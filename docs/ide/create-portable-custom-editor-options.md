@@ -1,6 +1,5 @@
 ---
-title: Visual Studio での EditorConfig 設定の使用 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio での EditorConfig 設定の使用
 ms.date: 12/13/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +7,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: fe1653df6fc1d71dc4497c6e7e0a9adae9fa0b44
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ff3391023d9a863bd9f06b4608b327902a17f0ac
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -158,8 +158,8 @@ EditorConfig 規則の範囲を制御するには、リポジトリのルート�
 
 ## <a name="see-also"></a>関連項目
 
-[.NET コード表記規則](../ide/editorconfig-code-style-settings-reference.md)  
-[.NET の名前付け規則](../ide/editorconfig-naming-conventions.md)  
-[言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)  
-[EditorConfig.org](http://editorconfig.org/)  
-[コード エディターでのコードの作成](writing-code-in-the-code-and-text-editor.md)
+- [.NET コード表記規則](../ide/editorconfig-code-style-settings-reference.md)
+- [.NET の名前付け規則](../ide/editorconfig-naming-conventions.md)
+- [言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)
+- [EditorConfig.org](http://editorconfig.org/)
+- [コード エディターでのコードの作成](writing-code-in-the-code-and-text-editor.md)

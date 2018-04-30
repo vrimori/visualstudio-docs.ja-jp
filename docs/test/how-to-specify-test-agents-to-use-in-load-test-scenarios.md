@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト シナリオで使用するテスト エージェントを指定する | Microsoft Docs
+title: Visual Studio でのロード テスト シナリオで使用するテスト エージェントを指定する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +12,13 @@ ms.assetid: e86806dd-5897-4e4c-bfd4-8d687fb72a6e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dd6ca0c9b92f8eaa27c2a8726cc9d2cea49636b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a4aacbd31516e6a3e55f1b543a3cc8f49ea6ce4d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>方法: ロード テスト シナリオで使用するテスト エージェントを指定する
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 コントローラーおよびエージェントを使用してリモートでロード テストを実行する場合は、シナリオに使用するエージェントを指定できます。 たとえば、特定のエージェントのセットを指定することで、パフォーマンスの傾向を分析する際の一貫性を維持することができます。 エージェントを地理的に分散して、実行するスクリプトとエージェントの場所の間に親和性を持たせることもできます。
 
 > [!TIP]
-> エージェントをリモート サイトに物理的に配置するのではなく、ネットワーク エミュレーションを使用して低速なネットワークをエミュレートする方法もあります。 詳細については、[仮想ネットワークの種類の指定](../test/specify-virtual-network-types-in-a-load-test-scenario.md)[](../test/specify-virtual-network-types-in-a-load-test-scenario.md)に関するページを参照してください。
+> エージェントをリモート サイトに物理的に配置するのではなく、ネットワーク エミュレーションを使用して低速なネットワークをエミュレートする方法もあります。 詳細については、「[仮想ネットワークタイプの指定](../test/specify-virtual-network-types-in-a-load-test-scenario.md)および[仮想ネットワークタイプの指定](../test/specify-virtual-network-types-in-a-load-test-scenario.md)」を参照してください。
 
 詳細については、[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)に関するページを参照してください。
 
