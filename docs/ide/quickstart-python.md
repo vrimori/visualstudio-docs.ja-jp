@@ -1,13 +1,10 @@
 ---
-title: 'クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する | Microsoft Docs'
+title: 'クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する'
 description: このクイック スタートでは、Visual Studio を使用し、Flask フレームワークで簡単な Python Web アプリを作成します。
 ms.custom: mvc
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 dev_langs:
 - python
@@ -17,11 +14,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 71501e113bc744f430c6935dbf20bfd2ec533758
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: b3a455dc04693b70c0ae3932503aea33085b2a80
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 
@@ -82,7 +79,7 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 **質問: 利用できる他の Python パッケージの詳細はどこで確認できますか。**
 
-**回答**: [Python Package Index](https://pypi.python.org/pypi) (pypi.python.org) を参照してください。
+**回答**: [Python Package Index](https://pypi.org/) (pypi.org) を参照してください。
 
 ## <a name="add-a-code-file"></a>コード ファイルの追加
 
@@ -121,7 +118,7 @@ Python の Web アプリは、ほぼ常に、Web 要求のルーティングや�
 
 **質問: Flask の詳細はどこで確認できますか。**
 
-**回答**: Flask 文書を参照してください。まずは [Flask クイック スタート](https://flask.pocoo.org/docs/0.12/quickstart/)からお読みください (flask.pocoo.org)。
+**回答**: Flask 文書を参照してください。まずは [Flask クイック スタート](http://flask.pocoo.org/docs/0.12/quickstart/#quickstart)からお読みください (flask.pocoo.org)。
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 

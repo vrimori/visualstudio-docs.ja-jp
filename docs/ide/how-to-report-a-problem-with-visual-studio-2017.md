@@ -2,9 +2,6 @@
 title: Visual Studio 2017 で問題を報告する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
@@ -13,11 +10,11 @@ manager: douge
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 809f9121be867785e6d92966ccf92b012740daab
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: eacb6ba97f79f2c66444bc79b11c51ef01a50672
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 
@@ -73,19 +70,19 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 
 ### <a name="report-a-problem-by-using-the-visual-studio-installer"></a>Visual Studio インストーラーを使用して問題をレポートする
 
-Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、Visual Studio インストーラーを使用して問題をレポートすることもできます。 そのためには、Visual Studio インストーラーの右上隅にあるフィードバック アイコンを選択してください。
+Visual Studio のインストールを完了できない場合、または Visual Studio 内のフィードバック ツールにアクセスできない場合は、**Visual Studio インストーラー**を使用して問題をレポートすることもできます。 そのためには、**Visual Studio インストーラー**の右上隅にあるフィードバック アイコンを選択します。
 
  ![Visual Studio インストーラーの [フィードバックの送信] ボタンからフィードバック ツールを開くことができます](../install/media/report-a-problem.png)
 
 ### <a name="search-for-problems-and-solutions-by-using-the-visual-studio-developer-community"></a>Visual Studio 開発者コミュニティを使用して問題と解決策を検索する
 
-Visual Studio を使って問題を報告することが望ましくない場合、またはできない場合は、Visual Studio の開発者コミュニティで既に問題が報告され、解決策が投稿されている可能性があります。 詳細については、「[Visual Studio 開発者コミュニティ ポータル](https://developercommunity.visualstudio.com/)」ページを参照してください。
+Visual Studio を使って問題を報告することが望ましくない場合、またはできない場合は、Visual Studio の開発者コミュニティで既に問題が報告され、解決策が投稿されている可能性があります。 詳細については、[Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/) ページを参照してください。
 
 #### <a name="provide-product-feedback-or-a-suggestion"></a>製品に関するフィードバックや提案を提供する
 
 レポートする問題はないが、製品に関するフィードバックや提案を提供したい場合、そのための場所も用意されています。 詳細については、[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-ide) ページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [ご意見](../ide/talk-to-us.md)
 * [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)

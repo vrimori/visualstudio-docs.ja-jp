@@ -1,23 +1,21 @@
 ---
-title: "方法 : ScrollBar のカスタマイズによるコードの追跡 | Microsoft Docs"
-ms.custom: 
+title: '方法 : スクロール バーのカスタマイズによるコードの追跡 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8f56e834e6c2b80706e4ed1d1a91583e1015791b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1ff36af9a034f3a369369a0916f468826c053d05
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>方法 : ScrollBar のカスタマイズによるコードの追跡
+# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>方法 : スクロール バーのカスタマイズによるコードの追跡
 
 長いコード ファイルで作業していると、すべてを頭に入れておくことは困難です。 コード ウィンドウのスクロール バーをカスタマイズして、コード全体を見渡せるようにすることができます。
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 
 1. コードの変更、ブレークポイント、エラー、およびブックマークを表示するようにスクロール バーを設定できます。
 
-    **スクロール バー**のオプション ページを開きます。そのためには、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[すべての言語]** または特定の言語を選択、またはクイック起動ウィンドウに「**スクロール バー**」と入力します。
+    **スクロール バー**のオプション ページを開きます。そのためには、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[すべての言語]** または特定の言語を選択するか、**クイック起動**ウィンドウに「**スクロール バー**」と入力します。
 
 2. **[垂直スクロール バーへのコメントの表示]** を選択し、表示するコメントを選択します 
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
     **スクロール バー**のオプション ページで、**[垂直スクロール バーでのバー モードの使用]** または **[垂直スクロール バーでのマップ モードの使用]** を選択します。 **[ソースの概要]** ドロップダウンで幅を選択できます。
 
-    マップ モードが有効で、幅が [中] に設定されているときの検索例を示します。
+    マップ モードが有効で、幅が **[中]** に設定されているときの検索例を示します。
 
     ![マップ モードのスクロール バー](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
 
@@ -59,4 +57,4 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>関連項目
 
-[コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+[エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)

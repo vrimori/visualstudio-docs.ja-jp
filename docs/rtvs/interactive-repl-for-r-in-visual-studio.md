@@ -1,26 +1,20 @@
 ---
-title: "R Tools for Visual Studio の対話型 REPL | Microsoft Docs"
-description: "エディター ウィンドウと統合される Visual Studio の R 用対話型 REPL 環境を使う方法について説明します。"
-ms.custom: 
+title: R 用の対話型 REPL
+description: エディター ウィンドウと統合される Visual Studio の R 用対話型 REPL 環境を使う方法について説明します。
 ms.date: 06/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: dc9ae4d0024fc9c03a68651ea6a2cf476ea4a00d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 12d5ae929c34b100ed83ea23823e88f7efbc5d14
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-the-r-interactive-window"></a>R 対話型ウィンドウの使用
 

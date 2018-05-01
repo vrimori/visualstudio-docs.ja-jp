@@ -1,15 +1,9 @@
 ---
-title: クイック スタート - Python コードのリポジトリを複製する | Microsoft Docs
+title: クイック スタート - Python コードのリポジトリを複製する
 description: このクイック スタートでは、Visual Studio チーム エクスプローラーを使用して Python Koans リポジトリを複製することで、Visual Studio で Python プロジェクトを作成します。
-ms.custom: mvc
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -17,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9acad900f31d3579156cd266ebc10c244a1de39c
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: d66c3b5b62edc6963d92e27bcf6a94889741b27f
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
@@ -31,7 +25,7 @@ ms.lasthandoff: 03/30/2018
 
 2. Visual Studio を起動します。
 
-3. **[ビュー]、[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます  (次に示す **[接続]** ページが表示されない場合は、上部ツールバーのプラグ アイコンを選択すると、そのページに進みます)。
+3. **[表示] > [チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。 (次に示す **[接続]** ページが表示されない場合は、上部ツールバーのプラグ アイコンを選択すると、そのページに進みます)。
 
     ![Visual Studio Team Services、GitHub、およびリポジトリの複製が表示された [チーム エクスプローラー] ウィンドウ](media/team-explorer.png)
 
@@ -52,7 +46,7 @@ ms.lasthandoff: 03/30/2018
 
 9. **ソリューション エクスプローラー**で `python3` ノードを展開し、`contemplate_koans.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
 
-10. メニューで **[プロジェクト]、[Koans プロパティ]**、**[全般]** タブの順に選択し、**[作業ディレクトリ]** を "python3" に設定します。 この手順が必要なのは、Visual Studio は既定では作業ディレクトリをスタートアップ ファイルの場所ではなく、プロジェクトのルートに設定するためです (`python3\contemplate_koans.py`。これはプロジェクトのプロパティでも確認できます)。 プログラム コードは、ファイル `koans.txt` を作業フォルダーから探すので、この値を変更しなくてもランタイム エラーは発生します。
+10. メニューで **[プロジェクト] > [Koans プロパティ]**、**[全般]** タブの順に選択し、**[作業ディレクトリ]** を "python3" に設定します。 この手順が必要なのは、Visual Studio は既定では作業ディレクトリをスタートアップ ファイルの場所ではなく、プロジェクトのルートに設定するためです (`python3\contemplate_koans.py`。これはプロジェクトのプロパティでも確認できます)。 プログラム コードは、ファイル `koans.txt` を作業フォルダーから探すので、この値を変更しなくてもランタイム エラーは発生します。
 
     ![Python プロジェクトの作業ディレクトリの設定](media/projects-set-working-directory.png)
 

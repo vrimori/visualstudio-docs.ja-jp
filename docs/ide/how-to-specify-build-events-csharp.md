@@ -1,12 +1,10 @@
 ---
-title: "方法 : ビルド イベントを指定する (C#) | Microsoft Docs"
-ms.custom: 
+title: '方法 : ビルド イベントを指定する (C#) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - pre-build events
 - events [Visual Studio], builds
@@ -14,21 +12,21 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: b4ce1ad9-5215-4b6f-b6a2-798b249aa335
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 1fcba0ef7abec3c8f5d71d34b8ff4e19e047d50b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7cf26e6f8565f08b7e272ec663e0db91ae3d545c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-build-events-c"></a>方法 : ビルド イベントを指定する (C#)
 ビルド開始前またはビルド終了後に実行するコマンドを指定するには、ビルド イベントを使います。 ビルド イベントは、ビルド プロセスにおいてビルドがこれらのポイントに正常に達した場合にのみ実行されます。  
   
- プロジェクトのビルド時に、ビルド前イベントは PreBuildEvent.bat というファイルに追加され、ビルド後イベントは PostBuildEvent.bat というファイルに追加されます。 エラー チェックを行う場合は、独自のエラー チェック コマンドをビルド ステップに追加します。  
+ プロジェクトのビルド時に、ビルド前イベントは *PreBuildEvent.bat* というファイルに追加され、ビルド後イベントは *PostBuildEvent.bat* というファイルに追加されます。 エラー チェックを行う場合は、独自のエラー チェック コマンドをビルド ステップに追加します。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
@@ -45,24 +43,25 @@ ms.lasthandoff: 12/22/2017
 4.  **[ビルド前に実行するコマンド ライン]** ボックスで、ビルド イベントの構文を指定します。  
   
     > [!NOTE]
-    >  プロジェクトが最新の状態で、ビルドがトリガーされない場合、ビルド前イベントは実行されません。  
+    > プロジェクトが最新の状態で、ビルドがトリガーされない場合、ビルド前イベントは実行されません。  
   
 5.  **[ビルド後に実行するコマンド ライン]** ボックスで、ビルド イベントの構文を指定します。  
   
     > [!NOTE]
-    >  .bat ファイルを実行するすべてのビルド後コマンドの前に `call` ステートメントを追加します。 たとえば、`call C:\MyFile.bat` または `call C:\MyFile.bat call C:\MyFile2.bat` のようにします。  
+    > *.bat* ファイルを実行するすべてのビルド後コマンドの前に `call` ステートメントを追加します。 たとえば、`call C:\MyFile.bat` または `call C:\MyFile.bat call C:\MyFile2.bat` のようにします。  
   
 6.  **[ビルド後イベントの実行]** ボックスで、ビルド後イベントを実行する条件を指定します。  
   
     > [!NOTE]
-    >  長い構文を追加する場合、または [[ビルド前に実行するコマンド ライン]/[ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)でビルド マクロを選択する場合は、省略記号 **[...]** ボタンをクリックして編集ボックスを表示します。  
+    > 長い構文を追加する場合、または [[ビルド前に実行するコマンド ライン]/[ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)でビルド マクロを選択する場合は、省略記号 **[...]** ボタンをクリックして編集ボックスを表示します。  
   
-     ビルド イベントの構文では、コマンド プロンプトまたは .bat ファイルで有効な任意のコマンドを使うことができます。 後続のすべてのコマンドが確実に実行されるように、バッチ ファイルの名前の前には `call` を記述する必要があります。  
+     ビルド イベントの構文では、コマンド プロンプトまたは *.bat* ファイルで有効な任意のコマンドを使うことができます。 後続のすべてのコマンドが確実に実行されるように、バッチ ファイルの名前の前には `call` を記述する必要があります。  
   
-     **注** ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。  
+    > [!NOTE]
+    > ビルド前またはビルド後イベントが正常に完了しない場合は、アクションの成功を示すゼロ (0) 以外のコードでイベント アクションを終了させて、ビルドを強制終了することができます。  
   
 ## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>例: ビルド後イベントを使ってマニフェスト情報を変更する方法  
- 次の手順は、ビルド後イベントから呼び出される .exe コマンドを使って、アプリケーション マニフェスト (プロジェクト ディレクトリ内の .exe.manifest ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。  
+ 次の手順は、ビルド後イベントから呼び出される *.exe* コマンドを使って、アプリケーション マニフェスト (プロジェクト ディレクトリ内の *.exe.manifest* ファイル) 内にオペレーティング システムの最小バージョンを設定する方法を示しています。 オペレーティング システムの最小バージョンは、4.10.0.0 などの 4 つの部分に分かれた数字です。 これを行うには、次のように、コマンドでマニフェストの `<dependentOS>` セクションを変更します。  
   
 ```  
 <dependentOS>  
@@ -78,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows]** をクリックして、**[コンソール アプリケーション]** テンプレートをクリックします。 プロジェクトに `ChangeOSVersionCS` という名前を付けます。  
   
-3.  Program.cs で、ファイルの先頭にある他の `using` ステートメントに次の行を追加します。  
+3.  *Program.cs* で、ファイルの先頭にある他の `using` ステートメントに次の行を追加します。  
   
     ```  
     using System.Xml;  
@@ -136,11 +135,11 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     このコマンドは、2 つの引数を受け取ります。1 つはアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダーであり、通常は Projectname.publish)、もう 1 つは新しいオペレーティング システムのバージョンです。  
+     このコマンドは、2 つの引数を受け取ります。1 つはアプリケーション マニフェストへのパス (つまり、ビルド処理でマニフェストが作成されるフォルダーであり、通常は *Projectname.publish*)、もう 1 つは新しいオペレーティング システムのバージョンです。  
   
-5.  プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+5.  プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
-6.  `C:\TEMP\ChangeOSVersionVB.exe` などのディレクトリに .exe ファイルをコピーします。  
+6.  *.exe* ファイルを *C:\TEMP\ChangeOSVersionVB.exe* などのディレクトリにコピーします。  
   
  次に、ビルド後のイベントでこのコマンドを呼び出して、アプリケーション マニフェストを変更します。  
   
@@ -150,13 +149,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows クラシック デスクトップ]** をクリックしてから **[Windows フォーム アプリケーション]** テンプレートをクリックします。 プロジェクトに `CSWinApp` という名前を付けます。  
   
-3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-4.  プロジェクト デザイナーで、**[発行]** ページに移動し、**[発行場所]** を `C:\TEMP\` に設定します。  
+4.  **プロジェクト デザイナー**で、**[発行]** ページに移動し、**[発行場所]** を *C:\TEMP* に設定します。  
   
 5.  **[今すぐ発行]** をクリックして、プロジェクトを発行します。  
   
-     マニフェスト ファイルがビルドされ、`C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest` に配置されます。 マニフェストを表示するには、ファイルを右クリックし、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順にクリックします。  
+     マニフェスト ファイルがビルドされ、*C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest* に配置されます。 マニフェストを表示するには、ファイルを右クリックし、**[プログラムから開く]**、**[一覧からプログラムを選択する]**、**[メモ帳]** の順にクリックします。  
   
      ファイルで `<osVersionInfo>` 要素を探します。 たとえば、バージョンは次のように記述されています。  
   
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/22/2017
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />  
     ```  
   
-6.  プロジェクト デザイナーで、**[ビルド イベント]** タブをクリックし、**[ビルド後の編集]** をクリックします。  
+6.  **プロジェクト デザイナー**で、**[ビルド イベント]** タブをクリックし、**[ビルド後の編集]** をクリックします。  
   
 7.  **[ビルド後に実行するコマンド ライン]** ボックスに次のコマンドを入力します。  
   
@@ -172,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
      プロジェクトをビルドすると、このコマンドでアプリケーション マニフェストのオペレーティング システムの最小バージョンが 5.1.2600.0 に変更されます。  
   
-     `$(TargetPath)` マクロは作成される実行可能ファイルの完全なパスを表すので、`$(TargetPath)`.manifest は bin ディレクトリに作成されるアプリケーション マニフェストを指定します。 発行することにより、前に設定した発行場所にこのマニフェストがコピーされます。  
+     `$(TargetPath)` マクロは作成される実行可能ファイルの完全なパスを表すので、`$(TargetPath)`*.manifest* は *bin* ディレクトリに作成されるアプリケーション マニフェストを指定します。 発行することにより、前に設定した発行場所にこのマニフェストがコピーされます。  
   
 8.  プロジェクトを再び発行します。 **[発行]** ページに移動して、**[今すぐ発行]** をクリックします。  
   
@@ -184,8 +183,8 @@ ms.lasthandoff: 12/22/2017
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ビルド イベント] ページ (プロジェクト デザイナー) (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
  [[ビルド前に実行するコマンド ライン] / [ビルド後に実行するコマンド ライン] ダイアログ ボックス](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
  [方法 : ビルド イベントを指定する (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
- [コードのコンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)
+ [コンパイルとビルド](../ide/compiling-and-building-in-visual-studio.md)

@@ -1,12 +1,9 @@
 ---
-title: "チュートリアル: XAML デザイナーでデータにバインドする | Microsoft Docs"
-ms.custom: 
+title: XAML デザイナーでデータにバインドする
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.XamlDesigner.DataBinding
 dev_langs:
@@ -14,16 +11,16 @@ dev_langs:
 - VB
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: ef8826fd01c0eec45f2daea5900c5e440a5cebb0
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: 364e5db22342a0a870a38db71506b39a6f0080b6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="walkthrough-binding-to-data-in-xaml-designer"></a>チュートリアル: XAML デザイナーでデータにバインドする
+# <a name="walkthrough-bind-to-data-in-xaml-designer"></a>チュートリアル: XAML デザイナーでデータにバインドする
 
 XAML デザイナーでは、アートボードと [プロパティ] ウィンドウを使用してデータ バインディングのプロパティを設定できます。 このチュートリアルの例では、データをコントロールにバインドする方法を示します。 具体的には、`ItemCount` という名前の [DependencyProperty](/uwp/api/Windows.UI.Xaml.DependencyProperty) を持つ簡単なショッピング カート クラスを作成した後、`ItemCount` プロパティを [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) コントロールの **Text** プロパティにバインドする方法を説明します。
 
@@ -103,5 +100,5 @@ XAML デザイナーでは、アートボードと [プロパティ] ウィン�
 
 ## <a name="see-also"></a>関連項目
 
-[XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)  
-[[値コンバーターの追加] ダイアログ ボックス](https://msdn.microsoft.com/c5f3d110-a541-4b55-8bca-928f77778af8)
+- [XAML デザイナーを使用して UI を作成する](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+- [[値コンバーターの追加] ダイアログ ボックス](https://msdn.microsoft.com/c5f3d110-a541-4b55-8bca-928f77778af8)

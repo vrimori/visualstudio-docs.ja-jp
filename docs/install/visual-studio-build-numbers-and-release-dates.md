@@ -1,23 +1,22 @@
 ---
-title: Visual Studio 2017 のビルド番号とリリース日 | Microsoft Docs
+title: Visual Studio 2017 のビルド番号とリリース日
 description: Visual Studio 2017 の現在までのリリース済みバージョンおよびビルド番号のリリース日順の一覧。
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 04/04/2018
+ms.date: 04/18/2018
 ms.topic: reference
 helpviewer_keywords: ''
-ms.technology:
-- vs-acquisition
-ms.service: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f941891c858d36d4cbe1de706d100c0b27d9c85
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: f24a293e3efe40f2003bf0ba993f7896d2d93c52
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 のビルド番号とリリース日
 
@@ -25,6 +24,10 @@ ms.lasthandoff: 04/06/2018
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.7.0 Preview 4.0 | [プレビュー] | 2018 年 4 月 18 日 | 15.7.27617.1 |
+| 15.6.6 | Release | 2018 年 4 月 10 日 | 15.6.27428.2037 |
+| 15.0.12 | Release | 2018 年 4 月 10 日 | 15.0.26228.30 |
+| 15.7.0 Preview 3.0 | [プレビュー] | 2018 年 4 月 9 日 | 15.7.27604.0 |
 | 15.6.5 | Release | 2018 年 4 月 4 日 | 15.6.27428.2027 |
 | 15.6.4 | Release | 2018 年 3 月 22 日 | 15.6.27428.2015 |
 | 15.7.0 Preview 2.0 | [プレビュー] | 2018 年 3 月 21 日 | 15.7.27520.0 |
@@ -124,8 +127,8 @@ ms.lasthandoff: 04/06/2018
 
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 

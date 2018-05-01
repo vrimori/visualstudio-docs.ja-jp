@@ -1,28 +1,24 @@
 ---
-title: "R Tools for Visual Studio で R コードを lint する | Microsoft Docs"
-description: "Visual Studio に組み込まれている R 用の lint サポート (lint オプションなど) を使う方法を説明します。"
-ms.custom: 
+title: R コードを lint する
+description: Visual Studio に組み込まれている R 用の lint サポート (lint オプションなど) を使う方法を説明します。
 ms.date: 01/15/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 dev_langs:
 - R
-ms.tgt_pltfrm: 
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
-ms.topic: article
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 30f508fbaa6de816f8b0adb336fea66b82f992a6
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d8b88e327af895d39335695b16b44bf17efdb18b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="linting-r-code-in-visual-studio"></a>Visual Studio で R コードを lint する
 

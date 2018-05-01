@@ -1,26 +1,20 @@
 ---
-title: R Tools for Visual Studio のパッケージ マネージャー | Microsoft Docs
+title: R のパッケージ マネージャー
 description: Visual Studio の R パッケージ マネージャーを使って R パッケージをインストールおよび管理する方法について説明します。
-ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 14948b0680e570e9045d724ae00adb67bd6b19cd
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 8086d28c9591195c90268b52a03325b8acc2e420
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="package-manager"></a>パッケージ マネージャー
 

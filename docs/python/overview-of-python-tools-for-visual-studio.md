@@ -1,15 +1,9 @@
 ---
-title: Windows 上の Visual Studio での Python サポートの概要 | Microsoft Docs
+title: Windows 上の Visual Studio での Python サポートの概要
 description: Windows 上で最高の Python IDE である Visual Studio の機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
-ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: overview
 author: kraigb
 ms.author: kraigb
@@ -17,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b76c83db283a2cb0940d8817c04e6052157ada4
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 31ffd868eeab4638344cfafc2723b6a60608f232
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
 
@@ -174,13 +168,15 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 [インストール ガイド](installing-python-support-in-visual-studio.md)の説明に従って、以下のエディションの Visual Studio に Python の機能をインストールできます。
 
 - [Visual Studio 2017 (全エディション)](https://www.visualstudio.com/vs/)
-- [Visual Studio 2015 (全エディション)](https://www.visualstudio.com/downloads/visual-studio-2015-downloads-vs)
+- Visual Studio 2015 (全エディション)
 - Visual Studio 2013 Community Edition
 - Visual Studio 2013 Express for Web Update 2 以降
 - Visual Studio 2013 Express for Desktop Update 2 以降
 - Visual Studio 2013 (Pro エディション以上)
 - Visual Studio 2012 (Pro エディション以上)
 - Visual Studio 2010 SP1 (Pro エディション以上、.NET 4.5 が必要)
+
+Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.com/vs/older-downloads/](https://www.visualstudio.com/vs/older-downloads/) で入手できます。
 
 > [!Important]
 > 機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。
@@ -301,6 +297,6 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- [IIS と Python の間の WFastCGI ブリッジ](https://pypi.python.org/pypi/wfastcgi) (python.org)
+- [IIS と Python の間の WFastCGI ブリッジ](https://pypi.org/p/wfastcgi) (pypi.org)
 - [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 - [Python に関して寄せられることの多い質問 (Microsoft Virtual Academy)](https://aka.ms/mva-top-python-questions)

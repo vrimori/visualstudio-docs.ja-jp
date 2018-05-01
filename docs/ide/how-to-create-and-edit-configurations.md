@@ -1,12 +1,10 @@
 ---
-title: "方法 : 構成を作成および編集する | Microsoft Docs"
-ms.custom: 
+title: '方法 : 構成を作成および編集する | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - solution build configurations, editing
 - build configurations, creating
@@ -18,47 +16,46 @@ helpviewer_keywords:
 - project build configurations, creating
 - project build configurations, editing
 ms.assetid: 19be121c-148e-4ece-bbfc-d20b08cfc3f7
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7ca6dfe8132603b06b9bd08655eaff3861e4700d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 97d30f421f7c893410e563b89fd7a33fe539f141
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-and-edit-configurations"></a>方法 : 構成を作成および編集する
 ソリューションに対して、複数のビルド構成を作成することができます。 たとえば、問題を検出して修正するためにテスト担当者が使用できるデバッグ ビルドを構成できます。他にも、多様な顧客に配布できる多様な種類のビルドを構成できます。  
 
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
 
-## <a name="creating-build-configurations"></a>ビルド構成の作成  
- **[構成マネージャー]** ダイアログ ボックスを使用して、既存のビルド構成を選択または変更することも、新しい構成を作成することもできます。  
+## <a name="create-build-configurations"></a>ビルド構成を作成する  
 
-#### <a name="to-open-the-configuration-manager-dialog-box"></a>[構成マネージャー] ダイアログ ボックスを開くには  
+**[構成マネージャー]** ダイアログ ボックスを使用して、既存のビルド構成を選択または変更することも、新しい構成を作成することもできます。  
 
--   **ソリューション エクスプローラー**で、ソリューションのショートカット メニューを開き、**[構成マネージャー]** をクリックします。  
+**[構成マネージャー]** ダイアログ ボックスを開くには、**ソリューション エクスプローラー**でソリューションのショートカット メニューを開き、**[構成マネージャー]** を選択します。  
 
-    > [!NOTE]
-    >  **[構成マネージャー]** がショートカット メニューに表示されない場合は、メニュー バーの **[ビルド]** メニューを確認してください。 どちらにも表示されていない場合は、メニュー バーで **[ツール]**、**[オプション]** の順にクリックします。**[オプション]** ダイアログ ボックスの左ウィンドウで **[プロジェクトおよびソリューション]**、**[全般]** の順に展開し、右ウィンドウで **[ビルド構成の詳細を表示]** チェック ボックスをオンにします。  
+> [!NOTE]
+> **[構成マネージャー]** がショートカット メニューに表示されない場合は、メニュー バーの **[ビルド]** メニューを確認してください。 どちらにも表示されていない場合は、メニュー バーで **[ツール]** > **[オプション]** の順に選択します。次に、**[オプション]** ダイアログ ボックスの左ウィンドウで **[プロジェクトおよびソリューション]** > **[全般]** の順に展開し、右ウィンドウで **[ビルド構成の詳細を表示]** チェック ボックスをオンにします。  
 
-     **[構成マネージャー]** ダイアログ ボックスでは、**[アクティブ ソリューション構成]** ボックスの一覧を使用して、ソリューション全体のビルド構成の選択、既存構成の変更、または新しい構成の作成を行うことができます。 **[アクティブ ソリューション プラットフォーム]** ドロップダウン リストを使用すると、構成の対象となるプラットフォームの選択、既存プラットフォームの変更、または新しいプラットフォームの追加を行うことができます。 **[プロジェクトのコンテキスト]** ウィンドウには、ソリューション内のプロジェクトが表示されます。 各プロジェクトについて、プロジェクト固有の構成とプラットフォームの選択、既存の構成とプラットフォームの変更、または新しい構成の作成あるいは新しいプラットフォームの追加を行うことができます。 また、ソリューション全体の構成を使用してソリューションをビルドまたは配置する際に、各プロジェクトを含めるかどうかをチェック ボックスで指定することができます。  
+**[構成マネージャー]** ダイアログ ボックスでは、**[アクティブ ソリューション構成]** ボックスの一覧を使用して、ソリューション全体のビルド構成の選択、既存構成の変更、または新しい構成の作成を行うことができます。 **[アクティブ ソリューション プラットフォーム]** ドロップダウン リストを使用すると、構成の対象となるプラットフォームの選択、既存プラットフォームの変更、または新しいプラットフォームの追加を行うことができます。 **[プロジェクトのコンテキスト]** ウィンドウには、ソリューション内のプロジェクトが表示されます。 各プロジェクトについて、プロジェクト固有の構成とプラットフォームの選択、既存の構成とプラットフォームの変更、または新しい構成の作成あるいは新しいプラットフォームの追加を行うことができます。 また、ソリューション全体の構成を使用してソリューションをビルドまたは配置する際に、各プロジェクトを含めるかどうかをチェック ボックスで指定することができます。  
 
  必要な構成を設定したら、その構成に適したプロジェクト プロパティを設定できます。  
 
-#### <a name="to-set-properties-based-on-configurations"></a>構成に基づいてプロパティを設定するには  
+### <a name="to-set-properties-based-on-configurations"></a>構成に基づいてプロパティを設定するには  
 
 -   **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。  
 
      **[プロパティ ページ]** ウィンドウが開きます。  
 
-     構成に応じたプロパティを設定できます。 たとえば、リリース構成の場合、ソリューションのビルド時にコードを最適化することを指定できます。デバッグ構成の場合、`DEBUG` 条件付きコンパイル シンボルを含むことを指定できます。 プロパティ ページの設定について詳しくは、「[プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)」をご覧ください。  
+     構成に応じたプロパティを設定できます。 たとえば、リリース構成の場合、ソリューションのビルド時にコードを最適化することを指定できます。デバッグ構成の場合は、`DEBUG` 条件付きコンパイル シンボルを含むことを指定できます。 プロパティ ページの設定の詳細については、「[プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)」を参照してください。  
 
-## <a name="creating-and-modifying-project-configurations"></a>プロジェクト構成の作成と変更  
+## <a name="create-and-modify-project-configurations"></a>プロジェクト構成を作成および変更する  
 
-#### <a name="to-create-a-project-configuration"></a>プロジェクト構成を作成するには  
+### <a name="to-create-a-project-configuration"></a>プロジェクト構成を作成するには  
 
 1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
 
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 
 6.  ソリューション全体の構成を同時に作成するには、**[新しいソリューション構成を作成する]** チェック ボックスをオンにします。  
 
-#### <a name="to-rename-a-project-configuration"></a>プロジェクト構成の名前を変更するには  
+### <a name="to-rename-a-project-configuration"></a>プロジェクト構成の名前を変更するには  
 
 1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
 
@@ -88,9 +85,9 @@ ms.lasthandoff: 12/22/2017
 
 5.  **[名前変更]** をクリックし、新しい名前を入力します。  
 
-## <a name="creating-and-modifying-solution-wide-build-configurations"></a>ソリューション全体のビルド構成の作成と変更  
+## <a name="create-and-modify-solution-wide-build-configurations"></a>ソリューション全体のビルド構成を作成および変更する  
 
-#### <a name="to-create-a-solution-wide-build-configuration"></a>ソリューション全体のビルド構成を作成するには  
+### <a name="to-create-a-solution-wide-build-configuration"></a>ソリューション全体のビルド構成を作成するには  
 
 1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
 
@@ -104,7 +101,7 @@ ms.lasthandoff: 12/22/2017
 
 5.  プロジェクト構成を同時に作成するには、**[新しいプロジェクト構成を作成する]** チェック ボックスをオンにします。  
 
-#### <a name="to-rename-a-solution-wide-build-configuration"></a>ソリューション規模のビルド構成の名前を変更するには  
+### <a name="to-rename-a-solution-wide-build-configuration"></a>ソリューション規模のビルド構成の名前を変更するには  
 
 1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
 
@@ -116,15 +113,15 @@ ms.lasthandoff: 12/22/2017
 
 4.  **[名前変更]** をクリックし、新しい名前を入力します。  
 
-#### <a name="to-modify-a-solution-wide-build-configuration"></a>ソリューション全体のビルド構成を変更するには  
+### <a name="to-modify-a-solution-wide-build-configuration"></a>ソリューション全体のビルド構成を変更するには  
 
 1.  **[構成マネージャー]** ダイアログ ボックスを開きます。  
 
 2.  **[アクティブ ソリューション構成]** ボックスの一覧で、構成を選択します。  
 
-3.  **[プロジェクトのコンテキスト]** ウィンドウで、すべてのプロジェクトに対して、必要な **[構成]** と **[プラットフォーム]** を選択し、**[ビルド]** するかどうかおよび **[配置]** するかどうかを指定します。  
+3.  **[プロジェクトのコンテキスト]** ウィンドウで、すべてのプロジェクトに対して、必要な**構成**と**プラットフォーム**を選択し、**ビルド**するかどうかと、**配置**するかどうかを指定します。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビルド構成について](../ide/understanding-build-configurations.md)   
  [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [プロジェクトおよびソリューションのプロパティの管理](managing-project-and-solution-properties.md)
