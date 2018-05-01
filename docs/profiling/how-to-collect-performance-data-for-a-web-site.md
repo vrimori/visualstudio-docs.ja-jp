@@ -1,13 +1,9 @@
 ---
-title: "方法: Web サイトのパフォーマンス データを収集する | Microsoft Docs"
-ms.custom: 
+title: '方法: Web サイトのパフォーマンス データを収集する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vsperf.url.url
 - vsperf.chooseurl
@@ -20,14 +16,14 @@ helpviewer_keywords:
 - ASP.NET, performance profilng
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db9cefe31201a3b67ba176a56fed58bbe155bcf0
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 7e07594e9b90fabd8e0a2bcc66dd0920db0973aa
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
 
@@ -52,9 +48,9 @@ ms.lasthandoff: 02/21/2018
 
 2. **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。
 
-3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 同時実行ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。
+3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]** をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 同時実行ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。
 
-4. **[プロファイル対象のアプリケーションを選択してください]** ドロップダウン リストで、現在のプロジェクトが選択されていることを確認し、 **[次へ]**をクリックします。
+4. **[プロファイル対象のアプリケーションを選択してください]** ドロップダウン リストで、現在のプロジェクトが選択されていることを確認し、 **[次へ]** をクリックします。
 
 5. ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。
 
@@ -62,9 +58,9 @@ ms.lasthandoff: 02/21/2018
 
     - Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。
 
-6. **[次へ]**をクリックします。
+6. **[次へ]** をクリックします。
 
-7. ウィザードの 4 番目のページで、 **[完了]**をクリックします。
+7. ウィザードの 4 番目のページで、 **[完了]** をクリックします。
 
 8. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。
 
@@ -76,13 +72,13 @@ ms.lasthandoff: 02/21/2018
 
 2. **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。
 
-3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]**をクリックします。 詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。
+3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]** をクリックします。 詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。
 
-4. ウィザードの 2 番目のページで、 **[ASP.NET または JavaScript アプリケーションのプロファイル]** オプションを選択し、 **[次へ]**をクリックします。
+4. ウィザードの 2 番目のページで、 **[ASP.NET または JavaScript アプリケーションのプロファイル]** オプションを選択し、 **[次へ]** をクリックします。
 
-5. ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]**をクリックします。
+5. ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]** をクリックします。
 
-    - サーバー (IIS) ベースのWeb サイトの場合は、 **http://localhost/MySite/default.aspx**のような URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+    - サーバー (IIS) ベースの Web サイトの場合は、**http://localhost/MySite/default.aspx** などの URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
 
     - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
 
@@ -96,9 +92,9 @@ ms.lasthandoff: 02/21/2018
 
     - Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。
 
-7. **[次へ]**をクリックします。
+7. **[次へ]** をクリックします。
 
-8. ウィザードの 4 番目のページで、 **[完了]**をクリックします。
+8. ウィザードの 4 番目のページで、 **[完了]** をクリックします。
 
 9. ASP.NET アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。
 

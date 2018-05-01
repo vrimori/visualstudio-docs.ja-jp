@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio の複数プロジェクトのテンプレートを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の複数プロジェクトのテンプレートを作成する | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-project
 - project templates, multi-project
 - multi-project templates
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 86952d3b742abf3b73b22e17d695717ca8dac9bd
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: b3902dd2b6f4dfac72d61d2c4d81937dcbbfdd07
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-multi-project-templates"></a>方法 : 複数プロジェクトのテンプレートを作成する
 
@@ -28,27 +26,27 @@ ms.lasthandoff: 01/05/2018
 
 複数プロジェクトのテンプレートは、1 つのプロジェクトのテンプレートとは動作が異なります。 これらには、次の固有の特性があります。
 
-- 複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、.vstemplate ファイルの `ProjectTemplateLink` 要素の `ProjectName` 属性を使用して、各プロジェクトの名前を指定します。
+- 複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、*.vstemplate* ファイルの `ProjectTemplateLink` 要素の `ProjectName` 属性を使用して、各プロジェクトの名前を指定します。
 
-- 複数プロジェクトのテンプレートには別の言語のプロジェクトを含めることができますが、テンプレート全体そのものは 1 つのカテゴリにのみ配置できます。 .vstemplate ファイルの `ProjectType` 要素でテンプレートのカテゴリを指定します。
+- 複数プロジェクトのテンプレートには別の言語のプロジェクトを含めることができますが、テンプレート全体そのものは 1 つのカテゴリにのみ配置できます。 *.vstemplate* ファイルの `ProjectType` 要素でテンプレートのカテゴリを指定します。
 
-複数プロジェクトのテンプレートは、次の項目を含み、.zip ファイルに圧縮する必要があります。
+複数プロジェクトのテンプレートは、次の項目を含み、*.zip* ファイルに圧縮する必要があります。
 
-- 複数プロジェクトのテンプレート全体のルート .vstemplate ファイル。 このルート .vstemplate ファイルは、**[新しいプロジェクト]** ダイアログ ボックスに表示されるメタデータを含み、このテンプレート内のプロジェクトの .vstemplate ファイルの場所を指定します。 このファイルは、.zip ファイルのルートに配置する必要があります。
+- 複数プロジェクトのテンプレート全体のルート *.vstemplate* ファイル。 このルート *.vstemplate* ファイルは、**[新しいプロジェクト]** ダイアログ ボックスに表示されるメタデータを含み、このテンプレート内のプロジェクトの *.vstemplate* ファイルの場所を指定します。 このファイルは、*.zip* ファイルのルートに配置する必要があります。
 
-- 完全なプロジェクト テンプレートに必要なファイルを含む 2 つ以上のフォルダー。 これにはプロジェクトのすべてのコード ファイルが含まれ、プロジェクトの .vstemplate ファイルも含まれます。
+- 完全なプロジェクト テンプレートに必要なファイルを含む 2 つ以上のフォルダー。 フォルダーにはプロジェクトのすべてのコード ファイルが含まれ、プロジェクトの *.vstemplate* ファイルも含まれます。
 
-たとえば、2 つのプロジェクトを含む複数プロジェクトのテンプレート .zip ファイルは、次のファイルとディレクトリを持つことが考えられます。
+たとえば、2 つのプロジェクトを含む複数プロジェクトのテンプレート *.zip* ファイルは、次のファイルとディレクトリを持つことが考えられます。
 
-- MultiProjectTemplate.vstemplate
-- \Project1\Project1.vstemplate
-- \Project1\Project1.vbproj
-- \Project1\Class.vb
-- \Project2\Project2.vstemplate
-- \Project2\Project2.vbproj
-- \Project2\Class.vb
+- *MultiProjectTemplate.vstemplate*
+- *\Project1\Project1.vstemplate*
+- *\Project1\Project1.vbproj*
+- *\Project1\Class.vb*
+- *\Project2\Project2.vstemplate*
+- *\Project2\Project2.vbproj*
+- *\Project2\Class.vb*
 
-複数プロジェクトのテンプレートのルート .vstemplate ファイルは、単一プロジェクトのテンプレートとは次の点が異なります。
+複数プロジェクトのテンプレートのルート *.vstemplate* ファイルは、単一プロジェクトのテンプレートとは次の点が異なります。
 
 - `VSTemplate` 要素の `Type` 属性には `Project` の代わりに値 `ProjectGroup` が含まれます。 例:
 
@@ -57,7 +55,7 @@ ms.lasthandoff: 01/05/2018
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- `TemplateContent` 要素には、含まれるプロジェクトの .vstemplate ファイルへのパスを定義する 1 つ以上の `ProjectTemplateLink` 要素を持つ `ProjectCollection` 要素が含まれます。 例:
+- `TemplateContent` 要素には、含まれるプロジェクトの *.vstemplate* ファイルへのパスを定義する 1 つ以上の `ProjectTemplateLink` 要素を持つ `ProjectCollection` 要素が含まれます。 例:
 
     ```xml
     <TemplateContent>
@@ -78,7 +76,7 @@ ms.lasthandoff: 01/05/2018
 
 1. テンプレートにエクスポートする準備ができるまで、プロジェクトをカスタマイズします。
 
-1. **[プロジェクト]** メニューの **[テンプレートのエクスポート...]** を選択します。
+1. **[プロジェクト]** メニューの **[テンプレートのエクスポート]** を選択します。
 
    **テンプレートのエクスポート ウィザード**が開きます。
 
@@ -86,31 +84,31 @@ ms.lasthandoff: 01/05/2018
 
 1. **[テンプレート オプションの選択]** ページで、テンプレートの名前および省略可能な説明、アイコン、プレビュー画像を入力します。 **[完了]** を選択します。
 
-   プロジェクトが .zip ファイルにエクスポートされ、指定した出力場所に置かれます。
+   プロジェクトが *.zip* ファイルにエクスポートされ、指定した出力場所に置かれます。
 
    > [!NOTE]
    > 各プロジェクトはテンプレートに個別にエクスポートする必要があるため、ソリューションのプロジェクトごとに上記の手順を繰り返します。
 
 1. テンプレートのディレクトリを作成し、プロジェクトごとにサブディレクトリを作ります。
 
-1. 各プロジェクトの .zip ファイルの内容を、作成した対応するサブディレクトリに抽出します。
+1. 各プロジェクトの *.zip* ファイルの内容を、作成した対応するサブディレクトリに抽出します。
 
-1. ベース ディレクトリ内に、**.vstemplate** ファイル拡張子を持つ XML ファイルを作成します。 このファイルには、複数プロジェクトのテンプレートのメタデータが含まれます。 ファイルの構造については、この後の例をご覧ください。 プロジェクトごとに .vstemplate ファイルの相対パスを指定してください。
+1. ベース ディレクトリ内に、*.vstemplate* ファイル拡張子を持つ XML ファイルを作成します。 このファイルには、複数プロジェクトのテンプレートのメタデータが含まれます。 ファイルの構造については、この後の例をご覧ください。 プロジェクトごとに *.vstemplate* ファイルの相対パスを指定してください。
 
 1. ベース ディレクトリを選び、右クリック メニューまたはコンテキスト メニューから、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選びます。
 
-   ファイルとフォルダーが .zip ファイルに圧縮されます。
+   ファイルとフォルダーが *.zip* ファイルに圧縮されます。
 
-1. ユーザー プロジェクト テンプレートのディレクトリに .zip ファイルをコピーします。 既定では、このディレクトリは %USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates です。
+1. ユーザー プロジェクト テンプレートのディレクトリに *.zip* ファイルをコピーします。 既定では、このディレクトリは *%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates* です。
 
 1. Visual Studio で **[新しいプロジェクト]** ダイアログ ボックスを開き、テンプレートが表示されることを確認します。
 
 ## <a name="two-project-example"></a>2 つのプロジェクトの例
 
-基本的なマルチプロジェクトのルート .vstemplate ファイルの例を以下に示します。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。 `ProjectTemplateLink` 要素の `ProjectName` 属性で、プロジェクトに適用する名前を指定します。
+基本的なマルチプロジェクトのルート *.vstemplate* ファイルの例を以下に示します。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトがあります。 `ProjectTemplateLink` 要素の `ProjectName` 属性で、プロジェクトに適用する名前を指定します。
 
 > [!TIP]
-> `ProjectName` 属性を指定しない場合、.vstemplate ファイルの名前がプロジェクト名として使用されます。
+> `ProjectName` 属性を指定しない場合、*.vstemplate* ファイルの名前がプロジェクト名として使用されます。
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -136,7 +134,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="example-with-solution-folders"></a>ソリューション フォルダーでの例
 
-この例では、`SolutionFolder` 要素を使用して、プロジェクトを `Math Classes` および `Graphics Classes` という 2 つのグループに分割します。 テンプレートには 4 つのプロジェクトが含まれ、その 2 つは各ソリューション フォルダーに配置されます。
+この例では、`SolutionFolder` 要素を使用して、プロジェクトを `Math Classes` および `Graphics Classes` という 2 つのグループに分割します。 テンプレートには 4 つのプロジェクトがあり、その 2 つは各ソリューション フォルダーに配置されます。
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -173,7 +171,7 @@ ms.lasthandoff: 01/05/2018
 ## <a name="see-also"></a>関連項目
 
 [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)  
-[方法 : プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)  
+[方法: プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)  
 [Visual Studio テンプレート スキーマ参照 (機能拡張)](../extensibility/visual-studio-template-schema-reference.md)  
 [SolutionFolder 要素 (Visual Studio テンプレート)](../extensibility/solutionfolder-element-visual-studio-templates.md)  
 [ProjectTemplateLink 要素 (Visual Studio テンプレート)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)

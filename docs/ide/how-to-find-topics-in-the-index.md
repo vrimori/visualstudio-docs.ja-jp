@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio ヘルプ ビューアーのインデックスを使用する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio ヘルプ ビューアーのインデックスを使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 helpviewer_keywords:
 - Index tab [Help Viewer]
 - Help Viewer, using the index
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - index filtering [Help Viewer]
 - Help Viewer, index filtering
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e6c9df2254108b778eb1478311ddaa386f70d74
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ee913682452e94bb0e973dff9e98e496b8cb3c70
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="finding-topics-by-using-the-help-viewer-index"></a>ヘルプ ビューアーのインデックスの使用によるトピックの検索
+# <a name="find-topics-by-using-the-help-viewer-index"></a>ヘルプ ビューアーのインデックスの使用によるトピックの検索
 インデックスには、インストールされているコンテンツのトピックに関連付けられているキーワードの一覧が含まれます。 各トピックには複数のキーワードが関連付けられている場合があり、各キーワードは複数のトピックに関連付けられている場合があります。 このインデックスの使い方は本の索引と同じです。  
   
 ## <a name="to-find-a-topic-by-using-the-index"></a>インデックスを使ってトピックを検索するには  

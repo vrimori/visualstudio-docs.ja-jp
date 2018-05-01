@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio ヘルプ ビューアーの目次を使用する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio ヘルプ ビューアーの目次を使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - hv_contents
 helpviewer_keywords:
@@ -16,26 +13,25 @@ helpviewer_keywords:
 - Contents tab [Help Viewer]
 - table of contents filtering [Help Viewer]
 ms.assetid: 8b98464d-2b05-4710-ad68-5647e78c6b7b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fdb49d915871bd9ac955ed61cdc7850bf35d6f41
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: db53125c30a2136500b6c99818b7143511bd2788
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>方法 : 目次でトピックを検索する
-**[目次]** タブでは、目次 (TOC) を使用して情報を検索できます。 目次は、インストールしたブックに関するトピックをすべて含む、展開可能なリストです。 TOC 内の移動方法に関するユーザー補助情報については、「[ショートカット キー (ヘルプ ビューアー)](../ide/shortcut-keys-help-viewer.md)」を参照してください。  
+**[目次]** タブでは、目次 (TOC) を使用して情報を検索できます。 目次は、インストールしたブックに関するトピックをすべて含む、展開可能なリストです。 TOC 内の移動方法に関するアクセシビリティについては、「[ショートカット キー (ヘルプ ビューアー)](../ide/shortcut-keys-help-viewer.md)」を参照してください。  
   
 > [!IMPORTANT]
 >  TOC で使用できるトピックの範囲は、選択したフィルターによって異なります。  
   
 ## <a name="filter-the-toc"></a>TOC のフィルター処理  
-TOC をフィルター処理して、**[目次]** タブに表示されるトピックの範囲を絞り込むことができます。指定した用語のルートがタイトルに含まれている場合にのみ、一覧にタイトルが表示されます。 たとえば、フィルターとして「troubleshooting」を指定すると、「troubleshoot」または「troubleshooting」を含むタイトルのみが表示されます。 タイトルに用語が含まれないノードは、省略記号 (...) と共に単一のノードに折りたたまれます。  
+TOC をフィルター処理して、**[目次]** タブに表示されるトピックの範囲を絞り込むことができます。指定した用語のルートがタイトルに含まれている場合にのみ、一覧にタイトルが表示されます。 たとえば、フィルターとして「troubleshooting」を指定すると、「troubleshoot」または「troubleshooting」を含むタイトルのみが表示されます。 タイトルに用語が含まれないノードは、省略記号 (**...**) と共に単一のノードに折りたたまれます。  
   
 #### <a name="to-filter-the-toc"></a>TOC をフィルター処理するには  
   
@@ -53,7 +49,7 @@ TOC をフィルター処理して、**[目次]** タブに表示されるトピ
   
 1.  トピックを表示します。  
   
-2.  ツール バーの **[目次のトピックを表示]** ボタンをクリックするか、**Ctrl+S** キーを押します。  
+2.  ツール バーの **[目次のトピックを表示]** ボタンをクリックするか、**Ctrl**+**S** キーを押します。  
   
      **[目次]** タブが開き、TOC 内のトピックの場所が表示されます。  
   

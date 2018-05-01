@@ -1,26 +1,21 @@
 ---
-title: requirements.txt ファイルを使用したパッケージ要件の管理 | Microsoft Docs
+title: requirements.txt ファイルを使用したパッケージ要件の管理
 description: requirements.txt ファイルを使用して、プロジェクトの依存関係を管理できます。 requirements.txt ファイルを含むプロジェクトを受信した場合は、これらの依存関係を 1 つの手順で簡単にインストールできます。
-ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9d1a35d8ba34561c56ca14261591c7b80bacdb0
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 447eda835a9ea3114f06a6f1a854475191934fad
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="managing-required-packages-with-requirementstxt"></a>requirements.txt での必要なパッケージの管理
 

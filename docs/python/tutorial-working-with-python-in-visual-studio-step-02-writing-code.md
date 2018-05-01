@@ -1,27 +1,21 @@
 ---
-title: Python の使用、手順 2、コードの記述と実行 | Microsoft Docs
+title: Python の使用、手順 2、コードの記述と実行
 description: Visual Studio で Python を使用するための基礎となるチュートリアルの手順 2 では、単純な Hello World プログラムを記述して実行する方法を説明したあと、Visual Studio での編集と IntelliSense の機能について、もう少し興味の湧きそうなコードを使って説明します。
-ms.custom: mvc
 ms.date: 01/16/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6045b385754eebfe7b754b9d213f860a199b1824
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 607903093735c1ab49886afcf292121e0b7bafb8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>手順 2: コードを記述して実行する
 

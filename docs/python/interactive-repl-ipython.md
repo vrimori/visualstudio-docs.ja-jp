@@ -1,27 +1,21 @@
 ---
-title: IPython REPL (対話型ウィンドウ) | Microsoft Docs
+title: IPython REPL (対話型ウィンドウ)
 description: Visual Studio の IPython モードの対話型ウィンドウは、対話型の並列コンピューティング機能を備えた使いやすい対話形式の開発環境です。
-ms.custom: ''
 ms.date: 07/13/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 76f34e28e35af00ed6352177a00f669b351058d1
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: a1581c9cd7cb317a50932e85bb46159c508d8522
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-ipython-in-the-interactive-window"></a>対話型ウィンドウでの IPython の使用
 

@@ -1,22 +1,19 @@
 ---
-title: "Blend におけるオブジェクト スタイルの変更 | Microsoft Docs"
-ms.custom: 
+title: Blend におけるオブジェクト スタイルの変更
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3073255564f81273fb6c6001538abf98d78766f7
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: 4ae494a82e92086cfa0e8e2a69b7f7eee022807a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>Blend におけるオブジェクト スタイルの変更
 
@@ -27,8 +24,6 @@ ms.lasthandoff: 01/25/2018
 ## <a name="brushes-modify-the-appearance-of-an-object"></a>ブラシ: オブジェクトの外観を変更する
 
 外観を変更する場合は、オブジェクトにブラシを適用します。
-
-**短いビデオを見る:** ![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [ブラシ エディター](http://www.popscreen.com/v/6A4mO/Microsoft-Expression-Blend-The-Brushes-Editor)
 
 ### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>繰り返しイメージまたはパターンでオブジェクトを塗りつぶします。
 
@@ -47,8 +42,6 @@ ms.lasthandoff: 01/25/2018
 ボタンなどのコントロールから、ビジュアル ブラシを作成します。 次の図は、ビジュアル ブラシと並べて表示されたビジュアル ブラシを示しています。
 
 ![表示ブラシ](../designers/media/fb6c90e0-153c-48fe-b563-e601beac6227.png) ![表示ブラシ (並べて表示)](../designers/media/e261b99f-7d8f-4d91-bc84-19c7beccc255.png)
-
-**短いビデオを見る:** ![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [タイル ブラシ](http://www.popscreen.com/v/6A4iM/Microsoft-Expression-Blend-Tile-Brushes)
 
 ## <a name="styles-and-templates-create-a-consistent-look-and-feel-across-controls"></a>スタイルとテンプレート: コントロール全体で一貫したルック アンド フィールを作成する
 
@@ -82,7 +75,7 @@ ms.lasthandoff: 01/25/2018
 
 > [!NOTE]
 > スタイルやテンプレートを全種類のコントロールに対して作成することはできません。 コントロールがスタイルやテンプレートをサポートしていない場合、[階層リンク] ボタンはアートボード上部に表示されません。
-> メイン ドキュメントのスコープの編集に戻るには、**[スコープを**  に戻す]![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) をクリックします。
+> メイン ドキュメントのスコープの編集に戻るには、**[スコープを戻す]** ![[スコープを戻す] アイコン](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)をクリックします。
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>コントロールにスタイルまたはテンプレートを適用する
 
@@ -92,7 +85,7 @@ ms.lasthandoff: 01/25/2018
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>コントロールの既定のスタイルまたはテンプレートを復元する
 
-コントロールを選択し、[[プロパティ]](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel) パネルで **[スタイル]** または **[テンプレート]** のプロパティの場所を探します。 **[詳細オプション]** ![](../designers/media/12e06962-5d8a-480d-a837-e06b84c545bb.png) を選択して、ショートカット メニューで **[リセット]** をクリックします。
+コントロールを選択し、[[プロパティ]](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel) パネルで **[スタイル]** または **[テンプレート]** のプロパティの場所を探します。 **[詳細オプション]** を選択して、ショートカット メニューで **[リセット]** をクリックします。
 
 ## <a name="visual-states-change-the-appearance-of-a-control-based-on-its-state"></a>表示状態: コントロールの状態に基づき、コントロールの外観を変更する
 
@@ -102,14 +95,12 @@ ms.lasthandoff: 01/25/2018
 
 **短いビデオを見る:** ![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF コントロールの状態を管理する](https://www.youtube.com/watch?v=m0PlkF5i6uw)
 
-##  <a name="Resources"></a> リソース: 色、スタイル、テンプレートを作成し、後で再利用する
+## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>リソース: 色、スタイル、テンプレートを作成し、後で再利用する
 
 プロジェクトにあるあらゆるものをリソースに変換できます。 リソースは、 アプリケーションのさまざまな場所で再利用できるオブジェクトです。 たとえば、1 回色を作成し、リソースにしてから、その色を複数のオブジェクトに使用することができます。 これらすべてのオブジェクトの色を変更するには、単に色リソースを変更します。
 
 ![[色をリソースに変換] ボタン](../designers/media/89203705-cf66-46e0-b153-52a23cd744f7.png) ![[色リソースの作成] ダイアログ ボックス](../designers/media/6bff8b19-3cd5-41a0-bbf9-ff65532d5aae.png)
 
-**短いビデオを見る:** ![再生ボタン](../designers/media/bldadminconsoleinitialconfigicon.PNG) [リソースの簡単なタッチ](http://www.popscreen.com/v/6A4k7/Microsoft-Expression-Blend-Brief-Touch-on-Resources)
-
 ## <a name="see-also"></a>関連項目
 
-[Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Blend for Visual Studio を使用して UI を作成する](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

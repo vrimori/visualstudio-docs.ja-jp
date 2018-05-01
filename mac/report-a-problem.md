@@ -1,15 +1,16 @@
 ---
-title: "問題を報告する | Microsoft Docs"
+title: Visual Studio for Mac で問題を報告する
+description: Visual Studio for Mac を使用している間に経験した問題を指摘または報告する方法を説明します。
+ms.topic: troubleshooting
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: f391ef0b21ba6d500e88908d806ea3958c771bed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 7469399a697f5ab677f8130620685eb61c882b4a
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Visual Studio for Mac に関する問題を報告する方法
 

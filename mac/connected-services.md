@@ -1,16 +1,16 @@
 ---
-title: Visual Studio for Mac の接続済みサービス | Microsoft Docs
+title: Visual Studio for Mac の接続済みサービス
 description: Visual Studio for Mac からモバイル アプリに Azure データ ストレージ、認証、およびプッシュ通知を追加する
 ms.prod: xamarin
 ms.assetid: 41CB62FF-0F39-4CE8-8917-6A77F058719F
 author: asb3993
 ms.author: amburns
 ms.date: 04/04/2018
-ms.openlocfilehash: cff322e25e19179ae7da79585d8880ce7565936a
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 0e3cc587b2c29cab19a4a6cdeed0a4b138330726
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="connected-services-walkthrough"></a>接続済みサービスのチュートリアル
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 04/06/2018
 このチュートリアルでは、クロスプラットフォーム Xamarin.Forms ポータブル クラス ライブラリ (PCL) アプリケーションに、クラウド データ ストレージ、認証、およびプッシュ通知を提供する Azure バックエンド サービスを追加する方法を説明します。
 
 
-1.  まず、ソリューションの **[接続済みサービス]** をダブルクリックして起動し、**[Services Gallery]**\(サービス ギャラリー\) を起動します。
+1.  まず、ソリューションの **[接続済みサービス]** をダブルクリックして起動し、**[Services Gallery]** \(サービス ギャラリー\) を起動します。
   この一覧は、そのアプリケーションの種類で利用可能なすべてのサービスです。 サービス (**Azure App Service を使用したモバイル バックエンド** など) をクリックして選択します。
 
     [![Visual Studio for Mac の接続済みサービス ノード](media/connected-services-image001-sml.png "Visual Studio for Mac の接続済みサービス ノード")](media/connected-services-image001.png#lightbox)

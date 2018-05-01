@@ -1,27 +1,21 @@
 ---
-title: Python の使用、手順 4、デバッグ | Microsoft Docs
+title: Python の使用、手順 4、デバッグ
 description: Visual Studio 内での Python の使用に関する中心的なチュートリアルの手順 4 では、デバッガーでの Python コードの実行方法について説明します。
-ms.custom: mvc
 ms.date: 03/08/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 49f29f310997b685369142e21cc71df8a21871cd
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: c3241adb4afdc18a8ca9a6d4c75f0ee8c80be7b7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
 

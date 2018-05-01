@@ -1,13 +1,10 @@
 ---
 title: ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する | Microsoft Docs
-description: ''
+description: ファイアウォールまたはプロキシ サーバーを使用する場合に、ホワイトリストに登録したり開いたりすることがあるドメイン URL、ポート、プロトコルを確認します
 ms.custom: ''
 ms.date: 02/12/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -20,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13f9f83c89e09e07d6024b779a89b9a6c4374112
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 5a3f866410afd0ca70080dcc15b1f01b78146890
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
+
 ユーザーまたはユーザーの組織でファイアウォールやプロキシ サーバーなどのセキュリティ対策を取っている場合は、Visual Studio および Azure Services をインストールして使用するときに最適なエクスペリエンスを得るために、"ホワイトリスト" への登録をお勧めするドメイン URL および開くことをお勧めするポートおよびプロトコルがあります。
 
 * **[Visual Studio のインストール](#install-visual-studio)**: これらの表には、目的とするすべてのコンポーネントおよびワークロードにアクセスできるようにするために、ホワイトリストに登録すべきドメイン URL を示します。
@@ -34,10 +32,13 @@ ms.lasthandoff: 04/03/2018
 * **[Visual Studio および Azure Services の使用](#use-visual-studio-and-azure-services)**: この表には、目的とするすべての機能とサービスにアクセスできるようにするために、ホワイトリストに登録すべきドメイン URL と、開くべきポートおよびプロトコルを示します。
 
 ## <a name="install-visual-studio"></a>Visual Studio のインストール
+
 ### <a name="urls-to-whitelist"></a>ホワイトリストに登録すべき URL
+
 Visual Studio インストーラーによって、さまざまなドメインやダウンロード サーバーからファイルがダウンロードされます。このため、UI または配置スクリプトで信頼されているものとしてホワイトリストに登録することをお勧めするドメイン URL を次に示します。
 
 #### <a name="microsoft-domains"></a>Microsoft ドメイン
+
 | ドメイン | 目的 |
 | ------ | ------- |
 | go.microsoft.com | URL の解像度を設定する |
@@ -57,6 +58,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 |  |  | |
 
 #### <a name="non-microsoft-domains"></a>Microsoft 以外のドメイン
+
 | ドメイン | 以下のワークロードをインストールします。 |
 | ------ | ------- |
 | archive.apache.org |  JavaScript でのモバイル開発 (Cordova) |
@@ -72,7 +74,9 @@ Visual Studio インストーラーによって、さまざまなドメインや
 |  |  | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>Visual Studio および Azure Services の使用
+
 ### <a name="urls-to-whitelist-and-ports-and-protocols-to-open"></a>ホワイトリストに登録すべき URL と開くべきポートおよびプロトコル
+
 ここでは、ファイアウォールまたはプロキシ サーバーの内側で Visual Studio または Azure Services を使用するときに必要なすべてのものに確実にアクセスできるようにするために、ホワイトリストに登録すべき URL と、開くことをお勧めするポートおよびプロトコルを示します。
 
 | サービスまたはシナリオ | DNS エンドポイント | プロトコル | ポート | 説明 |
@@ -116,18 +120,21 @@ Visual Studio インストーラーによって、さまざまなドメインや
 |パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。  パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
 |||||||
 
-
 ## <a name="troubleshoot-network-related-errors"></a>ネットワーク関連のエラーをトラブルシューティングする
+
 場合によって、ファイアウォールまたはプロキシ サーバーの内側で Visual Studio をインストールし使用するときにネットワークまたはプロキシに関連するエラーが発生する場合があります。 このようなエラー メッセージの解決策の詳細については、「[Troubleshooting network-related errors when you install or use Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)」 (Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング) ページを参照してください。
 
 ## <a name="get-support"></a>サポートを受ける
+
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
+
 * [Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング](troubleshooting-network-related-errors-in-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [Visual Studio 2017 のインストール](install-visual-studio.md)

@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio の複数ファイルの項目テンプレートを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の複数ファイルの項目テンプレートを作成する | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
 - item templates, creating multi-file item templates
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f1d5b11c97b7f214a13225b5605f47e3d3a45966
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: fc494f7fa3134984ccb2330e835332fb3e711c19
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>方法 : 複数ファイルの項目テンプレートを作成する
 
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/05/2018
 
 1. 手動で単一ファイルの項目テンプレートを作成するのと同じように項目テンプレートを作成しますが、複数ファイルの項目を構成する各ファイルを組み込みます。
 
-1. .vstemplate XML ファイルで、各個別ファイルに対する `ProjectItem` 要素を追加し、この要素に `TargetFileName` 属性を追加します。 `TargetFileName` 属性の値を $fileinputname$.*FileExtension* に設定します。*FileExtension* は、テンプレートに含まれるファイルのファイル拡張子です。 例:
+1. *.vstemplate* XML ファイルで、各個別ファイルに対する `ProjectItem` 要素を追加し、この要素に `TargetFileName` 属性を追加します。 `TargetFileName` 属性の値を *$fileinputname$.FileExtension* に設定します。ここで、*FileExtension* はテンプレートに含まれるファイルのファイル拡張子です。 例:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -59,13 +57,13 @@ ms.lasthandoff: 01/05/2018
 
 1. テンプレートに組み込むファイルを選んで右クリックし、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選択します。
 
-   選択したファイルは .zip ファイルに圧縮されます。
+   選択したファイルは *.zip* ファイルに圧縮されます。
 
-1. ユーザー項目テンプレートの場所に .zip ファイルをコピーします。 既定のディレクトリは %USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates です。 詳細については、「[方法 : プロジェクト テンプレートと項目テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
+1. ユーザー項目テンプレートの場所に *.zip* ファイルをコピーします。 既定のディレクトリは、*%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates* です。 詳細については、「[方法: プロジェクト テンプレートと項目テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」を参照してください。
 
 1. Visual Studio をいったん閉じて開きなおします。
 
-1. 新しいプロジェクトを作成するか、既存のプロジェクトを開き、**[プロジェクト]** > **[新しい項目の追加...]** の順に選ぶか、**Ctrl** + **Shift** + **A** キーを押します。
+1. 新しいプロジェクトを作成するか、既存のプロジェクトを開き、**[プロジェクト]** > **[新しい項目の追加]** の順に選ぶか、**Ctrl**+**Shift**+**A** キーを押します。
 
    複数ファイルの項目テンプレートが、**[新しい項目の追加]** ダイアログ ボックスに表示されます。
 
@@ -98,7 +96,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="see-also"></a>関連項目
 
-[プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)  
-[方法 : 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)  
+[プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)  
+[方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)  
 [テンプレート パラメーター](../ide/template-parameters.md)  
 [方法 : テンプレート内のパラメーターを置き換える](../ide/how-to-substitute-parameters-in-a-template.md)

@@ -1,26 +1,22 @@
 ---
-title: "プロパティ関数 | Microsoft Docs"
-ms.custom: 
+title: プロパティ関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, property functions
 ms.assetid: 2253956e-3ae0-4bdc-9d3a-4881dfae4ddb
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3bd5d35e3d996a1507a5ce14d40fbb59c24cbdb
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 62b214e5ceefa691787b9dee2a5b3332c6fcbee6
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="property-functions"></a>プロパティ関数
 .NET Framework のバージョン 4 と 4.5 では、プロパティ関数を使用して MSBuild スクリプトを評価できます。 プロパティ関数は、プロパティが表示される場所ならどこでも使用できます。 タスクとは異なり、プロパティ関数はターゲットの外側でも使用でき、ターゲットが実行される前に評価されます。  
@@ -107,6 +103,10 @@ ms.lasthandoff: 03/17/2018
 -   System.TimeSpan  
 
 -   System.Text.RegularExpressions.Regex  
+
+-   System.UriBuilder
+
+-   System.Version
 
 -   Microsoft.Build.Utilities.ToolLocationHelper  
 
