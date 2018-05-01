@@ -1,13 +1,8 @@
 ---
-title: プロジェクト内の参照の管理 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/26/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: プロジェクト内の参照の管理
+ms.date: 04/11/2018
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.ProjectPropertiesReferencePaths
 - cs.ProjectPropertiesReferencePaths
@@ -24,24 +19,24 @@ helpviewer_keywords:
 - objects [Visual Studio], referencing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ede31cadef7048b2f75ca652efea9b01716351e
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: ef62d3ab0436ff8b20766f2ffe88506d73c8f03b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="managing-references-in-a-project"></a>プロジェクト内の参照の管理
+# <a name="manage-references-in-a-project"></a>プロジェクト内の参照の管理
 
 外部コンポーネントまたは接続しているサービスを使用するためにコードを記述する前に、あらかじめプロジェクトにそのコンポーネントへの参照を追加しておく必要があります。 参照は、本質的には、Visual Studio がコンポーネントまたはサービスを検索するために必要な情報を含むプロジェクト ファイル内のエントリです。
 
-参照を追加するには、ソリューション エクスプローラーで参照ノードを右クリックして **[参照の追加]**を選択します。 詳細については、「 [方法: 参照マネージャーを使用して参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)」を参照してください。
+**参照**または**依存関係**を追加するには、**ソリューション エクスプローラー**で参照ノードを右クリックして **[参照の追加]** を選択します。 あるいは、プロジェクト ノードを右クリックし、**[追加]** > **[参照]** の順に選択します。 詳細については、[参照を追加または削除する方法](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)に関するページを参照してください。
 
-![Visual C&#43;&#43; での参照の追加](../ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")
+![Visual C++ での参照の追加](../ide/media/vs2015_cpp_add_reference.png)
 
-参照は、次の種類のコンポーネントとサービスに対して行うことができます。
+参照は、次の種類のコンポーネントとサービスに追加できます。
 
 - .NET Framework クラス ライブラリまたはアセンブリ
 
@@ -81,11 +76,11 @@ Visual Basic、C#、C++、JavaScript の各ユニバーサル Windows プラッ�
 
 1. Visual Studio を再起動し、アプリを開きます。
 
-1. エラーの原因となったプロジェクト内の **[参照]** ノードを右クリックして **[参照の追加]** を選択します。
+1. エラーの原因となったプロジェクト内の **[参照]** または **[依存関係]** ノードを右クリックして **[参照の追加]** を選択します。
 
-1. **[Windows]** タブをクリックし、**[拡張機能]** サブタブをクリックしてから、以前の拡張 SDK に対応するチェック ボックスをオフにし、新しい拡張 SDK に対応するチェック ボックスをオンにします。 **[OK]**をクリックします。
+1. **[Windows]** タブをクリックし、**[拡張機能]** サブタブをクリックしてから、以前の拡張 SDK に対応するチェック ボックスをオフにし、新しい拡張 SDK に対応するチェック ボックスをオンにします。 **[OK]** をクリックします。
 
-## <a name="adding-a-reference-at-design-time"></a>デザイン時の参照の追加
+## <a name="add-a-reference-at-design-time"></a>デザイン時の参照の追加
 
 プロジェクトでアセンブリを参照すると、Visual Studio は次の場所でアセンブリを検索します。
 
@@ -94,7 +89,9 @@ Visual Basic、C#、C++、JavaScript の各ユニバーサル Windows プラッ�
 - 同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[プロジェクト]** タブに表示されます。
 
 > [!NOTE]
-> すべてのプロジェクトには、mscorlib への暗黙的な参照が含まれます。 Visual Basic プロジェクトには、 `Microsoft.VisualBasic`への暗黙的な参照が含まれます。 `System.Core` が参照のリストから削除された場合でも、すべてのプロジェクトに `System.Core` への暗黙的な参照が含まれます。
+> - すべてのプロジェクトには、mscorlib への暗黙的な参照が含まれます。
+> - `System.Core` が参照のリストから削除された場合でも、すべてのプロジェクトに `System.Core` への暗黙的な参照が含まれます。
+> - Visual Basic プロジェクトには、 `Microsoft.VisualBasic`への暗黙的な参照が含まれます。
 
 ## <a name="references-to-shared-components-at-run-time"></a>実行時の共有コンポーネントへの参照
 
@@ -104,9 +101,9 @@ GAC に登録されているカスタム コンポーネントへの参照を含
 
 アセンブリまたはコンポーネントがグローバル アセンブリ キャッシュまたはフレームワーク コンポーネントである場合、既定では、 <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> プロパティは **False** に設定されます。 それ以外の場合、値は **True**に設定されます。 プロジェクト間参照は、常に **True**に設定されます。
 
-## <a name="referencing-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>異なるバージョンの .NET Framework を対象とするプロジェクトまたはアセンブリへの参照
+## <a name="reference-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>異なるバージョンの .NET Framework を対象とするプロジェクトまたはアセンブリを参照する
 
-異なるバージョンの .NET Framework を対象にしたプロジェクトまたはアセンブリを参照するアプリケーションを作成できます。 たとえば、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] を対象とするアプリケーションを作成し、そのアプリケーションで [!INCLUDE[dnprdnext](../ide/includes/dnprdnext_md.md)] を対象とするアセンブリを参照できます。 旧バージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を対象とするプロジェクトを作成した場合は、そのプロジェクト内で、それより新しいバージョンを対象とするプロジェクトまたはアセンブリを参照することはできません。
+異なるバージョンの .NET Framework を対象にしたプロジェクトまたはアセンブリを参照するアプリケーションを作成できます。 たとえば、.NET Framework 4.6 を対象とするアプリケーションを作成し、そのアプリケーションで .NET Framework 4.5 を対象とするアセンブリを参照できます。 旧バージョンの .NET Framework を対象とするプロジェクトを作成した場合は、そのプロジェクト内で、それより新しいバージョンを対象とするプロジェクトまたはアセンブリを参照することはできません。
 
 詳細については、[マルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)に関するページを参照してください。
 
@@ -125,5 +122,5 @@ GAC に登録されているカスタム コンポーネントへの参照を含
 
 ## <a name="see-also"></a>関連項目
 
-[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)
-[方法: 参照マネージャーを使用して参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)
+- [壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)
+- [方法: 参照を追加または削除する](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

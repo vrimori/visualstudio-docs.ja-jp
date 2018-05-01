@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での EditorConfig の .NET コーディング規則の設定 | Microsoft Docs
 ms.date: 02/28/2018
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - formatting conventions [EditorConfig]
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e69d7e291d1b13a5205aa4798c78c6a4e337db50
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: b313271e29bba660af1aa48654bfdfefb81e39f1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -113,13 +113,13 @@ none または silent | このルールに違反した場合、ユーザーに�
 
 このセクションのスタイル ルールは、C# および Visual Basic の両方に適用されます。 優先するプログラミング言語のコード例を表示するには、ブラウザー ウィンドウの右上隅にあるドロップダウンの **[言語]** メニューでそれを選択します。
 
-#### <a name="this_and_me">"This."と "Me." 修飾子</a>
+#### <a name="this_and_me"></a>"This." 修飾子 と "Me." 修飾子
 
 このスタイル ルール (ルール ID IDE0003 および IDE0009) は、フィールド、プロパティ、メソッド、またはイベントに適用できます。 **true** の値は、C# では `this.`、Visual Basic では `Me.` をコード記号の前に付けることを意味します。 **false** の値は、`this.` や `Me.` をコード要素の前に_付けない_ ことを意味します。
 
 次の表に、ルール名、適用可能なプログラミング言語、および既定値を示します。
 
-| ルール名 | 適用可能な言語 | Visual Studio の既定値 |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 |
 | ----------- | -------------------- | ----------------------|
 | dotnet_style_qualification_for_field | C# および Visual Basic | false:なし |
 | dotnet_style_qualification_for_property | C# および Visual Basic | false:なし |
@@ -218,7 +218,7 @@ AddHandler Me.Elapsed, AddressOf Handler
 AddHandler Elapsed, AddressOf Handler
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -229,13 +229,13 @@ dotnet_style_qualification_for_method = false:suggestion
 dotnet_style_qualification_for_event = false:suggestion
 ```
 
-#### <a name="language_keywords">型参照のためのフレームワーク型名の代わりの言語キーワード</a>
+#### <a name="language_keywords"></a>型参照のためのフレームワーク型名の代わりの言語キーワード
 
 このスタイル ルールは、ローカル変数、メソッド パラメーター、およびクラス メンバーに適用できます。また、型メンバー アクセス式に別個のルールとして適用できます。 **true** の値は、型を表すキーワードを持つ型に対して、型名 (`Int32` など) の代わりに言語キーワード (`int` や `Integer` など) を使用することを意味します。 **false** の値は、言語キーワードの代わりに型名を使用することを意味します。
 
 次の表に、ルール名、ルール ID、適用可能なプログラミング言語、および既定値を示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
 | dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
 | dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし |
@@ -286,7 +286,7 @@ Dim local = Integer.MaxValue
 Dim local = Int32.MaxValue
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -295,13 +295,13 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ```
 
-#### <a name="normalize_modifiers">修飾子の基本設定</a>
+#### <a name="normalize_modifiers"></a>修飾子の基本設定
 
 このセクションのスタイル ルールは、アクセシビリティ修飾子を必要とする、必要な修飾子の並べ替え順序を指定するなど、修飾子の基本設定に関するものです。
 
 次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
 | dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
@@ -363,7 +363,7 @@ Public Class MyClass
 End Class
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -379,13 +379,13 @@ csharp_preferred_modifier_order = public,private,protected,internal,static,exter
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
 ```
 
-#### <a name="expression_level">式レベル基本設定</a>
+#### <a name="expression_level"></a>式レベル基本設定
 
 このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的または推論されたタプル名、推定された匿名型が含まれます。
 
 次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ---- |
 | dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:提案 | 最初のリリース |
 | dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 | 最初のリリース |
@@ -505,7 +505,7 @@ var anon = new { age = age, name = name };
 
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -517,13 +517,13 @@ dotnet_style_prefer_inferred_tuple_names = true:suggestion
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 ```
 
-#### <a name="null_checking">"Null" 検査設定</a>
+#### <a name="null_checking"></a>"Null" 検査設定
 
 このセクションのスタイル ルールは、null 検査設定が関係します。
 
 次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ---- |
 | dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 | 最初のリリース |
 | dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 | 最初のリリース |
@@ -578,7 +578,7 @@ Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
 
-これらのルールは、次のように .editorconfig ファイルに表示されます。
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -591,13 +591,13 @@ dotnet_style_null_propagation = true:suggestion
 
 このセクションのスタイル ルールは、C# のみに適用されます。
 
-#### <a name="var">暗黙的な型と明示的な型</a>
+#### <a name="var"></a>暗黙的な型と明示的な型
 
 このセクションのスタイル ルール (ルール ID IDE0007 および IDE0008) は、変数宣言での [var](/dotnet/csharp/language-reference/keywords/var) キーワードと明示的な型の使用に関するものです。 このルールは、ビルトイン型、型が明らかな場合、および他の場所に個別に適用できます。
 
 次の表に、ルール名、適用可能なプログラミング言語、および既定値を示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 |
 | ----------- | -------------------- | ----------------------|
 | csharp_style_var_for_built_in_types | C# | true:なし |
 | csharp_style_var_when_type_is_apparent | C# | true:なし |
@@ -648,7 +648,7 @@ var f = this.Init();
 bool f = this.Init();
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -658,13 +658,13 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
 ```
 
-#### <a name="expression_bodied_members">式形式のメンバー</a>
+#### <a name="expression_bodied_members"></a>式形式のメンバー
 
 このセクションのスタイル ルールは、ロジックが単一の式で構成される場合の[式形式のメンバー](/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)の使用に関するものです。 このルールは、メソッド、コンストラクター、演算子、プロパティ、インデクサー、およびアクセサーに適用できます。
 
 次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
 | csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | false:なし | 15.3 |
 | csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | false:なし | 15.3 |
@@ -795,7 +795,7 @@ public int Age { get => _age; set => _age = value; }
 public int Age { get { return _age; } set { _age = value; } }
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -808,13 +808,13 @@ csharp_style_expression_bodied_indexers = true:suggestion
 csharp_style_expression_bodied_accessors = true:suggestion
 ```
 
-#### <a name="pattern_matching">パターン マッチング</a>
+#### <a name="pattern_matching"></a>パターン マッチング
 
 このセクションのスタイル ルールは、C# での[パターン マッチング](/dotnet/csharp/pattern-matching)の使用に関するものです。
 
 次の表に、ルール名、ルール ID、適用可能な言語バージョン、および既定値を示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
 | csharp_style_pattern_matching_over_is_with_cast_check | IDE0020 | C# 7.0+ | true:提案 |
 | csharp_style_pattern_matching_over_as_with_null_check | IDE0019 | C# 7.0+ | true:提案 |
@@ -850,7 +850,7 @@ var s = o as string;
 if (s != null) {...}
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -859,13 +859,13 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-#### <a name="inlined_variable_declarations">インライン変数宣言</a>
+#### <a name="inlined_variable_declarations"></a>インライン変数宣言
 
 このスタイル ルールは、`out` 変数がインラインで宣言されるかどうかに関するものです。 C# 7 以降では、別の変数宣言内ではなく、[メソッド呼び出しの引数リスト内で out 変数を宣言](/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument)できます。
 
 次の表に、ルール名、ルール ID、適用可能な言語バージョン、および既定値を示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | -------- | -------------------- | ----------------------|
 | csharp_style_inlined_variable_declaration | IDE0018 | C# 7.0+ | true:提案 |
 
@@ -885,7 +885,7 @@ int i;
 if (int.TryParse(value, out i) {...}
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -893,13 +893,13 @@ editorconfig ファイルの例:
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
-#### <a name="expression_level_csharp">式レベル基本設定</a>
+#### <a name="expression_level_csharp"></a>式レベル基本設定
 
 このセクションのスタイル ルールは、[既定の式](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)、分解された変数、匿名関数よりローカル関数を使用するなど、式レベル基本設定に関するものです。
 
 次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
 | csharp_prefer_simple_default_expression | IDE0034 | C# 7.1+ | true:提案 | 15.3 |
 | csharp_style_deconstructed_variable_declaration | IDE0042 | C# 7.0+ | true:提案 | 15.5 |
@@ -967,7 +967,7 @@ fibonacci = (int n) =>
 };
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -977,13 +977,13 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 ```
 
-#### <a name="null_checking_csharp">"null" チェック設定</a>
+#### <a name="null_checking_csharp"></a>"Null" 検査設定
 
 これらのスタイル ルールは、`throw` 式または `throw` ステートメントの使用や、null チェックを実行するか、[ラムダ式](/dotnet/csharp/lambda-expressions)の呼び出し時に条件付き合体演算子 (`?.`) を使用するかなどの、`null` チェックの構文に関するものです。
 
 次の表に、ルール名、ルール ID、適用可能な言語バージョン、および既定値を示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
 | csharp_style_throw_expression | IDE0016 | C# 7.0+ | true:提案 |
 | csharp_style_conditional_delegate_call | IDE0041 | C# 6.0+ | true:提案 |
@@ -1019,7 +1019,7 @@ func?.Invoke(args);
 if (func != null) { func(args); }
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -1028,13 +1028,13 @@ csharp_style_throw_expression = true:suggestion
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-#### <a name="code_block">コード ブロック基本設定</a>
+#### <a name="code_block"></a>コード ブロック基本設定
 
 このスタイル ルールは、コード ブロックを囲む中かっこ `{ }` の使用に関するものです。
 
 次の表には、ルール名、ルール ID、適用可能な言語バージョン、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
 | csharp_prefer_braces | IDE0011 | C# | true:なし | 15.3 |
 
@@ -1053,7 +1053,7 @@ if (test) { this.Display(); }
 if (test) this.Display();
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -1101,13 +1101,13 @@ Visual Studio で使用可能な書式規則のルールを以下にリストし
 
 このセクションの書式ルールは、C# および Visual Basic に適用されます。
 
-#### <a name="usings">using の整理</a>
+#### <a name="usings"></a>using の整理
 
 この書式ルールは、他の using ディレクティブに対する System.* using ディレクティブの配置に関するものです。
 
 次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | dotnet_sort_system_directives_first |  C# および Visual Basic | true | 15.3  |
 
@@ -1130,7 +1130,7 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # .NET formatting settings:
@@ -1142,13 +1142,13 @@ dotnet_sort_system_directives_first = true
 
 このセクションの書式ルールは、C# コードにのみ適用されます。
 
-#### <a name="newline">改行オプション</a>
+#### <a name="newline"></a>改行オプション
 
 これらの書式ルールは、コードの書式を設定する場合の改行の使用に関するものです。
 
 次の表には、"改行" のルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_new_line_before_open_brace |  C# | すべて | 15.3  |
 | csharp_new_line_before_else |  C# | true | 15.3  |
@@ -1327,7 +1327,7 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1341,13 +1341,13 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="indent">インデント オプション</a>
+#### <a name="indent"></a>インデント オプション
 
 これらの書式ルールは、コードの書式を設定する場合のインデントの使用に関するものです。
 
 次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_indent_case_contents |  C# | true | 15.3  |
 | csharp_indent_switch_labels |  C# | true | 15.3  |
@@ -1476,7 +1476,7 @@ class C
 }
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1486,13 +1486,13 @@ csharp_indent_switch_labels = true
 csharp_indent_labels = flush_left
 ```
 
-#### <a name="spacing">スペース オプション</a>
+#### <a name="spacing"></a>スペース オプション
 
 これらの書式ルールは、コードの書式を設定する場合の空白文字の使用に関するものです。
 
 次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_space_after_cast |  C# | False | 15.3  |
 | csharp_space_after_keywords_in_control_flow_statements |  C# | true | 15.3  |
@@ -1585,7 +1585,7 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1597,13 +1597,13 @@ csharp_space_between_method_call_parameter_list_parentheses = true
 csharp_space_between_parentheses = control_flow_statements, type_casts
 ```
 
-#### <a name="wrapping">折り返しオプション</a>
+#### <a name="wrapping"></a>折り返しオプション
 
 これらの書式ルールは、ステートメントとコード ブロックでの 1 行と別の行の使用に関するものです。
 
 次の表には、ルール名、適用可能な言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
-| ルール名 | 該当言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_preserve_single_line_statements |  C# | true | 15.3  |
 | csharp_preserve_single_line_blocks |  C# | true | 15.3  |
@@ -1642,7 +1642,7 @@ public int MyProperty
 }
 ```
 
-editorconfig ファイルの例:
+*.editorconfig* ファイルの例:
 
 ```EditorConfig
 # CSharp formatting settings:

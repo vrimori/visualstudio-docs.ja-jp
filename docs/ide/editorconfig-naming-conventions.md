@@ -1,30 +1,28 @@
 ---
-title: "EditorConfig ファイルでの .NET の名前付け規則 | Microsoft Docs"
-ms.custom: 
+title: EditorConfig ファイルでの .NET の名前付け規則 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naming conventions [EditorConfig]
 - EditorConfig naming conventions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ca33a9dfa2eb4d0eb8250df2d99337ab4d550938
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 14b284c797add9545efdd291b06ce62b0b75cf03
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig での .NET の名前付け規則
 
-名前付け規則は、クラス、プロパティ、およびメソッドなどのコード要素の名前付けに関するものです。 たとえば、パブリック メンバーは大文字表記とする必要があること、または非同期メソッドは "Async" で終わる必要があることを指定できます。 これらの規則を適用するには、[.editorconfig ファイル](../ide/create-portable-custom-editor-options.md)にそれらを含めます。 名前付け規則違反は、規則に対して選択した重大度に応じて、エラー一覧内に表示されるか、または名前の下に修正候補として表示されます。 違反を確認するためにプロジェクトをビルドする必要はありません。
+名前付け規則は、クラス、プロパティ、およびメソッドなどのコード要素の名前付けに関するものです。 たとえば、パブリック メンバーは大文字表記とする必要があること、または非同期メソッドは "Async" で終わる必要があることを指定できます。 これらの規則を適用するには、[.editorconfig ファイル](../ide/create-portable-custom-editor-options.md)にそれらを含めます。 名前付け規則違反は、規則に対して選択した重大度に応じて、**エラー一覧**内に表示されるか、または名前の下に修正候補として表示されます。 違反を確認するためにプロジェクトをビルドする必要はありません。
 
-名前付け規則は、.editorconfig ファイル内に固有度の高いものから低いものの順に並べる必要があります。 適用可能な最初に検出されたルールのみが適用されます。
+名前付け規則は、*.editorconfig* ファイル内に固有度の高いものから低いものの順に並べる必要があります。 適用可能な最初に検出されたルールのみが適用されます。
 
 それぞれの名前付け規則については、名前付け規則を適用するシンボル、名前付けのスタイル、および規則を適用する上での重大度を、以下に示すプロパティを使用して指定する必要があります。 プロパティの順序は重要ではありません。
 
@@ -147,15 +145,15 @@ ms.lasthandoff: 03/02/2018
 ------------ | -------------
 none または silent | このスタイルに準拠していないときは、ユーザーには何も表示されません。ただし、自動生成コードは、このスタイルに従います。
 修正候補 | このスタイルに準拠していないとき、修正候補としてユーザーに表示されます (最初の 2 文字の下に点線が付きます)。 コンパイル時には影響しません。
-警告 | このスタイルに準拠していないとき、エラー一覧にコンパイラの警告が表示されます。
-エラー | このスタイルに準拠していないとき、エラー一覧にコンパイラ エラーが表示されます。
+警告 | このスタイルに準拠していないとき、**エラー一覧**にコンパイラの警告が表示されます。
+エラー | このスタイルに準拠していないとき、**エラー一覧**にコンパイラ エラーが表示されます。
 
 > [!NOTE]
-> 名前付け規則違反を確認するために、プロジェクトをビルドする必要はありません。 名前付け規則違反は、コードの編集時に、エラー一覧に表示されるか、または修正候補として表示されます。
+> 名前付け規則違反を確認するために、プロジェクトをビルドする必要はありません。 名前付け規則違反は、コードの編集時に、**エラー一覧**に表示されるか、または修正候補として表示されます。
 
 ## <a name="example"></a>例
 
-次の .editorconfig ファイルには、パブリック プロパティ、メソッド、フィールド、イベント、およびデリゲートを大文字で入力する必要があることを指定した名前付け規則が含まれています。 この名前付け規則では、コンマを使用して個々のシンボル値を区切ることにより、規則を適用する複数の種類のシンボルを指定しています。
+次の *.editorconfig* ファイルには、パブリック プロパティ、メソッド、フィールド、イベント、デリゲートを大文字で入力する必要があることを指定した名前付け規則が含まれています。 この名前付け規則では、コンマを使用して個々のシンボル値を区切ることにより、規則を適用する複数の種類のシンボルを指定しています。
 
 ```EditorConfig
 # Public members must be capitalized (public_members_must_be_capitalized)
@@ -171,7 +169,7 @@ dotnet_naming_style.first_word_upper_case_style.capitalization = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-次のスクリーン ショットでは、この名前付け規則の結果がエディターに表示されています。 2 つのパブリック変数に付けられた名前は、最初の文字が大文字になっていません。 1 つは `const`、もう 1 つは `readonly` です。 名前付け規則は *readonly* シンボルのみに適用されるので、`readonly` 変数のみに、名前付け規則の修正候補が表示されています。
+次のスクリーンショットでは、この名前付け規則の結果がエディターに表示されています。 2 つのパブリック変数に付けられた名前は、最初の文字が大文字になっていません。 1 つは `const`、もう 1 つは `readonly` です。 名前付け規則は `readonly` シンボルのみに適用されるので、`readonly` 変数のみに、名前付け規則の修正候補が表示されています。
 
 ![名前付け規則の修正候補](media/editorconfig-naming-rule-suggestion.png)
 
@@ -181,7 +179,7 @@ dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
 ```
 
-コード ファイルを閉じてから再度開いた場合、名前違反の下には修正候補が表示されるのではなく、緑色の波線が表示され、さらにエラー一覧に警告が表示されます。
+コード ファイルを閉じてから再度開いた場合、名前違反の下には修正候補が表示されるのではなく、緑色の波線が表示され、さらに**エラー一覧**に警告が表示されます。
 
 ![名前付け規則の警告](media/editorconfig-naming-rule-warning.png)
 

@@ -1,10 +1,7 @@
 ---
-title: "Visual Studio のパフォーマンスの最適化 | Microsoft Docs"
+title: Visual Studio の起動時間の短縮 | Microsoft Docs
 ms.date: 11/15/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - startup time [Visual Studio]
 - optimizing performance [Visual Studio]
@@ -12,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: d1508121-8499-4084-8eb5-fa89fa7b17d3
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.performancecenter
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 403bbfff74cfe969a26e12aeb1f4b54ef0473195
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: ab8098e52f0045c913495dce81d5005772eac836
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="optimize-visual-studio-performance"></a>Visual Studio のパフォーマンスの最適化
+# <a name="optimize-visual-studio-startup-time"></a>Visual Studio の起動時間の最適化
 
 Visual Studio は、可能な限り迅速かつ効率的に起動するように設計されています。 ただし、特定の Visual Studio の拡張機能とツール ウィンドウは、その読み込み時に起動時間に悪影響を与える可能性があります。 **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスでは、起動に時間がかかる拡張機能とツール ウィンドウの動作を制御することができます。 パフォーマンスの向上に関するより一般的なヒントについては、「[Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)」を参照してください。
 
@@ -32,17 +29,17 @@ Visual Studio は、可能な限り迅速かつ効率的に起動するように
 
 起動時間が長くならないように、Visual Studio 2017 では、_要求に応じて_読み込む方法を使用して拡張機能を読み込みます。 この動作は、Visual Studio の起動後すぐに拡張機能を開くのではなく、必要に応じて開くことを意味します。 また、前の Visual Studio セッションでツール ウィンドウが開いたままである場合、スタートアップ時間が長くなる可能性があるため、Visual Studio は起動時間に影響しないようにより合理的な方法でツール ウィンドウを開きます。
 
-Visual Studio で起動の遅延が検出されると、ポップアップ メッセージが表示され、拡張機能またはツール ウィンドウが原因で遅延が発生していることを警告します。 メッセージには **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスへのリンクが表示されます。 このダイアログ ボックスには、メニュー バーで **[ヘルプ]**、**[Visual Studio のパフォーマンスの管理]** の順に選択することでアクセスすることもできます。
+Visual Studio で起動の遅延が検出されると、ポップアップ メッセージが表示され、拡張機能またはツール ウィンドウが原因で遅延が発生していることを警告します。 メッセージには **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスへのリンクが表示されます。 このダイアログ ボックスには、メニュー バーで **[ヘルプ]** > **[Visual Studio のパフォーマンスの管理]** の順に選択することでアクセスすることもできます。
 
 ![Visual Studio のパフォーマンスの管理 - "拡張機能...によって Visual Studio の速度が遅くなっていることを検出しました。" という内容のポップアップ](../ide/media/vside_perfdialog_popup.png)
 
 ダイアログ ボックスには、起動のパフォーマンスに影響している拡張機能とツール ウィンドウが一覧されます。 起動時のパフォーマンスを向上させるために、拡張機能とツール ウィンドウの設定を変更することができます。
 
-## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a>拡張機能の設定を変更して、起動時、ソリューションの読み込み時、および入力時のパフォーマンスを向上させるには
+## <a name="a-nameextensions-to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />拡張機能の設定を変更して、起動時、ソリューションの読み込み時、および入力時のパフォーマンスを向上させるには
 
-1. メニュー バーで **[ヘルプ]**、**[Visual Studio のパフォーマンスの管理]** の順に選択して、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスを開きます。
+1. メニュー バーで **[ヘルプ]** > **[Visual Studio のパフォーマンスの管理]** の順に選択して、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスを開きます。
 
-    拡張機能が Visual Studio の起動、ソリューションの読み込み、または入力の遅延の原因となっている場合は、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスの **[拡張機能]**、**[スタートアップ]** (あるいは **[ソリューションの読み込み]** または **[入力]**) に拡張機能が表示されます。
+    拡張機能が Visual Studio の起動、ソリューションの読み込み、または入力の遅延の原因となっている場合は、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスの **[拡張機能]** > **[スタートアップ]** (あるいは **[ソリューションの読み込み]** または **[入力]**) に拡張機能が表示されます。
 
     ![Visual Studio のパフォーマンスの管理 - 拡張機能の表示](../ide/media/vside_perfdialog_extensions.png)
 
@@ -50,11 +47,11 @@ Visual Studio で起動の遅延が検出されると、ポップアップ メ�
 
 拡張機能マネージャーまたは [Visual Studio のパフォーマンスの管理] ダイアログ ボックスを使用すれば、今後のセッションでいつでも拡張機能を再度有効にすることができます。
 
-## <a name="to-change-tool-window-settings-to-improve-startup-time"></a>ツール ウィンドウの設定を変更して起動時間を向上させるには
+## <a name="a-nametool-windows-to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />ツール ウィンドウの設定を変更して起動時間を向上させるには
 
-1. メニュー バーで **[ヘルプ]**、**[Visual Studio のパフォーマンスの管理]** の順に選択して、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスを開きます。
+1. メニュー バーで **[ヘルプ]** > **[Visual Studio のパフォーマンスの管理]** の順に選択して、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスを開きます。
 
-    ツール ウィンドウが Visual Studio の起動の遅延の原因となっている場合は、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスの **[ツール ウィンドウ]**、**[スタートアップ]** にツール ウィンドウが表示されます。
+    ツール ウィンドウが Visual Studio の起動の遅延の原因となっている場合は、**[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスの **[ツール ウィンドウ]** > **[スタートアップ]** にツール ウィンドウが表示されます。
 
 2. 動作を変更するツール ウィンドウを選択します。
 
@@ -73,4 +70,6 @@ Visual Studio で起動の遅延が検出されると、ポップアップ メ�
 
 ## <a name="see-also"></a>関連項目
 
+- [Visual Studio のパフォーマンスの最適化](../ide/optimize-visual-studio-performance.md)
 - [Visual Studio のパフォーマンスのヒントとテクニック](../ide/visual-studio-performance-tips-and-tricks.md)
+- [Visual Studio ブログ - Visual Studio 2017 バージョン 15.6 でソリューションの読み込みを速くする](https://blogs.msdn.microsoft.com/visualstudio/2018/04/04/load-solutions-faster-with-visual-studio-2017-version-15-6/)

@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio でのコード生成機能 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのコード生成機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/11/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33a2d18615885fea10f3fd64077b2f9438097a7d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 83b222d0c6318b1664b28e3c0259c2ff6de9b00e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio でのコード生成機能
 
@@ -30,7 +28,7 @@ Visual Studio には、コードの生成、修正、リファクタリングに
 > [!NOTE]
 > Visual Studio の各言語サービスは独自のコード生成機能を提供するので、C# でしか使えない機能や、C# と Visual Basic の両方で使える機能があります。
 
-## <a name="see-also"></a>関連項目
+### <a name="see-also"></a>関連項目
 
 [コード スニペット](../ide/code-snippets.md)  
 [クイック アクション](../ide/quick-actions.md)  
