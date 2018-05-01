@@ -1,22 +1,24 @@
 ---
 title: Visual Studio Enterprise および Visual Studio Professional クラウド サブスクリプションの請求に関してよくあるご質問
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 3/2/2018
-Ms.topic: Get-Started-Article
-Description: Billing questions for cloud subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 7c89c562ab49ffd95af7cfce699d13aa8a639c81
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 03/02/2018
+ms.topic: Get-Started-Article
+description: クラウド サブスクリプションの請求に関する質問。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 284b448c6c5eade7e85793c2d21196b83de9fdc4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio クラウド サブスクリプションの請求に関してよくあるご質問
 必ず[クラウド サブスクリプションの特典と価格を比較](https://www.visualstudio.com/vs/pricing/)して、各 Visual Studio サブスクリプションの特典、クラウドと標準の Visual Studio サブスクリプションの比較、サブスクライバー特典の詳細などを理解してください。
+
+## <a name="general-purchasing-questions"></a>一般的な購入に関する質問
 
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-using-a-purchase-order"></a>Q: 発注書を使って Visual Studio クラウド サブスクリプションを購入することはできますか?
 A: いいえ。 すべての Visual Studio クラウド サブスクリプションは、Azure サブスクリプションを使って購入する必要があります (Azure 請求先アカウントとお考えください)。
@@ -79,7 +81,7 @@ A: Visual Studio クラウド サブスクリプションをキャンセルす�
 
 ### <a name="q-can-i-use-the-monthly-azure-credits-as-a-visual-studio-subscriber-to-buy-more-visual-studio-cloud-subscriptions"></a>Q: Visual Studio サブスクライバーとしての毎月の Azure クレジットを使って、さらに Visual Studio クラウド サブスクリプションを購入できますか?
 
-A: いいえ、[Visual Studio サブスクライバーとしての毎月の Azure クレジット](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)を、Visual Studio Marketplace での購入の支払いに使うことはできません。 Visual Studio クラウド サブスクリプションのすべての購入は、クレジット カードに課金されます。
+A: いいえ、Visual Studio サブスクライバーとしての[毎月の Azure クレジット](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)を、Visual Studio Marketplace での購入の支払いに使うことはできません。 Visual Studio クラウド サブスクリプションのすべての購入は、クレジット カードに課金されます。
 購入を行う前に、[使用制限を解除する](https://azure.microsoft.com/pricing/spending-limits/)必要があります。
 
 ### <a name="q-whats-the-difference-between-annual-and-monthly-cloud-subscriptions"></a>Q: クラウド サブスクリプションの年間プランと月間プランは何が違うのですか?

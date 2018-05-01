@@ -2,10 +2,7 @@
 title: Visual Studio エディターでの他の言語のサポートの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - syntax colorization
 - IntelliSense
@@ -15,19 +12,18 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology:
 - vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 885563b456ca27c319e8b1eafb1963e77d9d1cfa
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 8082a2d52929b8ec03d904bd365f15f143448037
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Visual Studio エディターでの他の言語のサポートの追加
 Visual Studio エディターでさまざまなコンピューター言語の読み取りと移動をサポートする方法、および Visual Studio エディターで他の言語のサポートを追加する方法について説明します。  
@@ -83,7 +79,7 @@ Visual Studio エディターでさまざまなコンピューター言語の読
 |*\Syntaxes*|文法のフォルダーです。 *Matlab.json* などの、言語に対応する文法の *.json* ファイルが含まれています。|  
 |*\Snippets*|スニペットのフォルダーです。 言語のスニペットが含まれています。|  
   
- Windows では、*%userprofile%* はパス (*c:\Users\\*\<ユーザー名>*) に解決されます。* システム上に拡張機能フォルダーが存在しない場合は、作成する必要があります。 フォルダーが既に存在する場合は、表示されません。  
+ Windows では、*%userprofile%* はパス (*c:\Users\\\<ユーザー名>*) に解決されます。 システム上に拡張機能フォルダーが存在しない場合は、作成する必要があります。 フォルダーが既に存在する場合は、表示されません。  
   
  TextMate 文法の作成方法の詳細については、「[TextMate - Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)」 (TextMate - 言語の文法の概要: HTML に埋め込みのソース コード構文の強調表示を追加する方法) と「[Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)」 (Textmate バンドルの言語の文法とカスタム テーマを作成する方法に関する注意事項) を参照してください。  
   

@@ -1,20 +1,20 @@
 ---
 title: Visual Studio でロード テストの実行設定にコンテキスト パラメーターを追加する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, run settings, context parameters
 - load tests, context parameters
 ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 03db08b701574a4e910b96c843d0f2638e71a4f7
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 0d563adc5e6b43aa5371fe08f410880a6aba0a09
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>方法: ロード テストの実行設定にコンテキスト パラメーターを追加する
 
@@ -62,9 +62,9 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
      実行設定に **[コンテキスト パラメーター]** フォルダーが既に含まれている場合は、それを右クリックして **[コンテキスト パラメーターの追加]** を選択します。
 
-4.  [プロパティ] ウィンドウで、必要に応じて、**[名前]** の値を変更 (WebServer1 など) します。 [プロパティ] ウィンドウの **[値]** を、使用するパラメーター (http://CorporateStagingWebServer など) に変更します。
+4.  [プロパティ] ウィンドウで、必要に応じて、**[名前]** の値を変更 (WebServer1 など) します。 [プロパティ] ウィンドウの **[値]** を、使用するパラメーター (http://CorporateStagingWebServer) など) に変更します。
 
-5.  (省略可能) 手順 3. ～ 5. を繰り返し、**[値]** に別の文字列 (http://CorporateProductionWebServer など) を使用します。
+5.  (省略可能) 手順 3. ～ 5. を繰り返し、**[値]** に別の文字列 (http://CorporateProductionWebServer) など) を使用します。
 
 6.  どの実行設定をアクティブにするかを選択します。 実行設定のショートカット メニューを開いて **[アクティブとして設定]** を選択します。
 

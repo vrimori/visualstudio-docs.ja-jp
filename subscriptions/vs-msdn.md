@@ -1,52 +1,27 @@
 ---
-title: "Visual Studio サブスクリプションの MSDN Magazine 特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/13/2018
-Ms.topic: Get-Started-Article
-Description: Sign up to receive the MSDN Magazine subscription included in your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: a54f23a6f9264a626660ee23eac7dc95c94acf9e
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションの MSDN Magazine 特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/13/2018
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる MSDN Magazine サブスクリプションを受け取ってサインアップします。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 590cd180c8bdf5e2fcef4d16c84350bdc1d00273
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-msdn-magazine-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの MSDN Magazine 特典
 
-## <a name="overview"></a>概要 
 実用的なソリューションから実際の問題まで、マイクロソフト テクノロジを総合的に網羅します。  サブスクリプションによっては、紙版マガジンまたはデジタル版への早期アクセスの権利があります。  
 
-## <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
-|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                                             | 印刷エディション       |  ×                                                                  |
-| Visual Studio Enterprise - 年間プラン                                               | 印刷エディション       |  ×                                                                  |
-| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
-| Visual Studio Professional Standard                                           | 印刷エディション       |  ×                                                                  |
-| Visual Studio Professional - 年間プラン                                             | 印刷エディション       |  ×                                                                  | 
-| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
-| Visual Studio Test Pro                                                        | 印刷エディション       |  ×                                                                  |
-| MSDN Platforms                                                                | 印刷エディション       |  ×                                                                  |
-| Visual Studio Dev Essentials                                                  | デジタル エディション       |  [はい]                                                               |
-| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 印刷エディション       |  ×                                                                  |
-| Visual Studio Enterprise - FTE                                                | 印刷エディション       |  ×                                                                  |
-| Visual Studio Enterprise - Microsoft Partner Network                          | 印刷エディション       |  ×                                                                  |
-| Visual Studio Professional - Microsoft Partner Network                        | デジタル エディション       |  [はい]                                                               |
-| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Premium)                                  | 印刷エディション       |  ×                                                                  |
-| Visual Studio Enterprise – BizSpark                                           | 使用できません         |                                                                    |
-| マイクロソフト認定トレーナー - Software & Services                             | デジタル エディション       |  [はい]                                                               |
-| マイクロソフト認定トレーナー - Software & Services Developer                   | 使用できません         |                                                                    |
-
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
-
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
+特典をアクティブにする手順は、選択したエディションによって異なります。  
 
 ### <a name="digital-edition"></a>デジタル エディション
 デジタル エディションは、Visual Studio Dev Essentials メンバーが使用できます。  
@@ -71,8 +46,24 @@ ms.lasthandoff: 01/29/2018
 
 5.  以上で終了です。  選んだ雑誌のバージョンにより、印刷版マガジンまたは最新オンライン バージョンへのリンクを含むメールを次の号から受け取り始めます。  それではお楽しみください。
 
-## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> |印刷エディション       |  いいえ。  新しいサブスクライバーのみが使用できます          |
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 印刷エディション                                                            |いいえ。  新しいサブスクライバーのみが使用できます         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 印刷エディション                                             |  いいえ。  新しいサブスクライバーのみが使用できます         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 印刷エディション                                              | いいえ。  新しいサブスクライバーのみが使用できます         |
+|Visual Studio Enterprise、Visual Studio Professional (月間クラウド)   | Azure |使用できません      |  N/A         |
+|Visual Studio Dev Essentials| N/A |デジタル エディション       |  [はい]|
+
+<sup>1</sup> *印刷エディション: Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、Microsoft Partner Network (Enterprise)、Imagine (Premium)。*  
+
+*デジタル エディション: MCT Software & Services、Microsoft Valued Partner (Professional)、Region Director (RD)。*
+
+*Imagine (Standard)、BizSpark、MCT Software & Services Developer は含まれません。*
+
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="support-resources"></a>サポート リソース
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。

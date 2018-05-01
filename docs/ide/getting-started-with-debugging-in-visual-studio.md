@@ -1,25 +1,21 @@
 ---
-title: "Visual Studio のデバッグの概要 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のデバッグの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e858d24a37fec49468981b44d450212ba2fa3654
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 085ea00f95124eb6ae2ed7ccc96eed692be0d649
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-debugging-in-visual-studio"></a>Visual Studio のデバッグの概要
 Visual Studio は、プロジェクトのビルドとデバッグ ツールの強力な統合セットを提供します。 このトピックでは、デバッグ UI 機能の最も基本的なセットの使用を開始する方法が説明されます。  
@@ -49,7 +45,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
  ![Visual Studio の出力とエラーの一覧](../ide/media/vs_ide_gs_debug_bad_build_error_list.PNG "Vs_ide_gs_debug_bad_build_error_list")  
 
- **[エラー一覧]** ウィンドウのエラー行をクリックし、エラーが発生した行にジャンプします。 (右上の **[クイック起動]** バーをクリックし、そこに "行番号" を入力し、Enter キーを押して、行番号をオンにします。 これは、**[オプション]** ウィンドウ エントリを表示する最も簡単な方法です。そのウィンドウで行番号をオンにすることができます。 **[クイック起動]** バーの使用について学ぶと、UI をクリックする回数を減らすことができます。)  
+ **[エラー一覧]** ウィンドウのエラー行をクリックし、エラーが発生した行にジャンプします。 (右上の **[クイック起動]** バーをクリックし、そこに "行番号" を入力し、**Enter** キーを押して、行番号をオンにします。 これは、**[オプション]** ウィンドウ エントリを表示する最も簡単な方法です。そのウィンドウで行番号をオンにすることができます。 **[クイック起動]** バーの使用について学ぶと、UI をクリックする回数を減らすことができます。)  
 
  ![Visual Studio の行番号を含むエディター](../ide/media/vs_ide_gs_debug_line_numbers.png "Vs_ide_gs_debug_line_numbers")  
 
@@ -132,7 +128,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
  変数の上に移動し、その変数に現在格納されている値と参照を確認します。 表示される値が、予期していたものと異なる場合、先行するコード行または呼び出しているコード行にバグがある可能性があります。  詳細については、[デバッガーの使用方法の詳細に関するページ](../debugger/getting-started-with-the-debugger.md)を参照してください。
 
- さらに、Visual Studio では [診断ツール] ウィンドウが表示されます。このウィンドウで、時間の経過に伴うアプリの CPU 使用率とメモリ使用量の変化を監視することができます。 後でアプリケーションの開発時に、CPU 使用量やメモリの割り当てが予想外に多くなった場合に、これらのツールを使用して調べることができます。 これを **[ウォッチ]** ウィンドウおよびブレークポイントとともに使用して、予期していなかった多量の使用の原因となっているもの、または解放されていないリソースを特定します。  詳細については、「[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)」を参照してください。
+ さらに、Visual Studio では **[診断ツール]** ウィンドウが表示されます。このウィンドウで、時間の経過に伴うアプリの CPU 使用率とメモリ使用量の変化を監視できます。 後でアプリケーションの開発時に、CPU 使用量やメモリの割り当てが予想外に多くなった場合に、これらのツールを使用して調べることができます。 これを **[ウォッチ]** ウィンドウおよびブレークポイントとともに使用して、予期していなかった多量の使用の原因となっているもの、または解放されていないリソースを特定します。  詳細については、「[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)」を参照してください。
 
 ### <a name="run-unit-tests"></a>単体テストを実行する  
  単体テストは、コードのバグに対する保護の最前線です。単体テストを正しく実行すると、コードの単一の "ユニット" (通常は 1 つの関数) がテストされるので、通常はプログラム全体をデバッグするよりもはるかに簡単です。 Visual Studio は、マネージ コードおよびネイティブ コード用の Microsoft 単体テスト フレームワークをインストールします。 単体テスト フレームワークを使用して、単体テストを作成して実行し、そのテストの結果を報告します。 変更を加えたときは単体テストを再実行し、コードが正しく機能するかテストします。 Visual Studio Enterprise Edition を使用すると、ビルドの後でテストを自動的に実行できます。  
@@ -156,6 +152,6 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
  ![Visual Studio Code 分析の警告ホバー](../ide/media/vs_ide_gs_debug_code_analysis_warning_hover.png "vs_ide_gs_debug_code_analysis_warning_hover")  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)  
  [デバッガーの使用方法の詳細](../debugger/getting-started-with-the-debugger.md)

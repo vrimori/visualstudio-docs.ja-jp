@@ -1,19 +1,19 @@
 ---
 title: CSP 向けの Visual Studio クラウド サブスクリプションの購入
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 3/15/2018
-Ms.topic: Get-Started-Article
-Description: Information for Cloud Solution Providers on how to buy and manage Visual Studio cloud subscriptions for your customers.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: e6bbaa7e84da44b53bc7cea0d0b0746e4680caf2
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 03/15/2018
+ms.topic: Get-Started-Article
+description: クラウド ソリューション プロバイダーが顧客のために Visual Studio クラウド サブスクリプションを購入および管理する方法について説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 7cffe2f8e7351a243f581918e6d31a773d4808f3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>顧客用に Visual Studio クラウド サブスクリプションを購入して管理する
 
@@ -78,7 +78,7 @@ CSP パートナー向けの Visual Studio の価格を見るには、[パート
 月および Visual Studio サブスクリプションの単位で、(特定の顧客が) 購入した 6 番目以降のユニットに 5% の割引が提供されます。 各サブスクリプション オプションに 2 つの行があるのはそのためです。 1 つの行の [Minimum Value]\(最小値\) は 0 で、これはユニット 1 から 5 が基準価格であることを示します。 もう 1 つの行の [Minimum Value]\(最小値\) は 5 で、ユニット 6 以上に適用される 5% の割引価格を示します。
 
 
-## <a name="faq"></a>FAQ
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 ### <a name="q-how-are-monthly-cloud-subscription-charges-processed"></a>Q: **月間プラン**のクラウド サブスクリプション料金はどのように処理されますか?
 A:、最初の購入時は、現在の月の残りの日数をカバーする日割り計算された数量を請求します。 たとえば、10 個の Visual Studio Professional クラウド サブスクリプション月間プランを 4 月 15 日に購入した場合、30 日の月のうち 15 日、つまり 50% が残っており、ユニットの 50% が日割り計算されるため、5 ユニット分が請求されます。 5 月 1 日およびそれ以降は毎月、ユーザーがキャンセルするまで、10 ユニット分が請求されます。
 

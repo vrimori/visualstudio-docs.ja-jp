@@ -9,11 +9,11 @@ description: 管理者がサブスクライバーにライセンスを割り当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b035f748f6d99595bc2570b54a4d6413cab72af5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 62336656e551a085c6c8753e6baea06730f49510
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assigning-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 
@@ -32,11 +32,13 @@ Visual Studio サブスクリプションに利用可能なライセンスがあ
 
     サインイン用とメール受信用に異なるメール アドレスが使われている場合は、ここでそれを入力できます。 [Different email for communication than sign-in?]\(通信用とサインイン用の電子メール アドレスが異なる\) ハイパーリンクを選びます。 
 
-    このサブスクライバーが [Visual Studio サブスクリプション ポータル](https:/my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、必ず、[ダウンロード] ボックスをオンのままにしてください。 このボックスをオフにすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。 終わったら、**[追加]** をクリックします。
+    **ダウロードへのアクセス:**  
+    このサブスクライバーが [Visual Studio サブスクリプション ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、必ず、[ダウンロード] ボックスをオンのままにしてください。 このボックスをオフにすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。 
+    
+    このサブスクライバーのオプション選択が完了したら、**[追加]** をクリックします。
 
-    ![サブスクライバーの情報を入力する](_img\assign-license-add\add-subscriber-1.png)
-
-    ![サブスクライバーの情報を入力する](_img\assign-license-add\add-subscriber-2.png)
+    ![サブスクライバー情報の入力](_img\assign-license-add\add-subscriber-1.png)
+    ![サブスクライバー情報の入力](_img\assign-license-add\add-subscriber-2.png)
 
 4.  サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
 
@@ -55,9 +57,7 @@ Visual Studio サブスクリプションに利用可能なライセンスがあ
 **問題なくアップロードできるよう、次のベスト プラクティスに従ってください**。
     - フォームのどのフィールドにもコンマが含まれていないことを確認します。
     - フォームのフィールド (ユーザー名など) の前後のスペースを削除します。
-    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名を "Maggie        May" と入力してはいけません。システムは余分なスペースを除去しません)。
-
-    ![一括追加テンプレート](_img\assign-license-add\bulk-template.png)
+    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名を "Maggie        May" と入力してはいけません。システムは余分なスペースを除去しません)。![テンプレートの一括追加](_img\assign-license-add\bulk-template.png)
 
 4.  Visual Studio サブスクリプション管理ポータルに戻り、[Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで **[参照]** をクリックします。 保存した Excel ファイルを選んで、**[OK]** をクリックします。 アップロードの進行状況が画面に表示されます。 
 

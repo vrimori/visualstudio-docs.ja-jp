@@ -1,53 +1,25 @@
 ---
-title: "今日データ サイエンスのスキルを強化するには、選択した Visual Studio サブスクリプションの DataCamp 特典を使用します。 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/12/20108
-Ms.topic: Get-Started-Article
-Description: Learn about the DataCamp training subscription included with selected Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 9ca8cc7d70b7078366d136618ac523c9133490fb
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 今日データ サイエンスのスキルを強化するには、選択した Visual Studio サブスクリプションの DataCamp 特典を使用します。 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/12/20108
+ms.topic: Get-Started-Article
+description: 一部の Visual Studio サブスクリプションに含まれる DataCamp トレーニング サブスクリプションについて説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 552e82651937be61e333f9fc07e9e47b9723b360
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
-## <a name="overview"></a>概要
 有効な Visual Studio サブスクリプションには、DataCamp へのサブスクリプションが含まれます。  DataCamp を使用すると、必要なすべてのデータ サイエンスのスキルを使い慣れたブラウザーから学習できます。 いつ、どのような内容を学習するかを選択します。 ソフトウェアのインストールも特殊なハードウェアも必要ないので、これまでよりも簡単にデータ サイエンスを学習できます。
 
 DataCamp 特典の有効期間は、Visual Studio サブスクリプションによって異なります。
-
-## <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル/プログラム                                                  | 特長               | 更新可能かどうか                                                         |
-|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                                             | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| Visual Studio Enterprise - 年間プラン                                               | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| Visual Studio Enterprise - 月間プラン                                              | 使用できません         |                                                                    |
-| Visual Studio Professional Standard                                           | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| Visual Studio Professional - 年間プラン                                             | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            | 
-| Visual Studio Professional - 月間プラン                                            | 使用できません         |                                                                    |
-| Visual Studio Test Pro                                                        | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| MSDN Platforms                                                                | 3 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| Visual Studio Dev Essentials                                                  | 2 か月              |  いいえ。 新しいサブスクライバーのみが使用できます。                            |
-| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 使用できません         |                                                                    |
-| Visual Studio Enterprise - FTE                                                | 使用できません         |                                                                    |
-| Visual Studio Enterprise - Microsoft Partner Network                          | 使用できません         |                                                                    |
-| Visual Studio Professional - Microsoft Partner Network                        | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Standard)                                 | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Premium)                                  | 使用できません         |                                                                    |
-| Visual Studio Enterprise – BizSpark                                           | 使用できません         |                                                                    |
-| マイクロソフト認定トレーナー - Software & Services                             | 使用できません         |                                                                    |
-| マイクロソフト認定トレーナー - Software & Services Developer                   | 使用できません         |                                                                    |
-
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
-
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
-
 
 ## <a name="activation-steps"></a>アクティブ化の手順  
 
@@ -61,17 +33,17 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
     ![DataCamp: 新しいアカウントの作成](_img\vs-datacamp\vs-datacamp-create-account.png)
 
-> [!NOTE]
-> アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。  
+    > [!NOTE]
+    > アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。  
 
 4. アカウントが作成されたら、ラーニング パスを選択できます。  次のオプションがあります。
     - データ サイエンス用の Learning R
     - データ サイエンス用の Learning Python を開始する
     - データ サイエンス スキルセットを開発する
 
-開始するには、選択したパスをクリックするだけです。 
+    開始するには、選択したパスをクリックするだけです。   
 
-   ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
+     ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
 
 5. 目的のパスを選択したら、目標を選択して、ラーニング パスを絞り込むことができます。  たとえば、"データ サイエンス スキルセットを開発する" パスを選択すると、次のオプションが表示されます。 オプションを選択するか、**[I am not sure.Show me all career paths]\(わかりません。すべてのキャリア パスを表示してください\)** をクリックしてより広範なパスを作成します。 
 
@@ -86,10 +58,27 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
     ![DataCamp: 開始](_img\vs-datacamp\vs-datacamp-getting-started.png)
 
-任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスし、サインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
+任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスしてサインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
 
-## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
+## <a name="eligibility"></a>特典を受ける条件
+
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール | 3 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 3 か月                                                            |  いいえ。  新しいサブスクライバーのみが使用できます           |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用可能                                             |  いいえ。  新しいサブスクライバーのみが使用できます           |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能                                              |  いいえ。  新しいサブスクライバーのみが使用できます           |
+| Visual Studio Dev Essentials | N/A  | 2 か月 | いいえ。 新しいサブスクライバーのみが使用できます |
+| Visual Studio Enterprise (標準、年間クラウド)  | NFR<sup>1</sup> |使用できません  | N/A |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure | 使用できません | N/A |
+
+
+
+<sup>1</sup> *Not for Resale (NFR)、FTE、Microsoft Valued Partner (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、Visual Studio Industry Partner (VSIP)、Microsoft Certified Trainer、BizSpark、Imagine が含まれます*
+
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
 
 ## <a name="support-resources"></a>サポート リソース
 -  DataCamp の使用に関するヘルプが必要ですか。  以下のリソースを確認してください。

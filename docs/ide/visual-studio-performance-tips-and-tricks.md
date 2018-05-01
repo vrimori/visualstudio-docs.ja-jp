@@ -1,37 +1,31 @@
 ---
-title: "Visual Studio のパフォーマンスのヒントとテクニック | Microsoft Docs"
+title: Visual Studio のパフォーマンスのヒントとテクニック
 ms.date: 08/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- debugger
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a48166490cb48870e9e6341b0cba6dfc9f668fc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3ac89442c7f0242fca3238a32bfb60d1cb2e1b4e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
 Visual Studio のパフォーマンスの推奨事項は、まれなケースで発生する可能性があるメモリ不足の状況を想定したものです。 これらの状況では、使っていない可能性がある特定の Visual Studio の機能を最適化できます。 以下のヒントは一般的な推奨事項を意図したものではありません。
 
 > [!NOTE]
-> メモリの問題で製品の使用が困難な場合は、フィードバック ツールを使ってお知らせください。
+> メモリの問題で製品の使用が困難な場合は、[フィードバック ツール](../ide/how-to-report-a-problem-with-visual-studio-2017.md)を使ってお知らせください。
 
 ## <a name="optimize-your-environment"></a>環境を最適化する
 
-- **64 ビット OS を使う**
+- **64 ビット OS を使用する**
 
     システムを Windows の 32 ビット版から 64 ビット版にアップグレードすると、Visual Studio が使用できる仮想メモリの量が 2 GB から 4 GB に増えます。 これにより、Visual Studio は 32 ビット プロセスですが非常に大きいワークロードを処理できるようになります。
 
@@ -86,7 +80,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
 ### <a name="managed-language-services-roslyn"></a>マネージ言語サービス (Roslyn)
 
-.NET Compiler Platform ("Roslyn") のパフォーマンスに関する考慮事項については、「[Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)」(大きいソリューションでのパフォーマンスの考慮事項) をご覧ください。
+.NET Compiler Platform ("Roslyn") のパフォーマンスに関する考慮事項については、「[Performance considerations for large solutions](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)」 (大きいソリューションでのパフォーマンスの考慮事項) をご覧ください。
 
 - **完全なソリューション分析を無効にする**
 
@@ -108,7 +102,7 @@ Visual Studio のパフォーマンスの推奨事項は、まれなケースで
 
     拡張機能は Visual Studio に追加された追加ソフトウェア コンポーネントであり、新しい機能を提供したり、既存の機能を拡張したりします。 拡張機能がメモリ リソースの問題の原因になることがよくあります。 メモリ リソースの問題が発生する場合は、一度に 1 つの拡張機能を無効にして、シナリオまたはワークフローに与える影響を確認します。
 
-    拡張機能を無効にするには、**[ツール] > [拡張機能と更新プログラム]** の順に選び、特定の拡張機能を無効にします。
+    拡張機能を無効にするには、**[ツール]** > **[拡張機能と更新プログラム]** の順に選択し、特定の拡張機能を無効にします。
 
 - **XAML デザイナーを無効にする**
 
@@ -128,8 +122,9 @@ CLR では、ガベージ コレクションのメモリ管理システムが使
 
 ベージ コレクションを強制するとシナリオが確実に動くようになる場合、この動作はバグである可能性があるので、Visual Studio のフィードバック ツールを使ってレポートを提出してください。
 
-CLR ガベージ コレクターについて詳しくは、「[Fundamental of Garbage Collection](/dotnet/standard/garbage-collection/fundamentals)」(ガベージ コレクションの基礎) をご覧ください。
+CLR ガベージ コレクターについては、「[ガベージ コレクションの基礎](/dotnet/standard/garbage-collection/fundamentals)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio IDE](../ide/visual-studio-ide.md)
+- [Visual Studio のパフォーマンスの最適化](../ide/optimize-visual-studio-performance.md)
+- [Visual Studio ブログ - Visual Studio 2017 バージョン 15.6 でソリューションの読み込みを速くする](https://blogs.msdn.microsoft.com/visualstudio/2018/04/04/load-solutions-faster-with-visual-studio-2017-version-15-6/)

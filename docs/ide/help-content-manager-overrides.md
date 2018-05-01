@@ -1,34 +1,32 @@
 ---
-title: "ヘルプ コンテンツ マネージャーのオーバーライド | Microsoft Docs"
-ms.custom: 
+title: ヘルプ コンテンツ マネージャーのオーバーライド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 35bc6ae23fdbc89f6bdeaa57bd37d5d961d87286
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7a943724d10241b5f0d7abb236964be51c38b79c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-content-manager-overrides"></a>ヘルプ コンテンツ マネージャーのオーバーライド
 Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既定の動作を変更できます。 一部のオプションは、さまざまなレジストリ キー値を設定する [.pkgdef](https://blogs.msdn.microsoft.com/visualstudio/2009/12/18/whats-a-pkgdef-and-why/) ファイルを作成することで指定されます。 他のオプションはレジストリで直接設定されます。
 
 ## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>.pkgdef ファイルを使用してヘルプ ビューアーの動作を制御する方法
 
-1. 最初の行に `[$RootKey$\Help]` として .pkgdef ファイルを作成します。
+1. 最初の行に `[$RootKey$\Help]` として *.pkgdef* ファイルを作成します。
 
 2. 次の表で説明するレジストリ キー値のいずれかまたはすべてを別の行に追加します。例: `“UseOnlineHelp”=dword:00000001`
 
-3. ファイルを %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<エディション\>\Common7\IDE\CommonExtensions にコピーします。
+3. ファイルを *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<エディション\>\Common7\IDE\CommonExtensions* にコピーします。
 
 4. 開発者コマンド プロンプトで `devenv /updateconfiguration` を実行します。
 
@@ -39,7 +37,7 @@ Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既�
 |UseOnlineHelp|dword|ローカルのヘルプを指定するには `0`、オンライン ヘルプを指定するには `1`|オンライン ヘルプまたはオフライン ヘルプの既定を定義する|
 |OnlineBaseUrl|string|\<サービス エンドポイントの http URL\>|一意の F1 エンドポイントを定義する|
 |OnlineHelpPreferenceDisabled|dword|オンライン ヘルプの設定オプションを有効にするには `0`、無効にするには `1`|オンライン ヘルプの設定オプションを無効にする|
-|DisableManageContent|dword|ヘルプ ビューアーの **[コンテンツの管理]** タブを有効にするには`0`、無効にするには `1`|[コンテンツの管理] タブを無効にする|
+|DisableManageContent|dword|ヘルプ ビューアーの **[コンテンツの管理]** タブを有効にするには`0`、無効にするには `1`|**[コンテンツの管理]** タブを無効にする|
 |DisableFirstRunHelpSelection|dword|Visual Studio を初めて起動する際に構成されるヘルプ機能を有効にするには `0`、無効にするには `1`|Visual Studio を初めて起動する際にコンテンツのインストールを無効にする|
 
 ### <a name="example-pkgdef-file-contents"></a>.pkgdef ファイルの内容の例
