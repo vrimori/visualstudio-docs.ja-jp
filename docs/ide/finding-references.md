@@ -1,29 +1,28 @@
 ---
-title: "コード内の参照の検索 | Microsoft Docs"
-ms.custom: 
+title: コード内の参照の検索 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - code editor, find all references
 - find all references
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 92c12e4d51255849843f938c032ca17b611eeeab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c59a73fd0ffa23dd35d989a0fd0a0ae38b2419a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="finding-references-in-your-code"></a>コード内の参照の検索  
 **[すべての参照の検索]** コマンドを使用して、コードベース全体で特定のコード要素が参照されている場所を検索することができます。 **[すべての参照の検索]** コマンドは、参照を検索する要素のコンテキスト (右クリック) メニューで使用できます。 キーボードを使用する場合は、**Shift + F12** キーを押します。  
 
-結果が **'*element*' references** というツール ウィンドウに表示されます。ここで、*element* は検索対象の項目の名前です。 **references** ウィンドウのツール バーを使用して、次のことを行うことができます。  
+結果が **<element> references** というツール ウィンドウに表示されます。ここで、*element* は検索対象の項目の名前です。 **references** ウィンドウのツール バーを使用して、次のことを行うことができます。  
 - ドロップダウン リスト ボックスで検索の範囲を変更します。 ソリューション全体で変更されたドキュメントだけを検索対象にすることができます。  
 - 参照されている項目を選択し、**[コピー]** ボタンを選択してコピーします。  
 - 前または次の場所に移動するボタンを一覧から選択するか、**F8** キーおよび **Shift + F8** キーを押します。  
@@ -36,15 +35,15 @@ ms.lasthandoff: 12/22/2017
 
 ![[すべての参照の検索] ツール ウィンドウ](../ide/media/vside_findallreferences.png)  
 
-### <a name="navigate-to-references"></a>参照への移動
+## <a name="navigate-to-references"></a>参照への移動
 **references** ウィンドウでは、次の方法を使用して参照に移動できます。  
 
 - **F8** キーを押して次の参照に移動するか、**Shift + F8** キーを押して前の参照に移動します。  
 - 参照で **Enter** キーを押すか、参照をダブルクリックして、コード内のその参照に移動します。  
 - 参照のコンテキスト メニューで、**[前の場所へ移動]** または **[次の場所へ移動]** コマンドを選択します。  
-- **上方向**キーおよび**下方向**キー ([オプション] ダイアログ ボックスで有効になっている場合) を選択します。 この機能を有効にするには、メニュー バーの **[ツール]**、**[オプション]**、**[環境]**、**[タブとウィンドウ]**、**[プレビュー] タブ**の順に選択し、**[[プレビュー] タブで新しいファイルを開くことを許可する]** ボックスと **[検索結果で選択されたファイルをプレビューする]** ボックスをオンにします。  
+- **上方向**キーと**下方向**キー (**[オプション]** ダイアログ ボックスで有効になっている場合) を選択します。 この機能を有効にするには、メニュー バーの **[ツール]**、**[オプション]**、**[環境]**、**[タブとウィンドウ]**、**[プレビュー]** タブの順に選択し、**[[プレビュー] タブで新しいファイルを開くことを許可する]** ボックスと **[検索結果で選択されたファイルをプレビューする]** ボックスをオンにします。  
 
-### <a name="change-reference-groupings"></a>参照のグループ化の変更  
+## <a name="change-reference-groupings"></a>参照のグループ化の変更  
 既定では、参照はまずプロジェクトによってグループ化され、次に定義によってグループ化されます。 ただし、ツール バーの **[グループ化]** ドロップダウン リスト ボックスで設定を変更すると、このグループ化の順序を変更できます。 たとえば、既定の設定である **[プロジェクト、その次に定義]** から **[定義、その次にプロジェクト]** に、またはその他の設定に変更できます。  
 
 **[定義]** と **[プロジェクト]** の 2 つが既定のグループ化として使用されますが、選択した項目のコンテキスト メニューで **[グループ化]** コマンドを選択して、その他のグループ化を追加できます。 ソリューションのファイルとパスが多い場合は、その他のグループ化を追加すると便利です。  

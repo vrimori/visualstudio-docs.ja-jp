@@ -1,23 +1,20 @@
 ---
-title: "CodeLens によるコード変更とその他の履歴の検索 | Microsoft Docs"
-ms.custom: 
+title: CodeLens によるコード変更とその他の履歴の検索 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1123d1c557f6e7f01eb98e668b4f13785ee6893
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 1e20081320109e5334360d0cc1f38b187f05d574
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 01/29/2018
 
 ![CodeLens - チームに連絡する](../ide/media/codelensovervew2.png "CodeLensOvervew2")  
 
-表示するインジケーターを選択するか、CodeLens のオンとオフを切り替えるには、 **[ツール]**、 **[オプション]**、 **[テキスト エディター]**、 **[すべての言語]**、 **[CodeLens]**の順に移動します。  
+表示するインジケーターを選択するか、CodeLens のオンとオフを切り替えるには、**[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に移動します。  
 
 ## <a name="FindReferences"></a> コード参照の検索
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/29/2018
 
 -  C# または Visual Basic コード
 
-**参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、XAML ファイル、ASPX ファイルなどの他の項目からの参照は含まれません。
+**参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、**.xaml** ファイルや **.aspx** ファイルなどの他の項目からの参照は含まれません。
 
 ![CodeLens - 参照インジケーターを選択する](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
 
@@ -90,11 +87,11 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、 [TFSConfig コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd) および [/indexHistoryPeriod](../ide/codeindex-command.md) フラグを指定した **CodeIndex コマンド** を実行することにより、この制限を変更できます。
 
-1 年以上前のものを含む、すべての変更の詳細な履歴を表示するには、 **[すべてのファイルの変更を表示する]**を選択します。  
+1 年以上前のものを含む、すべての変更の詳細な履歴を表示するには、 **[すべてのファイルの変更を表示する]** を選択します。  
 
 ![すべてのコード変更を表示する](../ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
 
-これで、変更セットの [履歴] ウィンドウが開きます。  
+これで、変更セットの **[履歴]** ウィンドウが開きます。  
 
 ![すべてのコード変更の履歴ウィンドウ](../ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
 
@@ -191,7 +188,7 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 ##  <a name="FindRunUnitTests"></a> コードの単体テストの検索
 
-テスト エクスプ ローラーを開くことなく、ご使用のコード向けに存在する単体テストの詳細を確認します。 要件:  
+**テスト エクスプローラー**を開くことなく、ご使用のコード向けに存在する単体テストの詳細を確認します。 要件:  
 
 -   Visual Studio Enterprise または Visual Studio Professional  
   
@@ -223,7 +220,7 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 ###  <a name="ChangeOrTurnOff"></a> Q: CodeLens を無効または有効にする方法を教えてください。 表示するインジケーターの選択方法も教えてください。
 
-**A:**  参照インジケーター以外のインジケーターは無効にも有効にもできます。 **[ツール]**、 **[オプション]**、 **[テキスト エディター]**、 **[すべての言語]**、 **[CodeLens]**の順に移動します。  
+**A:**  参照インジケーター以外のインジケーターは無効にも有効にもできます。 **[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に進みます。  
   
  インジケーターが有効の場合は、インジケーターから CodeLens のオプションを開くこともできます。  
   
@@ -237,7 +234,7 @@ C# コードまたは Visual Basic コードを変更したユーザー、およ
 
 **A:** CodeLens は、メソッド、クラス、インデクサー、およびプロパティ レベルの C# および Visual Basic のコードで表示されます。 それ以外の種類のファイルについては、ファイル レベルで CodeLens が表示されます。
 
-- CodeLens が有効になっていることを確認します。 **[ツール]**、 **[オプション]**、 **[テキスト エディター]**、 **[すべての言語]**、 **[CodeLens]**の順に移動します。  
+- CodeLens が有効になっていることを確認します。 **[ツール]**、 **[オプション]**、 **[テキスト エディター]**、 **[すべての言語]**、 **[CodeLens]** の順に移動します。  
 
 - コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd)を使用することによって、コード インデックス作成が有効になっていることを確認します。
 
@@ -265,7 +262,7 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 ### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Q: CodeLens のフォントと色を変更するにはどうすればよいですか。
 
-**A:** **[ツール]**、 **[オプション]**、 **[環境]**、 **[フォントおよび色]**の順に選択します。  
+**A:** **[ツール]**、**[オプション]**、**[環境]**、**[フォントおよび色]** の順に進みます。  
 
 ![CodeLens - フォントおよび色の設定の変更](../ide/media/codelensoptionsfontscolorssettings.png "CodeLensOptionsFontsColorsSettings")  
 
@@ -275,9 +272,9 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 2.  **上方向** キーまたは **下方向** キーを押して **[環境]** ノードに移動するか、 **左方向** キーを押してノードを展開します。  
 
-3.  **下方向** キーを押して **[フォントおよび色]**に移動します。  
+3.  **下方向** キーを押して **[フォントおよび色]** に移動します。  
 
-4.  **Tab** キーを押して **[設定の表示]** の一覧に移動し、 **下方向** キーを押して **[CodeLens]**を選択します。  
+4.  **Tab** キーを押して **[設定の表示]** の一覧に移動し、**下方向**キーを押して **[CodeLens]** を選択します。  
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens ヘッドアップ ディスプレイを移動できますか。
 
