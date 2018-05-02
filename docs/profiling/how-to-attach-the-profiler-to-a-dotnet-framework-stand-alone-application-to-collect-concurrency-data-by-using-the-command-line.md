@@ -1,37 +1,20 @@
 ---
-title: "方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、同時実行データを収集する | Microsoft Docs"
-ms.custom: 
+title: '方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、同時実行データを収集する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
-caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e868a344d9b5c068f845b2005a85aaca2607140c
-ms.lasthandoff: 02/22/2017
-
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 710c0a8bbfacc0e1edca3a1852cd8b51218a5ce3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、同時実行データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、実行中の .NET Framework のスタンドアロン (クライアント) アプリケーションにプロファイラーをアタッチし、プロセスとスレッドの同時実行データを収集する方法について説明します。  
@@ -63,17 +46,17 @@ ms.lasthandoff: 02/22/2017
   
 3.  一般的な方法で対象のアプリケーションを起動します。  
   
-4.  プロファイラーを対象のアプリケーションにアタッチします。 種類:  
+4.  プロファイラーを対象のアプリケーションにアタッチします。 型:  
   
-     **VSPerfCmd /attach:** `PID` [**/lineoff**] [**/targetclr:**`Version`]  
+     **VSPerfCmd /attach:** `PID` **[/lineoff]** [**/targetclr:**`Version`]  
   
     -   `PID` には、対象アプリケーションのプロセス ID を指定します。 Windows タスク マネージャーで、実行中のすべてのプロセスのプロセス ID を参照できます。  
   
     -   [/lineoff](../profiling/lineoff.md) を指定すると、行番号データの収集が無効になります。  
   
-    -   [/targetclr](../profiling/targetclr.md) **:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 省略可能です。  
+    -   [/targetclr](../profiling/targetclr.md) **:** `Version` には、アプリケーションに複数のバージョンのランタイムが読み込まれている場合に、プロファイリングを行う共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 任意。  
   
-## <a name="controlling-data-collection"></a>データ収集の制御  
+## <a name="controlling-data-collection"></a>データ コレクションの制御  
  対象アプリケーションの実行中は、VSPerfCmd.exe のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ収集を制御することにより、アプリケーションの起動や終了など、プログラム実行の特定の部分についてのデータ収集を行うことができます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
@@ -95,10 +78,10 @@ ms.lasthandoff: 02/22/2017
   
     -   **VSPerfCmd /detach** と入力します  
   
-         または  
+         - または -  
   
     -   対象アプリケーションを終了します。  
   
-2.  プロファイラーをシャットダウンします。 種類:  
+2.  プロファイラーをシャットダウンします。 型:  
   
      VSPerfCmd[/shutdown](../profiling/shutdown.md)

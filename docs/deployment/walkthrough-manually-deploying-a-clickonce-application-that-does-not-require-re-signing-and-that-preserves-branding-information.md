@@ -1,165 +1,163 @@
 ---
-title: "チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "商標"
-  - "ClickOnce アプリケーション, 配置 (他のユーザーによる)"
-  - "ClickOnce 配置, 手動"
-  - "ClickOnce 配置, SDK ツール"
-  - "顧客配置"
-  - "マニフェスト [ClickOnce]"
-  - "ClickOnce の手動配置"
-  - "複数の ClickOnce 配置と商標"
-  - "保持される商標"
+title: 'チュートリアル: 再署名が不要で商標を保持する ClickOnce アプリケーションを手動で展開する |Microsoft ドキュメント'
+ms.custom: ''
+ms.date: 11/04/2016
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- branding
+- preserved branding information
+- ClickOnce deployment, manually
+- multiple ClickOnce deployment and branding
+- ClickOnce deployment, SDK tools
+- customer deployments
+- manual ClickOnce deployments
+- manifests [ClickOnce]
+- ClickOnce applications, deployed by others
 ms.assetid: c21822fb-d4ee-42e4-b72d-41ee9786efe5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cb4838e44549f762e609913c92d677832d897edb
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/19/2018
 ---
-# チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成し、顧客に提供して発行および配置する場合、従来は顧客が配置マニフェストを更新して再署名する必要がありました。ほとんどの場合はこの方法が適していることに変わりありませんが、.NET Framework 3.5 では、顧客が新しい配置マニフェストを再生成しなくても配置できる [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置を作成できます。  詳細については、「[再署名を行わない ClickOnce アプリケーションの配置 \(テスト サーバーおよび運用サーバー\)](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)」を参照してください。  
+# <a name="walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置
+作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを公開する顧客に渡すと展開、顧客が従来から配置マニフェストを更新して再署名する必要があります。 ほとんどの場合に推奨される方法は引き続き、中に、.NET Framework 3.5 を作成できます[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]顧客して、新しい配置マニフェストを再生成することがなく展開することを展開します。 詳細については、次を参照してください。 [ClickOnce アプリケーションのテスト用の展開および Resigning なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)です。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成し、顧客に提供して発行および配置する場合、アプリケーションは、顧客の商標を使用することも、作成者の商標を保持することもできます。  たとえば、アプリケーションが単一商標権を所有するアプリケーションである場合、作成者の商標を保持することができます。  アプリケーションが顧客ごとに大きくカスタマイズされる場合は、顧客の商標を使用できます。  .NET Framework 3.5 では、アプリケーションを組織に提供して配置するときに、作成者の商標、発行者情報、およびセキュリティ署名を保持することができます。  詳細については、「[開発者以外が配置する ClickOnce アプリケーションの作成](../deployment/creating-clickonce-applications-for-others-to-deploy.md)」を参照してください。  
+ 作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを公開する顧客に渡すと展開、アプリケーション、顧客のブランド化を使用できるまたはブランド化を保持することができます。 たとえば、アプリケーションが 1 つの専用アプリケーションの場合は、可能性があります残しておきたいブランド化します。 アプリケーションは、顧客ごとにカスタマイズされた高場合、は、お客様のブランド化を使用することができます。 .NET Framework 3.5 は、組織に展開するアプリケーションに付与すると、ブランド化を保持すること、発行者情報、およびセキュリティの署名を使用できます。 詳細については、次を参照してください。 [ClickOnce アプリケーションの作成の他のユーザーのデプロイに](../deployment/creating-clickonce-applications-for-others-to-deploy.md)です。  
   
 > [!NOTE]
->  このチュートリアルでは、コマンド ライン ツールの Mage.exe またはグラフィカル ツールの MageUI.exe を使用して配置を手動で作成します。  手動配置の詳細については、「[チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」を参照してください。  
+>  このチュートリアルで展開手動で作成するコマンド ライン ツールの Mage.exe または MageUI.exe のグラフィック ツールを使用しています。 手動による展開の詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)です。  
   
-## 必須コンポーネント  
- このチュートリアルの手順を実行するには、次のものが必要です。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このチュートリアルの手順を実行するには、次のものが必要。  
   
--   配置できる状態にある Windows フォーム アプリケーション。  このアプリケーションを、WindowsFormsApp1 と呼びます。  
+-   Windows フォーム アプリケーションを展開する準備ができたらです。 このアプリケーションは、WindowsFormsApp1 として参照されます。  
   
--   Visual Studio または Windows SDK  
+-   Visual Studio または Windows SDK。  
   
-### 複数の配置および商標をサポートする ClickOnce アプリケーションを Mage.exe を使用して配置するには  
+### <a name="to-deploy-a-clickonce-application-with-multiple-deployment-and-branding-support-using-mageexe"></a>複数の展開とブランド化のサポートが Mage.exe を使用して ClickOnce アプリケーションを展開するには  
   
-1.  Visual Studio コマンド プロンプトまたは [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] のコマンド プロンプトを開き、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] のファイルを格納するディレクトリに移動します。  
+1.  Visual Studio コマンド プロンプトを開き、または[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリへの変更、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
   
-2.  ディレクトリを作成し、配置の現在のバージョンに対応させて名前を付けます。  初めてアプリケーションを配置する場合であれば、1.0.0.0 などの名前を付けます。  
+2.  配置の現在のバージョンにちなんだ名前のディレクトリを作成します。 これが初めてアプリケーションを展開することである場合は、おそらくを選択します**1.0.0.0**です。  
   
     > [!NOTE]
-    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる場合もあります。  
+    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
   
-3.  bin サブディレクトリを作成し、実行可能ファイル、アセンブリ、リソース ファイル、データ ファイルなど、すべてのアプリケーション ファイルをこのサブディレクトリにコピーします。  
+3.  という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
   
-4.  Mage.exe を呼び出して、アプリケーション マニフェストを作成します。  
+4.  Mage.exe への呼び出しを使用してアプリケーション マニフェストを生成します。  
   
     ```  
     mage -New Application -ToFile 1.0.0.0\WindowsFormsApp1.exe.manifest -Name "Windows Forms App 1" -Version 1.0.0.0 -FromDirectory 1.0.0.0\bin -UseManifestForTrust true -Publisher "A. Datum Corporation"  
     ```  
   
-5.  自分のデジタル証明書を使用してアプリケーション マニフェストに署名します。  
+5.  デジタル証明書を使用してアプリケーション マニフェストに署名します。  
   
     ```  
     mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx  
     ```  
   
-6.  Mage.exe を呼び出して、配置マニフェストを作成します。  既定では、Mage.exe は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置を、オンラインでもオフラインでも実行できるように、インストール アプリケーションとして指定します。  ユーザーがオンラインの場合にだけアプリケーションを使用できるようにする場合は、`-i` 引数の値に `f` を指定して使用します。  このアプリケーションは複数配置機能を利用するので、Mage.exe の引数 `-providerUrl` は除外してください。  \(Version 3.5 より前のバージョンの .NET Framework では、オフライン アプリケーションの場合に `-providerUrl` を除外すると、エラーになります。\)  
+6.  Mage.exe への呼び出しで配置マニフェストを生成します。 既定では、Mage.exe ではマーク、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]が実行できるようにする両方オンラインとオフラインのインストールされているアプリケーションとして展開します。 アプリケーション使用できるようにする、ユーザーがオンラインのときにのみ、使用、`-i`引数の値を持つ`f`します。 このアプリケーションは、複数の展開機能を利用するための除外、 `-providerUrl` Mage.exe に渡す引数。 (を除くより前のバージョン 3.5、.NET Framework のバージョンで`-providerUrl`のオフラインのアプリケーションが、エラーになります)。  
   
     ```  
     mage -New Deployment -ToFile WindowsFormsApp1.application -Name "Windows Forms App 1" -Version 1.0.0.0 -AppManifest 1.0.0.0\WindowsFormsApp1.manifest   
     ```  
   
-7.  配置マニフェストに署名しないでください。  
+7.  配置マニフェストに署名しません。  
   
-8.  顧客にすべてのファイルを提供します。顧客はアプリケーションをネットワーク上に配置します。  
+8.  すべてのファイルをネットワーク上のアプリケーションを展開すると、顧客に提供します。  
   
-9. この時点で、顧客は自分で生成した証明書を使用して配置マニフェストに署名する必要があります。  たとえば、顧客が Adventure Works という会社の従業員である場合、顧客は MakeCert.exe ツールを使用して自己署名証明書を生成できます。  次に Pvk2pfx.exe ツールを使用して、MakeCert.exe によって作成されたファイルを、Mage.exe に渡すことができる PFX ファイルに結合します。  
+9. この時点では、お客様は、自分の自動生成された証明書で配置マニフェストをサインインする必要があります。 たとえば、お客様の会社 Adventure Works という名前の場合は、MakeCert.exe ツールを使用して自己署名証明書を生成彼できます。 次に、Mage.exe を渡すことができる、PFX ファイルに、MakeCert.exe によって作成されたファイルを結合するのに Pvk2pfx.exe ツールを使用します。  
   
     ```  
     makecert -r -pe -n "CN=Adventure Works" -sv MyCert.pvk MyCert.cer  
     pvk2pfx.exe -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx  
     ```  
   
-10. 次に顧客は、この証明書を使用して配置マニフェストに署名します。  
+10. お客様は、配置マニフェストの署名を次にこの証明書を使用します。  
   
     ```  
     mage -Sign WindowsFormsApp1.application -CertFile MyCert.pfx  
     ```  
   
-11. 顧客がユーザーにアプリケーションを配置します。  
+11. お客様は、ユーザーにアプリケーションを展開します。  
   
-### 複数の配置および商標をサポートする ClickOnce アプリケーションを MageUI.exe を使用して配置するには  
+### <a name="to-deploy-a-clickonce-application-with-multiple-deployment-and-branding-support-using-mageuiexe"></a>複数の展開とブランド化のサポートが MageUI.exe を使用して ClickOnce アプリケーションを展開するには  
   
-1.  Visual Studio コマンド プロンプトまたは [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] のコマンド プロンプトを開き、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] のファイルを格納するディレクトリに移動します。  
+1.  Visual Studio コマンド プロンプトを開き、または[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリに移動、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
   
-2.  bin サブディレクトリを作成し、実行可能ファイル、アセンブリ、リソース ファイル、データ ファイルなど、すべてのアプリケーション ファイルをこのサブディレクトリにコピーします。  
+2.  という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
   
-3.  サブディレクトリを作成し、配置の現在のバージョンに対応させて名前を付けます。  初めてアプリケーションを配置する場合であれば、1.0.0.0 などの名前を付けます。  
+3.  配置の現在のバージョンにちなんだ名前のサブディレクトリを作成します。 これが初めてアプリケーションを展開することである場合は、おそらくを選択します**1.0.0.0**です。  
   
     > [!NOTE]
-    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる場合もあります。  
+    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
   
-4.  \\bin ディレクトリを手順 2. で作成したディレクトリに移動します。  
+4.  移動、 \\ **bin**手順 2. で作成したディレクトリにディレクトリ。  
   
-5.  グラフィカル ツールの MageUI.exe を起動します。  
+5.  MageUI.exe のグラフィック ツールを起動します。  
   
     ```  
     MageUI.exe  
     ```  
   
-6.  **\[File\]** メニューの **\[New\]** をポイントし、**\[Application Manifest\]** をクリックして、アプリケーション マニフェストを新規作成します。  
+6.  選択して、新しいアプリケーション マニフェストを作成する**ファイル**、**新規**、 **Application Manifest**  メニューからです。  
   
-7.  既定で表示される **\[Name\]** ページで、この配置の名前およびバージョン番号を入力します。  **\[Publisher\]** の値も指定します。この値は、配置時の \[スタート\] メニューで、アプリケーションのショートカット リンクのフォルダー名として使用されます。  
+7.  既定の**名前** タブで、この展開の名前とバージョン番号を入力します。 またの値を指定**パブリッシャー**を展開すると、[スタート] メニューで、アプリケーションのショートカット リンクのフォルダー名として使用されます。  
   
-8.  **\[Application Options\]** タブをクリックし、**\[Use Application Manifest for Trust Information\]** をクリックします。  これにより、この [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションにサードパーティの商標を使用できるようになります。  
+8.  選択、**アプリケーション オプション** タブでをクリックし、**信頼情報を使用してアプリケーション マニフェスト**です。 これにより、このサード パーティ製のブランド化[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
-9. **\[Files\]** タブをクリックし、\[Application Directory\] ボックスの横の **\[Browse\]** をクリックします。  
+9. 選択、**ファイル** タブでをクリックし、**参照**アプリケーション ディレクトリ ボックスの横にあるボタンをクリックします。  
   
-10. フォルダー選択ダイアログ ボックスで、アプリケーション ファイルが格納されている、手順 2. で作成したディレクトリを選択し、**\[OK\]** をクリックします。  
+10. 手順 2. で作成したアプリケーション ファイルを含んでいるディレクトリを選択し、をクリックして**OK**フォルダーの選択 ダイアログ ボックスでします。  
   
-11. **\[Populate\]** をクリックし、アプリケーション ファイルすべてをファイル リストに追加します。  アプリケーションに実行可能ファイルが複数含まれている場合は、**\[File Type\]** ボックスの **\[Entry Point\]** をオンにして、この配置のメイン実行可能ファイルをスタートアップ アプリケーションとして指定します。  アプリケーションの実行可能ファイルが 1 つだけの場合には、そのファイルが MageUI.exe によってメイン実行可能ファイルとしてマークされます。  
+11. をクリックして、 **Populate**ファイル リストに、すべてのアプリケーション ファイルを追加するボタンをクリックします。 アプリケーションに 1 つ以上の実行可能ファイルが含まれている場合は、スタートアップ アプリケーションとしてこの展開のメインの実行可能ファイルをマーク を選択して**エントリ ポイント**から、**ファイルの種類**ドロップダウン リスト。 (場合は、アプリケーションには、1 つの実行可能ファイルのみが含まれる、MageUI.exe は対象として設定する。)  
   
-12. **\[Permissions Required\]** タブをクリックし、アプリケーションが要求する信頼のレベルを選択します。  既定値は **\[Full Trust\]** です。この設定は、ほとんどのアプリケーションに適しています。  
+12. 選択、**必要なアクセス許可**タブし、信頼をアサートするアプリケーションを作成する必要がありますのレベルを選択します。 既定値は**完全信頼**、ほとんどのアプリケーションに適したされます。  
   
-13. **\[File\]** メニューの **\[Save\]** をクリックし、アプリケーション マニフェストを保存します。  保存すると、アプリケーション マニフェストへの署名を求めるメッセージが表示されます。  
+13. 選択**ファイル**、**保存**メニューのおよびアプリケーション マニフェストを保存します。 保存すると、アプリケーション マニフェストに署名するように促されます。  
   
-14. 証明書をファイルとしてファイル システムに保存してある場合には、**\[Sign as certificate file\]** オプションの省略記号 \(**\[...\]**\) ボタンをクリックして、ファイル システム上の証明書を選択します。  
+14. 場合は、ファイル システム上のファイルとして格納されている証明書がある場合を使用して、**証明書ファイルと符号**し、省略記号ボタンを使用して、ファイル システムからの証明書の選択 (**.**) ボタンをクリックします。  
   
-     または  
+     - または -  
   
-     使用しているコンピューターからアクセスできる証明書ストアに証明書が保存されている場合には、**\[Sign with stored certificate option\]** をクリックし、表示された一覧から証明書を選択します。  
+     証明書がコンピューターからアクセス可能な証明書ストアに保持されている場合は、選択、 **stored certificate オプションを使用してサインイン**、表示された一覧から証明書を選択します。  
   
-15. **\[File\]** メニューの **\[New\]** をポイントし、**\[Deployment Manifest\]** をクリックして、配置マニフェストを作成します。次に、**\[Name\]** ページで名前とバージョン番号 \(この例の場合は、1.0.0.0\) を入力します。  
+15. 選択**ファイル**、**新規**、**配置マニフェストは**、配置マニフェストを作成するのには、メニューから、次に、**名前** タブで、指定、名前とバージョン番号 (**1.0.0.0**この例では)。  
   
-16. **\[Update\]** タブをクリックし、このアプリケーションを更新する頻度を指定します。  アプリケーションで [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置 API を使用して自動的に更新プログラムをチェックする場合には、**\[This application should check for updates\]** チェック ボックスをオフにします。  
+16. 切り替えて、**更新**タブをクリックし、このアプリケーションを更新する頻度を指定します。 アプリケーションで使用する場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Deployment API 自体は、更新プログラムのチェックをオフにチェック ボックスをオン**アプリケーションの更新プログラムを確認する必要があります**です。  
   
-17. **\[Application Reference\]** タブに移動します。  **\[Select Manifest\]** をクリックし、前の手順で作成したアプリケーション マニフェストを選択すると、このページに表示されるすべての値に初期値を入力できます。  
+17. 切り替えて、**アプリケーション参照**タブです。をクリックして、すべての値をこのタブで事前設定できる、 **マニフェスト**前の手順で作成したボタンをクリックし、アプリケーション マニフェストを選択します。  
   
-18. **\[Save\]** をクリックし、配置マニフェストをディスクに保存します。  保存すると、アプリケーション マニフェストへの署名を求めるメッセージが表示されます。  **\[Cancel\]** をクリックすると、署名なしでマニフェストが保存されます。  
+18. 選択**保存**し、配置マニフェストをディスクに保存します。 保存すると、アプリケーション マニフェストに署名するように促されます。 をクリックして**キャンセル**を署名なし、マニフェストを保存します。  
   
 19. すべてのアプリケーション ファイルを顧客に提供します。  
   
-20. この時点で、顧客は自分で生成した証明書を使用して配置マニフェストに署名する必要があります。  たとえば、顧客が Adventure Works という会社の従業員である場合、顧客は MakeCert.exe ツールを使用して自己署名証明書を生成できます。  次に Pvk2pfx.exe ツールを使用して、MakeCert.exe によって作成されたファイルを、MageUI.exe に渡すことができる PFX ファイルに結合します。  
+20. この時点では、お客様は、自分の自動生成された証明書で配置マニフェストをサインインする必要があります。 たとえば、お客様の会社 Adventure Works という名前の場合は、MakeCert.exe ツールを使用して自己署名証明書を生成彼できます。 次に、Pvk2pfx.exe ツールを使用して、MageUI.exe に渡すことができる、PFX ファイルに、MakeCert.exe によって作成されたファイルを結合します。  
   
     ```  
     makecert -r -pe -n "CN=Adventure Works" -sv MyCert.pvk MyCert.cer  
     pvk2pfx.exe -pvk MyCert.pvk -spc MyCert.cer -pfx MyCert.pfx  
     ```  
   
-21. 証明書が生成されたら、顧客は MageUI.exe で配置マニフェストを開いて配置マニフェストに署名し、署名した配置マニフェストを保存します。  署名ダイアログ ボックスが表示されたら、顧客は **\[Sign as certificate file\]** をクリックし、ディスクに保存した PFX ファイルを選択します。  
+21. 生成された証明書が、お客様はようになりました MageUI.exe で配置マニフェストを開き、保存して、配置マニフェストを署名します。 署名のダイアログ ボックスが表示されたら、選択**証明書ファイルと符号**オプションと彼は、ディスクに保存 PFX ファイルを選択します。  
   
-22. 顧客がユーザーにアプリケーションを配置します。  
+22. お客様は、ユーザーにアプリケーションを展開します。  
   
-## 次の手順  
+## <a name="next-steps"></a>次の手順  
   
-## 参照  
- [Mage.exe \(マニフェストの生成および編集ツール\)](../Topic/Mage.exe%20\(Manifest%20Generation%20and%20Editing%20Tool\).md)   
- [MageUI.exe \(マニフェスト生成および編集ツールのグラフィカル クライアント\)](../Topic/MageUI.exe%20\(Manifest%20Generation%20and%20Editing%20Tool,%20Graphical%20Client\).md)   
- [Makecert.exe \(証明書作成ツール\)](../Topic/Makecert.exe%20\(Certificate%20Creation%20Tool\).md)
+## <a name="see-also"></a>関連項目  
+ [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
+ [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
+ [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx)
