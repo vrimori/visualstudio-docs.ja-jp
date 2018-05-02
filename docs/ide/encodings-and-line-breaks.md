@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio のエンコーディングと改行文字 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のエンコーディングと改行文字 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.Encoding
 helpviewer_keywords:
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - line break characters
 - Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a472a09a4d4d67f59d7879d03b466932d1445e6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 15bc6faab8fab1eb943bc087c8730f800c11febd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encodings-and-line-breaks"></a>エンコーディングと改行
 Visual Studio では、次の文字が改行として解釈されます。  
@@ -53,8 +49,8 @@ Visual Studio では、次の文字が改行として解釈されます。
   
 > [!NOTE]
 >  **[ファイル]** メニューに **[保存オプションの詳細設定]** が表示されない場合は、追加することができます。 **[ツール]**、**[カスタマイズ]** の順に選択し、**[コマンド]** タブを選択します。**メニュー バー**のドロップダウン リストで、**[ファイル]** を選択し、**[コマンドの追加...]** ボタンを選択します。 **[コマンドの追加]** ダイアログ ボックスの **[カテゴリ]** の下で、**[ファイル]** を選択してから、**[コマンド]** 一覧で **[保存オプションの詳細設定]** を選択します。**[OK]** を選択し、**[下へ移動]** ボタンを選び、コマンドをメニュー内の任意の場所に移動します。 **[閉じる]** を選び、**[カスタマイズ]** ダイアログ ボックスを閉じます。 詳細については、「[メニューまたはツール バーのカスタマイズ](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md#customizing_menu)」を参照してください。
+>
+>または、**[ファイル]**、**[\<ファイル名\> に名前を付けて保存]** を選択して **[保存オプションの詳細設定]** ダイアログ ボックスにアクセスできます。**[名前を付けてファイルを保存]** ダイアログ ボックスで、**[保存]** ボタンの横にあるドロップダウンの三角形を選択し、**[エンコード付きで保存]** を選択します。
 
-または、**[ファイル]**、**[\<ファイル名\> に名前を付けて保存]** を選択して**[保存オプションの詳細設定]** ダイアログ ボックスにアクセスできます。**[名前を付けてファイルを保存]** ダイアログ ボックスで、**[保存]** ボタンの横にあるドロップダウンの三角形を選択し、**[エンコード付きで保存]** を選択します。
-
-## <a name="see-also"></a>関連項目
+### <a name="see-also"></a>関連項目
 [コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)

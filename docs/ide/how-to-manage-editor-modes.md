@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio の全画面表示と仮想空白モード | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の全画面表示と仮想空白モード | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - word wrap
 - views, virtual space
@@ -24,24 +22,24 @@ helpviewer_keywords:
 - views, changing mode
 - views, outlining
 ms.assetid: 1fb48027-d870-439f-8b72-4a0321390748
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 70daed24f72e6bf9efc0c81fc309c4b893285c39
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8e95940eaad599d149e504db9c1d48c5c011409e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-manage-editor-modes"></a>方法 : エディター モードを管理する
+# <a name="how-to-manage-editor-modes"></a>方法: エディター モードを管理する
 Visual Studio のコード エディターは、さまざまな表示モードで表示できます。  
   
 > [!NOTE]
 > 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、この記事の説明と異なる場合があります。 設定を、たとえば、**[全般]** や **[Visual C++]** に変更するには、**[ツール]**、**[設定のインポートとエクスポート]**、**[すべての設定をリセット]** の順に選択します。
   
-## <a name="enabling-full-screen-mode"></a>全画面表示モードを有効にする  
+## <a name="enable-full-screen-mode"></a>全画面表示モードを有効にする  
 **全画面表示**モードを有効にすると、すべてのツール ウィンドウを非表示にして、ドキュメント ウィンドウだけを表示することができます。  
   
 #### <a name="to-enable-full-screen-mode"></a>全画面表示モードを有効にするには  
@@ -52,14 +50,14 @@ Visual Studio のコード エディターは、さまざまな表示モード�
   
 -   **[コマンド]** ウィンドウで `View.Fullscreen` コマンドを実行します。  
   
-## <a name="enabling-virtual-space-mode"></a>仮想空白モードを有効にする  
+## <a name="enable-virtual-space-mode"></a>仮想空白モードを有効にする  
 **仮想空白**モードでは、各コード行の末尾に空白が挿入されます。 コードの横に一貫してコメントを入れる場合は、このチェック ボックスをオンにします。  
   
 #### <a name="to-enable-virtual-space-mode"></a>仮想空白モードを有効にするには  
   
 1.  **[ツール]** メニューの **[オプション]** を選択します。
 
-2.  **[テキスト エディター]** フォルダーを展開し、**[すべての言語]** を選択してこのオプションをグローバルに設定するか、または特定の言語フォルダーを選択します  (たとえば、Visual Basic でのみ行番号を表示するには、[テキスト エディター] ノードで [Basic] を選択します)。
+2.  **[テキスト エディター]** フォルダーを展開し、**[すべての言語]** を選択してこのオプションをグローバルに設定するか、または特定の言語フォルダーを選択します。 たとえば、Visual Basic でのみ行番号を表示するには、**[Basic]** > **[テキスト エディター]** ノードを選択します。
   
 3.  **[全般]** オプションを選択し、**[設定]** で **[仮想空白文字を使用]** を選択します。  
   
