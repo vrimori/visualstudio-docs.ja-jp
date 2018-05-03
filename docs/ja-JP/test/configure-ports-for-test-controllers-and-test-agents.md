@@ -1,0 +1,91 @@
+---
+title: Visual Studio でのテスト コントローラーおよびテスト エージェント用のポートの構成
+ms.date: 10/19/2016
+ms.topic: conceptual
+helpviewer_keywords:
+- firewalls, configuring for test agents
+- firewalls, configuring for test controllers
+- test agents, firewalls
+- test controllers, firewalls
+- agents, firewalls
+- controllers, firewalls
+ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
+author: gewarren
+ms.author: gewarren
+manager: douge
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.openlocfilehash: 4067dae0d75f5fbd4e4dfb3ff7bacfc1ff269512
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/26/2018
+---
+# <a name="configure-ports-for-test-controllers-and-test-agents"></a>テスト コントローラーおよびテスト エージェント用のポートの構成
+
+テスト コントローラー、テスト エージェント、およびクライアントが使用する既定の着信ポートを変更できます。 テスト コントローラー、テスト エージェント、またはクライアントを他のソフトウェアと共に使用する際、ポート設定が競合していると、着信ポートの変更が必要になることがあります。 ポートを変更するもう 1 つの理由として、テスト コントローラーとクライアント間のファイアウォールの制限があります。 この場合、ファイアウォールを通過してテスト コントローラーがクライアントに結果を送信できるように、手動でポートを設定することができます。
+
+ 次の図は、テスト コントローラー、テスト エージェント、およびクライアント間のコネクション ポイントを示しています。 ここでは、着信および発信接続に使用されるポートに加え、これらのポートで使用されるセキュリティ要件の詳細についても説明します。
+
+ ![テスト コントローラーとTest Agentのポートとセキュリティ](../test/media/test-controller-agent-firewall.png)
+
+## <a name="incoming-connections"></a>着信接続
+
+テスト コントローラーが使用する既定のポートは 6901 で、テスト エージェントの既定のポートは 6910 です。 クライアントは既定ではランダムなポートを使用して、テスト コントローラーからのテスト結果を受信します。 すべての着信接続に対して、テスト コントローラーは呼び出しを行っているパーティを認証し、そのパーティが特定のセキュリティ グループに所属しているかを検証します。
+
+- **テスト コントローラー** 着信接続は TCP ポート 6901 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+
+    テスト コントローラーは、テスト エージェントとクライアントに対して発信接続できる必要があります。
+
+    > [!NOTE]
+    > テスト コントローラーでは、着信である **[ファイルとプリンターの共有]** 接続が開いていることが必要です。
+
+- **テスト エージェント** 着信接続は TCP ポート 6910 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+
+   テスト エージェントは、テスト コントローラーに対して発信接続できる必要があります。
+
+- **クライアント** 既定では、着信接続に対してランダム TCP ポートが使用されます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+
+   テスト コントローラーがクライアントに初めて接続しようとするとき、ファイアウォールの通知を受け取る場合があります。
+
+   Windows Server 2008 では既定でファイアウォールの通知は無効になっていますが、着信接続を受け取ることができるように、クライアント プログラム (devenv.exe、mstest.exe、 mlm.exe) に対するファイアウォールの例外を手動で追加する必要があります。
+
+## <a name="outgoing-connections"></a>発信接続
+
+すべての発信接続に対してランダム TCP ポートが使用されます。
+
+- **テスト コントローラー** テスト コントローラーはエージェントとクライアントに対して発信接続できる必要があります。
+
+- **テスト エージェント** テスト エージェントはコントローラーに対して発信接続できる必要があります。
+
+- **クライアント** クライアントはコントローラーに対して発信接続できる必要があります。
+
+## <a name="configure-the-incoming-ports"></a>着信ポートの構成
+
+テスト コントローラーおよびテスト エージェントのポートを設定するには、次の手順に従います。
+
+- **コントローラー サービス** %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config ファイルを編集してポートの値を変更します。
+
+    ```xml
+    <appSettings>
+      <add key="ControllerServicePort" value="6901"/>
+    </appSettings>
+    ```
+
+- **エージェント サービス** %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config ファイルを編集してポートを変更します。
+
+    ```xml
+    <appSettings>
+      <add key="AgentServicePort" value="6910"/>
+    </appSettings>
+    ```
+
+- **クライアント** レジストリ エディターを使用して次のレジストリ (ダブルワード) 値を追加します。 クライアントは指定した範囲のポートの 1 つを使用して、テスト コントローラーからのデータを受信します。
+
+     HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart
+
+     HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd
+
+## <a name="see-also"></a>関連項目
+
+- [テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)
