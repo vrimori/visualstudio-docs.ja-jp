@@ -1,9 +1,9 @@
 ---
-title: Visual Studio での C# および ASP.NET Core の概要 | Microsoft Docs
+title: Visual Studio での C# および ASP.NET Core の概要
 ms.custom: ''
 ms.date: 12/11/2017
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
@@ -14,13 +14,13 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b3760c922e540837d0e9452efc8d44762eeeb3af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a896047ad8141bc7edf797066df9d309bf7eb72c
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio での C# および ASP.NET の概要
+# <a name="get-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio での C# および ASP.NET の概要
 Visual Studio を使用する ASP.NET Core での C# 開発に関するこのチュートリアルでは、C# ASP.NET Core Web アプリを作成し、それにコードを追加し、IDE の一部の機能を検討してアプリを実行します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
@@ -42,7 +42,7 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 
 1. Visual Studio 2017 を開きます。
 
-2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+2. 上部のメニュー バーで、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順に選択します。
 
 3. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual C#]**、**[Web]** の順に展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択し、ファイルに *MyCoreApp* という名前を付けてから **[OK]** を選択します。   
 
@@ -86,15 +86,15 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
     ![Visual Studio の ASP.NET ソリューション エクスプローラー](../ide/media/csharp-aspnet-solution-explorer-mycoreapp.png)
 
-1. **Controllers** フォルダーから **HomeController.cs** ファイルを開きます。
+1. **Controllers** フォルダーから *HomeController.cs* ファイルを開きます。
 
       ![Visual Studio のソリューション エクスプローラーの HomeController.cs ファイル](../ide/media/csharp-aspnet-solution-explorer-home-controller.png)
 
-2. **HomeController.cs** を表示します。
+2. *HomeController.cs* を表示します。
 
   ![Visual Studio コード ウィンドウの HomeController.cs](../ide/media/csharp-aspnet-home-controller-code.png)
 
-4. プロジェクトには **Views** フォルダーもあり、ここには各コントローラーにマップされるその他のフォルダー (および **Shared** ビューのフォルダー) が含まれます。 たとえば、**/Home/About** パスのビュー CSHTML ファイル (HTML を拡張したもの) は、**Views/Home/About.cshtml** にあります。 そのファイルを開きます。
+4. プロジェクトには **Views** フォルダーもあり、ここには各コントローラーにマップされるその他のフォルダー (および **Shared** ビューのフォルダー) が含まれます。 たとえば、*/Home/About* パスのビュー CSHTML ファイル (HTML を拡張したもの) は、*Views/Home/About.cshtml* にあります。 そのファイルを開きます。
 
   ![Visual Studio のソリューション エクスプローラーの About.cshtml ファイル](../ide/media/csharp-aspnet-solution-explorer-view-about.png)
 
@@ -103,13 +103,13 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
   ![Visual Studio コード ウィンドウの About.cshtml](../ide/media/csharp-aspnet-about-cshtml-code.png)
 
  >[!NOTE]
- > この詳細については、「[Getting started with C# and ASP.NET using the Razor syntax](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)」 (Razor 構文を使用する C# および ASP.NET の概要) ページを参照してください。
+ > この詳細については、「[Getting started with C# and ASP.NET using the Razor syntax](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)」(Razor 構文を使用する C# および ASP.NET の概要) ページを参照してください。
 
-6. ソリューションには、Web サイトのルートである **wwwroot** フォルダーも含まれます。 CSS、イメージ、JavaScript ライブラリなどの静的サイト コンテンツを、サイトの展開時に指定するパスに直接配置することができます。
+6. ソリューションには、Web サイトのルートである *wwwroot* フォルダーも含まれます。 CSS、イメージ、JavaScript ライブラリなどの静的サイト コンテンツを、サイトの展開時に指定するパスに直接配置することができます。
 
  ![Visual Studio のソリューション エクスプローラーの wwwroot フォルダー](../ide/media/csharp-aspnet-solution-wwwroot.png)
 
-7. また、プロジェクトとそのパッケージ、およびアプリケーションを実行時に管理するために機能するさまざまな構成ファイルがあります。 たとえば、既定のアプリケーション[構成](/aspnet/core/fundamentals/configuration)は **appsettings.json** に格納されます。 ただし、**開発**環境用の **appsettings.Development.json** ファイルを提供するなどして、環境ごとにこれらの設定の一部/すべてを上書きすることができます。
+7. また、プロジェクトとそのパッケージ、およびアプリケーションを実行時に管理するために機能するさまざまな構成ファイルがあります。 たとえば、既定のアプリケーション[構成](/aspnet/core/fundamentals/configuration)は *appsettings.json* に格納されます。 ただし、**開発**環境用の *appsettings.Development.json* ファイルを提供するなどして、環境ごとにこれらの設定の一部/すべてを上書きすることができます。
 
  ![Visual Studio のソリューション エクスプローラーの構成ファイル](../ide/media/csharp-aspnet-solution-explorer-config-files.png)
 
@@ -126,21 +126,21 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
  ![アプリのブラウザー ウィンドウで [バージョン情報] を選択する](../ide/media/csharp-aspnet-browser-page.png)
 
- たとえば、ブラウザーの [バージョン情報] ページには、HomeController.cs ファイルに設定されているテキストがレンダリングされます。
+ たとえば、ブラウザーの **[バージョン情報]** ページには、*HomeController.cs* ファイルに設定されているテキストがレンダリングされます。
 
    ![[バージョン情報] ページでテキストを表示する](../ide/media/csharp-aspnet-browser-page-about.png)
 
-1. ブラウザー ウィンドウを開いたまま、Visual Studio に戻ります。 **Controllers/HomeController.cs** を開きます (まだ開いていない場合)。
+1. ブラウザー ウィンドウを開いたまま、Visual Studio に戻ります。 *Controllers/HomeController.cs* を開きます (まだ開いていない場合)。
 
  ![Visual Studio のソリューション エクスプローラーから HomeController.cs ファイルを開く](../ide/media/csharp-aspnet-solution-explorer-home-controller.png)
 
 1. **About** メソッドの最初の行にブレークポイントを設定します。 これを行うには、余白をクリックするか、行にカーソルを設定して **F9** キーを押します。
 
-  この行では、**Views/Home/About.cshtml** の CSHTML ページでレンダリングされる **ViewData** コレクションのデータがいくつか設定されます。
+  この行では、*Views/Home/About.cshtml* の CSHTML ページでレンダリングされる **ViewData** コレクションのデータがいくつか設定されます。
 
  ![About.cshtml の About メソッドの最初の行にブレークポイントを設定する。  ](../ide/media/csharp-aspnet-home-controller-code-set-breakpoint.png)
 
-1. ブラウザーに戻り、[バージョン情報] ページを更新します。 これにより、Visual Studio のブレークポイントがトリガーされます。
+1. ブラウザーに戻り、**[バージョン情報]** ページを更新します。 これにより、Visual Studio のブレークポイントがトリガーされます。
 
 1. Visual Studio で、**ViewData** メンバーにマウスを移動し、そのデータを表示します。
 
@@ -148,7 +148,7 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
 1. アプリケーションのブレークポイントを、追加する際に使用したものと同じメソッドを使用して削除します。
 
-1. **Views/Home/About.cshtml** を開きます。
+1. *Views/Home/About.cshtml* を開きます。
 
  ![ソリューション エクスプローラーで About.cshtml を選択する](../ide/media/csharp-aspnet-solution-explorer-view-about.png)
 
