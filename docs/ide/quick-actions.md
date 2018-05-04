@@ -1,6 +1,7 @@
 ---
-title: クイック アクション | Microsoft Docs
+title: クイック アクション
 ms.date: 03/28/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -11,11 +12,11 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 941980eff8fc2474df9555b326278abdb9b26dac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43198f5722de1bd983991df8ff19b17fcaea9e83
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="quick-actions"></a>クイック アクション
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="to-see-potential-fixes"></a>修正候補を表示するには
 
-下矢印をクリックするか、修正候補を表示するリンクをクリックすると、電球マークで実行可能なクイック操作のリストが表示されます。
+下矢印をクリックするか、**修正候補を表示する**リンクをクリックすると、電球マークで実行可能なクイック操作のリストが表示されます。
 
 ![拡大電球](../ide/media/vs2015_lightbulb_hover_expanded.png)
 
@@ -51,4 +52,4 @@ ms.lasthandoff: 04/16/2018
 - [Visual Studio でのコード生成](../ide/code-generation-in-visual-studio.md)
 - [共通のクイック アクション](../ide/common-quick-actions.md)
 - [コード スタイルとクイック アクション](../ide/code-styles-and-quick-actions.md)
-- [コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+- [コードの記述とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)

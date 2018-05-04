@@ -1,7 +1,7 @@
 ---
-title: Visual Studio でソリューションとプロジェクトを作成する | Microsoft Docs
-ms.custom: ''
+title: Visual Studio のソリューションとプロジェクトを作成する
 ms.date: 02/06/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bb984c1a6947438df663e228bb21bda4eea763c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d92cc8bcbc160dbc5cab10bffe30b08ba1cca7be
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
@@ -134,7 +134,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>関連項目
 
-[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)  
-[GitHub の Microsoft のオープン ソース リポジトリ](https://github.com/Microsoft)  
-[Visual Studio のサンプル](../ide/visual-studio-samples.md)  
-[開発者コード サンプル](https://code.msdn.microsoft.com/)
+- [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+- [GitHub の Microsoft のオープン ソース リポジトリ](https://github.com/Microsoft)
+- [Visual Studio のサンプル](../ide/visual-studio-samples.md)
+- [開発者コード サンプル](https://code.msdn.microsoft.com/)

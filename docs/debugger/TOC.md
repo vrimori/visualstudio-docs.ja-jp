@@ -9,6 +9,7 @@
 ## [Visual Studio を使用したデバッグについて理解する](getting-started-with-the-debugger.md)
 ## [デバッガーで Python コードを実行する...](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 ## [ライブ Azure アプリをデバッグする](debug-live-azure-applications.md)
+## [管理されたネイティブ コードをデバッグする](how-to-debug-managed-and-native-code.md)
 ## [IntelliTrace ステップ バックを使用してスナップショットを表示する](how-to-use-intellitrace-step-back.md)
 # 使い方ガイド
 ## [デバッガーでのコード間の移動](navigating-through-code-with-the-debugger.md)
