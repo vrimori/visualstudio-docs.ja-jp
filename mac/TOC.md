@@ -3,6 +3,7 @@
 # [IDE ツアー](ide-tour.md)
 
 # [インストール](installation.md)
+## [インストールのプレビュー](install-preview.md)
 ## [更新](update.md)
 ## [アンインストール](uninstall.md)
 
@@ -30,6 +31,7 @@
 ## [スニペット](snippets.md)
 ## [ブロック選択](block-selection.md)
 ## [エディターのテーマ](editor-themes.md)
+## [EditorConfig](editorconfig.md)
 ## [一般的なキーボード ショートカット](keyboard-shortcuts.md)
 
 # [デバッグ](debugging.md)
@@ -43,6 +45,7 @@
 ### [構成を作成および編集する](create-and-edit-configurations.md)
 
 # [バージョン管理](version-control.md)
+## [TF バージョン管理](tf-version-control.md)
 ## [Git リポジトリのセットアップ](set-up-git-repository.md)
 ## [Git の使用](working-with-git.md)
 ## [Subversion リポジトリのセットアップ](set-up-subversion-repository.md)
@@ -50,7 +53,11 @@
 
 # [ワークロード](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
+### [Razor](razor.md)
+### [JavaScript](javascript.md)
 ## [Azure](azure-workload.md)
+### [Azure Functions の紹介](azure-functions.md)
+### [チュートリアル: Azure Functions](azure-functions-lab.md)
 ### [接続済みサービス](connected-services.md)
 ## [Unity によるゲーム開発](unity-tools.md)
 ### [セットアップ](setup-vsmac-tools-unity.md)

@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f27b11142880f71ed653371bd23ae01e51f50b3b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ee4789bc8ca7359af2df6cf2ff9fbcdd8ba7d6b9
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="immediate-window"></a>イミディエイト ウィンドウ
 **[イミディエイト]** ウィンドウは、式のデバックと評価、ステートメントの実行、変数値の出力などのために使用します。 このモードでは、デバッグ時に、開発言語で評価または実行される式を入力できます。 **[イミディエイト]** ウィンドウを表示するには、編集用にプロジェクトを開いて、**[デバッグ]** メニューの **[ウィンドウ]** をポイントし、**[イミディエイト]** をクリックするか、Ctrl キーと Alt キーを押しながら I キーを押します。
@@ -32,13 +32,13 @@ ms.lasthandoff: 04/26/2018
 ## <a name="displaying-the-values-of-variables"></a>変数の値の表示
  このウィンドウはアプリケーションをデバッグするときに特に役に立ちます。 たとえば、`varA` 変数の値を確認するには、[Print コマンド](../../ide/reference/print-command.md)を使用します。
 
-```
+```cmd
 >Debug.Print varA
 ```
 
  疑問符 (?) は`Debug.Print` のエイリアスであるため、このコマンドは次のように書き換えることもできます。
 
-```
+```cmd
 >? varA
 ```
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/26/2018
 
  **[イミディエイト]** ウィンドウの場合、等号 (=) は、代入演算子と解釈されます。 したがって、たとえば次のコマンド
 
-```
+```cmd
 >Debug.EvaluateStatement(varA=varB)
 ```
 
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/26/2018
 
  **[コマンド]** ウィンドウの場合、等号 (=) は、比較演算子と解釈されます。 **[コマンド]** ウィンドウでは、代入演算は使用できません。 したがって、たとえば変数 `varA` と変数 `varB` の値が異なる場合、次のコマンド
 
-```
+```cmd
 >Debug.EvaluateStatement(varA=varB)
 ```
 

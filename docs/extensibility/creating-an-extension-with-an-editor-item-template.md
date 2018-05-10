@@ -13,11 +13,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60f10479e0ce6fa08e888d92556ff47b5d82af66
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fd58c1ada38f8d79402bb08564bf91de23fb086
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-an-extension-with-an-editor-item-template"></a>エディター項目テンプレートに、拡張機能の作成
 エディターに分類子、修飾、および余白を追加する基本的なエディター拡張機能を作成する Visual Studio SDK に含まれている項目テンプレートを使用することができます。 エディターの項目テンプレートは、Visual c# または Visual Basic の VSIX プロジェクトで使用可能です。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="creating-a-classifier-extension"></a>分類器の拡張機能の作成  
  エディター分類子のアイテム テンプレート エディターの分類器を該当するテキストの色を作成する (このケースでは、すべてのもの) 任意のテキスト ファイルにします。  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestClassifier`」と入力します。 **[OK]**をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestClassifier`」と入力します。 **[OK]** をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動する、Visual c#**機能拡張**ノード**エディター分類子**です。 既定のファイル名 (EditorClassifier1.cs) のままにします。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
     -   EditorClassifier1.cs が含まれています、`EditorClassifier1`クラスです。  
   
-    -   EditorClassifier1ClassificationDefinition.cs が含まれています、`OEditorClassifier1ClassificationDefinition`クラスです。  
+    -   EditorClassifier1ClassificationDefinition.cs が含まれています、`EditorClassifier1ClassificationDefinition`クラスです。  
   
     -   EditorClassifier1Format.cs が含まれています、`EditorClassifier1Format`クラスです。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="creating-a-text-relative-adornment-extension"></a>テキストの相対表示要素の拡張機能の作成  
  エディターのテキスト装飾テンプレートで作成、テキスト文字のすべてのインスタンスを装飾するテキストの相対装飾赤の輪郭と青色の背景を持つボックスを使用して ' a' です。 テキストの相対であるため、ボックス オーバーレイ 'a' 文字の場合、移動または再フォーマットされる場合でも常にします。  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestAdornment`」と入力します。 **[OK]**をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`TestAdornment`」と入力します。 **[OK]** をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動する、Visual c#**機能拡張**ノード**エディターのテキスト装飾**です。 既定のファイル名 (TextAdornment1.cs/vb) のままにします。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
     -   TextAdornment1.cs が含まれています、`TextAdornment1`クラスです。  
   
-    -   extAdornment1TextViewCreationListener.cs が含まれています、`TextAdornment1TextViewCreationListener`クラスです。  
+    -   TextAdornment1TextViewCreationListener.cs が含まれています、`TextAdornment1TextViewCreationListener`クラスです。  
   
 4.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。 テキスト ファイルを開く場合、'a' のすべての文字のテキストが青色の背景に対して赤色で説明されています。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-viewport-adornment-extension-by-using-the-editor-viewport-adornment-template"></a>エディターのビューポートの表示要素のテンプレートを使用してビューポートの表示要素の拡張機能を作成するには  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`ViewportAdornment`」と入力します。 **[OK]**をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`ViewportAdornment`」と入力します。 **[OK]** をクリックします。  
   
 2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動して、Visual c# に**機能拡張**ノード**エディター ビューポート装飾**です。 既定のファイル名 (ViewportAdornment1.cs/vb) のままにします。  
   
@@ -86,9 +86,9 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-margin-extension-by-using-the-editor-margin-template"></a>エディターのマージンのテンプレートを使用して余白の拡張機能を作成するには  
   
-1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`MarginExtension`」と入力します。 **[OK]**をクリックします。  
+1.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**  をクリックし、 **Extensibility**です。 **テンプレート**ペインで、 **VSIX プロジェクト**です。 **[名前]** ボックスに「`MarginExtension`」と入力します。 **[OK]** をクリックします。  
   
-2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動して、Visual c# に**機能拡張**ノード**エディター ビューポート装飾**です。 既定のファイル名 (EditorMargin1.cs/vb) のままにします。  
+2.  **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 移動する、Visual c#**機能拡張**ノード**エディターのマージン**です。 既定のファイル名 (EditorMargin1.cs/vb) のままにします。  
   
 3.  2 つのコード ファイルを次があります。  
   

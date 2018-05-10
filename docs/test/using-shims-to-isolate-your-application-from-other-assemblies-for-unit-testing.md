@@ -1,6 +1,7 @@
 ---
-title: Visual Studio で shim を使用して単体テストのためにアプリケーションを分離する | Microsoft Docs
+title: Visual Studio で shim を使用して単体テストのためにアプリケーションを分離する
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 22c22328c0c9a34c783dd00f61f4b6c791c3507d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 55b31661120c5224d12485764328007dc8445a8e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
 
@@ -25,6 +26,10 @@ ms.lasthandoff: 04/16/2018
  **必要条件**
 
 -   Visual Studio Enterprise
+-   .NET Framework プロジェクト
+
+> [!NOTE]
+> .NET Standard プロジェクトはサポートされていません。
 
 ## <a name="example-the-y2k-bug"></a>例: Y2K バグ
 

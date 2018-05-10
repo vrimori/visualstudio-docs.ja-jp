@@ -1,8 +1,9 @@
 ---
-title: 静的ヘルパー クラス | Microsoft IntelliTest 開発者テスト ツール | Microsoft Docs
+title: 静的ヘルパー クラス | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
 ms.author: gewarren
@@ -10,11 +11,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bd414382889e02f209e9cd64155f9e9baad75534
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e83d964cf4c17542f8741a03963f317e234bca01
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="static-helper-classes"></a>静的ヘルパー クラス
 
@@ -32,8 +33,7 @@ IntelliTest は、[パラメーター化された単体テスト](test-generatio
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の前提 ([前提条件](test-generation.md#precondition)など) を表す静的クラス。
-このクラスのメソッドを使用して、望ましくないテスト入力をフィルターで除外することができます。
+[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の前提 ([前提条件](test-generation.md#precondition)など) を表す静的クラス。 このクラスのメソッドを使用して、望ましくないテスト入力をフィルターで除外することができます。
 
 一部のテスト入力に対して想定される条件が当てはまらない場合、**PexAssumeFailedException** がスローされます。 メッセージなしでテストが無視されます。
 
@@ -173,4 +173,4 @@ public static void AreElementsNotNull<T>(T[] value)
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 
-ご意見や機能に関するご要望を **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** で投稿してください。
+ご意見や機能に関するご要望を [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest) で投稿してください。

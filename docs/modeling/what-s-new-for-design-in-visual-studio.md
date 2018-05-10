@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f2e36bbd95146f8a8b1095fefaa7882ff5f88d2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c25d89ae3ab3d25e415b4407a46fc903b1c05266
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio での設計向けの新機能
 
@@ -64,18 +64,13 @@ UML デザイナーの重要なユーザーの場合は、UML のニーズに代
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-<a name="VersionSupport"></a>
-## <a name="version-support-for-architecture-and-modeling-tools"></a>アーキテクチャ ツールとモデリング ツールのバージョン サポート
+## <a name="a-nameversionsupport-version-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport" />アーキテクチャ ツールとモデリング ツールのバージョンのサポート
 
-Visual Studio には、使用できるバージョンがいくつかあります。 そのうちの一部においては、アーキテクチャ ツールとモデリング ツールのサポートが提供されていません。 各ツールの利用可能情報を次の表に示します。
+Visual Studio 2015 は、いくつかのバージョンで使用できます。 これらのすべては、アーキテクチャとモデリング ツールのサポートを提供します。 各ツールの利用可能情報を次の表に示します。
 
 |**機能**|**Enterprise**|**Professional**|**Community**|**Express**|
 |-----------------|--------------------|----------------------|-------------------|-----------------|
-|**コード マップ**|[はい]|注 (1) を参照してください。|-|-|
-|**依存関係図**|[はい]|注 (2) を参照してください。|注 (2) を参照してください。|-|
+|**コード マップ**|[はい]|のみコード マップの読み取りをサポートするには、フィルタ リングのコード マップ、新しいジェネリック ノードを追加して、選択範囲から新しい有向グラフを作成します。|-|-|
+|**依存関係図**|[はい]|のみの依存関係図の読み取りをサポートします。|のみの依存関係図の読み取りをサポートします。|-|
 |**グラフを向け**(DGML ダイアグラム)|[はい]|はい|[はい]|-|
 |**コード クローン**|[はい]|-|-|-|
-
-注 (1): コード マップの読み取り、コード マップのフィルター処理、新しいジェネリック ノードの追加、選択範囲からの新しい有向グラフの作成のみをサポートします。
-
-注 (2): のみサポートされて、依存関係図を読み取るします。

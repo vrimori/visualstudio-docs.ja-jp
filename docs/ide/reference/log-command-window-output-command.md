@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16eb42011a15539193e9d69724d299c73e5cecc4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2de9b21f55765706a56110aee84959b2003e994e
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="log-command-window-output-command"></a>LogCommandWindowOutput コマンド
 **[コマンド]** ウィンドウの入出力をすべてファイルにコピーします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cmd
 Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
@@ -58,19 +58,19 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ## <a name="examples"></a>使用例
  次の例では、新規のログ ファイル cmdlog を作成して、コマンドのログを開始します。
 
-```
+```cmd
 >Tools.LogCommandWindowOutput cmdlog
 ```
 
  次の例では、コマンドのログを停止します。
 
-```
+```cmd
 >Tools.LogCommandWindowOutput /off
 ```
 
  次の例では、以前のログ ファイルを使用してコマンドのログを再開します。
 
-```
+```cmd
 >Tools.LogCommandWindowOutput /on
 ```
 

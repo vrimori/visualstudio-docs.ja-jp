@@ -20,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17618aa39a5487ed90fc39f414b0f08233f48b2f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 966b51c0522a65641edc2f602bb27849bfabfe77
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>[VC++ プロジェクトの設定] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
 このダイアログ ボックスを使用すると、ログ、パフォーマンス、サポートするファイルの種類に関連する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] のビルド設定とプロジェクト設定を定義できます。
@@ -71,10 +71,10 @@ ms.lasthandoff: 04/26/2018
 ## <a name="extensions-to-hide"></a>[表示しない拡張子]
   **[すべてのファイルを表示]** が有効になっているときに**ソリューション エクスプローラー**に表示されないファイルのファイル名拡張子を指定します。
 
- ## <a name="build-customization-search-path"></a>[ビルドのカスタマイズの検索パス]
+## <a name="build-customization-search-path"></a>[ビルドのカスタマイズの検索パス]
   .rules ファイルを含むディレクトリの一覧を指定します。これは、プロジェクトのビルド ルールを定義するときに役立ちます。
 
-# <a name="solution-explorer-mode"></a>[ソリューション エクスプローラー モード]
+## <a name="solution-explorer-mode"></a>[ソリューション エクスプローラー モード]
  **[プロジェクト内のファイルのみ表示]**
 
   プロジェクト内のファイルだけが表示されるように、**ソリューション エクスプローラー**を構成します。

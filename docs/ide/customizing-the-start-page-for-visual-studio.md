@@ -1,7 +1,7 @@
 ---
-title: Visual Studio でのカスタム スタート ページのインストールまたはスタートアップ アイテムの変更 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio でのカスタム スタート ページのインストールまたはスタートアップ アイテムの変更
 ms.date: 02/01/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9863fdfbfb73e49d0539ba1060f1e1c56888599c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b5e32a311bcd60542df80518c791b1fbe413a7b2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-the-start-page-for-visual-studio"></a>Visual Studio のスタート ページをカスタマイズする
 
@@ -52,4 +52,4 @@ Visual Studio SDK を使用して[独自のカスタム スタート ページ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)

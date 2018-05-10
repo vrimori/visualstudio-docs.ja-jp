@@ -1,6 +1,7 @@
 ---
-title: Visual Studio でのテスト エクスプローラーによるテスト駆動開発 | Microsoft Docs
+title: Visual Studio でのテスト エクスプローラーによるテスト駆動開発
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b40ec7940e3c070bb1a29bd1753ed183bf67e22c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d16f3d3ede9c4ad72b8aacec6da00090d7bd5ef6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 
@@ -60,10 +61,12 @@ ms.lasthandoff: 04/16/2018
  **テストをデバッグするには:** 1 つ以上のテストを選択し、ショートカット メニューの **[選択したテストのデバッグ]** をクリックします。
 
 > [!IMPORTANT]
->  最新のテスト実行の結果が表示されます。 色分けされた結果バーに表示されるのは、実行されたテストの結果のみです。 たとえば、複数のテストを実行してそのいくつかに失敗し、次に成功したテストのみを実行した場合は、結果バーには緑色のみが表示されます。
+> 最新のテスト実行の結果が表示されます。 色分けされた結果バーに表示されるのは、実行されたテストの結果のみです。 たとえば、複数のテストを実行してそのいくつかに失敗し、次に成功したテストのみを実行した場合は、結果バーには緑色のみが表示されます。
+
 
 > [!NOTE]
->  テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「 [テスト エクスプローラーでさまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。
+> テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「 [テスト エクスプローラーでさまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。
+
 
 ##  <a name="walkthrough"></a> チュートリアル: 単体テストを使用してメソッドを開発する
  このチュートリアルでは、Microsoft 単体テスト フレームワークを使用して、テスト済みメソッドを C# で開発する方法を示します。 他の言語に適合させることも、NUnit など他のテスト フレームワークを使用することも、容易です。 詳細については、「 [さまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。

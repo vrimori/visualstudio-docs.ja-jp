@@ -1,6 +1,6 @@
 ---
-title: Python の使用、手順 6、Git との連携
-description: Visual Studio で Python を使用するための基礎となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明します。
+title: Python の概要のチュートリアル、手順 6、Git との連携
+description: Visual Studio の Python の中核となるチュートリアルの手順 6 では、Visual Studio の Git 関連の機能について説明しています。
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 93c8ba2ecaaacdd8dd2b0bbf9972df5d5f514c10
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c428082a061224f5bb8f3703d6ab4bed2b33aa76
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="step-6-working-with-git"></a>手順 6: Git の使用
 

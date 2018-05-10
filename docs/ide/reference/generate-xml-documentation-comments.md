@@ -1,19 +1,19 @@
 ---
-title: Visual Studio で XML ドキュメントのコメントを挿入する | Microsoft Docs
-ms.custom: ''
+title: Visual Studio で XML ドキュメントのコメントを挿入する
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0fae2411a77f405404e34c7a2357554c1e5398ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e3c38e46a5c73d1f8018f56f76b971939ba8c316
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>方法: ドキュメント生成のための XML コメントを挿入する
 
@@ -49,9 +49,9 @@ Visual Studio では、クラスやメソッドなどのコード要素を文書
 
 ## <a name="see-also"></a>関連項目
 
-[XML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
-[XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)  
-[方法: XML ドキュメントを作成する (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)  
-[C++ のコメント](/cpp/cpp/comments-cpp)  
-[XML ドキュメント (C++)](/cpp/ide/xml-documentation-visual-cpp)  
-[コード生成](../code-generation-in-visual-studio.md)
+- [XML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)
+- [方法: XML ドキュメントを作成する (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)
+- [C++ のコメント](/cpp/cpp/comments-cpp)
+- [XML ドキュメント (C++)](/cpp/ide/xml-documentation-visual-cpp)
+- [コード生成](../code-generation-in-visual-studio.md)

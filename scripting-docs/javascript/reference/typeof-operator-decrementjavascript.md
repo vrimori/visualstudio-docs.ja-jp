@@ -1,13 +1,13 @@
 ---
-title: "typeof 演算子 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: typeof 演算子 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - typeof_JavaScriptKeyword
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - typeof operator
 ms.assetid: ee8a1036-119f-486f-b034-b07bdba87f0c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
