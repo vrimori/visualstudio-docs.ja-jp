@@ -1,20 +1,22 @@
 ---
-title: Visual Studio 2017 で問題を報告する方法 | Microsoft Docs
+title: Visual Studio 2017 で問題を報告する方法
+description: Microsoft が診断と修正を実行できるように Visual Studio 2017 の問題を Microsoft に報告する方法について説明します。
 ms.custom: ''
 ms.date: 03/11/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: eacb6ba97f79f2c66444bc79b11c51ef01a50672
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: edf3a7eaecfbd133a2bd087620929cf6e3290b79
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 
@@ -28,7 +30,7 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 2. サインインしていない場合は、次のスクリーンショットに示されているように、ツールの右側にある **[サインイン]** を選びます。
 3. 画面に表示される手順に従ってサインインします。
 
- ![サインインして問題を報告](../ide/media/sign-in-new-ux.png "Sign in to report a problem")  
+ ![サインインして問題を報告](../ide/media/sign-in-new-ux.png "Sign in to report a problem")
 
 ## 類似問題を検索して投票する<a name="search_and_vote"></a>
 

@@ -1,7 +1,7 @@
 ---
-title: Visual Studio での [定義をここに表示] の使用 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio での [定義をここに表示] の使用
 ms.date: 01/10/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 316b49a08d5a2cddf92a09e583f432db96ce730b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc4cab55a20b6b820bbfc1af171f1bb0b45ce1e2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/19/2018
 
 1. **[OK]** をクリックして、**[オプション]** ダイアログ ボックスを閉じます。
 
-   ![マウス クリックの [定義をここに表示] オプションの設定](../ide/media/editor_options_peek_view.png)  
+   ![マウス クリックの [定義をここに表示] オプションの設定](../ide/media/editor_options_peek_view.png)
 
 ### <a name="keyboard-shortcuts-for-peek-definition"></a>[定義をここに表示] のキーボード ショートカット
 
@@ -85,6 +85,6 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="see-also"></a>関連項目
 
-[コード間の移動](../ide/navigating-code.md)  
-[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  
-[生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)
+- [コード間の移動](../ide/navigating-code.md)
+- [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)
+- [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

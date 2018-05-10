@@ -1,7 +1,7 @@
 ---
-title: Visual Studio のプロジェクト テンプレートを作成する | Microsoft Docs
-ms.custom: ''
+title: Visual Studio のプロジェクト テンプレートを作成する
 ms.date: 01/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a18b756b38a810915ea49e9f3208e9349afda7ef
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8e35833f9f8facf0639a87243d46794408167914
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-project-templates"></a>方法: プロジェクト テンプレートを作成する
 
@@ -51,6 +51,6 @@ Visual Studio SDK がインストールされている場合は、**VSIX プロ�
 
 ## <a name="see-also"></a>関連項目
 
-[プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)  
-[方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)  
-[VSIX プロジェクト テンプレートの概要](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)
+- [方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)
+- [VSIX プロジェクト テンプレートの概要](../extensibility/getting-started-with-the-vsix-project-template.md)

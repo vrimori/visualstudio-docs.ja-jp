@@ -101,7 +101,7 @@
 ### [方法: 製品マニフェストを作成する](how-to-create-a-product-manifest.md)
 ### [方法: パッケージ マニフェストを作成する](how-to-create-a-package-manifest.md)
 ### [方法: ローカライズされたブートストラップ パッケージを作成する](how-to-create-a-localized-bootstrapper-package.md)
-### [チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成](walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)
+### [チュートリアル: プライバシー プロンプトを使用してカスタム ブートストラップを作成する](walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)
 ### [製品およびパッケージ スキーマ リファレンス](product-and-package-schema-reference.md)
 #### [<Product> 要素 (ブートストラップ)](product-element-bootstrapper.md)
 #### [<Package> 要素 (ブートストラップ)](package-element-bootstrapper.md)

@@ -1,5 +1,5 @@
 ---
-title: R の使用を開始する
+title: R の概要のチュートリアル
 description: プロジェクトの作成、対話型ウィンドウ、コード編集、デバッグなど、Visual Studio での R の使用に関するチュートリアルです。
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
@@ -10,13 +10,13 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: c4ec2ce9a399c363427ef80087c1db1e8ef68d2c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: af2074770a97dbef1f9c8598ec8b6560bdd7f344
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="getting-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の使用を開始する
+# <a name="get-started-with-r-tools-for-visual-studio"></a>R Tools for Visual Studio の概要
 
 R Tools for Visual Studio (RTVS) をインストールすると ([インストール](installing-r-tools-for-visual-studio.md)に関するページを参照してください)、ツールが提供するエクスペリエンスをすばやく確認できます。 
 

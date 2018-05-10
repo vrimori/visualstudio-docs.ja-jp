@@ -1,9 +1,8 @@
 ---
-title: JavaScript IntelliSense | Microsoft Docs
-ms.custom: ''
+title: JavaScript IntelliSense
 ms.date: 06/28/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [JavaScript]
@@ -27,11 +26,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb4d95dcc53926f7ae8b0b295b7552185a4a934c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 16e0efd8393d6324321a505247a3dad171a81a57
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
@@ -53,7 +52,8 @@ TypeScript では、この情報を作成するためにいくつかのソース
 - [TypeScript 宣言ファイルに基づく IntelliSense](#TsDeclFiles)
 - [型定義の自動取得](#Auto)
 
-### <a name="TypeInference"></a>型推論に基づく IntelliSense
+<a name="TypeInference"></a>
+### <a name="intellisense-based-on-type-inference"></a>型推論に基づく IntelliSense
 
 JavaScript では、ほとんどの場合、明示的な型情報を利用できません。 幸い、周囲のコード コンテキストから型を推測するのは実に簡単です。
 このプロセスを型推論と呼びます。
@@ -70,7 +70,7 @@ nextItem; // now we know nextItem is a string
 
 関数の場合、return ステートメントから戻り値を推測できます。
 
-関数パラメーターの場合、現時点では推測されませんが、JSDoc または TypeScript の `.d.ts` ファイル (以降のセクションを参照) を使用してこれに対処する方法があります。
+関数パラメーターの場合、現時点では推測されませんが、JSDoc または TypeScript の *.d.ts* ファイル (以降のセクションを参照) を使用してこれに対処する方法があります。
 
 さらに、次のような特殊な推論があります。
 
@@ -89,7 +89,8 @@ exports.Foo = Foo;
 // Note that assigning a value to "module.exports" is also supported.
 ```
 
-### <a name="JsDoc"></a> JSDoc に基づく IntelliSense
+<a name="JsDoc"></a>
+### <a name="intellisense-based-on-jsdoc"></a>JSDoc に基づく IntelliSense
 
 型推論で必要な (またはドキュメントを補足するための) 型情報が提供されない場合、型情報は JSDoc 注釈で明示的に指定されることがあります。  たとえば、部分的に宣言されたオブジェクトに特定の型を指定する場合、次のように `@type` タグを使用できます。
 
@@ -113,29 +114,31 @@ function Foo(param1) {
 }
 ```
 
-現在サポートされている JsDoc 注釈については、[このドキュメント](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)を参照してください。
+現在サポートされている JsDoc の注釈については、「[JSDoc support in JavaScript](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)」 (JavaScript の JSDoc サポート) を参照してください。
 
-### <a name="TsDeclFiles"></a> TypeScript 宣言ファイルに基づく IntelliSense
+<a name="TsDeclFiles"></a>
+### <a name="intellisense-based-on-typescript-declaration-files"></a>TypeScript 宣言ファイルに基づく IntelliSense
 
-現在、JavaScript と TypeScript は同じ言語サービスに基づいているため、より多くの方法で対話することができます。 たとえば、JavaScript IntelliSense は、`.d.ts` ファイルで宣言された値に提供することができ ([詳細については、こちらを参照してください](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html))、TypeScript で宣言されているインターフェイスやクラスなどの型は、JsDoc コメントの型として使用できます。 
+現在、JavaScript と TypeScript は同じ言語サービスに基づいているため、より多くの方法で対話することができます。 たとえば、JavaScript IntelliSense は、*.d.ts* ファイルで宣言された値に提供することができ ([TypeScript ドキュメント](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)を参照してください)、TypeScript で宣言されているインターフェイスやクラスなどの型は、JsDoc コメントの型として使用できます。
 
-(インターフェイス経由で) このような型情報を、(JsDoc タグを使用して) 同じプロジェクトの JavaScript ファイルに提供する TypeScript 定義ファイルの簡単な例を以下に示します。
+(インターフェイス経由で) このような型情報を、(`JsDoc` タグを使用して) 同じプロジェクトの JavaScript ファイルに提供する TypeScript 定義ファイルの簡単な例を以下に示します。
 
-<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640"/>
+<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640" alt="TypeScript definition file" />
 
-### <a name="Auto"></a> 型定義の自動取得
+<a name="Auto"></a>
+### <a name="automatic-acquisition-of-type-definitions"></a>型定義の自動取得
 
-TypeScript の世界では、最も一般的な JavaScript ライブラリに `.d.ts` ファイルで記述された API が含まれ、その定義で最も一般的なレポジトリは [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) にあります。
+TypeScript の世界では、最も一般的な JavaScript ライブラリに *.d.ts* ファイルで記述された API が含まれ、その定義で最も一般的なレポジトリは [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) にあります。
 
-既定では、Salsa 言語サービスは使用されている JavaScript ライブラリを検出し、高度な IntelliSense を提供するためにライブラリを記述する、対応する `.d.ts` ファイルを自動的にダウンロードして参照しようとします。 ファイルは、`%LOCALAPPDATA%\Microsoft\TypeScript` のユーザー フォルダーの下にあるキャッシュにダウンロードされます。
+既定では、Salsa 言語サービスは使用されている JavaScript ライブラリを検出し、高度な IntelliSense を提供するためにライブラリを記述する、対応する *.d.ts* ファイルを自動的にダウンロードして参照しようとします。 ファイルは、*%LOCALAPPDATA%\Microsoft\TypeScript* のユーザー フォルダーの下にあるキャッシュにダウンロードされます。
 
 > [!NOTE]
-> `tsconfig.json` 構成ファイルを使用する場合、この機能は既定で**無効**になりますが、有効に設定することができます (下記参照)。
+> *tsconfig.json* 構成ファイルを使用する場合、この機能は既定で**無効**になりますが、有効に設定することができます (下記参照)。
 
-現在、自動検出は npm (`package.json` ファイルを読み取る場合)、Bower (`bower.json` ファイルを読み取る場合) からダウンロードされる依存関係に対して機能します。また、おおよそ上位 400 の最も一般的な JavaScript ライブラリのリストに一致する、プロジェクトのルーズ ファイルにも有効です。 たとえば、プロジェクトに `jquery-1.10.min.js` がある場合、ファイル `jquery.d.ts` は、優れた編集エクスペリエンスを提供するためにフェッチされ、読み込まれます。 この `.d.ts` ファイルはプロジェクトには影響しません。
+現在、自動検出は npm (*package.json* ファイルを読み取る場合)、Bower (*bower.json* ファイルを読み取る場合) からダウンロードされる依存関係に対して機能します。また、おおよそ上位 400 の最も一般的な JavaScript ライブラリのリストに一致する、プロジェクトのルーズ ファイルにも有効です。 たとえば、プロジェクトに *jquery-1.10.min.js* がある場合、ファイル *jquery.d.ts* は、優れた編集エクスペリエンスを提供するためにフェッチされ、読み込まれます。 この *.d.ts* ファイルはプロジェクトには影響しません。
 
 自動取得を使用しない場合は、以下に示すとおり、構成ファイルを追加して無効にします。 プロジェクト内で直接使用する場合も定義ファイルを手動で配置できます。
 
 ## <a name="see-also"></a>関連項目
 
-[IntelliSense の使用](../ide/using-intellisense.md)
+- [IntelliSense の使用](../ide/using-intellisense.md)

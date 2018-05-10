@@ -1,6 +1,6 @@
 ---
-title: Python の使用、手順 4、デバッグ
-description: Visual Studio 内での Python の使用に関する中心的なチュートリアルの手順 4 では、デバッガーでの Python コードの実行方法について説明します。
+title: Python の概要のチュートリアル、手順 4、デバッグ
+description: Visual Studio での Python 機能の中核となるチュートリアルの手順 4 では、デバッガーで Python コードを実行する方法について説明します。
 ms.date: 03/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c3241adb4afdc18a8ca9a6d4c75f0ee8c80be7b7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8f354c9209a7180db616a7ccc622df2809cfebe9
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
 
@@ -100,7 +100,7 @@ Visual Studio は、プロジェクト管理、豊富な編集機能、対話型
 > [!Tip]
 > Python インタープリター自体の起動に失敗した場合など、出力ウィンドウがごく短時間表示され、自動的に閉じてしまい、エラー メッセージが表示されない場合があります。 これが起こった場合、ソリューション エクスプローラーでプロジェクトを右クリックし、**[プロパティ]** の **[デバッグ]** タブを選び、**[インタープリター引数]** フィールドに `-i` を追加します。 この引数により、プログラム完了後にインタープリターは対話モードになり、ユーザーが Ctrl + Z キー、Enter キーの順に押して終了するまで、ウィンドウは開いたままになります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Python 環境へのパッケージのインストール](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)

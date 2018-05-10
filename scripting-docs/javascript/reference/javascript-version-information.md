@@ -1,13 +1,13 @@
 ---
-title: "JavaScript のバージョン情報 |Microsoft ドキュメント"
-ms.custom: 
+title: JavaScript のバージョン情報 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -16,7 +16,7 @@ dev_langs:
 helpviewer_keywords:
 - JavaScript, version information
 ms.assetid: 440f4924-f7a9-48e0-873e-bd599a93b437
-caps.latest.revision: 
+caps.latest.revision: 93
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen

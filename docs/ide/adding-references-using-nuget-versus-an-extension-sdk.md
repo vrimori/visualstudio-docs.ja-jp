@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49854e401bdefa4da776f888fff8cff6fdb0d136
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6956ebbd1220be17037b3c9a3d7bd3174872134d
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>拡張 SDK と比較して NuGet を使用した参照の追加
 
@@ -50,7 +50,7 @@ Visual Studio を対象とする NuGet 拡張機能、またはソフトウェ�
 |このメカニズムは、アプリケーション マニフェストに統合されます。|Y|SDK は、[!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] に固有の概念を渡す必要があります。その結果、パッケージ化機能と、F5 キーを使用する方法は、[!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] で使用可能な SDK で正常に機能します。|Y|NuGet の内容は、プロジェクトの一部になります。 F5 に関して特別な考慮事項は必要ありません。|
 |このメカニズムは、非参照ファイルを配置します (たとえば、[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリケーションのテストを実行するためのテスト フレームワークを配置します)。|Y|*\redist* フォルダーにファイルをドロップした場合は、それらのファイルは自動的に配置されます。|Y||
 |このメカニズムは、Visual Studio IDE 内のプラットフォーム SDK を自動的に追加します。|Y|[!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK または Windows Phone SDK を特定のレイアウトで特定の位置にドロップすると、その SDK は Visual Studio のすべての機能に自動的に統合されます。|N||
-|このメカニズムでは、開発者のクリーンなコンピューターがサポートされています  (つまり、インストールは必要なく、ソース・コード管理からの単純な取得が機能します)。|N|SDK を参照するには、ソリューションと SDK を個別にチェックインする必要があります。 MSBuild が SDK を反復処理する、レジストリとは異なる 2 つの既定の場所から SDK をチェックインできます (詳細については、「[Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md)」 (ソフトウェア開発キットの作成) を参照してください)。 代わりに、カスタムの位置に SDK が配置されている場合は、プロジェクト ファイル内で次のコードを指定できます。<br /><br /> `<PropertyGroup>    <SDKReferenceDirectoryRoot>C:\MySDKs</SDKReferenceDirectoryRoot>   </PropertyGroup>`<br /><br /> 次に、その場所に SDK をチェックインします。|Y|ソリューションをチェック アウトすることもでき、その場合は Visual Studio が直ちにファイルを認識して、そのファイルを処理します。|
+|このメカニズムでは、開発者のクリーンなコンピューターがサポートされています  (つまり、インストールは必要なく、ソース・コード管理からの単純な取得が機能します)。|N|SDK を参照するには、ソリューションと SDK を個別にチェックインする必要があります。 MSBuild が SDK を反復処理する、レジストリとは異なる 2 つの既定の場所から SDK をチェックインできます (詳細については、「[Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md)」 (ソフトウェア開発キットの作成) を参照してください)。 代わりに、カスタムの位置に SDK が配置されている場合は、プロジェクト ファイル内で次のコードを指定できます。<br /><br />`<PropertyGroup>`<br />&nbsp;&nbsp;`<SDKReferenceDirectoryRoot>`<br />&nbsp;&nbsp;`C:\MySDKs`<br />&nbsp;&nbsp;`</SDKReferenceDirectoryRoot>`<br />`</PropertyGroup>`<br /><br /> 次に、その場所に SDK をチェックインします。|Y|ソリューションをチェック アウトすることもでき、その場合は Visual Studio が直ちにファイルを認識して、そのファイルを処理します。|
 |パッケージ作成者から成る既存の大規模コミュニティに参加することもできます。|N/A|このコミュニティは新しく作成されたものです。|Y||
 |パッケージ使用者から成る既存の大規模コミュニティに参加することもできます。|N/A|このコミュニティは新しく作成されたものです。|Y||
 |パートナーのエコシステム (カスタム ギャラリー、リポジトリなど) に参加できます。|N/A|使用可能なリポジトリとしては、Visual Studio Marketplace、Microsoft ダウンロード センター、および [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] などがあります。|Y||

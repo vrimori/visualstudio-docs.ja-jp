@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 39e4b718ab7563e086f6ca2e85c31bd53b3c371c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a033d8b2709a6eaf871758d1bd46a3ad34f7a08f
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/19/2018
 
 **回答**: Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]、[新規]、[プロジェクト]** ダイアログからアクセスできます。
 
-Visual Studio は、Python クラス、Python パッケージ、Python 単体テスト、web.config ファイルなどを簡単に作成するためのさまざまなファイルや*項目テンプレート*も備えています。 Python プロジェクトを開いているとき、**[プロジェクト]、[新しい項目の追加]** メニュー コマンドから項目テンプレートにアクセスできます。
+Visual Studio は、Python クラス、Python パッケージ、Python 単体テスト、`web.config` ファイルなどを簡単に作成するためのさまざまなファイルや*項目テンプレート*も備えています。 Python プロジェクトを開いているとき、**[プロジェクト]、[新しい項目の追加]** メニュー コマンドから項目テンプレートにアクセスできます。 [項目テンプレート](python-item-templates.md)のリファレンスを参照してください。
 
 プロジェクトを開始するときやファイルを作成するとき、テンプレートを使用すると時間が大幅に節約されます。さまざまなアプリの種類やコードの構造について学習するための優れた方法でもあります。 さまざまなテンプレートからプロジェクトや項目を数分で作成できるということは、そのように作成したものでできることを知る上で便利なことです。
 
@@ -74,6 +74,6 @@ Visual Studio は、Python クラス、Python パッケージ、Python 単体テ
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)
+- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
 - [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
 - [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

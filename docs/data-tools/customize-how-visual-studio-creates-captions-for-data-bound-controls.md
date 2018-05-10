@@ -15,13 +15,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f6c2dffe793928532d36b539ba73914ecf0c24dc
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 60d2e181d0438f6ce180efe1cec2dd64dd8f2f5e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio でのデータ バインド コントロールのキャプションを作成する方法をカスタマイズします。
+
 項目をドラッグすると、[データ ソース ウィンドウ](add-new-data-sources.md)デザイナーでは、上に、特別な配慮: いるキャプション ラベルの列名は 2 つより読みやすい文字列に再設定または複数の単語として検出されました。連結されます。 設定によって、これらのラベルを作成、方法をカスタマイズすることができます、 **SmartCaptionExpression**、 **SmartCaptionReplacement**、および**SmartCaptionSuffix**値**HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data デザイナー**レジストリ キー。
 
 > [!NOTE]
@@ -48,15 +49,15 @@ ms.lasthandoff: 04/26/2018
 > [!CAUTION]
 > レジストリ エディターで操作する際は十分に注意してください。 編集する前に、レジストリをバックアップします。 レジストリ エディターを誤って使用する場合は、オペレーティング システムを再インストールする必要があります深刻な問題が発生することができます。 Microsoft では、レジストリ エディターの使用によって発生した問題を解決できることは保証されません。 レジストリ エディターは、ご自身の責任において使用してください。
 >
->  次のサポート技術情報の記事には、バックアップ、編集、およびレジストリを復元するための手順が含まれています: [Microsoft Windows レジストリの説明](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986)(http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
+> 次のサポート技術情報の記事には、バックアップ、編集、およびレジストリを復元するための手順が含まれています: [Microsoft Windows レジストリの説明](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986)(http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
 
-### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>データ ソース ウィンドウのスマート キャプションの動作を変更するには
+## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>データ ソース ウィンドウのスマート キャプションの動作を変更します。
 
 1.  クリックして、コマンド ウィンドウを開く**開始**し**実行**です。
 
 2.  型`regedit`で、**実行** ダイアログ ボックスをクリック**OK**です。
 
-3.  展開して、 **HKEY_CURRENT_USER**、**ソフトウェア*、 **Microsoft**、 **VisualStudio**ノード。
+3.  展開して、 **HKEY_CURRENT_USER**、**ソフトウェア**、 **Microsoft**、 **VisualStudio**ノード。
 
 7.  右クリックし、 **15.0**ノード、され、新しい作成**キー**という`Data Designers`です。
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/26/2018
 
     項目をドラッグして、次回、**データソース**ウィンドウで、キャプション ラベルを使用して作成、新しいレジストリ値を提供します。
 
-### <a name="to-turn-off-the-smart-captioning-feature"></a>スマート キャプション機能をオフにするには
+## <a name="turn-off-the-smart-captioning-feature"></a>スマート キャプション機能をオフにします。
 
 1.  クリックして、コマンド ウィンドウを開く**開始**し**実行**です。
 

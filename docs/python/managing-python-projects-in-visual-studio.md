@@ -1,6 +1,6 @@
 ---
 title: Python アプリケーション プロジェクトの管理
-description: Visual Studio のプロジェクトの目的についてご説明するほか、Python コードのプロジェクトの作成および管理方法や、Python で使用できるさまざまなプロジェクト テンプレートをご紹介します。
+description: Visual Studio のプロジェクトの目的、Python コードのプロジェクトの作成および管理方法、Python で使用できるさまざまなプロジェクト テンプレート。
 ms.date: 03/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7dcefe4a9d303c6d52fa88f478dc59c9c2cafe3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0609b23ef0ed6847fa73b0144201f70e76252e4
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="python-projects"></a>Python プロジェクト
+# <a name="python-projects-in-visual-studio"></a>Visual Studio の Python プロジェクト
 
 通常、Python アプリケーションはフォルダーとファイルのみを使って定義されますが、アプリケーションが大きくなり、おそらく自動生成されたファイル、Web アプリケーション用 JavaScript などが含まれるようになると、この構造は複雑になる可能性があります。 Visual Studio のプロジェクトは、このような複雑さを管理するのに役立ちます。 プロジェクト (`.pyproj` ファイル) には、プロジェクトに関連付けられたすべてのソース ファイルとコンテンツ ファイルの識別、各ファイルのビルド情報の格納、ソース管理システムと統合するための情報の保持、論理コンポーネントへのアプリケーションの整理の補助などの機能があります。
 
@@ -41,9 +41,9 @@ Visual Studio には、多数のアプリケーション構造を短時間で設
 
 ## <a name="adding-files-assigning-a-startup-file-and-setting-environments"></a>ファイルの追加、スタートアップ ファイルの割り当て、環境の設定
 
-アプリケーションを開発するときは、通常、さまざまな種類の新しいファイルをプロジェクトに追加する必要があります。 プロジェクトを右クリックして **[追加] > [既存の項目...]** を選ぶと、追加するファイルを参照できます。また、**[追加] > [新しい項目...]** を選ぶと、さまざまな項目テンプレートがダイアログに表示されます。 テンプレートには、空の Python ファイル、Python クラス、単体テスト、Web アプリケーションに関連する各種ファイルなどがあります。 テスト プロジェクトでこれらのオプションを調べ、お使いのバージョンの Visual Studio で使用可能なものについて知ることができます。
+アプリケーションを開発するときは、通常、さまざまな種類の新しいファイルをプロジェクトに追加する必要があります。 プロジェクトを右クリックして **[追加]** > **[既存の項目]** を選択すると、追加するファイルを参照できます。また、**[追加]** > **[新しい項目]** を選択すると、さまざまな項目テンプレートがダイアログに表示されます。 [項目テンプレート](python-item-templates.md)のリファレンスで説明されているように、オプションには、空の Python ファイル、Python クラス、単体テスト、Web アプリケーションに関連する各種ファイルなどがあります。 テスト プロジェクトでこれらのオプションを調べ、お使いのバージョンの Visual Studio で使用可能なものについて知ることができます。
 
-Python の各プロジェクトには 1 つのスタートアップ ファイルが割り当てられており、ソリューション エクスプローラーでは太字で表示されます。 デバッグを開始すると (F5 キーを押すか、**[デバッグ] > [デバッグを開始]** を選ぶ)、または対話型ウィンドウでプロジェクトを実行すると (Shift + Alt + F5 キーを押すか、**[デバッグ] > [Python Interactive でプロジェクトを実行]** を選ぶ)、スタートアップ ファイルが実行されます。 これを変更するには、新しいファイルを右クリックし、**[Set as Startup File (スタートアップ ファイルとして設定)]** を選びます。
+Python の各プロジェクトには 1 つのスタートアップ ファイルが割り当てられており、ソリューション エクスプローラーでは太字で表示されます。 デバッグを開始すると (F5 キーを押すか、**[デバッグ]** > **[デバッグを開始]** を選択する)、または対話型ウィンドウでプロジェクトを実行すると (Shift + Alt + F5 キーを押すか、**[デバッグ]** > **[Python Interactive でプロジェクトを実行]** を選択する)、スタートアップ ファイルが実行されます。 これを変更するには、新しいファイルを右クリックし、**[Set as Startup File (スタートアップ ファイルとして設定)]** を選びます。
 
 > [!Tip]
 > 選択したスタートアップ ファイルをプロジェクトから削除したが新しいファイルを選択しなかった場合、Visual Studio では、プロジェクトを実行しようとしたときにどの Python ファイルから始めればよいかわかりません。 この場合、Visual Studio 2017 バージョン 15.6 以降ではエラーが表示されます。それより前のバージョンでは、Python インタープリターが実行された出力ウィンドウが開くか、出力ウィンドウは表示されますが、ほぼ瞬時に消失します。 このような動作が発生する場合は、スタートアップ ファイルが割り当てられていることを確認します。
@@ -58,7 +58,7 @@ Python の各プロジェクトには 1 つのスタートアップ ファイル
 
 ## <a name="project-templates"></a>プロジェクト テンプレート
 
-Visual Studio には、新規に、または既存のコードから、Python プロジェクトをセットアップする複数の方法が用意されています。 テンプレートを使うには、**[ファイル] > [新規] > [プロジェクト]** メニュー コマンドを選ぶか、ソリューション エクスプローラーでソリューションを右クリックして **[追加] > [新しいプロジェクト...]** を選びます。どちらの場合も、**[新しいプロジェクト]** ダイアログが表示されます。 Python 固有のテンプレートを表示するには、「Python」を検索するか、**[インストール済み] > [Python]** ノードを選びます。
+Visual Studio には、新規に、または既存のコードから、Python プロジェクトをセットアップする複数の方法が用意されています。 テンプレートを使うには、**[ファイル]** > **[新規]** > **[プロジェクト]** メニュー コマンドを選択するか、ソリューション エクスプローラーでソリューションを右クリックして **[追加]** > **[新しいプロジェクト]** を選択します。どちらの場合も、**[新しいプロジェクト]** ダイアログが表示されます。 Python 固有のテンプレートを表示するには、「Python」を検索するか、**[インストール済み]** > **[Python]** ノードを選択します。
 
 ![Python テンプレートが表示されている [新しいプロジェクト] ダイアログ](media/projects-new-project-dialog.png)
 
@@ -69,7 +69,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 | [既存の Python コードから](#creating-a-project-from-existing-files) | フォルダー構造に存在する既存の Python コードから Visual Studio プロジェクトを作成します。  |
 | Python Application (Python アプリケーション) | 空のソース ファイルを 1 つ含む新しい Python アプリケーションの基本的なプロジェクト構造です。 既定では、プロジェクトは既定のグローバル環境のコンソール インタープリターで実行します。これは、[異なる環境を割り当てる](selecting-a-python-environment-for-a-project.md)ことで変更できます。 |
 | [Azure クラウド サービス](python-azure-cloud-service-project-template.md) | Python で記述された Azure クラウド サービス用のプロジェクトです。 |
-| [Web プロジェクト](python-web-application-project-templates.md) | Bottle、Django、Flask、Flask/Jade などのさまざまなフレームワークに基づく Web サーバー用のプロジェクトです。 |
+| [Web プロジェクト](python-web-application-project-templates.md) | Bottle、Django、Flask などのさまざまなフレームワークに基づく Web アプリ用のプロジェクトです。 |
 | IronPython Application (IronPython アプリケーション) | [Python Application (Python アプリケーション)] テンプレートに似ていますが、IronPython を既定で使って、.NET 相互運用と .NET 言語での混合モード デバッグを可能にします。 |
 | IronPython WPF Application (IronPython WPF アプリケーション) | IronPython と、アプリケーションのユーザー インターフェイス用に Windows Presentation Foundation の XAML ファイルを使うプロジェクト構造です。 Visual Studio は XAML UI デザイナーを提供し、コードビハインドを Python で記述でき、アプリケーションはコンソールを表示しないで実行します。 |
 | IronPython Silverlight Web Page (IronPython Silverlight Web ページ) | Silverlight を使ってブラウザーで実行する IronPython プロジェクトです。 アプリケーションの Python コードは、スクリプトとして Web ページに含まれます。 定型のスクリプト タグは、Silverlight の内部で実行する IronPython を初期化する JavaScript コードを生成し、それによって Python コードは DOM と対話できます。 |
@@ -80,7 +80,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 > [!Note]
 > Python はインタープリター言語であるため、Visual Studio 内の Python プロジェクトでは、他のコンパイル言語のプロジェクト (C# など) のようにスタンドアロンの実行可能ファイルは生成されません。 詳細については、[質問と回答](overview-of-python-tools-for-visual-studio.md#questions-and-answers)のセクションをご覧ください。
 
-<a name="create-project-from-existing-files"</a>
+<a name="create-project-from-existing-files"></a>
 
 ### <a name="creating-a-project-from-existing-files"></a>既存ファイルからのプロジェクトの作成
 

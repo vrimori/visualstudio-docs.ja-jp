@@ -11,21 +11,23 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - dotnet
-ms.openlocfilehash: d2db4210085e3dc16d9c4b9e00653312ae0d5a82
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2b7fc572541e0c2f0f5aa04c6e676d1e2913ff9f
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 用の visual Studio data tools
 
-Visual Studio と .NET Framework は、一緒に広範な API とツールのデータベースへの接続、メモリ内のデータのモデリングおよびユーザー インターフェイスでデータを表示するためのサポートを提供します。 データ アクセス機能を提供する .NET Framework のクラスと呼ばれる[ADO.NET](/dotnet/framework/data/adonet/index)です。 Visual Studio でのツールをデータと共に、ADO.NET 当初の目的、主にするリレーショナル データベースおよび XML をサポートします。 今日では、多くの NoSQL データベース仕入先、またはサード パーティは、ADO.NET プロバイダーを提供します。
+Visual Studio と .NET Framework は、一緒に広範な API とツールのデータベースへの接続、メモリ内のデータのモデリングおよびユーザー インターフェイスでデータを表示するためのサポートを提供します。 データ アクセス機能を提供する .NET Framework のクラスと呼ばれる[ADO.NET](/dotnet/framework/data/adonet/index)です。 Visual Studio でのツールをデータと共に、ADO.NET は、リレーショナル データベースと XML をサポートするには、主にデザインされました。 今日では、多くの NoSQL データベース仕入先、またはサード パーティは、ADO.NET プロバイダーを提供します。
 
 [.NET core](/dotnet/core/)データセットと関連する型を除く、ADO.NET をサポートしています。 .NET Core を対象となるオブジェクト リレーショナル マッピング (ORM) レイヤーを必要としていて使用[Entity Framework Core](/ef/core/)です。
 
 次の図は、基本的なアーキテクチャの概略を示します。
 
 ![ADO.NET のアーキテクチャ](../data-tools/media/raddata-ado-net-architecture-diagram.png)
+
+## <a name="typical-workflow"></a>一般的なワークフロー
 
 一般的なワークフローでは、これです。
 
@@ -43,4 +45,4 @@ Visual Studio と .NET Framework は、一緒に広範な API とツールのデ
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
+- [Visual Studio でデータにアクセス](../data-tools/accessing-data-in-visual-studio.md)

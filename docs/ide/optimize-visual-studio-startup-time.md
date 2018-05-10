@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の起動時間の短縮 | Microsoft Docs
+title: Visual Studio の起動時間の短縮
 ms.date: 11/15/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,15 @@ ms.author: gewarren
 manager: douge
 f1_keywords:
 - vs.performancecenter
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ab8098e52f0045c913495dce81d5005772eac836
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7ba4e3d3a32aa7921d23b8719ec63733b9e239e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio の起動時間の最適化
 
@@ -45,7 +46,7 @@ Visual Studio で起動の遅延が検出されると、ポップアップ メ�
 
 2. 無効にする拡張機能を選択してから、**[無効にする]** ボタンを選択します。
 
-拡張機能マネージャーまたは [Visual Studio のパフォーマンスの管理] ダイアログ ボックスを使用すれば、今後のセッションでいつでも拡張機能を再度有効にすることができます。
+**拡張機能マネージャー**または **[Visual Studio のパフォーマンスの管理]** ダイアログ ボックスを使用すれば、今後のセッションでいつでも拡張機能を再度有効にすることができます。
 
 ## <a name="a-nametool-windows-to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />ツール ウィンドウの設定を変更して起動時間を向上させるには
 

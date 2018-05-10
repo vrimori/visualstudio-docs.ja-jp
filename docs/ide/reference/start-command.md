@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1e5ade7d02882633504ac5615ee751b2533adde
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bbd2d64d8103afe1e303052c9b27fc2cc85cab58
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="start-command"></a>Start コマンド
 スタートアップ プロジェクトのデバッグを開始します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cmd
 Debug.Start [address]
 ```
 
@@ -41,7 +41,7 @@ Debug.Start [address]
 ## <a name="example"></a>例
  この例では、デバッガーを起動し、発生した例外はすべて無視されます。
 
-```
+```cmd
 >Debug.Start
 ```
 

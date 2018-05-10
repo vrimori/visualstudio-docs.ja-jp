@@ -1,7 +1,7 @@
 ---
-title: Visual Studio の生産性に関するヒント | Microsoft Docs
-ms.custom: ''
+title: Visual Studio の生産性に関するヒント
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,25 +9,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b79f7d36358a875b45b7a705674060b05969cc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 34206b9c41802063cb1d29fd3bc5f8984a5581ca
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 
 このトピックには、コードの記述、移動、およびデバッグを迅速かつ効率的にするのに役立つさまざまなヒントが含まれています。
 
-一般的なキーボード ショートカットの詳細については、[キーボードに関するヒント](../ide/tips-and-tricks-for-visual-studio.md)についての記事をご覧ください。 または、キーボード ショートカットの詳細な一覧については、[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)および[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)に関する記事をご覧ください。
+一般的なキーボード ショートカットの詳細については、[キーボードに関するヒント](../ide/tips-and-tricks-for-visual-studio.md)についての記事をご覧ください。 または、キーボード ショートカットの詳細な一覧については、[キーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)と[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)に関する記事をご覧ください。
 
-## <a name="writing-code"></a>コードを作成する
+## <a name="write-code"></a>コードの記述
 
 コードをすばやく記述するには、次の機能を使用します。
 
 - **便利なコマンドを使用する**。 Visual Studio は、一般的な編集タスクを迅速に実行できるさまざまなコマンドを備えています。 たとえば、**Visual Studio 2017 バージョン 15.6** 以降では、コマンドを選択するだけで簡単にコード行を複製できます。コード行をコピーし、カーソルの位置を移動させてから貼り付ける必要はありません。 **[編集]** > **[複製]** の順に選択するか、または **Ctrl** + **E** キー、**V** キーの順に押します。 **[編集]** > **[詳細設定]** > **[選択範囲の展開]** または **[編集]** > **[詳細設定]** > **[選択範囲の縮小]** を選択すると、選択範囲のテキストをすばやく拡張したり縮小したりできます。**Shift** + **Alt** + **=** キーまたは **Shift** + **Alt** + **-** キーを押しても実行できます (**Visual Studio 2017 バージョン 15.5** 以降で使用できます)。
 
-- **IntelliSense を使用する**。 エディターにコードを入力すると、メンバーの一覧、パラメーター ヒント、クイック ヒント、シグネチャ ヘルプ、入力候補などの IntelliSense 情報が表示されます。 これらの機能では、テキストのあいまい一致をサポートしています。そのため、たとえば、メンバーの一覧の結果一覧には、入力した文字から始まるエントリだけでなく、その文字の組み合わせが名前に含まれているエントリも含まれます。 詳細については、「[IntelliSense の使用](../ide/using-intellisense.md)」を参照してください。
+- **IntelliSense を使用する**。 エディターにコードを入力すると、メンバーの一覧、パラメーター ヒント、クイック ヒント、シグネチャ ヘルプ、入力候補などの IntelliSense 情報が表示されます。 これらの機能では、テキストのあいまい一致をサポートしています。そのため、たとえば、メンバーの一覧の結果一覧には、入力した文字から始まるエントリだけでなく、その文字の組み合わせが名前に含まれているエントリも含まれます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページを参照してください。
 
 - **コード入力時の IntelliSense オプションの自動挿入を変更する**。 IntelliSense を候補提示モードに切り替えることで、明示的に選択した場合にのみ IntelliSense オプションが挿入されるように指定できます。
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 
 - **サンプル アプリケーションを使用する**。 [Microsoft Developer Network](https://code.msdn.microsoft.com/) からサンプル アプリケーションをダウンロードしてインストールすると、アプリケーションの開発時間を短縮できます。 また、その分野のサンプル パックをダウンロードして調べることで、特定のテクノロジやプログラミング概念を学習することもできます。
 
-## <a name="navigating-within-your-code"></a>コード内での移動
+## <a name="navigate-within-your-code"></a>コード内での移動
 
  さまざまな方法を使用して、コード内の特定の場所をすばやく探して移動できます。
 
@@ -59,21 +59,21 @@ ms.lasthandoff: 04/16/2018
 
 - **コードの構造全体を参照する**。 **ソリューション エクスプローラー**では、プロジェクト内のクラスとその型およびメンバーを検索および参照できます。 また、シンボルの検索、メソッドの呼び出し階層の表示、シンボル参照の検索などのタスクを実行することもできます。 **ソリューション エクスプローラー**でコード要素を選択すると、関連ファイルが **[プレビュー]** タブに表示され、ファイル内でカーソルがその要素に移動します。 詳細については、「[コードの構造の表示](../ide/viewing-the-structure-of-code.md)」を参照してください。
 
-## <a name="finding-items-faster"></a>項目の検索の高速化
+## <a name="find-items-faster"></a>項目の検索の高速化
 
 ツール ウィンドウの内容をフィルター処理して、現在のタスクに関連する情報のみを表示するだけでなく、IDE 全体でコマンド、ファイル、およびオプションを検索することもできます。
 
 - **ツール ウィンドウの内容をフィルター処理する**。 **[ツールボックス]**、**[プロパティ]** ウィンドウ、**ソリューション エクスプローラー**など、さまざまなツール ウィンドウの内容を検索し、指定した文字が名前に含まれる項目のみを表示できます。
 
-- **対処する必要があるエラーのみを表示する**。 **[エラー一覧]** ツール バーの **[フィルター]** を選択すると、**[エラー一覧]** ウィンドウに表示されるエラーの数を減らすことができます。 エディターで開いているファイルのエラーのみ、現在のファイルのエラーのみ、または現在のプロジェクトのエラーのみを表示できます。 また、[エラー一覧] ウィンドウ内で検索して、特定のエラーを見つけることもできます。
+- **対処する必要があるエラーのみを表示する**。 **[エラー一覧]** ツール バーの **[フィルター]** を選択すると、**[エラー一覧]** ウィンドウに表示されるエラーの数を減らすことができます。 エディターで開いているファイルのエラーのみ、現在のファイルのエラーのみ、または現在のプロジェクトのエラーのみを表示できます。 また、**[エラー一覧]** ウィンドウ内で検索して、特定のエラーを見つけることもできます。
 
 - **ダイアログ ボックス、メニュー コマンド、およびオプションを検索する**。 [[クイック起動]](../ide/reference/quick-launch-environment-options-dialog-box.md) ボックスに、検索対象の項目のキーワードまたは語句を入力します。 たとえば、「`new project`」と入力すると、次のオプションが表示されます。
 
     !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
 
-    **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。
+    **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。
 
-## <a name="debugging-code"></a>コードのデバッグ
+## <a name="debug-code"></a>コードのデバッグ
 
 デバッグには時間がかかる場合がありますが、次のヒントはその処理時間を短縮するのに役立ちます。
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 
      その他のコマンドの詳細については、[Visual Studio コマンドのエイリアス](../ide/reference/visual-studio-command-aliases.md)に関するページを参照してください。
 
-## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools にアクセスする
+## <a name="access-visual-studio-tools"></a>Visual Studio ツールにアクセスする
 
 スタート メニューまたはタスク バーに固定すると、開発者コマンド プロンプトまたは別の Visual Studio のツールにすぐにアクセスできます。
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/16/2018
 
 1. **[開発者コマンド プロンプト]** を右クリックするかコンテキスト メニューを開いて、**[スタートにピン留めする]** または **[タスク バーにピン留めする]** を選びます。
 
-## <a name="managing-files-toolbars-and-windows"></a>ファイル、ツール バー、およびウィンドウの管理
+## <a name="manage-files-toolbars-and-windows"></a>ファイル、ツール バー、ウィンドウの管理
 
 アプリケーションを開発する際には、ほとんどの場合、複数のコード ファイルを操作し、さまざまなツール ウィンドウを行き来しながら作業します。 次のヒントに従うと、作業効率を上げることができます。
 
@@ -117,11 +117,11 @@ ms.lasthandoff: 04/16/2018
 
      また、**ソリューション エクスプローラー**のインスタンスをもう 1 つ作成し、それを別のモニターに移動すると、ファイルをより簡単に管理できます。 **ソリューション エクスプローラー**のインスタンスをもう 1 つ作成するには、**ソリューション エクスプローラー**のショートカット メニューを開き、**[新しいソリューション エクスプローラー ビュー]** を選択します。
 
-- **Visual Studio に表示されるフォントをカスタマイズする**。 IDE のテキストに使用されるフォント フェイス、サイズ、および色を変更できます。 たとえば、エディター内の特定のコード要素の色や、ツール ウィンドウまたは IDE 全体のフォント フェイスをカスタマイズできます。 詳細については、「[方法: Visual Studio で使用するフォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」および「[方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」を参照してください。
+- **Visual Studio に表示されるフォントをカスタマイズする**。 IDE のテキストに使用されるフォント フェイス、サイズ、および色を変更できます。 たとえば、エディター内の特定のコード要素の色や、ツール ウィンドウまたは IDE 全体のフォント フェイスをカスタマイズできます。 詳細については、「[方法: Visual Studio で使用するフォントと色を変更する](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)」と「[方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)
 - [方法: メニューおよびツール バーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
-- [チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+- [チュートリアル: 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
 - [アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)

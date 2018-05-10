@@ -260,17 +260,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0ffa56023aecc327f78b4b1d860c14fa96e04e45
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 69bc5492413a48ddde501bdba893fd880f2851cb
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>コード分析の警告の checkid 別のマネージ コード
 
 次の表に、マネージ コードのコード分析警告を警告の CheckId 識別子別に示します。
-
-## <a name="warnings"></a>警告
 
 |CheckId|警告|説明|
 |-------------|-------------|-----------------|
@@ -452,7 +450,7 @@ ms.lasthandoff: 04/26/2018
 |CA2132|[CA2132: 既定のコンストラクターは、基本型の既定コンストラクターと同程度以上、重要であることが必要](../code-quality/ca2132-default-constructors-must-be-at-least-as-critical-as-base-type-default-constructors.md)|SecurityCriticalAttribute でマークされている型およびメンバーを Silverlight アプリケーション コードで使用することはできません。 セキュリティが重要な型やメンバーは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] for Silverlight クラス ライブラリの信頼されているコードからのみ使用できます。 派生クラスにおけるパブリックな構築または保護された構築の透過性は、基本クラスと同程度以上である必要があるため、アプリケーション内のクラスを、SecurityCritical としてマークされたクラスから派生させることはできません。|
 |CA2133|[CA2133: デリゲートは透過性の整合がとれたメソッドにバインドする必要がある](../code-quality/ca2133-delegates-must-bind-to-methods-with-consistent-transparency.md)|この警告は、SecurityCriticalAttribute でマークされているデリゲートを、透過的メソッドまたは SecuritySafeCriticalAttribute でマークされているメソッドにバインドするメソッドに対して適用されます。 この警告は、透過的なデリゲートまたはセーフ クリティカルなデリゲートを、クリティカル メソッドにバインドするメソッドに対しても適用されます。|
 |CA2134|[CA2134: メソッドは、基本メソッドをオーバーライドしている場合、透過性の整合性を保つ必要がある](../code-quality/ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods.md)|この規則は、SecurityCriticalAttribute でマークされているメソッドが、透過的メソッドまたは SecuritySafeCriticalAttribute でマークされているメソッドをオーバーライドするときに適用されます。 また、透過的メソッドまたは SecuritySafeCriticalAttribute でマークされているメソッドが、SecurityCriticalAttribute でマークされているメソッドをオーバーライドした場合も、この規則が適用されます。 この規則は、仮想メソッドをオーバーライドする場合やインターフェイスを実装する場合に適用されます。|
-|CA2135|[CA2135: レベル 2 のアセンブリは LinkDemand を含んではならない](../code-quality/ca2135-level-2-assemblies-should-not-contain-linkdemands.md)|LinkDemands は、レベル 2 のセキュリティ規則セットでは使用が推奨されていません。 LinkDemands を使用して JIT コンパイル時にセキュリティを適用するのではなく、メソッド、型、およびフィールドに SecurityCriticalAttribute 属性を設定します。|
+|CA2135|[CA2135: レベル 2 のアセンブリは LinkDemand を含んではならない](../code-quality/ca2135-level-2-assemblies-should-not-contain-linkdemands.md)|LinkDemands は、レベル 2 のセキュリティ規則セットでは使用が非推奨とされます。 LinkDemands を使用して JIT コンパイル時にセキュリティを適用するのではなく、メソッド、型、およびフィールドに SecurityCriticalAttribute 属性を設定します。|
 |CA2136|[CA2136: メンバーには、透過性注釈の競合があってはならない](../code-quality/ca2136-members-should-not-have-conflicting-transparency-annotations.md)|透過性属性は、大きいスコープのコード要素から小さいスコープの要素に適用されます。 大きいスコープのコード要素の透過性属性は、最初の要素に含まれているコード要素の透過性属性よりも優先されます。 たとえば、SecurityCriticalAttribute 属性でマークされたクラスに SecuritySafeCriticalAttribute 属性でマークされたメソッドを含めることはできません。|
 |CA2137|[CA2137: 透過的メソッドは、検証可能な IL のみを含まなければならない](../code-quality/ca2137-transparent-methods-must-contain-only-verifiable-il.md)|メソッドに検証できないコードが含まれているか、メソッドから参照渡しで型が返されます。 この規則は、透過的セキュリティ コードが、検証できない MISL (Microsoft Intermediate Language) を実行しようとすると適用されます。 ただし、規則には完全な IL 検証ツールは含まれていないため、代わりにヒューリスティックを使用して、ほとんどの MSIL 検証違反が検出されます。|
 |CA2138|[CA2138: 透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない](../code-quality/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute.md)|透過的セキュリティ メソッドは、SuppressUnmanagedCodeSecurityAttribute 属性でマークされているメソッドを呼び出します。|

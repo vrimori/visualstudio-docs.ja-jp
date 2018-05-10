@@ -1,13 +1,13 @@
 ---
-title: "Remainder 演算子 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Remainder 演算子 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '%'
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - '% operator [JavaScript]'
 - remainder operator [JavaScript]
 ms.assetid: f98bf7ee-8366-4f1d-8769-dbdff82056a8
-caps.latest.revision: 
+caps.latest.revision: 0
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
