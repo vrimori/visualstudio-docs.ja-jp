@@ -1,4 +1,4 @@
----
+﻿---
 title: ClickOnce 配置マニフェスト |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/19/2018
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 配置マニフェスト
 配置マニフェストは、配置する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの現在のバージョン情報などを含む、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の配置に関して記述した XML ファイルです。  
-  
+
  配置マニフェストには、次の要素および属性があります。  
   
 |要素|説明|属性|  
