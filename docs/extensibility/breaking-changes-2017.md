@@ -48,7 +48,7 @@ VSIX 形式における変更は次のとおりです:
 
 これまで Visual Studio の各メジャー リリースは 1 つのコンピューターにつき 1 つまでしかインストールすることができませんでした。 Visual Studio 2017 ではサイド バイ サイド インストールをサポートするために、複数の Visual Studio ユーザー データ パスをユーザーのコンピューターに存在させることができます。
 
-Visual Studio の設定マネージャーを使用して、Visual Studio プロセス内で実行中のコードを更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは[このガイダンスに従って](locating-visual-studio.md)特定の Visual Studio インストールのユーザー パスを検索することができます。
+Visual Studio プロセスの内部で実行されているコードは Visual Studio の設定マネージャーを使用するように更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは [このガイダンスに従って](locating-visual-studio.md) 特定の Visual Studio インストールのユーザー パスを検索することができます。
 
 ## <a name="change-global-assembly-cache-gac"></a>変更: グローバル アセンブリ キャッシュ (GAC)
 
