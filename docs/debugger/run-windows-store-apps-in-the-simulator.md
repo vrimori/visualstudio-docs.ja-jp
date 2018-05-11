@@ -117,7 +117,7 @@ UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミ
   
 1.  シミュレーターのツール バーの **[ネットワーク プロパティの変更]** ボタンをクリックします。  
   
-2.  **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]**をクリックします。  
+2.  **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]** をクリックします。  
   
      チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
   
@@ -125,7 +125,7 @@ UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミ
   
 4.  選択、 [NetworkCostType](/uwp/api/windows.networking.connectivity.networkcosttype)からプロファイルの値、**ネットワーク コストの種類** ボックスの一覧です。  
   
-5.  **データの限度の状態フラグ**] ボックスの一覧を設定できます、 [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティまたは[OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティを true にするか選択できます**データの制限 [**両方の値を false に設定します。  
+5.  **データの限度の状態フラグ**] ボックスの一覧を設定できます、 [ApproachingDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティまたは[OverDataLimit](/uwp/api/windows.networking.connectivity.connectioncost)プロパティを true にするか選択できます**データの制限 [** 両方の値を false に設定します。  
   
 6.  **ローミングの状態**一覧で、設定、[ローミング](/uwp/api/windows.networking.connectivity.connectioncost)プロパティです。  
   

@@ -58,13 +58,13 @@ interface IManagedAddin : IUnknown
   
 1.  アプリケーションによって、次のレジストリ キーにあるエントリが検索され、VSTO アドインが検出されます。  
   
-     HKEY_CURRENT_USER\Software\Microsoft\Office\\*\<アプリケーション名 >*\Addins\  
+     HKEY_CURRENT_USER\Software\Microsoft\Office\\*\<アプリケーション名 >* \Addins\  
   
      このレジストリ キーにある各エントリは、VSTO アドインの一意な ID です。 通常、これは VSTO アドイン アセンブリの名前です。  
   
 2.  アプリケーションによって、各 VSTO アドイン エントリにある `Manifest` エントリが検索されます。  
   
-     マネージ VSTO アドインのマニフェストの完全なパスを格納できます、 `Manifest` HKEY_CURRENT_USER\Software\Microsoft\Office エントリ\\*\<アプリケーション名 >*\Addins\\ *\<アドイン ID >*です。 マニフェストは、VSTO アドインの読み込みに使用される情報を提供するファイル (通常は XML ファイル) です。  
+     マネージ VSTO アドインのマニフェストの完全なパスを格納できます、 `Manifest` HKEY_CURRENT_USER\Software\Microsoft\Office エントリ\\*\<アプリケーション名 >* \Addins\\ *\<アドイン ID >* です。 マニフェストは、VSTO アドインの読み込みに使用される情報を提供するファイル (通常は XML ファイル) です。  
   
 3.  アプリケーションによって `Manifest` エントリが検出されると、そのアプリケーションはマネージ VSTO アドイン ローダー コンポーネントの読み込みを試みます。 アプリケーションではこの IManagedAddin インターフェイスを実装する COM オブジェクトを作成することによって行われます。  
   
