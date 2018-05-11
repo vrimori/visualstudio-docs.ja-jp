@@ -1,23 +1,22 @@
 ---
-title: "プロダクト キーの使用 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to obtain and manage your product keys in Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 2ed935a5d254f57f4e643013704159c2fc90c8f5
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: プロダクト キーの使用 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションで、プロダクト キーを取得して管理する方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 2d3ca72182c26e2e43bcdf97ea6277a4dd1375f0
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのプロダクト キーの使用
 
-## <a name="product-keys-overview"></a>プロダクト キーの概要
 Visual Studio サブスクリプションがあれば、アプリケーションの設計、開発、テスト、デモのための Microsoft 製品を幅広くご利用いただけます。 これらの製品には、インストール時にプロダクト キーが必要になる製品と、ライセンス認証が必要な製品があります。
 
 Visual Studio サブスクリプションには、通常、現在のバージョンの Windows 製品と Office 製品の 5 つのプロダクト キー、および旧バージョン用の 3 つのプロダクト キーが含まれています。
@@ -48,7 +47,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 ## <a name="locating-and-claiming-product-keys"></a>プロダクト キーの確認と要求
 プロダクト キーを表示するには、Visual Studio サブスクリプションにサインインする必要があります。 以下に示す [[ダウンロード]](https://my.visualstudio.com/downloads) ページで、特定の製品の青い **[キーを入手]** リンクを選択すると、その製品のプロダクト キーが表示されます。  すべてのキーをまとめて [[プロダクト キー](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)] ページで確認することもできます。 1 つの製品に対して複数のキーが存在する場合は、使用するキーを識別できるよう、該当するダウンロードの [メモ] 列にメモが表示されます。
 
-![ダウンロード ページからキーを入手する](_img/product-keys/download-get-key.png)
+   ![ダウンロード ページからキーを入手する](_img/product-keys/download-get-key.png)
 
 製品によっては、1 つのダウンロードに製品の複数のエディションが含まれていることがあります。 このような場合、入力されたプロダクト キーによって、製品のどのエディションがインストールされるかが決まります。
 "静的" キーなどのように、自動的に提供されるキーもあります。これらは、ライセンス認証が必要ないので、同じキーを必要に応じて何回でも使用することができます。 他のキーについては、製品の **[キーを入手]** リンクを選択して要求する必要があります。
@@ -82,7 +81,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 1.  Visual Studio サブスクリプションにサインインします。  製品をダウンロードするかプロダクト キーを要求するには、サインインする必要があります。 
 2.  [[プロダクト キー]](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) タブをクリックします。
 3.  プロダクト キーは、製品名のアルファベット順に一覧表示されます。  目的の製品の名前まで下にスクロールするか、ページの上部にある検索バーを使用して検索することができます。  
-![プロダクト キーの検索](_img\product-keys\visio-product-key-cropped.png)
+    ![プロダクト キーの検索](_img\product-keys\visio-product-key-cropped.png)
 
 この例では、検索バーを使用して Visio 2010 用のプロダクト キーを検索しています。
 ご覧のように、いくつかのバージョンの Visio 2010 が一覧表示されます。  Visio Standard 2010 と Visio Premium 2010 のそれぞれで 1 つのキーが既に要求され、両方に 4 つのキーが残っています。  要求されたキーはどちらも販売キーであり、ページに表示されています。  **[メモ]** 列に要求したキーに関する簡単なメモを記録することができます。  これと **[要求済み]** 列の日付を組み合わせて、要求したキーを追跡することができます。  たとえば、キーを使用して製品のインストールをライセンス認証するときにメモを作成する場合があります。  
@@ -91,7 +90,7 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 要求したすべてキーおよび自動的に "請求済み" とマークされている多くの選択した静的キーおよび他のキーの一覧をエクスポートすることができます。  
 
 > [!IMPORTANT] 
-> サブスクリプションの期限が切れた場合、新しいキーを要求したり要求したキーをエクスポートしたりすることはできません。** 
+> サブスクリプションの期限が切れた場合、新しいキーを要求したり要求したキーをエクスポートしたりすることはできません。 
 
 キーをエクスポートするには、[プロダクト キー] ページの右端にある **[すべてのキーをエクスポート]** リンクをクリックします。  KeysExport.xml をという名前の .xml ファイルが作成され、ファイルを開くか保存するオプションが表示されます。  .Xml ファイルを処理できるアプリケーションでファイルを開く必要があります。  たとえば、Excel で読み取り専用のブックとしてファイルを開くことができます。  
 

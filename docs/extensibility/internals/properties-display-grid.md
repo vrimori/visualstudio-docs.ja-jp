@@ -1,27 +1,23 @@
 ---
-title: "プロパティ グリッドの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ グリッドの表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Visual Studio SDK], grid
 ms.assetid: 318e41b0-acf5-4842-b85e-421c9d5927c5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88720010c178fb1ca3a4c2425002f5f34e26e777
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 279450126cfcc7edba9398632e20bfb75e312b89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-display-grid"></a>プロパティ グリッドの表示
 **プロパティ**ウィンドウには、グリッド内のフィールドが表示されます。 左の列には、プロパティの名前が含まれています。右側の列には、プロパティの値が含まれています。  
@@ -33,19 +29,19 @@ ms.lasthandoff: 12/22/2017
   
 2.  設定、`pfHide`パラメーター<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A>に`TRUE`です。  
   
- 情報を送信する、**プロパティ**ウィンドウ、IDE を使用して<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>です。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>各ウィンドウに表示する関連のプロパティで選択可能オブジェクトを含む Vspackage によって呼び出されますが、**プロパティ**ウィンドウです。 **ソリューション エクスプ ローラー**の実装<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>呼び出し`GetProperty`を使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>階層内の参照可能なオブジェクトを取得する、プロジェクト階層にします。  
+ 情報を送信する、**プロパティ**ウィンドウ、IDE を使用して<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>です。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 各ウィンドウに表示する関連のプロパティで選択可能オブジェクトを含む Vspackage によって呼び出されますが、**プロパティ**ウィンドウです。 **ソリューション エクスプ ローラー**の実装<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>呼び出し`GetProperty`を使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>階層内の参照可能なオブジェクトを取得する、プロジェクト階層にします。  
   
  VSPackage がサポートされていない場合<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>、IDE を使用しようとしました。<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A>の値を使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>階層アイテムまたはアイテムを提供します。  
   
  VSPackage が作成する必要はありません、プロジェクト<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>を実装する IDE が指定したウィンドウ パッケージのため (たとえば、**ソリューション エクスプ ローラー**) 構築<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>の代わりにします。  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>IDE によって呼び出される 3 つの方法で構成されます。  
+ <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> IDE によって呼び出される 3 つの方法で構成されます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A>表示される選択されたオブジェクトの数を表す、**プロパティ**ウィンドウです。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> 表示される選択されたオブジェクトの数を表す、**プロパティ**ウィンドウです。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>返します、`IDispatch`に表示される選択されているオブジェクト、**プロパティ**ウィンドウです。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> 返します、`IDispatch`に表示される選択されているオブジェクト、**プロパティ**ウィンドウです。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A>によって返されるオブジェクトのいずれにもできるようになります<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>ユーザーが選択します。 これにより、VSPackage を視覚的に、UI 内のユーザーに表示される選択を更新できます。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> によって返されるオブジェクトのいずれにもできるようになります<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>ユーザーが選択します。 これにより、VSPackage を視覚的に、UI 内のユーザーに表示される選択を更新できます。  
   
  **プロパティ**ウィンドウからの情報を抽出し、`IDispatch`選ばれたプロパティを取得するオブジェクト。 プロパティ ブラウザーを使用して`IDispatch`オブジェクトにどのようなプロパティを確認することをサポートしているクエリを実行して`ITypeInfo`から取得される`IDispatch::GetTypeInfo`です。 ブラウザーの設定にこれらの値を使用して、**プロパティ**ウィンドウと個々 のプロパティの値がグリッドに表示を変更します。 プロパティの情報は、オブジェクト自体内で管理されます。  
   
@@ -55,9 +51,9 @@ ms.lasthandoff: 12/22/2017
   
 -   列挙された一覧に含まれている値は、<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>にクエリを実行`IDispatch`です。 フィールド名をダブルクリックするか、値をクリックし、ドロップダウン リストから新しい値を選択すると、プロパティ グリッドで列挙された一覧から取得された値を変更できます。 プロパティの列挙リストの設定は定義済みで、プロパティ リストにプロパティ名をダブルクリックすると、使用可能な選択肢を循環参照します。 True または false などの 2 つの選択肢で定義済みのプロパティの選択肢の間で切り替えるには、プロパティ名をダブルクリックします。  
   
--   場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A>は`false`を示す、値が変更されたことは、値が太字で表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A>値を元の値にリセットすることができるかどうかの判断に使用されます。 そのため、値を右クリックして既定値に戻す変更できる場合**リセット**表示されるメニューからです。 それ以外の場合、既定値に戻す値を手動で変更する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>ローカライズし、デザイン時に表示されるプロパティの名前を非表示にすることもできますが、実行時に表示されるプロパティ名には影響しません。  
+-   場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A>は`false`を示す、値が変更されたことは、値が太字で表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> 値を元の値にリセットすることができるかどうかの判断に使用されます。 そのため、値を右クリックして既定値に戻す変更できる場合**リセット**表示されるメニューからです。 それ以外の場合、既定値に戻す値を手動で変更する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> ローカライズし、デザイン時に表示されるプロパティの名前を非表示にすることもできますが、実行時に表示されるプロパティ名には影響しません。  
   
--   省略記号 (...) ボタンをクリックすると、(カラー ピッカーやフォントの一覧) 元となるユーザーが選択できるプロパティの値の一覧が表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>これらの値を提供します。  
+-   省略記号 (...) ボタンをクリックすると、(カラー ピッカーやフォントの一覧) 元となるユーザーが選択できるプロパティの値の一覧が表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> これらの値を提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)

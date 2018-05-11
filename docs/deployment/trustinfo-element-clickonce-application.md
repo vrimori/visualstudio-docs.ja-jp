@@ -1,12 +1,9 @@
 ---
-title: "&lt;trustInfo&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;trustInfo&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#IPermission
 - urn:schemas-microsoft-com:asm.v2#PermissionSet
@@ -22,16 +19,16 @@ helpviewer_keywords:
 - manifests [ClickOnce], trustInfo element
 - <trustInfo> element [ClickOnce application manifest]
 ms.assetid: 8a813a74-e158-4308-be78-565937f6af83
-caps.latest.revision: "16"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 51247e86535ed9c8da04fadd5993b973f3a5f694
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 516ed9ae36b97a75e5185c69b89fadf587ddeaa7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt;要素 (ClickOnce アプリケーション)
 アプリケーションをクライアント コンピューター上で実行するのに必要な最低限のセキュリティ権限について説明します。  
@@ -271,6 +268,6 @@ ms.lasthandoff: 12/22/2017
 </trustInfo>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

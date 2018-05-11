@@ -1,29 +1,24 @@
 ---
-title: "IDiaPropertyStorage::ReadMultiple |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaPropertyStorage::ReadMultiple |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaPropertyStorage::ReadMultiple
 ms.assetid: 6ccc9397-ce41-4f72-b261-72ac252cd4a5
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ffa66117095ef73ac9d25ce8117431f03ba0ad57
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1747d55de37777a9919f4709a62fbaff4b6d8a2a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 指定されたプロパティの現在のセットからプロパティを読み取ります。  
@@ -54,5 +49,5 @@ HRESULT ReadMultiple(
 ## <a name="remarks"></a>コメント  
  プロパティが見つからなかったかどうかの対応するエントリ、`rgvar`配列が含まれる、`VARIANT`の型と`VT_EMPTY`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

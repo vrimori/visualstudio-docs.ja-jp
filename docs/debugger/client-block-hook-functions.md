@@ -1,13 +1,9 @@
 ---
-title: "クライアント ブロック用のフック関数 |Microsoft ドキュメント"
-ms.custom: 
+title: クライアント ブロック用のフック関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
 dev_langs:
@@ -22,17 +18,16 @@ helpviewer_keywords:
 - client blocks, hook functions
 - hooks, client block
 ms.assetid: f21c197e-565d-4e3f-9b27-4c018c9b87fc
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0356ef6574e281ed896df5789eb741da1f206ba4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: eccc1781174394da333d2fc703fec0b4d31e522a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="client-block-hook-functions"></a>Client ブロック用のフック関数
 `_CLIENT_BLOCK` 型のブロックに格納されているデータの内容を検証したりレポートしたりするために、専用の関数を作成できます。 作成する関数には、CRTDBG.H で定義されている次のようなプロトタイプが必要です。  
@@ -46,14 +41,14 @@ void YourClientDump(void *, size_t)
   
  フック関数を使用して、インストールした後[_CrtSetDumpClient](/cpp/c-runtime-library/reference/crtsetdumpclient)、たびに呼び出されます、`_CLIENT_BLOCK`ブロックをダンプします。 使用してできます[_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)型またはダンプされたブロックのサブタイプに情報を取得します。  
   
- 渡す、関数へのポインター`_CrtSetDumpClient`の型は**_CRT_DUMP_CLIENT**CRTDBG で定義されています。H:  
+ 渡す、関数へのポインター`_CrtSetDumpClient`の型は **_CRT_DUMP_CLIENT**CRTDBG で定義されています。H:  
   
 ```  
 typedef void (__cdecl *_CRT_DUMP_CLIENT)  
    (void *, size_t);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   
  [crt_dbg2 サンプル](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)   
  [_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)

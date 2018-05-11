@@ -1,12 +1,10 @@
 ---
-title: "方法: マスター ページまたはテーマをインポート |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: マスター ページまたはテーマをインポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 07c3e9fb88ea562a85e1c7555d2c57cb04d769ff
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e60977a44593953b4858ea0262befc61c3189cec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>方法: マスター ページまたはテーマをインポートする
-  付与できるページ、SharePoint サイトで一貫した外観を作成し、マスター ページとテーマを使用します。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]これらの要素のテンプレートが用意されていませんが、SharePoint Designer で作成しにインポートできます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 詳細については、次を参照してください。[ビルディング ブロック: ページやユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)、Microsoft web サイトです。  
+  付与できるページ、SharePoint サイトで一貫した外観を作成し、マスター ページとテーマを使用します。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] これらの要素のテンプレートが用意されていませんが、SharePoint Designer で作成しにインポートできます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 詳細については、次を参照してください。[ビルディング ブロック: ページやユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)、Microsoft web サイトです。  
   
 ### <a name="to-import-a-master-page-or-theme"></a>マスター ページまたはテーマをインポートするには  
   
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/10/2018
   
      マスター ページまたはテーマのいずれかの一覧が表示され、マスター ページまたはインポートしたテーマのいずれかが含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター ページ](http://go.microsoft.com/fwlink/?LinkId=184955)   
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint 用ページの作成](../sharepoint/creating-pages-for-sharepoint.md)   

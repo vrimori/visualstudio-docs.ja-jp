@@ -1,27 +1,22 @@
 ---
-title: "タブの出力、オプション ダイアログ ボックスのメッセージ |Microsoft ドキュメント"
-ms.custom: 
+title: タブの出力、オプション ダイアログ ボックスのメッセージ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options, Output
 ms.assetid: 22dd48c2-6d17-41b1-b84c-9ddeaef68411
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb005e859f818e6fe8b97c755996d6e14a4ccbc3
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: e559edf5028d339b6086a413fb2dcb040aafb355
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="output-tab-message-options-dialog-box"></a>[出力] タブ ([メッセージ オプション] ダイアログ ボックス)
 使用して、**出力**タブの一覧に各メッセージからデータを指定する[メッセージ ビュー](../debugger/messages-view.md)です。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  

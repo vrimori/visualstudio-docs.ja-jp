@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python コードの書式設定 | Microsoft Docs"
-description: "間隔、ステートメント、折り返し、コメントなど、Visual Studio で Python コードの書式を自動的に再設定する方法について説明します。"
-ms.custom: 
+title: Python コードの書式設定
+description: 間隔、ステートメント、折り返し、コメントなど、Visual Studio で Python コードの書式を自動的に再設定する方法について説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 95ef8e1c5be39119574f838df93d067a7404f7f5
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 36879efbb7fe95c33d73529e3438350a87226700
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="formatting-python-code"></a>Python コードの書式設定
 

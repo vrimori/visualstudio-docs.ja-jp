@@ -1,22 +1,25 @@
 ---
-title: "Compensate アクティビティ デザイナー |Microsoft ドキュメント"
+title: Compensate アクティビティ デザイナーをワークフロー デザイナー-
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Compensate.UI
 ms.assetid: 7347c947-bfff-4bad-becd-5cd23e7b24cd
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aee48f5fa8b8452b5e80bd53002fe3c6f7f2fe7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 8278066a12df0d195770391d0b2f3144ba16487d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compensate-activity-designer"></a>Compensate アクティビティ デザイナー
+
 **補正**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Compensate>アクティビティ。
 
 ## <a name="the-compensate-activity"></a>Compensate アクティビティ
@@ -25,12 +28,12 @@ ms.lasthandoff: 03/12/2018
  <xref:System.Activities.Statements.CompensationToken> で指定された <xref:System.Activities.Statements.Compensate.Target%2A> は、<xref:System.Activities.Statements.CompensableActivity> の <xref:System.Activities.Statements.CompensableActivity.Body%2A> が正常に完了した後に <xref:System.Activities.Statements.CompensableActivity> を明示的に確認または補正する手段を提供します。
 
 ### <a name="using-the-compensate-activity-designer"></a>Compensate アクティビティ デザイナーの使用
- **補正**アクティビティ デザイナーは含まれて、**トランザクション**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**  タブの左側にある、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。
+ **補正**アクティビティ デザイナーは含まれて、**トランザクション**のカテゴリ、**ツールボックス**です。 開くには**ツールボックス**、select、**ツールボックス**ワークフロー デザイナーの左側にあるタブ (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。
 
- **補正**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 この操作により、Compensate という既定の <xref:System.Activities.Statements.Compensate> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>ヘッダーの値を編集できます、**補正**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+ **補正**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを配置して、このような内の場所に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 削除するアクティビティ デザイナーを作成、 <xref:System.Activities.Statements.Compensate> 、既定値を持つアクティビティ<xref:System.Activities.Activity.DisplayName%2A>補正のです。 <xref:System.Activities.Activity.DisplayName%2A>ヘッダーの値を編集できます、**補正**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-compensate-properties"></a>Compensate のプロパティ
- 次の表に、<xref:System.Activities.Statements.CancellationScope> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A> プロパティはプロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できますが、<xref:System.Activities.Statements.Compensate.Target%2A> プロパティはプロパティ グリッドで編集する必要があります。
+ 次の表に、<xref:System.Activities.Statements.CancellationScope> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A>プロパティ グリッドで、またはワークフロー デザイナー画面で、プロパティを編集できます。 編集、<xref:System.Activities.Statements.Compensate.Target%2A>プロパティ グリッド内のプロパティです。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

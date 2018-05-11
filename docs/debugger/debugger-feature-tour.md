@@ -1,29 +1,25 @@
 ---
-title: "デバッガーの機能のツアー |Microsoft ドキュメント"
-ms.custom: H1HackMay2017
-ms.date: 05/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: デバッガーで最初に表示
+description: 簡単に見て、Visual Studio デバッガーのさまざまな機能を実行します。
+ms.custom: mvc
+ms.date: 03/27/2018
+ms.technology: vs-ide-debug
+ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: c763d706-3213-494f-b4d2-990b6e1ec456
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b7ff9ea0b5caae46715894016469fadecaa098
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 9d93994c9a0b9521049070048ec2cc38a03e9c91
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="feature-tour-of-the-visual-studio-debugger"></a>Visual Studio デバッガーの機能のツアー
+# <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio デバッガーで最初に表示
 
 このトピックでは、Visual Studio デバッガーの機能を紹介します。 またはの場合を進めるために Visual Studio で独自のアプリを開くことによって、ことを行うことができます、サンプル アプリを使用して行うことができる、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
 
@@ -138,14 +134,14 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウで変数を検査します。
 
-デバッグ中に見て、 **[自動変数]**コード エディターの下部のウィンドウ。
+デバッグ中に見て、 **[自動変数]** コード エディターの下部のウィンドウ。
 
 ![[自動変数] ウィンドウ](../debugger/media/dbg-tour-autos-window.png "自動変数 ウィンドウ")
 
-**[自動変数]**ウィンドウで、現在の値とその種類を持つに沿って変数を確認します。 **[自動変数]**ウィンドウが現在の行または前の行で使用されるすべての変数を示しています (C++ では、ウィンドウに表示される変数上記の 3 行のコードにします。 言語固有の動作のマニュアルを確認) します。
+**[自動変数]** ウィンドウで、現在の値とその種類を持つに沿って変数を確認します。 **[自動変数]** ウィンドウが現在の行または前の行で使用されるすべての変数を示しています (C++ では、ウィンドウに表示される変数上記の 3 行のコードにします。 言語固有の動作のマニュアルを確認) します。
 
 > [!NOTE]
-> JavaScript では、**ローカル**ウィンドウはしない場合はサポートされて、 **[自動変数]**ウィンドウです。
+> JavaScript では、**ローカル**ウィンドウはしない場合はサポートされて、 **[自動変数]** ウィンドウです。
 
 次を見て、**ローカル**ウィンドウです。 **ローカル**ウィンドウは、現在のスコープ内にある変数を示します。
 
@@ -161,7 +157,7 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 ![[ウォッチ] ウィンドウ](../debugger/media/dbg-tour-watch-window.png "[ウォッチ] ウィンドウ")
 
-ウォッチがある場合、この例では、`File`オブジェクトとするには、その値をデバッガー内を移動するように変更を表示できます。 他の変数ウィンドウとは異なり、**ウォッチ**windows 常に変数を表示する、試聴していること (それらいるグレー表示時にスコープ外)。
+ウォッチがある場合、この例では、`f`オブジェクトとするには、その値をデバッガー内を移動するように変更を表示できます。 他の変数ウィンドウとは異なり、**ウォッチ**windows 常に変数を表示する、試聴していること (それらいるグレー表示時にスコープ外)。
 
 詳細については、次を参照してください[ウォッチと [クイック ウォッチ] ウィンドウを使用して監視を設定。](../debugger/watch-and-quickwatch-windows.md)
 
@@ -217,21 +213,9 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
 
-## <a name="more-features-to-look-at"></a>多くの機能を見る
+## <a name="next-steps"></a>次の手順
 
--   [デバッガーのヒントとテクニック](../debugger/debugger-tips-and-tricks.md)デバッガーでは、生産性を向上させる方法について説明します。
+このチュートリアルでは、デバッガーの多くの機能を簡単に見てをしました。 サンプル アプリケーションを使用してこれらの機能をより詳しくをする可能性があります。
 
--   [エディット コンティニュ](../debugger/edit-and-continue.md)の一部の言語 (c#、C++、Visual Basic)、エディット コンティニュ機能することができます、デバッグ セッション中のコードを編集します。
-
--   [マルチ スレッド アプリケーションをデバッグ](../debugger/debug-multithreaded-applications-in-visual-studio.md)マルチ スレッド アプリケーションをデバッグする方法について説明します。 
-
--   [リモート デバッグ](../debugger/remote-debugging.md)他のコンピューターまたはデバイスで実行されているアプリをデバッグする方法について説明します。 
-  
--   [IntelliTrace](../debugger/intellitrace.md) Visual Studio Enterprise の IntelliTrace の機能について説明します。 使用できます記録とトレース、コードの実行の履歴。
-
--   [ネットワークの使用率](../profiling/network-usage.md)web サービスおよびその他のネットワーク リソースにユニバーサル Windows アプリ (UWP) のデバッグに使用できるプロファイル ツールについて説明します。 ツールを使用すると、ペイロードを確認します。
-
--   [Debug Interface Access SDK](../debugger/debug-interface-access/debug-interface-access-sdk.md) Microsoft デバッグ インターフェイス アクセス ソフトウェア開発キット (DIA SDK) について説明します。 DIA SDK は、Microsoft ポストコンパイラ ツールで生成されたプログラム データベース (.pdb) ファイルに保存されているデバッグ情報へのアクセスを提供します。  
-
-## <a name="see-also"></a>参照  
- [Visual Studio でのデバッグ](../debugger/index.md)
+> [!div class="nextstepaction"]
+> [Visual Studio を使用したデバッグについて理解する](../debugger/getting-started-with-the-debugger.md)

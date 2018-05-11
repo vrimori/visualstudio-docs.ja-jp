@@ -1,13 +1,9 @@
 ---
-title: "エラー: SQL できます &#39; t 検索 SSDEBUGPS |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: SQL できます&#39;t が SSDEBUGPS を見つける |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.sqlde_cant_find_ssdebugps
 dev_langs:
@@ -18,16 +14,16 @@ dev_langs:
 - SQL
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69a82222fe1a4a2cd643f9f84127c3674f8078fd
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: f263d76667eb197d85a99ba06a45fc08e2f4d0d6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="error-sql-can39t-find-ssdebugps"></a>T 検索 SSDEBUGPS SQL できます &#39; エラー:
+# <a name="error-sql-can39t-find-ssdebugps"></a>エラー: SQL できます&#39;t が SSDEBUGPS を見つける
 
 SSDEBUGPS.dll は、SQL Server のデバッグ ホスト コンポーネントです。
 

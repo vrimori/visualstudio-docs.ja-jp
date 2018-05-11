@@ -1,29 +1,25 @@
 ---
-title: "AssignTargetPath タスク | Microsoft Docs"
-ms.custom: 
+title: AssignTargetPath タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
 - C++
 - jsharp
 ms.assetid: 0e830e31-3bcf-4259-b2a8-a5df49b92d51
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f279d3e22f0af72a718bf0646a1ffa81b943076b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8c57c9515b57b0fbdd49da6b35d664cd1547882d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath タスク
 このタスクはリスト ファイルを受け入れ、`<TargetPath>` 属性がまだ指定されていない場合は、この属性を追加します。  

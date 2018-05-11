@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio を使用してリモート Linux コンピューターで Python コードをデバッグする | Microsoft Docs"
-description: "必要な構成手順、セキュリティ、トラブルシューティングなど、Visual Studio を使ってリモート Linux コンピューターで動作する Python コードをデバッグする方法について説明します。"
-ms.custom: 
+title: リモート Linux コンピューターでの Python コードのデバッグ
+description: 必要な構成手順、セキュリティ、トラブルシューティングなど、Visual Studio を使ってリモート Linux コンピューターで動作する Python コードをデバッグする方法について説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 895abe0f9ce632f5c67c487726d0422607f8d427
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 1a5a4f5b0400c4bf3896e2d1c1ec7ec3e8664d31
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux 上の Python コードのリモート デバッグ
 
@@ -97,7 +91,7 @@ Azure VM のファイアウォール ルールの作成方法については、�
 
 1. **[デバッグ]、[プロセスにアタッチ]** の順に選択します。
 
-1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、これらのコマンドは **[トランスポート]**と **[Python リモート デバッグ]** という名称でした)。
+1. 表示される **[プロセスにアタッチ]** ダイアログで、**[接続の種類]** を **[Python remote (ptvsd)]** (Python リモート (ptvsd)) に設定します (旧バージョンの Visual Studio では、これらのコマンドは **[トランスポート]** と **[Python リモート デバッグ]** という名称でした)。
 
 1. **[接続先]** フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
 

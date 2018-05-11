@@ -1,17 +1,16 @@
 ---
-title: "Visual Studio for Mac のアンインストール | Microsoft Docs"
-description: "Visual Studio for Mac と関連ツールをアンインストールする方法を説明します。"
+title: Visual Studio for Mac のアンインストール
+description: Visual Studio for Mac と関連ツールをアンインストールする方法を説明します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 193856ca96395db9a5b3bd494a5b8f1f7331f702
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: 14afeefac0bb5aa198b2f62ba00ba85831b23ffb
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
@@ -163,7 +162,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 * アドイン `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` と `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` を削除します
 * `/Library/Frameworks/Xamarin.Interactive.framework` および `/Library/Frameworks/Xamarin.Inspector.framework` にある Inspector のファイルとサポート ファイルを削除します
 
-# <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler をアンインストールする
+## <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler をアンインストールする
 
 ```bash
 sudo rm -rf "/Applications/Xamarin Profiler.app"

@@ -1,19 +1,20 @@
 ---
-title: "Microsoft Visual Studio での XML スニペットを使用する方法 |Microsoft ドキュメント"
+title: XML スニペットを使用する方法
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e8e94b799db6572b3aafcbd6bacf826b4a22861
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: bf6b2143c7a2fd39cd7a8d2df797f68a706a2ec8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-xml-snippets"></a>方法: 使用する XML スニペット
 

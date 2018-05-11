@@ -1,29 +1,25 @@
 ---
-title: "IDebugPortNotify2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPortNotify2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugPortNotify2
 helpviewer_keywords:
 - IDebugPortNotify2 interface
 ms.assetid: 43278b79-bf16-4c08-bcf1-6f7f7a17feab
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e913a26d35d7207193d5086b68c785f737f8bfee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c1874b46e702af49bf8f0a738b9e764f2fa11014
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 このインターフェイスは、登録またはで実行されているポートとデバッグ可能なプログラムの登録を解除します。  
@@ -51,13 +47,13 @@ IDebugPortNotify2 : IUnknown
 ## <a name="remarks"></a>コメント  
  デバッグ ポートは、プログラムがロードまたはアンロードされたときを知る手段を持つ、しない限り、カスタム ポートのサプライヤーは、このインターフェイスを実装する必要があります。 特定のポートを使用して、デバッグに読み込まれるすべてのプログラムは、このインターフェイスを使用して追跡されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

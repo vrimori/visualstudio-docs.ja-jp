@@ -1,27 +1,23 @@
 ---
-title: "ファイル名拡張子のファイルのハンドラーを指定する |Microsoft ドキュメント"
-ms.custom: 
+title: ファイル名拡張子のファイルのハンドラーを指定する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, specifying file handlers
 ms.assetid: e3de4730-a95c-465a-b3b2-92ca85364ad7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5db7a218a718e27f584abbf350b49907b56fb17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0d0086f8badb32431c85f16e1f74fe8f186c9b2e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>ファイル名拡張子のファイルのハンドラーを指定します。
 特定のファイル拡張子を持つファイルを処理するアプリケーションを判断する方法の数があります。 OpenWithList と OpenWithProgids 動詞とは、ファイルのファイル拡張子のレジストリ エントリのハンドラーを指定する方法は 2 つです。  
@@ -53,7 +49,7 @@ HKEY_CLASSES_ROOT\
 |--------------------|----------------------|  
 |*.extension|ProductName です。 extension.versionMajor.versionMinor|  
   
- バージョン管理された Progid を値として、HKEY_CLASSES_ROOT に追加する特定のファイル拡張子を開くことができるさまざまなアプリケーションを登録する\\*\<拡張子 >*\OpenWithProgids キー。 このレジストリ キーには、ファイル拡張子に関連付けられている代替 Progid の一覧が含まれています。 表示された Progid に関連付けられているアプリケーションに表示されます、**ファイルを開く***Product Name*サブメニュー。 両方で同じアプリケーションが指定されている場合、`OpenWithList`と`OpenWithProgids`キー、オペレーティング システムが、重複部分を結合します。  
+ バージョン管理された Progid を値として、HKEY_CLASSES_ROOT に追加する特定のファイル拡張子を開くことができるさまざまなアプリケーションを登録する\\*\<拡張子 >*\OpenWithProgids キー。 このレジストリ キーには、ファイル拡張子に関連付けられている代替 Progid の一覧が含まれています。 表示された Progid に関連付けられているアプリケーションに表示、**ファイルを開く * * * 製品名*サブメニュー。 両方で同じアプリケーションが指定されている場合、`OpenWithList`と`OpenWithProgids`キー、オペレーティング システムが、重複部分を結合します。  
   
 > [!NOTE]
 >  `OpenWithProgids`キーは Windows XP でのみサポートされます。 他のオペレーティング システムは、このキーを無視する、ためにをファイル ハンドラーの唯一の登録と使用しないでです。 このキーを使用して、Windows XP のユーザー エクスペリエンスが向上します。  
@@ -69,7 +65,7 @@ HKEY_CLASSES_ROOT\
          otherprogid   REG_NONE (zero-length binary value)  
 ```  
   
- ファイル拡張子に対する既定値は既定のファイル ハンドラーとして指定された ProgID です。 以前のバージョンに付属するファイル拡張子の ProgID を変更する場合[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または他のアプリケーションを引き継ぐすることができますし、登録する必要があります、`OpenWithProgids`ファイル拡張機能のキーし、と共に一覧で、新しい ProgID を指定サポートする古い Progid です。 例:  
+ ファイル拡張子に対する既定値は既定のファイル ハンドラーとして指定された ProgID です。 以前のバージョンに付属するファイル拡張子の ProgID を変更する場合[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または他のアプリケーションを引き継ぐすることができますし、登録する必要があります、`OpenWithProgids`ファイル拡張機能のキーし、と共に一覧で、新しい ProgID を指定サポートする古い Progid です。 例えば:  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -83,6 +79,6 @@ HKEY_CLASSES_ROOT\
   
  かどうか、古い ProgID に関連付けられている動詞、これらの動詞は、も表示されます。**ファイルを開く** *Product Name* 、ショートカット メニュー。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ファイル名の拡張機能の概要](../extensibility/about-file-name-extensions.md)   
  [ファイル名拡張子の動詞を登録する](../extensibility/registering-verbs-for-file-name-extensions.md)

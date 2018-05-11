@@ -1,29 +1,25 @@
 ---
-title: "SccCheckout 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccCheckout 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccCheckout
 helpviewer_keywords:
 - SccCheckout function
 ms.assetid: 06e9ecd7-fc09-40c1-9dd1-2b56c622c80b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: af8aac642ecd21f8f4709874e4e3e6ff0b3e58b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 671e4ecebb44f0910eba3bb835a6da6f9a7f3903
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scccheckout-function"></a>SccCheckout 関数
 完全修飾ファイル名のリストを指定するには、この関数はそれらローカル ドライブにします。 コメントは、チェック アウトされているすべてのファイルに適用されます。コメントの引数を指定できます、`null`文字列。  
@@ -79,6 +75,6 @@ SCCRTN SccCheckout (
 |SCC_E_FILEOUTEXCLUSIVE|別のユーザーには、このファイルで排他チェック アウトが行われます。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)

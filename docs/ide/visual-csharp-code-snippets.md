@@ -1,12 +1,9 @@
 ---
-title: "C# コード スニペット | Microsoft Docs"
-ms.custom: 
+title: C# コード スニペット
 ms.date: 06/05/2017
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - snippets [C#]
 - code snippets [C#]
@@ -14,14 +11,14 @@ helpviewer_keywords:
 - C#, code snippets
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0328ceb6c1420b038ca424c42dd408e36da6f891
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 6d96d547c3558c9c1e5ce4d11904a0c8cce048e7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-code-snippets"></a>C# コード スニペット
 
@@ -78,7 +75,7 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="see-also"></a>関連項目
 
-[コード スニペットの関数](../ide/code-snippet-functions.md)  
-[コード スニペット](../ide/code-snippets.md)  
-[テンプレート パラメーター](../ide/template-parameters.md)  
-[方法 : surround-with コード スニペットを使用する](../ide/how-to-use-surround-with-code-snippets.md)
+- [コード スニペットの関数](../ide/code-snippet-functions.md)
+- [コード スニペット](../ide/code-snippets.md)
+- [テンプレート パラメーター](../ide/template-parameters.md)
+- [方法 : surround-with コード スニペットを使用する](../ide/how-to-use-surround-with-code-snippets.md)

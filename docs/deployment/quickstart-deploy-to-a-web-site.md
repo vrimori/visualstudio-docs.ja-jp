@@ -1,27 +1,22 @@
 ---
-title: "Visual Studio の web サイトへの公開 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio の web サイトへの公開 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/22/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
 ms.assetid: fc82b1f1-d342-4b82-9a44-590479f0a895
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e324869eb90cd60cba68d9ed7b2e3fdb1ebb588d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 6fa914b1b6b353d4e15bd8293f1fc141dd0ae371
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Visual Studio 発行ツールを使用して web サイトに web アプリまたは .NET Core アプリを発行します。
 
@@ -29,19 +24,25 @@ ms.lasthandoff: 01/10/2018
 
 次の手順は、ASP.NET、ASP.NET Core、.NET Core および Visual Studio での Python アプリに適用されます。 For Node.js、手順がサポートされますが、ユーザー インターフェイスが異なる。
 
+## <a name="prerequisites"></a>必須コンポーネント
+
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+
+    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
 1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
-1. **Visual c#**または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
+1. **Visual c#** または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
 
-1. 選択**MVC**、ことを確認して**認証なし**を選択して、をクリックして**OK**です。
+1. 選択**MVC** (かを選択して**Web アプリケーション (モデル-ビュー-コント ローラー)** .NET core)、ことを確認して**認証なし**を選択して、をクリックして **[ok]**.
 
-1. ような名前を入力**MyWebApp**  をクリック**OK**です。
+1. **MyWebApp** のような名前を入力して**OK**をクリックします。
 
     Visual Studio によってプロジェクトが作成されます。
 
-1. 選択**ビルド > ソリューションのビルド**プロジェクトをビルドします。
+1. **ビルド > ソリューションのビルド** を選択して、プロジェクトをビルドします。
 
 ## <a name="publish-to-a-web-site"></a>Web サイトに発行します。
 
@@ -49,11 +50,13 @@ ms.lasthandoff: 01/10/2018
 
     ![選択発行](../deployment/media/quickstart-publish-aspnet.png "選択発行")
 
-1. **発行** ウィンドウで、選択**IIS、FTP、等**です。
+1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
+
+1. **発行先の選択** ダイアログ ボックスで、選択**IIS、FTP、等**です。
 
     ![IIS、FTP などの選択](../deployment/media/quickstart-publish-iis-ftp.png "IIS の選択、FTP などです。")
 
-1. **[発行]**をクリックします。
+1. **[発行]** をクリックします。
 
     プロファイル、発行設定 ダイアログ ボックスが表示されます。
 
@@ -61,7 +64,7 @@ ms.lasthandoff: 01/10/2018
 
 1. **発行方法**フィールドなどのメソッドを選択**Web Deploy**または**FTP**です。
 
-    表示される設定は、次に、発行メソッドに対応しています。
+    表示される設定は、次に、発行メソッドに対応しています。 Web Deploy は、IIS サーバーに Web アプリケーションと Web サイトの展開を簡略化され、サーバー上のアプリケーションとしてインストールする必要があります。 使用して、 [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)をインストールします。
 
 1. 発行メソッドに必要な設定を構成し、をクリックして**接続の検証**です。
 
@@ -79,4 +82,7 @@ ms.lasthandoff: 01/10/2018
 
 ## <a name="next-steps"></a>次の手順
 
-- [IIS に ASP.NET を配置する](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
+このクイック スタートでは、Visual Studio を使用して、発行プロファイルを作成する方法について学習しました。 パブリッシングを構成することもできます。 発行の設定をインポートしてプロファイルできます。
+
+> [!div class="nextstepaction"]
+> [発行設定のインポートと IIS に配置](tutorial-import-publish-settings-iis.md)

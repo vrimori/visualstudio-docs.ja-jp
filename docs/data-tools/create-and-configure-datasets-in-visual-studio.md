@@ -1,25 +1,23 @@
 ---
-title: "作成し、Visual Studio でのデータセットの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: 作成し、Visual Studio でのデータセットを構成します。
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
 - datasets, configuring
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: da81d141e453e0106d329565338f7893b4fad758
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 8cbe95887e9a29fa98932a18c240bc558201fc43
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>作成し、Visual Studio でのデータセットを構成します。
 
@@ -43,7 +41,7 @@ A*データセット*をデータベースからデータをメモリに格納�
 
      ![データベース オブジェクトの選択](../data-tools/media/raddata-chose-objects.png "raddata に選択したオブジェクト")
 
-5.  **[完了]**をクリックします。
+5.  **[完了]** をクリックします。
 
 6.  内のノードとして表示されます、データセット**ソリューション エクスプ ローラー**:
 
@@ -93,4 +91,4 @@ A*データセット*をデータベースからデータをメモリに格納�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)
+- [Visual Studio のデータセット ツール](../data-tools/dataset-tools-in-visual-studio.md)

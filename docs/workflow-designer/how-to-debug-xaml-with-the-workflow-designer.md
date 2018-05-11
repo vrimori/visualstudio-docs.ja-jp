@@ -1,28 +1,31 @@
 ---
-title: "方法: ワークフロー デザイナーで XAML をデバッグ |Microsoft ドキュメント"
+title: 'ワークフロー デザイナー - 方法: ワークフロー デザイナーで XAML のデバッグ'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 4d17d0a92bf3760e723bfa4ba26b45952634e7e2
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: eac6294861080614cbdd46e6ac1cc9a05d7124ff
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>ワークフロー デザイナーを使用して XAML をデバッグする方法
-ワークフローは XAML で定義されます。 ワークフローの UI 表現は、ワークフローを定義する XAML ツリーに基づいて構築されます。 デバッグの機能は、Windows ワークフロー デザイナーでワークフローのデバッグと似ています。 たとえば、XAML のデバッグ中に、ローカル、ウォッチ、およびスレッドの各ウィンドウは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]でのデバッグ時と同様に機能します。 また、XAML のデバッグ中に使用される呼び出し履歴ビューは、ワークフローの実行フローの行ベースの階層ビューです。
+
+ワークフローは XAML で定義されます。 ワークフローの UI 表現は、ワークフローを定義する XAML ツリーに基づいて構築されます。 デバッグの機能は、Windows ワークフロー デザイナーでワークフローのデバッグと似ています。 たとえば、XAML のデバッグ中にローカル、ウォッチ、およびスレッド ウィンドウ同じ動作をワークフロー デザイナーのデバッグでのようにします。 また、XAML のデバッグ中に使用される呼び出し履歴ビューは、ワークフローの実行フローの行ベースの階層ビューです。
 
 > [!NOTE]
 > ワークフローの XAML がアクティビティと同じアセンブリ内にある場合、クラス名のアセンブリ部分は含まれません。 クラス (アクティビティ) 名のこの部分がないと、実行時に XAML を読み込むことはできません。 メイン プロジェクトと同じ名前空間でアクティビティを定義することはお勧めしません。定義した場合は、XAML をデザイナーで編集した後に手動で編集する必要があります。
 
-### <a name="to-debug-workflow-xaml"></a>ワークフローの XAML をデバッグするには
+## <a name="to-debug-workflow-xaml"></a>ワークフローの XAML をデバッグするには
 
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でワークフロー プロジェクトまたはアクティビティ プロジェクトを開きます。
+1.  Visual Studio でワークフローまたはアクティビティ プロジェクトを開きます。
 
 2.  アクティビティまたは」の説明に従ってをデバッグするアクティビティにブレークポイントを設定[する方法: ワークフロー内のブレークポイントの設定](../workflow-designer/how-to-set-breakpoints-in-workflows.md)です。
 

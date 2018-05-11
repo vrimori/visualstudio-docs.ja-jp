@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio で C/C++ 用の単体テストを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で C/C++ 用の単体テストを作成する
 ms.date: 11/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 25a5d358ce8c9b36286929232a42dad48099cff5
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 227b12f2da07d3d610f3d043348dc59680fc17ab
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -36,12 +33,11 @@ Visual Studio には次の C++ テスト フレームワークが含まれてお
 
 **Visual Studio 2017 バージョン 15.5**
 
-1) **Google Test アダプター**は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 このアダプターには、**ソリューション エクスプローラー**のソリューション ノードの **[新しいプロジェクトの追加]** コンテキスト メニューでソリューションに追加できるプロジェクト テンプレートと、**[ツール] > [オプション]** で構成できるオプションがあります。 詳細については、「[How to: use Google Test in Visual Studio](how-to-use-google-test-for-cpp.md)」(Visual Studio で C++ 用の Google Test を使用する方法) をご覧ください。
+- **Google Test アダプター**は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 このアダプターには、**ソリューション エクスプローラー**のソリューション ノードの **[新しいプロジェクトの追加]** コンテキスト メニューでソリューションに追加できるプロジェクト テンプレートと、**[ツール] > [オプション]** で構成できるオプションがあります。 詳細については、「[How to: use Google Test in Visual Studio](how-to-use-google-test-for-cpp.md)」(Visual Studio で C++ 用の Google Test を使用する方法) をご覧ください。
 
-2) **Boost.Test** は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 **テスト エクスプローラー**とは統合されていますが、現時点ではプロジェクト テンプレートがないので、手動で構成する必要があります。 詳細については、「[How to: use Boost.Test in Visual Studio](how-to-use-boost-test-for-cpp.md)」(Visual Studio で C++ 用の Boost.Test を使用する方法) をご覧ください。
+- **Boost.Test** は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 **テスト エクスプローラー**とは統合されていますが、現時点ではプロジェクト テンプレートがないので、手動で構成する必要があります。 詳細については、「[How to: use Boost.Test in Visual Studio](how-to-use-boost-test-for-cpp.md)」(Visual Studio で C++ 用の Boost.Test を使用する方法) をご覧ください。
 
-3) **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
-
+- **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
 
 **Visual Studio 2015 以前**
 
@@ -78,7 +74,7 @@ Google Test アダプターと Boost.Test アダプターは、それぞれ、Vi
 
 ![include ディレクティブを追加する](media/cpp-write-test-methods.png "C++ テストがヘッダー ファイルの include を追加する")
 
-TEST_CLASS と TEST_METHOD は、[Microsoft ネイティブ テスト フレームワーク](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md) の一部です。 **テスト エクスプローラー**は、サポートされている他のフレームワークのテスト メソッドも同様の方法で検出します。
+TEST_CLASS と TEST_METHOD は、[Microsoft ネイティブ テスト フレームワーク](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)の一部です。 **テスト エクスプローラー**は、サポートされている他のフレームワークのテスト メソッドも同様の方法で検出します。
 
 TEST_METHOD は void を返します。 テスト結果を生成するには、`Assert` クラスの静的メソッドを使って、期待される結果に対して実際の結果をテストします。 次の例では、`MyClass` に `std::string` を受け取るコンストラクターがあるものとします。 コンストラクターが期待どおりにクラスを初期化することを次のようにテストできます。
 
@@ -96,16 +92,16 @@ TEST_METHOD は void を返します。 テスト結果を生成するには、`
 
 ### <a name="run-the-tests"></a>テストを実行
 
-1.  **[テスト]** メニューで、**[Windows]**、**[テスト エクスプローラー]** の順に選択します。 次の図は、テストがまだ実行されていないテスト プロジェクトです。
+1. **[テスト]** メニューで、**[Windows]**、**[テスト エクスプローラー]** の順に選択します。 次の図は、テストがまだ実行されていないテスト プロジェクトです。
 
-![テスト実行前のテスト エクスプローラー](media/cpp-test-explorer.png "C++ のテスト エクスプローラー")
+   ![テスト実行前のテスト エクスプローラー](media/cpp-test-explorer.png "C++ のテスト エクスプローラー")
 
-> [!NOTE]
-> CTest と**テスト エクスプローラー**の統合はまだ利用できません。 CTest のテストは CMake のメイン メニューから実行します。
+   > [!NOTE]
+   > CTest と**テスト エクスプローラー**の統合はまだ利用できません。 CTest のテストは CMake のメイン メニューから実行します。
 
-2. ウィンドウに一部のテストしか表示されない場合は、次の方法でテスト プロジェクトをビルドします。**ソリューション エクスプローラー**で、該当するノードを右クリックし、**[ビルド]** または **[リビルド]** を選択します。
+1. ウィンドウに一部のテストしか表示されない場合は、次の方法でテスト プロジェクトをビルドします。**ソリューション エクスプローラー**で、該当するノードを右クリックし、**[ビルド]** または **[リビルド]** を選択します。
 
-3.  テスト エクスプローラーで、**[すべて実行]** を選択するか、または実行する特定のテストを選択します。 ブレークポイントを有効にした場合のデバッグ モードでのテストの実行など他のオプションについては、テストを右クリックします。 すべてのテストを実行すると、ウィンドウに成功したテストと失敗したテストが示されます。
+1. テスト エクスプローラーで、**[すべて実行]** を選択するか、または実行する特定のテストを選択します。 ブレークポイントを有効にした場合のデバッグ モードでのテストの実行など他のオプションについては、テストを右クリックします。 すべてのテストを実行すると、ウィンドウに成功したテストと失敗したテストが示されます。
 
 ![テスト実行後のテスト エクスプローラー](media/cpp-test-explorer-passed.png "テスト実行後の C++ テスト エクスプローラー")
 

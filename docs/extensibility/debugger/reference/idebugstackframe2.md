@@ -1,29 +1,25 @@
 ---
-title: "IDebugStackFrame2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugStackFrame2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugStackFrame2
 helpviewer_keywords:
 - IDebugStackFrame2 interface
 ms.assetid: bd212a6a-dcc6-4756-a77a-e8dfda38b104
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 457cfc4997ca02ca76b296e3b56fded244629e52
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: efa6c917e5a59c291d07757b52fab4fe8aa7b0ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugstackframe2"></a>IDebugStackFrame2
 このインターフェイスは、特定のスレッドのコール スタックの 1 つのスタック フレームを表します。  
@@ -47,7 +43,7 @@ IDebugStackFrame2 : IUnknown
 |------------|-----------------|  
 |[GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)|このスタック フレームのコードのコンテキストを取得します。|  
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md)|このスタック フレームのドキュメントのコンテキストを取得します。|  
-|[GetName](../../../extensibility/debugger/reference/idebugstackframe2-getname.md)|スタック フレームの名前を取得します。|  
+|[getName](../../../extensibility/debugger/reference/idebugstackframe2-getname.md)|スタック フレームの名前を取得します。|  
 |[GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)|スタック フレームの説明を取得します。|  
 |[GetPhysicalStackRange](../../../extensibility/debugger/reference/idebugstackframe2-getphysicalstackrange.md)|スタック フレームに関連付けられている物理アドレスの範囲のコンピューターに依存する形式を取得します。|  
 |[GetExpressionContext](../../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)|スタック フレームおよびスレッドの現在のコンテキストで式の評価を行うための評価コンテキストを取得します。|  
@@ -59,12 +55,12 @@ IDebugStackFrame2 : IUnknown
 ## <a name="remarks"></a>コメント  
  このインターフェイスは、デバッグ中のプログラムが (いずれかの原因となったユーザー セット ブレークポイントまたは例外によって) ブレークポイントで停止された場合にのみ取得されます。 このインターフェイスから式を評価する式のコンテキストを取得することができます、レジスタの一覧を返すことが、または呼び出し履歴を取得して調べることができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)

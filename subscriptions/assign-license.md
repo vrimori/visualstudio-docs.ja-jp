@@ -1,44 +1,51 @@
 ---
-Title: Assign licenses to Visual Studio Subscriptions | Microsoft Docs
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how administrators can assign licenses to subscribers
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: b82f02b968398d0a8d1ce4872ce00e8447a2ae4d
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションにライセンスを割り当てる | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: 管理者がサブスクライバーにライセンスを割り当てる方法を説明します
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 62336656e551a085c6c8753e6baea06730f49510
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assigning-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 
+Visual Studio サブスクリプションの管理者は、Visual Studio サブスクリプションの管理者ポータルを使用して、個々のユーザーにサブスクリプションを割り当てることができます。  
+ユーザー 1 人ずつに割り当てることも、[一括追加] 機能を使用して迅速かつ簡単にサブスクリプション情報でサブスクライバーの一覧をアップロードすることも可能です。 
+
 ## <a name="assigning-a-single-user"></a>1 人のユーザーの割り当て
 Visual Studio サブスクリプションに利用可能なライセンスがある場合は、新しいユーザーにそのライセンスを割り当てて、サブスクリプションの特典にアクセスできるようにすることができます。 
-1.  1 人の Visual Studio サブスクライバーを割り当てるには、テーブルの上部にある **[追加]** をクリックします。
+1.  [管理者ポータル](https://manage.visualstudio.com)へのサインイン
+
+2.  1 人の Visual Studio サブスクライバーを割り当てるには、テーブルの上部にある **[追加]** をクリックします。
 
     ![サブスクライバーの追加](_img\assign-license-add\assign-license-add.png)
 
-2.  フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます (下図参照)。 
+3.  フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます (下図参照)。 
 
-サインイン用とメール受信用に異なるメール アドレスが使われている場合は、ここでそれを入力できます。 [Different email for communication than sign-in?]\(通信用とサインイン用の電子メール アドレスが異なる\) ハイパーリンクを選びます。 
+    サインイン用とメール受信用に異なるメール アドレスが使われている場合は、ここでそれを入力できます。 [Different email for communication than sign-in?]\(通信用とサインイン用の電子メール アドレスが異なる\) ハイパーリンクを選びます。 
 
-このサブスクライバーが [Visual Studio サブスクリプション ポータル](https:/my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、必ず、[ダウンロード] ボックスをオンのままにしてください。 このボックスをオフにすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。 終わったら、**[追加]** をクリックします。
+    **ダウロードへのアクセス:**  
+    このサブスクライバーが [Visual Studio サブスクリプション ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、必ず、[ダウンロード] ボックスをオンのままにしてください。 このボックスをオフにすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。 
+    
+    このサブスクライバーのオプション選択が完了したら、**[追加]** をクリックします。
 
-   ![サブスクライバーの情報を入力する](_img\assign-license-add\add-subscriber-1.png)
+    ![サブスクライバー情報の入力](_img\assign-license-add\add-subscriber-1.png)
+    ![サブスクライバー情報の入力](_img\assign-license-add\add-subscriber-2.png)
 
-   ![サブスクライバーの情報を入力する](_img\assign-license-add\add-subscriber-2.png)
-
-3.  サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
+4.  サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
 
     ![追加されたサブスクライバー](_img\assign-license-add\add-subscriber-complete.png)
 
 ## <a name="bulk-assignments"></a>一括割り当て
-1.  複数のサブスクライバーを一度に追加するには、[サブスクライバー] タブに移動します。上部リボンの **[一括追加]** をクリックします。 
+1.  複数のサブスクライバーを一度に追加するには、**[サブスクライバー]** タブに移動します。上部リボンの **[一括追加]** をクリックします。 
 
     ![一括追加](_img\assign-license-add\bulk-assign-add.png)
 
@@ -50,9 +57,7 @@ Visual Studio サブスクリプションに利用可能なライセンスがあ
 **問題なくアップロードできるよう、次のベスト プラクティスに従ってください**。
     - フォームのどのフィールドにもコンマが含まれていないことを確認します。
     - フォームのフィールド (ユーザー名など) の前後のスペースを削除します。
-    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名を "Maggie        May" と入力してはいけません。システムは余分なスペースを除去しません)。
-
-   ![一括追加テンプレート](_img\assign-license-add\bulk-template.png)
+    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名を "Maggie        May" と入力してはいけません。システムは余分なスペースを除去しません)。![テンプレートの一括追加](_img\assign-license-add\bulk-template.png)
 
 4.  Visual Studio サブスクリプション管理ポータルに戻り、[Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで **[参照]** をクリックします。 保存した Excel ファイルを選んで、**[OK]** をクリックします。 アップロードの進行状況が画面に表示されます。 
 

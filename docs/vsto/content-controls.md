@@ -1,13 +1,10 @@
 ---
-title: "コンテンツ コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: コンテンツ コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.DropDownListContentControl
 - VST.Toolbox.RichTextContentControl
@@ -41,14 +38,14 @@ helpviewer_keywords:
 - BuildingBlockGalleryContentControl class
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e06075c0e748aab34c4a1df425f95592856217db
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a1c56b7e48ce42699330e8eb40595d9cc761736e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="content-controls"></a>コンテンツ コントロール
   コンテンツ コントロールは、次のような機能を備える文書やテンプレートをデザインするときに使用します。  
@@ -130,7 +127,7 @@ ms.lasthandoff: 01/10/2018
 |元に戻す操作またはやり直し操作の結果としてコンテンツ コントロールが文書に追加された後で、コードを実行します。|コントロールの <xref:Microsoft.Office.Tools.Word.ContentControlBase.Added> イベントを処理します。|  
 |コンテンツ コントロールが文書から削除される直前にコードを実行します。|コントロールの <xref:Microsoft.Office.Tools.Word.ContentControlBase.Deleting> イベントを処理します。|  
   
-##  <a name="Protection"></a>コンテンツ コントロールを使用して文書の一部を保護します。  
+##  <a name="Protection"></a> コンテンツ コントロールを使用して文書の一部を保護します。  
  文書の一部を保護すると、ユーザーは文書のその部分のコンテンツを変更および削除できなくなります。 コンテンツ コントロールを使用して文書の一部を保護するには、いくつかの方法があります。  
   
  保護対象とする領域がコンテンツ コントロールの内部にある場合は、コンテンツ コントロールのプロパティを使用して、ユーザーがコントロールの編集や削除を行うことができないようにします。  
@@ -146,7 +143,7 @@ ms.lasthandoff: 01/10/2018
   
  コンテンツ コントロールを使用して、ドキュメントの一部を保護する方法の詳細については、次を参照してください。[する方法: 文書を保護するコンテンツ コントロールの使用によって](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)です。  
   
-##  <a name="DataBinding"></a>コンテンツ コントロールへのデータをバインディング  
+##  <a name="DataBinding"></a> コンテンツ コントロールへのデータをバインディング  
  コンテンツ コントロールをデータ ソースにバインドすると、文書内にデータを表示できます。 データ ソースが更新されると、コンテンツ コントロールに変更内容が反映されます。 変更内容をデータ ソースに反映させて保存することもできます。  
   
  コンテンツ コントロールには、次のようなデータ バインディング オプションがあります。  
@@ -233,13 +230,13 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
   
  ユーザーがコンテンツ コントロールの内容を編集した時点を判断するには、コントロールをカスタム XML 部分にバインドし、<xref:Microsoft.Office.Tools.Word.ContentControlBase.StoreUpdating> イベントを処理します。 このイベントは、ユーザーがカスタム XML 部分にバインドされているコントロールの内容を変更したときに発生します。 カスタム XML 部分にコンテンツ コントロールをバインドする方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: カスタム XML 部分へのコンテンツ コントロールのバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)です。  
   
-###  <a name="checkbox"></a>Word プロジェクトでのチェック ボックス コンテンツ コントロール  
+###  <a name="checkbox"></a> Word プロジェクトでのチェック ボックス コンテンツ コントロール  
  Word 2010 では、チェック ボックスを表す新しい種類のコンテンツ コントロールが導入されました。 ただし、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Office プロジェクトで使用するための対応する CheckBoxContentControl 型を行いません。 [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または Word 2010 プロジェクトでチェック ボックス コンテンツ コントロールを作成するには、<xref:Microsoft.Office.Tools.Word.ControlCollection.AddContentControl%2A> メソッドを使用して <xref:Microsoft.Office.Tools.Word.ContentControl> オブジェクトを作成し、<xref:Microsoft.Office.Interop.Word.WdContentControlType.wdContentControlCheckBox> の値をそのメソッドに渡してチェック ボックス コンテンツ コントロールを指定します。 これを実行する方法を次のコード例に示します。  
   
  [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
  [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [チュートリアル: コンテンツ コントロールによるテンプレートの作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   

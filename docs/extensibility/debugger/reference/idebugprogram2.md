@@ -1,29 +1,25 @@
 ---
-title: "IDebugProgram2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugProgram2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProgram2
 helpviewer_keywords:
 - IDebugProgram2 interface
 ms.assetid: 8d73df73-cfff-4b8b-b426-d6051edb1939
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f02d099fe680006966219bb626e17bc7a7114b2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 392d9bd350d6207e6725c31c659a6edf1518a807
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugprogram2"></a>IDebugProgram2
 このインターフェイスは、プロセスで実行されているプログラムを表します。  
@@ -46,7 +42,7 @@ IDebugProgram2 : IUnknown
 |メソッド|説明|  
 |------------|-----------------|  
 |[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md)|このプログラムで実行されているスレッドを列挙します。|  
-|[GetName](../../../extensibility/debugger/reference/idebugprogram2-getname.md)|プログラムの名前を取得します。|  
+|[getName](../../../extensibility/debugger/reference/idebugprogram2-getname.md)|プログラムの名前を取得します。|  
 |[GetProcess](../../../extensibility/debugger/reference/idebugprogram2-getprocess.md)|このプログラムがで実行されているプロセスを取得します。|  
 |[終了](../../../extensibility/debugger/reference/idebugprogram2-terminate.md)|このプログラムを終了します。|  
 |[添付](../../../extensibility/debugger/reference/idebugprogram2-attach.md)|このプログラムにアタッチします。|  
@@ -67,7 +63,7 @@ IDebugProgram2 : IUnknown
 |[EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md)|このプログラムのコード パスを列挙します。|  
 |[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md)|ダンプ ファイルを書き込みます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
@@ -77,7 +73,7 @@ IDebugProgram2 : IUnknown
 ## <a name="remarks"></a>コメント  
  プログラムは、プロセスで構成される 1 つまたは複数のプログラムの中に、特定のランタイムのアーキテクチャで実行されているスレッド コンテナーです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [GetProgram](../../../extensibility/debugger/reference/idebugthread2-getprogram.md)   
  [次に](../../../extensibility/debugger/reference/ienumdebugprograms2-next.md)   

@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: sharepoint ビジネス データを使用して外部リストを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: sharepoint ビジネス データを使用して外部リストを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -24,14 +21,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], external list
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 49c43e3add54b3ba3f584af6feda630a8d1ad526
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 09606f3ca61abd747451f92d4ecf8ee43010e669
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成
 
@@ -189,7 +186,7 @@ ms.lasthandoff: 02/28/2018
 
 10. 手順 6 には、次のフィールドごとに、型記述子を作成します。
 
-    |name|型の名前|
+    |名前|型の名前|
     |----------|---------------|
     |FirstName|System.String|
     |LastName|System.String|
@@ -281,7 +278,7 @@ ms.lasthandoff: 02/28/2018
 - [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)です。
 - [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  
 [ビジネス データ接続モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)  

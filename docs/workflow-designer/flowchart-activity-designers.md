@@ -1,18 +1,20 @@
 ---
-title: "フローチャート アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナーにフローチャート アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 8b7b4aa6-d27d-45c8-87c2-641440d38afc
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a68a9bad05a63a6727f216b8ed8537b0f7051559
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: eb6294b2e2392c81e20c984972ec875c589a7167
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flowchart-activity-designers"></a>フローチャート アクティビティ デザイナー
 

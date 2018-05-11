@@ -1,12 +1,10 @@
 ---
-title: "方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 154af4ba9ac4a83c40c5d53a6b292c212aa71503
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 108474e725c95f495bf6eec0f9a2224ca971b3d2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>方法: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする
   に加えて、SharePoint ソリューションの配置、ローカル システムに、リモート サイトまたはローカルの SharePoint サイトにセキュリティで保護された SharePoint ソリューションを発行できます。 リモート発行プロセスは、SharePoint サーバーに .wsp ファイルをコピー、ソリューションをインストールし、ソリューションをアクティブ化することができます。 変更を行った後は、リモート SharePoint ソリューションのインストールをアップグレードすることもできます。  
@@ -32,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **ソリューション エクスプ ローラー**、発行、および順に選択する、セキュリティで保護された SharePoint プロジェクトのショートカット メニューを開いて**発行**です。  
   
-2.  **発行** ダイアログ ボックスで、選択、 **SharePoint サイトに発行**オプションをクリックし、次の例など、オンライン発行のサイトの URL を入力: **https://mytestsite.sharepoint.microsoftonline.com**です。  
+2.  **発行** ダイアログ ボックスで、選択、 **SharePoint サイトに発行**オプションをクリックし、次の例など、オンライン発行のサイトの URL を入力: **https://mytestsite.sharepoint.microsoftonline.com**.  
   
 3.  選択、**発行後にブラウザーでソリューション ギャラリー ページを開く**のソリューションの一覧を表示するオプション ボタン、**ソリューション ギャラリー**発行後のページです。  
   
@@ -77,7 +76,7 @@ ms.lasthandoff: 01/10/2018
   
      ソリューションの古いバージョンが非アクティブ化、ソリューションの新しいバージョンが、以前のソリューションから保持されているデータによってアップグレードおよび SharePoint の新しいソリューションを有効にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: 配置し、SharePoint ソリューションをローカルの SharePoint サイトに発行](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)   
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   

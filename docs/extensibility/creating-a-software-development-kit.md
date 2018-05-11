@@ -1,23 +1,21 @@
 ---
-title: "ソフトウェア開発キットの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ソフトウェア開発キットの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
-caps.latest.revision: "54"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4ea17b02cfa2e987c4a3c02acddf838001b4ae2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 55b62ac0ac448023793f511389146ebb1b07da0f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-software-development-kit"></a>ソフトウェア開発キットを作成する
 ソフトウェア開発キット (SDK) は、Visual Studio での 1 つのアイテムとして参照できる Api のコレクションです。 **参照マネージャー**  ダイアログ ボックスに、プロジェクトに関連するすべての Sdk が一覧表示されます。 SDK をプロジェクトに追加するときに Api は Visual Studio で使用できます。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [拡張機能 Sdk](#ExtensionSDKs)  
   
-##  <a name="PlatformSDKs"></a>プラットフォーム Sdk  
+##  <a name="PlatformSDKs"></a> プラットフォーム Sdk  
  プラットフォームのアプリを開発するには、プラットフォーム Sdk が必要です。 たとえば、 [!INCLUDE[win81](../debugger/includes/win81_md.md)] SDK が用のアプリの開発に必要な[!INCLUDE[win81](../debugger/includes/win81_md.md)]します。  
   
 ### <a name="installation"></a>インストール  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |アーキテクチャのフォルダー|サポートされるアーキテクチャの任意のフォルダーが存在できます。 Visual Studio には、次のアーキテクチャがサポートされています。 x86、x64、ARM、および neutral です。 注: Win32 が x86 にマップされ、AnyCPU がニュートラルにマップします。<br /><br /> MSBuild は、プラットフォーム Sdk を \CommonConfiguration\neutral 下でのみ検索します。|  
 |Sdkmanifest.xml 内|このファイルは、Visual Studio が SDK を使用する方法について説明します。 SDK マニフェストを見て[!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:**オブジェクト ブラウザーが、参照一覧に表示される値。<br /><br /> **PlatformIdentity:**この属性の存在に指示 Visual Studio および MSBuild の SDK がプラットフォーム SDK であること、およびそこから追加された参照がコピーされるべきではありませんローカルです。<br /><br /> **TargetFramework:**のみを対象との値で指定されている同じフレームワークをプロジェクトすることを確認する Visual Studio によってこの属性が使用される属性は、SDK を使用できます。<br /><br /> **MinVSVersion:**に適用する Sdk のみを使用する Visual Studio によってこの属性を使用します。<br /><br /> **参照:**この属性は、コントロールを含む参照のみを指定する必要があります。 参照がコントロールを含むかどうかを指定する方法の詳細については、後述します。|  
   
-##  <a name="ExtensionSDKs"></a>拡張機能 Sdk  
+##  <a name="ExtensionSDKs"></a> 拡張機能 Sdk  
  次のセクションでは、拡張機能 SDK を展開するために必要なものについて説明します。  
   
 ### <a name="installation"></a>インストール  
@@ -173,7 +171,7 @@ MoreInfo = "http://msdn.microsoft.com/MySDK">
   
 6.  MaxPlatformVerson: 拡張機能 SDK を使うことはできません、プラットフォームのバージョンを指定する最大のターゲット プラットフォーム バージョンを使用してください。 たとえば、Microsoft Visual C ランタイム パッケージ v11.0 は、Windows 8 プロジェクトでのみ参照必要があります。 したがって、Windows 8 プロジェクトの MaxPlatformVersion が 8.0 が。 つまり、参照マネージャーが、Windows 8.1 プロジェクトの Microsoft Visual C ランタイム パッケージをフィルター処理、MSBuild はエラーをスロー時に、[!INCLUDE[win81](../debugger/includes/win81_md.md)]プロジェクトでは、それを参照します。 注: この要素は、以降ではサポート[!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]です。  
   
-7.  AppliesTo: は、適用可能な Visual Studio プロジェクトの種類を指定することによって、参照マネージャーで使用できる、Sdk を指定します。 9 個の値が認識されます。 WindowsAppContainer、Visualc++、VB、CSharp、WindowsXAML、JavaScript、管理、およびネイティブです。 SDK の作成者が使用できると ("+')、または ("&#124;)、されません ("!")演算子を正確に SDK に適用されるプロジェクトの種類のスコープを指定します。  
+7.  AppliesTo: は、適用可能な Visual Studio プロジェクトの種類を指定することによって、参照マネージャーで使用できる、Sdk を指定します。 9 個の値が認識されます。 WindowsAppContainer、Visualc++、VB、CSharp、WindowsXAML、JavaScript、管理、およびネイティブです。 SDK の作成者が使用できると ("+')、または ("&#124;") ではなく、("!")演算子を正確に SDK に適用されるプロジェクトの種類のスコープを指定します。  
   
      WindowsAppContainer 識別用のプロジェクト[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]アプリ。  
   
@@ -195,7 +193,7 @@ MoreInfo = "http://msdn.microsoft.com/MySDK">
   
 16. ネイティブ Winmd をまたはコントロールを含む参照のみのファイル参照: を指定します。 参照がコントロールを含むかどうかを指定する方法については、次を参照してください。[ツールボックス項目の場所を指定する](#ToolboxItems)以下です。  
   
-##  <a name="ToolboxItems"></a>ツールボックス アイテムの場所を指定します。  
+##  <a name="ToolboxItems"></a> ツールボックス アイテムの場所を指定します。  
  Sdkmanifest.xml 内のスキーマの ToolBoxItems 要素は、プラットフォームと拡張機能 Sdk の両方で、カテゴリとツールボックス項目の場所を指定します。 次の例では、別の場所を指定する方法を示します。 これは、WinMD または DLL のいずれかの参照に適用します。  
   
 1.  既定のツールボックス カテゴリのコントロールを配置します。  
@@ -266,7 +264,7 @@ MoreInfo = "http://msdn.microsoft.com/MySDK">
     </File>  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: C++ を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
  [チュートリアル: c# または Visual Basic を使用して、SDK の作成](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md)   
  [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)

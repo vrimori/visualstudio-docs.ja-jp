@@ -1,12 +1,9 @@
 ---
-title: "Windows Vista の ClickOnce 配置 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows Vista の ClickOnce 配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - manifest generation
 - Windows, ClickOnce deployment
 ms.assetid: b21a0ebc-0ff6-4f49-8993-7d1ad3f8cac2
-caps.latest.revision: "12"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 49ea73293e8cc491b515644a7e7d3f226a799339
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c546d7e4287fc47a3770baa306a43a1631be2f06
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista の ClickOnce 配置
 Visual Studio でアプリケーションの構築 Windows Vista でユーザー アカウント制御 (UAC) は、通常、埋め込みマニフェストを生成するには、アプリケーションの実行可能ファイルに XML データをバイナリとしてにエンコードされます。 ClickOnce と登録を必要としない COM アプリケーションは外部マニフェストが必要なために、Visual Studio はこれらの種類の埋め込まれたマニフェストではなく、UAC データを含むプロジェクト ファイルを生成します。 Visual Studio の既定では、ユーザーが (ClickOnce と登録を必要としない COM デプロイメント用)、外部の UAC マニフェスト情報を生成するか、アプリケーションの実行可能ファイル (それ以外の場合は) に埋め込むアプリケーション マニフェストと呼ばれるファイルから情報が使用されます。 Visual Studio には、マニフェスト生成のための次のオプションが用意されています。  
@@ -51,7 +48,7 @@ Visual Studio でアプリケーションの構築 Windows Vista でユーザー
   
  マニフェスト生成のための Visual Basic プロジェクトの構成については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ユーザーのアクセス許可と Visual Studio](http://msdn.microsoft.com/en-us/d5c55084-1e7b-4b61-b478-137db01c0fc0)   
  [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)   

@@ -1,7 +1,9 @@
 ---
-title: "Windows Workflow Foundation (レガシ) 用の Visual Studio デバッガーを起動 |Microsoft ドキュメント"
+title: ワークフロー デザイナーで、Visual Studio Debugger for Windows Workflow Foundation (レガシ) を呼び出す
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - stepping
 - Step Over command
@@ -16,26 +18,28 @@ helpviewer_keywords:
 ms.assetid: d6f58e35-5cce-4ff2-9afc-b2d9d0f819cf
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d1b00cc3f838de8d70310e56f6cdb3476cf742
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a326f8b6dc482c2adfc2caba797c38094a99f8c5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Visual Studio Debugger for Windows Workflow Foundation の起動 (レガシ)
-このトピックについて説明する方法を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]をデバッグするデバッガー[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]従来の Windows ワークフロー デザイナー内のアプリケーションです。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- ほとんどの場合、他の Visual Studio プログラミング言語で書かれたプログラムをデバッグするときと同じようにして、従来のワークフローをデバッグすることができます。 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation を起動するには、次の方法に従います。
+このトピックの内容について説明します、従来の Windows ワークフロー デザイナーでの Windows Workflow Foundation (WF) アプリケーションをデバッグする方法、Visual Studio デバッガーを使用します。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
+
+ほとんどの場合、他の Visual Studio プログラミング言語で書かれたプログラムをデバッグするときと同じようにして、従来のワークフローをデバッグすることができます。 次のように、Visual Studio Debugger for Windows Workflow Foundation を起動できます。
 
 -   選択**プロセスにアタッチする**で、**デバッグ** メニューの選択可能なプロセスから実行中のワークフロー インスタンスを選択します。
 
 -   キーを押して**f5 キーを押して**ワークフローのインスタンスを実行を開始するか、ブレークポイントにヒットした後も引き続き実行します。
 
 ## <a name="stepping-through-code"></a>コードのステップ実行
- このデバッガは、最も一般的なデバッグ手順の 1 つであるステップ実行 (コードを 1 行ずつ段階的に実行していくこと) をサポートします。 コードをステップ実行するコマンドには、次の 3 つがあります。
+
+このデバッガは、最も一般的なデバッグ手順の 1 つであるステップ実行 (コードを 1 行ずつ段階的に実行していくこと) をサポートします。 コードをステップ実行するコマンドには、次の 3 つがあります。
 
 -   **ステップ イン**: を使用して、アクティビティにステップ インできます**F11**です。 デバッガーは、任意の定義済みハンドラーにステップ インします。 ハンドラーが定義されていない場合は、アクティビティをステップ オーバーするか、(他のアクティビティを含む) 複合アクティビティの場合には、実行される最初のアクティビティにステップ インします。 次のアクティビティのデザイナーからコード ハンドラへのステップ インはサポートされていません: **IfElseActivity**、 **WhileActivity**、 **ConditionedActivityGroup**、または**ReplicatorActivity**です。 これらのアクティビティに関連したハンドラをデバッグするには、明示的なブレークポイントをコード内に配置する必要があります。
 
@@ -51,7 +55,7 @@ ms.lasthandoff: 03/12/2018
 
  ソリューション エクスプ ローラーでスタートアップ プロジェクトを設定するには、プロジェクト名を右クリックして**スタートアップ プロジェクトとして設定**です。 パス内のホストに設定する、**外部プログラムの開始**プロパティ、ダブルクリックして、ワークフロー プロジェクトの**プロパティ**クリックし、ソリューション エクスプ ローラー内のノード、**デバッグ**タブ**開始動作****外部プログラムの開始**しデバッグするワークフローをホストしている、.exe ファイルへのパスを入力します。
 
- ホスト アプリケーションがスタートアップ プロジェクトとして設定されている場合は、Visual Studio デバッガだけがデバッグ用に起動されます。[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation は起動されません。 Visual Studio デバッガを使用する場合、C# または Visual Basic コード ブレークポイントだけがヒットします。ワークフロー デザイナで設定されたブレークポイントはヒットしません。 たとえば、デザイナで <xref:System.Workflow.Activities.ParallelActivity> アクティビティに対して設定したブレークポイントは、[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation が使用される場合にヒットしますが、Visual Studio デバッガが使用される場合はヒットしません。
+ ホスト アプリケーションがスタートアップ プロジェクトとして設定されている場合のみと、Visual Studio デバッガーが呼び出されるデバッグです。Visual Studio Debugger for Windows Workflow Foundation は呼び出されません。 Visual Studio デバッガを使用する場合、C# または Visual Basic コード ブレークポイントだけがヒットします。ワークフロー デザイナで設定されたブレークポイントはヒットしません。 設定したブレークポイントなど、 <xref:System.Workflow.Activities.ParallelActivity> Visual Studio Debugger for Windows Workflow Foundation を使用する場合は、Visual Studio デバッガーを使用するときではなく、デザイナーでアクティビティがヒットします。
 
 ## <a name="see-also"></a>関連項目
 

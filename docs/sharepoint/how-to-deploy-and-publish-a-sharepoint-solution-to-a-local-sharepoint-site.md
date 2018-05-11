@@ -1,12 +1,10 @@
 ---
-title: "方法: 展開し、SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 展開し、SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b5b3ab297612ec48027af8d4eb74956d1d255443
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5c4f7e347f9cea3a73ab5326b42720a1b2c33529
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>方法: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する
   展開したり、開発用コンピューター上のローカル SharePoint サーバーに SharePoint ソリューションを発行することができます。 展開プロセスは、SharePoint サーバーに .wsp ファイルをコピー、ソリューションをインストールし、機能をアクティブにし、します。 発行プロセスは、SharePoint サーバーに .wsp ファイルをコピーおよびインストールのみです。 SharePoint で有効にすることがアクティブ化する必要があります手動でします。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/10/2018
   
      Visual Studio で発行の進行状況が表示される**出力**ウィンドウです。 プロセスが完了したら、ソリューション (.wsp) ファイルはローカル SharePoint サーバーにインストールされます。 ただし、その必要がありますまだアクティブに SharePoint で使用します。 ソリューション ファイルが既に存在する場合、エラーが発生し、既存のファイルを上書きするかどうかを確認します。 パッケージをアップグレードする方法についてでリモート パッケージのアップグレードに関するセクションを参照して[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)   
  [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)   
  [方法: SharePoint ソリューション パッケージをカスタマイズします。](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   

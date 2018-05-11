@@ -1,13 +1,9 @@
 ---
-title: "方法: ClickOnce で発行されるファイルを指定して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce で発行されるファイルを指定して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Publish.BaseProvider.Dialog.File
 dev_langs:
@@ -18,17 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, file exclusion
 - files, publishing via ClickOnce
 ms.assetid: 579c134a-d50f-4e0c-8e05-2a4ff654896a
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eee0e88b23a26ae7a89005ff304b565dd3d84c34
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5c59ffc2324f25c42b505505b0dbea9160ef023a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>方法: ClickOnce で発行されるファイルを指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクト内のアプリケーション、コード以外のすべてのファイルは、アプリケーションと共に展開されます。 場合によっては、する可能性がありますいないか、特定のファイルを発行する必要がありますかを条件に基づく特定のファイルをインストールすることがあります。 Visual Studio では、ファイルを除外する、ファイルをデータ ファイルや、前提条件としてマーク、および条件付きでインストールするファイルのグループを作成する機能を提供します。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
 3.  クリックして、**アプリケーション ファイル**を開く ボタン、**アプリケーション ファイル** ダイアログ ボックス。  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
 3.  クリックして、**アプリケーション ファイル**を開く ボタン、**アプリケーション ファイル** ダイアログ ボックス。  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
 3.  クリックして、**アプリケーション ファイル**を開く ボタン、**アプリケーション ファイル** ダイアログ ボックス。  
   
@@ -91,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
 3.  クリックして、**アプリケーション ファイル**を開く ボタン、**アプリケーション ファイル** ダイアログ ボックス。  
   
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
 3.  クリックして、**アプリケーション ファイル**を開く ボタン、**アプリケーション ファイル** ダイアログ ボックス。  
   
@@ -119,6 +114,6 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  変更することはできません、**ダウンロード グループ**アプリケーションを実行するために必要なファイルです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

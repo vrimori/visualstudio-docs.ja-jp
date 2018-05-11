@@ -1,13 +1,9 @@
 ---
-title: "Debug Interface Access SDK リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Debug Interface Access SDK リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - API reference [DIA SDK]
 - DIA SDK, reference
 ms.assetid: 7cdbbce1-8b59-43ce-b6aa-a948bb4d7148
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1349a2d92f8c824fe61844ba04606ed16075d3d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 147051074bafef92b46ba3d82a83810f20f38fa5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Debug Interface Access SDK 参照
 すべてのインターフェイスとサポートする列挙体と DIA SDK 内の構造体への完全な参照。  
@@ -44,5 +39,5 @@ ms.lasthandoff: 12/22/2017
  [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
  シンボルと型を識別する方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

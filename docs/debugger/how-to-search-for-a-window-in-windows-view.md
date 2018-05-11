@@ -1,27 +1,22 @@
 ---
-title: "方法: ウィンドウ ビューでウィンドウの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ウィンドウ ビューでウィンドウの検索 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - windows, searching in Windows view
 ms.assetid: 30306970-b861-4315-acf8-f86a43d4e73b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dfec3f78e9f95a55d453c45c5a264125152cbf1b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4333a79e76358216ce87697975dcb54173570534
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>方法: ウィンドウ ビューでウィンドウを検索する
 Windows の表示で特定のウィンドウの検索条件として、ハンドル、キャプション、クラス、またはキャプションとクラスの組み合わせを使用して検索できます。 検索の最初の方向を指定することもできます。 ダイアログ ボックスで、フィールドは、ウィンドウのツリーで、選択したウィンドウの属性が表示されます。  

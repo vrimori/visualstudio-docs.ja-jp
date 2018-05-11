@@ -1,13 +1,9 @@
 ---
-title: "方法: 挿入されたコードのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 挿入されたコードのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.injected
 dev_langs:
@@ -25,17 +21,16 @@ helpviewer_keywords:
 - debugging [C++], using attributes
 - disassembly code, debugging
 ms.assetid: a1b4104d-d49e-451f-a91e-e39ceaf35875
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c06209d2c2774eb12c0e04d8f448b8ceb2de771
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bf602d8ee670e5fce8602cb50d2aaa1066b501de
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-injected-code"></a>方法 : 挿入されたコードをデバッグする
 > [!NOTE]
@@ -71,6 +66,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  **デバッグ** メニューの 選択**Windows**、 をクリック**逆アセンブル**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

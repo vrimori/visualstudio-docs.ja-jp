@@ -1,27 +1,23 @@
 ---
-title: "サイド バイ サイドのファイルの関連付けの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: サイド バイ サイドのファイルの関連付けの管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - verbs, setting default
 ms.assetid: 9b6df3bc-d15c-4a5d-9015-948a806193b7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d0a6f8ec88a49b785b771aef51dc25b5646ffda
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e9144125786e7aa5f2a70823a033d49ac3fa2990
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-side-by-side-file-associations"></a>サイド バイ サイドのファイルの関連付けを管理します。
 VSPackage では、ファイルの関連付けを提供する場合をサイド バイ サイド インストールを処理する方法を決定する必要がありますの特定のバージョン[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ファイルを開くに呼び出す必要があります。 互換性のないファイル形式は複合問題です。  
@@ -49,7 +45,7 @@ VSPackage では、ファイルの関連付けを提供する場合をサイド 
   
     -   のみ存在する場合は、最新バージョンを visual Studio .NET 2003 であると[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]は存在しません。  
   
-    -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のみの現在のバージョンである場合、最新のバージョンです。  
+    -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のみの現在のバージョンである場合、最新のバージョンです。  
   
      最終的な結果は、DEVENV_EXE_LATEST に最新バージョンの devenv.exe のパスが含まれているです。  
   
@@ -88,6 +84,6 @@ VSPackage では、ファイルの関連付けを提供する場合をサイド 
   
 -   ユーザーがファイルの関連付けを選択し、失われたアソシエーションを再利用できる構成オプション ページまたはダイアログ ボックスを提供します。 アンインストール後に実行するユーザーに指示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サイド バイ サイド配置のファイル名拡張子を登録します。](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)   
  [ファイル名拡張子の動詞を登録する](../extensibility/registering-verbs-for-file-name-extensions.md)

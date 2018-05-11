@@ -1,13 +1,9 @@
 ---
-title: "エラー: Web サーバー見つかりません、要求されたリソース |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: Web サーバー見つかりません、要求されたリソース |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 dev_langs:
 - CSharp
 - VB
@@ -15,17 +11,16 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - debugger, Web application errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5cc83d8d2d0b37d3bb7203e1a20c93478fb96b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 48d4a5845dd5e5f364d34544f57e1ef7bdfe6052
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>エラー : Web サーバーでは要求されたリソースを見つけられませんでした
 セキュリティ上の考慮から、IIS が汎用エラーを返しました。  
@@ -36,6 +31,6 @@ ms.lasthandoff: 12/22/2017
   
  IIS のトラブルシューティングの詳細については、次を参照してください。 [IIS 管理](http://go.microsoft.com/fwlink/?LinkId=255872)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [UrlScan セキュリティ ツール](http://www.microsoft.com/technet/security/tools/urlscan.mspx)   
  [エラー: Web サーバーが制限され、デバッグの有効化に必要な DEBUG 動詞をブロックしています](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

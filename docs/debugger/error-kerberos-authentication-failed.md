@@ -1,13 +1,9 @@
 ---
-title: "エラー: Kerberos 認証に失敗しました |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: Kerberos 認証に失敗しました |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.callback_kerberos_auth_failed
 dev_langs:
@@ -15,17 +11,16 @@ dev_langs:
 - VB
 - FSharp
 - C++
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c34b15d1611eaad106f3843070620af4470bc04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 63b3ed3349403bef0c85af9775f77cc980fc4e63
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-kerberos-authentication-failed"></a>エラー : Kerberos 認証に失敗しました。
 リモート デバッグを実行するときに、次のエラー メッセージが表示されることがあります。  
@@ -40,7 +35,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 -   ターゲット コンピューターまたはデバッガー ホスト コンピューターがドメインではなくワークグループに属している。  
   
-     \- または  
+     \- または -  
   
 -   ドメイン コントローラーで Kerberos が無効になっている。  
   
@@ -64,6 +59,6 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 5.  IP アドレス値を比較します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   
  [Remote Debugging](../debugger/remote-debugging.md)

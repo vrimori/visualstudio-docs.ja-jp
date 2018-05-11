@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_arrayindextype |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_arrayindextype |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_arrayIndexType method
 ms.assetid: cd63b9ec-9694-406c-b37f-bde6bd5fcbf2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f7fd423ee6b682704a5c3cc4459a91868983efd8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1212bb62888d1bed546a7c12ae4cfc48c22d0a07
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetarrayindextype"></a>IDiaSymbol::get_arrayIndexType
 シンボルの配列インデックスの種類のシンボルのインターフェイスを取得します。  
@@ -49,12 +44,12 @@ HRESULT get_arrayIndexType (
 ## <a name="remarks"></a>コメント  
  一部の言語では、配列のインデックスとして使用される型を指定できます。 このメソッドから返されるシンボルは、その型を指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK v7.0|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

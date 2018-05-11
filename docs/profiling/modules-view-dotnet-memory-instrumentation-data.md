@@ -1,27 +1,22 @@
 ---
-title: "モジュール ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs"
-ms.custom: 
+title: モジュール ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 26516139-0981-41de-917d-ad5769391b8d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e67b1676495b6217a6134bc7e0f3f4cf74b1faf6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c04ecdc1de848a95ad9f5051cc9ec54da02a3625
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>モジュール ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドで収集された .NET メモリの割り当てデータの モジュール ビューは、メモリとタイミング データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 モジュールの関数のプロファイル データが、モジュール ノードの下に一覧表示されます。  

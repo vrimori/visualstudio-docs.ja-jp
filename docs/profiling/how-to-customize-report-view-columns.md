@@ -1,30 +1,25 @@
 ---
-title: "方法: レポート ビューの列をカスタマイズする | Microsoft Docs"
-ms.custom: 
+title: '方法: レポート ビューの列をカスタマイズする | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.test.columnchooser.dialogbox
 helpviewer_keywords:
 - profiling tools, customizing reports
 - performance reports, customizing
 ms.assetid: cb6f6d30-52a5-4d92-ab07-1d5ddb67884c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e5e83629bdb2b93db3a34ba577da4df84b119cc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c030d001932d5b1cdeaa4c9b4a2ed82b321ee56f
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-customize-report-view-columns"></a>方法: レポート ビューの列をカスタマイズする
 Visual Studio Team System Development Edition のパフォーマンス ツールは、統合開発環境 (IDE) に完全に統合されており、シームレスなユーザー エクスペリエンスを提供します。 次のリストは、列を追加、削除、再配置してカスタマイズできる代表的なビューです。  
@@ -61,4 +56,4 @@ Visual Studio Team System Development Edition のパフォーマンス ツール
   
 4.  矢印ボタンをクリックして、列を並べ替えます。  
   
-5.  **[OK]**をクリックします。
+5.  **[OK]** をクリックします。

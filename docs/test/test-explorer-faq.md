@@ -1,11 +1,9 @@
 ---
-title: "テスト エクスプローラーに関する FAQ | Microsoft Docs"
+title: Visual Studio テスト エクスプローラーに関する FAQ
 ms.date: 1/15/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - Test Explorer
 - Test window
@@ -17,12 +15,12 @@ ms.author: kehavens
 ms.workload:
 - multiple
 author: kendrahavens
-manager: ghogen
-ms.openlocfilehash: d06c02e651dd4acdcaebf05448282f26c20e3a75
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+manager: douge
+ms.openlocfilehash: 151f60d21914168ea62bdb2d978d93839c8b859b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -73,6 +71,10 @@ ms.lasthandoff: 03/12/2018
   プロジェクト、名前空間、およびクラス グループの横にあるアイコンは、そのグループ内のテストの状態を反映します。 次の表を参照してください。
 
   ![テスト エクスプローラーの階層のアイコン](media/testex-hierarchyicons.png)
+  
+### <a name="10-there-is-no-longer-a-file-path-filter-in-the-test-explorer-search-box"></a>10.テスト エクスプローラーの検索ボックスの "ファイル パス" フィルターはもう存在しません。
+
+**テスト エクスプローラー**の検索ボックスのファイル パス フィルターは、Visual Studio 2017 バージョン 15.7 プレビュー 3 で削除されました。 この機能は使用頻度が低く、この機能を除外することで、テスト エクスプローラーはテスト メソッドを高速で取得できます。 この変更によって開発フローが中断される場合は、[開発者コミュニティ](https://developercommunity.visualstudio.com/)でフィードバックを送信してその旨をお知らせください。
 
 ## <a name="features"></a>フィーチャー
 
@@ -85,15 +87,15 @@ ms.lasthandoff: 03/12/2018
 Visual Studio 開発者コマンド プロンプトで機能フラグをオンにするには、次のコマンドを使用します。 パスを Visual Studio がインストールされているコンピューターに変更し、レジストリ キーを目的の機能フラグに変更します。
 
 ```shell
-vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise” HKLM FeatureFlags\TestingTools\UnitTesting\HierarchyView Value dword 1
+vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise" HKLM FeatureFlags\TestingTools\UnitTesting\HierarchyView Value dword 1
 ```
 
 > [!NOTE]
 > dword の後の値を 1 ではなく 0 にすると、同じコマンドでフラグをオフにできます。
-  
+
 ## <a name="see-also"></a>関連項目
 
-<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>  
-[既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
-[コードの単体テスト](unit-test-your-code.md)
-[Live Unit Testing についてよく寄せられる質問](live-unit-testing-faq.md)
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
+- [既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
+- [コードの単体テスト](unit-test-your-code.md)
+- [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)

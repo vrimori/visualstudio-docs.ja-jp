@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio サブスクリプションの Azure コミュニティ特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/8/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the Azure Community benefit included in selected Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: fb8c318d665c5c8b25a245ff304c5b2b9341a1ef
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションの Azure コミュニティ特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/08/2018
+ms.topic: Get-Started-Article
+description: 一部の Visual Studio サブスクリプションに含まれる Azure コミュニティ特典について説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 76384697d6bc0b56f8d7a1664b0c9fa72812f280
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-community"></a>Azure コミュニティ  
 
-## <a name="overview"></a>概要 
-Azure コミュニティを通じて、選ばれたサポート フォーラム内で Azure チームから直接ヘルプを受けます。
-
-Azure コミュニティ特典は、Azure 関連のトピックに重点を置いたフォーラムのコレクションへのアクセスを提供します。  
+Azure コミュニティを通じて、選ばれたサポート フォーラム内で Azure チームから直接ヘルプを受けます。  Azure コミュニティ特典は、Azure 関連のトピックに重点を置いたフォーラムのコレクションへのアクセスを提供します。  
 
 |                                       |                                                    |                                      |
 |---------------------------------------|----------------------------------------------------|--------------------------------------|
@@ -32,31 +29,7 @@ Azure コミュニティ特典は、Azure 関連のトピックに重点を置�
 | [Microsoft Azure の管理ポータル](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuremanagement&filter=alltypes&sort=lastpostdesc)               | [Azure Backup](https://social.msdn.microsoft.com/forums/home?forum=windowsazureonlinebackup&filter=alltypes&sort=lastpostdesc)                                       | [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)                          |
 | [Azure Virtual Machines](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)                | [Azure Site Recovery](https://social.msdn.microsoft.com/forums/home?forum=hypervrecovmgr&filter=alltypes&sort=lastpostdesc)                                | [Azure Marketplace](https://social.msdn.microsoft.com/forums/home?forum=DataMarket&filter=alltypes&sort=lastpostdesc)                    |
 
-### <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル/プログラム                                 | 特長               | 更新可能かどうか                                                         |
-|--------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                            | Included              | [はい]                                                                |
-| Visual Studio Enterprise - 年間プラン                              | Included              | [はい]                                                                |
-| Visual Studio Enterprise - 月間プラン                             | 使用できません         |                                                                    |
-| Visual Studio Professional Standard                          | Included              | [はい]                                                                |
-| Visual Studio Professional - 年間プラン                            | Included              | [はい]                                                                |
-| Visual Studio Professional - 月間プラン                           | 使用できません         |                                                                    |
-| Visual Studio Test Pro                                       | Included              | [はい]                                                                |
-| MSDN Platforms                                               | Included              | [はい]                                                                |
-| Visual Studio Dev Essentials                                 | Included              | [はい]                                                                |
-| Visual Studio Enterprise - NFR<sup>1</sup>                                | 使用できません         |                                                                    |
-| Visual Studio Enterprise - FTE                               | 使用できません         |                                                                    |
-| Visual Studio Enterprise - MPN                               | 使用できません         |                                                                    |
-| Visual Studio Professional - MPN                             | 使用できません         |                                                                    |
-| Visual Studio Enterprise - MVP/RD                            | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Standard)                | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Premium)                 | 使用できません         |                                                                    |
-| Visual Studio Enterprise – BizSpark                          | 使用できません         |                                                                    |
-| Visual Studio Enterprise – MCT Software & Services           | 使用できません         |                                                                    |
-| Visual Studio Enterprise – MCT Software & Services Developer | 使用できません         |                                                                    |
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 Azure コミュニティの開始は簡単です。  
@@ -74,8 +47,21 @@ Azure コミュニティの開始は簡単です。
 
    ![Azure コミュニティの例](_img/vs-azure-community/vs-azure-community-example.png)
 
-## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
+## <a name="eligibility"></a>特典を受ける条件
+Azure コミュニティ特典を利用できるかどうかは、以下のようにサブスクリプション レベルによって変わります。
+
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール   | 1 年      |  [はい]          |
+| Visual Studio Professional (標準、年間クラウド)  | VL、Azure、リテール                                      | 1 年                                                           |  [はい]          |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 1 年                                             |  [はい]          |
+| MSDN Platforms (標準)                                          | VL、リテール                                              |1 年                                              |  [はい]          |
+| Visual Studio Enterprise (月間クラウド)、Visual Studio Professional (月間クラウド)、NFR<sup>1</sup>                                          | すべて                                              |使用できません                                              |  ×          |
+| Visual Studio Dev Essentials                                        | N/A                                              |使用できません                                              |  ×          |
+|
+<sup>1</sup>  *Not for Resale (NFR)、Microsoft FTE、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、Microsoft Certified Trainer (MCT) が含まれます*
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="support-resources"></a>サポート リソース
 -  その他の Azure コミュニティのリソースは、Azure コミュニティの[サポート ページ](https://azure.microsoft.com/support/forums/)をご覧ください。

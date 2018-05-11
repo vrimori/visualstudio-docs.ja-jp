@@ -1,30 +1,25 @@
 ---
-title: "Visual Studio での Python 用 Django Web プロジェクト テンプレート | Microsoft Docs"
-description: "Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。"
-ms.custom: 
-ms.date: 07/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+title: Python 用 Django Web プロジェクト テンプレート
+description: Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
+ms.date: 04/17/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
+author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 25a2d92d5d61850f0f4928de437d9040d8953dd2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 077619b7d47441bb4a02dbe87e7cf714b634beff
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
-[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートが用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル]、[新規]、[プロジェクト]** の順に選択し、「Django」を検索して、**Django Web プロジェクト** テンプレートを選択します。 作成されるプロジェクトには、定型コードと既定の SQLite データベースが含まれます。 **空の Django Web プロジェクト** テンプレートも似ていますが、これにはデータベースが含まれません。
+[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートがいくつか用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択し、"Django" を探し、[空の Django Web プロジェクト]、"Django Web プロジェクト"、および "ポーリング Django Web プロジェクト" テンプレートから選択します。 すべてのテンプレートのチュートリアルについては、[Django チュートリアルの概要](learn-django-in-visual-studio-step-01-project-and-solution.md)に関するページを参照してください。
 
 Visual Studio は、Django プロジェクトの完全な IntelliSense を提供します。
 
@@ -60,10 +55,14 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
     ![コンソール](media/template-django-console-sync-db.png)
 
-- **[Collect Static (静的収集)]**: `manage.py collectstatic --noinput` を実行して、`settings.py` の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [Microsoft Azure に発行](python-web-application-project-templates.md#publishing-to-azure-app-service)する場合、統計ファイルは発行操作の一部として収集されます。
+- **[Collect Static (静的収集)]**: `manage.py collectstatic --noinput` を実行して、`settings.py` の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [[Microsoft Azure に発行]](publishing-python-web-applications-to-azure-from-visual-studio.md) を選択すると、統計ファイルは発行操作の一部として収集されます。
 
     ![コンソール](media/template-django-console-collect-static.png)
 
 - **[検証]**: `settings.py` の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
 
     ![コンソール](media/template-django-console-validate.png)
+
+## <a name="see-also"></a>関連項目
+
+- [Django チュートリアルの概要](learn-django-in-visual-studio-step-01-project-and-solution.md)

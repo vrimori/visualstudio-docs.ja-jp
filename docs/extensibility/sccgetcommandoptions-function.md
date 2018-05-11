@@ -1,29 +1,25 @@
 ---
-title: "SccGetCommandOptions 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccGetCommandOptions 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccGetCommandOptions
 helpviewer_keywords:
 - SccGetCommandOptions function
 ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3bce2922c961bf29f320f047a91057a638fe708a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 60245b7fab3c2a0b313ccbe1d7393b0783962a37
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions 関数
 この関数は、指定されたコマンドの詳細設定オプションのユーザーに求めます。  
@@ -81,6 +77,6 @@ SCCRTN SccGetCommandOptions(
 > [!NOTE]
 >  コマンドは、 `SCC_COMMAND_OPTIONS` IDE が表示されたときに使用、**オプション**統合の動作を制御 ダイアログ ボックス ユーザーを設定します。 表示できる、ソース管理プラグインは、独自の設定 ダイアログ ボックスを指定する必要がある場合、**詳細**IDE の基本設定 ダイアログ ボックスにボタンをクリックします。 取得し、この情報を保持する責任は、プラグインIDE や使用しないことを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
  [コマンドのコード](../extensibility/command-code-enumerator.md)

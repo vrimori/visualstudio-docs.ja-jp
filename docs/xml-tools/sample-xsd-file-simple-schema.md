@@ -1,50 +1,48 @@
 ---
-title: "サンプル XSD ファイル: 単純なスキーマ |Microsoft ドキュメント"
-ms.custom: 
+title: 'サンプル XSD ファイル: シンプルなスキーマ'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: sample
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 328e1f69d8d48f04a3762f7639613ec400b68080
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5f0e2115c0d7839439f74b8c99be3ce5eecdef15
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sample-xsd-file-simple-schema"></a>サンプル XSD ファイル: シンプルなスキーマ
-次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。 このファイルは、シンプルな購買発注書のスキーマです。  
-  
-```xml  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-           xmlns:tns="http://tempuri.org/PurchaseOrderSchema.xsd"   
-           targetNamespace="http://tempuri.org/PurchaseOrderSchema.xsd"   
-           elementFormDefault="qualified">  
- <xsd:element name="PurchaseOrder" type="tns:PurchaseOrderType"/>  
- <xsd:complexType name="PurchaseOrderType">  
-  <xsd:sequence>  
-   <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>  
-   <xsd:element name="BillTo" type="tns:USAddress"/>  
-  </xsd:sequence>  
-  <xsd:attribute name="OrderDate" type="xsd:date"/>  
- </xsd:complexType>  
-  
- <xsd:complexType name="USAddress">  
-  <xsd:sequence>  
-   <xsd:element name="name"   type="xsd:string"/>  
-   <xsd:element name="street" type="xsd:string"/>  
-   <xsd:element name="city"   type="xsd:string"/>  
-   <xsd:element name="state"  type="xsd:string"/>  
-   <xsd:element name="zip"    type="xsd:integer"/>  
-  </xsd:sequence>  
-  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>  
- </xsd:complexType>  
-</xsd:schema>  
+
+次の XSD ファイルは、XSD スキーマ デザイナーのドキュメントのさまざまな例で使用されます。 このファイルは、シンプルな購買発注書のスキーマです。
+
+```xml
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://tempuri.org/PurchaseOrderSchema.xsd"
+           targetNamespace="http://tempuri.org/PurchaseOrderSchema.xsd"
+           elementFormDefault="qualified">
+ <xsd:element name="PurchaseOrder" type="tns:PurchaseOrderType"/>
+ <xsd:complexType name="PurchaseOrderType">
+  <xsd:sequence>
+   <xsd:element name="ShipTo" type="tns:USAddress" maxOccurs="2"/>
+   <xsd:element name="BillTo" type="tns:USAddress"/>
+  </xsd:sequence>
+  <xsd:attribute name="OrderDate" type="xsd:date"/>
+ </xsd:complexType>
+
+ <xsd:complexType name="USAddress">
+  <xsd:sequence>
+   <xsd:element name="name"   type="xsd:string"/>
+   <xsd:element name="street" type="xsd:string"/>
+   <xsd:element name="city"   type="xsd:string"/>
+   <xsd:element name="state"  type="xsd:string"/>
+   <xsd:element name="zip"    type="xsd:integer"/>
+  </xsd:sequence>
+  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>
+ </xsd:complexType>
+</xsd:schema>
 ```

@@ -1,12 +1,10 @@
 ---
-title: "サンド ボックス ソリューションの考慮事項 |Microsoft ドキュメント"
-ms.custom: 
+title: サンド ボックス ソリューションの考慮事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.SandboxedSolutions
 - VS.SharePointTools.Security.SandboxedSolutions
@@ -22,13 +20,14 @@ helpviewer_keywords:
 - farm solutions [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0b510097dc21c385f67a9358eaca3997cbdc2316
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ff85f3407fb24d6d49856bb11ff1852c544cad35
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sandboxed-solution-considerations"></a>Sandboxed Solution Considerations
   *サンド ボックス ソリューション*を独自のカスタム コード ソリューションをアップロードするサイト コレクションのユーザーを有効にする Microsoft SharePoint 2010 で機能します。 一般的なサンド ボックス ソリューションは、ユーザー独自の Web パーツのアップロードです。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/10/2018
  セキュリティで保護された SharePoint アプリケーションは、Web ファームの一部にアクセスできるセキュリティで保護された、監視対象のプロセスで実行されます。 Microsoft SharePoint 2010 では、機能、ソリューション ギャラリー、ソリューションの監視、および検証フレームワークの組み合わせを使用して、サンド ボックス ソリューションを有効にします。  
   
 ## <a name="specifying-project-trust-level"></a>プロジェクトの信頼レベルを指定します。  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]サポートする project のブール型プロパティでサンド ボックス ソリューションと呼ばれる*サンド ボックス ソリューション*です。 このプロパティは、プロジェクトでいつでも設定できますかで、プロジェクトを作成する場合と指定することができます、 **SharePoint カスタマイズ ウィザード**です。  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] サポートする project のブール型プロパティでサンド ボックス ソリューションと呼ばれる*サンド ボックス ソリューション*です。 このプロパティは、プロジェクトでいつでも設定できますかで、プロジェクトを作成する場合と指定することができます、 **SharePoint カスタマイズ ウィザード**です。  
   
 > [!NOTE]  
 >  変更、*サンド ボックス ソリューション*が作成された後、プロジェクトのプロパティの検証エラーが発生する可能性があります。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/10/2018
  WSS 3.0 では、ソリューションをファーム レベルにのみ展開できます。 これは、こと有害なまたは安定性を損なう可能性があるソリューションが配置されると、Web ファーム全体とすべての他のサイト コレクションとその下で実行されるアプリケーションに影響を意味していました。 ただし、サンド ボックス ソリューションを使用するは、ファームで特定のサイト コレクションのサブ区分に、ソリューションを配置することができます。 追加の保護を提供するにはソリューションのアセンブリがメイン読み込まれない[!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)]プロセス (w3wp.exe)。 代わりに、別のプロセス (SPUCWorkerProcess.exe) に読み込まれます。 このプロセスが監視され、クォータと制限の CPU サイクルを消費する短いループの実行などの問題を引き起こすアクティビティを実行するサンド ボックス ソリューションから、ファームの保護を実装します。  
   
 ## <a name="site-collection-solution-gallery"></a>サイト コレクション ソリューション ギャラリー  
- [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)]2010 は、「サイト コレクション ソリューション ギャラリー」と呼ばれる機能があります。 SharePoint 2010 サーバーの全体管理ページ、または開くことによってこの機能にアクセスすることができます、**サイトの操作** メニューを選択する**サイト設定**、選択し、**ソリューション**下にあるリンク**ギャラリー** SharePoint サイトにします。 ソリューション ギャラリーは、そのサイトのコレクションでソリューションを管理するサイト コレクションの管理者を有効にするソリューションのリポジトリです。  
+ [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 は、「サイト コレクション ソリューション ギャラリー」と呼ばれる機能があります。 SharePoint 2010 サーバーの全体管理ページ、または開くことによってこの機能にアクセスすることができます、**サイトの操作** メニューを選択する**サイト設定**、選択し、**ソリューション**下にあるリンク**ギャラリー** SharePoint サイトにします。 ソリューション ギャラリーは、そのサイトのコレクションでソリューションを管理するサイト コレクションの管理者を有効にするソリューションのリポジトリです。  
   
  ソリューション ギャラリーは、SharePoint サイトのルート Web に格納されているドキュメント ライブラリです。 ソリューション ギャラリーでは、サイト テンプレートを置き換え、ソリューション パッケージをサポートします。 SharePoint ソリューション パッケージ (.wsp) ファイルがアップロードされると、サンド ボックス ソリューションとして処理されます。  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 01/10/2018
   
 -   SPWebEventReceiver  
   
--   派生するすべての Web パーツのサポート`System.Web.UI.WebControls.WebParts.WebPart`  
+-   派生するすべての Web パーツのサポート `System.Web.UI.WebControls.WebParts.WebPart`  
   
 -   Web パーツ  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 01/10/2018
   
 -   コードを持つワークフロー  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サンド ボックス間の相違点とファーム ソリューション](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

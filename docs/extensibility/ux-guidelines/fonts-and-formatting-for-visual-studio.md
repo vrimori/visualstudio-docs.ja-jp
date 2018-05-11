@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio のフォントと書式 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のフォントと書式 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fcd6b5edd5d0c6724ca7ed1e393e32d657a4a29b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 22e765916a19caeff643e25f97f4d0d4f91669c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
-##  <a name="BKMK_TheEnvironmentFont"></a>環境フォント  
+##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント
  Visual Studio 内のすべてのフォントは、カスタマイズのユーザーに公開する必要があります。 主に、これには、**フォントおよび色** ページで、**ツール > オプション**ダイアログ。 フォントの設定の 3 つのカテゴリは次のとおりです。  
   
 -   **環境フォント**-IDE (統合開発環境) のプライマリ フォント ダイアログ ボックス、メニューのツール ウィンドウおよびドキュメント ウィンドウを含む、すべてのインターフェイス要素を使用します。 既定では、環境フォントは現在のバージョンの Windows で 9 pt Segoe UI として表示されるシステム フォントに関連付けられています。 インターフェイスのすべての要素の 1 つのフォントを使用すると、IDE 全体で一貫したフォントの外観を確認できます。  
@@ -49,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
  Windows Presentation Foundation (WPF) では、シェルからダイアログ ウィンドウ クラスを派生させる`DialogWindow`WPF のではなくクラス`Window`クラスです。  
   
- XAML では、コードは、次のようになります。  
+ XAML では、コードは、次のようになります。
   
-```  
+```xaml
 <ui:DialogWindow  
     x:Class"MyNameSpace.MyWindow"  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
@@ -61,35 +59,37 @@ ms.lasthandoff: 12/22/2017
     WindowStartupLocation="CenterOwner"  
     Title="My Dialog">  
 </ui:DialogWindow>  
-  
-code behind:  
-  
+```
+
+分離コード:
+
+```csharp
 internal partial class WebConfigModificationWindow : DialogWindow  
 {  
 }  
-```  
+```
   
  (交換`Microsoft.VisualStudio.Shell.11.0`MPF dll の現在のバージョンにします)。  
   
- ダイアログを表示するには、呼び出す"`ShowModal()`"経由でクラスに`ShowDialog()`です。 `ShowModal()`により、親ウィンドウで、ダイアログ ボックスの中心は、シェルで正しいモーダル状態を設定します。  
+ ダイアログを表示するには、呼び出す"`ShowModal()`"経由でクラスに`ShowDialog()`です。 `ShowModal()` により、親ウィンドウで、ダイアログ ボックスの中心は、シェルで正しいモーダル状態を設定します。  
   
  コードは次のとおりです。  
   
-```  
+```csharp
 MyWindow window = new MyWindow();  
 window.ShowModal()  
-```  
+```
   
- `ShowModal`ブール値を返します。 (null 許容のブール値) で、 `DialogResult`、必要な場合に使用されます。 戻り値は true を設定すると、ダイアログ ボックスが閉じられました**OK**です。  
+ `ShowModal` ブール値を返します。 (null 許容のブール値) で、 `DialogResult`、必要な場合に使用されます。 戻り値は true を設定すると、ダイアログ ボックスが閉じられました**OK**です。  
   
  独自のダイアログ ボックスではありませんし、ホストされている一部 WPF UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウ、または Win32/WinForms の親ウィンドウの WPF 子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF e のルート要素にlement です。 (シェル メイン ウィンドウで、プロパティを設定するが、過去の継承されません、 `HWND`)。 シェルは、プロパティをバインドする、次のようにリソースを提供します。  
   
-```  
-<Setter property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  
-<Setter property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />  
-```  
+```xaml
+<Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  
+<Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />  
+```
   
-###  <a name="BKMK_Formatting"></a>書式設定 (スケーリング/太字) リファレンス  
+###  <a name="BKMK_Formatting"></a> 書式設定 (スケーリング/太字) リファレンス  
  一部のダイアログは、特定のテキストを太字や環境フォント以外のサイズが必要です。 環境フォントよりも大きいフォントが、以前は、各としてコード化された"`environment font +2`"または同様です。 提供されているコード スニペットを使用して、高 DPI モニターをサポートおよび (ライト Semilight など) の重みと正しいサイズで表示するテキストが常に表示されることを確認します。  
   
 > **注: 書式設定を適用する前に確認のガイダンスに従っている[テキストのスタイル](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)です。**  
@@ -97,10 +97,10 @@ window.ShowModal()
  環境フォントを拡張するためには、TextBlock または記載されているラベルのスタイルを設定します。 適切なサイズや重量のバリエーションを含め、適切なフォントが生成それぞれこれらのコード スニペットを適切に使用されます。  
   
  ここで"`vsui`"名前空間への参照は、 `Microsoft.VisualStudio.Shell`:  
-  
-```  
+
+```xaml
 xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0" 
-```  
+```
   
 #### <a name="375-environment-font--light"></a>375% 環境フォント + Light  
  **として表示されます:** 34 pt Segoe UI Light  
@@ -108,19 +108,19 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visual
 
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey);  
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">TextBlock: 375 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey}}">Label: 375 Percent Scaling</Label>  
-```  
+```
   
 #### <a name="310-environment-font--light"></a>310% 環境フォント + Light  
  **として表示されます:** 28 pt Segoe UI Light   
@@ -128,19 +128,19 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment310PercentFontSizeStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">TextBlock: 310 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment310PercentFontSizeStyleKey}}">Label: 310 Percent Scaling</Label>     
-```  
+```
   
 #### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight  
  **として表示されます:** 18 pt Segoe UI Semilight    
@@ -148,19 +148,19 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。 
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment200PercentFontSizeStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">TextBlock: 200 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment200PercentFontSizeStyleKey}}">Label: 200 Percent Scaling</Label>    
-```  
+```
   
 #### <a name="155-environment-font"></a>155% 環境フォント  
  **として表示されます:** 14 pt Segoe UI    
@@ -168,19 +168,19 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment155PercentFontSizeStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">TextBlock: 155 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment155PercentFontSizeStyleKey}}">Label: 155 Percent Scaling</Label>  
-```  
+```
   
 #### <a name="133-environment-font"></a>133% 環境フォント  
  **として表示されます:** 12 pt Segoe UI    
@@ -188,19 +188,19 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment133PercentFontSizeStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">TextBlock: 133 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment133PercentFontSizeStyleKey}}">Label: 133 Percent Scaling</Label>    
-```  
+```
   
 #### <a name="122-environment-font"></a>122% 環境フォント  
  **として表示されます:** 11 pt Segoe UI    
@@ -208,19 +208,19 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironment122PercentFontSizeStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">TextBlock: 122 Percent Scaling</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment122PercentFontSizeStyleKey}}">Label: 122 Percent Scaling</Label>    
-```  
+```
   
 #### <a name="environment-font--bold"></a>環境フォント + 太字  
  **として表示されます:**太字になっている 9 pt Segoe UI    
@@ -228,26 +228,26 @@ label.SetResourceReference(Label.StyleProperty,
   
  **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
-```  
+```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
         VsResourceKeys.TextBlockEnvironmentBoldStyleKey);   
 label.SetResourceReference(Label.StyleProperty,    
         VsResourceKeys.LabelEnvironmentBoldStyleKey);    
-```  
+```
   
  **XAML:** TextBlock またはラベルのスタイルを示すように設定します。  
   
-```  
+```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}"> Bold TextBlock</TextBlock>   
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironmentBoldStyleKey}}"> Bold Label</Label>    
-```  
+```
   
 ### <a name="localizable-styles"></a>ローカライズ可能なスタイル  
  場合によっては、ローカライザーは東アジア言語のテキストから太字の削除など、別のロケールを使用する場合は、フォント スタイルを変更する必要があります。 フォント スタイルのローカリゼーションを可能にするには、これらのスタイルが .resx ファイル内で必要があります。 これを実行しても、Visual Studio のフォーム デザイナーでのフォントのスタイルを編集する最善の方法では、デザイン時にフォント スタイルを明示的に設定します。 フォントが完全なオブジェクトを作成し、親のフォントの継承を停止するように思えるかもしれません、FontStyle プロパティのみを使用してフォント設定をします。  
   
  ダイアログ フォームのフックするために`FontChanged`イベント。 `FontChanged`イベント、すべてのコントロールについて説明し、そのフォントが設定されているかどうかは確認します。 設定されている場合は、フォームのフォントとコントロールの前のフォント スタイルに基づいて新しいフォントを変更します。 コードでこの例を示します。  
   
-```  
+```csharp
 private void Form1_FontChanged(object sender, System.EventArgs e)  
 {  
           SetFontStyles();  
@@ -279,7 +279,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
           }  
      }  
 }  
-```  
+```
   
  このコードを使用して、フォームのフォントが更新されると、コントロールのフォントもに更新されますが保証されます。 インスタンスを取得するダイアログ ボックスが失敗するため、このメソッドをフォームのコンス トラクターから呼び出されますが`IUIService`と`FontChanged`イベントは起動しません。 フック`FontChanged`ダイアログ ボックスが既に開いている場合でも、新しいフォントを動的に取得するダイアログが許可されます。  
   
@@ -296,7 +296,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
  フォントをリセットするには、をクリックして「既定値を使用」**ツール > オプション > 環境 > フォントおよび色**です。  
   
-##  <a name="BKMK_TextStyle"></a>テキストのスタイル  
+##  <a name="BKMK_TextStyle"></a> テキストのスタイル  
  テキストのスタイルは、フォント サイズ、太さ、および大文字小文字の区別を参照します。 実装のガイダンスについては、次を参照してください。[環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)です。  
   
 ### <a name="text-casing"></a>テキストの大文字小文字の区別  
@@ -417,13 +417,13 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> 署名のダイアログ ボックスより大きな見出し<br />-メイン レポートの見出し<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 28 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> ![310% 環境フォント &#43; の例Light の見出し](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|  
+|**使用法:**<br /><br /> 署名のダイアログ ボックスより大きな見出し<br />-メイン レポートの見出し<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 28 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> ![310% 環境フォントの例&#43;Light の見出し](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202 a_EF310")|  
   
 #### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight  
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> -小見出し<br />小規模および中規模のダイアログ ボックスのタイトル<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に Semilight 重み付けを使用します。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 18 pt Segoe UI Semillight<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43; (&)、200% 環境フォントの例Semilight](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202 b_EF200")|  
+|**使用法:**<br /><br /> -小見出し<br />小規模および中規模のダイアログ ボックスのタイトル<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に Semilight 重み付けを使用します。<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 18 pt Segoe UI Semillight<br /><br /> **ビジュアルの使用例:**<br /><br /> ![200% 環境フォントの例&#43;Semilight](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202 b_EF200")|  
   
 #### <a name="155-environment-font"></a>155% 環境フォント  
   
@@ -447,7 +447,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:**太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![#43; (&)、環境フォントの例太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
+|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:**太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例&#43;太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
   
 #### <a name="environment-font"></a>環境フォント  
   
@@ -464,6 +464,6 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 -   太字になっている環境フォントのテキストは、既定の行の高さの間隔とスペースに従う必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSDN: フォント (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742483\(v=vs.85\).aspx)   
  [MSDN: ユーザー インターフェイスのテキスト (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx)

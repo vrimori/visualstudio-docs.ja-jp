@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio での [定義をここに表示] の使用 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での [定義をここに表示] の使用
 ms.date: 01/10/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a7465b8432d00df83638dbfa98a36cf8dee469a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: fc4cab55a20b6b820bbfc1af171f1bb0b45ce1e2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 
@@ -67,7 +65,7 @@ ms.lasthandoff: 01/13/2018
 
 1. **[OK]** をクリックして、**[オプション]** ダイアログ ボックスを閉じます。
 
-   ![マウス クリックの [定義をここに表示] オプションの設定](../ide/media/editor_options_peek_view.png)  
+   ![マウス クリックの [定義をここに表示] オプションの設定](../ide/media/editor_options_peek_view.png)
 
 ### <a name="keyboard-shortcuts-for-peek-definition"></a>[定義をここに表示] のキーボード ショートカット
 
@@ -75,18 +73,18 @@ ms.lasthandoff: 01/13/2018
 
 |機能|キーボード ショートカット|
 |-------------------|:-----------------------:|
-|定義ウィンドウを開く|Alt + F12|
-|定義ウィンドウを閉じる|Esc|
-|定義ウィンドウを通常のドキュメント タブに昇格する|Shift + Alt + Home|
-|定義ウィンドウ間を移動する|Ctrl + Alt + マイナス記号 (-) と Ctrl + Alt + 等号 (=)|
-|複数の結果の間を移動する|F8 と Shift + F8|
-|コード エディター ウィンドウと定義ウィンドウの間で切り替える|Shift + Esc|
+|定義ウィンドウを開く|**Alt** + **F12**|
+|定義ウィンドウを閉じる|**Esc**|
+|定義ウィンドウを通常のドキュメント タブに昇格する|**Shift** + **Alt** + **Home**|
+|定義ウィンドウ間を移動する|**Ctrl** + **Alt** + **-** と **Ctrl** + **Alt** + **=**|
+|複数の結果の間を移動する|**F8** と **Shift** + **F8**|
+|コード エディター ウィンドウと定義ウィンドウの間で切り替える|**Shift** + **Esc**|
 
 > [!NOTE]
 > Visual Studio の他の場所でも、同じキーボード ショートカットを使って **[定義をここに表示]** ウィンドウでコードを編集できます。
 
 ## <a name="see-also"></a>関連項目
 
-[コード間の移動](../ide/navigating-code.md)  
-[[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)  
-[生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)
+- [コード間の移動](../ide/navigating-code.md)
+- [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)
+- [生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)

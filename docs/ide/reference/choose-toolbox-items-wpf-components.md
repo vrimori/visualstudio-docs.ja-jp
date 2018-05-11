@@ -1,12 +1,9 @@
 ---
-title: "[ツールボックス アイテムの選択]、[WPF コンポーネント] | Microsoft Docs"
-ms.custom: 
+title: '[ツールボックス アイテムの選択]、[WPF コンポーネント]'
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.chooseitems.wpfcomponents
 helpviewer_keywords:
@@ -14,14 +11,14 @@ helpviewer_keywords:
 - Choose Toolbox Items dialog box, WPF Components tab
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6953cefdaab594825843ac168bebe82bd9ef9144
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 6d05e69acb414c08e752593fbfdb08246c3d14a2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>ツールボックス アイテムの選択、WPF コンポーネント
 
@@ -39,16 +36,20 @@ ms.lasthandoff: 01/22/2018
 
 **[WPF コンポーネント]** タブの列には次の情報が含まれます。
 
-name  
+**Name**
+
 コンピューターのレジストリにエントリが存在する WPF コントロールの名前が一覧表示されます。
 
-名前空間  
+**名前空間**
+
 コンポーネントの構造を定義している [.NET Framework クラス API](/dotnet/api/?view=netframework-4.7) 名前空間の階層構造が表示されます。 コンピューターにインストールされている各 .NET Framework 名前空間内で使用可能なコンポーネントを一覧表示するには、この列で並べ替えます。
 
-アセンブリ名  
+**アセンブリ名**
+
 各コンポーネントの名前空間を含む .NET Framework アセンブリの名前が表示されます。 コンピューターにインストールされている各 .NET Framework アセンブリに含まれる名前空間を一覧表示するには、この列で並べ替えます。
 
-ディレクトリ  
+**ディレクトリ**
+
 .NET Framework アセンブリの場所が表示されます。 アセンブリはすべて、既定では、グローバル アセンブリ キャッシュにあります。 グローバル アセンブリ キャッシュについて詳しくは、「[アセンブリとグローバル アセンブリ キャッシュの使用](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)」をご覧ください。
 
 ## <a name="uielement-list"></a>UIElement の一覧
@@ -57,15 +58,15 @@ name
 
 テキスト ボックスに入力した文字列に基づいて、WPF コントロールの一覧をフィルター処理します。 4 つの列のいずれかで一致したものがすべて表示されます。
 
-### <a name="clear"></a>Clear
+**クリア**
 
 フィルター文字列をクリアします。
 
-### <a name="browse"></a>参照
+**参照**
 
 **[開く]** ダイアログ ボックスが開き、WPF コントロールを含むアセンブリに移動することができます。 グローバル アセンブリ キャッシュに含まれないアセンブリを読み込むには、これを使います。
 
-### <a name="language"></a>言語
+**Language**
 
 選んだ WPF コントロールを含むアセンブリのローカライズされた言語を表示します。
 
@@ -83,5 +84,5 @@ name
 
 ## <a name="see-also"></a>関連項目
 
-[ツールボックス](../../ide/reference/toolbox.md)  
-[WPF の概要](../../designers/getting-started-with-wpf.md)
+- [ツールボックス](../../ide/reference/toolbox.md)
+- [WPF の概要](../../designers/getting-started-with-wpf.md)

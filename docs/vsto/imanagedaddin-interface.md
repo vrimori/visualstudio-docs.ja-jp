@@ -1,13 +1,10 @@
 ---
-title: "IManagedAddin インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IManagedAddin インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - IManagedAddin interface
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce339bb56368ab5c7e88d1cc8956a3b19a7e89b3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: d626257d3a2683a6fbb6032e8053572fd1301645
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin インターフェイス
   実装を読み込むコンポーネントを作成する IManagedAddin インターフェイスは、VSTO アドインを管理します。このインターフェイスは、2007 Microsoft Office system に追加された機能です。  
@@ -48,7 +45,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>メソッド  
  IManagedAddin インターフェイスによって定義されているメソッドを次の表に示します。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office アプリケーションがマネージ VSTO アドインを読み込むときに呼び出されます。|  
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office アプリケーションがマネージ VSTO アドインをアンロードする直前に呼び出されます。|  
@@ -89,7 +86,7 @@ interface IManagedAddin : IUnknown
 > [!CAUTION]  
 >  この CLSID は、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]で VSTOLoader.dll によっても使用されます。 したがって、IManagedAddin を使用して、独自の VSTO アドイン ローダーおよびランタイム コンポーネントを作成することはできませんを配置した場合、コンポーネントに依存している VSTO アドインを実行しているコンピューター、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。  
   
-## <a name="see-also"></a>参照  
- [アンマネージ API リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
+## <a name="see-also"></a>関連項目  
+ [アンマネージ API リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
   
   

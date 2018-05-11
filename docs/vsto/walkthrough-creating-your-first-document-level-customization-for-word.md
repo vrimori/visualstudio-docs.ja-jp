@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], creating your first project
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8d37dde0027e33af16bdb6c146ec74076c686cf6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9bb85c10b2a66741bf0405d4a1313fb2343a708b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-word"></a>チュートリアル : 初めての Word 用ドキュメント レベルのカスタマイズの作成
   この入門編のチュートリアルでは、Microsoft Office Word 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定の文書が開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、文書が開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  選択**新しいドキュメントを作成する**、 をクリック**OK**です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]作成、 **FirstDocumentCustomization**プロジェクト、および追加、 **FirstDocumentCustomization**ドキュメントおよび ThisDocument コード ファイルをプロジェクトにします。 **FirstDocumentCustomization**ドキュメントがデザイナーで自動的に開かれます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 作成、 **FirstDocumentCustomization**プロジェクト、および追加、 **FirstDocumentCustomization**ドキュメントおよび ThisDocument コード ファイルをプロジェクトにします。 **FirstDocumentCustomization**ドキュメントがデザイナーで自動的に開かれます。  
   
 ## <a name="closing-and-reopening-the-document-in-the-designer"></a>デザイナーで文書を閉じ、再び開く  
  プロジェクトの開発中にデザイナーで開いたドキュメントを意図的にまたは誤って閉じた場合は、そのドキュメントを再び開くことができます。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  **ソリューション エクスプ ローラー**を右クリックし、 **ThisDocument**コード ファイル、およびクリックして**ビュー デザイナー**です。  
   
-     \- または  
+     \- または -  
   
      **ソリューション エクスプ ローラー**をダブルクリックして、 **ThisDocument**コード ファイル。  
   
@@ -157,8 +156,8 @@ ms.lasthandoff: 01/10/2018
   
 -   Word 用ドキュメント レベル カスタマイズの配置: [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
   
-## <a name="see-also"></a>参照  
- [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+## <a name="see-also"></a>関連項目  
+ [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Word ソリューション](../vsto/word-solutions.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   

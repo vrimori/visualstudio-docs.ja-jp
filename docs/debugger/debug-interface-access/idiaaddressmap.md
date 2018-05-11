@@ -1,29 +1,24 @@
 ---
-title: "IDiaAddressMap |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaAddressMap |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaAddressMap interface
 ms.assetid: e6467529-508c-4328-85d7-89444ae4d1c1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cdd8c9d2e581df3e7b0ebeba092a212fb7a89f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb1593f59125c4b6325bfd97015485cc2a4d85f6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 DIA SDK が仮想のアドレスと相対仮想アドレス デバッグ オブジェクトを計算する方法の制御を提供します。  
@@ -54,14 +49,14 @@ IDiaAddressMap : IUnknown
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  このインターフェイスを指定する場合は、DIA セッション オブジェクトで実行できます。 クライアントの呼び出し、 `QueryInterface` DIA セッション オブジェクト インターフェイスで、通常メソッド[IDiaSession](../../debugger/debug-interface-access/idiasession.md)、取得するため、`IDiaAddressMap`インターフェイスです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

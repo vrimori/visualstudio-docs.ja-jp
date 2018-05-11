@@ -1,27 +1,25 @@
 ---
-title: "共有とバージョン管理された Vspackage の使い分け |Microsoft ドキュメント"
-ms.custom: 
+title: 共有とバージョン管理された Vspackage の使い分け |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - SxS
 - side-by-side installation
 - installation [Visual Studio SDK], side-by-side
 ms.assetid: e3128ac3-2e92-48e9-87ab-3b6c9d80e8c9
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 20613722410bbe57231177eefafec79184d7741f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ce7f58d664c6a186146272af16324be2fee90983
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-between-shared-and-versioned-vspackages"></a>共有とバージョン管理された Vspackage の使い分け
 異なるバージョンの Visual Studio は、同じコンピューターに共存できます。 Vspackage の組み合わせをサポートできる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]バージョン。  
@@ -65,6 +63,6 @@ ms.lasthandoff: 12/22/2017
   
  だけでなく、VSPackage のバイナリのバイナリの互換性の計画、するもする必要がありますソリューションを検討およびプロジェクト ファイル形式。 VSPackage では、新しいプロジェクトの種類を作成する場合は、または複数のバージョンの 1 つのバージョンで実行できるかどうかを決定する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 詳細については、次を参照してください。[カスタム プロジェクトのアップグレード](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows インストーラーで Vspackage をインストールします。](../extensibility/internals/installing-vspackages-with-windows-installer.md)   
  [コンポーネント管理](../extensibility/internals/component-management.md)

@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python の使用、手順 0、インストール | Microsoft Docs"
-description: "Visual Studio で Python を使用するための基礎となるチュートリアルの手順 0 (前提条件) では、Visual Studio に Python のサポートをインストールする方法について説明します。"
-ms.custom: 
+title: Python の概要のチュートリアル、手順 0、インストール
+description: Visual Studio で Python を使用するための中核となるチュートリアルの手順 0 (インストールの前提条件)。
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 30e3341db1543690d39f5144ed67894b1fb65c4d
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: bc3f85e776fa7ec45bd157a9cffe99f6ac0b1aac
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="install-python-support-in-visual-studio"></a>Visual Studio での Python サポートのインストール
 
@@ -44,14 +38,14 @@ ms.lasthandoff: 02/23/2018
 
     ![対話型ウィンドウでの Python のテスト](media/installation-interactive-test.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [手順 1: Python プロジェクトの作成](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)
+- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
 - [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
 - [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)
 

@@ -1,29 +1,24 @@
 ---
-title: "Idiasectioncontrib::get_comdat |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasectioncontrib::get_comdat |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSectionContrib::get_comdat method
 ms.assetid: 8bd9be8d-59ee-4698-b055-daba354b8dcc
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb8f2ff8655be144df6a65123cee8651e3845bb3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 578314d0771d156fe66bdfbf661ffca98844207f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
 セクションが COMDAT レコードであるかどうかを示すフラグを取得します。  
@@ -46,5 +41,5 @@ HRESULT get_comdat (
 ## <a name="remarks"></a>コメント  
  COMDAT レコードは、パッケージ化された関数は、リンカーに表示されるオブジェクト ファイル形式 COFF (Common) レコードです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

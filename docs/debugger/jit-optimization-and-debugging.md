@@ -1,13 +1,9 @@
 ---
-title: "JIT の最適化とデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: JIT の最適化とデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], optimized code
 - optimized code, debugging
 ms.assetid: 19bfabf3-1a2e-49dc-8819-a813982e86fd
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23de1ec4e053a87c4f91cf7b599f49b8fe318015
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 9a9b18ab38c7c19fa5208d34439bd3133099e8bc
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 **.NET での最適化の作業:**場合コードをデバッグしようとしてが容易とそのコードが**いない**最適化します。 これは、コードの最適化時に、コンパイラとランタイム変更を行うので、出力の CPU コードをできるように、高速で実行されますが、元のソース コードに直接マップされています。 つまり、デバッガーは、ローカル変数の値を指定して、コードのステップ実行することが頻繁にはブレークポイントが期待どおりに機能しません。
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/27/2018
 1. 既に実行中のプロセスにデバッガーをアタッチする場合、このオプション効果はありませんが、デバッガーのアタッチ時に既に読み込まれているモジュールにします。
 2. このオプションはされている Dll に影響を与えません事前 (別名 ngen'ed) をネイティブ コードにコンパイルします。 ただし、事前にコンパイルされたコードの使用法を無効にプロセスを使用して開始、環境変数 'COMPlus_ZapDisable' が '1' に設定できます。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   

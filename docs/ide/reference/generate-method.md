@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio でメソッドを生成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でメソッドを生成する
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 29405c25e404d0183409fc00b7107888dba23541
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: c06aa8820635c876c05c6ac73c7de4c3c6581aa2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Visual Studio でメソッドを生成する
 

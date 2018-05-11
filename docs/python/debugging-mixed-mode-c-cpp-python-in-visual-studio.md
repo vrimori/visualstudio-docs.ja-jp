@@ -1,28 +1,21 @@
 ---
-title: "Visual Studio での Python の混合モードのデバッグ | Microsoft Docs"
-description: "環境間のステップ実行、値の表示、式の評価など、Visual Studio で C++ と Python を同時にデバッグする方法について説明します。"
-ms.custom: 
+title: Python の混合モードのデバッグ
+description: 環境間のステップ実行、値の表示、式の評価など、Visual Studio で C++ と Python を同時にデバッグする方法について説明します。
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-- C++
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d33e4d15e9d0de5c3aa35354dd1c8840d0ed9bd2
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 52aca112b802789f45f0a1d667d75b53a7535919
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 

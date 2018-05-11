@@ -1,28 +1,24 @@
 ---
-title: "Visual Studio グラフィックス診断の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio グラフィックス診断の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca07027874c304f009bdee7fddf9d6465e047202
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: c2804b07db0b7cf8d01c8578877d4b722d6ceb96
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の使用を開始する
 このセクションでは、まずグラフィックス診断を初めて使用するための準備をしてから、Direct3D アプリケーションのフレームをキャプチャして Graphics Analyzer でそれらを確認します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Visual Studio のグラフィックス診断を使用して、Visual Studio Enterprise、Visual Studio Professional、または Visual Studio Community を使用する必要があります。  Visual Studio のコードを含む、他のエディションでは、この機能は含まれません。
  
  [!INCLUDE[downloadvs](../includes/downloadvs_md.md)]  
@@ -32,7 +28,7 @@ ms.lasthandoff: 02/01/2018
   
  グラフィックス ツールをインストールする方法の詳細については、次を参照してください。 [Windows 10 のグラフィック ツールをインストール](#InstallGraphicsTools)です。  
   
-##  <a name="InstallGraphicsTools"></a>Windows 10 のグラフィック ツールをインストールします。  
+##  <a name="InstallGraphicsTools"></a> Windows 10 のグラフィック ツールをインストールします。  
  Windows 10 でグラフィックス診断のインフラストラクチャと呼ばれる Windows のオプション機能によって提供*グラフィック ツール*です。 この機能は、キャプチャするアプリが以前のバージョンの Windows を対象にしているかどうか、またはどのバージョンの Direct3D を使用しているかに関係なく、Windows 10 でグラフィックス情報をキャプチャおよび再生するために必要です。 グラフィック ツール機能を事前にインストールすることができます。それ以外の場合は、Visual Studio からグラフィックス診断セッションを最初に開始するときに、オンデマンドでインストールされます。  
   
 #### <a name="to-install-graphics-tools-for-windows-10"></a>Windows 10 用のグラフィック ツールをインストールするには  
@@ -91,5 +87,5 @@ ms.lasthandoff: 02/01/2018
   
  Graphics Analyzer ツールを一緒に使用する方法の詳細については、次を参照してください。、[例](graphics-diagnostics-examples.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Direct3D 12 グラフィック](http://msdn.microsoft.com/en-us/52094ae3-3b44-4689-9ee7-1ba1b3a779cb)

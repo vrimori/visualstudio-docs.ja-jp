@@ -1,12 +1,9 @@
 ---
-title: "ClickOnce アプリケーションのテストの配置と再署名なしの実稼働サーバー |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce アプリケーションのテストの配置と再署名なしの実稼働サーバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - deploymentProvider tag
 - manifests [ClickOnce]
 ms.assetid: 1218a98d-1ad5-4eef-95dd-0e0b3c44168c
-caps.latest.revision: "10"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: ec7265f91d5c202d5885b7f1994aa6f037d6d2ab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b4c71e1bd6f224fdd0198ce7850c92364126d7e3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>再署名を行わない ClickOnce アプリケーションの配置 (テスト サーバーおよび運用サーバー)
 このトピックでは、clickonce マニフェストにバージョン 3.5 を再署名したり、ClickOnce を変更せずに複数のネットワークの場所からの ClickOnce アプリケーションの展開を有効にする、.NET Framework で導入された新機能について説明します。  
@@ -54,17 +51,17 @@ ms.lasthandoff: 12/22/2017
   
  重要な点を除外するアプリケーション、`deploymentProvider`を含む更新プログラムを出荷するまで、更新する際、そのインストール場所を変更できません、`deploymentProvider`タグをもう一度です。  
   
- この点を明確にするための 2 つの例のとおりです。 最初の例を持たない ClickOnce アプリケーションを発行`deploymentProvider`http://www.adatum.com/MyApplication/ からインストールするタグ、してもらいます。 Http://subdomain.adatum.com/MyApplication/ からアプリケーションの次の更新をパブリッシュする場合は、する方法がありませんの http://www.adatum.com/MyApplication/ 内にある配置マニフェストでこれを意味します。 次の 2 つのいずれかの操作を行うことができます。  
+ この点を明確にするための 2 つの例のとおりです。 最初の例を持たない ClickOnce アプリケーションを発行`deploymentProvider`からインストールしてタグ、してもらいますhttp://www.adatum.com/MyApplication/です。 場合に、アプリケーションからの次の更新を発行するhttp://subdomain.adatum.com/MyApplication/、することができなくなります内にある配置マニフェストにこのことを示すのhttp://www.adatum.com/MyApplication/します。 次の 2 つのいずれかの操作を行うことができます。  
   
 -   以前のバージョンをアンインストールするユーザーに連絡し、新しい場所から、新しいバージョンをインストールします。  
   
--   含む http://www.adatum.com/MyApplication/ の更新プログラムを含む、 `deploymentProvider` http://www.adatum.com/MyApplication/ をポイントします。 次と後で別の更新プログラムをリリース`deploymentProvider`http://subdomain.adatum.com/MyApplication/ をポイントします。  
+-   更新プログラムを含めるhttp://www.adatum.com/MyApplication/が含まれている、`deploymentProvider`指すhttp://www.adatum.com/MyApplication/です。 次と後で別の更新プログラムをリリース`deploymentProvider`指すhttp://subdomain.adatum.com/MyApplication/です。  
   
- 指定する ClickOnce アプリケーションを公開する 2 番目の例では、 `deploymentProvider`、それを削除しようとするとします。 1 回、新しいバージョンは`deploymentProvider`はダウンロードされてクライアントにすることはできませんが、アプリケーションのバージョンが解放されるまでの更新に使用するパスにリダイレクト`deploymentProvider`復元します。 最初の例と同様`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 この場合、挿入を試行した場合、 `deploymentProvider` http://subdomain.adatum.com/MyApplication/を参照し、次の更新は失敗します。  
+ 指定する ClickOnce アプリケーションを公開する 2 番目の例では、 `deploymentProvider`、それを削除しようとするとします。 1 回、新しいバージョンは`deploymentProvider`はダウンロードされてクライアントにすることはできませんが、アプリケーションのバージョンが解放されるまでの更新に使用するパスにリダイレクト`deploymentProvider`復元します。 最初の例と同様`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 挿入しようとする場合、この場合、`deploymentProvider`を参照するhttp://subdomain.adatum.com/MyApplication/、次回の更新は失敗します。  
   
 ## <a name="creating-a-deployment"></a>展開を作成します。  
- 別のネットワークの場所から展開可能な展開を作成する手順のガイダンスについては、次を参照してください[チュートリアル: ClickOnce アプリケーションをはありません必要な設定を指定の手動展開とその保持のブランド化情報。](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md).  
+ 別のネットワークの場所から展開可能な展開を作成する手順のガイダンスについては、次を参照してください[チュートリアル: ClickOnce アプリケーションをはありません必要な設定を指定の手動展開とその保持のブランド化情報](../deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)

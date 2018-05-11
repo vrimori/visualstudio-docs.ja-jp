@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio の Python コードでの PyLint の使用 | Microsoft Docs"
-description: "Visual Studio で PyLint を使って、Python コードの問題を調べる方法を説明します。"
-ms.custom: 
+title: PyLint を使用した Python コードの lint
+description: Visual Studio で PyLint を使って、Python コードの問題を調べる方法を説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ec8737db3db3da99ad372b24b9308fc93811ebc4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4e47de7be6587f0e8c967ba458a65906c80f2e5b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-pylint-to-check-python-code"></a>PyLint を使用した Python コードのチェック
 

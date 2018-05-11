@@ -1,13 +1,9 @@
 ---
-title: "エラー: asp.NET がインストールされていない |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: asp.NET がインストールされていない |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.http_not_supported
 dev_langs:
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - debugger, Web application errors
 - error messages, ASP.NET
 - ASP.NET, installation error messages
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 36930db142821b11ed83edf846ccd3f65fd81d1d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b462c3ed02ebd622a39cd08039037b3ba63e7f57
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-aspnet-not-installed"></a>エラー ： ASP .NET がインストールされていません。
 このエラーは、デバッグを実行しようとしているコンピューターに [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] が正しくインストールされていない場合に発生します。 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] がインストールされていないか、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] がインストールされてから IIS がインストールされた可能性があります。  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Windows Server 2003 にインストールできます[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]を使用して**プログラム追加と削除**コントロール パネルの します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web アプリケーションのデバッグ : エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)

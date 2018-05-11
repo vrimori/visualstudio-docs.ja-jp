@@ -1,27 +1,23 @@
 ---
-title: "Visual Studio SDK の用語集 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio SDK の用語集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - glossary [Visual Studio SDK]
 ms.assetid: b64d432b-c39b-4904-ad18-3c3218b6e3aa
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa0f7eaed09df717eb0746076715f9c780464df1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0a08985c4977896e35fa8cd94014385ac32dd8bd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK の用語集
 この用語集で使用される用語の定義を提供する、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]ドキュメント。  
@@ -76,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  一般的に、ドキュメント全体を指します: 両方、`DocData`と`DocView`です。 など、DocumentFrame が含まれています、`DocView`への参照も保持されますが、`DocData`を永続化を処理します。  
   
  DocView  
- DocObject/Embedding/ウィンドウ ペインを表示および操作の基になるユーザーが対話する`DocData`です。 ユーザーがの一部であるドキュメント/ビューの分離の利点を受け取らないことに注意してください、`DocObject`インターフェイスを設計します。 ユーザーより抽象的 (と小さい形式化された) と呼ばれる、基になるデータの概念を使用する代わりにビューとして機能する全体 DocObject を使用して`DocData`です。 `DocView`オブジェクトは、IDE のドキュメント フレーム オブジェクト (MDI 子ウィンドウ) を常に埋め込まれます。  
+ DocObject/Embedding/ウィンドウ ペインを表示および操作の基になるユーザーが対話する`DocData`です。 ユーザーがの一部であるドキュメント/ビューの分離の利点を受け取らないことに注意してください、`DocObject`インターフェイスを設計します。 ユーザーより抽象的 (と小さい形式化された) と呼ばれる、基になるデータの概念を使用する代わりにビューとして機能する全体 DocObject を使用して`DocData`です。 `DocView` オブジェクトは、IDE のドキュメント フレーム オブジェクト (MDI 子ウィンドウ) を常に埋め込まれます。  
   
  DTE  
  `DTE` (開発ツールの拡張機能) のオブジェクトは、最上位のアクセス ポイントで Visual Studio のオートメーション モデルをプログラムでの自動化や IDE を拡張することができます。  

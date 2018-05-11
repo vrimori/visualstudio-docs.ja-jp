@@ -1,27 +1,23 @@
 ---
-title: "方法: リンクされた Undo 管理を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: リンクされた Undo 管理を使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - linked undo management
 ms.assetid: af5cc22a-c9cf-45b1-a894-1022d563f3ca
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7a025cdfc14eb39dad7ea2bc72a69f1f260fb583
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 24e39bd0bde922dbe761bc9de176d43161bb985d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-linked-undo-management"></a>方法: リンクされた Undo 管理を使用
 リンク元に戻すには、ユーザーが同時に複数のファイルで同じ編集の取り消しができます。 たとえば、ヘッダー ファイルと、Visual C ファイルなど、複数のプログラム ファイルのテキストの同時変更は、リンクされた undo トランザクションです。 リンク元に戻す機能が元に戻す manager の環境の実装に組み込まれていると<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager>この機能を操作することができます。 リンク元に戻すは、単一の元に戻す単位として扱われますを同時に元に戻すスタックをリンクできる親元に戻す単位によって実装されます。 リンク元に戻すを使用する手順については、次のセクションで詳しく説明します。  
@@ -37,7 +33,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  エディターでリンクされた undo 管理を実装するには、元に戻す管理を追加します。 リンク元に戻す管理の実装の詳細については、次を参照してください。[する方法: 元に戻す管理を実装](../extensibility/how-to-implement-undo-management.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>   
  [IOleParentUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms682151)   
  [IOleUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms678476)   

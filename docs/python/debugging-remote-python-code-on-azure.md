@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio で Python を使用した Azure リモート デバッグ | Microsoft Docs"
-description: "Visual Studio を使って Python アプリケーションをリモート デバッグするように Azure App Service を構成する方法について説明します。"
-ms.custom: 
+title: Python での Azure リモート デバッグ
+description: Visual Studio を使って Python アプリケーションをリモート デバッグするように Azure App Service を構成する方法について説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b0bf21ef477b334dccf872d3ca405c0ac4fa1c1
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 5fc6004c17614620f4ba75fb13258a685536c28b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remotely-debugging-python-code-on-azure"></a>Azure 上の Python コードのリモート デバッグ
 

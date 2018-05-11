@@ -1,25 +1,21 @@
 ---
-title: "Visual Studio での Python 検索パスの適用方法 | Microsoft Docs"
-ms.custom: 
+title: Python 検索パスの適用方法
+description: Visual Studio で環境とプロジェクトの両方で Python 検索パスが使用されるしくみの概要。
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2135515859ea32c8d134ec6c5824195c554ee97e
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 94770d1591d1f4d80fadd2a0f868dfedfd84999a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio による Python 検索パスの使用方法
 
@@ -29,7 +25,7 @@ ms.lasthandoff: 03/08/2018
 1. 実行している Python コードが含まれるフォルダー
 1. 該当する環境変数によって定義された "モジュール検索パス" (Python のコア ドキュメントの「[The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)」(モジュール検索パス) および「[Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH)」(環境変数) をご覧ください)。
 
-ただし、検索パス環境変数がシステム全体に対して設定されている場合でも、Visual Studio はこの変数を無視します。 実際はまさにシステム全体が設定されている "*ために*" 無視されるので、自動的には答えられないようなある種の疑問が発生します。参照されているモジュールは Python 2.7 または Python 3.3 のどちらか。 標準ライブラリ モジュールをオーバーライドするのか。 開発者はこの動作を認識しているのか、それとも悪意のあるハイジャックの試みか。
+ただし、検索パス環境変数がシステム全体に対して設定されている場合でも、Visual Studio はこの変数を無視します。 実際はまさにシステム全体が設定されている*ために*無視されるので、自動的には答えられないようなある種の疑問が発生します。参照されているモジュールは Python 2.7 または Python 3.6 のどちらか。 標準ライブラリ モジュールをオーバーライドするのか。 開発者はこの動作を認識しているのか、それとも悪意のあるハイジャックの試みか。
 
 そのため Visual Studio では、環境とプロジェクトの両方で検索パスを直接指定するための手段が用意されています。 Visual Studio で実行またはデバッグするコードは、検索パスを `PYTHONPATH` (およびその他の同等の変数) の値で受け取ります。 検索パスを追加すると、Visual Studio はそれらの場所でライブラリを検査し、必要に応じて IntelliSense データベースを構築します (Visual Studio 2017 バージョン 15.5 以前、ライブラリの数によっては時間がかかります)。
 

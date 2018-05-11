@@ -1,14 +1,11 @@
 ---
-title: "Visual Studio 2017 のインストール | Microsoft Docs"
-description: "Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。"
-ms.custom: 
+title: Visual Studio 2017 のインストール | Microsoft Docs
+description: Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。
+ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 f1_keywords:
 - vs.about
 helpviewer_keywords:
@@ -19,16 +16,17 @@ helpviewer_keywords:
 - Visual Studio installer
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b37b998347618ea346c3d4e7993d5192c1c82a8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c39496b09c72c6c5eb72fb1c5bedb59285d01347
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
+
 ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能だけを簡単に選んでインストールできるようになりました。 また、Visual Studio の最小フットプリントも減らしているため、以前よりもシステムへの影響が少なくなり、より迅速にインストールできます。
 
 このバージョンの他の新機能については、 [リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)を参照してください。
@@ -62,7 +60,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 次に、ブートストラップ ファイルを実行して、Visual Studio インストーラーをインストールします。 この新しい軽量インストーラーには、Visual Studio 2017 のインストールとカスタマイズの両方に必要なすべてのものが含まれています。
 
-1.  **[ダウンロード]** フォルダーで、次のいずれかのファイルと一致する、または似ているブートストラップをダブルクリックします。
+1. **[ダウンロード]** フォルダーで、次のいずれかのファイルと一致する、または似ているブートストラップをダブルクリックします。
 
   * Visual Studio Enterprise の場合は **vs_enterprise.exe**
   * Visual Studio Professional の場合は **vs_professional.exe**
@@ -70,7 +68,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
   ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
 
-2.  Microsoft の[ライセンス条項](https://www.visualstudio.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]**をクリックします。  
+2. Microsoft の[ライセンス条項](https://www.visualstudio.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]** をクリックします。  
 
    ![ライセンス条項とプライバシーに関する声明](media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")
 
@@ -78,20 +76,20 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 インストーラーがインストールされたら、それを使用して、必要な機能セット (またはワークロード) を選択し、インストールをカスタマイズすることができます。 ここではその方法を説明します。
 
-1.  **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
+1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
  ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-enterprise.png)
 
      たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
 
-2.  必要なワークロード (複数可) を選択したら、**[インストール]** をクリックします。
+2. 必要なワークロード (複数可) を選択したら、**[インストール]** をクリックします。
 
     そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
-3.  新しいワークロードとコンポーネントがインストールされたら、**[起動]** をクリックします。  
+3. 新しいワークロードとコンポーネントがインストールされたら、**[起動]** をクリックします。  
 
 > [!TIP]
->  インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択し、**[変更]** をクリックします。  
+> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択し、**[変更]** をクリックします。  
 
 |         |         |
 |---------|---------|
@@ -121,8 +119,8 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 
 コマンド ラインからインストーラーを実行して、既定の言語を変更することもできます。 たとえば、`vs_installer.exe --locale en-US` コマンドを実行して、インストーラーを英語で実行するように指定することができます。 この設定は、次回インストーラーを実行したときにも保持されています。 インストーラーでは次の言語トークンがサポートされます。zh-cn、zh-tw、cs-cz、en-us、es-es、fr-fr、de-de、it-it、ja-jp、ko-kr、pl-pl、pt-br、ru-ru、tr-tr。
 
-
 ## <a name="step-7---start-developing"></a>手順 7 - 開発を始める
+
 1. Visual Studio のインストールが完了したら **[起動]** をクリックして、[Visual Studio を使用した開発を開始](../ide/get-started-developing-with-visual-studio.md)します。
 
 2. **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。
@@ -132,15 +130,18 @@ Visual Studio のインストールをカスタマイズする際にワークロ
    [C# アプリをビルドする](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)には、**[インストール済み]** をクリックし、**[Visual C#]** を展開して、ビルドする C# プロジェクトの種類を選択します。
 
 ## <a name="get-support"></a>サポートを受ける
+
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
+
 * [Visual Studio 2017 の更新](update-visual-studio.md)
 * [Visual Studio 2017 の変更](modify-visual-studio.md)
 * [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)

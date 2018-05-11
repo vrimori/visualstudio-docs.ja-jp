@@ -1,12 +1,9 @@
 ---
-title: "方法: ページの上またはメモリ内で下 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ページの上またはメモリ内で下 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - Disassembly window, viewing memory space
 - Memory window, paging up or down in memory
 ms.assetid: 50b30a68-66f6-43f8-a48b-59ce12c95471
-caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0499fbf29e9bb16d0f5ff99c42f031d06e4fb4de
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5c87dc65bd48d47e54c4c46099c264a0c7051957
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>方法 : [メモリ] ウィンドウの上下スクロール
 メモリの内容を表示すると、**メモリ**ウィンドウまたは**逆アセンブル**ウィンドウで、メモリ領域内を上下に移動する垂直スクロール バーを使用することができます。  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   垂直スクロール バーの上端または下端にある矢印をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[メモリ] ウィンドウ](../debugger/memory-windows.md)   
  [方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)   
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

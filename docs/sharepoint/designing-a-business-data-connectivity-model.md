@@ -1,12 +1,10 @@
 ---
-title: "ビジネス データ接続モデルをデザイン |Microsoft ドキュメント"
-ms.custom: 
+title: ビジネス データ接続モデルをデザイン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], designing a model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fe3de196219091478a30ff07d6c2f5916d423f15
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6f34a754562674aacf989c294ff2662ca4f8f28f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designing-a-business-data-connectivity-model"></a>Business Data Connectivity モデルのデザイン
   モデル ファイルにエンティティとメソッドを追加することで、ビジネス データ接続 (BDC) サービスのモデルを開発できます。 エンティティは、データ フィールドのコレクションを表します。 たとえば、エンティティは、データベース内のテーブルを表すことができます。 メソッドは、追加、削除、またはエンティティによって表されるデータの更新などのタスクを実行します。 詳細については、次を参照してください。 [SharePoint にビジネス データを統合する](../sharepoint/integrating-business-data-into-sharepoint.md)です。  
@@ -49,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio では、モデル内のパラメーターの型記述子をコピーすることができます。 たとえば、という名前の型記述子を定義する場合があります`CustomerTD`の戻り値のパラメーターに、`GetCustomer`メソッドです。 コピーすることができます、`CustomerTD`入力記述子に、 **BDC エクスプ ローラー**の入力パラメーターには、その型記述子を貼り付けると、`CreateCustomer`メソッドです。 こうと、同じの型記述子を複数回定義する必要がなくなります。  
   
-##  <a name="MethodInstances"></a>メソッド インスタンス  
+##  <a name="MethodInstances"></a> メソッド インスタンス  
  メソッドを作成するときに、Visual Studio は、既定のメソッドのインスタンスを追加します。 メソッドのインスタンスは、メソッド、およびパラメーターの既定値への参照です。 1 つのメソッドは、メソッドの複数のインスタンスを持つことができます。 各インスタンスは、既定値のセットとメソッドのシグネチャの組み合わせです。 詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
  プロジェクトを実行するときに、SharePoint リストの上のドロップダウン リストでメソッドのインスタンスが表示されます。 ユーザーは、データを表示するメソッドのインスタンスを選択できます。  

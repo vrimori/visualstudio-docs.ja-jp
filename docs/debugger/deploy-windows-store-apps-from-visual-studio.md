@@ -1,27 +1,24 @@
 ---
-title: "Visual Studio での UWP アプリの展開 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での UWP アプリの展開 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 28b1897fad45ae0c2bd174c39433645caf011f09
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: fda8e9b09fadfb57145331b1fc09acc1687e58e7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio からの UWP アプリを配置します。
   
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
 -   別のアプリまたはメソッドによって起動される、デバッグ対象のアプリを配置します。
   
-##  <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a>UWP アプリを展開する方法  
+##  <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> UWP アプリを展開する方法  
  アプリを手動で配置する手順はシンプルです。  
   
 1.  リモート デバイスへ配置する場合は、アプリのスタートアップ プロジェクトのプロパティ プロジェクト ページに、デバイスの名前または IP アドレスを指定します。 (指定するステップはこのトピック内で後述)。  
@@ -81,7 +78,7 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
   
  **JavaScript または Visual C++ のプロジェクト ページにあるリモート デバイスを指定**  
   
- ![C &#43; #43 です。リモート デバッグのプロパティをプロジェクト](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")  
+ ![C&#43; &#43;リモート デバッグのプロパティをプロジェクト](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")  
   
 1.  **[起動するデバッガー]** ボックスの一覧の **[リモート デバッガー]** をクリックします。  
   
@@ -114,7 +111,7 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
   
 -   JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]**に設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リモート展開のオプションの詳細](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)  
  [インストールされているアプリ パッケージをデバッグします。](../debugger/debug-installed-app-package.md)   
  [Visual Studio からアプリを実行します。](../debugger/run-store-apps-from-visual-studio.md)

@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: リボン XML によるカスタム タブの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: リボン XML によるカスタム タブの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Custom tab [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1b736ace651854b3b6a527685e150f6f1ec7194c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 759aee9692ee905e33ce55ff068b74d4a289c78a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-tab-by-using-ribbon-xml"></a>チュートリアル : リボン XML によるカスタム タブの作成
   このチュートリアルを使用してカスタム リボン タブを作成する方法を示します、**リボン (XML)**項目。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/10/2018
   
      詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]開く、 **ThisAddIn.cs**または**ThisAddIn.vb**コード ファイルと追加、 **MyRibbonAddIn**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 開く、 **ThisAddIn.cs**または**ThisAddIn.vb**コード ファイルと追加、 **MyRibbonAddIn**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 ## <a name="creating-the-vsto-add-ins-tab"></a>VSTO [アドイン] タブの作成  
  作成する、**アドイン** タブで、追加、**リボン (XML)**をプロジェクトに項目。 このチュートリアルの後半で、このタブにボタンを追加します。  
@@ -157,7 +156,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Outlook フォーム領域を使用して Microsoft Office Outlook の UI をカスタマイズする。 詳細については、次を参照してください。[チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用したカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  

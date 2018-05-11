@@ -1,23 +1,21 @@
 ---
-title: "モデルを使用して、開発工程で |Microsoft ドキュメント"
-ms.custom: 
+title: 開発プロセス内でのモデルの使用
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d8d9b5632831c1d336f359aa4e4468da1543c73
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 211a2dbed77074139821cd77018169cb4e785a94
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 
@@ -141,11 +139,11 @@ Visual Studio では、システム、アプリケーション、またはコン
 
 ## <a name="see-also"></a>関連項目
 
-[アジャイル開発モデルを使用して](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f) 
-[アプリのモデルを作成](../modeling/create-models-for-your-app.md) 
-[ユーザー要件をモデリング](../modeling/model-user-requirements.md) 
-[アプリのモデルアーキテクチャ](../modeling/model-your-app-s-architecture.md) 
-[モデルからテストを開発](../modeling/develop-tests-from-a-model.md) 
-[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)
+- [アジャイル開発モデルを使用してください。](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)
+- [アプリのモデルを生成する](../modeling/create-models-for-your-app.md)
+- [ユーザー要件のモデリング](../modeling/model-user-requirements.md)
+- [アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)
+- [モデルからテストを開発する](../modeling/develop-tests-from-a-model.md)
+- [モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

@@ -1,28 +1,25 @@
 ---
-title: "多くのデバッグ機能 |Microsoft ドキュメント"
-ms.custom: 
+title: 多くのデバッグ機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: a41166d7-e03e-42ef-862e-dd025ef600b6
-caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b9e249ed95e0860c0dc781c4c0a0c9e7e86acc95
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a46c62c05b762bee3233062a5b84e3ffca20e15a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-debugging-features"></a>その他のデバッグ機能
 このセクションでは、Visual Studio デバッガーで使用できるその他の機能について説明します。  

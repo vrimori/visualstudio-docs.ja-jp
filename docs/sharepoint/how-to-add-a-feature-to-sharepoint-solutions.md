@@ -1,13 +1,10 @@
 ---
-title: "方法: SharePoint ソリューションのフィーチャーの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: SharePoint ソリューションのフィーチャーの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, features
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 17dd4438b0da4796cf553eee21eea4ccbefb13ee
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 07acb967e945f067bfe82d915684639464ded908
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>方法: SharePoint ソリューションにフィーチャーを追加する
   SharePoint ソリューションを作成するときに、1 つの機能と 1 つのパッケージがソリューションに追加されます。 異なる種類の SharePoint のファイルを整理する複数のフィーチャーの項目を追加できます。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能**を選択し**フィーチャーの追加**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

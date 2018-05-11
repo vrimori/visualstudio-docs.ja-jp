@@ -1,20 +1,21 @@
 ---
-title: "DevOps で Visual Studio の ラボ環境を使用する | Microsoft Docs"
+title: DevOps で Visual Studio のラボ環境を使用する
 ms.date: 05/02/2017
-ms.technology: vs-devops-test
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - lab environment, test lab
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b59de153b691cd67bfe70c52e62478f52795239f
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 20c692e648e094d6d7c62cc5099b73ba2f27e3c7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps でラボ環境を使用する
 
@@ -139,6 +140,6 @@ Lab Management の詳細については、以下を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-* [テスト エージェントをインストールして構成する](install-configure-test-agents.md)
+* [テスト エージェントをインストールして構成する](../../test/lab-management/install-configure-test-agents.md)
 * [Visual Studio Lab Management Guide (Visual Studio ラボ管理ガイド)](https://aka.ms/vsarsolutions)
 * [Microsoft DevOps ブログ](https://blogs.msdn.microsoft.com/devops/)

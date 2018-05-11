@@ -1,29 +1,24 @@
 ---
-title: "[ビルドの詳細設定] ダイアログ ボックス (C#) | Microsoft Docs"
-ms.custom: 
+title: '[ビルドの詳細設定] ダイアログ ボックス (C#)'
 ms.date: 06/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - cs.AdvancedBuildSettings
 helpviewer_keywords:
 - Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 44694e84fc0ab83ca4caf7bf80535dcae50a636f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dc9900927218e543b4e7ba962d7ea019d927c8a8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>[ビルドの詳細設定] ダイアログ ボックス (C#)
 
@@ -87,4 +82,5 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>参照
 
- [C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index) [[ビルド] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-page-project-designer-csharp.md)
+- [C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)
+- [[ビルド] ページ (プロジェクト デザイナー) (C#)](../../ide/reference/build-page-project-designer-csharp.md)

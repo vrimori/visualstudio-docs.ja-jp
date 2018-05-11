@@ -1,29 +1,24 @@
 ---
-title: "Idiastackframe::get_rawlvarinstancevalue |Microsoft ドキュメント"
-ms.custom: 
+title: Idiastackframe::get_rawlvarinstancevalue |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaStackFrame::get_rawLVarInstanceValue method
 ms.assetid: ce526259-85a6-475b-9274-0b3a21d95db2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5872c77a9154c72f6c3bcd76452792cff34452cb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2c50b1db74674158d4c7304bbacb4105f387cd56
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 このメソッドは、実際のバイト数として指定されたローカル変数の値を取得します。  
@@ -55,5 +50,5 @@ HRESULT get_rawLVarInstanceValue(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

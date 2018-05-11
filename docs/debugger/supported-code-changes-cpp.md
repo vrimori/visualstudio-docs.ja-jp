@@ -1,12 +1,9 @@
 ---
-title: "サポートされるコード変更 (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: サポートされるコード変更 (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -23,16 +20,16 @@ helpviewer_keywords:
 - what's new [C#], supported code changes
 - code changes
 ms.assetid: f5754363-8a56-417b-b904-b05d9dd26d03
-caps.latest.revision: "26"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b3ced43c776cc948467d68b2112fb808dd2a48c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bb97c08b8673854e0fe0d0bbd64efbe038227c43
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="supported-code-changes-c"></a>サポートされているコード変更 (C++)
 Visual C++ のエディット コンティニュは、大半の種類のコード変更に対応します。 ただし、一部の変更はプログラムの実行中に適用できません。 これらの変更を適用するには、プログラムの実行を中断し、新しいバージョンのコードをビルドする必要があります。  
@@ -143,5 +140,5 @@ Visual C++ のエディット コンティニュは、大半の種類のコー�
 ##  <a name="BKMK_IDL_Attribute_Limitations"></a> IDL 属性に関する制限事項  
  エディット コンティニュでは、インターフェイス定義 (IDL) ファイルは再生成されません。 このため、デバッグ時に IDL 属性への変更は反映されません。 IDL 属性の変更結果を表示するには、デバッグを停止し、アプリをリビルドする必要があります。 エディット コンティニュでは、IDL 属性が変更されているとエラーや警告は生成されません。 詳細については、「 [IDL 属性](/cpp/windows/idl-attributes)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Edit and Continue (Visual C++)](../debugger/edit-and-continue-visual-cpp.md)

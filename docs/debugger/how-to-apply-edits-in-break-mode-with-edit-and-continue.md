@@ -1,13 +1,9 @@
 ---
-title: "方法: 編集と中断モードで編集を適用して続行 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 編集と中断モードで編集を適用して続行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.variables.failededit
 dev_langs:
@@ -23,17 +19,16 @@ helpviewer_keywords:
 - coding, editing in break mode
 - code, editing in break mode
 ms.assetid: 1eef7498-6a1f-4fba-8146-510adc6375c9
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54fb069f5328dd9bc7cabab16c0688109312dfd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f031598e0c8f290907e759bcfceac85c1b063f5f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>方法 : エディット コンティニュの中断モード時に編集を適用する
 エディット コンティニュを使用すると、中断モードでコードを編集した後、コードを停止したり再起動したりせずにデバッグを継続できます。  
@@ -65,6 +60,6 @@ ms.lasthandoff: 12/22/2017
   
      適用した編集がプロジェクトに取り込まれた状態でコードが実行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされているコード変更 (c# および Visual Basic](../debugger/supported-code-changes-csharp.md)   
  [エディット コンティニュ (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

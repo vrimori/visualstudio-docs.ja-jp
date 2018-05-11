@@ -1,12 +1,9 @@
 ---
-title: "方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - executable files, importing
 - executable files, debugging outside of projects
 ms.assetid: 3ea176e8-1ce5-42c4-b7a2-abe3a2765033
-caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3ded5dfaec889e32bbf4c65f8e6a2335fd8c97a7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e16a938eda683a607dbf7d9418b2a7bd4455a0da
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-an-executable-that-is-not-part-of-a-visual-studio-solution"></a>方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ
 実行可能ファイル (.exe ファイル) ではないをデバッグする場合もありますの一部、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部で作成された実行可能ファイルや、他の人から受け取った実行可能ファイルなどがその例です。  
@@ -68,7 +65,7 @@ Visual Studio ソリューションの一部ではない実行可能ファイル
   
 5.  などの実行コマンドを選択して、実行可能ファイルを開始します。**開始**、から、**デバッグ**メニュー。    
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [DBG ファイル](http://msdn.microsoft.com/en-us/91e449e9-8b65-4123-960f-2107cd1f1cfd)

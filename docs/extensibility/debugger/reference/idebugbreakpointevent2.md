@@ -1,29 +1,25 @@
 ---
-title: "IDebugBreakpointEvent2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugBreakpointEvent2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugBreakpointEvent2
 helpviewer_keywords:
 - IDebugBreakpointEvent2 interface
 ms.assetid: 50b3a7a7-331b-42c8-922c-ff3522ebe1da
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8fedfdf2c978bb3bbb61ba469241fec75cb7dd01
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 72dabc4b9477231364721535b90782a0aee6396f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugbreakpointevent2"></a>IDebugBreakpointEvent2
 デバッグ エンジン (DE) は、プログラムがブレークポイントで停止したときに、セッションのデバッグ マネージャー (SDM) をこのインターフェイスを送信します。  
@@ -47,13 +43,13 @@ IDebugBreakpointEvent2 : IUnknown
 |------------|-----------------|  
 |[EnumBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md)|現在のコードの場所で発生したすべてのブレークポイントの列挙子を作成します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

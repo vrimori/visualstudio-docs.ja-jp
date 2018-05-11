@@ -1,12 +1,9 @@
 ---
-title: "方法: ClickOnce アプリケーションの発行ページを指定する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ClickOnce アプリケーションの発行ページを指定する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - publishing, ClickOnce
 - ClickOnce deployment, specifying publish page
 ms.assetid: 9d70eebb-bdee-4b42-8e7e-7a07e199bdf7
-caps.latest.revision: "18"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 491ef29c955c5ab06b8539ec5089f2ed32feaf36
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 864d0ef0f4934e040722a9a9fc00ba7a54f3331c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行ページを指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションで、既定の Web ページ (publish.htm) が生成され、アプリケーションと共に発行します。 このページは、アプリケーション、アプリケーションや、前提条件のインストールへのリンク、および説明するヘルプ トピックへのリンクの名前を含む[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 **ページを公開**、プロジェクトのプロパティでは、Web ページの名前を指定することができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  選択、**発行**ウィンドウです。  
   
-3.  クリックして、**オプション**を開く ボタン、**発行オプション** ダイアログ ボックス。  
+3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
   
 4.  をクリックして**展開**です。  
   
@@ -55,13 +52,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  選択、**発行**ウィンドウです。  
   
-3.  クリックして、**オプション**を開く ボタン、**発行オプション** ダイアログ ボックス。  
+3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
   
 4.  をクリックして**展開**です。  
   
 5.  **発行オプション**ダイアログ ボックスで、クリア、**発行後に web ページを開いている配置**チェック ボックスをオンします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [方法: ClickOnce の既定の Web ページをカスタマイズします。](../deployment/how-to-customize-the-default-web-page-for-a-clickonce-application.md)

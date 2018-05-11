@@ -1,24 +1,20 @@
 ---
-title: "Visual Studio におけるクロス プラットフォーム モバイル開発 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio におけるクロス プラットフォーム モバイル開発 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/06/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8202717a-e990-45cf-b092-438651ccb38a
-caps.latest.revision: 
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+author: asb3993
+ms.author: amburns
+manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: ace464f11d16f1498022cb1a0673b294a6ec408b
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 3010c0b204c822ab598c7559634010295a86f5e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
 

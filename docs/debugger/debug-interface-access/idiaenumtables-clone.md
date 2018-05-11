@@ -1,29 +1,24 @@
 ---
-title: "Idiaenumtables::clone |Microsoft ドキュメント"
-ms.custom: 
+title: Idiaenumtables::clone |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumTables::Clone method
 ms.assetid: beb21109-b12c-44d8-8c1f-a332216b3713
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cdd57eea5d6c70086eb258841a091cd70eddca4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7603e7e157d9c2de05cf5445674b591127b5041d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiaenumtablesclone"></a>IDiaEnumTables::Clone
 現在の列挙子と同じ列挙の状態を含む列挙子を作成します。  
@@ -43,5 +38,5 @@ HRESULT Clone (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

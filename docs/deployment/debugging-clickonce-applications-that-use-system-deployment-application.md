@@ -1,12 +1,9 @@
 ---
-title: "System.Deployment.Application を使用して ClickOnce アプリケーションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: System.Deployment.Application を使用して ClickOnce アプリケーションのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - debugging, System.Deployment
 - deploying applications [ClickOnce], debugging
 ms.assetid: 86f31948-2ca8-47c0-8e8b-c2b817bbf79f
-caps.latest.revision: "14"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: cc4d2a778449be4cbb441397c0a5a427ef91e8dd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 30cbf4aab2975b95703c24462604c1a43ed3554c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="debugging-clickonce-applications-that-use-systemdeploymentapplication"></a>System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開では、アプリケーションを更新する方法を構成することができます。 ただし、使用およびカスタマイズする必要がある場合は、高度な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置機能によって提供される展開のオブジェクト モデルにアクセスする必要がある<xref:System.Deployment.Application>です。 使用することができます、<xref:System.Deployment.Application>高度なタスクをなどの Api:  
@@ -80,5 +77,5 @@ ms.lasthandoff: 12/22/2017
   
  使用して、<xref:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed%2A>プロパティを呼び出す、 <xref:System.Deployment.Application> Api アプリケーションが展開される場合にのみ; Api 呼び出さないでくださいでのデバッグ中に[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application>

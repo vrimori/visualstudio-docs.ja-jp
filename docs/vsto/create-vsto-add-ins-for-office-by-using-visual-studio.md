@@ -1,24 +1,23 @@
 ---
-title: "Visual Studio を使用して Office 用の VSTO アドインを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio を使用して Office 用の VSTO アドインを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9a1b95c057163f3a90c8277744d1ec39a2f24cde
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 76a81b61c585c0a35b5b535988e559f5e045da13
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio を使用して Office 用 VSTO アドインを作成する
   Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成できます。 このようなアプリケーションは、 *Office ソリューション*とも呼ばれます。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/10/2018
 -   [Microsoft Office デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=83467) では、Office のカスタマイズと Office Business Application (OBA) に関する技術記事、コード サンプル、ダウンロード、コミュニティ情報、サポート、およびその他のドキュメントへのリンクが提供されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [作業の開始 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/getting-started-office-development-in-visual-studio.md)  
+ [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
  Office ソリューションの作成用に開発コンピューターを構成する方法、Office ソリューションの作成を開始する方法、および Visual Studio での Office 開発を対象とする新機能に関する情報へのリンクを示します。  
   
  [Office ソリューションのアップグレードと移行](../vsto/upgrading-and-migrating-office-solutions.md)  
@@ -86,13 +85,13 @@ ms.lasthandoff: 01/10/2018
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
  サンプル アプリケーション、および一般的なタスクの詳細な手順を説明するトピックへのリンクを示します。  
   
- [全般リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/general-reference-office-development-in-visual-studio.md)  
+ [全般リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
  Office プライマリ相互運用機能アセンブリ、マニフェスト、ユーザー インターフェイス要素、およびエラー メッセージに関する詳細情報へのリンクを示します。  
   
- [マネージ参照 (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/managed-reference-office-development-in-visual-studio.md)  
+ [マネージ参照&#40;Visual Studio での Office 開発&#41;](../vsto/managed-reference-office-development-in-visual-studio.md)  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を対象とする Office プロジェクトで使用される API の名前空間と型に関する情報へのリンクを示します。 .NET Framework 3.5 を対象とする Office プロジェクトで使用される名前空間と型に関する API リファレンス ドキュメントについては、Visual Studio 2008 ドキュメントのリファレンス セクション「 [2007 System マネージ参照](http://go.microsoft.com/fwlink/?LinkId=160658)」をご覧ください。  
   
- [アンマネージ API リファレンス (&) #40 です。 Visual Studio &#41; での Office 開発](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
+ [アンマネージ API リファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
  Office アプリケーションでマネージ VSTO アドインのロードとアンロードなどの操作を実行するために使用できる COM インターフェイスに関する情報へのリンクを示します。  
   
 ## <a name="related-sections"></a>関連項目  

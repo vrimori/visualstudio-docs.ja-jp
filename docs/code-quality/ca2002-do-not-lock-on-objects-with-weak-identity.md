@@ -1,11 +1,9 @@
 ---
-title: "2002 ca: はロック id が不十分なオブジェクトに対する |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2002: ID が不十分なオブジェクトをロックしないでください'
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - DoNotLockOnObjectsWithWeakIdentity
 - CA2002
@@ -14,17 +12,17 @@ helpviewer_keywords:
 - DoNotLockOnObjectsWithWeakIdentity
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e27af6104b06b1f6a01ae6a98bfe88e8a0e967b1
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 7708f5e968fed8765ca27bff99d479957927440b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: ID が不十分なオブジェクトをロックしないでください
 
@@ -84,7 +82,7 @@ ms.lasthandoff: 02/01/2018
 
 ## <a name="see-also"></a>関連項目
 
-<xref:System.Threading.Monitor>  
-<xref:System.AppDomain>  
-[lock ステートメント (c#)](/dotnet/csharp/language-reference/keywords/lock-statement)  
+<xref:System.Threading.Monitor>
+<xref:System.AppDomain>
+[lock ステートメント (c#)](/dotnet/csharp/language-reference/keywords/lock-statement)
 [SyncLock ステートメント (Visual Basic)](/dotnet/visual-basic/language-reference/statements/synclock-statement)

@@ -1,13 +1,10 @@
 ---
-title: "方法: エンティティをモデルに追加 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: エンティティをモデルに追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EntityTool
 dev_langs:
@@ -22,14 +19,14 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], adding an entity
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2ef3885f2a290fd1d4193daf9436a08ae5588a0d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f59f5e1b31baf9f731f58c9f21163c2a54f2a238
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>方法: モデルにエンティティを追加する
   エンティティを作成するには、Visual Studio からエンティティ コントロールを追加**ツールボックス**ビジネス データ接続 (BDC) をデザイナーにします。  
@@ -54,7 +51,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
  [方法: Deleter メソッドを追加](../sharepoint/how-to-add-a-deleter-method.md)   
  [方法: Updater メソッドを追加](../sharepoint/how-to-add-an-updater-method.md)   

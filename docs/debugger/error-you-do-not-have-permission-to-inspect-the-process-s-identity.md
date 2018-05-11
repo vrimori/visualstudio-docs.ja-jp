@@ -1,36 +1,33 @@
 ---
-title: "エラー: 必要はありません、プロセス &#39; を検査する権限 id |Microsoft ドキュメント"
-ms.custom: 
+title: 'エラー: 必要はありません、プロセスを検査する権限&#39;id |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: reference
+ms.topic: troubleshooting
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f51087d4f7882c34826942a898328640107a5ac6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0f37cf6f6a1a72435b549942fa03d821c900718a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>エラー: 必要はありません、プロセス &#39; を検査する権限 id
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>エラー: 必要はありません、プロセスを検査する権限&#39;id
 プロセスの ID を検査する権限がありません。 これは、システムの混が原因である可鉢があります。  
   
  デバッグに必要なプロセス ID をデバッガーが検査できませんでした。 最も可能性の高い原因として、ターミナル サービスが無効になっていることが挙げられます。 既定では、ターミナル サービスが有効に設定されています。 再度有効にするには、次の手順に従います。  
   
 ### <a name="to-enable-terminal-services"></a>ターミナル サービスを有効にするには  
   
-1.  をクリックして**開始**を選択し**コントロール パネルの** です。  
+1.  をクリックして**開始**を選択し**コントロール パネルの**です。  
   
 2.  コントロール パネルで、次のように選択します。**クラシック表示に切り替える**、必要に応じて、順にダブルクリック**管理ツール**です。  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  をクリックして**開始**し、右クリックし、**マイ コンピューター**です。  
   
-2.  選択**プロパティ**です。  
+2.  **[プロパティ]** を選択します。  
   
      **システム プロパティ**ウィンドウが表示されます。  
   
@@ -66,5 +63,5 @@ ms.lasthandoff: 12/22/2017
   
 5.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

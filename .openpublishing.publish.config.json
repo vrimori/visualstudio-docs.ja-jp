@@ -18,6 +18,9 @@
       "build_output_subfolder": "vsdocsdocs",
       "locale": "ja-jp",
       "monikers": [],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "open_to_public_contributors": true,
       "template_folder": "_themes"
     },
@@ -27,7 +30,13 @@
       "build_output_subfolder": "mac",
       "locale": "ja-jp",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
       "build_entry_point": "docs",
       "template_folder": "_themes"
     },
@@ -76,17 +85,8 @@
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
-      "branch": "live",
-      "branch_mapping": {
-        "live": "live",
-        "live-sxs": "live",
-        "master": "master"
-      }
+      "branch": "master",
+      "branch_mapping": {}
     },
     {
       "path_to_root": "_repo.en-us",
@@ -105,7 +105,7 @@
     ]
   },
   "need_generate_pdf_url_template": true,
-  "Targets": {
+  "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
     }

@@ -1,29 +1,32 @@
 ---
-title: "Visual Studio ワークフロー ウィンドウ (レガシ) |Microsoft ドキュメント"
+title: ワークフロー デザイナーの Visual Studio ワークフロー ウィンドウ (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, designer windows
 ms.assetid: 78526446-d165-4367-982c-b2cf269fa22b
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 865b8adf9316851a29e6cf76d0fc308021e63a4c
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 39e2b66a7203cd4ac80d855b8752683e126a0b27
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-workflow-windows-legacy"></a>Visual Studio ワークフローのウィンドウ (レガシ)
-[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] が備えている従来の[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]を使用すると、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とすることができます。 従来のデザイナーは、ワークフローの作成に使用できるビジュアルなデザイナーです。 アクティビティをドラッグすることができます、**ツールボックス**のデザイン画面し構成することがあります。 このデザイン サーフェイスは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウとして、他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エディター ウィンドウが使用するのと同じメイン ウィンドウ領域を占有します。 ワークフローの名前が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウのタイトル バーに表示されます。
 
- 従来のデザイナーのほとんどのウィンドウの操作方法は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の操作に慣れたユーザーにとって簡単です。 主なウィンドウを次の表に示します。
+Visual Studio 2010 ワークフロー デザイナーが提供される、従来は、.NET Framework version 3.5、または、WinFX を対象とする使用できます。 従来のデザイナーは、ワークフローの作成に使用できるビジュアルなデザイナーです。 アクティビティをドラッグすることができます、**ツールボックス**のデザイン画面し構成することがあります。 このデザイン サーフェイスは、Visual Studio エディター ウィンドウとして、他の Visual Studio エディター ウィンドウが使用するのと同じメイン ウィンドウ領域を占有します。 ワークフローの名前が Visual Studio ウィンドウのタイトル バーに表示されます。
+
+従来のデザイナー ウィンドウのほとんどは、経験豊富な Visual Studio ユーザーに理解しておく必要があります。 主なウィンドウを次の表に示します。
 
 |[Window]|説明|
 |------------|-----------------|
-|従来のワークフロー デザイン サーフェイス|[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とするワークフローの作成に使用する、ビジュアルなデザイナー画面。 アクティビティ デザイナーをドラッグして視覚的にアクティビティを作成する機能を提供、**ツールボックス**デザイン画面にします。|
+|従来のワークフロー デザイン サーフェイス|ビジュアルなデザイナー画面を .NET Framework version 3.5、または、WinFX を対象とするワークフローを作成するために使用します。 アクティビティ デザイナーをドラッグして視覚的にアクティビティを作成する機能を提供、**ツールボックス**デザイン画面にします。|
 |ツールボックス|アクティビティのグラフィック表示。デザイン サーフェイスまでドラッグできます。|
 |プロパティ|ワークフロー アクティビティのプロパティを構成するために使用します。|
 |ソリューション エクスプローラー|ワークフロー プロジェクトを階層ツリー ビューで表示します。ここから、プロジェクト管理に役立つ機能を利用できます。|

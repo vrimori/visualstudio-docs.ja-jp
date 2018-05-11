@@ -1,12 +1,9 @@
 ---
-title: "Ca 2126: 型のリンク要求には継承要求が必要です |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2126: 型のリンク要求には継承要求が必要です'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CA2126
 - TypeLinkDemandsRequireInheritanceDemands
@@ -14,53 +11,52 @@ helpviewer_keywords:
 - CA2126
 - TypeLinkDemandsRequireInheritanceDemands
 ms.assetid: 07b604e5-5579-4df9-a578-dadd0d8370a7
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 20ce42e001bcb0fe60f563cb4cfbee913315df27
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d3143bb7508af1fcb0a946ce7e3a3f0a8697b204
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: 型のリンク要求には継承要求が必要です
-|||  
-|-|-|  
-|TypeName|TypeLinkDemandsRequireInheritanceDemands|  
-|CheckId|CA2126|  
-|カテゴリ|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
-  
-## <a name="cause"></a>原因  
- パブリックのシールされていない型が保護されているリンク要求とオーバーライド可能なメソッドがあり、型でも、メソッドが継承確認要求で保護されています。  
-  
-## <a name="rule-description"></a>規則の説明  
- メソッドまたはその宣言する型にリンク確認要求では、直接の呼び出し元のメソッドの指定した権限を持っている必要があります。 メソッドの継承確認要求では、オーバーライドするメソッドを指定した権限を持っている必要があります。 型の継承確認要求では、指定した権限を持っているために派生クラスが必要です。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、種類またはリンク確認要求と同じアクセス許可の継承確認要求を持つメソッドをセキュリティで保護します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。  
-  
-## <a name="example"></a>例  
- 次の例は、規則に違反する型を示しています。  
-  
+|||
+|-|-|
+|TypeName|TypeLinkDemandsRequireInheritanceDemands|
+|CheckId|CA2126|
+|カテゴリ|Microsoft.Security|
+|互換性に影響する変更点|あり|
+
+## <a name="cause"></a>原因
+ パブリックのシールされていない型が保護されているリンク要求とオーバーライド可能なメソッドがあり、型でも、メソッドが継承確認要求で保護されています。
+
+## <a name="rule-description"></a>規則の説明
+ メソッドまたはその宣言する型にリンク確認要求では、直接の呼び出し元のメソッドの指定した権限を持っている必要があります。 メソッドの継承確認要求では、オーバーライドするメソッドを指定した権限を持っている必要があります。 型の継承確認要求では、指定した権限を持っているために派生クラスが必要です。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、種類またはリンク確認要求と同じアクセス許可の継承確認要求を持つメソッドをセキュリティで保護します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。
+
+## <a name="example"></a>例
+ 次の例は、規則に違反する型を示しています。
+
  [!code-cpp[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/CPP/ca2126-type-link-demands-require-inheritance-demands_1.cpp)]
  [!code-vb[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/VisualBasic/ca2126-type-link-demands-require-inheritance-demands_1.vb)]
- [!code-csharp[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/CSharp/ca2126-type-link-demands-require-inheritance-demands_1.cs)]  
-  
-## <a name="related-rules"></a>関連規則  
- [CA2108: 値型での宣言セキュリティをレビューします](../code-quality/ca2108-review-declarative-security-on-value-types.md)  
-  
- [CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)  
-  
- [CA2122: リンク確認要求で間接的にメソッドを公開しないでください](../code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands.md)  
-  
- [CA2123: オーバーライドのリンク確認要求は基本と同様にします](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)  
-  
-## <a name="see-also"></a>参照  
- [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [リンク確認要求](/dotnet/framework/misc/link-demands)   
+ [!code-csharp[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/CSharp/ca2126-type-link-demands-require-inheritance-demands_1.cs)]
+
+## <a name="related-rules"></a>関連規則
+ [CA2108: 値型での宣言セキュリティをレビューします](../code-quality/ca2108-review-declarative-security-on-value-types.md)
+
+ [CA2112: セキュリティで保護された型はフィールドを公開してはなりません](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
+
+ [CA2122: リンク確認要求で間接的にメソッドを公開しないでください](../code-quality/ca2122-do-not-indirectly-expose-methods-with-link-demands.md)
+
+ [CA2123: オーバーライドのリンク確認要求は基本と同様にします](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)
+
+## <a name="see-also"></a>関連項目
+ [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)[リンク確認要求](/dotnet/framework/misc/link-demands)

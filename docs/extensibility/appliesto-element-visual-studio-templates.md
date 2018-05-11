@@ -1,23 +1,21 @@
 ---
-title: "AppliesTo 要素 (Visual Studio テンプレート) |Microsoft ドキュメント"
-ms.custom: 
+title: AppliesTo 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 8fb1334b-d78c-405f-98b4-786e9f6b58d7
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 35e11a53b2b9b63a71aab2858151721cfdfd7f9c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2e27ee1ab0ba42a82d61e2adbe9fb4c6c81cbb48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo 要素 (Visual Studio テンプレート)
 省略可能な式を 1 つ以上の機能と一致するように指定します  (「<xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>」を参照してください)。 機能は、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5> プロパティとして、階層を介してプロジェクトの種類によって公開されます。 このようにすると、共通の適用可能な機能を持つ複数のプロジェクトの種類によってテンプレートを共有できます。  
@@ -26,8 +24,8 @@ ms.lasthandoff: 12/22/2017
   
  Visual Studio 2013 更新プログラム 2 で導入されました。 正しいバージョンを参照するを参照してください。[を参照する、Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリ](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)です。  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<AppliesTo >  
   
 ## <a name="syntax"></a>構文  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  有効な式の構文は次のように定義されます。  
   
--   "(Visualc++ &#124; などの機能の式CSharp) + (MSTest &#124;です。NUnit)"です。  
+-   機能の式など、"(Visualc++ &#124; CSharp) + (MSTest &#124; NUnit)"です。  
   
 -   "&#124;"は OR 演算子。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Null または空の式は、一致として評価されます。  
   
--   これらの予約文字を除く任意の文字をプロジェクトの機能があります:"':;,+-*/\\! ~ &#124; & %$@^()={}:operator[] <> しますか? を除く文字を使用できます。  
+-   これらの予約文字を除く任意の文字をプロジェクトの機能があります:"':;,+-*/\\! ~&#124;& %$@^()={}:operator[] <> しますか? を除く文字を使用できます。  
   
 ## <a name="example"></a>例  
  次の例に、3 種類のテンプレートを示します。 `Template1` は、C# のすべてのプロジェクトの種類、または `WindowsAppContainer` 機能をサポートする他のプロジェクトの種類に適用されます。 `Template2` は、すべての種類の C# プロジェクトに適用されます。 `Template3` は、`WindowsAppContainer` プロジェクトではない C# プロジェクトに適用されます。  
@@ -100,6 +98,6 @@ ms.lasthandoff: 12/22/2017
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

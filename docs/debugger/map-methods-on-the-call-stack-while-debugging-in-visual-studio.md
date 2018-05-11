@@ -1,13 +1,9 @@
 ---
-title: "呼び出し履歴のビジュアルのマップを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 呼び出し履歴のビジュアルのマップを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.progression.debugwithcodemaps
 dev_langs:
@@ -30,17 +26,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], tracing the call stack visually
 - debugging [Visual Studio], visualizing the call stack
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99f388fea1d6512760f99615256f71002099e9be
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 9891686206e8780ebd25082cffb7479d26c6dfba
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-in-visual-studio-enterprise"></a>Visual Studio Enterprise でのデバッグ中に、呼び出し履歴の visual のマップを作成します。
 コード マップをデバッグしながら呼び出し履歴を視覚的にトレースを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -69,11 +64,11 @@ ms.lasthandoff: 02/01/2018
   
 -   [マップを使用してバグを発見します。](#FindBugs)  
   
--   [Q & A](#QA)  
+-   [Q &AMP; A](#QA)  
   
  コマンドおよびコード マップを操作するときに使用できるアクションの詳細については、「[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)です。  
   
-##  <a name="MapStack"></a>呼び出し履歴でマップします。  
+##  <a name="MapStack"></a> 呼び出し履歴でマップします。  
   
 1.  デバッグを開始します。 (キーボード: **f5 キーを押して**)  
   
@@ -87,17 +82,17 @@ ms.lasthandoff: 02/01/2018
   
      デバッグを継続している間、マップは自動的に更新されます。 参照してください[次の呼び出し履歴でマップを更新](#UpdateMap)です。  
   
-##  <a name="MakeNotes"></a>コードに関するメモします。  
+##  <a name="MakeNotes"></a> コードに関するメモします。  
  コードで何が起こっているかを追跡するためにコメントを追加します。 新しい行をコメントを追加するキーを押して**shift + return**です。  
   
  ![コード マップの呼び出し履歴にコメントを追加](../debugger/media/debuggermap_addcomment.png "DebuggerMap_AddComment")  
   
-##  <a name="UpdateMap"></a>次の呼び出し履歴でマップを更新  
+##  <a name="UpdateMap"></a> 次の呼び出し履歴でマップを更新  
  アプリを次のブレークポイントまで実行するか、関数にステップ インします。 マップに新しい呼び出し履歴が追加されます。  
   
  ![次の呼び出し履歴でコード マップの更新](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")  
   
-##  <a name="AddRelatedCode"></a>マップに関連するコードを追加します。  
+##  <a name="AddRelatedCode"></a> マップに関連するコードを追加します。  
  作成できたところで、マップの新機能 次へしますか。 Visual c# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などのアイテムを追加します。  
   
  メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押す方法を選択して**F12**)  
@@ -121,7 +116,7 @@ ms.lasthandoff: 02/01/2018
   
  ![呼び出し履歴コード マップのフィールドを使用するメソッド](../debugger/media/debuggermap_foundallreferences.png "DebuggerMap_FoundAllReferences")  
   
-##  <a name="FindBugs"></a>マップを使用してバグを発見します。  
+##  <a name="FindBugs"></a> マップを使用してバグを発見します。  
  コードの視覚化はバグをよりすばやく見つけるために役立ちます。 たとえば、描画プログラムでバグを調査するいるとします。 直線を描画して元に戻そうとしても、別の直線を描画するまで何も起こりません。  
   
  そのため、`clear`、`undo`、および `Repaint` メソッドにブレークポイントを設定し、デバッグを開始して、次のようなマップを作成します。  
@@ -172,7 +167,7 @@ ms.lasthandoff: 02/01/2018
   
 -   **新しい呼び出し履歴を自動的に追加したマップを停止する方法は?**  
   
-     選択![ボタン &#45;自動的に呼び出し履歴コード マップに表示する](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップ ツールバーでします。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`**です。  
+     選択![ボタン&#45;ショー呼び出し履歴コード マップには自動的に](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon")マップ ツールバーでします。 マップを現在の呼び出し履歴を手動で追加するには、キーを押して**Ctrl** + **shift キーを押し** + **`**です。  
   
      デバッグ中に、マップ上の既存の呼び出し履歴を強調表示、マップが続行されます。  
   
@@ -194,7 +189,7 @@ ms.lasthandoff: 02/01/2018
   
 -   [マップを使用してバグを発見します。](#FindBugs)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション間の依存関係をマップします。](../modeling/map-dependencies-across-your-solutions.md)   
  [コード マップを使用してアプリケーションをデバッグするには](../modeling/use-code-maps-to-debug-your-applications.md)   
  [コード マップ アナライザーを使用して潜在的な問題を検索します。](../modeling/find-potential-problems-using-code-map-analyzers.md)   

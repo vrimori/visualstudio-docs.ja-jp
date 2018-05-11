@@ -1,31 +1,27 @@
 ---
-title: "Visual Studio IDE の 64 ビット サポート | Microsoft Docs"
-ms.custom: 
+title: Visual Studio IDE の 64 ビット サポート
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - 64-bit applications [C++]
 - Visual Studio, 64-bit support
 - 64-bit programming [C++]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9fe08a05d26dc4d226ca53d929e9889a7c98c41
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 3b911a6529e3e32075ca8599c921ae8369afb691
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE の 64 ビット サポート
 
-Visual Studio では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 Visual Studio での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](/dotnet/framework/64-bit-apps.md)」を参照してください。
+Visual Studio では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 Visual Studio での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](/dotnet/framework/64-bit-apps)」を参照してください。
 
 ## <a name="deploying-a-64-bit-application"></a>64 ビット アプリケーションの配置
 
@@ -37,5 +33,5 @@ Visual Studio では、64 ビット プラットフォームを含む、さま�
 
 ## <a name="debugging-a-64-bit-application"></a>64 ビット アプリケーションのデバッグ
 
-[64 ビット アプリケーションのデバッグ](../debugger/debug-64-bit-applications.md)
-[ダンプ ファイルの使用](../debugger/using-dump-files.md)
+- [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)
+- [ダンプ ファイルの使用](../debugger/using-dump-files.md)

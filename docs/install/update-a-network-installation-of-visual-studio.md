@@ -1,31 +1,31 @@
 ---
-title: "Visual Studio のネットワーク ベース インストールを更新する | Microsoft Docs"
-description: "--layout コマンドを実行して Visual Studio のネットワークベース インストールを更新する方法について説明します"
+title: Visual Studio のネットワーク ベース インストールを更新する
+description: --layout コマンドを実行して Visual Studio のネットワークベース インストールを更新する方法について説明します
 ms.date: 08/14/2017
-ms.reviewer: tims
-ms.suite: 
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 1AF69C0E-0AC9-451B-845D-AE4EDBCEA65C
-author: timsneath
+author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 63b9b8b85eeb300ba9a8a534aee25bfdd55b10d0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ad8cfdb54b690dd9f5639bea71d790ef0d79a19a
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio のネットワーク ベース インストールを更新する
 
 ネットワーク インストール レイアウトを Visual Studio の最新のインストール ポイントとして使用できるように、また、クライアント ワークステーションに既に配置されているインストールを保持するために、最新の製品の更新プログラムを使って Visual Studio のネットワーク インストール レイアウトを更新できます。
 
 ## <a name="how-to-update-a-network-layout"></a>ネットワーク レイアウトの更新方法
+
 最新の更新プログラムが含まれるように、ネットワーク インストールの共有を更新するには、--layout コマンドを実行して、更新されたパッケージの増分をダウンロードします。
 
 最初にネットワーク レイアウトを作成したときに部分的レイアウトを選択した場合は、その設定が保存されます。  以後のレイアウト コマンドでは以前のオプションと、指定した新しいすべてのオプションが使用されます。  (これは 15.3 の新機能です。)古いバージョンのレイアウトを使用している場合は、コンテンツの更新時に最初にネットワーク インストール レイアウトを作成したときに使用したものと同じコマンドライン パラメーター (つまり、同じワークロードと言語) を使用してください。
@@ -36,35 +36,36 @@ ms.lasthandoff: 12/22/2017
 
 * 最初に、英語のみ対象の 1 つのワークロードを含むレイアウトの作成例を示します。
 
-  ```
+  ```cmd
   vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
   ```
 
 * 以下は、同じレイアウトを新しいバージョンに更新する場合です。 追加のコマンド ライン パラメーターを指定する必要はありません。 このレイアウト フォルダーに保存されている以前の設定が、後続のすべてのレイアウト コマンドで使用されます。  
 
-  ```
+  ```cmd
   vs_enterprise.exe --layout c:\VS2017Layout  
   ```
 
 * ここでは、お使いのレイアウトを無人方式で新しいバージョンに更新する方法を示します。 レイアウト操作は、新しいコンソール ウィンドウでセットアップ プロセスを実行します。 ユーザーが最終的な結果と、発生した可能性のあるエラーの概要を確認できるように、ウィンドウは開いたままになります。 無人方式でレイアウト操作を実行している場合は (たとえば、定期的に実行してお使いのレイアウトを最新バージョンに更新するスクリプトがある場合)、`--passive` パラメーターを使うと、プロセスは自動的にウィンドウを閉じます。
 
-  ```
+  ```cmd
   vs_enterprise.exe --layout c:\VS2017Layout --passive
   ```
 
 * 次に、追加のワークロードとローカライズされた言語を追加する方法を示します。  (このコマンドでは、Azure のワークロードを追加しています。)これで、Managed Desktop と Azure の両方がこのレイアウトに含まれるようになります。  英語とドイツ語の言語リソースもすべてのワークロードに含まれます。  さらに、レイアウトが利用可能な最新バージョンに更新されます。
 
-  ```
+  ```cmd
   vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
 * 最後に、バージョンを更新せずに追加のワークロードとローカライズされた言語を追加する方法を示します。 (このコマンドでは、ASP.NET Web のワークロードを追加しています。)これで、Managed Desktop、Azure、ASP.NET Web のワークロードがこのレイアウトに含まれるようになりました。  英語、ドイツ語、フランス語の言語リソースもすべてのワークロードに含まれます。  ただし、このコマンドが実行されたときにレイアウトが利用可能な最新バージョンに更新されませんでした。  そのため、既存のバージョンのままになります。
 
-  ```
+  ```cmd
   vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
   ```
 
 ## <a name="how-to-deploy-an-update-to-client-machines"></a>クライアント マシンに更新を配置する方法
+
 ネットワーク環境が構成される方法によって、更新プログラムをエンタープライズ管理者が配置することも、クライアント マシンから開始することもできます。
 
 * ユーザーは、オフラインのインストール フォルダーからインストールした Visual Studio インスタンスを更新することができます。
@@ -77,19 +78,19 @@ ms.lasthandoff: 12/22/2017
 
 > [!NOTE]
 > [vswhere.exe コマンド](tools-for-managing-visual-studio-instances.md)を使用して、クライアント コンピューター上にある Visual Studio の既存のインスタンスのインストール パスを特定します。
-
+>
 > [!TIP]
 > 更新通知をユーザーに表示するときの制御方法の詳細については、「[Control updates to network-based Visual Studio deployments](controlling-updates-to-visual-studio-deployments.md)」 (ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する) を参照してください。
 
 ## <a name="how-to-verify-a-layout"></a>レイアウトを検証する方法
+
 `--verify` を使用して指定したオフライン キャッシュに対する検証を行います。 パッケージ ファイルが見つからないか、無効であるかどうかがチェックされます。 検証の最後に、見つからないファイルと無効なファイルのリストを出力します。
 
-```
+```cmd
 vs_enterprise.exe --layout <layoutDir> --verify
 ```
 
 layoutDir 内の vs_enterprise.exe を呼び出すことができます。
-
 
 > [!NOTE]
 > レイアウト オフライン キャッシュには `--verify` オプションで必要とされるいくつかの重要なメタデータ ファイルが必要です。 これらのメタデータ ファイルが見つからない場合、"--verify" が実行できず、セットアップでエラーが返されます。 このエラーが発生した場合、新しいオフライン レイアウトを別のフォルダー (または同じオフライン キャッシュ フォルダー) に再作成してください。 そのためには、初期オフライン レイアウトの作成に使用したものと同じレイアウト コマンドを実行します。 たとえば、`Vs_enterprise.exe --layout <layoutDir>` のようにします。
@@ -97,15 +98,17 @@ layoutDir 内の vs_enterprise.exe を呼び出すことができます。
 Microsoft は定期的に Visual Studio の更新プログラムを提供しているため、作成した新しいレイアウトが初期レイアウトと同じバージョンでない可能性があります。  
 
 ## <a name="how-to-fix-a-layout"></a>レイアウトの修正方法
+
 `--fix` を使用して `--verify` と同じ検証を実行して、特定された問題の修正も試みます。 `--fix` の処理にはインターネット接続が必要なため、`--fix` を呼び出す前に、コンピューターがインターネットに接続していることを確認してください。
 
-```
+```cmd
 vs_enterprise.exe --layout <layoutDir> --fix
 ```
 
 layoutDir 内の vs_enterprise.exe を呼び出すことができます。
 
 ## <a name="how-to-remove-older-versions-from-a-layout"></a>以前のバージョンをレイアウトから削除する方法
+
 オフライン キャッシュにレイアウトの更新を実行した後、レイアウト キャッシュ フォルダーには最新の Visual Studio のインストールに不要な古いパッケージがいくつか含まれている場合があります。 `--clean` オプションを使用すると、オフライン キャッシュ フォルダーから古いパッケージを削除できます。
 
 これを行うには、その古いパッケージが含まれるカタログ マニフェストのファイル パスが必要になります。 カタログ マニフェストは、オフライン レイアウト キャッシュの "Archive" フォルダーにあります。 これは、レイアウトの更新時に保存されたものです。 "Archive" フォルダーには、1 つまたは複数の "GUID" 名フォルダーがあり、そのそれぞれに古いカタログ マニフェストが含まれています。 "GUID" フォルダーの数は、オフライン キャッシュに対する更新プログラムの数と同じである必要があります。
@@ -114,32 +117,35 @@ layoutDir 内の vs_enterprise.exe を呼び出すことができます。
 
 --clean オプションを使用するいくつかの例を示します。   
 
-```
+```cmd
 vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> …
 ```
 
-```
+```cmd
 vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <file-path-of-catalog2> …
 ```
 
 &lt;layoutDir&gt; 内の vs_enterprise.exe を呼び出すことができます。 次に例を示します。
 
-```  
+```cmd   
 c:\VS2017Layout\vs_enterprise.exe --layout c:\VS2017Layout --clean c:\VS2017Layout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json
-```  
+```
 
 このコマンドを実行すると、セットアップでオフライン キャッシュ フォルダーが分析され、削除されるファイルのリストが検索されます。 このリストで、削除されるファイルを確認し、削除を確定できます。
 
 ## <a name="get-support"></a>サポートを受ける
+
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
+
 * [Visual Studio のインストール](install-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)

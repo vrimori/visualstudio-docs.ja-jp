@@ -1,12 +1,10 @@
 ---
-title: "ツールの拡張機能を SharePoint のプログラミング モデルの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ツールの拡張機能を SharePoint のプログラミング モデルの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,19 +14,20 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8eaa1f5d1cfe8120ec6a01c2fe7f646cf90be44a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a52d05dd22ae88deecc2d79d3ab3de7d3c3b6344
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能のプログラミング モデルの概要
   Visual Studio で SharePoint ツールの拡張機能を作成する場合、SharePoint ツールによって公開される 1 つ以上の機能拡張インターフェイスを実装することから始めます。 ほとんどの場合、SharePoint ツールによって提供される他の型も使用して、拡張機能で機能を実装します。 一部のシナリオでは、Visual Studio および SharePoint によって提供される他のオブジェクト モデルに含まれる型も使用します。 これらの各オブジェクト モデルの目的を理解し、互いに使用して SharePoint ツールの拡張機能を作成する方法を知っている必要があります。  
   
 ## <a name="extending-the-sharepoint-tools-by-implementing-extensibility-interfaces"></a>機能拡張インターフェイスの実装による SharePoint ツールの拡張  
- Visual Studio は、.NET Framework 4 の Managed Extensibility Framework (MEF) を使用して SharePoint ツールの機能拡張モデルを提供します。 MEF は、アプリケーションが機能拡張ポイントを公開したり、実行時に拡張機能を検出し、読み込んだりできるようにする (System.ComponentModel.Composition アセンブリで実装される) API です。 MEF の詳細については、次を参照してください。 [Managed Extensibility Framework &#40;です。MEF &#41;](/dotnet/framework/mef/index).  
+ Visual Studio は、.NET Framework 4 の Managed Extensibility Framework (MEF) を使用して SharePoint ツールの機能拡張モデルを提供します。 MEF は、アプリケーションが機能拡張ポイントを公開したり、実行時に拡張機能を検出し、読み込んだりできるようにする (System.ComponentModel.Composition アセンブリで実装される) API です。 MEF の詳細については、次を参照してください。 [Managed Extensibility Framework &#40;MEF&#41;](/dotnet/framework/mef/index)です。  
   
  SharePoint ツールを拡張するには、Visual Studio によって公開される 1 つ以上の機能拡張インターフェイスを実装します。 <xref:System.ComponentModel.Composition.ExportAttribute>、および必要に応じて SharePoint ツール固有のその他の属性をインターフェイスの実装に適用する必要もあります。 次の表に、SharePoint ツールを拡張するために実装できるインターフェイスを示します。  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 01/10/2018
 |サーバー オブジェクト モデル|サーバー オブジェクト モデルを使用すると、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] および [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] が公開しているすべての機能をプログラムから使用することができます。 このオブジェクト モデルは、SharePoint サーバー上で動作する SharePoint ソリューションから使用することを前提に設計されています。 このオブジェクト モデルの大部分は、Microsoft.SharePoint.dll アセンブリで定義されています。 サーバー オブジェクト モデルの詳細については、次を参照してください。 [SharePoint Foundation サーバー側オブジェクト モデルを使用して](http://go.microsoft.com/fwlink/?LinkId=177796)です。|  
 |クライアント オブジェクト モデル|クライアント オブジェクト モデルは、リモート クライアントまたはリモート サーバーの SharePoint データとの相互運用に使用できるサーバー オブジェクト モデルのサブセットです。 一般的なタスクに必要なラウンド トリップの回数を最小限に抑えるようにデザインされています。 クライアント オブジェクト モデルの大部分は、Microsoft.SharePoint.Client.dll および Microsoft.SharePoint.Client.Runtime.dll アセンブリで定義されています。 クライアント オブジェクト モデルの詳細については、次を参照してください。[マネージ クライアント オブジェクト モデル](http://go.microsoft.com/fwlink/?LinkId=177797)です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)   
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)  

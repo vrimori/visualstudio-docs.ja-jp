@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio の Python 用単体テスト | Microsoft Docs"
-description: "テスト エクスプローラーの機能を最大限に活用してテストを検出、実行、デバッグできるように、Visual Studio で Python コードの単体テストを設定します。"
-ms.custom: 
+title: Python の単体テスト
+description: テスト エクスプローラーの機能を最大限に活用してテストを検出、実行、デバッグできるように、Visual Studio で Python コードの単体テストを設定します。
 ms.date: 07/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 55b99e2f572b075c1e9ab1658c8a02b3fdd5ea88
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: e75a689f3c03d7ad358da6dc9413f70aaf2c4eab
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python コードの単体テストの設定
 

@@ -1,29 +1,25 @@
 ---
-title: "デバッガーでのネイティブ オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ネイティブ オブジェクトのカスタム ビューの作成
+description: Natvis フレームワークを使用して、Visual Studio が、デバッガーにネイティブ型を表示する方法をカスタマイズするには
+ms.custom: ''
 ms.date: 06/27/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - natvis
 dev_langs:
 - C++
 ms.assetid: 2d9a177a-e14b-404f-a6af-49498eff0bd7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340d0d7366749f402cb76f3075778fb2b7ea215b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 01f051faa03e80caa672aee25a6d4abe3104faad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでのネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、**ローカル**ウィンドウで、し、 **データヒント**です。
@@ -33,7 +29,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 > [!NOTE]
 >  Natvis フレームワークは次の場合には視覚化に使用されません。  
 >   
->  -  [デバッガーのタイプ] を **[混合]**に設定して、C++  Windows のデスクトップ プロジェクトをデバッグしている。  
+>  -  [デバッガーのタイプ] を **[混合]** に設定して、C++  Windows のデスクトップ プロジェクトをデバッグしている。  
 > -   マネージ互換モードでの Windows デスクトップ アプリケーションで混合モードのデバッグを行う (**ツール > オプション > デバッグ > [全般] > を使用してマネージ互換モード**)。  
 > -   ネイティブ互換モードでの Windows デスクトップ アプリケーションでのデバッグ (**ツール > オプション > デバッグ > [全般] > を使用してネイティブ互換モード**)。  
   
@@ -75,7 +71,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ## <a name="adding-natvis-files-to-your-projects"></a>プロジェクトへの .natvis ファイルの追加  
  .natvis ファイルはすべての C++ プロジェクトに追加できます。  
   
- C++ プロジェクトが開かれて、新しい .natvis ファイルを追加するでプロジェクト ノードを選択、**ソリューション エクスプ ローラー**、 をクリック**追加 > 新しい項目の追加 > Visual C > ユーティリティ > デバッガー視覚化ファイル (.natvis)**です。 デバッガーは Natvis ファイルを C++ プロジェクトから自動的に読み込みます。 既定では、プロジェクトの Natvis ファイルは、プロジェクトによってビルドされた .pdb ファイルにも挿入されます。 つまり、このプロジェクトでビルドされたバイナリをデバッグする場合、たとえプロジェクトを開かなくても、デバッガーが Natvis ファイルを .pdb から読み込みます。 .natvis ファイルが .pdb に含まれないようにするには、 **[ソリューション エクスプローラー]**で .natvis ファイルを右クリックして、 **[構成プロパティ]** ウィンドウで **[ビルドから除外]** を **[はい]**に設定します。  
+ C++ プロジェクトが開かれて、新しい .natvis ファイルを追加するでプロジェクト ノードを選択、**ソリューション エクスプ ローラー**、 をクリック**追加 > 新しい項目の追加 > Visual C > ユーティリティ > デバッガー視覚化ファイル (.natvis)** です。 デバッガーは Natvis ファイルを C++ プロジェクトから自動的に読み込みます。 既定では、プロジェクトの Natvis ファイルは、プロジェクトによってビルドされた .pdb ファイルにも挿入されます。 つまり、このプロジェクトでビルドされたバイナリをデバッグする場合、たとえプロジェクトを開かなくても、デバッガーが Natvis ファイルを .pdb から読み込みます。 .natvis ファイルが .pdb に含まれないようにするには、 **[ソリューション エクスプローラー]** で .natvis ファイルを右クリックして、 **[構成プロパティ]** ウィンドウで **[ビルドから除外]** を **[はい]** に設定します。  
   
  Visual Studio を使用して Natvis ファイルを編集することをお勧めします。Visual Studio を使用すると、ファイルを保存時に、デバッグ中に行ったすべての変更が自動的に有効になります。 Intellisense から強化された編集エクスペリエンスを取得できます。  
   
@@ -90,7 +86,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
   
 2.  読み込まれた C++ プロジェクトまたはトップレベル ソリューション項目の一部である .natvis ファイル。 このグループには、すべての読み込まれた C++ プロジェクト、クラス ライブラリなどが含まれていますが、他の言語のプロジェクトは含まれません (たとえば、することはできません .natvis ファイルを読み込む c# プロジェクトから)。 実行可能プロジェクトで .pdb に既に存在しない .natvis ファイルをホストする場合は、使用可能な C++ プロジェクトがないため、ソリューション項目を使用する必要があります。  
   
-3.  ユーザー固有の natvis ディレクトリ (たとえば、 **%USERPROFILE%\Documents\Visual Studio 2017\Visualizers**または**%USERPROFILE%\My documents \visual Studio 2015\Visualizers**)。  
+3.  ユーザー固有の natvis ディレクトリ (たとえば、 **%USERPROFILE%\Documents\Visual Studio 2017\Visualizers**または **%USERPROFILE%\My documents \visual Studio 2015\Visualizers**)。  
   
 4.  システム全体の Natvis ディレクトリ (**%VSINSTALLDIR%\Common7\Packages\Debugger\Visualizers**)。 このディレクトリは、Visual Studio と共にインストールされる .natvis ファイルがコピーされる場所です。 管理者権限を付与する場合もこのディレクトリに他のファイルを追加できます。  
   
@@ -129,12 +125,12 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 </Type>  
 ```  
   
- `DisplayString` および `ArrayItems` の要素は、既定ビューと簡易ビューで使用されます。一方、 `[size]` および `[capacity]` の項目は簡易ビューから除外されます。 **,view** 書式指定子を使用して、別のビューを指定できます。 **[ウォッチ]** ウィンドウで、 **vec,view(simple)**として簡易ビューを指定します。  
+ `DisplayString` および `ArrayItems` の要素は、既定ビューと簡易ビューで使用されます。一方、 `[size]` および `[capacity]` の項目は簡易ビューから除外されます。 **,view** 書式指定子を使用して、別のビューを指定できます。 **[ウォッチ]** ウィンドウで、 **vec,view(simple)** として簡易ビューを指定します。  
   
  ![単純なビューとウォッチ ウィンドウ](../debugger/media/watch-simpleview.png "ウォッチ SimpleView")  
   
 ##  <a name="BKMK_Diagnosing_Natvis_errors"></a> Natvis エラーの診断  
- Natvis 診断を使用すると、構文のトラブルシューティングおよび解析エラーの検出が行えます。 デバッガーに視覚化エントリのエラーが発生すると、デバッガーはエラーを無視し、未加工の形式で型を表示するか、別の該当する視覚化を選択します。 特定の視覚化エントリが無視される理由を理解し、基になるエラーを確認するには、Natvis 診断を有効にできます**ツール > オプション > デバッグ > [出力] ウィンドウ > Natvis 診断メッセージ (C++ のみ)**オプション。 エラーは **[出力]** ウィンドウに表示されます。  
+ Natvis 診断を使用すると、構文のトラブルシューティングおよび解析エラーの検出が行えます。 デバッガーに視覚化エントリのエラーが発生すると、デバッガーはエラーを無視し、未加工の形式で型を表示するか、別の該当する視覚化を選択します。 特定の視覚化エントリが無視される理由を理解し、基になるエラーを確認するには、Natvis 診断を有効にできます**ツール > オプション > デバッグ > [出力] ウィンドウ > Natvis 診断メッセージ (C++ のみ)** オプション。 エラーは **[出力]** ウィンドウに表示されます。  
   
 ##  <a name="BKMK_Syntax_reference"></a> Natvis 構文のリファレンス  
   
@@ -222,7 +218,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ```  
   
 ####  <a name="BKMK_Versioning"></a> Version 要素  
- `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 例:  
+ `Version` 要素を使用して、視覚化の適用範囲を特定のモジュールとそれらのバージョンに制限すると、名前の競合を最小限に抑えることができ、型のバージョンごとに異なる視覚化を使用できます。 例えば:  
   
 ```xml
 <Type Name="DirectUI::Border">  
@@ -464,7 +460,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 -   `ValueNode` は、空にするか `this` を指定すると、リンク リスト ノード自体を参照できます。  
   
 #### <a name="customlistitems-expansion"></a>CustomListItems 展開  
- `CustomListItems` 展開を使用して、ハッシュ テーブルなどのデータ構造を走査する際にカスタム ロジックを記述することができます。 使用する必要があります`CustomListItems`データを視覚化するものがすべてを評価する必要があります構造体は C++ の式を使用して表現が、にあまり適合しません。 `ArrayItems`、 `TreeItems`、または。`LinkedListItems.`  
+ `CustomListItems` 展開を使用して、ハッシュ テーブルなどのデータ構造を走査する際にカスタム ロジックを記述することができます。 使用する必要があります`CustomListItems`データを視覚化するものがすべてを評価する必要があります構造体は C++ の式を使用して表現が、にあまり適合しません。 `ArrayItems`、 `TreeItems`、または。 `LinkedListItems.`  
   
  CAtlMap のビジュアライザーは、 `CustomListItems` が適している場面を示す良い例です。  
   
@@ -542,7 +538,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 ####  <a name="BKMK_ExpandedItem_expansion"></a> ExpandedItem の展開  
  `ExpandedItem` 要素を使用すると、基底クラスまたはデータ メンバーのプロパティを視覚化された型の子であるかのように表示することで、子の集約ビューを作成できます。 指定した式が評価され、その結果の子ノードが、視覚化された型の子リストに追加されます。 たとえば、スマート ポインター型であるお`auto_ptr<vector<int>>`、通常として表示されます。  
   
- ![自動 &#95; ptr &#60; ベクター &#60; int &#62; &#62;。既定の拡張](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
+ ![自動&#95;ptr&#60;ベクター&#60;int&#62; &#62;既定の拡張](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
   
  vector の値を表示するには、変数ウィンドウで _Myptr メンバーを通って 2 階層下位にたどる必要があります。 `ExpandedItem` 要素を追加することで、階層から `_Myptr` 変数を排除し、vector の要素を直接表示できます。  
   
@@ -555,7 +551,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 </Type>  
 ```  
   
- ![自動 &#95; ptr &#60; ベクター &#60; int &#62; &#62;。ExpandedItem の展開](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
+ ![自動&#95;ptr&#60;ベクター&#60;int&#62; &#62; ExpandedItem の展開](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
   
  次の例では、派生クラスで基底クラスからプロパティを集計する方法を示します。 `CPanel` クラスが `CFrameworkElement`から派生しているとします。 基底クラス `CFrameworkElement` のプロパティを繰り返す代わりに、 `ExpandedItem` ノードでは、これらのプロパティを `CPanel` クラスの子リストに追加できます。 **Nd**派生クラスの一致する視覚エフェクトをオフに、書式指定子がここで必要です。 それ以外の場合、式`*(CFrameworkElement*)this`により、`CPanel`型の照合ルールの既定の視覚化のためもう一度適用される視覚エフェクトが解釈最も適切な。 使用して、 **nd**書式指定子が基底クラスは、視覚エフェクトを持っていない場合、基本クラスの視覚化または基底クラスの既定の展開を使用するデバッガーに指示します。  
   

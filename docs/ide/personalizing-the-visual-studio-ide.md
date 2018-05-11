@@ -1,23 +1,19 @@
 ---
-title: "Visual Studio IDE のカスタマイズ | Microsoft Docs"
-ms.custom: 
+title: Visual Studio IDE をカスタマイズする
 ms.date: 11/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff7461fc5880f744a2a32141155deb6c4b309fa0
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: fd4f00313cbbb7f082934bddff338f77f117fd5c
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE のカスタマイズ
 
@@ -27,7 +23,7 @@ ms.lasthandoff: 01/23/2018
 
 多くのカスタマイズ オプションが [[環境オプション]](../ide/reference/environment-options-dialog-box.md) ダイアログ ボックスで公開されています。 このダイアログ ボックスにアクセスするには、次の 2 つの方法があります。
 
-- メニュー バーで、**[ツール]**、**[オプション]** の順に選択します。**[環境]** ノードがまだ展開されていない場合は展開します。
+- メニュー バーで、**[ツール]** > **[オプション]** の順に選択します。**[環境]** ノードがまだ展開されていない場合は展開します。
 
 - **[クイック起動]** ボックスに「`environment`」と入力して、結果リストから **[環境]、[全般]** の順に選択します。
 
@@ -44,7 +40,7 @@ ms.lasthandoff: 01/23/2018
 
 メイン メニューの大文字小文字の区別は、**[タイトル文字]** ("File") と **[すべて大文字]** ("FILE") の間で変更できます。 **[クイック起動]** ボックスに「`environment`」と入力して、**[環境]、[全般]** の順に選択し、**[タイトルの文字スタイルをメニュー バーに適用する]** オプションを変更します。
 
-### <a name="customzing-menus-and-toolbars"></a>メニューとツール バーのカスタマイズ
+### <a name="customize-menus-and-toolbars"></a>メニューおよびツール バーをカスタマイズする
 
 メニュー項目やツールバーの項目を追加または削除するには、「[方法: メニューおよびツールバーをカスタマイズする](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)」を参照してください。
 
@@ -58,9 +54,9 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="external-tools"></a>外部ツール
 
-**[ツール]** メニューをカスタマイズして、外部ツールを起動することができます。詳細については、「[外部ツールの管理](../ide/managing-external-tools.md)」を参照してください。
+**[ツール]** メニューをカスタマイズして、外部ツールを起動することができます。 詳細については、「[外部ツールの管理](../ide/managing-external-tools.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio IDE の概要](../ide/visual-studio-ide.md)  
-[クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)

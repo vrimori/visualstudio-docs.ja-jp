@@ -1,25 +1,22 @@
 ---
-title: "方法: コード分析チェックイン ポリシーの保守が容易なコードを適用する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, check-in policies
 ms.assetid: d1b3b04f-4dd9-40e6-b2d4-b414d33fb647
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b1a6d953128317e89672d5d9b175ce7acc1b63f
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 6269b4839c552fa6a1e982226bbb311cb7d5e9d9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析チェックイン ポリシーの保守が容易なコードを適用します。
 
@@ -59,7 +56,7 @@ Team foundation バージョン管理の管理者は、チェックイン ポリ
 
     さらに、ビルドの成功を防ぐために規則違反する場合は、選択、**警告をエラーとして扱う**規則の説明の横にあるチェック ボックスです。
 
-3. **[OK]**をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
+3. **[OK]** をクリックします。 新しいチェックイン ポリシーは、将来のチェックインを今すぐに適用されます。
 
 ## <a name="see-also"></a>関連項目
 

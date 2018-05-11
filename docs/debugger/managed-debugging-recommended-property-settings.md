@@ -1,12 +1,9 @@
 ---
-title: "マネージ デバッグ: プロパティの推奨設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 'マネージ デバッグ: プロパティの推奨設定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], managed
 - debugging managed code, recommended property settings
 ms.assetid: 3d14a8d4-2925-44d0-be41-ec546d411db9
-caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: ebbd6bf87270bba70dc80cd7ff652c147d3a4849
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: e1c4b725871012f1fbf2c80f3e978f133d4db5b0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>マネージ デバッグ : プロパティの推奨設定
 一部のプロパティは、すべてのマネージ デバッグ シナリオで同じように設定する必要があります。  
@@ -53,6 +50,6 @@ ms.lasthandoff: 12/22/2017
 |**定数 DEBUG の定義**|このチェック ボックスをオンにすると、`DEBUG` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Debug> クラスを使用できるようになります。|  
 |**定数 TRACE の定義**|このチェック ボックスをオンにすると、`TRACE` 定数が定義され、アプリケーションで <xref:System.Diagnostics.Trace> クラスを使用できるようになります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクト](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

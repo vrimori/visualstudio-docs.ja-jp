@@ -1,24 +1,21 @@
 ---
-title: "属性の解説 | Microsoft IntelliTest 開発者テスト ツール | Microsoft Docs"
-ms.custom: 
+title: 属性の解説 | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Attribute glossary
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 0eab751276537de30de095d200fc0f0ffcb4ad43
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 1e42b9cae54186ed723c6c0567b5af247796d23d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-glossary"></a>属性の解説
 

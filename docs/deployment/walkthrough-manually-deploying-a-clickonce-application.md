@@ -1,13 +1,9 @@
 ---
-title: "チュートリアル: ClickOnce アプリケーションを手動で展開する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ClickOnce アプリケーションを手動で展開する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +17,16 @@ helpviewer_keywords:
 - manual ClickOnce deployments
 - manifests [ClickOnce]
 ms.assetid: ccee6551-a1b9-4ca2-8845-9c1cf4ac2560
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e0035641a8ed374892060dbaabe79d808150cc2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 71ab59e09f450d1656d77c551b3f44d0a60f1a57
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>チュートリアル : ClickOnce アプリケーションを手動で配置する
 展開する Visual Studio を使用できない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、または高度な展開機能を使用する必要があります。 信頼されたアプリケーションの配置などを作成するコマンド ライン ツールの Mage.exe を使用する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェスト。 このチュートリアルを作成する方法について説明、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]コマンド ライン バージョン (Mage.exe) またはマニフェストの生成および編集ツールのグラフィカルなバージョン (MageUI.exe) を使用して展開します。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   アプリケーションにクライアント コンピューターでの前提条件が必要かどうかを決定します。  
   
-     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Visual Studio からアプリケーションを配置には、展開に伴う前提条件のインストール ブートス トラップ (setup.exe) を含めることができます。 このチュートリアルに必要な 2 つのマニフェストの作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 前提条件のブートス トラップを使用して作成することができます、 [GenerateBootstrapper タスク](../msbuild/generatebootstrapper-task.md)です。  
+     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Visual Studio からアプリケーションを配置には、展開に伴う前提条件のインストール ブートス トラップ (setup.exe) を含めることができます。 このチュートリアルに必要な 2 つのマニフェストの作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 前提条件のブートス トラップを使用して作成することができます、 [GenerateBootstrapper タスク](../msbuild/generatebootstrapper-task.md)です。  
   
 ### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>Mage.exe コマンド ライン ツールを使用してアプリケーションを配置するには  
   
@@ -128,7 +123,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 展開ディレクトリでのすべてのファイルを配置先メディアにコピーします。 Web サイトや FTP サイト、ファイル共有、または CD-ROM 上のフォルダーがあります。  
   
-11. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定する場合は、配置マニフェストに、ユーザーの完全パスを示す必要があります。 AppToDeploy が http://webserver01/ AppToDeploy ディレクトリ内に展開されている場合など、完全な URL パスでは、http://webserver01/AppToDeploy/AppToDeploy.application になります。  
+11. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定する場合は、配置マニフェストに、ユーザーの完全パスを示す必要があります。 たとえば、AppToDeploy を配置する場合http://webserver01/AppToDeploy ディレクトリの完全な URL パスになりますhttp://webserver01/AppToDeploy/AppToDeploy.applicationです。  
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>MageUI.exe のグラフィカル ツールを使用してアプリケーションを配置するには  
   
@@ -203,12 +198,12 @@ ms.lasthandoff: 12/22/2017
   
 28. 展開ディレクトリでのすべてのファイルを配置先メディアにコピーします。 Web サイトや FTP サイト、ファイル共有、または CD-ROM 上のフォルダーがあります。  
   
-29. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定すると、配置マニフェストの完全パスをユーザーに示す必要があります。 AppToDeploy が http://webserver01/ AppToDeploy ディレクトリ内に展開されている場合など、完全な URL パスでは、http://webserver01/AppToDeploy/AppToDeploy.application になります。  
+29. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定すると、配置マニフェストの完全パスをユーザーに示す必要があります。 たとえば、AppToDeploy を配置する場合http://webserver01/AppToDeploy ディレクトリの完全な URL パスになりますhttp://webserver01/AppToDeploy/AppToDeploy.applicationです。  
   
 ## <a name="next-steps"></a>次の手順  
  アプリケーションの新しいバージョンを展開する必要がある場合は、新しいバージョンにちなんだ名前の新しいディレクトリを作成します: 1.0.0.1—and が、新しいディレクトリに新しいアプリケーション ファイルをコピーするなどです。 次に、作成し、新しいアプリケーション マニフェストに署名し、更新、および配置マニフェストに署名するには、前の手順に従う必要があります。 両方の Mage.exe で同じより高いバージョンを指定するように注意する`-New`と`-Update`呼び出し、として[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最上位の左端の整数値で以降のバージョンの更新のみです。 場合 MageUI.exe を使用することができますを更新する、配置マニフェストを開いてを選択すると、**アプリケーション参照**] タブをクリックすると、 **[マニフェスト**ボタンをクリックしを選択して、更新されました。アプリケーション マニフェスト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   

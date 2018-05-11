@@ -1,24 +1,21 @@
 ---
-title: "[単体テストの作成] コマンドを使用した単体テスト メソッド スタブの作成 | Microsoft Docs"
-ms.custom: 
+title: '[単体テストの作成] コマンドを使用した単体テスト メソッド スタブの作成'
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Get started
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 9016006f9774c4a9eff2937f32543b9f8d9f5fb8
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 72bba467bae5528333b520bdb40f5f4593982df2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-microsoft-intellitest"></a>Microsoft IntelliTest の概要
 

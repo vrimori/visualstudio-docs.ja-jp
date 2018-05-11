@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: IntelliTrace を使用して SharePoint アプリケーションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: IntelliTrace を使用して SharePoint アプリケーションのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - IntelliTrace
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d9f3e5ae5997f7ae4f7c7f94bc61dc526404f144
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 173dbc74a24166f69ca97da6d5f68332345b90ea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ
 
@@ -56,9 +53,9 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 - サポート対象エディションの Windows と SharePoint 参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。
 
-- Visual Studio Enterprise.
+- Visual Studio Enterprise。
 
-## <a name="BKMK_CreateReceiver">フィーチャー レシーバーを作成します。</a>
+## <a name="BKMK_CreateReceiver"></a> フィーチャー レシーバーを作成します。
 
 最初に、フィーチャー レシーバーがある空の SharePoint プロジェクトを作成します。
 
@@ -76,7 +73,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 4. クリックして、Feature1.feature のショートカット メニューを開き**イベント レシーバーの追加**コード モジュールをフィーチャーに追加します。
 
-## <a name="BKMK_AddCode">フィーチャー レシーバーにコードを追加します。</a>
+## <a name="BKMK_AddCode"></a> フィーチャー レシーバーにコードを追加します。
 
 次に、フィーチャー レシーバー内の 2 つのメソッド (`FeatureActivated` と `FeatureDeactivating`) にコードを追加します。 これらのメソッドは、SharePoint でフィーチャーがアクティブ化または非アクティブ化されたときにトリガーされます。
 
@@ -250,7 +247,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
     }
     ```
 
-## <a name="BKMK_Test1">プロジェクトをテストします。</a>
+## <a name="BKMK_Test1"></a> プロジェクトをテストします。
 
 コードがフィーチャー レシーバーに追加され、データ コレクターが実行されているので、SharePoint ソリューションを配置して実行し、それが正常に動作するかどうかをテストします。
 
@@ -277,7 +274,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
      FeatureDeactivating() イベント ハンドラーによってエラーがスローされます。
 
-## <a name="BKMK_CollectDiagnosticData">Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。</a>
+## <a name="BKMK_CollectDiagnosticData"></a> Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。
 
 SharePoint を実行しているシステムに Microsoft Monitoring Agent をインストールする場合は、IntelliTrace から返されるジェネリック情報よりも限定的なデータを使用して SharePoint ソリューションをデバッグすることができます。 エージェントは、PowerShell コマンドレットを使用して Visual Studio 外で動作し、SharePoint ソリューションの実行中にデバッグ情報をキャプチャします。
 
@@ -302,7 +299,7 @@ SharePoint を実行しているシステムに Microsoft Monitoring Agent を�
 
      **Stop-WebApplicationMonitoring**  *"\<SharePointSite>\\<SharePointAppName\>"*
 
-## <a name="BKMK_DebugSolution">デバッグおよび SharePoint ソリューションを修正</a>
+## <a name="BKMK_DebugSolution"></a> デバッグおよび SharePoint ソリューションを修正
 
 この時点で、Visual Studio で IntelliTrace ログ ファイルを表示し、SharePoint ソリューションのエラーを見つけて修正することができます。
 

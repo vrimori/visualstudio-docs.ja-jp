@@ -1,12 +1,9 @@
 ---
-title: "CRT ライブラリを使用してメモリ リークの検出 |Microsoft ドキュメント"
-ms.custom: 
+title: CRT ライブラリを使用してメモリ リークの検出 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -29,16 +26,16 @@ helpviewer_keywords:
 - _CRTDBG_MAP_ALLOC
 - _CrtSetDbgFlag
 ms.assetid: cf6dc7a6-cd12-4283-b1b6-ea53915f7ed1
-caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e67f3c3b8cc10e6aa3e7c9b996cd1c608d893eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d858b6c67893e49b4d4e9ec87c3b20fce56dd7c4
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>CRT ライブラリを使用したメモリ リークの検出
 メモリ リークとは、割り当て済みのメモリを適切に解放できない状態を指します。メモリ リークは、C/C++ アプリケーションで最も微妙で検出しにくいバグの 1 つです。 わずかなメモリ リークは最初は認識されないことがありますが、長期にわたる累積的なメモリ リークによりアプリケーションがメモリ不足になると、パフォーマンスの低下からクラッシュまで、さまざまな兆候が現れる可能性があります。 さらに悪い状況として、メモリ リークしているアプリケーションによってすべての使用可能なメモリが消費されると、別のアプリケーションがクラッシュし、原因となったアプリケーションの特定が困難になることもあります。 一見問題にならないように思われるメモリ リークであっても、修正が必要な別の問題につながっている可能性があります。  
@@ -263,7 +260,7 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
 ## <a name="false-positives"></a>誤検知  
  場合により、 `_CrtDumpMemoryLeaks` は実際にはメモリ リークでないにもかかわらず、メモリ リークを報告することがあります。 これは、内部的な割り当てを `_CRT_BLOCK`や `_CLIENT_BLOCK`としてマークせず、_NORMAL_BLOCK としてマークするライブラリを使用した場合に発生することがあります。 その場合、 `_CrtDumpMemoryLeaks` では、ユーザー割り当てとライブラリの内部的な割り当てを区別することができません。 ライブラリ割り当てのグローバル デストラクターが、 `_CrtDumpMemoryLeaks`の呼び出しポイント後に実行される場合、すべての内部ライブラリ割り当てがメモリ リークとして報告されます。 Visual Studio .NET より前のバージョンの標準テンプレート ライブラリは、 `_CrtDumpMemoryLeaks` が誤検出を報告する原因となっていましたが、最近のリリースでは修正されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRT デバッグ ヒープ](../debugger/crt-debug-heap-details.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

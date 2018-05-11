@@ -1,27 +1,25 @@
 ---
-title: "削除する ~ SAK ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: 削除する ~ SAK ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary files
 - ~sak files
 - source control plug-ins, ~SAK files
 ms.assetid: 5277b5fa-073b-4bd1-8ba1-9dc913aa3c50
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8d72a42c89cc775b9312d301a052ee102d977728
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 61227652bf191280f69466f127c4a400ea43856e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="elimination-of-sak-files"></a>削除する ~ SAK ファイル
 ソース管理プラグイン API 1.2 では、~ SAK ファイルが置き換えられて機能フラグと、ソース管理プラグインは、MSSCCPRJ ファイルと共有チェック アウトをサポートするかどうかを検出する新しい関数。  
@@ -54,5 +52,5 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  このレジストリ キーが dword:00000000 に設定されている場合は、存在しない、されているキーと等価である Visual Studio はまだ一時ファイルを作成しようとします。 ただし、レジストリ キーが dword:00000001 に設定されている場合 Visual Studio はしよう一時ファイルを作成します。 代わりに、ソース管理プラグインが、MSSCCPRJ をサポートしていないことを想定します。SCC ファイル共有チェック アウトをサポートしていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

@@ -1,12 +1,10 @@
 ---
-title: "発行ウィザード (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: 発行ウィザード (Visual Studio での Office 開発) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectProperties.PublishWizard
 - VST.PublishWizard.Publish.2007System
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - Publish Wizard, Office solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 43b4869435c34a29cac5fd18a13d2b4b140e8b6c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 67e3222c6f1deeca58b84aca4ba73d2826483b26
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>発行ウィザード (Visual Studio での Office 開発)
   使用して、**発行ウィザード**ソリューション ファイルを指定した場所にコピーするマニフェストのファイルを作成し、セットアップ プログラムを作成します。  
@@ -45,9 +44,9 @@ ms.lasthandoff: 01/10/2018
   
 -   汎用名前付け規則 (UNC) パスなど\\\ServerName\MyApplication\\です。  
   
--   Http://www.microsoft.com/MyApplication などの web サイトの URL です。  
+-   URL の web サイトなどhttp://www.microsoft.com/MyApplicationです。  
   
- 既定の発行場所は、IIS をインストールしている場合は *http://localhost/projectname/* 、IIS をインストールしていない場合は、publish\ ディレクトリです。  
+ 発行場所は、既定では、 *http://localhost/projectname/*かどうかがある、IIS をインストールまたは操作を行う場合は、publish \ ディレクトリが IIS インストールされていません。  
   
 > [!NOTE]  
 >  他の考慮事項があるターゲット コンピューターが Windows Vista を実行している場合。 ローカルの発行オプションを使用するには、Windows Vista コンピュータの管理者である必要がある必要があります。 さらに、既定の場所は、常に、*発行\\* IIS をインストールがあるかどうかに関係なく、ディレクトリです。  
@@ -68,9 +67,9 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio は、CD または DVD には書き込みできません。 CD または DVD に出力を手動でコピーする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [Visual Studio &#41; でのページ、プロジェクト デザイナー (&) #40 です。 の Office 開発を発行します。](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
+ [[発行] ページ (プロジェクト デザイナー) &#40;Visual Studio での Office 開発&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   
   

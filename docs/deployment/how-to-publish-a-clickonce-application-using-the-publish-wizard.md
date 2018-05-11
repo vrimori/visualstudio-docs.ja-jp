@@ -1,12 +1,9 @@
 ---
-title: "方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - Windows applications, ClickOnce deployments
 - publishing, ClickOnce
 ms.assetid: 2e4aa67c-4445-4f7b-9e03-9acb95829127
-caps.latest.revision: "25"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: d314763f8ff4dc170148cca166e3ecdff051ae24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 613c576e895042055d5faee9eeb7c8ca27da078a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する
 ユーザーが ClickOnce アプリケーションを利用できるようにするには、アプリケーションをファイル共有やパス、FTP サーバー、またはリムーバブル メディアに発行する必要があります。 発行ウィザードを使用してアプリケーションを発行することができます。発行に関連するその他のプロパティは、**発行**のページ、**プロジェクト デザイナー**です。 詳細については、次を参照してください。 [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)です。  
@@ -101,7 +98,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  発行が完了したら、CD-Rewriter または DVD-Rewriter を使用して、手順 3. で指定した場所にあるファイルを CD-ROM メディアまたは DVD-ROM メディアにコピーする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
  [ClickOnce を使用した Office ソリューションの配置](/office-dev/office-dev/deploying-an-office-solution-by-using-clickonce)

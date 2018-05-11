@@ -1,79 +1,78 @@
 ---
-title: "New File コマンド | Microsoft Docs"
-ms.custom: 
+title: NewFile コマンド
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - file.newfile
 helpviewer_keywords:
 - File.NewFile command
 - New File command
 ms.assetid: 767868d6-a525-425b-a43b-2198f636ab6b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad7f0232a4e08c134a7dffcc3d10a2180e235717
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a519de555f35df4fac91a9960993a0f163c4de5a
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="new-file-command"></a>NewFile コマンド
-新規ファイルを作成して開きます。 ファイルは [その他のファイル] フォルダーの下に表示されます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-File.NewFile [filename] [/t:templatename] [/editor:editorname]  
-```  
-  
-## <a name="arguments"></a>引数  
- `filename`  
- 任意。 ファイルの名前。 名前を指定しない場合は、既定の名前が付けられます。 テンプレート名がない場合は、テキスト ファイルが作成されます。  
-  
-## <a name="switches"></a>スイッチ  
- /t: `templatename`  
- 任意。 作成するファイルの種類を指定します。  
-  
- /t:`templatename` 引数の構文は、[新しいファイル] ダイアログ ボックスにある情報を反映します。 カテゴリ名に続けて円記号 (`\`)、およびテンプレート名を入力し、文字列全体を引用符で囲みます。  
-  
- たとえば、新しい [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] ソース ファイルを作成するには、/t:`templatename` 引数に対して次のように入力します。  
-  
-```  
-/t:"Visual C++\C++ File (.cpp)"  
-```  
-  
- 上の例で、C++ File のテンプレートは **[新しいファイル]** ダイアログ ボックスの [Visual C++] カテゴリにあります。  
-  
- /e:`editorname`  
- 任意。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。  
-  
- /e:`editorname` 引数の構文では、[ファイルを開くアプリケーションの選択] ダイアログ ボックスで表示されるようにエディター名を入力し、引用符で囲みます。  
-  
- たとえば、ソース コード エディターでファイルを開くには、/e:`editorname` 引数に対して次のように入力します。  
-  
-```  
-/e:"Source Code (text) Editor"  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、Web ページ "test1.htm" を新規作成し、それをソース コード エディターで開きます。  
-  
-```  
->File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"  
-```  
-  
-## <a name="see-also"></a>参照  
- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
- [コマンド ウィンドウ](../../ide/reference/command-window.md)   
- [イミディエイト ウィンドウ](../../ide/reference/immediate-window.md)   
- [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+新規ファイルを作成して開きます。 ファイルは [その他のファイル] フォルダーの下に表示されます。
+
+## <a name="syntax"></a>構文
+
+```cmd
+File.NewFile [filename] [/t:templatename] [/editor:editorname]
+```
+
+## <a name="arguments"></a>引数
+ `filename`
+
+ 任意。 ファイルの名前。 名前を指定しない場合は、既定の名前が付けられます。 テンプレート名がない場合は、テキスト ファイルが作成されます。
+
+## <a name="switches"></a>スイッチ
+ /t: `templatename`
+
+ 任意。 作成するファイルの種類を指定します。
+
+ /t:`templatename` 引数の構文は、[新しいファイル] ダイアログ ボックスにある情報を反映します。 カテゴリ名に続けて円記号 (`\`)、およびテンプレート名を入力し、文字列全体を引用符で囲みます。
+
+ たとえば、新しい [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] ソース ファイルを作成するには、/t:`templatename` 引数に対して次のように入力します。
+
+```cmd
+/t:"Visual C++\C++ File (.cpp)"
+```
+
+ 上の例で、C++ File のテンプレートは **[新しいファイル]** ダイアログ ボックスの [Visual C++] カテゴリにあります。
+
+ /e:`editorname`
+
+ 任意。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。
+
+ /e:`editorname` 引数の構文では、[ファイルを開くアプリケーションの選択] ダイアログ ボックスで表示されるようにエディター名を入力し、引用符で囲みます。
+
+ たとえば、ソース コード エディターでファイルを開くには、/e:`editorname` 引数に対して次のように入力します。
+
+```cmd
+/e:"Source Code (text) Editor"
+```
+
+## <a name="example"></a>例
+ 次の例では、Web ページ "test1.htm" を新規作成し、それをソース コード エディターで開きます。
+
+```cmd
+>File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"
+```
+
+## <a name="see-also"></a>参照
+
+- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
+- [コマンド ウィンドウ](../../ide/reference/command-window.md)
+- [イミディエイト ウィンドウ](../../ide/reference/immediate-window.md)
+- [検索コマンド ボックス](../../ide/find-command-box.md)
+- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

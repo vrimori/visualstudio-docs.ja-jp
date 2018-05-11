@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio のコントロール パターンが一般的な |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のコントロール パターンが一般的な |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ded7ed6dd843a7879100704276766bfcb528b6f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8383537a7e9d49f79e98da4dd95a3474803315d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio の共通のコントロール パターン
-##  <a name="BKMK_CommonControls"></a>コモン コントロール  
+##  <a name="BKMK_CommonControls"></a> コモン コントロール  
   
 ### <a name="overview"></a>概要  
 コモン コントロールは、Visual Studio でのユーザー インターフェイスの大部分を構成します。 Visual Studio インターフェイスで使用する最も一般的なコントロールが従う必要があります、 [Windows デスクトップ ガイドライン](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)です。 このトピックは Visual Studio に固有であり、特別な状況や、Windows のガイドラインを補強の詳細について説明します。  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/22/2017
   
 -   **ツール ウィンドウ、ドキュメント エディター、デザイン サーフェイスとテーマが適用されたダイアログ:**色サービスを使用して特別なテーマの表示を使用します。  
   
-###  <a name="BKMK_Scrollbars"></a>スクロール バー  
+###  <a name="BKMK_Scrollbars"></a> スクロール バー  
  スクロール バーが従う必要があります[のスクロール バーの Windows の一般的な相互作用のパターン](https://msdn.microsoft.com/en-us/library/windows/desktop/bb787527\(v=vs.85\).aspx)コード エディターでなどのコンテンツ情報で補強するしている、しない限り、します。  
   
-###  <a name="BKMK_InputFields"></a>入力フィールド  
+###  <a name="BKMK_InputFields"></a> 入力フィールド  
  一般的な相互作用動作に従って、[テキスト ボックスの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742442\(v=vs.85\).aspx)です。  
   
 #### <a name="visual-style"></a>Visual スタイル  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
      ![入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。] (../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />入力フィールドの長さを修正: 入力フィールドが必要なコンテンツの適切な幅です。
   
-###  <a name="BKMK_ComboBoxesAndDropDowns"></a>コンボ ボックスとドロップダウン リスト  
+###  <a name="BKMK_ComboBoxesAndDropDowns"></a> コンボ ボックスとドロップダウン リスト  
 一般的な相互作用動作に従って、[ドロップダウン リストとコンボ ボックスの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404\(v=vs.85\).aspx)です。  
   
 #### <a name="visual-style"></a>Visual スタイル  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/22/2017
   
 ![正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。] (../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />正しい: ドロップダウン リストにサイズが調整の翻訳の増加を許可するが、不必要に長時間かかる場合。 
   
-###  <a name="BKMK_CheckBoxes"></a>チェック ボックス  
+###  <a name="BKMK_CheckBoxes"></a> チェック ボックス  
 一般的な相互作用動作に従って、[チェック ボックスの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742401\(v=vs.85\).aspx)です。  
   
 #### <a name="visual-style"></a>Visual スタイル  
@@ -113,7 +111,7 @@ ms.lasthandoff: 12/22/2017
   
      ![正しい: チェック ボックスは、テキストの最初の行に配置されます。] (../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />正しい: チェック ボックスは、テキストの最初の行に配置されます。
   
-###  <a name="BKMK_RadioButtons"></a>オプション ボタン  
+###  <a name="BKMK_RadioButtons"></a> オプション ボタン  
 一般的な相互作用動作に従って、[のオプション ボタンの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742436\(v=vs.85\).aspx)です。  
   
 #### <a name="visual-style"></a>Visual スタイル  
@@ -122,7 +120,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="specialized-interactions"></a>特殊な相互作用  
 緊密なレイアウトでのグループの違いを維持するために必要でない限り、オプションの選択を囲むグループ フレームを使用する必要はありません。  
   
-###  <a name="BKMK_GroupFrames"></a>グループ フレーム  
+###  <a name="BKMK_GroupFrames"></a> グループ フレーム  
 一般的な相互作用動作に従って、[グループ フレームの Windows デスクトップ ガイドライン](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742405\(v=vs.85\).aspx)です。  
   
 #### <a name="visual-style"></a>Visual スタイル  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/22/2017
   
 -   グループのフレームのコンテナーではなく、水平線を使用できる場合があります。  
   
-##  <a name="BKMK_TextControls"></a>テキスト コントロール
+##  <a name="BKMK_TextControls"></a> テキスト コントロール
 
 ### <a name="static-text-fields"></a>静的なテキスト フィールド
 
@@ -217,7 +215,7 @@ ms.lasthandoff: 12/22/2017
 
 ユーザー情報をコピーする機能を許可する場合は、動的なテキストが読み取り専用のテキスト フィールドにする必要があります。
   
-##  <a name="BKMK_ButtonsAndHyperlinks"></a>ボタンとハイパーリンク  
+##  <a name="BKMK_ButtonsAndHyperlinks"></a> ボタンとハイパーリンク  
   
 ### <a name="overview"></a>概要  
 ボタンとリンクのコントロール (ハイパーリンク) に従う必要があります[ハイパーリンクの基本的な Windows デスクトップ ガイダンス](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742406\(v=vs.85\).aspx)表現、サイズ変更、および間隔で使用するためです。  
@@ -331,11 +329,11 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
   
 -   ホバー時の下線通常表示されません。 代わりに、リンクがアクティブであるユーザーにフィードバックは、わずかな色の変更と適切なリンクのカーソルです。  
   
-##  <a name="BKMK_TreeViews"></a>ツリー ビュー  
+##  <a name="BKMK_TreeViews"></a> ツリー ビュー  
   
 ツリー ビューでは、親と子グループに、複雑な編成するための一覧を提供します。 ユーザーは、展開したり、親グループを表示または基になる子項目を非表示を折りたたんだりできます。 さらにアクションを提供するツリー ビュー内の各項目を選択できます。  
   
-###  <a name="BKMK_TreeViewVisualStyle"></a>ツリー ビューの表示スタイル  
+###  <a name="BKMK_TreeViewVisualStyle"></a> ツリー ビューの表示スタイル  
   
 #### <a name="expanders"></a>展開コントロール  
 ツリー ビュー コントロールは、Windows および Visual Studio で使用される expander デザインに従っている必要があります。 各ノードは、基になるアイテムを表示したり閉じたりする expander コントロールを使用します。 Expander コントロールを使用して、Windows および Visual Studio 内の別のツリー ビューを発生する可能性があるユーザーの整合性を提供します。  
@@ -359,7 +357,7 @@ Visual Studio でのほとんどのボタンは、ユーティリティのダイ
   
 ![内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。] (../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />内容がツリー ビュー コントロールの制限を超えたために、両方の垂直および水平方向のスクロール バーが表示されます。
   
-###  <a name="BKMK_TreeViewInteractions"></a>ツリー ビューの相互作用  
+###  <a name="BKMK_TreeViewInteractions"></a> ツリー ビューの相互作用  
   
 #### <a name="context-menus"></a>コンテキスト メニュー  
 ツリー ビュー ノードには、コンテキスト メニューのサブメニューのオプションを表示できます。 通常、ユーザーが項目を右クリックしてまたは選択した項目を持つ Windows キーボードでメニュー キーを押したときに発生します。 ノードがフォーカスを取得しが選択されていることは重要です。 これにより、ユーザーに属しているサブメニュー項目を識別します。  

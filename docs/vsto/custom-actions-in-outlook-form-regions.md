@@ -1,12 +1,10 @@
 ---
-title: "フォーム領域の Outlook でのカスタム アクション |Microsoft ドキュメント"
-ms.custom: 
+title: フォーム領域の Outlook でのカスタム アクション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - custom actions [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 66a4d81728d438a749b46e42b003c02d08f13d67
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1e81528aa5008b7d6f78f560d0bc0139a1e0799a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-actions-in-outlook-form-regions"></a>Outlook フォーム領域のカスタム動作
   アクションは、Microsoft Office Outlook アイテムに応答するユーザーを有効にするボタンを表示します。 たとえば、メール アイテムに応答して、ユーザーをクリックして、**返信**、**全員に返信**、または**フォワード**アクション ボタン。 これらの各アクションは、新しいメール アイテムを作成し、元の項目から情報を使用して、項目のフィールドを追加します。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="customizing-a-custom-action-at-run-time"></a>実行時にカスタム動作のカスタマイズ  
  コードを使用して、カスタム動作を動作を追加することもできます。 たとえばは電子メールの受信者の名前を取得し、新しい予定アイテムの参加者としてそれらの名前を追加するコードを追加することができます。 これを行うには、処理、 [CustomAction](http://msdn.microsoft.com/library/office/ff862186.aspx)のイベント、 [MailItem オブジェクト](http://msdn.microsoft.com/library/office/ff861332.aspx)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
  [フォーム領域の Outlook メッセージ クラスへの関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)  

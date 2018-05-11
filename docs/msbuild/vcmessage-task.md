@@ -1,12 +1,9 @@
 ---
-title: "VCMessage タスク | Microsoft Docs"
-ms.custom: 
+title: VCMessage タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc.task.vcmessage
 dev_langs:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - VCMessage task (MSBuild (Visual C++))
 - MSBuild (Visual C++), VCMessage task
 ms.assetid: 956675fd-05dc-40b4-856f-616145103498
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f3ec9c3b41d7ef8bffaa1dd1c607cd39610143b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: aa8ef67a4fa19bd715e73e50fcc268aee7a4df5d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="vcmessage-task"></a>VCMessage タスク
 ビルド時の警告およびエラー メッセージをログに記録します。  

@@ -1,27 +1,23 @@
 ---
-title: "Project 型のサブタイプ デザイン |Microsoft ドキュメント"
-ms.custom: 
+title: Project 型のサブタイプ デザイン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, design
 ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 126bee146d1f53233db3c14672f80da4c0d60e9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6a931d6509b5a8a90f371986f4ddb8955c64387d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-subtypes-design"></a>プロジェクトのサブタイプの設計
 プロジェクトのサブタイプは、Microsoft Build Engine (MSBuild) に基づくプロジェクトを拡張する Vspackage を使用できます。 集計の使用、コア管理プロジェクト システムで実装の大部分を再利用できます。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]まだ特定のシナリオの動作をカスタマイズします。  
@@ -63,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  複数レベルのプロジェクト サブタイプ集計は、基本プロジェクト、プロジェクトのサブタイプを使用して集計し、さらに、高度なプロジェクトのサブタイプを使用して集計する、3 つのレベルで構成されます。 一部として用意されているサポート インターフェイスの一部で、図に焦点を当てています、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトのサブタイプ アーキテクチャ。  
   
 ##### <a name="deployment-mechanisms"></a>展開メカニズム  
- 基本プロジェクト システムの多くの間では、プロジェクトのサブタイプで強化された機能は、展開の機構です。 プロジェクトのサブタイプ構成インターフェイスを実装することによって展開メカニズムに影響を与えます (など<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>) での QueryInterface を呼び出すことにより取得される<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>です。 基本のプロジェクトを呼び出すシナリオでは、プロジェクトのサブタイプと高度なプロジェクトのサブタイプの両方が別の構成の実装を追加する場所、`QueryInterface`で高度なプロジェクトのサブタイプの`IUnknown`します。 内部のプロジェクトのサブタイプに基本プロジェクトが要求している構成の実装が含まれている場合、高度なプロジェクトのサブタイプは、内部のプロジェクトのサブタイプで提供される実装に委任されます。 1 つの集計レベルから別の状態を維持するためのメカニズム、全レベルのプロジェクト サブタイプ実装<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>ビルド非永続化するには、プロジェクト ファイルに XML データを関連します。 詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータの永続化](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)です。 <xref:EnvDTE80.IInternalExtenderProvider>プロジェクト サブタイプからオートメーション エクステンダーを取得するためのメカニズムとして実装されます。  
+ 基本プロジェクト システムの多くの間では、プロジェクトのサブタイプで強化された機能は、展開の機構です。 プロジェクトのサブタイプ構成インターフェイスを実装することによって展開メカニズムに影響を与えます (など<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>) での QueryInterface を呼び出すことにより取得される<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>です。 基本のプロジェクトを呼び出すシナリオでは、プロジェクトのサブタイプと高度なプロジェクトのサブタイプの両方が別の構成の実装を追加する場所、`QueryInterface`で高度なプロジェクトのサブタイプの`IUnknown`します。 内部のプロジェクトのサブタイプに基本プロジェクトが要求している構成の実装が含まれている場合、高度なプロジェクトのサブタイプは、内部のプロジェクトのサブタイプで提供される実装に委任されます。 1 つの集計レベルから別の状態を維持するためのメカニズム、全レベルのプロジェクト サブタイプ実装<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>ビルド非永続化するには、プロジェクト ファイルに XML データを関連します。 詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータの永続化](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)です。 <xref:EnvDTE80.IInternalExtenderProvider> プロジェクト サブタイプからオートメーション エクステンダーを取得するためのメカニズムとして実装されます。  
   
  次の図は、焦点を当てていますプロジェクト構成の参照オブジェクトをオートメーション エクステンダー実装の具体的には、プロジェクトのサブタイプ基本プロジェクト システムを拡張するために使用します。  
   
@@ -93,6 +89,6 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>|プロジェクト ファイル (.vbproj ファイルまたは .csproj) に任意の XML の構造化データを保持するプロジェクトのサブタイプを使用できます。 このデータでは、MSBuild に表示されません。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>|プロジェクトのサブタイプを使用できます。<br /><br /> -永続化する新しい MSBuild プロパティを追加します。<br />-MSBuild から不要なプロパティを削除します。<br />MSBuild プロパティの現在の値をクエリします。<br />-MSBuild プロパティの現在の値を変更します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>   
  <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>

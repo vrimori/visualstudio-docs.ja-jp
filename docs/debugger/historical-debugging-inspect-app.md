@@ -1,25 +1,20 @@
 ---
-title: "デバッグ履歴でアプリを検査 |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグ履歴でアプリを検査 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 629b5d93-39b2-430a-b8ba-d2a47fdf2584
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 315a5c06a1ecda7976f17e20a299daed5dad65bd
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: d6a8e4ec27c73516d2eb4ea79ee8beee91dfd19c
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio"></a>Visual Studio でデバッグ履歴の IntelliTrace を使用したアプリを検査します。
 使用することができます[デバッグ履歴](../debugger/historical-debugging.md)を後方へ移動し、アプリケーションの実行を介して転送状態を調べる。  

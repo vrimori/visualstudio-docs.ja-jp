@@ -1,24 +1,21 @@
 ---
-title: "探索の範囲 | Microsoft IntelliTest 開発者テスト ツール | Microsoft Docs"
-ms.custom: 
+title: 探索の範囲 | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Exploration bounds
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6ddcaaac8d814b1f77351a54de121eb641e7fe49
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 7952ccfb8a2574bca5f297da5e675f76e8725f83
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="exploration-bounds"></a>探索の範囲
 
@@ -61,7 +58,7 @@ IntelliTest がプログラムの実行パスを深く探索すればするほ�
 <a name="maxconstraintsolvermemory"></a>
 ## <a name="maxconstraintsolvermemory"></a>MaxConstraintSolverMemory
 
-[制約ソルバー](input-generation.md#constraint-solver)が、新しい別の実行パスを使用することになる入力を計算する必要があるメガバイト数。 これは **PexSettingsAttributeBase** とその派生型のオプションです。
+[制約ソルバー](input-generation.md#constraint-solver)が、新しい別の実行パスを使用することになる入力を計算する必要があるメガバイト数。 これは *PexSettingsAttributeBase** とその派生型のオプションです。
 
 IntelliTest がプログラムの実行パスを深く探索すればするほど、IntelliTest がプログラムの制御フローとデータ フローからビルドする制約システムが複雑になります。 コンピューターの使用可能なメモリに応じて、IntelliTest がより複雑な制約システムに対応できるようにこの値を設定することができます。
 
@@ -125,13 +122,12 @@ void ParameterizedTest(int n)
 
 IntelliTest がテストの探索中に試行する実行の最大数。
 
-この探索の範囲の背後にある意図は、ループまたは再帰を含むコードには無限の実行パスが存在する場合があるため、IntelliTest を[入力生成](input-generation.md)中に制限する必要があることです。 
+この探索の範囲の背後にある意図は、ループまたは再帰を含むコードには無限の実行パスが存在する場合があるため、IntelliTest を[入力生成](input-generation.md)中に制限する必要があることです。
 
-**MaxRuns** と **MaxRunsWithUniquePaths** の 2 つの設定は次のように関連します。 
+**MaxRuns** と **MaxRunsWithUniquePaths** の 2 つの設定は次のように関連します。
 
 * IntelliTest は、さまざまなテスト入力で **MaxRuns** の最大回数までパラメーター化されたテスト メソッドを呼び出します。
-* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 
-  ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。 
+* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。
 * IntelliTest は、一意の実行パスの検出数をカウントします。この数は、**MaxRunsWithUniquePaths** オプションで制限されます。
 
 <a name="maxrunswithoutnewtests"></a>
@@ -139,7 +135,7 @@ IntelliTest がテストの探索中に試行する実行の最大数。
 
 新しいテストが生成されずに連続する実行の最大数。
 
-多くの場合、IntelliTest は短時間で多数の対象のテスト入力を検出できますが、しばらくすると、新しいテスト入力を検索せず、単体テストを生成しなくなります。 この構成オプションは、IntelliTest が新しいテストを生成せずに実行できる連続試行の数を制限するものです。 これに達すると、探索が停止します。 
+多くの場合、IntelliTest は短時間で多数の対象のテスト入力を検出できますが、しばらくすると、新しいテスト入力を検索せず、単体テストを生成しなくなります。 この構成オプションは、IntelliTest が新しいテストを生成せずに実行できる連続試行の数を制限するものです。 これに達すると、探索が停止します。
 
 <a name="maxrunswithuniquepaths"></a>
 ## <a name="maxrunswithuniquepaths"></a>MaxRunsWithUniquePaths
@@ -151,8 +147,7 @@ IntelliTest が探索中に考慮する一意のパスの最大数。
 **MaxRuns** と **MaxRunsWithUniquePaths** の 2 つの設定は次のように関連します。 
 
 * IntelliTest は、さまざまなテスト入力で **MaxRuns** の最大回数までパラメーター化されたテスト メソッドを呼び出します。
-* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 
-  ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。 
+* 実行されるコードが明確な場合、IntelliTest は毎回、異なる実行パスを使用します。 ただし、一部の条件下では、さまざまな入力で、実行されるコードが既に使用されている実行パスに従う場合があります。 
 * IntelliTest は、一意の実行パスの検出数をカウントします。この数は、**MaxRunsWithUniquePaths** オプションで制限されます。
 
 <a name="maxexceptions"></a>
@@ -160,16 +155,14 @@ IntelliTest が探索中に考慮する一意のパスの最大数。
 
 探索が停止する前に検出できる例外の最大数。
 
-この探索の範囲の背後にある意図は、多くのバグを含むコードの探索を停止することです。
-IntelliTest がコードで検出したエラーが多すぎる場合、探索は停止します。
+この探索の範囲の背後にある意図は、多くのバグを含むコードの探索を停止することです。 IntelliTest がコードで検出したエラーが多すぎる場合、探索は停止します。
 
 <a name="testexcludepathboundsexceeded"></a>
 ## <a name="testexcludepathboundsexceeded"></a>TestExcludePathBoundsExceeded
 
 構成されたパスの範囲の [MaxCalls](#maxcalls)、[MaxBranches](#maxbranches)、[MaxStack](#maxstack)、および [MaxConditions](#maxconditions) を超える実行パスは無視されます。
 
-この探索の範囲の背後にある意図は、(多くの場合) 終了しないテストを処理することです。 IntelliTest は、[MaxCalls](#maxcalls)、[MaxBranches](#maxbranches)、[MaxStack](#maxstack)、または [MaxConditions](#maxconditions) などの探索の範囲に達すると、テストは終了しないプロセスではなく、後でスタック オーバーフローが発生することはないと判断します。
-このようなテスト ケースは他のテスト フレームワークでの問題を発生させる可能性があります。この属性は、終了しないプロセスまたはテスト ケースが原因でスタック オーバーフローが発生する可能性がある場合に、IntelliTest がテスト ケースを生成しないようにします。
+この探索の範囲の背後にある意図は、(多くの場合) 終了しないテストを処理することです。 IntelliTest は、[MaxCalls](#maxcalls)、[MaxBranches](#maxbranches)、[MaxStack](#maxstack)、または [MaxConditions](#maxconditions) などの探索の範囲に達すると、テストは終了しないプロセスではなく、後でスタック オーバーフローが発生することはないと判断します。 このようなテスト ケースは他のテスト フレームワークでの問題を発生させる可能性があります。この属性は、終了しないプロセスまたはテスト ケースが原因でスタック オーバーフローが発生する可能性がある場合に、IntelliTest がテスト ケースを生成しないようにします。
 
 <a name="testemissionfilter"></a>
 ## <a name="testemissionfilter"></a>TestEmissionFilter
@@ -188,10 +181,10 @@ IntelliTest が生成する必要があるテストの種類を示します。 �
 
 **TestEmissionBranchHits** 設定により、IntelliTest が、分岐がすべてカバーされた (**TestEmissionBranchHits=1**) かどうかや、テストで 1 回または 2 回カバーされた (**TestEmissionBranchHits=2**) かどうかなどを考慮する必要があるかどうかが決まります。
 
-**TestEmissionBranchHits=1** の場合、IntelliTest が到達する可能性のあるすべての分岐をカバーする非常に小さなテスト スイートが生成されます。 特に、このテスト スイートでは、到達したすべての基本的なブロックとステートメントもカバーします。 
+**TestEmissionBranchHits=1** の場合、IntelliTest が到達する可能性のあるすべての分岐をカバーする非常に小さなテスト スイートが生成されます。 特に、このテスト スイートでは、到達したすべての基本的なブロックとステートメントもカバーします。
 
 このオプションの既定値は **TestEmissionBranchHits=2** で、今後の回帰エラーの検出にもより適している、表現力の高いテスト スイートが生成されます。
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 
-ご意見や機能に関するご要望を **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** で投稿してください。
+ご意見や機能に関するご要望を [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest) で投稿してください。

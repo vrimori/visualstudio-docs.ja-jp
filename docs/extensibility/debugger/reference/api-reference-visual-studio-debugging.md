@@ -1,34 +1,30 @@
 ---
-title: "API リファレンス (Visual Studio のデバッグ) |Microsoft ドキュメント"
-ms.custom: 
+title: API リファレンス (Visual Studio のデバッグ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], API reference
 ms.assetid: e4e429da-3667-41f7-9158-a8207d13e91a
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f6e3110ca4988fcc12e547f3bcd82c1026f3aeb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3c9007d679e36e2aa6dbab41074338395434be42
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API リファレンス (Visual Studio のデバッグ)
 参照セクションにには、API、構文と、すべての API 要素の使用方法を示すガイドの概念の概要およびさまざまなコード例が含まれます。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  
   
  次の表は、一般的な`HRESULT`メソッドによって返される値。  
   
-|name|説明|[値]|  
+|名前|説明|[値]|  
 |----------|-----------------|-----------|  
 |S_OK|成功。|0x00000000|  
 |E_UNEXPECTED|予期しないエラーです。|0x8000FFFF|  
@@ -48,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  無効なまたは`NULL`[out] パラメーターがあります、IDE がクラッシュします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)   
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)   

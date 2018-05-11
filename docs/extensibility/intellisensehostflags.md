@@ -1,30 +1,26 @@
 ---
-title: "IntelliSenseHostFlags |Microsoft ドキュメント"
-ms.custom: 
+title: IntelliSenseHostFlags |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IntellisenseHostFlags
 helpviewer_keywords:
 - IntelliSense, IntellisenseHostFlags enumeration
 - IntellisenseHostFlags enumeration
 ms.assetid: 0930640b-eb84-48ef-a8f7-d4268f55c99c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36cf7ba40deba4bd133f2c4baf92c310665ed275
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a096e79a64168f74150103a5f3ba3a8683fe184e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 IntelliSense ホスト フラグを指定します。  
@@ -52,8 +48,8 @@ enum IntellisenseHostFlags
 |`IHF_FORCECOMMITTOCONTEXT`|`CanCommitIntoReadOnlyBuffer` と同じ。|  
 |`IHF_OVERTYPE`|(サブジェクトまたはコンテキスト) での編集は、上書きモードで行う必要があります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  SingleFileeditor.idl  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

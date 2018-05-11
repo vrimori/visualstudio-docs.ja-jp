@@ -1,13 +1,9 @@
 ---
-title: "Visual Studio デバッガーでの呼び出し履歴の表示 |Microsoft ドキュメント"
+title: Visual Studio デバッガーでの呼び出し履歴の表示 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 04/06/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.callstack
 dev_langs:
@@ -29,17 +25,16 @@ helpviewer_keywords:
 - stack, switching stack frames
 - Call Stack window, viewing disassembly code for functions on the call stack
 ms.assetid: 5154a2a1-4729-4dbb-b675-db611a72a731
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e10b81ff07b77e2fd6202d2f5fb27392fe8134c2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d20a1ac9f1a09b93f577c6aa90f550ccd6ff0def
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>呼び出し履歴を表示して、呼び出し履歴 ウィンドウで、Visual Studio デバッガーを使用します。
 
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 **[\<外部コード >]**  
   
-## <a name="bkmk_switch"></a>別のスタック フレーム (デバッガーのコンテキストの変更) に切り替える
+## <a name="bkmk_switch"></a> 別のスタック フレーム (デバッガーのコンテキストの変更) に切り替える
   
 1.  **呼び出し履歴**ウィンドウで、スタック フレームのコードとデータを表示するを右クリックします。
 
@@ -113,9 +108,9 @@ Visual Studio Enterprise (のみ) を使用している場合は、デバッグ�
 
 ## <a name="change-the-optional-information-displayed"></a>表示される省略可能な情報を変更します。  
   
--   右クリックし、**呼び出し履歴**ウィンドウとセットまたはクリア**表示\<** *情報* **>** .  
+-   右クリックし、**呼び出し履歴**ウィンドウとセットまたはクリア**表示\<***情報***>**です。  
   
-## <a name="bkmk_symbols"></a>モジュールのシンボルの読み込み
+## <a name="bkmk_symbols"></a> モジュールのシンボルの読み込み
 **呼び出し履歴**ウィンドウで、デバッグ シンボルが読み込まれたを現在持っていないコードのシンボルを読み込むことができます。 これらのシンボルには、Microsoft のパブリック シンボル サーバーからダウンロードされる .NET Framework シンボルやシステム シンボル、または、デバッグしているコンピューター上のシンボル パス内のシンボルを指定できます。  
   
 参照してください[シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
@@ -142,7 +137,7 @@ Visual Studio Enterprise (のみ) を使用している場合は、デバッグ�
   
 5.  **[OK]** をクリックして、**[オプション]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[呼び出し履歴] ウィンドウの混合コードと不足情報](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)  
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   

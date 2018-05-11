@@ -1,18 +1,20 @@
 ---
 layout: LandingPage
+ms.date: 01/01/2018
 author: gewarren
 ms.author: gewarren
-title: "Visual Studio でデータ ツールを使用してデータ ソリューションを開発する |Microsoft Docs"
-description: "Visual Studio のデータ ソリューション用ツールについて説明します。"
+title: Visual Studio でデータ ツールを使用してデータ ソリューションを開発する
+description: Visual Studio のデータ ソリューション用ツールについて説明します。
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: a3b0473237595dee29de024c7cbc04b6db82c93a
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 03f82da87bc546eea7d2b20100e11ca32ab72aad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Visual Studio でデータ ツールを使用してデータ ソリューションを開発する
 
@@ -113,7 +115,7 @@ Visual Studio でデータ ツールを使用して、SQL Server、Azure Data La
 
 ---
 
-<hr>    
+<hr>
 <h2>参照</h2>
 
 <ul class="panelContent cardsW">

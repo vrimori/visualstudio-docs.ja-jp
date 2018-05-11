@@ -1,29 +1,24 @@
 ---
-title: "IDiaPropertyStorage::ReadBOOL |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaPropertyStorage::ReadBOOL |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaPropertyStorage::ReadBOOL
 ms.assetid: ad1822db-4572-48f7-9919-f8137f6701f2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e7f146222e76ff0f4de9f30140064e7bdd08a358
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4a7ec4afc044af9d63fc65826e473d9036bf9ca3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
 読み取り`BOOL`プロパティ セット内の値。  
@@ -50,5 +45,5 @@ HRESULT ReadBOOL (
 ## <a name="remarks"></a>コメント  
  一貫性のある結果を得るには、次のように解釈します。、`BOOL`値の 0 以外の値が実行されるように`TRUE`0 で、`FALSE`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

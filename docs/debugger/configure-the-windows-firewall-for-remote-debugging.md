@@ -1,23 +1,20 @@
 ---
-title: "リモート デバッグ用に Windows ファイアウォールの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: リモート デバッグ用に Windows ファイアウォールの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66e3230a-d195-4473-bbce-8ca198516014
-caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f7458c2f35bfd29c53b939b6300d2759f0e7897f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d9fdd6db229bf1aa6f607e096715ea485ec5c5ce
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Windows ファイアウォールをリモート デバッグ用に構成する
 このトピックでは、次のオペレーティング システムが稼働するコンピューターでリモート デバッグを有効にするようにファイアウォールを構成する方法を説明します。  
@@ -83,11 +80,11 @@ Visual Studio またはリモート デバッガーをインストールする�
   
 1.  [Windows ファイアウォール] ページを開きます。 ( **[スタート]** メニューの検索ボックスに「 **Windows ファイアウォール**」と入力します)。  
   
-2.  **[Windows ファイアウォールを介したアプリまたは機能を許可]**をクリックします。  
+2.  **[Windows ファイアウォールを介したアプリまたは機能を許可]** をクリックします。  
   
-3.  **[許可されたアプリおよび機能]** の一覧で **[Visual Studio リモート デバッガー探索]**を見つけます。 一覧にこの項目が表示されている場合は、この項目が選択されていることと、1 つ以上のネットワークの種類も選択されていることを確認します。  
+3.  **[許可されたアプリおよび機能]** の一覧で **[Visual Studio リモート デバッガー探索]** を見つけます。 一覧にこの項目が表示されている場合は、この項目が選択されていることと、1 つ以上のネットワークの種類も選択されていることを確認します。  
   
-4.  **[Visual Studio リモート デバッガー探索]** が一覧に表示されていない場合は **[別のアプリの許可]**をクリックします。 まだ表示されない場合で、**アプリの追加**ウィンドウで、をクリックして**参照**に移動して **\<Visual Studio インストール ディレクトリ > \Common7\IDE\Remote Debugger**. アプリケーションの該当するフォルダー (x86、x64、Appx) を見つけ、 **msvsmon.exe**を選びます。 次に、 **[追加]**をクリックします。  
+4.  **[Visual Studio リモート デバッガー探索]** が一覧に表示されていない場合は **[別のアプリの許可]** をクリックします。 まだ表示されない場合で、**アプリの追加**ウィンドウで、をクリックして**参照**に移動して **\<Visual Studio インストール ディレクトリ > \Common7\IDE\Remote Debugger**. アプリケーションの該当するフォルダー (x86、x64、Appx) を見つけ、 **msvsmon.exe**を選びます。 次に、 **[追加]** をクリックします。  
   
 5.  **アプリおよび機能を許可**一覧で、 **Visual Studio リモート デバッガー**です。 リモート デバッグ モニターの通信に使用する 1 つ以上のネットワークの種類 (**[ドメイン]、[ホーム/社内 (プライベート)]、[パブリック]**) をオンにします。 選択する種類には、Visual Studio コンピューターが接続しているネットワークが含まれている必要があります。 
 
@@ -100,11 +97,11 @@ Visual Studio またはリモート デバッガーをインストールする�
   
 1.  [Windows ファイアウォール] ページを開きます。 ( **[スタート]** メニューの検索ボックスに「 **Windows ファイアウォール**」と入力します。)  
   
-2.  **[Windows ファイアウォールを介したアプリまたは機能を許可]**をクリックします。  
+2.  **[Windows ファイアウォールを介したアプリまたは機能を許可]** をクリックします。  
   
 3.  **アプリおよび機能を許可**ボックスの一覧で探します**Visual Studio リモート デバッガー**です。 一覧にこの項目が表示されている場合は、この項目が選択されていることと、1 つ以上のネットワークの種類も選択されていることを確認します。  
   
-4.  場合**Visual Studio リモート デバッガー**はクリックして一覧にない**別のアプリを許可する**です。 まだ表示されない場合で、**アプリ ウィンドウを追加**をクリックして**参照**に移動し、  **\<Visual Studio インストール ディレクトリ > \Common7\IDE\Remote Debugger**. アプリケーションの該当するフォルダー (x86、x64、Appx) を見つけ、 **msvsmon.exe**を選びます。 次に、 **[追加]**をクリックします。  
+4.  場合**Visual Studio リモート デバッガー**はクリックして一覧にない**別のアプリを許可する**です。 まだ表示されない場合で、**アプリ ウィンドウを追加**をクリックして**参照**に移動し、  **\<Visual Studio インストール ディレクトリ > \Common7\IDE\Remote Debugger**. アプリケーションの該当するフォルダー (x86、x64、Appx) を見つけ、 **msvsmon.exe**を選びます。 次に、 **[追加]** をクリックします。  
   
 5.  **許可されているアプリ**一覧で、 **Visual Studio リモート デバッガー**です。 リモート デバッグ モニターの通信に使用する 1 つ以上のネットワークの種類 (**[ドメイン]、[ホーム/社内 (プライベート)]、[パブリック]**) をオンにします。 選択する種類には、Visual Studio コンピューターが接続しているネットワークが含まれている必要があります。 
 
@@ -123,5 +120,5 @@ Visual Studio またはリモート デバッガーをインストールする�
 |500、4500|発信|UDP|ドメイン ポリシーで、ネットワーク通信を IPSec 経由で実行する必要がある場合は、必須。|  
 |80|発信|TCP|Web サーバーのデバッグに必要。|
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

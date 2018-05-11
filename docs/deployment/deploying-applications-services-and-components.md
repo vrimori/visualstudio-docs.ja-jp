@@ -1,12 +1,10 @@
 ---
-title: "展開の概要 - Visual Studio |Microsoft ドキュメント"
-ms.custom: 
+title: 展開の概要
+description: Visual Studio からアプリを展開するためのオプションについて説明します。
+ms.custom: mvc
 ms.date: 11/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: quickstart
 dev_langs:
 - FSharp
 - VB
@@ -21,18 +19,18 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f1ecd96b8541145cfd5d36686f7ceaf04e7544b1
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="deployment-overview-in-visual-studio"></a>Visual Studio での配置の概要
+# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: まず、Visual Studio での展開
 
 アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (多くの種類のアプリは、ここで説明されていない他の展開ツール コマンド ライン デプロイ NuGet などをサポートします)。
 
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="deploy-to-local-folder"></a>ローカル フォルダーに配置します。
 
-- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: 発行ツールを使用してローカルに展開するにはフォルダーです。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**を選択し**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
+- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および **.NET Core**: 発行ツールを使用して、ローカル フォルダーに配置します。 利用可能なオプションは、アプリの種類によって異なります。 ソリューション エクスプ ローラーでプロジェクトを右クリックして選択**発行**です。 (任意の発行プロファイルを構成していない場合をクリックし、**新しいプロファイルを作成**)。次に、選択**フォルダー**です。 詳細については、次を参照してください。[をローカル フォルダーに配置](quickstart-deploy-to-local-folder.md)です。
 
     ![選択を発行](../deployment/media/quickstart-publish.png)
 
@@ -48,11 +46,13 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="publish-to-web-or-deploy-to-network-share"></a>Web に発行またはネットワーク共有に展開
 
-- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および**.NET Core**: を展開する、発行ツールを使用することができます、web サイトの FTP や Web Deploy を使用します。 詳細については、次を参照してください。 [web サイトへのデプロイ](quickstart-deploy-to-a-web-site.md)です。
+- **ASP.NET**、 **ASP.NET Core**、 **Node.js**、 **Python**、および **.NET Core**: を展開する、発行ツールを使用することができます、web サイトの FTP や Web Deploy を使用します。 詳細については、次を参照してください。 [web サイトへのデプロイ](quickstart-deploy-to-a-web-site.md)です。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 ツールでは、発行には、構成手順を実行してオプションを選択します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (任意の発行プロファイルを構成していない場合をクリックし、**新しいプロファイルを作成**)。ツールでは、発行には、構成手順を実行してオプションを選択します。
 
     ![IIS、FTP などを選択します。](../deployment/media/quickstart-publish-iis-ftp.png)
+
+    Visual Studio での発行プロファイルをインポートする方法については、次を参照してください。[発行の設定をインポートし、IIS に展開](../deployment/tutorial-import-publish-settings-iis.md)です。
 
     いくつかの他の方法で ASP.NET アプリケーションとサービスを展開することもできます。 詳細については、次を参照してください。[を展開する ASP.NET web アプリケーションとサービス](http://www.asp.net/aspnet/overview/deployment)です。
 
@@ -62,18 +62,16 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="publish-to-azure"></a>Azure に発行する
 
-- **ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core** web アプリケーション: アプリを Azure App Service または Azure の仮想マシンを迅速に配置する、発行ツールを使用することができます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 [発行] ダイアログ ボックスでいずれかを選択**Microsoft Azure App Service**または**Microsoft Azure Virtual Machines**、し構成手順に従います。
+- **ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core** web アプリケーション: アプリを Azure App Service または Azure の仮想マシンを迅速に配置する、発行ツールを使用することができます。 ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。 (任意の発行プロファイルを構成していない場合をクリックし、**新しいプロファイルを作成**)。[発行] ダイアログ ボックスでいずれかを選択**Microsoft Azure App Service**または**Microsoft Azure Virtual Machines**、し構成手順に従います。
 
     ![Azure App Service の選択](../deployment/media/quickstart-publish-azure.png "Azure App Service の選択")
 
-    をパブリッシュする Azure の仮想マシンを右にスクロール、選択**Microsoft Azure Virtual Machines**です。
+    Azure App Service からの発行プロファイルを Visual Studio にインポートする方法の詳細については、次を参照してください。[発行設定をインポートし、Azure にデプロイ](../deployment/tutorial-import-publish-settings-azure.md)です。
 
     概要については、次を参照してください。 [Publish to Azure](quickstart-deploy-to-azure.md)です。 またを参照してください[ASP.NET Core アプリケーションを Azure に公開](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 Git を使用して展開では、次を参照してください。 [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](/aspnet/core/publishing/azure-continuous-deployment)です。
 
     > [!NOTE]
-    > Azure アカウントがない場合は[サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)です。
-
-- その他の**Azure サービス**: 固有の仕様を参照してください[Azure サービス](/azure/#pivot=products)Visual Studio によってサポートされる可能性があるさまざまな展開オプションをマニュアルでします。
+    > Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
 
 ### <a name="publish-to-microsoft-store"></a>Microsoft Store に公開します。
 

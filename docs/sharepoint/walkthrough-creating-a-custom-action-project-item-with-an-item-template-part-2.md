@@ -1,25 +1,24 @@
 ---
-title: "チュートリアル: 項目テンプレートにカスタム動作プロジェクト項目の作成、パート 2 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 項目テンプレートにカスタム動作プロジェクト項目の作成、パート 2 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 55794f7976e90e34ba24654400f755de9244e13e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 264decc53d8ba2d818562a9513ecfa2aab6f882c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目の種類のカスタム定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供することがもできます。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのに、テンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  選択、 **WPF ユーザー コントロール ライブラリ**プロジェクト テンプレートをプロジェクトに名前を**ItemTemplateWizard**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ItemTemplateWizard**プロジェクトがソリューションにします。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ItemTemplateWizard**プロジェクトがソリューションにします。  
   
 6.  プロジェクトから UserControl1 項目を削除します。  
   
@@ -209,7 +208,7 @@ ms.lasthandoff: 01/10/2018
     </WizardExtension>  
     ```  
   
-     詳細については、`WizardExtension`要素を参照してください[WizardExtension 要素 &#40;です。Visual Studio テンプレート&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
+     詳細については、`WizardExtension`要素を参照してください[WizardExtension 要素&#40;Visual Studio のテンプレート&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)です。  
   
 3.  ファイルを保存して閉じます。  
   
@@ -306,7 +305,7 @@ ms.lasthandoff: 01/10/2018
   
 13. **説明**ボックスに、入力**SharePoint デベロッパー センター web サイトが開きます**です。  
   
-14. **URL**ボックスに、入力**http://msdn.microsoft.com/sharepoint/default.aspx**を選択し、**完了**ボタンをクリックします。  
+14. **URL**ボックスに、入力 **http://msdn.microsoft.com/sharepoint/default.aspx**を選択し、**完了**ボタンをクリックします。  
   
      isual Studio という項目の追加**CustomAction1**プロジェクトおよびエディターに Elements.xml ファイルが開きます。 Elements.xml にウィザードで指定した値が含まれることを確認します。  
   
@@ -327,7 +326,7 @@ ms.lasthandoff: 01/10/2018
   
      **一覧の設定**ページが表示されます。  
   
-4.  下にある、**通信**選択ページの上部の見出しで、 **SharePoint デベロッパー センター**リンク、ブラウザーが web サイト http://msdn.microsoft.com/sharepoint/ を開くことを確認してください。default.aspx を閉じて、ブラウザー。  
+4.  下にある、**通信**選択ページの上部の見出しで、 **SharePoint デベロッパー センター**リンクで、ブラウザーが web サイトを開くことを確認http://msdn.microsoft.com/sharepoint/default.aspx、ブラウザーを閉じます。  
   
 ## <a name="cleaning-up-the-development-computer"></a>開発コンピューターのクリーンアップ  
  プロジェクト項目のテストが終わったら、プロジェクト項目テンプレートを Visual Studio の実験用インスタンスから削除します。  
@@ -344,7 +343,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  Visual Studio (実験用インスタンスと、CustomActionProjectItem ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   

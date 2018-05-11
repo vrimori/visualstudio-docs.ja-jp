@@ -1,7 +1,9 @@
 ---
-title: "従来のワークフロー アクティビティ |Microsoft ドキュメント"
+title: ワークフロー デザイナーの従来のワークフロー アクティビティ
 ms.date: 01/18/2017
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, activities
 - activities
@@ -9,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4af7a06b-1e82-43c8-aec8-0dc5fb63d08a
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c719725f3d4ebfffe291ff31115ddd0cc5f3d4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 45c24c0be518e58ce87af11a38486818ca4a3ac7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-workflow-activities"></a>従来のワークフロー アクティビティ
 
-[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] に含まれる既定のアクティビティ セットは、制御フロー、条件、イベント処理、状態管理、アプリケーションやサービスとの通信などの機能を提供します。 ワークフローを設計する場合は、Windows ワークフロー デザイナーで用意されているシステム標準アクティビティを行うこともできますか、独自のカスタム アクティビティを作成することができます。
+Windows Workflow Foundation (WF) には、アプリケーションやサービスとともに、制御フロー、条件、イベント処理、状態管理、および通信の機能を提供する活動の既定のセットが含まれています。 ワークフローを設計する場合は、Windows ワークフロー デザイナーで用意されているシステム標準アクティビティを行うこともできますか、独自のカスタム アクティビティを作成することができます。
 
- 次の表は、[!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] フレームワークに付属ですぐに使用できるアクティビティ セットの一覧です。 多くの場合、すべてではなく、これらのアクティビティはからアクセスできるアクティビティ デザイナーによって表される、**ツールボックス**の[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]です。 アクティビティを作成するからそのデザイナーをドラッグ、**ツールボックス**し、デザイン画面にドロップします。
+次の表は、Windows Workflow Foundation フレームワークに付属ですぐに使用できるアクティビティ セットの一覧です。 多くの場合、すべてではなく、これらのアクティビティはからアクセスできるアクティビティ デザイナーによって表される、**ツールボックス**ワークフロー デザイナーの。 アクティビティを作成するからそのデザイナーをドラッグ、**ツールボックス**し、デザイン画面にドロップします。
 
 |アクティビティ|説明|
 |--------------|-----------------|
@@ -64,7 +66,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Workflow.Activities.WebServiceOutputActivity>|Web サービスからワークフローに対する要求に応答します。 詳細については、次を参照してください。 [WebServiceOutputActivity アクティビティを使用して](http://go.microsoft.com/fwlink?LinkID=65092)です。|
 |<xref:System.Workflow.Activities.WhileActivity>|条件が満たされるまで、ワークフローをループさせることができます。 詳細については、次を参照してください。 [WhileActivity アクティビティを使用して](http://go.microsoft.com/fwlink?LinkID=65091)です。|
 
- カスタム アクティビティを作成する方法の詳細については、次を参照してください。[カスタム アクティビティの開発](http://go.microsoft.com/fwlink?LinkID=65023)と[従来のアクティビティ デザイナーを使用して](../workflow-designer/using-the-legacy-activity-designer.md)です。
+カスタム アクティビティを作成する方法の詳細については、次を参照してください。[カスタム アクティビティの開発](http://go.microsoft.com/fwlink?LinkID=65023)と[従来のアクティビティ デザイナーを使用して](../workflow-designer/using-the-legacy-activity-designer.md)です。
 
 ## <a name="see-also"></a>関連項目
 

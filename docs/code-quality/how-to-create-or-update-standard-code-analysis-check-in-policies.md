@@ -1,26 +1,23 @@
 ---
-title: "方法: を作成または標準のコード分析を用いたチェックイン ポリシーの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 作成または標準のコード分析を用いたチェックイン ポリシーを更新します
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.policyeditor
 helpviewer_keywords:
 - code analysis, migrating check-in policy
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0fba16ee285faeafdc37fc38e6b5bb0a0725a46
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 96fa2dd75c590e0841d7479e4e071154add04857
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 
@@ -33,11 +30,11 @@ ms.lasthandoff: 02/01/2018
 
 - マネージ コードの場合を指定して、チェックイン ポリシーを設定する、*ルール セット*コード分析規則のサブセットを格納しています。
 
-- C/C++ コードのチェックイン ポリシーでは、すべてのコード分析規則が実行されることが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。
+- Visual Studio 2017 15.6 と、以前のバージョンでの C/C++ コードのチェックイン ポリシーでは、すべてのコード分析規則が実行されることが必要です。 チーム プロジェクト内の個々 のコード プロジェクトの特定のルールを無効にするプリプロセッサ ディレクティブを追加できます。 15.7 以降では、使用 **/analyze: ruleset**を実行するには、どのルールを指定します。 詳細については、次を参照してください。[ルール セットを実行するように C++ 規則の指定を使用して](using-rule-sets-to-specify-the-cpp-rules-to-run.md)です。
 
 マネージ コードのチェックイン ポリシーを指定すると後、チーム メンバーは、チーム プロジェクトのポリシー設定をコード プロジェクトに対して、コード分析設定を同期できます。
 
-### <a name="to-open-the-check-in-policy-editor"></a>チェックイン ポリシー エディターを開く
+## <a name="to-open-the-check-in-policy-editor"></a>チェックイン ポリシー エディターを開く
 
 1. チーム エクスプ ローラーで、チーム プロジェクト名を右クリックし、**チーム プロジェクトの設定**、クリックして**ソース管理**です。
 
@@ -49,28 +46,28 @@ ms.lasthandoff: 02/01/2018
 
     - 既存のダブルクリック**コード分析**内の項目、**ポリシーの種類**ポリシーを変更する ボックスの一覧です。
 
-### <a name="to-set-policy-options"></a>ポリシー オプションを設定するには
+## <a name="to-set-policy-options"></a>ポリシー オプションを設定するには
 
 選択するか、次のオプションをオフにします。
 
-    |オプション|説明|  
-    |------------|-----------------|  
-    |**チェックインを強制のみファイルを格納する現在のソリューションの一部であります。**|コード分析は、ソリューションおよびプロジェクトの構成ファイルで指定されたファイルでのみ実行できます。 このポリシーは、ソリューションの一部であるすべてのコードを分析することを保証します。|  
-    |**C/C++ コード分析を強制 (/analyze)**|すべての C または C++ プロジェクトを作成できる必要があります、/analyze コンパイラ オプションをそれらをチェックインする前に、コード分析を実行します。|  
-    |**マネージ コードのコード分析を強制します。**|すべてのマネージ プロジェクトがコード分析を実行し、それらをチェックインする前に、ビルドが必要です。|
+|オプション|説明|
+|------------|-----------------|
+|**チェックインを強制のみファイルを格納する現在のソリューションの一部であります。**|コード分析は、ソリューションおよびプロジェクトの構成ファイルで指定されたファイルでのみ実行できます。 このポリシーは、ソリューションの一部であるすべてのコードを分析することを保証します。|
+|**C/C++ コード分析を強制 (/analyze)**|すべての C または C++ プロジェクトを作成できる必要があります、/analyze コンパイラ オプションをそれらをチェックインする前に、コード分析を実行します。|
+|**マネージ コードのコード分析を強制します。**|すべてのマネージ プロジェクトがコード分析を実行し、それらをチェックインする前に、ビルドが必要です。|
 
-### <a name="to-specify-a-managed-rule-set"></a>管理されている規則セットを指定するには
+## <a name="to-specify-a-managed-rule-set"></a>管理されている規則セットを指定するには
 
-- **この規則セットを実行**一覧で、次の方法のいずれかを使用します。
+**この規則セットを実行**一覧で、次の方法のいずれかを使用します。
 
-    - Microsoft の標準規則セットを選択します。
+- Microsoft の標準規則セットを選択します。
 
-    - カスタム規則セットを選択する をクリックして **\<... にソース管理からのルール セットの選択 >**、ソース コントロールのブラウザーで、規則セットのバージョン管理パスを入力します。 バージョン コントロール パスの構文です。
+- カスタム規則をクリックしてセットを選択して **\<... にソース管理からのルール セットの選択 >** です。 次に、ソース コントロールのブラウザーで、規則セットのバージョン管理パスを入力します。 バージョン コントロール パスの構文です。
 
-    - **$/** `TeamProjectName` **/** `VersionControlPath`
+   **$/** `TeamProjectName` **/** `VersionControlPath`
 
-    - セットを作成して、カスタム チェックイン ポリシーのルールを実装する方法の詳細についてを参照してください[を実装するカスタム チェックイン ポリシーにマネージ コードの](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)します。
+セットを作成して、カスタム チェックイン ポリシーのルールを実装する方法の詳細についてを参照してください[マネージ コードのカスタム実装のチェックイン ポリシー](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)です。
 
 ## <a name="see-also"></a>関連項目
 
-[コード分析を用いたチェックイン ポリシーの作成と使用](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+- [作成し、コード分析チェックイン ポリシーを使用します。](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

@@ -1,27 +1,23 @@
 ---
-title: "プロパティ ウィンドウの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ ウィンドウの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window
 ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f766fe903df4f7a7ea36fb4ec1654b889457f65
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e255795a52064723477eda4e1aca532adedb6be1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-window-overview"></a>プロパティ ウィンドウの概要
 **プロパティ**で利用可能な期間の 2 種類の主要で選択したオブジェクトのプロパティを表示するウィンドウを使用、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 これら 2 つの種類のウィンドウは次のとおりです。  
@@ -44,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|カテゴリの一覧を示します、**プロパティ**ウィンドウの各プロパティをカテゴリにマップします。|  
 |[IDispatch インターフェイス](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx)|オブジェクトのメソッドとプロパティ プログラミング ツールと自動化をサポートする他のアプリケーションを公開します。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|省略記号 (...) ボタンと呼ばれる*ビルダー*オブジェクト自体によって実装されたモーダル ダイアログ ウィンドウを開くことです。 値に簡単に型指定されていないテキスト フィールドでユーザーが場合、使用されます。 たとえばを開くには、カラー ピッカーの RGB 値を決定する使用可能性があります。|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|表示される情報を更新するためのオブジェクトにアクセスできるように、**プロパティ**ウィンドウです。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>各ウィンドウを表示する関連のプロパティで選択可能オブジェクトを含む Vspackage によって実装されます。|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|表示される情報を更新するためのオブジェクトにアクセスできるように、**プロパティ**ウィンドウです。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 各ウィンドウを表示する関連のプロパティで選択可能オブジェクトを含む Vspackage によって実装されます。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|インターフェイスと、構造体のフィールドのメソッドなどのオブジェクトの種類に関する情報を提供します。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|選択項目のイベントの通知を受け取ると、現在のプロジェクト階層、項目、要素の値、およびコマンド UI コンテキストに関する情報を取得する Vspackage を有効にします。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|複数の選択内容にアクセスできる環境を提供します。|  
@@ -54,6 +50,6 @@ ms.lasthandoff: 12/22/2017
   
  詳細については`IDispatch`、MSDN ライブラリを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張プロパティ](../../extensibility/internals/extending-properties.md)   
  [プロパティ ウィンドウのフィールドとインターフェイス](../../extensibility/internals/properties-window-fields-and-interfaces.md)

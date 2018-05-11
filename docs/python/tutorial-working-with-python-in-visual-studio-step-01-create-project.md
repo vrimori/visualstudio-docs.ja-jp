@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python の使用、手順 1、プロジェクトの作成 | Microsoft Docs"
-description: "Visual Studio 内での Python の使用に関する中心的なチュートリアルの手順 1 では、チュートリアル全体の概要を示し、前提条件について説明し、新規 Python プロジェクトの作成プロセスを段階的にたどります。"
-ms.custom: 
+title: Python の使用、手順 1、プロジェクトの作成
+description: Visual Studio 内での Python の使用に関する中心的なチュートリアルの手順 1 では、チュートリアル全体の概要を示し、前提条件について説明し、新規 Python プロジェクトの作成プロセスを段階的にたどります。
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 469494b2c0c4704ac1eab42d36934657adc2313d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 5857f06deea3bc4e7c8af481330e6c66162e2f2a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio での Python の使用
 

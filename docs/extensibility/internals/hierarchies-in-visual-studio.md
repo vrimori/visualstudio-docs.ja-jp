@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio での階層 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での階層 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies, Visual Studio IDE
 - IDE, hierarchies
 ms.assetid: 0a029a7c-79fd-4b54-bd63-bd0f21aa8d30
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e4b0bc2e7c60a4b474f54fd32fd522712326c157
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8d1f018b9cc48d059761a26721c808024f60bb3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio での階層
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) としてのプロジェクトが表示されます、*階層*です。 IDE では、階層は、各ノードが関連付けられているプロパティのセットを持つノードのツリーです。 A*階層をプロジェクト*プロジェクトのアイテム、アイテムのリレーションシップ、および項目の関連付けられているプロパティおよびコマンドを保持するコンテナーです。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  エディターで、ユーザーが項目を開くと、その項目を制御する階層が選択され、アクティブな階層になります。 選択した階層では、一連の項目に作用するコマンドを決定します。 この方法でユーザーのフォーカスを追跡するには、ユーザーの現在のコンテキストを反映するように階層が有効にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトの種類](../../extensibility/internals/project-types.md)   
  [選択範囲と、IDE の通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
  [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)

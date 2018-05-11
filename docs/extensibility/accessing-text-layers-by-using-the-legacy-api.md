@@ -1,27 +1,23 @@
 ---
-title: "レガシ API を使用してテキストのレイヤーにアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: レガシ API を使用してテキストのレイヤーにアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text layers
 ms.assetid: 2258fcdd-38d1-479d-b8f8-1d4e6525f72c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a5f7a80e8d594f3c9e62ecd2047cc1116948d2c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d21b31940f1e1ebca767b9d3f0cf5ab802181bda
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-text-layers-by-using-the-legacy-api"></a>レガシ API を使用してテキストのレイヤーにアクセスします。
 通常、テキストのレイヤーには、テキスト レイアウトの一部の側面がカプセル化します。 「関数での a のタイム」レイヤーでは、キャレット (テキスト挿入ポイント) を含む関数の前後に、テキストを非表示にします。  
@@ -51,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   それに<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer>、レイヤーのテキストを実装する必要があります<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>でイベントを発生させると、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLinesEvents>インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム エディターの構文の色分け](../extensibility/syntax-coloring-in-custom-editors.md)   
  [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
  [レガシ API を使用して、エディター コントロールやメニューをカスタマイズします。](../extensibility/customizing-editor-controls-and-menus-by-using-the-legacy-api.md)

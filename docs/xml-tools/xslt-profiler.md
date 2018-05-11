@@ -1,20 +1,20 @@
 ---
-title: XSLT Profiler | Microsoft Docs
-ms.custom: 
+title: XSLT プロファイラー
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 8e852628-99fc-4e6e-8602-e1c13dde3b95
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95bad7dfdf38b4b8a8f2aa1a307cf7512732ae9c
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 66ff0cb46a36bea633e3d871f9dc476887ae9aa6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xslt-profiler"></a>XSLT プロファイラー
 

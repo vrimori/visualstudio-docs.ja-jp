@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: ドキュメント レベルのプロジェクトでの複雑なデータ バインディング |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ドキュメント レベルのプロジェクトでの複雑なデータ バインディング |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - data binding [Office development in Visual Studio], multiple columns
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 3ee0dc3da505807a572b646c4c286132cc45ca81
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a46a0f30fe3ab0cfc44a4cdb9121c4f39f3c417f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-complex-data-binding-in-a-document-level-project"></a>チュートリアル : ドキュメント レベルのプロジェクトでの複合データ バインディング
   このチュートリアルでは、ドキュメント レベルのプロジェクトでの複合データ バインディングの基本について説明します。 Microsoft Office Excel ワークシートの複数のセルを Northwind SQL Server データベース内のフィールドにバインドできます。  
@@ -181,7 +180,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  空の行で、次の情報を追加します。  
   
-    |EmployeeID|LastName|FirstName|タイトル|  
+    |EmployeeID|LastName|FirstName|Title|  
     |----------------|--------------|---------------|-----------|  
     |10|Ito|Shu|販売責任者|  
   
@@ -226,7 +225,7 @@ ms.lasthandoff: 01/10/2018
   
 -   フィールドとテーブル間のマスター/詳細関係を作成します。 詳細については、次を参照してください。[チュートリアル: データセットを作成するマスターの詳細関係を使用して、キャッシュ](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
  [チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  

@@ -1,32 +1,30 @@
 ---
-title: "Visual Basic での警告の構成 | Microsoft Docs"
-ms.custom: 
+title: Visual Basic での警告の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [Visual Basic], warnings
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c076fe18318a9110babdf17d74898f35466d710c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 265d86365c9084dac9d75a04df1e1ea243b3b585
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-warnings-in-visual-basic"></a>Visual Basic での警告の構成
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のコンパイラには、実行時エラーの原因になる可能性があるコードに関する警告のセットが用意されています。 その情報を使うと、よりきれいで、速く、優れたコードを、バグをほとんど含まずに記述することができます。 たとえば、代入されていないオブジェクト変数のメンバーを呼び出そうとしたり、戻り値を設定しないで関数から戻ろうとしたり、例外をキャッチするロジックでエラーのある `Try` ブロックを実行しようとしたりすると、コンパイラはエラーを生成します。  
   
- 場合によって、コンパイラはユーザーの代わりに追加ロジックを提供し、ユーザーがエラーの可能性を考えることなく現在の作業に集中できるようにします。 以前のバージョンの [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラが提供する追加ロジックを制限するために `Option Strict` が使われていました。 警告を構成すると、個々の警告のレベルでさらに詳細にこのロジックを制限することができます。  
+ 場合によって、コンパイラはユーザーの代わりに追加ロジックを提供し、ユーザーがエラーの可能性を考えることなく現在の作業に集中できるようにします。 以前のバージョンの [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] では、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラが提供する追加ロジックを制限するために **Option Strict** が使われていました。 警告を構成すると、個々の警告のレベルでさらに詳細にこのロジックを制限することができます。  
   
  プロジェクトをカスタマイズして、アプリケーションに関係のない警告はオフにし、他の警告はエラーにすることができます。 このページでは、個々の警告を有効または無効にする方法について説明します。  
   
@@ -75,13 +73,13 @@ ms.lasthandoff: 12/22/2017
   
  ID: 42017  
   
-### <a name="operands-of-type-object-warnings"></a>Object 型のオペランドの警告  
- `Option Strict On` でエラーを作成する `Object` 型のオペランドが発生したときに生成されます。 新しいプロジェクトでの既定値はオンです。  
+### <a name="operands-of-type-object-warnings"></a>'Object' 型のオペランドの警告  
+ **Option Strict On** でエラーを作成する `Object` 型のオペランドが発生したときに生成されます。 新しいプロジェクトでの既定値はオンです。  
   
  ID: 42018、42019  
   
-### <a name="declarations-require-as-clause-warnings"></a>"As" 句が必要な宣言の警告  
- 変数、関数、またはプロパティの宣言に `As` 句が不足していて `Option Strict On` によりエラーが作成されるときに生成されます。 型が割り当てられていない変数は `Object` 型と見なされます。 新しいプロジェクトでの既定値はオンです。  
+### <a name="declarations-require-as-clause-warnings"></a>'As' 句が必要な宣言の警告  
+ 変数、関数、またはプロパティの宣言に `As` 句が不足していて **Option Strict On** によりエラーが作成されるときに生成されます。 型が割り当てられていない変数は `Object` 型と見なされます。 新しいプロジェクトでの既定値はオンです。  
   
  ID: 42020 (変数宣言)、42021 (関数宣言)、42022 (プロパティ宣言)  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 12/22/2017
   
  ID: 42029、42031  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーの種類](/dotnet/visual-basic/programming-guide/language-features/error-types)   
  [Try...Catch...Finally ステートメント](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)   
  [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)   

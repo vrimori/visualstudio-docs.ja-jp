@@ -1,29 +1,25 @@
 ---
-title: "ASP.NET の Visual Studio のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: ASP.NET をデバッグします。
+description: Visual Studio デバッガーを使用して ASP.NET をデバッグします。
+ms.custom: mvc
 ms.date: 03/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 0c6f3b0d074957ba8fabd93707e9a76f0dcd46e1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 5f731e5d40205776682e706aa4e32d988a76f0f0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでの ASP.NET をデバッグします。
+# <a name="quickstart-debug-aspnet-with-the-visual-studio-debugger"></a>クイック スタート: Visual Studio デバッガーでの ASP.NET をデバッグします。
 
 Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 
@@ -37,7 +33,7 @@ Visual Studio デバッガーでは、アプリのデバッグに役立つ多く
 
 1. ダイアログ ボックスが表示されますが、選択**Web アプリケーション**をクリックして中央のペイン**OK**。
 
-     表示されない場合、 **Web アプリケーション**プロジェクト テンプレートをクリックして、**開いている Visual Studio インストーラー**の左側のウィンドウ内のリンク、**新しいプロジェクト** ダイアログ ボックス。 Visual Studio インストーラーが起動します。 選択、 **ASP.NET**と**.NET Core**ワークロード、順に選択**変更**です。
+     表示されない場合、 **Web アプリケーション**プロジェクト テンプレートをクリックして、**開いている Visual Studio インストーラー**の左側のウィンドウ内のリンク、**新しいプロジェクト** ダイアログ ボックス。 Visual Studio インストーラーが起動します。 選択、 **ASP.NET**と **.NET Core**ワークロード、順に選択**変更**です。
 
     ![Web アプリケーションを選択します。](../debugger/media/dbg-qs-aspnet-choose-web-app.png)
 

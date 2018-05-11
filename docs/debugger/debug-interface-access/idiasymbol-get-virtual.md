@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_virtual |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_virtual |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_virtual method
 ms.assetid: 97e3ad51-8ef3-4446-ab33-3cb34a21b7a0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b14cbe602c9fce3dc8eb57214d0a31bb50b0d916
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9952d50c9d990f2c84a5a46dd4786477aebebc60
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetvirtual"></a>IDiaSymbol::get_virtual
 関数は仮想であるかどうかを指定するフラグを取得します。  
@@ -46,5 +41,5 @@ HRESULT get_virtual (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

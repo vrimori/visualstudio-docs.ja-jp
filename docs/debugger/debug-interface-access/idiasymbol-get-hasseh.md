@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_hasseh |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_hasseh |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_hasSEH method
 ms.assetid: 1a709ded-22c8-464c-97be-eba5e464210c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24512abd862c07079af662da0a7188a709291067
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dcc6cb799b5d218cec09095115a9046605780c65
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgethasseh"></a>IDiaSymbol::get_hasSEH
 関数がいずれかであるかどうかを指定するフラグを取得[構造化例外処理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (たとえば、_ _try/\__except ブロック) します。  
@@ -46,13 +41,13 @@ HRESULT get_hasSEH(
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [構造化例外処理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp)

@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションをセキュリティで保護する |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションをセキュリティで保護する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - security [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 271aad509d5ad2adb764b55f93fa65a8178424bd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a587534406d128655f9c24c9195902afb8e8817b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-office-solutions"></a>Office ソリューションのセキュリティ保護
   Office ソリューションのセキュリティ モデルでは、いくつかのテクノロジ: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]、Microsoft Office、および Internet Explorer の制限付きサイト ゾーンのセキュリティ センターです。 次のセクションでは、さまざまなセキュリティ機能のしくみについて説明します:  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-##  <a name="GrantingTrustToSolutions"></a>Office ソリューションへの信頼の付与  
+##  <a name="GrantingTrustToSolutions"></a> Office ソリューションへの信頼の付与  
  Office ソリューションへの信頼の付与とは、以下の証拠に基づいて Office ソリューションを信頼するように各エンド ユーザーのセキュリティ ポリシーを変更することを意味します。  
   
 -   配置マニフェストへの署名に使用する証明書  
@@ -50,16 +49,16 @@ ms.lasthandoff: 01/10/2018
   
  詳細については、次を参照してください。 [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)です。  
   
-##  <a name="GrantingTrustToDocuments"></a>ドキュメントへの信頼の付与  
+##  <a name="GrantingTrustToDocuments"></a> ドキュメントへの信頼の付与  
  ドキュメント レベルのカスタマイズでは、ドキュメントを信頼できる場所として指定されたディレクトリに置く必要があります。  詳細については、「 [Granting Trust to Documents](../vsto/granting-trust-to-documents.md)」を参照してください。  
   
-##  <a name="GrantingTrustWindowsInstaller"></a>Windows インストーラー使用時の信頼の付与  
+##  <a name="GrantingTrustWindowsInstaller"></a> Windows インストーラー使用時の信頼の付与  
  Windows インストーラーを使用して Program Files ディレクトリに Office ソリューションをインストールする MSI ファイルを作成できますが、これには管理者権限が必要です。 Office ソリューションの Program Files ディレクトリに、Visual Studio 2010 Tools for Office Runtime は信頼されるようにこれらの Office ソリューションを検討し、ClickOnce 信頼プロンプトは表示されません。  
   
-##  <a name="Security"></a>Office ソリューションの特定のセキュリティに関する考慮事項  
+##  <a name="Security"></a> Office ソリューションの特定のセキュリティに関する考慮事項  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]、[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] および Microsoft Office に用意されているセキュリティ機能は、Office ソリューションのさまざまなセキュリティ上の脅威に対する保護に役立てることができます。 詳細については、「 [Specific Security Considerations for Office Solutions](../vsto/specific-security-considerations-for-office-solutions.md)」を参照してください。  
   
-##  <a name="SecurityDuringDeployment"></a>開発時のセキュリティ  
+##  <a name="SecurityDuringDeployment"></a> 開発時のセキュリティ  
  Visual Studio では、開発プロセスを容易にするために、プロジェクトをビルドするたびにソリューションの実行およびデバッグに必要なセキュリティ ポリシーが設定されます。 場合によっては、プロジェクトの開発に追加のセキュリティ手順が必要になります。  
   
 ### <a name="document-level-solutions"></a>ドキュメント レベルのソリューション  
@@ -78,7 +77,7 @@ ms.lasthandoff: 01/10/2018
   
  時間の経過と共に多くの一時的な証明書が生成される可能性があるため、一時的な証明書を随時クリアする必要があります。  
   
-##  <a name="VisualStudioToolsForOfficeRuntime"></a>Visual Studio Tools for Office Runtime  
+##  <a name="VisualStudioToolsForOfficeRuntime"></a> Visual Studio Tools for Office Runtime  
  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]にパブリッシャーとカスタマイズに付与されるアクセス許可の id を検証する機能があります。 アクセス許可を確認するときには、一連のセキュリティ チェックが実行されます。  
   
 ### <a name="security-during-customization-loading"></a>カスタマイズの読み込み時のセキュリティ  
@@ -103,7 +102,7 @@ ms.lasthandoff: 01/10/2018
   
  ![VSTO セキュリティ - セットアップ プログラムを使用してインストールする](../vsto/media/setup-vstoinstaller.png "VSTO セキュリティ - セットアップ プログラムを使用してインストールするには")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)   
  [信頼のリストを使用して Office ソリューションを信頼します。](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)   

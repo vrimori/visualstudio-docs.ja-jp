@@ -1,10 +1,8 @@
 ---
-title: "[オプション]、[テキスト エディター]、[C#]、[詳細] | Microsoft Docs"
+title: '[オプション]、[テキスト エディター]、[C#]、[詳細]'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
@@ -16,14 +14,14 @@ helpviewer_keywords:
 - XML documentation, creating
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d6cf8b655151e9b07111b6ac6fd64b6ad3c845f
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: a7675d711a4a1df6af4643a459f49b6ef518e5b4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 
@@ -112,8 +110,8 @@ ms.lasthandoff: 02/12/2018
 
 ## <a name="see-also"></a>関連項目
 
-[方法: ドキュメント生成のための XML コメントを挿入する](../../ide/reference/generate-xml-documentation-comments.md)  
-[XML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
-[XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)  
-[言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)  
-[C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [方法: ドキュメント生成のための XML コメントを挿入する](../../ide/reference/generate-xml-documentation-comments.md)
+- [XML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [XML コメントによるコードの文書化 (C# ガイド)](/dotnet/csharp/codedoc)
+- [言語固有のエディター オプションの設定](../../ide/reference/setting-language-specific-editor-options.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

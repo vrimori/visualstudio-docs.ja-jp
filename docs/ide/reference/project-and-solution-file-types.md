@@ -1,12 +1,9 @@
 ---
-title: "プロジェクト ファイルとソリューション ファイルの種類 | Microsoft Docs"
-ms.custom: 
+title: プロジェクト ファイルとソリューション ファイルの種類
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - File Properties.CopyToOutputDirectory
 - File Properties.CustomToolNamespace
@@ -25,13 +22,14 @@ helpviewer_keywords:
 - suo files
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d05b7b5f1510777c758998572e78757c47148fa1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b3786d6f38e4f87aa05a51b0a6112613bda65e56
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-and-solution-file-types"></a>プロジェクト ファイルとソリューション ファイルの種類
 
@@ -50,8 +48,8 @@ Visual Studio では、ソリューションの設定を格納するために、
 
 プロジェクトにはさまざまな種類のファイルを含めることができます。 たとえば、C# コード ファイルの拡張子は **.cs**、C++ ファイルの拡張子は **.cpp** です。 リソースは **.resx** ファイルに、XAML は **.xaml** ファイルに格納されます。 [App.config](../../ide/managing-application-settings-dotnet.md) ファイルには、アプリケーション コードに含めない方がよいアプリケーション情報 (接続文字列など) が含まれています。
 
-C++ プロジェクトのファイルの種類については、「[Visual C++ プロジェクトに対して作成されるファイルの種類](/cpp/ide/file-types-created-for-visual-cpp-projects)」と「[Unicode in Microsoft Foundation Class Library](/cpp/mfc/unicode-in-mfc)」(Microsoft Foundation Class ライブラリの Unicode) を参照してください。
+C++ プロジェクトでのファイルの種類について詳しくは、「[File Types Created for Visual C++ Projects](/cpp/ide/file-types-created-for-visual-cpp-projects)」(Visual C++ プロジェクトに対して作成されるファイルの種類) をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)
+- [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)

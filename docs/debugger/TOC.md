@@ -1,14 +1,15 @@
 # [デバッガー向けドキュメント](index.md)
-# 概要
-## [デバッガー機能ツアー](debugger-feature-tour.md)
+# [概要](debugger-overview.md)
 # クイックスタート
+## [デバッガーでのはじめに](debugger-feature-tour.md)
 ## [管理対象アプリをデバッグする](quickstart-debug-with-managed.md)
 ## [ネイティブ アプリをデバッグする](quickstart-debug-with-cplusplus.md)
 ## [ASP.NET アプリをデバッグする](quickstart-debug-aspnet.md)
 # チュートリアル
 ## [Visual Studio を使用したデバッグについて理解する](getting-started-with-the-debugger.md)
-## [デバッガーで Python コードを実行する...](../python/vs-tutorial-01-04.md)
+## [デバッガーで Python コードを実行する...](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 ## [ライブ Azure アプリをデバッグする](debug-live-azure-applications.md)
+## [管理されたネイティブ コードをデバッグする](how-to-debug-managed-and-native-code.md)
 ## [IntelliTrace ステップ バックを使用してスナップショットを表示する](how-to-use-intellitrace-step-back.md)
 # 使い方ガイド
 ## [デバッガーでのコード間の移動](navigating-through-code-with-the-debugger.md)
@@ -26,9 +27,6 @@
 ### [ビジュアライザーでの文字列値の表示](string-visualizer-dialog-box.md)
 ### [逆アセンブリ コードの表示](how-to-use-the-disassembly-window.md)
 #### [方法 : [メモリ] ウィンドウの上下スクロール](how-to-page-up-or-down-in-memory.md)
-### [呼び出し履歴の表示](how-to-use-the-call-stack-window.md)
-#### [[呼び出し履歴] ウィンドウの混合コードと不足情報](mixed-code-and-missing-information-in-the-call-stack-window.md)
-#### [方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージ コードからステップ アウトする](how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)
 ### [レジスタ値の表示](how-to-use-the-registers-window.md)
 #### [[レジスタ] ウィンドウの概要](debugging-basics-registers-window.md)
 #### [方法 : レジスタ グループの表示と非表示を切り替える](how-to-display-and-hide-register-groups.md)
@@ -298,6 +296,7 @@
 #### [[プロセスにアタッチできません] ダイアログ ボックス](unable-to-attach-to-the-process.md)
 #### [[エディット コンティニュ エラー メッセージ] ダイアログ ボックス](edit-and-continue-error-message-dialog-box.md)
 #### [エラー: 関数 'function' の評価がタイムアウトし、安全でない方法で中止される必要がありました](error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way.md)
+#### [エラー: 関数 'function' の評価中にターゲット プロセスがコード 'code' で終了しました](error-evaluating-the-function-process-exited.md)
 #### [エラー : リモート コンピューター上の SQL Server に接続できません](error-unable-to-connect-to-sql-server-on-remote-machine.md)
 #### [エラー: SQL Server デバッグ インターフェイスにアクセスできません](error-unable-to-access-the-sql-server-debugging-interface.md)
 #### [エラー :SQL が SSDEBUGPS を見つけることができません](error-sql-can-t-find-ssdebugps.md)

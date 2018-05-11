@@ -1,11 +1,7 @@
 ---
-title: "データセットの読み込み中に制約をオフに |Microsoft ドキュメント"
-ms.custom: 
+title: データセットの読み込み中に制約をオフにします。
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DataRow.BeginEdit
 - DataRow.EndEdit
@@ -19,39 +15,42 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - constraints [Visual Basic], suspending during dataset update
 ms.assetid: 553f7d0c-2faa-4c17-b226-dd02855bf1dc
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 88c8687511dd600802cc7c6ecdc12f0827fd7f6f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: c27cb590b5a8a4b38a143de5e6faba80414f97ba
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>データセットの読み込み中に制約をオフにします。
-データセットに制約 (外部キー制約) などが含まれている場合、そのデータセットに対して実行される操作を順序に関連するエラーを発行できます。 たとえば、読み込み前に、子レコードの読み込み関連する親レコードの制約に違反してエラーが発生することができます。 子レコードをロードするとすぐに、制約は、関連する親レコード チェックし、エラーが発生します。  
-  
- 一時的に制約を中断する機構がない場合は、レコードを子テーブルに読み込もうとするたびにエラーが生成されます。 データセットのすべての制約を中断する別の方法として、<xref:System.Data.DataRow.BeginEdit%2A> プロパティおよび <xref:System.Data.DataRow.EndEdit%2A> プロパティを使用できます。  
-  
+
+データセットに制約 (外部キー制約) などが含まれている場合、そのデータセットに対して実行される操作を順序に関連するエラーを発行できます。 たとえば、読み込み前に、子レコードの読み込み関連する親レコードの制約に違反してエラーが発生することができます。 子レコードをロードするとすぐに、制約は、関連する親レコード チェックし、エラーが発生します。
+
+一時的に制約を中断する機構がない場合は、レコードを子テーブルに読み込もうとするたびにエラーが生成されます。 データセットのすべての制約を中断する別の方法として、<xref:System.Data.DataRow.BeginEdit%2A> プロパティおよび <xref:System.Data.DataRow.EndEdit%2A> プロパティを使用できます。
+
 > [!NOTE]
->  入力規則イベント (たとえば、<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>) 制約がになっているときに発生しません。  
-  
-### <a name="to-suspend-update-constraints-programmatically"></a>更新制約をプログラムによって中断するには  
-  
--   次の例は、データセットでの制約チェックを一時的に無効にする方法を示しています。  
-  
+> 入力規則イベント (たとえば、<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>) 制約がになっているときに発生しません。
+
+## <a name="to-suspend-update-constraints-programmatically"></a>更新制約をプログラムによって中断するには
+
+-   次の例は、データセットでの制約チェックを一時的に無効にする方法を示しています。
+
      [!code-csharp[VbRaddataEditing#10](../data-tools/codesnippet/CSharp/turn-off-constraints-while-filling-a-dataset_1.cs)]
-     [!code-vb[VbRaddataEditing#10](../data-tools/codesnippet/VisualBasic/turn-off-constraints-while-filling-a-dataset_1.vb)]  
-  
-### <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>データセット デザイナーを使って更新制約を中断するには  
-  
-1.  データセットを開き、**データセット デザイナー**です。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)です。  
-  
-2.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataSet.EnforceConstraints%2A>プロパティを`false`です。  
-  
-## <a name="see-also"></a>参照  
- [Tableadapter を使用してデータセットを入力します。](../data-tools/fill-datasets-by-using-tableadapters.md)   
- [データセットのリレーションシップ](../data-tools/relationships-in-datasets.md)
+     [!code-vb[VbRaddataEditing#10](../data-tools/codesnippet/VisualBasic/turn-off-constraints-while-filling-a-dataset_1.vb)]
+
+## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>データセット デザイナーを使って更新制約を中断するには
+
+1.  データセットを開き、**データセット デザイナー**です。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)です。
+
+2.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataSet.EnforceConstraints%2A>プロパティを`false`です。
+
+## <a name="see-also"></a>関連項目
+
+- [TableAdapters を使用してデータセットを入力する](../data-tools/fill-datasets-by-using-tableadapters.md)
+- [データセットのリレーションシップ](../data-tools/relationships-in-datasets.md)

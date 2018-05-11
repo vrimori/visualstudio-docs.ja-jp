@@ -1,7 +1,9 @@
 ---
-title: "従来のワークフローのデバッグ |Microsoft ドキュメント"
+title: ワークフロー デザイナーの従来のワークフローのデバッグ
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, debugging
 - debugging, workflows
@@ -9,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e6097b47-760a-4b30-a92c-ae70cdbda49f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4898e8f720143bd60337c9fe6bed20a7489c0d04
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 33a8358c5d62b938fc64d608c9b4546ab1745aaa
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-legacy-workflows"></a>従来のワークフローのデバッグ
 
-使用するかどうかは、従来の Windows ワークフロー デザイナーで[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)]をビルドする[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]target.NET Framework 3.0 または 3.5 をデバッグできるその他のプログラムと同様に、ワークフローのブレークポイントの設定、プロセスへのアタッチを調べることでアプリケーションスレッドと呼び出し履歴。 また、リモート デバッグを実行することもできます。
+Visual Studio で、従来の Windows ワークフロー デザイナーを使用して、その target.NET Framework 3.0 または 3.5 は、Windows Workflow Foundation (WF) アプリケーションをビルドするが場合をデバッグするその他のプログラムと同様に、ワークフロー、ブレークポイントの設定プロセスへのアタッチスレッドと呼び出し履歴を調べることです。 また、リモート デバッグを実行することもできます。
 
 > [!NOTE]
 > コンピューターに複数のバージョンの Visual Studio をインストールしてアンインストールした場合、WF3 のデバッグは失敗し、次のいずれかが発生する可能性があります。
@@ -32,7 +34,7 @@ ms.lasthandoff: 03/12/2018
 >
 > .NET Framework 3.0 または 3.5 のワークフローのデバッグ時にこれらのシナリオのいずれかが発生する場合は、Visual Studio インストールの修復を実行してください。
 
- [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] は、次のような標準の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッグ ウィンドウに統合されています。
+ Windows Workflow Foundation は、次のような標準の Visual Studio デバッグ ウィンドウに統合されています。
 
 -   **ブレークポイント**: 想定どおりに動作しますが、関数名のアクティビティを指定します。
 

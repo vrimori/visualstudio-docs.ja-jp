@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: グラフを更新するオプション ボタンを使用してドキュメントの |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: グラフを更新するオプション ボタンを使用してドキュメントの |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - controls [Office development in Visual Studio], updating documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1f1340c3e67ca0647448228fb2414fa4ba7d4003
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 60daf98d02c358e3a288a7dbb6a8a02df3a1258f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-updating-a-chart-in-a-document-using-radio-buttons"></a>チュートリアル : オプション ボタンを使用してドキュメントのグラフを更新する方法
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでオプション ボタンを使用して、文書上でグラフのスタイルを選択するオプションをユーザーに提供する方法を示します。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/10/2018
   
      **オブジェクト** ダイアログ ボックスが表示されます。  
   
-3.  **オブジェクトの種類**ボックスの一覧、**新規作成** タブで **Microsoft Graph グラフ** をクリックし、 **ok**です。  
+3.  **オブジェクトの種類**ボックスの一覧、**新規作成** タブで  **Microsoft Graph グラフ** をクリックし、 **ok**です。  
   
      カーソル位置にあるドキュメントにグラフが追加され、**データシート**ウィンドウは、既定のデータが表示されます。  
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 01/10/2018
   
      **[参照の追加]** ダイアログ ボックスが表示されます。  
   
-2.  **.NET**  タブで **Microsoft.Office.Interop.Graph** をクリック**OK**です。 アセンブリの 14.0.0.0 バージョンを選択します。  
+2.  **.NET**  タブで  **Microsoft.Office.Interop.Graph**  をクリック**OK**です。 アセンブリの 14.0.0.0 バージョンを選択します。  
   
 ## <a name="changing-the-chart-style-when-a-radio-button-is-selected"></a>オプション ボタンが選択されたときのグラフ スタイルの変更  
  ボタンを正しく動作させるために、ユーザー コントロールにパブリック イベントを作成し、選択の種類を設定するプロパティを追加して、各オプション ボタンの `CheckedChanged` イベントにプロシージャを作成します。  
@@ -215,7 +214,7 @@ ms.lasthandoff: 01/10/2018
   
 -   コンボ ボックスからスタイルを選択して書式を変更する。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

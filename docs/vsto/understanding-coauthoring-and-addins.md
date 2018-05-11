@@ -1,13 +1,10 @@
 ---
-title: "Understanding 共同編集およびアドイン |Microsoft ドキュメント"
-ms.custom: 
+title: Understanding 共同編集およびアドイン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/20/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - coauthoring, in Excel
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 656f1274b4dafc46c1417d2282f982eaed0c2f06
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 911db43b820a05928f97e727568582f939560e9d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-coauthoring-and-add-ins"></a>Understanding 共同編集およびアドイン
 
@@ -30,5 +27,5 @@ ms.lasthandoff: 01/10/2018
 
 注: は for Windows Desktop の Excel 共同編集 2017年に導入され、は office 365 のサブスクライバーを使用します。 Office 2016 または以前にライセンスを購入するユーザーは現在ありません coauthoring 機能へのアクセス。 (Excel Online では、Excel for Android、ios、Excel および Excel モバイル、Windows ストアでもサポート共同編集)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Excel ソリューション](./excel-solutions.md)

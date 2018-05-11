@@ -1,13 +1,10 @@
 ---
-title: "SharePoint ソリューションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint ソリューションのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.WebConfigModificationDialog
 - VS.SharePointTools.Project.DebuggingNotEnabled
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, debugging
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 85317332cd6b142bb8e0e916e3d7ac80e4aa836c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1be963dec8eee77efe4855c2e810af0fd1e72f1b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-sharepoint-solutions"></a>SharePoint ソリューションのデバッグ
   SharePoint ソリューションは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用してデバッグできます。 デバッグを開始するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]が SharePoint サーバーに、プロジェクト ファイルを展開し、Web ブラウザーで SharePoint サイトのインスタンスを開きます。 以下のセクションでは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint アプリケーションをデバッグする方法について説明します。  
@@ -42,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [拡張デバッグ情報を有効にします。](#EnhancedDebug)  
   
-##  <a name="EnableDebug"></a>デバッグの有効化  
+##  <a name="EnableDebug"></a> デバッグの有効化  
  SharePoint ソリューションを [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で初めてデバッグするとき、デバッグを有効にするように web.config ファイルが構成されていないことを警告するダイアログ ボックスが表示されます。 web.config ファイルは SharePoint サーバーのインストール時に作成されます。 詳細については、次を参照してください[Web.config ファイルで作業](http://go.microsoft.com/fwlink/?LinkID=149266)。)。このダイアログ ボックスでは、デバッグせずにプロジェクトを実行するか、デバッグを有効にするように web.config ファイルを編集するかを選択できるようになっています。 前者を選択した場合、プロジェクトは通常どおりに実行されます。 後者を選択した場合、web.config ファイルは次のように構成されます。  
   
 -   呼び出し履歴は有効にする (`CallStack="true"`)  
@@ -88,7 +85,7 @@ ms.lasthandoff: 01/10/2018
   
 -   コンパイル デバッグは無効にする (`<compilation debug="false">`)  
   
-##  <a name="Deployment"></a>F5 キーによるデバッグと配置プロセス  
+##  <a name="Deployment"></a> F5 キーによるデバッグと配置プロセス  
  SharePoint プロジェクトをデバッグ モードで実行するとき、SharePoint の配置プロセスによって、次のタスクが実行されます。  
   
 1.  カスタマイズ可能な配置前コマンドが実行されます。  
@@ -120,14 +117,14 @@ ms.lasthandoff: 01/10/2018
   
  タスクが 1 つ完了するたびに、ステータス メッセージが [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の出力ウィンドウに表示されます。 タスクを完了できなかった場合は、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の [エラー一覧] ウィンドウにエラー メッセージが表示されます。  
   
-##  <a name="Features"></a>SharePoint プロジェクトのフィーチャー  
+##  <a name="Features"></a> SharePoint プロジェクトのフィーチャー  
  フィーチャーは、サイト定義を使用することによってサイトの変更を単純化する、移植性のあるモジュール式の機能単位です。 パッケージも[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)](WSS) 要素を特定のスコープに対してアクティブ化できるし、ユーザーが特定の目的またはタスクを達成するのに役立ちます。 テンプレートはフィーチャーとして配置されます。  
   
  展開プロセスが内のフォルダーを作成するプロジェクトをデバッグ モードで実行するときに、*機能*ディレクトリ %COMMONPROGRAMFILES%\Microsoft shared \web server \14\template\features にします。 機能名の形式である*プロジェクト名*破棄*x*、TestProject_Feature1 などです。  
   
  Feature ディレクトリにソリューションのフォルダーが含まれています、*機能定義*ファイルと*ワークフロー定義*ファイル。 フィーチャー定義ファイル (Feature.xml) ファイルの説明で、プロジェクトのください。 プロジェクト定義ファイル (Elements.xml) は、プロジェクト テンプレートについて説明します。 Elements.xml は含まれて**ソリューション エクスプ ローラー**が Feature.xml がソリューション パッケージが作成されたときに発生します。 これらのファイルに関する詳細については、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)です。  
   
-##  <a name="Workflow"></a>ワークフローのデバッグ  
+##  <a name="Workflow"></a> ワークフローのデバッグ  
  ワークフロー プロジェクトをデバッグすると、その種類に応じたワークフロー テンプレートが [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によってライブラリまたはリストに追加されます。 このワークフロー テンプレートは手動で開始できるほか、項目を追加または更新することによって開始することもできます。 これで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を使用してワークフローをデバッグできます。  
   
 > [!NOTE]  
@@ -137,12 +134,12 @@ ms.lasthandoff: 01/10/2018
   
  たとえば、ワークフローの手動での開始を許可した場合は、ライブラリまたはリスト内のアイテムから、ワークフローを直接開始します。 ワークフローを手動で開始する方法の詳細については、次を参照してください。[ドキュメント項目に対するワークフローを手動で開始](http://go.microsoft.com/fwlink/?LinkID=79938)です。  
   
-##  <a name="FeatureEvents"></a>フィーチャー イベント レシーバーのデバッグ  
+##  <a name="FeatureEvents"></a> フィーチャー イベント レシーバーのデバッグ  
  既定では、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションを実行すると、そのフィーチャーが SharePoint サーバー上で自動的にアクティブ化されます。 ただし、これにより、問題フィーチャー イベント レシーバーをデバッグするときにためで機能をアクティブにするタイミング[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッガーとは異なるプロセスで実行されます。 つまり、ブレークポイントなどの一部のデバッグ機能が正常に機能しなくなるということです。  
   
  SharePoint の機能の自動ライセンス認証を無効にして、フィーチャーのイベント レシーバーが適切にデバッグできるように、プロジェクトの値を設定**アクティブな配置構成**プロパティを**アクティブ化しません。**デバッグする前にします。 そのうえで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint アプリケーションのデバッグを開始してから、SharePoint でフィーチャーを手動でアクティブ化します。 機能をアクティブ化、開く、**サイトの操作**メニューを SharePoint では、**サイト設定**を選択、**サイト機能の管理**リンク、および、を選択し**Activate**通常どおりデバッグを続行する、機能の横にあるボタンをクリックします。  
   
-##  <a name="EnhancedDebug"></a>拡張デバッグ情報を有効にします。  
+##  <a name="EnhancedDebug"></a> 拡張デバッグ情報を有効にします。  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロセス (devenv.exe)、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ホスト プロセス (vssphost4.exe)、SharePoint、および WCF レイヤー間の相互作用がときには複雑であるため、ビルドや配置などの実行中に発生したエラーを診断することが困難な場合があります。 拡張デバッグ情報を有効にすると、こうしたエラーが解決しやすくなります。 これを行うには、まず Windows レジストリで次のレジストリ キーに移動します。  
   
  [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools]  
@@ -153,7 +150,7 @@ ms.lasthandoff: 01/10/2018
   
  その他の SharePoint のレジストリ キーの詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのトラブルシューティング](../sharepoint/troubleshooting-sharepoint-solutions.md)  
   
   

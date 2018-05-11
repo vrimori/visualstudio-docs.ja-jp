@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: フィーチャー イベント レシーバーの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: フィーチャー イベント レシーバーの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, feature event receivers
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e028eb4d95495e92718769979f43012319596960
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: cda3967d0fc95fdd8f28503f209a5f2208d07031
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>チュートリアル: フィーチャーのイベント レシーバーの追加
   フィーチャー イベント レシーバーとは、SharePoint で、次の機能に関連するイベントのいずれかが発生したときに実行する方法です。  
@@ -120,7 +119,7 @@ ms.lasthandoff: 01/10/2018
   
      お知らせが表示されます、**お知らせ**フィーチャーが非アクティブ化された後に一覧表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: イベント レシーバーを作成します。](../sharepoint/how-to-create-an-event-receiver.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

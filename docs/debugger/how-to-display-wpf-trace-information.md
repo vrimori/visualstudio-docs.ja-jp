@@ -1,12 +1,9 @@
 ---
-title: "方法: WPF トレース情報の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: WPF トレース情報の表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,19 +13,19 @@ helpviewer_keywords:
 - WPF, debugging
 - debugging, WPF
 ms.assetid: be3c6859-06e1-459e-9fd0-46375b5f55ef
-caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3e210d575b17552d7b5e4d6dc126335ff3711ee5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 99fc861c627a094f9f5e4e67a6b034ecdd407688
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-display-wpf-trace-information"></a>方法: WPF トレース情報を表示する
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]WPF アプリケーションからデバッグ トレース情報を受信してでその情報を表示できます、**出力**ウィンドウです。 デバッグ トレース情報を表示するには、WPF トレースを有効にする必要があります。  
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] WPF アプリケーションからデバッグ トレース情報を受信してでその情報を表示できます、**出力**ウィンドウです。 デバッグ トレース情報を表示するには、WPF トレースを有効にする必要があります。  
   
  WPF トレースは、App.Config ファイルで、または <xref:System.Diagnostics.PresentationTraceSources> クラスを使用してプログラムによって有効にすることができます。 WPF トレースを有効にする簡単な方法を使用して、**オプション**ウィンドウです。 Web アプリケーション用の WPF トレースはサポートされていません。  
   
@@ -88,5 +85,5 @@ ms.lasthandoff: 12/22/2017
   
 8.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WPF のデバッグ](../debugger/debugging-wpf.md)

@@ -1,13 +1,9 @@
 ---
-title: "ClickOnce アプリケーションをセキュリティで保護する |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce アプリケーションをセキュリティで保護する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, security
 - deploying applications, ClickOnce security
 ms.assetid: a05b5f2f-d1f2-471a-8096-8b11f7554265
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7825ef0b664007fc119d7ed08066e8585ee59ac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 13ec12009a48d841a991519ab929794279fe2a5e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="securing-clickonce-applications"></a>ClickOnce アプリケーションのセキュリティ
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、保護されているリソースや操作に対して、コードが持つアクセス権を制限できるようにするための .NET Framework のコード アクセス セキュリティ制約を前提としています。 このため、コード アクセス セキュリティの影響を理解し、それに応じて [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成することが重要です。 アプリケーションでは、完全な信頼ゾーンまたは部分信頼ゾーン (インターネット ゾーンとイントラネット ゾーンなど) を使用して、アクセスを制限できます。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  アプリケーションの配置元ゾーンに与えられた既定のアクセス許可セットに含まれないアクセス許可を追加した場合、エンド ユーザーに対して、インストール時または更新時にアクセス許可の付与を求めるプロンプトが表示されます。 ユーザーに対する要求が行われないようにするために、システム管理者は、信頼された発行元として特定のアプリケーション発行元を定義する ClickOnce 配置ポリシーを指定できます。 このポリシーが配置されるコンピューター上では、アクセス許可は自動的に付与され、ユーザーへの要求は行われません。  
   
- 開発者は、開発するアプリケーションが適切なアクセス許可で実行されることを確認する必要があります。 実行時にアプリケーションでゾーン以外のアクセス許可が必要な場合、セキュリティの例外が表示されることがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって、対象のセキュリティ ゾーンでアプリケーションをデバッグできます。 また、セキュリティで保護されたアプリケーションの開発に役立ちます。 詳細については、「 [How to: Debug a ClickOnce Application with Restricted Permissions](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)」を参照してください。  
+ 開発者は、開発するアプリケーションが適切なアクセス許可で実行されることを確認する必要があります。 実行時にアプリケーションでゾーン以外のアクセス許可が必要な場合、セキュリティの例外が表示されることがあります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって、対象のセキュリティ ゾーンでアプリケーションをデバッグできます。 また、セキュリティで保護されたアプリケーションの開発に役立ちます。 詳細については、「 [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)」を参照してください。  
   
  コード アクセス セキュリティと ClickOnce の詳細については、「 [Code Access Security for ClickOnce Applications](../deployment/code-access-security-for-clickonce-applications.md)」を参照してください。  
   
@@ -82,6 +77,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deploying-obfuscated-assemblies"></a>難読化されたアセンブリの配置  
  Visual Studio が含まれていますが、無料[プリエンプティブの保護 - Dotfuscator Community Edition](../ide/dotfuscator/index.md)、コード難読化し、アクティブな保護対策を ClickOnce アプリケーションを保護に使用できます。  詳細については、「 [Dotfuscator Community Edition のユーザー ガイドの ClickOnce セクション](https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/advanced_clickonce.html)です。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)

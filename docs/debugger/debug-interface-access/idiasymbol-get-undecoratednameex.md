@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_undecoratednameex |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_undecoratednameex |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_undecoratedNameEx method
 ms.assetid: 579aed0b-c57d-41a1-a94a-3bf665fd4a9d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 82d0b25b2306cc957015ec4c205a22cd44660357
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 078826c799cf99cadd1812ff88dc29663a759baf
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetundecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 C++ の非装飾の名前の取得の一部またはすべての装飾 (リンケージ) 名です。  
@@ -79,5 +74,5 @@ HRESULT get_undecoratedNameEx(
 |UNDNAME_NO_IDENT_CHAR_CHECK|0x10000|有効な識別子の文字のチェックを抑制します。|  
 |UNDNAME_NO_PTR64|0x20000|出力に ptr64 は含まれません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

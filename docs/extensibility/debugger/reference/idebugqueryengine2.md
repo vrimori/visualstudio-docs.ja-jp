@@ -1,29 +1,25 @@
 ---
-title: "IDebugQueryEngine2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugQueryEngine2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugQueryEngine2
 helpviewer_keywords:
 - IDebugQueryEngine2 interface
 ms.assetid: 8f0e1838-a818-4459-9138-a3dceb7408de
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a54b6f6ab5667993553074f1ca2511a544a0eaea
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 402fc37d2ee78d834a2a88d070277c7b90ac3ecb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
 このインターフェイスにより、デバッグ マネージャー (SDM) をデバッグ エンジン (DE) を表すインターフェイスを取得するセッションです。  
@@ -50,14 +46,14 @@ IDebugQueryEngine2 : IUnknown
 ## <a name="remarks"></a>コメント  
  通常、このインターフェイスを実装するオブジェクトで実装、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス関数をステップ実行因果関係の順序付けですつまり、デバッガーがステップ実行関数の場合、外の場合をサポートするために、。次の関数を実行可能性がありますいないスタックで前の関数が別のスレッド内の関数を完全にあります。 「因果関係の作成」の定義では、次を参照してください。、 [Visual Studio デバッガーの用語集](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

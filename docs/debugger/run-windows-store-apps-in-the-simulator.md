@@ -1,28 +1,25 @@
 ---
-title: "UWP アプリをシミュレーターで実行 |Microsoft ドキュメント"
-ms.custom: 
+title: UWP アプリをシミュレーターで実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 81b69bf8-ec87-4bb6-9ad4-1fa7b7802d16
-caps.latest.revision: "42"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 40cdfaf430483d68744e4ec9535c2546e75d4470
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: 99881b657f6d3cb6877c7ce6d1fbf80f4eb1d731
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>UWP アプリをシミュレーターで実行します。
 UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミュレートするデスクトップ アプリケーションです。 通常は、ローカル コンピューター、接続されたデバイスまたはリモート コンピューター上でデバッグするは。 ただし、一部のシナリオで別の物理的な画面サイズと解像度をエミュレートするために、Visual Studio シミュレーターを使用することがあります。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。
@@ -99,7 +96,7 @@ UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミ
 > [!NOTE]
 >  ビットマップ イメージのスケーリングされたバージョンをアプリに保存できます。Windows は、現在のスケールで正しいイメージを読み込みます。 詳細については、次を参照してください。[デザインと UI 出だし](/windows/uwp/layout/design-and-ui-intro)です。 ただし、Windows によって解像度に合ったイメージが選択されるようにシミュレーターの解像度を変更した場合、新しいイメージを表示するにはデバッグ セッションを停止して再度開始する必要があります。  
   
-##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a>Microsoft Store に送信するアプリのスクリーン ショットをキャプチャします。  
+##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Microsoft Store に送信するアプリのスクリーン ショットをキャプチャします。  
  Microsoft ストアにアプリを送信するときに、アプリのスクリーン ショットを含める必要があります。  
   
 > [!NOTE]
@@ -153,5 +150,5 @@ UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミ
   
  シミュレーターを終了するには、キーを押して**ctrl キーと alt キーを押しながら F4**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio からアプリを実行します。](../debugger/run-store-apps-from-visual-studio.md)

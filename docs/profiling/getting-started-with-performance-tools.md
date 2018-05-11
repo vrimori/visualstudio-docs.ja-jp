@@ -1,28 +1,23 @@
 ---
-title: "パフォーマンス ツールの概要 | Microsoft Docs"
-ms.custom: 
+title: パフォーマンス ツールの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started, performance
 - getting started, profiling tools
 ms.assetid: 02085214-a8e4-40fd-9b26-32391a7a7082
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be3292cb4484263b9e70a4bbdde36f60f1ea7ccb
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 6fe0a1d3a305ca19b36358ab28fbb794d56df2aa
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="getting-started-with-performance-tools"></a>パフォーマンス ツールの概要
 ここでは、Visual Studio パフォーマンス ツールを使用してコード パフォーマンスの収集、表示、および分析を行うときに適用する概念とタスクの概要を説明します。  
@@ -39,9 +34,8 @@ ms.lasthandoff: 02/27/2018
 |----------|---------------------|  
 |**アプリケーションまたは Web サイトの迅速なプロファイリング:** Visual Studio ソリューションまたは Web サイトのプロファイリング セッションを構成および実行するには、パフォーマンス ウィザードを使用します。|-   [パフォーマンス プロファイリングのビギナーズ ガイド](../profiling/beginners-guide-to-cpu-sampling.md)<br />-   [方法: Web サイトのパフォーマンス データを収集する](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
 |**ウィザードを使用しない、アプリケーションのプロファイリング:** パフォーマンス セッションのプロパティ ページを使用してパフォーマンス セッションを作成する方法を学びます。|-   [方法: パフォーマンス セッションを手動で作成する](../profiling/how-to-manually-create-performance-sessions.md)|  
-|**実習:** サンプル アプリケーションをプロファイリングして実践的に練習します。|-   [チュートリアル: パフォーマンスの問題を特定する](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [PeopleTrax サンプル](../profiling/peopletrax-sample-profiling-tools.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概要](../profiling/overviews-performance-tools.md)   
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [パフォーマンス規則を使用したデータの分析](../profiling/using-performance-rules-to-analyze-data.md)   

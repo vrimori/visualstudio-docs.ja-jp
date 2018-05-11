@@ -1,12 +1,10 @@
 ---
-title: "ドキュメント レベルのソリューションでの保護を文書化 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント レベルのソリューションでの保護を文書化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], restricted permissions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 815bd65f9e1a0182736b2cc68d06c5f289fd4f68
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 546a74179b8bdf52541d771809426b5e4aec3e45
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-protection-in-document-level-solutions"></a>ドキュメント レベルのソリューションにおけるドキュメントの保護
   ドキュメント レベルのプロジェクトでは、Microsoft Office Word および Microsoft Office Excel の保護機能を使用することができます。 これらの機能は、ドキュメントの保護された部分を変更する権限のないユーザーをブロックします。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="setting-the-password"></a>パスワードの設定  
  Visual Studio は自動的に保護を有効しますが、既定ではパスワードが用意されていません。 パスワードを保持する文書を保護する場合は、ソリューションを配置する前に追加する必要があります。 承認されたユーザーがドキュメントの保護を解除するパスワードを追加することができます。パスワードのない保護を簡単に削除することはできません。 パスワードの設定の詳細については、特定の Office アプリケーションのヘルプを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって文書および文書の一部を保護します。](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   

@@ -1,12 +1,10 @@
 ---
-title: "作成する項目テンプレートとプロジェクト テンプレートの SharePoint プロジェクト項目 |Microsoft ドキュメント"
-ms.custom: 
+title: 作成する項目テンプレートとプロジェクト テンプレートの SharePoint プロジェクト項目 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating custom templates
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7f64abf2327d4e7702020a53c88d0d2c640e0756
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 3f71352dad7b77b2ce92816e84a7c90ec16710ed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートの作成
   カスタム SharePoint プロジェクト項目の種類を定義するときにすることができますまたはに関連付けること項目テンプレート プロジェクト テンプレートの他の開発者が Visual Studio でプロジェクト項目を使用できるようにします。 テンプレートのウィザードを作成することもできます。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
  項目テンプレートとプロジェクト テンプレートは、Visual Studio によってプロジェクト アイテムやプロジェクトを作成するために使用したファイルを含む .zip ファイルです。 項目テンプレートとプロジェクト テンプレートの基礎の詳細については、次を参照してください。[を作成するプロジェクトと項目テンプレート](/visualstudio/ide/creating-project-and-item-templates)です。  
   
-##  <a name="creatingitemtemplates"></a>項目テンプレートを作成します。  
+##  <a name="creatingitemtemplates"></a> 項目テンプレートを作成します。  
  SharePoint プロジェクト項目の項目テンプレートを作成するときにいくつかは常に、必要なファイルおよびプロジェクト項目の特定の種類によって使用される省略可能なファイルです。 SharePoint プロジェクト項目の種類を定義し、その項目テンプレートを作成する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。  
   
  次の表は、SharePoint プロジェクト項目の項目テンプレートの作成に必要なファイルを一覧表示します。  
@@ -83,7 +82,7 @@ ms.lasthandoff: 01/10/2018
   
  項目テンプレートとプロジェクト テンプレートにウィザードを作成する方法を示すチュートリアルについては、次を参照してください[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)と[チュートリアル: サイトを作成します。プロジェクトのテンプレートでの列プロジェクト項目パート 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム SharePoint プロジェクト項目の種類を定義します。](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   

@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio でローカル変数を導入する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でローカル変数を導入する
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a100cd5dfef6dcb36f6ce845000db31d82173a2d
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 05cf2d99f88fcf6d43674d837d62f2e6053470a9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio でローカル変数を導入する
 

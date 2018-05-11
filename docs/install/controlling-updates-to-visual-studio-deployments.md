@@ -1,41 +1,41 @@
 ---
-title: "Visual Studio 配置の更新プログラムを制御する | Microsoft Docs"
-description: "{{プレースホルダー}}"
+title: Visual Studio 配置の更新プログラムを制御する
+description: ネットワークからインストールするときに、Visual Studio が更新プログラムを検索する場所を変更する方法を説明します。
 ms.date: 08/14/2017
-ms.reviewer: tims
-ms.suite: 
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
-author: timsneath
+author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e923e4b8ec3a505dc3df7b51d9776629fa08faad
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 24a8f49c036ed28693d92b162a417114f2c93e89
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する
 
 企業の管理者は、多くの場合、レイアウトを作成してそれをネットワーク ファイル共有でホストし、エンド ユーザーに展開します。
 
 ## <a name="controlling-where-visual-studio-looks-for-updates"></a>Visual Studio が更新プログラムを探す場所を変更する
+
 既定では、インストールがネットワーク共有から展開された場合でも、Visual Studio は引き続きオンラインで更新プログラムを探します。 更新プログラムがある場合、ユーザーがインストールできます。 更新された内容のうちオフライン レイアウトで見つからないものは、すべて Web からダウンロードされます。
 
 Visual Studio が更新プログラムを検索する場所を変更することで直接制御することができます。 ユーザーが更新するバージョンも制御できます。 これを行うには、次の手順を実行します。
 
  1. オフライン レイアウトを作成します。
-    ```
+    ```cmd
     vs_enterprise.exe --layout C:\vs2017offline --lang en-US
     ```
  2. それをホストするファイル共有にコピーします。
-    ```
+    ```cmd
     xcopy /e C:\vs2017offline \\server\share\VS2017
     ```
  3. レイアウトの response.json ファイルを変更し、管理者が制御する channelManifest.json のコピーを指すように `channelUri` 値を変更します。
@@ -47,14 +47,14 @@ Visual Studio が更新プログラムを検索する場所を変更すること
   ```
 
  これでエンド ユーザーはこの共有からセットアップを実行し、Visual Studio をインストールできます。
-    ```
+    ```cmd
     \\server\share\VS2017\vs_enterprise.exe
     ```
 
 企業の管理者はユーザーが新しいバージョンの Visual Studio に更新する時期が来たと判断したとき、[レイアウトの場所を更新し](update-a-network-installation-of-visual-studio.md)、次のようにして更新されたファイルを組み込むことができます。
 
  1. 次のようなコマンドを使用します。
-    ```
+    ```cmd
     vs_enterprise.exe --layout \\server\share\VS2017 --lang en-US
     ```
  2. 更新後のレイアウトの response.json ファイルにカスタマイズ内容が引き続き含まれているようにします。特に次のような channelUri の変更内容です。
@@ -66,6 +66,7 @@ Visual Studio が更新プログラムを検索する場所を変更すること
  新しいインストールでは、更新されたバージョンの Visual Studio がレイアウトから直接インストールされます。
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE の通知を制御する
+
 上述のとおり、Visual Studio はそのインストール元である場所 (ネットワーク共有やインターネットなど) で更新プログラムが利用できないか確認します。 更新プログラムが利用可能になると、Visual Studio は、ユーザーへの通知としてウィンドウの右上隅に通知フラグを表示します。
 
  ![更新プログラムの通知フラグ](media/notification-flag.png)
@@ -77,21 +78,25 @@ Visual Studio 2017 は[プライベート レジストリにレジストリ エ�
 ```cmd
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
 ```
+
 (編集したいインストール済みのインスタンスと一致するようにディレクトリを置き換えてください。)
 
 > [!TIP]
 > [vswhere.exe](tools-for-managing-visual-studio-instances.md#detecting-existing-visual-studio-instances) を利用し、クライアント ワークステーションで特定のインスタンスの Visual Studio を見つけます。
 
 ## <a name="get-support"></a>サポートを受ける
+
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
+
 * [Visual Studio のインストール](install-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)

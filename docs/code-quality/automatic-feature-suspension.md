@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio での自動機能停止 |Microsoft ドキュメント"
+title: Visual Studio での自動機能中断
 ms.date: 11/04/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full solution analysis
 - performance
@@ -9,15 +9,16 @@ helpviewer_keywords:
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: d71960fb51d061e9c3ac9c165497582578a719ee
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: d75c02bf6b817d03492a15b1f827f94eaaf3e306
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="automatic-feature-suspension"></a>自動機能中断
 

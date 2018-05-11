@@ -1,20 +1,22 @@
 ---
-title: "[関連付け] ダイアログ ボックスの初期化 |Microsoft ドキュメント"
+title: ワークフロー デザイナーの初期化の関連付け ダイアログ ボックス
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - InitializeCorrelation.UI
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 641526a0577c74ff590d701560e5266c85fa60dc
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 93ce95c7a821d243af842170ba30ec82647933ab
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="initialize-correlation-dialog-box"></a>[関連付け初期化] ダイアログ ボックス
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="to-launch-the-initialize-correlation-dialog-box"></a>[関連付け初期化] ダイアログ ボックスを開くには
 
--   をクリックして**ビュー**上、 **InitializeCorrelation**アクティビティ デザイナーまたは [、<xref:System.ServiceModel.Activities.InitializeCorrelation>でアクティビティ[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]] の横にある省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>内のプロパティプロパティ グリッドです。
+-   をクリックして**ビュー**上、 **InitializeCorrelation**アクティビティ デザイナーまたは 、<xref:System.ServiceModel.Activities.InitializeCorrelation>アクティビティをワークフロー デザイナーと、省略記号ボタンをクリックして、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>プロパティに、プロパティ グリッドです。
 
 ## <a name="see-also"></a>関連項目
 

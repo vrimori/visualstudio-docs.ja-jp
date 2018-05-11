@@ -1,76 +1,63 @@
 ---
-title: "XML エディター |Microsoft ドキュメント"
-ms.custom: 
+title: XML エディター
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b00ca61dc99765ccc4611765ba7d9b1d58a91514
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ba02c3ff7d87daeda71c872e67df25ad345c6989
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-editor"></a>XML エディター
 
 XML エディターでは、Visual Studio テキスト エディターに基づいてされ、XML 言語のサポート追加にはが含まれています。 XML エディターには、次の機能が含まれています。
-  
--   XML 1.0 の構文チェック。
-  
--   入力中のスキーマ検証。
-  
--   スキーマから生成されるスニペットを含めた、XML スニペットのサポート。
-  
--   ドキュメント型定義 (DTD) のサポート。
-  
--   XML スキーマ定義言語 (XSD) スキーマのサポート。
-  
--   XML インスタンス ドキュメントからの XML スキーマの作成。
-  
--   DTD または XDR (XML-Data Reduced) スキーマの XML スキーマへの変換。
-  
--   XSLT 1.0 の構文チェック。
-  
--   要素の展開と折りたたみが可能なドキュメントのアウトライン表示。
-  
--   統合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。 これにより、XML スキーマの階層が表示されます。
+
+- XML 1.0 の構文チェック。
+
+- 入力中のスキーマ検証。
+
+- スキーマから生成されるスニペットを含めた、XML スニペットのサポート。
+
+- ドキュメント型定義 (DTD) のサポート。
+
+- XML スキーマ定義言語 (XSD) スキーマのサポート。
+
+- XML インスタンス ドキュメントからの XML スキーマの作成。
+
+- DTD または XDR (XML-Data Reduced) スキーマの XML スキーマへの変換。
+
+- XSLT 1.0 の構文チェック。
+
+- 要素の展開と折りたたみが可能なドキュメントのアウトライン表示。
+
+- 統合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。 これにより、XML スキーマの階層ビューが提供されます。
 
 XML エディターは、.xml、.xsd、.xsl、.config などのよく知られているファイル拡張子に対して呼び出されます。ファイルに XML が含まれている場合は、未知のファイル拡張子についても XML エディターが呼び出されます。 使用して、XML エディターを使用して任意のファイルを開くことができますも、**ファイルを開く**オプションと XML エディターを一覧から選択します。
 
-## <a name="in-this-section"></a>このセクションの内容
+## <a name="xslt-intellisense"></a>XSLT IntelliSense
 
-[XML ドキュメントの検証](../xml-tools/xml-document-validation.md)  
-構文チェックと検証機能について説明します。
+[XSLT IntelliSense](../xml-tools/xml-editor-intellisense-features.md)オート コンプリートの属性セット名、テンプレート モードおよびの名前を使用して、名前付きテンプレートの指定されたモードまたは指定されたパラメーター名。
 
-[XML エディターの IntelliSense 機能](../xml-tools/xml-editor-intellisense-features.md)  
-エディターの IntelliSense 機能について説明します。
+## <a name="xslt-profiler"></a>XSLT プロファイラー
 
-[XML スニペット](../xml-tools/xml-snippets.md)  
-XML スニペット機能を使用する方法について説明します。
+[XSLT profiler](../xml-tools/walkthrough-xslt-profiler.md)詳細な XSLT パフォーマンス計測、評価、および XSLT コード内のパフォーマンス関連の問題を対象するのに役立つレポートを作成します。 XSLT プロファイラーには、XSL および XSLT のスタイル シートの最適化に役立つヒントも含まれています。
 
-[XSLT スタイル シートの編集](../xml-tools/editing-xslt-style-sheets.md)  
-XSLT の編集操作について説明します。
+## <a name="xslt-hierarchy"></a>XSLT 階層
 
-[スキーマ キャッシュ](../xml-tools/schema-cache.md)  
-XML エディターによってインストールされるスキーマを一覧表示します。
-
-[XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)  
-XML エディターのユーザー インターフェイス コンポーネントをについて説明します。
+[XSLT 階層ツール](../xml-tools/walkthrough-using-xslt-hierarchy.md)インクルードされるスタイル シートやビルトイン テンプレート規則にブレークポイントを追加することができます。
 
 ## <a name="related-sections"></a>関連項目
 
-[コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)  
-テキスト エディターについて説明します。
-
-[XML 標準のリファレンス](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)  
-XML、DTD (Document Type Definition)、XSD (XML Schema Definition) 言語、XSLT などの XML テクノロジについて説明します。
+- [エディターでコードを記述](../ide/writing-code-in-the-code-and-text-editor.md)テキスト エディターに関する情報を提供します。
+- [XML 標準のリファレンス](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)XML、ドキュメント型定義 (DTD)、XML スキーマ定義言語 (XSD) および XSLT などの XML テクノロジに関する情報を提供します。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

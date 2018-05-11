@@ -1,13 +1,9 @@
 ---
-title: "使用可能なソースがありません |Microsoft ドキュメント"
-ms.custom: 
+title: 使用可能なソースがありません |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.nosource
 dev_langs:
@@ -18,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - No Source Code Available for the Current Location dialog box
 ms.assetid: ed0732bc-4b8c-490f-adb1-af06869a2a6b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a11770bc54a7b96aa918b73b34e0028731bf0f9c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aae4b2428470e3e33477cfdb36699c2c1da20c1f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="no-source-available"></a>使用できるソースはありません
 表示しようとしているコードのソース コードがプロジェクトに含まれていません。 一般的な原因が内にソース コードがないモジュールをダブルクリックすると、**呼び出し履歴 ウィンドウ**または**スレッド ウィンドウ**します。 デバッグは継続できますが、ソース ウィンドウを使ってブレークポイントを設定したり、この場所で他のアクションを実行したりすることはできません。 ブレークポイントを設定する必要がある場合、**逆アセンブル ウィンドウ**代わりにします。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  **常に逆アセンブル見つからないソース ファイルを表示します。**  
  表示するには、このオプションを選択して、**逆アセンブル ウィンドウ**自動的にソースが使用できない場合。 この設定を変更することも、**オプション**ダイアログ ボックスで、**デバッグ**カテゴリ、**全般** ページで、オンまたはオフにして**逆アセンブルを表示する場合ソースが利用できない**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックスをデバッグします。](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [SOS.dll (SOS デバッガー拡張)](/dotnet/framework/tools/sos-dll-sos-debugging-extension)

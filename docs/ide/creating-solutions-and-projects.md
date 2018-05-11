@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio でソリューションとプロジェクトを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のソリューションとプロジェクトを作成する
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openprojectfromweb
 - vs.newproject
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - projects [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e91f8c5908efb4eed942a9c2556de7778fda92
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: d92cc8bcbc160dbc5cab10bffe30b08ba1cca7be
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-solutions-and-projects"></a>ソリューションとプロジェクトを作成する
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 03/08/2018
 
 ![ソリューション/プロジェクト階層](./media/vside-proj-soln.png)
 
-**ソリューション エクスプローラー**という名称のツール ウィンドウでソリューションやプロジェクトを表示できます。 次のスクリーンショットは、ソリューション エクスプローラー (BikeSharing.Xamarin-UWP) のサンプル ソリューションです。BikeSharing.Clients.Core と BikeSharing.Clients.Windows という 2 つのプロジェクトが含まれています。 各プロジェクトに複数のファイル、フォルダー、参照が含まれています。 太字のプロジェクト名は*スタートアップ プロジェクト*です。つまり、アプリを実行すると起動するプロジェクトです。 スタートアップ プロジェクトにするプロジェクトを指定できます。
+**ソリューション エクスプローラー**という名称のツール ウィンドウでソリューションやプロジェクトを表示できます。 次のスクリーンショットは、**ソリューション エクスプローラー** (**BikeSharing.Xamarin-UWP**) のサンプル ソリューションです。**BikeSharing.Clients.Core** と **BikeSharing.Clients.Windows** という 2 つのプロジェクトが含まれています。 各プロジェクトに複数のファイル、フォルダー、参照が含まれています。 太字のプロジェクト名は*スタートアップ プロジェクト*です。つまり、アプリを実行すると起動するプロジェクトです。 スタートアップ プロジェクトにするプロジェクトを指定できます。
 
 ![ソリューション エクスプローラーとプロジェクト](./media/vside-solution-explorer-projects.png)
 
@@ -45,7 +42,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="to-create-a-project-from-a-project-template"></a>プロジェクト テンプレートからプロジェクトを作成するには
 
-1. Visual Studio では、いくつかの方法で新しいプロジェクトを作成できます。 [スタート] ページの **[プロジェクト テンプレートの検索]** ボックスにプロジェクト テンプレートの名前を入力するか、**[新しいプロジェクトの作成]** リンクを選択して **[新しいプロジェクト]** ダイアログ ボックスを開きます。 メニュー バーで **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択するか、ツール バーの **[新しいプロジェクト]** ボタンを選択するという方法もあります。
+1. Visual Studio では、いくつかの方法で新しいプロジェクトを作成できます。 **[スタート]** ページの **[プロジェクト テンプレートの検索]** ボックスにプロジェクト テンプレートの名前を入力するか、**[新しいプロジェクトの作成]** リンクを選択して **[新しいプロジェクト]** ダイアログ ボックスを開きます。 メニュー バーで **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択するか、ツール バーの **[新しいプロジェクト]** ボタンを選択するという方法もあります。
 
   ![スタート ページ](./media/vside-newproject1.png)
 
@@ -68,7 +65,7 @@ ms.lasthandoff: 03/08/2018
 
 1. **[OK]** ボタンを選択すると、ソリューションとプロジェクトが作成されます。
 
-1. ソリューションにプロジェクトを追加する場合、ソリューション エクスプローラーでソリューション ノードを選択し、次にメニュー バーで、**[プロジェクト]** > **[新しい項目の追加]** の順に選択します。
+1. ソリューションにプロジェクトを追加する場合、**ソリューション エクスプローラー**でソリューション ノードを選択し、次にメニュー バーで、**[プロジェクト]**、**[新しい項目の追加]** の順に選択します。
 
 ## <a name="create-a-project-from-existing-code-files"></a>既存のコード ファイルからプロジェクトを作成する
 
@@ -122,10 +119,10 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="delete-a-solution-project-or-item"></a>ソリューション、プロジェクト、アイテムを削除する
 
-ソリューションとそのコンテンツを完全に削除できますが、Visual Studio IDE でそれを行うことはできません。 Visual Studio 内でアイテムを削除した場合、現在のソリューションまたはプロジェクトから削除されるだけです。 ソリューションやその他のコンポーネントをシステムから完全に削除するには、エクスプローラーを利用し、.sln または .suo のソリューション ファイルが含まれるフォルダーを削除します。 ただし、ソリューションを完全に削除する前に、再び必要になる場合に備え、プロジェクトやファイルをバックアップしておくことをお勧めします。
+ソリューションとそのコンテンツを完全に削除できますが、Visual Studio IDE でそれを行うことはできません。 Visual Studio 内でアイテムを削除した場合、現在のソリューションまたはプロジェクトから削除されるだけです。 ソリューションやその他のコンポーネントをシステムから完全に削除するには、エクスプローラーを利用し、*.sln* または *.suo* のソリューション ファイルが含まれるフォルダーを削除します。 ただし、ソリューションを完全に削除する前に、再び必要になる場合に備え、プロジェクトやファイルをバックアップしておくことをお勧めします。
 
 > [!NOTE]
-> .suo ファイルは隠しファイルであり、エクスプローラーの既定の設定では表示されません。 隠しファイルを表示するには、エクスプローラーの **[表示]** メニューで **[非表示項目]** チェックボックスをオンにします。
+> *.suo* ファイルは隠しファイルであり、エクスプローラーの既定の設定では表示されません。 隠しファイルを表示するには、エクスプローラーの **[表示]** メニューで **[非表示項目]** チェックボックスをオンにします。
 
 ### <a name="to-permanently-delete-a-solution"></a>ソリューションを完全に削除するには
 
@@ -137,7 +134,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="see-also"></a>関連項目
 
-[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)  
-[GitHub の Microsoft のオープン ソース リポジトリ](https://github.com/Microsoft)  
-[Visual Studio のサンプル](../ide/visual-studio-samples.md)  
-[開発者コード サンプル](https://code.msdn.microsoft.com/)
+- [ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+- [GitHub の Microsoft のオープン ソース リポジトリ](https://github.com/Microsoft)
+- [Visual Studio のサンプル](../ide/visual-studio-samples.md)
+- [開発者コード サンプル](https://code.msdn.microsoft.com/)

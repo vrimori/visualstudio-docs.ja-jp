@@ -1,27 +1,23 @@
 ---
-title: "Windows インストーラーの配置の拡張機能の準備 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows インストーラーの配置の拡張機能の準備 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - vsix msi
 ms.assetid: 5ee2d1ba-478a-4cb7-898f-c3b4b2ee834e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b72fc46d64034ddc22e929fb1a1eff26115cce70
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ef51b3cb0f84a470f104ff688c1149e607d16f71
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="preparing-extensions-for-windows-installer-deployment"></a>Windows インストーラーの配置の拡張機能の準備
 Windows インストーラー パッケージ (MSI) を使用して、VSIX パッケージを配置することはできません。 ただし、MSI 展開用の VSIX パッケージの内容を抽出することができます。 このドキュメントが既定の出力はセットアップ プロジェクトに含めるのための VSIX パッケージ プロジェクトを準備する方法を示します。  
@@ -60,6 +56,6 @@ Windows インストーラー パッケージ (MSI) を使用して、VSIX パ�
   
 5.  セットアップ プロジェクトに、残りのファイルを追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio インストーラーの展開](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [チュートリアル: カスタム アクションの作成](http://msdn.microsoft.com/en-us/4bd4b63a-2b91-431e-839c-5752443f0eaf)

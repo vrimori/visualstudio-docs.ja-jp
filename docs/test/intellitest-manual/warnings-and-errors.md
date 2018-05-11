@@ -1,24 +1,21 @@
 ---
-title: "警告とエラー | Microsoft IntelliTest 開発者テスト ツール | Microsoft Docs"
-ms.custom: 
+title: 警告とエラー | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Warnings and errors
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 77f47c2d18b43c3ab08dac5fec6281892072ab36
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 19de1453722629e880a5fc64ad0b5f4d63175eba
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="warnings-and-errors"></a>警告とエラー
 

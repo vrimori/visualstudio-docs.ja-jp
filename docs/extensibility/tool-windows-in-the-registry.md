@@ -1,27 +1,23 @@
 ---
-title: "ツール ウィンドウ、レジストリの |Microsoft ドキュメント"
-ms.custom: 
+title: ツール ウィンドウ、レジストリの |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, registering
 ms.assetid: c4bb8add-7148-49e4-a377-01d059fd5524
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d3277a4e24b12d409654548b5670a4d47fa9539
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 234a3f50865e77f2c6b5a4057e6766b26d7ff521
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tool-windows-in-the-registry"></a>レジストリのツール ウィンドウ
 ツール ウィンドウを提供する Vspackage に登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のウィンドウ プロバイダーをツールとして。 Visual Studio パッケージ テンプレートを使用して作成されたツール ウィンドウは、これが既定によって行います。 ツール ウィンドウのプロバイダーでは、既定のツール ウィンドウのサイズと場所、ツール ウィンドウ ペインとドッキング スタイルとして機能するウィンドウの GUID などの可視属性を指定するシステムのレジストリ キーがあります。  
@@ -46,5 +42,5 @@ ms.lasthandoff: 12/22/2017
   
  2 番目の省略可能なキー、ToolWindows\Visibility は、表示するようにツール ウィンドウを必要とするコマンドの Guid を指定します。 この場合、指定したコマンドではありません。 詳細については、次を参照してください。[ツール ウィンドウの表示構成](../extensibility/tool-window-display-configuration.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPackage](../extensibility/internals/vspackages.md)

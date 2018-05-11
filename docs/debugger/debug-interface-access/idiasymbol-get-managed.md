@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_managed |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_managed |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_managed method
 ms.assetid: a69d00be-2a89-415c-b116-385c422e2fd5
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19568c1dfdb3cde822be946e68e46e285926b5ad
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c23f59a4506ccf369b60bf45cf9320ff407b129c
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetmanaged"></a>IDiaSymbol::get_managed
 シンボルはマネージ コードを参照するかどうかを指定するフラグを取得します。  
@@ -46,5 +41,5 @@ HRESULT get_managed (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

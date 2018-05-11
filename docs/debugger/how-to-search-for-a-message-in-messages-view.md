@@ -1,27 +1,24 @@
 ---
-title: "方法: メッセージ ビューでメッセージの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: メッセージ ビューでメッセージの検索 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Message Search dialog box
 - Messages view
 - messages, searching for
 ms.assetid: 732b7ccc-54ea-41db-823b-2b96e3e4083e
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: df8fc9ee13a721f98a942a3bb6d10f6c8d844ddf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 368d10f2285c94f053e536da77966e9b2fb26da9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>方法: メッセージ ビューでメッセージを検索する
 検索条件として、ハンドル、型、またはメッセージの ID を使用してメッセージ ビューで特定のメッセージを検索できます。 これらのいずれか、または組み合わせ: 有効な検索条件になります。 検索の最初の方向も指定することができます。 ダイアログ ボックスのフィールドは、現在選択されているメッセージの属性を持つプリロードされてです。  

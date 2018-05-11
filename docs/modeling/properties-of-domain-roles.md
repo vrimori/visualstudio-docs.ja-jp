@@ -1,21 +1,19 @@
 ---
-title: "ドメインのロールのプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: ドメイン ロールのプロパティ
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 61537deec73a5da8d647639a588641d7cf773da3
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 48e2ba4180e72b68838e33f099fbb31186006698
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-of-domain-roles"></a>ドメイン ロールのプロパティ
 次の表に、プロパティは、ドメインの役割に関連付けられます。 ドメイン ロールについては、次を参照してください。[についてモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。
@@ -29,7 +27,7 @@ ms.lasthandoff: 03/02/2018
 |プロパティ get アクセス操作子のアクセス修飾子|生成されたプロパティの get アクセス操作子のアクセス修飾子 (`public`、 `internal`、 `private`、 `protected`、または`protected internal`)。|`public`|
 |プロパティ セッターのアクセス修飾子|生成されたプロパティのセッターのアクセス修飾子 (`public`、 `internal`、 `private`、 `protected`、または`protected internal`)。|`public`|
 |複数要素の接続性|反対の役割を果たしますモデル要素の数 (`0..1`、 `1..1`、 `0..*`、または`1..*`)。 多重度が場合`0..*`または`1..*`、生成されるプロパティは、コレクションを表します。 それ以外の場合、生成されるプロパティが 1 つのモデル要素を表します。|リレーションシップの種類に依存し、これは、リレーションシップのソースまたはターゲットのロールであるかどうか。|
-|name|ドメインの役割の名前。 このプロパティは、空白文字を含めることはできません。|このロールのロール プレーヤーのドメイン クラスの名前。|
+|名前|ドメインの役割の名前。 このプロパティは、空白文字を含めることはできません。|このロールのロール プレーヤーのドメイン クラスの名前。|
 |コピーに反映させる|`DoNotPropagateCopy` -コピーされたロール プレーヤーには、このリンクのコピーはありません。<br /><br /> `PropagateCopyToLinkOnly` -コピーのリンクは、既存の反対のロール プレーヤーを指します。<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` -コピーのリンクは、反対側のロール プレーヤーのコピーを指します。|`PropagateCopyToLinkAndOppositeRolePlayer` 埋め込みのソース ロール。<br /><br /> `DoNotPropagateCopy` その他のロール。<br /><br /> 詳細については、次を参照してください[コピー動作のカスタマイズ。](../modeling/customizing-copy-behavior.md)|
 |伝達の削除|`True` 関連リンクを削除すると、この役割を果たす要素を削除します。|`True` 埋め込みのロールのターゲットです。<br /><br /> `False` その他のロール。<br /><br /> 詳細については、次を参照してください。[削除の動作のカスタマイズ](../modeling/customizing-deletion-behavior.md)です。|
 |プロパティ名|ロール プレーヤーのコードで生成されるプロパティの名前。 この名前は、空白文字を含めることはできません。|このロールが 0-1 を持つ場合の反対側のロールの名前または一対一、多重度。それ以外の場合、反対側のロールの複数形の名前。|
@@ -42,7 +40,8 @@ ms.lasthandoff: 03/02/2018
 |プロパティの表示名|生成されたロールのプロパティの生成されたデザイナーで表示される名前です。|プロパティ名プロパティの調整済みの値。|
 
 > [!NOTE]
->  表示名の既定値を小文字の文字を付けたものし、するが続いていない別の大文字の文字は、各大文字の文字の前にスペースを挿入することによって、関連付けられているプロパティの値に基づきます。
+> 表示名の既定値を小文字の文字を付けたものし、するが続いていない別の大文字の文字は、各大文字の文字の前にスペースを挿入することによって、関連付けられているプロパティの値に基づきます。
 
-## <a name="see-also"></a>参照
- [ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)
+## <a name="see-also"></a>関連項目
+
+- [ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)

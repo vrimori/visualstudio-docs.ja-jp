@@ -1,12 +1,9 @@
 ---
-title: "出力ウィンドウに診断メッセージを送信 |Microsoft ドキュメント"
-ms.custom: 
+title: 出力ウィンドウに診断メッセージを送信 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -26,16 +23,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], diagnostic messages in Output window
 - Debug class
 ms.assetid: 386e9524-be17-4573-83fb-4f7c5cae0be0
-caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: df071834a6ae36da0156c527284f6ffbfcee0e4e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bfe7cb6660d16c093889395a082c9fd58e5d0431
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="send-diagnostic-messages-to-the-output-window"></a>出力ウィンドウに診断メッセージを送信します。
 実行時のメッセージを記述することができます、**出力**ウィンドウを使用して、`Debug`クラスまたは`Trace`に含まれるクラスの<xref:System.Diagnostics>クラス ライブラリです。 プログラムのデバッグ バージョンだけで出力する場合は Debug クラスを使用します。 プログラムのデバッグ バージョンとリリース バージョンの両方で出力する場合は Trace クラスを使用します。  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   終了したスレッド  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [[出力] ウィンドウ](../ide/reference/output-window.md)   
  [アプリケーションのトレースとインストルメント](/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)  

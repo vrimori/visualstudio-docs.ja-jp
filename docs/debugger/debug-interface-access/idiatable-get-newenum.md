@@ -1,29 +1,24 @@
 ---
-title: "IDiaTable::get__NewEnum |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaTable::get__NewEnum |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaTable::get__NewEnum method
 ms.assetid: ee89bba8-5d5c-4a0b-aa0d-1aad56baa380
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a4b5a9bac5edc31fd4e4db73890c0479c0058754
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e5b6123ab1056da3d5ffcc1f83b8e79a1a980533
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiatablegetnewenum"></a>IDiaTable::get__NewEnum
 取得、<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>この列挙子のバージョン。  
@@ -43,5 +38,5 @@ HRESULT get__NewEnum (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

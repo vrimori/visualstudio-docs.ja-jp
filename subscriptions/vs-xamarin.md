@@ -1,53 +1,25 @@
 ---
-title: "Visual Studio サブスクリプションの Xamarin University トレーニング特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/12/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the Xamarin University Training subscription included with selected Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 8b9b5f887e717f49099582ff95183ee559b9018a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションの Xamarin University トレーニング特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/12/2018
+ms.topic: Get-Started-Article
+description: 一部の Visual Studio サブスクリプションに含まれる Xamarin University トレーニング サブスクリプションについて説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 742c7a45136fe364310623c80167e0205e416a1e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xamarin-university-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Xamarin University トレーニング特典
-
-## <a name="overview"></a>概要
 
 記録されたコースとゲスト講義を使用してネイティブの iOS アプリと Android アプリをビルドします。  
 -  Visual Studio Dev Essentials 向けの Xamarin University モバイル トレーニングは、12 のコースと 3 つのゲスト講義へのアクセスを提供します。 
 -  Visual Studio Professional と Visual Studio Enterprise サブスクリプションの Xamarin University モバイル トレーニングには、Visual Studio Dev Essentials が提供するのと同じコースと講義に加えて、さらに 18 のコースと 6 つの講義が含まれます。
-
-## <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル/プログラム                                                  | 特長                 | 更新可能かどうか                                                         |
-|-------------------------------------------------------------------------------|-------------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                                             | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise - 年間プラン                                               | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise - 月間プラン                                              | 使用できません           |                                                                    |
-| Visual Studio Professional Standard                                           | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Professional - 年間プラン                                             | 30 のコース、9 の講義  |                                                                    | 
-| Visual Studio Professional - 月間プラン                                            | 使用できません           |                                                                    |
-| Visual Studio Test Pro                                                        | 使用できません           |                                                                    |
-| MSDN Platforms                                                                | 使用できません           |                                                                    |
-| Visual Studio Dev Essentials                                                  | 12 のコース、3 つの講義  |                                                                    |
-| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise - FTE                                                | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise - Microsoft Partner Network                          | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Professional - Microsoft Partner Network                        | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise – Imagine (Standard)                                 | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise – Imagine (Premium)                                  | 30 のコース、9 の講義  |                                                                    |
-| Visual Studio Enterprise – BizSpark                                           | 30 のコース、9 の講義  |                                                                    |
-| マイクロソフト認定トレーナー - Software & Services                             | 使用できません           |                                                                    |
-| マイクロソフト認定トレーナー - Software & Services Developer                   | 30 のコース、9 の講義  |                                                                    |
-
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
-
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。 
@@ -58,16 +30,29 @@ ms.lasthandoff: 01/29/2018
 3.  [登録] ページで、連絡先情報を入力し、チェック ボックスをオンにして使用条件およびプライバシーの声明に同意し、**[特典の有効化]** をクリックします。 
 
     ![Xamarin University トレーニング特典の登録](_img\vs-xamarin\vs-xamarin-registration-resized.png)
-
-
-
 4.  必要な作業は以上です。  これで Xamarin University トレーニング特典が有効になったので、Microsoft Visual Studio 用の Xamarin University モバイル トレーニング ページにリダイレクトされます。  
 
     ![Xamarin University トレーニング特典ホーム ページ](_img\vs-xamarin\vs-xamarin-home-resized.png)
 
-## <a name="faq"></a>FAQ
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 30 のコース、9 の講義       |  [はい] |
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 30 のコース、9 の講義       |  [はい] |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                             |  N/A        |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                             |  N/A        |
+| Visual Studio Dev Essentials | N/A  | 12 のコース、3 つの講義                                             |  [はい]        |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
+
+<sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD) が含まれます。 MCT Software & Services は含まれません。*
+
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
+
+## <a name="frequently-asked-questions"></a>よく寄せられる質問
 ### <a name="q--what-topics-are-covered-in-the-classes-and-lectures"></a>Q:クラスや講義はどのような内容ですか。
-A: 両方で提供されるすべてのコースと講義の一覧については、https://www.xamarin.com/university/mobile-training を参照してください。 
+A: 両方のプランのコースと講義の詳細な一覧については、https://www.xamarin.com/university/mobile-training を参照してください。 
 
 ### <a name="q-im-already-a-xamarin-university-subscriber-does-this-affect-my-xamarin-university-mobile-training-benefit"></a>Q: 既に Xamarin University サブスクライバーです。 これは、自分の Xamarin University モバイル トレーニング特典に影響しますか。
 A: いいえ、既存の Xamarin University サブスクライバーは、university.xamarin.com でログインすることで、ライブ コース、資料、ゲスト講義を含む Xamarin University 年間サブスクリプションのすべてにアクセスできます。  

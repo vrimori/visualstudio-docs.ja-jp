@@ -1,12 +1,9 @@
 ---
-title: "デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定 |Microsoft ドキュメント"
+title: デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 04/05/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
 - VS.ToolsOptionsPages.Debugger.Symbols
@@ -27,16 +24,16 @@ helpviewer_keywords:
 - pdb files
 - debugger
 ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
-caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cbef364c316f51be8996e79f63a493b51e619f1e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b0a77ef00ee549006f9b4c6efb255c23543d6746
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 プログラム データベース (.pdb) ファイルは、シンボル ファイルとも呼ばれます。 は、クラス、メソッド、およびその他のコードは、プロジェクトのコンパイル済み実行可能ファイルで使用される識別子にソース コードで作成した識別子をマップします。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーでは、この情報を使って、2 つの重要な情報を決定します。
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 > [!TIP]
 > プロジェクト ソース コードの外部コードをデバッグする場合は、Windows コードまたはサード パーティのコードなどプロジェクトから呼び出す、.pdb ファイル (および必要に応じて、外部コードのソース ファイル) の場所を指定するがあり、それらのファイルは、t のビルドと正確に一致する必要があります。彼は実行可能ファイルです。  
  
-##  <a name="BKMK_Find_symbol___pdb__files"></a>デバッガーは、シンボル ファイルを検索しますか。 
+##  <a name="BKMK_Find_symbol___pdb__files"></a> デバッガーは、シンボル ファイルを検索しますか。 
   
 1.  DLL または実行可能ファイル内で指定されている場所。  
   
@@ -69,14 +66,14 @@ ms.lasthandoff: 12/22/2017
 ##  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> シンボル ファイルを実行可能ファイルに正確に対応付ける必要がある理由  
 デバッガーは、実行可能ファイルがビルドされたときに作成された .pdb ファイルと正確に一致する実行可能ファイルの .pdb ファイルのみ読み込みます (つまり .pdb ファイルはオリジナルまたはオリジナルのコピーであることが必要)。 コンパイラがコンパイル速度だけでなく、正確で効率的なコードを作成する主要なタスクに対しても最適化されるため、コード自体が変更されていない場合でも、実行可能ファイルの実際のレイアウトが変更されることがあります。 詳細については、「 [Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
   
-##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a>デバッガーがシンボル ファイルとシンボルの読み込み動作を検索する場所を構成します。
+##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> デバッガーがシンボル ファイルとシンボルの読み込み動作を検索する場所を構成します。
  Visual Studio IDE でプロジェクトをデバッグするときに、デバッガーでプロジェクト ディレクトリに格納されているシンボル ファイルが自動的に読み込まれます。 Microsoft、Windows、またはサード パーティのコンポーネントのシンボル サーバーと別の検索パスを指定できます**ツール > オプション > デバッグ > シンボル**です。 特定のモジュールのシンボルを自動的にロードするデバッガーをすることを指定することもできます。 これらの設定はデバッグ中に手動でも変更できます。  
   
 1.  Visual Studio で開く、**ツール > オプション > デバッグ > シンボル**ページ。  
   
-     ![ツール &#45;オプション &#45;デバッグ &#45;[シンボル] ページ](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
+     ![ツール&#45;オプション&#45;デバッグ&#45;[シンボル] ページ](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
   
-2.  フォルダーを選択して![ツールである (、&) #47 です。オプションである (、&) #47 です。デバッグ (&) #47 です。シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon")アイコン。 編集可能なテキストが **[シンボル ファイル (.pdb) の場所]** ボックスに表示されます。  
+2.  フォルダーを選択して![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon")アイコン。 編集可能なテキストが **[シンボル ファイル (.pdb) の場所]** ボックスに表示されます。  
   
 3.  シンボル サーバーまたはシンボルの場所の URL またはディレクトリ パスを入力します。 ステートメント入力候補により、正しい形式を確認できます。
 
@@ -156,7 +153,7 @@ DLL のエクスポート テーブル内で使用できるシンボルを調べ
   
 -   ソースまたはシンボル ファイルが見つからないときに逆アセンブルが常に表示されるようにするには、 **[[オプション] ダイアログ ボックス]** リンクをクリックし、 **[アドレス レベルのデバッグを有効にする]** と **[ソースがない場合は逆アセンブリの表示]**の両方をオンにします。  
   
-     ![オプションである (、&) #47 です。デバッグ (&) #47 です。一般的な逆アセンブル オプション](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG_Options_General_disassembly_checkbox")  
+     ![オプション&#47;デバッグ&#47;一般的な逆アセンブル オプション](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG_Options_General_disassembly_checkbox")  
   
  **ショートカット メニューからシンボル オプションを変更する**  
   
@@ -213,7 +210,7 @@ DLL のエクスポート テーブル内で使用できるシンボルを調べ
   
 4.  モジュールの .pdb のソース情報。 場合によって、モジュールがビルドされたソース ファイルの場所またはソース サーバーへのコマンドです。  
   
-###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a>検索して Source/No シンボルが読み込まれていませんページのソース ファイルを読み込む  
+###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> 検索して Source/No シンボルが読み込まれていませんページのソース ファイルを読み込む  
  ソース ファイルを使用できない場所でデバッガーが実行を中断した場合、 **[ソースが読み込まれていません]** または **[シンボルが読み込まれていません]** ページが表示されます。 **[シンボルが読み込まれていません]** が表示されたときは、デバッガーは実行可能ファイルのシンボル (.pdb) ファイルを見つけることができず、その検索を完了できません。 [シンボルが読み込まれていません] には、ファイルを検索するオプションが表示されています。 いずれかのオプションを実行した後、.pdb が見つかり、デバッガーがシンボル ファイル内の情報を使用してソース ファイルを取得できた場合は、ソースが表示されます。 それ以外の場合、 **[ソースが読み込まれていません]** ページが表示され、問題が説明されます。 このページには、問題解決のための操作を実行できるオプションのリンクが表示されています。  
   
 ###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> ソース ファイルの検索パスをソリューションに追加する  
@@ -223,7 +220,7 @@ DLL のエクスポート テーブル内で使用できるシンボルを調べ
   
 2.  **[共通プロパティ]** ノードの下の **[デバッグ ソース ファイル]**をクリックします。  
   
-3.  フォルダーをクリックして![ツールである (、&) #47 です。オプションである (、&) #47 です。デバッグ (&) #47 です。シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon")アイコン。 編集可能なテキストが **[ソース コードを含んでいるディレクトリ]** ボックスの一覧に表示されます。  
+3.  フォルダーをクリックして![ツール&#47;オプション&#47;デバッグ&#47;シンボル フォルダーのアイコン](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon")アイコン。 編集可能なテキストが **[ソース コードを含んでいるディレクトリ]** ボックスの一覧に表示されます。  
   
 4.  検索するパスを追加します。  
   
@@ -253,7 +250,7 @@ DLL のエクスポート テーブル内で使用できるシンボルを調べ
   
      **[部分信頼アセンブリのソース サーバーを許可する (マネージのみ)]** と **[信頼されていないソース サーバー コマンドを常に確認なしで実行する]** のいずれを選択した場合も、前述のセキュリティ リスクが高くなる可能性があることに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [シンボル ファイルおよび Visual Studio のシンボルの設定を理解します。](https://blogs.msdn.microsoft.com/visualstudioalm/2015/01/05/understanding-symbol-files-and-visual-studios-symbol-settings/)
 
 [Visual Studio 2012 および 2013 における .NET のリモート シンボル ローディングの変更](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)

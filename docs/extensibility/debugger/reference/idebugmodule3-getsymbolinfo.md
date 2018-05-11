@@ -1,30 +1,26 @@
 ---
-title: "IDebugModule3::GetSymbolInfo |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugModule3::GetSymbolInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugModule3::GetSymbolInfo
 helpviewer_keywords:
 - GetSymbolInfo method
 - IDebugModule3::GetSymbolInfo method
 ms.assetid: dda5e8e1-6878-4aa9-9ee4-e7d0dcc11210
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8648e591e545db73b636c6b21fcbcaa1d1afb640
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 53d84b9ef6cdabc12c88e30fc65d506cad673a26
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 各パスを検索の結果と、シンボル検索パスの一覧を取得します。  
@@ -91,7 +87,7 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
  **c:\symbols\user32.pdb しています.ファイルが見つかりません。**  
 **c:\winnt\symbols\user32.pdb しています.バージョンが一致しません。**  
 **\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb しています.シンボルが読み込まれます。**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

@@ -1,29 +1,25 @@
 ---
-title: "BP_ERROR_TYPE |Microsoft ドキュメント"
-ms.custom: 
+title: BP_ERROR_TYPE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_ERROR_TYPE
 helpviewer_keywords:
 - BP_ERROR_TYPE enumeration
 ms.assetid: c483eaab-db29-46de-bfdb-5c2a9a9cfb68
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c50e5cb9f9ba1edf09a30b13373a680ff8e5a3f2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 676ec19fec1406d85e6a7d9e66865b2794f72aa6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
 ブレークポイントのエラーの種類を指定します。  
@@ -100,16 +96,16 @@ public enum enum_BP_ERROR_TYPE {
 ## <a name="remarks"></a>コメント  
  これらの値は、ビットごとと組み合わせること`OR`用に使用されると、`dwType`のメンバー、 [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)構造体。 パラメーターとして渡される、 [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)メソッドです。  
   
- ブレークポイントのエラーの種類は、型と、重大度で構成されます。 ブレークポイント エラーの種類が型だけではない、つまり (たとえば、 `BPET_TYPE_ERROR`、) または重大度レベル (たとえば、 `BPET_SEV_GENERAL`) を単独で。 `BPET_GENERAL_WARNING``BPET_GENERAL_ERROR`警告およびエラーの一般的なブレークポイントの定義済みの値を指定します。  
+ ブレークポイントのエラーの種類は、型と、重大度で構成されます。 ブレークポイント エラーの種類が型だけではない、つまり (たとえば、 `BPET_TYPE_ERROR`、) または重大度レベル (たとえば、 `BPET_SEV_GENERAL`) を単独で。 `BPET_GENERAL_WARNING` `BPET_GENERAL_ERROR`警告およびエラーの一般的なブレークポイントの定義済みの値を指定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

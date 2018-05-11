@@ -1,12 +1,10 @@
 ---
-title: "メニュー コマンドのローカライズ |Microsoft ドキュメント"
-ms.custom: 
+title: メニュー コマンドのローカライズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - localize
 - localization
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - localize visual studio
 - localize vsct
 ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 77bd698149ca4e73b462fc3ada9256ba5911177e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d4fd8f2b42464b31c71b2983dd3e5c66f4a03351
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localizing-menu-commands"></a>メニュー コマンドのローカライズ
 メニューのローカライズされたテキストを指定することができ、ツールバーがローカライズされた .vsct ファイルを作成するコマンドしローカライズされた .resx ファイルを VSPackage とするために、プロジェクト ファイルを更新し、変更を反映します。  
@@ -157,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
      これは、メインのアセンブリ、および各言語のリソース アセンブリを作成します。 展開プロセスをローカライズする方法の詳細については、次を参照してください[VSIX パッケージのローカライズ。](../extensibility/localizing-vsix-packages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
  [MenuCommand と OleMenuCommands](../extensibility/menucommands-vs-olemenucommands.md)   
  [アプリケーションのグローバライズとローカライズ](../ide/globalizing-and-localizing-applications.md)

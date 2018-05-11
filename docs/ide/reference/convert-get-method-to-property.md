@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio での Get メソッドのプロパティへの変換、およびプロパティの Get メソッドへの変換 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での Get メソッドのプロパティへの変換、およびプロパティの Get メソッドへの変換
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.devlang: csharp
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab91e95d699b4a7fcc27ca1f6bcdf43b51af9c26
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 291f7a52bfbb702960259e2643967ff0a8e782dc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get メソッドのプロパティへの変換/プロパティの Get メソッドへの変換リファクタリング
 

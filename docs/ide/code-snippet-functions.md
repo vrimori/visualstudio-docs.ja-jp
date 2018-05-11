@@ -1,29 +1,25 @@
 ---
-title: "コード スニペットの関数 | Microsoft Docs"
-ms.custom: 
+title: コード スニペットの関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets [Visual Studio], functions
 - snippets [Visual Studio], functions
 - IntelliSense code snippets, functions
 ms.assetid: c0a2bf21-8fa5-4457-9281-f599beb53e7d
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fec5c2bbbf97bee5e0abb0725641a5c562997065
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 9229881eeb5b3b9b730101e2fb418c1a79d41cf4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-snippet-functions"></a>コード スニペットの関数
 
@@ -114,7 +110,7 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
                     <Default>ClassNamePlaceholder</Default>   
                 </Literal>  
             </Declarations>  
-            <Code Language="vjsharp" Format="CData">  
+            <Code Language="csharp" Format="CData">  
                 <![CDATA[   
                     public $classname$ ($type$ $name$)  
                     {  

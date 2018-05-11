@@ -1,51 +1,24 @@
 ---
-title: "Parasoft Virtualize/SOAtest Professional Desktop の特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to activate the Parasoft Virtualize/SOA Test Professional subscription included in your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 4468cc99db6437606570d70cdb7ece31a53ca3a3
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Parasoft Virtualize/SOAtest Professional Desktop の特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる Parasoft Virtualize/SOA Test Professional サブスクリプションをアクティブ化する方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 75ce02de0f7d534154ac075462484b2fc40f9328
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Parasoft Virtualize/SOAtest Professional Desktop
 
-## <a name="overview"></a>概要
-
 より早い段階でより多くのテストを行う必要があります。  入手不可能、または進化しているアプリケーションとシステムの動作をシミュレーションおよびテストします。  特典には、6 か月間の無料サブスクリプションが含まれます。  6 か月のサブスクリプションの終了時には、年間サブスクリプション料金の 25% 割り引きを受けることができます。  
 
-## <a name="eligibility"></a>特典を受ける条件
-
-| サブスクリプション レベル/プログラム                                 | 特長                     | 更新可能かどうか                                                   |
-|--------------------------------------------------------------|-----------------------------|--------------------------------------------------------------|
-| Visual Studio Enterprise Standard                            | 6 か月                    |   [はい]                                                        |
-| Visual Studio Enterprise - 年間プラン                              | 6 か月                    |   [はい]                                                        |
-| Visual Studio Enterprise - 月間プラン                             | 使用できません               |                                                              |
-| Visual Studio Professional Standard                          | 使用できません               |                                                              |
-| Visual Studio Professional - 年間プラン                            | 使用できません               |                                                              | 
-| Visual Studio Professional - 月間プラン                           | 使用できません               |                                                              |
-| Visual Studio Test Pro                                       | 使用できません               |                                                              |
-| MSDN Platforms                                               | 使用できません               |                                                              |
-| Visual Studio Dev Essentials                                 | 使用できません               |                                                              |
-| Visual Studio Enterprise - NFR*                              | 使用できません               |                                                              |
-| Visual Studio Enterprise - FTE                               | 使用できません               |                                                              |
-| Visual Studio Enterprise - Microsoft Partner Network         | 6 か月                    |   [はい]                                                        |
-| Visual Studio Professional - Microsoft Partner Network       | 使用できません               |                                                              |
-| Visual Studio Enterprise – Imagine (Standard)                | 使用できません               |                                                              |
-| Visual Studio Enterprise – Imagine (Premium)                 | 使用できません               |                                                              |
-| Visual Studio Enterprise – BizSpark                          | 使用できません               |                                                              |
-| Visual Studio Enterprise – MCT Software & Services           | 使用できません               |                                                              |
-| Visual Studio Enterprise – MCT Software & Services Developer | 使用できません               |                                                              |
-*Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。  
-
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
@@ -74,7 +47,7 @@ ms.lasthandoff: 01/29/2018
 
 8.  使う言語を選び、**[OK]** をクリックします。
 
-9.  Parasoft SOAtest & Virtualize セットアップ ウィザードが開始します。  **[次へ]**をクリックします。
+9.  Parasoft SOAtest & Virtualize セットアップ ウィザードが開始します。  **[次へ]** をクリックします。
 
     ![Parasoft 特典インストール開始](_img\vs-parasoft\vs-parasoft-start-install.png)
 
@@ -98,9 +71,20 @@ ms.lasthandoff: 01/29/2018
 
 17. セットアップが終わったら、**[完了]** をクリックします。 Parasoft Virtualize/SOAtest Professional Desktop 特典を使う準備ができました。
 
-## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
- 
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 6 か月       |  [はい]       |
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 使用できません                                                           |N/A         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                                           |N/A         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                                           |N/A         |
+| Visual Studio Dev Essentials | N/A  | 使用できません|N/A |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
+
+<sup>1</sup> *Microsoft Partner Network (Enterprise) が含まれます。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+
+
+
 ## <a name="support-resources"></a>サポート リソース
 -  Parasoft 製品のヘルプが必要ですか。  以下のリソースを確認してください。
     - テクニカル サポート: https://www.parasoft.com/support/ 

@@ -1,13 +1,9 @@
 ---
-title: "方法: デバッグ設定し、リリース構成 |Microsoft ドキュメント"
+title: '方法: デバッグ設定し、リリース構成 |Microsoft ドキュメント'
 ms.custom: H1HackMay2017
 ms.date: 04/10/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.builds
 dev_langs:
@@ -32,17 +28,16 @@ helpviewer_keywords:
 - release builds, switching to debug build
 - Visual Basic projects, debug and release builds
 ms.assetid: 57b6bbb7-f2af-48f7-8773-127d75034ed2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca61d09bb1d2ab09c6991f0cd50cc302dff7fb77
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 8e2eb30d50be7348802518b7cc1b945aa88a26bd
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>方法: デバッグ構成と設定リリース Visual Studio での構成
 Visual Studio プロジェクトでは、ご使用のプログラムに対応するリリースとデバッグ構成を個別に用意しています。 名前が示すように、デバッグ バージョンはデバッグ用、リリース バージョンは最終リリース配布用のビルドです。  
@@ -116,7 +111,7 @@ C# でのデバッグ構成のプロジェクトの設定の詳細について�
 
     シンボル ファイルは取得、実行可能ファイルまたは出力ファイルと同じフォルダーに作成されます。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visua Studio デバッガーでのシンボル (.pdb) ファイルおよびソース ファイルを指定します。](../debugger/debugger-settings-and-preparation.md)  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)   

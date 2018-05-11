@@ -1,28 +1,26 @@
 ---
-title: "ユーザーにフィードバック |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザーにフィードバック |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user model feedback
 - environment, context
 - IDE, context
 - IDE, user feedback
 ms.assetid: 2d472a24-3813-4f5f-9783-b491ad8a71ad
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3a5e31eb2acb50d9803bedd77e48d0821cbaea61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 629d12974a52bca30c0db96e838c5c731ae1abf7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feedback-to-the-user"></a>ユーザーへのフィードバック
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) で視覚的なフィードバックに関する利用可能な機能は、ユーザーの現在の選択とグローバルの選択コンテキストに基づきます。 次の表は、別の選択のコンテキストで使用できる機能を一覧表示します。  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   一般的にこれはアクティブな階層ウィンドウ**ソリューション エクスプ ローラー**、および現在のコンテキストと、状況依存を反映するように、タイトル バー update**プロジェクト**メニュー コマンドは、今すぐアクティブ Web に適用アプリケーションのプロジェクトです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [選択範囲と、IDE の通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)   
  [コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)   
  [階層と選択](../../extensibility/internals/hierarchies-and-selection.md)

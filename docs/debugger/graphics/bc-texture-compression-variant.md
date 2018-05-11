@@ -1,23 +1,20 @@
 ---
-title: "BC テクスチャ圧縮バリアント |Microsoft ドキュメント"
-ms.custom: 
+title: BC テクスチャ圧縮バリアント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d0f5305-585b-4b01-bc9a-7a32d6e991da
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 13b97c4d9e90adf8b621100d6d2a68d11570e71d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 49dfc92eeede177e843c9fd98b16b030f76079c0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="bc-texture-compression-variant"></a>BC テクスチャ圧縮バリアント
 B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピクセル形式を持つテクスチャで、ブロック圧縮を有効にします。  
@@ -64,5 +61,5 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
 ## <a name="example"></a>例  
  このバリアントは、`CreateTexture2D` への呼び出しを行う前に、実行時にテクスチャをブロック圧縮します。 実行コードについては、このアプローチは推奨されません。圧縮されていないテクスチャはより多くのディスク容量を使用し、ブロックベースの圧縮では大量のコンピューティング リソースをエンコードする必要があり、追加のステップによってアプリケーションのロード時間が非常に長くなることがあるためです。 代わりに、イメージ エディタ、またはビルド パイプラインの一部であるイメージ プロセッサを使用して、テクスチャをオフラインで圧縮することを推奨しています。 これらのアプローチではディスク容量の要件が減り、アプリケーションのランタイム オーバーヘッドが排除され、処理時間に余裕があるため、最適なイメージ品質を保持することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ハーフ/クォーター テクスチャ ディメンション バリアント](half-quarter-texture-dimensions-variant.md)

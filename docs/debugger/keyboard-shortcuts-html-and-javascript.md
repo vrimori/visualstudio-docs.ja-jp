@@ -1,28 +1,25 @@
 ---
-title: "キーボード ショートカット (HTML および JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: キーボード ショートカット (HTML および JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 8d44425a-6584-477d-932e-4e10d5e79511
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5e87e51e1e2969a8256ae805d60f5b53663b446e
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 07a528c0dda6237efc280644040a48d42c4b0f85
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>ショートカット キー (HTML および JavaScript)
   
@@ -59,6 +56,6 @@ ms.lasthandoff: 01/19/2018
 |選択した CSS 値を 1 つ増やす|↑ キー|  
 |選択した CSS 値を 1 つ減らす|↓ キー|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
  [クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)

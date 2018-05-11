@@ -1,12 +1,8 @@
 ---
-title: "文字列のビジュアライザーに文字列を表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列のビジュアライザーに文字列を表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -21,17 +17,16 @@ helpviewer_keywords:
 - string visualizer
 - visualizers, string
 ms.assetid: 080fd8f1-72b0-461f-8451-3c84d5dc51df
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 801618c900f11a562b42e610c56dfa7855dfaf39
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: a3a0575b02422bf83dd560d3eae5724b0a50d3f3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio での文字列のビジュアライザーで文字列を表示します。
 デバッグしている間がデータ ヒントまたはデバッガー ウィンドウに表示するのには長すぎる文字列を表示する文字列のビジュアライザーを開くことができます。 多くのシナリオでビジュアライザーに役立つことが正しくない形式の文字列を識別します。
@@ -70,5 +65,5 @@ ms.lasthandoff: 01/04/2018
 
 ![HTML 文字列ビジュアライザー](../debugger/media/dbg-string-visualizers-html.png "HTML 文字列ビジュアライザー")
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム ビジュアライザー (c#、Visual Basic) を作成します。](../debugger/create-custom-visualizers-of-data.md)

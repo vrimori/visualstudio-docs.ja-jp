@@ -1,12 +1,9 @@
 ---
-title: "MSBuild コマンド ライン リファレンス | Microsoft Docs"
-ms.custom: 
+title: MSBuild コマンド ライン リファレンス | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - MSBuild, command line reference
 - msbuild.exe
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47179698fe7a65552c10ddf24c2f49733f60fd97
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 536a19e26fa935f26201692d539c6ecd51270d32
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild コマンド ライン リファレンス
 MSBuild.exe を使用してプロジェクト ファイルやソリューション ファイルをビルドするとき、スイッチをいくつか含めて、プロセスのさまざまな側面を指定できます。  
@@ -73,7 +69,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |/distributedlogger:<br /><br /> `central logger`*<br /><br /> `forwarding logger`|/dl:`central logger`*`forwarding logger`|MSBuild のイベントを記録して、各ノードに異なる logger インスタンスをアタッチします。 複数の logger を指定するには、各 logger を個別に指定します。<br /><br /> logger を指定するには、logger の構文を使用します。 logger の構文については、この後に示されている **/logger** スイッチを参照してください。<br /><br /> このスイッチを使用する方法を次の例に示します。<br /><br /> `/dl:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `/dl:MyLogger,C:\My.dll*ForwardingLogger,C:\Logger.dll`|  
 |/fileLogger<br /><br /> *[number]*|/fl[`number`]|ビルド出力を、現在のディレクトリにある単一のファイルに記録します。 `number` を指定しない場合、出力ファイルの名前は msbuild.log になります。 `number` を指定した場合、出力ファイルの名前は msbuild`n`.log になります。この n には、`number` が設定されます。 `Number` は、1 から 9 までの数値を指定できます。<br /><br /> **/fileLoggerParameters** スイッチを使用して、ファイルの場所と fileLogger の他のパラメーターを指定できます。|  
 |/fileloggerparameters:[number]<br /><br /> `parameters`|/flp:[ `number`] `parameters`|ファイル logger と分散ファイル logger の追加のパラメーターを指定します。 このスイッチが指定されているということは、対応する /**filelogger[**`number`**]** スイッチが存在することを意味します。 `Number` は、1 から 9 までの数値を指定できます。<br /><br /> **/consoleloggerparameters** に示されているすべてのパラメーターを使用できます。 また、次のパラメーターを 1 つ以上使用することもできます。<br /><br /> -   **LogFile**。 ビルド ログが書き込まれるログ ファイルへのパス。 分散ファイル logger では、このパスをログ ファイル名の先頭に追加します。<br />-   **Append**。 ビルド ログを、ログ ファイルに追加して記録するか、ログ ファイルを上書きして記録するかについて指定します。 このスイッチを設定すると、ビルド ログはログ ファイルに追加して記録されます。 このスイッチを指定しないと、既存のログ ファイルの内容が上書きして記録されます。<br />     append スイッチを含めた場合、そのスイッチが true または false のどちらに設定されている場合でも、ログが追加して記録されます。 append スイッチを含めない場合、ログは上書きして記録されます。<br />     次の場合、ファイルを上書きして記録します。`msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log`<br />     次の場合、ファイルを追加して記録します。`msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log;append=true`<br />     次の場合、ファイルを追加して記録します。`msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log;append=false`<br />-   **Encoding**。 ファイルのエンコード (UTF-8、Unicode、ASCII など) を指定します。<br /><br /> 次の例では、警告とエラー用に個別のログ ファイルを生成します。<br /><br /> `/flp1:logfile=errors.txt;errorsonly /flp2:logfile=warnings.txt;warningsonly`<br /><br /> 次の例は、他の使用法を示しています:<br /><br /> `/fileLoggerParameters:LogFile=MyLog.log;Append; Verbosity=diagnostic;Encoding=UTF-8`<br /><br /> `/flp:Summary;Verbosity=minimal;LogFile=msbuild.sum`<br /><br /> `/flp1:warningsonly;logfile=msbuild.wrn`<br /><br /> `/flp2:errorsonly;logfile=msbuild.err`|  
-|/binaryLogger[:[LogFile=]`output.binlog`[;ProjectImports=[None,Embed,ZipFile]]]|/bl|すべてのビルド イベントをシリアル化し、バイナリ ファイルを作成します。 既定では、このファイルは現在のディレクトリに置かれ、名前は `msbuild.binlog` になります。 このバイナリ ログはビルド プロセスの詳しい説明であり、テキスト ログを再構築するために後で利用できます。また、他の分析ツールで利用できます。 バイナリ ログは通常、最も詳しいテキスト診断レベルのログの 10 分の 1 から 20 分の 1 のサイズになります。<br /><br />既定のバイナリ ロガーはプロジェクト ファイルのソース テキストを収集します。ビルド中に見つけられた、すべてのインポート済みファイルとターゲット ファイルも収集されます。 任意の `ProjectImports` スイッチでこの動作が制御されます。<br /><br /> -   **ProjectImports=None** プロジェクト インポートを収集しません。<br /> -   **ProjectImports=Embed** ログ ファイルにプロジェクト インポートを埋め込みます (既定)。<br /> -   **ProjectImports=ZipFile** プロジェクト ファイルを `output.projectimports.zip` に保存します。ここで、`output` はバイナリ ログ ファイル名と同じ名前になります。<br /><br />ProjectImports の初期設定は Embed です。<br />**注**: このロガーは、`.cs` や `.cpp` など、MSBuild 以外のソース ファイルを収集しません。<br />`.binlog` ファイルは、プロジェクト/ソリューションの代わりに引数として `msbuild.exe` に渡すことで "再生" できます。 その他のロガーは、ログ ファイルに含まれている情報を、元のビルトが行われていたかのように受け取ります。 バイナリ ログとその使用に関する詳細は、https://github.com/Microsoft/msbuild/wiki/Binary-Log にあります。 <br /><br />**例**:<br /> -   `/bl`<br /> -    `/bl:output.binlog`<br /> -   `/bl:output.binlog;ProjectImports=None`<br /> -   `/bl:output.binlog;ProjectImports=ZipFile`<br /> -   `/bl:..\..\custom.binlog`<br /> -   `/binaryLogger`|
+|/binaryLogger[:[LogFile=]`output.binlog`[;ProjectImports=[None,Embed,ZipFile]]]|/bl|すべてのビルド イベントをシリアル化し、バイナリ ファイルを作成します。 既定では、このファイルは現在のディレクトリに置かれ、名前は `msbuild.binlog` になります。 このバイナリ ログはビルド プロセスの詳しい説明であり、テキスト ログを再構築するために後で利用できます。また、他の分析ツールで利用できます。 バイナリ ログは通常、最も詳しいテキスト診断レベルのログの 10 分の 1 から 20 分の 1 のサイズになります。<br /><br />既定のバイナリ ロガーはプロジェクト ファイルのソース テキストを収集します。ビルド中に見つけられた、すべてのインポート済みファイルとターゲット ファイルも収集されます。 任意の `ProjectImports` スイッチでこの動作が制御されます。<br /><br /> -   **ProjectImports=None** プロジェクト インポートを収集しません。<br /> -   **ProjectImports=Embed** ログ ファイルにプロジェクト インポートを埋め込みます (既定)。<br /> -   **ProjectImports=ZipFile** プロジェクト ファイルを `output.projectimports.zip` に保存します。ここで、`output` はバイナリ ログ ファイル名と同じ名前になります。<br /><br />ProjectImports の初期設定は Embed です。<br />**注**: このロガーは、`.cs` や `.cpp` など、MSBuild 以外のソース ファイルを収集しません。<br />`.binlog` ファイルは、プロジェクト/ソリューションの代わりに引数として `msbuild.exe` に渡すことで "再生" できます。 その他のロガーは、ログ ファイルに含まれている情報を、元のビルトが行われていたかのように受け取ります。 バイナリ ログとその使用法について詳しくは、https://github.com/Microsoft/msbuild/wiki/Binary-Log をご覧ください <br /><br />**例**:<br /> -   `/bl`<br /> -    `/bl:output.binlog`<br /> -   `/bl:output.binlog;ProjectImports=None`<br /> -   `/bl:output.binlog;ProjectImports=ZipFile`<br /> -   `/bl:..\..\custom.binlog`<br /> -   `/binaryLogger`|
 |/logger:<br /><br /> `logger`|/l:`logger`|MSBuild からのイベントをログに記録する logger を指定します。 複数の logger を指定するには、各 logger を個別に指定します。<br /><br /> `logger` に対して次の構文を使用します。`[``LoggerClass``,]``LoggerAssembly``[;``LoggerParameters``]`<br /><br /> `LoggerClass` に対して次の構文を使用します。`[``PartialOrFullNamespace``.]``LoggerClassName`<br /><br /> アセンブリに logger が 1 つしか含まれていない場合は、logger クラスを指定する必要はありません。<br /><br /> `LoggerAssembly` に対して次の構文を使用します。`{``AssemblyName``[,``StrongName``] &#124;` `AssemblyFile``}`<br /><br /> logger のパラメーターは省略可能であり、入力されたとおりに logger に渡されます。<br /><br /> **/logger** スイッチを使用する例を次に示します。<br /><br /> `/logger:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `/logger:XMLLogger,C:\Loggers\MyLogger.dll;OutputAsHTML`|  
 |/noconsolelogger|/noconlog|既定のコンソール logger を無効にし、イベントのログをコンソールに記録しません。|  
   

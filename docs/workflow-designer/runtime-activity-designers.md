@@ -1,21 +1,23 @@
 ---
-title: "ランタイム アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナー、ランタイム アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 874bd63a044c3e1483bea7ec54af03b17b7e11bd
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a519e59538501ceb9f698c89cb2f0c762c08fcd3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="runtime-activity-designers"></a>ランタイム アクティビティ デザイナー
-ランタイム アクティビティ デザイナーは、ワークフロー アクティビティを保持および終了するために使用します。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーの使用方法についてのガイドラインを示します。
+ランタイム アクティビティ デザイナーは、ワークフロー アクティビティを保持および終了するために使用します。 このセクションに含まれるトピックでは、ワークフロー デザイナーのアクティビティ デザイナーを使用する方法のガイダンスを提供します。
 
 ## <a name="related-sections"></a>関連項目
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

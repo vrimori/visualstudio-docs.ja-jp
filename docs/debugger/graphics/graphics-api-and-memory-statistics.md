@@ -1,25 +1,23 @@
 ---
-title: "グラフィックス API とメモリの統計 |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス API とメモリの統計 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.apistatistics
 - vs.graphics.memorystatistics
 ms.assetid: 27d2f303-e3ed-4219-9009-345a0d849506
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c34c505751153410896da66040c866676c3a7ee2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 48c8ed3c8c2ebffc57ac46e987dbc37950cba0fd
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="graphics-api-and-memory-statistics"></a>グラフィックス API とメモリ統計情報
 <!-- VERSIONLESS -->
@@ -43,7 +41,7 @@ Visual Studio グラフィックス診断のグラフィックス API の統計�
 
 API 統計ツールを使用してを右クリックをすべてコピー データ ウィンドウでとして CSV で、さらに詳しい分析の Excel のように貼り付けることができます。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [グラフィックス診断 (DirectX グラフィックスのデバッグ)](visual-studio-graphics-diagnostics.md)   
 [リソースの履歴](graphics-event-list.md#resource-history)
 <!-- /VERSIONLESS -->

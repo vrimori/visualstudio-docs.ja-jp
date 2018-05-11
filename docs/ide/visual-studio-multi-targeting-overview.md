@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio での NET Framework の対象設定 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での NET Framework の対象設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - multi-targeting [Visual Studio]
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - .NET framework targeting [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e78f77993c510a223056696c0beac27147d18d5a
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 00f6baad44b4276ed4de81a2fd55c4f5b9d1c8a2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio のマルチ ターゲットの概要
 
@@ -87,6 +84,5 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 ## <a name="see-also"></a>関連項目
 
-[マルチ ターゲット (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)  
-[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)  
-[プラットフォームの互換性とシステム要件](http://www.microsoft.com/visualstudio/eng/products/compatibility)
+- [マルチ ターゲット (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
+- [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

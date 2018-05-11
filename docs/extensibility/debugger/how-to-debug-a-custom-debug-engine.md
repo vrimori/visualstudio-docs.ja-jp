@@ -1,26 +1,24 @@
 ---
-title: "方法: カスタム デバッグ エンジンのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: カスタム デバッグ エンジンのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, debugging
 - debugging [Debugging SDK], custom debug engines
 ms.assetid: df27a8d6-3938-45ff-b47f-b684e80b38a0
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0b814b441846479163aad4e003480cc9cfadde44
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 95a2db2bc5e8990f536abc851941c337a1dee277
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>方法: カスタム デバッグ エンジンをデバッグします。
 プロジェクトの種類からのデバッグ エンジン (DE) の起動、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>メソッドです。 インスタンスの管理下にある、DE を起動するつまり[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトの種類を制御します。 ただし、そのインスタンスの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デをデバッグすることはできません。 以下は、カスタム、DE をデバッグできるようにする手順を示します。  
@@ -77,5 +75,5 @@ ms.lasthandoff: 12/22/2017
   
 9. デを起動するためのプロセスをデバッグする場合は、「デバッグはカスタム デバッグ エンジン」の手順の起動後に、DE にアタッチする手順を実行することができます。 これにより、3 つのインスタンス[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を実行している: プロジェクト型のソース、インスタンスが作成されたプロジェクトの種類、および、DE にアタッチされている 3 つ目の 2 つ目のいずれか。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム デバッグ エンジンの作成](../../extensibility/debugger/creating-a-custom-debug-engine.md)

@@ -1,13 +1,9 @@
 ---
-title: "フレンド (Debug Interface Access SDK) |Microsoft ドキュメント"
-ms.custom: 
+title: フレンド (Debug Interface Access SDK) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - friend classes [DIA SDK]
 - Friend symbol
 ms.assetid: 5147a170-41ce-4727-8ace-c318e8d11647
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a4e8214228209c5eadbd6649a9b50de86f89459
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 75cdf9b4239b02e9f07077a6bf574c3b9e5b47a3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="friend-debug-interface-access-sdk"></a>フレンド (Debug Interface Access SDK)
 フレンド クラスとフレンド関数がで識別される`SymTagFriend`シンボル。 ユーザー定義型 (Udt) を親の子にされており、 [idiasymbol::get_classparent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)プロパティです。  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/22/2017
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|クラスまたは関数の記号。|  
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|型のシンボルの ID です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シンボル型のクラス階層](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

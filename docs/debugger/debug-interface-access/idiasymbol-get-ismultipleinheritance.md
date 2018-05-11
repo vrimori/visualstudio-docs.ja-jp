@@ -1,27 +1,22 @@
 ---
-title: "IDiaSymbol::get_isMultipleInheritance |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaSymbol::get_isMultipleInheritance |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0aa356a1-5c5c-4ee4-8b48-bae0a2610013
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df65db04f06e69dc5002e7210745fdc5b64e7182
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ab7f0d789527f874f3d3b80b44c58347d1cd84f3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetismultipleinheritance"></a>IDiaSymbol::get_isMultipleInheritance
 指定するかどうか、`this`多重継承を持つデータ メンバーを指すポインターです。  
@@ -40,5 +35,5 @@ HRESULT get_isMultipleInheritance(
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

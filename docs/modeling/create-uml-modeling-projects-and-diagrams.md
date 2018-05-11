@@ -1,22 +1,22 @@
 ---
-title: "UML モデリング プロジェクトおよびダイアグラムを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: UML モデリング プロジェクトおよびダイアグラムを作成する
 ms.date: 01/23/2018
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modeling diagrams (UML)
 - UML designers
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: de9c5e86e8c6cba28ebe601a4f69bc5ee9526fa7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 829114f763be82c776537af7dac1300f809cca0e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>UML モデリング プロジェクトおよびダイアグラムを作成する
 

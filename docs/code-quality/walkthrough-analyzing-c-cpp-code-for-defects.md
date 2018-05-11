@@ -1,13 +1,9 @@
 ---
-title: "チュートリアル: コードと C/C++ コードを分析する障害に対する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル : C/C++ コード分析による障害の検出'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - C/C++, code analysis
 - code analysis, walkthroughs
@@ -15,18 +11,18 @@ helpviewer_keywords:
 - code analysis tool, walkthroughs
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb07eacd12918692e3ee2036886e7d5e2e16a2
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 6e15c6acc241e36e7cadc1d6f043549f1f5e46c7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>チュートリアル : C/C++ コード分析による障害の検出
 
-このチュートリアルでは、コードと C/C++ コードのコード分析ツールを使用して潜在的なコードの不具合のコードと C/C++ コードを分析する方法を示します。 
+このチュートリアルでは、コードと C/C++ コードのコード分析ツールを使用して潜在的なコードの不具合のコードと C/C++ コードを分析する方法を示します。
 
 - ネイティブ コードに対してコード分析を実行します。
 - コード障害の警告を分析します。
@@ -169,7 +165,7 @@ ms.lasthandoff: 02/20/2018
 
    ```cpp
    . . .
-   LinkedList *newNode = NULL; 
+   LinkedList *newNode = NULL;
    if (NULL == node)
    {
         return NULL;

@@ -1,13 +1,9 @@
 ---
-title: "Visual Studio での CPU サンプリングのビギナーズ ガイド | Microsoft Docs"
+title: Visual Studio での CPU サンプリングのビギナーズ ガイド | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.wizard.intropage
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - performance tools, wizard
 - Performance Wizard
 ms.assetid: 85161cc4-18ee-49b3-9487-33680e687597
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69bc0ae15a33cd3f7fd9b06a25a34f7dc88c083c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ee85f9946e16b0ecaafa196e1b197304ccde3bd9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU サンプリングの初心者向けガイド
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 以下の手順では、**サンプリング データ**の使用方法を示します。

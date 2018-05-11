@@ -1,22 +1,20 @@
 ---
-title: "Visual Studio でメモリ使用量を分析する | Microsoft Docs"
-ms.custom: H1Hack27Feb2017
+title: アプリのメモリ使用量を測定する
+description: デバッガーに統合された診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。
+ms.custom: mvc
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "13"
+ms.topic: tutorial
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d6fc25c3a9d7306332c704453f22073df4e76546
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7f12caeb35e2c5c100069c3a5df066775beb5af3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="profile-memory-usage-in-visual-studio"></a>Visual Studio でのメモリ使用のプロファイリング
 デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使うと、マネージ メモリ ヒープとネイティブ メモリ ヒープの 1 つまたは複数の "*スナップショット*" を取得して、オブジェクト型のメモリ使用量への影響を理解するのに役立てることができます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
@@ -33,6 +31,12 @@ ms.lasthandoff: 01/04/2018
 >  **カスタム アロケーター サポート** ネイティブ メモリ プロファイラーは、実行時に生成された割り当て [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) イベント データを収集して機能します。  CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。  独自のアロケーターを作成する場合、新しく割り当てられたヒープ メモリへのポインターを返すすべての関数は、[__declspec](/cpp/cpp/declspec)(アロケーター) で修飾できます。myMalloc での例を次に示します。  
 >   
 >  `__declspec(allocator) void* myMalloc(size_t size)` 
+
+このチュートリアルでは、次の作業を行います。
+
+> [!div class="checklist"]
+> * メモリのスナップショットの作成
+> * メモリ使用量データの分析
 
 ## <a name="collect-memory-usage-data"></a>メモリ使用量データの収集
 
@@ -151,7 +155,7 @@ ms.lasthandoff: 01/04/2018
   
      ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
- 変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)**のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
+ 変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)** のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
   
  ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
@@ -165,6 +169,9 @@ ms.lasthandoff: 01/04/2018
   
  [Visual C++ ブログ: Visual C++ 2015 でのメモリ プロファイル](https://blogs.msdn.microsoft.com/vcblog/2015/10/21/memory-profiling-in-visual-c-2015/)  
 
-## <a name="see-also"></a>参照
- [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+## <a name="next-steps"></a>次の手順
+
+このチュートリアルでは、メモリ使用量データを収集し、分析する方法について学習しました。 [プロファイラーのツアー](../profiling/profiling-feature-tour.md)を既に完了している場合、自分のアプリの CPU 使用量を分析する方法を一読しておくことをお勧めします。
+
+> [!div class="nextstepaction"]
+> [CPU 使用率の分析](../profiling/beginners-guide-to-performance-profiling.md) 

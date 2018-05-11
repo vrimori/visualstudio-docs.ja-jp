@@ -1,13 +1,9 @@
 ---
-title: "方法: フラグを設定し、スレッドのフラグ解除 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: フラグを設定し、スレッドのフラグ解除 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - treads, switching [debugging]
 ms.assetid: 952d579d-6911-413e-b3e5-54e7e797e70c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 489403e4ce5052cb526a361e4548ab8823a20b18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 052c9d65e833152c0d3d3f67eda41742119eccaf
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-flag-and-unflag-threads"></a>方法 : スレッドに対するフラグの設定と設定解除を行う
 アイコンでマークすることによって、特に注目するスレッドのフラグを設定することができます、**スレッド**、**並列スタック**(スレッド ビュー)、**並列ウォッチ**、および**GPU スレッド**windows です。 このアイコンにより、フラグが設定されているスレッドをそれ以外のスレッドと簡単に区別できるようになります。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  **[OK]**をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)  
  [チュートリアル: [スレッド] ウィンドウを使用するマルチ スレッド アプリケーションをデバッグします。](../debugger/how-to-use-the-threads-window.md)

@@ -1,28 +1,25 @@
 ---
-title: "WebView コントロール (UWP) のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: WebView コントロール (UWP) のデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 7d105907-8b39-4d07-8762-5c5ed74c7f21
-caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 8c463bc443540e136b2cffd1a4abdda2cc543d05
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: 4576cfa5724869aba86842c5debb4df685559879
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP アプリの WebView コントロールをデバッグします。
   
@@ -86,5 +83,5 @@ ms.lasthandoff: 01/19/2018
   
 6.  表示し、アプリ内の変数を変更するか」の説明に従って、コンソールのコマンドを使用して[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

@@ -1,13 +1,9 @@
 ---
-title: "書式指定子 (C++)、デバッガーで |Microsoft ドキュメント"
-ms.custom: 
+title: 書式指定子 (C++)、デバッガーで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -28,17 +24,16 @@ helpviewer_keywords:
 - format specifiers, debugger
 - debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7efb90e6f2a2489fffb890c664393252021e6f
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: f8d9d2ecc00e0d29f39cb82dab997fb28704f518
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>C++ では、Visual Studio デバッガーでの書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。  
@@ -80,15 +75,15 @@ int main() {
 |**sb**|const char * 文字列 (引用符なし)|\<location> "hello world"|hello world|  
 |s8|UTF-8 文字列|\<場所 >"This is utf-8 コーヒー â˜• です"|「これは、utf-8 コーヒー ☕」|
 |**s8b**|Utf-8 文字列 (引用符なし)|\<location> "hello world"|hello world|  
-|su|(UTF-16 エンコード) Unicode 文字列|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
-|sub|Unicode (utf-16 エンコーディング) 文字列 (引用符なし)|\<location> L"hello world"|hello world|  
-|bstr|BSTR 文字列|\<location> L"hello world"|L"hello world"|  
-|env|環境ブロック (2 つの null 終了文字列)|\<位置 > L"=:: =::\\\\"|L"=:: =::\\\\\\0 = C: = C:\\\\windows\\\\system32\\0ALLUSERSPROFILE =…|
-|**s32**|UTF-32 文字列|\<location> U"hello world"|u"hello world"|  
-|**s32b**|UTF-32 文字列 (引用符なし)|\<location> U"hello world"|hello world|  
+|su|(UTF-16 エンコード) Unicode 文字列|\<位置 > L"hello world"|L"hello world"<br /><br /> u"hello world"|  
+|sub|Unicode (utf-16 エンコーディング) 文字列 (引用符なし)|\<位置 > L"hello world"|hello world|  
+|bstr|BSTR 文字列|\<位置 > L"hello world"|L"hello world"|  
+|env|環境ブロック (2 つの null 終了文字列)|\<location> L"=::=::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
+|**s32**|UTF-32 文字列|\<位置 > U"hello world"|u"hello world"|  
+|**s32b**|UTF-32 文字列 (引用符なし)|\<位置 > U"hello world"|hello world|  
 |**en**|enum|Saturday(6)|土曜日|  
-|**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<位置 > {\<最初のメンバー >}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
-|**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<location>, {member=value...}|{member=value...}|  
+|**hv**|ポインター型。検査されるポインター値が配列のヒープ割り当ての結果であることを意味します (たとえば、 `new int[3]`)。|\<location>{\<first member>}|\<位置 > {\<最初のメンバー >、 \<2 番目のメンバー >,…}|  
+|**na**|オブジェクトのポインターのメモリ アドレスを非表示にします。|\<場所 >、{メンバーの値... の =}|{member=value...}|  
 |**nd**|基底クラスの情報だけを表示し、派生クラスは無視します。|`(Shape*) square` には基底クラスおよび派生クラスの情報が含まれます。|基底クラスの情報だけを表示します。|  
 |hr|HRESULT または Win32 エラー コード。 デバッガーが HRESULT を自動的にデコードする場合、この指定子は不要です。|S_OK|S_OK|  
 |wc|Windows クラス フラグ|0x0010|WC_DEFAULTCHAR|  
@@ -120,11 +115,11 @@ int main() {
 |**f**|符号付き浮動小数点数値。|(3./2.), f|1.500000|  
 |**e**|符号付き指数表記。|(3.0/2.0)|1.500000e+000|  
 |**g**|符号付き浮動小数点数値または符号付き指数表記の短い方。|(3.0/2.0)|1.5|  
-|c|単一文字|\<location>|101 'e'|  
-|s|const char*|\<location>|"hello world"|  
-|su|const wchar_t*<br /><br /> const char16_t\*|\<location>|L"hello world"|  
-|sub|const wchar_t*<br /><br /> const char16_t\*|\<location>|hello world|  
-|s8|const char*|\<location>|"hello world"|  
+|c|単一文字|\<場所 >|101 'e'|  
+|s|const char*|\<場所 >|"hello world"|  
+|su|const wchar_t*<br /><br /> const char16_t\*|\<場所 >|L"hello world"|  
+|sub|const wchar_t*<br /><br /> const char16_t\*|\<場所 >|hello world|  
+|s8|const char*|\<場所 >|"hello world"|  
 |hr|HRESULT または Win32 エラー コード。 デバッガーが HRESULT を自動的にデコードする場合、この指定子は不要です。|S_OK|S_OK|  
 |wc|Windows クラス フラグ。|0x00000040,|WC_DEFAULTCHAR|  
 |wm|Windows メッセージ番号|0x0010|WM_CLOSE|  

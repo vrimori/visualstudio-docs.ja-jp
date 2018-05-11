@@ -1,16 +1,15 @@
 ---
-title: "ソース エディター | Microsoft Docs"
-description: "Visual Studio for Mac でのソース エディターの使用"
+title: ソース エディター
+description: Visual Studio for Mac でのソース エディターの使用
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: af5c66d8bd2b9fd16f7a0e7d5d9796ada1ede022
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: c617ed1bae10569291b88d038e8d875ca966ad43
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="source-editor"></a>ソース エディター
 

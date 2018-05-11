@@ -1,29 +1,25 @@
 ---
-title: "Visual Studio デバッガーを使用して C++ を使用してデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: C++ をデバッグします。
+description: Visual Studio デバッガーを使用してネイティブ コードをデバッグします。
+ms.custom: mvc
 ms.date: 03/18/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
 - debugger
 ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce20f8c17b52b109b469bd439905e0edd66c9d3
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1027e5f737bf3fc75b33c47578ae0cc107a1fb7d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="debug-with-c-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用して C++ でのデバッグします。
+# <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>Visual Studio デバッガーを使用して C++ でのクイック スタート: デバッグします。
 
 Visual Studio デバッガーでは、アプリのデバッグに役立つ多くの強力な機能を提供します。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。
 

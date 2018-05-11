@@ -1,25 +1,26 @@
 ---
-title: "管理者ポータルでのサブスクリプションの編集 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how administrators can edit subscription assignments.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 120bf87ddbaf50efa1abe59bac1c2e4616db7737
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 管理者ポータルでのサブスクリプションの編集 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: 管理者がサブスクリプションの割り当てを編集する方法を説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 9ea5f6bc562ce520be08728facfb6099df95ca4c
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio サブスクリプションの割り当ての編集
 
+サブスクリプション管理者は、組織内の個人に割り当てられているサブスクリプションに変更を加えることができます。  この記事では、行うことができる変更の種類と、必要な手順について説明します。 
+
 ## <a name="making-changes-to-subscriber-information"></a>サブスクライバー情報を変更する
 サブスクライバー情報を編集してエラーを修正したり情報を更新したりすることができます。 
-**サブスクライバーの電子メール アドレスの編集により、既存の特典がリセットされることに注意してください。**
 
 サブスクライバーを編集するには、サブスクライバーの電子メール アドレスの横にマウス ポインターを移動すると表示される省略記号 (...) を選択します。 ドロップダウン リストが表示されます。  **[編集]** を選択して、サブスクライバーの詳細を変更します。 グリッドのサブスクライバーの行をダブルクリックして編集ウィンドウを開くこともできます。
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/29/2018
 
     ![ライセンスの編集 - 一括編集のファイルのアップロード](_img\edit-license\edit-license-bulk-file-upload1.png)
 
-5.  ファイルをアップロードしたら、成功したことを知らせる通知が表示されます。 
+5.  ファイルをアップロードしたら、成功したことを知らせる通知が表示されます。 この時点で、編集内容がサブスクライバーの情報に反映されます。 
 
     ![ライセンスの編集 - 一括編集のアップロードの完了](_img\edit-license\edit-license-bulk-upload-complete.png)
 

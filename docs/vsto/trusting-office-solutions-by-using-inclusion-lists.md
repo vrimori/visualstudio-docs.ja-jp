@@ -1,12 +1,10 @@
 ---
-title: "信頼のリストを使用して Office ソリューションを信頼する側 |Microsoft ドキュメント"
-ms.custom: 
+title: 信頼のリストを使用して Office ソリューションを信頼する側 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - inclusion lists [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1fd73ddef389ba1f97aed46a41e1e6972135fd21
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4e8b26ef4c262f830cd2c6444b56e05f128316c6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trusting-office-solutions-by-using-inclusion-lists"></a>信頼のリストによる Office ソリューションへの信頼の付与
   信頼のリストによって、ユーザーは発行者を識別する証明書で署名されている Office ソリューションに信頼を付与することができます。 信頼のリストはユーザー固有であり、ドキュメント レベルのカスタマイズと VSTO アドインに使用できます。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="structure-of-the-inclusion-list"></a>信頼のリストの構造  
  有効な信頼のリストのエントリには、配置マニフェストへのパスと、ソリューションの署名に使用する公開キーという 2 つの部分があります。 ソリューションが信頼のリストに追加されると、信頼されているとみなされます。 Office ソリューションが実行されると、Office アプリケーションによって信頼リストのパブリックキーが配置マニフェストの署名キーと比較され、現在実行中のソリューションが元の信頼バージョンと同じであることが確認されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
   

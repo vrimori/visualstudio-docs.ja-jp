@@ -1,25 +1,22 @@
 ---
-title: "Visual Studio で .NET Framework のターゲット バージョンを指定する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で .NET Framework のターゲット バージョンを指定する
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - .NET Framework version [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 03d8b734833fad5a47f0d5517b21a7851d9258a6
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 6d0eef8a9563fdb6d74737f90cf184186142a672
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-target-a-version-of-the-net-framework"></a>方法: .NET Framework のターゲット バージョンを指定する
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 03/08/2018
 
 プロジェクトを作成したときに使用できる .NET Framework のバージョンは、インストールされているバージョンと **[新しいプロジェクト]** ダイアログ ボックスで選択したテンプレートによって変わります。
 
-1. メニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
 1. インストールされているテンプレートの一覧で、作成するプロジェクトの種類を選択し、プロジェクトの名前を入力します。
 
@@ -54,7 +51,7 @@ C++ プロジェクトのターゲット バージョンを変更する方法に
 
     ![Visual Studio のソリューション エクスプローラーのプロパティ](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")
 
-1. プロパティ ウィンドウの左側の列で、**[アプリケーション]** タブを選択します。
+1. **[プロパティ]** ウィンドウの左側の列で、**[アプリケーション]** タブを選択します。
 
     ![Visual Studio のアプリのプロパティの [アプリケーション] タブ](../ide/media/vs_slnexplorer_properties_applicationtab.png "vs_slnExplorer_Properties_ApplicationTab")
 
@@ -72,8 +69,8 @@ C++ プロジェクトのターゲット バージョンを変更する方法に
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio のマルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)  
-[.NET Framework を対象とするエラーのトラブルシューティング](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)  
-[[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)  
-[[アプリケーション] ページ (プロジェクト デザイナー)](../ide/reference/application-page-project-designer-visual-basic.md)  
-[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+- [Visual Studio のマルチ ターゲットの概要](../ide/visual-studio-multi-targeting-overview.md)
+- [.NET Framework を対象とするエラーのトラブルシューティング](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
+- [[アプリケーション] ページ (プロジェクト デザイナー) (C#)](../ide/reference/application-page-project-designer-csharp.md)
+- [[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)
+- [方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio での Visual C# コードの単体テスト | Microsoft Docs"
+title: Visual Studio での Visual C# コードの単体テスト
 ms.date: 11/04/2016
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 0d47d3902bc333ee354fdf7f7d6d489b0284f6e3
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: b409e3faa44b19cf0018e770915c8a3868f9ead4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unit-testing-visual-c-code"></a>Visual C# コードの単体テスト
 
@@ -149,7 +149,7 @@ ms.lasthandoff: 03/08/2018
 
    新しいテストがテスト エクスプローラーの **[テストを実行しない]** ノードに表示されます。
 
-5. テスト エクスプローラーで **[すべて実行]**をクリックします。
+5. テスト エクスプローラーで **[すべて実行]** をクリックします。
 
    ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png)
 
@@ -179,7 +179,7 @@ ms.lasthandoff: 03/08/2018
    >
    > ユーザーが要件を変更したら、正しくなくなったテストを無効にします。 新しいテストを作成し、一度に 1 つずつ、同じ増分方式で処理するようにします。
 
-2. テスト エクスプローラーで **[すべて実行]**をクリックします。
+2. テスト エクスプローラーで **[すべて実行]** をクリックします。
 
 3. テストが失敗します。
 
@@ -256,7 +256,7 @@ ms.lasthandoff: 03/08/2018
 
     1. `SquareRoot` 関数の先頭にブレークポイントを設定します。
 
-    2. 失敗したテストのショートカット メニューで **[選択したテストのデバッグ]**をクリックします。
+    2. 失敗したテストのショートカット メニューで **[選択したテストのデバッグ]** をクリックします。
 
         実行がブレークポイントで停止したら、コードをステップ実行します。
 

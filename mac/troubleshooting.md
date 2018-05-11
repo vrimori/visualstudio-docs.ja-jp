@@ -1,21 +1,21 @@
 ---
-title: "トラブルシューティング | Microsoft Docs"
-description: 
+title: Visual Studio for Mac のトラブルシューティング
+description: Visual Studio for Mac ユーザーのための一般的な問題と解決策です。
+ms.topic: troubleshooting
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
-ms.openlocfilehash: 4e483548e916bf00b07c472b18adac8504b6e967
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4a6b5d2f3c5e6c84307d70308773dd353c6de883
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 
 ## <a name="viewing-logs-in-visual-studio-for-mac"></a>Visual Studio for Mac でのログを表示する
- 
+
 ログは、**[ヘルプ] > [ログ ディレクトリを開く]** メニュー項目で見ることができます (下図参照)。
 
 ![[ログ ディレクトリを開く] メニュー項目](media/troubleshooting-image1.png)

@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: カスタム マスター ページのインポートし、サイトのイメージでページ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: カスタム マスター ページのインポートし、サイトのイメージでページ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 544c3c727046fdcabcde90f221f4b630c11cf29f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f90f85e7f22cf3bdecf90aaf6f8d61af3f399a68
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート
   このチュートリアルは、SharePoint カスタム マスター ページとサイトのページにイメージがインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行する次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
   
 -   Visual Studio  
   
@@ -177,9 +176,9 @@ ms.lasthandoff: 01/10/2018
   
 7.  展開されたアイテムを表示する SharePoint サイトを開きます。  
   
- ファイルをインポートする代替方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]しを展開内のモジュールにファイルを追加するは、SharePoint[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][する方法: マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
+ ファイルをインポートする代替方法[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]しを展開内のモジュールにファイルを追加するは、SharePoint[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [方法: マスター ページまたはテーマをインポート](../sharepoint/how-to-import-a-master-page-or-theme.md)と[モジュールを使用して、ソリューション内のファイルのインクルード](../sharepoint/using-modules-to-include-files-in-the-solution.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [既存の SharePoint サイトからアイテムをインポートします。](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  

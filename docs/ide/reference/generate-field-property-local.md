@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio でフィールド、プロパティ、またはローカル変数を生成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でフィールド、プロパティ、またはローカル変数を生成する
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4e5da77f3053aabc2e8e4813c8ef5e7fb3407b5f
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 4cff83eb490f8012e8679dbd0b2c6a65d27f8e14
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generate-a-field-property-or-local-variable-in-visual-studio"></a>Visual Studio でフィールド、プロパティ、またはローカル変数を生成する
 

@@ -1,29 +1,24 @@
 ---
-title: "Idiaframedata::get_lengthsavedregisters |Microsoft ドキュメント"
-ms.custom: 
+title: Idiaframedata::get_lengthsavedregisters |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaFrameData::get_lengthSavedRegisters method
 ms.assetid: dfda4e91-9bfa-4b9d-9133-b73015bfa4d5
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e3e8c0d7b4cbec4e019d393ad6877f97b22ff9a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5e214cacdf9e2a58d3d97311107b9ff20967b723
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiaframedatagetlengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
 スタックにプッシュされる保存されたレジスタのバイト数を取得します。  
@@ -46,6 +41,6 @@ HRESULT get_lengthSavedRegisters (
 ## <a name="remarks"></a>コメント  
  このメソッドによって返される値がプログラムの文字列の解釈で通常使用される (を参照してください、 [idiaframedata::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)プログラム文字列の定義のメソッド)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)   
  [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)

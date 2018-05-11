@@ -1,28 +1,25 @@
 ---
-title: "Blend における XAML のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: Blend における XAML のデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 8406f07b6f74211b4df873c7eae054e9ab67749c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: ebcf0508c5bc4d5788be1f7515604b5b4be228f1
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-xaml-in-blend"></a>Blend での XAML のデバッグ
 アプリの XAML をデバッグするために [!INCLUDE[blend_first](../debugger/includes/blend_first_md.md)] のツールを使用できます。 エラーが表示されるプロジェクトをビルドするときに、**結果**パネルです。 エラーをダブルクリックして、エラーに関連するマークアップを検索します。 作業領域を増やす場合は、非表示にできます、**結果**F12 キーを押してパネルです。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-create-a-project"></a>プロジェクトを作成するには  
   
-1.  [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)]を開き、**ファイル** メニューをクリックして**新しいプロジェクト**です。  
+1.  [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)]を開き、**ファイル**メニューをクリックして**新しいプロジェクト**です。  
   
      **新しいプロジェクト**ダイアログ ボックスで、左側にあるプロジェクトの種類の一覧が表示されます。 プロジェクトの種類をクリックすると、その種類に関連付けられているプロジェクト テンプレートが右側に表示されます。  
   
@@ -109,13 +106,13 @@ ms.lasthandoff: 12/22/2017
   
 1.  リストの最初のエラーをダブルクリックします。 説明は、"値 '<' は、属性では無効です" となります。 エラーをダブルクリックすると、ポインターがコード内の対応する場所を見つけます。 `<` の前の `Button` は有効で、エラー メッセージで指定された属性ではありません。 コードの前の行を見ると、属性 `Top` の終わりの引用符がないことがわかります。 終わりの引用符を入力します。 エラー リストに注意してください、**結果** パネルが、変更を反映するように更新します。  
   
-2.  説明をダブルクリックして「'0' は有効な名前の先頭にします」。 `Margin="0,149,0,0"`適切な形式で表示されます。 ただし、`Margin` のカラー コーディングはコードの `Margin` の他のインスタンスと一致しないことに注意してください。 終わりの引用符が前の名前/値ペア (`VerticalAlignment="Top`) にないため、`Margin="` は前の属性の値の一部として読み込まれ、0 が名前/値ペアの先頭として読み込まれます。 `Top` の終わりの引用符を入力します。 [エラー一覧で、**結果**] パネルが、変更を反映するように更新します。  
+2.  説明をダブルクリックして「'0' は有効な名前の先頭にします」。 `Margin="0,149,0,0"` 適切な形式で表示されます。 ただし、`Margin` のカラー コーディングはコードの `Margin` の他のインスタンスと一致しないことに注意してください。 終わりの引用符が前の名前/値ペア (`VerticalAlignment="Top`) にないため、`Margin="` は前の属性の値の一部として読み込まれ、0 が名前/値ペアの先頭として読み込まれます。 `Top` の終わりの引用符を入力します。 [エラー一覧で、**結果**] パネルが、変更を反映するように更新します。  
   
 3.  残りのエラーをダブルクリックします。"終わりの XML タグ 'Button' が一致しません。" ポインターは終わりの**グリッド**タグ (`</Grid>`)、提案の内部エラーがある、`Grid`オブジェクト。 2 番目の `Button` オブジェクトで終わりのタグがないことに注意してください。 終了を追加した後`/`、**結果**パネル リストが更新されます。 これら 2 つの最初のエラーが解決され、さらに 2 つのエラーが識別されました。  
   
 4.  "メンバー 'content' が認識されないか、アクセスできません。" をダブルクリックします。 `c` の `content` は大文字になります。 小文字の "c" を大文字の "c" に置き換えます。  
   
-5.  "プロパティ 'Mame' が 'http://schemas.microsoft.com/winfx/2006/xaml' namespace にありません。" をダブルクリックします。 "Mame" の "M" は "N" でなければなりません。 "M" を "N" で置き換えます。 これで、XAML が解析でき、アプリがデザイン サーフェスに表示されます。  
+5.  ダブルクリック"、プロパティ 'Mame' がありません 、'http://schemas.microsoft.com/winfx/2006/xaml' 名前空間です"。 "Mame" の "M" は "N" でなければなりません。 "M" を "N" で置き換えます。 これで、XAML が解析でき、アプリがデザイン サーフェスに表示されます。  
   
      ![Blend for Visual Studio で XAML をデバッグ](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")  
   

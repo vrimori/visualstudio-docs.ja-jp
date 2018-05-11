@@ -1,27 +1,25 @@
 ---
-title: "メニュー コマンドにアイコンを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: メニュー コマンドにアイコンを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - icons [Visual Studio], adding to toolbars
 - toolbars [Visual Studio], adding icons to commands
 - commands [Visual Studio], adding icons
 ms.assetid: 362a0c7e-5729-4297-a83f-1aba1a37fd44
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 06d90b5174cc9ff2d09d7ccba8b2f39bc1d2a077
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8591c55a176493ace23df2de61ba26d58a3155e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-icons-to-menu-commands"></a>メニュー コマンドにアイコンを追加します。
 コマンドは、メニューとツールバーの両方に表示できます。 ツールバー、アイコンとテキストの両方を使用するコマンドが通常表示されるだけアイコン (領域を節約する) ときにメニューに表示するコマンドの一般的なです。  
@@ -85,6 +83,6 @@ ms.lasthandoff: 12/22/2017
   
 8.  アイコンをテストします。 プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスのコマンドを検索します。 追加したアイコンが表示にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
  [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)

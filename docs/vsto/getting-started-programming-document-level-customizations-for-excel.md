@@ -1,12 +1,10 @@
 ---
-title: "Excel 用ドキュメント レベル カスタマイズのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: Excel 用ドキュメント レベル カスタマイズのプログラミング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Excel projects [Office development in Visual Studio], getting started
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fdf4afeb260d94b9e121628163c760244ac5f6e1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5f10e0c2d3dc7a561b4fff7ad74081e9a26570b0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-programming-document-level-customizations-for-excel"></a>Excel のドキュメント レベルのカスタマイズのプログラミングの概要
   だけを開始する Visual Studio を使用して Microsoft Office Excel のドキュメント レベルのカスタマイズを作成する場合に、知っておく次に示します。  
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/10/2018
   
  Excel プロジェクトの一般的なタスクを解説しているトピックの一覧は、次を参照してください。 [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
  [Excel ソリューション](../vsto/excel-solutions.md)   

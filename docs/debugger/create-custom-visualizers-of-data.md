@@ -1,13 +1,9 @@
 ---
-title: "データのカスタム ビジュアライザーを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: データのカスタム ビジュアライザーを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.visualizer.troubleshoot
 dev_langs:
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - debugger, visualizers
 - visualizers
 ms.assetid: c24c006f-f2ac-429f-89db-677fc0c6e1ea
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23985c56ba61e5a788232523611a48cfde902335
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f2a1602808cb21bd247d2bb1d249ab7ddea81524
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-custom-visualizers-of-data"></a>データのカスタム ビジュアライザーを作成します。
  ビジュアライザーのコンポーネントである、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]デバッガー ユーザー インターフェイス。 A*ビジュアライザー*  ダイアログ ボックスまたはそのデータ型に適切な方法で変数またはオブジェクトを表示する別のインターフェイスを作成します。 たとえば、HTML ビジュアライザーは、HTML 文字列を解釈し、ブラウザー ウィンドウに表示されるとおりに結果を表示します。また、ビットマップ ビジュアライザーは、ビットマップ構造体を解釈し、ビットマップが表すグラフィックを表示します。 一部のビジュアライザーでは、データを表示するだけでなく、変更することもできます。
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  > [!NOTE]
  > ネイティブ コードに対するカスタム ビジュアライザーを作成するを参照してください。、 [SQLite ネイティブ デバッガー ビジュアライザー](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/SqliteVisualizer)サンプルです。 UWP アプリと Windows 8.x アプリでのカスタム ビジュアライザーはサポートされていません。
 
- デバッガーでは、ビジュアライザーは虫眼鏡のアイコンで表されます![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ビジュアライザー アイコン")です。 虫眼鏡のアイコンが表示される、**データヒント**と同様に、デバッガー ウィンドウで、**ウォッチ**ウィンドウ、または、 **[クイック ウォッチ]**ダイアログ ボックスで、虫眼鏡をクリックすることができます対応するオブジェクトのデータ型に適したビジュアライザーを選択します。
+ デバッガーでは、ビジュアライザーは虫眼鏡のアイコンで表されます![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "ビジュアライザー アイコン")です。 虫眼鏡のアイコンが表示される、**データヒント**と同様に、デバッガー ウィンドウで、**ウォッチ**ウィンドウ、または、 **[クイック ウォッチ]** ダイアログ ボックスで、虫眼鏡をクリックすることができます対応するオブジェクトのデータ型に適したビジュアライザーを選択します。
 
 ## <a name="overview-of-custom-visualizers"></a>カスタム ビジュアライザーの概要
 

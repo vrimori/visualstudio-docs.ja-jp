@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python の使用、手順 2、コードの記述と実行 | Microsoft Docs"
-description: "Visual Studio で Python を使用するための基礎となるチュートリアルの手順 2 では、単純な Hello World プログラムを記述して実行する方法を説明したあと、Visual Studio での編集と IntelliSense の機能について、もう少し興味の湧きそうなコードを使って説明します。"
-ms.custom: 
+title: Python の概要のチュートリアル、手順 2、コードの記述と実行
+description: コードの編集やプロジェクトの実行など、Visual Studio での Python 機能の中核となるチュートリアルの手順 2。
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a6efed0adae6a321595af2e58c4db79f0da2f679
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 0769005bbf3715ae46a70e5461a6e34e50830c94
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>手順 2: コードを記述して実行する
 
@@ -91,7 +85,7 @@ ms.lasthandoff: 03/12/2018
 
 1. Ctrl キーを押しながら F5 キーを押すか、**[デバッグ] > [デバッグなしで開始]** を選択して、もう一度プログラムを実行します。 完了したら、出力ウィンドウを閉じます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)

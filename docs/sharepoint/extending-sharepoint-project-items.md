@@ -1,12 +1,10 @@
 ---
-title: "SharePoint プロジェクト項目を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint プロジェクト項目を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e990896720916048ab449c7ccb5a927577861256
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1cc202b2e3e303f8f6e92b82bbfbc6f5525966bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-sharepoint-project-items"></a>SharePoint プロジェクト項目の拡張
   Visual Studio で既にインストールされている SharePoint プロジェクト項目の種類に機能を追加する場合は、プロジェクト項目の拡張機能を作成します。 たとえば、組み込みの拡張機能を作成することができます**イベント レシーバー**または**リスト定義**のプロジェクトが Visual Studio で、項目またはカスタム プロジェクト項目の種類の拡張機能を作成することができます。 すべての SharePoint プロジェクト項目の種類の拡張機能を作成することもできます。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="identifiers-for-sharepoint-project-items"></a>SharePoint プロジェクト項目の識別子  
  各 SharePoint プロジェクト項目には、対応する文字列識別子があります。 次のタスクを実行する場合、プロジェクト項目の識別子をおく必要があります。  
   
--   プロジェクト項目の拡張機能を作成します。 この例では、コンス トラクターを拡張するプロジェクト項目の識別子を渡す必要があります、<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>です。 プロジェクト項目の種類のすべての拡張機能を作成するには、渡す、  **\*** 文字列値です。  
+-   プロジェクト項目の拡張機能を作成します。 この例では、コンス トラクターを拡張するプロジェクト項目の識別子を渡す必要があります、<xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>です。 プロジェクト項目の種類のすべての拡張機能を作成するには、渡す、 **\***文字列値です。  
   
 -   プログラムで、プロジェクト項目をプロジェクトに追加します。 この場合、プロジェクト項目の識別子を渡す必要があります、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add%2A>メソッドです。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/10/2018
 |Web パーツ|Microsoft.VisualStudio.SharePoint.WebPart|  
 |ワークフロー関連付けフォーム|Microsoft.VisualStudio.SharePoint.WorkflowAssociation|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: SharePoint プロジェクト項目の拡張機能を作成します。](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)   
  [方法: SharePoint プロジェクト項目の拡張機能にショートカット メニュー項目を追加](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md)   
  [方法: SharePoint プロジェクト項目の拡張機能にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md)   

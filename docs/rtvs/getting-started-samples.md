@@ -1,26 +1,20 @@
 ---
-title: "R Tools for Visual Studio のサンプル プロジェクト | Microsoft Docs"
-description: "Visual Studio で R を使い始めるときに役立つサンプルのコレクションの索引です。"
-ms.custom: 
+title: R のサンプル プロジェクト
+description: Visual Studio で R を使い始めるときに役立つサンプルのコレクションの索引です。
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: f8bf96d4fcfdb29fdaf79fa5adba9b99375aaddd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 615a53e830821fef780dcbc7596b3a1ced882fb8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>R Tools for Visual Studio のサンプル プロジェクト
 

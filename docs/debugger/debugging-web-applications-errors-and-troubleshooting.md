@@ -1,12 +1,9 @@
 ---
-title: "Web アプリケーションのデバッグ: エラーおよびトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: 'Web アプリケーションのデバッグ: エラーおよびトラブルシューティング |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -26,16 +23,16 @@ helpviewer_keywords:
 - debugging Web applications, troubleshooting
 - troubleshooting Web applications
 ms.assetid: 63f2742e-2031-48a8-9773-d9b547c62230
-caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b8d915339ae8e81d16b46ca602b45d527ab78aa9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 81d9ba4a2e37124f8d8b3641a129d09da1728118
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web アプリケーションのデバッグ : エラーおよびトラブルシューティング
 Web アプリケーションのデバッグを試行した場合に、次のエラーが発生することがあります。  
@@ -58,6 +55,6 @@ Web アプリケーションのデバッグを試行した場合に、次のエ�
   
 -   [エラー: Web サーバーでデバッグを開始できません](../debugger/error-unable-to-start-debugging-on-the-web-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)

@@ -1,24 +1,21 @@
 ---
-title: "方法: MSBuild プロジェクト SDK の参照 | Microsoft Docs"
-ms.custom: 
+title: '方法: MSBuild プロジェクト SDK の参照 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, SDKs, SDK
-author: jeffkl
-ms.author: jeffkl
-manager: angerlic
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28027b21d3f562e3eda94dc91de16ddb38362d3c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b595f08883023d1150612415fcdb6c50411db7e3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>方法: MSBuild プロジェクト SDK の参照
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15.0 では、"プロジェクト SDK" という概念が導入されました。これによって、プロパティとターゲットをインポートする必要があるソフトウェア開発キットの使用が簡単になります。
@@ -101,7 +98,7 @@ NuGet ベースの SDK リゾルバーでは、[global.json](https://docs.micros
     }
 }
 ```
-ビルド中には、各プロジェクト SDK の 1 つのバージョンのみを使用できます。  同じプロジェクト SDK の 2 つの異なるバージョンを参照していると、MSBuild から警告が生成されます。   **でバージョンが指定されている場合は、プロジェクトでバージョンを**指定しない`global.json`ことをお勧めします。  
+ビルド中には、各プロジェクト SDK の 1 つのバージョンのみを使用できます。  同じプロジェクト SDK の 2 つの異なるバージョンを参照していると、MSBuild から警告が生成されます。  **でバージョンが指定されている場合は、プロジェクトでバージョンを**指定しない`global.json`ことをお勧めします。  
 
 ## <a name="see-also"></a>参照  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   

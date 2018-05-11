@@ -1,26 +1,24 @@
 ---
-title: "登録と選択 (ソース コントロール VSPackage) |Microsoft ドキュメント"
-ms.custom: 
+title: 登録と選択 (ソース コントロール VSPackage) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - registration, source control packages
 - source control packages, registration
 ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
-caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b0f02abe4cad58db27700aee3c29ec8d2dd7a7e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1d7bcdb8f930430ac00335777e2c088ce52a34bb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース コントロール VSPackage)
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーはどの VSPackage を読み込むことが適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とこれらを登録する方法の詳細についてはします。  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="selecting-a-source-control-package"></a>ソース管理パッケージを選択します。  
  複数ソース コントロールのプラグイン API ベースのプラグイン、およびソース管理の Vspackage を同時に登録することがあります。 ソース管理プラグインまたは VSPackage を選択した場合のプロセスで、ことを確認する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プラグインをロードまたは適切な時に、VSPackage、不要なコンポーネントの読み込みが必要になるまでに任せることができます。 さらに、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー項目、ダイアログ ボックス、ツールバーなどの他の非アクティブの Vspackage からすべての UI を削除してアクティブな VSPackage の UI を表示する必要があります。  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]次の操作のいずれかが実行されるときに、ソース管理の VSPackage をロードします。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 次の操作のいずれかが実行されるときに、ソース管理の VSPackage をロードします。  
   
 -   (ソリューションでは、ソース管理下にある) 場合は、ソリューションが開かれます。  
   
@@ -64,14 +62,14 @@ ms.lasthandoff: 12/22/2017
  VSPackage は実際にしようとするときにのみに必要なすべてのコンポーネントを読み込む必要がありますをソース コントロールには、(それ以外の場合の遅延読み込みと呼ばれます) が使用されます。  
   
 ### <a name="automatic-solution-based-vspackage-swapping"></a>ソリューションに基づく自動の VSPackage のスワップ  
- ソース管理の Vspackage を手動で切り替えることができますを通じて、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **オプション**ダイアログ ボックスの 、**ソース管理**カテゴリ。 ソリューションに基づくパッケージの自動スワップするには、そのソリューションを開いたときに特定のソリューションに対して指定されているソース管理パッケージが自動的にアクティブに設定されることを意味します。 すべてのソース管理パッケージを実装する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]両方の切り替えを処理およびソース管理の Vspackage のソース管理プラグイン (ソース管理プラグイン API を実装する)。  
+ ソース管理の Vspackage を手動で切り替えることができますを通じて、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **オプション**ダイアログ ボックスの 、**ソース管理**カテゴリ。 ソリューションに基づくパッケージの自動スワップするには、そのソリューションを開いたときに特定のソリューションに対して指定されているソース管理パッケージが自動的にアクティブに設定されることを意味します。 すべてのソース管理パッケージを実装する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 両方の切り替えを処理およびソース管理の Vspackage のソース管理プラグイン (ソース管理プラグイン API を実装する)。  
   
  ソース コントロール アダプター パッケージを使用する任意のソース管理プラグイン API ベースに切り替えるにプラグインします。 中間のソース管理アダプター パッケージへの切り替えとするソース管理プラグインの決定のプロセスはアクティブまたは非アクティブでは、ユーザーに対して透過的に設定する必要があります。 アダプター パッケージは、常にアクティブなすべてソース管理プラグインがアクティブなときです。 単に読み込みおよびプラグインの DLL をアンロードする 2 つのソース管理プラグイン金額を切り替えます。 交代ソース コントロール VSPackage に、ただしでは、適切な VSPackage を読み込むよう IDE に対話します。  
   
  ソース管理の任意のソリューションが開かれ、VSPackage のレジストリ キーは、ソリューション ファイルと、VSPackage が呼び出されます。 ソリューションを開いたときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]レジストリ値を検出し、適切なソース管理 VSPackage を読み込みます。 Vspackage のすべてのソース管理には、上記のレジストリ エントリが必要です。 ソース管理下にあるソリューションは、特定のソース管理 VSPackage に関連付けられている中としてマークされます。 ソース管理の Vspackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>自動ソリューションに基づく VSPackage スワップを有効にします。  
   
 ### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Visual Studio のパッケージの選択と切り替えの UI  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]提供する VSPackage のソース コントロールの UI でプラグインの選択、**オプション**ダイアログ ボックスの 、**ソース管理**カテゴリ。 VSPackage、ユーザーが、アクティブなソース管理プラグインを選択できます。 ドロップダウン リストは次のとおりです。  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 提供する VSPackage のソース コントロールの UI でプラグインの選択、**オプション**ダイアログ ボックスの 、**ソース管理**カテゴリ。 VSPackage、ユーザーが、アクティブなソース管理プラグインを選択できます。 ドロップダウン リストは次のとおりです。  
   
 -   ソース管理パッケージをすべてインストール  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
  以前のバージョンのとは異なり[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]IDE の再起動は、Vspackage のソース管理をスイッチする唯一の方法ではなくなりました。 VSPackage の選択は自動です。 パッケージを切り替えるには、Windows のユーザー特権 (管理者またはパワー ユーザーではない) 必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence>   
  [機能](../../extensibility/internals/source-control-vspackage-features.md)   
  [ソース管理プラグインを作成します。](../../extensibility/internals/creating-a-source-control-plug-in.md)   

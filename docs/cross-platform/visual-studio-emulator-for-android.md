@@ -1,36 +1,32 @@
 ---
 title: Visual Studio Emulator for Android | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de44978f60b42ccd91c6d362738981adffb05de9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 55e1e24a1482f40664d3f0c154d362c08bb9fa17
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Android デバイスをエミュレートするデスクトップ アプリケーションです。 物理デバイスを使用しないで Android アプリをデバッグおよびテストできる仮想化環境を提供します。 また、アプリケーションのプロトタイプ用の分離された環境も提供します。  
+
+> [!IMPORTANT]
+> ほとんどのシナリオで、Visual Studio Emulator for Android の代わりに Google Android エミュレーターの使用をお勧めします。
+> - Visual Studio Emulator for Android 用に Android バージョン 6.0 より前の Android イメージを発行する計画はないので、Android 7.0 以降を含むエミュレーター イメージが必要なとき。
+> - Visual Studio Tools for Apache Cordova を使っているとき。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」を参照してください。
   
  Visual Studio Emulator for Android は、実際のデバイスに匹敵するパフォーマンスを提供するように設計されています。 ただし、アプリを公開する前に、物理デバイスでアプリをテストすることをお勧めします。  
   
  Android プラットフォームごとに異なるデバイス プロファイル、画面の解像度、および Visual Studio Emulator for Android でサポートされるその他のハードウェア プロパティで、アプリをテストできます。
-
-> [!NOTE]
-> Google Android エミュレーターは次の場合に使うことをお勧めします。
-> - Visual Studio Tools for Apache Cordova を使っているとき。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」を参照してください。
-> - Visual Studio Emulator for Android 用に Android バージョン 6.0 より前の Android イメージを発行する計画はないので、Android 7.0 以降を含むエミュレーター イメージが必要なとき。
   
 ##  <a name="Installing"></a> インストールとアンインストール  
  インストール  

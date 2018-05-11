@@ -1,12 +1,9 @@
 ---
-title: "サーバーとクライアント構成の問題 ClickOnce 配置 |Microsoft ドキュメント"
-ms.custom: 
+title: サーバーとクライアント構成の問題 ClickOnce 配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, troubleshooting
 - Windows applications, ClickOnce deployments
 ms.assetid: 929e5fcc-dd56-409c-bb57-00bd9549b20b
-caps.latest.revision: "33"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: b50dbe51f58af79b8c1074c592f98abccbe8ba7e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 077333237d1b384208355be7edb1aeb184678a05
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でのサーバーおよびクライアント構成の問題
 Windows server インターネット インフォメーション サービス (IIS) を使用する、展開には、Windows で認識されないファイルの種類が含まれている場合は、Microsoft Word ファイルなど、そのファイルを送信する IIS は拒否し、配置は失敗します。  
@@ -51,9 +48,9 @@ Windows server インターネット インフォメーション サービス (I
  A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション SSL 上で Internet Explorer が SSL 証明書に関するメッセージを生成するとき以外は問題なく動作します。 プロンプトは、有効期限が切れたときにサイト名が一致しないなど、証明書または証明書に何らかの問題がある場合に生成されることができます。 させる[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]SSL 接続経由での作業、証明書が、最新の状態であり、証明書のデータがサイト データを照合することを確認してください。  
   
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce とプロキシの認証  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].NET Framework 3.5 以降で Windows 統合のプロキシ認証のサポートを提供します。 特定の machine.config ディレクティブは必要ありません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]基本認証またはダイジェストなどの他の認証プロトコルのサポートを行いません。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 3.5 以降で Windows 統合のプロキシ認証のサポートを提供します。 特定の machine.config ディレクティブは必要ありません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 基本認証またはダイジェストなどの他の認証プロトコルのサポートを行いません。  
   
- この機能を有効にする .NET Framework 2.0 に修正プログラムを適用することもできます。 詳細については、http://go.microsoft.com/fwlink/?LinkId=158730 を参照してください。  
+ この機能を有効にする .NET Framework 2.0 に修正プログラムを適用することもできます。 詳細については、「http://go.microsoft.com/fwlink/?LinkId=158730」を参照してください。  
   
  詳細については、次を参照してください。 [ \<defaultProxy > 要素 (ネットワーク設定)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)です。  
   
@@ -96,7 +93,7 @@ Windows server インターネット インフォメーション サービス (I
  Visual Studio を使用して ClickOnce アプリケーションを発行する場合は、インストール場所として、マップされたドライブを指定できません。 ただし、Manifest Generator およびエディター (Mage.exe および MageUI.exe) を使用して、マップされたドライブからインストールする ClickOnce アプリケーションを変更することができます。 詳細については、次を参照してください。 [Mage.exe (マニフェスト生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)と[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)です。  
   
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP プロトコルがアプリケーションをインストールするためにサポートされていません  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]任意の HTTP 1.1 Web サーバーまたはファイル サーバーからアプリケーションのインストールをサポートします。 アプリケーションをインストールするのには、FTP、ファイル転送プロトコルはサポートされていません。 FTP を使用して、アプリケーションのみを公開することができます。 次の表には、これらの相違点をまとめたものです。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 任意の HTTP 1.1 Web サーバーまたはファイル サーバーからアプリケーションのインストールをサポートします。 アプリケーションをインストールするのには、FTP、ファイル転送プロトコルはサポートされていません。 FTP を使用して、アプリケーションのみを公開することができます。 次の表には、これらの相違点をまとめたものです。  
   
 |URL の種類|説明|  
 |--------------|-----------------|  
@@ -122,7 +119,7 @@ Windows server インターネット インフォメーション サービス (I
   
 -   拡張子の MIME の種類を作成する場合は"*"と MIME の種類「アプリケーション/オクテット ストリーム」では、ファイルのダウンロードをブロックされていないファイルの種類が許可されます。 (ただし、ブロック ファイル .aspx、.asmx などの種類をダウンロードすることはできません)。  
   
- Microsoft サポート技術情報の記事 KB326965、「IIS 6.0 はない機能不明な MIME の種類」を参照して Windows Server で MIME の種類の構成に関する特定の手順については、 [http://support.microsoft.com/default.aspx?scid=kb;en-us;326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965).  
+ Microsoft サポート技術情報の記事 KB326965、「IIS 6.0 はない機能不明な MIME の種類」を参照して Windows Server で MIME の種類の構成に関する特定の手順については、 [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)です。  
   
 ## <a name="content-type-mappings"></a>コンテンツの種類のマッピング  
  HTTP 経由で公開するとき、.application ファイルのコンテンツ タイプ (MIME の種類とも呼ばれます) は「/x ms-アプリケーションです」をする必要があります。 使用していれば[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]をサーバーにインストールが設定されます。 を自動的にします。 これがインストールされていないかどうかは、MIME の種類の関連付けを作成する必要があります、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション vroot (またはサーバー全体)。  
@@ -136,7 +133,7 @@ Windows server インターネット インフォメーション サービス (I
   
  IIS の詳細な手順については、次を参照してください。 [HTTP 圧縮対象のドキュメントの種類を指定する方法](http://go.microsoft.com/fwlink/?LinkId=178459)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)   
  [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)   
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)

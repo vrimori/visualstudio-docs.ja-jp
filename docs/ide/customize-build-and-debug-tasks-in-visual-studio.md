@@ -1,8 +1,9 @@
 ---
-title: "tasks.vs.json と launch.vs.json を使用して Visual Studio のビルド タスクとデバッグ タスクをカスタマイズする | Microsoft Docs"
+title: tasks.vs.json と launch.vs.json を使用して Visual Studio のビルド タスクとデバッグ タスクをカスタマイズする
 ms.date: 02/21/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NMAKE [Visual Studio]
 - makefiles [Visual Studio]
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - vsworkspacesettings.json file [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d40bd35d893afeb8e76e18d46185b3d63add1c5
-ms.sourcegitcommit: 3abca1c733af876c8146daa43a62e829833be280
+ms.openlocfilehash: 859a3687e2dde0d5bedb9f4084bb83b844ca28e1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>"フォルダーを開く" の開発のためにビルド タスクとデバッグ タスクをカスタマイズする
 
@@ -38,7 +39,7 @@ Visual Studio は多くのさまざまな言語やコードベースを実行す
 これらの *.json* ファイルは、コードベースのルート フォルダーの *.vs* という非表示のフォルダーにあります。 **ソリューション エクスプローラー**でファイルまたはフォルダーに対して **[タスクの構成]** または **[デバッグ設定と起動設定]** を選択すると、必要に応じて *tasks.vs.json* および *launch.vs.json* ファイルが作成されます。 これらの *.json* ファイルは、一般的にソース管理にチェックインする必要がないため、非表示になっています。 ただし、ソース管理にチェックインできるようにするには、ファイルをコードベースのルートにドラッグして表示します。
 
 > [!TIP]
-> Visual Studio で非表示ファイルを表示するには、ソリューション エクスプローラーのツールバーで **[すべてのファイルを表示]** ボタンを選択します。
+> Visual Studio で非表示ファイルを表示するには、**ソリューション エクスプローラー**のツール バーで **[すべてのファイルを表示]** ボタンを選択します。
 
 ## <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json でタスクを定義する
 
@@ -54,7 +55,7 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
 
 Visual Studio で認識できないカスタム ビルド ツールをコードベースで使用している場合、Visual Studio でコードを実行してデバッグするには、いくつかの構成手順を完了する必要があります。 Visual Studio には*ビルド タスク*が用意されています。ビルド タスクを使用して、コードのビルド、リビルド、およびクリーンの方法を Visual Studio に指示できます。 *tasks.vs.json* ビルド タスク ファイルは、Visual Studio の内部開発ループを、コードベースによって使用されるカスタム ビルド ツールに組み込みます。
 
-*hello.cs* という単一の C# ファイルで構成されるコードベースについて考えてみましょう。 このようなコードベースの makefile の例を次に示します。
+*hello.cs* という単一の C# ファイルで構成されるコードベースについて考えてみましょう。 このようなコードベースの *makefile* の例を次に示します。
 
 ```makefile
 build: directory hello.exe
@@ -73,7 +74,7 @@ bin:
     md bin
 ```
 
-ビルド、クリーン、リビルドのターゲットを含む makefile の場合、次の *tasks.vs.json* ファイルを定義することができます。 このファイルには、NMAKE をビルド ツールとして使用してコードベースのビルド、リビルド、およびクリーンを行うための 3 つのビルド タスクが含まれています。
+ビルド、クリーン、リビルドのターゲットを含む *makefile* の場合、次の *tasks.vs.json* ファイルを定義できます。 このファイルには、NMAKE をビルド ツールとして使用してコードベースのビルド、リビルド、およびクリーンを行うための 3 つのビルド タスクが含まれています。
 
 ```json
 {
@@ -117,7 +118,7 @@ bin:
 }
 ```
 
-*tasks.vs.json* でビルド タスクを定義すると、**ソリューション エクスプローラー**の対応するファイルに追加のコンテキスト メニュー項目が追加されます。 この例では、*makefile* ファイルのコンテキスト メニューに、**[ビルド]**、**[リビルド]**、**[クリーン]** オプションが追加されます。
+*tasks.vs.json* でビルド タスクを定義すると、**ソリューション エクスプローラー**の対応するファイルに追加のコンテキスト メニュー項目が追加されます。 この例では、*makefile* ファイルのコンテキスト メニューに、"ビルド"、"リビルド"、"クリーン" オプションが追加されます。
 
 ![[ビルド]、[リビルド]、[クリーン] がある makefile のコンテキスト メニュー](media/customize-build-rebuild-clean.png)
 
@@ -205,23 +206,23 @@ bin:
 |-|-|
 |`"*"`| タスクは、ワークスペース内のすべてのファイルとフォルダーで使用できます|
 |`"*/"`| タスクは、ワークスペース内のすべてのフォルダーで使用できます|
-|`"*.js"`| タスクは、ワークスペース内の拡張子が .js のすべてのファイルで使用できます|
-|`"/*.js"`| タスクは、ワークスペースのルートにある拡張子が .js のすべてのファイルで使用できます|
-|`"src/*/"`| タスクは、"src" フォルダーのすべてのサブフォルダーで使用できます|
-|`"makefile"`| タスクは、ワークスペース内のすべての makefile ファイルで使用できます|
-|`"/makefile"`| タスクは、ワークスペースのルートにある makefile にのみ使用できます|
+|`"*.js"`| タスクは、ワークスペース内の拡張子が *.js* のすべてのファイルで使用できます|
+|`"/*.js"`| タスクは、ワークスペースのルートにある拡張子が *.js* のすべてのファイルで使用できます|
+|`"src/*/"`| タスクは、*src* フォルダーのすべてのサブフォルダーで使用できます|
+|`"makefile"`| タスクは、ワークスペース内のすべての *makefile* ファイルで使用できます|
+|`"/makefile"`| タスクは、ワークスペースのルートにある *makefile* にのみ使用できます|
 
 #### <a name="macros-for-tasksvsjson"></a>tasks.vs.json のマクロ
 
 |||
 |-|-|
 |`${env.<VARIABLE>}`| 開発者コマンド プロンプトに設定されている環境変数 (たとえば、${env.PATH}、${env.COMSPEC} など) を指定します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)」を参照してください。|
-|`${workspaceRoot}`| ワークスペース フォルダーの完全なパス (例: "C:\sources\hello")|
-|`${file}`| このタスクの実行対象として選択されたファイルまたはフォルダーの完全なパス (例: "C:\sources\hello\src\hello.js")|
-|`${relativeFile}`| ファイルまたはフォルダーの相対パス (例: "src\hello.js")|
-|`${fileBasename}`| パスまたは拡張子のないファイル名 (例: "hello")|
-|`${fileDirname}`| ファイル名を除いたファイルの完全なパス (例: "C:\sources\hello\src")|
-|`${fileExtname}`| 選択したファイルの拡張子 (例: ".js")|
+|`${workspaceRoot}`| ワークスペース フォルダーの完全なパス (例: *C:\sources\hello*)|
+|`${file}`| このタスクの実行対象として選択されたファイルまたはフォルダーの完全なパス (例: *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| ファイルまたはフォルダーの相対パス (例: *src\hello.js*)|
+|`${fileBasename}`| パスまたは拡張子のないファイル名 (例: *hello*)|
+|`${fileDirname}`| ファイル名を除いたファイルの完全なパス (例: *C:\sources\hello\src*)|
+|`${fileExtname}`| 選択したファイルの拡張子 (例: *.js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>launch.vs.json によるデバッグの構成
 

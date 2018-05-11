@@ -1,13 +1,9 @@
 ---
-title: "方法: レポート ビューでノイズ除去を設定する | Microsoft Docs"
-ms.custom: 
+title: '方法: レポート ビューでノイズ除去を設定する | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.noisereduction.dialog
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - profiling tools, report noise reduction
 - profiling tools, folding
 ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c0648336f4ba6be42de7253c27703fe544fb58d7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa2ec4a797b7018a7a9e017760afd8849912cd35
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>方法: レポート ビューでノイズ除去を設定する
 パフォーマンス レポートは、コール ツリー ビューや 割り当て ビューに表示されるデータの数を制限して、ノイズを除去するように構成できます。 ノイズ除去を行うことで、パフォーマンスの問題を発見しやすくなります。 これは、パフォーマンス レポートの分析に役立ちます。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  トリミングを無効にするには、**[トリミングを有効にする]** をオフにします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ### <a name="to-configure-folding-for-a-performance-report"></a>パフォーマンス レポートの折りたたみを構成するには  
   
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  折りたたみを無効にするには、**[折りたたみを有効にする]** をオフにします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)   

@@ -1,27 +1,24 @@
 ---
-title: "グラフィックス情報のキャプチャ |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス情報のキャプチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.frame
 - vs.graphics.capturewindow
 - VS.ToolsOptionsPages.Graphics_Diagnostics.Capture
 ms.assetid: 187ce86e-e340-4f6c-8937-8e8f1027a17f
-caps.latest.revision: "41"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 89488533ab8ba36b0344faa7f0b800d8c4ecc6ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e00dd4d0fae184f092efabb5df4a4f27e76a653a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="capturing-graphics-information"></a>グラフィックス情報をキャプチャする
 Visual Studio Graphics Analyzer を使用してレンダリングに関する問題とパフォーマンスに関する問題を診断できるように、Direct3D アプリからグラフィックス情報をキャプチャします。  
@@ -87,5 +84,5 @@ Visual Studio Graphics Analyzer を使用してレンダリングに関する問
 ## <a name="capturing-graphics-information-from-the-command-line"></a>コマンド ラインからのグラフィックス情報のキャプチャ  
  コマンド ライン ツールを使用して、アプリからグラフィックス情報をキャプチャできます。 この DXCap.exe というツールでは、Visual Studio またはプログラムによるキャプチャを使用することなく、簡単にグラフィックス情報をキャプチャして再生できます。 具体的には、オートメーションを行う場合や、テスト環境で DXCap.exe を使用できます。 DXCap.exe の詳細については、次を参照してください[コマンド ライン キャプチャ ツール。](command-line-capture-tool.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: グラフィックス情報のキャプチャ](walkthrough-capturing-graphics-information.md)

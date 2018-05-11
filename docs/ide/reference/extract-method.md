@@ -1,14 +1,12 @@
 ---
-title: "Visual Studio でメソッドを抽出する | Microsoft Docs"
-ms.custom: 
+title: メソッドの抽出 (Visual Studio)
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.csharp.refactoring.extractmethod
 dev_langs:
@@ -16,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: d66a0e41f0c68d3d5c4378a664ef36aba0d869b7
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: b4b5a818a75399fc4ce29fb7f2bec6332dac0585
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-a-method-refactoring"></a>メソッドの抽出リファクタリング
 

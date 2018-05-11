@@ -1,12 +1,9 @@
 ---
-title: "2124: 脆弱なラップ finally 句外側の try |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA2124: 脆弱性のある finally 句の外側を try ブロックでラップします'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CA2124
 - WrapVulnerableFinallyClausesInOuterTry
@@ -14,73 +11,73 @@ helpviewer_keywords:
 - CA2124
 - WrapVulnerableFinallyClausesInOuterTry
 ms.assetid: 82efd224-9e60-4b88-a0f5-dfabcc49a254
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 567c519b09042dbd0bba447d4631544dd78ca1ad
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c299652e779476f2936c193a8bdb646e7b655dd4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124: 脆弱性のある finally 句の外側を try ブロックでラップします
-|||  
-|-|-|  
-|TypeName|WrapVulnerableFinallyClausesInOuterTry|  
-|CheckId|CA2124|  
-|カテゴリ|Microsoft.Security|  
-|互換性に影響する変更点|中断なし|  
-  
-## <a name="cause"></a>原因  
- バージョン 1.0 および 1.1 では、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、パブリックまたはプロテクト メソッドが含まれています、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックがセキュリティ状態をリセットするが表示されで囲まれていない、`finally`ブロックします。  
-  
-## <a name="rule-description"></a>規則の説明  
- このルールを検索`try` / `finally`の version 1.0 および 1.1 を対象とするコード内のブロック、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]コール スタック内にある悪意のある例外フィルターを受ける可能性があります。 前に、フィルターが実行される偽装などの機密性の高い操作は、try ブロックで発生する、例外がスローされると場合、`finally`ブロックします。 権限借用例では、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、Visual Basic でのみ実装されています。  
-  
+|||
+|-|-|
+|TypeName|WrapVulnerableFinallyClausesInOuterTry|
+|CheckId|CA2124|
+|カテゴリ|Microsoft.Security|
+|互換性に影響する変更点|中断なし|
+
+## <a name="cause"></a>原因
+ バージョン 1.0 および 1.1 では、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、パブリックまたはプロテクト メソッドが含まれています、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックがセキュリティ状態をリセットするが表示されで囲まれていない、`finally`ブロックします。
+
+## <a name="rule-description"></a>規則の説明
+ このルールを検索`try` / `finally`の version 1.0 および 1.1 を対象とするコード内のブロック、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]コール スタック内にある悪意のある例外フィルターを受ける可能性があります。 前に、フィルターが実行される偽装などの機密性の高い操作は、try ブロックで発生する、例外がスローされると場合、`finally`ブロックします。 権限借用例では、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、Visual Basic でのみ実装されています。
+
 > [!WARNING]
->  **注**2.0 以降のバージョンでは、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ランタイムが自動的に保護、 `try` / `catch` /  `finally`リセットが発生した場合、悪意のある例外フィルター ブロックメソッド内で直接例外ブロックを含むです。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- 配置、ラップされていない`try` / `finally` try ブロックの外側にします。 次の 2 番目の例を参照してください。 これにより、`finally`フィルター コードの前に実行します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。  
-  
-## <a name="pseudo-code-example"></a>擬似コードの例  
-  
-### <a name="description"></a>説明  
- 次の擬似コードでは、このルールにより検出されたパターンを示しています。  
-  
-### <a name="code"></a>コード  
-  
-```  
-try {  
-   // Do some work.  
-   Impersonator imp = new Impersonator("John Doe");  
-   imp.AddToCreditCardBalance(100);  
-}  
-finally {  
-   // Reset security state.  
-   imp.Revert();  
-}  
-```  
-  
-## <a name="example"></a>例  
- 次の擬似コードでは、コードを保護して、この規則を満たすために使用できるパターンを示します。  
-  
-```  
-try {  
-     try {  
-        // Do some work.  
-     }  
-     finally {  
-        // Reset security state.  
-     }  
-}  
-catch()  
-{  
-    throw;  
-}  
+>  **注**2.0 以降のバージョンでは、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ランタイムが自動的に保護、 `try` / `catch` /  `finally`リセットが発生した場合、悪意のある例外フィルター ブロックメソッド内で直接例外ブロックを含むです。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ 配置、ラップされていない`try` / `finally` try ブロックの外側にします。 次の 2 番目の例を参照してください。 これにより、`finally`フィルター コードの前に実行します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。
+
+## <a name="pseudo-code-example"></a>擬似コードの例
+
+### <a name="description"></a>説明
+ 次の擬似コードでは、このルールにより検出されたパターンを示しています。
+
+### <a name="code"></a>コード
+
+```
+try {
+   // Do some work.
+   Impersonator imp = new Impersonator("John Doe");
+   imp.AddToCreditCardBalance(100);
+}
+finally {
+   // Reset security state.
+   imp.Revert();
+}
+```
+
+## <a name="example"></a>例
+ 次の擬似コードでは、コードを保護して、この規則を満たすために使用できるパターンを示します。
+
+```
+try {
+     try {
+        // Do some work.
+     }
+     finally {
+        // Reset security state.
+     }
+}
+catch()
+{
+    throw;
+}
 ```

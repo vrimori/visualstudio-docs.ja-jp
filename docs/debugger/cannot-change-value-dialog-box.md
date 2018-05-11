@@ -1,12 +1,8 @@
 ---
-title: "ダイアログ ボックスの値を変更することはできません |Microsoft ドキュメント"
-ms.custom: 
+title: ダイアログ ボックスの値を変更することはできません |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.variables.failededit
@@ -19,26 +15,25 @@ helpviewer_keywords:
 - Cannot Change Value dialog box
 - variables [debugger], editing
 ms.assetid: 19e930c2-5fbf-4c83-aae8-a1dc3f8fcae8
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6b5cc2c1a5317009225d8e86fd497dc4367787
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 23a6eb8059d9780e3b7343c6a7864896a0c529c6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cannot-change-value-dialog-box"></a>[値を変更できません] ダイアログ ボックス
 ## <a name="error"></a>Error  
- `The value of this variable cannot be changed`&#124;です。`The name` *名前* `does not exist in the current context` &#124;です。*さまざまな他のメッセージ*  
+ `The value of this variable cannot be changed` &#124;`The name` *名前* `does not exist in the current context` &#124; *さまざまな他のメッセージ*  
   
  このメッセージ ボックスが表示されるのは、デバッガー ウィンドウ ([自動変数]、[ウォッチ]、または [ローカル] の各ウィンドウ)、または [クイック ウォッチ] ダイアログ ボックスで変数の内容を不正な値に変更しようとした場合です。 たとえば、整数値を文字列に設定しようとすると、このメッセージ ボックスが表示されます。  
   
 ## <a name="solution"></a>ソリューション  
  デバッグ用ウィンドウや [クイック ウォッチ] ダイアログ ボックスに入力した内容が、設定する変数に対して有効な値を表していることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガー内の式](../debugger/expressions-in-the-debugger.md)

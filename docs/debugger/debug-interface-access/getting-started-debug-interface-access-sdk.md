@@ -1,30 +1,25 @@
 ---
-title: "はじめに (Debug Interface Access SDK) |Microsoft ドキュメント"
-ms.custom: 
+title: はじめに (Debug Interface Access SDK) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .dbg files
 - DBG files
 ms.assetid: cb3d040a-2846-40d7-bdbc-8a5beb5dd2f6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d37843917be3a2668e9a2887f046eaee00600dc8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1fdfe560f22374c0b46305d096bea32a784babe6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>はじめに (Debug Interface Access SDK)
 デバッグ インターフェイス アクセス (DIA) SDK では、説明のドキュメントと DIA API を使用する方法を示すサンプルを提供します。 .Pdb ファイルと .dbg ファイルを開き、そのコンテンツのシンボル、値、属性、アドレス、およびその他のデバッグ情報を検索するカスタム アプリケーションを開発するのに DIA SDK のインターフェイスとメソッドを使用します。 この SDK では、C++ アプリケーションで見られる記号に関連するプロパティの参照テーブルも提供します。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio 統合開発環境 (IDE) のサンプルをコンパイルするため  
   
- DIA SDK は、通常、Visual Studio と共にインストールし、その既定の場所は*[ドライブ]*\Program Files\Microsoft Visual Studio 9.0\DIA SDK。 インストールの一環として、DIA SDK を実装すると、msdia90.dll は自動的に登録はこれを使用するために必要なすべてを含めるように`dia2.h`プログラムとへのリンクで`diaguids.lib`です。  
+ DIA SDK は、通常、Visual Studio と共にインストールし、その既定の場所は *[ドライブ]* \Program Files\Microsoft Visual Studio 9.0\DIA SDK。 インストールの一環として、DIA SDK を実装すると、msdia90.dll は自動的に登録はこれを使用するために必要なすべてを含めるように`dia2.h`プログラムとへのリンクで`diaguids.lib`です。  
   
  ヘッダー: include\dia2.h  
   
@@ -54,5 +49,5 @@ ms.lasthandoff: 12/22/2017
  [.Pdb ファイルの照会](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)  
  DIA API を使用して、.pdb ファイルを照会する方法の手順を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Debug Interface Access SDK](../../debugger/debug-interface-access/debug-interface-access-sdk.md)

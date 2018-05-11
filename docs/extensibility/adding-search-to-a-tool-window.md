@@ -1,27 +1,23 @@
 ---
-title: "ツール ウィンドウに検索を追加する |Microsoft ドキュメント"
-ms.custom: 
+title: ツール ウィンドウに検索を追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, adding search
 ms.assetid: f78c4892-8060-49c4-8ecd-4360f1b4d133
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d37956c01cbbebbe29d7506cf5eacd9456b3bbc1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f3b5aa52968be5a2efcf88d7a31505d94f97aaec
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adding-search-to-a-tool-window"></a>ツール ウィンドウに検索を追加します。
 作成または拡張機能のツール ウィンドウを更新するときは、Visual Studio で別の場所に表示される同じの検索機能を追加できます。 この機能では、次の機能があります。  
@@ -82,37 +78,6 @@ ms.lasthandoff: 12/22/2017
      **TestSearchControl**クラスで、次のコードを追加します。  
   
      このコードは追加パブリック<xref:System.Windows.Controls.TextBox>という名前のプロパティ**SearchResultsTextBox**およびという名前のパブリックの文字列プロパティ**SearchContent**です。 コンス トラクターで SearchResultsTextBox がテキスト ボックスに設定されているし、SearchContent は改行で区切られた一連の文字列に初期化します。 テキスト ボックスの内容は、文字列のセットにも初期化されます。  
-  
-    ```csharp  
-    public partial class TestSearchControl : UserControl  
-    {  
-        public TextBox SearchResultsTextBox { get; set; }  
-        public string SearchContent { get; set; }  
-  
-        public TestSearchControl()  
-        {  
-            InitializeComponent();  
-  
-            this.SearchResultsTextBox = resultsTextBox;  
-            this.SearchContent = BuildContent();  
-  
-            this.SearchResultsTextBox.Text = this.SearchContent;  
-        }  
-  
-        private string BuildContent()  
-        {  
-            StringBuilder sb = new StringBuilder();  
-            sb.AppendLine("1 go");  
-            sb.AppendLine("2 good");  
-            sb.AppendLine("3 Go");  
-            sb.AppendLine("4 Good");  
-            sb.AppendLine("5 goodbye");  
-            sb.AppendLine("6 Goodbye");  
-  
-            return sb.ToString();  
-        }  
-    }  
-    ```  
   
      [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
      [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
@@ -316,7 +281,7 @@ ms.lasthandoff: 12/22/2017
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5.  ソリューションをリビルドして、debugb を開始して、新しい設定をテストします。  
+5.  ソリューションをリビルドして、デバッグを開始して、新しい設定をテストします。  
   
      進行状況バー、検索ウィンドウとして表示されます (検索テキスト ボックスの下の青い線) たびに検索を実行することです。  
   
@@ -357,39 +322,11 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-2.  `TestSearchTask`クラス、matchCase 行のコメントを解除、`OnStartSearch`メソッド。  
+2.  `TestSearchTask`クラスで、次のコメントを解除の行、`OnStartSearch`メソッド。  
   
-    ```csharp  
-    private IVsEnumWindowSearchOptions m_optionsEnum;  
-    public override IVsEnumWindowSearchOptions SearchOptionsEnum  
-    {  
-        get  
-        {  
-            if (m_optionsEnum == null)  
-            {  
-                List<IVsWindowSearchOption> list = new List<IVsWindowSearchOption>();  
-  
-                list.Add(this.MatchCaseOption);  
-  
-                m_optionsEnum = new WindowSearchOptionEnumerator(list) as IVsEnumWindowSearchOptions;  
-            }  
-            return m_optionsEnum;  
-        }  
-    }  
-  
-    private WindowSearchBooleanOption m_matchCaseOption;  
-    public WindowSearchBooleanOption MatchCaseOption  
-    {  
-        get  
-         {  
-            if (m_matchCaseOption == null)  
-            {  
-                m_matchCaseOption = new WindowSearchBooleanOption("Match case", "Match case", false);  
-            }  
-            return m_matchCaseOption;  
-        }  
-    }  
-    ```  
+    ```csharp
+    matchCase = m_toolWindow.MatchCaseOption.Value;
+    ```
   
 3.  オプションをテストします。  
   

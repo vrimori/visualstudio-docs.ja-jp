@@ -1,8 +1,9 @@
-# [Visual Studio サブスクリプション](index.md) 
+# [Visual Studio サブスクリプション](index.md)
 ## サブスクライバーのエクスペリエンス
 ### [サブスクライバー ポータルの使用](using-the-subscriber-portal.md)
 #### [リテール サブスクリプションのアクティブ化](activate-store-subscriptions.md)
 #### [サインイン](signing-in.md)
+#### [代替 ID](vs-alternate-identity.md)
 ##### [エイリアスを使用したサインイン](aliasing.md)
 #### [サブスクリプションの管理](manage-vs-subscriptions.md)
 ### [ソフトウェアのダウンロード](subscriber-downloads.md)
@@ -14,9 +15,9 @@
 ### [サブスクリプション会員の特典](subscriber-benefits.md)
 ## サブスクリプション会員の特典を使用する
 ### ツール
-#### [Visual Studio IDE ](vs-ide-benefit.md) 
+#### [Visual Studio IDE ](vs-ide-benefit.md)
 #### [Visual Studio Team Services](vs-vsts.md)
-#### [Azure クレジット](vs-azure.md) 
+#### [Azure クレジット](vs-azure.md)
 #### [Visual Studio App Center](vs-visual-studio-app-center.md)
 #### [Parasoft ](vs-parasoft.md)
 #### [WhiteSource Bolt](vs-whitesource.md)
@@ -32,7 +33,6 @@
 #### [Opsgility](vs-opsgility.md)
 #### [Pluralsight](vs-pluralsight.md)
 #### [Xamarin University トレーニング](vs-xamarin.md)
-#### [Microsoft E-Learning](vs-elearn.md)
 #### [MSDN マガジンの定期購読](vs-msdn.md)
 ### サポートの特典
 #### [Azure Advisory Chat](vs-azure-advisory-chat.md)
@@ -41,35 +41,43 @@
 #### [優先フォーラム サポート](vs-priority-support.md)
 #### [コンシェルジェ サポート](vs-concierge-chat.md)
 ## サブスクリプションを管理する
-### 概要
-#### [サブスクリプションの管理について](subscription-management-info.md)
-#### [管理者の責任](admin-responsibilities.md)
-#### [管理者の管理](managing-admins.md)
-#### [ポータルへのアクセス](access-admin-portal.md)
-#### 組織のオンボード
-##### [PCN を見つける](find-pcn.md)
-##### [複数の PCN の管理](multiple-pcns.md)
-##### [プライマリ連絡先の検索](find-primary-contact.md)
-##### [サブスクリプション ID の検索](find-subscription-id.md)
-### 管理ポータルの使用
+### [管理者の責任](admin-responsibilities.md)
+### [サブスクリプションの管理について](subscription-management-info.md)
+### ポータルへのアクセスと、管理者の管理
+#### [ボリューム ライセンスの場合](volume-license-admins.md)
+##### [VLSC 管理の移行に関する FAQ](vlsc-admin-faq.md)
+##### 組織のオンボード
+###### [電子メール通信のオンボード](volume-license-onboarding-email.md)
+###### [PCN を見つける](find-pcn.md)
+###### [プライマリ連絡先の検索](find-primary-contact.md)
+#### [MPSA の場合](mpsa.md)
+#### [クラウド サブスクリプションの場合](cloud-admin.md)
+#### [オンボードのビデオ](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)
+### [管理ポータルの使用](using-admin-portal.md)
 #### [サブスクリプションを割り当てる](assign-license.md)
 #### [割り当ての電子メールを再送信する](resend-assignment-email.md)
-#### [サブスクリプションを編集する](edit-license.md)
-#### [サブスクリプションを削除する](delete-license.md)
+#### [サブスクリプションの編集](edit-license.md)
+#### [サブスクリプションの削除](delete-license.md)
 #### [サブスクリプションを検索する](search-license.md)
+#### [サブスクリプションのインポート](exporting-subscriptions.md)
 #### [超過](handle-overclaimed-license.md)
 #### [有効期限が切れたサブスクリプション](handle-expired-license.md)
 #### [個人用電子メール サインインを持つサブスクライバー](personal-email-sign-ins.md)
 ## Visual Studio サブスクリプションを取得する
-### [サブスクリプションを比較する](compare-subscriptions.md)
+### [サブスクリプション オプションを比較する](https://www.visualstudio.com/vs/pricing)
 ### クラウド サブスクリプションの購入
 #### [概要](vscloud-overview.md)
-#### [初回購入](vscloud-first-purchase.md)
-#### [更新](vscloud-renewals.md)
-#### [さらに購入する](vscloud-buy-more.md)
-#### [キャンセル](vscloud-cancel.md)
+#### [請求に関する FAQ](vscloud-billing-faq.md)
+#### [CSP のための購入](vscloud-csp.md)
+### プログラムで提供されたサブスクリプション
+#### [Microsoft Partner Network](program-mpn.md)
+#### [MPN のサブスクリプションを管理する](manage-mpn-subscriptions.md)
+#### [Microsoft for Startups](program-startups.md)
 ## リソース
 ### [Visual Studio のライセンス条項](vs-license-terms.md)
-### [Visual Studio ライセンス ホワイト ペーパー](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=2b1504e6-0bf1-46da-be0e-85cc792c6b9d)
+### [Visual Studio ライセンス ホワイト ペーパー](http://aka.ms/vslicensing)
 ### [サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/vs/pricing)
 ### [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare)
+### [Visual Studio の管理とサブスクリプションのサポート](https://www.visualstudio.com/support/support-overview-vs)
+### [ボリューム ライセンスと製品使用権 (PUR)](http://www.microsoft.com/licensing/product-licensing/products.aspx)
+### [Microsoft Products and Services Agreement (MPSA)](https://www.microsoft.com/en-us/licensing/mpsa/default.aspx)

@@ -1,12 +1,9 @@
 ---
-title: "方法: 非表示のデバッガー コマンドを復元 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 非表示のデバッガー コマンドを復元 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], restoring commands
 - commands, debugger
 ms.assetid: 76ac9b77-f536-43b5-a9fc-984854b1c566
-caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ebd03748a94c13dd80a9f38b0fa11c1c20e7e2eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f47f8cbb342f480e6124f765b3b427a615ec6a38
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>方法 : 非表示のデバッガー コマンドを復元する
 Visual Studio をセット アップするときに、既定の IDE 設定で主要なプログラム言語を選択するように指示されます。 言語によっては、既定の IDE 設定で一部のデバッガー コマンドが非表示のことがあります。  
@@ -76,6 +73,6 @@ Visual Studio をセット アップするときに、既定の IDE 設定で主
   
 9. **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)

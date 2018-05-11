@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python コードの編集 | Microsoft Docs"
-description: "Visual Studio での Python の編集では、IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。"
-ms.custom: 
+title: Python コードの編集
+description: Visual Studio での Python の編集では、IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aae28ff5634dc59f2481140918b7ee19c29c4e1e
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 97890a84b7b44af818c91f28b486be2d54567213
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="editing-python-code"></a>Python コードの編集
 
@@ -156,7 +150,7 @@ for x in range(1, 100):
 
 Visual Studio の Python のサポートとして、ソース コードが提供されているライブラリ、[ナビゲーション バー](#navigation-bar)、[[定義へ移動]](#go-to-definition)、[[移動]](#navigate-to)、[[すべての参照の検索]](#find-all-references) など、コード内のナビゲーションを迅速にするためのさまざまな手段が用意されています。 また、Visual Studio の[オブジェクト ブラウザー](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)も使用できます。
 
-### <a name="navigation-bar"></a>ナビゲーション バー
+### <a name="navigation-bar"></a>[ナビゲーション バー]
 
 ナビゲーション バーは各エディター ウィンドウの上部に表示され、2 つのレベルの定義リストを含みます。 左側のドロップダウン リストには、現在のファイル内の最上位のクラスと関数の定義が表示されます。右側のドロップダウン リストには、左側に表示されているスコープ内の定義のリストが表示されます。 エディター内を移動するとこれらのリストが現在のコンテキストを示すように更新され、リストからエントリを選択してそのエントリに直接ジャンプすることもできます。
 
@@ -171,17 +165,17 @@ Visual Studio の Python のサポートとして、ソース コードが提供
 
 ![[定義へ移動]](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>[移動]
+### <a name="navigate-to"></a>移動
 
 **[編集] > [移動]** コマンド (Ctrl + コンマ キー) を実行すると、エディター内に検索ボックスが表示されます。ボックスに任意の文字列を入力すると、その文字列を含む関数、クラス、変数を定義しているコード内の箇所が表示されます。 この機能は **[定義へ移動]** の機能と似ていますが、識別子の使用場所を探す必要がありません。
 
 任意の名前をダブルクリックするか、方向キーで選択して Enter キーを押すと、その識別子の定義に移動します。
 
-![[移動]](media/code-editing-navigate-to.png)
+![移動](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>[すべての参照の検索]
 
-**[すべての参照の検索]**は、特定の識別子の定義場所と使用場所の両方 (インポートと代入を含む) を見つけるのに便利な方法です。 これは、識別子を右クリックして **[すべての参照の検索]** を選択するか、識別子にキャレットを置いて Shift + F12 キーを押すと起動されます。 一覧内の項目をダブルクリックすると、その場所に移動します。
+**[すべての参照の検索]** は、特定の識別子の定義場所と使用場所の両方 (インポートと代入を含む) を見つけるのに便利な方法です。 これは、識別子を右クリックして **[すべての参照の検索]** を選択するか、識別子にキャレットを置いて Shift + F12 キーを押すと起動されます。 一覧内の項目をダブルクリックすると、その場所に移動します。
 
 ![[すべての参照の検索] の結果](media/code-editing-find-all-references.png)
 

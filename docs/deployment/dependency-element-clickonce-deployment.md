@@ -1,13 +1,9 @@
 ---
-title: "&lt;依存関係&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;依存関係&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#osVersionInfo
 - urn:schemas-microsoft-com:asm.v2#os
@@ -26,17 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - <dependency> element [ClickOnce deployment manifest]
 ms.assetid: 9b4d2082-0347-4922-ac70-85f11b913039
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8716da20c989a1a8d1e36d9e071e9802a06219bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 72e217413a428c8c22712ac3a90836b1ea4fbc35
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;依存関係&gt;要素 (ClickOnce 配置)
 をインストールするアプリケーションのバージョン、およびアプリケーション マニフェストの場所を識別します。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/22/2017
 |属性|説明|  
 |---------------|-----------------|  
 |`Name`|必須。 アプリケーションの名前を識別します。|  
-|`Version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。`major.minor.build.revision`|  
+|`Version`|必須。 次の形式で、アプリケーションのバージョン番号を指定します。 `major.minor.build.revision`|  
 |`publicKeyToken`|必須。 アプリケーションまたはアセンブリが署名に使用されたパブリック キーの sha-1 ハッシュの最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用される公開キーは 2048 ビットである必要がありますか値を超えています。|  
 |`processorArchitecture`|必須。 マイクロプロセッサを指定します。 有効な値は`x86`32 ビット Windows 用と`IA64`64 ビット Windows 用です。|  
 |`Language`|任意。 アセンブリの 2 部構成の言語コードを識別します。 たとえば、EN-US、英語 (米国) を意味します。 既定値は、`neutral` です。 この要素は、`asmv2`名前空間。|  
@@ -107,7 +102,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="hash"></a>hash  
  `hash`要素の省略可能な子では、`file`要素。 `hash`要素に属性がありません。  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開後に変更されたファイルがないことを確認するのに、セキュリティ チェックとして、アプリケーション内のすべてのファイルのアルゴリズムのハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 展開後に変更されたファイルがないことを確認するのに、セキュリティ チェックとして、アプリケーション内のすべてのファイルのアルゴリズムのハッシュを使用します。 場合、`hash`要素が含まれていない、このチェックは実行されません。 そのため、省略すると、`hash`要素はお勧めしません。  
   
 ## <a name="dsigtransforms"></a>dsig:Transforms  
  `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
@@ -186,6 +181,6 @@ ms.lasthandoff: 12/22/2017
 </dependency>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [\<依存関係 > 要素](../deployment/dependency-element-clickonce-application.md)
+ [\<dependency> 要素](../deployment/dependency-element-clickonce-application.md)

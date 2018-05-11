@@ -1,12 +1,9 @@
 ---
-title: "ツールボックス、[HTML] タブ | Microsoft Docs"
-ms.custom: 
+title: ツールボックス、[HTML] タブ
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.toolbox.html
 helpviewer_keywords:
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - HTML tab in Toolbox
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc52ea4ce28c7fac6f7318eac8e835efc0f11cb1
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 4c47ca792c25efe6ef77f3ee3a9baad61e801624
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="toolbox-html-tab"></a>ツールボックス、[HTML] タブ
 
@@ -166,7 +163,7 @@ ms.lasthandoff: 01/22/2018
 **テキスト領域**をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。
 
 ```html
-<textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea> 
+<textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea>
 ```
 
 > [!IMPORTANT]
@@ -181,7 +178,7 @@ ms.lasthandoff: 01/22/2018
 **テーブル**をデザイン ビュー サーフェイスにドラッグすると、次のように HTML マークアップがドキュメントに挿入されます。
 
 ```html
-<table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table> 
+<table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>
 ```
 
 **イメージ**
@@ -236,4 +233,4 @@ ms.lasthandoff: 01/22/2018
 
 ## <a name="see-also"></a>関連項目
 
-[ツールボックス](../../ide/reference/toolbox.md)
+- [ツールボックス](../../ide/reference/toolbox.md)

@@ -1,28 +1,22 @@
 ---
-title: "Visual Studio の Python での Azure リモート デバッグのトラブルシューティング | Microsoft Docs"
-description: "Visual Studio を使って Azure App Service で実行している Python アプリケーションをデバッグしようとするときの問題をトラブルシューティングする方法を説明します。"
-ms.custom: 
+title: Python での Azure リモート デバッグのトラブルシューティング
+description: Visual Studio を使って Azure App Service で実行している Python アプリケーションをデバッグしようとするときの問題をトラブルシューティングする方法を説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: b183cab67e8ac9382808832fb5c2c1e5283e70c0
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3d792a411867686abe0734fc67dfe654320d8b38
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remote-debugging-troubleshooter-for-python-and-azure"></a>Python と Azure のリモート デバッグのトラブルシューティング
 

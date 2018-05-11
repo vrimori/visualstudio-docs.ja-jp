@@ -1,13 +1,11 @@
 ---
-title: "コマンド ライン パラメーターを使用して Visual Studio をインストールする | Microsoft Docs"
-ms.custom: 
+title: コマンド ライン パラメーターを使用して Visual Studio をインストールする
+description: コマンド ライン パラメーターを使用して、Visual Studio のインストールを制御またはカスタマイズする方法を説明します。
+ms.custom: ''
 ms.date: 01/17/2018
-ms.reviewer: tims
-ms.suite: 
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 f1_keywords:
 - command-line parameters
 - switches
@@ -15,16 +13,17 @@ f1_keywords:
 ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41e66e9fabd84bac7ed7e413d51f08e55ef93a6e
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 566e662c55589424f04e93d0dd182faed8a4b757
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
+
 コマンド プロンプトから Visual Studio 2017 をインストールする場合、さまざまなコマンド ライン パラメーターを使用してインストールを管理またはカスタマイズすることができます。 コマンド ラインから、次の操作を行うことができます。
 
 - 特定のオプションをあらかじめ選択してインストールする。
@@ -37,7 +36,8 @@ ms.lasthandoff: 01/22/2018
 * [Visual Studio 2017 Professional](https://aka.ms/vs/15/release/vs_professional.exe)
 * [Visual Studio 2017 Community](https://aka.ms/vs/15/release/vs_community.exe)
 
-## <a name="list-of-command-line-parameters"></a>コマンド ライン パラメーターの一覧  
+## <a name="list-of-command-line-parameters"></a>コマンド ライン パラメーターの一覧
+
  Visual Studio のコマンド ライン パラメーターでは、大文字と小文字は区別されません。
 
 > 構文: `vs_enterprise.exe [command] <options>...`
@@ -103,9 +103,11 @@ ms.lasthandoff: 01/22/2018
 | `--noWeb` | **15.3 の新機能、省略可能**: インターネットからインストールしているコンテンツのダウンロードが即時セットアップされます。  インストールされるすべてのコンテンツがオフライン レイアウトで使用できる必要があります。  レイアウトにコンテンツがない場合、セットアップは失敗します。  詳細については、「[ネットワーク インストールから展開する](create-a-network-installation-of-visual-studio.md)」をご覧ください。 |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>ワークロード ID とコンポーネント ID の一覧
+
 Visual Studio 製品ごとに並べられているワークロード ID とコンポーネント ID の一覧については、「[Visual Studio 2017 のワークロード ID とコンポーネント ID](workload-and-component-ids.md)」のページを参照してください。
 
 ## <a name="list-of-language-locales"></a>言語ロケールの一覧
+
 | **言語ロケール** | **Language** |
 | ----------------------- | --------------- |
 | cs-CZ | チェコ語 |
@@ -124,6 +126,7 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 | zh-TW | 中国語 - 繁体字 |
 
 ## <a name="error-codes"></a>エラー コード
+
 操作の結果に応じて、`%ERRORLEVEL%` 環境変数は、次のいずれかの値に設定されます。
 
 | **[値]** | **結果** |
@@ -138,16 +141,18 @@ Visual Studio 製品ごとに並べられているワークロード ID とコ�
 操作ごとに、インストールの進行状況を示す複数のログ ファイルが `%TEMP%` ディレクトリに生成されます。 フォルダーを日付で並べ替え、`dd_bootstrapper`、`dd_client`、`dd_setup` で始まるファイルを探します (それぞれブートストラップ、インストーラー アプリ、セットアップ エンジンを表します)。
 
 ## <a name="get-support"></a>サポートを受ける
+
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 
- * [Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例](command-line-parameter-examples.md)
- * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
- * [応答ファイルで Visual Studio インストールを自動化する](automated-installation-with-response-file.md)
+* [Visual Studio 2017 のインストールに使用するコマンド ライン パラメーターの例](command-line-parameter-examples.md)
+* [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
+* [応答ファイルで Visual Studio インストールを自動化する](automated-installation-with-response-file.md)

@@ -1,25 +1,23 @@
 ---
-title: "どのような &#39; Visual Studio 2015 SDK の |Microsoft ドキュメント"
-ms.custom: 
+title: どのような&#39;、Visual Studio 2015 SDK の |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: c64aac80-a411-463f-b7bd-8b7607a52ece
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1008e1c81c6d99bc9fa0615263cf023a56101435
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6488f28f2963e17c716c2e9d395ddf77f270e7b1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>どのような &#39; Visual Studio 2015 SDK の
+# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>どのような&#39;、Visual Studio 2015 SDK の
 Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 更新、および Visual Studio 2017 の新規および更新の機能が次があります。  
   
 ## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK の更新プログラム 1  
@@ -32,7 +30,7 @@ Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 更新、お�
 -   [イメージ サービス ツール](../extensibility/internals/image-service-tools.md)Visual Studio イメージ マニフェスト ファイルで作業することができます。  
   
 ## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Visual Studio に Visual Studio SDK を追加する新しい方法  
- Visual Studio 2015 以降、する必要はありません、Visual Studio SDK を個別にダウンロードします。 代わりに、通常のインストール プロセスの一環としてインストールすることができますか、後でインストールすることもできます。 開く、VSIX ソリューションを作成したりすると、Visual Studio が Visual Studio 機能拡張ツールをインストールするように求められます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、する必要はありません、Visual Studio SDK を個別にダウンロードします。 代わりに、通常のインストール プロセスの一環としてインストールすることができますか、後でインストールすることもできます。 開く、VSIX ソリューションを作成したりすると、Visual Studio が Visual Studio 機能拡張ツールをインストールするように求められます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="new-ways-of-creating-extensions"></a>拡張機能を作成する新しい方法  
  使用しているプログラミング言語に応じて、拡張機能を作成するためのさまざまなオプションがある以降、Visual Studio 2015 SDK では、します。  

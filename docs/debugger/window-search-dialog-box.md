@@ -1,27 +1,22 @@
 ---
-title: "ウィンドウ検索 ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: ウィンドウ検索 ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Search
 ms.assetid: 9c30390d-dc3c-4c27-ae1a-9d92dc076d2b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f3b7b20b6ae96904b88ad97bbf87bf066f941d6
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: ce03cbf4b361bf341f98f46b4a67871ee9994177
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="window-search-dialog-box"></a>[ウィンドウ検索] ダイアログ ボックス
 検索で特定のウィンドウのノードを選択してこのダイアログ ボックスを使用して[ウィンドウ ビュー](../debugger/windows-view.md)です。 このダイアログ ボックスを表示するには、Windows のビュー ウィンドウにフォーカスを移動します。 選択し、**ウィンドウ検索**から、**検索**メニュー。  

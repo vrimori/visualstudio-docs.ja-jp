@@ -1,13 +1,10 @@
 ---
-title: "リボン デザイナー |Microsoft ドキュメント"
-ms.custom: 
+title: リボン デザイナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Designer_Microsoft.VisualStudio.Tools.Office.Ribbon.Design.RibbonDesigner
 dev_langs:
@@ -29,14 +26,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], shortcut keys
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cab4a223f8e2d33185f37bc6ad90397ace1d56e1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c1ab841be09122a3a9e1680bf2ae3ae1c6df9aac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ribbon-designer"></a>リボン デザイナー
   リボン デザイナーは、ビジュアルなデザイン キャンバスです。 リボン デザイナーを使用すると、Microsoft Office アプリケーションのリボンに、カスタムのタブ、グループ、およびコントロールを追加できます。  
@@ -69,7 +66,7 @@ ms.lasthandoff: 01/10/2018
   
  既に存在する場合、**リボン (ビジュアル デザイナー)**項目から別のプロジェクトを再利用できますが、現在のプロジェクトでを使用して、**既存項目の追加** ダイアログ ボックス。  
   
-##  <a name="DesigningRibbonLayout"></a>リボンのデザイン  
+##  <a name="DesigningRibbonLayout"></a> リボンのデザイン  
  リボン デザイナーを開くには、次の 3 つの方法があります。  
   
 -   **ソリューション エクスプ ローラー**、リボン コード ファイルをダブルクリックします。  
@@ -103,7 +100,7 @@ ms.lasthandoff: 01/10/2018
   
  コントロールは、リボン上のタブ間でドラッグすることはできません。 使用する必要があります、コントロールを別のタブに移動する場合、**切り取り**コマンドを 1 つのタブからコントロールを削除し、別のタブ上のコントロールを貼り付けます。コントロールを切り取って貼り付けると、イベント ハンドラーは動作を停止します。 イベント ハンドラーを再接続することができます、**プロパティ**ウィンドウです。 詳細については、次を参照してください。[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  
   
-###  <a name="AddTabToRibbon"></a>リボンにカスタム タブの追加  
+###  <a name="AddTabToRibbon"></a> リボンにカスタム タブの追加  
  リボンにカスタム タブを追加するには、次の 3 つの方法があります。  
   
 -   タブを追加、**ツールボックス**です。  
@@ -137,10 +134,10 @@ ms.lasthandoff: 01/10/2018
   
  組み込みタブをカスタマイズする方法の詳細については、「[する方法: 組み込みタブをカスタマイズする](../vsto/how-to-customize-a-built-in-tab.md)です。  
   
-###  <a name="AddGroupsToTab"></a>グループ、タブを追加します。  
+###  <a name="AddGroupsToTab"></a> グループ、タブを追加します。  
  グループを使用すると、リボンのコントロールを論理的に整理できます。 タブにグループを追加します。 グループに、他のすべてのコントロールを追加します。  
   
-###  <a name="AddControlsToGroups"></a>コントロールをグループに追加します。  
+###  <a name="AddControlsToGroups"></a> コントロールをグループに追加します。  
  グループに 1 つ以上のコントロールを追加します。 各コントロールの説明を次の表に示します。  
   
 |コントロール|説明|  
@@ -159,7 +156,7 @@ ms.lasthandoff: 01/10/2018
 |**SplitButton**|メニューが付属したボタン。 以下の任意のコントロールを含めることができます。<br /><br /> ボタン<br />-チェック ボックス<br />-ギャラリー<br />メニュー<br />分割ボタン<br />トグル ボタン<br />区切り<br /><br /> メニューと同様に、分割ボタンにも独自のデザイン サーフェイスがあります。 ただし、メニューとは異なり、分割ボタンにある項目を更新することができるのは、リボンが Office アプリケーションに読み込まれる前だけです。 分割ボタンにアイテムを更新する方法については、次を参照してください。[リボン オブジェクト モデルの概要](../vsto/ribbon-object-model-overview.md)です。|  
 |**トグル ボタン**|押された状態または押されていない状態で表示されるボタン。|  
   
-##  <a name="HandleEventsSetProperties"></a>イベントを処理し、プロパティの設定  
+##  <a name="HandleEventsSetProperties"></a> イベントを処理し、プロパティの設定  
  リボン デザイナーを使用して、デザイン時にコントロールのプロパティを設定することができます、**プロパティ**ウィンドウです。 さらに、リボンでは、厳密に型指定されたオブジェクト モデルを公開します。このモデルを使用して、実行時にリボン コントロールのプロパティに対して取得や設定を行うことができます。  
   
  デザイナー上の任意のコントロールをダブルクリックすると、そのコントロールの既定のイベントのイベント ハンドラーが開きます。 使用して他のすべてのコントロール イベントのイベント ハンドラーを作成することができます、**プロパティ**ウィンドウです。  
@@ -168,7 +165,7 @@ ms.lasthandoff: 01/10/2018
   
  リボン イベントを処理して、実行時にリボン コントロールのプロパティの設定については、次を参照してください。[リボン オブジェクト モデルの概要](../vsto/ribbon-object-model-overview.md)です。  
   
-##  <a name="CustomizingMicrosoftOfficeButton"></a>Backstage ビューをカスタマイズします。  
+##  <a name="CustomizingMicrosoftOfficeButton"></a> Backstage ビューをカスタマイズします。  
  リボン デザイナーを使用するには、をクリックしたときに表示されるメニューにコントロールを追加、**ファイル**タブです。このメニューは Backstage ビューと呼ばれます。  
   
  リボン デザイナーを使用して、ビルトイン コントロールの前または後ろにコントロールを配置することはできません。 ビルトイン コントロールは、Backstage ビューで既に表示されているコントロールです。 ビルトイン コントロールの前または後ろにコントロールを配置するには、リボン XML を使用する必要があります。 詳細については**リボン (XML)**を参照してください[リボン XML](../vsto/ribbon-xml.md)です。 Backstage ビューのカスタマイズの詳細については、次を参照してください。[開発者向けの Office 2010 の Backstage ビューの概要](http://go.microsoft.com/fwlink/?LinkId=182189)と[開発者向けの Office 2010 の Backstage ビューをカスタマイズする](http://go.microsoft.com/fwlink/?LinkId=182188)です。  
@@ -177,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
  Backstage ビューにコントロールを追加する方法については、次を参照してください。[する方法: Backstage ビューにコントロールを追加](../vsto/how-to-add-controls-to-the-backstage-view.md)です。  
   
-##  <a name="Accessibility"></a>リボン デザイナーのユーザー補助機能  
+##  <a name="Accessibility"></a> リボン デザイナーのユーザー補助機能  
  キーボード ショートカットを使用して、リボン デザイナーのコントロールを移動できます。 キーボード ショートカットには、すべてのコントロールに適用されるものと、メニューを備えたコントロールにのみ適用されるものがあります。  
   
  すべてのコントロールに適用されるキーボード ショートカットを、次の表に示します。  
@@ -206,7 +203,7 @@ ms.lasthandoff: 01/10/2018
 |ドロップダウン パネルが開いている場合は、そのパネルにある最初のコントロールを選択します。|右方向 (→) キー|  
 |ドロップダウン パネルを閉じます。|Esc|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   

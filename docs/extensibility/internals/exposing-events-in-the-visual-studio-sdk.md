@@ -1,29 +1,27 @@
 ---
-title: "Visual Studio SDK 内のイベントを公開する |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio SDK 内のイベントを公開する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - events [Visual Studio], exposing
 - automation [Visual Studio SDK], exposing events
 ms.assetid: 70bbc258-c221-44f8-b0d7-94087d83b8fe
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 74a9ff54d14b6212d0fc484acd2bd25fad18bb87
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 02ddcf0c2321f6f4c07170117c6474b993c340f4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 内のイベントを公開します。
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]により、オートメーションを使用してイベントをソースします。 プロジェクトとプロジェクト項目のイベントをソースにすることをお勧めします。  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] により、オートメーションを使用してイベントをソースします。 プロジェクトとプロジェクト項目のイベントをソースにすることをお勧めします。  
   
  イベントからオートメーション コンシューマーによって取得、<xref:EnvDTE.DTEClass.Events%2A>オブジェクトまたは<xref:EnvDTE.DTEClass.GetObject%2A>("EventObjectName") です。 環境の呼び出し`IDispatch::Invoke`を使用して、`DISPATCH_METHOD`または`DISPATCH_PROPERTYGET`フラグをイベントを返します。  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  「AutomationProjectItemsEvents オブジェクトを返します AutomationProjectItemEvents「=」」  
   
-|name|型|範囲|説明|  
+|名前|型|範囲|説明|  
 |----------|----------|-----------|-----------------|  
 |既定の (@)|REG_SZ|未使用|使用されません。 ドキュメントについては、データ フィールドを使用できます。|  
 |AutomationProjectsEvents|REG_SZ|イベント オブジェクトの名前です。|キー名のみが関連します。 ドキュメントについては、データ フィールドを使用できます。<br /><br /> この例は、基本的なプロジェクトのサンプルから取得されます。|  
@@ -113,6 +111,6 @@ STDMETHODIMP CVsPackage::GetAutomationObject(
   
  イベント オブジェクトを同じの一元化された場所から取得した、`DTE.Events`オブジェクト。 これにより、すべてのイベント オブジェクトはようにグループ化、エンドユーザーが特定のイベントを検索する全体のオブジェクト モデルを参照する必要はありません。 これはシステム全体のイベントのコードを実装する必要はなく、特定の VSPackage オブジェクトを提供することもできます。 ただし、エンドユーザーのユーザー見つける必要がありますのイベント、`ProjectItem`インターフェイス、明確ではないすぐにそのイベント オブジェクトが取得されるからです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>   
  [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)

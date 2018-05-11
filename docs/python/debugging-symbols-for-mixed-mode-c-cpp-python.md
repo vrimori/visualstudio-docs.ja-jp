@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での混合モード Python/C++ デバッグのシンボル | Microsoft Docs"
-description: "C++ と Python の完全な混合モード デバッグのために Visual Studio が提供するシンボル読み込み機能について説明します。"
-ms.custom: 
+title: 混合モード Python/C++ デバッグのシンボル
+description: C++ と Python の完全な混合モード デバッグのために Visual Studio が提供するシンボル読み込み機能について説明します。
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2f309e50337195dc0e4057ce34f56e2575ec1b61
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: fc4c477edd17e1c440b7a2288e7f5db841ec5c9e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルのインストール
 

@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_unmodifiedtype |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_unmodifiedtype |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_unmodifiedType method
 ms.assetid: bf914dc0-ff84-4f5d-9f75-1733b17f3be0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 552a1588b4ea1b4e5bc1cbc4d7ce87233dc74ea8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 13a07c85bf53d330874eca9e8e0eec37bed8dde9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
 このシンボルに元の型を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)型に設定します。  
@@ -49,12 +44,12 @@ HRESULT get_unmodifiedType(
 ## <a name="remarks"></a>コメント  
  現在の型では、返された元の型の変更です。 シンボルの元の型は、最初の記号の型を取得し、し、その元の型の型が返されますの問い合わせで決定できます。 一部のシンボルは、元の型の変更後の型を持てませんに注意してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia100.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

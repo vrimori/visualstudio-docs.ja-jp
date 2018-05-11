@@ -1,12 +1,9 @@
 ---
-title: "製品およびパッケージ スキーマ リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: 製品およびパッケージ スキーマ リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.CircularIncludes
 - MSBuild.ResolveManifestFiles.PublishFileNotFound
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - package files [ClickOnce]
 - Windows Installer, bootstrapper elements
 ms.assetid: 5a74878f-b896-4cca-b968-98d00fe78fb0
-caps.latest.revision: "7"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 149dd62b38bdcb0863d30f4280b35950361f58cb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: eed411e51b9e1b9e69d80a0c6187d7325d45ef7b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="product-and-package-schema-reference"></a>製品およびパッケージ スキーマ リファレンス
 A*製品ファイル*すべてに必要な外部の依存関係を記述する XML マニフェストには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 外部の依存関係の例として、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]および Microsoft Data Access Components (MDAC)。 パッケージ ファイルは、製品のファイルに似ていますが、ローカライズ済みのアセンブリ、ライセンス契約、ドキュメントなど、依存関係のカルチャに依存するコンポーネントをインストールするために使用します。  
@@ -54,7 +51,7 @@ A*製品ファイル*すべてに必要な外部の依存関係を記述する X
 ## <a name="remarks"></a>コメント  
  パッケージのスキーマは、Setup.exe、独自のほとんどのハード コーディングされたロジックを含む Msbuild ブートス トラップ タスクで生成されたスタブ プログラムにより消費されます。 スキーマは、インストール プロセスのすべての側面をドライブです。  
   
- `InstallChecks`テスト特定のパッケージの存在をその setup.exe を実行する必要があります。 `PackageFiles`すべてのセットアップ プロセスが存在する可能性をインストールする必要があります指定されたテストが失敗するパッケージの一覧を表示します。 コマンドの下にある各コマンドの入力を実行して説明するテストのいずれかの`InstallChecks`を指定して`PackageFile`を実行する必要があります、テストは失敗します。 使用することができます、`Strings`任意の数の言語のアプリケーションをインストールする 1 つのインストール バイナリを使用できるように、製品名と、エラー メッセージをローカライズする要素。  
+ `InstallChecks` テスト特定のパッケージの存在をその setup.exe を実行する必要があります。 `PackageFiles` すべてのセットアップ プロセスが存在する可能性をインストールする必要があります指定されたテストが失敗するパッケージの一覧を表示します。 コマンドの下にある各コマンドの入力を実行して説明するテストのいずれかの`InstallChecks`を指定して`PackageFile`を実行する必要があります、テストは失敗します。 使用することができます、`Strings`任意の数の言語のアプリケーションをインストールする 1 つのインストール バイナリを使用できるように、製品名と、エラー メッセージをローカライズする要素。  
   
 ## <a name="example"></a>例  
  次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
@@ -161,6 +158,6 @@ A*製品ファイル*すべてに必要な外部の依存関係を記述する X
 </Product>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

@@ -1,27 +1,23 @@
 ---
-title: "プログラムへのアタッチ |Microsoft ドキュメント"
-ms.custom: 
+title: プログラムへのアタッチ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: 9a3f5b83-60b5-4ef0-91fe-a432105bd066
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75b532005bf4aeb471aa16ecfc6ac8ff508e3c7f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0a4c9719f6258f3bbb5cc8323693001c7f1a9d47
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attaching-to-the-program"></a>プログラムへのアタッチ
 適切なポートに、プログラムを登録した後をデバッグするプログラムにデバッガーをアタッチする必要があります。  
@@ -63,7 +59,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  これは、同じ`IDebugProgram2`に渡されたオブジェクト、`IDebugEngine2::Attach`メソッドです。 渡された以前`IDebugProgram2`オブジェクトは、ポートのみによって認識され、別のオブジェクトは、します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [添付ファイルの起動に基づく](../../extensibility/debugger/launch-based-attachment.md)   
  [イベントの送信](../../extensibility/debugger/sending-events.md)   
  [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   

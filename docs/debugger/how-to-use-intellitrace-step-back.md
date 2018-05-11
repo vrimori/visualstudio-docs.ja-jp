@@ -1,26 +1,21 @@
 ---
-title: "IntelliTrace ステップ ライトバック - Visual Studio を使用してスナップショットの表示 |Microsoft ドキュメント"
+title: IntelliTrace ステップ ライトバックを使用してスナップショットを表示します。
 ms.description: Learn how to take snapshots, and view snapshots with IntelliTrace step-back
 ms.custom: mvc
-ms.date: 12/06/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.date: 05/01/2018
+ms.technology: vs-ide-debug
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9602aa5c75f9572f2ca0f5cd8ef3426cde8ed96a
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 68fec4e10d172f79908e57828c542a444d081b50
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio で IntelliTrace を使用してスナップショットの表示手順ライトバック
 
@@ -28,7 +23,7 @@ IntelliTrace ステップ ライトバックは、ステップのイベント、
 
 IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15.5 以降のバージョンから利用できるよう、Windows 10 Anniversary 更新を必要とまたはそれ以降。 この機能は現在サポートされて ASP.NET、WinForms、WPF、コンソールの管理対象アプリ、およびマネージ クラス ライブラリをデバッグします。 Visual Studio 2017 Enterprise バージョン 15.7 preview 1 から始めての機能も ASP.NET Core と .NET Core のサポートします。 UWP アプリケーションのデバッグは現在サポートされていません。
 
-このチュートリアルでは説明します。
+このチュートリアルでは、次の作業を行います。
 
 > [!div class="checklist"]
 > * Intellitrace イベントとスナップショットを有効にします。
@@ -39,13 +34,24 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
 1. Visual Studio Enterprise では、プロジェクトを開きます。
 
-1. 移動して**ツール > オプション > IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**です。 
+1. 開いている**ツール** > **オプション** > **IntelliTrace**設定、およびオプションを選択する**IntelliTrace イベントとスナップショット**. 
 
     ![IntelliTrace イベントとスナップショット モードを有効にする](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace イベントを有効にしてスナップショット モード")
 
-1. プロジェクトに 1 つまたは複数のブレークポイントを設定し、デバッグを開始 (キーを押します**f5 キーを押して**)、コードをステップ実行してデバッグを開始または (**F10**または**F11**)。
+1. 例外で表示するスナップショットのオプションを構成する場合は、選択**IntelliTrace** > **詳細**から、**オプション** ダイアログ ボックス。
 
-    IntelliTrace は、手順とブレークポイントのイベント、各デバッガーでアプリケーションのプロセスのスナップショットを取得します。 これらのイベントが記録されて、**イベント** タブで、**診断ツール**ウィンドウで、その他の IntelliTrace イベントと共にします。 このウィンドウを開くには、選択**デバッグ** > **Windows** > **診断ツールを表示する**です。
+    これらのオプションは、Visual Studio 2017 Enterprise 15.7 のバージョンので利用可能です。
+
+    ![例外でスナップショットの動作を構成します。](../debugger/media/intellitrace-enable-snapshots-on-exceptions.png)
+
+    イベントとスナップショットを有効にすると例外でのスナップショットの取得も既定で有効にします。 選択を解除するを例外でスナップショットを無効にする**例外イベントのスナップショットを収集**です。 この機能を有効にすると、未処理の例外のスナップショットを取得します。 処理済みの例外では、スナップショットが作成され、以前にスローされる例外の再スローがない場合、例外がスローされた場合にのみです。 例外でスナップショットの最大数を設定するには、ドロップダウン リストから値を選択します。 最大値は、アプリは中断モード (ときに、アプリでは、ブレークポイントがヒット) などの入力を時間ごとに適用されます。
+
+    > [!NOTE]
+    > IntelliTrace で記録する、スナップショットが例外イベントの場合のみ取得されます。 IntelliTrace が記録するイベントを指定するには、選択**ツール** > **オプション** > **IntelliTrace イベント**です。
+
+1. プロジェクトで、1 つまたは複数のブレークポイントを設定し、デバッグを開始 (キーを押します**f5 キーを押して**)、コードをステップ実行してデバッグを開始または (**F10**または**F11**)。
+
+    IntelliTrace は、各デバッガー ステップ、ブレークポイント イベント、および未処理の例外イベントに、アプリケーションのプロセスのスナップショットを取得します。 これらのイベントが記録されて、**イベント** タブで、**診断ツール**ウィンドウで、その他の IntelliTrace イベントと共にします。 このウィンドウを開くには、選択**デバッグ** > **Windows** > **診断ツールを表示する**です。
 
     スナップショットが使用可能なイベントの横にあるカメラ アイコンが表示されます。 
 
@@ -55,7 +61,7 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
 ## <a name="navigate-and-view-snapshots"></a>移動し、スナップショットを表示します。
 
-1. 使用してイベント間を移動、 **(Alt + [) 下位手順**と**つ進む (Alt +])**デバッグ ツールバーのボタンです。
+1. 使用してイベント間を移動、 **(Alt + [) 下位手順**と**つ進む (Alt +])** デバッグ ツールバーのボタンです。
 
     これらのボタンに表示されるイベントの移動、**イベント** タブで、**診断ツール ウィンドウ**します。 ステップ実行前後イベントに自動的にアクティブに[デバッグ履歴](../debugger/historical-debugging.md)選択したイベントにします。
 
@@ -73,8 +79,6 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
 3. スナップショットを表示することも、**イベント**タブです。これを行うには、スナップショットを使用してイベントを選択し、をクリックして**履歴デバッグの有効化**です。
 
-    デバッグ履歴をアクティブ化する [カメラ] アイコンをクリックすることができますも。
-
     ![デバッグ履歴をアクティブ化イベントを](../debugger/media/intellitrace-activate-historical-debugging.png "イベント履歴デバッグの有効化")
 
     異なり、**次のステートメントの設定**コマンド、スナップショットを表示するには、コードが再実行していません。 これにより、アプリケーションの状態の静的ビューの時点で過去に発生した時間内です。
@@ -87,7 +91,7 @@ IntelliTrace ステップ ライトバックは Visual Studio Enterprise 2017 15
 
 #### <a name="how-is-intellitrace-step-back-different-from-intellitrace-events-only-mode"></a>IntelliTrace ステップ ライトバックの IntelliTrace イベントのみのモードからさまざまな方法
 
-イベントのみのモードでの IntelliTrace を使用して、デバッグの履歴のブレークポイントとデバッガーのステップでアクティブ化するのにはできます。 ただし、IntelliTrace は、内のデータのみをキャプチャ、**ローカル**と**[自動変数]**ウィンドウが開いて、およびのみが展開されているデータをキャプチャした場合に、windows とビューにします。 イベントのみのモードにする多くの場合はありません変数や複雑なオブジェクトの完全なビュー。 さらに、式の評価と表示内のデータ、**ウォッチ**ウィンドウはサポートされていません。 
+イベントのみのモードでの IntelliTrace を使用して、デバッグの履歴のブレークポイントとデバッガーのステップでアクティブ化するのにはできます。 ただし、IntelliTrace は、内のデータのみをキャプチャ、**ローカル**と **[自動変数]** ウィンドウが開いて、およびのみが展開されているデータをキャプチャした場合に、windows とビューにします。 イベントのみのモードにする多くの場合はありません変数や複雑なオブジェクトの完全なビュー。 さらに、式の評価と表示内のデータ、**ウォッチ**ウィンドウはサポートされていません。 
 
 イベントとスナップショット モードでは、IntelliTrace は、複雑なオブジェクトを含む、アプリケーションのプロセスの全体のスナップショットをキャプチャします。 行のコードでは、ブレークポイントで停止された (および情報を以前に拡大するかどうかは関係ありません) かのように、同じ情報を表示できます。 式の評価は、スナップショットを表示するときにもサポートされます。  
 

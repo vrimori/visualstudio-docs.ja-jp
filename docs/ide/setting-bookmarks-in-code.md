@@ -1,25 +1,22 @@
 ---
-title: "Visual Studio でのコード ブックマークの使用 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのコード ブックマークの使用
 ms.date: 02/23/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.BookmarkWindow
 ms.assetid: a752ed5f-5cf9-4bf2-865a-2131ca600ed5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecf0aa9d18b02cffb68c68e5c844a726c749a0a3
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: edeb4a012d0059f54df29fd74b093cc51ed5e6f1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-bookmarks-in-code"></a>コードへのブックマークの設定
 
@@ -46,4 +43,4 @@ ms.lasthandoff: 03/02/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- [エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)

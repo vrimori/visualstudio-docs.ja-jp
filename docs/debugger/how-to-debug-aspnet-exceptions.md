@@ -1,12 +1,9 @@
 ---
-title: "方法: ASP.NET の例外のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ASP.NET の例外のデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - ASP.NET, exceptions
 - exceptions, ASP.NET
 ms.assetid: 1810096e-de8c-435e-be3d-f365d0cd0a6a
-caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: 82c81f2998497f047550e35397dc870338ed977e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- aspnet
+ms.openlocfilehash: 5923818e93170ded1f857ac20d42cd6134aed5d3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>方法 : ASP.NET の例外をデバッグする
 例外のデバッグは、堅牢な開発の重要な部分[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリケーションです。 例外をデバッグする方法に関する一般情報が、[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。  
@@ -51,5 +48,5 @@ ms.lasthandoff: 12/22/2017
   
 -   予測でき、処理方法がわかる例外をスローできるコードを、`try ... catch` ブロックで囲みます。 たとえば場合は、アプリケーションの呼び出しを行う XML Web サービスまたは SQL Server に直接、そのコードがでなければなりません**try… catch**数多くの例外が発生する可能性があるためにをブロックします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ASP.NET アプリケーションをデバッグします。](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

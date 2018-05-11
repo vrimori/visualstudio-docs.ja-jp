@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio での UWP アプリのデバッグ セッションを開始 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での UWP アプリのデバッグ セッションを開始 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/04/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.MachineName
 - VC.Project.IVCAppHostRemoteDebugPageObject.BreakpointBehavior
@@ -34,16 +31,16 @@ dev_langs:
 - VB
 - FSharp
 - C++
-caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 718d24ab0f9fbb310d2482b63bc98dd139658330
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: b298e2b17f1aa8805e0ab896c6978744c6c3bd53
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリのデバッグ セッションを開始します。
   
@@ -79,7 +76,7 @@ ms.lasthandoff: 01/19/2018
 |**デバイス**|USB で接続されたデバイス上のアプリをデバッグします。 デバイスは、開発者のロックを解除して、画面がロックを解除する必要があります。|  
 |**モバイル エミュレーター**|エミュレーターの名前で指定された構成でエミュレーターを起動、アプリを展開し、デバッグを開始します。 エミュレーターでは、HYPER-V 対応マシンで使用できるのみです。|  
 
-##  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a>追加のデバッグ オプションを選択します。  
+##  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a> 追加のデバッグ オプションを選択します。  
 
 追加のデバッグ オプションを構成する必要がある場合は、プロジェクトのプロパティ ページを開きます。
   
@@ -89,11 +86,11 @@ ms.lasthandoff: 01/19/2018
   
     -   Visual C# アプリと Visual Basic アプリの場合は、 **[デバッグ]**をクリックします。  
   
-         ![C &#35;です。& #47。VB プロジェクト デバッグ プロパティ ページ](../debugger/media/dbg_csvb_debugpropertypage.png)  
+         ![C&#35; &#47; VB プロジェクト デバッグ プロパティ ページ](../debugger/media/dbg_csvb_debugpropertypage.png)  
   
     -   アプリの Visual C と JavaScript アプリを展開し、**構成プロパティ**ノードを選択し**デバッグ**です。  
   
-         ![C &#43; #43 です。UWP アプリのデバッグ プロパティ ページ](../debugger/media/dbg_cpp_debugpropertypage.png)  
+         ![C&#43; &#43; UWP アプリのデバッグ プロパティ ページ](../debugger/media/dbg_cpp_debugpropertypage.png)  
 
 ###  <a name="BKMK_Choose_the_debugger_to_use"></a> 使用するデバッガーを選択する  
 既定では、Visual Studio は C# アプリと Visual Basic アプリのマネージ コードをデバッグします。 C# アプリと Visual Basic アプリでは、アプリのマネージ C/C++ コードとネイティブ C/C++ コードの両方をデバッグすることを選択できます。 C++ アプリの場合は、Visual Studio は既定ではネイティブ コードをデバッグします。 JavaScript アプリの場合は、Visual Studio は既定ではスクリプトをデバッグします。 
@@ -179,11 +176,11 @@ F5 キーを使用してデバッグを開始すると、Visual Studio はアプ
   
 デバッガーでインストール済みのアプリを起動するには選択**デバッグ**、し**他のデバッグ ターゲット**、し**インストール済みアプリ パッケージのデバッグ**です。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
 
-###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>実行中の UWP アプリにデバッガーをアタッチします。  
+###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> 実行中の UWP アプリにデバッガーをアタッチします。  
 
 実行中の UWP アプリをデバッグするには、選択**デバッグ**、し**他のデバッグ ターゲット**、し**インストール済みアプリ パッケージのデバッグ**です。 詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](../debugger/debug-installed-app-package.md)です。
   
-###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>実行中の Windows 8.x アプリにデバッガーをアタッチします。
+###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> 実行中の Windows 8.x アプリにデバッガーをアタッチします。
  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリにデバッガーをアタッチするには、デバッグ可能パッケージ マネージャーを使用して、デバッグ モードで実行するようにアプリを設定する必要があります。 デバッグ可能パッケージ マネージャーは、Visual Studio に対して、リモート ツールと共にインストールされます。  
   
  アプリへのデバッガーのアタッチは、インストール済みのアプリ ( [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]からインストールされたアプリなど) をデバッグする場合に役に立ちます。 アタッチは、アプリのソース ファイルはあるが、アプリの Visual Studio プロジェクトがない場合に必要です。 Visual Studio プロジェクトやソリューションを使用しないカスタム ビルド システムがこれに該当します。  
@@ -242,5 +239,5 @@ F5 キーを使用してデバッグを開始すると、Visual Studio はアプ
   
  Visual Studio によって、デバッガーがプロセスにアタッチされます。 実行は、ブレークポイントに達するか、実行が手動で中断されるか、ハンドルされない例外が発生するか、アプリが終了するまで続行されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でアプリをデバッグします。](../debugger/debug-store-apps-in-visual-studio.md)   

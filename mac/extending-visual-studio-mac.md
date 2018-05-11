@@ -1,17 +1,16 @@
 ---
-title: "Visual Studio for Mac の拡張 | Microsoft Docs"
-Description: "Visual Studio for Mac の機能は、拡張機能パッケージというモジュールを使用して拡張できます。 このガイドの最初の第 1 部では、ドキュメントに日時を挿入する単純な Visual Studio for Mac 拡張機能パッケージを作成します。 このガイドの第 2 部では、拡張機能パッケージ システムの基礎と、Visual Studio for Mac の基礎を形成するコア API の一部を紹介します。"
+title: Visual Studio for Mac の拡張
+description: Visual Studio for Mac の機能は、拡張機能パッケージというモジュールを使用して拡張できます。 このガイドの最初の第 1 部では、ドキュメントに日時を挿入する単純な Visual Studio for Mac 拡張機能パッケージを作成します。 このガイドの第 2 部では、拡張機能パッケージ システムの基礎と、Visual Studio for Mac の基礎を形成するコア API の一部を紹介します。
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: a1ef2b6416ec26cfc77f66ebf4ac2629c17295fa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 4ba57dde546ff6827c6d0d137e907174c0699dbb
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-visual-studio-for-mac"></a>Visual Studio for Mac の拡張
 
@@ -96,7 +95,7 @@ CommandItem 拡張機能を `/MonoDevelop/Ide/MainMenu/Edit` 拡張ポイント�
 </Extension>
 ```
 
-CommandItem は、id 属性に指定されているコマンドをメニューに配置します。 この CommandItem によって `/MonoDevelop/Ide/MainMenu/Edit` 拡張ポイントが拡張され、**[編集] メニュー**にコマンドのラベルが表示されます。 CommandItem の **id** はコマンド ノード `InsertDate` の id に対応します。 CommandItem を削除すると、[編集] メニューに **[Insert Date]**\(日付の挿入\) オプションに表示されなくなります。
+CommandItem は、id 属性に指定されているコマンドをメニューに配置します。 この CommandItem によって `/MonoDevelop/Ide/MainMenu/Edit` 拡張ポイントが拡張され、**[編集] メニュー**にコマンドのラベルが表示されます。 CommandItem の **id** はコマンド ノード `InsertDate` の id に対応します。 CommandItem を削除すると、[編集] メニューに **[Insert Date]** \(日付の挿入\) オプションに表示されなくなります。
 
 ### <a name="command-handlers"></a>コマンド ハンドラー
 

@@ -1,12 +1,10 @@
 ---
-title: "&lt;postActions&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;postActions&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - <postActions> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bbe0708ce97eb6410f006b6dcdc8d8194907b9c1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2c4dafa1c5ac7ef296ba388ecdfd93d00afef708
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt;要素 (Visual Studio での Office 開発)
   `postActions` 名前空間の `vstav3` の要素には、Office ソリューションのインストール後に実行する配置後アクションを説明する `postAction` 要素がすべて含まれています。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
  `postActions` には次の要素があります。  
   
 ### <a name="postaction"></a>postAction  
- 任意。 役割、`postAction`内の要素、`vstav3`で名前空間が定義されている[&#60; postAction &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/postaction-element-office-development-in-visual-studio.md).  
+ 任意。 役割、`postAction`内の要素、`vstav3`で名前空間が定義されている[ &#60;postAction&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/postaction-element-office-development-in-visual-studio.md)です。  
   
 ## <a name="post-deployment-action-example"></a>配置後アクションの例  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/10/2018
 </vstav3:postActions>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

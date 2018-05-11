@@ -1,12 +1,9 @@
 ---
-title: "[全般]([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
-ms.custom: 
+title: '[全般]\([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.Message.0x800a002e
 - VS.ToolsOptionsPages.Environment.General
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - editors, autocompletion
 - Options dialog box, General Environment
 - General Environment Options dialog box
-caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: de71795242cd5fbb1d41f3d071629e54cf5d04f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f12249cc8d0e8bd8396e1e1ebbbfefeddbb22b60
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-environment-options-dialog-box"></a>[全般]\([オプション] ダイアログ ボックス - [環境])
 
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 
 IDE の配色テーマで **[青]**、**[淡色]** または **[濃色]** を選択します。
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2017ColorThemeEditor) から **Visual Studio 配色テーマ エディター**をダウンロードしインストールすることで、定義済みテーマを追加でインストールしたりカスタム テーマを作成したりすることもできます。 このツールをインストールすると、追加の配色テーマが [配色テーマ] ボックスの一覧に表示されます。
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) から **Visual Studio 配色テーマ エディター**をダウンロードしインストールすることで、定義済みテーマを追加でインストールしたりカスタム テーマを作成したりすることもできます。 このツールをインストールすると、追加の配色テーマが [配色テーマ] ボックスの一覧に表示されます。
 
 **メニュー バーにタイトルの文字種を適用する**
 
@@ -69,22 +66,27 @@ Visual Studio で視覚的効果を自動的に調整するか、ユーザーが
 
 ## <a name="other"></a>その他
 
-**項目をウィンドウ メニューに表示**  
+**項目をウィンドウ メニューに表示**
+
 **[ウィンドウ]** メニューの [ウィンドウ] の一覧に表示されるウィンドウ数をカスタマイズします。 1 ～ 24 の値を入力します。 既定値は 10 です。
 
-**項目を最近使用した一覧に表示**  
+**項目を最近使用した一覧に表示**
+
 **[ファイル]** メニューに表示される、最近使ったプロジェクトとファイルの数をカスタマイズします。 1 ～ 24 の値を入力します。 既定値は 10 です。 このオプションを使用すると、最近使用したプロジェクトやファイルを簡単に表示できます。
 
-**ステータス バーの表示**  
+**ステータス バーの表示**
+
 ステータス バーが表示されます。 ステータス バーは IDE ウィンドウの一番下にあり、処理中の操作の進行状況が表示されます。
 
-**[閉じる] ボタンを、アクティブなツール ウィンドウに対してのみ実行する**  
+**[閉じる] ボタンを、アクティブなツール ウィンドウに対してのみ実行する**
+
 **[閉じる]** をクリックしたときに、ドッキング セット内のすべてのツール ウィンドウではなく、フォーカスのあるツール ウィンドウだけを閉じるように指定します。 既定では、このチェック ボックスはオンになっています。
 
-**[自動的に隠す] ボタンを、アクティブなツール ウィンドウに対してのみ実行する**  
+**[自動的に隠す] ボタンを、アクティブなツール ウィンドウに対してのみ実行する**
+
 **[自動的に隠す]** をクリックしたときに、ドッキング セット内のすべてのツール ウィンドウではなく、フォーカスのあるツール ウィンドウだけを自動的に非表示にするように指定します。 既定では、このチェック ボックスはオフになっています。
 
 ## <a name="see-also"></a>関連項目
 
-[[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)  
-[ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)
+- [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)
+- [ウィンドウ レイアウトをカスタマイズする](../../ide/customizing-window-layouts-in-visual-studio.md)

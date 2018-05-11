@@ -1,26 +1,24 @@
 ---
-title: "テストの領域 7: 共有 |Microsoft ドキュメント"
-ms.custom: 
+title: 'テストの領域 7: 共有 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], sharing items
 - source control plug-ins, sharing items
 ms.assetid: 6ec4780a-bda4-4327-bb3e-c6c9e7eabf35
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f87ff08ea8d5e325ac66d923300927b59ab06452
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: fa74d6ff2291288a1ca0e7f17a2edb1e126f222b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-7-share"></a>テスト領域 7: 共有
 このテスト領域経由でサイト間で共有のアイテムの説明、**共有**コマンド。  
@@ -62,5 +60,5 @@ ms.lasthandoff: 12/22/2017
 |読み込まれたプロジェクトにフォルダーを共有する — 再帰|1.新しいプロジェクトを作成します。<br />2.ソリューションをソース管理に追加します。<br />3.プロジェクトを選択します。<br />4.開く、**共有** ダイアログ ボックス (**ファイル** -> **ソース管理** -> **共有**)。<br />5.フォルダーを選択します。<br />6.プロジェクトに再帰的にフォルダーを共有します。|共通の期待される動作です。|  
 |1 つのプロジェクトからのいくつかのファイルを別の共有します。|1.いくつかのファイルが入っている、新しいプロジェクトを作成します。<br />2.ソリューションをソース管理に追加します。<br />3.ソリューションを閉じます。<br />4.新しいソリューションに新しいプロジェクトを作成します。<br />5.ソリューションをソース管理に追加します。<br />6.プロジェクトを選択します。<br />7.開く、**共有** ダイアログ ボックス (**ファイル** -> **ソース管理** -> **共有**)。<br />8.現在開いているプロジェクトに、以前に作成したプロジェクトからいくつかのファイルを共有します。|共通の期待される動作です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン向けのテスト ガイド](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

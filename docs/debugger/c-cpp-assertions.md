@@ -1,12 +1,9 @@
 ---
-title: "C と C++ アサーション |Microsoft ドキュメント"
-ms.custom: 
+title: C と C++ アサーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -28,16 +25,16 @@ helpviewer_keywords:
 - Assertion Failed dialog box
 - failures, finding locations
 ms.assetid: 2d7b0121-71aa-414b-bbb6-ede1093d0bfc
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53c03f1ab2c8680329f17bfa36a49b12062bff5
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcef94e9333b9c1050b76744351723924baaf0ab
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cc-assertions"></a>アサーション
 アサート ステートメントでは、プログラム内で true になる必要のある条件を指定します。 その条件が true でない場合、アサーションは失敗し、プログラムの実行が中断されると、および[アサートに失敗しました ダイアログ ボックス](../debugger/assertion-failed-dialog-box.md)が表示されます。  
@@ -77,17 +74,17 @@ ms.lasthandoff: 01/22/2018
   
 -   [未処理の検索エラー](#BKMK_Testing_error_conditions_)  
   
-##  <a name="BKMK_How_assertions_work"></a>アサーションのしくみ  
+##  <a name="BKMK_How_assertions_work"></a> アサーションのしくみ  
  MFC ライブラリまたは C ランタイム ライブラリのアサーションによってデバッガーが停止したとき、ソース ファイルが利用可能である場合は、そのソース ファイル内のアサーションが発生した位置にジャンプします。 両方にアサーション メッセージが表示されます、[出力ウィンドウ](../ide/reference/output-window.md)と**アサーションが失敗した** ダイアログ ボックス。 アサーション メッセージをコピーすることができます、**出力**を今後の参照を保存する場合は、テキスト ウィンドウへのウィンドウ。 **出力**ウィンドウも他のエラー メッセージを含めることがあります。 アサーションが失敗した原因を突き止める手掛かりとなるため、これらのエラー メッセージをよく調べてください。  
   
  開発中にアサーションを使用してエラーを検出します。 一般的に、想定ごとに 1 つのアサーションを使用します。 たとえば、引数が NULL でないと想定した場合、アサーションを使用してその想定が正しいかどうかをテストします。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a>デバッグ ビルドとリリース ビルドでのアサーション  
+##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> デバッグ ビルドとリリース ビルドでのアサーション  
  アサート ステートメントは、`_DEBUG` が定義されている場合のみコンパイルされます。 定義されていない場合、コンパイラはアサーションを null ステートメントとして扱います。 したがって、プログラムの最終リリース バージョンではアサート ステートメントのオーバーヘッドやパフォーマンス コストはゼロになります。`#ifdef` ディレクティブを使用する必要もありません。  
   
-##  <a name="BKMK_Side_effects_of_using_assertions"></a>アサーションの副作用  
+##  <a name="BKMK_Side_effects_of_using_assertions"></a> アサーションの副作用  
  アサーションをコードに追加するときは、そのアサーションに副作用がないことを確認してください。 たとえば、`nM` 値を変更する次のアサーションを考えます。  
   
 ```  
@@ -95,7 +92,7 @@ ASSERT(nM++ > 0); // Don't do this!
   
 ```  
   
- `ASSERT` 式はプログラムのリリース バージョンでは評価されないため、`nM` の値は、デバッグ バージョンとリリース バージョンとでは異なります。 MFC では、この問題を避けるためには、使用することができます、[を確認してください](/cpp/mfc/reference/diagnostic-services#verify)の代わりにマクロ`ASSERT`です。  `VERIFY`すべてのバージョンで式を評価しますが、リリース バージョンで結果はチェックしません。  
+ `ASSERT` 式はプログラムのリリース バージョンでは評価されないため、`nM` の値は、デバッグ バージョンとリリース バージョンとでは異なります。 MFC では、この問題を避けるためには、使用することができます、[を確認してください](/cpp/mfc/reference/diagnostic-services#verify)の代わりにマクロ`ASSERT`です。  `VERIFY` すべてのバージョンで式を評価しますが、リリース バージョンで結果はチェックしません。  
   
  アサート ステートメントで関数を呼び出す場合は、その関数の評価によって予想外の副作用が生じることがあるため特に注意してください。  
   
@@ -108,7 +105,7 @@ VERIFY ( myFnctn(0)==1 ) // safe
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_CRT_assertions"></a>CRT アサーション  
+##  <a name="BKMK_CRT_assertions"></a> CRT アサーション  
  CRTDBG です。H ヘッダー ファイルを定義、 [_assert マクロと _ASSERTE マクロ](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)アサーションをチェックするためです。  
   
 |マクロ|結果|  
@@ -160,7 +157,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_MFC_assertions"></a>MFC アサーション  
+##  <a name="BKMK_MFC_assertions"></a> MFC アサーション  
  MFC の定義、 [ASSERT](http://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c)マクロ アサーションをチェックするためです。 また、`MFC ASSERT_VALID` 派生オブジェクトの内部状態を検証するための `CObject::AssertValid` および `CObject` も定義されています。  
   
  MFC の `ASSERT` マクロの引数がゼロまたは false に評価された場合、マクロはプログラムの実行を停止し、ユーザーに警告を表示します。それ以外の場合、プログラムの実行を続けます。  
@@ -182,7 +179,7 @@ ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
   
  `ASSERT` マクロは、リリース バージョンではコードを生成しません。 リリース バージョンで式を評価する必要がある場合、[を確認してください](/cpp/mfc/reference/diagnostic-services#verify)ASSERT の代わりにマクロです。  
   
-###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID と cobject::assertvalid  
+###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID と cobject::assertvalid  
  [Cobject::assertvalid](/cpp/mfc/reference/cobject-class.md#CObject__AssertValid)メソッドは実行時にオブジェクトの内部状態のチェックを提供します。 `AssertValid` からクラスを派生させる場合、必ずしも `CObject` をオーバーライドする必要はありませんが、そうすることによって、クラスの信頼性を高めることができます。 `AssertValid` によって、オブジェクトのすべてのメンバー変数に対し、有効な値を保持しているかどうかを検証するアサーションが実行されます。 たとえば、ポインターのメンバー変数が NULL でないかどうかをチェックできます。  
   
  `AssertValid` 関数の宣言方法を次に示します。  
@@ -267,14 +264,14 @@ void CMyData::AssertValid( ) const
   
  これらの関数やマクロは、デバッグ バージョンのビルドに強力な機構を提供します。 リリース バージョンのビルド時には、この機構は自動的にオフになります。  
   
-###  <a name="BKMK_Limitations_of_AssertValid"></a>AssertValid に関する制限事項  
+###  <a name="BKMK_Limitations_of_AssertValid"></a> AssertValid に関する制限事項  
  この関数は、オブジェクトが不正な場合に、アサートしてプログラムの実行を停止します。 ただし、アサートされない場合でも、問題が検出されなかったことを示すだけで、必ずしもオブジェクトに問題がないと保証されたわけではありません。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Using_assertions"></a>アサーションの使用  
+##  <a name="BKMK_Using_assertions"></a> アサーションの使用  
   
-###  <a name="BKMK_Catching_logic_errors"></a>論理エラーの検出  
+###  <a name="BKMK_Catching_logic_errors"></a> 論理エラーの検出  
  プログラムの論理に従えば true になるはずの条件にアサーションを設定しておきます。 論理エラーが発生しない場合、このアサーションは特に機能しません。  
   
  たとえば、容器内の気体分子をシミュレートすると想定し、変数 `numMols` で分子の総数を表すことにします。 この数値が 0 より小さくなることはあり得ないため、次のような MFC アサート ステートメントを挿入しておきます。  
@@ -294,7 +291,7 @@ _ASSERT(numMols >= 0);
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Checking_results_"></a>結果を確認します。  
+###  <a name="BKMK_Checking_results_"></a> 結果を確認します。  
  アサーションは、ざっと見ただけでは結果がわかりにくい演算をテストする場合に有用です。  
   
  たとえば、次のコードを検討してみます。このコードは、`iMols` の指すリンク リストの内容に基づいて変数 `mols` を更新します。  
@@ -317,7 +314,7 @@ _ASSERT(iMols<=numMols); // CRT version
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Testing_error_conditions_"></a>未処理の検索エラー  
+###  <a name="BKMK_Testing_error_conditions_"></a> 未処理の検索エラー  
  アサーションを使用すると、コード内のエラー処理が完了しているはずの個所で、エラー条件をチェックできます。 次の例のグラフィック ルーチンは、エラー コードを返します。または、正常終了した場合は 0 を返します。  
   
 ```  
@@ -347,7 +344,7 @@ _ASSERT(!myErr); // Don't do this, either!
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [マネージ コードのアサーション](../debugger/assertions-in-managed-code.md)

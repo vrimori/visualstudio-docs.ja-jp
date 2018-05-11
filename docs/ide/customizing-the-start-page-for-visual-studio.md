@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio でのカスタム スタート ページのインストールまたはスタートアップ アイテムの変更 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのカスタム スタート ページのインストールまたはスタートアップ アイテムの変更
 ms.date: 02/01/2017
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.ToolsOptionsPages.Startup
 helpviewer_keywords:
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Visual Studio Start Page
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecc22bd23b5b245173321ed3a12379c6fe5622af
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b5e32a311bcd60542df80518c791b1fbe413a7b2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-the-start-page-for-visual-studio"></a>Visual Studio のスタート ページをカスタマイズする
 
@@ -30,7 +27,7 @@ Visual Studio の起動時の動作はさまざまな方法でカスタマイズ
 
 ## <a name="to-change-the-startup-item"></a>スタートアップ アイテムを変更する
 
-1. メニュー バーの **[ツール]**、 **[オプション]**の順にクリックします。
+1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
 
 1. **[環境]** を展開し、**[スタートアップ]** を選びます。
 
@@ -40,11 +37,11 @@ Visual Studio の起動時の動作はさまざまな方法でカスタマイズ
 
 Visual Studio SDK を使用して[独自のカスタム スタート ページを作成する](../extensibility/creating-a-custom-start-page.md)か、他のユーザーが既に作成したカスタム スタート ページを利用できます。 たとえば、[Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads) でカスタム スタート ページを検索できます。
 
-カスタム スタート ページをインストールするには、.vsix ファイルを開くか、スタート ページ ファイルをコピーしてコンピューターの **%USERPROFILE%\ドキュメント\Visual Studio 2017\StartPages** フォルダーに貼り付けます。
+カスタム スタート ページをインストールするには、*.vsix* ファイルを開くか、スタート ページ ファイルをコピーしてコンピューターの *%USERPROFILE%\ドキュメント\Visual Studio 2017\StartPages* フォルダーに貼り付けます。
 
 ### <a name="to-select-which-custom-start-page-to-display"></a>表示するカスタム スタート ページを選択する
 
-1. メニュー バーの **[ツール]**、 **[オプション]**の順にクリックします。
+1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
 
 1. **[環境]** を展開し、**[スタートアップ]** を選びます。
 
@@ -55,4 +52,4 @@ Visual Studio SDK を使用して[独自のカスタム スタート ページ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
+- [Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)

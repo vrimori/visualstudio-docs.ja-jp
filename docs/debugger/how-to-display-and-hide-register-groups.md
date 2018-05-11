@@ -1,13 +1,9 @@
 ---
-title: "方法: 表示し、非表示レジスタ グループ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 表示し、非表示レジスタ グループ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.registergroups
 dev_langs:
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - Registers window, displaying and hiding register groups
 - register groups, displaying and hiding
 ms.assetid: 6be5dfb4-4cfe-4daf-b538-60405640857d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 433789524facdc4dba95e5dcfc9e6859a9124692
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a06c6da95cfbdd899557f228d607d1cb06b0ecb3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-display-and-hide-register-groups"></a>方法 : レジスタ グループの表示と非表示を切り替える
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/22/2017
   
      デバッグ中のハードウェアでサポートされていないレジスタ グループは、ショートカット メニューで無効になっているため選択できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: [レジスタ] ウィンドウを使用する](../debugger/how-to-use-the-registers-window.md)

@@ -1,29 +1,25 @@
 ---
-title: "SccAdd 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SccAdd 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccAdd
 helpviewer_keywords:
 - SccAdd function
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52137da9d14920a2fd5213f1110a74d895e51c7f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2933d00b7450f946a5fd5409bcaeecc2527a9f64
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccadd-function"></a>SccAdd 関数
 この関数は、ソース管理システムに新しいファイルを追加します。  
@@ -99,5 +95,5 @@ SCCRTN SccAdd(
 |SCC_FILETYPE_UTF16LE|0x20|UTF16 で Unicode テキストとしてリトル エンディアン形式のファイルを処理します。|  
 |SCC_FILETYPE_UTF16BE|0x40|UTF16 ビッグ エンディアン Unicode テキストとしてファイル形式を扱います。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

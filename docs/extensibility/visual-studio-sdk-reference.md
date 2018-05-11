@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio SDK リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio SDK リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, reference
 - reference, Visual Studio SDK
 ms.assetid: a6930db5-a112-4651-8de3-e520df851f82
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6f84f92b4d940bc7141f8c53730a128651b27a8f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 656663c14b4c5b8b77645eb4fc0fd221e1786800
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
 このセクションには、Visual Studio SDK を使用する開発者の Visual Studio の名前空間、関連する名前空間、および関心のある他の領域に関する情報が含まれています。  

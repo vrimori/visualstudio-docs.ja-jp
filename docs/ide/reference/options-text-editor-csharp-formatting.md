@@ -1,10 +1,9 @@
 ---
-title: "[オプション]、[テキスト エディター]、[C#]、[書式設定] | Microsoft Docs"
+title: '[オプション]、[テキスト エディター]、[C#]、[書式設定]'
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Formatting.Spacing
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Formatting.NewLines
@@ -18,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 639082683ad0b65b294307df0740aa4d9c6069d0
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: 534460d0ad6b7290190a88b3714c7f1eb0972723
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-text-editor-c-formatting"></a>[オプション]、[テキスト エディター]、[C#]、[書式設定]
 
@@ -58,4 +57,4 @@ ms.lasthandoff: 02/12/2018
 
 ## <a name="see-also"></a>関連項目
 
-[[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
+- [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)

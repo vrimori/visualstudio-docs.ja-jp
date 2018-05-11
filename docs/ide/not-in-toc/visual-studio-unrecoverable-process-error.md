@@ -1,24 +1,21 @@
 ---
-title: "Visual Studio の回復不能なプロセス エラー | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の回復不能なプロセス エラー
 ms.date: 02/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: troubleshooting
 helpviewer_keywords:
 - editor
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 703e27a95d6a0f4b680ad6a729dc974dfe98fc11
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 1db7f2729ded01eedda6fff6d18ca1b2ee3607b6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # Visual Studio の回復不能なプロセス エラー
 

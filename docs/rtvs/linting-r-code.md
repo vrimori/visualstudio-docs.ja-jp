@@ -1,32 +1,26 @@
 ---
-title: "R Tools for Visual Studio で R コードを lint する | Microsoft Docs"
-description: "Visual Studio に組み込まれている R 用の lint サポート (lint オプションなど) を使う方法を説明します。"
-ms.custom: 
+title: R コードを lint する
+description: Visual Studio に組み込まれている R 用の lint サポート (lint オプションなど) を使う方法を説明します。
 ms.date: 01/15/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
-ms.topic: article
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 30f508fbaa6de816f8b0adb336fea66b82f992a6
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e5494283fdf759ddc664207d62d40f7f83993632
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linting-r-code-in-visual-studio"></a>Visual Studio で R コードを lint する
 
-lint とは、潜在的なエラー、書式設定の問題、コードのノイズ (たとえば、見かけ上の空白文字) などを明らかにするためにコードを分析するプロセスです。 lint はまた、識別子の名前付けの方法など、特定のコーディング規則を推奨するのに役立ち、チーム内やその他の状況で共同作業を行う場合に便利です。
+lint 処理では、潜在的なエラー、書式設定の問題、コードのノイズ (たとえば、見かけ上の空白文字) などを明らかにするためにコードを分析します。 lint 処理 は、識別子の命名方法など、特定のコーディング規則を推奨する場合にも役立ちます。 このような規則は、チームなど共同作業を行う状況で役立ちます。
 
 R Tools for Visual Studio (RTVS) は、R 用に組み込みの lint を備えています。この記事で説明しているように、lint の動作はさまざまなオプションを介して制御されます。 これらのオプションにアクセスするには、**[ツール]、[オプション]、[テキスト エディター]、[Lint]** の順に選択します。
 
@@ -36,7 +30,7 @@ lint が有効になると、エディター内で入力中に lint が適用さ
 
 ![R コードの lint の例](media/linting-01.png)
 
-通常、lint のオプションはプロジェクトまたはファイルのニーズに応じて変更します。 たとえば、オンライン コースのサンプル コードでは、`<-` ではなく、`=` と パスカルケースの識別子を使用することがあります。 そのようなコードでは、既定の lint オプションによってこのケースにフラグが設定されるため、lint の警告が頻繁に表示されます。 そのコードでの作業時には、オプションを無効にするだけで、各インスタンスの修正に時間を費やさずにすみます。
+通常、lint のオプションはプロジェクトまたはファイルのニーズに応じて変更します。 たとえば、オンライン コースのサンプル コードでは、`<-` ではなく、`=` と パスカルケースの識別子を使用することがあります。 そのようなコードでは、既定の lint オプションによってこのケースにフラグが設定されるため、lint の警告が頻繁に表示されます。 そのコードでの作業時には、オプションを無効にすると、各インスタンスの修正に時間を費やさずにすみます。
 
 ## <a name="assignment-group"></a>代入グループ
 

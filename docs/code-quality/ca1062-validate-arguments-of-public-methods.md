@@ -1,13 +1,9 @@
 ---
-title: "Ca 1062: パブリック メソッドの引数の検証 |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA1062: パブリック メソッドの引数の検証'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1062
 - ValidateArgumentsOfPublicMethods
@@ -17,14 +13,14 @@ helpviewer_keywords:
 - ValidateArgumentsOfPublicMethods
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f3661a9475935dbe92dfd55f566170ce46d69f84
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 8393123f34bf8c33e6a65f26944640b500334dcb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: パブリック メソッドの引数の検証
 

@@ -1,13 +1,10 @@
 ---
-title: "&lt;appAddin&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;appAddin&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: office-development
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <appAddin> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 27f286f9bde8db68a7190796f1d154a402fb208d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 85fda0db34bf104032e82d5725ff4d3d7aa772cb
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt;要素 (Visual Studio での Office 開発)
   `appAddin` 名前空間の `vstov4` 要素には、VSTO アドイン用のカスタマイズ固有の情報が格納されます。  
@@ -54,13 +51,13 @@ ms.lasthandoff: 01/10/2018
  `appAddin` 要素には、次の子要素があります。  
   
 ### <a name="friendlyname"></a>friendlyName  
- 任意。 `friendlyName`要素は」で説明されて[&#60; friendlyName &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/friendlyname-element-office-development-in-visual-studio.md).  
+ 任意。 `friendlyName`要素は」で説明されて[ &#60;friendlyName&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md)です。  
   
 ### <a name="description"></a>説明  
- 任意。 `description`要素は」で説明されて[&#60;以外の場合は説明 &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/description-element-office-development-in-visual-studio.md).  
+ 任意。 `description`要素は」で説明されて[&#60;説明&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/description-element-office-development-in-visual-studio.md)です。  
   
 ### <a name="formregions"></a>formRegions  
- フォーム領域を含む Outlook VSTO アドインにのみ必須です。 `formRegions`要素は」で説明されて[&#60; formRegions &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/formregions-element-office-development-in-visual-studio.md).  
+ フォーム領域を含む Outlook VSTO アドインにのみ必須です。 `formRegions`要素は」で説明されて[ &#60;formRegions&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/formregions-element-office-development-in-visual-studio.md)です。  
   
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 01/10/2018
 </vstov4:appAddIn>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

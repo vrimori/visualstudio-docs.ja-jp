@@ -1,13 +1,9 @@
 ---
-title: "リモート デバッグ、c# または Visual Studio での VB プロジェクト |Microsoft ドキュメント"
+title: リモート デバッグ、c# または Visual Studio での VB プロジェクト |Microsoft ドキュメント
 ms.custom: remotedebugging
 ms.date: 08/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 - FSharp
@@ -17,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - remote debugging, setup
 ms.assetid: a9753fbb-e7f4-47f0-9dbe-9de90c6c8457
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6546e58139b4c427f6bbc4343faf64bdd655b63e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 18cd64e24481111e22b3b9b842433bb1b1c19e0f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio での c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグするをインストール、アプリの展開先コンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するようにプロジェクトを構成して、アプリを実行します。
@@ -36,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
 リモート ユニバーサル Windows アプリ (UWP) をデバッグする方法については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 リモート デバッガーは、Windows 7 でサポートされていると新しい (phone ではない) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -50,14 +45,14 @@ ms.lasthandoff: 01/10/2018
 > [!TIP]
 > 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
   
-## <a name="BKMK_setup"></a>リモート デバッガーを設定します。
+## <a name="BKMK_setup"></a> リモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
 > 必要があるその他のユーザーのアクセス許可を追加または変更した場合、認証モード リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)です。
   
-## <a name="remote_csharp"></a>プロジェクトのリモート デバッグ
+## <a name="remote_csharp"></a> プロジェクトのリモート デバッグ
 デバッガーでは、Visual C# または Visual Basic のデスクトップ アプリケーションをリモート コンピューターに配置できませんが、次のようにリモートからそれらのデスクトップ アプリケーションをデバッグすることはできます。 次の手順は、という名前のコンピューターでデバッグすることを想定しています**MJO DL**の次の図に示すようにします。
   
 1.  という名前の WPF プロジェクトを作成する**MyWpf**です。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 01/10/2018
   
 13. メッセージが表示されたら、リモート コンピューターに接続するネットワーク資格情報を入力します。  
   
-     必要な資格情報は、ネットワークのセキュリティ構成によって異なります。 たとえば、ドメインのコンピューターで、ドメイン名とパスワードを入力できます。 非ドメイン コンピューターでは、可能性がありますを入力するマシン名と有効なユーザー アカウント名では、like  **MJO-DL\name@something.com** 、正しいパスワードとします。
+     必要な資格情報は、ネットワークのセキュリティ構成によって異なります。 たとえば、ドメインのコンピューターで、ドメイン名とパスワードを入力できます。 非ドメイン コンピューターでは、可能性がありますを入力するマシン名と有効なユーザー アカウント名では、like **MJO-DL\name@something.com**、正しいパスワードとします。
 
      WPF アプリケーションのメイン ウィンドウが、リモート コンピューターで開かれているはずです。
   
@@ -111,7 +106,7 @@ ms.lasthandoff: 01/10/2018
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用に Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   

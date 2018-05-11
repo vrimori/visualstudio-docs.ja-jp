@@ -1,28 +1,22 @@
 ---
-title: "Azure App Service での Python インタープリターとライブラリのインストール | Microsoft Docs"
-description: "Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。"
-ms.custom: 
+title: Azure App Service での Python インタープリターとライブラリのインストール
+description: Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。
 ms.date: 09/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 0f0910459fecb01573b7282137949acbfd5dcb32
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: cd3be2ee5d62c687fab1c822e3469d9523624047
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
 
@@ -217,4 +211,4 @@ Azure Portal から Kudu コンソールを使用する代わりに、`https://y
 
 コマンドと認証の詳細については、[Kudu のドキュメント](https://github.com/projectkudu/kudu/wiki/REST-API)を参照してください。
 
-Azure CLI の `az webapp deployment list-publishing-profiles` コマンドを使用して、資格情報を参照することもできます (「[az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az_webapp_deployment_list_publishing_profiles)」 (az webapp のデプロイ) を参照してください)。 Kudu コマンドをポストするためのヘルパー ライブラリは [GitHub で入手](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)することができます。
+Azure CLI の `az webapp deployment list-publishing-profiles` コマンドを使用して、資格情報を参照することもできます (「[az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles)」 (az webapp のデプロイ) を参照してください)。 Kudu コマンドをポストするためのヘルパー ライブラリは [GitHub で入手](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)することができます。

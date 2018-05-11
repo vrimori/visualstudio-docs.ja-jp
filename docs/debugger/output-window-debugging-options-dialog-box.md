@@ -1,11 +1,8 @@
 ---
-title: "デバッグするには、出力 ウィンドウのオプション ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグするには、出力 ウィンドウのオプション ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.OutputWindow
@@ -17,16 +14,16 @@ dev_langs:
 - FSharp
 - C++
 ms.assetid: d67387c2-39e9-4790-93bc-e41bff12fb9c
-caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 949dd44787684cea9c725ab7fe88462c1613faf4
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 35c424632e51cbc7de81fb581dd2e8429341677e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="output-window-debugging-options-dialog-box"></a>出力ウィンドウ ([オプション] ダイアログ ボックス - [デバッグ])
 表示されるデバッグ情報の種類を指定することができます、**出力**ウィンドウです。 これらのオプションを表示するを開き、**ツール** メニューのをクリックして**オプション**、展開、**デバッグ** ノードをクリック**出力ウィンドウ**します。  
@@ -39,6 +36,6 @@ ms.lasthandoff: 01/04/2018
   
  詳細については、次を参照してください。[する方法: WPF トレース情報を表示](../debugger/how-to-display-wpf-trace-information.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッグ オプション ダイアログ ボックス](../debugger/debugging-options-dialog-box.md)   
  [[出力] ウィンドウ](../ide/reference/output-window.md)

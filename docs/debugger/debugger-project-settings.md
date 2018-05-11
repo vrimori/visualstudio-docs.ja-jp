@@ -1,12 +1,9 @@
 ---
-title: "デバッガーのプロジェクトの設定 |Microsoft ドキュメント"
-ms.custom: 
+title: デバッガーのプロジェクトの設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - project settings, debugger
 - debugging [Visual Studio], project settings
 ms.assetid: 5e1b2a30-d2db-49e8-aba3-2d3a190eea80
-caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e3ae16740868fcbd0fdd98f35afed4290fae5905
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ea878114d940f8b9881a1a1d0204da58ca6519f5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  
@@ -61,5 +58,5 @@ ms.lasthandoff: 12/22/2017
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)  
  デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備作業について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

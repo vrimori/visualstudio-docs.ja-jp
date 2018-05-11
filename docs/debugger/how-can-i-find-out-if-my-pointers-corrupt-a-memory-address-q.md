@@ -1,12 +1,9 @@
 ---
-title: "ポインターがメモリ アドレスを破壊しているかどうか見つけるには | Microsoft Docs"
-ms.custom: 
+title: ポインターがメモリ アドレスを破壊しているかどうか見つけるには | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -20,16 +17,16 @@ helpviewer_keywords:
 - debugging [C++], memory corruption
 - corrupted memory address
 ms.assetid: a147c939-4fb1-415c-8410-cf303781e9e8
-caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a57b36fc1d1dd25f439f65fe9d72cec6aab63471
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8965ec268e5d236b9a33e5c3e8acfa35e51dcdb3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>ポインターがメモリ アドレスを破壊しているかどうか見つけるには
 ## <a name="problem-description"></a>問題の説明  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="check-for-heap-corruption"></a>ヒープ破損のチェック  
   
--   メモリの破損は、その多くがヒープの破損に起因します。 グローバル フラグ ユーティリティ (gflags.exe) または pageheap.exe を使用してください。 参照してください[http://support.microsoft.com/default.aspx?scid=kb;en-us;286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470)です。  
+-   メモリの破損は、その多くがヒープの破損に起因します。 グローバル フラグ ユーティリティ (gflags.exe) または pageheap.exe を使用してください。 参照してください[ http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470)です。  
   
 #### <a name="to-find-where-the-memory-address-is-modified"></a>メモリ アドレスの変更箇所を見つけるには  
   
@@ -47,6 +44,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  ブレークポイントをヒットしたときに使用して、**メモリ**0x00408000 から始まるメモリを表示するウィンドウの内容します。 詳細については、次を参照してください。[メモリ Windows](../debugger/memory-windows.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)   
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)

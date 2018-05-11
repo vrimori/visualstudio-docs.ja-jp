@@ -1,13 +1,10 @@
 ---
-title: "Office ソリューションのエラーのトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションのエラーのトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Project.DesignerDisabled
 - VST.Designer.CannotActivate
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - troubleshooting [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6a077949de07d89adad76c6fc68754d2018fa461
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1166f183e49bfc01592a645916ce12c1148ec8de
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-errors-in-office-solutions"></a>Office ソリューションのエラーのトラブルシューティング
   Visual Studio で Office ソリューションを開発する際、次のタスクを実行するときに問題が発生する場合があります。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [プロジェクトのデバッグ](#debugging)  
   
-##  <a name="creating"></a>作成、更新、およびプロジェクトを開く  
+##  <a name="creating"></a> 作成、更新、およびプロジェクトを開く  
  Office プロジェクトを作成、または開くときに、次のエラーが発生する場合があります。  
   
 ### <a name="the-project-cannot-be-created"></a>プロジェクトを作成できない  
@@ -89,7 +86,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio 2005 Tools for Office Second Edition Runtime は、他の Office ソリューションで使用されていない場合、プロジェクトのアップグレードが完了した後に開発用コンピューターからアンインストールできます。  
   
-##  <a name="designers"></a>デザイナーの使用  
+##  <a name="designers"></a> デザイナーの使用  
  ドキュメント レベルのプロジェクトでドキュメント、ブック、またはワークシート デザイナーを使用する場合に、次のエラーが発生する可能性があります。  
   
 ### <a name="designer-failed-to-load-correctly"></a>デザイナーの読み込みが正しくできない  
@@ -175,7 +172,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  Word または Excel の名前空間をインポートし、その中のすべてのクラスにアクセスできる場合でも、名前空間のあいまいさを排除するには、Word または Excel でのすべての型を完全に修飾する必要があります。  
   
-##  <a name="building"></a>プロジェクトをビルドします。  
+##  <a name="building"></a> プロジェクトをビルドします。  
  Office プロジェクトをビルドするときに、次のエラーが発生する場合があります。  
   
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>制限付きアクセス許可を持つドキュメントに基づくドキュメント レベルのプロジェクトをビルドできない  
@@ -188,7 +185,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>NamedRange コントロールを削除した後にコンパイル エラーが発生する  
  デザイナーで作業中のワークシートではないワークシートから <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを削除した場合、自動生成されたコードがプロジェクトから削除されず、コンパイラ エラーが発生することがあります。 コードが確実に削除されるようにするには、必ず、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを含むワークシートを選択し作業中のワークシートにしてからコントロールを削除します。 コントロールを削除するときに、自動生成されたコードが削除されない場合は、ワークシートをアクティブ化して、ワークシートが変更済みとしてマークされるように変更を加えれば、デザイナーによりコードが削除されます。 プロジェクトをリビルドするときに、コードが削除されます。  
   
-##  <a name="debugging"></a>プロジェクトのデバッグ  
+##  <a name="debugging"></a> プロジェクトのデバッグ  
  Office プロジェクトをデバッグするときに、次のエラーが発生する場合があります。  
   
 ### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>開発用コンピューターでソリューションを発行およびインストールするとアンインストールするよう求めるプロンプトが表示される  
@@ -218,7 +215,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  をクリックするかどうか**はい**または**いいえ** ダイアログ ボックスで、Visual Studio は Excel または Word プロセスを終了し、デバッガーを停止します。 このダイアログ ボックスを表示せずにプロジェクトのデバッグを停止するには、Visual Studio のデバッガを停止するのではなく、直接、Excel または Word を終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのトラブルシューティング](../vsto/troubleshooting-office-solutions.md)   
  [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)   
  [Office ソリューション配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)  

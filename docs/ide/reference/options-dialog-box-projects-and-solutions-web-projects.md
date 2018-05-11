@@ -1,27 +1,22 @@
 ---
-title: "[Web プロジェクト] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション]) | Microsoft Docs"
-ms.custom: 
+title: '[Web プロジェクト]\([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])'
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cf6798a8870834b97693845c1e39870863a66e4
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 79863ec5038b420bcfa00ed67fe105c28cf9fff7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>[Web プロジェクト]\([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
 
@@ -30,16 +25,20 @@ ms.lasthandoff: 01/29/2018
 既定では、Visual Studio で Web プロジェクトを実行するときに Visual Studio 開発サーバーが使用されます。 詳細については、「 [ASP.NET Web プロジェクト用の Visual Studio の Web サーバー](http://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328)」を参照してください。
 
 > [!NOTE]
->  使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 このヘルプ ページは、**Web 設定**を考慮して記述されています。 設定を表示または変更するには、**[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
-  
-## <a name="settings"></a>設定  
+> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 このヘルプ ページは、**Web 設定**を考慮して記述されています。 設定を表示または変更するには、**[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
-**Web サイトおよびプロジェクト用 IIS Express の 64 ビット バージョンを使用する**  
+
+## <a name="settings"></a>設定
+
+**Web サイトおよびプロジェクト用 IIS Express の 64 ビット バージョンを使用する**
+
 このオプションをオンにすると、Visual Studio 開発サーバーの代わりに IIS Express が使用されます。 詳細については、「[Introducing IIS Express](http://go.microsoft.com/?linkid=9747914)」 (IIS Express の紹介) と「[IIS Express の概要](http://go.microsoft.com/?linkid=9747915)」を参照してください。
 
-**エラー一覧にエラーがある場合、Web アプリケーションを実行する前に警告を表示する**  
+**エラー一覧にエラーがある場合、Web アプリケーションを実行する前に警告を表示する**
+
 このオプションが設定されているときは、Web アプリケーションをエラーなしでコンパイルできなかった場合にそのアプリケーションを実行しようとすると警告が表示されます。
 
-## <a name="see-also"></a>参照  
-[[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]](projects-and-solutions-options-dialog-box.md)  
-[[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]](options-dialog-box-projects-and-solutions-web-projects.md)
+## <a name="see-also"></a>参照
+
+- [[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]](projects-and-solutions-options-dialog-box.md)
+- [[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]](options-dialog-box-projects-and-solutions-web-projects.md)

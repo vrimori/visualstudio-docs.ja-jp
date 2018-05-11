@@ -1,22 +1,19 @@
 ---
-title: "方法: を有効にして、マネージ コードの自動コード分析を無効化 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: マネージ コードの自動コード分析を有効/無効にする'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e7699d8e5d7cbf9b63149e20fd9212cae14448d
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 6786d3f93c1ab7026c8a6bde25f5c43cb999e08a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>方法: を有効にして、マネージ コードの自動コード分析を無効にします。
 

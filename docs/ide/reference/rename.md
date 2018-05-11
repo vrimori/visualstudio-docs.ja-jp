@@ -1,14 +1,12 @@
 ---
-title: "Visual Studio で名前の変更をリファクタリングする | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で名前の変更をリファクタリングする
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.csharp.refactoring.rename
 dev_langs:
@@ -16,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: bd15d1b59eb5d593fe2b069c2b6721ca623ae99c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 696ec34bb0009b9b09b5902a102c71cf1331f320
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>コード シンボルの名前の変更のリファクタリング
 
@@ -78,5 +76,5 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="see-also"></a>関連項目
 
-[リファクタリング](../refactoring-in-visual-studio.md)  
-[変更のプレビュー](../../ide/preview-changes.md)
+- [リファクタリング](../refactoring-in-visual-studio.md)
+- [変更のプレビュー](../../ide/preview-changes.md)

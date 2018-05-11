@@ -1,27 +1,23 @@
 ---
-title: "プロパティ ウィンドウのフィールドとインターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ ウィンドウのフィールドとインターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, fields and interfaces
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f238cceb189723e3ec10fbf8db4abbd9675ae21
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a286d8cc782305b746789f56af431d7a62f8e2fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-window-fields-and-interfaces"></a>プロパティ ウィンドウのフィールドとインターフェイス
 モデルの選択で表示される情報を決定する、**プロパティ**ウィンドウは IDE でフォーカスのあるウィンドウに基づきます。 すべてのウィンドウ、および選択した期間内のオブジェクトには、その選択コンテキスト オブジェクトのグローバルの選択コンテキストにプッシュされたことができます。 環境は、そのウィンドウにフォーカスがあるときに、ウィンドウ フレームの値を持つグローバルの選択コンテキストを更新します。 フォーカスが変更されたときにも選択コンテキスト。  
@@ -49,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  最後に、下部、**プロパティ**ウィンドウで選択したフィールドの説明も含まれています、**プロパティ** ウィンドウのグリッドです。 詳細については、次を参照してください。[プロパティ ウィンドウからフィールドの説明を取得する](#getting-field-descriptions-from-the-properties-window)です。  
   
-## <a name="updating-property-values-in-the-properties-window"></a>[プロパティ] ウィンドウでプロパティ値を更新します。
+## <a name="updating-property-values-in-the-properties-window"></a> [プロパティ] ウィンドウでプロパティ値を更新します。
 **[プロパティ]** ウィンドウをプロパティ値の変更と同期するには、2 つの方法があります。 最初に呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>へのアクセスと、環境で提供されるツールとドキュメントのウィンドウの作成など、基本の windowing 機能へのアクセスを提供するインターフェイスです。 次の手順は、この同期プロセスを説明したものです。  
   
 ### <a name="updating-property-values-using-ivsuishell"></a>IVsUIShell を使ってプロパティ値を更新する  
@@ -67,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="considerations-in-implementing-the-iconnection-interface"></a>IConnection インターフェイスを実装する際の考慮事項  
   
-1.  `IConnection`列挙子サブオブジェクトへのアクセスを提供、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints>インターフェイスです。 すべての接続ポイント サブオブジェクトへのアクセスも用意されています。 各を実装する、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>インターフェイスです。  
+1.  `IConnection` 列挙子サブオブジェクトへのアクセスを提供、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints>インターフェイスです。 すべての接続ポイント サブオブジェクトへのアクセスも用意されています。 各を実装する、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>インターフェイスです。  
   
 2.  すべての参照オブジェクトが実装を担当する、<xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink>イベント。 **[プロパティ]** ウィンドウは、 `IConnection`を通してイベントを設定することをお勧めします。  
   
@@ -75,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
 4.  クライアントが呼び出すことができます、`IConnection`で列挙子サブオブジェクトへのアクセスを取得するインターフェイス、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints>インターフェイスです。 <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints>インターフェイスは、各発信インターフェイス ID (IID) の接続ポイントを列挙し、呼び出すことができます。  
   
-5.  `IConnection`接続でのポイント サブオブジェクトへのアクセスを得るために呼び出すこともできます、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>各発信 IID のインターフェイスです。 を介して、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>インターフェイス、クライアントが起動または接続可能なオブジェクトとクライアント自身の同期のアドバイザリ ループを終了します。クライアントが呼び出すことも、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>を持つ列挙子オブジェクトを取得するインターフェイス、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections>認識されるコネクションを列挙するインターフェイスです。  
+5.  `IConnection` 接続でのポイント サブオブジェクトへのアクセスを得るために呼び出すこともできます、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>各発信 IID のインターフェイスです。 を介して、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>インターフェイス、クライアントが起動または接続可能なオブジェクトとクライアント自身の同期のアドバイザリ ループを終了します。クライアントが呼び出すことも、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>を持つ列挙子オブジェクトを取得するインターフェイス、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections>認識されるコネクションを列挙するインターフェイスです。  
   
-## <a name="getting-field-descriptions-from-the-properties-window"></a>[プロパティ] ウィンドウからのフィールドの説明を取得します。
+## <a name="getting-field-descriptions-from-the-properties-window"></a> [プロパティ] ウィンドウからのフィールドの説明を取得します。
 **[プロパティ]** ウィンドウの下部にある説明領域に、選択したプロパティ フィールドに関連する情報が表示されます。 この機能は既定で有効になっています。 説明フィールドを非表示にするには、 **[プロパティ]** ウィンドウを右クリックし、 **[説明]**をクリックします。 これにより、メニュー ウィンドウの **[説明]** タイトルの横のチェック マークが削除されます。 同じ手順を行って **[説明]** の表示をオンに戻すことにより、フィールドを再度表示できます。  
   
  説明フィールド内の情報に由来<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>です。 それぞれのメソッド、インターフェイス、コクラスなどには、タイプ ライブラリのローカライズされていない `helpstring` 属性を適用できます。 **プロパティ**ウィンドウから文字列を取得する<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A>です。  
@@ -120,5 +116,5 @@ STDAPI DLLGetDocumentation
   
  実装することにより、ローカライズされた名前とプロパティの説明を取得する別の方法は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A>です。 このメソッドの実装に関連する詳細については、次を参照してください。[プロパティ ウィンドウのフィールドとインターフェイス](../../extensibility/internals/properties-window-fields-and-interfaces.md)です。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティの拡張](../../extensibility/internals/extending-properties.md)

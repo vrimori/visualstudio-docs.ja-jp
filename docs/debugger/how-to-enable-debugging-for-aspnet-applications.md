@@ -1,12 +1,9 @@
 ---
-title: "ASP.NET アプリケーションのデバッグを有効にする |Microsoft ドキュメント"
+title: ASP.NET アプリケーションのデバッグを有効にする |Microsoft ドキュメント
 ms.custom: H1HackMay2017
 ms.date: 09/21/17
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,22 +14,22 @@ helpviewer_keywords:
 - Web.config configuration file, debug mode
 - debugging [Visual Studio], ASP.NET
 ms.assetid: 3beed819-cece-4864-8184-bd410000973a
-caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: e3c6dffbd99dbdd91753ce8d06ab139006692089
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- aspnet
+ms.openlocfilehash: 3418e1d2e05d687f8cb73a7857178ae1060d56f8
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-aspnet-applications-in-visual-studio"></a>Visual Studio での ASP.NET アプリケーションをデバッグします。
 
 Visual Studio から ASP.NET アプリケーションをデバッグすることができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 このトピックの手順に従って操作する必要があります。
 
@@ -81,7 +78,7 @@ ASP.NET Core、web.config ファイルが自動的に作成 (が既に存在し�
   
 3.  `compilation` 要素内に `debug` 属性がない場合は、その属性を要素に追加します。  
   
-4.  `debug` 属性の値が `true` に設定されていることを確認します。  
+4.  `debug` 属性の値が `true`をクリックします。  
   
 Web.config ファイルは、次の例のようになります。
 
@@ -142,7 +139,7 @@ IIS express、web サーバーを構成する必要はありません (このセ
     > [!NOTE]
     > Windows Server 2008 R2 を使用している場合は、代わりにこのコマンドを使用して ASP.NET 4 をインストールします。
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe ir**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
 
 2. 開く、**インターネット インフォメーション サービス (IIS) マネージャー**です。 (サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
 
@@ -224,7 +221,7 @@ Web サイトには、複数の仮想ディレクトリとサブディレクト�
 > [!IMPORTANT]
 > パフォーマンスに影響が大幅にデバッグ モードを有効にすると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]アプリケーションです。 リリース バージョンのアプリケーションを配置したり、パフォーマンスの測定を実施したりする前には、デバッグ モードを無効にしてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ASP.NET のデバッグ: システム要件](aspnet-debugging-system-requirements.md)   
 [方法: ユーザー アカウントでワーカー プロセスの実行](how-to-run-the-worker-process-under-a-user-account.md)   
 [方法: ASP.NET プロセスの名前を見つける](how-to-find-the-name-of-the-aspnet-process.md)   

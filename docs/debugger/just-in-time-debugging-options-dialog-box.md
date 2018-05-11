@@ -1,11 +1,8 @@
 ---
-title: "Just-in-time、デバッグ オプション ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: Just-in-time、デバッグ オプション ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.JIT
@@ -20,16 +17,16 @@ helpviewer_keywords:
 - Just-In-Time debugging, setting options
 - Options dialog box, debugging
 ms.assetid: 7f11b2e3-3fb5-449d-b07c-6ecf1d6a487d
-caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 057c5e0e37d8e84daa4348c91847a12b6a9ae5e9
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7be7dacbe7b3b89b8bdc09515c23d7597e7e55e5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>[Just-In-Time] ([オプション] ダイアログ ボックス - [デバッグ])
 アクセスする、**ジャスト イン タイム** ページに移動して、**ツール**メニューをクリックして**オプション**です。 **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード**ジャスト イン タイム**です。 このページでは、マネージ コード、ネイティブ コード、およびスクリプトでの Just-In-Time デバッグを有効にできます。 詳細については、次を参照してください。 [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)です。  
@@ -59,6 +56,6 @@ ms.lasthandoff: 01/04/2018
   
  **アクセスが拒否されました。デバッグしておくことを管理者ジャスト イン タイムを有効にする、または Visual Studio のインストールを修復します。**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッグ オプション ダイアログ ボックス](../debugger/debugging-options-dialog-box.md)   
  [方法: デバッガー設定を指定する](../debugger/how-to-specify-debugger-settings.md)

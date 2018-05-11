@@ -1,26 +1,24 @@
 ---
-title: "Windows インストーラー パッケージの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: Windows インストーラー パッケージの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .msi files, VSPackages
 - msi files, VSPackages
 ms.assetid: 0ce7c21d-0d3f-47fe-a0bb-eed506e32609
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2055f57e78c348f3f8e53187126588f382f0b944
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 215e1496d35059448cf11457658b7d1270b5677d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authoring-a-windows-installer-package"></a>Windows インストーラー パッケージの作成
 データ ドライブの Windows インストーラーのモデル。 ファイルをコピーし、レジストリ エントリを記述する手順のスクリプトを記述するのではなくなどを作成するファイルとレジストリ データを含むデータベース テーブルの行と列。  
@@ -49,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Windows Installer XML Toolset  
   
-     ツールセットは、XML ソース ファイルから Windows インストーラー パッケージを構築します。 ツールセットは、Microsoft のオープン ソース プロジェクトです。 ソース コードとから実行可能ファイルをダウンロードすることができます[http://sourceforge.net/projects/wix](http://sourceforge.net/projects/wix)です。  
+     ツールセットは、XML ソース ファイルから Windows インストーラー パッケージを構築します。 ツールセットは、Microsoft のオープン ソース プロジェクトです。 ソース コードとから実行可能ファイルをダウンロードすることができます[ http://sourceforge.net/projects/wix](http://sourceforge.net/projects/wix)です。  
   
- 統合できる商用の製品の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]を参照してください[http://visualstudiogallery.com](http://visualstudiogallery.com/)です。  
+ 統合できる商用の製品の[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]を参照してください[ http://visualstudiogallery.com](http://visualstudiogallery.com/)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows インストーラーによる VSPackage のインストール](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

@@ -1,29 +1,24 @@
 ---
-title: "シンボル型の階層をクラス |Microsoft ドキュメント"
-ms.custom: 
+title: シンボル型の階層をクラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - symbols [DIA SDK], class hierarchies
 ms.assetid: 0ccd6990-4654-44cd-a6f3-bdd82fe90f6c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2cb2374a33677f961fa798332ac96b6d801990b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aa8aeb208c4015d205efbfe018ee324a8ba0ede6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>シンボル型のクラス階層
 次の表では、クラスの階層内のシンボルの型について説明します。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  各シンボルはシンボルとその他のシンボルへの参照に関する情報を保持するプロパティを持つことができます。 これらのプロパティは、個々 のシンボルのトピックで一覧表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)   
  [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   
  [シンボルとシンボル タグ](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)

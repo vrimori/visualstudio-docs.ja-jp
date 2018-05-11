@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio Tools for Unity を使用する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio Tools for Unity を使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-unity-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
 author: conceptdev
 ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e99f3e626487381639d0c76f94ceb6eac99084af
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: c0300e26c8811dc877ad6d01e1afbc5ef6ca35df
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 このセクションでは、Visual Studio Tools for Unity の統合と生産性の機能の使用法、および Unity 開発における Visual Studio デバッガーの使用法について取り上げます。
@@ -134,6 +131,12 @@ ms.lasthandoff: 02/28/2018
 
 > [!IMPORTANT]
 >  Visual Studio Tools for Unity と Unity インスタンスは UDP ネットワーク ソケット上で通信を行っているため、ファイアウォールからメッセージが表示されることがあります。 その場合は、VSTU と Unity が通信できるように、接続を承認する必要があります。
+
+### <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Unity と Visual Studio の間の接続のトラブルシューティング
+
+#### <a name="confirm-editor-attaching-is-enabled"></a>[Editor Attaching] が有効になっていることを確認する
+
+Unity のメニューで **[Edit] > [Preferences]** を選択し、**[External Tools]** タブを選択します。**[Editor Attaching]** チェック ボックスがオンになっていることを確認します。 詳しくは、[Unity Preferences のドキュメント](https://docs.unity3d.com/Manual/Preferences.html)をご覧ください。
 
 ###  <a name="debugging-your-project-in-a-unity-player"></a> Unity プレーヤーでのプロジェクトのデバッグ
  Unity エディターを実行していない場合、またはプラットフォーム固有の問題をデバッグする場合は、Visual Studio Tools for Unity を、スタンドアロン プレーヤーで実行されている Unity アプリケーションに直接接続できます。

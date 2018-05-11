@@ -1,27 +1,22 @@
 ---
-title: "呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs"
-ms.custom: 
+title: 呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Caller/Callee view
 ms.assetid: da624c06-8741-4afb-aad1-f8c0002f3de2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ee600d74da21c328e0cb374bad1ffdf55083254
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: baf4edeb67d9c1c66ce6e6542b9684b29a8c358b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="callercallee-view---net-memory-instrumentation-data"></a>呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドを使用して収集された .NET メモリ プロファイル データの呼び出し元/呼び出し先ビューには、選択した関数と、その選択した関数の親関数および子関数の割り当てとタイミングに関するデータが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  

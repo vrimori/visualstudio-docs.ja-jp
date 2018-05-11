@@ -1,7 +1,9 @@
 ---
-title: "方法: 宣言的ルール条件 (レガシ) を作成 |Microsoft ドキュメント"
+title: 'ワークフロー デザイナー - 方法: 宣言的ルール条件 (レガシ) を作成します。'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - declarative rule conditions
 - condition statements, declarative rule conditions
@@ -9,21 +11,22 @@ helpviewer_keywords:
 ms.assetid: 804b6129-c433-408f-a424-46987967730c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cd288086ffce4474c86cc4e87178ea173ff2e43
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 43b359040256788db240274f43f706b41f01d021
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>方法: 宣言的ルール条件を作成する (レガシ)
-このトピックを対象とする従来の Windows ワークフロー デザイナーを使用してルールの条件を宣言する方法について説明、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]です。
 
- 条件ステートメントの評価が**True**または**False**です。 宣言的ルール条件は、条件ステートメントを使用して作成される、[ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)ワークフローに XML として格納されているとします。 複数の述語を結合したブール値演算とワークフロー ステートとを比較する述語を含めることができます。
+このトピックでは、.NET Framework version 3.5、または、WinFX を対象とする従来の Windows ワークフロー デザイナーを使用してルールの条件を宣言する方法について説明します。
 
- 宣言的ルール条件は、次のような Windows Workflow Foundation 事前定義アクティビティで使用されます。
+条件ステートメントの評価が**True**または**False**です。 宣言的ルール条件は、条件ステートメントを使用して作成される、[ルール条件エディター ダイアログ ボックス (レガシ)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md)ワークフローに XML として格納されているとします。 複数の述語を結合したブール値演算とワークフロー ステートとを比較する述語を含めることができます。
+
+宣言的ルール条件は、次のような Windows Workflow Foundation 事前定義アクティビティで使用されます。
 
 -   [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
 
@@ -37,7 +40,7 @@ ms.lasthandoff: 03/12/2018
 
 -   [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
 
-### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>ルール条件エディタを使って宣言的ルール条件を作成するには
+## <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>ルール条件エディタを使って宣言的ルール条件を作成するには
 
 1.  アクティビティの**プロパティ**ウィンドウで、をクリックして、**条件**プロパティまたは**UntilCondition**アクティビティに応じてプロパティです。
 
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/12/2018
 
 4.  クリックして、 **ConditionName**プロパティです。
 
-5.  クリックして、 **ConditionName**省略記号**[...]**を開くには、 **[条件の**] ダイアログ ボックス。
+5.  クリックして、 **ConditionName**省略記号 **[...]** を開くには、 **[条件の**] ダイアログ ボックス。
 
 6.  をクリックして**新しい条件**を開くには、**ルール条件エディター**  ダイアログ ボックス。
 

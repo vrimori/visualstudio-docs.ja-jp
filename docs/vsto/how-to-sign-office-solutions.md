@@ -1,13 +1,10 @@
 ---
-title: "方法: Office ソリューションの署名 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Office ソリューションの署名 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - signing manifests [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2883f75c6ca75e1875621f9c6779db09722d6945
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 31b5e1fc3c78aecf518af0941a4a2dd0ab7e57c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションに署名する
   ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用してによる追加のセキュリティ ポリシー更新のないすべてのソリューションが信頼されます。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 01/10/2018
   
 #### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>証明書を使用して Office ソリューションを署名するには  
   
-1.  **プロジェクト** メニューのをクリックして*SolutionName***プロパティ**です。  
+1.  **プロジェクト** メニューのをクリックして * SolutionName ***プロパティ**です。  
   
 2.  **[署名]** タブをクリックします。  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  適切な証明書を使用していることを確認する をクリックして**詳細**証明書情報を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
  [Office ソリューションへの信頼の付与](../vsto/granting-trust-to-office-solutions.md)   
  [[署名] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/signing-page-project-designer)  

@@ -1,7 +1,9 @@
 ---
-title: "方法: ASP.NET ベースのワークフロー (レガシ) のデバッグ |Microsoft ドキュメント"
+title: 'ワークフロー デザイナー - 方法: ASP.NET ベースのワークフロー (レガシ) のデバッグ'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - ASP.NET, debugging workflows
 - debugging workflows, ASP.NET workflows
@@ -10,21 +12,22 @@ helpviewer_keywords:
 ms.assetid: 79b21edc-9e7d-410d-af68-09c1598b9c30
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3c62d4df23eb494d52a387da5e1727e4419f2ce8
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 7bf16a6a88c5d4cd063f1c32ca846031d8b2588d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-debug-aspnet-based-workflows-legacy"></a>方法: ASP.NET ベースのワークフローをデバッグする (レガシ)
-このトピックをデバッグする方法について説明[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]-ベース[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]いずれかを対象とするアプリケーション、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]従来の Windows ワークフロー デザイナーでします。
 
- ワークフローをそのホストとなるプロセスにアタッチすることにより、ASP.NET で開始される従来のワークフロー、または Web サービスとして公開される従来のワークフローをデバッグすることができます。
+このトピックをターゲットとするか、.NET Framework version 3.5 または従来の Windows ワークフロー デザイナーで WinFX は、ASP.NET ベースの Windows Workflow Foundation (WF) アプリケーションをデバッグする方法について説明します。
 
-### <a name="to-debug-an-aspnet-based-workflow"></a>ASP.NET ベースのワークフローをデバッグするには
+ワークフローをそのホストとなるプロセスにアタッチすることにより、ASP.NET で開始される従来のワークフロー、または Web サービスとして公開される従来のワークフローをデバッグすることができます。
+
+## <a name="to-debug-an-aspnet-based-workflow"></a>ASP.NET ベースのワークフローをデバッグするには
 
 1.  設定して、ASP.NET アプリケーションのデバッグを有効にする**デバッグ = true** web.config ファイルにします。
 
@@ -44,9 +47,9 @@ ms.lasthandoff: 03/12/2018
 
 7.  選択**コードの種類をデバッグ**選択**ワークフロー**です。
 
-8.  **[OK]**をクリックします。
+8.  **[OK]** をクリックします。
 
-9. **[アタッチ]**をクリックします。
+9. **[アタッチ]** をクリックします。
 
 10. ブラウザで既定の Web ページを開いて、ワークフローを開始します。
 

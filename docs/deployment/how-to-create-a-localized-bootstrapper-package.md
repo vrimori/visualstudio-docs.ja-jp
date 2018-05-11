@@ -1,27 +1,24 @@
 ---
-title: "方法: ローカライズされたブートス トラップ パッケージを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ローカライズされたブートス トラップ パッケージを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - localized bootstrapper packages
 - dependencies, creating localized bootstrapper packages
 - prerequisites, creating localized bootstrapper packages
 ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
-caps.latest.revision: "15"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 9a3339b4bd6724fec782857a74a6b51463fe8028
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 6948bd0a9cb3469141ea8c879effa130e7b00e86
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>方法: ローカライズされたブートストラップ パッケージを作成する
 ブートストラップ パッケージを作成したら、さらに 2 つのファイルをロケールごとに作成して、ローカライズ版のブートストラップ パッケージを作成できます。2 つのファイルとは、ソフトウェア ライセンス条項ファイル (eula.rtf など) とパッケージ マニフェスト (package.xml) です。  
@@ -94,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  package.xml ファイルを保存します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
  [方法: パッケージ マニフェストを作成する](../deployment/how-to-create-a-package-manifest.md)

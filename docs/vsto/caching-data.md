@@ -1,12 +1,10 @@
 ---
-title: "データのキャッシュ |Microsoft ドキュメント"
-ms.custom: 
+title: データのキャッシュ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0d036f11d60a8da1362464a875fdc0f2771cac0e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 094a4e6c639007fcf09ce28f0be2e398b8245858
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="caching-data"></a>キャッシュされたデータ
   ドキュメント レベル カスタマイズでデータ オブジェクトをキャッシュするには、データは、オフライン、または Microsoft Office Word または Microsoft Office Excel を開くことがなく、アクセスできるようにします。 オブジェクトをキャッシュするには、オブジェクトにデータ型を特定の要件を満たすことが必要です。 .NET Framework の多くの一般的なデータ型など、これらの要件を満たしている<xref:System.String>、 <xref:System.Data.DataSet>、および<xref:System.Data.DataTable>です。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
 -   実行時にデータ キャッシュにオブジェクトをプログラムで追加するには、使用、`StartCaching`メソッドのホスト項目など、`ThisDocument`または`ThisWorkbook`クラスです。 詳細については、次を参照してください。[する方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)です。  
   
- データ キャッシュにオブジェクトを追加した後は、アクセスして、Word または Excel を起動しなくても、キャッシュされたデータを変更することができます。 詳細については、「 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
+ データ キャッシュにオブジェクトを追加した後は、アクセスして、Word または Excel を起動しなくても、キャッシュされたデータを変更することができます。 詳細については、「 [サーバー上のドキュメント内のデータへのアクセス](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
   
 ## <a name="requirements-for-data-objects-to-be-cached"></a>キャッシュに保存するデータ オブジェクトの要件  
  ソリューション内のデータ オブジェクトをキャッシュするには、オブジェクトは、これらの要件を満たす必要があります。  
@@ -84,9 +83,9 @@ ms.lasthandoff: 01/10/2018
 ## <a name="preventing-data-loss-when-adding-null-values-to-the-data-cache"></a>データ キャッシュに Null 値を追加するときにデータ損失の防止  
  データ キャッシュにオブジェクトを追加するときのすべてのキャッシュされたオブジェクトに初期化する必要ない**null**ドキュメントが保存され、終了するまでの値します。 キャッシュされたオブジェクトがある場合、 **null**ドキュメントを保存して閉じるときに、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]データ キャッシュから削除するすべてのキャッシュされたオブジェクトに自動的にします。  
   
- 持つオブジェクトを追加する場合、 **null**値を使用して、データ キャッシュを<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>属性、デザイン時に使用することができます、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ドキュメントが開かれる前に、キャッシュされたデータを初期化するためにクラスのオブジェクトします。 これは、Word または Excel のドキュメントは、エンドユーザーが開かれる前にインストールされていないサーバー上のキャッシュされたデータを初期化する場合に便利です。 詳細については、「 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
+ 持つオブジェクトを追加する場合、 **null**値を使用して、データ キャッシュを<xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>属性、デザイン時に使用することができます、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ドキュメントが開かれる前に、キャッシュされたデータを初期化するためにクラスのオブジェクトします。 これは、Word または Excel のドキュメントは、エンドユーザーが開かれる前にインストールされていないサーバー上のキャッシュされたデータを初期化する場合に便利です。 詳細については、「 [サーバー上のドキュメント内のデータへのアクセス](../vsto/accessing-data-in-documents-on-the-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: オフラインであるか、サーバーで使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
  [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュ](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
  [方法: パスワードで保護されたドキュメント内のデータをキャッシュします。](../vsto/how-to-cache-data-in-a-password-protected-document.md)   

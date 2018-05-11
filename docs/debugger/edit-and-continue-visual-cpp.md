@@ -1,12 +1,9 @@
 ---
-title: "エディット コンティニュ (Visual C) |Microsoft ドキュメント"
-ms.custom: 
+title: エディット コンティニュ (Visual C) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/31/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - debugging [C++], Edit and Continue
 - C/C++, Edit and Continue
 ms.assetid: 1815251e-a877-433e-9e5e-69bd9ba254c7
-caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d1b9326aa862bd03bb989a4d6863e94dae7bddef
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d5195dd92e53a6657747758c03c87ee5463c1d5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-and-continue-visual-c"></a>エディット コンティニュ (Visual C++)
 Visual C++ プロジェクトでエディット コンティニュを使用できます。 参照してください[サポート コードの変更 (C++)](../debugger/supported-code-changes-cpp.md)制限については、エディット コンティニュのです。
@@ -41,7 +38,7 @@ Visual Studio 2015 Update 3 の機能強化の詳細については、次を参�
  現在のデバッグ セッション中に適用しないコードの編集を行う場合は、エディット コンティニュの自動起動を無効にすることもできます。 自動エディット コンティニュをもう一度有効にすることもできます。
 
 > [!IMPORTANT]
-> 必要なビルド設定やその他の機能の互換性についてを参照してください [C++ のエディット コンティニュ Visual Studio 2015 Update 3] (https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/ です。
+> 必要なビルド設定やその他の機能の互換性についてを参照してください C++ のエディット コンティニュ [Visual Studio 2015 Update 3](https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/です。
   
 1.  デバッグ セッションの場合は、デバッグの停止 (**shift キーを押しながら f5 キーを押して**)。
 
@@ -83,5 +80,5 @@ Visual Studio 2015 Update 3 の機能強化の詳細については、次を参�
   
  このような場合、変更が適用されるまで、デバッガーは元のコードを続けて実行します。 古いコードは、一時的なソース ファイル ウィンドウとして、 `enc25.tmp`などのタイトルで別のソース ウィンドウに表示されます。 編集されたソース コードは、元のソース ウィンドウに表示されます。 古いコードを編集しようとすると、警告メッセージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)

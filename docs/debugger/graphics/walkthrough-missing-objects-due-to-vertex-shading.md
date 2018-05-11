@@ -1,23 +1,20 @@
 ---
-title: "チュートリアル: 頂点の網かけによるオブジェクトの不足 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 頂点の網かけによるオブジェクトの不足 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e42b54a0-8092-455c-945b-9ecafb129d93
-caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f374bbbdf30a80bdea70b789da5d5febbeee7a82
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b669962fe1a0668b42aec29745072f3451966323
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>チュートリアル: 頂点の網かけによるオブジェクトの不足
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断ツールを使用して、頂点シェーダー ステージの間に発生するエラーが原因で欠落しているオブジェクトを調査する方法を示します。  
@@ -124,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  この問題を解決するには、ローカル変数 `m_marbleConstantBufferData.projection` の値を初期化する行の後に `projection`の値を設定するコード行を移動します。  
   
- ![修正された C &#43; #43 です。ソース コード](media/gfx_diag_demo_missing_object_shader_step_10.png "gfx_diag_demo_missing_object_shader_step_10")  
+ ![修正された C&#43; &#43;ソース コード](media/gfx_diag_demo_missing_object_shader_step_10.png "gfx_diag_demo_missing_object_shader_step_10")  
   
  コードを修正したら、それをリビルドし、もう一度アプリを実行してレンダリングの問題が解決されたかどうかを確認します。  
   

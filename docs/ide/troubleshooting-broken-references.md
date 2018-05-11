@@ -1,13 +1,9 @@
 ---
-title: "壊れた参照のトラブルシューティング | Microsoft Docs"
-ms.custom: 
+title: 壊れた参照のトラブルシューティング
 ms.date: 03/21/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 helpviewer_keywords:
 - C# projects, references
 - Visual Basic projects, references
@@ -16,14 +12,14 @@ helpviewer_keywords:
 - referencing components, troubleshooting
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecca7ee3d9d5ae6a4f347df7438cb38718d702b4
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 3c1879b67558cb57fba7bc462e4c7df03fb5efc8
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshoot-broken-references"></a>壊れた参照のトラブルシューティング
 
@@ -46,11 +42,11 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="reference-path-is-incorrect"></a>参照パスが正しくない
 
-異なるコンピューターでプロジェクトを共有している場合、コンポーネントが各コンピューターで異なるディレクトリに配置されていると、一部の参照が見つからない場合があります。 参照は、コンポーネント ファイルの名前 (MyComponent など) で格納されます。 参照がプロジェクトに追加されると、コンポーネント ファイルのフォルダーの場所 (C:\MyComponents\\ など) が **ReferencePath** プロジェクト プロパティに追加されます。
+異なるコンピューターでプロジェクトを共有している場合、コンポーネントが各コンピューターで異なるディレクトリに配置されていると、一部の参照が見つからない場合があります。 参照は、コンポーネント ファイルの名前 (*MyComponent* など) で格納されます。 参照がプロジェクトに追加されると、コンポーネント ファイルのフォルダーの場所 (*C:\MyComponents* など) が **ReferencePath** プロジェクト プロパティに追加されます。
 
-プロジェクトを開くと、参照パスで指定したディレクトリ内を検索して、これらの参照先のコンポーネント ファイルを検索しようとします。 コンポーネントを D:\MyComponents\\ などの別のディレクトリに格納しているコンピューターでプロジェクトを開くと、参照が見つらず、[タスク一覧] にエラーが表示されます。
+プロジェクトを開くと、参照パスで指定したディレクトリ内を検索して、これらの参照先のコンポーネント ファイルを検索しようとします。 コンポーネントを *D:\MyComponents* などの別のディレクトリに格納しているコンピューターでプロジェクトを開くと、参照が見つらず、**[タスク一覧]** にエラーが表示されます。
 
-この問題を解決するには、壊れている参照を削除し、[参照の追加] ダイアログ ボックスを使用してこれを置き換えます。 別の解決策は、プロジェクトのプロパティ ページで **[参照パス]** 項目を使用して、一覧内のフォルダーを適切な場所を指すように変更することです。 **[参照パス]** プロパティは、各コンピューターのユーザーごとに保持されます。 したがって、参照パスを変更しても、プロジェクトの他のユーザーには影響しません。
+この問題を解決するには、壊れている参照を削除し、**[参照の追加]** ダイアログ ボックスを使用してこれを置き換えます。 別の解決策は、プロジェクトのプロパティ ページで **[参照パス]** 項目を使用して、一覧内のフォルダーを適切な場所を指すように変更することです。 **[参照パス]** プロパティは、各コンピューターのユーザーごとに保持されます。 したがって、参照パスを変更しても、プロジェクトの他のユーザーには影響しません。
 
 > [!TIP]
 > プロジェクト間参照には、これらの問題はありません。 このため、可能であれば、ファイル参照の代わりにプロジェクト間参照を使用します。
@@ -95,4 +91,4 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="see-also"></a>関連項目
 
-[[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)
+- [[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

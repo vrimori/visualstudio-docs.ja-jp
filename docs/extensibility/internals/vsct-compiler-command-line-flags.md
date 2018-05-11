@@ -1,26 +1,24 @@
 ---
-title: "VSCT コンパイラのコマンド ライン フラグ |Microsoft ドキュメント"
-ms.custom: 
+title: VSCT コンパイラのコマンド ライン フラグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, compiling
 - command-table file compilation (VSCT files)
 ms.assetid: 9dc6c33f-e6cf-4cf2-9b05-e8f7bfac1cfb
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d33c0e1bc54ee0c1abab736ba24ce76fbf710fdc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6e2e1045adb451c7f4dd06b888fca356d26b7ff3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT コンパイラのコマンド ライン フラグ
 Visual Studio コマンド テーブル (VSCT) コンパイラは、.vsct ファイルのコンパイルが成功したことを確認するコマンド ライン スイッチを提供します。  
@@ -63,7 +61,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 |-D|追加の定義済みのシンボルを指定します。|  
 |-|追加のインクルード ファイルの参照を解決するときに使用されるパスを指定します。|  
 |-L|指定して、<xref:System.Globalization.CultureInfo>カルチャ名、たとえば"EN-US"です。|  
-|E|C# の場合、指定した項目の名前空間コマンド、続いて [C &#124; でオブジェクトを生成します。H &#124;です。N]:*filename*場所 C = C# の場合、H C++ ヘッダー、N = 名前空間を = です。 名前空間は、C# の場合に必要です。|  
+|-E|C# の場合、続いてコマンド項目の指定した名前空間内のオブジェクトを出力 [C&#124;H&#124;N]:*filename*場所 C = C# の場合、H C++ ヘッダー、N = = 名前空間。 名前空間は、C# の場合に必要です。|  
 |-v|詳細出力します。|  
   
  -L スイッチに対応するバイナリ .cto ファイルを生成するために文字列のグループを選択するコンパイラに指示、指定された<xref:System.Globalization.CultureInfo>カルチャ名。 指定されたカルチャ名は 1 つ以上の言語の属性と一致する必要があります[文字列要素](../../extensibility/strings-element.md).vsct ファイルでします。 親から継承されている文字列の要素には、言語属性がなければ、 [CommandTable 要素](../../extensibility/commandtable-element.md)です。  
@@ -78,7 +76,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
   
  VSCT コンパイラは、以前にビルドされたバイナリ ファイルをデコンパイルもできます。 これを行うには、指定のバイナリ ファイル、 \<infile >。   バイナリ ファイルは、VSCT コンパイラによって生成されて、その埋め込まれているそのシンボルとがのシンボリック名を持つ出力が生成されます、\<シンボル > 出力のセクションです。 バイナリは、CTC コンパイラによって生成されたが、出力には、実際の Guid と Id が含まれます。 Ctc.exe の現在のバージョンによって生成される *.ctsym ファイルは、バイナリの入力ファイルと同じフォルダーには、シンボルがそのファイルから読み込まれ、出力に使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)   
  [VSPackage でユーザー インターフェイス要素を追加する方法](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

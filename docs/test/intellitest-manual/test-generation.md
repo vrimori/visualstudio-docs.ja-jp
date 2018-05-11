@@ -1,28 +1,31 @@
 ---
-title: "テスト生成 | Microsoft IntelliTest 開発者テスト ツール | Microsoft Docs"
-ms.custom: 
+title: テスト生成 | Microsoft IntelliTest 開発者テスト ツール
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest, Test generation
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 478dbdd71845d8bc0eb98250318b853ba4b8e5e6
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: f621520f6303e72bdb4cd778218378af9ebd2323
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="test-generation"></a>テスト生成
 
-従来の単体テストでは、テストを組み立てるためにいくつかの構成要素が必要になります。
+従来の単体テストでは、テストは以下のいくつかの要素で構成されます。
+
+* [メソッド呼び出しのシーケンス](test-generation.md#test-generators)
+* メソッドを呼び出す引数。引数は[テスト入力](input-generation.md)です。
+* 一連の[アサート](#assumptions-and-assertions) ステートメントにより、テストされるアプリケーションで本来意図されている動作の検証
+
+テスト構造の例を以下に示します。
 
 ```
 [Test]
@@ -38,12 +41,6 @@ void MyTest() {
     Assert.AreEqual(a[0], 5);
 }
 ```
-
-テストは次のようなさまざまな側面から構成されます。
-
-* [メソッド呼び出しのシーケンス](test-generation.md#test-generators)を修正します。
-* メソッドを呼び出す引数を修正します。引数は[テスト入力](input-generation.md)です。
-* 一連の[アサート](#assumptions-and-assertions) ステートメントにより、テストされるアプリケーションで本来意図されている動作を検証します。
 
 IntelliTest は多くの場合、より一般的な[パラメーター化された単体テスト](#parameterized-unit-testing)の関連引数値を自動的に決定できます。パラメーター化された単体テストは、メソッド呼び出しとアサートのシーケンスを提供します。
 
@@ -247,4 +244,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>フィードバックをお寄せください
 
-ご意見や機能に関するご要望を **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** で投稿してください。
+ご意見や機能に関するご要望を [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest) で投稿してください。

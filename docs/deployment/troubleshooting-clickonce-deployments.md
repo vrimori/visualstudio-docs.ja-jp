@@ -1,12 +1,9 @@
 ---
-title: "ClickOnce 配置のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce 配置のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - Windows applications, ClickOnce deployments
 - deploying applications [ClickOnce], troubleshooting
 ms.assetid: 58e90012-f68b-4852-8ae9-58e361cbcc32
-caps.latest.revision: "32"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: fdb9d357f1046c453ad6e21829a55983a044ff4b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 14a9c25422edf58446c2500c6da74b891e1467f4
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="troubleshooting-clickonce-deployments"></a>ClickOnce 配置のトラブルシューティング
 このトピックでは、診断し、最も一般的な問題を解決する[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。  
@@ -52,6 +49,6 @@ ms.lasthandoff: 12/22/2017
  [System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)  
  System.Deployment.Application を使用して ClickOnce アプリケーションをデバッグする方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

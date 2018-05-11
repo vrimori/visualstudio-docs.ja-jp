@@ -1,12 +1,10 @@
 ---
-title: "置き換え可能パラメーター |Microsoft ドキュメント"
-ms.custom: 
+title: 置き換え可能パラメーター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, replaceable parameters
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fa002f58ffd749cef9a4cbf9b536a36d7901b105
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 696388ca89102d588bd1a291b6f5689dc08e26a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replaceable-parameters"></a>置き換え可能パラメーター
   置き換え可能パラメーターは、または*トークン*、プロジェクト ファイル内の実際の値は、デザイン時に認識されていない SharePoint ソリューションのアイテムの値を提供するのに使用できます。 標準には、関数に似ている[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]テンプレート トークンです。 詳細については、次を参照してください。[テンプレート パラメーター](/visualstudio/ide/template-parameters)です。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="tokens-list"></a>トークンの一覧  
  次の表には、使用可能なトークンが一覧表示します。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |$SharePoint.Project.FileName$|"NewProj.csproj"などを含むプロジェクト ファイルの名前です。|  
 |$SharePoint.Project.FileNameWithoutExtension$|ファイル名拡張子を除いたを含むプロジェクト ファイルの名前。 たとえば、"NewProj"です。|  
@@ -111,7 +110,7 @@ ms.lasthandoff: 01/10/2018
   
  代わりに、.targets ファイルに直接、拡張機能を追加することができます。 ただし、これを変更するだけでなく、ローカル システムでパッケージ化されたすべての SharePoint プロジェクトの拡張機能の一覧、独自です。 システム上の唯一の開発者の場合、またはほとんどのプロジェクトの必要な場合に便利ですがあります。 ただし、システムに固有である、この方法は非常に移植性ではありませんのでをお勧めするため追加するすべての拡張機能プロジェクト ファイルを代わりにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio での機能を拡張 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での機能を拡張 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81b0dbe6-ddf3-4899-b09c-a3837037231d
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ac4154ef3fd275d89bd8858717a5850fe34c1f38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6893cb15a93abf6c4ced532510110c32e259bcab
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extensibility-in-visual-studio"></a>Visual Studio の機能拡張
 Visual Studio では、多くの機能拡張オプションを提供しています。 独自の Sdk を作成し、Windows、Windows Phone、および Azure Sdk (Visual Studio の一部としてインストールされます) を使用して、Visual Studio 自体を拡張することができます。  

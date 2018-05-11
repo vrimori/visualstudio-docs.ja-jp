@@ -1,12 +1,9 @@
 ---
-title: "チュートリアル: Windows フォームのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Windows フォームのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -22,16 +19,16 @@ helpviewer_keywords:
 - Windows Forms, debugging
 - debugging Windows Forms, walkthroughs
 ms.assetid: 529db1e2-d9ea-482a-b6a0-7c543d17f114
-caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d0ab1ccdf6f5365c04c4a7ee0cac8ce75ab5f17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b4e256aeef1a068ddc46d13e98b344bcce56d08b
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>チュートリアル : Windows フォームのデバッグ
 Windows フォームは、最も一般的なマネージ アプリケーションの 1 つです。 Windows フォームは、標準 Windows アプリケーションを作成します。 このチュートリアルは、Visual Basic、C#、または C++ を使用して実行できます。  
@@ -67,7 +64,7 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
 6.  **ビュー**メニューの **ツールボックス**です。  
   
-     ツールボックスが表示されます。 詳細については、次を参照してください。[ツールボックス](../ide/reference/toolbox.md)です。  
+     ツールボックスが表示されます。 詳細については、「[ツールボックス](../ide/reference/toolbox.md)」をご覧ください。  
   
 7.  ツールボックスで、をクリックして、**ボタン**を制御し、コントロールをフォームのデザイン サーフェイスにドラッグします。 フォームに [Button] をドロップします。  
   
@@ -90,7 +87,7 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
     textBox1->Text = "Button was clicked!";  
     ```  
   
-11. **ビルド**メニューの **ソリューションのビルド**です。  
+11. **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。  
   
      プロジェクトがエラーのない状態でビルドされます。  
   
@@ -189,6 +186,6 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
      ブレークポイントの位置で、Windows フォームの実行が中断します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)

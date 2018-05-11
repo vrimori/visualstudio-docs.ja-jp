@@ -1,12 +1,9 @@
 ---
-title: "DLL プロジェクトのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: DLL プロジェクトのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - DLLs, debugging
 - debugging [Visual Studio], DLLs
 ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
-caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7b43d7c5fb8d66e758a44b86d4918f04599d6147
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8c5da503dd3eb1aec83c5f1fdef58261960d66d7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-dll-projects-from-visual-studio"></a>Visual Studio からの DLL プロジェクトのデバッグ
 次の Visual Studio のテンプレートは、Dll を作成します。  
@@ -106,7 +103,7 @@ DLL をデバッグするには、まず呼び出し元のアプリケーショ�
   
      ブレークポイントにヒットすると、 `Test`をステップ実行できます。 `Test`の実行が終了すると、デバッガーはデザイン モードに戻ります。
 
-## <a name="vxtskdebuggingdllprojectsexternal"></a>C++ プロジェクトからの外部 DLL をデバッグします。
+## <a name="vxtskdebuggingdllprojectsexternal"></a> C++ プロジェクトからの外部 DLL をデバッグします。
 
 (コードをステップ実行) などに使用できるデバッグ機能によって異なりますが、プロジェクトに外部 DLL をデバッグしている場合、 [DLL のデバッグ構成](#vxtskdebuggingdllprojectsbuildingadebugversion)かどうかとビルドされたときに、 [の.pdbファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) DLL に必要なその他のファイルがあるとします。
 
@@ -122,7 +119,7 @@ DLL をデバッグするには、まず呼び出し元のアプリケーショ�
 
 プロジェクトの設定の詳細については、次を参照してください。[プロパティ ページ (Visual c)](/cpp/ide/property-pages-visual-cpp)です。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
  [Visual C プロジェクトの種類](../debugger/debugging-preparation-visual-cpp-project-types.md)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   

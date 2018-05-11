@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator Community Edition (CE) をインストールする | Microsoft Docs"
-ms.date: 2017-06-22
+title: Dotfuscator Community Edition (CE) をインストールする
+ms.date: 06/22/2017
 ms.devlang: dotnet
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, インストール"
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, protection, community edition, 難読化, .NET, 無料, Visual Studio 2017, インストール
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -17,15 +18,16 @@ helpviewer_keywords:
 - install Dotfuscator
 - installing Dotfuscator
 - set up Dotfuscator
-description: "Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をインストールする方法について説明します。"
+description: Visual Studio 2017 に含まれる無料の Dotfuscator Community Edition をインストールする方法について説明します。
 ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 6e3151a7ce26fcc998df7fbce1cefda54249a384
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.author: gewarren
+manager: douge
+ms.openlocfilehash: cfacf9f394e411cc89a6722aaf03ac74bc114f63
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をインストールする
 
@@ -68,15 +70,15 @@ Visual Studio 2017 をまだインストールしていない場合は、[Visual
 
 インストールが完了したら、Dotfuscator CE の使用を開始できます。 詳細については、[Dotfuscator CE の完全なユーザー ガイドの概要ページ][get-started]を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Dotfuscator CE の完全なユーザー ガイドのこのトピック][full]
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
-[2017-install]: https://www.visualstudio.com/downloads/#vs-2017
-[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
+- [2017-install]: https://www.visualstudio.com/downloads/#vs-2017
+- [get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
 
-[download]: https://www.preemptive.com/products/dotfuscator/downloads
+- [download]: https://www.preemptive.com/products/dotfuscator/downloads
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_install.html
+- [full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_install.html

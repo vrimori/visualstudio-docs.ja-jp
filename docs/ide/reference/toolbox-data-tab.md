@@ -1,50 +1,49 @@
 ---
-title: "ツールボックス、[データ] タブ | Microsoft Docs"
-ms.custom: 
+title: ツールボックス、[データ] タブ
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Toolbox, Data tab
 - Data tab, Toolbox
 - data [Visual Studio], Toolbox
 ms.assetid: 2ae38b2a-29d2-461c-a67d-29dad274bf45
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d622f1b4a71f52103d1d7a3148291dcd2dcf9129
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a7deb9fef0ee50ecd202cc711566795932a9f51b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="toolbox-data-tab"></a>ツールボックス、[データ] タブ
-フォームとコンポーネントに追加できるデータ オブジェクトを表示します。 作成しているプロジェクトに関連するデザイナーがあると、**ツールボックス**の **[データ]** タブが表示されます。 **ツールボックス**は、Visual Studio の統合開発環境 (IDE: Integrated Development Environment) に既定で表示されます。**ツールボックス**を表示する必要がある場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。  
-  
+フォームとコンポーネントに追加できるデータ オブジェクトを表示します。 作成しているプロジェクトに関連するデザイナーがあると、**ツールボックス**の **[データ]** タブが表示されます。 **ツールボックス**は、Visual Studio の統合開発環境 (IDE: Integrated Development Environment) に既定で表示されます。**ツールボックス**を表示する必要がある場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。
+
 > [!TIP]
->  データ ソース構成ウィザードを実行すると、ほとんどのデータ項目が自動的に作成され、構成されます。 詳細については、「[新しいデータ ソースの追加](../../data-tools/add-new-data-sources.md)」を参照してください。  
-  
-## <a name="ui-element-list"></a>UI 要素の一覧  
- コンポーネントに対する .NET Framework の参照ページを直接表示するには、**ツールボックス**の項目で、またはデザイナーのトレイにあるコンポーネントの項目で、**F1** キーを押します。  
-  
-|name|説明|  
-|----------|-----------------|  
-|<xref:System.Data.DataSet>|型付きまたは型なしのデータセットのインスタンスをフォームまたはコンポーネントに追加します。 このオブジェクトをデザイナーにドラッグすると、ダイアログ ボックスが表示されて、既存の型指定されたデータセット クラスを選択、または新しいブランクの型指定されていないデータセットの作成を指定できます。 **注:** 新しい型指定されたデータセット スキーマおよびクラスを作成する場合、**ツールボックス**の <xref:System.Data.DataSet> オブジェクトは使用しません。 詳細については、[データセットの作成と構成](../../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。|  
-|<xref:System.Windows.Forms.DataGridView>|データを表形式で表示するための強力で柔軟な機能が用意されています。|  
-|<xref:System.Windows.Forms.BindingSource>|基になるデータ ソースにコントロールをバインドするプロセスを簡略化します。|  
-|<xref:System.Windows.Forms.BindingNavigator>|データにバインドされている、フォーム上のコントロールを移動および操作するためのユーザー インターフェイス (UI) を表します。|  
-  
-## <a name="see-also"></a>参照  
- [Visual Studio でのデータへのアクセス](../../data-tools/accessing-data-in-visual-studio.md)   
- [.NET 用の Visual Studio データ ツール](../../data-tools/visual-studio-data-tools-for-dotnet.md)   
- [Visual Studio のデータセット ツール](../../data-tools/dataset-tools-in-visual-studio.md)   
- [Visual Studio でのデータへのコントロールのバインド](../../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [データセットのデータの編集](../../data-tools/edit-data-in-datasets.md)   
- [データセットのデータの検証](../../data-tools/validate-data-in-datasets.md)   
- [データの保存](../../data-tools/saving-data.md)
+> データ ソース構成ウィザードを実行すると、ほとんどのデータ項目が自動的に作成され、構成されます。 詳細については、「[新しいデータ ソースの追加](../../data-tools/add-new-data-sources.md)」を参照してください。
+
+
+## <a name="ui-element-list"></a>UI 要素の一覧
+ コンポーネントに対する .NET Framework の参照ページを直接表示するには、**ツールボックス**の項目で、またはデザイナーのトレイにあるコンポーネントの項目で、**F1** キーを押します。
+
+|name|説明|
+|----------|-----------------|
+|<xref:System.Data.DataSet>|型付きまたは型なしのデータセットのインスタンスをフォームまたはコンポーネントに追加します。 このオブジェクトをデザイナーにドラッグすると、ダイアログ ボックスが表示されて、既存の型指定されたデータセット クラスを選択、または新しいブランクの型指定されていないデータセットの作成を指定できます。 **注:** 新しい型指定されたデータセット スキーマおよびクラスを作成する場合、**ツールボックス**の <xref:System.Data.DataSet> オブジェクトは使用しません。 詳細については、[データセットの作成と構成](../../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。|
+|<xref:System.Windows.Forms.DataGridView>|データを表形式で表示するための強力で柔軟な機能が用意されています。|
+|<xref:System.Windows.Forms.BindingSource>|基になるデータ ソースにコントロールをバインドするプロセスを簡略化します。|
+|<xref:System.Windows.Forms.BindingNavigator>|データにバインドされている、フォーム上のコントロールを移動および操作するためのユーザー インターフェイス (UI) を表します。|
+
+## <a name="see-also"></a>参照
+
+- [Visual Studio でのデータへのアクセス](../../data-tools/accessing-data-in-visual-studio.md)
+- [.NET 用の Visual Studio データ ツール](../../data-tools/visual-studio-data-tools-for-dotnet.md)
+- [Visual Studio のデータセット ツール](../../data-tools/dataset-tools-in-visual-studio.md)
+- [Visual Studio でのデータへのコントロールのバインド](../../data-tools/bind-controls-to-data-in-visual-studio.md)
+- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [データセットのデータの編集](../../data-tools/edit-data-in-datasets.md)
+- [データセットのデータの検証](../../data-tools/validate-data-in-datasets.md)
+- [データの保存](../../data-tools/saving-data.md)

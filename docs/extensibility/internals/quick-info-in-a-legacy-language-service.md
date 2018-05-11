@@ -1,27 +1,25 @@
 ---
-title: "従来の言語サービスで、クイック ヒント |Microsoft ドキュメント"
-ms.custom: 
+title: 従来の言語サービスで、クイック ヒント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Quick Info, supporting in language services [managed package framework]
 - IntelliSense, Quick Info
 - language services [managed package framework], IntelliSense Quick Info
 ms.assetid: 159ccb0b-f5d6-4912-b88b-e9612924ed5e
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8e0fa4a65960d0324a4be19db61648be48b08349
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ffdfe9bfb9063828a90dd9cdf3452ca3684ff0a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>従来の言語サービスで、クイック ヒント
 Intellisense によるクイック ヒントでは、ユーザーか、キャレットを配置します id に、選択して、ソースの識別子に関する情報を表示**クイック ヒント**から、 **IntelliSense**メニューまたはマウスを保持識別子の上にカーソル。 これにより、識別子の情報を表示するツールヒント。 この情報は、通常、識別子の型で構成されています。 デバッグ エンジンがアクティブで、この情報は、現在の値を含めることがあります。 デバッグ エンジンは、言語サービスは識別子のみを処理中に、式の値を指定します。  

@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python の使用、手順 5、パッケージのインストール | Microsoft Docs"
-description: "Visual Studio で Python を使用する際の主なチュートリアルの 5 番目の手順です。Python 環境でパッケージを管理する、Visual Studio の機能についてご説明します。"
-ms.custom: 
+title: Python の使用、手順 5、パッケージのインストール
+description: Visual Studio で Python を使用する際の主なチュートリアルの 5 番目の手順です。Python 環境でパッケージを管理する、Visual Studio の機能についてご説明します。
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d633ce061d0624c44060c5e059cf9b29733260d9
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 73de2a4c58a24a603f1d5d54138d5762e3ae9971
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>手順 5: Python 環境へのパッケージのインストール
 

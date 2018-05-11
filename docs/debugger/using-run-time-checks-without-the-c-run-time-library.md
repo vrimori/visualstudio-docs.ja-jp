@@ -1,13 +1,9 @@
 ---
-title: "C ランタイム ライブラリなしのチェックの実行時間を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: C ランタイム ライブラリなしのチェックの実行時間を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.runtime
 dev_langs:
@@ -24,17 +20,16 @@ helpviewer_keywords:
 - run-time checks, /RTC option
 - debugging [Visual Studio], run-time routines
 ms.assetid: 30ed90f3-9323-4784-80a4-937449eb54f6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc81dd57ca6a91cd748da82c792c2bbeca88bb25
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 533e4254b6222af1713691a0c448cad1383cd273
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C ランタイム ライブラリなしのランタイム チェックの使用方法
 C ランタイム ライブラリなしプログラムをリンクする場合を使用して**/NODEFAULTLIB**実行時のチェックを使用して、RunTmChk.lib とリンクする必要があります。  
@@ -69,5 +64,5 @@ extern "C" _RTC_error_fnW __cdecl _CRT_RTC_INITW(
   
  既定のエラー レポート関数を組み込むと、`_RTC_SetErrorFuncW` を使用して追加のエラー レポート関数を組み込むことができます。 詳細については、次を参照してください。 [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法 : ネイティブ ランタイム チェックを使用する](../debugger/how-to-use-native-run-time-checks.md)

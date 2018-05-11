@@ -1,26 +1,24 @@
 ---
-title: "拡張して、ツール ウィンドウをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: 拡張して、ツール ウィンドウをカスタマイズする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, essentials
 - tool windows, standard
 ms.assetid: 46b2892e-7b2b-4b3f-83a7-b884f1e114ee
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 74616bf92b1424b4749354d1f0a7b3232e66a335
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2ef4f656ed7b7ab7facbcfb470fca98327276cce
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-and-customizing-tool-windows"></a>拡張して、ツール ウィンドウをカスタマイズします。
 Visual Studio には、windows、ツール ウィンドウ、ドキュメント ウィンドウおよびダイアログ ウィンドウなどのさまざまな種類が用意されています。 [プロパティ] ウィンドウ、出力ウィンドウ、[タスク一覧] ウィンドウなどの他のウィンドウは、ツール ウィンドウの種類です。  
@@ -50,5 +48,5 @@ Visual Studio には、windows、ツール ウィンドウ、ドキュメント 
 ## <a name="modal-dialog-boxes"></a>モーダル ダイアログ ボックス  
  Visual Studio 拡張機能では、それらから派生することでモーダル ダイアログ ボックスを作成する必要があります<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow?displayProperty=fullName>、し、残りの UI を制御することができます。 詳細については、次を参照してください。 [作成して、モーダル ダイアログ ボックスを管理する](../extensibility/creating-and-managing-modal-dialog-boxes.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツール ウィンドウでの拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)

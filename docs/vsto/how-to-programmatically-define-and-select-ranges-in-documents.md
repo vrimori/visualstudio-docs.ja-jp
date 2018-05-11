@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによってを定義し、ドキュメントで範囲を選択 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによってを定義し、ドキュメントで範囲を選択 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - ranges, defining in documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0c99b40147d08a924b9f66a0f8a45a29204e37bc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 20dd981229c4e48e8d62f51073abccfd2502cf17
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>方法: プログラムによって文書に複数の範囲を定義して選択する
   Microsoft Office Word 文書内に範囲を定義するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用します。 使用してなど、さまざまな方法で文書全体を選択することができます、<xref:Microsoft.Office.Interop.Word.Range.Select%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Range>オブジェクト、またはの Content プロパティを使用して、<xref:Microsoft.Office.Tools.Word.Document>クラス (ドキュメント レベルのカスタマイズ)、または<xref:Microsoft.Office.Interop.Word.Document>クラス (で、VSTO アドインの場合)。  
@@ -128,7 +127,7 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#24)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#24](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#24)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
  [方法: プログラムによって開始と終了文字の範囲を取得](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   

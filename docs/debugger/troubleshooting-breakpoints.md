@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio デバッガーでブレークポイントをトラブルシューティングする |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio デバッガーでブレークポイントをトラブルシューティングする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "0"
-author: carpediemma
-ms.author: emrou
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a59a5448cb9ceb9aa4ac5578e9234c1a9972a15a
-ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
+ms.topic: conceptual
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d587809a9690e312e923ba184c9d90c38405a5d6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントをトラブルシューティングします。
 

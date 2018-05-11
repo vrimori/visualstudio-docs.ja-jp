@@ -1,24 +1,22 @@
 ---
-title: "コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント"
-ms.custom: 
+title: コードの不具合のマネージ コードのチュートリアルの分析 |Microsoft ドキュメント
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
 - managed code, analyzing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e1c708f31d31dd811017015cd37c7e60d49beef9
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: bb13e88e07741327088e8d138dfcf8b92a9075a6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>チュートリアル: コードの分析のマネージ コードを欠陥します。
 
@@ -30,11 +28,11 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="to-create-a-class-library"></a>クラス ライブラリを作成するには
 
-1. **ファイル**] メニューの [選択**新規** > **プロジェクト.**.
+1. **[ファイル]** メニューで、**[新規]** > **[プロジェクト]** の順に選択します。
 
-1. **新しいプロジェクト** ダイアログ ボックスで、展開**インストール** > **Visual c#**を選択し**Windows クラシック デスクトップ**です。
+1. **新しいプロジェクト** ダイアログ ボックスで、展開**インストール** > **Visual c#** を選択し**Windows クラシック デスクトップ**です。
 
-1. 選択、**クラス ライブラリ (.NET Framework)**テンプレート。
+1. 選択、**クラス ライブラリ (.NET Framework)** テンプレート。
 
 1. **名前**テキスト ボックスで、「 **CodeAnalysisManagedDemo**順にクリック**OK**です。
 
@@ -63,21 +61,21 @@ ms.lasthandoff: 02/01/2018
 ### <a name="to-analyze-a-managed-project-for-code-defects"></a>マネージ プロジェクトのコードの不具合を分析するには
 
 1. CodeAnalysisManagedDemo プロジェクトを選択**ソリューション エクスプ ローラー**です。
-  
+
 1. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
-  
+
      CodeAnalysisManagedDemo プロパティ ページが表示されます。
-  
+
 1. 選択、**コード分析**タブです。
-  
+
 1. 確認して**ビルドに対するコード分析を有効にする**がオンになっています。
-  
+
 1. **この規則セットを実行**ドロップダウン リストで、 **Microsoft すべてルール**です。
-  
+
 1. **ファイル** メニューのをクリックして**選択した項目の保存**、プロパティ ページを閉じます。
-  
+
 1. **ビルド** メニューのをクリックして**ビルド CodeAnalysisManagedDemo**です。
-  
+
     CodeAnalysisManagedDemo プロジェクトのビルド警告が表示されます、**エラー一覧**と**出力**windows です。
 
 ## <a name="correct-the-code-analysis-issues"></a>コード分析の問題を修正します。
@@ -112,7 +110,7 @@ ms.lasthandoff: 02/01/2018
 
    1. コードを追加`using System.Runtime.Serialization;`Class1.cs ファイルの先頭にします。
 
-   1. 次に、コンス トラクターを追加します。`protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
+   1. 次に、コンス トラクターを追加します。 `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
 
    [Ca 1032: 標準例外コンス トラクターを実装する](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design: このクラスに次のコンス トラクターを追加しますパブリック demo()。
 
@@ -144,7 +142,7 @@ ms.lasthandoff: 02/01/2018
 
    1. 選択、**アセンブリに署名**チェック ボックスをオンします。
 
-   1. **厳密な名前キー ファイルを選択**一覧で、 **\<新規… >**です。
+   1. **厳密な名前キー ファイルを選択**一覧で、 **\<新規… >** です。
 
       **厳密な名前キーの作成** ダイアログ ボックスが表示されます。
 

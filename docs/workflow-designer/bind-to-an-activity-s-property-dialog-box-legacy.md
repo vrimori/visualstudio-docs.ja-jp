@@ -1,7 +1,9 @@
 ---
-title: "アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ) |Microsoft ドキュメント"
+title: ワークフロー デザイナーでは、アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.ActivityBindForm.UI
 helpviewer_keywords:
@@ -9,21 +11,22 @@ helpviewer_keywords:
 ms.assetid: 19ebb207-e0a9-4642-8f5f-a5e31395c683
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ee80d096cc0df6092811fa7fba17125c5af380f
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 8922864a32c08d8feaed11e530314176557a785f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>アクティビティにバインド&#39;s プロパティ ダイアログ ボックス (レガシ)
-このトピックについて説明する方法を使用して、**アクティビティのプロパティにバインド**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
+# <a name="bind-to-an-activitys-property-dialog-box-legacy"></a>[アクティビティのプロパティへのバインド] ダイアログ ボックス (レガシ)
+
+このトピックについて説明する方法を使用して、**アクティビティのプロパティにバインド**従来の Windows ワークフロー デザイナー ダイアログ ボックス。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
 
  依存関係プロパティのインスタンス型は、別のアクティビティのパブリック プロパティまたはイベントにバインドすることができます。 アクティビティのバインドの詳細については、次を参照してください。[依存関係プロパティの使用](http://go.microsoft.com/fwlink?LinkID=65007)です。
 
- 使用してバインドするプロパティを選択する、**アクティビティのプロパティにバインド** ダイアログ ボックス。 省略記号ボタンをクリックしてこのダイアログ ボックスを開く**[...]**で選択したプロパティのテキスト ボックスの最後に、**プロパティ**ウィンドウか、プロパティ ブラウザでプロパティ名の横に表示される青い感嘆符アイコンをクリックします。
+ 使用してバインドするプロパティを選択する、**アクティビティのプロパティにバインド** ダイアログ ボックス。 省略記号ボタンをクリックしてこのダイアログ ボックスを開く **[...]** で選択したプロパティのテキスト ボックスの最後に、**プロパティ**ウィンドウか、プロパティ ブラウザでプロパティ名の横に表示される青い感嘆符アイコンをクリックします。
 
  次の表は、ユーザー インターフェイス (UI) 要素の**アクティビティのプロパティにバインド** ダイアログ ボックス。
 

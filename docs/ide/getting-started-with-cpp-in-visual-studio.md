@@ -1,24 +1,23 @@
 ---
-title: "Visual Studio 内の C++ の概要 | Microsoft Docs"
+title: Visual Studio 内の C++ の概要 | Microsoft Docs
 ms.custom: mvc
 ms.date: 12/04/2017
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: tutorial
 author: corob-msft
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e0e0709b8a1737e3f78268ec324d4481dac285a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: ec0ab12b1df5a36c81a394406610c16fe184f0d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="get-started-with-c-in-visual-studio"></a>Visual Studio 内の C++ の概要
+# <a name="get-started-with-c-in-visual-studio"></a>Visual Studio での C++ の概要
 
 このクイックスタートを完了すると、Visual Studio を使用して C++ のアプリケーションを開発する際に使用できるさまざまなツールおよびダイアログ ボックスの使用方法を習得できます。 "Hello, World" スタイルのコンソール アプリケーションを作成しながら、統合開発環境 (IDE) での作業方法について学習します。
 
@@ -34,7 +33,7 @@ Visual Studio がまだ実行されていない場合は、起動します。
 
 ![Visual C++ の設定が適用された IDE](../ide/media/get-started-cpp-ide-layout.png "Visual C++ の設定が適用された IDE")
 
-Visual Studio を開くと、IDE の 3 つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側と右側にドッキングされます。 上部には、**クイック起動**ボックス、メニュー バー、および標準ツールバーがあります。 ウィンドウの中央には、**[スタート ページ]**が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。
+Visual Studio を開くと、IDE の 3 つの基本的なパーツを確認できます。ツール ウィンドウ、メニューとツール バー、およびメイン ウィンドウ領域です。 ツール ウィンドウは、アプリ ウィンドウの左側と右側にドッキングされます。 上部には、**クイック起動**ボックス、メニュー バー、および標準ツールバーがあります。 ウィンドウの中央には、**[スタート ページ]** が表示されます。 ソリューションまたはプロジェクトを開くと、この領域にはエディターとデザイナーが表示されます。 アプリを開発する場合は、ほとんどの時間をこの中央の領域での作業に費やします。
 
 Visual Studio では、"*プロジェクト*" を使用してアプリのコードを整理し、"*ソリューション*" を使用してプロジェクトを整理します。 プロジェクトには、アプリをビルドする場合に使用するすべてのオプション、構成、および規則が含まれています。 また、プロジェクトでは、プロジェクトのすべてのファイルと、外部のファイルとの間のリレーションシップも管理します。 アプリを作成するには、まず、新しいプロジェクトとソリューションを作成します。
 
@@ -52,7 +51,7 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 1. **[OK]** ボタンを選択して、アプリのプロジェクトとソリューションを作成します。
 
-   Windows コンソール アプリの基本的なファイルを含む HelloApp プロジェクトとソリューションが作成され、**ソリューション エクスプローラー**に自動的に読み込まれます。 コード エディターで HelloApp.cpp ファイルが開かれます。 次の項目が**ソリューション エクスプローラー**に表示されます。
+   Windows コンソール アプリの基本的なファイルを含む HelloApp プロジェクトとソリューションが作成され、**ソリューション エクスプローラー**に自動的に読み込まれます。 コード エディターで *HelloApp.cpp* ファイルが開かれます。 次の項目が**ソリューション エクスプローラー**に表示されます。
 
    ![ソリューション エクスプローラーに表示されたソリューションのファイル](../ide/media/get-started-cpp-solution-explorer.png "ソリューション エクスプローラーに表示されたソリューションのファイル")
 
@@ -62,7 +61,7 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 ### <a name="to-edit-code-in-the-editor"></a>エディターでコードを編集するには
 
-1. HelloApp.cpp ファイルの `return 0;` という行の前に空白行を挿入し、次のコードを入力します。
+1. *HelloApp.cpp* ファイルの `return 0;` という行の前に空白行を挿入し、次のコードを入力します。
 
    ```cpp
    cout << "Hello\n";
@@ -76,16 +75,16 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
    ![[エラー一覧] ウィンドウのエラー](../ide/media/get-started-cpp-error-list.png "[エラー一覧] ウィンドウのエラー")
 
-   コードには [std::cout](/cpp/standard-library/iostream) の宣言が欠落しています。これは \<iostream> ヘッダー ファイルにあります。
+   コードには [std::cout](/cpp/standard-library/iostream) の宣言が欠落しています。これは *\<iostream>* ヘッダー ファイルにあります。
 
-1. iostream ヘッダーを組み込むには、このコードを `#include "stdafx.h"` の後に入力します。
+1. *iostream* ヘッダーを組み込むには、このコードを `#include "stdafx.h"` の後に入力します。
 
    ```cpp
    #include <iostream>
    using namespace std;
    ```
 
-   コードを入力したとき、ボックスが表示されたのに気づいたはずです。 このボックスには、入力した文字のオートコンプリート候補が含まれています。 これは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーやパラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、 [Using IntelliSense](../ide/using-intellisense.md) および [Code Snippets](../ide/code-snippets.md)を参照してください。
+   コードを入力したとき、ボックスが表示されたのに気づいたはずです。 このボックスには、入力した文字のオートコンプリート候補が含まれています。 これは、C++ の IntelliSense の一部で、コーディングの一連のヒントを提供します。それには、クラスやインターフェイスのメンバーやパラメーター情報が含まれます。 定義済みのコード ブロックであるコード スニペットを使用することもできます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページと「[コード スニペット](../ide/code-snippets.md)」を参照してください。
 
    ![エディターでのコードの修正](../ide/media/get-started-cpp-cout-fix.png "エディターでのコードの修正")
 
@@ -105,11 +104,11 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 
 ### <a name="to-debug-the-app"></a>アプリをデバッグするには
 
-1. デバッガーを起動するには、メニュー バーで **[デバッグ]、[デバッグ開始]** の順に選択します。
+デバッガーを起動するには、メニュー バーで **[デバッグ]、[デバッグ開始]** の順に選択します。
 
-   ![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/get-started-cpp-start-debugging-menu.png "[デバッグ] メニューの [デバッグの開始] コマンド")
+![[デバッグ] メニューの [デバッグの開始] コマンド](../ide/media/get-started-cpp-start-debugging-menu.png "[デバッグ] メニューの [デバッグの開始] コマンド")
 
-   デバッガーが起動し、コードが実行されます。 コンソール ウィンドウ (コマンド プロンプトのように見える別のウィンドウ) が数秒間表示されますが、デバッガーが実行を停止するとすぐに閉じます。 テキストを表示するには、ブレークポイントを設定してプログラムの実行を停止する必要があります。
+デバッガーが起動し、コードが実行されます。 コンソール ウィンドウ (コマンド プロンプトのように見える別のウィンドウ) が数秒間表示されますが、デバッガーが実行を停止するとすぐに閉じます。 テキストを表示するには、ブレークポイントを設定してプログラムの実行を停止する必要があります。
 
 ### <a name="to-add-a-breakpoint"></a>ブレークポイントを追加するには
 
@@ -149,7 +148,7 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 
 このビルドが完了すると、コマンド プロンプト ウィンドウでコピーおよび実行できるアプリの作成は完了です。 大したことではありませんが、これはより複雑な処理へ通じる入口となります。
 
-このクイック スタートは完了しました。 その他の例については、「[Visual Studio Samples](../ide/visual-studio-samples.md)」を参照してください。
+このクイック スタートは完了しました。 その他の例については、[Visual Studio サンプル](../ide/visual-studio-samples.md)に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -157,4 +156,4 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 [チュートリアル: C# または Visual Basic による簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
 [Visual Studio の生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)  
 [Visual Studio のサンプル](../ide/visual-studio-samples.md)  
-[Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)
+[Visual Studio を使用した開発の開始](../ide/get-started-developing-with-visual-studio.md)

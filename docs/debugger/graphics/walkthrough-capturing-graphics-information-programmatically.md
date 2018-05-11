@@ -1,23 +1,19 @@
 ---
-title: "チュートリアル: プログラムによってグラフィックス情報のキャプチャ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プログラムによってグラフィックス情報のキャプチャ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3de32ab0b9ded416f57f4699e534b6401c2a483c
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 9a2caae8a3ef2a6342cf98094994d5ebccbe3275
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -119,7 +115,7 @@ ms.lasthandoff: 02/27/2018
   
 -   グラフィックス診断ツールを使用してキャプチャされたグラフィックス情報を解析する方法について学習します。 参照してください[概要](overview-of-visual-studio-graphics-diagnostics.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: グラフィックス情報のキャプチャ](walkthrough-capturing-graphics-information.md)   
  [グラフィックス情報のキャプチャ](capturing-graphics-information.md)   
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)

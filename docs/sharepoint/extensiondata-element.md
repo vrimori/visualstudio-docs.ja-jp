@@ -1,13 +1,10 @@
 ---
-title: "ExtensionData 要素 |Microsoft ドキュメント"
-ms.custom: 
+title: ExtensionData 要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - ExtensionData element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: aafabb1d481afe41dd3dc932a176f6674bae6f99
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: b579a0221fcba04e2ca0915957f2bdbf60b91d84
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extensiondata-element"></a>ExtensionData 要素
   SharePoint プロジェクト アイテムに関連付けられているカスタム データ項目のコレクションを表します。  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/10/2018
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|×|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)  
   
   

@@ -1,11 +1,9 @@
 ---
-title: "Ca 1063: 実装 IDisposable 正しく |Microsoft ドキュメント"
-ms.custom: 
+title: 'CA1063: IDisposable を正しく実装します'
 ms.date: 02/12/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ImplementIDisposableCorrectly
 - CA1063
@@ -15,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29a2fbb82fd2795c675bfa249e213488913745a9
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: ac3827dd8ed34a118bb3e4eaaed47bf7400cef90
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable を正しく実装します
 
@@ -63,21 +61,21 @@ ms.lasthandoff: 03/02/2018
 
 コードをチェックし、この違反が、解決策は次の解決を決定します。
 
-- {0} によって実装され、代わりに、基底クラス Dispose の実装をオーバーライドするインターフェイスのリストから IDisposable を削除します。
+- によって実装されるインターフェイスのリストから IDisposable を削除する{0}し、基底クラス Dispose の実装をオーバーライドしてください。
 
-- {0} 型からファイナライザーを削除、Dispose (bool disposing) をオーバーライドし、'disposing' が false のコード パスに finalization 論理を追加します。
+- 型からファイナライザーを削除{0}Dispose (bool disposing) をオーバーライドし、'disposing' が false のコード パスに finalization 論理を追加します。
 
-- {0} 削除、Dispose (bool disposing) をオーバーライドし、'disposing' が true に、コード パスに dispose 論理を入れます。
+- 削除{0}Dispose (bool disposing) をオーバーライドし、'disposing' が true に、コード パスに dispose 論理を入れます。
 
-- {0} が public および sealed として宣言されていることを確認します。
+- いることを確認{0}は public として宣言され、シールします。
 
-- {0} を 'Dispose' の名前を変更し、public および sealed として宣言されているかどうかを確認します。
+- 名前を変更{0}を 'Dispose' public および sealed として宣言されているかどうかを確認します。
 
-- 宣言されているように保護されていることを確認して、仮想と封印されていないためです。
+- 確認して{0}が宣言された、保護対象として、仮想と封印されていません。
 
-- {0} を変更して、呼び出す dispose (true)、その後、GC を呼び出すようにします。現在のオブジェクト インスタンスで SuppressFinalize ('this' または 'Me' で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])、しを返します。
+- 変更{0}GC 呼び出すし、dispose (true) を呼び出すことができるようにします。現在のオブジェクト インスタンスで SuppressFinalize ('this' または 'Me' で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])、しを返します。
 
-- {0} を変更して、dispose (false) を呼び出し、を返します。
+- 変更{0}dispose (false) を呼び出すし、返しますできるようにします。
 
 - 宣言し、IDisposable インターフェイスを実装する封印されていない型を作成する場合は、IDisposable の実装がここでは、上記のパターンに従うことを確認します。
 

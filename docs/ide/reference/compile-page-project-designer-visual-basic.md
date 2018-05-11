@@ -1,13 +1,9 @@
 ---
-title: "[コンパイル] ページ、プロジェクト デザイナー (Visual Basic) | Microsoft Docs"
-ms.custom: 
+title: '[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesCompile
 helpviewer_keywords:
@@ -19,43 +15,48 @@ helpviewer_keywords:
 - Project Designer, Compile page
 - Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a883c1a04dc6ab5189cd5b2e5173406c098f6d
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 6d1b5c55c3bc1732d0b394473f25c0b103c917f4
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
-プロジェクト デザイナーの **[コンパイル]** ページを使用して、コンパイル命令を指定します。 このページでは、高度なコンパイラ オプションとビルド前またはビルド後のイベントを指定することもできます。  
-  
-**[コンパイル]** ページにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**、**[プロパティ]** の順に選択します。 プロジェクト デザイナーが表示されたら、**[コンパイル]** タブをクリックします。  
-  
-[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
-  
-## <a name="configuration-and-platform"></a>構成およびプラットフォーム  
- 次の設定を使用すると、表示または変更する構成およびプラットフォームを選択できます。  
-  
+
+プロジェクト デザイナーの **[コンパイル]** ページを使用して、コンパイル命令を指定します。 このページでは、高度なコンパイラ オプションとビルド前またはビルド後のイベントを指定することもできます。
+
+**[コンパイル]** ページにアクセスするには、**ソリューション エクスプローラー**でプロジェクト ノード (**[ソリューション]** ノードではありません) を選択します。 その後、メニュー バーで **[プロジェクト]**、**[プロパティ]** の順に選択します。 プロジェクト デザイナーが表示されたら、**[コンパイル]** タブをクリックします。
+
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
+
+## <a name="configuration-and-platform"></a>構成およびプラットフォーム
+
+次の設定を使用すると、表示または変更する構成およびプラットフォームを選択できます。
+
 > [!NOTE]
 > 簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 したがって、**構成**リストと**プラットフォーム** リストは表示されません。
-  
- **構成**  
+
+ **構成**
+
  表示または変更する構成設定を指定します。 設定は、**[デバッグ]** (既定)、**[リリース]**、または **[すべての構成]** のいずれかになります。 詳細については、「[ビルド構成について](../../ide/understanding-build-configurations.md)」と「[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)」を参照してください。
-  
- **プラットフォーム**  
+
+ **プラットフォーム**
+
  表示または変更するプラットフォーム設定を指定します。 **[任意の CPU]** (既定)、**[x64]**、または **[x86]** を指定できます。
-  
-## <a name="compiler-configuration-options"></a>コンパイラの構成オプション  
- 次の設定を使用すると、コンパイラの構成オプションを設定できます。  
-  
- **ビルド出力パス**  
+
+## <a name="compiler-configuration-options"></a>コンパイラの構成オプション
+
+次の設定を使用すると、コンパイラの構成オプションを設定できます。
+
+ **ビルド出力パス**
+
  このプロジェクト構成の出力ファイルの場所を指定します。 このボックスにビルド出力のパスを入力するか、**[参照]** ボタンをクリックしてパスを選択します。 このパスは、相対パスであることに注意してください。絶対パスを入力しても、相対パスとして保存されます。 既定のパスは bin\Debug\ または bin\Release\\ です。
-  
+
  簡易ビルド構成を使用した場合、デバッグ バージョンとリリース バージョンのどちらをビルドするかの決定はプロジェクト システムによって行われます。 **[デバッグ]** メニューの **[ビルド]** コマンド (F5) を使用すると、指定した **[出力パス]** に関係なく、デバッグ用の場所にビルドが配置されます。 ただし、**[ビルド]** メニューの **[ビルド]** コマンドでは、指定した場所にビルドが配置されます。
   
  **Option Explicit**  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/29/2018
   
 縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[暗黙の型変換と明示的な型変換](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)」、および「[拡大変換と縮小変換](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions)」を参照してください。  
   
-`Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」および「[事前バインディングと遅延バインディング](/dotnet/visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding)」を参照してください。  
+`Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」および「[事前バインディングと遅延バインディング](/dotnet/visual-basic/programming-guide/language-features/early-late-binding)」を参照してください。
   
 適切な型が宣言された変数を推論できない場合は暗黙的なオブジェクトの型エラーが発生するため、`Object` の型が推論されます。 これは主に、`As` 句を使用せず、`Option Infer` をオフにして、`Dim` ステートメントを使用して変数を宣言した場合に発生します。 詳細については、「[Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)」、「[Option Infer ステートメント](/dotnet/visual-basic/language-reference/statements/option-infer-statement)」、および「[Visual Basic Language Specification](/dotnet/visual-basic/reference/language-specification)」 (Visual Basic 言語仕様) を参照してください。  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 01/29/2018
 この設定は、[/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) コンパイラ オプションに相当します。  
   
 **すべての警告をエラーとして扱う**  
-警告の処理方法を指定します。 既定では、このチェック ボックスはオフになっているため、すべての警告通知が**[警告]** に設定されたままになっています。 すべての警告通知を **[エラー]** に変更するには、このチェック ボックスをオンにします。  
+警告の処理方法を指定します。 既定では、このチェック ボックスはオフになっているため、すべての警告通知が **[警告]** に設定されたままになっています。 すべての警告通知を **[エラー]** に変更するには、このチェック ボックスをオンにします。  
   
 このオプションは、**[すべての警告を表示しない]** がオフになっている場合にのみ使用できます。  
   
@@ -171,8 +172,9 @@ ms.lasthandoff: 01/29/2018
 **詳細コンパイル オプション**  
 このボタンをクリックして、**[コンパイラの詳細設定]** ダイアログ ボックスにアクセスします。 **[コンパイラの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、Visual Basic プロジェクトにのみ適用されます。 詳細については、「[[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)」を参照してください。  
 
+
 ## <a name="see-also"></a>関連項目
 
-[方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)  
-[Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)  
-[方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)
+- [方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [方法 : 構成を作成および編集する](../../ide/how-to-create-and-edit-configurations.md)

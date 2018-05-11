@@ -1,30 +1,25 @@
 ---
-title: "Visual Studio をデバッグする方法を学習 |Microsoft ドキュメント"
-ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
+title: デバッガーを概要します。
+ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: mvc
 ms.date: 03/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology: vs-ide-debug
+ms.topic: tutorial
 helpviewer_keywords:
 - debugger
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0686a4138fc2489c8a63b207e98cf7780477782
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: c62137422a4cbd7b85b4f7415e9b3fa85c2c0248
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="learn-to-debug-using-visual-studio"></a>Visual Studio を使用してデバッグする方法を学習します。
+# <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用してデバッグする方法を学習します。
 
 このトピックでは、ステップ バイ ステップ チュートリアルで Visual Studio デバッガーの機能を紹介します。 デバッガーの機能の高レベルの表示にする場合は、「[デバッガー機能のツアー](../debugger/debugger-feature-tour.md)です。
 
@@ -36,7 +31,7 @@ ms.lasthandoff: 03/19/2018
 
 デモ アプリが必要な場合は、c# を使用しての機能は、C++、Visual Basic、JavaScript、および (場合を除き) Visual Studio でサポートされるその他の言語に適用されます。
 
-このチュートリアルでは説明します。
+このチュートリアルでは、次の作業を行います。
 
 > [!div class="checklist"]
 > * デバッガーを起動し、ブレークポイントにヒットします。
@@ -64,7 +59,7 @@ ms.lasthandoff: 03/19/2018
 
     ![ソリューション エクスプ ローラー ファイル](../debugger/media/dbg-tour-solution-explorer.png "ソリューション エクスプ ローラー")
 
-4. F5 キーを押して (**デバッグ > [デバッグ開始]**または**デバッグの開始**ボタン![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始")デバッグ ツールバーで)。
+4. F5 キーを押して (**デバッグ > [デバッグ開始]** または**デバッグの開始**ボタン![デバッグの開始](../debugger/media/dbg-tour-start-debugging.png "デバッグの開始")デバッグ ツールバーで)。
 
      ![フォト ビューアー アプリ](../debugger/media/dbg-tour-wpf-app.png "ビューアー アプリの写真")
 
@@ -235,14 +230,14 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウで変数を検査します。
 
-1. 見て、 **[自動変数]**コード エディターの下部のウィンドウ。
+1. 見て、 **[自動変数]** コード エディターの下部のウィンドウ。
 
      ![[自動変数] ウィンドウで変数を検査](../debugger/media/dbg-tour-autos-window.png "自動変数 ウィンドウ")
 
-    **[自動変数]**ウィンドウで、変数と、現在の値を参照してください。 **[自動変数]**ウィンドウが現在の行または前の行で使用されるすべての変数を示しています (C++ では、ウィンドウに表示される変数上記の 3 行のコードにします。 言語固有の動作のマニュアルを確認) します。
+    **[自動変数]** ウィンドウで、変数と、現在の値を参照してください。 **[自動変数]** ウィンドウが現在の行または前の行で使用されるすべての変数を示しています (C++ では、ウィンドウに表示される変数上記の 3 行のコードにします。 言語固有の動作のマニュアルを確認) します。
 
     > [!NOTE]
-    > JavaScript では、**ローカル**ウィンドウはしない場合はサポートされて、 **[自動変数]**ウィンドウです。
+    > JavaScript では、**ローカル**ウィンドウはしない場合はサポートされて、 **[自動変数]** ウィンドウです。
 
 2. 次を見て、**ローカル**ウィンドウです。
 

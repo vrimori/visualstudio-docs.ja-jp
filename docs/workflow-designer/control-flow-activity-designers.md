@@ -1,18 +1,20 @@
 ---
-title: "制御フロー アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナーで制御フロー アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c68c94e5209a16caedb184cae515503ab87eaa9f
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: dea0806b1abc4febbdcf89c59025452c5879addb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activity-designers"></a>制御フロー アクティビティ デザイナー
 
@@ -44,7 +46,7 @@ Windows ワークフロー デザイナーには、ワークフローを構築�
 
 ## <a name="related-sections"></a>関連項目
 
-他の種類のアクティビティ デザイナーについては、次のトピックを参照してください。
+その他の種類のアクティビティ デザイナーでは、次のトピックを参照してください。
 
  [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)
 

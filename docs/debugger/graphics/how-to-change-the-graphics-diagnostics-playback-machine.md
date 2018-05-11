@@ -1,23 +1,20 @@
 ---
-title: "方法: グラフィックス診断再生マシンを変更する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: グラフィックス診断再生マシンを変更する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b9aa3ea-29a0-4e21-bc57-936f33537b5c
-caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c2279fa20766180371834e3f3425d8e75e98d430
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 143ae65b8d7db584546c250bf5d032450bf220aa
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>方法: グラフィックス診断再生マシンを変更する
 ローカル コンピューターを使用するか、リモート コンピューターまたはリモート デバイスを使用して、グラフィックス情報を再生できます。  
@@ -52,5 +49,5 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **リモート デバッガー接続** ダイアログ ボックスは、開発用コンピューターに直接接続されている、または同じサブネット上のリモート デバッグ ターゲットを表示も可能性があります。 これらのリモート デバッグ ターゲットのいずれかを、手動で構成せずに、グラフィックス診断再生コンピューターとして使用できます。 **リモート デバッガー接続** ダイアログ ボックスで、選択してを選択し、ターゲット、**選択**ボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフィックス ログ ドキュメント](graphics-log-document.md)

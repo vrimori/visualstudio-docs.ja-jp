@@ -1,22 +1,25 @@
 ---
-title: "Confirm アクティビティ デザイナー |Microsoft ドキュメント"
+title: Confirm アクティビティ デザイナーをワークフロー デザイナー-
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Confirm.UI
 ms.assetid: c753b67b-b0e7-462a-bb4e-ba8db04a078d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1350bd57b2792140a6e54e7d4252899d2498bb93
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 21a4c1b31769387470d58f27a060d4e3ec7ae70c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="confirm-activity-designer"></a>Confirm アクティビティ デザイナー
+
 **確認**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.Confirm>アクティビティ。
 
 ## <a name="the-confirm-activity"></a>Confirm アクティビティ
@@ -25,12 +28,12 @@ ms.lasthandoff: 03/12/2018
  <xref:System.Activities.Statements.CompensationToken> で指定された <xref:System.Activities.Statements.Compensate.Target%2A> は、<xref:System.Activities.Statements.CompensableActivity> の <xref:System.Activities.Statements.CompensableActivity.Body%2A> が正常に完了した後に <xref:System.Activities.Statements.CompensableActivity> を明示的に確認または補正する手段を提供します。
 
 ### <a name="using-the-confirm-activity-designer"></a>Confirm アクティビティ デザイナーの使用
- **確認**アクティビティ デザイナーは含まれて、**トランザクション**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス** タブの左側にある、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
+ **確認**アクティビティ デザイナーは含まれて、**トランザクション**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーの左側にあるタブ (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- **確認**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 この操作により、Confirm という既定の <xref:System.Activities.Statements.Confirm> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>値を指定できますのヘッダーで編集、**確認**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+ **確認**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを通常配置しているような内の場所に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 この操作により、Confirm という既定の <xref:System.Activities.Statements.Confirm> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>値を指定できますのヘッダーで編集、**確認**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-confirm-properties"></a>Confirm のプロパティ
- 次の表に、<xref:System.Activities.Statements.Confirm> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A> プロパティはプロパティ グリッドまたは[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できますが、<xref:System.Activities.Statements.Confirm.Target%2A> プロパティはプロパティ グリッドで編集する必要があります。
+ 次の表に、<xref:System.Activities.Statements.Confirm> のプロパティと、デザイナーでのその使用方法を示します。 <xref:System.Activities.Activity.DisplayName%2A>プロパティは、ワークフロー デザイナー画面で、またはプロパティ グリッドで編集できますが、<xref:System.Activities.Statements.Confirm.Target%2A>プロパティは、プロパティ グリッドで編集する必要があります。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

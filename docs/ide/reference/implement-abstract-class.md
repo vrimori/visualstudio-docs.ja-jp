@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio で抽象クラスを実装する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で抽象クラスを実装する
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 775175f5492bb8f1dd7ee2111a35ff24b273c3af
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: e89fb94b8c68bd4ac1219b675b8e77df206bf806
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio で抽象クラスを実装する
 

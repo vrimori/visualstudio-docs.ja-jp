@@ -1,10 +1,9 @@
 ---
-title: "[オプション]、[テキスト エディター]、[C#]、[IntelliSense] | Microsoft Docs"
+title: '[オプション]、[テキスト エディター]、[C#]、[IntelliSense]'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Intellisense
 helpviewer_keywords:
@@ -16,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78763e0257334065b1fdbcbcab5f106face20dee
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: d8f6928dd09b971e2c5924d34058a1a0d5e28394
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-text-editor-c-intellisense"></a>[オプション]、[テキスト エディター]、[C#]、[IntelliSense]
 
@@ -88,5 +87,5 @@ C# での IntelliSense の動作設定を変更するには、**[IntelliSense]**
 
 ## <a name="see-also"></a>関連項目
 
-[[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)  
-[IntelliSense の使用](../../ide/using-intellisense.md)
+- [[全般]、[環境]、[オプション] ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)
+- [IntelliSense の使用](../../ide/using-intellisense.md)

@@ -1,29 +1,24 @@
 ---
-title: "プロセス ビュー |Microsoft ドキュメント"
-ms.custom: 
+title: プロセス ビュー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.processesview
 helpviewer_keywords:
 - Processes view
 ms.assetid: e144e70e-eef2-45a7-a562-a177f177d9a1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2dc97cbe5c6bc178e4b14c89287a3f1c3794dca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4cd848f2e771a2207e89d67eddbead22d2180990
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="processes-view"></a>プロセス ビュー
 プロセス ビューには、システム上のすべてのアクティブなプロセスのツリーが表示されます。 プロセス ID とモジュール名が表示されます。 通常、実行中のプログラムに対応する特定のシステム プロセスを確認する場合は、プロセス ビューを使用します。 プロセスが、モジュール名で識別されるか、「システム プロセス」を指定します。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  **スパイ**] メニューの [選択**プロセス**です。  
   
- ![スパイ &#43; #43 です。プロセス ビュー](../debugger/media/spy--_processes.png "スパイ:operator++ _Processes")  
+ ![スパイ&#43;&#43;プロセス ビュー](../debugger/media/spy--_processes.png "スパイ:operator++ _Processes")  
 Spy++ プロセス ビュー  
   
  上記の図は、展開プロセスとスレッドのノードを持つプロセス ビューを示しています。  

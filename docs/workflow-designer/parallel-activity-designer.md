@@ -1,38 +1,44 @@
 ---
-title: "アクティビティ デザイナーの並列 |Microsoft ドキュメント"
+title: ワークフロー デザイナーの Parallel アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Parallel.UI
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d40a016631632ace52257d7086d4b1dca87520f
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c2315c27bc0a35ac1dc839b5fd98003105d92bd4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="parallel-activity-designer"></a>Parallel アクティビティ デザイナー
+
 <xref:System.Activities.Statements.Parallel> アクティビティは、一連の子アクティビティを同時に実行するアクティビティです。
 
 ## <a name="the-parallel-activity"></a>Parallel アクティビティ
- <xref:System.Activities.Statements.Parallel> アクティビティは、子アクティビティを <xref:System.Activities.Statements.Parallel.Branches%2A> コレクションに格納します。 一部の子アクティビティがアイドル状態になる可能性がある場合は、<xref:System.Activities.Statements.Parallel> アクティビティの代わりに <xref:System.Activities.Statements.Sequence> アクティビティを使用してください。
 
- <xref:System.Activities.Statements.Parallel> アクティビティには、ユーザーによって指定された <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 式を保持する [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロパティがあります。 このプロパティは、各分岐の完了後に、<xref:System.Activities.Statements.Parallel> アクティビティによって評価されます。 評価結果が場合**True**、<xref:System.Activities.Statements.Parallel>アクティビティは他の分岐を実行せずに完了します。 場合、<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>に評価されない**True**、<xref:System.Activities.Statements.Parallel>アクティビティのすべての子アクティビティが完了したときに完了します。
+<xref:System.Activities.Statements.Parallel> アクティビティは、子アクティビティを <xref:System.Activities.Statements.Parallel.Branches%2A> コレクションに格納します。 一部の子アクティビティがアイドル状態になる可能性がある場合は、<xref:System.Activities.Statements.Parallel> アクティビティの代わりに <xref:System.Activities.Statements.Sequence> アクティビティを使用してください。
+
+<xref:System.Activities.Statements.Parallel>アクティビティには、<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>ユーザーを含むプロパティは、Visual Basic の式を指定します。 このプロパティは、各分岐の完了後に、<xref:System.Activities.Statements.Parallel> アクティビティによって評価されます。 評価結果が場合**True**、<xref:System.Activities.Statements.Parallel>アクティビティは他の分岐を実行せずに完了します。 場合、<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>に評価されない**True**、<xref:System.Activities.Statements.Parallel>アクティビティのすべての子アクティビティが完了したときに完了します。
 
 ### <a name="using-the-parallel-activity-designer"></a>Parallel アクティビティ デザイナーの使用
- **並列**アクティビティ デザイナーは含まれて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス** タブの左側にある、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。
 
- **並列**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所アクティビティ デザイナーを通常配置しているなど、の内部で**シーケンス**アクティビティ デザイナー。 ドロップすた後、 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]、作成、<xref:System.Activities.Statements.Parallel>アクティビティで、既定で含まれて、<xref:System.Activities.Activity.DisplayName%2A>の**並列**
+**並列**アクティビティ デザイナーは含まれて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーの左側にあるタブ (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。
 
- 活動を追加する、 <xref:System.Activities.Statements.Parallel.Branches%2A> 、並列アクティビティのコレクションから他のアクティビティ デザイナーをドラッグして、**ツールボックス**内の三角形の上にドロップし、**並列**アクティビティ デザイナー。 分岐に含まれるアクティビティのそばに三角形が配置されます。 この手順を繰り返すことによって、さらにアクティビティを追加できます。 ドラッグ アンド ドロップします内でアクティビティを並べ替えることができます、**並列**アクティビティ デザイナー。
+**並列**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティ デザイナーを通常配置しているなど、内であれば、ワークフローデザイナー画面にドロップして**シーケンス**アクティビティ デザイナー。 作成、ワークフロー デザイナーにドロップして、後に、<xref:System.Activities.Statements.Parallel>アクティビティで、既定で含まれて、<xref:System.Activities.Activity.DisplayName%2A>の**並列**
+
+活動を追加する、 <xref:System.Activities.Statements.Parallel.Branches%2A> 、並列アクティビティのコレクションから他のアクティビティ デザイナーをドラッグして、**ツールボックス**内の三角形の上にドロップし、**並列**アクティビティ デザイナー。 分岐に含まれるアクティビティのそばに三角形が配置されます。 この手順を繰り返すことによって、さらにアクティビティを追加できます。 ドラッグ アンド ドロップします内でアクティビティを並べ替えることができます、**並列**アクティビティ デザイナー。
 
 ### <a name="parallel-activity-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの Parallel アクティビティのプロパティ
- 次の表に、Parallel アクティビティのプロパティと、デザイナーでのその使用方法を示します。
+
+次の表に、Parallel アクティビティのプロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

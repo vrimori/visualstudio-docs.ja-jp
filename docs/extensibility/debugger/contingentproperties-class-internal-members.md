@@ -1,31 +1,29 @@
 ---
-title: "ContingentProperties クラスの内部メンバー |Microsoft ドキュメント"
-ms.custom: 
+title: ContingentProperties クラスの内部メンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
 ms.assetid: c49d1362-ab1c-4b6d-9950-fcae40e0e66b
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e1bd9c94b99b4881167d7ae434691ffd08666ced
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b44bec34394df6f976416a827d7eb5d67cb99f6a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties クラスの内部メンバー
 追加のプロパティを含む、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **アセンブリ:** (mscorlib.dll) の mscorlib  
   
@@ -42,12 +40,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="fields"></a>フィールド  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[m_children](../../extensibility/debugger/m-children-field.md)|このタスクに登録されている子タスクの一覧。|  
   
 ## <a name="remarks"></a>コメント  
  .NET Framework は、必要な場合にのみ、このクラスのフィールドを初期化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

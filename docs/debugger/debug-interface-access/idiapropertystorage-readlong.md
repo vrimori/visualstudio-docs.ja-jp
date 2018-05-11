@@ -1,29 +1,24 @@
 ---
-title: "IDiaPropertyStorage::ReadLONG |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaPropertyStorage::ReadLONG |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaPropertyStorage::ReadLONG
 ms.assetid: 32054cbc-db55-4513-a1b4-de80e77aac8a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fca0d07dab3559bbd806a6eb5a34b2a9dbe466eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7d9f9e6b91492651e82368a0b10148cbb4e069b5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
 読み取り`LONG`プロパティ セット内の値。  
@@ -50,5 +45,5 @@ HRESULT ReadDLONG (
 ## <a name="remarks"></a>コメント  
  A `LONG` 32 ビット符号付き整数としての Windows によって定義されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

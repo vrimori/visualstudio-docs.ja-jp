@@ -1,36 +1,31 @@
 ---
-title: "メッセージ ビュー |Microsoft ドキュメント"
-ms.custom: 
+title: メッセージ ビュー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.messagesview
 helpviewer_keywords:
 - Messages view
 ms.assetid: 14c2a786-c23a-4b2d-acad-8c32a856c70d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c421b7c22bed32e6c60d30098b2c19e0d71a0af3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 31baccc88b25979dfc92fed6217bec3b0ef16a55
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="messages-view"></a>メッセージ ビュー
 各ウィンドウには、関連付けられたメッセージ ストリームがあります。 メッセージ ビュー ウィンドウでは、このメッセージ ストリームを表示します。 ウィンドウ ハンドル、メッセージ コード、およびメッセージが表示されます。 スレッドまたはプロセスにもメッセージ ビューを作成することができます。 これにより、特定のプロセスまたはスレッドはウィンドウの初期化メッセージをキャプチャするために特に便利ですが、所有するすべてのウィンドウに送信されるメッセージを表示できます。  
   
  一般的なメッセージ ビュー ウィンドウでは、以下が表示されます。 最初の列を含む、ウィンドウ ハンドルで、2 番目の列にはメッセージ コードが含まれています (「[メッセージ コード](../debugger/message-codes.md))。 デコードされたメッセージをパラメーターと戻り値が右にします。  
   
- ![スパイ &#43; #43 です。メッセージ ビュー](../debugger/media/spy--_messagesview.png "スパイ:operator++ _MessagesView")  
+ ![スパイ&#43;&#43;メッセージ ビュー](../debugger/media/spy--_messagesview.png "スパイ:operator++ _MessagesView")  
 Spy++ メッセージ ビュー  
   
 ## <a name="procedures"></a>手順  

@@ -1,39 +1,35 @@
 ---
-title: "VSPackage のインストール ディレクトリの選択 |Microsoft ドキュメント"
-ms.custom: 
+title: VSPackage のインストール ディレクトリの選択 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, installation directory
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 085c3bea9b9edc726fa09dd5d7658aff4a55e568
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 564a184e8b3907f5a61bccc26cfbafa8d2cf8e67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
 VSPackage とそのサポート ファイルは、ユーザーのファイル システム上でなければなりません。 場所は、VSPackage がかどうかの管理や、アンマネージ、サイド バイ サイドのバージョン管理スキーム、およびユーザーの選択によって異なります。  
   
 ## <a name="unmanaged-vspackages"></a>アンマネージ Vspackage  
- アンマネージ VSPackage は、任意の場所にインストール可能な COM サーバーです。 その登録情報では、その場所を正確に反映する必要があります。 インストーラーのユーザー インターフェイス (UI) をサブディレクトリとして ProgramFilesFolder Windows インストーラー プロパティの既定の場所を提供する必要があります。 例:  
+ アンマネージ VSPackage は、任意の場所にインストール可能な COM サーバーです。 その登録情報では、その場所を正確に反映する必要があります。 インストーラーのユーザー インターフェイス (UI) をサブディレクトリとして ProgramFilesFolder Windows インストーラー プロパティの既定の場所を提供する必要があります。 例えば:  
   
  [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\  
   
  小さなブート パーティションを保持するユーザーに対応する既定のディレクトリを変更し、別のボリューム上のアプリケーションおよびツールをインストールするユーザーを許可する必要があります。  
   
- サイド バイ サイド スキームは、バージョン管理された VSPackage を使用している場合は、異なるバージョンを格納するサブディレクトリを使用できます。 例:  
+ サイド バイ サイド スキームは、バージョン管理された VSPackage を使用している場合は、異なるバージョンを格納するサブディレクトリを使用できます。 例えば:  
   
  [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2002\  
   
@@ -65,7 +61,7 @@ VSPackage とそのサポート ファイルは、ユーザーのファイル �
   
  VSPackage DLL には、リソースと、SatelliteDll\DllName レジストリのエントリ ポイントが含まれている場合[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が上記の順序でそれらを読み込もうとします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [共有とバージョン管理された Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   
  [Vspackage の管理](../../extensibility/managing-vspackages.md)   
  [マネージ パッケージの登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)

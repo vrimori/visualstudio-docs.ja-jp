@@ -1,20 +1,21 @@
 ---
-title: "IntelliTest リファレンス マニュアル | Microsoft Developer Test Tools | Microsoft Docs"
+title: IntelliTest リファレンス マニュアル | Microsoft Developer Test Tools
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTest Reference Manual, IntelliTest
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 8216d8b4f27bb1211bc90d829233602edc915e43
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: f9534668ef5cf07388d6eefec9ef37a28593daaa
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="intellitest-reference-manual"></a>IntelliTest リファレンス マニュアル
 

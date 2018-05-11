@@ -1,22 +1,19 @@
 ---
-title: "新しい接続を追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 新しい接続を追加します。
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "14"
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 26a45e8fe44e2e0945a105711ae84b1082d5c891
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 5ea053e6b3f448311118b733c30b9ade5160288d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-new-connections"></a>新しい接続を追加します。
 
@@ -40,9 +37,9 @@ ms.lasthandoff: 12/22/2017
 
 ![サーバー エクスプ ローラーの新しい接続 アイコン](../data-tools/media/raddata-server-explorer-new-connection-icon.png "raddata サーバー エクスプ ローラーの新しい接続 アイコン")
 
-これにより、**接続の追加** ダイアログ ボックス。 ここでは、SQL Server LocalDB インスタンスの名前を入力しています。  
+これにより、**接続の追加** ダイアログ ボックス。 ここでは、SQL Server LocalDB インスタンスの名前を入力しています。
 
-![新しい接続を追加](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 新しい接続の追加ダイアログ")  
+![新しい接続を追加](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 新しい接続の追加ダイアログ")
 
 ## <a name="change-the-provider"></a>プロバイダーを変更します。
 
@@ -60,4 +57,4 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>関連項目
 
-[.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)
+- [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

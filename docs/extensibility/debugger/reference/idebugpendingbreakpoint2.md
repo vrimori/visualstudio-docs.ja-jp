@@ -1,29 +1,25 @@
 ---
-title: "IDebugPendingBreakpoint2 |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPendingBreakpoint2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugPendingBreakpoint2
 helpviewer_keywords:
 - IDebugPendingBreakpoint2 interface
 ms.assetid: d416b095-917e-475e-b796-ec0a03ffb8da
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ef986bd657a080c08fd0ebb85908ba59757bf207
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3e5e84180747a3e6a3b9e5a34e7694f4cd07867c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
 このインターフェイスは、コードの場所にバインドする準備が整っているブレークポイントを表します。  
@@ -58,18 +54,18 @@ IDebugPendingBreakpoint2 : IUnknown
 |[削除](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md)|この保留中のブレークポイントとそこからバインドされているすべてのブレークポイントを削除します。|  
   
 ## <a name="remarks"></a>コメント  
- `IDebugPendingBreakpoint2`1 つまたは複数のプログラムを適用できるコードにブレークポイントをバインドするために必要なすべての必要な情報のプロバイダーとしての考えることができます。  
+ `IDebugPendingBreakpoint2` 1 つまたは複数のプログラムを適用できるコードにブレークポイントをバインドするために必要なすべての必要な情報のプロバイダーとしての考えることができます。  
   
  保留中のブレークポイントは、バインドされた 2 つ以上のブレークポイントを生成可能性があることができます。 など、C++ スタイル テンプレート内のブレークポイントは、そのテンプレートの一意のインスタンスごとにバインドされたブレークポイントを生成する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)   
  [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md)   
  [GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getpendingbreakpoint.md)   

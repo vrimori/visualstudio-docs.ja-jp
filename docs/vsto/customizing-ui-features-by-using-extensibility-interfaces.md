@@ -1,12 +1,10 @@
 ---
-title: "機能拡張インターフェイスによる UI 機能のカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: 機能拡張インターフェイスによる UI 機能のカスタマイズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -22,13 +20,14 @@ helpviewer_keywords:
 - extensibility interfaces [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 404b54ea189c00b26f43a39274dfaf44ef37773a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 59a2eb15dcb21158df33b2f4a8ae138c424795cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-ui-features-by-using-extensibility-interfaces"></a>機能拡張インターフェイスによる UI 機能のカスタマイズ
   Visual Studio に含まれる Office 開発ツールは、VSTO アドインにおけるカスタム作業ウィンドウ、リボンのカスタマイズ、および Outlook フォーム領域の作成に使用可能な、多数の実装の詳細を処理するクラスとデザイナーを提供します。 ただし、特別な要件がある場合、各機能の *拡張インターフェイス* を自分で実装することもできます。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio に含まれる Office プロジェクト テンプレートを使用して VSTO アドインを作成する場合、リボンなどの機能をカスタマイズするために機能拡張インターフェイスを実装する必要はありません。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] はこれらのインターフェイスを実装します。 代わりに、Visual Studio が提供する、より直観的なクラスおよびデザイナーを使用することもできます。 ただし、必要に応じて、機能拡張インターフェイスを直接 VSTO アドインに実装することもできます。  
   
- クラスとこれらの機能に関して Visual Studio が提供されるデザイナーの詳細については、次を参照してください[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)、[リボン デザイナー](../vsto/ribbon-designer.md)、および[にOutlookフォーム領域を作成する。](../vsto/creating-outlook-form-regions.md).  
+ クラスとこれらの機能に関して Visual Studio が提供されるデザイナーの詳細については、次を参照してください[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)、[リボン デザイナー](../vsto/ribbon-designer.md)、および[にOutlookフォーム領域を作成する](../vsto/creating-outlook-form-regions.md)。  
   
 ## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>VSTO アドインに実装できる機能拡張インターフェイス  
  次の表に、実装可能な機能拡張インターフェイスとそれらをサポートするアプリケーションを示します。  
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   

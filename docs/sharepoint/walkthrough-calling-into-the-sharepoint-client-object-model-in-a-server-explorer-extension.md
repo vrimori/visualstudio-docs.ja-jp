@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: サーバー エクスプ ローラー拡張機能に SharePoint クライアント オブジェクト モデルを呼び出す |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: サーバー エクスプ ローラー拡張機能に SharePoint クライアント オブジェクト モデルを呼び出す |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 68836c8e95d7a9a53a1e1c2b90f7ee48e91106e6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4951d9960a3027e8d72bb0fbc72d551f123993ce
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>チュートリアル: サーバー エクスプローラーの拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す
   このチュートリアルのための拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す方法、 **SharePoint 接続**内のノード**サーバー エクスプ ローラー**です。 SharePoint クライアント オブジェクト モデルを使用する方法の詳細については、次を参照してください。[の SharePoint オブジェクト モデルを呼び出す](../sharepoint/calling-into-the-sharepoint-object-models.md)です。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **名前**ボックスに、入力**WebPartNode**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNode**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartNode**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 #### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **名前**ボックスに、入力**WebPartNodeExtension**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **WebPartNodeExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartNodeExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 6.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -243,7 +242,7 @@ ms.lasthandoff: 01/10/2018
   
     2.  **[SharePoint 接続の追加**] ダイアログ ボックスで、接続し、順に選択する SharePoint サイトの URL を入力、 **OK**ボタンをクリックします。  
   
-         開発用コンピューター上の SharePoint サイトを指定する入力**http://localhost**です。  
+         開発用コンピューター上の SharePoint サイトを指定する入力 **http://localhost**です。  
   
 3.  サイト接続ノード (サイトの URL が表示されます) を展開し、サイトの子ノードを展開 (たとえば、**チーム サイト**)。  
   
@@ -282,11 +281,11 @@ ms.lasthandoff: 01/10/2018
   
 5.  Visual Studio (実験用インスタンスおよび WebPartNode ソリューションが開いている Visual Studio のインスタンス) の両方のインスタンスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)   
- [アイコン &#41; のアイコンまたはその他のイメージ (&) #40 です。 イメージ エディターを作成します。](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [アイコンまたはその他のイメージの作成&#40;アイコン用イメージ エディター&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

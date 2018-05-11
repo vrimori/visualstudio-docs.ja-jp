@@ -1,13 +1,13 @@
 ---
-title: "未終了のコメント |Microsoft ドキュメント"
-ms.custom: 
+title: 未終了のコメント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1016
@@ -16,18 +16,18 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: d4286315-814b-4966-b4c4-1ee19d796eff
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 9fde5d5edd7e81060b088e4940d752aa05e65ded
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="unterminated-comment"></a>未終了のコメントです。
-複数行のコメント ブロックを開始しましたが、正常に終了しませんでしたが。 複数行コメントが始まる、"/*"逆で終わると組み合わせ、"\*/"の組み合わせ。 次に例を示します。  
+複数行のコメント ブロックを開始しましたが、正常に終了しませんでしたが。 複数行コメントが始まる、"/\*"逆で終わると組み合わせ、"\*/"の組み合わせ。 次に例を示します。  
   
 ```JavaScript  
 /* This is a comment  

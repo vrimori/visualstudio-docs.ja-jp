@@ -1,12 +1,9 @@
 ---
-title: "FindAppConfigFile タスク | Microsoft Docs"
-ms.custom: 
+title: FindAppConfigFile タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - FindAppConfigFile task [MSBuild]
 - MSBuild, FindAppConfigFile task
 ms.assetid: e292de3e-7482-4426-83ce-d921061808bf
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd77102f1fcee56cb690dc5934dcf158763bd9f2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cf30e53f8d62f98b5e18b4e9a64e43d32aa498b0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile タスク
 指定したリスト内で app.config ファイルを検索します。  

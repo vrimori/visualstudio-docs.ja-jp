@@ -1,13 +1,9 @@
 ---
-title: "方法: いる DLL でクラッシュしたプログラムの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: いる DLL でクラッシュしたプログラムの検索 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.dll
 dev_langs:
@@ -23,17 +19,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], DLL crashes
 - DLLs, load order of
 ms.assetid: ecf62568-8b65-4a41-b8a4-e962ff2dfb71
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df872ea52d716b4eaedc9414bc7234ba7c6294d3
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 350cd8a78780eb8ddb2a197ed1e8920fda23bbf3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-find-which-dll-your-program-crashed-in"></a>方法 : プログラムのクラッシュが発生している DLL を確認する
   
@@ -55,6 +50,6 @@ ms.lasthandoff: 02/27/2018
   
 6.  見て、**名前**と**パス**DLL の名前とパスを表示する列。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)   
  [方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)

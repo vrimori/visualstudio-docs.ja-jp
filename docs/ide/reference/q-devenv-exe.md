@@ -1,36 +1,32 @@
 ---
-title: -? (devenv.exe) | Microsoft Docs
-ms.custom: 
+title: -? (devenv.exe)
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - /? Devenv switch
 ms.assetid: fd8fd6b2-1304-4d06-8118-6629666801fb
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03ad912d17b84562a01a9e180980ac6130ef40a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e33726d600cd4988fa3ad4a07aea9df10db70ea7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-devenvexe"></a>/? (devenv.exe)
-すべての `devenv` スイッチをそれぞれの簡単な説明とともに一覧表示するメッセージ ボックスを表示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-devenv /?  
-```  
-  
-## <a name="see-also"></a>参照  
- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)
+すべての `devenv` スイッチをそれぞれの簡単な説明とともに一覧表示するメッセージ ボックスを表示します。
+
+## <a name="syntax"></a>構文
+
+```
+devenv /?
+```
+
+## <a name="see-also"></a>参照
+
+- [Devenv コマンド ライン スイッチ](../../ide/reference/devenv-command-line-switches.md)

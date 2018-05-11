@@ -1,13 +1,10 @@
 ---
-title: "Office ソリューションでのコントロールへのデータ バインディング |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションでのコントロールへのデータ バインディング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: office-development
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - controls, data binding
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5892f77b335e26e5b907159c4a9da37a58d2ae19
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: bf5dff37d227e3ba6b07261fc5c1d82b5c679c8b
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="binding-data-to-controls-in-office-solutions"></a>Office ソリューションでのコントロールへのデータのバインド
   Microsoft Office Word 文書または Microsoft Office Excel ワークシート上の Windows フォーム コントロールや *ホスト コントロール* を、データ ソースにバインドできます。この場合、コントロールには自動的にデータが表示されます。 アプリケーション レベルのプロジェクトとドキュメント レベルのプロジェクトの両方で、コントロールにデータをバインドできます。  
@@ -104,7 +101,7 @@ ms.lasthandoff: 01/10/2018
   
  詳細については、「[方法 : ホスト コントロールからのデータでデータ ソースを更新する](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [操作方法: Excel でデータベースのデータを使用する](http://go.microsoft.com/fwlink/?LinkID=130287)   
  [データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)   
  [方法 : Windows フォームに単純バインド コントロールを作成する](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)   

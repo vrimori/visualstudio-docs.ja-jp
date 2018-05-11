@@ -1,7 +1,9 @@
 ---
-title: "リモート コンピューター (レガシ) からワークフローのデバッグ |Microsoft ドキュメント"
+title: ワークフロー デザイナーで、リモート コンピューター (レガシ) からワークフローのデバッグ
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, debugging remotely
 - debugging workflows, remotely
@@ -10,23 +12,24 @@ helpviewer_keywords:
 ms.assetid: 44eaec8f-9959-4ae7-a374-670946f933c1
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be8c1f6a049224cc5b79a82dc6bc100840c72fd0
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 391180cd76fe5e0cccca802ba1cbfb78277dabc1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-workflows-from-a-remote-computer-legacy"></a>リモート コンピューターからのワークフローのデバッグ (レガシ)
-このトピックをリモートのレガシをデバッグする方法について説明[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]が従来の Windows ワークフロー デザイナーで作成されたアプリケーション。 アプリケーションが [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] または [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]を使用します。
 
- インストールするときに[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)]をインストールするコンポーネントのインストール オプションの 1 つは、 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]です。 これにより、リモート デバッグ コンポーネントがインストールされます。 リモート デバッグ コンポーネントは、リモート ワークフロー デバッグの対象となるコンピューター上にインストールされる必要があります。
+このトピックでは、従来の Windows ワークフロー デザイナーに組み込まれているリモートのレガシ Windows Workflow Foundation (WF) アプリケーションをデバッグする方法について説明します。 アプリケーションが .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のワークフロー デザイナーを使用します。
+
+ Visual Studio をインストールするときに、Visual Studio デバッガーの Windows Workflow Foundation (WF) をインストールするコンポーネントのインストール オプションの 1 つです。 これにより、リモート デバッグ コンポーネントがインストールされます。 リモート デバッグ コンポーネントは、リモート ワークフロー デバッグの対象となるコンピューター上にインストールされる必要があります。
 
  さらに、リモート コンピューター上のデバッグ対象である従来のワークフローのワークフロー定義を格納するアセンブリは、デバッグ元のローカル コンピューターのグローバル アセンブリ キャッシュ (GAC) にインストールされなければなりません。 たとえば、従来のワークフローがリモート コンピューター A で実行され、ローカル コンピューター B からそれをデバッグする場合には、ワークフロー定義はコンピューター B の GAC に存在する必要があります。これにより、デザイナーは、リモート コンピューター A で実行されるワークフローのワークフロー マークアップを逆シリアル化してコンピューター B に表示できます。グローバル アセンブリ キャッシュの詳細については、MSDN ライブラリを参照してください。
 
- [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] のリモート デバッグは、他の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] コンポーネントのリモート デバッグと同じように機能します。 詳細については、次を参照してください。 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] 、MSDN ライブラリでのリモート デバッグします。
+ Windows Workflow Foundation のリモート デバッグは、他の Visual Studio コンポーネントのリモート デバッグと同じように機能します。 詳細については、Visual Studio リモート デバッグ、MSDN ライブラリを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

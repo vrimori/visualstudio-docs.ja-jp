@@ -1,29 +1,24 @@
 ---
-title: "CV_HREG_e |Microsoft ドキュメント"
-ms.custom: 
+title: CV_HREG_e |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CV_HREG_e enumeration
 ms.assetid: 3f0622f7-6790-41d8-8778-227cbbf8a212
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da5bec48688a148ffe6d260ce616ff7d6df6ced
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aa6e567f811f163f8b79b277f5e0c8d2e4fc775b
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cvhrege"></a>CV_HREG_e
 ターゲットのレジスタを指定します。  
@@ -466,7 +461,7 @@ enum CV_HREG_e {
 ## <a name="requirements"></a>要件:  
  ヘッダー: cvconst.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙体と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [Idiastackwalkframe::get_registervalue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)   
  [Idiastackwalkframe::put_registervalue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)   

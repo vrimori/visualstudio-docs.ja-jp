@@ -1,16 +1,12 @@
 ---
-title: "Visual Studio での Python のオプションと設定 | Microsoft Docs"
-description: "Visual Studio での Python コードおよびプロジェクトに関連するさまざまな設定のリファレンスです。"
-ms.custom: 
+title: Python のオプションと設定
+description: Visual Studio での Python コードおよびプロジェクトに関連するさまざまな設定のリファレンスです。
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: reference
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Python_Tools
 - VS.ToolsOptionsPages.Python_Tools.General
@@ -21,15 +17,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Python.Advanced
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9bb1316d46f252721230ce4ac1b14f4304693445
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 2a0e8d21f87cecdbc585cb2c6bd730bffdd2d8e9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio での Python のオプション
 

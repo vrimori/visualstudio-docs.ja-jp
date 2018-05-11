@@ -1,27 +1,23 @@
 ---
-title: "MSBuild でのビルド ログの取得 | Microsoft Docs"
-ms.custom: 
+title: MSBuild でのビルド ログの取得 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9a2a7989e7b1cd98745d316ff01718653eda48f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c6953017a034257900c467e7f2fac89897fa0d9e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild でのビルド ログの取得
 MSBuild でスイッチを使用することで、確認するビルド データの量とビルド データを 1 つ以上のファイルに保存するかどうかを指定できます。 カスタム ロガーを指定して、ビルド データを収集することもできます。 このトピックで説明されていない MSBuild コマンド ライン スイッチの詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
@@ -45,7 +41,7 @@ MSBuild でスイッチを使用することで、確認するビルド デー�
 ```  
 msbuild MyProject.proj /t:go /v:diag  
 ```  
-  
+
 ## <a name="saving-the-build-log-to-a-file"></a>ビルド ログをファイルに保存する  
  **/fileLogger** (**fl**) スイッチを使用して、ビルド データをファイルに保存することができます。 次の例では、ビルド データを `msbuild.log` という名前のファイルに保存します。  
   
@@ -71,8 +67,20 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
   
 ```  
   
- 詳細については、「[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
-  
+ 詳細については、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
+
+## <a name="saving-a-binary-log"></a>バイナリ ログの保存
+
+**/binaryLogger** (**bl**) スイッチを利用すれば、ログを圧縮されたバイナリ形式で保存できます。 このログには、ビルド プロセスの詳しい説明が含まれ、特定のログ分析ツールで読み取ることができます。
+
+次の例では、バイナリ ログ ファイルが `binarylogfilename` という名前で作成されます。
+
+```  
+/bl:binarylogfilename.binlog
+``` 
+ 
+詳細については、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」を参照してください。  
+
 ## <a name="using-a-custom-logger"></a>カスタム ロガーを使用する  
  <xref:Microsoft.Build.Framework.ILogger> インターフェイスを実装するマネージ型を記述することにより、独自のロガーを作成できます。 たとえば、カスタム ロガーを使用して、ビルド エラーをメールで送信する、データベースにログを記録する、または XML ファイルにログを記録することができます。 詳細については、「[ビルド ロガー](../msbuild/build-loggers.md)」を参照してください。  
   

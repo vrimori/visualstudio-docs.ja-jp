@@ -1,12 +1,10 @@
 ---
-title: "方法: プログラムによって Word の組み込みダイアログ ボックスを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: プログラムによって Word の組み込みダイアログ ボックスを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - dialog boxes, Word
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 961f6ac2aa9852170ecce35aa18ce4c39d7a9983
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 80406a8048529f811cf9cbeadc8d185577a114f4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>方法: プログラムによって Word の組み込みダイアログ ボックスを使用する
   Microsoft Office Word を使用する場合は、ユーザー入力のダイアログ ボックスを表示する必要がある場合もがあります。 公開されている、Word の組み込みダイアログ ボックスを使用する方法を取る可能性がありますも作成できますが、自分、<xref:Microsoft.Office.Interop.Word.Dialogs>のコレクション、<xref:Microsoft.Office.Interop.Word.Application>オブジェクト。 これにより、200 以上の列挙型として表される組み込みダイアログ ボックスにアクセスすることができます。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用します。](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   

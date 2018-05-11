@@ -1,13 +1,9 @@
 ---
-title: "Visual Studio での変数のウォッチを設定 |Microsoft ドキュメント"
+title: Visual Studio での変数のウォッチを設定 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 04/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.watch
 helpviewer_keywords:
@@ -19,14 +15,14 @@ helpviewer_keywords:
 - debugging [Visual Studio], expression evaluation
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 454dacc7d3b785cf290823b38275a8e441950d8a
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 187c9e682877a0f0633e7d3210454d40cae9de0f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>ウォッチおよび Visual Studio の [クイック ウォッチ] ウィンドウを使用して変数のウォッチを設定します。
 デバッグ中に使用すること、**ウォッチ**と**[クイック ウォッチ]**変数と式をウォッチする windows です。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。 
@@ -217,7 +213,7 @@ public class Program
   
 2.  デバッグを開始し、ブレークポイントで実行が停止したら、 **[ローカル]** ウィンドウで対象の変数を見つけて右クリックし、 **[オブジェクト ID の作成]**を選択します。  
   
-3.  参照する必要があります、  **$** 付いた番号、**ローカル**ウィンドウで、オブジェクト ID を表します。  
+3.  参照する必要があります、 **$**付いた番号、**ローカル**ウィンドウで、オブジェクト ID を表します。  
   
 4.  このオブジェクト ID をウォッチ ウィンドウに追加します。  
   
@@ -250,5 +246,5 @@ public class Program
   
  **動的ビュー** は、COM オブジェクトのデバッグ機能も強化します。 デバッガーは **System.__ComObject**にラップされた COM オブジェクトを検出すると、そのオブジェクトの **動的ビュー** ノードを追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガー ウィンドウ](../debugger/debugger-windows.md)

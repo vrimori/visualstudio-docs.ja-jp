@@ -1,26 +1,22 @@
 ---
-title: "チュートリアル: 複数のコンピューターを使用するビルド環境の作成 | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: 複数のコンピューターを使用するビルド環境の作成'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, building on multiple computers
 - build environment, MSBuild
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65b4394b0f06dbcf995e8924833870a455bba348
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 52c7623aff3c2aec4753f628eb9a24ecf6937275
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
 
@@ -418,5 +414,5 @@ GAC へのファイルのインストールやレジストリ設定の変更を�
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)  
-[Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)
+- [デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)
+- [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)

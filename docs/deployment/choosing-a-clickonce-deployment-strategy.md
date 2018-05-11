@@ -1,12 +1,9 @@
 ---
-title: "ClickOnce 配置ストラテジの選択 |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce 配置ストラテジの選択 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - ClickOnce deployment, strategies
 - deploying applications, ClickOnce
 ms.assetid: 98bcab65-ab8b-4ed1-9adc-fdacf92b8106
-caps.latest.revision: "19"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: fffb73fac64aad880531fb8ea51904fb5ac71b16
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2b0bc8d7f2f6fb1515b8946d0fad9338733c5138
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="choosing-a-clickonce-deployment-strategy"></a>ClickOnce 配置ストラテジの選択
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置する際には 3 つのストラテジがあり、どれを選択するかは主として配置するアプリケーションの種類によって決まります。 この 3 つの配置ストラテジは次のとおりです。  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/22/2017
     >  配置ストラテジを選択するだけでなく、アプリケーションの更新プログラムを提供するストラテジも選択する必要があります。 詳細については、次を参照してください。 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)です。  
   
 ## <a name="install-from-the-web-or-a-network-share"></a>Web またはネットワーク共有からのインストール  
- このストラテジを使用すると、アプリケーションが Web サーバーまたはネットワーク ファイル共有に配置されます。 エンド ユーザーがアプリケーションをインストールするときは、Web ページのアイコンをクリックするか、ファイル共有のアイコンをダブルクリックします。 これで、アプリケーションがユーザーのコンピューターにダウンロードされ、インストールされて起動します。 項目を追加、**開始**メニューと**プログラム追加と削除**で**コントロール パネルの** です。  
+ このストラテジを使用すると、アプリケーションが Web サーバーまたはネットワーク ファイル共有に配置されます。 エンド ユーザーがアプリケーションをインストールするときは、Web ページのアイコンをクリックするか、ファイル共有のアイコンをダブルクリックします。 これで、アプリケーションがユーザーのコンピューターにダウンロードされ、インストールされて起動します。 項目を追加、**開始**メニューと**プログラム追加と削除**で**コントロール パネルの**です。  
   
  このストラテジはネットワーク接続に依存するため、ローカル エリア ネットワークや高速インターネット接続にアクセスできるユーザーのコンピューターにアプリケーションを配置する場合に最適です。  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  この配置ストラテジを手動で有効にするには、変更、 **deploymentProvider**配置マニフェスト内のタグ。 (として Visual Studio で、このプロパティが公開されている**インストール URL**上、**発行**プロジェクト デザイナーのページです。 Mage.exe では**開始場所**)。  
   
 ## <a name="start-the-application-from-the-web-or-a-network-share"></a>Web またはネットワーク共有からのアプリケーションの起動  
- このストラテジは 1 番目のストラテジに似ていますが、アプリケーションが Web アプリケーションのように動作する点が異なります。 ユーザーが Web ページのリンクをクリック (またはファイル共有のアイコンをダブルクリック) すると、アプリケーションが起動します。 ローカルのコンピューターで使用できなくユーザー アプリケーションを閉じると、何も追加、**開始**メニューまたは**プログラム追加と削除**で**コントロール パネルの** です。  
+ このストラテジは 1 番目のストラテジに似ていますが、アプリケーションが Web アプリケーションのように動作する点が異なります。 ユーザーが Web ページのリンクをクリック (またはファイル共有のアイコンをダブルクリック) すると、アプリケーションが起動します。 ローカルのコンピューターで使用できなくユーザー アプリケーションを閉じると、何も追加、**開始**メニューまたは**プログラム追加と削除**で**コントロール パネルの**です。  
   
 > [!NOTE]
 >  厳密には、アプリケーションは、Web アプリケーションが Web キャッシュにダウンロードされるのと同様に、ローカル コンピューターのアプリケーション キャッシュにダウンロードされ、インストールされます。 Web キャッシュの場合と同様に、ファイルは最終的にアプリケーション キャッシュから削除されます。 ただし、ユーザーの目には、アプリケーションが Web またはファイル共有から実行されるように映ります。  
@@ -75,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  .NET Framework 2.0 を対象とするアプリケーションは、Internet Explorer が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   

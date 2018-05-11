@@ -1,13 +1,9 @@
 ---
-title: "ClickOnce とアプリケーションの設定 |Microsoft ドキュメント"
-ms.custom: 
+title: ClickOnce とアプリケーションの設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - ClickOnce deployment, application settings
 ms.assetid: 891caba6-faef-4a3c-8f71-60e6fadb60eb
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 862f51aa7d124c3dbaa6514b666d74c26334e299
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e325ed1d66729eaed18c577c27f09a3db45d98f6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 Windows フォームのアプリケーション設定を簡単を作成、格納、およびカスタム アプリケーションと、クライアント上のユーザー設定を管理できます。 次のドキュメントでは、ClickOnce アプリケーションにおけるアプリケーション設定ファイルのしくみし、ユーザーは、次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
@@ -58,7 +53,7 @@ Windows フォームのアプリケーション設定を簡単を作成、格納
 ## <a name="clickonce-and-roaming-settings"></a>ClickOnce と設定のローミング  
  ClickOnce では機能しませんローミング設定は、これにより、ネットワーク上のコンピューター間で後に、設定ファイルです。 設定をローミングする場合は、ネットワーク経由での設定を格納するアプリケーションの設定プロバイダーを実装するか、リモート コンピューター上の設定を格納するためには、独自のカスタム設定クラスを開発する必要があります。 設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [アプリケーション設定の概要](/dotnet/framework/winforms/advanced/application-settings-overview)   
  [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)   

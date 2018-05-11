@@ -1,12 +1,9 @@
 ---
-title: "UWP アプリのリフレッシュ |Microsoft ドキュメント"
-ms.custom: 
+title: UWP アプリのリフレッシュ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -18,16 +15,16 @@ helpviewer_keywords:
 - DOM Explorer, Refresh [UWP apps]
 - Refresh [UWP apps]
 ms.assetid: fd99ee60-fa94-46df-8b17-369f60bfd908
-caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: ef42c0208b973707294a842376ef737216e13774
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: a45564f34fe0167821febb511a023c01f7c38358
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="refresh-a-uwp-app-in-visual-studio"></a>Visual Studio での UWP アプリをリフレッシュします。
   
@@ -64,5 +61,5 @@ ms.lasthandoff: 01/19/2018
   
 8.  アプリに切り替えます。 アプリが再度読み込まれ、更新された HTML がアプリを表示するために使用します。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クイック スタート: HTML および CSS のデバッグ](../debugger/quickstart-debug-html-and-css.md)

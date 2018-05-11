@@ -1,25 +1,22 @@
 ---
-title: C# IntelliSense | Microsoft Docs
-ms.custom: 
+title: C# IntelliSense
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9da494eaf71a02f7b46ce68b1cf9f781fe32e716
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 353a5100337d295f7265fb376e363e2520e6c9e6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -162,5 +159,5 @@ IntelliSense には、コード エディターでの作業中、抽象基本ク
 
 ## <a name="see-also"></a>関連項目
 
-[IntelliSense の使用](../ide/using-intellisense.md)  
-[Visual Studio IDE](../ide/visual-studio-ide.md)
+- [IntelliSense の使用](../ide/using-intellisense.md)
+- [Visual Studio IDE](../ide/visual-studio-ide.md)

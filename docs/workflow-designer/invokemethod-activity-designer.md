@@ -1,34 +1,38 @@
 ---
-title: "InvokeMethod アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナー - InvokeMethod アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.InvokeMethod.UI
 ms.assetid: 15e6efdc-52ca-46d8-9c5e-063f7c8265a6
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e372136170d315e5be685c7a123d0702a1e54c2d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: b612966da1244c745edbe8a5c92b1b300554a388
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod アクティビティ デザイナー
+
 **InvokeMethod**デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.InvokeMethod>アクティビティ。
 
 ## <a name="the-invokemethod-activity"></a>InvokeMethod アクティビティ
- <xref:System.Activities.Statements.InvokeMethod> は、指定されたオブジェクトまたは型のパブリック メソッドを呼び出します。
+
+<xref:System.Activities.Statements.InvokeMethod> は、指定されたオブジェクトまたは型のパブリック メソッドを呼び出します。
 
 ### <a name="using-the-invokemethod-activity-designer"></a>InvokeMethod アクティビティ デザイナーの使用
- **InvokeMethod**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブ[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)](または、選択**ツールバー**から、**ビュー**  メニューまたは CRTL + ALT + X です)。
+ **InvokeMethod**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**  メニューまたは CRTL + ALT + X です)。
 
- **InvokeMethod**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面でアクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 この操作により、InvokeMethod という既定の <xref:System.Activities.Statements.InvokeMethod> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeMethod**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+ **InvokeMethod**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**、ずっとアクティビティを通常配置しているような内に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 この操作により、InvokeMethod という既定の <xref:System.Activities.Statements.InvokeMethod> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeMethod**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-invokemethod-properties"></a>InvokeMethod プロパティ
- 次の表に、<xref:System.Activities.Statements.InvokeMethod> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、その一部は[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のデザイナー画面で編集できます。
+ 次の表に、<xref:System.Activities.Statements.InvokeMethod> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集することができ、一部は、ワークフロー Designerdesigner 画面で編集することができます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

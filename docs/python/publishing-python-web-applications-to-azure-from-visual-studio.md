@@ -1,28 +1,22 @@
 ---
-title: "Visual Studio から Azure App Service への Python アプリの発行 | Microsoft Docs"
-description: "web.config ファイルに必要な内容など、Visual Studio から Azure App Service に直接 Python Web アプリケーションを発行する方法を説明します。"
-ms.custom: 
+title: Azure App Service への Python アプリの発行
+description: web.config ファイルに必要な内容など、Visual Studio から Azure App Service に直接 Python Web アプリケーションを発行する方法を説明します。
 ms.date: 09/27/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 73e82e70733e12116250e47850bbcf1edff13a6d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: e28d306ede93cc4552e085e07e5ac5e977158386
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
 
@@ -84,7 +78,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
 1. Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]、[新しい項目]* を選択します。表示されるダイアログ ボックスで、[Azure web.config (Fast CGI)] テンプレートを選択し、[OK] を選択します。 これによりプロジェクト ルートに `web.config` ファイルが作成されます。
 
-1. `web.config` の `PythonHandler` エントリを変更して、パスがサーバー上の Python インストールと一致するようにします。 たとえば、Python 3.6.1 x64 の場合、エントリは次のように表示されます。
+1. `web.config` の `PythonHandler` エントリを変更して、パスがサーバー上の Python インストールと一致するようにします (詳細については、[IIS 構成リファレンス](https://www.iis.net/configreference) (iis.net) に関するページを参照してください)。 たとえば、Python 3.6.1 x64 の場合、エントリは次のように表示されます。
 
     ```xml
     <system.webServer>
@@ -112,7 +106,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
         <add key="WSGI_HANDLER" value="FlaskAzurePublishExample.app"/>
         ```
 
-    - **Django**: Django アプリの `web.config` には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは `wsgi.py` ファイル内にあります)。
+    - **Django**: Django プロジェクトの `web.config` には 2 つの変更が必要です。 最初に、`WSGI_HANDLER` 値を `django.core.wsgi.get_wsgi_application()` に変更します (オブジェクトは `wsgi.py` ファイル内にあります)。
 
         ```xml
         <!-- Django apps only -->
@@ -125,7 +119,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
         <add key="DJANGO_SETTINGS_MODULE" value="DjangoAzurePublishExample.settings" />
         ```
 
-1. **Django アプリのみ**: プロジェクト名と一致するフォルダーで、`settings.py` を開き、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインを `ALLOWED_HOSTS` に追加します。
+1. **Django アプリのみ**: Django プロジェクトの `settings.py` ファイルで、次に示すように、'vspython-test-02.azurewebsites.net' を自分の URL と置き換えて、サイト URL ドメインを `ALLOWED_HOSTS` に追加します。
 
     ```python
     # Change the URL to your specific site
@@ -134,9 +128,13 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
     配列への URL の追加が失敗すると、次のエラーが発生します。"DisallowedHost at / 不正な HTTP_HOST ヘッダー: '\<サイト URL\>'。 '\<サイト URL\>' を ALLOWED_HOSTS に追加する必要があります。"
 
+    配列が空の場合、Django は自動的に 'localhost' を許可しますが、実稼働環境の URL を追加するとその機能は削除されます。 このため、`settings.py` の開発用のコピーと実稼働環境用のコピーを別々に管理するか、環境変数を使用して実行時の値を制御することをお勧めします。
+
 1. **ソリューション エクスプローラー**で、プロジェクトと同じ名前が付いたフォルダーを展開し、`static` フォルダーを右クリックし、**[追加] > [新しい項目]** を選択し、"Azure 静的ファイルの web.config" テンプレートを選択し、**[OK]** を選択します。 この操作により `static` フォルダー内に別の `web.config` が作成され、そのフォルダーの Python 処理を無効にします。 この構成は、Python アプリケーションを使用せずに、静的ファイルの要求を既定の Web サーバーに送信します。
 
 1. プロジェクトを保存し、Visual Studio の**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[発行]** を選択します。
+
+    ![プロジェクトのコンテキスト メニューの [発行] コマンド](media/template-web-publish-command.png)
 
 1. 表示された **[発行]** タブで、発行先のターゲットを選択します。
 
@@ -172,8 +170,8 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
     e. 新しいパッケージをインストールした後、App Service の再起動を試します。 `web.config` を変更するときには再起動は不要です。`web.config` が変更されるたびに、App Service により自動で再起動が行われます。
 
-    > [!Tip] 
-    > アプリの `requirements.txt` ファイルに変更を加えた場合、必ずもう一度 Kudu コンソールを使用して、そのファイルに一覧表示されている任意のパッケージをインストールしてください。 
+    > [!Tip]
+    > アプリの `requirements.txt` ファイルに変更を加えた場合、必ずもう一度 Kudu コンソールを使用して、そのファイルに一覧表示されている任意のパッケージをインストールしてください。
 
 1. サーバー環境を完全に構成したら、ブラウザーでページを更新すると、Web アプリが表示されます。
 
@@ -181,7 +179,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
 ## <a name="publishing-to-app-service---visual-studio-2015"></a>App Service への発行 - Visual Studio 2015
 
-> [!Note] 
+> [!Note]
 > このプロセスの短いビデオについては、「[Visual Studio Python Tutorial: Building a Website](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)」(Visual Studio Python チュートリアル: Web サイトの構築) (youtube.com、3 分 10 秒) をご覧ください。
 
 1. **ソリューション エクスプローラー**で、プロジェクトを右クリックして、**[発行]** を選びます。
@@ -201,7 +199,7 @@ Visual Studio 2017 から Azure App Service に発行すると、プロジェク
 
 1. 必要に応じて、**[次へ >]** を選んで追加設定を確認します。 [Azure で Python コードをリモート デバッグする](debugging-remote-python-code-on-azure.md)場合は、**[構成]** を **[デバッグ]** に設定する必要があります。
 
-1. **[発行]** を選びます。 アプリケーションが Azure に配置されると、そのサイトで既定のブラウザーが開きます。 
+1. **[発行]** を選びます。 アプリケーションが Azure に配置されると、そのサイトで既定のブラウザーが開きます。
 
 このプロセスの一環として、Visual Studio は次のステップも実行します。
 

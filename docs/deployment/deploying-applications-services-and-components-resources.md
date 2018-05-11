@@ -1,58 +1,33 @@
 ---
-title: "アプリケーション、サービス、およびコンポーネントを展開する |Microsoft ドキュメント"
-ms.custom: 
+title: 展開の概要 - Visual Studio |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: overview
 dev_langs:
 - FSharp
 - VB
 - CSharp
 - C++
-helpviewer_keywords:
-- .NET applications, deploying
-- components [Visual Studio], deploying
-- installers
-- publishing
-- deploying applications [Visual Studio]
-- deploying applications [Visual Studio], about deploying applications
-- components [.NET Framework], deploying
-ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: "33"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: cbb1f96a7432b90cae725d88c1fcbc8a990494d4
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1991ead310c009e2926cdbb2e428a9038c00c04b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="deploying-applications-services-and-components"></a>アプリケーション、サービス、およびコンポーネントの配置
+# <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio での展開の概要
 
-アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。  
-  
-次の表は、さまざまな展開シナリオについて説明し、各シナリオの詳細情報へのリンクを提供します。  
+アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 
 
-Windows アプリのセットアップ エクスペリエンスを作成するオプションの詳細については、次を参照してください。[をユニバーサル Windows プラットフォーム (UWP) ブリッジにデスクトップ](/windows/uwp/porting/desktop-to-uwp-root#convert)です。
+多くの一般的なアプリ種類の Visual Studio でソリューション エクスプ ローラーから、アプリケーションの権利を展開できます。
 
- 
-## <a name="in-this-section"></a>このセクションの内容  
-  
-| 配置シナリオ | 関連する参照先 |
-| --- | --- |  
-| **クラウドへの発行:**することができますアプリケーション、サービス、およびデータから使用可能な任意の場所を使用して Visual Studio を Microsoft Azure に配置します。|[Microsoft Azure にアプリケーションの発行](/azure/#pivot=products) |
-| **UWP アプリの発行:**を簡単に作成、送信、および世界中の顧客に Microsoft ストアからアプリを販売します。 |[Windows アプリを発行します。](https://developer.microsoft.com/store/publish-apps) |
-| **ASP.NET アプリケーションまたはサービスの展開:**いくつかの方法で ASP.NET アプリケーションおよびサービスを展開することができます。|[ASP.NET web アプリケーションとサービスの展開](http://www.asp.net/aspnet/overview/deployment) |
-| **Office 用アドインで公開:** for Visual Studio での Office アドインを発行することができます。 | [展開し、Office アドインの公開](https://dev.office.com/docs/add-ins/publish/publish) |
-| **WCF または OData サービスのデプロイ:**他のアプリケーションが web サーバーに配置した WCF RIA サービスを使用できます。 | [開発と WCF Data Services の配置](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
-| **デスクトップ アプリケーションの配置:** ClickOnce 配置を使用するには、web サーバーまたはネットワーク ファイル共有にデスクトップ アプリケーションを発行することができます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 | [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md) |
-| **Visual C アプリケーションの配置:**集中配置、ローカル配置、または静的リンクを使用して、アプリケーションと共に Visual C ランタイムを配置することができます。 | [ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](/cpp/ide/deploying-native-desktop-applications-visual-cpp) |
-| **インストーラーの作成:** WiX の MSI ベースのインストーラーを使用して作成することができます、 [WiX ツールセット Visual Studio 2017 Extension](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)です。 InstallShield Limited Edition は; Visual Studio に含まれてないことに注意してください。かどうかを[Flexera ソフトウェア](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)の Visual Studio 2017 可能かどうか。 |
-| **テスト用のアプリケーションの展開:**より高度な開発と、仮想環境にアプリケーションを展開することでテストを有効にすることができます。|[ラボ環境でのテスト](../test/lab-management/using-a-lab-environment-for-your-application-lifecycle.md) | 
-| **インストールの前提条件:**ブートス トラップと呼ばれる一般的なインストーラーを構成することによりデスクトップ アプリケーションに必要なコンポーネントをインストールすることができます。|[アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md) |
-| **LightSwitch アプリケーションまたはサービスを展開する:** LightSwitch が Visual Studio 2017 は不要になったサポートされますが、Visual Studio 2015 から、以前にも展開できます。 | [LightSwitch アプリケーションの配置](http://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |  
+![パブリッシング オプションを選択します。](../deployment/media/quickstart-publish-iis-ftp.png)
+
+## <a name="next-steps"></a>次の手順
+
+* Visual Studio IDE の配置オプションのクイック ツアーで、次を参照してください。[最初の展開を見て](../deployment/deploying-applications-services-and-components.md)です。

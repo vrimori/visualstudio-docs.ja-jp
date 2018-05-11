@@ -1,13 +1,9 @@
 ---
-title: "&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#assembly
 dev_langs:
@@ -17,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <assembly> element [ClickOnce application manifest]
 ms.assetid: 51410569-10f9-4c0a-96b5-d39185edbefc
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c94d70f2be28a6a420d683335c99ee0466a52114
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1c72dd684092784c88b1ef6dd76d410ac9ff84d5
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ltassemblygt-element-clickonce-application"></a>&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション)
 アプリケーション マニフェストの最上位要素です。  
@@ -75,6 +70,6 @@ ms.lasthandoff: 12/22/2017
   xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-deployment.md)
+ [\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md)

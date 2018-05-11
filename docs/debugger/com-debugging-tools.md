@@ -1,13 +1,9 @@
 ---
-title: "デバッグ ツール COM |Microsoft ドキュメント"
-ms.custom: 
+title: デバッグ ツール COM |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.com
 dev_langs:
@@ -22,17 +18,16 @@ helpviewer_keywords:
 - ActiveX controls, debugging
 - debugging [C++], COM
 ms.assetid: 4296ad30-6952-46cb-b002-6b34eee1993a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6ddf648f28139c4805c6d417e3f353d494c48bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 00c801ddfce436d4867af9f7012c0abe785ed68a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="com-debugging-tools"></a>COM 用のデバッグ ツール
 ここでは、COM プログラムのテストと調査に役立つツールを紹介します。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/22/2017
  Microsoft Foundation Class のサンプル  
  MFC ActiveX サンプルの OCLIENT および SUPERPAD も、アプリケーションのテストに利用できます。 これらのサンプルの完全なソース コードが用意されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
  [COM 用のデバッグ ツール](../debugger/com-debugging-tools.md)  
  [Visual Studio でのデバッグ](../debugger/index.md)  

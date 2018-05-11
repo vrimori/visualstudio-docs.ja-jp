@@ -1,12 +1,9 @@
 ---
-title: "スレッドとプロセスをデバッグするためのツール |Microsoft ドキュメント"
-ms.custom: 
+title: スレッドとプロセスをデバッグするためのツール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - debugging threads
 - debugging [Visual Studio], threads
 ms.assetid: 9f0c8505-b6b2-452b-adfd-076db14d8115
-caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e6c6c8c239d27952c35486be308e5947aff50952
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f42159b15bbba4bd092dcde34404459212e26ab3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio のスレッドおよびプロセスをデバッグするためのツール
 *スレッド*と*プロセス*コンピューター科学における関連する概念です。 いずれも特定の順序で実行する必要がある命令のシーケンスを表します。 ただし、別個のスレッドやプロセスの命令は並列実行できます。  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |**タスク**ウィンドウ|-に関する情報の表示<xref:System.Threading.Tasks.Task>タスク ID、タスクの状態を含むオブジェクト (スケジュール済み、実行中、待機中、デッドロック)、スレッドがタスクに割り当てられているとします。<br />の呼び出し履歴内現在の場所。<br />デリゲートの作成時に、タスクに渡されます|-現在のタスクへの切り替え<br />-フラグを設定または解除タスク<br />-凍結または凍結解除するタスク|  
 |**GPU スレッド**ウィンドウ|-フラグ列。 特に注意することをスレッドのマークを付けることができます。<br />-現在のスレッドの列、黄色の矢印が、現在のスレッドを示します。<br />-**スレッド数**列で、同じ場所にあるスレッドの数を表示します。<br />-**行**列で、スレッドの各グループが配置されているコードの行が表示されます。<br />-**アドレス**列で、スレッドの各グループがある命令アドレスが表示されます。<br />-**場所**列で、アドレスのコード内の位置です。<br />-**ステータス**列で、スレッドがアクティブまたはブロックされているかどうかを示します。<br />-**タイル**列で、行のスレッドのタイル インデックスを示します。|-別のスレッドに変更します。<br />-特定のタイルとスレッドを表示します。<br />-表示、または列を非表示<br />-列による並べ替え<br />-グループのスレッド<br />-凍結またはスレッドを凍結解除<br />-フラグまたはスレッドのフラグの解除<br />-フラグが設定されたスレッドのみを表示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [GPU コードのデバッグ](../debugger/debugging-gpu-code.md)

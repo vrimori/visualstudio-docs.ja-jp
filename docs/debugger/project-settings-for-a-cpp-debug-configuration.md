@@ -1,12 +1,9 @@
 ---
-title: "C++ デバッグ構成の設定をプロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: C++ デバッグ構成の設定をプロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCDebugSettings.WebBrowser.DebuggerType
 - VC.Project.IVCGPUDebugPageObject.EnvironmentMerge
@@ -111,16 +108,16 @@ helpviewer_keywords:
 - pdb files, debug build project settings
 - /MAP linker option
 ms.assetid: 860c7f13-a108-4fe5-8fca-d235cd3ca1cb
-caps.latest.revision: "49"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cbb7e773c3c2cbb21ae4ac8d93f695601e8a3663
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6b323ab51f4be02faaddc1df7ab2dd6902323d63
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ デバッグ構成のプロジェクト設定
 C または C++ デバッグ構成でのプロジェクト設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[する方法: デバッグ設定とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
@@ -188,7 +185,7 @@ C または C++ デバッグ構成でのプロジェクト設定を変更する�
 
 外部プロジェクトにある Dll をデバッグするを参照してください。 [DLL のデバッグ プロジェクト](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal)です。 DLL プロジェクトのデバッグがない呼び出し元のアプリケーションのプロジェクトへのアクセスを参照してくださいする必要がある場合[DLL プロジェクトからデバッグする方法について](../debugger/how-to-debug-from-a-dll-project.md)です。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [Visual C++ プロジェクトの作成および管理](/cpp/ide/creating-and-managing-visual-cpp-projects)   

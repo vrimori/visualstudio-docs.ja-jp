@@ -1,12 +1,10 @@
 ---
-title: "SharePoint フィーチャーの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint フィーチャーの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - features [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9fa42efc654bd3835a4f1ec1a5002136813550a0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: b0a8de8b36d41684e00c9b679672d90909540107
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint フィーチャーの作成
   SharePoint 機能を使用して、展開が容易に関連する SharePoint プロジェクト項目をグループ化することができます。 機能を作成、スコープの設定、およびその他の機能を SharePoint フィーチャー デザイナーを使用して、依存関係としてマークできます。 デザイナーには、各機能を記述する XML ファイルである、マニフェストも生成されます。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|タイトル|任意。 設定されている機能の既定のタイトル*SolutionName**FeatureName*です。|  
+|Title|任意。 設定されている機能の既定のタイトル*SolutionName * * FeatureName*です。|  
 |説明|任意。 SharePoint の機能の説明です。|  
 |スコープ|必須。 使用して、機能を作成する場合**ソリューション エクスプ ローラー**スコープが既定では Web に設定します。<br /><br /> -ファーム:、サーバー ファーム全体の機能が有効にします。<br /><br /> サイト:、すべての web サイトのサイト コレクション機能が有効にします。<br /><br /> -Web:、特定の web サイトの機能が有効にします。<br /><br /> -WebApplication:、すべての web サイトの web アプリケーションの機能が有効にします。|  
 |[ソリューション内の項目]|フィーチャーに追加できるすべての SharePoint アイテムです。|  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="adding-feature-dependencies"></a>機能の依存関係を追加します。  
  フィーチャー マニフェストは、機能をアクティブ化する前に、SharePoint サーバーが特定の機能をアクティブにできるように構成できます。 たとえば、SharePoint の機能は、機能やデータの他の機能に依存する場合、SharePoint サーバーことができますまずの機能が依存する機能をアクティブ化するします。 詳細については、次を参照してください。[する方法: 追加および機能の依存関係を削除する](../sharepoint/how-to-add-and-remove-feature-dependencies.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: 追加および SharePoint フィーチャーの項目を削除します。](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
  [方法: フィーチャーの依存関係を追加および削除する](../sharepoint/how-to-add-and-remove-feature-dependencies.md)  

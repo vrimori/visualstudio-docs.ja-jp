@@ -1,13 +1,9 @@
 ---
-title: "&lt;説明&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;説明&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#description
 dev_langs:
@@ -17,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <description> element [ClickOnce deployment manifest]
 ms.assetid: 18f6919e-a3ab-4942-a57d-167fabfac44e
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f5045f9203d5413efdd6d192d2667e94d0119220
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 06a8f1a1e5ec5f4663ed999566158d104c6a7364
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;説明&gt;要素 (ClickOnce 配置)
 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `description` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v1` 名前空間に属します。 これは、子要素が含まれていない、次の属性です。  
+ `description` 要素は必須です。この要素は `urn:schemas-microsoft-com:asm.v1` 名前空間に属します。 これは、子要素を含まず、かつ、次の属性を持ちます。   
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -67,5 +62,5 @@ ms.lasthandoff: 12/22/2017
   xmlns="urn:schemas-microsoft-com:asm.v1" />  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

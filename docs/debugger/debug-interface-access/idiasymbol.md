@@ -1,29 +1,24 @@
 ---
-title: "IDiaSymbol |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaSymbol |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol interface
 ms.assetid: 01ad328a-736c-4933-a9f8-c2ded19ddd8c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c35accc7ca75a987dae615c06df68b4f85bba4a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a456abd2d3d80a122d4182ae882ca28b07788596
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 シンボルのインスタンスのプロパティについて説明します。  
@@ -267,7 +262,7 @@ IDiaSymbol : IUnknown
  この例では、指定の相対仮想アドレスに関数のローカル変数を表示する方法を示します。 また、さまざまな種類のシンボルが相互に関連する方法を示します。  
   
 > [!NOTE]
->  `CDiaBSTR`ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
+>  `CDiaBSTR` ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
   
 ```C++  
 void DumpLocalVars( DWORD rva, IDiaSession *pSession )  
@@ -341,14 +336,14 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- `Header:`Dia2.h  
+## <a name="requirements"></a>要件  
+ `Header:` dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)   

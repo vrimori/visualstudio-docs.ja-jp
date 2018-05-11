@@ -1,23 +1,20 @@
 ---
-title: "チュートリアル: デバイス状態によるオブジェクトの不足 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: デバイス状態によるオブジェクトの不足 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c036ccc3865c7ea97c37eda31d802bfc5acbd5a8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 295177c6ea34923668b4751ac2c9f5e0fcf9aeb9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>チュートリアル: デバイス状態によるオブジェクトの不足
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用して、デバイスの構成が正しくないために表示されないオブジェクトを調査する方法を示します。  

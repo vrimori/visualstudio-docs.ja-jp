@@ -1,19 +1,21 @@
 ---
-title: "エラー処理アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナーのエラー処理アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 9679ca32-ad7f-4089-824e-fdb931e47a30
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad558866b49b2cd1c24855b1dfa4c7f0b52c3734
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 59c8a8328fda71be7124b0ebd7fcd389d2b4f6dc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-handling-activity-designers"></a>エラー処理アクティビティ デザイナー
 
-Error Handling アクティビティ デザイナーは、Windows ワークフロー デザイナーでのエラー処理の管理に使用されます。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。
+Error Handling アクティビティ デザイナーは、Windows ワークフロー デザイナーでのエラー処理の管理に使用されます。 このセクションに含まれるトピックでは、アクティビティをワークフロー デザイナーおよびテンプレート デザイナーを使用する方法についてガイダンスを提供します。

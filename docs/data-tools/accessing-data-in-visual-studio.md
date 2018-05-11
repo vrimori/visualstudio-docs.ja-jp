@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio でのデータにアクセスする |Microsoft ドキュメント"
+title: Visual Studio でのデータにアクセスします。
 ms.date: 11/04/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "80025080"
 helpviewer_keywords:
@@ -11,15 +11,16 @@ helpviewer_keywords:
 - ADO.NET, data access
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e7c4c9aada390259d4abd57484c20d25728ef91f
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 4b43463dc35fa3f9703162817f6a8d63f44a87b8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio でのデータにアクセスします。
 
@@ -33,8 +34,8 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 
 ||||
 |-|-|-|
-|SQL Database|DocumentDB|ストレージ (blob、テーブル、キュー、ファイル)|
-|SQL Data Warehouse|SQL Server Stretch Database|StorSimple|
+|SQL データベース|Azure Cosmos DB|ストレージ (blob、テーブル、キュー、ファイル)|
+|SQL データ ウェアハウス|SQL Server Stretch Database|StorSimple|
 
 その他
 
@@ -109,7 +110,7 @@ C++ アプリからデータベースへの接続に関する詳細について�
 
 ## <a name="python"></a>Python
 
-インストール[Visual Studio での Python サポート](../python/python-in-visual-studio.md)Python アプリケーションを作成します。 Azure のドキュメントでは、データは、次のように接続するいくつかのチュートリアルがあります。
+インストール[Visual Studio での Python サポート](../python/overview-of-python-tools-for-visual-studio.md)Python アプリケーションを作成します。 Azure のドキュメントでは、データは、次のように接続するいくつかのチュートリアルがあります。
 
 - [Django、Azure 上の SQL データベース](/azure/app-service/app-service-web-get-started-python)
 - [Django、Azure の MySQL](/azure/app-service-web/web-sites-python-ptvs-django-mysql)

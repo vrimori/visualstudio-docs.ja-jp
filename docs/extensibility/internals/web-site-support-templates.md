@@ -1,27 +1,23 @@
 ---
-title: "Web サイトのサポート テンプレート |Microsoft ドキュメント"
-ms.custom: 
+title: Web サイトのサポート テンプレート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8be16e2bf1532b99f0c9c594394c3f0cbf8b1f75
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: af8e0d845157b475e4a5527443f55286828023cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-site-support-templates"></a>Web サイト テンプレートをサポート
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web サイトのプロジェクトと項目テンプレートは、最初から新しい Web サイト プロジェクトと項目を作成する必要性を解消して、開発プロセスを高速化と再利用可能なカスタマイズ可能な Web サイトのプロジェクトと項目のスタブを提供します。 詳細については[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、テンプレートを参照してください[を作成するプロジェクトと項目テンプレート](../../ide/creating-project-and-item-templates.md)です。
@@ -63,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 
      新しい Web サイトの既定のホーム ページです。 言語属性は、分離コード言語を指定し、CodeFile 属性がこのページに関連付けられている分離コードを格納している依存ファイルを指定します。
 
--   Default.aspx.*extension*
+-   Default.aspx です。*拡張機能*
 
      依存ファイルが既定のホーム ページの分離コードが含まれています。 分離コード言語の決定、*拡張子*このファイルのです。
 
@@ -190,5 +186,5 @@ ms.lasthandoff: 03/02/2018
 
      存在する場合は、新しいマスター ページとその依存ファイルの内容を決定するテンプレート ファイル。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [Web サイト サポート](../../extensibility/internals/web-site-support.md)

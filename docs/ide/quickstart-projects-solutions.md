@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio でのプロジェクトとソリューションの概要 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのプロジェクトとソリューションの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/11/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 284c99c9e9c1ed2e84b05070bbf6d9991c025f94
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 606b08608eea275a25a1a097ed75b7554a99f6a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -185,10 +182,10 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ## <a name="see-also"></a>関連項目
 
-[クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)  
-[クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)  
-[クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)  
-[プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)  
-[プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)  
-[プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)  
-[Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+- [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+- [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
+- [プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)
+- [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
+- [プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)

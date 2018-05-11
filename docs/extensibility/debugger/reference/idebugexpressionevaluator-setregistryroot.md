@@ -1,29 +1,25 @@
 ---
-title: "IDebugExpressionEvaluator::SetRegistryRoot |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugExpressionEvaluator::SetRegistryRoot |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugExpressionEvaluator::SetRegistryRoot
 helpviewer_keywords:
 - IDebugExpressionEvaluator::SetRegistryRoot method
 ms.assetid: 790886d8-1975-4d3c-9a75-cd86c1faf4ca
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd57bec1817ce61e15749469e2373284b32d69db
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 70b1730fc44deeb7e32433480f02f750c9bec193
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
 このメソッドは、レジストリ ルートを設定します。 サイド バイ サイドのデバッグに使用します。  
@@ -52,5 +48,5 @@ int SetRegistryRoot(
 ## <a name="remarks"></a>コメント  
  指定されたレジストリ ルートは通常、式エバリュエーターが最初にインスタンス化されると設定ポイントを特定のバージョンの Visual Studio のレジストリ キー (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*ここで、 *X.Y*バージョン番号です)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

@@ -1,13 +1,9 @@
 ---
-title: "UWP アプリで HTML および CSS のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: UWP アプリで HTML および CSS のデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - VS.WebClient.DomExplorer
 dev_langs:
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - debugging, HTML
 - debugging, JavaScript [UWP apps]
 - DOM Explorer [UWP apps]
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: bb410c6279b2910dfcb1af98ff75293d60a7e3e7
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: b5673a2ab191f71b9aec14f08c5adfc65883ff24
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio での UWP アプリで HTML および CSS をデバッグします。
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Windows Phone エミュレーターは、マウス ポインターを置くことによる要素の強調表示を部分的にサポートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   

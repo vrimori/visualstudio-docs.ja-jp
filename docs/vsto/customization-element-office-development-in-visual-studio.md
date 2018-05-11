@@ -1,13 +1,10 @@
 ---
-title: "&lt;カスタマイズ&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;カスタマイズ&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <customization> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b8e1c2c21fe5cf3a038066a47f50fe4b813b277e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 4384dd8bea4fc5829362ccdb06ea3912607cd263
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;カスタマイズ&gt;要素 (Visual Studio での Office 開発)
   `customization` 名前空間の `vstov4` 要素では、特定の Office ソリューションについて記述します。 ドキュメント レベルのカスタマイズと VSTO アドインでは、子要素が異なります。  
@@ -68,13 +65,13 @@ ms.lasthandoff: 01/10/2018
  `customization` 要素には、次の子要素があります。  
   
 #### <a name="document"></a>ドキュメント  
- `document`内の要素、`vstov4`で名前空間が定義されている[&#60;以外の場合はドキュメント &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/document-element-office-development-in-visual-studio.md).  
+ `document`内の要素、`vstov4`で名前空間が定義されている[&#60;ドキュメント&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/document-element-office-development-in-visual-studio.md)です。  
   
 ### <a name="vsto-add-ins"></a>VSTO アドイン  
  `customization` 要素には、次の子要素があります。  
   
 #### <a name="appaddin"></a>appAddin  
- `appAddin`内の要素、`vstov4`で名前空間が定義されている[&#60; appAddin &#62;。要素 &#40; Visual Studio &#41; での Office 開発](../vsto/appaddin-element-office-development-in-visual-studio.md).  
+ `appAddin`内の要素、`vstov4`で名前空間が定義されている[ &#60;appAddin&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)です。  
   
 ## <a name="example-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの例  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 01/10/2018
 </vstov4:customization>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

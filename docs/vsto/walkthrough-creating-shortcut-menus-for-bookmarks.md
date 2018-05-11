@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: ブックマークのショートカット メニューを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ブックマークのショートカット メニューを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - menus, creating in Office applications
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9af7c7dd4a4c56cbd872b757704d64afd22c6101
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 6d54d23330c6d5fab836f168a291b15b90379117
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>チュートリアル : ブックマークのショートカット メニューの作成
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズを使用して <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールのショートカット メニューを作成する方法を示します。 ユーザーがブックマーク内のテキストを右クリックすると、ショートカット メニューにテキストの書式設定オプションが表示されます。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-##  <a name="BKMK_CreateProject"></a>プロジェクトの作成  
+##  <a name="BKMK_CreateProject"></a> プロジェクトの作成  
  まず、Visual Studio で Word 文書プロジェクトを作成します。  
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
@@ -60,7 +57,7 @@ ms.lasthandoff: 01/10/2018
   
      デザイナーで新しい Word 文書を開き、 **My Bookmark Shortcut Menu**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-##  <a name="BKMK_addtextandbookmarks"></a>文書にテキストとブックマークの追加  
+##  <a name="BKMK_addtextandbookmarks"></a> 文書にテキストとブックマークの追加  
  文書にテキストを追加し、部分的に重なった 2 つのブックマークを追加します。  
   
 #### <a name="to-add-text-to-your-document"></a>文書にテキストを追加するには  
@@ -88,7 +85,7 @@ ms.lasthandoff: 01/10/2018
   
  デザイン時に文書にブックマークを追加すると、<xref:Microsoft.Office.Tools.Word.Bookmark> コントロールが作成されます。 ブックマークの複数のイベントに対してプログラミングを行うことができます。 ブックマークの <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> イベントにコードを作成することで、ユーザーがブックマーク内のテキストを右クリックしたときにショートカット メニューを表示できます。  
   
-##  <a name="BKMK_AddCmndsShortMenu"></a>ショートカット メニューにコマンドを追加します。  
+##  <a name="BKMK_AddCmndsShortMenu"></a> ショートカット メニューにコマンドを追加します。  
  ドキュメントを右クリックすると表示されるショートカット メニューにボタンを追加します。  
   
 #### <a name="to-add-commands-to-a-shortcut-menu"></a>ショートカット メニューにコマンドを追加するには  
@@ -148,7 +145,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
      [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
   
-##  <a name="BKMK_formattextbkmk"></a>ブックマークにテキストを書式設定します。  
+##  <a name="BKMK_formattextbkmk"></a> ブックマークにテキストを書式設定します。  
   
 #### <a name="to-format-the-text-in-the-bookmark"></a>ブックマーク内のテキストに書式を設定するには  
   
@@ -197,7 +194,7 @@ ms.lasthandoff: 01/10/2018
   
 -   チェック ボックスを使用してブックマーク内の書式を変更します。 詳細については、次を参照してください。[チュートリアル: を変更するドキュメントの書式設定 チェック ボックス コントロールを使用した](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   

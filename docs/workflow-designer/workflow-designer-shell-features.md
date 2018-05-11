@@ -1,20 +1,22 @@
 ---
-title: "ワークフロー デザイナーのシェルの機能 |Microsoft ドキュメント"
+title: ワークフロー デザイナーのシェルの機能
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDShellFeatures.UI
 ms.assetid: 14bfe312-9592-408e-92ce-e98585ad16e7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 21fa46d9d70ad69f4d3e0ccfc55f85ade331feb4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 4644d9bfa336b85b9ad124751db4f3fb0417475c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="workflow-designer-shell-features"></a>ワークフロー デザイナーのシェルの機能
 
@@ -27,7 +29,7 @@ Windows ワークフロー デザイナーは、次の 3 つの主要な UI 領�
  概要マップには、現在の階層リンク ルートでのアクティビティ全体が縮小表示されます。これには、すべての子、およびその展開された子のすべてが含まれます。 オレンジ色の罫線に囲まれた四角形のビューポートによって、エディター内で現在表示されているアクティビティの一部が示されます。 この四角形を概要マップ内でドラッグすると、ワークフロー デザイナーがスクロールされ、エディターのビューが変化します。
 
 > [!NOTE]
-> [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] ユーザー インターフェイスは仮想化されています。 アクティビティ デザイナーは、必要なときにのみ表示されます。 デザイナー画面でワークフローの一部がまだ描画されていない場合は、その部分が概要マップで白く表示されます。 概要マップをスクロールすると、ワークフロー全体が描画されます。
+> ワークフロー デザイナーのユーザー インターフェイスが仮想化します。 アクティビティ デザイナーは、必要なときにのみ表示されます。 デザイナー画面でワークフローの一部がまだ描画されていない場合は、その部分が概要マップで白く表示されます。 概要マップをスクロールすると、ワークフロー全体が描画されます。
 
 ## <a name="copying-or-saving-workflows-as-images"></a>ワークフローをイメージとしてコピーまたは保存
  ワークフローは、ビットマップ形式でのコピーや、ビットマップまたはベクター形式での保存が可能です。 イメージをコピーまたは保存すると、現在の階層リンク ルートにおけるアクティビティ全体 (すべての子およびそれらの展開された子のすべてを含む) のビューを別のプログラムにエクスポートできます。
@@ -36,4 +38,4 @@ Windows ワークフロー デザイナーは、次の 3 つの主要な UI 領�
 
 ## <a name="fonts-and-colors"></a>フォントと色
 
-[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 内の[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]で使用する色は、環境フォントにより制御されます。 オペレーティング システムのテーマにハイコントラストの配色を使用している場合は、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]で表示される色が変わります。 フォントまたは色の設定の変更後に[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]で変更を有効にするには、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] を再起動する必要があります。
+Visual Studio 2010 内のワークフロー デザイナーで使用されるフォントは、環境フォントによって制御されます。 ワークフロー デザイナーに表示される色は、オペレーティング システムのテーマのハイ コントラスト配色を使用している場合に変更されます。 ワークフロー デザイナーで変更が有効にするには、フォントや色の設定を変更を行った後は、Visual Studio 2010 を再起動する必要があります。

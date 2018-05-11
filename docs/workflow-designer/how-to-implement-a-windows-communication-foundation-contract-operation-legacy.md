@@ -1,25 +1,28 @@
 ---
-title: "方法: Windows Communication Foundation コントラクト操作 (レガシ) を実装して |Microsoft ドキュメント"
+title: 'ワークフロー デザイナー - 方法: Windows Communication Foundation コントラクト操作 (レガシ) を実装します。'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: d6aeb20e-fac8-4a9d-bd26-ae78bef96b41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8ea31cf143c572e42f1250f3a16cf73148a53fd
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 0b069d8ca8c1adb72e2869eb59644e8abeff14ae
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>方法: Windows Communication Foundation コントラクト操作を実装する (レガシ)
-このトピックを実装する方法について説明、[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)]コントラクト操作を対象とする従来の Windows ワークフロー デザイナーを使用して、[!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]または[!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]です。
 
- ドラッグした後、 **ReceiveActivity**ツールボックスからワークフロー デザイン サーフェイスにアクティビティを作成する新しい[!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)]コントラクトまたは既存のコントラクトをインポートして操作を実装します。 選択したり、コントラクトとその操作を作成する、[選択操作 ダイアログ ボックス (レガシ)](../workflow-designer/choose-operation-dialog-box-legacy.md)です。
+このトピックでは、.NET Framework version 3.5、または、WinFX を対象とする従来の Windows ワークフロー デザイナーを使用して Windows Communication Foundation (WCF) のコントラクト操作を実装する方法について説明します。
 
-### <a name="to-implement-a-wcf-contract-operation"></a>WCF コントラクト操作を実装するには
+ドラッグした後、 **ReceiveActivity**ツールボックスからワークフロー デザイン サーフェイスにアクティビティを作成する新しい[!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)]コントラクトまたは既存のコントラクトをインポートして操作を実装します。 選択したり、コントラクトとその操作を作成する、[選択操作 ダイアログ ボックス (レガシ)](../workflow-designer/choose-operation-dialog-box-legacy.md)です。
+
+## <a name="to-implement-a-wcf-contract-operation"></a>WCF コントラクト操作を実装するには
 
 1.  ダブルクリックして、 **ReceiveActivity**デザイナーのアクティビティ の横にある省略記号 をクリックして、 **ServiceOperationInfo**プロパティに、**プロパティ**ウィンドウです。
 

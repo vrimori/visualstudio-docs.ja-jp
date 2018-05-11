@@ -1,22 +1,19 @@
 ---
-title: "複数のユーザー アカウントを使って作業する | Microsoft Docs"
-ms.custom: 
+title: 複数のユーザー アカウントを使って作業する
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
+ms.topic: conceptual
+author: TerryGLee
+ms.author: tglee
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: def8b9347ec5c74cf369972602416c992dff39c7
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 55121b8cdaa55bed158aac25163462705c2aeec8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-multiple-user-accounts"></a>複数のユーザー アカウントを使って作業する
 
@@ -63,7 +60,7 @@ ASP.NET での異なる種類の認証について詳しくは、「[Creating AS
 
 ### <a name="access-your-visual-studio-team-services-account"></a>Visual Studio Team Services のアカウントへのアクセス
 
-メイン メニューから、**[チーム] > [Team Foundation Server への接続]** を選択して、**チーム エクスプローラー** ウィンドウを開きます。 **[チーム プロジェクトの選択]**をクリックすると、 **[Team Foundation Server の選択]**にあるリスト ボックスに Visual Studio Team Services アカウントの URL が表示されます。 URL を選択すると、資格情報を再入力しなくてもログインできます。
+メイン メニューから、**[チーム] > [Team Foundation Server への接続]** を選択して、**チーム エクスプローラー** ウィンドウを開きます。 **[チーム プロジェクトの選択]** をクリックすると、 **[Team Foundation Server の選択]** にあるリスト ボックスに Visual Studio Team Services アカウントの URL が表示されます。 URL を選択すると、資格情報を再入力しなくてもログインできます。
 
 ## <a name="add-a-second-user-account-to-visual-studio"></a>Visual Studio に 2 つ目にユーザー アカウントを追加
 
@@ -81,4 +78,4 @@ Visual Studio の上隅にあるユーザー名の横の矢印をクリックし
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio へのサインイン](signing-in-to-visual-studio.md)
+- [Visual Studio へのサインイン](signing-in-to-visual-studio.md)

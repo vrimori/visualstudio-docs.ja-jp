@@ -1,29 +1,24 @@
 ---
-title: "Idialinenumber::get_columnnumber |Microsoft ドキュメント"
-ms.custom: 
+title: Idialinenumber::get_columnnumber |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaLineNumber::get_columnNumber method
 ms.assetid: e317f29a-6525-46a7-8421-33985392f8fd
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ddcced006ded40275ce46838fbaface05ea26960
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e80b0aac64ec76504ef77b7b46ab6736a4cf6111
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idialinenumbergetcolumnnumber"></a>IDiaLineNumber::get_columnNumber
 式またはステートメントの開始列番号を取得します。  
@@ -47,5 +42,5 @@ HRESULT get_columnNumber (
 ## <a name="remarks"></a>コメント  
  このメソッドによって返される列の値は、行のステートメントの最初の文字を行へのバイト オフセットです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

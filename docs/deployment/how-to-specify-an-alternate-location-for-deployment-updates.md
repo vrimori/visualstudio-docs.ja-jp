@@ -1,12 +1,9 @@
 ---
-title: "方法: 配置の更新用の別の場所の指定 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 配置の更新用の別の場所の指定 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - ClickOnce deployment, updates
 - deployment update, alternative locations
 ms.assetid: 7faacd35-2638-492d-80f6-6b57e5f820de
-caps.latest.revision: "15"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 637f4517734d3a0bbf86c3894c4f0fc7dd5b5e8d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 14c6778d5cad698e6eea541b94df6f8eb793746c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法 : 配置の更新用に別の場所を指定する
 インストールすることができます、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD またはファイル共有から最初にアプリケーションが、アプリケーションが、Web で定期的な更新プログラムのチェックが必要です。 その最初のインストール後に Web サイトからアプリを更新できるように、配置マニフェストで更新プログラムの別の場所を指定できます。  
@@ -50,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  .NET Framework コマンド プロンプトを開きます。  
   
-2.  次のコマンドを使用して更新プログラムの場所を設定します。 この例では**HelloWorld.exe.application**へのパス、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は .application という拡張子を持つ常に、アプリケーション マニフェストと**http://adatum.com/Update/Path** url[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]はアプリケーションの更新プログラムを確認します。  
+2.  次のコマンドを使用して更新プログラムの場所を設定します。 この例では**HelloWorld.exe.application**へのパス、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は .application という拡張子を持つ常に、アプリケーション マニフェストと**http://adatum.com/Update/Path**そのをURLには[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]はアプリケーションの更新プログラムを確認します。  
   
-     **Mage-HelloWorld.exe.application の更新 - ProviderUrl http://adatum.com/Update/Path**  
+     **Mage-HelloWorld.exe.application ProviderUrl の更新 http://adatum.com/Update/Path**  
   
 3.  ファイルを保存します。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
  すべて[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]を使用するアプリケーション`<deploymentProvider>`アプリケーションが異なる別のコンピューター上の信頼レベルを受信しないようにに、そのアプリケーション マニフェストで必要な権限を明示的に宣言する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル : ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   

@@ -1,28 +1,22 @@
 ---
-title: Azure SDK for Python | Microsoft Docs
-description: "Azure SDK for Python を使うと、任意のプラットフォームで実行している Python アプリケーションから Microsoft Azure サービスを簡単に利用できるようになります。"
-ms.custom: 
+title: Azure SDK for Python
+description: Azure SDK for Python を使うと、任意のプラットフォームで実行している Python アプリケーションから Microsoft Azure サービスを簡単に利用できるようになります。
 ms.date: 01/22/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: baa206dfbb9caf58ce872d0c9dee22e183403adb
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 58e7f6cd46293573f17c344ffba943d99b55f830
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -42,7 +36,7 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 ## <a name="documentation"></a>ドキュメント
 
-ドキュメントは [azure-sdk-for-python.readthedocs.org](http://azure-sdk-for-python.readthedocs.org/en/latest/index.html) にあります。
+ドキュメントは [azure-sdk-for-python.readthedocs.org](https://docs.microsoft.com/en-us/python/azure/?view=azure-python) にあります。
 
 「[Python デベロッパー センター](http://azure.microsoft.com/develop/python/)」にも、さまざまなチュートリアルを含む有用なリソースが数多く用意されています。
 
@@ -50,12 +44,12 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 - [Python から Azure BLOB ストレージを使用する方法](/azure/storage/storage-python-how-to-use-blob-storage)
 - [Python から Table ストレージを使用する方法](/azure/storage/storage-python-how-to-use-table-storage)
 - [Python から Queue ストレージを使用する方法](/azure/storage/storage-python-how-to-use-queue-storage)
-- [DocumentDB を使用した Python Flask Web アプリケーションの作成](/azure/documentdb/documentdb-python-application)
+- [Azure Cosmos DB](/azure/cosmos-db/sql-api-python-application)
 - [Service Bus キューの使用方法](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
 - [Service Bus のトピックとサブスクリプションの使用方法](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
 - [Python からサービス管理を使用する方法](/azure/cloud-services/cloud-services-python-how-to-use-service-management)
 
-ドキュメントのないパブリック API に関しては、[SDK の GitHub リポジトリ](https://github.com/Azure/azure-sdk-for-python)が有益な情報源になります。
+ドキュメントのないパブリック API に関しては、[SDK の GitHub リポジトリ](https://github.com/Azure/azure-sdk-for-python)の単体テストが有益な情報源になります。
 
 - [ストレージの単体テスト](https://github.com/Azure/azure-storage-python/tree/master/tests)に関するページ
 - [Service Bus の単体テスト](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicebus/tests)に関するページ
@@ -64,6 +58,6 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 ## <a name="support"></a>サポート
 
-SDK の Git リポジトリは [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) にあります。
+SDK の Git リポジトリは、[https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) にあります。
 
 SDK の使用方法についての問題や質問がある場合は、[リポジトリに問題を登録してください](https://github.com/Azure/azure-sdk-for-python/issues)。

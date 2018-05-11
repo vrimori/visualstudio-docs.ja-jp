@@ -1,16 +1,15 @@
 ---
-title: "Visual Studio for Mac でのコードのリファクタリング | Microsoft Docs"
-description: "Visual Studio for Mac でのコードの再編成は、ソース解析を使用して簡単に行うことができます。"
+title: コードのリファクタリング
+description: Visual Studio for Mac でのコードの再編成は、ソース解析を使用して簡単に行うことができます。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
-ms.openlocfilehash: 925c928e171b76af76304074e736fd8962158564
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: ec0ae7aa61275b9b5362db178b9bdb8e3ccedfbb
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="refactoring"></a>リファクタリング
 

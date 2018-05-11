@@ -1,26 +1,26 @@
 ---
-title: "Build Tools をコンテナーにインストールする | Microsoft Docs"
-ms.custom: 
-ms.date: 10/18/2017
-ms.reviewer: 
-ms.suite: 
+title: Visual Studio Build Tools をコンテナーにインストールする
+description: Visual Studio Build Tools を Windows コンテナーにインストールして、継続的インテグレーションと継続的デリバリー (CI/CD) のワークフローをサポートする方法を説明します。
+ms.custom: ''
+ms.date: 04/18/2018
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
 author: heaths
-ms.author: heaths
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 95f9c69ebca7dbdc7e576279b4e1ad3f17d2be25
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d9dc5b1add4f81e91d0ea0e2cdc20e2581116525
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="install-build-tools-into-a-container"></a>Build Tools をコンテナーにインストールする
 
-Visual Studio Build Tools を Windows コンテナーにインストールして、継続的インテグレーションと継続的配信 (CI/CD) のワークフローをサポートできます。 この記事では、必要な Docker 構成の変更と、コンテナーにインストールできる[ワークロードとコンポーネント](workload-component-id-vs-build-tools.md)について説明します。
+Visual Studio Build Tools を Windows コンテナーにインストールして、継続的インテグレーションと継続的デリバリー (CI/CD) のワークフローをサポートできます。 この記事では、必要な Docker 構成の変更と、コンテナーにインストールできる[ワークロードとコンポーネント](workload-component-id-vs-build-tools.md)について説明します。
 
 [コンテナー](https://www.docker.com/what-container)は一貫性のあるビルド システムをパッケージ化する優れた手段であり、CI/CD サーバー環境でだけでなく、開発環境でも使うことができます。 たとえば、カスタマイズされた環境でビルドされるようにコンテナーにソース コードをマウントしながら、Visual Studio や他のツールを使って引き続きコードを記述することができます。 お使いの CI/CD ワークフローが同じコンテナー イメージを使っている場合、コードのビルドの一貫性を心配する必要はありません。 実行時の一貫性を保つためにコンテナーを使うこともでき、これはオーケストレーション システムで複数のコンテナーを使っているマイクロサービスでは一般的なことですが、この記事ではそれについては説明しません。
 
@@ -44,7 +44,7 @@ Hyper-V は既定では有効になっていません。 現在、Windows 10 で
 
 ## <a name="step-2-install-docker-for-windows"></a>手順 2. Docker for Windows をインストールする
 
-Windows 10 を使っている場合は、[Docker Community Edition for Windows](https://www.docker.com/docker-windows) をダウンロードしてインストールできます。 PowerShell を使い、Desired State Configuration (DSC) または簡単な単一インストール用の[パッケージ プロバイダー](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server)を使って、[Docker Enterprise Edition for Windows Server 2016 をインストール](https://docs.docker.com/engine/installation/windows/docker-ee)できます。
+Windows 10 を使っている場合は、[Docker Community Edition for Windows](https://docs.docker.com/docker-for-windows/install) をダウンロードしてインストールできます。 Windows Server 2016 を使用している場合は、[Docker Enterprise Edition をインストールする手順](https://docs.docker.com/install/windows/docker-ee)に従ってください。
 
 ## <a name="step-3-switch-to-windows-containers"></a>手順 3. Windows コンテナーに切り替える
 
@@ -114,7 +114,7 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
 
 ## <a name="step-5-create-and-build-the-dockerfile"></a>手順 5. Dockerfile を作成してビルドする
 
-次の Dockerfile の例を新しいファイルとしてディスクに保存する必要があります。 ファイル名を単に "Dockerfile" にすると、既定で認識されます。
+次の Dockerfile の例を新しいファイルとしてディスクに保存します。 ファイル名を単に "Dockerfile" にすると、既定で認識されます。
 
 > [!NOTE]
 > この例の Dockerfile では、コンテナーにインストールできない古い Windows SDK のみを除外します。 古いリリースはビルド コマンドが失敗する原因になります。
@@ -135,22 +135,22 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
 3. 次の内容を C:\BuildTools\Dockerfile に保存します。
 
    ```dockerfile
-   # Use the latest Windows Server Core image.
-   FROM microsoft/windowsservercore
+   # escape=`
 
-   # Download useful tools to C:\Bin.
-   ADD https://dist.nuget.org/win-x86-commandline/v4.1.0/nuget.exe C:\\Bin\\nuget.exe
+   # Use the latest Windows Server Core image with .NET Framework 4.7.1.
+   FROM microsoft/dotnet-framework:4.7.1
 
-   # Download the Build Tools bootstrapper outside of the PATH.
-   ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\\TEMP\\vs_buildtools.exe
+   # Download the Build Tools bootstrapper.
+   ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Add C:\Bin to PATH and install Build Tools excluding workloads and components with known issues.
-   RUN setx /m PATH "%PATH%;C:\Bin" \
-    && C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --all \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 \
-       --remove Microsoft.VisualStudio.Component.Windows81SDK \
+   # Install Build Tools excluding workloads and components with known issues.
+   RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
+       --installPath C:\BuildTools `
+       --all `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
+       --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
    # Start developer command prompt with any other commands specified.
@@ -159,6 +159,9 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
    # Default to PowerShell if no other command specified.
    CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!NOTE]
+   > microsoft/windowsservercore に直接基づくイメージの場合は、.NET Framework が正しくインストールされない可能性があり、インストール エラーは示されていません。 インストールが完了した後、マネージド コードが実行しない可能性があります。 代わりに、イメージを [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 以降に基づくようにします。
 
 4. そのディレクトリで次のコマンドを実行します。
 
@@ -184,13 +187,15 @@ Visual Studio Build Tools さらには Visual Studio 全体では、すべての
 このイメージを CI/CD ワークフローで使うには、独自の [Azure Container Registry](https://azure.microsoft.com/services/container-registry) または他の内部 [Docker レジストリ](https://docs.docker.com/registry/deploying)に発行して、サーバーがそれを取得するだけでよいようにします。
 
 ## <a name="get-support"></a>サポートを受ける
+
 ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
+
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。  (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 

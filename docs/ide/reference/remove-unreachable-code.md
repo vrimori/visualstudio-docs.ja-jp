@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio での到達できないコードの削除リファクタリング | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での到達できないコードの削除リファクタリング
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90ea46079e318c09ab62e27f9a75ccdd2452887d
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 73b04dafc094e05c57c626333a1d614de3ba76a1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="remove-unreachable-code-refactoring"></a>到達できないコードの削除リファクタリング
 

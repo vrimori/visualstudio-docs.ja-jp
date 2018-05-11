@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio で型に合わせてファイル名を変更する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で型に合わせてファイル名を変更する
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 29260d2f33c9debfe698cb6af30f711e9617cdd1
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 58a4a1647912203fd1415176f4089904f8c70e0f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>型からファイル名への同期またはファイル名から型への同期リファクタリング
 
@@ -69,4 +67,4 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="see-also"></a>関連項目
 
-[リファクタリング](../refactoring-in-visual-studio.md)
+- [リファクタリング](../refactoring-in-visual-studio.md)

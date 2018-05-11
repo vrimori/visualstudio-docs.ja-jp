@@ -1,13 +1,9 @@
 ---
-title: "CRT のデバッグ手法 |Microsoft ドキュメント"
-ms.custom: 
+title: CRT のデバッグ手法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - c.runtime.debugging
 dev_langs:
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - CRT, debugging
 - debugging [C++], CRT debug support
 ms.assetid: 9be561f6-14a8-44ff-925d-d911d5b8e6ff
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52f1847112741e90634ce0e68acbcfdd11b837db
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 890dec4a47a4dd49fa75521aaad068d331652a92
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="crt-debugging-techniques"></a>CRT のデバッグ技術
 C ランタイム ライブラリを使用したプログラムをデバッグする場合は、次のデバッグ技術が役立ちます。  
@@ -40,7 +35,7 @@ C ランタイム ライブラリを使用したプログラムをデバッグ�
  C ランタイム ライブラリによって提供されるデバッグ サポートについて説明し、ツールにアクセスするための手順を示します。  
   
  [レポート用マクロの使用](../debugger/macros-for-reporting.md)  
- に関する情報を提供、 **_RPTn**と**_RPTFn**マクロ (CRTDBG で定義されます。H) これの代わりに`printf`デバッグ用のステートメント。  
+ に関する情報を提供、 **_RPTn**と **_RPTFn**マクロ (CRTDBG で定義されます。H) これの代わりに`printf`デバッグ用のステートメント。  
   
  [デバッグ バージョンのヒープ割り当て関数](../debugger/debug-versions-of-heap-allocation-functions.md)  
  ヒープ割り当て関数の特別なデバッグ バージョンについて説明します。CRT が呼び出しを割り当てる方法、明示的な呼び出しの利点、変換の回避方法、クライアント ブロック内の各割り当て型の追跡、_DEBUG を定義しなかった場合の結果などを扱います。  

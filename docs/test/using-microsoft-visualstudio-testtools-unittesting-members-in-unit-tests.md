@@ -1,20 +1,21 @@
 ---
-title: "単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用 | Microsoft Docs"
+title: 単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: reference
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7c841210c41e7b2b9870c80cc148006f3e63290d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: ccc41d7cc2e1150c6c4eb9ca1e62719517b194fa
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="using-the-mstest-framework-in-unit-tests"></a>単体テストでの MSTest フレームワークの使用
+# <a name="use-the-mstest-framework-in-unit-tests"></a>単体テストでの MSTest フレームワークの使用
 
 [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) フレームワークは、Visual Studio での単体テストをサポートしています。 単体テストをコーディングするときに、<xref:Microsoft.VisualStudio.TestTools.UnitTesting> 名前空間のクラスとメンバーを使用します。 コードから生成された単体テストを調整するときにも、それらを使用できます。
 

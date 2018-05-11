@@ -1,25 +1,27 @@
 ---
-title: "参照して .NET の種類 ダイアログ ボックスの選択 |Microsoft ドキュメント"
+title: ワークフロー デザイナーを参照して .NET の種類 ダイアログ ボックスを選択
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33e2ba5ff213c2bdd2684d72f411b172c0437c99
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 4d136c98acd2719abd07f8feb2f9def48ec6b2ec
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 
-**プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.**データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。
+**プロパティ**ウィンドウ、ダイアログ ボックス、またはを選択すると、変数デザイナーなどのデザイナー**型を参照しています.** データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックス (「型ブラウザー」と省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。
 
  このダイアログ ボックスは、次のようなさまざなユーザー シナリオで使用されます。
 
@@ -34,7 +36,7 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーでの値型または参照型の選択
 
-#### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーで値型または参照型を選択するには
+### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>型ブラウザーで値型または参照型を選択するには
 
 1.  **型名**ボックスを使用する型の名前を入力します。
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 03/12/2018
 
     -   ための十分な文字を入力して、**型名**ボックスを使用して、enter キーを押し、種類を選択する型を一意に識別するには
 
-#### <a name="to-select-a-generic-type-from-the-type-browser"></a>型ブラウザーでジェネリック型を選択するには
+### <a name="to-select-a-generic-type-from-the-type-browser"></a>型ブラウザーでジェネリック型を選択するには
 
 1.  **型名**ボックスで使用する型の名前を入力します。
 
@@ -60,7 +62,7 @@ ms.lasthandoff: 03/12/2018
 ## <a name="filtering-search-results-in-the-type-browser"></a>型ブラウザーでの検索結果のフィルター処理
  内の型の一覧、**型名**ボックスが一致するものを検索する文字を入力するように短くを取得します。 フィルター処理された一覧には、入力した文字列で完全修飾名が始まる型、または、入力した文字列で始まる短い名前を持つ型のみが表示されます。
 
- 例:
+ 例えば:
 
 1.  入力**操作**と一致する<xref:System.OperationCanceledException>ではなく<xref:System.InvalidOperationException>です。 <xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。
 

@@ -1,26 +1,20 @@
 ---
-title: R Tools for Visual Studio | Microsoft Docs
-description: "R Tools for Visual Studio (RTVS) は無料のオープンソースの拡張機能で、IntelliSense、デバッグ、リモート ワークスぺースを含む多くの言語機能を提供しています。"
-ms.custom: 
+title: R Tools for Visual Studio
+description: R Tools for Visual Studio (RTVS) は無料のオープンソースの拡張機能で、IntelliSense、デバッグ、リモート ワークスぺースを含む多くの言語機能を提供しています。
 ms.date: 11/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: hero-article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: overview
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 7e5fd1c6f2e2d33fe3841923f1b25728ad002f6e
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: d571252c34a286e26fbf97537c5fe4a527743d72
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-r-in-visual-studio"></a>Visual Studio での R の使用
 

@@ -1,29 +1,24 @@
 ---
-title: "Idiaenumsymbolsbyaddr::next |Microsoft ドキュメント"
-ms.custom: 
+title: Idiaenumsymbolsbyaddr::next |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSymbolsByAddr::Next method
 ms.assetid: a1320587-7ce7-401f-9548-2f8bcece5cc3
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3256f36e8ab663200a35b3c0fe58933e8559c38e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ffede509bdeb45ad1ca19b368d10928568f4fff8
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiaenumsymbolsbyaddrnext"></a>IDiaEnumSymbolsByAddr::Next
 アドレスの順序で次のシンボルを取得します。  
@@ -54,6 +49,6 @@ HRESULT Next (
 ## <a name="remarks"></a>コメント  
  このメソッドは、フェッチされた要素の数によって、列挙子の位置を更新します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

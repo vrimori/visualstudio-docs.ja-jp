@@ -1,27 +1,21 @@
 ---
-title: "クイック スタート - Visual Studio で Python コードのリポジトリを複製する | Microsoft Docs"
-description: "Visual Studio チーム エクスプローラーを使って Python Koans リポジトリを複製することにより Python を迅速に使い始めます。"
-ms.custom: 
-ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
+title: クイック スタート - Python コードのリポジトリを複製する
+description: このクイック スタートでは、Visual Studio チーム エクスプローラーを使用して Python Koans リポジトリを複製することで、Visual Studio で Python プロジェクトを作成します。
+ms.date: 03/21/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a7ddd0f7cf24805eef529d08bf0e37b19fc6a8bc
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 8cad15dcb5bb7c9c8a774f645789d26e0e0ffd7e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
@@ -31,49 +25,51 @@ ms.lasthandoff: 02/23/2018
 
 2. Visual Studio を起動します。
 
-3. **[ビュー]、[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。
+3. **[表示] > [チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。 (次に示す **[接続]** ページが表示されない場合は、上部ツールバーのプラグ アイコンを選択すると、そのページに進みます)。
 
     ![Visual Studio Team Services、GitHub、およびリポジトリの複製が表示された [チーム エクスプローラー] ウィンドウ](media/team-explorer.png)
 
-4. **[Local Git Repositories]\(ローカル Git リポジトリ\)** の下の [URL] フィールドに、`https://github.com/gregmalcolm/python_koans` と入力し、複製されたファイル用のフォルダーを入力し、**[複製]** を選択します。
+4. **[ローカル Git リポジトリ]** で **[複製]** コマンドを選択し、[URL] フィールドに「`https://github.com/gregmalcolm/python_koans`」と入力し、複製元のファイルが格納されているフォルダーを入力し、**[複製]** ボタンを選択します。
 
     > [!Tip]
-    > チーム エクスプローラーで指定したフォルダーは、複製されたファイルを受け取る特定のフォルダーです。 `git clone` コマンドとは異なり、チーム エクスプローラーで複製を作成しても、リポジトリの名前のサブフォルダーは自動作成されません。
+    > チーム エクスプローラーで指定するフォルダーは、複製されたファイルを受け取るフォルダーです。 `git clone` コマンドとは異なり、チーム エクスプローラーで複製を作成しても、リポジトリの名前のサブフォルダーは自動作成されません。
 
-5. 複製が完了したら、チーム エクスプローラーの下のリポジトリ フォルダーをダブルクリックして、リポジトリのダッシュボードに移動します。 **[ソリューション]** の下で **[新規]** を選択します。
+5. 複製が完了すると、リポジトリ名が **[ローカル Git リポジトリ]** の一覧に表示されます。 その名前をダブルクリックして、**チーム エクスプローラー**のリポジトリ ダッシュボードに移動します。
+
+6. **[ソリューション]** の下で **[新規]** を選択します。
 
     ![[チーム エクスプローラー] ウィンドウ、複製からの新しいプロジェクトの作成](media/team-explorer-new-project.png)
 
-6. 表示された **[新しいプロジェクト]** ダイアログで、[From Existing Python Code]\(既存の Python コードから)\ を選択し、プロジェクトの名前を指定して、**[場所]** をリポジトリと同じフォルダーに設定し、**[OK]** を選択します。 表示されたウィザードで、**[完了]** をクリックします。
+7. 表示された **[新しいプロジェクト]** ダイアログで、Python 言語に移動 (または "Python" を検索) し、[既存の Python コードから] を選択し、プロジェクトの名前を指定し、**[場所]** をリポジトリと同じフォルダーに設定し、**[OK]** を選択します。 表示されたウィザードで、**[完了]** を選択します。
 
-7. メニューから **[表示]、[ソリューション エクスプローラー]** を選択します。
+8. メニューから **[表示]、[ソリューション エクスプローラー]** を選択します。
 
-8. ソリューション エクスプローラーで `python3` ノードを展開し、`contemplate_koans.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
+9. **ソリューション エクスプローラー**で `python3` ノードを展開し、`contemplate_koans.py` を右クリックし、**[スタートアップ ファイルとして設定]** を選択します。 この手順により、プロジェクトの実行時に使用されるファイルが Visual Studio に指示されます。
 
-9. メニューで **[プロジェクト]、[プロパティ]**、**[全般]** タブの順に選択し、**[作業ディレクトリ]** を "python3" に設定します。 これは、既定で Visual Studio がスタートアップ ファイル (`python3\contemplate_koans.py`。これは、プロジェクトのプロパティでも確認できます) の場所ではなく、プロジェクトのルートに作業ディレクトリを設定するために必要です。 プログラム コードは、ファイル `koans.txt` を作業フォルダーから探すので、この値を変更しなくてもランタイム エラーは発生します。
+10. メニューで **[プロジェクト] > [Koans プロパティ]**、**[全般]** タブの順に選択し、**[作業ディレクトリ]** を "python3" に設定します。 この手順が必要なのは、Visual Studio は既定では作業ディレクトリをスタートアップ ファイルの場所ではなく、プロジェクトのルートに設定するためです (`python3\contemplate_koans.py`。これはプロジェクトのプロパティでも確認できます)。 プログラム コードは、ファイル `koans.txt` を作業フォルダーから探すので、この値を変更しなくてもランタイム エラーは発生します。
 
     ![Python プロジェクトの作業ディレクトリの設定](media/projects-set-working-directory.png)
 
-10. Ctrl + F5 キーを押すか、**[デバッグ]、[デバッグなしで開始]** を選択し、プログラムを実行します。 `koans.txt` の `FileNotFoundError` が表示される場合、前の手順の作業ディレクトリの設定を再確認します。
+11. Ctrl + F5 キーを押すか、**[デバッグ]、[デバッグなしで開始]** を選択し、プログラムを実行します。 `koans.txt` の `FileNotFoundError` が表示される場合、前の手順の説明に従って作業ディレクトリの設定を再確認します。
 
-11. プログラムが正常に実行されると、`python3/koans/about_asserts.py` の 17 行にアサーション エラーが表示されます。 これが意図的です。ユーザーが意図的なエラーをすべて修正することにより、プログラムでは、Python にそれが通知されるよう設計されています。 (詳細は、Python Koans にインスピレーションを与えた [Ruby Koans](http://rubykoans.com/) を参照してください。)
+12. プログラムが正常に実行されると、`python3/koans/about_asserts.py` の 17 行にアサーション エラーが表示されます。 これが意図的です。ユーザーが意図的なエラーをすべて修正することにより、プログラムでは、Python にそれが通知されるよう設計されています。 (詳細は、Python Koans にインスピレーションを与えた [Ruby Koans](http://rubykoans.com/) を参照してください。)
 
     ![Python Koans プログラムからの最初の出力](media/koans-output.png)
 
-12. ソリューション エクスプローラーで `python3/koans/about_asserts.py` に移動し、それを開き、ファイルをダブルクリックします。 エディターには既定で行番号が表示されないことに注意してください。 これを変更するには、**[ツール]、[オプション]** を選択し、ダイアログの下部の **[すべての設定を表示]** を選択し、**[テキスト エディター]、[Python]、[全般]** に移動し、**[行番号]** を選択します。
+13. ソリューション エクスプローラーで `python3/koans/about_asserts.py` に移動し、それを開き、ファイルをダブルクリックします。 エディターには既定で行番号が表示されないことに注意してください。 これを変更するには、**[ツール]、[オプション]** を選択し、ダイアログの下部の **[すべての設定を表示]** を選択し、**[テキスト エディター]、[Python]、[全般]** に移動し、**[行番号]** を選択します。
 
     ![Python ファイルの行番号の有効化](media/options-general-line-numbers.png)
 
-13. 17 行の `False` 引数を `True` に変更することで、エラーを修正できます。 行を次のようにします。
+14. 17 行の `False` 引数を `True` に変更することで、エラーを修正できます。 行を次のようにします。
 
     ```python
     self.assertTrue(True) # This should be True
     ```
 
-14. プログラムを再実行し、最初のチェックに合格し、プログラムが次の koan で停止することを確認します。 エラーの修正を続け、必要に応じてプログラムを再実行します。
+15. 再びプログラムを実行します。 Visual Studio でエラーに関する警告が表示された場合は、**[はい]** と応答して、コードの実行を続行します。 最初のチェックに合格し、プログラムが次の koan で停止することを確認します。 エラーの修正を続け、必要に応じてプログラムを再実行します。
 
 > [!Important]
-> このクイック スタートでは、GitHub の *python_koans* リポジトリの複製を直接作成しました。 このようなリポジトリは、直接変更できないように作成者によって保護されているため、そのリポジトリに変更をコミットしようとすると失敗します。 実際には、代わりに開発者が自分の GitHub アカウントにこのようなリポジトリをフォークし、プル要求を作成し、元のリポジトリにそれらの変更を送信します。 これらの手順は、「[Tutorial Step 6 - Working with Git](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)」(チュートリアル手順 6: Git の使用) で説明しています。
+> このクイックスタートでは、GitHub の *python_koans* リポジトリの複製を直接作成しました。 このようなリポジトリは、直接変更できないように作成者によって保護されているため、そのリポジトリに変更をコミットしようとすると失敗します。 実際には、開発者は、自分の GitHub アカウントにこのようなリポジトリをフォークした後、プル要求を作成して元のリポジトリにそれらの変更を送信します。 独自のフォークがある場合は、前に使用されていた元のリポジトリの URL の代わりにその URL を使用します。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -82,6 +78,6 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)
+- [既存の Python インタープリターを手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
 - [Windows に Visual Studio 2015 の Python サポートをインストールする](installing-python-support-in-visual-studio.md)
 - [インストールする場所](installing-python-support-in-visual-studio.md#install-locations)

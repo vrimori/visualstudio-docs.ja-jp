@@ -1,30 +1,29 @@
 ---
-title: "プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する | Microsoft Docs"
+title: プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - open folder [Visual Studio]
 - anycode [Visual Studio]
 - projects and solutions, develop code without
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 08c50a07992a1856ad0d5f45c0200e0b8a232cb7
-ms.sourcegitcommit: 3abca1c733af876c8146daa43a62e829833be280
+ms.openlocfilehash: 6a2fee12882275d78d759e39d69674b4aef2f38b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する
 
 Visual Studio 2017 で、ほぼすべての種類のディレクトリ ベースのプロジェクトから、ソリューションまたはプロジェクト ファイルを使用せずに Visual Studio にコードを開くことができます。 これは、たとえば、GitHub でリポジトリを複製して、直接 Visual Studio に開き、ソリューションまたはプロジェクトを作成することなく開発を開始できることを意味します。 必要な場合は、カスタム ビルド タスクを指定し、単純な JSON ファイルからパラメーターを起動できます。
 
-Visual Studio でコード ファイルを開いた後、ソリューション エクスプローラーによって、フォルダー内のすべてのファイルが表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 コードは、構文が色付けされて表示され、多くの場合、基本的な IntelliSense ステートメント入力候補を含みます。
+Visual Studio でコード ファイルを開いた後、**ソリューション エクスプローラー**によって、フォルダー内のすべてのファイルが表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 コードは、構文が色付けされて表示され、多くの場合、基本的な IntelliSense ステートメント入力候補を含みます。
 
 ## <a name="open-any-code"></a>コードを開く
 
@@ -32,7 +31,7 @@ Visual Studio でコード ファイルを開いた後、ソリューション �
 
 - Visual Studio メニュー バーで、**[ファイル]** > **[開く]** > **[フォルダー]** を選択して、コードの場所を参照します。
 - コードを含むフォルダーのコンテキスト (右クリック) メニューで、**[Visual Studio で開く]** コマンドを選択します。
-- Visual Studio スタート ページで **[フォルダーを開く]** を選択します。
+- Visual Studio **スタート ページ**で **[フォルダーを開く]** を選択します。
 - キーボードのユーザーの場合は、Visual Studio で **Ctrl**+**shift** +**Alt**+**O** キーを押します。
 - 複製された GitHub リポジトリからコードを開きます。
 
@@ -46,7 +45,7 @@ Visual Studio でコード ファイルを開いた後、ソリューション �
 
    ![GitHub の複製ボタン](./media/VSIDE_Code_Clone.png)
 
-1. Visual Studio で、**[チーム エクスプローラー]** タブを選択し、チーム エクスプローラーを開きます。 タブが表示されない場合は、**[ビュー]** > **[チーム エクスプローラー]** からタブを開きます。
+1. Visual Studio で、**[チーム エクスプローラー]** タブを選択し、**チーム エクスプローラー**を開きます。 タブが表示されない場合は、**[ビュー]** > **[チーム エクスプローラー]** からタブを開きます。
 
 1. チーム エクスプローラーの **[ローカル Git リポジトリ]** セクションで **[複製]** コマンドを選択し、GitHub ページの URL をテキスト ボックスに貼り付けます。
 
@@ -54,11 +53,11 @@ Visual Studio でコード ファイルを開いた後、ソリューション �
 
 1. **[複製]** ボタンを選択して、プロジェクトのファイルをローカル Git リポジトリに複製します。 リポジトリのサイズによっては、この処理に数分かかることがあります。
 
-1. リポジトリがシステムに複製されたら、チーム エクスプローラーで、新しく複製されたリポジトリのコンテキスト (右クリック) メニューで **[開く]** コマンドを選択します。
+1. リポジトリがシステムに複製されたら、**チーム エクスプローラー**で、新しく複製されたリポジトリのコンテキスト (右クリック) メニューで **[開く]** コマンドを選択します。
 
    ![複製されたリポジトリ](./media/VSIDE_Code_Clone3.png)
 
-1. **[フォルダー ビューの表示]** コマンドを選択して、ソリューション エクスプローラーでファイルを表示します。
+1. **[フォルダー ビューの表示]** コマンドを選択して、**ソリューション エクスプローラー**でファイルを表示します。
 
    ![フォルダー ビューの表示](./media/VSIDE_Code_Clone3_show.png)
 

@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_nested |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_nested |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_nested method
 ms.assetid: 6ae46d43-8486-48d6-a6f2-d73ebf4023e3
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac2e106cbfbe8b9031aab04128ffb8aceba58feb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c43ffa3306254cb9ed14c9d987f24dd170f1d6c3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetnested"></a>IDiaSymbol::get_nested
 ユーザー定義データ型が入れ子になったかどうかを指定するフラグを取得します。  
@@ -46,5 +41,5 @@ HRESULT get_nested (
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

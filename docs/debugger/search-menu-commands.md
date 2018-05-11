@@ -1,27 +1,22 @@
 ---
-title: "メニュー コマンドの検索 |Microsoft ドキュメント"
-ms.custom: 
+title: メニュー コマンドの検索 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Search menu commands
 ms.assetid: f36dff9a-49ef-46ce-8c9a-76246458c0d0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5508f2aeef1dbaaf7758d2732ec69b99b7c7067
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 266af946d33e0fbbae6367c4a2729cc3977c0452
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="search-menu-commands"></a>[検索] メニューのコマンド
 **検索**メニューには、特定の windows を検索するためのコマンドが用意されています。  

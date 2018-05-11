@@ -1,26 +1,24 @@
 ---
-title: "ツールバーを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: ツールバーを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - toolbars [Visual Studio], adding to IDE
 - IDE, adding toolbars
 ms.assetid: 17302c25-6f59-4e97-8c85-54f95336a07f
-caps.latest.revision: "38"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f7b837a620a1e116b9bb8a11ff8a4edab7bfabfb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: c4a9a28ef3fced7cc2dab1f14b2854f2ca27d362
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-toolbar"></a>ツールバーを追加します。
 このチュートリアルでは、Visual Studio IDE にツールバーを追加する方法を示します。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  メニューの詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-an-extension-with-a-toolbar"></a>ツールバーと拡張機能の作成  
  という名前の VSIX プロジェクトを作成する`IDEToolbar`です。 という名前のメニュー コマンド項目テンプレートを追加**ToolbarTestCommand**です。 これを行う方法については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
@@ -93,5 +91,5 @@ ms.lasthandoff: 12/22/2017
   
 7.  ファイル アイコンには、検索の右側にアイコンとしては、ツールバーが表示されます。 示すメッセージ ボックスが表示されます、アイコンをクリックすると**ToolbarTestCommandPackage です。IDEToolbar.ToolbarTestCommand.MenuItemCallback() 内**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

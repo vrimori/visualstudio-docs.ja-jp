@@ -1,12 +1,9 @@
 ---
-title: "擬似変数 |Microsoft ドキュメント"
-ms.custom: 
+title: 擬似変数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], pseudovariables
 - pseudovariables
 ms.assetid: fae84f68-2138-4144-9bd4-c9e271b6182a
-caps.latest.revision: "35"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f2bde32d67bb2e106d058c5a9e62801940d3df25
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e1a674e854aaf587aca28f096883839ebd82e1e8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでの擬似変数
 擬似変数は変数ウィンドウで特定の情報を表示に使用される用語または**クイック ウォッチ**  ダイアログ ボックス。 通常の変数を入力するときと同様に、擬似変数を入力できます。 ただし、擬似変数は変数ではなく、プログラム内の変数名に対応しません。  
@@ -52,7 +49,7 @@ $handles
 |`$` *registername*<br /><br /> または<br /><br /> `@` *registername*|レジスタの内容を表示*registername*です。<br /><br /> 通常は、レジスタ名を入力するだけでレジスタの内容を表示できます。 この構文を使用する必要があるのは、レジスタ名で変数名をオーバーロードしている場合だけです。 レジスタ名が現在のスコープ内での変数名と同じであると、デバッガーは、その名前を変数名と解釈します。 これは、ような場合`$` *registername*または`@` *registername*に便利です。|  
 |`$clk`|クロック周期の時間を表示します。|  
 |`$user`|アプリケーションを実行しているアカウントのアカウント情報と共に、構造体を表示します。 セキュリティ上の理由から、パスワード情報は表示されません。|  
-|`$exceptionstack`|現在の Windows ランタイムの例外のスタック トレースを表示します。 `$ exceptionstack`UWP アプリでのみ機能します。 `$ exceptionstack` は、C++ および SHE の例外ではサポートされません。|  
+|`$exceptionstack`|現在の Windows ランタイムの例外のスタック トレースを表示します。 `$ exceptionstack` UWP アプリでのみ機能します。 `$ exceptionstack` C++ と SEH の例外はサポートされていません|  
 |`$ReturnValue`|.NET Framework メソッドの戻り値を表示します。|  
   
  C# と Visual Basic では、次の表に示す擬似変数を使用できます。  
@@ -71,6 +68,6 @@ $handles
 |`$` *N* `#`|等しいオブジェクト ID を持つオブジェクトを表示*N*です。|  
 |`$dynamic`|表示、特別な**動的ビュー**を実装するオブジェクトのノード、`IDynamicMetaObjectProvider`です。 インターフェイス。 構文は`$dynamic,`*オブジェクト*です。 この機能は、.NET Framework Version 4 を使用するコードにのみ適用されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
  [変数ウィンドウ](../debugger/debugger-windows.md)

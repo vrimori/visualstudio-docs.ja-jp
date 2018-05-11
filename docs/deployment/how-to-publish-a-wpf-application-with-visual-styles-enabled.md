@@ -1,23 +1,20 @@
 ---
-title: "方法: Visual スタイルが有効になっているでの WPF アプリケーションを発行 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual スタイルが有効になっているでの WPF アプリケーションを発行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 73b22b02-fc75-42aa-82d3-51fdcaf8e5c8
-caps.latest.revision: "3"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: bab4660d0e76e467bc95c373002a9035a4ccd672
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b265806a15d5a2b3f08862432c7c8e2a94d119c5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>方法: Visual スタイルが有効になっている WPF アプリケーションを公開する
 visual スタイルを使用すると、ユーザーが選択したテーマに基づいてコモン コントロールの外観を変更できます。 既定では、Visual スタイルは、Windows Presentation Foundation (WPF) アプリケーションで有効になっていないため、手動で有効にする必要があります。 ただし、WPF アプリケーションの Visual スタイルを有効にすると、ソリューションの発行によりエラーが発生します。 このトピックでは、このエラーを解決する方法と、Visual スタイルを有効にした WPF アプリケーションを発行するためのプロセスについて説明します。 Visual スタイルの詳細については、次を参照してください。 [Visual スタイルの概要](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e)です。 エラー メッセージに関する詳細については、次を参照してください。 [ClickOnce 配置での特定のエラーをトラブルシューティング](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)です。  
@@ -34,7 +31,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
  その後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。  
   
-##  <a name="BKMK_publishsolwovs"></a>Visual スタイルが有効にせずにソリューションを公開します。  
+##  <a name="BKMK_publishsolwovs"></a> Visual スタイルが有効にせずにソリューションを公開します。  
   
 1.  プロジェクトに有効になった Visual スタイルがないことを確認します。 最初に、次の XML をプロジェクトのマニフェスト ファイルを確認します。 その後、XML がある場合は、コメント タグで XML を囲みます。  
   
@@ -48,7 +45,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
     ###### <a name="to-open-the-manifest-file-in-a-visual-basic-project"></a>Visual Basic プロジェクトのマニフェスト ファイルを開くには  
   
-    1.  メニュー バーで、次のように選択します。**プロジェクト**、 *ProjectName***プロパティ**ここで、 *ProjectName* WPF プロジェクトの名前を指定します。  
+    1.  メニュー バーで、次のように選択します。**プロジェクト**、* ProjectName ***プロパティ**ここで、 *ProjectName* WPF プロジェクトの名前を指定します。  
   
          WPF プロジェクトのプロパティ ページが表示されます。  
   
@@ -58,7 +55,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
     ###### <a name="to-open-the-manifest-file-in-a-c-project"></a>C# プロジェクトのマニフェスト ファイルを開くには  
   
-    1.  メニュー バーで、次のように選択します。**プロジェクト**、 *ProjectName***プロパティ**ここで、 *ProjectName* WPF プロジェクトの名前を指定します。  
+    1.  メニュー バーで、次のように選択します。**プロジェクト**、* ProjectName ***プロパティ**ここで、 *ProjectName* WPF プロジェクトの名前を指定します。  
   
          WPF プロジェクトのプロパティ ページが表示されます。  
   
@@ -73,7 +70,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
 2.  ソリューションをビルドし、発行します。 ソリューションを発行する方法の詳細については、次を参照してください。[する方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)です。  
   
-##  <a name="BKMK_CreateManifest"></a>マニフェスト ファイルを作成します。  
+##  <a name="BKMK_CreateManifest"></a> マニフェスト ファイルを作成します。  
   
 1.  次の XML をメモ帳ファイルに貼り付けます。  
   
@@ -94,7 +91,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
     > [!NOTE]
     >  残りの手順では、このファイルの名前があると仮定**themes.manifest**ファイルは、コンピューターの C:\temp ディレクトリに保存されているとします。  
   
-##  <a name="BKMK_embedmanifest"></a>発行済みソリューションの実行可能ファイルにマニフェスト ファイルを埋め込む  
+##  <a name="BKMK_embedmanifest"></a> 発行済みソリューションの実行可能ファイルにマニフェスト ファイルを埋め込む  
   
 1.  開く、 **Visual Studio コマンド プロンプト**です。  
   
@@ -107,7 +104,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
     > -   ソリューションは、次のディレクトリにあります:`%UserProfile%\Documents\Visual Studio 2010\Projects\`です。  
     >   
     >      次のディレクトリに、ソリューションを発行:`%UserProfile%\Documents\Visual Studio 2010\Projects\publish`です。  
-    > -   公開されたアプリケーションのファイルの最新バージョンについては、次のディレクトリにあります。`%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
+    > -   公開されたアプリケーションのファイルの最新バージョンについては、次のディレクトリにあります。 `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
     >   
     >  上記の名前とディレクトリの場所は、いずれも使用する必要はありません。 前の名前と場所は、ソリューションの公開に必要な手順について説明するためにのみ使用されます。  
   
@@ -123,7 +120,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
     mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
     ```  
   
-##  <a name="BKMK_signappdeplyman"></a>アプリケーション マニフェストと配置マニフェストを署名します。  
+##  <a name="BKMK_signappdeplyman"></a> アプリケーション マニフェストと配置マニフェストを署名します。  
   
 1.  コマンド プロンプトで、次のコマンドを実行して、現在のディレクトリ内の実行可能ファイルから `.deploy` 拡張子を削除します。  
   
@@ -163,7 +160,7 @@ visual スタイルを使用すると、ユーザーが選択したテーマに�
   
  これらの手順を実行した後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。 ソリューションを頻繁に更新する場合は、新しいバージョンを発行するたびに、スクリプトにこれらのコマンドを移動し、スクリプトを実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置で特定のエラーのトラブルシューティング](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)   
  [Visual スタイルの概要](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e)   
  [Visual スタイルを有効にします。](https://msdn.microsoft.com/library/bb773175.aspx)   

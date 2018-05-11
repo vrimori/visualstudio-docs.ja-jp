@@ -1,13 +1,10 @@
 ---
-title: "リボン XML |Microsoft ドキュメント"
-ms.custom: 
+title: リボン XML |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.Ribbon.RibbonXMLItem
 dev_langs:
@@ -26,14 +23,14 @@ helpviewer_keywords:
 - customizing the Ribbon, displaying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e12489431a7496b1d64d5aef93a24fcc239be81a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 76527949bcfc5b3023ebd75fe15726b02938d39e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ribbon-xml"></a>リボン XML
   リボン (XML) 項目では XML を使用してリボンをカスタマイズできます。 リボン (ビジュアル デザイナー) 項目ではサポートされていない方法で、リボンをカスタマイズする場合は、リボン (XML) 項目を使用します。 各項目で実行できる操作の比較を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
@@ -67,7 +64,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Outlook では追加の手順が必要です。 詳細については、次を参照してください。 [Outlook のリボンのカスタマイズ](../vsto/customizing-a-ribbon-for-outlook.md)です。  
   
- リボンからアプリケーションを自動化する方法を示すチュートリアルについては、「 [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)」をご覧ください。  
+ リボンからアプリケーションを自動化する方法を示すチュートリアルについては、「 [チュートリアル : リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)」をご覧ください。  
   
 ### <a name="assigning-callback-methods-to-controls"></a>コントロールへのコールバック メソッドの割り当て  
  コールバック メソッドをリボン XML ファイル内のコントロールに割り当てるには、コールバック メソッドの種類とメソッドの名前を指定する属性を追加します。 たとえば、次の要素は **OnToggleButton1** という名前の `OnToggleButton1`」をご覧ください。  
@@ -133,7 +130,7 @@ ms.lasthandoff: 01/10/2018
 |**onLoad**|**customUI**|アプリケーションがリボンを読み込むときに呼び出されるメソッドを識別します。|  
 |**idMso**|**タブ**|リボンに表示する組み込みタブを識別します。|  
 |**ID**|**group**|グループを識別します。|  
-|**ラベル**|**group**|グループに表示するテキストを指定します。|  
+|**label**|**group**|グループに表示するテキストを指定します。|  
   
  リボン XML ファイルの既定の要素と属性は、使用できる要素と属性の小さなサブセットです。 使用可能な要素と属性の完全な一覧については、技術記事「 [2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 2/3)](http://msdn.microsoft.com/en-us/6b904f55-525f-4520-9b81-a017db65657b)」を参照してください。  
   
@@ -144,11 +141,11 @@ ms.lasthandoff: 01/10/2018
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`GetCustomUI`|リボン XML ファイルの内容を返します。 Microsoft Office アプリケーションはこのメソッドを呼び出して、カスタム リボンのユーザー インターフェイスを定義する XML 文字列を取得します。 このメソッドは、 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドを実装します。 **注:** `GetCustomUI`をリボン XML ファイルの内容を返すだけに実装する必要があります、VSTO アドインで初期化するために使用する必要がありますされません。 具体的には、 `GetCustomUI` の実装で、ダイアログ ボックスや他のウィンドウを表示しようとしてはいけません。 カスタム リボンが正しく動作しない可能性があります。 VSTO アドインを初期化するコードを実行する必要がある場合は、そのコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。|  
+|`GetCustomUI`|リボン XML ファイルの内容を返します。 Microsoft Office アプリケーションはこのメソッドを呼び出して、カスタム リボンのユーザー インターフェイスを定義する XML 文字列を取得します。 このメソッドは、 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドを実装します。 **注:** `GetCustomUI`をリボン XML ファイルの内容を返すだけに実装する必要があります、VSTO アドインで初期化するために使用する必要がありますされません。   具体的には、 `GetCustomUI` の実装で、ダイアログ ボックスや他のウィンドウを表示しようとしてはいけません。 カスタム リボンが正しく動作しない可能性があります。 VSTO アドインを初期化するコードを実行する必要がある場合は、そのコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。|  
 |`OnLoad`|<xref:Microsoft.Office.Core.IRibbonControl> パラメーターを `ribbon` フィールドに割り当てます。 Microsoft Office アプリケーションは、カスタム リボンが読み込まれるときに、このメソッドを呼び出します。 このフィールドを使用すると、カスタムのリボンを動的に更新することができます。 詳細については、技術記事「 [2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 1/3)](http://msdn.microsoft.com/en-us/a4fd6d18-d4a8-4e64-bd89-f437208573d3)」を参照してください。|  
 |`GetResourceText`|`GetCustomUI` メソッドによって呼び出され、リボン XML ファイルの内容を取得します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
  [チュートリアル: リボン XML によるカスタム タブの作成](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)   
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)  

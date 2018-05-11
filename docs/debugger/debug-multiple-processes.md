@@ -1,12 +1,9 @@
 ---
-title: "複数のプロセスのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 複数のプロセスのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.programs
 - vs.debug.processes.attaching
@@ -19,21 +16,21 @@ dev_langs:
 - FSharp
 - C++
 ms.assetid: bde37134-66af-4273-b02e-05b3370c31ab
-caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7d0aaa97009662000bf1376c1684d9ca41a7133a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 08a089feceb6ba66791358096e3c4663df06494e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-multiple-processes"></a>複数プロセスをデバッグする
 プロセスのデバッグを開始、プロセスの切り替え、中断し実行を続行、ソースのステップ実行、デバッグを停止および終了/プロセスからデタッチする方法を次に示します。  
   
-##  <a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a>複数のプロセスの実行動作を構成します。  
+##  <a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a> 複数のプロセスの実行動作を構成します。  
  既定では、複数のプロセスがデバッガーで実行されているとき、デバッガーの中断、ステップ実行、停止のコマンドは通常、すべてのプロセスに影響を与えます。 たとえば、1 つのプロセスがブレークポイントで中断されると、他のすべてのプロセスの実行も一時停止されます。 コマンドの実行対象をより詳細に制御するために、この既定の動作を変更できます。  
   
 1.  をクリックして**デバッグ > オプションと設定**です。  
@@ -42,14 +39,14 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-##  <a name="BKMK_Find_the_source_and_symbol___pdb__files"></a>ソースとシンボル (.pdb) ファイルを検索します。  
+##  <a name="BKMK_Find_the_source_and_symbol___pdb__files"></a> ソースとシンボル (.pdb) ファイルを検索します。  
  プロセスのソース コードを処理するために、デバッガーにはプロセスのソース ファイルとシンボル ファイルへのアクセスが必要になります。 参照してください[シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)です。  
   
  プロセスのファイルにアクセスすることはできない場合、は、[逆アセンブル] ウィンドウを使用して移動できます。 参照してください[する方法: [逆アセンブル] ウィンドウを使用して](../debugger/how-to-use-the-disassembly-window.md)  
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-##  <a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a>VS ソリューション内の複数のプロセスの開始、プロセスにアタッチする、デバッガーでプロセスが自動的に開始  
+##  <a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a> VS ソリューション内の複数のプロセスの開始、プロセスにアタッチする、デバッガーでプロセスが自動的に開始  
   
 -   [Visual Studio ソリューション内の複数のプロセスのデバッグを開始します。](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution)  
   
@@ -71,22 +68,22 @@ ms.lasthandoff: 12/22/2017
 >      - または -  
 > -   デバッガーの新しいインスタンスで子プロセスが自動的に開始されるように Windows を構成します。  
   
-###  <a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a>Visual Studio ソリューション内の複数のプロセスのデバッグを開始します。  
+###  <a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a> Visual Studio ソリューション内の複数のプロセスのデバッグを開始します。  
  Visual Studio ソリューション内に独立して実行できる複数のプロジェクト (個別のプロセスで実行されるプロジェクト) があるときは、デバッガーによって起動されるプロジェクトを選択できます。  
   
  ![プロジェクトのスタートアップの種類を変更する](../debugger/media/dbg_execution_startmultipleprojects.png "DBG_Execution_StartMultipleProjects")  
   
-####  <a name="BKMK_Change_the_startup_project"></a>スタートアップ プロジェクトを変更します。  
+####  <a name="BKMK_Change_the_startup_project"></a> スタートアップ プロジェクトを変更します。  
  ソリューションのスタートアップ プロジェクトを変更するには、ソリューション エクスプ ローラーでプロジェクトを選択し、**スタートアップ プロジェクトとして設定**コンテキスト メニュー。  
   
-####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a>ソリューション内の特定のプロジェクトを開始します。  
+####  <a name="BKMK_Start_a_specific_project_in_a_solution"></a> ソリューション内の特定のプロジェクトを開始します。  
  既定のスタートアップ プロジェクトを変更することがなく、ソリューションのプロジェクトを開始、ソリューション エクスプ ローラーでプロジェクトを選択し、**デバッグ**コンテキスト メニュー。 選択できるよう**新しいインスタンスを開始**または**新しいインスタンスにステップ イン**です。  
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [VS ソリューション内の複数のプロセスの開始、プロセスにアタッチする、デバッガーでプロセスが自動的に開始](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-####  <a name="BKMK_Start_multiple_projects_in_a_solution"></a>ソリューション内の複数のプロジェクトを開始します。  
+####  <a name="BKMK_Start_multiple_projects_in_a_solution"></a> ソリューション内の複数のプロジェクトを開始します。  
   
 1.  ソリューション エクスプ ローラーでソリューションを選択し、**プロパティ**コンテキスト メニューの します。  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-###  <a name="BKMK_Attach_to_a_process"></a>プロセスにアタッチします。  
+###  <a name="BKMK_Attach_to_a_process"></a> プロセスにアタッチします。  
  デバッガーのことにも*アタッチ*Visual Studio の外部プロセスで実行されているプログラムでは、リモート デバイスで実行されているプログラムを含むです。 プログラムにアタッチした後、デバッガーの実行コマンドを使用したり、プログラムの状態をチェックしたりできます。 プログラムのチェック機能は、デバッグ情報付きでビルドされたプログラムかどうか、プログラムのソース コードにアクセスできるかどうか、および共通言語ランタイムの JIT コンパイラがデバッグ情報を追跡しているかどうかによって限定される場合があります。  
   
  参照してください[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)詳細についてはします。  
@@ -111,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-###  <a name="BKMK_Automatically_start_an_process_in_the_debugger"></a>デバッガーでプロセスが自動的に開始します。  
+###  <a name="BKMK_Automatically_start_an_process_in_the_debugger"></a> デバッガーでプロセスが自動的に開始します。  
  場合によっては、別のプロセスで起動されたプログラムのスタートアップ コードをデバッグする必要があります。 たとえば、サービスやカスタムのセットアップ動作などです。 このような場合、アプリケーションの起動時にデバッガーを起動して自動的にアタッチできます。  
   
 1.  レジストリ エディターを起動 (**regedit.exe**)。  
@@ -136,13 +133,13 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-##  <a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a>プロセスを切り替える、中断/続行、ソースをステップ実行  
+##  <a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a> プロセスを切り替える、中断/続行、ソースをステップ実行  
   
 -   [プロセスの切り替え](#BKMK_Switch_between_processes)  
   
 -   [中断、ステップ、およびコマンドを続行](#BKMK_Break__step__and_continue_commands)  
   
-###  <a name="BKMK_Switch_between_processes"></a>プロセスの切り替え  
+###  <a name="BKMK_Switch_between_processes"></a> プロセスの切り替え  
  デバッグ中には複数のプロセスにアタッチできますが、デバッガーでアクティブになっているプロセスは常に 1 つだけです。 アクティブなを設定することができますか*現在*やデバッグの場所 ツールバーで、プロセス、**プロセス**ウィンドウです。 プロセス間で切り替えるには、両方のプロセスが中断モードであることが必要です。  
   
  **現在のプロセスを設定するには**  
@@ -165,7 +162,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-###  <a name="BKMK_Break__step__and_continue_commands"></a>中断、ステップ、およびコマンドを続行  
+###  <a name="BKMK_Break__step__and_continue_commands"></a> 中断、ステップ、およびコマンドを続行  
   
 > [!NOTE]
 >  既定では、中断、続行、ステップ実行のコマンドはデバッグ中のすべてのプロセスに影響を与えます。 この動作を変更するを参照してください[複数のプロセスの実行動作を構成します。](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
@@ -186,7 +183,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-##  <a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a>デバッグの停止を終了する/プロセスからデタッチします。  
+##  <a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a> デバッグの停止を終了する/プロセスからデタッチします。  
   
 -   [停止、終了、およびデタッチのコマンド](#BKMK_Stop__terminate__and_detach_commands)  
   
@@ -196,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   
 -   デバッガーを現在のプロセスにアタッチした場合、デバッガーはプロセスからデタッチされ、プロセスは実行中のままになります。  
   
- たとえば、Visual Studio ソリューションからプロセスのデバッグを開始する場合、既に実行されている別のプロセスにアタッチし、[**デバッグの停止]**では、デバッグ セッションを終了、Visual Studio で開始されたプロセス終了中に関連付けられているプロセスが実行したままにします。 次の手順を使用してデバッグの停止方法を制御できます。  
+ たとえば、Visual Studio ソリューションからプロセスのデバッグを開始する場合、既に実行されている別のプロセスにアタッチし、[**デバッグの停止]** では、デバッグ セッションを終了、Visual Studio で開始されたプロセス終了中に関連付けられているプロセスが実行したままにします。 次の手順を使用してデバッグの停止方法を制御できます。  
   
 > [!NOTE]
 >  **1 つのプロセスがブレークするときに、すべてのプロセスをブレーク**オプションには影響しませんまたはデバッグを終了して、プロセスからのデタッチを停止します。  
@@ -205,7 +202,7 @@ ms.lasthandoff: 12/22/2017
   
 -   開く、**プロセス**ウィンドウ (ショートカット**Ctrl + Alt + Z**)。 プロセスを選択し、オンまたはオフ、**デバッグの停止時にデタッチ**チェック ボックスをオンします。  
   
-###  <a name="BKMK_Stop__terminate__and_detach_commands"></a>停止、終了、およびデタッチのコマンド  
+###  <a name="BKMK_Stop__terminate__and_detach_commands"></a> 停止、終了、およびデタッチのコマンド  
   
 |||  
 |-|-|  
@@ -221,7 +218,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [実行中のプロセスをアタッチします。](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)   

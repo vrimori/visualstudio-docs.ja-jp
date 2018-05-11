@@ -1,26 +1,42 @@
 ---
-title: "変更ログ (Visual Studio Tools for Unity) | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 変更ログ (Visual Studio Tools for Unity、Windows) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/23/2018
 ms.technology: vs-unity-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: conceptdev
-ms.author: crdun
+author: dantogno
+ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f80e5eb1d82fab7167e86550739faaaa19000786
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4d7f965cd2a0cd34ea3cb889f25809d32bee2270
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="change-log-visual-studio-tools-for-unity"></a>変更ログ (Visual Studio Tools for Unity)
+# <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="3605"></a>3.6.0.5
+ リリース: 2018 年 3 月 13 日
+
+### <a name="new-features"></a>新機能
+
+-   **プロジェクトの生成:**
+
+    -   Unity 2018.1 の新しいプロジェクト ジェネレーターのサポートが追加されました
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   カスタム プロジェクトでの破損した状態の処理を修正しました。
+
+-   **デバッガー:**
+
+    -   次のステートメントの設定を修正しました。
 
 ## <a name="3604"></a>3.6.0.4
  リリース: 2018 年 3 月 5 日
@@ -42,7 +58,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **プロジェクトの生成:**
 
-    -   .Net Standard に対するサポートを追加しました。
+    -   .NET Standard のサポートを追加しました。
 
 ### <a name="bug-fixes"></a>バグ修正
 

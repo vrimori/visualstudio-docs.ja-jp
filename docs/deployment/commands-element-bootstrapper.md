@@ -1,13 +1,9 @@
 ---
-title: "&lt;コマンド&gt;要素 (ブートス トラップ) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;コマンド&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -16,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - <Commands> element [bootstrapper]
 ms.assetid: e61d5787-fe1f-4ebf-b0cf-0d7909be7ffb
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67bbb7cbec1df53a8481acf26273cc371f92bb40
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ac3ae61012bec5f8134a48714678110951c03b76
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;コマンド&gt;要素 (ブートス トラップ)
 `Commands`テスト下にある要素の説明を実装する要素、`InstallChecks`要素、どのパッケージを宣言し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ブートス トラップがテストに失敗した場合にインストールする必要があります。  
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="bypassif"></a>BypassIf  
  `BypassIf`要素の子では、`InstallConditions`要素とするコマンドは、実行してはならない正条件について説明します。 各`InstallConditions`要素が 0 以上を持つ`BypassIf`要素。  
   
- `BypassIf`次の属性があります。  
+ `BypassIf` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="failif"></a>FailIf  
  `FailIf`要素の子では、`InstallConditions`要素と、インストールを停止する正の値の条件について説明します。 各`InstallConditions`要素が 0 以上を持つ`FailIf`要素。  
   
- `FailIf`次の属性があります。  
+ `FailIf` 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -119,10 +114,10 @@ ms.lasthandoff: 12/22/2017
 |`Schedule`|任意。 名前、`Schedule`この規則を評価するときを定義するタグです。|  
   
 ## <a name="exitcodes"></a>ExitCodes  
- `ExitCodes`要素の子では、`Command`要素。 `ExitCodes`要素は、1 つ以上含まれています。`ExitCode`要素を、インストールが終了コードをパッケージからの応答で行う必要がありますを指定します。 1 つできます省略可能な`ExitCode`要素の下に、`Command`要素。 `ExitCodes`属性はありません。  
+ `ExitCodes`要素の子では、`Command`要素。 `ExitCodes`要素は、1 つ以上含まれています。`ExitCode`要素を、インストールが終了コードをパッケージからの応答で行う必要がありますを指定します。 1 つできます省略可能な`ExitCode`要素の下に、`Command`要素。 `ExitCodes` 属性はありません。  
   
 ## <a name="exitcode"></a>ExitCode  
- `ExitCode`要素の子では、`ExitCodes`要素。 `ExitCode`要素は、インストールが終了コードをパッケージからの応答の実行を決定します。 `ExitCode`子要素が含まれていない、次の属性です。  
+ `ExitCode`要素の子では、`ExitCodes`要素。 `ExitCode`要素は、インストールが終了コードをパッケージからの応答の実行を決定します。 `ExitCode` 子要素が含まれていない、次の属性です。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -209,6 +204,6 @@ ms.lasthandoff: 12/22/2017
 </Commands>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)   
  [\<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)

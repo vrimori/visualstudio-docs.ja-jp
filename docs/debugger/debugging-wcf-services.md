@@ -1,12 +1,9 @@
 ---
-title: "WCF サービスのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: WCF サービスのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - debugging, WCF
 - WCF, debugging
 ms.assetid: 6c8974d0-2c15-4d9f-a7f3-cabd4b204cda
-caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3c4b9ce1ec91315889133e77e86ecc1a417b1b4c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8efa769ab7e8fcf55e281f7c29f1f4e04b67f850
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-wcf-services"></a>WCF サービスのデバッグ
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -38,6 +35,6 @@ ms.lasthandoff: 12/22/2017
  [方法 : セルフホストされている WCF サービスをデバッグする](../debugger/how-to-debug-a-self-hosted-wcf-service.md)  
  IIS または [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 開発サーバーの外部で実行している WCF サービスをデバッグする方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

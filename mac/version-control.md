@@ -1,16 +1,15 @@
 ---
-title: "バージョン管理 | Microsoft Docs"
-description: "Visual Studio for Mac で Git および Subversion を使用します。"
+title: バージョン コントロール
+description: Visual Studio for Mac で Git および Subversion を使用します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: ceb0c5ec32da5a34971534a11055593039ea82fd
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 9d19edb4801ee8af6a18f3e458cd06d0499e0273
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="version-control"></a>バージョン管理
 

@@ -1,25 +1,21 @@
 ---
-title: "方法: ASP.NET Web アプリケーションのコード分析を構成する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Visual Studio での ASP.NET Web アプリケーションのコード分析を構成します。'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.asp
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 0f2aaf85128bd34f4e80a7b29763506b17d77911
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: bb1adaf9e97a950c6e9c53b3734debf5588fe0b9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>方法: ASP.NET Web アプリケーション用にコード分析を構成する
 
@@ -43,6 +39,6 @@ Visual Studio では、コード分析の一覧から選択できる*ルール �
 
     - 使用する規則セットを選択します。
 
-    - 選択**\<参照 >**既存のカスタム規則セットを指定ではありません、ボックスの一覧です。
+    - 選択**\<参照 >** 既存のカスタム規則セットを指定ではありません、ボックスの一覧です。
 
-    - カスタム規則セットを定義します。 詳細については、次を参照してください。[カスタム規則セットの作成](../code-quality/creating-custom-code-analysis-rule-sets.md)です。
+    - 定義、[カスタム規則セット](../code-quality/how-to-create-a-custom-rule-set.md)です。

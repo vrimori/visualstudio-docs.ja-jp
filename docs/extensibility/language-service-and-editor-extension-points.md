@@ -1,24 +1,23 @@
 ---
-title: "言語サービスとエディター拡張機能ポイント |Microsoft ドキュメント"
-ms.custom: 
+title: 言語サービスとエディター拡張機能ポイント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: editors [Visual Studio SDK], new - extension points
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
+helpviewer_keywords:
+- editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
-caps.latest.revision: "33"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7e62f1f3cac8f279dedbc79f283b908119d66ff2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d3c253ba52da1fd6bb9133e44ba6858e8f1a4151
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="language-service-and-editor-extension-points"></a>言語サービスとエディターの拡張点
 エディターでは、ほとんどの言語サービス機能を含め、Managed Extensibility Framework (MEF) コンポーネント パーツとして拡張できる拡張ポイントを提供します。 主要な拡張機能ポイントのカテゴリを次に示します。  
@@ -44,9 +43,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="extending-content-types"></a>コンテンツの種類の拡張  
  コンテンツの種類は、たとえば、エディターによって処理されるテキスト、"text"、"code"または"CSharp"の種類の定義です。 型の変数を宣言することで、新しいコンテンツの種類を定義する<xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition>し、新しいコンテンツの種類の一意の名前を与えることです。 エディターでは、コンテンツの種類を登録するには次の属性と共にエクスポートします。  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>コンテンツの種類の名前です。  
+-   <xref:Microsoft.VisualStudio.Utilities.NameAttribute> コンテンツの種類の名前です。  
   
--   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>このコンテンツの種類の派生元のコンテンツの種類の名前です。 コンテンツ型は、他の複数のコンテンツ タイプから継承することができます。  
+-   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> このコンテンツの種類の派生元のコンテンツの種類の名前です。 コンテンツ型は、他の複数のコンテンツ タイプから継承することができます。  
   
  <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition>クラスはシールされている型のパラメーターなしでエクスポートすることができます。  
   
@@ -295,7 +294,7 @@ internal IViewTagAggregatorFactoryService ViewTagAggregatorFactoryService { get;
   
 -   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: これにより、UI に表示する形式  
   
- コンス トラクターでは、表示名とタグの外観を定義します。 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A>塗りつぶしの色を定義および<xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A>境界線の色を定義します。 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A>形式の定義のローカライズ可能な名前を指定します。  
+ コンス トラクターでは、表示名とタグの外観を定義します。 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A> 塗りつぶしの色を定義および<xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A>境界線の色を定義します。 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A>形式の定義のローカライズ可能な名前を指定します。  
   
  形式の定義の例を次に示します。  
   
@@ -343,7 +342,7 @@ internal AdornmentLayerDefinition testLayerDefinition;
   
 -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: 表示要素の有効期限 (たとえば、"text"または「コード」) のコンテンツの種類。  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: この表示要素の有効期限、テキスト ビューの種類。 クラス<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles>ビュー ロールの定義済みのテキスト セットを持ちます。 たとえば、<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>ファイルのテキスト ビューは、主に使用します。 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>テキスト ビュー、ユーザーが編集または、マウスとキーボードを使用して移動できますが使用されます。 例については<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>ビューは、エディターのテキスト ビュー、および**出力**ウィンドウです。  
+-   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: この表示要素の有効期限、テキスト ビューの種類。 クラス<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles>ビュー ロールの定義済みのテキスト セットを持ちます。 たとえば、<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>ファイルのテキスト ビューは、主に使用します。 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> テキスト ビュー、ユーザーが編集または、マウスとキーボードを使用して移動できますが使用されます。 例については<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>ビューは、エディターのテキスト ビュー、および**出力**ウィンドウです。  
   
  次の例では、装飾プロバイダーにエクスポート属性を示します。  
   
@@ -371,7 +370,7 @@ internal AdornmentLayerDefinition testAdornmentLayer;
   
 -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>:、表示要素の有効期限 (たとえば、"text"または「コード」) のコンテンツの種類。  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: 対象のテキスト ビューの種類タグまたは表示要素が無効です。 クラス<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles>ビュー ロールの定義済みのテキスト セットを持ちます。 たとえば、<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>ファイルのテキスト ビューは、主に使用します。 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>テキスト ビュー、ユーザーが編集または、マウスとキーボードを使用して移動できますが使用されます。 例については<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>ビューは、エディターのテキスト ビュー、および**出力**ウィンドウです。  
+-   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: 対象のテキスト ビューの種類タグまたは表示要素が無効です。 クラス<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles>ビュー ロールの定義済みのテキスト セットを持ちます。 たとえば、<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>ファイルのテキスト ビューは、主に使用します。 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> テキスト ビュー、ユーザーが編集または、マウスとキーボードを使用して移動できますが使用されます。 例については<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>ビューは、エディターのテキスト ビュー、および**出力**ウィンドウです。  
   
 -   <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: タグまたは定義されている表示要素の種類。 2 番目を追加する必要があります<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>の<xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>します。  
   
@@ -511,7 +510,7 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource>代わりには廃止されて<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>です。  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> 代わりには廃止されて<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>です。  
   
  さらに、同じ種類のプロバイダーを実装する必要があります。  
   
@@ -524,7 +523,7 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider>代わりには廃止されて<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>です。  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> 代わりには廃止されて<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>です。  
   
  次の属性と共に、プロバイダーをエクスポートする必要があります。  
   

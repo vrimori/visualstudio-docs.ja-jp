@@ -1,26 +1,24 @@
 ---
-title: "ツール ウィンドウにツールバーを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: ツール ウィンドウにツールバーを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - tool windows, adding toolbars
 - toolbars [Visual Studio], adding to tool windows
 ms.assetid: 172f64b3-87f8-4292-9c1c-65bffa2b0970
-caps.latest.revision: "48"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 07b5eea4fe6d5f58ec4b05563af253aeef0c5f6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 47ff5f69ff559ea1c08d0ae9bdd7192a257c844e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-toolbar-to-a-tool-window"></a>ツール ウィンドウにツールバーを追加します。
 このチュートリアルでは、ツール ウィンドウにツールバーを追加する方法を示します。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  ツールバーを追加する方法の詳細については、次を参照してください。[ツールバーを追加する](../extensibility/adding-a-toolbar.md)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-toolbar-for-a-tool-window"></a>ツール ウィンドウのツールバーの作成  
   
@@ -117,5 +115,5 @@ ms.lasthandoff: 12/22/2017
   
 3.  ツールバーで、メッセージを表示するアイコンをクリックして**TWTestCommandPackage 内 TWToolbar.TWTestCommand.MenuItemCallback()**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツール バーの追加](../extensibility/adding-a-toolbar.md)

@@ -1,13 +1,9 @@
 ---
-title: "デバッガーでは、Visual Studio でのコード内を移動 |Microsoft ドキュメント"
+title: デバッガーでは、Visual Studio でのコード内を移動 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.execution
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6b83e1be32eb657555131a934f8c11f9567c5bc
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: ae96b360620a58fa323d080e6262c7f2966fa160
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="navigate-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード内を移動します。
 デバッガーでコードを移動するには、コマンドおよびショートカットについて理解し、使用することでより高速で簡単に見つけ、アプリケーションの問題を解決します。 デバッガーでコードを移動するときに、アプリの状態を検査またはの詳細については、その実行フローできます。  
@@ -35,19 +30,19 @@ ms.lasthandoff: 01/29/2018
   
  緑色の矢印もデバッガーを起動します (同じ**f5 キーを押して**)。  
   
- ![DBG &#95;です。基本 &#95;です。デバッグの開始日と #95;](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
+ ![DBG&#95;基礎&#95;開始&#95;デバッグ](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
  アタッチされたデバッガーでアプリを起動できる他のいくつかの方法を含める**F11** ([コードにステップ イン](#BKMK_Step_into__over__or_out_of_the_code))、 **F10** ([コードをステップ](#BKMK_Step_over_Step_out))、または使用して**カーソルまで実行**です。  これらのオプションの機能には、その他のセクションでは、情報は、このトピックを参照してください。  
   
  デバッグすると、黄色の行に次に実行されるコードが表示されます。  
   
- ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+ ![DBG&#95;基礎&#95;中断&#95;モード](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
   
  デバッグ中と同様に、コマンド間で切り替えることができます**f5 キーを押して**、 **F11**で検索するコードをすばやく表示するようなブレークポイント) には、このトピックで説明するその他の機能を使用するとします。  
   
  [ローカル] ウィンドウで変数の値の表示や [ウォッチ] ウィンドウで式の評価など、ほとんどのデバッガー機能は、デバッガーが一時停止中にのみ、使用可能な (とも呼ばれる*中断モード*)。 デバッガーを一時停止すると、ときに、関数、変数、中に、アプリの状態が中断され、オブジェクトはメモリに残ります。 中断モードでは、要素の位置と状態を確認して違反やバグを調査できます。 プロジェクトの種類によって行うことも中断モードでアプリを調整します。 これらの機能を示すビデオを見るには、次を参照してください。[デバッガーの使用を開始する](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)です。
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a>コードにステップ イン、1 行ずつ  
+##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> コードにステップ イン、1 行ずつ  
  デバッグ中にコード (ステートメントごと) の行ごとに停止する、 **F11**キーボード ショートカット (または**デバッグ** > **ステップ イン**メニュー)。  
   
 > [!TIP]
@@ -75,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
  関数にステップ イン中に、呼び出し履歴を視覚的にトレースするを参照してください。[デバッグ中に、呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)です。  
   
-##  <a name="BKMK_Step_over_Step_out"></a>関数をスキップしています。 コードをステップ実行  
+##  <a name="BKMK_Step_over_Step_out"></a> 関数をスキップしています。 コードをステップ実行  
  デバッガーでコードを実行するときに多くの場合を実感、特定の関数の動作を確認する必要はありません (必要ないか、または知っている十分にテストされたライブラリ コードと同様に動作、)。 これらのコマンドを使用してコードをスキップする (関数は、まだ実行もちろん、ものの、デバッガーがスキップします)。  
   
 |キーボード コマンド|メニュー コマンド|説明|  
@@ -86,7 +81,7 @@ ms.lasthandoff: 01/29/2018
 > [!TIP]
 >  アプリ内のエントリ ポイントを検索する必要がある場合が始まる**F10**または**F11**です。 これらのコマンドは、アプリの状態を検査したり、実行フローの詳細を検索しようとするときに多くの場合、便利です。  
   
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a>特定の位置または関数まで実行するには  
+##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> 特定の位置または関数まで実行するには  
  多くの場合、コードのデバッグの方法が推奨これらのメソッドは便利です、検査するどのようなコードだけがわかっている場合またはデバッグを開始するを把握するには、少なくともです。  
   
 -   **コードにブレークポイントを設定する**  
@@ -132,7 +127,7 @@ ms.lasthandoff: 01/29/2018
   
      ![[ブレークポイント] ダイアログ ボックスを選択して](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a>実行フローを変更するポインターを移動します。  
+##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 実行フローを変更するポインターを移動します。  
  デバッガーが一時停止中には、コードを実行するは、次のステートメントを設定する命令ポインターを移動することができます。 ソース ウィンドウまたは [逆アセンブル] ウィンドウのマージンに表示される黄色の矢印は、次に実行されるステートメントの位置を示します。 この矢印を移動すると、コードの一部をスキップしたり、前に実行した行に戻ったりできます。 既知のバグを含むコードのセクションをスキップするなどの場合に利用できます。  
   
  ![ポインターを移動](../debugger/media/dbg_basics_example3.gif "DBG_Basics_Example3")

@@ -1,29 +1,24 @@
 ---
-title: "IDiaStackWalkHelper::put_registerValue |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaStackWalkHelper::put_registerValue |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaStackWalkHelper2::put_registerValue method
 ms.assetid: 8f02ce54-ef59-455f-8aa6-dc26761c7aff
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eec04b3ab02f10d6eb9d745c21d2d0872df0ab8b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2c094384fd4c1e01b28edcc809d58ab56b3bb225
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiastackwalkhelperputregistervalue"></a>IDiaStackWalkHelper::put_registerValue
 レジスタの値を設定します。  
@@ -50,6 +45,6 @@ HRESULT put_registerValue (
 ## <a name="remarks"></a>コメント  
  値のサイズに関係なく、実装はだけ何レジスタは、通常を保持を保存する必要があります。 たとえば、8 ビット レジスタのみ、最下位 8 ビットの指定した値を保持します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)

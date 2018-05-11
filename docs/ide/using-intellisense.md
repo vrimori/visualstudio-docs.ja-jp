@@ -1,11 +1,9 @@
 ---
-title: "Visual Studio の IntelliSense | Microsoft Docs"
-ms.custom: 
+title: Visual Studio の IntelliSense | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.tools.intellisense
 helpviewer_keywords:
@@ -16,14 +14,14 @@ helpviewer_keywords:
 - IntelliSense [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88ee47502d0aa15e391155cae918c8e579e72194
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d6e87113f8c8a703a6eb4d893c0ca54a90bfb8d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-intellisense-in-visual-studio"></a>Visual Studio での IntelliSense の使用
 

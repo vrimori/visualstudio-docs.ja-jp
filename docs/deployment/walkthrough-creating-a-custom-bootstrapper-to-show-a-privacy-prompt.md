@@ -1,12 +1,9 @@
 ---
-title: "チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートス トラップの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プライバシー プロンプトでのカスタム ブートス トラップの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -19,18 +16,18 @@ helpviewer_keywords:
 - Windows Installer deployment, prerequisites
 - prerequisites [.NET Framework], custom bootstrapper package
 ms.assetid: 2f3edd6a-84d1-4864-a1ae-6a13c5732aae
-caps.latest.revision: "10"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 97b5ba379eb715c63e5432b22999e2c4f12bf50d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 73694df5b6e9e5d4c8b4ad40f16cf60998e9fc82
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
+# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトでのカスタム ブートス トラップを作成します。
 新しいファイルおよびアセンブリのバージョンを持つアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成することができます。 をお客様がこれに同意することを確認するために、プライバシー プロンプトを表示できます。 次に、自動的に更新するアプリケーションへのアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
@@ -40,12 +37,12 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio 2010。  
   
-## <a name="creating-an-update-consent-dialog-box"></a>更新プログラムの同意 ダイアログ ボックスを作成します。  
+## <a name="create-an-update-consent-dialog-box"></a>作成、更新プログラムの同意 ダイアログ ボックス  
  プライバシー プロンプトを表示するには、アプリケーションの自動更新することに同意を求める、アプリケーションを作成します。  
   
 #### <a name="to-create-a-consent-dialog-box"></a>同意を求めるダイアログ ボックスを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
 2.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして**Windows**、クリックして**WindowsFormsApplication**です。  
   
@@ -71,13 +68,13 @@ ms.lasthandoff: 12/22/2017
   
 12. **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **レイアウト**に**続行**です。  
   
-13. **プロパティ**ウィンドウで、変更、 **(名)**プロパティの **デザイン**に**ProceedButton**です。  
+13. **プロパティ**ウィンドウで、変更、 **(名)** プロパティの **デザイン**に**ProceedButton**です。  
   
 14. **ツールボックス**、ドラッグ、**ボタン**コントロールをフォームの右下にします。  
   
 15. **プロパティ**ウィンドウで、変更、**テキスト**プロパティの **レイアウト**に**キャンセル**です。  
   
-16. **プロパティ**ウィンドウで、変更、 **(名)**プロパティの **デザイン**に**CancelButton**です。  
+16. **プロパティ**ウィンドウで、変更、 **(名)** プロパティの **デザイン**に**CancelButton**です。  
   
 17. デザイナーをダブルクリックして、**同意**CheckedChanged イベント ハンドラーを生成する チェック ボックスです。  
   
@@ -137,9 +134,9 @@ ms.lasthandoff: 12/22/2017
   
      [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
   
-26. **ビルド**] メニューのをクリックして**[ソリューションのビルド**です。  
+26. **ビルド**] メニューのをクリックして **[ソリューションのビルド**です。  
   
-## <a name="creating-the-custom-bootstrapper-package"></a>カスタム ブートス トラップ パッケージを作成します。  
+## <a name="create-the-custom-bootstrapper-package"></a>カスタム ブートス トラップ パッケージを作成します。  
  エンドユーザーに、プライバシー プロンプトを表示するには、同意を求めるダイアログの更新アプリケーション用のカスタム ブートス トラップ パッケージを作成し、ClickOnce アプリケーションのすべての前提条件として含めるです。  
   
  この手順では、次のドキュメントを作成することで、カスタム ブートス トラップ パッケージを作成する方法を示します。  
@@ -231,7 +228,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  必要に応じて、各ロケールのソフトウェア ライセンス条項を新しい package.xml マニフェスト ファイルと新しい eula.rtf ドキュメントを作成します。 たとえば、fr および de ロケールのサブディレクトリを作成する場合は、package.xml 個別マニフェスト ファイルおよびソフトウェア ライセンス条項を作成し、fr および de サブディレクトリに保存します。  
   
-## <a name="setting-the-update-consent-application-as-a-prerequisite"></a>前提条件として更新プログラムの同意を求めるアプリケーションの設定  
+## <a name="set-the-update-consent-application-as-a-prerequisite"></a>前提条件として更新プログラムの同意を求めるアプリケーションを設定します。  
  Visual Studio で、前提条件として更新プログラムの同意を求めるアプリケーションを設定できます。  
   
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>前提条件として更新プログラムの同意を求めるアプリケーションを設定するには  
@@ -247,9 +244,9 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  必須コンポーネント ダイアログ ボックスで更新プログラムの同意を求めるダイアログを表示する Visual Studio を閉じて再度開くことがあります。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
-## <a name="creating-and-testing-the-setup-program"></a>作成して、セットアップ プログラムをテストします。  
+## <a name="create-and-test-the-setup-program"></a>作成し、セットアップ プログラムをテストします。  
  前提条件として更新プログラムの同意を求めるアプリケーションを設定した後、アプリケーションのインストーラーとブートス トラップを生成できます。  
   
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>作成していない をクリックして、セットアップ プログラムをテストするには、ことに同意します。  
@@ -258,7 +255,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
   
-3.  クリックして、**発行**] ページで、クリックして**[今すぐ発行**です。  
+3.  クリックして、**発行**] ページで、クリックして **[今すぐ発行**です。  
   
 4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
@@ -284,7 +281,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  **プロジェクト** メニューのをクリックして*ProjectName* **プロパティ**です。  
   
-3.  クリックして、**発行**] ページで、クリックして**[今すぐ発行**です。  
+3.  クリックして、**発行**] ページで、クリックして **[今すぐ発行**です。  
   
 4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
@@ -302,7 +299,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
  [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   

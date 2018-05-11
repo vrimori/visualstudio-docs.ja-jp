@@ -1,16 +1,15 @@
 ---
-title: "Visual Studio for Mac のサブスクリプションを有効にする | Microsoft Docs"
-description: "この記事では、Microsoft アカウントを使用してサブスクリプションを有効にして、Visual Studio for Mac の機能をロック解除する方法について説明します。"
+title: Visual Studio for Mac のサブスクリプションを有効にする
+description: この記事では、Microsoft アカウントを使用してサブスクリプションを有効にして、Visual Studio for Mac の機能をロック解除する方法について説明します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 9202229c1562c89e0ddd9852113d63dc85e0bcd2
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: dcfaee4d086fd5cd9d8ce85f365e63fbb21f8a9e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="enable-subscription"></a>サブスクリプションを有効にする
 
@@ -28,7 +27,7 @@ Visual Studio for Mac には、3 つの異なるサブスクリプション レ�
 
 サブスクリプションの有効期限が切れた場合は、2 つの選択肢があります。
 
-1. サブスクリプションを更新します。 [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/) からサブスクリプションを更新できます。
+1. サブスクリプションを更新します。 [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/) を参照して、サブスクリプションを更新することができます。
 
 2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細については、[複数のユーザー アカウントの追加](~/signing-in.md)に関する記事を参照してください。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。 
 

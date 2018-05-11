@@ -1,13 +1,9 @@
 ---
-title: "&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - <compatibleFrameworks> element [ClickOnce deployment manifest]
 ms.assetid: f6c3ee55-9e65-403d-8664-3ebde872c7d4
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 955e29add1990793711dd69fffbd2306ce61407d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d406ecf058bf1c570b57ed8f50815cc3d9378cbe
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置)
 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。  
@@ -78,5 +73,5 @@ ms.lasthandoff: 12/22/2017
 </compatibleFrameworks>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

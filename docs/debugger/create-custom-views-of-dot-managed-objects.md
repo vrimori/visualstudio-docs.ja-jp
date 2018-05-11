@@ -1,13 +1,9 @@
 ---
-title: "管理対象オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 管理対象オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.data.elements
 dev_langs:
@@ -24,17 +20,16 @@ helpviewer_keywords:
 - debugger, expanding data types
 - mcee_mc.dat file
 ms.assetid: 9969e9b2-9008-4729-8a14-0d6deaa61576
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 329e7fae6a2a8682c23417f88e59700b7caffd53
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6be491a5c7a0ceb0ed536416cdd3b273f96b4bb1
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-custom-views-of-managed-objects"></a>カスタム ビューの管理オブジェクトを作成します。
 Visual Studio でデバッガーの変数ウィンドウにデータ型を表示する方法をカスタマイズできます。  
@@ -55,7 +50,7 @@ Visual Studio でデバッガーの変数ウィンドウにデータ型を表示
   
  また、ネイティブ型の表示は、式エバリュエーター アドインを記述してカスタマイズできます。 詳細については、次を参照してください。 [EEAddIn サンプル: デバッグ式エバリュエーター アドイン](http://msdn.microsoft.com/en-us/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
  [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)   
  [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   

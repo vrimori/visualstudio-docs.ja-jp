@@ -1,22 +1,23 @@
 ---
-title: "Visual Studio で ADO.NET を使用して単純なデータ アプリケーションを作成 |Microsoft ドキュメント"
+title: Visual Studio で ADO.NET を使用して単純なデータ アプリケーションを作成します。
 ms.date: 08/23/2017
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: 2222841f-e443-4a3d-8c70-4506aa905193
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ab9c63e3601fb58bd2c25f84cf7ac8cda34f5b91
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 3d0b60bb4e7048e2dc49774ec69d3eea4fc0ce6c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/15/2018
 
 2. 右クリックして**データ接続**を選択して * * 新しい SQL Server データベースの作成..."です。
 
-3. **サーバー名**テキスト ボックスに、入力**(localdb) \mssqllocaldb**です。
+3. **サーバー名**テキスト ボックスに、入力 **(localdb) \mssqllocaldb**です。
 
 4. **新しいデータベース名**テキスト ボックスに、入力**Sales**、順に選択**OK**です。
 
@@ -125,11 +126,11 @@ ms.lasthandoff: 03/15/2018
  右クリックして、接続文字列を見つけることができます、 **Sales**内のデータ接続**サーバー エクスプ ローラー**を選択して**プロパティ**です。 検索、 **ConnectionString**プロパティ、しを使用して、CTRL + A Ctrl + C を選択し、文字列をクリップボードにコピーします。
 
 1.  C# の場合、使用している場合**ソリューション エクスプ ローラー**、展開、**プロパティ**ノード、プロジェクトの下で開き、 **Settings.settings**ファイル。
-    Visual Basic を使用している場合**ソリューション エクスプ ローラー**、] をクリックして**[すべてのファイル**、展開、 **My Project**ノードを開き、 **Settings.settings**ファイル。
+    Visual Basic を使用している場合**ソリューション エクスプ ローラー**、] をクリックして **[すべてのファイル**、展開、 **My Project**ノードを開き、 **Settings.settings**ファイル。
 
 2.  **名前**列、入力`connString`です。
 
-3.  **型**一覧で、 **(接続文字列)**です。
+3.  **型**一覧で、 **(接続文字列)** です。
 
 4.  **スコープ**一覧で、**アプリケーション**です。
 

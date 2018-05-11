@@ -1,35 +1,40 @@
 ---
-title: "PickBranch アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナー - PickBranch アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.PickBranch.UI
 ms.assetid: f523ad47-bbc0-4cda-a35c-41e67c4ba081
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be1cb6fdef8eed2a0f6b02f987143220e9b99d91
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 7ea106a96a5d6b81ee0b0b898c881eb752582f8d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch アクティビティ デザイナー
+
 <xref:System.Activities.Statements.PickBranch> は、受信イベントによってトリガー可能な、<xref:System.Activities.Statements.Pick> アクティビティ内のイベント ベースの実行パスを提供します。
 
 ## <a name="pickbranch"></a>PickBranch
- <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick.Branches%2A> アクティビティの <xref:System.Activities.Statements.Pick> コレクションに格納されます。 各 <xref:System.Activities.Statements.PickBranch> は <xref:System.Activities.Statements.Pick> アクティビティの分岐に格納され、トリガーの役割を果たす受信イベントに応答して実行できます。 この方法では、Windows ワークフロー デザイナーは、イベント ベースの制御フロー モデリングを提供します。 各 <xref:System.Activities.Statements.PickBranch> には、<xref:System.Activities.Statements.PickBranch.Trigger%2A> および <xref:System.Activities.Statements.PickBranch.Action%2A> が含まれます。
+
+<xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick.Branches%2A> アクティビティの <xref:System.Activities.Statements.Pick> コレクションに格納されます。 各 <xref:System.Activities.Statements.PickBranch> は <xref:System.Activities.Statements.Pick> アクティビティの分岐に格納され、トリガーの役割を果たす受信イベントに応答して実行できます。 この方法では、Windows ワークフロー デザイナーは、イベント ベースの制御フロー モデリングを提供します。 各 <xref:System.Activities.Statements.PickBranch> には、<xref:System.Activities.Statements.PickBranch.Trigger%2A> および <xref:System.Activities.Statements.PickBranch.Action%2A> が含まれます。
 
 ### <a name="how-to-use-the-pick-activity-designer"></a>Pick アクティビティ デザイナーの使用方法
- **PickBranch**デザイナーは含まれて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブに[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)](または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X)。
 
- 2 つの空<xref:System.Activities.Statements.PickBranch>を持つオブジェクトの名前を表示する**Branch1**と**Branch2**の要素として既定で作成される、<xref:System.Activities.Statements.Pick>アクティビティと、 **Pick**アクティビティ デザイナーをドロップ最初に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]です。 それぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティの値を編集できる、 **PickBranch**デザイナーのヘッダー内、または、**プロパティ**各分岐のウィンドウ。
+**PickBranch**デザイナーは含まれて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X)。
 
- 2 つの方法を追加する<xref:System.Activities.Statements.PickBranch>オブジェクトのコレクションを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、 **Pick**デザイン画面。
+2 つの空<xref:System.Activities.Statements.PickBranch>を持つオブジェクトの名前を表示する**Branch1**と**Branch2**の要素として既定で作成される、<xref:System.Activities.Statements.Pick>アクティビティと、 **Pick**アクティビティ デザイナーは最初に、ワークフロー デザイナーにドロップします。 それぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティの値を編集できる、 **PickBranch**デザイナーのヘッダー内、または、**プロパティ**各分岐のウィンドウ。
 
-1.  **PickBranch**デザイナーを作成、<xref:System.Activities.Statements.PickBranch>からドラッグされたときに、**ツールボックス**の分岐のいずれかにドロップし、 **Pick** 上のアクティビティデザイナー[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面。 新しい <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick> デザイナー内で、コレクションに含まれている既存の <xref:System.Activities.Statements.PickBranch> 要素の左側または右側に配置できます。 ドラッグしたときに、 **PickBranch**にデザイナー、 **Pick** 、マウスでデザイナー、 **Pick**デザイナーでは、青灰色の縦の帯を使用して、場所を示します、 <xref:System.Activities.Statements.PickBranch>マウスの指定した配置に追加されます。
+2 つの方法を追加する<xref:System.Activities.Statements.PickBranch>オブジェクトのコレクションを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、 **Pick**デザイン画面。
+
+1.  **PickBranch**デザイナーを作成、<xref:System.Activities.Statements.PickBranch>からドラッグされたときに、**ツールボックス**の分岐のいずれかにドロップし、 **Pick**上のアクティビティ デザイナー、ワークフロー デザイナーのサーフェイスです。 新しい <xref:System.Activities.Statements.PickBranch> オブジェクトは、<xref:System.Activities.Statements.Pick> デザイナー内で、コレクションに含まれている既存の <xref:System.Activities.Statements.PickBranch> 要素の左側または右側に配置できます。 ドラッグしたときに、 **PickBranch**にデザイナー、 **Pick** 、マウスでデザイナー、 **Pick**デザイナーでは、青灰色の縦の帯を使用して、場所を示します、 <xref:System.Activities.Statements.PickBranch>マウスの指定した配置に追加されます。
 
 2.  右クリックして**Pick**アクティビティ デザイナー (内部ではない**PickBranch**デザイナー) を選択し、コンテキスト メニューを**分岐の作成**を追加、新しい<xref:System.Activities.Statements.PickBranch>です。 注意して、新しい<xref:System.Activities.Statements.PickBranch>、既存の右側に追加<xref:System.Activities.Statements.PickBranch>内のオブジェクト、 **Pick**デザイナー。
 
@@ -46,7 +51,7 @@ ms.lasthandoff: 03/12/2018
  オンにしてください、 **PickBranch**デザイナー内のアクティビティのいずれかを選択すると、その**トリガー**または**アクション**ボックスが、誤ってこれらの活動の 1 つを削除していません。<xref:System.Activities.Statements.PickBranch>オブジェクト。
 
 ### <a name="pickbranch-properties-in-the-workflow-designer"></a>ワークフロー デザイナーでの PickBranch のプロパティ
- 次の表に、最も役に立つ <xref:System.Activities.Statements.PickBranch> のプロパティと、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]でのその使用方法を示します。
+ 次の表は、最も役に立つ<xref:System.Activities.Statements.PickBranch>プロパティと、ワークフロー デザイナーで使用する方法について説明します。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

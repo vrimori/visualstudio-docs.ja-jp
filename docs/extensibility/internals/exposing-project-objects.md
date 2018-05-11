@@ -1,26 +1,24 @@
 ---
-title: "プロジェクト オブジェクトを公開する |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクト オブジェクトを公開する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project objects, exposing
 - extensibility, project objects
 ms.assetid: 5bb24967-434a-4ef4-87a0-2f3250c9e22d
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 668287dc8b0b5ac9dd37cb450582e3a56fb7f25e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4eaa2a5e8c5c153698069084b9f0cfe406cad7db
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-project-objects"></a>プロジェクト オブジェクトを公開します。
 カスタム プロジェクトの種類は、オートメーション インターフェイスを使用してプロジェクトへのアクセスを許可するために、オートメーション オブジェクトを提供できます。 標準を提供するすべてのプロジェクトの種類が期待どおり<xref:EnvDTE.Project>からアクセスされるオートメーション オブジェクト<xref:EnvDTE.Solution>IDE で開かれているすべてのプロジェクトのコレクションを含むです。 プロジェクト内の各項目をによって公開されると予想される、<xref:EnvDTE.ProjectItem>オブジェクトを使用してアクセス`Project.ProjectItems`です。 これらの標準的なオートメーション オブジェクトだけでなくプロジェクト固有のオートメーション オブジェクトを提供する、プロジェクトを選択できます。  
@@ -94,5 +92,5 @@ ms.lasthandoff: 12/22/2017
   
      カスタム`Projects`コレクション オブジェクトは、プロジェクトのオートメーション モデルの残りの部分の利便性のためのエントリ ポイントです。 プロジェクトのオブジェクトはからアクセスも、<xref:EnvDTE.Solution>プロジェクト コレクションです。 コンシューマーを提供する適切なコードとレジストリ エントリを作成した後`Projects`オブジェクト コレクションを実装が残りのプロジェクトのモデルの標準的なオブジェクトを提供する必要があります。 詳細については、次を参照してください。[プロジェクトがモデリング](../../extensibility/internals/project-modeling.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>

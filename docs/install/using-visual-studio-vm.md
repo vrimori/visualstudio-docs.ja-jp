@@ -1,39 +1,43 @@
 ---
-title: "Azure 仮想マシンでの Visual Studio の使用 | Microsoft Docs"
-description: "Azure 仮想マシンで Visual Studio を使用する方法を説明します"
+title: Azure 仮想マシンでの Visual Studio の使用
+description: Azure 仮想マシンで Visual Studio を使用する方法を説明します
 ms.date: 03/03/2018
 ms.technology: vs-acquisition
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 helpviewer_keywords:
 - azure services
 - virtual machine; VM
 - installation
 - visual studio
 author: PhilLee-MSFT
-ms.author: phillee
-manager: sacalla
+ms.author: tglee
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4492a35c7d58aa92c2c3e86de5bd6be8f8ad9eca
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: f0c87d482c2bc7ad174f7074091767fb6127bf70
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a id="top"> </a> Azure 上の Visual Studio イメージ
+
 構成済みの Azure 仮想マシン (VM) での Visual Studio の使用は、短時間で何もない状態から開発環境を稼働状態にする簡単な方法です。 Visual Studio の構成が異なるさまざまなシステム イメージを、[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=%22visual%20studio%202017%22&page=1) で入手できます。
 
 まだ Azure を使ったことがない場合は、 [無料の Azure アカウントを作成してください](https://azure.microsoft.com/free)。
 
 ## <a name="what-configurations-and-versions-are-available"></a>利用できる構成とバージョン
+
 最新のメジャー バージョンである Visual Studio 2017 および Visual Studio 2015 のイメージは、Azure Marketplace で見つけることができます。 メジャー バージョンごとに、最初にリリースされた (RTW) バージョンと最新の更新バージョンを確認できます。 それぞれのバージョンに、Visual Studio Enterprise Edition と Visual Studio Community Edition があります。 これらのイメージは少なくとも毎月更新され、Visual Studio と Windows の最新の更新プログラムが組み込まれます。 イメージの名前は同じままですが、各イメージの説明には、インストールされる製品バージョンとイメージの "更新" 日が含まれます。
 
-| リリース バージョン              | エディション            | 製品バージョン     |
-|:-----------------------------------------:|:----------------------------:|:-----------------------:|
-| Visual Studio 2017: 最新 (バージョン 15.6) |    Enterprise、Community     |      バージョン 15.6.0     |
-|         Visual Studio 2017: RTW           |    Enterprise、Community     |      バージョン 15.0.10    |
-|   Visual Studio 2015: 最新 (Update 3)   |    Enterprise、Community     |  バージョン 14.0.25431.01  |
-|         Visual Studio 2015: RTW           |             なし             | (サービス有効期限切れ) |
+| リリース バージョン                                              | エディション                     |     製品バージョン     |
+|:------------------------------------------------------------:|:----------------------------:|:-----------------------:|
+| Visual Studio 2017: 最新 (バージョン 15.6)                    |    Enterprise、Community     |      バージョン 15.6.4     |
+| Visual Studio 2017: 最新のプレビュー (バージョン 15.7、プレビュー 3) |    Enterprise、Community     |      バージョン 15.7.0     |
+|         Visual Studio 2017: RTW                              |    Enterprise、Community     |      バージョン 15.0.10    |
+|   Visual Studio 2015: 最新 (Update 3)                      |    Enterprise、Community     |  バージョン 14.0.25431.01  |
+|         Visual Studio 2015: RTW                              |             なし             | (サービス有効期限切れ) |
 
 > [!NOTE]
 > Microsoft のサービス ポリシーに従って、Visual Studio 2015 の最初にリリースされた (RTW) バージョンは、サービスの有効期限が切れています。 Visual Studio 2015 製品ラインに提供されるバージョンとして残っているのは Visual Studio 2015 Update 3 だけです。
@@ -41,6 +45,7 @@ ms.lasthandoff: 03/08/2018
 詳細については、[Visual Studio サービス ポリシー](/visualstudio/productinfo/vs-servicing-vs)に関する説明を参照してください。
 
 ## <a name="what-features-are-installed"></a>インストールされる機能
+
 各イメージには、その Visual Studio エディションの推奨される機能が含まれます。 一般に、インストールには次のものが含まれます。
 
 * 利用可能なすべてのワークロードと、各ワークロードの推奨されるオプション コンポーネント
@@ -54,7 +59,7 @@ ms.lasthandoff: 03/08/2018
 ```shell
     vs_enterprise.exe --allWorkloads --includeRecommended --passive ^
        add Microsoft.Net.Component.4.7.SDK ^
-       add Microsoft.Net.Component.4.7.TargetingPack ^ 
+       add Microsoft.Net.Component.4.7.TargetingPack ^
        add Microsoft.Net.Component.4.6.2.SDK ^
        add Microsoft.Net.Component.4.6.2.TargetingPack ^
        add Microsoft.Net.ComponentGroup.4.7.DeveloperTools ^
@@ -66,6 +71,7 @@ ms.lasthandoff: 03/08/2018
 必要な Visual Studio の機能がイメージに含まれない場合は、フィードバック ツール (ページの右上隅) を使ってそのことをフィードバックしてください。
 
 ## <a name="what-size-vm-should-i-choose"></a>VM のサイズの選択
+
 Azure では、全サイズの仮想マシンを提供しています。 Visual Studio は高性能のマルチスレッド アプリケーションであるため、少なくとも 2 つのプロセッサと 7 GB のメモリを含む VM サイズが必要です。 Visual Studio イメージでは、次の VM サイズをお勧めします。
 
    * Standard_D2_v3
@@ -75,14 +81,15 @@ Azure では、全サイズの仮想マシンを提供しています。 Visual 
    * Standard_D2_v2
    * Standard_D2S_v2
    * Standard_D3_v2
-    
+
 最新のマシンのサイズについては、「[Azure の Windows 仮想マシンのサイズ](/azure/virtual-machines/windows/sizes)」を参照してください。
 
 Azure では、VM のサイズを変更することで、最初の選択を再調整できます。 より適切なサイズで新しい VM をプロビジョニングしたり、既存の VM のサイズを異なる基盤ハードウェアに合わせて変更したりできます。 詳細については、「[Windows VM のサイズ変更](/azure/virtual-machines/windows/resize-vm)」を参照してください。
 
 ## <a name="after-the-vm-is-running-whats-next"></a>VM 実行後の次の操作
+
 Visual Studio は、Azure の "ライセンス持ち込み" モデルに従います。 専用ハードウェアへのインストールと同様に、最初に行うことの 1 つは、Visual Studio のインストールのライセンスを有効にすることです。 Visual Studio のロックを解除するには、次のいずれかを行います。
-- Visual Studio サブスクリプションに関連付けられている Microsoft アカウントでサインインする 
+- Visual Studio サブスクリプションに関連付けられている Microsoft アカウントでサインインする
 - 最初の購入に付属するプロダクト キーを使用して Visual Studio のロックを解除する
 
 詳細については、「[Visual Studio にサインイン](../ide/signing-in-to-visual-studio.md)」および「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
@@ -106,6 +113,7 @@ Visual Studio は、Azure の "ライセンス持ち込み" モデルに従い�
 さらに、さまざまな開発構成や複数のコンピューター構成のように、開発タスクやテクノロジをさらに広げることが必要な場合があります。 Azure DevTest Labs を使用して、"ゴールデン イメージ" の構築を自動化する "_レシピ_" を作成できます。 DevTest Labs を使用して、チームが実行する VM のポリシーを管理することもできます。 「[開発者のための Azure DevTest Labs の使用](/azure/devtest-lab/devtest-lab-developer-lab)」は、DevTest Labs の詳細についての最適なソースです。
 
 ## <a name="next-steps"></a>次の手順
+
 事前構成済みの Visual Studio イメージについて理解したので、次のステップは新しい VM の作成です。
 
 * [Azure Portal で VM を作成する](/azure/virtual-machines/windows/quick-create-portal)

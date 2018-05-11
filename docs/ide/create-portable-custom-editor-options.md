@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio での EditorConfig 設定の使用 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio での EditorConfig 設定の使用
 ms.date: 12/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8be85bc578b31b087c77da1444ddd9950a6bc0ed
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ff3391023d9a863bd9f06b4608b327902a17f0ac
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
-Visual Studio 2017 では、[EditorConfig](http://editorconfig.org/) ファイルをプロジェクトまたはコードベースに追加して、そのコードベースを使用するすべてのユーザーに一貫したコーディング スタイルを使用させることができます。 EditorConfig の設定は、Visual Studio テキスト エディターのグローバルな設定より優先されます。 つまり、そのプロジェクトに固有のテキスト エディター設定を使用するように各コードベースを調整できます。 その場合でも、ユーザーは Visual Studio の **[オプション]** ダイアログ ボックスで、エディターを個人用に設定することができます。 個人設定は、.editorconfig ファイルのないコードベースで作業している場合、または .editorconfig ファイルが特定の設定をオーバーライドしない場合に、常に適用されます。 このような個人設定の一例が、インデント スタイル (タブまたはスペース) です。
+Visual Studio 2017 では、[EditorConfig](http://editorconfig.org/) ファイルをプロジェクトまたはコードベースに追加して、そのコードベースを使用するすべてのユーザーに一貫したコーディング スタイルを使用させることができます。 EditorConfig の設定は、Visual Studio テキスト エディターのグローバルな設定より優先されます。 つまり、そのプロジェクトに固有のテキスト エディター設定を使用するように各コードベースを調整できます。 その場合でも、ユーザーは Visual Studio の **[オプション]** ダイアログ ボックスで、エディターを個人用に設定することができます。 個人設定は、*.editorconfig* ファイルのないコードベースで作業している場合、または *.editorconfig* ファイルが特定の設定をオーバーライドしない場合に、常に適用されます。 このような個人設定の一例が、インデント スタイル (タブまたはスペース) です。
 
 EditorConfig の設定は、Visual Studio など、多くのコード エディターと IDE でサポートされています。 この設定は、コードと共に移動する移植可能なコンポーネントであり、Visual Studio の外部であってもコーディング スタイルを適用できます。
 
@@ -29,7 +26,7 @@ EditorConfig の設定は、Visual Studio など、多くのコード エディ�
 
 ## <a name="coding-consistency"></a>コーディングの一貫性
 
-EditorConfig ファイルの設定を利用すれば、使用するエディターや IDE に関係なく、コードベースでコーディングのスタイルと設定の一貫性を維持できます。たとえば、インデントのスタイル、タブの幅、行末文字、エンコードなどです。 たとえば、C# でコーディングするとき、インデントを常に 5 つ分の空白文字で構成し、文書で UTF-8 エンコードを使用し、各行が常に CR/LF で終わるというという慣習をコードベースに与えるのであれば、そのように .editorconfig ファイルを構成できます。
+EditorConfig ファイルの設定を利用すれば、使用するエディターや IDE に関係なく、コードベースでコーディングのスタイルと設定の一貫性を維持できます。たとえば、インデントのスタイル、タブの幅、行末文字、エンコードなどです。 たとえば、C# でコーディングするとき、インデントを常に 5 つ分の空白文字で構成し、文書で UTF-8 エンコードを使用し、各行が常に CR/LF で終わるというという慣習をコードベースに与えるのであれば、そのように *.editorconfig* ファイルを構成できます。
 
 個人的なプロジェクトで使用するコーディング規則は、チームのプロジェクトで使用するそれとは変えることができます。 たとえば、コーディングの際に、自分はインデントでタブ文字を追加したくても、 チームはインデントでタブ文字ではなく 4 つの空白文字を追加したいかもしれません。 EditorConfig ファイルがこの問題を解決します。シナリオごとに構成を与えることができるからです。
 
@@ -58,7 +55,7 @@ EditorConfig ファイルをプロジェクトまたはコードベースから�
 
 ### <a name="to-add-an-editorconfig-file-to-a-project-or-solution"></a>EditorConfig ファイルをプロジェクトまたはソリューションに追加するには
 
-1. Visual Studio でプロジェクトまたはソリューションを開きます。 .editorconfig 設定をソリューションのすべてのプロジェクトに適用するか、1 つのプロジェクトだけに適用するかに応じて、プロジェクト ノードまたはソリューション ノードのいずれかを選択します。 また、.editorconfig ファイルを追加するプロジェクトまたはソリューションで、フォルダーを選択できます。
+1. Visual Studio でプロジェクトまたはソリューションを開きます。 *.editorconfig* 設定をソリューションのすべてのプロジェクトに適用するか、1 つのプロジェクトだけに適用するかに応じて、プロジェクト ノードまたはソリューション ノードのいずれかを選択します。 また、*.editorconfig* ファイルを追加するプロジェクトまたはソリューションで、フォルダーを選択できます。
 
 1. メニュー バーから **[プロジェクト]** > **[新しい項目の追加...]** の順に選択するか、**Ctrl**+**Shift**+**A** キーを押します。
 
@@ -66,7 +63,7 @@ EditorConfig ファイルをプロジェクトまたはコードベースから�
 
 1. 左側のカテゴリで **[全般]** を選択してから、**[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスに「`.editorconfig`」と入力し、**[追加]** を選択します。
 
-   ソリューション エクスプローラーに .editorconfig ファイルが表示されたら、エディターで開きます。
+   ソリューション エクスプローラーに *.editorconfig* ファイルが表示されたら、エディターで開きます。
 
    ![ソリューション エクスプローラーの .editorconfig ファイル](media/editorconfig-in-solution-explorer.png)
 
@@ -89,13 +86,13 @@ EditorConfig ファイルをプロジェクトまたはコードベースから�
 
 ## <a name="override-editorconfig-settings"></a>EditorConfig 設定を上書きする
 
-ファイル階層のフォルダーに .editorconfig ファイルを追加すると、その設定がその階層レベルとその下のレベルのあらゆる該当ファイルに適用されます。 また、特定のプロジェクトやコードベースの EditorConfig 設定を上書きしたり、コードベースの一部の EditorConfig 設定を上書きして、コードベースの他の部分とは異なる規則を使用するようにしたりできます。 これは、別の場所からコードを組み込んで、その規則を変更したくない場合に役立ちます。
+ファイル階層のフォルダーに *.editorconfig* ファイルを追加すると、その設定がその階層レベルとその下のレベルのあらゆる該当ファイルに適用されます。 また、特定のプロジェクトやコードベースの EditorConfig 設定を上書きしたり、コードベースの一部の EditorConfig 設定を上書きして、コードベースの他の部分とは異なる規則を使用するようにしたりできます。 これは、別の場所からコードを組み込んで、その規則を変更したくない場合に役立ちます。
 
-一部またはすべての EditorConfig 設定を上書きするには、上書きされた設定を適用するファイルの階層レベルに .editorconfig ファイルを追加します。 新しい EditorConfig ファイルの設定は、同じレベルと任意のサブディレクトリ内のファイルに適用されます。
+一部またはすべての EditorConfig 設定を上書きするには、上書きされた設定を適用するファイルの階層レベルに *.editorconfig* ファイルを追加します。 新しい EditorConfig ファイルの設定は、同じレベルと任意のサブディレクトリ内のファイルに適用されます。
 
 ![EditorConfig 階層](../ide/media/vside_editorconfig_hierarchy.png)
 
-すべての設定ではなく一部を上書きする場合には、.editorconfig ファイルで該当する設定だけを指定します。 下位レベルのファイルで明示的に一覧表示したプロパティのみが上書きされます。 上位レベルの .editorconfig ファイルからのその他の設定は、引き続き適用されます。 _すべての_上位レベルの .editorconfig ファイルからの設定がコードベースのこの部分に適用_されない_ようにするには、次のように ```root=true``` プロパティを下位レベルの .editorconfig ファイルに追加します。
+すべての設定ではなく一部を上書きする場合には、*.editorconfig* ファイルで該当する設定だけを指定します。 下位レベルのファイルで明示的に一覧表示したプロパティのみが上書きされます。 上位レベルの *.editorconfig* ファイルからのその他の設定は、引き続き適用されます。 _すべての_上位レベルの *.editorconfig* ファイルからの設定がコードベースのこの部分に適用_されない_ようにするには、次のように ```root=true``` プロパティを下位レベルの *.editorconfig* ファイルに追加します。
 
 ```EditorConfig
 # top-most EditorConfig file
@@ -106,19 +103,19 @@ EditorConfig ファイルは上から下に読み取られ、最も近い Editor
 
 ## <a name="editing-editorconfig-files"></a>EditorConfig ファイルの編集
 
-Visual Studio では、.editorconfig ファイルを編集しやすいように、IntelliSense の入力候補一覧が提供されます。
+Visual Studio では、*.editorconfig* ファイルを編集しやすいように、IntelliSense の入力候補一覧が提供されます。
 
 ![.editorconfig ファイルの IntelliSense](media/editorconfig-intellisense-no-extension.png)
 
 EditorConfig ファイルを編集したら、コード ファイルを再度読み込んで新しい設定を有効にする必要があります。
 
-多数の .editorconfig ファイルを編集する場合は、[EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)が便利です。 この拡張機能には、構文の強調表示、強化された IntelliSense、検証、およびコードの書式設定などの機能が含まれます。
+多数の *.editorconfig* ファイルを編集する場合は、[EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)が便利です。 この拡張機能には、構文の強調表示、強化された IntelliSense、検証、およびコードの書式設定などの機能が含まれます。
 
 ![EditorConfig 言語サービス拡張機能の IntelliSense](media/editorconfig-intellisense.png)
 
 ## <a name="example"></a>例
 
-次の例では、.editorconfig ファイルをプロジェクトに追加する前と追加した後の C# コード スニペットのインデント状態を示します。 Visual Studio テキスト エディターの **[オプション]** ダイアログ ボックスにある **[タブ]** 設定は、**Tab** キーを押したときに空白文字を入力するように設定されています。
+次の例では、*.editorconfig* ファイルをプロジェクトに追加する前と追加した後の C# コード スニペットのインデント状態を示します。 Visual Studio テキスト エディターの **[オプション]** ダイアログ ボックスにある **[タブ]** 設定は、**Tab** キーを押したときに空白文字を入力するように設定されています。
 
 ![テキスト エディター タブの設定](../ide/media/vside_editorconfig_tabsetting.png)
 
@@ -126,7 +123,7 @@ EditorConfig ファイルを編集したら、コード ファイルを再度読
 
 ![EditorConfig を使用する前のコード](../ide/media/vside_editorconfig_before.png)
 
-.editorconfig という名前の新しいファイルを、次のコンテンツと共にプロジェクトに追加します。 `[*.cs]` の設定は、この変更がこのプロジェクトの C# コード ファイルにのみ適用されることを意味します。
+*.editorconfig* という名前の新しいファイルを、次のコンテンツと共にプロジェクトに追加します。 `[*.cs]` の設定は、この変更がこのプロジェクトの C# コード ファイルにのみ適用されることを意味します。
 
 ```EditorConfig
 # Top-most EditorConfig file
@@ -147,22 +144,22 @@ EditorConfig ファイルがディレクトリ構造内でプロジェクトの�
 
    **"このファイルの種類のユーザー設定は、このプロジェクトのコーディング規則により上書きされます。"**
 
-つまり、**[ツール]** > **[オプション]** > **[テキスト エディター]** の任意のエディター設定 (インデントのサイズとスタイル、タブ サイズ、コーディング規則など) が、ディレクトリ構造内でプロジェクトと同じか上位にある EditorConfig ファイルで指定されると、EditorConfig ファイル内の規則がオプションの設定よりも優先されます。 この動作は、**[ツール]** > **[オプション]** > **[テキスト エディター]** の **[プロジェクトのコーディング規則に従います]** オプションを切り替えることで制御できます。 このオプションをオフにすると、Visual Studio の EditorConfig に対するサポートが無効になります。
+つまり、**[ツール]**、**[オプション]**、**[テキスト エディター]** の任意のエディター設定 (インデントのサイズとスタイル、タブ サイズ、コーディング規則など) が、ディレクトリ構造内でプロジェクトと同じか上位にある EditorConfig ファイルで指定されると、EditorConfig ファイル内の規則が**オプション**の設定よりも優先されます。 この動作は、**[ツール]** > **[オプション]** > **[テキスト エディター]** の **[プロジェクトのコーディング規則に従います]** オプションを切り替えることで制御できます。 このオプションをオフにすると、Visual Studio の EditorConfig に対するサポートが無効になります。
 
 ![[ツール] メニューの [オプション] - [プロジェクトのコーディング規則に従います]](media/coding_conventions_option.png)
 
-親ディレクトリで任意の .editorconfig ファイルを見つけるには、コマンド プロンプトを開き、プロジェクトが格納されているディスクのルートから次のコマンドを実行します。
+親ディレクトリで任意の *.editorconfig* ファイルを見つけるには、コマンド プロンプトを開き、プロジェクトが格納されているディスクのルートから次のコマンドを実行します。
 
 ```Shell
 dir .editorconfig /s
 ```
 
-EditorConfig 規則の範囲を制御するには、リポジトリのルートにある、またはプロジェクトが格納されているディレクトリ内の .editorconfig ファイルで ```root=true``` プロパティ を設定します。 Visual Studio は、開かれたファイルのディレクトリ内とすべての親ディレクトリで .editorconfig という名前のファイルを探します。 検索は、ルート ファイル パスに到達するか、または ```root=true``` を含む .editorconfig ファイルが見つかると、終了します。
+EditorConfig 規則の範囲を制御するには、リポジトリのルートにある、またはプロジェクトが格納されているディレクトリ内の *.editorconfig* ファイルで ```root=true``` プロパティを設定します。 Visual Studio は、開かれたファイルのディレクトリ内とすべての親ディレクトリで *.editorconfig* という名前のファイルを探します。 検索は、ルート ファイル パスに到達するか、または ```root=true``` を含む *.editorconfig* ファイルが見つかると、終了します。
 
 ## <a name="see-also"></a>関連項目
 
-[.NET コード表記規則](../ide/editorconfig-code-style-settings-reference.md)  
-[.NET の名前付け規則](../ide/editorconfig-naming-conventions.md)  
-[言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)  
-[EditorConfig.org](http://editorconfig.org/)  
-[コード エディターでのコードの作成](writing-code-in-the-code-and-text-editor.md)
+- [.NET コード表記規則](../ide/editorconfig-code-style-settings-reference.md)
+- [.NET の名前付け規則](../ide/editorconfig-naming-conventions.md)
+- [言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)
+- [EditorConfig.org](http://editorconfig.org/)
+- [コード エディターでのコードの作成](writing-code-in-the-code-and-text-editor.md)

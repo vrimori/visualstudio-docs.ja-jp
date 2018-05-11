@@ -1,8 +1,9 @@
 ---
-title: "Visual Studio Devenv コマンド ライン スイッチ | Microsoft Docs"
+title: Visual Studio Devenv コマンド ライン スイッチ
 ms.date: 02/28/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - switches, Devenv
 - command-line switches, Devenv
@@ -11,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b507ff8710e3257f2da61a32baa81a18441c3aff
-ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
+ms.openlocfilehash: 1b6cf3bf422c861d5a649e5cfa71cf2b4a4b5fea
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="devenv-command-line-switches"></a>Devenv コマンド ライン スイッチ
 

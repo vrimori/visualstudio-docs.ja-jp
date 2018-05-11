@@ -1,27 +1,21 @@
 ---
-title: "Visual Studio での Python サポートのインストール | Microsoft Docs"
-description: "Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法の詳細と、オプションやインストールの場所について説明します。"
-ms.custom: 
+title: Python サポートのインストール
+description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法の詳細と、オプションやインストールの場所について説明します。
 ms.date: 02/15/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3cc0b6b99dd76a531ed3e99dcac8ae5d438d7e63
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: a998a2a62915d1ce998e30202f4b4fd0838975a3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -43,7 +37,7 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 最新の Visual Studio 2017 インストーラーをダウンロードし、実行します。 Visual Studio が既にインストールされている場合は、Visual Studio インストーラーを実行し、手順 2 へ進みます。
+1. 最新の Visual Studio 2017 インストーラーをダウンロードし、実行します。 Visual Studio が既にインストールされている場合は、Visual Studio インストーラーを実行し、**[変更]** オプションを選択して ([Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)、手順 2 へ進みます。
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 のインストールに関するコミュニティ</a>
@@ -80,6 +74,16 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
 |   |   |
 |---|---|
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio での Python サポートのインストールについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567) をご覧ください。|
+
+### <a name="troubleshooting"></a>トラブルシューティング
+
+Visual Studio で Python をインストールしたか、実行したときに問題が発生した場合、次をお試しください。
+
+- Python CLI を利用し、つまり、コマンド プロンプトから `python.exe` を実行し、同じエラーが発生するかどうかを判断します。
+- [Visual Studio インストーラーの [修復] オプション](../install/repair-visual-studio.md)を使用します。
+- Windows で **[設定]、[アプリと機能]** の順に選択し、Python を修復するか、再インストールします。
+
+**エラー例**: 対話プロセスを開始できない: System.ComponentModel.Win32Exception (0x80004005): Unknown error (0xc0000135) at Microsoft.PythonTools.Repl.PythonInteractiveEvaluator.d__43.MoveNext().
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 

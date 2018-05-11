@@ -1,33 +1,29 @@
 ---
-title: "チュートリアル: 中かっこの一致の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 中かっこの一致の表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - brace matching
 ms.assetid: 5af08ac7-1d08-4ccf-997e-01aa6cb3d3d7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c3dde61c10d0a8c9fc5578b02cc713f648409cbf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 370340246cd75e53580d1ac2b6c591f0854cb23e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-matching-braces"></a>チュートリアル: 対応する中かっこを表示します。
 かっこの照合して、照合するかっこを定義するテキスト マーカー タグ キャレットの中かっこの 1 つである場合に対応する中かっこを追加しなどの言語に対応した機能を実装できます。 中かっこを定義するには、言語のコンテキストでまたは独自ファイル名拡張子とコンテンツの種類を定義し、その型にタグを適用することができますか、既存のコンテンツの種類 ("text") などにタグを適用することができます。 次のチュートリアルでは、かっこの一致の「テキスト」コンテンツ タイプにタグを適用する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールするはできません。 Visual Studio のセットアップのオプション機能として含まれます。 後でまた VS SDK をインストールすることができます。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトの作成  
   
@@ -128,5 +124,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  始め中かっこの前にキャレットを配置するときにその中かっこと一致するかっこの両方は強調表示されます。 カーソルを閉じる中かっこの直後にすると、その中かっこと一致する始め中かっこの両方は強調表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

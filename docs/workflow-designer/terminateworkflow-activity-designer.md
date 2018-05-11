@@ -1,34 +1,40 @@
 ---
-title: "TerminateWorkflow アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナー - TerminateWorkflow アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.TerminateWorkflow.UI
 ms.assetid: 08e632ed-0724-4fb4-9df1-f8d443eaf0ac
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 683c482436e968ff9d2a1bd4ce0bbb8e173a5520
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 5dfd7438a14f0bcbedcf5cdc5add78020604c355
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow アクティビティ デザイナー
+
 **TerminateWorkflow**アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.TerminateWorkflow>アクティビティ。
 
 ## <a name="the-terminateworkflow-activity"></a>TerminateWorkflow アクティビティ
- <xref:System.Activities.Statements.TerminateWorkflow> アクティビティは、ワークフローの実行を停止します。
+
+<xref:System.Activities.Statements.TerminateWorkflow> アクティビティは、ワークフローの実行を停止します。
 
 ### <a name="using-the-terminateworkflow-activity-designer"></a>TerminateWorkflow アクティビティ デザイナーの使用
- **TerminateWorkflow**アクティビティ デザイナーは含まれて、**ランタイム**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**  タブ (または、選択**ツールボックス**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- **TerminateWorkflow**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**に、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]サーフェス任意の場所、アクティビティを通常配置など内、<xref:System.Activities.Statements.Sequence>です。 これを作成、 <xref:System.Activities.Statements.TerminateWorkflow> 、既定値を持つアクティビティ**DisplayName** terminateworkflow であるのです。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **TerminateWorkflow**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+**TerminateWorkflow**アクティビティ デザイナーは含まれて、**ランタイム**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**  タブ (または、選択**ツールボックス**から、**ビュー**メニューまたは CTRL + ALT + X です)。
+
+**TerminateWorkflow**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを通常配置しているような内の場所に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 これを作成、 <xref:System.Activities.Statements.TerminateWorkflow> 、既定値を持つアクティビティ**DisplayName** terminateworkflow であるのです。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **TerminateWorkflow**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-terminateworkflow-properties"></a>TerminateWorkflow のプロパティ
- 次の表に、<xref:System.Activities.Statements.TerminateWorkflow> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できます。また、その一部は[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]画面で編集できます。
+
+次の表に、<xref:System.Activities.Statements.TerminateWorkflow> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集することができ、それらの一部は、ワークフロー デザイナー画面で編集することができます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

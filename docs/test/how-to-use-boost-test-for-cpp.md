@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio で C++ 用の Boost.Test を使用する方法 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で C++ 用の Boost.Test を使用する方法
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-test
+ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91c4dc3cc3bc3550f11bc60c95f1c3ed511cf62
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: deb52bd6b905e8e1cd73b75abd6304698858a20b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 
@@ -80,7 +77,7 @@ Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる�
 
    d. **プロパティ ページ**を開くには、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します。
 
-   d. **[C/C++]** > **[コード生成]** の順に展開し、**[ランタイム ライブラリ]** を選択します。 スタティック ランタイム ライブラリをデバッグする場合は**/MTd** を、スタティック ランタイム ライブラリをリリースする場合は **/MT** を選択します。
+   d. **[C/C++]** > **[コード生成]** の順に展開し、**[ランタイム ライブラリ]** を選択します。 スタティック ランタイム ライブラリをデバッグする場合は **/MTd** を、スタティック ランタイム ライブラリをリリースする場合は **/MT** を選択します。
 
    f. **[リンカー] > [システム]** を展開します。 **[サブシステム]** が **[コンソール]** に設定されていることを確認します。
 

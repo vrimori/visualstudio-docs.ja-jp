@@ -1,26 +1,23 @@
 ---
-title: "VSTO アドインのパフォーマンスを向上させる |Microsoft ドキュメント"
-ms.custom: 
+title: VSTO アドインのパフォーマンスを向上させる |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: be5ec0d8e4654ad9d383278e5d0d60c7fa2e34c9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 17fbb8d0d1bdb2c3924645f494d8bd5eccd457a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improving-the-performance-of-a-vsto-add-in"></a>VSTO アドインのパフォーマンスの向上
   Office アプリケーション用に作成した VSTO アドインを最適化して、そのアドインの開始、終了、また、項目を開くなどのタスクの実行を素早く行えるようにして、ユーザー エクスペリエンスを向上させることができます。 VSTO アドインが Outlook を対象にしている場合は、不十分なパフォーマンスが原因で VSTO アドインが無効にされる可能性を低くすることができます。 次の方針を導入すると、VSTO アドインのパフォーマンスを向上させることができます。  
@@ -84,9 +81,9 @@ ms.lasthandoff: 01/10/2018
   
     ```  
   
-     C# プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定 &#40;です。C# 35; &#41;](/visualstudio/ide/how-to-specify-build-events-csharp).  
+     C# プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定&#40;C&#35;&#41;](/visualstudio/ide/how-to-specify-build-events-csharp)です。  
   
-     Visual Basic プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定 &#40;です。Visual Basic &#41;](/visualstudio/ide/how-to-specify-build-events-visual-basic).  
+     Visual Basic プロジェクトでビルド後のイベントを作成する方法については、次を参照してください。[する方法: ビルド イベントの指定&#40;Visual Basic&#41;](/visualstudio/ide/how-to-specify-build-events-visual-basic)です。  
   
 ##  <a name="Publish"></a> Publish Office Solutions by Using Windows Installer  
  Windows インストーラーを使用してソリューションを発行する場合は、Visual Studio 2010 Tools for Office Runtime は、VSTO アドインを読み込むときに次の手順をスキップします。  
@@ -118,7 +115,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Office オブジェクト モデルを呼び出すすべてのコードは、メイン スレッドで実行する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSTO アドインの必要に応じた読み込み](http://blogs.msdn.com/b/andreww/archive/2008/07/14/demand-loading-vsto-add-ins.aspx)   
  [Office アドインの CLR を遅延読み込み](http://blogs.msdn.com/b/andreww/archive/2008/04/19/delay-loading-the-clr-in-office-add-ins.aspx)   
  [VSTO のパフォーマンス: 遅延読み込みと開発者 (Stephen Peters)](http://blogs.msdn.com/b/vsto/archive/2010/01/07/vsto-performance-delay-loading-and-you.aspx)   

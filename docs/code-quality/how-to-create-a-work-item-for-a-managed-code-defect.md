@@ -1,26 +1,22 @@
 ---
-title: "方法: マネージ コードの障害に対する作業項目を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: マネージ コードの障害に対する作業項目を作成する'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - managed code, creating work items for code defects
 - code analysis, creating work items
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 695380527ed47c4a6bc3c820c028d88555938359
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: fcbb7716d8ba0496d267f3c8757bb8425884cfb0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-work-item-for-a-managed-code-defect"></a>方法: マネージ コードの障害に対する作業項目を作成する
 

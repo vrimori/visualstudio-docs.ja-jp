@@ -1,23 +1,20 @@
 ---
 title: Visual Studio Tools for Unity | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-unity-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
-author: conceptdev
-ms.author: crdun
+author: dantogno
+ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 133413989a47b71773cffd8eb521de6ad9599f83
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 98c2ac925f1bcdfb4297444f8a3e52379d08d6d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
 このセクションでは Visual Studio Tools for Unity について学習します。これは無料の Visual Studio 拡張機能であり、これによって Visual Studio は Unity でゲームを作成するための強力なツールになります。

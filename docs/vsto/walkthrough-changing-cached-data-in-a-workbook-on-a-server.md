@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: サーバー上のブック内のデータをキャッシュを変更する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: サーバー上のブック内のデータをキャッシュを変更する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], server-side data access
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fcea73cfbd87a4e541654b91463091b08c47b8c0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d9303c165b0c04d36a873ee2ff2aae22365b24e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-changing-cached-data-in-a-workbook-on-a-server"></a>チュートリアル : サーバー上のブックにキャッシュされたデータの変更
   このチュートリアルを使用して Excel を起動しなくても Microsoft Office Excel ブックにキャッシュされているデータセットを変更する方法を示します、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>クラスです。  
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  **[OK]**をクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **AdventureWorksDataSet**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Class1.cs**または**Class1.vb**コード ファイル。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **AdventureWorksDataSet**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Class1.cs**または**Class1.vb**コード ファイル。  
   
 9. **ソリューション エクスプ ローラー**を右クリックして**Class1.cs**または**Class1.vb**、クリックして**削除**です。 このチュートリアルのこのファイルが不要です。  
   
@@ -144,7 +143,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  いることを確認**新しいドキュメントを作成する**を選択して、をクリックして**OK**です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]開きます、 **AdventureWorksReport**デザイナーでブックを追加し、 **AdventureWorksReport**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 開きます、 **AdventureWorksReport**デザイナーでブックを追加し、 **AdventureWorksReport**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
 ## <a name="adding-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Excel ブック プロジェクトのデータ ソースにデータセットを追加します。  
  データセットを表示するには、Excel ブックで、前に、Excel ブック プロジェクトのデータ ソースにデータセットを追加する必要があります。  
@@ -239,7 +238,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **[OK]**をクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **DataWriter**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Program.cs**または**Module1.vb**コード ファイル。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **DataWriter**プロジェクトを**ソリューション エクスプ ローラー**開くと、 **Program.cs**または**Module1.vb**コード ファイル。  
   
 ## <a name="changing-data-in-the-cached-dataset-by-using-the-console-application"></a>コンソール アプリケーションを使用して、キャッシュされたデータセット内のデータを変更します。  
  使用して、<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>ローカル データの読み取りにコンソール アプリケーション内のクラス`AdventureWorksLTDataSet`オブジェクト、このデータを変更し、キャッシュされたデータセットに保存します。  
@@ -311,7 +310,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  ブックを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: サーバー上のブックへのデータの挿入](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)   
  [Windows フォーム アプリケーションでのデータへの接続](/visualstudio/data-tools/connecting-to-data-in-windows-forms-applications)  
   

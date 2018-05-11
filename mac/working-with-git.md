@@ -1,16 +1,15 @@
 ---
-title: "Git の使用 | Microsoft Docs"
-description: "Visual Studio for Mac で Git を使用します。"
+title: Git の使用
+description: Visual Studio for Mac で Git を使用します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
-ms.openlocfilehash: 76bb378297e29fa5967a43e4df38ca2ecc4e6361
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a63e954b2f7998e334c94221186907963540d329
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="working-with-git"></a>Git の使用
 

@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: SharePoint プロジェクトの拡張機能の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: SharePoint プロジェクトの拡張機能の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a03dd09525d29aaea31ef5c376814bd09747f90e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 17722233c5215858dce59a0d85a05f668de85446
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-sharepoint-project-extension"></a>チュートリアル: SharePoint プロジェクトの拡張機能の作成
   このチュートリアルでは、SharePoint プロジェクトの拡張機能を作成する方法について説明します。 プロジェクトの拡張機能を使用して、プロジェクトを追加、削除、または名前を変更する場合など、プロジェクト レベルのイベントに応答することができます。 カスタム プロパティを追加したり、プロパティ値が変更されたときに応答できます。 プロジェクト項目の拡張機能とは異なり、プロジェクトの拡張機能は、特定の SharePoint プロジェクトの種類に関連付けられてすることはできません。 任意の種類の SharePoint プロジェクトを開いたときに、拡張機能を読み込みますプロジェクトの拡張機能を作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
@@ -86,7 +85,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  **名前**ボックスに、入力**ProjectExtension**を選択し、 **OK**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]追加、 **ProjectExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **ProjectExtension**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
 5.  Class1 コード ファイルをプロジェクトから削除します。  
   
@@ -131,7 +130,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **ソリューション エクスプ ローラー**source.extension.vsixmanifest ファイルのショートカット メニューを開きを選択し、**開く**ボタンをクリックします。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]マニフェスト デザイナーで、ファイルを開きます。 表示される情報、**メタデータ**にも表示されます タブ、**拡張機能と更新プログラム**です。 すべての VSIX パッケージでは、extension.vsixmanifest ファイルが必要です。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] マニフェスト デザイナーで、ファイルを開きます。 表示される情報、**メタデータ**にも表示されます タブ、**拡張機能と更新プログラム**です。 すべての VSIX パッケージでは、extension.vsixmanifest ファイルが必要です。 このファイルの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 1.0 リファレンス](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)です。  
   
 2.  **Product Name**ボックスに、入力**カスタム プロジェクト プロパティ**です。  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  クリックするか、プロジェクトのデバッグ ビルドを開始、 **f5 キーを押して**キーか、メニュー バーで**デバッグ**、**デバッグの開始**です。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom プロジェクト Property\1.0 に拡張機能をインストールしての実験用インスタンスを起動する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom プロジェクト Property\1.0 に拡張機能をインストールしての実験用インスタンスを起動する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
   
 3.  実験用インスタンスで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ファーム ソリューションでは、SharePoint プロジェクトを作成し、ウィザードの他の値の既定値を使用します。  
   
@@ -203,7 +202,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] の実験用インスタンスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクトの拡張](../sharepoint/extending-sharepoint-projects.md)   
  [方法: SharePoint プロジェクトにプロパティを追加](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
  [SharePoint プロジェクト システムの種類とその他の Visual Studio プロジェクトの種類間の変換](../sharepoint/converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md)   

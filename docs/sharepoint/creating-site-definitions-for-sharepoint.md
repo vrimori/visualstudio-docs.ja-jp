@@ -1,12 +1,10 @@
 ---
-title: "SharePoint のサイト定義を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: SharePoint のサイト定義を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - site definitions [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: d29ab819dfc7efd04d27652ab3d711c89045847c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1a9e2a631ae80e878ee5293ec3790f8ac93912e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-site-definitions-for-sharepoint"></a>SharePoint のサイト定義の作成
   SharePoint サイト定義プロジェクト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を作成することができます、*サイト定義*、新しい SharePoint サイトの基礎として使用します。 だけでなく、これらの定義は、SharePoint サイトの既定のコンテンツやも機能の動作と外観を決定します。 定義では、構成済みのリスト、コンテンツの種類、イベント レシーバー、画像、およびその他のアイテムを配置できます。 SharePoint には、たとえば、ブログなどの一部のサイト定義が含まれます。 ブログ サイト定義に基づくサイトを作成するときに、サイトには、リスト、Web パーツ、およびブログ サイトが必要なその他のアイテムが含まれています。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/10/2018
 |[ASP.NET Web Pages のプログラミング](http://go.microsoft.com/fwlink/?LinkId=178728)|内のイベント ハンドラーを作成する方法に関する情報を提供[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)]ページとクライアント スクリプトを操作する方法です。|  
 |[Windows SharePoint Services でのプログラミング](http://go.microsoft.com/fwlink/?LinkId=178729)|提供されているマネージ オブジェクト モデルを使用する方法について説明[!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)]です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
   

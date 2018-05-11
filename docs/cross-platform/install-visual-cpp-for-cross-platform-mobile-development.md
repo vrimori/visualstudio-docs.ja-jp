@@ -1,26 +1,22 @@
 ---
-title: "Visual C++ for Cross-Platform Mobile Development のインストール | Microsoft Docs"
-ms.custom: 
+title: Visual C++ for Cross-Platform Mobile Development のインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: b9f87e95a2d4088bb72890ef3f9508d9c5e02abc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 64bdc654bc1bcd6721cc29052a9409e00f6afd07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development のインストール
 [Visual C++ for Cross-Platform Mobile Development](http://go.microsoft.com/fwlink/p/?LinkId=536383) は、Visual Studio 2015 付属のインストール可能なコンポーネントです。 クロス プラットフォームの Visual Studio テンプレートが含まれており、クロス プラットフォーム ツールおよび SDK をインストールしてすぐに開始できるようにします。それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロス プラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使用してクロス プラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 コンポーネントの概要については、「 [Visual C++ クロスプラットフォーム モバイル](http://go.microsoft.com/fwlink/p/?LinkId=536387)」をご覧ください。  
@@ -62,7 +58,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  「 [ツールの取得](#GetTheTools)」のリンクに従ってダウンロードした Visual Studio 2015 インストーラーを実行します。 オプションのコンポーネントをインストールするために、インストールの種類として **[カスタム]** を選びます。 **[次へ]** を選んで、インストールするオプションのコンポーネントを選びます。  
   
-2.  [機能の選択] で、 **[クロス プラットフォームのモバイル開発]** を展開し、 **[Visual C++ モバイル開発]**を選択します。  
+2.  [機能の選択] で、 **[クロス プラットフォームのモバイル開発]** を展開し、 **[Visual C++ モバイル開発]** を選択します。  
   
      ![[Visual C&#43;&#43; モバイル開発] を選択する](../cross-platform/media/cppmdd_install_vcmdd.png "CPPMDD_Install_VCMDD")  
   
@@ -84,7 +80,7 @@ ms.lasthandoff: 02/09/2018
     > [!NOTE]
     >  お使いのコンピューターまたは Windows のバージョンで Hyper-V がサポートされていない場合は、Microsoft Visual Studio Emulator for Android コンポーネントを使用できません。 Windows の Home エディションには、Hyper-V のサポートが含まれていません。  
   
-5.  Visual Studio を開きます。 Visual Studio を実行するのが初めての場合は、構成してサインインするまでに時間がかかることがあります。 Visual Studio の準備が完了したら、 **[ツール]** メニューで **[拡張機能と更新プログラム]**、 **[更新プログラム]**の順に選びます。 Visual C++ for Cross-Platform Mobile Development または Microsoft Visual Studio Emulator for Android 用の利用可能な Visual Studio の更新プログラムがある場合は、それらをインストールします。  
+5.  Visual Studio を開きます。 Visual Studio を実行するのが初めての場合は、構成してサインインするまでに時間がかかることがあります。 Visual Studio の準備が完了したら、 **[ツール]** メニューで **[拡張機能と更新プログラム]**、 **[更新プログラム]** の順に選びます。 Visual C++ for Cross-Platform Mobile Development または Microsoft Visual Studio Emulator for Android 用の利用可能な Visual Studio の更新プログラムがある場合は、それらをインストールします。  
   
 ##  <a name="InstallForiOS"></a> Install tools for iOS  
  Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションについて詳しくは、「 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」をご覧ください。 iOS 用にビルドするのでない場合は、この手順を省略できます。  
@@ -125,9 +121,9 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-set-the-paths-for-third-party-tools"></a>サード パーティのツールのパスを設定するには  
   
-1.  Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]**の順に選びます。  
+1.  Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]** の順に選びます。  
   
-2.  **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**の順に展開し、 **[Android]**を選びます。  
+2.  **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]** の順に展開し、 **[Android]** を選びます。  
   
      ![Android ツールのパス オプション](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")  
   

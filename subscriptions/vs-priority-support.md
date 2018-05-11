@@ -1,26 +1,27 @@
 ---
-title: "Visual Studio サブスクリプションの優先サポート特典 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/16/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the Priority Support benefit included in Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: b62a60207f306c623d53f67fbe7e473c5ee8164d
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションの優先サポート特典 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/16/2018
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションに含まれる優先サポート特典について説明します。
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: e2cad13b3904779bfaca86f7d3e66ac5dbbcfbb8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="priority-support-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの優先サポート
 
-## <a name="overview"></a>概要 
 優先サポート特典は、さまざまなサポート コミュニティ フォーラムへのアクセスを提供します。ここで既存の投稿を検索したり、新しく質問したりすることができます。  質問に対して 2 日以内にコミュニティから回答がない場合、マイクロソフトのサポート チームが回答します。  
 
 選択した Visual Studio サブスクリプションのサブスクライバーは、さまざまなトピックをカバーする多数のフォーラムを通じて、優先サポートを受けることができます。
+
+## <a name="included-forums"></a>含まれるフォーラム
 
 ### <a name="net-framework"></a>.NET Framework
    - .NET Framework のセットアップとサービス 
@@ -194,34 +195,6 @@ ms.lasthandoff: 01/29/2018
    - SQL Server XML 
 
 
-
-### <a name="eligibility"></a>特典を受ける条件
-| サブスクリプション レベル/プログラム                                 | 特長               | 更新可能かどうか                                                         |
-|--------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
-| Visual Studio Enterprise Standard                            | Included              | [はい]                                                                |
-| Visual Studio Enterprise - 年間プラン                              | Included              | [はい]                                                                |
-| Visual Studio Enterprise - 月間プラン                             | 使用できません         |                                                                    |
-| Visual Studio Professional Standard                          | Included              | [はい]                                                                |
-| Visual Studio Professional - 年間プラン                            | Included              | [はい]                                                                | 
-| Visual Studio Professional - 月間プラン                           | 使用できません         |                                                                    |
-| Visual Studio Test Pro                                       | Included              | [はい]                                                                |
-| MSDN Platforms                                               | Included              | [はい]                                                                |
-| Visual Studio Dev Essentials                                 | Included              | [はい]                                                                |
-| Visual Studio Enterprise - NFR<sup>1</sup>                               | Included              | [はい]                                                                |
-| Visual Studio Enterprise - FTE                               | Included              | [はい]                                                                |
-| Visual Studio Enterprise - MPN                               | 使用できません         |                                                                    |
-| Visual Studio Professional - MPN                             | 使用できません         |                                                                    |
-| Visual Studio Enterprise - MVP/RD                            | 使用できません         |                                                                    |
-| Visual Studio Enterprise – Imagine (Standard)                | Included              | [はい]                                                                |
-| Visual Studio Enterprise – Imagine (Premium)                 | Included              | [はい]                                                                |
-| Visual Studio Enterprise – BizSpark                          | 使用できません         |                                                                    |
-| Visual Studio Enterprise – MCT Software & Services           | 使用できません         |                                                                    |
-| Visual Studio Enterprise – MCT Software & Services Developer | 使用できません         |                                                                    |
-<sup>1</sup>  *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP) が含まれます。*  
-
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、電子メール アドレスに割り当てられているすべてのサブスクリプションを表示します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
-
-
 ## <a name="activation-steps"></a>アクティブ化の手順
 優先サポートへのアクセスは非常に単純です。 
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
@@ -238,8 +211,20 @@ ms.lasthandoff: 01/29/2018
 
     ![優先サポートの例](_img/vs-priority-support/vs-priority-support-example.png)
 
-## <a name="faq"></a>FAQ
-*こちらで最新情報を確認してください*
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | Included       |  [はい]          |
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | Included                                                            |[はい] |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | Included                                                            |[はい] |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | Included                                                            |[はい] |
+| Visual Studio Dev Essentials | N/A  | Included                                                            |[はい] |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
+
+<sup>1</sup>  *Not for Resale (NFR)、FTE、Visual Studio Industry Partner (VSIP)、Imagine が含まれます。Microsoft Partner Network (MPN)、MCT Software & Services、MCT Software & Services Developer、BizSpark、Microsoft Valued Partner (MVP)、Region Director (RD) は含まれません。*
+
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+
 
 ## <a name="support-resources"></a>サポート リソース
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。

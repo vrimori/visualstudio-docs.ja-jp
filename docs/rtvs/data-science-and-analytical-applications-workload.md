@@ -1,27 +1,23 @@
 ---
-title: "データ サイエンスと分析のアプリケーション ワークロード | Microsoft Docs"
-description: "Visual Studio のデータ サイエンスと分析のアプリケーション ワークロードでは、Python、R、F# と、そのランタイム ディストリビューション (Anaconda など) を使うことができます。"
-ms.custom: 
+title: データ サイエンスと分析のアプリケーション ワークロード
+description: この Visual Studio ワークロードでは、Python、R、F# と、そのランタイム ディストリビューション (Anaconda など) を使うことができます。
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-- devlang-python
-ms.tgt_pltfrm: 
-ms.topic: landing-page
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: overview
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
+- python
 - data-science
-ms.openlocfilehash: 3c84e2f3f79d49596ccd24f9f99da06eecc04351
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ecbd5d1fce685243d889b39017efed24ca4492a0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="data-science-and-analytical-applications-workload"></a>データ サイエンスと分析のアプリケーション ワークロード
+# <a name="install-data-science-support-in-visual-studio"></a>Visual Studio でのデータ サイエンス サポートのインストール
 
 Visual Studio のインストーラーを使って選択し、インストールするデータ サイエンスと分析のアプリケーション ワークロードでは、次の 3 つの言語とそのランタイム ディストリビューションを使用できます。
 
@@ -45,7 +41,7 @@ R と Python は、データ サイエンスで使用される主要な 2 つの
   - Python 言語サポート
   - [Anaconda3 64 ビット](https://www.continuum.io) (さまざまなデータ サイエンス ライブラリおよび Python インタープリターを含む Python ディストリビューションです。)
   - Python Web サポート
-  - - cookiecutter テンプレートのサポート
+  - cookiecutter テンプレートのサポート
 - R:
   - R 言語サポート
   - R 開発ツールのランタイム サポート

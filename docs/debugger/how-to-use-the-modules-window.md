@@ -1,13 +1,9 @@
 ---
-title: "デバッガーで Dll と実行可能ファイルの表示 |Microsoft ドキュメント"
+title: デバッガーで Dll と実行可能ファイルの表示 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.modules
 dev_langs:
@@ -24,17 +20,16 @@ helpviewer_keywords:
 - DLLs, displaying while debugging
 - modules, displaying
 ms.assetid: d840fdca-b035-4452-b652-72580c831896
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 772c252265e15c3c928fbcc47c756ceafd9e1362
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 46dc913b95396e16f208611bcfc926378609bef6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-dlls-and-executables-using-the-modules-window-in-the-visual-studio-debugger"></a>Dll および Visual Studio デバッガーの [モジュール] ウィンドウを使用して実行可能ファイルを表示します。
  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  をポイント**自動シンボル読み込みの設定** をクリックし、**常に手動で読み込む**または**既定**です。 変更内容は、デバッグ セッションを再起動しないと有効になりません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行の中断](http://msdn.microsoft.com/en-us/30fc4643-f337-4651-b1ff-f2de2c098d40)   
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
  [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

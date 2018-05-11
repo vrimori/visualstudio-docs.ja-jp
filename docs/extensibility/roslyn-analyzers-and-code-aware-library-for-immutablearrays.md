@@ -1,23 +1,21 @@
 ---
-title: "Roslyn アナライザーと ImmutableArrays 用のコードに対応するライブラリ |Microsoft ドキュメント"
-ms.custom: 
+title: Roslyn アナライザーと ImmutableArrays 用のコードに対応するライブラリ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6870f1733d507f2cf46d196b2bba027b998b5ba4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6ebafdd09e6fca0e1266c4eb03c4f6cb66554d06
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用のコードに対応するライブラリ
 
@@ -28,8 +26,8 @@ ms.lasthandoff: 12/22/2017
 この例をビルドするには、次のとおりです。
 
 * Visual Studio 2015 (、Express エディション以外) またはそれ以降のバージョン。  無料を使用することができます[Visual Studio Community エディション](https://www.visualstudio.com/products/visual-studio-community-vs)
-* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  確認することも、Visual Studio をインストールするときに、同時に、SDK をインストールする一般的なツール Visual Studio 機能拡張ツールです。  Visual Studio が既にインストールされて場合、メイン メニューに移動してこの SDK をインストールすることも、**ファイル &#124;です。新しい &#124;です。プロジェクトの追加.**左側のナビゲーション ウィンドウで、c# を選択し、機能拡張を選択し、します。  選択すると、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートをするよう求められますをダウンロードして、SDK をインストールします。
-* [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)です。  メイン メニューに移動して、この SDK をインストールすることもできます。**ファイル &#124;です。新しい &#124;です。プロジェクトの追加.**選択、 **c#**左側のナビゲーション ペインで、クリックして、 **Extensibility**です。  選択すると"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートをするよう求められますをダウンロードして、SDK をインストールします。  この SDK に含まれています、 [Roslyn 構文ビジュアライザー](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)です。  この非常に便利なツールでは、どのようなコード モデルの種類を理解する必要があります内で検索、アナライザーです。  アナライザー インフラストラクチャ コードを呼び出すの特定のコード モデルの種類のコードはのみに必要なときに実行し、関連するコードを分析することのみに集中できます。
+* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  確認することも、Visual Studio をインストールするときに、同時に、SDK をインストールする一般的なツール Visual Studio 機能拡張ツールです。  Visual Studio が既にインストールされて場合、メイン メニューに移動してこの SDK をインストールすることも、**ファイル&#124;新規&#124;プロジェクト.**左側のナビゲーション ウィンドウで、c# を選択し、機能拡張を選択し、します。  選択すると、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートをするよう求められますをダウンロードして、SDK をインストールします。
+* [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)です。  メイン メニューに移動して、この SDK をインストールすることもできます**ファイル&#124;新規&#124;プロジェクト.。**選択、 **c#**左側のナビゲーション ペインで、クリックして、 **Extensibility**です。  選択すると"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートをするよう求められますをダウンロードして、SDK をインストールします。  この SDK に含まれています、 [Roslyn 構文ビジュアライザー](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)です。  この非常に便利なツールでは、どのようなコード モデルの種類を理解する必要があります内で検索、アナライザーです。  アナライザー インフラストラクチャ コードを呼び出すの特定のコード モデルの種類のコードはのみに必要なときに実行し、関連するコードを分析することのみに集中できます。
 
 ## <a name="whats-the-problem"></a>何がそんなに問題ですか。
 
@@ -59,13 +57,13 @@ ImmutableArray.Add メソッドはこのメソッドを呼び出すたびに新�
 
 ## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>関連する構文、アナライザーをトリガーするノードの種類を検索します。
 
- アナライザーをビルドするには、まず把握 SyntaxNode の種類確認する必要があります。 構文ビジュアライザー メニューから起動され、**ビュー &#124;です。その他の Windows &#124;です。Roslyn 構文ビジュアライザー**です。
+ アナライザーをビルドするには、まず把握 SyntaxNode の種類確認する必要があります。 構文ビジュアライザー メニューから起動され、**ビュー&#124;その他のウィンドウ&#124;Roslyn 構文ビジュアライザー**です。
 
 宣言する行のエディターのキャレットを配置する`b1`です。  使用するビジュアライザーの構文を示していますが表示されます、`LocalDeclarationStatement`構文ツリーのノードです。  このノードには、`VariableDeclaration`がさらに、`VariableDeclarator`がさらに、 `EqualsValueClause`、最後には、`ObjectCreationExpression`です。  構文のビジュアライザーのツリーで、ノードをクリックすると、そのノードによって表されるコードを表示する、エディター ウィンドウ内の構文が強調表示されます。  SyntaxNode サブ型の名前では、c# の文法で使用する名前と一致します。
 
 ## <a name="creating-the-analyzer-project"></a>アナライザー プロジェクトを作成します。
 
-メイン メニューから選択**ファイル &#124;です。新しい &#124;です。プロジェクトの追加.**.**新しいプロジェクト**ダイアログで、 **c#**プロジェクト、左側のナビゲーション バーで、拡張性を選択し、右側のペインで選択、**で修正するコード分析**プロジェクトテンプレートです。  名前を入力し、ダイアログ ボックスを確認します。
+メイン メニューから選択**ファイル&#124;新規&#124;プロジェクト.**.**新しいプロジェクト**ダイアログで、 **c#**プロジェクト、左側のナビゲーション バーで、拡張性を選択し、右側のペインで選択、**で修正するコード分析**プロジェクトテンプレートです。  名前を入力し、ダイアログ ボックスを確認します。
 
 テンプレートは、DiagnosticAnalyzer.cs ファイルを開きます。  エディター バッファー タブを選択します。このファイルには、アナライザー クラス (形成されるプロジェクトを指定した名前から) から派生した`DiagnosticAnalyzer`(Roslyn API 型)。  新しいクラスが、`DiagnosticAnalyzerAttribute`アナライザーを宣言することが設定されて、c# 言語に関連するコンパイラを検出し、アナライザーを読み込みます。
 
@@ -312,7 +310,7 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 すべての終了コードを確認できます[ここ](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)です。  DoNotUseImmutableArrayCollectionInitializer と DoNotUseImmutableArrayCtor サブ フォルダーでは、問題と、Visual Studio 電球 UI に表示されるコード修正を実装する c# ファイルを検索するための c# ファイルがあります。  メモ、終了コードが ImmutableArray をフェッチを回避する少し多くの抽象化\<T > オブジェクトを何度も入力します。  使用可能なコンテキスト型のオブジェクトを保存する入れ子にされた登録済みのアクションを使用するたびにサブ操作 (オブジェクトの作成を分析し、コレクションの初期化を分析) を実行します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [\\\Build 2015 講演](http://channel9.msdn.com/events/Build/2015/3-725)
 * [GitHub でコードが完了しました](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)

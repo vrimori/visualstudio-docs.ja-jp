@@ -1,13 +1,9 @@
 ---
-title: "統合開発環境に関するエラーのトラブルシューティング情報 | Microsoft Docs"
-ms.custom: 
+title: 統合開発環境に関するエラーのトラブルシューティング情報
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
 - VS.Message.0x00005A8E
@@ -94,31 +90,35 @@ f1_keywords:
 - VB_E_TERRCLASSNOTREG
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5466d764413283cb3f33525f12d7782c02ce6925
-ms.sourcegitcommit: e5bd950df79175a96fe62b3d4b17a3ef536ec4c3
+ms.openlocfilehash: a87d0b6aeec41071fd1e1018155b0a7898ed4a6c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>統合開発環境に関するエラーのトラブルシューティング情報
-一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、その他のリソースを利用できます。  
 
-## <a name="knowledge-base-articles"></a>サポート技術情報の文書  
- サポート技術情報 (KB) で、製品の問題に関する文書をオンラインで検索できます。 問題に該当する KB の文書が存在しないこともありますが、多数のユーザーが経験したエラーについては、その多くが文書化されています。 KB の文書には、[Microsoft サポート](http://go.microsoft.com/fwlink/?linkid=1782) Web サイトでアクセスできます。  
+一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、その他のリソースを利用できます。
 
-## <a name="the-developer-community"></a>開発者コミュニティ  
- フォーラムを利用すると、他の開発者や Microsoft の社員との間でさまざまな情報を交換できます。 エラーの解決策が見つからなかった場合は、問題に関する質問をフォーラムに投稿できます。 また、ニュースグループで過去に同じような問題が投稿されていないかを検索することもできます。  
+## <a name="knowledge-base-articles"></a>サポート技術情報の文書
 
- フォーラム、ブログ、チャットなどのリソースには、[マイクロソフト コミュニティ](http://go.microsoft.com/fwlink/?LinkID=144922) Web サイトでアクセスできます。  
+サポート技術情報 (KB) で、製品の問題に関する文書をオンラインで検索できます。 問題に該当する KB の文書が存在しないこともありますが、多数のユーザーが経験したエラーについては、その多くが文書化されています。 KB の文書には、[Microsoft サポート](https://support.microsoft.com) Web サイトでアクセスできます。
 
-## <a name="product-support"></a>製品のサポート  
- 他のリソースを参照しても問題が解決しない場合は、[Microsoft サポート](http://go.microsoft.com/fwlink/?linkid=1782) Web サイトにアクセスして、Microsoft サポート サービスに問い合わせることができます。 お住まいの地域で利用できる製品サポートについては、「[ご意見](../../ide/talk-to-us.md)」をご覧ください。
+## <a name="the-developer-community"></a>開発者コミュニティ
 
- ## <a name="see-also"></a>関連項目
- * [プロキシ エラーのトラブルシューティング](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)
+フォーラムを利用すると、他の開発者や Microsoft の社員との間でさまざまな情報を交換できます。 エラーの解決策が見つからなかった場合は、問題に関する質問をフォーラムに投稿できます。 また、ニュースグループで過去に同じような問題が投稿されていないかを検索することもできます。
+
+フォーラム、ブログ、チャットなどのリソースには、[マイクロソフト コミュニティ](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) Web サイトでアクセスできます。
+
+## <a name="product-support"></a>製品のサポート
+
+他のリソースを参照しても問題が解決しない場合は、[Microsoft サポート](http://go.microsoft.com/fwlink/?linkid=1782) Web サイトにアクセスして、Microsoft サポート サービスに問い合わせることができます。 お住まいの地域で利用できる製品サポートについては、「[ご意見](../../ide/talk-to-us.md)」をご覧ください。
+
+## <a name="see-also"></a>関連項目
+
+* [プロキシ エラーのトラブルシューティング](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)

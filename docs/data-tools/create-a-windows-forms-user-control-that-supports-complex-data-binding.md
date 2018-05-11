@@ -1,11 +1,7 @@
 ---
-title: "データ バインディングを使用する Windows フォーム ユーザー コントロールを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: データ バインディングを使用する Windows フォーム ユーザー コントロールを作成します。
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +11,16 @@ helpviewer_keywords:
 - user controls [Visual Studio], complex data binding
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: dc3ebe35c7b9697921e50a9ea310723128b494be
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4a1922c3b79a718b3a239280561bf954165332e6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 
@@ -82,7 +80,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-1. いずれかを展開**Visual c#**または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+1. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
 
 1. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -113,7 +111,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 ## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。
 
 データ バインディングをサポートする複合コントロールには、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装できます。
-  
+
 ### <a name="to-implement-the-complexbindingproperties-attribute"></a>ComplexBindingProperties 属性を実装するには
 
 1. スイッチ、 **ComplexDataGridView**コントロールをコード ビューにします。 (上、**ビュー**メニューの **コード**)。
@@ -123,7 +121,7 @@ Windows アプリケーションでフォームにデータを表示する場合
     [!code-csharp[VbRaddataDisplaying#4](../data-tools/codesnippet/CSharp/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.cs)]
     [!code-vb[VbRaddataDisplaying#4](../data-tools/codesnippet/VisualBasic/create-a-windows-forms-user-control-that-supports-complex-data-binding_1.vb)]
 
-1. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。
+1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
 ## <a name="creating-a-data-source-from-your-database"></a>データベースからデータ ソースの作成
 
@@ -131,11 +129,11 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 ### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1.  **[データ]** メニューの **[データ ソースの表示]**をクリックします。
+1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成**ウィザード。
 
-3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]**をクリックします。
+3.  **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
 
 4.  **データ接続の選択**ページは、次のいずれか。
 
@@ -175,7 +173,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 ### <a name="to-create-data-bound-controls-on-the-form"></a>フォームにデータ バインド コントロールを作成するには
 
-メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。  
+メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウからフォームにします。いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
 
 ## <a name="running-the-application"></a>アプリケーションの実行
 
@@ -193,6 +191,6 @@ F5 キーを押してアプリケーションを実行します。
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)  
-[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)  
-[Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)
+- [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+- [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)

@@ -1,27 +1,23 @@
 ---
-title: "ソリューションの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ソリューションの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions, about solutions
 ms.assetid: 3b21e3a1-170a-4485-941e-6b04b7b27886
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 539ceb45cce6c317ed3723c5006e6d2a77029335
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d64175c570c4fbca26bae0aa587b66e04cbee2be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="solutions-overview"></a>ソリューションの概要
 ソリューションは、連携するアプリケーションを作成する 1 つまたは複数のプロジェクトのグループです。 ソリューションに関連するプロジェクトとステータスの詳細については、2 つの別のソリューション ファイルに格納されます。 ソリューション (.sln) ファイルはテキスト ベースしソース コード管理下に配置およびユーザーの間で共有できます。 ソリューション ユーザー オプション (.suo) ファイルはバイナリです。 その結果、.suo ファイルはソース コード管理下に配置することはできませんし、ユーザーに固有の情報が含まれています。  
@@ -50,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  2 つのプロジェクトの構成で構成されると、ビルドからの 3 つ目の除外は、新しいソリューション構成を作成する場合は、プロパティ ページの UI またはオートメーションを使用する必要があります。 ソリューションのビルド マネージャーの構成とそのプロパティを直接変更することはできませんを使用して、ソリューションのビルド マネージャーを操作することができます、 `SolutionBuild` dte オートメーション モデル内のクラスです。 ソリューションを構成する方法の詳細については、次を参照してください。[ソリューション構成](../../extensibility/internals/solution-configuration.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>   

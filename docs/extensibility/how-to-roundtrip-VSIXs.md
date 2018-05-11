@@ -1,25 +1,21 @@
 ---
-title: "方法: Visual Studio の拡張機能をラウンドトリップする| Microsoft Docs"
-ms.custom: 
+title: '方法: Visual Studio の拡張機能をラウンドトリップする| Microsoft Docs'
+ms.custom: ''
 ms.date: 06/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
-caps.latest.revision: 
 author: willbrown
 ms.author: willbrown
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: b51673daa7a8c3526ad7de7f7cfdeac6a91d3b4b
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 9d8d0dc2e5c8c95b5f2502ef5a48e6f97c26e289
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>方法: 拡張機能を Visual Studio 2017 と Visual Studio 2015 に対応させる
 
@@ -93,7 +89,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * Visual Studio で source.extension.vsixmanifest ファイルを開きます。
 * **[Install Targets]\(インストールの対象)\** タブを開きます。
-* **[バージョン範囲]** を [14.0, 16.0) に変更します。  '[' は、14.0 とそれより前のすべてのバージョンを含めるよう Visual Studio に指示します。  ')' は、15.0 までのすべてのバージョンを含めるが、バージョン 16.0 は含めないように Visual Studio に指示します。
+* **[バージョン範囲]** を [14.0, 16.0) 変更します。  '[' は、14.0 とそれより前のすべてのバージョンを含めるよう Visual Studio に指示します。  ')' は、15.0 までのすべてのバージョンを含めるが、バージョン 16.0 は含めないように Visual Studio に指示します。
 * すべての変更を保存し、Visual Studio のすべてのインスタンスを閉じます。
 
 ![インストールの対象の画像](media/visual-studio-installation-targets-example.png)
@@ -168,7 +164,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * Microsoft.VSSDK.BuildTools 参照を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' != '14.0' And` を挿入します。  これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
 
-例:
+例えば:
 
 ```xml
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
@@ -176,7 +172,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' == '14.0' And` を挿入します。 これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
 
-例:
+例えば:
 
 ```xml
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
@@ -184,7 +180,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * Microsoft.VSSDK.BuildTools 参照を含んでいる `<Error>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' != '14.0' And` を挿入します。 これらのステートメントは、csproj ファイルのフッターに表示されます。
 
-例:
+例えば:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
@@ -192,7 +188,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 * Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<Error>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' == '14.0' And` を挿入します。 これらのステートメントは、csproj ファイルのフッターに表示されます。
 
-例:
+例えば:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />

@@ -1,13 +1,9 @@
 ---
-title: "デバッガーの変数のメモリを表示 |Microsoft ドキュメント"
+title: デバッガーの変数のメモリを表示 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.memory
 dev_langs:
@@ -24,17 +20,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], Memory window
 - buffers, viewing
 ms.assetid: 7f7a0439-10e4-4966-bb2d-51f04cda4fe2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96a4dc22f4f5c96d3dd9d40a565c2656ffe6e283
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 550c5ffe641fac5bb2d080a892143bf3ff9744b0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Visual Studio デバッガーの [メモリ] ウィンドウを使用します。
 **メモリ**ウィンドウには、アプリケーションによって使用されるメモリ領域に表示します。 **ウォッチ**ウィンドウで、 **クイック ウォッチ**ダイアログ ボックスで、 **自動変数**ウィンドウ、および**ローカル** ウィンドウに表示される変数の内容メモリ内の特定の位置に格納されます。 **メモリ**ウィンドウには大きな画像が表示されます。 これは、ほかのウィンドウではうまく表示されない大きなデータ (バッファーや長い文字列など) をチェックする場合に便利です。 ただし、**メモリ**ウィンドウはデータを表示するのに限定されません。 [メモリ] ウィンドウには、データ、コード、または未使用メモリの不要なランダム ビットを問わず、メモリ空間内のすべての要素が表示されます。  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  右クリックし、**メモリ**ウィンドウです。  
   
-2.  ショートカット メニューをクリックして **ツールバーの表示**です。  
+2.  ショートカット メニューをクリックして**ツールバーの表示**です。  
   
      直前の状態に応じて、ツール バーが表示されるか非表示になります。  
   
@@ -121,5 +116,5 @@ ms.lasthandoff: 12/22/2017
   
      ここで、使用すると実行コマンドなど**ステップ**、表示されているメモリ アドレスは、ポインターが変わると自動的に変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーでのデータ表示](../debugger/viewing-data-in-the-debugger.md)

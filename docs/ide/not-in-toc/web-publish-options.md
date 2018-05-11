@@ -1,27 +1,23 @@
 ---
-title: "状況に適した発行オプション | Microsoft Docs"
-ms.custom: 
+title: 状況に適した発行オプション
 ms.date: 03/09/2017
 ms.reviewer: riande
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-deployment
+ms.topic: conceptual
 helpviewer_keywords:
 - ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
-caps.latest.revision: 
 author: Mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c9aa56ab63d0c7c3b342e2c50cf81045580b54
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 18c0a5c24f664d337df3d85f24078d7ed410c137
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # 状況に適した発行オプション
 
@@ -32,7 +28,7 @@ Visual Studio 内から、次のターゲットに Web アプリケーション�
 - [ファイル システム](#file-system)
 - [カスタム ターゲット (IIS、FTP など)](#custom-targets) (任意の Web サーバーをすべて含みます)
 
-**[発行]** タブでは、既存の発行プロファイルを選んだり、既存の発行プロファイルをインポートしたり、ここで説明するオプションを使って新しい発行プロファイルを作成したりできます。
+**[発行]** タブでは、既存の発行プロファイルを選んだり、既存の発行プロファイルをインポートしたり、ここで説明するオプションを使って新しい発行プロファイルを作成したりできます。 IDE でのアプリの種類別の発行オプションについては、[デプロイの概要](../../deployment/deploying-applications-services-and-components.md)に関する記事を参照してください。
 
 ## Azure App Service Web Apps
 

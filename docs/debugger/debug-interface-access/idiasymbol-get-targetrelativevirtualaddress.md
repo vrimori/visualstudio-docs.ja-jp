@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_targetrelativevirtualaddress |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_targetrelativevirtualaddress |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_targetRelativeVirtualAddress method
 ms.assetid: 49a159f3-6943-44d3-90a3-0dba51e8a7ec
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e89bacdc9f16c429ff82495642689964b8e1eceb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5c43d496565518df7e24b57cd9d191b1a64a800f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgettargetrelativevirtualaddress"></a>IDiaSymbol::get_targetRelativeVirtualAddress
 サンク ターゲットの相対仮想アドレス (RVA) を取得します。  
@@ -51,6 +46,6 @@ HRESULT get_targetRelativeVirtualAddress (
   
  「サンク」は、32 ビット メモリ アドレス空間 (フラットのアドレス空間とも呼ばれます) と (セグメント化されたアドレス空間と呼ばれます) の 16 ビット アドレス空間の間で変換するコードです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)

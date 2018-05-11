@@ -1,29 +1,24 @@
 ---
-title: "方法 : エディターのワード ラップを管理する | Microsoft Docs"
-ms.custom: 
+title: '方法 : エディターのワード ラップを管理する'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - word wrap
 - editors, text viewing
 - Code Editor, word wrap
 ms.assetid: 442f33ef-9f52-4515-b55f-fb816d664645
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 75a82b2c3e3e251dbd53ae8d2fc67edabb33f830
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 08fe7ac16eff2c7ebf398b0483034a324eb02d91
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>方法 : エディターのワード ラップを管理する
 
@@ -35,26 +30,26 @@ ms.lasthandoff: 01/29/2018
 ## <a name="procedure"></a>プロシージャ
 
 ### <a name="to-set-word-wrap-preferences"></a>ワード ラップ オプションを設定するには
-  
-1.  **[ツール]** メニューの **[オプション]** を選択します。  
-  
-2.  **[テキスト エディター]** フォルダーで、**[すべての言語]** サブフォルダーの **[全般]** オプションを選択して、このオプションをグローバルに設定します。  
-  
-     または  
-  
-     プログラミングしている言語のサブフォルダーの **[全般]** オプションを選択します。  
-  
-3.  **[設定]** で、**[右端で折り返す]** オプションをオンまたはオフにします。  
-  
-     **[右端で折り返す]** オプションをオンにすると、**[右端の折り返しの記号を表示する]** オプションが有効になります。  
-  
-4.  長い行が 2 行目に折り返される場合に改行インジケーターを表示するには、**[折り返しの記号を表示する]** オプションをオンにします。 このオプションをオフにすると、インジケーターは表示されません。  
-  
+
+1.  **[ツール]** メニューの **[オプション]** を選択します。
+
+2.  **[テキスト エディター]** フォルダーで、**[すべての言語]** サブフォルダーの **[全般]** オプションを選択して、このオプションをグローバルに設定します。
+
+     または
+
+     プログラミングしている言語のサブフォルダーの **[全般]** オプションを選択します。
+
+3.  **[設定]** で、**[右端で折り返す]** オプションをオンまたはオフにします。
+
+     **[右端で折り返す]** オプションをオンにすると、**[右端の折り返しの記号を表示する]** オプションが有効になります。
+
+4.  長い行が 2 行目に折り返される場合に改行インジケーターを表示するには、**[折り返しの記号を表示する]** オプションをオンにします。 このオプションをオフにすると、インジケーターは表示されません。
+
     > [!NOTE]
-    >  改行インジケーターはコードには追加されません。表示専用です。  
-  
+    >  改行インジケーターはコードには追加されません。表示専用です。
+
 ## <a name="see-also"></a>関連項目
 
-[エディターのカスタマイズ](../../ide/customizing-the-editor.md)  
-[[テキスト エディター] ([オプション] ダイアログ ボックス)](../../ide/reference/text-editor-options-dialog-box.md)  
-[コードの作成](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [エディターのカスタマイズ](../../ide/customizing-the-editor.md)
+- [[テキスト エディター] ([オプション] ダイアログ ボックス)](../../ide/reference/text-editor-options-dialog-box.md)
+- [コードの作成](../../ide/writing-code-in-the-code-and-text-editor.md)

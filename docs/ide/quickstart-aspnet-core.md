@@ -1,25 +1,22 @@
 ---
-title: "Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する | Microsoft Docs
+ms.custom: ''
 ms.date: 10/10/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ba3c6655401501edf1f71e04f2aa249a6a001dda
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 0f1a1397de407a4497961920762b0084069b3764
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -41,7 +38,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
      ![VS インストーラーの ASP.NET ワークロード](../ide/media/quickstart-aspnet-workload.png)
 
-1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューから **[ASP.NET Core 2.0]** を選択します  (リストに **ASP.NET Core 2.0** が表示されない場合は、ダイアログ ボックスの上部付近にある黄色のバーに表示される **[ダウンロード]** リンクに従ってインストールしてください)。**[OK]**をクリックします。
+1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューから **[ASP.NET Core 2.0]** を選択します  (リストに **ASP.NET Core 2.0** が表示されない場合は、ダイアログ ボックスの上部付近にある黄色のバーに表示される **[ダウンロード]** リンクに従ってインストールしてください)。**[OK]** をクリックします。
 
    ![[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス](../ide/media/quickstart-aspnet-core20.png)
 
@@ -86,7 +83,8 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
+このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
 
-* [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
-* [ASP.NET Core の Razor ページの概要](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+> [!div class="nextstepaction"]
+> [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)

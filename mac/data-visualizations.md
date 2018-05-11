@@ -1,17 +1,16 @@
 ---
-title: "デバッグ - データの視覚化"
-description: "デバッグは、プログラミングの中でも一般的で必要な部分です。 Visual Studio for Mac には、デバッグが簡単になる機能一式が備わっています。 この記事では、デバッガーでオブジェクトを検査するときに表示できるさまざまなデータの視覚化について説明します。"
+title: デバッグ - データの視覚化
+description: デバッグは、プログラミングの中でも一般的で必要な部分です。 Visual Studio for Mac には、デバッグが簡単になる機能一式が備わっています。 この記事では、デバッガーでオブジェクトを検査するときに表示できるさまざまなデータの視覚化について説明します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
-ms.openlocfilehash: 5f1eda5ccf6f308c626d525bbe7069a84ce3154b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5ee16324a312eca79de2f3b356a5f3be941f5e7b
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-visualizations"></a>データの視覚化
 
@@ -64,7 +63,7 @@ Rectangle/RectangleF (iOS と Mac では CGRect) は、ディメンションと�
 ![ベジエ曲線の視覚化](media/data-visualizations-image16.png)
 
 
-## <a name="string"></a>文字列型
+## <a name="string"></a>String
 
 100 文字未満の文字列は、プレビューを使用せずに完全に表示されます。 100 文字以上の文字列は、プレビューで完全に表示されます。 文字列は編集可能で、ビジュアライザーには編集ボタンが表示されます。ボタンをクリックすると、以下のようにプレビューまたは文字列値エディターで文字列値を編集できます。
 

@@ -1,29 +1,24 @@
 ---
-title: "IDiaTable |Microsoft ドキュメント"
-ms.custom: 
+title: IDiaTable |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaTable interface
 ms.assetid: c99a2c44-7b72-4e3c-b963-25fe3df3a555
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f596d2c51c5d5e543ed67212662c5096ea2e4eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e95c469bb3a1d8747a7f1dabfadec24dc991730c
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiatable"></a>IDiaTable
 DIA データ ソースのテーブルを列挙します。  
@@ -72,7 +67,7 @@ IDiaTable : IEnumUnknown
  最初の関数では、`ShowTableNames`セッション内のすべてのテーブルの名前を表示します。 2 番目の関数では、 `GetTable`、すべての指定したインターフェイスを実装するテーブルのテーブルを検索します。 3 番目の関数では、`UseTable`を使用する方法を示します、`GetTable`関数。  
   
 > [!NOTE]
->  `CDiaBSTR`ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
+>  `CDiaBSTR` ラップするクラスには、`BSTR`し、自動的に処理をインスタンス化がスコープ外に出るときに、文字列を解放します。  
   
 ```C++  
 void ShowTableNames(IDiaSession *pSession)  
@@ -136,14 +131,14 @@ void UseTable(IDiaSession *pSession)
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
   
  DLL: msdia80.dll  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [Idiaenumtables::item](../../debugger/debug-interface-access/idiaenumtables-item.md)   

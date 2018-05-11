@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: サイト内の列、コンテンツ タイプ、および SharePoint のリストを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: サイト内の列、コンテンツ タイプ、および SharePoint のリストを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
@@ -23,13 +21,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, content types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4db9ed078131e7152f3987c80f4e6181f888e540
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a6fc193ba73c040042e7d19d5b86f0acf61e69ac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成
   次の手順は、カスタムの SharePoint サイト列を作成する方法をデモンストレーション — または*フィールド*— だけでなく、サイト内の列を使用するコンテンツの種類。 新しいコンテンツの種類を使用するリストを作成する方法も示しています。  
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Visual Studio  
   
-##  <a name="BKMK_CreatingCustSiteCols"></a>カスタムのサイト列を作成します。  
+##  <a name="BKMK_CreatingCustSiteCols"></a> カスタムのサイト列を作成します。  
  この例では、患者を病院で管理するために、リストを作成します。 最初に、SharePoint プロジェクトを作成する必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]サイト内の列を追加して、次のようにします。  
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
@@ -97,7 +96,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  同じ手順を使用して 2 つのサイト列プロジェクトに追加:**患者の ID** (種類 =「整数」) と**医師名前**(型 ="Text") です。 そのグループの値を設定**クリニック サイト内の列**です。  
   
-##  <a name="BKMK_CreateCustContType"></a>カスタム コンテンツ タイプを作成します。  
+##  <a name="BKMK_CreateCustContType"></a> カスタム コンテンツ タイプを作成します。  
  次に、コンテンツの種類を作成-連絡先コンテンツの種類に基づいて-前の手順で作成したサイト内の列が含まれています。 コンテンツの種類を既存のコンテンツの種類に基づいて、によって基本コンテンツの種類には、いくつかのサイト列、新しいコンテンツ タイプで使用するための時間を節約できます。  
   
 #### <a name="to-create-a-custom-content-type"></a>カスタム コンテンツ タイプを作成するには  
@@ -131,7 +130,7 @@ ms.lasthandoff: 01/10/2018
   
 11. メニュー バーで、次のように選択します。**ファイル**、**すべて保存**、し、コンテンツ タイプ デザイナーを閉じます。  
   
-##  <a name="BKMK_CreateList"></a>一覧を作成します。  
+##  <a name="BKMK_CreateList"></a> 一覧を作成します。  
  ここで、新しいコンテンツの種類とサイト列を使用するリストを作成します。  
   
 #### <a name="to-create-a-list"></a>一覧を作成するには  
@@ -205,7 +204,7 @@ ms.lasthandoff: 01/10/2018
   
 15. **列名**一覧で、選択**患者名**、ことを確認して、**並べ替え**に設定されている列**昇順**、をクリックして**[Ok]**ボタンをクリックします。  
   
-##  <a name="BKMK_TestApp"></a>アプリケーションのテスト  
+##  <a name="BKMK_TestApp"></a> アプリケーションのテスト  
  カスタムのサイト列、コンテンツ タイプ、および一覧は、準備ができたら、SharePoint に配置したり、アプリケーション テストを実行できます。  
   
 #### <a name="to-test-the-application"></a>アプリケーションをテストするには  
@@ -226,7 +225,7 @@ ms.lasthandoff: 01/10/2018
   
      一覧に新しいレコードが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint のサイト列、コンテンツの種類、およびリストの作成](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)   
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [方法: カスタム フィールドの種類を作成します。](http://go.microsoft.com/fwlink/?LinkId=192079)   

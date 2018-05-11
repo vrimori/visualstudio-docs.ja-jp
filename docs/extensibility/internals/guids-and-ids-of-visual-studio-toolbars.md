@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio ツールバーの Guid と Id |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio ツールバーの Guid と Id |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - visual studio groups
 - toolbars
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - tool window toolbar
 - guid
 ms.assetid: c9cacd57-9225-450f-a9ac-cbf3168ea844
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: bbb14818cebb35f703ec6f5ade084d96ac383d6a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 394e0991d734279879df89422ac23fdd26899eeb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio ツールバーの Guid と Id
 このトピックは、Visual Studio 統合開発環境 (IDE) に含まれているツールバーの GUID と ID の値を列挙し、グループが含まれています。 これらの値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)です。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="standard-toolbar-groups"></a>標準ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |保存/開く|IDG_VS_TOOLSB_SAVEOPEN|  
 |切り取り/コピー|IDG_VS_TOOLSB_CUTCOPY|  
@@ -79,14 +77,14 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="build-toolbar-groups"></a>ツールバーのグループを作成します。  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |ビルド バー|IDG_VS_BUILDBAR|  
 |キャンセル|IDG_VS_BUILD_CANCEL|  
   
 ### <a name="text-editor-toolbar-groups"></a>テキスト エディター ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |完了|IDM_VS_TOOL_TEXTEDITOR|  
 |Indent|IDG_VS_EDITTOOLBAR_INDENT|  
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="debug-toolbar-groups"></a>デバッグ ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |実行|IDM_DEBUG_TOOLBAR|  
 |ステップ実行|IDG_DEBUG_TOOLBAR_STEPPING|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="debug-location-toolbar-groups"></a>デバッグの場所 ツールバーのグループ  
   
-|name|ID|  
+|名前|ID|  
 |----------|--------|  
 |デバッグの場所|IDG_DEBUG_CONTEXT_TOOLBAR|  
   
@@ -138,7 +136,7 @@ ms.lasthandoff: 12/22/2017
 |1 ~ 4 のメモリ|guidVSDebugGroup:IDM_MEMORY_WINDOW_TOOLBAR1 しています.4|IDG_MEMORY_EXPRESSION1.4<br /><br /> IDG_MEMORY_COLUMNS1.4|  
 |プロセス|guidVSDebugGroup:IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツールバーにメニュー コント ローラーを追加します。](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)   
  [ツール ウィンドウにツールバーを追加します。](../../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [Visual Studio メニューの GUID および ID](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

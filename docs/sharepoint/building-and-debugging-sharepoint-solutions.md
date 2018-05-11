@@ -1,12 +1,10 @@
 ---
-title: "ビルドと SharePoint ソリューションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: ビルドと SharePoint ソリューションのデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, debugging
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c74c65d091f170b19357058b1d8ae407b2125e77
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f797fbf14504e2856616a0709aabba70cd639446
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-and-debugging-sharepoint-solutions"></a>SharePoint ソリューションのビルドとデバッグ
   一般に、ビルドと SharePoint ソリューションのデバッグは、ビルドおよびその他の種類のプロジェクトのデバッグと同じ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 このセクションのトピックでは、いくつかある相違点について説明します。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="using-the-clean-command"></a>［クリーン］ コマンドの使用  
  SharePoint ソリューションのデバッグは、SharePoint サーバーのインストール時に、**クリーン**コマンドでは、ソリューションはアンインストールされません。 代わりに、SharePoint 構成から機能を非アクティブ化する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)   
  [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

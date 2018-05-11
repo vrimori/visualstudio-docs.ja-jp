@@ -1,18 +1,18 @@
 ---
-title: "*.runsettings* ファイルを使用して Visual Studio で単体テストを構成する | Microsoft Docs"
+title: .runsettings ファイルを使用して Visual Studio で単体テストを構成する | Microsoft Docs
 ms.date: 02/28/2018
-ms.technology: vs-devops-test
-ms.topic: article
+ms.technology: vs-ide-test
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f10870096697341081904c4dac9540d72823e52f
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 3a446c3223197058401e07a5aef2cb13bde46f3c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings ファイルを使用して単体テストを構成する*
 
@@ -57,7 +57,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
 
     <!-- Path to Test Adapters -->
     <TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>
-  
+
      <!--TestSessionTimeout is only available with Visual Studio 2017 version 15.5 and higher -->
      <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
      <TestSessionTimeout>10000</TestSessionTimeout>
@@ -147,7 +147,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
 
 ビデオ データ コレクターは、テストが実行されたときに、画面記録をキャプチャします。 この記録は、UI テストのトラブルシューティングに役立ちます。 ビデオ データ コレクターは、**Visual Studio 2017 バージョン 15.5** 以降で使用できます。
 
-他の種類の診断データ アダプターをカスタマイズするには、テスト設定ファイルを使用する必要があります。 詳細については、「[Visual Studio のテストにおけるテスト設定の指定](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)」を参照してください。
+他の種類の診断データ アダプターをカスタマイズするには、[テスト設定ファイル](../test/collect-diagnostic-information-using-test-settings.md)を使用する必要があります。
 
 ### <a name="testrunparameters"></a>TestRunParameters
 
@@ -170,7 +170,7 @@ TestContext を使用するには、プライベートの [TestContext](https://
 |-------------------|-------------|------------|
 |ForcedLegacyMode|False|Visual Studio 2012 で、MSTest アダプターは処理速度を向上させ、よりスケーラブルになるように最適化されました。 テストが実行される順序などの一部の動作は、Visual Studio の以前のエディションでの動作と完全に同じではない場合もあります。 以前のテスト アダプターを使用するには、この値を `true` に設定します。<br /><br /> たとえば、単体テスト用に指定された *app.config* ファイルがある場合は、この設定を使用することがあります。<br /><br /> より新しいアダプターを使用できるように、テストのリファクタリングを検討することをお勧めします。|
 |IgnoreTestImpact|False|テストの影響機能は、MSTest で実行したとき、または Microsoft Test Manager から実行したときに最近の変更の影響を受けるテストの優先順位を付けます。 この設定は機能を非アクティブ化します。 詳細については、「[方法: コードの変更後に実行するテストをチェックするためのデータを収集する](http://msdn.microsoft.com/Library/2f921ea1-9bb0-4870-a30f-0521fc22cb47)」を参照してください。|
-|SettingsFile||ここで、MSTest アダプターで使用するテスト設定ファイルを指定できます。 **[テスト]**メニューの **[テストの設定]**、 **[テスト設定ファイルの選択]**を使用してテスト設定ファイルを指定することもできます。<br /><br /> この値を指定する場合は、 **ForcedlegacyMode** も **true**に設定する必要があります。<br /><br /> `<RunSettings>   <MSTest>     <SettingsFile>my.testsettings</SettingsFile>      <ForcedLegacyMode>true</ForcedLegacyMode>    </MSTest> </RunSettings>`|
+|SettingsFile||ここで、MSTest アダプターで使用するテスト設定ファイルを指定できます。 **[テスト]** メニューの **[テストの設定]**、 **[テスト設定ファイルの選択]** を使用してテスト設定ファイルを指定することもできます。<br /><br /> この値を指定する場合は、 **ForcedlegacyMode** も **true**に設定する必要があります。<br /><br /> `<RunSettings>   <MSTest>     <SettingsFile>my.testsettings</SettingsFile>      <ForcedLegacyMode>true</ForcedLegacyMode>    </MSTest> </RunSettings>`|
 |KeepExecutorAliveAfterLegacyRun|False|テストの実行が完了した後、MSTest がシャットダウンされます。 テストの一部として起動されたプロセスも中止されています。 テスト実行プログラムを中止しない場合は、この構成を true に切り替えます。<br /><br /> たとえば、コード化された UI テストの間にブラウザーの実行を維持するために、この設定を使用できます。|
 |DeploymentEnabled|true|値を false に設定すると、テスト メソッドで指定した配置項目が配置ディレクトリにコピーされません。|
 |CaptureTraceOutput|true|Trace.WriteLine を使用して、テスト メソッドからデバッグ トレースに書き込むことができます。 この構成を使用して、これらのデバッグ トレースをオフにできます。|
@@ -181,4 +181,4 @@ TestContext を使用するには、プライベートの [TestContext](https://
 
 ## <a name="see-also"></a>関連項目
 
-[コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)
+- [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)

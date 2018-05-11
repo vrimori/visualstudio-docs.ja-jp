@@ -1,20 +1,22 @@
 ---
-title: "[型コレクション エディター] ダイアログ ボックス |Microsoft ドキュメント"
+title: ワークフロー デザイナーの [型コレクション エディター] ダイアログ ボックス
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeCollectionEditor.UI
 ms.assetid: 63cdea6b-bca2-4c06-b8b4-c8faabd40726
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f873ef2f2f30e307c7f9ec16a612eb76d09633c9
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 09bb5c7789be78a39a8d33a556ce66385db4a1d8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-collection-editor-dialog-box"></a>[型コレクション エディター] ダイアログ ボックス
 

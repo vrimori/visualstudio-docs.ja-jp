@@ -1,11 +1,9 @@
 ---
-title: "Visual Studio でのツールボックス ウィンドウ | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のツールボックス ウィンドウ
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.toolbox.general
 - vs.toolbox
@@ -14,14 +12,14 @@ helpviewer_keywords:
 - custom controls [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c9cc96d501eb6d7d10ab31f48600eb65eb57a7
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 3f296349a6dfda80ff402b1ede0f1da591f6caa9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="toolbox"></a>ツールボックス
 

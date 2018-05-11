@@ -1,30 +1,27 @@
 ---
-title: "[設定のインポートとエクスポート] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs"
-ms.custom: 
+title: '[設定のインポートとエクスポート] \([オプション] ダイアログ ボックス - [環境])'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Profiles
 ms.assetid: 4e69f97b-2bd2-4619-a5f9-92ca2e814de3
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b63f3c74a59630ea762cb1ba37bc192f53e5fcb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 567a7f0eeb0fcf68d37dc38a484c3a8db15f3c40
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="import-and-export-settings-environment-options-dialog-box"></a>[設定のインポートとエクスポート] \([オプション] ダイアログ ボックス - [環境])
-このページを使用して、ユーザー設定ファイルの保存先とチーム設定ファイルを使用するかどうかを指定します。 設定について詳しくは、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。  
-  
-## <a name="see-also"></a>参照  
- [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)
+
+このページを使用して、ユーザー設定ファイルの保存先とチーム設定ファイルを使用するかどうかを指定します。 設定について詳しくは、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。
+
+### <a name="see-also"></a>参照
+
+- [[環境] ([オプション] ダイアログ ボックス)](../../ide/reference/environment-options-dialog-box.md)

@@ -1,8 +1,9 @@
 ---
-title: "CA2117: APTCA 型は APTCA 基本型を拡張して必要があるだけ |Microsoft ドキュメント"
+title: 'CA2117: APTCA 型は APTCA 基本型のみを拡張することができます'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CA2117
 - AptcaTypesShouldOnlyExtendAptcaBaseTypes
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: c505b586-2f1e-47cb-98ee-a5afcbeda70f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4987d9624e448cfcdba263bb08ceed4e6c1c7b60
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 2d295ef0a0cc2723634ad6f32c9bb91c4f7524b2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 型は APTCA 基本型のみを拡張することができます
 

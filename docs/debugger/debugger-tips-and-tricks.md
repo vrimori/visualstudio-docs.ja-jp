@@ -1,27 +1,25 @@
 ---
-title: "ヒントし、コツについて、Visual Studio デバッガーで |Microsoft ドキュメント"
-ms.custom: 
+title: ヒントし、コツについて、Visual Studio デバッガーで
+description: Visual Studio デバッガー用の生産性に関するヒントを理解します。
+ms.custom: ''
 ms.date: 06/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stepping
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 5262d8b1-2648-429e-85d5-90fcaadfb362
-caps.latest.revision: "2"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: dacce06dc59724b7f8feba8f84d2b781ba56ed9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bb4fb2c32f74a764e092e0e6f65685a358d64f54
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガー用の生産性に関するヒントと秘訣を理解します。
 
@@ -88,7 +86,7 @@ Visual Studio でサポートされている多くの言語では、デバッグ
 
 ## <a name="view-return-values-for-functions"></a>関数の戻り値の表示
 
-表示するには、関数の戻り値を見てで表示される機能、 **[自動変数]**ウィンドウは、コードをステップ実行するときにします。 関数の戻り値を表示するには、興味のある関数が既に実行されていることを確認します (キーを押して**F10**関数呼び出しの現在停止している場合に 1 回)。 使用して、ウィンドウを閉じる場合**デバッグ > Windows > [自動変数]**を開くには、 **[自動変数]**ウィンドウです。
+表示するには、関数の戻り値を見てで表示される機能、 **[自動変数]** ウィンドウは、コードをステップ実行するときにします。 関数の戻り値を表示するには、興味のある関数が既に実行されていることを確認します (キーを押して**F10**関数呼び出しの現在停止している場合に 1 回)。 使用して、ウィンドウを閉じる場合**デバッグ > Windows > [自動変数]** を開くには、 **[自動変数]** ウィンドウです。
 
 ![[自動変数] ウィンドウ](../debugger/media/dbg-tips-autos-window.png "AutosWindow")
 
@@ -167,5 +165,5 @@ UWP アプリでは、ネットワーク操作を使用して実行を分析す�
 - [Visual Studio でデバッグするために 7 のいずれか小さいほう既知ハッキング](https://blogs.msdn.microsoft.com/visualstudio/2017/06/26/7-lesser-known-hacks-for-debugging-in-visual-studio/)
 - [Visual Studio での 7 の非表示 gems](https://blogs.msdn.microsoft.com/visualstudio/2017/10/05/7-hidden-gems-in-visual-studio-2017/)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [キーボード ショートカット](../ide/tips-and-tricks-for-visual-studio.md)

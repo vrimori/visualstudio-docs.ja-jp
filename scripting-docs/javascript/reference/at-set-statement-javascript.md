@@ -1,13 +1,13 @@
 ---
-title: "@setステートメント (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: '@set ステートメント (JavaScript) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@set_JavaScriptKeyword'
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@set statement'
 - conditional compilation, variables
 ms.assetid: 36f15926-3e69-422d-82a2-d186dc088203
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 10f74a1d57a61d78897b660812a6fd8078244b6b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="set-statement-javascript"></a>@setステートメント (JavaScript)
+# <a name="set-statement-javascript"></a>@set ステートメント (JavaScript)
 条件付きコンパイル ステートメントで使用する変数を作成します。  
   
 > [!WARNING]
@@ -44,10 +44,10 @@ ms.lasthandoff: 10/27/2017
   
 ## <a name="parameters"></a>パラメーター  
  *varname*  
- 必須です。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で有効な変数名を指定します。 必ず先頭に "@" という文字を記述します。  
+ 必須。 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] で有効な変数名を指定します。 必ず先頭に "@" という文字を記述します。  
   
  `term`  
- 必須です。 0 個以上の単項演算子に続けて、定数、条件コンパイル変数、またはかっこで囲んだ式を指定します。  
+ 必須。 0 個以上の単項演算子に続けて、定数、条件コンパイル変数、またはかっこで囲んだ式を指定します。  
   
 ## <a name="remarks"></a>コメント  
  条件コンパイルでは、数値変数とブール変数がサポートされています。 文字列はサポートされていません。 通常、`@set` ステートメントで作成した変数は、条件コンパイルの中で使用しますが、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] コードのどの場所でも使用できます。  
@@ -96,5 +96,5 @@ ms.lasthandoff: 10/27/2017
 ## <a name="see-also"></a>関連項目  
  [条件付きコンパイル](../../javascript/advanced/conditional-compilation-javascript.md)   
  [条件付きコンパイル変数](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_onステートメント](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@cc_on ステートメント](../../javascript/reference/at-cc-on-statement-javascript.md)   
  [@if ステートメント](../../javascript/reference/at-if-statement-javascript.md)

@@ -1,45 +1,42 @@
 ---
-title: "Migration アクティビティ デザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナーでの移行アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 7598e869-1da1-4721-b4bf-6cbe402be1a2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86db81d54d332b8e28946e9577936e6738240b07
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a7f118f340ab91359f26ee03c3900d734720c128
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migration-activity-designers"></a>移行アクティビティ デザイナー
-Migration アクティビティ デザイナーは、[!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] を対象にしたワークフローからワークフロー 3.0/3.5 のアクティビティを呼び出すために使用します。 このセクションに含まれているトピックでは、[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]のアクティビティ デザイナーの使用方法についてのガイドラインを示します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [Interop](../workflow-designer/interop-activity-designer.md)  
- <xref:System.Activities.Statements.Interop> アクティビティを作成および構成するために使用します。  
-  
-## <a name="reference"></a>参照  
-  
-## <a name="related-sections"></a>関連項目  
- 他の種類のアクティビティ デザイナーについては、次のトピックを参照してください。  
-  
- [制御フロー](../workflow-designer/control-flow-activity-designers.md)  
-  
- [フローチャート](../workflow-designer/flowchart-activity-designers.md)  
-  
- [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)  
-  
- [メッセージング](../workflow-designer/messaging-activity-designers.md)  
-  
- [ランタイム](../workflow-designer/runtime-activity-designers.md)  
-  
- [Primitives](../workflow-designer/primitives-activity-designers.md)  
-  
- [トランザクション](../workflow-designer/transaction-activity-designers.md)  
-  
- [コレクション](../workflow-designer/collection-activity-designers.md)  
-  
+
+Migration アクティビティ デザイナーは、.NET Framework 4 を対象とするワークフローからワークフロー 3.0/3.5 のアクティビティを呼び出すに使用されます。 このセクションに含まれるトピックでは、ワークフロー デザイナーのアクティビティ デザイナーを使用する方法のガイダンスを提供します。
+
+## <a name="related-sections"></a>関連項目
+ 他の種類のアクティビティ デザイナーについては、次のトピックを参照してください。
+
+ [制御フロー](../workflow-designer/control-flow-activity-designers.md)
+
+ [フローチャート](../workflow-designer/flowchart-activity-designers.md)
+
+ [アクティビティ デザイナーの使用](../workflow-designer/using-the-activity-designers.md)
+
+ [メッセージング](../workflow-designer/messaging-activity-designers.md)
+
+ [ランタイム](../workflow-designer/runtime-activity-designers.md)
+
+ [Primitives](../workflow-designer/primitives-activity-designers.md)
+
+ [トランザクション](../workflow-designer/transaction-activity-designers.md)
+
+ [コレクション](../workflow-designer/collection-activity-designers.md)
+
  [エラー処理](../workflow-designer/error-handling-activity-designers.md)

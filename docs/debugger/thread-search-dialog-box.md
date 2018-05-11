@@ -1,27 +1,22 @@
 ---
-title: "スレッド検索 ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: スレッド検索 ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Thread Search
 ms.assetid: 52ecb289-9b86-455c-a52b-3dcd3f7255bf
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f6cf674581b4e4368aab87e7ddd6c64096efe5e
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 44ce2c01bc943945439e0682b9462f24c7d9c5fd
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="thread-search-dialog-box"></a>[スレッド検索] ダイアログ ボックス
 検索で特定のスレッドのノードを選択してこのダイアログ ボックスを使用して[スレッド ビュー](../debugger/threads-view.md)です。 このダイアログ ボックスを表示するには、フォーカスを移動、**スレッド**ビュー ウィンドウ。 選択し、**スレッド**から、**検索**メニュー。  

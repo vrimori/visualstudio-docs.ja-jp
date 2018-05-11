@@ -1,28 +1,26 @@
 ---
-title: "選択範囲と、IDE で通貨 |Microsoft ドキュメント"
-ms.custom: 
+title: 選択範囲と、IDE で通貨 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - currency, Visual Studio IDE
 - IDE, selection
 - selection, Visual Studio IDE
 - IDE, currency
 ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e46c18f424130a29085aaccad19328c9f86682f6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bf8c58cb08f82b10970424600843b0fedcf477fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="selection-and-currency-in-the-ide"></a>選択範囲と、IDE の通貨
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) の保持の選択を使用して、ユーザーの情報がオブジェクトに現在選択されている*コンテキスト*です。 選択コンテキスト、Vspackage が、2 つの方法での追跡の通貨でパーツを受け取ることができます。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |-------------|-----------------|  
 |現在の階層|通常、現在のプロジェクトです。NULL の現在の階層では、全体として、ソリューションが最新であることを示します。|  
 |現在のアイテム Id|現在の階層内で選択した項目選択した複数のプロジェクトのウィンドウである場合は、複数の現在の項目があります。|  
-|現在の`SelectionContainer`|[プロパティ] ウィンドウがプロパティを表示する必要があります 1 つまたは複数のオブジェクトが保持されます。|  
+|現在の `SelectionContainer`|[プロパティ] ウィンドウがプロパティを表示する必要があります 1 つまたは複数のオブジェクトが保持されます。|  
   
  さらに、環境には、次の 2 つのグローバル リストが保持されます。  
   
@@ -66,6 +64,6 @@ ms.lasthandoff: 12/22/2017
   
 -   トレース ウィンドウ フレームの選択コンテキスト内で要素を変更するイベントです。 例についてには、DocObject 内の選択範囲を変更するか、プロジェクトの種類 ウィンドウで選択を変更が含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテキスト オブジェクトの選択](../../extensibility/internals/selection-context-objects.md)   
  [ユーザーへのフィードバック](../../extensibility/internals/feedback-to-the-user.md)

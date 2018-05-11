@@ -1,13 +1,9 @@
 ---
-title: "&lt;署名&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;署名&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - <Signature> element [ClickOnce deployment manifest]
 ms.assetid: c99b07ad-e8ba-43f2-b0d6-3745e7a7c8b3
-caps.latest.revision: 
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ffcc04808916d8ef31fb77cab72f54c1e22e924c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5637bad77e2d4e09d6d04007f0e0da3ed8af68df
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;署名&gt;要素 (ClickOnce 配置)
 この配置マニフェストにデジタル署名するために必要な情報が含まれます。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="remarks"></a>コメント  
- エンベロープ署名を使用して配置マニフェストに署名オプションですが、ことをお勧めします。 ファイルを XML 署名の詳細については、World Wide Web Consortium 推奨事項を「XML 署名の構文と処理を」」の説明を参照してください[http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/)です。  
+ エンベロープ署名を使用して配置マニフェストに署名オプションですが、ことをお勧めします。 ファイルを XML 署名の詳細については、World Wide Web Consortium 推奨事項を「XML 署名の構文と処理を」」の説明を参照してください[ http://www.w3.org/TR/xmldsig-core/](http://www.w3.org/TR/xmldsig-core/)です。  
   
  マニフェストに署名する場合は、すべてのファイル ハッシュを指定する必要があります。 ユーザーは、ハッシュされていないファイルの内容を確認できないため、ハッシュされていないファイルを含むマニフェストは署名できません。  
   
@@ -76,5 +71,5 @@ MIIHnTCCBoWgAwIBAgIKJY9+nwAHAAB...
 </Signature>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)

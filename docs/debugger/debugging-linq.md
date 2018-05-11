@@ -1,12 +1,9 @@
 ---
-title: "LINQ のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: LINQ のデバッグ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,21 +16,21 @@ helpviewer_keywords:
 - LINQ, stepping
 - LINQ, edit and continue
 ms.assetid: dbae26cb-ac5f-4312-b474-b9f29714f4c6
-caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b2e159e89fe1854f2d26267793e196aa91b570ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 52b4c9eb74207e966c17a212b9a9181293581297
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-linq"></a>LINQ のデバッグ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、統合言語クエリ (LINQ) コードのデバッグをサポートしていますが、いくつかの制約事項があります。 ステップ実行、ブレークポイントの設定、デバッガー ウィンドウでの結果の表示など、ほとんどのデバッグ機能を、LINQ ステートメントと組み合わせて使用することができます。 このトピックでは、LINQ のデバッグの主要な制限事項について説明します。  
   
-##  <a name="BKMK_ViewingLINQResults"></a>LINQ の結果を表示します。  
+##  <a name="BKMK_ViewingLINQResults"></a> LINQ の結果を表示します。  
  LINQ ステートメントの結果を表示するには、DataTip、[ウォッチ] ウィンドウ、および [クイック ウォッチ] ダイアログ ボックスを使用します。 ソース ウィンドウを使用すると、ソース ウィンドウ内のクエリ上でポインターを停止し、DataTip を表示することができます。 LINQ 変数をコピーし、[ウォッチ] ウィンドウや [クイック ウォッチ] ダイアログ ボックスに貼り付けることができます。  
   
  LINQ では、クエリは作成または宣言の時点では評価されず、実行時にのみ評価されます。 したがって、評価の時点までクエリには値がありません。 クエリの作成および評価の詳細については、次を参照してください。 [LINQ クエリ (c#) の概要](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)または[書き込み、最初の LINQ クエリの](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query)します。  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   クエリの評価は、データの値やプログラムの状態が変化するという副作用をもたらすことがあります。 すべてのクエリに副作用があるわけではありません。 クエリの評価に副作用があるかどうかを確認するためには、クエリを実装するコードの内容を把握する必要があります。  
   
-##  <a name="BKMK_SteppingAndLinq"></a>ステップ実行と LINQ  
+##  <a name="BKMK_SteppingAndLinq"></a> ステップ実行と LINQ  
  LINQ コードをデバッグする場合は、ステップ実行に動作上の違いがいくつかあるため、理解しておく必要があります。  
   
 ### <a name="linq-to-sql"></a>LINQ to SQL  
@@ -108,10 +105,10 @@ End Function
   
  修正したクエリは、`IsEven` のパスごとに関数 `items` を呼び出します。 デバッガー ウィンドウで各項目が指定された条件を満たすかどうかを確認し、`IsEven` 内のコードをステップ実行できます。 この例の述語コードはきわめて単純です。 もっと複雑な述語コードをデバッグする場合にも、この方法が十分役に立つことがあります。  
   
-##  <a name="BKMK_EditandContinueNotSupportedforLINQ"></a>エディット コンティニュの LINQ のサポートされていません  
+##  <a name="BKMK_EditandContinueNotSupportedforLINQ"></a> エディット コンティニュの LINQ のサポートされていません  
  エディット コンティニュは、LINQ クエリの制限事項と変更をサポートします。 詳細については、「 [EnC サポートされている変更](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL のデバッグ](http://msdn.microsoft.com/en-us/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)    
  [デバッガーでの例外を管理します。](../debugger/managing-exceptions-with-the-debugger.md)   
  [LINQ クエリの概要 (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)   

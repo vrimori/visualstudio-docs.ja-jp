@@ -1,29 +1,24 @@
 ---
-title: "Idiaframedata::get_functionparent |Microsoft ドキュメント"
-ms.custom: 
+title: Idiaframedata::get_functionparent |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaFrameData::get_functionParent method
 ms.assetid: f00b9ab1-d4da-4818-973a-58f8f0e66769
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce738f2f4139a849f22481b247a395ee3f865595
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 924b884c43f8a00f7b078ff6dfa8c669230ae419
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiaframedatagetfunctionparent"></a>IDiaFrameData::get_functionParent
 外側の関数のフレーム データ インターフェイスを取得します。  
@@ -43,5 +38,5 @@ HRESULT get_functionParent (
 ## <a name="return-value"></a>戻り値  
  成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,29 +1,24 @@
 ---
-title: "Idiasymbol::get_haslongjump |Microsoft ドキュメント"
-ms.custom: 
+title: Idiasymbol::get_haslongjump |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_hasLongJump method
 ms.assetid: 14484cb1-43b0-47a1-a9a8-081b55566886
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 31bb71fb491fd5bd03f2346f93edb4c3ba45af1f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 79e98b5178c08f95e1da4d2bee1affc0c200d2ba
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgethaslongjump"></a>IDiaSymbol::get_hasLongJump
 関数の使用が含まれるかどうかを指定するフラグを取得、 [longjmp](/cpp/c-runtime-library/reference/longjmp)コマンド (とペアになって、 [setjmp](/cpp/c-runtime-library/reference/setjmp)コマンド、例外処理の C スタイルのメソッドを形成これら)。  
@@ -46,14 +41,14 @@ HRESULT get_hasLongJump
 > [!NOTE]
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |必要条件|説明|  
 |-----------------|-----------------|  
 |ヘッダー:|dia2.h|  
 |バージョン:|DIA SDK バージョン 8.0|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [Idiasymbol::get_hassetjump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)   
  [longjmp](/cpp/c-runtime-library/reference/longjmp)   

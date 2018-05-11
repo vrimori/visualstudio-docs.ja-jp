@@ -1,12 +1,8 @@
 ---
-title: "Microsoft Visual Studio リモート デバッグ モニターに接続できません |。Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft Visual Studio リモート デバッグ モニターに接続できません |。Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/24/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.remote_debug
@@ -18,14 +14,14 @@ dev_langs:
 - C++
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6efbb27052dc837ab10a74d8f43e949dfb816190
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: a5b7af9c41aac0531a9af014a49e9e0a1e71763d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio リモート デバッグ モニターに接続できません。
 このメッセージは、リモート デバッグ モニターが正しく設定されていないリモート コンピューター上またはリモート コンピューターがネットワークの問題またはファイアウォールが存在するためにアクセスできなくなっているために発生する可能性があります。
@@ -46,7 +42,7 @@ ms.lasthandoff: 02/01/2018
 - [アクセスが拒否されました](#access_denied)
 - [セキュリティ パッケージの特定のエラーが発生しました](#security_package)
 
-## <a name="cannot_connect"></a>デバッガーは、リモート コンピューターに接続できません。 デバッガーは、指定したコンピューター名を解決するのにはできませんでした。
+## <a name="cannot_connect"></a> デバッガーは、リモート コンピューターに接続できません。 デバッガーは、指定したコンピューター名を解決するのにはできませんでした。
 
 次の手順を試してください。
 
@@ -66,17 +62,17 @@ ms.lasthandoff: 02/01/2018
 
 4. 次の手順でこのエラーが解決しない場合は、次を参照してください。[リモート コンピューターに到達できません](#dns)です。
 
-## <a name="rejected"></a>接続要求は、リモート デバッガーによって拒否されました
+## <a name="rejected"></a> 接続要求は、リモート デバッガーによって拒否されました
 
 **プロセスにアタッチする** ダイアログ ボックスまたはプロジェクトのプロパティで、リモート コンピューター名とポート番号がリモート デバッガー ウィンドウに表示される名前とポート番号と一致していることを確認します。 正しくない場合は修正してからやり直してください。
 
 これらの値が適切であり、メッセージを示す場合**Windows 認証**モードでは、リモート デバッガーが適切な認証モードであることを確認 (**ツール > オプション**)。
 
-## <a name="invalid_access"></a>メモリ位置への正しくないアクセス
+## <a name="invalid_access"></a> メモリ位置への正しくないアクセス
 
 内部エラーが発生しました。 Visual Studio を再起動し、もう一度やり直してください。
 
-## <a name="no_server"></a>指定された名前、リモート コンピューターで実行されているサーバーは存在しません
+## <a name="no_server"></a> 指定された名前、リモート コンピューターで実行されているサーバーは存在しません
 
 Visual Studio は、リモート デバッガーに接続できませんでした。 このメッセージは、いくつかの理由が発生する可能性があります。
 
@@ -87,7 +83,7 @@ Visual Studio は、リモート デバッガーに接続できませんでし�
 - リモート デバッガーのバージョンでは、Visual Studio は一致しません。 リモート デバッガーの正しいバージョンを取得するには、次を参照してください[リモート デバッグ。](../debugger/remote-debugging.md)
 
 
-## <a name="#valid_name"></a>要求された名前が有効では、要求された型のデータが見つかりません
+## <a name="#valid_name"></a> 要求された名前が有効では、要求された型のデータが見つかりません
 
 リモート コンピューターが存在するが、Visual Studio はリモート デバッガーに接続できませんでした。 このメッセージは、いくつかの理由が発生する可能性があります。
 
@@ -99,29 +95,29 @@ Visual Studio は、リモート デバッガーに接続できませんでし�
 
 - リモート デバッガーのバージョンでは、Visual Studio は一致しません。 リモート デバッガーの正しいバージョンを取得するには、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。
 
-## <a name="cant_connect_back"></a>ターゲット コンピューターに Visual Studio リモート デバッガーは、このコンピューターに接続できません。
+## <a name="cant_connect_back"></a> ターゲット コンピューターに Visual Studio リモート デバッガーは、このコンピューターに接続できません。
 
 リモート デバッガーは、別のユーザー アカウントで実行されている可能性があります。 リモート デバッガーで開く**ツール > のアクセス許可**リモート デバッガーのアクセス許可にユーザーを追加します。 詳細については、次を参照してください。[リモート デバッガーが別のユーザー アカウントで実行されている](#user_accounts)です。
 
 エラー メッセージも参照している場合、ファイアウォール、ローカル コンピューター上のファイアウォールできない可能性がありますに Visual Studio に戻り、リモート コンピューターからの通信します。 参照してください[手順](#firewall)です。
 
-## <a name="access_denied"></a>アクセスが拒否されました
+## <a name="access_denied"></a> アクセスが拒否されました
 
 (サポートされていません)、32 ビット コンピューターから 64 ビットのリモート コンピューター上でのデバッグしようとする場合は、このエラーを表示する場合があります。
 
-## <a name="security_package"></a>セキュリティ パッケージの特定のエラーが発生しました
+## <a name="security_package"></a> セキュリティ パッケージの特定のエラーが発生しました
 
 Windows XP および Windows 7 に固有の従来の問題があります。 これを参照してください[情報](https://stackoverflow.com/questions/4786016/unable-to-connect-to-the-microsoft-remote-debugging-monitor-a-security-package)です。 
 
 ## <a name="causes-and-recommendations"></a>原因と推奨事項
 
-### <a name="dns"></a>リモート コンピューターに到達できません。 
+### <a name="dns"></a> リモート コンピューターに到達できません。 
 
 リモート コンピューター名を使用して接続できない場合は、代わりに IP アドレスを使用してください。 使用することができます`ipconfig`IPv4 アドレスを取得するリモート コンピューター上のコマンドラインでします。 HOSTS ファイルを使用している場合は、正しく構成されていることを確認します。
 
 失敗した場合、リモート コンピューターがネットワークにアクセスできることを確認してください ([ping](https://technet.microsoft.com/en-us/library/cc732509(v=ws.10).aspx)リモート コンピューター)。 インターネット経由でリモート デバッグはサポートされていませんが、一部の Microsoft Azure のシナリオでは可します。
   
-### <a name="server_incorrect"></a>サーバー名が正しくないか、サード パーティのソフトウェアがリモート デバッガーに干渉すること
+### <a name="server_incorrect"></a> サーバー名が正しくないか、サード パーティのソフトウェアがリモート デバッガーに干渉すること
 
 Visual Studio でのプロジェクト プロパティを確認し、サーバー名が正しいかどうかを確認します。 トピックをご覧ください[c# および Visual Basic](../debugger/remote-debugging-csharp.md#remote_csharp)と[C++](../debugger/remote-debugging-cpp.md#remote_cplusplus)です。 ASP.NET、開く**プロパティまたは Web/サーバー**または**プロパティ/デバッグ**プロジェクトの種類によって異なります。
 
@@ -130,7 +126,7 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
 
 サーバー名が正しい場合は、ウイルス対策ソフトウェアまたはサード パーティ製のファイアウォールがブロックされる場合、リモート デバッガーです。 をローカルでのデバッグにこれは Visual Studio には 64 ビット バージョンのリモート デバッガーを使用して 64 ビット アプリケーションをデバッグするために、32 ビット アプリケーションは発生します。 32 ビットおよび 64 ビット プロセスでは、ローカル コンピューター内のローカル ネットワークを使用してを通信します。 コンピューターからネットワーク トラフィックが送信されることはありませんが、サード パーティのセキュリティ ソフトウェアが通信を妨げる可能性があります。
 
-### <a name="user_accounts"></a>リモート デバッガーが別のユーザー アカウントで実行されています。 
+### <a name="user_accounts"></a> リモート デバッガーが別のユーザー アカウントで実行されています。 
 
 リモート デバッガーが、既定では、のみを許可、リモート デバッガーと Administrators グループのメンバーを起動したユーザーからの接続。 ユーザーを追加する必要があります明示的に付与するアクセス許可。 
  
@@ -147,7 +143,7 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
   
 -   また、すべてのユーザーにリモート デバッグを許可できます。 リモート デバッガー ウィンドウに移動、**ツール > オプション**ダイアログ。 **[認証なし]**を選択すると、 **[すべてのユーザーにデバッグを許可する]**をチェックできるようになります。 ただし、その他のオプションが失敗した場合にのみ、またはプライベート ネットワーク上にいる場合は、このオプションを試してください。
 
-### <a name="firewall"></a>リモート コンピューター上のファイアウォールがリモート デバッガーへの着信接続を許可しません  
+### <a name="firewall"></a> リモート コンピューター上のファイアウォールがリモート デバッガーへの着信接続を許可しません  
  Visual Studio とリモート デバッガーの間の通信を許可するように、Visual Studio のコンピューター上のファイアウォールとリモート コンピューター上のファイアウォールを構成する必要があります。 リモート デバッガーが使用するポートについては、「 [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)」を参照してください。 Windows ファイアウォールを構成する方法については、「 [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md)」を参照してください。
   
 ### <a name="the-version-of-the-remote-debugger-doesnt-match-the-version-of-visual-studio"></a>リモート デバッガーのバージョンは Visual Studio のバージョンと一致しません  
@@ -170,5 +166,5 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
 ## <a name="more-help"></a>その他のヘルプ  
  複数のリモート デバッガーのヘルプを表示する、リモート デバッガーのヘルプ ページを開きます (**ヘルプ > 使用状況**リモート デバッガーで)。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Remote Debugging](../debugger/remote-debugging.md)

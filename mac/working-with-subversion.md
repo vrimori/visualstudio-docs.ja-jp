@@ -1,16 +1,15 @@
 ---
-title: "Subversion の使用 | Microsoft Docs"
-description: "Visual Studio for Mac の Subversion を使用します。"
+title: Subversion の使用
+description: Visual Studio for Mac の Subversion を使用します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 39f7407854b2ff74552209762565236adb403d84
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 1c03c4fac50c34cb96583a1fc8c16a403b7bbe1b
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="working-with-subversion"></a>Subversion の使用
 

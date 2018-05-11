@@ -1,13 +1,10 @@
 ---
-title: "Office ソリューションの配置のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションの配置のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - deploying applications [Office development in Visual Studio], troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8940cd30b4e573b7438b45b13fdd30735a504809
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 29c3cfdcf31609eb5b6aec0111fe2297ba8c01ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-office-solution-deployment"></a>Office ソリューション配置のトラブルシューティング
   このトピックでは、Office ソリューションを配置するときに発生する可能性がある一般的な問題を解決する方法について説明します。  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/10/2018
  セットアップ パッケージには、Office ソリューションと共に配置される必須コンポーネントとして、.NET Framework、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]、および Office プライマリ相互運用機能アセンブリを追加できます。 プライマリ相互運用機能アセンブリをインストールする方法については、次を参照してください。 [Office ソリューションの開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)と[する方法: Office のプライマリ相互運用機能アセンブリをインストール](../vsto/how-to-install-office-primary-interop-assemblies.md)です。  
   
 ## <a name="publishing-using-localhost-can-cause-installation-problems"></a>"Localhost" を使用して発行するとインストール問題が生じることがある  
- ドキュメント レベルのソリューションの発行場所またはインストール先として "http://localhost" を使用した場合、この文字列は **[発行ウィザード]** で実際のコンピューター名に変換されません。 この場合は、ソリューションを開発用コンピューター上にインストールする必要があります。 配置ソリューションに開発用コンピューター上の IIS を使用させるには、HTTP、HTTPS、FTP のすべての場所について、localhost ではなく完全修飾名を使用します。  
+ 使用すると"http://localhost"、発行場所またはインストール先のドキュメント レベルのソリューションとして、**発行ウィザード**実際のコンピューター名に文字列を変換されません。 この場合は、ソリューションを開発用コンピューター上にインストールする必要があります。 配置ソリューションに開発用コンピューター上の IIS を使用させるには、HTTP、HTTPS、FTP のすべての場所について、localhost ではなく完全修飾名を使用します。  
   
 ## <a name="cached-assemblies-are-loaded-instead-of-updated-assemblies"></a>更新済みのアセンブリではなくキャッシュしたアセンブリが読み込まれる  
  プロジェクトの出力パスがネットワーク ファイル共有上にあり、アセンブリが厳密な名前で署名されていて、カスタマイズ アセンブリのバージョンが変更されていない場合、.NET Framework アセンブリ ローダーである fusion は、キャッシュしたアセンブリのコピーを読み込みます。 アセンブリを更新しても、これらの条件が満たされるとキャッシュしたコピーが読み込まれるため、プロジェクトを次回実行するときに更新は表示されません。  
@@ -74,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 #### <a name="to-download-assemblies-instead-of-loading-cached-copies"></a>キャッシュしたコピーではなくアセンブリをダウンロードするには  
   
-1.  メニュー バーで、 **[プロジェクト]**、[ *ProjectName***のプロパティ]**」を参照してください。  
+1.  メニュー バーで、次のように選択します。**プロジェクト**、* ProjectName ***プロパティ**です。  
   
 2.  **[アプリケーション]** ページで、 **[アセンブリ情報]**を選択します。  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="reinstalling-office-solutions-causes-an-argument-out-of-range-exception"></a>Office ソリューションを再インストールすると、引数が範囲外という例外が発生する  
  Office ソリューションを再インストールするときに、 <xref:System.ArgumentOutOfRangeException> 例外が発生し、"指定された引数は、有効な値の範囲内にありません" というエラー メッセージが表示される場合があります。  
   
- インストール場所の URL の大文字と小文字が違っていると、この状況が発生します。 たとえば、Office ソリューションを最初は [http://fabrikam.com/ExcelSolution.vsto](http://fabrikam.com/ExcelSolution.vsto) からインストールし、次に [http://fabrikam.com/excelsolution.vsto](http://fabrikam.com/excelsolution.vsto) を使用すると、このエラーが発生します。  
+ インストール場所の URL の大文字と小文字が違っていると、この状況が発生します。 Office ソリューションをインストールした場合このエラーが表示されるなど、 [ http://fabrikam.com/ExcelSolution.vsto ](http://fabrikam.com/ExcelSolution.vsto)初めてし、使用[ http://fabrikam.com/excelsolution.vsto ](http://fabrikam.com/excelsolution.vsto) 2 番目の時間。  
   
  このエラー メッセージが表示されないようにするには、Office ソリューションのインストール時に、同じ大文字と小文字の組み合わせを使用します。  
   
@@ -129,7 +126,7 @@ ms.lasthandoff: 01/10/2018
   
  拡張子を **.vsto** に、MIME の種類を " **application/x-ms-vsto**" に設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce 配置のトラブルシューティング](/visualstudio/deployment/troubleshooting-clickonce-deployments)   
  [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
   

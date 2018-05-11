@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 以降に Office ソリューションの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: .NET Framework 4 以降に Office ソリューションの移行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Project.TargetFrameworkWarning
 dev_langs:
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8cb61186c7e8260578e9b69242c594c198f7e525
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 830dcdb9e42472aa712c86ddb117b3b8003ac4d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrating-office-solutions-to-the-net-framework-4-or-later"></a>.NET Framework 4 以降への Office ソリューションの移行
   Office プロジェクトのターゲット フレームワークを旧バージョンの .NET Framework から [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、開発用コンピューターおよびエンド ユーザー コンピューターでソリューションを引き続き実行するために追加の手順が必要な場合があります。 詳細については、次を参照してください。[実行 Office プロジェクトは .NET Framework 4 または .NET Framework 4.5 に移行するのに必要な変更](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  Office プロジェクトの一部の機能が対象とするさまざまなプログラミング モデルを持つ理由の詳細については、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]か、後で、「[デザインの Office プロジェクトの変更を .NET Framework 4 または .NET Framework 4.5を対象とします。](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)と[Visual Studio Tools for Office Runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
  [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)   

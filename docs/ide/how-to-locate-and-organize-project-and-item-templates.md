@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio でテンプレートを整理する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でテンプレートを整理する
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project templates [Visual Studio], locations
 - item templates [Visual Studio], locations
@@ -15,12 +12,12 @@ helpviewer_keywords:
 - templates [Visual Studio], organizing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: c58bda5570be9cdb7fba7a8f90a282df7b7167a2
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+manager: douge
+ms.openlocfilehash: 65d4940e7a7969fe28fe115ec7ef42cfdc645c9a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>方法: プロジェクト テンプレートと項目テンプレートを配置して整理する
 
@@ -32,15 +29,15 @@ ms.lasthandoff: 01/13/2018
 
 ### <a name="user-templates"></a>ユーザー テンプレート
 
-.vstemplate ファイルを含む圧縮 (.zip) ファイルをユーザー テンプレート ディレクトリに追加すると、そのテンプレートは **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスに表示されます。 既定では、ユーザー テンプレートは次の場所に配置されます。
+**.vstemplate** ファイルを含む圧縮 (**.zip**) ファイルをユーザー テンプレート ディレクトリに追加すると、そのテンプレートは *[新しいプロジェクト]* ダイアログ ボックスまたは *[新しい項目の追加]* ダイアログ ボックスに表示されます。 既定では、ユーザー テンプレートは次の場所に配置されます。
 
-- %USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates
+- *%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates*
 
-- %USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates
+- *%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates*
 
-たとえば、次のディレクトリには C# 用のユーザー プロジェクト テンプレートが含まれます。
+たとえば、次のディレクトリには C# 用のユーザー プロジェクト テンプレートがあります。
 
-   C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\
+- *C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#*
 
 > [!TIP]
 > ユーザー テンプレートの場所は、**[ツール]** > **[オプション]** > **[プロジェクトおよびソリューション]** > **[場所]** で設定できます。
@@ -49,17 +46,17 @@ ms.lasthandoff: 01/13/2018
 
 既定では、Visual Studio でインストールされるテンプレートは次の場所にあります。
 
-- \\<*Visual Studio のインストール ディレクトリ*>\Common7\IDE\ItemTemplates\\<*プログラム言語*>\\<*ロケール ID*>
+- *\\<VisualStudioInstallationDirectory\>\Common7\IDE\ItemTemplates\\<プログラミング言語\>\\<Locale ID>*
 
-- \\<*Visual Studio のインストール ディレクトリ*>\Common7\IDE\ProjectTemplates\\<*プログラム言語*>\\<*ロケール ID*>
+- *\\<VisualStudioInstallationDirectory\>\Common7\IDE\ProjectTemplates\\<プログラミング言語\>\\<Locale ID>*
 
-たとえば、次のディレクトリには英語 (LCID 1033) 用の Visual Basic の項目テンプレートが含まれます。
+たとえば、次のディレクトリには英語 (LCID 1033) 用の Visual Basic 項目テンプレートがあります。
 
-   C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\
+- *C:\\<VisualStudioInstallationDirectory\>\Common7\IDE\ItemTemplates\VisualBasic\1033*
 
 ## <a name="organize-templates"></a>テンプレートの整理
 
-**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスのカテゴリには、インストールされたテンプレートおよびユーザー テンプレートの場所に存在するディレクトリ構造が反映されます。 ユーザー テンプレート ディレクトリに新しいフォルダーを追加することで、ユーザー テンプレートを独自のカテゴリに整理できます。 **[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスには、ユーザー テンプレート カテゴリに加えた変更が反映されます。
+**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスのカテゴリには、インストールされたテンプレートおよびユーザー テンプレートの場所に存在するディレクトリ構造が反映されます。 ユーザー テンプレート ディレクトリに新しいフォルダーを追加することで、ユーザー テンプレートを独自のカテゴリに整理できます。 **[新しいプロジェクト]** ダイアログ ボックスと **[新しい項目の追加]** ダイアログ ボックスには、ユーザー テンプレート カテゴリに加えた変更が表示されます。
 
 > [!NOTE]
 > プログラミング言語のレベルでは、新しいカテゴリを作成できません。 新しいカテゴリは、各言語内でのみ作成できます。
@@ -68,7 +65,7 @@ ms.lasthandoff: 01/13/2018
 
 1. ユーザー プロジェクト テンプレートのディレクトリのプログラミング言語フォルダーに、フォルダーを作成します。 たとえば、C# プロジェクト テンプレートに **HelloWorld** カテゴリを設定するには、次のディレクトリを作成します。
 
-    \%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates\Visual C#\HelloWorld\
+    - *\%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ProjectTemplates\Visual C#\HelloWorld*
 
 1. このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。
 
@@ -80,7 +77,7 @@ ms.lasthandoff: 01/13/2018
 
 1. ユーザー項目テンプレートのディレクトリのプログラミング言語フォルダーに、フォルダーを作成します。 たとえば、C# 項目テンプレートに **HelloWorld** カテゴリを設定するには、次のディレクトリを作成します。
 
-    \%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates\Visual C#\HelloWorld\
+    - *\%USERPROFILE%\Documents\Visual Studio \<バージョン\>\Templates\ItemTemplates\Visual C#\HelloWorld*
 
 1. このカテゴリのすべてのテンプレートを新しいフォルダーに配置します。
 
@@ -90,15 +87,15 @@ ms.lasthandoff: 01/13/2018
 
 ### <a name="display-templates-in-parent-categories"></a>親カテゴリでのテンプレートの表示
 
-.vstemplate ファイルの `NumberOfParentCategoriesToRollUp` 要素を使用して、サブカテゴリのテンプレートを親カテゴリに表示できます。 この手順は、プロジェクト テンプレートと項目テンプレートで同じです。
+*.vstemplate* ファイルの `NumberOfParentCategoriesToRollUp` 要素を使用して、サブカテゴリのテンプレートを親カテゴリに表示できます。 この手順は、プロジェクト テンプレートと項目テンプレートで同じです。
 
 #### <a name="to-display-templates-in-parent-categories"></a>親カテゴリにテンプレートを表示するには
 
-1. テンプレートを含む .zip ファイルを探します。
+1. テンプレートを含む *.zip* ファイルを探します。
 
-1. .zip ファイルを展開します。
+1. *.zip* ファイルを展開します。
 
-1. Visual Studio で .vstemplate ファイルを開きます。
+1. Visual Studio で *.vstemplate* ファイルを開きます。
 
 1. `TemplateData` 要素に、`NumberOfParentCategoriesToRollUp` 要素を追加します。 たとえば、次のコードを実行すると、テンプレートが親カテゴリに表示されますが、親カテゴリよりも上のレベルでは表示されません。
 
@@ -112,20 +109,20 @@ ms.lasthandoff: 01/13/2018
     </TemplateData>
     ```
 
-1. .vstemplate ファイルを保存して、閉じます。
+1. *.vstemplate* ファイルを保存して、閉じます。
 
 1. テンプレートのファイルを選んで右クリックし、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選択します。
 
-   ファイルは .zip ファイルに圧縮されます。
+   ファイルは *.zip* ファイルに圧縮されます。
 
-1. 抽出したテンプレート ファイルと古いテンプレート .zip ファイルを削除します。
+1. 抽出したテンプレート ファイルと古いテンプレート *.zip* ファイルを削除します。
 
-1. 削除した .zip ファイルが含まれていたディレクトリに、新しい .zip ファイルを配置します。
+1. 削除した *.zip* ファイルが含まれていたディレクトリに、新しい *.zip* ファイルを配置します。
 
 ## <a name="see-also"></a>関連項目
 
-[テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)  
-[Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md) (拡張機能)  
-[NumberOfParentCategoriesToRollUp (Visual Studio テンプレート)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)  
-[方法 : プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)  
-[方法 : 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)
+- [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)
+- [Visual Studio テンプレート スキーマ参照 (機能拡張)](../extensibility/visual-studio-template-schema-reference.md)
+- [NumberOfParentCategoriesToRollUp (Visual Studio テンプレート)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)
+- [方法: プロジェクト テンプレートを作成する](../ide/how-to-create-project-templates.md)
+- [方法: 項目テンプレートを作成する](../ide/how-to-create-item-templates.md)

@@ -1,27 +1,25 @@
 ---
-title: "テンプレート ディレクトリの説明 (です。Vsdir) ファイル |Microsoft ドキュメント"
-ms.custom: 
+title: テンプレート ディレクトリの説明 (です。Vsdir) ファイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .vsdir files
 - VSDIR files
 - template directory description files
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 739dd0d41fb63c4993dad0d66737aaada1cf01c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 14ea2e0bcc11324e6529c70c04c11874ec4a3399
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="template-directory-description-vsdir-files"></a>テンプレート ディレクトリの説明 (です。Vsdir) ファイル
 テンプレート ディレクトリの説明ファイル (.vsdir) は、統合開発環境 (IDE) フォルダー、ウィザードの .vsz ファイル、およびダイアログ ボックスで、プロジェクトに関連付けられているテンプレート ファイルが表示できるテキスト ファイルです。 内容には、ファイルまたはフォルダーごとに 1 つのレコードが含まれます。 1 つだけ .vsdir ファイルが一般に用意されていますが複数のフォルダー、ウィザード、またはテンプレート ファイルを記述する、参照先の場所にすべての .vsdir ファイルがマージされます。  
@@ -35,7 +33,7 @@ HeaderFile.h|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#125|130|#126|0|0|0|#127
 SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124  
 ```  
   
- この場合、2 つのレコードが 1 つのファイルです。 新しい行 (キャリッジ リターン文字) は、各レコードを区切ります。 各行は、別のファイル種類を表します。 パイプ (&#124;) の文字は、各レコードのフィールドを区切るためです。 別のファイル名を持つ複数の .vsdir ファイルを含めることができます、単一のディレクトリまたはファイルの種類ごとに 1 つの .vsdir ファイルがあることができます。  
+ この場合、2 つのレコードが 1 つのファイルです。 新しい行 (キャリッジ リターン文字) は、各レコードを区切ります。 各行は、別のファイル種類を表します。 パイプ (&#124;) 文字は、各レコードのフィールドを区切ります。 別のファイル名を持つ複数の .vsdir ファイルを含めることができます、単一のディレクトリまたはファイルの種類ごとに 1 つの .vsdir ファイルがあることができます。  
   
 ## <a name="fields"></a>フィールド  
  次の表には、各レコードに対して指定されたフィールドが一覧表示します。  
@@ -66,6 +64,6 @@ SourceFile.cpp|{E59935A1-6156-11d1-87A6-00A0C91E2A46}|#122|110|#123|0|0|0|#124
   
 -   .Vsz ファイル、フォルダー、またはテンプレート ファイルを削除する場合は、.vsdir ファイルからも、対応するレコードを削除する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ウィザード](../../extensibility/internals/wizards.md)   
  [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

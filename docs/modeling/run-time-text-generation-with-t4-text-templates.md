@@ -1,10 +1,7 @@
 ---
-title: "T4 テキスト テンプレートを使用して実行時テキスト生成 |Microsoft ドキュメント"
-ms.custom: 
+title: T4 テキスト テンプレートを使用した実行時テキスト生成
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -15,15 +12,16 @@ helpviewer_keywords:
 - text templates, generating files at run time
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f3900a9f42791f4b71ef221bbeb1f010d1785917
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 5b39437dc5f81b17c0bcfe27dbb7b8d99bebbc87
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 テキスト テンプレートを使用した実行時テキスト生成
 
@@ -67,7 +65,7 @@ This report is Company Confidential.
 
 4. **[追加]** をクリックします。
 
-    新しいファイルが作成された拡張子を持つ**.tt**です。 その**カスタム ツール**プロパティに設定されている**TextTemplatingFilePreprocessor**です。 次の行が含まれています。
+    新しいファイルが作成された拡張子を持つ **.tt**です。 その**カスタム ツール**プロパティに設定されている**TextTemplatingFilePreprocessor**です。 次の行が含まれています。
 
     ```
     <#@ template language="C#" #>
@@ -88,9 +86,9 @@ This report is Company Confidential.
 2. ファイルの設定**カスタム ツール**プロパティを**TextTemplatingFilePreprocessor**です。 ソリューション エクスプ ローラーで、ファイルのショートカット メニューを選択**プロパティ**です。
 
     > [!NOTE]
-    > プロパティは既に設定されている場合であることを確認してください**TextTemplatingFilePreprocessor**および not **TextTemplatingFileGenerator**です。 これは、既に拡張子を持つファイルを含める場合に発生することができます**.tt**です。
+    > プロパティは既に設定されている場合であることを確認してください**TextTemplatingFilePreprocessor**および not **TextTemplatingFileGenerator**です。 これは、既に拡張子を持つファイルを含める場合に発生することができます **.tt**です。
 
-3. ファイル名拡張子を変更する**.tt**です。 この手順はオプションですが、これを回避できます不適切なエディターでファイルを開きます。
+3. ファイル名拡張子を変更する **.tt**です。 この手順はオプションですが、これを回避できます不適切なエディターでファイルを開きます。
 
 4. ファイル名の本体からスペースや句読点を削除します。 たとえば"My Web Page.tt"がない、正しいであっても"MyWebPage.tt"が正しくです。 ファイル名は、生成されたコード内のクラス名として使用されます。
 
@@ -110,7 +108,7 @@ Language パラメーターは、プロジェクトの言語によって異な�
 
 ### <a name="plain-content"></a>プレーン コンテンツ
 
-編集、 **.tt**アプリケーションを生成するテキストを格納するファイル。 例:
+編集、 **.tt**アプリケーションを生成するテキストを格納するファイル。 例えば:
 
 ```html
 <html><body>
@@ -122,7 +120,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>埋め込まれたプログラム コード
 
-間でのプログラム コードを挿入する`<#`と`#>`です。 例:
+間でのプログラム コードを挿入する`<#`と`#>`です。 例えば:
 
 ```csharp
 <table>
@@ -153,7 +151,7 @@ This report is Company Confidential.
 
 ### <a name="the-code-built-from-the-template"></a>テンプレートから構築されたコード
 
-保存すると、 **.tt**ファイル、子会社**.cs**または**.vb**ファイルを生成します。 ソリューション エクスプ ローラーでこのファイルを表示する展開、 **.tt**ファイル ノード。 Visual Basic プロジェクトで最初に選択**すべてのファイル**ソリューション エクスプ ローラーのツールバー。
+保存すると、 **.tt**ファイル、子会社 **.cs**または **.vb**ファイルを生成します。 ソリューション エクスプ ローラーでこのファイルを表示する展開、 **.tt**ファイル ノード。 Visual Basic プロジェクトで最初に選択**すべてのファイル**ソリューション エクスプ ローラーのツールバー。
 
 従属ファイルが呼び出されるメソッドを格納する部分クラスが含まれている通知`TransformText()`です。 このメソッドは、アプリケーションから呼び出すことができます。
 

@@ -1,65 +1,159 @@
 ---
-title: "Visual Studio での Python サポートの概要 (Windows) | Microsoft Docs"
-description: "Visual Studio での Python で使用可能な機能 (Python Tools for Visual Studio (PTVS) とも言われます) の概要について説明します。また、Visual Studio の各バージョンについての質問と回答 (FAQ) や機能サポート マトリックスも示します。"
-ms.custom: 
-ms.date: 02/15/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: 
-ms.topic: hero-article
+title: Windows 上の Visual Studio での Python サポートの概要
+description: Windows 上で最高の Python IDE である Visual Studio の機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
+ms.date: 04/06/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
+ms.topic: overview
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8693e876d56a30b31cd873861c37dbef486e7284
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 31ffd868eeab4638344cfafc2723b6a60608f232
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
-Windows の Visual Studio では、Python の開発およびデータ サイエンス ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。 現在、Python は Visual Studio for Mac ではサポートされていませんが、Visual Studio Code によって Mac と Linux でも使うことができます (「[質問と回答](#questions-and-answers)」を参照)。
+Visual Studio は、Windows 上の強力な Python IDE です。 Visual Studio では、Python の開発およびデータ サイエンス ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。
+
+現在、Python は Visual Studio for Mac ではサポートされていませんが、Visual Studio Code によって Mac と Linux でも使うことができます (「[質問と回答](#questions-and-answers)」を参照)。
 
 開始するには:
 
 - [インストール手順](installing-python-support-in-visual-studio.md)に従って、Python ワークロードを設定します。
-- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[テンプレートからプロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)のクイックスタートから始めます。
+- この記事の各セクションを読んで、Visual Studio の Python 機能に関する知識を深めてください。 Visual Studio での Python の概要については、[ビデオ シリーズ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) もご覧ください (合計 22 分)。
+- 1 つ以上のクイックスタートを使用して、プロジェクトを作成します。 わからない場合は、[Flask を使用して Web アプリを作成する](../ide/quickstart-python.md?context=visualstudio/python/default)方法から始めます。
 - 完全なエンド ツー エンドのエクスペリエンスの場合は、[Visual Studio での Python の使用](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)のチュートリアルに従います。
-- 次に、以下の表のリンクを使って Python 関連の機能と Visual Studio 自体の機能について詳しくご覧ください。
 
-| 機能 | 説明 | Visual Studio の一般的なドキュメント |
-| --- | --- | --- |
-| [Visual Studio のプロジェクト システム](managing-python-projects-in-visual-studio.md) | Python コードのフォルダー構造を暗黙的に取得し、アプリ コード、テスト コード、Web ページ、JavaScript、ビルド スクリプトなどの識別を明示的に制御できます。 | [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md) |
-| [プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates) | コンソール、Web、Azure、データ サイエンス、他の種類のプロジェクト用のプロジェクト構造を短時間で作成します。 | [Visual Studio テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates) |
-| 複数のインタープリターのサポート | さまざまなバージョンの CPython と IronPython をサポートします。 | N/A |
-| IPython のサポート | インライン プロット、.NET、および Windows Presentation Foundation (WPF) のための REPL での IPython/Jupyter のサポートが含まれます。 | N/A |
-| [豊富な編集、IntelliSense、コード読解](editing-python-code-in-visual-studio.md) | 構文の色分け、すべてのコードとライブラリ間でのオートコンプリート、[コードのフォーマット](formatting-python-code.md)、シグネチャ ヘルプ、クラス ビュー、定義への移動、すべての参照の検索、コード スニペット、[リファクタリング](refactoring-python-code.md)、[PyLint](linting-python-code.md) などを含みます。 | [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [対話型ウィンドウ](python-interactive-repl-in-visual-studio.md) | コードの一部を簡単に強調表示してそれを対話型ウィンドウに送信する機能を備えた、Python 用のクイック REPL エクスペリエンスを提供します。 | N/A |
-| [フル機能のデバッグ](debugging-python-in-visual-studio.md) | Visual Studio プロジェクトを使っても使わなくてもデバッグを行うことができ、既存の実行可能ファイルをデバッグする機能、[Python/C++ 混合モードのデバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)、Windows/Linux/Mac の [Linux でのリモート デバッグ](debugging-python-code-on-remote-linux-machines.md)、[Azure へのリモート デバッグ](debugging-remote-python-code-on-azure.md)、および対話型ウィンドウ内でのデバッグを含みます。 | [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md) |
-| [包括的なレポートを備えたプロファイリング ツール](profiling-python-code-in-visual-studio.md) | アプリケーション内で時間がどのように費やされているかを調べます。異なるプロファイリング実行の間でパフォーマンスを比較する機能を含みます。 | [プロファイリング ツール](../profiling/profiling-tools.md)(Visual Studio のプロファイリング機能の一部は、Python では使用できません) |
-| [単体テスト ツール](unit-testing-python-in-visual-studio.md) | Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。 | [コードの単体テスト](../test/unit-test-your-code.md) |
+## <a name="support-for-multiple-interpreters"></a>複数のインタープリターのサポート
 
-Python ワークロードに含まれる [Azure SDK for Python](azure-sdk-for-python.md) を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
+Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅を広げて表示しています) を使用すると、グローバルな Python 環境、conda 環境、仮想環境をすべて 1 つの場所で管理できます。 Visual Studio では、標準的な場所にある Python のインストールが自動的に検出されます。また、カスタム インストールを構成することができます。 各環境では、簡単にパッケージを管理し、その環境の対話型ウィンドウを開き、環境フォルダーにアクセスできます。
+
+![[Python 環境] ウィンドウを広げた表示](media/environments-expanded-view.png)
+
+詳細情報
+
+- ビデオ (2 分 35 秒): [Python 環境の管理](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)
+- ドキュメント: [Python 環境の管理](managing-python-environments-in-visual-studio.md)
+- ドキュメント: [[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)
+
+## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
+
+Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、型に関するヒント、lint 処理 (lint 処理については以下を参照してください) などを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
+
+![Visual Studio での Python コードのオートコンプリート](media/code-editing-completions-simple.png)
+
+詳細情報
+
+- ビデオ (2 分 30 秒): [Python コードの編集](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)
+- ドキュメント: [Python コードの編集](editing-python-code-in-visual-studio.md)
+- ドキュメント: [コードの書式設定](formatting-python-code.md)
+- ドキュメント: [リファクタリング](refactoring-python-code.md)
+- ドキュメント: [lint 処理](linting-python-code.md)
+- 一般的な Visual Studio 機能のドキュメント: [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+
+## <a name="interactive-window"></a>対話型ウィンドウ
+
+Visual Studio で認識されるすべての Python 環境で、別のコマンド プロンプトを使用するのではなく、Visual Studio 内で直接、Python インタープリター用の同じ対話型 (REPL) 環境を簡単に開くことができます。 また、環境間を簡単に切り替えることもできます。
+
+![Visual Studio の Python 対話型ウィンドウ](media/interactive-window.png)
+
+また、Visual Studio では、Python コード エディターと対話型ウィンドウ間の緊密な統合も提供されています。 キーボード ショートカットの **Ctrl + Enter** キーを使用すると、簡単にエディターの現在のコード行 (またはコード ブロック) を対話型ウィンドウに送信し、次の行 (またはブロック) に移動することができます。 **Ctrl + Enter** キーを使用すると、デバッガーを実行することなく簡単にコードをステップ実行できます。 また、選択されているコードを同じキー入力で対話型ウィンドウに送信し、対話型ウィンドウのコードをエディターに簡単に貼り付けることもできます。 これらの機能を組み合わせることで、対話型内のコードのセグメントについて詳しく調べ、エディターで簡単に結果をファイルに保存することができます。
+
+Visual Studio は、インライン プロット、.NET、Windows Presentation Foundation (WPF) など、REPL の IPython/Jupytr もサポートしています。
+
+詳細情報
+
+- ビデオ (2 分 22 秒): [Python の対話型ウィンドウ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)
+- ドキュメント: [対話型ウィンドウ](python-interactive-repl-in-visual-studio.md)
+- ドキュメント: [Visual Studio の IPython](interactive-repl-ipython.md)
+
+## <a name="project-system-and-project-and-item-templates"></a>プロジェクト システム、プロジェクト テンプレート、項目テンプレート
+
+Visual Studio は、時間と共に複雑になるプロジェクトを管理するために役立ちます。 プロジェクトにはフォルダー構造をはるかに超えた機能があり、各ファイルの使用方法や相互の関係などを把握できます。 Visual Studio を使用すると、アプリケーション コード、テスト コード、Web ページ、JavaScript、ビルド スクリプトなどを区別できます。また、ファイルに適した機能が有効になります。 さらに、Visual Studio ソリューションは、Python プロジェクトや C ++ 拡張プロジェクトなどの複数の関連プロジェクトを管理する場合に役立ちます。
+
+![Python プロジェクトと C ++ プロジェクトの両方を含む Visual Studio ソリューション](media/projects-solution-explorer-two-projects.png)
+
+プロジェクト テンプレートと項目テンプレートで、さまざまな種類のプロジェクトやファイルの設定プロセスを自動化すると、貴重な時間を節約し、複雑でエラーが発生しやすい詳細情報の管理作業を軽減できます。 Visual Studio には、Web、Azure、データ サイエンス、コンソールなどの種類のプロジェクト用のテンプレートだけでなく、Python クラス、単体テスト、Azure の Web 構成、HTML、さらには Django アプリなどのファイル用のテンプレートも用意されています。
+
+[![Visual Studio の Python プロジェクト テンプレートと項目テンプレート](media/project-and-item-templates.png)](media/project-and-item-templates.png)
+
+詳細情報
+
+- ドキュメント: [Python プロジェクトの管理](managing-python-projects-in-visual-studio.md)
+- ドキュメント: [Python プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates)
+- ドキュメント: [C++ と Python の使用](working-with-c-cpp-python-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント: [プロジェクト テンプレートと項目テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates)
+- 一般的な Visual Studio 機能のドキュメント: [Visual Studio のソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)
+
+## <a name="full-featured-debugging"></a>フル機能のデバッグ
+
+Visual Studio の長所の 1 つは強力なデバッガーです。 特に Python 用には、Python/C++ 混合モード デバッグ、Linux 上のリモート デバッグ、Azure 上のリモート デバッグ、対話型ウィンドウ内のデバッグ、Python の単体テストのデバッグが Visual Studio に含まれています。
+
+![例外をポップアップ表示する Python 用の Visual Studio デバッガー](media/debugging-exception-popup.png)
+
+詳細情報
+
+- ビデオ (3 分 32 秒):[Python のデバッグ](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=Ep5dp5LWE_3805918567)
+- ドキュメント: [Python のデバッグ](debugging-python-in-visual-studio.md)
+- ドキュメント: [Python と C++ の混合モード デバッグ](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
+- ドキュメント: [Linux 上のリモート デバッグ](debugging-python-code-on-remote-linux-machines.md)
+- ドキュメント: [Azure 上のリモート デバッグ](debugging-remote-python-code-on-azure.md)
+- 一般的な Visual Studio 機能のドキュメント: [Visual Studio デバッガーの機能ツアー](../debugger/debugger-feature-tour.md)
+
+## <a name="profiling-tools-with-comprehensive-reporting"></a>包括的なレポートを備えたプロファイリング ツール
+
+プロファイリングでは、アプリケーション内で時間がどのように使用されているかを調べます。 Visual Studio は、CPython ベースのインタープリターを使用したプロファイリングをサポートし、複数のプロファイリング処理のパフォーマンスを比較する機能を備えています。
+
+[![Visual Studio プロファイラーの Python プロジェクトの結果](media/profiling-results.png)](media/profiling-results.png)
+
+詳細情報
+
+- ビデオ (3 分 00 秒): [Python のプロファイリング](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=s6FoC6LWE_1005918567)
+- ドキュメント: [Python のプロファイリング ツール](profiling-python-code-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント: [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md) (Visual Studio のプロファイリング機能の一部は、Python では使用できません)。
+
+## <a name="unit-testing-tools"></a>単体テスト ツール
+
+Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。
+
+![Visual Studio での Python 単体テストのデバッグ](media/unit-test-debugging.png)
+
+詳細情報
+
+- ビデオ (2 分 31 秒): [Python のテスト](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=hb46k6LWE_405918567)
+- ドキュメント: [Python 用の単体テスト ツール](unit-testing-python-in-visual-studio.md)
+- 一般的な Visual Studio 機能のドキュメント: [コードの単体テスト](../test/unit-test-your-code.md)
+
+## <a name="publishing-to-azure-and-azure-sdk-for-python"></a>Azure と Azure SDK for Python への発行
+
+Visual Studio は、Web アプリケーションとクラウド サービスを Azure に発行するための統合サポートを提供しています。 Visual Studio には、動的コンテンツと静的コンテンツの両方に必要な `web.config` 項目テンプレートが含まれています。 Python ワークロードに含まれる Azure SDK for Python を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
+
+![Visual Studio で Python アプリケーションを Azure に発行する](media/azure-publish-dialog.png)
+
+詳細情報
+
+- ドキュメント: [Azure への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- ドキュメント: [Azure SDK for Python](azure-sdk-for-python.md)
+
+## <a name="python-training-on-microsoft-virtual-academy"></a>Microsoft Virtual Academy の Python トレーニング
 
 |   |   |
 |---|---|
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio での Python の概要については、[こちらのビデオ シリーズ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) をご覧ください (合計 22 分)。 |
-| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Microsoft Virtual Academy の次のビデオも参照してください。<ul><li>[Python によるプログラミングの入門](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python の初心者向け: 文字列と関数](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python の基礎: リストとループ](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[よく寄せられる質問](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | <ul><li>[Python によるプログラミングの入門](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python の初心者向け: 文字列と関数](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python の基礎: リストとループ](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[よく寄せられる質問](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
 
 ## <a name="questions-and-answers"></a>質問と回答
 
 **Q.Visual Studio for Mac では Python のサポートを利用できますか?**
 
-A:  現時点では利用できませんが、[UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac) には要望が寄せられています。 [Visual Studio for Mac](/visualstudio/mac/) のドキュメントでは、現在サポートされている開発の種類が示されています。 当面の間、Windows、Mac、Linux での Visual Studio Code は、[利用可能な拡張機能によって Python で問題なく動作します](https://code.visualstudio.com/docs/languages/python)。
+A:  まだ実装されていませんが、[UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac) で要望に投票することができます。 [Visual Studio for Mac](/visualstudio/mac/) のドキュメントでは、現在サポートされている開発の種類が示されています。 当面の間、Windows、Mac、Linux での Visual Studio Code は、[利用可能な拡張機能によって Python で問題なく動作します](https://code.visualstudio.com/docs/languages/python)。
 
 **Q.Python で UI を構築するには何を使用できますか?**
 
@@ -74,13 +168,15 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 [インストール ガイド](installing-python-support-in-visual-studio.md)の説明に従って、以下のエディションの Visual Studio に Python の機能をインストールできます。
 
 - [Visual Studio 2017 (全エディション)](https://www.visualstudio.com/vs/)
-- [Visual Studio 2015 (全エディション)] (https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs)
+- Visual Studio 2015 (全エディション)
 - Visual Studio 2013 Community Edition
 - Visual Studio 2013 Express for Web Update 2 以降
 - Visual Studio 2013 Express for Desktop Update 2 以降
 - Visual Studio 2013 (Pro エディション以上)
 - Visual Studio 2012 (Pro エディション以上)
 - Visual Studio 2010 SP1 (Pro エディション以上、.NET 4.5 が必要)
+
+Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.com/vs/older-downloads/](https://www.visualstudio.com/vs/older-downloads/) で入手できます。
 
 > [!Important]
 > 機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。
@@ -201,6 +297,6 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- [IIS と Python の間の WFastCGI ブリッジ](https://pypi.python.org/pypi/wfastcgi) (python.org)
+- [IIS と Python の間の WFastCGI ブリッジ](https://pypi.org/p/wfastcgi) (pypi.org)
 - [Microsoft Virtual Academy の無料 Python コース](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 - [Python に関して寄せられることの多い質問 (Microsoft Virtual Academy)](https://aka.ms/mva-top-python-questions)

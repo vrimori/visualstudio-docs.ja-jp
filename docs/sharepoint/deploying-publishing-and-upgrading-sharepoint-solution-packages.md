@@ -1,12 +1,10 @@
 ---
-title: "展開する、発行、および SharePoint ソリューション パッケージのアップグレード |Microsoft ドキュメント"
-ms.custom: 
+title: 展開する、発行、および SharePoint ソリューション パッケージのアップグレード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.SharePointProjectPropertyTab
 - VS.SharePointTools.Project.Publishing
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5990ab0f6ff6ec02131921f54197dd28e7f4e6ff
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: aac96c7954a52a3277b08efcd89fa24a743117be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-publishing-and-upgrading-sharepoint-solution-packages"></a>SharePoint ソリューションのパッケージの配置、発行、アップグレード
   Visual Studio での SharePoint ソリューションを開発した後、いずれかローカル SharePoint サーバーにそのパッケージ (.wsp) ファイルを配置したり、リモートまたはローカルの SharePoint サーバーにパブリッシュできます。 ファイルを展開する場合は、パッケージ ファイル (.wsp) を展開する方法をカスタマイズできます。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
  展開の前後に実行するためのコマンドを追加することもできます。 詳細については、次を参照してください。[する方法: SharePoint の配置コマンドを設定](../sharepoint/how-to-set-sharepoint-deployment-commands.md)です。  
   
 ## <a name="publishing-packages-to-a-remote-or-local-server"></a>リモートまたはローカル サーバーにパッケージを発行します。  
- メニュー バーでのリモート サーバーにセキュリティで保護された SharePoint ソリューションを発行するには選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン**https://someremoteserver.sharepoint.microsoftonline.com**です。  
+ メニュー バーでのリモート サーバーにセキュリティで保護された SharePoint ソリューションを発行するには選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン **https://someremoteserver.sharepoint.microsoftonline.com**です。  
   
  ローカル サーバーに SharePoint ソリューションを発行する、**発行** ダイアログ ボックスで、選択、**ファイル システムに公開**ローカル システム パスを提供する、オプション ボタンをクリックします。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="upgrading-published-packages"></a>公開されたパッケージをアップグレードします。  
  パブリッシュした後に、Visual Studio での SharePoint プロジェクトに変更を加えた場合は、変更を含める発行済みのパッケージをアップグレードしてください。 正常にアップグレードするには、一意の名前がパッケージに必要です。 同じ名前のパッケージが見つかった場合 - これは、既存のアプリケーションを更新する場合に発生することが、SharePoint サイトでエラー アラート ファイル名を競合およびパッケージの名前を変更することができます。 再発行されない後は、新しいパッケージは、SharePoint サイトに表示され、アップグレードすることができます。 アップグレードされたパッケージは、古いパッケージからデータを使用してソリューションを更新し、し、SharePoint のソリューションがアクティブにします。 詳細については、次を参照してください。[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

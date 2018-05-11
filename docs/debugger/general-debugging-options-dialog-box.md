@@ -1,12 +1,8 @@
 ---
-title: "オプション ダイアログ ボックスの 全般、デバッグ、|Microsoft ドキュメント"
-ms.custom: 
+title: オプション ダイアログ ボックスの 全般、デバッグ、|Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.General
@@ -22,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 01c87cfc2beb030b2fd10a4455def65ab139a5f0
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: b153f5e411cabc8975ad1a2dca1ed212372b63ee
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般** ページでは、次のオプションを設定できます。  
@@ -203,6 +198,6 @@ Visual Studio は、デバッグ対象プロセスでコードを実行中のカ
   
 新しいデバッグ エンジンは .NET C++ 式の評価をサポートしていないため、.NET C++ コードをデバッグするときにはこのオプションを使用する必要があります。 ただし、ネイティブ互換モードを有効にすると、現在のデバッガーの実装に依存している多くの機能が無効になります。 たとえば、レガシ エンジンではなどの組み込み型の場合、多くのビジュアライザーがない`std::string`の Visual Studio 2015 のプロジェクトです。   このような場合、デバッグ機能を最適にご利用いただくためには、Visual Studio 2013 プロジェクトをお使いください。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

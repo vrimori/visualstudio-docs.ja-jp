@@ -1,27 +1,24 @@
 ---
-title: "グラフィックス オブジェクト テーブル |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス オブジェクト テーブル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.datavisualizer
 - vs.graphics.objecttable
 - vs.graphics.bufferviewer
 ms.assetid: f48f62d9-16ff-4a2e-8c01-5cbe99513788
-caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: eb03ab88ca3d1d50b559cef87bfdf045a0a81319
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d58c219069efcc98fccaa52dff5bd156212ea64d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="graphics-object-table"></a>グラフィックス オブジェクト テーブル
 Visual Studio のグラフィックス分析に含まれるグラフィックス オブジェクト テーブルは、ゲームまたはアプリのフレームをサポートする Direct3D オブジェクトについて理解するために役立ちます。  
@@ -48,10 +45,10 @@ Visual Studio のグラフィックス分析に含まれるグラフィックス
 |**アクティブ**|キャプチャされたフレームの間に D3D10Device または D3D11DeviceContext に設定されたオブジェクトの場合は "*" が表示されます。<br /><br /> これは灰色のテキストで表示されるオブジェクトに対応しますが、オブジェクト テーブルを並べ替えるのに役立つ列エントリが用意されています。|  
 |**Size**|オブジェクトのサイズ (バイト単位)。|  
 |**Format**|オブジェクトの形式。 たとえば、テクスチャ オブジェクトの形式や、シェーダー オブジェクトのシェーダー モデル。|  
-|**幅**|テクスチャ オブジェクトの幅。 他のオブジェクトの種類には適用されません。|  
-|**高さ**|テクスチャ オブジェクトの高さ。 他のオブジェクトの種類には適用されません。|  
+|**Width**|テクスチャ オブジェクトの幅。 他のオブジェクトの種類には適用されません。|  
+|**Height**|テクスチャ オブジェクトの高さ。 他のオブジェクトの種類には適用されません。|  
 |**深度**|3-D テクスチャ オブジェクトの深さ。 テクスチャが 3-D でない場合、値は 0 です。 他のオブジェクトの種類には適用されません。|  
-|**Mips**|テクスチャ オブジェクトにある MIP レベルの数。 他のオブジェクトの種類には適用されません。|  
+|**mips**|テクスチャ オブジェクトにある MIP レベルの数。 他のオブジェクトの種類には適用されません。|  
 |**ArraySize**|テクスチャ配列内のテクスチャの数。 範囲は、1 から、現在の機能レベルで定義されている上限までです。 キューブ マップの場合、この値は配列内のキューブ マップ数の 6 倍です。|  
 |**サンプル**|ピクセルあたりのマルチサンプルの数。|  
   
@@ -113,6 +110,6 @@ Visual Studio のグラフィックス分析に含まれるグラフィックス
 |**uint64**|64 ビットの符号なし整数値。 同じ**u8byte**です。|  
 |**bool**|ブール型 (`true` または `false`) の値。 それぞれのブール値は 32 ビット値によって表されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフィックス診断 (DirectX グラフィックスのデバッグ)](visual-studio-graphics-diagnostics.md)   
  [チュートリアル: デバイス状態によるオブジェクトの不足](walkthrough-missing-objects-due-to-device-state.md)

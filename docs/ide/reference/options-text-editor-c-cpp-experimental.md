@@ -1,28 +1,23 @@
 ---
-title: "[オプション]、[テキスト エディター]、[C/C++]、[実験用] | Microsoft Docs"
-ms.custom: 
+title: '[オプション]、[テキスト エディター]、[C/C++]、[実験用]'
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.technology:
-- vs-ide-general
+manager: douge
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38f6dfc375e776e4ad471fa8075b755dc3c31998
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 36826a998c579526487b440ebe9d3ddab228daab
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-text-editor-cc-experimental"></a>[オプション]、[テキスト エディター]、[C/C++]、[実験用]
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 03/02/2018
 
 ## <a name="additional-features-in-the-visual-studio-marketplace"></a>Visual Studio Marketplace で追加された機能
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Downloads) で、追加のテキスト エディター機能を参照できるようになりました。 例として、 [C++ Quick Fixes](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.CQuickFixes2017)があります。これは、次をサポートします。
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Downloads) で、追加のテキスト エディター機能を参照できるようになりました。 例として、 [C++ Quick Fixes](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.CQuickFixes2017)があります。これは、次をサポートします。
 
 - **不足している #include の追加** -コード内の不明なシンボルについて関連する #include を提案します
 

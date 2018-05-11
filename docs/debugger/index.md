@@ -1,14 +1,17 @@
 ---
 layout: LandingPage
-title: "Visual Studio でのアプリのデバッグ | Microsoft Docs"
-description: "Visual Studio 2017 を使用して、ご使用のプラットフォームとデバイス向けに任意の言語でアプリケーション、サービス、ツールをデバッグする方法について説明します。"
+title: Visual Studio でのアプリのデバッグ | Microsoft Docs
+description: Visual Studio 2017 を使用して、ご使用のプラットフォームとデバイス向けに任意の言語でアプリケーション、サービス、ツールをデバッグする方法について説明します。
 ms.topic: landing-page
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 6c81a60b706a02a66fce176613fce1e0dae2496c
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.author: mikejo
+author: mikejo5000
+manager: douge
+ms.openlocfilehash: c9d997985d4e19b68a326b3b69e28875942b8bfb
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio でのデバッグ
 
@@ -52,24 +55,6 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_debug.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>デバッガーでのコードの移動</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-        <li>
         <a href="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171">
         <div class="cardSize">
             <div class="cardPadding">
@@ -106,7 +91,7 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/get-started-debugging-multithreaded-apps">
+        <a href="https://docs.microsoft.com/visualstudio/debugger/how-to-use-intellitrace-step-back">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -116,25 +101,25 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>マルチスレッド アプリのデバッグ</h3>
+                        <h3>IntelliTrace スナップショットの表示 (Visual Studio Enterprise)</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
-        <li>
-        <a href="https://docs.microsoft.com/visualstudio/debugger/intellitrace">
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/debug-live-azure-applications">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="">
+                            <img src="/media/common/i_get-started.svg" alt="">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>IntelliTrace の詳細 (Visual Studio Enterprise)</h3>
+                        <h3>Azure App Service アプリケーションのライブ デバッグ</h3>
                     </div>
                 </div>
             </div>
@@ -153,6 +138,24 @@ Visual Studio デバッガーを使用すると、プログラムの実行時の
                     </div>
                     <div class="cardText">
                         <h3>デバッガーのヒントと秘訣</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/visualstudio/debugger/get-started-debugging-multithreaded-apps">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>マルチスレッド アプリのデバッグ</h3>
                     </div>
                 </div>
             </div>

@@ -1,26 +1,24 @@
 ---
-title: "IDebugGenericFieldInstance::TypeArgumentCount |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugGenericFieldInstance::TypeArgumentCount |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - TypeArgumentCount
 - IDebugGenericFieldInstance::TypeArgumentCount
 ms.assetid: e662c5ea-a5c1-478e-a268-5980dadffcd1
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 94aa82ed8252a852e0f973ccc64cc7b44629b0f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a2fb72a486c58c0213361eb983371493f7ebafc5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebuggenericfieldinstancetypeargumentcount"></a>IDebugGenericFieldInstance::TypeArgumentCount
 このインスタンスのパラメーターの引数型の数を返します。  
@@ -49,5 +47,5 @@ int TypeArgumentCount(
 ## <a name="remarks"></a>コメント  
  たとえば場合、リスト\<int >、このメソッドは、1 を返し、一覧\<int, float2 > 2 を返します。 このメソッドは、型引数がない場合に 0 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

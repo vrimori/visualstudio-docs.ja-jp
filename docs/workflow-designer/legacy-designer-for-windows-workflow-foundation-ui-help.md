@@ -1,7 +1,9 @@
 ---
-title: "Windows Workflow Foundation UI ヘルプの従来のデザイナー |Microsoft ドキュメント"
+title: ワークフロー デザイナーで Windows Workflow Foundation UI ヘルプの従来のデザイナー
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - UI reference
 - Visual Studio 2005 Extensions for Windows Workflow Foundation, UI reference
@@ -9,16 +11,17 @@ helpviewer_keywords:
 ms.assetid: b3a0104f-4485-45ac-9794-82d54e45fb09
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb1eca03c08776206de3ba6706205736a52dfc9e
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: b8b3a84926f933e2e7f5d97a6e2f3562f2807560
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-designer-for-windows-workflow-foundation-ui-help"></a>従来の Designer for Windows Workflow Foundation UI ヘルプ
-このセクションには、従来の Windows ワークフロー デザイナーでの状況依存のヘルプ トピックが含まれています[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]です。 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] または [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] を対象とする必要がある場合は、従来のデザイナーを使用します。
 
- これらのトピックにアクセスすることができます、[!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)]ユーザー インターフェイスでキーを押して**F1** 、従来[!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] ダイアログ ボックスが開きます。
+このセクションには、Visual Studio 2010 では、従来の Windows ワークフロー デザイナーの状況依存のヘルプ トピックが含まれています。 .NET Framework version 3.5、または、WinFX を対象とする必要がある場合は、従来のデザイナーを使用します。
+
+キーを押して Visual Studio ユーザー インターフェイスからこれらのトピックにアクセスすることができます**F1**従来のワークフロー デザイナー ダイアログ ボックスが開いているとき。

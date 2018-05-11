@@ -1,27 +1,24 @@
 ---
-title: "Visual Studio 2017 の更新 | Microsoft Docs"
-description: "Visual Studio を更新する方法について、ステップ バイ ステップで説明します。"
-ms.date: 03/06/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+title: Visual Studio 2017 を更新する
+description: Visual Studio を最新のリリースに更新する詳細な手順を説明します。
+ms.date: 04/23/2018
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 helpviewer_keywords:
 - update Visual Studio
 - change visual studio
 - changing Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41fc3df0806bf703385099647d2f92cfa2236051
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 0d528c8ec235ceb1b9c8b23de0874ebe42c472ce
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017 を最新リリースに更新する
 
@@ -56,6 +53,9 @@ IDE 内から直接使用しやすくするために、インストールと更�
 
      更新が続行されます。 処理が完了すると、Visual Studio が再起動されます。
 
+     > [!NOTE]
+     > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。    
+
 ### <a name="use-the-ide"></a>IDE を使用する
 
 更新プログラムを確認し、Visual Studio のメニュー バーから更新プログラムをインストールすることができます。
@@ -69,6 +69,9 @@ IDE 内から直接使用しやすくするために、インストールと更�
 3. **[更新]** ダイアログ ボックスが開いたら、**[今すぐ更新]** を選択します。
 
    前のセクションと同様に更新が実行され、更新が正常に完了すると Visual Studio が再起動されます。
+
+   > [!NOTE]
+   > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。  
 
 ### <a name="use-the-visual-studio-installer"></a>Visual Studio インストーラーを使用する
 
@@ -150,8 +153,8 @@ Visual Studio は、Visual Studio 自体またはいずれかのコンポーネ�
 
 * Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、質問したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関する掲示板](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
+* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,12 +1,10 @@
 ---
-title: "方法: アドイン ユーザー インターフェイス エラーを表示 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: アドイン ユーザー インターフェイス エラーを表示 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - application-level add-ins [Office development in Visual Studio], user interface errors
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4ce5204855cd6ebe468d652b8420cddc7fd19a1a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 795578d6a168dff5fee259a90abac83fa7788121
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-show-add-in-user-interface-errors"></a>方法 : アドインのユーザー インターフェイス エラーを表示する
   既定では、VSTO アドインが Microsoft Office ユーザー インターフェイス (UI) の操作を試みて失敗しても、エラー メッセージは表示されません。 しかし、UI に関連するエラー メッセージを表示するように Microsoft Office アプリケーションを構成できます。 これらのメッセージを使用すると、カスタム リボンが表示されない原因や、リボンは表示されるもののコントロールが表示されない理由を判断するのに役立ちます。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  Outlook の場合、詳細ウィンドウの **[開発]** セクションに **[VSTO アドイン ユーザー インターフェイスのエラーを表示する]** チェック ボックスがあります。 その他のアプリケーションの場合、このチェック ボックスは、詳細ウィンドウの **[全般]** セクションにあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office UI のカスタマイズ](../vsto/office-ui-customization.md)   
  [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   

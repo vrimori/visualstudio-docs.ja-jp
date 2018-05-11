@@ -1,61 +1,35 @@
 ---
-title: "XSLT のデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: XSLT のデバッグ
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: conceptual
 ms.assetid: 344940bd-c41e-4ed9-8458-3e3aa8e6bb37
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0d610a7410232104428281d90bf7c67992e2a378
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3b2ff66c51e749dedb7887388feeed12ef7c7223
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-xslt"></a>XSLT のデバッグ
-Visual Studio デバッガーを使用して XSLT をデバッグすることができます。 このデバッガーは、ブレークポイントの設定や、XSLT 実行状態の表示などをサポートします。 XSLT デバッグ機能は、Visual Studio の Team System および Professional Edition で提供されています。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [XSLT デバッガーの新機能](../xml-tools/what-s-new-in-the-xslt-debugger.md)  
- XSLT デバッガーの今回のリリースで導入された新しい機能について説明します。  
-  
- [方法 : XSLT のデバッグを開始する](../xml-tools/how-to-start-debugging-xslt.md)  
- XSLT デバッガーを起動する方法について説明します。  
-  
- [方法 : XSLT でブレークポイントを使用する](../xml-tools/how-to-use-breakpoints-with-xslt.md)  
- スタイル シート内でブレークポイントを使用する方法について説明します。  
-  
- [方法 : XPath 式を評価する](../xml-tools/how-to-evaluate-an-xpath-expression.md)  
- 使用した XPath 式を評価する方法について説明します、 **クイック ウォッチ**  ダイアログ ボックス。  
-  
- [チュートリアル : XSLT スタイル シートのデバッグ](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)  
- XSLT スタイル シートをデバッグする方法を示します。  
-  
- [XSLT の既定のテンプレート](../xml-tools/xslt-default-templates.md)  
- XSLT デバッガーにおける既定のテンプレートの扱いについて説明します。  
-  
- [デバッガー ユーザー インターフェイス (XSLT)](../xml-tools/debugger-user-interface-xslt.md)  
- XSLT デバッガーのウィンドウとダイアログ ボックスについて説明します。  
-  
- [XSLT プロファイラー](../xml-tools/xslt-profiler.md)  
- XSLT プロファイラーにアクセスする方法について説明します。  
-  
-## <a name="related-sections"></a>関連項目  
- [XSLT スタイル シートの編集](../xml-tools/editing-xslt-style-sheets.md)  
- XML エディターを使用したスタイル シートの編集について説明します。  
-  
- [XML データを使用するときのセキュリティに関する考慮事項](../xml-tools/security-considerations-when-working-with-xml-data.md)  
- XML エディターや XSLT デバッガーを使用する際に知っておく必要があるセキュリティの問題について説明します。  
-  
- [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)  
- Visual Studio デバッガーについて紹介します。  
-  
- [XSLT の参照](http://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
- XSLT の要素と関数に関するリファレンス ドキュメントを紹介します。
+
+Visual Studio デバッガーを使用して XSLT をデバッグすることができます。 このデバッガーは、ブレークポイントの設定や、XSLT 実行状態の表示などをサポートします。
+
+> [!NOTE]
+> XSLT デバッガーを Visual Studio 2017 の Enterprise edition でできるだけです。
+
+## <a name="xslt-profiler"></a>XSLT プロファイラー
+
+[XSLT profiler](../xml-tools/xslt-profiler.md)開発者を計測、評価、および詳細な XSLT パフォーマンス レポートを作成することで XSLT コード内のパフォーマンス関連の問題を特定できるようにするツールです。
+
+## <a name="related-sections"></a>関連項目
+
+- [XSLT スタイル シート編集](../xml-tools/editing-xslt-style-sheets.md)スタイル シートを編集する XML エディターの使用について説明します。
+- [XML データを操作するときのセキュリティに関する考慮事項](../xml-tools/security-considerations-when-working-with-xml-data.md)XML エディターや XSLT デバッガーを使用する際に知っておくべきセキュリティの問題について説明します。
+- [Visual Studio でデバッグ](../debugger/debugging-in-visual-studio.md)Visual Studio デバッガーが導入されています。
+- [XSLT 参照](http://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)XSLT 要素と関数についての参考資料を提供します。

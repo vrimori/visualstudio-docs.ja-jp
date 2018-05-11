@@ -1,12 +1,10 @@
 ---
-title: "Office ソリューションの遅延バインディング |Microsoft ドキュメント"
-ms.custom: 
+title: Office ソリューションの遅延バインディング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - casting, object to specific type
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 430c10ffa5f79be45282d637b48772943be638e9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="late-binding-in-office-solutions"></a>Office ソリューションの遅延バインディング
   Office アプリケーションのオブジェクト モデルの種類によっては、遅延バインディング機能を介して使用可能な機能を提供します。 たとえば、一部のメソッドとプロパティは、異なる種類の Office アプリケーションのコンテキストによってオブジェクトを返すことができ、一部の型は、さまざまな方法または別のコンテキストでのプロパティを公開できます。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  ほとんどの場合、参照ドキュメントを返すメンバーの戻り値の種類を一覧表示、<xref:System.Object>です。 オブジェクトをキャストまたは変換オブジェクト コード エディターでの IntelliSense を有効にします。  
   
- Visual Basic での変換については、次を参照してください。[暗黙的および明示的な変換 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)と[CType 関数 &#40;です。Visual Basic &#41;](/dotnet/visual-basic/language-reference/functions/ctype-function).  
+ Visual Basic での変換については、次を参照してください。[暗黙的および明示的な変換&#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions)と[CType 関数&#40;Visual Basic&#41;](/dotnet/visual-basic/language-reference/functions/ctype-function)です。  
   
 ### <a name="examples"></a>使用例  
  次のコード例を Visual Basic プロジェクトでオブジェクトを特定の型にキャストする方法を示しています、 **Option Strict**にします。 このプロジェクトの種類である必要があります明示的にキャストする、<xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A>プロパティを<xref:Microsoft.Office.Interop.Excel.Range>です。 この例では、という名前のワークシート クラスとドキュメント レベルの Excel プロジェクトが必要があります`Sheet1`です。  
@@ -64,10 +63,10 @@ ms.lasthandoff: 01/10/2018
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
- [Dynamic 型 &#40; を使用します。C &#35;です。プログラミング ガイド &#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [Dynamic 型の使用&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  

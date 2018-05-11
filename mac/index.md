@@ -1,16 +1,15 @@
 ---
-title: "Visual Studio for Mac の概要 | Microsoft Docs"
-description: 
+title: Visual Studio for Mac の概要
+description: この記事では Visual Studio for Mac の機能を紹介します
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
-ms.topic: article
+ms.date: 05/06/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: d12331bd074f77db83ae4574195b8b6f7e5c452a
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 918c0532140369bfc6790be2306830b5f160ebdf
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
@@ -73,7 +72,7 @@ Visual Studio には、独自の統合 Android SDK マネージャーがあり�
 
 Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次の画像のように Android デザイナーでこれらのファイルを開きます。
 
-![](media/intro-image31.png)
+![Android UI デザイナー](media/intro-image31.png)
 
 Android デザイナーの詳細については、[デザイナーの概要](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)に関するドキュメントを参照してください。
 
@@ -81,7 +80,7 @@ Android デザイナーの詳細については、[デザイナーの概要](htt
 
 iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib およびストーリーボード ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
 
-![](media/intro-image30.png)
+![iOS ストーリーボード デザイナー](media/intro-image30.png)
 
 iOS Designer の使用方法については、[Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) に関するドキュメントを参照してください。
 
@@ -110,7 +109,7 @@ Xamarin Profiler には、プロファイルに使用できる 3 つのツール
 
 Xamarin Inspector は、対話型 C# コンソールとツールをユーザーに提供しています。 ライブ アプリケーションを調査するときのデバッグまたは診断支援として、教育ツール、ドキュメント作成ツール、または実験ツールとして使用できます。
 
-![](media/intro-inspector.png)
+![Xamarin Inspector](media/intro-inspector.png)
 
 多様なプログラミング プラットフォーム (Android、iOS、Mac、および Windows) を対象にすることができる高機能な C# コンソールを提供するスタンドアロン アプリケーションと、IDE のデバッグ ワークフローへの統合から構成されます。
 

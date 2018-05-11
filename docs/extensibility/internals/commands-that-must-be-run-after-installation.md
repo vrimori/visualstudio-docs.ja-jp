@@ -1,27 +1,23 @@
 ---
-title: "インストール後に実行する必要がありますコマンド |Microsoft ドキュメント"
-ms.custom: 
+title: インストール後に実行する必要がありますコマンド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - post-install commands
 ms.assetid: c9601f2e-2c6e-4da9-9a6e-e707319b39e2
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ff4b1e572fd1e0c5c500fbd756d01063665bd1f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 84f1651f311fbad7aefe40a2744c61dc7d81725c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>インストール後に実行する必要がありますコマンド
 実行する必要があります、.msi ファイルを使用して拡張機能を展開する場合`devenv /setup`で Visual Studio 拡張機能を検出するために、インストールの一部として。  
@@ -34,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>RegLocator テーブルの行から別のバージョンの Visual Studio の devenv.exe を検索するには  
   
-|Signature_|ルート|キー|name|型|  
+|Signature_|ルート|キー|名前|型|  
 |-----------------|----------|---------|----------|----------|  
 |RL_DevenvExe_2002|2|SOFTWARE\Microsoft\VisualStudio\7.0\Setup\VS|EnvironmentPath|2|  
 |RL_DevenvExe_2003|2|SOFTWARE\Microsoft\VisualStudio\7.1\Setup\VS|EnvironmentPath|2|  
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
  カスタム アクションは、インストール中に実行するためにスケジュールする InstallExecuteSequence テーブルに記述する必要があります。 場合は、その実行されているカスタム動作を防ぐために、[条件] 列の各行に対応するプロパティを使用してバージョンの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]システムにインストールされていません。  
   
 > [!NOTE]
->  `Null`プロパティに評価される`False`条件で使用するとします。  
+>  `Null` プロパティに評価される`False`条件で使用するとします。  
   
  各カスタム アクションのシーケンス列の値は、Windows インストーラー パッケージには、その他のシーケンス値に依存します。 シーケンス値は、devenv.exe のカスタム アクションとして実行にできるだけ近い installfinalize が標準的な操作の前にすぐになるようにする必要があります。  
   
@@ -86,5 +82,5 @@ ms.lasthandoff: 12/22/2017
 |CA_RunDevenv2005|DEVENV_EXE_2005|6605|  
 |CA_RunDevenv2008|DEVENV_EXE_2008|6608|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows インストーラーによる VSPackage のインストール](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

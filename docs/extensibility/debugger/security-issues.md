@@ -1,26 +1,24 @@
 ---
-title: "セキュリティの問題 |Microsoft ドキュメント"
-ms.custom: 
+title: セキュリティの問題 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Debugging SDK]
 - debugging [Debugging SDK], security
 ms.assetid: d6ffff0a-afb4-4f38-86d8-476c881c4e4b
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 753f916d148675afd7313afc8673232f22280b7d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d45ebd8c4d80b84749838c2034d72159c9e39627
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-issues"></a>セキュリティ上の問題
 Visual Studio を使用してプログラムをデバッグするには必要なアクセス許可は、開発者がプログラムを実行する必要があるものと同じです。 これは、ほとんどの状況が (インターネット インフォメーション サービスなど、他のサービスに関連するいくつかの状況はより高いレベルのアクセス許可にあります) のリモート デバッグが含まれます。  
@@ -29,7 +27,7 @@ Visual Studio を使用してプログラムをデバッグするには必要な
   
  これは、開発者が特別な権限を自分が起動されたプログラムをデバッグすることを意味します。 であっても、開発者は、その他の人が、同じセキュリティ グループのメンバーである場合は、他のユーザーによって開始されたプロセスをデバッグできます。 リモート デバッグを有効にする必要があるだけで、必要なをコピーするファイルをリモート コンピューターし、msvsmon.exe を起動し、(を参照してください[リモート デバッグ](../../debugger/remote-debugging.md)詳細)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   
  [プロセスのデバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)   
  [Remote Debugging](../../debugger/remote-debugging.md)

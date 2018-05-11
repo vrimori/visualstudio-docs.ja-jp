@@ -1,12 +1,9 @@
 ---
-title: "CPPClean タスク | Microsoft Docs"
-ms.custom: 
+title: CPPClean タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc.task.cppclean
 dev_langs:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - MSBuild (Visual C++), CPPClean task
 - CPPClean task (MSBuild (Visual C++))
 ms.assetid: b62a482e-8fb5-4999-b50b-6605a078e291
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f976d54e3a18d3bc854b46678f79ecec41659f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a871effd2b7560cc34ae8e2a91c0b55f63bcfe44
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="cppclean-task"></a>CPPClean タスク
 Visual C++ プロジェクトのビルド時に MSBuild によって作成される一時ファイルを削除します。 ビルド ファイルを削除するプロセスは、*クリーニング* と呼ばれます。  

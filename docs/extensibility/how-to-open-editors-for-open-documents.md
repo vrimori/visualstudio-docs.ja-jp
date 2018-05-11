@@ -1,27 +1,23 @@
 ---
-title: "方法: 開いているドキュメントに対して開いているエディター |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 開いているドキュメントに対して開いているエディター |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], opening for open documents
 ms.assetid: 1a0fa49c-efa4-4dcc-bdc0-299b7052acdc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4c6321644cb59f55ad1335249aec5b071aef4ab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 621ed4436160b6f491abb34d8194c75595d9a54c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>方法: 開いているドキュメントのエディターを開く
 プロジェクトには、ドキュメント ウィンドウが開き、プロジェクト最初判断しなければなりませんかどうか、ファイルが既に開いているドキュメント ウィンドウには、別のエディター。 登録されている標準エディターのいずれかのプロジェクト固有のエディターで開くかなどがあります、または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  ドキュメントが開いていない場合は、手順を実行し、[する方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開くと、プロジェクト項目の保存](../extensibility/internals/opening-and-saving-project-items.md)   
  [方法: プロジェクトに固有のエディターを開く](../extensibility/how-to-open-project-specific-editors.md)   
  [方法: 標準のエディターを開く](../extensibility/how-to-open-standard-editors.md)

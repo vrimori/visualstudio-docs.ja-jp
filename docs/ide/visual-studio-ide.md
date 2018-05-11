@@ -1,24 +1,23 @@
 ---
-title: "Visual Studio 2017 の概要 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 2017 の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/05/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 f1_keywords:
 - vs.startpage
 - VS.StartPage.HowDoI
+- MSDNSTART
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb2e7a3dcd800367ab54945cb0c406ce7afcf45a
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 6525b9d0bd0d5b394f09f0acd01b40a73bfc3bf2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
 

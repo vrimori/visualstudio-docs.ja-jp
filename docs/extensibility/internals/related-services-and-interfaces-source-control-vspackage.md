@@ -1,26 +1,24 @@
 ---
-title: "関連するサービスとインターフェイス (ソース コントロール VSPackage) |Microsoft ドキュメント"
-ms.custom: 
+title: 関連するサービスとインターフェイス (ソース コントロール VSPackage) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, interfaces
 - interfaces, source control packages
 ms.assetid: 3e96e838-5675-46bb-99cf-40d420086038
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7d19c7e2560fafbf54257bf4c46303874bfc717b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1f9e8e90fdda61524a9af107df452bc2b13cd90c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>関連するサービスとインターフェイス (ソース コントロール VSPackage)
 このセクションでは、ソース管理のインターフェイスの VSPackage に関連するすべて一覧表示、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。 ソース コントロール VSPackage では、これらのインターフェイスの一部を実装し、他のユーザーを使用してソース管理のタスクを実現します。  
@@ -65,5 +63,5 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts>|このインターフェイスを使用すると、ソリューションのオプション (.suo) ファイルにソース管理の設定を保存します。 これには、現在のユーザーの参加リストの場所などのユーザーに固有のソース管理の設定が含まれます。|ソース管理 VSPackage|推奨|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>|このインターフェイスは、ソリューションを閉じるか、またはプロジェクトを開くときに、ソース管理から新しいファイルを取得する前にプロジェクト ファイルのチェックインなどの操作を実行するために使用イベントを監視します。|ソース管理 VSPackage|推奨|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)

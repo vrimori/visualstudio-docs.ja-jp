@@ -1,12 +1,9 @@
 ---
-title: "MSBuild プロジェクトの共通プロパティ | Microsoft Docs"
-ms.custom: 
+title: MSBuild プロジェクトの共通プロパティ | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - ExcludeDeploymentUrl property
 - project file properties (MSBuild)
 ms.assetid: 9857505d-ae15-42f1-936d-6cd7fb9dd276
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 359dda28fa02711d4def9f26f2859dcc3c2bc65d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 61fa8f0f447bddcfb1c8e468ca6d88bbdf503f5c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-msbuild-project-properties"></a>MSBuild プロジェクトの共通プロパティ
 次の表は、Visual Studio プロジェクト ファイルで定義される、または MSBuild に用意されているターゲット ファイルに含まれている、使用頻度の高いプロパティを示しています。  
@@ -73,9 +69,10 @@ ms.lasthandoff: 02/09/2018
 |FileAlignment|出力ファイルでセクションをアラインするサイズをバイト単位で指定します。 有効値は 512、1024、2048、4096、および 8192 です。 このプロパティは、`/filealignment` コンパイラ スイッチに相当します。|  
 |FrameworkPathOverride|mscorlib.dll および microsoft.visualbasic.dll の位置を指定します。 このパラメーターは、vbc.exe コンパイラの `/sdkpath` スイッチに相当します。|  
 |GenerateDocumentation|(Visual Basic のみ) ビルドによってドキュメントを生成するかどうかを示すブール値パラメーターです。 `true` に設定すると、ビルドによってドキュメント情報が生成され、ビルド タスクが作成した実行可能ファイルまたはライブラリの名前と共に .xml ファイルに格納されます。|
-|IntermediateOutputPath|中間出力ファイルの完全パスであり、パスが指定されていない場合に `BaseIntermediateOutputPath` を基に生成されます。 たとえば、\obj\debug\\ のようなパスが生成されます。 このプロパティがオーバーライドされた場合、`BaseIntermediateOutputPath` は無効になります。|  
+|IntermediateOutputPath|中間出力ファイルの完全パスであり、パスが指定されていない場合に `BaseIntermediateOutputPath` を基に生成されます。 たとえば、\obj\debug\\ のようなパスが生成されます。|  
 |KeyContainerName|厳密名キーのコンテナー名です。|  
 |KeyOriginatorFile|厳密名キー ファイルの名前です。|  
+|MSBuildProjectExtensionsPath|プロジェクト拡張機能が配置されるパスを指定します。 既定では、`BaseIntermediateOutputPath` と同じ値が使用されます。|  
 |ModuleAssemblyName|コンパイル済みモジュールを組み込むアセンブリの名前です。 このプロパティは、`/moduleassemblyname` コンパイラ スイッチに相当します。|  
 |NoLogo|コンパイラ ロゴをオフにするかどうかを示すブール値です。 このプロパティは、`/nologo` コンパイラ スイッチに相当します。|  
 |NoStdLib|標準ライブラリ (mscorlib.dll) の参照を回避するかどうかを示すブール値です。 既定値は `false` です。|  

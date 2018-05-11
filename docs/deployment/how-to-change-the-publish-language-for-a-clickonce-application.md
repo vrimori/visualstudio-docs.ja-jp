@@ -1,12 +1,9 @@
 ---
-title: "方法: 変更、ClickOnce アプリケーションの発行の言語 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 変更、ClickOnce アプリケーションの発行の言語 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, changing publish language
 - publishing, ClickOnce
 ms.assetid: ef5024c4-cda1-4970-bc75-32a2a10c92c3
-caps.latest.revision: "19"
-author: stevehoag
-ms.author: shoag
-manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 7d368f036e8a5f8599a802bb6f57eba7bc6d767d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d39535138b8b6e6be0c3384c73ab660d368c9b0c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行言語を変更する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、ユーザー インターフェイスの言語と、開発用コンピューターのカルチャに既定のインストール中に表示されます。 ローカライズされたアプリケーションを発行する場合は、言語とローカライズされたバージョンと一致するカルチャを指定する必要があります。 これによって決定されますが、`Publish language`プロジェクトのプロパティです。  
@@ -39,14 +36,14 @@ ms.lasthandoff: 12/22/2017
   
 1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
   
-2.  クリックして、**発行**タブです。  
+2.  **発行**タブをクリックします。  
   
-3.  クリックして、**オプション**を開く ボタン、**発行オプション** ダイアログ ボックス。  
+3.  **オプション**ボタンをクリックして、**発行オプション** ダイアログ ボックスを開きます。  
   
-4.  をクリックして**説明**です。  
+4.  **説明**をクリックします。  
   
 5.  **発行オプション** ダイアログ ボックス、言語を選択してからカルチャ、**発行の言語**クリックしてドロップダウン リスト**OK**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

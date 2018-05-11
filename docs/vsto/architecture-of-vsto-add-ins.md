@@ -1,13 +1,10 @@
 ---
-title: "VSTO アドインのアーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: VSTO アドインのアーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: office-development
+ms.prod: visual-studio-dev15
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], architecture
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a8abb77978731a9fa5cd43acdcb4928944c605b1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 88757888662ec4e50411864274a4a34b3a84a3a7
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO アドインのアーキテクチャ
   Visual Studio の Office Developer Tools を使用して作成される VSTO アドインには、安定性とセキュリティを重視するアーキテクチャ上の特性があり、Microsoft Office と密接に連携させることができます。 このトピックでは、VSTO アドインの次の点について説明します。  
@@ -39,12 +36,12 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
- 詳細については、VSTO アドインの作成は、次を参照してください。 [Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)と[はじめに VSTO アドインのプログラミング](../vsto/getting-started-programming-vsto-add-ins.md)です。  
+ 詳細については、VSTO アドインの作成は、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[の取得開始プログラミングは、VSTO アドイン](../vsto/getting-started-programming-vsto-add-ins.md)です。  
   
 ##  <a name="UnderstandingAddIns"></a> VSTO アドインについて  
  Visual Studio の Office Developer Tools を使用して VSTO アドインをビルドする場合は、Microsoft Office アプリケーションによって読み込まれるマネージ コード アセンブリを作成します。 アセンブリが読み込まれると、VSTO アドインがアプリケーションで発生するイベント (ユーザーがメニュー項目をクリックした場合など) に応答できます。 また、VSTO アドインはオブジェクト モデルを呼び出して、アプリケーションの自動化や拡張を行うこともでき、さらに [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]のすべてのクラスも使用できます。  
   
- アセンブリは、アプリケーションのプライマリ相互運用機能アセンブリを介してアプリケーションの COM コンポーネントとの通信を行います。 詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)と[Office ソリューション開発の概要 &#40;です。VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ アセンブリは、アプリケーションのプライマリ相互運用機能アセンブリを介してアプリケーションの COM コンポーネントとの通信を行います。 詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)と[Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
   
  アプリケーションに複数の VSTO アドインがインストールされている場合、それぞれの VSTO アドインは異なるアプリケーション ドメインに読み込まれます。 つまり、正しく動作しない 1 つの VSTO アドインが原因で他の VSTO アドインでエラーが発生することはありません。 また、アプリケーションが閉じられた場合に、すべての VSTO アドイン アセンブリを確実にメモリからアンロードするためにも役立ちます。 アプリケーション ドメインの詳細については、次を参照してください。[アプリケーション ドメイン](/dotnet/framework/app-domains/application-domains)です。  
   
@@ -109,10 +106,10 @@ ms.lasthandoff: 01/10/2018
   
 11. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は VSTO アドインの `ThisAddIn_Startup` メソッドを呼び出します。 このメソッドは、 <xref:Microsoft.Office.Tools.AddInBase.Startup> イベントの既定のイベント ハンドラーです。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
- [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [Visual Studio Tools for Office ランタイム](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   

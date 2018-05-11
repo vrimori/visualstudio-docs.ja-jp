@@ -1,27 +1,24 @@
 ---
-title: "Visual Studio のデータベース互換性 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio のデータベースの互換性
 ms.date: 09/06/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database systems
 - database compatibility
 - databases for Visual Studio
 ms.assetid: 821de34b-eaa9-40af-b9aa-b8305de16899
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 8fbe818e233c8bbdaf4431c70b8962baf43a2ed2
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 883287c782742aa7bfb7d24f9e2d846a1caa149e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio の互換性のあるデータベースのシステム
 
@@ -59,5 +56,5 @@ Firebird は、オープン ソースの SQL データベースのシステム�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)  
-[バージョンおよびエディションの SQL Server とそのコンポーネントを確認する方法](http://support.microsoft.com/kb/321185)
+- [Visual Studio でのデータへのアクセス](../data-tools/accessing-data-in-visual-studio.md)
+- [バージョンおよびエディションの SQL Server とそのコンポーネントを確認する方法](http://support.microsoft.com/kb/321185)

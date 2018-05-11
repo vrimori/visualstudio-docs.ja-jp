@@ -1,25 +1,21 @@
 ---
-title: "グラフィックス フレーム分析 |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス フレーム分析 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/09/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.frameanalysis
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3af414b5d59ec49ed6e042d6a656d322fe8a38
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 9fe34c421d06fea1e4eefc064d344727382ca1d8
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="graphics-frame-analysis"></a>グラフィックス フレーム分析
 Visual Studio Graphics Analyzer のグラフィックス フレーム分析を使用して、Direct3D ゲームまたはアプリケーションのレンダリング パフォーマンスを分析し、最適化します。  
@@ -75,7 +71,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### <a name="timeline"></a>タイムライン  
  タイムラインは、相互に関連した描画 - 呼び出しのタイミングの概要を示しています。 描画時間が長い場合には、長いバーが対応しているため、これを使用してフレーム内で最も負荷がかかっている描画呼び出しをすぐに見つけることができます。 キャプチャされたフレームに含まれている描画呼び出しの数が非常に多い場合は、複数の描画呼び出しが 1 つのバーにまとめられ、その長さは描画呼び出しの合計になっています。  
   
- ![タイムラインは描画 &#45; コストを呼び出します。] (media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
+ ![タイムラインは描画&#45;コストを呼び出します。] (media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
   
  バーにポインターを置くと、バーがどの描画 - 呼び出しイベントに対応しているのかわかります。 バーを選択すると、イベント リストが対象のイベントと同期されます。  
   
@@ -137,7 +133,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
   
  フレーム分析は、再試行を 10 回に制限しています。 プラットフォームに積極的な電源管理またはクロックゲーティングの機能がある場合、これらの機能が再試行の制限を超えたために、フレーム分析が失敗してエラーをレポートする原因となることがあります。 この問題は、プラットフォームの電源管理をリセットすること、およびプラットフォームで可能な場合はクロック速度の調整を少し遅くすることによって、改善できます。  
   
-##  <a name="HardwareSupport"></a>ハードウェアのサポート  
+##  <a name="HardwareSupport"></a> ハードウェアのサポート  
   
 ### <a name="timestamps-and-occlusion-queries"></a>タイムスタンプおよび occlusion querｙ  
  タイムスタンプは、フレーム分析をサポートしているすべてのプラットフォームでサポートされています。 (Pixels Occluded カウンターで必要な) 深さの occlusion query は、機能レベル 9.2 以降をサポートしているプラットフォームでサポートされます。  
@@ -175,14 +171,14 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 ### <a name="warp"></a>WARP  
  フレーム分析は、実際のハードウェアでレンダリング パフォーマンスをプロファイルおよび改善する目的で使用されます。 WARP デバイスでフレーム分析を実行することは回避できませんは通常価値のあるフォロー アップ ハイエンド CPU で WARP を実行にも、最も機能最新の Gpu より低速なため、WARP パフォーマンスは、CPU によって大幅に変化するためを実行されています。  
   
-##  <a name="Variants"></a>Variant 型  
+##  <a name="Variants"></a> Variant 型  
  再生中に、フレームがレンダリングされる方法に対してフレーム分析がそれぞれの変更と呼ばれる、*バリアント*です。 フレーム分析が調査するバリアントは、レンダリング パフォーマンスまたはアプリケーションの表示品質を改善しようとして行った、一般的で比較的簡単な変更に対応します。たとえば、テクスチャのサイズを小さくする、テクスチャの圧縮を使用する、違う種類のアンチエイリアス処理を有効にする、などの変更です。 バリアントは、通常のレンダリング コンテキストおよびアプリケーションのパラメーターを上書きします。 次に概要を示します。  
   
 |バリアント|説明|  
 |-------------|-----------------|  
 |**1 x 1 ビューポート サイズ**|すべてのレンダー ターゲットでビューポートのディメンションを 1x1 ピクセルに減らします。<br /><br /> 詳細については、次を参照してください[1 x 1 ビューポート サイズ バリアント。](1x1-viewport-size-variant.md)|  
 |**0x MSAA**|すべてのレンダー ターゲット上で multi-sample anti-aliasing (MSAA) を無効にします。<br /><br /> 詳細については、次を参照してください[0 x/2 x/4 x MSAA バリアント。](0x-2x-4x-msaa-variants.md)|  
-|**2x MSAA**|すべてのレンダー ターゲット上で 2x multi-sample anti-aliasing (MSAA) を有効にします。<br /><br /> 詳細については、次を参照してください[0 x/2 x/4 x MSAA バリアント。](0x-2x-4x-msaa-variants.md)|  
+|**2 x MSAA**|すべてのレンダー ターゲット上で 2x multi-sample anti-aliasing (MSAA) を有効にします。<br /><br /> 詳細については、次を参照してください[0 x/2 x/4 x MSAA バリアント。](0x-2x-4x-msaa-variants.md)|  
 |**4x MSAA**|すべてのレンダー ターゲット上で 4x multi-sample anti-aliasing (MSAA) を有効にします。<br /><br /> 詳細については、次を参照してください[0 x/2 x/4 x MSAA バリアント。](0x-2x-4x-msaa-variants.md)|  
 |**ポイント テクスチャ フィルタ リング**|該当するすべてのテクスチャ サンプルに対して、フィルタリング モードを `DXD11_FILTER_MIN_MAG_MIP_POINT` (point texture filtering) に設定します。<br /><br /> 詳細については、次を参照してください。[ポイント、バイリニア、トリリニア、およびアニソトロ ピック テクスチャ フィルタ リング バリアント](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)です。|  
 |**Bilinear Texture Filtering**|該当するすべてのテクスチャ サンプルに対して、フィルタリング モードを `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT` (bilinear texture filtering) に設定します。<br /><br /> 詳細については、次を参照してください。[ポイント、バイリニア、トリリニア、およびアニソトロ ピック テクスチャ フィルタ リング バリアント](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)です。|  
