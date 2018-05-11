@@ -2,8 +2,7 @@
 title: デバッガーの変数のメモリを表示 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.memory
@@ -26,11 +25,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e5e2c43f48a1a91c35c770f5f7150972bebb1a1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 550c5ffe641fac5bb2d080a892143bf3ff9744b0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Visual Studio デバッガーの [メモリ] ウィンドウを使用します。
 **メモリ**ウィンドウには、アプリケーションによって使用されるメモリ領域に表示します。 **ウォッチ**ウィンドウで、 **クイック ウォッチ**ダイアログ ボックスで、 **自動変数**ウィンドウ、および**ローカル** ウィンドウに表示される変数の内容メモリ内の特定の位置に格納されます。 **メモリ**ウィンドウには大きな画像が表示されます。 これは、ほかのウィンドウではうまく表示されない大きなデータ (バッファーや長い文字列など) をチェックする場合に便利です。 ただし、**メモリ**ウィンドウはデータを表示するのに限定されません。 [メモリ] ウィンドウには、データ、コード、または未使用メモリの不要なランダム ビットを問わず、メモリ空間内のすべての要素が表示されます。  

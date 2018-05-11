@@ -1,26 +1,24 @@
 ---
-title: "チュートリアル: Visual Studio 拡張機能の発行 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: Visual Studio 拡張機能の発行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing web controls
 - web controls, publishing
 ms.assetid: a7816161-0490-4043-86f5-0f7331ed83b3
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: be1402da1677388712472d4309c40ce767358f7b
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f823334f3686bdba3406daac69b2a98d203780a7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能の発行
 
@@ -28,7 +26,7 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
- このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [、Visual Studio SDK をインストールする](../extensibility/installing-the-visual-studio-sdk.md)です。
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。
 
 ## <a name="create-a-visual-studio-extension"></a>Visual Studio 拡張機能を作成します。
 
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/25/2018
 
 6. 使用して、拡張機能をアップロードするパブリッシャーを選択します。  発行元を変更するには、左側に表示されている発行元の名前をクリックするとします。  をクリックして**新しい拡張子**選択**Visual Studio**です。
 
-7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、  **をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]**をクリックします。
+7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、 **をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]**をクリックします。
 
 8. **2: 拡張機能の詳細を提供**、いくつかのフィールドは、自動設定された source.extension.vsixmanifest ファイル拡張機能からです。  それぞれの詳細については、下はあります。
 

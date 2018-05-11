@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのロード テスト結果の概要 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.monitor.summary.view
 helpviewer_keywords:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6222e5288526dd5806997b8b65f326e841b692af
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 001f7f866437807565bc83a8ad3a4dd809dd4100
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-test-results-summary-overview"></a>ロード テスト結果の概要
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="test-results"></a>テスト結果
 
-このセクションには、ロード テストに含まれるテストおよびシナリオの一覧があります。 テストの名前、シナリオ、テストの実行回数、失敗した回数、および平均テスト時間が表示されます。 テストの名前を選択すると、**[テスト]** テーブルが表示され、そのテストの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果の分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
+このセクションには、ロード テストに含まれるテストおよびシナリオの一覧があります。 テストの名前、シナリオ、テストの実行回数、失敗した回数、および平均テスト時間が表示されます。 テストの名前を選択すると、**[テスト]** テーブルが表示され、そのテストの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
 
 > [!NOTE]
 > このセクションは、セクション タイトルの左側の矢印を選択して折りたたんだり展開したりできます。
@@ -98,7 +98,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="transaction-results"></a>トランザクション結果
 
-このセクションには、ロード テストに含まれるトランザクションの一覧があります。 トランザクションの名前、シナリオ、テスト、応答時間、経過時間、およびカウントが表示されます。 トランザクションの名前を選択すると、**[トランザクション]** テーブルが表示され、そのトランザクションの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果の分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
+このセクションには、ロード テストに含まれるトランザクションの一覧があります。 トランザクションの名前、シナリオ、テスト、応答時間、経過時間、およびカウントが表示されます。 トランザクションの名前を選択すると、**[トランザクション]** テーブルが表示され、そのトランザクションの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
 
 > [!NOTE]
 > このセクションは、セクション タイトルの左側の矢印を選択して折りたたんだり展開したりできます。

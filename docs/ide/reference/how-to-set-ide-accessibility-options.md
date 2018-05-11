@@ -1,26 +1,23 @@
 ---
-title: "方法: IDE アクセシビリティ オプションを設定する | Microsoft Docs"
-ms.custom: 
+title: '方法: IDE アクセシビリティ オプションを設定する | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6881e90a0035ed7c918acab924832013d9b17088
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: b44f31b03dae1c553008685553548d886a8943a2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 > [!TIP]
@@ -47,7 +44,7 @@ ms.lasthandoff: 01/29/2018
 
 ##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>テキスト ベースのツール ウィンドウおよびエディターでのテキスト サイズを変更するには  
 
-1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。  
 
 2.  **[環境]** フォルダーの **[フォントおよび色]** を選択します。  
 
@@ -70,7 +67,7 @@ ms.lasthandoff: 01/29/2018
     > [!NOTE]
     >  テキスト ベースのツール ウィンドウおよびエディターのテキスト サイズをリセットするには **[既定値を使用]** を選択します。  
 
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
 
 ### <a name="changing-the-colors-used-in-the-ide"></a>IDE で使用される色の変更  
  また、エディター内のテキスト、マージン インジケーター、空白文字、およびコード要素の既定の色を変更することもできます。  
@@ -80,7 +77,7 @@ ms.lasthandoff: 01/29/2018
 
 ##### <a name="to-change-the-color-of-items-in-the-editor"></a>エディター内の項目の色を変更するには  
 
-1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。  
 
 2.  **[環境]** フォルダーの **[フォントおよび色]** を選択します。  
 
@@ -90,7 +87,7 @@ ms.lasthandoff: 01/29/2018
 
 5.  **[前景色]**、**[背景色]**、および **[太字]** の各オプションから表示設定を選択します。  
 
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
 
 ## <a name="toolbars"></a>ツールバー  
  ツール バーの操作性を向上させるために、ツール バー ボタンにテキストを追加できます。  

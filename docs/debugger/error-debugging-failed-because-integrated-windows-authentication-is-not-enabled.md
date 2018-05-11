@@ -2,9 +2,8 @@
 title: 'エラー: デバッグ統合 Windows 認証が有効でないために失敗しました |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.webdbg_ntlm_authn_not_enabled
 dev_langs:
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7181642b0a1f05a3eae252393e8daeefe5947d05
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f189e9f3f85fd53941aa51cf2a2d969b9c9ed19
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>エラー ： Windows 統合認証が無効になっているため、デバッグに失敗しました。
 デバッグを要求したユーザーの認証が認証エラーで失敗しました。 このエラーは、Web アプリケーションまたは XML Web サービスにステップ インしようとするときに発生することがあります。 このエラーの原因の 1 つとして、統合 Windows 認証が有効ではないことが挙げられます。 その機能を有効にする場合は、「統合 Windows 認証を有効にするには」の手順を実行します。  
@@ -91,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
     9. **Web 管理ツール**、展開、 **IIS 6 管理互換**ノード、および選択、 **IIS 6 メタベースおよび IIS 6 構成との互換性**チェック ボックスをオンします。  
   
-    10.  **Web 管理ツール****IIS 管理コンソール** をクリック**ok です。**  
+    10. **Web 管理ツール** **IIS 管理コンソール** をクリック**ok です。**  
   
     11. コンピューターを再起動して、これらの変更を反映します。  
   

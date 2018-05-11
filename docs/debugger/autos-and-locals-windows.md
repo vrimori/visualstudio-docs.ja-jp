@@ -2,8 +2,7 @@
 title: '[自動変数] と [ローカル] ウィンドウで変数を検査 |Microsoft ドキュメント'
 ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.autos
@@ -17,14 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b3bad753a18352ebbf68bef5f398a8039a9c4dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 223bbf3d2f59b79214cf6acbff89946750cb312d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>自動変数 内の変数と Visual Studio の ローカル ウィンドウを調べる
-**[自動変数]**ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
+**[自動変数]** ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
   
 デバッグの基礎について詳しくは、「 [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md)」をご覧ください。  
   
@@ -106,7 +105,7 @@ private static int subtractVars(int i, int j)
 
  `int x = sumVars(a, b) + subtractVars(c, d);` の行にブレークポイントを設定します。  
   
- デバッグを開始して、最初のブレークポイントで実行が中断したときに、 **F10 キー (ステップ オーバー)**を押します。 **[自動変数]** ウィンドウには次のように表示されます。  
+ デバッグを開始して、最初のブレークポイントで実行が中断したときに、 **F10 キー (ステップ オーバー)** を押します。 **[自動変数]** ウィンドウには次のように表示されます。  
   
  ![AutosReturnValueCSharp2](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
   
@@ -114,7 +113,7 @@ private static int subtractVars(int i, int j)
 **[ローカル]** ウィンドウと **[自動変数]** ウィンドウで時々、変数の値が赤色で表示されることがあります。 これらは、前回の評価以降、変化した変数の値です。 この変更は前のデバッグ セッションに由来する場合もあれば、ウィンドウで値が変更されたための場合もあります。  
   
 ## <a name="changing-the-numeric-format-of-a-variable-window"></a>変数ウィンドウの数値の形式の変更  
-既定の数値の形式は 10 進数ですが、これを 16 進数に変更することができます。 **[ローカル]** または **[自動変数]** ウィンドウ内で右クリックし、 **[16 進数で表示]**を選びます。 この変更は、すべてのデバッガー ウィンドウに反映されます。  
+既定の数値の形式は 10 進数ですが、これを 16 進数に変更することができます。 **[ローカル]** または **[自動変数]** ウィンドウ内で右クリックし、 **[16 進数で表示]** を選びます。 この変更は、すべてのデバッガー ウィンドウに反映されます。  
   
 ## <a name="editing-a-value-in-a-variable-window"></a>[変数] ウィンドウで値を編集する  
 **[自動変数]**、 **[ローカル]**、 **[ウォッチ]**、 **[クイック ウォッチ]** ウィンドウに表示される変数の大部分は、値を編集できます。 **[ウォッチ]** と **[クイック ウォッチ]** ウィンドウについては、「 [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)」をご覧ください。 変更する値をダブルクリックするだけで、新しい値を追加できます。  
@@ -132,7 +131,7 @@ private static int subtractVars(int i, int j)
 -   浮動小数点値を編集すると、小数部分の 10 進とバイナリの変換により、多少の誤差が発生する場合があります。 特に影響のないように見える編集でも、浮動小数点値の最下位バイトが変化する場合があります。  
   
 ## <a name="changing-the-window-context"></a>ウィンドウのコンテキストを変更します。  
-使用することができます、**デバッグの場所**ツールバーを必要な関数、スレッド、または変数のウィンドウのコンテキストを変更するプロセスを選択します。 ブレークポイントを設定し、デバッグを開始します。 (このツール バーが表示されていない場合は、ツール バーの領域の空白の場所をクリックして有効にできます。 ツール バーの一覧が表示されたら、 **[デバッグの場所]**を選びます。) ブレークポイントにヒットすると、実行が停止しは、次の図の一番下の行は、[デバッグの場所] ツールバーを確認できます。
+使用することができます、**デバッグの場所**ツールバーを必要な関数、スレッド、または変数のウィンドウのコンテキストを変更するプロセスを選択します。 ブレークポイントを設定し、デバッグを開始します。 (このツール バーが表示されていない場合は、ツール バーの領域の空白の場所をクリックして有効にできます。 ツール バーの一覧が表示されたら、 **[デバッグの場所]** を選びます。) ブレークポイントにヒットすると、実行が停止しは、次の図の一番下の行は、[デバッグの場所] ツールバーを確認できます。
   
 ![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   

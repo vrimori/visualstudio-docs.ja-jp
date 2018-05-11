@@ -3,28 +3,24 @@ title: Node.js と Express のアプリを作成する - Visual Studio | Microso
 description: このチュートリアルでは Visual Studio で Node.js と Express のアプリを作成します
 ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
+ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f7d0774753178c9cb0dbcae1800da6b00ab02a0e
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 47bf06fabba9197029831382b6ad6e9068e7829c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
-このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。  
+このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
@@ -51,13 +47,13 @@ ms.lasthandoff: 04/03/2018
 ## <a name="create-a-project"></a>プロジェクトを作成する
 まず、Node.js Web アプリケーション プロジェクトを作成します。
 
-1. Visual Studio 2017 を開きます。  
+1. Visual Studio 2017 を開きます。
 
-1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。  
+1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[JavaScript]** を展開し、**[Node.js]** を選択します。 真ん中のウィンドウで **[基本の Azure Node.js Express 4 アプリケーション]** を選択し、**[OK]** を選択します。   
+1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[JavaScript]** を展開し、**[Node.js]** を選択します。 真ん中のウィンドウで **[基本の Azure Node.js Express 4 アプリケーション]** を選択し、**[OK]** を選択します。
 
-     **[基本の Azure Node.js Express 4 アプリケーション]** プロジェクト テンプレートが表示されない場合は、最初に **Node.js 開発**ワークロードをインストールする必要があります。 
+     **[基本の Azure Node.js Express 4 アプリケーション]** プロジェクト テンプレートが表示されない場合は、最初に **Node.js 開発**ワークロードをインストールする必要があります。
 
     Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 *app.js* プロジェクト ファイルがエディター (左のウィンドウ) で開きます。
 
@@ -130,11 +126,11 @@ ms.lasthandoff: 04/03/2018
 
 1. `data` 文字列の後に「`: get`」と入力します。IntelliSense が `getData` 関数を表示します。 `getData` を選択します。
 
-    ![IntelliSense を使用する](../nodejs/media/tutorial-nodejs-intellisense.png) 
+    ![IntelliSense を使用する](../nodejs/media/tutorial-nodejs-intellisense.png)
 
 1. `"data"` の前のコンマ (`,`) を削除します。式で緑の構文が強調表示されます。 構文の強調表示にカーソルを合わせます。
 
-    ![構文エラーの表示](../nodejs/media/tutorial-nodejs-syntax-checking.png) 
+    ![構文エラーの表示](../nodejs/media/tutorial-nodejs-syntax-checking.png)
 
     このメッセージの最後の行から、JavaScript インタープリターはコンマ (`,`) を要求していることがわかります。
 
@@ -152,15 +148,15 @@ ms.lasthandoff: 04/03/2018
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
-    ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行コードを中断する場所を示します。これにより、変数の値またはメモリの動作を確認したり、コードの分岐が実行されるかどうかを確認したりすることができます。 
+    ブレークポイントは、信頼できるデバッグの最も基本的で重要な機能です。 ブレークポイントは、Visual Studio が実行コードを中断する場所を示します。これにより、変数の値またはメモリの動作を確認したり、コードの分岐が実行されるかどうかを確認したりすることができます。
 
-    ![ブレークポイントの設定](../nodejs/media/tutorial-nodejs-set-breakpoint.png) 
+    ![ブレークポイントの設定](../nodejs/media/tutorial-nodejs-set-breakpoint.png)
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
 1. デバッグ ツール バーでデバッグ ターゲットを選択します。
 
-    ![デバッグ ターゲットを選択する](../nodejs/media/tutorial-nodejs-deploy-target.png) 
+    ![デバッグ ターゲットを選択する](../nodejs/media/tutorial-nodejs-deploy-target.png)
 
 1. **F5** キー (**[デバッグ]** > **[デバッグの開始]**) を押してアプリケーションを実行します。
 
@@ -178,15 +174,15 @@ ms.lasthandoff: 04/03/2018
 
 1. ボタンをクリックすると、さまざま画像が表示されます。
 
-    ![ブラウザーで実行しているアプリ](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
+    ![ブラウザーで実行しているアプリ](../nodejs/media/tutorial-nodejs-running-in-browser.png)
 
-1. Web ブラウザーを閉じます。  
+1. Web ブラウザーを閉じます。
 
 ## <a name="optional-publish-to-azure-app-service"></a>(省略可能) Azure App Service に発行する
 
 1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
 
-   ![Azure App Service に発行する](../nodejs/media/tutorial-nodejs-publish-to-azure.png)  
+   ![Azure App Service に発行する](../nodejs/media/tutorial-nodejs-publish-to-azure.png)
 
 1. **[Microsoft Azure App Service]** を選択します。
 
@@ -198,11 +194,11 @@ ms.lasthandoff: 04/03/2018
 
     デプロイに成功すると、Azure App Service で実行されているアプリがブラウザーで開きます。 ボタンをクリックすると、画像が表示されます。
 
-   ![Azure App Service で実行されているアプリ](../nodejs/media/tutorial-nodejs-running-in-azure.png)  
+   ![Azure App Service で実行されているアプリ](../nodejs/media/tutorial-nodejs-running-in-azure.png)
 
 これでこのチュートリアルは完了です。
 
-## <a name="next-steps"></a>次の手順 
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、Express を使用して Node.js アプリを作成して実行し、デバッガーを使用してブレークポイントに到達する方法について学びました。
 

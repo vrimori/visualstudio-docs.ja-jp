@@ -1,19 +1,18 @@
 ---
-title: ドメインのロールのプロパティ |Microsoft ドキュメント
-ms.custom: ''
+title: ドメイン ロールのプロパティ
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 00ed4a86f2a00f9317f198d925fddbbc7f115481
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ead7128c998b8c4ed97acac0f6da0f08113e7bef
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="properties-of-domain-roles"></a>ドメイン ロールのプロパティ
 次の表に、プロパティは、ドメインの役割に関連付けられます。 ドメイン ロールについては、次を参照してください。[についてモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。
@@ -40,7 +39,8 @@ ms.lasthandoff: 04/16/2018
 |プロパティの表示名|生成されたロールのプロパティの生成されたデザイナーで表示される名前です。|プロパティ名プロパティの調整済みの値。|
 
 > [!NOTE]
->  表示名の既定値を小文字の文字を付けたものし、するが続いていない別の大文字の文字は、各大文字の文字の前にスペースを挿入することによって、関連付けられているプロパティの値に基づきます。
+> 表示名の既定値を小文字の文字を付けたものし、するが続いていない別の大文字の文字は、各大文字の文字の前にスペースを挿入することによって、関連付けられているプロパティの値に基づきます。
 
 ## <a name="see-also"></a>関連項目
- [ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)
+
+- [ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)

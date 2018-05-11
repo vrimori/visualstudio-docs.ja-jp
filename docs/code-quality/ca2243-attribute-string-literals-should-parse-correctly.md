@@ -1,10 +1,8 @@
 ---
-title: 'Ca 2243: 属性文字列リテラルは、正しく解析する必要があります |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA2243: 属性文字列リテラルは、正しく解析する必要があります'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2243
 - AttributeStringLiteralsShouldParseCorrectly
@@ -17,48 +15,48 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0715624391b766649e48775470ed9e27f47f9613
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fcfb3d3ce0709f95ff864d081ba90c2aa49fad15
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: 属性文字列リテラルは、正しく解析する必要があります
-|||  
-|-|-|  
-|TypeName|AttributeStringLiteralsShouldParseCorrectly|  
-|CheckId|CA2243|  
-|カテゴリ|Microsoft.Usage|  
-|互換性に影響する変更点|中断なし|  
-  
-## <a name="cause"></a>原因  
- 属性の文字列リテラル パラメーターは、URL、GUID、またはバージョンは正常に解析できません。  
-  
-## <a name="rule-description"></a>規則の説明  
- 属性が派生ため<xref:System.Attribute?displayProperty=fullName>属性がコンパイル時に使用して、定数値だけをそのコンス トラクターに渡すことができます。 属性のパラメーターを Url、Guid、およびバージョンを表す必要がありますとして入力することはできません<xref:System.Uri?displayProperty=fullName>、 <xref:System.Guid?displayProperty=fullName>、および<xref:System.Version?displayProperty=fullName>これらの型は、定数として表現できないため、します。 代わりに、文字列で表す必要があります。  
-  
- パラメーターが文字列として入力されているために、コンパイル時に正しくない形式のパラメーターを渡すことが可能です。  
-  
- このルールは、名前付けのヒューリスティックを使用して、グローバルに一意の識別子 (GUID) またはバージョンの uniform resource identifier (URI) を表すパラメーターを検索し、渡された値が正しいことを確認します。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- 正しい形式の URL、GUID、またはバージョンにパラメーターの文字列を変更します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- URL、GUID、またはバージョン パラメーターを表していない場合は、この規則による警告を抑制するのには安全です。  
-  
-## <a name="example"></a>例  
- 次の例では、この規則に違反する AssemblyFileVersionAttribute のコードを示します。  
-  
- [!code-csharp[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  
-  
- 次のように、ルールがトリガーされます。  
-  
--   パラメーター 'version' が含まれており、System.Version を解析できません。  
-  
--   パラメーター 'guid' が含まれており、System.Guid を解析できません。  
-  
--   パラメーター 'uri'、'urn' または 'url' が含まれており、System.Uri を解析できません。  
-  
-## <a name="see-also"></a>関連項目  
+|||
+|-|-|
+|TypeName|AttributeStringLiteralsShouldParseCorrectly|
+|CheckId|CA2243|
+|カテゴリ|Microsoft.Usage|
+|互換性に影響する変更点|中断なし|
+
+## <a name="cause"></a>原因
+ 属性の文字列リテラル パラメーターは、URL、GUID、またはバージョンは正常に解析できません。
+
+## <a name="rule-description"></a>規則の説明
+ 属性が派生ため<xref:System.Attribute?displayProperty=fullName>属性がコンパイル時に使用して、定数値だけをそのコンス トラクターに渡すことができます。 属性のパラメーターを Url、Guid、およびバージョンを表す必要がありますとして入力することはできません<xref:System.Uri?displayProperty=fullName>、 <xref:System.Guid?displayProperty=fullName>、および<xref:System.Version?displayProperty=fullName>これらの型は、定数として表現できないため、します。 代わりに、文字列で表す必要があります。
+
+ パラメーターが文字列として入力されているために、コンパイル時に正しくない形式のパラメーターを渡すことが可能です。
+
+ このルールは、名前付けのヒューリスティックを使用して、グローバルに一意の識別子 (GUID) またはバージョンの uniform resource identifier (URI) を表すパラメーターを検索し、渡された値が正しいことを確認します。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ 正しい形式の URL、GUID、またはバージョンにパラメーターの文字列を変更します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ URL、GUID、またはバージョン パラメーターを表していない場合は、この規則による警告を抑制するのには安全です。
+
+## <a name="example"></a>例
+ 次の例では、この規則に違反する AssemblyFileVersionAttribute のコードを示します。
+
+ [!code-csharp[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]
+
+ 次のように、ルールがトリガーされます。
+
+-   パラメーター 'version' が含まれており、System.Version を解析できません。
+
+-   パラメーター 'guid' が含まれており、System.Guid を解析できません。
+
+-   パラメーター 'uri'、'urn' または 'url' が含まれており、System.Uri を解析できません。
+
+## <a name="see-also"></a>関連項目
  [CA1054: URI パラメーターを文字列にすることはできません](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

@@ -1,14 +1,12 @@
 ---
-title: "Visual Studio でのインターフェイスの抽出リファクタリング | Microsoft Docs"
-ms.custom: 
+title: Visual Studio でのインターフェイスの抽出リファクタリング | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.csharp.refactoring.extractinterface
 dev_langs:
@@ -16,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: e735b194da008de83fddac564194f8bb008c66bb
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 7abdc017c4d57e17685671539a4b053e6241b424
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extract-an-interface-refactoring"></a>インターフェイスの抽出リファクタリング
 
@@ -34,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
 **条件:** 共通のものにして、他のクラス、構造体、またはインターフェイスで使用できるメソッドを持つクラス、構造体、またはインターフェイスがいくつかあるとき。
 
-**理由:**インターフェイスは、オブジェクト指向設計の優れた構成要素であるため。 さまざまな動物のクラス (Dog、Cat、Bird) があり、これらすべてが Eat、Drink、Sleep などの共通メソッドを持つとします。 IAnimal のようなインターフェイスを使用すると、Dog、Cat、Bird に、これらのメソッド共通の "シグネチャ" を持たせることができます。
+**理由:** インターフェイスは、オブジェクト指向設計の優れた構成要素であるため。 さまざまな動物のクラス (Dog、Cat、Bird) があり、これらすべてが Eat、Drink、Sleep などの共通メソッドを持つとします。 IAnimal のようなインターフェイスを使用すると、Dog、Cat、Bird に、これらのメソッド共通の "シグネチャ" を持たせることができます。
 
 ## <a name="how-to"></a>方法
 
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/28/2018
    | **新しいファイル名** | インターフェイスを含んで生成されるファイルの名前。 インターフェイス名と同様に、既定値は I*ClassName*。ここで、*ClassName* は上で選択したクラスの名前です。 |
    | **インターフェイスを形成するパブリック メンバーを選択する** | インターフェイスに抽出する項目。 選択できる数に制限はありません。 |
 
-1. **[OK]**をクリックします。
+1. **[OK]** をクリックします。
 
    指定した名前のファイルにインターフェイスが作成されます。 さらに、選択したクラスにそのインターフェイスが実装されます。
 

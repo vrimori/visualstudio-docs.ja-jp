@@ -1,10 +1,8 @@
 ---
-title: 'Ca 1025: 反復的な引数を params 配列置換 |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1025: 反復する引数を params 配列で置き換えます'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1025
 - ReplaceRepetitiveArgumentsWithParamsArray
@@ -17,33 +15,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9d42e7109d75f14d51e0e7834bc996f6f8864dc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a5957b73789f751f5bd704c1a228994ee6187dc
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: 反復する引数を params 配列で置き換えます
-|||  
-|-|-|  
-|TypeName|ReplaceRepetitiveArgumentsWithParamsArray|  
-|CheckId|CA1025|  
-|カテゴリ|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
-  
-## <a name="cause"></a>原因  
- パブリック型のパブリックまたはプロテクト メソッドは複数の 3 つのパラメーターを持ちの最後の 3 つのパラメーターは、同じ型です。  
-  
-## <a name="rule-description"></a>規則の説明  
- 引数の正確な数が不明と、可変個の引数は、同じ型では、または同じ型で渡すことができる場合、引数を繰り返すのではなく、パラメーター配列を使用します。 たとえば、<xref:System.Console.WriteLine%2A>メソッドを任意の数を受け入れるように、パラメーター配列を使用する汎用のオーバー ロードを提供する<xref:System.Object>引数。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、パラメーター配列で引数を繰り返すを置き換えます。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告を抑制しても安全では常にただし、この設計では、利便性の問題が発生します。  
-  
-## <a name="example"></a>例  
- 次の例は、この規則に違反する型を示しています。  
-  
+|||
+|-|-|
+|TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
+|CheckId|CA1025|
+|カテゴリ|Microsoft.Design|
+|互換性に影響する変更点|なし|
+
+## <a name="cause"></a>原因
+ パブリック型のパブリックまたはプロテクト メソッドは複数の 3 つのパラメーターを持ちの最後の 3 つのパラメーターは、同じ型です。
+
+## <a name="rule-description"></a>規則の説明
+ 引数の正確な数が不明と、可変個の引数は、同じ型では、または同じ型で渡すことができる場合、引数を繰り返すのではなく、パラメーター配列を使用します。 たとえば、<xref:System.Console.WriteLine%2A>メソッドを任意の数を受け入れるように、パラメーター配列を使用する汎用のオーバー ロードを提供する<xref:System.Object>引数。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、パラメーター配列で引数を繰り返すを置き換えます。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告を抑制しても安全では常にただし、この設計では、利便性の問題が発生します。
+
+## <a name="example"></a>例
+ 次の例は、この規則に違反する型を示しています。
+
  [!code-csharp[FxCop.Design.RepeatArgs#1](../code-quality/codesnippet/CSharp/ca1025-replace-repetitive-arguments-with-params-array_1.cs)]

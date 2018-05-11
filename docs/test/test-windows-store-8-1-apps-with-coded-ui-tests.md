@@ -2,20 +2,20 @@
 title: Visual Studio でコード化された UI テストを使用して Windows UWP アプリをテストする | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 889e29926d638e4e160c323e8d2673d858ab5c22
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 8167834fdfb4cf0251aad4a5d31c4dea00e37731
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-windows-uwp-apps-with-coded-ui-tests"></a>コード化された UI テストを使用して Windows UWP アプリをテストする
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/19/2018
 
 1.  XAML ベースの UWP アプリ用のコード化された UI テストを実行する場合は、 [各コントロールを識別する一意のオートメーション プロパティを設定する](../test/set-a-unique-automation-property-for-windows-store-controls-for-testing.md)必要があります。
 
-     **[ツール]** メニューの **[オプション]** をポイントし、 **[テキスト エディター]**、 **[XAML]**、 **[その他]**の順に選択します。
+     **[ツール]** メニューの **[オプション]** をポイントし、 **[テキスト エディター]**、 **[XAML]**、 **[その他]** の順に選択します。
 
      チェック ボックスをオンにして、対話要素の作成時に自動的に名前を付けます。
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/19/2018
 
      ![[UI マップの編集またはアサーションの追加] を選択する](../test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")
 
-3.  コード化された UI テスト ビルダーで十字線ツールを使用してアプリ タイルを選択し、 **[AutomationId]** を右クリックして、 **[値をクリップボードにコピー]**を選択します。 クリップボード内の値は、テスト用のアプリを起動する操作を記述するために後で使用されます。
+3.  コード化された UI テスト ビルダーで十字線ツールを使用してアプリ タイルを選択し、 **[AutomationId]** を右クリックして、 **[値をクリップボードにコピー]** を選択します。 クリップボード内の値は、テスト用のアプリを起動する操作を記述するために後で使用されます。
 
      ![AutomationId をクリップボードにコピーする](../test/media/cuit_windows_store_tileautomationid.png "CUIT_Windows_Store_TileAutomationID")
 

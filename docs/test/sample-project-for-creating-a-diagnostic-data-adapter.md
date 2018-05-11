@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での診断データ アダプター作成用のサンプル プロジェクト | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter [Visual Studio ALM]
 - samples. Diagnostic Data Adapter [Visual Studio ALM]
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 548bdc5e-338f-4be7-a555-e6a2efb1df6b
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0b37512405442b327bb4b9688a39bfc4c99ea594
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 98606c5afbeed035392f35d71de60bb4d4bbb5a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-project-for-creating-a-diagnostic-data-adapter"></a>診断データ アダプター作成用のサンプル プロジェクト
 
@@ -332,7 +332,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
      **[参照パスの選択]** ダイアログ ボックスが表示されます。
 
-3.  インストール ディレクトリに基づき、パス *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* を選択します。 **[OK]**をクリックします。
+3.  インストール ディレクトリに基づき、パス *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* を選択します。 **[OK]** をクリックします。
 
 4.  フォルダーを参照パスに追加するために、**[フォルダーの追加]** をクリックします。
 
@@ -348,7 +348,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
          このアセンブリは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* にあります。
 
-    3.  **[OK]**をクリックします。
+    3.  **[OK]** をクリックします。
 
 7.  アセンブリ **Microsoft.VisualStudio.QualityTools.Common** を追加します。
 
@@ -358,7 +358,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
          このアセンブリは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* にあります。
 
-    3.  **[OK]**をクリックします。
+    3.  **[OK]** をクリックします。
 
 8.  このドキュメントで既に示した診断データ アダプター クラスをクラス ライブラリのクラスにコピーします。 このクラスを保存します。
 
@@ -381,7 +381,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
 16. このカスタム診断データ アダプターを使用するテストの設定を作成します。 テストの設定を構成し、存在しているファイルを収集します。
 
-     Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、[オプションを指定して実行] コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
+     Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、[オプションを指定して実行] コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
 
 17. この診断データ アダプターを選択したテストの設定を使用して、テストを実行します。
 

@@ -2,17 +2,17 @@
 title: Visual Studio で単体テスト プロジェクトを作成する | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 2d01a2de95f05fd2d907082621f65c82e9de7954
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 998b936f33047d6132889a949a6ecd56f5a40911
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 
     1.  ソリューション エクスプローラーでプロジェクトを選択します。
 
-    2.  **[プロジェクト]** メニューの **[参照の追加]**をクリックします。
+    2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。
 
     3.  [参照マネージャー] ダイアログ ボックスで、**[ソリューション]** ノードを開き、**[プロジェクト]** を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。
 

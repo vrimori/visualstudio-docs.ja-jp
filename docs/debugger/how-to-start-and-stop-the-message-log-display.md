@@ -2,8 +2,7 @@
 title: '方法: 開始および停止メッセージ ログの表示 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - message log display, starting
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bea113f654e2939c07ea4797dbd67cee76aece50
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bbb0a3eedd5060576c145b71d6c501a8b753b6c
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>方法: メッセージ ログの表示を開始および終了する
 ときに、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウがアクティブで、**ログ開始**または**ログの停止**Spy++ での選択項目が表示されます**メッセージ**] メニューの [および対応する**ログ開始**または**ログの停止**ツール バー ボタンがアクティブになります。  

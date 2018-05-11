@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio のアクセシビリティのヒントとテクニック | Microsoft Docs"
-ms.custom: 
+title: Visual Studio のアクセシビリティのヒントとテクニック | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cfc07cb77e1db595d1b381b1097dcfcba0abdab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 06f378c3ac0cfc808094170c37792399812538bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 > [!TIP]
@@ -93,7 +90,7 @@ Windows のサウンド アプレットを使用して、Visual Studio プログ
 
   ![Windows 10 のサウンド アプレットの [サウンド] タブ](media/sound-applet.png "検索結果の [システムが出す音の変更] をダブルクリックする")
 
-4. **[OK]**をクリックします。
+4. **[OK]** をクリックします。
 
 
 

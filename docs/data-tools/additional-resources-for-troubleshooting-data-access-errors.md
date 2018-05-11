@@ -1,8 +1,7 @@
 ---
-title: データのトラブルシューティングに関するその他のリソースにアクセス エラー |Microsoft ドキュメント
-ms.custom: ''
+title: データ アクセス エラーのトラブルシューティングに関するその他のリソース
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords:
 - DSD_ImportXmlSchemaSameFileWrnHelpId
 - vbdata.ParameterizeFormDialog_NoDataSource
@@ -227,37 +226,32 @@ robots: noindex,nofollow
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 04d7d9922e15ae61709e21f3b220564c64ec6e08
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bed8ea08496d8751c093d448c5138b97db39dd3d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="additional-resources-for-troubleshooting-data-access-errors"></a>データ アクセス エラーのトラブルシューティングに関するその他のリソース
-MSDN (Microsoft Developer Network) のパブリック フォーラムでは、エラーや警告のトラブルシューティングに役立つ情報を参照できます。 次の表には、MSDN で利用できるデータに関連するフォーラムが一覧表示します。  
-  
- [Windows フォームのデータ コントロールとデータ バインディング](http://go.microsoft.com/fwlink/?LinkId=160179)  
- Windows フォームでのデータ アクセスに関する質問や一般的な議論のためのフォーラムです。  
-  
- [ADO.NET データセット フォーラム](http://go.microsoft.com/fwlink/?LinkId=160180)  
- データセットに関する質問や一般的な議論のためのフォーラムです。  
-  
- [ADO.NET Entity Framework でも LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520)  
- Entity Framework アプリケーションおよび LINQ to Entities の言語に関する質問や一般的な議論のためのフォーラムです。  
-  
- [WCF Data Services フォーラム](http://go.microsoft.com/fwlink/?LinkId=160181)  
- データ サービスに関する質問や一般的な議論のためのフォーラムです。  
-  
- [SQL Server データ アクセス フォーラム](http://go.microsoft.com/fwlink/?LinkID=160184)  
- Microsoft SQL Server のデータへのアクセスに関する質問や一般的な議論のためのフォーラムです。  
-  
- [Linq to SQL フォーラム](http://go.microsoft.com/fwlink/?LinkId=160183)  
- LINQ to SQL に関する質問や一般的な議論のためのフォーラムです。  
-  
- [ADO.NET データ プロバイダーのフォーラム](http://go.microsoft.com/fwlink/?LinkId=160182)  
- さまざまな .NET Framework データ プロバイダーに関する質問や一般的な議論のためのフォーラムです。  
-  
- SQL Server への接続をトラブルシューティングする方法については、次を参照してください。[方法、SQL Server データベース エンジンへの接続のトラブルシューティングを行うと](http://go.microsoft.com/fwlink/?LinkID=246151)です。  
-  
-## <a name="see-also"></a>関連項目  
- [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)
+
+MSDN (Microsoft Developer Network) のパブリック フォーラムでは、エラーや警告のトラブルシューティングに役立つ情報を参照できます。 次の表には、MSDN で利用できるデータに関連するフォーラムが一覧表示します。
+
+ [Windows フォームのデータ コントロールとデータ バインド](http://go.microsoft.com/fwlink/?LinkId=160179)質問や議論の Windows フォームでのデータ アクセス フォーラムを提供します。
+
+ [ADO.NET データセット フォーラム](http://go.microsoft.com/fwlink/?LinkId=160180)質問や議論のデータセットのフォーラムを提供します。
+
+ [ADO.NET Entity Framework と LINQ to Entities](http://go.microsoft.com/fwlink/?LinkId=191520)質問や議論の Entity Framework アプリケーションおよび LINQ to Entities の言語のフォーラムを提供します。
+
+ [WCF Data Services フォーラム](http://go.microsoft.com/fwlink/?LinkId=160181)質問や議論のデータ サービスのフォーラムを提供します。
+
+ [SQL Server データ アクセス フォーラム](http://go.microsoft.com/fwlink/?LinkID=160184)質問や議論の Microsoft SQL Server でのデータにアクセスするフォーラムを提供します。
+
+ [Linq to SQL フォーラム](http://go.microsoft.com/fwlink/?LinkId=160183)質問や議論の Linq to SQL フォーラムを提供します。
+
+ [ADO.NET データ プロバイダーのフォーラム](http://go.microsoft.com/fwlink/?LinkId=160182)質問や議論の異なる .NET Framework データ プロバイダーのフォーラムを提供します。
+
+ SQL Server への接続をトラブルシューティングする方法については、次を参照してください。[方法、SQL Server データベース エンジンへの接続のトラブルシューティングを行うと](http://go.microsoft.com/fwlink/?LinkID=246151)です。
+
+## <a name="see-also"></a>関連項目
+
+- [.NET 用の Visual Studio データ ツール](../data-tools/visual-studio-data-tools-for-dotnet.md)

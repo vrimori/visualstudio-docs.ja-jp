@@ -2,8 +2,7 @@
 title: リモート コンピューターにアクセスしようとしたときに DCOM エラーが発生しました。 アクセスが拒否されました。 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.remote.dcom_access_denied
@@ -23,11 +22,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a46129dd8b83cfbbdb62c6118cb2575b1b8cfc8a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8533201bfd052b2131ba302e8e1c451f62e5b50a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied"></a>リモート コンピューターにアクセスしようとしたときに DCOM エラーが発生しました。 アクセスが拒否されました。
 リモート デバッグでは、DCOM を使用して次のような状況でローカル コンピューターとリモート コンピューターとの間で通信します。  
@@ -42,9 +41,9 @@ ms.lasthandoff: 04/16/2018
   
  このエラーが発生するのは、Visual Studio のプロセスが DCOM 経由でリモート デバッガープロセスに対して自己認証できない (入力した資格情報が不十分と見なされた) 場合です。 次のいずれかの回避策で問題を解決できることがあります。  
   
--   **[ネイティブ互換モード]** と **[マネージ互換モード]**をオフにします。  
+-   **[ネイティブ互換モード]** と **[マネージ互換モード]** をオフにします。  
   
--   Visual Studio 2013 で、 **[ネイティブのエディット コンティニュを有効にする]**をオフにします。  
+-   Visual Studio 2013 で、 **[ネイティブのエディット コンティニュを有効にする]** をオフにします。  
   
 -   両方のコンピューターを再起動する。  
   

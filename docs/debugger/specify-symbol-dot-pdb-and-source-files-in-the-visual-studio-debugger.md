@@ -2,8 +2,7 @@
 title: デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定 |Microsoft ドキュメント
 ms.custom: H1Hack27Feb2017
 ms.date: 04/05/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
@@ -30,11 +29,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e2549cfe71ef05d611251bbc8a017bd4891df3e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b0a77ef00ee549006f9b4c6efb255c23543d6746
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 プログラム データベース (.pdb) ファイルは、シンボル ファイルとも呼ばれます。 は、クラス、メソッド、およびその他のコードは、プロジェクトのコンパイル済み実行可能ファイルで使用される識別子にソース コードで作成した識別子をマップします。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーでは、この情報を使って、2 つの重要な情報を決定します。

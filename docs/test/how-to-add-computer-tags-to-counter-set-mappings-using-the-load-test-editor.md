@@ -1,19 +1,19 @@
 ---
 title: Visual Studio でロード テスト用のカウンター セット マップにコンピューター タグを追加する | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, counter set mappings, computer tags
 ms.assetid: f52a73e1-036a-4b28-a6c8-848284bf4488
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 70f3f2c58974478b17c78c3de4014a1921accd76
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 26a0ffc5835e79ee02d1041c4e228f59bcd87d37
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-computer-tags-to-counter-set-mappings-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してコンピューター タグをカウンター セットのマップに追加する
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/19/2018
 
      **[カウンター セットの管理]** ダイアログ ボックスが表示されます。
 
-3.  (省略可能) **[選択されたコンピューターおよびカウンター セットは、次の実行設定で追加されます]** ボックスの一覧で、別の実行設定を選択します。
+3.  (省略可能) **[選択されたコンピューターおよびカウンター セットは、次の実行設定で追加されます]** リスト ボックスで、別の実行設定を選択します。
 
     > [!NOTE]
     > この手順は、ロード テストに複数の実行設定がある場合にのみ適用されます。
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
 5.  **[コンピューター タグ]** ボックスに、コンピューターに関連付けるタグを入力します。 たとえば、「ラボ 3 の TestMachine12」のように入力します。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 

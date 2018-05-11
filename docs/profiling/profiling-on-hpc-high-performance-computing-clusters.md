@@ -1,13 +1,9 @@
 ---
-title: "高性能コンピューティング (HPC) クラスターでのプロファイリング | Microsoft Docs"
-ms.custom: 
+title: 高性能コンピューティング (HPC) クラスターでのプロファイリング | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.hpc.wizard.exeoptions
 - vs.performance.hpc.wizard.summary
@@ -22,14 +18,14 @@ helpviewer_keywords:
 - HPC profiling
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 148610eadf05c26247ad813f7be733fade6d4a48
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: e4542289e0d9dceeeadf972db714148d4e1bec4d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
 
@@ -75,7 +71,7 @@ HPC パフォーマンス ウィザードを使用してプロファイリング
 
     - 開いているプロジェクト内に存在しないバイナリのプロファイリングを実行するには、**[実行可能ファイル (.EXE ファイル)]** オプションを選択します。
 
-4. **[次へ]**をクリックします。
+4. **[次へ]** をクリックします。
 
 5. ウィザードの 3 番目のページ:
 
@@ -87,7 +83,7 @@ HPC パフォーマンス ウィザードを使用してプロファイリング
 
     - **[配置場所]** で、HPC サーバーによる配置対象イメージのステージングに使用されるディレクトリへのパスを指定します。
 
-6. **[次へ]**をクリックします。
+6. **[次へ]** をクリックします。
 
 7. ウィザードの 4 ページ目で、次の操作を実行します。
 
@@ -101,13 +97,13 @@ HPC パフォーマンス ウィザードを使用してプロファイリング
 
          HPC クラスター内の特定のノード上で実行される 1 つ以上のプロセスをプロファイリングするには、**[ノードでのプロファイル]** オプションを選択し、ドロップダウン リストからノードを選択します。
 
-8. **[次へ]**をクリックします。
+8. **[次へ]** をクリックします。
 
 9. ウィザードの 5 ページ目で、プロファイラーとプロファイリング プロセスをすぐに開始できます。または、パフォーマンス エクスプローラーを使用して後からプロファイリングを開始することもできます。
 
     - すぐにプロファイリングを開始する場合は、**[ウィザードの完了後にプロファイルを起動する]** を選択します。手動でプロファイリングを開始する場合は、このチェック ボックスをオフにします。
 
-10. **[完了]**をクリックします。
+10. **[完了]** をクリックします。
 
 ## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>パフォーマンス セッションのプロパティ ページを使用した HPC プロファイリング プロパティの設定
 

@@ -2,8 +2,7 @@
 title: Idiasymbol::get_isdataaligned |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc83909c398b7736c78f4eb2c3607578e40a9aa3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2888ce16c64b12ad846289148412733b18bc2500
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
 ユーザー定義型 (UDT) がいくつかの特定のメモリ境界に配置されたかどうかを指定するフラグを取得します。  
@@ -43,7 +42,7 @@ HRESULT get_isDataAligned(
 >  戻り値の`S_FALSE`プロパティが、シンボルを使用できないことを意味します。  
   
 ## <a name="remarks"></a>コメント  
- 既定以外のデータの整列の実行可能ファイルがコンパイルされるときに、このプロパティを設定、通常は。 たとえば、Microsoft C コンパイラがコマンド ライン オプションを使用してデータのアラインメントを変更できます/Zp*#*ここで、 *#*バイト値です。  
+ 既定以外のデータの整列の実行可能ファイルがコンパイルされるときに、このプロパティを設定、通常は。 たとえば、Microsoft C コンパイラがコマンド ライン オプションを使用してデータのアラインメントを変更できます/Zp*#* ここで、 *#* バイト値です。  
   
 ## <a name="requirements"></a>要件  
   

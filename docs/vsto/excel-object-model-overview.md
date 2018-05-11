@@ -1,12 +1,10 @@
 ---
-title: "Excel オブジェクト モデルの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Excel オブジェクト モデルの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - Office object models
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bbf76579baeebfabf3ec796498c20b32feed4cac
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6b700d3834cf432ff9af2ec17e1daa3011763cac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excel-object-model-overview"></a>Excel Object Model Overview
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
  ここでは、Excel オブジェクト モデルの概念について簡単に説明します。 リソースについては、全体の Excel オブジェクト モデルの詳細についてここで、次を参照してください。 [Excel オブジェクト モデルのドキュメントを使用して](#ExcelOMDocumentation)です。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[方法は i: を使用してイベント ハンドラーで、Excel 2007 アドイン?](http://go.microsoft.com/fwlink/?LinkID=130291)、および[方法は図形を使用して、バブル チャートを作成するには。Excel のグラフですか?](http://go.microsoft.com/fwlink/?LinkID=130313).  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください[方法は i: を使用してイベント ハンドラーで、Excel 2007 アドイン?](http://go.microsoft.com/fwlink/?LinkID=130291)、および[方法は図形を使用してバブル チャートを作成するには。excel しますか](http://go.microsoft.com/fwlink/?LinkID=130313)。  
   
 ## <a name="accessing-objects-in-an-excel-project"></a>Excel プロジェクト内のオブジェクトへのアクセス  
  Excel で新しい VSTO アドイン プロジェクトを作成すると、Visual Studio によって ThisAddIn.vb または ThisAddIn.cs というコード ファイルが自動的に作成されます。 `Me.Application` または `this.Application` を使用して、アプリケーション オブジェクトにアクセスすることができます。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/10/2018
 |Sheet2.vb|Sheet2.cs|  
 |Sheet3.vb|Sheet3.cs|  
   
- プロジェクト内の `Globals` クラスを使用して、それぞれのクラスの外部から `ThisWorkbook`、`Sheet1`、`Sheet2`、または `Sheet3` にアクセスすることができます。 詳細については、次を参照してください。 [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)です。 次の例では、<xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>メソッドの`Sheet1`のいずれかに、コードを配置するかどうかに関係なく、 `Sheet`  *n* クラスまたは`ThisWorkbook`クラスです。  
+ プロジェクト内の `Globals` クラスを使用して、それぞれのクラスの外部から `ThisWorkbook`、`Sheet1`、`Sheet2`、または `Sheet3` にアクセスすることができます。 詳細については、次を参照してください。 [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)です。 次の例では、<xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>メソッドの`Sheet1`のいずれかに、コードを配置するかどうかに関係なく、 `Sheet` *n*クラスまたは`ThisWorkbook`クラスです。  
   
  [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)]
  [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]  
@@ -102,7 +101,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio は <xref:Microsoft.Office.Tools.Excel.NamedRange> および <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 型を提供することで <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトを拡張します。 これらの型は <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトとほぼ同じ機能を含むだけでなく、データ バインド機能や新しいイベントなどの新機能も含んでいます。 詳細については、次を参照してください。 [NamedRange コントロール](../vsto/namedrange-control.md)と[XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)です。  
   
-##  <a name="ExcelOMDocumentation"></a>Excel オブジェクト モデル ドキュメントの使用  
+##  <a name="ExcelOMDocumentation"></a> Excel オブジェクト モデル ドキュメントの使用  
  Excel オブジェクト モデルに関する詳細については、Excel プライマリ相互運用機能アセンブリ (PIA) のリファレンスと、VBA オブジェクト モデルのリファレンスを参照してください。  
   
 ### <a name="primary-interop-assembly-reference"></a>プライマリ相互運用機能アセンブリのリファレンス  

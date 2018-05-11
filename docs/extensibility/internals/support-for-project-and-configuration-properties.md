@@ -1,38 +1,36 @@
 ---
-title: "プロジェクトと構成プロパティのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: プロジェクトと構成プロパティのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project properties, supporting with Visual Studio SDK
 - configuration properties, suppporting with Visual Studio SDK
 ms.assetid: 9fcfaa0f-7b41-4b68-82ec-7a151dca5d7e
-caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e31f4feda55469d2740b32b0eac5d9cfba286d0c
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 823bfa0453d3e33fea2daa51779b1fe4800a1a86
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-project-and-configuration-properties"></a>プロジェクトと構成プロパティのサポート
 **プロパティ** ウィンドウで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、プロジェクトと構成のプロパティを表示できます。 ユーザーがアプリケーションのプロパティを設定できるように、プロジェクトの種類のプロパティ ページを使用できます。  
   
- プロジェクト ノードを選択して**ソリューション エクスプ ローラー**クリックし、**プロパティ**上、**プロジェクト**] メニューの [プロジェクトと構成を含むダイアログ ボックスを開くことができますプロパティ。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、プロジェクトの種類のタブ付きページとしてこのダイアログ ボックスが表示されます。 これらの言語から派生し、[全般、環境、オプションダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)です。 詳細については、次を参照してください。[ビルド内にありません: チュートリアル: プロジェクトの公開および構成のプロパティ (c#)](http://msdn.microsoft.com/en-us/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)です。  
+ プロジェクト ノードを選択して**ソリューション エクスプ ローラー**クリックし、**プロパティ**上、**プロジェクト**] メニューの [プロジェクトと構成を含むダイアログ ボックスを開くことができますプロパティ。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、プロジェクトの種類のタブ付きページとしてこのダイアログ ボックスが表示されます。 これらの言語から派生し、[全般、環境、オプション ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)です。 詳細については、次を参照してください。[ビルド内にありません: チュートリアル: プロジェクトの公開および構成のプロパティ (c#)](http://msdn.microsoft.com/en-us/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)です。  
   
  (MPFProj) のプロジェクト用 Managed Package Framework は、作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順にソースを検索できる[プロジェクトの Visual Studio 2013 の MPF](http://mpfproj12.codeplex.com/)です。  
   
 ## <a name="persistence-of-project-and-configuration-properties"></a>プロジェクトと構成プロパティの永続化  
  プロジェクトと構成のプロパティは、たとえば、プロジェクトの種類に関連付けられているファイル名拡張子、.csproj、.vbproj ファイル、および .myproj を含むプロジェクト ファイルに保存されます。 通常、言語のプロジェクトは、プロジェクト ファイルを生成するのにテンプレート ファイルを使用します。 ただし、プロジェクトの種類のテンプレートを関連付けるために実際にはいくつかの方法があります。 詳細については、次を参照してください。[テンプレート ディレクトリの説明 (です。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)です。  
   
- プロジェクトと構成のプロパティを作成するには、項目テンプレート ファイルを追加します。 これらのプロパティはこのテンプレートを使用するプロジェクトの種類を使用して作成されたプロジェクトに使用できるになります。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクトおよび MPFProj の両方を使用して、[ビルド内にありません: MSBuild の概要](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde)テンプレート ファイルのスキーマです。 これらのファイルは、各構成の PropertyGroup セクションを持っています。 プロジェクトのプロパティは、通常は、null 文字列に設定の構成の引数が存在する最初の PropertyGroup セクションで永続化されます。  
+ プロジェクトと構成のプロパティを作成するには、項目テンプレート ファイルを追加します。 これらのプロパティはこのテンプレートを使用するプロジェクトの種類を使用して作成されたプロジェクトに使用できるになります。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクトおよび MPFProj の両方を使用して、[ビルド内にありません: MSBuild の概要](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde)テンプレート ファイルのスキーマです。 これらのファイルは、各構成の PropertyGroup セクションを持っています。 プロジェクトのプロパティは、通常は、null 文字列に設定の構成の引数が存在する最初の PropertyGroup セクションで永続化されます。  
   
  次のコードでは、基本的な MSBuild プロジェクト ファイルの先頭を示します。  
   
@@ -62,9 +60,9 @@ ms.lasthandoff: 01/22/2018
   
  `SettingsPage`クラスおよび`Microsoft.VisualStudio.Package.ProjectNode`クラスがプロジェクトと構成のプロパティを保持するこれらのメソッドを提供します。  
   
--   `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty`および`Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty`プロジェクトのプロパティを永続化します。  
+-   `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty` および`Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty`プロジェクトのプロパティを永続化します。  
   
--   `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty`および`Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty`構成プロパティを保持します。  
+-   `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty` および`Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty`構成プロパティを保持します。  
   
     > [!NOTE]
     >  実装、`Microsoft.VisualStudio.Package.SettingsPage`と`Microsoft.VisualStudio.Package.ProjectNode`クラスを使用して、 `Microsoft.Build.BuildEngine` (MSBuild) メソッドを取得し、プロジェクト ファイルからプロジェクトと構成のプロパティを設定します。  
@@ -94,7 +92,7 @@ ms.lasthandoff: 01/22/2018
   
  `MyConfigProp`として構成プロパティ ページで構成プロパティが表示されます**マイ Config プロパティ** カテゴリで、**マイ カテゴリ**です。 オプションを選択する場合、説明、**マイ説明**、[説明] パネルに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [追加して、プロパティ ページを削除します。](../../extensibility/adding-and-removing-property-pages.md)   
  [プロジェクト](../../extensibility/internals/projects.md)   
  [テンプレート ディレクトリの説明 (.Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)

@@ -1,23 +1,21 @@
 ---
-title: "Microsoft ヘルプ ビューアー SDK |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ヘルプ ビューアー SDK |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 620d7dcd-d462-475e-a449-fbfa06ff12c5
-caps.latest.revision: "33"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7c15956bc861f9eb20267dc97446cf5ea49cae31
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e3ddc23ab56df017ef0a37c56cd5b0a81ee33a07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 この記事には、Visual Studio ヘルプ ビューアー インテグレーターの次のタスクが含まれています。  
@@ -134,17 +132,17 @@ ContosoTopic4.htm をという名前の新しい XHTML ドキュメントを作�
   
 ページのリンク、注のセクションで、折りたたみ可能な領域、コード スニペットでは、および言語固有のテキストのセクションで、このトピックの本文 (ヘッダーとフッターを含むされません) が含まれます。  これらの領域については、記載されたトピックのブランド化のセクションを参照してください。  
   
-1.  トピック タイトルのタグを追加します。`<div class="title">Contoso Topic 4</div>`  
+1.  トピック タイトルのタグを追加します。  `<div class="title">Contoso Topic 4</div>`  
   
-2.  注」セクションを追加します。`<div class="alert"> add your table tag and text </div>`  
+2.  注」セクションを追加します。 `<div class="alert"> add your table tag and text </div>`  
   
-3.  折りたたみ可能な領域を追加します。`<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`  
+3.  折りたたみ可能な領域を追加します。  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`  
   
-4.  コード スニペットを追加します。`<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`  
+4.  コード スニペットを追加します。  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`  
   
 5.  コード言語の特定のテキストを追加:`<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />`その devLangnu に注意してください = その他の言語を入力することができます。 たとえば、devLangnu ="Fortran"Fortran が表示されるときに DisplayLanguage のコード スニペット Fortran を =  
   
-6.  ページのリンクを追加します。`<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`  
+6.  ページのリンクを追加します。 `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`  
   
 > [!NOTE]
 >  注意: コード スニペットでコードの色付けがサポートされていない新しい"の表示言語の"(例、f#、Cobol、Fortran) モノクロ、されます。  
@@ -354,20 +352,20 @@ IDE では、ヘルプ メニュー項目の下位選択"ヘルプ コンテキ�
   
 |プロパティ (HTML 形式)|説明|  
 |--------------------------------------|-----------------|  
-|\<メタ name="Microsoft.Help.Locale"コンテンツ「[言語コード]」/>|このトピックのロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありは、その他の Microsoft ヘルプ タグ上に挿入する必要があります。 このタグを使用しない場合、このトピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用して、インデックスが作成します。それ以外の場合、en-us ワード ブレーカーが使用されます。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な Language 属性ではなくこのプロパティを使用します。|  
-|\<メタ name="Microsoft.Help.TopicLocale"コンテンツ「[言語コード]」/>|その他のロケールを使用しても、このトピックのロケールを設定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 カタログには、1 つ以上の言語でコンテンツが含まれている場合は、このタグを使用します。 カタログ内の複数のトピックでは、同じ ID を使用できますが、それぞれ一意 TopicLocale を指定する必要があります。 カタログのロケールに対応する TopicLocale を示すトピックでは、コンテンツのテーブルに表示されるトピックです。 ただし、このトピックのすべての言語バージョンは、検索結果に表示されます。|  
-|\<タイトル > [タイトル]\</title >|このトピックのタイトルを指定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 トピックの本文にタイトルが含まれていないかどうかは\<div > と内容のテーブルのトピックのセクションで、このタイトルが表示されます。|  
-|\<meta name ="Microsoft.Help.Keywords"コンテンツ ="[aKeywordPhrase]"/>|ヘルプ ビューアーの [インデックス] ウィンドウに表示されるリンクのテキストを指定します。 リンクがクリックされたときに、トピックが表示されます。トピックに対して、複数のインデックス キーワードを指定するか、インデックスに表示するには、このトピックにリンクしたくない場合は、このタグを省略できます。 以前のバージョンのヘルプの"K"キーワードは、このプロパティに変換できます。|  
-|\<メタ name="Microsoft.Help.Id"コンテンツ ="[TopicID]"/>|このトピックの識別子を設定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 ID のトピックでは、カタログを同じロケール設定を持つ間で一意にする必要があります。 別のトピックでは、この ID を使用して、このトピックの内容へのリンクを作成できます。|  
-|\<メタ name="Microsoft.Help.F1"content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ >|このトピックの F1 キーワードを指定します。 、トピックの、複数の F1 キーワードを指定するか、アプリケーション ユーザーが f1 キーを押したときに表示するには、このトピックしたくない場合は、このタグを省略することができます。 通常は、トピックの 1 つだけの F1 キーワードを指定します。 以前のバージョンのヘルプの"F"キーワードは、このプロパティに変換できます。|  
-|\<メタデータ名"Description"のコンテンツを = =「[トピックの説明]」/>|このトピックの内容の短い概要を示します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 このプロパティは、クエリ ライブラリによって直接アクセスします。インデックス ファイルは格納されません。|  
+|\< メタ name="Microsoft.Help.Locale"コンテンツ「[言語コード]」/>|このトピックのロケールを設定します。 トピックでは、このタグを使用する場合は、1 回だけ使用する必要がありは、その他の Microsoft ヘルプ タグ上に挿入する必要があります。 このタグを使用しない場合、このトピックの本文が指定されている場合、製品のロケールに関連付けられているワード ブレーカーを使用して、インデックスが作成します。それ以外の場合、en-us ワード ブレーカーが使用されます。 このタグは、ISOC RFC 4646 に準拠します。 Microsoft ヘルプが正しく動作することを確認するには、するには、一般的な Language 属性ではなくこのプロパティを使用します。|  
+|\< メタ name="Microsoft.Help.TopicLocale"コンテンツ「[言語コード]」/>|その他のロケールを使用しても、このトピックのロケールを設定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 カタログには、1 つ以上の言語でコンテンツが含まれている場合は、このタグを使用します。 カタログ内の複数のトピックでは、同じ ID を使用できますが、それぞれ一意 TopicLocale を指定する必要があります。 カタログのロケールに対応する TopicLocale を示すトピックでは、コンテンツのテーブルに表示されるトピックです。 ただし、このトピックのすべての言語バージョンは、検索結果に表示されます。|  
+|\< タイトル > [タイトル]\</title >|このトピックのタイトルを指定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 トピックの本文にタイトルが含まれていないかどうかは\<div > と内容のテーブルのトピックのセクションで、このタイトルが表示されます。|  
+|\< meta name ="Microsoft.Help.Keywords"コンテンツ ="[aKeywordPhrase]"/>|ヘルプ ビューアーの [インデックス] ウィンドウに表示されるリンクのテキストを指定します。 リンクがクリックされたときに、トピックが表示されます。トピックに対して、複数のインデックス キーワードを指定するか、インデックスに表示するには、このトピックにリンクしたくない場合は、このタグを省略できます。 以前のバージョンのヘルプの"K"キーワードは、このプロパティに変換できます。|  
+|\< メタ name="Microsoft.Help.Id"コンテンツ ="[TopicID]"/>|このトピックの識別子を設定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 ID のトピックでは、カタログを同じロケール設定を持つ間で一意にする必要があります。 別のトピックでは、この ID を使用して、このトピックの内容へのリンクを作成できます。|  
+|\< メタ name="Microsoft.Help.F1"content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ >|このトピックの F1 キーワードを指定します。 、トピックの、複数の F1 キーワードを指定するか、アプリケーション ユーザーが f1 キーを押したときに表示するには、このトピックしたくない場合は、このタグを省略することができます。 通常は、トピックの 1 つだけの F1 キーワードを指定します。 以前のバージョンのヘルプの"F"キーワードは、このプロパティに変換できます。|  
+|\< メタデータ名"Description"のコンテンツを = =「[トピックの説明]」/>|このトピックの内容の短い概要を示します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 このプロパティは、クエリ ライブラリによって直接アクセスします。インデックス ファイルは格納されません。|  
  メタ name="Microsoft.Help.TocParent"コンテンツ ="[parent_Id]"/>|このトピックの親トピック目次を指定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 値は、親の Microsoft.Help.Id です。 トピックには、コンテンツのテーブルの 1 つの場所を持つことができます。 「-1」では、TOC ルート トピック ID と見なされます。 [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]、そのページは、ヘルプ ビューアーのホーム ページです。 これは、同じ理由で具体的にはいくつかのトピックを表示、上部のレベルを確認するに TocParent = 1 を追加します。ヘルプ ビューアーのホーム ページは、システム ページと置き換え可能なためです。 VSP が-1 の ID でページを追加しようとすると場合に、コンテンツのセットに追加された取得可能性がありますが、ヘルプ ビューアーのシステム ページ - ヘルプ ビューアーのホームを常に使用します。|  
-|\<メタ name="Microsoft.Help.TocOrder"コンテンツ =「[正の整数]」/>|目次でこのトピックの内容が表示される場所のピア トピックに対して相対的を指定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 値は整数です。 価値の高い整数を指定するトピック上、小さい方の値の整数を指定するトピックが表示されます。|  
-|\<メタ name="Microsoft.Help.Product"コンテンツ「[製品コード]」/>|このトピックで説明する製品を指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
-|\<メタ name="Microsoft.Help.ProductVersion"コンテンツ ="[バージョン number]"/>|このトピックで説明する製品のバージョンを指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
-|\<メタ name="Microsoft.Help.Category"コンテンツ ="[string]"/>|製品で使用すると、コンテンツのサブセクションを識別します。 複数のサブセクションでは、トピックがわかります。 またはへのリンクを任意のサブセクションを識別したくない場合は、このタグを省略することができます。 このタグを使用して、以前のバージョンのヘルプからトピックを変換するとき、TargetOS な TargetFrameworkMoniker 属性を格納します。 コンテンツの形式は、AttributeName:AttributeValue です。|  
-|\<メタ name="Microsoft.Help.TopicVersion コンテンツ =「[トピックのバージョン番号]」/>|カタログ内に複数のバージョンが存在する場合は、このトピックのバージョンを指定します。 このタグは 1 つ以上のバージョンのトピックに存在する場合、カタログ、たとえば、ときに、カタログにはによって、.NET Framework 3.5 とトピックの .NET Framework 4 のトピックが含まれます。 どちらも同じ Micro、必要な Microsoft.Help.Id は一意であることは保証されない、ためソフトです。Help.Id です。|  
-|\<メタデータ名"SelfBranded"コンテンツを = =「[TRUE または false の場合]」/>|このトピックには、ヘルプ ライブラリ マネージャーのスタートアップ ブランド パッケージまたはトピックに固有であるブランド パッケージが使用しているかどうかを指定します。 このタグは真である必要がありますまたは FALSE です。 TRUE の場合、関連するトピックのブランド パッケージには、ヘルプ ライブラリ マネージャーが起動し、その他のコンテンツのレンダリングと異なる場合でも意図されたように、トピックが表示されるときに設定されているブランド パッケージがよりも優先し、します。 FALSE の場合は、ヘルプ ライブラリ マネージャーの起動時に設定されているブランド パッケージに基づいて、現在のトピックが表示されます。 既定では、ヘルプ ライブラリ マネージャーが想定 SelfBranded 変数が TRUE であると宣言されている場合は false に自己ブランド化そのため、宣言する必要はいない\<メタ名"SelfBranded"コンテンツを = ="FALSE"/>。|  
+|\< メタ name="Microsoft.Help.TocOrder"コンテンツ =「[正の整数]」/>|目次でこのトピックの内容が表示される場所のピア トピックに対して相対的を指定します。 このタグは、必要ですが、トピック内で 1 回だけ使用する必要があります。 値は整数です。 価値の高い整数を指定するトピック上、小さい方の値の整数を指定するトピックが表示されます。|  
+|\< メタ name="Microsoft.Help.Product"コンテンツ「[製品コード]」/>|このトピックで説明する製品を指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
+|\< メタ name="Microsoft.Help.ProductVersion"コンテンツ ="[バージョン number]"/>|このトピックで説明する製品のバージョンを指定します。 トピックでは、このタグを使用する場合、1 回だけ使用する必要があります。 この情報は、ヘルプのインデクサーに渡されるパラメーターとしても指定することができます。|  
+|\< メタ name="Microsoft.Help.Category"コンテンツ ="[string]"/>|製品で使用すると、コンテンツのサブセクションを識別します。 複数のサブセクションでは、トピックがわかります。 またはへのリンクを任意のサブセクションを識別したくない場合は、このタグを省略することができます。 このタグを使用して、以前のバージョンのヘルプからトピックを変換するとき、TargetOS な TargetFrameworkMoniker 属性を格納します。 コンテンツの形式は、AttributeName:AttributeValue です。|  
+|\< メタ name="Microsoft.Help.TopicVersion コンテンツ =「[トピックのバージョン番号]」/>|カタログ内に複数のバージョンが存在する場合は、このトピックのバージョンを指定します。 このタグは 1 つ以上のバージョンのトピックに存在する場合、カタログ、たとえば、ときに、カタログにはによって、.NET Framework 3.5 とトピックの .NET Framework 4 のトピックが含まれます。 どちらも同じ Micro、必要な Microsoft.Help.Id は一意であることは保証されない、ためソフトです。Help.Id です。|  
+|\< メタデータ名"SelfBranded"コンテンツを = =「[TRUE または false の場合]」/>|このトピックには、ヘルプ ライブラリ マネージャーのスタートアップ ブランド パッケージまたはトピックに固有であるブランド パッケージが使用しているかどうかを指定します。 このタグは真である必要がありますまたは FALSE です。 TRUE の場合、関連するトピックのブランド パッケージには、ヘルプ ライブラリ マネージャーが起動し、その他のコンテンツのレンダリングと異なる場合でも意図されたように、トピックが表示されるときに設定されているブランド パッケージがよりも優先し、します。 FALSE の場合は、ヘルプ ライブラリ マネージャーの起動時に設定されているブランド パッケージに基づいて、現在のトピックが表示されます。 既定では、ヘルプ ライブラリ マネージャーが想定 SelfBranded 変数が TRUE であると宣言されている場合は false に自己ブランド化そのため、宣言する必要はいない\<メタ名"SelfBranded"コンテンツを = ="FALSE"/>。|  
   
 ### <a name="creating-a-branding-package"></a>ブランド パッケージを作成します。  
 Visual Studio リリースには、Visual Studio のパートナーの分離性と統合シェルを含む別の Visual Studio 製品の数が含まれます。  各製品には、ある程度のサポート、製品に固有のブランド化トピック ベースのヘルプ コンテンツが必要です。  たとえば、Visual Studio のトピックが必要、一貫性のあるブランド プレゼンテーションし、ISO シェルをラップする SQL Studio は、独自一意ヘルプ コンテンツのブランド化の各トピックです。  統合のシェル パートナーは、ブランド化、独自のトピックを維持しながら、親 Visual Studio 製品のヘルプ コンテンツに収まるように、ヘルプ トピックを必要があります。  
@@ -559,22 +557,22 @@ Branding.js ファイルには、JavaScript Visual Studio ヘルプ ビューア
 |-|-|-|  
 |**ファイル**|**使用します。**|**コンテンツ ソースの表示**|  
 |homepage.htm|これは、現在インストールされているコンテンツ、およびその内容についてユーザーに提示する適切な他のメッセージを表示するページです。  このファイルに追加メタ データ属性の"Microsoft.Help.Id"コンテンツ「-1」配置このローカル コンテンツ TOC の上部にあるコンテンツを = です。||  
-||< META_HOME_PAGE_TITLE_ADD/>|Branding.xml、タグ\<HomePageTitle >|  
-||< HOME_PAGE_INTRODUCTION_SECTION_ADD/>|Branding.xml、タグ\<HomePageIntroduction >|  
-||< HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/>|Branding.xml、タグ\<HomePageContentInstallText >|  
-||< HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/>|Branding.xml タグ セクションの見出し\<HomePageInstalledBooks >、アプリケーションから生成されるデータ\<HomePageNoBooksInstalled > ときにブックがインストールされていません。|  
-||< HOME_PAGE_SETTINGS_SECTION_ADD/>|Branding.xml タグ セクションの見出し\<HomePageHelpSettings >、テキストのセクション\<HomePageHelpSettingsText >。|  
+||&LT; META_HOME_PAGE_TITLE_ADD/&GT;|Branding.xml、タグ\<HomePageTitle >|  
+||&LT; HOME_PAGE_INTRODUCTION_SECTION_ADD/&GT;|Branding.xml、タグ\<HomePageIntroduction >|  
+||&LT; HOME_PAGE_CONTENT_INSTALL_SECTION_ADD/&GT;|Branding.xml、タグ\<HomePageContentInstallText >|  
+||&LT; HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD/&GT;|Branding.xml タグ セクションの見出し\<HomePageInstalledBooks >、アプリケーションから生成されるデータ\<HomePageNoBooksInstalled > ときにブックがインストールされていません。|  
+||&LT; HOME_PAGE_SETTINGS_SECTION_ADD/&GT;|Branding.xml タグ セクションの見出し\<HomePageHelpSettings >、テキストのセクション\<HomePageHelpSettingsText >。|  
 |topiccorrupted.htm|何らかの理由を表示することはできませんが、ローカルのセットにトピックが存在する場合 (コンテンツが破損している)。||  
-||< META_TOPIC_CORRUPTED_TITLE_ADD/>|Branding.xml、タグ\<TopicCorruptedTitle >|  
-||< TOPIC_CORRUPTED_SECTION_ADD/>|Branding.xml、タグ\<TopicCorruptedViewOnlineText >|  
+||&LT; META_TOPIC_CORRUPTED_TITLE_ADD/&GT;|Branding.xml、タグ\<TopicCorruptedTitle >|  
+||&LT; TOPIC_CORRUPTED_SECTION_ADD/&GT;|Branding.xml、タグ\<TopicCorruptedViewOnlineText >|  
 |topicnotfound.htm|トピックが存在しないときのローカル コンテンツで使用されず、設定された場合、オンライン||  
-||< META_TOPIC_NOT_FOUND_TITLE_ADD/>|Branding.xml、タグ\<TopicNotFoundTitle >|  
-||< META_TOPIC_NOT_FOUND_ID_ADD/>|Branding.xml、タグ\<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|  
-||< TOPIC_NOT_FOUND_SECTION_ADD/>|Branding.xml、タグ\<TopicNotFoundText >|  
+||&LT; META_TOPIC_NOT_FOUND_TITLE_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundTitle >|  
+||&LT; META_TOPIC_NOT_FOUND_ID_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|  
+||&LT; TOPIC_NOT_FOUND_SECTION_ADD/&GT;|Branding.xml、タグ\<TopicNotFoundText >|  
 |contentnotinstalled.htm|製品のインストールされているローカルのコンテンツがない場合。||  
-||< META_CONTENT_NOT_INSTALLED_TITLE_ADD/>|Branding.xml、タグ\<ContentNotInstalledTitle >|  
-||< META_CONTENT_NOT_INSTALLED_ID_ADD/>|Branding.xml、タグ\<ContentNotInstalledDownloadContentText >|  
-||< CONTENT_NOT_INSTALLED_SECTION_ADD/>|Branding.xml、タグ\<ContentNotInstalledText >|  
+||&LT; META_CONTENT_NOT_INSTALLED_TITLE_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledTitle >|  
+||&LT; META_CONTENT_NOT_INSTALLED_ID_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledDownloadContentText >|  
+||&LT; CONTENT_NOT_INSTALLED_SECTION_ADD/&GT;|Branding.xml、タグ\<ContentNotInstalledText >|  
   
 **CSS ファイル**  
   
@@ -737,7 +735,7 @@ Visual Studio のコンテンツ ストアを作成します。 Integrated Shell
   
 1.  Visual Studio で、**ファイル**、選択**新しいプロジェクト****その他のプロジェクトの種類**選択**機能拡張**を選択し**Visual Studio Isolated Shell**です。 プロジェクトに名前を`ContosoHelpShell`) を Visual Studio Isolated Shell テンプレートに基づいて、拡張機能プロジェクトを作成します。  
   
-2.  ソリューション エクスプ ローラーで、ContosoHelpShellUI のプロジェクトで、[リソース ファイル] フォルダー ApplicationCommands.vsct を開きます。 この行はコメント アウト ("No_Help"の検索) されていることを確認します。`<!-- <define name="No_HelpMenuCommands"/> -->`  
+2.  ソリューション エクスプ ローラーで、ContosoHelpShellUI のプロジェクトで、[リソース ファイル] フォルダー ApplicationCommands.vsct を開きます。 この行はコメント アウト ("No_Help"の検索) されていることを確認します。 `<!-- <define name="No_HelpMenuCommands"/> -->`  
   
 3.  F5 キーをコンパイルして実行する**デバッグ**です。 分離シェル IDE の実験用インスタンスの選択、**ヘルプ**メニュー。 確認して、 **ヘルプの表示**、**ヘルプ コンテンツを削除して追加**、および**ヘルプ設定**コマンドが表示されます。  
   
@@ -802,7 +800,7 @@ Visual Studio のコンテンツ ストアを作成します。 Integrated Shell
   
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15  
   
-     [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]Integrated Shell:  
+     [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Integrated Shell:  
   
      C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-u. s.  
   
@@ -833,4 +831,4 @@ Visual Studio のコンテンツ ストアを作成します。 Integrated Shell
   
 最新の問題、更新プログラムを参照してください、[ヘルプ ビューアーの Readme](http://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409)  
   
-ヘルプ ビューアー PM チームに直接連絡にメールを送信します。hlpfdbk@microsoft.com
+ヘルプ ビューアー PM チームに直接連絡にメールを送信します。 hlpfdbk@microsoft.com

@@ -1,26 +1,24 @@
 ---
-title: "検索式の論理演算子と高度な演算子 | Microsoft Docs"
-ms.custom: 
+title: 検索式の論理演算子と高度な演算子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 helpviewer_keywords:
 - Help Viewer, logical operators in search
 - logical operators in search [Help Viewer]
 ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 09141b10ab9ee39568176fa7252a503bdaa747dd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 952aea626dd59a303fd7091a4d36fdbf512db6bd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>検索式の論理演算子と高度な演算子
 論理演算子と高度な検索演算子を使用して、ヘルプ ビューアーでヘルプ コンテンツの検索を絞り込むことができます。

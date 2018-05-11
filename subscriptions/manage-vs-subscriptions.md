@@ -1,25 +1,30 @@
 ---
-title: "Visual Studio サブスクリプションを管理する"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to get the most out of your Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 8059d316912e78bcbcaa9d4f54f86b4e2c2b907f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio サブスクリプションを管理する
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio サブスクリプションを最大限に活用する方法を説明します
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 808b3f9c17ad486649b84c787d864fe768fe1c08
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-subscriptions"></a>サブスクリプションを管理する
+
+Visual Studio の[サブスクライバー ポータル](https://my.visualstudio.com)では、あらゆるサブスクリプションとプログラム メンバーシップを 1 か所で管理できます。  プロファイルを変更したり、サブスクリプションに付属する特典をすべて利用したり、サブスクリプションを簡単に切り替えたりできます。  
+
 ## <a name="signing-in-to-the-portal"></a>ポータルにサインインする
 Visual Studio サブスクリプションへようこそ。  サブスクリプションにより、コーディングに必要なすべてのソフトウェアや特典が提供されます。たとえばソフトウェア、月間の Azure 利用権、コラボレーション ツール、トレーニング特典、サポートなど、すべて最新で最適なものをマイクロソフトから入手できます。  ポータルを使うには、サインインする必要があります。
+
 ### <a name="first-time-access"></a>初めてのアクセス
 初めてサブスクリプションを使うときの手順は、サブスクリプションを入手した方法によって異なります。  
+
 #### <a name="microsoft-store"></a>Microsoft ストア
 Microsoft ストアで Visual Studio サブスクリプションを購入した場合は、支払いの**確認ページ**または**確認メール**からライセンス認証手順を始めることができます。  
 1.  "確認ページ" または "確認メール" で、**[Click here to sign in]\(サインインするにはここをクリックしてください\)** をクリックします。  https://my.visualstudio.com/subscriptions/activate にリダイレクトされます。
@@ -48,46 +53,48 @@ Microsoft ストアで Visual Studio サブスクリプションを購入した�
 5.  パスワードを入力します
 6.  **[サインイン]** をクリックします 
 
-### <a name="managing-multiple-subscriptions"></a>複数のサブスクリプションを管理する
+## <a name="managing-multiple-subscriptions"></a>複数のサブスクリプションを管理する
 Visual Studio サブスクリプション ポータルは、Visual Studio サブスクリプションとプログラムがすべて 1 か所にまとめられて使いやすくなったポータル エクスペリエンスです。  たとえば、職場で使う Visual Studio Enterprise などの標準サブスクリプションや、自宅で使う月単位の Visual Studio Professional サブスクリプションまたは Visual Studio Dev Essentials メンバーシップなどがあります。 
-#### <a name="which-subscription-am-i-using"></a>使っているサブスクリプションの確認
+
+### <a name="which-subscription-am-i-using"></a>使っているサブスクリプションの確認
 特典ページでは、使用中のサブスクリプションが目立つように青いバナーで表示されています。  ページの右上にも表示されます。
 
-![アクティブなサブスクリプション](_img\manage-vs-subscriptions\current-subscription-cropped.png)
+   ![アクティブなサブスクリプション](_img\manage-vs-subscriptions\current-subscription-cropped.png)
 
-#### <a name="to-switch-between-subscriptions-you-can"></a>サブスクリプションは次のいずれかの方法で切り替えることができます。
+### <a name="to-switch-between-subscriptions-you-can"></a>サブスクリプションは次のいずれかの方法で切り替えることができます。
 - 右上のドロップダウンをクリックし、一覧からサブスクリプションを選びます
 - [サブスクリプション] タブをクリックし、使うサブスクリプションをクリックします
 
-![サブスクリプションを切り替える](_img\manage-vs-subscriptions\change-subscription-resized.png)
+   ![サブスクリプションを切り替える](_img\manage-vs-subscriptions\change-subscription-resized.png)
 
-#### <a name="if-your-subscription-is-not-visible"></a>サブスクリプションが表示されない場合...
+### <a name="if-your-subscription-is-not-visible"></a>サブスクリプションが表示されない場合...
 - 有効期限が切れている可能性があります。  サブスクライバー ポータルには、アクティブなサブスクリプションのみが表示されます。
 - 別のメール アドレスに関連付けられている可能性があります。 たとえば、職場/学校メール アドレスで Visual Studio Professional サブスクリプションにサインインし、Visual Studio Dev Essentials のメンバーシップが Microsoft アカウントと関連付けられている場合は、サブスクライバー ポータルへのサインインに使ったメール アドレスに対応するサブスクリプションだけが表示されます。  他のサブスクリプションを表示するには、いったんサインアウトしてから、他のメール アドレスでサインインする必要があります。
 - 会社がボリューム ライセンスでサブスクリプションを購入している場合、管理者がサブスクリプションを割り当てていないか、別のユーザーにサブスクリプションを割り当てている可能性があります。  
 
-### <a name="renewing-my-subscriptions"></a>サブスクリプションを更新する
+## <a name="renewing-my-subscriptions"></a>サブスクリプションを更新する
 **標準サブスクリプション**
 - Microsoft ストア: [Microsoft ストア](http://www.microsoft.com/store)からサブスクリプションを購入した場合は、更新も Microsoft ストアでできます。 
 - ボリューム ライセンス: 会社がボリューム ライセンスでサブスクリプションを購入した場合は、管理者が再販業者にサブスクリプションの更新を依頼する必要があります。
 
-**クラウド サブスクリプション -** クラウド サブスクリプションを更新する必要はありません。  サブスクリプションの支払いが行われている限り、アクティブな状態が保たれます。 
+**クラウド サブスクリプション:** クラウド サブスクリプションを更新する必要はありません。  サブスクリプションの支払いが行われている限り、アクティブな状態が保たれます。 
 
-**プログラムで取得されたサブスクリプション -** プログラムでサブスクリプションを入手した場合、サブスクリプションはプログラムへの参加に結び付けられています。  詳しくは、プログラムの連絡先にお問い合わせください。 
+**プログラムで取得されたサブスクリプション:** プログラムでサブスクリプションを入手した場合、サブスクリプションはプログラムへの参加に結び付けられています。  詳しくは、プログラムの連絡先にお問い合わせください。 
 - [Imagine](https://imagine.microsoft.com/about)
 - [BizSpark](https://bizspark.microsoft.com/About/Offers)
 - [Microsoft Partner Network](https://partner.microsoft.com/en-us)
 - [マイクロソフト認定トレーナー](https://www.microsoft.com/en-us/learning/mct-certification.aspx)
 
-**Visual Studio Dev Essentials -** Dev Essentials は無料プログラムであり、メンバーシップの有効期限はありません。  
+**Visual Studio Dev Essentials:** Dev Essentials は無料プログラムであり、メンバーシップの有効期限はありません。  
 
-### <a name="transferring-subscriptions"></a>サブスクリプションを譲渡する
+## <a name="transferring-subscriptions"></a>サブスクリプションを譲渡する
 マイクロソフト ボリューム ライセンスから購入したサブスクリプションを、組織内の別のユーザーに再割り当てする必要がある場合は、管理者がこれを行う必要があります。 販売店から購入したサブスクリプションは、カスタマー サービスに連絡することで譲渡できます。  無料または "再販禁止" のサブスクリプションは譲渡できません。 
 
 
-### <a name="managing-my-profile"></a>プロファイルを管理する
+## <a name="managing-my-profile"></a>プロファイルを管理する
+サブスクリプション ポータルでは、プロファイルを作成して管理することでサブスクリプションの管理を簡単にできます。  自分の ID 情報を変更したり、既存の Azure アカウントや VSTS アカウントの他のサインイン ID を代替 ID を利用して自分のサブスクリプションに関連付けたりできます。 
 
-#### <a name="changing-profile-information"></a>プロファイルの情報を変更する
+### <a name="changing-profile-information"></a>プロファイルの情報を変更する
 プロファイルの連絡先情報およびユーザー設定は簡単に変更できます。  
 1.  サブスクライバー ポータルの右上隅の名前をクリックします。
 2.  **[プロファイルの編集]** ボタンをクリックします。
@@ -97,7 +104,7 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 
 ![プロファイルの情報を編集する](_img\manage-vs-subscriptions\edit-profile-resized.png)
 
-#### <a name="linking-my-subscription-to-existing-vsts-or-azure-subscriptions"></a>既存の VSTS または Azure サブスクリプションにサブスクリプションをリンクする
+### <a name="linking-my-subscription-to-existing-vsts-or-azure-subscriptions"></a>既存の VSTS または Azure サブスクリプションにサブスクリプションをリンクする
 個人の Microsoft アカウント (MSA) を使ってサブスクリプションにサインインしていて、Azure によって管理される職場または学校アカウントを使う Visual Studio Team Services または Microsoft Azure を含むサブスクリプションがある場合は、2 つのサブスクリプションをリンクできます。 これは "代替アカウント" と呼ばれ、サブスクリプションへのサインインに MSA を使い続けることができるだけでなく、職場または学校アカウントに関連付けられている既存の Azure、VSTS、IDE リソースにアクセスすることもできます。 
 
 両方のアカウントで同じメール アドレスを使っている場合でも、両方のアカウントで特典を使うためには、代替として職場/学校アカウントを追加する必要があります。 

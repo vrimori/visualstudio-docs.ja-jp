@@ -13,15 +13,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 33b9a56d88b4f64c4253126dafa5e3515aa498c6
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 6276c70cebd8f4d71e056142258422645c50cdfa
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする
 
@@ -80,6 +80,16 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
 |   |   |
 |---|---|
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Visual Studio での Python サポートのインストールについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567) をご覧ください。|
+
+### <a name="troubleshooting"></a>トラブルシューティング
+
+Visual Studio で Python をインストールしたか、実行したときに問題が発生した場合、次をお試しください。
+
+- Python CLI を利用し、つまり、コマンド プロンプトから `python.exe` を実行し、同じエラーが発生するかどうかを判断します。
+- [Visual Studio インストーラーの [修復] オプション](../install/repair-visual-studio.md)を使用します。
+- Windows で **[設定]、[アプリと機能]** の順に選択し、Python を修復するか、再インストールします。
+
+**エラー例**: 対話プロセスを開始できない: System.ComponentModel.Win32Exception (0x80004005): Unknown error (0xc0000135) at Microsoft.PythonTools.Repl.PythonInteractiveEvaluator.d__43.MoveNext().
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 

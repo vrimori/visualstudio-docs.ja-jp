@@ -1,24 +1,20 @@
 ---
-title: "Blend for Visual Studio を使用して UI を作成する | Microsoft Docs"
-ms.custom: 
+title: Blend for Visual Studio を使用して UI を作成する
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Blend.Start.Dev12
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a087af717e60eab3b9a1091ae46b9263e7342887
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: f8c7c5ab82c45ed183b8e6a6ae2031b50e2a086c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Blend for Visual Studio を使用して UI を作成する
 
@@ -121,7 +117,7 @@ Blend for Visual Studio の **[ツール]** パネルは、アプリケーショ
 
 ## <a name="see-also"></a>関連項目
 
-[コントロールの挿入およびそのビヘイビアーの変更](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)  
-[オブジェクトのアニメーション化](../designers/animate-objects-in-xaml-designer.md)  
-[図形とパスの描画](../designers/draw-shapes-and-paths.md)  
-[Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)
+- [コントロールの挿入およびそのビヘイビアーの変更](../designers/insert-controls-and-modify-their-behavior-in-xaml-designer.md)
+- [オブジェクトのアニメーション化](../designers/animate-objects-in-xaml-designer.md)
+- [図形とパスの描画](../designers/draw-shapes-and-paths.md)
+- [Visual Studio および Blend for Visual Studio での XAML の設計](../designers/designing-xaml-in-visual-studio.md)

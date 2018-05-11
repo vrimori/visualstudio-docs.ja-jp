@@ -1,12 +1,10 @@
 ---
-title: "[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.General
 - VS.ToolsOptionsPages.Projects.Locations
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - Projects and Solutions Options dialog box
 - Options dialog box, Projects and Solutions
 ms.assetid: 2801f24e-a138-488a-ae3c-e1f99a678ac0
-caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d7b122c66c4fd49cbc8939e5770c56fe8bc48b78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bd72380cbc17d0ff161a296e1ef08e238159da43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス
 プロジェクトおよびソリューションに関連する [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 動作を設定します。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[全般]** をクリックします。
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 選択した場合、**ソリューション エクスプローラー**が自動的に開いて、アクティブな項目が選択されます。 選択される項目は、プロジェクトまたはソリューション内の別のファイルや、デザイナー内の異なるコンポーネントを処理の対象にすると変更されます。 このオプションがオフのとき、**ソリューション エクスプローラー**での選択内容は自動的に変更されません。 既定では、このオプションは有効になっています。  
 
 **ビルド構成の詳細を表示**  
-選択した場合、ビルドの構成オプションが **[プロジェクト プロパティ ページ]** ダイアログ ボックスおよび **[ソリューション プロパティ ページ]** ダイアログ ボックスに表示されます。 オフにすると、ビルドの構成オプションは、1 つの構成または 2 つの構成のデバッグとリリースを含む  **および**  プロジェクトのための、**[プロジェクト プロパティ ページ]** ダイアログ ボックスや [[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]ソリューション プロパティ ページ[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]] ダイアログ ボックスに表示されません。 プロジェクトにユーザー定義の構成がある場合、ビルドの構成オプションが表示されます。  
+選択した場合、ビルドの構成オプションが **[プロジェクト プロパティ ページ]** ダイアログ ボックスおよび **[ソリューション プロパティ ページ]** ダイアログ ボックスに表示されます。 オフにすると、ビルドの構成オプションは、1 つの構成または 2 つの構成のデバッグとリリースを含む **および** プロジェクトのための、**[プロジェクト プロパティ ページ]** ダイアログ ボックスや [[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]ソリューション プロパティ ページ[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]] ダイアログ ボックスに表示されません。 プロジェクトにユーザー定義の構成がある場合、ビルドの構成オプションが表示されます。  
 
 オフの場合、**[ビルド]** メニューのコマンド (**[ソリューションのビルド]**、**[ソリューションのリビルド]**、**[ソリューションのクリーン]** など) はリリース構成で実行され、**[デバッグ]** メニューのコマンド (**[デバッグ開始]**、**[デバッグなしで開始]** など) はデバッグ構成で実行されます。  
 

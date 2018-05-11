@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の Web パフォーマンス テスト プラグインを作成する | Microsoft Docs
 ms.date: 10/03/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.web.webtestplugin
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: a612f2d2-9806-477d-a126-12842f07da6e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 52f6ae448ffb9b3a416db3dfe1a89ca8932ddb62
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: d7cb0eea7c6ebb32d0de4317a92fb83a8f7f2f10
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>方法: Web パフォーマンス テスト プラグインを作成する
 
@@ -43,7 +43,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 5.  **[名前]** ボックスに、クラスの名前を入力します。
 
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 7.  新しいクラス ライブラリ プロジェクトがソリューション エクスプローラーに追加され、新しいクラスがコード エディターに表示されます。
 
@@ -53,7 +53,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 10. **[.NET]** タブを選択し、スクロール ダウンして **[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択します。
 
-11. **[OK]**をクリックします。
+11. **[OK]** をクリックします。
 
      **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照がソリューション エクスプローラーの **[参照設定]** フォルダーに追加されます。
 
@@ -63,7 +63,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 14. **[プロジェクト]** タブをクリックし、[クラス ライブラリ プロジェクト] を選択します。
 
-15. **[OK]**をクリックします。
+15. **[OK]** をクリックします。
 
 16. コード エディターで、プラグインのコードを記述します。 まず、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> クラスから派生する新しいパブリック クラスを作成します。
 
@@ -100,7 +100,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
     > [!NOTE]
     > プラグインのプロパティをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定して、任意の数だけ公開できます。 Web パフォーマンス テスト プラグインのプロパティは、後で [プロパティ] ウィンドウを使用して変更することもできます。
 
-23. **[OK]**をクリックします。
+23. **[OK]** をクリックします。
 
      **[Web テスト プラグイン]** フォルダーにプラグインが追加されます。
 

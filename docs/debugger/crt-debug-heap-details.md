@@ -2,8 +2,7 @@
 title: CRT デバッグ ヒープ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -76,11 +75,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3bbbed8eb7e7ca7294ca23386b5b1ec9add31e3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bf71bd4d424c372a6dadf85593fd3b456bc7ec0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="crt-debug-heap-details"></a>CRT デバッグ ヒープ
 このトピックでは、CRT デバッグ ヒープについて詳しく解説します。  
@@ -172,7 +171,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
  **_IGNORE_BLOCK**  
  デバッグ ヒープ処理を一定期間だけオフにできます。 この間は、メモリ ブロックはリスト中に保持されますが、Ignore ブロックとしてマークされます。  
   
- 所定のブロックのサブタイプと型を特定するのには、関数を使用して[_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)およびマクロ**_BLOCK_TYPE**と**_BLOCK_SUBTYPE**です。 これらのマクロは、crtdbg.h で次のように定義されています。  
+ 所定のブロックのサブタイプと型を特定するのには、関数を使用して[_CrtReportBlockType](/cpp/c-runtime-library/reference/crtreportblocktype)およびマクロ **_BLOCK_TYPE**と **_BLOCK_SUBTYPE**です。 これらのマクロは、crtdbg.h で次のように定義されています。  
   
 ```  
 #define _BLOCK_TYPE(block)          (block & 0xFFFF)  
@@ -194,11 +193,11 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
 |ビット フィールド|既定値<br /><br /> value|説明|  
 |---------------|-----------------------|-----------------|  
-|**_CRTDBG_ALLOC_MEM_DF**|オン|デバッグ用の割り当てをオンにします。 一緒にチェーンされたときにこのビットがオフ、割り当てがそのブロック型は**_IGNORE_BLOCK**です。|  
-|**_CRTDBG_DELAY_FREE_MEM_DF**|オフ|メモリ不足の状態をシミュレートできるように、実際にはメモリを解放しません。 このビットがオンの解放されたブロックはデバッグ ヒープのリンク リストに保持されますが、としてマークされて**_FREE_BLOCK**特別なバイト値が設定されます。|  
-|**_CRTDBG_CHECK_ALWAYS_DF**|オフ|により**_CrtCheckMemory**すべて割り当てと割り当て解除時に呼び出されます。 実行速度は遅くなりますが、エラーをすばやく検出できます。|  
-|**_CRTDBG_CHECK_CRT_DF**|オフ|ブロックの型としてマークされている**_CRT_BLOCK**メモリ リークの検出と状態の操作に含まれます。 このビットがオフの場合、ランタイム ライブラリによって内部的に使用されるメモリは、これらの処理対象には含まれません。|  
-|**_CRTDBG_LEAK_CHECK_DF**|オフ|メモリ リークをへの呼び出しを使用してプログラムの終了時に実行されるチェック**_CrtDumpMemoryLeaks**です。 アプリケーションが割り当てたメモリを解放できていない場合は、エラー レポートが生成されます。|  
+|**_CRTDBG_ALLOC_MEM_DF**|オン|デバッグ用の割り当てをオンにします。 一緒にチェーンされたときにこのビットがオフ、割り当てがそのブロック型は **_IGNORE_BLOCK**です。|  
+|**_CRTDBG_DELAY_FREE_MEM_DF**|オフ|メモリ不足の状態をシミュレートできるように、実際にはメモリを解放しません。 このビットがオンの解放されたブロックはデバッグ ヒープのリンク リストに保持されますが、としてマークされて **_FREE_BLOCK**特別なバイト値が設定されます。|  
+|**_CRTDBG_CHECK_ALWAYS_DF**|オフ|により **_CrtCheckMemory**すべて割り当てと割り当て解除時に呼び出されます。 実行速度は遅くなりますが、エラーをすばやく検出できます。|  
+|**_CRTDBG_CHECK_CRT_DF**|オフ|ブロックの型としてマークされている **_CRT_BLOCK**メモリ リークの検出と状態の操作に含まれます。 このビットがオフの場合、ランタイム ライブラリによって内部的に使用されるメモリは、これらの処理対象には含まれません。|  
+|**_CRTDBG_LEAK_CHECK_DF**|オフ|メモリ リークをへの呼び出しを使用してプログラムの終了時に実行されるチェック **_CrtDumpMemoryLeaks**です。 アプリケーションが割り当てたメモリを解放できていない場合は、エラー レポートが生成されます。|  
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
@@ -306,9 +305,9 @@ typedef struct _CrtMemState
 |--------------|-----------------|  
 |[_CrtMemCheckpoint](/cpp/c-runtime-library/reference/crtmemcheckpoint)|ヒープのスナップショットを保存、 **_CrtMemState**アプリケーションによって提供される構造体。|  
 |[_CrtMemDifference](/cpp/c-runtime-library/reference/crtmemdifference)|メモリ状態を格納した 2 つの構造体を比較し、その相違点を別の構造体に保存します。2 つの状態が異なっている場合は TRUE を返します。|  
-|[_CrtMemDumpStatistics](/cpp/c-runtime-library/reference/crtmemdumpstatistics)|ダンプの指定された**_CrtMemState**構造体。 この構造体には、ある時点でのデバッグ ヒープの状態のスナップショット、または 2 つのスナップショットの相違点が格納されています。|  
-|[_CrtMemDumpAllObjectsSince](/cpp/c-runtime-library/reference/crtmemdumpallobjectssince)|指定されたスナップショットの取得以降、またはプログラムの実行開始以降に割り当てられたすべてのオブジェクトに関する情報をダンプします。 ダンプするたびに、 **_CLIENT_BLOCK**ブロックを使用して 1 つインストールされている場合に、アプリケーションによって提供されるフック関数を呼び出す**_CrtSetDumpClient**です。|  
-|[_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)|プログラムの実行開始以降にメモリ リークが発生したかどうかを調べます。メモリ リークが発生している場合は、割り当てられている全オブジェクトをダンプします。 たびに**_CrtDumpMemoryLeaks**ダンプ、 **_CLIENT_BLOCK**ブロックを使用して 1 つインストールされている場合に、アプリケーションによって提供されるフック関数を呼び出す**_CrtSetDumpClient**.|  
+|[_CrtMemDumpStatistics](/cpp/c-runtime-library/reference/crtmemdumpstatistics)|ダンプの指定された **_CrtMemState**構造体。 この構造体には、ある時点でのデバッグ ヒープの状態のスナップショット、または 2 つのスナップショットの相違点が格納されています。|  
+|[_CrtMemDumpAllObjectsSince](/cpp/c-runtime-library/reference/crtmemdumpallobjectssince)|指定されたスナップショットの取得以降、またはプログラムの実行開始以降に割り当てられたすべてのオブジェクトに関する情報をダンプします。 ダンプするたびに、 **_CLIENT_BLOCK**ブロックを使用して 1 つインストールされている場合に、アプリケーションによって提供されるフック関数を呼び出す **_CrtSetDumpClient**です。|  
+|[_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks)|プログラムの実行開始以降にメモリ リークが発生したかどうかを調べます。メモリ リークが発生している場合は、割り当てられている全オブジェクトをダンプします。 たびに **_CrtDumpMemoryLeaks**ダンプ、 **_CLIENT_BLOCK**ブロックを使用して 1 つインストールされている場合に、アプリケーションによって提供されるフック関数を呼び出す **_CrtSetDumpClient**.|  
   
  ![ページのトップへ](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [内容](#BKMK_Contents)  
   
@@ -319,7 +318,7 @@ typedef struct _CrtMemState
   
  不正となるヒープ割り当て呼び出しを特定するには、デバッグ ヒープ上の各ブロックに関連付けられている一意の割り当て要求番号を利用する方法が最も簡単です。 ダンプ関数を使用してブロックの情報を出力すると、この割り当て要求番号が中かっこで囲まれて表示されます ("{36}" など)。  
   
- 不正な割り当てブロックの割り当て要求番号がわかったら、渡すできますに数値[_CrtSetBreakAlloc](/cpp/c-runtime-library/reference/crtsetbreakalloc)ブレークポイントを作成します。 このブロックが割り当てられる直前でプログラムの実行が停止するため、その時点からさかのぼって、不正な呼び出しの原因となっているルーチンを突き止めることができます。 再コンパイルを回避するのには、設定して、デバッガーで同じ処理を行うことができます**_crtBreakAlloc**興味のある割り当て要求番号にします。  
+ 不正な割り当てブロックの割り当て要求番号がわかったら、渡すできますに数値[_CrtSetBreakAlloc](/cpp/c-runtime-library/reference/crtsetbreakalloc)ブレークポイントを作成します。 このブロックが割り当てられる直前でプログラムの実行が停止するため、その時点からさかのぼって、不正な呼び出しの原因となっているルーチンを突き止めることができます。 再コンパイルを回避するのには、設定して、デバッガーで同じ処理を行うことができます **_crtBreakAlloc**興味のある割り当て要求番号にします。  
   
  **独自割り当てルーチンのデバッグ バージョンを作成します。**  
   

@@ -1,5 +1,5 @@
 ---
-title: "管理者ポータルにアクセスする | Visual Studio Marketplace"
+title: 管理者ポータルにアクセスする | Visual Studio Marketplace
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -10,10 +10,10 @@ Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
 ms.openlocfilehash: 41bee30e54411a3b9bcaed6c72be3909f2d1cfab
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="accessing-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルへのアクセス
 ## <a name="for-mpsa"></a>MPSA の場合
@@ -49,7 +49,7 @@ Microsoft BizSpark プログラムの詳細は、[https://bizspark.microsoft.com
 
 
 ### <a name="imagine"></a>Imagine
-Microsoft Imagine 管理者の場合は、[https://imagine.microsoft.com/institutions/index](https://imagine.microsoft.com/institutions/index) をご覧ください。
+Microsoft Imagine の管理者は [https://imagine.microsoft.com/institutions/index](https://imagine.microsoft.com/institutions/index) にアクセスしてください。
 
 
 ### <a name="partner"></a>Partner

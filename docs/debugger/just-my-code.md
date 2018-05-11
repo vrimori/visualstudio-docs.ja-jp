@@ -2,8 +2,7 @@
 title: マイ コードのみにユーザー コードのデバッグ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 05/18/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
 author: mikejo5000
@@ -11,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bf41b8d264d353b6c47acd2e0a762a57d46412e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b59072f17ecfa810bec422770aeff24e0d8e2d99
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Visual Studio で マイ コードのみを使用してユーザー コードのみをデバッグするかどうかを指定します。
 自動的にステップ オーバーするシステム、フレームワーク、およびその他の非ユーザー呼び出しの呼び出し履歴 ウィンドウでそれらの呼び出しを折りたたむ Visual Studio を構成することができます。 有効またはこの動作を無効にする機能が呼び出されます*マイ コードのみ*です。 このトピックでは、c#、Visual Basic、C++、および JavaScript のプロジェクトでマイ コードのみを使用する方法について説明します。

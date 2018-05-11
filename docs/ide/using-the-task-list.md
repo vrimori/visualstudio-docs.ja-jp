@@ -1,12 +1,10 @@
 ---
-title: "タスク一覧の使用 | Microsoft Docs"
-ms.custom: 
+title: タスク一覧の使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - TaskListWindow
 - VS.TaskList
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Visual Studio, task list
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 282d9a70470686af71120887ee18bb2b6a899f78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ef9b3904ce06c498518d55b0d62b8e9393c75239
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-task-list"></a>タスク一覧の使用
 
@@ -42,11 +41,11 @@ ms.lasthandoff: 12/22/2017
 
 - 任意の列のヘッダーをクリックします。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目の列ヘッダーをクリックします。
 
-     または、ショートカット メニューで、 **[並べ替え]**をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目のヘッダーをクリックします。
+     または、ショートカット メニューで、 **[並べ替え]** をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目のヘッダーをクリックします。
 
 ### <a name="to-show-or-hide-columns"></a>列の表示/非表示を切り替えるには
 
-- ショートカット メニューで、 **[列の表示]**をクリックします。 表示または非表示にする列をクリックします。
+- ショートカット メニューで、 **[列の表示]** をクリックします。 表示または非表示にする列をクリックします。
 
 ### <a name="to-change-the-order-of-the-columns"></a>列の順序を変更するには
 
@@ -82,9 +81,9 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 #### <a name="to-create-a-custom-token"></a>カスタム トークンを作成するには
 
-1. **[ツール]** メニューの **[オプション]**をクリックします。
+1. **[ツール]** メニューの **[オプション]** をクリックします。
 
-2. **[環境]** フォルダーを開き、 **[タスク一覧]**をクリックします。
+2. **[環境]** フォルダーを開き、 **[タスク一覧]** をクリックします。
 
      [[タスク一覧] オプション ページ](../ide/reference/task-list-environment-options-dialog-box.md)が表示されます。
 
@@ -104,7 +103,7 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 ## <a name="shortcuts"></a>ショートカット
 
-*ショートカット* は、 **[タスク一覧]**で追跡されるコード内のブックマークで、標準のブックマークとはアイコンが異なります。 コード内の対応する位置に移動するには、 **[タスク一覧]** にあるショートカットをダブルクリックします。
+*ショートカット* は、 **[タスク一覧]** で追跡されるコード内のブックマークで、標準のブックマークとはアイコンが異なります。 コード内の対応する位置に移動するには、 **[タスク一覧]** にあるショートカットをダブルクリックします。
 
 ![Visual Studio タスク一覧へのショートカット アイコン](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")
 

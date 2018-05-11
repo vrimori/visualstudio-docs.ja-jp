@@ -1,23 +1,21 @@
 ---
-title: "評価の Tools for Visual Studio |Microsoft ドキュメント"
-ms.custom: 
+title: 評価の Tools for Visual Studio |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
-caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7026a14a4880a47f415f5aecd1c15f8a2423d86e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6a149d9163e61dd49105f123b373ecd9c7c1c278
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio の評価ツール
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio の職人気質チェックリスト  
@@ -149,7 +147,7 @@ ms.lasthandoff: 12/22/2017
   
 -   フィールドが必須フィールドように識別される必要がありますがの場合は、次のコマンドを確認します。  
   
-    -   バック グラウンドに設定されている`Environment.ControlEditRequiredBackground`に設定されているフォア グラウンドと`Environment.ControlEditRequiredHintText`  
+    -   バック グラウンドに設定されている`Environment.ControlEditRequiredBackground`に設定されているフォア グラウンドと `Environment.ControlEditRequiredHintText`  
   
     -   として表示されるコントロール内のヒント テキストが**"\<必要 >"**  
   
@@ -165,7 +163,7 @@ ms.lasthandoff: 12/22/2017
   
 -   その省略記号を確認してください**[...]**ボタンには、ニーモニックはありません。 その横にある入力コントロールにフォーカスがある場合、1 つのタブは、省略記号ボタンにフォーカスを移動する必要があります。  
   
--   ボタン、コマンド、および複数のユーザー入力をキャプチャするセカンダリの UI を起動するコマンド リンクは、省略記号で終わる必要がありますを確認してください**[...]。**.  
+-   ボタン、コマンド、および複数のユーザー入力をキャプチャするセカンダリの UI を起動するコマンド リンクは、省略記号で終わる必要がありますを確認してください**[...]**。  
   
 #### <a name="hyperlinks"></a>ハイパーリンク  
   

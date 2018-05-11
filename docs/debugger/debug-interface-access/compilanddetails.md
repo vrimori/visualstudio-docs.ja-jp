@@ -2,8 +2,7 @@
 title: CompilandDetails |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16f9239028cada1108092af3bc5a511964f89c6d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b1288a3bde1a8d17f40971744298adb1e1ecffb
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 シンボルの情報をコンパイル単位に分割されて、`SymTagCompiland`タグ (解像度の低い) と`SymTagCompilandDetails`タグ (高詳細)。 `SymTagCompilandDetails` 追加のシンボルの読み込みが必要です。 ただし、豊富なコンパイル単位では使用できないことに関する情報を提供する`SymTagCompiland`シンボル。  

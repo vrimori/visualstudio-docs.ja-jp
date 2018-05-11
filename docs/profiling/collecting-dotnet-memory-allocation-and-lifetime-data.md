@@ -1,26 +1,22 @@
 ---
-title: ".NET メモリの割り当ておよび有効期間データの収集 | Microsoft Docs"
-ms.custom: 
+title: .NET メモリの割り当ておよび有効期間データの収集 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - .NET memory profiling method
 - Profiling Tools,.NET memory method
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1b79f112fb72ff6b57ea87dc2f1cdea2f468eaf0
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 91013c0f9a6f213b70710d29d9102efc04db2821
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="collecting-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当ておよび有効期間データの収集
 
@@ -48,7 +44,7 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 
 ## <a name="to-collect-net-memory-data"></a>.NET メモリ データを収集するには
 
-1. **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックして、 **[プロパティ]**をクリックします。
+1. **パフォーマンス エクスプローラー**で、パフォーマンス セッションを右クリックして、 **[プロパティ]** をクリックします。
 
 2. *[パフォーマンス セッション]***[プロパティ ページ]** ダイアログ ボックスで **[全般]** タブをクリックし、**[.NET オブジェクトの割り当て情報を収集]** チェック ボックスをオンにします。
 
@@ -58,7 +54,7 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 
 追加のオプションを、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:
 
-- **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]**をクリックします。
+- **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。
 
 次の表の各タスクでは、.NET メモリ データを収集する際に、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
 

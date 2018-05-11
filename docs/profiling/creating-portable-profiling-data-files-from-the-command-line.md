@@ -1,23 +1,20 @@
 ---
-title: "コマンド ラインからの移植可能なプロファイル データ ファイルの作成 | Microsoft Docs"
-ms.custom: 
+title: コマンド ラインからの移植可能なプロファイル データ ファイルの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2ceb63a7-b835-4988-b756-2afc3fcc4808
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 95302666d8bd5c5738f93a2fb0a8ec698c5bb7d9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: dd329df74c88f5edadef27444bf3b3c89ee1b30d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="creating-portable-profiling-data-files-from-the-command-line"></a>移植可能なプロファイル データ ファイルのコマンド ラインからの作成
 プロファイル データの共有を簡単に行うために、[VSPerfReport](../profiling/vsperfreport.md) コマンドライン ツールを利用し、プロファイリング実行用のシンボルを .vsp ファイル内に埋め込むことができます。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
   
-     \<Path>**VSPerfReport \<**VSP File> **/PackSymbols**  
+     \<Path>**VSPerfReport \<** VSP File> **/PackSymbols**  
   
      既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。  
   
@@ -43,6 +40,6 @@ ms.lasthandoff: 12/22/2017
   
 -   [コマンド プロンプト] ウィンドウで、次のコマンドを入力します。  
   
-     \<Path>**VSPerfReport \<**VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
+     \<Path>**VSPerfReport \<** VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
   
      既定では、.vsps ファイルには、.vsp ファイルのベース名で名前が付けられます。 **Output** オプションを利用し、代替名を指定できます。

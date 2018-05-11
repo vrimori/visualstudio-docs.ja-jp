@@ -1,10 +1,8 @@
 ---
-title: 'Ca 1017: アセンブリに ComVisibleAttribute をマーク |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA1017: アセンブリに ComVisibleAttribute を設定します'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1017
 - MarkAssembliesWithComVisible
@@ -17,39 +15,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aa835d06dc081445673bc3a92dff1184d329d51
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 886de205e59ae7a10787dafe15f0ba726b99b465
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: アセンブリに ComVisibleAttribute を設定します
-|||  
-|-|-|  
-|TypeName|MarkAssembliesWithComVisible|  
-|CheckId|CA1017|  
-|カテゴリ|Microsoft.Design|  
-|互換性に影響する変更点|なし|  
-  
-## <a name="cause"></a>原因  
- アセンブリがない、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>属性を適用します。  
-  
-## <a name="rule-description"></a>規則の説明  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>属性は、COM クライアントがマネージ コードにアクセスする方法を決定します。 アセンブリで COM の参照範囲を明示することをお勧めします。 COM の参照範囲は、アセンブリ全体に設定し、それぞれの型と型のメンバー用にオーバーライドできます。 属性が存在しない場合、アセンブリのコンテンツは COM クライアントに表示されます。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、アセンブリに属性を追加します。 属性を適用し、その値に設定されるアセンブリの COM クライアントで表示したくない場合`false`です。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。 属性を適用し、その値に設定を表示するアセンブリを実行する場合に、`true`です。  
-  
-## <a name="example"></a>例  
- 次の例では、アセンブリが、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> COM クライアントに表示されないようにする適用される属性です。  
-  
+|||
+|-|-|
+|TypeName|MarkAssembliesWithComVisible|
+|CheckId|CA1017|
+|カテゴリ|Microsoft.Design|
+|互換性に影響する変更点|なし|
+
+## <a name="cause"></a>原因
+ アセンブリがない、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>属性を適用します。
+
+## <a name="rule-description"></a>規則の説明
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>属性は、COM クライアントがマネージ コードにアクセスする方法を決定します。 アセンブリで COM の参照範囲を明示することをお勧めします。 COM の参照範囲は、アセンブリ全体に設定し、それぞれの型と型のメンバー用にオーバーライドできます。 属性が存在しない場合、アセンブリのコンテンツは COM クライアントに表示されます。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、アセンブリに属性を追加します。 属性を適用し、その値に設定されるアセンブリの COM クライアントで表示したくない場合`false`です。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。 属性を適用し、その値に設定を表示するアセンブリを実行する場合に、`true`です。
+
+## <a name="example"></a>例
+ 次の例では、アセンブリが、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> COM クライアントに表示されないようにする適用される属性です。
+
  [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
  [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]
- [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]  
-  
-## <a name="see-also"></a>関連項目  
- [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)   
- [要件 (相互運用のための .NET 型の)](/dotnet/framework/interop/qualifying-net-types-for-interoperation)
+ [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]
+
+## <a name="see-also"></a>関連項目
+ [アンマネージ コードと相互運用](/dotnet/framework/interop/index)[相互運用のための .NET 型の条件を満たす](/dotnet/framework/interop/qualifying-net-types-for-interoperation)

@@ -1,32 +1,28 @@
 ---
-title: "手順 1: プロジェクトの作成とフォームへのテーブルの追加 | Microsoft Docs"
-ms.custom: 
+title: '手順 1: プロジェクトの作成とフォームへのテーブルの追加 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc8def9bb088275cef9f15e4e643d6811feab462
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 59afec50a1889b62e6115be44caa116b475a95c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 絵合わせゲームの作成における最初の手順は、プロジェクトの作成とフォームへのテーブルの追加です。 テーブルはアイコンを 4 x 4 のグリッドに整列させるために便利です。 いくつかのプロパティの設定も行ってゲーム ボードの見栄えが良くなるようにします。  
   
 ### <a name="to-create-a-project-and-add-a-table-to-your-form"></a>プロジェクトを作成し、フォームにテーブルを追加するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
 2.  Visual Studio Express を使用していない場合は、最初にプログラミング言語を選択する必要があります。 **[インストールされたテンプレート]** ボックスの一覧で、**[Visual C#]** または **[Visual Basic]** を選択します。  
   

@@ -1,10 +1,8 @@
 ---
-title: 'CA2123: オーバーライドのリンク要求をベースと同一にする必要があります |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA2123: オーバーライドのリンク確認要求は基本と同様にします'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2123
 - OverrideLinkDemandsShouldBeIdenticalToBase
@@ -17,39 +15,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c23bdf9246855fc4a91d5cd5f748f8f8fb17a67
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7aa696c1d08b71078ff4ae3beed7283d0b0333e2
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: オーバーライドのリンク確認要求は基本と同様にします
-|||  
-|-|-|  
-|TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|  
-|CheckId|CA2123|  
-|カテゴリ|Microsoft.Security|  
-|互換性に影響する変更点|あり|  
-  
-## <a name="cause"></a>原因  
- パブリック型のパブリックまたはプロテクト メソッドがメソッドをオーバーライドまたはインターフェイスを実装し、同じではありません[リンク確認要求](/dotnet/framework/misc/link-demands)インターフェイスまたは仮想メソッドとして。  
-  
-## <a name="rule-description"></a>規則の説明  
- この規則は、メソッドをその基本メソッド (別の型のインターフェイスまたは仮想メソッド) とマッチングし、それぞれについてリンク確認要求を比較します。 メソッドまたは基本メソッドのいずれかのリンク確認要求があり、もう一方にない場合は、違反が報告されます。  
-  
- この規則に違反する場合、悪意のある呼び出し元は、セキュリティ保護されていないメソッドを呼び出すだけで、リンク確認要求を省略することができます。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するには、オーバーライド メソッドや実装に同じリンク確認要求を適用します。 これが可能でない場合は、完全な demand でメソッドをマークまたは属性をすべて削除します。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。  
-  
-## <a name="example"></a>例  
- 次の例では、このルールのさまざまな違反を示します。  
-  
- [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]  
-  
-## <a name="see-also"></a>関連項目  
- [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)   
- [リンク確認要求](/dotnet/framework/misc/link-demands)
+|||
+|-|-|
+|TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|
+|CheckId|CA2123|
+|カテゴリ|Microsoft.Security|
+|互換性に影響する変更点|あり|
+
+## <a name="cause"></a>原因
+ パブリック型のパブリックまたはプロテクト メソッドがメソッドをオーバーライドまたはインターフェイスを実装し、同じではありません[リンク確認要求](/dotnet/framework/misc/link-demands)インターフェイスまたは仮想メソッドとして。
+
+## <a name="rule-description"></a>規則の説明
+ この規則は、メソッドをその基本メソッド (別の型のインターフェイスまたは仮想メソッド) とマッチングし、それぞれについてリンク確認要求を比較します。 メソッドまたは基本メソッドのいずれかのリンク確認要求があり、もう一方にない場合は、違反が報告されます。
+
+ この規則に違反する場合、悪意のある呼び出し元は、セキュリティ保護されていないメソッドを呼び出すだけで、リンク確認要求を省略することができます。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するには、オーバーライド メソッドや実装に同じリンク確認要求を適用します。 これが可能でない場合は、完全な demand でメソッドをマークまたは属性をすべて削除します。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。
+
+## <a name="example"></a>例
+ 次の例では、このルールのさまざまな違反を示します。
+
+ [!code-csharp[FxCop.Security.OverridesAndSecurity#1](../code-quality/codesnippet/CSharp/ca2123-override-link-demands-should-be-identical-to-base_1.cs)]
+
+## <a name="see-also"></a>関連項目
+ [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)[リンク確認要求](/dotnet/framework/misc/link-demands)

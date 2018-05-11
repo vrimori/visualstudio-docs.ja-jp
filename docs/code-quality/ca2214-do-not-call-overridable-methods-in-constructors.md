@@ -1,10 +1,8 @@
 ---
-title: 'Ca 2214: コンス トラクターのオーバーライド可能なメソッドを呼び出す必要はありません |Microsoft ドキュメント'
-ms.custom: ''
+title: 'CA2214: コンストラクターのオーバーライド可能なメソッドを呼び出しません'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - DoNotCallOverridableMethodsInConstructors
 - CA2214
@@ -17,40 +15,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c9df9acf8c04e85b16c1f3b5d964938a21f168b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 589aefaab69a6ea7f211ff7a3de19515ed7e9163
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: コンストラクターのオーバーライド可能なメソッドを呼び出しません
-|||  
-|-|-|  
-|TypeName|DoNotCallOverridableMethodsInConstructors|  
-|CheckId|CA2214|  
-|カテゴリ|Microsoft.Usage|  
-|互換性に影響する変更点|中断なし|  
-  
-## <a name="cause"></a>原因  
- 封印されていない型のコンス トラクターは、そのクラスで定義されている仮想メソッドを呼び出します。  
-  
-## <a name="rule-description"></a>規則の説明  
- 仮想メソッドが呼び出されると、実行時までは、メソッドを実行する実際の型が選択されていません。 コンス トラクターが仮想メソッドを呼び出すと、そのメソッドを呼び出すインスタンスのコンス トラクターが実行していないことができます。  
-  
-## <a name="how-to-fix-violations"></a>違反の修正方法  
- この規則違反を修正するのには、型のコンス トラクター内からの型の仮想メソッドの呼び出す必要はありません。  
-  
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況  
- この規則による警告は抑制しないでください。 仮想メソッドの呼び出しを回避するのには、コンス トラクターを再設計する必要があります。  
-  
-## <a name="example"></a>例  
- 次の例では、この規則違反の影響を示します。 テスト アプリケーションのインスタンスを作成する`DerivedType`、それが原因で、基本クラス (`BadlyConstructedType`) コンス トラクターが実行されます。 `BadlyConstructedType`コンス トラクターが、仮想メソッドを正しく呼び出す`DoSomething`です。 出力に示す`DerivedType.DoSomething()`が実行され、前に`DerivedType`のコンス トラクターを実行します。  
-  
+|||
+|-|-|
+|TypeName|DoNotCallOverridableMethodsInConstructors|
+|CheckId|CA2214|
+|カテゴリ|Microsoft.Usage|
+|互換性に影響する変更点|中断なし|
+
+## <a name="cause"></a>原因
+ 封印されていない型のコンス トラクターは、そのクラスで定義されている仮想メソッドを呼び出します。
+
+## <a name="rule-description"></a>規則の説明
+ 仮想メソッドが呼び出されると、実行時までは、メソッドを実行する実際の型が選択されていません。 コンス トラクターが仮想メソッドを呼び出すと、そのメソッドを呼び出すインスタンスのコンス トラクターが実行していないことができます。
+
+## <a name="how-to-fix-violations"></a>違反の修正方法
+ この規則違反を修正するのには、型のコンス トラクター内からの型の仮想メソッドの呼び出す必要はありません。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+ この規則による警告は抑制しないでください。 仮想メソッドの呼び出しを回避するのには、コンス トラクターを再設計する必要があります。
+
+## <a name="example"></a>例
+ 次の例では、この規則違反の影響を示します。 テスト アプリケーションのインスタンスを作成する`DerivedType`、それが原因で、基本クラス (`BadlyConstructedType`) コンス トラクターが実行されます。 `BadlyConstructedType`コンス トラクターが、仮想メソッドを正しく呼び出す`DoSomething`です。 出力に示す`DerivedType.DoSomething()`が実行され、前に`DerivedType`のコンス トラクターを実行します。
+
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../code-quality/codesnippet/CSharp/ca2214-do-not-call-overridable-methods-in-constructors_1.cs)]
- [!code-vb[FxCop.Usage.CtorVirtual#1](../code-quality/codesnippet/VisualBasic/ca2214-do-not-call-overridable-methods-in-constructors_1.vb)]  
-  
- この例を実行すると、次の出力が生成されます。  
-  
- **基本 ctor を呼び出しています。**  
-**派生 DoSomething が呼び出される初期化ですか?違います**  
-**派生した通話 ctor です。**
+ [!code-vb[FxCop.Usage.CtorVirtual#1](../code-quality/codesnippet/VisualBasic/ca2214-do-not-call-overridable-methods-in-constructors_1.vb)]
+
+ この例を実行すると、次の出力が生成されます。
+
+ **基本 ctor を呼び出しています。** 
+ **DoSomething の派生には、呼び出される初期化ですか?いいえ**
+**通話が ctor を派生します。**

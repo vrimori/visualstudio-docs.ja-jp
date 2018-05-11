@@ -2,8 +2,7 @@
 title: デバッガーのプロジェクトの設定 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa3a216f8f7bdcaebfae617ae345ee1a7ee42293
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ea878114d940f8b9881a1a1d0204da58ca6519f5
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  

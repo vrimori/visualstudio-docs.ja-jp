@@ -1,21 +1,21 @@
 ---
-title: "別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/2/2018
-Ms.topic: Get-Started-Article
-Description: Sign-in may fail if aliases or friendly names are used.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 8c07bc8d3cf674d86c2152ff80f20e4fac003fc3
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/02/2018
+ms.topic: Get-Started-Article
+description: 別名またはフレンドリ名の使用でサインインに失敗する場合がある
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 869835e53b1975d86501660b3e4ca34a41a1a7d4
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="signing-in-to-visual-studio-subscriptions-may-fail-with-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
+# <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
 
 サインインに使用されるアカウントの種類によっては、[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にサインインするときに利用可能なサブスクリプションが正しく表示されない場合があります。考えられる原因の 1 つは、サブスクリプションが割り当てられているサインイン ID の代わりに "別名" または "表示名" を使用していることです。 これは "別名定義" と呼ばれます。 
 
@@ -28,8 +28,8 @@ ms.lasthandoff: 01/29/2018
 ## <a name="as-an-administrator-what-options-do-i-have"></a>管理者として選択できるオプションとは
 
 管理者には、[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) でユーザーのサインインを確実に成功させるために、次の 2 つのオプションがあります。 
-1. 1 番目のオプション (推奨) は、ディレクトリ アカウントをボリューム ライセンス サービス センター (VLSC) で割り当てられたアドレスとして利用することです。 詳細については、この記事の「[サブスクライバーをディレクトリ アカウントに割り当てる](#assigning-subscribers-to-a-directory-account)」セクションを参照してください。
-2. 2 番目のオプション (安全性で劣る) は、サブスクライバーに自身の "職場または学校" のメール アドレスを "個人用" アカウント (別名:  Microsoft アカウント (MSA)) に関連付けることを許可することです。 詳細については、この記事の「[職場または学校アカウントを個人用アカウントとして定義する](#defining-a-work-or-school-account-as-a-personal-account )」セクションを参照してください。
+- 1 番目のオプション (推奨) は、ディレクトリ アカウントをボリューム ライセンス サービス センター (VLSC) で割り当てられたアドレスとして利用することです。 詳細については、この記事の「[サブスクライバーをディレクトリ アカウントに割り当てる](#assigning-subscribers-to-a-directory-account)」セクションを参照してください。
+- 2 番目のオプション (安全性で劣る) は、サブスクライバーに自身の "職場または学校" のメール アドレスを "個人用" アカウント (別名:  Microsoft アカウント (MSA)) に関連付けることを許可することです。 詳細については、この記事の「[職場または学校アカウントを個人用アカウントとして定義する](#defining-a-work-or-school-account-as-a-personal-account )」セクションを参照してください。
 
 > [!NOTE]
 > 会社が新しい Visual Studio サブスクリプションの[管理ポータル](https://manage.visualstudio.com)に移行すると、ディレクトリとメール アドレスの両方をサブスクライバーのプロファイルの一部として指定できる、新しい管理エクスペリエンスが利用できるようになります。  移行の詳細については、[こちら](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details)をご覧ください。
@@ -99,9 +99,9 @@ ms.lasthandoff: 01/29/2018
 
 %サブスクライバー名% 様
 
-Visual Studio サブスクリプションが割り当てられました。  Https://my.visualstudio.com にアクセスして、%ディレクトリ アドレス% アドレスを使用してログインし、サブスクリプションをアクティブ化してアクセスしてください。 
+Visual Studio サブスクリプションが割り当てられました。  https://my.visualstudio.com にアクセスして、%ディレクトリ アドレス% アドレスを使用してログインし、サブスクリプションをアクティブ化してアクセスしてください。 
 
-問題がある場合は、サポート チーム (https://www.visualstudio.com/subscriptions/support/) にお問い合わせください。
+問題がある場合は、サポート チームにお問い合わせください (https://www.visualstudio.com/subscriptions/support/)。
 
 ページの下部で、次を選択します。
    - [Accounts, Subscriptions, and Billing Support]\(アカウント、サブスクリプション、課金サポート\)
@@ -145,7 +145,7 @@ Visual Studio サブスクリプションが割り当てられました。  Http
 %サブスクライバー名% 様
 
 Visual Studio サブスクリプションが割り当てられ、ウェルカム メールでは、https://my.visualstudio.com にログインするように指示されています。  これは特典を使用する場合の Web サイトで、当組織では、サイトにアクセスする前に、いくつか追加手順を実行していただく必要があります。  次の指示に従って、弊社のメール アドレスに関連付けられる "Microsoft アカウント" を作成してください。  これらの手順が完了したら、ご自分のメール アドレスを使用してサブスクリプションの特典にアクセスします。
-1. Visit https://my.visualstudio.com
+1. https://my.visualstudio.com にアクセスします。
 
 2. 右側で [新しい Microsoft アカウントを作成する] をクリックします。
 
@@ -163,7 +163,7 @@ Visual Studio サブスクリプションが割り当てられ、ウェルカム
 
 注: 将来、https://my.visualstudio.com にアクセスしたときに、使用するアカウント ("職場または学校アカウント" または "個人用アカウント" など) を選択するように求められる場合があります。  上記の手順を実行したら、"個人用アカウント" オプションを利用する必要があります。
 
-問題がある場合は、サポート チーム (https://www.visualstudio.com/subscriptions/support/) にお問い合わせください。
+問題がある場合は、サポート チームにお問い合わせください (https://www.visualstudio.com/subscriptions/support/)。
 
 ページの下部で、次を選択します。
    - [Accounts, Subscriptions, and Billing Support]\(アカウント、サブスクリプション、課金サポート\)

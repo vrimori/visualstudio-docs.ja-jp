@@ -2,11 +2,8 @@
 title: MIDL タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCMidlTool.ServerStubFile
 - VC.Project.VCMidlTool.ApplicationConfigurationMode
@@ -26,17 +23,16 @@ helpviewer_keywords:
 - MSBuild (Visual C++), MIDL task
 - MIDL task (MSBuild (Visual C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
-caps.latest.revision: 8
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51ed6c8c34fd5aa37eebffabcda077ca8554c498
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: b46e4dc771ad5bb95185647a4769359427886f24
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="midl-task"></a>MIDL タスク
 Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Definition Language) コンパイラ ツール (midl.exe) をラップします。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」を参照してください。  
@@ -50,7 +46,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      インポートされた IDL ファイル、組み込みヘッダー ファイル、アプリケーション構成ファイル (ACF) の検索対象ディレクトリのリストにディレクトリを追加します。  
   
-     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の**/I** オプションを参照してください。  
+     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の **/I** オプションを参照してください。  
   
 -   **AdditionalOptions**  
   
@@ -66,7 +62,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      `true` の場合、IDL ファイルでいくつかの ACF キーワードを使用できるようになります。  
   
-     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の**/app_config** オプションを参照してください。  
+     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の **/app_config** オプションを参照してください。  
   
 -   **ClientStubFile**  
   
@@ -74,7 +70,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      RPC インターフェイスのクライアント スタブ ファイルの名前を指定します。  
   
-     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の**/cstub** オプションを参照してください。 この表にある **ServerStubFile** パラメーターも参照してください。  
+     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の **/cstub** オプションを参照してください。 この表にある **ServerStubFile** パラメーターも参照してください。  
   
 -   **CPreprocessOptions**  
   
@@ -82,7 +78,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      C/C++ プリプロセッサに渡すオプションを指定します。 スペースで区切られたプリプロセッサ オプションのリストを指定します。  
   
-     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の**/cpp_opt** オプションを参照してください。  
+     詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」の **/cpp_opt** オプションを参照してください。  
   
 -   **DefaultCharType**  
   
@@ -422,5 +418,5 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)

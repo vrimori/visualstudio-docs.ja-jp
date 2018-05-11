@@ -3,8 +3,7 @@ title: Visual Studio をデバッグする方法を学習 |Microsoft ドキュ�
 ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
 ms.custom: mvc
 ms.date: 03/16/2018
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: tutorial
 helpviewer_keywords:
 - debugger
@@ -14,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 92194e403e5a8fe6c7075ea7cd449442f281a7e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3501f3e94fdb9b98aefc96d7a1e2fe12b4117fbb
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-to-debug-using-visual-studio"></a>Visual Studio を使用してデバッグする方法を学習します。
 
