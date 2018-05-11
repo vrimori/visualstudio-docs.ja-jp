@@ -63,7 +63,7 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
 1.  Perl 言語のコピーを取得します。  
   
-2.  通常にある Perl スクリプト ConvertCTCToVSCT.pl のコピーを入手して、  *\<Visual Studio SDK インストール パス >*\VisualStudioIntegration\Tools\bin フォルダーです。  
+2.  通常にある Perl スクリプト ConvertCTCToVSCT.pl のコピーを入手して、  *\<Visual Studio SDK インストール パス >* \VisualStudioIntegration\Tools\bin フォルダーです。  
   
 3.  変換する .ctc ソース ファイルのコピーを取得します。  
   
@@ -98,7 +98,7 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
 3.  Visual Studio コマンド プロンプトで、.cto ファイルと .ctsym ファイルが保存されているディレクトリに移動します。  
   
-4.  型**vsct.exe** *ctofilename * * * .cto** * vsctfilename***.vsct-s***symfilename ***.ctsym**です。  
+4.  型**vsct.exe** *ctofilename * * * .cto** * vsctfilename ***.vsct-s***symfilename ***.ctsym**です。  
   
      `ctofilename` .cto ファイルの名前を指定`vsctfilename`を作成する vsct ファイルの名前を指定し、 `symfilename` .ctsym ファイルの名前を指定します。  
   
