@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: ff8408ecdf8036a6ec00bdbc3ec93f4b41a2a7fa
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ade15b950e5fc6ab0dd277a26640a7ecb7825e62
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -35,7 +35,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターにアプリケーション
   
-1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**選択してから、* * Visual c# > Web > ASP.NET Web アプリケーションです。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]**を選択します。 確認して**Docker のサポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**です。 プロジェクトに名前を**MyASPApp**)。
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**選択してから、* * Visual c# > Web > ASP.NET Web アプリケーションです。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]** を選択します。 確認して**Docker のサポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**です。 プロジェクトに名前を**MyASPApp**)。
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
@@ -51,6 +51,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 - go.microsoft.com
 - download.microsoft.com
 - visualstudio.com
+- iis.net
 
 Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。 (My.visualstudio.com からリモート デバッガーの古いバージョンをダウンロードする場合は、いくつか追加の信頼済みサイトが必要にサインインします。)
 
@@ -59,6 +60,8 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 ## <a name="BKMK_deploy_asp_net"></a> Windows Server に ASP.NET 4.5 をインストールします。
 
 詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+
+1. サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**です。
 
 1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**新しい Web Platform コンポーネントの取得**、ASP.NET の検索)。
 
@@ -79,13 +82,13 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後で配置されます。
 
-2. 開く、**インターネット インフォメーション サービス (IIS) マネージャー**です。 (サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
+2. これがまだ開いていない場合は開きます、**インターネット インフォメーション サービス (IIS) マネージャー**です。 (サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
 
 3. **接続**左側のウィンドウに移動**サイト**です。
 
 4. 選択、**既定の Web サイト**、選択**基本設定**、設定と、**物理パス**に**C:\Publish**です。
 
-5. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]**を選択します。
+5. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]** を選択します。
 
 6. 設定、**エイリアス**フィールドを**MyASPApp**、既定のアプリケーション プール (**DefaultAppPool**)、し、設定、**物理パス**に**C:\Publish**です。
 
@@ -147,19 +150,19 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
     > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスを再アタッチできます**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
 
 3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
-4. **[更新]**を生成する必要があります。
+4. **[更新]** を生成する必要があります。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
 
-5. **[すべてのユーザーからのプロセスを表示する]**をオンにします。
+5. **[すべてのユーザーからのプロセスを表示する]** をオンにします。
 6. すばやく検索するプロセス名の最初の文字を入力**w3wp.exe** ASP.NET 4.5 用です。
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess.png "RemoteDBG_AttachToProcess")
 
 7. をクリックして**アタッチ**
 
-8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動**http://\<リモート コンピューター名 >**です。
+8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動**http://\<リモート コンピューター名 >** です。
     
     ASP.NET の Web ページが表示されるはずです。
 9. ASP.NET アプリケーションの実行では、リンクをクリックして、**に関する**ページ。

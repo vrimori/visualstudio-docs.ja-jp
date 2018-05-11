@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のローカル フォルダーに配置 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 05/08/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 024d191628e413f07cd510595eac5c7d9fca085b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3b54a8fa30ef5eafcc5ebce5c81cc7b80be6fb6
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
 
@@ -24,11 +24,17 @@ ms.lasthandoff: 04/19/2018
 
 次の手順は、ASP.NET、ASP.NET Core、.NET Core および Visual Studio での Python アプリに適用されます。 For Node.js、手順がサポートされますが、ユーザー インターフェイスが異なる。
 
+## <a name="prerequisites"></a>必須コンポーネント
+
+* Visual Studio 2017 年 1 をインストールする必要があります、 **.NET Framework**と **.NET Core**開発ワークロードがインストールされています。
+
+    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
 1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
-1. **Visual c#**または**Visual Basic**、選択**.NET Core**、中央のペインの **コンソール アプリケーション (.NET Core)**です。
+1. **Visual c#** または**Visual Basic**、選択 **.NET Core**、し、中央のペインで次のように選択します。**コンソール アプリケーション (.NET Core)** です。
 
 1. ような名前を入力**MyLocalApp**  をクリック**OK**です。
 
@@ -40,13 +46,15 @@ ms.lasthandoff: 04/19/2018
 
     ![選択発行](../deployment/media/quickstart-publish.png "選択発行")
 
-1. **発行** ウィンドウで、選択**フォルダー**です。
+1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
+
+1. **発行先の選択** ダイアログ ボックスで、選択**フォルダー**です。
 
     ![フォルダーを選択](../deployment/media/quickstart-publish-folder.png "フォルダーを選択します")
 
 1. パスを入力またはクリックして**参照**ローカル フォルダーを参照します。
 
-1. **[発行]**をクリックします。
+1. **[発行]** をクリックします。
 
     Visual Studio は、プロジェクトをビルドし、指定されたフォルダーに発行します。
 

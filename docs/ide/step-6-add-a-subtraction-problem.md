@@ -11,11 +11,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e73d32a3917003fe4c425406faadbc6e303f1eac
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: eb6d338217d3112fc56307ddc2f9af696c99e96a
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>手順 6: 減算問題の追加
 このチュートリアルの第 6 部では、減算問題を追加し、次のタスクを実行する方法を説明します。
@@ -26,9 +26,9 @@ ms.lasthandoff: 04/26/2018
 
 -   解答を確認するメソッドを更新して、新しい減算問題についても確認するようにします。
 
--   タイマーの Tick イベント ハンドラーを、残り時間がなくなったら正しい答えを表示するように更新します。
+-   タイマーの <xref:System.Windows.Forms.Timer.Tick> イベント ハンドラーを、残り時間がなくなったら正しい答えを表示するように更新します。
 
-### <a name="to-add-a-subtraction-problem"></a>減算問題を追加するには
+## <a name="to-add-a-subtraction-problem"></a>減算問題を追加するには
 
 1.  減算問題の 2 つの整数変数をフォームの加算問題の整数変数とタイマーの間に追加します。 コードは次のようになります。
 
@@ -44,18 +44,19 @@ ms.lasthandoff: 04/26/2018
      [!code-vb[VbExpressTutorial3Step5_6#13](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_2.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#13](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_2.cs)]
 
-     減算問題の解答が負にならないように、このコードでは、加算問題とは少し異なる方法で `Next()` クラスの `Random` メソッドを使用します。 `Next()` メソッドに 2 つの値を指定した場合、最初の値以上で 2 番目の値未満の乱数が選択されます。 次のコードでは、1 ～ 100 の乱数が選択され、minuend 変数に格納されます。
+     減算問題の解答が負にならないように、このコードでは、加算問題とは少し異なる方法で <xref:System.Random.Next> クラスの <xref:System.Random> メソッドを使用します。 `Next()` メソッドに 2 つの値を指定した場合、最初の値以上で 2 番目の値未満の乱数が選択されます。 次のコードでは、1 ～ 100 の乱数が選択され、minuend 変数に格納されます。
 
      [!code-vb[VbExpressTutorial3Step5_6#21](../ide/codesnippet/VisualBasic/step-6-add-a-subtraction-problem_3.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#21](../ide/codesnippet/CSharp/step-6-add-a-subtraction-problem_3.cs)]
 
-     複数の方法で、このチュートリアルで前に randomizer と名付けた、`Next()` クラスの `Random` メソッドを呼び出すことができます。 複数の方法で呼び出すことができるメソッドをオーバーロード メソッドと呼び、IntelliSense を使用して確認することができます。 `Next()` メソッドについての IntelliSense ウィンドウのツールヒントをもう一度見てください。
+     複数の方法で、このチュートリアルで前に randomizer と名付けた、Random クラスの `Next()` メソッドを呼び出すことができます。 複数の方法で呼び出すことができるメソッドをオーバーロード メソッドと呼び、IntelliSense を使用して確認することができます。 `Next()` メソッドについての IntelliSense ウィンドウのツールヒントをもう一度見てください。
 
-     ![IntelliSense ウィンドウのツールヒント](../ide/media/express_overloads.png "Express_Overloads") IntelliSense ウィンドウのツールヒント
+     ![IntelliSense ウィンドウのツールヒント](../ide/media/express_overloads.png "Express_Overloads")
+**IntelliSense** ウィンドウのツールヒント
 
-     ツールヒントには "**(+ 2 オーバーロード)**" と表示され、これは他の 2 つの方法で `Next()` メソッドを呼び出せることを意味します。 オーバーロードには、異なる数または型の引数が含まれていて、互いに動作が若干異なります。 たとえば、メソッドは単一の整数引数を受け取ることがあり、さらにオーバーロードの 1 つは整数と文字列を受け取ることがありますが、 目的に基づいて適切なオーバーロードを選択します。 `StartTheQuiz()` メソッドにコードを追加すると、`randomizer.Next(` を入力するとすぐに、詳細情報が IntelliSense ウィンドウに表示されます。 別のオーバーロードに切り替えるには、次の図に示すように、上矢印キーおよび下矢印キーを押します。
+     ツールヒントには "**(+ 2 オーバーロード)**" と表示され、これは他の 2 つの方法で `Next()` メソッドを呼び出せることを意味します。 オーバーロードには、異なる数または型の引数が含まれていて、互いに動作が若干異なります。 たとえば、メソッドは単一の整数引数を受け取ることがあり、さらにオーバーロードの 1 つは整数と文字列を受け取ることがありますが、 目的に基づいて適切なオーバーロードを選択します。 `StartTheQuiz()` メソッドにコードを追加すると、`randomizer.Next(` を入力するとすぐに、詳細情報が IntelliSense ウィンドウに表示されます。 別のオーバーロードに切り替えるには、次の図に示すように、**上矢印**キーおよび**下矢印**キーを押します。
 
-     ![IntelliSense 内での Next() メソッドのオーバーライド](../ide/media/express_nextoverload.png "Express_NextOverload") IntelliSense 内での Next() メソッドのオーバーライド
+     ![IntelliSense 内での Next&#40;&#41; メソッドのオーバーライド](../ide/media/express_nextoverload.png "Express_NextOverload") **IntelliSense** 内での **Next()** メソッドのオーバーライド
 
      この場合、最小値と最大値を指定できるため、最後のオーバーロードを選択する必要があります。
 
@@ -75,9 +76,10 @@ ms.lasthandoff: 04/26/2018
 
      プログラムには、次の図に示すように減算問題が含まれます。
 
-     ![減算の問題のある計算クイズ](../ide/media/express_addsubtract.png "Express_AddSubtract") 減算の問題のある計算クイズ
+     ![減算の問題のある計算クイズ](../ide/media/express_addsubtract.png "Express_AddSubtract")
+減算の問題のある**計算クイズ**
 
-### <a name="to-continue-or-review"></a>続行または確認するには
+## <a name="to-continue-or-review"></a>続行または確認するには
 
 -   チュートリアルの次の手順に進むには、「[手順 7: 乗算問題と除算問題の追加](../ide/step-7-add-multiplication-and-division-problems.md)」を参照してください。
 
