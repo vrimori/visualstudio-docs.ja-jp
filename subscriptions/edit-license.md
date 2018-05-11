@@ -9,11 +9,11 @@ description: 管理者がサブスクリプションの割り当てを編集す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: fa700e62f6491321aae2696739f85b7cfd4cecd3
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9ea5f6bc562ce520be08728facfb6099df95ca4c
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio サブスクリプションの割り当ての編集
 
@@ -21,8 +21,6 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="making-changes-to-subscriber-information"></a>サブスクライバー情報を変更する
 サブスクライバー情報を編集してエラーを修正したり情報を更新したりすることができます。 
-> [!NOTE]
-> サブスクライバーのメール アドレスの編集により、既存の特典がリセットされます。
 
 サブスクライバーを編集するには、サブスクライバーの電子メール アドレスの横にマウス ポインターを移動すると表示される省略記号 (...) を選択します。 ドロップダウン リストが表示されます。  **[編集]** を選択して、サブスクライバーの詳細を変更します。 グリッドのサブスクライバーの行をダブルクリックして編集ウィンドウを開くこともできます。
 
