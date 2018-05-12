@@ -29,11 +29,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe345773cfa4a91789681969623e2174db60c54c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 314a559e4370f254af9473ec38c77d11287c575a
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチできます。 プロセスを実行した後にをクリックして**デバッグ > プロセスにアタッチする**(またはキーを押して**CTRL + ALT + P**) を開くには、**プロセスにアタッチする** ダイアログ ボックス。
@@ -122,7 +122,7 @@ ms.lasthandoff: 04/18/2018
 
 デバッグ中には複数のプログラムにアタッチできますが、デバッガーでアクティブになっているプログラムは常に 1 つだけです。 アクティブなプログラムは、 **[デバッグの場所]** ツール バーまたは **[プロセス]** ウィンドウで設定できます。  
   
-信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい点またはことを確認して場合、このプロセスに接続しないで](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)です。  
+信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい点またはことを確認して場合、このプロセスに接続しないで](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)です。  
   
 リモート デスクトップ (ターミナル サービス) セッションでのデバッグ時には、 **[選択可能なプロセス]** ボックスに、使用可能なプロセスのすべてが表示されない場合があります。 Visual Studio を、制限付きユーザー アカウントを持つユーザーとして実行している場合、 **[選択可能なプロセス]** ボックスの一覧には、セッション 0 で実行しているプロセスは表示されません。セッション 0 は、サービスおよび w3wp.exe を含むその他のサーバー プロセス用に使用されます。 この問題を解決するには、管理者アカウントで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行するか、ターミナル サービス セッションからではなくサーバー コンソールから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行します。 どちらの方法も実行できない場合、3 つ目の方法として、Windows コマンド ラインから `vsjitdebugger.exe -p` *ProcessId* を実行することによって、プロセスにアタッチできます。 プロセス ID は tlist.exe を使用して確認できます。 tlist.exe を入手するには、「  [WDK と WinDbg のダウンロード](http://go.microsoft.com/fwlink/?LinkId=168279)」で Windows 対応のデバッグ ツールをダウンロードし、インストールします。
 

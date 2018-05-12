@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1db8ca68453cff105f2bbefcd384b8afa9efea9d
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: b023349454f71835e13e7cc891b8be92b90c153f
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって IIS にアプリケーションを公開 Visual Studio で発行設定
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/10/2018
 > * 発行設定ファイルを Visual Studio にインポートします。
 > * IIS にアプリを配置します。
 
-発行設定ファイル (\*.publishsettings) 発行プロファイルとは異なる (\*.pubxml) Visual Studio で作成します。 発行設定ファイルを IIS または Azure App Service によって作成や、手動で作成することができますし、Visual Studio にインポートします。
+発行設定ファイル (*\*.publishsettings*) 発行プロファイルとは異なる (*\*.pubxml*) Visual Studio で作成します。 発行設定ファイルを IIS または Azure App Service によって作成や、手動で作成することができますし、Visual Studio にインポートします。
 
 > [!NOTE]
 > だけを Visual Studio が公開プロファイルをコピーする必要がある場合 (\*.pubxml ファイル) を別の Visual Studio のインストールが 1 つから、公開プロファイルを見つけることができます *\<profilename\>.pubxml*、 *\\< projectname\>\Properties\PublishProfiles*マネージ プロジェクトの種類のフォルダーです。 Web サイト、探します、 *\App_Data*フォルダーです。 発行プロファイルは、MSBuild XML ファイルです。
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 
     この記事の手順では Visual Studio 2017 に基づいてに並べ替えられます。
 
-* ASP.NET Core がインストールされているか、IIS から発行設定ファイルを生成するに正しく構成されている IIS 8.0 Web サーバーの役割と、ASP.NET 4.5 と Windows Server 2012 を実行している別のコンピューターがあります。 ASP.NET Core では、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。 ASP.NET 4.5 では、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+* IIS から発行設定ファイルを生成するには IIS 8.0 Web サーバーの役割が正しく構成されている Windows Server 2012 を実行しているコンピューターが必要し、ASP.NET 4.5 または ASP.NET Core のいずれかがインストールされています。 ASP.NET Core では、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。 ASP.NET 4.5 では、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio で新しい ASP.NET プロジェクトを作成します。
 

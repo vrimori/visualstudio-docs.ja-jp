@@ -11,17 +11,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a0fcc9f6ec4143a757139a9e013f1a1f4dbe666e
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 3e844e2177d01d5b308472eae5661b25798f0838
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって Azure App Service にアプリケーションを公開 Visual Studio で発行設定
 
 使用することができます、**発行**をインポートするツールの設定を発行し、アプリを展開します。 この記事では使用して Azure の App Service の発行設定しますが、使用することをインポートするのと同様の手順から設定を発行する[IIS](../deployment/tutorial-import-publish-settings-iis.md)です。 一部のシナリオでは、発行設定プロファイルを Visual Studio のインストールごとに、サービスへの展開を手動で構成するよりも高速にすることができますの使用します。
 
-次の手順は、Visual Studio での ASP.NET、ASP.NET Core と .NET Core のアプリに適用されます。 手順は、Visual Studio 2017 15.6 のバージョンに対応します。
+次の手順は、Visual Studio での ASP.NET、ASP.NET Core と .NET Core のアプリに適用されます。 インポートすることも発行の設定[Python](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio)アプリ。 手順は、Visual Studio 2017 15.6 のバージョンに対応します。
 
 このチュートリアルでは、次の作業を行います。
 
@@ -30,10 +30,10 @@ ms.lasthandoff: 05/10/2018
 > * 発行設定ファイルを Visual Studio にインポートします。
 > * Azure App Service にアプリを配置します。
 
-発行設定ファイル (*.publishsettings) 発行プロファイルとは異なる (*.pubxml) Visual Studio で作成します。 発行設定ファイルが Azure App Service によって作成され、Visual Studio にし、インポートすることができます。
+発行設定ファイル (*\*.publishsettings*) 発行プロファイルとは異なる (*\*.pubxml*) Visual Studio で作成します。 発行設定ファイルが Azure App Service によって作成され、Visual Studio にし、インポートすることができます。
 
 > [!NOTE]
-> だけを Visual Studio が公開プロファイルをコピーする必要がある場合 (\*.pubxml ファイル) を別の Visual Studio のインストールが 1 つから、公開プロファイルを見つけることができます *\<profilename\>.pubxml*、 *\\< projectname\>\Properties\PublishProfiles*マネージ プロジェクトの種類のフォルダーです。 Web サイト、探します、 *\App_Data*フォルダーです。 発行プロファイルは、MSBuild XML ファイルです。
+> だけを Visual Studio が公開プロファイルをコピーする必要がある場合 (*\*.pubxml*ファイル) を別の Visual Studio のインストールが 1 つから、公開プロファイルを見つけることができます *\<profilename\>.pubxml*で、  *\\< projectname\>\Properties\PublishProfiles*マネージ プロジェクトの種類のフォルダーです。 Web サイト、探します、 *\App_Data*フォルダーです。 発行プロファイルは、MSBuild XML ファイルです。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

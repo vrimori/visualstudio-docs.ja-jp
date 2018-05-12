@@ -19,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e3824bc4bc4f51baf822caee11a5fb4c106fa9e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3f0b97564c48255ea8b8f37e370402fa8f7499aa
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="debugger-security"></a>デバッガーのセキュリティ
 別プロセスでデバッグする機能によって、リモート環境からのデバッグをはじめとした、さまざまな操作を行うことができます。 ただし、デバッガーに悪意があると、デバッグ対象のコンピューターに広範囲の損害を与える可能性があります。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/18/2018
 ### <a name="managed-debugging-security"></a>マネージ デバッグのセキュリティ  
  すべてのマネージ デバッグに適用される全般的な推奨事項を次に示します。  
   
--   信頼されていないユーザーのプロセスにアタッチするときに注意してください: が信頼できることを想定するようにするとします。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい点またはことを確認して場合、このプロセスに接続しないで](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)です。  
+-   信頼されていないユーザーのプロセスにアタッチするときに注意してください: が信頼できることを想定するようにするとします。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい点またはことを確認して場合、このプロセスに接続しないで](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)です。  
   
 -   プロジェクトをインターネットからダウンロードするとき、およびそのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込むときは注意します。 デバッグを実行しない場合でも、これはリスクの高い方法です。 この場合、含まれるプロジェクトとコードが信頼できるかどうかを判断します。  
   
@@ -81,5 +81,5 @@ ms.lasthandoff: 04/18/2018
 ## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
- [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい点またはことを確認して場合がこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)   
+ [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい点またはことを確認して場合がこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
  [セキュリティ警告: デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)
