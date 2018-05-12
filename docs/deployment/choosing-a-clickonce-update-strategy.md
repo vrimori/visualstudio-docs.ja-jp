@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0013b9f7ae004b709a1651af0e32e36dd45f909c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 08025ed5d5e3806e04501c46a96e1df5f85b31fb
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="choosing-a-clickonce-update-strategy"></a>ClickOnce の更新方法の選択
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、アプリケーションを自動的に更新できます。 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、アプリケーションの更新が使用できるかどうかを確認するには、配置マニフェスト ファイルを定期的に読み取ります。 利用可能であれば、アプリケーションの新しいバージョンがダウンロードされて実行されます。 効率性を高めるために、変更されたファイルだけがダウンロードされます。  
@@ -35,14 +35,14 @@ ms.lasthandoff: 04/19/2018
 >  アプリケーションの更新には、ネットワーク接続が必要です。 ネットワーク接続されていない場合、選択した更新方法に関係なく、アプリケーションは更新プログラムをチェックせずに実行されます。  
   
 > [!NOTE]
->  .NET Framework 2.0 および .NET Framework 3.0 で、アプリケーションの起動の前後または <xref:System.Deployment.Application> の API を使用する前後に更新プログラムがあるかどうかをチェックする場合は、配置マニフェストで `deploymentProvider` を設定する必要があります。 `deploymentProvider`要素は、Visual studio に対応しています、**の場所を更新**フィールドに、**更新**のダイアログ ボックス、**発行**タブです。この規則は .NET Framework 3.5 で緩和されています。 詳細については、次を参照してください。 [ClickOnce アプリケーションのテスト用の展開および Resigning なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)です。  
+>  .NET Framework 2.0 および .NET Framework 3.0 で、アプリケーションの起動の前後または <xref:System.Deployment.Application> の API を使用する前後に更新プログラムがあるかどうかをチェックする場合は、配置マニフェストで `deploymentProvider` を設定する必要があります。 `deploymentProvider`要素は、Visual studio に対応しています、**の場所を更新**フィールドに、**更新**のダイアログ ボックス、**発行**タブです。この規則は .NET Framework 3.5 で緩和されています。 詳細については、次を参照してください。 [ClickOnce アプリケーションのテスト用の展開および Resigning なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)です。  
   
 ## <a name="checking-for-updates-after-application-startup"></a>アプリケーション起動後の更新プログラムのチェック  
  この方法を使用した場合、アプリケーションは、実行中にバックグラウンドで配置マニフェスト ファイルの検索と読み取りを試みます。 更新が利用可能な場合は、ユーザーが次回アプリケーションを実行したときに、更新プログラムをダウンロードしてインストールするかどうかを確認するプロンプトが表示されます。  
   
  この方法は、低帯域幅のネットワーク接続や、ダウンロードに時間を要する可能性のあるサイズの大きなアプリケーションに最も適しています。  
   
- この更新方法を有効にする] をクリックして**アプリケーションの起動後**で、**アプリケーションの更新プログラムを確認する必要があります [**のセクションで、**アプリケーションの更新プログラム**ダイアログ ボックス。 セクションで、更新の間隔を指定**アプリケーションが更新プログラムを確認する頻度を指定して**です。  
+ この更新方法を有効にする] をクリックして**アプリケーションの起動後**で、**アプリケーションの更新プログラムを確認する必要があります [** のセクションで、**アプリケーションの更新プログラム**ダイアログ ボックス。 セクションで、更新の間隔を指定**アプリケーションが更新プログラムを確認する頻度を指定して**です。  
   
  これは、変更した場合と同じ、**更新**マニフェストの次のように、展開内の要素。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/19/2018
   
  この方法は、高帯域幅のネットワーク接続に最も適しています。低帯域幅の接続では、アプリケーション起動時の遅延が容認できないほど長くなる可能性があります。  
   
- この更新方法を有効にする] をクリックして**アプリケーションを開始する前に**で、**アプリケーションの更新プログラムを確認する必要があります [**のセクション、**アプリケーションの更新プログラム**ダイアログ ボックス。  
+ この更新方法を有効にする] をクリックして**アプリケーションを開始する前に**で、**アプリケーションの更新プログラムを確認する必要があります [** のセクション、**アプリケーションの更新プログラム**ダイアログ ボックス。  
   
  これは、変更した場合と同じ、**更新**マニフェストの次のように、展開内の要素。  
   

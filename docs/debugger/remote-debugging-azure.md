@@ -12,11 +12,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 3a6e25d98c2560c9cfd6901d30a7a5252398f6fc
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: c95a91ecd057bfec7af5e9b932d4326cdcab9270
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017 で Azure での IIS で ASP.NET Core のリモート デバッグ
 
@@ -110,11 +110,17 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 3. システムを再起動 (実行または**net stop が/y**続く**net 開始 w3svc**システム パスへの変更を取得するコマンド プロンプトから)。
 
+## <a name="optional-install-web-deploy-36-for-hosting-servers-on-windows-server"></a>(省略可能)インストール Web 3.6 Windows Server 上のサーバーをホストするための展開します。
+
+一部のシナリオで、速度を向上するインポートは、手動で展開オプションを構成する代わりに Visual Studio での設定を公開します。 発行の Visual Studio での発行プロファイルを構成する代わりに設定をインポートする場合を参照してください[発行の設定のインポートと IIS に配置](../deployment/tutorial-import-publish-settings-iis.md)です。 それ以外の場合、このトピックで維持されを参照してください。 インポートに関する記事を完了する場合発行の設定と、アプリを配置するしに戻ってこのトピックのセクションで開始[リモート ツールをダウンロードする](#BKMK_msvsmon)です。
+
 ### <a name="BKMK_install_webdeploy"></a> (省略可能)インストール Web 3.6 Windows Server での展開します。
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
 ### <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターで ASP.NET Web サイトを構成します。
+
+インポートする場合は、発行の設定、このセクションをスキップすることができます。
 
 1. **インターネット インフォメーション サービス (IIS) マネージャー** を開き、 **[サイト]** に移動します。
 

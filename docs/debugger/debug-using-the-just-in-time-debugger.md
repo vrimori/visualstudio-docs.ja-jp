@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6abdd96f740d36b4f6806b16e6cdd9ba946cb95
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 17dc34cd030bf2eab430872a191424fb657d6cd0
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 ジャスト イン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部で実行されるアプリケーション例外またはクラッシュが発生した場合。 これにより、Visual Studio が実行されていない場合、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
@@ -36,7 +36,7 @@ Windows デスクトップ アプリの Just-in-time デバッグは機能しま
 
     有効または無効にジャスト イン タイム レジストリ キーでは、デバッグ設定し、管理者特権は、そのキーを変更する必要があります。
     
-2. **[ツール]** メニューの **[オプション]**をクリックします。
+2. **[ツール]** メニューの **[オプション]** をクリックします。
   
 2.  **オプション** ダイアログ ボックスで、展開、**デバッグ**ノード。  
   
@@ -46,7 +46,7 @@ Windows デスクトップ アプリの Just-in-time デバッグは機能しま
   
 4.  **コードの種類の有効にする Just-In-Time デバッグを**ボックス、オンまたはオフに関連するプログラムの種類:**マネージ**、**ネイティブ**、または**スクリプト**.    
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない時にのみ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
   
@@ -122,7 +122,7 @@ static void Main(string[] args)
   
  ソリューションのビルド (Visual Studio で、次のように選択します。**ビルド > ソリューションのリビルド**)。 デバッグまたはリリース構成のいずれかを選択できます (選択**デバッグ**デバッグの完全なエクスペリエンスに)。 ビルド構成の詳細については、「[ビルド構成について](../ide/understanding-build-configurations.md)」を参照してください。  
   
- ビルド プロセスでは、実行可能 ThrowsNullException.exe を作成します。 C# プロジェクトを作成したフォルダーの下で見つかります。 **...\ThrowsNullException\ThrowsNullException\bin\Debug**または**...\ThrowsNullException\ThrowsNullException\bin\Release**です。  
+ ビルド プロセスでは、実行可能 ThrowsNullException.exe を作成します。 C# プロジェクトを作成したフォルダーの下で見つかります。 **...\ThrowsNullException\ThrowsNullException\bin\Debug**または **...\ThrowsNullException\ThrowsNullException\bin\Release**です。  
   
  ThrowsNullException.exe をダブルクリックします。 次のように、コマンド ウィンドウが表示されます。  
   
@@ -141,9 +141,9 @@ static void Main(string[] args)
   
  ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")  
   
- **利用可能なデバッガー**、表示されます、 **Microsoft Visual Studio の新しいインスタンス<available version>**の行を選択します。 既に選択されていない場合は、ここで選択します。  
+ **利用可能なデバッガー**、表示されます、 **Microsoft Visual Studio の新しいインスタンス<available version>** の行を選択します。 既に選択されていない場合は、ここで選択します。  
   
- ウィンドウの下部にある [ **、選択したデバッガーを使用してデバッグする?**、] をクリックして**[はい]**です。  
+ ウィンドウの下部にある [ **、選択したデバッガーを使用してデバッグする?**、] をクリックして **[はい]** です。  
   
  実行の例外をスローする行で停止するいると、Visual Studio の新しいインスタンスに ThrowsNullException プロジェクトを開きます。  
   
@@ -178,4 +178,4 @@ static void Main(string[] args)
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
  [デバッガーの基本事項](../debugger/debugger-basics.md)   
  [Just-in-time、デバッグ オプション ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)   
- [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)
+ [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
