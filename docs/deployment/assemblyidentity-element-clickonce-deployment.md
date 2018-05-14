@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;assemblyIdentity&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
@@ -29,9 +29,8 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-      <assemblyIdentity    
+```
+<assemblyIdentity    
    name   
    version  
    publicKeyToken  
@@ -48,13 +47,13 @@ ms.lasthandoff: 04/19/2018
 |`name`|必須。 情報提供を目的として、人間が判読できる配置の名前を指定します。<br /><br /> `name`に、一重引用符または二重引用符のような特殊文字が含まれている場合、アプリケーションはアクティブ化に失敗することがあります。|  
 |`version`|必須。 アセンブリのバージョン番号を次の形式で指定します:`major.minor.build.revision`.<br /><br /> この値は、アプリケーションの更新をトリガーするマニフェストが更新されるたび、増加する必要があります。|  
 |`publicKeyToken`|必須。 配置マニフェストに署名する公開キーの sha-1 ハッシュ値の最後の 8 バイトを表す 16 文字の 16 進文字列を指定します。 署名に使用する公開キーは 2048 ビット以上である必要があります。<br /><br /> アセンブリの署名は推奨されていますが、任意であり、署名するかに関わらずこの属性は必要です。 アセンブリが署名付きでない場合は、自己署名されたアセンブリから値をコピーするか、すべてがゼロ値である「ダミー」を使用する必要があります。|  
-|`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は`msil`すべてのプロセッサに対して`x86`32 ビット Windows の`IA64`64 ビット windows の場合と`Itanium`Intel 64 ビット Itanium プロセッサ用です。|  
+|`processorArchitecture`|必須。 プロセッサを指定します。 有効な値は、すべてのプロセッサに対して有効な `msil`、32 ビット Windows 用の`x86`、64 ビット windows 用の`IA64`、そして Intel 64 ビット Itanium プロセッサ用の`Itanium`です。|
 |`type`|必須。 Windows サイド バイ サイド インストール テクノロジとの互換性を維持します。 許可されている値は`win32`だけです。 許可されている値だけ`win32`です。|  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
- 次のコード例を示しています、`assemblyIdentity`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 このコード例に示されている例の一部である、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックです。  
+次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト の`assemblyIdentity`要素を示しています。 このコード例は、[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックに示されている例の一部です。
   
 ```  
 <!-- Identify the deployment. -->  
