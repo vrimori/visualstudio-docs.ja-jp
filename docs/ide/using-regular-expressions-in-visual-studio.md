@@ -18,13 +18,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1dae1c3d62fce5ba8b3991e41bade1d612b74647
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 16a5647461c37502f2d7a91cfb71c8f96164f2b1
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
+# <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 
 Visual Studio は、テキストの検索と置換をするときに、[.NET Framework の正規表現](/dotnet/standard/base-types/regular-expressions)を使います。
 

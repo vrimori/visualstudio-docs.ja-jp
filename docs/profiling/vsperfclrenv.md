@@ -15,17 +15,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d0e459fe1bd9960c46a1816add1f79e4d5507d5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc032fc89b6dee609fa3c69ebd210aa8adefd17c
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 
 VSPerfCLREnv ツールは、.NET Framework アプリケーションをプロファイルするために必要な環境変数を設定するために使用されます。 このツールでは、次の構文が使用されます。
 
-```
+```cmd
 VsPerfCLREnv [/option]
 ```
 
@@ -45,7 +45,7 @@ VsPerfCLREnv [/option]
 
 次の例には、サンプリング メソッドを使用するプロファイル実行に階層相互作用データが含まれています。
 
-```
+```cmd
 VSPerfCLREnv /SampleOn
 VSPerfCLREnv /InteractionOn
 VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
@@ -53,7 +53,7 @@ VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
 
 次の例には、Windows サービスのプロファイルの実行に階層相互作用データが含まれています。
 
-```
+```cmd
 VSPerfCLREnv /GlobalSampleOn
 VSPerfCLREnv /GlobalInteractionOn
 REM Restart the computer and start the service

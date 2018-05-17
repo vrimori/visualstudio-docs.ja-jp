@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 05b5b87afda20990f122597520b0e2cf7e9b7ac1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0efe4fe685a0a75438cb68590722ea6748a15f23
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP アプリでのエネルギー使用の分析
 Visual Studio の **エネルギー消費** プロファイラーは、常時または一時的に内蔵バッテリで動作する低電力のタブレット デバイス上で、UWP アプリによる電力とエネルギーの消費量を分析するのに役立ちます。 バッテリ電源デバイスでは、エネルギー消費量が多すぎるアプリはユーザーに嫌われ、最終的にアンインストールされる場合もあります。 エネルギー使用を最適化することで、ユーザーがそのアプリを選択する可能性が高まり、使用頻度も向上します。  
@@ -67,7 +67,7 @@ Visual Studio の **エネルギー消費** プロファイラーは、常時ま
   
  ユーザー マークを追加するには、コード内のマークする位置に次のコードを追加します。  
   
-```  
+```JavaScript  
 if (performance && performance.mark) {  
     performance.mark(markDescription);  
 }  

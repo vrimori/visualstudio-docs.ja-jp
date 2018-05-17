@@ -1,20 +1,21 @@
 ---
 title: ビルド アクション
+description: この記事では、C# プロジェクトで使用できるさまざまなビルド アクションについて説明します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 3e876bbc20f2f2e86ba7ec4806f67f4a2573a089
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 889414d391a4a894879399317d782df58a8bacb3
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="build-actions"></a>ビルド アクション
 
 Visual Studio for Mac プロジェクトのすべてのファイルにビルド アクションが含まれています。これは、ビルド中、ファイルに行われる処理を制御します。 設定するには、下の画像のように、ファイルをクリックし、**[ビルド アクション]** を選択ます。
 
-![](media/projects-and-solutions-image1.png)
+![ソリューション エクスプローラーで [コンパイル] ビルド アクションを選択する](media/projects-and-solutions-image1.png)
 
 C# プロジェクトの一般的ビルド アクションには次のようなものがあります。
 

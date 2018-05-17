@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23ab79ddf73b8481f8393ac39696bc0a5ee74c75
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 08c9de6d307b54829e2f0783cf0ff272f399de68
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="gc-vsperfcmd"></a>GC (VSPerfCmd)
 **GC** オプションは、.NET Framework メモリ割り当てとオブジェクト有効期間データを収集できます。 **GC** オプションはサンプリング プロファイリング方法でのみ、かつ、**Launch** オプションとの併用でのみ利用できます。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cmd  
 VSPerfCmd.exe /Launch:AppName /GC[:{Allocation|Lifetime}] [Options]  
 ```  
   
@@ -45,7 +45,7 @@ VSPerfCmd.exe /Launch:AppName /GC[:{Allocation|Lifetime}] [Options]
 ## <a name="example"></a>例  
  次の例では、アプリケーションが起動し、.NET Framework メモリ割り当てデータが収集されます。  
   
-```  
+```cmd  
 VSPerfCmd.exe /Launch:TestApp.exe /gc  
 ```  
   

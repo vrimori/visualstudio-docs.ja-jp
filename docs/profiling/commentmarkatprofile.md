@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4484e5fdee3158b61e7d1ae6d33966141e2a6a5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 63bd01f6ad180c85e48c51925de094df94aaa335
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 `CommentMarkAtProfile` メソッドは、タイムスタンプ値、数字マーク、コメント文字列を .vsp ファイルに挿入します。 タイムスタンプ値は、外部イベントの同期に使用できます。 マークやコメントを挿入するには、CommentMarkAtProfile 関数が含まれるスレッドのプロファイリングをオンにする必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (  
                                    __int64 dnTimestamp,  
                                    long lMarker,  
@@ -77,7 +77,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 ## <a name="example"></a>例  
  次のコードは、汎用関数呼び出しの CommentMarkAtProfile の使用を表しています。 この例では、コードで ANSI 対応関数を呼び出すかどうかを判断するために、Win32 文字列マクロおよび ANSI のコンパイラ設定が使用されていることを前提としています。  
   
-```  
+```cpp  
 void ExerciseCommentMarkAtProfile(void)  
 {  
     // Declare and initalize variables to pass to   

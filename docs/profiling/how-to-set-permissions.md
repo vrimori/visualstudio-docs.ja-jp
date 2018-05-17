@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1f3cf4ca3cb79a6b58d4f3549d05d355764148f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d8c5b6e7878e4000b8263cc772d59ee197f0b62e
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="how-to-set-permissions"></a>方法: アクセス許可を設定する
 
@@ -58,7 +58,7 @@ Users グループのメンバーの場合は、チームの他のメンバー�
 
      このフォルダーのパスの一例を次に示します。
 
-    ```
+    ```cmd
     D:\ourProject
     ```
 
@@ -82,13 +82,13 @@ Users グループのメンバーの場合は、チームの他のメンバー�
 
 2. 次のディレクトリに移動します。
 
-    ```
+    ```cmd
     <drive>:\Program Files\Microsoft Visual Studio 10\Team Tools\Performance Tools
     ```
 
 3. 次のコマンドを実行します。
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,start /admin:service,start
     ```
 
@@ -100,7 +100,7 @@ Users グループのメンバーの場合は、チームの他のメンバー�
 
 4. コンピューターへの管理者アクセス許可を持たないユーザーまたはグループがプロファイリング ドライバー機能にアクセスできるようにするために、次のコマンドを実行します。
 
-    ```
+    ```cmd
     vsperfcmd /admin:security,allow,<right[,right],<user name|group name>
     ```
 
@@ -114,7 +114,7 @@ Users グループのメンバーの場合は、チームの他のメンバー�
 
 5. (省略可能) コンピューターの再起動後に前の手順の結果を維持する場合は、次のコマンドを実行します。
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,autostart,on
     ```
 

@@ -14,18 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29164c08b03bd23980aad381a1a832b2857309a6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3c3e6909bcb7299f4fd6d725334c26d2b59e0edb
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="diagnostic-namespace"></a>diagnostic 名前空間
 `diagnostics` 名前空間は、同時実行ビジュアライザー マーカーを出力するための機能を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 namespace diagnostic;  
 ```  
   

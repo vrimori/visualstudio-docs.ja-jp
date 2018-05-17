@@ -1,5 +1,5 @@
 ---
-title: Azure App Service での Python インタープリターとライブラリのインストール
+title: Azure App Service での Python の構成
 description: Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。
 ms.date: 09/13/2017
 ms.prod: visual-studio-dev15
@@ -12,13 +12,13 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: cd3be2ee5d62c687fab1c822e3469d9523624047
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9a71ea2210bfc6c56a235f194354c3279c8e7370
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="managing-python-on-azure-app-service"></a>Azure App Service での Python の管理
+# <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service で Python 環境を設定する方法
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
 
@@ -46,7 +46,7 @@ Azure App Service でのカスタマイズ可能な Python のサポートは、
 
 ## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager から Python のバージョンを選択する
 
-Azure Resource Manager テンプレートを使用して App Service をデプロイしている場合は、サイト拡張機能をリソースとして追加します。 拡張機能は、入れ子になったリソースとして、型 `siteextensions` と [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22) からの名前で表示されます。
+Azure Resource Manager テンプレートを使用して App Service をデプロイしている場合は、サイト拡張機能をリソースとして追加します。 具体的には、拡張機能は、入れ子になったリソース (`resources` の下の `resources` オブジェクト) として、型 `siteextensions` および [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22) からの名前で表示されます。
 
 たとえば、`python361x64` (Python 3.6.1 x 64) への参照を追加すると、テンプレートは、次のようになります (いくつかのプロパティは省略しています)。
 

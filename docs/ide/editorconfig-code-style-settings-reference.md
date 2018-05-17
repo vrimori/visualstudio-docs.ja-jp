@@ -1,7 +1,7 @@
 ---
-title: Visual Studio での EditorConfig の .NET コーディング規則の設定 | Microsoft Docs
+title: Visual Studio での EditorConfig の .NET コーディング規則の設定
 ms.date: 02/28/2018
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - CSharp
 - VB
@@ -13,15 +13,16 @@ helpviewer_keywords:
 author: kuhlenh
 ms.author: kaseyu
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b313271e29bba660af1aa48654bfdfefb81e39f1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2a6642b03d5e49763cd18bccae8f88ff1f7c5bd4
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -237,7 +238,7 @@ dotnet_style_qualification_for_event = false:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
-| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
+| dotnet_style_predefined_type_for_locals_ parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
 | dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし |
 
 **dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**
@@ -303,7 +304,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
+| dotnet_style_require_ accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
 | visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:none | 15.5 |
 
@@ -391,7 +392,7 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 | 最初のリリース |
 | dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:提案 | 最初のリリース |
 | dotnet_style_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ および Visual Basic 15+ | true:提案 | 15.6 |
-| dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
+| dotnet_style_prefer_inferred_anonymous_ type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
 
 **dotnet\_style\_object_initializer**
 
@@ -1496,7 +1497,7 @@ csharp_indent_labels = flush_left
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_space_after_cast |  C# | False | 15.3  |
 | csharp_space_after_keywords_in_control_flow_statements |  C# | true | 15.3  |
-| csharp_space_between_method_declaration_parameter_list_parentheses |  C# | False | 15.3  |
+| csharp_space_between_method_declaration_parameter_ list_parentheses |  C# | False | 15.3  |
 | csharp_space_between_method_call_parameter_list_parentheses |  C# | False | 15.3  |
 | csharp_space_between_parentheses |  C# | False | 15.3  |
 

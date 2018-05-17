@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 97e0b1e58a1a3a490d97d49410f04b4b08eb844b
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: dc5260c50fde7137ed2c598483fd2647d73f4112
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-6-use-the-polls-django-web-project-template"></a>チュートリアル手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
@@ -193,7 +193,7 @@ Django では、移行コマンドの実行時に必要な移行が適用され�
 
 回答: モデルがデータベースの内容と一致しない場合、実行時に適切な例外がスローされ、Django は失敗します。 たとえば、前のセクションで示したモデルの変更を移行し忘れた場合、"no such column: app_poll.author" というエラーが表示されます。
 
-![モデルの変更が移行されなかったときに表示されるエラー](media/django/step06-exception-when-forgetting-to-migrate.png).
+![モデルの変更が移行されなかったときに表示されるエラー](media/django/step06-exception-when-forgetting-to-migrate.png)である必要があります。
 
 ### <a name="question-why-doesnt-solution-explorer-show-newly-generated-scripts-after-running-django-make-migrations"></a>質問: [Django で移行を実行する] を実行した後、ソリューション エクスプローラーに新しく生成されたスクリプトが表示されないのはなぜですか
 
@@ -361,7 +361,7 @@ admin.site.register(Poll, PollAdmin)
 ## <a name="next-steps"></a>次の手順
 
 > [!Note]
-> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django) のチュートリアル ソース コードと一致するようにします。
+> このチュートリアルの途中で Visual Studio ソリューションをソース コード管理にコミットした場合は、もう 1 つのコミットを実行することをお勧めします。 ソリューションは、GitHub [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) のチュートリアル ソース コードと一致するようにします。
 
 Visual Studio で "空の Django Web プロジェクト"、"Django Web プロジェクト"、"ポーリング Django Web プロジェクト" の各テンプレートを全体的に確認しました。 ビューとテンプレートの使用方法など、Django のすべての基本を学習し、ルーティング、認証、データベース モデルの使用方法を確認しました。 これで、必要なビューとモデルがある独自の Web アプリを作成できるようになったはずです。
 

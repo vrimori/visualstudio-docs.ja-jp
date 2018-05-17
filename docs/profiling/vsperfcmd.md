@@ -16,16 +16,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 869aa12259775a87030fcff6956c644d8296f3a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: df1982f0f5f1739d514dcedd32291bd765a5680b
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 **VSPerfCmd.exe** ツールはパフォーマンス データ収集の開始と停止に使用されます。 このツールでは、次の構文が使用されます。  
   
-```  
+```cmd  
 VSPerfCmd [/U] [/options]  
 ```  
   

@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac35c99b9e75be50d00e560e9c8899420685f7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bcb969201d484aabc01c7c5cc66e3656fbb29fb9
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
 
@@ -54,20 +54,20 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 2. .NET プロファイル環境変数と TIP を環境変数初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /traceon
     vsperfclrenv /interactionon
     ```
 
 3. プロファイラーを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:Desktop_tip.vsp 
     ```
 
 4. VSPerfCmd でアプリケーションを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /launch:DesktopApp.exe
     ```
 
@@ -75,7 +75,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 6. TIP 環境変数を削除します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /off
     ```
 
@@ -97,13 +97,13 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 3. .NET プロファイル環境変数を初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globaltraceon
     ```
 
 4. TIP 環境変数を初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globalinteractionon
     ```
 
@@ -113,7 +113,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 7. プロファイラーを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -121,7 +121,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 9. プロファイラーをサービスにアタッチします。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -133,7 +133,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 12. .NET および TIP プロファイル環境変数を削除します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globaloff
     ```
 
@@ -151,7 +151,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、[!INCLUDE[v
 
 VSPerfASPNETCmd を使用して収集されたデータのプロファイリングに階層相互作用を追加するには、**/TIP** オプションをコマンド ラインに追加します。 たとえば、インストルメンテーション メソッドを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション用に階層相互作用データを収集するには、次のコマンド ラインを使用します。
 
-```
+```cmd
 vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```
 

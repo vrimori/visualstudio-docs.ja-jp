@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2904e329e26fe588553745f3a9d6ca8a572b5c83
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 4050694685302eb527b33d8810bc7f92974bc305
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-2-create-a-django-app-with-views-and-page-templates"></a>チュートリアル手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -278,4 +278,4 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 - [最初の Django アプリの作成、パート 1 - ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial01/#write-your-first-view) (docs.djangoproject.com)
 - インクルードと継承など Django テンプレートの詳細な機能について、「[The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)」(Django テンプレート言語) (docs.djangoproject.com) を確認する
 - [inLearning での正規表現のトレーニング](https://www.linkedin.com/learning/topics/regular-expressions) (LinkedIn)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

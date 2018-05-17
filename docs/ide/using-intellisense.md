@@ -1,7 +1,7 @@
 ---
-title: Visual Studio の IntelliSense | Microsoft Docs
-ms.custom: ''
+title: Visual Studio IntelliSense
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6e87113f8c8a703a6eb4d893c0ca54a90bfb8d1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0afa66a9085c16700306330acdbfba3b9667fc03
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-intellisense-in-visual-studio"></a>Visual Studio での IntelliSense の使用
 
@@ -31,7 +31,7 @@ IntelliSense には、言語によって異なる要素が多数あります。 
 
 ## <a name="list-members"></a>リスト メンバー
 
-トリガーの文字 (マネージ コードではピリオド (`.`)、C++ では `::`) を入力すると、型 (または名前空間) の有効なメンバーが一覧表示されます。 文字の入力を続けると、一覧にフィルターが適用され、その文字で始まるか、名前の中の*いずれか*の単語がその文字で始まるメンバーだけが含まれます。 IntelliSense は "キャメル ケース" 照合も実行します。メンバー内の各キャメル ケースの単語の最初の文字を入力するだけで、それに一致するメンバーが表示されます。
+トリガーの文字 (マネージド コードではピリオド (`.`)、C++ では `::`) を入力すると、型 (または名前空間) の有効なメンバーが一覧表示されます。 文字の入力を続けると、一覧にフィルターが適用され、その文字で始まるか、名前の中の*いずれか*の単語がその文字で始まるメンバーだけが含まれます。 IntelliSense は "キャメル ケース" 照合も実行します。メンバー内の各キャメル ケースの単語の最初の文字を入力するだけで、それに一致するメンバーが表示されます。
 
 項目を選択した後、**Tab** キーを押すか空白を入力することによって、その項目をコードに挿入できます。 項目を選択してピリオドを入力した場合、項目がピリオドの前に表示され、ピリオドによって別のメンバー一覧が表示されます。 項目を選択した場合、挿入する前に、項目のクイック ヒントが表示されます。
 
@@ -39,23 +39,23 @@ IntelliSense には、言語によって異なる要素が多数あります。 
 
 ![Visual Studio のメンバー一覧](../ide/media/vs2015_intellisense.png "vs2015_Intellisense")
 
-**メンバーの一覧**機能を起動するには、**CTRL** + **J** キーを押すか、**[編集]** > **[IntelliSense]** > **[メンバーの一覧]** の順に選択するか、エディターのツール バーで **[メンバーの一覧]** を選択します。 空白行または認識可能なスコープの外で呼び出された場合、メンバー一覧にはグローバル名前空間にあるシンボルが表示されます。
+**メンバーの一覧**機能を手動で起動するには、**Ctrl**+**J** キーを押すか、**[編集]** > **[IntelliSense]** > **[メンバーの一覧]** の順に選択するか、エディターのツール バーで **[メンバーの一覧]** を選択します。 空白行または認識可能なスコープの外で呼び出された場合、メンバー一覧にはグローバル名前空間にあるシンボルが表示されます。
 
 既定でメンバーの一覧を無効にする (明確に指定しなければ表示されないようにする) には、**[ツール]** > **[オプション]** > **[すべての言語]** の順にクリックし、**[自動メンバー表示]** をオフにします。 特定の言語に対してのみメンバーの一覧を無効にするには、その言語の **[全般]** 設定で指定します。
 
-入力したテキストのみがコードに挿入される提案モードに変更することもできます。 たとえば、一覧にない識別子を入力して **Tab** キーを押すと、完了モードでは、入力した識別子がエントリに置き換わります。 完了モードと提案モードを切り替えるには、**Ctrl** + **Alt** + **Space** キーを押すか、**[編集]** > **[IntelliSense]** > **[完了モードの切り替え]** の順に選択します。
+入力したテキストのみがコードに挿入される提案モードに変更することもできます。 たとえば、一覧にない識別子を入力して **Tab** キーを押すと、完了モードでは、入力した識別子がエントリに置き換わります。 完了モードと提案モードを切り替えるには、**Ctrl**+**Alt**+**Space** キーを押すか、**[編集]** > **[IntelliSense]** > **[完了モードの切り替え]** の順に選択します。
 
 ## <a name="parameter-info"></a>パラメーター ヒント
 
 パラメーター ヒントでは、メソッド、属性、ジェネリック型パラメーター (C#)、またはテンプレート (C++) で必要とされるパラメーターの数、名前、およびデータ型について情報を確認できます。
 
-太字のパラメーターは、入力した関数で次に必要なパラメーターを表しています。 オーバーロードされた関数の場合、↑キーと↓キーを使用して、オーバーロードごとに異なるパラメーター情報を表示できます。
+太字のパラメーターは、入力した関数で次に必要なパラメーターを表しています。 オーバーロードされた関数の場合、**↑** キーと **↓** キーを使用して、オーバーロードごとに異なるパラメーター情報を表示できます。
 
 ![パラメーター ヒント](../ide/media/vs2015_param_info.png "VS2015_param_Info")
 
-関数やパラメーターに XML ドキュメント コメントによる注釈を付けると、そのコメントがパラメーター ヒントとして表示されます。 詳細については、「[XML コード コメントの追加](../ide/supplying-xml-code-comments.md)」を参照してください。
+関数やパラメーターに XML ドキュメント コメントによる注釈を付けると、そのコメントがパラメーター ヒントとして表示されます。 詳細については、[XML コード コメントの追加](../ide/supplying-xml-code-comments.md)に関するページを参照してください。
 
-パラメーター ヒントを手動で起動するには、**[編集]** > **[IntelliSense]** > **[パラメーター ヒント]** の順にクリックするか、**Ctrl** + **Shift** + **Space** キーを押すか、エディターのツール バーで **[パラメーター ヒント]** ボタンを選択します。
+パラメーター ヒントを手動で起動するには、**[編集]** > **[IntelliSense]** > **[パラメーター ヒント]** の順にクリックするか、**Ctrl**+**Shift**+**Space** キーを押すか、エディターのツール バーで **[パラメーター ヒント]** ボタンを選択します。
 
 ## <a name="quick-info"></a>クイック ヒント
 
@@ -67,7 +67,7 @@ IntelliSense には、言語によって異なる要素が多数あります。 
 
 ![C&#35; コード ファイルのパラメーター情報](../ide/media/vs2015_paraminfo.png "VS2015_ParamInfo")
 
-クイック ヒントを手動で起動するには、**[編集]** > **[IntelliSense]** > **[クイック ヒント]** の順に選択するか、**Ctrl** + **I** キーを押すか、エディターのツール バーで **[クイック ヒント]** を選択します。
+クイック ヒントを手動で起動するには、**[編集]** > **[IntelliSense]** > **[クイック ヒント]** の順に選択するか、**Ctrl**+**I** キーを押すか、エディターのツール バーで **[クイック ヒント]** を選択します。
 
 関数がオーバーロードされている場合、IntelliSense では一部のオーバーロード形式の情報が表示されないことがあります。
 
@@ -81,7 +81,7 @@ C++ コードのクイック ヒントをオフにするには、**[ツール]**
 
 IntelliSense オプションは、既定でオンになっています。 これらを無効にするには、**[ツール]** > **[オプション]** > **[テキスト エディター]** の順に選択し、**[パラメーター ヒント]** をオフにするか、メンバーの一覧機能が不要であれば **[自動メンバー表示]** をオフにします。
 
-## <a name="troubleshooting-intellisense"></a>IntelliSense のトラブルシューティング
+## <a name="troubleshoot-intellisense"></a>IntelliSense のトラブルシューティング
 
 IntelliSense オプションは、状況によっては意図どおりに機能しません。
 
@@ -99,8 +99,8 @@ MessageBox( hWnd, "String literal|")
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Basic の IntelliSense](../ide/visual-basic-specific-intellisense.md)  
-[C# IntelliSense](../ide/visual-csharp-intellisense.md)  
-[JavaScript IntelliSense](../ide/javascript-intellisense.md)  
-[コードの作成とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)  
-[XML コード コメントの追加](../ide/supplying-xml-code-comments.md)
+- [Visual Basic の IntelliSense](../ide/visual-basic-specific-intellisense.md)
+- [C# IntelliSense](../ide/visual-csharp-intellisense.md)
+- [JavaScript IntelliSense](../ide/javascript-intellisense.md)
+- [コードの記述とリファクタリング (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+- [XML コード コメントの追加](../ide/supplying-xml-code-comments.md)

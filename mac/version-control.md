@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: 9d19edb4801ee8af6a18f3e458cd06d0499e0273
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: c26cb512f0beb0dcfd47801d7a619ec78eb3cd32
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="version-control"></a>バージョン管理
 
@@ -23,7 +23,7 @@ Subversion は集中管理されているバージョン コントロール シ�
 
 Git は、チームが同じドキュメントで同時に作業できるようにする分散型バージョン管理システムです。 Git には、すべてのファイルを含む単一のサーバーが存在する場合がありますが、この中央のソースからリポジトリがチェック アウトされるたびに、リポジトリ全体がローカルのコンピューターに複製されます。
 
-# <a name="basic-concepts"></a>基本的な概念 
+## <a name="basic-concepts"></a>基本的な概念 
 
 Visual Studio for Mac は、Git と Subversion の両方のバージョン管理システムに対応しています。 Visual Studio for Mac で Git および Subversion のリポジトリをセットアップする方法、および変更のレビュー、コミット、プッシュなどの簡単な機能の説明については、次の記事を参照してください。
 

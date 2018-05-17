@@ -1,7 +1,7 @@
 ---
 title: '[Python 環境] ウィンドウ リファレンス'
 description: Visual Studio の [Python 環境] ウィンドウに表示される各タブの詳細について説明します。
-ms.date: 03/05/2018
+ms.date: 05/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7017ba7e91acc36b72c229cdf77ee7b604f6a920
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6ba46e41c8d6cd4feec4adc04f1470eed7744242
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="python-environments-window-tabs-reference"></a>[Python 環境] ウィンドウ タブ リファレンス
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/19/2018
 
 | コマンド | 説明 |
 | --- | --- |
-| Make this environment the default for new projects (この環境を新しいプロジェクトの既定にする) | アクティブな環境を設定します。これにより、IntelliSense データベースが読み込まれる間、Visual Studio がしばらく応答しなくなる場合があります。 多くのパッケージがある環境では、長時間応答しなくなる可能性があります。 |
+| Make this environment the default for new projects (この環境を新しいプロジェクトの既定にする) | アクティブな環境を設定します。これにより、IntelliSense データベースが読み込まれる間、Visual Studio (2017 バージョン 15.5 以前) がしばらく応答しなくなる場合があります。 多くのパッケージがある環境では、長時間応答しなくなる可能性があります。 |
 | ディストリビューターの Web サイトに移動する | Python のディストリビューションで提供された URL をブラウザーで開きます。 たとえば、Python 3.x では python.org に移動します。 |
 | 対話型ウィンドウを開く | この環境用の[対話型 (REPL) ウィンドウ](python-interactive-repl-in-visual-studio.md)を Visual Studio 内で開き、すべての[スタートアップ スクリプト (後述)](#startup-scripts) を適用します。 |
 | 対話型のスクリプトを確認する | 「[スタートアップ スクリプト](#startup-scripts)」をご覧ください。 |
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/19/2018
 
 *旧バージョンでは "pip" も表示されます。*
 
-環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。
+pip を使用して環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。 Visual Studio 2017 バージョン 15.7 以降では、代わりに conda パッケージ マネージャーを使用する **[パッケージ (Conda)]** オプションが表示されます  (その選択肢が表示されない場合は、オプション **[ツール]** > **[オプション]** > **[Python]** > **[試験段階]** >  **[Use conda package manager when available (instead of pip)]\(使用可能な場合、(pip ではなく) conda パッケージ マネージャーを使用する\)** を設定して、Visual Studio を再起動します)。
 
 既にインストールされているパッケージには、パッケージを更新するためのコントロール (上向き矢印) とアンインストールするためのコントロール (円内の X) が表示されます。
 
@@ -105,7 +105,8 @@ IntelliSense 入力候補データベースの現在の状態を示します。
 
 ![[Python Environments (Python 環境)] の [IntelliSense] タブ](media/environments-intellisense-tab.png)
 
-**Visual Studio 2017 バージョン 15.5** 以前は、IntelliSense による補完は、そのライブラリ用にコンパイルされているデータベースに依存しています。 データベースの構築はライブラリのインストール時にバックグラウンドで実行されますが、時間がかかる可能性があり、コードの記述の開始時には完了していないことがあります。 **Visual Studio 2017 バージョン 15.6** 以降は、特に有効にすることを選択しない限り、データベースに依存しないで完了する高速な方法が使用されます。
+- **Visual Studio 2017 バージョン 15.5** 以前は、IntelliSense による補完は、そのライブラリ用にコンパイルされているデータベースに依存しています。 データベースの構築はライブラリのインストール時にバックグラウンドで実行されますが、時間がかかる可能性があり、コードの記述の開始時には完了していないことがあります。
+- **Visual Studio 2017 バージョン 15.6** 以降は、既定ではデータベースに依存せずに完了する迅速な方法が使用されます。 このため、タブのラベルは **IntelliSense [データベース無効]** になります。 データベースを有効にするには、オプション **[ツール]** > **[オプション]** > **[Python]** >  **[試験段階]** > **[Use new style IntelliSense for environments]\(環境に対して新しいスタイル IntelliSense を使用する\)** をクリアします。
 
 Visual Studio は新しい環境を検出すると (またはユーザーが追加すると)、ライブラリのソース ファイルを分析することで、データベースのコンパイルを自動的に開始します。 インストールされている内容により、この処理には 1 分から 1 時間以上かかることがあります (たとえば、Anaconda には多くのライブラリが付属しており、データベースのコンパイルに少し時間がかかります)。完了すると、詳細な IntelliSense が提供され、新しいライブラリをインストールするまでデータベースを再度更新する (**[Refresh DB]\(DB の更新\)** ボタンで) 必要はありません。
 

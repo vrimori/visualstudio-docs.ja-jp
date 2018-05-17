@@ -1,9 +1,9 @@
 ---
-title: Visual Studio 2017 の新機能 | Microsoft Docs
+title: Visual Studio 2017 の新機能
 ms.custom: ''
-ms.date: 12/04/2017
-ms.technology:
-- vs-acquisition
+ms.date: 05/07/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 f1_keywords:
 - VS.StartPage.WhatsNew
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7c2ce39143bbc4be2e7dc2e077d93ee7a1fff52
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ae8a0424f822b4b84aed01badc5bc625aacdde8
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
-#### <a name="updated-for-the-156-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.6 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
+#### <a name="updated-for-the-157-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.7 リリース](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)の更新
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
 以前のバージョンである Visual Studio 2015 以降に行われた主な変更点の要約を示します。
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 * **AI の開発**。 Visual Studio Tools for AI (**15.5 の新機能**) では、Visual Studio の生産性機能を使用して、AI 革新を高速化することができます。 堅牢な実験機能 (たとえば、データ準備とモデル トレーニング ジョブの別の計算ターゲットへの透過的な送信など) のために、Azure Machine Learning とシームレスに統合するディープ ラーニング / AI ソリューションをビルド、テスト、展開します。 また、Visual Studio Tools for AI はカスタム メトリックと実行履歴追跡のサポートを提供し、データ サイエンスの再現性と監査を可能にします。
 
 > [!NOTE]
-> Visual Studio 2017 の新機能の一覧については、[現在のリリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)に関するページを参照してください。 また、将来的な機能の内容については、[プレビュー リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-preview-relnotes)に関するページを参照してください。
+> Visual Studio 2017 の新機能の一覧については、「[最新のリリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)」を参照してください。 また、将来的な機能の内容については、「[リリース ノートのプレビュー](https://www.visualstudio.com/news/releasenotes/vs2017-preview-relnotes)」を参照してください。
 
 Visual Studio 2017 の最も重要な改善点と新機能について、そのいくつかの詳細を確認できます。
 
@@ -55,7 +55,11 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
  ![Visual Studio 2017 のセットアップ ダイアログ](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 のセットアップ画面")
 
-ワークロードを使用する代わりに、独自のコンポーネントを選択するには、 インストーラーから **[個別のコンポーネント]** タブを選択します。 また、Windows の言語オプションを変更することなく、言語パックをインストールする場合は、 インストーラーの **[言語パック]** タブを選択します。  
+また、インストールを調整するオプションもあります。
+
+* ワークロードを使用する代わりに、独自のコンポーネントを選択するには、 インストーラーから **[個別のコンポーネント]** タブを選択します。
+* また、Windows の言語オプションを変更することなく、言語パックをインストールする場合は、 インストーラーの **[言語パック]** タブを選択します。
+* **15.7 の新機能**: Visual Studio のインストール場所を変更したいですか? インストーラーの **[インストール オプション]** タブを選択します。
 
 ステップ バイ ステップの手順を含む、新しいインストール エクスペリエンスの詳細については、[Visual Studio のインストール](../install/install-visual-studio.md)に関するページを参照してください。
 
@@ -74,14 +78,14 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 Visual Studio の新しいパフォーマンス センターは、IDE の起動時間を最適化するのに役立ちます。 パフォーマンス センターでは、IDE の起動を遅くしている可能性のある拡張機能やツール ウィンドウをすべて一覧表示します。 拡張機能を起動するタイミングや、ツール ウィンドウを起動時に開くかどうかを指定して、起動時のパフォーマンスを向上させるために使用することができます。
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>拡張機能のオンデマンド読み込みの高速化
-Visual Studio では、独自およびサードパーティの拡張機能が IDE の起動時ではなく必要に応じて読み込まれるように取り組みを進めています。 どの拡張機能が起動、ソリューションの読み込み、および入力パフォーマンスに影響があるかについて関心をお持ちですか? この情報については、[ヘルプ]、[Visual Studio のパフォーマンスの管理] の順に選択して確認することができます。
+Visual Studio では、独自およびサードパーティの拡張機能が IDE の起動時ではなく必要に応じて読み込まれるように取り組みを進めています。 どの拡張機能が起動、ソリューションの読み込み、および入力パフォーマンスに影響があるかについて関心をお持ちですか? この情報については、**[ヘルプ]**、**[Visual Studio のパフォーマンスの管理]** の順に選択して確認することができます。
 
   ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 2017 の [ヘルプ] ダイアログ ボックス - パフォーマンス管理")
 
 #### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>[拡張機能マネージャーのローミング] で拡張機能を管理する
 Visual Studio にサインインすると、お気に入りの拡張機能を使用して、各開発環境を容易に設定できるようになりました。 新しい [拡張機能マネージャーのローミング] は、クラウドに同期されたリストを作成することで、お気に入りの拡張機能をすべて追跡します。  
 
-Visual Studio の拡張機能の一覧を表示するには、[ツール]、[拡張機能と更新プログラム] の順にクリックし、[拡張機能マネージャーのローミング] をクリックします。
+Visual Studio の拡張機能の一覧を表示するには、**[ツール]**、**[拡張機能と更新プログラム]** の順にクリックし、**[拡張機能マネージャーのローミング]** をクリックします。
 
 ![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
 
@@ -106,14 +110,13 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 詳細については、「[Introducing Live Unit Testing](../test/live-unit-testing-intro.md)」(Live Unit Testing の概要) を参照してください。 Visual Studio Enterprise 2017 の各リリースで追加された新機能の一覧は、「[What's new in Live Unit Testing](../test/live-unit-testing-whats-new.md)」(Live Unit Testing の新機能) を参照してください。
 
-#### <a name="setting-up-a-cicd-pipeline"></a>CI/CD パイプラインの設定
+#### <a name="set-up-a-cicd-pipeline"></a>CI/CD パイプラインの設定
 #### <a name="automated-testing"></a>自動テスト
 自動化されたテストは、DevOps パイプラインの重要な部分です。 短い周期で、一貫性と信頼性のある方法でソリューションをテストし、公開できます。 CI/CD (Continuous Integration and Continuous Delivery/継続的インテグレーションと継続的デリバリー) フローにより、このプロセスがさらに効率的になります。
 
 自動化されたテストの詳細については、[DevOps の 自動化テストの CI/CD パイプライン](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/04/20/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently/)に関するブログ投稿をご覧ください。
 
-
-  [Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Committing with Confidence: Commit Time Code Quality (自信を持ってコミットする: タイム コードの品質をコミットする)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」をご覧ください。
+[Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Commit with confidence: Commit time code quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」 (自信を持ってコミットする: タイム コードの品質をコミットする) をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
 #### <a name="use-new-refactorings"></a>新しいリファクタリングの使用
@@ -138,15 +141,15 @@ Visual Studio でプロジェクトを操作する際に、コードを迅速に
 #### <a name="experience-improved-navigation-controls"></a>操作性が改善されたナビゲーション コントロール
 より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
 
-* **15.4 の新機能**: **定義へ移動 (Ctrl キーを押しながらクリックまたは F12)** &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。  
+* **15.4 の新機能**: **定義へ移動** (**Ctrl** + **クリック**または **F12**) &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。  
 
-* **実装に移動 (Ctrl + F12)** &ndash;任意の基本データ型やメンバーから各種実装に移動します。
+* **実装に移動** (**Ctrl** + **F12**) &ndash; 任意の基本データ型やメンバーから各種実装に移動します。
 
-* **すべてにジャンプ (Ctrl + T または Ctrl + ,)** &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
+* **すべてにジャンプ** (**Ctrl** + **T** または **Ctrl** + **,**) &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
 
  ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
 
-* **すべての参照の検索 (Shift + F12)** &ndash; 構文の色付けにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
+* **すべての参照の検索** (**Shift** + **F12**) &ndash; 構文の色付けにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
  ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
 
@@ -161,7 +164,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 同時に 250 以上のバグを修正し、コンパイラおよびツールの問題をレポートしてきました。その多くは [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") を通じてお客様から寄せられたものです。
 
-詳細については、[Visual 2017 での Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)に関するページを参照してください。  
+詳細については、「[What's new for Visual C++ in Visual 2017](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)」 (Visual 2017 での Visual C++ の新機能) ページを参照してください。  
 
 ### <a name="debugging-and-diagnostics"></a>デバッグと診断
 #### <a name="run-to-click"></a>クリックで実行
@@ -174,12 +177,12 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 ![新しい例外ヘルパー ダイアログ](../ide/media/vs2017ide-ExceptionHelper.png "新しい例外ヘルパー ダイアログ")
 
-詳細については、「[Using the New Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)」 (Visual Studio で新しい例外ヘルパーを使用する) のブログの投稿を参照してください。
+詳細については、「[Use the new Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)」 (Visual Studio で新しい例外ヘルパーを使用する) のブログの投稿を参照してください。
 
 #### <a name="snapshots-and-intellitrace-step-back"></a>スナップショットと IntelliTrace ステップ バック:
 **15.5 の新機能**: IntelliTrace ステップ バックでは、ブレークポイントおよびデバッガー ステップ イベントごとにアプリケーションのスナップショットを自動的に取得します。 記録されたスナップショットにより、前のブレークポイントまたはステップに戻り、過去の時点でのアプリケーションの状態を確認できるようになります。 IntelliTrace ステップ バックでは、以前のアプリケーションの状態を確認したいが、デバッグの再開や必要なアプリ状態の再作成は必要でない場合に時間を節約できます。
 
-スナップショット間を移動して表示するには、デバッグ ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
+スナップショット間を移動して表示するには、**デバッグ** ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。 あるイベントに戻るまたは進むと、選択したイベントの過去のデバッグが自動的に有効になります。
 
 ![Visual Studio の新しい例外ヘルパー ダイアログ](../debugger/media/intellitrace-step-back-icons-description.png  "[前に戻る] ボタンと [次へ進む] ボタン")
 
@@ -234,12 +237,12 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 詳細については、「[Visual Studio と Xamarin](../cross-platform/visual-studio-and-xamarin.md)」ページを参照してください。
 
 ### <a name="entitlements-editor"></a>権利エディター
-**15.3 の新機能**: iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 entitlements.plist ファイルをダブルクリックすると起動します。
+**15.3 の新機能**: iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 *entitlements.plist* ファイルをダブルクリックすると起動します。
 
 ![Xamarin の権利エディター](../ide/media/xamarin-entitlements-editor.png "Xamarin の権利エディター")
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Xamarin 用の Visual Studio ツール
-**15.4 の新機能**: Xamarin Live では、開発者は iOS および Android デバイスで直接、アプリの継続的な展開、テスト、デバッグができます。 Xamarin Live Player (&mdash;App Store または Google Play で利用可能&mdash;) をダウンロードした後、デバイスを Visual Studio とペアリングすることで、モバイル アプリの構築方法を一変させることができます。 この機能は、Visual Studio に含まれるようになりました。[ツール]、[オプション]、[Xamarin]、[その他]、[Xamarin Live Player を有効にする] の順に移動して有効にすることができます。
+**15.4 の新機能**: Xamarin Live では、開発者は iOS および Android デバイスで直接、アプリの継続的な展開、テスト、デバッグができます。 Xamarin Live Player (&mdash;App Store または Google Play で利用可能&mdash;) をダウンロードした後、デバイスを Visual Studio とペアリングすることで、モバイル アプリの構築方法を一変させることができます。 この機能は、Visual Studio に含まれるようになりました。**[ツール]** > **[オプション]** > **[Xamarin]** > **[Other] \(その他)** > **[Xamarin Live Player を有効にする]** で有効にすることができます。
 
 ![Xamarin Live Player のペアリング、展開、ライブ エディット モードのアニメーション](../ide/media/xamarinliveplayer.gif)
 
@@ -289,18 +292,18 @@ Docker 対応にもなりました。
 詳細については、「[Visual Studio Tools for AI](../ai/about-ai-tools.md)」のページを参照してください。
 
 
-## <a name="talk-to-us"></a>ご意見  
+## <a name="contact-us"></a>お問い合わせ  
  Visual Studio チームにフィードバックを送ることにどんな意味があるのでしょうか? お客様からのフィードバックは、すべて真剣に考慮することにしています。 フィードバックによって今後の動向が左右されることになります。  
 
 Visual Studio を向上させることができるご提案がある場合、または問題を報告する場合は、「[ご意見](../ide/talk-to-us.md)」ページを参照してください。  
 
 ### <a name="report-a-problem"></a>問題を報告する  
- メッセージは、発生した問題の影響をすべて表せていない場合があります。 ハング、クラッシュ、またはその他のパフォーマンスの問題が発生した場合、**[問題の報告]** ツールを使用すると、再現手順やサポート ファイル (スクリーン ショット、トレース ファイル、ヒープ ダンプ ファイルなど) を簡単に Microsoft と共有することができます。 このツールの使用方法については、[問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)に関するページを参照してください。  
+ メッセージは、発生した問題の影響をすべて表せていない場合があります。 ハング、クラッシュ、またはその他のパフォーマンスの問題が発生した場合、**[問題の報告]** ツールを使用すると、再現手順やサポート ファイル (スクリーン ショット、トレース ファイル、ヒープ ダンプ ファイルなど) を簡単に Microsoft と共有することができます。 このツールの使用方法については、「[問題を報告する方法](how-to-report-a-problem-with-visual-studio-2017.md)」のページを参照してください。  
 
 ### <a name="track-your-issue-in-connect"></a>問題点を Connect で追跡する  
- Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、Connect に戻って、その状態を追跡することができます。  
+ Visual Studio に関するフィードバックの状況を追跡するには、 [Connect](http://connect.microsoft.com/) でバグ報告をしてください。 報告したら、**Connect** に戻って、その状態を追跡することができます。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 * [Visual Studio 2017 リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# の新機能](/dotnet/csharp/whats-new)  

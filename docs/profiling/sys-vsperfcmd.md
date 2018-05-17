@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e054cc07748e7503cb7410206c5ebff1408725b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6c202dbaec3ad1bf894d3892f4f89be75c3a7ad7
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
 VSPerfCmd.exe の **Sys** オプションは、システム呼び出しイベント (プロファイリングされたアプリケーションからオペレーティング システムへの関数呼び出し) にサンプリングされるプロファイリング イベントを設定し、必要に応じて、サンプリング間隔のシステム呼び出し数を既定値の 10 から変更します。  
@@ -27,7 +27,7 @@ VSPerfCmd.exe の **Sys** オプションは、システム呼び出しイベン
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cmd  
 VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]  
 ```  
   
@@ -62,7 +62,7 @@ VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]
 ## <a name="example"></a>例  
  この例では、プロファイラーのサンプリング イベントをシステム呼び出しに設定し、サンプリング間隔をサンプルごとに 20 の呼び出しに設定する方法を示します。  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /Sys:20  
 ```  
