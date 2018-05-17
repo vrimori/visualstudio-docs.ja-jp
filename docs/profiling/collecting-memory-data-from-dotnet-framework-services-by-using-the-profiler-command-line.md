@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5857f0e64014ff6570bfddd087d7c3aafe33b713
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b03973767088951d62620cfb5846dda6fa7a5f82
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  
@@ -34,15 +34,15 @@ ms.lasthandoff: 04/19/2018
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)|  
-|**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
+|**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
 |**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
 ### <a name="profiling-net-framework-memory-data"></a>.NET Framework メモリ データのプロファイリング  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
-|**スタンドアロン (クライアント) アプリケーションのプロファイリング**|-   [.NET Framework メモリ データの収集](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
-|**ASP.NET Web アプリケーションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md)|  
+|**スタンドアロン (クライアント) アプリケーションのプロファイリング**|-   [.NET Framework メモリ データの収集](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|  
+|**ASP.NET Web アプリケーションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
   
 ### <a name="analyzing-net-memory-data-views-and-reports"></a>.NET メモリ データ ビューとレポートの分析  
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)  

@@ -1,7 +1,9 @@
 ---
-title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する | Microsoft Docs
-ms.custom: ''
+title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
+description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
+ms.custom: mvc
 ms.date: 10/10/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: quickstart
 author: TerryGLee
@@ -12,11 +14,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 0f1a1397de407a4497961920762b0084069b3764
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b74f47201c706cbb4fe4a4f0eca647b350d9a72
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -30,7 +32,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. Visual Studio 2017 を開きます。
 
-1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択してから **[OK]** を選択します。
 

@@ -2,7 +2,7 @@
 title: コマンド ライン パラメーターを使用して Visual Studio をインストールする
 description: コマンド ライン パラメーターを使用して、Visual Studio のインストールを制御またはカスタマイズする方法を説明します。
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 05/07/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 566e662c55589424f04e93d0dd182faed8a4b757
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0fdd9df0d7c5b88b3fc4f19170be8494437fb2b7
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -101,6 +101,10 @@ ms.lasthandoff: 04/20/2018
 | `--nocache` | **15.2 の新機能、省略可能**: 指定した場合、パッケージはインストールまたは修復された後、削除されます。 必要な場合にのみ、もう一度ダウンロードされ、使用後はもう一度削除されます。 このオプションでは、その後のインストール、修復、または修正に使用されるグローバル ポリシー設定が上書きされます。 既定のポリシーでは、パッケージをキャッシュします。 アンインストール コマンドでは、これは無視されます。 詳細については、「[disable or move the package cache](disable-or-move-the-package-cache.md)」 (パッケージ キャッシュの無効化または移動) を参照してください。 |
 | `--noUpdateInstaller` | **15.2 の新機能、省略可能**: 指定した場合、quiet が指定されていると、インストーラーはインストーラー自体を更新しません。 インストーラーの更新が必要な場合に、noUpdateInstaller と quiet の両方が指定されていると、インストーラーはコマンドを失敗させて、0 以外の終了コードを返します。 |
 | `--noWeb` | **15.3 の新機能、省略可能**: インターネットからインストールしているコンテンツのダウンロードが即時セットアップされます。  インストールされるすべてのコンテンツがオフライン レイアウトで使用できる必要があります。  レイアウトにコンテンツがない場合、セットアップは失敗します。  詳細については、「[ネットワーク インストールから展開する](create-a-network-installation-of-visual-studio.md)」をご覧ください。 |
+| `--path <name>=<path>` | **15.7 の新機能、省略可能**: インストール用のカスタム インストール パスを指定するために使用します。 サポートされているパス名は、shared、cache、および install です。 |
+| `--path cache=<path>` | **15.7 の新機能、省略可能**: 指定した場所を使用してインストール ファイルをダウンロードします。 この場所は、Visual Studio を初めてインストールするときにのみ設定することができます。 例 : `--path cache="C:\VS\cache"` |
+| `--path shared=<path>` | **15.7 の新機能、省略可能**: Visual Studio のサイド バイ サイド インストール用の共有ファイルが含まれています。 ツールおよび SDK については、このドライブ上の場所にインストールされるものもあれば、この設定を上書きして、別のドライブにインストールされるものもあります。 例 : `--path shared="C:\VS\shared"` |
+| `--path install=<path>` | **15.7 の新機能、省略可能**: `–-installPath` と等価です。 具体的には、`--installPath "C:\VS"` と `--path install="C:\VS"` が等価です。 これらは、一度に 1 つずつしか使用できません。 |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>ワークロード ID とコンポーネント ID の一覧
 

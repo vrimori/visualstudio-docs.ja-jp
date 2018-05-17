@@ -1,9 +1,8 @@
 ---
-title: Visual Basic の IntelliSense | Microsoft Docs
-ms.custom: ''
+title: Visual Basic の IntelliSense
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [Visual Basic]
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44ff32ed0452efb5e413d730a69293147fec4c7c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 903bfe0a0effe87ca3f56fcfca5044afdf17e347
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intellisense-for-visual-basic-code-files"></a>Visual Basic コード ファイルの IntelliSense
 
@@ -39,7 +38,7 @@ Visual Basic ソース コード エディターでは、次の IntelliSense 機
 
 既定で補完機能を無効にするには、**[Visual Basic]** フォルダーの **[全般]** プロパティ ページで、**[自動メンバー表示]** の選択を解除します。
 
-メンバーの一覧、入力候補、または Alt + 右方向キーを起動することにより、補完機能を手動で起動することができます。 詳細については、「[IntelliSense の使用](../ide/using-intellisense.md)」を参照してください。
+[メンバーの一覧] または [入力候補] を呼び出すか、**Alt**+**→**キーを押して、補完機能を手動で起動することができます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページを参照してください。
 
 ## <a name="intellisense-in-zone"></a>ゾーン内の IntelliSense
 
@@ -57,4 +56,4 @@ Visual basic の IntelliSense コンプリート リストには、リストの�
 
 ## <a name="see-also"></a>関連項目
 
-[IntelliSense の使用](../ide/using-intellisense.md)
+- [IntelliSense を使用する](../ide/using-intellisense.md)

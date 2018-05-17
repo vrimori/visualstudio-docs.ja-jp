@@ -18,16 +18,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0c19d009ddfb60d3e8fa33cf4a976df44ab4c2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: be865f9fe51a1028192d54de556a52e47b241f0d
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="vsperfmon"></a>VSPerfMon
 VSPerfMon ツールを使用すると、アプリケーションのパフォーマンス データを収集できます。通常、このツールは VSPerfCmd.exe によって起動されます。 VSPerfMon を使用した場合は、VSPerfCmd ツールでは入手できない、プロセスのアタッチやデタッチに関する追加情報を表示できます。 この情報を表示するには、VSPerfMon を別のウィンドウで起動します。 VSPerfMon を起動するには、次の構文を使用します。  
   
-```  
+```cmd  
 VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTPUT <file name> [/WINCOUNTER:cfg] [/USER [DOMAIN\]username]  
 ```  
   

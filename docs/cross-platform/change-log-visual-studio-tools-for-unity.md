@@ -5,16 +5,16 @@ ms.date: 03/23/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: dantogno
-ms.author: v-davian
+author: TerryGLee
+ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 4d7f965cd2a0cd34ea3cb889f25809d32bee2270
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 86ccb5f78f939fa617216fb84cb71a934e314b1d
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
@@ -84,7 +84,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **統合:**
 
     -   プロジェクトの再読み込みは、外部での変更時のみ実行されます (調整による)。
- 
+
 ## <a name="3601"></a>3.6.0.1
  リリース: 2018 年 1 月 24 日
 
@@ -93,9 +93,9 @@ Visual Studio Tools for Unity の変更ログです。
 -   **統合:**
 
     -   pdb から mdb への自動デバッグ シンボル変換を修正済み
-    
+
     -   配列のサイズを変更するときに、インスペクターに影響する EditorPrefs.GetBool への間接的な呼び出しを修正しました。
- 
+
 ## <a name="3600"></a>3.6.0.0
  リリース: 2018 年 1 月 10 日
 
@@ -112,7 +112,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **デバッガー:**
 
     -   新しい Unity ランタイムを使用した DebuggerHidden/DebuggerStepThrough 属性のサポートを追加しました。
-    
+
 -   **ウィザード:**
 
     -   ウィザードの '最新' バージョンを導入しました。
@@ -126,7 +126,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **デバッガー:**
 
     -   中断イベントを処理するときの競合を修正しました。
-    
+
 -   **ウィザード:**
 
     -   roslyn コンテキストは、メソッドの挿入前に更新されます。

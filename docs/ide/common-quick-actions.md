@@ -12,15 +12,15 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b638d7c2faf792da208cb1dbea153f24db25066
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 70de979f1af431b85bc9fb2f07feec93486624ee
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="common-quick-actions"></a>共通のクイック アクション
 
-このトピックのセクションでは、C# と Visual Basic 両方のコードに共通に適用されるクイック アクションを示します。 これらのアクションは、Visual Studio の組み込み[アナライザー ルール](../code-quality/roslyn-analyzers-overview.md)の*コード修正*です。
+このトピックのセクションでは、C# と Visual Basic 両方のコードに共通に適用される**クイック アクション**の一部を示します。 このアクションは、コンパイラ診断、または Visual Studio の組み込みの [.NET Compiler Platform アナライザー](../code-quality/roslyn-analyzers-overview.md)のいずれかの*コード修正*です。
 
 ## <a name="actions-that-fix-errors"></a>エラーを修正するアクション
 

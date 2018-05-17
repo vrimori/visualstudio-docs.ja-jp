@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 1
 description: Visual Studio プロジェクトのコンテキストでの Django の基礎に関するチュートリアルでは、Visual Studio が Django 開発のために提供するサポートについて説明します。
-ms.date: 04/25/2018
+ms.date: 05/03/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 97f801d111f7fcb2aaeb207c3f3fcf1784a04f30
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 389bd7a3dedfcc400e9cf3d56d26723a5fc9aa7e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tutorial-step-1-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル手順 1: Visual Studio での Django Web フレームワークの概要
 
@@ -33,7 +33,9 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Python のワークロードがインストールされた Visual Studio 2017。 手順については、「[Visual Studio での Python サポートのインストール](installing-python-support-in-visual-studio.md)」をご覧ください。
+- Visual Studio 2017 と以下のオプション:
+  - **Python 開発ワークロード** (インストーラーの **[ワークロード]** タブ)。 手順については、「[Visual Studio での Python サポートのインストール](installing-python-support-in-visual-studio.md)」をご覧ください。
+  - **Windows 向け Git** と **Visual Studio 向け GitHub 拡張** (**[個別のコンポーネント]** タブの **[コード ツール]**)。
 
 Django プロジェクト テンプレートは Python Tools for Visual Studio のすべての旧バージョンにも含まれていますが、詳細は、このチュートリアルの説明と異なる場合があります (特に、Django フレームワークの旧バージョンでは異なります)。
 
@@ -89,7 +91,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
     ![ソース管理に使用できる Git リポジトリ オプションを表示している [チーム エクスプローラー] ウィンドウ](media/django/step01-team-explorer.png)
 
-    自身のプロジェクトにどちらのサービスでも選択できます。 このチュートリアルでは、GitHub の使用方法を示します。GitHub では、チュートリアルの完全なサンプル コードが [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django) リポジトリに保持されます。
+    自身のプロジェクトにどちらのサービスでも選択できます。 このチュートリアルでは、GitHub の使用方法を示します。GitHub では、チュートリアルの完全なサンプル コードが [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) リポジトリに保持されます。
 
 1. いずれかの **[発行]** コントロールを選択すると、**[チーム エクスプローラー]** から詳細情報を要求されます。 たとえば、このチュートリアルのサンプルを発行する場合は、リポジトリ自体を最初に作成する必要があります。その場合、**[Push to Remote Repository]\(リモート リポジトリにプッシュ\)** オプションがリポジトリの URL と共に使用されました。
 
@@ -206,4 +208,4 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
 - Django プロジェクト コード: [最初の Django アプリの作成、パート 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (docs.djangoproject.com)
 - 管理ユーティリティ: [django-admin と manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/) (docs.djangoproject.com)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

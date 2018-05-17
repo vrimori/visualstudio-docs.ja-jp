@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 941597abd21d62501546860cf9cc8adc8fc6de2d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 76f843133a31dd62129bb45e58337ca4a612cc01
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 
@@ -54,13 +54,13 @@ ms.lasthandoff: 04/19/2018
 
 4. 次のコマンドを入力し、適切な環境変数を設定します。
 
-    ```
+    ```cmd
     VSPerfCLREnv /sampleon
     ```
 
 5. VSPerfCmd.exe (プロファイラーを制御するコマンド ライン ツール) を実行してプロファイリングを開始します。 次のコマンドにより、アプリケーションとプロファイラーがサンプリング モードで起動します。
 
-    ```
+    ```cmd
     VsPerfCmd /start:sample /output:PeopleTraxReport.vsp /launch:PeopleTrax.exe
     ```
 
@@ -76,13 +76,13 @@ ms.lasthandoff: 04/19/2018
 
 9. プロファイラーをシャットダウンします。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     VSPerfCmd /shutdown
     ```
 
 10. 次のコマンドを使用し、環境変数をリセットします。
 
-    ```
+    ```cmd
     VSPerfCLREnv /sampleoff
     ```
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/19/2018
 
     - コマンド ライン ツール VSPerfReport.exe を使用してコンマ区切り値 (csv) ファイルを生成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 以外で使用するレポートを生成するには、次のコマンドを使用します。
 
-        ```
+        ```cmd
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all
         ```
 

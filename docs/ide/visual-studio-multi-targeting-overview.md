@@ -1,9 +1,8 @@
 ---
-title: Visual Studio での NET Framework の対象設定 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio での NET Framework の対象設定
 ms.date: 02/06/2018
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
@@ -16,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00f6baad44b4276ed4de81a2fd55c4f5b9d1c8a2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cba93b86d6ecebf249e11d18bd6e4b6b86e59fda
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio のマルチ ターゲットの概要
 
@@ -51,7 +50,7 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 - **ツールボックス**内のカスタム コントロールをフィルター処理し、対象のバージョンで使用できないコントロールを除外したり、複数のコントロールが使用可能である場合に最新のコントロールのみを表示したりします。
 
-- IntelliSense をフィルター処理して、対象のバージョンで使用できない言語機能を除外します。
+- **IntelliSense** をフィルター処理して、対象のバージョンで使用できない言語機能を除外します。
 
 - **プロパティ** ウィンドウのプロパティをフィルター処理して、対象のバージョンで使用できないプロパティを除外します。
 
@@ -62,7 +61,7 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 > [!NOTE]
 > フレームワークの対象機能は、開発中のアプリケーションが正しく実行されることを保証するわけではありません。 対象のバージョンで実行できるかどうかを確認するために、アプリケーションをテストする必要があります。 .NET Framework 2.0 より前のバージョンのフレームワークを対象にすることはできません。
 
-## <a name="selecting-a-target-framework-version"></a>対象フレームワークのバージョンの選択
+## <a name="select-a-target-framework-version"></a>対象フレームワークのバージョンを選択する
 
 プロジェクトを作成するときに、**[新しいプロジェクト]** ダイアログ ボックスで、対象の .NET Framework バージョンを選択します。 使用できる Framework のリストには、選択したテンプレートの種類に適用されるインストール済みの Framework バージョンが表示されます。 .NET Core テンプレートなどの .NET Framework を必要としないテンプレートの種類の場合、**[Framework]** ドロップダウン リストは表示されません。
 
@@ -70,17 +69,17 @@ Visual Studio では、プロジェクトの対象となる .NET Framework の�
 
 既存のプロジェクトでは、プロジェクトのプロパティ ダイアログ ボックス内で、対象となる [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンを変更できます。 詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
 
-## <a name="resolving-system-and-user-assembly-references"></a>システム参照およびユーザー アセンブリ参照の解決
+## <a name="resolve-system-and-user-assembly-references"></a>システム参照およびユーザー アセンブリ参照の解決
 
 .NET Framework の特定のバージョンを対象にするには、最初に適切なアセンブリ参照をインストールする必要があります。 [.NET ダウンロード](https://www.microsoft.com/net/download/windows) ページでさまざまなバージョンの .NET Framework の開発者向けパックをダウンロードすることができます。
 
-**[参照の追加]** ダイアログ ボックスでは、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンに関係しないシステム アセンブリが無効にされます。その結果、それらのアセンブリをプロジェクトに誤って追加することはありません  (システム アセンブリとは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] バージョンの一部である .dll ファイルのことです)。対象より新しいバージョンのフレームワークに属する参照は解決されず、そのような参照に依存するコントロールを追加することはできません。 このような参照を有効にするには、プロジェクトの対象である [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を、その参照を含むバージョンに再設定します。  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
+**[参照の追加]** ダイアログ ボックスでは、対象の [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のバージョンに関係しないシステム アセンブリが無効にされます。その結果、それらのアセンブリをプロジェクトに誤って追加することはありません  (システム アセンブリとは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] バージョンの一部である *.dll* ファイルのことです)。対象より新しいバージョンのフレームワークに属する参照は解決されず、そのような参照に依存するコントロールを追加することはできません。 このような参照を有効にするには、プロジェクトの対象である [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] を、その参照を含むバージョンに再設定します。  詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。
 
-アセンブリ参照の詳細については、「[Resolving Assemblies at Design Time](../msbuild/resolving-assemblies-at-design-time.md)」(デザイン時のアセンブリの解決) を参照してください。
+アセンブリ参照の詳細については、「[デザイン時のアセンブリの解決](../msbuild/resolving-assemblies-at-design-time.md)」を参照してください。
 
-## <a name="enabling-linq"></a>LINQ の有効化
+## <a name="enable-linq"></a>LINQ を有効にする
 
-.NET Framework Version 3.5 以降を対象にする場合は、System.Core の参照と System.Linq のプロジェクトレベル インポート (Visual Basic のみ) が自動的に追加されます。 LINQ 機能を使用する場合は、[Option Infer] もオンにする必要があります (Visual Basic のみ)。 対象をそれより前のバージョンの .NET Framework に変更すると、この参照とインポートは自動的に削除されます。 詳細については、「[LINQ の使用](/dotnet/csharp/tutorials/working-with-linq)」を参照してください。
+.NET Framework Version 3.5 以降を対象にする場合は、**System.Core** の参照と <xref:System.Linq> のプロジェクトレベル インポート (Visual Basic のみ) が自動的に追加されます。 LINQ 機能を使用する場合は、`Option Infer` もオンにする必要があります (Visual Basic のみ)。 対象をそれより前のバージョンの .NET Framework に変更すると、この参照とインポートは自動的に削除されます。 詳細については、「[LINQ の使用](/dotnet/csharp/tutorials/working-with-linq)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

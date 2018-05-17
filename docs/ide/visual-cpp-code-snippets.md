@@ -1,5 +1,5 @@
 ---
-title: Visual C++ コード スニペット
+title: Visual C++ のコード スニペット
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,11 +11,11 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eca50a938312f6c463ff661c83fd90c9218b5ec
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bb091701384d36ca5aa8154701d94cda5fb34a5b
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ のコード スニペット
 
@@ -23,9 +23,9 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 
 コード スニペットをコードの特定の場所に追加することと (挿入)、選択したコードをコード スニペットで囲むことのいずれかが可能です。
 
-## <a name="inserting-a-code-snippet"></a>コード スニペットの挿入
+## <a name="insert-a-code-snippet"></a>コード スニペットの挿入
 
-コード スニペットを挿入するには、C++ コード ファイル (.cpp または .h) を開き、ファイル内の任意の場所をクリックして、次のいずれかを実行します。
+コード スニペットを挿入するには、C++ コード ファイル (*.cpp* または *.h*) を開き、ファイル内の任意の場所をクリックして、次のいずれかを実行します。
 
 - 右クリックしてコンテキスト メニューを表示し、**[スニペットの挿入]** を選択する
 
@@ -41,9 +41,9 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 #endif // 0
 ```
 
-次に、0 を正しい条件に置き換えることができます。
+次に、**0** を正しい条件に置き換えることができます。
 
-## <a name="using-a-code-snippet-to-surround-selected-code"></a>コード スニペットを使用して、選択したコードを囲む
+## <a name="use-a-code-snippet-to-surround-selected-code"></a>コード スニペットを使用して、選択したコードを囲む
 
 コード スニペットを使用して、選択したコードを囲むには、行 (または複数の行) を選択し、次のいずれかを実行します。
 
@@ -71,7 +71,7 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 
 ## <a name="class-vs-classi"></a>class と classi
 
-**class** スニペットは MyClass というクラスの定義を提供します。これは適切な既定のコンストラクターとデストラクターを持ち、コンストラクターとデストラクターの定義はクラスの外部に配置されます。
+**class** スニペットは `MyClass` というクラスの定義を提供します。これは適切な既定のコンストラクターとデストラクターを持ち、コンストラクターとデストラクターの定義はクラスの外部に配置されます。
 
 ```cpp
 class MyClass
@@ -93,7 +93,7 @@ MyClass::~MyClass()
 }
 ```
 
-**classi** コード スニペットも MyClass というクラスの定義を提供しますが、既定のコンストラクターとデストラクターはクラス定義内で定義されます。
+**classi** コード スニペットも `MyClass` というクラスの定義を提供しますが、既定のコンストラクターとデストラクターはクラス定義内で定義されます。
 
 ```cpp
 class MyClass
@@ -153,7 +153,7 @@ class SomeClass {
 };
 ```
 
-デストラクターのスニペットを挿入すると、SomeClass のデストラクターが提供されます。
+デストラクターのスニペットを挿入すると、`SomeClass` のデストラクターが提供されます。
 
 ```cpp
 class SomeClass {

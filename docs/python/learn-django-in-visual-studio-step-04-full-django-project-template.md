@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9d48c8f86d29c990d254b2ed1d0adf471c24d6b8
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 387077f8845d4e070d4ad0a07f6549a97552a233
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-4-use-the-full-django-web-project-template"></a>チュートリアル手順 4: 完全な Django Web プロジェクト テンプレートを使用する
 
@@ -217,4 +217,4 @@ urlpatterns = [
 ## <a name="going-deeper"></a>詳しい説明
 
 - [最初の Django アプリの作成、パート 4 - フォームと汎用ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
-- GitHub 上にあるチュートリアルのソース コード: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

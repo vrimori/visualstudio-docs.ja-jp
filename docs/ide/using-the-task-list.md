@@ -16,13 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a0fb071186d816e852c695ffe1cceed29d23ff8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4a82663fe397488ee78a82d4fab5d38bfec4ae37
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-the-task-list"></a>タスク一覧の使用
+# <a name="use-the-task-list"></a>タスク一覧の使用
 
 **[タスク一覧]** を使って、 `TODO` 、 `HACK`などのトークンやカスタム トークンを使用するコード コメントを追跡し、コード内の事前に定義された場所に直接アクセスできるショートカットを管理できます。 ソース コード内のその場所に移動するには、一覧の項目をクリックします。
 
@@ -30,29 +30,29 @@ ms.lasthandoff: 04/26/2018
 
 **[タスク一覧]** が開き、アプリケーション ウィンドウの下部に表示されます。
 
-### <a name="to-open-the-task-list"></a>[タスク一覧] を開くには
+### <a name="open-the-task-list"></a>[タスク一覧] を開く
 
-- **[表示]** メニューで、**[タスク一覧]** をクリックします (キーボード: Ctrl + \\、T)。
+- **[表示]** メニューで、**[タスク一覧]** をクリックします (キーボード: **Ctrl**+**\\**、**T**)。
 
     ![[タスク一覧] ウィンドウ](../ide/media/vs2015_task_list.png "vs2015_task_list")
 
-### <a name="to-change-the-sort-order-of-the-list"></a>一覧の並べ替え順序を変更するには
+### <a name="change-the-sort-order-of-the-list"></a>一覧の並べ替え順序を変更する
 
 - 任意の列のヘッダーをクリックします。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目の列ヘッダーをクリックします。
 
-     または、ショートカット メニューで、 **[並べ替え]** をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、Shift キーを押しながら 2 番目のヘッダーをクリックします。
+     または、ショートカット メニューで、 **[並べ替え]** をクリックして、ヘッダーを選択します。 検索結果をさらに絞り込むには、**Shift** キーを押しながら 2 番目のヘッダーをクリックします。
 
-### <a name="to-show-or-hide-columns"></a>列の表示/非表示を切り替えるには
+### <a name="show-or-hide-columns"></a>列の表示または非表示
 
 - ショートカット メニューで、 **[列の表示]** をクリックします。 表示または非表示にする列をクリックします。
 
-### <a name="to-change-the-order-of-the-columns"></a>列の順序を変更するには
+### <a name="change-the-order-of-the-columns"></a>列の順序を変更する
 
 - 任意の列ヘッダーを目的の場所にドラッグします。
 
 ## <a name="user-tasks"></a>ユーザー タスク
 
-Visual Studio 2015 以降、ユーザー タスク機能が削除されています。 Visual Studio 2013 以前のバージョンからのユーザー タスク データを含むソリューションを開くと、.suo ファイル内のユーザー タスク データは影響を受けませんが、ユーザー タスクはタスク一覧に表示されません。
+Visual Studio 2015 以降、ユーザー タスク機能が削除されています。 Visual Studio 2013 以前のバージョンからのユーザー タスク データを含むソリューションを開くと、*.suo* ファイル内のユーザー タスク データは影響を受けませんが、ユーザー タスクはタスク一覧に表示されません。
 
 ユーザー タスク データに引き続きアクセスして更新する場合は、プロジェクトを Visual Studio 2013 で開き、好きなプロジェクト管理ツール (Team Foundation Server など) にユーザー タスクの内容をコピーする必要があります。
 
@@ -74,11 +74,11 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 ###  <a name="customTokens"></a> カスタム トークン
 
-既定で、Visual Studio には、HACK、TODO、UNDONE、NOTE のトークンが含まれます。 大文字と小文字は区別されません。
+既定では、Visual Studio にはトークン `HACK`、`TODO`、`UNDONE`、`NOTE` が含まれます。 大文字と小文字は区別されません。
 
 カスタム トークンを独自に作成することもできます。
 
-#### <a name="to-create-a-custom-token"></a>カスタム トークンを作成するには
+#### <a name="create-a-custom-token"></a>カスタム トークンを作成する
 
 1. **[ツール]** メニューの **[オプション]** をクリックします。
 
@@ -96,7 +96,7 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 既定で、C++ TODO コメントは **[タスク一覧]** ウィンドウに表示されます。 この動作を変更できます。
 
-#### <a name="to-turn-off-c-todo-comments"></a>C++ TODO コメントをオフにするには
+#### <a name="turn-off-c-todo-comments"></a>C++ TODO コメントをオフにする
 
 **[ツール]** メニューで、**[オプション]** > **[テキストエディター]** > **[C/C++]** > **[表示]** > **[コメント タスクの列挙]** の順に選択し、値を False に設定します。
 
@@ -106,9 +106,9 @@ Visual Studio 2015 以降、ユーザー タスク機能が削除されていま
 
 ![Visual Studio タスク一覧へのショートカット アイコン](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")
 
-### <a name="to-create-a-shortcut"></a>ショートカットを作成するには
+### <a name="create-a-shortcut"></a>ショートカットを作成する
 
-ショートカットを作成するには、ショートカットを配置するコードにポインターを挿入します。 **[編集]** > **[ブックマーク]** > **[タスク一覧へのショートカットの追加]** の順に選択するか、または **Ctrl** + **K**、**Ctrl** + **H** キーを押します。
+ショートカットを作成するには、ショートカットを配置するコードにポインターを挿入します。 **[編集]** > **[ブックマーク]** > **[タスク一覧へのショートカットの追加]** の順に選択するか、または **Ctrl**+**K**、**Ctrl**+**H** キーを押します。
 
 コード内のショートカットをナビゲートしていくには、一覧でショートカットを選択し、ショートカット メニューから **[次のタスク]** か **[前のタスク]** をクリックします。
 

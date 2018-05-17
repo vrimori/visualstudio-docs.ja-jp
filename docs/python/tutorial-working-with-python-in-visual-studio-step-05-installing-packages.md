@@ -1,6 +1,6 @@
 ---
-title: Python の使用、手順 5、パッケージのインストール
-description: Visual Studio で Python を使用する際の主なチュートリアルの 5 番目の手順です。Python 環境でパッケージを管理する、Visual Studio の機能についてご説明します。
+title: Python の概要のチュートリアル、手順 5、パッケージのインストール
+description: Visual Studio での Python 機能の中核となるチュートリアルの手順 5 では、Python 環境でパッケージを管理するための Visual Studio の機能について説明します。
 ms.date: 03/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 73de2a4c58a24a603f1d5d54138d5762e3ae9971
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 18a4f274de38bab160144a9e13d6a6963168fff1
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>手順 5: Python 環境へのパッケージのインストール
 
@@ -43,9 +43,9 @@ Python 開発者コミュニティは、ユーザーが独自のプロジェク�
 
   ![環境での matplotlib のインストール完了](media/environments-add-matplotlib2.png)
 
-  環境の下の小さい進行状況バーは、Visual Studio が新しくインストールしたパッケージに対して、IntelliSense データベースを構築していることを示します。 **[IntelliSense]** タブにはより詳細な情報も表示されます。 データベースが完了するまで、そのパッケージのエディターでオートコンプリートや構文チェックなどの IntelliSense 機能はアクティブになりません。
+  環境の下の小さい進行状況バーが表示され、Visual Studio が新しくインストールしたパッケージに対して、IntelliSense データベースを構築していることを示すことがあります。 **[IntelliSense]** タブにはより詳細な情報も表示されます。 データベースが完了するまで、そのパッケージのエディターでオートコンプリートや構文チェックなどの IntelliSense 機能はアクティブになりません。
 
-  **Visual Studio 2017 バージョン 15.6** 以降は、高速で IntelliSense を操作する異なった方法が使用されています。その効果に関するメッセージが **[IntelliSense]** タブに表示されます。
+  **Visual Studio 2017 バージョン 15.6** 以降では、高速で IntelliSense を操作する異なった方法が使用されています。その効果に関するメッセージが **[IntelliSense]** タブに表示されます。
 
 1. **[ファイル] > [新規] > [プロジェクト]** で、"Python アプリケーション" テンプレートを選択して新しいプロジェクトを作成します。 表示されるコード ファイルに、次のコードを貼り付けて余弦波を作成します。これは前のチュートリアルの手順と似ていますが、今回はグラフィカルにプロットするだけです。
 
@@ -66,7 +66,7 @@ Python 開発者コミュニティは、ユーザーが独自のプロジェク�
 
   ![matplotlib の出力例](media/environments-add-matplotlib3.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Git の使用](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)

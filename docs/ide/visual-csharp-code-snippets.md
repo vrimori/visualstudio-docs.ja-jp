@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d96d547c3558c9c1e5ce4d11904a0c8cce048e7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b9d494b1fb6465c1cf246f6becb9b812115e6076
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-code-snippets"></a>C# コード スニペット
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
 
  カーソル位置にコード スニペットを挿入したり、現在選択されているコード ブロックを囲むように surround-with コード スニペットを挿入したりすることができます。 コード スニペット挿入機能は、**[IntelliSense]** メニューの **[コード スニペットの挿入]** または **[ブロックの挿入]** コマンドを使って、またはキーボード ショートカットの場合はそれぞれ **Ctrl** + **K**、**X** キーの順に押すか、**Ctrl** + **K**、**S** キーの順に押すことで、呼び出すことができます。
 
- コード スニペット挿入機能では、すべての利用可能なコード スニペットのコード スニペット名が表示されます。 また、コード スニペット挿入機能には、コード スニペットの名前または名前の一部を入力できる入力ダイアログ ボックスもあります。 最も近いコード スニペット名が強調表示されます。 **Tab** キーを押すと、コード スニペット挿入機能が閉じて、現在選択されているコード スニペットが挿入されます。 **Esc** キーを押すか、コード エディターをマウスでクリックすると、コード スニペットを挿入することなくコード スニペット挿入機能が閉じます。
+ **コード スニペット挿入機能**では、すべての利用可能なコード スニペットのコード スニペット名が表示されます。 また、コード スニペット挿入機能には、コード スニペットの名前または名前の一部を入力できる入力ダイアログ ボックスもあります。 最も近いコード スニペット名が強調表示されます。 **Tab** キーを押すと、コード スニペット挿入機能が閉じて、現在選択されているコード スニペットが挿入されます。 **Esc** キーを押すか、コード エディターをマウスでクリックすると、コード スニペットを挿入することなくコード スニペット挿入機能が閉じます。
 
 ## <a name="default-code-snippets"></a>既定のコード スニペット
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/26/2018
 |iterator|反復子を作成します。|クラスまたは構造体の内部。|
 |iterindex|入れ子になったクラスを使って "名前付き" の反復子とインデクサーのペアを作成します。|クラスまたは構造体の内部。|
 |lock|[lock](/dotnet/csharp/language-reference/keywords/lock-statement) ブロックを作成します。|メソッド、インデクサー、プロパティ アクセサー、またはイベント アクセサーの内部。|
-|mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> への呼び出しを作成します。 場合によっては、System.Windows.Forms.dll への参照を追加する必要があります。|メソッド、インデクサー、プロパティ アクセサー、またはイベント アクセサーの内部。|
+|mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> への呼び出しを作成します。 場合によっては、*System.Windows.Forms.dll* への参照を追加する必要があります。|メソッド、インデクサー、プロパティ アクセサー、またはイベント アクセサーの内部。|
 |namespace|[namespace](/dotnet/csharp/language-reference/keywords/namespace) 宣言を作成します。|名前空間 (グローバル名前空間を含む) の内部。|
 |prop|[自動実装プロパティ](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)の宣言を作成します。|クラスまたは構造体の内部。|
 |propfull|`get` および `set` アクセサーを持つプロパティの宣言を作成します。|クラスまたは構造体の内部。|
@@ -78,4 +78,4 @@ ms.lasthandoff: 04/26/2018
 - [コード スニペットの関数](../ide/code-snippet-functions.md)
 - [コード スニペット](../ide/code-snippets.md)
 - [テンプレート パラメーター](../ide/template-parameters.md)
-- [方法 : surround-with コード スニペットを使用する](../ide/how-to-use-surround-with-code-snippets.md)
+- [方法: surround-with コード スニペットを使用する](../ide/how-to-use-surround-with-code-snippets.md)

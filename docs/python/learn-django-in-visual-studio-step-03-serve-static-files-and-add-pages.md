@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8dba33c4ff90f3066c8333870c5d18c371b5fb2a
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: b267c4963eede53f433bd929eb7944ad53e9a8ba
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>チュートリアル手順 3: 静的ファイルを提供し、ページを追加して、テンプレートの継承を使用する
 
@@ -283,4 +283,4 @@ Django のテンプレート システムでは、複数のテンプレート間
 - [最初の Django アプリの作成、パート 3 (ビュー)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
 - 制御フローなど Django テンプレートの詳細な機能について、「[The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)」(Django テンプレート言語) (docs.djangoproject.com) を確認する
 - `{% url %}` タグの使用に関する完全な詳細について、Django テンプレート リファレンスの「[Built-in template tags and filters](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/)」(組み込みのテンプレート タグとフィルター) (docs.djangoproject.com) にある [URL](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) を確認する
-- GitHub 上にあるチュートリアルのソース コード: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
