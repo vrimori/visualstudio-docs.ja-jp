@@ -25,10 +25,10 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: 0584aac376345bc508e5f2088decd45b8c64783b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置
 作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを公開する顧客に渡すと展開、顧客が従来から配置マニフェストを更新して再署名する必要があります。 ほとんどの場合に推奨される方法は引き続き、中に、.NET Framework 3.5 を作成できます[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]顧客して、新しい配置マニフェストを再生成することがなく展開することを展開します。 詳細については、次を参照してください。 [ClickOnce アプリケーションのテスト用の展開および Resigning なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)です。  

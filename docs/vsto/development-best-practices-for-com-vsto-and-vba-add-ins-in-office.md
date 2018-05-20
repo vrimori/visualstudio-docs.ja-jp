@@ -1,5 +1,5 @@
 ---
-title: COM、VSTO、および VBA の office アドインの開発のベスト プラクティス |Microsoft ドキュメント
+title: COM、VSTO、および VBA のアドインの office 開発のベスト プラクティス
 ms.custom: ''
 ms.date: 07/25/2017
 ms.technology:
@@ -14,13 +14,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6da083b12717606233d4c8dd9bc175b42722d53e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 020faeb330348049dcf12431fadfa6ab099d1584
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>COM、VSTO、および VBA のアドインの office 開発のベスト プラクティス
+# <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>COM、VSTO、および VBA のアドインの office 開発のベスト プラクティス
   Office 用に COM、VBA、または VSTO アドインを開発する場合はこの記事で説明する開発のベスト プラクティスに従います。   これによりすることができます。
 
 -  独自のアドインに Office の展開と異なるバージョン間での互換性。
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/16/2018
  追加で、アドインのインストール プロセス中に Office がインストールされているかどうかを検出することはお勧めしません。 Office がインストールされていない場合、アドインをインストールすることができ、ユーザーは Office のインストール後にアクセスすることにします。 
   
 ## <a name="use-embedded-interop-types-nopia"></a>埋め込まれた相互運用機能型 (NoPIA) を使用します。  
-場合は、ソリューションが .NET 4.0 を使用して、または後で、使用して埋め込まれた相互運用機能型 (NoPIA) の代わりにに応じて、Office プライマリ相互運用機能アセンブリ (PIA) 再頒布可能パッケージ。 型の埋め込みを使用して、ソリューションのインストールのサイズを削減し、将来の互換性を確保します。 Office 2010 では、PIA の再頒布可能パッケージに同梱されている Office の最新バージョンをでした。 詳細については、次を参照してください。[チュートリアル: Microsoft Office アセンブリから型情報を埋め込む](https://msdn.microsoft.com/en-us/library/ee317478.aspx)と[型の等価性と埋め込まれた相互運用機能型](/windows/uwp/porting/desktop-to-uwp-root)です。
+場合は、ソリューションが .NET 4.0 を使用して、または後で、使用して埋め込まれた相互運用機能型 (NoPIA) の代わりにに応じて、Office プライマリ相互運用機能アセンブリ (PIA) 再頒布可能パッケージ。 型の埋め込みを使用して、ソリューションのインストールのサイズを削減し、将来の互換性を確保します。 Office 2010 では、PIA の再頒布可能パッケージに同梱されている Office の最新バージョンをでした。 詳細については、次を参照してください。[チュートリアル: Microsoft Office アセンブリから型情報を埋め込む](https://msdn.microsoft.com/en-us/library/ee317478.aspx)と[等価性と埋め込まれた相互運用機能型の入力](/windows/uwp/porting/desktop-to-uwp-root)です。
 
 ソリューションは、以前のバージョンの .NET を使用している場合は、.NET 4.0 以降を使用するソリューションを更新することをお勧めします。 .NET 4.0 以降を使用するには、新しいバージョンの Windows で実行時の前提条件が少なくなります。
   

@@ -1,5 +1,5 @@
 ---
-title: カスタム ドキュメント プロパティの概要 |Microsoft ドキュメント
+title: カスタム ドキュメント プロパティの概要
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c5ca93d7a761ca8757f0e43ab88cb6586c203160
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b85dfe077f73a26eadf173197de2ca514ff44679
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="custom-document-properties-overview"></a>Custom Document Properties Overview
+# <a name="custom-document-properties-overview"></a>カスタム ドキュメント プロパティの概要
 
-Visual Studio がプロジェクト内のドキュメントを 2 つのカスタム プロパティを追加、ドキュメント レベルのプロジェクトをビルドすると: \_AssemblyLocation と\_AssemblyName。 ユーザーがドキュメントを開いたときに、Microsoft Office アプリケーションがこれらのカスタム ドキュメント プロパティを確認します。 ドキュメントに存在する場合、アプリケーションの読み込み、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]カスタマイズを開始します。 詳細については、次を参照してください。 [Visual Studio で Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)です。
+Visual Studio がプロジェクト内のドキュメントを 2 つのカスタム プロパティを追加、ドキュメント レベルのプロジェクトをビルドすると: \_AssemblyLocation と\_AssemblyName。 ユーザーがドキュメントを開いたときに、Microsoft Office アプリケーションがこれらのカスタム ドキュメント プロパティを確認します。 ドキュメントに存在する場合、アプリケーションの読み込み、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]カスタマイズを開始します。 詳細については、次を参照してください。 [Visual Studio での Office のアーキテクチャ ソリューション](../vsto/architecture-of-office-solutions-in-visual-studio.md)です。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -38,7 +38,7 @@ Visual Studio がプロジェクト内のドキュメントを 2 つのカスタ
 
 ## <a name="assemblylocation"></a>\_AssemblyLocation
 
-このプロパティには、カスタマイズの詳細については、配置マニフェストを提供する文字列が含まれています。 マニフェストの詳細については、次を参照してください。[アプリケーション マニフェストと配置は、Office ソリューションのマニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)です。
+このプロパティには、カスタマイズの詳細については、配置マニフェストを提供する文字列が含まれています。 マニフェストの詳細については、次を参照してください。[アプリケーション マニフェストおよび配置マニフェスト Office ソリューションにおける](../vsto/application-and-deployment-manifests-in-office-solutions.md)です。
 
  The_AssemblyLocation プロパティの値は、ソリューションが配置された方法に応じて、さまざまな形式を持つことができます。
 
@@ -54,8 +54,8 @@ Visual Studio がプロジェクト内のドキュメントを 2 つのカスタ
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)
-[ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)
-[アプリケーション マニフェストおよび配置マニフェストで Office ソリューション](../vsto/application-and-deployment-manifests-in-office-solutions.md) 
-[する方法: ClickOnce を使用して Office ソリューションを発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-[する方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)
+- [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)
+- [アプリケーション マニフェストと配置マニフェストの Office ソリューション](../vsto/application-and-deployment-manifests-in-office-solutions.md)
+- [方法: ClickOnce を使用して Office ソリューションの発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
+- [方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)

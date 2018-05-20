@@ -4,11 +4,11 @@ hide_bc: true
 title: Visual Studio のドキュメント | Microsoft Docs
 description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: 4dcf3ff02db54d1a0d6b2e45d3418caf1d908783
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e97752779c09c89107e784a0001737a8f5d77e2
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -537,7 +537,7 @@ ms.lasthandoff: 04/16/2018
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Node.js</h3>
-                                                    <p>Node.js、非同期、イベント ドリブンの JavaScript ランタイムを使って拡張性の高いネットワーク アプリケーションを構築します。</p>
+                                                    <p>Node.js (非同期、イベント ドリブン JavaScript ランタイム) を使用してスケーラブルなネットワーク アプリケーションをビルドします。</p>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,5 +1,5 @@
 ---
-title: コンテンツ コントロール |Microsoft ドキュメント
+title: コンテンツ コントロール
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -41,24 +41,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a1c56b7e48ce42699330e8eb40595d9cc761736e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0874ab1c883b7a56b7a031dc861949b05d9add56
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="content-controls"></a>コンテンツ コントロール
   コンテンツ コントロールは、次のような機能を備える文書やテンプレートをデザインするときに使用します。  
   
 -   フォームのような、入力を制御するユーザー インターフェイス (UI)。  
   
--   文書やテンプレートの保護されたセクションをユーザーが編集できないように制限する機能。 詳細については、次を参照してください。[文書パーツの保護コンテンツ コントロールを使用して](#Protection)です。  
+-   文書やテンプレートの保護されたセクションをユーザーが編集できないように制限する機能。 詳細については、次を参照してください。[コンテンツ コントロールを使用してドキュメントの一部を保護する](#Protection)です。  
   
--   データ ソースへのデータ バインディング。 詳細については、次を参照してください。[コンテンツ コントロールへのデータ バインディング](#DataBinding)です。  
+-   データ ソースへのデータ バインディング。 詳細については、次を参照してください。[コンテンツ コントロールにデータをバインド](#DataBinding)です。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Word 2007 コンテンツ コントロールを使用して Visual Studio Tools for the Office System (3.0) へのデータ バインディング](http://go.microsoft.com/fwlink/?LinkId=136785)です。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[バインドにデータを Word 2007 コンテンツ コントロールの Office system (3.0) を Visual Studio Tools を使用して](http://go.microsoft.com/fwlink/?LinkId=136785)です。  
   
 ## <a name="overview-of-content-controls"></a>コンテンツ コントロールの概要  
  コンテンツ コントロールは、ユーザーによる入力および印刷に最適化された UI を備えています。 文書に追加するコンテンツ コントロールには、境界線、タイトル、およびユーザーに情報を提供するための仮テキストを設定できます。 コントロールの境界線とタイトルは、文書を印刷したときには表示されません。  
@@ -74,18 +74,18 @@ ms.lasthandoff: 04/16/2018
  ドキュメントレベルのプロジェクトでは、デザイン時または実行時に、文書にコンテンツ コントロールを追加できます。 VSTO アドイン プロジェクトでは、実行時に任意の開いているドキュメントにコンテンツ コントロールを追加できます。 詳細については、次を参照してください。[する方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)です。  
   
 > [!NOTE]  
->  コンテンツ コントロールは、Open XML 形式で保存された文書でのみ使用できます。 Word 97-2003 文書 (.doc) 形式で保存された文書では、コンテンツ コントロールは使用できません。  
+>  コンテンツ コントロールは、Open XML 形式で保存された文書でのみ使用できます。 Word 97-2003 文書の保存されている文書にコンテンツ コントロールを使用することはできません (*.doc*) 形式です。  
   
 ## <a name="types-of-content-controls"></a>コンテンツ コントロールの種類  
- 文書に追加できるコンテンツ コントロールは 9 種類あります。 ほとんどのコンテンツ コントロールには、<xref:Microsoft.Office.Tools.Word> 名前空間内に対応する型が存在します。 また、使用可能なものであればどのようなコンテンツ コントロールになることもできる汎用コントロール、<xref:Microsoft.Office.Tools.Word.ContentControl> を使用することもできます。 利用できるコンテンツ コントロールの各を使用する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: コントロールによるテンプレートを使用してコンテンツを作成する](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)です。  
+ 文書に追加できるコンテンツ コントロールは 9 種類あります。 ほとんどのコンテンツ コントロールには、<xref:Microsoft.Office.Tools.Word> 名前空間内に対応する型が存在します。 また、使用可能なものであればどのようなコンテンツ コントロールになることもできる汎用コントロール、<xref:Microsoft.Office.Tools.Word.ContentControl> を使用することもできます。 利用できるコンテンツ コントロールの各を使用する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: コンテンツ コントロールを使用してテンプレートを作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)です。  
   
-### <a name="building-block-gallery"></a>文書パーツ ギャラリー  
+### <a name="build-block-gallery"></a>パーツ ギャラリーを作成します。  
  文書パーツ ギャラリーには、ユーザーの一覧から選択ができるように*ドキュメントのビルド ブロック*ドキュメントに挿入します。 文書パーツは、コンテンツとして何度も使用できるように作成された部品のようなもの (共通の表紙、書式設定された表、ヘッダーなど) です。 詳細については、<xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 型を参照してください。 文書パーツの詳細については、次を参照してください。 [Word 2007 での開発者向けの新](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)です。  
   
 ### <a name="check-box"></a>チェック ボックス  
  チェック ボックスは、2 値 (オンまたはオフ) の状態を表す UI です。  
   
- 他の種類のコンテンツ コントロールとは異なり、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] にはチェック ボックス コンテンツ コントロールを表す特定の型が用意されていません。 つまり、CheckBoxContentControl 型はありません。 ただし、プログラム上でジェネリック型の <xref:Microsoft.Office.Tools.Word.ContentControl> を文書に追加し、チェック ボックス コンテンツ コントロールを作成することはできます。 詳細については、次を参照してください。 [Word プロジェクトでのチェック ボックス コンテンツ コントロール](#checkbox)です。  
+ 他の種類のコンテンツ コントロールとは異なり、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] にはチェック ボックス コンテンツ コントロールを表す特定の型が用意されていません。 つまり、`CheckBoxContentControl` 型は存在しません。 ただし、プログラム上でジェネリック型の <xref:Microsoft.Office.Tools.Word.ContentControl> を文書に追加し、チェック ボックス コンテンツ コントロールを作成することはできます。 詳細については、次を参照してください。 [Word プロジェクトでのチェック ボックス コンテンツ コントロール](#checkbox)です。  
   
 ### <a name="combo-box"></a>コンボ ボックス  
  コンボ ボックスには、ユーザーが選択できるアイテムの一覧が表示されます。 ドロップダウン リストとは異なり、コンボ ボックスではユーザーが独自のアイテムを追加できます。 詳細については、<xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> 型を参照してください。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="picture"></a>画像  
  画像コントロールには、画像が表示されます。 イメージは、デザイン時または実行時に指定できます。また、ユーザーがこのコントロールをクリックしてイメージを選択し、文書に挿入することもできます。 詳細については、<xref:Microsoft.Office.Tools.Word.PictureContentControl> 型を参照してください。  
   
-### <a name="rich-text"></a>リッチ テキスト形式  
+### <a name="rich-text"></a>リッチ テキスト  
  リッチ テキスト コントロールには、テキストやその他のアイテム (表、画像、またはその他のコンテンツ コントロール) を含めることができます。 詳細については、<xref:Microsoft.Office.Tools.Word.RichTextContentControl> 型を参照してください。  
   
 ### <a name="plain-text"></a>プレーンテキスト  
@@ -127,23 +127,23 @@ ms.lasthandoff: 04/16/2018
 |元に戻す操作またはやり直し操作の結果としてコンテンツ コントロールが文書に追加された後で、コードを実行します。|コントロールの <xref:Microsoft.Office.Tools.Word.ContentControlBase.Added> イベントを処理します。|  
 |コンテンツ コントロールが文書から削除される直前にコードを実行します。|コントロールの <xref:Microsoft.Office.Tools.Word.ContentControlBase.Deleting> イベントを処理します。|  
   
-##  <a name="Protection"></a> コンテンツ コントロールを使用して文書の一部を保護します。  
+##  <a name="Protection"></a> コンテンツ コントロールを使用してドキュメントを保護する. します。  
  文書の一部を保護すると、ユーザーは文書のその部分のコンテンツを変更および削除できなくなります。 コンテンツ コントロールを使用して文書の一部を保護するには、いくつかの方法があります。  
   
  保護対象とする領域がコンテンツ コントロールの内部にある場合は、コンテンツ コントロールのプロパティを使用して、ユーザーがコントロールの編集や削除を行うことができないようにします。  
   
 -   **LockContents**プロパティは、内容を編集できないようにします。  
   
--   **[Lockcontentcontrol]**プロパティがコントロールを削除できないようにします。  
+-   **[Lockcontentcontrol]** プロパティがコントロールを削除できないようにします。  
   
  保護対象とする領域がコンテンツ コントロールの内部にない場合、またはコンテンツ コントロールとその他の種類のコンテンツを含む領域を保護する場合は、領域全体を <xref:Microsoft.Office.Tools.Word.GroupContentControl> に配置します。 他のコンテンツ コントロールとは異なり、<xref:Microsoft.Office.Tools.Word.GroupContentControl> にはユーザーに対して表示される UI がありません。 このコントロールは、ユーザーが編集できない領域を定義することだけを目的としています。  
   
 > [!NOTE]  
 >  コンテンツ コントロールが埋め込まれた <xref:Microsoft.Office.Tools.Word.GroupContentControl> を作成した場合、埋め込まれたコンテンツ コントロールは自動的には保護されません。 使用する必要があります、 **LockContents**の各プロパティには、ユーザーがその内容を編集することを防止するコントロールが埋め込まれています。  
   
- コンテンツ コントロールを使用して、ドキュメントの一部を保護する方法の詳細については、次を参照してください。[する方法: 文書を保護するコンテンツ コントロールの使用によって](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)です。  
+ コンテンツ コントロールを使用して、ドキュメントの一部を保護する方法の詳細については、次を参照してください。[する方法: コンテンツ コントロールを使用してドキュメントの一部を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)です。  
   
-##  <a name="DataBinding"></a> コンテンツ コントロールへのデータをバインディング  
+##  <a name="DataBinding"></a> コンテンツ コントロールにデータをバインドします。  
  コンテンツ コントロールをデータ ソースにバインドすると、文書内にデータを表示できます。 データ ソースが更新されると、コンテンツ コントロールに変更内容が反映されます。 変更内容をデータ ソースに反映させて保存することもできます。  
   
  コンテンツ コントロールには、次のようなデータ バインディング オプションがあります。  
@@ -152,12 +152,12 @@ ms.lasthandoff: 04/16/2018
   
 -   内の XML の要素にコンテンツ コントロールをバインドすることができます (とも呼ば*カスタム XML 部分*) ドキュメントに埋め込まれています。  
   
- Office ソリューションにおけるデータへのホスト コントロールのバインドの概要については、次を参照してください。 [Office ソリューションでのコントロールへのデータ バインディング](../vsto/binding-data-to-controls-in-office-solutions.md)です。  
+ Office ソリューションにおけるデータへのホスト コントロールのバインドの概要については、次を参照してください。 [Office ソリューションでのコントロールにデータをバインド](../vsto/binding-data-to-controls-in-office-solutions.md)です。  
   
-### <a name="using-the-windows-forms-data-binding-model"></a>Windows フォームのデータ バインディング モデルの使用  
- ほとんどのコンテンツ コントロールは、Windows フォームが使用する単純なデータ バインディング モデルをサポートします。 単純なデータ バインディングとは、コントロールが単一のデータ要素 (データ テーブルの列の値など) にバインドされることを意味します。 詳細については、「 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)」を参照してください。  
+### <a name="use-the-windows-forms-data-binding-model"></a>Windows フォーム データ バインディング モデルを使用します。  
+ ほとんどのコンテンツ コントロールは、Windows フォームが使用する単純なデータ バインディング モデルをサポートします。 単純なデータ バインディングとは、コントロールが単一のデータ要素 (データ テーブルの列の値など) にバインドされることを意味します。 詳細については、次を参照してください。[データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)です。  
   
- ドキュメント レベルのプロジェクトでできるデータをバインドするコンテンツ コントロールを使用して、**データソース**ウィンドウ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 コンテンツのデータ バインド コントロールをドキュメントに追加する方法の詳細については、次を参照してください。[する方法: データをデータベースからドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)と[する方法: ドキュメント オブジェクトのデータを読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)します。  
+ ドキュメント レベルのプロジェクトでできるデータをバインドするコンテンツ コントロールを使用して、**データソース**ウィンドウ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 コンテンツのデータ バインド コントロールをドキュメントに追加する方法の詳細については、次を参照してください。[する方法: データベースからデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-a-database.md)と[する方法: オブジェクトからのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)します。  
   
  次の表では、各データ型にバインドできるコンテンツ コントロールの一覧、**データソース**ウィンドウです。  
   
@@ -169,12 +169,12 @@ ms.lasthandoff: 04/16/2018
   
  ドキュメント レベルのプロジェクトおよび VSTO アドイン プロジェクトでは、コントロールの <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> プロパティの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを使用して、プログラムによってデータ ソースにコンテンツ コントロールをバインドできます。 これを行う場合、文字列で渡す**テキスト**を*propertyName*のパラメーター、<xref:System.Windows.Forms.ControlBindingsCollection.Add%2A>メソッドです。 **テキスト**プロパティは、コンテンツ コントロールの既定のデータ バインディング プロパティ。  
   
- コンテンツ コントロールは双方向のデータ バインディングもサポートするため、コントロール内での変更によってデータ ソースが更新されます。 詳細については、「 [方法 : ホスト コントロールからのデータでデータ ソースを更新する](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)」を参照してください。  
+ コンテンツ コントロールは双方向のデータ バインディングもサポートするため、コントロール内での変更によってデータ ソースが更新されます。 詳細については、次を参照してください。[する方法: ホスト コントロールからのデータでデータ ソースを更新](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)です。  
   
 > [!NOTE]  
 >  コンテンツ コントロールは複合データ バインディングをサポートしません。 Windows フォーム データ モデルを使用してデータ ソースに <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> または <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> をバインドすると、ユーザーがコントロールをクリックしたときに 1 つの値だけが表示されます。 これらのコントロールを一連のデータ値にバインドし、ユーザーがその中から選択できるようにするには、カスタム XML 部分の要素にコントロールをバインドします。  
   
-### <a name="binding-content-controls-to-custom-xml-parts"></a>カスタム XML 部分へのコンテンツ コントロールのバインディング  
+### <a name="bind-content-controls-to-custom-xml-parts"></a>カスタム XML 部分へのコンテンツ コントロールをバインドします。  
  一部のコンテンツ コントロールは、文書に埋め込まれているカスタム XML 部分の要素にバインドできます。 カスタム XML 部分の詳細については、次を参照してください。[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)です。  
   
  コンテンツ コントロールをカスタム XML 部分の要素にバインドするには、使用、 **XMLMapping**コントロールのプロパティです。 次のコード例は、文書に既に追加されているカスタム XML 部分の `Product` ノードの下にある `Price` 要素に <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> をバインドする方法を示しています。  
@@ -203,7 +203,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
   
 -   <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>  
   
-### <a name="data-binding-events-for-content-controls"></a>コンテンツ コントロールのデータ バインディング イベント  
+### <a name="data-bind-events-for-content-controls"></a>データ バインドのコンテンツ コントロールのイベント  
  すべてのコンテンツ コントロールは、データ関連のタスク (データ ソースを更新する前にコントロール内のテキストが特定の条件を満たしているかどうかの検証など) を実行するために処理できる一連のイベントを提供します。 データ バインディングに関連するコンテンツ コントロール イベントの一覧を、次の表に示します。  
   
 |タスク|event|  
@@ -216,7 +216,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ## <a name="limitations-of-content-controls"></a>コンテンツ コントロールの制限事項  
  Office プロジェクトでコンテンツ コントロールを使用する場合は、次の制限事項に留意してください。  
   
-### <a name="behavior-differences-between-design-time-and-run-time"></a>デザイン時と実行時の動作の違い  
+### <a name="behavior-differences-between-design-time-and-runtime"></a>デザイン時および実行時の動作の相違  
  実行時のコンテンツ コントロールに対する Microsoft Office Word の制約の多くは、デザイン時には適用されません。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] でドキュメント レベルのソリューションの UI を設計するときは、必ず実行時にサポートされる方法だけを使用してコンテンツ コントロールを編集してください。  
   
  デザイン時のコンテンツ コントロールの変更方法が実行時にサポートされない場合、サポートされない変更であることを示す [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デザイナーの警告は表示されません。 ただし、プロジェクトをデバッグまたは実行したときや、プロジェクトを保存してから再度開いた場合は、Word のエラー メッセージと文書を修復するかどうかの確認メッセージが表示されます。 文書を修復すると、サポートされていないすべてのコンテンツと書式設定がコントロールから削除されます。  
@@ -237,9 +237,9 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
  [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
   
 ## <a name="see-also"></a>関連項目  
- [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
+ [拡張オブジェクトによる Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [チュートリアル: コンテンツ コントロールによるテンプレートの作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   
+ [チュートリアル: コンテンツ コントロールを使用してテンプレートを作成します。](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   
  [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)   
- [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+ [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  

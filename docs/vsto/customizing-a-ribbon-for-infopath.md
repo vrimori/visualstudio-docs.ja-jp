@@ -1,5 +1,5 @@
 ---
-title: InfoPath のリボンをカスタマイズ |Microsoft ドキュメント
+title: InfoPath のリボンをカスタマイズします。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a3e5121285f66059a898ce64fc4107903f371485
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82238cc29504b3ad2b757e94efa89a3c521bca90
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="customizing-a-ribbon-for-infopath"></a>InfoPath のリボンのカスタマイズ
+# <a name="customize-a-ribbon-for-infopath"></a>InfoPath のリボンをカスタマイズします。
   Microsoft Office InfoPath でリボンをカスタマイズする場合、アプリケーションのどこにカスタム リボンを表示するかを検討する必要があります。 [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] では、次の 3 種類の InfoPath アプリケーション ウィンドウにリボンを表示できます。  
   
 -   デザイン モードで開くフォーム テンプレートを表示するウィンドウ。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [印刷プレビュー] ウィンドウ。  
   
- **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **対象:** このトピックの情報は、InfoPath 2010 の VSTO アドインのプロジェクトに適用されます。 詳細については、次を参照してください。 [Office アプリケーションおよびプロジェクトの種類で使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)します。  
   
  ユーザーとデザイナーは、フォーム テンプレートをデザイン モードで開き、テンプレートの外観とレイアウトを変更します。 ユーザーは、フォーム テンプレートを基にしたフォームを開き、コンテンツを追加します。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  リボンを表示する各ウィンドウのリボンの種類を指定する必要があります。  
   
-## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>リボン デザイナーでのリボンの種類の指定  
+## <a name="specify-the-ribbon-type-in-the-ribbon-designer"></a>リボン デザイナーでリボンの種類を指定します。  
  **リボン (ビジュアルなデザイナー)** 項目を使用する場合は、 **[プロパティ]** ウィンドウでリボンの **[RibbonType]** プロパティをクリックし、次の表に示すリボン ID を選択します。  
   
 |リボン ID|プロジェクトの実行時にリボンが表示されるウィンドウ|  
@@ -51,10 +51,10 @@ ms.lasthandoff: 04/16/2018
 |**Microsoft.InfoPath.Editor**|フォーム テンプレートを基にしたフォームを表示するウィンドウ。|  
 |**Microsoft.InfoPath.PrintPreview**|[印刷プレビュー] ウィンドウ。|  
   
- 1 つのプロジェクトに複数のリボンを追加することができます。 1 つ以上のリボンは、リボン ID を共有している場合で CreateRibbonExtensibilityObject メソッドをオーバーライド、`ThisAddin`実行時に表示するリボンを指定するようにプロジェクトのクラスです。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
+ 1 つのプロジェクトに複数のリボンを追加することができます。 複数のリボンで 1 つのリボン ID を共有する場合は、プロジェクトの `ThisAddin` クラスの `CreateRibbonExtensibilityObject` メソッドをオーバーライドし、実行時に表示するリボンを指定します。 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
   
-## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>リボン XML を使用したリボンの種類の指定  
- 使用している場合、**リボン (XML)**項目の値を確認して、 *ribbonID*内のパラメーター、<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>メソッドと、適切なリボンを戻り値。  
+## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>リボン XML を使用して、リボンの種類を指定します。  
+ 使用している場合、**リボン (XML)** 項目の値を確認して、 *ribbonID*内のパラメーター、<xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>メソッドと、適切なリボンを戻り値。  
   
  <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> メソッドは、Visual Studio によってリボン コード ファイルに自動的に生成されます。 *ribbonID* パラメーターは、開いている InfoPath ウィンドウの種類を識別する文字列です。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [実行時にリボンにアクセスします。](../vsto/accessing-the-ribbon-at-run-time.md)   
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)  
