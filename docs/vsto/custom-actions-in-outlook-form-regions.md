@@ -1,5 +1,5 @@
 ---
-title: フォーム領域の Outlook でのカスタム アクション |Microsoft ドキュメント
+title: Outlook フォーム領域のカスタム動作
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1e81528aa5008b7d6f78f560d0bc0139a1e0799a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec4c6a0ce361102ab216bc0c9f460a0bdd7a4a0d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="custom-actions-in-outlook-form-regions"></a>Outlook フォーム領域のカスタム動作
   アクションは、Microsoft Office Outlook アイテムに応答するユーザーを有効にするボタンを表示します。 たとえば、メール アイテムに応答して、ユーザーをクリックして、**返信**、**全員に返信**、または**フォワード**アクション ボタン。 これらの各アクションは、新しいメール アイテムを作成し、元の項目から情報を使用して、項目のフィールドを追加します。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="adding-custom-actions-to-a-form-region"></a>フォーム領域へのカスタム アクションの追加  
+## <a name="add-custom-actions-to-a-form-region"></a>フォーム領域へのカスタム アクションを追加します。  
  フォーム領域に、カスタム アクションを追加するには、使用、**カスタム アクション** ダイアログ ボックス。 開くことができます、**カスタム動作** ダイアログ ボックスで**ソリューション エクスプ ローラー**を展開して、**マニフェスト** ノードを選択すると、 **CustomActions**プロパティ、および省略記号ボタンをクリックし (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円"))。  
   
  使用することができます、**カスタム動作** ダイアログ ボックスを指定する、*フォームのターゲット*です。 ターゲット フォームは、ユーザーがカスタム アクションを実行するときに表示されるフォームです。  
@@ -50,12 +50,12 @@ ms.lasthandoff: 04/16/2018
 |**TargetForm**|ターゲットの形式のメッセージ クラス名を指定します。 たとえば、「 **IPM です。タスク**タスク フォームを開きます。|  
 |**タイトル**|カスタム アクション ボタンのラベルを指定します。|  
   
-## <a name="customizing-a-custom-action-at-run-time"></a>実行時にカスタム動作のカスタマイズ  
+## <a name="customize-a-custom-action-at-runtime"></a>実行時にカスタム動作をカスタマイズします。  
  コードを使用して、カスタム動作を動作を追加することもできます。 たとえばは電子メールの受信者の名前を取得し、新しい予定アイテムの参加者としてそれらの名前を追加するコードを追加することができます。 これを行うには、処理、 [CustomAction](http://msdn.microsoft.com/library/office/ff862186.aspx)のイベント、 [MailItem オブジェクト](http://msdn.microsoft.com/library/office/ff861332.aspx)です。  
   
 ## <a name="see-also"></a>関連項目  
- [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)   
- [チュートリアル: Outlook フォーム領域のデザイン](../vsto/walkthrough-designing-an-outlook-form-region.md)   
- [フォーム領域の Outlook メッセージ クラスへの関連付け](../vsto/associating-a-form-region-with-an-outlook-message-class.md)  
+ [Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)   
+ [チュートリアル: Outlook フォーム領域をデザインします。](../vsto/walkthrough-designing-an-outlook-form-region.md)   
+ [フォーム領域を Outlook メッセージ クラスに関連付ける](../vsto/associating-a-form-region-with-an-outlook-message-class.md)  
   
   

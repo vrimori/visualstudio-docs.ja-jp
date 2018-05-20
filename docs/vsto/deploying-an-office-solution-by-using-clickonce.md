@@ -1,5 +1,5 @@
 ---
-title: ClickOnce を使用して Office ソリューションの配置 |Microsoft ドキュメント
+title: ClickOnce を使用して Office ソリューションを配置します。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0b5e1b9437412f343874b8cca6513a551d9900d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29c0e6691f31c6092b9d2222064c59d7fb8839db
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="deploying-an-office-solution-by-using-clickonce"></a>ClickOnce を使用した Office ソリューションの配置
-  ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 したがって、複数のユーザーが同じコンピューターでソリューションを実行する場合は、Windows インストーラー (.msi) の使用を検討する必要があります。  
+# <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce を使用して Office ソリューションを配置します。
+  ClickOnce を使用する場合は、少しの手順で Office ソリューションを配置できます。 更新プログラムを発行する場合は、ソリューションはそれらを自動的に検出してインストールします。 ただし、ClickOnce を使用する場合は、コンピューターのユーザーごとに、ソリューションを個別にインストールする必要があります。 Windows インストーラーの使用を検討する必要がありますそのため、(*.msi*) 場合は 1 つ以上のユーザーは、同じコンピューターにソリューションを実行します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [ソリューションを以前のバージョンにロールバックします。](#Roll)  
   
- Windows インストーラー ファイルを作成して Office ソリューションを配置する方法の詳細については、次を参照してください。 [Windows インストーラーを使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)です。  
+ Windows インストーラー ファイルを作成して Office ソリューションを配置する方法の詳細については、次を参照してください。 [Windows インストーラーを使用して Office ソリューションを配置](../vsto/deploying-an-office-solution-by-using-windows-installer.md)です。  
   
 ##  <a name="Publish"></a> ソリューションを発行します。  
  使用してソリューションを発行することができます、**発行ウィザード**または**プロジェクト デザイナー**です。 この手順で使用する、**プロジェクト デザイナー**パブリッシング オプションの完全なセットを提供するためです。 参照してください[発行ウィザード&#40;Visual Studio での Office 開発&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)です。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
      ![プロジェクト デザイナーの [発行] タブ](../vsto/media/vsto-publishtab.png "プロジェクト デザイナーの [発行] タブ")  
   
-4.  **発行フォルダーの場所 (ftp サーバー、またはファイル パス)**先フォルダーのパスを入力、**プロジェクト デザイナー**ソリューション ファイルをコピーします。  
+4.  **発行フォルダーの場所 (ftp サーバー、またはファイル パス)** 先フォルダーのパスを入力、**プロジェクト デザイナー**ソリューション ファイルをコピーします。  
   
      次のいずれかの種類のパスを入力できます。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/16/2018
 9. 場合は、ソリューションでは、.NET Framework 4.5 をターゲットとも選択、 **Visual Studio 2010 Tools for Office Runtime**チェック ボックスをオンします。  
   
     > [!NOTE]  
-    >  既定では、このチェック ボックスは表示されません。 このチェック ボックスを表示するには、ブートストラップ パッケージを作成する必要があります。 参照してください[Visual Studio 2012 での Office 2013 VSTO アドインをブートス トラップ パッケージを作成する](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)です。  
+    >  既定では、このチェック ボックスは表示されません。 このチェック ボックスを表示するには、ブートストラップ パッケージを作成する必要があります。 参照してください[Visual Studio 2012 での Office 2013 VSTO アドインをブートス トラップ パッケージを作成](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)です。  
   
 10. **の前提条件のインストール場所を指定**、表示を選択し、オプションのいずれかを選択、 **ok**ボタンをクリックします。  
   
@@ -99,14 +99,14 @@ ms.lasthandoff: 04/16/2018
   
      参照してください[の前提条件 ダイアログ ボックス](/visualstudio/ide/reference/prerequisites-dialog-box)です。  
   
-11. 選択、**更新**ボタンを各エンドユーザーの VSTO アドインまたはカスタマイズをクリックして、更新プログラムを確認する頻度を指定、 **[ok]**ボタンをクリックします。  
+11. 選択、**更新**ボタンを各エンドユーザーの VSTO アドインまたはカスタマイズをクリックして、更新プログラムを確認する頻度を指定、 **[ok]** ボタンをクリックします。  
   
     > [!NOTE]  
     >  を CD またはリムーバブル ドライブを使用して配置する場合は、選択、**更新プログラムを確認しない**オプション ボタンをクリックします。  
   
      更新を発行する方法については、次を参照してください。[更新プログラムの発行](#Update)です。  
   
-12. 選択、**オプション**ボタン、[オプションを確認、**オプション**] ダイアログ ボックスをクリックして、 **[ok]**ボタンをクリックします。  
+12. 選択、**オプション**ボタン、[オプションを確認、**オプション**] ダイアログ ボックスをクリックして、 **[ok]** ボタンをクリックします。  
   
 13. 選択、 **今すぐ発行**ボタンをクリックします。  
   
@@ -131,14 +131,14 @@ ms.lasthandoff: 04/16/2018
      ![発行フォルダーの構造](../vsto/media/publishfolderstructure.png "発行フォルダーの構造")  
   
     > [!NOTE]  
-    >  セキュリティで保護されたで保護されたインターネット インフォメーション サービス (IIS) のインストールされているが、安全でない拡張子が原因のファイルをブロックしないように、ClickOnce はアセンブリに .deploy 拡張子を追加します。 ユーザーがソリューションをインストールする時点で、ClickOnce は .deploy 拡張子を削除します。  
+    >  ClickOnce は追加、 *.deploy*拡張機能アセンブリをセキュリティで保護されたで保護されたインターネット インフォメーション サービス (IIS) のインストールされているが、安全でない拡張子が原因のファイルをブロックしないようにします。 ClickOnce を削除、ユーザーがソリューションをインストールすると、 *.deploy*拡張機能です。  
   
 14. この手順で既に指定したインストール場所に、ソリューション ファイルをコピーします。  
   
 ##  <a name="Trust"></a> ソリューションに信頼を付与する方法を決定します。  
- ユーザーのコンピューターでソリューションを実行する前に、次のいずれかの方法で信頼を付与する必要があります。そうしない場合は、ユーザーはソリューションをインストールするときに、信頼プロンプトに応答する必要が生じます。 ソリューションに信頼を付与するには、既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。 参照してください[マニフェスト署名アプリケーションおよび展開して、ソリューションを信頼する](../vsto/granting-trust-to-office-solutions.md#Signing)です。  
+ ユーザーのコンピューターでソリューションを実行する前に、次のいずれかの方法で信頼を付与する必要があります。そうしない場合は、ユーザーはソリューションをインストールするときに、信頼プロンプトに応答する必要が生じます。 ソリューションに信頼を付与するには、既知の信頼される発行者を特定する証明書を使用してマニフェストに署名します。 参照してください[、アプリケーション マニフェストと配置マニフェストに署名することにより、ソリューションが信頼](../vsto/granting-trust-to-office-solutions.md#Signing)です。  
   
- ドキュメント レベルのカスタマイズを配置して、ユーザーのコンピューター上のフォルダーにドキュメントを配置または SharePoint サイトでドキュメントを使用できるようにするの場合は、ドキュメントの場所を Office が信頼することを確認します。 参照してください[ドキュメントへの信頼の付与](../vsto/granting-trust-to-documents.md)です。  
+ ドキュメント レベルのカスタマイズを配置して、ユーザーのコンピューター上のフォルダーにドキュメントを配置または SharePoint サイトでドキュメントを使用できるようにするの場合は、ドキュメントの場所を Office が信頼することを確認します。 参照してください[ドキュメントへの信頼を付与](../vsto/granting-trust-to-documents.md)です。  
   
 ##  <a name="Helping"></a> ユーザーがソリューションをインストールできます。  
  ユーザーはソリューションをインストールするために、セットアップ プログラムを実行して配置マニフェストを開くか、またはドキュメント レベルのカスタマイズの場合はドキュメントを直接開くことができます。 ベスト プラクティスとして、ユーザーはセットアップ プログラムを使用してソリューションをインストールする必要があります。 その他の 2 つの方法は、前提条件のソフトウェアがインストールされていることを確認しません。 ユーザーがインストール場所からドキュメントを開こうとする場合は、Office アプリケーションのセキュリティ センターにある信頼できる場所の一覧に、そのインストール場所を追加する必要があります。  
@@ -148,46 +148,46 @@ ms.lasthandoff: 04/16/2018
   
  ベスト プラクティスとして、ユーザーはローカル コンピューター上にあるドキュメントのコピーを開く必要があります。その結果、複数のユーザーが同じドキュメントを同時に開こうとすることはありません。 このプラクティスを強制するために、ユーザーのコンピューターにドキュメントをコピーするようにセットアップ プログラムを構成することができます。 参照してください[ソリューションのドキュメントをエンドユーザーのコンピューター (ドキュメント レベルのカスタマイズのみ) に配置](#Put)です。  
   
-### <a name="installing-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>IIS の Web サイトから配置マニフェストを開く方法でソリューションをインストール  
- ユーザーは、Web で配置マニフェストを開くことにより、Office ソリューションをインストールできます。 ただし、セキュリティで保護されたインターネット インフォメーション サービス (IIS) がインストールされていると、.vsto 拡張子を持つファイルはブロックされます。 IIS を使用して Office ソリューションを配置する前に、IIS に MIME の種類を定義する必要があります。  
+### <a name="install-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>IIS の web サイトから配置マニフェストを開くことで、ソリューションをインストールします。  
+ ユーザーは、Web で配置マニフェストを開くことにより、Office ソリューションをインストールできます。 ただし、セキュリティで保護されたインストールのインターネット インフォメーション サービス (IIS) を持つファイルをブロック、 *.vsto*拡張機能です。 IIS を使用して Office ソリューションを配置する前に、IIS に MIME の種類を定義する必要があります。  
   
 ##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>IIS 6.0 に MIME の種類 (.vsto) を追加するには  
   
-1.  IIS 6.0 を実行するサーバーで次のように選択します**開始**、**すべてのプログラム**、**管理ツール**、**インターネット インフォメーション サービス (IIS) マネージャー**。  
+1.  IIS 6.0 を実行するサーバーで次のように選択します**開始** > **すべてのプログラム** > **管理ツール** >   **。インターネット インフォメーション サービス (IIS) マネージャー**です。 
   
 2.  コンピューター名を選択して、 **Websites**フォルダー、または web サイトを構成しています。  
   
-3.  メニュー バーで、次のように選択します。**アクション**、**プロパティ**です。  
+3.  メニュー バーで、次のように選択します。**アクション** > **プロパティ**です。  
   
 4.  **HTTP ヘッダー**  タブで、選択、 **MIME の種類**ボタンをクリックします。  
   
 5.  **MIME の種類**ウィンドウで、選択、**新規**ボタンをクリックします。  
   
-6.  **MIME の種類**ウィンドウで、入力**.vsto** 、拡張子として次のように入力します。**アプリケーション/x ms-vsto** MIME として「」と、新しい設定を適用します。  
+6.  **MIME の種類**ウィンドウで、入力 **.vsto** 、拡張子として次のように入力します。**アプリケーション/x ms-vsto** MIME として「」と、新しい設定を適用します。  
   
     > [!NOTE]  
-    >  変更を有効にするために、World Wide Web 発行サービスを再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。 その後、ブラウザーのディスク キャッシュをフラッシュし、.vsto ファイルを再度開く必要があります。  
+    >  変更を有効にするために、World Wide Web 発行サービスを再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。 ブラウザーのディスク キャッシュをフラッシュししてを開くには、再試行する必要があります、 *.vsto*ファイルを再びです。  
   
 ##### <a name="to-add-the-vsto-mime-type-to-iis-70"></a>IIS 7.0 に MIME の種類 (.vsto) を追加するには  
   
-1.  IIS 7.0 を実行しているサーバーで次のように選択します。**開始**、**すべてのプログラム**、**アクセサリ**です。  
+1.  IIS 7.0 を実行しているサーバーで次のように選択します。**開始** > **すべてのプログラム** > **アクセサリ**です。  
   
 2.  ショートカット メニューを開き、**コマンド プロンプト**を選択し**管理者として実行します。**  
   
 3.  **開いている**ボックスで、次のパスを入力し、、 **OK**ボタンをクリックします。  
   
-    ```  
+    ```cmd
     %windir%\system32\inetsrv   
     ```  
   
 4.  次のコマンドを入力し、新しい設定を適用します。  
   
-    ```  
+    ```cmd
     set config /section:staticContent /+[fileExtension='.vsto',mimeType='application/x-ms-vsto']  
     ```  
   
     > [!NOTE]  
-    >  変更を有効にするために、World Wide Web Publishing Service を再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。 その後、ブラウザーのディスク キャッシュをフラッシュし、.vsto ファイルを再度開く必要があります。  
+    >  変更を有効にするために、World Wide Web 発行サービスを再起動するか、ワーカー プロセスがリサイクルされるまで待つ必要があります。 ブラウザーのディスク キャッシュをフラッシュししてを開くには、再試行する必要があります、 *.vsto*ファイルを再びです。  
   
 ##  <a name="Put"></a> ソリューションのドキュメントをエンドユーザーのコンピューター (ドキュメント レベルのカスタマイズのみ) に配置します。  
  それらのエンドユーザーのコンピューター上に、ソリューションのドキュメントをコピーするには、配置後アクションを作成します。 このように、ソリューションのインストール後に自分のコンピューターにインストール場所からドキュメントを手動でコピーする、ユーザーが持っていません。 配置後アクションを定義するクラスを作成、ビルド、ソリューションを発行し、アプリケーション マニフェストを変更、および、アプリケーション マニフェストと配置マニフェストに再署名する必要があります。  
@@ -196,7 +196,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="create-a-class-that-defines-the-post-deployment-action"></a>配置後アクションを定義するクラスを作成します。  
   
-1.  メニュー バーで **[ファイル]**をクリックし、 **[追加]**を選択し、 **[新しいプロジェクト]**をクリックします。  
+1.  メニュー バーで、次のように選択します。**ファイル** > **追加** > **新しいプロジェクト**です。  
   
 2.  **新しいプロジェクトの追加** ダイアログ ボックスで、**インストールされたテンプレート** ウィンドウで、選択、 **Windows**フォルダーです。  
   
@@ -206,9 +206,9 @@ ms.lasthandoff: 04/16/2018
   
 5.  **ソリューション エクスプ ローラー**、選択、 **FileCopyPDA**プロジェクト。  
   
-6.  メニュー バーで、**[プロジェクト]**、**[参照の追加]** の順に選択します。  
+6.  メニュー バーで、次のように選択します。**プロジェクト** > **参照の追加**です。  
   
-7.  **.NET**  タブで、Microsoft.VisualStudio.Tools.Applications.Runtime および Microsoft.VisualStudio.Tools.Applications.ServerDocument への参照を追加します。  
+7.  **.NET**  タブへの参照を追加`Microsoft.VisualStudio.Tools.Applications.Runtime`と`Microsoft.VisualStudio.Tools.Applications.ServerDocument`です。  
   
 8.  クラスの名前を `FileCopyPDA` に変更してから、ファイルの内容を次のコードに置き換えます。 このコードは次のタスクを実行します。  
   
@@ -233,13 +233,13 @@ ms.lasthandoff: 04/16/2018
   
 5.  **ソリューション エクスプ ローラー**、選択、 **ExcelWorkbook**プロジェクト。  
   
-6.  メニュー バーで、次のように選択します。**プロジェクト**、**新しいフォルダー**です。  
+6.  メニュー バーで、次のように選択します。**プロジェクト** > **新しいフォルダー**です。  
   
-7.  Enter**データ**、し、Enter キーを押します。  
+7.  Enter**データ**を選択し、 **Enter**キー。  
   
 8.  **ソリューション エクスプ ローラー**、選択、**データ**フォルダーです。  
   
-9. メニュー バーで、次のように選択します。**プロジェクト**、**既存項目の追加**です。  
+9. メニュー バーで、次のように選択します。**プロジェクト** > **既存項目の追加**です。  
   
 10. **既存項目の追加** ダイアログ ボックスでの出力ディレクトリを参照、 **ExcelWorkbook**プロジェクトを選択して、 **ExcelWorkbook.xlsx**ファイル、および、を選択**追加**ボタンをクリックします。  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  `</vstav3:update>` 要素の後に、次のコードを追加します。 クラス属性、`<vstav3:entryPoint>`要素を次の構文を使用して: *NamespaceName.ClassName*です。 次の例では、名前空間名とクラス名は同じであるため、最終的にエントリ ポイント名は `FileCopyPDA.FileCopyPDA` になります。  
   
-    ```  
+    ```xml
     <vstav3:postActions>  
       <vstav3:postAction>  
         <vstav3:entryPoint  
@@ -288,7 +288,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  次のコマンドを実行し、変更したアプリケーション マニフェストに署名します。  
   
-    ```  
+    ```cmd
     mage -sign ExcelWorkbook.dll.manifest -certfile ExcelWorkbook_TemporaryKey.pfx  
     ```  
   
@@ -296,7 +296,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  変更、 **c:\publish**次のコマンドを実行して、フォルダー、し、更新プログラムおよび記号の配置マニフェストします。  
   
-    ```  
+    ```cmd
     mage -update ExcelWorkbook.vsto -appmanifest "Application Files\Ex  
     celWorkbookMostRecentVersionNumber>\ExcelWorkbook.dll.manifest" -certfile "Application Files\ExcelWorkbookMostRecentVersionNumber>\ExcelWorkbook_TemporaryKey.pfx"  
     ```  
@@ -306,7 +306,7 @@ ms.lasthandoff: 04/16/2018
   
      "ExcelWorkbook.vsto 正常に署名されました" というメッセージが表示されます。  
   
-5.  ExcelWorkbook.vsto ファイルをコピー、 **c:\publish\Application \excelworkbook**\__MostRecentVersionNumber_ディレクトリ。  
+5.  コピー、 *ExcelWorkbook.vsto*ファイルの名前を**c:\publish\Application \excelworkbook**\__MostRecentVersionNumber_ディレクトリ。  
   
 ##  <a name="SharePoint"></a> ソリューションのドキュメント (ドキュメント レベルのカスタマイズのみ) SharePoint を実行しているサーバーに配置します。  
  SharePoint を使用して、エンド ユーザーに対してドキュメント レベルのカスタマイズを発行できます。 ユーザーが SharePoint サイトにアクセスし、ドキュメントを開くと、ランタイムが自動的に共有ネットワーク フォルダーからユーザーのローカル コンピューターにソリューションをインストールします。 ソリューションをローカル インストールした後、ドキュメントをデスクトップなど別の場所にコピーした場合でも、カスタマイズは引き続き機能します。  
@@ -331,7 +331,7 @@ ms.lasthandoff: 04/16/2018
   
         4.  **パス**ボックスで、アップロードしたドキュメントを含む SharePoint ドキュメント ライブラリの URL を入力してください (たとえば、 *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*)。  
   
-             既定の Web ページで、default.aspx や AllItems.aspx などの名前を追加しないでください。  
+             など、既定の Web ページの名前を追加しない*default.aspx*または*AllItems.aspx*です。  
   
         5.  選択、**この場所のサブフォルダも併せて信頼**チェック ボックスをオンにして、 **OK**ボタンをクリックします。  
   
@@ -340,13 +340,13 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Custom"></a> カスタム インストーラーを作成します。  
  ソリューションを発行するときに作成するセットアップ プログラムを使用する代わりに、Office ソリューションのカスタム インストーラーを作成することができます。 たとえば、ログイン スクリプトを使用してインストールを開始したり、バッチ ファイルを使用して、ユーザーの操作なしにソリューションをインストールすることもできます。 このようなシナリオは、エンド ユーザーのコンピューターに必須コンポーネントがインストール済みの場合に最適です。  
   
- カスタム インストール プロセスの一環として、Office ソリューション用のインストーラー ツール (VSTOInstaller.exe) を呼び出します。既定では、このツールは次の場所にインストールされます。  
+ カスタム インストール プロセスの一環として、Office ソリューション用のインストーラー ツールを呼び出します (*VSTOInstaller.exe*)、既定では、次の場所にインストールされています。  
   
- %commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe  
+ *%commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe*  
   
- ツールがこの場所にない場合は、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath レジストリ キーまたは HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath レジストリ キーを使用して、このツールのパスを見つけることができます。  
+ ツールは、その場所にいない場合を使って、**この Runtime setup \v4\installerpath**または**hkey_local_machine \software\wow6432node\microsoft\vsto Runtime Setup\v4\InstallerPath**そのツールのパスを検索するレジストリ キー。  
   
- VSTOinstaller.exe で次のパラメーターを使用できます。  
+ 次のパラメーターを使用する*VSTOinstaller.exe*です。  
   
 |パラメーター|定義|  
 |---------------|----------------|  
@@ -355,18 +355,18 @@ ms.lasthandoff: 04/16/2018
 |/Silent または /S|ユーザーに入力を要求したりメッセージを表示したりすることなくソリューションをインストールまたはアンインストールします。 信頼プロンプトが必要な場合、カスタマイズされていないインストールまたは更新します。|  
 |/Help または /?|ヘルプ情報を表示します。|  
   
- VSTOinstaller.exe を実行すると、次のエラー コードが表示されることがあります。  
+ 実行すると*VSTOinstaller.exe*、次のエラー コードが表示される可能性があります。  
   
 |エラー コード|定義|  
 |----------------|----------------|  
 |0|ソリューションが正常にインストールまたはアンインストールされたか、VSTOInstaller ヘルプが表示されました。|  
-|-100|1 つ以上のコマンド ライン オプションが有効でないか、複数回設定されました。 詳細については、次を入力してください"vstoinstaller/?"。 参照してくださいまたは[ClickOnce Office ソリューションのカスタム インストーラーを作成する](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)です。|  
+|-100|1 つ以上のコマンド ライン オプションが有効でないか、複数回設定されました。 詳細については、次を入力してください"vstoinstaller/?"。 参照してくださいまたは[ClickOnce Office ソリューションのカスタム インストーラーの作成](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)です。|  
 |-101|1 つまたは複数のコマンド ライン オプションが無効です。 詳細については、"vstoinstaller /?" と入力してください。|  
 |-200|配置マニフェストの URI が無効です。 詳細については、"vstoinstaller /?" と入力してください。|  
 |-201|配置マニフェストが有効でないために、ソリューションをインストールできませんでした。 参照してください[Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)です。|  
 |-202|Visual Studio Tools for Office セクションのアプリケーション マニフェストが有効でないために、ソリューションをインストールできませんでした。 参照してください[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。|  
 |-203|ダウンロード エラーが発生したため、ソリューションをインストールできませんでした。 配置マニフェストの URI またはネットワーク ファイルの位置を確認し、もう一度、実行してみてください。|  
-|-300|セキュリティ例外が発生したため、ソリューションをインストールできませんでした。 参照してください[Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)です。|  
+|-300|セキュリティ例外が発生したため、ソリューションをインストールできませんでした。 参照してください[セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)です。|  
 |-400|ソリューションをインストールできませんでした。|  
 |-401|ソリューションをアンインストールできませんでした。|  
 |-500|ソリューションをインストールまたはアンインストールできなかったこと、または配置マニフェストをダウンロードできなかったことが原因で、操作は取り消されました。|  
@@ -398,7 +398,7 @@ ms.lasthandoff: 04/16/2018
   
      次の例で、インストール パスを、Fabrikam の Web サイト上にある場所に変更する方法を示しますが、この URL は必要なパスに置き換えることができます。  
   
-    ```  
+    ```cmd  
     setup.exe /url="http://www.fabrikam.com/newlocation"  
     ```  
   
@@ -441,7 +441,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  ソリューションのインストール場所を開きます。  
   
-2.  トップレベルの発行フォルダーで、配置マニフェスト (.vsto ファイル) を削除します。  
+2.  トップレベルの発行フォルダー、削除、配置マニフェスト (、 *.vsto*ファイル)。  
   
 3.  ロールバック先のバージョンに対応するサブフォルダーを見つけます。  
   
@@ -456,14 +456,14 @@ ms.lasthandoff: 04/16/2018
      アプリケーションまたはカスタマイズされたドキュメントをユーザーが次回開くときに、配置マニフェストの変更が検出されます。 Office ソリューションの以前のバージョンは、ClickOnce キャッシュから実行されます。  
   
 > [!NOTE]  
->  ローカル データは、ソリューションの 1 つ前のバージョンについてのみ保存されます。 2 つのバージョンをロールバックする場合は、ローカル データは保持されません。 ローカル データの詳細については、次を参照してください。[ローカルへのアクセスと ClickOnce アプリケーションでのリモート データ](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)です。  
+>  ローカル データは、ソリューションの 1 つ前のバージョンについてのみ保存されます。 2 つのバージョンをロールバックする場合は、ローカル データは保持されません。 ローカル データの詳細については、次を参照してください。 [ClickOnce アプリケーションにおけるローカルおよびリモート データにアクセス](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)です。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [Office ソリューションの発行](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [Office ソリューションを配置します。](../vsto/deploying-an-office-solution.md)   
+ [Office ソリューションを発行します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [方法: ClickOnce を使用して Office ソリューションの発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
  [方法: ClickOnce Office ソリューションのインストール](http://msdn.microsoft.com/en-us/14702f48-9161-4190-994c-78211fe18065)   
- [方法: ClickOnce を使用して、SharePoint サーバーにドキュメント レベルの Office ソリューションの発行](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
- [ClickOnce Office ソリューション用のカスタム インストーラーを作成します。](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
+ [方法: ClickOnce を使用して、SharePoint サーバーにドキュメント レベルの Office ソリューションを発行](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
+ [ClickOnce office ソリューションのカスタム インストーラーを作成します。](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
   
   

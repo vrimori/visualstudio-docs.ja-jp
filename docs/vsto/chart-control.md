@@ -1,5 +1,5 @@
 ---
-title: グラフ コントロール |Microsoft ドキュメント
+title: グラフ コントロール
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,24 +19,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c473c026f5d5f9a5919626fb667994e6ffdc01f4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b1adf0d961489b09a9dc01775148636e6d2d231a
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="chart-control"></a>Chart Control
+# <a name="chart-control"></a>グラフ コントロール
   <xref:Microsoft.Office.Tools.Excel.Chart> コントロールはイベントを公開するグラフ オブジェクトです。 ワークシートにグラフを追加すると、ユーザーが Microsoft Office Excel オブジェクト モデルを走査する必要なく、直接、プログラムできる <xref:Microsoft.Office.Tools.Excel.Chart> オブジェクトが Visual Studio により作成されます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## <a name="creating-the-control"></a>コントロールの作成  
- ドキュメント レベルのプロジェクトでは、デザイン時または実行時に <xref:Microsoft.Office.Tools.Excel.Chart> コントロールを Microsoft Office Excel ワークシートに追加できます。  
+## <a name="create-the-control"></a>コントロールを作成します。  
+ 追加することができます<xref:Microsoft.Office.Tools.Excel.Chart>コントロールをデザイン時または実行時にドキュメント レベルのプロジェクトは、Microsoft Office Excel ワークシートです。  
   
- VSTO アドインでは実行時に <xref:Microsoft.Office.Tools.Excel.Chart> コントロールをワークシートに追加できます。 詳細については、次を参照してください。[する方法: ワークシートに Chart コントロールを追加](../vsto/how-to-add-chart-controls-to-worksheets.md)です。  
+ 追加することができます<xref:Microsoft.Office.Tools.Excel.Chart>コントロールを VSTO アドインで実行時にワークシートです。 詳細については、次を参照してください。[する方法: ワークシートにコントロールを追加グラフ](../vsto/how-to-add-chart-controls-to-worksheets.md)です。  
   
 > [!NOTE]  
->  動的に作成されたグラフ オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+>  動的に作成されたグラフ オブジェクトは、ワークシートを閉じる際に、ホスト コントロールとしてワークシートに残りません。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。  
   
 ## <a name="formatting"></a>書式設定  
  <xref:Microsoft.Office.Interop.Excel.Chart> に適用できるすべての書式設定は、<xref:Microsoft.Office.Tools.Excel.Chart> コントロールにも適用できます。 これには、罫線、フォント、グラフの種類、グリッド線、凡例、およびデータ ラベルが含まれます。  
@@ -76,12 +76,12 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="see-also"></a>関連項目  
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
- [実行時の Word 文書と VSTO アドイン内の Excel ブックの拡張](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
+ [Word 文書と実行時に VSTO アドイン内の Excel ブックを拡張します。](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
+ [拡張オブジェクトによる Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)   
- [Office ソリューションでのコントロールへのデータをバインディング](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+ [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   
   

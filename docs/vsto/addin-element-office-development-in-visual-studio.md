@@ -1,5 +1,5 @@
 ---
-title: '&lt;addin&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+title: '&lt;addin&gt;要素 (Visual Studio での Office 開発)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -17,18 +17,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 01e7ee9e7329f46c0a728d48c16fc11eaebea5a8
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 1d2ab0264452630892d492946462fbf9ad1639d0
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt;要素 (Visual Studio での Office 開発)
-  名前空間 `addin` の `vstav3` 要素には、Visual Studio で開発した Microsoft Office VSTO アドインとドキュメント レベルのカスタマイズに関する情報を格納します。  
+  **Addin**の要素、`vstav3`名前空間には、Microsoft Office VSTO アドインおよび Visual Studio で開発したドキュメント レベルのカスタマイズに固有の情報が含まれています。  
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml
 <addIn>  
   <entryPointsCollection>  
     <entryPoints>  
@@ -51,32 +51,32 @@ ms.lasthandoff: 04/27/2018
 ```  
 
 ## <a name="elements-and-attributes"></a>要素と属性  
- 名前空間 `addin` の `vstav3` 要素には、Office ソリューションと Microsoft Office アプリケーションに関する情報を格納します。 この要素は、名前空間 `vstav3=urn:schemas-microsoft-com:vsta.v3`に存在する必要があります。 子要素もこの名前空間に存在する必要があります。  
+ **Addin**の要素、`vstav3`名前空間には、Office ソリューションと Microsoft Office アプリケーションに関する情報が含まれています。 この要素は、名前空間 `vstav3=urn:schemas-microsoft-com:vsta.v3`に存在する必要があります。 子要素もこの名前空間に存在する必要があります。  
 
  `addin` 要素に属性はありません。  
 
  `addin` 要素には、次の子要素があります。  
 
 ### <a name="entrypoints"></a>entryPoints  
- 必須。 `entryPoints`要素については、「 [ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)です。  
+ 必須。 **EntryPoints**要素については、「 [ &#60;entryPoints&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)です。  
 
 ### <a name="update"></a>更新  
- 必須。 `update`要素については、「 [&#60;更新&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/update-element-office-development-in-visual-studio.md)です。  
+ 必須。 **更新**要素については、「 [&#60;更新&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/update-element-office-development-in-visual-studio.md)です。  
 
 ### <a name="postactions"></a>postActions  
- 任意。 `postActions`要素については、「 [ &#60;postActions&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)です。  
+ 任意。 **PostActions**要素については、「 [ &#60;postActions&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)です。  
 
 ### <a name="application"></a>アプリケーション  
- 必須。 `application`要素については、「 [&#60;アプリケーション&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/application-element-office-development-in-visual-studio.md)です。  
+ 必須。 **アプリケーション**要素については、「 [&#60;アプリケーション&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/application-element-office-development-in-visual-studio.md)です。  
 
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
 
 ### <a name="description"></a>説明  
- 次のコード例は、 `addin` を使用して配置するドキュメント レベルの Office ソリューションの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例を示しています、 **addin**ドキュメント レベルの Office ソリューションを使用して配置されている要素[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]です。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
 
 ### <a name="code"></a>コード  
 
-```  
+```xml
 <vstav3:addIn   
   xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">  
   <vstav3:entryPointsCollection>  
@@ -136,11 +136,11 @@ ms.lasthandoff: 04/27/2018
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
 
 ### <a name="description"></a>説明  
- 次のコード例は、 `addin` を使用して配置するアプリケーション レベルの Office ソリューションの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例を示しています、 **addin**要素を使用して配置されているアプリケーション レベルの Office ソリューションで[!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]です。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
 
 ### <a name="code"></a>コード  
 
-```  
+```xml
 <vstav3:addIn   
   xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">  
   <vstav3:entryPointsCollection>  
@@ -192,6 +192,6 @@ ms.lasthandoff: 04/27/2018
 ```  
 
 ## <a name="see-also"></a>関連項目  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
+ [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)   
+ [Office ソリューション用配置マニフェストします。](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  

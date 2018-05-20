@@ -1,12 +1,13 @@
 ---
-title: "reduce メソッド (Array) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: reduce メソッド (Array) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - arrays [JavaScript], reduce method
 - reduce method [JavaScript]
 ms.assetid: 48d069e0-e083-494f-86d5-d459d2377dc5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 76279f66f8e3180fdebd73b83eb31c7368cefc75
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d99f92d90885f26b19392b476ee64ae17bd40aed
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="reduce-method-array-javascript"></a>reduce メソッド (Array) (JavaScript)
 配列内のすべての要素には、指定されたコールバック関数を呼び出します。 コールバック関数の戻り値は収集された結果で、コールバック関数の次の呼び出しの引数として提供されます。  
@@ -41,9 +42,9 @@ array1.reduce(callbackfn[, initialValue])
   
 |パラメーター|定義|  
 |---------------|----------------|  
-|`array1`|必須です。 配列オブジェクト。|  
-|`callbackfn`|必須です。 最大 4 つの引数を受け取る関数。 `reduce` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
-|`initialValue`|省略可能です。 場合`initialValue`を指定すると、蓄積を開始する初期値として使用されます。 最初の呼び出し、`callbackfn`関数は配列の値の代わりに、引数としてこの値を提供します。|  
+|`array1`|必須。 配列オブジェクト。|  
+|`callbackfn`|必須。 最大 4 つの引数を受け取る関数。 `reduce` メソッドは、配列内の各要素に対して `callbackfn` 関数を 1 回呼び出します。|  
+|`initialValue`|任意。 場合`initialValue`を指定すると、蓄積を開始する初期値として使用されます。 最初の呼び出し、`callbackfn`関数は配列の値の代わりに、引数としてこの値を提供します。|  
   
 ## <a name="return-value"></a>戻り値  
  コールバック関数の最後の呼び出しから収集された結果です。  
@@ -58,7 +59,7 @@ array1.reduce(callbackfn[, initialValue])
 ## <a name="remarks"></a>コメント  
  場合、`initialValue`が指定されて、`reduce`メソッドの呼び出し、`callbackfn`関数をインデックスの昇順で、配列の各要素に対して 1 回です。 場合、`initialValue`が指定されていない、`reduce`メソッドの呼び出し、`callbackfn`以降 2 番目の要素で、各要素に対して関数。  
   
- コールバック関数の戻り値として提供される、`previousValue`コールバック関数に次の呼び出しで引数。 コールバック関数の最後の呼び出しの戻り値は、戻り値の`reduce`メソッドです。  
+ コールバック関数の戻り値として提供される、`accumulator`コールバック関数に次の呼び出しで引数。 コールバック関数の最後の呼び出しの戻り値は、戻り値の`reduce`メソッドです。  
   
  配列内で欠落している要素に対しては、コールバック関数は呼び出されません。  
   
@@ -68,7 +69,7 @@ array1.reduce(callbackfn[, initialValue])
 ## <a name="callback-function-syntax"></a>コールバック関数の構文  
  コールバック関数の構文は次のとおりです。  
   
- `function callbackfn(previousValue, currentValue, currentIndex, array1)`  
+ `function callbackfn(accumulator, currentValue, currentIndex, array1)`  
   
  最大 4 つのパラメーターを使用して、コールバック関数を宣言することができます。  
   
@@ -76,7 +77,7 @@ array1.reduce(callbackfn[, initialValue])
   
 |コールバック引数|定義|  
 |-----------------------|----------------|  
-|`previousValue`|コールバック関数には、前の呼び出しからの値。 場合、`initialValue`に提供される、 `reduce` 、メソッド、`previousValue`は`initialValue`初めて関数が呼び出されたとき。|  
+|`accumulator`|コールバック関数には、前の呼び出しからの値。 場合、`initialValue`に提供される、 `reduce` 、メソッド、`accumulator`は`initialValue`初めて関数が呼び出されたとき。|  
 |`currentValue`|現在の配列要素の値。|  
 |`currentIndex`|現在の配列要素の数値インデックス。|  
 |`array1`|要素を格納している配列オブジェクト。|  
@@ -86,13 +87,13 @@ array1.reduce(callbackfn[, initialValue])
   
  場合、 `initialValue` reduce のメソッドに提供します。  
   
--   `previousValue` 引数が `initialValue` です。  
+-   `accumulator` 引数が `initialValue` です。  
   
 -   `currentValue`の引数は、最初の要素を配列内に存在します。  
   
  場合、`initialValue`が指定されていません。  
   
--   `previousValue`の引数は、最初の要素を配列内に存在します。  
+-   `accumulator`の引数は、最初の要素を配列内に存在します。  
   
 -   `currentValue`の引数は、2 番目の要素を配列内に存在します。  
   
@@ -109,12 +110,12 @@ array1.reduce(callbackfn[, initialValue])
 |要素が配列から削除されている。|いいえ (その要素が既にコールバック関数に渡されている場合を除く)。|  
   
 ## <a name="example"></a>例  
- 次の例では、配列の値を連結で値を分離する、文字列に"::"です。 初期値が提供されていないため、`reduce`としてメソッドをコールバック関数の最初の呼び出しでは"abc"、`previousValue`引数と"def"として、`currentValue`引数。  
+ 次の例では、配列の値を連結で値を分離する、文字列に"::"です。 初期値が提供されていないため、`reduce`としてメソッドをコールバック関数の最初の呼び出しでは"abc"、`accumulator`引数と"def"として、`currentValue`引数。  
   
 ```JavaScript  
 // Define the callback function.  
-function appendCurrent (previousValue, currentValue) {  
-    return previousValue + "::" + currentValue;  
+function appendCurrent (accumulator, currentValue) {  
+    return accumulator + "::" + currentValue;  
     }  
   
 // Create an array.  
@@ -136,8 +137,8 @@ document.write(result);
   
 ```JavaScript  
 // Define the callback function.  
-function addRounded (previousValue, currentValue) {  
-    return previousValue + Math.round(currentValue);  
+function addRounded (accumulator, currentValue) {  
+    return accumulator + Math.round(currentValue);  
     }  
   
 // Create an array.  
@@ -154,10 +155,10 @@ document.write (result);
  次の例では、配列内の値を追加します。 `currentIndex`と`array1`パラメーター、コールバック関数で使用されます。  
   
 ```JavaScript  
-function addDigitValue(previousValue, currentDigit, currentIndex, array) {  
+function addDigitValue(accumulator, currentDigit, currentIndex, array) {  
     var exponent = (array.length - 1) - currentIndex;  
     var digitValue = currentDigit * Math.pow(10, exponent);  
-    return previousValue + digitValue;  
+    return accumulator + digitValue;  
     }  
   
 var digits = [4, 1, 2, 5];  
@@ -173,17 +174,17 @@ document.write (result);
  次の例は 1 ~ 10 を別の配列内の値のみを含む配列を取得します。 指定された初期値、`reduce`メソッドは空の配列。  
   
 ```JavaScript  
-function Process(previousArray, currentValue) {  
+function Process(accumulatedArray, currentValue) {  
     // If currentValue is between 1 and 10,   
     // append currentValue to the array.  
     var nextArray;  
     if (currentValue >= 1 && currentValue <= 10)  
-        nextArray = previousArray.concat(currentValue);  
+        nextArray = accumulatedArray.concat(currentValue);  
     else  
-        nextArray = previousArray;  
+        nextArray = accumulatedArray;  
   
     // If this is not the last call by the reduce method,  
-    // the returned array is previousArray on the next call.  
+    // the returned array is accumulatedArray on the next call.  
     // If this is the last call by the reduce method, the  
     // returned array is the return value of the reduce method.  
     return nextArray;  

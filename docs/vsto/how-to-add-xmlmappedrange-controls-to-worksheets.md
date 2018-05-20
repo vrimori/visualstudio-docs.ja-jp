@@ -1,5 +1,5 @@
 ---
-title: '方法: ワークシートに XMLMappedRange コントロールを追加する |Microsoft ドキュメント'
+title: '方法: ワークシートに XMLMappedRange コントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fa0e6d6249ea9b7da3fb0ab57640b61fb38e7fe5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 55b6c83624c3ccb6c28701cd97753ea155e37288
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>方法 : ワークシートに XMLMappedRange コントロールを追加する
+# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>方法: ワークシートに XMLMappedRange コントロールを追加します。
   Microsoft Office Excel のセルに XML 要素をマップすると、Visual Studio は自動的に追加、<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>をワークシートにコントロールできます。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>コントロールでは使用できません、**ツールボックス**または**データソース**ウィンドウです。 また、作成することはできません<xref:Microsoft.Office.Tools.Excel.XmlMappedRange>プログラムで制御します。  
   
-### <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>ワークシートに XMLMappedRange コントロールを追加するには  
+## <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>ワークシートに XMLMappedRange コントロールを追加するには  
   
 1.  Visual Studio デザイナーで Excel ブックを開きます。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 3.  **開発者** タブで、をクリックして**ソース**です。  
   
     > [!NOTE]  
-    >  場合、**開発者** タブがリボンに表示されていない、有効にする必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  場合、**開発者** タブがリボンに表示されていない、有効にする必要があります。 詳細については、次を参照してください。[する方法: [開発] タブをリボンに表示](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)です。  
   
      **XML ソース**タスク ウィンドウが表示されます。  
   
@@ -64,9 +64,9 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="see-also"></a>関連項目  
  [XmlMappedRange コントロール](../vsto/xmlmappedrange-control.md)   
- [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)   
+ [拡張オブジェクトによる Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [方法: Visual Studio 内でワークシートにスキーマを割り当てる](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
+ [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [方法: Visual Studio 内のワークシートにスキーマのマッピング](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)  
   
   

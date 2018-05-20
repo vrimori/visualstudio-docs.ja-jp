@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17dc34cd030bf2eab430872a191424fb657d6cd0
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 4f01dddf18e93c657d2c69e30a9b4698f4dda796
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 ジャスト イン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部で実行されるアプリケーション例外またはクラッシュが発生した場合。 これにより、Visual Studio が実行されていない場合、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
@@ -58,7 +58,7 @@ Visual Studio がコンピューターからアンインストールされた後
   
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger  
   
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\DbgManagedDebugger  
+    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\です。NETFramework\DbgManagedDebugger  
 
     ![レジストリ キーの JIT](../debugger/media/dbg-jit-registry.png "JIT レジストリ キー") 
   
