@@ -19,11 +19,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27bcbb12ac8111ad76b5b71c486081d9e075365e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: ee4a75ba456184ffe48cb59f77668625acf673d1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -78,7 +78,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
- ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-enterprise.png)
+ ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-community.png)
 
      たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
 
