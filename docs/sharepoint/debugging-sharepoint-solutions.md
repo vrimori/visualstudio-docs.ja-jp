@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1be963dec8eee77efe4855c2e810af0fd1e72f1b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9acec4af35fd194007ec13724bd07ceb366fc044
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="debugging-sharepoint-solutions"></a>SharePoint ソリューションのデバッグ
   SharePoint ソリューションは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デバッガーを使用してデバッグできます。 デバッグを開始するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]が SharePoint サーバーに、プロジェクト ファイルを展開し、Web ブラウザーで SharePoint サイトのインスタンスを開きます。 以下のセクションでは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint アプリケーションをデバッグする方法について説明します。  
@@ -128,16 +128,16 @@ ms.lasthandoff: 04/16/2018
  ワークフロー プロジェクトをデバッグすると、その種類に応じたワークフロー テンプレートが [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によってライブラリまたはリストに追加されます。 このワークフロー テンプレートは手動で開始できるほか、項目を追加または更新することによって開始することもできます。 これで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を使用してワークフローをデバッグできます。  
   
 > [!NOTE]  
->  その他のアセンブリに参照を追加する場合は、アセンブリがグローバル アセンブリ キャッシュ ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]) にインストールされていることを確認してください。 そうしないと、ワークフロー ソリューションは失敗します。 アセンブリをインストールする方法については、次を参照してください。[ドキュメントや項目でワークフローを手動で開始](http://go.microsoft.com/fwlink/?LinkID=79938)です。  
+>  その他のアセンブリに参照を追加する場合は、アセンブリがグローバル アセンブリ キャッシュ ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]) にインストールされていることを確認してください。 そうしないと、ワークフロー ソリューションは失敗します。 アセンブリをインストールする方法については、次を参照してください。[ドキュメントや項目でワークフローを手動で開始](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963)です。  
   
  ただし、配置プロセスでは、ワークフローは開始されません。 SharePoint Web サイトからワークフローを開始する必要があります。 Microsoft Office Word 2010 などのクライアント アプリケーションや別個のサーバー側のコードを使用して、ワークフローを開始することもできます。 指定するアプローチのいずれかを使用して、 **SharePoint カスタマイズ ウィザード**です。  
   
- たとえば、ワークフローの手動での開始を許可した場合は、ライブラリまたはリスト内のアイテムから、ワークフローを直接開始します。 ワークフローを手動で開始する方法の詳細については、次を参照してください。[ドキュメント項目に対するワークフローを手動で開始](http://go.microsoft.com/fwlink/?LinkID=79938)です。  
+ たとえば、ワークフローの手動での開始を許可した場合は、ライブラリまたはリスト内のアイテムから、ワークフローを直接開始します。 ワークフローを手動で開始する方法の詳細については、次を参照してください。[ドキュメント項目に対するワークフローを手動で開始](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963)です。  
   
 ##  <a name="FeatureEvents"></a> フィーチャー イベント レシーバーのデバッグ  
  既定では、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションを実行すると、そのフィーチャーが SharePoint サーバー上で自動的にアクティブ化されます。 ただし、これにより、問題フィーチャー イベント レシーバーをデバッグするときにためで機能をアクティブにするタイミング[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッガーとは異なるプロセスで実行されます。 つまり、ブレークポイントなどの一部のデバッグ機能が正常に機能しなくなるということです。  
   
- SharePoint の機能の自動ライセンス認証を無効にして、フィーチャーのイベント レシーバーが適切にデバッグできるように、プロジェクトの値を設定**アクティブな配置構成**プロパティを**アクティブ化しません。**デバッグする前にします。 そのうえで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint アプリケーションのデバッグを開始してから、SharePoint でフィーチャーを手動でアクティブ化します。 機能をアクティブ化、開く、**サイトの操作**メニューを SharePoint では、**サイト設定**を選択、**サイト機能の管理**リンク、および、を選択し**Activate**通常どおりデバッグを続行する、機能の横にあるボタンをクリックします。  
+ SharePoint の機能の自動ライセンス認証を無効にして、フィーチャーのイベント レシーバーが適切にデバッグできるように、プロジェクトの値を設定**アクティブな配置構成**プロパティを**アクティブ化しません。** デバッグする前にします。 そのうえで、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint アプリケーションのデバッグを開始してから、SharePoint でフィーチャーを手動でアクティブ化します。 機能をアクティブ化、開く、**サイトの操作**メニューを SharePoint では、**サイト設定**を選択、**サイト機能の管理**リンク、および、を選択し**Activate**通常どおりデバッグを続行する、機能の横にあるボタンをクリックします。  
   
 ##  <a name="EnhancedDebug"></a> 拡張デバッグ情報を有効にします。  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロセス (devenv.exe)、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ホスト プロセス (vssphost4.exe)、SharePoint、および WCF レイヤー間の相互作用がときには複雑であるため、ビルドや配置などの実行中に発生したエラーを診断することが困難な場合があります。 拡張デバッグ情報を有効にすると、こうしたエラーが解決しやすくなります。 これを行うには、まず Windows レジストリで次のレジストリ キーに移動します。  

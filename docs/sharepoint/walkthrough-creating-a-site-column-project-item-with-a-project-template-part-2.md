@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0027b49cd371aaec00d2bcfb609a694f14dc4869
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 0aa938d41540229d6cd91598968f104b3fa3a7be
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。 ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2018
 -   ウィザードをデバッグおよびテストします。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+> 一連のサンプル ワークフローは、次を参照してください。 [SharePoint ワークフロー サンプル](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-workflow-samples)です。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行する必要があります最初に作成する、SiteColumnProjectItem ソリューションを完了して[チュートリアル: プロジェクト テンプレート、第 1 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)です。  

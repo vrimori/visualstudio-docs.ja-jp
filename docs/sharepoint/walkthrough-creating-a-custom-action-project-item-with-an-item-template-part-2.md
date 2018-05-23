@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b617230c7a30ee437ac1d1120793e567e14c7814
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 86e176ba2b6b4da026e5ecfc341ac535d9a32f84
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目の種類のカスタム定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供することがもできます。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのに、テンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/22/2018
 -   ウィザードをデバッグおよびテストします。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます:[プロジェクト ファイルを SharePoint ツール拡張機能のチュートリアルについて](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  サンプルをダウンロードする[Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities)ワークフローについては、カスタム アクティビティを作成する方法を示すです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行する必要があります最初に作成する、CustomActionProjectItem ソリューションを完了して[チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)です。  

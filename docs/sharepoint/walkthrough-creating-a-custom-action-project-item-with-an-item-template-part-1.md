@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6b1d81f200fde885a25aa367e700e61399af5bab
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 02f3311b96d8f1287f2c2f2a81f9b37e51d4f7f6
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。
   Visual Studio の SharePoint プロジェクト システムは、プロジェクト項目の種類を独自に作成することによって拡張することができます。 このチュートリアルでは、SharePoint サイトでカスタム アクションを作成する SharePoint プロジェクトに追加できるプロジェクト項目を作成します。 カスタム アクションを追加するメニュー項目、**サイトの操作**SharePoint サイトのメニュー。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/22/2018
  これは、独立したチュートリアルです。 このチュートリアルを完了すると、項目テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。 詳細については、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  サンプルをダウンロードする[Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities)ワークフローについては、カスタム アクティビティを作成する方法を示すです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
