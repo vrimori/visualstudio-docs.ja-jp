@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのデータにアクセスします。
+title: データ アクセスおよびツール
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +16,23 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4b43463dc35fa3f9703162817f6a8d63f44a87b8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fbfd4227a2a4acfd8e21703cc29ff13ec36bd986
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="accessing-data-in-visual-studio"></a>Visual Studio でのデータにアクセスします。
+# <a name="access-data-in-visual-studio"></a>Visual Studio でデータにアクセス
 
 Visual Studio で、ほぼすべてのデータベース製品または任意の形式で、任意の場所のサービスのデータに接続するアプリケーションを作成することができます、ローカル コンピューターのローカル エリア ネットワーク、またはパブリック、プライベート、またはハイブリッド クラウド。
 
 JavaScript、Python、PHP、Ruby、または C++ では、アプリケーションのデータに接続するには、何でもしてライブラリを取得するコードの記述と同じようにします。 .NET アプリケーションの場合は、Visual Studio は、データ ソースの探索を格納し、メモリ内のデータを操作およびユーザー インターフェイスにデータをバインドするオブジェクト モデルを作成し、使用できるツールを提供します。 Microsoft Azure は、Azure ストレージに接続するため、.NET、Java、Node.js、PHP、Python、Ruby、およびモバイル アプリ、および Visual Studio のツールの Sdk を提供します。
 
-次の表は、Visual Studio から使用できる多くのデータベースと記憶域システムの一部だけを示します。 [Microsoft Azure](https://azure.microsoft.com/)内容はデータなどのサービスのすべてのプロビジョニングと、基になるデータ ストアの管理。  [Azure Tools for Visual Studio](https://www.visualstudio.com/features/azure-tools-vs.aspx)オプションのコンポーネントであり、Visual Studio から直接 Azure データ ストアを操作することができます。 ほとんど他の SQL、NoSQL データベース製品は、ここに記載されているは、ローカル コンピューター、ローカル ネットワーク上または Microsoft Azure で仮想マシン上でホストできます。 このシナリオでは、データベース自体の管理を担当すます。
+次の表は、Visual Studio から使用できる多くのデータベースと記憶域システムの一部だけを示します。 [Microsoft Azure](https://azure.microsoft.com/)内容はデータなどのサービスのすべてのプロビジョニングと、基になるデータ ストアの管理。 **Azure 開発**ワークロードで[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) Visual Studio から直接 Azure データ ストアを操作することができます。
+
+![Azure 開発ワークロード](media/azure-development-workload.png)
+
+ほとんど他の SQL、NoSQL データベース製品は、ここに記載されているは、ローカル コンピューター、ローカル ネットワーク上または Microsoft Azure で仮想マシン上でホストできます。 Microsoft Azure の仮想マシンでデータベースをホストしている場合、データベース自体の管理を担当できました。
 
 **Microsoft Azure**
 
@@ -68,7 +72,7 @@ JavaScript、Python、PHP、Ruby、または C++ では、アプリケーショ�
 
 .NET Core を含む、すべての .NET データ アクセスは、ADO.NET、任意の種類のデータ ソース、リレーショナルおよび非リレーショナルの両方にアクセスするためのインターフェイスを定義する一連のクラスに基づいています。 Visual Studio がいくつかのツールとデザイナーを使用すると、データベースに接続するように ADO.NET を使用するデータを操作およびユーザーにデータを表示します。 このセクションのドキュメントでは、これらのツールを使用する方法について説明します。 また、ADO.NET コマンド オブジェクトに対して直接プログラミングすることができます。 ADO.NET Api を直接呼び出すの詳細については、次を参照してください。 [ADO.NET](/dotnet/framework/data/adonet/index)です。
 
-データ アクセスのドキュメントが ASP.NET に関連する具体的には、次を参照してください。[データを扱う](http://www.asp.net/web-forms/overview/presenting-and-managing-data)ASP.NET サイトです。 ASP.NET MVC で Entity Framework の使用に関するチュートリアルは、次を参照してください。 [Entity Framework 6 の Code First MVC 5 を使用すると作業の開始](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)です。
+データ アクセスのドキュメントが ASP.NET に関連する、次を参照してください。[データを扱う](http://www.asp.net/web-forms/overview/presenting-and-managing-data)ASP.NET サイトです。 ASP.NET MVC で Entity Framework の使用に関するチュートリアルは、次を参照してください。 [Entity Framework 6 の Code First MVC 5 を使用すると作業の開始](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)です。
 
 C# または Visual Basic でのユニバーサル Windows プラットフォーム (UWP) アプリは、Microsoft Azure SDK for .NET を使用して、Azure Storage や他の Azure サービスにアクセスすることができます。 Windows.Web.HttpClient クラスには、任意の RESTful サービスとの通信ができるようにします。 詳細については、次を参照してください。 [Windows.Web.Http を使用して HTTP サーバーに接続する方法](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)です。
 

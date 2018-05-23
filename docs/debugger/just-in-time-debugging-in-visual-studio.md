@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c506e12fc8e6637e2b53852587e6a37c57cbf5ce
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1b97e2d6b9ca269a86c3b66ffbcc4bb441051f29
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-respond-to-the-just-in-time-debugger"></a>方法: - Just-in-time デバッガーへの応答
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/18/2018
 
 #### <a name="if-you-want-to-fix-or-debug-the-error-visual-studio-users"></a>修正するか、エラー (Visual Studio ユーザー) をデバッグする場合
 
-- 必要があります[Visual Studio がインストールされて](https://www.microsoft.com/en-us/download/details.aspx?id=48146)エラーに関する詳細情報を表示し、それをデバッグしようとしています。 詳細については、次を参照してください。 [Just-In-Time デバッガーを使用してデバッグ](../debugger/debug-using-the-just-in-time-debugger.md)です。 場合はエラーを解決し、アプリを修正することはできません、エラーを解決するのには、アプリの所有者に問い合わせてください。
+- 必要があります[Visual Studio がインストールされて](http://www.visualstudio.com)エラーに関する詳細情報を表示し、それをデバッグしようとしています。 詳細については、次を参照してください。 [Just-In-Time デバッガーを使用してデバッグ](../debugger/debug-using-the-just-in-time-debugger.md)です。 場合はエラーを解決し、アプリを修正することはできません、エラーを解決するのには、アプリの所有者に問い合わせてください。
 
 #### <a name="if-you-want-to-prevent-the-just-in-time-debugger-dialog-box-from-appearing"></a>Just-In-Time デバッガー ダイアログ ボックスが表示されないようにする場合
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/18/2018
 
 2. (ASP.NET と IIS)IIS で ASP.NET Web アプリをホストしている場合は、サーバー側のデバッグを無効にします。
 
-    IIS マネージャーでは、サーバー ノードを右クリックして、選択**機能ビューに切り替える**です。 [ASP.NET] セクションで選択**.NET コンパイル**を選択するかどうかを確認し、 **False** (手順は、IIS の旧バージョンでは異なります) のデバッグ動作として。
+    IIS マネージャーでは、サーバー ノードを右クリックして、選択**機能ビューに切り替える**です。 [ASP.NET] セクションで選択 **.NET コンパイル**を選択するかどうかを確認し、 **False** (手順は、IIS の旧バージョンでは異なります) のデバッグ動作として。
   
 ## <a name="see-also"></a>関連項目    
  [デバッガーの基本事項](../debugger/debugger-basics.md)   

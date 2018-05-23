@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 223bbf3d2f59b79214cf6acbff89946750cb312d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d3b19e8bd55320a9fbd5d8af037a9577db42a2fa
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>自動変数 内の変数と Visual Studio の ローカル ウィンドウを調べる
 **[自動変数]** ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/18/2018
 デバッグの基礎について詳しくは、「 [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md)」をご覧ください。  
   
 ## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウ内のオブジェクトを調べる  
-配列とオブジェクトは、[自動変数] と [ローカル] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 以下に、 [[ローカル]](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) ウィンドウに表示されている **FileStream** オブジェクトの例を示します。  
+配列とオブジェクトは、[自動変数] と [ローカル] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 例を次に示します、 [FileStream](/dotnet/api/system.io.filestream)内のオブジェクト、**ローカル**ウィンドウ。  
   
 ![[ローカル]&#45;FileStream](../debugger/media/locals-filestream.png "ローカル FileStream")  
   

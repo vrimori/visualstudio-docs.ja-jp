@@ -15,11 +15,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c56ad565dfffd454eeca465aa4097c077fdc0a65
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fbe291c838d006bea62450f7e397cde7e5d09ee3
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName 要素 (Visual Studio テンプレート)
 指定するかどうか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト システムでテンプレートの既定の名前によって生成されます、**新しい項目の追加**または**新しいプロジェクト** ダイアログ ボックス。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
  場合、`ProvideDefaultName`要素は`false`、**名前**のボックス、**新しい項目の追加**と**新しいプロジェクト** ダイアログ ボックスに値が含まれて`<Enter_name>`です。  
   
- 使用して、 [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)要素プロジェクトの既定の名前を指定するか、内の項目を**新しい項目の追加**と**新しいプロジェクト** ダイアログ ボックス。  
+ 使用して、 [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md)要素プロジェクトの既定の名前を指定するか、内の項目を**新しい項目の追加**と**新しいプロジェクト** ダイアログ ボックス。 ときの値、`ProvideDefaultName`要素は`true`の省略、`DefaultName`プロジェクトの要素から値は、テンプレートの名前をダイアログ ボックスに表示、[名前](../extensibility/name-element-visual-studio-templates.md)要素。
   
 ## <a name="example"></a>例  
  次のコード例のセット、`ProvideDefaultName`要素を`false`です。  
