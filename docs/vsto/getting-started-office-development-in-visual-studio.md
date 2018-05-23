@@ -1,5 +1,5 @@
 ---
-title: はじめに (Visual Studio での Office 開発) |Microsoft ドキュメント
+title: 開始 (での Office 開発 Visual Studio) の取得します。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,13 +15,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2e0c945667f99fdd6df431413e3f1f96d06eca4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 194e98578125a41c1db5d54b4b9d4e5767c27a9a
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="getting-started-office-development-in-visual-studio"></a>はじめに (Visual Studio での Office 開発)
+# <a name="get-started-office-development-in-visual-studio"></a>開始 (での Office 開発 Visual Studio) の取得します。
   このセクションには、Visual Studio の Microsoft Office Developer Tools の使用に役立つトピックが含まれています。  
   
 > [!NOTE]  
@@ -31,25 +31,25 @@ ms.lasthandoff: 04/16/2018
  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)  
  Visual Studio での Office ソリューションの開発に必要な背景情報を示します。  
   
- [.NET Framework 4 または .NET Framework 4.5 を対象とする Office プロジェクトのデザインの変更](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+ [Office プロジェクトのデザインをターゲットとする .NET Framework 4 または .NET Framework 4.5 に変更します。](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とする Office プロジェクトの新しいデザインについて説明し、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に移行する Office プロジェクトのコードに加えられた重大な変更点の一覧を示します。  
   
- [Office アプリケーションおよびプロジェクト タイプ別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)  
+ [Office アプリケーションおよびプロジェクトの種類で使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)  
  リボン機能拡張、カスタム作業ウィンドウ、操作ウィンドウ、フォーム領域など、Office 開発機能に必要なアプリケーションおよびプロジェクトについて説明します。  
   
- [Office ソリューションを開発できるようにコンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)  
+ [Office ソリューションを開発コンピューターを構成します。](../vsto/configuring-a-computer-to-develop-office-solutions.md)  
  Office 開発ツールのインストール、Office ソリューションをエンド ユーザーのコンピューターで実行できるようにするランタイムのインストール、Microsoft Office プライマリ相互運用機能アセンブリのインストールを行うための情報および手順を示します。  
   
- [Excel のドキュメント レベルのカスタマイズのプログラミングの概要](../vsto/getting-started-programming-document-level-customizations-for-excel.md)  
+ [Excel 用ドキュメント レベルのカスタマイズを起動したプログラムの取得します。](../vsto/getting-started-programming-document-level-customizations-for-excel.md)  
  Visual Studio を使用して Excel 用のドキュメント レベルのカスタマイズを作成するために必要となる重要な概念について、その概要を示します。  
   
- [Word 用のドキュメント レベルのカスタマイズのプログラミングについて](../vsto/getting-started-programming-document-level-customizations-for-word.md)  
+ [Word 用ドキュメント レベルのカスタマイズのプログラミングを始める](../vsto/getting-started-programming-document-level-customizations-for-word.md)  
  Visual Studio を使用して Word 用のドキュメント レベルのカスタマイズを作成するために必要となる重要な概念について、その概要を示します。  
   
- [VSTO アドインのプログラミングについて](../vsto/getting-started-programming-vsto-add-ins.md)  
+ [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)  
  Visual Studio を使用して Microsoft Office アプリケーション用のアプリケーション レベルの Visual Studio Tools for Office (VSTO) アドインを作成するために必要となる重要な概念について、その概要を示します。  
   
- [VBA ソリューションと Visual Studio の Office ソリューションの比較](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)  
+ [VBA と Office Visual Studio ソリューションの比較](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)  
  Office ソリューションの開発に Visual Basic for Applications を使用する場合と Visual Studio の Office 開発ツールを使用する場合の相対的なメリットについて説明します。  
   
  [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)  
@@ -59,22 +59,22 @@ ms.lasthandoff: 04/16/2018
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)  
  サンプル アプリケーション、および一般的なタスクの詳細な手順を説明するトピックへのリンクを示します。  
   
- [Visual Studio の Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
- Office ソリューションのコンポーネントと、それらのコンポーネントのデザイン時と実行時における動作について説明します。  
+ [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
+ Office ソリューションおよびデザイン時および実行時に動作のしくみのコンポーネントについて説明します。  
   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で Office プロジェクトを作成し、プロジェクトを構成する方法について説明します。  
   
- [Office ソリューションの開発](../vsto/developing-office-solutions.md)  
+ [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)  
  Office プロジェクトでコードやユーザー インターフェイスのカスタマイズを実装する方法について説明します。  
   
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
+ [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)  
  Office ソリューションのセキュリティ要件について説明します。  
   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
+ [Office ソリューションを配置します。](../vsto/deploying-an-office-solution.md)  
  Office ソリューションをユーザーが使用できるようにする方法についての情報を提供し、配置方法を選択するときやセキュリティを設定するときに考慮する主な問題点について説明します。  
   
- [Visual Studio Tools for Office 技術資料およびビジュアルな「HOW TO」サポート技術情報](http://go.microsoft.com/fwlink/?LinkID=106640)  
+ [Office 技術資料およびビジュアル Howto の visual Studio Tools](http://go.microsoft.com/fwlink/?LinkID=106640)  
  Visual Studio を使用して作成された Office ソリューションについてのビデオおよび技術情報へのリンクがあります。  
   
   

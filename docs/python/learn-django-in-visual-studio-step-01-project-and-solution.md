@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 389bd7a3dedfcc400e9cf3d56d26723a5fc9aa7e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: de9726b6716ff66178b90792a25f7bf02bec8ede
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-step-1-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル手順 1: Visual Studio での Django Web フレームワークの概要
 
@@ -62,7 +62,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
     - **ソリューション**: このコントロールは既定の "新しいソリューションの作成" オプションに設定したままにします。
     - **ソリューション名**: このチュートリアルでは複数プロジェクトのコンテナーとしてのソリューションに適した "LearningDjango" に設定します。
     - **ソリューションのディレクトリを作成**: オンのままにします (既定)。
-    - **新しい Git リポジトリの作成**: ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。
+    - **新しい Git リポジトリの作成**: ソリューションの作成時に Visual Studio でローカルの Git リポジトリが作成されるように、このオプション (既定ではオフ) をオンにします。 このオプションが表示されない場合は、Visual Studio 2017 インストーラーを実行し、**[コード ツール]** の **[個別のコンポーネント]** タブで Windows 用 Git および Visual Studio 用 GitHub 拡張機能を追加します。
 
 1. しばらくすると、Visual Studio に (次に示すように) "このプロジェクトには外部パッケージが必要です" というダイアログが表示されます。 テンプレートには、最新の Django 1.x パッケージを参照する `requirements.txt` ファイルが含まれているため、このダイアログが表示されます  (正確な依存関係を確認するには **[必要なパッケージを表示]** を選択します)。
 

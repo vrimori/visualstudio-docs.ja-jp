@@ -1,5 +1,5 @@
 ---
-title: クイック アクション
+title: クイック アクション、電球、ねじ回し
 ms.date: 03/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,11 +12,11 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 43198f5722de1bd983991df8ff19b17fcaea9e83
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: d413d5b440c39c3603e1e909fb0c4645719f188b
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="quick-actions"></a>クイック アクション
 
@@ -29,21 +29,27 @@ ms.lasthandoff: 04/28/2018
 - リファクタリングを適用する (例: [一時変数をインライン化する](../ide/reference/inline-temporary-variable.md))
 - コードを生成する (例: [ローカル変数を導入する](../ide/reference/introduce-local-variable.md))
 
-クイック アクションは、電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png) を使うか、適切なコード行にカーソルを置いて **Ctrl**+ **キーを押すと** 利用できます。 赤い波線が表示され、Visual Studio が問題の修正候補を提供できる場合に、電球アイコンが表示されます。 たとえば、赤い波線で示されるエラーがある場合、そのエラーの修正が可能な場合に電球マークが表示されます。
+クイック アクションは、電球 ![電球アイコン](media/light-bulb-icon.png) アイコンまたはねじ回し ![ねじ回しアイコン](media/screwdriver-icon.png) アイコンを使うか、適切なコード行にカーソルを置いて **Ctrl**+**.** キーを押すと 利用できます。 エラーを示す赤い波線があり、Visual Studio にそのエラーに対処するために使用可能な解決策がある場合は、エラー電球 ![エラー電球アイコン](media/error-light-bulb-icon.png) が表示されます。
 
 いずれの言語でも、サードパーティは、たとえば SDK の一部として、カスタマイズした診断や提案を表示できます。Visual Studio はそれらの規則に基づいて電球マークを表示します。
 
-## <a name="to-see-a-light-bulb"></a>電球マークを表示するには
+## <a name="icons"></a>アイコン
 
-1. 多くの場合、電球マークはマウスをエラーの地点に移動すると自動的に表示されます。あるいは、カレットをエラーが含まれている行に移動すると、エディターの左端に表示されます。 赤い波線が表示されている場合にマウス ポインターを重ねると電球マークを表示させることができます。 問題が発生した行のどこかに、マウスやキーボードを使用して移動することで電球マークを表示させることもできます。
+クイック アクションが使用可能なときに表示されるアイコンは、使用可能な解決策またはリファクタリングの種類を示します。 *ねじ回し*![ねじ回しアイコン](media/screwdriver-icon.png) アイコンは、コードを変更するのに使用可能なアクションがあることを示すだけで、必ずしもそれらを使用する必要はありません。 *黄色の電球* ![電球アイコン](media/light-bulb-icon.png) アイコンは、コードを改善するために実行する*必要がある*使用可能なアクションがあることを示します。 *エラー電球* ![エラー電球アイコン](media/error-light-bulb-icon.png) アイコンは、コード内のエラーを修正するために使用可能なアクションがあることを示します。
 
-1. 行の任意の場所で **Ctrl**+**.** キーを押すと、 電球マークの表示を呼び出して修正候補のリストを直接表示できます。
+## <a name="to-see-a-light-bulb-or-screwdriver"></a>電球やねじ回しを表示するには
+
+- 解決策が使用可能な場合は、エラーの場所にマウス ポインターを置くと、電球が自動的に表示されます。
 
    ![電球でのマウス ホバー](../ide/media/vs2015_lightbulb_hover.png)
 
+- キャレットをクイック アクションが使用できるコード行に移動すると、エディターの左余白に電球とねじ回しが表示されます。
+
+- 行の任意の場所で **Ctrl**+**.** キーを押すと、 使用可能なクイック アクションとリファクタリングの一覧が表示されます。
+
 ## <a name="to-see-potential-fixes"></a>修正候補を表示するには
 
-下矢印をクリックするか、**修正候補を表示する**リンクをクリックすると、電球マークで実行可能なクイック操作のリストが表示されます。
+電球の横の下矢印を選択するか、**[修正候補を表示する]** リンクを選択すると、使用可能なクイック アクションのリストが表示されます。
 
 ![拡大電球](../ide/media/vs2015_lightbulb_hover_expanded.png)
 

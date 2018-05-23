@@ -12,17 +12,21 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 70de979f1af431b85bc9fb2f07feec93486624ee
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: becddc01dbe668fbdb129fd6e350f28e054408b7
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="common-quick-actions"></a>共通のクイック アクション
 
 このトピックのセクションでは、C# と Visual Basic 両方のコードに共通に適用される**クイック アクション**の一部を示します。 このアクションは、コンパイラ診断、または Visual Studio の組み込みの [.NET Compiler Platform アナライザー](../code-quality/roslyn-analyzers-overview.md)のいずれかの*コード修正*です。
 
 ## <a name="actions-that-fix-errors"></a>エラーを修正するアクション
+
+このセクションのクイック アクションにより、ビルドの失敗の原因となるコードのエラーが修正されます。 コード行のエラーの修正でクイック アクションが使用できる場合に余白または赤の波線の下に表示される電球のアイコンには、赤の 'x' が表示されます。
+
+![クイック アクションのエラー アイコンとメニュー](media/error-light-bulb-with-code.png)
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>記号やキーワードのスペルミスの修正
 
@@ -94,44 +98,6 @@ private void MyMethod()
 |  エラー ID | 該当言語 |  サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | CS8300、BC37284  | C# および Visual Basic | Visual Studio 2017 バージョン 15.3 |
-
-### <a name="make-method-synchronous"></a>メソッドを同期させる
-
-`async` または `Async` のキーワードをメソッドで使う場合は、そのメソッド内のどこかで `await` または `Await` のキーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async` または `Async` のキーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。 [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
-
-```csharp
-// Before
-async Task<int> MyAsyncMethod()
-{
-    return 3;
-}
-
-// Make method synchronous
-
-// After
-int MyAsyncMethod()
-{
-    return 3;
-}
-```
-
-```vb
-' Before
-Async Function MyAsyncMethod() As Task(Of Integer)
-    Return 3
-End Function
-
-' Make method synchronous
-
-' After
-Function MyAsyncMethod() As Integer
-    Return 3
-End Function
-```
-
-|  エラー ID | 該当言語 |  サポートされているバージョン |
-| ------- | -------------------- | ----------------  |
-| CS1998、BC42356 | C# および Visual Basic | Visual Studio 2015 更新プログラム 2 |
 
 ### <a name="make-method-asynchronous"></a>メソッドを非同期にする
 
@@ -953,6 +919,44 @@ Console.WriteLine($"{x} {y}");
 | 診断 ID | 該当言語 | サポートされているバージョン |
 | ------- | -------------------- | ----------------  |
 | IDE0042 | C# 7.0+ | Visual Studio 2017 v. 15.5 |
+
+### <a name="make-method-synchronous"></a>メソッドを同期させる
+
+`async` または `Async` のキーワードをメソッドで使う場合は、そのメソッド内のどこかで `await` または `Await` のキーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async` または `Async` のキーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。 [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
+
+```csharp
+// Before
+async Task<int> MyAsyncMethod()
+{
+    return 3;
+}
+
+// Make method synchronous
+
+// After
+int MyAsyncMethod()
+{
+    return 3;
+}
+```
+
+```vb
+' Before
+Async Function MyAsyncMethod() As Task(Of Integer)
+    Return 3
+End Function
+
+' Make method synchronous
+
+' After
+Function MyAsyncMethod() As Integer
+    Return 3
+End Function
+```
+
+|  エラー ID | 該当言語 |  サポートされているバージョン |
+| ------- | -------------------- | ----------------  |
+| CS1998、BC42356 | C# および Visual Basic | Visual Studio 2015 更新プログラム 2 |
 
 ## <a name="see-also"></a>関連項目
 

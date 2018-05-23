@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 92aefd2292976bd9dcb50603e93b460cdf2bf991
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c232d541e985944fe64d9eb40da7e344b32c0cc
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成
   このチュートリアルでは、関連付けフォームと開始フォームの使用が組み込まれている基本的なシーケンシャル ワークフローを作成する方法を示します。 これらは、最初は SharePoint 管理者 (関連付けフォーム) が関連付けられている場合、およびユーザー (開始フォーム) によって、ワークフローの開始時にワークフローに追加するパラメーターを有効にする ASPX フォームです。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  展開、 **SharePoint**ノード**Visual c#**または**Visual Basic**を選択し、 **2010**ノード。  
+2.  展開、 **SharePoint**ノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
   
 3.  **テンプレート** ウィンドウで、選択、 **SharePoint 2010 プロジェクト**プロジェクト テンプレート。  
   
@@ -88,13 +88,13 @@ ms.lasthandoff: 04/16/2018
   
 7.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-8.  いずれかで**Visual c#**または**Visual Basic**、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
+8.  いずれかで**Visual c#** または**Visual Basic**、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
-9. **テンプレート** ウィンドウで、選択**シーケンシャル ワークフロー (ファーム ソリューションのみ)**テンプレートを選択し、**追加**ボタンをクリックします。  
+9. **テンプレート** ウィンドウで、選択**シーケンシャル ワークフロー (ファーム ソリューションのみ)** テンプレートを選択し、**追加**ボタンをクリックします。  
   
      **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-10. **デバッグのワークフローの名前を指定** ページで、既定の名前 (**ExpenseReport - Workflow1**)。 既定のワークフロー テンプレート型の値を保持 (**リスト ワークフロー)**です。 **[次へ]** ボタンをクリックします。  
+10. **デバッグのワークフローの名前を指定** ページで、既定の名前 (**ExpenseReport - Workflow1**)。 既定のワークフロー テンプレート型の値を保持 (**リスト ワークフロー)** です。 **[次へ]** ボタンをクリックします。  
   
 11. **Visual Studio でデバッグ セッションでワークフローを自動的に関連付けたいですか?**  ページで、ボックスがオンの場合、ワークフロー テンプレートを自動的に関連付けますをオフにします。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**を表示する、**新しい項目の追加** ダイアログ ボックス。  
   
-3.  ダイアログ ボックスのツリー ビューのいずれかを展開**Visual c#**または**Visual Basic** (、プロジェクト言語に応じて)、展開、 **SharePoint**  ノード、を選択し**2010**ノード。  
+3.  ダイアログ ボックスのツリー ビューのいずれかを展開**Visual c#** または**Visual Basic** (、プロジェクト言語に応じて)、展開、 **SharePoint**  ノード、を選択し**2010**ノード。  
   
 4.  テンプレートの一覧で選択、**ワークフロー関連付けフォーム**テンプレート。  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  このコンテンツの要素の最初の行のすぐ後に、ラベルと経費承認制限の入力を求めるテキスト ボックスを作成する次のコードを追加 (*AutoApproveLimit*)。  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" runat="server" />  
@@ -172,7 +172,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**表示、**新しい項目の追加** ダイアログ ボックス。  
   
-3.  ダイアログ ボックスのツリー ビューのいずれかを展開**Visual c#**または**Visual Basic** (、プロジェクト言語に応じて)、展開、 **SharePoint**  ノード、を選択し**2010**ノード。  
+3.  ダイアログ ボックスのツリー ビューのいずれかを展開**Visual c#** または**Visual Basic** (、プロジェクト言語に応じて)、展開、 **SharePoint**  ノード、を選択し**2010**ノード。  
   
 4.  テンプレートの一覧で選択、**ワークフロー開始フォーム**テンプレート。  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  直接このコンテンツの要素の最初の行の後のラベルと経費承認制限を表示するテキスト ボックスを作成する次のコードを追加 (*AutoApproveLimit*) 関連付けフォームと別のラベルに入力したと経費精算の合計を要求するテキスト ボックス (*ExpenseTotal*)。  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" ReadOnly="true" runat="server" />  

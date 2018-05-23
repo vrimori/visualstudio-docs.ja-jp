@@ -15,11 +15,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7c49e12b7357cc8f3aa6ce9f7cbdcd02294cc253
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7ed6b037d04e867b2d94a28fef5ecb6760e39dc
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="deploying-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio での SharePoint ツールの拡張機能の配置
   SharePoint ツール拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]拡張機能のアセンブリおよび拡張機能を配布するその他のファイルを含む拡張機能 (VSIX) パッケージ。 VSIX パッケージは、Open Packaging Conventions (OPC) 標準に準拠した圧縮ファイルです。 VSIX パッケージでは、.vsix 拡張子が付いています。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-3.  **型**一覧で、選択**[microsoft.visualstudio.projecttemplate]**または**[microsoft.visualstudio.itemtemplate]**です。  
+3.  **型**一覧で、選択 **[microsoft.visualstudio.projecttemplate]** または **[microsoft.visualstudio.itemtemplate]** です。  
   
 4.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
   
@@ -133,19 +133,19 @@ ms.lasthandoff: 04/16/2018
   
 8.  プロジェクト ファイルで次の `VSTemplate` 要素を見つけます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="YourTemplateName.vstemplate">  
     ```  
   
 9. この要素を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="YourTemplateName.vstemplate">  
       <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>  
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 要素は、プロジェクトをビルドするとプロジェクト テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客が開いたときにだけ、項目テンプレートが使用できることを確認してください、**新しいプロジェクトの追加** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。**ノード。  
+     `OutputSubPath` 要素は、プロジェクトをビルドするとプロジェクト テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客が開いたときにだけ、項目テンプレートが使用できることを確認してください、**新しいプロジェクトの追加** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。** ノード。  
   
 10. ファイルを保存して閉じます。  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-7.  **型**一覧で、選択**[microsoft.visualstudio.itemtemplate]**または**[microsoft.visualstudio.projecttemplate]**です。  
+7.  **型**一覧で、選択 **[microsoft.visualstudio.itemtemplate]** または **[microsoft.visualstudio.projecttemplate]** です。  
   
 8.  **ソース**一覧で、選択**ファイルシステム上のファイル**です。  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-3.  **型**一覧で、選択**[microsoft.visualstudio.assembly]**です。  
+3.  **型**一覧で、選択 **[microsoft.visualstudio.assembly]** です。  
   
 4.  **ソース**一覧で、次の手順のいずれかを実行します。  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="example"></a>例  
  次の例では、SharePoint ツール拡張機能に extension.vsixmanifest ファイルの内容を示します。 拡張機能は、Contoso.ProjectExtension.dll というアセンブリに実装されます。 拡張機能には、Contoso.ExtensionCommands.dll と項目テンプレートをという名前のフォルダーの下に指定される SharePoint コマンド アセンブリが含まれています。**項目テンプレート**VSIX パッケージにします。 この例では、VSIX パッケージ内になる extension.vsixmanifest ファイルと同じフォルダーには、アセンブリの両方を前提としています。  
   
-```  
+```xml 
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">  
   <Metadata>  
     <Identity Id="CustomActionProjectItem.Microsoft.b99efe4d-cef3-4afd-b9af-034ca0c52743" Version="1.0" Language="en-US" Publisher="Microsoft" />  

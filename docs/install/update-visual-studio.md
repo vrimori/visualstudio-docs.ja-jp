@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d528c8ec235ceb1b9c8b23de0874ebe42c472ce
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c0a53ca3a5b7eb292a2b2bdd1e95b9319205bcf3
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017 を最新リリースに更新する
 
@@ -54,7 +54,7 @@ IDE 内から直接使用しやすくするために、インストールと更�
      更新が続行されます。 処理が完了すると、Visual Studio が再起動されます。
 
      > [!NOTE]
-     > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。    
+     > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。
 
 ### <a name="use-the-ide"></a>IDE を使用する
 
@@ -71,7 +71,7 @@ IDE 内から直接使用しやすくするために、インストールと更�
    前のセクションと同様に更新が実行され、更新が正常に完了すると Visual Studio が再起動されます。
 
    > [!NOTE]
-   > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。  
+   > Visual Studio を管理者モードで実行する場合は、更新後に Visual Studio を手動で再起動する必要があります。
 
 ### <a name="use-the-visual-studio-installer"></a>Visual Studio インストーラーを使用する
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;entryPointsCollection&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+title: '&lt;entryPointsCollection&gt;要素 (Visual Studio での Office 開発)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 357e2b4d7aedb82b63676055f1ad1215171a25cf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 119cff9135b2b65f09d265aed2af3a7e2d500d60
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection&gt;要素 (Visual Studio での Office 開発)
   `entryPointsCollection` 名前空間の `vstav3` 要素は、Office ソリューションに関連付けられているすべての `entryPoints` 要素を格納します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <entryPointsCollection>  
   <entryPoints>  
     <entryPoint>  
@@ -54,11 +54,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、 `entryPointsCollection` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例では、 `entryPointsCollection` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
   
 ### <a name="code"></a>コード  
   
-```  
+```xml  
 <vstav3:entryPointsCollection>  
     <vstav3:entryPoints>  
       <vstav3:entryPoint   
@@ -100,11 +100,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、 `entryPointsCollection` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例では、 `entryPointsCollection` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
   
 ### <a name="code"></a>コード  
   
-```  
+```xml  
 <vstav3:entryPointsCollection>  
     <vstav3:entryPoints>  
       <vstav3:entryPoint   
@@ -119,14 +119,14 @@ ms.lasthandoff: 04/16/2018
   </vstav3:entryPointsCollection>  
 ```  
   
-## <a name="multi-project-deployment-example"></a>複数プロジェクトの配置の例  
+## <a name="multi-project-deployment-example"></a>複数プロジェクトの配置例  
   
 ### <a name="description"></a>説明  
- 次のコード例では、2 つの Office ソリューションを使用した複数プロジェクトの配置でのアプリケーション マニフェストにある `entryPointsCollection` 要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例では、2 つの Office ソリューションを使用した複数プロジェクトの配置でのアプリケーション マニフェストにある `entryPointsCollection` 要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
   
 ### <a name="code"></a>コード  
   
-```  
+```xml  
 <vstav3:entryPointsCollection>  
       <vstav3:entryPoints   
         id="ContosoExcel">  
@@ -178,8 +178,8 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
+ [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)   
+ [Office ソリューション用配置マニフェストします。](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  
   
   

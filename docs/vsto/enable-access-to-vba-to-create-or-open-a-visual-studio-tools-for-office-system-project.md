@@ -1,6 +1,6 @@
 ---
-title: 作成するか、Visual Studio Tools for the Microsoft Office System プロジェクトを開き VBA へのアクセスを有効にします。
-decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office System project
+title: 作成するか、Visual Studio Tools for the Microsoft Office system プロジェクトを開き VBA へのアクセスを有効にします。
+decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office system project
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -20,15 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 05c7296412ffd3f87433f4790617f4b27ca75ae3
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: f17c4e1481e7f33034e16d1e60a285b25c6f8230
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>作成するか、Visual Studio Tools for the Microsoft Office System プロジェクトを開き VBA へのアクセスを有効にします。
+# <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>作成するか、Visual Studio Tools for the Microsoft Office system プロジェクトを開き VBA へのアクセスを有効にします。
 
-作成したり、Visual Studio Tools for the Microsoft Office System プロジェクトを開く前に明示的に、Microsoft office Applications (VBA) のプロジェクト システムの Visual Basic へのアクセスを有効にする必要があります。
+作成したり、Visual Studio Tools for the Microsoft Office system プロジェクトを開く前に明示的に、Microsoft office Applications (VBA) のプロジェクト システムの Visual Basic へのアクセスを有効にする必要があります。
 
  Microsoft Office の開発プロジェクトに、プロジェクトはアプリケーションの Visual Basic を使用しない場合でもに Applications (VBA) のプロジェクト システムに Microsoft Office Word および Microsoft Office Excel の Visual Basic へのアクセスが必要です。 Visual Basic プロジェクトと C# プロジェクトでは、デザイン時にコントロールをサポートするために Visual Basic for Applications プロジェクト システムを使用します。
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 
  VBA エラーまたは COM エラーが表示される場合、Office のインストールを修復できます。
 
-## <a name="to-enable-or-disable-access-to-visual-basic-projects"></a>Visual Basic プロジェクトへのアクセスを有効または無効にするには
+## <a name="to-enable-or-disable-access-to-visual-basic-projects"></a>有効にするにまたは Visual Basic プロジェクトへのアクセスを無効にするには
 
 1. **[ファイル]** タブをクリックします。
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/10/2018
 
 6. **[OK]** をクリックします。
 
-### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>有効にするにまたは 2007 Microsoft Office system で Visual Basic プロジェクトへのアクセスを無効にするには
+### <a name="to-enable-or-disable-access-to-visual-basic-projects-with-the-2007-microsoft-office-system"></a>有効にするにまたは 2007 Microsoft Office system での Visual Basic プロジェクトへのアクセスを無効にするには
 
 1. **ツール**メニュー Word または Excel では、をポイント**マクロ**、クリックして**セキュリティ**です。
 
@@ -127,4 +127,4 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="see-also"></a>関連項目
 
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)
+ [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)

@@ -1,15 +1,15 @@
 ---
-title: Visual Studio for Mac で新しいプロジェクトとソリューションを作成する
+title: 新しいプロジェクトとソリューションを作成する
 description: この記事では、Visual Studio for Mac でプロジェクトとソリューションを作成する方法について説明します。
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: 327d0a51efd312c1a2b2909c90ff7668a1083529
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 948d5d5bba49571d4b4a73d4ba47a77b377d8b11
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-new-projects-and-solutions"></a>新しいプロジェクトとソリューションを作成する
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 
 Visual Studio のランディング ページには、最近使用したプロジェクトの一覧が表示されます。
 
- ![](media/create-new-projects-recent.png)
+ ![ウェルカム ページの最近使用したソリューションのセクション](media/create-new-projects-recent.png)
 
 フィルター ボックスを利用してこの一覧を絞り込んだり、一覧から個々の項目を削除したりできます。 
  

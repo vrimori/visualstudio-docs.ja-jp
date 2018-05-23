@@ -1,9 +1,8 @@
 ---
-title: '方法: クラス ダイアグラムをイメージとしてエクスポートする (クラス デザイナー) | Microsoft Docs'
-ms.custom: ''
+title: '方法: クラス ダイアグラムをイメージとしてエクスポートする (クラス デザイナー)'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.exportdialog
@@ -15,27 +14,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c69a03c141779eefda805e39cdda6403a502a22
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9c18fa28d52115d2666e2098a56a78658bebdc8f
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-export-class-diagrams-as-images-class-designer"></a>方法: クラス ダイアグラムをイメージとしてエクスポートする (クラス デザイナー)
-プロジェクトのコードから作成されたクラス ダイアグラムをエクスポートするには、ダイアグラムをイメージとして保存します。 代わりに UML クラス ダイアグラムをエクスポートする場合は、「[イメージとしてダイアグラムをエクスポートする](../../modeling/export-diagrams-as-images.md)」を参照してください。  
-  
-1.  クラス ダイアグラム (.cd) ファイルを開きます。  
-  
-2.  **[クラス ダイアグラム]** メニューまたはダイアグラム サーフェイスのショートカット メニューから、**[イメージとしてダイアグラムをエクスポート]** を選択します。  
-  
-3.  ダイアグラムを選択します。  
-  
-4.  必要な形式を選択します。  
-  
-5.  **[エクスポート]** をクリックしてエクスポートを終了します。  
-  
-     他のドキュメントからリンクされているエクスポート済みイメージを自動的に更新するには、Visual Studio でもう一度ダイアグラムをエクスポートします。  
-  
+# <a name="how-to-export-class-diagrams-as-images"></a>方法: クラス ダイアグラムをイメージとしてエクスポートする
+
+プロジェクトのコードから作成されたクラス ダイアグラムをエクスポートするには、ダイアグラムをイメージとして保存します。 代わりに UML クラス ダイアグラムをエクスポートする場合は、「[イメージとしてダイアグラムをエクスポートする](../../modeling/export-diagrams-as-images.md)」を参照してください。
+
+## <a name="export-a-diagram"></a>ダイアグラムをエクスポートする
+
+1.  クラス ダイアグラム (*.cd*) ファイルを開きます。
+
+2.  **[クラス ダイアグラム]** メニューまたはダイアグラム サーフェイスのショートカット メニューから、**[イメージとしてダイアグラムをエクスポート]** を選択します。
+
+3.  ダイアグラムを選択します。
+
+4.  必要な形式を選択します。
+
+5.  **[エクスポート]** をクリックしてエクスポートを終了します。
+
+他のドキュメントからリンクされているエクスポート済みイメージを自動的に更新するには、Visual Studio でもう一度ダイアグラムをエクスポートします。
+
 ## <a name="see-also"></a>関連項目
-[方法: クラス ダイアグラムを印刷する](how-to-print-class-diagrams.md)   
-[クラス ダイアグラムの使用](working-with-class-diagrams.md)
+
+- [方法: クラス ダイアグラムを印刷する](how-to-print-class-diagrams.md)
+- [クラス ダイアグラムの使用](working-with-class-diagrams.md)
