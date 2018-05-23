@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7df107cbf6170e603978358d49df167596208a4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2cf84975f96ca2d1935da7f750f5c120d72eb112
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent の使用
-**Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent は [Application Insights](http://www.visualstudio.com/get-started/find-performance-problems-vs.aspx) および [System Center Operation Manager](http://technet.microsoft.com/library/hh205987.aspx)と統合できます。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
+**Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent に統合できます[Application Insights](/azure/application-insights/)と[System Center Operation Manager](http://technet.microsoft.com/library/hh205987.aspx)です。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
   
 > [!NOTE]
 >  **IntelliTrace スタンドアロン コレクター**を使用して、対象環境を変更することなく、リモート コンピューター上の Web、SharePoint、WPF、Windows フォーム アプリの IntelliTrace 診断データとメソッド データを収集することもできます。 スタンドアロン コレクターは、Microsoft Monitoring Agent を **モニター** モードで実行するよりも、パフォーマンスに大きな影響を及ぼします。 参照してください[IntelliTrace スタンドアロン コレクターを使用して](../debugger/using-the-intellitrace-stand-alone-collector.md)です。  
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/18/2018
   
     1.  IntelliTrace ログ ディレクトリの **[プロパティ]** を開きます。  
   
-    2.  **[セキュリティ]** タブで、 **[編集]**、 **[追加]**を順に選択します。  
+    2.  **[セキュリティ]** タブで、 **[編集]**、 **[追加]** を順に選択します。  
   
     3.  **[オブジェクトの種類を選択してください]** ボックスに **[ビルトイン セキュリティ プリンシパル]** が表示されることを確認します。 選択していない場合**オブジェクトの種類**に追加します。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/18/2018
   
     5.  **[選択するオブジェクト名を入力してください]** ボックスに、Web アプリまたは SharePoint アプリケーションのアプリケーション プールを追加します。  
   
-    6.  **[名前の確認]** を選択して名前を解決します。 **[OK]**をクリックします。  
+    6.  **[名前の確認]** を選択して名前を解決します。 **[OK]** をクリックします。  
   
     7.  アプリケーション プールが確認**読み取り & 実行**アクセス許可。  
   
