@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: dcfaee4d086fd5cd9d8ce85f365e63fbb21f8a9e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: d1bb23d03ac613c12df54f1a11e19ee5a8c2edb0
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="enable-subscription"></a>サブスクリプションを有効にする
 
@@ -19,7 +19,7 @@ Visual Studio for Mac には、3 つの異なるサブスクリプション レ�
 * Visual Studio Professional for Mac
 * Visual Studio Community for Mac
 
-サブスクリプションの利用を開始するには、「[Visual Studio for Mac にサインインする](~/signing-in.md)」ガイドの手順に従い、Visual Studio for Mac にログインします。 サインインすると、サブスクリプションが有効になり、アカウントのダイアログに表示されます。
+サブスクリプションの利用を開始するには、「[Visual Studio for Mac にサインインする](signing-in.md)」ガイドの手順に従い、Visual Studio for Mac にログインします。 サインインすると、サブスクリプションが有効になり、アカウントのダイアログに表示されます。
 
 ![ユーザー ライセンスの表示ダイアログ](media/user-accounts-login.png)
 
@@ -29,11 +29,11 @@ Visual Studio for Mac には、3 つの異なるサブスクリプション レ�
 
 1. サブスクリプションを更新します。 [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/) を参照して、サブスクリプションを更新することができます。
 
-2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細については、[複数のユーザー アカウントの追加](~/signing-in.md)に関する記事を参照してください。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。 
+2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細については、[複数のユーザー アカウントの追加](signing-in.md)に関する記事を参照してください。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。 
 
 ## <a name="product-key-usage"></a>プロダクト キーの使用法
 
-現時点では、プロダクト キーを使用して Visual Studio for Mac の Professional または Enterprise の権利を有効にする方法はありません。 Visual Studio Enterprise for Mac または Visual Studio Professional for Mac を使用するには、関連する[サブスクリプション](https://www.visualstudio.com/subscriptions/)があり、IDE に[サインイン](~/signing-in.md)している必要があります。
+現時点では、プロダクト キーを使用して Visual Studio for Mac の Professional または Enterprise の権利を有効にする方法はありません。 Visual Studio Enterprise for Mac または Visual Studio Professional for Mac を使用するには、関連する[サブスクリプション](https://www.visualstudio.com/subscriptions/)があり、IDE に[サインイン](signing-in.md)している必要があります。
 
 ## <a name="offline-activation"></a>オフラインのライセンス認証
 
