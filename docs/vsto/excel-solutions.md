@@ -1,5 +1,5 @@
 ---
-title: Excel ソリューション |Microsoft ドキュメント
+title: Excel ソリューション
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -29,11 +29,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bfbb56e3e11cd260065adb8a25be4eccefdd40ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8e2c6e25c3acdfb4c90eb0ba74d66670be339588
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="excel-solutions"></a>Excel ソリューション
   Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
@@ -45,46 +45,46 @@ ms.lasthandoff: 04/16/2018
   
  ここでは、次の情報について説明します。  
   
--   [Excel の自動化](#automating)。  
+-   [Excel の自動化](#automating)です。  
   
--   [Excel 用のドキュメント レベルのカスタマイズの開発](#doclevel)。  
+-   [Excel 用ドキュメント レベルのカスタマイズを開発](#doclevel)です。  
   
--   [Excel 用の VSTO アドインの開発](#applevel)。  
+-   [Excel 用 VSTO アドインを開発](#applevel)です。  
   
--   [Excel のユーザー インターフェイスのカスタマイズ](#UI)。  
+-   [Excel のユーザー インターフェイスのカスタマイズ](#UI)です。  
   
-##  <a name="automating"></a> Excel の自動化  
- Excel オブジェクト モデルでは、Excel の自動化に使用できる型が多数公開されています。 たとえば、グラフの作成、ワークシートの書式設定、範囲やセルの値の設定をプログラムを使用して実行できます。 詳細については、「 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)」を参照してください。  
+##  <a name="automating"></a> Excel を自動化します。  
+ Excel オブジェクト モデルでは、Excel の自動化に使用できる型が多数公開されています。 たとえば、グラフの作成、ワークシートの書式設定、範囲やセルの値の設定をプログラムを使用して実行できます。 詳細については、次を参照してください。 [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)です。  
   
- Visual Studio で Excel ソリューションを開発する場合、ソリューションで *ホスト項目* と *ホスト コントロール* も使用できます。 これらのオブジェクトは、Excel オブジェクト モデル内にある、 <xref:Microsoft.Office.Interop.Excel.Worksheet> や <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトなど、よく使用される特定のオブジェクトを拡張したオブジェクトです。 これらの拡張オブジェクトは、基になる Excel オブジェクトと同じように動作しますが、基のオブジェクトにはないイベントとデータ バインディング機能が追加されています。 詳細については、「 [拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)」を参照してください。  
+ Visual Studio で Excel ソリューションを開発する場合、ソリューションで *ホスト項目* と *ホスト コントロール* も使用できます。 これらのオブジェクトは、Excel オブジェクト モデル内にある、 <xref:Microsoft.Office.Interop.Excel.Worksheet> や <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトなど、よく使用される特定のオブジェクトを拡張したオブジェクトです。 これらの拡張オブジェクトは、基になる Excel オブジェクトと同じように動作しますが、基のオブジェクトにはないイベントとデータ バインディング機能が追加されています。 詳細については、次を参照してください。[拡張オブジェクトによる Excel の自動化](../vsto/automating-excel-by-using-extended-objects.md)です。  
   
-##  <a name="doclevel"></a> Developing Document-Level Customizations for Excel  
+##  <a name="doclevel"></a> Excel 用ドキュメント レベルのカスタマイズを開発します。  
  Microsoft Office Excel のドキュメント レベルのカスタマイズは、特定のブックに関連付けられたアセンブリで構成されます。 このアセンブリは、一般には UI のカスタマイズと Excel の自動化によってブックの機能を拡張します。 Excel 自体と関連付けられる VSTO アドインとは異なり、カスタマイズに実装した機能は、関連付けられたブックが Excel で開かれている場合にのみ利用できます。  
   
- Excel 用のドキュメント レベルのカスタマイズ プロジェクトを作成するには、Visual Studio の **[新しいプロジェクト]** ダイアログ ボックスで Excel ブックまたは Excel テンプレートのプロジェクト テンプレートを使用します。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+ Excel 用ドキュメント レベルのカスタマイズ プロジェクトを作成するに Excel ブックまたは Excel テンプレート プロジェクト テンプレートを使用して、**新しいプロジェクト**Visual Studio のダイアログ ボックス。 詳細については、次を参照してください。[する方法: Visual Studio で作成する Office プロジェクト](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
- ドキュメント レベルのカスタマイズが機能するしくみの詳細については、「 [Architecture of Document-Level Customizations](../vsto/architecture-of-document-level-customizations.md)」を参照してください。  
+ ドキュメント レベルのカスタマイズが機能の詳細については、次を参照してください。[ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)です。  
   
 ### <a name="excel-customization-programming-model"></a>Excel カスタマイズのプログラミング モデル  
  Excel 用のドキュメント レベルのプロジェクトを作成すると、ソリューションの基礎となるクラス ( `ThisWorkbook`、 `Sheet1`、 `Sheet2`、および `Sheet3`) が Visual Studio によって生成されます。 これらのクラスはソリューションに関連付けられたブックおよびワークシートを表し、コードを記述するための開始点となります。  
   
- 生成されたこれらのクラスおよびドキュメント レベルのプロジェクトで使用できる他の機能の詳細については、「 [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)」を参照してください。  
+ これらの詳細については生成クラスとその他の機能を使用することができます、ドキュメント レベル プロジェクトを参照してください[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)です。  
   
-##  <a name="applevel"></a> Excel 用の VSTO アドインの開発  
+##  <a name="applevel"></a> Excel 用の VSTO アドインを開発します。  
  Microsoft Office Excel の VSTO アドインは、Excel によって読み込まれるアセンブリで構成されます。 このアセンブリは、一般には UI のカスタマイズと Excel の自動化によって Excel の機能を拡張します。 特定のブックに関連付けられるドキュメント レベルのカスタマイズとは異なり、VSTO アドインに実装する機能の対象は 1 つのブックだけに制限されません。  
   
- Excel 用の VSTO アドイン プロジェクトを作成するには、Visual Studio の **[新しいプロジェクト]** ダイアログ ボックスで Excel ブックまたは Excel テンプレートのプロジェクト テンプレートを使用します。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+ Excel 用 VSTO アドイン プロジェクトを作成するに Excel ブックまたは Excel テンプレート プロジェクト テンプレートを使用して、**新しいプロジェクト**Visual Studio のダイアログ ボックス。 詳細については、次を参照してください。[する方法: Visual Studio で作成する Office プロジェクト](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
  VSTO アドインが機能するしくみの概要については、「 [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)」を参照してください。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[方法は i: PowerPoint を自動化する Excel アドインを?](http://go.microsoft.com/fwlink/?LinkID=130300)です。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Excel アドインから PowerPoint を自動化する i: の操作方法?](http://go.microsoft.com/fwlink/?LinkID=130300)です。  
   
 ### <a name="excel-add-in-programming-model"></a>Excel アドインのプログラミング モデル  
  Excel VSTO アドイン プロジェクトを作成すると、 `ThisAddIn`と呼ばれる、ソリューションの基礎となるクラスが Visual Studio によって生成されます。 このクラスは、コードを記述するための開始点となり、Excel のオブジェクト モデルを VSTO アドインに公開します。  
   
- 詳細については、`ThisAddIn`クラスおよび VSTO アドインで使用できるその他の Visual Studio の機能を参照してください[VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)です。  
+ 詳細については、`ThisAddIn`クラスおよび VSTO アドインで使用できるその他の Visual Studio の機能を参照してください[プログラムは、VSTO アドイン](../vsto/programming-vsto-add-ins.md)です。  
   
-##  <a name="UI"></a> Customizing the User Interface of Excel  
+##  <a name="UI"></a> Excel のユーザー インターフェイスをカスタマイズします。  
  Excel のユーザー インターフェイスをカスタマイズする方法はいくつかあります。 一部のオプションはすべてのプロジェクト タイプで使用できますが、VSTO アドインまたはドキュメント レベルのカスタマイズでのみ使用できるオプションもあります。  
   
 ### <a name="options-for-all-project-types"></a>すべてのプロジェクト タイプのオプション  
@@ -93,15 +93,15 @@ ms.lasthandoff: 04/16/2018
 |タスク|詳細情報|  
 |----------|--------------------------|  
 |リボンをカスタマイズする。|[リボンの概要](../vsto/ribbon-overview.md)|  
-|Windows フォーム コントロールまたは拡張された Excel コントロールを、ドキュメント レベルのカスタマイズ用のカスタマイズされたブック内のワークシート、または VSTO アドイン用の任意の開いているブック内のワークシートに追加する。|[方法: Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [方法: ワークシートに Chart コントロールを追加する](../vsto/how-to-add-chart-controls-to-worksheets.md)<br /><br /> [方法: ワークシートに ListObject コントロールを追加する](../vsto/how-to-add-listobject-controls-to-worksheets.md)<br /><br /> [方法: ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)|  
+|Windows フォーム コントロールまたは拡張された Excel コントロールを、ドキュメント レベルのカスタマイズ用のカスタマイズされたブック内のワークシート、または VSTO アドイン用の任意の開いているブック内のワークシートに追加する。|[方法: Office ドキュメントへの Windows フォーム コントロールの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [方法: ワークシートに Chart コントロールを追加します。](../vsto/how-to-add-chart-controls-to-worksheets.md)<br /><br /> [方法: ワークシートに ListObject コントロールを追加します。](../vsto/how-to-add-listobject-controls-to-worksheets.md)<br /><br /> [方法: ワークシートに NamedRange コントロールを追加します。](../vsto/how-to-add-namedrange-controls-to-worksheets.md)|  
   
 ### <a name="options-for-document-level-customizations"></a>ドキュメント レベルのカスタマイズのオプション  
  ドキュメント レベルのカスタマイズにのみ使用できるカスタマイズ オプションを次の表に示します。  
   
 |タスク|詳細情報|  
 |----------|--------------------------|  
-|ブックに操作ウィンドウを追加する。|[操作ウィンドウの概要](../vsto/actions-pane-overview.md)<br /><br /> [方法: Word 文書または Excel ブックに操作ウィンドウを追加する](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|  
-|XML ノードにマップする拡張範囲コントロールをワークシートに追加する。|[方法: ワークシートに XmlMappedRange コントロールを追加する](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)|  
+|ブックに操作ウィンドウを追加する。|[操作ウィンドウの概要](../vsto/actions-pane-overview.md)<br /><br /> [方法: Word 文書に操作ウィンドウを追加または Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|  
+|XML ノードにマップする拡張範囲コントロールをワークシートに追加する。|[方法: ワークシートに XMLMappedRange コントロールを追加します。](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)|  
   
 ### <a name="options-for-vsto-add-ins"></a>VSTO アドインのオプション  
  VSTO アドインにのみ使用できるカスタマイズ オプションを次の表に示します。  
@@ -111,17 +111,16 @@ ms.lasthandoff: 04/16/2018
 |カスタム作業ウィンドウを作成する。|[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)|  
   
 ### <a name="related-topics"></a>関連トピック  
-  
 |タイトル|説明|  
 |-----------|-----------------|  
-|[Excel Object Model Overview](../vsto/excel-object-model-overview.md)|Excel オブジェクト モデルによって提供される主な型の概要について説明します。|  
-|[Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)|Excel ソリューションで使用できる ( [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]によって提供される) 拡張オブジェクトについて説明します。|  
+|[Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)|Excel オブジェクト モデルによって提供される主な型の概要について説明します。|  
+|[拡張オブジェクトによる Excel を自動化します。](../vsto/automating-excel-by-using-extended-objects.md)|Excel ソリューションで使用できる ( [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]によって提供される) 拡張オブジェクトについて説明します。|  
 |[Excel ソリューションのグローバリゼーションとローカリゼーション](../vsto/globalization-and-localization-of-excel-solutions.md)|Windows が英語以外の言語に設定されているコンピューター上で実行される Excel ソリューションに関する特記事項について説明します。|  
-|[Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)|Windows フォーム コントロールを Excel ワークシートに追加する方法について説明します。|  
-|[チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズの作成](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Excel 用の基本的なドキュメント レベルのカスタマイズを作成する方法を示します。|  
-|[チュートリアル: 初めての Excel 用 VSTO アドインの作成](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)|Excel 用の基本的な VSTO アドインを作成する方法を示します。|  
-|[チュートリアル: 実行時における VSTO アドイン プロジェクトのワークシートへのコントロールの追加](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)|VSTO アドインを使用して、実行時に Windows フォームのボタン、 <xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> をワークシートに追加する方法を示します。|
-|[共同作成とアドインの理解](./understanding-coauthoring-and-addins.md)|ソリューションに共同編集に対応させるために必要な場合があります調整をについて説明します。|  
+|[Office ドキュメントの概要 Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)|Windows フォーム コントロールを Excel ワークシートに追加する方法について説明します。|  
+|[チュートリアル: 初めての Excel 用ドキュメント レベルのカスタマイズを作成します。](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Excel 用の基本的なドキュメント レベルのカスタマイズを作成する方法を示します。|  
+|[Excel 用チュートリアル: を初めて VSTO アドインの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)|Excel 用の基本的な VSTO アドインを作成する方法を示します。|  
+|[チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)|Windows フォームのボタンを追加する方法を示します、 <xref:Microsoft.Office.Tools.Excel.NamedRange>、および<xref:Microsoft.Office.Tools.Excel.ListObject>VSTO アドインを使用して、実行時にワークシートにします。|
+|[共同編集し、アドインを理解します。](./understanding-coauthoring-and-addins.md)|ソリューションに共同編集に対応させるために必要な場合があります調整をについて説明します。|  
 |[Office 開発における Excel 2010](http://go.microsoft.com/fwlink/?LinkId=199011)|Excel ソリューションの開発に関する記事およびリファレンス ドキュメントへのリンクを提供します。 Visual Studio を使用した Office 開発だけの情報ではありません。|  
   
   

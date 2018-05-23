@@ -17,11 +17,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a3f866410afd0ca70080dcc15b1f01b78146890
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 304c31a9cfd389bb3a5af6b1a8191f41d881165b
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 
@@ -117,7 +117,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | スナップショット <br>デバッガー | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6.Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022 (Visual Studio バージョン依存) | 1..json ファイルに対してクエリを実行して、アプリ サービス SKU サイズを取得します <br>2.さまざまな Azure RM 呼び出し <br>3.サイト ウォーム アップ呼び出し  <br>4.顧客の対象 App Service Kudu エンドポイント <br>5.nuget.org で発行されたサイト拡張機能バージョンに対してクエリを実行します <br>6.リモート デバッグ チャンネル |
 |Azure Stream Analytics <br><br>HDInsight | Management.azure.com |https|443 |ASA ジョブの表示、送信、実行、管理で使用されます <br><br> HDI クラスターを参照し、HDI ジョブを送信、診断、およびデバッグするために使用されます |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | ジョブのコンパイル、送信、表示、診断、およびデバッグのために使用されます。ADLS ファイルを参照するために使用されます。ファイルをアップロードおよびダウンロードするために使用されます。 |
-|パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。  パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
+|パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。 パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
 |||||||
 
 ## <a name="troubleshoot-network-related-errors"></a>ネットワーク関連のエラーをトラブルシューティングする

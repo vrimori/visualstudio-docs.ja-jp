@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e080c981715e746b8d24e2b2959fa1d5bd97029b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0027b49cd371aaec00d2bcfb609a694f14dc4869
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目のカスタム種類を定義し、Visual Studio でその種類をプロジェクト テンプレートと関連付けてから、テンプレート用のウィザードを用意することもできます。 ウィザードを使用すると、ユーザーがテンプレートを使用してプロジェクト項目を含む新しいプロジェクトを作成するときに、ユーザーから情報を収集できます。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -83,9 +83,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **SiteColumnProjectItem**ソリューション ノードを選択して**追加**を選択し**新しいプロジェクト**.  
   
-3.  上部にある、**新しいプロジェクトの追加** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
+3.  上部にある、**新しいプロジェクトの追加** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
   
-4.  展開、 **Visual c#**ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
+4.  展開、 **Visual c#** ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
   
 5.  プロジェクト テンプレートの一覧で選択**WPF ユーザー コントロール ライブラリ**、プロジェクトに名前を**ProjectTemplateWizard**を選択し、 **OK**ボタンをクリックします。  
   
@@ -97,9 +97,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**で SiteColumnProjectItem ソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  上部にある、**新しいプロジェクトの追加** ダイアログ ボックスで、選択**.NET Framework 3.5** .NET Framework のバージョンの一覧にします。  
+2.  上部にある、**新しいプロジェクトの追加** ダイアログ ボックスで、選択 **.NET Framework 3.5** .NET Framework のバージョンの一覧にします。  
   
-3.  展開、 **Visual c#**ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
+3.  展開、 **Visual c#** ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
   
 4.  選択、**クラス ライブラリ**プロジェクト テンプレートをプロジェクトに名前を**SharePointCommands**を選択し、 **OK**ボタンをクリックします。  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  ショートカット メニューを開き、 **ProjectTemplateWizard**プロジェクト**追加**を選択し**新しい項目の**します。  
   
-5.  選択、**ウィンドウ (WPF)**アイテム、アイテムの名前を付けます**WizardWindow**を選択し、**追加**ボタンをクリックします。  
+5.  選択、**ウィンドウ (WPF)** アイテム、アイテムの名前を付けます**WizardWindow**を選択し、**追加**ボタンをクリックします。  
   
-6.  2 つの追加**ユーザー コントロール (WPF)**項目をプロジェクトに名前を付けると**Page1**と**Page2**です。  
+6.  2 つの追加**ユーザー コントロール (WPF)** 項目をプロジェクトに名前を付けると**Page1**と**Page2**です。  
   
 7.  次の名前で 4 つのコード ファイルをプロジェクトに追加します。  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic プロジェクトを開発している場合は、削除、`ProjectTemplateWizard`から名前空間、`WizardWindow`内のクラス名、`x:Class`の属性、`Window`要素。 この要素は XAML の 1 行目にあります。 完了したら、最初の行は次の例のようになります。  
   
-    ```  
+    ```xml  
     <Window x:Class="WizardWindow"  
     ```  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic プロジェクトを開発している場合は、`ProjectTemplateWizard` 要素の `Page1` 属性の `x:Class` クラス名から `UserControl` 名前空間を削除します。 これは XAML の 1 行目にあります。 変更後の 1 行目は次のようになります。  
   
-    ```  
+    ```xml  
     <UserControl x:Class="Page1"  
     ```  
   
@@ -281,7 +281,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic プロジェクトを開発している場合は、`ProjectTemplateWizard` 要素の `Page2` 属性の `x:Class` クラス名から `UserControl` 名前空間を削除します。 これは XAML の 1 行目にあります。 変更後の 1 行目は次のようになります。  
   
-    ```  
+    ```xml  
     <UserControl x:Class="Page2"  
     ```  
   
@@ -319,7 +319,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-build-your-project"></a>プロジェクトをビルドするには  
   
-1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>プロジェクト テンプレートからの key.snk ファイルの削除  
  [チュートリアル: プロジェクト テンプレート、第 1 部に基づくサイト列プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)、作成したプロジェクト テンプレートには、各 Site Column プロジェクト インスタンスの署名に使用するための key.snk ファイルが含まれています。 ウィザードでプロジェクトごとに新しい key.snk ファイルが生成されるようになったため、この key.snk ファイルはもう必要ありません。 プロジェクト テンプレートから key.snk ファイルを削除し、このファイルへの参照を削除します。  
@@ -332,7 +332,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  下にある、 **SiteColumnProjectTemplate**ノード、SiteColumnProjectTemplate.vstemplate ファイルを開くしから次の要素を削除します。  
   
-    ```  
+    ```xml  
     <ProjectItem ReplaceParameters="false" TargetFileName="key.snk">key.snk</ProjectItem>  
     ```  
   
@@ -340,16 +340,16 @@ ms.lasthandoff: 04/16/2018
   
 5.  下にある、 **SiteColumnProjectTemplate**ノード、ProjectTemplate.csproj または ProjectTemplate.vbproj ファイルを開くし、次を削除して`PropertyGroup`からの要素。  
   
-    ```  
+    ```xml  
     <PropertyGroup>  
       <SignAssembly>true</SignAssembly>  
       <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>  
     </PropertyGroup>  
-    ```  
+    ``` 
   
 6.  次の `None` 要素を削除します。  
   
-    ```  
+    ```xml  
     <None Include="key.snk" />  
     ```  
   
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **署名**] タブで、[、**アセンブリに署名**チェック ボックスをオンします。  
   
-3.  **厳密な名前キー ファイルを選択して**一覧で、選択**\<新規作成 ...> >**です。  
+3.  **厳密な名前キー ファイルを選択して**一覧で、選択**\<新規作成 ...> >** です。  
   
 4.  **厳密な名前キーの作成** ダイアログ ボックスで、チェック ボックスをオフに、新しいキー ファイルの名前を入力、**キーファイルをパスワードで保護する**チェック ボックスをオンにして、 **ok**ボタンをクリックします。  
   
@@ -384,7 +384,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  次のコマンドを実行交換*PathToWizardAssembly*開発用コンピューターで、ProjectTemplateWizard プロジェクトのビルド ProjectTemplateWizard.dll アセンブリに完全なパス。  
   
-    ```  
+    ```cmd  
     sn.exe -T PathToWizardAssembly  
     ```  
   
@@ -398,7 +398,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  ファイルの末尾の近くで、次の `WizardExtension` 要素を `</TemplateContent>` タグと `</VSTemplate>` タグの間に追加します。 置換、*トークン*の値、`PublicKeyToken`前の手順で取得した公開キー トークンを持つ属性。  
   
-    ```  
+    ```xml  
     <WizardExtension>  
       <Assembly>ProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=your token</Assembly>  
       <FullClassName>ProjectTemplateWizard.SiteColumnProjectWizard</FullClassName>  
@@ -418,7 +418,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate プロジェクトで、Elements.xml ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <Field ID="{$guid5$}"   
@@ -447,7 +447,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-3.  **型**一覧で、選択**[microsoft.visualstudio.assembly]**です。  
+3.  **型**一覧で、選択 **[microsoft.visualstudio.assembly]** です。  
   
 4.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
   
@@ -461,7 +461,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
   
-9. **プロジェクト**一覧で、選択、 **SharePointCommands**プロジェクトをクリックして、 **[ok]**ボタンをクリックします。  
+9. **プロジェクト**一覧で、選択、 **SharePointCommands**プロジェクトをクリックして、 **[ok]** ボタンをクリックします。  
   
 10. メニュー バーで、次のように選択します。**ビルド**、**ソリューションのビルド**、、ソリューションがエラーなしでビルドするかどうかを確認します。  
   
@@ -486,7 +486,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio の実験用インスタンスのメニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-2.  展開、 **Visual c#**ノードまたは**Visual Basic** (言語によっては、プロジェクト テンプレートをサポートする) ノードが展開、 **SharePoint**  ノードを選択し、**2010**ノード。  
+2.  展開、 **Visual c#** ノードまたは**Visual Basic** (言語によっては、プロジェクト テンプレートをサポートする) ノードが展開、 **SharePoint**  ノードを選択し、**2010**ノード。  
   
 3.  プロジェクト テンプレートの一覧で選択**サイト内の列**、プロジェクトに名前を**SiteColumnWizardTest**を選択し、 **OK**ボタンをクリックします。  
   

@@ -1,27 +1,39 @@
 ---
 title: Subversion リポジトリのセットアップ
-description: Visual Studio for Mac で Git および Subversion を使用します。
+description: Visual Studio for Mac の Subversion を使用します。
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: f21106ea020118eb1facef9f7ac64a080015d621
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: e5f395511ad3b2b3cc4568a4d701ca5dbcc02736
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setting-up-a-subversion-repository"></a>Subversion リポジトリのセットアップ
 
-Subversion は分散型のバージョン管理システムです。 これは、ユーザーが任意のファイルの任意のバージョンをチェックアウトできるすべてのファイルと変更履歴を含む、1 つのサーバーがあることを意味します。 ファイルがリモート Subversion レポジトリからチェックアウトされると、ユーザーはその時点のリポジトリのスナップショットを取得します。
+Subversion は集中管理されている_バージョン管理システム_です。つまり、すべてのファイルとリビジョンが格納された単一のサーバーが存在し、ユーザーはそこから任意のファイルの任意のバージョンをチェック アウトできます。 ファイルがリモート Subversion リポジトリからチェックアウトされると、ユーザーはその時点のリポジトリのスナップショットを取得します。
 
-Subversion の使用を開始する前に、Xcode コマンド ライン ツールをインストールする必要があります。これらのツールには適切な svn パッケージが含まれています。 次のコマンドを使用して、ターミナルに SVN がインストールされていることを確認できます。
+Subversion をバージョン管理に使用するには、これをコンピューターにインストールする必要があります。 Subversion がコンピューターにインストールされているかどうかを確認するには、端末で次のコマンドを使用します。
 
-`svn h`
+```bash
+svn --version
+```
+
+このコマンドはバージョン番号を返します。
+
+Subversion がまだインストールされていない場合にこれを取得する最も簡単な方法は、_Xcode コマンド ライン ツール_をインストールする方法です。 Xcode コマンド ライン ツールと Subversion をインストールするには、次のコマンドを使用します。
+
+```bash
+xcode-select --install
+```
+
+Subversion がコンピューターにインストールされたら、次の手順を使用して、SVN でプロジェクトを発行します。
 
 1. オンラインで無料の SVN リポジトリを作成します。 この例では [Assembla](https://app.assembla.com/) が使用されています。 作成後に、URL が提供されます。これはリポジトリへの接続に使用されます。 
 
-    ![SVN URL を取得してコピーする](media/version-control-subversion1-sml.png)
+    ![SVN URL をコピーします](media/version-control-subversion1-sml.png)
 
 2. Visual Studio for Mac プロジェクトを開くか、作成します。
 
@@ -31,15 +43,15 @@ Subversion の使用を開始する前に、Xcode コマンド ライン ツー�
 
 4. **[リポジトリへの接続]** タブで、上部のドロップダウンから **[Subversion]** を選択します。
 
-5. 手順 1. の URL を入力します。 これで、他のフィールドが既定で設定されます。 
+5. 手順 1. の URL を入力します。 URL が入力されたら、他のフィールドが既定により設定されます。 
 
     ![[リポジトリの選択] と詳細入力ダイアログ](media/version-control-subversion3.png)
 
 7. **[OK]** をクリックし、**[発行]** を押して確認します。
 
-7. リポジトリを作成するサイトの資格情報の入力を求められる場合があります。 以下に示すように、これらを入力します。
+7. リポジトリを作成するサイトの資格情報の入力を求められたら、次の図のように入力します。
 
-    ![](media/version-control-subversion5.png)
+    ![Subversion リポジトリの資格情報の入力](media/version-control-subversion5.png)
 
 8.  これで、使用可能なすべてのバージョン管理コマンドがバージョン管理メニューに表示されます。
 

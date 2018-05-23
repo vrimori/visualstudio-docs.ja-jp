@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: e999c9c68a534611aa1db6e571594d11fc20201e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 16f14d1acb31612d2997937b9aa34f918b6376d6
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-the-build-system"></a>ビルド システムのカスタマイズ
 
@@ -28,17 +28,17 @@ MSBuild は、プロジェクト ファイルと呼ばれる XML ファイルを
 
 MSBuild ファイルを見つけるには、プロジェクト名を右クリックし、**[Finder に表示]** を選択します。 次の図のように、この Finder ウィンドウには、`.csproj` ファイルなど、プロジェクトに関連するすべてのファイルとフォルダーが表示されます。
 
-![](media/customizing-build-system-image1.png)
+![Finder での csproj の場所](media/customizing-build-system-image1.png)
 
 Visual Studio for Mac で新しいタブに `.csproj` を表示するには、プロジェクト名を右クリックし、**[ツール]、[ファイルの編集]** の順に選択します。
 
-![](media/customizing-build-system-image2.png)
+![ソース エディターで csproj を開く](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>MSBuild ファイルの構成
 
 すべての MSBuild ファイルに、次のように必須のルート `Project` 要素が含まれています。
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 </Project>
@@ -46,7 +46,7 @@ Visual Studio for Mac で新しいタブに `.csproj` を表示するには、�
 
 通常、プロジェクトは `.targets` ファイルもインポートします。 このファイルには、さまざまなファイルを処理し、ビルドする方法を説明したルールがたくさん含まれています。 通常、このインポートは `proj` ファイルの下のほうに表示されます。C# プロジェクトの場合、次の画像のようになります。
 
-```
+```xml
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
@@ -64,7 +64,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 たとえば、簡単なコンソール アプリケーションの PropertyGroup は次の XML のようになります。
 
-```
+```xml
 <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -86,7 +86,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 たとえば、次のコード スニペットでは、iOS の起動画面が作成されます。 起動画面には、ビルドの種類 `BundleResource` と、イメージのパスの指定が表示されます。
 
-```
+```xml
  <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default%402x.png" />
@@ -96,7 +96,7 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
     <BundleResource Include="Resources\Default-Landscape%402x.png" />
   </ItemGroup>
  ```
- 
+
  項目セットは、`@()` 構文を利用して式から参照できます。 たとえば、`@(BundleResource)` は BundleResource 項目セットとして評価されます。すべての BundleResource 項目を意味します。 この種類の項目がない場合、エラーなしで空になります。
 
 ## <a name="resources-for-learning-msbuild"></a>MSBuild の学習リソース
@@ -105,5 +105,3 @@ MSBuild には、*項目*と*プロパティ*という 2 つの基本データ�
 
 * [MSDN - 概要](https://msdn.microsoft.com/library/dd393574.aspx)
 * [MSDN - 概念](https://msdn.microsoft.com/library/dd637714.aspx)
-
-

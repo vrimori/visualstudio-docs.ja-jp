@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: c617ed1bae10569291b88d038e8d875ca966ad43
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 8660ee0de90813e95a221c3b4ea3a50528b4307a
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="source-editor"></a>ソース エディター
 
@@ -24,7 +24,6 @@ Visual Studio for Mac のソース エディターでは、デバッグ、リフ
 コード全体を効率的に表示して移動することは、開発ワークフローにとって不可欠な部分です。 正確にどのような方法でコードを表示して管理するかは個人的な決定であり、開発者により、そして多くの場合はプロジェクトにより異なります。
 
 Visual Studio for Mac には、クロスプラット フォーム開発を可能な限りわかりやすく、使いやすいものにする、多くの強力な機能が用意されています。 以下のセクションでは、主な特徴について説明します。
-
 
 ## <a name="code-folding"></a>コードの折りたたみ
 
@@ -62,25 +61,20 @@ Visual Studio for Mac には、クロスプラット フォーム開発を可能
 
  ![空白文字の表示](media/source-editor-image22.png)
 
-
 ## <a name="ruler"></a>ルーラー
 
 列ルーラーは行の長さを判断する場合に役立ちます。特に、行の長さのガイドラインがあるチームで作業する場合に便利です。 列ルーラーを有効または無効にするには、次の図のように、**[Visual Studio] > [ユーザー設定] > [テキスト エディター] > [マーカーとルーラー]** に移動し、**[列ルーラーを表示する]** をオンまたはオフにします。
 
- ![](media/source-editor-image5.png)
+ ![[列ルーラーを表示する] が強調表示されている [ユーザー設定] ダイアログ](media/source-editor-image5.png)
 
  列ルーラーは、ソース エディターに垂直の明るい灰色の線として表示されます。
-
 
 ## <a name="highlight-identifier-references"></a>識別子参照の強調表示
 
 [識別子の参照を強調表示する] オプションを有効にしてソース コードの任意のシンボルを選択すると、そのファイル内の他のすべての参照に対する視覚的なガイドが表示されます。 このオプションを有効にするには、次の図のように、**[Visual Studio] > [ユーザー設定] > [テキスト エディター] > [マーカーとルーラー]** に移動し、_[識別子の参照を強調表示する]_ をオンにします。
 
-![](media/source-editor-image6.png)
+![[識別子の参照を強調表示する] が強調表示されている [ユーザー設定] ダイアログ](media/source-editor-image6.png)
 
 強調表示の色は、何かが割り当てられたり参照されたりしていることを確認するのにも便利です。 割り当てられているものは赤で強調表示され、参照されているものは青で強調表示されます。
 
-![](media/source-editor-image7.png)
-
-
-
+![強調表示の色を示す例](media/source-editor-image7.png)

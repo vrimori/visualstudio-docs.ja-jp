@@ -24,11 +24,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 03863489f17672e1d72074633d353b041e022b78
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61d9b988f0e0898f0dfe3843456b711f9f39b7c5
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio での Office および SharePoint 開発
   ユーザーが [Office ストア](https://store.office.com/) または組織のカタログからダウンロードする軽量なアプリやアドインを作成するか、ユーザーがコンピューターにインストールする .NET Framework ベースのソリューションを作成することによって、Microsoft Office および SharePoint を拡張できます。  
@@ -50,11 +50,7 @@ ms.lasthandoff: 04/16/2018
   
  ![概念モデルが Office および SharePoint 用アプリ](../vsto/media/officeandsharepointapps2015.png "Office および SharePoint の概念モデル用のアプリ")  
   
- **詳細を表示**  
-  
-|終了|解決方法については、|  
-|--------|---------|  
-|Napa Office 365 開発ツールの詳細を確認する。|[Napa Office 365 開発ツール](https://msdn.microsoft.com/library/dn974046.aspx)|  
+
   
 ### <a name="build-an-office-add-in"></a>Office アドインの作成  
  Office の機能を拡張するには、Office アドインを構築します。 Excel、Word、Outlook、PowerPoint などの Office アプリケーションでホストされている web ページでは基本的にします。 構築したアプリを使用して、ドキュメント、ワークシート、電子メール メッセージ、予定、プレゼンテーション、およびプロジェクトに機能を追加できます。  
@@ -71,7 +67,6 @@ ms.lasthandoff: 04/16/2018
 |--------|---------|  
 |Office アドインの詳細を確認し、アドインを構築する。|[Office アドイン](http://msdn.microsoft.com/office/dn448457)|  
 |Office のさまざまな拡張方法を比較し、アプリと Office アドインのどちらを使用する必要があるかを判断する。|[Office アドイン、VSTO、および VBA へのロードマップ](http://blogs.msdn.com/b/officeapps/archive/2013/06/18/roadmap-for-apps-for-office-vsto-and-vba.aspx)|  
-|Napa Office 365 開発ツールの詳細を確認する。|[Napa Office 365 開発ツール](https://msdn.microsoft.com/library/dn974046.aspx)|  
   
 ### <a name="build-a-sharepoint-add-in"></a>SharePoint アドインの作成  
  ユーザー向けに SharePoint を拡張するには、SharePoint アドインを構築します。 ユーザーやビジネス要件を解決する、小さくて使いやすい、スタンドアロンのアプリケーションでは基本的にします。  
@@ -88,8 +83,7 @@ ms.lasthandoff: 04/16/2018
 |--------|---------|  
 |SharePoint アドインの詳細を確認し、アドインを構築する。|[SharePoint アドイン](https://msdn.microsoft.com/library/office/fp179930.aspx)|  
 |SharePoint アドインを従来の SharePoint ソリューションと比較する。|[SharePoint アドインと SharePoint ソリューションの比較](http://msdn.microsoft.com/library/office/jj163114.aspx)|  
-|SharePoint ソリューションと SharePoint アドインのどちらを構築するかを選択する。|[SharePoint アドインと SharePoint ソリューションの比較](https://msdn.microsoft.com/library/office/jj163114.aspx)|  
-|Napa Office 365 開発ツールの詳細を確認する。|[Napa Office 365 開発ツール](https://msdn.microsoft.com/library/dn974046.aspx)|  
+|SharePoint ソリューションと SharePoint アドインのどちらを構築するかを選択する。|[SharePoint アドインと SharePoint ソリューションの比較](https://msdn.microsoft.com/library/office/jj163114.aspx)|
   
 ##  <a name="Add-ins"></a> VSTO アドインの作成  
  VSTO アドインのでは提供できない機能 Office アドインと Office 2013 と Office 2016 を拡張するまたは Office 2007 または Office 2010 を対象に作成します。VSTO アドインはデスクトップ上でのみ動作します。 ユーザーは、通常は難しく配置やサポートするように VSTO アドインをインストールする必要です。  ただし、VSTO アドインは、より密接に Office に統合できます。 たとえば、Office リボンにタブやコントロールを追加し、文書の結合やグラフの変更などの高度な自動化タスクを実行できます。 また、.NET Framework を活用し、C# および Visual Basic を使用して、Office オブジェクトと対話することもできます。  

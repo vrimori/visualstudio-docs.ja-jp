@@ -11,11 +11,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1aa3d2412bfeabcaa3a66be7470367fcaaf0bfbc
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 320615daa95ba9fad69fe48490f83c19ccf8e1ce
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio でコードを機能させる
 
@@ -91,17 +91,15 @@ C++ コードを分析するには、[静的コード分析](../code-quality/qui
 
 ## <a name="use-light-bulbs-to-fix-or-refactor-code"></a>電球を使用したコードの修正またはリファクタリング
 
-[電球](../ide/quick-actions.md)は、Visual Studio の比較的新しい機能です。電球を使用すると、コード インラインをリファクタリングできます。 これは、C#、C++、Visual Basic コードで一般的な警告を迅速かつ効率的に修正する簡単な方法です。 電球にアクセスするには、警告の波線を右クリックして **[クイック アクション]** を選択するか、色付きの波線の行にカーソルを置いたときに **Ctrl**+**.** キー を押します。 そのコード行に適用できる修正またはリファクタリングの一覧が表示されます。
+電球またはねじ回しアイコンから使用できる[クイック アクション](../ide/quick-actions.md)では、コードをインラインでリファクタリングできます。 これは、C#、C++、Visual Basic コードで一般的な警告を迅速かつ効率的に修正する簡単な方法です。 アクセスするには、警告の波線を右クリックして **[Quick Actions and refactorings]\(クイック アクションとリファクタリング\)** を選択します。 または、カーソルが色付きの波線のある行にある場合に、**Ctrl**+ **キーを押します。** もしくは、余白にある電球またはねじ回しアイコンを選択します。 そのコード行に適用できる修正またはリファクタリングの一覧が表示されます。
 
 ![Visual Studio 電球のプレビュー](../ide/media/quick-actions-options.png)
 
-電球は、コード アナライザーが、コードの修正、リファクタリング、改善の機会があると判断したときはいつでも使用できます。 任意のコード行をクリックし、右クリックしてコンテキスト メニューを開き、**[クイック アクション]** を選択します (効率的な方法としては、**Ctrl**+**.** キーを押す方法もあります)。 リファクタリングまたは改善オプションを利用できる場合は、オプションが表示されます。 それ以外の場合は、"**クイック オプションはここでは使用できません**" というメッセージが、IDE の左下隅に表示されます。
+クイック アクションは、コード アナライザーが、コードの修正、リファクタリング、改善の機会があると判断したときにいつでも使用できます。 任意のコード行をクリックし、右クリックしてコンテキスト メニューを開き、**[Quick Actions and refactorings]\(クイック アクションとリファクタリング\)** を選択します。 リファクタリングまたは改善オプションを利用できる場合は、オプションが表示されます。 それ以外の場合は、"**クイック アクションはここでは使用できません**" というメッセージが、IDE の左下隅に表示されます。
 
-![Visual Studio 電球 'オプションなし' テキスト](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
+![クイック アクションが使用できないというテキスト](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
 
-慣れてくれば、すばやく矢印キーと **Ctrl** + **.** キー を使用して、クイック オプションのリファクタリング機会をチェックし、コードをクリーンアップできます。
-
-電球の詳細については、[クイック アクション](../ide/quick-actions.md)に関するページを参照してください。
+慣れてくれば、すばやく矢印キーと **Ctrl** + **.** キー を使用して、リファクタリング機会を簡単にチェックし、コードをクリーンアップできます。
 
 ## <a name="debug-your-running-code"></a>実行されているコードのデバッグ
 
@@ -161,4 +159,4 @@ Visual Studio の単体テストの詳細、およびより優れた品質のコ
 
 - [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
 - [デバッガーの使用方法の詳細](../debugger/getting-started-with-the-debugger.md)
-- [コードの生成と修正](../ide/code-generation-in-visual-studio.md)
+- [コードを生成し、修正する](../ide/code-generation-in-visual-studio.md)

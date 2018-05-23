@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1538e68d29667eb7a1b3f0c976ddc5d77dab825b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9052136a58b0c6cd3246b7c7b61c89bf637a8cf
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects"></a>チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成
   SharePoint プロジェクトを展開するときに、Visual Studio は、特定の順序で一連の展開の手順を実行します。 Visual Studio には、多くの組み込みの配置手順が含まれていますが、独自に作成することもできます。  
@@ -71,9 +71,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
   
     > [!NOTE]  
     >  **Extensibility**ノードは、Visual Studio SDK をインストールする場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**で UpgradeDeploymentStep ソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Windows**ノード。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Windows**ノード。  
   
 3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 4.5** 、.NET Framework のバージョンの一覧にします。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**で UpgradeDeploymentStep ソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#**または**Visual Basic**を選択し、 **Windows**ノード。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**を選択し、 **Windows**ノード。  
   
 3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 3.5** 、.NET Framework のバージョンの一覧にします。  
   
@@ -161,9 +161,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-the-deployment-configuration"></a>展開構成を作成するには  
   
-1.  
-  
-2.  **DeploymentStepExtension**プロジェクト、DeploymentConfigurationExtension コード ファイルを開きに、次のコードを貼り付けます。  
+1.  **DeploymentStepExtension**プロジェクト、DeploymentConfigurationExtension コード ファイルを開きに、次のコードを貼り付けます。  
   
      [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs#2)]
      [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb#2)]  
@@ -253,9 +251,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio の実験用インスタンスのメニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**ノードまたは**Visual Basic**  ノードを展開、 **SharePoint**  ノードを選択し**2010**ノード。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** ノードまたは**Visual Basic**  ノードを展開、 **SharePoint**  ノードを選択し**2010**ノード。  
   
-3.  ダイアログ ボックスの上部にあることを確認**.NET Framework 3.5** .NET Framework のバージョンの一覧に表示されます。  
+3.  ダイアログ ボックスの上部にあることを確認 **.NET Framework 3.5** .NET Framework のバージョンの一覧に表示されます。  
   
      用にプロジェクト[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]と[!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]このバージョンの .NET Framework を必要とします。  
   
@@ -282,11 +280,11 @@ ms.lasthandoff: 04/16/2018
   
 11. **一覧の設定を選択して** ページで、次の設定を確認しを選択し、**完了**ボタン。  
   
-    1.  **従業員一覧**に表示されます、**リストの表示する名前?**ボックス。  
+    1.  **従業員一覧**に表示されます、**リストの表示する名前?** ボックス。  
   
-    2.  **に基づいてカスタマイズ可能なリストを作成する:**オプション ボタンを選択します。  
+    2.  **に基づいてカスタマイズ可能なリストを作成する:** オプション ボタンを選択します。  
   
-    3.  **既定値 (空白)**で選択された、**に基づいてカスタマイズ可能なリストを作成する:**  ボックスの一覧です。  
+    3.  **既定値 (空白)** で選択された、**に基づいてカスタマイズ可能なリストを作成する:**  ボックスの一覧です。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] タイトルの列と 1 つの空のインスタンスで従業員のリスト項目を作成し、リスト デザイナーを開きます。  
   
@@ -306,7 +304,7 @@ ms.lasthandoff: 04/16/2018
   
 15. Elements.xml ファイルに、このファイルの既定の XML を次の XML に置き換えます。 この XML にリストの名前を変更する**従業員**佐藤直樹という名前を持つ従業員の情報を追加します。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  
@@ -357,7 +355,7 @@ ms.lasthandoff: 04/16/2018
   
      完了したら、ファイルは、次の XML を含める必要があります。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  
@@ -432,7 +430,7 @@ ms.lasthandoff: 04/16/2018
   
      プロパティ エディターとデザイナーが開きます。  
   
-4.  **ビュー**  タブで、選択、**電子メール** 列を選択し、 **<**キーから列を移動する、 **の列を選択**の一覧を表示、**使用可能な列** ボックスの一覧です。  
+4.  **ビュー**  タブで、選択、**電子メール** 列を選択し、 **<** キーから列を移動する、 **の列を選択**の一覧を表示、**使用可能な列** ボックスの一覧です。  
   
      この操作の既定のビューからのこれらのフィールドの削除、**従業員**SharePoint サイト上のリスト。  
   

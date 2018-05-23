@@ -9,11 +9,11 @@ description: Visual Studio サブスクリプションに含まれるテクニ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ef77e784ccaad30413ad81716b55df8e2de45fea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c04132540477bcd94880cdb55b71493cbb1a347
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="activating-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
@@ -75,6 +75,20 @@ Azure に関連する問題がある場合に Visual Studio サブスクリプ�
 3.  [サポート] で、[サポート契約をリンクする] をクリックします。
 4.  上記の手順 1. で指定した "アクセス ID" と "契約 ID" を入力します。
 これらの手順を完了したら、Visual Studio サブスクリプションの特典に関連付けられているサポート プランを選択することができます   (プラン名には "MSDN" が含まれる場合があります)。
+
+## <a name="eligibility"></a>特典を受ける条件
+| サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup> | 4 つのインシデント       |  [はい]|
+| Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール、一部の NFR<sup>2</sup>                                        | 2 つのインシデント                                                          |[はい]         |
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 2 つのインシデント                                             |  [はい]         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 2 つのインシデント                                               | [はい]         |
+| Visual Studio Dev Essentials | N/A  | 使用できません |N/A|
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |N/A|
+
+<sup>1</sup>  *Imagine Premium が含まれています。Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine Standard、Microsoft Valued Partner (MVP)、Region Director (RD)、MCT Software & Services は含まれません。*
+
+<sup>2</sup>  *Imagine Standard が含まれています。*
 
  
 

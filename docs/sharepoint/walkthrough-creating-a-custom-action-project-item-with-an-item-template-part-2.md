@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 264decc53d8ba2d818562a9513ecfa2aab6f882c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b617230c7a30ee437ac1d1120793e567e14c7814
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)
   SharePoint プロジェクト項目の種類のカスタム定義し、Visual Studio で項目テンプレートに関連付ける、テンプレートのウィザードを提供することがもできます。 ウィザードを使用すると、プロジェクトにプロジェクト項目の新しいインスタンスを追加するのに、テンプレートを使用するときに、ユーザーから情報を収集します。 収集した情報を使用して、プロジェクト項目を初期化できます。  
@@ -62,9 +62,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Windows**ノード。  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Windows**ノード。  
   
-4.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
+4.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
   
 5.  選択、 **WPF ユーザー コントロール ライブラリ**プロジェクト テンプレートをプロジェクトに名前を**ItemTemplateWizard**を選択し、 **OK**ボタンをクリックします。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
      Visual c# プロジェクトの場合にこの値を設定することができます、**アプリケーション**タブです。Visual Basic プロジェクトでこの値を設定することができます、**コンパイル**タブです。詳細については、「[方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)」を参照してください。  
   
-3.  **ItemTemplateWizard**プロジェクトに追加、**ウィンドウ (WPF)**をプロジェクトに項目をクリックし、項目を名**WizardWindow**です。  
+3.  **ItemTemplateWizard**プロジェクトに追加、**ウィンドウ (WPF)** をプロジェクトに項目をクリックし、項目を名**WizardWindow**です。  
   
 4.  CustomActionWizard と文字列の名前の 2 つのコード ファイルを追加します。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic プロジェクトを開発している場合は、削除、`ItemTemplateWizard`から名前空間、`WizardWindow`内のクラス名、`x:Class`の属性、`Window`要素。 この要素は XAML の 1 行目にあります。 完了したら、最初の行は、次のコードをようになります。  
   
-    ```  
+    ```xml  
     <Window x:Class="WizardWindow"  
     ```  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-build-your-project"></a>プロジェクトをビルドするには  
   
-1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 ## <a name="associating-the-wizard-with-the-item-template"></a>項目テンプレートと、ウィザードの関連付け  
  これで、ウィザードを実装していることを関連付ける必要があります、**カスタム アクション**3 つの主要な手順を完了して項目テンプレート。  
@@ -177,17 +177,17 @@ ms.lasthandoff: 04/16/2018
   
 2.  **署名**] タブで、[、**アセンブリに署名**チェック ボックスをオンします。  
   
-3.  **厳密な名前キー ファイルを選択して**一覧で、選択**\<新規作成 ...> >**です。  
+3.  **厳密な名前キー ファイルを選択して**一覧で、選択**\<新規作成 ...> >** です。  
   
 4.  **厳密な名前キーの作成** ダイアログ ボックスをオフ、名前を入力、**キーファイルをパスワードで保護する**チェック ボックスをオンにして、 **ok**ボタンをクリックします。  
   
-5.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+5.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>ウィザード アセンブリの公開キー トークンを取得するには  
   
 1.  Visual Studio コマンド プロンプト ウィンドウで、次を実行してコマンドを置き換える*PathToWizardAssembly* ItemTemplateWizard 上のプロジェクトで、開発ビルド ItemTemplateWizard.dll アセンブリへの完全パスとコンピューターです。  
   
-    ```  
+    ```xml  
     sn.exe -T PathToWizardAssembly  
     ```  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  ファイルの末尾の近くで、次の `WizardExtension` 要素を `</TemplateContent>` タグと `</VSTemplate>` タグの間に追加します。 置換、 *YourToken*の値、`PublicKeyToken`前の手順で取得した公開キー トークンを持つ属性。  
   
-    ```  
+    ```xml  
     <WizardExtension>  
       <Assembly>ItemTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=YourToken</Assembly>  
       <FullClassName>ItemTemplateWizard.CustomActionWizard</FullClassName>  
@@ -221,7 +221,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  ItemTemplate プロジェクトの Elements.xml ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="$IdValue$"  
@@ -250,7 +250,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-3.  **型**一覧で、選択**[microsoft.visualstudio.assembly]**です。  
+3.  **型**一覧で、選択 **[microsoft.visualstudio.assembly]** です。  
   
 4.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
   
@@ -279,7 +279,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio の実験用インスタンスのメニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-2.  展開、 **Visual c#**または**Visual Basic** (言語によっては、項目テンプレートをサポートする) ノードが展開、 **SharePoint**ノード、にして、 **2010**ノード。  
+2.  展開、 **Visual c#** または**Visual Basic** (言語によっては、項目テンプレートをサポートする) ノードが展開、 **SharePoint**ノード、にして、 **2010**ノード。  
   
 3.  プロジェクト テンプレートの一覧で選択**SharePoint 2010 プロジェクト**、プロジェクトに名前を**CustomActionWizardTest**を選択し、 **OK**ボタンをクリックします。  
   

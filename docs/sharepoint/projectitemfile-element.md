@@ -15,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cc9aa921c83bfe26c424e73fd53ad577e1aa527e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 67d1ed00ef4781e0419d1fceda5f95a8c0c710fb
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="projectitemfile-element"></a>ProjectItemFile 要素
   フィーチャー要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなどの SharePoint ファイルを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <ProjectItemFile Source = "Name of the file"  
     Target = "Deployment path of the file"  
     Type = "Type of deployment for the file" />  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/16/2018
 |**名前空間**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
-|**空にすることができます。**|×|  
+|**空にすることができます。**|いいえ|  
   
 ## <a name="see-also"></a>関連項目  
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)  

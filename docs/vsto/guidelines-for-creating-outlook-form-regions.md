@@ -1,5 +1,5 @@
 ---
-title: フォーム領域の Outlook の作成に関するガイドライン |Microsoft ドキュメント
+title: Outlook フォーム領域の作成に関するガイドライン
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,20 +16,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dae7f03c49223c9919dc67b1c6a13768c597698d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d00c0aac83714e3a0906c38d13a705158cdfea9c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="guidelines-for-creating-outlook-form-regions"></a>Outlook フォーム領域の作成に関するガイドライン
   次に示す情報は、フォーム領域の最適化と、潜在的な問題の回避に役立ちます。  
   
--   [フォーム領域の名前の使用](#UsingFormRegions)。  
+-   [フォーム領域の名前を使用して](#UsingFormRegions)です。  
   
--   [フォーム領域の継承の無効化](#DisablingInheritance)。  
+-   [フォーム領域の継承を無効にする](#DisablingInheritance)です。  
   
--   [型名とメッセージ クラス名について](#ClassNames)。  
+-   [種類を理解して、メッセージ クラス名](#ClassNames)です。  
   
 -   [閲覧ウィンドウの隣接フォーム領域のデザイン](#ReadingPane)。  
   

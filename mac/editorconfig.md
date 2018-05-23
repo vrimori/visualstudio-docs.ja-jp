@@ -7,11 +7,11 @@ ms.date: 05/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 26A0DE31-2FBF-4E1B-99FB-083111AA1680
-ms.openlocfilehash: 553a8ceeae16b660115ea3c8e32e544e903a72af
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 336ec5ef0779bcd67302bea7b51851dced531a7d
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-and-editing-a-custom-editorconfig-file"></a>カスタム EditorConfig ファイルの作成と編集
 
@@ -73,7 +73,7 @@ EditorConfig は、C# の[コード スタイル書式設定](https://docs.micro
 
 プロジェクトの既存の `.editorconfig` ファイルを再利用すると便利な場合があります。 既存のファイルを追加するには、最初に**ターミナル**に次のコマンドを入力し、Finder に隠しファイルを表示する必要があります。
 
-```
+```bash
 $ defaults write com.apple.Finder AppleShowAllFiles true
 $ killall Finder
 ```
@@ -124,7 +124,7 @@ csharp_new_line_before_open_brace = none
 
 各ソリューションに複数の `.editorconfig` ファイルを与えることができます。 Visual Studio for Mac はソリューションで上から下へと `.editorconfig` ファイルを読み、読みながら設定を追加したり、オーバーライドしたりします。 つまり、編集しているファイルに "最も近い" `.editorconfig` の設定が優先されます。 
 
-上位の _ ファイルの設定がコードベースのこの部分に "適用されない" ようにするには、下位の `.editorconfig` ファイルの一番上に `root=true` プロパティを追加します。
+すべての上位レベルの `.editorconfig` ファイルからの設定がコードベースのこの部分に適用_されない_ようにするには、次のように `root=true` プロパティを下位レベルの `.editorconfig` ファイルに追加します。
 
 ```EditorConfig
 # top-most EditorConfig file

@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d54b3ea7c32230a683359ee466b03e8954fec2ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77c8d2151380c48b80b53ec3f0ef671daa92dbaa
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>チュートリアル: 基本サイト定義プロジェクトの作成
   このチュートリアルでは、一部のコントロールに視覚的 Web パーツを含む基本的なサイト定義を作成する方法を示します。 わかりやすくは、作成した視覚的 Web パーツは、いくつかのコントロールのみがします。 ただし、多くの機能を含むより高度な SharePoint サイト定義を作成できます。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-site-definition-project"></a>サイト定義プロジェクトを作成するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。 IDE は、Visual Basic 開発設定を使用して、メニュー バーでに設定されている場合は、選択**ファイル**、**新しいプロジェクト**です。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。 IDE は、Visual Basic 開発設定を使用して、メニュー バーでに設定されている場合は、選択**ファイル**、**新しいプロジェクト**です。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  展開、 **Visual c#**ノードまたは**Visual Basic**ノード、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
+2.  展開、 **Visual c#** ノードまたは**Visual Basic**ノード、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
 3.  **テンプレート**一覧で、選択、 **SharePoint 2010 プロジェクト**テンプレート。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  **デバッグのサイトとセキュリティ レベルを指定して**ページで、サイト定義をデバッグする SharePoint サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/)。  
   
-6.  **この SharePoint ソリューションの信頼レベルは何ですか?**セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
+6.  **この SharePoint ソリューションの信頼レベルは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
   
      すべてのサイト定義プロジェクトはファーム ソリューションとして配置する必要があります。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)です。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  **ソリューション エクスプ ローラー**、プロジェクト ノードを選択し、次に、メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
   
-9. いずれかで**Visual c#**または**Visual Basic**、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
+9. いずれかで**Visual c#** または**Visual Basic**、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
 10. **テンプレート** ウィンドウで、選択、**サイト定義**のままにして、テンプレート、**名前**として**SiteDefinition1**、をクリックして**追加**ボタンをクリックします。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  展開、 **Visual c#**ノードまたは**Visual Basic**ノード、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
+3.  展開、 **Visual c#** ノードまたは**Visual Basic**ノード、展開、 **SharePoint**  ノードを選択し、 **2010**ノード。  
   
 4.  テンプレートの一覧で選択、**視覚的 Web パーツ**テンプレート、既定値は、VisualWebPart1 の名前を指定しを選択し、保持、**追加**ボタンをクリックします。  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  VisualWebPart1.ascx の下部には、3 つのコントロールをフォームに追加するのには、次のマークアップを追加します。 テキスト ボックス、ボタン、およびラベル。  
   
-    ```  
+    ```aspx-csharp  
     <table>  
       <tr>  
         <td>  
@@ -128,7 +128,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Default.aspx ページを開き、下にある次の行を追加、`WebPartPages`タグ。  
   
-    ```  
+    ```aspx-csharp  
     <%@ Register Tagprefix="MyWebPartControls" Namespace="TestSiteDef.VisualWebPart1" Assembly="$SharePoint.Project.AssemblyFullName$" %>  
     ```  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  後に、`</asp:Content>`要素全体を置き換える`ContentPlaceHolderId="PlaceHolderMain"`セクションとその内容を次のコード。  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="Content1" ContentPlaceHolderId="PlaceHolderMain" runat="server">  
         <MyWebPartControls:VisualWebPart1 runat="server" />      
     </asp:Content>  

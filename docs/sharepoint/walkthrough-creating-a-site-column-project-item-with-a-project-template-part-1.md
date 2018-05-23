@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 535d5d32771a7be2eacca575f0735548ff2926ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f494ef7160d38365643f72cfd1dabfa6cb66d4c3
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1"></a>チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)
   SharePoint プロジェクトは、1 つ以上の SharePoint プロジェクト項目のコンテナーです。 独自の SharePoint プロジェクト項目の種類を作成し、それらをプロジェクト テンプレートと関連付けることで、Visual Studio で SharePoint プロジェクト システムを拡張できます。 このチュートリアルでは、サイト内の列を作成するためのプロジェクト項目の種類を定義し、サイト内の列プロジェクト項目が含まれる新しいプロジェクトの作成に使用できるプロジェクト テンプレートを作成します。  
@@ -70,9 +70,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-3.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
+3.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
   
 4.  展開、 **Visual Basic**または**Visual c#** 、ノードを選択し、 **Extensibility**ノード。  
   
@@ -89,9 +89,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
+2.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
   
-3.  展開、 **Visual c#**または**Visual Basic**  ノードを選択し、 **Extensibility**ノード。  
+3.  展開、 **Visual c#** または**Visual Basic**  ノードを選択し、 **Extensibility**ノード。  
   
 4.  プロジェクト テンプレートの一覧で選択、 **c# プロジェクト テンプレート**または**Visual Basic プロジェクト テンプレート**テンプレート。  
   
@@ -119,9 +119,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
+2.  上部にある、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5** .NET Framework のバージョンの一覧でを選択します。  
   
-3.  展開、 **Visual c#**または**Visual Basic** 、ノードを選択、 **Windows**  ノードを選択し、**クラス ライブラリ**テンプレート。  
+3.  展開、 **Visual c#** または**Visual Basic** 、ノードを選択、 **Windows**  ノードを選択し、**クラス ライブラリ**テンプレート。  
   
 4.  **名前**ボックスに、入力**ProjectItemTypeDefinition**を選択し、 **OK**ボタンをクリックします。  
   
@@ -203,19 +203,19 @@ ms.lasthandoff: 04/16/2018
   
 3.  プロジェクト ファイル内で、次の `VSTemplate` 要素を見つけます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="SiteColumnProjectTemplate.vstemplate">  
     ```  
   
 4.  この要素を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="SiteColumnProjectTemplate.vstemplate">  
       <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>  
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 要素は、プロジェクトをビルドするとプロジェクト テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客を開く場合にのみ、プロジェクト テンプレートが使用できることを確認してください、**新しいプロジェクト** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。**ノード。  
+     `OutputSubPath` 要素は、プロジェクトをビルドするとプロジェクト テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客を開く場合にのみ、プロジェクト テンプレートが使用できることを確認してください、**新しいプロジェクト** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。** ノード。  
   
 5.  ファイルを保存して閉じます。  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate プロジェクトで、Elements.xml ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <Field ID="{$guid5$}"   
@@ -280,7 +280,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate プロジェクトで、SharePointProjectItem.spdata ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <ProjectItem Type="Contoso.SiteColumn" DefaultFile="Elements.xml"   
                  xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">  
@@ -304,7 +304,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate プロジェクトで、Feature1.feature ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="$guid4$" featureId="$guid4$"   
              imageUrl="" solutionId="00000000-0000-0000-0000-000000000000" title="Site Column Feature1" version=""  
@@ -330,7 +330,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate プロジェクトで、Package.package ファイルの内容を次の XML に置き換えます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0"   
              Id="$guid3$" solutionId="$guid3$" resetWebServer="false" name="$safeprojectname$"   
@@ -357,7 +357,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Visual C# プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">  
       <TemplateData>  
@@ -393,7 +393,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Visual Basic プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">  
       <TemplateData>  
@@ -445,7 +445,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Visual C# プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
@@ -525,7 +525,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  Visual Basic プロジェクト テンプレートを作成している場合は、次の XML を使用します。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
@@ -653,7 +653,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-6.  **型**一覧で、選択**[microsoft.visualstudio.projecttemplate]**です。  
+6.  **型**一覧で、選択 **[microsoft.visualstudio.projecttemplate]** です。  
   
     > [!NOTE]  
     >  この値は、extension.vsixmanifest ファイル内の `ProjectTemplate` 要素に対応します。 この要素は、プロジェクト テンプレートを格納する VSIX パッケージ内のサブフォルダーを示します。 詳細については、次を参照してください。 [ProjectTemplate 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/87add64c-9dcd-495f-8815-209dab182cb1)です。  
@@ -694,7 +694,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio の実験用インスタンスのメニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-2.  展開、 **Visual c#**または**Visual Basic** (言語によっては、プロジェクト テンプレートをサポートする) ノードが展開、 **SharePoint**  ノード、をクリックして**2010**ノード。  
+2.  展開、 **Visual c#** または**Visual Basic** (言語によっては、プロジェクト テンプレートをサポートする) ノードが展開、 **SharePoint**  ノード、をクリックして**2010**ノード。  
   
 3.  プロジェクト テンプレートの一覧で選択、 **Site Column**テンプレート。  
   
