@@ -8,26 +8,26 @@
 ## [Azure に配置する](quickstart-deploy-to-azure.md)
 # チュートリアル
 ## .NET
-### [発行ツールを使用して .NET Core アプリケーションを配置する](/dotnet/core/deploying/deploy-with-vs)
-### [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+### [発行ツールを使用して .NET Core アプリケーションを配置する](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ### [ClickOnce を使用してデスクトップ アプリを配置する](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 ### [ClickOnce アプリケーションのコマンド ラインからのビルド](building-clickonce-applications-from-the-command-line.md)
 ## ASP.NET
-### [Azure に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+### [Azure に ASP.NET Core アプリを発行する](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ### [発行設定のインポートと Azure へのデプロイ](tutorial-import-publish-settings-azure.md)
 ### [発行設定のインポートと IIS へのデプロイ](tutorial-import-publish-settings-iis.md)
-### [Git を使用した Azure への ASP.NET Core の継続的な配置](/aspnet/core/publishing/azure-continuous-deployment)
-### [IIS に ASP.NET を配置する](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
+### [Git を使用した Azure への ASP.NET Core の継続的な配置](/aspnet/core/publishing/azure-continuous-deployment?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [IIS に ASP.NET を配置する](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## ネイティブ
-### [Visual C++ での配置](/cpp/ide/deployment-in-visual-cpp)
-### [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
-### [ClickOnce を使用してネイティブ アプリを配置する](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)
+### [Visual C++ に配置...](/cpp/ide/deployment-in-visual-cpp)
+### [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [ClickOnce を使用してネイティブ アプリを配置...](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)
 ## UWP
-### [Visual Studio を使用して UWP アプリをパッケージ化する](/windows/uwp/packaging/packaging-uwp-apps)
+### [Visual Studio を使用して UWP アプリをパッケージ化する](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## Node.js
-### [Web 配置を使用して Azure Web サイトに発行する](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
+### [Web 配置を使用して Azure Web サイトに発行する](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## Python
-### [Azure App Service に発行する](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio)
+### [Azure App Service に発行する](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 # 使い方ガイド
 ## [ClickOnce のセキュリティと配置](clickonce-security-and-deployment.md)
 ### [ClickOnce 配置ストラテジの選択](choosing-a-clickonce-deployment-strategy.md)
@@ -50,7 +50,7 @@
 #### [方法: SignTool.exe を使用してセットアップ ファイルに署名する (ClickOnce)](how-to-sign-setup-files-with-signtool-exe-clickonce.md)
 ### [ClickOnce アプリケーションの発行](publishing-clickonce-applications.md)
 #### [開発者以外が配置する ClickOnce アプリケーションの作成](creating-clickonce-applications-for-others-to-deploy.md)
-#### [再署名を行わない ClickOnce アプリケーションの配置 (テスト サーバーおよび運用サーバー)](deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)
+#### [再署名を行わない ClickOnce アプリケーションの配置 (テスト サーバーおよび運用サーバー)](deploying-clickonce-applications-for-testing-and-production-without-resigning.md)
 #### [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](accessing-local-and-remote-data-in-clickonce-applications.md)
 #### [ClickOnce での COM コンポーネントの配置](deploying-com-components-with-clickonce.md)
 #### [ClickOnce アプリケーションのコマンド ラインからのビルド](building-clickonce-applications-from-the-command-line.md)
@@ -82,7 +82,7 @@
 ##### [チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api.md)
 #### [チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードする](walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)
 #### [チュートリアル : ClickOnce アプリケーションを手動で配置する](walkthrough-manually-deploying-a-clickonce-application.md)
-##### [チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置](walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information.md)
+##### [チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置](walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)
 #### [チュートリアル : ClickOnce 配置 API を使用して必要に応じてサテライト アセンブリをダウンロードする](walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)
 #### [チュートリアル: ClickOnce アプリケーションのカスタム インストーラーの作成](walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)
 ### [ClickOnce の更新方法の選択](choosing-a-clickonce-update-strategy.md)
