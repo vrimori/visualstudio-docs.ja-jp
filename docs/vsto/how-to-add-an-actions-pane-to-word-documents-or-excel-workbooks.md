@@ -1,5 +1,5 @@
 ---
-title: '方法: Word 文書や Excel ブックに操作ウィンドウを追加 |Microsoft ドキュメント'
+title: '方法: Word 文書に操作ウィンドウを追加または Excel ブック'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: aeb6fa198f7e7c82e96a97382befc41a2f016d53
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ebf4896411a46b2c75edd8216bd61623bc9b728f
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>方法: Word 文書または Excel ブックに操作ウィンドウを追加する
   Microsoft Office Word ドキュメントまたは Microsoft Excel ブックに操作ウィンドウを追加するには、Windows フォーム ユーザー コントロールをまず作成します。 次に、ユーザー コントロールを追加、<xref:Microsoft.Office.Tools.ActionsPane.Controls%2A>のプロパティ、`ThisDocument.ActionsPane`フィールド (Word の場合) または`ThisWorkbook.ActionsPane`project のフィールド (Excel)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio で Word または Excel のドキュメント レベルのプロジェクトを開きます。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
 3.  **新しい項目の追加**ダイアログ ボックスで、**操作ウィンドウ コントロール**、名前を付けます**HelloControl**、 をクリック**追加**です。  
   
@@ -62,10 +62,10 @@ ms.lasthandoff: 04/16/2018
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#13)]  
   
-## <a name="adding-the-user-control-to-the-actions-pane"></a>[操作] ウィンドウにユーザー コントロールの追加  
+## <a name="add-the-user-control-to-the-actions-pane"></a>[操作] ウィンドウに、ユーザー コントロールを追加します。  
  [操作] ウィンドウを表示するユーザー コントロールを追加、<xref:Microsoft.Office.Tools.ActionsPane.Controls%2A>のプロパティ、`ThisDocument.ActionsPane`フィールド (Word の場合) または`ThisWorkbook.ActionsPane`フィールド (Excel)。  
   
-#### <a name="to-add-the-user-control-to-the-actions-pane"></a>[操作] ウィンドウにユーザー コントロールを追加するには  
+### <a name="to-add-the-user-control-to-the-actions-pane"></a>[操作] ウィンドウにユーザー コントロールを追加するには  
   
 1.  次のコードを追加、`ThisDocument`または`ThisWorkbook`クラス レベルの宣言とクラス (は、メソッドに次のコードが追加されることはしません)。  
   
@@ -81,6 +81,6 @@ ms.lasthandoff: 04/16/2018
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
  [チュートリアル: アクション ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)   
  [方法: アクション ペイン上のコントロールのレイアウトの管理](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
- [チュートリアル: 操作ウィンドウから文書へのテキストの挿入](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
+ [チュートリアル: アクション ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
   
   

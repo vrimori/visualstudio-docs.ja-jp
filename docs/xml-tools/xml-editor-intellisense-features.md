@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c2b87f9d1b850ce93851d78a8b43420ae473c41
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 82d05e481d313a7ba9010fe253756d3f21c345e2
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 
@@ -46,7 +46,7 @@ XML エディターでは、Visual Studio で提供されている他の言語�
 
 詳細については、次を参照してください。[チュートリアル: XSLT IntelliSense の使用](../xml-tools/walkthrough-using-xslt-intellisense.md)トピックです。
 
-## <a name="auto-completion"></a>オートコンプリート
+## <a name="auto-completion"></a>オート コンプリート
  XML エディターでは、必要な XML 構文が自動的に入力されるため、XML の編集も容易になっています。 たとえば、次の開始タグを入力します。
 
  `<book>`
@@ -73,14 +73,14 @@ XML エディターでは、Visual Studio で提供されている他の言語�
 
 -   DTD 宣言の終了 : `>`
 
-XML エディターは、名前空間で修飾された要素や属性を IntelliSense の一覧から選択し、その要素や属性の名前空間がまだスコープ内にない場合には、名前空間宣言を挿入するという機能も備えています。
+XML エディターは、名前空間を挿入することも宣言、名前空間で修飾された要素を選択するか、IntelliSense の一覧とその要素または属性の名前空間からの属性がまだスコープ内ではありません。
 
 たとえば、IntelliSense の一覧から `e:Book` 要素を選択したときに、プレフィックスが、ドキュメント内で宣言されていない `http://books` 名前空間に関連付けられている場合は、XML エディターによって必要な名前空間宣言が自動的に挿入されます。 結果の XML テキストを次に示します。
 
 `<e:Book xmlns:e="http://books"`
 
 ## <a name="brace-matching"></a>中かっこの一致
- XML エディターでは、中かっこを強調表示することにより、閉じたばかりの要素について即座にフィードバックを返します。 ショートカット キー (Ctrl+]) を使用しても、1 つの中かっこから対応する中かっこにジャンプできます。
+ XML エディターでは、中かっこを強調表示することにより、閉じたばかりの要素について即座にフィードバックを返します。 キーボード ショートカットを使用することもできます (**Ctrl**+**]**) 中かっこから対応する中かっこに移動します。
 
  XML エディターは、この動作を次の項目に対して行います。
 
@@ -98,8 +98,8 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
 
 -   属性の開始と終了の引用符
 
-## <a name="modifying-the-intellisense-options"></a>IntelliSense オプションの変更
- IntelliSense とオートコンプリートの機能は、既定で有効になっています。 ただし、[ツール] メニューの [オプション] の設定を変更することによって、この設定を変更できます。
+## <a name="modify-the-intellisense-options"></a>IntelliSense オプションを変更します。
+ IntelliSense とオートコンプリートの機能は、既定で有効になっています。 これを変更することで変更するただし、**ツール** > **オプション**設定します。
 
  **自動挿入**のセクションで、 **[その他]** ページは、次の動作を制御します。
 
@@ -109,7 +109,7 @@ XML エディターは、名前空間で修飾された要素や属性を Intell
 |属性値の引用符|新しい属性の名前を入力するときに属性値の引用符を挿入します。|
 |その他のマークアップ|コメント、CDATA、DOCTYPE、処理命令、およびその他のマークアップ宣言を完了します。|
 
-#### <a name="to-change-the-auto-completion-behavior"></a>オートコンプリートの動作を変更するには
+### <a name="to-change-the-auto-completion-behavior"></a>オートコンプリートの動作を変更するには
 
 1.  **[ツール]** メニューの **[オプション]** を選択します。
 

@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e844e2177d01d5b308472eae5661b25798f0838
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 2cf6c17f3017bb1021423b19b32b36749fe0744d
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって Azure App Service にアプリケーションを公開 Visual Studio で発行設定
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
 
     まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
 
@@ -92,21 +92,7 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
 
-1. ASP.NET プロジェクトを Visual Studio で開くがあるコンピューターで、ソリューション エクスプ ローラーでプロジェクトを右クリックし **発行**です。
-
-1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
-
-1. **発行先の選択**ダイアログ ボックスで、をクリックして**プロファイルのインポート**です。
-
-    ![選択を発行](../deployment/media/tutorial-publish-tool-import-profile.png)
-
-1. 前のセクションで作成した発行設定ファイルの場所に移動します。
-
-1. **発行設定ファイルのインポート** ダイアログ ボックスでは、前のセクションで作成したプロファイルを選択し、をクリックして**開く**です。
-
-1. 2 つのインポートされたプロファイルのいずれかを選択し、クリックして**発行**です。
-
-    Visual Studio は、展開プロセスを開始し、進行状況と結果は、出力ウィンドウを示しています。
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
 ## <a name="next-steps"></a>次の手順
 

@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b023349454f71835e13e7cc891b8be92b90c153f
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 907fecd348dba46f6d3375d2d994b04ec1cf1eb5
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって IIS にアプリケーションを公開 Visual Studio で発行設定
 
@@ -38,13 +38,11 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
 
     まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
 
-    この記事の手順では Visual Studio 2017 に基づいてに並べ替えられます。
-
-* IIS から発行設定ファイルを生成するには IIS 8.0 Web サーバーの役割が正しく構成されている Windows Server 2012 を実行しているコンピューターが必要し、ASP.NET 4.5 または ASP.NET Core のいずれかがインストールされています。 ASP.NET Core では、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。 ASP.NET 4.5 では、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+* IIS から発行設定ファイルを生成するには Windows Server 2012 または Windows Server 2016 を実行しているコンピューターが必要し、正しく構成されている IIS Web サーバーの役割をする必要があります。 ASP.NET 4.5 または ASP.NET Core のいずれかをインストールする必要があります。 ASP.NET Core では、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。 ASP.NET 4.5 では、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio で新しい ASP.NET プロジェクトを作成します。
 
@@ -68,62 +66,13 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成します。
 
-1. IIS を右クリックし、**既定の Web サイト**、選択**展開** > **Web 配置をパブリッシング**です。
-
-    ![Web 配置の構成を構成します。](../deployment/media/tutorial-configure-web-deploy-publishing.png)
-
-1. **Web 配置をパブリッシング** ダイアログ ボックスで、設定を確認します。
-
-1. をクリックして**セットアップ**です。
-
-    **結果**パネルで、アクセス権を出力結果に与えられていることと、指定したユーザーのファイルが、 *.publishsettings*で表示されている場所で生成されたファイル拡張子、ダイアログ ボックス。
-
-    ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <publishData>
-      <publishProfile
-        publishUrl="https://myhostname:8172/msdeploy.axd"
-        msdeploySite="Default Web Site"
-        destinationAppUrl="http://myhostname:80/"
-        mySQLDBConnectionString=""
-        SQLServerDBConnectionString=""
-        profileName="Default Settings"
-        publishMethod="MSDeploy"
-        userName="myhostname\myusername" />
-    </publishData>
-    ```
-
-    Windows Server および IIS の構成によって異なる値が表示されます。 次に、いくつかの詳細が表示される値を示します。
-
-    * *Msdeploy.axd*で参照されているファイル、`publishUrl`属性は Web Deploy を動的に生成されたファイルの HTTP ハンドラー。 (テスト目的で`http://myhostname:8172`一般にも同様に機能します)。
-    * `publishUrl`ポートは通常は Web Deploy の既定ポート 8172 に設定します。
-    * `destinationAppUrl`ポートは通常は IIS の既定ポート 80 に設定します。
-    * (後の手順) でホスト名を使用して Visual Studio でリモート ホストに接続できない場合は、ホスト名の代わりに IP アドレスをテストします。
-
-    > [!NOTE]
-    > Azure VM で実行されている IIS に発行する場合、Web デプロイおよび IIS のポートは、ネットワーク セキュリティ グループで開く必要があります。 詳細については、次を参照してください。[実行 IIS をインストールして](/azure/virtual-machines/windows/quick-create-portal#open-port-80-for-web-traffic)です。
-
-1. このファイルを Visual Studio が実行されているコンピューターにコピーします。
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
 
-1. ASP.NET プロジェクトを Visual Studio で開くがあるコンピューターで、ソリューション エクスプ ローラーでプロジェクトを右クリックし **発行**です。
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
-
-1. **発行先の選択**ダイアログ ボックスで、をクリックして**プロファイルのインポート**です。
-
-    ![選択を発行](../deployment/media/tutorial-publish-tool-import-profile.png)
-
-1. 前のセクションで作成した発行設定ファイルの場所に移動します。
-
-1. **発行設定ファイルのインポート**ダイアログ ボックスに移動し、前のセクションで作成したプロファイルを選択し、をクリックして**開く**です。
-
-    Visual Studio は、展開プロセスを開始し、進行状況と結果は、出力ウィンドウを示しています。
-
-    場合は、任意の展開エラーが発生する、クリックして**設定**設定を編集します。 設定を変更し、をクリックして**検証**新しい設定をテストします。
-
-    ![発行ツールで設定を編集します。](../deployment/media/tutorial-configure-publish-settings-in-tool.png)
+アプリが正常に配置した後、自動的に開始する必要があります。 Visual Studio から起動はしない場合は、IIS でアプリを起動します。 ASP.NET core アプリケーション プールのフィールドをかどうかを確認する必要があります、 **DefaultAppPool**に設定されている**マネージ コードなし**です。
 
 ## <a name="next-steps"></a>次の手順
 

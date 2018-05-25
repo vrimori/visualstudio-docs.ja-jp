@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b820820a42814eb7169287408200bedd73435ff7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ae09c578eac5a4acbfa9c169ba175fe557872da5
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-create-xml-snippets"></a>方法 : XML スニペットを作成する
+# <a name="how-to-create-xml-snippets"></a>方法: XML スニペットを作成します。
 
 XML エディターを使用して、新しい XML スニペットを作成することができます。 エディターには、新しい XML スニペットを作成する際の定型スニペットである、"Snippet" という名前の XML スニペットが含まれています。
 
@@ -30,7 +30,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
 
 3.  エディター ウィンドウで右クリックし **スニペットの挿入**です。
 
-4.  選択**スニペット**ENTER キーを押して、一覧からです。
+4.  選択**スニペット**キーを押して、一覧から**Enter**です。
 
 5.  新しいスニペットに必要な変更を加えます。
 
@@ -40,7 +40,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
 
 7.  新しいスニペットの名前を入力し、選択**スニペット ファイル**から、**付けて**ドロップダウン ウィンドウです。
 
-8.  使用して、**で保存**ドロップダウン リストをファイルの場所を My documents \visual Studio 2005\Code \xml\my XML Snippets フォルダーに変更し、キーを押します**保存**です。
+8.  使用して、**で保存**ファイルの場所を変更するドロップダウン リスト、 *My documents \visual Studio 2005\Code \xml\my XML Snippets*フォルダーを押してから**保存**です。
 
 ## <a name="snippet-description"></a>スニペットの説明
 
@@ -83,7 +83,7 @@ XML エディターを使用して、新しい XML スニペットを作成す�
 
 -   $selected$ は定義済みの変数です。 この変数は、スニペットを呼び出す前に XML エディターで選択されたテキストを表します。 この変数の配置によって、選択されたテキストが、選択範囲を囲むコード スニペット内のどこに出現するかが決まります。
 
--   $end$ は定義済みの変数です。 Enter キーを押してコード スニペット フィールドの編集を終了すると、この変数によってキャレット (^) の移動先が決まります。
+-   $end$ は定義済みの変数です。 押されたとき**Enter**するためのコード スニペット フィールドの編集を終了するには、この変数を特定キャレット (^) の移動先。
 
  上記の `Code` 要素によって、次の XML テキストが挿入されます。
 
@@ -120,5 +120,5 @@ XML エディターを使用して、新しい XML スニペットを作成す�
 ## <a name="see-also"></a>関連項目
 
 - [XML スニペット](../xml-tools/xml-snippets.md)
-- [方法 : XML スニペットを使用する](../xml-tools/how-to-use-xml-snippets.md)
-- [方法 : XML スキーマから XML スニペットを生成する](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
+- [方法: 使用する XML スニペット](../xml-tools/how-to-use-xml-snippets.md)
+- [方法: XML スキーマから XML スニペットを生成](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

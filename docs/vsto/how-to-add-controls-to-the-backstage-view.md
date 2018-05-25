@@ -23,14 +23,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d72cd3371a1465faa1dd505f71c5fe8c9e2e181d
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 6b775c7613b8cc0953e419b2546ec017c96e8454
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>方法: コントロール、Backstage ビューを追加します。
-  リボン デザイナーを使用するには、をクリックしたときに表示されるメニューにコントロールを追加、**ファイル**タブ コントロールに追加するアプリケーションを実行するときに、**ファイル** タブに表示されるという名前のグループ**アドイン**です。  
+  リボン デザイナーを使用するには、をクリックしたときに表示されるメニューにコントロールを追加、**ファイル**タブです。アプリケーションに追加するコントロールを実行すると、**ファイル** タブに表示されるという名前のグループ**アドイン**です。  
   
  Visual Studio でリボン デザイナーを使用して、組み込みのコントロールの前後にコントロールを配置できません。 ビルトイン コントロールは、Backstage ビューで既に表示されているコントロールです。 組み込みコントロールの前後にコントロールを配置する場合は、リボン XML を使用する必要があります。 詳細については**リボン (XML)** を参照してください[リボン XML](../vsto/ribbon-xml.md)です。 Backstage ビューのカスタマイズの詳細については、次を参照してください。[開発者向けの Office 2010 の Backstage ビューの概要](http://go.microsoft.com/fwlink/?LinkId=182189)と[開発者向けの Office 2010 の Backstage ビューをカスタマイズ](http://go.microsoft.com/fwlink/?LinkId=182188)です。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/17/2018
  [リボンの概要](../vsto/ribbon-overview.md)   
  [リボン デザイナー](../vsto/ribbon-designer.md)   
  [リボン XML](../vsto/ribbon-xml.md)   
- [方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)   
+ [方法: 開始リボンをカスタマイズします。](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [チュートリアル: リボン デザイナーを使用してカスタム タブを作成します。](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
   
   

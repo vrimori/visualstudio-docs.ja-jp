@@ -16,11 +16,11 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: aeb74bac5196450ec98426727a1456a009adb5c1
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 548b86406ba36a6f46a2dfb3d4d894b5621c298c
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="tutorial-debug-managed-and-native-code-in-visual-studio"></a>チュートリアル: Visual Studio でのマネージ コードとネイティブ コードをデバッグします。
 
@@ -116,7 +116,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
 
 1. *Program.cs*既定のコードを次のコードに置き換えます。
 
-    ```c#
+    ```csharp
     using System;
     using System.Runtime.InteropServices;
     
@@ -183,7 +183,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
 
 1. C# プロジェクトで開きます*Program.cs*左余白をクリックして次のコード行にブレークポイントを設定します。
 
-    ```c#
+    ```csharp
     int result = Multiply(7, 7);
     ```
 

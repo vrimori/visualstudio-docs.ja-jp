@@ -1,7 +1,7 @@
 ---
 title: リモート デバッグの IIS のリモート コンピューター上の ASP.NET Core |Microsoft ドキュメント
 ms.custom: remotedebugging
-ms.date: 08/14/2017
+ms.date: 05/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: 573a3fc5-6901-41f1-bc87-557aa45d8858
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 952b4e4cdff2f5620870cad5903d6e20f61a862e
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: cb1898c9e46de7669bc727884055f847abb0ce6e
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="remote-debug-aspnet-core-on-a-remote-iis-computer-in-visual-studio-2017"></a>Visual Studio 2017 の IIS のリモート コンピューターでリモート デバッグの ASP.NET Core
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -31,6 +31,14 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 ## <a name="requirements"></a>要件
 
 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
+
+## <a name="app-already-running-in-iis"></a>アプリが既に IIS で実行されていますか。
+
+この記事には、Windows server 上の IIS の基本的な構成設定、および Visual Studio からアプリの展開のステップが含まれます。 ここでは、サーバーがインストールされているアプリが正常に実行できることと、リモート デバッグする準備ができたらコンポーネントを必要なことを確認する手順。
+
+* IIS で、アプリが実行されていて、リモート デバッガーをダウンロードし、デバッグを開始に移動したい[ダウンロードして、Windows Server のリモート ツールをインストール](#BKMK_msvsmon)です。
+
+* アプリがセットアップされている、展開するかどうかを確認するのに役立つこのトピックのすべての手順に従いますをデバッグすることができるように、IIS で正しく実行する場合。
 
 ## <a name="create-the-aspnet-core-application-on-the-visual-studio-2017-computer"></a>Visual Studio 2017 コンピューター上の ASP.NET Core アプリケーションを作成します。 
 
@@ -50,17 +58,14 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server 上のブラウザーのセキュリティ設定を更新します。
 
-設定によっては、セキュリティには、このチュートリアルで説明されているソフトウェアを簡単にダウンロードするため、お使いのブラウザーに次の信頼済みサイトを追加するときに保存可能性があります。 これらのサイトへのアクセスは必要な場合があります。
+(これは既定で有効)、Internet explorer セキュリティ強化の構成が有効な場合は、いくつかの web サーバー コンポーネントをダウンロードするために信頼済みサイトとしていくつかのドメインを追加する必要があります。 移動して、信頼済みサイトを追加**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 次のドメインを追加します。
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
-- visualstudio.com
 - iis.net
 
-Internet Explorer を使用している場合に移動して、信頼済みサイトを追加できます**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 これらの手順は、その他のブラウザーによって異なります。 (My.visualstudio.com からリモート デバッガーの古いバージョンをダウンロードする場合は、いくつか追加の信頼済みサイトが必要にサインインします。)
-
-ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらの追加リソースは、ほとんどの場合、ソフトウェアをインストールする必要はありません。
+ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらのリソースの一部は必要ありません、クリックしてプロセスを簡易化、**追加**されたらです。
 
 ## <a name="install-aspnet-core-on-windows-server"></a>Windows Server での ASP.NET Core をインストールします。
 
@@ -71,17 +76,47 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
 3. システムを再起動 (実行または**net stop が/y**続く**net 開始 w3svc**システム パスへの変更を取得するコマンド プロンプトから)。
 
-## <a name="optional-install-web-deploy-36-for-hosting-servers-on-windows-server"></a>(省略可能)インストール Web 3.6 Windows Server 上のサーバーをホストするための展開します。
+## <a name="choose-a-deployment-option"></a>展開オプションを選択します
 
-一部のシナリオで、速度を向上するインポートは、手動で展開オプションを構成する代わりに Visual Studio での設定を公開します。 発行の Visual Studio での発行プロファイルを構成する代わりに設定をインポートする場合を参照してください[発行の設定のインポートと IIS に配置](../deployment/tutorial-import-publish-settings-iis.md)です。 それ以外の場合、このトピックで維持されを参照してください。 インポートに関する記事を完了する場合発行の設定と、アプリを配置するしに戻ってこのトピックのセクションで開始[リモート ツールをダウンロードする](#BKMK_msvsmon)です。
+アプリを展開する、IIS にする必要がある場合は、これらのオプションを考慮してください。
 
-## <a name="BKMK_install_webdeploy"></a> (省略可能)インストール Web 3.6 Windows Server での展開します。
+* IIS で、発行設定ファイルを作成して、Visual Studio での設定をインポートして展開します。 シナリオによっては、これは、アプリの配置に高速な方法です。 発行設定ファイルを作成するときに権限 IIS で自動的に設定されます。
 
-[!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
+* ローカル フォルダーに発行し、IIS で準備済みのアプリのフォルダーに優先の方法で出力をコピーして展開します。
 
-## <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターで ASP.NET Web サイトを構成します。
+## <a name="optional-deploy-using-a-publish-settings-file"></a>(省略可能)発行設定ファイルを使用した展開します。
 
-インポートする場合は、発行の設定、このセクションをスキップすることができます。
+このオプションを使用する、発行設定ファイルを作成し、Visual Studio にインポートします。
+
+> [!NOTE]
+> この展開方法は、Web Deploy を使用します。 Web 配置を手動で構成 Visual Studio で、設定をインポートする代わりにする場合をホストしているサーバーの Web 展開 3.6 ではなく Web 展開 3.6 をインストールできます。 ただし、Web Deploy を手動で構成する場合、必要がありますに正しい値および権限を持つサーバー上のアプリ フォルダーが構成されていることを確認してください (を参照してください[を構成する ASP.NET Web サイト](#BKMK_deploy_asp_net))。
+
+### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>インストールして Windows Server 上のホスト サーバーの Web 配置を構成します。
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
+
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成します。
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
+
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+
+アプリが正常に配置した後、自動的に開始する必要があります。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。 ASP.NET core アプリケーション プールのフィールドをかどうかを確認する必要があります、 **DefaultAppPool**に設定されている**マネージ コードなし**です。
+
+1. **設定**ダイアログ ボックスをクリックしてデバッグを有効にする**次**を選択、**デバッグ**構成を選択し**の追加ファイルを削除します。移行先**下にある、**ファイルを発行**オプション。
+
+    > [!NOTE]
+    > デバッグを無効にする、リリース構成を選択した場合、 *web.config*ファイルの公開時にします。
+
+1. をクリックして**保存**し、アプリを再発行します。
+
+## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(省略可能)ローカル フォルダーに発行して展開します。
+
+このオプションを使用すると、Powershell、RoboCopy を使用して IIS にアプリケーションをコピーするか、ファイルを手動でコピーする場合、アプリを展開します。
+
+### <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターで ASP.NET Web サイトを構成します。
 
 1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後で配置されます。
 
@@ -101,17 +136,17 @@ Internet Explorer を使用している場合に移動して、信頼済みサ�
 
     これらのユーザーのアクセス権を持つ 1 つ表示されない場合は、読み取りと実行権限を持つユーザーとして IUSR を追加する手順を移動します。
 
-## <a name="bkmk_webdeploy"></a> (省略可能)発行し、Visual Studio からの Web デプロイを使用してアプリを配置
-
-[!INCLUDE [remote-debugger-deploy-app-web-deploy](../debugger/includes/remote-debugger-deploy-app-web-deploy.md)]
-
-## <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>(省略可能)発行および Visual Studio から、ローカル フォルダーに発行してアプリを配置
+### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>発行および Visual Studio から、ローカル フォルダーに発行してアプリを配置
 
 発行し、ファイル システムまたはその他のツールを使用してアプリを展開することもできます。
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
 ## <a name="BKMK_msvsmon"></a> ダウンロードして、Windows Server のリモート ツールのインストール
+
+このチュートリアルでは、Visual Studio 2017 を使用します。
+
+リモート デバッガーのダウンロード ページを開くときに問題があればを参照してください。[ファイルのダウンロードをブロック解除](../debugger/remote-debugging.md#unblock_msvsmon)ヘルプを参照します。
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 

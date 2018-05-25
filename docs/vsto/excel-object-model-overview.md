@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0c1626b7f363c5b6d71e26d7b42d9a57d7b775ee
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: f7f15cc3ce8396e4cd10a49a1427f1ba1be76b50
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="excel-object-model-overview"></a>Excel オブジェクト モデルの概要
   Microsoft Office Excel を使用するソリューションを開発するため、Excel オブジェクト モデルによって提供されるオブジェクトと対話することができます。 このトピックでは、特に重要なオブジェクトについて説明します。  
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/22/2018
 ### <a name="primary-interop-assembly-reference"></a>プライマリ相互運用機能アセンブリのリファレンス  
  Excel PIA のリファレンス ドキュメントは、Excel のプライマリ相互運用機能アセンブリの種類について説明しています。 このドキュメントは、次の場所から使用可能な: [Excel 2010 プライマリ相互運用機能アセンブリのリファレンス](http://go.microsoft.com/fwlink/?LinkId=189585)です。  
   
- PIA のイベントの実装方法、PIA のクラスとインターフェイスの違いなど、Excel PIA の設計の詳細については「[クラスの概要と、Office プライマリ相互運用機能アセンブリインターフェイス](http://go.microsoft.com/fwlink/?LinkId=189592).  
+ PIA のイベントの実装方法、PIA のクラスとインターフェイスの違いなど、Excel PIA の設計の詳細については「 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
 ### <a name="vba-object-model-reference"></a>VBA オブジェクト モデル リファレンス  
  VBA オブジェクト モデルのリファレンスでは、Visual Basic for Applications (VBA) コードに公開される Excel オブジェクト モデルについて説明しています。 詳細については、次を参照してください。 [Excel 2010 オブジェクト モデル リファレンス](http://go.microsoft.com/fwlink/?LinkId=199768)です。  

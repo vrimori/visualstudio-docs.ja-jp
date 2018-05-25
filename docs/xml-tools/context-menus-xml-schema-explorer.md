@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79f128968d810120c40b797715bd0df325116414
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: faf28fc44acd530cbc379c4a400c3488f98405ea
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
-# <a name="context-menus-xml-schema-explorer"></a>コンテキスト メニュー (XML スキーマ エクスプローラー)
+# <a name="context-menus-xml-schema-explorer"></a>コンテキスト メニュー (XML スキーマ エクスプ ローラー)
 
 次のコンテキスト メニュー項目は、スキーマ固有の検索やその他の操作を実行するために使用します。
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/26/2018
 |**グローバル要素を表示します。**|スキーマ セット内のすべてのグローバル要素を検索して強調表示します。|
 |**[プロパティ] ウィンドウ**|開く、**プロパティ**ウィンドウ (これがまだ開いていない) 場合。 このウィンドウには、ノードに関する情報が表示されます。|
 
-## <a name="node-type-namespace"></a>ノード型: 名前空間
+## <a name="node-type-namespace"></a>ノードの種類: Namespace
  名前空間ノードに使用できるオプションを次の表に示します。
 
 |オプション|説明|
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 |**グローバル要素を表示します。**|選択した名前空間内のすべてのグローバル要素を検索して強調表示します。|
 |**[プロパティ] ウィンドウ**|開く、**プロパティ**ウィンドウ (これがまだ開いていない) 場合。 このウィンドウには、ノードに関する情報が表示されます。|
 
-## <a name="node-type-file"></a>ノード型: ファイル
+## <a name="node-type-file"></a>ノードの種類: ファイル
  ファイル ノードに使用できるオプションを次の表に示します。
 
 |オプション|説明|
