@@ -66,4 +66,5 @@
 # [ユーザー補助](accessibility.md)
 
 # [トラブルシューティング](troubleshooting.md)
+## [Visual Studio カスタマー エクスペリエンス向上プログラム](visual-studio-experience-improvement-program.md)
 ## [問題を報告する](report-a-problem.md)
