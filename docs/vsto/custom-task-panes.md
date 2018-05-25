@@ -28,11 +28,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f2c74fe2b6f145dd88acbc3bc11d66201acbffd5
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 4dff9c5f8602f1e11ef020400a11d7d165b23b04
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="custom-task-panes"></a>カスタム作業ウィンドウ
   作業ウィンドウは、通常、Microsoft Office アプリケーションのウィンドウの一辺にドッキングされているユーザー インターフェイス ウィンドウです。 カスタム作業ウィンドウは、独自の作業ウィンドウを作成し、ユーザーがソリューションの各機能にアクセスする際に使い慣れたインターフェイスを利用できるようにするものです。 たとえば、インターフェイスにはドキュメントを変更するコードや、データ ソースのデータを表示するコードを実行するコントロールが含まれます。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/17/2018
 ### <a name="familiar-user-interface"></a>使い慣れたユーザー インターフェイス  
  Microsoft Office system でのアプリケーションのユーザーなどを使用して作業ウィンドウに慣れている、**スタイルと書式**Word 作業ウィンドウ。 カスタム作業ウィンドウは Microsoft Office システムの他の作業ウィンドウと似た動作をします。 ユーザーはカスタム作業ウィンドウをアプリケーション ウィンドウのどの辺にでもドッキングすることができ、また、ウィンドウ内の任意の場所にカスタム作業ウィンドウをドラッグできます。 複数のカスタム作業ウィンドウを同時に表示できる VSTO アドインを作成することもできます。各作業ウィンドウは、ユーザーが個別に操作できます。  
   
-### <a name="windows-forms-support"></a>Windows フォームのサポート  
+### <a name="windows-forms-support"></a>Windows フォームをサポートします。  
  Visual Studio で Office 開発ツールを使用して作成したカスタム作業ウィンドウのユーザー インターフェイスは、Windows フォーム コントロールに基づいています。 使い慣れた Windows フォーム デザイナーを使用して、カスタム作業ウィンドウのユーザー インターフェイスを設計できます。 また、Windows フォームのデータ バインディング サポートを使用して、作業ウィンドウ上のコントロールにデータ ソースをバインドすることもできます。  
   
 ## <a name="create-a-custom-task-pane"></a>カスタム作業ウィンドウを作成します。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/17/2018
 ## <a name="access-the-application-from-the-task-pane"></a>作業ウィンドウからアプリケーションへのアクセスします。  
  ユーザー コントロールからアプリケーションを自動化する場合、コード内の `Globals.ThisAddIn.Application` を使用して、オブジェクト モデルに直接アクセスできます。 静的な `Globals` クラスは、`ThisAddIn` オブジェクトへのアクセスを提供します。 このオブジェクトの `Application` フィールドは、アプリケーションのオブジェクト モデルへのエントリ ポイントです。  
   
- 詳細については、`Application`のフィールド、`ThisAddIn`オブジェクトを参照してください[プログラムは、VSTO アドイン](../vsto/programming-vsto-add-ins.md)です。カスタム作業ウィンドウからアプリケーションを自動化する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: カスタム作業ウィンドウからアプリケーションを自動化](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)です。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)です。  
+ 詳細については、`Application`のフィールド、`ThisAddIn`オブジェクトを参照してください[プログラムは、VSTO アドイン](../vsto/programming-vsto-add-ins.md)です。カスタム作業ウィンドウからアプリケーションを自動化する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: カスタム作業ウィンドウからのアプリケーションの自動](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)です。 詳細については、`Globals`クラスを参照してください[Office プロジェクト内のオブジェクトへのアクセスをグローバル](../vsto/global-access-to-objects-in-office-projects.md)です。  
   
 ## <a name="manage-the-user-interface-of-the-task-pane"></a>ユーザー インターフェイスの作業ウィンドウを管理します。  
  作業ウィンドウを作成した後に、<xref:Microsoft.Office.Tools.CustomTaskPane> オブジェクトのプロパティとイベントを使用して、作業ウィンドウのユーザー インターフェイスを制御したり、ユーザーが作業ウィンドウを変更したときに対応したりすることができます。  
@@ -142,16 +142,11 @@ ms.lasthandoff: 05/17/2018
  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [Word VSTO アドインで作業ウィンドウを i: 管理の操作方法?](http://go.microsoft.com/fwlink/?LinkId=136781)です。  
   
 ##  <a name="Outlook"></a> Outlook  
- Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプローラーまたはインスペクター ウィンドウに関連付けられます。 エクスプローラーは、フォルダーの内容を表示するウィンドウであり、インスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウです。  
+ Outlook 用のカスタム作業ウィンドウを作成するときには、カスタム作業ウィンドウが特定のエクスプローラーまたはインスペクター ウィンドウに関連付けられます。 エクスプ ローラーは、フォルダーの内容を表示するウィンドウおよびインスペクターは電子メール メッセージやタスクなどの項目を表示するウィンドウです。  
   
  複数のエクスプ ローラーやインスペクターのウィンドウでカスタム作業ウィンドウを表示する場合は、エクスプ ローラーまたはインスペクター ウィンドウが開いたときに、カスタム作業ウィンドウの新しいインスタンスを作成する必要があります。 そのためには、エクスプ ローラーまたはインスペクター ウィンドウが作成されるときに発生するイベントを処理し、次に、イベント ハンドラーで作業ウィンドウを作成します。 どのウィンドウを表示させるかに応じて、作業ウィンドウを非表示にしたり表示させたりするように、エクスプ ローラーおよびインスペクターのイベントを処理することもできます。  
   
  作業ウィンドウを特定のエクスプ ローラーまたはインスペクターに関連付けるを使用して、<xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A>作業ウィンドウを作成して渡す方法、<xref:Microsoft.Office.Interop.Outlook.Explorer>または<xref:Microsoft.Office.Interop.Outlook.Inspector>オブジェクトを*ウィンドウ*パラメーター。 カスタム作業ウィンドウの作成の詳細については、次を参照してください。[カスタム作業ウィンドウの概要](../vsto/custom-task-panes.md)です。  
-  
- 開かれている電子メール メッセージごとの作業ウィンドウを作成する方法について説明するチュートリアルでは、次を参照してください。[チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)です。  
-  
-### <a name="outlook-events"></a>Outlook のイベント  
- エクスプ ローラー ウィンドウの状態を監視するために、次のようなエクスプ ローラーに関連するイベントを処理できます。  
   
 -   <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
   

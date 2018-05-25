@@ -1,32 +1,26 @@
 ---
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 273f67b997da80b27c124d3119ec0871f0a061b8
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+title: リモート デバッガーのダウンロード
+description: リモート デバッガーのダウンロード先リンク
+services: ''
+author: mikejo5000
+ms.service: ''
+ms.topic: include
+ms.date: 05/23/2018
+ms.author: mikejo
+ms.custom: include file
+ms.openlocfilehash: 358dc0b457381bb56532e6cae1156aac9ea2dba2
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 1.  デバイスまたはサーバーをデバッグするコンピューターではなく Visual Studio を実行しているコンピューター)、リモート ツールの正しいバージョンを取得します。
 
     |Version|リンク|メモ|
     |-|-|-|
-    |Visual Studio 2017 (最新バージョン)|[リモート ツール](https://www.visualstudio.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|常に、デバイスのオペレーティング システム (x86 または x64) に一致するバージョンをダウンロードします。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
-    |Visual Studio 2017 年 (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|以前のリリースの Visual Studio 2017 用のリモート ツール My.VisualStudio.com から利用できます。メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
-    |Visual Studio 2015 更新プログラム 3|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
-    |Visual Studio 2015 が (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 強化されたセキュリティ モードが有効な場合 (Windows Server)、指示された場合は新しい信頼できるサイトを追加する必要があります。|
+    |Visual Studio 2017 (最新バージョン)|[リモート ツール](https://www.visualstudio.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|常に、デバイスのオペレーティング システム (x86 または x64) に一致するバージョンをダウンロードします。 Windows server で、次を参照してください。[ファイルのダウンロードをブロック解除](../../debugger/remote-debugging.md#unblock_msvsmon)リモート ツールをダウンロードするヘルプを参照します。|
+    |Visual Studio 2017 年 (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|以前のリリースの Visual Studio 2017 用のリモート ツール My.VisualStudio.com から利用できます。メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 Windows server で、次を参照してください。[ファイルのダウンロードをブロック解除](../../debugger/remote-debugging.md#unblock_msvsmon)リモート ツールをダウンロードするヘルプを参照します。|
+    |Visual Studio 2015 が (古い)|[リモート ツール](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|メッセージが表示されたら、結合、無料の Visual Studio Dev Essentials グループ、または、Visual Studio サブスクリプションでサインインします。 id です。 Windows server で、次を参照してください。[ファイルのダウンロードをブロック解除](../../debugger/remote-debugging.md#unblock_msvsmon)リモート ツールをダウンロードするヘルプを参照します。|
     |Visual Studio 2013|[リモート ツール](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2013 のドキュメント内のページをダウンロードします。|
     |Visual Studio 2012|[リモート ツール](https://msdn.microsoft.com/library/bt727f1t(v=vs.110).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2012 のドキュメント内のページをダウンロードします。|
   

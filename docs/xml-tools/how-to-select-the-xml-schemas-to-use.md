@@ -10,30 +10,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: edda7ab4875381b6213e893169fc8bc837427757
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d835a8592108b549a109f7bb7e128a8ae5b01611
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-select-the-xml-schemas-to-use"></a>方法: 使用する XML スキーマを選択する
+# <a name="how-to-select-the-xml-schemas-to-use"></a>方法: を使用する XML スキーマの選択
 
-XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallDir%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュには、IntelliSense と XML ドキュメントの検証に使用される既知の XML スキーマが格納されています。
+XML エディターでスキーマ キャッシュを提供する、 *%InstallDir%\Xml\Schemas*ディレクトリ。 スキーマ キャッシュには、IntelliSense と XML ドキュメントの検証に使用される既知の XML スキーマが格納されています。
 
 **スキーマ**ドキュメント プロパティの使用を 1 つまたは複数 XML スキーマ定義言語 (XSD) スキーマを使用するを選択します。 このプロパティによって、スキーマ キャッシュにあるスキーマの選択、またはキャッシュ内に置かれていないスキーマの指定が可能になります。
 
-指定したスキーマは、他のすべての XML ドキュメント プロパティと共に非表示のソリューション ユーザー オプション ファイル (.suo) に保存されます。 このため、ソリューションを次に開いたときにプロパティの値を再入力する必要はありません。
+指定したスキーマが非表示のソリューション ユーザー オプション ファイルに保存されます (.*suo*)、およびその他のすべての XML ドキュメントのプロパティです。 このため、ソリューションを次に開いたときにプロパティの値を再入力する必要はありません。
 
 > [!NOTE]
 > エディターは、インライン スキーマ、または `xsd:schemaLocation` 属性によって参照されているスキーマを使用して検証を行うことができます。 詳細については、次を参照してください。 [XML ドキュメントの検証](../xml-tools/xml-document-validation.md)です。
 
-## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>スキーマ キャッシュにある XML スキーマを選択するには
+## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>スキーマ キャッシュから XML スキーマを選択するには
 
 1.  XML エディターでファイルを開きます。
 
 2.  ドキュメントのプロパティ ウィンドウで、ボタンをクリックして、**スキーマ**フィールドです。
 
-     **XML スキーマ** ダイアログ ボックスが表示されます。 ダイアログ ボックスの一覧 (catalog.xml ファイルで参照されているスキーマを含む)、スキーマ キャッシュに .xsd 拡張子を持つすべてのスキーマとで参照されている Visual Studio で、現在のソリューション内にある任意のスキーマを開くことも、`xsd:schemaLocation`属性、またはで参照されています。**スキーマ**プロパティです。
+     **XML スキーマ** ダイアログ ボックスが表示されます。 ダイアログ ボックスですべてのスキーマの表示にします。*xsd* 、スキーマ キャッシュ内の拡張機能 (で参照されているスキーマを含む、 *catalog.xml*ファイル) とは、Visual Studio で開いての現在のソリューション内で参照されている任意のスキーマ、 `xsd:schemaLocation`属性で参照したり、**スキーマ**プロパティです。
 
 3.  次のいずれかを実行し、検証に使用するスキーマを選択します。
 
@@ -47,7 +47,7 @@ XML エディターはスキーマ キャッシュを提供します。このキ
 
      選択したスキーマの一覧にコピー、**スキーマ**プロパティを文書化します。
 
-## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>XML スキーマをスキーマ キャッシュに追加するには
+## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>スキーマ キャッシュに XML スキーマを追加するには
 
 1.  ドキュメントのプロパティ ウィンドウで、ボタンをクリックして、**スキーマ**フィールドです。
 
@@ -61,7 +61,7 @@ XML エディターはスキーマ キャッシュを提供します。このキ
 
      スキーマに追加するスキーマのキャッシュし、は、**使用**に列の値が設定されている**このスキーマを使用して**です。
 
-## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>スキーマ キャッシュにある XML スキーマを削除するには
+## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>スキーマ キャッシュから XML スキーマを削除するには
 
 1.  ドキュメントのプロパティ ウィンドウで、ボタンをクリックして、**スキーマ**フィールドです。
 
@@ -75,5 +75,5 @@ XML エディターはスキーマ キャッシュを提供します。このキ
 ## <a name="see-also"></a>関連項目
 
 - [スキーマ キャッシュ](../xml-tools/schema-cache.md)
-- [[XML スキーマ] ダイアログ ボックス](../xml-tools/xml-schemas-dialog-box.md)
+- [XML スキーマ ダイアログ ボックス](../xml-tools/xml-schemas-dialog-box.md)
 - [XML エディター](../xml-tools/xml-editor.md)

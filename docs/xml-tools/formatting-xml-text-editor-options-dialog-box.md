@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1046655812bf88f51af7590fd1b39ccea11f8eb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5f92ced5ca5ac007969a06cec7f253617ee293e3
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="formatting-xml-text-editor-options-dialog-box"></a>[書式設定] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
+# <a name="formatting-xml-text-editor-options-dialog-box"></a>書式設定すると、XML、テキスト エディターのオプション ダイアログ ボックス
 
 このダイアログ ボックスでは、XML エディターの書式設定を指定することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 </item>
 ```
 
-## <a name="auto-reformat"></a>自動による書式の再設定
+## <a name="auto-reformat"></a>自動再フォーマット
  **クリップボードから貼り付け時に**
 
  クリップボードから貼り付ける XML テキストの書式を再設定します。
@@ -67,5 +67,5 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント プロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)
+- [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)
 - [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

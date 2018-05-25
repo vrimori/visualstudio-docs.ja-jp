@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 298cb342b83dd512f591e03a6922a099c127cb3a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: db635a9bc18a00bcb723a7bf8b66a557434e3e9a
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>方法: を作成し、XSD スキーマ ファイルを編集します。
 
@@ -22,11 +22,11 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="to-create-a-new-xml-schema-file"></a>新しい XML スキーマ ファイルを作成するには
 
-1. Visual Studio で開く、**ファイル**メニュー**新規** > **ファイル**です。 または、ショートカット キーの Ctrl + N を使用します。
+1. Visual Studio で開く、**ファイル**メニュー**新規** > **ファイル**です。 または、使用して、 **Ctrl**+**N**キーボード ショートカット。
 
 2. **新しいファイル**ダイアログ ボックスで、 **XML スキーマ**し、**開く**です。
 
-   新しいファイルが作成されます。 Visual Studio にスタート ビューと空の XML スキーマ エクスプローラーのウィンドウが表示されます。
+   新しいファイルが作成されます。 スタート ビューと、空**XML スキーマ エクスプ ローラー**ウィンドウが Visual Studio で表示します。
 
 ## <a name="to-edit-a-file"></a>ファイルを編集するには
 
@@ -36,8 +36,8 @@ ms.lasthandoff: 04/26/2018
 
 2. XML スキーマのサンプル コードをコピー[購買発注書スキーマ](../xml-tools/sample-xsd-file-simple-schema.md)し、既定では、新しい XSD ファイルに追加されたコードの代わりに貼り付けます。
 
-   XML スキーマ エクスプローラーが、新しいスキーマ セットで更新されます。
+   **XML スキーマ エクスプ ローラー**新しいスキーマ セットで更新されます。
 
 ## <a name="see-also"></a>関連項目
 
-- [XML データの使用](../xml-tools/working-with-xml-data.md)
+- [XML データの操作](../xml-tools/working-with-xml-data.md)

@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11ec095bd3228eb2291f77bf9fadceb0b74d8a37
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6d3da2e6b5b0c9ea2701524c0fb2fde1e1313687
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成する
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントの作成
 
 **サンプル XML の生成**機能には、XML スキーマ (XSD) ファイルに基づいてサンプルの XML ファイルが生成されます。
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)を右クリックし、`PurchaseOrder`グローバル要素。 選択**サンプル XML の生成**です。
 
-     このオプションを選択すると、次のサンプル XML コンテンツの PurchaseOrder.xml ファイルが生成され、XML エディターに表示されます。
+     このオプションは、PurchaseOrder を選択するとします。*xml*次のサンプル XML コンテンツを持つファイルが生成され、XML エディターで開かれます。
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -77,4 +77,4 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [XML データの使用](../xml-tools/working-with-xml-data.md)
+- [XML データの操作](../xml-tools/working-with-xml-data.md)
