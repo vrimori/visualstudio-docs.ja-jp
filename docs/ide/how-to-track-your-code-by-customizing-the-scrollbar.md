@@ -1,7 +1,7 @@
 ---
-title: '方法 : スクロール バーのカスタマイズによるコードの追跡 | Microsoft Docs'
-ms.custom: ''
+title: '方法 : スクロール バーのカスタマイズによるコードの追跡'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ff36af9a034f3a369369a0916f468826c053d05
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a5b7094aba90a8844480536e6f44951fb7dc15ad
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>方法 : スクロール バーのカスタマイズによるコードの追跡
 
@@ -57,4 +57,4 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="see-also"></a>関連項目
 
-[エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)

@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 18c0a5c24f664d337df3d85f24078d7ed410c137
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0fd980aa7da59c98348c4dede5aee9835863d522
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # 状況に適した発行オプション
 
@@ -98,7 +98,7 @@ Visual Studio では任意の数のカスタム デプロイ プロファイル�
 
 ### カスタム デプロイを選ぶ状況
 
-- URL でアクセスできる Azure 以外のクラウド サービスを使っている。
+- URL でアクセスできる Azure 以外のプロバイダーでクラウド サービスを使っている。
 - Visual Studio で使っている資格情報または Azure アカウントに直接結び付けられている資格情報とは異なる資格情報を使ってデプロイしたい。
 - デプロイするたびに、ターゲットからファイルを削除したい。
 

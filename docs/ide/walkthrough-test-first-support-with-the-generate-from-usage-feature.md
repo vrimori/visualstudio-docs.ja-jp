@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 624e66486dfd2c4e75b12cfdce1d3758ab37de60
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 866c4e1762efe6bb94586fc1c7258ffaa309eea8
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファースト開発
 
@@ -160,7 +160,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>関連項目
 
 - [使用法から生成](../ide/visual-csharp-intellisense.md#generate-from-usage)
-- [コードの記述](../ide/writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 - [IntelliSense を使用する](../ide/using-intellisense.md)
 - [コードの単体テスト](../test/unit-test-your-code.md)
 - [クイック アクション](../ide/quick-actions.md)

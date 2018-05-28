@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 246e1ad9d63b272350c461ead804dca1b6a2b062
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a397932e23386356757ca96dc86dee7222947431
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="customize-the-editor"></a>エディターのカスタマイズ
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="see-also"></a>関連項目
 
 - [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
-- [コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 - [コードへのブックマークの設定](../ide/setting-bookmarks-in-code.md)
 - [[全般] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/general-environment-options-dialog-box.md)
 - [[ドキュメント] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/documents-environment-options-dialog-box.md)

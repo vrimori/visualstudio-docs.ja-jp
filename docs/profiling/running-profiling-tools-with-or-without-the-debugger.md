@@ -10,13 +10,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7208f687ea38475603b8bfcae7e9ee55ab3ae58
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 64ea0d4d51a7dfbd9a7e1fb58e6297d0842d83b3
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="running-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
+# <a name="run-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
 Visual Studio ではパフォーマンス ツールを選ぶことができます。一部のツール (たとえば、**[CPU 使用率]** と **[メモリ使用量]**) は、デバッガーがありでもなしでも実行できます。 デバッガーを使用しないパフォーマンス ツールは、リリース構成で実行することを目的とし、デバッガー統合のツールはデバッグ構成で実行するためのものです。  
   
 ## <a name="should-i-run-the-tool-with-or-without-the-debugger"></a>このツールは、デバッガーを使用して実行したほうが良いですか、使用しないほうが良いですか。  
@@ -39,9 +39,9 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
 ##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> デバッグ中にプロファイリング データを収集する  
  次のセクションでは、ローカル デバッグについて説明します。 後のセクションでは、デバイスでのデバッグやリモート デバッグについて確認できます。  
   
-1.  デバッグするプロジェクトを開いてから、 **[デバッグ] / [デバッグの開始]** の順にクリックします (またはツールバーの **[開始]** をクリックするか、 **F5**キーを押します)。  
+1.  デバッグするプロジェクトを開いてから、**[デバッグ]** > **[デバッグの開始]** の順にクリックします (またはツールバーの **[開始]** をクリックするか、 **F5** キーを押します)。  
   
-2.  **[診断ツール]** ウィンドウは、オフにしていない限り自動的に表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。  
+2.  **[診断ツール]** ウィンドウは、オフにしていない限り自動的に表示されます。 もう一度ウィンドウを表示するには、**[デバッグ]** > **[ウィンドウ]** > **[診断ツールの表示]** の順にクリックします。  
   
 3.  データを収集するシナリオを実行します。  
   
@@ -51,7 +51,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
      ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
-4.  ツールバーにある **[ツールの選択]** の設定で、**[メモリ使用率]** や **[CPU 使用率]** (またはその両方) を表示するかどうかを選択できます。 Visual Studio Enterprise を実行している場合は、**[ツール] > [オプション] > [IntelliTrace]** で IntelliTrace を有効または無効にすることができます。  
+4.  ツールバーにある **[ツールの選択]** の設定で、**[メモリ使用率]** や **[CPU 使用率]** (またはその両方) を表示するかどうかを選択できます。 Visual Studio Enterprise を実行している場合は、**[ツール]** > **[オプション]** > **[IntelliTrace]** で IntelliTrace を有効または無効にすることができます。  
   
 5.  診断セッションは、デバッグを停止すると終了します。  
   
@@ -72,7 +72,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
   
 1.  Visual Studio でプロジェクトを開きます。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。(ショートカット キー: Alt + F2)。  
+2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** をクリックします (ショートカット キー: **Alt** + **F2**)。  
   
 3.  診断の起動ページで、セッションで実行する 1 つ以上のツールを選択します。 プロジェクトの種類、オペレーティング システム、およびプログラミング言語に適用されるツールのみが表示されます。 ある診断ツールを選択すると、同じ診断セッションで実行できないツールの選択肢が無効になります。 次に、選択したツールが C# UWP アプリを検索する方法を示します。  
   
@@ -106,7 +106,7 @@ Visual Studio ではパフォーマンス ツールを選ぶことができま�
 |![手順 5](../profiling/media/procguid_6.png "ProcGuid_6")|データに複数のツールからの情報が含まれる場合、ツールの詳細情報が収集されてタブに表示されます。|  
 |![手順 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|ツールには、1 つ以上の詳細ビューが含まれることがあります。 ビューはタイムラインの選択された領域でフィルター処理されます。|  
   
-## <a name="setting-the-analysis-target-to-another-device"></a>分析ターゲットを別のデバイスに設定する  
+## <a name="set-the-analysis-target-to-another-device"></a>分析ターゲットを別のデバイスに設定する  
  Visual Studio プロジェクトからのアプリの起動以外に、別のターゲットに対して診断セッションを実行することもできます。 たとえば、Windows アプリ ストアからインストールされたバージョンのアプリのパフォーマンス問題を診断することができます。  
   
  ![診断ツールの分析ターゲットを選択](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  

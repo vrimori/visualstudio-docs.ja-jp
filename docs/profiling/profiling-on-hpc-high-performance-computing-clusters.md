@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e4542289e0d9dceeeadf972db714148d4e1bec4d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 80f6d697cecdc63dd013ae91631b350c51fc0e90
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="profiling-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
+# <a name="profile-on-hpc-high-performance-computing-clusters"></a>高性能コンピューティング (HPC) クラスターでのプロファイリング
 
-Visual Studio のプロファイリング ツールのサンプリング メソッドを使用して、Microsoft Windows HPC クラスターの計算ノード上でプロファイリングを実行できます。 HPC の詳細については、Microsoft の Web サイトの [Windows HPC](http://go.microsoft.com/fwlink/?LinkId=165393) に関する記事を参照してください。
+Visual Studio のプロファイリング ツールのサンプリング メソッドを使用して、Microsoft Windows HPC クラスターの計算ノード上でプロファイリングを実行できます。 HPC の詳細については、Microsoft の Web サイトの [Windows HPC](https://azure.microsoft.com/solutions/big-compute/) に関する記事を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -57,7 +57,7 @@ HPC 計算ノード上でプロファイリングを実行する前に、次の�
 |*%FxPath%*|[!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)] インストーラーへのパス。 Visual Studio のインストール メディア上のパスは、WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe です。|
 |*%ProfilerPath%*|スタンドアロン バージョンのプロファイリング ツール インストーラーへのパス。 Visual Studio のメディア上のパスは、Standalone Profiler\x64\vs_profiler.exe です。|
 
-## <a name="profiling-on-an-hpc-compute-node"></a>HPC 計算ノード上でのプロファイリング
+## <a name="profile-on-an-hpc-compute-node"></a>HPC 計算ノード上でプロファイリングを実行する
 
 HPC パフォーマンス ウィザードを使用してプロファイリング セッションを構成し、HPC クラスターや対象の情報を指定します。 パフォーマンス セッションのプロパティ ページで、追加のオプションを設定できます。 プロファイリング ツールにより、必要な対象バイナリが自動的に配置され、プロファイラーと HPC アプリケーションが起動されます。
 
@@ -105,7 +105,7 @@ HPC パフォーマンス ウィザードを使用してプロファイリング
 
 10. **[完了]** をクリックします。
 
-## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>パフォーマンス セッションのプロパティ ページを使用した HPC プロファイリング プロパティの設定
+## <a name="set-hpc-profiling-properties-by-using-performance-session-property-pages"></a>パフォーマンス セッションのプロパティ ページを使用した HPC プロファイリング プロパティの設定
 
 HPC プロファイル ウィザードで設定されたパフォーマンス セッションのプロパティを、パフォーマンス セッションのプロパティ ページの [HPC 起動プロパティ] ページで変更できます。 [HPC 詳細プロパティ] ページで、追加のオプションを設定できます。
 
@@ -134,7 +134,7 @@ HPC プロファイル ウィザードで設定されたパフォーマンス �
 |**リモート作業ディレクトリ**|各計算ノード上のプロセス インスタンスで使用されるフォルダーへのパスを指定します。|
 |**配置場所**|HPC サーバーによる配置対象イメージのステージングに使用されるディレクトリへのパスを指定します。|
 
-### <a name="advanced-properties"></a>高度なプロパティ
+### <a name="advanced-properties"></a>詳細プロパティ
 
 |プロパティ|説明|
 |--------------|-----------------|

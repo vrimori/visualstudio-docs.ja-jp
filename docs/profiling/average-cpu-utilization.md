@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c34293a140ca82918c1bd3d03ae9c83eab8665a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fee580cdd708c555682f0309759678dee38ad2b1
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="average-cpu-utilization"></a>平均 CPU 使用状況
 プロセスの期間におけるシステムの論理コアのプロファイリングされたプロセスの平均使用状況を示します。 任意の時点にどのコアがアクティブかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア ビュー](../profiling/cores-view.md)   
  [CPU 使用状況グラフ](../profiling/cpu-utilization-graph.md)

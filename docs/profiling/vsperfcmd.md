@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df1982f0f5f1739d514dcedd32291bd765a5680b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 86aada9d28300a2fdb2cd20072afa383c6f3f9e1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 **VSPerfCmd.exe** ツールはパフォーマンス データ収集の開始と停止に使用されます。 このツールでは、次の構文が使用されます。  
@@ -54,7 +54,7 @@ VSPerfCmd [/U] [/options]
 |[ThreadOn と ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|指定したスレッドのプロファイリングを一時停止します。 インストルメンテーション方法でプロファイリングするときにのみ、**ThreadOff** を使用します。|  
 |[Mark](../profiling/mark.md) **:** *MarkNum*[**,***MarkText***]**|プロファイリング データ ファイルにマークと任意のテキストを挿入します。|  
   
-## <a name="sampling-method-options"></a>サンプリング メソッド オプション  
+## <a name="sample-method-options"></a>サンプル メソッドのオプション  
  次のオプションは、サンプリング プロファイル方法の使用時にのみ利用できます。  
   
 |オプション|説明|  
@@ -66,7 +66,7 @@ VSPerfCmd [/U] [/options]
 |[Detach](../profiling/detach.md)[**:***PID*[,*PID*]]|指定されたプロセスのプロファイリングを停止します。 プロセスはプロセス ID またはプロセス名で識別されます。 プロセスが指定されていない場合、すべてのプロセスに対してプロファイリングが停止します。|  
 |[GC](../profiling/gc-vsperfcmd.md)[**:**{**Allocation**`&#124;`**Lifetime**}]|.NET メモリの割り当てとオブジェクトの有効期間データを収集します。 使用時は必ず **VSPerfCmdLaunch** オプションを付けます。|  
   
-### <a name="sampling-interval-options"></a>サンプリング間隔オプション  
+### <a name="sample-interval-options"></a>サンプリング間隔オプション  
  次のオプションは、サンプリング間隔の種類と期間を指定します。 既定は **Timer** です。 **Counter** オプションを使用し、CPU カウンターを間隔として指定することもできます。 これらのオプションは **Launch** と共に指定するか、プロファイリング セッションの最初の **Attach** と共に指定します。  
   
 |オプション|説明|  

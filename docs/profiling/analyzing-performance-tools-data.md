@@ -18,13 +18,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe9ddcc2a374661525744e064929ca20daa83c97
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 36b5f5000ab18360d5146603862381e056b37284
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="analyzing-performance-tools-data"></a>パフォーマンス データを分析する
+# <a name="analyze-performance-tools-data"></a>パフォーマンス ツール データの分析
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのパフォーマンス レポートを使用すると、アプリケーション パフォーマンスの問題を表示して分析することができます。 このセクションでは、パフォーマンス レポートとパフォーマンス データを確認するために使用できるビューの概要を示します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  
@@ -36,11 +36,11 @@ ms.lasthandoff: 04/19/2018
 |**レポート ビューの構成、並べ替え、およびフィルター:** レポートに表示するデータ列の指定と順序付け、レポート行の並べ替え、および指定した時間セグメントのみを含めるようにデータをフィルター処理することができます。|-   [パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)|  
   
 ## <a name="related-sections"></a>関連項目  
- [パフォーマンス データ ファイルの比較](../profiling/comparing-performance-data-files.md)  
+ [パフォーマンス データ ファイルを比較する](../profiling/comparing-performance-data-files.md)  
   
  [パフォーマンス ツール データの保存とエクスポート](../profiling/saving-and-exporting-performance-tools-data.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

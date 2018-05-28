@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: b03973767088951d62620cfb5846dda6fa7a5f82
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 4e94932749523cea906cd60442971b93160b6c13
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
+# <a name="collect-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] サービスのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  
   
-## <a name="common-tasks"></a>一般的なタスク  
+## <a name="common-tasks"></a>一般的なタスク
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 05/11/2018
 |**.NET サービスをインストルメント化し、.NET メモリ データを収集する**|-   [方法: .NET Framework サービスをインストルメント化し、メモリ データを収集する](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
 |**階層の相互作用データを追加する**|-   [階層相互作用データの収集](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>関連するタスク
   
-### <a name="profiling-services"></a>サービスのプロファイリング  
+### <a name="profile-services"></a>サービスのプロファイリング  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
@@ -37,14 +37,14 @@ ms.lasthandoff: 05/11/2018
 |**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
 |**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-net-framework-memory-data"></a>.NET Framework メモリ データのプロファイリング  
+### <a name="profile-net-framework-memory-data"></a>.NET Framework メモリ データのプロファイリング  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**スタンドアロン (クライアント) アプリケーションのプロファイリング**|-   [.NET Framework メモリ データの収集](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|  
 |**ASP.NET Web アプリケーションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
   
-### <a name="analyzing-net-memory-data-views-and-reports"></a>.NET メモリ データ ビューとレポートの分析  
+### <a name="analyze-net-memory-data-views-and-reports"></a>.NET メモリ データ ビューとレポートの分析  
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)  
   
 ## <a name="reference"></a>参照  

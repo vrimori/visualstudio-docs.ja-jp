@@ -1,7 +1,7 @@
 ---
 title: Windows 上の Visual Studio での Python サポートの概要
 description: Windows 上で最高の Python IDE である Visual Studio の Python 機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
-ms.date: 04/06/2018
+ms.date: 05/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: overview
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 44d2e6c20173c075f1a3e5aac4881f12f5b46e1f
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 587517bdeabf9755e2678b03206059ef5b403255
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="working-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -57,7 +57,7 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 - ドキュメント: [コードの書式設定](formatting-python-code.md)
 - ドキュメント: [リファクタリング](refactoring-python-code.md)
 - ドキュメント: [lint 処理](linting-python-code.md)
-- 一般的な Visual Studio 機能のドキュメント: [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- 一般的な Visual Studio 機能のドキュメント: [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
 
