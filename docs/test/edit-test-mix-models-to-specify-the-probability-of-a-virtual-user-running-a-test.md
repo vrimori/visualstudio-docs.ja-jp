@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのテキスト ミックス モデルの編集 | Microsoft Docs
+title: Visual Studio でのテキスト ミックス モデルの編集
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,19 +9,21 @@ ms.assetid: e3b7d952-9012-400a-8131-3444390a6066
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ebcb58ea848bbb04dd4fdb132a87c66707bc4af8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 591bdaa84d143dc3b639990530a68246dc00385a
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="edit-text-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定
+# <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>テスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する
 
 "*テスト ミックス モデル*" では、ロード テスト シナリオで仮想ユーザーが指定のテストを実行する確率を指定します。 これにより、より現実的なロードをシミュレートできます。 アプリケーションを通じて使用するワークフローを 1 つだけではなく複数設定することができ、エンド ユーザーがアプリケーションとやり取りする形態により近い状態を実現できます。
 
 ## <a name="test-mix-model-options"></a>テスト ミックス モデルのオプション
- ロード テスト シナリオに、次のいずれかのテスト ミックス モデル オプションを指定できます。
+
+ロード テスト シナリオに、次のいずれかのテスト ミックス モデル オプションを指定できます。
 
 -   **テストの合計数に基づく:** 仮想ユーザーがテスト イテレーションを開始するときに実行される Web パフォーマンス テストまたは単体テストを決定します。 ロード テストの終了時に、特定のテストの実行回数が、割り当てられたテストの配分に一致します。 IIS ログまたは本番データのトランザクションの割合に基づくテスト ミックスを使用する場合に、このテスト ミックス モデルを使用します。
 

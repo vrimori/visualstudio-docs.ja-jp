@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64e9d8c2b25d779bfe0e80aa7b7d324f7a69879c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5911dfcdf2cc7e235dc1ad5ab78aaf290d89d5e5
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsinstr"></a>VSInstr
 VSInstr ツールは、バイナリをインストルメント化するために使用します。 VSInstr ツールは、次の構文を使用して起動します。  
   
-```  
+```cmd  
 VSInstr [/U] filename [/options]  
 ```  
   

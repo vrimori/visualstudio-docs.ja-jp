@@ -2,7 +2,7 @@
 title: Visual Studio 2017 のインストール | Microsoft Docs
 description: Visual Studio をインストールする方法について、ステップ バイ ステップで説明します。
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 05/07/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -19,11 +19,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c39496b09c72c6c5eb72fb1c5bedb59285d01347
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ee4a75ba456184ffe48cb59f77668625acf673d1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -78,7 +78,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
- ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-enterprise.png)
+ ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-community.png)
 
      たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
 
@@ -119,7 +119,15 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 
 コマンド ラインからインストーラーを実行して、既定の言語を変更することもできます。 たとえば、`vs_installer.exe --locale en-US` コマンドを実行して、インストーラーを英語で実行するように指定することができます。 この設定は、次回インストーラーを実行したときにも保持されています。 インストーラーでは次の言語トークンがサポートされます。zh-cn、zh-tw、cs-cz、en-us、es-es、fr-fr、de-de、it-it、ja-jp、ko-kr、pl-pl、pt-br、ru-ru、tr-tr。
 
-## <a name="step-7---start-developing"></a>手順 7 - 開発を始める
+## <a name="step-7---change-the-installation-location-optional"></a>手順 7 - インストール場所の変更 (省略可能)
+
+**15.7 の新機能**: システム ドライブ上の Visual Studio のインストール フットプリントを小さくできるようになりました。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
+
+  ![Visual Studio 2017 - インストール場所を変更する](media/installation-options-by-location.png "インストール場所を変更する")
+
+詳細については、「[Change installation locations in Visual Studio](change-installation-locations.md)」 (Visual Studio のインストール場所を変更する) ページを参照してください。
+
+## <a name="step-8---start-developing"></a>手順 8 - 開発を始める
 
 1. Visual Studio のインストールが完了したら **[起動]** をクリックして、[Visual Studio を使用した開発を開始](../ide/get-started-developing-with-visual-studio.md)します。
 

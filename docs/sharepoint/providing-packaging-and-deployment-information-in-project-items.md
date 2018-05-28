@@ -29,11 +29,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 078715380bb5ddc570d745d76fabe4d8a264eef0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f0c12c01566011ed93d83cd9ecc0dd417edd0b1b
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="providing-packaging-and-deployment-information-in-project-items"></a>プロジェクト項目でのパッケージ化と配置の情報の提供
   すべての SharePoint プロジェクト項目[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]プロジェクトが SharePoint に配置されるときに、追加のデータを指定するのに使用できるプロパティがあります。 選択できるプロパティは次のとおりです。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
  プロジェクト アイテムをフィーチャーのプロパティの値を追加すると、値は、アイテムのフィーチャーのマニフェスト内の要素として追加されます。 ビジネス データ接続 (BDC) モデル プロジェクトでは、たとえば、ModelFileName 機能のプロパティとして表示されます。  
   
-```  
+```xml  
 <Property Key="ModelFileName" Value="BdcModel1\BdcModel1.bdcm" />   
 ```  
   

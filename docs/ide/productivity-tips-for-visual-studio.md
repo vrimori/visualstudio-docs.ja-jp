@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 34206b9c41802063cb1d29fd3bc5f8984a5581ca
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 51e4376b791e6d65a53069e1d483497009c94ed5
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
      スニペットを挿入するには、メニュー バーで **[編集]** > **[IntelliSense]** > **[スニペットの挿入]** もしくは **[ブロックの挿入]** の順に選択するか、またはファイルのショートカット メニューを開き、**[スニペット]** > **[スニペットの挿入]** もしくは **[ブロックの挿入]** を選択します。 詳細については、「[Code Snippets](../ide/code-snippets.md)」を参照してください。
 
-- **コード エラーをインラインで修正する**。 クイック アクションを使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。 これらのアクションは、電球アイコン ![小さい電球アイコン](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") を使用するか、または適切なコード行にカーソルを置いて **Alt** + **Enter** キーまたは **Ctrl** + **.** キーを押すと 適用できます。 詳細については、「[クイック アクション](quick-actions.md)」を参照してください。
+- **コード エラーをインラインで修正する**。 クイック アクションを使うと、コードのリファクタリング、生成、その他の変更を、1 つの操作で簡単に行うことができます。 これらのアクションは、ねじ回し ![ねじ回しアイコン](media/light-bulb-icon.png) アイコンまたは電球 ![電球アイコン](media/screwdriver-icon.png) アイコンを使うか、適切なコード行にカーソルを置いて **Alt**+**Enter** キーまたは **Ctrl**+**.** キーを押すことで 適用できます。 詳細については、「[クイック アクション](quick-actions.md)」を参照してください。
 
 - **コード要素の定義を表示および編集する**。 メンバー、変数、ローカルなどのコード要素が定義されているモジュールをすばやく表示および編集できます。
 

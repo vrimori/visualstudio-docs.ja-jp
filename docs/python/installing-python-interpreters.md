@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ed5ac9e470b55281d1273bfe665be0813b37bf55
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4bf9c65d44739dd1b9164731f1097ce29050e6d8
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="installing-python-interpreters"></a>Python インタープリターのインストール
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/19/2018
 
 Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」(PEP 514 - Windows レジストリでの Python の登録) に従って) が確認され、インストールされている各 Python インタープリターとその環境が自動的に検出されます。
 
-Visual Studio でインストール済みの環境が検出されない場合は、[既存の環境を手動で特定する方法](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)に関するセクションを参照してください。
+Visual Studio でインストール済みの環境が検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
 Visual Studio の [[Python 環境] ウィンドウ](managing-python-environments-in-visual-studio.md)には既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
 
@@ -45,7 +45,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 ファイル システムを使用して既存のインタープリターを新しい場所に移動すると、Visual Studio は変更を自動的に検出しません。
 
-- 元々 **[Python 環境]** ウィンドウでインタープリターの場所を指定した場合は、そのウィンドウの **[構成]** タブを使用して環境を編集して新しい場所を特定します。 [既存の環境を手動で特定する方法](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)に関するセクションを参照してください。
+- 元々 **[Python 環境]** ウィンドウでインタープリターの場所を指定した場合は、そのウィンドウの **[構成]** タブを使用して環境を編集して新しい場所を特定します。 「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
 - インストーラー プログラムを使用してインタープリターをインストールした場合は、次の手順でインタープリターを新しい場所に再インストールします。
 

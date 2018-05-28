@@ -1,23 +1,61 @@
 ---
 title: 変更ログ (Visual Studio Tools for Unity、Windows) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/23/2018
+ms.date: 05/07/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: dantogno
-ms.author: v-davian
+author: TerryGLee
+ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 4d7f965cd2a0cd34ea3cb889f25809d32bee2270
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80fdd724d9d5bca57e0d8dab44ac4a0bef7238f2
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="3701"></a>3.7.0.1
+ リリース: 2018 年 5 月 7 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **インストーラー:**
+
+    -   試験的ビルドを使うときの依存関係の問題を解決しました。
+
+## <a name="3700"></a>3.7.0.0
+ リリース: 2018 年 5 月 7 日
+
+### <a name="new-features"></a>新機能
+
+-   **デバッグ:**
+
+    -   調整されたデバッグのサポートが追加されました (同じ Visual Studio セッションでの複数のプレーヤー/エディターのデバッグ)。
+    
+    -   Android USB プレーヤーのデバッグのサポートが追加されました。
+    
+    -   UWP/IL2CPP プレーヤーのデバッグのサポートが追加されました。
+
+-   **評価:**
+
+    -   16 進指定子のサポートが追加されました。
+    
+    -   ウォッチ ウィンドウの評価エクスペリエンスが強化されました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   例外設定の使用方法が修正されました。
+
+-   **プロジェクトの生成:**
+
+    -   パッケージ マネージャーのコンパイル単位が生成から除外されました。
 
 ## <a name="3605"></a>3.6.0.5
  リリース: 2018 年 3 月 13 日
@@ -26,7 +64,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **プロジェクトの生成:**
 
-    -   Unity 2018.1 の新しいプロジェクト ジェネレーターのサポートが追加されました
+    -   Unity 2018.1 の新しいプロジェクト ジェネレーターのサポートが追加されました。
 
 ### <a name="bug-fixes"></a>バグ修正
 
@@ -84,7 +122,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **統合:**
 
     -   プロジェクトの再読み込みは、外部での変更時のみ実行されます (調整による)。
- 
+
 ## <a name="3601"></a>3.6.0.1
  リリース: 2018 年 1 月 24 日
 
@@ -93,9 +131,9 @@ Visual Studio Tools for Unity の変更ログです。
 -   **統合:**
 
     -   pdb から mdb への自動デバッグ シンボル変換を修正済み
-    
+
     -   配列のサイズを変更するときに、インスペクターに影響する EditorPrefs.GetBool への間接的な呼び出しを修正しました。
- 
+
 ## <a name="3600"></a>3.6.0.0
  リリース: 2018 年 1 月 10 日
 
@@ -112,7 +150,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **デバッガー:**
 
     -   新しい Unity ランタイムを使用した DebuggerHidden/DebuggerStepThrough 属性のサポートを追加しました。
-    
+
 -   **ウィザード:**
 
     -   ウィザードの '最新' バージョンを導入しました。
@@ -126,7 +164,7 @@ Visual Studio Tools for Unity の変更ログです。
 -   **デバッガー:**
 
     -   中断イベントを処理するときの競合を修正しました。
-    
+
 -   **ウィザード:**
 
     -   roslyn コンテキストは、メソッドの挿入前に更新されます。

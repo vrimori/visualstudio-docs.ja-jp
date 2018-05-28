@@ -1,7 +1,7 @@
 ---
 title: Windows 上の Visual Studio での Python サポートの概要
-description: Windows 上で最高の Python IDE である Visual Studio の機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
-ms.date: 04/06/2018
+description: Windows 上で最高の Python IDE である Visual Studio の Python 機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
+ms.date: 05/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: overview
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 31ffd868eeab4638344cfafc2723b6a60608f232
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 587517bdeabf9755e2678b03206059ef5b403255
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio での Python の使用 (Windows)
+# <a name="working-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
@@ -46,7 +46,7 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
 
-Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、型に関するヒント、lint 処理 (lint 処理については以下を参照してください) などを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
+Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、lint 処理 (lint 処理については以下を参照してください)、型に関するヒントなどを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
 
 ![Visual Studio での Python コードのオートコンプリート](media/code-editing-completions-simple.png)
 
@@ -57,7 +57,7 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 - ドキュメント: [コードの書式設定](formatting-python-code.md)
 - ドキュメント: [リファクタリング](refactoring-python-code.md)
 - ドキュメント: [lint 処理](linting-python-code.md)
-- 一般的な Visual Studio 機能のドキュメント: [コード エディターとテキスト エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- 一般的な Visual Studio 機能のドキュメント: [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
 
@@ -88,6 +88,7 @@ Visual Studio は、時間と共に複雑になるプロジェクトを管理す
 詳細情報
 
 - ドキュメント: [Python プロジェクトの管理](managing-python-projects-in-visual-studio.md)
+- ドキュメント: [項目テンプレートのリファレンス](python-item-templates.md)
 - ドキュメント: [Python プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates)
 - ドキュメント: [C++ と Python の使用](working-with-c-cpp-python-in-visual-studio.md)
 - 一般的な Visual Studio 機能のドキュメント: [プロジェクト テンプレートと項目テンプレート](../ide/creating-project-and-item-templates.md#visual-studio-templates)

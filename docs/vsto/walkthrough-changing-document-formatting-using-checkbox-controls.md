@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: CheckBox コントロールを使用したドキュメント書式の変更 |Microsoft ドキュメント'
+title: 'チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,13 +19,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ecbb0036fc74cf5d0d27ea61283ec5b733dca1a5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 459253c6a84add4fcca68565d5bf082dc0931f22
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>チュートリアル : CheckBox コントロールを使用したドキュメント書式の変更
+# <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。
   このチュートリアルでは、Microsoft Office Word のドキュメント レベルのカスタマイズでの Windows フォーム コントロールを使用して、テキストの書式設定を変更する方法を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -47,21 +47,21 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
   
-## <a name="creating-the-project"></a>プロジェクトの作成  
+## <a name="create-the-project"></a>プロジェクトの作成  
  最初に、Word 文書のプロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
+### <a name="create-a-new-project"></a>新しいプロジェクトを作成する  
   
 1.  名前の Word 文書プロジェクトを作成**My Word 書式**です。 ウィザードで、次のように選択します。**新しいドキュメントを作成する**です。  
   
-     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     詳細については、次を参照してください。[する方法: Visual Studio で作成する Office プロジェクト](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      デザイナーで新しい Word 文書を開き、 **My Word 書式**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-text-and-controls-to-the-word-document"></a>Word 文書にテキストとコントロールの追加  
+## <a name="add-text-and-controls-to-the-word-document"></a>Word 文書にテキストとコントロールを追加します。  
  このチュートリアルでは、次の 3 つのチェック ボックスとテキストを追加、 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 文書にコントロールできます。 チェック ボックス オプションが表示されます、ユーザーにテキストの書式設定します。  
   
-#### <a name="to-add-three-check-boxes"></a>次の 3 つのチェック ボックスを追加するには  
+### <a name="add-three-check-boxes"></a>次の 3 つのチェック ボックスを追加します。  
   
 1.  Visual Studio デザイナーで文書が開いていることを確認します。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/16/2018
     |**Name**|**applyUnderlineFont**|  
     |**[テキスト]**|**下線**|  
   
-#### <a name="to-add-text-and-a-bookmark-control"></a>テキストおよびブックマーク コントロールを追加するには  
+### <a name="add-text-and-a-bookmark-control"></a>テキストおよびブックマーク コントロールを追加します。  
   
 1.  チェック ボックス コントロールの下にカーソルを移動し、次のテキストを入力します。  
   
@@ -106,14 +106,14 @@ ms.lasthandoff: 04/16/2018
   
      A<xref:Microsoft.Office.Tools.Word.Bookmark>という名前のコントロール**Bookmark1**がドキュメントで選択したテキストに追加します。  
   
-4.  **プロパティ** ウィンドウの値を変更、 **(名)**プロパティを**fontText です。**  
+4.  **プロパティ** ウィンドウの値を変更、 **(名)** プロパティを**fontText です。**  
   
  次に、チェック ボックスをオンまたはオフのときにテキストの書式を設定するコードを記述します。  
   
-## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>オンまたはオフには、テキストと、チェック ボックスを書式設定  
+## <a name="format-the-text-when-a-check-box-is-checked-or-cleared"></a>チェック ボックスをオンまたはオフになっているときにテキストを書式設定します。  
  ユーザーが書式設定オプションを選択すると、ドキュメント内のテキストの書式を変更します。  
   
-#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>チェック ボックスを書式設定を変更するのには、選択されています。  
+### <a name="change-formatting-when-a-check-box-is-selected"></a>チェック ボックスが選択されているときに書式設定を変更します。  
   
 1.  右クリック`ThisDocument`で**ソリューション エクスプ ローラー**、クリックして**コードの表示**ショートカット メニューの します。  
   
@@ -136,16 +136,16 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#5)]
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#5)]  
   
-6.  C# の場合にあるテキスト ボックスのイベント ハンドラーを追加する必要があります、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント。 イベント ハンドラーを作成する方法については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
+6.  C# の場合にあるテキスト ボックスのイベント ハンドラーを追加する必要があります、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント。 イベント ハンドラーを作成する方法については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]  
   
-## <a name="testing-the-application"></a>アプリケーションのテスト  
+## <a name="test-the-application"></a>アプリケーションをテストする  
  選択またはチェック ボックスをオフにするときに、テキストの書式が正しく設定することを確認する文書をテストできます。  
   
-#### <a name="to-test-your-document"></a>文書をテストするには  
+### <a name="test-your-document"></a>文書をテストして  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  キーを押して**f5 キーを押して**プロジェクトを実行します。  
   
 2.  選択またはチェック ボックスをオフにします。  
   
@@ -154,14 +154,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、チェック ボックスを使用して、プログラムによって Word 文書で書式設定テキストの変更の基礎を説明します。 ここでは、次のタスクを行います。  
   
--   ボタンを使用して、テキスト ボックスに入力します。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してドキュメント内のテキスト ボックスに表示するテキスト](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)です。  
+-   ボタンを使用して、テキスト ボックスに入力します。 詳細については、次を参照してください。[チュートリアル: ボタンを使用してドキュメント内のテキスト ボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)です。  
   
--   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、次を参照してください。[チュートリアル: グラフを更新するラジオ ボタンを使用してドキュメントで](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)です。  
+-   オプション ボタンを使用してグラフのスタイルを選択する。 詳細については、次を参照してください。[チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)です。  
   
--  
-  
+
 ## <a name="see-also"></a>関連項目  
- [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
+ [Word を使用したチュートリアル](../vsto/walkthroughs-using-word.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  

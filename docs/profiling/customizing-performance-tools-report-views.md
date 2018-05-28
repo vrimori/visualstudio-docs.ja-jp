@@ -13,16 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 691723e27cc2927733fe82aa1f79e9fd1d9d663d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21df85a54071a6fffe03483856c55194af08a2da
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="customizing-performance-tools-report-views"></a>パフォーマンス ツール のレポート ビューのカスタマイズ
+# <a name="customize-performance-tools-report-views"></a>パフォーマンス ツール のレポート ビューのカスタマイズ
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールで生成されたレポートのカスタマイズ方法について説明します。  
   
-## <a name="common-tasks"></a>一般的なタスク  
+## <a name="common-tasks"></a>一般的なタスク
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
@@ -34,5 +34,5 @@ ms.lasthandoff: 04/19/2018
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)  
  プロファイル データの解析に利用できるビューについて説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)

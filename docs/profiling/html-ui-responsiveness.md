@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 7dd31d94552895d42c803df81e1e66cd9a3947f0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 94398b39e6e1c2f97e2b6851639649fc33dd217c
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -101,7 +101,7 @@ ms.lasthandoff: 04/19/2018
   
     -   並べ替え方法を選択するには、 [診断セッションのタイムラインの表示](#Ruler) 」を使用して、 [分析用のコードのマーク](#ProfileMark)、アプリ ライフ サイクル イベント、これらのイベントに関連するタイムライン、他のグラフのデータのタイムラインを表示します。  
   
-    -   [CPU utilization graph](#CPUutilization) 」を使用して、CPU アクティビティと、特定の期間内にそれが処理する作業の種類についての一般的な情報を表示します。 過剰な CPU アクティビティがある期間には、応答性の問題およびフレームのドロップが発生する場合があります。  
+    -   [CPU utilization graph](#CPUUtilization) 」を使用して、CPU アクティビティと、特定の期間内にそれが処理する作業の種類についての一般的な情報を表示します。 過剰な CPU アクティビティがある期間には、応答性の問題およびフレームのドロップが発生する場合があります。  
   
     -   ゲームやリッチ メディア アプリを開発する場合は、 [ビジュアル スループット (FPS) の表示](#VisualThroughput) を使用すると、フレーム レートが低下した期間を特定できます。  
   

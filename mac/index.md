@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: 918c0532140369bfc6790be2306830b5f160ebdf
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 54f178a35d95819b13b1d477c3415fd02b8298f5
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
@@ -27,7 +27,7 @@ Visual Studio for Mac は、モバイル、デスクトップ、および Web �
 
 ## <a name="installation"></a>インストール
 
-[インストール](~/installation.md) ガイドの手順に従って Visual Studio for Mac をダウンロードしてインストールします。
+[インストール](installation.md) ガイドの手順に従って Visual Studio for Mac をダウンロードしてインストールします。
 
 ## <a name="language-support"></a>言語サポート
 
@@ -117,8 +117,8 @@ Xamarin Inspector は、対話型 C# コンソールとツールをユーザー�
 
 ## <a name="next-steps"></a>次の手順
 
-* **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](~/ide-tour.md)を参照してください。
-* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、[インストール](~/installation.md)に関するガイドを参照してください。
+* **全体像の把握** - Visual Studio for Mac の数多くの主要な機能の概要について、[IDE ツアー](ide-tour.md)を参照してください。
+* **セットアップ** - Visual Studio をダウンロードしてインストールする方法については、[インストール](installation.md)に関するガイドを参照してください。
 * **Xamarin チュートリアル** - Xamarin を使用してコードを開発する詳細な方法については、Xamarin の [Developer Center](https://developer.xamarin.com) を参照してください。
 * **ビデオ** - Visual Studio for Mac の他の機能や側面の詳細については、[Xamarin University](https://university.xamarin.com) Web サイトのビデオをご覧ください。
 * **ハンズオン ラボ** - Visual Studio for Mac に含まれている多様なワークロードの基本的な使用方法については、[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs)を参照してください。

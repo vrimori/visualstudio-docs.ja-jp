@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 606af4d08ffaec87c46c394f55ffe4e37b2a940d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 631b9fc17345d5d0c00d36e42a9d3b1db633c114
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>[プロジェクトおよびソリューション] の [オプション] ダイアログ ボックス
 プロジェクトおよびソリューションに関連する [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 動作を設定します。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[全般]** をクリックします。
@@ -70,6 +70,12 @@ ms.lasthandoff: 04/26/2018
 **[Prompt before moving files to a new location]\(新しい場所にファイルを移動する前にメッセージを表示する\)**
 
 選択すると、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、ソリューション エクスプ ローラーでの操作によってファイルの場所が変更される前に確認メッセージ ボックスを表示します。
+
+**Reopen documents on solution load (ソリューションの読み込み時にドキュメントを再度開く) (Visual Studio 2017 バージョン 15.8 プレビュー 2 以降)**
+ 
+ソリューションを読み込むときに、前のセッションで開いていたドキュメントを自動的に再度開きます。 オンにすると、前にこのソリューションを閉じたときに開かれていたドキュメントが、ソリューションを読み込むときに自動的に開かれます。
+
+特定の種類のファイルまたはデザイナーを開きなおすと、ソリューションの読み込みが遅くなることがあります。 ソリューションの以前のコンテキストを復元する必要がない場合は、このオプションをオフにすると、ソリューションの読み込みのパフォーマンスが向上します。
 
 ## <a name="locations-tab-options"></a>[場所] タブのオプション
 

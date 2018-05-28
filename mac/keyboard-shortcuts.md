@@ -1,15 +1,15 @@
 ---
 title: ソース エディターの一般的なキーボード ショートカット
-description: ''
+description: この記事では、Visual Studio for Mac のソース エディターでの一般的なキーボード ショートカットについて説明します
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: ba0e1d7b5625dbe0b9bb86f43f5e402d6cf07043
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 39cbe0eb3ba8d99c81119256773cc76f4699b7bd
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="common-keyboard-shortcuts-in-visual-studio-for-mac"></a>Visual Studio for Mac の一般的なキーボード ショートカット
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/20/2018
 
 ## <a name="quick-fixes-and-actions"></a>クイック修正とクイック アクション
 
-[リファクタリング](~/refactoring.md) コンテキスト アクションが表示されます。
+[リファクタリング](refactoring.md) コンテキスト アクションが表示されます。
 
 `option + enter`
 

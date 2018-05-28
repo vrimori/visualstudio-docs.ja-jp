@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0cde5d1ddd5dabfd42a6a7d31284736e24fa302
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e06d85d879a99386c5e2e4894a56e52918cd964f
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>[詳細設定] ダイアログ ボックス (同時実行ビジュアライザー)
 同時実行ビジュアライザーの **[詳細設定]** ダイアログ ボックスを使うと、トレースを収集する方法を制御できます。  このダイアログ ボックスには、シンボル、マイ コードのみ、バッファリング、フィルター処理、CLR イベント、マーカー、プロバイダー、およびファイルに関するタブがあります。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/19/2018
   
  重要度レベルの一覧を使って、重要度または ETW レベルが指定した値より小さいイベントを除外できます。  
   
-### <a name="configuring-an-existing-provider"></a>既存のプロバイダーの構成  
+### <a name="configure-an-existing-provider"></a>既存のプロバイダーの構成  
  既存のプロバイダーに関連付けられている設定を編集するには、一覧でプロバイダーを選び、**[プロバイダーを編集します]** ボタンを選びます。  名前、GUID、およびフィルター処理の設定を変更できます。  
   
 ### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>同時実行ビジュアライザー レポートからのマーカー データの除外  
@@ -84,6 +84,6 @@ ms.lasthandoff: 04/19/2018
   
  2 つの ETL ファイルには生のトレース データが保存され、2 つの同時実行ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイ コードのみ](../profiling/just-my-code-threads-view.md)   
  [同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)

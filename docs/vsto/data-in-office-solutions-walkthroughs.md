@@ -1,5 +1,5 @@
 ---
-title: Office ソリューションのチュートリアルにおけるデータ |Microsoft ドキュメント
+title: Office ソリューションのチュートリアルにおけるデータ
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,58 +16,58 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0a30280c2e47a5beac99c52eefb61fcbc7fbbdea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a8c63a98d47a3846ea6482624aa71cd0a7378f1a
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office ソリューションのチュートリアルにおけるデータ
   次のチュートリアルでは、ドキュメント レベルのカスタマイズと、Microsoft Office Word および Microsoft Office Excel 用の VSTO アドインで、データを操作する方法について説明します。  
   
-## <a name="binding-controls-to-data"></a>データへのコントロールのバインディング  
- [チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
+## <a name="bind-controls-to-data"></a>データ コントロールをバインドします。  
+ [チュートリアル: ドキュメント レベルのプロジェクトでの単純なデータ バインディング](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)  
  SQL Server データベースの 1 つのデータ フィールドを Excel のドキュメント レベルのカスタマイズ内の <xref:Microsoft.Office.Tools.Excel.NamedRange> にバインドする方法について説明します。  
   
- [チュートリアル: ドキュメント レベルのプロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
+ [チュートリアル: ドキュメント レベルのプロジェクトでの複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)  
  SQL Server データベースのテーブルをExcel のドキュメント レベルのカスタマイズ内の <xref:Microsoft.Office.Tools.Excel.ListObject> にバインドする方法について説明します。  
   
- [チュートリアル: VSTO アドイン プロジェクトでの単純データ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)  
+ [チュートリアル: VSTO アドイン プロジェクトでの単純なデータ バインディング](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)  
  SQL Server データベースの 1 つのデータ フィールドを Word 用の VSTO アドイン内の <xref:Microsoft.Office.Tools.Word.RichTextContentControl> にバインドする方法について説明します。  
   
- [チュートリアル: VSTO アドイン プロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)  
+ [チュートリアル: VSTO アドイン プロジェクトでの複雑なデータ バインディング](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)  
  SQL Server データベースのテーブルを Excel 用の VSTO アドイン内の <xref:Microsoft.Office.Tools.Excel.ListObject> にバインドする方法について説明します。  
   
- [チュートリアル: Excel の操作ウィンドウのコントロールへのデータ連結](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
+ [チュートリアル: Excel の操作ウィンドウ上のコントロールへのデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
  データ ソースにバインドされるコントロールを Excel の操作ウィンドウに追加する方法について説明します。  
   
- [チュートリアル: Word の操作ウィンドウ上のコントロールへのデータ バインディング](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
+ [チュートリアル: Word の操作ウィンドウ上のコントロールへのデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
  操作ウィンドウに配置されたコントロールをデータにバインドする方法について説明します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
- [チュートリアル: カスタム XML 部分へのコンテンツ コントロールのバインド](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)  
+ [チュートリアル: カスタム XML 部分へのコンテンツ コントロールをバインドします。](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)  
  Word 文書内のコンテンツ コントロールを文書内に格納されている XML データにバインドする方法について説明します。  
   
-## <a name="caching-data-in-document-level-solutions"></a>ドキュメント レベルのソリューションでのデータのキャッシュ  
- [チュートリアル: キャッシュされたデータセットを使用したマスター/詳細関係の作成](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
+## <a name="cache-data-in-document-level-solutions"></a>ドキュメント レベルのソリューションでデータのキャッシュ  
+ [チュートリアル: キャッシュされたデータセットを使用してマスター/詳細関係を作成します。](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
  ワークシート上にマスター/詳細関係を作成して、ソリューションをオフラインで使用できるようにデータをキャッシュする方法について説明します。  
   
- [チュートリアル: サーバー上のブックへのデータの挿入](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)  
+ [チュートリアル: サーバー上のブックにデータを挿入します。](../vsto/walkthrough-inserting-data-into-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットにデータを挿入する方法について説明します。  
   
- [チュートリアル: サーバー上のブックからのキャッシュされたデータの取得](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md)  
+ [チュートリアル: サーバー上のブックからのキャッシュされたデータを取得します。](../vsto/walkthrough-retrieving-cached-data-from-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットからデータを取得する方法について説明します。  
   
- [チュートリアル: サーバー上のブックにキャッシュされたデータの変更](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)  
+ [チュートリアル: サーバー上のブックにキャッシュされたデータを変更します。](../vsto/walkthrough-changing-cached-data-in-a-workbook-on-a-server.md)  
  Microsoft Office Excel を起動することなく、Excel ブックにキャッシュされているデータセットを変更する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアルを使用して Word](../vsto/walkthroughs-using-word.md)   
- [使用して Excel のチュートリアル](../vsto/walkthroughs-using-excel.md)   
+ [Word を使用したチュートリアル](../vsto/walkthroughs-using-word.md)   
+ [Excel を使用したチュートリアル](../vsto/walkthroughs-using-excel.md)   
  [Office UI のカスタマイズのチュートリアル](../vsto/office-ui-customization-walkthroughs.md)   
- [セキュリティおよび配置に関するチュートリアル](../vsto/security-and-deployment-walkthroughs.md)   
+ [セキュリティと配置のチュートリアル](../vsto/security-and-deployment-walkthroughs.md)   
  [Office 開発のサンプル](../vsto/office-development-samples.md)   
- [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
   
   

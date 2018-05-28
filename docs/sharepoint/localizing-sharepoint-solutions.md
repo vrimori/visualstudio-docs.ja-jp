@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 86ffb2795d5e2a9b9583360146c4bb1d2556b9a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 89cc146a64e1e74c2682163ba3bebc16ed5a84e7
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint ソリューションのローカライズ
   アプリケーションを世界中で使用できるように準備するプロセスをローカライズと呼びます。 ローカライズでは、リソースを特定のカルチャに翻訳します。 詳細については、次を参照してください。[グローバライズとローカライズ アプリケーション](/visualstudio/ide/globalizing-and-localizing-applications)です。 このトピックでは、SharePoint ソリューションをローカライズする方法の概要について説明します。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
  詳細については、次を参照してください。[のローカライズ用リソースの階層編成](http://go.microsoft.com/fwlink/?LinkId=178360)です。  
   
- 開発するための SharePoint プロジェクトに既定のリソース ファイルを指定する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、選択**インバリアント言語 (ロケールに依存しない国)**のカルチャの一覧で、**リソースの追加** ダイアログ ボックスの場合にします。リソース ファイルを追加します。  
+ 開発するための SharePoint プロジェクトに既定のリソース ファイルを指定する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、選択**インバリアント言語 (ロケールに依存しない国)** のカルチャの一覧で、**リソースの追加** ダイアログ ボックスの場合にします。リソース ファイルを追加します。  
   
 ## <a name="localizing-visual-studio-sharepoint-solutions"></a>Visual Studio SharePoint ソリューションのローカライズ  
  ソリューションをローカライズする際には、そのソリューションでユーザーに表示されるすべてのテキスト情報を考慮に入れる必要があります。 たとえば、情報メッセージ、エラー メッセージ、および [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] 文字列を翻訳して、リソース ファイルに配置する必要があります。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
  フィーチャー リソース ファイルを作成したら、そこに翻訳済みの文字列を追加します。 ローカライズされた文字列にアクセスするには次の形式の式を使用します。  
   
-```  
+```aspx-csharp  
 $Resources:String ID  
 ```  
   
@@ -85,25 +85,25 @@ $Resources:String ID
   
  ASPX ページと ASPX コントロールのマークアップで、ハードコーディングされたプロパティ文字列をすべて次の形式の式に置き換えます。  
   
-```  
+```aspx-csharp  
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
  例えば:  
   
-```  
+```aspx-csharp  
 <asp:Button ID="btn1" runat="server" onclick="btn1_Click" Text="<%$Resources:Resource1,String7%>"></asp:Button>  
 ```  
   
  テキストとしての ASPX に対しては次の形式の式を使用します。  
   
-```  
+```aspx-csharp  
 <asp:literal ID="<ID>" runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
  例えば:  
   
-```  
+```aspx-csharp  
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />  
 ```  
   
@@ -120,7 +120,7 @@ $Resources:String ID
   
  コードで次の構文を使用して、ハードコーディングされた文字列を <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> メソッドの呼び出しに置き換えます。  
   
-```  
+```aspx-csharp  
 HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")  
 ```  
   

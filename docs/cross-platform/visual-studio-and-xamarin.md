@@ -10,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: c16898fa94bcdb051b215f3ff89cf4d42cbe7fe7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 723518fa837803a5245eef2b227e6d593e8f4447
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio と Xamarin
 
@@ -30,7 +30,7 @@ C#、.NET、Visual Studio に親しんだ開発者であれば、モバイル �
   
 -   インストールが完了したら、[Xamarin 環境を検証する](../cross-platform/verify-your-xamarin-environment.md)作業を実行します。  
   
--   チュートリアル「[Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項](/learn-app-building-basics-with-xamarin-forms-in-visual-studio.md)」を確認して、作業を仕上げます。  
+-   チュートリアル「[Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項](learn-app-building-basics-with-xamarin-forms-in-visual-studio.md)」を確認して、作業を仕上げます。  
   
 [任意のエディションの Visual Studio 2017](https://www.visualstudio.com/vs) (Community、Professional、Enterprise) で、Xamarin のすべての機能を使用できます。 別個のライセンスは必要ありません。  
   

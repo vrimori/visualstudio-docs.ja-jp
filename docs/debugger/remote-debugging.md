@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのリモート デバッグ |Microsoft ドキュメント
 ms.custom: remotedebugging
-ms.date: 08/14/2017
+ms.date: 05/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 422714c1180ef94d32d8d323c796ed2c84258bf3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: db20b62c5ef409f523253c5ba19e2c68213743be
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグすることができます。 このデバッグを行うには、Visual Studio リモート デバッガーを使用します。
@@ -47,22 +47,63 @@ ms.lasthandoff: 04/18/2018
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
+## <a name="unblock_msvsmon"></a> Windows Server 上のリモート ツールのダウンロードをブロック解除します。
+
+Windows Server での Internet Explorer の既定のセキュリティ設定を使用するリモート ツールなどのコンポーネントのダウンロードに時間がかかる。
+
+* Web サイトを開くと、リソースを含むドメインが明示的に許可しない限り、web リソースにアクセスできないように、Internet Explorer のセキュリティ強化の構成が有効になっている (つまり、信頼関係)。
+
+* Windows Server 2016 で既定の設定で**インターネット オプション** > **セキュリティ** > **インターネット** >  **レベルのカスタマイズ** > **ダウンロード**ファイルのダウンロードも無効にします。 Windows サーバー上で直接リモート ツールをダウンロードすることを選択する場合は、ファイルのダウンロードを有効にする必要があります。
+
+Windows Server 上のツールをダウンロードするには、ことをお勧め、次のいずれか。
+
+* 1 つ実行している Visual Studio など別のコンピューターでリモート ツールをダウンロードし、コピー、 *.exe*を Windows Server ファイル。
+
+* リモート デバッガーを実行する[ファイル共有から](#fileshare_msvsmon)Visual Studio コンピューターにします。
+
+* Windows サーバー上で直接リモート ツールをダウンロードして、信頼済みサイトを追加する画面の指示をそのまま使用します。 最新の web サイトが含まれる場合、多くのサードパーティのリソースのため、画面の指示多数になります。 さらに、リダイレクトされたリンクは、手動で追加する必要があります。 信頼済みサイトのダウンロードを開始する前に追加することができます。 移動して**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**し、次のサイトを追加します。
+
+  * visualstudio.com
+  * download.visualstudio.microsoft.com
+  * 方法: 空白
+
+  My.visualstudio.com 上でデバッガーの古いバージョンは、これらの追加サイトをそのログインが成功したかどうかを確認を追加します。
+
+  * microsoft.com
+  * go.microsoft.com
+  * download.microsoft.com
+  * my.visualstudio.com
+  * login.microsoftonline.com
+  * login.live.com
+  * secure.aadcdn.microsoftonline p.com
+  * msft.sts.microsoft.com
+  * auth.gfx.ms
+  * app.vssps.visualstudio.com
+  * vlscppe.microsoft.com
+  * query.prod.cms.rt.microsoft.com
+
+    リモート ツールのダウンロード中にこれらのドメインを追加する場合は選択**追加**されたらです。
+
+    ![ブロックされたコンテンツ ダイアログ ボックス](../debugger/media/remotedbg-blocked-content.png)
+
+    ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むためのアクセス許可を与えるいくつか追加の要求を取得します。 My.visualstudio.com でそのログインが成功したかどうかを確認する追加のドメインを追加することをお勧めします。
+
 ### <a name="fileshare_msvsmon"></a> (省略可能)ファイル共有から、リモート デバッガーを実行するには
 
-リモート デバッガーを見つけることができます (**msvsmon.exe**) Visual Studio Community、Professional、または Enterprise が既にインストール済みのコンピューターでします。 一部のシナリオでは、ファイル共有からリモート デバッガー (msvsmon.exe) を実行するはリモート デバッグをセットアップする最も簡単な方法です。 使用法の制限は、リモート デバッガーのヘルプ ページを参照してください (**ヘルプ > 使用状況**リモート デバッガーで)。
+リモート デバッガーを見つけることができます (*msvsmon.exe*) Visual Studio Community、Professional、または Enterprise が既にインストール済みのコンピューターでします。 一部のシナリオでは、ファイル共有からリモート デバッガー (msvsmon.exe) を実行するはリモート デバッグをセットアップする最も簡単な方法です。 使用法の制限は、リモート デバッガーのヘルプ ページを参照してください (**ヘルプ > 使用状況**リモート デバッガーで)。
 
-1. 検索**msvsmon.exe** Visual Studio のバージョンと一致するディレクトリにします。 For Visual Studio Enterprise 2017。
+1. 検索*msvsmon.exe* Visual Studio のバージョンと一致するディレクトリにします。 For Visual Studio Enterprise 2017。
 
-      **プログラム ファイル (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe**
+      *プログラム ファイル (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
       
-      **プログラム ファイル (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe**
+      *プログラム ファイル (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
 2. 共有、**リモート デバッガー** Visual Studio コンピューター上のフォルダーです。
 
-3. リモート コンピューターで実行して**msvsmon.exe**です。 以下の[セットアップ手順](#bkmk_setup)です。
+3. リモート コンピューターで実行して*msvsmon.exe*です。 以下の[セットアップ手順](#bkmk_setup)です。
 
 > [!TIP] 
-> コマンド ライン インストールとコマンド ライン リファレンスでは、ヘルプ ページを参照してください**msvsmon.exe** 」と入力して``msvsmon.exe /?``with Visual Studio がインストールされているコンピューター上のコマンドラインで (に移動または**ヘルプ > 使用状況**リモート デバッガーで)。
+> コマンド ライン インストールとコマンド ライン リファレンスでは、ヘルプ ページを参照してください*msvsmon.exe* 」と入力して``msvsmon.exe /?``with Visual Studio がインストールされているコンピューター上のコマンドラインで (に移動または**ヘルプ > 使用状況**リモート デバッガーで)。
   
 ## <a name="requirements_msvsmon"></a> 必要条件
 
@@ -80,7 +121,7 @@ ms.lasthandoff: 04/18/2018
      > [!IMPORTANT] 
      > Visual Studio コンピューターを使用しているユーザー アカウントからユーザー アカウントとは異なるリモート デバッガーを実行することができますが、別のユーザー アカウントをリモート デバッガーのアクセス許可を追加する必要があります。 
 
-     使用してコマンドラインからリモート デバッガーを開始する代わりに、 **/allow\<ユーザー名 >**パラメーター: **msvsmon/allow \< username@computer>**です。
+     使用してコマンドラインからリモート デバッガーを開始する代わりに、 **/allow\<ユーザー名 >** パラメーター: **msvsmon/allow \< username@computer>** です。
   
 -   認証モードやポート番号を変更したり、リモート ツールのタイムアウト値を指定する必要がある場合: 選択**ツール > オプション**です。  
   
@@ -96,19 +137,19 @@ ASP.NET および他のサーバー環境でデバッグは、管理者として
   
 1.  **リモート デバッガー構成ウィザード** (rdbgwiz.exe) を見つけます (このアプリケーションは、リモート デバッガーとは別のアプリケーションです)。このアプリケーションは、リモート ツールをインストールした場合にのみ入手でき、 Visual Studio と共にはインストールされません。  
   
-2.  構成ウィザードの実行を開始します。 最初のページが表示されたら、 **[次へ]**をクリックします。  
+2.  構成ウィザードの実行を開始します。 最初のページが表示されたら、 **[次へ]** をクリックします。  
   
 3.  **[Visual Studio 2015 リモート デバッガー サービスを実行する]** チェック ボックスをオンにします。  
   
 4.  ユーザー アカウントの名前とパスワードを追加します。  
   
-     追加する必要があります、**サービスとしてログオン**権利をこのアカウントのユーザー (検索**ローカル セキュリティ ポリシー** (secpol.msc) で、**開始**ページまたはウィンドウ (または型**secpol**コマンド プロンプトで)。 ウィンドウが表示されたら、 **[ユーザー権利の割り当て]**をダブルクリックし、右ペインで **[サービスとしてログオン]** を見つけます。 これをダブルクリックします。 ユーザー アカウントを追加、**プロパティ**ウィンドウをクリック**OK**)。 **[次へ]**をクリックします。  
+     追加する必要があります、**サービスとしてログオン**権利をこのアカウントのユーザー (検索**ローカル セキュリティ ポリシー** (secpol.msc) で、**開始**ページまたはウィンドウ (または型**secpol**コマンド プロンプトで)。 ウィンドウが表示されたら、 **[ユーザー権利の割り当て]** をダブルクリックし、右ペインで **[サービスとしてログオン]** を見つけます。 これをダブルクリックします。 ユーザー アカウントを追加、**プロパティ**ウィンドウをクリック**OK**)。 **[次へ]** をクリックします。  
   
-5.  リモート ツールが通信するネットワークの種類を選択します。 少なくとも 1 つのネットワークの種類を選択する必要があります。 コンピューターがドメインを介して接続されている場合は、最初の項目を選択する必要があります。 コンピューターがワークグループまたはホーム グループを介して接続されている場合は、2 番目または 3 番目の項目を選択する必要があります。 **[次へ]**をクリックします。  
+5.  リモート ツールが通信するネットワークの種類を選択します。 少なくとも 1 つのネットワークの種類を選択する必要があります。 コンピューターがドメインを介して接続されている場合は、最初の項目を選択する必要があります。 コンピューターがワークグループまたはホーム グループを介して接続されている場合は、2 番目または 3 番目の項目を選択する必要があります。 **[次へ]** をクリックします。  
   
 6.  サービスを開始できた場合は、「 **Visual Studio リモート デバッガー構成ウィザードは正常に完了しました**」と表示されます。 サービスを開始できなかった場合は、「 **Visual Studio リモート デバッガー構成ウィザードを完了できませんでした**」と表示されます。 このページには、サービスを開始するために従う必要があるヒントもいくつか提供されます。  
   
-7.  **[完了]**をクリックします。  
+7.  **[完了]** をクリックします。  
   
  この時点で、リモート デバッガーはサービスとして実行されています。 これに移動して確認することができます**コントロール パネル > サービス**を探すこと**Visual Studio 2015 リモート デバッガー**です。  
   

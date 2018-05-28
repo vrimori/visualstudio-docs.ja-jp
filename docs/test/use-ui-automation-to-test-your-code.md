@@ -1,6 +1,7 @@
 ---
-title: Visual Studio で UI オートメーションを使用してコードをテストする | Microsoft Docs
+title: Visual Studio で UI オートメーションを使用してコードをテストする
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
@@ -17,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9235cf218ab5eed64140f4ae1dc6e4d54ea73e1b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 897ce97da798509253bf3f7d93a79735cc354965
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/16/2018
     > [!WARNING]
     > デスクトップ上で実行されるすべてのアクションが記録されます。 機密データが記録される可能性のあるアクションを実行する場合には、記録を一時停止します。
 
-     間違って記録した**操作を削除するには**、**[Edit Actions]**(操作の編集) を選択します。
+     間違って記録した**操作を削除するには**、**[Edit Steps]\(ステップの編集\)** を選択します。
 
      操作をレプリケートする**コードを生成するには**、**[コードの生成]** アイコンを選択し、コード化された UI テスト メソッドの名前と説明を入力します。
 

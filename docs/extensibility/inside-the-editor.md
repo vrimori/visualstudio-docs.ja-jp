@@ -13,11 +13,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 181a414d4cf1b9def941f32560d41158c0ed92fb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ace9e405b52873d08c578c2af8e7005249e7d58c
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="inside-the-editor"></a>エディター内
 エディターでは、テキスト ビューと、ユーザー インターフェイスからエディター モデル別のテキストを保持するように設計されている複数のサブシステムの数で構成されます。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
  テキスト モデル サブシステムはユーザー インターフェイス (UI) の概念です。 たとえばはテキスト形式またはテキストのレイアウトを担当して、テキストと共に関連付けられている可能性のあるビジュアル表示要素の情報を持たない。  
   
- テキスト モデル サブシステムのパブリック型は、.NET Framework の基本クラス ライブラリおよび Managed Extensibility Framework (MEF) にのみ依存 Microsoft.VisualStudio.Text.Data.dll と Microsoft.VisualStudio.CoreUtilitiy.dll に格納されます。  
+ テキスト モデル サブシステムのパブリック型は、.NET Framework の基本クラス ライブラリおよび Managed Extensibility Framework (MEF) にのみ依存 Microsoft.VisualStudio.Text.Data.dll と Microsoft.VisualStudio.CoreUtility.dll に格納されます。  
   
 ### <a name="text-view-subsystem"></a>テキスト ビュー サブシステム  
  テキスト ビュー サブシステムは書式設定と、テキストを表示します。 このサブシステム内の型は、種類が Windows Presentation Foundation (WPF) を使用するかどうかに応じて、2 つのレイヤーに分かれています。 最も重要な型は<xref:Microsoft.VisualStudio.Text.Editor.ITextView>と<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>を表示するテキスト行のセットとも、カレット、選択、および WPF UI 要素を使用して、テキストを装飾するための機能を制御します。 このサブシステムでは、テキストの周囲のマージン領域の表示も用意されています。 これらの余白は、拡張して、さまざまな種類のコンテンツや視覚的効果を含めることができます。 余白の例は、行番号表示やスクロール バーです。  

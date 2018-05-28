@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c787431cbdf9f6a9bcb70a87b99b0a566fd0e5ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 317588e4d6c81a13a18c036a040508a1adebafcb
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="xml-schema-designer-workspace"></a>XML スキーマ デザイナーのワークスペース
 
@@ -22,19 +22,19 @@ XML スキーマ デザイナー (XSD デザイナー) は、XML スキーマを
 
 目的のノードを調べるには、ワークスペースにノードを追加する必要があります。 ワークスペースは、すべてのビューで共有されます。
 
-## <a name="adding-nodes-to-the-workspace"></a>ワークスペースへのノードの追加
+## <a name="add-nodes-to-the-workspace"></a>ワークスペースにノードを追加します。
 
 次の方法でワークスペースにノードを追加できます。
 
 -   「スキーマ セットの詳細」セクションで、[スタート ビュー](../xml-tools/start-view.md)、をクリックして、**追加**グローバル ノードの種類の横にあるリンクします。
 
--   XML スキーマ エクスプローラーからは、3 つのどのビューにでもグローバル ノード、ファイル ノード、および名前空間ノードをドラッグ アンド ドロップすることができます。 詳細についてを参照してください「ノードをドラッグすること、および削除する」 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。
+-   ドラッグ アンド ドロップのグローバル ノード、ファイル ノード、および名前空間ノードから、 **XML スキーマ エクスプ ローラー**に 3 つのビューのいずれか。 詳細についてを参照してください「ノードをドラッグすること、および削除する」 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。
 
--   XML スキーマ エクスプローラーのコンテキスト メニューを使用します。 詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)です。
+-   コンテキスト メニューを使用して、 **XML スキーマ エクスプ ローラー**です。 詳細については、次を参照してください。[コンテキスト メニュー](../xml-tools/context-menus-xml-schema-explorer.md)です。
 
 -   XSD エクスプ ローラーで検索を実行し、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。 詳細については、次を参照してください。[スキーマ セットの検索](../xml-tools/searching-the-schema-set.md)です。
 
-## <a name="view-switching"></a>ビューの切り替え
+## <a name="switch-views"></a>ビューを切り替える
 
 ビューを切り替えるには、次のいずれかを使用します。
 
@@ -44,4 +44,4 @@ XML スキーマ デザイナー (XSD デザイナー) は、XML スキーマを
 
 -   スタート ビューのウォーターマークか、空白のコンテンツ モデル ビューまたはグラフ ビューのウォーターマーク。
 
--   ホット キー: スタート ビューに切り替えるには Ctrl + 1、グラフ ビューに切り替えるには Ctrl + 2、およびコンテンツ モデル ビューに切り替えるには Ctrl + 3。
+-   ホット キー: **Ctrl**+**1**スタート ビューの**Ctrl**+**2**グラフ ビューのおよび**Ctrl キーを押し**+**3**コンテンツ モデル ビューにします。

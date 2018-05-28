@@ -23,11 +23,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b153f5e411cabc8975ad1a2dca1ed212372b63ee
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d49d2b2b4f69cb20a87c50a0a7e0dc9791eb42ec
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般** ページでは、次のオプションを設定できます。  
@@ -94,11 +94,11 @@ SRCSRV (`srcsrv.dll`) プロトコルを実装するソース サーバーから
 - **移行元サーバーは、部分信頼アセンブリ (マネージのみ)**  
     ソース サーバーのサポートが有効になっているとき、この設定により、部分信頼アセンブリのソースを取得しないという既定の動作がオーバーライドされます。  
 
-- **ソースのリンクのサポートを有効にします。**  
+**ソースのリンクのサポートを有効にします。**  
     ソースのリンク情報を含む .pdb ファイルのソース ファイルをダウンロードする Visual Studio デバッガーに指示します。 ソースのリンクの詳細については、次を参照してください。、[送信元リンク仕様](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md)です。
 
     > [!IMPORTANT]
-    >  ソース リンク は http または https を使用してファイルをダウンロードするための .pdb ファイルが信頼できることを確認します。  
+    >  Because Source Link will download files using http or https, make sure you trust the .pdb file.  
   
 **ブレークポイントおよび現在のステートメント (C++ のみ) のソース行全体を強調表示します。**  
 デバッガーでブレークポイントまたは現在のステートメントを強調表示するときに、行全体を強調表示します。  

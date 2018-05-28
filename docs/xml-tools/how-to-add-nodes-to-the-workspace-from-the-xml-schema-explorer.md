@@ -10,20 +10,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 010cdbbb23b1e376ec12e7a6a6a903664a069d17
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 487cb4fe5ea15c2186f9284c557a1e9377ac801f
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>方法: XML スキーマ エクスプローラーからワークスペースにノードを追加する
+# <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>方法: XML スキーマ エクスプ ローラーからワークスペースにノードを追加
 
-このトピックにノードを追加する方法について説明、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)XML スキーマ エクスプ ローラーからです。 これは、XML スキーマ エクスプローラーから XSD デザイナーのビューにノードをドラッグ アンド ドロップするか、XML スキーマ エクスプローラーのコンテキスト メニューを使用することによって行うことができます。 さらに、XML スキーマ エクスプローラーの検索結果で強調表示されたノードを追加することができます。 詳細については、次を参照してください。[する方法: スキーマ セット検索結果ノードを追加、ワークスペース](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md)です。
+このトピックにノードを追加する方法について説明、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)から、 **XML スキーマ エクスプ ローラー**です。 ドラッグ アンド ドロップのノードでこれを行う、 **XML スキーマ エクスプ ローラー** XSD デザイナーのビューにまたはを使用して、 **XML スキーマ エクスプ ローラー**コンテキスト メニュー。 実行された検索の結果として強調表示されているノードを追加することも、 **XML スキーマ エクスプ ローラー**です。 詳細については、次を参照してください。[する方法: スキーマ セットの検索結果のノードをワークスペースに追加](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md)です。
 
 > [!NOTE]
 > グローバル ノードだけに追加することができます、 [XML スキーマ デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)です。
 
-## <a name="to-add-nodes-through-the-xml-explorer-context-menu"></a>XML スキーマ エクスプローラーのコンテキスト メニューからノードを追加するには
+## <a name="to-add-nodes-through-the-xml-explorer-context-menu"></a>XML のエクスプ ローラーのコンテキスト メニューからノードを追加するには
 
 1.  手順に従います[する方法: を作成し、XSD スキーマ ファイルを編集](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)です。
 
@@ -33,11 +33,11 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="to-drag-and-drop-a-node-on-to-a-view"></a>ビューにノードをドラッグ アンド ドロップするには
 
-1.  グラフ ビューで `PurchaseOrderType` ノードを右クリックします。 選択**XML スキーマ エクスプ ローラーで表示**です。
+1.  右クリックし、`PurchaseOrderType`グラフ ビューのノードです。 選択**XML スキーマ エクスプ ローラーで表示**です。
 
-     XML スキーマ エクスプローラーにノードが強調表示されます。
+     ノードが強調表示されて、 **XML スキーマ エクスプ ローラー**です。
 
-2.  右クリックして、`PurchaseOrderType`クリックし、XML スキーマ エクスプ ローラーでノード**すべての参照**です。
+2.  右クリックして、`PurchaseOrderType`内のノード、 **XML スキーマ エクスプ ローラー**選択**すべての参照**です。
 
      `purchaseOrder` ノードが強調表示されます。
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 
      ![XML スキーマ エクスプ ローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
 
-     検索結果が XML スキーマ エクスプローラーで強調表示され、垂直スクロール バーのチックでマークされます。
+     検索結果が強調表示されて、 **XML スキーマ エクスプ ローラー**垂直スクロール バーのチックでマークされています。
 
 2.  クリックして、ワークスペースに検索結果を追加、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。
 

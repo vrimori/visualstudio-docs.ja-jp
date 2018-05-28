@@ -10,29 +10,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4feb40ba843da5c3f2e5f7de9b8d554debf6fcc6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8be2666316bdc4d64d4f3dd4ec52c5104a1af5cc
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>方法: グラフ ビューを使用してスキーマ セットの概要を表示する
+# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>方法: グラフ ビューを使用して設定スキーマの概要
 
 このトピックを使用する方法について説明、[グラフ ビュー](../xml-tools/graph-view.md)スキーマ セットと、ノード間のリレーションシップ内のノードの高度なビューを表示します。
 
 ## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>新しい XSD ファイルを作成してコンテンツ モデル ビューにルート要素を表示するには
 
-1.  新しい XML スキーマ ファイルを作成して、Relationships.xsd という名前でファイルを保存します。
+1.  新しい XML スキーマ ファイルを作成し、ファイルに保存*Relationships.xsd*です。
 
 2.  クリックして、**を表示および基になる XML スキーマ ファイルを編集する XML エディターを使用して**スタート ビューにリンクします。
 
-3.  XML スキーマのサンプル コードをコピー[サンプル XML スキーマ: リレーションシップ](../xml-tools/sample-xsd-file-relationships.md)し、既定では、新しい XSD ファイルに追加されたコードの代わりに貼り付けます。
+3.  XML スキーマのサンプル コードをコピー[サンプルの XML スキーマ: リレーションシップ](../xml-tools/sample-xsd-file-relationships.md)し、既定では、新しい XSD ファイルに追加されたコードの代わりに貼り付けます。
 
 4.  XML エディター内を右クリックし、選択**ビュー デザイナー**です。
 
-5.  XSD ツール バーからグラフ ビューを選択します。
+5.  グラフ ビューの選択、 **XSD ツールバー**です。
 
-6.  選択**スキーマ セット**グラフ ビューのデザイン サーフェイスには、XML スキーマ エクスプ ローラーとドラッグ ノード内のノードです。 すべてのグローバル ノードが表示され、リレーションシップを持つノード間に矢印が引かれます。
+6.  選択**スキーマ セット**内のノード、 **XML スキーマ エクスプ ローラー**グラフ ビューのデザイン サーフェイスにノードをドラッグします。 すべてのグローバル ノードが表示され、リレーションシップを持つノード間に矢印が引かれます。
 
      ![グラフ ビュー](../xml-tools/media/relationshipingraphview.gif "RelationshipInGraphView")
 

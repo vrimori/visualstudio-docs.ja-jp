@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e690d18bae72b59234f2f90cbcf903b9941df7d6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 02f3311b96d8f1287f2c2f2a81f9b37e51d4f7f6
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。
   Visual Studio の SharePoint プロジェクト システムは、プロジェクト項目の種類を独自に作成することによって拡張することができます。 このチュートリアルでは、SharePoint サイトでカスタム アクションを作成する SharePoint プロジェクトに追加できるプロジェクト項目を作成します。 カスタム アクションを追加するメニュー項目、**サイトの操作**SharePoint サイトのメニュー。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/16/2018
  これは、独立したチュートリアルです。 このチュートリアルを完了すると、項目テンプレートにウィザードを追加してプロジェクト項目を拡張できるようになります。 詳細については、次を参照してください。[チュートリアル: 項目テンプレート、第 2 部にカスタム動作プロジェクト項目を作成する](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)です。  
   
 > [!NOTE]  
->  完成したプロジェクト、コード、およびこのチュートリアルでは、次の場所から他のファイルを含むサンプルをダウンロードすることができます: [ http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)です。  
+>  サンプルをダウンロードする[Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities)ワークフローについては、カスタム アクティビティを作成する方法を示すです。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
@@ -76,11 +76,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-3.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5**が選択されています。  
+3.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5**が選択されています。  
   
-4.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
+4.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
   
     > [!NOTE]  
     >  **Extensibility**ノードは、Visual Studio SDK をインストールする場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。  
@@ -95,9 +95,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5**が選択されています。  
+2.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5**が選択されています。  
   
-3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
   
 4.  プロジェクト テンプレートの一覧で選択、 **c# 項目テンプレート**または**Visual Basic 項目テンプレート**テンプレート。  
   
@@ -109,9 +109,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して**.NET Framework 4.5**が選択されています。  
+2.  上部にある一覧で、**新しいプロジェクト** ダイアログ ボックスで、ことを確認して **.NET Framework 4.5**が選択されています。  
   
-3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択して、 **Windows**  ノード、を選択し**クラス ライブラリ**プロジェクト テンプレート。  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択して、 **Windows**  ノード、を選択し**クラス ライブラリ**プロジェクト テンプレート。  
   
 4.  **名前**ボックスに、入力**ProjectItemDefinition**を選択し、 **OK**ボタンをクリックします。  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  次の XML は、Visual C# の項目テンプレート用です。 Visual Basic の項目テンプレートを作成する場合は、`ProjectType` 要素の値を `VisualBasic` に置き換えてください。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
       <TemplateData>  
@@ -230,7 +230,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  次の XML を CustomAction.spdata ファイルに追加し、ファイルを保存して閉じます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <ProjectItem Type="Contoso.CustomAction" DefaultFile="Elements.xml"   
      xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">  
@@ -250,7 +250,7 @@ ms.lasthandoff: 04/16/2018
   
 11. Elements.xml ファイルの内容を次の XML に置き換え、ファイルを保存して閉じます。  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="Replace this with a GUID or some other unique string"  
@@ -274,19 +274,19 @@ ms.lasthandoff: 04/16/2018
   
 15. プロジェクト ファイルで次の `VSTemplate` 要素を見つけます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="ItemTemplate.vstemplate">  
     ```  
   
 16. `VSTemplate` 要素を次の XML に置き換え、ファイルを保存して閉じます。  
   
-    ```  
+    ```xml  
     <VSTemplate Include="ItemTemplate.vstemplate">  
       <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>  
     </VSTemplate>  
     ```  
   
-     `OutputSubPath` 要素は、プロジェクトをビルドすると項目テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客が開いたときにだけ、項目テンプレートが使用できることを確認してください、**新しい項目の追加** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。**ノード。  
+     `OutputSubPath` 要素は、プロジェクトをビルドすると項目テンプレートが作成されるパス内の追加フォルダーを指定します。 ここで指定したフォルダーは、顧客が開いたときにだけ、項目テンプレートが使用できることを確認してください、**新しい項目の追加** ダイアログ ボックスで、展開、 **SharePoint**  ノードを選択し、 **2010。** ノード。  
   
 17. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ItemTemplate**プロジェクトをクリックして**プロジェクトの再読み込み**です。  
   
@@ -309,7 +309,7 @@ ms.lasthandoff: 04/16/2018
   
      **新しいアセットの追加** ダイアログ ボックスが表示されます。  
   
-6.  **型**一覧で、選択**[microsoft.visualstudio.itemtemplate]**です。  
+6.  **型**一覧で、選択 **[microsoft.visualstudio.itemtemplate]** です。  
   
     > [!NOTE]  
     >  この値は、extension.vsixmanifest ファイル内の `ItemTemplate` 要素に対応します。 プロジェクト項目テンプレートが格納される VSIX パッケージ内のサブフォルダーは、この要素によって指定されます。 詳細については、次を参照してください。 [ItemTemplate 要素 (VSX Schema)](http://msdn.microsoft.com/en-us/1d489e54-c1c5-4f96-a510-6c2640867ff0)です。  
@@ -356,7 +356,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio の実験用インスタンスのメニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**です。  
   
-2.  展開**Visual c#**または**Visual Basic** (言語によっては、項目テンプレートをサポートする) 展開**SharePoint**を選択し、 **2010**ノード。  
+2.  展開**Visual c#** または**Visual Basic** (言語によっては、項目テンプレートをサポートする) 展開**SharePoint**を選択し、 **2010**ノード。  
   
 3.  プロジェクト テンプレートの一覧で選択**SharePoint 2010 プロジェクト**です。  
   
@@ -378,7 +378,7 @@ ms.lasthandoff: 04/16/2018
   
 10. 選択、 **f5 キーを押して**プロジェクトのデバッグを続行するキー。  
   
-11. Visual Studio の実験用インスタンスで**ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **CustomAction1** ] ノードを選択し**[カスタム動作デザイナー**.  
+11. Visual Studio の実験用インスタンスで**ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **CustomAction1** ] ノードを選択し **[カスタム動作デザイナー**.  
   
 12. いることを確認するメッセージ ボックスが表示されたらを選択し、 **OK**ボタンをクリックします。  
   
@@ -400,25 +400,25 @@ ms.lasthandoff: 04/16/2018
   
     -   `CustomAction` 要素で、次の例に示すように、`Id` 属性を GUID などの一意の文字列に設定します。  
   
-        ```  
+        ```xml  
         Id="cd85f6a7-af2e-44ab-885a-0c795b52121a"  
         ```  
   
     -   `CustomAction` 要素で、次の例に示すように、`Title` 属性を設定します。  
   
-        ```  
+        ```xml  
         Title="SharePoint Developer Center"  
         ```  
   
     -   `CustomAction` 要素で、次の例に示すように、`Description` 属性を設定します。  
   
-        ```  
+        ```xml  
         Description="Opens the SharePoint Developer Center Web site."  
         ```  
   
     -   `UrlAction` 要素で、次の例に示すように、`Url` 属性を設定します。  
   
-        ```  
+        ```xml  
         Url="http://msdn.microsoft.com/sharepoint/default.aspx"  
         ```  
   

@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 1c03c4fac50c34cb96583a1fc8c16a403b7bbe1b
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 9514db72dd72e616f45670ffdf8c0b468bfb81cc
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="working-with-subversion"></a>Subversion の使用
 
@@ -29,7 +29,7 @@ Subversion では、コピー-変更-マージ モデルを使用して、ユー
 
 リモートの Subversion リポジトリの使用を始める前に、リポジトリをチェックアウトして、ローカル コンピューターにそのディレクトリの作業コピーを作成します。
 
-Visual Studio for Mac の**チェックアウト**機能の使用方法については、「[Setting up a Subversion repository](~/set-up-subversion-repository.md)」(Subversion リポジトリのセットアップ) の手順に従ってください。
+Visual Studio for Mac の**チェックアウト**機能の使用方法については、「[Setting up a Subversion repository](set-up-subversion-repository.md)」(Subversion リポジトリのセットアップ) の手順に従ってください。
 
 ## <a name="update-solution"></a>ソリューションの更新
 

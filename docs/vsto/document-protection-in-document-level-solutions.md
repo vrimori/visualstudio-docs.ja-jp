@@ -1,5 +1,5 @@
 ---
-title: ドキュメント レベルのソリューションでの保護を文書化 |Microsoft ドキュメント
+title: ドキュメント レベルのソリューションでドキュメントの保護
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,13 +19,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 546a74179b8bdf52541d771809426b5e4aec3e45
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 22c8f135770fbd427d361b9c9b113da3b20e609a
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="document-protection-in-document-level-solutions"></a>ドキュメント レベルのソリューションにおけるドキュメントの保護
+# <a name="document-protection-in-document-level-solutions"></a>ドキュメント レベルのソリューションでドキュメントの保護
   ドキュメント レベルのプロジェクトでは、Microsoft Office Word および Microsoft Office Excel の保護機能を使用することができます。 これらの機能は、ドキュメントの保護された部分を変更する権限のないユーザーをブロックします。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -42,11 +42,11 @@ ms.lasthandoff: 04/16/2018
   
  ただし、保護を有効になっている既存の Word 文書を使用するプロジェクトを作成する場合は、ドキュメントがデザイナーで開いているときに保護されます。 ドキュメントの保護された部分を編集することはできませんが、作成することもコード、コード エディターでドキュメントを自動化します。 できませんプロジェクトをビルドする場合は、文書が Visual Studio で開いているときに、保護を有効にします。  
   
- ドキュメントを編集して、プロジェクトをビルドできるように、ドキュメントがデザイナーで開いている間に、保護を無効にできます。 デバッグしている間は、デザイナー内のコピーの保護を無効にすることはできません。デバッグ中に開かれるドキュメントは、(Visual basic の場合は、\bin ディレクトリと c# の \bin\debug ディレクトリで、出力のコピーを格納します)、デザイナーで、1 つが開いてから別のコピーです。  
+ ドキュメントを編集して、プロジェクトをビルドできるように、ドキュメントがデザイナーで開いている間に、保護を無効にできます。 デバッグしている間は、デザイナー内のコピーの保護を無効にすることはできません。デバッグ中に開かれるドキュメントがデザイナーで、1 つが開いてから別のコピー (で出力のコピーが格納されている、 *\bin* Visual basic の場合は、ディレクトリと*\bin\debug*ディレクトリ C# の場合)。  
   
  Visual Studio でプロジェクトを閉じて、プロジェクト ディレクトリ内にあるドキュメントのコピーを開き、保護を有効にして、デザイナーで開かれているドキュメントのコピーの保護を有効にすることができます。  
   
-## <a name="enforcing-word-document-protection-on-build"></a>ビルド時に Word 文書の保護を適用します。  
+## <a name="enforce-word-document-protection-on-build"></a>ビルド時に Word 文書の保護を適用します。  
  デバッグ用のドキュメントを開いたときに、保護が有効にするために、visual Studio は、ビルド処理中に Word 文書やテンプレートの保護の適用を開始します。 ドキュメントは、空のパスワードで保護されます。  
   
  保護が有効になっているビルド時にこれをドキュメント内のコードがある場合<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント、アプリケーションの動作を変更したり、例外が発生する可能性がある、このコードは、デバッグ対象正しくです。 ドキュメントが開かれた後に保護を有効にした場合の初期化コードをデバッグまたはテストできません。  
@@ -57,9 +57,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムによって文書および文書の一部を保護します。](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
- [Information Rights Management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
+ [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
  [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)   
- [方法: アクセス許可の制限のドキュメントの背後に実行するようにコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [方法: ドキュメントの背後にあるアクセス許可の制限を実行するコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
   
   

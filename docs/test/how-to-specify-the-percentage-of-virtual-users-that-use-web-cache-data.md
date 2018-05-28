@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストで Web キャッシュ データを使用する仮想ユーザーの割合を指定する | Microsoft Docs
+title: Visual Studio でロード テストで Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,13 @@ ms.assetid: f66d5d43-4121-4487-b27f-d0a0baaf7601
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 76d611af76877a9638ed2815a7d8dc5f77e45c8c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1bf1c0ce47e96438df768776244cc26bc9ea8929
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>方法: Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 
@@ -28,21 +29,21 @@ ms.lasthandoff: 04/16/2018
 
 イメージなどのキャッシュ可能なコンテンツをローカルにキャッシュしているリピーター ユーザーが非常に多い Web サイトのロード テストを実行する場合、**新しいユーザーのパーセンテージ** プロパティを 100% に設定すると、ダウンロード要求が実際の運用時より多く生成されます。 この場合は、初回アクセス ユーザーによる Web サイトへのアクセスが占める割合を推測し、それに基づいて **新しいユーザーのパーセンテージ** プロパティを設定する必要があります。
 
-## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>シナリオに使用するエージェントを指定するには
+## <a name="to-specify-the-percentage-of-new-users-for-a-scenario"></a>シナリオの新しいユーザーのパーセンテージを指定するには
 
-1.  ロード テストを開きます。
+1. ロード テストを開きます。
 
      **ロード テスト エディター**が表示されます。 ロード テスト ツリーが表示されます。
 
-2.  ロード テスト ツリーの **[シナリオ]** フォルダーで、使用するエージェントを指定するシナリオのノードを選択します。
+2. ロード テスト ツリーの **[シナリオ]** フォルダーで、新しいユーザーのパーセンテージを変更するシナリオのノードを選びます。
 
-3.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
+3. **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
      [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 
-4.  新しいユーザーのパーセンテージの数値を入力して、**新しいユーザーのパーセンテージ** プロパティの値を設定します。
+4. 新しいユーザーのパーセンテージの数値を入力して、**[新しいユーザーのパーセンテージ]** プロパティの値を設定します。
 
-5.  プロパティを変更したら、**[ファイル]** メニューの **[保存]** を選択します。 次に、新しい **新しいユーザーのパーセンテージ** の値を使用して、ロード テストを実行します。
+5. プロパティを変更したら、**[ファイル]** メニューの **[保存]** を選択します。 次に、**[新しいユーザーのパーセンテージ]** の新しい値を使って、ロード テストを実行します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -50,4 +51,4 @@ ms.lasthandoff: 04/16/2018
 - [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)
-- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)

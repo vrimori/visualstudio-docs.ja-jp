@@ -1,15 +1,15 @@
 ---
-title: Visual Studio for Mac のコンパイルとビルド
-description: ''
+title: コードのコンパイルとビルド
+description: この記事では、Visual Studio for Mac でプロジェクトとソリューションをコンパイルおよびビルドする方法について説明します。
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 7a7dfaeca45ae157dc9e82b9f8eff54244cbd7ca
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 29c6baaa4da4eae4a2302ec3916a156b59a49272
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Visual Studio for Mac のコンパイルとビルド
 
@@ -21,7 +21,7 @@ Visual Studio for Mac を使用すると、ビルドをすぐに作成し、実�
 
 IDE で作成されたすべてのプロジェクトとソリューションに既定のビルド構成が与えられます。この構成がビルドのコンテキストを定義します。 構成は編集可能です。独自の構成を作成するともできます。 構成を作成したり、変更したりすると、プロジェクト ファイルが自動的に更新されます。それが MSBuild で使用され、プロジェクトがビルドされます。  
 
-IDE でプロジェクトやソリューションをビルドする方法については、「[プロジェクトとソリューションのビルドおよびクリーン](~/building-and-cleaning-projects-and-solutions.md)」ガイドを参照してください。
+IDE でプロジェクトやソリューションをビルドする方法については、「[プロジェクトとソリューションのビルドおよびクリーン](building-and-cleaning-projects-and-solutions.md)」ガイドを参照してください。
 
 Visual Studio for Mac は以下にも使用できます。
 

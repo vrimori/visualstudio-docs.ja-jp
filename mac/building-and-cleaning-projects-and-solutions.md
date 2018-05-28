@@ -1,15 +1,15 @@
 ---
-title: プロジェクトとソリューションのビルドおよびクリーン
-description: ''
+title: Visual Studio for Mac でのプロジェクトとソリューションのビルドとクリーン
+description: この記事では、Visual Studio for Mac でプロジェクトをビルドする方法について説明します
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
-ms.openlocfilehash: 746aefbee359313e6e8a5f0e3b8387cb5eff9a16
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 686735df963f2cdb3f85e4328299b609d5fbe08d
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>プロジェクトとソリューションのビルドおよびクリーン
 
@@ -21,11 +21,11 @@ ms.lasthandoff: 04/20/2018
 
 1. Solution Pad でソリューション ノードを選択します。
 
-    ![](media/compiling-and-building-image1.png)
+    ![ソリューション ノードの選択](media/compiling-and-building-image1.png)
 
 2. メニュー バーで [ビルド] メニューを選択し、次のいずれかのオプションを選択します。
 
-    ![](media/compiling-and-building-image2.png)
+    ![[すべてビルド] メニュー項目の選択](media/compiling-and-building-image2.png)
 
     * **すべてビルド** - 一番新しいビルド以降、プロジェクト内で変更された、プロジェクト内のすべてのファイルがビルドされます。
     * **すべてリビルド** - ソリューションを取り除き、それからビルドします。

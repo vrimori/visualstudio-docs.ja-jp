@@ -81,7 +81,6 @@
 ##### [方法 : 混合モードでデバッグする](how-to-debug-in-mixed-mode.md)
 #### [デバッグの準備 : コンソール プロジェクト](debugging-preparation-console-projects.md)
 #### [方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする](how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)
-#### [方法: Code Center Premium ソースをデバッグする](how-to-debug-with-code-center-premium-source.md)
 #### [プロセスのデバッグとホスト](debugging-and-the-hosting-process.md)
 #### [方法: デバッグで .NET Framework のバージョンを指定する](how-to-specify-a-dotnet-framework-version-for-debugging.md)
 ### [データのカスタム ビューの作成](viewing-data-in-the-debugger.md)

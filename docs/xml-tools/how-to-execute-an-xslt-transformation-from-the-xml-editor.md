@@ -10,19 +10,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 74432b7807f901253646f28a3e1bf4664f673326
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 892f82d64bb022c20c786a996bf9f89cf557b4c2
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>方法: XML エディターから XSLT 変換を実行する
+# <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>方法: XML エディターから XSLT 変換を実行
 
 XML エディターでは、XSLT スタイル シートを XML ドキュメントと関連付けて変換を実行し、結果を表示させることができます。 XSLT 変換から得られた結果の出力は、新しいドキュメント ウィンドウに表示されます。
 
-**出力**プロパティは、出力ファイル名を指定します。 場合、**出力**プロパティが空白、一時ディレクトリにファイル名が生成されます。 ファイル拡張子はスタイル シート内の `xsl:output` 要素に基づき、.xml、.txt、または .htm のいずれかが付けられます。
+**出力**プロパティは、出力ファイル名を指定します。 場合、**出力**プロパティが空白、一時ディレクトリにファイル名が生成されます。 ファイルの拡張子がに基づいて、`xsl:output`自分のスタイル内の要素シートし、することができます *。xml*、.*txt*または *。htm*です。
 
-場合、**出力**プロパティ .htm ファイルとファイル名が指定または .html の拡張機能、XSLT 出力の使用のプレビュー時[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)]Internet Explorer です。 他のファイル拡張子はすべて、[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio によって選択されている既定のエディターを使用して開かれます。 たとえば、ファイル拡張子が .xml の場合、Visual Studio では XML エディターが使用されます。
+場合、**出力**プロパティを持つファイル名を指定する *。htm*または *。html*拡張 XSLT 出力がプレビューを使用して[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)]Internet Explorer です。 他のファイル拡張子はすべて、[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio によって選択されている既定のエディターを使用して開かれます。 たとえば、ファイルの拡張子がある場合です。*xml*、Visual Studio は、XML エディターを使用します。
 
 ## <a name="to-execute-an-xslt-transformation-from-an-xml-document"></a>XML ドキュメントから XSLT 変換を実行するには
 

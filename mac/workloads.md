@@ -1,14 +1,15 @@
 ---
 title: Visual Studio for Mac ワークロード
+description: この記事では、Visual Studio for Mac で利用できるさまざまなワークロードについて説明しています
 author: asb3993
 ms.author: amburns
-ms.date: 08/03/2017
+ms.date: 05/06/2018
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: a3132e5719c2b916648456889508095f81e0c165
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 42d0f9682f2f0c54b86fc24cdfd5d82569ddbb5b
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac ワークロード
 
@@ -32,8 +33,8 @@ Visual Studio for Mac で Xamarin を使用する方法の詳細については�
 
 ## <a name="aspnet-core-web-applications"></a>ASP.NET Core Web アプリケーション
 
-Visual Studio for Mac で ASP.NET Core の使用を開始するには、「[ASP.NET Core の概要](~/asp-net-core.md)」ガイド、または ASP.NET Core Web アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)をご覧ください。
+Visual Studio for Mac で ASP.NET Core の使用を開始するには、「[ASP.NET Core の概要](asp-net-core.md)」ガイド、または ASP.NET Core Web アプリの[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)をご覧ください。
 
 ## <a name="cross-platform-unity-game-development"></a>クロスプラットフォーム Unity ゲームの開発
 
-Unity でゲームの構築を開始するには、[セットアップ ページ](~/setup-vsmac-tools-unity.md) および [Unity ツールの使用ガイド](~/using-vsmac-tools-unity.md)を参照するか、Unity の[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)をチェックアウトしてください。
+Unity でゲームの構築を開始するには、[セットアップ ページ](setup-vsmac-tools-unity.md) および [Unity ツールの使用ガイド](using-vsmac-tools-unity.md)を参照するか、Unity の[ハンズオン ラボ](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started)をチェックアウトしてください。

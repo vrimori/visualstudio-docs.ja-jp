@@ -6,11 +6,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
-ms.openlocfilehash: 4a6b5d2f3c5e6c84307d70308773dd353c6de883
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 135a71f18451eb209f9f351ae9224c1606bc50d6
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/08/2018
 
 **[詳細の表示]** ダイアログが開き、例外に関する詳細情報が表示されます。
 
-![](media/troubleshooting-image3.png)
+![詳細ダイアログを表示する](media/troubleshooting-image3.png)
 
 ダイアログの重要なセクションについて以下で詳しく説明します。番号は上の図に対応しています。
 

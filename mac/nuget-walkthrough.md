@@ -1,15 +1,15 @@
 ---
-title: チュートリアル - プロジェクトに NuGet パッケージを含める
+title: プロジェクトに NuGet パッケージを含める
 description: このドキュメントでは、Xamarin プロジェクトに NuGet パッケージを含める方法について説明します。 パッケージの検索およびダウンロードの手順を説明し、IDE 統合機能の概要を示します。
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
-ms.openlocfilehash: 05762df8b06a69647c6c7a628db54ac499248374
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f251080351f1e448d250798c4f9a758114a6e5ab
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="including-a-nuget-package-in-your-project"></a>プロジェクトに NuGet パッケージを含める
 
@@ -26,8 +26,6 @@ NuGet パッケージの機能を示すため、まず、新しいアプリケ�
 まず、以下に示すように `HelloNuget` という名前のプロジェクトを作成します。 この例では iOS 用の単一ビュー アプリケーションのテンプレートを示していますが、サポートされているどのプロジェクト タイプでも動作します。
 
 ![新しい iOS プロジェクトを作成する](media/nuget-walkthrough-NewProject.png)
-
-<a name="Adding_a_Package" class="injected"></a>
 
 ## <a name="adding-a-package"></a>パッケージの追加
 
@@ -50,9 +48,9 @@ Visual Studio for Mac でプロジェクトを開いた状態で、**Solution Pa
 
 パッケージはダウンロードされた後、プロジェクトに追加されます。 ソリューションは次のように変更されます。
 
-*   **[参照]** ノードには、NuGet パッケージの一部であるすべてのアセンブリのリストが含まれます。
-*   **[パッケージ]** ノードには、ダウンロードした各 NuGet パッケージが表示されます。 このリストのパッケージを更新したり、削除したりすることができます。
-*   **packages.config** ファイルはプロジェクトに追加されます。 この XML ファイルは、このプロジェクトで参照されるパッケージ パージョンを追跡するために IDE で使用されます。 このファイルを手動で編集しないでください。ただし、バージョン管理で保持する必要があります。 project.json ファイルを packages.config ファイルの代わりに使用できることに注意してください。 project.json ファイルは、NuGet 3 で導入された新しいパッケージ ファイル形式であり、推移的な復元をサポートします。 project.json の詳細については、[NuGet のドキュメント](http://docs.microsoft.com/NuGet/Schema/Project-Json)を参照してください。 Visual Studio for Mac で project.json ファイルを使用する前に、project.json ファイルを手動で追加して、プロジェクトを閉じてから再度開く必要があります。
+* **[参照]** ノードには、NuGet パッケージの一部であるすべてのアセンブリのリストが含まれます。
+* **[パッケージ]** ノードには、ダウンロードした各 NuGet パッケージが表示されます。 このリストのパッケージを更新したり、削除したりすることができます。
+* **packages.config** ファイルはプロジェクトに追加されます。 この XML ファイルは、このプロジェクトで参照されるパッケージ パージョンを追跡するために IDE で使用されます。 このファイルを手動で編集しないでください。ただし、バージョン管理で保持する必要があります。 project.json ファイルを packages.config ファイルの代わりに使用できることに注意してください。 project.json ファイルは、NuGet 3 で導入された新しいパッケージ ファイル形式であり、推移的な復元をサポートします。 project.json の詳細については、[NuGet のドキュメント](http://docs.microsoft.com/NuGet/Schema/Project-Json)を参照してください。 Visual Studio for Mac で project.json ファイルを使用する前に、project.json ファイルを手動で追加して、プロジェクトを閉じてから再度開く必要があります。
 
 ## <a name="using-nuget-packages"></a>NuGet パッケージの使用
 
@@ -60,8 +58,9 @@ NuGet パッケージが追加され、プロジェクト参照が更新され�
 
 必ず、必要な `using` ディレクティブをファイルの先頭に追加してください。
 
-
-    using Newtownsoft.json;
+```csharp
+using Newtownsoft.json;
+```
 
 ほとんどの NuGet では、README や Nuget ソースへのプロジェクト ページ リンクなどの追加情報が提供されます。 通常は、[パッケージを追加] ページのパッケージの宣伝文にこのリンクが表示されます。
 

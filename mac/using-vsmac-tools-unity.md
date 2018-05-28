@@ -1,14 +1,15 @@
 ---
 title: Visual Studio for Mac Tools for Unity を使用する
+description: このガイドでは、Visual Studio for Mac Tools for Unity 拡張機能を使用する方法について説明します
 author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: c32b80d64e6b57667a3711e0c08455346782f75a
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ab605b3a8505ac189bc0f628b717c6863f9fd902
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity を使用する
 
@@ -16,7 +17,7 @@ ms.lasthandoff: 04/20/2018
 
 ## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Visual Studio for Mac で Unity スクリプトを開く
 
-Visual Studio for Mac を [Unity の外部スクリプト エディターとして設定](/visualstudio/mac/setup-vsmac-tools-unity#configure-unity-for-use-with-visual-studio-for-mac)した後は、Unity エディターからスクリプトを開くと、自動的に Visual Studio for Mac が起動するか、または Visual Studio for Mac に切り替わり、選んだスクリプトが開かれます。
+Visual Studio for Mac を [Unity の外部スクリプト エディターとして設定](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac)した後は、Unity エディターからスクリプトを開くと、自動的に Visual Studio for Mac が起動するか、または Visual Studio for Mac に切り替わり、選んだスクリプトが開かれます。
 
 または、Unity の **[Assets]\(アセット\)** メニューから **[Open C# Project]\(C# プロジェクトを開く\)** を選ぶことで、ソース エディターでスクリプトを開かずに Visual Studio for Mac を起動できます。
 

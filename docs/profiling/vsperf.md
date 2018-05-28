@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b0b0941959b0d70fa5dfb0ae72aed181b1cd42e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 94e12f8e3ee431574ab846e30f9672e4c06592a9
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsperf"></a>VSPerf
 **VsPerf** コマンド ライン ツールを使用して、次を行います。  
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/19/2018
 |**/detach**|データ収集を停止しますが、ターゲット プロセスの実行は続行します。|  
 |**/status**|プロファイラーの状態を表示します。|  
   
-## <a name="see-also"></a>参照  
- [Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
- [コマンド ラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)
+## <a name="see-also"></a>関連項目  
+ [Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
+ [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)

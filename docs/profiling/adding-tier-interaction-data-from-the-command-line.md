@@ -12,13 +12,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac35c99b9e75be50d00e560e9c8899420685f7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 42bc9219b3e1af5b1ae25ee2049b7293e2f4c344
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="adding-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
+# <a name="add-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
 
 階層相互作用プロファイリングにより、1 つ以上のデータベースと通信する多階層アプリケーションの関数で同期 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] の呼び出しの実行時間に関する追加情報が提供されます。
 
@@ -38,36 +38,36 @@ Windows 8 デスクトップ アプリおよび Windows Server 2012 アプリで
 
 階層相互作用データは、Visual Studio Enterprise でのみ表示できます。 [VSPerfReport](../profiling/vsperfreport.md) の使用による、ファイル ベースの階層相互作用レポートは利用できません。
 
-## <a name="adding-tier-interaction-data-with-vsperfcmd"></a>VSPerfCmd に階層相互作用データを追加する
+## <a name="add-tier-interaction-data-with-vsperfcmd"></a>VSPerfCmd に階層相互作用データを追加する
 
 VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロファイリング ツールで使用できるすべての機能にアクセスできます。 VSPerfCmd を使用して収集されたプロファイリング データに階層相互作用を追加するには、**VSPerfCLREnv** ユーティリティを使用して階層相互作用データを有効にする環境変数を設定して削除する必要があります。 指定するオプションとデータを収集するために必要な手順は、プロファイリングするアプリケーションの種類によって異なります。
 
-## <a name="profiling-stand-alone-applications"></a>スタンドアロン アプリケーションのプロファイリング
+## <a name="profile-stand-alone-applications"></a>スタンドアロン アプリケーションのプロファイリング
 
 別のプロセス (SQLServer に対して同期 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 呼び出しを行う Windows デスクトップ アプリケーションなど) によって実行されないアプリケーションに階層相互作用データを追加するには、**VSPerfClrEnv /InteractionOn** オプションを使用して環境変数を設定し、**VSPerfClrEnv /InteractionOff** オプションを使用してそれらを削除します。
 
 次の例では、Windows デスクトップ アプリケーションはインストルメンテーション メソッドを使用してプロファイルされ、階層相互作用データが収集されます。
 
-### <a name="profiling-a-windows-desktop-application-example"></a>Windows デスクトップ アプリケーションのプロファイルの例
+### <a name="profile-a-windows-desktop-application-example"></a>Windows デスクトップ アプリケーションのプロファイルの例
 
 1. 管理者特権を使用して、コマンド プロンプト ウィンドウを開きます。 **[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[アクセサリ]** の順にポイントします。 **[コマンド プロンプト]** を右クリックしてから、**[管理者として実行]** をクリックします。
 
 2. .NET プロファイル環境変数と TIP を環境変数初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /traceon
     vsperfclrenv /interactionon
     ```
 
 3. プロファイラーを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:Desktop_tip.vsp 
     ```
 
 4. VSPerfCmd でアプリケーションを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /launch:DesktopApp.exe
     ```
 
@@ -75,13 +75,13 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 6. TIP 環境変数を削除します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /off
     ```
 
 詳細については、「[スタンドアロン アプリケーションのコマンド ラインによるプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)」を参照してください。
 
-## <a name="profiling-services"></a>サービスのプロファイリング
+## <a name="profile-services"></a>サービスのプロファイリング
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションなどのサービスをプロファイルするには、**VSPerfClrEnv /GlobalInteractionOn** オプションを使用して環境変数を設定し、**VSPerfClrEnv/GlobalInteractionOff** オプションを使用してそれらを削除します。
 
@@ -89,7 +89,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 次の例では、Windows サービスはインストルメンテーション メソッドを使用してプロファイルされ、階層相互作用データが収集されます。
 
-### <a name="profiling-a-windows-service-example"></a>Windows サービスのプロファイリングの例
+### <a name="profile-a-windows-service-example"></a>Windows サービスのプロファイリングの例
 
 1. インストールの必要なサービスがあればインストールします。
 
@@ -97,13 +97,13 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 3. .NET プロファイル環境変数を初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globaltraceon
     ```
 
 4. TIP 環境変数を初期化します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globalinteractionon
     ```
 
@@ -113,7 +113,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 7. プロファイラーを起動します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -121,7 +121,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 9. プロファイラーをサービスにアタッチします。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -133,7 +133,7 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 12. .NET および TIP プロファイル環境変数を削除します。 次のコマンドを入力します。
 
-    ```
+    ```cmd
     vsperfclrenv /globaloff
     ```
 
@@ -145,13 +145,13 @@ VSPerfASPNETCmd コマンド ライン ツールを使用すると、プロフ�
 
 [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)
 
-## <a name="adding-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd に階層相互作用データを追加する
+## <a name="add-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd に階層相互作用データを追加する
 
 VSPerfASPNETCmd コマンド ライン ツールを使用すると、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションを簡単にプロファイルできます。 **VSPerfCmd** コマンド ライン ツールと比較すると、オプションが減り、環境変数を設定する必要がなく、コンピューターを再起動する必要がありません。 VSPerfASPNETCmd のこれらの機能により、階層相互作用データの収集が非常に簡単になります。
 
 VSPerfASPNETCmd を使用して収集されたデータのプロファイリングに階層相互作用を追加するには、**/TIP** オプションをコマンド ラインに追加します。 たとえば、インストルメンテーション メソッドを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション用に階層相互作用データを収集するには、次のコマンド ラインを使用します。
 
-```
+```cmd
 vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```
 

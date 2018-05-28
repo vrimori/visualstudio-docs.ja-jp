@@ -13,11 +13,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 259524aa8f4bb20097f5f5504c890ee7f4cc3b78
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1d5cbc7287c77e08bb2ddabbf31615c4b2d0075c
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
 このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio および Node.js 開発ワークロードをインストールしている必要があります。
+* Visual Studio 2017 および Node.js 開発ワークロードをインストールしている必要があります。
 
     まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
 
@@ -95,6 +95,8 @@ ms.lasthandoff: 04/26/2018
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
+    上記のコードは、タイトルとようこそメッセージを含む HTML ページを動的に生成するためのマークアップを追加します。 また、このページには、ボタンをクリックするたびに変化するイメージを表示するコードも含まれています。
+
 1. ルート フォルダーに *index.js* を開きます。
 
 1. `router.get` の呼び出しの前に次のコードを追加します。
@@ -110,6 +112,8 @@ ms.lasthandoff: 04/26/2018
     }
     ````
 
+    このコードは、動的に生成された HTML ページに渡すデータ オブジェクトを作成します。
+
 1. `router.get` 関数呼び出しを次のコードで置換します。
 
     ```js
@@ -117,14 +121,16 @@ ms.lasthandoff: 04/26/2018
         res.render('index', { title: 'Express', "data" });
     });
     ```
+    
+    上記のコードは、Express ルーター オブジェクトを使って現在のページを設定し、ページにタイトルとデータ オブジェクトを渡してページをレンダリングします。
 
-    `res.render` が含まれるコードの行にエラーがあります。 アプリを実行するには、アプリを修正する必要があります。 次のセクションでは、エラーを修正します。
+    Visual Studio のいくつかの機能を示すため、`res.render` を含むコード行にエラーを組み込んであります。 アプリを実行するには、先にエラーを修正する必要があります。 次のセクションでは、エラーを修正します。
 
 ## <a name="use-intellisense"></a>IntelliSense を使用する
 
 1. *index.js* で、`res.render` を含むコードの行に移動します。
 
-1. `data` 文字列の後に「`: get`」と入力します。IntelliSense が `getData` 関数を表示します。 `getData` を選択します。
+1. `data` 文字列の後にカーソルを置き、「`: get`」と入力します。IntelliSense が `getData` 関数を表示します。 `getData` を選択します。
 
     ![IntelliSense を使用する](../nodejs/media/tutorial-nodejs-intellisense.png)
 

@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b0a8de8b36d41684e00c9b679672d90909540107
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 16c7405cfe889808f27dbb274f7f685e949889dd
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint フィーチャーの作成
   SharePoint 機能を使用して、展開が容易に関連する SharePoint プロジェクト項目をグループ化することができます。 機能を作成、スコープの設定、およびその他の機能を SharePoint フィーチャー デザイナーを使用して、依存関係としてマークできます。 デザイナーには、各機能を記述する XML ファイルである、マニフェストも生成されます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|Title|任意。 設定されている機能の既定のタイトル*SolutionName * * FeatureName*です。|  
+|Title|任意。 設定されている機能の既定のタイトル*SolutionName* *FeatureName*です。|  
 |説明|任意。 SharePoint の機能の説明です。|  
 |スコープ|必須。 使用して、機能を作成する場合**ソリューション エクスプ ローラー**スコープが既定では Web に設定します。<br /><br /> -ファーム:、サーバー ファーム全体の機能が有効にします。<br /><br /> サイト:、すべての web サイトのサイト コレクション機能が有効にします。<br /><br /> -Web:、特定の web サイトの機能が有効にします。<br /><br /> -WebApplication:、すべての web サイトの web アプリケーションの機能が有効にします。|  
 |[ソリューション内の項目]|フィーチャーに追加できるすべての SharePoint アイテムです。|  

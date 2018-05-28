@@ -10,19 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acb8959aa18741c61e4a6719641645eb9be9ea70
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d144728d86bf57a5af837fb8740becd1b6ee4c22
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="visualizing-eventsource-events-as-markers"></a>マーカーとしての EventSource イベントの視覚化
+# <a name="visualize-eventsource-events-as-markers"></a>マーカーとしての EventSource イベントの視覚化
 同時実行ビジュアライザーは、マーカーとして EventSource イベントを表示でき、マーカーの表示方法を制御できます。 EventSource マーカーを表示するには、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを使用して ETW プロバイダー GUID を登録します。 同時実行ビジュアライザーには、[フラグ マーカー](../profiling/flag-markers.md)、[スパン マーカー](../profiling/span-markers.md)、[メッセージ マーカー](../profiling/message-markers.md)として EventSource イベントを表す既定の規約があります。 イベントにカスタム フィールドを追加することで、EventSource イベントの表示方法をカスタマイズできます。 マーカーに関する詳細については、「[同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)」を参照してください。 EventSource イベントの詳細については、「<xref:System.Diagnostics.Tracing>」を参照してください。  
   
 ## <a name="default-visualization-of-eventsource-events"></a>EventSource イベントの既定の視覚化  
  既定では、同時実行ビジュアライザーは EventSource イベントを表すために次の規約を使用します。  
   
-### <a name="marker-type"></a>マーカーの種類  
+### <a name="marker-type"></a>[マーカーの種類]  
   
 1.  [オペコード](http://msdn.microsoft.com/en-us/d97953df-669b-4c55-b1a8-925022b339b7) win:Start または win:Stop を持つイベントは、それぞれスパンの開始と終了として扱われます。  入れ子になっているスパンまたは重複するスパンは表示できません。 あるスレッドで開始し、別のスレッドで終了するイベント ペアは表示できません。  
   
@@ -52,10 +52,10 @@ ms.lasthandoff: 04/19/2018
 ### <a name="text"></a>テキスト  
  printf 型の書式設定されたテキスト メッセージがイベントに対して定義されている場合、マーカーの説明として表示されます。 それ以外の場合は、説明はイベントの名前と各ペイロード フィールドの値です。  
   
-## <a name="customizing-visualization-of-eventsource-events"></a>EventSource イベントの視覚化のカスタマイズ  
+## <a name="customize-visualization-of-eventsource-events"></a>EventSource イベントの視覚化のカスタマイズ  
  次のセクションで説明されているように、イベントに適切なフィールドを追加すれば、EventSource イベントの表示方法をカスタマイズできます。  
   
-### <a name="marker-type"></a>マーカーの種類  
+### <a name="marker-type"></a>[マーカーの種類]  
  `cvType` フィールド (バイト) を使用して、イベントを表すために使用するマーカーの種類を制御します。 cvType に使用できる値は次のとおりです。  
   
 |cvType 値|結果として得られるマーカーの種類|  
@@ -94,5 +94,5 @@ ms.lasthandoff: 04/19/2018
 > [!NOTE]
 >  SpanID を使用してスパンを入れ子にすること、同じスレッドで部分的に重複させること、または開始と終了のスレッドを別にすることはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ビジュアライザー マーカー](../profiling/concurrency-visualizer-markers.md)

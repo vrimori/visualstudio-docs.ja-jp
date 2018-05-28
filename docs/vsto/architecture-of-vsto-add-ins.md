@@ -1,5 +1,5 @@
 ---
-title: VSTO アドインのアーキテクチャ |Microsoft ドキュメント
+title: VSTO アドインのアーキテクチャ
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -19,16 +19,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 88757888662ec4e50411864274a4a34b3a84a3a7
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: 97532cfc91fb75bdeaa1f10c2fdcdd65eaec6850
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO アドインのアーキテクチャ
   Visual Studio の Office Developer Tools を使用して作成される VSTO アドインには、安定性とセキュリティを重視するアーキテクチャ上の特性があり、Microsoft Office と密接に連携させることができます。 このトピックでは、VSTO アドインの次の点について説明します。  
   
--   [VSTO アドインについて](#UnderstandingAddIns)  
+-   [VSTO アドインを理解します。](#UnderstandingAddIns)  
   
 -   [VSTO アドインのコンポーネント](#AddinComponents)  
   
@@ -36,9 +36,9 @@ ms.lasthandoff: 04/28/2018
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
- 詳細については、VSTO アドインの作成は、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[の取得開始プログラミングは、VSTO アドイン](../vsto/getting-started-programming-vsto-add-ins.md)です。  
+ 詳細については、VSTO アドインの作成は、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md)と[VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)です。  
   
-##  <a name="UnderstandingAddIns"></a> VSTO アドインについて  
+##  <a name="UnderstandingAddIns"></a> VSTO アドインを理解します。  
  Visual Studio の Office Developer Tools を使用して VSTO アドインをビルドする場合は、Microsoft Office アプリケーションによって読み込まれるマネージ コード アセンブリを作成します。 アセンブリが読み込まれると、VSTO アドインがアプリケーションで発生するイベント (ユーザーがメニュー項目をクリックした場合など) に応答できます。 また、VSTO アドインはオブジェクト モデルを呼び出して、アプリケーションの自動化や拡張を行うこともでき、さらに [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]のすべてのクラスも使用できます。  
   
  アセンブリは、アプリケーションのプライマリ相互運用機能アセンブリを介してアプリケーションの COM コンポーネントとの通信を行います。 詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリ](../vsto/office-primary-interop-assemblies.md)と[Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
@@ -54,40 +54,40 @@ ms.lasthandoff: 04/28/2018
 ### <a name="registry-entries"></a>レジストリ エントリ  
  Microsoft Office アプリケーションは、一連のレジストリ エントリを検索して VSTO アドインを検出します。 完全なは、VSTO アドインで使用されるレジストリ エントリの一覧を表示するには、次を参照してください。 [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)です。  
   
- ソリューションをビルドすると、Visual Studio によって開発用コンピューター上に必要なレジストリ エントリがすべて作成されるので、VSTO アドインをデバッグして実行することができます。 詳細については、次を参照してください。 [Office ソリューションのビルド](../vsto/building-office-solutions.md)です。  
+ ソリューションをビルドすると、Visual Studio によって開発用コンピューター上に必要なレジストリ エントリがすべて作成されるので、VSTO アドインをデバッグして実行することができます。 詳細については、次を参照してください。[ビルド Office ソリューション](../vsto/building-office-solutions.md)です。  
   
- ClickOnce を使用してソリューションを配置すると、発行プロセスで生成されたセットアップ プログラムによってエンド ユーザーのコンピューター上にレジストリ キーが自動的に作成されます。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
+ ClickOnce を使用してソリューションを配置すると、発行プロセスで生成されたセットアップ プログラムによってエンド ユーザーのコンピューター上にレジストリ キーが自動的に作成されます。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションを配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
   
 ### <a name="deployment-manifest-and-application-manifest"></a>配置マニフェストとアプリケーション マニフェスト  
- VSTO アドインは配置マニフェストとアプリケーション マニフェストを使用して、最新バージョンの VSTO アドイン アセンブリを特定して読み込みます。 配置マニフェストは、最新のアプリケーション マニフェストを指します。 アプリケーション マニフェストは、VSTO アドイン アセンブリを指し、アセンブリ内で実行するエントリ ポイント クラスを指定します。 詳細については、「 [Application and Deployment Manifests in Office Solutions](../vsto/application-and-deployment-manifests-in-office-solutions.md)」を参照してください。  
+ VSTO アドインは配置マニフェストとアプリケーション マニフェストを使用して、最新バージョンの VSTO アドイン アセンブリを特定して読み込みます。 配置マニフェストは、最新のアプリケーション マニフェストを指します。 アプリケーション マニフェストは、VSTO アドイン アセンブリを指し、アセンブリ内で実行するエントリ ポイント クラスを指定します。 詳細については、次を参照してください。[アプリケーション マニフェストおよび配置マニフェスト Office ソリューションにおける](../vsto/application-and-deployment-manifests-in-office-solutions.md)です。  
   
 ### <a name="visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office ランタイム  
  Visual Studio の Office Developer Tools を使用して作成した VSTO アドインを実行するには、エンド ユーザーのコンピューターに [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] がインストールされている必要があります。 ランタイムには、アンマネージ コンポーネントと一連のマネージ アセンブリが含まれています。 アンマネージ コンポーネントは、VSTO アドイン アセンブリを読み込みます。 マネージ アセンブリにより、VSTO アドイン コードがホスト アプリケーションを自動化して拡張するために使用するオブジェクト モデルが提供されます。  
   
- 詳細については、「 [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)」を参照してください。  
+ 詳細については、次を参照してください。 [Visual Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)です。  
   
-##  <a name="HowAddinsWork"></a> How VSTO Add-ins Work with Microsoft Office Applications  
+##  <a name="HowAddinsWork"></a> VSTO アドインが Microsoft Office アプリケーションを操作する方法  
  ユーザーが Microsoft Office アプリケーションを起動すると、アプリケーションは配置マニフェストとアプリケーション マニフェストを使用して、最新バージョンの VSTO アドイン アセンブリを特定して読み込みます。 これらの VSTO アドインの基本アーキテクチャを、次の図に示します。  
   
  ![2007 office アドインのアーキテクチャ](../vsto/media/office07addin.png "2007 Office アドインのアーキテクチャ")  
   
 > [!NOTE]  
->  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とする Office ソリューションでは、PIA を直接呼び出す代わりに、ソリューション アセンブリに埋め込まれた PIA 型情報を使用してホスト アプリケーションのオブジェクト モデルを呼び出します。 詳細については、「 [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)」を参照してください。  
+>  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とする Office ソリューションでは、PIA を直接呼び出す代わりに、ソリューション アセンブリに埋め込まれた PIA 型情報を使用してホスト アプリケーションのオブジェクト モデルを呼び出します。 詳細については、次を参照してください。[デザインおよび Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)です。  
   
 ### <a name="loading-process"></a>読み込みプロセス  
  ユーザーがアプリケーションを起動すると、次のステップが実行されます。  
   
 1.  アプリケーションは、Visual Studio の Office Developer Tools を使用して作成された VSTO アドインを特定するエントリのレジストリをチェックします。  
   
-2.  アプリケーションは、これらのレジストリ エントリを検出すると、VSTOEE.dll を読み込みます。これにより、VSTOLoader.dll が読み込まれます。 これらは、Visual Studio 2010 Tools for Office Runtime のローダー コンポーネントであるアンマネージ DLL です。 詳細については、「 [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)」を参照してください。  
+2.  アプリケーションは、これらのレジストリ エントリを検出すると、VSTOEE.dll を読み込みます。これにより、VSTOLoader.dll が読み込まれます。 これらは、Visual Studio 2010 Tools for Office Runtime のローダー コンポーネントであるアンマネージ DLL です。 詳細については、次を参照してください。 [Visual Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)です。  
   
-3.  VSTOLoader.dll は [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] を読み込み、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]のマネージ部分を起動します。  
+3.  *VSTOLoader.dll*読み込みます、[!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]のマネージ部分を起動し、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。  
   
 4.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] はマニフェストの更新をチェックして、最新のアプリケーション マニフェストと配置マニフェストをダウンロードします。  
   
-5.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、一連のセキュリティ チェックを実行します。 詳細については、「 [Securing Office Solutions](../vsto/securing-office-solutions.md)」を参照してください。  
+5.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、一連のセキュリティ チェックを実行します。 詳細については、次を参照してください。[セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)です。  
   
-6.  VSTO アドインを信頼して実行できる場合、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は配置マニフェストとアプリケーション マニフェストを使用して、アセンブリの更新をチェックします。 利用できる新しいバージョンのアセンブリが存在する場合、ランタイムは、クライアント コンピューターの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] キャッシュに新しいバージョンのアセンブリをダウンロードします。 詳細については、次を参照してください。 [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)です。  
+6.  VSTO アドインを信頼して実行できる場合、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は配置マニフェストとアプリケーション マニフェストを使用して、アセンブリの更新をチェックします。 利用できる新しいバージョンのアセンブリが存在する場合、ランタイムは、クライアント コンピューターの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] キャッシュに新しいバージョンのアセンブリをダウンロードします。 詳細については、次を参照してください。 [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)です。  
   
 7.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、VSTO アドイン アセンブリの読み込み先となる新しいアプリケーション ドメインを作成します。  
   
@@ -95,24 +95,24 @@ ms.lasthandoff: 04/28/2018
   
 9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、VSTO アドインの <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> メソッドを呼び出します (このメソッドがオーバーライドされている場合)。  
   
-     必要に応じて、このメソッドをオーバーライドして、VSTO アドイン内のオブジェクトを他の Microsoft Office ソリューションに公開できます。 詳細については、「 [その他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。  
+     必要に応じて、このメソッドをオーバーライドして、VSTO アドイン内のオブジェクトを他の Microsoft Office ソリューションに公開できます。 詳細については、次を参照してください。[他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)です。  
   
 10. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、VSTO アドインの <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドを呼び出します (このメソッドがオーバーライドされている場合)。  
   
-     必要に応じて、このメソッドをオーバーライドして、機能拡張インターフェイスを実装するオブジェクトを返すことで Microsoft Office 機能を公開できます。 詳細については、「 [Customizing UI Features By Using Extensibility Interfaces](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)」を参照してください。  
+     必要に応じて、このメソッドをオーバーライドして、機能拡張インターフェイスを実装するオブジェクトを返すことで Microsoft Office 機能を公開できます。 詳細については、次を参照してください。[機能拡張インターフェイスによる UI のカスタマイズ機能](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)します。  
   
     > [!NOTE]  
     >  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は、ホスト アプリケーションでサポートされている機能拡張インターフェイスごとに、 <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドを呼び出します。 <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドの最初の呼び出しは、通常、 `ThisAddIn_Startup` メソッド呼び出しの前に実行されますが、 <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> メソッドが呼び出される時点や回数について、推測に基づいて VSTO アドインを作成してはいけません。  
   
-11. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は VSTO アドインの `ThisAddIn_Startup` メソッドを呼び出します。 このメソッドは、 <xref:Microsoft.Office.Tools.AddInBase.Startup> イベントの既定のイベント ハンドラーです。 詳細については、「 [Events in Office Projects](../vsto/events-in-office-projects.md)」を参照してください。  
+11. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] は VSTO アドインの `ThisAddIn_Startup` メソッドを呼び出します。 このメソッドは、 <xref:Microsoft.Office.Tools.AddInBase.Startup> イベントの既定のイベント ハンドラーです。 詳細については、次を参照してください。 [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)   
- [Visual Studio Tools for Office ランタイム](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
- [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
+ [ビジュアルの Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
+ [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
+ [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)   
+ [Office ソリューションを配置します。](../vsto/deploying-an-office-solution.md)  
   
   

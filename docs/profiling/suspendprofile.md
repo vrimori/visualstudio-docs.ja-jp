@@ -12,18 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b807076e56037344a360fb93f89da46eba1221a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1a156e7acfdb68d1fa523263835eeee4a573ff78
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="suspendprofile"></a>SuspendProfile
 `SuspendProfile` メソッドは、指定されたプロファイル レベルの保留/再開カウンターをインクリメントします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(  
                        PROFILE_CONTROL_LEVEL Level,   
                        unsigned int dwId);  
@@ -73,7 +73,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
 ## <a name="example"></a>例  
  SuspendProfile メソッドの例を以下に示します。 この例では、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別されるプロセスまたはスレッドに対して、StartProfile が既に呼び出されていることを前提としています。  
   
-```  
+```cpp  
 void ExerciseSuspendProfile()  
 {  
     // The initial value of the Suspend/Resume counter is 0.  

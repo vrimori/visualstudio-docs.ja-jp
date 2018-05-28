@@ -12,13 +12,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9206798c11fa0e5f63245235d633b755317e3cd2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f919bd6b3fdad1a9c7412960e14d8c9f4cf5af67
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="caller--callee-view----contention-data"></a>呼び出し元/呼び出し先ビュー - 競合データ
+# <a name="callercallee-view----contention-data"></a>呼び出し元/呼び出し先ビュー - 競合データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数の競合情報が表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
   
  **[現在の関数]** は中央のグリッドに表示されます。このグリッドには、選択した関数に関する競合情報が表示されます。 値には、関数のすべてのブロックしている競合が含まれます。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/19/2018
 |**ルート関数名**|現在の関数の名前です。 [VSPerfReport](../profiling/vsperfreport.md) コマンド ライン レポートでのみ有効です。|  
 |**ソース ファイル**|この関数の定義を含むソース ファイルです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [呼び出し元/呼び出し先ビュー](../profiling/caller-callee-view.md)   
  [呼び出し元/呼び出し先ビュー - サンプリング データ](../profiling/caller-callee-view-sampling-data.md)   

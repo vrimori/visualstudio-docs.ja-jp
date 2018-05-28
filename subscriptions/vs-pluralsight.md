@@ -9,11 +9,11 @@ description: Visual Studio サブスクリプションに含まれる Pluralsigh
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 8f1a8485f71bb1d9162077730d3fca42478e45a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4782c1da48b21fffcb0ebc5abc05b56a8116ae0
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 | Visual Studio Enterprise (NFR<sup>1</sup>) | プログラム                                       | 使用できません                                  |N/A|
 <sup>1</sup>  *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、BizSpark、MCT Software & Services Developer、MCT Software & Service、Microsoft Valued Partner (MVP)、Region Director (RD)、Microsoft Partner Network (MPN)、FTE、Imagine が含まれます。*
 
-<sup>2</sup> *Pluralsight サブスクリプションの有効期限が切れた後、3 つの学習分野のいずれかで 50 個の選ばれた Pluralsight コースに 12 か月間アクセスできます。詳細については、以下のよく寄せられる質問を参照してください。*
+<sup>2</sup>  *Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。一度サブスクライバーが特典を使用すると、特典はリセットされません。詳細については、以下のよく寄せられる質問を参照してください。Pluralsight サブスクリプションの有効期限が切れた後、3 つの学習分野のいずれかで 50 個の選ばれた Pluralsight コースに 12 か月間アクセスできます。*
 
 どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
 
@@ -91,10 +91,23 @@ ms.lasthandoff: 04/16/2018
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Q: Visual Studio Enterprise サブスクリプションを持っていますが、特典ページに Pluralsight タイルが表示されません。 理由 
 A: すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [サブスクリプションの表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
 
+### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Q: 任意のカスタマイズされた学習のプレイリストやチャネルへのアクセス権はありませすか? 
+A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニング特典の一部としてチャネルをエクスポートするアクセス権を取得します。 これらのチャネルは Microsoft の専門家によって特別に作成されており、.Net、Azure、DevOps、モビリティの学習範囲を対象としています。 Visual Studio サブスクリプション ポータル [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) から Pluralsight 特典をアクティブにし、Pluralsight 学習ページでこれらのチャネルにアクセスします。 
+
+•   Scott Hanselmann (.Net、Azure) - [http://go.pluralsight.com/scott-hanselman](http://go.pluralsight.com/scott-hanselman)
+
+•   Donovan Brown (DevOps) - [http://go.pluralsight.com/donovan-brown](http://go.pluralsight.com/donovan-brown) 
+
+•   James Montemagno (モビリティ) - [http://go.pluralsight.com/james-montemagno](http://go.pluralsight.com/james-montemagno)
+
+
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。  
 A: 無料の Pluralsight サブスクリプションの終了時には、2 つのオプションがあります。
 - クラウドでのアプリ開発、AI、機械学習およびデータ、クラウドでの DevOps の 3 つの主要領域の、50 の制限付きのコース セットに、12 か月間無料でアクセスできます (お持ちのサブスクリプションが対象かどうかを確認するには、[特典を受ける条件についての表](#eligibility)をご確認ください)。 有効期限後に無料アクセスしたい場合については、Pluralsight からの電子メールを確認してください。 それぞれの部分的なライブラリの下で[コース一覧](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)をご確認いただけます。
-- Pluralsight から直接 10% 割引でサブスクリプションを購入した場合、全カタログを使用することが可能です。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。  
+- Pluralsight から直接 10% 割引でサブスクリプションを購入した場合、全カタログを使用することが可能です。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。 
+
+### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q: 会社が Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?
+A: いいえ。  Pluralsight 特典は、個人に関連付けられた単一ユーザーのみが使用できます。  一度サブスクライバーが特典を使用すると、特典はリセットされません。  これは、小売店、クラウド、ボリューム ライセンス (VL) の購入など、すべての購入チャネルに当てはまります。 
 
 ## <a name="support-resources"></a>サポート リソース
 -  [Pluralsight ヘルプ センター](https://help.pluralsight.com/help)は、Pluralsight コースの取得や Pluralsight Web サイトの使用をサポートします。 

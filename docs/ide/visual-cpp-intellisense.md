@@ -9,15 +9,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd4284e242f91525e14630375d5ea624968f60c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0d82b40c7f0f06925be0fc6f55c5a01a4114946e
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 
-C++ 用の IntelliSense は、スタンドアロン ファイルおよび C++ プロジェクトの一部を成すファイルで使用することができます。 クロスプラットフォーム プロジェクトでは、いくつかの IntelliSense 機能が、Android や iOS のコンテキスト内にいるときでも共有コード プロジェクト内の .cpp および .c ファイルで使用できます。
+C++ 用の IntelliSense は、スタンドアロン ファイルおよび C++ プロジェクトの一部を成すファイルで使用することができます。 クロスプラットフォーム プロジェクトでは、いくつかの IntelliSense 機能が、Android や iOS のコンテキスト内にいるときでも共有コード プロジェクト内の *.cpp* および *.c* ファイルで使用できます。
 
 ## <a name="intellisense-features-in-c"></a>C++ の IntelliSense 機能
 
@@ -73,34 +73,34 @@ IntelliSense は、コード作成をより便利にするための一連の機�
 
 次の点に注意してください。
 
-- __ANDROID\_\_ が Android プロジェクトに対して定義されているため、8 行目の #else 分岐は淡色表示で非アクティブ領域として表示されています。
+- `__ANDROID__` が Android プロジェクトに対して定義されているため、8 行目の `#else` 分岐は淡色表示で非アクティブ領域として表示されています。
 
-- 11 行目のあいさつの変数は HELLO 識別子で初期化され、紫の波線で表示されています。 これは現在アクティブではない iOS プロジェクトに、HELLO 識別子が定義されていないためです。 Android プロジェクトでは、11 行目がコンパイルされますが、iOS ではコンパイルされません。 これは共有コードのため、現在アクティブな構成でコンパイルする場合でも、変更する必要があります。
+- 11 行目のあいさつの変数は `HELLO` 識別子で初期化され、紫の波線で表示されています。 これは現在アクティブではない iOS プロジェクトに、`HELLO` 識別子が定義されていないためです。 Android プロジェクトでは、11 行目がコンパイルされますが、iOS ではコンパイルされません。 これは共有コードのため、現在アクティブな構成でコンパイルする場合でも、変更する必要があります。
 
-- 12 行目の BYE 識別子は赤の波線で表示されており、現在選択されているアクティブ プロジェクトでは定義されていません。
+- 12 行目の `BYE` 識別子は赤の波線で表示されており、現在選択されているアクティブ プロジェクトでは定義されていません。
 
-ここで、アクティブなプロジェクトを iOS.StaticLibrary に変更し、波線がどう変化するかに注目してください。
+ここで、アクティブなプロジェクトを **iOS.StaticLibrary** に変更し、波線がどう変化するかに注目してください。
 
 ![アクティブなプロジェクトとして iOS が選択されています。](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")
 
 次の点に注意してください。
 
-- __ANDROID\_\_ が iOS プロジェクトに対して定義されていないため、6 行目の #ifdef 分岐は淡色表示で非アクティブ領域として表示されています。
+- `__ANDROID__` が iOS プロジェクトに対して定義されていないため、6 行目の `#ifdef` 分岐は淡色表示で非アクティブ領域として表示されています。
 
-- 11 行目のあいさつの変数は、HELLO 識別子で初期化され、赤の波線で表示されています。 これは現在アクティブな iOS プロジェクトに、HELLO 識別子が定義されていないためです。
+- 11 行目のあいさつの変数は、`HELLO` 識別子で初期化され、赤の波線で表示されています。 これは現在アクティブな iOS プロジェクトに、`HELLO` 識別子が定義されていないためです。
 
-- 12 行目の BYE 識別子は紫の波線で表示されており、現在非アクティブな Android.NativeActivity プロジェクトでは定義されていません。
+- 12 行目の `BYE` 識別子は紫の波線で表示されており、現在非アクティブな **Android.NativeActivity** プロジェクトでは定義されていません。
 
 ### <a name="intellisense-for-stand-alone-files"></a>スタンドアロン ファイルの IntelliSense
 
-プロジェクトの外部で 1 つのファイルを開いても、やはり IntelliSense を取得します。 **[テキスト エディター]** > **[C/C++]** > **[詳細設定]** の **[オプション]** ダイアログ ボックスで特定の IntelliSense 機能を有効または無効にすることができます。 プロジェクトの一部ではない 1 つのファイルに IntelliSense を構成するには、**IntelliSense and Browsing for Non-Project Files** (IntelliSense およびプロジェクト以外のファイルの参照) を検索します。
+プロジェクトの外部で 1 つのファイルを開いても、やはり IntelliSense を取得します。 **[テキスト エディター]** > **[C/C++]** > **[詳細設定]** の **[オプション]** ダイアログ ボックスで特定の IntelliSense 機能を有効または無効にすることができます。 プロジェクトの一部ではない 1 つのファイルに IntelliSense を構成するには、**IntelliSense を表示し、非プロジェクト ファイルのセクション**を確認します。
 
 ![Visual C&#43;&#43; の単一ファイルの IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")
 
-既定では、単一ファイルの IntelliSense は標準のインクルード ディレクトリだけを使用してヘッダー ファイルを検索します。 他にディレクトリを追加するには、次の図に示すとおり、ソリューション ノードのショートカット メニューを開き、**[デバッグ ソース ファイル]** リストにディレクトリを追加します。
+既定では、単一ファイルの IntelliSense は標準のインクルード ディレクトリだけを使用してヘッダー ファイルを検索します。 他にディレクトリを追加するには、次の図に示すとおり、**ソリューション** ノードのショートカット メニューを開き、**[デバッグ ソース ファイル]** リストにディレクトリを追加します。
 
 ![ヘッダー ファイルまでのパスを追加しています。](../ide/media/intellisensedebugyourcode.jpg "IntelliSenseDebugYourCode")
 
 ## <a name="see-also"></a>関連項目
 
-- [IntelliSense の使用](../ide/using-intellisense.md)
+- [IntelliSense を使用する](../ide/using-intellisense.md)

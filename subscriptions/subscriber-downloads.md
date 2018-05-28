@@ -9,11 +9,11 @@ description: Visual Studio サブスクリプションに含まれている Micr
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 708a33c35739acc6f0742d778a51e635a35d9567
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 28239e7588e99573d709db08255c38142c907098
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでサブスクライバー ダウンロードを使用します。
 サブスクライバー特典の一環として、広い範囲のソフトウェアのダウンロードにアクセスできます。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 04/06/2018
 
 特定の製品がサブスクライバーを利用できない理由はいくつか考えられます。
 
-- **製品がお客様のサブスクリプション レベルまたはプログラムに含まれていない。** お客様のサブスクリプションでご利用いただけるソフトウェアや特典に関する[詳細情報](https://www.visualstudio.com/vs/pricing/)をご覧になるか、サブスクリプション レベル別の利用可能な製品の全一覧表を[ダウンロード](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Products_by_Benefit_Level.xlsx_)してください。 [Microsoft Partner Network](https://partner.microsoft.com/) などの一部のプログラムは、それぞれの特典の一部として Visual Studio サブスクリプションを提供します。  これらのサブスクリプションには、購入した Visual Studio サブスクリプションに含まれるすべての製品は含まれません。 これらのプログラムのサブスクライバーは、それらのプログラムのサポート チームに、製品をダウンロードできるかどうかについて問い合わせる必要があります。
+- **製品がお客様のサブスクリプション レベルまたはプログラムに含まれていない。** お客様のサブスクリプションでご利用いただけるソフトウェアや特典に関する[詳細情報](https://www.visualstudio.com/vs/pricing/)をご覧になるか、サブスクリプション レベル別の利用可能な製品の全一覧表を[ダウンロード](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Products_by_Benefit_Level.xlsx)してください。 [Microsoft Partner Network](https://partner.microsoft.com/) などの一部のプログラムは、それぞれの特典の一部として Visual Studio サブスクリプションを提供します。  これらのサブスクリプションには、購入した Visual Studio サブスクリプションに含まれるすべての製品は含まれません。 これらのプログラムのサブスクライバーは、それらのプログラムのサポート チームに、製品をダウンロードできるかどうかについて問い合わせる必要があります。
 - **製品がサブスクリプションの一部ではない**。 特別なライセンス条項、技術上の制限事項、開発者の関連性などの理由により、一部の Microsoft 製品はサブスクリプションに含まれていません。 サブスクリプションに製品を追加することをご提案される場合は、最寄りの Visual Studio [カスタマー サービス](https://www.visualstudio.com/subscriptions/support/) センターまで電子メールでご連絡ください。
 - **製品が一般公開されている**。 一部のツール、SDK、DDK、サービス パックは、[Microsoft ダウンロード センター](https://www.microsoft.com/download)で一般公開されています。 このような製品は、ダウンロードに公開されない場合があります。
 - **まだ製品がリリースされていない**。  ダウンロードでは、多くのプレリリース (ベータ) 版やリリース候補版を入手できます。 ただし、すべてのベータ版が公開されるわけではありません。たとえば、一部のベータ版には特別な登録や資格が必要です。 オープン テクニカル ベータ プログラムの詳細については、[Microsoft Connect](http://connect.microsoft.com/) にアクセスしてください。

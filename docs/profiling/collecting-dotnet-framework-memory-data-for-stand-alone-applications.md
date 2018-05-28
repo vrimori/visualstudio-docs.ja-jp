@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71de1a690e872ad11e776a86dcfdb47ba41e2f97
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a12cdea552c1008f3e26c868c206ccabaebced91
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用して .NET Framework メモリ データを収集する
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/19/2018
 |----------|---------------------|  
 |**アプリケーションの起動と .NET メモリのプロファイリング**|-   [方法: プロファイラーによって .NET Framework アプリケーションを起動し、メモリ データを収集する](../profiling/how-to-launch-a-stand-alone-dotnet-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line.md)|  
 |**プロファイラーを NET アプリケーションにアタッチする**|-   [方法: プロファイラーを .NET Framework アプリケーションにアタッチし、メモリ データを収集する](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md)|  
-|**アプリケーションをインストルメント化して .NET メモリ データを収集する**|-   [方法: プロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメント化し、メモリ データを収集する](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line.md)|  
+|**アプリケーションをインストルメント化して .NET メモリ データを収集する**|-   [方法: プロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメント化し、メモリ データを収集する](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|  
   
 ## <a name="related-tasks"></a>関連タスク  
   
@@ -34,16 +34,16 @@ ms.lasthandoff: 04/19/2018
   
 |タスク|関連コンテンツ|  
 |----------|---------------------|  
-|**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
-|**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line.md)|  
-|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line.md)|  
+|**サンプリング メソッドを使用したプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|  
+|**インストルメンテーション方式を使用したプロファイリング**|-   [インストルメンテーションを使用した詳細なタイミング データの収集](../profiling/collecting-detailed-timing-data-for-a-stand-alone-application.md)|  
+|**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
 |**階層の相互作用データを追加する**|-   [階層相互作用データの収集](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
 ### <a name="profiling-net-memory-data"></a>.NET メモリ データのプロファイリング  
   
 |タスク|関連コンテンツ|  
 |----------|---------------------|  
-|**ASP.NET アプリケーションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md)|  
+|**ASP.NET アプリケーションのプロファイリング**|-   [メモリ データの収集](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
 |**サービスのプロファイリング**|-   [.NET メモリ データの収集](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
   
 ### <a name="analyzing-net-memory-data-views-and-reports"></a>.NET メモリ データ ビューとレポートの分析  

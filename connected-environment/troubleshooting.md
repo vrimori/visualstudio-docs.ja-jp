@@ -66,7 +66,7 @@ VS Code デバッガーを実行すると、`Configured debug type 'coreclr' is 
 
 **理由:** ビルド コンテキストは、既定ではプロジェクト/サービス レベルであるため、使用するライブラリ プロジェクトは見つかりません。
 
-**次の操作を試してください。**実行する必要がある操作は次のとおりです。
+**次の操作を試してください。** 実行する必要がある操作は次のとおりです。
 1. vsce.yaml ファイルを変更して、ビルド コンテキストをソリューション レベルに設定します。
 2. Dockerfile および Dockerfile.develop ファイルを変更して、新しいビルド コンテキストを基準に正しく csproj ファイルを参照するようにします。
 3. .sln ファイルの横に .dockerignore ファイルを配置して、必要に応じて変更します。
@@ -79,7 +79,7 @@ https://github.com/sgreenmsft/buildcontextsample で例を見つけることが�
 
 **理由:** 選択した Azure サブスクリプションで Microsoft.ConnectedEnvironment 名前空間が登録されていません。
 
-**次の操作を試してください。**所有者または共同作成者のアクセス権を持つユーザーは、以下の Azure CLI コマンドを実行して、Microsoft.ConnectedEnvironment 名前空間を手動で登録できます。
+**次の操作を試してください。** 所有者または共同作成者のアクセス権を持つユーザーは、以下の Azure CLI コマンドを実行して、Microsoft.ConnectedEnvironment 名前空間を手動で登録できます。
 
 ```cmd
 az provider register --namespace Microsoft.ConnectedEnvironment
@@ -89,7 +89,7 @@ az provider register --namespace Microsoft.ConnectedEnvironment
 
 **理由:** VSCE を、プロジェクト内の特定の Dockerfile をポイントするように構成することができます。 VSCE が予期した Dockerfile を使用してコンテナーをビルドしていないように見える場合は、VSCE にその場所を明示的に指示する必要がある場合があります。 
 
-**次の操作を試してください。**プロジェクト内の VSCE で生成された `vsce.yaml` ファイルを開きます。 `configurations->develop->build->dockerfile` ディレクティブを使って、使用する Dockerfile をポイントします。
+**次の操作を試してください。** プロジェクト内の VSCE で生成された `vsce.yaml` ファイルを開きます。 `configurations->develop->build->dockerfile` ディレクティブを使って、使用する Dockerfile をポイントします。
 
 ```
 ...

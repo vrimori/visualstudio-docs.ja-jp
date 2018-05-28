@@ -10,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: a8602915827c442fa2fc4cbddf4db2a25ef21749
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d813226dfa79a65da85a2b17e54306d12a4ed09
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 
@@ -95,7 +95,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
   
     -   **[インストール]** をクリックします。  
   
-7.  手順 7 を繰り返し、**Microsoft.CSharp** パッケージを見つけ、.NET Standard プロジェクトにインストールします。 このライブラリは、.NET Standard ライブラリの C# `dynamic` データ型を使用するために必要です。
+7.  手順 6 を繰り返し、**Microsoft.CSharp** パッケージを見つけ、.NET Standard プロジェクトにインストールします。 このライブラリは、.NET Standard ライブラリの C# `dynamic` データ型を使用するために必要です。
   
 8.  ソリューションをビルドし、ビルド エラーがないことを確認します。  
   

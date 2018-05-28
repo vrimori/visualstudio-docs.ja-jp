@@ -14,18 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 069d51e8264a98fac8f02d6000044ce61cee2fcb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 84bdb0b1eb5c875bb1fe30595c59e97c0338b37f
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="markerseriesmarkerseries-destructor"></a>marker_series::~marker_series デストラクター
 marker_series オブジェクトを破棄し、割り当てられているすべてのリソースを解放します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 ~marker_series();  
 ```  
   

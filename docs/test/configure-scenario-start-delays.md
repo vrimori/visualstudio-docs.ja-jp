@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストのシナリオ開始時刻の遅延を構成する | Microsoft Docs
+title: ロード テストのシナリオ開始時刻の遅延を構成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,13 @@ ms.assetid: 2f634fba-8dfa-4c7a-a8b9-be867b78d16a
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f39f19e0c09da69ff82718f9c0f6efd8d05a77de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b098fac29652fdb843301f780e1c7cdc6b32aabc
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>ロード テストのシナリオ開始時刻の遅延を構成する
 
@@ -71,11 +72,11 @@ ms.lasthandoff: 04/16/2018
 
      **ロード テスト エディター**が表示されます。 ロード テスト ツリーが表示されます。
 
-2. ロード テスト ツリーの **[シナリオ]** フォルダーで、使用するエージェントを指定するシナリオのノードを選択します。
+2. ロード テスト ツリーの **[シナリオ]** フォルダーで、ウォームアップ動作を変更するシナリオのノードを選択します。
 
 3. **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
-     [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
+     **[プロパティ]** ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 
      **[ウォームアップ時に無効化]** プロパティで、**[True]** または **[False]** を選択します。
 

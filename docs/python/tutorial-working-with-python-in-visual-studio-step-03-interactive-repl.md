@@ -1,6 +1,6 @@
 ---
-title: Python の使用、手順 3、対話型 REPL ウィンドウ
-description: Visual Studio で Python を使用するための基礎となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。
+title: Python の概要のチュートリアル、手順 3、対話型 REPL
+description: Visual Studio での Python 機能の中核となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0a0cbe766f1b31166185275989bfa0678ed50690
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: aface4f125ea8c5a4209e4f220330f15c8ed6d1c
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -89,7 +89,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 
 1. ここでは、対話型ウィンドウの迅速な REPL 対話型ウィンドウを使用し、小規模なコードの詳細を処理し、そのコードをプロジェクトのソース ファイルに追加しました。 Ctrl + F5 キー (または **[デバッグ] > [デバッグなしで開始]**) を使用してコードを今再実行した場合、期待した正確な結果を得られます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [デバッガーでコードを実行する](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)

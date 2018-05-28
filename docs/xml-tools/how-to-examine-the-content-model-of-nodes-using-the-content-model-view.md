@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2bb1bcc13ad908b69a847662178cd6cd13aeec6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 650478a92ea2dabc9aeef239a68bdff428429cd7
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>方法: コンテンツ モデル ビューを使用してノードのコンテンツ モデルを調べる
+# <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>方法: コンテンツ モデル ビューを使用して、ノードのコンテンツ モデルを調べる
 
 このトピックを使用してノードを調べる方法について説明、[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)です。
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  をクリックして**を表示および基になる XML スキーマ ファイルを編集する XML エディターを使用して**スタート ビューにします。
 
-3.  XML スキーマのサンプル コードをコピー[サンプル XML スキーマ: 購買発注書スキーマ](../xml-tools/sample-xsd-file-purchase-order-schema.md)し、既定では、新しい XSD ファイルに追加されたコードの代わりに貼り付けます。
+3.  XML スキーマのサンプル コードをコピー[サンプルの XML スキーマ: 購買発注書のスキーマ](../xml-tools/sample-xsd-file-purchase-order-schema.md)し、既定では、新しい XSD ファイルに追加されたコードの代わりに貼り付けます。
 
 4.  選択、`purchaseOrder`を右クリックして、スキーマ エクスプ ローラー内の要素、 `purchaseOrder` XML エディターでの要素を選択して**XML エクスプ ローラーで表示**です。
 

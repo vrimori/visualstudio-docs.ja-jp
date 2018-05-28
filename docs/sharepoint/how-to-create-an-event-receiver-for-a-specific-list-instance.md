@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4d6d01b9f9ed0db8588124b71c982b2d37aa86ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e5c68db8d1c9809e487fc8f64159d8b385a96a2
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>方法: 特定のリスト インスタンスに対するイベント レシーバーを作成する
   リスト インスタンスのイベント レシーバーは、リスト定義の任意のインスタンスで発生するイベントに応答します。 イベント レシーバーのテンプレートでは、特定のリスト インスタンスのターゲット設定は有効にしません、対象とする特定のリスト インスタンス内のイベントに応答するリストの定義には、イベント レシーバーを変更することができます。  
@@ -42,12 +42,12 @@ ms.lasthandoff: 04/16/2018
   
 5.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、イベント レシーバー プロジェクトを作成します。  
   
-6.  **イベント レシーバーの種類が必要ですか?**一覧で、選択**リスト項目イベント**です。  
+6.  **イベント レシーバーの種類が必要ですか?** 一覧で、選択**リスト項目イベント**です。  
   
     > [!NOTE]  
     >  その他の種類のリストの定義に、スコープのイベント レシーバーを選択することもできます。**リスト電子メール イベント**または**リスト ワークフロー イベント**です。  
   
-7.  **イベント ソースとなる項目?**一覧で、選択**お知らせ**です。  
+7.  **イベント ソースとなる項目?** 一覧で、選択**お知らせ**です。  
   
 8.  **、次のイベントを処理**一覧で、、**項目が追加されている**チェック ボックスをオンにして、**完了**ボタンをクリックします。  
   
@@ -55,13 +55,13 @@ ms.lasthandoff: 04/16/2018
   
      イベント レシーバーは、現在次の行を使用してお知らせリストの定義を参照します。  
   
-    ```  
+    ```xml  
     <Receivers ListTemplateId="104">  
     ```  
   
      この行を次のテキストに変更します。  
   
-    ```  
+    ```xml  
     <Receivers ListUrl="Lists/TestAnnouncements">  
     ```  
   

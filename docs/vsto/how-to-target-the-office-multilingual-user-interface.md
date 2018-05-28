@@ -1,5 +1,5 @@
 ---
-title: '方法: Office Multilingual User Interface をターゲット |Microsoft ドキュメント'
+title: '方法: Office の多言語ユーザー インターフェイス ターゲット'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,28 +20,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 54b305311b686f527a79092280fbc33c3974247e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b917479598b73f71a0f3092c874276a700717d6
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="how-to-target-the-office-multilingual-user-interface"></a>方法 : Office Multilingual User Interface を使用する
+# <a name="how-to-target-the-office-multilingual-user-interface"></a>方法: Office の多言語ユーザー インターフェイス ターゲット
   Multilingual User Interface (MUI) は、エンドユーザーのユーザー インターフェイス (UI) の言語を変更する機能を提供する Microsoft Office 機能です。 たとえば、英語の UI で作業している、エンドユーザーは、スペイン語に、UI の言語を変更できます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Office の複数の言語を使用するユーザー、アプリケーションを使用する場合は、自動的に UI (ユーザーにインストールされている正しいリソースがある場合)、ユーザーのコンピューターで Office で使用されている言語と一致する文字列の言語を変更するコードを追加できます。  
+ Office の多くの言語を使用するユーザー、アプリケーションを使用する場合は、自動的に UI (ユーザーにインストールされている正しいリソースがある場合)、ユーザーのコンピューターで Office で使用されている言語と一致する文字列の言語を変更するコードを追加できます。  
   
-### <a name="to-check-the-current-office-ui-setting"></a>Office UI の現在の設定を確認するには  
+## <a name="to-check-the-current-office-ui-setting"></a>Office UI の現在の設定を確認するには  
   
-1.  使用して、<xref:System.Threading.Thread.CurrentUICulture%2A>現在のスレッドのプロパティです。 ユーザーのコンピューターで現在実行されている Office のバージョンで使用されている言語に合わせての UI 文字列の言語を設定します。  
+1.  使用して、<xref:System.Threading.Thread.CurrentUICulture%2A>現在のスレッドのプロパティです。 ユーザーのコンピューターで現在実行されている Office のバージョンで使用する言語に合わせての UI 文字列の言語を設定します。  
   
      [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]
      [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [方法: プライマリ相互運用機能アセンブリをターゲットの Office アプリケーション](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)  
   
   

@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 34975f93b719c759707110907a3c19dabbd661c1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 688c4d8d9193ec33f0dcb63923673826a453c9be
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する
   Visual Studio で、使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー**を SharePoint サイト上のコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**既定では一部のコンポーネントが表示されません。 このチュートリアルで拡張する**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
+3.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** または**Visual Basic** 、ノードを選択し、 **Extensibility**ノード。  
   
     > [!NOTE]  
     >  **Extensibility**ノードは、Visual Studio SDK をインストールする場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  **新しいプロジェクト**] ダイアログ ボックスで、展開、 **Visual c#**ノードまたは**Visual Basic**ノードを展開し、[ **Windows**ノード。  
+2.  **新しいプロジェクト**] ダイアログ ボックスで、展開、 **Visual c#** ノードまたは**Visual Basic**ノードを展開し、[ **Windows**ノード。  
   
 3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 4.5** 、.NET Framework のバージョンの一覧にします。  
   
@@ -103,17 +103,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **ソリューション エクスプ ローラー**でソリューション ノードのショートカット メニューを開き、**追加**を選択し**新しいプロジェクト**です。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#**ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual c#** ノードまたは**Visual Basic**  ノードを選択し、 **Windows**ノード。  
   
 3.  ダイアログ ボックスの上部には、次のように選択します。 **.NET Framework 3.5** 、.NET Framework のバージョンの一覧にします。  
   
-4.  
-  
-5.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartCommands**を選択し、 **OK**ボタンをクリックします。  
+4.  プロジェクト テンプレートの一覧で選択**クラス ライブラリ**、プロジェクトに名前を**WebPartCommands**を選択し、 **OK**ボタンをクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 追加、 **WebPartCommands**プロジェクトがソリューションにし、既定の Class1 コード ファイルを開きます。  
   
-6.  Class1 コード ファイルをプロジェクトから削除します。  
+5.  Class1 コード ファイルをプロジェクトから削除します。  
   
 ## <a name="configuring-the-projects"></a>プロジェクトの構成  
  拡張機能を作成するコードを記述する前に、コード ファイルおよびアセンブリ参照を追加し、プロジェクト設定を構成する必要があります。  
@@ -267,7 +265,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-build-the-solution"></a>ソリューションをビルドするには  
   
-1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+1.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
     > [!WARNING]  
     >  この時点で、VSIX マニフェスト ファイルでは、作成者の値がなかったために、WebPartNode プロジェクトは、ビルド エラーがあります。 このエラーは解消後の手順で値を追加する場合。  

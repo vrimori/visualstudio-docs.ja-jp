@@ -23,11 +23,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6eef7953a767e08febcb3e8dc42ad4f55e73889c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08daee9f9b8a7bdfbe71b4787eaaaeb3baa178d9
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="creating-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションの作成
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ドキュメントとリスト アイテムを SharePoint Web サイトでのライフ サイクルを管理するカスタム ワークフローを作成するのに役立つツールを提供します。 指定された項目には、デザイナー、一連のアクティビティのコントロール、および必要なアセンブリ参照が含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 含まれています、 **SharePoint カスタマイズ ウィザード**を作成し、ワークフローを構成するために、します。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="workflows-in-sharepoint"></a>SharePoint でのワークフロー  
  ワークフローを SharePoint ライブラリまたはリストに追加する場合は、ライブラリまたはリスト内のすべてのアイテムで、ビジネス プロセスを適用します。 ワークフローは、システムまたはユーザーが項目を編集して、確認を送信するなど、各項目に対して実行する必要がありますアクションを説明します。 呼ばれるこれらのアクション*アクティビティ*ワークフローのビルド ブロックです。  
   
- SharePoint ワークフローを作成することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]し、SharePoint Web サイトに展開します。 ワークフローは、SharePoint に配置される後、は、ライブラリまたはリストに関連付けます。 できますし、開始する必要が自動的に、プロセスが、またはユーザーによって手動でします。 ワークフロー操作の詳細については、次を参照してください。[プロセスを管理するワークフローを使用して](http://go.microsoft.com/fwlink/?LinkId=79757)です。  
+ SharePoint ワークフローを作成することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]し、SharePoint Web サイトに展開します。 ワークフローは、SharePoint に配置される後、は、ライブラリまたはリストに関連付けます。 できますし、開始する必要が自動的に、プロセスが、またはユーザーによって手動でします。 ワークフロー操作の詳細については、次を参照してください。 [SharePoint の開発を Visual Studio を使用してワークフロー](https://docs.microsoft.com/sharepoint/dev/general-development/develop-sharepoint-workflows-using-visual-studio)です。  
   
 ## <a name="creating-custom-sharepoint-workflows"></a>カスタム SharePoint ワークフローを作成します。  
  2 つの SharePoint ワークフロー プロジェクトで使用できる[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]:**シーケンシャル ワークフロー**と**ステート マシン ワークフロー**です。  
