@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a091ce71312778353a7f09869d6de45bc394c665
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8b9b85d5bf1bab61fbc59c0f90411c3e70545745
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="profiler-sampling-method-data-views"></a>プロファイラー サンプリング メソッドのデータ ビュー
 ここでは、サンプリング メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/19/2018
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 UWP アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要ビュー](../profiling/summary-view-sampling-data.md)  
+ [概要 ビュー](../profiling/summary-view-sampling-data.md)  
  サンプルの収集時に最も頻繁に実行された関数、および最も多くの個別作業を実行した関数が一覧表示されます。  
   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)  
@@ -38,10 +38,10 @@ ms.lasthandoff: 04/19/2018
  [呼び出し元/呼び出し先ビュー - サンプリング データ](../profiling/caller-callee-view-sampling-data.md)  
  選択した関数と、選択した関数を呼び出した関数および選択した関数によって呼び出された関数のプロファイル データが表示されます。  
   
- [関数 ビュー](../profiling/functions-view-sampling-data.md)  
+ [関数ビュー](../profiling/functions-view-sampling-data.md)  
  プロファイリングが関数ごとに整理され、サンプルの収集時に実行された関数が一覧表示されます。  
   
- [行 ビュー](../profiling/lines-view-sampling-data.md)  
+ [行ビュー](../profiling/lines-view-sampling-data.md)  
  サンプルの収集時に実行されたソース コード行が一覧表示されます。  
   
  [命令ポインター (IP) ビュー](../profiling/instruction-pointers-ips-view-sampling-data.md)  
@@ -64,5 +64,5 @@ ms.lasthandoff: 04/19/2018
  [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)  
  .NET メモリ データを含むプロファイラー データ ファイルのビューとレポートに関するリファレンス情報。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

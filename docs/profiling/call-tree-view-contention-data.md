@@ -12,23 +12,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4e21b91ceda5b51a26633b7595aed4e0ee12059
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 40e28eb246b2c4611a15dc4ce2cf6b1b02dd0100
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="call-tree-view---contention-data"></a>コール ツリー ビュー - 競合データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードには、その関数が呼び出したすべての関数、関数がブロックされた回数、および他のスレッドやプロセスとリソースを競合したために関数がブロックされた時間が一覧表示されます。  
   
  コール ツリー ビュー内の値は、コール ツリー内の親関数から呼び出された関数のインスタンスに対応します。 割合の値を計算するには、関数インスタンスの値と、プロファイル実行での競合の総数を比較します。  
   
-## <a name="highlighting-the-execution-hot-path"></a>実行ホット パスの強調表示  
+## <a name="highlight-the-execution-hot-path"></a>実行ホット パスの強調表示  
  コール ツリー ビューでは、最も多くの競合が発生したプロセスまたは関数の実行パスを展開して強調表示できます。  
   
 -   最もアクティブなパスを表示するには、プロセスまたは関数を右クリックし、**[ホット パスの展開]** をクリックします。  
   
-## <a name="setting-the-call-tree-root-node"></a>コール ツリーのルート ノードの設定  
+## <a name="set-the-call-tree-root-node"></a>コール ツリーのルート ノードの設定  
  プロファイル実行の各プロセスは、ルート ノードとして表示されます。 コール ツリー ビューの開始ノードを設定するには、開始ノードとして設定するノードを右クリックし、**[ルートの設定]** をクリックします。  
   
  ルート ノードを設定すると、選んだノードのサブツリーを除く他のすべてのエントリはビューから除外されます。 ルート ノードを元のノードに戻すには、コール ツリー ビュー内を右クリックし、**[ルートのリセット]** をクリックします。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/19/2018
 |**プロセス名**|プロセスの名前です。|  
 |**ソース ファイル**|この関数の定義を含むソース ファイルです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [コール ツリー ビュー](../profiling/call-tree-view.md)   
  [コール ツリー ビュー - インストルメンテーション](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   

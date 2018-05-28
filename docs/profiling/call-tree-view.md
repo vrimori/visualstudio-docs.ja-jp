@@ -17,13 +17,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f098b18100bd54e8078ea0c855a1b3e51926b93
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f8973f1536ded24d2fd327aa3eac1ceee795cb54
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="call-tree-view"></a>コール ツリー ビュー
+# <a name="call-tree-view"></a>[コール ツリー] ビュー
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、呼び出したすべての関数と、その関数呼び出しに関するパフォーマンス データを表示します。  
   
  [コール ツリー] ビューでは、最も時間を消費した関数や最も頻繁にサンプリングされた関数の実行パスを展開したり強調表示したりすることもできます。 最もパフォーマンス負荷の高いパスを表示するには、関数を右クリックし、**[ホット パスの展開]** をクリックします。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/19/2018
   
  [コール ツリー ビュー](../profiling/call-tree-view-contention-data.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)   
  [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)   
  [サンプリング データ値について](../profiling/understanding-sampling-data-values.md)

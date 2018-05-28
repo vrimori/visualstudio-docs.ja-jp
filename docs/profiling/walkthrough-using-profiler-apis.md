@@ -13,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b755e79daa0ebb48c8218252c78eb1a3675e6218
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: d49b5076076b61d0234bf8e252b62684a67e79b3
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="walkthrough-using-profiler-apis"></a>チュートリアル : プロファイラー API の使用
+# <a name="walkthrough-using-profiler-apis"></a>チュートリアル: プロファイラー API の使用
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
   
  このチュートリアルの手順は、一般に C/C++ アプリケーションに該当します。 言語ごとに、適したビルド環境を構成する必要があります。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/11/2018
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、ユーザーが選択した開発環境で、デバッグとサンプリングがサポートされていることを前提としています。 以下のトピックでは、これらの前提条件の概要について説明しています。  
   
- [方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
+ [方法 : 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
   
  [方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)  
   
@@ -51,7 +51,7 @@ DataCollection.CurrentId);
   
  API 呼び出しを使用せず、コマンド ラインでのデータ収集を無効にできます。 次の手順では、コマンド ライン ビルド環境がプロファイリング ツールを開発ツールとして実行するよう構成されていることが前提です。 これには、VSInstr と VSPerfCmd に必要な設定が含まれます。 コマンド ライン プロファイリング ツールに関するページを参照してください。  
   
-## <a name="limiting-data-collection-using-profiler-apis"></a>プロファイラー API を使用したデータ収集の制限  
+## <a name="limit-data-collection-using-profiler-apis"></a>プロファイラー API を使用したデータ収集の制限  
   
 #### <a name="to-create-the-code-to-profile"></a>プロファイルするコードを作成するには  
   
@@ -159,8 +159,8 @@ DataCollection.CurrentId);
   
      現在のディレクトリに、結果のパフォーマンス データが含まれた .csv ファイルが作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Profiler>   
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)   
- [はじめに](../profiling/getting-started-with-performance-tools.md)   
+ [作業の開始](../profiling/getting-started-with-performance-tools.md)   
  [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)

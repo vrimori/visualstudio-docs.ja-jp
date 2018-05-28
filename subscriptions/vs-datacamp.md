@@ -9,11 +9,11 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 552e82651937be61e333f9fc07e9e47b9723b360
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 67b79e711cb18f894cd9ae8ee23e049bf84bf9c3
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
@@ -64,7 +64,7 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール | 3 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
+| Visual Studio Enterprise (標準、年間クラウド)   | VL、Azure、リテール、 | 3 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
 | Visual Studio Professional (標準、年間クラウド) | VL、Azure、リテール                                       | 3 か月                                                            |  いいえ。  新しいサブスクライバーのみが使用できます           |
 | Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用可能                                             |  いいえ。  新しいサブスクライバーのみが使用できます           |
 | MSDN Platforms (標準)                                          | VL、リテール                                              | 使用可能                                              |  いいえ。  新しいサブスクライバーのみが使用できます           |
@@ -83,6 +83,7 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 ## <a name="support-resources"></a>サポート リソース
 -  DataCamp の使用に関するヘルプが必要ですか。  以下のリソースを確認してください。
     - フォーラムとチュートリアルを特徴とする [DataCamp コミュニティ](https://www.datacamp.com/community/tutorials)
-    - [FAQ](https://datacamp.groovehq.com/help_center)。  FAQ ページで、電子メール サポート要求を送信できる場合もあります。
+    - [DataCamp Help Center](https://support.datacamp.com/hc) では、サポート トピックを検索し、要求ユーザーの質問を参照できます。  
+    - [サポート要求を送信する](https://support.datacamp.com/hc/requests/new)
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 

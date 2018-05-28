@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 3a3b45d8714c72e588f64cd5c1830cc97b9f136e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 676c8767691610349cc2eee4c09970318feda9f5
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
 アプリに、コントロール、レイアウト、図形などの要素を追加するには、XAML、コード、または XAML デザイナーを使用します。 このトピックでは、Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 
         -   **[最背面へ移動]**: 要素を重ね順の一番後ろに移動します。
 
-     [プロパティ] ウィンドウの **[レイアウト]** セクションで **[ZIndex]** プロパティを変更します。 要素が重なり合うときは、**[ZIndex]** プロパティのほうが、[ドキュメント アウトライン] ウィンドウに表示される要素の順序よりも優先されます。 **[ZIndex]** 値が小さい要素ほど、他の要素より前に表示されます。
+     [プロパティ] ウィンドウの **[レイアウト]** セクションで **[ZIndex]** プロパティを変更します。 要素が重なり合うときは、**[ZIndex]** プロパティのほうが、[ドキュメント アウトライン] ウィンドウに表示される要素の順序よりも優先されます。 **[ZIndex]** 値が大きい要素ほど、他の要素より前に表示されます。
 
 ## <a name="changing-the-alignment-of-an-element"></a>要素の配置を変更する
  アートボードで要素の配置を調整するには、メニュー コマンドを使用するか、要素をスナップ ガイドラインに沿ってドラッグします。
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/26/2018
 
      端が揃うと、合図として*位置揃えライン*が表示されます。 位置揃えライン (スナップ ガイドライン) は赤色の破線です。 位置揃えラインは、 **[スナップ ガイドラインへのスナップ]** が有効に設定されている場合にのみ表示されます。 位置揃えラインが表示されたアートボードの図解は、「[XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」をご覧ください。
 
-## <a name="changing-the-an-elements-margins"></a>要素の余白を変更する
+## <a name="changing-an-elements-margins"></a>要素の余白の変更
  XAML デザイナーでの余白により、アートボード上で要素の周りに確保される空白領域の量が決まります。 たとえば、要素の外側の端と、その要素を格納している `Grid` パネルの境界との間に取られる領域の大きさは、余白によって指定されます。 また、`StackPanel` に含まれる要素間の領域の量も、余白によって指定されます。
 
 #### <a name="to-change-an-elements-margins-in-the-properties-window"></a>[プロパティ] ウィンドウで要素の余白を変更するには

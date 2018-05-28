@@ -14,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b51d2be6e2ec45b55b04c906a9db71843c98f427
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e1b31fde9497438b6abbcbd314462daf4c23f5e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio デバッガーを使わずにメモリ使用量を分析する
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
 1.  Visual Studio で、C# のユニバーサル Windows プロジェクトを開きます。  
   
-2.  メニュー バーで、**[デバッグ]、[パフォーマンス プロファイラー...]** の順にクリックします。  
+2.  メニュー バーで、**[デバッグ]** > **[パフォーマンス プロファイラー]** の順に選びます。  
   
 3.  **[メモリ使用量]** を選択し、ページの下部にある **[開始]** ボタンをクリックします。  
   
@@ -199,8 +199,8 @@ ms.lasthandoff: 04/19/2018
 |**サイズ (バイト)**|インスタンスの場合は、指定したスナップショットに含まれるオブジェクトのサイズ (インスタンスに含まれているオブジェクトのサイズは除く)。<br /><br /> 型の場合は、指定したスナップショットに含まれるその型のインスタンスの合計サイズ (インスタンスに含まれているオブジェクトのサイズは除く)。|  
 |**包括サイズ (バイト)**|指定したスナップショットに含まれているオブジェクトのサイズ (オブジェクトに含まれているオブジェクトのサイズを含む)。|  
   
-## <a name="see-also"></a>参照  
- [[JavaScript メモリ]](../profiling/javascript-memory.md)  
+## <a name="see-also"></a>関連項目  
+ [JavaScript メモリ](../profiling/javascript-memory.md)  
  [Visual Studio のプロファイル](../profiling/index.md)  
  [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)  
  [C++、C#、または Visual Basic を使った UWP アプリのパフォーマンスのベスト プラクティス](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   

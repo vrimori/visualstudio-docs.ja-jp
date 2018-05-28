@@ -13,17 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32039843f3aef60f6e7087b0d26f8b5e1efd1df8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21ccf237bec0b3ab7bf3ad96f6f4d24df240db0e
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-data-views"></a>共通のデータ ビュー
 ここでは、すべてのプロファイル方法に共通のプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要ビュー](../profiling/summary-view.md)  
+ [概要 ビュー](../profiling/summary-view.md)  
  概要ビューとレポートについて説明します。 データ列はプロファイル方法に応じて異なります。  
   
  [呼び出し元/呼び出し先ビュー](../profiling/caller-callee-view.md)  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/19/2018
  プロファイル データ ファイルに挿入された ETW およびサンプリング イベントが一覧表示されます。  
   
 ## <a name="related-sections"></a>関連項目  
- [プロファイラー サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)  
+ [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)  
  サンプリング メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報。  
   
  [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)  

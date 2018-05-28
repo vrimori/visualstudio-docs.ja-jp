@@ -18,11 +18,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a6642b03d5e49763cd18bccae8f88ff1f7c5bd4
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: a61f2cd0e961aaa726f9a56cf75c4efb0ed77ae9
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -84,7 +84,7 @@ none または silent | このルールに違反した場合、ユーザーに�
         - dotnet\_style\_coalesce_expression
         - dotnet\_style\_null_propagation
 - C# コード スタイルの設定
-    - [暗黙的な型と明示的な型](#var)
+    - [暗黙的な型と明示的な型](#implicit-and-explicit-types)
         - csharp\_style\_var\_for\_built\_in_types
         - csharp\_style\_var\_when\_type\_is_apparent
         - csharp\_style\_var_elsewhere
@@ -592,7 +592,7 @@ dotnet_style_null_propagation = true:suggestion
 
 このセクションのスタイル ルールは、C# のみに適用されます。
 
-#### <a name="var"></a>暗黙的な型と明示的な型
+#### <a name="implicit-and-explicit-types"></a>暗黙的な型と明示的な型
 
 このセクションのスタイル ルール (ルール ID IDE0007 および IDE0008) は、変数宣言での [var](/dotnet/csharp/language-reference/keywords/var) キーワードと明示的な型の使用に関するものです。 このルールは、ビルトイン型、型が明らかな場合、および他の場所に個別に適用できます。
 

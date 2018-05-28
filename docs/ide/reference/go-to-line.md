@@ -1,6 +1,6 @@
 ---
 title: '[指定行へのジャンプ]'
-ms.date: 11/04/2016
+ms.date: 05/18/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,22 +15,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af3db0e322a89188d2f767652f0bc30b79619d11
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bfbe70232537556bee826653d533bab8728e3d1c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="go-to-line-dialog-box"></a>[指定行へのジャンプ] ダイアログ ボックス
 
-このダイアログ ボックスを使用すると、アクティブ ドキュメント内の特定の行に移動できます。 このダイアログ ボックスにアクセスするには、編集するドキュメントを開き、**[編集]** メニューの **[ジャンプ]** を選択します。
+**[指定行へのジャンプ]** ダイアログ ボックスを使うと、アクティブ ドキュメント内の特定の行に移動できます。 このダイアログ ボックスにアクセスするには、編集するドキュメントを開き、**[編集]** > **[ジャンプ]** > **[指定行へのジャンプ]** を選ぶか、**Ctrl** + **G** キーを押します。
 
-## <a name="line-number-1---n"></a>[行番号 (1 - `n`)]
+![Visual Studio の [指定行へのジャンプ] ダイアログ ボックス](media/go-to-line-dialog-box.png)
 
-アクティブ ドキュメント内の移動先の行番号を入力できます。 入力できる値は、1 から `n` (現在のドキュメントの行数) までです。
+## <a name="line-number-1---n"></a>行番号 (1 - \<n>)
+
+**[行番号 (1 - \<n>)]** ボックスに、アクティブ ドキュメント内の移動先の行番号を入力します。 入力できる値は、1 から現在のドキュメントの最後の行番号までです。
 
 ## <a name="see-also"></a>参照
 
+- [移動コマンドを使用したコードの検索](../../ide/go-to.md)
 - [コードへのブックマークの設定](../../ide/setting-bookmarks-in-code.md)
 - [テキストの検索と置換](../../ide/finding-and-replacing-text.md)
-- [コードの作成](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../../ide/writing-code-in-the-code-and-text-editor.md)

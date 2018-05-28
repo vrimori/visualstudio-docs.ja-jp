@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cdc89faaebff31981e7cece07c8530600f32454
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: c4e4cf8e21f3f053783b1f7b70dcc51f2fd4ef2a
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>クラス デザイナーを使用したクラスと型の設計と表示
 
@@ -58,5 +58,5 @@ Visual Studio の**クラス デザイナー**では、コード内のクラス�
 
 ## <a name="see-also"></a>関連項目
 
-- [エディターでのコードの作成](../writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../writing-code-in-the-code-and-text-editor.md)
 - [ソリューション間の依存関係をマップする](../../modeling/map-dependencies-across-your-solutions.md)
