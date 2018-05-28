@@ -19,25 +19,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6c32fc1a7fbd82d1ac9604396dc2ea118efbad2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: acb96e598128060563d12809a300318ccb929aaf
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="encodings-and-line-breaks"></a>エンコーディングと改行
+# <a name="encodings-and-line-endings"></a>エンコーディングと行の終わり
 
 Visual Studio では、次の文字が改行として解釈されます。
 
--   CR LF: キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)
+- CR LF: キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)
 
--   LF: ライン フィード文字 (Unicode 文字では 000A)
+- LF: ライン フィード文字 (Unicode 文字では 000A)
 
--   NEL: 次行記号 (Unicode 文字では 0085)
+- NEL: 次行記号 (Unicode 文字では 0085)
 
--   LS: 行区切り記号 (Unicode 文字では 2028)
+- LS: 行区切り記号 (Unicode 文字では 2028)
 
--   PS: 段落区切り記号 (Unicode 文字では 2029)
+- PS: 段落区切り記号 (Unicode 文字では 2029)
 
 他のアプリケーションからコピーされたテキストでは、元のエンコーディングと改行文字が保持されます。 たとえば、メモ帳からテキストをコピーし、Visual Studio でテキスト ファイルに貼り付けた場合、貼り付けたテキストの設定は、メモ帳で使用していた設定と同じになります。
 
@@ -56,4 +56,4 @@ Visual Studio では、次の文字が改行として解釈されます。
 
 ## <a name="see-also"></a>関連項目
 
-- [コード エディターでのコードの作成](../ide/writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)

@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: ff3391023d9a863bd9f06b4608b327902a17f0ac
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3ace523bd68b9d96916c23ebdbc93eaadd339da6
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -162,4 +162,4 @@ EditorConfig 規則の範囲を制御するには、リポジトリのルート�
 - [.NET の名前付け規則](../ide/editorconfig-naming-conventions.md)
 - [言語サービスの EditorConfig のサポート](../extensibility/supporting-editorconfig.md)
 - [EditorConfig.org](http://editorconfig.org/)
-- [コード エディターでのコードの作成](writing-code-in-the-code-and-text-editor.md)
+- [コード エディターの機能](writing-code-in-the-code-and-text-editor.md)
