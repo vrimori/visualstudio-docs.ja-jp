@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31893928"
 ---
 # <a name="automatic-feature-suspension"></a>自動機能中断
 
@@ -30,7 +31,7 @@ Visual Studio では、メモリ不足の状態を検出すると、安定性を
 
 メモリ不足の状態で、次の操作が実行されます。
 
-- Visual c# および Visual Basic の完全なソリューション分析は無効です。
+- Visual C# および Visual Basic の完全なソリューション分析は無効です。
 
 - [ガベージ コレクション](/dotnet/standard/garbage-collection/index)Visual c# と Visual Basic (GC) の低待機時間モードが無効にします。
 
