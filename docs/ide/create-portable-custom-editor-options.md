@@ -14,6 +14,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446502"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -40,10 +41,10 @@ Visual Studio のエディターは、[EditorConfig プロパティ](http://edit
 - indent_size
 - tab_width
 - end\_of_line
-- 文字セット
+- charset
 - trim\_trailing_whitespace
 - insert\_final_newline
-- ルート
+- root
 
 EditorConfig エディター設定は、XML を除き、Visual Studio 対応のすべての言語でサポートされています。 また、EditorConfig では、C# および Visual Basic の[コード スタイル](../ide/editorconfig-code-style-settings-reference.md)と[名前付け](../ide/editorconfig-naming-conventions.md)規則がサポートされます。
 

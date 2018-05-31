@@ -1,0 +1,815 @@
+- name: プロファイリング ドキュメント
+  href: index.md
+- name: 概要
+  href: profiling-overview.md
+- name: クイックスタート
+  items:
+    - name: プロファイリングでのはじめに
+      href: profiling-feature-tour.md
+    - name: CPU 使用率の分析 (管理対象)
+      href: quickstart-cpu-usage-managed.md
+    - name: CPU 使用率の分析 (ネイティブ)
+      href: quickstart-cpu-usage-native.md
+    - name: CPU 使用率の分析 (ASP.NET)
+      href: quickstart-cpu-usage-aspnet.md
+- name: チュートリアル
+  items:
+    - name: Visual Studio でのアプリケーション パフォーマンスのプロファイリング
+      href: beginners-guide-to-performance-profiling.md
+    - name: Visual Studio でのメモリ使用のプロファイリング
+      href: memory-usage.md
+- name: 概念
+  items:
+    - name: デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
+      href: running-profiling-tools-with-or-without-the-debugger.md
+- name: 使い方ガイド
+  items:
+    - name: CPU 使用率の分析
+      href: cpu-usage.md
+      items:
+        - name: ユニバーサル Windows アプリ (UWP) での CPU 使用率を分析します
+          href: analyze-cpu-usage-in-a-windows-universal-app.md
+    - name: メモリ使用量の分析
+      href: analyze-memory-usage.md
+      items:
+        - name: カスタム ネイティブ ETW ヒープ イベント
+          href: custom-native-etw-heap-events.md
+        - name: デバッガーなしのメモリ使用量
+          href: memory-usage-without-debugging2.md
+    - name: GPU の使用率の分析
+      href: gpu-usage.md
+    - name: リソース消費量の分析
+      href: application-timeline.md
+    - name: PerfTips の使用
+      href: perftips.md
+    - name: JavaScript メモリの分析
+      href: javascript-memory.md
+      items:
+        - name: 'チュートリアル: メモリ リークの検出 (JavaScript)'
+          href: walkthrough-find-a-memory-leak-javascript.md
+    - name: ネットワーク使用量の分析
+      href: network-usage.md
+    - name: HTML UI の応答性の分析
+      href: html-ui-responsiveness.md
+      items:
+        - name: 'チュートリアル: UI の応答性の向上 (HTML)'
+          href: walkthrough-improving-ui-responsiveness-html.md
+    - name: パフォーマンス エクスプローラーの使用
+      href: performance-explorer.md
+      items:
+        - name: Windows 8 と Windows Server 2012 アプリケーションのパフォーマンス ツール
+          href: performance-tools-on-windows-8-and-windows-server-2012-applications.md
+        - name: 概要 (パフォーマンス ツール)
+          href: overviews-performance-tools.md
+          items:
+            - name: パフォーマンス セッションの概要
+              href: performance-session-overview.md
+            - name: パフォーマンス収集方法について
+              href: understanding-performance-collection-methods.md
+            - name: サンプリング データ値について
+              href: understanding-sampling-data-values.md
+            - name: インストルメンテーション データ値について
+              href: understanding-instrumentation-data-values.md
+            - name: メモリの割り当てとオブジェクトの有効期間のデータ値について
+              href: understanding-memory-allocation-and-object-lifetime-data-values.md
+            - name: リソース競合データ値について
+              href: understanding-resource-contention-data-values.md
+            - name: CPU カウンターと Windows カウンター
+              href: cpu-and-windows-counters.md
+            - name: '[パフォーマンス エクスプローラー] ウィンドウ'
+              href: performance-explorer-window.md
+            - name: パフォーマンス セッションのプロパティ
+              href: performance-session-properties.md
+            - name: プロファイルと Windows Vista のセキュリティ
+              href: profiling-and-windows-vista-security.md
+        - name: パフォーマンス ツールの概要
+          href: getting-started-with-performance-tools.md
+          items:
+            - name: CPU サンプリングの初心者向けガイド
+              href: beginners-guide-to-cpu-sampling.md
+            - name: Web サイトのパフォーマンス データを収集する
+              href: how-to-collect-performance-data-for-a-web-site.md
+            - name: パフォーマンス セッションを手動で作成する
+              href: how-to-manually-create-performance-sessions.md
+        - name: パフォーマンス セッションの構成
+          href: configuring-performance-sessions.md
+          items:
+            - name: Windows シンボル情報を参照する
+              href: how-to-reference-windows-symbol-information.md
+            - name: 収集方法を選択する
+              href: how-to-choose-collection-methods.md
+            - name: サンプリングを使用したパフォーマンス統計情報の収集
+              href: collecting-performance-statistics-by-using-sampling.md
+              items:
+                - name: サンプリング イベントを選択する
+                  href: how-to-choose-sampling-events.md
+                - name: 行レベルのサンプリング データを収集する
+                  href: how-to-collect-line-level-sampling-data.md
+            - name: .NET メモリの割り当てと有効期間データの収集
+              href: collecting-dotnet-memory-allocation-and-lifetime-data.md
+            - name: インストルメンテーションを使用した詳細なタイミング データの収集
+              href: collecting-detailed-timing-data-by-using-instrumentation.md
+              items:
+                - name: CPU カウンター データを収集する
+                  href: how-to-collect-cpu-counter-data.md
+                - name: インストルメント化されたバイナリの再配置
+                  href: how-to-relocate-instrumented-binaries.md
+                - name: インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
+                  href: how-to-specify-pre-and-post-instrument-commands.md
+                - name: 追加のインストルメンテーション オプションを指定する
+                  href: how-to-specify-additional-instrumentation-options.md
+            - name: Web ページ内の JavaScript コードをプロファイリングする
+              href: how-to-profile-javascript-code-in-web-pages.md
+            - name: スレッドとプロセスの同時実行データの収集
+              href: collecting-thread-and-process-concurrency-data.md
+            - name: 階層相互作用データを収集する
+              href: collecting-tier-interaction-data.md
+            - name: 追加のパフォーマンス データの収集
+              href: collecting-additional-performance-data.md
+              items:
+                - name: Windows カウンター データを収集する
+                  href: how-to-collect-windows-counter-data.md
+                - name: ETW (Event Tracing for Windows) データを収集する
+                  href: how-to-collect-event-tracing-for-windows-etw-data.md
+            - name: シンボル情報をシリアル化する
+              href: how-to-serialize-symbol-information.md
+            - name: パフォーマンス セッションの全般オプションの設定
+              href: setting-general-performance-session-options.md
+            - name: 現在のセッションを設定する
+              href: how-to-set-the-current-session.md
+            - name: アクセス許可を設定する
+              href: how-to-set-permissions.md
+            - name: 開始するバイナリを指定する
+              href: how-to-specify-the-binary-to-start.md
+            - name: パフォーマンス データ ファイル名のオプションを設定する
+              href: how-to-set-performance-data-file-name-options.md
+            - name: .NET Framework ランタイムを指定する
+              href: how-to-specify-the-dotnet-framework-runtime.md
+        - name: データ収集の制御
+          href: controlling-data-collection.md
+          items:
+            - name: パフォーマンス データの収集の開始と終了
+              href: how-to-start-and-end-performance-data-collection.md
+            - name: 実行中のプロセスに対するパフォーマンス ツールのアタッチとデタッチ
+              href: how-to-attach-and-detach-performance-tools-to-running-processes.md
+            - name: パフォーマンス データ収集の一時停止と再開
+              href: how-to-pause-and-resume-performance-data-collection.md
+            - name: インストルメンテーションを特定の DLL に制限する
+              href: how-to-limit-instrumentation-to-specific-dlls.md
+            - name: インストルメンテーションを特定の関数に制限する
+              href: how-to-limit-instrumentation-to-specific-functions.md
+            - name: インストルメンテーションで短い関数を除外または含める
+              href: how-to-exclude-or-include-short-functions-from-instrumentation.md
+        - name: パフォーマンス ツール データの分析
+          href: analyzing-performance-tools-data.md
+          items:
+            - name: パフォーマンス規則を使用したデータの分析
+              href: using-performance-rules-to-analyze-data.md
+              items:
+                - name: パフォーマンスに関する警告の表示
+                  href: how-to-view-performance-warnings.md
+                - name: パフォーマンス規則を構成する
+                  href: how-to-configure-performance-rules.md
+                - name: パフォーマンス規則リファレンス
+                  href: performance-rules-reference.md
+                  items:
+                    - name: ID 別のパフォーマンス規則
+                      href: performance-rules-by-id.md
+                    - name: .NET Framework の使用に関するパフォーマンス規則
+                      href: dotnet-framework-usage-performance-rules.md
+                      items:
+                        - name: 'DA0001: StringBuilder を使用して連結してください'
+                          href: da0001-use-stringbuilder-for-concatenations.md
+                        - name: 'DA0005: 頻繁な GC2 のコレクションです'
+                          href: da0005-frequent-gc2-collections.md
+                        - name: 'DA0006: 値の型で Equals() をオーバーライドしてください'
+                          href: da0006-override-equals-parens-for-value-types.md
+                        - name: 'DA0007: 制御フローでの例外の使用を避けてください'
+                          href: da0007-avoid-using-exceptions-for-control-flow.md
+                        - name: 'DA0010: GetHashCode の負荷が高くなっています'
+                          href: da0010-expensive-gethashcode.md
+                        - name: 'DA0011: CompareTo の負荷が高くなっています'
+                          href: da0011-expensive-compareto.md
+                        - name: 'DA0012: リフレクションが頻繁に実行されています'
+                          href: da0012-significant-amount-of-reflection.md
+                        - name: 'DA0013: String.Split/String.Substring が頻繁に使用されています'
+                          href: da0013-high-usage-of-string-split-or-string-substring.md
+                        - name: 'DA0018: 32 ビット アプリケーションがプロセスのマネージ メモリ制限で実行されています'
+                          href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
+                        - name: 'DA0021: ジェネレーション 1 のガベージ コレクションが高率です'
+                          href: da0021-high-rate-of-gen-1-garbage-collections.md
+                        - name: 'DA0022: ジェネレーション 2 のガベージ コレクションが高率です'
+                          href: da0022-high-rate-of-gen-2-garbage-collections.md
+                        - name: 'DA0023: 高い GC CPU 時間'
+                          href: da0023-high-gc-cpu-time.md
+                        - name: 'DA0024: 過剰な GC CPU 時間'
+                          href: da0024-excessive-gc-cpu-time.md
+                        - name: 'DA0038: 高率のロック競合'
+                          href: da0038-high-rate-of-lock-contentions.md
+                        - name: 'DA0039: 非常に高率のロック競合'
+                          href: da0039-very-high-rate-of-lock-contentions.md
+                    - name: メモリとページングのパフォーマンス規則
+                      href: memory-and-paging-performance-rules.md
+                      items:
+                        - name: 'DA0014: ディスクへのアクティブなメモリのページングが非常に高率で発生しています'
+                          href: da0014-extremely-high-rates-of-paging-active-memory-to-disk.md
+                        - name: 'DA0017: ディスクへのアクティブなメモリのページングが高率で発生しています。'
+                          href: da0017-high-rates-of-paging-active-memory-to-disk.md
+                    - name: プロファイリング ツールの使用に関する規則
+                      href: profiling-tools-usage-rules.md
+                      items:
+                        - name: 'DA0002: VSPerfCorProf.dll がありません'
+                          href: da0002-vsperfcorprof-dll-is-missing.md
+                        - name: 'DA0003: カーネル サンプルが多数存在します'
+                          href: da0003-many-kernel-samples.md
+                        - name: 'DA0004: プロセッサ使用率が高くなっています'
+                          href: da0004-high-processor-usage.md
+                        - name: 'DA0008: 少数のサンプルしか収集されていません'
+                          href: da0008-few-samples-collected.md
+                        - name: 'DA0026: 過剰なカーネル CPU 処理時間。'
+                          href: da0026-excessive-kernel-cpu-time-processing.md
+                        - name: 'DA0029: サポートされていない CLR バージョンです。'
+                          href: da0029-unsupported-clr-version.md
+                        - name: 'DA0030: データベース プロジェクトの階層の相互作用の測定を収集します。'
+                          href: da0030-gather-tier-interaction-measurements-for-database-projects.md
+                    - name: リソース監視のパフォーマンス規則
+                      href: resource-monitoring-performance-rules.md
+                      items:
+                        - name: 'DA0501: プロセスによる平均 CPU 使用量をプロファイリングしています'
+                          href: da0501-average-cpu-consumption-by-the-process-being-profiled.md
+                        - name: 'DA0502: プロセスによる最大 CPU 使用量をプロファイリングしています'
+                          href: da0502-maximum-cpu-consumption-by-the-process-being-profiled.md
+                        - name: 'DA0503: プロセスのワーキング セット平均バイト数がプロファイリングされています'
+                          href: da0503-average-working-set-in-bytes-for-the-process-being-profiled.md
+                        - name: 'DA0504: プロセスのワーキング セット最大バイト数がプロファイリングされています'
+                          href: da0504-maximum-working-set-in-bytes-for-the-process-being-profiled.md
+                        - name: 'DA0505: プロセスに割り当てられた平均プライベート バイト数がプロファイリングされています'
+                          href: da0505-average-private-bytes-allocated-for-the-process-being-profiled.md
+                        - name: 'DA0506: プロセスに割り当てられた最大プライベート バイト数がプロファイリングされています'
+                          href: da0506-maximum-private-bytes-allocated-for-the-process-being-profiled.md
+            - name: パフォーマンス レポート ビュー
+              href: performance-report-views.md
+              items:
+                - name: パフォーマンス レポートの概要
+                  href: performance-report-overview.md
+                - name: 共通のデータ ビュー
+                  href: common-data-views.md
+                  items:
+                    - name: プロセス ビュー
+                      href: process-view.md
+                    - name: マーク ビュー
+                      href: marks-view.md
+                    - name: 概要 ビュー
+                      href: summary-view.md
+                    - name: コール ツリー ビュー
+                      href: call-tree-view.md
+                    - name: 呼び出し元/呼び出し先ビュー
+                      href: caller-callee-view.md
+                    - name: モジュール ビュー
+                      href: modules-view.md
+                    - name: 関数ビュー
+                      href: functions-view.md
+                    - name: 行ビュー
+                      href: lines-view.md
+                    - name: 命令ポインター (IP) ビュー
+                      href: instruction-pointers-ips-view.md
+                    - name: 関数の詳細ビュー
+                      href: function-details-view.md
+                    - name: ETW (Event Tracing for Windows) レポート
+                      href: event-tracing-for-windows-etw-report.md
+                - name: プロファイラー サンプリング メソッドのデータ ビュー
+                  href: profiler-sampling-method-data-views.md
+                  items:
+                    - name: 概要ビュー - サンプリング データ
+                      href: summary-view-sampling-data.md
+                    - name: コール ツリー ビュー - サンプリング データ
+                      href: call-tree-view-sampling-data.md
+                    - name: モジュール ビュー - サンプリング データ
+                      href: modules-view-sampling-data.md
+                    - name: 呼び出し元/呼び出し先ビュー - サンプリング データ
+                      href: caller-callee-view-sampling-data.md
+                    - name: 関数ビュー - サンプリング データ
+                      href: functions-view-sampling-data.md
+                    - name: 行ビュー - サンプリング データ
+                      href: lines-view-sampling-data.md
+                    - name: 命令ポインター (IP) ビュー - サンプリング データ
+                      href: instruction-pointers-ips-view-sampling-data.md
+                - name: インストルメンテーション メソッドのデータ ビュー
+                  href: instrumentation-method-data-views.md
+                  items:
+                    - name: 概要ビュー - インストルメンテーション データ
+                      href: summary-view-instrumentation-data.md
+                    - name: コール ツリー ビュー - インストルメンテーション データ
+                      href: call-tree-view-instrumentation-data.md
+                    - name: モジュール ビュー - インストルメンテーション データ
+                      href: modules-view-instrumentation-data.md
+                    - name: 呼び出し元/呼び出し先ビュー - インストルメンテーション データ
+                      href: caller-callee-view-instrumentation-data.md
+                    - name: 関数ビュー - インストルメンテーション データ
+                      href: functions-view-instrumentation-data.md
+                - name: .NET メモリのデータ ビュー
+                  href: dotnet-memory-data-views.md
+                  items:
+                    - name: 概要ビュー - .NET メモリ データ
+                      href: summary-view-dotnet-memory-data.md
+                    - name: .NET メモリの割り当てビュー
+                      href: dotnet-memory-allocations-view.md
+                    - name: オブジェクトの有効期間ビュー
+                      href: object-lifetime-view.md
+                    - name: コール ツリー ビュー - .NET メモリ サンプリング データ
+                      href: call-tree-view-dotnet-memory-sampling-data.md
+                    - name: モジュール ビュー - .NET メモリ サンプリング データ
+                      href: modules-view-dotnet-memory-sampling-data.md
+                    - name: 呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ
+                      href: caller-callee-view-dotnet-memory-sampling-data.md
+                    - name: 関数ビュー - .NET メモリ サンプリング データ
+                      href: functions-view-dotnet-memory-sampling-data.md
+                    - name: 行ビュー - .NET メモリ サンプリング データ
+                      href: lines-view-dotnet-memory-sampling-data.md
+                    - name: 命令ポインター (IP) ビュー - .NET メモリ サンプリング データ
+                      href: instruction-pointers-ips-view-dotnet-memory-sampling-data.md
+                    - name: コール ツリー ビュー - .NET メモリ インストルメンテーション データ
+                      href: call-tree-view-dotnet-memory-instrumentation-data.md
+                    - name: モジュール ビュー - .NET メモリ インストルメンテーション データ
+                      href: modules-view-dotnet-memory-instrumentation-data.md
+                    - name: 呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ
+                      href: caller-callee-view-net-memory-instrumentation-data.md
+                    - name: 関数ビュー - .NET メモリ インストルメンテーション データ
+                      href: functions-view-dotnet-memory-instrumentation-data.md
+                - name: リソース競合データのビュー
+                  href: resource-contention-data-views.md
+                  items:
+                    - name: 概要ビュー - リソース競合ビュー
+                      href: summary-view-resource-contention-view.md
+                    - name: コール ツリー ビュー - 競合データ
+                      href: call-tree-view-contention-data.md
+                    - name: モジュール ビュー - 競合データ
+                      href: modules-view-contention-data.md
+                    - name: 呼び出し元/呼び出し先ビュー - 競合データ
+                      href: caller-callee-view-contention-data.md
+                    - name: 関数ビュー - 競合データ
+                      href: functions-view-contention-data.md
+                    - name: リソースの詳細ビュー - 競合データ
+                      href: resource-details-view-contention-data.md
+                    - name: スレッドの詳細ビュー - 競合データ
+                      href: thread-details-view-contention-data.md
+                    - name: リソースの競合ビュー - 競合データ
+                      href: resource-contentions-view-contention-data.md
+                    - name: プロセス ビュー - 競合データ
+                      href: process-view-contention-data.md
+                    - name: 行ビュー - 競合データ
+                      href: lines-view-contention-data.md
+                    - name: 命令ポインター (IP) ビュー - 競合データ
+                      href: instruction-pointers-ips-view-contention-data.md
+                - name: 階層相互作用のビュー
+                  href: tier-interaction-views.md
+                  items:
+                    - name: 階層の相互作用ビュー
+                      href: tier-interactions-view.md
+            - name: パフォーマンス ツールのレポート ビューのカスタマイズ
+              href: customizing-performance-tools-report-views.md
+              items:
+                - name: レポート ビューの列をカスタマイズする
+                  href: how-to-customize-report-view-columns.md
+                - name: レポート ビューのフィルター処理
+                  href: filtering-report-views.md
+                - name: 概要ビューのタイムラインからレポート ビューをフィルター処理する
+                  href: how-to-filter-report-views-from-the-summary-timeline.md
+                - name: パフォーマンス レポート ビュー フィルター
+                  href: performance-report-view-filter.md
+                - name: レポート ビューでノイズ除去を設定する
+                  href: how-to-configure-noise-reduction-in-report-views.md
+                - name: プロファイリング ツールのレポート ビューをフィルター処理してマイ コードのみを表示する
+                  href: how-to-filter-profiling-tools-report-views-to-display-just-my-code.md
+        - name: パフォーマンス データ ファイルを比較する
+          href: comparing-performance-data-files.md
+          items:
+            - name: パフォーマンス データ ファイルを比較する
+              href: how-to-compare-performance-data-files.md
+        - name: パフォーマンス データ ファイルを使用したシンボル情報の保存
+          href: saving-symbol-information-with-performance-data-files.md
+        - name: パフォーマンス ツール データの保存とエクスポート
+          href: saving-and-exporting-performance-tools-data.md
+        - name: コマンド ラインからのプロファイリング ツールの使用
+          href: using-the-profiling-tools-from-the-command-line.md
+          items:
+            - name: コマンド ラインからシンボル ファイルの場所を指定する
+              href: how-to-specify-symbol-file-locations-from-the-command-line.md
+            - name: プロファイル ツールのコマンド ライン ツールへのパスの指定
+              href: specifying-the-path-to-profiling-tools-command-line-tools.md
+            - name: 各種のプロファイル方法を使用したコマンド ラインからのパフォーマンス データの収集
+              href: using-profiling-methods-to-collect-performance-data-from-the-command-line.md
+            - name: コマンド ラインからの階層相互作用データの追加
+              href: adding-tier-interaction-data-from-the-command-line.md
+            - name: スタンドアロン アプリケーションのコマンド ラインによるプロファイリング
+              href: command-line-profiling-of-stand-alone-applications.md
+              items:
+                - name: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのアプリケーション統計情報の収集
+                  href: collecting-application-statistics-for-stand-alone-applications.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーでスタンドアロン アプリケーションを起動し、アプリケーション統計情報を収集する
+                      href: how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line.md
+                    - name: コマンド ラインを使用して .NET Framework のスタンドアロン アプリケーションにプロファイラーをアタッチし、アプリケーションの統計情報を収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-app-and-collect-application-statistics.md
+                    - name: コマンド ラインを使用してスタンドアロンのネイティブ アプリケーションにプロファイラーをアタッチし、アプリケーション統計情報を収集する
+                      href: how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line.md
+                - name: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの詳細なタイミング データの収集
+                  href: collecting-detailed-timing-data-for-a-stand-alone-application.md
+                  items:
+                    - name: コマンド ラインからプロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメントし、タイミング データを収集する
+                      href: how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md
+                    - name: コマンド ラインからプロファイラーを使用してスタンドアロンのネイティブ コンポーネントをインストルメントし、タイミング データを収集する
+                      href: how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md
+                - name: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの同時実行データの収集
+                  href: collecting-concurrency-data-for-stand-alone-applications.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーによってスタンドアロンの .NET Framework アプリケーションを起動し、同時実行データを収集する
+                      href: how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-concurrency-data.md
+                    - name: コマンド ラインを使用してプロファイラーによってスタンドアロンのネイティブ アプリケーションを起動し、同時実行データを収集する
+                      href: how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line.md
+                    - name: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、同時実行データを収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-app-and-collect-concurrency-data.md
+                    - name: コマンド ラインを使用してスタンドアロンのネイティブ アプリケーションにプロファイラーをアタッチし、同時実行データを収集する
+                      href: how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-concurrency-data-by-using-the-command-line.md
+                - name: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの .NET Framework メモリ データの収集
+                  href: collecting-dotnet-framework-memory-data-for-stand-alone-applications.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーによってスタンドアロンの .NET Framework アプリケーションを起動し、メモリ データを収集する
+                      href: how-to-launch-a-stand-alone-dotnet-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line.md
+                    - name: コマンド ラインを使用してプロファイラーをスタンドアロンの .NET Framework アプリケーションにアタッチし、メモリ データを収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md
+                    - name: プロファイラーのコマンド ラインを使用してスタンドアロンの .NET Framework コンポーネントをインストルメントし、メモリ データを収集する
+                      href: how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md
+                - name: 'チュートリアル: サンプリングを使ったコマンド ライン プロファイリング'
+                  href: walkthrough-command-line-profiling-using-sampling.md
+            - name: ASP.NET Web アプリケーションのコマンド ライン プロファイリング
+              href: command-line-profiling-of-aspnet-web-applications.md
+              items:
+                - name: VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング
+                  href: rapid-web-site-profiling-with-vsperfaspnetcmd.md
+                - name: コマンド ラインからのプロファイラーのサンプリング メソッドを使用した ASP.NET Web アプリケーションのアプリケーション統計情報の収集
+                  href: collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、アプリケーションの統計情報を収集する
+                      href: how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md
+                - name: コマンド ラインからのプロファイラーのインストルメンテーション メソッドを使用した ASP.NET Web アプリケーションの詳細なタイミング データの収集
+                  href: collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md
+                  items:
+                    - name: プロファイラーのコマンド ラインを使用して、静的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、詳細なタイミング データを収集する
+                      href: how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md
+                    - name: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、詳細なタイミング データを収集する
+                      href: how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md
+                - name: プロファイラーのコマンド ラインを使用した ASP.NET Web アプリケーションの同時実行データの収集
+                  href: collecting-concurrency-data-for-an-aspnet-web-application.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、同時実行データを収集する
+                      href: how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md
+                - name: プロファイラーのコマンド ラインを使用した ASP.NET Web アプリケーションからのメモリ データの収集
+                  href: collecting-memory-data-from-an-aspnet-web-application.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、メモリ データを収集する
+                      href: how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md
+                    - name: プロファイラーのコマンド ラインを使用して静的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する
+                      href: how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md
+                    - name: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する
+                      href: how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md
+                - name: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
+                  href: how-to-modify-web-config-files-to-instrument-dynamically-compiled-aspnet-apps.md
+            - name: サービスのコマンド ライン プロファイリング
+              href: command-line-profiling-of-services.md
+              items:
+                - name: プロファイラー サンプリング メソッドを使用したサービスのアプリケーション統計情報の収集
+                  href: collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md
+                    - name: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、アプリケーションの統計情報を収集する
+                      href: how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line.md
+                - name: プロファイラーのコマンド ラインからインストルメンテーション メソッドを使用した、サービスの詳細なタイミング データの収集
+                  href: collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md
+                  items:
+                    - name: プロファイラーのコマンド ラインを使用して .NET サービスをインストルメントし、詳細なタイミング データを収集する
+                      href: how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md
+                    - name: プロファイラーのコマンド ラインを使用してネイティブ サービスをインストルメントし、詳細なタイミング データを収集する
+                      href: how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md
+                - name: プロファイラーのコマンド ラインを使用したサービスの同時実行データの収集
+                  href: collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、同時実行データを収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-service-to-collect-concurrency-data-by-using-the-command-line.md
+                    - name: コマンド ラインを使用してプロファイラーをネイティブ サービスにアタッチし、同時実行データを収集する
+                      href: how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line.md
+                - name: プロファイラーのコマンド ラインを使用した .NET Framework サービスからのメモリ データの収集
+                  href: collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md
+                  items:
+                    - name: コマンド ラインを使用してプロファイラーを .NET サービスにアタッチし、メモリ データを収集する
+                      href: how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md
+                    - name: プロファイラーのコマンド ラインを使用して .NET Framework サービスをインストルメントし、メモリ データを収集する
+                      href: how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md
+            - name: コマンド ラインからのプロファイラー レポートの作成
+              href: creating-profiler-reports-from-the-command-line.md
+              items:
+                - name: コマンド ラインからの基本的なプロファイリング レポートの作成
+                  href: creating-basic-profiling-reports-from-the-command-line.md
+                - name: コマンド ラインからレポートをフィルター処理する
+                  href: how-to-filter-reports-from-the-command-line.md
+                - name: コマンド プロンプトからプロファイラー比較レポートを作成する
+                  href: how-to-create-a-profiler-comparison-report-from-a-command-prompt.md
+                - name: プロファイリング ツールのコール トレース レポートを作成する
+                  href: how-to-create-a-profiling-tools-call-trace-report.md
+                - name: コマンド ラインからの移植可能なプロファイル データ ファイルの作成
+                  href: creating-portable-profiling-data-files-from-the-command-line.md
+                - name: プロファイリング ツールの ETW レポートを作成する
+                  href: how-to-create-a-profiling-tools-etw-report.md
+            - name: スタンドアロンのプロファイラーをインストールする
+              href: how-to-install-the-stand-alone-profiler.md
+            - name: コマンド ライン プロファイリング ツール リファレンス
+              href: command-line-profiling-tools-reference.md
+              items:
+                - name: VSInstr
+                  href: vsinstr.md
+                - name: VSInstr の警告
+                  href: vsinstr-warnings.md
+                - name: VSPerf
+                  href: vsperf.md
+                - name: VSPerfCmd
+                  href: vsperfcmd.md
+                  items:
+                    - name: '[開始]'
+                      href: start.md
+                    - name: CrossSession
+                      href: crosssession.md
+                    - name: 出力
+                      href: output.md
+                    - name: WinCounter
+                      href: wincounter.md
+                    - name: カウンター
+                      href: counter.md
+                    - name: WaitStart
+                      href: waitstart.md
+                    - name: AutoMark
+                      href: automark.md
+                    - name: User (VSPerfCmd)
+                      href: user-vsperfcmd.md
+                    - name: QueryCounters
+                      href: querycounters.md
+                    - name: Events (VSPerfCmd)
+                      href: events-vsperfcmd.md
+                    - name: シャットダウン
+                      href: shutdown.md
+                    - name: GlobalOn と GlobalOff
+                      href: globalon-and-globaloff.md
+                    - name: ProcessOn と ProcessOff
+                      href: processon-and-processoff.md
+                    - name: ThreadOn と ThreadOff
+                      href: threadon-and-threadoff.md
+                    - name: GC (VSPerfCmd)
+                      href: gc-vsperfcmd.md
+                    - name: Launch
+                      href: launch.md
+                    - name: Attach
+                      href: attach.md
+                    - name: Args
+                      href: args.md
+                    - name: Mark
+                      href: mark.md
+                    - name: Detach
+                      href: detach.md
+                    - name: PF
+                      href: pf.md
+                    - name: Sys (VSPerfCmd)
+                      href: sys-vsperfcmd.md
+                    - name: タイマー
+                      href: timer.md
+                    - name: LineOff
+                      href: lineoff.md
+                    - name: コンソール
+                      href: console.md
+                    - name: Status
+                      href: status.md
+                    - name: TargetCLR
+                      href: targetclr.md
+                - name: VSPerfMon
+                  href: vsperfmon.md
+                - name: VSPerfReport
+                  href: vsperfreport.md
+                - name: VSPerfCLREnv
+                  href: vsperfclrenv.md
+                - name: VSPerfASPNetCmd
+                  href: vsperfaspnetcmd.md
+        - name: 高性能コンピューティング (HPC) クラスターでのプロファイリング
+          href: profiling-on-hpc-high-performance-computing-clusters.md
+        - name: プロファイリング ツールの API
+          href: profiling-tools-apis.md
+          items:
+            - name: Visual Studio プロファイラー API リファレンス (ネイティブ)
+              href: visual-studio-profiler-api-reference-native.md
+              items:
+                - name: CommentMarkAtProfile
+                  href: commentmarkatprofile.md
+                - name: CommentMarkProfile
+                  href: commentmarkprofile.md
+                - name: MarkProfile
+                  href: markprofile.md
+                - name: NameProfile
+                  href: nameprofile.md
+                - name: ResumeProfile
+                  href: resumeprofile.md
+                - name: StartProfile
+                  href: startprofile.md
+                - name: StopProfile
+                  href: stopprofile.md
+                - name: SuspendProfile
+                  href: suspendprofile.md
+                - name: PROFILE_CURRENTID
+                  href: profile-currentid.md
+            - name: 'チュートリアル: プロファイラー API の使用'
+              href: walkthrough-using-profiler-apis.md
+        - name: ASP.NET ロード テストのプロファイリング
+          href: profiling-aspnet-load-tests.md
+        - name: パフォーマンス ツールに関する問題のトラブルシューティング
+          href: troubleshooting-performance-tools-issues.md
+    - name: 同時実行ビジュアライザー
+      href: concurrency-visualizer.md
+      items:
+        - name: 適切に動作しないマルチスレッド アプリケーションの一般的なパターン
+          href: common-patterns-for-poorly-behaved-multithreaded-applications.md
+        - name: 使用状況ナビゲーター
+          href: utilization-navigator.md
+        - name: 使用状況ビュー
+          href: utilization-view.md
+          items:
+            - name: CPU 使用状況グラフ
+              href: cpu-utilization-graph.md
+            - name: 平均 CPU 使用状況
+              href: average-cpu-utilization.md
+            - name: ズーム コントロール (使用状況ビュー)
+              href: zoom-control-utilization-view.md
+            - name: GPU アクティビティ グラフ
+              href: gpu-activity-graph.md
+            - name: GPU アクティビティ (ページング)
+              href: gpu-activity-paging.md
+            - name: GPU アクティビティ (このプロセス)
+              href: gpu-activity-this-process.md
+            - name: GPU アクティビティ (他のプロセス)
+              href: gpu-activity-other-processes.md
+        - name: スレッド ビュー (並行処理のパフォーマンス)
+          href: threads-view-parallel-performance.md
+          items:
+            - name: ブロック時間のプロファイル レポート
+              href: blocking-time-profile-report.md
+            - name: チャネル (スレッド ビュー)
+              href: channels-threads-view.md
+            - name: 選択範囲のコピー
+              href: copy-selection.md
+            - name: 現在のタブ
+              href: current-tab.md
+            - name: ディスク操作レポート (スレッド ビュー)
+              href: disk-operations-report-threads-view.md
+            - name: 空のタイムライン セグメントです
+              href: empty-timeline-segment.md
+            - name: 実行プロファイル レポート
+              href: execution-profile-report.md
+            - name: 実行時間 (スレッド ビュー)
+              href: execution-time-threads-view.md
+            - name: '[エクスポート] ボタン (同時実行ビジュアライザー)'
+              href: export-button-concurrency-visualizer.md
+            - name: I/O 時間 (スレッド ビュー)
+              href: i-o-time-threads-view.md
+            - name: '[マイ コードのみ]\(スレッド ビュー)'
+              href: just-my-code-threads-view.md
+            - name: チャネルの管理
+              href: manage-channels.md
+            - name: マーカー レポート
+              href: markers-report.md
+            - name: 測定モード オン/オフ
+              href: measure-mode-on-off.md
+            - name: メモリ管理時間
+              href: memory-management-time.md
+            - name: 複数のカテゴリが存在します
+              href: multiple-categories-are-present.md
+            - name: 表示するディスク アクティビティがありません (スレッド ビュー)
+              href: no-disk-activity-to-show-threads-view.md
+            - name: 表示するスレッド アクティビティがありません (スレッド ビュー)
+              href: no-thread-activity-to-show-threads-view.md
+            - name: 不要項目の非表示の割合
+              href: noise-reduction-percentage.md
+            - name: スレッド別の概要レポート
+              href: per-thread-summary-report.md
+            - name: 優先時間
+              href: preemption-time.md
+            - name: 表示された時間範囲に基づいたレポート
+              href: report-based-on-visible-time-range.md
+            - name: スリープ時間
+              href: sleep-time.md
+            - name: 同期時間
+              href: synchronization-time.md
+            - name: スレッド準備完了コネクタ
+              href: thread-ready-connector.md
+            - name: タイムライン キャレット
+              href: timeline-caret.md
+            - name: UI 処理時間
+              href: ui-processing-time.md
+            - name: ブロック解除スタック
+              href: unblocking-stack.md
+            - name: 表示されているタイムライン プロファイル
+              href: visible-timeline-profile.md
+            - name: ズーム コントロール (スレッド ビュー)
+              href: zoom-control-threads-view.md
+        - name: コア ビュー
+          href: cores-view.md
+          items:
+            - name: コア ビューの凡例
+              href: cores-view-legend.md
+            - name: コア ビューの論理コア
+              href: cores-view-logical-cores.md
+            - name: コア ビューのタイムライン
+              href: cores-view-timeline.md
+            - name: コア ビューのズーム ツール
+              href: cores-view-zoom-tool.md
+        - name: '[詳細設定] ダイアログ ボックス (同時実行ビジュアライザー)'
+          href: advanced-settings-dialog-box-concurrency-visualizer.md
+        - name: 同時実行ビジュアライザー マーカー
+          href: concurrency-visualizer-markers.md
+          items:
+            - name: フラグ マーカー
+              href: flag-markers.md
+            - name: メッセージ マーカー
+              href: message-markers.md
+            - name: スパン マーカー
+              href: span-markers.md
+            - name: マーカーとしての EventSource イベントの視覚化
+              href: visualizing-eventsource-events-as-markers.md
+        - name: 同時実行ビジュアライザー SDK
+          href: concurrency-visualizer-sdk.md
+          items:
+            - name: 同時実行ビジュアライザー マーカー SDK を使用する
+              href: how-to-use-the-concurrency-visualizer-markers-sdk.md
+            - name: C++ ライブラリ リファレンス
+              href: cpp-library-reference.md
+              items:
+                - name: Concurrency 名前空間 (同時実行ビジュアライザー)
+                  href: concurrency-namespace-concurrency-visualizer.md
+                  items:
+                    - name: diagnostic 名前空間
+                      href: diagnostic-namespace.md
+                      items:
+                        - name: span クラス
+                          href: span-class.md
+                          items:
+                            - name: 'span::~span デストラクター'
+                              href: span-tilde-span-destructor.md
+                            - name: 'span::span コンストラクター'
+                              href: span-span-constructor.md
+                        - name: marker_series クラス
+                          href: marker-series-class.md
+                          items:
+                            - name: 'marker_series::~marker_series デストラクター'
+                              href: marker-series-tilde-marker-series-destructor.md
+                            - name: 'marker_series::is_enabled メソッド'
+                              href: marker-series-is-enabled-method.md
+                            - name: 'marker_series::marker_series コンストラクター'
+                              href: marker-series-marker-series-constructor.md
+                            - name: 'marker_series::write_alert メソッド'
+                              href: marker-series-write-alert-method.md
+                            - name: 'marker_series::write_flag メソッド'
+                              href: marker-series-write-flag-method.md
+                            - name: 'marker_series::write_message メソッド'
+                              href: marker-series-write-message-method.md
+                        - name: marker_importance 列挙型
+                          href: marker-importance-enumeration.md
+            - name: C ライブラリ リファレンス
+              href: c-library-reference.md
+              items:
+                - name: CvCreateDefaultMarkerSeriesOfDefaultProvider 関数
+                  href: cvcreatedefaultmarkerseriesofdefaultprovider-function.md
+                - name: CvCreateMarkerSeries 関数
+                  href: cvcreatemarkerseries-function.md
+                - name: CvCreateMarkerSeriesWithCodePageA 関数
+                  href: cvcreatemarkerserieswithcodepagea-function.md
+                - name: CvEnterSpan 関数
+                  href: cventerspan-function.md
+                - name: CvInitProvider 関数
+                  href: cvinitprovider-function.md
+                - name: CvIsEnabled 関数
+                  href: cvisenabled-function.md
+                - name: CvLeaveSpan 関数
+                  href: cvleavespan-function.md
+                - name: CvReleaseMarkerSeries 関数
+                  href: cvreleasemarkerseries-function.md
+                - name: CvReleaseProvider 関数
+                  href: cvreleaseprovider-function.md
+                - name: CvWriteAlert 関数
+                  href: cvwritealert-function.md
+                - name: CvWriteFlag 関数
+                  href: cvwriteflag-function.md
+                - name: CvWriteMessage 関数
+                  href: cvwritemessage-function.md
+        - name: 同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
+          href: concurrency-visualizer-command-line-utility-cvcollectioncmd.md
+    - name: ストア アプリでのエネルギー使用の分析
+      href: analyze-energy-use-in-store-apps.md
+- name: リソース
+  items:
+    - name: プロファイリング ツールの新機能
+      href: what-s-new-in-profiling-tools.md

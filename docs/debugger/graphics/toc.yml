@@ -1,0 +1,98 @@
+- name: Visual Studio グラフィックス診断
+  href: visual-studio-graphics-diagnostics.md
+- name: Visual Studio グラフィックス診断の概要
+  href: overview-of-visual-studio-graphics-diagnostics.md
+- name: Visual Studio グラフィックス診断の使用を開始する
+  href: getting-started-with-visual-studio-graphics-diagnostics.md
+- name: グラフィックス情報をキャプチャする
+  href: capturing-graphics-information.md
+- name: グラフィックス ログ ドキュメント
+  href: graphics-log-document.md
+- name: グラフィックス フレーム分析
+  href: graphics-frame-analysis.md
+  items:
+    - name: 1x1 ビューポイント サイズ バリアント
+      href: 1x1-viewport-size-variant.md
+    - name: 0x/2x/4x MSAA バリアント
+      href: 0x-2x-4x-msaa-variants.md
+    - name: ポイント、バイリニア、トリリニア、およびアニソトロピック テクスチャ フィルタリング バリアント
+      href: point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md
+    - name: 16bpp レンダリング ターゲット フォーマット バリアント
+      href: 16bpp-render-target-format-variant.md
+    - name: ミップマップ生成バリアント
+      href: mip-map-generation-variant.md
+    - name: ハーフ/クォーター テクスチャ ディメンション バリアント
+      href: half-quarter-texture-dimensions-variant.md
+    - name: BC テクスチャ圧縮バリアント
+      href: bc-texture-compression-variant.md
+- name: イベント一覧
+  href: graphics-event-list.md
+- name: グラフィックスの状態
+  href: graphics-state.md
+- name: パイプライン ステージ
+  href: graphics-pipeline-stages.md
+- name: イベント呼び出し履歴
+  href: graphics-event-call-stack.md
+- name: ピクセル履歴
+  href: graphics-pixel-history.md
+- name: オブジェクト テーブル
+  href: graphics-object-table.md
+- name: API とメモリの統計情報
+  href: graphics-api-and-memory-statistics.md
+- name: フレームの検証
+  href: graphics-frame-validation.md
+- name: HLSL シェーダーのデバッガー
+  href: hlsl-shader-debugger.md
+- name: コマンド ライン キャプチャ ツール
+  href: command-line-capture-tool.md
+- name: グラフィックス診断例
+  href: graphics-diagnostics-examples.md
+  items:
+    - name: 'チュートリアル: グラフィックス情報のキャプチャ'
+      href: walkthrough-capturing-graphics-information.md
+    - name: 'チュートリアル: プログラムによるグラフィックス情報のキャプチャ'
+      href: walkthrough-capturing-graphics-information-programmatically.md
+    - name: 'チュートリアル: デバイス状態によるオブジェクトの不足'
+      href: walkthrough-missing-objects-due-to-device-state.md
+    - name: 'チュートリアル: 頂点の網かけによるオブジェクトの不足'
+      href: walkthrough-missing-objects-due-to-vertex-shading.md
+    - name: 'チュートリアル: ピクセル シェーディングによるオブジェクトの不足'
+      href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
+    - name: 'チュートリアル: 網かけによるレンダリング エラーのデバッグ'
+      href: walkthrough-debugging-rendering-errors-due-to-shading.md
+    - name: 'Walkthrough: Using Graphics Diagnostics to Debug a Compute Shader (チュートリアル: 計算シェーダーをデバッグするためのグラフィックス診断の使用)'
+      href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
+    - name: '方法: グラフィックス診断再生マシンを変更する'
+      href: how-to-change-the-graphics-diagnostics-playback-machine.md
+- name: 参照 (プログラムによるキャプチャ)
+  href: reference-programmatic-capture.md
+  items:
+    - name: VsgDbg クラス
+      href: vsgdbg-class.md
+      items:
+        - name: 'VsgDbg::VsgDbg (コンストラクター)'
+          href: vsgdbg-vsgdbg-constructor.md
+        - name: 'VsgDbg::~VsgDbg (デストラクター)'
+          href: vsgdbg-tilde-vsgdbg-destructor.md
+        - name: AddMessage
+          href: addmessage.md
+        - name: BeginCapture
+          href: begincapture.md
+        - name: CaptureCurrentFrame
+          href: capturecurrentframe.md
+        - name: コピー (プログラムによるキャプチャ)
+          href: copy-programmatic-capture.md
+        - name: EndCapture
+          href: endcapture.md
+        - name: Init
+          href: init.md
+        - name: ToggleHUD
+          href: togglehud.md
+        - name: UnInit
+          href: uninit.md
+    - name: DONT_SAVE_VSGLOG_TO_TEMP
+      href: dont-save-vsglog-to-temp.md
+    - name: VSG_DEFAULT_RUN_FILENAME
+      href: vsg-default-run-filename.md
+    - name: VSG_NODEFAULT_INSTANCE
+      href: vsg-nodefault-instance.md

@@ -74,10 +74,9 @@
 #### [MPN のサブスクリプションを管理する](manage-mpn-subscriptions.md)
 #### [Microsoft for Startups](program-startups.md)
 ## リソース
-### [Visual Studio のライセンス条項](vs-license-terms.md)
 ### [Visual Studio ライセンス ホワイト ペーパー](http://aka.ms/vslicensing)
 ### [サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/vs/pricing)
 ### [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare)
 ### [Visual Studio の管理とサブスクリプションのサポート](https://www.visualstudio.com/support/support-overview-vs)
-### [ボリューム ライセンスと製品使用権 (PUR)](http://www.microsoft.com/licensing/product-licensing/products.aspx)
+### [ボリューム ライセンスの契約条件](https://www.microsoft.com/en-us/licensing/product-licensing/products.aspx)
 ### [Microsoft Products and Services Agreement (MPSA)](https://www.microsoft.com/en-us/licensing/mpsa/default.aspx)
