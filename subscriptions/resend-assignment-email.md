@@ -9,11 +9,12 @@ description: manage.visualstudio.com または VLSC からサブスクリプシ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ee41426aa845f8a6c7ae2b414bec7bc3a814bcfe
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 2edabf44637672f45241299703cb3d3f88348b6c
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335958"
 ---
 # <a name="how-to-resend-subscription-assignment-emails-in-the-visual-studio-subscription-management-portal"></a>Visual Studio のサブスクリプション管理ポータルからサブスクリプションの割り当てメールを再送信する方法
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/27/2018
 manage.visualstudio.com ポータル内から割り当てメールを再送信するためのプロセスは非常に簡単です。
 
 1. [manage.visualstudio.com](https://manage.visualstudio.com) ポータルにアクセスしてサインインします。 
-2. **[フィルター]** タブを使用して、割り当てメールを再送信するサブスクライバーを検索します  (フィルター処理の詳細については、[サブスクリプションの検索](/visualstudio/subscriptions/search-license)に関するページを参照してください)。
+2. **[フィルター]** タブを使用して、割り当てメールを再送信するサブスクライバーを検索します  (フィルター処理の詳細については、[サブスクリプションの検索](search-license.md)に関するページを参照してください)。
 3. [サブスクリプション] タブをクリックします。  複数のサブスクライバーを選択するには、Ctrl キーを押しながらクリックするか、Shift キーを押しながらクリックします。
 4. 検索結果の先頭にある **[再送信]** をクリックします。  
 

@@ -9,17 +9,18 @@ description: Visual Studio サブスクリプション ポータルを使用す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: cb6e33e442a5b4d63f4c1950df382da9a439643f
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 1fc8c77e71f32e2bb559426b3447d0bbc293e785
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335932"
 ---
 # <a name="using-the-subscriber-portal---myspanspanvisualstudiospanspancom"></a>サブスクライバー ポータルの使用 - my.<span></span>visualstudio<span></span>.com
 
 Visual Studio サブスクリプション ポータル ([https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)) は、Visual Studio サブスクリプションで提供されるあらゆる特典を利用できるオールインワン リソースです。 
 
-ポータルを使用するには、サブスクリプションに関連付けられた ID を使用してサインインする必要があります。  Microsoft アカウント (MSA)、または勤務先や学校などの組織から提供された電子メール アドレスを使用できます。  詳細については、[サインイン](/visualstudio/subscriptions/signing-in)に関するページを参照してください。
+ポータルを使用するには、サブスクリプションに関連付けられた ID を使用してサインインする必要があります。  Microsoft アカウント (MSA)、または勤務先や学校などの組織から提供された電子メール アドレスを使用できます。  詳細については、[サインイン](signing-in.md)に関するページを参照してください。
 
 ポータルは 6 ページで構成されています。  各ページから、サブスクリプションに含まれるさまざまな製品やサービスにアクセスできます。  6 ページの内訳は、[特典]、[ダウンロード]、[プロダクト キー]、[サブスクリプション]、[サポート]、[Marketplace] です。  
 

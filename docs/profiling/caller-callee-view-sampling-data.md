@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c04c3d6e9df1bc761fdbcd3e78a5e43ab3efd1f2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8e964ec877b791fc3058068e2f89706cc5826e0f
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335971"
 ---
 # <a name="caller--callee-view---sampling-data"></a>呼び出し元/呼び出し先ビュー - サンプリング データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数のプロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/19/2018
 |**サンプル数 (関数のみ)**|-   現在の関数の場合、この関数が直接実行されていたとき、つまりこの関数が呼び出し履歴の最上位にあったときに収集されたプロファイル実行のサンプル数。 この関数の子関数の実行中に収集されたサンプルは、排他カウントには含まれません。<br />-   呼び出し元関数の場合、この関数が現在の関数を呼び出したときに収集された現在の関数の排他サンプル数。<br />-   呼び出し先関数の場合、現在の関数がこの関数を呼び出したときに収集されたこの関数の排他サンプル数。|  
 |**サンプル % (関数のみ)**|プロファイル実行のすべてのサンプルに対する、この関数の排他サンプルの割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
  [呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
  [呼び出し元/呼び出し先ビュー - インストルメンテーション データ](../profiling/caller-callee-view-instrumentation-data.md)

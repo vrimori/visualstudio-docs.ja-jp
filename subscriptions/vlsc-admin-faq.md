@@ -9,11 +9,12 @@ description: ボリューム ライセンス サービス センター管理の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 014564880dcc7587a1f94e3815d6f36edb36cee3
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: e4dda4264ae48903e98166346f9e2569ab1e4da0
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336127"
 ---
 # <a name="visual-studio-subscriptions-administration-migration"></a>Visual Studio サブスクリプション管理の移行
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/06/2018
 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインし、**[サブスクリプション]** > **[Visual Studio サブスクリプション]** に移動します。 PCN は **[Agreement/Public Customer Number Results]\(契約/パブリック カスタマー番号の結果\)** の下に表示されます。 PCN を確認する手順については、こちらの[ヘルプ記事](/find-pcn/)を参照してください。 
 
 ### <a name="how-do-i-find-out-who-my-primary-or-notices-contact-is"></a>主要連絡先または通知連絡先が誰かを確認するにはどうすればよいですか?
-[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインし、**[ライセンス] > [関係サマリー]** に移動し、**[ライセンス ID] > [連絡先]** の順に選択します。 主要連絡先または通知連絡先を確認する手順については、こちらの[ヘルプ記事](/find-primary-contact/)を参照してください。 
+[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインし、**[ライセンス] > [関係サマリー]** に移動し、**[ライセンス ID] > [連絡先]** の順に選択します。 主要連絡先または通知連絡先を確認する手順については、こちらの[ヘルプ記事](find-primary-contact.md)を参照してください。 
 
 ### <a name="what-if-my-primary-or-notices-contact-is-gone-no-longer-with-the-company-or-not-available-to-complete-onboarding"></a>主要連絡先または通知連絡先が不在である、退職した、またはオンボードを完了できなくなった場合はどうすればよいですか?
 [サポートに連絡し](https://www.visualstudio.com/subscriptions/support/#talktous)、VLSC でサブスクリプションの管理に使用していたメール アドレスを伝えていただく必要があります。 確認が完了すると、サポート担当者がオンボード プロセスのお手伝いできるようになります。 
@@ -106,8 +107,8 @@ ms.lasthandoff: 04/06/2018
 
 - Visual Studio のサブスクリプションと管理の[サポート](https://www.visualstudio.com/subscriptions/support/) 
 
-- [PCN を確認する方法](/find-pcn/)
+- [PCN を確認する方法](find-pcn.md)
 
-- [主要担当者または通知連絡先を確認する方法](/find-primary-contact/) 
+- [主要担当者または通知連絡先を確認する方法](find-primary-contact.md) 
 
 - 組織のオンボードと管理者の管理に関する[ビデオ](https://www.youtube.com/watch?v=ZmnywYGSFMg&list=PLReL099Y5nRfDyvvwzNDBaZe7qTxmuM2T&index=1&t=0s) 

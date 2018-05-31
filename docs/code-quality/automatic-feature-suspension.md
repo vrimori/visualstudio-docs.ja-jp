@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio での自動機能中断
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31893928"
 ---
 # <a name="automatic-feature-suspension"></a>自動機能中断
 
