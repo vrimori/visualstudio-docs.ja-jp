@@ -1,4 +1,4 @@
----
+﻿---
 title: '方法: マネージ コードの自動コード分析を有効/無効にする'
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919506"
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>方法: マネージ コードの自動コード分析を有効/無効にします
 

@@ -1,0 +1,377 @@
+- name: SharePoint ソリューションの作成
+  href: create-sharepoint-solutions.md
+  items:
+    - name: はじめに (SharePoint 開発)
+      href: getting-started-sharepoint-development-in-visual-studio.md
+      items:
+        - name: SharePoint ソリューションの開発要件
+          href: requirements-for-developing-sharepoint-solutions.md
+        - name: SharePoint のエラーに関する追加情報
+          href: additional-information-for-sharepoint-errors.md
+    - name: SharePoint ソリューションの開発
+      href: developing-sharepoint-solutions.md
+      items:
+        - name: SharePoint プロジェクトとプロジェクト項目テンプレート
+          href: sharepoint-project-and-project-item-templates.md
+        - name: SharePoint プロジェクトに項目を追加する
+          href: how-to-add-items-to-a-sharepoint-project.md
+        - name: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成
+          href: creating-site-columns-content-types-and-lists-for-sharepoint.md
+          items:
+            - name: 'チュートリアル: SharePoint のサイト列、コンテンツ タイプ、およびリストの作成'
+              href: walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md
+        - name: イベント レシーバーを作成する
+          href: how-to-create-an-event-receiver.md
+        - name: 特定のリスト インスタンスに対するイベント レシーバーを作成する
+          href: how-to-create-an-event-receiver-for-a-specific-list-instance.md
+        - name: SharePoint ワークフロー ソリューションの作成
+          href: creating-sharepoint-workflow-solutions.md
+          items:
+            - name: ワークフローでのフォームのサポート
+              href: form-support-in-workflows.md
+            - name: 'チュートリアル : SharePoint ワークフロー ソリューションの作成とデバッグ'
+              href: walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md
+            - name: 'チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成'
+              href: walkthrough-creating-a-workflow-with-association-and-initiation-forms.md
+            - name: 'チュートリアル: ワークフローへのアプリケーション ページの追加'
+              href: walkthrough-add-an-application-page-to-a-workflow.md
+            - name: 'チュートリアル: サイトのカスタム ワークフロー アクティビティの作成'
+              href: walkthrough-create-a-custom-site-workflow-activity.md
+            - name: 'チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート'
+              href: walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md
+        - name: SharePoint 用ページの作成
+          href: creating-pages-for-sharepoint.md
+          items:
+            - name: SharePoint のアプリケーション ページの作成
+              href: creating-application-pages-for-sharepoint.md
+            - name: アプリケーション ページを作成する
+              href: how-to-create-an-application-page.md
+            - name: 'チュートリアル: SharePoint アプリケーション ページの作成'
+              href: walkthrough-creating-a-sharepoint-application-page.md
+        - name: SharePoint の Web パーツの作成
+          href: creating-web-parts-for-sharepoint.md
+          items:
+            - name: SharePoint Web パーツを作成する
+              href: how-to-create-a-sharepoint-web-part.md
+            - name: デザイナーを使用して SharePoint Web パーツを作成する
+              href: how-to-create-a-sharepoint-web-part-by-using-a-designer.md
+            - name: 'チュートリアル: SharePoint の Web パーツを作成する'
+              href: walkthrough-creating-a-web-part-for-sharepoint.md
+            - name: 'チュートリアル: デザイナーを使用した SharePoint の Web パーツの作成'
+              href: walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md
+            - name: 'チュートリアル: SharePoint の OData を表示する Silverlight Web パーツの作成'
+              href: walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md
+        - name: Web パーツまたはアプリケーション ページの再利用できるコントロールの作成
+          href: creating-reusable-controls-for-web-parts-or-application-pages.md
+          items:
+            - name: SharePoint アプリケーション ページまたは Web パーツのユーザー コントロールを作成する
+              href: how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md
+        - name: SharePoint へのビジネス データの統合
+          href: integrating-business-data-into-sharepoint.md
+          items:
+            - name: ビジネス データ接続モデルの作成
+              href: creating-a-business-data-connectivity-model.md
+              items:
+                - name: BDC モデルを作成する
+                  href: how-to-create-a-bdc-model.md
+                - name: 既存の BDC モデル ファイルを SharePoint プロジェクトに追加する
+                  href: how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md
+                - name: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する
+                  href: how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md
+                - name: BDC 機能にカスタム アセンブリを含める
+                  href: how-to-include-a-custom-assembly-in-a-bdc-feature.md
+            - name: Business Data Connectivity モデルのデザイン
+              href: designing-a-business-data-connectivity-model.md
+              items:
+                - name: BDC モデルのデザイン ツールの概要
+                  href: bdc-model-design-tools-overview.md
+                - name: モデルにエンティティを追加する
+                  href: how-to-add-an-entity-to-a-model.md
+                - name: Finder メソッドを追加する
+                  href: how-to-add-a-finder-method.md
+                - name: SpecificFinder メソッドを追加する
+                  href: how-to-add-a-specific-finder-method.md
+                - name: Creator メソッドを追加する
+                  href: how-to-add-a-creator-method.md
+                - name: Deleter メソッドを追加する
+                  href: how-to-add-a-deleter-method.md
+                - name: Updater メソッドを追加する
+                  href: how-to-add-an-updater-method.md
+                - name: メソッドにパラメーターを追加する
+                  href: how-to-add-a-parameter-to-a-method.md
+                - name: パラメーターの型記述子を定義する
+                  href: how-to-define-the-type-descriptor-of-a-parameter.md
+                - name: メソッド インスタンスを定義する
+                  href: how-to-define-a-method-instance.md
+                - name: カスタム プロパティを追加する
+                  href: how-to-add-a-custom-property.md
+                - name: Finder メソッドにフィルター記述子を追加する
+                  href: how-to-add-a-filter-descriptor-to-a-finder-method.md
+                - name: エンティティ間の関連付けの作成
+                  href: creating-an-association-between-entities.md
+                - name: エンティティ間に関連付けを作成する
+                  href: how-to-create-an-association-between-entities.md
+                - name: 'チュートリアル: ビジネス データを使用した SharePoint での外部リストの作成'
+                  href: walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md
+        - name: SharePoint のサイト定義の作成
+          href: creating-site-definitions-for-sharepoint.md
+          items:
+            - name: 'チュートリアル: 基本サイト定義プロジェクトの作成'
+              href: walkthrough-create-a-basic-site-definition-project.md
+        - name: 既存の SharePoint サイトからのアイテムのインポート
+          href: importing-items-from-an-existing-sharepoint-site.md
+          items:
+            - name: 'チュートリアル: 既存の SharePoint サイトからのアイテムのインポート'
+              href: walkthrough-import-items-from-an-existing-sharepoint-site.md
+            - name: 再利用可能なワークフローをインポートするためのガイドライン
+              href: guidelines-for-importing-reusable-workflows.md
+            - name: マスター ページまたはテーマをインポートする
+              href: how-to-import-a-master-page-or-theme.md
+            - name: 'チュートリアル: イメージを備えたカスタム マスター ページおよびサイト ページのインポート'
+              href: walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md
+        - name: モジュールを使用してソリューションにファイルを追加する
+          href: using-modules-to-include-files-in-the-solution.md
+          items:
+            - name: モジュールを使用してファイルを含める
+              href: how-to-include-files-by-using-a-module.md
+        - name: サーバー エクスプローラーを使用した SharePoint 接続の参照
+          href: browsing-sharepoint-connections-using-server-explorer.md
+          items:
+            - name: SharePoint 接続を追加または削除する
+              href: how-to-add-or-remove-sharepoint-connections.md
+        - name: プロジェクト項目でのパッケージ化と配置の情報の提供
+          href: providing-packaging-and-deployment-information-in-project-items.md
+          items:
+            - name: コントロールを安全なコントロールとしてマークする
+              href: how-to-mark-controls-as-safe-controls.md
+            - name: プロジェクト出力参照を追加する
+              href: how-to-add-a-project-output-reference.md
+        - name: マップされたフォルダーを追加および削除する
+          href: how-to-add-and-remove-mapped-folders.md
+        - name: Sandboxed Solution Considerations
+          href: sandboxed-solution-considerations.md
+        - name: SharePoint ソリューションのセキュリティ
+          href: security-for-sharepoint-solutions.md
+        - name: URL ピッカー ダイアログ ボックス
+          href: url-picker-dialog-box-sharepoint-development-in-visual-studio.md
+    - name: SharePoint ソリューションのローカライズ
+      href: localizing-sharepoint-solutions.md
+      items:
+        - name: リソース ファイルを追加する
+          href: how-to-add-a-resource-file.md
+        - name: フィーチャーをローカライズする
+          href: how-to-localize-a-feature.md
+        - name: ASPX マークアップをローカライズする
+          href: how-to-localize-aspx-markup.md
+        - name: コードをローカライズする
+          href: how-to-localize-code.md
+    - name: SharePoint ソリューションのビルドとデバッグ
+      href: building-and-debugging-sharepoint-solutions.md
+      items:
+        - name: SharePoint ソリューションをビルドする
+          href: how-to-build-sharepoint-solutions.md
+        - name: SharePoint ソリューションのデバッグ
+          href: debugging-sharepoint-solutions.md
+        - name: SharePoint コードの検証およびデバッグ
+          href: verifying-and-debugging-sharepoint-code.md
+          items:
+            - name: 'チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ'
+              href: walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md
+        - name: SharePoint アプリケーションのパフォーマンスのプロファイリング
+          href: profiling-the-performance-of-sharepoint-applications.md
+          items:
+            - name: 'チュートリアル: SharePoint アプリケーションのプロファイリング'
+              href: walkthrough-profiling-a-sharepoint-application.md
+        - name: サンドボックス ソリューションとファーム ソリューションの違い
+          href: differences-between-sandboxed-and-farm-solutions.md
+        - name: SharePoint でサポートされている MSBuild プロパティ
+          href: msbuild-properties-supported-by-sharepoint.md
+        - name: SharePoint ソリューションのトラブルシューティング
+          href: troubleshooting-sharepoint-solutions.md
+    - name: SharePoint ソリューションのパッケージ化と配置
+      href: packaging-and-deploying-sharepoint-solutions.md
+      items:
+        - name: SharePoint フィーチャーの作成
+          href: creating-sharepoint-features.md
+          items:
+            - name: SharePoint ソリューションにフィーチャーを追加する
+              href: how-to-add-a-feature-to-sharepoint-solutions.md
+            - name: SharePoint フィーチャーをカスタマイズする
+              href: how-to-customize-a-sharepoint-feature.md
+            - name: SharePoint フィーチャーの項目を追加および削除する
+              href: how-to-add-and-remove-items-to-sharepoint-features.md
+            - name: フィーチャーの依存関係を追加および削除する
+              href: how-to-add-and-remove-feature-dependencies.md
+            - name: 'チュートリアル: フィーチャーのイベント レシーバーの追加'
+              href: walkthrough-add-feature-event-receivers.md
+        - name: SharePoint ソリューション パッケージの作成
+          href: creating-sharepoint-solution-packages.md
+          items:
+            - name: SharePoint ソリューション パッケージをカスタマイズする
+              href: how-to-customize-a-sharepoint-solution-package.md
+            - name: パッケージ デザイナーを使用してパッケージのフィーチャーおよび項目を追加および削除する
+              href: how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md
+            - name: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する
+              href: how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md
+            - name: アセンブリを追加および削除する
+              href: how-to-add-and-remove-additional-assemblies.md
+            - name: MSBuild タスクを使用して SharePoint ソリューション パッケージを作成する
+              href: how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md
+            - name: MSBuild ターゲットを使用して SharePoint ソリューション パッケージをカスタマイズする
+              href: how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md
+        - name: SharePoint ソリューションのパッケージの配置、発行、アップグレード
+          href: deploying-publishing-and-upgrading-sharepoint-solution-packages.md
+          items:
+            - name: SharePoint ソリューションをローカルの SharePoint サイトに配置および発行する
+              href: how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md
+            - name: リモート サーバー上で SharePoint ソリューションを配置、発行、およびアップグレードする
+              href: how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md
+            - name: SharePoint の配置コマンドを設定する
+              href: how-to-set-sharepoint-deployment-commands.md
+            - name: SharePoint の配置構成を編集する
+              href: how-to-edit-a-sharepoint-deployment-configuration.md
+            - name: 'チュートリアル: プロジェクト タスク リスト定義の配置'
+              href: walkthrough-deploying-a-project-task-list-definition.md
+        - name: 置き換え可能パラメーター
+          href: replaceable-parameters.md
+        - name: SharePoint のパッケージ化と配置のトラブルシューティング
+          href: troubleshooting-sharepoint-packaging-and-deployment.md
+        - name: フィーチャー マニフェストとパッケージ マニフェストの XML のマージ
+          href: merging-xml-in-feature-and-package-manifests.md
+    - name: SharePoint 開発のサンプルとチュートリアル
+      href: sharepoint-development-samples-and-walkthroughs.md
+      items:
+        - name: SharePoint 開発のサンプル
+          href: sharepoint-development-samples.md
+        - name: SharePoint 開発のチュートリアル
+          href: sharepoint-development-walkthroughs.md
+    - name: Visual Studio の SharePoint ツールの拡張
+      href: extending-the-sharepoint-tools-in-visual-studio.md
+      items:
+        - name: SharePoint ツール拡張機能のプログラミング モデルの概要
+          href: overview-of-the-programming-model-of-sharepoint-tools-extensions.md
+        - name: SharePoint プロジェクト システムの拡張
+          href: extending-the-sharepoint-project-system.md
+          items:
+            - name: SharePoint プロジェクト項目の種類の定義
+              href: defining-custom-sharepoint-project-item-types.md
+              items:
+                - name: SharePoint プロジェクト項目の種類を定義する
+                  href: how-to-define-a-sharepoint-project-item-type.md
+                - name: ショートカット メニュー項目をカスタム SharePoint プロジェクト項目の種類に追加する
+                  href: how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md
+                - name: プロパティをカスタムの SharePoint プロジェクト項目の種類に追加する
+                  href: how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md
+                - name: SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートの作成
+                  href: creating-item-templates-and-project-templates-for-sharepoint-project-items.md
+                - name: 'チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 1)'
+                  href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md
+                - name: 'チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)'
+                  href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md
+                - name: 'チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)'
+                  href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md
+                - name: 'チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)'
+                  href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md
+            - name: SharePoint プロジェクト項目の拡張
+              href: extending-sharepoint-project-items.md
+              items:
+                - name: SharePoint プロジェクト項目の拡張機能を作成する
+                  href: how-to-create-a-sharepoint-project-item-extension.md
+                - name: ショートカット メニュー項目を SharePoint プロジェクト項目の拡張機能に追加する
+                  href: how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md
+                - name: SharePoint プロジェクト項目の拡張機能にプロパティを追加する
+                  href: how-to-add-a-property-to-a-sharepoint-project-item-extension.md
+                - name: 'チュートリアル: SharePoint プロジェクト項目の種類の拡張'
+                  href: walkthrough-extending-a-sharepoint-project-item-type.md
+            - name: SharePoint プロジェクトの拡張
+              href: extending-sharepoint-projects.md
+              items:
+                - name: SharePoint プロジェクトの拡張機能を作成する
+                  href: how-to-create-a-sharepoint-project-extension.md
+                - name: ショートカット メニュー項目を SharePoint プロジェクトに追加する
+                  href: how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md
+                - name: SharePoint プロジェクトにプロパティを追加する
+                  href: how-to-add-a-property-to-sharepoint-projects.md
+                - name: 'チュートリアル: SharePoint プロジェクトの拡張機能の作成'
+                  href: walkthrough-creating-a-sharepoint-project-extension.md
+            - name: SharePoint のパッケージ化と配置の拡張
+              href: extending-sharepoint-packaging-and-deployment.md
+              items:
+                - name: 配置手順の実行時にコードを実行する
+                  href: how-to-run-code-when-deployment-steps-are-executed.md
+                - name: SharePoint プロジェクトの配置時または取り消し時にコードを実行する
+                  href: how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md
+                - name: 配置競合を処理する
+                  href: how-to-handle-deployment-conflicts.md
+                - name: 'チュートリアル: SharePoint プロジェクトに対するカスタムの配置手順の作成'
+                  href: walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md
+                - name: SharePoint ソリューションのフィーチャーとパッケージのカスタム検証規則を作成する
+                  href: how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md
+            - name: SharePoint プロジェクト システムの拡張機能におけるデータの保存
+              href: saving-data-in-extensions-of-the-sharepoint-project-system.md
+            - name: SharePoint プロジェクト システムと他の Visual Studio プロジェクトの間の型変換
+              href: converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md
+        - name: 'サーバー エクスプローラーの [SharePoint 接続] ノードの拡張'
+          href: extending-the-sharepoint-connections-node-in-server-explorer.md
+          items:
+            - name: サーバー エクスプローラーの SharePoint ノードを拡張する
+              href: how-to-extend-a-sharepoint-node-in-server-explorer.md
+            - name: サーバー エクスプローラーにカスタム SharePoint ノードを追加する
+              href: how-to-add-a-custom-sharepoint-node-to-server-explorer.md
+            - name: サーバー エクスプローラーの組み込みの SharePoint ノードのデータを取得する
+              href: how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md
+            - name: 'チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する'
+              href: walkthrough-extending-server-explorer-to-display-web-parts.md
+        - name: SharePoint ツール拡張機能におけるプログラミングに関する概念および特徴
+          href: programming-concepts-and-features-for-sharepoint-tools-extensions.md
+          items:
+            - name: SharePoint オブジェクト モデルの呼び出し
+              href: calling-into-the-sharepoint-object-models.md
+              items:
+                - name: SharePoint コマンドを作成する
+                  href: how-to-create-a-sharepoint-command.md
+                - name: SharePoint コマンドを実行する
+                  href: how-to-execute-a-sharepoint-command.md
+                - name: 'チュートリアル: サーバー エクスプローラーの拡張機能から SharePoint クライアント オブジェクト モデルを呼び出す'
+                  href: walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md
+            - name: SharePoint プロジェクト サービスの使用
+              href: using-the-sharepoint-project-service.md
+              items:
+                - name: SharePoint プロジェクト サービスを取得する
+                  href: how-to-retrieve-the-sharepoint-project-service.md
+            - name: カスタム データの SharePoint ツールの拡張機能への関連付け
+              href: associating-custom-data-with-sharepoint-tools-extensions.md
+        - name: Visual Studio での SharePoint ツールの拡張機能のデバッグ
+          href: debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md
+        - name: Visual Studio での SharePoint ツールの拡張機能の配置
+          href: deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md
+        - name: 参照
+          href: reference-sharepoint-tools-extensibility.md
+          items:
+            - name: SharePoint プロジェクト項目スキーマのリファレンス
+              href: sharepoint-project-item-schema-reference.md
+              items:
+                - name: ExtensionData 要素
+                  href: extensiondata-element.md
+                - name: ExtensionDataItem 要素
+                  href: extensiondataitem-element.md
+                - name: FeatureProperties 要素
+                  href: featureproperties-element.md
+                - name: FeatureProperty 要素
+                  href: featureproperty-element.md
+                - name: Files 要素
+                  href: files-element.md
+                - name: ProjectItem 要素
+                  href: projectitem-element.md
+                - name: ProjectItemFile 要素
+                  href: projectitemfile-element.md
+                - name: ProjectItemFolder 要素
+                  href: projectitemfolder-element.md
+                - name: ProjectOutputFile 要素
+                  href: projectoutputfile-element.md
+                - name: SafeControl 要素
+                  href: safecontrol-element.md
+                - name: SafeControls 要素
+                  href: safecontrols-element.md
+            - name: API リファレンス
+              href: api-reference-sharepoint-tools-extensibility.md

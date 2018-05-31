@@ -1,0 +1,177 @@
+- name: ユーザー インターフェイスを設計する
+  href: designing-user-interfaces.md
+  items:
+    - name: Visual Studio で XAML をデザインする
+      href: designing-xaml-in-visual-studio.md
+      items:
+        - name: XAML デザイナーを使用して UI を作成する
+          href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+          items:
+            - name: XAML デザイナーで要素を操作する
+              href: working-with-elements-in-xaml-designer.md
+            - name: XAML デザイナーでレイアウト コンテナーにオブジェクトを編成する
+              href: organize-objects-into-layout-containers-in-xaml-designer.md
+            - name: リソースを作成して適用する
+              href: how-to-create-and-apply-a-resource.md
+            - name: 'チュートリアル: XAML デザイナーでデータにバインドする'
+              href: walkthrough-binding-to-data-in-xaml-designer.md
+            - name: XAML デザイナーのキーボード ショートカット
+              href: keyboard-shortcuts-for-xaml-designer.md
+            - name: XAML デザイナーでプロジェクト コードをデバッグまたは無効化する
+              href: debugging-or-disabling-project-code-in-xaml-designer.md
+            - name: XAML のエラーと警告
+              href: xaml-errors-warnings.md
+        - name: Blend for Visual Studio を使用した UI の作成
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+          items:
+            - name: XAML デザイナー でコントロールを挿入し、そのビヘイビアーを変更する
+              href: insert-controls-and-modify-their-behavior-in-xaml-designer.md
+            - name: XAML デザイナーでイメージ、ビデオ、およびオーディオ クリップを挿入する
+              href: insert-images-videos-and-audio-clips-in-xaml-designer.md
+            - name: 図形とパスの描画
+              href: draw-shapes-and-paths.md
+            - name: Blend におけるオブジェクト スタイルの変更
+              href: modify-the-style-of-objects-in-blend.md
+            - name: XAML デザイナーでのオブジェクトのアニメーション化
+              href: animate-objects-in-xaml-designer.md
+            - name: データの表示
+              href: display-data-in-blend.md
+            - name: Blend でのキーボード ショートカットと修飾キー
+              href: keyboard-shortcuts-and-modifier-keys-in-blend.md
+              items:
+                - name: キーボード ショートカット
+                  href: keyboard-shortcuts-in-blend.md
+                - name: アートボードの修飾キー
+                  href: artboard-modifier-keys-in-blend.md
+                - name: ペン ツールの修飾キー
+                  href: pen-tool-modifier-keys-in-blend.md
+                - name: '[個別選択] ツールの修飾キー'
+                  href: direct-selection-tool-modifier-keys-in-blend.md
+            - name: アクセシビリティ製品およびサービス (Blend)
+              href: accessibility-products-and-services-blend.md
+    - name: WPF の使用を開始する
+      href: getting-started-with-wpf.md
+      items:
+        - name: WPF の概要
+          href: introduction-to-wpf.md
+        - name: LINQ to XML による WPF のデータ バインディング
+          href: wpf-data-binding-with-linq-to-xml-overview.md
+          items:
+            - name: LINQ to XML の動的プロパティ
+              href: linq-to-xml-dynamic-properties.md
+              items:
+                - name: XAttribute クラスの動的プロパティ
+                  href: xattribute-class-dynamic-properties.md
+                  items:
+                    - name: Value (XAttribute 動的プロパティ)
+                      href: value-xattribute-dynamic-property.md
+                - name: XElement クラスの動的プロパティ
+                  href: xelement-class-dynamic-properties.md
+                  items:
+                    - name: Attribute (XElement 動的プロパティ)
+                      href: attribute-xelement-dynamic-property.md
+                    - name: Element (XElement 動的プロパティ)
+                      href: element-xelement-dynamic-property.md
+                    - name: Elements (XElement 動的プロパティ)
+                      href: elements-xelement-dynamic-property.md
+                    - name: Descendants (XElement 動的プロパティ)
+                      href: descendants-xelement-dynamic-property.md
+                    - name: Value (XElement 動的プロパティ)
+                      href: value-xelement-dynamic-property.md
+                    - name: Xml (XElement 動的プロパティ)
+                      href: xml-xelement-dynamic-property.md
+            - name: 例
+              href: wpf-data-binding-using-linq-to-xml-example.md
+              items:
+                - name: LinqToXmlDataBinding という例をビルドして実行する
+                  href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                - name: 'チュートリアル: LINQ to XML のデータ バインディング'
+                  href: walkthrough-linqtoxmldatabinding-example.md
+                  items:
+                    - name: L2DBForm.xaml ソース コード
+                      href: l2dbform-xaml-source-code.md
+                    - name: L2DBForm.xaml.cs sauce コード
+                      href: l2dbform-xaml-cs-source-code.md
+    - name: ゲームとアプリ用の 3D アセットを操作する
+      href: working-with-3-d-assets-for-games-and-apps.md
+      items:
+        - name: テクスチャおよびイメージを使用する
+          href: working-with-textures-and-images.md
+          items:
+            - name: イメージ エディター
+              href: image-editor.md
+            - name: イメージ エディターの例
+              href: image-editor-examples.md
+              items:
+                - name: 基本的なテクスチャを作成する
+                  href: how-to-create-a-basic-texture.md
+                - name: MIP レベルを作成および変更する
+                  href: how-to-create-and-modify-mip-levels.md
+        - name: 3D モデルを操作する
+          href: working-with-3-d-models.md
+          items:
+            - name: モデル エディター
+              href: model-editor.md
+            - name: モデル エディターの例
+              href: model-editor-examples.md
+              items:
+                - name: 基本 3D モデルを作成する
+                  href: how-to-create-a-basic-3-d-model.md
+                - name: 3D モデルのピボット ポイントを変更する
+                  href: how-to-modify-the-pivot-point-of-a-3-d-model.md
+                - name: 3D 地形のモデル化
+                  href: how-to-model-3-d-terrain.md
+                - name: シェーダーを 3D モデルに適用する
+                  href: how-to-apply-a-shader-to-a-3-d-model.md
+        - name: シェーダーを操作する
+          href: working-with-shaders.md
+          items:
+            - name: シェーダー デザイナー
+              href: shader-designer.md
+            - name: シェーダー デザイナー ノード
+              href: shader-designer-nodes.md
+              items:
+                - name: 定数ノード
+                  href: constant-nodes.md
+                - name: パラメーター ノード
+                  href: parameter-nodes.md
+                - name: テクスチャ ノード
+                  href: texture-nodes.md
+                - name: 数値演算ノード
+                  href: math-nodes.md
+                - name: ユーティリティ ノード
+                  href: utility-nodes.md
+                - name: フィルター ノード
+                  href: filter-nodes.md
+            - name: シェーダー デザイナーの例
+              href: shader-designer-examples.md
+              items:
+                - name: 基本カラー シェーダーを作成する
+                  href: how-to-create-a-basic-color-shader.md
+                - name: 基本ランバート シェーダーを作成する
+                  href: how-to-create-a-basic-lambert-shader.md
+                - name: 基本フォン シェーダーを作成する
+                  href: how-to-create-a-basic-phong-shader.md
+                - name: 基本的なテクスチャ シェーダーを作成する
+                  href: how-to-create-a-basic-texture-shader.md
+                - name: グレースケール テクスチャ シェーダーを作成する
+                  href: how-to-create-a-grayscale-texture-shader.md
+                - name: ジオメトリベースのグラデーション シェーダーを作成する
+                  href: how-to-create-a-geometry-based-gradient-shader.md
+                - name: 'チュートリアル: リアルな 3D のビリヤード ボールを作成する'
+                  href: walkthrough-creating-a-realistic-3-d-billiard-ball.md
+                - name: シェーダーをエクスポートする
+                  href: how-to-export-a-shader.md
+        - name: ゲームまたはアプリで 3D アセットを使用する
+          href: using-3-d-assets-in-your-game-or-app.md
+          items:
+            - name: ミップマップを含むテクスチャをエクスポートする
+              href: how-to-export-a-texture-that-contains-mipmaps.md
+            - name: 前乗算されたアルファを持つテクスチャをエクスポートする
+              href: how-to-export-a-texture-that-has-premultiplied-alpha.md
+            - name: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする
+              href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
+    - name: Visual Studio Image Library
+      href: the-visual-studio-image-library.md
+- name: ワークフロー デザイナーでアプリを開発する
+  href: ../workflow-designer/developing-applications-with-the-workflow-designer.md

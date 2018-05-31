@@ -12,21 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c50e27ef43acc62c1dcf13403ce510064c986541
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c3c7c70057380289272e86cf7187680746dafdd2
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336046"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>コール ツリー ビュー - .NET メモリ サンプリング データ
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、それが呼び出したすべての関数と、それらの関数呼び出しに関する .NET メモリ割り当てデータを一覧表示します。  
   
  コール ツリー ビュー内の値は、コール ツリー内の親関数から呼び出された関数のインスタンスに対応します。 割合の値を計算するには、関数インスタンスの値と、プロファイル実行における割り当ての総数またはサイズを比較します。  
   
-## <a name="highlighting-the-execution-hot-path"></a>実行ホット パスの強調表示  
+## <a name="highlight-the-execution-hot-path"></a>実行ホット パスの強調表示  
  コール ツリー ビューでは、最も大きな、あるいは最も多くのオブジェクトが発生したプロセスまたは関数の実行パスを展開して強調表示できます。 最もアクティブなパスを表示するには、プロセスまたは関数を右クリックし、**[ホット パスの展開]** をクリックします。  
   
-## <a name="setting-the-call-tree-root-node"></a>コール ツリーのルート ノードの設定  
+## <a name="set-the-call-tree-root-node"></a>コール ツリーのルート ノードの設定  
  プロファイル実行の各プロセスは、ルート ノードとして表示されます。 コール ツリー ビューの開始ノードを別のノードに設定するには、開始ノードとして設定するノードを右クリックし、**[ルートの設定]** をクリックします。  
   
  ルート ノードを設定すると、選択したノードのサブツリーを除く他のすべてのエントリはビューから除外されます。 ルート ノードをリセットし、表示していたノードに戻るには、[コール ツリー] ウィンドウ内の任意の場所で右クリックし、**[ルートのリセット]** を選択します。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/19/2018
 |**割り当てバイト数 (関数のみ)**|コール ツリーの親関数が呼び出した、この関数のインスタンスによって割り当てられたメモリのバイト数。 この数には、子関数によって行われた割り当てが含まれません。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイル実行で割り当てられたすべてのメモリのバイト数に対する、この関数の排他的割り当てであったバイト数の割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コール ツリー ビュー - インストルメンテーション](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)   
  [コール ツリー ビュー](../profiling/call-tree-view-instrumentation-data.md)

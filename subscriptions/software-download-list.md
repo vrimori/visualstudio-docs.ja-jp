@@ -9,11 +9,12 @@ description: Visual Studio サブスクリプションに含まれているダ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c59565e903947df54ec0ae593421ee0cc447e8c5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 7958ccedb28a14763264cd590e83d5e8e7fbbcdf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335841"
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>ダウンロードできるソフトウェアはどうすればわかりますか。
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/06/2018
 
 既に Visual Studio サブスクリプションをお持ちの場合: 
 1. [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) に移動します。
-2. 自分のサブスクリプションにサインインします。  (方法については、[サインインに関するページ](/visualstudio/subscriptions/signing-in)を参照してください)。
+2. 自分のサブスクリプションにサインインします。  (方法については、[サインインに関するページ](signing-in.md)を参照してください)。
 3. サインインに成功すると、目的のダウンロードを検索できます。  また、人気のあるダウンロードの一覧も表示できます。一覧はいくつかの基準を指定して並べ替えることができます。 
 
 製品をすばやく見つけるには、ページの上部にある [検索] 機能を使用するか、左側にある別の製品の種類をクリックします。
