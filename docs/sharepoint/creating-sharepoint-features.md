@@ -16,26 +16,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 16c7405cfe889808f27dbb274f7f685e949889dd
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: d119e84bba07c68e8d0466902d52d4ed9d151123
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692016"
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint フィーチャーの作成
   SharePoint 機能を使用して、展開が容易に関連する SharePoint プロジェクト項目をグループ化することができます。 機能を作成、スコープの設定、およびその他の機能を SharePoint フィーチャー デザイナーを使用して、依存関係としてマークできます。 デザイナーには、各機能を記述する XML ファイルである、マニフェストも生成されます。  
   
-## <a name="adding-features-to-the-sharepoint-solution"></a>SharePoint ソリューションに機能を追加します。  
+## <a name="add-features-to-the-sharepoint-solution"></a>SharePoint ソリューションに機能を追加します。
  SharePoint ソリューションに機能を追加するには、ソリューション エクスプ ローラーまたはパッケージング エクスプ ローラーを使用します。 機能を追加するのにには、次のいずれかを使用できます。  
   
 -   **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能**を選択し**フィーチャーの追加**です。  
   
 -   **パッケージング エクスプ ローラー**をパッケージのショートカット メニューを開きを選択し、**フィーチャーの追加**です。  
   
-## <a name="using-the-feature-designer"></a>フィーチャー デザイナーを使用  
+## <a name="using-the-feature-designer"></a>フィーチャー デザイナーを使用
  SharePoint ソリューションには、ソリューション エクスプ ローラーで、そのフィーチャー ノードの下でグループ化されている 1 つまたは複数の SharePoint 機能を含めることができます。 各機能には、独自**フィーチャー デザイナー**フィーチャーのプロパティのカスタマイズを行えます。 詳細については、次を参照してください。[する方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)です。 いずれかの別の機能を区別するためには、タイトル、説明、バージョン、およびスコープなどの機能のプロパティを構成できます。  
   
-### <a name="feature-designer-options"></a>フィーチャー デザイナーのオプション  
+### <a name="feature-designer-options"></a>フィーチャー デザイナーのオプション
  機能を作成した後は、それをカスタマイズするのにフィーチャー デザイナーを使用できます。  
   
  次の表では、フィーチャー デザイナーに表示される機能のプロパティについて説明します。  
@@ -48,13 +49,13 @@ ms.lasthandoff: 05/17/2018
 |[ソリューション内の項目]|フィーチャーに追加できるすべての SharePoint アイテムです。|  
 |フィーチャー内の項目|フィーチャーに追加されている SharePoint プロジェクト項目です。|  
   
-## <a name="adding-and-removing-sharepoint-project-items"></a>追加して、SharePoint プロジェクト項目の削除  
+## <a name="add-and-remove-sharepoint-project-items"></a>SharePoint プロジェクト アイテム追加し、削除
  SharePoint プロジェクト項目を展開するための SharePoint 機能を追加することを選択することができます。 使用して、**フィーチャー デザイナー**して、フィーチャーのマニフェストの追加と、機能に項目を削除します。 詳細については、次を参照してください。[する方法: 追加および SharePoint フィーチャーの項目を削除する](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)です。  
   
-## <a name="adding-feature-dependencies"></a>機能の依存関係を追加します。  
+## <a name="add-feature-dependencies"></a>機能の依存関係を追加します。
  フィーチャー マニフェストは、機能をアクティブ化する前に、SharePoint サーバーが特定の機能をアクティブにできるように構成できます。 たとえば、SharePoint の機能は、機能やデータの他の機能に依存する場合、SharePoint サーバーことができますまずの機能が依存する機能をアクティブ化するします。 詳細については、次を参照してください。[する方法: 追加および機能の依存関係を削除する](../sharepoint/how-to-add-and-remove-feature-dependencies.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: 追加および SharePoint フィーチャーの項目を削除します。](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
  [方法: フィーチャーの依存関係を追加および削除する](../sharepoint/how-to-add-and-remove-feature-dependencies.md)  

@@ -1,5 +1,5 @@
 ---
-title: データセットへの WPF コントロールをバインドします。
+title: データセットへの WPF コントロールのバインド
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,13 +17,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bd0aa9ae269da4cfd4ae5ab3dfb45e96052d75fe
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 917bf166057ef304f3d045898838b7074d76c467
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34690719"
 ---
-# <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールをバインドします。
+# <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールのバインド
 このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、データセットでカプセル化された製品レコードにバインドされます。 また、製品を参照するためのボタンの追加と、製品レコードへの変更の保存も行います。
 
 このチュートリアルでは、次の作業について説明します。
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/26/2018
 
     -   をクリックして**新しい接続**、AdventureWorksLT データベースへの接続を作成します。
 
-6.  **アプリケーション構成ファイルへの接続文字列を保存**] ページで、[、**接続を保存、**チェック ボックスをクリックして **[次へ]** です。
+6.  **アプリケーション構成ファイルへの接続文字列を保存**] ページで、[、**接続を保存、** チェック ボックスをクリックして **[次へ]** です。
 
 7.  **データベース オブジェクトの選択** ページで、展開**テーブル**、クリックして、 **Product (SalesLT)** テーブル。
 
@@ -116,7 +117,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  **SQL ステートメントを入力** ページで、追加した後は、次の WHERE 句、`SELECT`テキスト ボックス内のステートメント。
 
-    ```
+    ```sql
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 

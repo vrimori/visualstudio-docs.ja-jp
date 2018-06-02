@@ -1,5 +1,5 @@
 ---
-title: このコンピューターに Microsoft Office がインストールされていない |Microsoft ドキュメント
+title: Microsoft Office はこのコンピューターにインストールされていません。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,21 +15,22 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 45a15b1680fbc12c9493833e01a6d8e90085faad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e781612e051b281b340c3744d2fbb1e6a1e834d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692432"
 ---
-# <a name="microsoft-office-is-not-installed-on-this-computer"></a>Microsoft Office はこのコンピューターにインストールされていません。
-  Visual Studio で、プロジェクトの種類に対応する Microsoft Office アプリケーションが見つかりません。 VSTO アドイン プロジェクトを開発している場合、これはデバッグまたはプロジェクトを実行できないことを表します。 ドキュメント レベルのプロジェクトを作成しようとしている場合、これはプロジェクトを作成できないことを表します。  
+# <a name="microsoft-office-is-not-installed-on-the-computer"></a>コンピューターに Microsoft Office がインストールされていません。
+  Visual Studio で、プロジェクトの種類に対応する Microsoft Office アプリケーションが見つかりません。 VSTO アドイン プロジェクトを開発している場合は、デバッグまたはプロジェクトを実行できないことを意味します。 ドキュメント レベルのプロジェクトを作成しようとしている場合、これはプロジェクトを作成できないことを表します。  
   
-### <a name="to-correct-this-error"></a>このエラーを解決するには  
+## <a name="to-correct-the-error"></a>このエラーを解決するには  
   
-1.  プライマリ相互運用機能アセンブリを含む、このプロジェクトの種類に関連付けられた Microsoft Office アプリケーションをインストールする必要があります。 サポートされている Microsoft Office のバージョンについて詳しくは、「 [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)」をご覧ください。  
+1.  プライマリ相互運用機能アセンブリを含む、プロジェクトの種類に関連付けられている Microsoft Office アプリケーションをインストールします。 サポートされる Microsoft Office のバージョンの詳細については、次を参照してください。 [Office ソリューションを開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)です。  
   
 ## <a name="see-also"></a>関連項目  
- [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
- [方法: Office ソリューションを開発できるようにコンピューターを構成する](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)  
+ [Office ソリューションを開発コンピューターを構成します。](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
+ [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)  
   
   

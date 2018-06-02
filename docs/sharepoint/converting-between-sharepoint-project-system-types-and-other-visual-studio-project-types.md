@@ -15,20 +15,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6cf039f3d5330b2f4869ae323ac358a1220c2fbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d91b7d3927b9723c943676cf3ce15c4bc808b906
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692120"
 ---
-# <a name="converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint プロジェクト システムと他の Visual Studio プロジェクトの間の型変換
+# <a name="converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint プロジェクト システムの種類とその他の Visual Studio プロジェクトの種類間の変換
   場合によっては、SharePoint プロジェクト システムでオブジェクトがある可能性があり、Visual Studio オートメーション オブジェクト モデルまたは統合オブジェクト モデル内の対応するオブジェクトの機能を使用する場合またはその逆です。 このような場合は、使用することができます、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> SharePoint プロジェクト サービスのオブジェクトを別のオブジェクト モデルに変換するメソッド。  
   
  たとえば、する必要があります、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>のみで使用できるメソッドを使用するオブジェクトが、<xref:EnvDTE.Project>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>オブジェクト。 この場合、使用することができます、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A>に変換する方法、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>を<xref:EnvDTE.Project>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>です。  
   
  Visual Studio オートメーション オブジェクト モデルと Visual Studio の統合オブジェクト モデルの詳細については、次を参照してください。[プログラミング モデルの SharePoint ツール拡張機能の概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)です。  
   
-## <a name="types-of-conversions"></a>型の変換  
+## <a name="types-of-conversions"></a>型の変換
  次の表には、このメソッドは、SharePoint プロジェクト システムと他の Visual Studio のオブジェクト モデルの間で変換できる型が一覧表示します。  
   
 |SharePoint プロジェクト システムの種類|オートメーションとの統合オブジェクト モデルで対応する型|  
@@ -48,9 +49,8 @@ ms.lasthandoff: 04/16/2018
   
 -   登録するコード、`projectService_ProjectAdded`を処理するメソッド、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded>のイベント、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService>オブジェクト。 例については、次を参照してください。[する方法: SharePoint プロジェクトの拡張機能を作成する](../sharepoint/how-to-create-a-sharepoint-project-extension.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
  [方法: SharePoint プロジェクト サービスの取得](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md)   
  [SharePoint ツール拡張機能のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  
-  
   

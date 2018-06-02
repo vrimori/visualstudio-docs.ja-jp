@@ -1,5 +1,5 @@
 ---
-title: '&lt;postAction&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+title: '&lt;postAction&gt;要素 (Visual Studio での Office 開発)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2934b0ad761dcd512b21e2424515c06fb896dda5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dcab31eea406da695bdedd21b21c0d86cacea220
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693118"
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction&gt;要素 (Visual Studio での Office 開発)
   `postAction` 名前空間の `vstav3` 要素には、配置後アクションに関連付ける `entrypoint` 要素とすべての `postActionData` 要素を格納します。これらの要素は、Office ソリューションのインストール後に実行されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <postAction>  
   <entryPoint>  
   </entryPoint>  
@@ -53,11 +54,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="post-deployment-action-example"></a>配置後アクションの例  
   
 ### <a name="description"></a>説明  
- 次のコード例は、 `postAction` を使用して配置する Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例は、 `postAction` を使用して配置する Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
   
 ### <a name="code"></a>コード  
   
-```  
+```xml
 <vstav3:postAction>  
   <vstav3:entryPoint   
     class="PostDeploymentAction.PostDeploymentActionSample">  
@@ -73,8 +74,8 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
+ [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)   
+ [Office ソリューション用配置マニフェストします。](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  
   
   

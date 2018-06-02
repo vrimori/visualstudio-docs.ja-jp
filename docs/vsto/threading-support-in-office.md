@@ -1,5 +1,5 @@
 ---
-title: スレッド処理の Office でサポート |Microsoft ドキュメント
+title: スレッド処理のオフィスのサポート
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 473287ed42fb2e4978a0f92717a01fdf31e28ad4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 966f012b2ff4860205186410951b759c2e214668
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693085"
 ---
-# <a name="threading-support-in-office"></a>Office でのスレッドのサポート
-  このトピックでは、Microsoft Office オブジェクト モデルのスレッド処理のサポートについての情報を提供します。 Office オブジェクト モデルは、スレッド セーフではありませんが、Office ソリューションで複数のスレッドを使用することです。 Office アプリケーションは、コンポーネント オブジェクト モデル (COM) サーバーです。 COM には、クライアントは任意のスレッドの COM サーバーを呼び出すことができます。 COM サーバーのスレッド セーフではない場合は、COM は、1 つだけの論理スレッドがいつでも、サーバーで実行されるように、同時呼び出し数をシリアル化するためのメカニズムを提供します。 このメカニズムは、シングル スレッド アパートメント (STA) モデルと呼ばれます。 呼び出しは、シリアル化されるための呼び出し元がブロックされている期間、サーバーがビジー状態か、バック グラウンド スレッドでその他の呼び出しが処理中にします。  
+# <a name="threading-support-in-office"></a>スレッド処理のオフィスのサポート
+  この記事では、Microsoft Office オブジェクト モデルのスレッド処理のサポートについての情報を提供します。 Office オブジェクト モデルは、スレッド セーフではありませんが、Office ソリューションで複数のスレッドを使用することです。 Office アプリケーションは、コンポーネント オブジェクト モデル (COM) サーバーです。 COM には、クライアントは任意のスレッドの COM サーバーを呼び出すことができます。 COM サーバーのスレッド セーフではない場合は、COM は、1 つだけの論理スレッドがいつでも、サーバーで実行されるように、同時呼び出し数をシリアル化するためのメカニズムを提供します。 このメカニズムは、シングル スレッド アパートメント (STA) モデルと呼ばれます。 呼び出しは、シリアル化されるための呼び出し元がブロックされている期間、サーバーがビジー状態か、バック グラウンド スレッドでその他の呼び出しが処理中にします。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
@@ -62,13 +63,13 @@ ms.lasthandoff: 04/16/2018
   
  ただし、Visual Studio の Office 開発ツールを使用して作成されたソリューションを場合 COM 相互運用変換、拒否されたすべての呼び出し、 <xref:System.Runtime.InteropServices.COMException> ("メッセージ フィルターによる、アプリケーションがビジー状態である") です。 オブジェクト モデルを呼び出すを加えるたびにバック グラウンド スレッドでは、この例外を処理する準備する必要があります。 通常、関連する一定の時間の再試行およびダイアログを表示します。 ただしも STA としてバック グラウンド スレッドを作成し、このケースを処理するには、そのスレッドのメッセージ フィルターを登録できます。  
   
-## <a name="starting-the-thread-correctly"></a>正しくスレッドの起動  
+## <a name="start-the-thread-correctly"></a>スレッドが正常に起動します。  
  新しい STA スレッドを作成するときに、スレッドを開始する前に、sta アパートメント状態を設定します。 これを実行する方法を次のコード例に示します。  
   
  [!code-csharp[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/ThisWorkbook.cs#5)]
  [!code-vb[Trin_VstcoreCreatingExcel#5](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/ThisWorkbook.vb#5)]  
   
- 詳細については、次を参照してください。[マネージ スレッド処理の実施](/dotnet/standard/threading/managed-threading-best-practices)です。  
+ 詳細については、次を参照してください。[マネージ スレッド処理のベスト プラクティス](/dotnet/standard/threading/managed-threading-best-practices)です。  
   
 ## <a name="modeless-forms"></a>モードレスのフォーム  
  モードレスのフォームでは、フォームが表示されている間に何らかの種類のアプリケーションとの対話ができます。 フォームをユーザーが操作して、フォームは閉じずに、アプリケーションによって対話します。 Office オブジェクト モデルがマネージ モードレス フォーム; をサポートしていますただし、これら指定しないでバック グラウンド スレッドでします。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>関連項目  
  [マネージ スレッド処理](/dotnet/standard/threading/)  
  [スレッド処理 (c#)](/dotnet/csharp/programming-guide/concepts/threading/index) [スレッド処理 (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/threading/index)   
- [スレッドの使用とスレッド処理](/dotnet/standard/threading/using-threads-and-threading)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [使用するスレッドとスレッド処理](/dotnet/standard/threading/using-threads-and-threading)   
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
   
   

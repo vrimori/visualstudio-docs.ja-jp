@@ -14,11 +14,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5c0cefc826c26e1f981866a3ceb16fc16d2d522b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 433a8bc7cae982b5ec8106966ec8c6ca0af45076
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34690927"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>データベースを作成し、Visual Studio でのテーブルの追加
 Visual Studio を使用して作成し、SQL Server Express LocalDB でローカル データベース ファイルを更新することができます。 内の TRANSACT-SQL ステートメントを実行することによって、データベースを作成することも、 **SQL Server オブジェクト エクスプ ローラー** Visual Studio でのツール ウィンドウです。 このトピックでは、.mdf ファイルを作成し、テーブル デザイナーを使用してテーブルおよびキーを追加します。
@@ -88,7 +89,7 @@ SampleDatabase.mdf ファイルの接続文字列を表示するには、デー�
 
 6.  スクリプト ペインの最初の行の次のサンプルのように更新して、Customers (顧客) をテーブルと名前を付けます:
 
-    ```
+    ```sql
     CREATE TABLE [dbo].[Customers]
     ```
 

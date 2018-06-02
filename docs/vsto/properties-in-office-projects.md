@@ -1,5 +1,5 @@
 ---
-title: Office プロジェクトのプロパティ |Microsoft ドキュメント
+title: Office プロジェクトのプロパティ
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,19 +21,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47af1dae914528a3a338503989e53f081dfffde5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2b5c5e0719f7b619fa00a3a0f4333ae0080c0715
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692773"
 ---
 # <a name="properties-in-office-projects"></a>Office プロジェクトのプロパティ
   Visual Studio で Office プロジェクトに使用できる重要なプロパティがいくつかあります。 これらのプロパティには **[プロパティ]** ウィンドウでアクセスできます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="namespace-for-host-item"></a>ホスト項目の名前空間  
- Visual C# プロジェクトでホスト項目クラス (たとえば、 **、** 、 `ThisAddIn`クラス) の名前空間を変更するには、[ `ThisWorkbook`ホスト項目の名前空間 `ThisDocument` ] プロパティを使用します。 このプロパティは、 **ソリューション エクスプローラー** でドキュメント レベル プロジェクト (ExcelWorkbook1.xlsx や WordDocument1.docx など) のドキュメント ノードを選択するか、または VSTO アドイン プロジェクト (Excel や Word など) のアプリケーション ノードを選択した場合に、 **[プロパティ]**ウィンドウに表示されます。  
+## <a name="namespace-for-host-item"></a>ホスト項目の Namespace  
+ Visual C# プロジェクトでホスト項目クラス (たとえば、 **、** 、 `ThisAddIn`クラス) の名前空間を変更するには、[ `ThisWorkbook`ホスト項目の名前空間 `ThisDocument` ] プロパティを使用します。 このプロパティに表示されて、**プロパティ**ウィンドウ、ドキュメント レベルのプロジェクトで、[ドキュメント] ノードを選択すると (など*ExcelWorkbook1.xlsx*または*worddocument1.docx など*) または (Excel や Word など) には VSTO アドイン プロジェクトでのアプリケーション ノード**ソリューション エクスプ ローラー**です。  
   
  Visual C# Office プロジェクトを作成すると、プロジェクトの名前に基づいてホスト項目に名前空間が与えられます。 コード ファイルを直接編集するのではなく、**[ホスト項目の名前空間]** プロパティを使用して名前空間を変更することをお勧めします。 このプロパティを使用すると、名前空間は、生成されるコード ファイル (非表示) だけでなく、表示されるコード ファイル内でも変更されます。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
 -   ドキュメントのデータセットをキャッシュしない場合は、 **false** を選択します。  
   
- データのキャッシュの詳細については、「 [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md)」を参照してください。  
+ データのキャッシュの詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュされたデータ](../vsto/cached-data-in-document-level-customizations.md)です。  
   
 ## <a name="value2"></a>Value2  
  **Value2** プロパティは、Excel ブック プロジェクトまたはテンプレート プロジェクトにのみ使用できます。 ワークシート デザイナーで **コントロールを選択すると、[** プロパティ **] ウィンドウの** Databindings <xref:Microsoft.Office.Tools.Excel.NamedRange> プロパティの下に表示されます。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/16/2018
  **の** プロパティをデータ ソースのフィールドにバインドするには、**[プロパティ]** ウィンドウの <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> Value2 <xref:Microsoft.Office.Tools.Excel.NamedRange> プロパティを使用します。  
   
 ## <a name="see-also"></a>関連項目  
- [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)   
  [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)   
  [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)  
   

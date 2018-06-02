@@ -10,13 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4610a2574fbd822e4468436655668cff3892270
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e7c29a6e106381e23007f8cb3d899cb3b3c0e387
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693566"
 ---
-# <a name="xml-document-properties-properties-window"></a>XML ドキュメント プロパティと [プロパティ] ウィンドウ
+# <a name="xml-document-properties-properties-window"></a>XML ドキュメントのプロパティと [プロパティ] ウィンドウ
 
 **プロパティ**ウィンドウは、XML エディターでアクティブになっているドキュメントに関する基本的な情報を提供します。 使用可能なプロパティは、現在アクティブになっている XML ドキュメントの種類によって異なります。
 
