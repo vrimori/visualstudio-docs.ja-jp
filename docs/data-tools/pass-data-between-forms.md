@@ -19,11 +19,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4b8a1865dc6fce56f11faa453a4786ae799af7e3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: db1d993d745ea4dd1861dd086cea73cb16a08c81
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691213"
 ---
 # <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
 このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 顧客と Northwind の orders テーブルを使用して、1 つの形式により、ユーザー、顧客を選択して、2 番目のフォームには、選択した顧客の注文が表示されます。 このチュートリアルでは、最初のフォームからデータを受信する 2 番目のフォームにメソッドを作成する方法を示します。
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  返すクエリに WHERE 句を追加`Orders`に基づいて、`CustomerID`です。 クエリは次のようになります。
 
-    ```
+    ```sql
     SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry
     FROM Orders
     WHERE CustomerID = @CustomerID

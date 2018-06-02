@@ -15,11 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d7edb1826816ea4f20d66b91a7f9819ef394ce98
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 547ba6d1e58376c50d0e01ab8fd3d55f62d5a935
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693319"
 ---
 # <a name="troubleshooting-office-solution-security"></a>Office ソリューションのセキュリティのトラブルシューティング
   このトピックには、Office ソリューションのセキュリティ保護を使用する場合に発生する可能性がある一般的な問題を解決するためのヒントが含まれています。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
  IEESC と Internet Explorer 7 以降では、配置マニフェストの URL は、インターネット ゾーンの分類は、マニフェストが信頼された発行元からの証明書を持つ必要がありますかソリューションをインストールすることはできません。 Ieesc については、既定の動作は、信頼の決定にエンド ユーザー入力を求めるはします。  
   
- IEESC と Internet Explorer 7 の効果を管理し、以降では、特定の web サイトおよび汎用名前付けの規則 (UNC) パスを信頼し、(ローカル イントラネットまたは信頼済みサイト) の信頼されたセキュリティ ゾーンのいずれかに追加します。ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)です。  
+ IEESC と Internet Explorer 7 の効果を管理し、以降では、web サイトおよび汎用名前付けの規則 (UNC) パスを信頼して信頼されたセキュリティ ゾーン (イントラネットまたは信頼済みサイト) のいずれかに追加します。ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)です。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  

@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac3c30f0db4c2aa1dc606348604efce3bb3ddac
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: e2111286afde9e60391f1a7410fec2778b3ed673
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693787"
 ---
 # <a name="xml-editor"></a>XML エディター
 
@@ -39,7 +40,7 @@ XML エディターでは、Visual Studio テキスト エディターに基づ�
 
 - 統合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)です。 これにより、XML スキーマの階層ビューが提供されます。
 
-XML エディターは、.xml、.xsd、.xsl、.config などのよく知られているファイル拡張子に対して呼び出されます。ファイルに XML が含まれている場合は、未知のファイル拡張子についても XML エディターが呼び出されます。 使用して、XML エディターを使用して任意のファイルを開くことができますも、**ファイルを開く**オプションと XML エディターを一覧から選択します。
+XML エディターがなどのよく知られているファイル拡張子に対して呼び出される *.xml*、 *.xsd*、 *.xsl*、および *.config*です。ファイルに XML が含まれている場合は、未知のファイル拡張子についても XML エディターが呼び出されます。 使用して、XML エディターを使用して任意のファイルを開くことができますも、**ファイルを開く**オプションと XML エディターを一覧から選択します。
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 
@@ -57,4 +58,4 @@ XML エディターは、.xml、.xsd、.xsl、.config などのよく知られ�
 
 - [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)テキスト エディターに関する情報を提供します。
 - [XML 標準のリファレンス](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)XML、ドキュメント型定義 (DTD)、XML スキーマ定義言語 (XSD) および XSLT などの XML テクノロジに関する情報を提供します。
-- [Visual Studio の XML ツール](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio での XML ツール](../xml-tools/xml-tools-in-visual-studio.md)

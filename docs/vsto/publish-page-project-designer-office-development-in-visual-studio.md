@@ -1,5 +1,5 @@
 ---
-title: '[発行] ページ (プロジェクト デザイナー) (Visual Studio での Office 開発) |Microsoft ドキュメント'
+title: '[発行] ページ、プロジェクト デザイナー (Visual Studio での Office 開発)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,19 +19,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ee835542d88fa316eb3aec859e5aaf61d376f624
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d63044dbe191a2143b4800b57ee5344bf030107d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692845"
 ---
-# <a name="publish-page-project-designer-office-development-in-visual-studio"></a>プロジェクト デザイナーの [発行] ページ (Visual Studio での Office 開発)
+# <a name="publish-page-project-designer-office-development-in-visual-studio"></a>[発行] ページ、プロジェクト デザイナー (Visual Studio での Office 開発)
   **プロジェクト デザイナー** の **[発行]** ページは、配置用のプロパティを構成する場合に使用します。  
   
  このページにアクセスするでプロジェクトを選択**ソリューション エクスプ ローラー**、、**プロジェクト** メニューの 選択*Projectname* **プロパティ**. **[発行]** ページが表示されない場合は、 **[発行]** タブをクリックします。  
   
 > [!NOTE]  
->  **[発行ウィザード]**で発行場所を設定することもできます。 詳細については、「 [方法: ClickOnce を使用して Office ソリューションを発行する](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)」を参照してください。  
+>  **[発行ウィザード]** で発行場所を設定することもできます。 詳細については、次を参照してください。[する方法: ClickOnce を使用して Office ソリューションを発行](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)です。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
  **発行フォルダーの場所 (Web サイト、FTP サーバー、またはファイル パス)**  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  オプションには、ローカル コンピューター、UNC ファイル共有、または HTTP/HTTPS Web サイトがあります。 このパスはローカルにできます (*c:\foldername\publishfolder*)、相対パス (*発行\\*)、または完全修飾の場所 (*\\\servername\foldername*または http://*servername/foldername*)。  
   
- 発行場所は、既定では、 *http://localhost/projectname/*かどうかがある、IIS をインストールまたは操作を行う場合は、publish \ ディレクトリが IIS インストールされていません。  
+ 発行場所は、既定では、 *http://localhost/projectname/* 、IIS をインストールした場合、または*発行\\*ディレクトリの場合は IIS をインストールすることはありません。  
   
  **インストール フォルダーの URL**  
  任意。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
  CD オプションの場合のように、インストール ファイルがドキュメントまたはセットアップ プログラムを基準とする相対的な場所に存在する場合は、このボックスを空白のままにします。  
   
- この値は、管理者が後で割り当てることができます。 詳細については、「 [方法: Office ソリューションのインストール パスを変更する](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)」を参照してください。  
+ この値は、管理者が後で割り当てることができます。 詳細については、次を参照してください。[する方法: Office ソリューションのインストール パスを変更して](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd)です。  
   
  **必須コンポーネント**  
  必須コンポーネントは、セットアップ プログラムに含めるか、またはインストール時に必要に応じてダウンロードすることができます。  
@@ -70,16 +71,16 @@ ms.lasthandoff: 04/16/2018
   
  ドキュメント レベルのカスタマイズまたは VSTO アドインが読み込まれるたびに更新プログラムを確認すると、最新の状態に保たれますが、起動時のパフォーマンスに影響を与えます。  
   
- CD またはリムーバブル ドライブを使用して配置を行う場合は、 **[更新の確認をしない]**に設定します。  
+ CD またはリムーバブル ドライブを使用して配置を行う場合は、 **[更新の確認をしない]** に設定します。  
   
  **オプション (説明)**  
  次のプロパティの発行オプションを設定できます。  
   
 -   発行の言語: Office ソリューションのロケール。  
   
--   発行者名: **[プログラムの追加と削除]** または **[プログラムと機能]**に表示される会社名または開発者名です。  
+-   発行者名: **[プログラムの追加と削除]** または **[プログラムと機能]** に表示される会社名または開発者名です。  
   
--   製品名: **[プログラムの追加と削除]** または **[プログラムと機能]**に表示される Office ソリューションの名前です。  
+-   製品名: **[プログラムの追加と削除]** または **[プログラムと機能]** に表示される Office ソリューションの名前です。  
   
 -   サポート URL: エンド ユーザーが Office ソリューションのテクニカル サポートに連絡するための場所です。  
   
@@ -99,20 +100,20 @@ ms.lasthandoff: 04/16/2018
  **発行の言語**  
  このオプションにより、マイクロソフト ソフトウェア ライセンス条項の言語が設定され、必須コンポーネントの一覧に言語パックが含められます。 カスタマイズの言語には影響しません。 セットアップ プログラムの言語は、インストールされている Visual Studio の言語によって決まります。  
   
- **[発行の言語]**の変更方法の詳細については、「 [方法: ClickOnce アプリケーションの発行言語を変更する](/visualstudio/deployment/how-to-change-the-publish-language-for-a-clickonce-application)」を参照してください。  
+ 変更する方法について、**発行の言語**を参照してください[する方法: ClickOnce アプリケーションの発行の言語を変更する](/visualstudio/deployment/how-to-change-the-publish-language-for-a-clickonce-application)です。  
   
- **バージョンの発行**  
+ **バージョンを発行します。**  
  カスタマイズのバージョン番号を設定します。 バージョン番号を変更すると、アプリケーションが更新プログラムとして発行されます。 ビルド プロセス時に各バージョン用の新しいフォルダーが作成されるため、前に発行されたバージョンは上書きされません。 発行バージョンを構成する各部分 (**[メジャー]**、 **[マイナー]**、 **[ビルド]**、 **[リビジョン]**) には、それぞれ 5 桁までの数値を含めることができます。  
   
  **リリースごとにリビジョンを自動的にインクリメントする**  
  任意。 このオプションが選択されている場合 (既定)、バージョン番号の **[リビジョン]** 部分は、カスタマイズが発行されるたびに 1 ずつインクリメントされます。 これにより、そのカスタマイズが更新プログラムとして発行されます。  
   
  **今すぐ発行**  
- 現在の設定を使用して、アプリケーションを発行します。 **[発行ウィザード]** の **[完了]**ボタンと同じです。  
+ 現在の設定を使用して、アプリケーションを発行します。 **[発行ウィザード]** の **[完了]** ボタンと同じです。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [Office ソリューションを配置します。](../vsto/deploying-an-office-solution.md)   
+ [ClickOnce を使用して Office ソリューションを配置します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [Office ソリューションの必須コンポーネントの展開](http://msdn.microsoft.com/en-us/9f672809-43a3-40a1-9057-397ce3b5126e)  
   
   

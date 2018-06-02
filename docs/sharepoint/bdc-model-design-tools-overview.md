@@ -28,18 +28,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 088afa321e5f4026735e88c3068900b0bfc8c07c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 11469e76464cf4177d581705004bf640d71c43a1
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691480"
 ---
 # <a name="bdc-model-design-tools-overview"></a>BDC モデルのデザイン ツールの概要
   BDC デザイナーを使用してビジネス データ接続 (BDC) モデルを設計することができます、 **BDC メソッドの詳細**ウィンドウ、および**BDC エクスプ ローラー**です。  
   
  **BDC エクスプ ローラー**モデルの参照し、モデルを検索、型記述子を定義することができます。  
   
-## <a name="bdc-designer"></a>BDC デザイナー  
+## <a name="bdc-designer"></a>BDC デザイナー
  BDC デザイナーでは、モデルのエンティティを定義して、相互の関係を視覚的に整理できます。 次のタスクを実行するのに BDC デザイナーを使用します。  
   
 -   モデルにエンティティを追加します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
  BDC デザイナーを開くには、そのプロジェクトで、モデル ファイルをダブルクリックし、モデル ファイルのショートカット メニューを開くまたはを選択し、**開く**です。 エンティティ モデルを追加、ドラッグまたはコピーして、**エンティティ**から、**ツールボックス**デザイナーにします。 2 つのエンティティ間の関連付けを作成するには、選択、**アソシエーション**で制御、**ツールボックス**を最初のエンティティを選択して、2 番目のエンティティを選択します。  
   
-## <a name="bdc-method-details-window"></a>BDC メソッドの詳細 ウィンドウ  
+## <a name="bdc-method-details-window"></a>BDC メソッドの詳細 ウィンドウ
  使用して、 **BDC メソッドの詳細**パラメーターのインスタンスを定義して、メソッドの記述子をフィルター処理するウィンドウです。  
   
  Finder、固有の検索、作成者、アップデーター、および削除子のメソッドをすばやく生成することができます、 **BDC メソッドの詳細**ウィンドウです。 これらのメソッドを生成するときに、Visual Studio は、メソッドにパラメーター、インスタンス、および型記述子などのメタデータを追加します。 特定のシナリオを満たすためには、このメタデータを変更することができます。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
  展開または折りたたみの内のノード、 **BDC メソッドの詳細**インスタンス、パラメーターを定義して記述子をフィルター処理するウィンドウです。 使用して、 **BDC エクスプ ローラー**型記述子を定義します。  
   
-## <a name="bdc-explorer"></a>BDC エクスプローラー  
+## <a name="bdc-explorer"></a>BDC エクスプローラー
  **BDC エクスプ ローラー**モデルを構成する要素が表示されます。 開くには、 **BDC エクスプ ローラー**、メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC エクスプ ローラー**です。 モデルを参照するときにノードを展開、 **BDC エクスプ ローラー**です。 各ノードは、モデル ファイルの XML の要素を表します。  
   
  内のノードを選択すると、 **BDC エクスプ ローラー**、選択した各ノードのプロパティに表示されます、**プロパティ**ウィンドウです。 これらのプロパティの多くは、モデル ファイル内の属性に対応します。 上部にある検索ボックスを使用して、モデルを検索することができます、 **BDC エクスプ ローラー**です。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  **BDC エクスプ ローラー**識別子、カスタム プロパティをローカライズされた文字列、関連付けグループ、アクション、フィルター記述子、アクションのコントロール リスト、および既定のパラメーター値は表示されません。  
   
-### <a name="defining-type-descriptors"></a>型記述子を定義します。  
+### <a name="define-type-descriptors"></a>型記述子を定義します。
  使用して、 **BDC エクスプ ローラー**型記述子を定義します。 BDC エクスプ ローラーを使用すると、1 回、型記述子を定義し、モデルの他の場所には、その型記述子を再利用できます。 これを実現するには、型記述子をコピーし、その他のパラメーターに貼り付けるか記述子を入力します。  
   
 > [!NOTE]  
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
  詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [方法: BDC モデルを作成](../sharepoint/how-to-create-a-bdc-model.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
@@ -91,4 +92,4 @@ ms.lasthandoff: 04/16/2018
  [ビジネス データ接続モデルを作成します。](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  
   
-  
+ 

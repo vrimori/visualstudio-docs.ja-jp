@@ -20,11 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f484c0501cbeede5600a4831d3d872ac81b3b5c3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d4cfbe0a7ae0a27e41053457774217f049d5caf3
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34694047"
 ---
 # <a name="creating-pages-for-sharepoint"></a>SharePoint 用ページの作成
   アプリケーション ページ、サイトのページ、マスター ページ、および SharePoint サイトのページ レイアウトを作成することができます。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  カスケード スタイル シート、ECMAScript、およびテーマを使用して、ページの動作と外観を変更することもできます。  
   
-## <a name="types-of-sharepoint-pages"></a>SharePoint ページの種類  
+## <a name="types-of-sharepoint-pages"></a>SharePoint ページの種類
  次の表では、4 つのメインの種類の SharePoint サイトを含むページについて説明します。  
   
 |ページの種類|説明|  
@@ -45,29 +46,28 @@ ms.lasthandoff: 04/16/2018
   
  ページの各種類の概要については、次を参照してください。[ビルディング ブロック: ページと、ユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)、および[ページ レイアウトやマスター ページ](http://go.microsoft.com/fwlink/?LinkID=182096)です。  
   
-## <a name="creating-application-pages"></a>アプリケーション ページの作成  
+## <a name="create-application-pages"></a>アプリケーション ページを作成します。
  追加することで、Visual Studio でアプリケーション ページを作成することができます、**アプリケーション ページ**を SharePoint プロジェクト項目です。 ページにコントロールを追加し、コードを追加してコントロールのイベントを処理できます。  
   
  ページのコード ファイルにブレークポイントを設定、デバッガーを起動、および追加の構成手順を実行せずローカル SharePoint サイトのページをテストできます。 詳細については、次を参照してください。 [for SharePoint アプリケーション ページを作成する](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
   
-## <a name="creating-site-pages-master-pages-and-page-layouts"></a>サイト ページ、マスター ページとページ レイアウトを作成します。  
+## <a name="create-site-pages-master-pages-and-page-layouts"></a>サイトのページ、マスター ページ、およびページ レイアウトを作成します。
  サイトのページ、マスター ページ、およびページ レイアウトを作成するには、SharePoint Designer を使用します。 次に、これらのページを Visual Studio にインポートできます。 展開または Visual Studio で使用可能なソース管理機能を利用する場合は、ページをインポートします。 詳細については、次を参照してください。[既存の SharePoint サイトからインポートする項目](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)です。  
   
  インポートした後、これらのページを変更するが困難なので、それらをインポートする前にこれらのページを設計する必要があります。  
   
-## <a name="creating-cascading-style-sheets-ecmascript-and-themes"></a>カスケード スタイル シート、ECMAScript、テーマの作成  
+## <a name="create-cascading-style-sheets-ecmascript-and-themes"></a>カスケード スタイル シート、ECMAScript、およびテーマを作成します。
  Visual Studio では、開発のカスケード スタイル シート (CSS)、ECMAScript (JavaScript、JScript)、または SharePoint サイトのテーマ ファイルのテンプレートは提供されません。 SharePoint SDK で利用可能なガイダンスを使用して、または SharePoint デザイナーなどのツールを使用して、これらのファイルを作成することができます。  
   
  これらのファイルを直接ソリューションに追加することができますか、それらをインポートすることができます。 いずれの場合に、各項目を追加するに適切なマップされたフォルダーを作成する必要があります。 マップされたフォルダーを作成する方法の詳細については、次を参照してください。[する方法: 追加し、マップされたフォルダーを削除する](../sharepoint/how-to-add-and-remove-mapped-folders.md)です。  
   
  カスケード スタイル シートの作成の詳細については、次を参照してください。[カスケード スタイル シート クラス内の使用状況 SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkID=182098)です。 SharePoint ソリューションの JavaScript および JScript ファイルの作成の詳細については、次を参照してください。[設定を、基本 ASPX ページ ECMAScript の](http://go.microsoft.com/fwlink/?LinkID=182099)します。 テーマの詳細については、次を参照してください。[ビルディング ブロック: ページと、ユーザー インターフェイス](http://go.microsoft.com/fwlink/?LinkID=182095)です。  
   
-## <a name="related-topics"></a>関連トピック  
+## <a name="related-topics"></a>関連トピック
   
 |タイトル|説明|  
 |-----------|-----------------|  
 |[SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)|アプリケーション ページを追加する方法について説明します。 SharePoint のマスター ページとマージされる .aspx コンテンツ。|  
 |[方法: アプリケーション ページを作成する](../sharepoint/how-to-create-an-application-page.md)|SharePoint サイト上で実行される ASP.NET ページを作成する方法を示します。|  
 |[チュートリアル: SharePoint アプリケーション ページの作成](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|デザインおよび SharePoint サイトの ASP.NET Web ページをデバッグする方法を示します。|  
-  
   

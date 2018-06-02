@@ -17,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 807fa532961edb4f2723858a47dcf1fe87134338
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82eaa5deca395af985017d0db0a98c11b2be9592
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691605"
 ---
-# <a name="create-sharepoint-solutions"></a>SharePoint ソリューションの作成
+# <a name="create-sharepoint-solutions"></a>SharePoint ソリューションを作成します。
   SharePoint Designer の代わりに Visual Studio で SharePoint アプリケーションを作成できます。 Visual Studio には、高度なデバッグ ツール、IntelliSense、ステートメント入力候補、プロジェクト テンプレートなど、迅速な SharePoint 開発を促進する機能が用意されています。 さらに、Visual Studio では、高度な .NET Framework ベースのツールと言語も活用されています。 SharePoint プロジェクトは Visual Basic または Visual C# を使用して開発できます。また、SharePoint 用アプリのプロジェクトは JavaScript を使用して開発できます。  
   
  SharePoint 2013 アドインと SharePoint アドインについては、「 [SharePoint 2013](http://msdn.microsoft.com/library/jj162979.aspx) 」および「 [SharePoint アプリの作成](http://msdn.microsoft.com/library/office/apps/jj163230%28v=office.15%29.aspx)」を参照してください。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 04/16/2018
 |![操作方法ビデオ](../sharepoint/media/vs-icon-howdoivideos.gif "どうすればいいですか?ビデオ")|**操作方法ビデオ**<br /><br /> -   [操作方法: 作成 SharePoint 2010 の視覚的 Web パーツを Visual Studio 2010 のですか。](http://msdn.microsoft.com/vstudio/ff623014.aspx)<br />-   [操作方法: Visual Studio 2010 で SharePoint 2010 のコンテンツ タイプを作成する](http://msdn.microsoft.com/vstudio/ff623016.aspx)<br />-   [操作方法: Visual Studio 2010 で SharePoint 2010 のサイト定義を作成する](http://msdn.microsoft.com/vstudio/ff623012.aspx)<br />-   [操作方法: Visual Studio 2010 を使用して SharePoint 2010 のビジネス データ接続モデルを作成する](http://msdn.microsoft.com/vstudio/ff623022.aspx)|  
 |![Channel 9 ビデオ](../sharepoint/media/vs-icon-channel9videos.gif "Channel 9 ビデオ")|**Channel 9 ビデオ**<br /><br /> -   [Visual Studio 2010 での SharePoint 開発の概要](http://channel9.msdn.com/posts/funkyonex/Overview-of-SharePoint-Development-in-Visual-Studio-2010/)<br />-   [Visual Studio 2010 で SharePoint 2010 Web パーツを構築する際のベスト プラクティス](http://channel9.msdn.com/posts/funkyonex/Best-Practices-on-Building-SharePoint-2010-Web-Parts-with-Visual-Studio-2010/)<br />-   [Visual Studio 2010 の SharePoint フィーチャー デザイナーとパッケージ デザイナー](http://channel9.msdn.com/posts/funkyonex/SharePoint-Feature-and-Package-Designers-in-Visual-Studio-2010/)|  
 |![MSDN デベロッパー センター](../sharepoint/media/vs-icon-msdndevcenter.gif "MSDN デベロッパー センター")|**MSDN デベロッパー センター**<br /><br /> -   [Visual Studio デベロッパー センター](http://msdn.microsoft.com/vstudio/default.aspx)<br />-   [SharePoint デベロッパー センター](http://msdn.microsoft.com/sharepoint/default.aspx)<br />-   [SharePoint Server デベロッパー センター](http://msdn.microsoft.com/office/aa905503.aspx)<br />-   [SharePoint Designer デベロッパー センター](http://msdn.microsoft.com/office/bb421303.aspx)<br />-   [ASP.NET デベロッパー センター](http://msdn.microsoft.com/aa336522.aspx)|  
-|![フィードバックを提供する](../sharepoint/media/vs-icon-feedback.gif "フィードバックを提供します。")|**フィードバックを提供します。**<br /><br /> Visual Studio に関するフィードバックを送ることができます。<br /><br /> -   [Microsoft Connect します。](http://go.microsoft.com/fwlink/?LinkID=150463)<br /><br /> Visual Studio のドキュメントに関するフィードバックを送ることができます。<br /><br /> -   **簡易表示:** トピックの上部から、 **[このトピックを評価する]** リンクを選択してトピックの下部に移動します。そこで、 **[この情報は役にたちましたか。]** に対する応答として、 **[はい]** または **[いいえ]** を指定できます。 **[はい]**を選択した場合は、表示される 1 つ以上のチェック ボックスを選択し、テキスト ボックスに詳細情報を入力できます。 終了したら、 **[投稿]** ボタンをクリックします。<br />-   **スクリプトを使用しない表示:** トピックの上部で、 **[フィードバック]** リンクを選択し、MSDN、TechNet および式ライブラリ フィードバック フォーラムにフィードバックします。<br />-   **クラシック ビュー** トピックの上部で、 **[クリックして評価とフィードバックをお寄せください]** のアイコンを選択し、ドキュメント チームにそのトピックについてフィードバックしてください。|  
+|![フィードバックを提供する](../sharepoint/media/vs-icon-feedback.gif "フィードバックを提供します。")|**フィードバックを提供します。**<br /><br /> Visual Studio に関するフィードバックを送ることができます。<br /><br /> -   [Microsoft Connect します。](http://go.microsoft.com/fwlink/?LinkID=150463)<br /><br /> Visual Studio のドキュメントに関するフィードバックを送ることができます。<br /><br /> -   **簡易表示:** トピックの上部から、 **[このトピックを評価する]** リンクを選択してトピックの下部に移動します。そこで、 **[この情報は役にたちましたか。]** に対する応答として、 **[はい]** または **[いいえ]** を指定できます。 **[はい]** を選択した場合は、表示される 1 つ以上のチェック ボックスを選択し、テキスト ボックスに詳細情報を入力できます。 終了したら、 **[投稿]** ボタンをクリックします。<br />-   **スクリプトを使用しない表示:** トピックの上部で、 **[フィードバック]** リンクを選択し、MSDN、TechNet および式ライブラリ フィードバック フォーラムにフィードバックします。<br />-   **クラシック ビュー** トピックの上部で、 **[クリックして評価とフィードバックをお寄せください]** のアイコンを選択し、ドキュメント チームにそのトピックについてフィードバックしてください。|  
   
-  
+ 

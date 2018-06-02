@@ -33,11 +33,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e2eb30d50be7348802518b7cc1b945aa88a26bd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6ae43c5cab67d79450cea1dc024da98fe25c5375
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34690667"
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>方法: デバッグ構成と設定リリース Visual Studio での構成
 Visual Studio プロジェクトでは、ご使用のプログラムに対応するリリースとデバッグ構成を個別に用意しています。 名前が示すように、デバッグ バージョンはデバッグ用、リリース バージョンは最終リリース配布用のビルドです。  
@@ -60,7 +61,7 @@ Visual Studio プロジェクトでは、ご使用のプログラムに対応す
   
      このツールバーは、Express Edition では使用できません。 使用することができます、**ビルド ソリューション F6**と**デバッグ F5 の開始**構成を選択するメニュー項目。
 
-## <a name="BKMK_symbols_release"></a>ビルドのシンボル (.pbd) ファイルを生成します。
+## <a name="BKMK_symbols_release"></a>ビルドのシンボル (.pdb) ファイルを生成します。
 
 ほとんどの種類のプロジェクトは、.pdb ファイルが両方のデバッグ用の既定で生成され、リリース ビルドが既定の設定は、特定のプロジェクトの種類と Visual Studio のバージョンによって異なります。 構成することができます、コンパイラが .pdb ファイルを生成するかどうかにデバッグ情報の種類。
 
@@ -77,7 +78,7 @@ C# でのデバッグ構成のプロジェクトの設定の詳細について�
 
 2. 選択、**リリース**または**デバッグ**からのビルド、**構成** ボックスの一覧です。
 
-2. 選択**ビルド**設定をクリックして、 **[詳細設定]**ボタンをクリックします。
+2. 選択**ビルド**設定をクリックして、 **[詳細設定]** ボタンをクリックします。
 
     Visual Basic を選択する、**コンパイル**設定、および**詳細コンパイル オプション**代わりにボタンをクリックします。
 
