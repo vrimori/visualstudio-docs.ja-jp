@@ -54,7 +54,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
- 次のコード例を示しています、`assemblyIdentity`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
+ 次のコード例は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト内の `assemblyIdentity` 要素を示しています。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
   
 ### <a name="code"></a>コード  
   
@@ -70,4 +70,4 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)
+ [\<assemblyIdentity> 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)
