@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio での自動機能中断
 ms.date: 11/04/2016
 ms.topic: conceptual

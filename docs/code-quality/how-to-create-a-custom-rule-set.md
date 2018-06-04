@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio でカスタム コード分析ルールを作成します。
 ms.date: 04/04/2018
 ms.prod: visual-studio-dev15
