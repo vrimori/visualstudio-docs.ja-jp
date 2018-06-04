@@ -1,0 +1,247 @@
+- name: 概要
+  items:
+    - name: Visual Studio でのデータへのアクセス
+      href: accessing-data-in-visual-studio.md
+- name: チュートリアル
+  items:
+    - name: ADO.NET を使用して単純なデータ アプリを作成する
+      href: create-a-simple-data-application-by-using-adonet.md
+    - name: WPF と Entity Framework を使用して単純なデータ アプリを作成する
+      href: create-a-simple-data-application-with-wpf-and-entity-framework-6.md
+    - name: C++ アプリからデータに接続する
+      href: visual-studio-data-tools-for-cpp.md
+    - name: O/R デザイナーを使用して LINQ to SQL クラスを作成する
+      href: walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md
+    - name: n 層データ アプリケーションを作成する
+      href: walkthrough-creating-an-n-tier-data-application.md
+- name: 概念
+  items:
+    - name: 互換性のあるデータベース システム
+      href: installing-database-systems-tools-and-samples.md
+    - name: .NET 用の Visual Studio データ ツール
+      href: visual-studio-data-tools-for-dotnet.md
+    - name: Entity Framework のツール
+      href: entity-data-model-tools-in-visual-studio.md
+    - name: データセットのツール
+      href: dataset-tools-in-visual-studio.md
+      items:
+        - name: 型指定されたデータセットと型指定されていないデータセットの比較
+          href: typed-vs-untyped-datasets.md
+        - name: TableAdapter の概要
+          href: fill-datasets-by-using-tableadapters.md
+        - name: n 層アプリケーションでのデータセットの操作
+          href: work-with-datasets-in-n-tier-applications.md
+    - name: データベース プロジェクトとデータ層アプリケーション (DAC)
+      href: creating-and-managing-databases-and-data-tier-applications-in-visual-studio.md
+    - name: n 層データ アプリケーションの概要
+      href: n-tier-data-applications-overview.md
+- name: 使い方ガイド
+  items:
+    - name: データベースを作成する
+      href: create-a-sql-database-by-using-a-designer.md
+    - name: 接続を追加する
+      href: add-new-connections.md
+      items:
+        - name: 接続文字列を保存および編集する
+          href: how-to-save-and-edit-connection-strings.md
+        - name: Access データベース内のデータに接続する
+          href: connect-to-data-in-an-access-database-windows-forms.md
+    - name: .NET データ ソースを追加する
+      href: add-new-data-sources.md
+    - name: LINQ to SQL ツールを使用する
+      href: linq-to-sql-tools-in-visual-studio2.md
+      items:
+        - name: DataContext メソッドの戻り値の型を変更する
+          href: how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md
+        - name: ストアド プロシージャにマップされる DataContext メソッドを作成する
+          href: how-to-create-datacontext-methods-mapped-to-stored-procedures-and-functions-o-r-designer.md
+        - name: O/R デザイナーを使用して継承を構成する
+          href: how-to-configure-inheritance-by-using-the-o-r-designer.md
+        - name: テーブルとビューにマップされた LINQ to SQL クラスを作成する
+          href: how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md
+        - name: O/R デザイナーで生成されたコードを拡張する
+          href: how-to-extend-code-generated-by-the-o-r-designer.md
+        - name: LINQ to SQL クラス間に関連付けを作成する
+          href: how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md
+        - name: エンティティ クラスに検証を追加する
+          href: how-to-add-validation-to-entity-classes.md
+        - name: エンティティ クラスの挿入、更新、および削除の動作をカスタマイズする
+          href: walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes.md
+        - name: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる
+          href: how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md
+        - name: 複数形化をオンまたはオフにする
+          href: how-to-turn-pluralization-on-and-off-o-r-designer.md
+    - name: データセットのツールの使用
+      items:
+        - name: Visual Studio でデータセットを作成および構成する
+          href: create-and-configure-datasets-in-visual-studio.md
+          items:
+            - name: データセット間にリレーションシップを作成する
+              href: relationships-in-datasets.md
+            - name: データセット デザイナーを使用してデータセットを作成する
+              href: walkthrough-creating-a-dataset-with-the-dataset-designer.md
+            - name: データセット デザイナーを使用して DataTable を作成する
+              href: walkthrough-creating-a-datatable-in-the-dataset-designer.md
+        - name: TableAdapter
+          items:
+            - name: Tableadapter の作成および構成
+              href: create-and-configure-tableadapters.md
+            - name: パラメーター付きの TableAdapter クエリを作成する
+              href: create-parameterized-tableadapter-queries.md
+            - name: TableAdapter で直接データベースにアクセスする
+              href: directly-access-the-database-with-a-tableadapter.md
+            - name: データセットの読み込み中に制約をオフにする
+              href: turn-off-constraints-while-filling-a-dataset.md
+            - name: TableAdapter の機能を拡張する
+              href: extend-the-functionality-of-a-tableadapter.md
+        - name: XML データのデータセットへの読み込み
+          href: read-xml-data-into-a-dataset.md
+        - name: データセットのデータの編集
+          href: edit-data-in-datasets.md
+        - name: データセットのデータの検証
+          href: validate-data-in-datasets.md
+        - name: データをデータベースに保存する
+          href: save-data-back-to-the-database.md
+          items:
+            - name: データベースに新しいレコードを挿入する
+              href: insert-new-records-into-a-database.md
+            - name: TableAdapter を使用してデータを更新する
+              href: update-data-by-using-a-tableadapter.md
+            - name: 階層更新を実行する
+              href: hierarchical-update.md
+            - name: 同時実行例外を処理する
+              href: handle-a-concurrency-exception.md
+            - name: トランザクションを使用してデータを保存する
+              href: save-data-by-using-a-transaction.md
+              items:
+                - name: 'チュートリアル: トランザクションにデータを保存する'
+                  href: save-data-in-a-transaction.md
+            - name: データベースへのデータの保存 (複数テーブル)
+              href: save-data-to-a-database-multiple-tables.md
+            - name: オブジェクトからデータベースにデータを保存する
+              href: save-data-from-an-object-to-a-database.md
+            - name: TableAdapter DBDirect メソッドを使用してデータを保存する
+              href: save-data-with-the-tableadapter-dbdirect-methods.md
+            - name: データセットを XML として保存する
+              href: save-a-dataset-as-xml.md
+        - name: データセットのクエリ
+          href: query-datasets.md
+        - name: n 層アプリケーション
+          items:
+            - name: n 層データセットに検証を追加する
+              href: add-validation-to-an-n-tier-dataset.md
+            - name: n 層アプリケーションのデータセットにコードを追加する
+              href: add-code-to-datasets-in-n-tier-applications.md
+            - name: n 層アプリケーションの TableAdapters にコードを追加する
+              href: add-code-to-tableadapters-in-n-tier-applications.md
+            - name: データセットと TableAdapters を別々のプロジェクトに分離する
+              href: separate-datasets-and-tableadapters-into-different-projects.md
+    - name: データ ソースにコントロールをバインドする
+      href: bind-controls-to-data-in-visual-studio.md
+      items:
+        - name: '[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する'
+          href: set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md
+        - name: '[データ ソース] ウィンドウにカスタム コントロールを追加する'
+          href: add-custom-controls-to-the-data-sources-window.md
+        - name: データへの WPF コントロールのバインド
+          href: bind-wpf-controls-to-data-in-visual-studio.md
+          items:
+            - name: データセットへの WPF コントロールのバインド
+              href: bind-wpf-controls-to-a-dataset.md
+            - name: WCF Data Service への WPF コントロールのバインド
+              href: bind-wpf-controls-to-a-wcf-data-service.md
+            - name: ルックアップ テーブルを作成する
+              href: create-lookup-tables-in-wpf-applications.md
+            - name: 関連データを表示する
+              href: display-related-data-in-wpf-applications.md
+            - name: データベースの画像にコントロールをバインドする
+              href: bind-controls-to-pictures-from-a-database.md
+        - name: Windows フォーム コントロールをデータにバインドする
+          href: bind-windows-forms-controls-to-data-in-visual-studio.md
+          items:
+            - name: Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う
+              href: filter-and-sort-data-in-a-windows-forms-application.md
+            - name: データの保存前にデータ バインド コントロールで実行中の編集をコミットする
+              href: commit-in-process-edits-on-data-bound-controls-before-saving-data.md
+            - name: ルックアップ テーブルを作成する
+              href: create-lookup-tables-in-windows-forms-applications.md
+            - name: データを検索する Windows フォームを作成する
+              href: create-a-windows-form-to-search-data.md
+            - name: 単純なデータ バインディングをサポートするユーザー コントロールを作成する
+              href: create-a-windows-forms-user-control-that-supports-simple-data-binding.md
+            - name: 複雑なデータ バインディングをサポートするユーザー コントロールを作成する
+              href: create-a-windows-forms-user-control-that-supports-complex-data-binding.md
+            - name: ルックアップ データ バインディングをサポートするユーザー コントロールを作成する
+              href: create-a-windows-forms-user-control-that-supports-lookup-data-binding.md
+            - name: フォーム間でデータを渡す
+              href: pass-data-between-forms.md
+        - name: カスタム オブジェクトをバインドする
+          href: bind-objects-in-visual-studio.md
+        - name: Visual Studio がデータ バインド コントロールのキャプションを作成する方法をカスタマイズする
+          href: customize-how-visual-studio-creates-captions-for-data-bound-controls.md
+    - name: Windows Communication Foundation サービスと WCF Data Services
+      href: windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md
+      items:
+        - name: 概念モデルを使用する
+          href: working-with-a-conceptual-model-wcf-data-services.md
+        - name: サービスのデータに接続する
+          href: how-to-connect-to-data-in-a-service.md
+        - name: Windows フォームで WCF サービスを作成する
+          href: walkthrough-creating-a-simple-wcf-service-in-windows-forms.md
+        - name: WPF と Entity Framework を使用して WCF Data Services を作成する
+          href: walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework.md
+        - name: サービス参照をトラブルシューティングする
+          href: troubleshooting-service-references.md
+        - name: '[サービス参照の構成] ダイアログ ボックス'
+          href: configure-service-reference-dialog-box.md
+        - name: WCF Data Services 参照を追加、更新、または削除する
+          href: how-to-add-update-or-remove-a-wcf-data-service-reference.md
+    - name: .mdf ファイルのアップグレード
+      href: upgrade-dot-mdf-files.md
+    - name: データ アクセス エラーをトラブルシューティングする
+      href: additional-resources-for-troubleshooting-data-access-errors.md
+- name: 参照
+  items:
+    - name: O/R デザイナー (LINQ to SQL)
+      items:
+        - name: DataContext メソッド
+          href: datacontext-methods-o-r-designer.md
+        - name: データ クラスの継承
+          href: data-class-inheritance-o-r-designer.md
+        - name: O/R デザイナーのメッセージ
+          href: o-r-designer-messages.md
+          items:
+            - name: 選択したクラスは、1 つ以上の DataContext メソッドで戻り値の型として使用されているため、削除できません
+              href: the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md
+            - name: 接続文字列にはクリア テキスト パスワード付きの資格情報が含まれていて、統合セキュリティは使用されていません
+              href: the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security.md
+            - name: プロパティ <property name> は関連付け <association name> に関与しているため、削除できません
+              href: the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md
+            - name: プロパティ <property name> を削除できません
+              href: the-property-property-name-cannot-be-deleted.md
+            - name: アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません
+              href: the-connection-property-in-the-application-settings-file-is-missing-or-incorrect.md
+            - name: 関連付け <association name> を作成できません - プロパティの型が一致しません
+              href: cannot-create-an-association-association-name-property-types-do-not-match.md
+            - name: '警告: [動作の構成] ダイアログ ボックスで行った変更が適用されていません'
+              href: warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied.md
+            - name: サポートされていないデータベース プロバイダーのデータベース オブジェクトが選択されています
+              href: you-have-selected-a-database-object-from-an-unsupported-database-provider.md
+            - name: この関連メソッドは、次の既定の挿入、更新、または削除メソッドのバッキング メソッドです
+              href: this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods.md
+            - name: 1 つ以上の選択された項目に、デザイナーでサポートされていないデータ型が含まれています
+              href: one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer.md
+            - name: DataContext メソッドの戻り値の型を変更すると、元に戻せなくなります
+              href: changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md
+            - name: デバッグ中はデザイナーを変更できません
+              href: the-designer-cannot-be-modified-while-debugging.md
+            - name: 選択した接続では、サポートされていないデータベース プロバイダーが使用されています
+              href: the-selected-connection-uses-an-unsupported-database-provider.md
+            - name: デザイナーに追加する対象のオブジェクトは、デザイナーが現在使用しているのとは異なるデータ接続を使用しています
+              href: the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using.md
+            - name: 関連付け <association name> を作成できません - プロパティが複数リストされています
+              href: cannot-create-an-association-association-name-property-listed-twice.md
+            - name: データベース オブジェクトのスキーマ情報を取得できませんでした
+              href: could-not-retrieve-schema-information-for-database-object-object-name.md
+            - name: 1 つ以上の選択されたデータベース オブジェクトがターゲット データ クラスのスキーマに一致しないスキーマを返しました
+              href: one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md

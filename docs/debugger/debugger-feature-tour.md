@@ -1,6 +1,6 @@
 ---
-title: デバッガーで最初に表示
-description: 簡単に見て、Visual Studio デバッガーのさまざまな機能を実行します。
+title: デバッガーでのはじめに
+description: Visual Studio デバッガーのさまざまな機能を簡単に見てを実行します。
 ms.custom: mvc
 ms.date: 03/27/2018
 ms.technology: vs-ide-debug
@@ -13,15 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d93994c9a0b9521049070048ec2cc38a03e9c91
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: de27a6b3fd5b182ac2fa0ad12ed04e4d1105d9ac
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691093"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio デバッガーで最初に表示
 
-このトピックでは、Visual Studio デバッガーの機能を紹介します。 またはの場合を進めるために Visual Studio で独自のアプリを開くことによって、ことを行うことができます、サンプル アプリを使用して行うことができる、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
+このトピックでは、Visual Studio デバッガーの機能を紹介しています。 またはの場合を進めるために Visual Studio で独自のアプリを開くことによって、ことを行うことができます、サンプル アプリを使用して行うことができる、[ビギナーズ ガイド](../debugger/getting-started-with-the-debugger.md)です。
 
 ここで説明する機能は、c#、C++、Visual Basic、JavaScript、および (場合を除き) Visual Studio でサポートされるその他の言語に適用されます。
 
@@ -76,7 +77,7 @@ F10 キーは、(引き続きコードが実行される)、アプリ コード�
 
 ![クリックして実行](../debugger/media/dbg-tour-run-to-click-2.png "実行 をクリックする")
 
->  [!NOTE] 
+> [!NOTE]
 > **実行 をクリックする**(ここに実行) ボタンはで新しく[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]です。
 
 クリックして、**実行 をクリックする**(ここに実行) ボタンをクリックします。 デバッガーは、クリックした場所のコード行に進めます。
@@ -104,7 +105,6 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 選択したコードの行に到達するまでは、f5 キーを押して**カーソルまで実行**です。
 
 このコマンドは、コードを編集して、すぐに一時的なブレークポイントを設定し、デバッガーを起動する場合に便利です。
-
 
 > [!NOTE]
 > 使用することができます**カーソルまで実行**で、**呼び出し履歴**ウィンドウは、デバッグ中です。
@@ -179,7 +179,7 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 ## <a name="examine-an-exception"></a>例外を調べる
 
 アプリでは、例外をスローするときに、デバッガーでは、例外をスローしたコードの行にします。
-     
+
 ![例外ヘルパー](../debugger/media/dbg-tour-exception-helper.png "例外ヘルパー")
 
 この例では、**例外ヘルパー**を表示、`System.Argument`例外およびパスは正しい書式ではありませんを示すエラー メッセージ。 わかるようにするため、メソッドまたは関数の引数に、エラーが発生しました。
@@ -188,7 +188,7 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 例外ヘルパーは、エラーをデバッグするのに役立つ優れた機能です。 エラーの詳細なビューと同様の操作を実行し、例外ヘルパーからのウォッチを追加できます。 または、必要な場合は、特定の例外をスローするための条件を変更することができます。
 
->  [!NOTE] 
+>  [!NOTE]
 > 例外ヘルパーが、例外処理アシスタントに置き換えられます[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]です。
 
 展開して、**例外設定**このツアーを何も変更する必要はありませんが、この種類の例外を処理する方法の他のオプションを表示するノードです。
@@ -209,7 +209,7 @@ Shift キーを押しながら F11 キーを押します (または**デバッ�
 
 スナップショット間を移動して表示するには、デバッグ ツールバーの **[前に戻る]** ボタンと **[次へ進む]** ボタンを使用します。 これらのボタンを使用して、**[診断ツール]** ウィンドウの **[イベント]** タブに表示されるイベント間を移動します。
 
-![ステップ後退と転送ボタン](../debugger/media/intellitrace-step-back-icons-description.png  "旧バージョンとステップと転送ボタン")  
+![ステップ後退と転送ボタン](../debugger/media/intellitrace-step-back-icons-description.png  "旧バージョンとステップと転送ボタン")
 
 詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
 

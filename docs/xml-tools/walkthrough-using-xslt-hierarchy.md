@@ -7,13 +7,14 @@ ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3155eeaafdd419687b9111ef3e353f7a517aa10e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 20223a18fa422facc7d7a0a74336402d6d391b0a
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693446"
 ---
-# <a name="walkthrough-using-xslt-hierarchy"></a>チュートリアル: XSLT 階層の使用
+# <a name="walkthrough-use-xslt-hierarchy"></a>チュートリアル: を使用して XSLT 階層
 
 XSLT 階層ツールは、多くの XML 開発タスクを簡素化します。 XSLT スタイル シートには、多くの場合 `includes` 命令および `imports` 命令が使用されています。 コンパイルはプリンシパル スタイル シートから開始されますが、XSLT スタイル シートのコンパイル結果としてエラーが表示された場合、プリンシパル スタイル シート以外のものがエラーの原因である可能性があります。 エラーを修正するか、スタイル シートを編集するには、インクルードまたはインポートされたスタイル シートへのアクセスが必要になる場合があります。 デバッガーでスタイル シートをステップ実行すると、インクルードまたはインポートされたスタイル シートが開かれる場合があり、1 つまたは複数のインクルードされたスタイル シートにブレークポイントを追加することができます。
 
@@ -47,7 +48,7 @@ XSLT 階層ツールが役立つ別のシナリオとして、ビルトイン �
     </COLLECTION>
     ```
 
-1. 次の `xslincludefile.xsl` を追加します。
+1. 次の追加*xslincludefile.xsl*:
 
     ```xml
     <?xml version='1.0'?>
@@ -70,7 +71,7 @@ XSLT 階層ツールが役立つ別のシナリオとして、ビルトイン �
     </xsl:stylesheet>
     ```
 
-3.  次の `xslinclude.xsl` ファイルを追加します。
+3.  次の追加*xslinclude.xsl*ファイル。
 
     ```xml
     <?xml version='1.0'?>

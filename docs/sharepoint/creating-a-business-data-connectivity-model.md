@@ -20,16 +20,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f823c8c67750dec31c6c2b534ecc7500e20defaf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6c6fc0b1169ff906d7cda36eeeb5a74410cf46a9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691497"
 ---
-# <a name="creating-a-business-data-connectivity-model"></a>ビジネス データ接続モデルの作成
+# <a name="creating-a-business-data-connectivity-model"></a>ビジネス データ接続モデルを作成します。
   ビジネス データ接続 (BDC) モデルを作成したり、Visual Studio を使用して、既存の BDC モデルをカスタマイズすることができます。 各 SharePoint プロジェクトには、1 つのみのモデルを含めることができます。 詳細については、次を参照してください。 [SharePoint にビジネス データを統合する](../sharepoint/integrating-business-data-into-sharepoint.md)です。  
   
-## <a name="creating-a-new-model"></a>新しいモデルを作成します。  
+## <a name="create-a-new-model"></a>新しいモデルを作成します。
  新しいモデルを作成するには、作成、**ビジネス データ接続モデル**プロジェクトや追加、**ビジネス データ接続モデル**項目を**空の SharePoint プロジェクト**です。  
   
 > [!NOTE]  
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Visual Studio では、プロジェクトをデバッグするときに、ローカル コンピューター上の両方の場所にアセンブリをコピーします。  
   
-## <a name="adding-an-existing-model"></a>既存のモデルを追加します。  
+## <a name="add-an-existing-model"></a>既存のモデルを追加します。
  SharePoint Designer などその他のツールを使用して作成したモデルをインポートすることができます。 次の状況で、プロジェクトに既存のモデルをインポートを選択する場合があります。  
   
 -   既に SharePoint サーバー ファームに配置されているモデルをカスタマイズします。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/16/2018
   
  型の .NET Framework アセンブリの LOB システムをインポートしたモデルに追加するにはのオプションを選択して、**追加の .NET アセンブリの LobSystem**です。 これにより、カスタム コードを記述し、デザイナーを使用して、インポートされたモデルのメタデータを定義することができます。  
   
-## <a name="related-topics"></a>関連トピック  
+## <a name="related-topics"></a>関連トピック
   
 |タイトル|説明|  
 |-----------|-----------------|  
@@ -73,4 +74,4 @@ ms.lasthandoff: 04/16/2018
 |[方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)|Web パーツまたは Web ページで、モデルが使用される場合、モデルのメタデータとマージする文字列を提供する方法について説明します。|  
 |[方法: BDC 機能にカスタム アセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)|この機能にカスタム アセンブリを含める方法を示します。|  
   
-  
+ 

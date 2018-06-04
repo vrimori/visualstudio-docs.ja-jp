@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a66a9209f306c8a7c6872c886c96a09f4323ccc
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: bb6e5fe61e6210826ce0b37ae2650da8d6af86c9
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335607"
 ---
-# <a name="collecting-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>プロファイラー サンプリング メソッドを使用したサービスのアプリケーション統計情報の収集
+# <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>プロファイラー サンプリング メソッドを使用したサービスのアプリケーション統計情報の収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、Windows サービスのパフォーマンスの統計情報を収集する手順とオプションについて説明します。  
   
 > [!NOTE]
@@ -27,12 +28,12 @@ ms.lasthandoff: 05/11/2018
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**プロファイラーを .NET サービスにアタッチする**|-   [方法: プロファイラーを .NET サービスにアタッチし、アプリケーションの統計情報を収集する](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-application-statistics-by-using-the-command-line.md)|  
-|**階層の相互作用データを追加する**|-   [階層相互作用データの収集](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
+|**階層の相互作用データを追加する**|-   [階層相互作用データを収集する](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
 |**プロファイラーを C/C++ サービスにアタッチする**|-   [方法: プロファイラーをネイティブ サービスにアタッチし、アプリケーションの統計情報を収集する](../profiling/how-to-attach-the-profiler-to-a-native-service-to-collect-application-statistics-by-using-the-command-line.md)|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>関連するタスク  
   
-### <a name="profiling-windows-services"></a>Windows サービスのプロファイリング  
+### <a name="profile-windows-services"></a>Windows サービスのプロファイリング  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
@@ -40,12 +41,15 @@ ms.lasthandoff: 05/11/2018
 |**.NET のメモリ割り当てとガベージ コレクションのプロファイリング**|-   [.NET メモリ データの収集](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
 |**リソースの競合とスレッド アクティビティのプロファイリング**|-   [同時実行データの収集](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-by-using-the-sampling-method"></a>サンプリング方式を使用したプロファイリング  
+
+### <a name="profile-by-using-the-sampling-method"></a>サンプリング メソッドを使用したプロファイリング  
   
 |タスク|関連するコンテンツ|  
 |----------|---------------------|  
 |**スタンドアロン (クライアント) アプリケーションのプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|  
 |**ASP.NET Web アプリケーションのプロファイリング**|-   [サンプリングを使用したアプリケーション統計情報の収集](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|  
   
-### <a name="analyzing-sampling-data-views-and-reports"></a>サンプリング データ ビューとレポートの分析  
+### <a name="analyze-sampling-data-views-and-reports"></a>サンプリング データ ビューとレポートの分析  
  [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)
+
+  

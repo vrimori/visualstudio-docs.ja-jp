@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f92b96f09353bf8e432d6a3931a534064ad7c446
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 07ddb1dd64e5d972c23a032cb1eb752515d92ab6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693852"
 ---
 # <a name="xml-snippets"></a>XML スニペット
 
@@ -40,17 +41,17 @@ XML エディターには、一般的なタスクを対象としたスニペッ�
 
  スニペットは 2 つの方法で挿入できます。 **スニペットの挿入**コマンドは、カーソル位置に XML スニペットを挿入します。 **ブロックの挿入**コマンドは、選択したテキストの周囲の XML スニペットをラップします。 両方のコマンドを使用するかから、 **IntelliSense**下にあるサブメニュー、**編集**メニュー、またはエディターのショートカット メニューからです。
 
- 詳細については、次を参照してください。[する方法: XML スニペットを使用して](../xml-tools/how-to-use-xml-snippets.md)です。
+ 詳細については、次を参照してください。[する方法: 使用する XML スニペット](../xml-tools/how-to-use-xml-snippets.md)です。
 
-## <a name="schema-generated-xml-snippets"></a>スキーマを生成する XML スニペット
+## <a name="schema-generated-xml-snippets"></a>スキーマから生成される XML スニペット
  XML エディターは、XML スキーマから XML スニペットを生成する機能も備えています。 この機能を使用すると、要素に、その要素のスキーマ情報から生成された XML 要素を格納することができます。
 
- 詳細については、次を参照してください。[する方法: XML スニペットを、XML スキーマを生成](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)です。
+ 詳細については、次を参照してください。[する方法: XML スキーマから XML スニペットを生成](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)です。
 
-## <a name="create-new-xml-snippets"></a>新しい XML スニペットを作成する
+## <a name="create-new-xml-snippets"></a>新しい XML スニペットを作成します。
  含まれているスニペットに加えて[!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)]を作成して、独自の XML スニペットを使用することができますも既定では Visual Studio です。
 
- 詳細については、次を参照してください。[する方法: XML スニペットの作成](../xml-tools/how-to-create-xml-snippets.md)です。
+ 詳細については、次を参照してください。[する方法: XML の作成スニペット](../xml-tools/how-to-create-xml-snippets.md)です。
 
 ## <a name="see-also"></a>関連項目
 

@@ -18,10 +18,11 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920691"
 ---
 # <a name="custom-rule-sets"></a>カスタム規則セット
 
-カスタムを作成する*ルール セット*コード分析の特定のプロジェクトのニーズにします。
+特定のプロジェクトにあわせて必要なコード分析の *カスタム ルール セット* を作成することができます。
 
 ## <a name="create-a-custom-rule-set"></a>カスタム規則セットを作成します。
 

@@ -10,17 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f23492d45a0cd88566ab36dbdb803f68dd46037
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a398450fdf2be1dd3280c96c3b55529e14af51d4
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693943"
 ---
 # <a name="xml-schema-explorer"></a>XML スキーマ エクスプローラー
 
-XML スキーマ エクスプローラーは Microsoft Visual Studio および XML エディターに統合されており、これを使用すると、XML スキーマ定義言語 (XSD) スキーマの操作が可能になります。 XML スキーマ ファイルを開くときに、**スキーマ セット**XML スキーマ エクスプ ローラーでノードが表示されます。 XML スキーマ エクスプローラーには、対象ファイルに対してインクルード、インポート、または再定義されたすべてのスキーマだけでなく、`include` ステートメントまたは `import` ステートメントを通じて参照されているファイルも表示されます。
+**XML スキーマ エクスプ ローラー**に XML スキーマ定義言語 (XSD) スキーマを使用するには、Microsoft Visual Studio と XML エディターと統合されています。 XML スキーマ ファイルを開くときに、**スキーマ セット**ノードに表示されます、 **XML スキーマ エクスプ ローラー**です。 すべての含まれる、インポート、または再定義されたスキーマで参照されているすべてのファイルと同様に、対象ファイルの`include`または`import`ステートメントにも表示されます、 **XML スキーマ エクスプ ローラー**です。
 
- XML スキーマ エクスプローラーでは、次の操作を実行できます。
+ **XML スキーマ エクスプ ローラー**次の操作をすることができます。
 
 -   スキーマ セットの概要をすばやく確認する。
 
@@ -28,7 +29,7 @@ XML スキーマ エクスプローラーは Microsoft Visual Studio および X
 
 -   キーワード検索とスキーマ固有の検索を実行する。 詳細については、次を参照してください。[スキーマ セットの検索](../xml-tools/searching-the-schema-set.md)です。
 
--   グラフ ビューまたはコンテンツ モデル ビューに検索結果を追加する。
+-   検索結果をグラフ ビューまたはコンテンツ モデル ビューに追加します。
 
 -   ドキュメントの順序、ドキュメントの種類、またはドキュメント名でツリーを並べ替える。 詳細については、次を参照してください。[並べ替え、フィルター処理、およびグループ化](../xml-tools/sorting-filtering-and-grouping-xml-schema-explorer.md)です。
 
@@ -36,18 +37,18 @@ XML スキーマ エクスプローラーは Microsoft Visual Studio および X
 
 -   グローバル要素のサンプル XML を生成する。
 
-XML スキーマ エクスプローラーでは、ツリー ビューでスキーマ セットの階層を表示することができます。 また、検索、フィルター処理、ナビゲーション、および並べ替えを行うこともできます。 XML スキーマ エクスプローラーにアクセスするには、次のいずれかの操作を実行します。
+**XML スキーマ エクスプ ローラー**ツリー ビューでスキーマ セットの階層ビューを提供します。 **XML スキーマ エクスプ ローラー**も検索、フィルター処理、ナビゲーション、および並べ替えを提供します。 アクセスする、 **XML スキーマ エクスプ ローラー**次のいずれかの操作します。
 
 -   表示されている場合、[スタート ビュー](../xml-tools/start-view.md)をクリックして、 **XML スキーマ エクスプ ローラー**リンクします。
 
--   表示されている場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)ワークスペースにノードがあると、コンテキスト メニューを使用して、XML スキーマ エクスプ ローラーを選択します。
+-   表示されている場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)ワークスペースにノードがあると、コンテキスト メニューを使用して、 **XML スキーマ エクスプ ローラー**です。
 
--   XML スキーマ Explorerfrom を選択することも、**ビュー**メニュー。
+-   選択することも、 **XML スキーマ エクスプ ローラー**から、**ビュー**メニュー。
 
--   XML スキーマ Explorerfrom を持つ Visual Basic の XML リテラル .xsd ファイルに関連付けられている .vb ファイルにアクセスできます。 スキーマを XML スキーマ エクスプ ローラー設定、XML リテラル内の XML ノードまたは XML 名前空間インポートを右クリックしを選択して、**スキーマ エクスプ ローラーで表示する**コマンド。 詳細については、次を参照してください。[統合の XML リテラルと XML スキーマ エクスプ ローラー](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)です。
+-   アクセスすることができます、 **XML スキーマ エクスプ ローラー**から、 *.vb*に関連付けられている Visual Basic XML リテラルを含むファイル、 *.xsd*ファイル。 スキーマを表示するには、設定、 **XML スキーマ エクスプ ローラー**を XML リテラルまたは XML 名前空間インポートで XML ノードを右クリックし、**スキーマ エクスプ ローラーで表示する**コマンド。 詳細については、次を参照してください。[統合の XML リテラルと XML スキーマ エクスプ ローラー](../xml-tools/integration-of-xml-literals-with-xml-schema-explorer.md)です。
 
 ## <a name="tree-view"></a>ツリー ビュー
- XML スキーマ エクスプローラーでは、事前にコンパイルされたスキーマ セット情報がツリー構造で表示されます。 ツリー構造は、次のように構成されます。
+ **XML スキーマ エクスプ ローラー**プリコンパイル表示スキーマがツリー構造で情報を設定します。 ツリー構造は、次のように構成されます。
 
 -   最上位レベルは、スキーマ セット ノードです。
 
@@ -72,7 +73,7 @@ XML スキーマ エクスプローラーでは、ツリー ビューでスキ�
 
 -   SchemaSet または名前空間ノードをアクティブ化しても、何も行われません。
 
-## <a name="draging-and-dropping-nodes"></a>ノードのドラッグ アンド ドロップ
+## <a name="drag-and-drop-nodes"></a>ノードのドラッグ アンド ドロップ
  グローバル ノード、ファイル ノード、名前空間ノードを XSD デザイナーのビューにドラッグ アンド ドロップすることができます。 現在のビューがある場合、[スタート ビュー](../xml-tools/start-view.md)が開き、ビューにノードをドラッグして、[グラフ ビュー](../xml-tools/graph-view.md)です。 現在のビューがある場合、[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)またはグラフ ビューの場合、ビューは変化しませんにノードを削除するとします。
 
  ビュー上のファイルをドロップすると、すべてのグローバル ノードがファイルに追加されます、 [XSD デザイナーのワークスぺース](../xml-tools/xml-schema-designer-workspace.md)です。 ビューに名前空間をドロップすると、名前空間内のすべてのグローバル ノードがワークスぺースに追加されます。 ワークスペースは、すべてのビューで共有されます。
@@ -81,4 +82,4 @@ XML スキーマ エクスプローラーでは、ツリー ビューでスキ�
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: XML スキーマ エクスプローラーからワークスペースにノードを追加する](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)
+- [方法: XML スキーマ エクスプ ローラーからワークスペースにノードを追加](../xml-tools/how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer.md)

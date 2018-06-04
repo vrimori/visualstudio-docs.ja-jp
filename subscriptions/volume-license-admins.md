@@ -9,11 +9,12 @@ description: サブスクリプションの管理者が管理ポータルにア�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 mearchscope: VS Subscription
-ms.openlocfilehash: 33ed7f26e146efffb66b7fabde65dc45276d085d
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: e403e1d8282b3f0a18058105bca0150938a956cf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335893"
 ---
 # <a name="accessing-the-portal-and-managing-administrators---for-subscriptions-acquired-through-volume-licensing-vl"></a>ポータルへのアクセスおよび管理者の管理: ボリューム ライセンス (VL) で取得したサブスクリプションの場合
 
@@ -36,7 +37,7 @@ VLSC でサブスクリプションを管理する方法の詳細については
 
      a.  電子メールでは、主要ご担当者様および連絡先ご担当者様に、専用のリンク、パブリック カスタマー番号 (PCN) の最後の 3 桁が提供されます。  (主要ご担当者様および連絡先ご担当者様が、複数の電子メールを受信した場合、複数の PCN があることを意味しています。 管理者は、各電子メールで参照されている PCN の一意のリンクを使用してプロセスを完了する必要があります。)
 
-     b.  PCN をすべて取得するには、主要ご担当者様が VLSC にサインインする必要があります。 [Instructions for locating the PCN](/find-pcn/) (PCN を検索する手順) 
+     b.  PCN をすべて取得するには、主要ご担当者様が VLSC にサインインする必要があります。 [Instructions for locating the PCN](find-pcn.md) (PCN を検索する手順) 
 
      c. PCN を入手した後に、サインインするよう要求する一意のリンクを選択する必要があります。 組織が AAD にない場合は、職場または学校のアカウント (組織が AAD である場合) または Microsoft アカウント (MSA) のいずれかを使用してサインインできます。 
 
@@ -46,6 +47,6 @@ VLSC でサブスクリプションを管理する方法の詳細については
 
 3.  新しいサブスクリプション管理ポータルにアクセスします。 組織が移行した後に、新しく追加されたスーパー管理者と管理者に、新しいポータルにアクセスして、サブスクリプションの管理を開始するように招待する電子メールが送信されます。  
 
-新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、[主要連絡先を確認する方法](/find-primary-contact/)に関するトピックを参照してください。
+新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、[主要連絡先を確認する方法](find-primary-contact.md)に関するトピックを参照してください。
 
 管理者として既に設定されている場合は、Visual Studio サブスクリプション[管理ポータルhttps://manage.visualstudio.com](https://manage.visualstudio.com)に直接進むことができます。 

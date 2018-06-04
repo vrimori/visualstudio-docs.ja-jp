@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5a80233a6c1aaed56770e0ec2bb6733a800ce06
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d74e6c90f1caf66cbba299ea210d6f4af6637f4e
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336101"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数の .NET メモリ プロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/19/2018
 |**割り当てバイト数 (関数のみ)**|-   現在の関数の場合、プロファイル実行で関数によって割り当てられたメモリのバイト数。 この数値には、現在の関数によって呼び出された関数で割り当てられたメモリは含まれません。<br />-   呼び出し元関数の場合、呼び出し先関数からの呼び出しによって生成された現在の関数の排他バイト数。<br />-   呼び出し先関数の場合、現在の関数からの呼び出しによって生成された関数のインスタンスで割り当てられたバイト数。 この数値には、呼び出し先関数によって呼び出された関数で割り当てられたバイト数は含まれません。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイル実行で割り当てられたすべてのメモリのバイト数に対する、この関数の排他的割り当てであったバイト数の割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [呼び出し元/呼び出し先ビュー - .NET メモリ インストルメンテーション データ](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
  [呼び出し元/呼び出し先ビュー - サンプリング データ](../profiling/caller-callee-view-sampling-data.md)   

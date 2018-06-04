@@ -15,16 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0aca731f3f57b7c7024135a3d06d7b17481ba924
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1367a8850110fc720a9adfdd733a7c8cdf0aeb14
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692071"
 ---
-# <a name="api-reference-sharepoint-tools-extensibility"></a>API リファレンス (SharePoint ツールの拡張性)
+# <a name="api-reference-sharepoint-tools-extensibility"></a>API リファレンス (SharePoint ツール拡張機能)
   このセクションでは、Visual Studio の SharePoint ツールを拡張するための API リファレンス ドキュメントを示します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="in-this-section"></a>このセクションの内容
  <xref:Microsoft.VisualStudio.SharePoint>  
  SharePoint プロジェクト システムを拡張するのに使用する型があります。 たとえば、組み込みの SharePoint プロジェクトやプロジェクト項目を拡張できるほか、独自のプロジェクト項目を作成することもできます。  
   
@@ -58,12 +59,11 @@ ms.lasthandoff: 04/16/2018
  <xref:Microsoft.VisualStudio.SharePoint.Validation>  
  SharePoint プロジェクトの機能およびパッケージ検証動作をカスタマイズするために使用する型があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [参照&#40;SharePoint ツールの拡張性&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
  [ツールの拡張機能を SharePoint のプログラミング モデルの概要](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [SharePoint の拡張のパッケージ化と配置](../sharepoint/extending-sharepoint-packaging-and-deployment.md)   
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)  
-  
   

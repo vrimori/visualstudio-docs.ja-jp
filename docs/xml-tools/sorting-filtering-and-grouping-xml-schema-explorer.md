@@ -10,15 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4354e58e8de2d877e726b4615bac3832bfc37d2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2a3e281f8e3995cf22100d328089f1993110f756
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693670"
 ---
-# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>並べ替え、フィルター処理、およびグループ化 (XML スキーマ エクスプローラー)
+# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>並べ替え、フィルター、およびグループ化 (XML スキーマ エクスプ ローラー)
 
-このトピックで使用できるオプションについて説明、**並べ替え、フィルター処理、およびグループ化のオプション**XML スキーマ エクスプ ローラー ツールバーのメニュー。
+このトピックで使用できるオプションについて説明、**並べ替え、フィルター処理、およびグループ化のオプション**メニューで、 **XML スキーマ エクスプ ローラー**ツールバー。
 
 ## <a name="filter-options"></a>フィルター オプション
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="sorting-options"></a>並べ替えオプション
 
- 次の並べ替えオプションがあります。 既定値は**種類で並べ替え**です。 ファイルと名前空間には、[種類で並べ替え] オプションと [名前で並べ替え] オプションは適用されません。
+ 次の並べ替えオプションがあります。 既定値は**種類で並べ替え**です。 **並べ替えによって**オプションは、ファイルと名前空間には適用されません。
 
 -   **型で並べ替え**です。
 
@@ -78,6 +79,6 @@ ms.lasthandoff: 04/26/2018
 
  **ドキュメント順**オプションは使用可能な場合に、**スキーマ ファイルを表示**オプションを選択します。 ときに**ドキュメント順**が選択されているグローバル ノードが、スキーマ ファイルで表示される順に表示されます。
 
-## <a name="persisting-sortfilter-options"></a>並べ替え/フィルター オプションの保存
+## <a name="persisting-sortfilter-options"></a>永続化の並べ替え/フィルター オプション
 
  設定の変更時に開かれていたソリューションやファイルにかかわらず、並べ替え、フィルター処理、およびグループ化のオプションは各ユーザーのレジストリに保存されます。
