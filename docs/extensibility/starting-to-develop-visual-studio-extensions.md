@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144464"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始
 Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。  
@@ -58,7 +59,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
   
 -   [Visual Studio の分離シェル](../extensibility/visual-studio-isolated-shell.md)  
   
-##  <a name="BKMK_ProjectTemplate"></a> VSSDK によってどのようなプロジェクト テンプレートが提供されますか。
+##  <a name="BKMK_ProjectTemplate"></a> VSSDK によってどのようなプロジェクト テンプレートが提供されますか。  
  2 つの主な種類の拡張機能は、Vspackage および MEF 拡張機能です。 一般に、VSPackage 拡張機能は、使用するか、コマンド、ツール ウィンドウ、およびプロジェクトを拡張する拡張機能で使用されます。 MEF 拡張機能は、拡張または Visual Studio エディターのカスタマイズに使用されます。  
   
  Visual c# および Visual Basic の拡張機能、VSSDK には、メニュー コマンド、ツール ウィンドウおよびエディター拡張機能を作成する新しい項目テンプレートと共に使用できる空の VSIX プロジェクト テンプレートが用意されています。 また、他のユーザーに配布するパッケージ プロジェクト テンプレート、コード スニペット、およびその他の成果物にこのテンプレートを使用することができます。  

@@ -18,7 +18,7 @@ ms.locfileid: "31919506"
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>方法: マネージ コードの自動コード分析を有効/無効にします
 
-マネージ コード プロジェクトのビルド後に実行されるコード分析を構成することができます。また、ビルド構成ごとに異なるコード分析のプロパティを設定できます。
+マネージ コード プロジェクトのビルド後に実行されるコード分析を構成することができます。 また、ビルド構成ごとに異なるコード分析のプロパティを設定できます。
 
 ## <a name="to-enable-or-disable-automatic-code-analysis"></a>自動コード分析を有効または無効にするには
 

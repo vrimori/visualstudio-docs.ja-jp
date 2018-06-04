@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio でカスタム コード分析ルールを作成します。
 ms.date: 04/04/2018
 ms.prod: visual-studio-dev15
@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920691"
 ---
 # <a name="custom-rule-sets"></a>カスタム規則セット
 
