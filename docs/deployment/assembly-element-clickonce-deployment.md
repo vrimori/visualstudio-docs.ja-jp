@@ -1,5 +1,5 @@
 ---
-title: '&lt;アセンブリ&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+title: '&lt;assembly&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -23,8 +23,9 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31560259"
 ---
-# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;アセンブリ&gt;要素 (ClickOnce 配置)
+# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly&gt;要素 (ClickOnce 配置)
 配置マニフェストの最上位要素です。  
   
 ## <a name="syntax"></a>構文  
