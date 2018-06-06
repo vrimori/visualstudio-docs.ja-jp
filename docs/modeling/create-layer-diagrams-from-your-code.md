@@ -1,5 +1,5 @@
 ---
-title: コードから依存関係のダイアグラムを作成します。
+title: コードからの依存関係図の作成
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3a34d52bb4b9af535d1b11843967ac5b9619a153
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 73f3cf2bbb5903a3c2dda8c531f28e9aa81facad
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749702"
 ---
-# <a name="create-dependency-diagrams-from-your-code"></a>コードから依存関係のダイアグラムを作成します。
+# <a name="create-dependency-diagrams-from-your-code"></a>コードからの依存関係図の作成
 
 ソフトウェア システムの高レベルで論理アーキテクチャを視覚化するには、作成、*依存関係ダイアグラム*Visual Studio でします。 コードがこの設計と一致することを確認するには、依存関係ダイアグラムとコードを検証します。 Visual c# および Visual Basic プロジェクトの依存関係図を作成することができます。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
 
-![依存関係図を作成する](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
+![依存関係図を作成します。](../modeling/media/layerdiagramvisualizecode.png)
 
 依存関係ダイアグラムでは、Visual Studio のソリューション項目と呼ばれる論理的、抽象的なグループに編成できます。*レイヤー*です。 レイヤーを使用して、これらの成果物が実行する主要タスク、またはシステムの主要コンポーネントを示すことができます。 各レイヤーには、より詳細なタスクを示す別のレイヤーを含めることができます。 意図的または既存を指定することも*の依存関係*層の間です。 矢印で表されるこれらの依存関係は、どのレイヤーが、他のレイヤーが表す機能を使用できるか、または現在使用しているかを示します。 コードのアーキテクチャ コントロールを保持するには、目的の依存関係を図で示し、図と照らし合わせてコードを検証します。
 

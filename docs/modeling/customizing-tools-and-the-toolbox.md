@@ -15,11 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 357101a9430eb8d22aeab39179a0a4f70f0dc1bf
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f39ddf910f120c30cf8ef55e77d4fe09f645e148
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748528"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 ユーザーがモデルに追加可能な要素についてツールボックス項目を定義する必要があります。 ツールには要素ツールと接続ツールの 2 種類があります。 生成されたデザイナーで、ユーザーは要素ツールを選択して図形を図へドラッグすることができ、接続ツールを選択して図形間のリンクを描画できます。 一般にユーザーは、要素ツールを使用するとドメイン クラスのインスタンスをモデルに追加することができ、接続ツールを使用するとドメイン リレーションシップのインスタンスを追加できます。
@@ -199,17 +200,17 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  **受け取った、OutPort 入れ子になったコンポーネントからの接続**
 
- ![接続ビルダー](../modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")
+ ![接続ビルダー](../modeling/media/connectionbuilder_3.png)
 
  したがって、入れ子になったコンポーネントから OutPort への接続が可能であることを指定するのが適切です。 設定するような接続を指定する**を使用してユーザー設定を受け入れる**で、 **InPort**ソース ロールとしての型と**OutPort**にターゲット ロールと型、 **DSL 詳細**ウィンドウの次の図に示すようにします。
 
  **リンクで接続 DSL のエクスプ ローラーでディレクティブ**
 
- ![接続ビルダー イメージ](../modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")
+ ![接続ビルダー イメージ](../modeling/media/connectionbuilder_4a.png)
 
  **リンクで接続 DSL 詳細 ウィンドウでディレクティブ**
 
- ![](../modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")
+ ![](../modeling/media/connectionbuilder_4b.png)
 
  次に、ConnectionBuilder クラスにメソッドを入力する必要があります。
 

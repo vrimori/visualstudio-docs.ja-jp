@@ -21,11 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a887d31eded0f7f37e9ec5390a934c192836697
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ff7a135c11df03e203f8cf221f02c40264fb6bd6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749230"
 ---
 # <a name="options-text-editor-all-languages"></a>[オプション]、[テキスト エディター]、[すべての言語]
 このダイアログ ボックスでは、コード エディターの既定の動作を変更できます。 設定は、HTML デザイナーのソース ビューなど、コード エディターに基づいて他のエディターにも適用されます。 このダイアログ ボックスを開くには、**[ツール]** メニューから **[オプション]** を選択します。 **[テキスト エディター]** フォルダー内で **[すべての言語]** サブフォルダーを展開し、**[全般]** を選択します。
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/26/2018
 
  選択すると、長い行を折り返したとき、その位置に折り返し矢印インジケーターが表示されます。
 
- ![LineBreakSymbol スクリーンショット](../../ide/reference/media/linebreak.gif "linebreak")
+ ![LineBreakSymbol スクリーンショット](../../ide/reference/media/linebreak.gif)
 
  インジケーターを表示しない場合、このオプションをオフにします。
 

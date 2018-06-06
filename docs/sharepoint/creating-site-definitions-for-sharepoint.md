@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 06a5aa5d7f97f56bfbb21941ab996628b689c86a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 1fae92a9ca958f3d6702ec0f2d1678b33d471bab
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691805"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765493"
 ---
-# <a name="creating-site-definitions-for-sharepoint"></a>SharePoint のサイト定義を作成します。
+# <a name="create-site-definitions-for-sharepoint"></a>SharePoint のサイト定義を作成します。
   SharePoint サイト定義プロジェクト[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を作成することができます、*サイト定義*、新しい SharePoint サイトの基礎として使用します。 だけでなく、これらの定義は、SharePoint サイトの既定のコンテンツやも機能の動作と外観を決定します。 定義では、構成済みのリスト、コンテンツの種類、イベント レシーバー、画像、およびその他のアイテムを配置できます。 SharePoint には、たとえば、ブログなどの一部のサイト定義が含まれます。 ブログ サイト定義に基づくサイトを作成するときに、サイトには、リスト、Web パーツ、およびブログ サイトが必要なその他のアイテムが含まれています。  
   
  サイト定義の詳細については、次を参照してください。[サイト テンプレートと定義](http://go.microsoft.com/fwlink/?LinkId=179134)です。  
@@ -41,11 +41,11 @@ ms.locfileid: "34691805"
   
 |ファイル名|説明|  
 |---------------|-----------------|  
-|default.aspx|新しい SharePoint サイトの既定の ASPX ホーム ページです。|  
-|Onet.xml|新しいサイトの構成のコンポーネント、サイト定義のテンプレートと既定の動作を指定します。 これらの設定は、コンテンツの種類、有効な既定のリスト ビューで、ドキュメント テンプレート ファイルなどの属性を含めるし、Web サイトに含まれているパーツできます。 既定では、`Modules`セクションには、SharePoint サイトとその構成に追加するファイルが一覧表示します。|  
-|webtemp_*SiteDefinitionName*.xml|表示されるサイト定義構成を指定します、**テンプレートの選択**のセクションで、**新しい SharePoint サイト**ページ。|  
+|*default.aspx*|新しい SharePoint サイトの既定の ASPX ホーム ページです。|  
+|*Onet.xml*|新しいサイトの構成のコンポーネント、サイト定義のテンプレートと既定の動作を指定します。 これらの設定は、コンテンツの種類、有効な既定のリスト ビューで、ドキュメント テンプレート ファイルなどの属性を含めるし、Web サイトに含まれているパーツできます。 既定では、`Modules`セクションには、SharePoint サイトとその構成に追加するファイルが一覧表示します。|  
+|*webtemp_ {SiteDefinitionName} .xml*|表示されるサイト定義構成を指定します、**テンプレートの選択**のセクションで、**新しい SharePoint サイト**ページ。|  
   
- 既定では、すべてのサイト定義が格納されている、*ドライブ:* \program files \microsoft shared \web Server Extensions\14\TEMPLATE\SiteTemplates フォルダーです。 各サイトの定義は、それぞれのサブフォルダーが。  
+ 既定では、すべてのサイト定義が格納されている、 *{ドライブ:} \program files \microsoft shared \web Server Extensions\14\TEMPLATE\SiteTemplates*フォルダーです。 各サイトの定義は、それぞれのサブフォルダーが。  
   
 ## <a name="related-topics"></a>関連トピック
   
@@ -53,7 +53,7 @@ ms.locfileid: "34691805"
 |-----------|-----------------|  
 |[チュートリアル: 基本サイト定義プロジェクトの作成](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|基本的なサイト定義プロジェクトの作成を追って[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。|  
 |[方法: カスタムのサイト定義と構成の作成](http://go.microsoft.com/fwlink/?LinkId=183309)|既存のサイト定義をコピーして、コピーを変更し、SharePoint でカスタムのサイト定義を作成する方法について説明します。|  
-|[WebTemp.xml](http://go.microsoft.com/fwlink/?LinkId=183310)|使用可能なサイト定義を指定する元のファイルについて説明します、**テンプレートの選択**のセクションで、**新しい SharePoint サイト**ページ。|  
+|[*WebTemp.xml*](http://go.microsoft.com/fwlink/?LinkId=183310)|使用可能なサイト定義を指定する元のファイルについて説明します、**テンプレートの選択**のセクションで、**新しい SharePoint サイト**ページ。|  
 |[SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)|グローバルに使用できる、SharePoint ソリューションを準備する方法について説明します。|  
 |[SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)|ユーザーを変更できる SharePoint ページの部分を作成する方法について説明します。|  
 |[Web パーツまたはアプリケーション ページの再利用できるコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)|アプリケーション ページと Web パーツで実行される再利用可能なコントロールを作成する方法について説明します。|  

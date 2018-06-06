@@ -28,14 +28,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 882c2edfc097b8da57cc26c431cbaaa72ba200b6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 2a9cb18d1b9de7f4f67f8c3d153a9dfa4598612d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691533"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765727"
 ---
-# <a name="creating-web-parts-for-sharepoint"></a>SharePoint の web パーツの作成
+# <a name="create-web-parts-for-sharepoint"></a>For SharePoint web パーツを作成します。
   Web パーツを作成すると、SharePoint サイト ページのコンテンツ、外観、および動作をユーザーがブラウザーから変更できます。 Web パーツは、Web パーツ ページ内で実行されるサーバー側コントロールです。SharePoint サイトに表示されるページはこれらの Web パーツで構成されます。 参照してください[ビルディング ブロック: Web パーツ](http://go.microsoft.com/fwlink/?LinkID=182097)です。  
   
  SharePoint サイトの Web パーツを作成およびデバッグするには、Visual Studio のテンプレートを使用します。  
@@ -50,7 +50,7 @@ ms.locfileid: "34691533"
   
 |ファイル|説明|  
 |----------|-----------------|  
-|Elements.xml|Web パーツを配置する際、プロジェクトのフィーチャー定義ファイルで使用する情報が格納されます。|  
+|*Elements.xml*|Web パーツを配置する際、プロジェクトのフィーチャー定義ファイルで使用する情報が格納されます。|  
 |.webpart ファイル|SharePoint の Web パーツ ギャラリーに Web パーツを表示するために必要な情報を指定します。|  
 |コード ファイル|Web パーツにコントロールを追加するメソッド、および Web パーツ内にカスタム コンテンツを生成するメソッドが保存されます。|  
   
@@ -65,14 +65,14 @@ ms.locfileid: "34691533"
 |コントロール名|説明|  
 |------------------|-----------------|  
 |[AspMenu](http://go.microsoft.com/fwlink/?LinkId=235307)|ASP メニューを挿入します。 詳細については、次を参照してください。[メニュー コントロールの概要](http://go.microsoft.com/fwlink/?LinkId=235316)です。|  
-|[CssLink](http://go.microsoft.com/fwlink/?LinkId=235308)|挿入、**リンク**.aspx ページに要素によって定義された 1 つまたは複数の外部スタイル シートを適用し、 **CssRegistration**です。|  
-|[DateTimeControl](http://go.microsoft.com/fwlink/?LinkId=235306)|.aspx ページに DateTime コントロールを挿入します。|  
-|[FormDigest](http://go.microsoft.com/fwlink/?LinkId=235309)|.aspx ページにセキュリティ検証を挿入します。|  
+|[CssLink](http://go.microsoft.com/fwlink/?LinkId=235308)|挿入、**リンク**に要素を *.aspx*ページし、によって定義された 1 つまたは複数の外部スタイル シートを適用**CssRegistration**です。|  
+|[DateTimeControl](http://go.microsoft.com/fwlink/?LinkId=235306)|DateTime コントロールを挿入、 *.aspx*ページ。|  
+|[FormDigest](http://go.microsoft.com/fwlink/?LinkId=235309)|セキュリティ検証を挿入、 *.aspx*ページ|  
 |[ListProperty](http://go.microsoft.com/fwlink/?LinkId=235310)|指定されたリストのプロパティを返します。|  
 |[ProjectProperty](http://go.microsoft.com/fwlink/?LinkId=235311)|現在の Web サイトのグローバル プロパティを返します。|  
-|[RssLink](http://go.microsoft.com/fwlink/?LinkId=235312)|RSS フィードへのリンクを .aspx ページに挿入します。|  
+|[RssLink](http://go.microsoft.com/fwlink/?LinkId=235312)|RSS フィードにへのリンクを挿入、 *.aspx*ページ。|  
 |[ScriptLink](http://go.microsoft.com/fwlink/?LinkId=235313)|スクリプトなどのリソースをページに登録し、ページのレンダリング時に要求できるようにするためのプロパティとメソッドを提供します。|  
-|[テーマ](http://go.microsoft.com/fwlink/?LinkId=235314)|.aspx ページにテーマを適用します。|  
+|[テーマ](http://go.microsoft.com/fwlink/?LinkId=235314)|テーマを適用、 *.aspx*ページ。|  
   
 ## <a name="debug-a-web-part"></a>Web パーツをデバッグします。
  他の Visual Studio プロジェクトをデバッグする場合と同様に、Web パーツを含む SharePoint プロジェクトをデバッグできます。 Visual Studio デバッガーを開始すると、SharePoint サイトが開きます。  

@@ -14,12 +14,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 433a8bc7cae982b5ec8106966ec8c6ca0af45076
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 53f34fbed4a2067836c5f2c7a8d4bf8aa6c09d29
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34690927"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747041"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>データベースを作成し、Visual Studio でのテーブルの追加
 Visual Studio を使用して作成し、SQL Server Express LocalDB でローカル データベース ファイルを更新することができます。 内の TRANSACT-SQL ステートメントを実行することによって、データベースを作成することも、 **SQL Server オブジェクト エクスプ ローラー** Visual Studio でのツール ウィンドウです。 このトピックでは、.mdf ファイルを作成し、テーブル デザイナーを使用してテーブルおよびキーを追加します。
@@ -36,7 +36,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB でローカ
 
 3.  項目テンプレートの一覧で下へスクロールし、選択**サービス ベースのデータベース**です。
 
-     ![項目テンプレート ダイアログ ボックス](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")
+     ![[アイテム テンプレート] ダイアログ ボックス](../data-tools/media/raddata-vsitemtemplates.png)
 
 4.  データベースの名前**SampleDatabase**、クリックして、**追加**ボタンをクリックします。
 
@@ -95,7 +95,7 @@ SampleDatabase.mdf ファイルの接続文字列を表示するには、デー�
 
     次のように表示されます。
 
-    ![テーブル デザイナー](../data-tools/media/raddata-table-designer.png "raddata テーブル デザイナー")
+    ![テーブル デザイナー](../data-tools/media/raddata-table-designer.png)
 
 7.  左上隅にある、**テーブル デザイナー**、select、**更新**ボタンをクリックします。
 
@@ -130,7 +130,7 @@ SampleDatabase.mdf ファイルの接続文字列を表示するには、デー�
 ### <a name="to-create-a-foreign-key"></a>外部キーを作成するには
 1.  グリッドの右側にある コンテキスト ウィンドウでショートカット メニューを開き、**外部キー**、し、**新しい外部キーの追加**次の図に示すようにします。
 
-     ![テーブル デザイナーで外部キーの追加](../data-tools/media/foreignkey.png "ForeignKey")
+     ![テーブル デザイナーでの外部キーの追加](../data-tools/media/foreignkey.png)
 
 2.  テキスト ボックスが表示されますが、置換**ToTable**で`Customers`です。
 

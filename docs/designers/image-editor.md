@@ -13,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a3fe4cf9591d64465fa7ec44d1653bbfc65ec8b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 92d82cfaf2f06018ce93e6c1fce1abd0b63809f6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747311"
 ---
 # <a name="image-editor"></a>イメージ エディター
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 04/26/2018
 
  **[イメージ エディターのモード]** ツール バーを次に示します。
 
- ![イメージ エディターのモーダル ツール バー。](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")
+ ![イメージ エディターのモーダル ツール バー。](../designers/media/digit-tre-modal-toolbar.png)
 
  次の表は、**[イメージ エディターのモード]** ツール バーに、左から右へ順に表示される項目を示します。
 
@@ -116,7 +117,7 @@ ms.lasthandoff: 04/26/2018
 
  **[イメージ エディター]** ツール バーを次に示します。
 
- ![イメージ エディターのツール バー](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")
+ ![[イメージ エディター] ツール バー](../designers/media/digit-tre-toolbar.png)
 
  次の表では、**[イメージ エディター]** ツール バーに、上から下へ順に表示される項目について説明します。
 

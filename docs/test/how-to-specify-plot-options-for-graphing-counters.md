@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト用のグラフ作成カウンターのプロット オプション | Microsoft Docs
+title: Visual Studio でのロード テスト用のグラフ作成カウンターのプロット オプション
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,18 +8,20 @@ ms.assetid: 1969c20b-e0eb-48f6-a49f-a9090cd86008
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5c52aefb731fdb1c858819d1c005d27000ad840e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7a5f87a83b8c743ae869a700618051e07c8c2e75
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750923"
 ---
 # <a name="how-to-specify-plot-options-for-graphing-counters"></a>方法: グラフ作成カウンターのプロット オプションを指定する
 
 **[プロット オプション]** ダイアログ ボックスを使用すると、グラフにプロットされるカウンターの色と線スタイルを変更できます。 サンプル データに基づいて、特定の値で範囲を固定したり、その範囲が自動的に調整されるように設定したりすることもできます。
 
-![[プロット オプション] ダイアログ ボックス](../test/media/ltest_plotoptions.png "LTest_PlotOptions")
+![[プロット オプション] ダイアログ ボックス](../test/media/ltest_plotoptions.png)
 
 ## <a name="to-specify-plotting-options-for-graphs"></a>グラフのプロット オプションを指定するには
 

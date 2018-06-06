@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b1660d440b72c48787af2cf2c653a420982c8799
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7773c2c81527e065652486eb851f3c27828bf76d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767138"
 ---
-# <a name="how-to-add-a-finder-method"></a>方法: Finder メソッドを追加する
-  Web パーツまたはリスト内のエンティティの一覧を表示するビジネス データ接続サービスを有効にする必要がありますを作成する、 *Finder*メソッドです。 Finder メソッドは、エンティティのインスタンスのコレクションを返す特殊な方法です。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
+# <a name="how-to-add-a-finder-method"></a>方法: Finder メソッドを追加
+  Web パーツまたはリスト内のエンティティの一覧を表示するビジネス データ接続 (BDC) サービスを有効にする必要がありますを作成する、 *Finder*メソッドです。 Finder メソッドは、エンティティのインスタンスのコレクションを返す特殊な方法です。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
 ### <a name="to-create-a-finder-method"></a>Finder メソッドを作成するには  
   
-1.  BDC デザイナーでは、エンティティを選択します。  
+1.  **BDC デザイナー**エンティティを選択します。  
   
      詳細については、次を参照してください。[する方法: エンティティをモデルに追加](../sharepoint/how-to-add-an-entity-to-a-model.md)です。  
   
-2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
+2.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ** > **BDC メソッドの詳細**です。  
   
      **BDC メソッドの詳細**ウィンドウが開きます。 詳細については、 **BDC メソッドの詳細**ウィンドウを参照してください[BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   

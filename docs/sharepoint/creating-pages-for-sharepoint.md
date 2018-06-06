@@ -20,14 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d4cfbe0a7ae0a27e41053457774217f049d5caf3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 0532025fdb090c3811f09cb823745bd50e8d91c5
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34694047"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765529"
 ---
-# <a name="creating-pages-for-sharepoint"></a>SharePoint 用ページの作成
+# <a name="create-pages-for-sharepoint"></a>SharePoint のページを作成します。
   アプリケーション ページ、サイトのページ、マスター ページ、および SharePoint サイトのページ レイアウトを作成することができます。  
   
  Visual Studio でテンプレートを使用してアプリケーション ページを作成することができます。 SharePoint Designer を使用して、サイトのページ、マスター ページ、およびページ レイアウトを作成します。 次に、SharePoint プロジェクトで使用する Visual Studio にこれらのページをインポートできます。  
@@ -67,7 +67,7 @@ ms.locfileid: "34694047"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)|アプリケーション ページを追加する方法について説明します。 SharePoint のマスター ページとマージされる .aspx コンテンツ。|  
+|[SharePoint のアプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)|アプリケーション ページを追加する方法について説明します。 *.aspx*の SharePoint のマスター ページとマージされるコンテンツ。|  
 |[方法: アプリケーション ページを作成する](../sharepoint/how-to-create-an-application-page.md)|SharePoint サイト上で実行される ASP.NET ページを作成する方法を示します。|  
 |[チュートリアル: SharePoint アプリケーション ページの作成](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|デザインおよび SharePoint サイトの ASP.NET Web ページをデバッグする方法を示します。|  
   

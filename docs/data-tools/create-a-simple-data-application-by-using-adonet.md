@@ -13,11 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d0b60bb4e7048e2dc49774ec69d3eea4fc0ce6c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0c4e985231f8e74095add3e8a3a3e412814bed0d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745803"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用して単純なデータ アプリケーションを作成します。
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/26/2018
 
  **Navigation フォーム**
 
- ![ダイアログ ボックスのナビゲーション](../data-tools/media/simpleappnav.png "SimpleAppNav")
+ ![ナビゲーション ダイアログ ボックス](../data-tools/media/simpleappnav.png)
 
 |Navigation フォームのコントロール|プロパティ|
 |--------------------------------------|----------------|
@@ -93,7 +94,7 @@ ms.lasthandoff: 04/26/2018
 
  **NewCustomer フォーム**
 
- ![新しい顧客を追加し、注文](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")
+ ![新しい顧客を追加して注文を作成する](../data-tools/media/simpleappnewcust.png)
 
 |NewCustomer フォームのコントロール|プロパティ|
 |---------------------------------------|----------------|
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/26/2018
 
  **FillOrCancel フォーム**
 
- ![入力するか、または注文のキャンセル](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")
+ ![注文の入力または取り消し](../data-tools/media/simpleappcancelfill.png)
 
 |FillOrCancel フォームのコントロール|プロパティ|
 |----------------------------------------|----------------|

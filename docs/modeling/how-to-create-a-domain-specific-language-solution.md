@@ -15,11 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c4851577a62db08e2c759f7140895e15b230ec60
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 49d33858970eebd9231eac35d4e4e58999771ae1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748899"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を使用して作成する特殊な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/26/2018
         > [!NOTE]
         >  可能であれば、コードが生成される可能性がありますので、入力した名前は、有効な Visual c# 識別子をする必要があります。
 
-     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png)
 
 2.  DSL テンプレートを選択します。
 

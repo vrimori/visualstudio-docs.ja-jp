@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d58cbb439eb370af16ee68ca03a4d1db467861f0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 40eb0ce15ade3162fecbda16469c5efa382afb28
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745631"
 ---
 # <a name="how-to-create-a-basic-texture"></a>方法: 基本テクスチャを作成する
 このドキュメントでは、イメージ エディターを使用した基本的なテクスチャの作成方法を示します。
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
  次の手順は、"bullseye" ターゲットを表すテクスチャを作成する方法を示します。終了したら、テクスチャは次の絵のようになります。 テクスチャの透明度がわかりやすくなるために、イメージ エディターは、緑色の格子模様のパターンを使用して透明度を表示するように構成されています。
 
- ![透明度が緑で表示された "Bullseye" ターゲット](../designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")
+ ![透明度が緑で表示された "Bullseye" ターゲット](../designers/media/digit-bullseye-texture-in-editor.png)
 
  開始する前に、**[プロパティ]** ウィンドウが表示されていることを確認します。 作業中に、**[プロパティ]** ウィンドウを使用して、イメージのサイズを設定し、ツールのプロパティを変更し、色を指定します。
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/26/2018
 
  "bullseye" ターゲットのテクスチャが完成しました。 表示される最終的なイメージと透明度を次に示します。
 
- !["bullseye" ターゲットのテクスチャ全体](../designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")
+ !["bullseye" ターゲットのテクスチャ全体](../designers/media/gfx_image_demo_bullseye.png)
 
  次の手順では、このテクスチャの MIP レベルを生成できます。 詳細については、「[方法: MIP レベルを作成および変更する](../designers/how-to-create-and-modify-mip-levels.md)」を参照してください。
 

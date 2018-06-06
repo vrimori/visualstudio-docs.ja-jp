@@ -11,13 +11,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7e98be1dd16705be00f388419013686f861f3753
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 18f4153db019dd6ded97337d4599f02a6b02ef49
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748935"
 ---
-# <a name="navigate-and-update-a-model-in-program-code"></a>移動し、プログラム コードでモデルを更新します
+# <a name="navigate-and-update-a-model-in-program-code"></a>プログラム コードのモデル内を移動し、モデルを更新する
 
 作成およびモデル要素を削除、プロパティの設定、および作成、要素間のリンクを削除するコードを記述することができます。 トランザクション内ですべての変更を加える必要があります。 要素は、ダイアグラムで表示され場合の図は、「修正されます」自動的に、トランザクションの終了時。
 
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/26/2018
 ##  <a name="example"></a> DSL 定義の例
  これは、このトピックの例として DslDefinition.dsl の主要部分です。
 
- ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")
+ ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png)
 
  このモデルでは、この DSL のインスタンスを示します。
 
- ![Tudor ファミリ ツリー モデル](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")
+ ![Tudor ファミリ ツリー モデル](../modeling/media/tudor_familytreemodel.png)
 
 ### <a name="references-and-namespaces"></a>参照と名前空間
  このトピックのコードを実行するを参照する必要があります。
@@ -350,7 +351,7 @@ using (Transaction t = targetDiagram.Store.
  DSL で、個人または曲などの概念を表す、ドメイン モデル要素とは別をダイアグラムに表示されるものを表す図形要素には。 ドメイン モデル要素には、重要なプロパティおよび概念の関係が格納されます。 図形要素は、サイズ、位置とダイアグラムで、オブジェクトの表示の色、およびその構成部分のレイアウトを格納します。
 
 ### <a name="presentation-elements"></a>プレゼンテーション要素
- ![基本図形および要素の型のクラス ダイアグラム](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")
+ ![基本図形および要素型のクラス図](../modeling/media/dslshapesandelements.png)
 
  DSL 定義では、指定した各要素は、標準的なクラスを次のいずれかから派生したクラスを作成します。
 
@@ -509,7 +510,7 @@ partial class MyDiagram
  図形、コネクタと図がのサブタイプ<xref:Microsoft.VisualStudio.Modeling.ModelElement>とストアでライブします。 トランザクション内でのみに変更を行う必要がありますのでです。 詳細については、次を参照してください。[する方法: モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)です。
 
 ##  <a name="docdata"></a> ドキュメント ビューとドキュメントのデータ
- ![標準タイプのクラス ダイアグラム](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")
+ ![標準タイプのクラス図](../modeling/media/dsldiagramsanddocs.png)
 
 ## <a name="store-partitions"></a>パーティションを格納します。
  モデルが読み込まれるときに、同時に付随する図が読み込まれます。 通常、Store.DefaultPartition に、モデルが読み込まれ、ダイアグラムの内容が別のパーティションに読み込まれます。 通常、各パーティションのコンテンツが読み込まれ、別のファイルに保存されます。

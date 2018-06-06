@@ -1,6 +1,7 @@
 ---
 title: シェーダー デザイナー
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -12,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 641db475998d62df534353824f9d58a01c8d1792
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9ba084cb3d18d661198f481323d012c98cb37b2c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746781"
 ---
 # <a name="shader-designer"></a>シェーダー デザイナー
 
@@ -65,7 +67,7 @@ DGSL シェーダーを作成するたびに、**ポイントの色**ノード�
 
 **[シェーダー デザイナー モード]** ツール バーを以下に示します。
 
-![シェーダー デザイナーのモーダル ツールバー。](../designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")
+![シェーダー デザイナーのモーダル ツール バー。](../designers/media/digit-dsd-modal-toolbar.png)
 
 次の表では、**[シェーダー デザイナー モード]** ツール バーの各項目について、左から右へ表示される順序で説明します。
 

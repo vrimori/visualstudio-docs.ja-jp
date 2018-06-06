@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストの仮想ユーザー アクティビティを分析する | Microsoft Docs
+title: Visual Studio でロード テストの仮想ユーザー アクティビティを分析する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3688b49a5e16d52ee569afe94569a705ead7f99c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f7da7f881cf70ebfdafb3dbaaf2821471327fa81
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751235"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>方法: 仮想ユーザー アクティビティ チャートを使用してロード テスト中に仮想ユーザーが行っている操作を分析する
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 04/16/2018
 
      **[詳細の凡例] パネル**
 
-     ![[詳細の凡例] パネル](../test/media/ltest_detailslegend.png "LTest_DetailsLegend")
+     ![詳細な凡例パネル](../test/media/ltest_detailslegend.png)
 
 2.  ロード テストに関連付けられたエラー、ログ、テスト、検索、および aspx の各ページのチェック ボックスをオンまたはオフにします。
 
@@ -86,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 
      **[フィルター結果] パネル**
 
-     ![[フィルター結果] パネル](../test/media/ltest_filterresults.png "LTest_FilterResults")
+     ![結果パネルのフィルター処理](../test/media/ltest_filterresults.png)
 
 3.  [フィルター結果] で、次のフィルター オプションのチェック ボックスをオンまたはオフにします。
 

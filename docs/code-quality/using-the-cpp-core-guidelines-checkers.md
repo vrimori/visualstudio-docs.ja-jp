@@ -9,11 +9,12 @@ dev_langs:
 - CPP
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 607b4f2d96e809f9c8b5aedf8362c5d5f54e097d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f8b031fc1251ad06fdba154c086696337e552445
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747405"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ の主要なガイドライン チェッカーを使用します。
 C++ の主要なガイドラインは、ポータブル ガイドライン、ルール、および C++ の専門家とデザイナーで作成された C++ で記述に関するベスト プラクティスのセットです。 現在、visual Studio は、c++ のコード分析ツールの一部としてこれらの規則のサブセットをサポートします。 コア ガイドライン チェッカーが Visual Studio 2017 で既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして入手できます](#vs2015_corecheck)です。
@@ -24,11 +25,11 @@ C++ の主要なガイドラインは、ポータブル ガイドライン、ル
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>コード分析のコアを確認して C++ ガイドラインを有効にします。
  選択して、プロジェクトでコード分析を有効にすることができます、**ビルドに対するコード分析を有効にする**のチェック ボックス、**コード分析**のセクションで、**プロパティ ページ**のダイアログ ボックスプロジェクトです。
 
- ![コード分析の全般設定のプロパティ ページ](../code-quality/media/cppcorecheck_codeanalysis_general.png "CPPCoreCheck_CodeAnalysis_General")
+ ![コード分析の全般設定のプロパティ ページ](../code-quality/media/cppcorecheck_codeanalysis_general.png)
 
  C++ コアの確認規則は、コード分析が有効になっているときに実行される既定の規則セットの拡張機能です。 C++ コア チェックの規則では、開発中であるため一部のルールが準備されて、およびいくつか、すべてのコードで使用する準備ができていない可能性がありますがわかりやすくします。 ルールは、次の 2 つのグループに分けられます: リリースし、実験用です。 プロジェクトのプロパティでリリースされたか、実験用の規則を実行するかどうかを選択できます。
 
- ![コード分析の拡張機能設定のプロパティ ページ](../code-quality/media/cppcorecheck_codeanalysis_extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")
+ ![コード分析の拡張機能設定のプロパティ ページ](../code-quality/media/cppcorecheck_codeanalysis_extensions.png)
 
  有効にするにまたは C++ コアの確認規則セットを無効にする、開く、**プロパティ ページ**プロジェクトのダイアログ。 **構成プロパティ**、展開**コード分析**、**拡張**です。 横にドロップダウン リストで制御**を有効にする C++ Core のチェック (リリース済み)** または**を有効にする C++ コアを確認 (します試験段階)** を選択**はい**または**いいえ**です。 選択**OK**または**適用**して変更を保存します。
 
@@ -241,7 +242,7 @@ MSBuild に依存しないビルド システムを使用する場合、チェ�
 
 2.  **NuGet Package Manager**ウィンドウで、Microsoft.CppCoreCheck を検索します。
 
-     ![Nuget パッケージ マネージャー ウィンドウでは、CppCoreCheck パッケージを示しています](../code-quality/media/cppcorecheck_nuget_window.PNG "CPPCoreCheck_Nuget_Window。")
+     ![Nuget パッケージ マネージャー ウィンドウでは、CppCoreCheck パッケージを示しています。](../code-quality/media/cppcorecheck_nuget_window.png)
 
 3.  Microsoft.CppCoreCheck パッケージを選択し、、**インストール**をプロジェクトにルールを追加するボタンをクリックします。
 

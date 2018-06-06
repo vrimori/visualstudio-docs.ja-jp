@@ -23,11 +23,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 31bee5d824b612ddaeb264fe2f944746cdda68fa
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 442d6cd60597219c25b41f26ad8c2dc2151248ee
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747470"
 ---
 # <a name="hierarchical-update"></a>階層更新
 *階層更新*参照整合性を維持しながらをデータベースに戻す (2 つ以上の関連するテーブルを含むデータセット) から更新されたデータを保存するプロセスを指します。 *参照整合性*はデータベース内の挿入、更新、および関連するレコードの削除の動作を制御する制約によって定義される一貫性規則を参照します。 たとえば、その顧客の注文を作成できないを許可する前に、顧客レコードの作成を強制する参照整合性を勧めします。  データセットのリレーションシップの詳細については、次を参照してください[データセットのリレーションシップ。](../data-tools/relationships-in-datasets.md)
@@ -39,12 +40,12 @@ ms.lasthandoff: 04/26/2018
 ## <a name="enable-hierarchical-update-in-a-dataset"></a>データセット内の階層の更新を有効にします。
  プロジェクトで追加または作成されたすべての新しいデータセットでは、階層更新が既定で有効になっています。 階層更新をオンまたはオフを設定して、**階層更新**データセットで指定されたデータセットのプロパティ**True**または**False**:
 
- ![階層更新設定](../data-tools/media/hierarchical-update-setting.png "階層的な更新プログラムの設定")
+ ![階層更新の設定](../data-tools/media/hierarchical-update-setting.png)
 
 ## <a name="create-a-new-relation-between-tables"></a>テーブル間に新しいリレーションシップを作成します。
  2 つのテーブル間に新しいリレーションシップを作成する、データセット デザイナーで各テーブルのタイトル バーを選択を右クリックし、選択**関係の追加**です。
 
- ![階層更新の追加リレーションシップ メニュー](../data-tools/media/hierarchical-update-add-relation-menu.png "階層更新 メニューの関係を追加します。")
+ ![階層更新 メニューの関係を追加します。](../data-tools/media/hierarchical-update-add-relation-menu.png)
 
 ## <a name="understand-foreign-key-constraints-cascading-updates-and-deletes"></a>Foreign key 制約、カスケード更新、および削除を理解します。
  どの foreign key 制約を理解することが重要と、生成されたデータセット コードで作成されるデータベースの連鎖動作します。
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 >  更新順序はすべてを含んでいることを理解しておく必要があります。 つまり、更新プログラムが実行されると、挿入、および、削除は、データセット内のすべてのテーブルに対して実行されます。
 
- 設定する、`UpdateOrder`から項目をドラッグした後、プロパティ、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに次のように選択します、`TableAdapterManager`コンポーネント トレイ、および設定で、`UpdateOrder`プロパティに、 **のプロパティ。**ウィンドウです。
+ 設定する、`UpdateOrder`から項目をドラッグした後、プロパティ、[データ ソース ウィンドウ](add-new-data-sources.md)、フォームに次のように選択します、`TableAdapterManager`コンポーネント トレイ、および設定で、`UpdateOrder`プロパティに、 **のプロパティ。** ウィンドウです。
 
 ## <a name="create-a-backup-copy-of-a-dataset-before-performing-a-hierarchical-update"></a>階層更新を実行する前に、データセットのバックアップ コピーを作成します。
  データを保存すると (`TableAdapterManager.UpdateAll()` メソッドを呼び出すことにより)、`TableAdapterManager` は単一のトランザクションで各テーブルのデータの更新を試みます。 任意のテーブルの更新時に、なんらかが失敗した場合、トランザクション全体がロールバックされます。 ほとんどの状況では、ロールバックは、元の状態をアプリケーションを返します。

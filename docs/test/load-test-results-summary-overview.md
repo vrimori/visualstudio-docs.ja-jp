@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト結果の概要 | Microsoft Docs
+title: Visual Studio でのロード テスト結果の概要
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,18 +14,20 @@ ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 001f7f866437807565bc83a8ad3a4dd809dd4100
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41849b5ac9b55ff97735dbbda4df909d54f8a346
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751859"
 ---
 # <a name="load-test-results-summary-overview"></a>ロード テスト結果の概要
 
 ロード テストを実行した後、ロード テストの概要を表示して直ちにテスト結果を把握できます。 ロード テストの概要には、主要な結果がわかりやすい形式で簡潔にまとめられています。 ロード テストの概要を印刷することもできます。 これによって利害関係者に結果を伝えるのが容易になります。 前に実行したロード テストからロード テスト結果を開くと、ロード テストの概要が既定のビューになります。 詳細については、「[方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)」を参照してください。
 
- ![概要ビュー](../test/media/ltest_summaryview.png "LTest_SummaryView")
+ ![概要ビュー](../test/media/ltest_summaryview.png)
 
 ## <a name="the-load-test-summary"></a>ロード テストの概要
 

@@ -15,14 +15,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a7ed6b037d04e867b2d94a28fef5ecb6760e39dc
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: dba88bde834ddf8e5eba938325b21434560827a1
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767261"
 ---
-# <a name="deploying-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio での SharePoint ツールの拡張機能の配置
-  SharePoint ツール拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]拡張機能のアセンブリおよび拡張機能を配布するその他のファイルを含む拡張機能 (VSIX) パッケージ。 VSIX パッケージは、Open Packaging Conventions (OPC) 標準に準拠した圧縮ファイルです。 VSIX パッケージでは、.vsix 拡張子が付いています。  
+# <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio での SharePoint ツールの拡張機能を展開します。
+  SharePoint ツール拡張機能を展開するには、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]拡張機能のアセンブリおよび拡張機能を配布するその他のファイルを含む拡張機能 (VSIX) パッケージ。 VSIX パッケージは、Open Packaging Conventions (OPC) 標準に準拠した圧縮ファイルです。 VSIX パッケージが、 *.vsix*拡張機能です。  
   
  VSIX パッケージを作成した後、他のユーザーは、拡張機能のインストールを探し、.vsix ファイルを実行できます。 ユーザーが、拡張機能をインストールすると、%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0\Extensions フォルダーにすべてのファイル インストールされます。 VSIX パッケージをアップロードする、拡張機能を展開する、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイト、またはすることができます、パッケージ顧客に配布のパッケージをネットワーク共有またはその他のいくつかの Web サイトをホストしているなど、他の方法でします。  
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/22/2018
   
  使用して VSIX パッケージを作成することができます、 **VSIX プロジェクト**には、Visual Studio は、テンプレートでは、VSIX パッケージを手動で作成することができます。  
   
-## <a name="using-vsix-projects-to-create-vsix-packages"></a>VSIX プロジェクトを使用して VSIX パッケージを作成するには  
+## <a name="use-vsix-projects-to-create-vsix-packages"></a>VSIX プロジェクトを使用して VSIX パッケージを作成するには
  使用することができます、 **VSIX プロジェクト**SharePoint ツールの拡張機能の VSIX パッケージを作成する Visual Studio SDK で提供されるテンプレートです。 VSIX プロジェクトを使用すると、VSIX パッケージを手動で作成するのにいくつかの利点があります。  
   
 -   Visual Studio は、プロジェクトをビルドするときに、VSIX パッケージを自動的に生成されます。 配置のファイルをパッケージに追加し、パッケージの [Content_Types] .xml ファイルを作成するなどのタスクが自動的に実行します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/22/2018
   
  詳細については、VSIX プロジェクトを使用して、次を参照してください。 [VSIX プロジェクト テンプレート](/visualstudio/extensibility/vsix-project-template)です。  
   
-### <a name="organizing-your-projects"></a>プロジェクトの整理  
+### <a name="organize-your-projects"></a>プロジェクトを整理します。
  既定では、VSIX プロジェクトは、アセンブリではないの VSIX パッケージを生成するだけです。 そのため、通常を実装していない SharePoint ツール拡張機能で VSIX プロジェクト。 一般に、少なくとも 2 つのプロジェクトで作業します。  
   
 -   VSIX プロジェクト。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/22/2018
   
  場合は、同じ Visual Studio ソリューション内のすべてのプロジェクトを含めると、クラス ライブラリ プロジェクトのビルド出力を含む VSIX プロジェクトの source.extension.vsixmanifest ファイルを変更できます。  
   
-### <a name="editing-the-vsix-manifest"></a>VSIX マニフェストの編集  
+### <a name="edit-the-vsix-manifest"></a>VSIX マニフェストを編集します。
  拡張機能に追加するすべてのアイテムのエントリを含めるに VSIX プロジェクトの source.extension.vsixmanifest ファイルを編集する必要があります。 Source.extension.vsixmanifest ファイルを開くには、ショートカット メニューから、ファイル内の XML を編集するための UI を提供する、デザイナーで、ファイルが表示されます。 詳細については、次を参照してください。 [VSIX マニフェスト デザイナー](/visualstudio/extensibility/vsix-manifest-designer)です。  
   
  次の項目の source.extension.vsixmanifest ファイルにエントリを追加する必要があります。  
@@ -167,7 +168,7 @@ ms.lasthandoff: 05/22/2018
   
      *YourTemplateName*.zip  
   
-     たとえば、英語 (米国) ロケールをサポートする ContosoCustomAction.zip をという名前の項目テンプレートを使っている場合、完全なパスがあります ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip。  
+     たとえば、英語 (米国) ロケールをサポートする ContosoCustomAction.zip をという名前の項目テンプレートがあれば、完全なパスがあります*ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*です。  
   
 3.  **ソリューション エクスプ ローラー**、テンプレート ファイルを選択します (*YourTemplateName*.zip)。  
   
@@ -185,7 +186,7 @@ ms.lasthandoff: 05/22/2018
   
 8.  **ソース**一覧で、選択**ファイルシステム上のファイル**です。  
   
-9. **パス**フィールドに、アセンブリへの完全なパスを入力してください (たとえば、 **ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip**を使用して、または、 **を参照**を見つけて、アセンブリを選択してボタンをクリックしを選択し、 **OK**ボタンをクリックします。  
+9. **パス**フィールドに、アセンブリへの完全なパスを入力してください (たとえば、 *ItemTemplates\SharePoint\SharePoint14\1033\ContosoCustomAction.zip*を使用して、または、 **を参照**を見つけて、アセンブリを選択してボタンをクリックしを選択し、 **OK**ボタンをクリックします。  
   
 ##### <a name="to-include-a-wizard-for-a-project-template-or-item-template"></a>プロジェクト テンプレートや項目テンプレートのウィザードを含める  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 05/22/2018
   
 5.  **[OK]** を選択します。  
   
-### <a name="related-walkthroughs"></a>関連するチュートリアル  
+### <a name="related-walkthroughs"></a>関連するチュートリアル
  次の表は、VSIX プロジェクトを使用して、さまざまな種類の SharePoint ツール拡張機能を展開する方法について説明するチュートリアルを一覧表示します。  
   
 |拡張機能の種類|関連するチュートリアル|  
@@ -217,7 +218,7 @@ ms.lasthandoff: 05/22/2018
 |Visual Studio のテンプレートを含む拡張機能|[チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 1)](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)<br /><br /> [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 1)](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)|  
 |テンプレート ウィザードを含む拡張機能|[チュートリアル: 項目テンプレートに基づくカスタム動作プロジェクト項目の作成 (パート 2)](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)<br /><br /> [チュートリアル: プロジェクト テンプレートに基づくサイト列プロジェクト項目の作成 (パート 2)](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)|  
   
-## <a name="creating-vsix-packages-manually"></a>VSIX パッケージを手動で作成します。  
+## <a name="create-vsix-packages-manually"></a>VSIX パッケージを手動で作成します。
  SharePoint ツール拡張機能の VSIX パッケージを手動で作成する場合は、次の手順に従います。  
   
 1.  新しいフォルダーになる extension.vsixmanifest ファイルと [Content_Types] .xml ファイルを作成します。 詳細については、次を参照してください。 [VSIX パッケージの構造は](/visualstudio/extensibility/anatomy-of-a-vsix-package)します。  
@@ -260,10 +261,9 @@ ms.lasthandoff: 05/22/2018
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト システムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)   
  [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [Visual Studio での SharePoint ツールの拡張機能のデバッグ](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
-  
   

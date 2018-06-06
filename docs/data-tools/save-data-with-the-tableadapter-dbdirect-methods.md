@@ -1,5 +1,5 @@
 ---
-title: TableAdapter DBDirect メソッドを使ってデータを保存します。
+title: TableAdapter DBDirect メソッドを使用してデータを保存する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,13 +18,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 51f855cca05d2f9f7e6a86524da6bcf866eb0856
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 68842160d3ad7bf7e96d22f58607866c34f9ceb5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747548"
 ---
-# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使ってデータを保存します。
+# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect メソッドを使用してデータを保存する
 このチュートリアルでは、TableAdapter の DBDirect メソッドを使用して、データベースに対して直接 SQL ステートメントを実行する詳細な手順を提供します。 TableAdapter の DBDirect メソッドは、細かいレベル、データベースの更新で制御を提供します。 それらを使用して、個別に呼び出すことによって、特定の SQL ステートメントおよびストアド プロシージャを実行することができます`Insert`、 `Update`、および`Delete`アプリケーションで必要に応じてメソッド (オーバー ロードされたのではなく`Update`更新プログラムを実行するメソッド、INSERT、および DELETE のステートメントすべて 1 つの呼び出しで)。
 
  このチュートリアルでは、次の作業を行う方法について説明します。
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 
@@ -115,7 +116,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  以下の設定を**名前**と**テキスト**各ボタンのプロパティです。
 
-    |名前|テキスト|
+    |name|テキスト|
     |----------|----------|
     |`InsertButton`|**[挿入]**|
     |`UpdateButton`|**更新**|

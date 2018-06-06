@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47a519db245e2ec15548ba1d46a583d0a73f466f
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: c9bc2dc1af5f2f040a15c5bee25a8d5dfc91afe2
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34693485"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764770"
 ---
-# <a name="creating-reusable-controls-for-web-parts-or-application-pages"></a>Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成します。
+# <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>Web パーツまたはアプリケーション ページの再利用可能なコントロールを作成します。
   Visual Studio で、アプリケーション ページと SharePoint で実行される Web パーツで使用できる、再利用可能なカスタム コントロールを作成することができます。 これらのコントロールは、ユーザー コントロールと呼ばれます。 ユーザー コントロールは、ASP.NET Web ページと同様に動作する複合コントロールの種類: ユーザー コントロールを既存の Web サーバー コントロールとマークアップを追加し、コントロールのプロパティとメソッドを定義できます。 ASP.NET Web ページで、場所、単位として機能し、埋め込むことができます。  
   
 ## <a name="create-a-user-control"></a>ユーザー コントロールを作成します。

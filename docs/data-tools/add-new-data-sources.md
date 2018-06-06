@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1c7df62a0801534f8a23f7b5cde984c75742406a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d88ba8b5648135d361a145dbc98a82dee6836e50
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745595"
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースを追加します。
 Visual Studio での .NET data tools のコンテキストで用語*データ ソース*データ ストアに接続し、.NET アプリケーションにデータを公開する .NET オブジェクトを参照します。 Visual Studio のデザイナーにドラッグしてから、データベース オブジェクトをドロップすると、フォームにデータをバインドする定型コードを生成するデータ ソースの出力を使用できる、**データソース**ウィンドウです。 この種類のデータ ソースを指定できます。
@@ -39,11 +40,11 @@ Visual Studio での .NET data tools のコンテキストで用語*データ �
 
  作成しを使用してデータ ソースの編集、**データ ソース構成ウィザード**Windows フォームや Windows Presentation Foundation アプリケーションでします。 Entity Framework では、まず、エンティティ クラスを作成し、 を選択して、ウィザードを開始して**プロジェクト** > **新しいデータ ソースの追加**(この記事の後半で詳しく説明します)。
 
- ![データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png "データ ソース構成ウィザード")
+ ![データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)
 
  データ ソースを作成するに表示され、**データソース**ツール ウィンドウ (Shift + Alt + D または**ビュー** > **その他のウィンドウ** >  **データソース**)。 データ ソースをドラッグすることができます、**データソース**ウィンドウ、フォームのデザイン サーフェイスまたはコントロールからにします。 これにより、定型的なコードを生成する-ユーザーにデータ ストアで生成されたデータを表示するコードです。 次の図は、Windows フォームからドロップするデータセットを示します。 アプリケーションで f5 キーを選択した場合、データベースのデータを基になると、フォームのコントロールに表示されます。
 
- ![データ ソースはドラッグ操作](../data-tools/media/raddata-data-source-drag-operation.png "raddata データ ソースはドラッグ操作")
+ ![データ ソースのドラッグ操作](../data-tools/media/raddata-data-source-drag-operation.png)
 
 ## <a name="data-source-for-a-database-or-a-database-file"></a>データベースまたはデータベース ファイルのデータ ソース
 
@@ -53,15 +54,15 @@ Visual Studio での .NET data tools のコンテキストで用語*データ �
 ### <a name="entity-classes"></a>エンティティ クラス
  データ ソースとして Entity Framework モデルを作成するには、最初に実行、 **Entity Data Model ウィザード**エンティティ クラスを作成する (**プロジェクト** > **新しい項目の追加** >  **ADO.NET Entity Data Model**)。
 
- ![新しいモデル プロジェクト項目の Entity Framework](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata Entity Framework の新しいモデル プロジェクト項目")
+ ![新しいモデル プロジェクト項目の Entity Framework](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
  モデルを生成するメソッドを選択します。
 
- ![Entity Data Model ウィザード](../data-tools/media/raddata-entity-data-model-wizard.png "raddata Entity Data Model ウィザード")
+ ![エンティティ データ モデル ウィザード](../data-tools/media/raddata-entity-data-model-wizard.png)
 
  データ ソースとしてモデルを追加します。 生成されたクラスが表示されます、**データ ソース構成ウィザード**を選択すると、**オブジェクト**カテゴリ。
 
- ![エンティティ クラスとデータ ソース構成ウィザード](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata エンティティ クラスとデータ ソース構成ウィザード")
+ ![エンティティ クラスとデータ ソース構成ウィザード](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png)
 
 ## <a name="data-source-for-a-service"></a>サービスのデータ ソース
  サービスからデータ ソースを作成するには、実行、**データ ソース構成ウィザード**を選択し、**サービス**データ ソースの種類。 これへのショートカットを実際には、**サービス参照の追加** ダイアログ ボックスで、プロジェクトを右クリックしてアクセスすることもできます**ソリューション エクスプ ローラー**を選択すると**サービス参照の追加**。

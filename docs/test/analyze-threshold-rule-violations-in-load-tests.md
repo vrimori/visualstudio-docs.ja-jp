@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストのしきい値規則違反を分析する | Microsoft Docs
+title: Visual Studio でロード テストのしきい値規則違反を分析する
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +15,14 @@ ms.assetid: 969ed346-cf2e-4d48-82b3-edb3e075e1c0
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 42463515a8c3da9661f22d1a39c8dd8346c63aea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 753cf038cf6d8129aa9a4691b0f88c046aadf640
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750910"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>ロード テスト アナライザーを使用したロード テストのしきい値規則違反の分析
 
@@ -52,15 +54,15 @@ ms.lasthandoff: 04/16/2018
 
  アイコンは以下のいずれかです。
 
- ![しきい値違反なし](../test/media/icon_ltest_1.gif "Icon_LTest_1") しきい値違反なし。
+ ![しきい値違反なし](../test/media/icon_ltest_1.gif) しきい値違反がない。
 
- ![最後の間隔における重大なしきい値違反](../test/media/icon_ltest_2.gif "Icon_LTest_2") 重大なしきい値違反が最後の間隔で発生した。
+ ![最後の間隔における重大なしきい値違反](../test/media/icon_ltest_2.gif) 重大なしきい値違反が最後の間隔で発生した。
 
- ![以前の間隔における重大なしきい値違反](../test/media/icon_ltest_3.gif "Icon_LTest_3") 重大なしきい値違反が以前の間隔で発生した。
+ ![以前の間隔における重大なしきい値違反](../test/media/icon_ltest_3.gif) 重大なしきい値違反が以前の間隔で発生した。
 
- ![最後の間隔における警告しきい値違反](../test/media/icon_ltest_4.gif "Icon_LTest_4") 警告しきい値違反が最後の間隔で発生した。
+ ![最後の間隔における警告しきい値違反](../test/media/icon_ltest_4.gif) 警告しきい値違反が最後の間隔で発生した。
 
- ![以前の間隔における警告しきい値違反](../test/media/icon_ltest_5.gif "Icon_LTest_5") 警告しきい値違反が前の間隔で発生した。
+ ![以前の間隔における警告しきい値違反](../test/media/icon_ltest_5.gif) 警告しきい値違反が前の間隔で発生した。
 
  必要に応じて、しきい値違反をグラフに表示することもできます。 しきい値アイコンは、グラフ上のしきい値違反が発生したデータ ポイントの隣に表示されます。
 

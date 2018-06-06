@@ -12,11 +12,12 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 202e9ce6e0a53c6967ebe1bacaa6553a1241298e
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: a4e03f9a369959a5736d7030a1dac885771d7984
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746768"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017 で Azure での IIS で ASP.NET Core のリモート デバッグ
 
@@ -43,7 +44,7 @@ Azure でのリモート デバッグするための推奨方法は、シナリ�
 > このチュートリアルの手順を完了したときに作成する Azure リソースを削除することを確認します。 このように不要な料金を回避できます。
 
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -196,14 +197,14 @@ Web Deploy を使用していない場合は、発行およびファイル シ�
 
 ### <a name="BKMK_attach"></a> Visual Studio コンピューターから ASP.NET アプリケーションにアタッチする
 
-1. Visual Studio コンピューターで開く、 **MyASPApp**ソリューションです。
+1. Visual Studio コンピューターには、デバッグしようとしているソリューションを開きます (**MyASPApp**この記事の手順に従っている場合)。
 2. Visual Studio で、**デバッグ > プロセスにアタッチする**(Ctrl + Alt + P)。
 
     > [!TIP]
     > Visual Studio 2017、することができますを使用して、以前にアタッチした同じプロセスにアタッチして再**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
 
 3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
-4. **[更新]** を生成する必要があります。
+4. をクリックして**更新**です。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。

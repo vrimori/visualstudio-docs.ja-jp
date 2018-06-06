@@ -19,18 +19,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8be3cd7576dcd42391c2f1bda1bd2d997ea958ac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 97bfe044ef89691afdb1a8e845867ce2e177dbb9
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767963"
 ---
-# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加する
+# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照の追加
   以外の SharePoint プロジェクトのアセンブリ (または Silverlight プロジェクトでの .xap ファイル) を SharePoint を展開するには、それらをプロジェクト出力参照として追加します。  
   
  このプロセスでは、2 つのプロジェクト間ソリューション ビルドの依存関係を作成します。 SharePoint プロジェクトをビルドおよび配置する前に、プロジェクト出力参照に関連付けられているプロジェクトが構築されます。  
   
-### <a name="to-add-a-project-output-reference"></a>プロジェクト出力参照を追加するには  
+### <a name="to-add-a-project-output-reference"></a>プロジェクト出力参照を追加するには
   
 1.  少なくとも 1 つの SharePoint プロジェクトと 1 つ以外の SharePoint プロジェクトを含むソリューションを読み込みます。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  横の矢印を選択**プロジェクト名**、以外の SharePoint プロジェクト項目の名前を選択し、、 **OK**ボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [方法: 安全なコントロールとしてマークの制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

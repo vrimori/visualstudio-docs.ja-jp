@@ -9,11 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5d9b900e47febb9e75b825fdb662c942fce7188b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e6a12bdbb45c5cdfdf0abb8fb738ae87bf67c45c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748375"
 ---
 # <a name="customizing-copy-behavior"></a>コピー動作のカスタマイズ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK を使用して作成したドメイン固有言語 (DSL) で、ユーザーが要素のコピーと貼り付けを実行する際の動作を変更できます。
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
  この規則はコピーした要素およびリンクに再帰的に適用されます。
 
- ![コピーして要素を貼り付ける](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")
+ ![コピーされ貼り付けられた要素](../modeling/media/dslcopypastedefault.png)
 
  コピーした要素およびリンクはシリアル化され、<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP) に格納されて、クリップボードに配置されます。
 
@@ -217,7 +218,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 ##  <a name="customizeLinks"></a> リンクのコピー動作をカスタマイズします。
  ユーザーが要素をコピーするときの標準動作は埋め込まれたすべての要素もコピーされることです。 このコピー標準動作は変更できます。 DSL 定義でロールを選択、およびプロパティ ウィンドウのセット内のリレーションシップの一方の側で、**伝達コピー**値。
 
- ![ドメインの役割のコピー プロパティに反映させる](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")
+ ![ドメイン ロールの "コピー" プロパティの反映](../modeling/media/dslpropagatescopy.png)
 
  次の 3 つの値があります。
 
@@ -227,7 +228,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 
 -   コピーをリンクおよび反対のロール プレーヤーに伝達する - コピーしたグループにリンクの他端の要素のコピーが含まれます。
 
- ![Propagatecopytolinkonly コピーの効果](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")
+ ![PropagateCopyToLinkOnly を使用したコピーの効果](../modeling/media/dslpropagatecopy.png)
 
  変更内容はコピーする要素とイメージの両方に影響します。
 
@@ -237,9 +238,9 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 > [!TIP]
 >  プログラム コードを使用して、モデルのカスタマイズの詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。
 
- ![コピー操作のシーケンス図](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")
+ ![コピー操作のシーケンス図](../modeling/media/dslcopyseqdiagram.png)
 
- ![貼り付け操作のシーケンス図](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")
+ ![貼り付け操作のシーケンス図](../modeling/media/dslpasteseqdiagram.png)
 
 #### <a name="to-define-your-own-elementoperations"></a>独自の ElementOperations を定義するには
 

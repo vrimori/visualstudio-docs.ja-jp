@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d56b90e9a3badfe2c49b10793a25fc552bbdd774
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0743fa0dd1f8b876c4396d4e52d9c8636c504d67
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749146"
 ---
 # <a name="about-domain-specific-languages"></a>ドメイン固有言語について
 
@@ -39,7 +40,7 @@ DSL のユーザーが作成*モデル。* モデルは*インスタンス*DSL �
 
 次の図は、DSL 図形式で小さいモデルを示しています。
 
-![Tudor ファミリ ツリー モデル](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")
+![Tudor ファミリ ツリー モデル](../modeling/media/tudor_familytreemodel.png)
 
 ## <a name="what-you-can-do-with-dsls"></a>Dsl で行うことができます。
 
