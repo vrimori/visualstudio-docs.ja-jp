@@ -13,16 +13,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b3dec7405e6d9964a1e622d5d872ad31efcd541d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8ab473e4835e4ba6467a9af83e69bfabc43e8236
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748726"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>ドメイン固有言語ツールのユーザー インターフェイスの概要
 ドメイン固有言語ツール (DSL ツール) ソリューションに最初に開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、ユーザー インターフェイスは、次の図のようにします。
 
- ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL デザイナー](../modeling/media/dsl_designer.png)
 
  次の表では、UI の各部分の使用方法について説明します。
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="the-domain-model-diagram"></a>ドメイン モデル ダイアグラム
  ドメイン モデルの図は、2 つの部分に分かれています。 ダイアグラムの一方の側は、モデル内の要素および関係を示します。 反対側は、モデルが表示される方法を示しています。 要素とモデル図のプロパティを表示するために使用する図形が含まれています。 次の図は、図の要素を示しています。
 
- ![スイムレーンを含む dsl デザイナー](../modeling/media/dsl_desinger.png "dsl_desinger")
+ ![スイムレーンを含む DSL デザイナー](../modeling/media/dsl_desinger.png)
 
  次の表では、いくつかのドメイン モデル図の要素について説明します。
 

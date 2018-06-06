@@ -22,12 +22,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3ef60be5002c5d99f8947bfa770665fa3535a20e
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 6ecbf8e67b2c8db1b33fa1c5228d9d94f98e48c5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691135"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748060"
 ---
 # <a name="save-data-back-to-the-database"></a>データをデータベースに保存する
 データセットは、データのメモリ内のコピーです。 そのデータを変更する場合は、これらの変更をデータベースに保存することをお勧めします。 これには 3 つの方法のいずれかの操作を行います。
@@ -60,7 +60,7 @@ Tableadapter に慣れている場合は、次のトピックのいずれかに�
 
  データベースに変更を送信する場合、2 番目の手順が必要です。 データ バインド コントロールを使用していない場合は、手動でデータセットを作成するために使用する同じ TableAdapter (またはデータ アダプター) の Update メソッドを呼び出す必要があります。 ただし、1 つのデータ ソースからデータを移動する、または複数のデータ ソースを更新するも別のアダプターを使用することができます。 データ バインディングを使用するいないし、関連テーブルに対して変更の保存は、TableAdapterManager、自動生成されたクラスの変数を手動でインスタンス化し、その UdpateAll メソッドを呼び出す必要があります。
 
- ![Visual Basic データセット更新](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates") 2 段階プロセスと、正常な更新における DataRowVersion の役割の更新
+ ![Visual Basic データセット更新](../data-tools/media/vbdatasetupdates.gif)2 段階プロセスと、正常な更新における DataRowVersion の役割の更新
 
  データセットには、行のコレクションを含むテーブルのコレクションが含まれています。 後で、基になるデータ ソースを更新する場合は、DataTable.DataRowCollection プロパティの追加または行を削除するときにメソッドを使用する必要があります。 これらのメソッドは、データ ソースの更新のために必要な変更の追跡を実行します。 行のプロパティで RemoveAt コレクションを呼び出すと場合、削除がデータベースに戻されて伝えするされません。
 

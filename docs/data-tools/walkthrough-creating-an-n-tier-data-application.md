@@ -16,11 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 35733a737f10fccab7d9fd6cab350478182b2259
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 329214cded185a15fa1ef21b162955957523f5fc
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747002"
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
 *N 層*データ アプリケーションは複数の論理レイヤーに分離され、データにアクセスするアプリケーションまたは*階層*です。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。
@@ -49,7 +50,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 -   データ テーブルにデータを読み込むコードを記述する。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") 、このトピックのビデオ版については、次を参照してください。[ビデオ デモ: N 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)です。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)、このトピックのビデオ版については、次を参照してください。[ビデオ デモ: N 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)です。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
@@ -78,7 +79,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
 
 3. 中央のペインで、**クラス ライブラリ**プロジェクトの種類。
 
@@ -289,7 +290,7 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 1.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**追加**、**新しいプロジェクト.**.
 
-2.  **新しいプロジェクト**ダイアログ ボックスで、左側のペインで、select、 **Windows クラシック デスクトップ**です。 中央のペインで選択**Windows フォーム アプリ**です。
+2.  **新しいプロジェクト**ダイアログ ボックスで、左側のペインで、select、 **Windows デスクトップ**です。 中央のペインで選択**Windows フォーム アプリ**です。
 
 3.  プロジェクトに名前を**PresentationTier**  をクリック**OK**です。
 

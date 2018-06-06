@@ -16,11 +16,12 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 548b86406ba36a6f46a2dfb3d4d894b5621c298c
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: d8987d24a6302c9d9ffd7ffdb127e52c57e22ff9
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764554"
 ---
 # <a name="tutorial-debug-managed-and-native-code-in-visual-studio"></a>チュートリアル: Visual Studio でのマネージ コードとネイティブ コードをデバッグします。
 
@@ -39,7 +40,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
 
 * Visual Studio をインストールする必要があります、 **C++ を使用したデスクトップ開発**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
     ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。
 
@@ -73,7 +74,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
     ```cpp
     #ifndef MIXED_MODE_MULTIPLY_HPP
     #define MIXED_MODE_MULTIPLY_HPP
-    
+
     extern "C"
     {
         __declspec(dllexport) int __stdcall mixed_mode_multiply(int a, int b) {
@@ -106,7 +107,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
 
 1. アプリケーション コードのテンプレートを選択します。
 
-    .NET Framework 用で、**新しいプロジェクト** ダイアログ ボックスで、選択**Visual c#**、 **Windows クラシック デスクトップ**インストールされたテンプレート セクションから、中央のペインで、選択**コンソール アプリケーション (.NET Framework)** です。
+    .NET Framework 用で、**新しいプロジェクト** ダイアログ ボックスで、選択**Visual c#**、 **Windows デスクトップ**インストールされたテンプレート セクションから、次に中央のペインの選択**コンソール アプリケーション (.NET Framework)** です。
 
     .NET core で、**新しいプロジェクト** ダイアログ ボックスで、選択**Visual c#**、 **.NET Core**し、インストールされたテンプレート セクションから、中央のペインで選択**コンソール アプリケーション (.NET Core)** です。
 
@@ -119,7 +120,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
     ```csharp
     using System;
     using System.Runtime.InteropServices;
-    
+
     namespace Mixed_Mode_Calling_App
     {
         public class Program
@@ -133,7 +134,7 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
             "mixed_mode_multiply", CallingConvention = CallingConvention.StdCall)]
             public static extern int Multiply(int x, int y);
             public static void Main(string[] args)
-            { 
+            {
                 int result = Multiply(7, 7);
                 Console.WriteLine("The answer is {0}", result);
                 Console.ReadKey();
@@ -165,9 +166,9 @@ Visual Studio では、デバッガーの 1 つ以上の種類をデバッグす
     ```
     "nativeDebugging": true
     ```
-    
+
     そのためなど、ファイルは次のようになります可能性があります。
-    
+
     ```
     {
       "profiles": {

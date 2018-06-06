@@ -19,13 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7d097562ecf1abe021d78440bc6c96019d2eb97d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6155aa13c8b05036dbb5fb2d9f895ed38719741
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767375"
 ---
-# <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: SharePoint フィーチャーの項目を追加および削除する
+# <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>方法: 追加および SharePoint フィーチャーの項目を削除します。
   SharePoint ソリューションを作成するときに、Visual Studio は、機能に既定の SharePoint プロジェクト項目を追加します。 展開する前に、追加し、SharePoint の機能を変更する SharePoint プロジェクト項目を削除できます。  
   
 ## <a name="adding-sharepoint-project-items-to-a-feature"></a>機能への SharePoint プロジェクト項目の追加  
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="removing-sharepoint-project-items-from-a-feature"></a>機能から SharePoint プロジェクト アイテムの削除  
   
-#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>フィーチャー デザイナーと SharePoint の項目を削除するには  
+#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>フィーチャー デザイナーと SharePoint の項目を削除するには
   
 1.  内の 1 つまたは複数の項目を選択して、**フィーチャー内の項目** ボックスの一覧です。  
   
@@ -56,8 +57,7 @@ ms.lasthandoff: 04/16/2018
   
      SharePoint プロジェクト項目に表示されます、**ソリューション内の項目** ボックスの一覧です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
   

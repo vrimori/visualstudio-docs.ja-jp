@@ -13,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1a162c66f4a014d50da7ad7bd3cd5da9edd6e43
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9a1b76c5790c255a3c1ca2ed0fe38bc0d13a8d02
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746648"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>リソースを作成して適用する方法
 XAML デザイナーで、要素のスタイルとテンプレートは "リソース" という再利用可能なエンティティに保存されます。 スタイルを使用すると、要素のプロパティを設定し、それらの設定を複数の要素で再利用することにより、一貫した外観を維持できます。 [ControlTemplate](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) は、コントロールの外観を定義し、リソースとしての適用も可能です。 詳細については、「[クイック スタート: コントロールのスタイル](http://go.microsoft.com/fwlink/?LinkID=248239)」および「[クイック スタート: コントロール テンプレート](http://go.microsoft.com/fwlink/?LinkID=247982)」を参照してください。
@@ -32,7 +33,7 @@ XAML デザイナーで、要素のスタイルとテンプレートは "リソ�
 
      選択したオブジェクトに適したダイログ ボックスが表示されます。 ブラシからリソースを作成するときには、次のダイアログ ボックスが表示されます。
 
-     ![[リソースの作成] ダイアログ ボックス](../designers/media/xaml_create_resource.png "xaml_create_resource")
+     ![[リソースの作成] ダイアログ ボックス](../designers/media/xaml_create_resource.png)
 
 3.  **[名前 (キー)]** ボックスに、キー名を入力します。 これは、他の要素からリソースを参照するときに使用できる名前です。
 

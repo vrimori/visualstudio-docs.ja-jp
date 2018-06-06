@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト用のカウンター セットとしきい値規則 | Microsoft Docs
+title: Visual Studio でのロード テスト用のカウンター セットとしきい値規則
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,14 @@ ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d2b80ab1aaed9f5f59399a02026c9334f38701c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7e5e6919dbc37294ef677f3c512c51d53aea0e2f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751343"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する
 
@@ -50,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 
 割合、カウント、および平均の 3 つのカウンター カテゴリがあります。 たとえば、CPU 使用率の割合、SQL Server のロック カウント、1 秒あたりの IIS 要求などがあります。
 
-![ロード テストのカウンター セット](../test/media/loadtestcountersets.png "LoadTestCounterSets")
+![ロード テストのカウンター セット](../test/media/loadtestcountersets.png)
 
 個々の HTTP 要求のパフォーマンス データは、テストを実行するコンピューターによって報告されます。 たとえば、エージェント コンピューターなどです。 要求の場合、[最初のバイトを取得する平均時間]、[応答時間]、および [Requests/Sec] などのデータを監視できます。
 

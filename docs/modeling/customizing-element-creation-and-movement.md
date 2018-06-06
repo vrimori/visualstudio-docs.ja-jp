@@ -13,11 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7d86dd961a5192d63cee9501eb16aaf51b3fd629
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f4563756e42b5c0bdc1a56e938ca6326e04b104
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748660"
 ---
 # <a name="customizing-element-creation-and-movement"></a>要素作成処理および要素移動処理のカスタマイズ
 要素にドラッグすること、ツールボックスから、または貼り付けの操作または移動を許可できます。 指定したリレーションシップを使用して移動された要素をターゲット要素にリンクされていることができます。
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/26/2018
 
  EMD の責任では、どのオブジェクトまたはオブジェクトのグループにマージするモデルの特定の場所を決定します。 具体的には、マージされたグループをモデルにリンクするどのようなリレーションシップをインスタンス化する必要がありますを決定します。 プロパティを設定して、その他のオブジェクトを作成することをカスタマイズすることもできます。
 
- ![DSL&#45;EMD&#95;マージ](../modeling/media/dsl-emd_merge.png "DSL EMD_Merge") Element マージのディレクティブの役割
+ ![DSL&#45;EMD&#95;マージ](../modeling/media/dsl-emd_merge.png)Element マージのディレクティブの役割
 
  埋め込みリレーションシップを定義するとき、EMD が自動的に生成されます。 この既定 EMD は、ユーザーが親に子の新しいインスタンスを追加するときに、リレーションシップのインスタンスを作成します。 カスタム コードを追加することによってたとえば既定入力例: でこれらを変更できます。
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="defining-an-element-merge-directive"></a>要素のマージ ディレクティブを定義します。
  ドメイン クラス、ドメインの関係、図形、コネクタ、およびダイアグラムには、要素マージ ディレクティブを追加できます。 追加したり、受信側のドメイン クラスは、DSL のエクスプ ローラーで確認できます。 受信側のクラスは、モデルでは、新規またはコピーした要素をマージするのには、既に要素のドメイン クラス。
 
- ![DSL&#45;EMD&#95;詳細](../modeling/media/dsl-emd_details.png "DSL EMD_Details")
+ ![DSL&#45;EMD&#95;の詳細](../modeling/media/dsl-emd_details.png)
 
  **インデックス クラス**を受け取るクラスのメンバーにマージできる要素のドメイン クラスです。 インデックス作成クラスのサブクラスのインスタンスもマージされますこの EMD で設定する場合を除き、**サブクラスに適用されます**を False にします。
 

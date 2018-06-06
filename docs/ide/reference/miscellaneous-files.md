@@ -22,18 +22,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bb2106c89b9bbef2babbe7e4d203c32a1d96d7b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f0241f1e918b4c0022106059b0466a15559f2e84
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747734"
 ---
 # <a name="miscellaneous-files"></a>その他のファイル
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のエディターでは、プロジェクトともソリューションとも関係のないファイルを操作できます。 ソリューションを開いているときに、ファイルをソリューションやプロジェクトに追加せずに開いて編集できます。 コンテナーとは関係なく操作されるファイルを "その他のファイル" と呼びます。 "その他のファイル" は、ソリューションやプロジェクトの外部にあり、ビルドには含まれません。また、ソース管理の対象になっているソリューションに含めることはできません。
 
  ファイルをコンテナーとは関係なく開くと、さまざまな利点があります。 たとえば、プロジェクト ベースのソリューションの開発中に、ソリューションの開発には必要のないファイルを表示できます。 こうしたファイルの例としては、開発メモ (指示書)、データベース スキーマ、コード クリップなどがあります。 また、スタンドアロンのファイルも作成できます。
 
- ![ソリューション プロジェクト](../../ide/reference/media/projects_solutions_misc.gif "Projects_Solutions_Misc")
+ ![ソリューション プロジェクト](../../ide/reference/media/projects_solutions_misc.gif)
 
  ソリューション エクスプローラーで該当する表示オプションを有効にすると、[その他のファイル] フォルダーが表示されます。 [[ドキュメント] ([オプション] ダイアログ ボックス - [環境])](../../ide/reference/documents-environment-options-dialog-box.md) から、オプションを設定することができます。 "その他のファイル" を閉じた後も特定のソリューションやプロジェクトとの関連付けを維持するには、そのためのオプションを有効にする必要があります。
 

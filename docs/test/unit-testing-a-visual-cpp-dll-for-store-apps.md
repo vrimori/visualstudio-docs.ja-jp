@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 717786fea5d0ae355af5b8ea4993932a95d01196
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ac32063f61baa33b9b28eea51988b95edde579eb
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751872"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL をテストする方法
 
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/26/2018
 
 3.  プロジェクトに `RooterLibTests` という名前を付けます。場所を指定します。ソリューションに `RooterLib` という名前を付けます。**[ソリューションのディレクトリを作成]** チェックボックスがオンになっていることを確認します。
 
-     ![ソリューションとプロジェクトの名前と場所を指定](../test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")
+     ![ソリューション、プロジェクト名、および場所の指定](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
 
 4.  新しいプロジェクトで、**unittest1.cpp** を開きます。
 
-     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png "UTE_Cpp_windows_unittest1_cpp")
+     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
      次の点に注意してください。
 
@@ -64,13 +65,13 @@ ms.lasthandoff: 04/26/2018
 
      テスト プロジェクトがビルドされ、実行されます。 テスト エクスプローラーのウィンドウが表示され、テストが **[成功したテスト]** に表示されます。 ウィンドウの下部の [概要] ウィンドウに、選択したテストに関する詳細情報が表示されます。
 
-     ![テスト エクスプ ローラー](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
+     ![Test Explorer](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
 ##  <a name="Add_the_DLL_project_to_the_solution"></a> DLL プロジェクトをソリューションに追加する
 
 1.  ソリューション エクスプローラーでソリューション名を選択します。 ショートカット メニューの **[追加]** をポイントし、**[新しいプロジェクトの追加]** を選択します。
 
-     ![RooterLib プロジェクトの作成](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")
+     ![RooterLib プロジェクトの作成](../test/media/ute_cpp_windows_rooterlib_create.png)
 
 2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[DLL (UWP アプリ)]** を選択します。
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/26/2018
 
     1.  ソリューション エクスプローラーで **RooterLib** プロジェクトを選択し、ショートカット メニューの **[プロパティ]** を選択します。
 
-         ![プリプロセッサ シンボル定義の追加](../test/media/ute_cpp_windows_addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
+         ![プリプロセッサ シンボル定義の追加](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
     2.  RooterLib の [プロパティ ページ] ダイアログ ボックスで **[構成プロパティ]**、**[C++]** の順に展開し、**[プリプロセッサ]** を選択します。
 
@@ -175,7 +176,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  テスト エクスプローラーで **[すべて実行]** をクリックします。
 
-     ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")
+     ![基本テスト成功](../test/media/ute_cpp_testexplorer_basictest.png)
 
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
 
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  テストが失敗します。
 
-     ![RangeTest 失敗](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![RangeTest 失敗](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
     > 各テストが記述した後すぐに失敗することを確認します。 これは、絶対に失敗しないテストを記述するという簡単なミスを避けることに役立ちます。
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/26/2018
 
      テストが失敗します。 テスト エクスプローラーでテスト名を選択します。 失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。
 
-     ![Negativerangetest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+     ![NegativeRangeTest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
 3.  テストが失敗した理由を表示するには、関数をステップ実行します。
 
@@ -308,7 +309,7 @@ ms.lasthandoff: 04/26/2018
 
  今回は、すべてのテストに合格します。
 
- ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+ ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png)
 
 ##  <a name="Refactor_the_code_without_changing_tests"></a> テストを変更せずにコードをリファクタリングする
 

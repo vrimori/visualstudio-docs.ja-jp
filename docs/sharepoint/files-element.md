@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ee8794ad3b381f58721da72b4ec3950f001a0888
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 330c408aa0e283eb282b93f77726ccc5d9547795
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691896"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766907"
 ---
 # <a name="files-element"></a>Files 要素
   フィーチャー要素ファイルなど、SharePoint プロジェクト項目と依存する以外の SharePoint プロジェクトの出力を配置するファイルを指定します。  
@@ -37,26 +37,26 @@ ms.locfileid: "34691896"
 ## <a name="type"></a>型  
  **FileCollectionType**  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
  なし。  
   
-### <a name="child-elements"></a>子要素  
+### <a name="child-elements"></a>子要素
   
 |要素|説明|  
 |-------------|-----------------|  
 |[ProjectItemFile](../sharepoint/projectitemfile-element.md)|省略可能な**ProjectItemFileType**要素。<br /><br /> フィーチャー要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなどの SharePoint ファイルを表します。|  
 |[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|省略可能な**ProjectOutputFileType**要素。<br /><br /> SharePoint に配置されるときに、プロジェクト項目に含めるプロジェクトの出力を表します。|  
   
-### <a name="parent-elements"></a>親要素  
+### <a name="parent-elements"></a>親要素
   
 |要素|説明|  
 |-------------|-----------------|  
 |[ProjectItem](../sharepoint/projectitem-element.md)|SharePoint プロジェクト項目を表します。 この要素の必須のルート要素の`.spdata`ファイル。|  
   
-## <a name="element-information"></a>要素情報  
+## <a name="element-information"></a>要素情報
   
 |||  
 |-|-|  
@@ -65,7 +65,7 @@ ms.locfileid: "34691896"
 |**検証ファイル**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)  
   
   

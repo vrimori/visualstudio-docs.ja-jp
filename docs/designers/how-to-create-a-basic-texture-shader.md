@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea7bd7368dbdd5d66f1921d555fbbf731cebd664
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c73ba8007bf107f9dae5cc1422fb582aa5415916
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747054"
 ---
 # <a name="how-to-create-a-basic-texture-shader"></a>方法: 基本テクスチャ シェーダーを作成する
 
@@ -47,9 +48,9 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 > この図では、平面がプレビューの図形として使用され、テクスチャはシェーダーの効果がわかりやすくなるように指定されています。
 
-![シェーダー グラフとその効果のプレビュー](../designers/media/digit-texture-effect.png "Digit-Texture-Effect")
+![シェーダー グラフとその効果のプレビュー](../designers/media/digit-texture-effect.png)
 
-特定の図形を使用すると、一部のシェーダーをより適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」を参照してください。
+シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

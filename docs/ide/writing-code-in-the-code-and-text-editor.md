@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 854cfe64b446660e1327ffb511ebb577735dbd4b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: c7da101ac664488acf2eeada391cbc691116f188
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572392"
 ---
 # <a name="features-of-the-code-editor"></a>コード エディターの機能
 
@@ -87,6 +88,6 @@ Visual Studio では、言語によって異なる機能がサポートされて
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio IDE](../ide/visual-studio-ide.md)
-- [Visual Studio での C++ の概要](../ide/quickstart-cpp.md)
+- [Visual Studio での C++ の概要](../ide/getting-started-with-cpp-in-visual-studio.md)
 - [Visual Studio での C# および ASP.NET の概要](../ide/tutorial-csharp-aspnet-core.md)
 - [Visual Studio での Python の概要](../ide/quickstart-python.md)

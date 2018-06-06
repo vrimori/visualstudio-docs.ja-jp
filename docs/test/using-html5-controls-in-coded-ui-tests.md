@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 918a2087635b88e018234f4c5dddff5e1f5f45d5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 15298414788c112c4f6a1f761055efd38933dfde
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751443"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> オーディオ コントロール
  **オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。
 
- ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")
+ ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png)
 
 |アクション|記録中|生成されたコード|
 |------------|---------------|--------------------|
@@ -89,7 +90,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> ビデオ コントロール
  **ビデオ コントロール:** HTML5 ビデオ コントロールに対するアクションが正しく記録され再生されます。
 
- ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")
+ ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png)
 
 |アクション|記録中|生成されたコード|
 |------------|---------------|--------------------|
@@ -120,7 +121,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> スライダー
  **スライダー コントロール:** HTML5 スライダー コントロールに対するアクションが正しく記録され再生されます。
 
- ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")
+ ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png)
 
 |アクション|記録中|生成されたコード|
 |------------|---------------|--------------------|
@@ -140,7 +141,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar
  **ProgreesBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。
 
- ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")
+ ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png)
 
 ## <a name="see-also"></a>関連項目
 

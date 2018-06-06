@@ -11,11 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 211a2dbed77074139821cd77018169cb4e785a94
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 08345fc043de8c01540fb0933cc4296c790ae17c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749896"
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 
@@ -132,7 +133,7 @@ Visual Studio では、システム、アプリケーション、またはコン
 
 |**カテゴリ**|**リンク**|
 |------------------|---------------|
-|**ビデオ**|![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [ビデオ MSDN How Do I: 作成と使用して UML モデルと図 (Visual Studio 2010 Ultimate) する方法](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: Visual Studio 2010 での UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I シリーズ: UML ツールと機能拡張 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
+|**ビデオ**|![ビデオへのリンク](../data-tools/media/playvideo.gif)[ビデオ MSDN How Do I: 作成と使用して UML モデルと図 (Visual Studio 2010 Ultimate) する方法](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [Channel 9: Visual Studio 2010 での UML](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [MSDN How Do I シリーズ: UML ツールと機能拡張 (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|
 |**フォーラム**|- [Visual Studio の視覚化およびモデリング ツール](http://go.microsoft.com/fwlink/?LinkId=184720)<br />- [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](http://go.microsoft.com/fwlink/?LinkId=184721)|
 |**ブログ**|[Visual Studio ALM + Team Foundation Server のブログ](http://go.microsoft.com/fwlink/?LinkID=201340)|
 |**技術記事とジャーナル**|[MSDN アーキテクチャ センター](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|

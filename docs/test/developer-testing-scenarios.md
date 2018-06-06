@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c4b8bb09795f35e3ae67065322e926a09dda0f19
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 89d09a8b01dc4179f3b9de4cbdbf1905846f7002
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691860"
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>開発者用テスト ツール、シナリオ、および機能
 
@@ -47,8 +48,7 @@ XAML ベースの UWP アプリ、ブラウザー アプリ、および SharePoi
 
 * [UI オートメーションを使用してコードをテストする](use-ui-automation-to-test-your-code.md)
 * [コード化された UI テストの作成、編集、および保守の概要](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
-* [コード化された UI テストを使用して UWP アプリをテストする](test-windows-store-8-1-apps-with-coded-ui-tests.md)
-* [コード化された UI テストを使用して Windows Phone アプリをテストする](test-windows-phone-8-1-apps-with-coded-ui-tests.md)
+* [コード化された UI テストを使用して UWP アプリをテストする](test-uwp-app-with-coded-ui-test.md)
 * [コード化された UI テストを使用して SharePoint アプリケーションをテストする](testing-sharepoint-2010-applications-with-coded-ui-tests.md)
 * [Visual Studio Enterprise でのコード化された UI テストの概要 (ラボ)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20Coded%20UI%20Tests%20with%20Visual%20Studio%20Enterprise%202015.docx)
 

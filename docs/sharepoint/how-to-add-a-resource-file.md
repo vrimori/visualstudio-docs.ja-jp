@@ -18,20 +18,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 132a5b5933b1bc96244238570091e522f8af91d2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 533deb22f37af012ab9c4fd3a8d369edad64ce06
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766829"
 ---
-# <a name="how-to-add-a-resource-file"></a>方法: リソース ファイルを追加する
+# <a name="how-to-add-a-resource-file"></a>方法: リソース ファイルを追加
   リソース ファイルを追加するためのコマンドは、ソリューション エクスプ ローラー内の機能のノード、ソリューション ノードのショートカット メニューでです。 詳細については、次を参照してください。 [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)です。  
   
 ### <a name="to-add-a-global-resource-file-to-a-sharepoint-solution"></a>SharePoint ソリューションにグローバル リソース ファイルを追加するには  
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、SharePoint ソリューションを開きます。  
   
-2.  **ソリューション エクスプ ローラー**、SharePoint プロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
+2.  **ソリューション エクスプ ローラー**、SharePoint プロジェクト ノードを選択し、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**です。  
   
 3.  **新しい項目の追加** ダイアログ ボックスで、選択、**グローバル リソース ファイル**テンプレートを選択し、**追加**ボタンをクリックします。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **リソースの追加** ダイアログ ボックスで、英語 (米国) など、リソース ファイル用のカルチャを選択します。  
   
-     この手順にグローバル リソース ファイルの形式で、リソース、ソリューションを追加 * x ***.*** カルチャ ***.** resx、Resource1.en US.resx などです。  
+     この手順にグローバル リソース ファイルの形式で、リソース、ソリューションを追加 * x ***.*** カルチャ ***.** resx のように*Resource1.en US.resx*です。  
   
 5.  ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
   
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/16/2018
   
 2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、[機能の名前、**機能**] ノードを選択し**フィーチャー リソースの追加**です。  
   
-     この手順にリソース ファイルの形式で、機能を追加 * ResourceFileName ***.*** カルチャ ***.** resx、Feature1.en US.resx などです。  
+     この手順にリソース ファイルの形式で、機能を追加 * ResourceFileName ***.*** カルチャ ***.** resx のように*Feature1.en US.resx*です。  
   
 3.  ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
-  
+ 

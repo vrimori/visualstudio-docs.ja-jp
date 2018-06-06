@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 59f273c511a24b1139b03421c2ca59871350aec3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 43e75e69899f74fb67980172c546cdc99d41d173
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747145"
 ---
 # <a name="n-tier-data-applications-overview"></a>n 層データ アプリケーションの概要
 *N 層*データ アプリケーションは複数に分離されるデータ アプリケーション*階層*です。 n 層アプリケーションは、"分散アプリケーション" および "多階層アプリケーション" とも呼ばれ、クライアントとサーバー間に分散された別個の層に処理を分離します。 データにアクセスするアプリケーションを開発する場合は、アプリケーションを構成する各種の層を明確に分離する必要があります。
@@ -58,7 +59,7 @@ Visual Studio には、開発者が n 層アプリケーションを作成する
 
 次の図は、Visual Studio で使用できる機能および技術と、n 層アプリケーションの中間層においてそれらが適合する位置を示しています。
 
-![中間層コンポーネント](../data-tools/media/ntiermid.png "NtierMid")中間層
+![中間層コンポーネント](../data-tools/media/ntiermid.png)中間層
 
 通常、中間層は、データ接続を使用してデータ層に接続します。 一般に、このデータ接続はデータ アクセス コンポーネントに格納されます。
 
@@ -67,7 +68,7 @@ Visual Studio には、開発者が n 層アプリケーションを作成する
 
 次の図は、Visual Studio で使用できる機能および技術と、n 層アプリケーションのデータ層においてそれらが適合する位置を示しています。
 
-![データ層コンポーネント](../data-tools/media/ntierdatatier.png "ntierdatatier")データ層
+![データ層コンポーネント](../data-tools/media/ntierdatatier.png)データ層
 
 プレゼンテーション層のクライアントからデータ層に直接アクセスすることはできません。 代わりに、プレゼンテーション層とデータ層の間の通信では、中間層のデータ アクセス コンポーネントが使用されます。
 

@@ -9,11 +9,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5ea053e6b3f448311118b733c30b9ade5160288d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a7b580f8bd04c4fbce9518d903a568bbd0f9175a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747093"
 ---
 # <a name="add-new-connections"></a>新しい接続を追加します。
 
@@ -35,23 +36,23 @@ ms.lasthandoff: 04/26/2018
 
 データベースへの接続を作成する をクリックして、**接続の追加**アイコン**サーバー エクスプ ローラー**、内を右クリックしてまたは**サーバー エクスプ ローラー**上、**データ接続**ノード**接続の追加**です。 ここでは、また別のサーバー、SharePoint サービス、または Azure サービス上のデータベースに接続することができます。
 
-![サーバー エクスプ ローラーの新しい接続 アイコン](../data-tools/media/raddata-server-explorer-new-connection-icon.png "raddata サーバー エクスプ ローラーの新しい接続 アイコン")
+![サーバー エクスプ ローラーの新しい接続 アイコン](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
 これにより、**接続の追加** ダイアログ ボックス。 ここでは、SQL Server LocalDB インスタンスの名前を入力しています。
 
-![新しい接続を追加](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 新しい接続の追加ダイアログ")
+![新しい接続を追加します。](../data-tools/media/raddata-add-new-connection-dialog.png)
 
 ## <a name="change-the-provider"></a>プロバイダーを変更します。
 
 データ ソースが必要ない場合をクリックして、**変更** ボタンを新しいデータ ソースや新しい ADO.NET データ プロバイダーを選択します。 新しいプロバイダーが構成方法に応じて、資格情報を要求します。
 
-![AD0.NET データ プロバイダーを変更する](../data-tools/media/raddata-change-ad0.net-data-provider.png "raddata AD0.NET データ プロバイダーの変更")
+![AD0.NET データ プロバイダーの変更](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
 ## <a name="test-the-connection"></a>接続をテストします
 
 データ ソースを選択した後にをクリックして**Test-connection**です。 成功しなかった場合必要がありますをトラブルシューティングするベンダーのドキュメントに基づく。
 
-![接続をテストする](../data-tools/media/raddata-test-connection.png "raddata 接続のテスト")
+![テスト接続](../data-tools/media/raddata-test-connection.png)
 
 作成する準備ができたら、テストが成功した場合、*データ ソース*、本当にことを意味している Visual Studio 用語は、*データ モデル*基になるデータベースまたはサービスに基づきます。
 

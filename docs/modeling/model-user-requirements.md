@@ -12,11 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 89b5a5130264dc46e953ee87f048a768d756ce9c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a8f79e80b5b4e4e14772548ad92e8886150749b7
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749058"
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 
@@ -63,7 +64,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 
  多くのビジネス ルールは、概念クラス間の関係に関する制約です。 これらを記述することができます*静的 * * ビジネス ルール*概念クラス ダイアグラムで、関連するクラスに関連付けられているコメントとして。 例えば:
 
- ![コメント内のルールは、Order クラスにアタッチされます。] (../modeling/media/uml_reqmcd2.png "UML_ReqmCD2")
+ ![Order クラスにアタッチされたコメント内のルール](../modeling/media/uml_reqmcd2.png)
 
  *動的ビジネス ルール* は、イベントの許容可能なシーケンスを制約します。 たとえば、シーケンス図やアクティビティ図を使って、ユーザーがシステムにログインしてから他の操作を実行する必要があることを示すとします。
 

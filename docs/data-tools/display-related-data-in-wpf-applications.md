@@ -18,11 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 57a617524f4f9bc03818d30ec434b2d4604b0f3e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 38c25cc1631529895a11af566298ce22930a2e6a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746547"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF アプリケーションで関連するデータを表示します。
 一部のアプリケーションでは、複数のテーブルまたは親と子の関係で相互に関連付けられているエンティティから取得したデータを使用することができます。 顧客を表示するグリッドを表示するなど、`Customers`テーブル。 別のグリッドに、関連するその顧客の注文が表示されます、ユーザーは、特定の顧客を選択するときに`Orders`テーブル。
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/26/2018
 
      次の図は、関連を示します**Orders**のテーブル、**顧客**にデータセット内のテーブル、**データ ソース**ウィンドウです。
 
-     ![データ ソース ウィンドウの関係を示す](../data-tools/media/datasources2.gif "DataSources2")
+     ![関係を示すデータ ソース ウィンドウ](../data-tools/media/datasources2.gif)
 
 ## <a name="see-also"></a>関連項目
 

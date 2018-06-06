@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4e005152aa7a5b7c1905e768da878e72051bbdb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9268fd0deb463a29c8e6d19e98ad63c86b965292
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767089"
 ---
-# <a name="how-to-add-a-parameter-to-a-method"></a>方法 : メソッドにパラメーターを追加する
+# <a name="how-to-add-a-parameter-to-a-method"></a>方法: メソッドにパラメーターを追加
   メソッドに情報を渡すか、メソッドから情報を返す、パラメーターを使用します。 すべてのメソッドには、少なくとも 1 つのパラメーターが必要です。 作成する方法の種類をサポートするためにパラメーターを設計する方法の詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
- Visual Studio が追加のメソッドにパラメーターを追加すると、`<Parameter>`要素をモデル プロジェクト内のファイル、XML にします。 属性の詳細については、`<Parameter>`要素を参照してください[パラメーター](http://go.microsoft.com/fwlink/?LinkId=169284)です。  
+ メソッドにパラメーターを追加すると、Visual Studio は、モデル プロジェクト内のファイル、XML にパラメーター要素を追加します。 Parameter 要素の属性に関する詳細については、次を参照してください。[パラメーター](http://go.microsoft.com/fwlink/?LinkId=169284)です。  
   
 ### <a name="to-add-a-parameter-to-a-method"></a>メソッドにパラメーターを追加するには  
   
 1.  メソッドは、エンティティを追加します。  
   
-2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
+2.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ** > **BDC メソッドの詳細**です。  
   
      **BDC メソッドの詳細**ウィンドウが開きます。 詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
      下に新しいパラメーターが表示されます、**パラメーター**ノード。  
   
-5.  メニュー バーで、次のように選択します。**ビュー**、**プロパティ ウィンドウ**します。  
+5.  メニュー バーで、次のように選択します。**ビュー** > **プロパティ ウィンドウ**します。  
   
 6.  **プロパティ**ウィンドウで、設定、**名前**プロパティを意味のある任意の名前にします。 たとえば、メソッドは、顧客を返しますが場合、は、メソッドを名前可能性があります**GetCustomers**です。  
   
@@ -57,11 +58,10 @@ ms.lasthandoff: 04/16/2018
   
 8.  パラメーターの型記述子を変更します。 詳細については、次を参照してください。[する方法: パラメーターの型記述子を定義する](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: エンティティをモデルに追加します。](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [方法: パラメーターの型記述子を定義します。](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)   
  [方法: メソッド インスタンスの定義](../sharepoint/how-to-define-a-method-instance.md)   
  [Business Data Connectivity モデルのデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)  
-  
   

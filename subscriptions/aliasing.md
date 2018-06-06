@@ -9,21 +9,22 @@ description: 別名またはフレンドリ名の使用でサインインに失�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 869835e53b1975d86501660b3e4ca34a41a1a7d4
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 765862efcd3b83be2d52767dbc81570da2e8f9d6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477653"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
 
-サインインに使用されるアカウントの種類によっては、[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にサインインするときに利用可能なサブスクリプションが正しく表示されない場合があります。考えられる原因の 1 つは、サブスクリプションが割り当てられているサインイン ID の代わりに "別名" または "表示名" を使用していることです。 これは "別名定義" と呼ばれます。 
+サインインに使用されるアカウントの種類によっては、[https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) にサインインするときに利用可能なサブスクリプションが正しく表示されない場合があります。 考えられる原因の 1 つは、サブスクリプションが割り当てられているサインイン ID の代わりに "別名" または "表示名" を使用していることです。 これは "別名定義" と呼ばれます。 
 
 ## <a name="what-is-aliasing"></a>別名定義とは
 
 "別名定義" という用語は、Windows (または Active Directory) へのサインインと電子メールへのアクセスに別々の ID を持っているユーザーを指します。
 
-別名定義は、JohnD@contoso.com のように、会社が自社のディレクトリのサインイン用に Microsoft オンライン サービスを持っているが、ユーザーは John.Doe@contoso.com などの別名や表示名を使用して自分の電子メール アカウントにアクセスしている場合に発生する場合があります。ボリューム ライセンス サービス センター (VLSC) を介してサブスクリプションを管理している多くのユーザーにとって、これがサインインが失敗する原因となる場合があります。指定したメール アドレス (John.Doe@contoso.com) が、"職場または学校アカウント" オプションを通じて正常に認証するために必要なディレクトリ アドレス (JohnD@contoso.com) と一致していないからです。
+別名定義は、JohnD@contoso.com のように、会社が自社のディレクトリのサインイン用に Microsoft オンライン サービスを持っているが、ユーザーは John.Doe@contoso.com などの別名や表示名を使用して自分の電子メール アカウントにアクセスしている場合に発生する場合があります。  ボリューム ライセンス サービス センター (VLSC) を介してサブスクリプションを管理している多くのユーザーにとって、これがサインインが失敗する原因となる場合があります。指定したメール アドレス (John.Doe@contoso.com) が、"職場または学校アカウント" オプションを通じて正常に認証するために必要なディレクトリ アドレス (JohnD@contoso.com) と一致していないからです。
 
 ## <a name="as-an-administrator-what-options-do-i-have"></a>管理者として選択できるオプションとは
 
@@ -48,25 +49,26 @@ ms.lasthandoff: 04/06/2018
 1. [ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) にアクセスしてサインインします。
 2. VLSC の管理ページから、**[サブスクリプション]**、**[Visual Studio サブスクリプション]** の順にクリックします。
 
-    ![サブスクリプション メニュー](_img//vlsc/vlsc-subscriptions.png)
+    <img alt="Subscriptions menu" src="_img//vlsc/vlsc-subscriptions.png" style="border: 1px solid #CCCCCC" />
 
 3. Visual Studio サブスクリプションに関連付けられている**契約番号**をクリックします。
 
-    ![契約の選択](_img/vlsc/vlsc-agreement.png)
+    <img alt="Select agreement" src="_img/vlsc/vlsc-agreement.png" style="border: 1px solid #CCCCCC" />
 
 4. **[サブスクリプションの割り当て]** をクリックします。
 
-    ![サブスクリプションの割り当て](_img/vlsc/vlsc-assign.png)
+    <img alt="Assign subscription" src="_img/vlsc/vlsc-assign.png" style="border: 1px solid #CCCCCC" />
+
 
 5. 目的の**サブスクリプション レベル**を選択します。
 
-    ![サブスクリプション レベル](_img/vlsc/vlsc-subscription-level.png)
-    
+    <img alt="Subscription level" src="_img/vlsc/vlsc-subscription-level.png" style="border: 1px solid #CCCCCC" /> 
+
 6. サブスクリプションが割り当て可能になっていることを確認し、**[次へ]** をクリックします。
 7.  サブスクライバーの詳細と [電子メール アドレス] フィールドにディレクトリ アドレスを入力し、**[次へ]** をクリックします。
 
-    ![電子メール アドレス](_img/vlsc/vlsc-email-address.png)
-    
+    <img alt="Email address" src="_img/vlsc/vlsc-email-address.png" style="border: 1px solid #CCCCCC" /> 
+        
 8. サブスクライバー情報を確認し、**[完了]** をクリックします。
 
 9. 下記の[テンプレート](#notifying-your-subscribers-with-directory-addresses)を使用して、サブスクリプションがプロビジョニングされたことをサブスクライバーに通知します。
@@ -128,7 +130,7 @@ Visual Studio サブスクリプションが割り当てられました。  http
     - Someone@example.com ボックスにウェルカム メールを受信したメール アドレスを入力します。
     - パスワードを作成します。
     - キャンペーンの設定を選択します。
-    - **[次へ]**をクリックします。
+    - **[次へ]** をクリックします。
 
 3. 検証手順を実行して、**[次へ]** をクリックします。
 

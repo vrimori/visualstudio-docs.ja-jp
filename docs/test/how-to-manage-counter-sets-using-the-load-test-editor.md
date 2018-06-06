@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストのカウンター セット | Microsoft Docs
+title: Visual Studio でのロード テストのカウンター セット
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +13,14 @@ ms.assetid: 64315c2f-a0b2-4378-be16-0774b99beef5
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b2ff43592819e5834f1e5f7b5088c00f61d8b1c4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 27a1cdd3390d6f068947bfcb0daef76eb93fd026
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751989"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカスタム カウンター セットを管理する
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 カウンター セットの管理では、パフォーマンス データの収集元となるコンピューター セットの選択や、個々のコンピューターから収集するカウンター セットの割り当てなどを行います。 カウンターは、**ロード テスト エディター**で管理します。
 
-![カウンター セットの管理](../test/media/loadtestmanagecountersets.png "LoadTestManageCounterSets")
+![カウンター セットの管理](../test/media/loadtestmanagecountersets.png)
 
 ## <a name="to-manage-counter-sets"></a>カウンター セットを管理するには
 

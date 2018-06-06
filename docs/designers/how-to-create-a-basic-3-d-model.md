@@ -1,6 +1,7 @@
 ---
 title: '方法: 基本 3D モデルを作成する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb448037b5baf8058860df615cd28e8cc4e26829
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6627bac92221d66bd2cc1ab32efe10d0588c3b7e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745686"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>方法: 基本 3D モデルを作成する
 
@@ -34,7 +36,7 @@ ms.lasthandoff: 04/19/2018
 
  完成したモデルの様子を示します。
 
- ![簡単な家の完成したモデル](../designers/media/gfx_model_demo_house_final.png "gfx_model_demo_house_final")
+ ![簡単な家の完成したモデル](../designers/media/gfx_model_demo_house_final.png)
 
  開始する前に、**[プロパティ]** ウィンドウと**ツールボックス**が表示されていることを確認します。
 
@@ -48,27 +50,27 @@ ms.lasthandoff: 04/19/2018
 
 4.  直方体の上部を再分割します。 面選択モードで、直方体を 1 回クリックして、選択できるようにアクティブにしてから、直方体の上部をクリックして、上部の面を選択します。 [モデル エディター] ツール バーで、**[面を再分割する]** を選択します。 直方体の上部を均等なサイズの 4 つのパーティションに分割する新しい頂点が追加されます。
 
-     ![直方体の上部が再分割されました](../designers/media/gfx_model_demo_house_subdiv.png "gfx_model_demo_house_subdiv")
+     ![立方体の上面がさらに分割されました](../designers/media/gfx_model_demo_house_subdiv.png)
 
 5.  直方体の隣接した 2 つの面を浮き出し表示にします。たとえば、直方体の前面と右面です。 面選択モードで、直方体を 1 回クリックして、選択できるようにアクティブにしてから、直方体の 1 つの面を選択します。 Ctrl キーを長押しして、最初に選択した面に隣接した別の面を直方体から選択し、[モデル エディター] ツール バーで、**[面を浮き出し表示にする]** を選択します。
 
-     ![直方体の面が押し出されました](../designers/media/gfx_model_demo_house_extrude.png "gfx_model_demo_house_extrude")
+     ![立方体の面が押し出されました。](../designers/media/gfx_model_demo_house_extrude.png)
 
 6.  一方の浮き出しを拡大します。 浮き出し表示したばかりの面の 1 つを選択し、[モデル エディター] ツール バーで、**[変換]** ツールを選択して、変換マニピュレーターを浮き出しと同じ方向に移動します。
 
-     ![直方体の一面がさらに押し出されました。](../designers/media/gfx_model_demo_house_extend.png "gfx_model_demo_house_extend")
+     ![立方体の一面がさらに押し出されました。](../designers/media/gfx_model_demo_house_extend.png)
 
 7.  モデルを三角形に変換します。 [モデル エディター] ツール バーで、**[詳細]**、**[ツール]**、**[三角形に変換]** の順に選択します。
 
 8.  家の屋根を作成します。 [モデル エディター] ツール バーで、**[エッジの選択]** を選択してエッジ選択モードに切り替え、直方体を選択してアクティブにします。 Ctrl キーを長押しして、ここに表示されるエッジ群を選択します。
 
-     ![屋根の頂点を形成するエッジ](../designers/media/gfx_model_demo_house_edges.png "gfx_model_demo_house_edges")
+     ![屋根の先端を形成する端](../designers/media/gfx_model_demo_house_edges.png)
 
      エッジが選択できたら、[モデル エディター] ツール バーで **[変換]** ツールを選択し、変換マニピュレーターを上方に移動して家の屋根を作成します。
 
  簡単な家のモデルが完成しました。 フラット シェーディングを適用した最終的なモデルを次にもう一度示します。
 
- ![簡単な家の完成したモデル](../designers/media/gfx_model_demo_house_final.png "gfx_model_demo_house_final")
+ ![簡単な家の完成したモデル](../designers/media/gfx_model_demo_house_final.png)
 
  次の手順として、この 3D モデルにシェーダーを適用できます。 詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 

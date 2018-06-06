@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c62137422a4cbd7b85b4f7415e9b3fa85c2c0248
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0f3d4c27f0aedf879137b3ef7a154fb7dd6f9164
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766260"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用してデバッグする方法を学習します。
 
@@ -39,6 +40,14 @@ ms.lasthandoff: 04/26/2018
 > * データのヒント、およびデバッガー ウィンドウで変数を検査します。
 > * コール スタックを調べる
 > * 例外ヘルパーを使用します。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+* インストールされている Visual Studio 2017 が必要とします。**NET デスクトップ開発**ワークロード。
+
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+
+    ワークロードのインストールが既に Visual Studio でをクリックする必要があるかどうか、**開いている Visual Studio インストーラー**の左側のウィンドウ内のリンク、**新しいプロジェクト** ダイアログ ボックス (選択**ファイル**  > **新しい** > **プロジェクト**)。 Visual Studio インストーラーが起動します。 選択します。**NET デスクトップ開発**ワークロード、順に選択**変更**です。
 
 ## <a name="start-the-debugger"></a>デバッガーを開始します。
 

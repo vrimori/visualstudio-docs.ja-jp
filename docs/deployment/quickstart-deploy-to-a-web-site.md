@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fa914b1b6b353d4e15bd8293f1fc141dd0ae371
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 0f722dcc4ada5643f9de3342b85469fa667d4b7c
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766553"
 ---
 # <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Visual Studio 発行ツールを使用して web サイトに web アプリまたは .NET Core アプリを発行します。
 
@@ -26,9 +27,9 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET および web 開発**ワークロードと **。NET デスクトップ開発**ワークロード。 アプリについては、.NET Core する必要があります、します。**NET コア**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
@@ -85,4 +86,4 @@ ms.lasthandoff: 05/10/2018
 このクイック スタートでは、Visual Studio を使用して、発行プロファイルを作成する方法について学習しました。 パブリッシングを構成することもできます。 発行の設定をインポートしてプロファイルできます。
 
 > [!div class="nextstepaction"]
-> [発行設定のインポートと IIS に配置](tutorial-import-publish-settings-iis.md)
+> [発行設定のインポートと IIS へのデプロイ](tutorial-import-publish-settings-iis.md)

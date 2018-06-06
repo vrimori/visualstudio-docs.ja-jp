@@ -1,7 +1,7 @@
 ---
-title: Visual Studio オフライン ヘルプのインストール | Microsoft Docs
-ms.custom: ''
+title: Visual Studio オフライン ヘルプのインストール
 ms.date: 11/01/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-help-viewer
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b44a96bd0386fdcec7740b8cafdcd9f328b64892
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e902df40e27fb5bf27ca29d9335634844024f3fb
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747483"
 ---
 # <a name="microsoft-help-viewer-installation"></a>Microsoft ヘルプ ビューアーのインストール
 
@@ -24,7 +25,7 @@ Visual Studio や SQL Server などのいくつかの製品では、Microsoft �
 
 ヘルプ ビューアーは、Visual Studio のオプションのインストール コンポーネントです。 Visual Studio インストーラーを使用してインストールするには、次の手順を実行します。
 
-1. [スタート] メニューから **Visual Studio インストーラー**を開くか、Visual Studio が開いている場合は、**[ツール]** の **[ツールと機能を取得...]** を選ぶと、Visual Studio インストーラーが開きます。
+1. [スタート] メニューから **Visual Studio インストーラー**を開くか、Visual Studio が開いている場合は、**[ツール]** > **[ツールと機能を取得]** を選ぶと、Visual Studio インストーラーが開きます。
 
 1. **[個々のコンポーネント]** タブを選択し、**[コード ツール]** セクションの下で **[ヘルプ ビューアー]** を選択します。
 
@@ -38,7 +39,7 @@ Microsoft ヘルプ ビューアーを簡単にインストールするもう 1 
 
    ![[クイック起動] ボックス](media/help_viewer_quick_launch.png)
 
-1. **ヘルプ ビューアー (個々のコンポーネント)** と呼ばれるのインストール結果を選択します。
+1. **ヘルプ ビューアー (個々のコンポーネント)** と呼ばれる結果を選択します。
 
 1. 開いたダイアログ ボックスで、**[インストール]** ボタンを選択します。
 
@@ -46,9 +47,9 @@ Microsoft ヘルプ ビューアーを簡単にインストールするもう 1 
 
 |         |         |
 |---------|---------|
-|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |  Visual Studio インストーラーを使用して、Microsoft ヘルプ ビューアーをインストールする方法については、[こちらのビデオ](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=ZMfaVID6D_7411787171)をご覧ください。 |
+|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png)  |  Visual Studio インストーラーを使用して、Microsoft ヘルプ ビューアーをインストールする方法については、[こちらのビデオ](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=ZMfaVID6D_7411787171)をご覧ください。 |
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft Help Viewer](../ide/microsoft-help-viewer.md)  
-[SQL Server のヘルプ ビューアーとオフライン コンテンツ](/sql/sql-server/sql-server-help-installation)
+- [Microsoft Help Viewer](../ide/microsoft-help-viewer.md)
+- [SQL Server のヘルプ ビューアーとオフライン コンテンツ](/sql/sql-server/sql-server-help-installation)

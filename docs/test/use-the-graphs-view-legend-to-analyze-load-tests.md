@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのグラフ ビューの凡例を使用したロード テストの分析 | Microsoft Docs
+title: Visual Studio でのグラフ ビューの凡例を使用したロード テストの分析
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,18 +9,20 @@ ms.assetid: 0f6ba8e4-1343-419c-8a9f-240cf50efed7
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a6c14375d46c4317b86b9da67526230369cfbcb6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 065e50b123ccf4ac96ba6bec89db74bb51990f58
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751402"
 ---
 # <a name="using-the-graphs-view-legend-to-analyze-load-tests"></a>グラフ ビューの凡例を使用したロード テストの分析
 
 ロード テスト アナライザーのグラフ ビューには凡例パネルがあり、現在選択されているグラフに関連付けられている各パフォーマンス カウンターの情報が表示されます。
 
-![グラフ ビューの凡例](../test/media/load_viewlegend.png "Load_ViewLegend")
+![グラフ ビューの凡例](../test/media/load_viewlegend.png)
 
 凡例には以下の情報が含まれています。
 

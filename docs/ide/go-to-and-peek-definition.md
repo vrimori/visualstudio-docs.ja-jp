@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: afe72522d235579147b645c27cf4f560827f555d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 529486e39db57228feb703817eea44fab9399c85
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745764"
 ---
 # <a name="view-type-and-member-definitions"></a>型とメンバーの定義の表示
 
@@ -61,7 +62,7 @@ Visual Studio 2017 バージョン 15.4 の場合、マウスを使用すると�
 
 たとえば、<xref:System.Console> に対して **[定義へ移動]** コマンドを実行すると、<xref:System.Console> のメタデータが C# のソース コードとしてコード エディターに表示されます。 このコードはその宣言に似ていますが、実装は表示されません。
 
-![ソースとしてのメタデータ](../ide/media/metadatasource.png "MetadataSource")
+![ソースとしてのメタデータ](../ide/media/metadatasource.png)
 
 > [!NOTE]
 > 内部としてマークされた型やメンバーに対して **[定義へ移動]** または **[定義をここに移動]** コマンドを実行しても、参照元のアセンブリがフレンドかどうかに関係なく、Visual Studio はメタデータをソース コードとして表示しません。

@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a9cd01fc4f8ceff4b679ef81e2ce25d38624a3
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 416e83790e4776f37f7ca7ce011a5a2fb2ad484c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747496"
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>方法 : エディターで行番号を表示する
 コードの行番号を表示または非表示にできます。
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/22/2018
 
 2.  **[行番号]** チェック ボックスをオンにします。
 
-    ![エディターに行番号を表示するためのオプション](../../ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")
+    ![エディターに行番号を表示するためのオプション](../../ide/reference/media/vs_displaylinenumbers.png)
 
 > [!NOTE]
 > 使う言語または設定によっては、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにして、**[すべての言語]** サブノードを表示する必要がある場合があります。

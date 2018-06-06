@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d00159a8c944944348e4eec5fb98aaa4d6e9bae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 451784c052ee656686bf40315b809dcce58c6aaf
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767651"
 ---
-# <a name="how-to-add-a-specific-finder-method"></a>方法: SpecificFinder メソッドを追加する
+# <a name="how-to-add-a-specific-finder-method"></a>方法: 特定の Finder メソッドを追加
   作成することで、1 つのエンティティのインスタンスを返すことができます、 *Specific Finder*メソッドです。 ビジネス データ接続 (BDC) サービスは、ユーザーがビジネス データ web パーツまたは外部の一覧でエンティティを選択すると、Specific Finder メソッドを実行します。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
-### <a name="to-create-a-specific-finder-method"></a>Specificfinder メソッドを作成するには  
+### <a name="to-create-a-specific-finder-method"></a>特定の Finder メソッドを作成するには
   
-1.  BDC デザイナーでは、エンティティを選択します。  
+1.  **BDC デザイナー**エンティティを選択します。  
   
-     Visual Studio で BDC デザイナーにエンティティを追加する方法については、次を参照してください。[する方法: エンティティをモデルに追加](../sharepoint/how-to-add-an-entity-to-a-model.md)です。  
+     エンティティを追加する方法については、 **BDC デザイナー** Visual Studio で、次を参照してください。[する方法: エンティティをモデルに追加](../sharepoint/how-to-add-an-entity-to-a-model.md)です。  
   
-2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
+2.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ**、 **BDC メソッドの詳細**です。  
   
      **BDC メソッドの詳細**ウィンドウが開きます。 そのウィンドウの詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
  [方法: Creator メソッドを追加](../sharepoint/how-to-add-a-creator-method.md)   
@@ -98,5 +99,4 @@ ms.lasthandoff: 04/16/2018
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   
  [方法: メソッドにパラメーターを追加](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
  [方法: メソッド インスタンスを定義する](../sharepoint/how-to-define-a-method-instance.md)  
-  
   

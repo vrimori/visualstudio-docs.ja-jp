@@ -14,24 +14,18 @@ manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 415e2ee4da01affd2d34b2bbb1aafb5de697767e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c576795a130b6e654310a9ad48381fdc6a23c0e2
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766325"
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>スナップショットのデバッガーを使用してライブの ASP.NET Azure アプリをデバッグします。
 
 スナップショット デバッガーで関心のあるコードを実行するときに、実稼働環境でアプリのスナップショットを取得します。 スナップショットを取得するようにデバッガーに指示するには、コードでスナップショットとログポイントを設定します。 デバッガーでは、実稼働アプリケーションのトラフィックに影響を与えることなく、問題を正確に確認できます。 スナップショット デバッガーは、実稼働環境で発生する問題の解決にかかる時間を大幅に短縮するのに役立ちます。
 
 Snappoints と logpoints は、ブレークポイントに似ていますが、snappoints、ブレークポイントとは異なり、アプリケーションを停止しない場合にヒットします。 通常、スナップショットをキャプチャする、snappoint で 10 ~ 20 ミリ秒がかかります。 
-
-スナップショット コレクションは、Azure App Service で実行されている次の Web アプリで利用できます。
-
-- .NET Framework 4.6.1 以降で実行されている ASP.NET アプリケーション。
-- Windows の .NET Core 2.0 以降で実行されている ASP.NET Core アプリケーション。
-
-さらに、スナップショットのデバッガーは、Visual Studio 2017 Enterprise 15.5 またはそれ以降のバージョンと基本的な以上の App Service プランのできるだけです。 
 
 このチュートリアルでは、次の作業を行います。
 
@@ -40,16 +34,27 @@ Snappoints と logpoints は、ブレークポイントに似ていますが、s
 > * Snappoint を設定し、スナップショットの表示
 > * 設定、logpoint
 
-## <a name="start-the-snapshot-debugger"></a>スナップショットのデバッガーを起動します。
+## <a name="prerequisites"></a>必須コンポーネント
 
-1. インストール[Visual Studio 2017 Enterprise バージョン 15.5](https://www.visualstudio.com/downloads/)またはそれ以降。 以前の Visual Studio 2017 のインストールを更新する場合は、Visual Studio インストーラーを実行し、ASP.NET と web 開発ワークロード内のスナップショットのデバッガー コンポーネントを確認します。
+* スナップショットのデバッガーが Visual Studio 2017 Enterprise 15.5 以降のバージョンの使用可能なだけ、 **ASP.NET および web 開発ワークロード**です。 ASP.NET Core も必要の。**NET の中核的な開発**ワークロードがインストールされています。
 
-2. スナップショット デバッグするには、プロジェクトを開きます。 
+    インストールされていない場合は、インストール[Visual Studio 2017 Enterprise バージョン 15.5](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)またはそれ以降。 Visual Studio インストーラーを実行しでスナップショットのデバッガー コンポーネントを確認してください。 以前の Visual Studio 2017 のインストールを更新する場合、 **ASP.NET および web 開発ワークロード**です。
+
+* 基本的なまたはそれ以降の Azure App Service プランです。
+
+* スナップショット コレクションは、Azure App Service で実行されている次の Web アプリで利用できます。
+
+    * .NET Framework 4.6.1 以降で実行されている ASP.NET アプリケーション。
+    * Windows の .NET Core 2.0 以降で実行されている ASP.NET Core アプリケーション。
+
+## <a name="open-your-project-and-start-the-snapshot-debugger"></a>プロジェクトを開き、スナップショットのデバッガーを起動
+
+1. スナップショット デバッグするには、プロジェクトを開きます。 
 
     > [!IMPORTANT] 
     > スナップショットのデバッグ を開く必要があります、**ソース コードの同じバージョン**Azure App Service で公開されています。 
 
-3. Cloud Explorer で (**ビュー > Cloud Explorer**) をプロジェクトを配置する Azure App Service を右クリックし、**スナップショット デバッガーのアタッチ**です。
+1. Cloud Explorer で (**ビュー > Cloud Explorer**) をプロジェクトを配置する Azure App Service を右クリックし、**スナップショット デバッガーのアタッチ**です。
 
    ![スナップショットのデバッガーを起動します。](../debugger/media/snapshot-launch.png)
 

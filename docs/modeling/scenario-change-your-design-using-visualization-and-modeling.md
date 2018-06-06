@@ -17,11 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 829fd8ed601eae28d367e4b2f3de0a5c7b709985
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 7784bcfc8db3c8f2709bde045622c747a326ddcc
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750169"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -150,13 +151,13 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 
  たとえば、開発者はコード マップを作成します。 新しいシナリオの影響を受ける領域に合わせてスコープを調整します。 次のマップでは、それらの領域が選択されて強調表示されています。
 
- ![依存関係グラフの Namespace](../modeling/media/namespace_reviewsystem.png "Namespace_ReviewSystem")
+ ![名前空間の依存関係グラフ](../modeling/media/namespace_reviewsystem.png)
 
  **名前空間のコード マップ**
 
  選択した名前空間を展開すると、その名前空間のクラス、メソッド、および関係が表示されます。
 
- ![展開された名前空間の依存関係グラフ](../modeling/media/dep_reviewsystem.png "Dep_ReviewSystem")
+ ![拡張された名前空間の依存関係グラフ](../modeling/media/dep_reviewsystem.png)
 
  **展開された名前空間のコード マップ (グループ間リンクが表示されています)**
 
@@ -177,7 +178,7 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 
  たとえば、次の依存関係図では、各レイヤーに関連付けられている成果物の数とレイヤー間の依存関係について説明します。
 
- ![統合された支払いシステムの依存関係図](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")
+ ![統合された支払いシステムの依存関係図](../modeling/media/layer_integrated_dnlucerne.png)
 
  **依存関係図**
 
@@ -277,19 +278,19 @@ Lucerne と Dinner Now は、支払いシステムを統合する必要があり
 
 次のマップは、PaymentProcessing クラスと Dinner Now システムの他の部分との依存関係を示しています。該当する箇所が選択されています。
 
-![Dinner Now の支払いシステムの依存関係グラフ](../modeling/media/dep_dnpayment.png "Dep_DNPayment")
+![Dinner Now の支払いシステムの依存関係グラフ](../modeling/media/dep_dnpayment.png)
 
 **Dinner Now の支払いシステムのコード マップ**
 
 開発者はこのマップを調べるために、PaymentProcessing クラスを展開してそのメンバーを選択します。これにより、影響を受ける可能性がある領域が表示されます。
 
-![PaymentProcessing と依存関係の内部メソッド](../modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")
+![PaymentProcessing 内のメソッドとその依存関係](../modeling/media/depgraph_expandeddn.png)
 
 **PaymentProcessing クラス内のメソッドとその依存関係**
 
 さらに、Lucerne Payment System のクラス、メソッド、および依存関係を調べるために次のマップを生成しました。 これにより、Dinner Now のその他のパートと相互作用するためには Lucerne のシステムにも手を加える必要があることがわかりました。
 
-![Lucerne の支払いシステムの依存関係グラフ](../modeling/media/depgraph_lucernepay.png "DepGraph_LucernePay")
+![Lucerne の支払いシステムの依存関係グラフ](../modeling/media/depgraph_lucernepay.png)
 
 **Lucerne の支払いシステムのコード マップ**
 
@@ -297,7 +298,7 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
 コードの再構成が完了したら、2 つのチームは新しいコード マップを生成して、更新された構造とリレーションシップを確認します.
 
-![再構成されたコードの依存関係グラフ](../modeling/media/depgraph_integrated.png "DepGraph_Integrated")
+![再構成されたコードを含む依存関係グラフ](../modeling/media/depgraph_integrated.png)
 
 **再構成されたコードを含むコード マップ**
 
@@ -338,7 +339,7 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
  Lucerne は、Process Payment ユース ケースに参加するエンティティを記述し、それについて議論するために、次のようなクラス図を描画しました。
 
- ![Process Payment のエンティティ クラス ダイアグラムで](../modeling/media/uml_payentities.png "UML_PayEntities")
+ ![クラス図の Process Payment のエンティティ](../modeling/media/uml_payentities.png)
 
  **クラス図の Process Payment のエンティティ**
 
@@ -346,7 +347,7 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
  開発中に次のようなクラス図を使用することにより、各クラスの詳細を記述し、それについて議論することができます。
 
- ![Process Payment のエンティティの詳細をクラス ダイアグラムで](../modeling/media/uml_payment.png "UML_Payment")
+ ![クラス図の Process Payment エンティティの詳細](../modeling/media/uml_payment.png)
 
  **クラス図の Process Payment の詳細**
 
@@ -407,7 +408,7 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
  整合性を維持するコードが設計と、Dinner Now と Lucerne はようコードを検証するのに次の依存関係図を使用します。
 
- ![統合された支払いシステムの依存関係図](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")
+ ![統合された支払いシステムの依存関係図](../modeling/media/layer_integrated_dnlucerne.png)
 
  **Lucerne と統合された Dinner Now の依存関係図**
 
@@ -417,13 +418,13 @@ Dinner Now と Lucerne は協力して、2 つのシステムを統合するの�
 
  次のコード マップは、Dinner Now と PaymentApprover の間の新しい呼び出しを示しています。
 
- ![統合システムで更新された依存関係グラフ](../modeling/media/depgraph_intsystem.png "DepGraph_IntSystem")
+ ![統合されたシステムを含む更新された依存関係グラフ](../modeling/media/depgraph_intsystem.png)
 
  **更新されたメソッド呼び出しを含んだコード マップ**
 
  システムが正常に動作することを確認した後、Dinner Now の PaymentProcessing のコードをコメント アウトしました。 その結果、レイヤー検証でエラーは報告されず、コード マップに PaymentProcessing の依存関係が存在しなくなりました。
 
- ![PaymentProcessing を含まない依存関係グラフ](../modeling/media/depgraph_nomore.png "DepGraph_NoMore")
+ ![PaymentProcessing を含まない依存関係グラフ](../modeling/media/depgraph_nomore.png)
 
  **PyamentProcessing を含まないコード マップ**
 
