@@ -24,18 +24,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fccbd816d578a95e3e43e15c83d615756dcddcb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f1e744071219426c751576f8ca781ad27dfedb61
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815861"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;ファイル&gt;要素 (ClickOnce アプリケーション)
 アセンブリ以外のファイルをすべてダウンロードして、アプリケーションで使用されるを識別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <file  
     name  
     size  
@@ -187,7 +188,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="example"></a>例  
  次のコード例を示しています`file`アプリケーション内の要素を使用してデプロイされたアプリケーションのマニフェストの[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。  
   
-```  
+```xml  
 <file name="Icon.ico" size="9216">  
   <hash>  
     <dsig:Transforms>  

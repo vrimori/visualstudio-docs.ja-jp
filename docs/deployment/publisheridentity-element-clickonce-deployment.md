@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ad10cae4ebd3aee6b65ad408ea3a3df3f82fd02
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 92b0082d7a2b062d946d132c5a86fbceb5208802
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815143"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt;要素 (ClickOnce 配置)
 この配置マニフェストに署名した発行元についての情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <publisherIdentity  
    name  
    issuerKeyHash  
@@ -52,6 +53,6 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 ## <a name="subhead"></a>小見出し

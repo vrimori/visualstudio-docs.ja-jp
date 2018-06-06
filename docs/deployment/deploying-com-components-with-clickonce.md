@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 740d72f0ec339ded8ec8b721bbc2b94d706f8da7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ab25276596358f7c0a8c1f90bd38e89686e3196c
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815874"
 ---
 # <a name="deploying-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントの配置
 従来の COM コンポーネントの展開には、難しい作業されていましたが。 コンポーネントは、グローバルに登録される必要があるし、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 この状況は通常、.NET Framework アプリケーションに問題があるコンポーネントをアプリケーションに完全に分離されたか、サイド バイ サイド互換であるためです。 Visual Studio では、Windows XP または以上のオペレーティング システムで分離されている COM コンポーネントを展開することができます。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/19/2018
   
 4.  Class1.vb で生成されたコードの後に次のコードを追加、`New`メソッド。  
   
-    ```  
+    ```vb  
     Public Sub SayHello()  
        MsgBox "Message from the VB6Hello COM component"  
     End Sub  
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/19/2018
   
 8.  ハンドラー コードを追加するには、ボタンをダブルクリックし、コード ファイルで、ハンドラーを次のように読み取るようにするにコードを追加します。  
   
-    ```  
+    ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
         Dim VbObj As New VB6Hello.Class1  
         VbObj.SayHello()  

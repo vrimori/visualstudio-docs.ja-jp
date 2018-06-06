@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8240e4bb8ba540fcdd4453e39d9fa6b00b31bef2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ced10a16bae0e5892fddec1a79b9f7793b4dac43
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815546"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>方法 : ClickOnce アプリケーションにデータ ファイルを含める
 各[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションをインストールするには、アプリケーションが、独自のデータを管理できます先のコンピューターのローカル ディスク上のデータ ディレクトリが割り当てられます。 データ ファイルは、任意の種類のファイルを含めることができます。 テキスト ファイル、XML ファイル、または Microsoft Access データベース (.mdb) ファイルのであってもです。 以下の手順は、任意の種類のデータ ファイルを追加する方法を示して、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  データ ファイルの一覧に、アプリケーション マニフェストを更新します。  
   
-     **mage-u v1.0.0.0\Application.manifest - FromDirectory v1.0.0.0**  
+     `mage -u v1.0.0.0\Application.manifest -FromDirectory v1.0.0.0`  
   
      このタスクを実行すると、アプリケーション マニフェストでファイルの一覧を再作成しも自動的にハッシュ署名を生成します。  
   
@@ -53,13 +54,11 @@ ms.lasthandoff: 04/19/2018
   
      アプリケーション マニフェストのハッシュが変更されたため、配置マニフェストを再署名する必要があります。  
   
-     **mage-s アプリケーション マニフェストの cf cert_file-pwd パスワード**  
+     `mage -s app manifest -cf cert_file -pwd password`
   
-     **mage-u 配置マニフェスト appm アプリ マニフェスト**  
+     `mage -u deployment manifest -appm app manifest`
   
-     **mage-s 配置マニフェストは cf certfile-pwd パスワード**  
-  
-2.  
+     `mage -s deployment manifest -cf certfile -pwd password`
   
 ### <a name="to-include-a-data-file-by-using-mageuiexe"></a>MageUI.exe を使用して、データ ファイルを追加するには  
   

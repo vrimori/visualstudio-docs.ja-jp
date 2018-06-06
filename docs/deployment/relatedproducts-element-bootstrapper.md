@@ -23,18 +23,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 574b7180efb7495b755d823c798ffa0c21339390
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5701b88f3942301c8fdb6d674fc323e62a93589b
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815458"
 ---
 # <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts&gt;要素 (ブートス トラップ)
 `RelatedProducts`要素は、現在の製品に含まれるかに依存する他の製品を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <RelatedProducts>  
     <DependsOnProduct  
         Code  
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="example"></a>例  
  次のコード例と Microsoft インストーラーがインストールされていることを指定します、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ため、個別のインストールは必要ありません。  
   
-```  
+```xml  
 <RelatedProducts>  
     <IncludesProduct Code="Microsoft.Windows.Installer.2.0" />  
 </RelatedProducts>  

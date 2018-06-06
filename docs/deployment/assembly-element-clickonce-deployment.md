@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ab58cb90f9486c3a233d5173db340be3ee5f034
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e6b12f1a5d50e2636d3c8478e6b6a9efe50384a5
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31560259"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815666"
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly&gt;要素 (ClickOnce 配置)
 配置マニフェストの最上位要素です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
   
       <assembly    
    manifestVersion  
@@ -49,7 +49,7 @@ ms.locfileid: "31560259"
 ## <a name="example"></a>例  
  次のコード例を示しています、`assembly`を使用してデプロイされたアプリケーションの配置マニフェスト内の要素[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 このコード例に示されている例の一部である、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックです。  
   
-```  
+```xml  
 <asmv1:assembly   
   xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"  
   manifestVersion="1.0"  

@@ -27,11 +27,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eed411e51b9e1b9e69d80a0c6187d7325d45ef7b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: dc613a95f6c0051690e9371cd3c5c8e401df6b86
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815575"
 ---
 # <a name="product-and-package-schema-reference"></a>製品およびパッケージ スキーマ リファレンス
 A*製品ファイル*すべてに必要な外部の依存関係を記述する XML マニフェストには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 外部の依存関係の例として、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]および Microsoft Data Access Components (MDAC)。 パッケージ ファイルは、製品のファイルに似ていますが、ローカライズ済みのアセンブリ、ライセンス契約、ドキュメントなど、依存関係のカルチャに依存するコンポーネントをインストールするために使用します。  
@@ -56,7 +57,7 @@ A*製品ファイル*すべてに必要な外部の依存関係を記述する X
 ## <a name="example"></a>例  
  次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Product  
