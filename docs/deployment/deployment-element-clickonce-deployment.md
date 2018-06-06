@@ -72,7 +72,7 @@ ms.lasthandoff: 04/19/2018
  `deployment`要素には、次の子要素も含まれています。  
   
 ## <a name="subscription"></a>subscription 
- 任意。`update` 要素を含んでいます。 `subscription`要素に属性がありません。 `subscription`要素が存在しない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは更新プログラムのスキャンことはありません。 `install`の属性の `deployment` 要素が `false` の場合、`subscription`要素が無視されるため、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]常に、ネットワークから起動されるアプリケーションは、最新バージョンを使用します。  
+ 任意。`update` 要素を含んでいます。 `subscription`要素に属性がありません。 `subscription`要素が存在しない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは更新プログラムをスキャンしません。`install`の属性の `deployment` 要素が `false` の場合、ネットワークから起動される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは常に最新のバージョンを使用するため、`subscription`要素は無視されます。
   
 ## <a name="update"></a>update
  必須。 この要素の子である、`subscription`要素いずれかが含まれています、`beforeApplicationStartup`または`expiration`要素。 `beforeApplicationStartup` および`expiration`両方を同じ配置マニフェストに指定することはできません。  
