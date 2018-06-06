@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でカウンター パネルを使用してロード テストのエラーを分析する | Microsoft Docs
+title: Visual Studio でカウンター パネルを使用してロード テストのエラーを分析する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: 981b4f1e-505a-4078-a06d-58ae17d996b4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2705120f5cf0e13e94369140c256bd3c7ae1466b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bc7beb1100b5e1bfe3fd554da53520ffc9888e64
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751885"
 ---
 # <a name="how-to-analyze-errors-using-the-counters-panel"></a>方法: カウンター パネルを使用してエラーを分析する
 
@@ -21,7 +23,7 @@ ms.lasthandoff: 04/16/2018
 
  [カウンター] パネルの **[エラー]** ノードには、ロード テスト中に検出されたすべてのエラーが含まれています。 エラー ノードには、さまざまなエラーに固有のサブカテゴリ エラー ノードが複数含まれています。 たとえば、**[例外]** や **[HTTP エラー]** などです。
 
- ![カウンター パネルのエラー ノード](../test/media/ltest_errornode.png "LTest_ErrorNode")
+ ![カウンター パネルのエラー ノード](../test/media/ltest_errornode.png)
 
 ## <a name="to-analyze-errors-in-the-counters-panel"></a>[カウンター] パネルでエラーを分析するには
 

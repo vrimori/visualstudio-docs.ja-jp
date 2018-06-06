@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストの仮想ユーザー アクティビティの分析 | Microsoft Docs
+title: Visual Studio でのロード テストの仮想ユーザー アクティビティの分析
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,18 +11,20 @@ ms.assetid: 63f4bd42-3cfb-4eee-af68-e8334976539e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5f874b070e726374a20e821508115b5798f40b80
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c91cd1a2ea721743c289b6664ddd0a76ceedbc4f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750839"
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーの詳細ビューでのロード テストの仮想ユーザー アクティビティの分析
 
 **仮想ユーザー アクティビティ チャート**
 
- ![仮想ユーザー アクティビティ チャート](../test/media/virtual_actchart.png "Virtual_ActChart")
+ ![仮想ユーザー アクティビティ チャート](../test/media/virtual_actchart.png)
 
  詳細ビューには、ロード テスト中に各仮想ユーザーが実行していた操作を視覚的に分析するための仮想ユーザー アクティビティ チャートが表示されます。 仮想ユーザー アクティビティ チャートで、ユーザー アクティビティのパターンとロード パターンを表示して、失敗したテストや時間のかかったテストを関連付け、他の仮想ユーザー アクティビティによる要求を確認できます。 仮想ユーザー アクティビティ チャートは、CPU 使用率のスパイク、1 秒あたりの要求数のドロップ、および、スパイクとドロップの間に実行されていたテストまたはページを調べるのに役立ちます。
 
@@ -31,7 +33,7 @@ ms.lasthandoff: 04/16/2018
 
  **[詳細の凡例] パネル**
 
- ![[詳細の凡例] パネル](../test/media/ltest_detailslegend.png "LTest_DetailsLegend")
+ ![詳細な凡例パネル](../test/media/ltest_detailslegend.png)
 
  [詳細の凡例] パネルは、仮想ユーザー アクティビティ チャートに表示されます。 [詳細の凡例] パネルを使用すると、数種類の基準に基づいてテスト、ページ、およびトランザクションを除外できます。 たとえば、ビューから特定のテストを削除したり、成功したすべてのテストを削除したりできます。特定のエラーで失敗したテストを削除することもできます。 ログがないテストをすべて削除することもできます。
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 
  **[フィルター結果] パネル**
 
- ![[フィルター結果] パネル](../test/media/ltest_filterresults.png "LTest_FilterResults")
+ ![結果パネルのフィルター処理](../test/media/ltest_filterresults.png)
 
  [フィルター結果] パネルは、仮想ユーザー アクティビティ チャートに表示されます。 [フィルター結果] パネルでは、次のように結果がフィルターされます。
 

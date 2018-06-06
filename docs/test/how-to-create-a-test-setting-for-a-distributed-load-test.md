@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での分散ロード テスト用のテスト設定の作成 | Microsoft Docs
+title: Visual Studio での分散ロード テスト用のテスト設定の作成
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 30b9cf45b60b108e51cc1cbe5defd5e8d8cac0e4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29517fcf0f788150db43988fdacf54b3b8b5800c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751820"
 ---
 # <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>方法: 配布されたロード テストのテスト設定を作成する
 
@@ -73,7 +75,7 @@ Visual Studio から実行する予定のロード テストについて、ソ�
 
      **[ロール]** ページが表示されます。
 
-     ![テスト設定のロール](../test/media/load_testtestrole.png "Load_TestTestRole")
+     ![テスト設定のロール](../test/media/load_testtestrole.png)
 
 10. テストをリモートで実行する、またはテストをリモートで実行してデータをリモートで収集するには、**[テストの実行メソッド]** ドロップダウン リストで **[リモート実行]** を選択します。
 
@@ -107,7 +109,7 @@ Visual Studio から実行する予定のロード テストについて、ソ�
 
      **[データと診断]** ページが表示されます。
 
-     ![テスト設定のデータと診断](../test/media/load_testtest.png "Load_TestTest")
+     ![テスト設定のデータと診断](../test/media/load_testtest.png)
 
 18. **[データと診断]** ページで、ロールがデータ収集に使用する*診断データ アダプター*を選択してロールの実行内容を定義します。 その結果、1 つ以上のデータおよび診断アダプターがロールに対して有効になっていると、テスト コントローラーは使用可能なテスト エージェント コンピューターを選択し、ロールに定義された属性に基づいて、指定されたデータおよび診断アダプターのデータを収集します。 各ロールで収集するデータおよび診断データ アダプターを選択するには、ロールを選択します。 各ロールについて、テストのニーズに応じて診断データ アダプターを選択します。 各ロールに対して選択した診断データ アダプターを構成するには、**[構成]** を選択します。
 

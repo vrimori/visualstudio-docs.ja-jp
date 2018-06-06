@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb6e5fe61e6210826ce0b37ae2650da8d6af86c9
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 6f30131debe9dd4e35f115531a0e00afeb38a492
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335607"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690703"
 ---
 # <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>プロファイラー サンプリング メソッドを使用したサービスのアプリケーション統計情報の収集
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、Windows サービスのパフォーマンスの統計情報を収集する手順とオプションについて説明します。  

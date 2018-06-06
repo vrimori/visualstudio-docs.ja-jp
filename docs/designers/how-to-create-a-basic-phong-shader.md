@@ -1,6 +1,7 @@
 ---
 title: '方法: 基本フォン シェーダーを作成する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f81d6e34a6fe0932a8bccae2202c1640b8befb76
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9208879400846d7acfa2cb89d1c30efaa65631a0
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746586"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>方法: 基本フォン シェーダーを作成する
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 > [!NOTE]
 > この図では、シェーダーの効果を分かりやすくするために、シェーダーの **MaterialDiffuse** パラメーターを使用してオレンジ色が指定されています。また、**MaterialSpecular** パラメーターと **MaterialSpecularPower** パラメーターを使用して、金属のような仕上がりが指定されています。 マテリアル パラメーターについては、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。
 
- ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-lighting-graph.png "Digit-Lighting-Graph")
+ ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-lighting-graph.png)
 
  シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 04/19/2018
 >
 > **MaterialSpecularPower** プロパティは、反射ハイライトの輝度を決定します。 反射輝度が高い場合は、よりくすんだ、より局部的なハイライトがシミュレートされます。 反射輝度が非常に低い場合は、広範囲に及ぶ強いハイライトがシミュレートされ、サーフェイス全体の色が過飽和状態になり隠されます。
 
- ![モデルに適用されたフォン ライティング](../designers/media/digit-lighting-model.png "Digit-Lighting-Model")
+ ![モデルに適用されたフォン光源](../designers/media/digit-lighting-model.png)
 
  3D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 

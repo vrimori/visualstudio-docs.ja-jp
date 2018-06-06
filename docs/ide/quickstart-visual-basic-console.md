@@ -14,17 +14,18 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 44c996e0e896a125a0d0ab9342e63b81ad2b9b24
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 17d95ed3ceeaa93110fa17b301e8d37ed87f073d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766244"
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>クイックスタート: Visual Studio で Visual Basic を使用して初めてコンソール アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、コンソールで実行される簡単な Visual Basic アプリケーションを作成します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -32,7 +33,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. Visual Studio 2017 を開きます。
 
-2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 3. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Basic]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[Console App (.NET Core)]** を選択します。 プロジェクトに *HelloWorld* という名前を付けます。
 
@@ -68,7 +69,8 @@ IDE で **[Hello World]** ボタンをクリックした場合、デバッグ �
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
-   これにより、キー入力があるまで、プログラムは一時停止状態となります。
+
+    これにより、キー入力があるまで、プログラムは一時停止状態となります。
 
 2. メニュー バーで **[ビルド]** > **[ソリューションのビルド]** の順に選択します。
 

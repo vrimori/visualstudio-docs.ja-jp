@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 13f06279857897ba1562c157a7ffa1c76dd3c6c8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 020bdb53a62d49eeaf3431c7cca45198c9a2266d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751781"
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用
 Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010 アプリケーションの分離単体テストの作成に役立つ一連のライブラリが用意されています。 エミュレーターは、[Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 分離フレームワークで [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) を使用して、SharePoint API の最も一般的なオブジェクトおよびメソッドを模倣する、軽量なメモリ内オブジェクトを作成します。 SharePoint メソッドがエミュレートされていない場合、またはエミュレーターの既定の動作を変更する場合は、Fakes shim を作成して必要な結果を提供できます。
@@ -33,7 +34,7 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
 ##  <a name="BKMK_The_AppointmentsWebPart_example"></a> AppointmentsWebPart の例
  AppointmentsWebPart を使用すると、予定の SharePoint リストを表示および管理できます。
 
- ![予定 Web パーツ](../test/media/ut_emulators_appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")
+ ![予定 Web パーツ](../test/media/ut_emulators_appointmentswebpart.png)
 
  この例では、Web パーツの 2 つのメソッドをテストします。
 
@@ -118,7 +119,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
 3.  `Microsoft.SharePoint.Emulators` の **[オンライン]** カテゴリを検索し、**[インストール]** を選択します。
 
- ![SharePoint エミュレーター NuGet パッケージ](../test/media/ut_emulators_nuget.png "UT_EMULATORS_Nuget")
+ ![SharePoint エミュレーター NuGet パッケージ](../test/media/ut_emulators_nuget.png)
 
 ###  <a name="BKMK__Running_a_test_method_in_the_emulation_context"></a> エミュレーションを使用してテスト メソッドを実行する
  パッケージをインストールすると、必要なライブラリへの参照がプロジェクトに追加されます。 既存のテスト クラスでエミュレーターを使いやすくするには、名前空間 `Microsoft.SharePoint.Emulators` と `Microsoft.QualityTools.Testing.Emulators` を追加します。
@@ -155,7 +156,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
  テスト メソッドが実行されると、エミュレーター ランタイムは、Microsoft Fake を呼び出してコードを SharePoint メソッドに動的に挿入し、これらのメソッドへの呼び出しを、Microsoft.SharePoint.Fakes.dll で宣言されているデリゲートに迂回させます。 Microsoft.SharePoint.Emulators.dll は、エミュレートされたメソッドのデリゲートを実装し、SharePoint の実際の動作を正確に模倣します。 テスト メソッドまたはテスト対象のコンポーネントが SharePoint メソッドを呼び出した結果として生じる動作は、エミュレーションの動作です。
 
- ![エミュレーターの実行フロー](../test/media/ut_emulators_flowchart.png "UT_EMULATORS_FlowChart")
+ ![エミュレーターの実行フロー](../test/media/ut_emulators_flowchart.png)
 
 ##  <a name="BKMK_Creating_dual_use_classes_and_methods"></a> 二重用途のクラスおよびメソッドを作成する
  実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストの両方に使用できるメソッドを作成するには、オーバーロードされたコンストラクター `SharePointEmulationScope(EmulationMode)` を使用して、テスト メソッド コードをラップします。 `EmulationMode` 列挙型の 2 つの値は、スコープがエミュレーターを使用するかどうか  (`EmulationMode.Enabled`)、またはスコープが SharePoint API を使用するかどうか (`EmulationMode.Passthrough`) を指定します。
@@ -266,11 +267,11 @@ namspace MySPAppTests
 
 1.  エミュレートされていない SharePoint クラスに shim を使用する場合は、Microsoft.SharePoint.fakes ファイルを編集し、shim が使用されたクラスの一覧にそのクラスを追加します。 「[Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)」の [stub と shim のコード生成の構成](http://msdn.microsoft.com/library/hh708916.aspx#bkmk_configuring_code_generation_of_stubs)に関するセクションを参照してください。
 
-     ![ソリューション エクスプローラーの Fakes フォルダー](../test/media/ut_emulators_fakesfilefolder.png "UT_EMULATORS_FakesFileFolder")
+     ![ソリューション エクスプローラーの Fakes フォルダー](../test/media/ut_emulators_fakesfilefolder.png)
 
 2.  Microsoft SharePoint エミュレーター パッケージのインストール後、Microsoft.SharePoint.Fakes ファイルを編集した場合、少なくとも 1 回はテスト プロジェクトをリビルドします。 プロジェクトをビルドすると、ディスク上のプロジェクト ルート フォルダーに **FakesAssembly** フォルダーが作成され、設定されます。
 
-     ![FakesAssembly フォルダー](../test/media/ut_emulators_fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")
+     ![FakesAssembly フォルダー](../test/media/ut_emulators_fakesassemblyfolder.png)
 
 3.  **FakesAssembly** フォルダーにある **Microsoft.SharePoint.14.0.0.0.Fakes.dll** アセンブリに参照を追加します。
 

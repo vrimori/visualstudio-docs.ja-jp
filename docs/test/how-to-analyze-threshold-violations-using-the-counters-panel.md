@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストのしきい値違反| Microsoft Docs
+title: Visual Studio でのロード テストのしきい値違反
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: 0126d7b7-0538-4ea9-9046-6556654b3b9d
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6acb9eec16107134dc03765da82008a01b599e4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fdb54122344ce91fe873d854768d0890a83f198a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751807"
 ---
 # <a name="how-to-analyze-threshold-violations-using-the-counters-panel-in-load-test-analyzer"></a>方法: ロード テスト アナライザーのカウンター パネルを使用して、しきい値違反を分析する
 
@@ -21,21 +23,21 @@ ms.lasthandoff: 04/16/2018
 
  しきい値違反は、特定のパフォーマンス カウンターに関連付けられ、パフォーマンス カウンターがしきい値を上回ったこと、または下回ったことを示します。 [カウンター] パネルのアイコンがしきい値違反を示します。
 
- ![[カウンター] パネルのコンピューター ノード](../test/media/ltest_compnode.png "LTest_CompNode")
+ ![カウンター パネルのコンピューター ノード](../test/media/ltest_compnode.png)
 
  しきい値違反を示すアイコンは、違反が発生したカウンターが存在するツリー ノードからルートまで反映されます。 また、ツリーが折りたたまれていて表示されないカウンターに関する違反の警告もアイコンに表示されます。 このアイコンの例は、前の図の [カウンター] パネル内にある**コンピューター ノード**に示されています。
 
  アイコンは以下のいずれかです。
 
- ![しきい値違反なし](../test/media/icon_ltest_1.gif "Icon_LTest_1") しきい値違反なし。
+ ![しきい値違反なし](../test/media/icon_ltest_1.gif) しきい値違反がない。
 
- ![最後の間隔における重大なしきい値違反](../test/media/icon_ltest_2.gif "Icon_LTest_2") 重大なしきい値違反が最後の間隔で発生した。
+ ![最後の間隔における重大なしきい値違反](../test/media/icon_ltest_2.gif) 重大なしきい値違反が最後の間隔で発生した。
 
- ![以前の間隔における重大なしきい値違反](../test/media/icon_ltest_3.gif "Icon_LTest_3") 重大なしきい値違反が以前の間隔で発生した。
+ ![以前の間隔における重大なしきい値違反](../test/media/icon_ltest_3.gif) 重大なしきい値違反が以前の間隔で発生した。
 
- ![最後の間隔における警告しきい値違反](../test/media/icon_ltest_4.gif "Icon_LTest_4") 警告しきい値違反が最後の間隔で発生した。
+ ![最後の間隔における警告しきい値違反](../test/media/icon_ltest_4.gif) 警告しきい値違反が最後の間隔で発生した。
 
- ![以前の間隔における警告しきい値違反](../test/media/icon_ltest_5.gif "Icon_LTest_5") 警告しきい値違反が前の間隔で発生した。
+ ![以前の間隔における警告しきい値違反](../test/media/icon_ltest_5.gif) 警告しきい値違反が前の間隔で発生した。
 
 ## <a name="to-analyze-threshold-violations-in-the-counters-panel"></a>[カウンター] パネルのしきい値違反を分析するには
 

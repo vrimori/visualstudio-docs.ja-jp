@@ -9,11 +9,12 @@ description: 管理者がサブスクリプションの割り当てを削除す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 1d96cc46a43e945f4ff59ba02ea6c132385f5908
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: e759733738d35ea71cd8133179ccca1ee1037d22
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476457"
 ---
 # <a name="deleting-assignments-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの割り当てを削除する
 
@@ -22,4 +23,4 @@ ms.lasthandoff: 04/27/2018
 2.  選択したサブスクライバーを削除するには、**[削除]** をクリックします。 
 3.  削除の確認を求めるメッセージが表示されたら、**[OK]** をクリックします。 
 
-![サブスクライバーの削除](_img\delete-license\delete-subscribers.png)
+    <img alt="Delete subscribers" src="_img\delete-license\delete-subscribers.png" style="border: 1px solid #CCCCCC" />

@@ -1,6 +1,7 @@
 ---
-title: Visual Studio でのコード化された UI テスト ログを使用したコード化された UI テストの分析 | Microsoft Docs
+title: Visual Studio でのコード化された UI テスト ログを使用したコード化された UI テストの分析
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 21bee57859f067afee884693fe8a808771374f04
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f28ae1e73a22be7e1e9a677df9fb68fc4c954926
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750728"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>コード化された UI テスト ログを使用したコード化された UI テストの分析
 
@@ -71,17 +73,17 @@ ms.lasthandoff: 04/16/2018
 
 4.  テスト エクスプローラーの結果で、**[出力]** リンクを選択します。
 
-     ![テスト エクスプローラーの出力リンク](../test/media/cuit_htmlactionlog1.png "CUIT_HTMLActionLog1")
+     ![テスト エクスプローラーの出力リンク](../test/media/cuit_htmlactionlog1.png)
 
      この操作によって表示されるテストの出力に、操作ログへのリンクが含まれています。
 
-     ![コード化された UI テストからの結果と出力リンク](../test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")
+     ![コード化された UI テストからの結果と出力リンク](../test/media/cuit_htmlactionlog2.png)
 
 5.  *UITestActionLog.html* リンクを選択します。
 
      Web ブラウザーにログが表示されます。
 
-     ![コード化された UI テストのログ ファイル](../test/media/cuit_htmlactionlog3.png "CUIT_HTMLActionLog3")
+     ![コード化された UI テストのログ ファイル](../test/media/cuit_htmlactionlog3.png)
 
 ## <a name="see-also"></a>関連項目
 
