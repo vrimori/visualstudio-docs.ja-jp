@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4932f6761ecb8c915d9d919318af6403680eedaf
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 813f637f3bb12c3f3f4eec75abf1423de06f9707
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751846"
 ---
 # <a name="start-view"></a>スタート ビュー
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/24/2018
 
 スタート ビューには、次の 2 つの主要なセクションが含まれています、*ウォーターマーク*と**スキーマ セットの詳細**ウィンドウです。 さらに、XSD デザイナーのすべてのビューで使用できるツール バーも含まれています。
 
-![XML スキーマ デザイナーのスタート ビュー](../xml-tools/media/xsddesigner_startview.gif "XSDDesigner_StartView")
+![XML スキーマ デザイナーの開始ビュー](../xml-tools/media/xsddesigner_startview.gif)
 
 ## <a name="watermark"></a>ウォーターマーク
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/24/2018
 
 スタート ビュー間を移動することができます、[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)と[グラフ ビュー](../xml-tools/graph-view.md) XML スキーマ デザイナーのツールバーからです。
 
-![XML スキーマ デザイナーのツールバー](../xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")
+![XML スキーマ デザイナーのツール バー](../xml-tools/media/xsdstartviewtoolbar.gif)
 
 スタート ビューがアクティブな場合に、XSD デザイナーのツール バーに次のボタンが表示されます。
 

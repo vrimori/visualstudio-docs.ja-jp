@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 実行時における VSTO ワークシートにコントロールを追加するアドインのプロジェクト |Microsoft ドキュメント'
+title: 'チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,16 +18,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47c647e2b3af6941f7b4a4d6f28eccfac2b31e2d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6f972f2daa734bbabcea39ada9270acb7644db6
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767338"
 ---
-# <a name="walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>チュートリアル : 実行時における VSTO アドイン プロジェクトのワークシートへのコントロールの追加
-  Excel VSTO アドインを使用して、任意の開いているワークシートにコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがワークシートに <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加できるようにする方法を説明します。 詳細については、次を参照してください。[を実行時に Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。  
+# <a name="walkthrough-add-controls-to-a-worksheet-at-runtime-in-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。
+  Excel VSTO アドインを使用して、任意の開いているワークシートにコントロールを追加できます。 このチュートリアルでは、リボンを使用してユーザーがワークシートに <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加できるようにする方法を説明します。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。  
   
- **適用されます:**このトピックの情報は、Excel の VSTO アドイン プロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
+ **適用されます:** このトピックの情報は、Excel の VSTO アドイン プロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
  このチュートリアルでは、次の作業について説明します。  
   
@@ -46,21 +47,21 @@ ms.lasthandoff: 04/16/2018
   
 -   Excel  
   
-## <a name="creating-a-new-excel-vsto-add-in-project"></a>新しい Excel VSTO アドイン プロジェクトの作成  
+## <a name="create-a-new-excel-vsto-add-in-project"></a>新しい Excel VSTO アドイン プロジェクトを作成します。  
  まず、Excel VSTO アドイン プロジェクトを作成します。  
   
-#### <a name="to-create-a-new-excel-vsto-add-in-project"></a>新しい Excel VSTO アドイン プロジェクトを作成するには  
+### <a name="to-create-a-new-excel-vsto-add-in-project"></a>新しい Excel VSTO アドイン プロジェクトを作成するには  
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、名前の Excel VSTO アドイン プロジェクトを作成**ExcelDynamicControls**です。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
   
 2.  参照を追加、 **Microsoft.Office.Tools.Excel.v4.0.Utilities.dll**アセンブリ。 この参照は、このチュートリアルの後半で Windows フォーム コントロールをワークシートにプログラムを使用して追加するのに必要です。  
   
-## <a name="providing-a-ui-to-add-controls-to-a-worksheet"></a>ワークシートにコントロールを追加するための UI の提供  
+## <a name="provide-a-ui-to-add-controls-to-a-worksheet"></a>コントロールをワークシートに追加する UI を提供します。  
  Excel のリボンにカスタム タブを追加します。 ユーザーはタブにあるチェック ボックスをオンにして、ワークシートにコントロールを追加できます。  
   
 #### <a name="to-provide-a-ui-to-add-controls-to-a-worksheet"></a>ワークシートにコントロールを追加するための UI を提供するには  
   
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
 2.  **新しい項目の追加**ダイアログ ボックスで、**リボン (ビジュアル デザイナー)**、クリックして**追加**です。  
   
@@ -91,10 +92,10 @@ ms.lasthandoff: 04/16/2018
     |**Name**|**ListObject**|  
     |**Label**|**ListObject**|  
   
-## <a name="adding-controls-to-the-worksheet"></a>ワークシートへのコントロールの追加  
+## <a name="add-controls-to-the-worksheet"></a>ワークシートにコントロールを追加します。  
  マネージ コントロールは、ホスト項目に対してのみ追加できます。これは、コンテナーとして機能します。 VSTO アドイン プロジェクトは任意の開いているブックを操作するため、VSTO アドインはワークシートをホスト項目に変換するか、または既存のホスト項目を取得してから、コントロールを追加します。 開いているワークシートに基づく <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目を生成するように、各コントロールのクリック イベント ハンドラーにコードを追加します。 次に、ワークシートの現在選択されている位置に <xref:Microsoft.Office.Tools.Excel.Controls.Button>、<xref:Microsoft.Office.Tools.Excel.NamedRange>、および <xref:Microsoft.Office.Tools.Excel.ListObject> を追加します。  
   
-#### <a name="to-add-controls-to-a-worksheet"></a>ワークシートにコントロールを追加するには  
+### <a name="to-add-controls-to-a-worksheet"></a>ワークシートにコントロールを追加するには  
   
 1.  リボン デザイナーで、ダブルクリック**ボタン**です。  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#2)]
      [!code-vb[Trin_Excel_Dynamic_Controls#2](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#2)]  
   
-3.  **ソリューション エクスプ ローラー**、Ribbon1.cs または Ribbon1.vb を選択します。  
+3.  **ソリューション エクスプ ローラー** *Ribbon1.cs*または*Ribbon1.vb*です。  
   
 4.  **ビュー**  メニューのをクリックして**デザイナー**です。  
   
@@ -134,30 +135,30 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/Ribbon1.cs#1)]
      [!code-vb[Trin_Excel_Dynamic_Controls#1](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/Ribbon1.vb#1)]  
   
-## <a name="removing-controls-from-the-worksheet"></a>ワークシートからコントロールを削除する。  
- ワークシートが保存されて閉じられるとき、コントロールは保持されません。 ワークシートを保存する前に、生成されたすべての Windows フォーム コントロールをプログラムを使用して削除する必要があります。そうしないと、ワークシートを再び開いたときに、コントロールのアウトラインのみが表示されます。 生成されたホスト項目のコントロール コレクションから Windows フォーム コントロールを削除するコードを <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントに追加します。 詳細については、「 [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)」を参照してください。  
+## <a name="remove-controls-from-the-worksheet"></a>ワークシートからコントロールを削除します。  
+ ワークシートが保存されて閉じられるとき、コントロールは保持されません。 ワークシートを保存する前に、生成されたすべての Windows フォーム コントロールをプログラムを使用して削除する必要があります。そうしないと、ワークシートを再び開いたときに、コントロールのアウトラインのみが表示されます。 生成されたホスト項目のコントロール コレクションから Windows フォーム コントロールを削除するコードを <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントに追加します。 詳細については、次を参照してください。 [Office 文書で動的コントロールを永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)です。  
   
-#### <a name="to-remove-controls-from-the-worksheet"></a>ワークシートからコントロールを削除するには  
+### <a name="to-remove-controls-from-the-worksheet"></a>ワークシートからコントロールを削除するには  
   
-1.  **ソリューション エクスプ ローラー**、ThisAddIn.cs または ThisAddIn.vb を選択します。  
+1.  **ソリューション エクスプ ローラー** *ThisAddIn.cs*または*ThisAddIn.vb*です。  
   
 2.  **ビュー**  メニューのをクリックして**コード**です。  
   
-3.  次のメソッドを ThisAddIn クラスに追加します。 このコードはブックの最初のワークシートを取得し、`HasVstoObject` メソッドを使用して、ワークシートにワークシート オブジェクトが生成されているかどうかを確認します。 生成されたワークシート オブジェクトにコントロールがある場合、コードはそのワークシート オブジェクトを取得し、コントロール コレクションを反復処理してコントロールを削除します。  
+3.  `ThisAddIn` クラスに次のメソッドを追加します。 このコードはブックの最初のワークシートを取得し、`HasVstoObject` メソッドを使用して、ワークシートにワークシート オブジェクトが生成されているかどうかを確認します。 生成されたワークシート オブジェクトにコントロールがある場合、コードはそのワークシート オブジェクトを取得し、コントロール コレクションを反復処理してコントロールを削除します。  
   
      [!code-csharp[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#6)]
      [!code-vb[Trin_Excel_Dynamic_Controls#6](../vsto/codesnippet/VisualBasic/Trin_Excel_Dynamic_Controls/ThisAddIn.vb#6)]  
   
-4.  C# では、<xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントのイベント ハンドラーを作成する必要があります。 このコードを `ThisAddIn_Startup` メソッドに配置できます。 イベント ハンドラーの作成の詳細については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)です。 `ThisAddIn_Startup` メソッドを次のコードに置き換えます。  
+4.  C# では、<xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> イベントのイベント ハンドラーを作成する必要があります。 このコードを `ThisAddIn_Startup` メソッドに配置できます。 イベント ハンドラーの作成の詳細については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成](../vsto/how-to-create-event-handlers-in-office-projects.md)です。 `ThisAddIn_Startup` メソッドを次のコードに置き換えます。  
   
      [!code-csharp[Trin_Excel_Dynamic_Controls#5](../vsto/codesnippet/CSharp/Trin_Excel_Dynamic_Controls/ThisAddIn.cs#5)]  
   
-## <a name="testing-the-solution"></a>ソリューションのテスト  
- リボンのカスタム タブからコントロールを選択し、ワークシートに追加します。 ワークシートを保存すると、これらのコントロールは削除されます。  
+## <a name="test-the-solution"></a>ソリューションをテストします。  
+ リボンのカスタム タブから選択して、ワークシートにコントロールを追加します。 ワークシートを保存すると、これらのコントロールは削除されます。  
   
-#### <a name="to-test-the-solution"></a>ソリューションをテストするには  
+### <a name="to-test-the-solution"></a>ソリューションをテストするには  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  キーを押して**f5 キーを押して**プロジェクトを実行します。  
   
 2.  Sheet1 で任意のセルを選択します。  
   

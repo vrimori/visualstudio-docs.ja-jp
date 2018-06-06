@@ -18,11 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8b2fc6b7a729be412b48c331eb5029df617d35c4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7c9fd9337682abbcd7325a849b95846be3af118d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747181"
 ---
 # <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>チュートリアル: Windows フォームでの簡単な WCF サービスの作成
 このチュートリアルは、単純な [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] サービスを作成し、テストして、Windows フォーム アプリケーションからアクセスする方法を例示しています。
@@ -37,12 +38,12 @@ ms.lasthandoff: 04/26/2018
 
 2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#** ノードをクリック**WCF**で始まり、 **WCFサービス ライブラリ**です。 をクリックして**OK**プロジェクトを開きます。
 
-     ![WCF サービス ライブラリ プロジェクト](../data-tools/media/wcf1.PNG "wcf1")
+     ![WCF サービス ライブラリ プロジェクト](../data-tools/media/wcf1.png)
 
     > [!NOTE]
     >  これにより、テストしてアクセスすることが可能な機能するサービスが作成されます。 次の 2 つの手順は、別のデータ型を使用するように既定の方法を変更する方法を示しています。 実際のアプリケーションで、独自の関数をサービスに追加することもできます。
 
-3.  ![IService1 ファイル](../data-tools/media/wcf2.png "wcf2")
+3.  ![IService1 ファイル](../data-tools/media/wcf2.png)
 
      **ソリューション エクスプ ローラー**、IService1.vb または IService1.cs をダブルクリックし、次の行を探します。
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/26/2018
 
      上記のコードで、`<OperationContract()>` または `[OperationContract]` 属性に注意してください。 これらの属性は、サービスによって公開されている任意のメソッドに必要です。
 
-4.  ![Service1 ファイル](../data-tools/media/wcf3.png "wcf3")
+4.  ![Service1 ファイル](../data-tools/media/wcf3.png)
 
      **ソリューション エクスプ ローラー**、Service1.vb または Service1.cs をダブルクリックし、次の行を探します。
 
@@ -76,15 +77,15 @@ ms.lasthandoff: 04/26/2018
 
 2.  **WCF テスト クライアント**フォームをダブルクリックして、 **GetData()** 対象メソッドの**IService1**です。 **GetData**タブが表示されます。
 
-     ![GetData&#40; &#41;メソッド](../data-tools/media/wcf4.png "wcf4")
+     ![GetData&#40; &#41;メソッド](../data-tools/media/wcf4.png)
 
 3.  **要求**ボックスで、選択、**値**フィールドとタイプ`Hello`です。
 
-     ![値フィールド](../data-tools/media/wcf5.png "wcf5")
+     ![[値] フィールド](../data-tools/media/wcf5.png)
 
 4.  クリックして、 **Invoke**ボタンをクリックします。 場合、**セキュリティ警告** ダイアログ ボックスが表示されたら、をクリックして**OK**です。 結果が表示されます、**応答**ボックス。
 
-     ![応答 ボックスに結果](../data-tools/media/wcf6.png "wcf6")
+     ![[応答] ボックスに結果が表示される](../data-tools/media/wcf6.png)
 
 5.  **ファイル** メニューのをクリックして**終了**テスト フォームを閉じます。
 
@@ -96,13 +97,13 @@ ms.lasthandoff: 04/26/2018
 
 2.  **新しいプロジェクト**] ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#** ノードを選択**Windows**、し、[ **Windows フォーム アプリケーション**です。 をクリックして**OK**プロジェクトを開きます。
 
-     ![Windows フォーム アプリケーション プロジェクト](../data-tools/media/wcf7.png "wcf7")
+     ![Windows フォーム アプリケーション プロジェクト](../data-tools/media/wcf7.png)
 
 3.  右クリック**WindowsApplication1**  をクリック**サービス参照の追加**です。 **サービス参照の追加** ダイアログ ボックスが表示されます。
 
 4.  **サービス参照の追加**ダイアログ ボックスで、をクリックして**Discover**です。
 
-     ![[サービス参照の追加] ダイアログ ボックス](../data-tools/media/wcf8.png "wcf8")
+     ![[サービス参照の追加] ダイアログ ボックス](../data-tools/media/wcf8.png)
 
      **Service1**に表示される、 **Services**ウィンドウです。
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  **ツールボックス**、ドラッグ、`TextBox`コントロール、`Label`コントロール、および`Button`コントロールをフォームにします。
 
-     ![フォームにコントロールを追加する](../data-tools/media/wcf9.png "wcf9")
+     ![フォームへのコントロールの追加](../data-tools/media/wcf9.png)
 
 3.  `Button` をダブルクリックし、`Click` イベント ハンドラーに次のコードを追加します。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  キーを押して**f5 キーを押して**プロジェクトを実行します。 いくつかのテキストを入力し、ボタンをクリックします。 ラベルに「You entered:」と入力したテキストが表示されます。
 
-     ![結果を表示するフォーム](../data-tools/media/wcf10.png "wcf10")
+     ![結果を表示するフォーム](../data-tools/media/wcf10.png)
 
 ## <a name="see-also"></a>関連項目
 

@@ -22,20 +22,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0424c6561b063b17f384215021a1300122dcbb1c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd566eacba7f94cfe7617e9396440c90dc32f51e
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767137"
 ---
-# <a name="how-to-add-a-creator-method"></a>方法: Creator メソッドを追加する
-  Creator メソッドは、エンティティのデータ ソースに新しいデータを追加します。 クリックすると、ビジネス データ接続 (BDC) サービスがこのメソッドを呼び出して、**新しい項目の**モデルに基づいているリストのリボンのボタンです。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
+# <a name="how-to-add-a-creator-method"></a>方法: Creator メソッドを追加
+  Creator メソッドは、エンティティのデータ ソースに新しいデータを追加します。 クリックすると、ビジネス データ接続 (BDC) サービスがこのメソッドを呼び出して、**新しい項目の**ボタンをクリックして、**リボン**モデルに基づいているリストのです。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
 ### <a name="to-add-a-creator-method"></a>Creator メソッドを追加するには  
   
-1.  BDC デザイナーでは、エンティティを選択します。  
+1.  **BDC デザイナー**エンティティを選択します。  
   
-2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
+2.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ** >**BDC メソッドの詳細**です。  
   
      **BDC メソッドの詳細**ウィンドウが開きます。 そのウィンドウの詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
      [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
  [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   

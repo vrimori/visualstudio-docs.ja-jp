@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a68e7d039fe0b60faf42ea319bb3a3bd4f888d3b
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 016538bded47a5186294c161cc7f310b26818d15
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764220"
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
 
@@ -26,9 +27,9 @@ ms.lasthandoff: 05/22/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 年 1 をインストールする必要があります、 **.NET Framework**と **.NET Core**開発ワークロードがインストールされています。
+* インストールされている Visual Studio 2017 が必要とします。**NET デスクトップ開発**ワークロードと **。NET コア**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/22/2018
 
     Visual Studio によってプロジェクトが作成されます。
 
-## <a name="deploy-to-a-local-folder"></a>ローカル フォルダーに配置します。
+## <a name="deploy-to-a-local-folder"></a>ローカル フォルダーに配置する
 
 1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
 

@@ -18,11 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4aea2750e3900beb0aaa62156c215376ff16d1ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f870bce3abea444d6a04c0076d7110345c55ea7c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750429"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
 ドメイン固有言語 (DSL) を定義するのには、テンプレートから Visual Studio ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/26/2018
 
 1.  ソリューションを作成、**ドメイン固有言語**テンプレートで、下にあります**その他のプロジェクトの種類/機能拡張**で、**新しいプロジェクト** ダイアログ ボックス。
 
-     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png)
 
      クリックすると**OK**、**ドメイン固有言語ウィザード**開きテンプレート DSL ソリューションの一覧が表示されます。
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/26/2018
 
  ユーザー インターフェイスは次の図のようになります。
 
- ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL デザイナー](../modeling/media/dsl_designer.png)
 
  このソリューションはドメイン固有言語を定義します。 詳細については、次を参照してください。[ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)です。
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 04/26/2018
 
  作成したソリューションを実行する場合、**最小限言語**実験用の Visual Studio のテンプレートは次の例のようになります。
 
- ![](../modeling/media/dsl_min.png "DSL_min")
+ ![](../modeling/media/dsl_min.png)
 
  ツールを試してみます。 要素を作成して接続します。
 
@@ -139,11 +140,11 @@ ms.lasthandoff: 04/26/2018
 
  次の図に、このトピックで例として使用する DSL のクラスとリレーションシップの部分を示します。
 
- ![リレーションシップの埋め込みと参照リレーションシップ](../modeling/media/music_classes.png "Music_Classes")
+ ![埋め込みリレーションシップと参照リレーションシップ](../modeling/media/music_classes.png)
 
  次の図は、この DSL のモデル例です。
 
- ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png "Music_Instance")
+ ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png)
 
 > [!NOTE]
 >  "モデル" は、ユーザーが作成する DSL のインスタンスを指し、通常は図として表示されます。 このトピックでは、DSL を使用するときに表示される DSL 定義図とモデル図の両方について説明します。
@@ -235,7 +236,7 @@ ms.lasthandoff: 04/26/2018
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>図にシェイプとして表示する要素のクラスを定義するには
 
-1.  **定義および」の説明に従ってドメイン クラスをテスト**[ドメイン クラスを定義する](#classes)**です。** 
+1.  **定義および」の説明に従ってドメイン クラスをテスト**[ドメイン クラスを定義する](#classes)**です。**
 
     -   クラスの親はルート クラスである必要があります。 つまり、ルート クラスと新しいドメイン クラスの間に埋め込みリレーションシップが存在している必要があります。
 
@@ -285,7 +286,7 @@ ms.lasthandoff: 04/26/2018
 
     4.  各デコレータ名の横にチェック マークが表示されていることを確認します。
 
-     ![図形のマップと [DSL 詳細] ウィンドウ](../modeling/media/dsldetailswindow.png "DslDetailsWindow")
+     ![図形のマップと [DSL 詳細] ウィンドウ](../modeling/media/dsldetailswindow.png)
 
 7.  **ドメイン クラスの要素を作成するためのツールボックス項目を作成します。**
 
@@ -331,7 +332,7 @@ ms.lasthandoff: 04/26/2018
 
  たとえば音楽の Album と Artist が図上にシェイプとして表示される場合、Artist と、そのアーティストが参加した Album を関連付ける ArtistsAppearedOnAlbums というリレーションシップを定義できます。 次の図に示す例を参照してください。
 
- ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png "Music_Instance")
+ ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png)
 
  参照リレーションシップは、同じ型の要素をリンクすることもできます。 たとえば家系図を表す DSL で、親とその子の間のリレーションシップは、Person から Person への参照リレーションシップです。
 
@@ -348,7 +349,7 @@ ms.lasthandoff: 04/26/2018
 
  **リレーションシップの重複により、プロパティを設定する**場合は、同じモデル要素のペアの間、同じクラスの 1 つ以上のリンクが存在します。 たとえば、Teacher が同一 Student に複数の Subject を指導できるように設定できます。
 
- ![コネクタ用のマップのシェイプ](../modeling/media/music_connector.png "Music_Connector")
+ ![コネクタ用の図形マップ](../modeling/media/music_connector.png)
 
  詳細については、次を参照してください。[ドメイン リレーションシップのプロパティ](../modeling/properties-of-domain-relationships.md)と[ドメイン ロールのプロパティ](../modeling/properties-of-domain-roles.md)です。
 
@@ -411,11 +412,11 @@ ms.lasthandoff: 04/26/2018
 ##  <a name="compartments"></a> リストを含む図形を定義する: コンパートメントの図形
  コンパートメント シェイプには、1 つ以上の項目リストが含まれています。 たとえば Music Library DSL では、コンパートメント シェイプを使用して Album (音楽) を表すことができます。 各 Album には Song のリストがあります。
 
- ![図形のコンパートメント](../modeling/media/compartmentshape.png "CompartmentShape")
+ ![コンパートメントの図形](../modeling/media/compartmentshape.png)
 
  DSL 定義でこれを実現する最も簡単な方法は、コンテナーのドメイン クラスを １ つ定義し、各リストを表すドメイン クラスを 1 つずつ定義する方法です。 コンテナー クラスはコンパートメント シェイプにマップされます。
 
- ![マップのシェイプ](../modeling/media/music_mapcomp.png "Music_MapComp")
+ ![図形マップ](../modeling/media/music_mapcomp.png)
 
  詳細については、次を参照してください。[プロパティのコンパートメント図形](../modeling/properties-of-compartment-shapes.md)です。
 
@@ -505,7 +506,7 @@ ms.lasthandoff: 04/26/2018
 
 7.  言語エクスプローラーを開きます。 リスト項目ノードが含まれているコンテナー ノードが表示されることを確認します。
 
- ![DSL のエクスプ ローラーが生成された](../modeling/media/music_explorer.png "Music_Explorer")
+ ![生成された DSL のエクスプローラー](../modeling/media/music_explorer.png)
 
  コンパートメント シェイプを初めてテストした後に、シェイプのプロパティをいくつか調整し、拡張機能を追加したい場合があります。 詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。
 

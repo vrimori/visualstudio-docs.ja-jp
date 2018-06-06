@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: c5c172ff3ec3033b50815efdb0b4ee293853ab1e
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: f91fd6e8c101b674b745c120978a47adb17c9b91
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765376"
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に ASP.NET または ASP.NET Core アプリケーションを公開します。
 
@@ -26,9 +27,9 @@ Azure アカウントをもっていない場合は、ここから [サインア
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET および web 開発**ワークロードと **。NET デスクトップ開発**ワークロード。 アプリについては、.NET Core する必要があります、します。**NET コア**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
 
@@ -81,4 +82,4 @@ Azure アカウントをもっていない場合は、ここから [サインア
 このクイック スタートでは、Visual Studio を使用して Azure へのデプロイの発行プロファイルを作成する方法について学習しました。 パブリッシングを構成することもできます。 プロファイルをインポートしてから Azure App Service の設定を発行します。
 
 > [!div class="nextstepaction"]
-> [発行設定のインポートと Azure への配置](tutorial-import-publish-settings-azure.md)
+> [発行設定のインポートと Azure へのデプロイ](tutorial-import-publish-settings-azure.md)

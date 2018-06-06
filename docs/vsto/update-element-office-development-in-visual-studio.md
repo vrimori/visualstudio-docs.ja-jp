@@ -1,5 +1,5 @@
 ---
-title: '&lt;更新&gt;要素 (Visual Studio での Office 開発) |Microsoft ドキュメント'
+title: '&lt;更新&gt;要素 (Visual Studio での Office 開発)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2f0e1fdc26e285ce9b6a1fd5ecc1aa638fe909b8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c51a7f79165d421f080d05088418d02a48680b66
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767609"
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;更新&gt;要素 (Visual Studio での Office 開発)
   `update`要素は、更新プログラムのソリューションを確認する間隔を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <update  
   enabled>  
   <expiration  
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 |属性|説明|  
 |---------------|-----------------|  
-|`maximumAge`|必須。 値は整数に設定します。|  
+|`maximumAge`|   必須。 値は整数に設定します。|  
 |`unit`|必須。 設定`unit`値は次のいずれかに。<br /><br /> -   **時間**<br />-   **日数**<br />-   **週**|  
   
 ## <a name="example-of-always-checking-for-updates"></a>常に更新プログラムのチェックの例  
@@ -66,27 +67,27 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>コード  
   
-```  
+```xml  
 <vstav3:update enabled="true" />  
 ```  
   
 ## <a name="example-of-setting-a-default-update-interval"></a>既定の更新間隔を設定する例  
   
 ### <a name="description"></a>説明  
- 次のコード例を示しています、 `update` Office ソリューションに対するアプリケーション マニフェストの要素。 このコード例は、「 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。  
+ 次のコード例を示しています、 `update` Office ソリューションに対するアプリケーション マニフェストの要素。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
   
 ### <a name="code"></a>コード  
   
-```  
+```xml  
 <vstav3:update enabled="true">  
     <vstav3:expiration maximumAge="7" unit="days" />  
 </vstav3:update>  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce を使用して Office ソリューションを配置します。](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
+ [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)   
+ [Office ソリューション用配置マニフェストします。](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)  
   
   

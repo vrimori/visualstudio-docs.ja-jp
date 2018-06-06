@@ -11,11 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 907fecd348dba46f6d3375d2d994b04ec1cf1eb5
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 02e6ae6e06daf43a6aec08097df2b37a21d2aaa3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766678"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって IIS にアプリケーションを公開 Visual Studio で発行設定
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/24/2018
 
 * Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 * IIS から発行設定ファイルを生成するには Windows Server 2012 または Windows Server 2016 を実行しているコンピューターが必要し、正しく構成されている IIS Web サーバーの役割をする必要があります。 ASP.NET 4.5 または ASP.NET Core のいずれかをインストールする必要があります。 ASP.NET Core では、次を参照してください。[を IIS に発行](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)です。 ASP.NET 4.5 では、次を参照してください。 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
 
@@ -66,17 +67,17 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成します。
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
+[!INCLUDE [create-publish-settings-iis](../deployment/includes/create-publish-settings-iis.md)]
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+[!INCLUDE [import-publish-settings](../deployment/includes/import-publish-settings-vs.md)]
 
 アプリが正常に配置した後、自動的に開始する必要があります。 Visual Studio から起動はしない場合は、IIS でアプリを起動します。 ASP.NET core アプリケーション プールのフィールドをかどうかを確認する必要があります、 **DefaultAppPool**に設定されている**マネージ コードなし**です。
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、Visual Studio にインポート、および、IIS に ASP.NET アプリケーションを展開する発行設定ファイルを作成します。
+このチュートリアルでは、Visual Studio にインポート、および、IIS に ASP.NET アプリケーションを展開する発行設定ファイルを作成します。 Visual Studio の他の発行オプションの概要をする可能性があります。
 
 > [!div class="nextstepaction"]
 > [配置でのはじめに](../deployment/deploying-applications-services-and-components.md)

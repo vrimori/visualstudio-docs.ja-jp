@@ -19,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0507fe16dd910fe61c4816594125b690c350a1a6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 051285d1a2b3fc1c32a813fbfd8aa778befa0545
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691371"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764876"
 ---
-# <a name="associating-custom-data-with-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能とカスタム データの関連付け
+# <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint ツール拡張機能にカスタム データを関連付ける
   カスタム データは、SharePoint ツール拡張機能の特定のオブジェクトを追加することができます。 これは、機能は、後で、拡張機能の他のコードからアクセスする、拡張機能の 1 つの部分でデータがある場合に便利です。 保存し、データにアクセスするカスタム方法を実装するには、代わりには、拡張機能のオブジェクトとデータを関連付けるし、後で、同じオブジェクトからデータを取得します。  
   
  カスタム データ オブジェクトを追加するは、Visual Studio での特定の項目に関連するデータを保持する場合にも役立ちます。 Visual Studio で、そのため、拡張機能可能性があります機能をいくつかの異なる項目と 1 回では、SharePoint ツール拡張機能が読み込まれます (プロジェクトなどのプロジェクト項目、または**サーバー エクスプ ローラー**ノード) いつでもです。 特定の項目のみに関連するカスタムのデータを使用する場合は、項目を表すオブジェクトをデータを追加できます。  
@@ -87,5 +87,6 @@ ms.locfileid: "34691371"
  [チュートリアル: 項目テンプレート、第 1 部にカスタム動作プロジェクト項目を作成します。](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [方法: SharePoint プロジェクトにプロパティを追加](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
- [方法: カスタム SharePoint プロジェクト項目の種類にプロパティを追加](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md   
+ [方法: プロパティをカスタムの SharePoint プロジェクト項目の種類に追加する](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
+   
  

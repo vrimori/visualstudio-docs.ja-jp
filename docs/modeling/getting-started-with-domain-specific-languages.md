@@ -9,11 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 61fdb4b652b7fe74f3baf80c6e9d6332914a9a1e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 77fe0d04b49cf12401c38b4a8842a14d6f84ccd2
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750260"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>ドメイン固有言語の概要
 このトピックを定義すると、Visual Studio for Modeling SDK で作成したドメイン固有言語 (DSL) を使用して基本的な概念について説明します。
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/26/2018
 
  DSL を設計するときに、Visual Studio Integration Extension (VSIX) パッケージの一部として配布できます。 ユーザーは、Visual Studio での DSL を使用します。
 
- ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](../modeling/media/familyt_instance.png "FamilyT_Instance")
+ ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプローラー](../modeling/media/familyt_instance.png)
 
  表記は、DSL の一部のみです。 表記法、と共に、VSIX パッケージには、ユーザーを編集し、そのモデルから情報の生成のために適用可能なツールが含まれています。
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  をクリックして**ドメイン固有言語デザイナー**です。
 
-     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png)
 
 4.  **名前**ボックスに、入力**FamilyTree**です。 **[OK]** をクリックします。
 
@@ -87,7 +88,7 @@ ms.lasthandoff: 04/26/2018
 
  ユーザー インターフェイスは次の図のようになります。
 
- ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL デザイナー](../modeling/media/dsl_designer.png)
 
  このソリューションはドメイン固有言語を定義します。 詳細については、次を参照してください。[ドメイン固有言語ツールのユーザー インターフェイスの概要](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)です。
 
@@ -136,7 +137,7 @@ ms.lasthandoff: 04/26/2018
 
  実験用の Visual Studio は次の例のようになります。
 
- ![](../modeling/media/dsl_min.png "DSL_min")
+ ![](../modeling/media/dsl_min.png)
 
 ### <a name="the-content-of-a-model"></a>モデルのコンテンツ
  DSL のインスタンスであるファイルの内容と呼ばれる、*モデル*です。 モデルに含まれる*モデル * * 要素*と*リンク*要素の間です。 DSL 定義は、どのような種類のモデル要素を指定しへのリンクがモデルに存在できます。 たとえば、最小限の言語のテンプレートから作成された DSL では 1 種類のモデル要素とリンクの 1 つの型。
@@ -196,7 +197,7 @@ ms.lasthandoff: 04/26/2018
 
 1.  DslDefinition 図では、名前を変更する**ExampleModel**に**FamilyTreeModel**、 **ExampleElement**に**Person**、 **ターゲット**に**親**、および**ソース**に**子**です。 これを変更するには、各ラベルをクリックすることができます。
 
-     ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png "FamilyT_Person")
+     ![DSL 定義ダイアグラム&#45;ファミリ ツリー モデル](../modeling/media/familyt_person.png)
 
 2.  要素とコネクタ ツールの名前を変更します。
 
@@ -255,7 +256,7 @@ ms.lasthandoff: 04/26/2018
 
     4.  各新しいデコレータを選択し、[プロパティ] ウィンドウで、設定、**位置**フィールドです。 これは、図形のドメイン プロパティの値の表示場所を決定します。 たとえば、設定**InnerBottomLeft**と**InnerBottomRight**です。
 
-         ![コンパートメント図形定義](../modeling/media/familyt_compartment.png "FamilyT_Compartment")
+         ![コンパートメント図形の定義](../modeling/media/familyt_compartment.png)
 
 3.  デコレーター プロパティにマップします。
 
@@ -271,7 +272,7 @@ ms.lasthandoff: 04/26/2018
 
 6.  .Tt ファイルでは、各ユーザーのプロパティを取得するコードを追加できます。
 
- ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプ ローラー](../modeling/media/familyt_instance.png "FamilyT_Instance")
+ ![ファミリ ツリー ダイアグラム、ツールボックス、およびエクスプローラー](../modeling/media/familyt_instance.png)
 
 ### <a name="define-new-classes"></a>新しいクラスを定義します。
  モデルには、ドメイン クラスとリレーションシップを追加できます。 たとえば、町、および、町に人が続かないことを表す新しいリレーションシップを表す新しいクラスを作成できます。
@@ -297,7 +298,7 @@ ms.lasthandoff: 04/26/2018
 
     1.  クリックして、**参照リレーションシップ**ツールを人 をクリックし、町 をクリックします。
 
-         ![DSL 定義フラグメント: ファミリ ツリー ルート](../modeling/media/familyt_root.png "FamilyT_Root")
+         ![DSL 定義フラグメント: ファミリ ツリー ルート](../modeling/media/familyt_root.png)
 
         > [!NOTE]
         >  参照リレーションシップは、別にモデル ツリーの 1 つの部分からの相互参照を表します。
@@ -322,7 +323,7 @@ ms.lasthandoff: 04/26/2018
 
     2.  使用して、**ダイアグラム要素のマップ**人と町間のリレーションシップに、新しいコネクタをリンクするツールです。
 
-         ![追加された図形マップを使用したファミリ ツリー定義](../modeling/media/familyt_shapemap.png "FamilyT_ShapeMap")
+         ![追加された図形マップを使用したファミリ ツリー定義](../modeling/media/familyt_shapemap.png)
 
 6.  新規町を行うため、要素のツールを作成します。
 

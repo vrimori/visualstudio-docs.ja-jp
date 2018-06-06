@@ -21,11 +21,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 87639a4ebb123415014994dcc1bfa7af1d7fb301
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a3f3dd16bef85ebe8b90dd5f456f4e386113a8b6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745699"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter を使用してデータセットを入力します。
 TableAdapter のコンポーネントは、クエリまたは指定したストアド プロシージャの 1 つまたは複数に基づいて、データベースからデータを含むデータセットを格納します。 Tableadapter を行うことができますも追加、更新、およびデータセットに対して行った変更を保持するデータベースを削除します。 特定のテーブルに関連しないグローバル コマンドを発行することもできます。
@@ -49,7 +50,7 @@ TableAdapter のコンポーネントは、クエリまたは指定したスト�
 ## <a name="tableadapter-overview"></a>TableAdapter の概要
  Tableadapter は、データベース、クエリまたはストアド プロシージャに接続し、返されたデータ、DataTable にデータをデザイナーで生成されるコンポーネントです。 Tableadapter では、データベースに、アプリケーションから更新されたデータを送信することもできます。 上でどのように TableAdapter TableAdapter が関連付けられているテーブルのスキーマに準拠するデータを返す限り、できるだけ多くのクエリを実行することができます。 次の図は、Tableadapter がデータベースとメモリ内の他のオブジェクトと対話する方法を示しています。
 
- ![クライアント アプリケーション内のデータ フロー](../data-tools/media/clientdatadiagram.gif "ClientDataDiagram")
+ ![クライアント アプリケーションのデータ フロー](../data-tools/media/clientdatadiagram.gif)
 
  Tableadapter がでデザインされます、**データセット デザイナー**、TableAdapter のクラスが入れ子になったクラスとして生成されません<xref:System.Data.DataSet>です。 各データセットに固有の個別の名前空間内にあります。 たとえば、という名前のデータセットがある場合`NorthwindDataSet`、Tableadapter に関連付けられている<xref:System.Data.DataTable>内、`NorthwindDataSet`ようになります。、`NorthwindDataSetTableAdapters`名前空間。 プログラムで特定の TableAdapter にアクセスするには、TableAdapter の新しいインスタンスを宣言する必要があります。 例えば:
 
@@ -63,7 +64,7 @@ TableAdapter のコンポーネントは、クエリまたは指定したスト�
  TableAdapter の更新プログラム機能は、情報の量は、TableAdapter ウィザードでは、メインのクエリで使用できるに左右されます。 たとえば、複数のテーブル (JOIN)、スカラー値、ビュー、または集約関数の結果から値をフェッチするように設定された TableAdapter の場合、最初の作成時には、基になるデータベースに更新を戻す機能がありません。 ただし、手動で INSERT、UPDATE、および DELETE コマンドを構成することができます、**プロパティ**ウィンドウです。
 
 ## <a name="tableadapter-queries"></a>TableAdapter クエリ
- ![複数のクエリによる TableAdapter](../data-tools/media/tableadapter.gif "TableAdapter")
+ ![複数のクエリがある TableAdapter](../data-tools/media/tableadapter.gif)
 
  Tableadapter では、その関連付けられたデータ テーブルを入力する複数のクエリを含めることができます。 それぞれのクエリが、関連するデータ テーブルと同じスキーマに従ったデータを返す限り、アプリケーションに必要なクエリをいくつでも TableAdapter に定義できます。 この機能は、さまざまな条件に基づいて異なる結果を読み込む TableAdapter を使用します。
 

@@ -12,11 +12,12 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: fa732c8b2fbf55b1cb2c8b80a06cf1ab18d6b50c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d2e74fca7109a19c789215424526eef6190b568c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752399"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C++ 用の visual Studio data tools
 
@@ -34,11 +35,11 @@ SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 
 
 3.  LocalDB に解凍 Northwind.mdf ファイルをアタッチするのにには、SQL Server Management Studio を使用します。 SQL Server Management Studio が起動したら、(localdb) \MSSQLLocalDB に接続します。
 
-     ![SSMS の接続ダイアログ](../data-tools/media/raddata-ssms-connect-dialog.png "raddata SSMS 接続ダイアログ")
+     ![SSMS の接続 ダイアログ](../data-tools/media/raddata-ssms-connect-dialog.png)
 
      左側のウィンドウで localdb ノードを右クリックしを選択し、**アタッチ**です。
 
-     ![データベースの SSMS アタッチ](../data-tools/media/raddata-ssms-attach-database.png "raddata SSMS アタッチ データベース")
+     ![データベースの SSMS のアタッチ](../data-tools/media/raddata-ssms-attach-database.png)
 
 4.  ODBC の Windows SDK サンプルをダウンロードして、新しい場所に解凍します。 このサンプルでは、データベースと問題のクエリとコマンドへの接続に使用される ODBC の基本的なコマンドを示します。 これらの関数について詳しく知ることができます、 [Microsoft オープン データベース コネクティビティ)](/sql/odbc/microsoft-open-database-connectivity-odbc)です。 (C++ フォルダーには) ソリューションを最初に読み込むときに、ソリューションを Visual Studio の現在のバージョンにアップグレードする Visual Studio が提供されます。 **[はい]** をクリックします。
 
@@ -67,7 +68,7 @@ SQL Server 2005 でのカスタム機能を利用し、後で、使用して、 
 
 8.  F5 キーを押してアプリケーションをビルドし、実行します。 データベースを入力するように要求する、ドライバーからダイアログ ボックスを表示する必要があります。 入力`(localdb)\MSSQLLocalDB`、し確認**信頼された接続を使用する**です。 **[OK]** を押します。 コンソールを接続に成功を示すメッセージが表示されます。 表示されます、コマンド プロンプトの SQL ステートメントで入力することができます。 次の画面は、クエリの例と、結果を示しています。
 
-     ![ODBC のサンプル クエリ出力](../data-tools/media/raddata-odbc-sample-query-output.png "raddata ODBC サンプル クエリの出力")
+     ![ODBC のサンプル クエリの出力](../data-tools/media/raddata-odbc-sample-query-output.png)
 
 ## <a name="see-also"></a>関連項目
 

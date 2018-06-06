@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b95d8396cd96741187ae0146d2f727c3433b3ef
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 7a6ad12c823d0a29bb2d4211f03010e484e79257
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751703"
 ---
 # <a name="graph-view"></a>グラフ ビュー
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/24/2018
 
  次の画像は、デザイン サーフェイスに 6 つのグローバル ノードが表示されたグラフ ビューを示します。
 
- ![XML スキーマ デザイナーのグラフ ビュー](../xml-tools/media/xsddesigner_graphview.gif "XSDDesigner_GraphView")
+ ![XML スキーマ デザイナーのグラフ ビュー](../xml-tools/media/xsddesigner_graphview.gif)
 
 ## <a name="design-surface"></a>デザイン画面
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/24/2018
 
  デザイン サーフェイスが空白の場合、XML エディター、 **XML スキーマ エクスプ ローラー**、され、レベルのウォーターマークが表示されます。 *ウォーターマーク*XSD デザイナーのすべてのビューへのリンクの一覧を示します。
 
- ![XSD デザイナー;グラフ ビュー](../xml-tools/media/xsdgraphviewwatermark.gif "XSDGraphViewWatermark")
+ ![XSD デザイナー (グラフ ビュー)](../xml-tools/media/xsdgraphviewwatermark.gif)
 
  スキーマ セットにエラーがある場合、一覧の最後に "スキーマ セット内のエラーを表示および修正するには、エラー一覧を使用します" というテキストが表示されます。
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/24/2018
 
  グラフ ビューがアクティブな場合に、次の XSD ツール バー ボタンが表示されます。
 
- ![XML スキーマ デザイナーのツールバー](../xml-tools/media/xsdgraphviewtoolbar.gif "XSDGraphViewToolbar")
+ ![XML スキーマ デザイナーのツール バー](../xml-tools/media/xsdgraphviewtoolbar.gif)
 
 |オプション|説明|
 |------------|-----------------|

@@ -1,5 +1,5 @@
 ---
-title: 作成し、Tableadapter を構成します。
+title: Tableadapter の作成および構成
 ms.date: 09/01/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +16,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c59128fe0ed0c1053c044431bbde68fb5906de31
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 76c00f33bfcf277dcad9fdda32661b29e08bbfc3
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748958"
 ---
-# <a name="create-and-configure-tableadapters"></a>作成し、Tableadapter を構成します。
+# <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
 TableAdapter を使用すると、アプリケーションとデータベース間で通信できます。 データベース、クエリまたはストアド プロシージャに接続して、新しいデータを返すか、テーブルまたは既存の fill<xref:System.Data.DataTable>返されたデータです。 Tableadapter では、データベースに、アプリケーションから更新されたデータを送信することもできます。
 
 次の操作のいずれかの操作を行うときの Tableadapter が作成されます。
@@ -40,7 +41,7 @@ Tableadapter の概要については、次を参照してください。 [Table
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter 構成ウィザードを使用します。
 実行、 **TableAdapter 構成ウィザード**を作成または Tableadapter およびそれらに関連する Datatable を編集します。 上で右クリックして既存の TableAdapter を構成することができます、**データセット デザイナー**です。
 
-![テーブル アダプターの構成ウィザードの raddata](../data-tools/media/raddata-table-adapter-configuration-wizard.png "raddata テーブル アダプターの構成ウィザード")
+![raddata テーブル アダプターの構成ウィザード](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
 
 場合は、ツールボックスから新しい TableAdapter をドラッグするときに、**データセット デザイナー**注目、ウィザードが起動し、TableAdapter をソース データを指定するプロンプトが接続するには。 次のページでは、ウィザードは、データベース、SQL ステートメントまたはストアド プロシージャのいずれかと通信するために使用するコマンドの種類を確認します。 (表示されませんこの既にデータ ソースに関連付けられた TableAdapter を構成している場合。)
 
@@ -63,7 +64,7 @@ Tableadapter の概要については、次を参照してください。 [Table
 ## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter の塗りつぶし方法を構成します。
 場合によって、TableAdapter のテーブルのスキーマを変更することができます。 TableAdapter のプライマリに変更するには、`Fill`メソッドです。 Tableadapter の作成がプライマリ`Fill`関連付けられたデータ テーブルのスキーマを定義するメソッド。 プライマリ`Fill`メソッドは、クエリまたはストアド プロシージャが最初に TableAdapter を構成するときに入力したに基づいています。 データセット デザイナーでデータ テーブルの下にある最初の (最上位) メソッドを勧めします。
 
-![複数のクエリによる TableAdapter](../data-tools/media/tableadapter.gif "TableAdapter")
+![複数のクエリがある TableAdapter](../data-tools/media/tableadapter.gif)
 
 TableAdapter に行った変更のメイン`Fill`メソッドは、関連付けられたデータ テーブルのスキーマに反映されます。 たとえば、メインのクエリから列を削除する`Fill`も、メソッドは、関連付けられたデータ テーブルから列を削除します。 さらに、列を削除するメイン`Fill`メソッドは、その TableAdapter の他のクエリから列を削除します。
 

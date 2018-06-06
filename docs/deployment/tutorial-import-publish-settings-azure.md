@@ -11,11 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cf6c17f3017bb1021423b19b32b36749fe0744d
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 88dc37e555f6ceb30584d4a1c17b96506219631a
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766741"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>インポートすることによって Azure App Service にアプリケーションを公開 Visual Studio で発行設定
 
@@ -37,9 +38,9 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**と **.NET Framework**開発ワークロード。 アプリについては、.NET Core も必要があります、 **.NET Core**ワークロード。
+* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET**および **。NET Framework**開発ワークロード。 アプリについては、.NET Core も必要の。**NET コア**ワークロード。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 * Azure App Service を作成します。 詳細については、次を参照してください。 [Visual Studio を使用して Azure に ASP.NET Core web アプリを配置](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)です。 
 
@@ -92,11 +93,11 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+[!INCLUDE [import publish settings](../deployment/includes/import-publish-settings-vs.md)]
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、Visual Studio にインポート、および、Azure App Service に、ASP.NET アプリケーションを展開する発行設定ファイルを作成します。
+このチュートリアルでは、Visual Studio にインポート、および、Azure App Service に、ASP.NET アプリケーションを展開する発行設定ファイルを作成します。 Visual Studio でのパブリッシング オプションの概要をする可能性があります。
 
 > [!div class="nextstepaction"]
 > [配置でのはじめに](../deployment/deploying-applications-services-and-components.md)

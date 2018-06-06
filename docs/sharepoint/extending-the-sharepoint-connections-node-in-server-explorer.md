@@ -17,23 +17,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0eabca43f604d92ecab78dccae281a450f7c0400
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 433923234b890564d21915d56a906fe10060e4ae
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766273"
 ---
-# <a name="extending-the-sharepoint-connections-node-in-server-explorer"></a>サーバー エクスプローラーの [SharePoint 接続] ノードの拡張
+# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。
   使用して Visual Studio で、開発用コンピューターでローカルの SharePoint サイトに接続できる、 **SharePoint 接続**内のノード、**サーバー エクスプ ローラー**ウィンドウです。 このノードでは、階層ツリー ビューで、ローカルの SharePoint サイトのコンポーネントの多くを表示します。 たとえば、ローカル サイトには、リスト、ドキュメント ライブラリ、およびコンテンツの種類を表示できます。 使用しての詳細については**サーバー エクスプ ローラー**ローカルの SharePoint サイトに接続するを参照してください。[参照 SharePoint 接続を使用してサーバー エクスプ ローラー](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)です。  
   
  拡張することができます、 **SharePoint 接続**ノードまたはカスタム ノード型を作成して、ノードの階層に追加することによって、既存のノードの拡張機能を作成します。  
   
-## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>SharePoint 接続 ノードを拡張するためのタスク  
+## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>SharePoint 接続 ノードを拡張するためのタスク
  既存のノードを拡張するを実装する Visual Studio 拡張機能を作成、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>インターフェイスです。 ノードを拡張するときに、独自のショートカット メニュー項目またはカスタム プロパティなどのノードに機能を追加できます。 詳細については、次を参照してください。[する方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)です。  
   
  カスタム ノード型を作成するを実装する Visual Studio 拡張機能を作成、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>インターフェイスです。 表示されていない SharePoint サイトのコンポーネントを表示する場合は、カスタム ノードを作成する**サーバー エクスプ ローラー**既定です。 たとえば、**サーバー エクスプ ローラー**これを行うカスタム ノードを表示しない で、既定では、SharePoint サイトの Web パーツ ギャラリーを追加できますをしません。 詳細については、次を参照してください。[する方法: サーバー エクスプ ローラーにカスタム SharePoint ノードを追加](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)と[チュートリアル: サーバー エクスプ ローラー Web パーツの表示を拡張する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)です。  
   
-## <a name="adding-custom-properties-to-nodes"></a>ノードにカスタム プロパティの追加  
+## <a name="add-custom-properties-to-nodes"></a>カスタム プロパティのノードを追加します。
  ノードを拡張またはカスタム ノード型を作成する場合は、ノードにカスタム プロパティを追加できます。 プロパティが表示されます、**プロパティ**ノードが選択されているときにウィンドウです。  
   
  ノードに追加できるカスタム プロパティの 2 つの種類があります。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
 -   カスタムの読み取り/書き込みデータを表示するプロパティです。 これを行う方法を示すコード例を参照してください。[する方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)です。  
   
-## <a name="getting-data-for-built-in-nodes"></a>組み込みのノードのデータの取得  
+## <a name="get-data-for-built-in-nodes"></a>組み込みのノードのデータを取り出し
  すべての Visual Studio によって提供される組み込みのノードには、それらが表す SharePoint コンポーネントに関する一部のデータが含まれます。 たとえば、SharePoint サイトの一覧を表すノードは、タイトルと、一覧の既定のビューの URL など、リストに関する一部のデータを提供します。  
   
  このデータにアクセスするからのデータ オブジェクトを取得、<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>のプロパティ、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode>興味のあるノードを表すオブジェクト。 データ オブジェクトの型は、ノードの種類によって異なります。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
  使用しての詳細については、<xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>プロパティを参照してください[SharePoint ツール拡張機能とカスタム データを関連付ける](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [チュートリアル: サーバー エクスプ ローラー Web パーツ表示するための拡張](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
  [方法: サーバー エクスプ ローラーにカスタム SharePoint ノードを追加](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)   

@@ -24,20 +24,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4a0607bcd05fcb0d63fcc9bff40dfffeb2c45b8f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 02a6daf7a3155113ecd06d991b337b54fb0d7cd4
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768132"
 ---
-# <a name="how-to-add-a-deleter-method"></a>方法: Deleter メソッドを追加する
-  エンドユーザーがデータ レコードを追加することで SharePoint サイト上の外部リストから削除することができます、*デリーター*モデルへのメソッドです。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
+# <a name="how-to-add-a-deleter-method"></a>方法: Deleter メソッドを追加
+  モデルに Deleter メソッドを追加することで、SharePoint サイトで外部リストのデータ レコードを削除するエンドユーザーを有効にすることができます。 詳細については、次を参照してください。[ビジネス データ接続モデルをデザイン](../sharepoint/designing-a-business-data-connectivity-model.md)です。  
   
 ### <a name="to-create-a-deleter-method"></a>削除子メソッドを作成するには  
   
-1.  BDC デザイナーでは、エンティティを選択します。  
+1.  **BDC デザイナー**エンティティを選択します。  
   
-2.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、 **BDC メソッドの詳細**です。  
+2.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ** > **BDC メソッドの詳細**です。  
   
      **BDC メソッドの詳細**ウィンドウが開きます。 このウィンドウの詳細については、次を参照してください。 [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)です。  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#6](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#6)]
      [!code-vb[SP_BDC#6](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#6)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [ビジネス データ接続モデルの設計](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [方法: Finder メソッドを追加](../sharepoint/how-to-add-a-finder-method.md)   
  [方法: Specificfinder メソッドを追加します。](../sharepoint/how-to-add-a-specific-finder-method.md)   

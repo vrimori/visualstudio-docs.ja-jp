@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c110344499281243628d633d005506af5cd801d0
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 1133d6a67442bde5a9f949553efcffd07e2d3ffe
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751742"
 ---
 # <a name="search-the-schema-set"></a>スキーマ セットを検索します。
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/24/2018
 
  内の部分文字列を入力してキーワード検索を実行する、**検索 SchemaSet**のテキスト ボックス、 **XML スキーマ エクスプ ローラー**ツールバー。
 
- ![XML スキーマ エクスプ ローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
+ ![XML スキーマ エクスプローラー キーワード検索](../xml-tools/media/schemaexplorersearch.gif)
 
  **XML スキーマ エクスプ ローラー**スキーマ セットに、次の属性を検索します。
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/24/2018
 
  をクリックして、ワークスペースに検索結果を追加することができます、**強調表示されたノードをワークスペースに追加**概要結果ペインでボタンをクリックします。
 
- ![XML スキーマ エクスプ ローラー検索結果](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")
+ ![XML スキーマ エクスプローラー検索結果](../xml-tools/media/schemaexplorersearchresult.gif)
 
 ## <a name="clear-search-results"></a>検索結果のクリア
 
