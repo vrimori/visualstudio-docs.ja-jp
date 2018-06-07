@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3309435600991db85540c95dc969206619438e51
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 00704c236e8e0c0453a36add4cb4603b76c31bd9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477289"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (ASP.NET)
 
@@ -49,13 +50,13 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 1. ソリューション エクスプローラーで、`Models/Data.cs` を開き、次の `using` ステートメントをファイルの先頭に追加します。
 
-    ```cs
+    ```csharp
     using System.Threading;
     ```
 
 1. Data.cs で、下記のコード
 
-    ```cs
+    ```csharp
     public class Data
     {
     }
@@ -63,7 +64,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
     を、次のコードで置換します。
 
-    ```cs
+    ```csharp
     public class ServerClass
     {
         const int MIN_ITERATIONS = int.MaxValue / 1000;
@@ -133,7 +134,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 1. ソリューション エクスプローラーで、Controller/HomeControllers.cs を開き、次のコードを
 
-    ```cs
+    ```csharp
     public ActionResult About()
     {
         ViewBag.Message = "Your application description page.";
@@ -144,7 +145,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
     を、次のコードで置換します。
 
-    ```cs
+    ```csharp
     public ActionResult About()
     {
         Models.Simple s = new Models.Simple();
