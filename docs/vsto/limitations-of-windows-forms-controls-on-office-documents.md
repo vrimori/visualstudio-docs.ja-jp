@@ -1,5 +1,5 @@
 ---
-title: Windows の制限事項が Office ドキュメントのコントロールをフォーム |Microsoft ドキュメント
+title: Office ドキュメントでの Windows フォーム コントロールの制限事項
 ms.date: 02/02/2017
 ms.technology: office-development
 ms.topic: conceptual
@@ -21,11 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1136d799bb6bee56f0589c798a7c61fe0879d556
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 104b8b3449b2ffb689caf66d5c180817b633f83e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572960"
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office ドキュメントでの Windows フォーム コントロールの制限事項
 
@@ -83,8 +84,8 @@ Windows フォーム コントロール、通常がある動作は同じ Office 
 |コントロールのサイズ変更|8 つのサイズ変更ハンドルのいずれかを使用して、ドキュメント上のコントロールのサイズを変更する場合、新しいサイズには反映されません、**プロパティ**ウィンドウ、コントロールが再度選択するまでです。|
 |コントロールの動作|Excel ワークシート上のコントロールは、ワークシート ウィンドウを分割すると、予期しない動作可能性があります。 たとえばへのアクセス、<xref:Microsoft.Office.Tools.Excel.Controls.TextBox>ワークシートでのみ使用可能ないずれかになります、windows のです。|
 |コントロールの名前付け|コントロールの名前に予約語を使用することはできません。 追加する場合など、<xref:Microsoft.Office.Tools.Excel.Controls.Button>をワークシートに名前を変更し、**システム**プロジェクトをビルドするときにエラーが発生します。|
-|コントロールをプログラムで追加します。|実行時にドキュメントにコントロールを追加するのにコントロールのコンス トラクターを使用しないでください。 代わりに、によって提供されるヘルパー メソッドを使用して、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 たとえば、使用して、<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>ボタンをワークシートに追加するメソッド。 これらのヘルパー メソッドによってサポートされていないコントロールを追加する場合は、AddControl メソッドを使用することができます。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。|
-|コントロールをコピー|Windows フォーム コントロールをコピーし、実行時に、ドキュメントに貼り付け、空のコンテナー ActiveX コントロールがドキュメントに貼り付けられます。 Windows フォーム コントロールが、新しい場所に表示されないと、元のコントロールの分離コードが ActiveX コントロール コンテナーにコピーされません。|
+|コントロールをプログラムで追加します。|実行時にドキュメントにコントロールを追加するのにコントロールのコンス トラクターを使用しないでください。 代わりに、によって提供されるヘルパー メソッドを使用して、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 たとえば、使用して、<xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A>ボタンをワークシートに追加するメソッド。 これらのヘルパー メソッドによってサポートされていないコントロールを追加する場合は、使用、`AddControl`メソッドです。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。|
+|コントロールをコピー|Windows フォーム コントロールをコピーし、実行時にドキュメントに貼り付け、空のコンテナー ActiveX コントロールがドキュメントに貼り付けられます。 Windows フォーム コントロールが、新しい場所に表示されないと、元のコントロールの分離コードが ActiveX コントロール コンテナーにコピーされません。|
 
 ## <a name="limitations-in-document-level-projects"></a>ドキュメント レベルのプロジェクトでの制限事項
 
@@ -95,7 +96,7 @@ Windows フォーム コントロール、通常がある動作は同じ Office 
 特定の Windows フォーム コントロールから削除されます、**ツールボックス**Excel のワークシートまたは Word 文書が開いているとき、Visual Studio デザイナーでします。 これは、技術的な制限により、または機能は既に Word または Excel 内で使用できるためです。 Excel および Word プロジェクトのサポートのすべての Windows フォーム コントロールとその他のコンポーネントに表示される、**ツールボックス**、フォーカスのある文書とワークシートまたは文書にサード パーティ製コントロールを追加することもできます。
 
 > [!NOTE]
-> すべてのコントロールから削除されます、**ツールボックス**ドキュメントが保護されている場合。 ドキュメントの保護については、次を参照してください。[ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)です。
+> すべてのコントロールから削除されます、**ツールボックス**ドキュメントが保護されている場合。 ドキュメントの保護については、次を参照してください。[ドキュメント レベルのソリューションでの保護を文書化](../vsto/document-protection-in-document-level-solutions.md)です。
 
 > [!NOTE]
 > サード パーティ製コントロールがあります、<xref:System.Runtime.InteropServices.ComVisibleAttribute>属性に設定**true** Office ソリューションで使用するためにします。
@@ -185,6 +186,6 @@ Windows フォーム コントロール、通常がある動作は同じ Office 
 ## <a name="see-also"></a>関連項目
 
 - [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)
-- [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)
-- [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [方法: Office ドキュメントに Windows フォーム コントロールを追加する](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Office ドキュメントの概要 Windows フォーム コントロール](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [方法: Office ドキュメントへの Windows フォーム コントロールの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)

@@ -10,15 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b5febfd1055c10eaa39d27e411aba5cf442a97c3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: cf3c41c16f904077f884bc6cffcdf0ba97233a1a
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572788"
 ---
 # <a name="schema-cache"></a>スキーマ キャッシュ
 
-XML エディターはスキーマ キャッシュを提供します。このキャッシュは %InstallRoot%\Xml\Schemas ディレクトリに配置されています。 スキーマ キャッシュはコンピューター上のすべてのユーザーに対してグローバルで、IntelliSense と XML ドキュメントの検証に使用される標準的な XML スキーマを格納しています。
+XML エディターでスキーマ キャッシュを提供する、 *%InstallRoot%\Xml\Schemas*ディレクトリ。 スキーマ キャッシュはコンピューター上のすべてのユーザーに対してグローバルで、IntelliSense と XML ドキュメントの検証に使用される標準的な XML スキーマを格納しています。
 
 XML エディターは、ソリューション内にあるスキーマを検索することで指定されたスキーマ、**スキーマ**ドキュメントのフィールド**プロパティ**ウィンドウ、およびスキーマで識別される、`xsi:schemaLocation`と`xsi:noNamespaceSchemaLocation`属性。
 
@@ -26,32 +27,32 @@ XML エディターは、ソリューション内にあるスキーマを検索�
 
 |ファイル名|説明|
 |--------------|-----------------|
-|catalog.xsd|XML エディターのスキーマ カタログ ファイル用のスキーマです。 スキーマ カタログの詳細については、下記を参照してください。|
-|DotNetConfig.xsd|Web.Config ファイルのスキーマ"http://schemas.microsoft.com/.NETConfiguration/v2.0"です。|
-|msbuild.xsd|MSBuild メイク ファイル用にスキーマ"http://schemas.microsoft.com/developer/msbuild/2003"です。|
-|msdata.xsd|<xref:System.Data.DataSet> クラスによって追加される XSD 注釈用のスキーマ (urn:schemas-microsoft-com:xml-msdata) です。|
-|msxsl.xsd|Microsoft XSLT スクリプト ブロック拡張用のスキーマ (urn:schemas-microsoft-com:xslt) です。|
-|SnippetFormat.xsd|コード スニペットの XML ファイルのスキーマです。 例については、%InstallDir%\VC#\Expansions を参照してください。|
-|Soap1.1.xsd|簡易オブジェクト アクセス プロトコル (SOAP) 1.1 でのスキーマhttp://schemas.xmlsoap.org/soap/envelope/です。|
-|Soap1.2.xsd|簡易オブジェクト アクセス プロトコル 1.2 のスキーマです。|
-|SiteMapSchema.xsd|ASP.NET サイト マップ XML ファイルのスキーマ"http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"です。|
-|wsdl.xsd|Web サービス記述言語のスキーマhttp://schemas.xmlsoap.org/wsdl/です。|
-|xenc.xsd|XML 暗号化のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|
-|xhtml.xsd|XHTML のスキーマhttp://www.w3.org/1999/xhtmlです。|
-|xlink.xsd|XLink1.0 のスキーマhttp://www.w3.org/1999/xlinkです。|
-|xml.xsd|Xml:space と xml:lang の属性を記述するスキーマhttp://www.w3.org/XML/1998/namespaceです。|
-|xmlsig.xsd|XML デジタル署名用のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|
-|xsdschema.xsd|XSD 自体を記述するスキーマhttp://www.w3.org/2001/XMLSchemaです。|
-|xslt.xsd|XML 変換のスキーマ、http://www.w3.org/1999/XSL/Transformです。|
+|*catalog.xsd*|XML エディターのスキーマ カタログ ファイル用のスキーマです。 スキーマ カタログの詳細については、下記を参照してください。|
+|*DotNetConfig.xsd*|Web.Config ファイルのスキーマ"http://schemas.microsoft.com/.NETConfiguration/v2.0"です。|
+|*msbuild.xsd*|MSBuild メイク ファイル用にスキーマ"http://schemas.microsoft.com/developer/msbuild/2003"です。|
+|*msdata.xsd*|<xref:System.Data.DataSet> クラスによって追加される XSD 注釈用のスキーマ (urn:schemas-microsoft-com:xml-msdata) です。|
+|*msxsl.xsd*|Microsoft XSLT スクリプト ブロック拡張用のスキーマ (urn:schemas-microsoft-com:xslt) です。|
+|*SnippetFormat.xsd*|コード スニペットの XML ファイルのスキーマです。 例については、次を参照してください。 *%InstallDir%\VC#\Expansions*です。|
+|*Soap1.1.xsd*|簡易オブジェクト アクセス プロトコル (SOAP) 1.1 でのスキーマhttp://schemas.xmlsoap.org/soap/envelope/です。|
+|*Soap1.2.xsd*|簡易オブジェクト アクセス プロトコル 1.2 のスキーマです。|
+|*SiteMapSchema.xsd*|ASP.NET サイト マップ XML ファイルのスキーマ"http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"です。|
+|*wsdl.xsd*|Web サービス記述言語のスキーマhttp://schemas.xmlsoap.org/wsdl/です。|
+|*xenc.xsd*|XML 暗号化のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|
+|*xhtml.xsd*|XHTML のスキーマhttp://www.w3.org/1999/xhtmlです。|
+|*xlink.xsd*|XLink1.0 のスキーマhttp://www.w3.org/1999/xlinkです。|
+|*xml.xsd*|Xml:space と xml:lang の属性を記述するスキーマhttp://www.w3.org/XML/1998/namespaceです。|
+|*xmlsig.xsd*|XML デジタル署名用のスキーマhttp://www.w3.org/2000/09/xmldsig#です。|
+|*置かれている xsdschema.xsd*|XSD 自体を記述するスキーマhttp://www.w3.org/2001/XMLSchemaです。|
+|*置かれている xslt.xsd*|XML 変換のスキーマ、http://www.w3.org/1999/XSL/Transformです。|
 
-## <a name="updating-schemas-in-the-cache"></a>キャッシュ内のスキーマの更新
+## <a name="update-schemas-in-the-cache"></a>キャッシュ内のスキーマを更新します。
  エディターは、XML エディター パッケージが読み込まれるときにスキーマ キャッシュのディレクトリを読み込み、実行中にはすべての変更点を監視します。 スキーマが追加された場合は、そのスキーマがメモリ内にある既知のスキーマのインデックス内に自働的に読み込まれます。 スキーマが削除された場合は、そのスキーマがメモリ内のインデックスから自働的に削除されます。 スキーマが更新された場合は、メモリ内にあるそのスキーマのキャッシュが自動的に無効化されます。
 
 > [!NOTE]
 > スキーマ キャッシュのディレクトリはコンピューター上でグローバルなので、このキャッシュには、コンピューター上で作成されるすべての Visual Studio プロジェクトに対して標準的かつ有用なスキーマのみを追加する必要があります。
 
 
- XML エディターはまた、スキーマ キャッシュ ディレクトリ内で任意の数のスキーマ カタログ ファイルをサポートします。 スキーマ カタログでは、エディターで常に認識しておきたいスキーマが存在する他の場所を指し示すことができます。 catalog.xsd ファイルはカタログ ファイルの形式を定義し、スキーマ キャッシュ ディレクトリに格納されています。 catalog.xml ファイルは既定のカタログで、%InstallDir% に存在する他のスキーマへのリンクが含まれています。 catalog.xml ファイルの例を次に示します。
+ XML エディターはまた、スキーマ キャッシュ ディレクトリ内で任意の数のスキーマ カタログ ファイルをサポートします。 スキーマ カタログでは、エディターで常に認識しておきたいスキーマが存在する他の場所を指し示すことができます。 *Catalog.xsd*ファイルはカタログ ファイルの形式を定義し、スキーマ キャッシュ ディレクトリに含まれています。 *Catalog.xml*ファイルは既定のカタログとの他のスキーマへのリンクが含まれている、 *%installdir%* です。 サンプルを次に示します、 *catalog.xml*ファイル。
 
 ```xml
 <SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
@@ -92,7 +93,7 @@ XML エディターは、ソリューション内にあるスキーマを検索�
 ```
 
 ## <a name="localized-schemas"></a>ローカライズされたスキーマ
- 多くの場合、catalog.xml ファイルには、ローカライズされたスキーマのエントリは含まれません。 ローカライズされたスキーマのディレクトリを指し示す追加のエントリを catalog.xml ファイルに追加できます。
+ 多くの場合、 *catalog.xml*ファイルにローカライズされたスキーマのエントリが含まれていません。 追加エントリを追加することができます、 *catalog.xml*ファイルをローカライズされたスキーマのディレクトリをポイントします。
 
  次の例では、%LCID% 変数を使用してローカライズされたスキーマを指し示す新しい `Schema` 要素を作成します。
 
@@ -120,7 +121,7 @@ XML エディターは、ソリューション内にあるスキーマを検索�
 
 ### <a name="to-add-another-directory-of-common-schemas"></a>よく使用するスキーマが存在するディレクトリを追加するには
 
-1.  XML エディターのスキーマ キャッシュ ディレクトリにある catalog.xml ファイルを編集します。
+1.  編集、 *catalog.xml* XML エディターのスキーマ キャッシュ ディレクトリ内のファイルです。
 
 2.  追加するスキーマのディレクトリを指し示す新しい `<Catalog href="..."/>` 要素を追加します。
 

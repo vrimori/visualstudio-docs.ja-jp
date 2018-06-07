@@ -17,31 +17,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 830dcdb9e42472aa712c86ddb117b3b8003ac4d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7ac244bebb1a625c7858a62399ee79126e309cf2
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571800"
 ---
-# <a name="migrating-office-solutions-to-the-net-framework-4-or-later"></a>.NET Framework 4 以降への Office ソリューションの移行
-  Office プロジェクトのターゲット フレームワークを旧バージョンの .NET Framework から [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、開発用コンピューターおよびエンド ユーザー コンピューターでソリューションを引き続き実行するために追加の手順が必要な場合があります。 詳細については、次を参照してください。[実行 Office プロジェクトは .NET Framework 4 または .NET Framework 4.5 に移行するのに必要な変更](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。  
+# <a name="migrating-office-solutions-to-the-net-framework-4-or-later"></a>Office ソリューションの移行、.NET Framework 4 以降
+  Office プロジェクトのターゲット フレームワークを旧バージョンの .NET Framework から [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、開発用コンピューターおよびエンド ユーザー コンピューターでソリューションを引き続き実行するために追加の手順が必要な場合があります。 詳細については、次を参照してください。 [、.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトを実行する変更が必要に](../vsto/required-changes-to-run-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)です。  
   
  さらに、プロジェクトがコンパイルされなくなる場合があります。 Office プロジェクトの一部の機能は、.NET Framework のバージョンに応じてプログラミング モデルが異なっています。 Office プロジェクトのターゲット フレームワークを旧バージョンの .NET Framework から [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、プロジェクトに対して次のコード変更を加える必要があります。  
   
--   [更新の Excel および Word プロジェクトの .NET Framework 4 または .NET Framework 4.5 に移行します。](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+-   [.NET Framework 4 または .NET Framework 4.5 に移行する Excel および Word のプロジェクトを更新します。](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
--   [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズの更新](../vsto/updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+-   [.NET Framework 4 または .NET Framework 4.5 に移行する Office プロジェクトのリボンのカスタマイズを更新します。](../vsto/updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
--   [.NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域の更新](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
+-   [.NET Framework 4 または .NET Framework 4.5 に移行する Outlook プロジェクトのフォーム領域を更新します。](../vsto/updating-form-regions-in-outlook-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)  
   
- Office プロジェクトのターゲット フレームワークは、そのプロジェクトを旧バージョンの Visual Studio からアップグレードすると変更されます。 詳細については、「 [Upgrading and Migrating Office Solutions](../vsto/upgrading-and-migrating-office-solutions.md)」を参照してください。  
+ Office プロジェクトのターゲット フレームワークは、そのプロジェクトを旧バージョンの Visual Studio からアップグレードすると変更されます。 詳細については、次を参照してください。[アップグレードし、Office ソリューションの移行](../vsto/upgrading-and-migrating-office-solutions.md)です。  
   
- Office プロジェクトの一部の機能が対象とするさまざまなプログラミング モデルを持つ理由の詳細については、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]か、後で、「[デザインの Office プロジェクトの変更を .NET Framework 4 または .NET Framework 4.5を対象とします。](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)と[Visual Studio Tools for Office Runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)です。  
+ Office プロジェクトの一部の機能が対象とするさまざまなプログラミング モデルを持つ理由の詳細については、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]か、後で、「[を .NET Framework 4 または .NET Framework 4.5対象とするOfficeプロジェクトデザインの変更](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)と[Visual Studio Tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)です。  
   
 ## <a name="see-also"></a>関連項目  
- [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [方法: .NET Framework のバージョンをターゲットにする](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
- [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)   
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)   
+ [方法: .NET Framework のバージョンを対象](../ide/how-to-target-a-version-of-the-dotnet-framework.md)   
+ [Office ソリューションのエラーをトラブルシューティングします。](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office ソリューションのエラーについての追加サポート](../vsto/additional-support-for-errors-in-office-solutions.md)  
   
   
