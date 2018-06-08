@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;deployment&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
