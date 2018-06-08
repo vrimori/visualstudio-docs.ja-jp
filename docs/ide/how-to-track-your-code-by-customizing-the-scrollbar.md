@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a5b7094aba90a8844480536e6f44951fb7dc15ad
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: bc18b436a7f25baad9870e36c3224f23de920241
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745738"
 ---
 # <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>方法 : スクロール バーのカスタマイズによるコードの追跡
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/22/2018
 
     次の図は、文字列を検索した後のスクロール バーです。 文字列のすべてのインスタンスが表示されています。
 
-    ![文字列の検索後のスクロール バー。](../ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")
+    ![文字列の検索後のスクロール バー。](../ide/media/enhancedscrollbarsearch.png)
 
     次の図は、文字列のすべてのインスタンスを置き換えた後のスクロール バーです。 この操作で問題が発生したことがわかります。
 
-    ![文字列の置換でエラーが発生した後のスクロール バー](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
+    ![文字列の置換でエラーが発生した後のスクロール バー](../ide/media/enhancedscrollbarreplace.png)
 
 ## <a name="to-set-the-display-mode-for-the-scroll-bar"></a>スクロール バーの表示モードを設定するには
 
@@ -47,11 +48,11 @@ ms.lasthandoff: 05/22/2018
 
     マップ モードが有効で、幅が **[中]** に設定されているときの検索例を示します。
 
-    ![マップ モードのスクロール バー](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
+    ![マップ モードのスクロール バー](../ide/media/enhancedscrollbar.png)
 
 2. マップ モードで、スクロール バーの上下にポインターを移動したときのコードのプレビューを有効にするには、**[プレビュー ツール ヒントの表示]** オプションを選択します。 次のように表示されます。
 
-    ![ツールヒント付きのスクロール バー](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
+    ![ツールヒント付きのスクロール バー](../ide/media/enhancedscrollbarsearchtooltip.png)
 
     マップ モードのスクロール動作とプレビュー ツール ヒントはそのままで、ソース コードの概要を表示しない場合は、**[ソースの概要]** を **[オフ]** に設定できます。
 

@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03fff714a8940a4722cb9def8077ce49f366a565
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e7bc06e106a6b42f2225668edb928e6fef7e349b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572242"
 ---
 # <a name="trusted-application-deployment-overview"></a>信頼されたアプリケーションの配置の概要
 このトピックでは、信頼されたアプリケーションの配置テクノロジを使用して、昇格されたアクセス許可を持つ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置する方法の概要を示します。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/19/2018
  信頼されたアプリケーションの配置は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]に特有の機能であり、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに対してのみ使用できます。  
   
 ### <a name="sign-the-deployment"></a>配置に署名する  
- 使用する証明書を取得したら、この証明書を使用して配置に署名する必要があります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の発行ウィザードを使用してアプリケーションを配置する場合は、独自に証明書を指定しなければ、ウィザードが自動的にテスト証明書を生成します。 また、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の [プロジェクト デザイナー] ウィンドウを使用して、CA から取得した証明書を指定することもできます。  参照してください [する方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行] (http://msdn.microsoft.com/library/31kztyey\(v=vs.110\)です。  
+ 使用する証明書を取得したら、この証明書を使用して配置に署名する必要があります。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の発行ウィザードを使用してアプリケーションを配置する場合は、独自に証明書を指定しなければ、ウィザードが自動的にテスト証明書を生成します。 また、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の [プロジェクト デザイナー] ウィンドウを使用して、CA から取得した証明書を指定することもできます。  参照してください[する方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)です。  
   
 > [!CAUTION]
 >  テスト証明書を使用してアプリケーションを配置することはお勧めできません。  

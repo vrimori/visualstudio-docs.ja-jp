@@ -1,6 +1,7 @@
 ---
 title: Visual Studio での XAML デザイナーを使用した UI の作成
 ms.date: 07/17/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -14,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 9eadc306b0b2f7c53dffc01d27590bc5d4cf4b52
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 707fdd9c1ea0712d743bb62276599783507f0739
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745751"
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Visual Studio での XAML デザイナーを使用した UI の作成
 Visual Studio の XAML デザイナーは、XAML ベースの Windows および Web アプリをデザインする際に役立つビジュアル インターフェイスを提供します。 アプリのユーザー インターフェイスを作成するには、 **[ツールボックス]** からコントロールをドラッグし、 **[プロパティ]** ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。
@@ -33,7 +35,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 
  [デザイン] ビューでは、 *アートボード* を含むウィンドウがアクティブ ウィンドウになり、主要な作業画面として使用できます。 要素を追加または描画し、必要に応じて変更することにより、アプリのページを視覚的にデザインできます。 詳細については、「 [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)」を参照してください。 次の図は、デザイン ビューに表示されるアートボードを示しています。
 
- ![XAML デザイナーのデザイン ビュー](../designers/media/xaml_editor_design_view.png "xaml_editor_design_view")
+ ![XAML デザイナーのデザイン ビュー](../designers/media/xaml_editor_design_view.png)
 
  アートボードで使用できる機能は次のとおりです。
 
@@ -55,7 +57,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 
  デザイン ビューでは、画面の左下に次のように表示される追加のアートボード コマンドを使用できます。
 
- ![デザイン ビュー コマンド](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")
+ ![デザイン ビュー コマンド](../designers/media/xaml_editor_design_controls.png)
 
  このツール バーでは、次のコマンドを使用できます。
 
@@ -69,7 +71,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 
  XAML ビューでは、XAML エディターが含まれているウィンドウがアクティブ ウィンドウであり、XAML エディターが主要な編集ツールです。 Extensible Application Markup Language (XAML) は、アプリケーションのユーザー インターフェイスを指定するための、XML をベースにした宣言型のボキャブラリを提供します。 XAML ビューには、IntelliSense、オート フォーマット、構文の強調表示、およびタグ ナビゲーションが含まれています。 次の図は、XAML ビューを示しています。
 
- ![XAML ビュー](../designers/media/xaml_editor.png "xaml_editor")
+ ![XAML ビュー](../designers/media/xaml_editor.png)
 
  **分割ビュー バー** 分割ビュー バーは、XAML エディターが下側のウィンドウにある場合に、XAML ビューの上部に表示されます。 分割ビュー バーを使用すると、デザイン ビューと XAML ビューの相対サイズを調節できます。 また、ビューの位置を交換したり ( **[ペインの交換]** ボタンを使用)、ビューの左右分割または上下分割を切り替えたり、どちらかのビューを折りたたんだりできます。
 
@@ -78,7 +80,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 ## <a name="device-window"></a>デバイス ウィンドウ
  XAML デザイナーの [デバイス] ウィンドウを使用すると、デザイン時にプロジェクトのさまざまなビュー、表示、および表示オプションをシミュレートできます。 [デバイス] ウィンドウは、XAML デザイナーを使用しているときに **[デザイン]** メニューから使用できます。 次のように表示されます。
 
- ![[デバイス] ウィンドウ](../designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")
+ ![デバイス ウィンドウ](../designers/media/xaml_editor_device_panel.png)
 
  [デバイス] ウィンドウで使用可能なオプションは、次のとおりです。
 
@@ -113,7 +115,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 
  [ドキュメント アウトライン] ウィンドウを表示するには、メニュー バーで **[表示]**、 **[その他のウィンドウ]**、 **[ドキュメント アウトライン]** の順に選択します。
 
- ![[ドキュメント アウトライン] ウィンドウ](../designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")
+ ![[ドキュメント アウトライン] ウィンドウ](../designers/media/xaml_editor_doc_outline.png)
 
  [ドキュメント アウトライン] ウィンドウで使用可能なオプションは、次のとおりです。
 
@@ -128,7 +130,7 @@ Visual Studio の XAML デザイナーは、XAML ベースの Windows および 
 ## <a name="properties-window"></a>[プロパティ] ウィンドウ
  [プロパティ] ウィンドウでは、コントロールのプロパティの値を設定できます。 次のように表示されます。
 
- ![[プロパティ] ウィンドウ](../designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")
+ ![[プロパティ] ウィンドウ](../designers/media/xaml_editor_prop_window.png)
 
  [プロパティ] ウィンドウの上部にはさまざまなオプションがあります。 現在選択されている要素の名前を変更するには、 **[名前]** ボックスを使用します。 左上にあるアイコンは、現在選択されている要素を表します。 プロパティをカテゴリ別またはアルファベット順に並べ替えるには、 **[並べ替え]** の一覧で **[カテゴリ]**、 **[名前]** 、または **[ソース]** をクリックします。 コントロールのイベントの一覧を表示するには、 **[イベント]** ボタン (稲妻のシンボルが表示されている) をクリックします。 プロパティを検索するには、 **[検索プロパティ]** ボックスにプロパティの名前を入力し始めます。 入力した文字列に一致するプロパティが [プロパティ] ウィンドウに表示されます。 一部のプロパティでは、下矢印ボタンを選択して、詳細プロパティを設定することができます。 プロパティの使用とイベントの処理の詳細ついては、「 [クイック スタート: コントロールの追加とイベントの処理](http://go.microsoft.com/fwlink/?LinkID=247983)」を参照してください。
 

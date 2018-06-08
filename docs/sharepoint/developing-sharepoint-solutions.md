@@ -18,32 +18,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2269a457ee8466a5c119659e048f506cd85e4ed3
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 622ac8b6fd9f003c8bfccbd953f4b5f51cd00332
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766286"
 ---
-# <a name="developing-sharepoint-solutions"></a>SharePoint ソリューションの開発
+# <a name="develop-sharepoint-solutions"></a>SharePoint ソリューションを開発します。
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトおよびサイト要素を作成するための SharePoint プロジェクトの種類のテンプレートがいくつか用意されています。 使用可能なプロジェクトの種類の一覧は、次を参照してください。 [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)です。 次に、SharePoint プロジェクトの要素およびプロパティについて説明します。  
   
  SharePoint 2013 アドインと SharePoint アドインについては、「 [SharePoint 2013](http://msdn.microsoft.com/library/jj162979.aspx) 」および「 [SharePoint アドインの作成](http://msdn.microsoft.com/library/office/apps/jj163230%28v=office.15%29.aspx)」を参照してください。  
   
-## <a name="elements-of-a-sharepoint-project"></a>SharePoint プロジェクトの要素  
+## <a name="elements-of-a-sharepoint-project"></a>SharePoint プロジェクトの要素
  SharePoint プロジェクトのノードは、 *SharePoint アイテム*と呼ばれます。 SharePoint の項目と呼ばれる 1 つまたは複数のサブが含まれることも*SharePoint アイテム ファイル*など[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]構成ファイル、.aspx フォームなどです。  
   
  プロジェクト項目ファイルから成るプロジェクト テンプレートを使用してプロジェクトを作成する代わりに、 **[空のプロジェクト]** テンプレートを使用して、空の SharePoint プロジェクトを作成し、それにプロジェクト項目を手動で追加することもできます。 SharePoint プロジェクトには、必要に応じて 1 つ以上のフィーチャー ファイル (SharePoint でのアクティブ化に使用) およびパッケージ ファイル (プロジェクトの配布に使用) を含めることができます。  
   
-### <a name="special-nodes"></a>特殊なノード  
+### <a name="special-nodes"></a>特殊なノード
  すべての SharePoint プロジェクトに、名前変更、削除、切り取り、コピー、プロジェクトからのドラッグなどの操作ができないノードが 2 つ含まれています。 これらのノードを次に示します。  
   
--   機能  
-  
+-   機能    
 -   パッケージ  
   
  プロジェクトにフィーチャーまたはパッケージが定義されているかどうかに関係なく、この 2 つのノードはすべての SharePoint プロジェクトに必ず表示されます。  
   
-#### <a name="features-node"></a>[Features] ノード  
+#### <a name="features-node"></a>[Features] ノード
  **[Features]** ノードには、SharePoint プロジェクトのフィーチャーが 1 つ以上含まれています。 フィーチャーとは、SharePoint の拡張機能のコンテナーのことです。 SharePoint サーバーにフィーチャーを配置すると、SharePoint サイトの SharePoint 管理者が、そのフィーチャーをサイト定義に追加したり、個別にアクティブ化したりすることができます。 詳細については、「 [フィーチャーの使用](http://go.microsoft.com/fwlink/?LinkID=147704)」を参照してください。  
   
  コンテンツ タイプやリスト インスタンスなどのアイテムを SharePoint プロジェクトに追加すると、 **[Features]** ノード内のフィーチャーに追加されます。 新しいフィーチャーに追加されるか、既存のフィーチャーに追加されるかは、そのアイテムのスコープによって決まります。 新しい項目が既存のフィーチャーと同じスコープを持つ場合は、そのフィーチャーに追加されます。 それ以外の場合は、新しいフィーチャーに追加されます。  
@@ -52,17 +52,17 @@ ms.lasthandoff: 05/17/2018
   
  SharePoint プロジェクトに追加したフィーチャーは、 **ソリューション エクスプローラー** にノードとして表示され、"Feature*x*.feature" という既定の名前が付けられます ( *x* は一意の番号)。 SharePoint Server にフィーチャーが配置されると、SharePoint 管理者は SharePoint サイト ユーザーが使用できるようにそれをアクティブ化することができます。  
   
-#### <a name="package-node"></a>[Package] ノード  
+#### <a name="package-node"></a>[パッケージ] ノード
  **[Package]** ノードには、SharePoint プロジェクトの配布メカニズムとして機能するファイルが 1 つだけ含まれています。 このファイルと呼ばれる、*ソリューション パッケージ*はします。CAB に基づくと、します。WSP 拡張します。 ソリューション パッケージは、SharePoint サイトに適用される一連のフィーチャー、サイト定義、およびアセンブリを含んでいる配置可能で再利用可能なファイルであり、これは個別に有効または無効にできます。 **パッケージ**ノードがである Package.wspdef というファイルにはも必ず含まれています、[!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]パッケージ定義ファイルです。 SharePoint を実行しているサーバーにパッケージが配置されると、SharePoint 管理者はそのパッケージをインストールしてフィーチャーをアクティブにできます。  
   
  表示したりを [パッケージ] ノードをダブルクリックするか、ショートカット メニューを開き、選択し、パッケージ デザイナーでパッケージの内容を変更する**開く**です。 詳細については、次を参照してください。 [SharePoint ソリューション パッケージの作成](../sharepoint/creating-sharepoint-solution-packages.md)です。  
   
-## <a name="sharepoint-project-and-project-item-properties"></a>SharePoint プロジェクトとプロジェクト項目のプロパティ  
+## <a name="sharepoint-project-and-project-item-properties"></a>SharePoint プロジェクトとプロジェクト項目のプロパティ
  SharePoint プロジェクトでは、他の [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] プロジェクトと同様、[プロパティ] ウィンドウおよび [プロパティ] ページにプロパティが表示されます。 表示されるプロパティは、選択したノードによって異なります。  
   
  **ソリューション エクスプローラー**で SharePoint プロジェクト ノード、プロジェクト項目ノード、またはプロジェクト項目ファイル ノードを選択すると、次のプロパティが [プロパティ] ウィンドウまたは [プロパティ] ページに表示されます。  
   
-### <a name="project-properties"></a>プロジェクトのプロパティ  
+### <a name="project-properties"></a>プロジェクト プロパティ
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/17/2018
   
  SharePoint の項目ファイル (ワークフローや [Features] ノードのフィーチャーなど) を選択すると、[プロパティ] ウィンドウに次のプロパティが表示されます。  
   
-### <a name="project-item-properties"></a>プロジェクト項目のプロパティ  
+### <a name="project-item-properties"></a>プロジェクト項目のプロパティ
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/17/2018
 |プロジェクト出力参照|プロジェクト項目の実行に必要な依存関係 (アセンブリなど) を指定します。 詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)です。|  
 |安全なコントロール エントリ|信頼関係のないユーザーが編集しても安全なコントロールを指定します。 詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)です。|  
   
-### <a name="project-item-file-properties"></a>プロジェクト項目ファイルのプロパティ  
+### <a name="project-item-file-properties"></a>プロジェクト項目ファイルのプロパティ
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
@@ -104,11 +104,11 @@ ms.lasthandoff: 05/17/2018
 |配置場所|SharePoint サーバー上のファイルの完全修飾パス。 このパスは、[配置ルート] プロパティと [配置パス] プロパティで構成されます。|  
 |配置パス|Workflow1 など、SharePoint サーバー上のファイルの相対パス\\です。 ファイルの完全修飾パスは、 *Deployment Path* 値の末尾に *Deployment Root* 値を連結することによって作成されます。<br /><br /> 値を選択する*RootFile*の*展開の種類*プロパティが変更された、*配置ルート*プロパティ {sharepointroot} を\\、その結果には完全修飾パスが {sharepointroot} \Workflow1\\です。 詳細については、次を参照してください。[パッケージ化と SharePoint ソリューションの配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)です。|  
 |Deployment Root|文字列。 ファイルの配置先となる SharePoint Server 上のルート フォルダーです たとえば、{sharepointroot} \Template\Features\\{FeatureName}\\です。<br /><br /> *Deployment Root* プロパティの値は、 *Deployment Type* の設定に依存します。|  
-|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment:\<値なし ><br /><br /> ElementManifest: {sharepointroot} \Template\Features\\{FeatureName}\\<br /><br /> ElementFile: {sharepointroot} \Template\Features\\{FeatureName}\\<br /><br /> TemplateFile: {sharepointroot} \Template\\<br /><br /> RootFile: {sharepointroot}\\<br /><br /> GlobalResource: {sharepointroot} \Resources\\<br /><br /> ClassResource: {ClassResourcePath}\\<br /><br /> 詳細については、「<xref:Microsoft.VisualStudio.SharePoint.DeploymentType>」を参照してください。|  
+|Deployment Type|ファイルの配置の種類です。 *Deployment Root* 値に依存します。 次のいずれかの値になります。<br /><br /> NoDeployment: *\<値なし >*<br /><br /> ElementManifest: *{sharepointroot} \Template\Features\\{FeatureName}*\\<br /><br /> ElementFile: *{sharepointroot} \Template\Features\\{FeatureName}\\*<br /><br /> TemplateFile: *{sharepointroot} \Template\\*<br /><br /> RootFile: *{sharepointroot}\\*<br /><br /> GlobalResource: *{sharepointroot} \Resources\\*<br /><br /> ClassResource: *{ClassResourcePath}\\*<br /><br /> 詳細については、「<xref:Microsoft.VisualStudio.SharePoint.DeploymentType>」を参照してください。|  
 |ファイル名|項目ファイルの名前またはフォルダーの名前です。|  
 |完全パス|項目ファイルの場所です。 システム テーブルは読み取り専用です。|  
   
-## <a name="related-topics"></a>関連トピック  
+## <a name="related-topics"></a>関連トピック
   
 |タイトル|説明|  
 |-----------|-----------------|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/17/2018
 |[SharePoint ソリューションのセキュリティ](../sharepoint/security-for-sharepoint-solutions.md)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] で SharePoint ソリューションを開発する際のセキュリティ上の考慮事項について説明します。|  
 |[URL ピッカー ダイアログ ボックス&#40;Visual Studio での SharePoint 開発&#41;](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|プロジェクト内またはローカル SharePoint サーバー上のリソースへのパス参照を追加するために使用できるダイアログ ボックスについて説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [作業の開始&#40;Visual Studio での SharePoint 開発&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
  [サーバー エクスプ ローラーを使用して SharePoint 接続の参照](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)   

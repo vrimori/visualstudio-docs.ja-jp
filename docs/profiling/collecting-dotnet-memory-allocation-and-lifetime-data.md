@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 91013c0f9a6f213b70710d29d9102efc04db2821
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7e8c63316cc4ca13f74e1b66b2346cf329465e0c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548636"
 ---
-# <a name="collecting-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当ておよび有効期間データの収集
+# <a name="collect-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当てと有効期間データの収集
 
 Visual Studio プロファイリング ツールは、.NET メモリ割り当てとオブジェクト有効期間データの収集をサポートしています。アプリケーションのメモリに関連するパフォーマンスの問題を検出できます。
 
@@ -60,12 +61,12 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 
 |タスク|関連するコンテンツ|
 |----------|---------------------|
-|**[全般]** ページで、生成されるプロファイリング データ (.vsp) ファイルの名前付けの詳細を指定します。|- [.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [方法: パフォーマンス データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)|
-|コード ソリューション内に複数の .exe プロジェクトがある場合は、**[起動]** ページで、開始するアプリケーションを選択します。|- [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|
-|**[階層の相互作用]** ページで、プロファイリング実行に ADO.NET 呼び出しデータを追加します。|- [階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)|
+|**[全般]** ページで、生成されるプロファイリング データ (.vsp) ファイルの名前付けの詳細を指定します。|- [.NET メモリの割り当てと有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />- [方法: パフォーマンス データ ファイル名のオプションを設定する](../profiling/how-to-set-performance-data-file-name-options.md)|
+|コード ソリューション内に複数の .exe プロジェクトがある場合は、**[起動]** ページで、開始するアプリケーションを選択します。|- [階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)|
+|**[階層の相互作用]** ページで、プロファイリング実行に ADO.NET 呼び出しデータを追加します。|- [階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)|
 |**[Windows イベント]** ページで、サンプリング データと共に収集する 1 つ以上の ETW (Windows イベント トレーシング) イベントを指定します。|- [方法: ETW (Event Tracing for Windows) データを収集する](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|
-|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|- [方法 : Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|
-|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|- [方法: side-by-side 実行でプロファイリングするように .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|**[Windows カウンター]** ページで、プロファイリング データをマークとして追加するオペレーティング システムのパフォーマンス カウンターを 1 つ以上指定します。|- [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)|
+|アプリケーション モジュールで複数のバージョンを使用する場合は、**[詳細]** ページで、プロファイリングする .NET Framework ランタイムのバージョンを指定します。 既定では、最初に読み込まれたバージョンがプロファイリングされます。|- [方法: .NET Framework ランタイムを指定する](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
 
 ## <a name="instrumentation-tasks"></a>インストルメンテーション タスク
 
@@ -74,12 +75,12 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 |タスク|関連するコンテンツ|
 |----------|---------------------|
 |**[バイナリ]** ページで、モジュールのインストルメント化されたコピーの場所を指定します。 既定では、元のバイナリはバックアップ フォルダーに移動されます。|- [方法 : インストルメント化されたバイナリを再配置する](../profiling/how-to-relocate-instrumented-binaries.md)|
-|**[インストルメンテーション]** ページで、プロファイリングのオーバーヘッドを低減するために小規模関数を除外し、ASP.NET Web ページで JavaScript コードをプロファイルし、インストルメンテーション処理の前と後にコマンド プロンプトで実行するコマンドを指定します。|- [方法 : インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [方法: Web ページ内の JavaScript コードをプロファイリングする](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [方法 : インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
+|**[インストルメンテーション]** ページで、プロファイリングのオーバーヘッドを低減するために小規模関数を除外し、ASP.NET Web ページで JavaScript コードをプロファイルし、インストルメンテーション処理の前と後にコマンド プロンプトで実行するコマンドを指定します。|- [方法: インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />- [方法: Web ページ内の JavaScript コードをプロファイリングする](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />- [方法 : インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|
 |**[CPU カウンター]** ページで、プロファイリング データを追加するプロセッサのパフォーマンス カウンターを 1 つ以上指定します。|- [方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)|
-|**[詳細]** ページで、追加する VSInstr.exe オプションをすべて指定します (特定の関数を含めるオプションや特定の関数を除外するオプションなど)。 VSInstr オプションの詳細については、「[VSInstr](../profiling/vsinstr.md)」を参照してください。|- [方法 : 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [方法 : インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
+|**[詳細]** ページで、追加する VSInstr.exe オプションをすべて指定します (特定の関数を含めるオプションや特定の関数を除外するオプションなど)。 VSInstr オプションの詳細については、「[VSInstr](../profiling/vsinstr.md)」を参照してください。|- [方法: 追加のインストルメンテーション オプションを指定する](../profiling/how-to-specify-additional-instrumentation-options.md)<br />- [方法: インストルメンテーションを特定の関数に制限する](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|
 
 ## <a name="see-also"></a>関連項目
 
 [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)  
-[方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
+[方法 : 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)  
 [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)

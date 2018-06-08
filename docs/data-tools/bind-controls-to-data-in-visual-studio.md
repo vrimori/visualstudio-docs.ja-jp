@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4100066d6c6b86bf319cad3bc123098835807acb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d27975cf387c92e5afcc61bd267f383a6bed414a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747392"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio でのデータにコントロールをバインドします。
 データをコントロールにバインドすることで、アプリケーションのユーザーに対してデータを表示できます。 項目をドラッグして、これらのデータ バインド コントロールを作成することができます、**データソース**ウィンドウからデザイン サーフェイス、または Visual Studio での画面のコントロールにします。
@@ -31,9 +32,9 @@ ms.lasthandoff: 04/26/2018
 
 |データ ソース|ドラッグ アンド ドロップのサポート**Windows フォーム デザイナー**|ドラッグ アンド ドロップのサポート**WPF デザイナー**|ドラッグ アンド ドロップのサポート**Silverlight デザイナー**|
 |-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|
-|データセット|[はい]|はい|×|
+|データセット|[はい]|はい|いいえ|
 |エンティティ データ モデル|[はい]<sup>1</sup>|[はい]|[はい]|
-|LINQ to SQL クラス|いいえ<sup>2</sup>|いいえ<sup>2</sup>|いいえ<sup>2</sup>|
+|LINQ to SQL クラス|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|
 |サービス (含む[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、WCF services、および web サービス)|[はい]|はい|[はい]|
 |Object|[はい]|はい|[はい]|
 |SharePoint|[はい]|はい|[はい]|
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="data-sources-window"></a>[データ ソース] ウィンドウ
  内の項目としてデータ ソースは、プロジェクトで使用できる、**データソース**ウィンドウです。 このウィンドウが表示されている、またはからアクセス可能な**ビュー** ] メニューの [フォームのデザイン サーフェイスがプロジェクト内のアクティブなウィンドウ。 基になるデータにバインドされているコントロールを作成するには、このウィンドウから項目をドラッグすることができを右クリックして、データ ソースを構成することもできます。
 
- ![データ ソース ウィンドウ](../data-tools/media/raddata-data-sources-window.png "raddata データ ソース ウィンドウ")
+ ![[データ ソース] ウィンドウ](../data-tools/media/raddata-data-sources-window.png)
 
  データの種類別に表示される、**データソース**ウィンドウ、デザイナーに項目をドラッグするときに既定のコントロールが作成されます。 項目をドラッグする前に、**データソース**ウィンドウで、作成されるコントロールを変更することができます。 詳細については、次を参照してください。[セットのデータ ソース ウィンドウからドラッグしたときに作成する制御](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)です。
 

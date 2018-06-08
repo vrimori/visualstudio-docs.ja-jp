@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト結果のグラフにカウンターを追加および削除する | Microsoft Docs
+title: Visual Studio でロード テスト結果のグラフにカウンターを追加および削除する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,20 @@ ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1ec02769cc3960b4b1b7f4dd7a04d3d78193c1e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3293b526b3380d3052123d45f3fb7f6599f7b5f7
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751976"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>方法: ロード テスト結果のグラフにカウンターを追加および削除する
 
 カウンター パネルを使用して、グラフにパフォーマンス カウンターを追加できます。
 
- ![グラフに追加されたカウンター](../test/media/ltest_selectcounter.png "LTest_SelectCounter")
+ ![グラフに追加されたカウンター](../test/media/ltest_selectcounter.png)
 
  **パフォーマンス カウンターのサンプリング間隔に関する考慮事項**
 

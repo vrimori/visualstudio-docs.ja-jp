@@ -1,5 +1,5 @@
 ---
-title: ブートス トラップ パッケージを作成します。
+title: ブートストラップ パッケージの作成
 ms.custom: ''
 ms.date: 05/02/2018
 ms.technology: vs-ide-deployment
@@ -22,13 +22,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 234f89f2d0a28c0836ee06df4c49c3ab60f102ce
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: d3cc80a6ca29583fdc445b507aeb8f87267459d8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572726"
 ---
-# <a name="create-bootstrapper-packages"></a>ブートス トラップ パッケージを作成します。
+# <a name="create-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 セットアップ プログラムは、Windows インストーラー (.msi) ファイルや実行可能プログラムなどの再頒布可能コンポーネントを検出およびインストールするように構成できる汎用的なインストーラーです。 インストーラーはブートストラップとも呼ばれます。 ブートストラップは、コンポーネントのインストールを管理するためのメタデータを指定する、一連の XML マニフェストによってプログラミングされます。  表示される各再頒布可能コンポーネント、または必要な前提条件、**の前提条件**ClickOnce のダイアログ ボックスは、ブートス トラップ パッケージです。 ブートストラップ パッケージは、必須コンポーネントのインストール方法を記述するマニフェスト ファイルを含むディレクトリおよびファイルのグループです。 
   
 ブートストラップでは、まず、既にインストールされている必須コンポーネントがあるかどうかが検出されます。 必須コンポーネントがインストールされていない場合、ライセンス条項が表示されます。 次に、エンド ユーザーがライセンス条項に同意すると、必須コンポーネントのインストールが開始されます。 すべての必須コンポーネントが検出された場合は、そのままアプリケーション インストーラーが開始されます。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/10/2018
   
 再頒布可能コンポーネントは、パッケージのディレクトリの下の専用のサブフォルダーにそれぞれ表示されます。 製品マニフェストと再頒布可能ファイルはこのサブフォルダーに格納されます。 コンポーネントとパッケージ マニフェストのローカライズ版は、カルチャ名に従ってという名前のサブフォルダーに配置する必要があります。  
   
-これらのファイルは、ブートス トラップ フォルダーにコピーした後、ブートス トラップ パッケージは、Visual Studio で自動的に表示されます**の前提条件** ダイアログ ボックス。 カスタム ブートス トラップ パッケージが表示されない場合を閉じてから開き、**の前提条件** ダイアログ ボックス。 詳細については、「 [Prerequisites Dialog Box](../ide/reference/prerequisites-dialog-box.md)」を参照してください。  
+これらのファイルは、ブートス トラップ フォルダーにコピーした後、ブートス トラップ パッケージは、Visual Studio で自動的に表示されます**の前提条件** ダイアログ ボックス。 カスタム ブートス トラップ パッケージが表示されない場合を閉じてから開き、**の前提条件** ダイアログ ボックス。 詳細については、「 [[必須コンポーネント] ダイアログ ボックス](../ide/reference/prerequisites-dialog-box.md)」を参照してください。  
   
 ブートストラップによって自動的に設定されるプロパティを次の表に示します。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/10/2018
 |ApplicationName|アプリケーションの名前。|  
 |ProcessorArchitecture|実行可能ファイルが対象とするプラットフォームのプロセッサと、ワードあたりのビット数。 次の値があります。<br /><br /> -Intel<br />-IA64<br />-AMD64|  
 |[Version9x](https://msdn.microsoft.com/en-us/library/aa372490\(v=vs.140\).aspx)|Microsoft Windows 95、Windows 98、または Windows ME の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
-|[VersionNT](https://msdn.microsoft.com/en-us/library/aa372495\(v=vs.140\).xaspx)|Windows NT、Windows 2000、Windows XP、Windows Vista、Windows Server 2008、または Windows 7 の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
+|[VersionNT](https://msdn.microsoft.com/en-us/library/aa372495\(v=vs.140\).aspx)|Windows NT、Windows 2000、Windows XP、Windows Vista、Windows Server 2008、または Windows 7 の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
 |[VersionMSI](https://msdn.microsoft.com/en-us/library/aa372493\(v=vs.140\).aspx)|インストール中に実行される Windows インストーラーのアセンブリ (msi.dll) のバージョン。|  
 |[AdminUser](https://msdn.microsoft.com/en-us/library/aa367545\(v=vs.140\).aspx)|このプロパティは、ユーザーに管理者特権がある場合に設定されます。 値は true または false です。|  
 |InstallMode|インストール モードは、コンポーネントのインストール元の場所を示します。 次の値があります。<br /><br /> -HomeSite - 前提条件は、製造元の Web サイトからインストールされます。<br />-SpecificSite - 前提条件は、選択した場所からインストールされます。<br />-SameSite - 前提条件は、アプリケーションと同じ場所からインストールされます。|  

@@ -19,18 +19,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cadfffb2dbf977e23a0edb082065125aea4f5940
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ddfdc09f27d5c94445064c064772e812779dcf08
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767778"
 ---
-# <a name="how-to-add-and-remove-additional-assemblies"></a>方法: アセンブリを追加および削除する
+# <a name="how-to-add-and-remove-additional-assemblies"></a>方法: 追加およびその他のアセンブリを削除します。
   SharePoint パッケージが機能またはデータについて他のアセンブリに依存している場合、そのアセンブリをソリューション パッケージ (.wsp) に追加できます。 パッケージをインストールする際は、カスタム アセンブリがインストールされているかどうかが、SharePoint サーバーによって確認されます。  
   
  アセンブリに関連付けられているセーフ コントロールやクラス リソース ファイルを追加および変更することもできます。  
   
-## <a name="adding-additional-assemblies-safe-controls-and-class-resources"></a>アセンブリ、セーフ コントロール、およびクラス リソースの追加  
+## <a name="adding-additional-assemblies-safe-controls-and-class-resources"></a>その他のアセンブリ、セーフ コントロール、およびクラス リソースの追加  
  SharePoint ソリューション パッケージにアセンブリを追加できます。 サンドボックス ソリューションの追加アセンブリは、グローバル アセンブリ キャッシュに配置されますが、サンドボックス ソリューションの SharePoint プロジェクト項目はコンテンツ データベースに追加されます。 これらの追加アセンブリにセーフ コントロールやクラス リソースを追加することもできます。 安全なコントロールの詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)または"を作成する、SafeControl エントリ"で[SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=245505)です。  
   
 #### <a name="to-add-an-existing-assembly"></a>既存のアセンブリを追加するには  
@@ -112,9 +113,8 @@ ms.lasthandoff: 04/16/2018
   
 3.  Del キーを押します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint フィーチャーの作成](../sharepoint/creating-sharepoint-features.md)   
  [方法: SharePoint フィーチャーをカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [方法: SharePoint フィーチャーの項目を追加および削除する](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
-  
   

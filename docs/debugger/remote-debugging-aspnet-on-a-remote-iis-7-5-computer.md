@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: dddbe20c36aac6bc1c21cc2e29e59231c5b8feaf
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 759615311478f1b428edc2a800c61b9252a3a84a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746859"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
 IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
@@ -29,7 +30,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 これらの手順は、これらのサーバー構成でテストされています。
 * Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 のサーバーの手順が異なる)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降ではサポートします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
 
@@ -183,14 +184,14 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
 ## <a name="BKMK_attach"></a> Visual Studio コンピューターから ASP.NET アプリケーションにアタッチする
 
-1. Visual Studio コンピューターで開く、 **MyASPApp**ソリューションです。
+1. Visual Studio コンピューターには、デバッグしようとしているソリューションを開きます (**MyASPApp**この記事の手順に従っている場合)。
 2. Visual Studio で、**デバッグ > プロセスにアタッチする**(Ctrl + Alt + P)。
 
     > [!TIP]
     > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスを再アタッチできます**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
 
 3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
-4. **[更新]** を生成する必要があります。
+4. をクリックして**更新**です。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
     すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。

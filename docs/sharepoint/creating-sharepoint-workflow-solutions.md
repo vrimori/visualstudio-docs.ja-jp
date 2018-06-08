@@ -23,14 +23,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bc78726146b67a39f8e8988dda6c7d2baf5c49b3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 0c496c6d460b11efc4ccb6e1d8e7b5489efacd93
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691925"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766442"
 ---
-# <a name="creating-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションを作成します。
+# <a name="create-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションを作成します。
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ドキュメントとリスト アイテムを SharePoint Web サイトでのライフ サイクルを管理するカスタム ワークフローを作成するのに役立つツールを提供します。 指定された項目には、デザイナー、一連のアクティビティのコントロール、および必要なアセンブリ参照が含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 含まれています、 **SharePoint カスタマイズ ウィザード**を作成し、ワークフローを構成するために、します。  
   
  SharePoint プロジェクトを作成するための前提条件の一覧については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。 SharePoint の詳細については、次を参照してください。 [Microsoft SharePoint 製品およびテクノロジ](http://go.microsoft.com/fwlink/?LinkId=178470)です。  
@@ -53,7 +53,7 @@ ms.locfileid: "34691925"
   
  ワークフローの種類の詳細については、次を参照してください。[ワークフロー型](http://go.microsoft.com/fwlink/?LinkId=178995)です。  
   
-### <a name="using-the-wizard"></a>ウィザードの使用
+### <a name="use-the-wizard"></a>ウィザードを使用してください。
  SharePoint ワークフロー プロジェクトを作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、最初にその設定を指定する、 **SharePoint カスタマイズ ウィザード**です。 ウィザードでは、これらの設定を使用でプロジェクトを作成して**ソリューション エクスプ ローラー**です。 このプロジェクトは、コード ファイル、ワークフローの配置に使用されるいくつかのファイルが含まれていますおよびカスタム SharePoint ワークフローを作成するために必要なアセンブリへの参照します。  
   
  ワークフローを作成した後は、[プロパティ] ウィンドウでそのプロパティを変更できます。 省略記号ボタンをクリックする必要がいくつかが、ほとんどのワークフローのプロパティは、[プロパティ] ウィンドウで直接変更できます (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP.NET モバイル デザイナー楕円")) に値を変更します。 このボタンの再起動、 **SharePoint カスタマイズ ウィザード**です。 プロパティ値の変更で、選択を行ったら、**完了**ボタンをクリックして確定します。  
@@ -124,7 +124,7 @@ ms.locfileid: "34691925"
  SharePoint ライブラリまたはリスト内の項目のプロパティを使用して、ユーザーから情報を収集することもできます。 メイン コード ファイル (Workflow1.cs または Workflow1.vb) という名前の Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.WorkflowProperties クラスのインスタンスを宣言して`workflowProperties`です。 使用して、`workflowProperties`ライブラリまたはコードの一覧のプロパティにアクセスするオブジェクト。 例については、次を参照してください。[チュートリアル: SharePoint ワークフロー ソリューションのデバッグの作成と](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)です。  
   
 ## <a name="debug-a-sharepoint-workflow-template"></a>SharePoint ワークフロー テンプレートをデバッグします。
- できますプロジェクトをデバッグする SharePoint ワークフローと同じ他のデバッグ時に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Web ベースのプロジェクトです。 開始すると、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッガー、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で指定した設定を使用して、 **SharePoint カスタマイズ ウィザード**を適切な SharePoint Web サイトを開き、ワークフロー テンプレートを自動的に関連付ける適切なライブラリまたはリスト。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] アタッチ、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]するデバッガー、 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] w3wp.exe をという名前のプロセスです。  
+ できますプロジェクトをデバッグする SharePoint ワークフローと同じ他のデバッグ時に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Web ベースのプロジェクトです。 開始すると、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]デバッガー、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で指定した設定を使用して、 **SharePoint カスタマイズ ウィザード**を適切な SharePoint Web サイトを開き、ワークフロー テンプレートを自動的に関連付ける適切なライブラリまたはリスト。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] アタッチ、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]するデバッガー、[!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)]という名前のプロセス*w3wp.exe*です。  
   
  ワークフローをテストするにする必要があります手動で起動します。 詳細についてを参照してください「ワークフローのデバッグ」で[SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)です。 詳細については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Web アプリケーションのデバッグを参照してください[Web アプリケーションのデバッグとスクリプト](/visualstudio/debugger/debugging-web-applications-and-script)です。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "34691925"
 |-----------|-----------------|  
 |[チュートリアル: SharePoint ワークフロー ソリューションの作成とデバッグ](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|作成し、デバッグ、単純な手順について説明[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ワークフローです。|  
 |[チュートリアル: 関連付けフォームと開始フォームを持つワークフローの作成](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|手順について説明、フル機能の作成に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ワークフロー関連付けフォームと開始フォームを完了します。|  
-|[チュートリアル: ワークフローへのアプリケーション ページの追加](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|トピックを上に構築[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)ワークフローに入力されたデータを報告する追加の .aspx アプリケーション ページを追加することによりします。|  
+|[チュートリアル: ワークフローへのアプリケーション ページの追加](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|トピックを上に構築[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)、さらに追加して *.aspx*アプリケーション ページでは、ワークフローに入力されたデータを報告します。|  
 |[チュートリアル: サイトのカスタム ワークフロー アクティビティの作成](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|2 つの主要タスクを実行する方法を示します。 サイト レベルのワークフローを作成し、カスタム ワークフロー アクティビティを作成します。|  
 |[チュートリアル: SharePoint Designer の再利用可能なワークフローの Visual Studio へのインポート](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|SharePoint Designer 2010 で作成した再利用可能な宣言型ワークフローをインポートする方法を示します、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。|  
   

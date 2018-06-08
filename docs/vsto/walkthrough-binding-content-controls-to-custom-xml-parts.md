@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: カスタム XML 部分へのコンテンツ コントロールのバインド |Microsoft ドキュメント'
+title: 'チュートリアル: カスタム XML 部分へのコンテンツ コントロールをバインドします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,13 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7ca9c3e049d29874419327ec4ac7d71e0537466c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 71fc9f944ec8861503f5518eec9edf33170bf050
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768093"
 ---
-# <a name="walkthrough-binding-content-controls-to-custom-xml-parts"></a>チュートリアル : カスタム XML 部分へのコンテンツ コントロールのバインド
+# <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>チュートリアル: カスタム XML 部分へのコンテンツ コントロールをバインドします。
   このチュートリアルでは、Word のドキュメント レベルのカスタマイズで、コンテンツ コントロールを同じ文書内の XML データにバインドする方法を説明します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   デザイン時に XML スキーマを文書に添付する。  
   
--   実行時に XML ファイルの内容を文書内のカスタム XML 部分に追加する。  
+-   実行時にドキュメントにカスタム XML 部分に XML ファイルの内容を追加します。  
   
 -   コンテンツ コントロールをカスタム XML 部分の要素にバインドする。  
   
@@ -56,19 +57,19 @@ ms.lasthandoff: 04/16/2018
   
 -   Microsoft Word。  
   
-## <a name="creating-a-new-word-document-project"></a>新しい Word 文書プロジェクトを作成する  
+## <a name="create-a-new-word-document-project"></a>新しい Word 文書プロジェクトを作成します。  
  このチュートリアルで使用する Word 文書を作成します。  
   
-#### <a name="to-create-a-new-word-document-project"></a>Word 文書プロジェクトを作成するには  
+### <a name="to-create-a-new-word-document-project"></a>Word 文書プロジェクトを作成するには  
   
-1.  名前の Word 文書プロジェクトを作成**EmployeeControls**です。 ソリューションの新しい文書を作成します。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+1.  名前の Word 文書プロジェクトを作成**EmployeeControls**です。 ソリューションの新しい文書を作成します。 詳細については、次を参照してください。[する方法: Visual Studio で作成する Office プロジェクト](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] デザイナーで新しい Word 文書を開き、追加、 **EmployeeControls**プロジェクトを**ソリューション エクスプ ローラー**です。  
   
-## <a name="adding-content-controls-to-the-document"></a>文書にコンテンツ コントロールを追加する  
+## <a name="add-content-controls-to-the-document"></a>コンテンツ コントロールをドキュメントに追加します。  
  ユーザーが従業員に関する情報を表示または編集できる 3 種類のコンテンツ コントロールが含まれるテーブルを作成します。  
   
-#### <a name="to-add-content-controls-to-the-document"></a>文書にコンテンツ コントロールを追加するには  
+### <a name="to-add-content-controls-to-the-document"></a>文書にコンテンツ コントロールを追加するには  
   
 1.  ホストされている Word 文書で、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 、リボン上のデザイナーを選択して、**挿入** タブ。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 5.  リボンで、選択、**開発者**タブです。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[する方法: [開発] タブをリボンに表示](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)です。  
   
 6.  **コントロール**グループで、選択、**テキスト**ボタン![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") を追加する<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>最初のセルにします。  
   
@@ -101,12 +102,12 @@ ms.lasthandoff: 04/16/2018
   
  これで、このプロジェクトのユーザー インターフェイスが完成しました。 ここでこのプロジェクトを実行すると、最初の行にテキストを入力し、2 つ目の行で日付を選択できます。 次の手順では、表示するデータを XML ファイル内の文書に添付します。  
   
-## <a name="creating-the-xml-data-file"></a>XML データ ファイルの作成  
+## <a name="create-the-xml-data-file"></a>XML データ ファイルを作成します。  
  通常は、ファイルやデータベースなどの外部ソースからカスタム XML 部分に格納する XML 文字列を取得する必要があります。 このチュートリアルでは、文書内のコンテンツ コントロールにバインドする要素でマークされた従業員データを含む、XML ファイルを作成します。 実行時に使用可能にするため、カスタマイズ アセンブリのリソースとして XML ファイルを埋め込みます。  
   
 #### <a name="to-create-the-data-file"></a>データ ファイルを作成するには  
   
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  内容を置き換える、 **employees.xml**を次のテキスト ファイルです。  
   
-    ```  
+    ```xml 
     <?xml version="1.0" encoding="utf-8" ?>  
     <employees xmlns="http://schemas.microsoft.com/vsto/samples">  
       <employee>  
@@ -135,12 +136,12 @@ ms.lasthandoff: 04/16/2018
   
      この操作によって、プロジェクトをビルドしたときに、XML ファイルがリソースとしてアセンブリに埋め込まれます。 これにより、実行時に XML ファイルの内容にアクセスできます。  
   
-## <a name="creating-an-xml-schema"></a>XML スキーマを作成する  
+## <a name="create-an-xml-schema"></a>XML スキーマを作成します。  
  コンテンツ コントロールをカスタム XML 部分の 1 つの要素にバインドする場合は、XML スキーマを使用する必要はありません。 ただし、<xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を複数の値にバインドする場合は、前の手順で作成した XML データ ファイルを検証する XML スキーマを作成する必要があります。 XML スキーマには、`title` 要素に割り当てることができる値を定義します。 このチュートリアルの後半で、この要素に <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> をバインドします。  
   
 #### <a name="to-create-an-xml-schema"></a>XML スキーマを作成するには  
   
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  内容を置き換える、 **employees.xsd**次のスキーマを持つファイルです。  
   
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8" ?>  
     <xs:schema xmlns="http://schemas.microsoft.com/vsto/samples"   
         targetNamespace="http://schemas.microsoft.com/vsto/samples"  
@@ -185,10 +186,10 @@ ms.lasthandoff: 04/16/2018
   
 6.  **ファイル** メニューのをクリックして**すべて保存**に変更を保存する、 **employees.xml**と**employees.xsd**ファイル。  
   
-## <a name="attaching-the-xml-schema-to-the-document"></a>XML スキーマを文書に添付する  
+## <a name="attach-the-xml-schema-to-the-document"></a>XML スキーマをドキュメントにアタッチします。  
  <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> を `title` 要素の有効な値にバインドするためには、XML スキーマを文書に添付する必要があります。  
   
-#### <a name="to-attach-the-xml-schema-to-the-document-includeword15shortvstoincludesword-15-short-mdmd"></a>XML スキーマをドキュメントに添付するには ([!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])  
+### <a name="to-attach-the-xml-schema-to-the-document-includeword15shortvstoincludesword-15-short-mdmd"></a>XML スキーマをドキュメントに添付するには ([!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])  
   
 1.  アクティブ化**EmployeeControls.docx**デザイナーでします。  
   
@@ -202,7 +203,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  選択、 **OK**を閉じる ボタン、**テンプレートとアドイン** ダイアログ ボックス。  
   
-#### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>XML スキーマをドキュメントに添付するには (Word 2010)  
+### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>XML スキーマをドキュメントに添付するには (Word 2010)  
   
 1.  アクティブ化**EmployeeControls.docx**デザイナーでします。  
   
@@ -222,10 +223,10 @@ ms.lasthandoff: 04/16/2018
   
 8.  閉じる、 **XML 構造**作業ウィンドウ。  
   
-## <a name="adding-a-custom-xml-part-to-the-document"></a>カスタム XML 部分を文書に追加する  
+## <a name="add-a-custom-xml-part-to-the-document"></a>カスタム XML 部分をドキュメントに追加します。  
  コンテンツ コントロールを XML ファイル内の要素にバインドするためには、XML ファイルの内容を文書内の新しいカスタム XML 部分に追加する必要があります。  
   
-#### <a name="to-add-a-custom-xml-part-to-the-document"></a>カスタム XML 部分を文書に追加するには  
+### <a name="to-add-a-custom-xml-part-to-the-document"></a>カスタム XML 部分を文書に追加するには  
   
 1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **ThisDocument.cs**または**ThisDocument.vb**を選択し**コードの表示**です。  
   
@@ -246,32 +247,32 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#4)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#4)]  
   
-## <a name="binding-the-content-controls-to-elements-in-the-custom-xml-part"></a>コンテンツ コントロールをカスタム XML 部分の要素にバインドする  
+## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>カスタム XML 部分の要素にコンテンツ コントロールをバインドします。  
  使用してカスタム XML 部分の要素にバインドする各コンテンツ コントロール、 **XMLMapping**各コンテンツ コントロールのプロパティです。  
   
-#### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>コンテンツ コントロールをカスタム XML 部分の要素にバインドするには  
+### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>コンテンツ コントロールをカスタム XML 部分の要素にバインドするには  
   
 1.  `ThisDocument` クラスに次のメソッドを追加します。 このメソッドは、各コンテンツ コントロールをカスタム XML 部分の要素にバインドし、<xref:Microsoft.Office.Tools.Word.DatePickerContentControl> の日付表示形式を設定します。  
   
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#5)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#5)]  
   
-## <a name="running-your-code-when-the-document-is-opened"></a>文書が開かれたときにコードを実行する  
+## <a name="run-your-code-when-the-document-is-opened"></a>ドキュメントを開いたときに、コードを実行します。  
  カスタム XML 部分を作成し、文書が開かれたときにカスタム コントロールをデータにバインドします。  
   
-#### <a name="to-run-your-code-when-the-document-is-opened"></a>文書が開かれたときにコードを実行するには  
+### <a name="to-run-your-code-when-the-document-is-opened"></a>文書が開かれたときにコードを実行するには  
   
 1.  `ThisDocument_Startup` クラスの `ThisDocument` メソッドに次のコード行を追加します。 このコードは元の XML 文字列を取得、 **employees.xml**ファイルが、ドキュメント内の新しいカスタム XML 部分に XML 文字列を追加し、コンテンツ コントロールをカスタム XML 部分の要素にバインドします。  
   
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#2)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#2)]  
   
-## <a name="testing-the-project"></a>プロジェクトのテスト  
+## <a name="test-the-project"></a>プロジェクトをテストします。  
  文書を開くと、コンテンツ コントロールにカスタム XML 部分の要素のデータが表示されます。 クリックすることができます、<xref:Microsoft.Office.Tools.Word.DropDownListContentControl>の 3 つの有効な値のいずれかを選択、`title`で定義されている要素、 **employees.xsd**ファイル。 コンテンツ コントロールに表示されたデータを編集すると、新しい値が文書内のカスタム XML 部分に保存されます。  
   
-#### <a name="to-test-the-content-controls"></a>コンテンツ コントロールをテストするには  
+### <a name="to-test-the-content-controls"></a>コンテンツ コントロールをテストするには  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  キーを押して**f5 キーを押して**プロジェクトを実行します。  
   
 2.  文書内に次のようなテーブルが表示されることを確認します。 2 つ目の列の文字列は、文書内のカスタム XML 部分の要素から取得されます。  
   
@@ -289,13 +290,13 @@ ms.lasthandoff: 04/16/2018
   
 6.  文書を保存して閉じます。  
   
-7.  エクスプローラーで、プロジェクトの下にある \bin\Debug フォルダーを開きます。  
+7.  ファイル エクスプ ローラーで、開く、 *\bin\Debug*プロジェクトの下にあるフォルダーです。  
   
 8.  ショートカット メニューを開き、 **EmployeeControls.docx**を選択し**の名前を変更**です。  
   
 9. ファイルの名前を付けます**EmployeeControls.docx.zip**です。  
   
-     **EmployeeControls.docx** Open XML 形式のドキュメントを保存します。 この文書の拡張子を .zip に変更すると、文書の内容を確認できます。 Open XML の詳細については、技術記事を参照してください。 [、Office (2007) Open XML ファイル形式の概要](http://msdn.microsoft.com/en-us/96018532-f62c-4da7-bbff-16b96a483fbf)です。  
+     **EmployeeControls.docx** Open XML 形式のドキュメントを保存します。 このドキュメントでの名前を変更して、 *.zip*ファイル名拡張子、ドキュメントの内容を調べることができます。 Open XML の詳細については、技術記事を参照してください。 [Introducing Office (2007) Open XML ファイル形式](http://msdn.microsoft.com/en-us/96018532-f62c-4da7-bbff-16b96a483fbf)です。  
   
 10. 開く、 **EmployeeControls.docx.zip**ファイル。  
   
@@ -312,19 +313,19 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>次の手順  
  コンテンツ コントロールの使用方法の詳細については、次の各トピックを参照してください。  
   
--   用意されているすべてのコンテンツ コントロールを使用してテンプレートを作成できます。 詳細については、次を参照してください。[チュートリアル: コントロールによるテンプレートを使用してコンテンツを作成する](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)です。  
+-   用意されているすべてのコンテンツ コントロールを使用してテンプレートを作成できます。 詳細については、次を参照してください。[チュートリアル: コンテンツ コントロールを使用してテンプレートを作成](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)です。  
   
 -   文書を閉じた状態でカスタム XML 部分のデータを変更できます。 その文書を次にユーザーが開いたときには、XML 要素にバインドされたコンテンツ コントロールに新しいデータが表示されます。  
   
--   コンテンツ コントロールを使用して文書の一部を保護できます。 詳細については、「 [方法 : コンテンツ コントロールを使用して文書を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。  
+-   コンテンツ コントロールを使用して文書の一部を保護できます。 詳細については、次を参照してください。[する方法: コンテンツ コントロールを使用してドキュメントの一部を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)です。  
   
 ## <a name="see-also"></a>関連項目  
- [拡張オブジェクトによる Word の自動化](../vsto/automating-word-by-using-extended-objects.md)   
+ [拡張オブジェクトによる Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
  [コンテンツ コントロール](../vsto/content-controls.md)   
  [方法: Word 文書にコンテンツ コントロールを追加](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [方法: コンテンツ コントロールを使用してドキュメントを保護する.](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)  
   
   

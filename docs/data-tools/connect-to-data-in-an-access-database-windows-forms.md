@@ -16,11 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d15cf1d8e2d7a7178b6ffc423319fcadd8e00cad
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 233527e92a6d0d20294769d070e8dc81b33753b4
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746817"
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access データベース (Windows フォーム) にデータへの接続します。
 Visual Studio を使用して、Access データベース (.mdf ファイルまたは .accdb ファイル) に接続することができます。 接続の定義後に表示される、データ、**データソース**ウィンドウです。 ここから、テーブルまたはビューをフォームにドラッグできます。
@@ -37,7 +38,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
 2.  **ビュー**メニューの **その他のウィンドウ** > **データソース**です。
 
-     ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")
+     ![[表示]、[その他のウィンドウ]、[データ ソース]](../data-tools/media/viewdatasources.png)
 
 3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
@@ -59,7 +60,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
 9. 戻り、**接続の追加**ダイアログ ボックスで、 **Microsoft Office 12.0 Access Database Engine OLE DB Provider**から、 **OLE DB プロバイダー**ドロップダウンします。
 
-     ![OLE DB プロバイダーの Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")
+     ![OLE DB プロバイダーの Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png)
 
      > [!NOTE]
      >  表示されない場合**Microsoft Office 12.0 Access Database Engine OLE DB Provider**ドロップダウン OLE DB プロバイダーをインストールする必要があります、 [2007 Office System ドライバー: データ接続コンポーネント](https://www.microsoft.com/download/confirmation.aspx?id=23734)です。
@@ -87,7 +88,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
 2.  **ビュー**メニューの **その他のウィンドウ** > **データソース**です。
 
-     ![その他の Windows のデータ ソースの表示](../data-tools/media/viewdatasources.png "ViewDataSources")
+     ![[表示]、[その他のウィンドウ]、[データ ソース]](../data-tools/media/viewdatasources.png)
 
 3.  **[データ ソース]** ウィンドウで、 **[新しいデータ ソースの追加]** をクリックします。
 
@@ -103,7 +104,7 @@ Visual Studio を使用して、Access データベース (.mdf ファイルま�
 
 8.  **データベース ファイルの名前**を選択し、接続する .mdb ファイルの名前とパスを指定**OK**です。
 
-     ![Access データベース ファイルの接続を追加](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")
+     ![Access データベース ファイルへの接続を追加](../data-tools/media/dataaddconnectionaccessmdb.png)
 
 9. 選択**次**上、**データ接続の選択**ページ。
 

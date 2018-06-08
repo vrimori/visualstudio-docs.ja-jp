@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06a41f0843b33e1f73d9a2449fe954d8673350fc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 054e66914172447e96e2977f81985c52430af115
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573246"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
 [DebuggerDisplayAttribute クラス](/dotnet/api/system.diagnostics.debuggerdisplayattribute)デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
@@ -87,6 +88,7 @@ public sealed class MyClass
     }  
 }  
 ```  
+"、Nq"サフィックスが、式エバリュエーターを最終的な値を表示するときに、引用符を削除するように指示 (nq 引用符 = なし)。 
   
 ## <a name="example"></a>例  
  次のコード例では、 `DebuggerDisplay`を `DebuggerBrowseable` および `DebuggerTypeProxy`と組み合わせて使用する方法を示します。 **[ウォッチ]** ウィンドウなど、デバッガーの変数ウィンドウに表示されると、次のように展開が作成されます。  

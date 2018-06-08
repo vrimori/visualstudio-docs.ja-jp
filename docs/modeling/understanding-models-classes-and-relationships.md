@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 408c74dbbf23abee5d548484014e0f2ddc66963e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 394b21d396bf92b794060ff27ed940e25a77aa26
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748489"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>モデル、クラス、およびリレーションシップについて
 ドメイン固有言語 (DSL) は、作成した場合、カスタム プログラム コードと共にその DSL 定義ファイルで定義されます。 DSL ソリューション内のプログラム コードのほとんどは、このファイルから生成されます。
@@ -25,13 +26,13 @@ ms.lasthandoff: 04/26/2018
 ## <a name="the-dsl-definition"></a>DSL 定義
  開くと`Dsl\DslDefinition.dsl`、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウ次の図のようになります。
 
- ![dsl designer](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL デザイナー](../modeling/media/dsl_designer.png)
 
  DSL 定義で最も重要な情報は、DSL 定義ダイアグラムに表示されます。 詳細についても DslDefinition.dsl の一部であるは、ダイアグラムの横にある通常表示 DSL のエクスプ ローラーに表示されます。 最も一般的なタスクについては、図とのより高度なカスタマイズの DSL のエクスプ ローラーを操作するとします。
 
  DSL 定義ダイアグラムは、モデル要素、およびモデルの要素間のリンクを定義するリレーションシップを定義するドメイン クラスを示しています。 図形と、ユーザーにモデル要素を表示するために使用するコネクタも示しています。
 
- ![スイムレーンを含む dsl デザイナー](../modeling/media/dsl_desinger.png "dsl_desinger")
+ ![スイムレーンを含む DSL デザイナー](../modeling/media/dsl_desinger.png)
 
  図または DSL のエクスプ ローラーで、DSL 定義内の項目を選択するプロパティ ウィンドウでそれに関する情報が表示されます。 詳細については、[DSL 詳細] ウィンドウに表示されます可能性があります。
 
@@ -45,13 +46,13 @@ ms.lasthandoff: 04/26/2018
 
  この図は、音楽ライブラリ DSL のユーザーによって作成されたモデルを示しています。 音楽のアルバムの曲の一覧を含むボックスとして表されます。 アーティストはボックスの角の丸いによって表されに関与するアルバムに接続しています。
 
- ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png "Music_Instance")
+ ![生成された DSL のインスタンス モデル](../modeling/media/music_instance.png)
 
  DSL 定義は、2 つの側面を分離します。 モデル図のモデル要素の外観を定義するには、クラスの図形とコネクタ クラスを使用します。 モデルに含まれる情報は、ドメイン クラスおよびドメインの関係を使用して定義されます。
 
  次の図は、音楽ライブラリの DSL 定義でドメイン クラスとリレーションシップを示しています。
 
- ![リレーションシップの埋め込みと参照リレーションシップ](../modeling/media/music_classes.png "Music_Classes")
+ ![埋め込みリレーションシップと参照リレーションシップ](../modeling/media/music_classes.png)
 
  図に示す 4 つのドメイン クラス: 音楽、アルバム、アーティスト、曲。 ドメイン クラスは、名前、タイトルなどのドメインのプロパティを定義します。 モデルでは、インスタンス、これらのプロパティの一部の値は、ダイアグラムに表示されます。
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="the-explorer-displays-the-embedding-tree"></a>エクスプ ローラーには、埋め込みのツリーが表示されます。
  DSL 定義には、ユーザーがそのモデル図と共に「エクスプ ローラーも作成されます。
 
- ![DSL のエクスプ ローラーが生成された](../modeling/media/music_explorer.png "Music_Explorer")
+ ![生成された DSL のエクスプローラー](../modeling/media/music_explorer.png)
 
  エクスプ ローラーは、モデルでは、すべての図形を定義していないものも、すべての要素を示します。 要素と埋め込みの関係を示していますが、リレーションシップを参照していません。
 
@@ -122,7 +123,7 @@ ms.lasthandoff: 04/26/2018
 
  次の図の間の線で、**パブリッシャー**ドメイン クラスおよび**PublisherCatalog**ドメイン リレーションシップ ソース ロールは、します。 ドメイン リレーションシップの間の線、および**アルバム**ドメイン クラスは、ターゲット ロールです。
 
- ![ロールおよびプロパティです。] (../modeling/media/propertycode.png "PropertyCode")
+ ![ロールおよびプロパティ](../modeling/media/propertycode.png)
 
  リレーションシップに関連付けられている名前は、モデルを走査するプログラム コードを記述するときに特に重要です。 たとえば、DSL ソリューションをビルドするときに、生成されたクラスでは、パブリッシャーには、アルバムのコレクションであるカタログ プロパティがあります。 クラスのアルバムには、パブリッシャー クラスの 1 つのインスタンスは、パブリッシャーのプロパティがあります。
 

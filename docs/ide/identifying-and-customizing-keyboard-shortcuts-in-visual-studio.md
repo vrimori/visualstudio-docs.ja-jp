@@ -1,7 +1,7 @@
 ---
-title: Visual Studio でのキーボード ショートカットの識別とカスタマイズ | Microsoft Docs
-ms.custom: ''
+title: Visual Studio でのキーボード ショートカットの識別とカスタマイズ
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -19,13 +19,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b277c587fc92f9ce6c38815e2b07c74fa6ea3bc3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ed1806ce5810814c8ea2ce9c08462ecc8f9fd77
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747230"
 ---
-# <a name="identifying-and-customizing-keyboard-shortcuts-in-visual-studio"></a>Visual Studio でのキーボード ショートカットの識別とカスタマイズ
+# <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Visual Studio でのキーボード ショートカットの識別とカスタマイズ
 
 Visual Studio のコマンドのショートカット キーを確認し、カスタマイズしたら、他の人が使用できるようにエクスポートできます。 多くのショートカット キーは常に同じコマンドを起動しますが、その動作は次の条件によって異なることがあります。
 
@@ -33,22 +34,22 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 - ショートカット キーの動作をカスタマイズしたかどうか。
 
-- ショートカット キーを選択するときのコンテキスト。 たとえば、F2 ショートカット キーでは、設定デザイナーを使用している場合は Edit.EditCell コマンドが呼び出され、チーム エクスプローラーを使用している場合は File.Rename コマンドが呼び出されます。
+- ショートカット キーを選択するときのコンテキスト。 たとえば、**F2** ショートカット キーでは、**設定デザイナー**を使用している場合は `Edit.EditCell` コマンドが呼び出され、**チーム エクスプローラー**を使用している場合は `File.Rename` コマンドが呼び出されます。
 
-設定、カスタマイズ、コンテキストにかかわらず、**[オプション]** ダイアログ ボックスでいつでもショートカット キーを変更できます。 数十のコマンドの既定のキーボード ショートカットについては、「[Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)」でも確認できます。また、既定のショートカット キー ([全般的な開発設定] に基づく) の完全な一覧については、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」で確認できます。
+設定、カスタマイズ、コンテキストにかかわらず、**[オプション]** ダイアログ ボックスでいつでもショートカット キーを変更できます。 数十のコマンドの既定のキーボード ショートカットについては、「[Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)」でも確認できます。また、既定のショートカット キー (**[全般的な開発設定]** に基づく) の完全な一覧については、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」で確認できます。
 
 ショートカット キーを [全体] コンテキストに割り当て、他のコンテキストに割り当てていない場合、そのショートカット キーによって常にそのコマンドが呼び出されます。 しかし、ショートカット キーは [全体] コンテキストの 1 つのコマンドに割り当て、特定のコンテキストの別のコマンドに割り当てることができます。 そのようなショートカット キーを特定のコンテキストで使用すると、ショートカット キーによって [全体] コンテキストではなく特定のコンテキストのコマンドが呼び出されます。
 
 > [!NOTE]
 > 使用している Visual Studio の設定とエディションによって、メニューに表示されるコマンドやダイアログ ボックスに表示されるオプションの名前や位置が異なる場合があります。 このトピックは **[全般的な開発設定]** に基づいています。
 
-## <a name="identifying-a-keyboard-shortcut"></a>ショートカット キーの確認
+## <a name="identify-a-keyboard-shortcut"></a>ショートカット キーの確認
 
-1. メニュー バーの **[ツール]**、 **[オプション]** の順にクリックします。
+1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
 
 2. **[環境]** を展開し、**[キーボード]** を選択します。
 
-   ![[オプション] ダイアログ ボックスにキーボード ショートカットを表示](../ide/media/optionskeyboard.png "OptionsKeyboard")
+   ![[オプション] ダイアログ ボックスにキーボード ショートカットを表示](../ide/media/optionskeyboard.png)
 
 3. **[以下の文字列を含むコマンドを表示]** ボックスに、コマンド名の全体または一部を、空白を含めずに入力し始めます。
 
@@ -56,15 +57,15 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 4. 一覧から該当するコマンドを選択します。
 
-    たとえば、**View.SolutionExplorer** を選択できます。
+    たとえば、`View.SolutionExplorer` を選択できます。
 
 5. コマンドにショートカット キーが既に割り当てられている場合は、**[選択したコマンドへのショートカット]** ボックスの一覧に表示されます。
 
-   ![指定されたコマンドのショートカットを表示](../ide/media/viewshortcut.png "ViewShortcut")
+   ![指定されたコマンドのショートカットを表示](../ide/media/viewshortcut.png)
 
-## <a name="customizing-a-keyboard-shortcut"></a>ショートカット キーのカスタマイズ
+## <a name="customize-a-keyboard-shortcut"></a>ショートカット キーのカスタマイズ
 
-1. メニュー バーの **[ツール]**、 **[オプション]** の順にクリックします。
+1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
 
 2. **[環境]** フォルダーを展開し、**[キーボード]** を選択します。
 
@@ -72,28 +73,28 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 4. ショートカット キーを割り当てるコマンドを一覧から選択します。
 
-**[ショートカットの使用場所]** ボックスの一覧で、ショートカット キーを使用する機能領域を選択します。
+    **[ショートカットの使用場所]** ボックスの一覧で、ショートカット キーを使用する機能領域を選択します。
 
-    For example, you can choose **Global** if you want the shortcut to work in all contexts. You can use any shortcut that isn't mapped (as Global) in another editor. Otherwise, the editor overrides the shortcut.
+    たとえば、ショートカットをすべてのコンテキスト内で機能させる場合は、**[全体]** をクリックします。 他のエディターで同じショートカットが ([全体] として) 割り当てられていなければ、そのショートカット キーを使用できます。 それ以外の場合は、既存のショートカットが上書きされます。
 
     > [!NOTE]
-    > You can't assign the following keys as part of a keyboard shortcut in **Global**: Print Scrn/Sys Rq, Scroll Lock, Pause/Break, Tab, Caps Lock, Insert, Home, End, Page Up, Page Down, the Windows logo key, the Application key, any of the Arrow keys, or Enter; Num Lock, Delete, or Clear on the numeric keypad; the Ctrl+Alt+Delete key combination.
+    > 次のキーは、ショートカット キーの一部として **[全体]** に割り当てることができません: Print Screen/Sys Rq、Scroll Lock、Pause/Break、Tab、Caps Lock、Insert、Home、End、Page Up、Page Down、Windows ロゴ キー、アプリケーション キー、すべての方向キー、Enter キーのほか、数値キーパッドの Num Lock、Delete、Clear、Ctrl + Alt + Delete キーの組み合わせ。
 
 6. **[ショートカット キー]** ボックスで、使用するショートカット キーを入力します。
 
     > [!NOTE]
-    > 文字と Alt キー、Ctrl キー、またはその両方を組み合わせたショートカット キーを作成できます。 Shift キーおよび文字と Alt キー、Ctrl キー、またはその両方を組み合わせたショートカット キーを作成することもできます。
+    > 文字と **Alt** キー、**Ctrl** キー、またはその両方を組み合わせたショートカット キーを作成できます。 **Shift** キーおよび文字と **Alt** キー、**Ctrl** キー、またはその両方を組み合わせたショートカット キーを作成することもできます。
 
-     ショートカット キーが別のコマンドに既に割り当てられている場合は、**[現在使用されているショートカット]** ボックスに表示されます。 その場合は、Backspace キーを押してそのショートカット キーを削除してから、別のショートカット キーを試します。
+     ショートカット キーが別のコマンドに既に割り当てられている場合は、**[現在使用されているショートカット]** ボックスに表示されます。 その場合は、**Backspace** キーを押してそのショートカット キーを削除してから、別のショートカット キーを試します。
 
-    ![コマンドに異なるショートカットを指定](../ide/media/reassignshortcut.png "ReassignShortcut")
+    ![コマンドに異なるショートカットを指定](../ide/media/reassignshortcut.png)
 
 7. **[割り当て]** ボタンをクリックします。
 
     > [!NOTE]
     > コマンドに別のショートカット キーを指定し、**[割り当て]** ボタンをクリックした後に、**[キャンセル]** ボタンをクリックしても、ダイアログ ボックスは閉じますが、変更は元に戻りません。
 
-## <a name="sharing-custom-keyboard-shortcuts"></a>カスタム ショートカット キーの共有
+## <a name="share-custom-keyboard-shortcuts"></a>カスタム ショートカット キーの共有
 
 カスタム ショートカット キーを他のユーザーと共有できます。そのためには、ショートカット キーの情報をファイルにエクスポートし、そのファイルを他のユーザーに渡して、インポートしてもらう必要があります。
 
@@ -107,11 +108,11 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 4. **[キーボード]** チェック ボックスをオンにして、**[次へ]** ボタンをクリックします。
 
-    ![カスタマイズされたショートカット キーのみをエクスポート](../ide/media/exportshortcuts.png "ExportShortcuts")
+    ![カスタマイズされたキーボード ショートカットのみをエクスポート](../ide/media/exportshortcuts.png)
 
 5. **[設定ファイルの名前を指定してください]** と **[設定を次のディレクトリに格納する]** ボックスで、既定値のままにするか別の値を指定し、**[完了]** ボタンをクリックします。
 
-    既定では、ショートカット キーは %USERPROFILE%\Documents\Visual Studio 2017\Settings フォルダーに保存されます。 ファイルの名前には設定のエクスポート時の日付が反映され、拡張子は .vssettings になります。
+    既定では、ショートカット キーは *%USERPROFILE%\Documents\Visual Studio 2017\Settings* フォルダーに保存されます。 ファイルの名前には設定のエクスポート時の日付が反映され、拡張子は *.vssettings* になります。
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>ショートカット キーのみをインポートするには
 
@@ -129,8 +130,8 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 7. **[キーボード]** チェック ボックスをオンにして、**[完了]** ボタンをクリックします。
 
-    ![カスタマイズされたショートカット キーのみをインポート](../ide/media/importshortcuts.png "ImportShortcuts")
+    ![カスタマイズされたキーボード ショートカットのみをインポート](../ide/media/importshortcuts.png)
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)
+- [Visual Studio のユーザー補助機能](../ide/reference/accessibility-features-of-visual-studio.md)

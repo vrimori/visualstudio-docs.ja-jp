@@ -19,11 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 613c576e895042055d5faee9eeb7c8ca27da078a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ed2080c34908f67c83baed182d8e958eb1776b8f
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815822"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する
 ユーザーが ClickOnce アプリケーションを利用できるようにするには、アプリケーションをファイル共有やパス、FTP サーバー、またはリムーバブル メディアに発行する必要があります。 発行ウィザードを使用してアプリケーションを発行することができます。発行に関連するその他のプロパティは、**発行**のページ、**プロジェクト デザイナー**です。 詳細については、次を参照してください。 [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)です。  
@@ -48,11 +49,11 @@ ms.lasthandoff: 04/19/2018
   
 4.  **ユーザーがアプリケーションをインストールする方法ですか?**  ページで、アプリケーションのインストールのユーザーの移動先の場所を選択します。  
   
-    -   ユーザーは、Web サイトからインストールする場合にクリックして**Web サイトから**と前の手順で入力したファイル パスに対応する URL を入力します。 **[次へ]**をクリックします。 (このオプションは通常、発行場所として FTP アドレスを指定する場合に使用します。 FTP からの直接ダウンロードはサポートされていません。 したがって、ここに URL を入力する必要があります。)  
+    -   ユーザーは、Web サイトからインストールする場合にクリックして**Web サイトから**と前の手順で入力したファイル パスに対応する URL を入力します。 **[次へ]** をクリックします。 (このオプションは通常、発行場所として FTP アドレスを指定する場合に使用します。 FTP からの直接ダウンロードはサポートされていません。 したがって、ここに URL を入力する必要があります。)  
   
     -   ユーザーは、ファイル共有から直接アプリケーションをインストールする場合にをクリックして**UNC パスまたはファイル共有**、順にクリック**次**です。 (これは、フォーム c:\deploy\myapp の発行場所または\\\server\myapp)。  
   
-    -   ユーザーがリムーバブル メディアからインストールする場合はクリックして**から CD-ROM または DVD-ROM**、クリックして**[次へ]**です。  
+    -   ユーザーがリムーバブル メディアからインストールする場合はクリックして**から CD-ROM または DVD-ROM**、クリックして **[次へ]** です。  
   
 5.  **アプリケーションはオフラインでも利用できます?**  ページで、適切なオプションをクリックします。  
   
@@ -101,4 +102,4 @@ ms.lasthandoff: 04/19/2018
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
- [ClickOnce を使用した Office ソリューションの配置](/office-dev/office-dev/deploying-an-office-solution-by-using-clickonce)
+ [ClickOnce を使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)

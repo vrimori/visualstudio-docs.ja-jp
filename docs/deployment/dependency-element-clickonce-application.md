@@ -28,18 +28,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5d84dba671d1fddda0569015d936b95e5e58d1d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fee364b7116bf69b961726ec2154809f66f9bc45
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815036"
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;依存関係&gt;要素 (ClickOnce アプリケーション)
 アプリケーションに必要なプラットフォームやアセンブリ依存関係を識別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
   
       <dependency>  
    <dependentOS  
@@ -173,7 +174,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="example"></a>例  
  次のコード例を示しています`dependency`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 このコード例に示されている例の一部である、 [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)トピックです。  
   
-```  
+```xml  
 <dependency>  
   <dependentOS>  
     <osVersionInfo>  

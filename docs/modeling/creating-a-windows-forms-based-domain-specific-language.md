@@ -9,16 +9,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ce2fa2f067b72d051aa21eba0db2b8f0eda8b43f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f4cfe9549880646fe9ba0a487045b005366c075
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749477"
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語の作成
 Windows フォームを使用すると、DSL 図を使用する代わりに、ドメイン固有言語 (DSL) モデルの状態を表示します。 このトピックを紹介 DSL への Windows フォームのバインドを使用して、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK。
 
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2") A DSL のインスタンス、Windows フォーム UI とモデル エクスプ ローラーを表示します。
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png) A DSL のインスタンス、Windows フォーム UI とモデル エクスプ ローラーを表示します。
 
 ## <a name="creating-a-windows-forms-dsl"></a>Windows フォーム DSL を作成します。
  **最小限 WinForm デザイナー** DSL テンプレートには、独自の要件に合わせて変更できる最小限に抑える DSL が作成されます。
@@ -68,7 +69,7 @@ Windows フォームを使用すると、DSL 図を使用する代わりに、�
 ## <a name="updating-the-dsl-definition"></a>DSL 定義の更新
  DSL 定義は、このチュートリアルで使用します。
 
- ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")
+ ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png)
 
 #### <a name="to-update-the-dsl-definition"></a>DSL 定義を更新するには
 
@@ -127,7 +128,7 @@ Windows フォームを使用すると、DSL 図を使用する代わりに、�
 
      プロパティと、モデル クラスの関係は、データ ソース ウィンドウに表示されます。
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")
+     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png)
 
 #### <a name="to-connect-your-model-to-a-form"></a>フォームに、モデルを接続するには
 
@@ -172,7 +173,7 @@ Windows フォームを使用すると、DSL 図を使用する代わりに、�
 
 -   これにより、ユーザーは、行を選択するときに、[プロパティ] ウィンドウが表示されるデータ グリッド行の代わりに、対応するモデル要素のプロパティ。
 
- ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4")データ ソースとビューの間のリンクのスキーマです。
+ ![DslWpf4](../modeling/media/dslwpf4.png)データ ソースとビューの間のリンクのスキーマです。
 
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL へのバインドを完了するには
 
@@ -301,7 +302,7 @@ Windows フォームを使用すると、DSL 図を使用する代わりに、�
 
      データ グリッド ビュー内の要素の名前を編集することができます。 そこから削除することもできます。
 
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>要素を追加するコードについて
  新しい要素ボタンでは、次の代替コードは少し簡単なです。

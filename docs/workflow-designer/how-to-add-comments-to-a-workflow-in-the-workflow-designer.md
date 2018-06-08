@@ -13,11 +13,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ba21ba5b2ce6126d29d34f5df662e9e332359ed3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d740614ed94d0fd91ba9f3e73a083791b9112919
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752028"
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>ワークフロー デザイナーでワークフローにコメントを追加する方法
 
@@ -52,11 +53,11 @@ ms.lasthandoff: 04/26/2018
 
    注釈は、アクティビティのデザイナーに表示されます。 次のスクリーンショットでは、「ワーク フローのアクティビティを開始する」という注釈がアクティビティ デザイナーに表示されています。
 
-   ![注釈がアクティビティ デザイナーに表示されている](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")
+   ![注釈がアクティビティ デザイナーに表示されている](../workflow-designer/media/annotationindesigner.png)
 
 1. アクティビティ デザイナーの外部に注釈を表示するアクティビティ デザイナーの注釈の領域を合わせるし をクリックして、**ピン解除** アイコン
 
-   ![アクティビティのデザイナーの外部に表示される注釈](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")
+   ![注釈がアクティビティ デザイナーの外部に表示されている](../workflow-designer/media/annotationoutsidedesigner.png)
 
 ## <a name="showing-or-hiding-all-annotations"></a>すべての注釈の表示または非表示
 

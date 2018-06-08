@@ -21,20 +21,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8c1869f11d4202237d628ff3f15f73906822ec47
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: e2108ce50cca32be707931f5bcf11d4501e8d3d3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34692523"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764921"
 ---
-# <a name="creating-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint のサイト列、コンテンツの種類、およびリストの作成
+# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>For SharePoint のサイト列、コンテンツの種類、およびリストを作成します。
   Visual Studio には、さまざまな基本的な SharePoint アイテムの数などのプロジェクト項目テンプレートが用意されています*一覧*と*コンテンツの種類*、どちらのサイト内の列を組み込むことができます (または*フィールド*)。 コンテンツ タイプおよびリストの新しいデザイナーは、これらの項目をより簡単に作成を行います。  
   
 ## <a name="site-columns"></a>サイト内の列
  サイト内の列には、SharePoint プロジェクトに追加できる最も基本的な要素の 1 つがあります。 サイト内の列は、電話番号、コメント、またはメンバー リスト内の連絡先の都市名など、データの型を表します。  
   
- 新しいサイト列プロジェクト項目テンプレートが容易作成元のサイト列よりも、以前のバージョンの Visual Studio です。 新しいサイト内の列を作成すると、その表示名、そのデータ型、およびサイト内の列を SharePoint に表示するグループなどの必要な情報が含まれるサイト内の列の Elements.xml ファイル内の XML を変更できます。 サイト内の列の詳細については、次を参照してください。[列の概要](http://go.microsoft.com/fwlink/?LinkId=224996)です。  
+ 新しいサイト列プロジェクト項目テンプレートが容易作成元のサイト列よりも、以前のバージョンの Visual Studio です。 新しいサイト内の列を作成した後でサイト内の列の XML を変更することができます*Elements.xml*の表示名、そのデータ型、およびサイト内の列に表示グループなどの必要な情報が含まれるファイルSharePoint。 サイト内の列の詳細については、次を参照してください。[列の概要](http://go.microsoft.com/fwlink/?LinkId=224996)です。  
   
 ## <a name="content-types-and-lists"></a>コンテンツ タイプおよびリスト
  コンテンツの種類および一覧は、SharePoint で使用される要素の間で最も頻繁にです。  

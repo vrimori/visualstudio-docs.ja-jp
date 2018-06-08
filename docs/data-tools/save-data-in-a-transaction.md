@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: トランザクション内のデータを保存します。'
+title: 'チュートリアル: トランザクションにデータを保存する'
 ms.date: 09/08/2017
 ms.topic: conceptual
 dev_langs:
@@ -19,13 +19,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ec2ff00c4d355b2683c888fcdb6a333bf15e1b99
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c1f035fc56cd673f12ba694d6a94ec57aea1d93b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745530"
 ---
-# <a name="walkthrough-save-data-in-a-transaction"></a>チュートリアル: トランザクション内のデータを保存します。
+# <a name="walkthrough-save-data-in-a-transaction"></a>チュートリアル: トランザクションにデータを保存する
 このチュートリアルを使用して、トランザクションでデータを保存する方法を示します、<xref:System.Transactions>名前空間。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。 データ ソース構成ウィザードを使用して、Northwind サンプル データベース内のデータセットを 2 つのテーブルを作成します。 Windows フォームにデータ バインド コントロールと BindingNavigator の保存ボタン TransactionScope は、内部データベースを更新するためのコードを変更してみますを追加します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 

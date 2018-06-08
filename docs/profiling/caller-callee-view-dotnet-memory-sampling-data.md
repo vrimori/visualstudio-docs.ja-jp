@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d74e6c90f1caf66cbba299ea210d6f4af6637f4e
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: e2115f2f5c23d244d3a8650b46fff1f0f74689ec
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34336101"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548122"
 ---
 # <a name="callercallee-view---net-memory-sampling-data"></a>呼び出し元/呼び出し先ビュー - .NET メモリ サンプリング データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数の .NET メモリ プロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  

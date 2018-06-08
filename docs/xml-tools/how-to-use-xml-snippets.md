@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bf6b2143c7a2fd39cd7a8d2df797f68a706a2ec8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b4758fbebea12b014f92bed59e851210509cdbb9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573129"
 ---
 # <a name="how-to-use-xml-snippets"></a>方法: 使用する XML スニペット
 
@@ -22,7 +23,7 @@ XML エディターのショートカット メニューにある次の 2 つの
 
 XML スニペットがエディターに追加されると、スニペット内の編集可能なフィールドがすべて黄色で強調表示され、カーソルが最初の編集可能なフィールドに置かれます。
 
-## <a name="insert-snippet"></a>スニペットを挿入します。
+## <a name="insert-snippet"></a>スニペットの挿入
 
 次の手順にアクセスする方法を説明する、**スニペットの挿入**コマンド。
 
@@ -49,7 +50,7 @@ XML スニペットがエディターに追加されると、スニペット内�
 
 3. マウスを使用して、一覧から、またはキーを押して、スニペットの名前を入力して、スニペットを選択**タブ**または**Enter**です。
 
-### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>IntelliSense の入力候補の一覧からスニペットを挿入するには
+### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>IntelliSense 入力候補の一覧からスニペットを挿入するには
 
 1. XML スニペットを挿入する位置にカーソルを置きます。
 
@@ -79,7 +80,7 @@ XML スニペットがエディターに追加されると、スニペット内�
 > [!NOTE]
 > **ブロックの挿入**コマンドも、キーボード ショートカットを使用 (**Ctrl**+**K**、し**Ctrl** +**S**)。
 
-### <a name="to-use-surround-with-from-the-context-menu"></a>コンテキスト メニューから [ブロックの挿入] を使用するには
+### <a name="to-use-surround-with-from-the-context-menu"></a>コンテキスト メニューの ブロックの挿入を使用するには
 
 1. XML エディターで、囲むテキストを選択します。
 
@@ -89,7 +90,7 @@ XML スニペットがエディターに追加されると、スニペット内�
 
 3. またはキーを押して、スニペットの名前を入力して、マウスのボタンを使用して一覧からスニペットを選択**タブ**または**Enter**です。
 
-### <a name="to-use-surround-with-from-the-intellisense-menu"></a>IntelliSense メニューからブロックの挿入を使用するには
+### <a name="to-use-surround-with-from-the-intellisense-menu"></a>ブロックの挿入、IntelliSense メニューから使用するには
 
 1. XML エディターで、囲むテキストを選択します。
 
@@ -99,7 +100,7 @@ XML スニペットがエディターに追加されると、スニペット内�
 
 3. またはキーを押して、スニペットの名前を入力して、マウスのボタンを使用して一覧からスニペットを選択**タブ**または**Enter**です。
 
-## <a name="using-xml-snippets"></a>XML スニペットを使用します。
+## <a name="use-xml-snippets"></a>XML スニペットを使用します。
 
 XML スニペットを選択すると、カーソルの位置にコード スニペットのテキストが自動的に挿入されます。 スニペット内の編集可能なフィールドがすべて強調表示され、最初の編集可能なフィールドが自動的に選択されます。 現在選択されているフィールドは枠で囲まれます。
 
@@ -109,10 +110,10 @@ XML スニペットを選択すると、カーソルの位置にコード スニ
 
 キーを押して**Enter**または**Esc**フィールドの編集をキャンセルし、normal、エディターを返します。
 
-コード スニペット フィールドの設定を変更することで編集できるコード スニペット フィールドの既定の色を変更することができます、**フォントおよび色**のペイン、**オプション** ダイアログ ボックス。 詳細については、次を参照してください。[する方法: エディターの変更のフォントと色](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)です。
+変更することで編集できるコード スニペット フィールドの既定の色を変更することができます、**コード スニペット フィールド**で設定、**フォントおよび色**のペイン、**オプション** ダイアログ ボックス。 詳細については、次を参照してください。[する方法: エディターのフォントと色を変更する](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)です。
 
 ## <a name="see-also"></a>関連項目
 
 - [XML スニペット](../xml-tools/xml-snippets.md)
-- [方法 : XML スキーマから XML スニペットを生成する](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
-- [方法 : XML スニペットを作成する](../xml-tools/how-to-create-xml-snippets.md)
+- [方法: XML スキーマから XML スニペットを生成](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
+- [方法: XML スニペットを作成します。](../xml-tools/how-to-create-xml-snippets.md)

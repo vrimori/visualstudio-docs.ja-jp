@@ -1,6 +1,7 @@
 ---
-title: Visual Studio で Microsoft Fakes を使用したテストでコードを分離する | Microsoft Docs
+title: Visual Studio で Microsoft Fakes を使用したテストでコードを分離する
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -11,11 +12,12 @@ author: gewarren
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: ed5e8844234f6dfde52408ecd4c814b725816eb7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0ac6bd2e9b2c15f64e0232e46267a87c210b5b69
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751456"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes を使用したテストでのコードの分離
 
@@ -27,11 +29,15 @@ Fakes には 2 種類のフレーバーがあります。
 
 -   [shim](#shims) は、アプリケーションのコンパイル済みコードを実行時に変更します。これにより、指定されたメソッド呼び出しを実行する代わりに、テストで提供される shim コードが実行されるようになります。 Shim を使用すると、.NET アセンブリなど、変更できないアセンブリの呼び出しを置き換えることができます。
 
-![他のコンポーネントに置き換わる Fakes](../test/media/fakes-2.png "Fakes-2")
+![他のコンポーネントに置き換わる Fakes](../test/media/fakes-2.png)
 
 **必要条件**
 
 -   Visual Studio Enterprise
+-   .NET Framework プロジェクト
+
+> [!NOTE]
+> .NET Standard プロジェクトはサポートされていません。
 
 ## <a name="choosing-between-stub-and-shim-types"></a>スタブ型と shim 型から選択する
 通常、Visual Studio プロジェクトはコンポーネントと見なされますが、それは、これらのクラスを同時に開発および更新するためです。 プロジェクトがソリューション内の別のプロジェクトに対して実行する呼び出し、またはプロジェクトが参照する別のアセンブリに対して実行する呼び出しにスタブと shim を使用することを検討します。

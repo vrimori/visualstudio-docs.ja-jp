@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c05d1317c2b8040baf23c98cff8a032f14f47798
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0ea5606913a4afb082fda09644dad7af8031a7e2
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815075"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>方法: ClickOnce を使用して、複数のバージョンの .NET Framework で実行できるアプリケーションを配置する
 ClickOnce の配置テクノロジを使用して複数のバージョンの .NET Framework を対象とするアプリケーションを展開することができます。 これは、生成して、アプリケーション マニフェストと配置マニフェストを更新する必要があります。  
@@ -85,13 +86,13 @@ ClickOnce の配置テクノロジを使用して複数のバージョンの .NE
   
 2.  追加`group="framework"`sentinel アセンブリの依存関係に XML を (`System.Core`、 `WindowsBase`、 `Sentinel.v3.5Client`、および`System.Data.Entity`)。 たとえば、XML の場合は、次のようになります。  
   
-    ```  
+    ```xml  
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">  
     ```  
   
 3.  更新プログラムのバージョン番号、 `<assemblyIdentity>` Microsoft.Windows.CommonLanguageRuntime の最小の共通部分は、.NET Framework のバージョン番号の要素。 たとえば、アプリケーションが .NET Framework 3.5 を対象とする場合と[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]使用、2.0.50727.0 バージョン番号と、XML、次のようになります。  
   
-    ```  
+    ```xml  
     <dependency>  
       <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
         <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />  

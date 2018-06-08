@@ -1,5 +1,5 @@
 ---
-title: Office ソリューションの遅延バインディング |Microsoft ドキュメント
+title: Office ソリューションの遅延バインディング
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5616ce958747f90c8015df858f657299ba52852b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572551"
 ---
 # <a name="late-binding-in-office-solutions"></a>Office ソリューションの遅延バインディング
   Office アプリケーションのオブジェクト モデルの種類によっては、遅延バインディング機能を介して使用可能な機能を提供します。 たとえば、一部のメソッドとプロパティは、異なる種類の Office アプリケーションのコンテキストによってオブジェクトを返すことができ、一部の型は、さまざまな方法または別のコンテキストでのプロパティを公開できます。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  Visual Basic プロジェクト where **Option Strict** off および Visual c# プロジェクトをターゲットとするには、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]これら遅延バインディングの機能を利用している型を直接操作できます。  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>オブジェクトの戻り値の明示的および暗黙的なキャスト  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>オブジェクトの明示的および暗黙的なキャストが値を返す  
  多くのメソッドとプロパティには、Microsoft Office プライマリ相互運用機能アセンブリ (Pia) を返す<xref:System.Object>値は、いくつかの異なる種類のオブジェクトを返せるためです。 たとえば、<xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A>プロパティから返される、<xref:System.Object>その戻り値ができるので、<xref:Microsoft.Office.Interop.Excel.Worksheet>または<xref:Microsoft.Office.Interop.Excel.Chart>によっては、アクティブなシート オブジェクトです。  
   
  メソッドまたはプロパティが返されるときに、 <xref:System.Object>、する必要があります明示的に変換する (Visual Basic) のオブジェクトを Visual Basic プロジェクトで正しい型場所**Option Strict**にします。 明示的にキャストする必要はありません<xref:System.Object>Visual Basic プロジェクトで値を返す場所**Option Strict**がオフです。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
  [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>遅延バインディングでのみ利用可能なメンバーへのアクセス  
+## <a name="access-members-that-are-available-only-through-late-binding"></a>遅延バインディングでのみ利用可能なメンバーにアクセス  
  一部のプロパティと、Office Pia のメソッドは、遅延バインディングを介してのみ使用します。 Visual Basic のプロジェクトの場所**Option Strict**がオフまたは Visual c# プロジェクトをターゲットとする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]、遅延バインディング メンバーにアクセスするこれらの言語で遅延バインディング機能を使用することができます。 Visual basic プロジェクト where **Option Strict**は、リフレクションを使用してこれらのメンバーにアクセスする必要があります。  
   
 ### <a name="examples"></a>使用例  
@@ -64,12 +65,12 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションのコードの記述](../vsto/writing-code-in-office-solutions.md)   
+ [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
  [Dynamic 型の使用&#40;C&#35;プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
   
   

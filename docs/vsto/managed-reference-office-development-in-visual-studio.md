@@ -1,5 +1,5 @@
 ---
-title: マネージ参照 (Visual Studio での Office 開発) |Microsoft ドキュメント
+title: マネージ参照 (Visual Studio での Office 開発)
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5b0b6d7b6fdbb55030088f33fc235429d0b6142e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a3c991b6507ded441dd37ec92cb5efd0e2167285
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572193"
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>マネージ参照 (Visual Studio での Office 開発)
   このセクションには、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を対象とする Office プロジェクトで使用される名前空間と型についての API リファレンス ドキュメントが含まれています。 名前空間と、.NET Framework 3.5 をターゲットとする Office プロジェクトで使用されている型に関する API リファレンス ドキュメント、Visual Studio ドキュメントのリファレンス セクションを参照してください: [ http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)です。  
@@ -63,9 +64,9 @@ ms.lasthandoff: 04/16/2018
  Office プロジェクトのビルドに使用される MSBuild タスク クラスが含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio Tools for Office ランタイム](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
- [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [ビジュアルの Studio tools for Office runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)   
- [Office ソリューションのデザインと作成](../vsto/designing-and-creating-office-solutions.md)  
+ [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
   
   

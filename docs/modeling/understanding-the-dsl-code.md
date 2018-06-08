@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c5daaad156b2a4372ab43a19ba2f2bdd6cdb87b5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 27581387b9775d2e2cf4401c811dab09b15c3722
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748674"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
 ドメイン固有言語 (DSL) ソリューションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内で DSL のインスタンスの読み取りと更新に使用可能な API を生成します。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/26/2018
 
  このソリューション テンプレートに習熟していない場合は、F5 キーを押して実験します。 コンポーネントにポート ツールをドラッグすることによりポートが作成されることと、ポートを接続できることに特に注意してください。
 
- ![コンポーネントと相互接続ポート](../modeling/media/componentsample.png "ComponentSample")
+ ![コンポーネントおよび相互接続ポート](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL ソリューションの構造
  **Dsl**プロジェクトは、DSL の API を定義します。 **DslPackage**プロジェクトでは、その統合方法を定義[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 独自のプロジェクトを追加することも可能で、それらもモデルから生成されるコードを含みます。
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/26/2018
 
  DSL を理解するために生成されたコードを調べてみることをお勧めします。 生成されたファイルを表示するには、ソリューション エクスプローラーで *.tt ファイルを展開します。
 
- \*.Tt ファイルを含むほとんどのコードを生成します。 その代わりに、それらは `<#include>` ディレクティブを使用して共有テンプレート ファイルを含みます。 共有のファイルは含まれて **\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates**
+ \*.Tt ファイルを含むほとんどのコードを生成します。 その代わりに、それらは `<#include>` ディレクティブを使用して共有テンプレート ファイルを含みます。 共有のファイルは含まれて**\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\11.0\TextTemplates**
 
  DSL ソリューションに独自のプログラム コードを追加する場合、生成されたコード フォルダーの外の別ファイルに追加します。 作成する場合があります、**カスタム コード**フォルダーです。 (新しいコード ファイルをカスタム フォルダーに追加する場合、必ず初期コード スケルトン内の名前空間を修正してください)
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/26/2018
 
  *YourDsl* `Schema.xsd`
 
- DSL のインスタンスを含むファイルのスキーマ。 このファイルは、コンパイル時にコピー (**bin**) ディレクトリ。 このファイルをコピーするには、DSL をインストールするときに **\Program Files\Microsoft Visual Studio 11.0\Xml\Schemas**モデル ファイルを検証できるようにします。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。
+ DSL のインスタンスを含むファイルのスキーマ。 このファイルは、コンパイル時にコピー (**bin**) ディレクトリ。 このファイルをコピーするには、DSL をインストールするときに**\Program Files\Microsoft Visual Studio 11.0\Xml\Schemas**モデル ファイルを検証できるようにします。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。
 
  DSL エクスプローラーでオプションを設定することによりシリアル化をカスタマイズする場合、スキーマは適宜変更されます。 ただし、独自のシリアル化コードを作成する場合、このファイルは実際のスキーマを表さなくなる場合があります。 詳細については、次を参照してください。[ファイル記憶域のカスタマイズと XML シリアル化](../modeling/customizing-file-storage-and-xml-serialization.md)です。
 

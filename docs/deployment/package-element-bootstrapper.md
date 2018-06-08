@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c04676f03f4734a25601e772208939e0b3f8482d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b304cc3bee93b367cc3b401328749ee6aca89625
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815601"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
 `Package`要素は、パッケージ ファイル内で最上位の XML 要素です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Package  
     Culture  
     Name  
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="example"></a>例  
  次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Package  

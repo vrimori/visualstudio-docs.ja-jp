@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51e4376b791e6d65a53069e1d483497009c94ed5
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 2aaa32de4742d5c3897ec2290e77223b0d6cdd56
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752664"
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio の生産性に関するヒント
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/11/2018
 
 - **ダイアログ ボックス、メニュー コマンド、およびオプションを検索する**。 [[クイック起動]](../ide/reference/quick-launch-environment-options-dialog-box.md) ボックスに、検索対象の項目のキーワードまたは語句を入力します。 たとえば、「`new project`」と入力すると、次のオプションが表示されます。
 
-    !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
+    !['新しいプロジェクト' のクイック起動結果](../ide/media/productivity_quicklaunch.png)
 
     **クイック起動**には、**[新しいプロジェクト]** ダイアログ ボックス、**[新しい項目の追加]** ダイアログ ボックス、**[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** ページなどへのリンクが表示されます。 また、クイック起動の結果には、プロジェクト ファイルおよびツール ウィンドウも含まれます。
 
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/11/2018
 
 - **さまざまなブラウザーで同じページ、アプリケーション、またはサイトをテストする**。 コードをデバッグする際に、**[ブラウザーの選択]** ダイアログ ボックスを開かなくても、[Page Inspector (Visual Studio)](http://msdn.microsoft.com/Library/65880969-1ad2-47be-85b9-bb12c81bf209) など、インストールされている Web ブラウザーを簡単に切り替えることができます。 **[標準]** ツール バーの **[デバッグ開始]** ボタンの横にある **[デバッグ ターゲット]** ボックスを使用すると、ページをデバッグまたは表示する際に使用しているブラウザーを即座に確認できます。
 
-    ![Web ブラウザーのデバッグ オプションの選択](../ide/media/webbrowserdropdowntoolbar.png "WebBrowserDropDownToolbar")
+    ![Web ブラウザーのデバッグ オプションの選択](../ide/media/webbrowserdropdowntoolbar.png)
 
 - **一時的なブレークポイントを設定する**。 現在のコード行に一時的なブレークポイントを作成し、同時にデバッガーを起動できます。 そのコード行に到達すると、デバッガーは中断モードになります。 詳細については、「[デバッガーでのコード間の移動](../debugger/navigating-through-code-with-the-debugger.md)」を参照してください。
 

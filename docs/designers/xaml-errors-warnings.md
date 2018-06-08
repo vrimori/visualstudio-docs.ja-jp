@@ -10,11 +10,12 @@ ms.author: karann
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea8bf298f5847c779d2dc13154ddb27b2efeb214
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a263f361e28c515f1694238c4d60fdeffb95f03a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746625"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML のエラーと警告
 
@@ -40,6 +41,6 @@ Visual Studio では、XAML を作成するとき、入力したコードがす�
 
 **[Show errors detected by the XAML designer]\(XAML デザイナーによって検出されたエラーを表示する\)** チェック ボックスの選択を解除します。
 
-![XAML デザイナー エラーを非表示にする](../designers/media/suppress_xaml_designer_errors.PNG "SuppressXAMLDesignerErrors")
+![XAML デザイナー エラー](../designers/media/suppress_xaml_designer_errors.png)
 
 

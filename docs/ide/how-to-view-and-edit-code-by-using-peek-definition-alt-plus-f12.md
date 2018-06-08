@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc4cab55a20b6b820bbfc1af171f1bb0b45ce1e2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c64f271f041c28dc621ed85a8cd9d79c36caa3dd
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746716"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>方法: [定義をここに表示] を使用してコードを表示および編集する (Alt + F12)
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
      次の図に、`Print()` という名前のメソッドの **[定義をここに表示]** ウィンドウを示します。
 
-     ![[定義をここに表示] ウィンドウ](../ide/media/peekwindow.png "PeekWindow")
+     ![[表示のみ] ウィンドウ](../ide/media/peekwindow.png)
 
      定義ウィンドウは、元のファイルの `printer.Print("Hello World!")` 行の下に表示されます。 このウィンドウにより、元のファイル内のどのコードも隠れて見えなくなることはありません。 `printer.Print("Hello World!")` に続く行は定義ウィンドウの下に表示されます。
 
@@ -43,19 +44,19 @@ ms.lasthandoff: 04/26/2018
 
 既に **[定義をここに表示]** ウィンドウを開いている場合、そのウィンドウ内のコードで **[定義をここに表示]** を再度呼び出すことができます。 もう 1 つの定義ウィンドウが開きます。 定義ウィンドウ タブの横に一連の階層リンクの点が表示されます。これらの点を使用して定義ウィンドウ間を移動できます。 各点のツールヒントには、それぞれの点が表す定義ファイルの名前とパスが表示されます。
 
-   ![[定義をここに表示] ウィンドウ内の [定義をここに表示] ウィンドウ](../ide/media/peekwithinpeek.png "PeekWithinPeek")
+   ![[表示のみ] ウィンドウ内の [表示のみ] ウィンドウ](../ide/media/peekwithinpeek.png)
 
 ### <a name="peek-definition-with-multiple-results"></a>複数の結果がある [定義をここに表示]
 
 複数の定義 (部分クラスなど) があるコードで **[定義をここに表示]** を使うと、結果の一覧がコード定義ビューの右側に表示されます。 一覧内の結果を選択してその定義を表示できます。
 
-   ![複数の結果がある [定義をここに表示] ウィンドウ](../ide/media/peekmultiple.png "PeekMultiple")
+   ![複数の結果からの [表示のみ] ウィンドウ](../ide/media/peekmultiple.png)
 
 ### <a name="edit-inside-the-peek-definition-window"></a>[定義をここに表示] ウィンドウ内での編集
 
 **[定義をここに表示]** ウィンドウ内で編集を始めると、変更中のファイルがコード エディターの別のタブで自動的に開き、行った変更が反映されます。 **[定義をここに表示]** ウィンドウで続けて変更を加えたり、元に戻したり、保存したりすることができ、タブにはそれらの変更が反映され続けます。 変更を保存せずに **[定義をここに表示]** ウィンドウを閉じた場合でも、タブ内で変更を加えたり、元に戻したり、保存したりすることができ、**[定義をここに表示]** ウィンドウで作業を中断した正確な位置から再開することができます。
 
-   ![[定義をここに表示] ウィンドウ内での編集](../ide/media/peekedit.png "PeekEdit")
+   ![[表示のみ] ウィンドウ内での編集](../ide/media/peekedit.png)
 
 ### <a name="to-change-options-for-peek-definition"></a>[定義をここに表示] のオプションを変更するには
 

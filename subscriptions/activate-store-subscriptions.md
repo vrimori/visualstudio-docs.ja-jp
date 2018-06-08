@@ -9,11 +9,12 @@ description: Microsoft Store で購入した Visual Studio のサブスクリプ
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: dea917758f643315b99f0ecd9c1890fd5ad32e74
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 751f2fb7931c2081be8c146b6bc3959cc60c2a85
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477276"
 ---
 # <a name="how-do-i-activate-a-subscription-acquired-from-the-microsoft-store"></a>Microsoft Store で購入したサブスクリプションをアクティブ化する方法
 Microsoft Store で Visual Studio のサブスクリプションを購入した場合は、購入後に受け取った支払いの確認ページまたは確認メールからライセンス認証手順を始めることができます。 
@@ -30,9 +31,9 @@ Microsoft Store で Visual Studio のサブスクリプションを購入した�
     - 職場/学校のアカウントを使用しているサブスクライバーは、組織のサインイン ページにリダイレクトされます。  
 6. パスワードを入力するか、組織でのサインインに必要な情報を入力します。
 7. サインインに成功すると、[Activate Your Visual Studio Subscription]\(Visual Studio サブスクリプションをアクティブ化する\) ウィンドウが表示されます。
-8. 支払いの確認ページまたは確認メールにある プロダクト キー 情報を入力し、**アクティブ化** をクリックします。
+8. 支払いの確認ページまたは確認メールにある プロダクト キー] 情報を入力し、**[アクティブ化]** をクリックします。
 
-    ![プロダクト キーの入力](_img/buy-retail/enter-product-key.png)
+    <img alt="Enter product key" src="_img/buy-retail/enter-product-key.png" style="border: 1px solid #CCCCCC" />
 
 9. サブスクリプションは [[サブスクリプション](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)] ページで確認でき、サブスクリプションの特典のすべてにアクセスできるようになりました。 
 

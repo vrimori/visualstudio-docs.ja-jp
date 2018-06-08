@@ -1,18 +1,20 @@
 ---
-title: Visual Studio のコード カバレッジのトラブルシューティング | Microsoft Docs
+title: Visual Studio のコード カバレッジのトラブルシューティング
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 10fc5afdd342f1d1677a92498f27e6a13179aabf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1169d4e482f097ca923cc017964724e5886658d1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751567"
 ---
 # <a name="troubleshoot-code-coverage"></a>コード カバレッジのトラブルシューティング
 
@@ -22,7 +24,7 @@ Visual Studio のコード カバレッジ分析ツールは、ネイティブ �
 
 [テスト] メニューの **[コード カバレッジの分析]** コマンドを選択し、ビルドとテストが正常に実行された場合、[コード カバレッジ] ウィンドウに結果の一覧が表示されます。 詳細を表示するために、項目を展開する必要がある場合があります。
 
-![色分けされたコード カバレッジの結果](../test/media/codecoverage1.png "CodeCoverage1")
+![色分けされたコード カバレッジの結果](../test/media/codecoverage1.png)
 
 詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
 

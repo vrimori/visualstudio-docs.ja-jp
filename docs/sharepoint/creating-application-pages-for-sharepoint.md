@@ -21,14 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8bc73918a2af82acab1fd465f5f80755cc594ba9
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 9fab7bbed25d3f308eef02b7f975e71af6fa8183
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691980"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765006"
 ---
-# <a name="creating-application-pages-for-sharepoint"></a>For SharePoint アプリケーション ページの作成
+# <a name="create-application-pages-for-sharepoint"></a>For SharePoint アプリケーション ページを作成します。
   *アプリケーション ページ*が SharePoint Web サイトで使用するよう設計された ASP.NET Web ページです。 アプリケーション ページとは、ASP.NET ページの特化された型です。 アプリケーション ページと標準の ASP.NET ページの主な違いは、アプリケーション ページには、SharePoint のマスター ページとマージされるコンテンツが含まれているです。 マスター ページには、サイト上の他のページと同じ外観と動作を共有するアプリケーション ページができるようにします。  
   
  Visual Studio では、デザイナーを使用して、アプリケーション ページをデザインすることができます。 デザイナーは、マスター ページで定義されている各コンテンツのプレース ホルダーのコンテンツ領域を表示します。 アプリケーション ページをデザインするには、これらの領域にコントロールをドラッグします。  
@@ -55,7 +55,7 @@ ms.locfileid: "34691980"
   
 |ファイル|説明|  
 |----------|-----------------|  
-|ASP.NET ページのファイル (.aspx)|ページを定義する XML マークアップが含まれています。|  
+|ASP.NET ページのファイル (*.aspx*)|ページを定義する XML マークアップが含まれています。|  
 |アプリケーション ページ コード ファイル|アプリケーション ページで、分離コードが含まれています。 このファイルにイベントを処理するコードを追加します。|  
 |アプリケーション ページ デザイナー コード ファイル|デザイナーによって生成されるコードが含まれています。 このファイルを直接編集しないでください。|  
   

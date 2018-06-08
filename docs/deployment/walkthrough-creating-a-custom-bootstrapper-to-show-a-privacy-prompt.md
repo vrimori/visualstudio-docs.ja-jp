@@ -21,13 +21,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 73694df5b6e9e5d4c8b4ad40f16cf60998e9fc82
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 22feab436d701124b7e3843a0e6855d2830d570d
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34816043"
 ---
-# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトでのカスタム ブートス トラップを作成します。
+# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用してカスタム ブートストラップを作成する
 新しいファイルおよびアセンブリのバージョンを持つアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成することができます。 をお客様がこれに同意することを確認するために、プライバシー プロンプトを表示できます。 次に、自動的に更新するアプリケーションへのアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
@@ -165,7 +166,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Product.xml ファイルでは、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
-    ```  
+    ```xml  
     <Product  
       xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
       ProductCode="Microsoft.Sample.EULA">  
@@ -197,7 +198,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Package.xml ファイルでは、ロケールを定義し、ソフトウェア ライセンス条項を含めるには、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
-    ```  
+    ```xml  
     <Package   
       xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
       Name="DisplayName"  

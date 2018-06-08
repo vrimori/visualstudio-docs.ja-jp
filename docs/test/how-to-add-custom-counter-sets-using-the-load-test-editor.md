@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト用にカスタム カウンター セットを追加する | Microsoft Docs
+title: Visual Studio でロード テスト用にカスタム カウンター セットを追加する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,14 @@ ms.assetid: 499aca80-1069-408d-ac68-326da6a50645
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f811ee784a0cb40fb1e5daf00f0ccf3c2ca16bfe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 862afc0755e8d478d5e8bca76019abd899d842f8
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752015"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカスタム カウンター セットを追加する
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 
 カウンターは、**ロード テスト エディター**で管理します。 テストに既に追加されているカウンター セットは、ロード テストの **[カウンター セット]** ノードに表示されます。 ロード テストを作成すると、そこに新しいカスタム カウンター セットを追加できます。
 
-![カスタム カウンター セット](../test/media/loadtestcustomcounter.png "LoadTestCustomCounter")
+![カスタムのカウンター セット](../test/media/loadtestcustomcounter.png)
 
 ## <a name="to-add-a-custom-counter-set-to-a-load-test"></a>カスタム カウンター セットをロード テストに追加するには
 

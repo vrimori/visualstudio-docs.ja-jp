@@ -21,7 +21,7 @@ ms.openlocfilehash: dd86b7c15fa198b37ce15c75b13d2863f56ca3ba
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34693371"
 ---
 # <a name="secure-office-solutions"></a>セキュリティで保護された Office ソリューション

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンス テストにデータ ソースを追加する | Microsoft Docs
+title: Visual Studio で Web パフォーマンス テストにデータ ソースを追加する
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,14 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a2a079723d44bd7cee7ae418b5852a99d62cac25
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8e1b983dc9ec690396b7e4a8494a02f188ef77e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750826"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
@@ -142,11 +144,11 @@ ms.lasthandoff: 04/16/2018
 
 1. プロジェクトのデータベース成果物を整理するフォルダーを作成し、項目を追加します。
 
-     ![データ フォルダーに新しい項目を追加する](../test/media/web_test_databinding_foldernewitem.png "Web_Test_DataBinding_FolderNewItem")
+     ![データ フォルダーに新しい項目を追加する](../test/media/web_test_databinding_foldernewitem.png)
 
 2. テキスト ファイルを作成します。
 
-     ![新しいテキスト ファイルに ColorData.csv と名前を付ける](../test/media/web_test_databinding_foldernewitemtextfile.png "Web_Test_DataBinding_FolderNewItemTextFile")
+     ![新しいテキスト ファイルに ColorData.csv という名前を付ける](../test/media/web_test_databinding_foldernewitemtextfile.png)
 
 3. このテキスト ファイルを編集して、次の内容を追加します。
 
@@ -158,7 +160,7 @@ ms.lasthandoff: 04/16/2018
 
 4. 「[SQL データのバインド](#AddingDataBindingWebTest_BindSQLData)」の手順を使用しますが、データ ソースとして CSV ファイルを選択します。
 
-     ![名前を入力して CSV ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialog.png "Web_Test_DataBinding_AddDataSourceDialog")
+     ![名前を入力して CSV ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialog.png)
 
 ### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Q: 既存の CSV ファイルに列見出しが含まれていない場合は、どうすればよいですか。
 
@@ -166,7 +168,7 @@ ms.lasthandoff: 04/16/2018
 
 1. schema.ini という名前の新しいテキスト ファイルを追加します。
 
-     ![schema.ini ファイルを追加する](../test/media/web_test_databinding_schemafile.png "Web_Test_DataBinding_SchemaFile")
+     ![schema.ini ファイルを追加する](../test/media/web_test_databinding_schemafile.png)
 
 2. schema.ini ファイルを編集して、データの構造を記述する情報を追加します。 たとえば、CSV ファイルについて記述するスキーマ ファイルは次のようになります。
 
@@ -177,39 +179,39 @@ ms.lasthandoff: 04/16/2018
 
 3. データ ソースをテストに追加します。
 
-     ![Web パフォーマンス テストにデータ ソースを追加する](../test/media/web_test_databinding_sql_adddatasource.png "Web_Test_DataBinding_SQL_AddDataSource")
+     ![Web パフォーマンス テストにデータ ソースを追加する](../test/media/web_test_databinding_sql_adddatasource.png)
 
 4. schema.ini ファイルを使用する場合は、データ ソースとして (CSV ファイルではなく) データベースを選択し、名前を指定します。
 
-     ![データベース データ ソースを追加する](../test/media/web_test_databinding_adddatasourcecolortext.png "Web_Test_DataBinding_AddDataSourceColorText")
+     ![データベース データ ソースの追加](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
 5. 新しい接続を作成します。
 
-     ![新しい接続を選択する](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png "Web_Test_DataBinding_SQL_AddDataSourceDialogConnectionNew")
+     ![新しい接続を選択する](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
 
 6. [.NET Framework Data Provider for OLE DB] をクリックします。
 
-     ![.NET Framework OLE DB データ プロバイダーを選択する](../test/media/web_test_databinding_adddatasourcecolortext2.png "Web_Test_DataBinding_AddDataSourceColorText2")
+     ![.NET Framework OLE DB データ プロバイダーを選択する](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
 7. [詳細設定] を選択します。
 
-     ![[詳細設定] を選択する](../test/media/web_test_databinding_advanced.png "Web_Test_DataBinding_Advanced")
+     ![[詳細設定] を選択する](../test/media/web_test_databinding_advanced.png)
 
 8. "プロバイダー" プロパティについて Microsoft.Jet.OLEDB.4.0 を選択し、[拡張プロパティ] を Text;HDR=NO に設定します。
 
-     ![詳細設定プロパティを適用する](../test/media/web_test_databinding_advancedproperties.png "Web_Test_DataBinding_AdvancedProperties")
+     ![詳細設定プロパティの適用](../test/media/web_test_databinding_advancedproperties.png)
 
 9. スキーマ ファイルが含まれているフォルダーの名前を入力し、接続をテストします。
 
-     ![データ フォルダーへのパスを入力する](../test/media/web_test_databinding_adddatasourcecolortext5.png "Web_Test_DataBinding_AddDataSourceColorText5")
+     ![データ フォルダーへのパスを入力する](../test/media/web_test_databinding_adddatasourcecolortext5.png)
 
 10. 使用する CSV ファイルを選択します。
 
-     ![テキスト ファイルを選択する](../test/media/web_test_databinding_adddatasourcecolortext6.png "Web_Test_DataBinding_AddDataSourceColorText6")
+     ![テキスト ファイルを選択する](../test/media/web_test_databinding_adddatasourcecolortext6.png)
 
      終了すると、CSV ファイルがテーブルとして表示されます。
 
-     ![テストに追加されたデータ ソース](../test/media/web_test_databinding_adddatasourcecolortext7.png "Web_Test_DataBinding_AddDataSourceColorText7")
+     ![テストに追加されたデータ ソース](../test/media/web_test_databinding_adddatasourcecolortext7.png)
 
 ### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Q: XML ファイルをデータ ソースとして使うにはどうすればよいですか。
 
@@ -217,11 +219,11 @@ ms.lasthandoff: 04/16/2018
 
 1. プロジェクトのデータベース成果物を整理するフォルダーを作成し、項目を追加します。
 
-     ![データ フォルダーに新しい項目を追加する](../test/media/web_test_databinding_foldernewitem.png "Web_Test_DataBinding_FolderNewItem")
+     ![データ フォルダーに新しい項目を追加する](../test/media/web_test_databinding_foldernewitem.png)
 
 2. XML ファイルを作成します。
 
-     ![ColorData.xml ファイルを追加する](../test/media/web_test_databinding_additemxmlfile.png "Web_Test_DataBinding_AddItemXMLFile")
+     ![ColorData.xml ファイルを追加する](../test/media/web_test_databinding_additemxmlfile.png)
 
 3. XML ファイルを編集し、データを追加します。
 
@@ -241,7 +243,7 @@ ms.lasthandoff: 04/16/2018
 
 4. 「[SQL データのバインド](#AddingDataBindingWebTest_BindSQLData)」の手順を使用しますが、データ ソースとして XML ファイルを選択します。
 
-     ![名前を入力して XML ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialogxml.png "Web_Test_DataBinding_AddDataSourceDialogXML")
+     ![名前を入力して XML ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
 ### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Q: SOAP を使用する Web サービス要求にデータ バインディングを追加できますか。
 
@@ -249,7 +251,7 @@ ms.lasthandoff: 04/16/2018
 
 1. 要求ツリーで Web サービス要求を選択し、[プロパティ] ウィンドウの "文字列ボディ" プロパティの省略記号 (...) をクリックします。
 
-     ![Web サービスの文字列ボディを編集する](../test/media/web_test_databinding_webservicerequest.png "Web_Test_DataBinding_WebServiceRequest")
+     ![Web サービスの String Body を編集する](../test/media/web_test_databinding_webservicerequest.png)
 
 2. 次の構文を使用して、SOAP 本体の値をデータ バインディング値に置き換えます。
 

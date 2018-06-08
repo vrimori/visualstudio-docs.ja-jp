@@ -10,11 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 4b5dfdd4b4d05969406f93801bcf87880949e41a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d3b5863e6273e96d7e0047f89cd16a69358c49cc
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751664"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>ワークフロー デザイナーで検索を使用する方法
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  検索用語が現在のワークフローで検索されます。 アクティビティの表示名がデザイナーで見つかったことを示すスクリーンショットを次に示します。
 
-     ![検索結果をワークフロー デザイナーで](../workflow-designer/media/designersearch.png "DesignerSearch")
+     ![ワークフロー デザイナーでの検索結果](../workflow-designer/media/designersearch.png)
 
 ## <a name="find-in-files"></a>フォルダーを指定して検索する
 

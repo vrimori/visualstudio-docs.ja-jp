@@ -1,6 +1,7 @@
 ---
 title: '方法: 基本ランバート シェーダーを作成する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: ec5c10fb-9600-4240-8280-d59451ea1d68
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a843f15275893f0c4ffe110e39bb2069b5a51be
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e67ca994015dcb2609dce8680000a6d47c3b3a4e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748206"
 ---
 # <a name="how-to-create-a-basic-lambert-shader"></a>方法: 基本ランバート シェーダーを作成する
 
@@ -40,13 +42,13 @@ ms.lasthandoff: 04/19/2018
 > [!NOTE]
 > この図では、シェーダーの効果を分かりやすくするために、シェーダーの **MaterialDiffuse** パラメーターを使用してオレンジ色が指定されています。 このパラメーターをゲームやアプリで使用して、オブジェクトごとに一意の色値を指定できます。 マテリアル パラメーターについては、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。
 
- ![シェーダー グラフとその効果のプレビュー。](../designers/media/digit-lambert-effect-graph.png "Digit-Lambert-Effect-Graph")
+ ![シェーダー グラフとその効果のプレビュー。](../designers/media/digit-lambert-effect-graph.png)
 
- シェーダーによっては、特定の図形でより適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。
+ シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法の詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「シェーダーのプレビュー」を参照してください。
 
  次の図は、このドキュメントで説明した、3D モデルに適用されるシェーダーを示しています。
 
- ![モデルに適用されるランバート照明。](../designers/media/digit-lambert-effect-result.png "Digit-Lambert-Effect-Result")
+ ![モデルに適用されたランバート光源。](../designers/media/digit-lambert-effect-result.png)
 
  3D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 

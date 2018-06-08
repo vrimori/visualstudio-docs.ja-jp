@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cac17f0b4ca7a2dd4e5c4cf6f1f2da9e4dc5f54
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bdb95f417cadac04a04e30b1e965392f2492d864
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815770"
 ---
 # <a name="how-to-create-a-product-manifest"></a>方法: 製品マニフェストを作成する
 アプリケーションの前提条件を展開するには、ブートス トラップ パッケージを作成できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 パッケージ マニフェストには、パッケージのローカライズに固有の要素が含まれています。 これには、文字列、使用許諾契約書、および言語パックが含まれます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/19/2018
   
 3.  パッケージの XML 名前空間と製品コードを記述する次の XML を追加します。 製品コードをパッケージの一意の識別子に置き換えます。  
   
-    ```  
+    ```xml  
     <Product  
     xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"   
     ProductCode="Custom.Bootstrapper.Package">  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/19/2018
   
 4.  パッケージに依存関係があることを指定する XML を追加します。 この例では、Microsoft Windows インストーラー 3.1 の依存関係を使用します。  
   
-    ```  
+    ```xml  
     <RelatedProducts>  
         <DependsOnProduct Code="Microsoft.Windows.Installer.3.1" />  
       </RelatedProducts>  
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/19/2018
   
 5.  ブートス トラップ パッケージ内にあるすべてのファイルを列挙する XML を追加します。 この例では、パッケージのファイル名 CorePackage.msi を使用します。  
   
-    ```  
+    ```xml  
     <PackageFiles>  
         <PackageFile Name="CorePackage.msi"/>  
     </PackageFiles>  
@@ -67,14 +68,14 @@ ms.lasthandoff: 04/19/2018
   
 7.  ブートス トラップ コマンドを使用してパッケージをインストールする XML を追加します。 ブートス トラップを自動的に追加、 **/qn**フラグを .msi ファイルをサイレント インストールされます。 ファイルが .exe の場合は、ブートス トラップは、シェルを使用して、.exe ファイルを実行します。 次の XML に CorePackage.msi、引数はありませんが、Arguments 属性にコマンドライン引数を配置することができます。  
   
-    ```  
+    ```xml  
     <Commands>  
         <Command PackageFile="CorePackage.msi" Arguments="">  
     ```  
   
 8.  このブートス トラップ パッケージがインストールされているかどうかはチェックは、次の XML を追加します。 製品コードを再頒布可能コンポーネントの GUID に置き換えます。  
   
-    ```  
+    ```xml  
     <InstallChecks>  
         <MsiProductCheck   
             Property="IsMsiInstalled"   
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/19/2018
   
 9. ブートス トラップ コンポーネントが既にインストールされている場合は、によってブートス トラップの動作を変更する XML を追加します。 コンポーネントがインストールされている場合、ブートス トラップ パッケージは実行されません。 次の XML では、このコンポーネントには、管理者特権が必要とするために、現在のユーザーが管理者がかどうかを確認します。  
   
-    ```  
+    ```xml  
     <InstallConditions>  
         <BypassIf   
            Property="IsMsiInstalled"   
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/19/2018
   
 10. インストールが成功した場合と、再起動が必要な場合は、終了コードを設定する XML を追加します。 次の XML では、失敗して FailReboot 終了するブートス トラップは続行されませんパッケージをインストールすることを示すコードを示します。  
   
-    ```  
+    ```xml  
     <ExitCodes>  
         <ExitCode Value="0" Result="Success"/>  
         <ExitCode Value="1641" Result="SuccessReboot"/>  
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/19/2018
   
 11. ブートス トラップ コマンドについては、セクションの末尾に次の XML を追加します。  
   
-    ```  
+    ```xml  
         </Command>  
     </Commands>  
     ```  
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="example"></a>例  
  製品マニフェストには、カスタムの必須コンポーネントのインストール手順が含まれています。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Product  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  

@@ -13,17 +13,18 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 2348872baee6bfd073611b9e11d42295babedc37
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: 228ebc2fd2137b78b44347fa2e03d7ba949a23c7
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764934"
 ---
 # <a name="get-started-with-visual-basic-in-visual-studio"></a>Visual Studio の Visual Basic の概要
 
 この Visual Basic (VB) に関するチュートリアルでは、Visual Studio を使用して、いくつかの異なるコンソール アプリを作成して実行しながら、Visual Studio の[統合開発環境 (IDE)](visual-studio-ide.md) の一部の機能を検討します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -62,9 +63,11 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
    ![Visual Studio IDE の [新しいプロジェクト] ダイアログ ボックスに示されているコンソール アプリ (.NET Core) プロジェクト テンプレート](../ide/media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
 #### <a name="add-a-workgroup-optional"></a>ワークグループを追加する (省略可能)
+
 **コンソール アプリ (.NET Core)** プロジェクト テンプレートが表示されない場合は、**.NET Core クロスプラットフォームの開発**ワークロードを追加して取得できます。 コンピューターにインストールされている Visual Studio 2017 の更新プログラムに応じて、次の 2 つの方法のうちのいずれかでこのワークロードを追加することができます。
 
 ##### <a name="option-1-use-the-new-project-dialog-box"></a>オプション 1: [新しいプロジェクト] ダイアログ ボックスを使用する
+
 1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクをクリックします。
 
   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクをクリックする](../ide/media/vs-open-visual-studio-installer-generic.png)
@@ -74,9 +77,10 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
    ![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ##### <a name="option-2-use-the-tools-menu-bar"></a>オプション 2: [ツール] メニュー バーを使用する
+
 1. **[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーから **[ツール]** > **[ツールと機能を取得]** の順に選択します。
 
-2. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。   
+2. Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、**[変更]** を選択します。
 
 ## <a name="create-a-what-is-your-name-application"></a>"What Is Your Name" アプリケーションを作成する
 
@@ -106,6 +110,7 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 5. 任意のキーを押して、コンソール ウィンドウを閉じます。
 
 ## <a name="create-a-calculate-this-application"></a>"Calculate This" アプリケーションを作成する
+
 1. Visual Studio 2017 を開き、上部のメニュー バーから **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 2. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Basic]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[Console App (.NET Core)]** を選択します。 次に、ファイルに *CalculateThis* という名前を付けます。  

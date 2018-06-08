@@ -19,13 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dafa11c17968eb5468ecd4eff462ff9474ce5131
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8c838880dd7d7e7adfe080541f1419bd4651ff3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767443"
 ---
-# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>方法: パッケージング エクスプローラーを使用してパッケージのフィーチャーおよび項目を追加および削除する
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>方法: 追加およびパッケージング エクスプ ローラーを使用して、フィーチャーおよび項目をパッケージを削除
   SharePoint プロジェクト項目およびフィーチャーを配置するためのパッケージを構成するのには、パッケージング エクスプ ローラーを使用することができます。 .Wsp ファイル内では、SharePoint プロジェクト項目と機能を調整できます。  
   
  または、パッケージ デザイナーを使用して、表示およびアクティブ化順序を変更する機能の順序を変更することができます。 詳細については、次を参照してください。[する方法: して追加および削除のフィーチャーおよび項目をパッケージにパッケージ デザイナーを使用して](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)です。  
@@ -35,14 +36,14 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-open-the-packaging-explorer"></a>パッケージ エクスプ ローラーを開く  
   
-1.  メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、**パッケージング エクスプ ローラー**です。  
+1.  メニュー バーで、次のように選択します。**ビュー** > **その他のウィンドウ** > **パッケージング エクスプ ローラー**です。  
   
      **パッケージング エクスプ ローラー**に表示されます、**ツールボックス**です。  
   
 ## <a name="adding-a-feature-to-a-package"></a>パッケージに機能の追加  
  パッケージング エクスプ ローラーを使用して、パッケージに新規および既存の機能を追加できます。  
   
-#### <a name="to-add-a-sharepoint-feature"></a>SharePoint 機能を追加するには  
+#### <a name="to-add-a-sharepoint-feature"></a>SharePoint 機能を追加するには
   
 1.  開く、**パッケージング エクスプ ローラー**、プロジェクトのショートカット メニューを開きを選択し、**フィーチャーの追加**です。  
   
@@ -60,13 +61,12 @@ ms.lasthandoff: 04/16/2018
 ## <a name="validating-a-feature-or-package"></a>機能またはパッケージの検証  
  ファイルを検証することによって、SharePoint のフィーチャーおよびパッケージ内の潜在的な問題を識別できます。 警告とエラーは、エラー一覧 ウィンドウと出力ウィンドウに表示されます。  
   
-#### <a name="to-validate-a-sharepoint-feature-or-package"></a>SharePoint フィーチャーまたはパッケージを検証するには  
+#### <a name="to-validate-a-sharepoint-feature-or-package"></a>SharePoint フィーチャーまたはパッケージを検証するには
   
 1.  開く、**パッケージング エクスプ ローラー**です。  
   
 2.  機能またはパッケージのショートカット メニューを開き、選択**検証**です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
   

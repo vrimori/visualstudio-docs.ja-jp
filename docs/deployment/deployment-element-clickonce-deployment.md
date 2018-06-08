@@ -1,5 +1,5 @@
 ---
-title: '&lt;展開&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+title: '&lt;deployment&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -23,18 +23,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f26bd8fe2b67a6078a78c9a263d57e98fc180e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e2e078da7f746460ea17d1a5ac2d83e5ac46dc62
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815533"
 ---
-# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;展開&gt;要素 (ClickOnce 配置)
+# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;deployment&gt;要素 (ClickOnce 配置)
 更新プログラムの配置とシステムへの公開に使用される属性を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
   
       <deployment   
    install  
@@ -71,10 +72,10 @@ ms.lasthandoff: 04/19/2018
   
  `deployment`要素には、次の子要素も含まれています。  
   
-## <a name="subscription"></a>サブスクリプション  
- 任意。 含まれています、`update`要素。 `subscription`要素に属性がありません。 場合、`subscription`要素が存在しない、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは更新プログラムのスキャンことはありません。 場合、`install`の属性、`deployment`要素は`false`、`subscription`要素が無視されるため、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]常に、ネットワークから起動されるアプリケーションは、最新バージョンを使用します。  
+## <a name="subscription"></a>subscription  
+ 任意。 `update`要素を含んでいます。 `subscription`要素に属性がありません。 `subscription`要素が存在しない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは更新プログラムをスキャンしません。 `install`の属性の `deployment` 要素が `false` の場合、ネットワークから起動される[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは常に最新のバージョンを使用するため、`subscription`要素は無視されます。  
   
-## <a name="update"></a>更新  
+## <a name="update"></a>update  
  必須。 この要素の子である、`subscription`要素いずれかが含まれています、`beforeApplicationStartup`または`expiration`要素。 `beforeApplicationStartup` および`expiration`両方を同じ配置マニフェストに指定することはできません。  
   
  `update`要素に属性がありません。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="beforeapplicationstartup"></a>beforeApplicationStartup  
  任意。 この要素の子である、`update`要素と属性を持っていません。 ときに、`beforeApplicationStartup`要素が存在する、アプリケーションはブロックされている場合に[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]場合、クライアントはオンラインの更新をチェックします。 この要素が存在しない場合[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]は、最初の指定された値に基づいて更新プログラムのスキャン、`expiration`要素。 `beforeApplicationStartup` および`expiration`両方を同じ配置マニフェストに指定することはできません。  
   
-## <a name="expiration"></a>有効期限  
+## <a name="expiration"></a>expiration   
  任意。 この要素の子である、`update`要素、子を持っていないとします。 `beforeApplicationStartup` および`expiration`両方を同じ配置マニフェストに指定することはできません。 更新チェックが発生し、更新されたバージョンが検出された、新しいバージョンが、既存のバージョンの実行中にキャッシュします。 次回起動時に、新しいバージョンをインストールし、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
   
  `expiration`要素は、次の属性をサポートしています。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/19/2018
 |---------------|-----------------|  
 |`codebase`|必須。 位置を識別、として、Uniform Resource Identifier ()、更新に使用される配置マニフェスト、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 この要素は、CD ベースのインストールの更新プログラムの場所を転送する場合もできます。 有効な URI である必要があります。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  構成することができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]スタートアップ時に、更新プログラムをスキャンするアプリケーションの開始の後、更新プログラムをスキャンまたは更新プログラムを確認しません。 起動時に更新プログラムをスキャンすることを確認、`beforeApplicationStartup`下にある要素が存在する、`update`要素。 起動後に更新プログラムのスキャン、いることを確認、`expiration`下にある要素が存在する、`update`要素、および更新間隔が提供されます。  
   
  更新プログラムのチェックを無効にするには削除、`subscription`要素。 更新プログラムをスキャンしないに配置マニフェストで指定すると、手動で確認できますの更新プログラムを使用して、<xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A>メソッドです。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="examples"></a>使用例  
  次のコード例を示しています、`deployment`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 この例では、`deploymentProvider`を推奨される更新プログラムの場所を示す要素。  
   
-```  
+```xml  
 <deployment install="true" minimumRequiredVersion="2.0.0.0" mapFileExtension="true" trustUrlParameters="true">  
     <subscription>  
       <update>  

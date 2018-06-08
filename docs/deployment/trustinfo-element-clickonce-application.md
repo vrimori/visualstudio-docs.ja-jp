@@ -24,18 +24,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 516ed9ae36b97a75e5185c69b89fadf587ddeaa7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c5349ecc2a93f2d5179a88c79b632747195989df
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34816004"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt;要素 (ClickOnce アプリケーション)
 アプリケーションをクライアント コンピューター上で実行するのに必要な最低限のセキュリティ権限について説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml
   
       <trustInfo>  
    <security>  
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/19/2018
   
      必須。 アプリケーションの実行に、このアクセス許可を無制限で与える必要があるかどうかを指定します。 `true`に設定すると、アクセス許可は無条件に与えられます。 `false`に設定するか、この属性を定義しない場合は、 `IPermission` タグで定義されているアクセス許可固有の属性に従って制限されます。 アクセス許可の例を次に示します。  
   
-    ```  
+    ```xml  
     <IPermission  
       class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=1.2.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"   
       version="1"   
@@ -169,7 +170,7 @@ ms.lasthandoff: 04/19/2018
   
  最初の例は、Internet セキュリティ ゾーンで使用できる既定のアクセス許可の `trustInfo` 要素を示しています。  
   
-```  
+```xml  
 <trustInfo>  
     <security>  
       <applicationRequestMinimum>  
@@ -205,7 +206,7 @@ ms.lasthandoff: 04/19/2018
   
  2 番目の例は、LocalIntranet セキュリティ ゾーンで使用できる既定のアクセス許可の `trustInfo` 要素を示しています。  
   
-```  
+```xml  
 <trustInfo>  
     <security>  
       <applicationRequestMinimum>  
@@ -257,7 +258,7 @@ ms.lasthandoff: 04/19/2018
   
  3 番目の例は、FullTrust セキュリティ ゾーンで使用できる既定のアクセス許可の `trustInfo` 要素を示しています。  
   
-```  
+```xml  
 <trustInfo>  
   <security>  
     <applicationRequestMinimum>  

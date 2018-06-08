@@ -1,5 +1,5 @@
 ---
-title: 単純データ バインディングをサポートするユーザー コントロールを作成します。
+title: 単純なデータ バインディングをサポートするユーザー コントロールを作成する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,11 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a484388223b7dae62f165e13b2fc75368b0e642f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c27316cbee2ebdb1d0000d2564891e69294ec292
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747298"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-simple-data-binding"></a>単純データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 Windows アプリケーションでフォームにデータを表示する場合から既存のコントロールを選択できます、**ツールボックス**、またはアプリケーションが標準コントロールで利用できない機能に必要な場合は、カスタム コントロールを作成することができます。 このチュートリアルでは、<xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールを作成する方法を示します。 <xref:System.ComponentModel.DefaultBindingPropertyAttribute> を実装するコントロールには、データにバインドできるプロパティを 1 つ含めることができます。 このようなコントロールは、<xref:System.Windows.Forms.TextBox> や <xref:System.Windows.Forms.CheckBox> に似ています。
@@ -77,7 +78,7 @@ Windows アプリケーションでフォームにデータを表示する場合
 
 1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows クラシック デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
 
 3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
 

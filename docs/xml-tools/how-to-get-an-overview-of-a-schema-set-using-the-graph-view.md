@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be2666316bdc4d64d4f3dd4ec52c5104a1af5cc
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 05f690d76d61ffd52abbc7b73cf162d7f6609708
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751898"
 ---
 # <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>方法: グラフ ビューを使用して設定スキーマの概要
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/25/2018
 
 6.  選択**スキーマ セット**内のノード、 **XML スキーマ エクスプ ローラー**グラフ ビューのデザイン サーフェイスにノードをドラッグします。 すべてのグローバル ノードが表示され、リレーションシップを持つノード間に矢印が引かれます。
 
-     ![グラフ ビュー](../xml-tools/media/relationshipingraphview.gif "RelationshipInGraphView")
+     ![グラフ ビュー](../xml-tools/media/relationshipingraphview.gif)
 
 7.  デザイン サーフェイスでノードをクリックし、階層リンク バーで選択したノードが存在するスキーマ セットの場所を確認します。
 
