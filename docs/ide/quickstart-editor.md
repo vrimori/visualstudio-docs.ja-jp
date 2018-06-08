@@ -1,7 +1,7 @@
 ---
-title: Visual Studio での編集の概要 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio での編集の概要
 ms.date: 11/30/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
@@ -11,11 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 46f627d7157972e277589d2edf07309190c6430d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8231b36f2fe44a04e16b420eb13bfcc4eb30c696
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573285"
 ---
 # <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
 
@@ -23,25 +24,25 @@ ms.lasthandoff: 04/16/2018
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
 
-このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/quickstart-cpp.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
+このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 
 ## <a name="create-a-new-code-file"></a>新しいコード ファイルを作成する
 
 新しいファイルを作成し、何らかのコードをそのファイルに追加することから始めます。 エディターが提供している一部の特典は、プロジェクトを作成しなくても利用できます。
 
-1. Visual Studio を開き、メニュー バーの **[ファイル]** メニューから、**[新規作成]** > **[ファイル]** を選択します。
+1. Visual Studio を開き、メニュー バーの **[ファイル]** メニューから、**[新規作成]**、**[ファイル]** の順に選択します。
 
 1. **[新しいファイル]** ダイアログ ボックスの **[全般]** カテゴリで、**[Visual C# クラス]** を選択し、**[開く]** を選択します。
 
    エディターで新しいファイルが開かれ、C# クラスのスケルトンが表示されます。
 
-## <a name="using-code-snippets"></a>コード スニペットの使用
+## <a name="use-code-snippets"></a>コード スニペットを使用する
 
 Visual Studio で提供されている便利なコード スニペットを使用すると、一般的に使用されるコード ブロックを迅速かつ簡単に生成することができます。 [コード スニペット](../ide/code-snippets.md)は、C#、Visual Basic、C++ など、さまざまなプログラミング言語で使用することができます。 C# `void Main` スニペットをファイルに追加してみましょう。
 
 1. `Class1` コンストラクターの右中かっこの下にカーソルを置き、文字 `svm` を入力します。
 
-   `svm` スニペットに関する情報を含んだ IntelliSense ダイアログ ボックスが表示されているのがわかります。
+   `svm` スニペットに関する情報を含んだ **IntelliSense** ダイアログ ボックスが表示されているのがわかります。
 
    ![Intellisense スニペット](media/quickstart-intellisense-snippet.png)
 
@@ -55,7 +56,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
 
 このリストには、クラス、コンストラクター、`Console.WriteLine()`、`for` ループ、`if` ステートメント、`switch` ステートメントなどを作成するためのスニペットが含まれています。
 
-## <a name="commenting-out-code"></a>コードのコメント アウト
+## <a name="comment-out-code"></a>コメント アウト コード
 
 ツールバーには、コード作成時の生産性を高めるためのボタンが複数用意されています。 たとえば、IntelliSense 完了モードの切り替え、インデントの増減、ブックマークの設定、コードのコメント アウトを行うことができます。 このセクションでは、コンパイルしたくないコードをコメント アウトします。
 
@@ -91,7 +92,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
 
    選択した各列の先頭に C# コメント文字 `//` を追加すると、コードがコメント アウトされます。
 
-## <a name="collapsing-code-blocks"></a>コード ブロックを折りたたむ
+## <a name="collapse-code-blocks"></a>コード ブロックを折りたたむ
 
 生成された `Class1` の空のコンストラクターは表示したくありません。コードのビューを整理するために、ビューを折りたたみましょう。 コンストラクターの最初の行の余白にある、内部にマイナス記号が表示された小さな灰色のボックスを選択します。 または、キーボードを使用している場合は、コンストラクター コード内の任意の場所にカーソルを置き、**Ctrl**+**M** キー、**Ctrl**+**M** キーを押します。
 
@@ -99,7 +100,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
 
 コード ブロックが最初の行に折りたたまれ、後続に省略記号 (`...`) が表示されます。 コード ブロックを再度展開するには、現在内部にプラス記号が表示されている同じ灰色のボックスをクリックするか、**Ctrl**+**M** キー、**Ctrl**+**M** キーをもう一度押します。 これは、[アウトライン](../ide/outlining.md)機能と呼ばれ、長いメソッドまたはクラス全体を折りたたむ場合に特に便利です。
 
-## <a name="viewing-symbol-definitions"></a>シンボル定義の表示
+## <a name="view-symbol-definitions"></a>シンボル定義の表示
 
 Visual Studio エディターでは、型やメソッドなどの定義の検査を容易に行うことができます。1 つの方法として、たとえば、シンボルが参照されている任意の場所で **[定義へ移動]** を選択して、定義を含むファイルに移動します。 作業中のファイルからフォーカスを移動しないより迅速な方法としては、[[定義をここに表示]](../ide/go-to-and-peek-definition.md#peek-definition) を使用します。 `string` の定義を参照してみましょう。
 
@@ -111,7 +112,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 1. 表示された定義ウィンドウを閉じるには、ポップアップ ウィンドウの右上にある、内部に "x" が表示された小さなボックスを選択します。
 
-## <a name="using-intellisense-to-complete-words"></a>IntelliSense を使用した入力補完
+## <a name="use-intellisense-to-complete-words"></a>IntelliSense を使用した入力補完
 
 コードを記述する場合、[IntelliSense](../ide/using-intellisense.md) は貴重なリソースです。 このリソースでは、使用可能な型のメンバーに関する情報、またはメソッドの各種オーバーロードのためのパラメーターの詳細を表示できます。 また、IntelliSense を使用すると、単語を区別するために十分な文字を入力した後に入力補完を利用することができます。 順序付けされた文字列をコンソール ウィンドウに出力するコード行を追加してみましょう。
 
@@ -136,7 +137,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
    }
    ```
 
-## <a name="refactoring-a-name"></a>名前のリファクタリング
+## <a name="refactor-a-name"></a>名前のリファクタリング
 
 だれも最初から適切なコードは記述できないものです。変更を必要とする可能性のある要素の 1 つに、変数またはメソッドの名前があります。 Visual Studio の[リファクタリング](../ide/refactoring-in-visual-studio.md)機能を使用して、`_words` 変数の名前を `words` に変更してみましょう。
 
@@ -165,4 +166,4 @@ Visual Studio エディターにおけるこのクイックスタートは完了
 - [アウトライン](../ide/outlining.md)
 - [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)
 - [リファクタリング](../ide/refactoring-in-visual-studio.md)
-- [IntelliSense の使用](../ide/using-intellisense.md)
+- [IntelliSense を使用する](../ide/using-intellisense.md)

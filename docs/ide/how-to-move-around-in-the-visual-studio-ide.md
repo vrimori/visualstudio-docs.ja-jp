@@ -19,11 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e78cba542c5a511eed13eedcde2665a832b09ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0d38c465cac0c24c7e776acc131a5b5fe22aa824
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747132"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>方法: Visual Studio IDE 内で移動する
 
@@ -55,7 +56,7 @@ Visual Studio のほぼすべてのメニュー コマンドにはショート�
 
 **IDE Navigator** は、Windows アプリケーションのスイッチャーのように動作します。 メニューからは利用できず、ショートカット キーを使用してのみアクセスできます。 2 つのコマンドのいずれかを使って **IDE Navigator** にアクセスし (下記参照)、表示したい順番でファイルを切り替えることができます。
 
-![Visual Studio IDE Navigator](../ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")
+![Visual Studio IDE ナビゲーター](../ide/media/vs2015_ide_navigator.png)
 
 `Window.PreviousDocumentWindowNav` では最後にアクセスしたファイルに移動することができ、`Window.NextDocumentWindowNav` では逆の順序で移動することができます。 **[全般的な開発設定]** では、**Shift** + **Alt** + **F7** が `Window.PreviousDocumentWindowNav` に、**Alt** + **F7** が `Window.NextDocumentWindowNav` に割り当てられています。
 

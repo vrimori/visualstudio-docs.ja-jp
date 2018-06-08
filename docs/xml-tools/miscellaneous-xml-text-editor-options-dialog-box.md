@@ -10,13 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dfc0a4e3841f30c2be81b60b2e86d9fd29bb801
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bd6ee70f99f3b82505d210ab95f8359b5c7f90c8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571771"
 ---
-# <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>[その他] ([オプション] ダイアログ ボックス - [テキスト エディター] - [XML])
+# <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>その他、XML、テキスト エディター、オプション ダイアログ ボックス
 
 このダイアログ ボックスでは、XML エディターのオートコンプリートとスキーマの設定を変更することができます。 アクセスすることができます、**オプション**からダイアログ ボックス、**ツール**メニュー。
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 04/26/2018
 > 選択すると、これらの設定は使用可能な**テキスト エディター**フォルダー、 **XML**フォルダー、し、 **その他**オプションを**のオプション**  ダイアログ ボックス。
 
 
-## <a name="auto-insert"></a>自動挿入
+## <a name="auto-insert"></a>[自動挿入]
  **終了タグ**
 
  オートコンプリート設定がオンのときに、タグが既に閉じられていない場合には、開始タグを閉じるためにユーザーが右山かっこ (>) を入力すると、エディターによって自動的に終了タグが追加されます。 これが既定の動作です。
@@ -70,5 +71,5 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント プロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)
+- [XML ドキュメントのプロパティと [プロパティ] ウィンドウ](../xml-tools/xml-document-properties-properties-window.md)
 - [XML エディターのコンポーネント](../xml-tools/xml-editor-components.md)

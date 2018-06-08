@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b2e2b7a9e6511faaa1941d65f6b328a07b10f79
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3ae7595121fcefa36998a88b53aae466d3a726cb
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573324"
 ---
 # <a name="integration-with-xml-editor"></a>XML エディターとの統合
 
@@ -22,9 +23,9 @@ XML スキーマ デザイナーは、XML エディターと統合されてい�
 
 -   XML エディターで、ノードを右クリックし、選択**XML スキーマ エクスプ ローラーで表示**です。
 
--   グラフ ビューと XML スキーマ エクスプ ローラーで、ノードをダブルクリックまたはノードを右クリックし **コードの表示**です。 コンテンツ モデル ビューでノードを右クリックし、選択**コードの表示**です。
+-   グラフ ビューで、 **XML スキーマ エクスプ ローラー**、ノードをダブルクリックして、またはノードを右クリックし、選択**コードの表示**です。 コンテンツ モデル ビューでノードを右クリックし、選択**コードの表示**です。
 
-次のスクリーン ショットは、XML スキーマが表示されている XML スキーマ エクスプローラーを示しています。 XML スキーマ エクスプローラーでは、スキーマ セットがツリー ビューに表示されます。 XML エディターには、XML スキーマ エクスプローラーで現在アクティブになっているノードのテキスト ビューが表示されます。
+次のスクリーン ショットで開かれている XML スキーマを示しています、 **XML スキーマ エクスプ ローラー**です。 **XML スキーマ エクスプ ローラー**スキーマ ツリー ビューのセットが表示されます。 XML エディターで現在アクティブなノードのテキスト ビューを表示する、 **XML スキーマ エクスプ ローラー**です。
 
 ![XSDDesignerWithXMLEditor](../xml-tools/media/xsddesignerwithxmleditor.gif)
 

@@ -21,11 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d417b5126989736c6126ae7c80bfcbc86f336a09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9b03f6112ebf44a89da3b4d5cbf6f7ff23f54b9c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571987"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office ソリューションの省略可能なパラメーター
   Microsoft Office アプリケーションのオブジェクト モデルに含まれるメソッドの多くは、省略可能なパラメーターを受け取ります。 Visual Studio で Visual Basic を使用して Office ソリューションを開発する場合は、省略可能なパラメーターに値を渡す必要はありません。省略したパラメーターに対しては自動的に既定値が使用されます。 ほとんどの場合は、Visual c# プロジェクトで省略可能なパラメーターも省略できます。 ただし、省略することはできませんと省略可能な**ref**のパラメーター、`ThisDocument`ドキュメント レベルの Word プロジェクトのクラスです。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstrefGeneralWord#1](../vsto/codesnippet/VisualBasic/worddocument1/ThisDocument.vb#1)]
  [!code-csharp[Trin_VstrefGeneralWord#1](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#1)]  
   
-## <a name="using-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word 用の Visual C# ドキュメント レベル プロジェクトの ThisDocument クラスでのメソッドの省略可能なパラメーターの使用  
+## <a name="use-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word 用の Visual c# ドキュメント レベルのプロジェクトの ThisDocument クラスでメソッドの省略可能なパラメーターを使用します。  
  Word オブジェクト モデルには、多くの方法でオプションが含まれています。 **ref**を受け取るパラメーター<xref:System.Object>値。 ただし、省略することはできませんと省略可能な**ref**生成されるメソッドのパラメーターを`ThisDocument`Visual c# ドキュメント レベルのプロジェクトで Word 用のクラスです。 Visual c# を使用するとオプションを省略する**ref**のみのインターフェイスのメソッドのパラメーターがないクラスです。 たとえば、次のコード例はコンパイルされず、オプションを省略することはできませんので**ref**のパラメーター、<xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A>のメソッド、`ThisDocument`クラスです。  
   
  [!code-csharp[Trin_VstrefGeneralWord#3](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#3)]  
@@ -68,10 +69,10 @@ ms.lasthandoff: 04/16/2018
   
  [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]  
   
- 値と参照型のパラメーターの詳細については、次を参照してください[値と参照渡しに引数を渡す&#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic の場合) 用と[パラメーターの引き渡し&#40;C&#35; 。プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)です。  
+ 値と参照型のパラメーターの詳細については、次を参照してください[値と参照渡しの引数を渡す&#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic の場合) 用と[パラメーターを渡す&#40;C&#35; 。プログラミング ガイド&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)です。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションの開発](../vsto/developing-office-solutions.md)   
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
+ [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
+ [Office ソリューションでコードを記述します。](../vsto/writing-code-in-office-solutions.md)  
   
   
