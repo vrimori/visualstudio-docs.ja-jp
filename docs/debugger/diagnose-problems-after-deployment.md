@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479612"
 ---
 # <a name="diagnose-problems-after-deployment"></a>配置後の問題の診断
 IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診断するには、リリースについてのビルド情報を含めます。こうすることで、Visual Studio が、IntelliTrace ログをデバッグするために必要な正しいソース ファイルとシンボル ファイルを自動的に検索できるようになります。  
@@ -141,7 +142,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 ###  <a name="ManualBuild"></a> Visual Studio を使用して手動ビルドのビルド マニフェストを作成します。  
  プロジェクトのビルド マニフェスト (BuildInfo.config ファイル) を自動的に作成し、プロジェクトの出力フォルダーに配置するには、次の手順を実行します。 このファイルは出力フォルダーで "*ProjectName*.BuildInfo.config" と表示されますが、アプリの発行後に配置フォルダーで "BuildInfo.config" という名前に変更されます。  
 
-1.  **[ソリューション エクスプローラー]**で、Web プロジェクトをアンロードします。  
+1.  **[ソリューション エクスプローラー]** で、Web プロジェクトをアンロードします。  
 
 2.  プロジェクト ファイル (.csproj、.vbproj) を開きます。 次の行を追加します。  
 
@@ -205,7 +206,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
      ![ソース管理から開く&#45;新しいワークスペースを作成](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
 
-     特定のマッピングを備えたワークスペースや、コンピューターとは名前が異なるワークスペースを作成するには、 **[管理]**を選択します。  
+     特定のマッピングを備えたワークスペースや、コンピューターとは名前が異なるワークスペースを作成するには、 **[管理]** を選択します。  
 
      [Q: なぜは Visual Studio でしょうか。 選択した個人用ワークスペースは適合していません](#IneligibleWorkspace)  
 
@@ -213,7 +214,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
 ### <a name="diagnose-a-performance-problem"></a>パフォーマンスの問題を診断する  
 
-1.  **[パフォーマンス違反]**で、記録されたパフォーマンス イベント、総実行時間、およびその他のイベント情報を確認します。 その後、特定のパフォーマンス イベントの発生時に呼び出されたメソッドをさらに掘り下げます。  
+1.  **[パフォーマンス違反]** で、記録されたパフォーマンス イベント、総実行時間、およびその他のイベント情報を確認します。 その後、特定のパフォーマンス イベントの発生時に呼び出されたメソッドをさらに掘り下げます。  
 
      ![パフォーマンス イベントの詳細を表示](../debugger/media/ffr_itsummarypageperformance.png "FFR_ITSummaryPagePerformance")  
 
@@ -237,7 +238,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
 ### <a name="diagnose-an-exception"></a>例外の診断  
 
-1.  **[例外データ]**では、記録された例外イベントとその種類、メッセージ、およびその例外がいつ発生したかを確認できます。 コードをさらに掘り下げるには、例外グループの最新のイベントからデバッグを開始します。  
+1.  **[例外データ]** では、記録された例外イベントとその種類、メッセージ、およびその例外がいつ発生したかを確認できます。 コードをさらに掘り下げるには、例外グループの最新のイベントからデバッグを開始します。  
 
      ![例外イベントからデバッグを開始](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")  
 
@@ -373,7 +374,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
         ```  
 
 ####  <a name="IneligibleWorkspace"></a> Q: なぜは Visual Studio でしょうか。 選択した個人用ワークスペースは適合していません  
- **A:** 選択したワークスペースのソース コントロール フォルダーとローカル フォルダーの間にマッピングがありません。 このワークスペースのマッピングを作成するには、 **[管理]**を選択します。 それ以外の場合は、既に割り当てられているワークスペースを選択するか、新しいワークスペースを作成します。  
+ **A:** 選択したワークスペースのソース コントロール フォルダーとローカル フォルダーの間にマッピングがありません。 このワークスペースのマッピングを作成するには、 **[管理]** を選択します。 それ以外の場合は、既に割り当てられているワークスペースを選択するか、新しいワークスペースを作成します。  
 
  ![ない割り当てられているワークスペースとソース管理から開く](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")  
 
@@ -400,4 +401,4 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 ####  <a name="UntrustedSymbols"></a> 信頼されていないシンボルに関するメッセージを取得する q は?  
  ![信頼されていないシンボル パスを使用してデバッグしますか。] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
 
- **A:**このメッセージが表示されるときに、ビルド マニフェスト ファイルでシンボル パス (\<*ProjectName*>。>.buildinfo.config) は、信頼されたシンボル パスの一覧に含まれていません。 このパスをシンボル パスの一覧に追加するには、デバッガー オプションを使用します。
+ **A:** このメッセージが表示されるときに、ビルド マニフェスト ファイルでシンボル パス (\<*ProjectName*>。>.buildinfo.config) は、信頼されたシンボル パスの一覧に含まれていません。 このパスをシンボル パスの一覧に追加するには、デバッガー オプションを使用します。

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481685"
 ---
 # <a name="how-to-debug-com-servers"></a>方法 : COM サーバーをデバッグする
 COM サーバー アプリケーションのデバッグには固有の問題があります。これらの問題は、常に簡単に解決できるとは限りません。  

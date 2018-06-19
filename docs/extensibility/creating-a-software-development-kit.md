@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109179"
 ---
 # <a name="creating-a-software-development-kit"></a>ソフトウェア開発キットを作成する
 ソフトウェア開発キット (SDK) は、Visual Studio での 1 つのアイテムとして参照できる Api のコレクションです。 **参照マネージャー**  ダイアログ ボックスに、プロジェクトに関連するすべての Sdk が一覧表示されます。 SDK をプロジェクトに追加するときに Api は Visual Studio で使用できます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 |DesignTime フォルダー|前の実行/デバッグ時にのみ必要なファイルが含まれています。 XML ドキュメント、ライブラリ、ヘッダー、ツールボックスのデザイン時バイナリ、MSBuild の成果物などが該当<br /><br /> XML ドキュメントは、理想的には、フォルダーに配置する、\DesignTime が、XML ドキュメントの参照には引き続き Visual Studio での参照ファイルと一緒に配置します。 たとえば、XML ドキュメントを参照 \References を\\[config]\\[arch]\sample.dll \References になります\\[config]\\[arch]\sample.xml、およびそのドキュメントのローカライズ版なります \References\\[config]\\[アーキテクチャ]\\[locale]\sample.xml です。|  
 |[構成] フォルダー|3 つのフォルダーが存在することができます。 デバッグ、小売および CommonConfiguration です。 SDK の作成者は、SDK のコンシューマーが対象とする構成に関係なく、同じ SDK ファイルのセットを使用する必要がある場合 CommonConfiguration の下にファイルを配置できます。|  
 |アーキテクチャのフォルダー|サポートされるアーキテクチャの任意のフォルダーが存在できます。 Visual Studio には、次のアーキテクチャがサポートされています。 x86、x64、ARM、および neutral です。 注: Win32 が x86 にマップされ、AnyCPU がニュートラルにマップします。<br /><br /> MSBuild は、プラットフォーム Sdk を \CommonConfiguration\neutral 下でのみ検索します。|  
-|Sdkmanifest.xml 内|このファイルは、Visual Studio が SDK を使用する方法について説明します。 SDK マニフェストを見て[!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:**オブジェクト ブラウザーが、参照一覧に表示される値。<br /><br /> **PlatformIdentity:**この属性の存在に指示 Visual Studio および MSBuild の SDK がプラットフォーム SDK であること、およびそこから追加された参照がコピーされるべきではありませんローカルです。<br /><br /> **TargetFramework:**のみを対象との値で指定されている同じフレームワークをプロジェクトすることを確認する Visual Studio によってこの属性が使用される属性は、SDK を使用できます。<br /><br /> **MinVSVersion:**に適用する Sdk のみを使用する Visual Studio によってこの属性を使用します。<br /><br /> **参照:**この属性は、コントロールを含む参照のみを指定する必要があります。 参照がコントロールを含むかどうかを指定する方法の詳細については、後述します。|  
+|Sdkmanifest.xml 内|このファイルは、Visual Studio が SDK を使用する方法について説明します。 SDK マニフェストを見て[!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **DisplayName:** オブジェクト ブラウザーが、参照一覧に表示される値。<br /><br /> **PlatformIdentity:** この属性の存在に指示 Visual Studio および MSBuild の SDK がプラットフォーム SDK であること、およびそこから追加された参照がコピーされるべきではありませんローカルです。<br /><br /> **TargetFramework:** のみを対象との値で指定されている同じフレームワークをプロジェクトすることを確認する Visual Studio によってこの属性が使用される属性は、SDK を使用できます。<br /><br /> **MinVSVersion:** に適用する Sdk のみを使用する Visual Studio によってこの属性を使用します。<br /><br /> **参照:** この属性は、コントロールを含む参照のみを指定する必要があります。 参照がコントロールを含むかどうかを指定する方法の詳細については、後述します。|  
   
 ##  <a name="ExtensionSDKs"></a> 拡張機能 Sdk  
  次のセクションでは、拡張機能 SDK を展開するために必要なものについて説明します。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  参照フォルダー: Api が含まれているバイナリです。 これらは、Windows メタデータ (WinMD) ファイルまたはアセンブリがあります。  
   
-3.  Redist フォルダー: ファイルをランタイム/デバッグが必要であり、ユーザーのアプリケーションの一部としてパッケージ化を取得する必要があります。 \Redist 下にあるすべてのバイナリを配置する必要があります\\< config\>\\< arch\>があり、一意性を確保するのには、次の形式は、バイナリ名: **\<会社 >.\<製品 >。\<目的 >。\<拡張子 >**です。 たとえば、Microsoft.Cpp.Build.dll です。 名前衝突する可能性があります (たとえば、javascript、css、pri、xaml、png、jpg ファイル) その他の Sdk からのファイル名を持つすべてのファイルを \redist の下に配置する必要があります\\< config\>\\< arch\> \\< sdk 名\>\ XAML に関連付けられているファイルを除くを制御します。 これらのファイルを \redist の下に配置する必要があります\\< config\>\\< arch\>\\< componentname\>\\です。  
+3.  Redist フォルダー: ファイルをランタイム/デバッグが必要であり、ユーザーのアプリケーションの一部としてパッケージ化を取得する必要があります。 \Redist 下にあるすべてのバイナリを配置する必要があります\\< config\>\\< arch\>があり、一意性を確保するのには、次の形式は、バイナリ名: **\<会社 >.\<製品 >。\<目的 >。\<拡張子 >** です。 たとえば、Microsoft.Cpp.Build.dll です。 名前衝突する可能性があります (たとえば、javascript、css、pri、xaml、png、jpg ファイル) その他の Sdk からのファイル名を持つすべてのファイルを \redist の下に配置する必要があります\\< config\>\\< arch\> \\< sdk 名\>\ XAML に関連付けられているファイルを除くを制御します。 これらのファイルを \redist の下に配置する必要があります\\< config\>\\< arch\>\\< componentname\>\\です。  
   
 4.  DesignTime フォルダー: 前の実行/デバッグのみで必要なファイルは、時間し、ユーザーのアプリケーションの一部としてパッケージ化することはできません。 XML ドキュメント、ライブラリ、ヘッダー、ツールボックスのデザイン時バイナリ、MSBuild の成果物などを指定できます。 ネイティブ プロジェクトによる消費を持っていなければなりませんためのものでは、すべての SDK、 *sdk 名*.props ファイル。 この種類のファイルのサンプルを次に示します。  
   

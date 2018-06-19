@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480662"
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>UWP アプリをシミュレーターで実行します。
 UWP アプリの Visual Studio シミュレーターは、UWP アプリをシミュレートするデスクトップ アプリケーションです。 通常は、ローカル コンピューター、接続されたデバイスまたはリモート コンピューター上でデバッグするは。 ただし、一部のシナリオで別の物理的な画面サイズと解像度をエミュレートするために、Visual Studio シミュレーターを使用することがあります。 一般的なタッチと回転イベントのシミュレーションや、ネットワーク接続のプロパティをシミュレートすることができますも。
