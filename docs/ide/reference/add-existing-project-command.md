@@ -20,6 +20,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33704786"
 ---
 # <a name="add-existing-project-command"></a>AddExistingProject コマンド
 既存のプロジェクトを現在のソリューションに追加します。

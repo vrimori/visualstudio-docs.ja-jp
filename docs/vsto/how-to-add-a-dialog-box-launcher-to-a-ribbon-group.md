@@ -21,6 +21,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548394"
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>方法: リボン グループにダイアログ ボックス起動ツールを追加
   ダイアログ ボックス起動ツールは、リボン上の任意のグループに追加できます。 ダイアログ ボックス起動ツールは、グループに表示される小さなアイコンです。 ユーザーは、関連するダイアログ ボックスまたはグループに関連する他のオプションを提供する作業ウィンドウを開くには、このアイコンをクリックします。  

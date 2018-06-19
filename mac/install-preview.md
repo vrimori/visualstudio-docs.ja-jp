@@ -12,6 +12,7 @@ ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34453856"
 ---
 # <a name="installing-preview-releases"></a>プレビュー リリースのインストール
 

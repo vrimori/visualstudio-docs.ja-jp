@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31559336"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>方法 : ClickOnce アプリケーションと共に必須コンポーネントをインストールする
 すべて[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションで実行する前に、.NET Framework の正しいバージョンがコンピューターにインストールされているが必要です。 多くのアプリケーションにもその他の前提条件です。 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、アプリと一緒にパッケージ化する前提条件コンポーネントのセットを選択することができます。 インストール時に、チェックされます。 それぞれの前提条件のかどうかは、既に存在します。 を決定するにはインストールする前にインストールされていない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>ClickOnce アプリケーションと共にインストールする前提条件を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  選択、**発行**ウィンドウです。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-specify-a-different-download-location-for-prerequisites"></a>前提条件を別のダウンロード場所を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  選択、**発行**ウィンドウです。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/19/2018
   
 5.  **の前提条件のインストール場所を指定**セクションで、**次の場所から必須コンポーネントをダウンロード**です。  
   
-6.  ドロップダウン リストから場所を選択または URL、ファイル パスまたは FTP の場所を入力し、クリックして**[ok] です。**  
+6.  ドロップダウン リストから場所を選択または URL、ファイル パスまたは FTP の場所を入力し、クリックして **[ok] です。**  
   
     > [!NOTE]
     >  指定した位置に指定されたコンポーネントのインストーラーが存在することを確認する必要があります。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31558335"
 ---
 # <a name="how-to-set-the-clickonce-publish-version"></a>方法: ClickOnce の発行バージョンを設定する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `Publish Version`プロパティを公開するアプリケーションが更新プログラムとして扱われますかどうかを決定します。 各時間バージョンがインクリメントされる、アプリケーションは、更新プログラムとして発行されます。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-change-the-publish-version"></a>発行バージョンを変更するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **発行**タブをクリックします。  
   

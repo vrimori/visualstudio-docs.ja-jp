@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31116192"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
 このインターフェイスはによって実装される拡張機能インターフェイス[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)実装します。 これにより、デバッグ プロセス環境に関する情報を取得する実行者できます。  

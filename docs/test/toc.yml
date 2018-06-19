@@ -353,16 +353,14 @@
               href: how-to-delete-load-test-results-from-a-repository.md
         - name: 結果ビューアー用のアドインを作成する
           href: how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md
-- name: UI オートメーションを使用してコードをテストする
+- name: UI テスト自動化
   href: use-ui-automation-to-test-your-code.md
   items:
-    - name: 'チュートリアル: コード化された UI テストの作成、編集、および保守'
+    - name: 'チュートリアル: コード化された UI テストの作成、編集、管理'
       href: walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md
-    - name: コード化された UI テストを使用して Windows UWP アプリをテストする
-      href: test-windows-store-8-1-apps-with-coded-ui-tests.md
-    - name: コード化された UI テストを使用した Windows UWP および 8.1 Phone アプリのテスト
-      href: test-windows-phone-8-1-apps-with-coded-ui-tests.md
-    - name: テスト用に UWP コントロールの一意のオートメーション プロパティを設定する
+    - name: コード化された UI テストを使用して UWP アプリをテストする
+      href: test-uwp-app-with-coded-ui-test.md
+    - name: UWP コントロールの一意のオートメーション プロパティを設定する
       href: set-a-unique-automation-property-for-windows-store-controls-for-testing.md
     - name: コード化された UI テストで HTML5 コントロールを使用する
       href: using-html5-controls-in-coded-ui-tests.md
@@ -370,7 +368,7 @@
       href: testing-sharepoint-2010-applications-with-coded-ui-tests.md
     - name: データ ドリブンのコード化された UI テストを作成する
       href: creating-a-data-driven-coded-ui-test.md
-    - name: 再生中に特定のイベントを待機するようにコード化された UI テストを設定する
+    - name: 再生中に特定のイベントを待機する
       href: making-coded-ui-tests-wait-for-specific-events-during-playback.md
     - name: コード化された UI テストでさまざまな Web ブラウザーを使用する
       href: using-different-web-browsers-with-coded-ui-tests.md
@@ -386,28 +384,10 @@
       href: testing-a-large-application-with-multiple-ui-maps.md
     - name: コントロールのコード化された UI テストの有効化
       href: enable-coded-ui-testing-of-your-controls.md
-    - name: コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム
+    - name: サポートされている構成とプラットフォーム
       href: supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md
-    - name: コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポートする
+    - name: コード化された UI テスト フレームワークを拡張する
       href: extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md
-      items:
-        - name: コード化された UI テスト用の Excel アドインのサンプル
-          href: sample-excel-add-in-for-coded-ui-testing.md
-        - name: Excel Communicator インターフェイスのサンプル
-          href: sample-excel-communicator-interface.md
-        - name: Excel 用にコード化された UI テストの拡張子のサンプル
-          href: sample-coded-ui-test-extension-for-excel.md
-          items:
-            - name: 'Excel 拡張子のサンプル: ExtensionPackage クラス'
-              href: sample-excel-extension-extensionpackage-class.md
-            - name: 'Excel 拡張子のサンプル: TechnologyManager クラス'
-              href: sample-excel-extension-technologymanager-class.md
-            - name: 'Excel 拡張子のサンプル: PropertyProvider クラス'
-              href: sample-excel-extension-propertyprovider-class.md
-            - name: 'Excel 拡張子のサンプル: 要素クラス'
-              href: sample-excel-extension-element-classes.md
-            - name: 'Excel 拡張子のサンプル: ActionFilter クラス'
-              href: sample-excel-extension-actionfilter-class.md
 - name: ラボ管理のテスト
   href: lab-management/using-a-lab-environment-for-your-application-lifecycle.md
   items:
