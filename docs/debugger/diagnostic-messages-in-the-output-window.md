@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474584"
 ---
 # <a name="send-diagnostic-messages-to-the-output-window"></a>出力ウィンドウに診断メッセージを送信します。
 実行時のメッセージを記述することができます、**出力**ウィンドウを使用して、`Debug`クラスまたは`Trace`に含まれるクラスの<xref:System.Diagnostics>クラス ライブラリです。 プログラムのデバッグ バージョンだけで出力する場合は Debug クラスを使用します。 プログラムのデバッグ バージョンとリリース バージョンの両方で出力する場合は Trace クラスを使用します。  

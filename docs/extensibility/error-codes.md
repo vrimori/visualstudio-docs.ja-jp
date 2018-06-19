@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130775"
 ---
 # <a name="error-codes"></a>エラー コード
 ソース管理プラグイン API 関数がエラーを返したときに、次のエラー コードのいずれかに必要です。 すべてのエラーが警告または情報エラー コードは正の値に負の場合は、成功した場合は 0 です。  

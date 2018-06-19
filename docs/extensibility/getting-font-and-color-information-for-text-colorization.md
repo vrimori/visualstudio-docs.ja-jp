@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129697"
 ---
 # <a name="getting-font-and-color-information-for-text-colorization"></a>フォントとテキスト彩色の色の情報を取得します。
 レンダリングまたはユーザー インターフェイス (UI) 要素の色分けされたテキストを表示するプロセスは、プロジェクト、テクノロジ、および developer の基本設定の種類によって異なります。 **フォントおよび色**プロパティ ページの設定を保存します。

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138289"
 ---
 # <a name="opening-a-dynamic-tool-window"></a>動的なツール ウィンドウを開く
 ツール ウィンドウは通常、対応するキーボード ショートカットやメニューのコマンドから開きます。 ときに、ただし、必要がありますツール ウィンドウを特定の UI コンテキストが適用され、UI コンテキストが適用されなくなったときに終了するたびに開きます。 ツール ウィンドウのこれらの型と呼びます*動的*または*自動表示*です。  

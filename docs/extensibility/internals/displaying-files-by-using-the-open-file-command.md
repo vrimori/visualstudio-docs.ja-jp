@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130894"
 ---
 # <a name="displaying-files-by-using-the-open-file-command"></a>ファイルを開くコマンドを使用してファイルを表示します。
 次の手順では、IDE を処理する方法について説明する、**ファイルを開く**で使用できるコマンド、**ファイル**でメニュー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 手順では、プロジェクトがこのコマンドからの呼び出しに応答する方法についても説明します。  

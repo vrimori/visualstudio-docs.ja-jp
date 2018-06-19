@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130386"
 ---
 # <a name="stepping-in-break-mode"></a>中断モードでのステップ実行
 次に、デバッガーは中断モードにして、コードをステップ実行する必要があるときに発生するプロセスについて説明します。  

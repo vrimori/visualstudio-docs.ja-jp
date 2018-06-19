@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138107"
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録します。
 アプリケーションとファイル名拡張子の関連付けは通常、ユーザーがファイルをダブルクリックしたときに発生する推奨されるアクションを持っています。 これを優先する動詞をたとえば開いているアクションに対応するアクションをリンクします。  

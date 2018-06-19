@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927547"
 ---
 # <a name="understanding-sal"></a>SAL について
 Microsoft ソース コード注釈言語 (SAL) は、そのパラメーターとそれが、それらについている前提条件と、それが完了したら、保証の関数の使用について説明するに使用できる注釈のセットを提供します。 注釈はヘッダー ファイルで定義されている`<sal.h>`です。 C++ 用の visual Studio コード分析では、SAL 注釈を使用して、関数の分析を変更します。 SAL 2.0 の Windows のドライバーの開発の詳細については、次を参照してください。 [SAL 2.0 注釈の Windows ドライバー](http://go.microsoft.com/fwlink/?LinkId=250979)です。

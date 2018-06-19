@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950882"
 ---
 # <a name="options-text-editor-javascript-formatting"></a>[オプション]、[テキスト エディター]、[JavaScript]、[書式設定]
 **[オプション]** ダイアログ ボックスの **[書式設定]** ページで、コード エディターでのコード書式オプションを設定します。 このページにアクセスするには、メニュー バーで **[ツール]**、**[オプション]** の順にクリックし、次に、**[テキスト エディター]**、**[JavaScript]**、**[書式設定]** を展開します。

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141650"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>エディターでの managed Extensibility Framework
 エディターは、Managed Extensibility Framework (MEF) コンポーネントを使用して作成されています。 エディターを拡張する独自の MEF コンポーネントをビルドして、コード エディターのコンポーネントもを使用できます。  

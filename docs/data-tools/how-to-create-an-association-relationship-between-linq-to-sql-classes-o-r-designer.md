@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31923391"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>方法: LINQ to SQL クラス (O/R デザイナー) 間の関連付けを作成します。
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] のエンティティ クラス間の関連付けは、データベース内のテーブル間の関連付けに似ています。 使用してエンティティ クラス間の関連付けを作成することができます、 **[関連付けエディター** ] ダイアログ ボックス。

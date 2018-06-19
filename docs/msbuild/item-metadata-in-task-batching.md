@@ -20,6 +20,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31573566"
 ---
 # <a name="item-metadata-in-task-batching"></a>タスクのバッチの項目メタデータ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目リストをさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのタスクを実行する機能があります。 厳密にどの項目がどのバッチで渡されるのかは少々複雑です。 このトピックでは、バッチ処理を伴う一般的なシナリオについて説明します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465344"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 指定した親の識別子の名と記号の種類に一致するすべての子を取得します。  

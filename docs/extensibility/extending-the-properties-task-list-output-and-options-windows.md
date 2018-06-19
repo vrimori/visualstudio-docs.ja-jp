@@ -23,6 +23,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135548"
 ---
 # <a name="extending-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、およびオプションの Windows の拡張
 Visual Studio での任意のツール ウィンドウにアクセスすることができます。 このチュートリアルは、新しいツール ウィンドウに関する情報を統合する方法を示す**オプション**ページと、新しい設定で、**プロパティ**に書き込む方法と ページで、**タスク一覧**と**出力**windows です。  

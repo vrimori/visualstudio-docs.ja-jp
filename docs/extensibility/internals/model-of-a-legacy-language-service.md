@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131588"
 ---
 # <a name="model-of-a-legacy-language-service"></a>従来の言語サービスのモデル
 言語サービスは、要素と、特定の言語の機能を定義し、その言語に固有の情報に、エディターを提供するために使用します。 たとえば、エディターは、構文の色分けをサポートするために、要素と言語のキーワードを知っている必要があります。  

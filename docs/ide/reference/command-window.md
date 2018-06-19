@@ -23,6 +23,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33704760"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 **[コマンド]** ウィンドウは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE) でコマンドやエイリアスを実行するときに使用します。 メニュー コマンドと、メニューに表示されないコマンドの両方を実行できます。 **[コマンド]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[コマンド ウィンドウ]** をクリックします。

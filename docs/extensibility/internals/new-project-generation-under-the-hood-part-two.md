@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133190"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>新しいプロジェクトの生成: フードの第 2 部します。
 [新しいプロジェクトの生成: 短縮、パート 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md)見た方法、**新しいプロジェクト** ダイアログ ボックスが表示されます。 選択したと仮定、 **Visual c# の Windows アプリケーション**、情報を入力した、**名前**と**場所**テキスト ボックス、および [ok] のクリックしました。  

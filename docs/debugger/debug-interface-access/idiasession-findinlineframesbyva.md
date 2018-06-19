@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468705"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
 指定された仮想アドレス (VA) 上のインライン フレームのすべての反復処理にクライアントを許可する列挙体を取得します。  

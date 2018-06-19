@@ -20,6 +20,7 @@ ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454377"
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName 要素 (Visual Studio テンプレート)
 指定するかどうか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト システムでテンプレートの既定の名前によって生成されます、**新しい項目の追加**または**新しいプロジェクト** ダイアログ ボックス。  

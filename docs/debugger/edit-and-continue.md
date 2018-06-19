@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471971"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>コードを編集し、(c#、VB、C++)、Visual Studio でデバッグを続行
 エディット コンティニュを使用すると、プログラムが中断モードのときにソース コードを変更できるため、時間を節約できます。 などの実行コマンドを選択して、プログラムの実行を再開すると**続行**または**ステップ**、エディット コンティニュに自動的にいくつかの制限によるコード変更を適用します。 このため、デバッグ セッション中にコードを変更できます。デバッグ セッションをいったん停止し、プログラム全体を再コンパイルしてからデバッグ セッションを再開する必要がありません。  

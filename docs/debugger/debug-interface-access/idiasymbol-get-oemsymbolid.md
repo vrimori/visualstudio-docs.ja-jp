@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468412"
 ---
 # <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
 相手先ブランド供給業者 (OEM) シンボルの ID 値を取得します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31464759"
 ---
 # <a name="idiasymbolgetisltcg"></a>IDiaSymbol::get_isLTCG
 指定するフラグを取得するかどうか、[コンパイル単位](../../debugger/debug-interface-access/compiland.md)リンカー スイッチにリンクされている[/LTCG (リンク時コード生成)](/cpp/build/reference/ltcg-link-time-code-generation)、プログラム全体の最適化を支援します。 このスイッチは、マネージ コードのみに適用されます。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133151"
 ---
 # <a name="test-area-4-check-in"></a>チェックイン テスト領域 4:
 このソース管理プラグインのテストの領域の説明を使用して、バージョン ストアに更新された項目を送信する、**チェックイン**コマンド。  

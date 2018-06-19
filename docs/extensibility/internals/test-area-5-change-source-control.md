@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134358"
 ---
 # <a name="test-area-5-change-source-control"></a>テスト領域 5: ソース管理の変更
 このソース管理プラグインのテストの領域は、によるソース管理の変更について説明、**ソース管理の変更**コマンド。  

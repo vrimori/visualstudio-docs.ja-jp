@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474701"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>[メッセージ] タブ ([メッセージ オプション] ダイアログ ボックス)
 使用して、**メッセージ**リストにするメッセージの種類を選択するタブ[メッセージ ビュー](../debugger/messages-view.md)、およびメッセージの検索条件を指定します。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  

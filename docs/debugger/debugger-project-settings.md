@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474025"
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  

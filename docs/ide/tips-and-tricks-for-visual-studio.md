@@ -14,6 +14,7 @@ ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32065066"
 ---
 # <a name="keyboard-shortcuts-for-visual-studio"></a>Visual Studio のキーボード ショートカット
 

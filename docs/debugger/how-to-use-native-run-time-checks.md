@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480603"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>方法 : ネイティブ ランタイム チェックを使用する
 Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-checks) を使用して、次のような一般的なランタイム エラーをキャッチできます。  
@@ -58,7 +59,7 @@ Visual C++ では、ネイティブ [runtime_checks](/cpp/preprocessor/runtime-c
   
 -   短い変数への代入によるデータの消失  
   
- 最適化された ( **/RTC** ) ビルドで**/O**を使用すると、コンパイラ エラーが発生します。 `runtime_checks` プラグマを最適化されたビルドに使用しても効果はありません。  
+ 最適化された ( **/RTC** ) ビルドで **/O**を使用すると、コンパイラ エラーが発生します。 `runtime_checks` プラグマを最適化されたビルドに使用しても効果はありません。  
   
  ランタイム チェックが有効になっている状態のプログラムをデバッグすると、既定の動作では、ランタイム エラーの発生時にプログラムが停止し、デバッガーが起動されます。 この既定の動作は、任意のランタイム チェックで変更できます。 詳細については、次を参照してください。[デバッガーでは、例外を管理する](../debugger/managing-exceptions-with-the-debugger.md)です。  
   

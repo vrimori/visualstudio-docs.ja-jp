@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130573"
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>ソース管理ストアをローカルのプロジェクト フォルダーの省略可能な比較
 ソース制御関数を使用して、ローカルのプロジェクト フォルダーとソース コントロール間の比較が行われますプラグイン API 1.2 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md)と[SccDirDiff](../../extensibility/sccdirdiff-function.md)です。  

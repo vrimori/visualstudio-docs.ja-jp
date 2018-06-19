@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131964"
 ---
 # <a name="brace-matching-in-a-legacy-language-service"></a>従来の言語サービスにおけるかっこの一致
 かっこの照合と、かっこと中かっこなど、同時に、発生する必要がある言語要素の追跡、開発者が役立ちます。 入力すると、開発者、右かっこ、始めかっこが強調表示されます。  

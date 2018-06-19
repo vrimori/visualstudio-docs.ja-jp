@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138926"
 ---
 # <a name="the-experimental-instance"></a>実験用インスタンス
 それに変わる可能性があるテストされていないアプリケーションから、Visual Studio 開発環境を保護するためには、VSSDK は、実験に使用できる実験用の領域を提供します。 通常どおり、Visual Studio を使用して新しいアプリケーションを開発するが、この実験用インスタンスを使用して実行します。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
   
  場合は、特定のソリューションの外部の Visual Studio の実験用インスタンスを開始するは、コマンド ウィンドウで、次のコマンドを実行します。  
   
- "*\<Visual studio インストール パス >*\Common7\IDE\devenv.exe"RootSuffix Exp  
+ "*\<Visual studio インストール パス >* \Common7\IDE\devenv.exe"RootSuffix Exp  
   
 > [!NOTE]
 >  実験用インスタンスは、下のレジストリに書き込まれます、`<version number>Exp`と`<version number>Exp_Config`ノード。 たとえば、Visual Studio 2015 の実験用のレジストリ領域が  

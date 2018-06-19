@@ -40,6 +40,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448715"
 ---
 # <a name="events-in-office-projects"></a>Office プロジェクトのイベント
   各 Office プロジェクト テンプレートは、自動的に複数のイベント ハンドラーを生成します。 ドキュメント レベルのカスタマイズに使用するイベント ハンドラーは、VSTO アドイン用のイベント ハンドラーとは若干異なります。  

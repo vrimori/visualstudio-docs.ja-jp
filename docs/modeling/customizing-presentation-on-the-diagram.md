@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946833"
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>図の外観のカスタマイズ
 この図は、ドメイン固有言語デザイナーの主な表示領域です。 通常、ユーザーはこの図を使用してモデルを作成します。 以降のトピックで説明されているように、図をカスタマイズできます。

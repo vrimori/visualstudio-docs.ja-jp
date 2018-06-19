@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31558286"
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>方法 : デザイナーを使用して ClickOnce アプリケーションの URL アクティベーションを無効にする
 通常、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Web サーバーからインストールした後すぐにアプリケーションが自動的に開始します。 セキュリティ上の理由から、することができます、この動作を無効にしてからアプリケーションを起動するユーザーに通知する、**開始** メニューの代わりにします。 次の手順では、URL アクティベーションを無効にする方法を説明します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  **プロパティ** ページで、をクリックして、**発行**タブです。  
   
-3.  **[オプション]**をクリックします。  
+3.  **[オプション]** をクリックします。  
   
 4.  をクリックして**マニフェスト**です。  
   

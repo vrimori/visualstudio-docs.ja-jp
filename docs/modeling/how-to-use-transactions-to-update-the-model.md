@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950008"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>方法: トランザクションを使用してモデルを更新する
 トランザクションをストアに加えられた変更がグループとして扱われることを確認します。 グループ化されている変更をコミットまたは 1 つの単位としてロールバックできます。

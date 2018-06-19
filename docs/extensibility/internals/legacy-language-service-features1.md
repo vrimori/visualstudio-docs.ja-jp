@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131739"
 ---
 # <a name="legacy-language-service-features"></a>レガシ言語サービス機能
 マネージ パッケージ フレームワーク (MPF) 言語サービスは、1 つ以上をサポートできる[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]構文の強調表示、IntelliSense、ブレークポイントの検証などの機能です。 各機能は、互いに独立して実装できますが、パーサーとスキャナーのみを必要とするスキャナー構文の強調表示を除くすべて必要があります。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/16/2018
  部分的に型指定された単語を完了するため、IntelliSense の入力候補の操作をサポートするための要件について説明します。  
   
  [従来の言語サービスでの自動変数ウィンドウのサポート](../../extensibility/internals/support-for-the-autos-window-in-a-legacy-language-service.md)  
- 言語サービス行える操作をサポートするについて説明します、 **[自動変数]**ウィンドウは、デバッグ中です。  
+ 言語サービス行える操作をサポートするについて説明します、 **[自動変数]** ウィンドウは、デバッグ中です。  
   
  [従来の言語サービスでのナビゲーション バーのサポート](../../extensibility/internals/support-for-the-navigation-bar-in-a-legacy-language-service.md)  
  使用する方法について説明します、**ナビゲーション バー**クイック ナビゲーションを任意の種類とそのビューに表示されるファイル内のメンバーを提供するエディターのビューの上部にまたがって.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454753"
 ---
 # <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: 標準例外コンストラクターを実装します
 

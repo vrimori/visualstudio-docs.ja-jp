@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128988"
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>ソース管理情報の削除。Proj とします。Sln ファイル
 バージョン 1.2 のソース管理プラグイン API、SCC は、情報は、MSSCCPRJ に格納されます。SCC ファイルです。 MSSCCPRJ 利点です。SCC ファイルは、SCC 情報がないソースに - .proj および .sln ファイル内にあるように、制御します。  

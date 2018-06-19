@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129473"
 ---
 # <a name="how-to-provide-automation-for-windows"></a>方法: Windows 用のオートメーションの提供
 ドキュメントとツール ウィンドウのオートメーションを使用できます。 オートメーションは適切では、ウィンドウのオートメーション オブジェクトを使用できるようにして、環境が存在しないときに提供することは、タスク一覧で、既製のオートメーション オブジェクトを提供します。

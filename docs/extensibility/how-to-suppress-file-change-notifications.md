@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128773"
 ---
 # <a name="how-to-suppress-file-change-notifications"></a>方法: ファイル変更通知を抑制します。
 メッセージとダイアログ ボックスが表示テキスト バッファーを表す物理的なファイルが変更されると**を次の項目への変更を保存するか。** これは、ファイル変更通知と呼ばれます。 多くの変更に場合のファイルへ、ただし、このダイアログ ボックスを繰り返し表示はすぐに面倒な場合。  

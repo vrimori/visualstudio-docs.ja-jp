@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473473"
 ---
 # <a name="how-can-i-keep-focus-when-stepping-through-my-program"></a>プログラムのステップ実行時にフォーカスを保持するには
 ## <a name="description"></a>説明  

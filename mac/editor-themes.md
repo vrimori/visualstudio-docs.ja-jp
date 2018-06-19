@@ -10,6 +10,7 @@ ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33865020"
 ---
 # <a name="editor-themes"></a>エディターのテーマ
 エディターのテーマは、Visual Studio for Mac に既定で用意されている 10 個の配色のいずれかに変更できます。変更するには、**[Visual Studio] > [ユーザー設定] > [テキスト エディター] > [配色テーマ]** メニュー オプションを選択します。

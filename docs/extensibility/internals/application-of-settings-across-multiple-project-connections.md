@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129207"
 ---
 # <a name="application-of-settings-across-multiple-project-connections"></a>複数プロジェクトの接続設定の適用
 ソース管理プラグインが複数のプロジェクトまたは複数の接続コンテキスト全体にわたって、同じソース管理の操作を実行するバッチ操作を使用してソース管理プラグイン API 1.2 を使用して作成できます。 バッチは、重複除去、プロジェクトごとのユーザー エクスペリエンス ダイアログ ボックスを使用できます。  

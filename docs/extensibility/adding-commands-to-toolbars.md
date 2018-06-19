@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102370"
 ---
 # <a name="adding-commands-to-toolbars"></a>ツールバーにコマンドを追加します。
 ツールバーは、水平または垂直方向のストリップをコマンドにバインドされているボタンを含むです。 Visual Studio での多くのさまざまなウィンドウのツールバーに、独自のコマンドを追加することができます。 Visual Studio のメイン ウィンドウ、ソリューション エクスプ ローラーで、および独自のカスタム ツール ウィンドウです。  

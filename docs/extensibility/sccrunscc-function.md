@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138266"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc 関数
 この関数は、ソース管理の管理ツールを起動します。  
@@ -66,7 +67,7 @@ SCCRTN SccRunScc(
   
  この関数は、数と現在選択されているファイルのファイル名の配列を使用します。 管理インターフェイス内のファイルを事前に選択するファイルの一覧を使用できる管理ツールでサポートされる場合、それ以外の場合、一覧を無視できます。  
   
- ユーザーを選択すると、この関数は通常呼び出されます、**起動\<ソース管理サーバー >**から、**ファイル** -> **ソース管理**メニューです。 これは、**起動**メニュー オプションを常に無効になっているやレジストリ エントリを設定しても非表示にします。 参照してください[する方法: ソース管理プラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)の詳細については、これとその他の機能ビット)。  
+ ユーザーを選択すると、この関数は通常呼び出されます、**起動\<ソース管理サーバー >** から、**ファイル** -> **ソース管理**メニューです。 これは、**起動**メニュー オプションを常に無効になっているやレジストリ エントリを設定しても非表示にします。 参照してください[する方法: ソース管理プラグインをインストール](../extensibility/internals/how-to-install-a-source-control-plug-in.md)詳細についてはします。 場合にのみ、この関数が呼び出されます[SccInitialize](../extensibility/sccinitialize-function.md)を返します、`SCC_CAP_RUNSCC`機能ビット (を参照してください[機能フラグ](../extensibility/capability-flags.md)の詳細については、これとその他の機能ビット)。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
