@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130585"
 ---
 # <a name="project-modeling"></a>プロジェクトのモデリング
 プロジェクトは、標準プロジェクト オブジェクトを実装するために、オートメーションを提供することで、次の手順:<xref:EnvDTE.Projects>と`ProjectItems`コレクション以外の場合は、`Project`と<xref:EnvDTE.ProjectItem>オブジェクトと、実装に固有の残りのオブジェクト。 これらの標準的なオブジェクトは、Dteinternal.h ファイルで定義されます。 BscPrj サンプルでは、標準的なオブジェクトの実装を提供します。 サイド バイ サイドを強調する、独自の標準的なプロジェクト オブジェクトを作成するモデルとしてこれらのクラスを使用するその他のプロジェクトの種類のプロジェクトのオブジェクトとします。  

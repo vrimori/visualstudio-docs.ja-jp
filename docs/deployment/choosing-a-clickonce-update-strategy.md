@@ -23,6 +23,7 @@ ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34065690"
 ---
 # <a name="choosing-a-clickonce-update-strategy"></a>ClickOnce の更新方法の選択
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、アプリケーションを自動的に更新できます。 A[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは、アプリケーションの更新が使用できるかどうかを確認するには、配置マニフェスト ファイルを定期的に読み取ります。 利用可能であれば、アプリケーションの新しいバージョンがダウンロードされて実行されます。 効率性を高めるために、変更されたファイルだけがダウンロードされます。  

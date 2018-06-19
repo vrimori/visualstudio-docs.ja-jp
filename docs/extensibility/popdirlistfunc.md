@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142187"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 これに指定されたコールバック関数、 [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md)ディレクトリおよび (必要に応じて) を検索するソース管理下にファイル名のコレクションを更新する関数。  

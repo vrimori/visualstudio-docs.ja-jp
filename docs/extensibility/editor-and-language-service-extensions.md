@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126630"
 ---
 # <a name="editor-and-language-service-extensions"></a>エディターと言語サービスの拡張機能
 Visual Studio code エディターのほとんどの機能を拡張することができます。 エディターは Windows Presentation Foundation (WPF) に基づいており、マネージ コードで記述されました。 この設計は、以前のバージョンの Visual Studio でデザインから異なる場合は、同じ機能のほとんどを提供します。 エディターを拡張するには、Managed Extensibility Framework (MEF) を使用します。  

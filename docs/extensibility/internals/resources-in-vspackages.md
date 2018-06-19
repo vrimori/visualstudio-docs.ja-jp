@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130952"
 ---
 # <a name="resources-in-vspackages"></a>Vspackage のリソース
 ネイティブ UI、サテライト Dll マネージ サテライト Dll の場合、または、マネージ VSPackage 自体には、ローカライズされたリソースを埋め込むことができます。  

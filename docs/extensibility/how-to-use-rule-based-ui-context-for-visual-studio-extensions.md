@@ -13,6 +13,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133710"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>方法: Visual Studio 拡張機能の規則ベースの UI コンテキストを使用
 Visual Studio により、読み込み時に特定の Vspackage のよく知られた<xref:Microsoft.VisualStudio.Shell.UIContext>s がアクティブにします。 しかし、これらの UI コンテキストが非常に細かい設定が可能な拡張機能の作成者を選択しないまま、ポイントの前にアクティブに使用できる UI コンテキストを取得する本当にありました、VSPackage を読み込みます。 よく知られている UI コンテキストの一覧は、次を参照してください。<xref:Microsoft.VisualStudio.Shell.KnownUIContexts>です。  

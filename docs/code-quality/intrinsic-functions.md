@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920949"
 ---
 # <a name="intrinsic-functions"></a>組み込み関数
 SAL の式は副作用がない式であれば、C と C++ の式を指定できます: たとえば、+ +、-- と関数の呼び出しがこのコンテキストですべての副作用であります。  ただし、SAL は一部の関数に似たオブジェクトと SAL 式で使用できるいくつかの予約済みの記号を提供します。 呼ばれる、*の組み込み関数*です。

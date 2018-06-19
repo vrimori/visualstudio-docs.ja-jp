@@ -20,6 +20,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921024"
 ---
 # <a name="code-analysis-application-errors"></a>コード分析のアプリケーション エラー
 このセクションでは、マネージ コード分析ツールによって生成されるエラー メッセージの参照です。 に特定のエラー メッセージのヘルプを取得するにはエラー番号を入力、**探します**ボックス インデックスにします。

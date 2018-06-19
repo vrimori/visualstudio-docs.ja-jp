@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132196"
 ---
 # <a name="project-configuration-for-output"></a>出力用のプロジェクトの構成
 すべての構成には、一連の実行可能ファイルまたはリソース ファイルなどの出力項目を生成するビルド プロセスをサポートできます。 これらの出力項目はユーザーにプライベートであり、出力実行可能ファイル (.exe、.dll、.lib) とソース ファイル (.idl、.h ファイル) などの関連する型をリンクしているグループに配置することができます。  

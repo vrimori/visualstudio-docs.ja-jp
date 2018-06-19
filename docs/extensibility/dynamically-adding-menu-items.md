@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133273"
 ---
 # <a name="dynamically-adding-menu-items"></a>メニュー項目を動的に追加します。
 指定して実行時にメニュー項目を追加することができます、`DynamicItemStart`コマンドを処理および表示するアイテムには (コード) メニューの数を定義し、Visual Studio コマンド テーブル (.vsct) ファイルでプレース ホルダー ボタンの定義をフラグをコマンドします。 VSPackage が読み込まれるときに、プレース ホルダーは、動的メニュー項目に置き換えられます。  

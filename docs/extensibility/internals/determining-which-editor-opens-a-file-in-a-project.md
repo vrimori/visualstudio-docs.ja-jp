@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130010"
 ---
 # <a name="determining-which-editor-opens-a-file-in-a-project"></a>どのエディターが開き、プロジェクトのファイルを決定します。
 プロジェクトで、ユーザーがファイルを開くと、最終的に、適切なエディターまたはそのファイルのデザイナーを開いて、ポーリング処理によって、環境が移動します。 環境内で採用されている最初の手順は、標準およびカスタムの両方のエディターに対して同じです。 ファイルを開くときに使用するエディターをポーリングするときに、環境でさまざまな条件を使用し、VSPackage は、このプロセス中に環境と連携する必要があります。  

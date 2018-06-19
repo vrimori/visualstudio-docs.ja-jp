@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132257"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>展開を管理するためのプロジェクトの構成
 展開は、動作は、デバッグおよびインストールの予期される場所に、ビルド プロセスからの出力項目を物理的に移動します。 たとえば、Web アプリケーションをローカル コンピューター上に構築され、サーバー上に配置しする可能性があります。  

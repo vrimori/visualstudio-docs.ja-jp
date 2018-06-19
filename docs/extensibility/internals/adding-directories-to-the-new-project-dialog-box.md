@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128081"
 ---
 # <a name="adding-directories-to-the-new-project-dialog-box"></a>[新しいプロジェクト] ダイアログ ボックスにディレクトリを追加します。
 新しいプロジェクトの種類を作成するときに登録することもできる、新しいディレクトリに、**新しいプロジェクト**ダイアログ ボックスを使用するためのテンプレートとして表示します。 次のコード例では、ノードとも呼ばれる、新しいディレクトリを登録する方法について説明します。 例では、VSPackage CLSID_Package によって公開されているテンプレートが登録されます。 その結果の左側にある、**新しいプロジェクト** ダイアログ ボックスは Folder_Label_ResID リソースによって決まります名、追加のノードを提供します。 このリソースは、VSPackage サテライト DLL から読み込まれます。  

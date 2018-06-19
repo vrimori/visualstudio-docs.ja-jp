@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921446"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>別のデータセットと TableAdapters を別々 のプロジェクトに
 型指定されたデータセットが強化されたできるように、 [Tableadapter](create-and-configure-tableadapters.md)別々 のプロジェクトにデータセット クラスを生成することができます。 これにより、アプリケーション層を分離して、n 層データ アプリケーションをすばやく生成できるようになります。

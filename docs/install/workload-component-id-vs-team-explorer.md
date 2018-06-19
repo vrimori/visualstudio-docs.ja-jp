@@ -22,6 +22,7 @@ ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33875443"
 ---
 # <a name="visual-studio-team-explorer-2017-component-directory"></a>Visual Studio Team Explorer 2017 のコンポーネント ディレクトリ
 

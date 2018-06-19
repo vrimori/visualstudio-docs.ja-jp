@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128634"
 ---
 # <a name="sample-implementation-of-changing-values"></a>値の変更の実装のサンプル
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/16/2018
  表示されるすべてのローカル、**ローカル**ウィンドウが、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)オブジェクトが関連付けられています。 これは、`IDebugProperty2`オブジェクトには、ローカルの名前、値、および種類が含まれています。 Visual Studio を呼び出すユーザーは、ローカルの値を変更するときに[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)をメモリにローカル変数の値を更新します。 この例では、ローカルで表される、`CFieldProperty`を実装するクラス、`IDebugProperty2`インターフェイスです。  
   
 > [!NOTE]
->  **ウォッチ**と**[クイック ウォッチ]** 、式によって表される値を変更する、 `CValueProperty` MyCEE サンプルのクラスです。 ただしの実装`IDebugProperty2::SetValueAsString`は次のように同じです。  
+>  **ウォッチ**と **[クイック ウォッチ]** 、式によって表される値を変更する、 `CValueProperty` MyCEE サンプルのクラスです。 ただしの実装`IDebugProperty2::SetValueAsString`は次のように同じです。  
   
  この実装`IDebugProperty2::SetValueAsString`は、次のタスクを実行します。  
   

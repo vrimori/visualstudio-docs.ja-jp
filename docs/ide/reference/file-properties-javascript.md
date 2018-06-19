@@ -32,6 +32,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947925"
 ---
 # <a name="file-properties-javascript"></a>ファイルのプロパティ、JavaScript
 ファイルのプロパティを使用して、プロジェクト システムがファイルに対して実行するアクションを指定できます。 たとえば、ファイルがリソース ファイルとしてパッケージに追加するかどうかを示すには、ファイル プロパティを設定できます。

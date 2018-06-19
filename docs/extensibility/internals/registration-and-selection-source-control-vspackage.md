@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133038"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース コントロール VSPackage)
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーはどの VSPackage を読み込むことが適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とこれらを登録する方法の詳細についてはします。  

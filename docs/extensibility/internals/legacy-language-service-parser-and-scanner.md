@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134584"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>レガシ言語サービス パーサーとスキャナー
 パーサーは、言語サービスの中核です。 Managed Package Framework (MPF) 言語のクラスでは、表示されているコードに関する情報を選択する言語パーサーが必要です。 パーサーは、構文のトークンにテキストを分離し、型と機能を使用してこれらのトークンを識別します。  
@@ -129,7 +130,7 @@ namespace MyNamespace
  詳細については、次を参照してください。[レガシ言語サービスでの構文が色分け](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)です。  
   
 ## <a name="parsing-for-functionality-and-scope"></a>機能とスコープの解析  
- 機能とスコープの解析中には、発生したトークンの種類を識別するだけよりも多くの労力が必要です。 パーサーは、トークンの種類だけでなく、トークンが使用されている機能を識別するがします。 たとえば、識別子は、名前だけが、言語、識別子が、クラス、名前空間、メソッド、または、コンテキストに応じて、変数の名前を指定します。 トークンの一般的な種類できますが、識別子は識別子にはこれに応じておよびが定義されているその他の意味があります。 この id には、解析された言語に関するより広範な知識を身にパーサーが必要です。 これは、ような場合、<xref:Microsoft.VisualStudio.Package.AuthoringSink>クラスが役に立ちます。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>クラス識別子、メソッド、(など、中かっこおよびかっこを使用)、一致する言語および言語の 3 要素に関する情報を収集する (たとえば、3 つの部分がある点を除いて言語の組み合わせに似ています"`foreach()`""`{`「と」`}`") です。 さらに、オーバーライドすることができます、<xref:Microsoft.VisualStudio.Package.AuthoringSink>デバッガーが読み込まれる必要があるないように、ブレークポイントの事前検証で使用される、コードの識別をサポートするクラスと**[自動変数]**デバッグ ウィンドウで、ローカルを示しています変数とパラメーターに自動的にプログラムは、デバッグ中と適切なローカル変数と、デバッガーを表示するだけでなくパラメーターを識別するためにパーサーが必要です。  
+ 機能とスコープの解析中には、発生したトークンの種類を識別するだけよりも多くの労力が必要です。 パーサーは、トークンの種類だけでなく、トークンが使用されている機能を識別するがします。 たとえば、識別子は、名前だけが、言語、識別子が、クラス、名前空間、メソッド、または、コンテキストに応じて、変数の名前を指定します。 トークンの一般的な種類できますが、識別子は識別子にはこれに応じておよびが定義されているその他の意味があります。 この id には、解析された言語に関するより広範な知識を身にパーサーが必要です。 これは、ような場合、<xref:Microsoft.VisualStudio.Package.AuthoringSink>クラスが役に立ちます。 <xref:Microsoft.VisualStudio.Package.AuthoringSink>クラス識別子、メソッド、(など、中かっこおよびかっこを使用)、一致する言語および言語の 3 要素に関する情報を収集する (たとえば、3 つの部分がある点を除いて言語の組み合わせに似ています"`foreach()`""`{`「と」`}`") です。 さらに、オーバーライドすることができます、<xref:Microsoft.VisualStudio.Package.AuthoringSink>デバッガーが読み込まれる必要があるないように、ブレークポイントの事前検証で使用される、コードの識別をサポートするクラスと **[自動変数]** デバッグ ウィンドウで、ローカルを示しています変数とパラメーターに自動的にプログラムは、デバッグ中と適切なローカル変数と、デバッガーを表示するだけでなくパラメーターを識別するためにパーサーが必要です。  
   
  <xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトは、パーサーの一部として、<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクト、および新しい<xref:Microsoft.VisualStudio.Package.AuthoringSink>オブジェクトがするたびに作成される新しい<xref:Microsoft.VisualStudio.Package.ParseRequest>オブジェクトを作成します。 さらに、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドが返す必要があります、<xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクト、IntelliSense、さまざまな操作を処理するために使用します。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>オブジェクトを保持宣言の一覧と、メソッドの一覧かされるは、によって設定されます、解析の理由。 <xref:Microsoft.VisualStudio.Package.AuthoringScope>クラスを実装する必要があります。  
   

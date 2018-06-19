@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134114"
 ---
 # <a name="making-commands-available"></a>コマンドを使用できるようにします。
 複数 VSPackages を Visual Studio に追加するとき、ユーザー インターフェイス (UI) は、コマンドで overcrowded になる可能性があります。 次のように、この問題を軽減するためにパッケージをプログラムすることができます。

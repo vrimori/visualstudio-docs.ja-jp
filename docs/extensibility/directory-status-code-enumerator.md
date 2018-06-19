@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126085"
 ---
 # <a name="directory-status-code-enumerator"></a>ディレクトリのステータス コード列挙子
 `SccDirStatus`列挙子には、ソース管理システムのディレクトリの状態を指定する名前付きの定数値が含まれています。 この列挙体を使って、 [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md)です。 これは、ソース管理プラグイン API のバージョン 1.2 で導入されました。  

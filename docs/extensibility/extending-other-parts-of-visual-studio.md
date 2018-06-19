@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133663"
 ---
 # <a name="extending-other-parts-of-visual-studio"></a>Visual Studio の他の部分を拡張します。
 拡張可能な Visual Studio の UI の多くの複数の部分があります。 ここでは説明するほんの一例です。  

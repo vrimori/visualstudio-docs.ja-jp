@@ -23,6 +23,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134215"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio のメニューの Guid と Id
 このトピックでは、メニューや Visual Studio のメニュー バー上のグループの GUID と ID の値を列挙します。 これらの値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)です。  

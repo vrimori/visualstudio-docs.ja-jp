@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130717"
 ---
 # <a name="glyph-control-source-control-vspackage"></a>グリフ コントロール (ソース コントロール VSPackage)
 ソース管理の Vspackage を使用できる高度な統合の一部は、ソース管理下にある項目の状態を示すために、独自のグリフを表示する機能です。  

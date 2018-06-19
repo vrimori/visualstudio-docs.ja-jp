@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131328"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>従来の言語サービスで入力候補
 ステートメント入力候補は、する言語サービスやすく、言語のキーワードまたはコア エディターに入力が開始されている要素を終了するプロセスです。 このトピックでは、ステートメント入力候補のしくみと、言語サービスに実装する方法について説明します。  

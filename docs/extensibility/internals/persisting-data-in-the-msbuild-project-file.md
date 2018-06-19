@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132079"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild プロジェクト ファイルでデータを保持します。
 プロジェクトのサブタイプは、後で使用できるプロジェクト ファイルにサブタイプに固有のデータを保持する必要があります。 プロジェクトのサブタイプでは、プロジェクト ファイルの永続化を使用して、次の要件を満たします。  

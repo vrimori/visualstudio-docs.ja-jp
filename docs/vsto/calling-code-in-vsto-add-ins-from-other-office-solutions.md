@@ -25,6 +25,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265329"
 ---
 # <a name="call-code-in-vsto-add-ins-from-other-office-solutions"></a>その他の Office ソリューションから VSTO アドイン内のコードを呼び出す
   VSTO アドイン内のオブジェクトは、他の Microsoft Office ソリューションを含む、他のソリューションに公開できます。 このことは、VSTO アドインが他のソリューションで使用可能なサービスを含む場合に便利です。 たとえば、この場合は、Web サービスから受け取る財務データについて計算を実行する、Microsoft Office Excel の VSTO アドインである場合は、その他のソリューションは実行時に Excel VSTO アドインを呼び出すことによってこれらの計算を実行できます。  

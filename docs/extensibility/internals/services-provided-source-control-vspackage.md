@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129603"
 ---
 # <a name="services-provided-source-control-vspackage"></a>提供されるサービス (ソース コントロール VSPackage)
 サービスは、Vspackage 間および Visual Studio 統合開発環境 (IDE) と、インストールされている Vspackage 間に機能を共有する主要なメカニズムです。 サービスと、Visual Studio IDE の重要度の詳細については、次を参照してください。[を使用するとサービスを提供する](../../extensibility/using-and-providing-services.md)です。  

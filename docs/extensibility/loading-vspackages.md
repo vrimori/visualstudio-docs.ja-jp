@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140015"
 ---
 # <a name="loading-vspackages"></a>Vspackage を読み込む
 Vspackage は、それらの機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、Visual Studio はプロジェクト ファクトリまたは VSPackage を実装するサービスを使用する場合、VSPackage が読み込まれます。 この機能は、パフォーマンスを向上させるために可能な場合に使用される、遅延読み込みと呼ばれます。  

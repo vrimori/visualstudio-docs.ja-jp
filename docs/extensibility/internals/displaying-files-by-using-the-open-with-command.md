@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128621"
 ---
 # <a name="displaying-files-by-using-the-open-with-command"></a>コマンドで開く を使用してファイルを表示します。
 プロジェクトを表示するための IDE を求めることができます、**ファイルを開く** ダイアログ ボックス。 この要求は、標準のエディターの選択を含むファイルを開くかどうかを求めるメッセージを表示します。 次の手順では、このプロセスについて説明します。  

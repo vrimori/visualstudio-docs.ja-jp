@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949644"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>ドメイン固有言語ソリューション テンプレートの選択
 ドメイン固有言語ソリューションを作成するには、ドメイン固有言語デザイナー ウィザードで使用できるソリューション テンプレートのいずれかを選択します。 作成に使用する言語に最も近いテンプレートを選択すると、開始のソリューションを作成する必要のある変更を最小限に抑えることができます。

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127038"
 ---
 # <a name="taskstatecanceled-field"></a>TASK_STATE_CANCELED フィールド
 実行中の状態に達したか、またはその取り消しを受領した例外なしで完了する前に、タスクが取り消されました。  

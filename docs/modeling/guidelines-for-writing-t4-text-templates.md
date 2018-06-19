@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31953617"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 テキスト テンプレートの記述に関するガイドライン
 これらの一般的なガイドラインは、プログラム コードまたはその他のアプリケーションのリソースを生成している場合に役立つ可能性があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ルール問題を解決できません。

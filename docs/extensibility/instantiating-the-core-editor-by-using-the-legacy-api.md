@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132337"
 ---
 # <a name="instantiating-the-core-editor-by-using-the-legacy-api"></a>レガシ API を使用して、コア エディターをインスタンス化します。
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 テキストの色指定、インデント、および IntelliSense 入力候補などの言語サービスによって提供されると、これらの関数を組み合わせています。  

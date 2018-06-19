@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134608"
 ---
 # <a name="parameter-info-in-a-legacy-language-service"></a>従来の言語サービスでのパラメーター ヒント
 IntelliSense パラメーター情報は、ユーザーがパラメーター リストを入力すると、メソッドのシグネチャを表示するツールヒントが start メソッド パラメーター リストの文字 (通常、開きかっこを入力)。 各パラメーターを入力し、パラメーター区切り記号 (コンマ) が型指定された、次のパラメーターを太字で表示するツールヒントが更新されます。  

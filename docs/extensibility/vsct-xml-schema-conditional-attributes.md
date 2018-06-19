@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138357"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
 条件付き属性は、すべてのリストと項目に適用可能性があります。 論理演算子およびシンボル拡張式は、true または false に評価されます。 True の場合、関連付けられているリストまたは項目が、結果の出力に含まれます。  

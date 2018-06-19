@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31902273"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>マネージ コードの "基本デザイン ガイドライン規則" 規則セット
 Microsoft 基本デザイン ガイドライン規則規則を理解し、使用するコードを容易に重点を置くセットを使用できます。 この規則セットを保守が容易なコードのベスト プラクティスを適用する場合や、プロジェクトにライブラリ コードが含まれている場合を含める必要があります。

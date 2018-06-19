@@ -13,6 +13,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131634"
 ---
 # <a name="in-place-activation"></a>インプレース アクティブ化
 エディター ビューが ActiveX などのアクティブ コントロールをホストしている場合は、インプレース アクティブ化モデルを使用して ActiveX コントロールまたはアクティブ ドキュメント データ オブジェクトとしてエディター ビューを実装する必要があります。  

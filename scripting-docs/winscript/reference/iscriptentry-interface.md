@@ -1,16 +1,16 @@
 ---
-title: "IScriptEntry インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IScriptEntry インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IScriptEntry interface
 ms.assetid: 86da3bc1-58b7-4d73-87ab-bc3ce34e3f41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24729812"
 ---
 # <a name="iscriptentry-interface"></a>IScriptEntry インターフェイス
 実装するオブジェクト、`IScriptEntry`インターフェイスは、スクリプト ブロックまたは関数オブジェクトを表します。  

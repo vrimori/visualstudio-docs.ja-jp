@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134065"
 ---
 # <a name="properties-display-grid"></a>プロパティ グリッドの表示
 **プロパティ**ウィンドウには、グリッド内のフィールドが表示されます。 左の列には、プロパティの名前が含まれています。右側の列には、プロパティの値が含まれています。  

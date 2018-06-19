@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134033"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでメンバーの完了
 IntelliSense のメンバーの補完は、クラス、構造体、列挙型、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツール ヒントです。 たとえば、C# の場合、ユーザーの種類"this"、ピリオドが続く場合クラスまたは現在のスコープで構造体のすべてのメンバーの一覧でが表示されます、ユーザーが選択できるリスト。  

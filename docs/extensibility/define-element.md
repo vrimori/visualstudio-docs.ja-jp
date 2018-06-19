@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126963"
 ---
 # <a name="define-element"></a>要素を定義します。
 シンボルの名前と値のペアを定義します。 このシンボルは、条件付き属性を評価できます。 詳細については、次を参照してください。[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。 参照、[要素をシンボル](../extensibility/symbols-element.md)です。  

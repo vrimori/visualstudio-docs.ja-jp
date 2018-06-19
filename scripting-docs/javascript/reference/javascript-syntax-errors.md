@@ -1,13 +1,13 @@
 ---
-title: "JavaScript 構文エラー |Microsoft ドキュメント"
-ms.custom: 
+title: JavaScript 構文エラー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JavaScript
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - errors [JavaScript]
 - syntax errors, JavaScript
 ms.assetid: 0343dc19-5f5e-4a4c-83da-630b4fbcb3b6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24639782"
 ---
 # <a name="javascript-syntax-errors"></a>JavaScript 構文エラー
 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]構文エラーが発生したときの 1 つの構造、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]ステートメントでは、1 つ以上の構文上のルールに違反しています。  

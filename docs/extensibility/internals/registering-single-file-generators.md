@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132183"
 ---
 # <a name="registering-single-file-generators"></a>単一ファイル ジェネレーターを登録します。
 カスタム ツールで使用できるようにする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、ように登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]をインスタンス化でき、特定のプロジェクトの種類に関連付けます。  

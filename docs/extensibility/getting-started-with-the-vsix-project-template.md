@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129194"
 ---
 # <a name="getting-started-with-the-vsix-project-template"></a>VSIX プロジェクト テンプレートの概要
 拡張機能を作成するか、展開の既存の拡張機能をパッケージ化する VSIX プロジェクト テンプレートを使用することができます。 VSIX プロジェクト テンプレートは、Visual Basic および Visual c# の両方のバージョンが存在しては、Visual Studio SDK の一部としてインストールします。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 04/16/2018
   
     2.  **[プロジェクト]** メニューの **[テンプレートのエクスポート]** をクリックします。 ウィザードの手順を実行します。  
   
-         %USERPROFILE%\My documents \visual Studio に .zip ファイルが作成*\<バージョン >*\My エクスポート テンプレート\\です。  
+         %USERPROFILE%\My documents \visual Studio に .zip ファイルが作成*\<バージョン >* \My エクスポート テンプレート\\です。  
   
 2.  空の VSIX プロジェクトを作成します。  
   
-     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。 いずれかを選択**Visual Basic**または**Visual c#**です。 選択したノードの下にある次のように選択します。 **Extensibility**、し、 **VSIX プロジェクト**です。  
+     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 いずれかを選択**Visual Basic**または**Visual c#** です。 選択したノードの下にある次のように選択します。 **Extensibility**、し、 **VSIX プロジェクト**です。  
   
 3.  .Zip ファイルをプロジェクトに追加します。 設定の**出力ディレクトリにコピー**プロパティを`Copy Always`です。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
     -   設定、**説明**フィールドを**マイ プロジェクト テンプレート**です。  
   
-    -   **資産**セクションを追加、 **[microsoft.visualstudio.projecttemplate]**を入力し、そのパスの .zip ファイルの名前を設定します。  
+    -   **資産**セクションを追加、 **[microsoft.visualstudio.projecttemplate]** を入力し、そのパスの .zip ファイルの名前を設定します。  
   
 5.  保存して、source.extension.vsixmanifest ファイルを閉じます。  
   

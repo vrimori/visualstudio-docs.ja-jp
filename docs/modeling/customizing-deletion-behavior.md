@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952616"
 ---
 # <a name="customizing-deletion-behavior"></a>削除動作のカスタマイズ
 通常、要素を削除すると、関連する要素も削除されます。 接続されたすべてのリレーションシップと子要素が削除されます。 この動作の名前は*伝達の削除*です。 削除の伝達をカスタマイズできます。たとえば、追加の関連要素を削除することを準備できます。 プログラム コードを作成して、モデルの状態に応じた削除の伝達を実現できます。 削除に応じて他の変更を発生させることもできます。

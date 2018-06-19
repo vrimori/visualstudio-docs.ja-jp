@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130261"
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>ドキュメント データとカスタム エディターでドキュメント ビュー
 2 つの部分で構成されるカスタム エディター: ドキュメント データ オブジェクトとドキュメント ビュー オブジェクト。 名前からわかるように、ドキュメント データ オブジェクト テキスト データを表示するには、表しドキュメント ビュー オブジェクト (または"view") は、ドキュメント データ オブジェクトを表示するための 1 つまたは複数の windows を表します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128705"
 ---
 # <a name="detecting-system-requirements"></a>システム要件の検出
 Visual Studio がインストールされていない場合、VSPackage は機能できません。 Microsoft Windows インストーラーを使用して、VSPackage のインストールを管理する場合は、Visual Studio がインストールされているかどうかを検出するためにインストーラーを構成できます。 システムを調べ、その他の要件の例に、特定のバージョンの Windows または特定の容量の RAM を構成することもできます。  

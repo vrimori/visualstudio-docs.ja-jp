@@ -23,6 +23,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920548"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存
 使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>を自動的に管理されているトランザクションに参加するオブジェクト。

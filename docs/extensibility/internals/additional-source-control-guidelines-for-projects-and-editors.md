@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129282"
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>プロジェクトおよびエディターに対して追加のソース コントロールのガイドライン
 いくつかのプロジェクトおよびエディター ソース管理をサポートするために従う必要があるガイドラインがあります。  

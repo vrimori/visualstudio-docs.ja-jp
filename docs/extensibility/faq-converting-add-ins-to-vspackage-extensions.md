@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134046"
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: アドインを VSPackage 拡張に変換する
 現在、アドインは推奨されていません。 新しい Visual Studio 拡張機能をするためには、VSIX 拡張機能を作成する必要があります。 ここでは、VSIX 拡張機能を Visual Studio アドインを変換する方法についてよく寄せられる質問に対する回答を示します。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
      Visual Studio の 2 番目のインスタンスが表示されます。 この 2 番目のインスタンスは実験用インスタンスと呼ばれます。コードの記述に使用する Visual Studio のインスタンスとは設定が異なることがあります。 実験用インスタンスを初めて実行するときには、VS Online にサインインしてテーマとプロファイルを指定するよう求められます。  
   
-     **ツール**メニュー (、実験用インスタンスで) という名前のボタンを表示する必要があります**マイ コマンド名**です。 このボタンを選択すると、メッセージが表示されます:**内 TestVSPackagePackage.MenuItemCallback()**です。  
+     **ツール**メニュー (、実験用インスタンスで) という名前のボタンを表示する必要があります**マイ コマンド名**です。 このボタンを選択すると、メッセージが表示されます:**内 TestVSPackagePackage.MenuItemCallback()** です。  
   
 ##  <a name="BKMK_RunAddin"></a> VSPackage でアドインのコードを実行する方法は?  
  通常、アドイン コードは次の 2 つの方法のどちらかで実行します。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  メニュー コマンドを含む VSPackage を作成します。 (詳細については、次を参照してください[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)。)。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >* Package.cs)。  
   
 3.  ファイルに次の `using` ステートメントを追加します。  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-get-the-dte-object-from-a-vspackage"></a>VSPackage から DTE オブジェクトを取得するには  
   
-1.  Visual Studio パッケージ項目テンプレートを使用して VSIX プロジェクトは、検索、 *\<プロジェクト名 >*Package.cs ファイル。 これは <xref:Microsoft.VisualStudio.Shell.Package> から派生するクラスで、Visual Studio の操作に役立ちます。 この場合、<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> を使用して <xref:EnvDTE80.DTE2> オブジェクトを取得します。  
+1.  Visual Studio パッケージ項目テンプレートを使用して VSIX プロジェクトは、検索、 *\<プロジェクト名 >* Package.cs ファイル。 これは <xref:Microsoft.VisualStudio.Shell.Package> から派生するクラスで、Visual Studio の操作に役立ちます。 この場合、<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> を使用して <xref:EnvDTE80.DTE2> オブジェクトを取得します。  
   
 2.  次の `using` ステートメントを追加します。  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >* Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   
@@ -209,7 +210,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  メニュー コマンド、としてする VSPackage を作成、 [VSIX 拡張機能の開発を開始する方法ですか?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping)セクションです。  
   
-2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >*Package.cs)。  
+2.  VSPackage の定義が含まれているファイルを開きます。 (C# プロジェクトである *\<、プロジェクト名 >* Package.cs)。  
   
 3.  次の `using` ステートメントを追加します。  
   

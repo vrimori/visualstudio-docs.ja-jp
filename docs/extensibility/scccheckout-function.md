@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137750"
 ---
 # <a name="scccheckout-function"></a>SccCheckout 関数
 完全修飾ファイル名のリストを指定するには、この関数はそれらローカル ドライブにします。 コメントは、チェック アウトされているすべてのファイルに適用されます。コメントの引数を指定できます、`null`文字列。  

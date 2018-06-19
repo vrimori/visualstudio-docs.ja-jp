@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126937"
 ---
 # <a name="net-compiler-platform-quotroslynquot-extensibility"></a>.NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) の機能拡張
 .NET コンパイラ プラットフォーム ("Roslyn") のコア ミッションを c# および Visual Basic コンパイラを開くと、ツールを許可して、プログラムに関する豊富な情報と、コンパイラで共有する開発者が必要です。 コード分析ツールは、コード品質の向上し、アプリケーションの構築のジェネレーターの参考情報をコードします。 スマートなツールとして、詳細とのみコンパイラ保有深いコード知識の詳細にアクセスが必要です。 不透明なトランスレータ (ソース コード内とオブジェクト コードを) するのではなく Roslyn コンパイラは、ツールやアプリケーション内のコードに関連するタスクを使用できる Api が用意されています。  

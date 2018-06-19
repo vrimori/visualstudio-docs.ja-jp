@@ -25,6 +25,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134382"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage の開発の Devenv コマンド ライン スイッチ
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] devenv.exe、Visual Studio 統合開発環境 (IDE) を開始するファイルを実行するときに、コマンドラインからタスクを自動化することができます。  

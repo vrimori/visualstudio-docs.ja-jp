@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142933"
 ---
 # <a name="simplified-embedding"></a>埋め込み簡素化されます。
 簡略化された埋め込みが有効になって、エディターでそのドキュメント ビュー オブジェクトの親 (つまり、実行の子) になれるとき[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、および<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>そのウィンドウのコマンドを処理するインターフェイスを実装します。 簡略化された埋め込みエディターには、アクティブなコントロールをホストできません。 簡略化された埋め込みエディターを作成するために使用オブジェクトは、次の図に表示されます。  

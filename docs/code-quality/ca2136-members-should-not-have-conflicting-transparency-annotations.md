@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31918518"
 ---
 # <a name="ca2136-members-should-not-have-conflicting-transparency-annotations"></a>CA2136: メンバーには、透過性注釈の競合があってはならない
 |||

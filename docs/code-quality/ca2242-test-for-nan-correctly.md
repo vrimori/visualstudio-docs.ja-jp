@@ -20,6 +20,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921307"
 ---
 # <a name="ca2242-test-for-nan-correctly"></a>CA2242: NaN に対して正しくテストします
 |||

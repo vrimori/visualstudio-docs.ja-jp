@@ -23,6 +23,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263491"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office ソリューション用配置マニフェストします。
   配置マニフェストとは、Office ソリューションの配置設定を記述および現在のアプリケーションのバージョンを指定する XML ファイルです。  

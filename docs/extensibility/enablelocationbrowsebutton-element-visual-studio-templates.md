@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126846"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
 指定するかどうか、**参照**でボタンは使用、**新しいプロジェクト** ダイアログ ボックスで、新しいプロジェクトが保存されている既定のディレクトリを簡単に変更できるようにします。  
