@@ -1,12 +1,13 @@
 ---
-title: "演算子の優先順位 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 演算子の優先順位 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - operator precedence
 - order of precedence
 ms.assetid: cf3c510a-2214-4b47-b8fe-3521298efaab
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +26,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569352"
 ---
 # <a name="operator-precedence-javascript"></a>演算子の優先順位 (JavaScript)
 演算子の優先順位は、式を評価する際の演算子の実行順序を説明します。 優先順位の高い演算は、優先順位の低い演算より先に実行されます。 たとえば、乗算は加算より先に実行されます。  

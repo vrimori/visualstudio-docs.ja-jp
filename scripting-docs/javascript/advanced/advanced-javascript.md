@@ -1,12 +1,13 @@
 ---
-title: "高度な JavaScript | Microsoft Docs"
-ms.custom: 
+title: 高度な JavaScript | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - arrays [JavaScript]
 - recursive procedures, JavaScript
 ms.assetid: ea26b6a1-e5c6-40d5-ac33-3961f584f941
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569252"
 ---
 # <a name="advanced-javascript"></a>高度な JavaScript
 以下のセクションでは、再帰、配列、トラブルシューティングなどの高度な [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 機能について説明します。  

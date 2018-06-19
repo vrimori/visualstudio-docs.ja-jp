@@ -1,12 +1,13 @@
 ---
-title: "配列の使用 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 配列の使用 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - arrays [JavaScript]
 - arrays [JavaScript], objects
 ms.assetid: 785c5acd-b8b3-4152-af9a-dd42ecdd75ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +26,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569162"
 ---
 # <a name="using-arrays-javascript"></a>配列の使用 (JavaScript)
 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 内の配列は*スパース*です。 つまり、0、1、および 2 の 3 つの要素を含む配列がある場合、要素 3 から 49 を意識せずに要素 50 を作成できます。 配列に自動変数 length が存在する場合 (配列の長さの自動監視の詳細については、「[組み込みオブジェクト (JavaScript)](../../javascript/intrinsic-objects-javascript.md)」を参照してください)、length 変数は 4 ではなく、51 に設定されます。 要素の番号付けで番号が飛ばない配列を作成できますが、必ずしもそうする必要はありません。  

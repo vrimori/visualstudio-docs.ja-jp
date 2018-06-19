@@ -1,13 +1,13 @@
 ---
-title: "無効な文字 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: 無効な文字 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1014
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: b6a54a93-7fc9-459a-bdd6-f42d1ce40b5f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633732"
 ---
 # <a name="invalid-character-javascript"></a>無効な文字です。(JavaScript)
 識別子の構成で有効なものとして認識されていない文字 (または文字) を使用して、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラです。 有効な文字は、次の規則を使用します。  

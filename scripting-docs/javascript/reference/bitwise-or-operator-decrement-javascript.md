@@ -1,13 +1,13 @@
 ---
-title: "ビット演算子 OR 演算子 (|)(JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: ビット演算子 OR 演算子 (|)(JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '|'
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - OR operator
 - '| operator'
 ms.assetid: ffc8f758-3151-478e-bafb-fc78f1c469a0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633752"
 ---
 # <a name="bitwise-or-operator--javascript"></a>ビットごとの OR 演算子 (|) (JavaScript)
 2 つの式に対してビットごとの OR を実行します。  
@@ -51,7 +52,7 @@ result = expression1 | expression2
  任意の式。  
   
 ## <a name="remarks"></a>コメント  
- **&#124;**演算子は 2 つの式の値をバイナリ形式で、それらのビットごとの演算を行います。 この操作の結果は次のように動作します。  
+ **&#124;** 演算子は 2 つの式の値をバイナリ形式で、それらのビットごとの演算を行います。 この操作の結果は次のように動作します。  
   
 ```JavaScript  
 0101   (expression1)  

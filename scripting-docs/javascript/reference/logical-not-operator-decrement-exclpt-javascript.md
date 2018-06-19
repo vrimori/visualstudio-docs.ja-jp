@@ -1,13 +1,13 @@
 ---
-title: "論理 NOT 演算子 (!)(JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: 論理 NOT 演算子 (!)(JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '!'
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - '! operator'
 - '! operator, about ! operator'
 ms.assetid: 68c3dc71-ae95-4293-9155-67405846d71d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24638942"
 ---
 # <a name="logical-not-operator--javascript"></a>論理 NOT 演算子 (!)(JavaScript)
 2 つの式に対して論理否定を実行します。  

@@ -1,19 +1,20 @@
 ---
-title: "byteLength プロパティ (ArrayBuffer) |Microsoft ドキュメント"
-ms.custom: 
+title: byteLength プロパティ (ArrayBuffer) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: c158fa59-d006-4842-9d06-0fd8e630ea31
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633502"
 ---
 # <a name="bytelength-property-arraybuffer"></a>byteLength プロパティ (ArrayBuffer)
 読み取り専用です。 ArrayBuffer の長さ (バイト単位)。  

@@ -1,18 +1,18 @@
 ---
-title: "JavaScript での Windows ランタイムの使用 | Microsoft Docs"
-ms.custom: 
+title: JavaScript での Windows ランタイムの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/03/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - JavaScript, Windows Runtime
 ms.assetid: 90658546-f746-4e34-a7d1-71cf9ee322a2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -21,6 +21,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24571462"
 ---
 # <a name="using-the-windows-runtime-in-javascript"></a>JavaScript での Windows ランタイムの使用
 ユニバーサル Windows プラットフォーム (UWP) アプリを作成する場合、ネイティブ JavaScript オブジェクト、メソッド、プロパティを使用するのとほとんど同じように、Windows ランタイム クラス、メソッド、プロパティを使用できます。 このトピックでは、JavaScript の概要を説明し、JavaScript で Windows ランタイム API を使用する際の基本概念を説明するトピックへのリンクを記載します。リンク先のトピックでは、Windows ランタイム型の表現方法、非同期 Windows ランタイム メソッドを使用する方法、Windows ランタイム イベントをリッスンして処理する方法などを説明しています。  

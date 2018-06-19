@@ -1,13 +1,13 @@
 ---
-title: "データ型 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: データ型 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,7 +16,7 @@ dev_langs:
 helpviewer_keywords:
 - Boolean data type, supported data types
 ms.assetid: c7a6bd3a-4b1c-4dbe-8505-106dbf483b41
-caps.latest.revision: 
+caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569762"
 ---
 # <a name="data-types-javascript"></a>データ型 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] には、3 つのプライマリ データ型、2 つの複合データ型、および 2 つの特別なデータ型があります。  

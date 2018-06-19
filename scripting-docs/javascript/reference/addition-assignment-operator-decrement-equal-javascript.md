@@ -1,13 +1,13 @@
 ---
-title: "加算代入演算子 (+ =) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: 加算代入演算子 (+ =) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +=
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - += operator
 - assignment operators, JavaScript
 ms.assetid: 8517d05c-38b0-4107-bea4-253eb420f438
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633632"
 ---
 # <a name="addition-assignment-operator--javascript"></a>加算代入演算子 (+=) (JavaScript)
 変数の値に式の値を追加し、その結果を変数に代入します。  

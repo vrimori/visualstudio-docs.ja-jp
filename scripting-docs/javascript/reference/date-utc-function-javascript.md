@@ -1,13 +1,13 @@
 ---
-title: "Date.UTC 関数 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Date.UTC 関数 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UTC
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - UTC dates, returning
 - Date.UTC function [JavaScript]
 ms.assetid: c0d67ce1-a47e-4dfd-bbf4-21619c406a0f
-caps.latest.revision: 
+caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636352"
 ---
 # <a name="dateutc-function-javascript"></a>Date.UTC 関数 (JavaScript)
 午前 0 時、1970 年 1 月 1 日までのミリ秒数を返します世界協定時刻 (UTC) (つまり GMT) と、指定した日付。  

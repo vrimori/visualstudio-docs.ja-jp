@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 76aa8ed151f99278f051c7ccf40f819f22a714fc
+ms.openlocfilehash: ce4b6ce80e25839fc27231369f0830e184f5a77e
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
-ms.locfileid: "24565402"
+ms.locfileid: "24565422"
 ---
-.NET Framework 3.5
+SQL Server 2008 Express

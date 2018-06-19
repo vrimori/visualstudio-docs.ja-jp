@@ -1,12 +1,13 @@
 ---
-title: "日付と時刻の計算 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 日付と時刻の計算 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - date comparison [JavaScript]
 - date and time calculations [JavaScript]
 ms.assetid: ea976f78-d934-479b-9056-880390d8bddd
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569502"
 ---
 # <a name="calculating-dates-and-times-javascript"></a>日付と時刻の計算 (JavaScript)
 [Date オブジェクト](../javascript/reference/date-object-javascript.md)を使うと、日付の比較や経過時間の計算など、カレンダーと時計に関する一般的なタスクを実行できます。  

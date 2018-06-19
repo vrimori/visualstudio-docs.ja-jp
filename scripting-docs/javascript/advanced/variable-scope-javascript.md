@@ -1,12 +1,13 @@
 ---
-title: "変数のスコープ (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 変数のスコープ (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -17,7 +18,7 @@ helpviewer_keywords:
 - variable scope [JavaScript]
 - variables, scope [JavaScript]
 ms.assetid: a811a9a6-856f-46e9-8be3-f2d22a0c245f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -26,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569322"
 ---
 # <a name="variable-scope-javascript"></a>変数のスコープ (JavaScript)
 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] には、グローバルとローカルの 2 つのスコープがあります。 関数定義の外部で宣言された変数はグローバル変数になり、プログラム内のどこからでも値の参照や変更を行うことができます。 関数定義内で宣言された変数はローカル変数になります。 ローカル変数は、関数が実行されるたびに作成され破棄されます。関数の外部のコードからローカル変数にアクセスすることはできません。 JavaScript では、ブロック スコープ変数の特殊な場合を除いて、(`{. . .}` のように中かっこで囲んで新しいスコープを定義する) ブロック スコープはサポートしていません。  

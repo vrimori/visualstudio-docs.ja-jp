@@ -1,13 +1,13 @@
 ---
-title: "encodeURI 関数 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: encodeURI 関数 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - encodeURI
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - encodeURI method
 ms.assetid: 17bab5a2-bcd4-46c2-8b52-b2b5a0ed98a3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636422"
 ---
 # <a name="encodeuri-function-javascript"></a>encodeURI 関数 (JavaScript)
 テキスト文字列として、有効な識別子 URI (Uniform Resource) のエンコードします。  

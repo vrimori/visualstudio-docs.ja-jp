@@ -1,13 +1,13 @@
 ---
-title: "setYear メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: setYear メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - setYear
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Year method
 - setYear method
 ms.assetid: 36431050-e0ec-45ee-830d-0d7c20e207ea
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640282"
 ---
 # <a name="setyear-method-date-javascript"></a>setYear メソッド (Date) (JavaScript)
 の年の値の設定、`Date`オブジェクト。  
@@ -49,7 +50,7 @@ dateObj.setYear(numYear)
 ## <a name="remarks"></a>コメント  
  このメソッドは、廃止されておりを保持する下位互換性を維持します。 代わりに、`setFullYear` メソッドを使用してください。  
   
- 年を設定する、 `Date` 1997 年にオブジェクト呼び出し**setYear(97)**です。 2010 年を設定するには、呼び出す**setYear(2010)**です。 最後に、0 ~ 99 の範囲内で 1 年、年を設定する次のように使用します。、`setFullYear`メソッドです。  
+ 年を設定する、 `Date` 1997 年にオブジェクト呼び出し**setYear(97)** です。 2010 年を設定するには、呼び出す**setYear(2010)** です。 最後に、0 ~ 99 の範囲内で 1 年、年を設定する次のように使用します。、`setFullYear`メソッドです。  
   
 > [!NOTE]
 >  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] Version 1.0、`setYear`によって提供される年の値を 1900 年の加算の結果となる値を使用して`numYear`年の値に関係なく、します。 たとえば、1899 年を設定する`numYear`-1 は、2000 年に設定して`numYear`100 です。  

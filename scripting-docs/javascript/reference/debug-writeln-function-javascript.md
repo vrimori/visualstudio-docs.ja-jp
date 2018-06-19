@@ -1,13 +1,13 @@
 ---
-title: "Debug.writeln 関数 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Debug.writeln 関数 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - writeln
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - writeIn method
 ms.assetid: c3aad0cd-0486-4161-9ba6-31d672da72af
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636282"
 ---
 # <a name="debugwriteln-function-javascript"></a>Debug.writeln 関数 (JavaScript)
 文字列を改行文字が続く、スクリプト デバッガーに送信します。  

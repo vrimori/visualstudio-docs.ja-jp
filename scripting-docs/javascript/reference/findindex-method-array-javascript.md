@@ -1,19 +1,20 @@
 ---
-title: "findIndex メソッド (Array) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: findIndex メソッド (Array) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 3a200cf0-db67-4c7b-89f8-5e9f5dc1a926
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636582"
 ---
 # <a name="findindex-method-array-javascript"></a>findIndex メソッド (Array) (JavaScript)
 コールバック関数で指定したテスト条件を満たしている最初の配列の値のインデックス値を返します。  

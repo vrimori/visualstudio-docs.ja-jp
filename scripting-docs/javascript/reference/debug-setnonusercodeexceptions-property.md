@@ -1,19 +1,20 @@
 ---
-title: "Debug.setNonUserCodeExceptions プロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: Debug.setNonUserCodeExceptions プロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 1dd2abee-a415-41bb-a359-017da62f9485
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636162"
 ---
 # <a name="debugsetnonusercodeexceptions-property"></a>Debug.setNonUserCodeExceptions プロパティ
 このスコープ内の、try-catch ブロックが、ユーザーに処理されないと、デバッガーによって処理されるかどうかを判断します。 例外は、スローされた場合、ユーザーに処理されないに従って分類または処理されないことができます。  

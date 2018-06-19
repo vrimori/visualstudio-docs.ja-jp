@@ -1,13 +1,13 @@
 ---
-title: "未定義の識別子 |Microsoft ドキュメント"
-ms.custom: 
+title: 未定義の識別子 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5009
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 8c8000d9-dd14-487e-922d-98430024a0f6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633582"
 ---
 # <a name="undefined-identifier"></a>未定義の識別子です。
 識別子を使用しようとする、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コンパイラでは認識されません。 使用するたびに、未定義の値が返されます。  

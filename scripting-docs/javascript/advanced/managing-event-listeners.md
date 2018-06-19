@@ -1,19 +1,20 @@
 ---
-title: "イベント リスナーの管理 | Microsoft Docs"
-ms.custom: 
+title: イベント リスナーの管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 87717f5d-b0c6-4c8d-a293-476002b7bfcf
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569222"
 ---
 # <a name="managing-event-listeners"></a>イベント リスナーの管理
 DOM 要素またはオブジェクトの有効期間が対応するイベント リスナーの有効期間と異なる場合には、メモリ リークを回避するために、[removeEventListener](http://msdn.microsoft.com/library/ie/ff975250\(v=vs.85\).aspx) メソッドを使用しなければならないこともあります。  

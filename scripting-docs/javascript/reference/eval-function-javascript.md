@@ -1,13 +1,13 @@
 ---
-title: "eval 関数 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: eval 関数 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - eval
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - parsing, code
 - parser
 ms.assetid: 85587e39-9325-4b75-b9f9-9d7d475a2120
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636442"
 ---
 # <a name="eval-function-javascript"></a>eval 関数 (JavaScript)
 評価[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]コード、実行します。  

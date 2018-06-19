@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24571502"
 ---
 # <a name="writing-javascript-code"></a>JavaScript コードの記述
 他の多くのプログラミング言語と同様に、[!INCLUDE[javascript](../javascript/includes/javascript-md.md)] はステートメント、関連する一連のステートメントのブロック、そしてコメントで構成されます。 ステートメント内では、変数、文字列、数値、および式を使うことができます。  
