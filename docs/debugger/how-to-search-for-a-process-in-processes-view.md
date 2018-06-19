@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472479"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>方法: プロセス ビューでプロセスを検索する
 検索条件として、プロセス ID またはモジュールの文字列を使用して、[プロセス] ビューで特定のプロセスを検索できます。 検索の最初の方向を指定することもできます。 ダイアログ ボックスで、フィールドは、処理ツリーで選択したプロセスの属性が表示されます。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 04/18/2018
   
 5.  選択**を**または**ダウン**検索の方向。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
  強調表示されて、一致するプロセスが見つかった場合、**プロセス ビュー**ウィンドウです。

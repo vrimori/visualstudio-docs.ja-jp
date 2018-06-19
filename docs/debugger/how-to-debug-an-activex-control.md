@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474428"
 ---
 # <a name="how-to-debug-an-activex-control"></a>方法 : ActiveX コントロールをデバッグする
 > [!NOTE]
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/18/2018
   
 6.  Internet Explorer をコンテナーとして指定する、アクティブ デスクトップを使用している場合は、入力`/new`で、**コマンド引数**ボックス。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
      内のコンテナーを指定しない場合、**プロジェクト プロパティ ページ**ダイアログ ボックスで、デバッグを開始するときに、コンテナーを指定できます。 デバッグを開始する実行コマンドを選択すると、[デバッグ セッション ダイアログ ボックスの実行可能ファイル](../debugger/executable-for-debugging-session-dialog-box.md)が表示されます。 ダイアログ ボックスにコンテナーのパス名を指定します。  
   
