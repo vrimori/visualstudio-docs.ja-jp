@@ -29,6 +29,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927296"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並行アプリケーションのデバッグ
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**並列アプリケーションをデバッグする windows です。 これらの windows のヘルプを把握し、使用するコードの実行時の動作を確認する、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)です。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 コードが中断されたら、チュートリアルで使用する方法、**並列タスク**と**並列スタック**を調査する windows です。  

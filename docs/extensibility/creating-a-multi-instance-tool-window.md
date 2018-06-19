@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31097797"
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>マルチ インスタンス ツール ウィンドウを作成します。
 複数のインスタンスを同時に開くできるように、ツール ウィンドウをプログラムできます。 既定では、ツール ウィンドウには 1 つインスタンスのみを開くことができます。  

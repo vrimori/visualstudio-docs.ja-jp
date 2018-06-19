@@ -15,6 +15,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31066711"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Android デバイスをエミュレートするデスクトップ アプリケーションです。 物理デバイスを使用しないで Android アプリをデバッグおよびテストできる仮想化環境を提供します。 また、アプリケーションのプロトタイプ用の分離された環境も提供します。  

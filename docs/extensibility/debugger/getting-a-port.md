@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102994"
 ---
 # <a name="getting-a-port"></a>ポートの取得
 ポートは、プロセスを実行しているコンピューターへの接続を表します。 ローカル コンピューターまたはリモート コンピューターにそのマシンがある可能性があります (する可能性のある実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  

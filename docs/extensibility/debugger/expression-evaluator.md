@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102318"
 ---
 # <a name="expression-evaluator"></a>式エバリュエーター
 (EE) の式エバリュエーターでは、IDE が中断モードの場合、ユーザーを表示することを解析および実行時に、変数や式を評価するための言語の構文を確認します。  

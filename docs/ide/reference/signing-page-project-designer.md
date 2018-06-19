@@ -26,6 +26,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31951997"
 ---
 # <a name="signing-page-project-designer"></a>[署名] ページ (プロジェクト デザイナー)
 **プロジェクト デザイナー**の **[署名]** ページを使用して、アプリケーション マニフェストと配置マニフェストに署名し、アセンブリに署名します (厳密な名前の署名)。

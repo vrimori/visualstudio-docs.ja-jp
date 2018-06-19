@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947938"
 ---
 # <a name="environment-options-dialog-box"></a>[環境] ([オプション] ダイアログ ボックス)
 **[オプション]** ダイアログ ボックスの **[環境]** フォルダーのページを使用すると、統合開発環境 (IDE) の特定の要素の表示方法と動作方法を設定できます。 メニュー バーで **[ツール]**、**[オプション]** を順にクリックし、次に **[環境]** をクリックすると、[環境] の各ページにアクセスできます。

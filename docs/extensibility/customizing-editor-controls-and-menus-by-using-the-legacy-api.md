@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102383"
 ---
 # <a name="customizing-editor-controls-and-menus-by-using-the-legacy-api"></a>レガシ API を使用して、エディター コントロールやメニューをカスタマイズします。
 言語サービスまたはテキスト ビューには、コンテキスト メニューと、エディター内のコントロールを制御できます。 このセクションのページでは、これらの機能を使用する方法について説明します。  

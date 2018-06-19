@@ -19,12 +19,13 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31105308"
 ---
 # <a name="enumerating-locals"></a>ローカル変数の列挙
 > [!IMPORTANT]
 >  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
   
- Visual Studio の設定の準備完了、 **[ローカル]**ウィンドウで、それを呼び出す[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)上、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)から返されたオブジェクト[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (を参照してください[実装 GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md))。 `IDebugProperty2::EnumChildren` 返します、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)オブジェクト。  
+ Visual Studio の設定の準備完了、 **[ローカル]** ウィンドウで、それを呼び出す[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)上、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)から返されたオブジェクト[GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) (を参照してください[実装 GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md))。 `IDebugProperty2::EnumChildren` 返します、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)オブジェクト。  
   
  この実装`IDebugProperty2::EnumChildren`は、次のタスクを実行します。  
   

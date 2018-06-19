@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31106982"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>方法: カスタム デバッグ エンジンをデバッグします。
 プロジェクトの種類からのデバッグ エンジン (DE) の起動、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>メソッドです。 インスタンスの管理下にある、DE を起動するつまり[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトの種類を制御します。 ただし、そのインスタンスの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デをデバッグすることはできません。 以下は、カスタム、DE をデバッグできるようにする手順を示します。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  最初のインスタンスで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](DE)、プロジェクトの次のように選択します。**プロセスにアタッチする**から、**デバッグ**メニュー。  
   
-8.  **プロセスにアタッチする** ダイアログ ボックスで、変更、**トランスポート**に**リモート (認証なしのネイティブのみ)**です。  
+8.  **プロセスにアタッチする** ダイアログ ボックスで、変更、**トランスポート**に**リモート (認証なしのネイティブのみ)** です。  
   
 9. 変更、**修飾子**コンピューターの名前に (注: エントリの履歴があるため、この名前に 1 回だけ入力する必要があります)。  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  開始[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]通常レジストリ ハイブおよび負荷でプロジェクトがプロジェクト (これは、プロジェクトの種類のインスタンス化ではない、プロジェクトの種類には、ソース) を入力します。  
   
-2.  プロジェクトのプロパティを開きに移動、**デバッグ**ページ。 **コマンド**へのパスを入力、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (これは既定では、 *[ドライブ]*\Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe)。  
+2.  プロジェクトのプロパティを開きに移動、**デバッグ**ページ。 **コマンド**へのパスを入力、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (これは既定では、 *[ドライブ]* \Program Files\Microsoft [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8\Common7\IDE\devenv.exe)。  
   
 3.  **コマンド引数**、型`/rootsuffix exp`(VSIP のインストール時に作成される)、実験用レジストリ ハイブにします。  
   

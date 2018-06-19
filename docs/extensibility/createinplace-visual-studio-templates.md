@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099214"
 ---
 # <a name="createinplace-visual-studio-templates"></a>CreateInPlace (Visual Studio テンプレート)
 プロジェクトを作成し、指定した場所にパラメーター置換を実行または一時的な場所でパラメーター置換を実行し、指定した場所にプロジェクトを保存するかどうかを指定します。  

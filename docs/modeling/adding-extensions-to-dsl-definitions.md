@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947535"
 ---
 # <a name="add-extensions-to-dsl-definitions"></a>DSL 定義に拡張機能を追加します。
 

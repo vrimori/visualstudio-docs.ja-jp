@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31098668"
 ---
 # <a name="accessing-text-layers-by-using-the-legacy-api"></a>レガシ API を使用してテキストのレイヤーにアクセスします。
 通常、テキストのレイヤーには、テキスト レイアウトの一部の側面がカプセル化します。 「関数での a のタイム」レイヤーでは、キャレット (テキスト挿入ポイント) を含む関数の前後に、テキストを非表示にします。  

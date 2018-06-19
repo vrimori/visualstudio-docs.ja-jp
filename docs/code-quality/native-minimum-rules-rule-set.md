@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927179"
 ---
 # <a name="native-minimum-rules-rule-set"></a>"ネイティブ最小規則" 規則セット
 Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードの最も重大な問題に注目します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。

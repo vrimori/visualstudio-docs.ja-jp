@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31097615"
 ---
 # <a name="commandname-element"></a>CommandName 要素
 `CommandName`要素がキーボード カテゴリに表示されるテキストを指定、**オプション**] ダイアログ ボックスし、[、**コマンド**一覧に、**カスタマイズ**ダイアログボックスです。  

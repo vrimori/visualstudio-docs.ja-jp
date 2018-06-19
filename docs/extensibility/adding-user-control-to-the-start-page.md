@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31104096"
 ---
 # <a name="adding-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
 このチュートリアルでは、カスタム スタート ページへの参照を DLL を追加する方法を示します。 例では、ソリューションにユーザー コントロールがユーザー コントロールをビルドし、スタート ページの .xaml ファイルからビルドされたアセンブリを参照を追加します。 新しいタブでは、基本的な Web ブラウザーとして機能する、ユーザー コントロールをホストします。  

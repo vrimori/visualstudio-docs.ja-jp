@@ -17,6 +17,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31065596"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>クロス プラットフォーム モバイル開発の例
 Visual C++ for Cross-Platform Mobile Development でインストールされるテンプレートの中には、学習に利用できる完全なサンプルを生成できるものがあります。 さらに、Windows デベロッパー センターにはダウンロードして Visual Studio で試用できる複数のサンプル アプリケーションがあります。  

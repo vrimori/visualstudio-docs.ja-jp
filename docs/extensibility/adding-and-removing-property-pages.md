@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31101291"
 ---
 # <a name="adding-and-removing-property-pages"></a>追加して、プロパティ ページを削除します。
 プロジェクト デザイナーには、プロジェクトのプロパティ、設定、および内のリソースを管理するための一元的な場所が用意されています[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 単一のウィンドウとして表示されます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) と、左側のタブを通じてアクセスする、右側のペインの数が含まれています。 プロジェクト デザイナーのペイン (プロパティ ページとも呼ばれます) は、プロジェクトの種類と言語によって異なります。 プロジェクト デザイナーをアクセスするのには、**プロパティ**コマンドを**プロジェクト**メニュー。  

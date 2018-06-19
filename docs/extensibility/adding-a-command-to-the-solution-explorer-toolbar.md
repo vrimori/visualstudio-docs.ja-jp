@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31107388"
 ---
 # <a name="adding-a-command-to-the-solution-explorer-toolbar"></a>ソリューション エクスプ ローラーのツールバーにコマンドを追加します。
 このチュートリアルで説明するためのボタンを追加する方法、**ソリューション エクスプ ローラー**ツールバー。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  新規作成 ボタンをクリックします。  
   
-     ダイアログ ボックスに、メッセージ**ToolbarButtonPackage 内 SolutionToolbar.ToolbarButton.MenuItemCallback()**が表示されます。  
+     ダイアログ ボックスに、メッセージ**ToolbarButtonPackage 内 SolutionToolbar.ToolbarButton.MenuItemCallback()** が表示されます。  
   
 ## <a name="controlling-the-visibility-of-a-button"></a>ボタンの表示を制御します。  
  このチュートリアルのこのセクションでは、ツールバーのボタンの表示を制御する方法を示します。 内の 1 つまたは複数のプロジェクトにコンテキストを設定して、`<VisibilityConstraints>`セクション SolutionToolbar.vsct ファイルの表示のみのプロジェクトまたは開いているときにボタンを制限します。  

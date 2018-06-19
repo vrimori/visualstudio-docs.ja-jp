@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099084"
 ---
 # <a name="changing-the-appearance-of-a-command"></a>コマンドの外観を変更します。
 コマンドの外観を変更することによって、ユーザーにフィードバックを提供できます。 たとえばは使用できないと異なって表示するコマンドをする可能性があります。 コマンドを可能に使用できるか、使用できませんを非表示にまたは、それらを表示するまたは確認したり、メニューでそれをオフにできます。  

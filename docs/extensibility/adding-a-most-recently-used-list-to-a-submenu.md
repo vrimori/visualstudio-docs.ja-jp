@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31105266"
 ---
 # <a name="adding-a-most-recently-used-list-to-a-submenu"></a>サブメニューの一覧を使用して、ほとんどの最近追加
 このチュートリアルのデモンストレーションに基づいて[メニューにサブメニューを追加](../extensibility/adding-a-submenu-to-a-menu.md)サブメニューに動的な一覧を追加する方法を示しています。 動的な一覧は、最も最近使用した (MRU) のリストの作成の基礎を形成します。  

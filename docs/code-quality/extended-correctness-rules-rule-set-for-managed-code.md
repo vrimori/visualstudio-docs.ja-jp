@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31926555"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張正確性規則" 規則セット
 Microsoft 拡張正確性規則の規則セットは、ロジック エラーやフレームワーク使用エラー コード分析によって報告されるを最大化します。 COM 相互運用性とモバイル アプリケーションなどの特定のシナリオに重点が置かれています。 この規則セットは、プロジェクトまたはプロジェクトで他の問題を検索するこれらのシナリオのいずれかが適用される場合を含むを検討する必要があります。

@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31925013"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>方法: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする
 イメージ コンテンツ パイプラインにより、Direct2D の内部レンダリング規則と互換性のあるテクスチャを生成できます。 この種のテクスチャの用途に適しているのは、Direct2D を使用するアプリや、JavaScript で作成する UWP アプリです。

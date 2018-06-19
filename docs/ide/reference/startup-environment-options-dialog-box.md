@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31942491"
 ---
 # <a name="startup-environment-options-dialog-box"></a>[スタートアップ] ([オプション] ダイアログ ボックス - [環境])
 このページを使用して、Visual Studio のスタート ページをカスタマイズするか、Visual Studio 起動時の別の既定のアクションを設定します。 詳細については、[スタート ページのカスタマイズ](../../ide/customizing-the-start-page-for-visual-studio.md)に関するページを参照してください。

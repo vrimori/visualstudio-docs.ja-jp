@@ -30,6 +30,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947119"
 ---
 # <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])
 内部 Web ブラウザーと Internet Explorer のオプションを設定します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[Web ブラウザー]** を選択します。

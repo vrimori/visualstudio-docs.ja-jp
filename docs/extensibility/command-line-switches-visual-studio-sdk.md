@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31098187"
 ---
 # <a name="command-line-switches-visual-studio-sdk"></a>コマンド ライン スイッチ (Visual Studio SDK)
 Devenv.exe を起動する実行可能ファイル、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、Vspackage の開発向けコマンド ライン スイッチをサポートしています。 Vspackage できますも、独自のスイッチに使用できるように、Devenv コマンド ライン。 次のトピックでは、IDE でのコマンド ライン スイッチを使用する方法に関する情報を提供します。  

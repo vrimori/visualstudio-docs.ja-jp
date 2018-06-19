@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31951896"
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>生成済みクラスのオーバーライドおよび拡張
 DSL 定義は、プラットフォーム強力な一連のドメイン固有言語に基づくツールをビルドすることができます。 多くの拡張機能と製を採用したは、オーバーライドして、DSL 定義から生成されるクラスを拡張して作成できます。 これらのクラスには、DSL 定義ダイアグラムで明示的に定義したドメイン クラスだけでなくもツールボックス、エクスプ ローラー、シリアル化、およびなどを定義するその他のクラスが含まれます。

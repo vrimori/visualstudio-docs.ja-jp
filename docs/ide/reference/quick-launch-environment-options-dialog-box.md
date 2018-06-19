@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946781"
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>[クイック起動] \([オプション] ダイアログ ボックス - [環境])
 **クイック起動**を使用すると、オプション、テンプレート、メニューなどの IDE アセットのアクションをすばやく検索して実行できます。 **クイック起動**を使用してコードおよびシンボルを検索できません。 **クイック起動**の検索ボックスは、メニュー バーの右上隅にあり、Ctrl キーを押しながら Q キーを押すとアクセスできます。 ボックスに検索文字列を入力します。 @ を含む文字列を検索するには、'@@' を使用します。

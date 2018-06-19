@@ -1,10 +1,9 @@
 ---
-title: 検索式の論理演算子と高度な演算子 | Microsoft Docs
-ms.custom: ''
+title: 検索式の論理演算子と高度な演算子
 ms.date: 11/02/2017
-ms.technology:
-- vs-help-viewer
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-help-viewer
+ms.topic: reference
 helpviewer_keywords:
 - Help Viewer, logical operators in search
 - logical operators in search [Help Viewer]
@@ -14,56 +13,62 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 952aea626dd59a303fd7091a4d36fdbf512db6bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: de351e019c4daacc61bbbdd2757b0f0d9a46e584
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31942842"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>検索式の論理演算子と高度な演算子
-論理演算子と高度な検索演算子を使用して、ヘルプ ビューアーでヘルプ コンテンツの検索を絞り込むことができます。
+
+論理演算子と高度な検索演算子を使用して、**ヘルプ ビューアー**でヘルプ コンテンツの検索を絞り込むことができます。
 
 ## <a name="logical-operators"></a>論理演算子
+
 論理演算子では、複数の検索用語を検索クエリでどのように組み合わせる必要があるかを指定します。 次の表に、論理演算子 AND、OR、NOT、NEAR を示します。
-  
-|検索対象|使用|例|結果|  
-|-------------------|---------|-------------|------------|  
-|同じアーティクル内の両方の用語|AND|dib AND palette|"dib" と "palette" の両方を含むトピック。|  
-|アーティクル内のいずれかの用語|OR|raster OR vector|"raster" または "vector" を含むトピック。|  
-|同じアーティクル内の最初の用語 (2 番目の用語を含まない)|NOT|"operating system" NOT DOS|"operating system" を含むが、"DOS" を含まないトピック。|  
-|アーティクル内で近接する両方の用語|NEAR|user NEAR kernel|"kernel" にきわめて近い "user" を含むトピック。|  
-  
+
+|検索対象|使用|例|結果|
+|-------------------|---------|-------------|------------|
+|同じアーティクル内の両方の用語|AND|dib AND palette|"dib" と "palette" の両方を含むトピック。|
+|アーティクル内のいずれかの用語|OR|raster OR vector|"raster" または "vector" を含むトピック。|
+|同じアーティクル内の最初の用語 (2 番目の用語を含まない)|NOT|"operating system" NOT DOS|"operating system" を含むが、"DOS" を含まないトピック。|
+|アーティクル内で近接する両方の用語|NEAR|user NEAR kernel|"kernel" にきわめて近い "user" を含むトピック。|
+
 > [!IMPORTANT]
 > 検索エンジンが認識できるように、論理演算子をすべて大文字で入力する必要があります。
 
 ## <a name="advanced-operators"></a>高度な演算子
+
 高度な検索演算子は、アーティクル内で検索語句を探す場所を指定することで、コンテンツの検索を絞り込みます。 次の表は、利用できる 4 つの高度な検索演算子をまとめたものです。
 
-|検索対象|使用|例|結果|  
-|-------------------|---------|-------------|------------|  
-|アーティクルのタイトルの用語|title:|title:binaryreader|タイトルに "binaryreader" が含まれるトピック。|  
-|コード サンプルの言葉|code:|code:readdouble|コード サンプルに "readdouble" が含まれるトピック。|  
-|特定のプログラミング言語のサンプルの言葉|code:vb:|code:vb:string|Visual Basic コード サンプルに "string" が含まれるトピック。|  
-|特定のインデックス キーワードに関連付けられているアーティクル|keyword:|keyword:readbyte|"readbyte" というインデックス キーワードに関連付けられているトピック。|  
+|検索対象|使用|例|結果|
+|-------------------|---------|-------------|------------|
+|アーティクルのタイトルの用語|`title:`|`title:binaryreader`|タイトルに "binaryreader" が含まれるトピック。|
+|コード サンプルの言葉|`code:`|`code:readdouble`|コード サンプルに "readdouble" が含まれるトピック。|
+|特定のプログラミング言語のサンプルの言葉|`code:vb:`|`code:vb:string`|Visual Basic コード サンプルに "string" が含まれるトピック。|
+|特定のインデックス キーワードに関連付けられているアーティクル|`keyword:`|`keyword:readbyte`|"readbyte" というインデックス キーワードに関連付けられているトピック。|
 
 > [!IMPORTANT]
-> 高度な検索演算子を入力するときは、検索エンジンに認識させるために最後にコロンを付け、コロンの前にはスペースを入れません。    
+> 高度な検索演算子を入力するときは、検索エンジンに認識させるために最後にコロンを付け、コロンの前にはスペースを入れません。
 
 ### <a name="programming-languages-for-code-examples"></a>コード例のプログラミング言語
-**code:** 演算子を使用して、複数のプログラミング言語のいずれかに関するコンテンツを検索できます。 特定のプログラミング言語に対して例を返すには、次のプログラミング言語値のいずれかを使用します。  
 
-|プログラミング言語|検索演算子構文|  
-|--------------------|---------|  
-|Visual Basic|code:vb<br/>code:visualbasic|  
-|C#|code:c#<br/>code:csharp|  
-|C++|code:cpp<br/>code:c++<br/>code:cplusplus|  
-|F#|code:f#<br/>code:fsharp|  
-|JavaScript|code:javascript<br/>code:js|  
-|XAML|code:xaml|
+`code:` 演算子を使用して、複数のプログラミング言語のいずれかに関するコンテンツを検索できます。 特定のプログラミング言語に対して例を返すには、次のプログラミング言語値のいずれかを使用します。
+
+|プログラミング言語|検索演算子構文|
+|--------------------|---------|
+|Visual Basic|`code:vb`<br/>`code:visualbasic`|
+|C#|`code:c#`<br/>`code:csharp`|
+|C++|`code:cpp`<br/>`code:c++`<br/>`code:cplusplus`|
+|F#|`code:f#`<br/>`code:fsharp`|
+|JavaScript|`code:javascript`<br/>`code:js`|
+|XAML|`code:xaml`|
 
 > [!NOTE]
-> **code:** 演算子は、コードとして一般的にマークされているコンテンツではなく、プログラミング言語ラベルでマークされているコンテンツのみを検索します。 
-  
-## <a name="see"></a>解決方法については、 
-[方法: トピックを検索する](how-to-search-for-topics.md)  
-[Microsoft Help Viewer](microsoft-help-viewer.md)
+> `code:` 演算子は、コードとして一般的にマークされているコンテンツではなく、プログラミング言語ラベルでマークされているコンテンツのみを検索します。
+
+## <a name="see-also"></a>関連項目
+
+- [方法: トピックを検索する](how-to-search-for-topics.md)
+- [Microsoft Help Viewer](microsoft-help-viewer.md)
