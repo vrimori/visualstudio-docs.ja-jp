@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31461861"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 関数が定義されている点を持つ場合は、どのデバッグを終了するには、デバッグの開始点は、シンボルがによって識別される、`SymTagFuncDebugEnd`タグ。  

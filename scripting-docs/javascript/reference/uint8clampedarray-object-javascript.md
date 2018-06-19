@@ -1,19 +1,20 @@
 ---
-title: "Uint8ClampedArray オブジェクト (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Uint8ClampedArray オブジェクト (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 0c5537f7-00b4-487a-8fba-ef032e67e7bd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24642112"
 ---
 # <a name="uint8clampedarray-object-javascript"></a>Uint8ClampedArray オブジェクト (JavaScript)
 0 ～ 255 の範囲に制限される値による 8 ビットの符号なし整数で型指定された配列。 内容は 0 に初期化されます。 要求されたバイト数を割り当てることができない場合は、例外がスローされます。  

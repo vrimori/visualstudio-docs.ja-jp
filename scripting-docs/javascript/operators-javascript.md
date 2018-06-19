@@ -25,6 +25,7 @@ ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2018
+ms.locfileid: "29753272"
 ---
 # <a name="operators-javascript"></a>演算子 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] には、算術演算子、論理演算子、ビット処理演算子、代入演算子、およびその他のさまざまな演算子があります。 説明と例については、特定の演算子のトピックをご覧ください。  

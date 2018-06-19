@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144217"
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>チュートリアル: JavaScript を使用して SDK を作成します。
 このチュートリアルでは、JavaScript を使用して単純な数学 SDK と Visual Studio Extension (VSIX) を作成する方法を説明します。  このチュートリアルは、これらのパートに分かれています。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
 ##  <a name="createSimpleMathVSIX"></a> SimpleMathVSIX 拡張機能 SDK プロジェクトを作成するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
 2.  テンプレート カテゴリの一覧で  **Visual c#****機能拡張**、し、、 **VSIX プロジェクト**テンプレート。  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 04/16/2018
   
 ##  <a name="createSampleApp"></a> SDK を使用するサンプル アプリを作成するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
 2.  テンプレート カテゴリの一覧で  **JavaScript** **Windows ストア**、し、、**空のアプリケーション**テンプレート。  
   
@@ -313,7 +314,7 @@ ms.lasthandoff: 04/16/2018
   
 11. F5 キーをアプリをビルドして実行を選択します。  
   
-12. UI のアプリで、2 つの数値を入力してください。、、の操作を選択し、、 **=**ボタンをクリックします。 正しい結果が表示されます。  
+12. UI のアプリで、2 つの数値を入力してください。、、の操作を選択し、、 **=** ボタンをクリックします。 正しい結果が表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [ソフトウェア開発キットを作成する](../extensibility/creating-a-software-development-kit.md)

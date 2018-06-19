@@ -16,6 +16,7 @@ ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32031983"
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148133"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 ##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント
@@ -106,7 +107,7 @@ xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visual
  **として表示されます:** 34 pt Segoe UI Light  
  **使用:** (まれな) 一意ブランド化された UI と同様に、スタート ページで
 
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -124,9 +125,9 @@ label.SetResourceReference(Label.StyleProperty,
   
 #### <a name="310-environment-font--light"></a>310% 環境フォント + Light  
  **として表示されます:** 28 pt Segoe UI Light   
- **使用:**大きな署名ダイアログ タイトル、メイン レポートの見出し  
+ **使用:** 大きな署名ダイアログ タイトル、メイン レポートの見出し  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -144,9 +145,9 @@ label.SetResourceReference(Label.StyleProperty,
   
 #### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight  
  **として表示されます:** 18 pt Segoe UI Semilight    
- **使用:**小見出し、小規模および中規模のダイアログ ボックスのタイトル  
+ **使用:** 小見出し、小規模および中規模のダイアログ ボックスのタイトル  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。 
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。 
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -164,9 +165,9 @@ label.SetResourceReference(Label.StyleProperty,
   
 #### <a name="155-environment-font"></a>155% 環境フォント  
  **として表示されます:** 14 pt Segoe UI    
- **使用:**ドキュメント内のセクションの見出しと共に UI またはレポート  
+ **使用:** ドキュメント内のセクションの見出しと共に UI またはレポート  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -184,9 +185,9 @@ label.SetResourceReference(Label.StyleProperty,
   
 #### <a name="133-environment-font"></a>133% 環境フォント  
  **として表示されます:** 12 pt Segoe UI    
- **使用:**署名ダイアログおよびドキュメントのより小さな小見出しでも UI  
+ **使用:** 署名ダイアログおよびドキュメントのより小さな小見出しでも UI  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -204,9 +205,9 @@ label.SetResourceReference(Label.StyleProperty,
   
 #### <a name="122-environment-font"></a>122% 環境フォント  
  **として表示されます:** 11 pt Segoe UI    
- **使用:**署名ダイアログの見出しのセクションで、ツリー ビューで、垂直タブ ナビゲーション ノードの上位  
+ **使用:** 署名ダイアログの見出しのセクションで、ツリー ビューで、垂直タブ ナビゲーション ノードの上位  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -223,10 +224,10 @@ label.SetResourceReference(Label.StyleProperty,
 ```
   
 #### <a name="environment-font--bold"></a>環境フォント + 太字  
- **として表示されます:**太字になっている 9 pt Segoe UI    
- **使用:**でも UI のラベルと署名のダイアログ ボックス、レポート、およびドキュメントの小見出し  
+ **として表示されます:** 太字になっている 9 pt Segoe UI    
+ **使用:** でも UI のラベルと署名のダイアログ ボックス、レポート、およびドキュメントの小見出し  
   
- **プロシージャ コード:**場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
+ **プロシージャ コード:** 場所`textBlock`は、以前に定義された TextBlock と`label`以前に定義されたラベルします。  
   
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,    
@@ -411,7 +412,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**まれです。 一意なブランド化された UI のみです。<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 34 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> *使用されていません。スタート ページで使用できます。*|  
+|**使用法:** まれです。 一意なブランド化された UI のみです。<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-常に使用軽量<br /><br /> **できません：**<br /><br /> 使い UI のスタート ページなどの UI の署名以外<br />-太字、斜体、または太字斜体<br />本文の使用<br />ツール ウィンドウで使用します。|**として表示されます:** 34 pt Segoe UI Light<br /><br /> **ビジュアルの使用例:**<br /><br /> *使用されていません。スタート ページで使用できます。*|  
   
 #### <a name="310-environment-font--light"></a>310% 環境フォント + Light  
   
@@ -447,13 +448,13 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:**太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例&#43;太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
+|**使用法:**<br /><br /> -ラベルや署名ダイアログの小見出し<br />-ラベルやレポートでの小見出し<br />-ラベルとそのドキュメント内の小見出しおよび UI<br /><br /> **操作を行います。**<br /><br /> -のみ大文字を使用します。<br />-太字を使用します。<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />本文の使用<br />-Visual Studio の標準コントロールで使用します。<br />ツール ウィンドウで使用します。|**として表示されます:** 太字になっている 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例&#43;太字の見出し](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202 f_EFB")|  
   
 #### <a name="environment-font"></a>環境フォント  
   
 |||  
 |-|-|  
-|**使用法:**その他のすべてのテキスト<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **しない:**斜体太字斜体または|**として表示されます:** 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202 g_EF")|  
+|**使用法:** その他のすべてのテキスト<br /><br /> **操作を行います**のみ大文字を使用。<br /><br /> **しない:** 斜体太字斜体または|**として表示されます:** 9 pt Segoe UI<br /><br /> **ビジュアルの使用例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202 g_EF")|  
   
 ### <a name="padding-and-spacing"></a>余白および間隔  
  見出しでは、それらに適切な強調の周囲のスペースが必要です。 この領域は、ポイントのサイズと水平方向のルールや環境フォントのテキストの行など、見出し、近くの他に何がに応じて異なります。  

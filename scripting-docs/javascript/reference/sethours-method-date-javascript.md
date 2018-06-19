@@ -1,13 +1,13 @@
 ---
-title: "setHours メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: setHours メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - setHours
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - setHours method
 - dates, setting
 ms.assetid: 460f742d-f8d2-4874-9d07-2fb969fef066
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640962"
 ---
 # <a name="sethours-method-date-javascript"></a>setHours メソッド (Date) (JavaScript)
 時間の値を設定、`Date`オブジェクトのローカル時刻を使用します。  
@@ -61,7 +62,7 @@ dateObj.setHours(numHours[, numMin[, numSec[, numMilli]]])
   
  世界協定時刻 (UTC) を使用して時間の値を設定するには、使用、`setUTCHours`メソッドです。  
   
- 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納される他の値が変更されます。 たとえば、格納されている日付"1996 年 1 月 5 日 00時 00分: 00"、および**setHours(30)**が呼び出されると、日付を変更する"1996 年 1 月 6 日 06時 00分: 00 です"。 負の数値では、同様の動作があります。  
+ 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納される他の値が変更されます。 たとえば、格納されている日付"1996 年 1 月 5 日 00時 00分: 00"、および**setHours(30)** が呼び出されると、日付を変更する"1996 年 1 月 6 日 06時 00分: 00 です"。 負の数値では、同様の動作があります。  
   
 ## <a name="example"></a>例  
  `setHours` メソッドの使用例を次に示します。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32031183"
 ---
 # <a name="searching-and-filtering-subscribers-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのサブスクライバーの検索とフィルター処理
 Visual Studio サブスクリプション管理ポータルでは、さまざまな条件を基にサブスクライバーの特定のサブセットを検索することができます。 名前、メール アドレス、サブスクリプション レベル、その他の各種情報で、サブスクライバーの一覧をフィルター処理できます。 

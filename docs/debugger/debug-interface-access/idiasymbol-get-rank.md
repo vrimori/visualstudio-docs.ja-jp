@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31469244"
 ---
 # <a name="idiasymbolgetrank"></a>IDiaSymbol::get_rank
 FORTRAN 多次元配列のランク (次元数) を取得します。  

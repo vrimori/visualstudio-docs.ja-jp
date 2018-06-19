@@ -1,13 +1,13 @@
 ---
-title: "instanceof 演算子 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: instanceof 演算子 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - instanceof_JavaScriptKeyword
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - instanceOf operator
 ms.assetid: 92467bdc-56b5-42dc-adbd-a219776454d2
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/13/2018
+ms.locfileid: "27799584"
 ---
 # <a name="instanceof-operator-javascript"></a>instanceof 演算子 (JavaScript)
 オブジェクトが特定のクラスのインスタンスかどうかを示すブール値を返します。  

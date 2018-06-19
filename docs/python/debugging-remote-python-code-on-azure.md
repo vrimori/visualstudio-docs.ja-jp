@@ -11,15 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5fc6004c17614620f4ba75fb13258a685536c28b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11a624ec6582e5e07e51de6d4ab29b84dc53d4a1
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32031892"
 ---
 # <a name="remotely-debugging-python-code-on-azure"></a>Azure 上の Python コードのリモート デバッグ
 
-[Visual Studio での Python サポート](installing-python-support-in-visual-studio.md)には、Azure App Service 上で実行されている Python コードをリモートでデバッグする機能が含まれています。 単純なリモート デバッグとは異なり、このシナリオの対象コンピューターには TCP 経由で直接アクセスできません。そのため Visual Studio は、HTTP 経由でデバッガー プロトコルを公開するプロキシを提供します。 Web テンプレートを使用して作成したプロジェクトでは、生成される `web.debug.config` ファイル内にこのプロキシが自動的に構成されます。 リモート デバッグは、「[Azure App Service への発行](python-web-application-project-templates.md#publishing-to-azure-app-service)」で説明している方法でプロジェクトのデバッグ構成を発行した場合にも有効になります。
+[Visual Studio での Python サポート](installing-python-support-in-visual-studio.md)には、Azure App Service 上で実行されている Python コードをリモートでデバッグする機能が含まれています。 単純なリモート デバッグとは異なり、このシナリオの対象コンピューターには TCP 経由で直接アクセスできません。そのため Visual Studio は、HTTP 経由でデバッガー プロトコルを公開するプロキシを提供します。 Web テンプレートを使用して作成したプロジェクトでは、生成される `web.debug.config` ファイル内にこのプロキシが自動的に構成されます。 リモート デバッグは、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」で説明している方法でプロジェクトのデバッグ構成を発行した場合にも有効になります。
 
 Azure リモート デバッグは Web ソケットを使用するため、[Azure Portal](https://portal.azure.com) で App Service に対してソケットを有効にする必要があります。これを行うには、**[設定] > [アプリケーションの設定]** に移動し、**[全般設定] > [Web ソケット]**  を **[オン]** にしてから **[保存]** を選択して変更を適用します。 (**[デバッグ]** の設定は、Python のデバッグには適用されません。)
 

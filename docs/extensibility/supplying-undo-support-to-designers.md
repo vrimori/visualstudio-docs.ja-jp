@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144883"
 ---
 # <a name="supplying-undo-support-to-designers"></a>デザイナーに元に戻す機能を提供します。
 通常、デザイナー、エディターに対しと同様には、コード要素を変更する場合、ユーザーは、最近の変更を取り消すことができるように、元に戻す操作をサポートする必要があります。  

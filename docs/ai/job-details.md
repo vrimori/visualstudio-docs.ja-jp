@@ -5,6 +5,7 @@ ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2018
+ms.locfileid: "29709832"
 ---
 # <a name="view-recent-job-performance-and-details"></a>最近のジョブのパフォーマンスと詳細を表示する
 ジョブが送信されたら、ジョブの一覧を表示して、ジョブの状態やジョブの期間などを確認することができます。

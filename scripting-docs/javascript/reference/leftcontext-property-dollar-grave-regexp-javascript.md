@@ -1,13 +1,13 @@
 ---
-title: "leftContext プロパティ ($') (RegExp) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: leftContext プロパティ ($') (RegExp) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - $`
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - leftContext property ($`)
 ms.assetid: 840e56c0-eb7c-461f-bb56-91acff9b5bcf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24637802"
 ---
 # <a name="leftcontext-property--regexp-javascript"></a>leftContext プロパティ ($`) (RegExp) (JavaScript)
 検索した文字列の先頭から、最後に一致した先頭の前までの文字を返します。 読み取り専用です。  

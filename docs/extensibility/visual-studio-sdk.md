@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144279"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、新機能を Visual Studio に統合するのに役立ちます。 Visual Studio Marketplace だけでなく、他のユーザーに、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  

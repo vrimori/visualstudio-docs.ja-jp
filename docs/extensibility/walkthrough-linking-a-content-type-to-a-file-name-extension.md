@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144896"
 ---
 # <a name="walkthrough-linking-a-content-type-to-a-file-name-extension"></a>チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク
 独自のコンテンツの種類を定義し、エディターの Managed Extensibility Framework (MEF) 拡張機能を使用して、ファイル名拡張子をリンクできます。 場合によっては、ファイル名拡張子が既に定義されている言語サービス; でただし、MEF で使用するもする必要がありますにリンクするコンテンツの種類。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  C# の場合は、VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を付けます`ContentTypeTest`です。  
   
-2.  **Source.extension.vsixmanifest**ファイルに移動して、**資産**タブをクリックし、設定、**型**フィールドを**[microsoft.visualstudio.mefcomponent]**、**ソース**フィールドを**現在のソリューション内のプロジェクト**、および**プロジェクト**フィールドをプロジェクトの名前。  
+2.  **Source.extension.vsixmanifest**ファイルに移動して、**資産**タブをクリックし、設定、**型**フィールドを **[microsoft.visualstudio.mefcomponent]**、**ソース**フィールドを**現在のソリューション内のプロジェクト**、および**プロジェクト**フィールドをプロジェクトの名前。  
   
 ## <a name="defining-the-content-type"></a>コンテンツの種類を定義します。  
   
