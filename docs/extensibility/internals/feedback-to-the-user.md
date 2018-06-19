@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129947"
 ---
 # <a name="feedback-to-the-user"></a>ユーザーへのフィードバック
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) で視覚的なフィードバックに関する利用可能な機能は、ユーザーの現在の選択とグローバルの選択コンテキストに基づきます。 次の表は、別の選択のコンテキストで使用できる機能を一覧表示します。  

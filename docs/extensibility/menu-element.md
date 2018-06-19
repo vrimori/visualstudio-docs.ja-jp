@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143453"
 ---
 # <a name="menu-element"></a>Menu 要素
 1 つのメニュー項目を定義します。 これらは、メニューの 6 つの種類: コンテキスト、メニューの MenuController、MenuControllerLatched、ツールバー、および ToolWindowToolbar です。  

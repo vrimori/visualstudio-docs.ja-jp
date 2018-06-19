@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130043"
 ---
 # <a name="template-policy-and-the-properties-window"></a>テンプレートのポリシーと [プロパティ] ウィンドウ
 エンタープライズ テンプレート プロジェクトをプロジェクトに含まれているときに、エンタープライズ テンプレート プロジェクトは、ポリシーを適用できます。 テンプレートのポリシーは、プロパティの既定値の設定、プロパティを非表示、プロパティを追加およびなどに使用できる制約システムになります。  

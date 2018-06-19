@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131591"
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>言語サービスとエディター拡張機能の概要
 エディターの拡張機能を使用して、独自のプログラミング言語または任意のコンテンツ タイプをアウトライン表示、かっこの照合、IntelliSense、および電球などの言語サービス機能を追加することができます。 Visual Studio のエディター、色分け、余白、修飾、および他のビジュアル要素のテキストなどの動作と外観をカスタマイズすることもできます。 また、コンテンツの種類を定義でき、コンテンツが表示されるテキスト ビューの動作と外観を指定できます。  
@@ -66,9 +67,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="running-extensions-in-the-experimental-instance"></a>実験用インスタンスで拡張機能を実行しています。  
  次の実験用フォルダー (Windows Vista および Windows 7) 上に展開することで、拡張機能を開発する際、作業バージョンの Visual Studio が分離されることができます。  
   
- *%Localappdata%*\VisualStudio\10.0Exp\Extensions\\*会社*\\*ExtensionID*  
+ *%Localappdata%* \VisualStudio\10.0Exp\Extensions\\*会社*\\*ExtensionID*  
   
- ここで*%localappdata%* 、ログオン ユーザーの名前を指定*会社*、拡張機能を所有している会社の名前を指定し、 *ExtensionID*拡張機能の id を指定します。  
+ ここで *%localappdata%* 、ログオン ユーザーの名前を指定*会社*、拡張機能を所有している会社の名前を指定し、 *ExtensionID*拡張機能の id を指定します。  
   
  実験用の場所に拡張機能を配置する場合は、デバッグ モードで実行されます。 Visual Studio の 2 番目のインスタンスが開始され、名前は**Microsoft Visual Studio の実験用インスタンス**です。  
   

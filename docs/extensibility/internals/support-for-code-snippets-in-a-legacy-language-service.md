@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135683"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>従来の言語サービスでのコード スニペットのサポート
 コード スニペットは、ソース ファイルに挿入するコードの一部です。 自体は、一連のフィールドに XML ベースのテンプレートです。 これらのフィールドは、スニペットが挿入され、スニペットを挿入するコンテキストに応じて異なる値を持つことができますに強調表示されます。 スニペットの挿入後にすぐに、言語サービスは、スニペットを書式設定できます。  
@@ -52,15 +53,15 @@ ms.lasthandoff: 04/16/2018
   
  通常は、スニペット テンプレート ファイルが格納される 2 つの場所: 1)、言語がインストールされていると、ユーザーのフォルダーに 2)。 これらの場所はレジストリに追加ようにする、Visual Studio**コード スニペット マネージャー**スニペットを見つけることができます。 ユーザーのフォルダーには、ユーザーによって作成されたスニペットを格納します。  
   
- 次のようなインストールされているスニペット テンプレート ファイルの一般的なフォルダーのレイアウト: *[として「installroot」]*\\*[TestLanguage]*\Snippets\\*の[LCID]*\Snippets です。  
+ 次のようなインストールされているスニペット テンプレート ファイルの一般的なフォルダーのレイアウト: *[として「installroot」]*\\ *[TestLanguage]* \Snippets\\*の[LCID]* \Snippets です。  
   
- *[として「installroot」]*で使用する言語がインストールされているフォルダーです。  
+ *[として「installroot」]* で使用する言語がインストールされているフォルダーです。  
   
- *[TestLanguage]*フォルダー名として使用する言語の名前を指定します。  
+ *[TestLanguage]* フォルダー名として使用する言語の名前を指定します。  
   
- *[LCID]*ロケール ID です。 これは、スニペットのどのローカライズ版は格納します。 たとえば、英語版のロケール ID はこの 1033、ため*[LCID]* 1033 は置き換えられます。  
+ *[LCID]* ロケール ID です。 これは、スニペットのどのローカライズ版は格納します。 たとえば、英語版のロケール ID はこの 1033、ため *[LCID]* 1033 は置き換えられます。  
   
- 1 つの追加ファイルを指定する必要があり、SnippetsIndex.xml または ExpansionsIndex.xml (任意の有効なファイル名 .xml で終わるを使用することができます) と通常呼ばれる、インデックス ファイルであります。 このファイルは通常に格納されている、 *[として「installroot」]*\\*[TestLanguage]*フォルダー snippets フォルダーだけでなく、言語 ID の正確な場所と言語の GUID を指定しますスニペットを使用するサービスです。 インデックス ファイルの正確なパスは、「のレジストリ エントリのインストール」で後述するように、レジストリに配置されます。 SnippetsIndex.xml ファイルの例を次に示します。  
+ 1 つの追加ファイルを指定する必要があり、SnippetsIndex.xml または ExpansionsIndex.xml (任意の有効なファイル名 .xml で終わるを使用することができます) と通常呼ばれる、インデックス ファイルであります。 このファイルは通常に格納されている、 *[として「installroot」]*\\ *[TestLanguage]* フォルダー snippets フォルダーだけでなく、言語 ID の正確な場所と言語の GUID を指定しますスニペットを使用するサービスです。 インデックス ファイルの正確なパスは、「のレジストリ エントリのインストール」で後述するように、レジストリに配置されます。 SnippetsIndex.xml ファイルの例を次に示します。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/16/2018
   
  この例では、Visual Studio インストール フォルダーに、言語サービスをインストールしている前提としています。 %Lcid は、ユーザーの現在のロケール ID に置き換えられます 複数\<SnippetDir > タグを追加できる別のディレクトリおよびロケールごとに 1 つです。 さらに、スニペット フォルダーがの索引ファイルで指定されたそれぞれのサブフォルダーを含めることができます、 \<SnippetSubDir > タグに埋め込まれている、 \<SnippetDir > タグです。  
   
- ユーザー、対象の言語が独自のスニペットを作成できます。 たとえば、ユーザーの設定 フォルダーに格納するは通常これら*[TestDocs]*\Code スニペット\\*[TestLanguage]*\Test コード スニペットでは、ここで*[TestDocs]* Visual Studio のユーザーの設定 フォルダの場所です。  
+ ユーザー、対象の言語が独自のスニペットを作成できます。 たとえば、ユーザーの設定 フォルダーに格納するは通常これら *[TestDocs]* \Code スニペット\\ *[TestLanguage]* \Test コード スニペットでは、ここで *[TestDocs]* Visual Studio のユーザーの設定 フォルダの場所です。  
   
  格納されているパスに次の置換要素を配置することができます、\<か、指定 > インデックス ファイルのタグ。  
   
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/16/2018
 |% として「installroot」|たとえば、C:\Program 個の \microsoft Visual Studio の 8、Visual Studio のルート インストール フォルダーです。|  
 |ProjDir %|現在のプロジェクトを含むフォルダー。|  
 |ProjItem %|現在のプロジェクト項目を含むフォルダー。|  
-|TestDocs %|ユーザーの設定 フォルダー、たとえば、C:\Documents and Settings フォルダー\\*[username]*\My Documents\Visual Studio\8 です。|  
+|TestDocs %|ユーザーの設定 フォルダー、たとえば、C:\Documents and Settings フォルダー\\ *[username]* \My Documents\Visual Studio\8 です。|  
   
 ### <a name="enabling-code-snippets-for-your-language-service"></a>言語サービスのコード スニペットを有効にします。  
  追加することで、言語サービスのコード スニペットを有効にすることができます、<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute>属性、VSPackage を (を参照してください[レガシ言語サービスを登録する](../../extensibility/internals/registering-a-legacy-language-service1.md)詳細)。 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>と<xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A>パラメーターは省略可能で、含める必要があります、`SearchPaths`名前付きパラメーターを通知するために、**コード スニペット マネージャー**スニペットの場所。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31924811"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>マネージ コードの "マネージ推奨規則" 規則セット
 潜在的なセキュリティ ホール、アプリケーションのクラッシュ、その他の重要な論理エラーやデザイン エラーなど、マネージ コードの最も重大な問題に重点を置く設定 Microsoft マネージ推奨規則規則を使用することができます。 この規則セットは、プロジェクト用に作成したカスタム規則セットを含める必要があります。

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139953"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc 関数
 この関数は、既にソース管理システムにあるファイルを参照することができ、後で、現在のプロジェクトの場合は、これらのファイル部分を作成します。 たとえば、この関数は、ファイルをコピーすることがなく、現在のプロジェクトに共通のヘッダー ファイルを取得できます。 ファイルの戻り値の配列`lplpFileNames`ユーザーが IDE のプロジェクトに追加するファイルの一覧が含まれています。  

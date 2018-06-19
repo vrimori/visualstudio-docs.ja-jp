@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949567"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>1 つのソリューション内の複数の DSL
 いくつかの DSL を単一ソリューションの一部としてパッケージ化し、同時にインストールすることができます。

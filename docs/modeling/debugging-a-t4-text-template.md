@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954353"
 ---
 # <a name="debugging-a-t4-text-template"></a>T4 テキスト テンプレートのデバッグ
 テキスト テンプレートにブレークポイントを設定できます。 デザイン時テキスト テンプレートをデバッグするには、テキスト テンプレート ファイルを保存し、 **T4 テンプレートのデバッグ**ソリューション エクスプ ローラーでファイルのショートカット メニューの します。 実行時テキスト テンプレートをデバッグするには、属するアプリケーションを単純にデバッグします。

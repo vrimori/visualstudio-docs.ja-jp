@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131496"
 ---
 # <a name="project-type-design-decisions"></a>プロジェクトの種類の設計に関する決定事項
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計に関する決定を行う必要があります。 使用して、プロジェクトが含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  

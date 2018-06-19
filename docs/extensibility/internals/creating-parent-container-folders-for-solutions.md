@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132562"
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナーのフォルダーを作成します。
 API では、ソース管理プラグイン バージョン 1.2、ユーザーは、ソリューション内のすべての Web プロジェクトの 1 つのルート ソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (SUR) が呼び出されます。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135912"
 ---
 # <a name="list-of-available-services"></a>使用可能なサービスの一覧
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない、独自のサービスを提供して — など、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリに言語サービスの GUID を見つける必要があります。  

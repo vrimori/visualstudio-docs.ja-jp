@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134127"
 ---
 # <a name="source-control-configuration-details"></a>ソース コントロールの構成の詳細
 ソース管理を実装するためには、エディターは、次に、プロジェクト システムを適切に構成する必要があります。

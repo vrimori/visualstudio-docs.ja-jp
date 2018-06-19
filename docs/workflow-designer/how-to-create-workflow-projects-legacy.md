@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31973341"
 ---
 # <a name="how-to-create-workflow-projects-legacy"></a>方法: ワークフロー プロジェクトを作成する (レガシ)
 

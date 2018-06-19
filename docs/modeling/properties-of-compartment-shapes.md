@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952169"
 ---
 # <a name="properties-of-compartment-shapes"></a>コンパートメント シェイプのプロパティ
 コンパートメント図形は、ドメイン固有言語でのドメイン クラスの表示に使用することができます、図形の 1 つです。 展開したり、コンパートメントを折りたたんだりできます。

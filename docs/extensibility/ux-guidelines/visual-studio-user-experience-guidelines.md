@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139865"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン
 Visual Studio ユーザー エクスペリエンス ガイドライン 』 は、対象とした Visual Studio の新機能を設計します。 次のガイドラインは、新しいユーザー インターフェイス (UI) の設計者は、シームレスな開発環境内で一貫性のあるユーザー エクスペリエンスを作成できるように、ユーザーの一般的なモデルと相互作用のパターンに関する情報を格納します。  

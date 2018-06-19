@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129336"
 ---
 # <a name="implementing-a-legacy-language-service"></a>レガシ言語サービスを実装します。
 構文の強調表示、かっこの照合、および IntelliSense 入力候補など、さまざまな機能をサポートする従来の言語サービスを実装するのにマネージ パッケージ フレームワーク (MPF) 内のクラスを使用できます。  
