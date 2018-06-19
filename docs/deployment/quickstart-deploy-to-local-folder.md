@@ -21,7 +21,7 @@ ms.locfileid: "34764220"
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
 
-使用することができます、**発行**をローカル フォルダーにアプリを公開するツールです。 
+ローカル フォルダーにアプリを公開するために **発行**ツール を使用することができます。
 
 次の手順は、ASP.NET、ASP.NET Core、.NET Core および Visual Studio での Python アプリに適用されます。 For Node.js、手順がサポートされますが、ユーザー インターフェイスが異なる。
 
