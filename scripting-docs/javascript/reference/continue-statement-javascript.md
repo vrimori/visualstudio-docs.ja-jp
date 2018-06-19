@@ -1,13 +1,13 @@
 ---
-title: "continue ステートメント (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: continue ステートメント (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - continue_JavaScriptKeyword
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - continue statement
 - loop structures, continue statement
 ms.assetid: f8a30d9f-e2de-4e1f-8668-4e4cf95f7df9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24636382"
 ---
 # <a name="continue-statement-javascript"></a>continue ステートメント (JavaScript)
 ループの現在の反復の実行を中止し、次の反復の実行を開始します。  

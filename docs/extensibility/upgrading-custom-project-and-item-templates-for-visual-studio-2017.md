@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143479"
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-2017"></a>カスタム プロジェクトと Visual Studio 2017 項目テンプレートをアップグレードします。
 
@@ -27,15 +28,15 @@ VSIX 拡張機能の一部として、プロジェクトまたは項目テンプ
 
 ## <a name="template-scanning"></a>テンプレートのスキャン
 
-Visual Studio の以前のバージョンで**devenv/setup**または**devenv/installvstemplates**プロジェクトと項目テンプレートを検索するローカル ディスクをスキャンします。 Visual Studio 2017 以降、スキャンは、ユーザー レベルの場所に対してのみ実行されます。 ユーザー レベルの既定の場所は**%USERPROFILE%\Documents\\< Visual Studio のバージョン\>\Templates\\**です。 この場所はによって生成されたテンプレートの使用、**プロジェクト** > **テンプレートをエクスポートしています.**コマンドの場合、 **、テンプレートを Visual Studio を自動的にインポート**ウィザードでオプションを選択します。
+Visual Studio の以前のバージョンで**devenv/setup**または**devenv/installvstemplates**プロジェクトと項目テンプレートを検索するローカル ディスクをスキャンします。 Visual Studio 2017 以降、スキャンは、ユーザー レベルの場所に対してのみ実行されます。 ユーザー レベルの既定の場所は **%USERPROFILE%\Documents\\< Visual Studio のバージョン\>\Templates\\**です。 この場所はによって生成されたテンプレートの使用、**プロジェクト** > **テンプレートをエクスポートしています.** コマンドの場合、 **、テンプレートを Visual Studio を自動的にインポート**ウィザードでオプションを選択します。
 
 (非ユーザー)、他の場所の場所と、テンプレートの他の特性を指定する manifest(.vstman) ファイルを含める必要があります。 テンプレートの使用、.vstemplate ファイルと共に .vstman ファイルが生成されます。 .Vsix を使用して、拡張機能をインストールする場合は、Visual Studio 2017 内の拡張機能を再コンパイルしてこれを実行できます。 .Msi を使用する場合は、変更を手動で行う必要があります。 これらの変更のために実行する必要がありますの一覧は、次を参照してください。**でインストールする拡張機能をアップグレードします。MSI**このトピックで後述します。  
   
 ## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>プロジェクトまたは項目テンプレートを VSIX 拡張機能を更新する方法  
 
-1.  Visual Studio 2017 でソリューションを開きます。 コードをアップグレードするように求められます。 **[OK]**をクリックします。  
+1.  Visual Studio 2017 でソリューションを開きます。 コードをアップグレードするように求められます。 **[OK]** をクリックします。  
   
-2.  アップグレードが完了したら、インストール対象のバージョンを変更する必要があります。 VSIX プロジェクトの source.extension.vsixmanifest ファイルを開き、選択、**インストールの対象**タブです。場合、**バージョン範囲**フィールドは**[14.0]**、 をクリックして**編集**し、Visual Studio 2017 を含むように変更します。 たとえば設定することができます**[14.0,15.0]** 、拡張機能をインストール、Visual Studio 2015 または Visual Studio 2017 年 1、またはに**[15.0]** Visual Studio 2017 だけにインストールします。  
+2.  アップグレードが完了したら、インストール対象のバージョンを変更する必要があります。 VSIX プロジェクトの source.extension.vsixmanifest ファイルを開き、選択、**インストールの対象**タブです。場合、**バージョン範囲**フィールドは **[14.0]**、 をクリックして**編集**し、Visual Studio 2017 を含むように変更します。 たとえば設定することができます **[14.0,15.0]** 、拡張機能をインストール、Visual Studio 2015 または Visual Studio 2017 年 1、またはに **[15.0]** Visual Studio 2017 だけにインストールします。  
   
 3.  コードを再コンパイルします。  
   
@@ -120,7 +121,7 @@ Visual Studio 2015 と Visual Studio 2017 のバージョンのテンプレー�
   
 ```  
   
- によって提供される情報、 [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)要素は変わりません。  **\<VSTemplateContainer >**要素は、関連付けられているテンプレートの .vstemplate ファイルを指します。  
+ によって提供される情報、 [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)要素は変わりません。  **\<VSTemplateContainer >** 要素は、関連付けられているテンプレートの .vstemplate ファイルを指します。  
   
  Visual Studio 2015 で作成された既定の項目の .vstemplate ファイルを次に示します。  
   
@@ -173,7 +174,7 @@ Visual Studio 2015 と Visual Studio 2017 のバージョンのテンプレー�
   
 ```  
   
- によって提供される情報、  **\<TemplateData >**要素は変わりません。  **\<VSTemplateContainer >**要素が関連付けられているテンプレートの .vstemplate ファイルを指す  
+ によって提供される情報、  **\<TemplateData >** 要素は変わりません。  **\<VSTemplateContainer >** 要素が関連付けられているテンプレートの .vstemplate ファイルを指す  
   
  .Vstman ファイルのさまざまな要素の詳細については、次を参照してください。 [Visual Studio テンプレート マニフェスト スキーマ リファレンス](../extensibility/visual-studio-template-manifest-schema-reference.md)です。  
   

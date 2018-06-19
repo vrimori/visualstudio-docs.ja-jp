@@ -1,11 +1,11 @@
 ---
-title: "IActiveScriptParse::AddScriptlet |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScriptParse::AddScriptlet |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptParse.AddScriptlet
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptParse_AddScriptlet
 ms.assetid: 824929f4-4dd3-473a-92d9-0b96acea2f14
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24724652"
 ---
 # <a name="iactivescriptparseaddscriptlet"></a>IActiveScriptParse::AddScriptlet
 コード スクリプトレットをスクリプトに追加します。 このメソッドは、スクリプトの永続状態が、ホスト ドキュメントに組み合わされたされ、ホストは、スクリプトを復元するため、環境で使用ではなくを通じて、`IPersist*`インターフェイスです。 プライマリの例としては、組み込みイベントにアタッチされている HTML ドキュメントに埋め込まれたコードのスクリプトレットを許可する HTML スクリプト言語 (たとえば、ONCLICK="button1.text='Exit'") です。  

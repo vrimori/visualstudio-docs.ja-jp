@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144438"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 要素 (Visual Studio テンプレート)
 項目テンプレートを表示するプロジェクトの種類を指定します。 この要素は重要なときに[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`false`です。 ときに[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md)に設定されている`true`、項目テンプレートはすべてのプロジェクト タイプで使用できます。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>コメント  
  `TemplateGroupID` は要素です。  
   
- 値、`TemplateGroupID`要素は、プロジェクト システム登録と共に使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<バージョン番号 >*\Projects\\)テンプレートをフィルターに表示される、**新しい項目の追加** ダイアログ ボックス。  
+ 値、`TemplateGroupID`要素は、プロジェクト システム登録と共に使用 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<バージョン番号 >* \Projects\\)テンプレートをフィルターに表示される、**新しい項目の追加** ダイアログ ボックス。  
   
 |Visual C++ の値|説明|  
 |------------------------|-------------|  

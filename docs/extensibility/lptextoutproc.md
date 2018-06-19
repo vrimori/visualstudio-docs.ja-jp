@@ -24,6 +24,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143528"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 ユーザーは、統合開発環境 (IDE) 内からソース管理操作を実行するとき、ソース管理プラグインすることも、操作に関連するエラーまたはステータス メッセージの伝達します。 プラグインを表示できます、独自のメッセージ ボックスこの目的のため。 ただし、複数のシームレスな統合をプラグインできますで文字列を渡す、IDE では、ステータス情報を表示するがネイティブの方法で表示されます。 このメカニズムは、`LPTEXTOUTPROC`関数ポインター。 IDE では、エラーと状態を表示する (詳細については、以下で説明) この関数を実装します。  

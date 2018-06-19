@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31463303"
 ---
 # <a name="idiasymbolfindinlineelinesbyaddr"></a>IDiaSymbol::findInlineeLinesByAddr
 すべての関数のインライン展開され、直接または間接的に含まれていない、指定したアドレスの範囲内でこのシンボル、行番号の情報を反復処理するクライアントを許可する列挙体を取得します。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147129"
 ---
 # <a name="web-site-support-templates"></a>Web サイト テンプレートをサポート
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web サイトのプロジェクトと項目テンプレートは、最初から新しい Web サイト プロジェクトと項目を作成する必要性を解消して、開発プロセスを高速化と再利用可能なカスタマイズ可能な Web サイトのプロジェクトと項目のスタブを提供します。 詳細については[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、テンプレートを参照してください[を作成するプロジェクトと項目テンプレート](../../ide/creating-project-and-item-templates.md)です。

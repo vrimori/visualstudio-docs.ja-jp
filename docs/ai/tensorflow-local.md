@@ -1,7 +1,7 @@
 ---
-title: "TensorFlow モデルをローカルにトレーニングする"
-description: "AI Tools for Visual Studio でローカルに TensorFlow モデルを実行します"
-keywords: "AI, Visual Studio, TensorFlow, ローカル"
+title: TensorFlow モデルをローカルにトレーニングする
+description: AI Tools for Visual Studio でローカルに TensorFlow モデルを実行します
+keywords: AI, Visual Studio, TensorFlow, ローカル
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2018
+ms.locfileid: "29708934"
 ---
 # <a name="train-a-tensorflow-model-locally"></a>TensorFlow モデルをローカルにトレーニングする
 

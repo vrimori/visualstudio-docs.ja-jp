@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146833"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio の UX Essentials
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -155,7 +156,7 @@ Visual Studio 内でのアンチ パターンは、UI を消去する前に説�
   
  ![色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。] (../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102 j_HyperlinkIncorrect")<br />色のサービスを無視し、「詳細」のハイパーリンクを使用して Visual Studio のアンチ パターンは、します。  
   
- **ソリューションのより強力な:**リンクをクリックして、ユーザーを求めるは質問が発生します。  
+ **ソリューションのより強力な:** リンクをクリックして、ユーザーを求めるは質問が発生します。  
   
 -   Windows Azure サービスのしくみ  
   

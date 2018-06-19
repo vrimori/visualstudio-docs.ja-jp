@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31965980"
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>ドメイン固有言語ソリューションの使用
 使用してドメイン固有言語 (DSL) を作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションです。 このセクションでを設定し、ソリューションをカスタマイズする方法について説明します。

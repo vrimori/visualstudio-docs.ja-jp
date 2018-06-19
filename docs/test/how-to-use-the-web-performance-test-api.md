@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Web パフォーマンス テスト API | Microsoft Docs
+title: Visual Studio の Web パフォーマンス テスト API
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,14 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ed7cbc7375cbf416d82a56c140479925569dad8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 330e0aa9bcf51b0ce9d57ea93a13303b7a356982
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31969130"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>方法: Web パフォーマンス テスト API を使用する
 
@@ -23,7 +25,8 @@ Web パフォーマンス テストのコードを記述できます。 Web パ�
  また、Web パフォーマンス テスト API を使用して、プログラムにより宣言 Web パフォーマンス テストを作成および保存することもできます。 それを行うには、<xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> クラスと <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> クラスを使用します。
 
 > [!TIP]
->  オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
+> オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
+
 
  ロード テスト用のプラグインを作成することもできます。 詳細については、[ロード テスト API を使用する方法](../test/how-to-use-the-load-test-api.md)に関するページ、および「[How to: Create a Load Test Plug-In](../test/how-to-create-a-load-test-plug-in.md)」(方法 : ロード テスト プラグインを作成する) を参照してください。
 

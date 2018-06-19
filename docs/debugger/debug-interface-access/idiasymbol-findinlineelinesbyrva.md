@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31464613"
 ---
 # <a name="idiasymbolfindinlineelinesbyrva"></a>IDiaSymbol::findInlineeLinesByRVA
 クライアントはインライン展開を直接または間接的に、指定された相対仮想アドレス (RVA) 内でこのシンボルのすべての関数の行番号情報を反復処理を可能にする列挙体を取得します。  

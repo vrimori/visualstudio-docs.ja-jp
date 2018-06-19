@@ -1,13 +1,13 @@
 ---
-title: "replace メソッド (String) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: replace メソッド (String) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - replace
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - replacing strings
 - Replace method
 ms.assetid: 5f0e4765-df4d-4887-bd09-efe5e58251bf
-caps.latest.revision: 
+caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/09/2018
+ms.locfileid: "27719345"
 ---
 # <a name="replace-method-string-javascript"></a>replace メソッド (String) (JavaScript)
 正規表現または検索文字列を使用して、文字列内のテキストを置換します。  
@@ -59,8 +60,8 @@ stringObj.replace(rgExp, replaceText)
 |----------------|-------------|  
 |**$$**|`$` ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
 |**$&**|`stringObj` でパターンが完全に一致した部分を指定します。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
-|`$``|部分を表します`stringObj`で説明されている一致の直前まで **$&**です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
-|`$'`|部分を表します`stringObj`で説明されている一致に依存している **$&**です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
+|`$``|部分を表します`stringObj`で説明されている一致の直前まで **$&** です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
+|`$'`|部分を表します`stringObj`で説明されている一致に依存している **$&** です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
 |`$`  ***n***| *n*番目のキャプチャのサブマッチ場所 *n* は 1 ~ 9 の 1 つの 10 進数字です。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
 |`$`  ***nn***| *nn* Th、サブマッチをキャプチャする場所 *nn* はの 01 ~ 99 の 2 桁の 10 進数。 ([!INCLUDE[jsv55textspecific](../../javascript/reference/includes/jsv55textspecific-md.md)] 以降)|  
   

@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31974045"
 ---
 # <a name="how-to-create-an-activity-library"></a>アクティビティ ライブラリを作成する方法
 カスタム アクティビティは、ワークフローで特定のビジネス プロセスをモデル化するために使用されます。 Visual Studio 2010 でアクティビティ ライブラリ テンプレートは、視覚的に、Windows ワークフロー デザイナーを使用してこのようなカスタム アクティビティを作成するために提供されています。

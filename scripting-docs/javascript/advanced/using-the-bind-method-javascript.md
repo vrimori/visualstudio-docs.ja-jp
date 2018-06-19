@@ -1,13 +1,13 @@
 ---
-title: "bind メソッドの使用 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: bind メソッドの使用 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - bind method [JavaScript]
 - this object [JavaScript]
 ms.assetid: f608f95b-3b9d-437a-a67a-5a4ef8f6c07f
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -26,6 +26,7 @@ ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/05/2018
+ms.locfileid: "28987868"
 ---
 # <a name="using-the-bind-method-javascript"></a>bind メソッドの使用 (JavaScript)
 JavaScript の `bind` メソッドには複数の用途があります。 通常は、別のコンテキストで実行される関数の実行コンテキストを保持するために使用されます。 `bind` は、元の関数と同じ本体を持つ、新しい関数を作成します。 `bind` に渡される最初の引数で、バインドされた関数の `this` キーワードの値が指定されます。 また、`bind` への省略可能な追加の引数を渡すこともできます。 その他の用途の例については、「[bind メソッド (Function)](../../javascript/reference/bind-method-function-javascript.md)」をご覧ください。 部分的に関数を適用する `bind` の使用例については、「[Hilo での非同期プログラミング パターンとヒント (JavaScript と HTML を使った Windows ストア アプリ)](http://msdn.microsoft.com/library/windows/apps/jj649740.aspx)」をご覧ください。  

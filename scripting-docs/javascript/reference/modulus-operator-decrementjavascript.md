@@ -28,6 +28,7 @@ ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2018
+ms.locfileid: "29753259"
 ---
 # <a name="remainder-operator--javascript"></a>剰余演算子 (JavaScript)
 数値式の値を別の数値式の値で除算し、残りの部分を生成します。  

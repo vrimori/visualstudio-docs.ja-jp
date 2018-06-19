@@ -1,19 +1,20 @@
 ---
-title: "コレクション (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: コレクション (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 23c26185-6a7b-4b69-9d22-63e1841b4905
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/12/2018
+ms.locfileid: "27783053"
 ---
 # <a name="collections-javascript"></a>コレクション (JavaScript)
 値とオブジェクトを格納するには、コレクション オブジェクト [Map](../../javascript/reference/map-object-javascript.md)、[Set](../../javascript/reference/set-object-javascript.md)、[WeakMap](../../javascript/reference/weakmap-object-javascript.md) を使用できます。 これらのオブジェクトには、インデックスの代わりにキーまたは値を使用してメンバーを追加および取得するための便利なメソッドが用意されています。 インデックスを使用してコレクションのメンバーにアクセスするには、`Array` オブジェクトを使用します。 詳しくは、「[配列の使用](../../javascript/advanced/using-arrays-javascript.md)」をご覧ください。  

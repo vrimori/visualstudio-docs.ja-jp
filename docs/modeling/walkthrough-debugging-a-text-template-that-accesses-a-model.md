@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31968121"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>チュートリアル: モデルにアクセスするテキスト テンプレートのデバッグ
 変更またはドメイン固有言語ソリューションでテキスト テンプレートを追加するときに、エンジン ソース コードへ、または生成されたコードをコンパイルするときに、テンプレートを変換するときにエラーが発生する可能性があります。 次のチュートリアルでは、テキスト テンプレートのデバッグを行うことができます、処理の一部を示します。

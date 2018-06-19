@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142777"
 ---
 # <a name="symbols-element"></a>シンボル要素
 Guid および他の VSCT 要素によって使用されている Id を定義します。 アンマネージ コードは、この情報、通常で指定されているヘッダー ファイルから[Extern 要素](../extensibility/extern-element.md)です。 マネージ コードが、要素の子要素、シンボルをこの情報を定義します。  

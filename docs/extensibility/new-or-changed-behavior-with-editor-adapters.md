@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148663"
 ---
 # <a name="new-or-changed-behavior-with-editor-adapters"></a>エディターのアダプターで新しいまたは変更された動作
 以前のバージョンの Visual Studio コア エディターと照らして記述されたコードを更新して、新しい API を使用するのではなくエディター アダプター (または shim) を使用する場合は、注意してください、次の相違点エディター アダプターの動作に関しては、以前のコア エディターです。  

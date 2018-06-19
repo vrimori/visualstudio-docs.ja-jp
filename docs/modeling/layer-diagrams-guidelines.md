@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954393"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 作成することで、高レベルのアプリのアーキテクチャの記述*依存関係図*Visual Studio でします。 依存関係ダイアグラムとコードを検証することによって、コードのこの設計で一貫性が保たことを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 参照してください[Channel 9 ビデオ: デザインし、依存関係のダイアグラムを使用して、アーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。

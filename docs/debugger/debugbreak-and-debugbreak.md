@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31470474"
 ---
 # <a name="debugbreak-and-debugbreak"></a>DebugBreak と __debugbreak
 DebugBreak Win32 関数を呼び出すことができます、または[_ _debugbreak](/cpp/intrinsics/debugbreak)コード内の任意の時点で組み込みです。 `DebugBreak` および `__debugbreak` を呼び出した場合の動作は、その位置にブレークポイントを設定した場合と同様です。  

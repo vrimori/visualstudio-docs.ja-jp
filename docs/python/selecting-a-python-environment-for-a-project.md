@@ -1,6 +1,6 @@
 ---
-title: プロジェクト用の環境の選択
-description: Visual Studio のソリューション エクスプローラーでは、既定の環境を無視して、指定されたプロジェクトに常に使用する特定の Python インタープリター (環境) を割り当てることができます。 また、仮想環境を作成し、管理することもできます。
+title: プロジェクトの Python インタープリターと環境の選択
+description: Visual Studio プロジェクトで使用する Python 環境を割り当てる方法と、仮想環境の作成手順。
 ms.date: 03/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 72f07115aa323db15dd5680575871b8d4c4b20b4
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 85ac0ab5fe06db5af677290a99f914616e3ed064
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31976690"
 ---
-# <a name="selecting-a-python-interpreter-and-environment-for-use-in-a-project"></a>プロジェクトで使用する Python インタープリターと環境を選択する
+# <a name="how-to-assign-which-python-environment-is-used-for-a-project"></a>プロジェクトで使用される Python 環境を割り当てる方法
 
 Python プロジェクトのすべてのコードは、特定の環境のコンテキスト内で実行されます。 また、Visual Studio では、デバッグ、インポートとメンバーの入力候補、構文チェック、環境を必要とするその他のタスクにもその環境を使用します。
 
