@@ -16,6 +16,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31569889"
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>方法: MSBuild プロジェクト SDK の参照
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15.0 では、"プロジェクト SDK" という概念が導入されました。これによって、プロパティとターゲットをインポートする必要があるソフトウェア開発キットの使用が簡単になります。

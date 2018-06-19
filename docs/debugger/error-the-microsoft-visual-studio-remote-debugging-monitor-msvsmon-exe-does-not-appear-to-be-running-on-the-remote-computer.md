@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476066"
 ---
 # <a name="error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmonexe-does-not-appear-to-be-running-on-the-remote-computer"></a>エラー : Microsoft Visual Studio リモート デバッグ モニター (MSVSMON.EXE) は、リモート コンピューター上では実行されていません。
 このエラー メッセージは、Visual Studio がリモート コンピューター上で Visual Studio リモート デバッグ モニターの適切なインスタンスを見つけることができなかったことを示します。 リモート デバッグを行うには、Visual Studio リモート デバッグ モニターをインストールする必要があります。 ダウンロードして、リモート デバッガーの設定については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。  
@@ -50,11 +51,11 @@ ms.lasthandoff: 04/18/2018
   
 -   リモート デバッガーを停止し、ローカル コンピューターで使用しているアカウントで再起動します。  
   
--   使用してコマンドラインからリモート デバッガーを開始することができます、 **/allow\<ユーザー名 >**パラメーター。 `msvsmon /allow <username@computer>`  
+-   使用してコマンドラインからリモート デバッガーを開始することができます、 **/allow\<ユーザー名 >** パラメーター。 `msvsmon /allow <username@computer>`  
   
 -   リモート デバッガーのアクセス許可をユーザーを追加することができます (リモート デバッガー ウィンドウで、**ツール > のアクセス許可**)。  
   
--   前の手順の方法を使用できない場合は、すべてのユーザーにリモート デバッグの実行を許可します。 リモート デバッガー ウィンドウに移動、**ツール > オプション**ダイアログ。 **[認証なし]**を選択すると、 **[すべてのユーザーにデバッグを許可する]**をチェックできるようになります。 ただし、このオプションの使用は、他に選択肢がない場合、またはプライベート ネットワーク上で作業している場合に限る必要があります。  
+-   前の手順の方法を使用できない場合は、すべてのユーザーにリモート デバッグの実行を許可します。 リモート デバッガー ウィンドウに移動、**ツール > オプション**ダイアログ。 **[認証なし]** を選択すると、 **[すべてのユーザーにデバッグを許可する]** をチェックできるようになります。 ただし、このオプションの使用は、他に選択肢がない場合、またはプライベート ネットワーク上で作業している場合に限る必要があります。  
   
 ## <a name="the-firewall-on-the-remote-machine-doesnt-allow-incoming-connections-to-the-remote-debugger"></a>リモート コンピューター上のファイアウォールがリモート デバッガーへの着信接続を許可しません  
  Visual Studio とリモート デバッガーの間の通信を許可するように、Visual Studio のコンピューター上のファイアウォールとリモート コンピューター上のファイアウォールを構成する必要があります。 リモート デバッガーが使用するポートについては、「 [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)」を参照してください。 Windows ファイアウォールを構成する方法については、「 [Configure the Windows Firewall for Remote Debugging](../debugger/configure-the-windows-firewall-for-remote-debugging.md)」を参照してください。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="more-help"></a>その他のヘルプ  
  コマンド ライン スイッチを含む、多くのリモート デバッガーのヘルプを取得する をクリックして**ヘルプ > 使用状況**リモート デバッガー ウィンドウにします。 開くことがあるない場合に次の行をコピーして、web ページを表示できます、**ファイル エクスプ ローラー**ウィンドウです。 (交換する必要があります\<Visual Studio インストール ディレクトリ > Visual Studio のインストールの場所を使用します)。  
   
- res://*\<Visual Studio インストール ディレクトリ >*\Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm  
+ res://*\<Visual Studio インストール ディレクトリ >* \Common7\IDE\Remote%20Debugger\x64\msvsmon.exe/help.htm  
   
 ## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

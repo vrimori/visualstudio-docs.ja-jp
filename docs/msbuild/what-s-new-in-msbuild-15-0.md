@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31569304"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 の新機能
 MSBuild は現在 [.NET Core SDK](https://www.microsoft.com/net/download/core) の一部として利用でき、Windows、macOS、Linux で .NET Core プロジェクトをビルドできます。  

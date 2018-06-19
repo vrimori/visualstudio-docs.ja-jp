@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476823"
 ---
 # <a name="inspect-your-app-with-intellitrace-historical-debugging-in-visual-studio"></a>Visual Studio でデバッグ履歴の IntelliTrace を使用したアプリを検査します。
 使用することができます[デバッグ履歴](../debugger/historical-debugging.md)を後方へ移動し、アプリケーションの実行を介して転送状態を調べる。  
@@ -56,7 +57,7 @@ private static int AddInt(int add)
   
 2.  `Console.WriteLine(resultInt);` の行にブレークポイントを設定します。  
   
-3.  デバッグを開始します。 コードがブレークポイントまで実行されます。 **[ローカル]**ウィンドウがの値`resultInt`44。  
+3.  デバッグを開始します。 コードがブレークポイントまで実行されます。 **[ローカル]** ウィンドウがの値`resultInt`44。  
   
 4.  開く、**診断ツール**ウィンドウ (**デバッグ > 診断ツールを表示する**)。 コード ウィンドウは、次のようになります。  
   

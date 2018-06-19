@@ -27,6 +27,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264777"
 ---
 # <a name="reduce-method-array-javascript"></a>reduce メソッド (Array) (JavaScript)
 配列内のすべての要素には、指定されたコールバック関数を呼び出します。 コールバック関数の戻り値は収集された結果で、コールバック関数の次の呼び出しの引数として提供されます。  

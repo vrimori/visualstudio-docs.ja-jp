@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31563376"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce 配置のサンプルとチュートリアル
 このセクションには、Windows フォーム、WPF、コンソール アプリケーションの配置に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  

@@ -34,10 +34,12 @@
           href: tutorial-import-publish-settings-azure.md
         - name: 発行の設定のインポートおよび IIS へのデプロイ
           href: tutorial-import-publish-settings-iis.md
+        - name: Web 配置を使用して IIS に配置する
+          href: deploy-iis-with-web-deploy.md
         - name: Git を使用した Azure への ASP.NET Core の継続的な配置
           href: /aspnet/core/publishing/azure-continuous-deployment?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
-        - name: IIS に ASP.NET を配置する
-          href: /iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+        - name: Visual Studio Kubernetes ツールを使用して Kubernetes に発行する
+          href: tutorial-kubernetes-tools.md
     - name: ネイティブ
       items:
         - name: Visual C++ に配置...

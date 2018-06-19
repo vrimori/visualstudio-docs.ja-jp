@@ -118,6 +118,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479246"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ デバッグ構成のプロジェクト設定
 C または C++ デバッグ構成でのプロジェクト設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[する方法: デバッグ設定とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
@@ -175,7 +176,7 @@ C または C++ デバッグ構成でのプロジェクト設定を変更する�
 |**マップ ファイルの生成**([/map](/cpp/build/reference/map-generate-mapfile))|リンク中にマップ ファイルを生成するようにリンカーに指示します。 既定の設定は [いいえ] です。 詳細については、「[/MAP (マップ ファイルの生成)](/cpp/build/reference/map-generate-mapfile)」を参照してください。|  
 |**ファイル名をマップ**([/map:](/cpp/build/reference/map-generate-mapfile)*名前*)|[マップ ファイルの作成] を選択する場合は、このボックスにマップ ファイルを指定できます。 詳細については、「[/MAP (マップ ファイルの生成)](/cpp/build/reference/map-generate-mapfile)」を参照してください。|  
 |**マップ ファイルのエクスポート**([/MAPINFO:EXPORTS](/cpp/build/reference/mapinfo-include-information-in-mapfile))|エクスポートされた関数をマップ ファイルに含めます。 既定の設定は [いいえ] です。 詳細については、次を参照してください。 [/MAPINFO (マップ ファイルに含める情報)](/cpp/build/reference/mapinfo-include-information-in-mapfile)です。|  
-|**デバッグできるアセンブリ**([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|リンカーの /ASSEMBLYDEBUG オプションの設定を指定します。 次の値を指定できます。<br /><br /> -   **デバッグ可能な属性が作成されません**です。<br />-   **ランタイム トラッキングおよび最適化の無効 (/ASSEMBLYDEBUG)**です。 これが既定の設定です。<br />-   **ないランタイム トラッキングおよび有効にする optimizations(/ASSEMBLYDEBUG:DISABLE)**です。<br />-   **\<親またはプロジェクトの既定値から継承 >**です。<br />詳細については、次を参照してください。 [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](/cpp/build/reference/assemblydebug-add-debuggableattribute)です。|  
+|**デバッグできるアセンブリ**([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|リンカーの /ASSEMBLYDEBUG オプションの設定を指定します。 次の値を指定できます。<br /><br /> -   **デバッグ可能な属性が作成されません**です。<br />-   **ランタイム トラッキングおよび最適化の無効 (/ASSEMBLYDEBUG)** です。 これが既定の設定です。<br />-   **ないランタイム トラッキングおよび有効にする optimizations(/ASSEMBLYDEBUG:DISABLE)** です。<br />-   **\<親またはプロジェクトの既定値から継承 >** です。<br />詳細については、次を参照してください。 [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](/cpp/build/reference/assemblydebug-add-debuggableattribute)です。|  
   
  [構成プロパティ] フォルダー ([デバッグ] カテゴリ) 内のこれらの設定は、Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings インターフェイスを使用してプログラムで変更できます。 詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>」を参照してください。
 

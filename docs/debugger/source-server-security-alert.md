@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474126"
 ---
 # <a name="source-server-security-alert"></a>ソース サーバー のセキュリティ警告
 ソース サーバーの使用時は、認識できて信頼できる場所からのシンボル ファイルのみを使用してください。  

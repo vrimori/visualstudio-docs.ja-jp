@@ -26,6 +26,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31565693"
 ---
 # <a name="application-deployment-prerequisites"></a>アプリケーション配置の必要条件
 アプリケーションが正常にインストールされ、実行されるようにするには、アプリケーションが依存しているすべてのコンポーネントがターゲット コンピューターに既にインストールされていることを最初に確認する必要があります。 たとえば、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用して作成されたほとんどのアプリケーションは、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] に依存します。アプリケーションをインストールする前に、共通言語ランタイムの適切なバージョンが、ターゲット コンピューター上に存在している必要があります。  

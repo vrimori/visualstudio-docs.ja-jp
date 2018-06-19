@@ -18,6 +18,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265776"
 ---
 # <a name="inside-the-editor"></a>エディター内
 エディターでは、テキスト ビューと、ユーザー インターフェイスからエディター モデル別のテキストを保持するように設計されている複数のサブシステムの数で構成されます。  

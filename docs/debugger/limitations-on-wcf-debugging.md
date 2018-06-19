@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476999"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF デバッグの制約
 WCF サービスのデバッグを開始するには、次の 3 つの方法があります。  

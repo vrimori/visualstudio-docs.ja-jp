@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31561351"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法 : 配置の更新用に別の場所を指定する
 インストールすることができます、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD またはファイル共有から最初にアプリケーションが、アプリケーションが、Web で定期的な更新プログラムのチェックが必要です。 その最初のインストール後に Web サイトからアプリを更新できるように、配置マニフェストで更新プログラムの別の場所を指定できます。  
