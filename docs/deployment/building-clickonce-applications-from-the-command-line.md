@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31566187"
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからのプロジェクトをビルドすることができます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]インストールします。 これにより、自動プロセスを使用してビルドを再生成するなど、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの対象外の手法です。  

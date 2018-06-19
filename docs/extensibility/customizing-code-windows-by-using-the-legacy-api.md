@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109965"
 ---
 # <a name="customizing-code-windows-by-using-the-legacy-api"></a>レガシ API を使用してコード ウィンドウをカスタマイズします。
 コード ウィンドウは、1 つまたは複数のテキスト ビューをサポートするドキュメント ウィンドウ オブジェクトです。 コード ウィンドウの正確な機能は、関連付けられた言語サービスによって異なります。 マルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウは、MDI 子フレームです。  

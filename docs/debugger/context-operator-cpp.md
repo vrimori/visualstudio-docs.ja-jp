@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31466046"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>コンテキスト演算子 Visual Studio デバッガー (C++)
 C++ のコンテキスト演算子を使用して、ブレークポイントの場所、変数名、または式を修飾できます。 コンテキスト演算子は、ローカル名で隠されていてほかにアクセス方法がない外部スコープから名前を指定するために利用できます。  

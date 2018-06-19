@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140470"
 ---
 # <a name="visual-studio-command-table-vsct-files"></a>Visual Studio コマンド テーブル (です。Vsct) ファイル
 コマンド テーブルの構成ファイルは、VSPackage を含むコマンドのセットを説明するテキスト ファイルです。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド テーブル (VSCT) コンパイラが XML ベースの構成ファイル (.vsct ファイル) をテーブルのバイナリ コマンドの出力 (.cto) ファイルにコンパイルします。 結果の .cto ファイル、.ctc 構成ファイルをコンパイルするコマンド テーブル (CTC) コンパイラを使用して作成されたものと同じです。 ただし、XML ベースの .vsct ファイルでは、XML エディターや XML IntelliSense などのいくつかの利点があります。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108470"
 ---
 # <a name="about-file-name-extensions"></a>ファイル名の拡張機能の概要
 VSPackage のファイル拡張子を登録するときに関連付けることが、バージョンの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 これは、1 つのバージョン以上の場合に重要な[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コンピューターにインストールします。  

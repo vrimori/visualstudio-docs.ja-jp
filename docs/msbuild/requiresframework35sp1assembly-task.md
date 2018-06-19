@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31572990"
 ---
 # <a name="requiresframework35sp1assembly-task"></a>RequiresFramework35SP1Assembly タスク
 アプリケーションで .NET Framework 3.5 SP1 が必要であるかどうかを確認します。  

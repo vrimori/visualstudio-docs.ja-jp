@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31112471"
 ---
 # <a name="idebugmemorycontext2compare"></a>IDebugMemoryContext2::Compare
 比較フラグ、一致する最初のコンテキストのインデックスを返すことによって示されるように指定した配列内の各コンテキストにメモリ コンテキストを比較します。  

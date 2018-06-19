@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31122276"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
 参照の値のバイト単位のサイズを取得します。 将来使用するために予約されています。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141035"
 ---
 # <a name="vstextbuffer-object"></a>VSTextBuffer オブジェクト
 テキスト バッファー オブジェクトでは、一般に、ファイルに関連付けられている Unicode テキストのストリームを表します。 A<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ウィザードの場合は、コア エディターのコンテキストの外部オブジェクトを使用できます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109991"
 ---
 # <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
 カスタム ビューアーを識別する構造またはビジュアライザーを入力します。  

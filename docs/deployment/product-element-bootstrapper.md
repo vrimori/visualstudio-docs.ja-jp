@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31559440"
 ---
 # <a name="ltproductgt-element-bootstrapper"></a>&lt;製品&gt;要素 (ブートス トラップ)
 `Product`要素は、製品ファイル内で最上位の XML 要素です。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578888"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild ツールセット (ToolsVersion)
 MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。 通常、MSBuild ツールセットには、microsoft.common.tasks ファイル、microsoft.common.targets ファイル、および csc.exe や vbc.exe などのコンパイラが含まれています。 ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。 ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  

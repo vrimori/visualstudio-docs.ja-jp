@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462535"
 ---
 # <a name="idiasymbolgethfafloat"></a>IDiaSymbol::get_hfaFloat
 ユーザー定義型 (UDT) が同種浮動小数点 (HFA) の集計データは float 型を含むかどうかを指定するフラグを取得します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31120560"
 ---
 # <a name="idebugprogramprovider2"></a>IDebugProgramProvider2
 登録されたこのインターフェイスにより、セッションのデバッグ manager「公開済み」からのプログラムに関する情報を取得するには、(SDM)、 [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)インターフェイスです。  

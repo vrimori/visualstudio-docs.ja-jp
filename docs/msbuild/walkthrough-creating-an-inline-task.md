@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31575794"
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>チュートリアル: インライン タスクの作成
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 .NET Framework Version 4 以降では、プロジェクト ファイルでタスクをインラインで作成できます。 個別のアセンブリを作成してタスクをホストする必要はありません。 詳細については、「[インライン タスク](../msbuild/msbuild-inline-tasks.md)」を参照してください。  
