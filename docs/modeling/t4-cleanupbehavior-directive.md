@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946040"
 ---
 # <a name="t4-cleanupbehavior-directive"></a>T4 CleanUpBehavior ディレクティブ
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949525"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
 ホストされるドメイン固有言語ツール (DSL ツール)[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、ドメイン固有言語の設計および言語に基づくモデルを作成するためのユーザーが必要なすべてのものを生成します。

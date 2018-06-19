@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31943307"
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]\([オプション] ダイアログ ボックス - [環境])
 このページを使用して、Visual Studio での更新プログラムの実行方法に関するオプションと、拡張機能の更新および検出方法に関するオプションを設定します。

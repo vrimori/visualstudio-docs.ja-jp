@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31953087"
 ---
 # <a name="structure-your-modeling-solution"></a>モデリング ソリューションの構築
 開発プロジェクトでモデルを効果的に使用するため、チーム メンバーは、プロジェクトのさまざまな部分のモデルを同時に作業する必要があります。 このトピックでは、アプリケーションを、レイヤー図全体の各レイヤーに対応する複数の部分に分割するスキームを提案します。

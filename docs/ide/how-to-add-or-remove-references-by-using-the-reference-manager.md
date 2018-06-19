@@ -1,6 +1,7 @@
 ---
 title: 参照マネージャーで参照を追加する
 ms.date: 04/11/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84f5eec811178c1287986b690ce995364428c16b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 33b9b29cef4ad215e76af57e66c73eb2e8a134db
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31953837"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
 
@@ -50,7 +52,7 @@ ms.lasthandoff: 04/19/2018
 
 ### <a name="to-add-a-reference"></a>参照を追加するには
 
-1. **ソリューション エクスプローラー**で、**[参照]** ノードまたは **[依存関係]** ノードを右クリックし、**[参照の追加]** を選びます。 または、プロジェクト ノードを右クリックし、**[追加]** > **[参照]** の順に選択します。
+1. **ソリューション エクスプローラー**で、**[参照]** ノードまたは **[依存関係]** ノードを右クリックし、**[参照の追加]** を選びます。 あるいは、プロジェクト ノードを右クリックし、**[追加]** > **[参照]** の順に選択します。
 
    **[参照マネージャー]** は、使用可能な参照を開いてグループごとに表示します。
 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950544"
 ---
 # <a name="embedding-a-diagram-in-a-windows-form"></a>Windows フォームでのダイアグラムの埋め込み
 表示されます、Windows のコントロールに DSL 図を埋め込むことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウです。

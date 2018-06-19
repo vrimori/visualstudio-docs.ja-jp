@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31951181"
 ---
 # <a name="the-text-template-transformation-process"></a>テキスト テンプレート変換プロセス
 テキスト テンプレート変換プロセスでは、テキスト テンプレート ファイルを入力として受け取りし、新しいテキスト ファイルとして出力を生成します。 テキスト テンプレートを使用するには、Visual Basic または c# のコードを生成するなど、HTML レポートを生成することができます。

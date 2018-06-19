@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948195"
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK
 サポートされている Visual Studio のエディションの一覧は、次のとおり[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]オーサリングとデプロイ環境でします。 これらのエディションの詳細については、Microsoft を参照してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)です。

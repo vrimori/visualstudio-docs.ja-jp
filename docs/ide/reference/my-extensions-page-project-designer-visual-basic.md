@@ -20,6 +20,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948962"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>[マイ拡張] ページ (プロジェクト デザイナー) (Visual Basic)
 **プロジェクト デザイナー**の **[マイ拡張]** ページを使用して、プロジェクトの `My` 名前空間拡張を管理します。 `My` 名前空間拡張を使用すれば、`My` 名前空間をカスタマイズして独自のカスタム メンバーに追加することができます。 カスタムの `My` 名前空間拡張の作成については、「[Visual Basic における My 名前空間の拡張](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)」を参照してください。

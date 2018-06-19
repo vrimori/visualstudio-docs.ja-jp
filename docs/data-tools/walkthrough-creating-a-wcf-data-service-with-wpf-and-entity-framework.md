@@ -23,6 +23,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31926811"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF および Entity Framework と WCF データ サービスを作成します。
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされている、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションとして、Windows フォーム アプリケーションからアクセスします。
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual Basic**または**Visual c#** と**Web** 、ノードを選択し、 **ASP です。NET Web アプリケーション**テンプレート。
 
-3.  **名前**テキスト ボックスに、入力**「NorthwindWeb**、を選択し、 **OK**ボタンをクリックします。
+3.  **名前**テキスト ボックスに、入力 **「NorthwindWeb**、を選択し、 **OK**ボタンをクリックします。
 
 4.  **新しい ASP.NET プロジェクト** ダイアログ ボックスで、**テンプレートを選択して**一覧で、選択**空**を選択し、 **ok**ボタンをクリックします。
 
