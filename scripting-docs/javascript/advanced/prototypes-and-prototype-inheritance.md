@@ -23,9 +23,10 @@ ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 200ca757e72b2eec8f09fd48a841cc8eb816c85d
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
+ms.locfileid: "29899946"
 ---
 # <a name="prototypes-and-prototype-inheritance"></a>プロトタイプおよびプロトタイプの継承
 JavaScript では、`prototype` は関数のプロパティ、およびコンストラクター関数によって作成されるオブジェクトのプロパティです。 関数のプロトタイプはオブジェクトです。 主に、関数がコンストラクターとして使用される場合に使用されます。  

@@ -1,13 +1,13 @@
 ---
-title: "while ステートメント (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: while ステートメント (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - while_JavaScriptKeyword
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - loop structures, while statements
 - while statement
 ms.assetid: d63777cf-0e1a-4555-8d3a-334381001f48
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641252"
 ---
 # <a name="while-statement-javascript"></a>while ステートメント (JavaScript)
 指定された条件がなるまでステートメントまたは一連のステートメント実行`false`です。  

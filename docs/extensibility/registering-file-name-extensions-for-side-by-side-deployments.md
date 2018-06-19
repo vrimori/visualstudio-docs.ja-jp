@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136311"
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>サイド バイ サイド配置のファイル名拡張子を登録します。
 Vspackage がサイド バイ サイドの環境に展開されている、ファイルを関連付けるには、正しいバージョンのファイル名拡張子を登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 登録でユーザーがプロジェクトを開き、プロジェクト項目ファイルの適切なバージョンでは、バージョン固有のファイル名拡張子を使用する場合を除き、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  

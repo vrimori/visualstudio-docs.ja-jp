@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109952"
 ---
 # <a name="bpflags"></a>BP_FLAGS
 ブレークポイントを設定するときに、追加情報を指定するために使用する省略可能なフラグを提供します。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141721"
 ---
 # <a name="supporting-multiple-document-views"></a>複数のドキュメント ビューをサポートします。
 エディターの別のドキュメントのデータおよびドキュメント ビュー オブジェクトを作成することで、ドキュメントの 1 つ以上のビューを提供できます。 場合によっては便利ですが、追加のドキュメント ビューは次のとおりです。  

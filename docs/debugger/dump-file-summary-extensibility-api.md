@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471022"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>ダンプ ファイルの概要機能拡張 API
 拡張できる機能拡張 Api を使用して、このセクションで、します。Exe プロジェクト システムと**ダンプの概要**独自のカスタム デバッグ エンジンで使用するためのページです。  

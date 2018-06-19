@@ -1,13 +1,13 @@
 ---
-title: "Math オブジェクト (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Math オブジェクト (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -16,7 +16,7 @@ dev_langs:
 helpviewer_keywords:
 - Math object
 ms.assetid: 607b94cb-921c-43cd-b514-fdbc13aeced6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24642162"
 ---
 # <a name="math-object-javascript"></a>Math オブジェクト (JavaScript)
 数値計算のための基本的な演算機能と定数を提供する組み込みオブジェクトです。  

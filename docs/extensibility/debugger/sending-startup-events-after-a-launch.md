@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135755"
 ---
 # <a name="sending-startup-events-after-a-launch"></a>スタートアップ イベントを起動後に送信します。
 デバッグ エンジン (DE) がプログラムにアタッチされる、デバッグ セッションに戻す、一連のスタートアップ イベントを送信します。  

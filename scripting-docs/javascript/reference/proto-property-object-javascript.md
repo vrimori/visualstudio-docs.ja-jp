@@ -25,6 +25,7 @@ ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/15/2018
+ms.locfileid: "29899576"
 ---
 # <a name="proto-property-object-javascript"></a>__proto__プロパティ (Object) (JavaScript)
 指定されたオブジェクトの内部プロトタイプへの参照が含まれます。  

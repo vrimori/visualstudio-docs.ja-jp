@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141354"
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>チュートリアル: インストールされているコード スニペット (レガシ実装) の一覧を取得します。
 コード スニペットはまたはのいずれか (これにより、インストールされているコード スニペットの一覧を選択) メニューのコマンドでは、ソース バッファーに挿入できるコードの IntelliSense コンプリート リストから、スニペット ショートカットを選択します。  

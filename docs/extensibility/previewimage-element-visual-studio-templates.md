@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136807"
 ---
 # <a name="previewimage-element-visual-studio-templates"></a>PreviewImage 要素 (Visual Studio テンプレート)
 プレビュー イメージを指定して、いずれかで表示されるプレビュー イメージのファイル名として、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  

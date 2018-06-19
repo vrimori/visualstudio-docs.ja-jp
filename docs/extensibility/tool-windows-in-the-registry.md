@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138448"
 ---
 # <a name="tool-windows-in-the-registry"></a>レジストリのツール ウィンドウ
 ツール ウィンドウを提供する Vspackage に登録する必要があります[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のウィンドウ プロバイダーをツールとして。 Visual Studio パッケージ テンプレートを使用して作成されたツール ウィンドウは、これが既定によって行います。 ツール ウィンドウのプロバイダーでは、既定のツール ウィンドウのサイズと場所、ツール ウィンドウ ペインとドッキング スタイルとして機能するウィンドウの GUID などの可視属性を指定するシステムのレジストリ キーがあります。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139462"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>カスタム エディターの構文の色分け
 コア エディターなど、visual Studio 環境 SDK エディターは、構文上の特定の項目を識別し、特定のドキュメント ビューの指定した色で表示する言語サービスを使用します。

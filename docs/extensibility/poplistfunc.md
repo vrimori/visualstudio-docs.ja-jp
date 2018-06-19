@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138565"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 このコールバックに用意されて、 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE によってファイルまたはディレクトリの一覧を更新する、ソース管理プラグインによって使用されます (に指定されている、`SccPopulateList`関数)。  

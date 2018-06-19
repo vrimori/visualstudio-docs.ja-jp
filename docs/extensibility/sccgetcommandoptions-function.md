@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141198"
 ---
 # <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions 関数
 この関数は、指定されたコマンドの詳細設定オプションのユーザーに求めます。  
@@ -68,9 +69,9 @@ SCCRTN SccGetCommandOptions(
   
  ユーザーが選択、**取得**コマンドと、IDE を表示、**取得** ダイアログ ボックス。 IDE の呼び出し、`SccGetCommandOptions`で機能`iCommand`に設定`SCC_COMMAND_GET`と`ppvOptions`'éý'`NULL`です。 これは、ソース管理プラグイン質問としてによって解釈されますが、"このコマンドの詳細設定オプションですか?" プラグインを返す場合`SCC_I_ADV_SUPPORT`、IDE を表示、 **詳細設定**ボタンをクリックして、**取得** ダイアログ ボックス。  
   
- 初めてユーザーがクリックして、 **[詳細設定]**ボタン、IDE をもう一度呼び出す、`SccGetCommandOptions`関数は、この時点ではない`NULL``ppvOptions`を指す、`NULL`ポインター。 プラグインの表示、独自**オプションを取得** ダイアログ ボックスについては、ユーザー要求、独自の構造体には、その情報を格納およびでその構造体へのポインターを返します`ppvOptions`です。  
+ 初めてユーザーがクリックして、 **[詳細設定]** ボタン、IDE をもう一度呼び出す、`SccGetCommandOptions`関数は、この時点ではない`NULL``ppvOptions`を指す、`NULL`ポインター。 プラグインの表示、独自**オプションを取得** ダイアログ ボックスについては、ユーザー要求、独自の構造体には、その情報を格納およびでその構造体へのポインターを返します`ppvOptions`です。  
   
- ユーザーがクリックした場合**[詳細設定]**もう一度同じダイアログ ボックスでは、IDE によって呼び出さ、`SccGetCommandOptions`関数を変更せずにもう一度`ppvOptions`、構造体がプラグインに渡されるようにします。 これにより、ユーザーが以前に設定する値には、そのダイアログ ボックスを再初期化するようにプラグインできます。 プラグインを返す前に、配置内の構造を変更します。  
+ ユーザーがクリックした場合 **[詳細設定]** もう一度同じダイアログ ボックスでは、IDE によって呼び出さ、`SccGetCommandOptions`関数を変更せずにもう一度`ppvOptions`、構造体がプラグインに渡されるようにします。 これにより、ユーザーが以前に設定する値には、そのダイアログ ボックスを再初期化するようにプラグインできます。 プラグインを返す前に、配置内の構造を変更します。  
   
  最後に、ユーザーがクリックしたとき**OK**で IDE の**取得**ダイアログ ボックスで、IDE の呼び出し、 [SccGet](../extensibility/sccget-function.md)で返される構造体を渡すこと`ppvOptions`を格納している、高度なオプションです。  
   

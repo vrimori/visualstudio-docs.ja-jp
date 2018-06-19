@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135923"
 ---
 # <a name="sdk-helpers-for-debugging"></a>デバッグ用の SDK ヘルパー
 これらの関数と宣言は、C++ でのデバッグ エンジン、式の評価者、およびシンボル プロバイダーを実装するためのグローバルなヘルパー関数です。  
@@ -178,7 +179,7 @@ HRESULT EnumMetricSections(
 |metricDataBP|データの変更のブレークポイントの設定のサポートを示すために 0 以外に設定します。|  
 |metricDisassembly|[逆アセンブル] の一覧の運用環境のサポートを示すために 0 以外に設定します。|  
 |metricDumpWriting|ダンプ (ダンプの出力デバイス メモリ) を記述のサポートを示すために 0 以外に設定します。|  
-|metricENC|エディット コンティニュのサポートを示すために 0 以外に設定します。 **注:**カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
+|metricENC|エディット コンティニュのサポートを示すために 0 以外に設定します。 **注:** カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
 |metricExceptions|例外のサポートを示すために 0 以外に設定します。|  
 |metricFunctionBP|名前付きのブレークポイント (特定の関数名が呼び出されるときに中断するブレークポイント) のサポートを示すために 0 以外に設定します。|  
 |metricHitCountBP|「ポイントをヒット」ブレークポイント (される回数だけのヒット後にのみトリガーされるブレークポイント) の設定のサポートを示すために 0 以外に設定します。|  
@@ -193,7 +194,7 @@ HRESULT EnumMetricSections(
 |metricAlwaysLoadProgramProviderLocal|0 以外を指定すること、プログラムのプロバイダーは常に読み込まれたローカルに設定します。|  
 |metricEngineCanWatchProcess|これを設定プログラム プロバイダーではなくプロセス イベントは、デバッグ エンジンをウォッチことを示すために 0 以外の値。|  
 |metricRemoteDebugging|これに設定をリモート デバッグのサポートを示す 0 以外の値。|  
-|metricEncUseNativeBuilder|編集と続行マネージャーを使用するデバッグ エンジンの encbuild.dll エディット コンティニュ用にビルドするには 0 以外に設定します。 **注:**カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
+|metricEncUseNativeBuilder|編集と続行マネージャーを使用するデバッグ エンジンの encbuild.dll エディット コンティニュ用にビルドするには 0 以外に設定します。 **注:** カスタム デバッグ エンジンは、これは設定しないでまたは常に 0 に設定します。|  
 |metricLoadUnderWOW64|これを設定して、デバッグ エンジンを読み込むこと wow デバッグ対象のプロセスで 64 ビット プロセスをデバッグするときを示すためには 0 以外。それ以外の場合、デバッグ エンジンは、Visual Studio のプロセス (WOW64 の下で実行されている) に読み込まれます。|  
 |metricLoadProgramProviderUnderWOW64|これを設定して wow; 64 ビット プロセスをデバッグするときにプログラム プロバイダーをデバッグ対象のプロセスに読み込まれている必要があるように指定する 0 以外の値それ以外の場合、Visual Studio プロセスに読み込まれます。|  
 |metricStopOnExceptionCrossingManagedBoundary|これに設定をマネージ/アンマネージ コードの境界を越えて、未処理の例外がスローされた場合、プロセスを停止するかを示す 0 以外の値。|  
@@ -265,7 +266,7 @@ HRESULT EnumMetricSections(
 |-----------------|-----------------|  
 |*[レジストリ キー]*|`HKEY_CURRENT_USER` または `HKEY_LOCAL_MACHINE`。|  
 |*[バージョン ルート]*|Visual Studio のバージョン (たとえば、 `7.0`、 `7.1`、または`8.0`)。 ただし、このルートを変更することもを使用して、 **/rootsuffix**に切り替える**devenv.exe**です。 VSIP、この修飾子は、通常**Exp**バージョン ルートである場合はたとえば、8.0Exp のため、します。|  
-|*[メトリックのルート]*|これは、いずれかの`AD7Metrics`または`AD7Metrics(Debug)`dbgmetric.lib のデバッグ バージョンを使用するかどうかに応じて、します。 **注:**デバッグとリリースの違いがある場合、この名前付け規則に従う必要があります dbgmetric.lib を使用すると、かどうかのバージョンをレジストリに反映する必要があります。|  
+|*[メトリックのルート]*|これは、いずれかの`AD7Metrics`または`AD7Metrics(Debug)`dbgmetric.lib のデバッグ バージョンを使用するかどうかに応じて、します。 **注:** デバッグとリリースの違いがある場合、この名前付け規則に従う必要があります dbgmetric.lib を使用すると、かどうかのバージョンをレジストリに反映する必要があります。|  
 |*[メトリックの種類]*|書き込まれるメトリックの種類: `Engine`、 `ExpressionEvaluator`、 `SymbolProvider`, などです。これらすべてとして dbgmetric.h のように定義されます`metricTypeXXXX`ここで、`XXXX`特定の種類の名前を指定します。|  
 |*[metric]*|メトリックを設定するために値を割り当てるためのエントリの名前。 メトリックの実際の組織は、メトリックの種類によって異なります。|  
 |*[メトリックの値]*|メトリックに割り当てられた値。 値は、(文字列、数値など) を持つ必要があります型は、メトリックによって異なります。|  
@@ -274,7 +275,7 @@ HRESULT EnumMetricSections(
 >  すべての Guid の形式で格納`{GUID}`です。 たとえば、`{123D150B-FA18-461C-B218-45B3E4589F9B}` のようにします。  
   
 ### <a name="debug-engines"></a>デバッグ エンジン  
- レジストリのデバッグ エンジンのメトリックの構成を次に示します。 `Engine` デバッグ エンジンのメトリックの種類の名前に対応する*[メトリックの種類]*上記のレジストリ サブツリーでします。  
+ レジストリのデバッグ エンジンのメトリックの構成を次に示します。 `Engine` デバッグ エンジンのメトリックの種類の名前に対応する *[メトリックの種類]* 上記のレジストリ サブツリーでします。  
   
  `Engine`\  
   
@@ -301,7 +302,7 @@ HRESULT EnumMetricSections(
 |*[ポートのサプライヤーの guid]*|存在する場合、ポート サプライヤーの GUID です。 多くのデバッグ エンジンは、既定ポート業者を使用し、独自の仕入先を指定しません。 この場合、サブキー`PortSupplier`は出力されません。|  
   
 ### <a name="port-suppliers"></a>ポートの仕入先  
- レジストリで、ポート供給業者のメトリックの組織を次に示します。 `PortSupplier` ポートのサプライヤーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリで、ポート供給業者のメトリックの組織を次に示します。 `PortSupplier` ポートのサプライヤーのメトリックの種類の名前に対応する *[メトリックの種類]* です。  
   
  `PortSupplier`\  
   
@@ -319,7 +320,7 @@ HRESULT EnumMetricSections(
 |*[クラス guid]*|このポート業者を実装するクラスの GUID|  
   
 ### <a name="symbol-providers"></a>プロバイダーのシンボル  
- レジストリでシンボル供給業者のメトリックの構成を次に示します。 `SymbolProvider` シンボルのプロバイダーのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリでシンボル供給業者のメトリックの構成を次に示します。 `SymbolProvider` シンボルのプロバイダーのメトリックの種類の名前に対応する *[メトリックの種類]* です。  
   
  `SymbolProvider`\  
   
@@ -347,7 +348,7 @@ HRESULT EnumMetricSections(
 |*[クラス guid]*|このシンボル プロバイダーを実装するクラスの GUID|  
   
 ### <a name="expression-evaluators"></a>式エバリュエーター  
- レジストリで、式エバリュエーターのメトリックの組織を次に示します。 `ExpressionEvaluator` 式エバリュエーターのメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリで、式エバリュエーターのメトリックの組織を次に示します。 `ExpressionEvaluator` 式エバリュエーターのメトリックの種類の名前に対応する *[メトリックの種類]* です。  
   
 > [!NOTE]
 >  指標の種類の`ExpressionEvaluator`式エバリュエーターのメトリックの変更がすべてが適切な式エバリュエーターのメトリック関数を介して送られることが前提として、dbgmetric.h で定義されていない (のレイアウト、`ExpressionEvaluator`サブキーがある程度複雑になり、dbgmetric.lib 内部に詳細が隠されたように) します。  
@@ -378,7 +379,7 @@ HRESULT EnumMetricSections(
 |*[デバッグ エンジン guid]*|この式エバリュエーターで動作するデバッグ エンジンの GUID|  
   
 ### <a name="expression-evaluator-extensions"></a>式エバリュエーターの拡張機能  
- 式エバリュエーター拡張子メトリックは、レジストリ内の組織を次に示します。 `EEExtensions` 指標の種類名、式エバリュエーターの拡張機能ありに対応しています*[メトリックの種類]*です。  
+ 式エバリュエーター拡張子メトリックは、レジストリ内の組織を次に示します。 `EEExtensions` 指標の種類名、式エバリュエーターの拡張機能ありに対応しています *[メトリックの種類]* です。  
   
  `EEExtensions`\  
   
@@ -393,7 +394,7 @@ HRESULT EnumMetricSections(
 |*[拡張機能の guid]*|式エバリュエーターの拡張機能の GUID|  
   
 ### <a name="exceptions"></a>例外  
- レジストリの例外のメトリックの構成を次に示します。 `Exception` 例外のメトリックの種類の名前に対応する*[メトリックの種類]*です。  
+ レジストリの例外のメトリックの構成を次に示します。 `Exception` 例外のメトリックの種類の名前に対応する *[メトリックの種類]* です。  
   
  `Exception`\  
   
@@ -420,7 +421,7 @@ HRESULT EnumMetricSections(
 |*[例外]*|例外の名前。 たとえば、 **_com_error**または**コントロール ブレーク**です。 これらの名前は、ユーザーに特定の例外を識別するも使われます。|  
   
 ## <a name="requirements"></a>要件  
- これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]*\Program Files\Microsoft Visual Studio 2010 SDK\\)。  
+ これらのファイルにある、 [!INCLUDE[vs_dev10_ext](../../../extensibility/debugger/reference/includes/vs_dev10_ext_md.md)] SDK のインストール ディレクトリ (既定では、 *[ドライブ]* \Program Files\Microsoft Visual Studio 2010 SDK\\)。  
   
  ヘッダー: includes\dbgmetric.h  
   

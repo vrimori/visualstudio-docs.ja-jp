@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462053"
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
 これらは、列挙体と DIA SDK によって使用される構造です。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140230"
 ---
 # <a name="test-area-6-delete"></a>テスト領域 6: 削除
 このソース管理プラグインのテストの領域では、削除の各操作について説明します。  

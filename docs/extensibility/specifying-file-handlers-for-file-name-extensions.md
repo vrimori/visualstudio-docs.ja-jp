@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140688"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>ファイル名拡張子のファイルのハンドラーを指定します。
 特定のファイル拡張子を持つファイルを処理するアプリケーションを判断する方法の数があります。 OpenWithList と OpenWithProgids 動詞とは、ファイルのファイル拡張子のレジストリ エントリのハンドラーを指定する方法は 2 つです。  

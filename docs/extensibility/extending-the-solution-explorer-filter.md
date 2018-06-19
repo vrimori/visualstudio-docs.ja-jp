@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135510"
 ---
 # <a name="extending-the-solution-explorer-filter"></a>ソリューション エクスプ ローラーのフィルターを拡張します。
 拡張できます**ソリューション エクスプ ローラー**別のファイルを非表示機能をフィルター処理します。 たとえば、c# クラス ファクトリ内のファイルだけを表示するフィルターを作成することができます、**ソリューション エクスプ ローラー**ように、このチュートリアルで説明します。  
