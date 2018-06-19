@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31559596"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>方法: エンド ユーザーがインストールを開始する場所を指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、ユーザーにアクセスする、アプリケーションをダウンロードしてインストール場所は必ずしもアプリケーションを最初に発行する場所です。 たとえば、組織によっては、開発者が、ステージング サーバーにアプリケーションを公開可能性があり、管理者は、アプリケーションを Web サーバーに移動し、します。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-specify-an-installation-url"></a>インストール URL を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **発行**タブをクリックします。  
   

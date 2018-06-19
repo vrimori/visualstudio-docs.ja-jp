@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448429"
 ---
 # <a name="get-started-programming-document-level-customizations-for-excel"></a>Excel 用ドキュメント レベルのカスタマイズのプログラミングを始める
   だけを開始する Visual Studio を使用して Microsoft Office Excel のドキュメント レベルのカスタマイズを作成する場合に、知っておく次に示します。  

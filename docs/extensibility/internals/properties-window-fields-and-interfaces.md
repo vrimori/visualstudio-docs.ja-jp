@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135723"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>プロパティ ウィンドウのフィールドとインターフェイス
 モデルの選択で表示される情報を決定する、**プロパティ**ウィンドウは IDE でフォーカスのあるウィンドウに基づきます。 すべてのウィンドウ、および選択した期間内のオブジェクトには、その選択コンテキスト オブジェクトのグローバルの選択コンテキストにプッシュされたことができます。 環境は、そのウィンドウにフォーカスがあるときに、ウィンドウ フレームの値を持つグローバルの選択コンテキストを更新します。 フォーカスが変更されたときにも選択コンテキスト。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/16/2018
 5.  `IConnection` 接続でのポイント サブオブジェクトへのアクセスを得るために呼び出すこともできます、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>各発信 IID のインターフェイスです。 を介して、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>インターフェイス、クライアントが起動または接続可能なオブジェクトとクライアント自身の同期のアドバイザリ ループを終了します。クライアントが呼び出すことも、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint>を持つ列挙子オブジェクトを取得するインターフェイス、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections>認識されるコネクションを列挙するインターフェイスです。  
   
 ## <a name="getting-field-descriptions-from-the-properties-window"></a> [プロパティ] ウィンドウからのフィールドの説明を取得します。
-**[プロパティ]** ウィンドウの下部にある説明領域に、選択したプロパティ フィールドに関連する情報が表示されます。 この機能は既定で有効になっています。 説明フィールドを非表示にするには、 **[プロパティ]** ウィンドウを右クリックし、 **[説明]**をクリックします。 これにより、メニュー ウィンドウの **[説明]** タイトルの横のチェック マークが削除されます。 同じ手順を行って **[説明]** の表示をオンに戻すことにより、フィールドを再度表示できます。  
+**[プロパティ]** ウィンドウの下部にある説明領域に、選択したプロパティ フィールドに関連する情報が表示されます。 この機能は既定で有効になっています。 説明フィールドを非表示にするには、 **[プロパティ]** ウィンドウを右クリックし、 **[説明]** をクリックします。 これにより、メニュー ウィンドウの **[説明]** タイトルの横のチェック マークが削除されます。 同じ手順を行って **[説明]** の表示をオンに戻すことにより、フィールドを再度表示できます。  
   
  説明フィールド内の情報に由来<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>です。 それぞれのメソッド、インターフェイス、コクラスなどには、タイプ ライブラリのローカライズされていない `helpstring` 属性を適用できます。 **プロパティ**ウィンドウから文字列を取得する<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A>です。  
   

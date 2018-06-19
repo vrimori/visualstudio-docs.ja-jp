@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479943"
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>方法 : セルフホストされている WCF サービスをデバッグする
 A*セルフホストされているサービス*する WCF サービスを IIS で WCF サービス ホスト内で実行されないのは、または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]開発サーバーです。 自己ホスト型 WCF をデバッグする最も簡単な方法を構成するのには、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を選択すると、クライアントとサーバーの両方を起動する**デバッグの開始**上、**デバッグ**メニュー。  
@@ -52,7 +53,7 @@ A*セルフホストされているサービス*する WCF サービスを IIS �
   
     5.  クライアント プロジェクトに対応する行をクリックして**アクション**選択**開始**です。  
   
-    6.  **[OK]**をクリックします。  
+    6.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
  [WCF サービスのデバッグ](../debugger/debugging-wcf-services.md)   

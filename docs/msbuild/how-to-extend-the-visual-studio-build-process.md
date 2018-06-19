@@ -20,6 +20,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31571862"
 ---
 # <a name="how-to-extend-the-visual-studio-build-process"></a>方法 : Visual Studio ビルド処理を拡張する
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理は、プロジェクト ファイルにインポートされる一連の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] .targets ファイルによって定義されます。 このインポートされるファイルの 1 つである Microsoft.Common.targets を拡張することで、ビルド処理の複数のポイントでカスタム タスクを実行できます。 このトピックでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ビルド処理を拡張するための 2 つの方法について説明します。  

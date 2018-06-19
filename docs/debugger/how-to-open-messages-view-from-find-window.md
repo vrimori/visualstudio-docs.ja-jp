@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473846"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>方法: [ウィンドウ検索] からメッセージ ビューを開く
 使用できると便利な場合があります、**ウィンドウ検索**を対象のウィンドウを選択し、そのウィンドウのメッセージ ビューを開く ダイアログ ボックス。  

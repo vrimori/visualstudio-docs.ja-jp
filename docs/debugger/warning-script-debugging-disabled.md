@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476794"
 ---
 # <a name="warning-script-debugging-disabled"></a>警告 : スクリプト デバッグが無効
 Internet Explorer では、スクリプトのデバッグは現在無効になっています。  
@@ -38,7 +39,7 @@ Internet Explorer では、スクリプトのデバッグは現在無効にな�
   
 4.  クリア**スクリプト (Internet Explorer) のデバッグを無効にする**です。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  Internet Explorer を終了して再起動します。  
   

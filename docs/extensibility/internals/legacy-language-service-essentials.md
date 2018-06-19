@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135446"
 ---
 # <a name="legacy-language-service-essentials"></a>レガシ言語サービス Essentials
 Visual Studio のプログラミング言語に統合する言語サービスを提供する必要があります。 このトピックでは、従来の言語サービスで使用できる機能について説明します。  
@@ -46,5 +47,5 @@ Visual Studio のプログラミング言語に統合する言語サービスを
   
 |機能|説明|  
 |-------------|-----------------|  
-|式エバリュエーター|では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]に表示するブレークポイントを検証し、式のリストを指定することによってデバッガー、 **[自動変数]**デバッグ ウィンドウです。<br /><br /> 詳細については、次を参照してください。[をデバッグ用の言語サービス サポート](../../extensibility/internals/language-service-support-for-debugging.md)です。|  
+|式エバリュエーター|では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]に表示するブレークポイントを検証し、式のリストを指定することによってデバッガー、 **[自動変数]** デバッグ ウィンドウです。<br /><br /> 詳細については、次を参照してください。[をデバッグ用の言語サービス サポート](../../extensibility/internals/language-service-support-for-debugging.md)です。|  
 |シンボル参照のツール|サポート**オブジェクト ブラウザー**、**クラス ビュー**、**呼び出しブラウザー**、および**シンボルの検索結果**です。|

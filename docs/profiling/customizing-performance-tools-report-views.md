@@ -18,6 +18,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263966"
 ---
 # <a name="customize-performance-tools-report-views"></a>パフォーマンス ツール のレポート ビューのカスタマイズ
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールで生成されたレポートのカスタマイズ方法について説明します。  

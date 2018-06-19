@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481477"
 ---
 # <a name="stale-code-warning-dialog-box"></a>[古いコードの警告] ダイアログ ボックス
 このダイアログ ボックスが表示されますが完了したらネイティブへの変更のコードを**エディット コンティニュ**すぐには適用できませんでした。 結果として、現在のスタック フレーム内の一部のネイティブ コードが最新でない (陳腐化している) 場合があります。 詳細については、次を参照してください。[する方法: 古いコードを操作](http://msdn.microsoft.com/en-us/c7536e95-66a6-44a0-995d-3fe5035250b4)です。  

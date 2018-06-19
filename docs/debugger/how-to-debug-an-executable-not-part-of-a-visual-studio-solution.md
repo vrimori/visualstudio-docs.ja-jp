@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476248"
 ---
 # <a name="how-to-debug-an-executable-that-is-not-part-of-a-visual-studio-solution"></a>方法: Visual Studio ソリューションの一部ではない実行可能ファイルのデバッグ
 実行可能ファイル (.exe ファイル) ではないをデバッグする場合もありますの一部、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部で作成された実行可能ファイルや、他の人から受け取った実行可能ファイルなどがその例です。  
@@ -61,7 +62,7 @@ Visual Studio ソリューションの一部ではない実行可能ファイル
   
 3.  目的の実行可能ファイルを見つけ、選択します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  などの実行コマンドを選択して、実行可能ファイルを開始します。**開始**、から、**デバッグ**メニュー。    
   

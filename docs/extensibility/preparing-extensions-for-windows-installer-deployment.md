@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136327"
 ---
 # <a name="preparing-extensions-for-windows-installer-deployment"></a>Windows インストーラーの配置の拡張機能の準備
 Windows インストーラー パッケージ (MSI) を使用して、VSIX パッケージを配置することはできません。 ただし、MSI 展開用の VSIX パッケージの内容を抽出することができます。 このドキュメントが既定の出力はセットアップ プロジェクトに含めるのための VSIX パッケージ プロジェクトを準備する方法を示します。  

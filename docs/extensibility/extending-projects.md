@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126797"
 ---
 # <a name="extending-projects"></a>プロジェクトの拡張
 プロジェクトおよびソリューションは、Visual Studio コードおよびリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細についてを見つけることができます[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)です。  

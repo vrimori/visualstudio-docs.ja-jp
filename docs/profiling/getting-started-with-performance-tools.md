@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31576444"
 ---
 # <a name="getting-started-with-performance-tools"></a>パフォーマンス ツールの概要
 ここでは、Visual Studio パフォーマンス ツールを使用してコード パフォーマンスの収集、表示、および分析を行うときに適用する概念とタスクの概要を説明します。  

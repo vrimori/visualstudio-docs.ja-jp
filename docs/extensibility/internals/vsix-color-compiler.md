@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144331"
 ---
 # <a name="vsix-color-compiler"></a>VSIX カラー コンパイラ
 Visual Studio 拡張機能カラー コンパイラ ツールは、コンソール アプリケーションを既存の Visual Studio のテーマの色を表す .xml ファイルを受け取ると、.pkgdef にファイルの Visual Studio でそれらの色を使用できるようにする変換です。 .Xml ファイルの間の違いを比較する簡単なので、このツールは、ソース管理でカスタムの色を管理するのに役立ちます。 これもにフックできます。 ビルド環境、ビルドの出力が有効な .pkgdef ファイルようにします。  
@@ -110,7 +111,7 @@ Visual Studio 拡張機能カラー コンパイラ ツールは、コンソー�
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|型|[必須]色の種類。 次のいずれかを指定できます。<br /><br /> *CT_INVALID:*色は無効であるか設定されていません。<br /><br /> *CT_RAW:*生 ARGB 値。<br /><br /> *CT_COLORINDEX:*使用しないでください。<br /><br /> *CT_SYSCOLOR:* SysColor から Windows のシステム カラーです。<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX から Visual Studio の色。<br /><br /> *CT_AUTOMATIC:*自動の色。<br /><br /> *CT_TRACK_FOREGROUND:*使用しないでください。<br /><br /> *CT_TRACK_BACKGROUND:*使用しないでください。|  
+|型|[必須]色の種類。 次のいずれかを指定できます。<br /><br /> *CT_INVALID:* 色は無効であるか設定されていません。<br /><br /> *CT_RAW:* 生 ARGB 値。<br /><br /> *CT_COLORINDEX:* 使用しないでください。<br /><br /> *CT_SYSCOLOR:* SysColor から Windows のシステム カラーです。<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX から Visual Studio の色。<br /><br /> *CT_AUTOMATIC:* 自動の色。<br /><br /> *CT_TRACK_FOREGROUND:* 使用しないでください。<br /><br /> *CT_TRACK_BACKGROUND:* 使用しないでください。|  
 |ソース|[必須]16 進数で表される色の値|  
   
  __VSCOLORTYPE 列挙体によってサポートされているすべての値は、型の属性のスキーマによってサポートされます。 ただし、CT_RAW と CT_SYSCOLOR のみを使用することをお勧めします。  

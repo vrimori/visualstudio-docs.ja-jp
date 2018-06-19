@@ -21,6 +21,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548815"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>方法: カスタム作業ウィンドウをアプリケーションに追加します。
   VSTO アドインを使用して、上記にリストしたアプリケーションにカスタム作業ウィンドウを追加できます。 詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  

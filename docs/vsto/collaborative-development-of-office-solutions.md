@@ -23,6 +23,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34267777"
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office ソリューションの共同開発
   複数の開発者は、その他の Visual Studio プロジェクトで共同作業すると同じ方法で Office プロジェクトで作業できます。 Visual Studio は、別の場所で Office がインストールされている場合でも、各コンピューターに Microsoft Office のインストールを正しく検索します。 ただし、これには注意すべき重要な考慮事項があります。  

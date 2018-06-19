@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481230"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>トリガーする方法を中断、再開、および Visual Studio での UWP アプリのデバッグ中にバック グラウンド イベント
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
@@ -70,13 +71,13 @@ ms.lasthandoff: 04/18/2018
   
 1.  デバッグするバックグラウンド タスク コードの中にブレークポイントを設定します。  
   
-2.  スタートアップ プロジェクトのデバッグ プロパティ ページを開きます。 ソリューション エクスプローラーでプロジェクトを選択します。 **[デバッグ]** メニューの **[プロパティ]**をクリックします。  
+2.  スタートアップ プロジェクトのデバッグ プロパティ ページを開きます。 ソリューション エクスプローラーでプロジェクトを選択します。 **[デバッグ]** メニューの **[プロパティ]** をクリックします。  
   
      C++ と JavaScript のプロジェクト展開**構成プロパティ**を選択し**デバッグ**です。  
   
 3.  次のいずれかの操作を行います。  
   
-    -   Visual C# プロジェクトと Visual Basic プロジェクトの場合は、 **[起動しないが、開始時にコードをデバッグ]**をクリックします。  
+    -   Visual C# プロジェクトと Visual Basic プロジェクトの場合は、 **[起動しないが、開始時にコードをデバッグ]** をクリックします。  
   
          ![C&#35;&#47;VB のデバッグ起動アプリケーション プロパティ](../debugger/media/dbg_csvb_dontlaunchapp.png "DBG_CsVb_DontLaunchApp")  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/18/2018
   
 2.  **操作** ウィンドウで、 **[表示]** をクリックし、 **[分析およびデバッグ ログの表示]** がオンになっていることを確認します。  
   
-3.  **イベント ビューアー (ローカル)**ツリーでノードを展開して、 **Applications and Services Logs** > **Microsoft** > **Windows**  >  **[Backgroundtasksinfrastructure]**です。  
+3.  **イベント ビューアー (ローカル)** ツリーでノードを展開して、 **Applications and Services Logs** > **Microsoft** > **Windows**  >  **[Backgroundtasksinfrastructure]** です。  
   
 4.  **診断** ログを選択します。  
   

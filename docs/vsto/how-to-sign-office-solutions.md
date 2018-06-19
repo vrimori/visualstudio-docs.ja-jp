@@ -22,6 +22,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262192"
 ---
 # <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションの署名
   ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用してによる追加のセキュリティ ポリシー更新のないすべてのソリューションが信頼されます。  

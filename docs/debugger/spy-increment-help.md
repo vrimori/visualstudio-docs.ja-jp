@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476606"
 ---
 # <a name="spy-help"></a>Spy++ ヘルプ
 Spy++ ユーティリティのドキュメントには、一般的なトピックを使用して spy++ と spy++ ビューでの 2 つのグループが含まれています。 これらが各利用可能なメニュー コマンドやダイアログ ボックスで詳細をさらには、spy++ リファレンス続きます。  

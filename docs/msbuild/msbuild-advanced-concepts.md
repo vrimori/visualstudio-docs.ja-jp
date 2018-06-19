@@ -17,6 +17,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578823"
 ---
 # <a name="msbuild-advanced-concepts"></a>MSBuild の詳細な概念
 このセクションのドキュメントでは、MSBuild を使用して実行するビルドを向上させる高度なテクニックの使用方法について説明します。  
