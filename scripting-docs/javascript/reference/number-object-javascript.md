@@ -1,13 +1,13 @@
 ---
-title: "Number オブジェクト (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Number オブジェクト (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Number_JavaScript
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - Number object
 ms.assetid: 76e87c37-cf6c-46cc-bafa-04be1fe3d78d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641672"
 ---
 # <a name="number-object-javascript"></a>Number オブジェクト (JavaScript)
 任意の種類の数値を表すオブジェクト。 JavaScript のすべての数値は、64 ビットの浮動小数点数です。  

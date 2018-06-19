@@ -1,11 +1,11 @@
 ---
-title: "DebugPropertyInfo 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: DebugPropertyInfo 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - DebugPropertyInfo
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - DebugPropertyInfo structure
 ms.assetid: 3246efbc-c212-4024-8f07-6414c2f85e75
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640812"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo 構造体
 名前、型、および値を持つ階層的な性質のオブジェクトについて説明します。 ローカル変数やパラメーター、変数のウォッチ式のデバッグ プロパティを表すために使用し、登録します。  

@@ -1,13 +1,13 @@
 ---
-title: "shift メソッド (Array) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: shift メソッド (Array) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - shift
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - shift method
 ms.assetid: f33baec5-f67e-4760-b7c1-553727bd0423
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24639382"
 ---
 # <a name="shift-method-array-javascript"></a>shift メソッド (Array) (JavaScript)
 配列の先頭の要素を削除し、削除した要素を返します。  

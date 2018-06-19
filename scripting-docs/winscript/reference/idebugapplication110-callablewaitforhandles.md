@@ -1,16 +1,16 @@
 ---
-title: "IDebugApplication110::CallableWaitForHandles |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugApplication110::CallableWaitForHandles |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugApplication110::CallableWaitForHandles
 ms.assetid: 02e79b60-0d67-47f9-bf78-b65a02c9c014
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24725352"
 ---
 # <a name="idebugapplication110callablewaitforhandles"></a>IDebugApplication110::CallableWaitForHandles
 シグナル状態になる一方で指定したハンドルのいずれかの待機スレッド間の呼び出しに、このスレッドに通知されます。 このメソッドは、デバッガー スレッドから呼び出す必要があります。  

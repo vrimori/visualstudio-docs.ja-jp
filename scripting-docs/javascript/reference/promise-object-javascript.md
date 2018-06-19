@@ -1,19 +1,20 @@
 ---
-title: "Promise オブジェクト (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: Promise オブジェクト (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: 358ad98b-f7fa-448c-9ee0-ef1e2a45e9c6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640632"
 ---
 # <a name="promise-object-javascript"></a>Promise オブジェクト (JavaScript)
 まだ計算されていない値に対して作業が完了するようにスケジューリングするメカニズムを提供します。 これは、非同期 API との対話を管理するための抽象化です。  

@@ -1,16 +1,16 @@
 ---
-title: "IDebugDocumentText インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugDocumentText インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentText interface
 ms.assetid: 242bad79-9c0a-4a30-879a-9f43db4e022b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24727952"
 ---
 # <a name="idebugdocumenttext-interface"></a>IDebugDocumentText インターフェイス
 デバッグのドキュメントのテキストのみのバージョンへのアクセスを提供します。 このインターフェイスは、次の規則を使用します。  

@@ -1,13 +1,13 @@
 ---
-title: "unescape 関数 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: unescape 関数 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - unescape
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - Unescape method
 ms.assetid: 4adf0270-88b5-4d54-8110-d879d6ae97c2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641402"
 ---
 # <a name="unescape-function-javascript"></a>unescape 関数 (JavaScript)
 デコード`String`でエンコードされたオブジェクト、`escape`関数。 使用しないでください。  
@@ -42,7 +43,7 @@ unescape(charString)
   
  `unescape`関数の内容を含む文字列値を返します`charstring`です。 % でエンコードされた文字をすべて*xx* 16 進数形式が ASCII 文字セット値で置き換えられます。  
   
- エンコードされた文字**%u** *xxxx* (Unicode 文字) の形式は 16 進エンコードを使用して Unicode 文字に置き換えられます*xxxx*です。  
+ エンコードされた文字 **%u** *xxxx* (Unicode 文字) の形式は 16 進エンコードを使用して Unicode 文字に置き換えられます*xxxx*です。  
   
 > [!NOTE]
 >  `unescape` Uniform Resource Identifier (URI) をデコードする関数を使用する必要があります。 使用して`decodeURI`と`decodeURIComponent`代わりに機能します。  

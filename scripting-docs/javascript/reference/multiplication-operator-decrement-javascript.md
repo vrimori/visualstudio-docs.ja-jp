@@ -1,13 +1,13 @@
 ---
-title: "乗算演算子 (*) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: 乗算演算子 (*) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '*'
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - multiplication operator
 - Math object
 ms.assetid: dd88bcfd-aca5-412a-8f51-bb1bec198136
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24638402"
 ---
 # <a name="multiplication-operator--javascript"></a>乗算演算子 (*) (JavaScript)
 2 つの式の値を乗算します。  

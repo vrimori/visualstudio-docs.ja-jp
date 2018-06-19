@@ -25,6 +25,7 @@ ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2018
+ms.locfileid: "29753285"
 ---
 # <a name="javascript-operators"></a>JavaScript の演算子
 次の表に [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 演算子を示します。  

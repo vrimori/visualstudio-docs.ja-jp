@@ -1,13 +1,13 @@
 ---
-title: "比較演算子 (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: 比較演算子 (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Comparison
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - inequity operator
 - identity operator
 ms.assetid: 084f90f0-d010-47cf-96dd-13d637fc9b68
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -32,6 +32,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24634202"
 ---
 # <a name="comparison-operators-javascript"></a>比較演算子 (JavaScript)
 比較の結果を示すブール値を返します。  

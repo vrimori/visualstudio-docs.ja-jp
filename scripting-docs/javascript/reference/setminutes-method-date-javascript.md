@@ -1,13 +1,13 @@
 ---
-title: "setMinutes メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: setMinutes メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - setMinutes
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - minutes
 - setMinutes method
 ms.assetid: 34c959cd-cd29-4cee-8e04-9061cf6d42f3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641192"
 ---
 # <a name="setminutes-method-date-javascript"></a>setMinutes メソッド (Date) (JavaScript)
 分の値を設定、**日付**オブジェクトのローカル時刻を使用します。  
@@ -57,7 +58,7 @@ dateObj.setMinutes(numMinutes[, numSeconds[, numMilli]])
   
  世界協定時刻 (UTC) を使用して分の値を設定するには、使用、`setUTCMinutes`メソッドです。  
   
- 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納される他の値が変更されます。 たとえば、格納されている日付"1996 年 1 月 5 日 00時 00分: 00"と**setMinutes(90)**が呼び出されると、日付を変更する"1996 年 1 月 5 日 1時 30分: 00 です"。 負の数値では、同様の動作があります。  
+ 引数に有効範囲を超える値や負の値を指定すると、値に応じて格納される他の値が変更されます。 たとえば、格納されている日付"1996 年 1 月 5 日 00時 00分: 00"と**setMinutes(90)** が呼び出されると、日付を変更する"1996 年 1 月 5 日 1時 30分: 00 です"。 負の数値では、同様の動作があります。  
   
 ## <a name="example"></a>例  
  `setMinutes` メソッドの使用例を次に示します。  

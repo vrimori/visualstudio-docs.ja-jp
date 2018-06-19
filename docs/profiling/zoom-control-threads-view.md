@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447883"
 ---
 # <a name="zoom-control-threads-view"></a>ズーム コントロール (スレッド ビュー)
 ズーム コントロールは、タイムラインの表示を拡大縮小するのに役立つスライダーです。このコントロールを使用して、興味のある領域を集中的に見ることができます。 このコントロールではタイムライン ビューの中央が拡大の中心点になるため、拡大する前に、対象となる領域が中央に置かれるように調整してください。  

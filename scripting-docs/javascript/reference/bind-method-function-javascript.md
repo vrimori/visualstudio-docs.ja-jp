@@ -1,12 +1,13 @@
 ---
-title: "bind メソッド (Function) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: bind メソッド (Function) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -18,7 +19,7 @@ helpviewer_keywords:
 - bind method [JavaScript]
 - this keyword [JavaScript], bind method
 ms.assetid: 28946f47-b758-48cf-b508-610a0f2f6e19
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24634312"
 ---
 # <a name="bind-method-function-javascript"></a>bind メソッド (Function) (JavaScript)
 指定された関数に対して、元の関数と同じ本体を持つ、バインディングされた関数を作成します。 バインディングされた関数では、`this` オブジェクトは、渡されたオブジェクトに解決します。 バインディングされた関数には、指定された初期パラメーターがあります。  

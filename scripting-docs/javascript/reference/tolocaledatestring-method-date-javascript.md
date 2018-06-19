@@ -1,13 +1,13 @@
 ---
-title: "toLocaleDateString メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: toLocaleDateString メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - toLocaleDateString
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - toLocaleDateString method
 ms.assetid: 0b83715c-8ced-4bd7-8940-a8007d002d10
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641282"
 ---
 # <a name="tolocaledatestring-method-date-javascript"></a>toLocaleDateString メソッド (Date) (JavaScript)
 ホスト環境の現在のロケールまたは指定されたロケールに対応した日付を文字列値で返します。  

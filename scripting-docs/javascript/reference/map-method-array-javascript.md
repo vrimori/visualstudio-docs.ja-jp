@@ -1,12 +1,13 @@
 ---
-title: "map メソッド (Array) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: map メソッド (Array) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -16,7 +17,7 @@ helpviewer_keywords:
 - map method [JavaScript]
 - arrays [JavaScript], map method
 ms.assetid: 500dc4f8-d73d-4a28-a5b8-c9bd5674ea36
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +26,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640842"
 ---
 # <a name="map-method-array-javascript"></a>map メソッド (Array) (JavaScript)
 定義されたコールバック関数を配列の各要素に対して呼び出し、結果を含む配列を返します。  

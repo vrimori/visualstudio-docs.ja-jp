@@ -1,16 +1,16 @@
 ---
-title: "IActiveScriptDebug インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScriptDebug インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IActiveScriptDebug interface
 ms.assetid: e3e28cba-ee08-4a52-973a-b74be488c348
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24645822"
 ---
 # <a name="iactivescriptdebug-interface"></a>IActiveScriptDebug インターフェイス
 デバッグをサポートするスクリプト エンジンによって実装されます。 通常を実装するオブジェクト、`IActiveScriptDebug`インターフェイスも実装して、`IActiveScript`インターフェイスです。 大文字と小文字の場合は、呼び出し、`IActiveScript::QueryInterface`を取得するメソッド、`IActiveScriptDebug`インターフェイスです。  

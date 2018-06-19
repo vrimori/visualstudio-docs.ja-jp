@@ -1,13 +1,13 @@
 ---
-title: "ビット演算子 OR 代入演算子 (| =) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: ビット演算子 OR 代入演算子 (| =) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '|='
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - bitwise operators, OR operator
 - OR operator
 ms.assetid: 9b424ff6-4442-4621-b3b6-83e7fd1e5cd5
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -30,6 +30,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633892"
 ---
 # <a name="bitwise-or-assignment-operator--javascript"></a>ビットごとの OR 代入演算子 (|=) (JavaScript)
 変数の値と式の値に対してビットごとの OR を実行し、その結果を変数に代入します。  
@@ -55,7 +56,7 @@ result |= expression
 result = result | expression  
 ```  
   
- **&#124; =**演算子の値のバイナリ表現を見ます*結果*と*式*にビットごとの OR 演算の場合は。 この操作の結果は、次のように動作します。  
+ **&#124; =** 演算子の値のバイナリ表現を見ます*結果*と*式*にビットごとの OR 演算の場合は。 この操作の結果は、次のように動作します。  
   
 ```JavaScript  
 0101    (result)  

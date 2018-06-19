@@ -1,13 +1,13 @@
 ---
-title: "join メソッド (Array) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: join メソッド (Array) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - join
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - concatenating strings, join method
 - arrays [Visual Studio], joining
 ms.assetid: 20f8fde1-014b-488e-9008-464a86e6b21f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24637612"
 ---
 # <a name="join-method-array-javascript"></a>join メソッド (Array) (JavaScript)
 指定した区切り記号で区切られた配列のすべての要素を追加します。  

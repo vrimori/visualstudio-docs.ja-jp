@@ -1,13 +1,13 @@
 ---
-title: "setMonth メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: setMonth メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - setMonth
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Month method
 - setMonth method
 ms.assetid: 4f5be295-d536-46c0-b3a4-ad06457efe82
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640262"
 ---
 # <a name="setmonth-method-date-javascript"></a>setMonth メソッド (Date) (JavaScript)
 月の値の設定、`Date`オブジェクトのローカル時刻を使用します。  
@@ -52,7 +53,7 @@ dateObj. setMonth(numMonth[, dateVal])
 ## <a name="remarks"></a>コメント  
  世界協定時刻 (UTC) を使用して月の値を設定するには、使用、`setUTCMonth`メソッドです。  
   
- 場合の値`numMonth`11 より大きい (1 月は 0) または負の値が格納されている年が変更されます。 たとえば、格納されている日付は、「Jan 5, 1996"と**setMonth(14)**が呼び出されると、日付が"1997 年 3 月 5 日です"に変更されます  
+ 場合の値`numMonth`11 より大きい (1 月は 0) または負の値が格納されている年が変更されます。 たとえば、格納されている日付は、「Jan 5, 1996"と**setMonth(14)** が呼び出されると、日付が"1997 年 3 月 5 日です"に変更されます  
   
  **SetFullYear**メソッドは、年、月、および月の日を設定するために使用できます。  
   

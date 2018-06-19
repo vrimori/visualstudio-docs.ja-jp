@@ -1,13 +1,13 @@
 ---
-title: "toUpperCase メソッド (String) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: toUpperCase メソッド (String) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - toUpperCase
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - toUpperCase method
 ms.assetid: 4fd4ccc3-e794-498a-9db1-baf48fc1dda1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640662"
 ---
 # <a name="touppercase-method-string-javascript"></a>toUpperCase メソッド (String) (JavaScript)
 文字列内のすべての英字を大文字に変換します。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2018
+ms.locfileid: "29753498"
 ---
 # <a name="javascript-version-information"></a>JavaScript のバージョン情報
 JavaScript のバージョンごとに、サポートされている JavaScript 要素は異なります。 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリがサポートしている機能は、Internet Explorer とはわずかに異なります。  

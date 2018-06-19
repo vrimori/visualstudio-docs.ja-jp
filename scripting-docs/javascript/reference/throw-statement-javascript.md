@@ -1,13 +1,13 @@
 ---
-title: "throw ステートメント (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: throw ステートメント (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - throw_JavaScriptKeyword
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - error handling, throw statement
 - throw statement
 ms.assetid: 75cbade0-fb81-4ffe-b187-b71be380bb05
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -28,6 +28,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24639592"
 ---
 # <a name="throw-statement-javascript"></a>throw ステートメント (JavaScript)
 処理できるエラー条件を生成、`try...catch...finally`ステートメントです。  

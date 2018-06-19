@@ -1,13 +1,13 @@
 ---
-title: "setUTCFullYear メソッド (Date) (JavaScript) |Microsoft ドキュメント"
-ms.custom: 
+title: setUTCFullYear メソッド (Date) (JavaScript) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - setUTCFullYear
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - setUTCFullYear method
 - UTC dates, setting
 ms.assetid: e6c51b49-0149-4f9a-aa74-c73c0306f98e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -29,6 +29,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640992"
 ---
 # <a name="setutcfullyear-method-date-javascript"></a>setUTCFullYear メソッド (Date) (JavaScript)
 年の値を設定、`Date`オブジェクト世界協定時刻 (UTC) を使用します。  

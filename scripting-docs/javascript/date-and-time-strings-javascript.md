@@ -1,19 +1,20 @@
 ---
-title: "日付と時刻文字列 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 日付と時刻文字列 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
 - TypeScript
 - DHTML
 ms.assetid: ba0798c5-3574-4434-89f4-3d90be276001
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -22,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569642"
 ---
 # <a name="date-and-time-strings-javascript"></a>日付と時刻文字列 (JavaScript)
 JavaScript の日付と時刻文字列を指定し、書式設定するには、いくつかの方法があります。  

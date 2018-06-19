@@ -1,13 +1,13 @@
 ---
-title: "IActiveScriptParse32::ParseScriptText |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScriptParse32::ParseScriptText |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33e454c-69d8-4cab-9150-d1e7fd04786d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 ms.openlocfilehash: af1e3b6723b402263359719695aa1f57432c76e2
@@ -15,6 +15,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24724822"
 ---
 # <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
 指定したコード スクリプトレットを解析することで、宣言を名前空間に追加し、必要に応じてコードを評価します。  
