@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio サブスクリプション"
+title: Visual Studio サブスクリプション
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29795319"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio サブスクリプション
 Visual Studio サブスクリプションは、Windows、iOS、Android、Linux など、お好みのプラットフォームとデバイス上で優れたアプリケーションを作成、展開、管理するための包括的なリソース セットです。  サブスクリプションの特典には、開発ツール、クラウドのサービスとソフトウェア、トレーニングの利用が含まれ、開発およびテストのサポートも含まれます。

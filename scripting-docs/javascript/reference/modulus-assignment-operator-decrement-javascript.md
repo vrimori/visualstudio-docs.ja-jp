@@ -29,6 +29,7 @@ ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2018
+ms.locfileid: "29753524"
 ---
 # <a name="remainder-assignment-operator--javascript"></a>剰余代入演算子 (JavaScript)
 変数の値を式で指定された値で除算し、その剰余を変数に代入します。  

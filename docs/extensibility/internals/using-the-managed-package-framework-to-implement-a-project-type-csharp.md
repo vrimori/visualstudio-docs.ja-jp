@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140204"
 ---
 # <a name="using-the-managed-package-framework-to-implement-a-project-type-c"></a>Managed Package Framework を使用して、プロジェクトの種類 (c#) を実装するには
 Managed Package Framework (MPF) は、c# クラスを使用するか、独自のプロジェクトの種類を実装する継承を提供します。 MPF は、維持、プロジェクトの種類の詳細を実装することに専念する多くの Visual Studio でプロジェクトの種類を指定するインターフェイスを実装します。  

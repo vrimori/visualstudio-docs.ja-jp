@@ -27,6 +27,7 @@ ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/15/2018
+ms.locfileid: "29899631"
 ---
 # <a name="typeof-operator-javascript"></a>typeof 演算子 (JavaScript)
 式のデータ型を識別する文字列を返します。  

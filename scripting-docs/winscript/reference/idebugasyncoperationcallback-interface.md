@@ -1,16 +1,16 @@
 ---
-title: "IDebugAsyncOperationCallBack インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugAsyncOperationCallBack インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugAsyncOperationCallBack interface
 ms.assetid: ccbe12fe-2aac-4d9f-9e70-601003f1a34d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24726442"
 ---
 # <a name="idebugasyncoperationcallback-interface"></a>IDebugAsyncOperationCallBack インターフェイス
 進行状況に関連するステータス イベントを提供する`IDebugAsyncOperation`評価のインターフェイスです。  

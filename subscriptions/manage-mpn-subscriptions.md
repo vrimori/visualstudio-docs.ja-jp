@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2018
+ms.locfileid: "30862771"
 ---
 # <a name="managing-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) で提供されている Visual Studio サブスクリプションの管理
 
@@ -27,10 +28,10 @@ MPN でコンピテンシーを取得するか、Action Pack を購入したパ�
 Microsoft Action Pack サブスクライバーと Visual Studio サブスクリプション
 
 1. プログラム管理者が Partner Membership Center にログインします。
-2. **[Requirements and Assets]\(要件と資産\)**を通じてユーザーを関連付けます。
+2. **[Requirements and Assets]\(要件と資産\)** を通じてユーザーを関連付けます。
 3. 個人を特定し、**ロールを割り当て**ます。
 4. 1 番目、2 番目、3 番目の**技術担当者**を選び、**保存**します。
-5. **[実績と必要要件]**を選びます。
+5. **[実績と必要要件]** を選びます。
 6. **[アクセス許可]** を選びます。
 7. **[Visual Studio サブスクリプション]** を選びます (注: 保留中の Visual Studio サブスクリプションの更新プログラム)
 8. 目的の**個人**を選びます。
@@ -45,7 +46,7 @@ Microsoft Action Pack サブスクライバーと Visual Studio サブスクリ�
 
 
 ### <a name="competency-partners"></a>コンピテンシー パートナー
-1. **[実績と必要要件]**を選びます。
+1. **[実績と必要要件]** を選びます。
 2. **[アクセス許可]** を選びます。
 3. **[MSDN サブスクリプション]** を選びます (注: これは近々 "Visual Studio サブスクリプション" に変更されます)。
 4. 目的の**個人**を見つけます。

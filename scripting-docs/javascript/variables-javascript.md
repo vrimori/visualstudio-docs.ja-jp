@@ -26,6 +26,7 @@ ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/03/2018
+ms.locfileid: "30307270"
 ---
 # <a name="variables-javascript"></a>変数 (JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] では、変数に "hello" や 5 などの値が含まれています。 変数を使用して、`NumberOfDaysLeft = EndDate - TodaysDate` など、それが表すデータを参照します。  

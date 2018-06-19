@@ -1,8 +1,8 @@
 ---
 layout: LandingPage
-title: "Visual Studio でのバージョン コントロール | VSTS & TFS"
-description: "Viual Studio でのバージョン コントロール概要ガイド"
-keywords: "VSTS, TFS, バージョン コントロール"
+title: Visual Studio でのバージョン コントロール | VSTS & TFS
+description: Viual Studio でのバージョン コントロール概要ガイド
+keywords: VSTS, TFS, バージョン コントロール
 author: steved0x
 ms.manager: douge
 ms.author: sdanie
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29795353"
 ---
 # <a name="version-control-in-visual-studio"></a>Visual Studio でのバージョン コントロール
 
