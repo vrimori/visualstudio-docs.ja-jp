@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c10695eacdf680d247be8ef95ae14c3208ae92af
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ee31b1547f9607f54cc5db9d056b997f071633ff
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691588"
 ---
 # <a name="cores-view-legend"></a>コア ビューの凡例
 コア ビューの凡例では、各スレッドが色と名前で示されます。 クロスコアのコンテキスト スイッチの回数、コンテキスト スイッチの合計回数、クロスコアのコンテキスト スイッチの割合を示す列が含まれます。 凡例の行は、クロスコアのコンテキスト スイッチの回数が多い順に並べられています。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 04/19/2018
 |合計コンテキスト スイッチ数|サンプリング期間中に特定のスレッドでのコンテキスト スイッチの合計回数。 スレッドのコンテキストが変わるたびに (たとえば、実行から同期に)、コンテキスト スイッチが 1 回カウントされます。|  
 |クロス コアのコンテキスト スイッチの割合|クロスコア コンテキスト スイッチの回数をコンテキスト スイッチの合計回数で割った割合として計算されます。 この割合が高いほど、この特定のスレッドのパフォーマンスに対するクロスコア コンテキスト スイッチのオーバーヘッドの全体的な影響が大きくなります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア ビュー](../profiling/cores-view.md)

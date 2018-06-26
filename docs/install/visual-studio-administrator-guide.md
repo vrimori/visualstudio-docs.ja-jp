@@ -2,7 +2,7 @@
 title: Visual Studio 管理者ガイド
 description: エンタープライズ環境で Visual Studio を展開する方法について説明します。
 ms.custom: ''
-ms.date: 05/15/2017
+ms.date: 05/29/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -16,17 +16,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39d9c6c3c63fe1c601a307ff006858a64db56c83
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0436612d208fa4ffbcc808007849b5d168b049da
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691119"
 ---
 # <a name="visual-studio-2017-administrator-guide"></a>Visual Studio 2017 管理者ガイド
 
 エンタープライズ環境では、エンドユーザーにネットワーク共有またはシステム管理ソフトウェアを使用してインストールを配置することが、システム管理者にとって一般的です。 エンタープライズ展開をサポートするために、Visual Studio セットアップ エンジンを設計しました。これは、インストールの既定値を事前に構成し、インストール プロセス中にプロダクト キーを展開し、ロールアウトが成功した後に製品の更新プログラムを管理するために、システム管理者がネットワーク インストールの場所を作成できるようにします。 この管理者ガイドでは、ネットワーク環境でエンタープライズ展開を行うためのシナリオ ベースのガイダンスを示します。
 
-## <a name="deploying-visual-studio-2017-in-an-enterprise-environment"></a>エンタープライズ環境で Visual Studio 2017 を配置する
+## <a name="deploy-visual-studio-2017-in-an-enterprise-environment"></a>エンタープライズ環境で Visual Studio 2017 を配置する
 
 Visual Studio 2017 をクライアント ワークステーションに配置するには、インストール対象となる各コンピューターが[最小インストール要件](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)を満たしている必要があります。 System Center などのソフトウェアから配置するか、バッチ ファイルから配置するかにかかわらず、一般的に次の手順に従って進めます。
 
@@ -49,12 +50,26 @@ Visual Studio 2017 をクライアント ワークステーションに配置す
 > [!IMPORTANT]
 > ネットワーク共有からのインストールは、出所のソースの場所を "記憶" します。 これは、クライアント マシンの修復に、クライアントのインストール元のネットワーク共有に戻る必要があることを意味します。 ネットワークの場所は、Visual Studio 2017 クライアントが組織で実行されると予想される有効期間に合わせて配置されるよう慎重に選択してください。
 
-## <a name="visual-studio-tools"></a>Visual Studio ツール
+## <a name="use-visual-studio-tools"></a>Visual Studio Tools を使用する
 
 クライアント コンピューターに[インストールされている Visual Studio インスタンスを検出して管理する](tools-for-managing-visual-studio-instances.md)ために役立つ複数のツールが用意されています。
 
 > [!TIP]
 > 管理者のガイドのドキュメントに加えて、Visual Studio 2017 セットアップの情報が、「[Heath Stewart のブログ](https://blogs.msdn.microsoft.com/heaths/tag/vs2017/)」に多く掲載されています。
+
+## <a name="specify-customer-feedback-settings"></a>顧客フィードバック設定を指定する
+
+既定では、Visual Studio をインストールすると、カスタマー フィードバックが有効になります。 グループ ポリシーを有効にするとき、個々のコンピューターで顧客フィードバックを無効にするように Visual Studio を構成することができます。 これを行うには、次のキーでレジストリ ベースのポリシーを設定します。
+
+**HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\VisualStudio\SQM**
+
+エントリ = **OptIn**
+
+値 = (DWORD)
+* **0**: オプトアウト
+* **1**: オプトイン
+
+顧客フィードバックの設定について詳しくは、「[Visual Studio カスタマー エクスペリエンス向上プログラム](../ide/visual-studio-experience-improvement-program.md)」ページをご覧ください。
 
 ## <a name="get-support"></a>サポートを受ける
 

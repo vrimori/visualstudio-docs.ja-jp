@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8baf096a0ead512cddf9f33801c4504c2a5a4502
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 8a02f4af740910fe666af295aa8535c8aef8245c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571739"
 ---
 # <a name="help-content-manager-overrides"></a>ヘルプ コンテンツ マネージャーのオーバーライド
 
@@ -67,4 +68,3 @@ Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既�
 - [ヘルプ ビューアーの管理者ガイド](../ide/help-viewer-administrator-guide.md)
 - [ヘルプ コンテンツ マネージャーのコマンド ライン引数](../ide/command-line-arguments-for-the-help-content-manager.md)
 - [Microsoft Help Viewer](../ide/microsoft-help-viewer.md)
-- [.pkgdef ファイルを使用した分離シェルの変更](../extensibility/shell/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)

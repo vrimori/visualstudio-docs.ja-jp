@@ -3,27 +3,30 @@ title: Visual Studio for Mac Tools for Unity
 description: Visual Studio Tools for Unity 拡張機能の概要
 author: dantogno
 ms.author: v-davian
-ms.date: 07/17/2017
+ms.date: 05/25/2018
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: b8384c3595627e288e2ef05cf9135242d37e6d36
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: f80debf3098fd8296ddfa205db3ed296707e23c0
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572418"
 ---
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
 ![図案化された Unity and Visual Studio for Mac の画像](media/vsmac-tools-unity-image1.png)
 
-Visual Studio for Mac Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。
+Visual Studio for Mac Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。 
 
-## <a name="overview"></a>概要 
+Visual Studio for Mac には Unity の統合が既に含まれており、Unity 2018.1 以降では、Visual Studio for Mac が Unity プロジェクト用の既定の C# IDE です。
+
+## <a name="overview"></a>概要
 
 次に示すのは、Visual Studio for Mac Tools for Unity の主な機能です。
 
 ### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Visual Studio for Mac Community Edition との互換性
 
-[Visual Studio for Mac Community Edition](https://www.visualstudio.com/) は無料で使用できます。
+[Visual Studio for Mac Community Edition](https://www.visualstudio.com/) は無料で利用でき、Unity 2018.1 以降では Unity のインストールにバンドルされています。 詳しくは、Visual Studio for Mac Tools for Unity の[セットアップ ドキュメント](setup-vsmac-tools-unity.md)をご覧ください。
 
 ### <a name="intellisense-for-unity-messages"></a>Unity メッセージ用の IntelliSense
 
@@ -33,13 +36,10 @@ IntelliSense を使うと、`OnCollisionEnter` などの [Unity メッセージ�
 
 Visual Studio for Mac Tools for Unity は、Visual Studio に期待されるすべての[デバッグ](using-vsmac-tools-unity.md#unity-debugging)機能をサポートしています。
 
-*   ブレークポイント (条件付きブレークポイントを含む) の設定。
-
-*   [ウォッチ] ウィンドウでの複雑な式の評価。
-
-*   変数および引数の値の検査と変更。
-
-*   複雑なオブジェクトやデータ構造体へのドリルダウン。
+* ブレークポイント (条件付きブレークポイントを含む) の設定。
+* [ウォッチ] ウィンドウでの複雑な式の評価。
+* 変数および引数の値の検査と変更。
+* 複雑なオブジェクトやデータ構造体へのドリルダウン。
 
 ### <a name="powerful-refactoring-and-context-actions"></a>強力なリファクタリングとコンテキストのアクション
 

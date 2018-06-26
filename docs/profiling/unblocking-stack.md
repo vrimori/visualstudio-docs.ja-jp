@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c77f9240b223ad903cc89be0e49f3b0ea46d2fe3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8d2a22c413c7f27b5aff14fa21d28163963a7351
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34477029"
 ---
-# <a name="unblocking-stack"></a>ブロック解除スタック
+# <a name="unblock-stack"></a>ブロック解除スタック
 現在選択されているスレッドの要素が、現在のプロセスの別のスレッドによってブロック解除された後に実行を開始するブロック セグメントを表している場合、ブロック解除を行ったスレッドの呼び出し履歴がこのタブに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)
