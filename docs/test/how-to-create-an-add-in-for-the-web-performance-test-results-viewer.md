@@ -1,5 +1,5 @@
 ---
-title: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する | Microsoft Docs
+title: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,14 @@ ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: aa163381415060d189899e7defd64a8935c4ea94
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d3f0ec5108d077346eb69f1fb1236a7ecee56d5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751677"
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
@@ -134,7 +136,7 @@ ms.lasthandoff: 04/16/2018
 
 6.  ツールボックスから userControl1 のサーフェイスに <xref:System.Windows.Forms.DataGridView> をドラッグします。
 
-7.  <xref:System.Windows.Forms.DataGridView> の右上隅のアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックして、次の手順を実行します。
+7.  <xref:System.Windows.Forms.DataGridView> の右上隅のアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif)) をクリックし、次の手順を実行します。
 
     1.  **[親コンテナーにドッキングする]** を選択します。
 

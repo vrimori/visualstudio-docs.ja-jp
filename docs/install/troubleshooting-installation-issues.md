@@ -1,5 +1,5 @@
 ---
-title: インストールの問題のトラブルシューティング
+title: Visual Studio 2017 のインストール時に発生する問題を解決する
 description: ときには、問題が発生してしまうことがあります。 Visual Studio のインストールまたはアップグレードが失敗した場合、このページが役に立ちます。
 ms.date: 11/21/2017
 ms.technology: vs-acquisition
@@ -14,11 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0009aa15919cf04c3ff8e56edf4f10adcb7e0ea
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 99547ff029e8bde94118918b8b0c538e3f7fad7d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766039"
 ---
 # <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
@@ -112,4 +113,5 @@ Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET 
 
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [Visual Studio インスタンスの検出および管理用のツール](tools-for-managing-visual-studio-instances.md)
+* [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Visual Studio 2017 の削除](remove-visual-studio.md)

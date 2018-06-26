@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4438e7967a15384887d00503bde93b7bbd40fe6c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a10c8db7a9706c406cb192f9418c1fd8d04e888a
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765701"
 ---
-# <a name="how-to-collect-line-level-sampling-data"></a>方法 : 行レベルのサンプリング データを収集する
+# <a name="how-to-collect-line-level-sampling-data"></a>方法: 行レベルのサンプリング データを収集する
 行レベルのサンプリングとは、排他サンプル数が高い関数など、プロセッサ集中型の関数のコードで、プロセッサが大部分の時間を費やす必要のある場所を特定するためのプロファイラーの機能です。  
   
 ## <a name="overview"></a>概要  
@@ -47,8 +48,8 @@ ms.lasthandoff: 04/19/2018
   
  **[モジュール]** ビューでは、関数に行レベルの統計が含まれている場合、統計は各関数の下に入れ子になっています。 さらに、各行で入れ子になっている IP レベルの統計が表示されます。  
   
-### <a name="turn-off-line-level-sampling-for-managed-code"></a>マネージ コードの行レベルのサンプリングの無効化  
- 既定では、行レベルのサンプリングは有効になっています。 マネージ コードの行レベルのデータ収集を無効にするには、次のいずれかを実行します。  
+### <a name="turn-off-line-level-sampling-for-managed-code"></a>マネージド コードの行レベルのサンプリングの無効化  
+ 既定では、行レベルのサンプリングは有効になっています。 マネージド コードの行レベルのデータ収集を無効にするには、次のいずれかのコマンドを使用します。  
   
 -   プロファイリングの前に、「**VSPerfCLREnv /samplelineoff**」と入力します。 これは、アプリケーションとサービスの両方に影響します。  
   
@@ -56,6 +57,6 @@ ms.lasthandoff: 04/19/2018
   
 -   アプリケーションの起動時に、「**VSPerfCmd /lineoff\<他の引数>**」を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)   
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)

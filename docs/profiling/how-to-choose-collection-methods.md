@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55e801404fbf3356b597471d7c3dda23264eb0c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f15a8d5b00d947dc3d77dca58ce6ff5fa2cf58e0
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765390"
 ---
 # <a name="how-to-choose-collection-methods"></a>方法 : 収集方法を選択する
 
@@ -52,7 +53,7 @@ Visual Studio プロファイリング ツールでは、サンプリング、�
 
 1. **パフォーマンス エクスプローラー**でパフォーマンス セッションを選択します。
 
-     パフォーマンス セッション ファイル名の拡張子は .psess です。
+     パフォーマンス セッション ファイル名の拡張子は .*psess* です。
 
 2. パフォーマンス セッションを右クリックして、**[プロパティ]** をクリックします。
 
@@ -80,7 +81,7 @@ Visual Studio プロファイリング ツールでは、サンプリング、�
 
 6. (省略可能) **[.NET オブジェクトの有効期間情報も収集]** をクリックして、オブジェクト メモリが解放されたガベージ コレクションの生成に関するデータを収集します。
 
-     .NET メモリ データの収集に使用できるその他のオプションについては、「[.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)」を参照してください。
+     .NET メモリ データの収集に使用できるその他のオプションについては、[.NET メモリの割り当てと有効期間データを収集する](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)方法に関するページを参照してください。
 
 ### <a name="to-select-concurrency-data-collection-by-using-performance-session-properties"></a>パフォーマンス セッションのプロパティを使用して同時実行データの収集を選択するには
 

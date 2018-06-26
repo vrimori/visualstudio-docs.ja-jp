@@ -10,20 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 502fe56f04fe933e51e9afa5376a35a53445c099
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d6b076023f725ac037ae5863bc8955e6952285ac
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764908"
 ---
-# <a name="creating-basic-profiling-reports-from-the-command-line"></a>コマンド ラインからの基本的なプロファイリング レポートの作成
-ここでは、.vsp プロファイル データ ファイルまたは .vsps プロファイル データ ファイルからコンマ区切り値 (.csv) レポートを生成する基本的な VSPerfReport コマンドについて説明します。 すべてのレポート オプションの詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  
+# <a name="create-basic-profiling-reports-from-the-command-line"></a>コマンド ラインから基本的なプロファイリング レポートを作成する
+この記事では、.*vsp* プロファイル データ ファイルまたは .*vsps* プロファイル データ ファイルからコンマ区切り値 (.*csv*) レポートを生成する基本的な VSPerfReport コマンドについて説明します。 すべてのレポート オプションの詳細については、「[VSPerfReport](../profiling/vsperfreport.md)」を参照してください。  
   
 ## <a name="report-commands"></a>レポート コマンド  
  指定したプロファイル データ ファイルのレポートを作成するには、次のいずれかのコマンドを使用します。  
   
  **VSPerfReport** `VSPFile` **/Summary:All**  
- .vsp ファイルまたは .vsps ファイルで利用できるすべてのレポートが生成されます。  
+ .*vsp* ファイルまたは .*vsps* ファイルで利用できるすべてのレポートが生成されます。  
   
  **VSPerfReport** `VSPFile` **/Summary:**`ReportType`[,`ReportType`...]  
  指定した種類のレポートが生成されます。  

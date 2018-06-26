@@ -11,17 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 387077f8845d4e070d4ad0a07f6549a97552a233
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: b03cfca6a575cf9c91b1e60b0e44212388cc7611
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750364"
 ---
 # <a name="tutorial-step-4-use-the-full-django-web-project-template"></a>チュートリアル手順 4: 完全な Django Web プロジェクト テンプレートを使用する
 
 **前の手順: [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
 
-Visual Studio の "空の Django App プロジェクト" テンプレート上にアプリを構築して、Django の基本を確認したので、"Django Web プロジェクト" テンプレートで作成されるより完全なアプリを簡単に理解できるようになりました。
+Visual Studio の "空の Django Web プロジェクト" テンプレート上にアプリを構築して、Django の基本を確認したので、"Django Web プロジェクト" テンプレートで作成されるより完全なアプリを簡単に理解できるようになりました。
 
 この手順では、次のことを学習します。
 
@@ -40,7 +41,7 @@ Visual Studio の "空の Django App プロジェクト" テンプレート上�
 
 1. ここでも、テンプレートに `requirements.txt` ファイルが含まれているので、Visual Studio からそれらの依存関係をインストールする場所を尋ねられます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。
 
-1. Python による仮想環境の設定が終了したら、`readme.html` に表示された指示に従って、Django スーパー ユーザー (つまり、管理者) を作成します。 Visual Studio プロジェクトを右クリックして、**[Python]** > **[Django でスーパー ユーザーを作成する]** コマンドを選択して、プロンプトの指示に従います。 アプリの認証機能を利用するときに使うので、必ずユーザー名とパスワードを記録してください。
+1. Visual Studio による仮想環境の設定が終了したら、`readme.html` に表示された指示に従って、Django スーパー ユーザー (つまり、管理者) を作成します。 Visual Studio プロジェクトを右クリックして、**[Python]** > **[Django でスーパー ユーザーを作成する]** コマンドを選択して、プロンプトの指示に従います。 アプリの認証機能を利用するときに使うので、必ずユーザー名とパスワードを記録してください。
 
 1. **ソリューション エクスプローラー**を右クリックし、**[Set as Startup Project]\(スタートアップ プロジェクトとして設定する\)** を選択して、"DjangoWeb" プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
 
@@ -103,7 +104,7 @@ def about(request):
     )
 ```
 
-テンプレートはアプリの `templates/app` フォルダー (通常は、`app` を実際のアプリの名前に変更します) に配置されています。 基本のテンプレートである `layout.html` は、最も拡張性に優れています。 このテンプレートは、すべての必要な静的ファイル (JavaScript および CSS) を参照し、他のページによって上書きされる "content" という名前のブロックを定義し、"scripts" という名前のもう 1 つのブロックを提供しています。 次に示す `layout.html` からのコメント付きの抜粋は、これらの固有の領域を示しています。
+テンプレートはアプリの `templates/app` フォルダー (通常は、`app` を実際のアプリの名前に変更します) に配置されています。 基本のテンプレートである `layout.html` は、最も拡張性に優れています。 このテンプレートは、すべての必要な静的ファイル (JavaScript および CSS) を参照し、他のページによってオーバーライドされる "content" という名前のブロックを定義し、"scripts" という名前のもう 1 つのブロックを提供しています。 次に示す `layout.html` からのコメント付きの抜粋は、これらの固有の領域を示しています。
 
 ```html
 <!DOCTYPE html>

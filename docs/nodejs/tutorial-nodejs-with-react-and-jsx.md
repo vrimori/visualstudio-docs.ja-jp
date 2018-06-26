@@ -2,7 +2,7 @@
 title: Node.js と React のアプリを作成する
 description: このチュートリアルでは、Node.js Tools for Visual Studio を使用してアプリを作成します。
 ms.custom: mvc
-ms.date: 02/19/2018
+ms.date: 05/23/2018
 ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
@@ -13,11 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 9958711ea64daee9876d3b16330685786b6d5825
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 9b7703c1e8884a5b65e4cdfbd91f2cc9b88c7f68
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765844"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 Visual Studio では、Node.js プロジェクトを簡単に作成することができ、IntelliSense や、Node.js をサポートする他の組み込み機能を利用できます。 Visual Studio に関するこのチュートリアルでは、Visual Studio のテンプレートから Node.js Web アプリケーション プロジェクトを作成します。 その後、React を使って簡単なアプリを作成します。
@@ -34,22 +35,22 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
 * Visual Studio 2017 および Node.js 開発ワークロードをインストールしている必要があります。
 
-    まだ Visual Studio をインストールしていない場合は、[ここ](http://www.visualstudio.com)から無料でインストールできます。
+    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
     ワークロードをインストールする必要があるが、既に Visual Studio を所有している場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[Node.js 開発]** ワークロードを選択し、**[変更]** を選択します。
 
 * Node.js ランタイムをインストールしている必要があります。
 
-    インストールされていない場合は、LTS バージョンを [Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。 一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストールされているランタイムが検出されない場合は、プロパティ ページで、インストールされているランタイムを参照するプロジェクトを構成することができます (プロジェクトを作成した後、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します)。
+    このチュートリアルは、バージョン 8.11.2 でテストされました。
 
-    このチュートリアルは、バージョン 8.9.4 でテストされました。
+    インストールされていない場合は、LTS バージョンを [Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。 一般に、Visual Studio はインストール済みの Node.js ランタイムを自動的に検出します。 インストールされているランタイムが検出されない場合は、プロパティ ページで、インストールされているランタイムを参照するプロジェクトを構成することができます (プロジェクトを作成した後、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します)。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 まず、Node.js Web アプリケーション プロジェクトを作成します。
 
 1. Visual Studio 2017 を開きます。
 
-1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[JavaScript]** を展開し、**[Node.js]** を選択します。 中央のウィンドウで、**[空白の Node.js Web アプリケーション]** を選択し、名前に「**NodejsWebAppBlank**」と入力してから、**[OK]** を選択します。
 
@@ -88,7 +89,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     ![npm パッケージをインストールする](../nodejs/media/tutorial-nodejs-react-install-packages.png)
 
-    **[出力]** ウィンドウに、パッケージのインストールの進行状況が表示されます。 インストールが済むと、**npm** ノードの下にパッケージが表示されます。
+    **[出力]** ウィンドウをクリックすると、パッケージ インストールの進捗状況が表示されます (**[出力元の表示]** フィールドで **[npm]** を選択してください)。 インストールが済むと、**npm** ノードの下にパッケージが表示されます。
 
     プロジェクトの *package.json* ファイルが、パッケージのバージョンなど、新しいパッケージの情報で更新されます。
 
@@ -98,8 +99,8 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
     "dependencies": {
       "express": "4.16.2",
       "path": "0.12.7",
-      "react": "16.2.0",
-      "react-dom": "16.2.0",
+      "react": "16.4.0",
+      "react-dom": "16.4.0",
       "ts-loader": "4.0.1",
       "typescript": "2.7.2",
       "webpack": "4.1.1",
@@ -107,9 +108,9 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
     }
     ```
 
-1. プロジェクトで **npm** ノードを右クリックして、**[不足している npm パッケージをインストールする]** を選びます。
+1. プロジェクトで **npm** ノードを右クリックし、**[npm パッケージを更新する]** を選択します。
 
-    **[出力]** ウィンドウに、パッケージのインストールの進行状況が表示されます。
+    **[出力]** ウィンドウをクリックすると、パッケージ インストールの進行状況が表示されます。 表示には数分かかることがあります。結果がすぐに表示されないことがあります。
 
     npm モジュールがインストールされると、ソリューション エクスプローラーの表示は次のようになります。
 
@@ -133,7 +134,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
 1. **[新しい項目の追加]** ダイアログ ボックスで、**[TypeScript JSX ファイル]** を選び、名前に「*app.tsx*」と入力して、**[OK]** をクリックします。
 
-1. 同じ手順を繰り返して *webpack-config.js* を追加します。
+1. 同じ手順を繰り返して *webpack-config.js* を追加します。 TypeScript JSX ファイルの代わりに、**[JavaScript ファイル]** を選択します。
 
 1. 同じ手順を繰り返して *index.html* をプロジェクトに追加します。 JavaScript ファイルではなく、**[HTML ファイル]** を選びます。
 
@@ -229,7 +230,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     webpack 構成コードは、TypeScript ローダーを使って JSX をトランスパイルするよう Webpack に指示します。
 
-1. tsconfig.json を開き、TypeScript コンパイラ オプションを指定する次のコードを追加します。
+1. *tsconfig.json* を開き、TypeScript コンパイラ オプションを指定する次のコードで既定のコードを置換します。
 
     ```json
     {
@@ -251,7 +252,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
     }
     ```
 
-    app.tsx は、ソース ファイルとして指定されています。
+    *app.tsx* は、ソース ファイルとして指定されています。
 
 ## <a name="transpile-the-jsx"></a>JSX をトランスパイルする
 
@@ -331,7 +332,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     ![ブレークポイントの設定](../nodejs/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-1. Visual Studio でデバッグ ターゲットとして Chrome を選択し、**Ctrl + F5** キーを押して (**[デバッグ]** > **[デバッグなしで開始]**)、ブラウザーでアプリを実行します。
+1. Visual Studio でデバッグ ターゲットとして Chrome を選択し、**Ctrl**+**F5** キーを押して (**[デバッグ]** > **[デバッグなしで開始]**)、ブラウザーでアプリを実行します。
 
     アプリがブラウザーの新しいタブで開きます。
 
@@ -346,7 +347,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
     Visual Studio で DOM Explorer と JavaScript コンソールが開けば、デバッガーが正しくアタッチしたことがわかります。 これらのデバッグ ツールは、Chrome の開発者ツールや Edge の F12 ツールに似ています。
 
     > [!NOTE]
-    > デバッガーがアタッチされず、「プロセスにアタッチできません。 現在の状態での操作は無効です。」 というメッセージが表示される場合、Chrome をデバッグ モードで開始する前に、タスク マネージャーを使用して Chrome のすべてのインスタンスを閉じます。 Chrome の拡張機能が実行され、フル デバッグ モードが阻止されている場合があります。
+    > デバッガーがアタッチされず、「プロセスにアタッチできません。 現在の状態での操作は無効です。」というメッセージが表示される場合、Chrome をデバッグ モードで開始する前に、タスク マネージャーを使用して Chrome のすべてのインスタンスを閉じます。 Chrome の拡張機能が実行され、フル デバッグ モードが阻止されている場合があります。
 
 1. ブレークポイントを設定したコードは既に実行しているので、ブラウザーのページを更新してブレークポイントにヒットします。
 
@@ -354,7 +355,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     環境とブラウザーの状態に応じて、*app-bundle.js* 内またはそれにマップされた *app.tsx* 内の場所で、ブレークポイントにヒットする可能性があります。 どちらの場合も、コードをステップ実行して、変数を確認できます
 
-    * *app.tsx* のコードを中断する必要があるときにできない場合は、前の手順で説明したデバッガーをアタッチするための **[プロセスにアタッチ]** を使用します。 次いで、ソリューション エクスプ ローラーで **[スクリプト ドキュメント]** > **[app.tsx]** を開き、動的に生成された *app.tsx* ファイルを開いて、ブレークポイントを設定してブラウザーでページを更新します。
+    * *app.tsx* のコードを中断する必要があるときにできない場合は、前の手順で説明したデバッガーをアタッチするための **[プロセスにアタッチ]** を使用します。 次いで、ソリューション エクスプ ローラーで **[スクリプト ドキュメント]** > **[app.tsx]** の順に開き、動的に生成された *app.tsx* ファイルを開いて、ブレークポイントを設定してブラウザーでページを更新します (`return` ステートメントや `var` 宣言など、ブレークポイントを許可するコード行にブレークポイントを設定します)。
 
         または、*app.tsx* 内のコードで中断する必要があり、できない場合は、*app.tsx* で `debugger;` ステートメントを使うか、または Chrome の開発者ツールでブレークポイントを設定してみてください。
 
@@ -368,4 +369,4 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 このチュートリアルでは、Node.js と React アプリを作成し、JSX をトランスパイルして、デバッグする方法を説明しました。 Node.js Tools for Visual Studio についてさらに学習するには、Wiki のページをご覧ください。
 
 > [!div class="nextstepaction"]
-> [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools)
+> [Visual Studio 向けの Node.js ツール](https://github.com/Microsoft/nodejstools)

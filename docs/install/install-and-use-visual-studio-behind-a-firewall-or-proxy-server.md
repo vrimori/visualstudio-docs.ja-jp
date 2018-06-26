@@ -17,11 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 304c31a9cfd389bb3a5af6b1a8191f41d881165b
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 2aeb7b1fc308247d5eebb810113aba1ed4afe89c
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765669"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 
@@ -135,6 +136,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング](troubleshooting-network-related-errors-in-visual-studio.md)
+* [Visual Studio のネットワーク インストールを作成する](create-a-network-installation-of-visual-studio.md)
+* [Visual Studio のネットワーク関連エラーのトラブルシューティング](troubleshooting-network-related-errors-in-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
-* [Visual Studio 2017 のインストール](install-visual-studio.md)
+

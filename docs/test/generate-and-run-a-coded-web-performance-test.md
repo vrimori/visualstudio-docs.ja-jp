@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのコード化された Web パフォーマンス テスト | Microsoft Docs
+title: Visual Studio でのコード化された Web パフォーマンス テスト
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,14 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: aa6f1e07bffc59030865018610c4367489d4ba9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 65331aa24eee140bcba983f1360c02f0227905fe
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750855"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>コード化された Web パフォーマンス テストの生成と実行
 
@@ -74,11 +76,11 @@ Web パフォーマンス テストは、Web アプリ内を移動すること�
 
 6.  テストを実行します。
 
-     ![コード化された Web パフォーマンス テストの実行](../test/media/web_test_coded_generate_run.png "Web_Test_Coded_Generate_Run")
+     ![コード化された Web パフォーマンス テストの実行](../test/media/web_test_coded_generate_run.png)
 
      実行日が水曜日であるため、次のようになります。
 
-     ![コード化された Web パフォーマンス テストの結果](../test/media/web_test_coded_generate_results.png "Web_Test_Coded_Generate_Results")
+     ![コード化された Web パフォーマンス テストの結果](../test/media/web_test_coded_generate_results.png)
 
 ## <a name="qa"></a>Q&A
 

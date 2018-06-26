@@ -14,15 +14,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 994a50e66164dcd7a2a3768c8284825019e281e1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ee77d340eec13c42588511575c6047b5c8f28d16
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765100"
 ---
-# <a name="how-to-collect-cpu-counter-data"></a>方法 : CPU カウンター データを収集する
+# <a name="how-to-collect-cpu-counter-data"></a>方法: CPU カウンター データを収集する
 
-CPU イベント カウンターはハードウェア固有のパフォーマンス データの収集に使用します。 このトピックでは、インストルメンテーション プロファイリング方式を使用した場合の、イベント カウンター データを収集する方法を示します。
+CPU イベント カウンターはハードウェア固有のパフォーマンス データの収集に使用します。 この記事では、インストルメンテーション プロファイリング方式を使用した場合の、イベント カウンター データを収集する方法を示します。
 
 2 種類の CPU カウンター イベントが発生します。
 
@@ -44,7 +45,7 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
 
 - インストルメンテーションによってプロファイリングする場合は、1 つ以上のカウンターからデータを収集します。
 
-- サンプリングによってプロファイリングする場合は、サンプリング間隔としてカウンター イベントを指定します。 詳細については、「[方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)」を参照してください。
+- サンプリングによってプロファイリングする場合は、サンプリング間隔としてカウンター イベントを指定します。 詳細については、「[方法 :サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)」を参照してください。
 
 ## <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>インストルメンテーションによってプロファイリングする場合に、CPU パフォーマンス カウンター データを収集するには
 
@@ -64,4 +65,4 @@ CPU イベント カウンターはハードウェア固有のパフォーマン
 [パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)  
 [パフォーマンス セッションのプロパティ](../profiling/performance-session-properties.md)  
 [CPU カウンターと Windows カウンター](../profiling/cpu-and-windows-counters.md)  
-[方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)
+[方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)

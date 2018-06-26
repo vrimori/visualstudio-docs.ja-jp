@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c3e6909bcb7299f4fd6d725334c26d2b59e0edb
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: d781bbfefa59b2e124cf76c11b8fd7c06cc66dda
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764671"
 ---
 # <a name="diagnostic-namespace"></a>diagnostic 名前空間
 `diagnostics` 名前空間は、同時実行ビジュアライザー マーカーを出力するための機能を提供します。  
@@ -45,9 +46,9 @@ namespace diagnostic;
 |[marker_importance 列挙型](../profiling/marker-importance-enumeration.md)|同時実行ビジュアライザー マーカーの重要度レベルを表します。|  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** cvmarkersobj.h  
+ **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (同時実行ビジュアライザー)](../profiling/concurrency-namespace-concurrency-visualizer.md)
