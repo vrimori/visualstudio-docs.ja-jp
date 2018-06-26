@@ -8,12 +8,12 @@
   items:
     - name: 配置でのはじめに
       href: deploying-applications-services-and-components.md
-    - name: ローカル フォルダーに配置する
-      href: quickstart-deploy-to-local-folder.md
+    - name: Azure App Service に配置する
+      href: quickstart-deploy-to-azure.md
     - name: Web サイトに配置する
       href: quickstart-deploy-to-a-web-site.md
-    - name: Azure に配置する
-      href: quickstart-deploy-to-azure.md
+    - name: ローカル フォルダーに配置する
+      href: quickstart-deploy-to-local-folder.md
 - name: チュートリアル
   items:
     - name: .NET

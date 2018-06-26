@@ -1,4 +1,5 @@
 # [Visual Studio サブスクリプション](index.md)
+## [新機能](whats-new-in-subscriptions.md)
 ## サブスクライバーのエクスペリエンス
 ### [サブスクライバー ポータルの使用](using-the-subscriber-portal.md)
 #### [リテール サブスクリプションのアクティブ化](activate-store-subscriptions.md)

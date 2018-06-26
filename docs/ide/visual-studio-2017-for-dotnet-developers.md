@@ -12,11 +12,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: bd517cd859f47f9b4cb41884bd116005aa31fa29
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 9c4577b1d04b74bdc351927603604d2f92d31eb9
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748752"
 ---
 # <a name="visual-studio-2017-productivity-guide-for-net-developers"></a>.NET 開発者のための Visual Studio 2017 生産性ガイド
 
@@ -88,7 +89,7 @@ Visual Studio 2017 には、多くのリファクタリング、コード生成�
   - [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
   - [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
 
-![Visual Studio でのリファクタリング](../ide/media/VSGuide_CodeAnalysis.png "VSGuide_CodeAnalysis")
+![Visual Studio でのリファクタリング](../ide/media/VSGuide_CodeAnalysis.png)
 
 ## <a name="i-need-find-usages-go-to-implementation-navigate-to-decompiled-assemblies"></a>使用状況の検索、実装への移動、逆コンパイルされたアセンブリへの移動が必要です
 Visual Studio 2017 には、コードベースの検索と移動に役立つ多くの機能があります。 [コード ナビゲーションの機能](../ide/navigating-code.md)の詳細を確認してください
@@ -119,7 +120,7 @@ Visual Studio 2017 では多数の新しいデバッグ機能が追加されま�
 - [[Step Back]\(前に戻る\)](../debugger/how-to-use-intellitrace-step-back.md) のデバッグにより、前のブレークポイントまたは手順に戻り、過去の時点でのアプリケーションの状態を確認できるようになります。
 - [[スナップショットのデバッグ]](/azure/application-insights/app-insights-snapshot-debugger) では、例外がスローされた (Azure にスローされる必要があります) 時点での、ライブ Web アプリケーションの状態を調査することができます。
 
-![VS2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png "VSGuide_Debugging")
+![VS2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png)
 
 ## <a name="i-want-to-use-version-control-with-my-projects"></a>自分のプロジェクトでバージョン管理を使用する必要があります。
 Git または TFVC を使用して Visual Studio でコードを格納して更新することができます。
