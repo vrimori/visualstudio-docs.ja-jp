@@ -16,7 +16,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 44403b5d60fc13666ffc6ec00558b80ef3a50ea9
 ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ms.locfileid: "31144464"
@@ -47,7 +47,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
   
 -   [拡張とツール ウィンドウのカスタマイズ](../extensibility/extending-and-customizing-tool-windows.md): 既存のツール ウィンドウの拡張や、独自のツール ウィンドウを作成します。 インスタンスに新しいプロパティを追加する可能性があります、**プロパティ**、または機能を追加する新しいツール ウィンドウを作成する可能性があります。  
   
--   [エディターと言語サービスの拡張機能](../extensibility/editor-and-language-service-extensions.md): IntelliSense が提供する Visual Studio の言語では、独自のカスタマイズを追加するか新しいプログラミング言語のサポートを作成します。 新しいステートメント入力候補、提案、および新しいクイック ツールヒントが表示を作成することができます。 、電球を使ってリファクタリングの候補を追加して、新しいプログラミング言語をサポートするためにコードを修正します。  
+-   [エディターと言語サービスの拡張機能](../extensibility/editor-and-language-service-extensions.md): Visual Studio の言語に対して IntelliSense が提供する独自のカスタマイズを追加するか、新しいプログラミング言語のサポートを作成します。 新しいステートメント入力候補、提案、および新しいクイックヒントのヒントが表示を作成することができます。 電球アイコンから、新しいプログラミング言語をサポートするためにリファクタリングの提案を追加したり、コード修正プログラムを追加したりすることができます。  
   
 -   [プロジェクトの拡張](../extensibility/extending-projects.md)  
   
