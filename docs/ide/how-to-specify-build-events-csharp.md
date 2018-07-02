@@ -16,11 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38f8240d0e0157edd1ebe189d0eafac54be60ebb
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 500426eb7fda2c35f74b899154d9153a91d5020b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746261"
 ---
 # <a name="how-to-specify-build-events-c"></a>方法 : ビルド イベントを指定する (C#)
 
@@ -148,7 +149,7 @@ ms.lasthandoff: 05/07/2018
 
 1.  発行するプロジェクト用の Windows アプリケーションを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。
 
-2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows クラシック デスクトップ]** をクリックしてから **[Windows フォーム アプリケーション]** テンプレートをクリックします。 プロジェクトに `CSWinApp` という名前を付けます。
+2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[Windows デスクトップ]**、**[Windows フォーム アプリケーション]** テンプレートの順にクリックします。 プロジェクトに `CSWinApp` という名前を付けます。
 
 3.  **ソリューション エクスプローラー**でプロジェクトを選択し、**[プロジェクト]** メニューの **[プロパティ]** をクリックします。
 

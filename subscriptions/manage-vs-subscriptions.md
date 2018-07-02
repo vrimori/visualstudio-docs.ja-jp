@@ -9,11 +9,12 @@ description: Visual Studio サブスクリプションを最大限に活用す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 808b3f9c17ad486649b84c787d864fe768fe1c08
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: a1e1baed18eb592386d45f436c5d4988b91ea1b3
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548724"
 ---
 # <a name="managing-subscriptions"></a>サブスクリプションを管理する
 
@@ -118,3 +119,21 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 ![代替アカウント](_img\manage-vs-subscriptions\alternate-account-resized.png)
 
 代替アカウントを追加した後は、**[サブスクリプション]** タブをクリックして **[Related Links]** セクションで適切なオプションを選ぶことにより、いつでも更新または削除できます。  
+
+## <a name="frequently-asked-questions"></a>よく寄せられる質問   
+### <a name="q-if-i-do-not-renew-my-subscription-how-long-will-microsoft-keep-my-data"></a>Q: サブスクリプションを更新しない場合、Microsoft ではどのくらいデータは保持されますか?
+A: これは購入されたチャネルによって異なります。Microsoft の顧客データの維持期間はさまざまです。
+
+| チャネル                                                | 期間 (日数) |
+|--------------------------------------------------------|-----------------|
+|    販売 (例: Microsoft ストアから)               |    360          |
+|    ボリューム ライセンス サービス センター (VLSC)              |    180          |
+|    Microsoft Products and Services Agreement (MPSA)    |    180          |
+|    Visual Studio クラウド サブスクリプション                   |    180          |
+|    プログラム (例: MCT、BizSpark、MPN、Imagine)          |    180          |
+|    非売品 (例: MVP、MSP)                      |    180          |
+|    DevEssentials                                       |    30           |
+
+> [!NOTE]
+> - Microsoft アカウントまたは Azure AD を閉じることを選択した場合、個人データは直ちに匿名化されます。  
+> - アクティブなサブスクリプションがある場合、すべての個人データが完全に削除されることはありません。 

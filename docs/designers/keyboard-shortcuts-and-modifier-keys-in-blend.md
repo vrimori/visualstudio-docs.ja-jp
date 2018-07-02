@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 056df5c589fe74ad43fdfab6abbf450d3149e74d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d6a9ceb3f6aa2483621b3d917533457a05008df0
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747418"
 ---
 # <a name="keyboard-shortcuts-and-modifier-keys-in-blend"></a>Blend でのキーボード ショートカットと修飾キー
 キーボード ショートカットを使うと、マウスのボタンを何度も押す手間が省けるので、作業のスピードが上がります。 [!INCLUDE[blend_first](../debugger/includes/blend_first_md.md)] のキーボード ショートカットには、次の 2 種類があります。
@@ -23,13 +24,13 @@ ms.lasthandoff: 04/26/2018
 
      アクセス キーを使用するには、まず、Alt キーか F10 キーを押してアンダースコアを表示します。次に、アクセスしたいメニューまたはダイアログ ボックスの項目に付いている文字のキーを押します。 または、Tab キーか矢印キーを押して、メニューまたはダイアログ ボックスの項目間を移動します。 たとえば、[!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] で Alt キーを押すと、**[ファイル]** メニューの **F** の下に下線が表示され、アクセス キーであることがわかります。 プロジェクトを開く場合は、Alt キーを押したまま F キーを押し、次に O キーを押します。
 
-     ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png "441d5d67-48ee-4ba3-9e55-1826167e8d64") ALT キーを押すと表示されるアンダースコア付きアクセス キー
+     ![](../designers/media/441d5d67-48ee-4ba3-9e55-1826167e8d64.png) Alt キーを押すと表示されるアンダースコア付きアクセス キー
 
 -   **ショートカット キー** 特定の操作 (メニュー コマンドの選択、ツールの動作の変更など )を行うときに押すキー。
 
      ショートカット キーの多くは、[!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] のユーザー インターフェイスのメニュー コマンドの右に表示されているので簡単にわかります。 たとえば、**[ファイル]** メニューの **[プロジェクトを開く]** メニュー コマンドにはキーボード ショートカット Ctrl + Shift + O が含まれます。 **[ツール]** パネルのツールのショートカット キーを表示するには、ツールの上にポインターを置きます。
 
-     ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png "f147fc85-9fc5-4e8a-8039-bead80a3e595") ショートカットのあるメニュー項目の横に表示されるショートカット キー
+     ![](../designers/media/f147fc85-9fc5-4e8a-8039-bead80a3e595.png) ショートカットのあるメニュー項目の横に表示されるショートカット キー
 
  アクセシビリティと各種機能について詳しくは、「[マイクロソフト アクセシビリティ ホーム](http://go.microsoft.com/fwlink/?LinkId=75069)」をご覧ください。
 

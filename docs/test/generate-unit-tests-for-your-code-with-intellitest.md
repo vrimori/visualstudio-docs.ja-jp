@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 28ba3f0abd948714e17ef0c69267eb7c1df9162e
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 7caabbe6875f6c51b0c84d0bb8f4b5e4e18a10d2
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750871"
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest でのコードの単体テストの生成
 IntelliTest はテスト データおよび単体テストのスイートを生成するために .NET コードを確認します。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。 たとえば、`if` ステートメント、アサーション、および例外をスローするすべての操作が分析されます。 この分析は、各メソッドのパラメーター化された単体テストのためにテスト データを生成し、高いコード カバレッジを持つ単体テストを作成するために使用されます。
@@ -41,15 +42,15 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 2.  コード内のメソッドを右クリックして **[IntelliTest の実行]** を選択し、メソッドにあるすべてのコード パスに対する単体テストを生成します。
 
-     ![メソッドを右クリックして単体テストを生成](../test/media/runpex.png "RunPEX")
+     ![メソッドを右クリックして単体テストを生成](../test/media/runpex.png)
 
      IntelliTest は、異なる入力でコードを何度も実行します。 それぞれの実行は、表の入力テスト データおよび結果出力または例外で示されます。
 
-     ![[精査結果] ウィンドウでのテスト表示](../test/media/pexexplorationresults.png "PEXExplorationResults")
+     ![[精査結果] ウィンドウでのテスト表示](../test/media/pexexplorationresults.png)
 
      クラス内のすべてのパブリック メソッドに対して単体テストを生成するには、特定のメソッドではなく、クラスで右クリックします。 その後、 **[IntelliTest の実行]** を選択します。 [精査結果] ウィンドウにあるドロップダウン リストを使用して、クラス内の各メソッドの単体テストと入力データを表示します。
 
-     ![表示するテスト結果をリストから選択](../test/media/selectpextest.png "SelectPEXTest")
+     ![表示するテスト結果をリストから選択](../test/media/selectpextest.png)
 
      合格したテストについて、結果列に報告されている結果が、コードに対する予想と一致していることを確認します。 テストが失敗した場合は、必要に応じてコードを修正します。 IntelliTest を再実行して、修正を検証します。
 
@@ -57,11 +58,11 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 1.  パラメーター化された単体テストでテスト プロジェクトに保存するデータの行を選択します。
 
-     ![テストを選択して右クリックした後、[保存] を選択](../test/media/savepextests.png "SavePEXTests")
+     ![テストを選択して右クリックし、[保存] を選択](../test/media/savepextests.png)
 
      テスト プロジェクトと作成されたパラメーター化された単体テストを表示できます。各行に対応する個々の単体テストはテスト プロジェクトの .g.cs ファイルに保存され、パラメーター化された単体テストは対応する .cs ファイルに保存されます。 単体テストは、テスト エクスプローラーから実行してその結果を表示することができます。これは、手動で作成する他の単体テストと同様です。
 
-     ![クラス ファイルのテスト メソッドの部分を開き、単体テストを表示](../test/media/testmethodpex.png "TestMethodPEX")
+     ![クラス ファイルのテスト メソッドの部分を開き、単体テストを表示](../test/media/testmethodpex.png)
 
      その他の必要な参照もテスト プロジェクトに追加されます。
 
@@ -73,11 +74,11 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
      警告を表示してその後の行動を決めます。
 
-     ![警告を表示](../test/media/pexviewwarning.png "PEXViewWarning")
+     ![警告の表示](../test/media/pexviewwarning.png)
 
 2.  コードを調査して何をテストするか理解した後、警告を修正して、インターフェイスをテストするためにどのクラスを使用するかを選択できます。
 
-     ![警告を右クリックして [修正] を選択](../test/media/pexfixwarning.png "PEXFixWarning")
+     ![警告を右クリックして [修正] を選択](../test/media/pexfixwarning.png)
 
      この選択は PexAssemblyInfo.cs ファイルに追加されます。
 
@@ -85,7 +86,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 3.  これで IntelliTest を再実行して、修正したクラスだけを使用してパラメーター化された単体テストとテスト データを生成できます。
 
-     ![IntelliTest を再実行してテスト データを生成する](../test/media/pexwarningsfixed.png "PEXWarningsFixed")
+     ![IntelliTest を再実行してテスト データを生成する](../test/media/pexwarningsfixed.png)
 
 ## <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>指定: コードで指定した正確性プロパティを検証するために IntelliTest を使用する
 
@@ -93,9 +94,9 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 ##  <a name="QandALink"></a> Q & A
 
-### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Q: アンマネージ コードに IntelliTest を使用できますか。
+### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Q: アンマネージド コードに IntelliTest を使用できますか。
 
-**A:** いいえ。IntelliTest はマネージ コードでのみ動作します。
+**A:** いいえ。IntelliTest はマネージド コードでのみ動作します。
 
 ### <a name="q-when-does-a-generated-test-pass-or-fail"></a>Q: 生成されたテストはどのような場合に合格または失敗しますか。
 
@@ -131,11 +132,11 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 **A:** はい。それには、クラスまたはメソッドを右クリックして **[IntelliTest の作成]** を選択します。
 
- ![エディターを右クリックし、[IntelliTest の作成] を選択する](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")
+ ![エディターを右クリックし、[IntelliTest の作成] を選択](../test/media/pexcreateintellitest.png)
 
  テスト生成時の既定の形式を受け入れるか、プロジェクトまたはテストの名前付け方法を変更します。 新しいテスト プロジェクトを作成するか、既存のプロジェクトにテストを保存することができます。
 
- ![MSTest の既定値を使用して IntelliTest を作成する](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")
+ ![既定の MSTest での [IntelliTest の作成]](../test/media/pexcreateintellitestmstest.png)
 
 <a name="extend-framework"></a>
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>Q: IntelliTest で他の単体テスト フレームワークを使用することはできますか。
@@ -149,7 +150,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 その後、Visual Studio を再起動し、ソリューションを再度開いてクラスまたはメソッドを右クリックし、 **[IntelliTest の作成]** を選択します。 インストールしたフレームワークを選択します。
 
-![IntelliTest の他の単体テスト フレームワークを選択する](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")
+![IntelliTest の他の単体テスト フレームワークを選択する](../test/media/pexcreateintellitestextensions.png)
 
 これで、IntelliTest を実行すると、個々の単体テストが対応する g.cs ファイル内に生成されます。
 

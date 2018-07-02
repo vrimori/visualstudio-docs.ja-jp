@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d16f3d3ede9c4ad72b8aacec6da00090d7bd5ef6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 83dfee8bc028ff92e01b18d6cb50933b46907354
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751424"
 ---
 # <a name="quickstart-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 
@@ -21,14 +22,14 @@ ms.lasthandoff: 04/26/2018
 
  テスト エクスプローラーは、Visual Studio の以前のエディションにあった単体テスト ウィンドウに代わる機能です。 これには次のような利点があります。
 
--   .NET、アンマネージ、データベース、およびその他の種類のテストを 1 つのインターフェイスで実行できます。
+-   .NET、アンマネージド、データベース、およびその他の種類のテストを 1 つのインターフェイスで実行できます。
 
 -   NUnit や MSTest など、任意の単体テスト フレームワークを使用できます。
 
 -   必要な情報をすべて、1 つのウィンドウで確認できます。
 
 ## <a name="using-test-explorer"></a>テスト エクスプローラーの使用
- ![[すべて実行] ボタンを示す単体テスト エクスプローラー](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")
+ ![[すべて実行] ボタンを示す単体テスト エクスプローラー](../test/media/unittestexplorer-beta-.png)
 
 ### <a name="to-run-unit-tests-by-using-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行するには
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/26/2018
 
     2.  各単体テストをメソッドとして記述します。 各テスト メソッドにプレフィックスとして `[TestMethod]` 属性を付けます。
 
-2.  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
+2.  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
 
 3.  メニュー バーで、 **[テスト]**、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。
 
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/26/2018
 
     -   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[テスト]** 、 **[単体テスト プロジェクト]** の順にクリックします。
 
-         ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png "UnitTestExplorerWalk1")
+         ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png)
 
 3.  基本的なテスト メソッドを記述します。 特定の入力に対して生じた結果を確認します。
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 04/26/2018
 
 7.  テストに失敗した箇所を確認するには、 **[スタック トレース]** の下に表示されている項目を選択します。
 
- ![テストの失敗を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough2.png "UnitTestExplorerWalkthrough2")
+ ![テストの失敗を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough2.png)
 
  この時点で、テストとスタブが作成されています。テストに合格するには、これらを修正する必要があります。
 
@@ -146,7 +147,7 @@ ms.lasthandoff: 04/26/2018
 
      テストに合格します。
 
-     ![テストの成功を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")
+     ![テストの成功を示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough3.png)
 
 #### <a name="add-tests-to-extend-the-range-of-inputs"></a>テストを追加して入力の範囲を拡張する
 
@@ -288,4 +289,4 @@ ms.lasthandoff: 04/26/2018
 
      今回もすべてのテストに合格します。
 
-     ![3 つのテストが成功したことを示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough4.png "UnitTestExplorerWalkthrough4")
+     ![3 つのテストが成功したことを示す単体テスト エクスプローラー。](../test/media/unittestexplorerwalkthrough4.png)

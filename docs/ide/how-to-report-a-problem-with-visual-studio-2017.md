@@ -12,11 +12,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: edf3a7eaecfbd133a2bd087620929cf6e3290b79
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0979c0e7ec0fa53879766136d27ab79b0f490a17
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745996"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017 で問題を報告する方法
 
@@ -30,14 +31,14 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 2. サインインしていない場合は、次のスクリーンショットに示されているように、ツールの右側にある **[サインイン]** を選びます。
 3. 画面に表示される手順に従ってサインインします。
 
- ![サインインして問題を報告](../ide/media/sign-in-new-ux.png "Sign in to report a problem")
+ ![サインインして問題を報告する](../ide/media/sign-in-new-ux.png)
 
 ## 類似問題を検索して投票する<a name="search_and_vote"></a>
 
 1. 問題を検索し、他のユーザーが既に報告しているかどうかも確認します。
 2. 報告済みの場合は、"上向きの矢印に投票" してお知らせください。
 
-  ![類似の問題の検索と投票](../ide/media/search-and-vote.png "類似の問題の検索と投票")
+  ![類似問題を検索して投票する](../ide/media/search-and-vote.png)
 
 ## 新しい問題を報告する<a name="report_new_problem"></a>
 
@@ -45,7 +46,7 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 2. 適切な Visual Studio チームに問題を転送できるように、報告には説明的なタイトルを付けてください。
 3. 可能であれば、問題を再現する手順など、さらに詳しい情報を記載します。
 
-  ![新しい問題を報告する](../ide/media/report-new-problem.png "新しい問題を報告する")
+  ![新しい問題を報告する](../ide/media/report-new-problem.png)
 
 ## スクリーンショットと添付ファイル (省略可能) を提供する<a name="provide_screenshots"></a>
 
@@ -58,7 +59,7 @@ Visual Studio に問題が発生した場合は、Microsoft にお知らせく�
 1. **[記録]** タブを選択します。
 2. **[記録の開始]** を選択します。 ツールの実行を許可します。
 
-  ![[記録の開始] を選択して、トレースとヒープ ダンプのファイルを提供する](../ide/media/record-dialog-box.png "トレースとヒープ ダンプ ファイルを提供する")
+  ![[記録の開始] を選択して、トレースとヒープ ダンプのファイルを提供する ](../ide/media/record-dialog-box.png)
 
 3. **[ステップ記録ツール]** ツールが表示されたら、問題を再現する手順を実行します。
 4. 終了したら、**[記録の停止]** ボタンをクリックします。

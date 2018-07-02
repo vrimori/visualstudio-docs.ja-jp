@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78b8e4d8b0a8ac7a2afbe0eb501ff496b3ade188
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2b073640670d3e6e650fc4144c61e971c085aec2
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749725"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: StringBuilder を使用して連結してください
 |||  
@@ -39,6 +40,6 @@ ms.lasthandoff: 04/19/2018
  StringBuilder クラスは System.String とは異なり、変更可能なオブジェクトであるため、このクラスのインスタンスを変更する StringBuilder のメソッドの大多数はその同じインスタンスへの参照を返します。 StringBuilder インスタンスには、文字を挿入したり、テキストを付加することができ、新しいインスタンスを割り当てたり、元のインスタンスを削除しなくても、インスタンスの文字を削除または置換することができます。  
   
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
- [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、サンプリング プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 文字列連結を最も頻繁に使用するプログラムをセクションを特定します。 頻繁な文字列連結など、複雑な文字列操作には StringBuilder クラスを使用します。  
+ **[エラー一覧]** ウィンドウに表示されたメッセージをダブルクリックして、サンプリング プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 文字列連結を最も頻繁に使用するプログラムをセクションを特定します。 頻繁な文字列連結など、複雑な文字列操作には StringBuilder クラスを使用します。  
   
- 文字列の使用方法の詳細については、Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの[第 5 章「マネージ コード パフォーマンスの向上](http://go.microsoft.com/fwlink/?LinkId=177817)」の「[文字列処理](http://go.microsoft.com/fwlink/?LinkId=177816)」を参照してください。
+ 文字列の使用方法の詳細については、Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの[第 5 章「マネージド コード パフォーマンスの向上](http://go.microsoft.com/fwlink/?LinkId=177817)」の「[文字列処理](http://go.microsoft.com/fwlink/?LinkId=177816)」を参照してください。

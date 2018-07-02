@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 94e12f8e3ee431574ab846e30f9672e4c06592a9
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: fcac1e902ccc1fcc5432a231c5f34629422815fd
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477393"
 ---
 # <a name="vsperf"></a>VSPerf
 **VsPerf** コマンド ライン ツールを使用して、次を行います。  
@@ -25,16 +26,7 @@ ms.lasthandoff: 05/22/2018
   
  プロファイル オプションの詳細については、「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
-##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- このトピックでは、`vsperf.exe` コマンド ライン ツールで使用できるオプションについて説明します。 このトピックは、次のセクションで構成されています。  
-  
- [UWP アプリのみ](#BKMK_windows_store_apps_only)  
-  
- [Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
-  
- [すべてのアプリケーション](#BKMK_All_applications)  
-  
-##  <a name="BKMK_windows_store_apps_only"></a> UWP アプリのみ  
+## <a name="uwp-apps-only"></a>UWP アプリのみ  
  これらのオプションは、UWP アプリにのみ適用されます。  
   
 |||  
@@ -45,7 +37,7 @@ ms.lasthandoff: 05/22/2018
 |**/noclr**|任意。 CLR データは収集しません。<br /><br /> /package または /attach でのみ使用します。<br /><br /> 最適化で、マネージ シンボルは解決されません。|  
 |**/listapps**|インストール済みアプリの Name と PackageFullName を一覧表示します。|  
   
-##  <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ  
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Windows 8 デスクトップ アプリケーション、および Windows Server 2012 のアプリケーションのみ  
  これらのオプションは、UWP アプリでは機能しません。  
   
 |||  
@@ -54,7 +46,7 @@ ms.lasthandoff: 05/22/2018
 |**/args:{ExecutableArguments}**|**/launch** ターゲットに渡すようにコマンド ライン引数を指定します。|  
 |**/console**|新しいコマンド ウィンドウで **/launch** ターゲットを実行します。|  
   
-##  <a name="BKMK_All_applications"></a> すべてのアプリケーション  
+## <a name="all-applications"></a>すべてのアプリケーション  
  これらのオプションは、すべての Windows 8 アプリケーションまたは Windows Server 2012 アプリケーションに適用されます。  
   
 |||  

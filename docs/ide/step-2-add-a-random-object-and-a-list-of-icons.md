@@ -11,11 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95996165351be2ead2f24556da1bfdcdd6fcc048
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: 84c9c837fdb812b18f72e768b8ee528118b28777
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746833"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>手順 2: Random オブジェクトおよびアイコンのリストの追加
 このステップでは、絵合わせゲームに使用する一連のアイコンを作成します。 各アイコンは、フォーム上の TableLayoutPanel 内の 2 つのランダムなセルに追加されます。 そのために、2 つの `new` ステートメントを使用して 2 つのオブジェクトを作成します。 1 つ目は、計算クイズ ゲームで使用したオブジェクトに似た <xref:System.Random> オブジェクトです。 このコードでは、TableLayoutPanel 内のセルをランダムに選択するために使用します。 2 つ目は、初めての使用になるかもしれませんが、<xref:System.Collections.Generic.List%601> オブジェクトです。ランダムに選択されたアイコンを格納するために使用します。
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/28/2018
 
 3.  List オブジェクトを追加するときに、表示される **IntelliSense** ウィンドウに注目します。 次に示しているのは Visual C# の例ですが、Visual Basic でリストを追加するときも同様のテキストが表示されます。
 
-     ![Click イベントが表示されたプロパティ ウィンドウ](../ide/media/express_listintellisense.png "Express_ListIntellisense") IntelliSense window
+     ![Click イベントが表示されたプロパティ ウィンドウ](../ide/media/express_listintellisense.png) IntelliSense ウィンドウ
 
     > [!NOTE]
     >  [IntelliSense] ウィンドウは、手動でコードを入力する場合にのみ表示されます。 コードをコピーして貼り付ける場合は表示されません。

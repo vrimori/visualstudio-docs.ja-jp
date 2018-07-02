@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2eaa236a5cc4a11832cee3b4dfc43aa4ef0cb97c
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: af9d6476e82f37d02e1a32b1d6cb23812f0fdde5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748219"
 ---
 # <a name="walkthrough-build-an-application"></a>チュートリアル: アプリケーションをビルドする
 
@@ -33,31 +34,31 @@ ms.lasthandoff: 05/03/2018
 
 1. **[構成マネージャー]** ダイアログ ボックスを開きます。
 
-   ![[ビルド] メニュー、[構成マネージャー] コマンド](../ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")
+   ![[ビルド] メニュー、[構成マネージャー] コマンド](../ide/media/buildwalk_configurationmanagerdialogbox.png)
 
 1. **[アクティブ ソリューション構成]** 一覧の **\<[新規作成...]\>** をクリックします。
 
 1. **[新しいソリューション構成]** ダイアログ ボックスで、新しい構成の名前として「`Test`」と入力し、既存の**デバッグ**構成から設定をコピーして、**[OK]** を選びます。
 
-   ![[新しいソリューション構成] ダイアログ ボックス](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")
+   ![[新しいソリューション構成] ダイアログ ボックス](../ide/media/buildwalk_newsolutionconfigdlgbox.png)
 
 1. **[アクティブ ソリューション プラットフォーム]** 一覧の **\<[新規作成...]\>** をクリックします。
 
 1. **[新しいソリューション プラットフォーム]** ダイアログ ボックスで、**[x64]** を選択します。x86 プラットフォームの設定はコピーしません。
 
-   ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")
+   ![[新しいソリューション プラットフォーム] ダイアログ ボックス](../ide/media/buildwalk_newsolutionplatform.png)
 
 1. **[OK]** を選択します。
 
    アクティブなソリューション構成が**テスト**に変更され、アクティブなソリューション プラットフォームが x64 に設定されました。
 
-   ![テスト構成を使用した構成マネージャー](../ide/media/buildwalk_configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")
+   ![テスト構成を使用した構成マネージャー](../ide/media/buildwalk_configmanagertestconfig.png)
 
 1. **[閉じる]** を選択します。
 
 **[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用すると、アクティブなソリューション構成を簡単に確認または変更することができます。
 
-![[ソリューション構成] オプション (標準ツール バー)](../ide/media/buildwalk_standardtoolbarsolutioncongfig.png "BuildWalk_StandardToolbarSolutionCongfig")
+![[ソリューション構成] オプション (標準ツール バー)](../ide/media/buildwalk_standardtoolbarsolutioncongfig.png)
 
 ## <a name="build-the-application"></a>アプリケーションのビルド
 
@@ -83,9 +84,9 @@ ms.lasthandoff: 05/03/2018
 
 **[出力]** ウィンドウに、ビルドの結果が表示されます。 ビルドに成功しましたが、次の警告が生成されました。
 
-![出力ウィンドウ、Visual Basic](../ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
+![出力ウィンドウ、Visual Basic](../ide/media/buildwalk_vbbuildoutputwnd.png)
 
-![出力ウィンドウ、Visual C&#35;](../ide/media/buildwalk_csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
+![出力ウィンドウ、Visual C&#35;](../ide/media/buildwalk_csharpbuildoutputwnd.png)
 
 ビルド出力が見やすくなるように、ビルド時に特定の警告メッセージを一時的に非表示にすることができます。
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 
 1. **[ビルド]** ページを選択し、**[警告の表示なし]** ボックスで、警告番号 **0168** を指定します。
 
-     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")
+     ![[ビルド] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_csharpsupresswarnings.png)
 
      詳細については、「[Build Page, Project Designer (C#)](../ide/reference/build-page-project-designer-csharp.md)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 
      **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。
 
-     ![[出力] ウィンドウ、Visual C&#35; のビルド警告](../ide/media/buildwalk_visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")
+     ![出力ウィンドウ、Visual C&#35; ビルド警告](../ide/media/buildwalk_visualcsharpbuildwarnings.png)
 
 ### <a name="suppress-all-visual-basic-build-warnings"></a>Visual Basic のすべてのビルド警告を非表示にする
 
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 
 1. **[コンパイル]** ページで、**[すべての警告を表示しない]** チェック ボックスをオンにします。
 
-     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsupresswarnings.png "BuildWalk_VBSupressWarnings")
+     ![[コンパイル] ページ、[プロジェクト デザイナー]](../ide/media/buildwalk_vbsupresswarnings.png)
 
      詳細については、「[Visual Basic での警告の構成](../ide/configuring-warnings-in-visual-basic.md)」を参照してください。
 
@@ -127,7 +128,7 @@ ms.lasthandoff: 05/03/2018
 
  **[出力]** ウィンドウには、ビルドの概要情報のみが表示されます。
 
- ![出力ウィンドウ、Visual Basic のビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png "BuildWalk_VisualBasicBuildWarnings")
+ ![出力ウィンドウ、Visual Basic ビルド警告](../ide/media/buildwalk_visualbasicbuildwarnings.png)
 
  詳細については、「[方法: コンパイラ警告を非表示にする](../ide/how-to-suppress-compiler-warnings.md)」を参照してください。
 
@@ -143,7 +144,7 @@ ms.lasthandoff: 05/03/2018
 
 1. **[オプション]** ダイアログ ボックスを開きます。
 
-     ![[ツール] メニューの [オプション] コマンド](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")
+     ![[ツール] メニューの [オプション] コマンド](../ide/media/exploreide-toolsoptionsmenu.png)
 
 1. **[プロジェクトおよびソリューション]** カテゴリを選択し、**[ビルド/実行]** ページを選択します。
 
@@ -174,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 
 1. **プロジェクト デザイナー**を開きます。
 
-     ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")
+     ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk_viewpropertypages.png)
 
 1. **[コンパイル]** ページをクリックします。
 
@@ -191,13 +192,13 @@ ms.lasthandoff: 05/03/2018
 
 1. アプリケーションをビルドします。
 
-     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
+     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png)
 
 ### <a name="specify-a-release-build-for-c"></a>C# 用にリリース ビルドを指定する #
 
 1. **プロジェクト デザイナー**を開きます。
 
-     ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")
+     ![[表示] メニュー、[プロパティ ページ] コマンド](../ide/media/buildwalk_viewpropertypages.png)
 
 1. **[ビルド]** ページを選びます。
 
@@ -216,7 +217,7 @@ ms.lasthandoff: 05/03/2018
 
 1. アプリケーションをビルドします。
 
-     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")
+     ![[ビルド] メニューの [ソリューションのビルド] コマンド](../ide/media/exploreide-buildsolution.png)
 
    指定したネットワーク パスに、実行可能ファイルがコピーされます。 そのパスは `\\myserver\builds\\FileName.exe` になります。
 

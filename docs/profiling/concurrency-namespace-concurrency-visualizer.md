@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 362c8e87c104dbed859421e21b43d309a6eab8b4
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: aec7bc6373644b81dd45eeeadefa33ab3af88396
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548139"
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>Concurrency 名前空間 (同時実行ビジュアライザー)
 `Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)」を参照してください。  
@@ -40,5 +41,5 @@ namespace Concurrency;
 ## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkersobj.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C ライブラリ リファレンス](../profiling/c-library-reference.md)

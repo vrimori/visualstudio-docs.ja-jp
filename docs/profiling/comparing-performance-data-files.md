@@ -13,16 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b56982cdef9c27beb4e5aeb82fa9d9741e87fbd7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 20324a3026f5c32fcc1525f1c5afcd20b1b62332
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690732"
 ---
-# <a name="comparing-performance-data-files"></a>パフォーマンス データ ファイルの比較
-プロファイリング ツールのデータ ファイルの比較機能を使用すると、2 つのレポート ファイル (.VSP または .VSPS) を選択し、2 つのプロファイリング セッション間の違い、パフォーマンスの低下、および改善を示すレポートを生成できます。  
+# <a name="compare-performance-data-files"></a>パフォーマンス データ ファイルを比較する
+プロファイル ツールのデータ ファイルの比較機能を使用すると、2 つのレポート ファイル (.*vsp* または .*vsps*) を選択し、2 つのプロファイリング セッション間の違い、パフォーマンスの低下、および改善を示すレポートを生成できます。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのデータ ファイルの比較レポートでは、あるプロファイリング データ ファイルの分析結果と、他のデータ ファイルの基準の分析結果を比較します。 両方のデータ ファイルは、同じプロファイリング メソッドで生成されている必要があります。 分析された比較のレポートは .vsps ファイル形式で保存されます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのデータ ファイルの比較レポートでは、あるプロファイリング データ ファイルの分析結果と、他のデータ ファイルの基準の分析結果を比較します。 両方のデータ ファイルは、同じプロファイリング メソッドで生成されている必要があります。 分析された比較のレポートは .*vsps* ファイル形式で保存されます。  
   
  比較レポート ビューには、変化したデータのテーブル ビューが表示されます。 テーブルは、差分、またはベースラインからの変化を表示します。 差分は、古い値、基準値と、新しい分析による結果の値との違いを測定して計算されます。  
   

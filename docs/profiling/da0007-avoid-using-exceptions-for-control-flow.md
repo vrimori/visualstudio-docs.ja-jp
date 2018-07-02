@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c70ddc12b2c790a360f5124e7deeb8e99189742c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8b7f673adc1c5f93c3cf356218c510cad7f8d229
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749867"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: 制御フローでの例外の使用を避けてください
 |||  
@@ -38,9 +39,9 @@ ms.lasthandoff: 04/19/2018
 ## <a name="rule-description"></a>規則の説明  
  例外ハンドラーを使用して、プログラム実行を中断するエラーやその他のイベントをキャッチするのは良い方法ですが、通常のプログラム実行ロジックの一部として例外ハンドラーを使用すると負荷が高くなる可能性があるため、避けてください。 ほとんどの場合、例外は、あまり発生することのない、予期しない状況に対してのみ使用する必要があります。 値を返すときに通常のプログラム フローの一部として例外を使用しないでください。 多くの場合、値を検証し、条件付きロジックを使用して問題の原因となっているステートメントの実行を中断することで、例外の発生を抑えることができます。  
   
- 詳細については、MSDN の **Microsoft Patterns and Practices** (マイクロソフトのパターンと手法) ライブラリの「**.NET アプリケーションのパフォーマンスとスケーラビリティの向上**」の**第 5 章「マネージ コード パフォーマンスの向上**」の「[例外管理](http://go.microsoft.com/fwlink/?LinkID=177825)」を参照してください。  
+ 詳細については、MSDN の **Microsoft Patterns and Practices** (マイクロソフトのパターンと手法) ライブラリの「**Improving .NET Application Performance and Scalability**」 (.NET アプリケーションのパフォーマンスとスケーラビリティの向上) の 「**Chapter 5 — Improving Managed Code Performance**」 (第 5 章マネージド コード パフォーマンスの向上) の 「[Exception Management](http://go.microsoft.com/fwlink/?LinkID=177825)」 (例外管理) を参照してください。  
   
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
- [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、[マーク] ビューに移動します。 **.NET CLR Exceptions(@ProcessInstance)\\# of Exceps Thrown / sec** の測定値が含まれる列を見つけます。 例外処理の頻度が他よりも高い特定のプログラム実行フェーズがあるかどうかを確認します。 サンプリング プロファイルを使用して、頻繁な例外を生成する throw ステートメントおよび try/catch ブロックを識別してください。 必要に応じて、ロジックを catch ブロックに追加すると、最も頻繁に処理されている例外を見分けることができます。 可能な場合は、頻繁に実行される throw ステートメントまたは catch ブロックを、簡単なフロー制御ロジックまたは検証コードと置き換えてください。  
+ [エラー一覧] ウィンドウに表示されたメッセージをダブルクリックして、[マーク] ビューに移動します。 **.NET CLR Exceptions(@ProcessInstance)\\# of Excels Thrown / sec** の測定値が含まれる列を見つけます。 例外処理の頻度が他よりも高い特定のプログラム実行フェーズがあるかどうかを確認します。 サンプリング プロファイルを使用して、頻繁な例外を生成する throw ステートメントおよび try/catch ブロックを識別してください。 必要に応じて、ロジックを catch ブロックに追加すると、最も頻繁に処理されている例外を見分けることができます。 可能な場合は、頻繁に実行される throw ステートメントまたは catch ブロックを、簡単なフロー制御ロジックまたは検証コードと置き換えてください。  
   
- たとえば、アプリケーションが DivideByZeroException 例外を頻繁に処理している場合、ロジックをプログラムに追加して値が 0 の分母をチェックすると、アプリケーションのパフォーマンスが向上します。
+ たとえば、アプリケーションが DivideByZeroException 例外を頻繁に処理している場合、ロジックをプログラムに追加して値が 0 の分母をチェックすると、アプリケーションのパフォーマンスが向上されます。

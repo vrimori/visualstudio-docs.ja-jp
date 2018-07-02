@@ -1,6 +1,7 @@
 ---
-title: CPU 使用率データの分析 (マネージ コード) | Microsoft Docs
-ms.custom: ''
+title: CPU 使用率データの分析 (マネージド コード)
+description: CPU 使用率診断ツールを使用して C# と Visual Basic でアプリのパフォーマンスを測定する
+ms.custom: mvc
 ms.date: 12/05/2017
 ms.technology: vs-ide-debug
 ms.topic: quickstart
@@ -12,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cac26376df6a5e7dc26b55e07fbebe240b1511de
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 69b1179763433213539af81bf29e34d09e98bf3b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750286"
 ---
-# <a name="analyze-cpu-usage-data-in-visual-studio-managed-code"></a>Visual Studio の CPU 使用率データの分析 (マネージ コード)
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-managed-code"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (マネージド コード)
 
 Visual Studio は、アプリケーションのパフォーマンス問題の分析に役立つ高性能な機能をたくさん備えています。 このトピックでは、基本的な機能のいくつかを簡単に紹介します。 今回、高い CPU 使用率に起因するパフォーマンス上のボトルネックを特定するツールを紹介します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
 
@@ -31,7 +33,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
 
-2. **[Visual C#]** または **[Visual Basic]** の下で、**[Windows クラシック デスクトップ]** を選択し、真ん中のウィンドウで [**コンソール アプリ (.NET Framework)]** を選択します。
+2. **[Visual C#]** または **[Visual Basic]** の下で、**[Windows デスクトップ]** を選択し、中央のウィンドウで [**コンソール アプリ (.NET Framework)]** を選択します。
 
 3. 「**MyProfilerApp**」のような名前を入力し、**[OK]** をクリックします。
 
@@ -39,14 +41,14 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 2. Program.cs を開き、すべてのコードを次のコードで置換します。
 
-    ```cs
+    ```csharp
     using System;
     using System.Threading;
     public class ServerClass
     {
         const int MIN_ITERATIONS = int.MaxValue / 1000;
         const int MAX_ITERATIONS = MIN_ITERATIONS + 10000;
-    
+
         long m_totalIterations = 0;
         readonly object m_totalItersLock = new object();
         // The method that will be called when the thread is started.
@@ -54,10 +56,10 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
         {
             Console.WriteLine(
                 "ServerClass.InstanceMethod is running on another thread.");
-    
+
             var x = GetNumber();
         }
-    
+
         private int GetNumber()
         {
             var rand = new Random();
@@ -67,8 +69,8 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
             {
                 m_totalIterations += iters;
             }
-            // we're just spinning here  
-            // and using Random to frustrate compiler optimizations  
+            // we're just spinning here
+            // and using Random to frustrate compiler optimizations
             for (var i = 0; i < iters; i++)
             {
                 result = rand.Next();
@@ -76,7 +78,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
             return result;
         }
     }
-    
+
     public class Simple
     {
         public static void Main()
@@ -89,14 +91,14 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
         public static void CreateThreads()
         {
             ServerClass serverObject = new ServerClass();
-    
+
             Thread InstanceCaller = new Thread(new ThreadStart(serverObject.DoWork));
             // Start the thread.
             InstanceCaller.Start();
-    
+
             Console.WriteLine("The Main() thread calls this after "
                 + "starting the new InstanceCaller thread.");
-    
+
         }
     }
     ```
@@ -104,21 +106,21 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     ```vb
     Imports System
     Imports System.Threading
-    
+
     Namespace MyProfilerApp
         Public Class ServerClass
             Const MIN_ITERATIONS As Integer = Integer.MaxValue / 1000
             Const MAX_ITERATIONS As Integer = MIN_ITERATIONS + 10000
-    
+
             Private m_totalIterations As Long = 0
             ReadOnly m_totalItersLock As New Object()
             ' The method that will be called when the thread is started.
             Public Sub DoWork()
                 Console.WriteLine("ServerClass.InstanceMethod is running on another thread.")
-    
+
                 Dim x = GetNumber()
             End Sub
-    
+
             Private Function GetNumber() As Integer
                 Dim rand = New Random()
                 Dim iters = rand.[Next](MIN_ITERATIONS, MAX_ITERATIONS)
@@ -126,15 +128,15 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
                 SyncLock m_totalItersLock
                     m_totalIterations += iters
                 End SyncLock
-                ' we're just spinning here  
-                ' and using Random to frustrate compiler optimizations  
+                ' we're just spinning here
+                ' and using Random to frustrate compiler optimizations
                 For i As Integer = 0 To iters - 1
                     result = rand.[Next]()
                 Next
                 Return result
             End Function
         End Class
-    
+
         Public Class Simple
             Public Shared Sub Main()
                 For i As Integer = 0 To 199
@@ -143,13 +145,13 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
             End Sub
             Public Shared Sub CreateThreads()
                 Dim serverObject As New ServerClass()
-    
+
                 Dim InstanceCaller As New Thread(New ThreadStart(AddressOf serverObject.DoWork))
                 ' Start the thread.
                 InstanceCaller.Start()
-    
+
                 Console.WriteLine("The Main() thread calls this after " + "starting the new InstanceCaller thread.")
-    
+
             End Sub
         End Class
     End Namespace
@@ -158,8 +160,8 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     > [!NOTE]
     > Visual Basic で、スタートアップ オブジェクトが `Sub Main` に設定されていることを確認します (**[プロパティ]、[アプリケーション]、[スタートアップ オブジェクト]**)。
 
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
-  
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する
+
 1.  最初に、`Main` 関数のこのコード行でアプリのブレークポイントを設定します。
 
     `for (int i = 0; i < 200; i++)`
@@ -176,7 +178,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
     > [!TIP]
     > 2 つのブレークポイントを設定することで、分析するコードの部分にデータ収集を限定できます。
-  
+
 3.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
 
 4.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
@@ -196,7 +198,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
      これで、2 つのブレークポイント間で実行されるコードのリージョンを対象に、アプリケーションのパフォーマンス データが得られました。
 
      プロファイラーがスレッド データの準備を開始します。 それが完了するまで待ちます。
-  
+
      CPU 使用率ツールの **[CPU 使用率]** タブにレポートが表示されます。
 
      この時点で、データの分析を開始できます。
@@ -214,7 +216,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 2. 関数の一覧で、`ServerClass::GetNumber` 関数をダブルクリックします。
 
-    関数をダブルクリックすると、左ウィンドウで **[呼び出し元/呼び出し先]** ビューが開きます。 
+    関数をダブルクリックすると、左ウィンドウで **[呼び出し元/呼び出し先]** ビューが開きます。
 
     ![診断ツールの [呼び出し元/呼び出し先] ビュー](../profiling/media/quickstart-cpu-usage-caller-callee.png "DiagToolsCallerCallee")
 
@@ -233,7 +235,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 - CPU 使用率ツールで [CPU 使用率を分析し](../profiling/cpu-usage.md)、さらに詳細な情報を取得します。
 - デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析します。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
 
- [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+- [Visual Studio のプロファイル](../profiling/index.md)
+- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)

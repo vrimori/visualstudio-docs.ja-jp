@@ -14,15 +14,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca61a511d5b65233aa0f7e979374ba5dd48d21ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14bf030ce1adb1dede9ad2a377d8fb435d75e0c6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690534"
 ---
 # <a name="cores-view-timeline"></a>コア ビューのタイムライン
 タイムラインの各行は、プロファイリング対象システムの論理プロセッサ コアを表します。 各行の、水平軸は特定の時点で論理コアで実行されたスレッドを示します。 タイムラインで興味のある色の上にマウス ポインターを合わせると、スレッドを特定するヒントが返されます。 ウィンドウの下部の凡例で、各色の意味がわかります。スレッドの特定に役立ちます。 ズーム ツールで拡大縮小できます。クリックしたままドラッグするか、CTRL を押しながらマウス ホイールを動かします。 コア ビューとスレッド ビューを切り替えるとき、ズームの一貫性が維持されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コア ビュー](../profiling/cores-view.md)   
  [ズーム コントロール (スレッド ビュー)](../profiling/zoom-control-threads-view.md)

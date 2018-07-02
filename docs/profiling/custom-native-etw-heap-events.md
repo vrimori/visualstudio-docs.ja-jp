@@ -12,11 +12,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d08abca1d20641a8e12261577ec1fdcf8179e080
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1cdff316b5553a8c1425927275e1547294040002
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749461"
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
@@ -136,7 +137,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
    CloseHeapTracker(hHeapTracker);
    ```
 
-## <a name="tracking-memory-usage"></a>メモリ使用量を追跡記録する
+## <a name="track-memory-usage"></a>メモリ使用量を追跡する
 呼び出しが所定の場所にあるので、Visual Studio の標準**メモリ使用量**ツールを利用し、カスタム ヒープ使用量を追跡できます。  このツールの使用方法については、[メモリ使用量](../profiling/memory-usage.md)に関する文書を参照してください。 スナップショットによるヒープ プロファイリングを有効にしてください。有効にしない場合、カスタム ヒープ使用量が表示されません。 
 
 ![ヒープ プロファイリングを有効にする](media/heap-enable-heap.png)
@@ -145,7 +146,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 ![ヒープ選択](media/heap-example-custom-heap.png)
 
-`MemoryPool` が `VSHeapTracker::CHeapTracker` オブジェクトを作成し、独自の `allocate` メソッドが `AllocateEvent` メソッドを呼び出す上記のコード サンプルで、そのカスタム割り当ての結果が表示されます。3 つのインスタンスで合計 24 バイトです。種類はすべて `Foo` です。
+`MemoryPool` で `VSHeapTracker::CHeapTracker` オブジェクトを作成し、独自の `allocate` メソッドで `AllocateEvent` メソッドを呼び出す上記のコード例を使用して、そのカスタム割り当ての結果を表示できます。ここには、合計 24 バイトのインスタンスが 3 つ表示され、種類はすべて `Foo` です。
 
 既定の *NT ヒープ*は前と同じに見えますが、`CHeapTracker` オブジェクトが追加されています。
 
@@ -154,8 +155,8 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 標準 Windows ヒープと同様に、このツールを利用してスナップショットを比較し、カスタム ヒープのリークや破損を探すこともできます。詳しくは、[メモリ使用量](../profiling/memory-usage.md)に関する文書を参照してください。
 
 > [!TIP]
-> Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。**[デバッグ]、[パフォーマンス プロファイラー]** の順に選択するか、キーボード ショートカットの **Alt + F2** を押してください。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。**[デバッグ]、[Windows]、[診断ツールの表示]** の順に選択するか、キーボード ショートカットの **Ctrl+Alt+F2** を押してください。
+> Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。これは、**[デバッグ]**>**[パフォーマンス プロファイラー]** メニュー オプション、または **Alt**+**F2** キーの組み合わせで有効にできます。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。このウィンドウは、**[デバッグ]**>**[Windows]**>**[診断ツールの表示]** メニュー、または **Ctrl**+**Alt**+**F2** キーの組み合わせで有効にできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [プロファイリング ツール](../profiling/profiling-tools.md)  
 [メモリ使用量](../profiling/memory-usage.md)
