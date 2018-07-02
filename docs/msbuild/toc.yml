@@ -84,6 +84,8 @@
               items:
                 - name: 'チュートリアル: インライン タスクの作成'
                   href: walkthrough-creating-an-inline-task.md
+            - name: RoslynCodeTaskFactory を使用する MSBuild インライン タスク
+              href: msbuild-roslyncodetaskfactory.md
         - name: プロパティと項目の比較
           href: comparing-properties-and-items.md
         - name: MSBuild の特殊文字
@@ -279,6 +281,8 @@
               href: csc-task.md
             - name: Delete タスク
               href: delete-task.md
+            - name: DownloadFile タスク
+              href: downloadfile-task.md
             - name: Error タスク
               href: error-task.md
             - name: Exec タスク
@@ -351,6 +355,8 @@
               href: touch-task.md
             - name: UnregisterAssembly タスク
               href: unregisterassembly-task.md
+            - name: Unzip タスク
+              href: unzip-task.md
             - name: UpdateManifest タスク
               href: updatemanifest-task.md
             - name: Vbc タスク
@@ -367,6 +373,8 @@
               href: xmlpoke-task.md
             - name: XslTransformation タスク
               href: xsltransformation-task.md
+            - name: ZipDirectory タスク
+              href: zipdirectory-task.md
         - name: MSBuild の条件
           href: msbuild-conditions.md
         - name: MSBuild の条件構造

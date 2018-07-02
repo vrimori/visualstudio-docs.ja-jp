@@ -1,41 +1,30 @@
-- name: ワークフロー デザイナーを使用したアプリケーションの開発
+- name: ワークフロー デザイナーでアプリを開発する
   href: developing-applications-with-the-workflow-designer.md
   items:
-    - name: ワークフロー デザイナーを使用する
-      href: using-the-workflow-designer.md
+    - name: ワークフロー プロジェクトを作成する
+      href: creating-a-workflow-project.md
       items:
-        - name: ワークフロー プロジェクトを作成する
-          href: creating-a-workflow-project.md
-          items:
-            - name: ワークフロー コンソール アプリケーションを作成する
-              href: how-to-create-a-workflow-console-application.md
-            - name: WCF ワークフロー サービス アプリケーションを作成する
-              href: how-to-create-a-wcf-workflow-service-application.md
-            - name: アクティビティ ライブラリを作成する
-              href: how-to-create-an-activity-library.md
-            - name: アクティビティ デザイナー ライブラリを作成する
-              href: how-to-create-an-activity-designer-library.md
-            - name: ワークフロー プロジェクトに新しい項目を追加する
-              href: how-to-add-a-new-item-to-a-workflow-project.md
-        - name: ツール ボックスにアクティビティを追加する
-          href: how-to-add-activities-to-the-toolbox.md
-        - name: 引数デザイナーを使用する
-          href: how-to-use-the-argument-designer.md
-        - name: 変数デザイナーを使用する
-          href: how-to-use-the-variable-designer.md
-        - name: 式エディターを使用する
-          href: how-to-use-the-expression-editor.md
-        - name: インポート デザイナーを使用する
-          href: how-to-use-the-imports-designer.md
-        - name: 階層リンク ナビゲーションを使用する
-          href: how-to-use-breadcrumb-navigation.md
-        - name: ワークフロー デザイナーで検索を使用する
-          href: how-to-use-search-in-the-workflow-designer.md
-        - name: ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する
-          href: how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md
-        - name: ワークフロー デザイナーでワークフローにコメントを追加する
-          href: how-to-add-comments-to-a-workflow-in-the-workflow-designer.md
-    - name: アクティビティ デザイナーの使用
+        - name: ワークフロー プロジェクトに新しい項目を追加する
+          href: how-to-add-a-new-item-to-a-workflow-project.md
+    - name: ツール ボックスにアクティビティを追加する
+      href: how-to-add-activities-to-the-toolbox.md
+    - name: 引数デザイナーを使用する
+      href: how-to-use-the-argument-designer.md
+    - name: 変数デザイナーを使用する
+      href: how-to-use-the-variable-designer.md
+    - name: 式エディターを使用する
+      href: how-to-use-the-expression-editor.md
+    - name: インポート デザイナーを使用する
+      href: how-to-use-the-imports-designer.md
+    - name: 階層リンク ナビゲーションを使用する
+      href: how-to-use-breadcrumb-navigation.md
+    - name: ワークフロー デザイナーで検索を使用する
+      href: how-to-use-search-in-the-workflow-designer.md
+    - name: ワークフロー デザイナーでアクティビティ デリゲートを定義および使用する
+      href: how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md
+    - name: ワークフロー デザイナーでワークフローにコメントを追加する
+      href: how-to-add-comments-to-a-workflow-in-the-workflow-designer.md
+    - name: アクティビティ デザイナー
       href: using-the-activity-designers.md
       items:
         - name: 制御フロー アクティビティ デザイナー
@@ -156,18 +145,16 @@
           items:
             - name: Interop アクティビティ デザイナー
               href: interop-activity-designer.md
-    - name: ワークフロー デザイナーを使用したワークフローのデバッグ
+    - name: デバッグ ワークフロー
       href: debugging-workflows-with-the-workflow-designer.md
       items:
-        - name: ワークフロー デバッガーを呼び出す
-          href: how-to-invoke-the-workflow-debugger.md
         - name: ワークフロー内のブレークポイントを設定する
           href: how-to-set-breakpoints-in-workflows.md
         - name: ワークフロー デザイナーを使用して XAML をデバッグする
           href: how-to-debug-xaml-with-the-workflow-designer.md
-        - name: ワークフロー デザイナーでサポートされていないデバッグ シナリオ
+        - name: サポートされていないデバッグ シナリオ
           href: unsupported-debugging-scenarios-in-the-workflow-designer.md
-    - name: ワークフロー デザイナーの UI ヘルプ
+    - name: UI リファレンス
       href: workflow-designer-ui-help.md
       items:
         - name: '[.NET 型の参照と選択] ダイアログ ボックス'
@@ -188,97 +175,7 @@
           href: system-activities-tab-choose-toolbox-items-dialog-box.md
         - name: ワークフロー デザイナーのシェルの機能
           href: workflow-designer-shell-features.md
-        - name: ワークフロー デザイナーのキーボード ショートカット
+        - name: ショートカット キー
           href: keyboard-shortcuts-in-the-workflow-designer.md
-        - name: ワークフロー デザイナーでのエラー メッセージ
+        - name: エラー メッセージ
           href: error-messages-in-workflow-designer.md
-    - name: .NET 3.0 または .NET 3.5 Framework を対象とするワークフロー アプリケーションの開発
-      href: developing-workflow-applications-targeting-the-dotnet-3-0-or-dotnet-3-5-framework.md
-      items:
-        - name: 従来のワークフローのデバッグ
-          href: debugging-legacy-workflows.md
-          items:
-            - name: ASP.NET ベースのワークフローをデバッグする (レガシ)
-              href: how-to-debug-aspnet-based-workflows-legacy.md
-            - name: ワークフロー内にブレークポイントを設定する (レガシ)
-              href: how-to-set-breakpoints-in-workflows-legacy.md
-            - name: リモート コンピューターからのワークフローのデバッグ (レガシ)
-              href: debugging-workflows-from-a-remote-computer-legacy.md
-            - name: デバッグのステップ実行オプション (レガシ)
-              href: debug-stepping-options-legacy.md
-            - name: デバッグのステップ実行オプションを変更する (レガシ)
-              href: how-to-change-the-debug-stepping-option-legacy.md
-            - name: Visual Studio Debugger for Windows Workflow Foundation の無効化 (レガシ)
-              href: disabling-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md
-            - name: Visual Studio Debugger for Windows Workflow Foundation の起動 (レガシ)
-              href: invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy.md
-        - name: 従来のワークフロー デザイナーの使用
-          href: using-the-legacy-workflow-designer.md
-          items:
-            - name: Visual Studio ワークフローのウィンドウ (レガシ)
-              href: visual-studio-workflow-windows-legacy.md
-            - name: 従来のワークフロー プロジェクトの作成
-              href: creating-legacy-workflow-projects.md
-              items:
-                - name: ワークフロー アクティビティ ライブラリを作成する (レガシ)
-                  href: how-to-create-a-workflow-activity-library-legacy.md
-                - name: 空のワークフロー プロジェクトを作成する (レガシ)
-                  href: how-to-create-an-empty-workflow-project-legacy.md
-                - name: ワークフロー プロジェクトに新しい項目を追加する (レガシ)
-                  href: how-to-add-a-new-item-to-a-workflow-project-legacy.md
-                - name: ワークフロー プロジェクトのプロパティを構成する (レガシ)
-                  href: how-to-configure-workflow-project-properties-legacy.md
-                - name: シーケンシャル ワークフロー コンソール アプリケーションを作成する (レガシ)
-                  href: how-to-create-sequential-workflow-console-applications-legacy.md
-                - name: ステート マシン ワークフロー コンソール アプリケーションを作成する (レガシ)
-                  href: how-to-create-state-machine-workflow-console-applications-legacy.md
-                - name: ワークフロー プロジェクトを作成する (レガシ)
-                  href: how-to-create-workflow-projects-legacy.md
-                - name: シーケンシャル ワークフロー ライブラリを作成する (レガシ)
-                  href: how-to-create-a-sequential-workflow-library-legacy.md
-                - name: ステート マシン ワークフロー ライブラリを作成する (レガシ)
-                  href: how-to-create-a-state-machine-workflow-library-legacy.md
-            - name: シーケンシャル ワークフロー ビュー (レガシ)
-              href: sequential-workflow-views-legacy.md
-            - name: 従来のワークフロー アクティビティ
-              href: legacy-workflow-activities.md
-              items:
-                - name: 宣言的ルール条件を作成する (レガシ)
-                  href: how-to-create-a-declarative-rule-condition-legacy.md
-                - name: PolicyActivity ルール セットを作成する (レガシ)
-                  href: how-to-create-a-policyactivity-rule-set-legacy.md
-                - name: アクティビティ ビュー (レガシ)
-                  href: activity-views-legacy.md
-                - name: ツールボックスにアクティビティを追加する (レガシ)
-                  href: how-to-add-activities-to-the-toolbox-legacy.md
-                - name: Windows Communication Foundation コントラクト操作を実装する (レガシ)
-                  href: how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md
-                - name: Windows Communication Foundation コントラクト操作を呼び出す (レガシ)
-                  href: how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md
-            - name: ワークフロー内でのテーマの使用 (レガシ)
-              href: using-themes-in-workflows-legacy.md
-            - name: 従来のステート マシン ワークフロー デザイナーの使用
-              href: using-the-legacy-state-machine-workflow-designer.md
-            - name: 従来のアクティビティ デザイナーの使用
-              href: using-the-legacy-activity-designer.md
-            - name: 従来の Designer for Windows Workflow Foundation UI ヘルプ
-              href: legacy-designer-for-windows-workflow-foundation-ui-help.md
-              items:
-                - name: '[アクティビティのプロパティへのバインド] ダイアログ ボックス (レガシ)'
-                  href: bind-to-an-activity-s-property-dialog-box-legacy.md
-                - name: '[.NET 型の参照と選択] ダイアログ ボックス (レガシ)'
-                  href: browse-and-select-a-dotnet-type-dialog-box-legacy.md
-                - name: '[操作の選択] ダイアログ ボックス (レガシ)'
-                  href: choose-operation-dialog-box-legacy.md
-                - name: '[ルール条件エディター] ダイアログ ボックス (レガシ)'
-                  href: rule-condition-editor-dialog-box-legacy.md
-                - name: '[ルール セット エディター] ダイアログ ボックス (レガシ)'
-                  href: rule-set-editor-dialog-box-legacy.md
-                - name: '[条件の選択] ダイアログ ボックス (レガシ)'
-                  href: select-condition-dialog-box-legacy.md
-                - name: '[ルール セットの選択] ダイアログ ボックス (レガシ)'
-                  href: select-rule-set-dialog-box-legacy.md
-                - name: '[テーマの構成] ダイアログ ボックス (レガシ)'
-                  href: theme-configuration-dialog-box-legacy.md
-                - name: '[ヘルプ] ([オプション] ダイアログ ボックス - ワークフロー デザイナー) (レガシ)'
-                  href: themes-workflow-designer-options-dialog-box-legacy.md

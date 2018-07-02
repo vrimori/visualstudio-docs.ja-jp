@@ -1,26 +1,28 @@
 ---
 title: Visual Studio サブスクリプション
 Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
+Ms.author: tglee
+Manager: lank
 layout: LandingPage
-Ms.date: 02/26/2018
+Ms.date: 06/25/2018
 Ms.topic: landing-page
 Description: Welcome to Visual Studio Subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 400282de2a523e849a736e899c69edb555ed0df4
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 125f1fe960618648a9a04c5bd787523b86d9260f
+ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327191"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36946927"
 ---
 # <a name="visual-studio-subscriptions"></a>Visual Studio サブスクリプション
+
 Visual Studio サブスクリプションは、Windows、iOS、Android、Linux など、お好みのプラットフォームとデバイス上で優れたアプリケーションを作成、展開、管理するための包括的なリソース セットです。  サブスクリプションの特典には、開発ツール、クラウドのサービスとソフトウェア、トレーニングの利用が含まれ、開発およびテストのサポートも含まれます。
 
-##  <a name="get-started"></a>開始するには
+## <a name="get-started"></a>開始するには
+
 管理者が、[https://manage.visualstudio.com](https://manage.visualstudio.com) にサインインして、チームにサブスクリプションを割り当てます。<br>
 サブスクライバーが、[https://my.visualstudio.com](https://my.visualstudio.com) にサインインして、サブスクリプション特典にアクセスします。
 
@@ -134,6 +136,12 @@ Visual Studio サブスクリプションは、Windows、iOS、Android、Linux �
         </a>
     </li>   
 </ul>
+
+---
+
+## <a name="whats-new"></a>新機能
+
+サブスクリプションをさらに便利にするため、サブスクリプションの特典を頻繁に追加し、更新しています。 詳細については、[サブスクリプションの新着情報](whats-new-in-subscriptions.md)に関するページをご覧ください。
 
 ---
 
