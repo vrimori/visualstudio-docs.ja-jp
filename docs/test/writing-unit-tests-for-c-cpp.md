@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: ea1253144c245c8706cf96e6cb5d1462e302afea
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: f0315027d6b0a3b57acc7b1651f0788d0b30bba1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752080"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -51,19 +52,19 @@ Google Test アダプターと Boost.Test アダプターは、それぞれ、Vi
 
 テスト対象のコードと同じソリューション内にある 1 つまたは複数のテスト プロジェクトでテストを実行します。 既存のソリューションに新しいテスト プロジェクトを追加するには、**ソリューション エクスプローラー**でソリューション ノードを右クリックして、**[追加] > [新しいプロジェクト]** の順に選びます。 次に、左側のウィンドウで **[Visual C++] > [テスト]** を選び、中央のウィンドウでプロジェクトの種類のいずれかを選びます。 次の図は、**C++ によるデスクトップ開発**ワークロードがインストールされている場合に選ぶことができるテスト プロジェクトです。
 
-![C++ テスト プロジェクト](media/cpp-new-test-project.png "C++ の新しいテスト プロジェクト テンプレート")
+![C++ テスト プロジェクト](media/cpp-new-test-project.png)
 
 ### <a name="create-references-to-other-projects-in-the-solution"></a>ソリューション内の他のプロジェクトへの参照を作成する
 
 テスト コードがテスト対象プロジェクト内の関数にアクセスできるようにするには、テスト プロジェクト内のプロジェクトへの参照を追加します。 **ソリューション エクスプローラー**でプロジェクト ノードを右クリックして、**[追加] > [参照]** を選びます。 ダイアログで、テストするプロジェクトを選びます。
 
-![参照の追加](media/cpp-add-ref-test-project.png "C++ テストがテスト対象プロジェクトへの参照を追加する")
+![参照の追加](media/cpp-add-ref-test-project.png)
 
 ### <a name="add-include-directives-for-header-files"></a>ヘッダー ファイルの #include ディレクティブを追加する
 
 次に、単体テストの .cpp ファイルで、テスト対象の型および関数が宣言されているヘッダー ファイルの `#include` ディレクティブを追加します。 「`#include "`」と入力すると、IntelliSense がアクティブ化して選択を支援します。 他のすべてのヘッダーについて繰り返します。
 
-![include ディレクティブを追加する](media/cpp-add-includes-test-project.png "C++ テストがヘッダー ファイルの include を追加する")
+![インクルード ディレクティブを追加する](media/cpp-add-includes-test-project.png)
 
 ### <a name="write-test-methods"></a>テスト メソッドを作成する
 
@@ -72,7 +73,7 @@ Google Test アダプターと Boost.Test アダプターは、それぞれ、Vi
 
 テスト プロジェクトの .cpp ファイルには、テスト コード記述方法の例として、スタブ クラスとメソッドの定義が含まれます。 シグネチャで TEST_CLASS および TEST_METHOD マクロが使われていることに注意してください。これにより、[テスト エクスプローラー] ウィンドウでメソッドを見つけることができます。
 
-![include ディレクティブを追加する](media/cpp-write-test-methods.png "C++ テストがヘッダー ファイルの include を追加する")
+![インクルード ディレクティブを追加する](media/cpp-write-test-methods.png)
 
 TEST_CLASS と TEST_METHOD は、[Microsoft ネイティブ テスト フレームワーク](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)の一部です。 **テスト エクスプローラー**は、サポートされている他のフレームワークのテスト メソッドも同様の方法で検出します。
 
@@ -94,7 +95,7 @@ TEST_METHOD は void を返します。 テスト結果を生成するには、`
 
 1. **[テスト]** メニューで、**[Windows]**、**[テスト エクスプローラー]** の順に選択します。 次の図は、テストがまだ実行されていないテスト プロジェクトです。
 
-   ![テスト実行前のテスト エクスプローラー](media/cpp-test-explorer.png "C++ のテスト エクスプローラー")
+   ![テスト実行前のテスト エクスプローラー](media/cpp-test-explorer.png)
 
    > [!NOTE]
    > CTest と**テスト エクスプローラー**の統合はまだ利用できません。 CTest のテストは CMake のメイン メニューから実行します。
@@ -103,7 +104,7 @@ TEST_METHOD は void を返します。 テスト結果を生成するには、`
 
 1. テスト エクスプローラーで、**[すべて実行]** を選択するか、または実行する特定のテストを選択します。 ブレークポイントを有効にした場合のデバッグ モードでのテストの実行など他のオプションについては、テストを右クリックします。 すべてのテストを実行すると、ウィンドウに成功したテストと失敗したテストが示されます。
 
-![テスト実行後のテスト エクスプローラー](media/cpp-test-explorer-passed.png "テスト実行後の C++ テスト エクスプローラー")
+![テスト実行後のテスト エクスプローラー](media/cpp-test-explorer-passed.png)
 
 失敗したテストについては、原因の診断に役立つ詳細がメッセージで提供されます。 失敗したテストを右クリックして **[選択したテストのデバッグ]** を選び、障害が発生した関数をステップ実行できます。
 

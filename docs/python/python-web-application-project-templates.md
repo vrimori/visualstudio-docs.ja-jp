@@ -1,7 +1,7 @@
 ---
 title: Python 用 Web アプリケーション テンプレート
 description: デバッグの構成や Azure App Service への発行など、Bottle、Flask、および Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
-ms.date: 04/17/2018
+ms.date: 05/18/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6d76bc7868c78b1def09376cb2382aa39cff1cda
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: f975b726b8be76af1e3daeff59a06a18988644ab
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752041"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -41,7 +42,7 @@ Pyramid などの他のフレームワークには、汎用の "Web プロジェ
 | --- | --- |
 | Blank Bottle Web プロジェクト | `/` に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `<name>` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `app.py` 内に生成します。 |
 | 空の Django Web プロジェクト | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と[Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事をご覧ください。 |
-| Blank Flask Web プロジェクト | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?context=visualstudio/python/default)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。
+| Blank Flask Web プロジェクト | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?context=visualstudio/python/default)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページもご覧ください。
 
 ### <a name="web-group"></a>Web グループ
 
@@ -51,8 +52,8 @@ Pyramid などの他のフレームワークには、汎用の "Web プロジェ
 | --- | --- |
 | Bottle Web プロジェクト | 静的ファイルが `static` フォルダーに含まれていて、`app.py` 内のコードを通して処理されるアプリを生成します。 個々のページに対するルーティングは `routes.py` に含まれており、`views` フォルダーにはページのテンプレートが含まれています。|
 | Django Web プロジェクト | 3 つのページ、認証サポート、および SQLite データベース (データ モデルはなし) を使用して Django プロジェクトと Django アプリを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md) に関する記事と [Django 手順 4](learn-django-in-visual-studio-step-04-full-django-project-template.md) に関する記事をご覧ください。 |
-| Flask Web プロジェクト | 静的ファイルが `static` フォルダーに含まれていているアプリを生成します。 `views.py` 内のコードによってルーティングが処理され、Jinja エンジンを使用するページ テンプレートが `templates` に含まれています。 `runserver.py` ファイルはスタートアップ コードを提供します。 |
-| Flask/Jade Web プロジェクト | "Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jade テンプレート エンジンを使用して生成します。 |
+| Flask Web プロジェクト | 静的ファイルが `static` フォルダーに含まれていているアプリを生成します。 `views.py` 内のコードによってルーティングが処理され、Jinja エンジンを使用するページ テンプレートが `templates` に含まれています。 `runserver.py` ファイルはスタートアップ コードを提供します。 [Flask の詳細情報の手順 4](learn-flask-visual-studio-step-04-full-flask-project-template.md) に関する記事をご覧ください。 |
+| Flask/Jade Web プロジェクト | "Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
 
 ### <a name="polls-group"></a>ポーリング グループ
 
@@ -62,8 +63,8 @@ Pyramid などの他のフレームワークには、汎用の "Web プロジェ
 | --- | --- |
 | Polls Bottle Web プロジェクト | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは `models` フォルダーに含まれ、`settings.py` ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 |
 | ポーリング Django Web プロジェクト | 3 つのページと SQLite データベースを使用して Django プロジェクトと Django アプリを生成します。 認証された管理者がポーリングを作成および管理できるように、Django 管理インターフェイスにカスタマイズを含めます。 詳細については、[Django テンプレート](python-django-web-application-project-template.md) に関する記事と [Django 手順 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md) に関する記事をご覧ください。 |
-| Polls Flask Web プロジェクト | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは `models` フォルダーに含まれ、`settings.py` ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 アプリでは、ページ テンプレートに対して Jinja エンジンが使用されます。 |
-| Polls Flask/Jade Web プロジェクト | "ポーリング Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jade テンプレート エンジンを使用して生成します。 |
+| Polls Flask Web プロジェクト | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは `models` フォルダーに含まれ、`settings.py` ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 アプリでは、ページ テンプレートに対して Jinja エンジンが使用されます。 [Flask の詳細情報の手順 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md) に関する記事をご覧ください。 |
+| Polls Flask/Jade Web プロジェクト | "Polls Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
 
 ## <a name="installing-project-requirements"></a>プロジェクト要件をインストールする
 
@@ -71,7 +72,7 @@ Pyramid などの他のフレームワークには、汎用の "Web プロジェ
 
 ![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](media/template-web-requirements-txt-wizard.png)
 
-ソース管理を使用している場合、仮想環境は `requirements.txt` でしか再作成できないので、仮想環境フォルダーは通常は省略されます。 そのフォルダーを除外する最善の方法としては、上に示したプロンプト内で **[I will install them myself]\(自分でインストールする\)**  を選択して、仮想環境を作成する前に自動コミットを無効にします。 詳細については、[Django チュートリアル: 手順 1 ～ 2、手順 1 ～ 3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関する記事をご覧ください。
+ソース管理を使用している場合、仮想環境は `requirements.txt` でしか再作成できないので、仮想環境フォルダーは通常は省略されます。 そのフォルダーを除外する最善の方法としては、上に示したプロンプト内で **[I will install them myself]\(自分でインストールする\)**  を選択して、仮想環境を作成する前に自動コミットを無効にします。 詳細については、[Django のチュートリアル - 手順 1-2 および手順 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページと [Flask のチュートリアル - 手順 1-2 および手順 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページをご覧ください。
 
 Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに `requirements.txt` ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
 
@@ -87,7 +88,7 @@ Web プロジェクトのデバッグが開始されると、Visual Studio は�
 
 - **[検索パス]**、**[スクリプトの引数]**、**[インタープリターの引数]**、**[インタープリター パス]**: これらのオプションは、[通常のデバッグ](debugging-python-in-visual-studio.md)の場合と同じです
 - **[起動 URL]**: ブラウザーで開かれる URL を指定します。 既定値は `localhost` です。
-- **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 この設定により、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値を上書きできます。
+- **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 この設定により、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値をオーバーライドできます。
 
 **[Run Server Command (サーバー コマンドの実行)]** と **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ (後者はイメージに表示されている内容の下にあります) のプロパティによって、Web サーバーの起動方法が決定されます。 多くのフレームワークでは、現在のプロジェクトの外部のスクリプトを使用する必要があるため、スクリプトをここで構成でき、スタートアップ モジュールの名前をパラメーターとして渡すことができます。
 
@@ -127,7 +128,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
   - 引数: `Production.ini`
 
 - **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
-  - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)
+  - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
   - 引数: `Development.ini`
 
 > [!Tip]
