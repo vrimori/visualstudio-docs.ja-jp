@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ad00d05bf6eba2a3853c0af79bf9decaaba236f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 4b9e63b930122d36903187128d4bebeb1ff96143
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "35669242"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -35,7 +35,7 @@ ms.locfileid: "34751729"
 
 コード化された UI テストの作成は簡単です。 **コード化された UI テスト ビルダー**をバックグラウンドで実行しているときに、テストを手動で実行するだけです。 特定のフィールドに表示する値を指定することもできます。 **コード化された UI テスト ビルダー**では、操作が記録され、それらの記録からコードを生成します。 テストの作成後、特殊なエディターでテストを編集して、操作のシーケンスを変更することができます。
 
-または、Microsoft Test Manager に記録されたテスト ケースがある場合は、それからコードを生成できます。 詳細については、「[手動テストの記録と再生](/vsts/manual-test/getting-started/record-play-back-manual-tests)」をご覧ください。
+または、Microsoft Test Manager に記録されたテスト ケースがある場合は、それからコードを生成できます。 詳細については、「[手動テストの記録と再生](/vsts/test/mtm/record-play-back-manual-tests)」をご覧ください。
 
 コーディングよりテストに集中している場合でも、特殊な**コード化されたテスト ビルダー**とエディターによって、簡単にコード化された UI テストを作成および編集できます。 ただし、開発者が高度な方法でテストを拡張する場合は、コードはコピーして調整する作業がわかりやすくなるように構成されます。 たとえば、Web サイトで商品を購入するテストを記録した後、生成されたコードを編集して多数の商品を購入するループを追加する場合があります。
 
@@ -105,7 +105,7 @@ ms.locfileid: "34751729"
     > [!TIP]
     > 操作の記録と値の検証の間で交互に切り替えます。 操作または検証の各シーケンスの最後にコードを生成します。 必要に応じて、後で新しい操作と検証を挿入できます。
 
-     詳細については、「[UI コントロールのプロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」をご覧ください。
+     詳細については、「[UI コントロールのプロパティを検証する](#validate-the-properties-of-ui-controls)」をご覧ください。
 
 5. 生成されたテスト コードを表示します。
 
@@ -140,7 +140,7 @@ ms.locfileid: "34751729"
 
 8. テストを実行します。
 
-   テスト エクスプローラーを使用するか、テスト メソッドでショートカット メニューを開き、**[テストの実行]** を選択します。 テストの実行方法の詳細については、「[テスト エクスプローラーを使用した単体テストの実行](../test/run-unit-tests-with-test-explorer.md)」と、このトピックの最後の「[次の内容](#VerifyCodeUsingCUITWhatsNext)」セクションの「*コード化された UI テストの実行の追加オプション*」をご覧ください。
+   テスト エクスプローラーを使用するか、テスト メソッドでショートカット メニューを開き、**[テストの実行]** を選択します。 テストの実行方法の詳細については、「[テスト エクスプローラーを使用した単体テストの実行](../test/run-unit-tests-with-test-explorer.md)」と、このトピックの最後の「[次の内容](#what's-next?)」セクションの「*コード化された UI テストの実行の追加オプション*」をご覧ください。
 
 このトピックの残りのセクションでは、このプロシージャ内の各ステップについてさらに詳しく説明します。
 
@@ -284,13 +284,13 @@ Web ブラウザーで暗黙のホバーの記録を有効にするには、構�
 
 コード化された UI テストの作成後、Visual Studio で次のいずれかのツールを使用してテストを編集できます。
 
-- **コード化された UI テスト ビルダー**を使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#VerifyingCodeUsingCUITGenerateAssertions)」セクションをご覧ください。
+- **コード化された UI テスト ビルダー**を使用して、テストにコントロールや検証を追加します。 このトピックの「[コントロールを追加し、プロパティを検証する](#validate-the-properties-of-ui-controls)」セクションをご覧ください。
 
 - **コード化された UI テスト エディター**を使用すると、コード化された UI テストを簡単に変更できます。 **コード化された UI テスト エディター**を使用すると、テスト メソッドを検索、表示、および編集できます。 また、UI コントロール マップ内の UI 操作および関連コントロールを編集することもできます。 詳細については、「[コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)」をご覧ください。
 
 - **コード エディター:**
 
-    - このトピックの「[UI コントロールの操作とプロパティのコーディング](#VerifyingCodeCUITActionsandProperties)」セクションで説明しているように、テストのコントロールのコードを手動で追加します。
+    - このトピックの「[UI コントロールの操作とプロパティのコーディング](#coded-ui-control-actions-and-properties)」セクションで説明しているように、テストのコントロールのコードを手動で追加します。
 
     - コード化された UI テストを作成した後、データ ドリブンになるようにテストを変更できます。 詳細については、「[データ ドリブンのコード化された UI テストの作成](../test/creating-a-data-driven-coded-ui-test.md)」をご覧ください。
 
@@ -454,7 +454,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 - [コード化された UI テストと操作の記録を拡張する](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-コード化された UI テストは、手動テストを自動化するためによく使用されます。 手動テストの詳細については、「[Microsoft Test Manager での手動テストの実行](/vsts/manual-test/mtm/run-manual-tests-with-microsoft-test-manager)」を参照してください。 自動テストの詳細については、「[Visual Studio のテスト ツール](../test/improve-code-quality.md)」を参照してください。
+コード化された UI テストは、手動テストを自動化するためによく使用されます。 手動テストの詳細については、「[Microsoft Test Manager での手動テストの実行](/vsts/test/mtm/run-manual-tests-with-microsoft-test-manager)」を参照してください。 自動テストの詳細については、「[Visual Studio のテスト ツール](../test/improve-code-quality.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

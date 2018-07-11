@@ -13,12 +13,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 88c42b710b08ca7dae8d779da3d6e093179ddca6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 852742c3cea6e2a730fd546fecf17c6b5feb0fac
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34692370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "35669418"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用してコード化された UI テストを編集する
 
@@ -92,9 +92,9 @@ UI 操作のプロパティを **[UI 操作]** ウィンドウで変更する場
 
 - コード化された UI テスト エディターのツール バーにある **[検索]** ボタンを使用すると、Visual Studio の検索と置換ツールを開くことができます。 そうすれば、検索コントロールを使用して、コード化された UI テスト エディターで UI 操作を検索できます。 たとえば、"'Login' ボタンをクリック" を検索できます。 これは、大規模なテストの場合に便利です。 コード化された UI テスト エディターでは検索と置換ツールの置換機能を使用できません。 詳細については、「 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)」の「検索コントロール」を参照してください。
 
-- テスト対象のアプリケーションの UI におけるコントロールの位置を表示するのが難しい場合があります。 コード化された UI テスト エディターの機能の 1 つとして、UI コントロール マップに一覧表示されているコントロールを選択し、テスト対象のアプリケーションにおけるそのコントロールの位置を表示することができます。 詳細については、このトピックの後半に登場する「[テスト対象のアプリケーションで UI コントロールを検索する](#CodedUITestEditor_LocateUIControl)」を参照してください。
+- テスト対象のアプリケーションの UI におけるコントロールの位置を表示するのが難しい場合があります。 コード化された UI テスト エディターの機能の 1 つとして、UI コントロール マップに一覧表示されているコントロールを選択し、テスト対象のアプリケーションにおけるそのコントロールの位置を表示することができます。 詳細については、このトピックの後半に登場する「[テスト対象のアプリケーションで UI コントロールを検索する](#locate-a-ui-control-in-the-application-under-test)」を参照してください。
 
-- 編集するコントロールを含むコンテナー コントロールを拡張する必要が生じる場合があります。 詳細については、このトピックの後半に登場する「[コントロールとその子孫を検索する](#CodedUITestEditor_LocateDecendants)」を参照してください。
+- 編集するコントロールを含むコンテナー コントロールを拡張する必要が生じる場合があります。 詳細については、このトピックの後半に登場する「[コントロールとその子孫を検索する](#locate-a-control-and-its-descendants)」を参照してください。
 
 ## <a name="delete-unwanted-ui-actions"></a>不要な UI 操作を削除する
 
