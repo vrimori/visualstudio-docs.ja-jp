@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3295a5aee03badc52b980183e88f484e0d4bcc3a
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 31c76ba53e858d9eab41d6579950f47b16f8c9b8
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37056356"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke タスク
 
@@ -35,7 +35,7 @@ XML ファイルに XPath クエリで指定された値を設定します。
   
 |パラメーター|説明|
 |---------------|-----------------|
-|`Namespaces`|省略可能な `String` 型のパラメーターです。<br /><br /> XPath クエリ プレフィックスの名前空間を指定します。|
+|`Namespaces`|省略可能な `String` 型のパラメーターです。<br /><br /> XPath クエリ プレフィックスの名前空間を指定します。 `Namespaces` は、属性 `Prefix` と `Uri` を持つ `Namespace` 要素で構成される XML スニペットです。 属性 `Prefix` では、`Uri` 属性で指定された名前空間に関連付けるプレフィックスを指定します。 空の `Prefix` は使用しないでください。|
 |`Query`|省略可能な `String` 型のパラメーターです。<br /><br /> XPath クエリを指定します。|
 |`Value`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> 指定されたパスに挿入する値を指定します。|
 |`XmlInputPath`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> XML 入力をファイル パスとして指定します。|
@@ -43,6 +43,43 @@ XML ファイルに XPath クエリで指定された値を設定します。
 ## <a name="remarks"></a>コメント
 
  表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。
+
+## <a name="example"></a>例
+
+以下に、変更する sample.xml を示します。
+
+```
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" >
+<Identity Name="Sample.Product " Publisher="CN=1234" Version="1.0.0.0" />
+<mp:PhoneIdentity PhoneProductId="456" PhonePublisherId="0" />
+</Package>
+```
+
+この例では、`/Package/mp:PhoneIdentity/PhonePublisherId` を変更する場合、以下を使用します。
+
+```
+<Project>
+  <PropertyGroup>
+    <Namespace>
+        <Namespace Prefix="dn" Uri="http://schemas.microsoft.com/appx/manifest/foundation/windows10" />
+        <Namespace Prefix="mp" Uri="http://schemas.microsoft.com/appx/2014/phone/manifest" />
+        <Namespace Prefix="uap" Uri="http://schemas.microsoft.com/appx/manifest/uap/windows10" />
+    </Namespace>
+</PropertyGroup>
+
+<Target Name="Poke">
+  <XmlPoke
+    XmlInputPath="Sample.xml"
+    Value="MyId"
+    Query="/dn:Package/mp:PhoneIdentity/@PhoneProductId"
+    Namespaces="$(Namespace)"/>
+</Target>
+</Project>
+```
+
+ここでは、既定の名前空間の人為的な名前空間プレフィックスとして `dn` が使用されます。
 
 ## <a name="see-also"></a>参照
 

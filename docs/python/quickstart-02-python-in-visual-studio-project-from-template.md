@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dca1e37a0cde89a2a531d3fceea4337bb9e348dd
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 046aeb3d43066dbe0bd28ef76036478efdbda49f
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37057025"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
@@ -37,11 +37,31 @@ ms.locfileid: "33957338"
     > [!Tip]
     > プロジェクトを開始するとき、すぐに仮想環境を作成することを強くお勧めします。ほとんどの Visual Studio テンプレートでそのように勧められます。 仮想環境では、時間の経過と共にライブラリを追加したり、削除したりしても、プロジェクトの厳密な要件が維持されます。 そのため、`requirements.txt` ファイルを簡単に生成できます。このファイルを利用し、(ソース管理を利用するとき) 他の開発コンピューターにそれらの依存関係を再インストールします。また、運用サーバーにプロジェクトを展開するときに再インストールします。 仮想環境とその長所については、「[仮想環境を使用する](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)」と「[requirements.txt での必要なパッケージの管理](../python/managing-required-packages-with-requirements-txt.md)」を参照してください。
 
-1. Visual Studio によってその環境が作成されたら、**ソリューション エクスプローラー**を見て、`requirements.txt` と共に `app.py` ファイルが指定されていることを確認します。 `app.py` を開き、「[クイック スタート - Flask での Web アプリの作成](../ide/quickstart-python.md)」のものと似たコードがテンプレートによって指定されていること、さらに 2 つのセクションが追加されていることを確認します。
+1. Visual Studio によってその環境が作成されたら、**ソリューション エクスプローラー**を見て、`requirements.txt` と共に `app.py` ファイルが指定されていることを確認します。 `app.py` を開き、「[クイック スタート - Flask での Web アプリの作成](../ide/quickstart-python.md)」のものと似たコードがテンプレートによって指定されており、セクションがいくつか追加されていることを確認します。 以下に示すコードはすべてテンプレートで作成されるため、ユーザーが自分で `app.py` に貼り付ける必要はありません。
 
-    1 つ目のセクションは行 `wsgi_app = app.wsgi_app` です。これは、アプリを Web ホストに展開するときに便利です。
+    コードは次のように必要なインポートで始まります。
 
-    2 つ目のセクションはスタートアップ コードです。ハードコーディングするのではなく、環境変数によってホストとポートを設定できます。 このようなコードによって、コードを変更することなく、開発コンピューターと運用コンピューターの両方で構成を簡単に制御できます。
+    ```python
+    from flask import Flask
+    app = Flask(__name__)
+    ```
+
+    次の行は、アプリを Web ホストに展開するときに便利です。
+
+    ```python
+    wsgi_app = app.wsgi_app
+    ```
+
+    その後に、ビューを定義する単純な関数のルート デコレーターが続きます。
+
+    ```python
+    @app.route('/')
+    def hello():
+        """Renders a sample page."""
+        return "Hello World!"
+    ```
+
+    最後に、以下のスタートアップ コードが示され、ハードコーディングするのではなく、環境変数によってホストとポートを設定できます。 このようなコードによって、コードを変更することなく、開発コンピューターと運用コンピューターの両方で構成を簡単に制御できます。
 
     ```python
     if __name__ == '__main__':
@@ -56,7 +76,8 @@ ms.locfileid: "33957338"
 
 1. **[デバッグ]、[デバッグなしで開始]** を選択し、アプリを実行してブラウザーで `localhost:5555` を開きます。
 
-**質問: Visual Studio には他にどのような Python テンプレートがありますか。**
+
+  **質問: Visual Studio には他にどのような Python テンプレートがありますか。**
 
 **回答**: Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]、[新規]、[プロジェクト]** ダイアログからアクセスできます。
 
