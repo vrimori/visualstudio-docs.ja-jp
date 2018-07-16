@@ -1,36 +1,37 @@
 ---
-title: .NET 開発者向けの Visual Studio 2017
-description: .NET コードをより速く記述するための Visual Studio 2017 の機能の概要。
+title: .NET 開発の生産性を向上させる
+description: より良い .NET コードをより早く書き込むのに役立つ、移動、コード分析、単体テスト、およびその他の機能の概要。
 author: kuhlenh
 ms.author: kaseyu
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.date: 01/16/2018
+ms.date: 06/14/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c4577b1d04b74bdc351927603604d2f92d31eb9
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3c3b7ae456886939dc47c93dfb155aae726e8ccf
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37175305"
 ---
-# <a name="visual-studio-2017-productivity-guide-for-net-developers"></a>.NET 開発者のための Visual Studio 2017 生産性ガイド
+# <a name="visual-studio-2017-c-productivity-guide"></a>Visual Studio 2017 C# の生産性ガイド
 
-[Visual Studio 2017](https://www.visualstudio.com/downloads/) を使うと開発者の生産性が向上します。 ソリューションの起動と読み込み、テスト検出、入力待機時間のパフォーマンスと信頼性が向上しました。 よりよいコードをより早く作成するのに役立つ機能も追加および強化されました。 たとえば、逆コンパイルされたアセンブリへの移動、入力時の変数名の提案、**テスト エクスプローラー**の階層ビュー、ファイル/型/メンバー/シンボルの宣言に移動するための [すべてに移動] (**Ctrl** + **T**)、インテリジェントな**例外ヘルパー**、コード スタイルの構成と適用、多くのリファクタリングとコード修正などがあります。
-
-このガイドに従って、生産性を最適化してください。
+[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) によって開発者の生産性がどのように向上するかを説明します。 逆コンパイルされたアセンブリへの移動、入力時の変数名の提案、**テスト エクスプローラー**の階層ビュー、ファイル/型/メンバー/シンボルの宣言に移動するための [すべてに移動] (**Ctrl** + **T**)、インテリジェントな**例外ヘルパー**、コード スタイルの構成と適用、多くのリファクタリングとコード修正など、パフォーマンスと生産性を向上させる機能を利用できます。
 
 ##  <a name="im-used-to-my-keyboard-shortcuts-from-a-different-extensioneditoride"></a>別の拡張機能/エディター/IDE のキーボード ショートカットを使用しています。
 
-別の IDE またはコーディング環境から切り替えた場合は、以下のいずれかの拡張機能をインストールすると役立つ場合があります。
+**Visual Studio 2017 バージョン 15.8 の新機能** 別の IDE やコーディング環境から切り替えた場合は、キーボード スキームを *Visual Studio Code* または *ReSharper (Visual Studio)* に変更することができます。
 
-- [Emacs エミュレーション](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
+![Visual Studio のキーボード スキーム](../ide/media/VS2017Guide-Keyboard.png)
+
+次の一部の拡張機能でも、キーボード スキームが提供されます。
 - [Visual Studio のホット キー (ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
+- [Emacs エミュレーション](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.EmacsEmulation)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
 よく使用される Visual Studio のショートカットを以下に示します。
@@ -44,14 +45,18 @@ ms.locfileid: "34748752"
 | **Ctrl**+**.** (C# Profile では **Alt** + **Enter** でも可能) | クイック アクションとリファクタリング | そのカーソル位置またはコード選択で、どのコード修正、コード生成アクション、リファクタリング、その他クイック アクションが使用できるかを表示します |
 | **Ctrl** + **D** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6** 以降で使用可能) |
 | **Shift** + **Alt** + **+**/**-** | 選択範囲の拡大/縮小 | エディターの現在の選択範囲を拡大または縮小します (**Visual Studio 2017 バージョン 15.5** 以降で使用できます) |
+| **Shift**  +  **Alt**  +  **Ins** | 次の一致にキャレットを挿入 | 現在の選択範囲と一致する次の場所で選択内容とキャレットを追加します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
 | **Ctrl** + **Q** | クイック起動 | すべての Visual Studio の設定を検索します |
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl** + **F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |
 | **Ctrl** + **K**、**D** (既定のプロファイル) または **Ctrl** + **E**、**D** (C# Profile) | ドキュメントのフォーマット | 改行文字、間隔、およびインデント設定に基づき、ファイルの書式設定の違反をクリーンアップします |
 | **Ctrl** + **\\**、**E** (既定のプロファイル) または **Ctrl** + **W**、**E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
+| **Alt**  +  **PgUp/PgDn** | 次/前の問題に移動 | ドキュメント内の前/次のエラー、警告、提案に移動します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
 
 > [!NOTE]
-> 一部の拡張機能によって、既定の Visual Studio キー バインドがバインド解除されます。 次のコマンドを使用するには、**[ツール]** > **[設定のインポートとエクスポート]** > **[すべての設定をリセット]** または **[ツール]** > **[オプション]** > **[キーボード]** > **[リセット]** の順に進み、キー バインドを Visual Studio の既定値に復元します。
+> 一部の拡張機能によって、既定の Visual Studio キー バインドがバインド解除されます。 上記のコマンドを使用するには、**[ツール]** > **[設定のインポートとエクスポート]** > **[すべての設定をリセット]** または **[ツール]** > **[オプション]** > **[キーボード]** > **[リセット]** の順に進み、キー バインドを Visual Studio の既定値に復元します。
+
+Visual studio のキーボード ショートカットとコマンドの詳細については、[こちらのドキュメント](..\ide\tips-and-tricks-for-visual-studio.md)を参照してください。
 
 ## <a name="i-need-a-way-to-quickly-navigate-to-files-or-types"></a>ファイルまたは型にすばやく移動する方法が必要です。
 Visual Studio 2017 には、"**すべてに移動**" という機能があります (**Ctrl** + **T**)。 [すべてに移動] を使うと、ファイル、型、メンバー、またはシンボルの宣言にすばやく移動できます。
@@ -85,6 +90,7 @@ Visual Studio 2017 には、多くのリファクタリング、コード生成�
   - [ドキュメント](https://aka.ms/refactorings)で詳細を確認してください
 - 独自のリファクタリングまたはコード修正は [Roslyn アナライザー](https://github.com/dotnet/roslyn/wiki/Getting-Started-Writing-a-Custom-Analyzer-&-Code-Fix)を使用して記述します。
 - 何人かのコミュニティ メンバーが、コードの検査を追加する、次のような無料の拡張機能を作成しています。
+  - [FXCop アナライザー](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/)
   - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2017)
   - [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017)
   - [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/)
@@ -120,7 +126,7 @@ Visual Studio 2017 では多数の新しいデバッグ機能が追加されま�
 - [[Step Back]\(前に戻る\)](../debugger/how-to-use-intellitrace-step-back.md) のデバッグにより、前のブレークポイントまたは手順に戻り、過去の時点でのアプリケーションの状態を確認できるようになります。
 - [[スナップショットのデバッグ]](/azure/application-insights/app-insights-snapshot-debugger) では、例外がスローされた (Azure にスローされる必要があります) 時点での、ライブ Web アプリケーションの状態を調査することができます。
 
-![VS2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png)
+![Visual Studio 2017 の新しい例外ヘルパー](../ide/media/VSGuide_Debugging.png)
 
 ## <a name="i-want-to-use-version-control-with-my-projects"></a>自分のプロジェクトでバージョン管理を使用する必要があります。
 Git または TFVC を使用して Visual Studio でコードを格納して更新することができます。
@@ -141,8 +147,6 @@ Git または TFVC を使用して Visual Studio でコードを格納して更�
 | 補完/提案モード | IntelliSense の補完動作が変更されました -- IntelliJ の知識がある開発者は、この既定動作を変更することがよくあります | **[メニュー]** > **[編集]** > **[IntelliSense]** > **[完了モードの切り替え]** |
 | [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md) | コードの参照情報と変更履歴をエディターに表示します | **[ツール]** > **[オプション]** > **[テキスト エディター]** > **[すべての言語]** > **[CodeLens]** |
 | [コード スニペット](../ide/visual-csharp-code-snippets.md) | 一般的な定型句をスタブできるようにします |  スニペットの名前を入力し、**Tab** キーを 2 回押します。 |
-
-![Visual Studio のコード スニペット](../ide/media/VSGuide_SmartEditor.png)
 
 ## <a name="missing-a-feature-that-makes-you-productive-or-experiencing-poor-performance"></a>生産性向上機能が見つからない、またはパフォーマンスが低下している場合
 複数の方法でフィードバックを送ることができます。
