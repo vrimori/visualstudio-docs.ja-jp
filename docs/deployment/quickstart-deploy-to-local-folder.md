@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio のローカル フォルダーに配置 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 05/08/2018
