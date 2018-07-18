@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133761"
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>新しいプロジェクトの生成: フードのパート 1
 プロジェクトの種類を作成する方法についてたいと思ったしますか。 新しいプロジェクトを作成するときに実際にはどうなりますか不思議にしますか。 フードの時間をかけてし、実際に起こっているを確認してみましょう。  
@@ -62,7 +63,7 @@ devenv /installvstemplates
 ```  
   
 ### <a name="project-types"></a>プロジェクトの種類  
- 位置との名前、**プロジェクトの種類**などのルート ノード、 **Visual c#**と**他の言語**、システム レジストリのエントリによって決定されます。 子ノードの構成など、**データベース**と**スマート デバイス**.vstemplate の対応するファイルを含むフォルダーの階層構造を反映します。 最初のルート ノードを見てみましょう。  
+ 位置との名前、**プロジェクトの種類**などのルート ノード、 **Visual c#** と**他の言語**、システム レジストリのエントリによって決定されます。 子ノードの構成など、**データベース**と**スマート デバイス**.vstemplate の対応するファイルを含むフォルダーの階層構造を反映します。 最初のルート ノードを見てみましょう。  
   
 #### <a name="project-type-root-nodes"></a>プロジェクトの種類のルート ノード  
  ときに[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]が初期化されると、システムのレジストリ キーのルート ノードの名前をビルドする HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\NewProjectTemplates\TemplateDirs のサブキーの走査、**プロジェクトの種類**ツリー。 この情報は、後で使用できるキャッシュされます。 TemplateDirs 見て\\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC} \\ /1 キー。 各エントリは、VSPackage GUID です。 サブキーの名前 (/1) は無視され、その存在は、これがあることを示しますが、**プロジェクトの種類**ルート ノードです。 ルート ノードがありますでその外観を制御するいくつかのサブキーさらに、**プロジェクトの種類**ツリー。 これらのいくつかを見てみましょう。  
@@ -80,7 +81,7 @@ devenv /installvstemplates
   
  \<Visual Studio インストール パス > \VC#\VCSPackages\1033\csprojui.dll  
   
- これを確認し、ファイル エクスプ ローラーを開き、Visual Studio ディレクトリに csprojui.dll をドラッグ. 文字列テーブルはことがわかりますリソース #2345 キャプション**Visual c#**です。  
+ これを確認し、ファイル エクスプ ローラーを開き、Visual Studio ディレクトリに csprojui.dll をドラッグ. 文字列テーブルはことがわかりますリソース #2345 キャプション**Visual c#** です。  
   
 ##### <a name="sortpriority"></a>SortPriority  
  ルート ノードの位置を指定、**プロジェクトの種類**ツリー。  
@@ -131,7 +132,7 @@ devenv /installvstemplates
 <ProjectType>CSharp</ProjectType>  
 ```  
   
- \<ProjectType > タグ、および ProjectTemplates フォルダーのサブフォルダー内のアプリケーションのルート ノードを決定、**プロジェクトの種類**ツリー。 表示する例では、Windows CE アプリケーション、 **Visual c#**ルート ノードで、Windows CE アプリケーションが下にある表示は、WindowsCE フォルダーを VisualBasic フォルダーに移動した場合でも、 **Visual c#**ルート ノードです。  
+ \<ProjectType > タグ、および ProjectTemplates フォルダーのサブフォルダー内のアプリケーションのルート ノードを決定、**プロジェクトの種類**ツリー。 表示する例では、Windows CE アプリケーション、 **Visual c#** ルート ノードで、Windows CE アプリケーションが下にある表示は、WindowsCE フォルダーを VisualBasic フォルダーに移動した場合でも、 **Visual c#** ルート ノードです。  
   
 ##### <a name="localizing-the-node-name"></a>ノード名のローカライズ  
  Visual Studio では、ProjectTemplates フォルダーを走査、検出された任意の .vstdir ファイルを調査します。 .Vstdir ファイルは、プロジェクトの種類の外観を制御する XML ファイル、**新しいプロジェクト** ダイアログ ボックス。 .Vstdir ファイルで使用して、 \<LocalizedName > タグの名前を**プロジェクトの種類**ノード。  
@@ -142,7 +143,7 @@ devenv /installvstemplates
 <LocalizedName Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="4598"/>  
 ```  
   
- この場合、ルート ノードの名前を示すローカライズされた文字列のサテライト DLL とリソース ID を指定**データベース**です。 ローカライズされた名前が利用できないフォルダー名など、特殊文字を含めることができます**.NET**です。  
+ この場合、ルート ノードの名前を示すローカライズされた文字列のサテライト DLL とリソース ID を指定**データベース**です。 ローカライズされた名前が利用できないフォルダー名など、特殊文字を含めることができます **.NET**です。  
   
  ない場合は\<LocalizedName > タグがある、フォルダー自体によって、プロジェクトの種類が名前付き**smartphone 2003**です。  
   
@@ -208,7 +209,7 @@ devenv /installvstemplates
   
  Visual Studio を開きます。  
   
-1.  開く、**新しいプロジェクト** ダイアログ ボックスし、展開、 **Visual c#**プロジェクト ノードです。  
+1.  開く、**新しいプロジェクト** ダイアログ ボックスし、展開、 **Visual c#** プロジェクト ノードです。  
   
  ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   

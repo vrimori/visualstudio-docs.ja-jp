@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129365"
 ---
 # <a name="implementing-single-file-generators"></a>単一ファイル ジェネレーターの実装
 カスタム ツール — 単一ファイル ジェネレーターとも呼ば — 拡張に使用できる、[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]と[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]プロジェクト システムで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタム ツールは、実装する COM コンポーネント、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイスです。 このインターフェイスを使用して、カスタム ツールは、1 つの出力ファイルに 1 つの入力ファイルを変換します。 役立つその他の出力または変換の結果は、ソース コードにあります。 カスタム ツールで生成されたコード ファイルの 2 つの例は、ビジュアル デザイナーや Web サービス記述言語 (WSDL) を使用して生成されたファイルの変更に応答で生成されたコードです。  

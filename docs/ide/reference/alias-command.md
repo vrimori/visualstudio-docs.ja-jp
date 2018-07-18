@@ -23,6 +23,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33703406"
 ---
 # <a name="alias-command"></a>Alias コマンド
 完全なコマンド、完全なコマンドと引数、または他のエイリアスに対して新しいエイリアスを作成します。

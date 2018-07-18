@@ -23,6 +23,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130532"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>既定のコマンド、グループ、およびツールバーの配置
 製品統一性と安定性は、UI は既定では、コマンドの特定のグループを表示および[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンドおよびコマンド グループの定義について説明します。 Vspackage は、標準のコマンドおよびコマンド グループにも使用できます。  

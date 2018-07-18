@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134634"
 ---
 # <a name="registering-a-project-type"></a>プロジェクトの種類を登録します。
 新しいプロジェクトの種類を作成するときに、有効にするレジストリ エントリを作成する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を認識し、プロジェクトの種類を使用します。 通常、これらのレジストリ エントリは、レジストリ スクリプト (.rgs) ファイルを使用して作成します。  

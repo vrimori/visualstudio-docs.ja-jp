@@ -25,6 +25,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549039"
 ---
 # <a name="how-to-add-a-form-region-to-an-outlook-add-in-project"></a>方法: フォーム領域を Outlook アドイン プロジェクトに追加します。
   **新しい Outlook フォーム領域** ウィザードを使用して、標準またはカスタムの Microsoft Office Outlook フォームを拡張するフォーム領域を作成します。 新しいフォーム領域を作成して Visual Studio でユーザー インターフェイスをデザインするか、または Outlook でデザインしたフォーム領域をインポートして Visual Basic または C# コードを追加することができます。  

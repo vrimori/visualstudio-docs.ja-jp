@@ -28,6 +28,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578056"
 ---
 # <a name="cl-task"></a>CL タスク
 Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  

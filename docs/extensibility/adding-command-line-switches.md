@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31098419"
 ---
 # <a name="adding-command-line-switches"></a>コマンド ライン スイッチを追加します。
 Devenv.exe を実行すると、VSPackage に適用されるコマンド ライン スイッチを追加することができます。 使用して<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、VSPackage という名前のサブクラスの MySwitch スイッチを追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage を使用しています。  
@@ -38,7 +39,7 @@ Devenv.exe を実行すると、VSPackage に適用されるコマンド ライ�
  この設定で 1、それ以外の場合は 0 に設定されている場合は、VSPackage を自動的に読み込みます。  
   
  HelpString  
- ヘルプ文字列またはリソースの ID 文字列の表示に**devenv/?**です。  
+ ヘルプ文字列またはリソースの ID 文字列の表示に**devenv/?** です。  
   
  名前  
  スイッチです。  

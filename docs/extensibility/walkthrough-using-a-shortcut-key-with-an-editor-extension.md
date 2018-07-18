@@ -18,6 +18,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33704026"
 ---
 # <a name="walkthrough-using-a-shortcut-key-with-an-editor-extension"></a>チュートリアル: エディターの拡張機能とショートカット キーを使用します。
 エディター拡張機能で、ショートカット キーに応答することができます。 次のチュートリアルでは、テキスト ビューにショートカット キーを使用してビューの表示要素を追加する方法を示します。 このチュートリアルは、ビューポート装飾エディター テンプレートに基づいておりを使用して表示要素を追加することができます、プラス記号です。  

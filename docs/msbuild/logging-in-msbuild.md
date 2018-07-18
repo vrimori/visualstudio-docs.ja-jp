@@ -17,6 +17,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31567994"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild でのログ
 ログを使用すると、ビルドの進行状況を監視できます。 ログは、ログ ファイルにイベント、メッセージ、警告、エラーをキャプチャします。  

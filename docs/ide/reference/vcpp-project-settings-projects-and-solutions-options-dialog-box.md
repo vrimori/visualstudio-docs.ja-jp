@@ -25,6 +25,7 @@ ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103438"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>[VC++ プロジェクトの設定] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
 このダイアログ ボックスを使用すると、ログ、パフォーマンス、サポートするファイルの種類に関連する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] のビルド設定とプロジェクト設定を定義できます。

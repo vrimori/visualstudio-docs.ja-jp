@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468809"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 シンボルの情報をコンパイル単位に分割されて、`SymTagCompiland`タグ (解像度の低い) と`SymTagCompilandDetails`タグ (高詳細)。 `SymTagCompilandDetails` 追加のシンボルの読み込みが必要です。 ただし、豊富なコンパイル単位では使用できないことに関する情報を提供する`SymTagCompiland`シンボル。  

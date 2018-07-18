@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919159"
 ---
 # <a name="globalization-warnings"></a>グローバリゼーションの警告
 グローバリゼーションに関する警告は、国際対応ライブラリおよびアプリケーションをサポートします。

@@ -14,6 +14,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705074"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>方法: 非同期の Visual Studio サービスを提供
 UI スレッドをブロックすることがなくサービスを取得する場合は、非同期のサービスを作成し、バック グラウンド スレッドでパッケージを読み込む必要があります。 この目的で使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>ではなく、 <xref:Microsoft.VisualStudio.Shell.Package>、非同期のパッケージの特別な非同期メソッドで、サービスを追加します。

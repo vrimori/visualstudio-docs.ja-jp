@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458721"
 ---
 # <a name="idialinenumbergetcompiland"></a>IDiaLineNumber::get_compiland
 イメージのテキストのバイト数を引き起こしているコンパイル単位のシンボルへの参照を取得します。  

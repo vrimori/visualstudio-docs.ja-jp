@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139027"
 ---
 # <a name="source-control-plug-in-glossary"></a>ソース管理プラグインの用語集
 次の便利な用語と定義は、ソース管理プラグイン SDK のドキュメントに適用されます。  

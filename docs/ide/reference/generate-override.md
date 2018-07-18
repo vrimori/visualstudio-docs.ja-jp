@@ -1,19 +1,20 @@
 ---
-title: Visual Studio でメソッドのオーバーライドを生成する | Microsoft Docs
-ms.custom: ''
+title: Visual Studio でメソッドのオーバーライドを生成する
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5900872ab034daa24a28b8b97d96bbb736ae6e3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c366ce3d393e639590e5d45fc55ad5523be920b6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31943867"
 ---
 # <a name="generate-an-override-in-visual-studio"></a>Visual Studio でオーバーライドを生成する
 
@@ -59,4 +60,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>関連項目
 
-[コード生成](../code-generation-in-visual-studio.md)
+- [コード生成](../code-generation-in-visual-studio.md)

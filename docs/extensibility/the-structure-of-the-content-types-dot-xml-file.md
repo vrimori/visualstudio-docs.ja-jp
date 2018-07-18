@@ -21,12 +21,13 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144568"
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types] .xml ファイルの構造
 VSIX パッケージ内のコンテンツの種類についてを説明します。 Visual Studio は、パッケージをインストールする [Content_Types] .xml ファイルを使用しますが、ファイル自体はインストールされません。  
   
 > [!NOTE]
->  このトピックでは、VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ、[Content_Types] .xml ファイルの種類の一部、 *Open Packaging Conventions (OPC)*標準です。 詳細については、次を参照してください。 [OPC: A 新しい標準のパッケージ化、データ](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイトです。  
+>  このトピックでは、VSIX パッケージで使用されている [Content_Type] .xml ファイルにのみ、[Content_Types] .xml ファイルの種類の一部、 *Open Packaging Conventions (OPC)* 標準です。 詳細については、次を参照してください。 [OPC: A 新しい標準のパッケージ化、データ](http://go.microsoft.com/fwlink/?LinkID=148207)MSDN Web サイトです。  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
  次のセクションでは、ルート要素とその属性や子要素について説明します。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31560714"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce アプリケーションのコード アクセス セキュリティ
 ClickOnce アプリケーションは、.NET Framework に基づいており、コード アクセス セキュリティ制約の対象です。 このため、コード アクセス セキュリティの影響を理解し、それに応じて ClickOnce アプリケーションを作成することが重要です。  

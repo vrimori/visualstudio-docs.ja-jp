@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: ec0dd78b7bfdc3389a9867478e546c5456e42437
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 98e258c2547bbd3cd1b87d289bf643956acfdb1d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751034"
 ---
 # <a name="how-to-use-ctest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の CTest を使用する方法
 
@@ -29,7 +30,7 @@ Visual Studio 2017 バージョン 15.6 では、CTest は**テスト エクス�
 
 次の図は、Google テスト フレームワークを使用して実行した CTest の結果を示しています。
 
-![VS2017 15.6 での Google テスト フレームワークを使用した CTest](media/ctest-test-explorer.png "テスト エクスプローラーでの CTest と Google テスト")
+![VS2017 15.6 での Google Test Framework による CTest](media/ctest-test-explorer.png)
 
 CTest を使用するが、Google アダプターまたは Boost アダプターを使用していない場合、結果は、個別のテスト方法レベルではなく、CTest レベルで表示されます。 CTest 専用実行可能ファイルのデバッグとステップ実行を行うことができますが、個々のテストのスタック トレースはサポートされません。
 
@@ -37,7 +38,7 @@ CTest を使用するが、Google アダプターまたは Boost アダプター
 
 **Visual Studio 2017 バージョン 15.5** では、CTest は**テスト エクスプローラー**に統合されていません。 テストは、CMake のメイン メニューから実行するか、または**ソリューション エクスプローラー**で **CMakeLists.txt** ファイルに対するコンテキスト メニューから実行することができます。 テストの結果は、Visual Studio の **[出力ウィンドウ]** に送られます。
 
-![VS2017 15.5 での CTest テストの実行](media/cpp-cmake-run-tests.png "15.5 での CTest テストの実行")
+![VS2017 15.5 での CTest テストの実行](media/cpp-cmake-run-tests.png)
 
 ## <a name="see-also"></a>関連項目
 

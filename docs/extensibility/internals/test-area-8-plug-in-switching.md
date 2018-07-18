@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148861"
 ---
 # <a name="test-area-8-plug-in-switching"></a>テストの領域 8: プラグインの切り替え
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、ユーザー インターフェイス (UI) を持つ、現在のソース管理プラグインを変更します。 このテストの領域は、ソリューションのソース管理を使用するプラグインを選定するプロセスのテスト_ケースを提供します。  

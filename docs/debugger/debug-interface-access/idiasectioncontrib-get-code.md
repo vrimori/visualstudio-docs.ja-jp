@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462293"
 ---
 # <a name="idiasectioncontribgetcode"></a>IDiaSectionContrib::get_code
 セクションに、実行可能コードが含まれているかどうかを示すフラグを取得します。  

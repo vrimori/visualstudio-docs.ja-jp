@@ -1,4 +1,4 @@
----
+﻿---
 title: 配置機能のツアー
 description: Visual Studio からアプリを展開するためのオプションについて説明します。
 ms.custom: mvc
@@ -26,7 +26,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 8d2c84b8e5d37876d890d40144b281e236fdcd0c
 ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/05/2018
 ms.locfileid: "34766312"
@@ -35,7 +35,7 @@ ms.locfileid: "34766312"
 
 アプリケーション、サービス、またはコンポーネントを配置すると、他のコンピューターのデバイス、サーバー、またはクラウドに対してインストールするために、それらを配布することになります。 必要な配置の種類に合わせて、Visual Studio で適切な手法を選択します。 (多くの種類のアプリは、ここで説明されていない他の展開ツール コマンド ライン デプロイ NuGet などをサポートします)。
 
-ステップ バイ ステップ デプロイメントの手順のチュートリアルを参照してください。 Web アプリケーションを配置する場合は、Visual Studio から最適な展開オプションを決定するために、より詳細な情報 ([状況に適した発行オプション](../ide/not-in-toc/web-publish-options.md)) を参照してください。
+ステップ バイ ステップ デプロイメントの手順のチュートリアルを参照してください。 Web アプリケーションを配置する場合は、Visual Studio から最適な展開オプションを決定するために、より詳細な情報 [状況に適した発行オプション](../ide/not-in-toc/web-publish-options.md) を参照してください。
 
 ## <a name="deploy-to-local-folder"></a>ローカル フォルダーに配置します。
 

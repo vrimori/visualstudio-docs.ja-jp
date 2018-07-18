@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31107622"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
 このフィールドのカスタム属性の存在を定義し、存在する場合は、属性情報を返します。  

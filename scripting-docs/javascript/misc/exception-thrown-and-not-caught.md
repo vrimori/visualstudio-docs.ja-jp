@@ -1,13 +1,13 @@
 ---
-title: "例外がスローされ、キャッチされませんでした |。Microsoft ドキュメント"
-ms.custom: 
+title: 例外がスローされ、キャッチされませんでした |。Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5022
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: b5235490-a8e7-42e3-804e-d85235bc6f05
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633122"
 ---
 # <a name="exception-thrown-and-not-caught"></a>例外がスローされ、キャッチされませんでした。
 含まれている、`throw`内では、コード内のステートメントが囲まれていない、**を再試行してください**ブロック、か、関連付けられていませんが**キャッチ**エラーをトラップするブロック。 内から例外がスローされます、**を再試行してください**ブロックを使用して、**スロー**ステートメントでは、外部キャッチし、**を再試行してください**ブロックを**キャッチ**ステートメント。  

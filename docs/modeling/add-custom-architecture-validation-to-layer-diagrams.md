@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952545"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>依存関係のダイアグラムにカスタム アーキテクチャ検証を追加します。
 Visual Studio で、ユーザーは、ソース コードが依存関係ダイアグラムへの依存関係に準拠していることを確認できるようにレイヤー モデルに対するプロジェクト内のソース コードを検証できます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。

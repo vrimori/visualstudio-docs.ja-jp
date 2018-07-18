@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919455"
 ---
 # <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>方法: 生成されたコードに対するコード分析の警告を抑制する
 マネージ コード コンパイラは、多くの場合、迅速なコードの開発を容易にするためにプロジェクトに追加されるコードを生成します。 さらに、開発者は、アプリケーションをすばやく開発するのに役立つサード パーティ製ツールを使用する多くの場合にします。 これらのツールでは、プロジェクトに追加されるコードも生成します。

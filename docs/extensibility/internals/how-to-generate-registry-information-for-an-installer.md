@@ -20,12 +20,13 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131872"
 ---
 # <a name="how-to-generate-registry-information-for-an-installer"></a>方法: インストーラーのレジストリ情報を生成
 RegPkg.exe ユーティリティは、マネージ VSPackage の登録マニフェストを生成するために使用できます。 マニフェストは、Windows インストーラーのセットアップ パッケージに組み込むことができます。 RegPkg もに基づいてセットアップのソース ファイルに含めることができるファイルを生成できる、 [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=62238)です。  
   
 > [!IMPORTANT]
->  RegPkg 開発システムに固有のパス名が生成されます、適切な Windows インストーラーがプロパティをフォーマットするので、RegPkg を使用するたびに使用する出力を編集する必要があります。 たとえば、InprocServer32 値になります**[SystemFolder]mscoree.dll**パスを使用して**[#filekey]**と**[$componentkey]**です。 この方法で出力を調整するには、別のドライブまたは別のディレクトリ、ローカライズされたディレクトリ名、およびユーザーが選択されるパスにインストールされている Windows のコンピューターがサポートしています。 詳細については、次を参照してください。[表示書式](http://go.microsoft.com/fwlink/?LinkId=71120)Windows インストーラー SDK に含まれています。 開発システムのパスの RegPkg 規則に従うかどうか — たとえば、ファイル形式 File_ の Id*ファイル名*— 少ない数の変更を行う必要があります。  
+>  RegPkg 開発システムに固有のパス名が生成されます、適切な Windows インストーラーがプロパティをフォーマットするので、RegPkg を使用するたびに使用する出力を編集する必要があります。 たとえば、InprocServer32 値になります **[SystemFolder]mscoree.dll**パスを使用して **[#filekey]** と **[$componentkey]** です。 この方法で出力を調整するには、別のドライブまたは別のディレクトリ、ローカライズされたディレクトリ名、およびユーザーが選択されるパスにインストールされている Windows のコンピューターがサポートしています。 詳細については、次を参照してください。[表示書式](http://go.microsoft.com/fwlink/?LinkId=71120)Windows インストーラー SDK に含まれています。 開発システムのパスの RegPkg 規則に従うかどうか — たとえば、ファイル形式 File_ の Id*ファイル名*— 少ない数の変更を行う必要があります。  
   
 ### <a name="to-create-a-registration-manifest"></a>登録のマニフェストを作成するには  
   

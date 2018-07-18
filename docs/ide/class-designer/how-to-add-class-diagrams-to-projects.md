@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33998190"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>方法: プロジェクトにクラス ダイアグラムを追加する
 

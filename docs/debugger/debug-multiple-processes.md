@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478227"
 ---
 # <a name="debug-multiple-processes"></a>複数プロセスをデバッグする
 プロセスのデバッグを開始、プロセスの切り替え、中断し実行を続行、ソースのステップ実行、デバッグを停止および終了/プロセスからデタッチする方法を次に示します。  

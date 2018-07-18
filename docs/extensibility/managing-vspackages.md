@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140135"
 ---
 # <a name="managing-vspackages"></a>Vspackage の管理
 ほとんどの場合、Vspackage を管理するプロジェクトと項目テンプレートが登録し、自動的にパッケージを読み込むためについて心配する必要はありません。 ただし、状況によっては、パッケージを管理するために少しを学習する必要があります。  

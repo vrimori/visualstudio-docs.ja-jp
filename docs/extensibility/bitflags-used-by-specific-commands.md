@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108787"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 1 つの値の 1 つ以上のビットを設定して、さまざまなソース管理プラグイン API の関数の動作を変更できます。 これらの値は、ビットフラグと呼ばれます。 ソース管理プラグイン API によって使用されるさまざまなビットフラグの詳細をここでは、それらを使用する関数によってグループ化します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457840"
 ---
 # <a name="compiland"></a>コンパイル単位
 1 つを使用する必要がある`SymTagCompiland`の .exe ファイルにリンクされている各コンパイル単位シンボルします。 シンボルの情報をコンパイル単位に分割されて、`SymTagCompiland`が取得される追加のコンパイル単位シンボルを読み込むことがなく、タグにシンボルと、`SymTagCompilandDetails`タグ、追加のシンボルの読み込みが必要です。  

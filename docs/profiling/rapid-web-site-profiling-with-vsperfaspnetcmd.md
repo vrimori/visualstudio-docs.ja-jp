@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ebff923667f76c350f17a08196369b4354151d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2efa8cf966967b07e1dbbfe5e2e1f6b7f8f6aef7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572882"
 ---
 # <a name="rapid-web-site-profiling-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd を使用した迅速な Web サイト プロファイリング
 
@@ -28,11 +29,11 @@ ms.lasthandoff: 04/19/2018
  同時実行データの収集やプロファイリングの一時停止と再開などの一部のシナリオでは、プロファイリングに **VSPerfCmd** の使用をお勧めします。
 
 > [!NOTE]
-> プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビットのコンピューターでは、32 ビットの \Team Tools\Performance Tools ディレクトリにある VSPerfASPNETCmd ツールを使用します。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。
+> プロファイリング ツールのコマンド ライン ツールは、Visual Studio インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビットのコンピューターでは、32 ビットの *\Team Tools\Performance Tools* ディレクトリにある VSPerfASPNETCmd ツールを使用します。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。
 
 ## <a name="profiling-an-aspnet-application"></a>ASP.NET アプリケーションのプロファイリング
 
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをプロファイルするには、次の各セクションで説明するコマンドの 1 つを入力します。 Web サイトが起動し、プロファイラーがデータ収集を開始します。 アプリケーションを実行した後、ブラウザーを閉じます。 プロファイリングを停止するには、コマンド プロンプト ウィンドウで Enter キーを押します。
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをプロファイルするには、次の各セクションで説明するコマンドの 1 つを入力します。 Web サイトが起動し、プロファイラーがデータ収集を開始します。 アプリケーションを実行した後、ブラウザーを閉じます。 プロファイリングを停止するには、コマンド プロンプト ウィンドウで **Enter** キーを押します。
 
 > [!NOTE]
 > 既定では、**vsperfaspnetcmd** コマンドの後にコマンド プロンプトは戻りません。 **/nowait** オプションを使用すると、コマンド プロンプトを強制的に戻すことができます。 「[/NoWait オプションの使用](#UsingNoWait)」をご覧ください。
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/19/2018
 
 **vsperfaspnetcmd /trace**  *websiteUrl*
 
-Web アプリケーション内の静的にコンパイルされた .dll ファイルをプロファイリングする場合は、[VSInstr](../profiling/vsinstr.md) コマンド ライン ツールを使用してファイルをインストルメント化する必要があります。 vsperfaspnetcmd /trace コマンドを実行すると、インストルメント化されたファイルのデータが収集されます。
+Web アプリケーション内の静的にコンパイルされた .*dll* ファイルをプロファイルする場合は、[VSInstr](../profiling/vsinstr.md) コマンド ライン ツールを使用してファイルをインストルメント化する必要があります。 vsperfaspnetcmd /trace コマンドを実行すると、インストルメント化されたファイルのデータが収集されます。
 
 ## <a name="to-collect-net-memory-data"></a>.NET メモリ データを収集するには
 
@@ -101,5 +102,5 @@ Web アプリケーション内の静的にコンパイルされた .dll ファ�
 
 |オプション|説明|
 |------------|-----------------|
-|**/Output:** `VspFile`|既定では、プロファイル データ (.vsp) ファイルは **PerformanceReport.vsp** というファイル名で現在のディレクトリに作成されます。 別の場所、ファイル名、またはその両方を指定するには、/output オプションを使用します。|
-|**/PackSymbols:Off**|既定では、VsPerfASPNETCmd に .vsp ファイルのシンボル (関数名、パラメーター名など) が埋め込まれています。 シンボルを埋め込むと、プロファイル データ ファイルが非常に大きくなる可能性があります。 データを分析するときにシンボルを含む .pdb ファイルにアクセスできる場合は、/packsymbols:off オプションを使用してシンボルの埋め込みを無効にしてください。|
+|**/Output:** `VspFile`|既定では、プロファイル データ (.*vsp*) ファイルは **PerformanceReport.vsp** というファイル名で現在のディレクトリに作成されます。 別の場所、ファイル名、またはその両方を指定するには、/output オプションを使用します。|
+|**/PackSymbols:Off**|既定では、VsPerfASPNETCmd に .*vsp* ファイルのシンボル (関数名、パラメーター名など) が埋め込まれています。 シンボルを埋め込むと、プロファイル データ ファイルが非常に大きくなる可能性があります。 データを分析するときにシンボルを含む .*pdb* ファイルにアクセスできる場合は、/packsymbols:off オプションを使用してシンボルの埋め込みを無効にしてください。|

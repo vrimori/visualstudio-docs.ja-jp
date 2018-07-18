@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130757"
 ---
 # <a name="how-to-implement-undo-management"></a>方法: 元に戻す管理の実装
 元に戻す管理に使用されるプライマリ インターフェイスは<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>は環境によって実装されています。 元に戻す管理をサポートするには、元に戻す単位を実装する (つまり、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>、複数の個別のステップを含むことができます。  

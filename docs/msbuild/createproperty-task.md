@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31566694"
 ---
 # <a name="createproperty-task"></a>CreateProperty タスク
 渡された値をプロパティに入力します。 プロパティ間または文字列間で値をコピーできます。  

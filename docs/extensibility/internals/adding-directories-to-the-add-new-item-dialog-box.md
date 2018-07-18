@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127749"
 ---
 # <a name="adding-directories-to-the-add-new-item-dialog-box"></a>ディレクトリを追加する、新しい項目 ダイアログ ボックスを追加
 次のコード例は、ディレクトリの新しいセットを登録する方法を示します、**新しい項目の追加** ダイアログ ボックス。 用のディレクトリ、**新しい項目の追加** ダイアログ ボックスはプロジェクトごとに異なります。 見つかった、プロジェクトのサブキーの下で、ディレクトリが登録されているため、 \<HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects >:  

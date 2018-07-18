@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954273"
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus は、モデルにモデルの間でおよびその他のツールからのリンクを作成する方法を提供します。 たとえば、ドメイン固有言語 (DSL) モデルおよび UML モデルを関連付けることができます。 DSL の統合セットを作成できます。
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックして**を有効にする Modelbus**です。
 
-3.  ダイアログ ボックスで選択**、ModelBus をこの DSL を公開する**です。 この DSL のモデルを公開すると同時に他の DSL への参照を利用する場合は、両方のオプションを選択できます。
+3.  ダイアログ ボックスで選択 **、ModelBus をこの DSL を公開する**です。 この DSL のモデルを公開すると同時に他の DSL への参照を利用する場合は、両方のオプションを選択できます。
 
 4.  **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。
 

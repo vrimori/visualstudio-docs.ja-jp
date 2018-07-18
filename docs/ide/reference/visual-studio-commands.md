@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31951792"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio コマンド
 Visual Studio のコマンドを使用すると、 **[コマンド]** ウィンドウ、 **[イミディエイト]** ウィンドウ、または **[検索]** ボックスからコマンドを呼び出すことができます。 どちらに入力する場合でも、後続の操作が検索またはデバッグではなく、コマンドであることを示す不等号 (`>`) を使用します。

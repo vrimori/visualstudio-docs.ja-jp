@@ -17,6 +17,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31070952"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、一般的なコードを共有する iOS アプリおよび Android アプリ用の Visual Studio ソリューションとプロジェクトを作成できます。 このトピックでは、簡単な iOS アプリと Android Native Activity アプリの両方を作成するソリューション テンプレートについて説明します。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (OpenGL for Embedded Systems または GLES) は、多くのモバイル デバイスでサポートされている 2D および 3D グラフィックス API です。  

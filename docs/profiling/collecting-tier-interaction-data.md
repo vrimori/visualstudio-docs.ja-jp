@@ -16,13 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 251dac9f457e1103173de01f0a9522c8199a9571
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f5e86cd1318d4b0db35ce6fa0e0abd925100fe34
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548438"
 ---
-# <a name="collecting-tier-interaction-data"></a>階層相互作用データの収集
+# <a name="collect-tier-interaction-data"></a>階層相互作用データを収集する
 
 階層相互作用プロファイリングにより、ADO.NET サービスを通じてデータベースと通信する多階層アプリケーションの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。
 
@@ -48,4 +49,4 @@ Windows 8 デスクトップ アプリおよび Windows Server 2012 アプリで
 
 ## <a name="see-also"></a>関連項目
 
-[階層相互作用のビュー](../profiling/tier-interactions-view.md)
+[階層の相互作用ビュー](../profiling/tier-interactions-view.md)

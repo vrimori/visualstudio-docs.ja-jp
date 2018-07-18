@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920445"
 ---
 # <a name="portability-warnings"></a>移植性に関する警告
 移植性に関する警告は、さまざまなオペレーティング システムでの移植性をサポートします。

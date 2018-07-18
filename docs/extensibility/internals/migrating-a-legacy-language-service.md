@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135858"
 ---
 # <a name="migrating-a-legacy-language-service"></a>従来の言語サービスを移行します。
 プロジェクトを更新して、source.extension.vsixmanifest ファイルをプロジェクトに追加することによって、以降のバージョンの Visual Studio にレガシ言語サービスを移行できます。 言語サービス自体は引き続き以前と同様、関数、Visual Studio エディターで適応させるのでします。  
@@ -53,13 +54,13 @@ ms.lasthandoff: 04/16/2018
   
 4.  RegExLangServ.sln ソリューションを開きます。  
   
-5.  **一方向のアップグレード**ウィンドウが表示されます。 **[OK]**をクリックします。  
+5.  **一方向のアップグレード**ウィンドウが表示されます。 **[OK]** をクリックします。  
   
 6.  プロジェクトのプロパティを更新します。 開く、**プロジェクト プロパティ** ウィンドウでプロジェクト ノードを選択して、**ソリューション エクスプ ローラー**、右クリックし、選択**プロパティ**です。  
   
     -   **アプリケーション** タブで、変更**ターゲット フレームワーク**に**4.6.1**です。  
   
-    -   **デバッグ** タブで、**外部プログラムの開始**ボックスに、入力 **\<Visual Studio インストール パス > \Common7\IDE\devenv.exe。**です。  
+    -   **デバッグ** タブで、**外部プログラムの開始**ボックスに、入力 **\<Visual Studio インストール パス > \Common7\IDE\devenv.exe。** です。  
   
          **コマンドライン引数**ボックスに、入力/**/rootsuffix Exp**です。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
     -   ファイルを保存して閉じます。  
   
-11. ソリューションをビルドします。 ビルドされたファイルに配置されます**%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ\\**です。  
+11. ソリューションをビルドします。 ビルドされたファイルに配置されます **%USERPROFILE%\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\MSIT\ RegExLangServ\\**です。  
   
 12. デバッグを開始します。 Visual Studio の 2 番目のインスタンスが開かれます。  
   

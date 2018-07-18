@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475406"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>[出力] タブ ([メッセージ オプション] ダイアログ ボックス)
 使用して、**出力**タブの一覧に各メッセージからデータを指定する[メッセージ ビュー](../debugger/messages-view.md)です。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  

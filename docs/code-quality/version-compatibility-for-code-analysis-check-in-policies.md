@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31915816"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>コード分析を用いたチェックイン ポリシーに関するバージョンの互換性
 評価し、コード分析チェックイン ポリシーに異なるバージョンの使用を作成する必要がある場合[!INCLUDE[esprtfc](../code-quality/includes/esprtfc_md.md)]、方法の違いを理解する必要があります[!INCLUDE[vstsTfsOrcasLong](../code-quality/includes/vststfsorcaslong_md.md)]と[!INCLUDE[vstsTfsRosarioShort](../code-quality/includes/vststfsrosarioshort_md.md)]チェックイン ポリシーを評価します。

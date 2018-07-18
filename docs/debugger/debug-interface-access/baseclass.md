@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465422"
 ---
 # <a name="baseclass"></a>BaseClass
 ユーザー定義型 (UDT) シンボルの各基本クラスが持つ子で識別される、`SymTagBaseClass`タグ。 [Idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)プロパティが、基になる UDT の記号を格納および基になる、UDT のすべてのプロパティは使用可能なこの BaseClass シンボルの一部として。  

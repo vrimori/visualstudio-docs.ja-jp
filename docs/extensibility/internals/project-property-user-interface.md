@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132428"
 ---
 # <a name="project-property-user-interface"></a>プロジェクト プロパティのユーザー インターフェイス
 プロジェクトのサブタイプは、プロジェクトで項目を使用できる**プロパティ ページ** ダイアログ ボックスは基本のプロジェクトで指定できるように非表示にするように指定すると、読み取り専用のコントロールと全体のページを作成または、にプロジェクトのサブタイプに固有のページを追加**プロパティ ページ** ダイアログ ボックス。

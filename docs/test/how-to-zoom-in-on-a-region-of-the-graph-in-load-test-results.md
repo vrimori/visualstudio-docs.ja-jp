@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト結果のグラフにズーム インする | Microsoft Docs
+title: Visual Studio でロード テスト結果のグラフにズーム インする
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,12 +11,14 @@ ms.assetid: 729b4c30-4bc3-4698-91b3-17a676897443
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9e2379161051c821af07b6da5b102177178a0d7f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a61d53e8dbdbbce9c5a09fc8f8cd180a8b312d2c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750972"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>方法: ロード テスト結果でグラフの領域にズーム インする
 
@@ -38,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 > [!TIP]
 > ツール バーの **[横方向ズーム コントロールの同期]** は、横方向ズームの自動同期のオンとオフを切り替えます。 同期をオンにすると、あるグラフに適用したズームがグラフ ビューのその他のグラフにも適用されます。
 
- ![グラフ ビューのズーム コントロール](../test/media/ltest_zoomcontrol.png "LTest_ZoomControl") グラフ ビューのズーム コントロール
+ ![グラフ ビューのズーム コントロール](../test/media/ltest_zoomcontrol.png) グラフ ビューのズーム コントロール
 
  上の図では、[テスト下のシステム] グラフがしきい値の問題を調査するためにズーム インされています。 しきい値違反は、ツール バーの **[グラフのオプション]** ドロップダウンの **[しきい値の違反をグラフに表示]** を使用して有効化されています。
 

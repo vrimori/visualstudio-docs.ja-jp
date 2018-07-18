@@ -21,11 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a143502c875acabca7b36bdd3070e5a441b842bd
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: b32fc71efadbf319f3d713c3eaf4d86f382646a5
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34476834"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio の削除
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/20/2018
 
 1. Visual Studio インストーラーを閉じます。
 2. 管理者のコマンド プロンプトを開きます。 管理者のコマンド プロンプトを開くには、以下の手順に従います。
-   * **[スタート]** メニューで、 **[ファイル名を指定して実行]** (Start + R) をクリックします。
+   * **[スタート]** メニューをクリックします。
    * 「**cmd**」と入力します。
    * **[Command Prompt]** を右クリックし、**[管理者として実行]** をクリックします。
 3. `InstallCleanup.exe` ユーティリティの完全なパスを入力して、必要なコマンドライン スイッチを渡します。 既定では、ユーティリティのパスは次のようになります。

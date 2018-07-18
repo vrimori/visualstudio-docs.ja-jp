@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31106657"
 ---
 # <a name="control-of-execution"></a>実行の制御
 デバッグ エンジン (DE) では、最後のスタートアップ イベントとして、次のイベントのいずれかの通常送信します。  

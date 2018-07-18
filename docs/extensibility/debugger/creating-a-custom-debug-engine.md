@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31101379"
 ---
 # <a name="creating-a-custom-debug-engine"></a>カスタム デバッグ エンジンを作成します。
 デバッグ エンジン (DE) は、特定のランタイム アーキテクチャのデバッグを許可するコンポーネントです。 実行時環境ごとに 1 つだけ DE 実装は通常です。  

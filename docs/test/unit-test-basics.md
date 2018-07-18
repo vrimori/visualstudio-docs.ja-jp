@@ -11,11 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 45c40c484a4a14ed103c1d29f979f4a767066a4a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8a69f644fecd74328eb3fa007e4589ff194c8e11
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751518"
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 
 このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述され、マネージ コード用の Microsoft 単体テスト フレームワークを使用して示されますが、その概念は他の言語やフレームワークに容易に移行できます。
 
- ![MyBank ソリューション](../test/media/ute_mybanksolution.png "UTE_MyBankSolution")
+ ![MyBank ソリューション](../test/media/ute_mybanksolution.png)
 
  `MyBank` アプリケーションのデザイン時の最初の計画には、個々のアカウントおよびアカウントの銀行との取引を表すアカウント コンポーネントと、個々のアカウントを集計および管理する機能を表すデータベース コンポーネントが含まれます。
 
@@ -85,15 +86,15 @@ public void Withdraw(double amount)
 
 1.  コード エディター ウィンドウで、右クリックしてコンテキスト メニューから **[単体テストの作成]** を選択します。
 
-     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png "CreateUnitTestsRightClick")
+     ![エディター ウィンドウで、コンテキスト メニューを表示](../test/media/createunittestsrightclick.png)
 
 2.  [OK] をクリックして、既定値をそのまま使用して単体テストを作成するか、単体テスト プロジェクトと単体テストの作成と名前付けに使用される値を変更します。 単体テスト メソッドに既定で追加されるコードを選択することができます。
 
-     ![エディター内を右クリックし、[単体テストの作成] を選択](../test/media/createunittestsdialog.png "CreateUnitTestsDialog")
+     ![エディター内を右クリックし、[単体テストの作成] を選択](../test/media/createunittestsdialog.png)
 
 3.  新しい単体テスト プロジェクトでは、クラス内のすべてのメソッドに単体テスト スタブが作成されます。
 
-     ![単体テストが作成済み](../test/media/createunittestsstubs.png "CreateUnitTestsStubs")
+     ![単体テストが作成済み](../test/media/createunittestsstubs.png)
 
 4.  ここで、先に進み、単体テストを有意義なものにするための [コードを単体テスト メソッドに追加する](#BKMK_Writing_your_tests) 方法と、コードを徹底的にテストするために追加する追加の単体テストについて確認します。
 
@@ -204,7 +205,7 @@ public void My_Test ()
 
 テスト プロジェクトをビルドすると、テストはテスト エクスプローラーに表示されます。 テスト エクスプローラーが表示されない場合は、Visual Studio メニューの **[テスト]** をクリックし、 **[Windows]**、 **[テスト エクスプローラー]** の順に選択します。
 
- ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
+ ![単体テスト エクスプローラー](../test/media/ute_failedpassednotrunsummary.png)
 
  テストを実行して、記述し、再実行すると、テスト エクスプローラーの既定のビューに **[失敗したテスト]**、 **[成功したテスト]**、 **[スキップされたテスト]** 、および **[テストを実行しない]** グループの結果が表示されます。 グループの見出しを選択して、そのグループ内のすべてのテストを表示するビューを開くことができます。
 
@@ -214,11 +215,11 @@ public void My_Test ()
 
 テスト エクスプローラーのツール バーは、対象にするテストを検出、編成、実行するのに役立ちます。
 
- ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png "UTE_ToolBar")
+ ![テスト エクスプローラー ツールバーからテストを実行](../test/media/ute_toolbar.png)
 
  **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。 一連のテストを実行した後、テスト実行の概要がテスト エクスプローラー ウィンドウの下部に表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。 コンテキスト メニューから **[テストを開く]** を選択すると (キーボード: F12)、選択したテストのソース コードが表示されます。
 
- 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
+ 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
 
 ### <a name="run-tests-after-every-build"></a>各ビルドの後にテストを実行する
 
@@ -227,17 +228,17 @@ public void My_Test ()
 
 |||
 |-|-|
-|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|
+|![ビルド後に実行](../test/media/ute_runafterbuild_btn.png)|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|
 
 ### <a name="filter-and-group-the-test-list"></a>テスト リストのフィルター処理とグループ化を実行する
 
 多数のテストがある場合は、テスト エクスプローラーの検索ボックスに入力し、指定した文字列によって一覧をフィルター処理できます。 フィルターの一覧から選択することで、フィルター イベントをさらに制限できます。
 
- ![検索フィルターのカテゴリ](../test/media/ute_searchfilter.png "UTE_SearchFilter")
+ ![フィルターの検索カテゴリ](../test/media/ute_searchfilter.png)
 
 |||
 |-|-|
-|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|
+|![テスト エクスプローラー グループ ボタン](../test/media/ute_groupby_btn.png)|カテゴリ別にテストをグループ化するには、 **[グループ化]** をクリックします。|
 
  詳細については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。
 
@@ -260,7 +261,7 @@ public void My_Test ()
 
  **A:** IntelliSense を使用して、プロジェクト コードにクラスとメソッドを生成します。 テスト メソッドに、生成するクラスまたはメソッドを呼び出すステートメントを記述し、その呼び出しの下で IntelliSense メニューを開きます。 新しいクラスのコンストラクターへの呼び出しの場合は、メニューから **[新しい型の生成]** を選択し、ウィザードに従ってコード プロジェクトにクラスを挿入します。 メソッドへの呼び出しの場合は、IntelliSense メニューから **[Generate new method (新しいメソッドの生成)]** を選択します。
 
- ![[メソッド スタブの生成] の IntelliSense メニュー](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")
+ ![[メソッド スタブの生成] の IntelliSense メニュー](../test/media/ute_generatemethodstubintellisense.png)
 
  **Q: テストを実行する入力値として複数のデータ セットを使用する単体テストを作成できますか。**
 
@@ -304,9 +305,9 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 
  カバレッジの結果は、[コード カバレッジの結果] ウィンドウに表示されます。
 
- ![コード カバレッジの結果](../test/media/ute_codecoverageresults.png "UTE_CodeCoverageResults")
+ ![コード カバレッジの結果](../test/media/ute_codecoverageresults.png)
 
- [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)の詳細を確認してください。
+ [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) の詳細を確認してください。
 
  **Q: 外部依存関係を含むコード内のメソッドをテストする方法を教えてください。**
 
@@ -326,6 +327,6 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 
  **A:** はい。以下の手順に従って、 [他のフレームワークを検索してインストール](../test/install-third-party-unit-test-frameworks.md)してください。 Visual Studio を再起動した後、単体テストを作成するためのソリューションをもう一度開き、インストールしたフレームワークを選びます。
 
- ![インストールされているその他の単体テスト フレームワークを選択する](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")
+ ![他のインストールされている単体テスト フレームワークの選択](../test/media/createunittestsdialogextensions.png)
 
  選んだフレームワークを使用して、単体テスト スタブが作成されます。

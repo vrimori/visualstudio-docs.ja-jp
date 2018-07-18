@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471221"
 ---
 # <a name="symbols-and-symbol-tags"></a>シンボルとシンボル タグ
 コンパイル済みのプログラムに関するデバッグ情報は、シンボルとデバッグ インターフェイス アクセス (DIA) SDK の Api を使用してアクセス可能であるプログラム データベース (.pdb) ファイルに格納されます。 すべてのシンボルが、 [idiasymbol::get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)と[idiasymbol::get_symindexid](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)プロパティです。 `symTag`で定義されているプロパティがシンボルの種類を示す、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙します。 `symIndexId`プロパティは、`DWORD`シンボルのすべてのインスタンスの一意の識別子を含む値です。  

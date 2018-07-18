@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129377"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>従来の言語サービスでのアウトライン表示と非表示のテキスト
 アウトライン表示できるようになりますの単一行にテキスト行のシーケンスを折りたたみます。 たとえば、C++ ではすべてのメソッドをメソッド シグネチャのみを示す 1 つの行を折りたたむできます。 非表示のテキストは、表示または非表示にできるテキスト行のシーケンスです。  

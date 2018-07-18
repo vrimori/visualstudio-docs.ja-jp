@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31469101"
 ---
 # <a name="idiasymbolgetpure"></a>IDiaSymbol::get_pure
 関数が純粋なかどうかを指定するフラグを取得する仮想です。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134621"
 ---
 # <a name="legacy-language-service-interfaces"></a>レガシ言語サービス インターフェイス
 特定のプログラミング言語のことができますがある言語サービスのインスタンスを 1 つだけ、一度にです。 ただし、1 つの言語サービスは、1 つ以上のエディターを使用できます。  

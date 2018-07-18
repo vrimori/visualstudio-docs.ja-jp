@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31576041"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] をインストールすると、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  

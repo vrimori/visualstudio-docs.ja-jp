@@ -1,7 +1,7 @@
 ---
 title: '[Python 環境] ウィンドウ リファレンス'
 description: Visual Studio の [Python 環境] ウィンドウに表示される各タブの詳細について説明します。
-ms.date: 03/05/2018
+ms.date: 05/25/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96c177b48e594c7cec9f5dd026782f0d9541eb2b
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: d4adc1ac472bb05affa547d795690dc7143655fd
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "34572125"
 ---
 # <a name="python-environments-window-tabs-reference"></a>[Python 環境] ウィンドウ タブ リファレンス
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/07/2018
 
 *旧バージョンでは "pip" も表示されます。*
 
-pip を使用して環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。 Visual Studio 2017 バージョン 15.7 以降では、代わりに conda パッケージ マネージャーを使用する **[パッケージ (Conda)]** オプションが表示されます  (その選択肢が表示されない場合は、オプション **[ツール]** > **[オプション]** > **[Python]** > **[試験段階]** >  **[Use conda package manager when available (instead of pip)]\(使用可能な場合、(pip ではなく) conda パッケージ マネージャーを使用する\)** を設定して、Visual Studio を再起動します)。
+pip を使用して環境にインストールされているパッケージを管理します。それにより、ユーザーは新しいパッケージ (すべての依存関係を含む) の検索とインストールもできるようになります。 Visual Studio 2017 バージョン 15.7 以降では、代わりに conda パッケージ マネージャーを使用する **[パッケージ (Conda)]** タブが表示されます  (その選択肢が表示されない場合は、オプション **[ツール]** > **[オプション]** > **[Python]** > **[試験段階]** >  **[Use conda package manager when available (instead of pip)]\(使用可能な場合、(pip ではなく) conda パッケージ マネージャーを使用する\)** を設定して、Visual Studio を再起動します)。
 
 既にインストールされているパッケージには、パッケージを更新するためのコントロール (上向き矢印) とアンインストールするためのコントロール (円内の X) が表示されます。
 
@@ -85,11 +86,19 @@ pip を使用して環境にインストールされているパッケージを�
 
 !["num" で検索を実行中の [Python 環境] の [パッケージ] タブ](media/environments-pip-tab.png)
 
-検索ボックスに、`pip install` コマンドと `--user` や `--no-deps` などのフラグを直接入力することもできます。
+上の図に示すように、検索結果は、検索用語と一致するパッケージの数を表示します。ただし、一覧で最初のエントリは、`pip install <name>` を直接実行するコマンドです。 **[パッケージ (Conda)]** タブを表示している場合、代わりに `conda install <name>` が表示されます。
+
+![conda インストール コマンドを表示している Conda パッケージ タブ](media/environments-conda-tab-install.png)
+
+どちらの場合でも、パッケージの名前の後に、検索ボックスに引数を追加してインストールをカスタマイズできます。 引数を含めた場合、検索結果で `pip install` または `conda install` の後に、検索ボックスの内容が表示されます。
+
+![pip および conda のインストール コマンドで引数を使用する](media/environments-pip-tab-arguments.png)
 
 パッケージをインストールすると、ファイル システム上の環境の `Lib` フォルダー内にサブフォルダーが作成されます。 たとえば、Python 3.6 を `c:\Python36` にインストールすると、パッケージは `c:\Python36\Lib` にインストールされます。Anaconda3 を `c:\Program Files\Anaconda3` にインストールすると、パッケージは `c:\Program Files\Anaconda3\Lib` にインストールされます。
 
-後者の場合、ファイル システムの保護された領域 `c:\Program Files` に環境があるため、Visual Studio は、パッケージ サブフォルダーを作成できるように、管理者特権で `pip install` を実行する必要があります。 管理者特権への昇格が必要な場合、Visual Studio により "この環境でパッケージのインストール、更新、削除を行うには、管理者特権が必要な場合があります" というプロンプトが表示されます。
+### <a name="granting-administrator-privileges-for-package-install"></a>パッケージのインストールのための管理者特権を付与する
+
+`c:\Program Files\Anaconda3\Lib` などのファイル システムの保護された領域に置かれた環境にパッケージをインストールする場合、Visual Studio は、パッケージ サブフォルダーを作成できるように、管理者特権で `pip install` を実行する必要があります。 管理者特権への昇格が必要な場合、Visual Studio により "この環境でパッケージのインストール、更新、削除を行うには、管理者特権が必要な場合があります" というプロンプトが表示されます。
 
 ![パッケージ インストールのための昇格時のプロンプト](media/environments-pip-elevate.png)
 
@@ -98,6 +107,18 @@ pip を使用して環境にインストールされているパッケージを�
 **[パッケージのインストール時か削除時に必ず昇格]** を選ぶと、対象の環境ではダイアログが表示されなくなります。 再びダイアログが表示されるようにするには、**[ツール] > [オプション] > [Python ツール] > [全般]** に移動し、**[永続的に表示されないすべてのダイアログをリセットする]** ボタンを選びます。
 
 同じオプション タブでは、**[常に管理者として pip を実行する]** を選んで、すべての環境でダイアログを非表示にすることもできます。 「[Options - General tab](python-support-options-and-settings-in-visual-studio.md#general-options)」([全般] タブのオプション) をご覧ください。
+
+### <a name="security-restrictions-with-older-versions-of-python"></a>Python の旧バージョンのセキュリティ制限
+
+Python 2.6、3.1、3.2 を使用する場合、Visual Studio には、"Due to security restrictions, installing from the internet may not work on this version of Python (セキュリティ上の制限により、このバージョンの Python ではインターネットからのインストールが機能しない場合があります)" という警告が示されます。
+
+![Python の以前のバージョンでの pip インストール制限についてのメッセージ](media/environments-old-version-restriction.png)
+
+警告の理由は、Python の以前のバージョンでは、パッケージ ソース pypi.org からパッケージをダウンロードするために必要な、トランスポート セキュリティ層 (TLS) 1.2 のサポートが `pip install` に含まれていないことです。カスタムの Python ビルドは TLS 1.2 をサポートすることがあります。その場合 `pip install` が動作する可能性があります。
+
+パッケージの適切な `get-pip.py` を [bootstrap.pypa.io](https://bootstrap.pypa.io/) からダウンロードできる場合があります。[pypi.org](https://pypi.org/) からパッケージを手動でダウンロードし、そのローカル コピーからパッケージをインストールします。
+
+ただし、Python 2.7 または 3.3 にアップグレードすることをお勧めします。この場合、警告が表示されません。
 
 ## <a name="intellisense-tab"></a>[IntelliSense] タブ
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473219"
 ---
 # <a name="how-to-display-thread-properties"></a>方法: スレッドのプロパティを表示する
 表示されているスレッドの詳細を検索する[スレッド ビュー](../debugger/threads-view.md)を使用して、[スレッド プロパティ ダイアログ ボックス](../debugger/thread-properties-dialog-box.md)です。  

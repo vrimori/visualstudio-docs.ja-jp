@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31917463"
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: 型のリンク要求には継承要求が必要です
 |||

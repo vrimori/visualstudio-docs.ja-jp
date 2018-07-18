@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139810"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 これで使用されるコールバック関数、 [SccQueryChanges](../extensibility/sccquerychanges-function.md)操作がファイル名のコレクションを列挙し、各ファイルの状態を判断します。  

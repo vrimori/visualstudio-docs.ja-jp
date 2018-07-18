@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト用のカウンター セットにカウンターを追加する | Microsoft Docs
+title: Visual Studio でロード テスト用のカウンター セットにカウンターを追加する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,22 @@ ms.assetid: e17d0e71-f982-4fc1-a2df-a1065d37473d
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 153e7369397b961338b4c4c495cfd953f5271c0d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 871ba69d088e58ac1d662f254c72c406c79f86fd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31967886"
 ---
 # <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカウンターをカウンター セットに追加する
 
 **ロード テスト ウィザード**を使用してロード テストを作成する場合、初期のカウンター セットを追加します。 これらによって、定義済みのカウンター セットがロード テスト用に提供されます。 詳細については、「[ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)」を参照してください。
 
 > [!NOTE]
->  ロード テストを複数のリモート コンピューターに分散する場合、コントローラーとエージェント カウンターが、コントローラーとエージェント カウンター セットに割り当てられます。 ロード テストでリモート コンピューターを使用する方法の詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
+> ロード テストを複数のリモート コンピューターに分散する場合、コントローラーとエージェント カウンターが、コントローラーとエージェント カウンター セットに割り当てられます。 ロード テストでリモート コンピューターを使用する方法の詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
+
 
  カウンターは、**ロード テスト エディター**で管理します。 テストに既に追加されているカウンター セットは、ロード テストの **[カウンター セット]** ノードに表示されます。 ロード テストを作成すると、既存のカウンター セットに新しいカウンターを追加できます。
 

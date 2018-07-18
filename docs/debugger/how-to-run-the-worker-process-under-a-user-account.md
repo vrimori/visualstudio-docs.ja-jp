@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475755"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>方法 : ユーザー アカウントでワーカー プロセスを実行する
 ユーザー アカウントを使用して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ワーカー プロセス (aspnet_wp.exe または w3wp.exe) を実行できるようにコンピューターを設定するには、次の手順を実行します。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/18/2018
   
 11. **Temporary ASP.NET Files のアクセス許可エントリ** ダイアログ ボックスで、ユーザーに付与**フル コントロール**、クリックして**ok**を閉じる、**一時的な ASP のエントリ.NET ファイル** ダイアログ ボックス。  
   
-12. A**セキュリティ** ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかは確認します。 **[はい]**をクリックします。  
+12. A**セキュリティ** ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかは確認します。 **[はい]** をクリックします。  
   
 13. をクリックして**OK**を閉じる、 **Temporary ASP.NET Files のプロパティ** ダイアログ ボックス。  
   

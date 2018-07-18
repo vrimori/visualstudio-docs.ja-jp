@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31482153"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>エラー : リモート コンピューター上の SQL Server に接続できません。
 リモート コンピューター上の SQL Server に接続できません。*名前*です。 アクセスが拒否されました。 リモート コンピューターにリモート デバッガーをインストールしてあることを確認してください。 リモート コンピューターがドメイン上にない場合、または Visual Studio がローカル アカウントとして動作している場合は、ローカル アカウントと同一のユーザー名とパスワードをリモート コンピューターに指定しなければなりません。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134094"
 ---
 # <a name="support-for-user-settings"></a>ユーザー設定のサポート
 VSPackage は、ユーザーが選択したときに永続化状態変数のグループ、1 つまたは複数の設定カテゴリの定義可能性があります、**設定のインポート/エクスポート**コマンドを**ツール**メニュー。 この永続化を有効にする設定を使用して Api で、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  
@@ -33,14 +34,14 @@ VSPackage は、ユーザーが選択したときに永続化状態変数のグ�
      1 つの VSPackage は、いくつかのカスタム設定ポイントをサポートしている、各カスタム設定ポイントは別のクラスによって実装およびの一意のインスタンスでそれぞれが登録されている場合、<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラスです。 そのため、実装するクラスの設定は、1 つ以上のカテゴリの設定をサポートできます。  
   
 ## <a name="custom-settings-point-registry-entry-details"></a>カスタム設定ポイントのレジストリ エントリの詳細  
- 次の場所にレジストリ エントリでのカスタム設定ポイントが作成されます: HKLM\Software\Microsoft\VisualStudio\\*\<バージョン >*\UserSettings\\`<CSPName>`ここで、`<CSPName>` 、VSPackage がサポートする、カスタム設定ポイントの名前と*\<バージョン >*のバージョンは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]8.0 などのです。  
+ 次の場所にレジストリ エントリでのカスタム設定ポイントが作成されます: HKLM\Software\Microsoft\VisualStudio\\*\<バージョン >* \UserSettings\\`<CSPName>`ここで、`<CSPName>` 、VSPackage がサポートする、カスタム設定ポイントの名前と*\<バージョン >* のバージョンは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]8.0 などのです。  
   
 > [!NOTE]
->  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >*代替でオーバーライドできるルートの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です初期化されます。 詳細については、次を参照してください。[コマンド ライン スイッチ](../../extensibility/command-line-switches-visual-studio-sdk.md)です。  
+>  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >* 代替でオーバーライドできるルートの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です初期化されます。 詳細については、次を参照してください。[コマンド ライン スイッチ](../../extensibility/command-line-switches-visual-studio-sdk.md)です。  
   
  レジストリ エントリの構造は、次に示します。  
   
- HKLM\Software\Microsoft\VisualStudio\\*\<バージョン >*\UserSettings\  
+ HKLM\Software\Microsoft\VisualStudio\\*\<バージョン >* \UserSettings\  
   
  `<CSPName`> = '#12345' s  
   

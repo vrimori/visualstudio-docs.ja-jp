@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121314"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 このインターフェイスは、デバッグ中のプログラムでは、ステップ イン、ステップ オーバー、またはソース コードまたはステートメントまたは命令の行外の手順が完了すると、セッション デバッグ マネージャー (SDM) に、デバッグ エンジン (DE) によって送信されます。  

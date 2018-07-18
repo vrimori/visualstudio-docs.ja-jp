@@ -37,6 +37,7 @@ ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106961"
 ---
 # <a name="analyze-and-model-your-architecture"></a>アーキテクチャを分析およびモデルする
 アプリが Visual Studio アーキテクチャを使用するツールとモデリング ツールを設計およびアプリのモデルによってアーキテクチャの要件を満たしていることを確認してください。

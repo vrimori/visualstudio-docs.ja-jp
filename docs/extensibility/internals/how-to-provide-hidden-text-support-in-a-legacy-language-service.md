@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132643"
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>方法: レガシ言語サービスでの非表示テキストのサポートを提供
 アウトライン領域以外にも非表示のテキスト領域を作成できます。 非表示テキスト領域は、クライアント管理の対象またはエディター コントロールとテキストの範囲を完全に非表示に使用します。 エディターには、水平の線としての非表示の領域が表示されます。 この例は、HTML エディターのスクリプトのみのビューです。  

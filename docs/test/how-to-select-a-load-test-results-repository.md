@@ -1,5 +1,5 @@
 ---
-title: '方法 : Visual Studio でロード テストの結果リポジトリを選択する | Microsoft Docs'
+title: '方法 : Visual Studio でロード テストの結果リポジトリを選択する'
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +15,14 @@ ms.assetid: fa0c4dd9-612f-4a57-b8eb-458f129d9cda
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3b653ff4bd57c9986e2269c20a4fb314a9372b23
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 24b146b9916fbdd656868a7a89daa0213ec7b659
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752002"
 ---
 # <a name="how-to-select-a-load-test-results-repository"></a>方法 : ロード テストの結果リポジトリを選択する
 
@@ -36,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 2.  **[ロード テスト]** ツール バーで、**[テスト コントローラーの管理]** を選択します。 [テスト コントローラーの管理] ダイアログ ボックスが表示されます。 エージェントをリモートで使用している場合は、コントローラーを選択する必要があります。
 
-     ![ロード テストの結果ストアの接続プロパティ](../test/media/loadtestconnectionproperties.png "LoadTestConnectionProperties") ロード テストの結果ストアの接続プロパティ
+     ![ロード テストの結果ストアの接続プロパティ](../test/media/loadtestconnectionproperties.png) ロード テストの結果ストアの接続プロパティ
 
 3.  **[ロード テストの結果ストア]** で、(...) をクリックし、**[接続のプロパティ]** ダイアログ ボックスを表示します。
 

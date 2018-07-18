@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31107804"
 ---
 # <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成
 WPF (Windows Presentation Framework) ツールボックス コントロール テンプレートを使用に自動的に追加されている WPF コントロールを作成する、**ツールボックス**拡張機能がインストールされている場合。 このトピックは、テンプレートを使用して作成する方法を示しています、**ツールボックス**コントロールを他のユーザーに配布することができます。  

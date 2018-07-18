@@ -1,5 +1,5 @@
 ---
-title: Visual Studio のロード テスト実行設定の [タイミングの詳細ストレージ] プロパティ | Microsoft Docs
+title: Visual Studio のロード テスト実行設定の [タイミングの詳細ストレージ] プロパティ
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,14 @@ ms.assetid: 867a9c21-0909-4963-bc02-d41e9393008c
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 73e800893fe9d923ff3f119f6741b496feac4fb6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a41b9e7470fb9741a47f355e533c0451fe67fc3a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31974058"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>方法: ロード テストの実行設定の [タイミングの詳細ストレージ] プロパティを指定する
 

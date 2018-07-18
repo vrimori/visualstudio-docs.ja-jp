@@ -1,9 +1,8 @@
 ---
-title: Visual Studio でのコード変更のプレビュー | Microsoft Docs
-ms.custom: ''
+title: Visual Studio でのコード変更のプレビュー
 ms.date: 12/16/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
@@ -12,11 +11,12 @@ f1_keywords:
 - vs.codefix.previewchanges
 ms.workload:
 - multiple
-ms.openlocfilehash: cc838d55e83a5b606059acbf068639116ab012bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dfb9ff26ca20060a8df9a0b3a81783b60e0b46f3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31942456"
 ---
 # <a name="preview-changes-window"></a>[変更のプレビュー] ウィンドウ
 
@@ -32,5 +32,5 @@ Visual Studio でさまざまな*クイック アクション* ツールまた�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio でのリファクタリング](../ide/refactoring-in-visual-studio.md)  
-[クイック アクション](../ide/quick-actions.md)
+- [Visual Studio でのリファクタリング](../ide/refactoring-in-visual-studio.md)
+- [クイック アクション](../ide/quick-actions.md)

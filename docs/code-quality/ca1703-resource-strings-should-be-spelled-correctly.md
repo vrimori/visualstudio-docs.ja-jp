@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31918268"
 ---
 # <a name="ca1703-resource-strings-should-be-spelled-correctly"></a>CA1703: リソース文字列は正しく入力されなければなりません
 

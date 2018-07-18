@@ -9,17 +9,18 @@ ms.author: mblome
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb52bd6b905e8e1cd73b75abd6304698858a20b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: eadcc8f2a3e50f9a23da3e3bbc6689c643904470
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751625"
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 
 **Visual Studio 2017 バージョン 15.5** 以降では、Boost.Test テスト アダプターが **[C++ によるデスクトップ開発]** ワークロードのコンポーネントとして Visual Studio IDE に統合されています。
 
-![Boost.Test のテスト アダプター](media/cpp-boost-component.png "Boost.Test コンポーネントのテスト アダプター")
+![Test Adapter for Boost.Test](media/cpp-boost-component.png)
 
 **[C++ によるデスクトップ開発]** ワークロードがインストールされていない場合は、**Visual Studio インストーラー**を開いて、**[変更]** を選択します。 **[C++ によるデスクトップ開発]** ワークロードを選んで、**[変更]** ボタンを選択します。
 
@@ -43,7 +44,7 @@ Boost.Test には [Boost](http://www.boost.org/) が必要です。 Boost がイ
 
 1. テスト用の .cpp ファイルを追加するには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[新しい項目の追加]** を選択します。
 
-   ![Boost.Test 項目テンプレート](media/boost_test_item_template.png "Boost.Test 項目テンプレート")
+   ![Boost.Test 項目テンプレート](media/boost_test_item_template.png)
 
 1. 新しいファイルには、サンプル テスト メソッドが含まれます。 プロジェクトをビルドして、**テスト エクスプ ローラー**がメソッドを検出できるようにします。
 
@@ -87,7 +88,7 @@ Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる�
 
 1. テストの .cpp ファイルで、必要な `#include` ディレクティブを追加して、プログラムの型と関数がテスト コードに認識されるようにします。 通常、プログラムはフォルダー階層で 1 つ上のレベルです。 「`#include "../"`」と入力すると IntelliSense ウィンドウが表示され、ヘッダー ファイルへの完全パスを選択できます。
 
-   ![#include ディレクティブを追加する](media/cpp-gtest-includes.png "テストの .cpp ファイルに include ディレクティブを追加する")
+   ![#include ディレクティブを追加する](media/cpp-gtest-includes.png)
 
    次のようにすると、スタンドアロン ライブラリを使うことができます。
 

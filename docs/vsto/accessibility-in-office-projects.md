@@ -23,6 +23,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262317"
 ---
 # <a name="accessibility-in-office-projects"></a>Office プロジェクトのユーザー補助機能
   Microsoft Visual Studio と Microsoft Office を使用すると、標準のユーザー補助の要件を満たすカスタム ソリューションをビルドする多くのユーザー補助機能が含まれます。 Microsoft では、Web 上のユーザー補助のためのガイドラインを発行します。 詳細については、次を参照してください。、[アクセシビリティ web サイト](http://go.microsoft.com/fwlink/?LinkID=37113)です。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31571358"
 ---
 # <a name="troubleshooting-net-framework-targeting-errors"></a>.NET Framework を対象とするエラーのトラブルシューティング
 このトピックは、参照の問題が原因で発生する可能性のある MSBuild エラーと、そのエラーの解決方法について説明します。  

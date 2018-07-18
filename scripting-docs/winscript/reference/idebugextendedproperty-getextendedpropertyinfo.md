@@ -1,11 +1,11 @@
 ---
-title: "IDebugExtendedProperty::GetExtendedPropertyInfo |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugExtendedProperty::GetExtendedPropertyInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugExtendedProperty.GetExtendedPropertyInfo
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IDebugExtendedProperty::GetExtendedPropertyInfo
 ms.assetid: 56edf538-5082-4653-82b6-e6640d6f61ba
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24727082"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
 拡張プロパティより単純なより多くの情報の拡張情報をフェッチ`IDebugProperty`です。  

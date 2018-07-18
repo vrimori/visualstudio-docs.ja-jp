@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31124882"
 ---
 # <a name="ienumdebugports2"></a>IEnumDebugPorts2
 このインターフェイスは、コンピューターまたはポートの仕入先のポートを列挙します。  

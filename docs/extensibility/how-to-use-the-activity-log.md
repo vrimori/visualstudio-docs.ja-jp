@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127104"
 ---
 # <a name="how-to-use-the-activity-log"></a>方法: アクティビティ ログを使用
 Vspackage は、メッセージを動作状況ログを書き込むことができます。 この機能は、小売環境で Vspackage をデバッグするため便利です。  
@@ -48,7 +49,7 @@ Vspackage は、メッセージを動作状況ログを書き込むことがで�
   
 1.  Visual Studio と実行、 [/ログ](../ide/reference/log-devenv-exe.md)ActivityLog.xml をディスクに書き込むセッション中にコマンド ライン スイッチです。
 
-2.  Visual Studio を閉じると、アクティビティのログ サブフォルダーにデータを探す Visual Studio: *%appdata%*\Microsoft\VisualStudio\15.0\ActivityLog.xml です。  
+2.  Visual Studio を閉じると、アクティビティのログ サブフォルダーにデータを探す Visual Studio: *%appdata%* \Microsoft\VisualStudio\15.0\ActivityLog.xml です。  
   
 3.  任意のテキスト エディターで、動作状況ログを開きます。 一般的なエントリを次に示します。  
   

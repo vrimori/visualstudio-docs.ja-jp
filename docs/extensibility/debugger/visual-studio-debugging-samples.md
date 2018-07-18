@@ -20,10 +20,11 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31125438"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio のデバッグのサンプル
 2 つのサンプルを使用して、Visual Studio デバッガーを拡張する方法を示します[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  
   
--   マネージ言語の場合、デバッガーの式エバリュエーター サンプルが含まれている、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]ウィンドウで、をクリックして、**サンプル** タブで、をクリックして**すべて**または**c#**クリックして、言語の一覧で**デバッガー**です。  
+-   マネージ言語の場合、デバッガーの式エバリュエーター サンプルが含まれている、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]ウィンドウで、をクリックして、**サンプル** タブで、をクリックして**すべて**または**c#** クリックして、言語の一覧で**デバッガー**です。  
   
 -   Visual Studio デバッグ エンジン サンプル、ネイティブ言語は、MSDN コード ギャラリーで利用可能なです。 詳細については、このページで Microsoft Web サイトを参照: [Visual Studio デバッグ エンジン サンプル](http://go.microsoft.com/fwlink/?LinkId=150236)です。

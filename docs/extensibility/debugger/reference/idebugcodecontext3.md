@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108509"
 ---
 # <a name="idebugcodecontext3"></a>IDebugCodeContext3
 拡張、 [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)インターフェイス モジュールとプロセスのインターフェイスの取得を有効にします。  

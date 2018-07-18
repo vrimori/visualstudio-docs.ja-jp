@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448053"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>方法 : エディターで URL をリンクとして表示する
 コード エディターでコード内の Uniform Resource Locator (URL) をアクティブなリンクとして扱うことができます。 この機能を使うと、URL は次のように処理されます。

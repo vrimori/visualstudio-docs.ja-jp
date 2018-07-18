@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31103358"
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>メニュー項目にバインドのキーボード ショートカット
 カスタム メニュー コマンドをキーボード ショートカットをバインドするにのみ、パッケージの .vsct ファイルにエントリを追加します。 このトピックでは、カスタム ボタン、メニュー項目、またはツール バー コマンドにショートカット キーをマップする方法と、既定のエディターのキーボード マッピングを適用またはカスタム エディターを制限する方法について説明します。  

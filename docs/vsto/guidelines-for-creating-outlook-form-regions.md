@@ -21,6 +21,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548168"
 ---
 # <a name="guidelines-to-create-outlook-form-regions"></a>Outlook フォーム領域を作成するのには、ガイドライン
   次に示す情報は、フォーム領域の最適化と、潜在的な問題の回避に役立ちます。  

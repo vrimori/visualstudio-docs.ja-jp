@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31464288"
 ---
 # <a name="idiasymbolgethassetjump"></a>IDiaSymbol::get_hasSetJump
 関数の使用が含まれるかどうかを指定するフラグを取得、 [setjmp](/cpp/c-runtime-library/reference/setjmp)コマンド (とペアになって、 [longjmp](/cpp/c-runtime-library/reference/longjmp)コマンド、例外処理の C スタイルのメソッドを形成これら)。  

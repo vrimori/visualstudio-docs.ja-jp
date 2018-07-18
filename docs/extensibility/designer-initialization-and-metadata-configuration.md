@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132748"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>デザイナーの初期化とメタデータの構成
 デザイナーまたはデザイナー コンポーネントに関連付けられているメタデータとフィルターの属性の操作は、さまざまな処理を特定のデザイナーで使用されるツールを定義するアプリケーションのメカニズムを備えています<xref:System.Type>オブジェクト (などのデータ構造体。クラス、またはグラフィカルなエンティティ) 場合は、デザイナーが利用可能なおよびデザイナーをサポートするために、Visual Studio IDE を構成する方法 (のインスタンスを**ツールボックス**カテゴリまたはタブを使用)。  

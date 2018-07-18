@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133558"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
 ソース管理プラグインを作成するには、3 つの手順が含まれます。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-register-the-source-control-plug-in-dll"></a>ソース管理プラグインの DLL を登録するには  
   
-1.  製品名のサブキーを続けて、会社名サブキーを指定する、ソフトウェア サブキー HKEY_LOCAL_MACHINE キーに 2 つのエントリを追加します。 パターンは、hkey_local_machine \software\\*[会社名]*\\*[製品名]*\\*[入力]* = 値です。 SCCServerName と SCCServerPath、2 つのエントリが常に呼び出されます。 各は、正規の文字列です。  
+1.  製品名のサブキーを続けて、会社名サブキーを指定する、ソフトウェア サブキー HKEY_LOCAL_MACHINE キーに 2 つのエントリを追加します。 パターンは、hkey_local_machine \software\\ *[会社名]*\\ *[製品名]*\\ *[入力]* = 値です。 SCCServerName と SCCServerPath、2 つのエントリが常に呼び出されます。 各は、正規の文字列です。  
   
      たとえば、会社名が Microsoft と、ソース管理製品の場合はという名前の SourceSafe、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe するレジストリのパスとなります。 このサブキーには、最初のエントリ、SCCServerName は、製品の名前を付け、ユーザーが判読できる文字列です。 2 番目のエントリでは、SCCServerPath は、ソースへの完全パスに接続する IDE プラグインの DLL を制御します。 レジストリ エントリの例を次に示します。  
   
@@ -55,9 +56,9 @@ ms.lasthandoff: 04/16/2018
   
          HideInVisualStudio は、DWORD の値は、プラグインを非表示を 1 またはプラグインを表示する場合は 0 に設定されています。 レジストリ エントリが表示されない場合、既定の動作は、プラグインを表示するのには。  
   
-    -   DisableSccManager レジストリ エントリを無効または非表示に使用できる、**起動\<ソース管理サーバー >**下に通常表示されるメニュー オプション、**ファイル** ->  **ソース管理** をクリックします。 このメニューを選択するオプションを呼び出し、 [SccRunScc](../../extensibility/sccrunscc-function.md)関数。 ソース管理プラグインには、外部プログラムのことはできませんし、したがってを無効にするにまたはでも非表示にする場合があります、**起動**メニュー オプション。  
+    -   DisableSccManager レジストリ エントリを無効または非表示に使用できる、**起動\<ソース管理サーバー >** 下に通常表示されるメニュー オプション、**ファイル** ->  **ソース管理** をクリックします。 このメニューを選択するオプションを呼び出し、 [SccRunScc](../../extensibility/sccrunscc-function.md)関数。 ソース管理プラグインには、外部プログラムのことはできませんし、したがってを無効にするにまたはでも非表示にする場合があります、**起動**メニュー オプション。  
   
-         DisableSccManager は DWORD 値が 0 に設定を有効にする、**起動\<ソース管理サーバー >**メニュー オプションを 1 に設定 メニュー オプションを無効にして、メニュー オプションを非表示にする 2 に設定します。 このレジストリ エントリが表示されない場合、既定の動作では、メニュー オプションを説明します。  
+         DisableSccManager は DWORD 値が 0 に設定を有効にする、**起動\<ソース管理サーバー >** メニュー オプションを 1 に設定 メニュー オプションを無効にして、メニュー オプションを非表示にする 2 に設定します。 このレジストリ エントリが表示されない場合、既定の動作では、メニュー オプションを説明します。  
   
     |レジストリ エントリの例|サンプル値|  
     |---------------------------|------------------|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  下のサブキー、SourceCodeControlProvider、ソフトウェア サブキー HKEY_LOCAL_MACHINE キーを追加します。  
   
-     このサブキーにレジストリ エントリ ProviderRegKey éý ' è を手順 1. でレジストリに配置したサブキーを表す文字列。 パターンは、HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey ソフトウェアを =\\*[会社名]*\\*[製品名]*です。  
+     このサブキーにレジストリ エントリ ProviderRegKey éý ' è を手順 1. でレジストリに配置したサブキーを表す文字列。 パターンは、HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey ソフトウェアを =\\ *[会社名]*\\ *[製品名]* です。  
   
      このサブキーにサンプルの内容を次に示します。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  SourceCodeControlProvider サブキーの下で InstalledSCCProviders をという名前のサブキーを作成し、そのサブキーの下の 1 つのエントリを配置します。  
   
-     このエントリの名前が (同じ SCCServerName エントリに指定された値)、プロバイダーのユーザーが判読できる名前と値が、もう一度、手順 1. で作成されたサブキー。 パターンは、HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\*[表示名]*ソフトウェアを =\\*[会社名]* \\ *[製品名]*です。  
+     このエントリの名前が (同じ SCCServerName エントリに指定された値)、プロバイダーのユーザーが判読できる名前と値が、もう一度、手順 1. で作成されたサブキー。 パターンは、HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\ *[表示名]* ソフトウェアを =\\ *[会社名]* \\ *[製品名]* です。  
   
      例えば:  
   

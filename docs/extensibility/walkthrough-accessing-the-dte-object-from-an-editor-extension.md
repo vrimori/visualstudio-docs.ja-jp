@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139641"
 ---
 # <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス
 Vspackage を呼び出して、DTE オブジェクトを取得することができます、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework (MEF) 拡張機能ではインポートできる<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>を呼び出すと、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>の型を持つメソッド<xref:EnvDTE.DTE>です。  

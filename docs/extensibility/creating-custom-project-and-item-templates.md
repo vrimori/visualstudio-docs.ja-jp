@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31104366"
 ---
 # <a name="creating-custom-project-and-item-templates"></a>カスタム プロジェクトと項目テンプレートを作成します。
 
@@ -76,7 +77,7 @@ NuGet パッケージをインストールするためのテンプレートを�
   
 3.  プロジェクト テンプレートを VSIX プロジェクトのアセットとして設定します。 .Vsixmanifest ファイルを開きます。 移動して、**資産** タブでをクリックし、**新規**です。  
   
-    1.  設定、**型**フィールドを**[microsoft.visualstudio.projecttemplate]**または**[microsoft.visualstudio.itemtemplate]**です。  
+    1.  設定、**型**フィールドを **[microsoft.visualstudio.projecttemplate]** または **[microsoft.visualstudio.itemtemplate]** です。  
   
     2.  ソースの選択、**現在のソリューション内のプロジェクト**オプション、およびテンプレートが含まれているプロジェクトを選択します。  
   

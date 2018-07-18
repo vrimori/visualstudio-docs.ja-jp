@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142469"
 ---
 # <a name="test-area-7-share"></a>テスト領域 7: 共有
 このテスト領域経由でサイト間で共有のアイテムの説明、**共有**コマンド。  

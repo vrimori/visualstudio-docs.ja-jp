@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475497"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>ショートカット キー (HTML および JavaScript)
   
@@ -51,8 +52,8 @@ ms.lasthandoff: 04/18/2018
 |------------|--------------|  
 |要素の選択|Ctrl + B|  
 |表示とを使用する場合は、web ページ強調表示ボックスを非表示を切り替える**要素の選択**|Ctrl + Shift + I|  
-|使用して変更をコミット**[HTML として編集]**|Ctrl + Enter|  
-|使用して変更を破棄して**[HTML として編集]**|Esc|  
+|使用して変更をコミット **[HTML として編集]**|Ctrl + Enter|  
+|使用して変更を破棄して **[HTML として編集]**|Esc|  
 |選択した CSS 値を 1 つ増やす|↑ キー|  
 |選択した CSS 値を 1 つ減らす|↓ キー|  
   

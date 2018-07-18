@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473265"
 ---
 # <a name="styles-tab-window-properties-dialog-box"></a>[スタイル] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 使用して、**スタイル** タブを選択したウィンドウに適用されるスタイルを表示します。 表示する、[ウィンドウのプロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)にフォーカスを移動する、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio で診断データ アダプターを作成する | Microsoft Docs'
+title: '方法: Visual Studio で診断データ アダプターを作成する'
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 22867cab68497afd54c2ffee30bb9ccc73e90862
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 923296a6eaed79edc345b9071d5e1d4e2ececefe
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844743"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: カスタム診断データ アダプターを作成する
 
@@ -91,13 +93,13 @@ ms.lasthandoff: 04/16/2018
 
 5.  診断データ アダプター用のクラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorTypeUriAttribute> を追加して、診断データ アダプターとして識別します。このとき、**Company**、**Product**、および **Version** を診断データ アダプターに応じた情報に置き換えます。
 
-    ```
+    ```csharp
     [DataCollectorTypeUri("datacollector://Company/Product/Version")]
     ```
 
 6.  クラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorFriendlyNameAttribute> 属性を追加して、パラメーターを診断データ アダプターに応じた情報に置き換えます。
 
-    ```
+    ```csharp
     [DataCollectorFriendlyName("Collect Log Files", false)]
     ```
 

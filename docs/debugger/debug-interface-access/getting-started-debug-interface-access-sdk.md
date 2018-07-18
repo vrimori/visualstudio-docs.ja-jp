@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457902"
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>はじめに (Debug Interface Access SDK)
 デバッグ インターフェイス アクセス (DIA) SDK では、説明のドキュメントと DIA API を使用する方法を示すサンプルを提供します。 .Pdb ファイルと .dbg ファイルを開き、そのコンテンツのシンボル、値、属性、アドレス、およびその他のデバッグ情報を検索するカスタム アプリケーションを開発するのに DIA SDK のインターフェイスとメソッドを使用します。 この SDK では、C++ アプリケーションで見られる記号に関連するプロパティの参照テーブルも提供します。  

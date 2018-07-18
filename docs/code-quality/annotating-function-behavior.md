@@ -27,6 +27,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31899356"
 ---
 # <a name="annotating-function-behavior"></a>関数の動作に注釈を付ける
 注釈を付けるだけでなく[関数パラメーターと戻り値の](../code-quality/annotating-function-parameters-and-return-values.md)、関数全体のプロパティに注釈を付けることができます。

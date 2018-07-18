@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472302"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>方法 : マネージ コードのスレッド名を設定する
 スレッド名の設定は、Visual Studio のどのエディションでも実行できます。 スレッドの名前を付け、内のスレッドを追跡するために便利です、**スレッド**ウィンドウです。

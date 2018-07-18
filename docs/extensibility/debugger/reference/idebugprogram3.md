@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121766"
 ---
 # <a name="idebugprogram3"></a>IDebugProgram3
 このインターフェイスを表しますが、プロセスで実行され、拡張するプログラム[Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)スレッドに関する情報を提供することによりします。  

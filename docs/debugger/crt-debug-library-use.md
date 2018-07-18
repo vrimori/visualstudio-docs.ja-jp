@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31467957"
 ---
 # <a name="crt-debug-library-use"></a>CRT デバッグ ライブラリの使用方法
 C ランタイム ライブラリには、広範なデバッグ支援機能が用意されています。 CRT デバッグ ライブラリのいずれかを使用するのとリンクする必要があります[/debug](/cpp/build/reference/debug-generate-debug-info)してコンパイル **/MDd**、 **/MTd**、または **/LDd**です。  

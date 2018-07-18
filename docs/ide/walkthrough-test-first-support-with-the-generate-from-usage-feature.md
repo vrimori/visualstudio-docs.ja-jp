@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 866c4e1762efe6bb94586fc1c7258ffaa309eea8
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 47ad898b353914949c74eae65c6e545b1c167ec9
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748193"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファースト開発
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/22/2018
 
 3.  中央のペインで、**[単体テスト プロジェクト]** を選択し、`UnitTestProject1` の既定の名前をそのまま使用します。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] で表示されるダイアログ ボックスを次の図に示します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のダイアログ ボックスも同様です。
 
-     ![[新しいテスト プロジェクト] ダイアログ](../ide/media/newproject_test.png "NewProject_Test")
+     ![[新しいテスト プロジェクト] ダイアログ](../ide/media/newproject_test.png)
 
 4.  **[OK]** を選択して、**[新しいプロジェクト]** ダイアログ ボックスを閉じます。
 
@@ -66,9 +67,9 @@ ms.lasthandoff: 05/22/2018
 
 3.  `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次のスクリーンショットに示されているように、このメソッド内に `Automobile` というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、[クイック アクション](../ide/quick-actions.md) (電球) が左の余白に表示される (C# のみ) か、カーソルを移動すると波線の下に直接表示されます。
 
-     ![Visual Basic のクイック アクション](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")
+     ![Visual Basic のクイック アクション](../ide/media/genclass_underlinevb.png)
 
-     ![C&#35; のクイック アクション](../ide/media/genclass_underline.png "GenClass_Underline")
+     ![C&#35; のクイック アクション](../ide/media/genclass_underline.png)
 
 4.  **クイック アクション** (電球) を選択するかクリックします。 `Automobile` 型が定義されていないことを示すエラー メッセージが表示されます。 ソリューションもいくつか表示されます。
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/22/2018
 
 6. **[プロジェクト]** の一覧で、**[GFUDemo\_VB]** または **[GFUDemo_CS]** をクリックして、テスト プロジェクトではなくクラス ライブラリ プロジェクトにファイルを追加するように Visual Studio に指示します。 **[新しいファイルの作成]** がまだ選択されていない場合は選択し、*Automobile.cs* または *Automobile.vb* という名前を付けます。
 
-     ![[新しい型の生成] ダイアログ ボックス](../ide/media/genotherdialog.png "GenOtherDialog")
+     ![[新しい型の生成] ダイアログ ボックス](../ide/media/genotherdialog.png)
 
 6.  **[OK]** をクリックしてダイアログ ボックスを閉じ、新しいファイルを作成します。
 
@@ -133,7 +134,7 @@ ms.lasthandoff: 05/22/2018
 
      次の図に **[テスト結果]** ウィンドウを示します。
 
-     ![失敗したテストの結果](../ide/media/testsfailed.png "TestsFailed")
+     ![失敗したテストの結果](../ide/media/testsfailed.png)
 
 2.  **[テスト結果]** ウィンドウで、各テスト結果の行をダブルクリックして、各テストの場所に移動します。
 
@@ -155,7 +156,7 @@ ms.lasthandoff: 05/22/2018
 
      今回はテストに合格します。 次の図に **[テスト結果]** ウィンドウを示します。
 
-     ![合格したテストの結果](../ide/media/testspassed.png "TestsPassed")
+     ![合格したテストの結果](../ide/media/testspassed.png)
 
 ## <a name="see-also"></a>関連項目
 

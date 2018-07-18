@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126289"
 ---
 # <a name="registering-a-custom-debug-engine"></a>カスタム デバッグ エンジンを登録します。
 デバッグ エンジン必要があります COM 規則に従うクラス ファクトリとして登録だけでなく、Visual Studio のレジストリ サブキーを Visual Studio に登録します。  

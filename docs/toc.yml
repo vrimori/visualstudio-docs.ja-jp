@@ -2,6 +2,10 @@
   href: ide/index.md
 - name: 概要
   href: ide/visual-studio-ide.md
+  expanded: true
+  items:
+    - name: 高度な機能
+      href: ide/advanced-feature-overview.md
 - name: インストール
   items:
     - name: Visual Studio のインストール
@@ -151,8 +155,6 @@
               href: porting/port-migrate-and-upgrade-visual-studio-projects.md
             - name: プロジェクト アイテムの追加と削除
               href: ide/adding-and-removing-project-items.md
-            - name: プロジェクト ファイルとソリューション ファイルの種類
-              href: ide/reference/project-and-solution-file-types.md
             - name: プロジェクトおよびソリューションのプロパティの管理
               href: ide/managing-project-and-solution-properties.md
             - name: プロジェクト内の参照の管理
@@ -280,7 +282,7 @@
                       href: ide/reference/generate-field-property-local.md
                     - name: コンストラクターの生成
                       href: ide/reference/generate-constructor.md
-                    - name: 上書きの生成
+                    - name: オーバーライドの生成
                       href: ide/reference/generate-override.md
                     - name: Equals および GetHashCode メソッドのオーバーライドの生成
                       href: ide/reference/generate-equals-gethashcode-methods.md
@@ -600,11 +602,6 @@
           href: ide/how-to-specify-build-events-csharp.md
         - name: Visual Basic での警告の構成
           href: ide/configuring-warnings-in-visual-basic.md
-        - name: ホスト プロセスを無効にする
-          href: ide/how-to-disable-the-hosting-process.md
-          items:
-            - name: ホスト プロセス (vshost.exe)
-              href: ide/hosting-process-vshost-exe.md
         - name: 'チュートリアル: 複数のコンピューターを使用するビルド環境の作成'
           href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
     - name: デバッグ...
@@ -630,6 +627,8 @@
           href: ide/how-to-customize-menus-and-toolbars-in-visual-studio.md
         - name: ウィンドウ レイアウトをカスタマイズする
           href: ide/customizing-window-layouts-in-visual-studio.md
+        - name: ソリューション エクスプローラーでファイルの入れ子をカスタマイズする
+          href: ide/file-nesting-solution-explorer.md
         - name: スタート ページのカスタマイズ
           href: ide/customizing-the-start-page-for-visual-studio.md
         - name: Visual Studio 拡張機能の検索と使用
@@ -645,18 +644,7 @@
           href: ide/optimize-visual-studio-startup-time.md
         - name: ヒントとテクニック
           href: ide/visual-studio-performance-tips-and-tricks.md
-    - name: セキュリティ
-      href: ide/security-in-visual-studio.md
-      items:
-        - name: セキュリティで保護されたアプリケーション
-          href: ide/securing-applications.md
-        - name: セキュリティの維持
-          href: ide/maintaining-security.md
-        - name: ユーザー権限
-          href: ide/user-permissions-and-visual-studio.md
-        - name: セキュリティ参考文献
-          href: ide/security-bibliography.md
-    - name: ユーザー補助機能を管理する
+    - name: アクセシビリティ機能を管理する
       href: ide/reference/accessibility-features-of-visual-studio.md
       items:
         - name: IDE アクセシビリティ オプションを設定する
@@ -860,6 +848,8 @@
               items:
                 - name: '[サービスの詳細設定] ダイアログ ボックス'
                   href: ide/reference/advanced-settings-for-services-dialog-box.md
+            - name: '[設定] ページ (プロジェクト デザイナー)'
+              href: ide/reference/settings-page-project-designer.md
             - name: '[署名] ページ (プロジェクト デザイナー)'
               href: ide/reference/signing-page-project-designer.md
         - name: プロパティ ページ、JavaScript
@@ -997,6 +987,14 @@
           href: ide/reference/toggle-breakpoint-command.md
         - name: Watch コマンド
           href: ide/reference/watch-command.md
+    - name: セキュリティ
+      items:
+        - name: セキュリティで保護されたアプリケーションの開発
+          href: ide/securing-applications.md
+        - name: Visual Studio を通常ユーザーまたは管理者として実行する
+          href: ide/user-permissions-and-visual-studio.md
+        - name: Windows 情報保護 (WIP)
+          href: ide/exempt-visual-studio-from-wip.md
     - name: Microsoft ヘルプ ビューアー
       href: ide/microsoft-help-viewer.md
       items:
@@ -1043,18 +1041,23 @@
           href: /visualstudio/releasenotes/vs2017-relnotes-history?context=visualstudio/default
         - name: リリースのタイミング
           href: /visualstudio/productinfo/vs2017-release-rhythm?context=visualstudio/default
+        - name: Visual Studio のロードマップ
+          href: /visualstudio/productinfo/vs2018-roadmap?context=visualstudio/default
         - name: システム要件
           href: /visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default
         - name: プラットフォームの互換性
           href: /visualstudio/productinfo/vs2017-compatibility-vs?context=visualstudio/default
         - name: ライセンス
-          href: 'https://www.visualstudio.com/license-terms/'
+          href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: 再頒布可能コード
           href: /visualstudio/productinfo/2017-redistribution-vs?context=visualstudio/default
         - name: サポート ライフサイクルとサービス
           href: /visualstudio/productinfo/vs-servicing-vs?context=visualstudio/default
     - name: Visual Studio 2017 で問題を報告する
       href: ide/how-to-report-a-problem-with-visual-studio-2017.md
+      items:
+        - name: 開発者コミュニティのデータのプライバシー
+          href: ide/developer-community-privacy.md
     - name: カスタマー エクスペリエンス向上プログラム
       href: ide/visual-studio-experience-improvement-program.md
       items:

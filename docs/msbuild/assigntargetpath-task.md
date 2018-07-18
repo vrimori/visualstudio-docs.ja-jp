@@ -20,6 +20,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31568924"
 ---
 # <a name="assigntargetpath-task"></a>AssignTargetPath タスク
 このタスクはリスト ファイルを受け入れ、`<TargetPath>` 属性がまだ指定されていない場合は、この属性を追加します。  

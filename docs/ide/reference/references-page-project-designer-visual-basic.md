@@ -23,6 +23,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950294"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)
 **[プロジェクト デザイナー]** の **[参照]** ページを利用し、プロジェクトの参照、Web 参照、インポートした名前空間を管理します。 プロジェクトには、COM コンポーネント、XML Web サービス、.NET Framework クラス ライブラリまたはアセンブリ、その他のクラス ライブラリの参照を含めることができます。 参照の使用方法については、「[プロジェクト内の参照の管理](../../ide/managing-references-in-a-project.md)」を参照してください。

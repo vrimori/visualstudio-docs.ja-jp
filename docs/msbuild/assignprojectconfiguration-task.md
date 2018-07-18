@@ -20,6 +20,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31567617"
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration タスク
 このタスクは、構成文字列の一覧を受け入れ、それらを指定されたプロジェクトに割り当てます。  

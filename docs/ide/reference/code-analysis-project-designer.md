@@ -20,6 +20,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31944675"
 ---
 # <a name="code-analysis-project-designer"></a>コード分析 (プロジェクト デザイナー)
 コードに対して実行できるコード分析ツールが含まれます。 ツールは、Microsoft .NET Framework デザイン ガイドラインに規定されたプログラミングやデザインに関する規則違反など、アセンブリに関する情報を報告します。

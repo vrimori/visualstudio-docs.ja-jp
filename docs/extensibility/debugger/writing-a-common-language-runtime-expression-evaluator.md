@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135851"
 ---
 # <a name="writing-a-common-language-runtime-expression-evaluator"></a>共通言語ランタイムの式エバリュエーターの書き込み
 > [!IMPORTANT]

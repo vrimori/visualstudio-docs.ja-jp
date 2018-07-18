@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145413"
 ---
 # <a name="writing-to-the-user-settings-store"></a>ユーザー設定ストアへの書き込み
 ユーザー設定でのような書き込み可能な設定、**ツール/オプション**ダイアログ、プロパティ ウィンドウ、およびその他の特定のダイアログ ボックス。 Visual Studio 拡張機能は、これらを使用少量のデータを格納するのにことがあります。 このチュートリアルでは、ユーザー設定ストアへの書き込みから読み取りを外部ツールとしてメモ帳を Visual Studio に追加する方法を示します。  

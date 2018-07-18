@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465357"
 ---
 # <a name="idiasymbolgetconstructor"></a>IDiaSymbol::get_constructor
 ユーザー定義データ型が、コンス トラクターまたはデストラクターを持つかどうかを指定するフラグを取得します。  

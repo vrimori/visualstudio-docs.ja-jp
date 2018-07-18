@@ -15,15 +15,16 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 9cfcfab850d4d56589688eea0d5833400df9cb9d
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 36b6eff9f37cdd50e59942ece5ba56dcfe60b8f6
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767687"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードの単体テストを作成し、実行する
 
-このチュートリアルでは、マネージド コード用の Microsoft 単体テスト フレームワークと Visual Studio **テスト エクスプローラー**を使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。
+この記事では、マネージド コード用の Microsoft 単体テスト フレームワークと Visual Studio **テスト エクスプローラー**を使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。
 
 > [!NOTE]
 > このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークを使用します。 また、**テスト エクスプローラー**用のアダプターを備えたサード パーティの単体テスト フレームワークから**テスト エクスプローラー**を実行することもできます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」をご覧ください。
@@ -41,21 +42,18 @@ ms.lasthandoff: 05/22/2018
 
 2. **[ファイル]** メニューで、**[新規作成]** > **[プロジェクト]** の順に選択します。
 
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
+   **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
 3. **[インストールされているテンプレート]** の **[Visual C#]** をクリックします。
 
 4. アプリケーションの種類の一覧の **[クラス ライブラリ]** をクリックします。
 
-5. In the **[名前]** ボックスに「 `Bank` をポイントし、 **[OK]**」をご覧ください。
+5. **[名前]** ボックスに「**Bank**」と入力し、**[OK]** をクリックします。
 
-    > [!NOTE]
-    > "Bank" という名前が既に使用されている場合は、別のプロジェクト名を選択します。
+   新しい Bank プロジェクトが作成され、コード エディターに *Class1.cs* ファイルが開いた状態で**ソリューション エクスプローラー**が表示されます。
 
-     新しい Bank プロジェクトが作成され、コード エディターに *Class1.cs* ファイルが開いた状態で**ソリューション エクスプローラー**が表示されます。
-
-    > [!NOTE]
-    > コード エディターに *Class1.cs* ファイルが表示されない場合、ソリューション エクスプローラーのファイル *Class1.cs* をダブルクリックして開きます。
+   > [!NOTE]
+   > コード エディターで *Class1.cs* が開いていない場合は、**ソリューション エクスプローラー**のファイル *Class1.cs* をダブルクリックして開きます。
 
 6. 「[単体テストを作成するサンプル プロジェクト](../test/sample-project-for-creating-unit-tests.md)」からソース コードをコピーし、*Class1.cs* の元の内容をコピーしたコードに置き換えます。
 
@@ -93,11 +91,11 @@ public void Debit(double amount)
 
 4. **[名前]** ボックスに「`BankTests`」と入力して、**[OK]** を選択します。
 
-     **BankTests** プロジェクトが **Bank** ソリューションに追加されます。
+   **BankTests** プロジェクトが **Bank** ソリューションに追加されます。
 
 5. **BankTests** プロジェクトで、**Bank** プロジェクトへの参照を追加します。
 
-     ソリューション エクスプローラーで、**BankTests** プロジェクトの **[参照設定]** をクリックし、コンテキスト メニューの **[参照の追加]** をクリックします。
+   ソリューション エクスプローラーで、**BankTests** プロジェクトの **[参照設定]** をクリックし、コンテキスト メニューの **[参照の追加]** をクリックします。
 
 6. [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** を展開し、 **[Bank]** チェックボックスをオンにします。
 
@@ -142,7 +140,7 @@ using BankAccountNS;
 
 - マネージ コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。
 
-- テスト エクスプローラーで実行する各テスト メソッドには `[TestMethod]`属性が必要です。
+- テスト エクスプローラーで実行する各テスト メソッドには、`[TestMethod]` 属性が必要です。
 
 単体テスト プロジェクトで `[TestClass]` 属性がない別のクラスを使用することができます。また、テスト クラスで `[TestMethod]` 属性がない別のメソッドを使用することもできます。 こうした別のクラスやメソッドをテスト メソッドで使用できます。
 
@@ -211,13 +209,13 @@ public void Debit_WithValidAmount_UpdatesBalance()
 
 ## <a name="fix-your-code-and-rerun-your-tests"></a>コードを修正してテストを再実行する
 
-**テスト結果を分析する**
+### <a name="analyze-the-test-results"></a>テスト結果を分析する
 
 テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*value*>** パラメーター) および実際に受け取られた事項 (**Actual\<*value*>** パラメーター) が示されます。 残高が減少すると予想していましたが、実際には代わりに引き出し額によって増加しています。
 
 単体テストにより、引き出し額は、*減算*する必要があるときに口座残高に*追加*されます。単体テストではバグがわかりました。
 
-**バグを修正する**
+### <a name="correct-the-bug"></a>バグを修正する
 
 エラーを修正するには、行を置き換えます。
 
@@ -231,22 +229,22 @@ m_balance += amount;
 m_balance -= amount;
 ```
 
-**テストを再実行する**
+### <a name="rerun-the-test"></a>テストを再実行する
 
-テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーはテストが成功したことを示す緑色になり、テストは **[成功したテスト]** グループに移動します。
+テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーはテストが成功したことを示す緑色になり、テストは **[成功したテスト]** グループに移動されます。
 
 ## <a name="use-unit-tests-to-improve-your-code"></a>単体テストを使用してコードを改良する
 
 このセクションでは、分析の反復処理、単体テストの進展、およびリファクタリングが、実稼働のコードの堅牢性と有効性を高めるうえでどのように役立つかを説明します。
 
-**問題を分析する**
+### <a name="analyze-the-issues"></a>問題を分析する
 
 有効な金額が `Debit` メソッドで正しく差し引かれているかどうかを確認するテスト メソッドを作成しました。 引き落とし金額が次のいずれかである場合、メソッドが <xref:System.ArgumentOutOfRangeException> をスローすることを確認します。
 
 - 残高よりも大きい、または
 - 0 未満。
 
-**テスト メソッドを作成する**
+### <a name="create-the-test-methods"></a>テスト メソッドを作成する
 
 引き落とし金額が 0 未満の場合の正しい動作を検証するテスト メソッドを作成します。
 
@@ -277,11 +275,11 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 
 3. `debitAmount` を、残高を上回る数値に設定します。
 
-**テストを実行**
+### <a name="run-the-tests"></a>テストを実行
 
 2 つのテスト メソッドを実行すると、テストが正しく機能することがわかります。
 
-**分析を継続する**
+### <a name="continue-the-analysis"></a>分析を継続する
 
 一方で、最後の 2 つのテスト メソッドには問題もあります。 いずれかのテストが実行されたときに、テスト対象のメソッドのどの条件が例外をスローするかを特定することはできません。 負の引き落とし金額または残高よりも大きい金額の 2 つの条件を区別するいくつかの方法を利用すると、テストの信頼が高くなります。
 
@@ -291,11 +289,11 @@ public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
 throw new ArgumentOutOfRangeException("amount");
 ```
 
-はるかに豊富な情報を報告するために使用できるコンストラクターがあります。<xref:System.ArgumentOutOfRangeException.%23ctor%2A>`(String, Object, String)` には、引数の名前、引数の値、ユーザー定義のメッセージが含まれています。 このコンストラクターを使用するようにテスト対象のメソッドをリファクタリングできます。 さらに、一般に公開されている型メンバーを使用して、エラーを指定できます。
+さらに豊富な情報を報告するために使用できるコンストラクターがあります。<xref:System.ArgumentOutOfRangeException.%23ctor(System.String,System.Object,System.String)> には、引数の名前、引数の値、ユーザー定義のメッセージが含まれています。 このコンストラクターを使用するようにテスト対象のメソッドをリファクタリングできます。 さらに、一般に公開されている型メンバーを使用して、エラーを指定できます。
 
-**テスト対象のコードをリファクタリングする**
+### <a name="refactor-the-code-under-test"></a>テスト対象のコードをリファクタリングする
 
-最初に、エラー メッセージの 2 つの定数をクラス スコープで定義します。 これらをテスト対象のクラスに入れます (`Bank`)。
+最初に、エラー メッセージの 2 つの定数をクラス スコープで定義します。 これらをテスト対象のクラスに入れます (BankAccount)。
 
 ```csharp
 public const string DebitAmountExceedsBalanceMessage = "Debit amount exceeds balance";
@@ -316,7 +314,7 @@ public const string DebitAmountLessThanZeroMessage = "Debit amount is less than 
     }
 ```
 
-**テスト メソッドをリファクタリングする**
+### <a name="refactor-the-test-methods"></a>テスト メソッドをリファクタリングする
 
 `ExpectedException` テスト メソッド属性を削除し、代わりにスローされた例外をキャッチし、関連付けられたメッセージを確認します。 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert.Contains%2A?displayProperty=fullName> メソッドには、2 つの文字列を比較する機能があります。
 
@@ -344,9 +342,9 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 }
 ```
 
-**再テストする、書き換える、再分析する**
+### <a name="retest-rewrite-and-reanalyze"></a>再テストする、書き換える、再分析する
 
-テスト対象のメソッドにバグがあっても `Debit` メソッドが <xref:System.ArgumentOutOfRangeException> を*スロー*せず、例外と共に正しいメッセージを出力するとします。 現在、テスト メソッドはこのケースを処理しません。 `debitAmount` 値が有効な場合 (つまり、残高未満だが 0 よりは大きい場合)、例外はキャッチされないので、アサートはキャッチされません。 それでも、テスト メソッドは成功します。 これは適切ではありません。例外がスローされない場合はテスト メソッドが失敗することを想定しているためです。
+テスト対象のメソッドにバグがあっても `Debit` メソッドが <xref:System.ArgumentOutOfRangeException> をスローせず、例外と共に正しいメッセージを出力するとします。 現在、テスト メソッドはこのケースを処理しません。 `debitAmount` 値が有効な場合 (つまり、残高未満だが 0 よりは大きい場合)、例外はキャッチされないので、アサートはキャッチされません。 それでも、テスト メソッドは成功します。 これは適切ではありません。例外がスローされない場合はテスト メソッドが失敗することを想定しているためです。
 
 これはテスト メソッドのバグです。 この問題を解決するには、テスト メソッドの最後に <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> アサートを追加して、例外がスローされないケースを処理するようにします。
 

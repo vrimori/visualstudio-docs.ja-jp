@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31892704"
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>匿名メソッドとコード分析
 *匿名メソッド*メソッド名を持っていないです。 匿名メソッドは、コード ブロックをデリゲートのパラメーターとして渡すを最も頻繁に使用されます。

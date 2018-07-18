@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131289"
 ---
 # <a name="creating-options-pages"></a>[オプション] ページを作成します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]追加することによって IDE**オプション**ページの下にある、**ツール**メニュー。  

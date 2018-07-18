@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31922773"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>方法: を有効にして、マネージ コードの完全なソリューション分析を無効にします。
 

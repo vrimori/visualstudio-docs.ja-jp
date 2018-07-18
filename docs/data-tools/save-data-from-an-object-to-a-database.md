@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31924718"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>オブジェクトからデータをデータベースに保存します。
 オブジェクトをデータベースでデータを保存するには、TableAdapter の DBDirect メソッドのいずれかに、オブジェクトから値を渡すことで (たとえば、 `TableAdapter.Insert`)。 詳細については、次を参照してください。 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。

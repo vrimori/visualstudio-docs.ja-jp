@@ -19,6 +19,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31572596"
 ---
 # <a name="writing-multi-processor-aware-loggers"></a>マルチプロセッサ対応の logger の記述
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では複数のプロセッサを使用できるため、プロジェクトのビルド時間が短縮されますが、同時にビルド イベント ログの複雑性も高まります。 シングルプロセッサ環境では、イベント、メッセージ、警告、およびエラーが順序に従った予測可能な方法で logger に到着します。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 この問題を解決するために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にはマルチプロセッサ対応の logger と新しいログ モデルが導入されており、カスタム "転送 logger" を作成できます。  

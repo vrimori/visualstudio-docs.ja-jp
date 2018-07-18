@@ -1,7 +1,7 @@
 ---
-title: '[フォルダーを指定して検索] | Microsoft Docs'
-ms.custom: ''
+title: '[フォルダーを指定して検索]'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e7e181883fff125349949f081826157f2a3aa36f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1470868e207687a7b35f46724b80b0da0a0e71c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946560"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
 
@@ -69,19 +70,19 @@ ms.lasthandoff: 04/16/2018
 
 **[検索オプション]** セクションは、展開または折りたたむことができます。 次のオプションは、オンまたはオフにできます。
 
-**[大文字と小文字を区別する]**  
+**[大文字と小文字を区別する]**
 
 オンにすると、**[検索結果]** 検索で大文字と小文字が区別されます。
 
-**[単語単位で探す]**  
+**[単語単位で探す]**
 
 オンにすると、単語単位で一致した項目のみが **[検索結果]** ウィンドウに表示されます。
 
-**正規表現の使用**  
+**正規表現の使用**
 
 このチェック ボックスをオンにすると、**[検索する文字列]** または **[置換後の文字列]** テキスト ボックスで特殊な表記を使用して、検索する文字列のパターンを定義できます。 これらの表記の一覧については、「[Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)」を参照してください。
 
-**[次のファイルの種類を参照]**  
+**[次のファイルの種類を参照]**
 
 この一覧は、**[検索対象]** ディレクトリで検索するファイルの種類を示します。 このフィールドが空白の場合は、**[検索対象]** ディレクトリ内のすべてのファイルが検索されます。
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 04/16/2018
 
 **[結果オプション]** セクションは、展開または折りたたむことができます。 次のオプションは、オンまたはオフにできます。
 
-**[検索結果 1] ウィンドウ**  
+**[検索結果 1] ウィンドウ**
 
 オンにすると、現在の検索結果で **[検索結果 1]** ウィンドウの内容が置換されます。 このウィンドウは自動的に開き、検索結果を表示します。 このウィンドウを手動で開くには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[検索結果 1]** を選択します。
 
@@ -109,6 +110,6 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>関連項目
 
-[テキストの検索と置換](../ide/finding-and-replacing-text.md)  
-[フォルダーを指定して置換](../ide/replace-in-files.md)  
-[Visual Studio コマンド](../ide/reference/visual-studio-commands.md)
+- [テキストの検索と置換](../ide/finding-and-replacing-text.md)
+- [フォルダーを指定して置換](../ide/replace-in-files.md)
+- [Visual Studio コマンド](../ide/reference/visual-studio-commands.md)

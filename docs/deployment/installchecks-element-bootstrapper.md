@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31566174"
 ---
 # <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks&gt;要素 (ブートス トラップ)
 `InstallChecks`要素は、さまざまなすべてのアプリケーションの適切な前提条件がインストールされているかどうかを確認するローカル コンピューターに対するテストの開始をサポートします。  

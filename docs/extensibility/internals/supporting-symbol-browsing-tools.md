@@ -26,6 +26,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134592"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>シンボル参照のツールのサポート
 **オブジェクト ブラウザー**、**クラス ビュー**、**呼び出しブラウザー**と**シンボルの検索結果**ツールは、シンボル参照 Visual Studio での機能を提供します。 これらのツールは、シンボルの階層ツリー ビューを表示し、ツリー内のシンボルの関係を表示します。 シンボルには、名前空間、オブジェクト、クラス、クラス メンバー、およびさまざまなコンポーネントに含まれるその他の言語要素を表すことがあります。 コンポーネントは、Visual Studio プロジェクトは、外部[!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)]コンポーネントおよび (.tlb) のタイプ ライブラリ。 詳細については、「[コードの構造の表示](../../ide/viewing-the-structure-of-code.md)」を参照してください。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31117479"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
 このプロセスを停止状態から実行が続行されます。 (ステップ) など、以前の実行状態が保持されます、しを再度実行して、プロセスを開始します。  

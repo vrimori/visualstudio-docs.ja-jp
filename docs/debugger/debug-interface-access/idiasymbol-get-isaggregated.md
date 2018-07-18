@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31464704"
 ---
 # <a name="idiasymbolgetisaggregated"></a>IDiaSymbol::get_isAggregated
 データ シンボル集計またはシンボルのコレクションの一部であるかどうかを指定するフラグを取得しますコンパイラでは、集計されたシンボルは個別のエンティティとして扱いますが、実際に 1 つの大きなシンボルの一部です。  

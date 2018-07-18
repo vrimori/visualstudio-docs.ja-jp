@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447246"
 ---
 # <a name="grant-trust-to-office-solutions"></a>Office ソリューションに信頼を付与
   ソリューションのアセンブリ、アプリケーション マニフェスト、配置マニフェスト、およびドキュメントを信頼する Office ソリューションは各ターゲット コンピューターのセキュリティ ポリシーを変更する信頼を付与します。 ユーザーまたはエンドユーザーによって、Office ソリューションに信頼を付与できます。  

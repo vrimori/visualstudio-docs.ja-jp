@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465591"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 セクション貢献度を記述するデータを取得、つまり、連続するメモリ ブロックから提供されたイメージに、コンパイル単位です。  

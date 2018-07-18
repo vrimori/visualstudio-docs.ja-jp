@@ -30,9 +30,10 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481760"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C ランタイム ライブラリなしのランタイム チェックの使用方法
-C ランタイム ライブラリなしプログラムをリンクする場合を使用して**/NODEFAULTLIB**実行時のチェックを使用して、RunTmChk.lib とリンクする必要があります。  
+C ランタイム ライブラリなしプログラムをリンクする場合を使用して **/NODEFAULTLIB**実行時のチェックを使用して、RunTmChk.lib とリンクする必要があります。  
   
  `_RTC_Initialize` は、ランタイム チェックでプログラムを初期化します。 C ランタイム ライブラリとリンクしない場合は、次のように、プログラムが `_RTC_Initialize` を呼び出す前に、ランタイム エラー チェックでコンパイルされているかどうかを確認する必要があります。  
   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/10/2018
+ms.locfileid: "24633412"
 ---
 # <a name="object-doesn39t-support-this-property-or-method"></a>オブジェクトは&#39;t は、このプロパティまたはメソッドをサポート
 このオブジェクトにはないプロパティまたはメソッドを指定しました。 すべてのオブジェクトが、すべてのプロパティとメソッドをサポートするわけではありません。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475723"
 ---
 # <a name="window-properties-dialog-box"></a>[ウィンドウ プロパティ] ダイアログ ボックス
 このダイアログ ボックスを使用して、特定のウィンドウについて詳しく調べます。 このダイアログ ボックスを表示するには、フォーカスを移動、[ウィンドウ ビュー](../debugger/windows-view.md)ウィンドウです。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

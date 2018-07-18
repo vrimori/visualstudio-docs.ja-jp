@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952827"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 テキスト テンプレートを含むモデルを読み取ることを記述するかどうかは[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ModelBus を参照して、ターゲットのモデルにアクセスする参照を解決することができます。 その場合は、テキスト テンプレートを使用し、参照先のドメイン固有言語 (Dsl) を調整する必要があります。
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/26/2018
 
     2.  DSL 定義ファイルを開きます。 デザイン サーフェイスを右クリックし、をクリックして**を有効にする Modelbus**です。
 
-    3.  ダイアログ ボックスで選択**、ModelBus をこの DSL を公開する**です。 この DSL をそのモデルを公開し、その他の Dsl への参照を使用する場合は、両方のオプションを選択できます。
+    3.  ダイアログ ボックスで選択 **、ModelBus をこの DSL を公開する**です。 この DSL をそのモデルを公開し、その他の Dsl への参照を使用する場合は、両方のオプションを選択できます。
 
     4.  **[OK]** をクリックします。 新しいプロジェクト "ModelBusAdapter" が DSL ソリューションに追加されます。
 
@@ -265,7 +266,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
 
      これにより、他の DSL を使用するコードを作成することができます。 いくつかの Dsl への参照を作成する場合も追加します。
 
-3.  DSL 定義ダイアグラムでダイアグラムを右クリックし、をクリックして**を有効にする ModelBus**です。 ダイアログ ボックスで選択**、ModelBus を使用するには、この DSL を有効にする**です。
+3.  DSL 定義ダイアグラムでダイアグラムを右クリックし、をクリックして**を有効にする ModelBus**です。 ダイアログ ボックスで選択 **、ModelBus を使用するには、この DSL を有効にする**です。
 
 4.  クラスの`ExampleElement`、新しいドメインのプロパティを追加`MBR`、[プロパティ] ウィンドウでその型に設定し、`ModelBusReference`です。
 

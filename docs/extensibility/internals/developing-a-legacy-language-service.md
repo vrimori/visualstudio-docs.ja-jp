@@ -24,6 +24,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129851"
 ---
 # <a name="developing-a-legacy-language-service"></a>レガシ言語サービスの開発
 このセクションにリンクするのに役立つトピックでは、従来の言語サービスを作成します。  

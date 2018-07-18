@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921712"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>SAL 注釈を使って C/C++ のコード障害を減らす方法
 SAL は、Microsoft ソース コード注釈言語です。 ソース コード注釈を使用すると、することができます、目的としたコードの背後にある明示的なです。 また、これらの注釈には、偽陽性および偽陰性の数が少ないと、コードをより正確には、分析に自動のスタティック分析ツールが有効にします。

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131315"
 ---
 # <a name="source-control-design-decisions"></a>ソース コントロールの設計に関する決定事項
 ソース管理を実装する場合は、プロジェクトの次の設計に関する決定事項を考慮してください。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462913"
 ---
 # <a name="idiasymbolgetcontainer"></a>IDiaSymbol::get_container
 この関数は、この記号の親/コンテナーを表すシンボルへのポインターを取得します。  

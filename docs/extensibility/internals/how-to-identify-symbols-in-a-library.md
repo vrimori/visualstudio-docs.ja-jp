@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136127"
 ---
 # <a name="how-to-identify-symbols-in-a-library"></a>方法: ライブラリ内のシンボルの特定
 シンボル参照のツールには、シンボルの階層ビューが表示されます。 シンボルは、名前空間、オブジェクト、クラス、クラス メンバー、およびその他の言語要素を表します。  

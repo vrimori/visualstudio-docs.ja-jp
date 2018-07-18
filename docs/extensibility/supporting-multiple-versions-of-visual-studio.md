@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137821"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Visual Studio の複数のバージョンをサポートします。
 用語*サイド バイ サイド*インストールおよび同じコンピューター上で製品の複数のバージョンを維持できることを意味します。 つまり、Vspackage の場合、ユーザーが同じコンピューターにインストールされているいくつかの Visual Studio のバージョンを持つことができます。 ただし、1 つのバージョンの Visual Studio に読み込まれる、Vspackage のバージョンをサイド バイ サイドを持つことはできません。  

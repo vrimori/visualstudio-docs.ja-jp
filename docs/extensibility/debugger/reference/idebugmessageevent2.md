@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31116176"
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
 このインターフェイスは、ユーザーからの応答を必要とする Visual Studio にメッセージを送信するデバッグ エンジン (DE) によって使用されます。  

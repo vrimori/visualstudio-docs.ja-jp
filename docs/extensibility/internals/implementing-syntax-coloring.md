@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131856"
 ---
 # <a name="implementing-syntax-coloring"></a>構文の色分けを実装します。
 言語サービスは、構文の色表示機能を提供する場合、パーサーは、行のテキスト装飾が可能な項目の配列に変換し、これらの装飾が可能な項目に対応するトークンの種類を返します。 パーサーは、装飾が可能な項目の一覧に属しているトークンの種類を返す必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 適切なトークンの種類に colorizer オブジェクトによって割り当てられた属性に従ってコード ウィンドウで各装飾が可能な項目を表示します。  

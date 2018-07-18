@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481542"
 ---
 # <a name="message-properties-dialog-box"></a>[メッセージ プロパティ] ダイアログ ボックス
 このダイアログ ボックスを使用して、特定のメッセージについて詳しく調べます。 このダイアログ ボックスを表示するには、フォーカスを移動、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウです。 ツリーで、メッセージの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  

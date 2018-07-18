@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472943"
 ---
 # <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージ コードからステップ アウトする
 かどうか、コードがネイティブ フレームでは表示されませんが、**呼び出し履歴**ウィンドウで、マネージ コード外のステップは、予期しない結果を生成できます。 この問題を回避するには、代わりにブレークポイントを使用することができます**ステップ アウト**です。  

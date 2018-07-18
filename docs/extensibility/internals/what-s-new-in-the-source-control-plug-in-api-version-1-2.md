@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136420"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>どのような&#39;ソースのプラグイン API バージョン 1.2 の制御
 このセクションでは、ソース管理プラグイン API バージョン 1.2 の高度なソース コード管理機能を強調表示されます。 バージョン 1.2 の新機能を次に示します。  

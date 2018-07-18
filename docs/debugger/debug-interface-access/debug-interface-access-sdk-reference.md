@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468706"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Debug Interface Access SDK 参照
 すべてのインターフェイスとサポートする列挙体と DIA SDK 内の構造体への完全な参照。  

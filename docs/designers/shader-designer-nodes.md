@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31926445"
 ---
 # <a name="shader-designer-nodes"></a>シェーダー デザイナー ノード
 ドキュメントのこのセクションの記事には、グラフィックス効果を作成するために使うことができるさまざまなシェーダー デザイナー ノードについての情報が含まれています。

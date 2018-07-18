@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142756"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio 拡張機能の配布
 拡張機能開発が終了したら後、は、他のコンピューターにインストールして、友人や同僚と共有または Visual Studio Marketplace に発行できます。 このセクションの内容を発行して、拡張機能を維持するために行うには必要なすべての情報を用いて: 発行、更新して、ローカライズ、.vsix ファイルを操作します。  

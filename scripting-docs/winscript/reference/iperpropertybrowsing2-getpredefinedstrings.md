@@ -1,11 +1,11 @@
 ---
-title: "IPerPropertyBrowsing2::GetPredefinedStrings |Microsoft ドキュメント"
-ms.custom: 
+title: IPerPropertyBrowsing2::GetPredefinedStrings |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IPerPropertyBrowsing2.GetPredefinedStrings
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IPerPropertyBrowsing2::GetPredefinedStrings
 ms.assetid: d2fa30f7-a566-4dbd-8b47-ffdc00419771
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24729252"
 ---
 # <a name="iperpropertybrowsing2getpredefinedstrings"></a>IPerPropertyBrowsing2::GetPredefinedStrings
 このプロパティの潜在的な値を表す文字列のポインターのカウント対象の配列とリスト ボックスに入力する、呼び出し元を使用できます。  

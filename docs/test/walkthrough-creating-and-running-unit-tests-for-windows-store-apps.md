@@ -1,6 +1,7 @@
 ---
-title: Visual Studio での UWP アプリ用の単体テストの作成および実行 | Microsoft Docs
+title: Visual Studio での UWP アプリ用の単体テストの作成および実行
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +14,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: bbb1da5474dcb36e9b102f85f21c4945b3ebb33c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf27c036f68eb4d2847c1070282c7949f59d2454
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751716"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリ用の単体テストの作成および実行
 
@@ -44,11 +46,11 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 6.  **[ソリューションのディレクトリを作成]** をクリックしたまま、 **[OK]** をクリックします。
 
-     ![調整された単体テスト ライブラリ](../test/media/unit_test_win8_1.png "Unit_Test_Win8_1")
+     ![調整された単体テスト ライブラリ](../test/media/unit_test_win8_1.png)
 
      ソリューション エクスプローラーに UWP 単体テスト プロジェクトが設定され、コード エディターに UnitTest1 という既定の単体テストが表示されます。
 
-     ![調整された新しい単体テスト プロジェクト](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png "Unit_Test_Win8_UnitTestExplorer_NewProjectCreated")
+     ![調整された新しい単体テスト プロジェクト](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
 
 ## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>単体テスト プロジェクトの UWP アプリケーション マニフェスト ファイルを編集する
 
@@ -98,7 +100,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
     >
     > また、 **[選択されたテストをデバッグ]**、 **[テストを開く]** をクリックし、 **[プロパティ]** オプションを使用できます。
     >
-    > ![単体テスト エクスプローラー &#45; 単体テストのコンテキスト メニュー](../test/media/unit_test_win8_unittestexplorer_contextmenu.png "Unit_Test_Win8_UnitTestExplorer_ContextMenu")
+    > ![単体テスト エクスプローラー &#45; 単体テスト コンテキスト メニュー](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 
     単体テストが実行されます。 完了すると、テスト エクスプローラーは、テストの状態、経過時間、およびソースへのリンクを表示します。
 

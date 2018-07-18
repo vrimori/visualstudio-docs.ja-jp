@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135369"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開
 シンボル参照ツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**を新しいデータの要求を渡す[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー。 オブジェクト マネージャは、適切なライブラリを検索して、シンボルのリストを要求します。 ライブラリの応答を要求されたデータを提供することによって、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャーを介して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>インターフェイスです。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]オブジェクト マネージャー メソッドを呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>データを取得するインターフェイスし、表示したり、シンボル参照のツールのビューの更新に使用します。  

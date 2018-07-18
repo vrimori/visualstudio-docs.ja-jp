@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146197"
 ---
 # <a name="troubleshooting-vspackages"></a>Vspackage のトラブルシューティング
 一般的な問題を VSPackage に可能性のある問題を解決するためのヒントを次に示します。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  レジストリのパッケージ セクションで、VSPackage の CLSID を見つけます。  
   
-         HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >*\Packages  
+         HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >* \Packages  
   
     2.  SatelliteDll サブキーによって指定されたパスが正しいことを確認します。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  アンマネージ コードの検索で、VSPackage の CLSID、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID レジストリ ノード。  
   
-     HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >*\CLSID  
+     HKLM\Software\Microsoft\Visual Studio\\*\<バージョン >* \CLSID  
   
  InprocServer32 エントリの VSPackage の dll の正しいパスがあることを確認してください。  
   

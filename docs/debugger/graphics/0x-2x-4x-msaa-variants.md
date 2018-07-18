@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475769"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA バリアント
 すべてのレンダー ターゲットおよびスワップ チェーン上で multi-sample anti-aliasing (MSAA) の設定をオーバーライドします。  

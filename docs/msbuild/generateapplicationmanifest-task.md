@@ -26,6 +26,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31575320"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest タスク
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストまたはネイティブ マニフェストを生成します。 ネイティブ マニフェストでは、コンポーネントの一意の ID を定義し、コンポーネントを構成するアセンブリおよびファイルを指定することによって、コンポーネントを記述します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストはネイティブ マニフェストを拡張するもので、アプリケーションのエントリ ポイントとセキュリティ レベルを指定します。  

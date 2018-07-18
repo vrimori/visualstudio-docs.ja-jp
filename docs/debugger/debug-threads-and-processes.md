@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477369"
 ---
 # <a name="tools-to-debug-threads-and-processes-in-visual-studio"></a>Visual Studio のスレッドおよびプロセスをデバッグするためのツール
 *スレッド*と*プロセス*コンピューター科学における関連する概念です。 いずれも特定の順序で実行する必要がある命令のシーケンスを表します。 ただし、別個のスレッドやプロセスの命令は並列実行できます。  

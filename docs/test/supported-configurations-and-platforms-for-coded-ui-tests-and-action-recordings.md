@@ -1,8 +1,9 @@
 ---
-title: Visual Studio でのコード化された UI テストの構成とプラットフォーム | Microsoft Docs
+title: Visual Studio でのコード化された UI テストの構成とプラットフォーム
 ms.date: 2015-10-04
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - coded UI tests
 ms.author: gewarren
@@ -10,18 +11,20 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 82d44d08353ed048ff51c90ea9a4b5c061a2dc2d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3fc4d5a6c1a4ae3cabbbb2426d7a4fdf011b9e0e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34693888"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム
 
 Visual Studio Enterprise のコード化された UI テストがサポートされる構成とプラットフォームを、次の表に示します。 この構成は、 [!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]を使用して作成される操作の記録にも適用されます。
 
 > [!NOTE]
->  コード化された UI テスト プロセスには、テスト対象のアプリケーションと同じ特権が必要です。
+> コード化された UI テスト プロセスには、テスト対象のアプリケーションと同じ特権が必要です。
+
 
  **要件**
 
@@ -37,7 +40,8 @@ Visual Studio Enterprise のコード化された UI テストがサポートさ
 |.NET|.NET 2.0、3.0、3.5、4、および 4.5。 **注:** [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] および Visual Studio が動作するには、いずれも .NET 4 が必要です。 ただし、一覧のバージョンの .NET を使用して開発されたアプリケーションはサポートされます。|
 
 > [!NOTE]
->  *UI 同期* とは、各コントロールのメッセージ キューで再生を検証する機能です。 送信されたイベントに対してコントロールが応答しなかった場合は、イベントが再度送信されます。
+> *UI 同期* とは、各コントロールのメッセージ キューで再生を検証する機能です。 送信されたイベントに対してコントロールが応答しなかった場合は、イベントが再度送信されます。
+
 
 ## <a name="platform-support"></a>プラットフォームのサポート
 
@@ -66,7 +70,7 @@ Visual Studio Enterprise のコード化された UI テストがサポートさ
 |Citrix およびターミナル サービス|ターミナル サーバーに対する操作の記録はお勧めしません。 レコーダーは、複数のインスタンスの同時実行をサポートしていません。|
 |PowerBuilder|一部サポートされています。<br /><br /> サポートは、PowerBuilder コントロールに対してユーザー補助が有効である程度までです。|
 
- その他のプラットフォームをサポートするための拡張機能の作成方法については、「[コントロールのコード化された UI テストの有効化](../test/enable-coded-ui-testing-of-your-controls.md)」および「[コード化された UI テストと操作の記録を拡張して Microsoft Excel をサポート](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)」をご覧ください。
+ その他のプラットフォームをサポートするための拡張機能の作成方法については、「[コントロールのコード化された UI テストの有効化](../test/enable-coded-ui-testing-of-your-controls.md)」および「[Extending Coded UI Tests and Action Recordings](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)」 (コード化された UI テストと操作の記録を拡張する) をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

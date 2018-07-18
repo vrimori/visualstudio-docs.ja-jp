@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457765"
 ---
 # <a name="copyright-notice-for-spy-help"></a>Spy++ ヘルプの著作権表記
 このドキュメントの情報は予告なしに変更されることがあります。 この例で使用されている企業、名前、データは特に断りのない限り、架空のものです。 本書のいかなる部分も、書面による Microsoft Corporation の許可なしに、電子的、機械的、またはその他のいかなる形式または方法によっても、その目的を問わず、複製または伝送することを禁じます。  

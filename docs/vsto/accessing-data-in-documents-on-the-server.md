@@ -21,6 +21,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34268389"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>サーバー上のドキュメントのデータにアクセス
   Microsoft Office Word または Microsoft Office Excel のオブジェクト モデルを使用することがなく、ドキュメント レベルのカスタマイズ内のデータに対してプログラミングできます。 つまり、単語がないサーバー上のドキュメントに含まれているデータにアクセスすることができますか、Excel がインストールされていること。 たとえば、サーバー上のコード (などの[!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] ページ)、ドキュメント内のデータをカスタマイズしてエンドユーザー向けにカスタマイズされた文書を送信します。 エンドユーザーが、ドキュメントを開いたときに、ソリューション アセンブリのデータ バインディング コードはカスタマイズされたデータをドキュメントにバインドします。 これには、ドキュメント内のデータは、ユーザー インターフェイスから分離されるためです。 詳細については、次を参照してください。[ドキュメント レベルのカスタマイズでキャッシュされたデータ](../vsto/cached-data-in-document-level-customizations.md)です。  

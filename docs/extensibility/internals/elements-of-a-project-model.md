@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135560"
 ---
 # <a name="elements-of-a-project-model"></a>プロジェクト モデルの要素
 インターフェイスおよび実装内のすべてのプロジェクトの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]基本的な構造を共有: プロジェクトの種類のプロジェクトのモデル。 VSPackage を開発するには、プロジェクト モデルでは、IDE によって提供されるグローバルの機能と共に動作および設計に関する決定に準拠したオブジェクトを作成します。 プロジェクト項目を保存する方法を制御するなどが制御できない通知ファイルを永続化する必要があります。 ユーザーが開いているプロジェクト アイテムにフォーカスが移ります、選択**を保存**で、**ファイル**メニューで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]メニュー バーで、プロジェクトの種類のコードする必要があります IDE からコマンドを途中受信、ファイルを保持してとファイルが不要になった変更されたことを IDE に戻るには、通知を送信します。  

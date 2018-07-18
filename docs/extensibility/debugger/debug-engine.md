@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102929"
 ---
 # <a name="debug-engine"></a>デバッグ エンジン
 デバッグ エンジン (DE) は、実行の制御やブレークポイントなどの式の評価などのデバッグ サービスを提供する、インタープリターまたはオペレーティング システムで動作します。 デはデバッグ中のプログラムの状態を監視します。 これを実現するには、DE は、CPU とは Api からは、ランタイムによって提供されるかどうかは、任意のメソッドはランタイムではサポートされている、使用を使用します。  

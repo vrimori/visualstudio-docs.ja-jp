@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31100531"
 ---
 # <a name="enabling-a-program-to-be-debugged"></a>デバッグするプログラムを有効にします。
 デバッグ エンジン (DE) は、プログラムをデバッグできます、前にするには、DE を起動か、既存のプログラムにアタッチします。  

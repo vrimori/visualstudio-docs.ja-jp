@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31101795"
 ---
 # <a name="adding-visual-studio-commands-to-a-start-page"></a>Visual Studio のコマンドをスタート ページに追加します。
 カスタム スタート ページを作成するときに Visual Studio のコマンドを追加できます。 このドキュメントでは、Visual Studio のコマンドを [スタート] ページの XAML オブジェクトにバインドするさまざまな方法について説明します。  

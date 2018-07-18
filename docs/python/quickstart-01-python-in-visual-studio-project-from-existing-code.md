@@ -16,6 +16,7 @@ ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958530"
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>クイックスタート: 既存のコードから Python プロジェクトを作成する
 

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474328"
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>C# の場合、Visual Studio デバッガーでの書式指定子
 書式指定子を使用して、 **ウォッチ** ウィンドウに表示される値の書式設定を変更することができます。 書式指定子を使用することも、**イミディ エイト** ウィンドウで、**コマンド**ウィンドウで、[トレース ポイント](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)、ソース ウィンドウ内でもです。 これらのウィンドウで式の上にカーソルを合わせると、結果が [データヒント] に表示されます。 [データヒント] には、[データヒント] 表示の書式指定子が反映されます。  

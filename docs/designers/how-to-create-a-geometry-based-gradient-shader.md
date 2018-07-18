@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ab2aeea5cf70b3c9a70b9f8e80961825bfff179a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 056eae05911af2a9ae6be12f2d3d7b18106df9b1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745777"
 ---
 # <a name="how-to-create-a-geometry-based-gradient-shader"></a>方法: ジオメトリベースのグラデーション シェーダーを作成する
 
@@ -49,13 +50,13 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 > この図では、シェーダーの効果をわかりやすく示すためにオレンジ色が指定されていますが、ワールド空間にプレビュー図形の位置がないため、シェーダー デザイナーでシェーダーを完全にプレビューすることができません。 完全な効果を確認するには、シェーダーを実際のシーンでプレビューする必要があります。
 
- ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-gradient-effect-graph.png "Digit-Gradient-Effect-Graph")
+ ![シェーダー グラフとその効果のプレビュー](../designers/media/digit-gradient-effect-graph.png)
 
  シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「**シェーダーのプレビュー**」を参照してください。
 
  次の図は、このドキュメントで説明したシェーダーを「[方法: 3D 地形をモデル化する](../designers/how-to-model-3-d-terrain.md)」に示した 3D シーンに適用したものです。 ここでは、色の輝度とワールド空間のポイントの高さが共に増加しています。
 
- ![3&#45;D 地形モデルに適用されたグラデーション効果](../designers/media/digit-gradient-effect-result.png "Digit-Gradient-Effect-Result")
+ ![3&#45;D 地形モデルに適用されたグラデーション効果](../designers/media/digit-gradient-effect-result.png)
 
  3D モデルにシェーダーを適用する方法の詳細については、「[方法: シェーダーを 3D モデルに適用する](../designers/how-to-apply-a-shader-to-a-3-d-model.md)」を参照してください。
 

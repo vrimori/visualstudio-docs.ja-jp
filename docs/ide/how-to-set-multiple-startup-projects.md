@@ -1,9 +1,8 @@
 ---
-title: '方法 : 複数のスタートアップ プロジェクトを設定する | Microsoft Docs'
-ms.custom: ''
+title: '方法 : 複数のスタートアップ プロジェクトを設定する'
 ms.date: 06/21/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - startup projects, setting multiple startup projects
@@ -13,22 +12,24 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 322b82e37851ef78c97664df9c33db9194d9db90
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9cc601f871d3f33ca408c24cd4ed070d2e5e77b8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31942742"
 ---
 # <a name="how-to-set-multiple-startup-projects"></a>方法 : 複数のスタートアップ プロジェクトを設定する
-Visual Studio では、デバッガーの起動時に複数のプロジェクトをどのように実行するかを指定できます。  
 
-## <a name="to-set-multiple-startup-projects"></a>複数のスタートアップ プロジェクトを設定するには  
+Visual Studio では、デバッガーの起動時に複数のプロジェクトをどのように実行するかを指定できます。
 
-1.  **ソリューション エクスプローラー**で、ソリューション (最上位ノード) を選びます。  
+## <a name="to-set-multiple-startup-projects"></a>複数のスタートアップ プロジェクトを設定するには
 
-2.  ソリューション ノードのコンテキスト (右クリック) メニューを選択し、**[プロパティ]** を選択します。 **[ソリューション プロパティ ページ]** ダイアログ ボックスが表示されます。  
+1.  **ソリューション エクスプローラー**で、ソリューション (最上位ノード) を選びます。
 
-3.  **[共通プロパティ]** ノードを展開し、**[スタートアップ プロジェクト]** を選択します。  
+2.  ソリューション ノードのコンテキスト (右クリック) メニューを選択し、**[プロパティ]** を選択します。 **[ソリューション プロパティ ページ]** ダイアログ ボックスが表示されます。
+
+3.  **[共通プロパティ]** ノードを展開し、**[スタートアップ プロジェクト]** を選択します。
 
 4.  **[マルチ スタートアップ プロジェクト]** オプションを選択し、適切なアクションを設定します。
 

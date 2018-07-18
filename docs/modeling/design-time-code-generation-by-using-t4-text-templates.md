@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954093"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 データに応じて生成されるコードが異なるようにするテンプレートを記述する通常、*モデル*です。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。

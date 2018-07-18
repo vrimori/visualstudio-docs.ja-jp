@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での Web パフォーマンス テストのカスタム検証規則のコーディング | Microsoft Docs
+title: Visual Studio での Web パフォーマンス テストのカスタム検証規則のコーディング
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,14 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0c2e3eb6d9b0411a078c5d7531105230dfc82457
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c95e461f99a78a3241a091f7b590137e4dbc7066
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31971398"
 ---
 # <a name="coding-a-custom-validation-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム検証規則のコーディング
 
@@ -59,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 次のコードは、カスタム検証規則の実装を示しています。 この検証規則は、定義済みの [必要なタグ] 検証規則の動作を模しています。 この例を、独自のカスタム検証規則のひな形として使用してください。
 
 > [!WARNING]
->  カスタム検証用のコード内のパブリック プロパティは、null 値にすることはできません。
+> カスタム検証用のコード内のパブリック プロパティは、null 値にすることはできません。
 
 ```csharp
 using System;

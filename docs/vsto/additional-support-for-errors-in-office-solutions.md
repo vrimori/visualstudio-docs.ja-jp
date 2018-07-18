@@ -64,6 +64,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34267833"
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションのエラーについての追加サポート
   次のリソースを使用すると、Visual Studio で Office ソリューションを作成する際に発生する問題に対する回答を検索できます。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109806"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>式の評価 (Visual Studio SDK のデバッグ)
 IDE は、中断モード中に、プログラムのいくつかの変数を含む単純な式を評価できる必要があります。 これを実現するには、デバッグ エンジン (DE) できる必要がありますを解析し、IDE のウィンドウの 1 つに入力した式を評価します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263278"
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>エラー メッセージ (Visual Studio での Office 開発)
   エラー メッセージの各トピックでは、考えられるエラーの原因と、問題解決のために考えられる解決方法または代替手段を示します。  

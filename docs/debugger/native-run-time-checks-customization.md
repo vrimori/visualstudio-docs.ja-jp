@@ -29,9 +29,10 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480903"
 ---
 # <a name="native-run-time-checks-customization"></a>ネイティブ ランタイム チェックのカスタマイズ
-コンパイルするときに**/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
+コンパイルするときに **/RTC** (実行時チェック) を使用して、または、`runtime_checks`プラグマ、C ランタイム ライブラリはネイティブ ランタイム チェックを提供します。 ランタイム チェックのカスタマイズが必要になる場合があります。次に例を示します。  
   
 -   ランタイム チェック メッセージを既定とは異なるファイルや出力先に転送する。  
   

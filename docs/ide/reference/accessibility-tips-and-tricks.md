@@ -13,11 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ebcf8adb89a2e152f1f4dd1cd0e324d1b25a782
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7cff1eb98dd76f8b594193b2e768987b4e2a441d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747457"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 
@@ -34,13 +35,13 @@ Visual Studio には、スクリーン リーダーやその他の支援テク�
 
 一部の人たちには、見えにくい色があります。 コードを書くときにコントラストを強くしたいが一般的な "ハイ コントラスト" テーマは使用したくないという場合は、"青 (エクストラ コントラスト)" テーマをお勧めします。
 
-  ![青のテーマと青 (エクストラ コントラスト) テーマの比較](media/blue-extra-contrast-theme.png "青のテーマと青 (エクストラ コントラスト) テーマの違いを確認してください")
+  ![青のテーマと青のエクストラ コントラスト テーマの比較](media/blue-extra-contrast-theme.png)
 
 ## <a name="use-annotations-to-reveal-useful-information-about-your-code"></a>注釈を使用してコードに関する有用な情報を表示する
 
 Visual Studio エディターには多くのテキスト "表示要素" が含まれています。これにより、電球、エラーおよび警告の "波線" 、ブックマークなど、コード行の特定のポイントで、特性や機能について知ることができます。 “行注釈の表示” コマンド セットを使用すると、これらの表示要素の検出およびこれらの表示要素間の移動が簡単になります。
 
-  ![“行注釈の表示” コマンド セットを使用する](media/show-line-annotations-command-set.png "“行注釈の表示” コマンド セットの設定方法を表示する")
+  ![行注釈の表示コマンド セットを使用する](media/show-line-annotations-command-set.png)
 
 ## <a name="access-toolbars-by-using-shortcut-key-combinations"></a>ショートカット キーの組み合わせを使用してツールバーにアクセスする
 
@@ -82,18 +83,18 @@ Windows のサウンド アプレットを使用して、Visual Studio プログ
 
 1. Windows 10 を実行しているコンピューター上の**検索**ボックスに「**システムが出す音の変更**」と入力します。
 
-  ![Windows 10 の検索ボックス](media/type-here-to-search.png "Windows 10 を実行しているコンピューターの検索ボックスに「サウンド」と入力する")
+  ![Windows 10 の検索ボックス](media/type-here-to-search.png)
 
   (あるいは、Cortana が有効になっている場合は、「コルタナさん」と言ってから、「システムが出す音の変更」と言います。)
 
 2. **[システムが出す音の変更]** をダブルクリックします。
 
-  ![Windows 10 での検索結果](media/change-system-sounds.png "検索結果の [システムが出す音の変更] をダブルクリックする")
+  ![Windows 10 の検索結果](media/change-system-sounds.png)
 
 3. **[サウンド]** ダイアログ ボックスで、**[サウンド]** タブをクリックします。 <br><br>
  次に、**[プログラム イベント]** で、**[Microsoft Visual Studio]** にスクロールし、選択したイベントに適用するサウンドを選択します。
 
-  ![Windows 10 のサウンド アプレットの [サウンド] タブ](media/sound-applet.png "検索結果の [システムが出す音の変更] をダブルクリックする")
+  ![Windows 10 の [サウンド] アプレットの [サウンド] タブ](media/sound-applet.png)
 
 4. **[OK]** をクリックします。
 

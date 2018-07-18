@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447818"
 ---
 # <a name="how-to-change-fonts-and-colors-in-the-editor"></a>方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する
 コード エディターでは、さまざまなテキスト**表示項目**の既定のフォント フェイスを変更し、フォント サイズを調整し、前景色と背景色を変更することができます。 フォントの設定を変更するときは、次の情報に注意してください。

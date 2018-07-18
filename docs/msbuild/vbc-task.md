@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578849"
 ---
 # <a name="vbc-task"></a>Vbc タスク
 実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll)、またはコード モジュール (.netmodule) を生成する vbc.exe をラップします。 vbc.exe の詳細については、「[Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)」を参照してください。  

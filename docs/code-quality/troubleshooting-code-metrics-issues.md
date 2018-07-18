@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920590"
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>コード メトリックに関する問題のトラブルシューティング
 コード メトリックを収集するときに、次に示す問題が発生する場合があります。

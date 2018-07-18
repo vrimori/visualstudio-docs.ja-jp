@@ -5,15 +5,16 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: 54f178a35d95819b13b1d477c3415fd02b8298f5
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 31459717e9a2c001a9ae4f0efef5ebb0930af1c8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34693693"
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
-Visual Studio for Mac は、モバイル、デスクトップ、および Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の開発をサポートしています。
+Visual Studio for Mac は、モバイル、デスクトップ、および Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の種類の開発がサポートされています。
 
 * モバイルと .NET: Android、iOS、tvOS、watchOS
 * Mac デスクトップ アプリ
@@ -21,7 +22,7 @@ Visual Studio for Mac は、モバイル、デスクトップ、および Web �
 * ASP.NET Core Web アプリケーション
 * クロスプラットフォーム Unity ゲーム
 
-リッチ エディター、デバッグ、iOS、Mac、および Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
+リッチ エディター、デバッグ、iOS、Mac、Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
 
 この記事では、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能の一部を紹介します。
 

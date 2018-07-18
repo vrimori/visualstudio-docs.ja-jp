@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135785"
 ---
 # <a name="handling-specialized-deployment"></a>特殊化の展開の処理
 展開は、プロジェクトの省略可能な操作です。 Web プロジェクトは、たとえば、Web サーバーを更新するプロジェクトへの展開をサポートします。 同様に、**スマート デバイス**プロジェクトのターゲット デバイスにビルドされたアプリケーションをコピーする展開をサポートしています。 プロジェクトのサブタイプは、実装することによって特殊な展開の動作を指定できます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイスです。 このインターフェイスは、展開操作の完全なセットを定義します。  

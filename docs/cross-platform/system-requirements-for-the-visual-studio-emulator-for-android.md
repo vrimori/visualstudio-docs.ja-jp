@@ -15,6 +15,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31068662"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして動作します。Hyper-V は Windows 8 以降のバージョンの仮想化テクノロジです。 エミュレーターを実行するには、このトピックで説明する Hyper-V の要件をコンピューターが満たしている必要があります。  

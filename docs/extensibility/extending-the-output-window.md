@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131037"
 ---
 # <a name="extending-the-output-window"></a>出力ウィンドウを拡張します。
 **出力**ウィンドウは、読み取り/書き込みテキスト ペインのセット。 Visual Studio はこれらの組み込みペイン:**ビルド**、プロジェクトのビルドに関するメッセージを通信し、**全般**を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]IDE に関するメッセージを伝えます。 プロジェクトへの参照を取得する、**ビルド**ペインを使用して自動的に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>インターフェイスのメソッド、および Visual Studio に直接アクセスするには、**全般**でウィンドウを<xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane>サービス。 組み込みのペインでは、だけでなくを作成して管理する独自のカスタム ペインです。  

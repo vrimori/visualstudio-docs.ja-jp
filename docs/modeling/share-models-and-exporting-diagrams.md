@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948302"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>モデルおよびエクスポート ダイアグラムの共有
 Visual Studio では、いくつかの方法でモデルと図を同僚と共有できます。

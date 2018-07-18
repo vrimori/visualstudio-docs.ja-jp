@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478721"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
   
@@ -83,7 +84,7 @@ if (console && console.log) {
 ```  
   
 ## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript コンソール ウィンドウを使ったオブジェクトの検査  
- JavaScript コンソール ウィンドウを使用すると、スコープ内のオブジェクトと対話できます。 コンソール ウィンドウでスコープ外のオブジェクトを検査するには、コードから `console.log` 、 `console.dir`、または他のコマンドを使用します。 または、コードでブレークポイントを設定 (**[ブレークポイント]** > **Insert [ブレークポイント]**の順にクリック) すると、コンソール ウィンドウからスコープ内のオブジェクトと対話できます。  
+ JavaScript コンソール ウィンドウを使用すると、スコープ内のオブジェクトと対話できます。 コンソール ウィンドウでスコープ外のオブジェクトを検査するには、コードから `console.log` 、 `console.dir`、または他のコマンドを使用します。 または、コードでブレークポイントを設定 (**[ブレークポイント]** > **Insert [ブレークポイント]** の順にクリック) すると、コンソール ウィンドウからスコープ内のオブジェクトと対話できます。  
   
 ##  <a name="ConsoleLog"></a> Console.log 出力の書式設定  
  複数の引数を `console.log`に渡すと、コンソールはその引数を配列として処理し、出力を連結します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31977203"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>チュートリアル: カスタム テキスト テンプレート ホストを作成します。
 

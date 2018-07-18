@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475419"
 ---
 # <a name="symbol-load-information-dialog-box"></a>[シンボルの読み込み情報] ダイアログ ボックス
 **シンボルの読み込み情報**を右クリックしてダイアログ ボックスが開きます、**モジュール**ウィンドウを選択して**シンボルの読み込み情報**です。  

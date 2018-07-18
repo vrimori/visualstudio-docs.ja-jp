@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31125904"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>参照 (Visual Studio のデバッグ Api)
 Visual Studio Debugging SDK の参照は、実行時のアーキテクチャと、デバッガーとそのコンポーネントの機能の基本的なモデルを示しています。 ドキュメントは、記述されているインターフェイスを定義する動作とは別のコンポーネントとインターフェイスについてできるだけ少ない想定です。  

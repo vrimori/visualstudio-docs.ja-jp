@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129053"
 ---
 # <a name="document-windows"></a>ドキュメント ウィンドウ
 Visual Studio で、*ドキュメント ウィンドウ*マルチ ドキュメント インターフェイス (MDI) ウィンドウに関連付けられているフレームを使用した子ウィンドウします。 ドキュメント ウィンドウは、通常、ディスプレイとソース コードまたはテキストの変更の使用が、他の機能の種類をホストすることもできます。 ドキュメント ウィンドウ:  

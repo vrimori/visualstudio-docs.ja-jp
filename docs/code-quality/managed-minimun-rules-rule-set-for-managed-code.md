@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919053"
 ---
 # <a name="managed-minimum-rules-rule-set-for-managed-code"></a>マネージ最小規則に対して規則セット マネージ コード
 マネージ最小規則は、潜在的なセキュリティ ホール、アプリケーションのクラッシュ、その他の重要な論理エラーやデザイン エラーなど、コードで最も重要な問題に注目します。 プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。

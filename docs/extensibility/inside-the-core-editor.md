@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130438"
 ---
 # <a name="inside-the-core-editor"></a>コア エディター内
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターには、一連のいくつかのコンポーネントを変更し、テキストの情報を照会できます。 レガシ API を使用して、コア エディターをカスタマイズした場合は、エディター アダプター経由でルーティングされますが、これらのカスタマイズを使用する続行することがあります。 お勧め、ただし、API の新しいエディターに、カスタマイズを調整することです。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145972"
 ---
 # <a name="workspaces"></a>ワークスペース
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 
 ワークスペースが、<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager>をワークスペースに簡易かつ強力な制御サービス。 設定の基本的な概要については、次を参照してください。[ビルドをカスタマイズし、タスクをデバッグ](../ide/customize-build-and-debug-tasks-in-visual-studio.md)です。
 
-ほとんどの設定を`SettingsType`型は_.json_など_VSWorkspaceSettings.json_と_tasks.vs.json_です。
+ほとんどの設定を`SettingsType`型は _.json_など_VSWorkspaceSettings.json_と_tasks.vs.json_です。
 
 ワークスペースの設定の電源を「スコープ」は、ワークスペース内のパスだけでは、中心にします。 コンシューマーを呼び出すと<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettingsManager.GetAggregatedSettings%2A>、要求されたパスと設定の種類を含むすべてのスコープは集計します。 スコープの集計の優先度は次のとおりです。
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/16/2018
 1. すべてさらに、ワークスペースのルートを含むディレクトリの親です。
 1. ユーザーのディレクトリには、「グローバル設定」。
 
-結果のインスタンスである<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings>です。 このオブジェクトが特定の種類の設定を保持し、として格納されているキー名を設定するために問い合わせることができます`string`です。 <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>メソッドと<xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions>拡張メソッドが要求する呼び出し元が要求されている設定値の型を認識します。 ほとんどの設定ファイルとして永続化と_.json_ファイル、多くの呼び出しが使用`string`、 `bool`、 `int`、およびそれらの型の配列。 オブジェクトの種類もサポートします。 使用できるような場合、`IWorkspaceSettings`自体の型引数として。 例えば:
+結果のインスタンスである<xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings>です。 このオブジェクトが特定の種類の設定を保持し、として格納されているキー名を設定するために問い合わせることができます`string`です。 <xref:Microsoft.VisualStudio.Workspace.Settings.IWorkspaceSettings.GetProperty%2A>メソッドと<xref:Microsoft.VisualStudio.Workspace.Settings.WorkspaceSettingsExtensions>拡張メソッドが要求する呼び出し元が要求されている設定値の型を認識します。 ほとんどの設定ファイルとして永続化と _.json_ファイル、多くの呼び出しが使用`string`、 `bool`、 `int`、およびそれらの型の配列。 オブジェクトの種類もサポートします。 使用できるような場合、`IWorkspaceSettings`自体の型引数として。 例えば:
 
 ```json
 {
@@ -178,7 +179,7 @@ UI コンテキストは、パッケージの自動読み込みを使用でき�
 
 ### <a name="the-sourceexplorerpackage-package-did-not-load-correctly"></a>SourceExplorerPackage パッケージは正しく読み込まれませんでした。
 
-ワークスペースの機能拡張は頻度の高い MEF に基づいており、コンポジション エラーが発生する、パッケージの読み込み失敗を開いているフォルダーをホストします。 たとえば、拡張機能を持つ型をエクスポートする`ExportFileContextProviderAttribute`、型が実装のみが、 `IWorkspaceProviderFactory<IFileContextActionProvider>`、Visual Studio でのフォルダーを開こうとしたときにエラーが発生します。 エラーの詳細は含まれて_%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_です。 拡張機能によって実装されている種類のエラーを解決します。
+ワークスペースの機能拡張は頻度の高い MEF に基づいており、コンポジション エラーが発生する、パッケージの読み込み失敗を開いているフォルダーをホストします。 たとえば、拡張機能を持つ型をエクスポートする`ExportFileContextProviderAttribute`、型が実装のみが、 `IWorkspaceProviderFactory<IFileContextActionProvider>`、Visual Studio でのフォルダーを開こうとしたときにエラーが発生します。 エラーの詳細は含まれて _%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_id\ComponentModelCache\Microsoft.VisualStudio.Default.err_です。 拡張機能によって実装されている種類のエラーを解決します。
 
 ## <a name="next-steps"></a>次の手順
 

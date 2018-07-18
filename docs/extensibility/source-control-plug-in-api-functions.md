@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144370"
 ---
 # <a name="source-control-plug-in-api-functions"></a>ソース管理プラグイン API 関数
 ソース コントロールのプラグイン API は、次の関数は、ソース管理プラグインに従ってこの API によって実装する必要がありますを提供します。 ビット フラグに関連付けられている各関数とセマンティクスのシグネチャとその他のパラメーターは、このリファレンスで詳しく説明します。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="requirements"></a>要件  
  ヘッダー: scc.h  
   
- (環境 SDK で提供される共通のフォルダーに含まれて、既定では*[ドライブ]*\Program Files\VSIP 8.0\EnvSDK\common\inc; MSSCCI サンプルを使用して、VSIP フォルダーの中でも提供*[ドライブ]*\ProgramFiles\VSIP 8.0\MSSCCI)。  
+ (環境 SDK で提供される共通のフォルダーに含まれて、既定では *[ドライブ]* \Program Files\VSIP 8.0\EnvSDK\common\inc; MSSCCI サンプルを使用して、VSIP フォルダーの中でも提供 *[ドライブ]* \ProgramFiles\VSIP 8.0\MSSCCI)。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   

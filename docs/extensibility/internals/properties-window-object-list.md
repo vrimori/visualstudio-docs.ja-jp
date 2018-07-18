@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130137"
 ---
 # <a name="properties-window-object-list"></a>プロパティ ウィンドウ オブジェクトの一覧
 オブジェクトの一覧で、**プロパティ**ウィンドウがドロップダウン リストを 1 つまたは複数の選択したウィンドウ内で使用できる他のオブジェクトへの選択を変更することができます。 呼び出しをトリガー内でのこの一覧から別のオブジェクトを選択すると<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A>に新しいオブジェクトが選択されている環境を通知します。 表示される情報、**プロパティ**ウィンドウは、新しく選択したオブジェクトに関連付けられたプロパティを表示する変更です。  

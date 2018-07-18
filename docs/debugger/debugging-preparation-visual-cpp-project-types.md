@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478188"
 ---
 # <a name="debugging-preparation-visual-c-project-types"></a>デバッグの準備 : Visual C++ のプロジェクト
 ここでは、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクト テンプレートで作成された基本的なプロジェクトの種類をデバッグする方法について説明します。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/18/2018
   
 |プロパティ名|設定|  
 |-------------------|-------------|  
-|**デバッグ情報を生成します。**|常にこのオプションに設定する必要があります**はい (/debug)**デバッグ シンボルとデバッグに必要なファイルを作成します。 アプリケーションを稼働するときは、このオプションをオフに設定できます。|  
+|**デバッグ情報を生成します。**|常にこのオプションに設定する必要があります**はい (/debug)** デバッグ シンボルとデバッグに必要なファイルを作成します。 アプリケーションを稼働するときは、このオプションをオフに設定できます。|  
   
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
@@ -82,22 +83,22 @@ ms.lasthandoff: 04/18/2018
   
 3.  選択**全般**の値を設定し、**出力**行を**デバッグ**です。  
   
-4.  開く、 **C/C++**ノード、および選択**全般**です。  
+4.  開く、 **C/C++** ノード、および選択**全般**です。  
   
-     **デバッグ**デバッグ コンパイラによって生成される情報の種類を指定する行。 選択した可能性があります値を含める**プログラム データベース (/Zi)**または**編集と続行 (/ZI) 用のプログラム データベース**です。  
+     **デバッグ**デバッグ コンパイラによって生成される情報の種類を指定する行。 選択した可能性があります値を含める**プログラム データベース (/Zi)** または**編集と続行 (/ZI) 用のプログラム データベース**です。  
   
-5.  選択**最適化**、し、、**最適化**行で、**無効 (/0 d)**ドロップダウン リストからです。  
+5.  選択**最適化**、し、、**最適化**行で、**無効 (/0 d)** ドロップダウン リストからです。  
   
      最適化されたコードは、生成された命令がソース コードと直接対応していないため、デバッグが困難です。 プログラムで、最適化されたコード内だけに現れるバグが見つかった場合は、この設定を有効にできます。[逆アセンブル] ウィンドウに表示されるコードは最適化されたソースから生成されているため、ソース ウィンドウに表示されるコードとは一致しない可能性があります。 ステップ実行などの機能で、ブレークポイントや実行ポイントが正しく表示されない場合があります。  
   
-6.  開く、**リンカー**ノード、および選択**デバッグ**です。 最初の**生成**行で、 **はい (/debug)**ドロップダウン リストからです。 デバッグ時には、必ずこのオプションを設定する必要があります。  
+6.  開く、**リンカー**ノード、および選択**デバッグ**です。 最初の**生成**行で、 **はい (/debug)** ドロップダウン リストからです。 デバッグ時には、必ずこのオプションを設定する必要があります。  
   
  詳細については、次を参照してください。[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)です。  
   
  [このトピックの内容](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Windows_Forms_Applications___NET_"></a> Windows フォーム アプリケーション (.NET)  
- **Windows フォーム アプリケーション (.NET)**テンプレートを作成、 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションです。 詳細については、「 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)」を参照してください。  
+ **Windows フォーム アプリケーション (.NET)** テンプレートを作成、 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] Windows フォーム アプリケーションです。 詳細については、「 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)」を参照してください。  
   
  この種のアプリケーションを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でデバッグする作業は、マネージ Windows フォーム アプリケーションのデバッグ作業に似ています。  
   

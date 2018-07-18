@@ -26,6 +26,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31564507"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置の固有のエラーのトラブルシューティング
 このトピックの一覧を展開するときに発生する可能性がある次の一般的なエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、各問題を解決する手順を示します。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/19/2018
 -   ネットワーク接続の問題があるかどうかを参照してください。ダウンロード中に、クライアント コンピューターがオフラインになった場合、このメッセージが表示されることができます。  
   
 #### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>.Config ファイルを持つ ClickOnce アプリケーションをインストールしようとすると、エラーをダウンロードします。  
- 既定では、Visual Basic の Windows ベースのアプリケーションには、App.config ファイルが含まれています。 問題があるユーザーはそのオペレーティング システムがセキュリティ上の理由の .config ファイルのインストールをブロックしているために、Windows Server 2003 を使用する Web サーバーからインストールしようとしています。 インストールする、.config ファイルを有効にする をクリックして**".deploy"ファイル拡張子を使用して**で、**発行オプション** ダイアログ ボックス。  
+ 既定では、Visual Basic の Windows ベースのアプリケーションには、App.config ファイルが含まれています。 問題があるユーザーはそのオペレーティング システムがセキュリティ上の理由の .config ファイルのインストールをブロックしているために、Windows Server 2003 を使用する Web サーバーからインストールしようとしています。 インストールする、.config ファイルを有効にする をクリックして **".deploy"ファイル拡張子を使用して**で、**発行オプション** ダイアログ ボックス。  
   
  設定することも必要がありますコンテンツ タイプ (MIME の種類とも呼ばれます) は、適切に .application、マニフェスト、および .deploy のファイルです。 詳細については、Web サーバーのマニュアルを参照してください。  
   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108561"
 ---
 # <a name="context-menus"></a>コンテキスト メニュー
 コンテキスト メニューは、ユーザーがクライアント領域のアクティブな領域で右クリックしたときに表示し、マウスの右ボタンが離されたときにクリアします。  

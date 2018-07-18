@@ -27,11 +27,12 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476976"
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio での文字列のビジュアライザーで文字列を表示します。
 デバッグしている間がデータ ヒントまたはデバッガー ウィンドウに表示するのには長すぎる文字列を表示する文字列のビジュアライザーを開くことができます。 多くのシナリオでビジュアライザーに役立つことが正しくない形式の文字列を識別します。
 
-標準的な組み込みの文字列のビジュアライザーには、プレーン テキスト、XML、HTML、および JSON が含まれます。 デバッガーで表示されている WPF オブジェクトなどの他のいくつかの種類の windows と同様に、 **[自動変数]**ウィンドウで、ビジュアライザーを開くこともできます。
+標準的な組み込みの文字列のビジュアライザーには、プレーン テキスト、XML、HTML、および JSON が含まれます。 デバッガーで表示されている WPF オブジェクトなどの他のいくつかの種類の windows と同様に、 **[自動変数]** ウィンドウで、ビジュアライザーを開くこともできます。
 
 ## <a name="open-a-string-visualizer"></a>文字列ビジュアライザーを開く
 

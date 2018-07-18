@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127935"
 ---
 # <a name="authoring-a-windows-installer-package"></a>Windows インストーラー パッケージの作成
 データ ドライブの Windows インストーラーのモデル。 ファイルをコピーし、レジストリ エントリを記述する手順のスクリプトを記述するのではなくなどを作成するファイルとレジストリ データを含むデータベース テーブルの行と列。  

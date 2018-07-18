@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480086"
 ---
 # <a name="how-to-refresh-the-view"></a>方法: ビューを更新する
 Spy++ はシステム テーブルの「スナップショット」を取得し、この情報に基づいてビューを更新します。 システム ビューを定期的に更新することが重要です。 ある場合は、spy++ ビューを開くし、ビューは更新されませんが表示されない、プロセス、スレッド、および後に作成される windows。 また、存在しなくなった項目を表示することがあります。 **更新**コマンドは、メッセージ ビューを除くすべてのビューを使用します。  

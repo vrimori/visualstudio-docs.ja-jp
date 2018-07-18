@@ -23,12 +23,13 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481516"
 ---
 # <a name="debugging-and-the-hosting-process"></a>プロセスのデバッグとホスト
 Visual Studio のホスト プロセスでは、デバッガーのパフォーマンスを向上させ、部分信頼のデバッグやデザイン時の式の評価など、新しいデバッガー機能が使用できるようになりました。 必要に応じてホスト プロセスを無効にすることもできます。 詳細については、「 [How to: Disable the Hosting Process](../ide/how-to-disable-the-hosting-process.md)」を参照してください。 次のセクションでは、ホスト プロセスがある場合とない場合のデバッグの違いについて説明します。  
   
 ## <a name="partial-trust-debugging-and-click-once-security"></a>部分信頼のデバッグと ClickOnce のセキュリティ  
- 部分信頼のデバッグにはホスト プロセスが必要です。 ホスト プロセスを無効にすると、 **[プロジェクトのプロパティ]** の **[セキュリティ]**ページで部分信頼が有効になっている場合でも、部分信頼のデバッグは機能しません。 詳細については、次のトピックを参照してください。 [How to: Disable the Hosting Process](../ide/how-to-disable-the-hosting-process.md) および [How to: Debug a Partial Trust Application](../debugger/how-to-debug-a-partial-trust-application.md).  
+ 部分信頼のデバッグにはホスト プロセスが必要です。 ホスト プロセスを無効にすると、 **[プロジェクトのプロパティ]** の **[セキュリティ]** ページで部分信頼が有効になっている場合でも、部分信頼のデバッグは機能しません。 詳細については、次のトピックを参照してください。 [How to: Disable the Hosting Process](../ide/how-to-disable-the-hosting-process.md) および [How to: Debug a Partial Trust Application](../debugger/how-to-debug-a-partial-trust-application.md).  
   
 ## <a name="design-time-expression-evaluation"></a>デザイン時の式評価  
  デザイン時の式では、常にホスト プロセスが使用されます。 **[プロジェクトのプロパティ]** でホスト プロセスを無効にすると、クラス ライブラリ プロジェクトでデザイン時の式の評価も無効になります。 他のプロジェクトの種類では、デザイン時の式の評価は無効になりません。 代わりに、Visual Studio で実際の実行可能ファイルが起動され、ホスト プロセスを使用せずにデザイン時の評価に使用されます。 この違いがあるため、結果も異なる可能性があります。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31569931"
 ---
 # <a name="msbuild-tasks"></a>MSBuild タスク
 ビルド プラットフォームでは、ビルドの処理中に、いくつかのアクションを実行する権限が必要です。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は*タスク*を使用して、これらのアクションを実行します。 タスクとは、分割不可能なビルド操作を実行するために [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で使用される実行可能コードの単位です。  

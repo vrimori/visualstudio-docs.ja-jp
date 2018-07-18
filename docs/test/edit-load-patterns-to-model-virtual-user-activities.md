@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テストのロード パターン | Microsoft Docs
+title: Visual Studio でのロード テストのロード パターン
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,14 @@ ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7a6d9054bb12290d29247c09263a3854f2ea0dad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e317c51963b930bdd58553f6620c23aae783ba11
+ms.sourcegitcommit: 893c09d58562c378a4ba057bf2a06bde1c80df90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "35669107"
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>ロード パターンを編集して仮想ユーザー アクティビティをモデル化する
 
@@ -43,7 +45,8 @@ ms.lasthandoff: 04/16/2018
  たとえば、**[初期のユーザー カウント]** に 1、**[最大ユーザー カウント]** に 100、**[ステップ継続時間 (秒)]** に 10、**[ユーザー カウントのステップ]** に 1 を設定したステップ ロードの場合、1 で開始し、100 ユーザーになるまで、10 秒ごとに 1 増えるユーザー ロード パターンが作成されます。
 
 > [!NOTE]
->  合計テスト期間が、最大ユーザー ロードまで増大するために必要な時間よりも短い場合、テストは経過期間の後で停止し、[最大ユーザー カウント] のターゲットまでは達しません。
+> 合計テスト期間が、最大ユーザー ロードまで増大するために必要な時間よりも短い場合、テストは経過期間の後で停止し、[最大ユーザー カウント] のターゲットまでは達しません。
+
 
  ステップの目標を使用すると、サーバーのパフォーマンスが急激に低下する点までロードを増やすことができます。 ロードを増やし続けると、いずれはサーバーがリソース不足の状態になります。 ステップ ロードは、この現象が発生するユーザー数を決定するために適した方法です。 ステップ ロードの場合、エージェントで目的のロードを生成できることを確認するために、エージェント リソースを注意深く監視する必要もあります。
 
@@ -107,7 +110,7 @@ ms.lasthandoff: 04/16/2018
 
 |[タスク]|関連するトピック|
 |-----------|-----------------------|
-|**ロード テストの初期ロード パターンを指定する:** 新しいロード テスト ウィザードを使用してロード テストを作成するときに、ロード パターンを選択します。|-   [ロード パターンの変更](../test/edit-load-patterns-to-model-virtual-user-activities.md#EditingLoadPatternsChanging)|
+|**ロード テストの初期ロード パターンを指定する:** 新しいロード テスト ウィザードを使用してロード テストを作成するときに、ロード パターンを選択します。|-   [ロード パターンの変更](../test/edit-load-patterns-to-model-virtual-user-activities.md#changing-the-load-pattern)|
 |**ロード テストのロード パターンを編集する:** ロード テスト ウィザードでロード テストを作成した後で、ロード テスト エディターを使用してロード パターンを編集できます。|-   [方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
 |**ロード テスト シナリオの仮想ユーザーに Web キャッシュ データを含めるかどうかを指定する:** **"新しいユーザーのパーセンテージ"** プロパティを変更できます。このプロパティの変更によって、仮想ユーザーの Web ブラウザーで実行される Web キャッシュをロード テストでシミュレートする方法が影響を受けます。|-   [方法: Web キャッシュ データを使用する仮想ユーザーの割合を指定する](../test/how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md)|
 |**ステップ ロード パターンのステップごとの傾斜増加時間を指定する:** **"ステップごとの傾斜増加時間"** プロパティを使用すると、1 つのステップから次の手順 (100 人から 200 人への増加など) へ突然増加するのではなく、徐々に増加することができます。|-   [方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する](../test/how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md)|
@@ -117,12 +120,14 @@ ms.lasthandoff: 04/16/2018
  最初に、**新しいロード テスト ウィザード**を使用してロード テストを作成した後で、**ロード テスト エディター**を使用し、シナリオに関連付けられたロード パターン プロパティをテストの目標にあったレベルに変更します。
 
 > [!NOTE]
->  ロード テスト シナリオの各プロパティとその説明の一覧については、「[Load Test Scenario Properties](../test/load-test-scenario-properties.md)」(ロード テスト シナリオのプロパティ) を参照してください。
+> ロード テスト シナリオの各プロパティとその説明の一覧については、「[Load Test Scenario Properties](../test/load-test-scenario-properties.md)」(ロード テスト シナリオのプロパティ) を参照してください。
+
 
  ロード パターンは、ロード テスト中にアクティブである仮想ユーザーの数、および新しいユーザーが追加される割合を指定します。 ステップ パターン、持続、およびゴール志向という使用可能な 3 つのパターンから選択できます。 詳細については、「[ロード テスト シナリオでロード パターンを使用して仮想ユーザーの数を指定する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
 > [!NOTE]
->  また、ロード テスト プラグインを使用すると、ロード プロパティをプログラムによって変更できます。 ロード テストを作成する方法の詳細については、「[方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
+> また、ロード テスト プラグインを使用すると、ロード プロパティをプログラムによって変更できます。 ロード テストを作成する方法の詳細については、「[方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
+
 
 ### <a name="to-change-the-load-pattern"></a>ロード パターンを変更するには
 

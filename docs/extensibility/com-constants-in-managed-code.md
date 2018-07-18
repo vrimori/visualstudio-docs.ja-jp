@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31101889"
 ---
 # <a name="com-constants-in-managed-code"></a>マネージ コードで COM 定数
 Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネージ コード。 これらの定数は、参照用に以下に示します。  

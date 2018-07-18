@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141904"
 ---
 # <a name="subscribing-to-an-event"></a>イベントのサブスクライブ
 このチュートリアルでは、実行中のドキュメント テーブル (RDT) 内のイベントに応答するツール ウィンドウを作成する方法について説明します。 ツール ウィンドウを実装するユーザー コントロールをホストする<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>です。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A>メソッドは、イベントに、インターフェイスを接続します。  

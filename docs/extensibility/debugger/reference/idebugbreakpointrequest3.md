@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109702"
 ---
 # <a name="idebugbreakpointrequest3"></a>IDebugBreakpointRequest3
 このインターフェイスは、作成し、任意の種類のブレークポイントをバインドするための情報を表します。 拡張では[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)です。  

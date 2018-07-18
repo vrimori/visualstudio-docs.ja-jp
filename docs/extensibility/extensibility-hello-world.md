@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134809"
 ---
 # <a name="creating-your-first-extension-hello-world"></a>最初の拡張機能の作成: Hello World
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 
 手順 1. **ファイル** メニューをクリックして**新しいプロジェクト**です。 画面の下部にある、プロジェクトの名前を入力できます。
 
-手順 2. **テンプレート** メニューのをクリックして**Visual c#**をクリックして**機能拡張**、順にクリック**VSIX プロジェクト**です。
+手順 2. **テンプレート** メニューのをクリックして**Visual c#** をクリックして**機能拡張**、順にクリック**VSIX プロジェクト**です。
 
 ![新しいプロジェクト](media/hello-world-new-project.png)
 
@@ -121,7 +122,7 @@ Visual Studio タイトル バーに「実験用インスタンス」という�
 
 ![実験用インスタンスのタイトル バー](media/hello-world-exp-instance.png)
 
-手順 2. **ツール**のメニューを開き、**実験用インスタンス**をクリックして**Say Hello World!**です。
+手順 2. **ツール**のメニューを開き、**実験用インスタンス**をクリックして**Say Hello World!** です。
 
 ![最終結果](media/hello-world-final-result.png)
 

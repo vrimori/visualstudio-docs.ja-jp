@@ -25,6 +25,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263762"
 ---
 # <a name="information-rights-management-and-managed-code-extensions-overview"></a>Information rights management とマネージ コード拡張機能の概要
   Microsoft Office Word および Microsoft Office Excel は、Information Rights Management (IRM)、承認されていないユーザーを表示したり、機密情報を変更することを防止するのに役立つ機能を提供します。 詳細については、Information Rights Management のしくみ、特定の Office アプリケーションのヘルプを参照してください。  

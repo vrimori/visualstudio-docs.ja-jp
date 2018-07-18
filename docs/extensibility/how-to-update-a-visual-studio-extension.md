@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134683"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>方法: Visual Studio の拡張の更新
 使用して、システムに Visual Studio 拡張機能を更新することができます**拡張機能と更新プログラム**更新されたバージョンをインストールします。 拡張機能の更新バージョンを作成する場合は、することを示します VSIX マニフェストのバージョン番号のインクリメントで更新します。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-update-an-extension-on-your-system"></a>システム上の拡張機能を更新するには  
   
-1.  **[ツール]** メニューの **[拡張機能と更新プログラム]**をクリックします。  
+1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
   
 2.  左側のウィンドウでをクリックして**更新**です。  
   

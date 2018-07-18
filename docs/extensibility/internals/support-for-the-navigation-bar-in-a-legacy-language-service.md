@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134660"
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>従来の言語サービス内のナビゲーション バーのサポート
 エディター ビューの上部にあるナビゲーション バーは、ファイル内の型とメンバーを表示します。 型は左側ドロップダウンに表示され、メンバーを表示する右のドロップダウンします。 ユーザーは、型を選択する型の最初の行にカーソルが配置されます。 ユーザーは、メンバーを選択するときにカーソルが、メンバーの定義に配置されます。 ドロップ ダウン ボックスは、そのキャレットの現在の場所を反映するように更新されます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132156"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>従来の言語サービスで、クイック ヒント
 Intellisense によるクイック ヒントでは、ユーザーか、キャレットを配置します id に、選択して、ソースの識別子に関する情報を表示**クイック ヒント**から、 **IntelliSense**メニューまたはマウスを保持識別子の上にカーソル。 これにより、識別子の情報を表示するツールヒント。 この情報は、通常、識別子の型で構成されています。 デバッグ エンジンがアクティブで、この情報は、現在の値を含めることがあります。 デバッグ エンジンは、言語サービスは識別子のみを処理中に、式の値を指定します。  

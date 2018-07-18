@@ -13,11 +13,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c4bf6ba014d594dd6f5b26420ffa6ee7e61a79a1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 34c0b1a09a6483d45adda63f0fa1bf9d3ff032fa
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747282"
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 
@@ -67,7 +68,7 @@ XAML は、アプリケーションの外観を宣言的に実装するために
 
  次の図は、前記の例の XAML で定義されたユーザー インターフェイス (UI) を示しています。
 
- ![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png "WPFIntroFigure10")
+ ![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png)
 
  XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。
 
@@ -300,7 +301,7 @@ WPF で提供される 2D 図形では、基本的な図形の標準セットが
 
 <xref:System.Windows.Media.Geometry> オブジェクトは、クリップ、ヒット テスト、2D グラフィック データのレンダリングに使用できます。
 
-![パスのさまざまな使用方法](../designers/media/wpfintrofigure5.PNG "WPFIntroFigure5")
+![パスのさまざまな使用](../designers/media/wpfintrofigure5.png)
 
 詳しくは、「[ジオメトリの概要](/dotnet/framework/wpf/graphics-multimedia/geometry-overview)」をご覧ください。
 
@@ -308,7 +309,7 @@ WPF で提供される 2D 図形では、基本的な図形の標準セットが
 
 WPF の 2D 機能のサブセットには、グラデーション、ビットマップ、描画、ビデオによる塗りつぶし、回転、スケーリング、傾斜などの視覚効果が含まれています。 これらはすべてブラシによって実現します。次の図に、例をいくつか示します。
 
-![さまざまなブラシの図](../designers/media/wpfintrofigure6.PNG "WPFIntroFigure6")
+![さまざまなブラシの図](../designers/media/wpfintrofigure6.png)
 
 詳しくは、「 [WPF のブラシの概要](/dotnet/framework/wpf/graphics-multimedia/wpf-brushes-overview)」をご覧ください。
 
@@ -316,7 +317,7 @@ WPF の 2D 機能のサブセットには、グラデーション、ビットマ
 
 WPF には 2D グラフィックスと統合し、より魅力的で興味深いユーザー インターフェイスを作成できる 3D レンダリング機能も含まれています。 たとえば、次の図では 3D 図形上にレンダリングされる 2D イメージを示しています。
 
-![Visual3D サンプルのスクリーンショット](../designers/media/wpfintrofigure13.png "WPFIntroFigure13")
+![Visual3D サンプルのスクリーンショット](../designers/media/wpfintrofigure13.png)
 
 詳細については、「[3D グラフィックスの概要](/dotnet/framework/wpf/graphics-multimedia/3-d-graphics-overview)」を参照してください。
 
@@ -324,7 +325,7 @@ WPF には 2D グラフィックスと統合し、より魅力的で興味深い
 
 WPF のアニメーション サポートを使用すると、コントロールを拡大、振動、スピン、フェードさせることができ、魅力的なページ遷移などを作成できです。 カスタム クラスも含めて、ほとんどの WPF クラスをアニメーション表示できます。 次の図に、実行中の単純なアニメーションを示します。
 
-![アニメーション キューブのイメージ](../designers/media/wpfintrofigure7.png "WPFIntroFigure7")
+![アニメーション キューブのイメージ](../designers/media/wpfintrofigure7.png)
 
 詳しくは、「 [アニメーションの概要](/dotnet/framework/wpf/graphics-multimedia/animation-overview)」をご覧ください。
 
@@ -336,7 +337,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 イメージは、ほとんどのアプリケーションに共通していますが、WPF にはイメージを使用するための、いくつかの方法が用意されています。 次の図に、サムネイル イメージが含まれているリスト ボックスがある、ユーザー インターフェイスを示します。 サムネイルを選ぶと、そのイメージがフル サイズで表示されます。
 
-![サムネイル イメージとフルサイズ イメージ](../designers/media/wpfintrofigure8.PNG "WPFIntroFigure8")
+![サムネイル イメージとフルサイズのイメージ](../designers/media/wpfintrofigure8.png)
 
 詳しくは、「 [イメージングの概要](/dotnet/framework/wpf/graphics-multimedia/imaging-overview)」をご覧ください。
 
@@ -348,7 +349,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 次の図のウィンドウは、動作中の <xref:System.Windows.Controls.MediaElement> コントロールを示しています。
 
-![オーディオおよびビデオを含む MediaElement コントロール](../designers/media/wpfintrofigure1.png "WPFIntroFigure1")
+![オーディオおよびビデオを含む MediaElement コントロール](../designers/media/wpfintrofigure1.png)
 
 詳細については、「[グラフィックスとマルチメディア](/dotnet/framework/wpf/graphics-multimedia)」を参照してください。
 
@@ -397,7 +398,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 次の図に、結果を示します。
 
-![テキストを含む TextBox コントロール](../designers/media/wpfintrofigure21.png "WPFIntroFigure21")
+![テキストを含む TextBox コントロール](../designers/media/wpfintrofigure21.png)
 
 しかし、さまざまな種類の複数のアイテムのコンテンツを含めることができるコントロールもあります。<xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定された <xref:System.Windows.Controls.Button> のコンテンツには、レイアウト コントロール、テキスト、画像、図形などのさまざまなアイテムを含めることができます。 次の例に、 <xref:System.Windows.Controls.Button> 、 <xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.Border>を含むコンテンツを備えた <xref:System.Windows.Controls.MediaElement>を示します。
 
@@ -423,7 +424,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 次の図はこのボタンのコンテンツを示しています。
 
-![複数の種類の内容を含むボタン](../designers/media/wpfintrofigure22.png "WPFIntroFigure22")
+![複数の種類の内容を含むボタン](../designers/media/wpfintrofigure22.png)
 
 さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「 [WPF コンテンツ モデル](/dotnet/framework/wpf/controls/wpf-content-model)」をご覧ください。
 
@@ -452,7 +453,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 コントロール テンプレートを使用すると、コントロールの外観を指定できますが、データ テンプレートではコントロールのコンテンツの外観を指定できます。 データ テンプレートはたいてい、バインドされたデータの表示方法を多様化するために使用されます。 次の図では、`Task` オブジェクトのコレクションにバインドされた <xref:System.Windows.Controls.ListBox> の既定の外観を示しています。各タスクは名前、説明、優先順位を持ちます。
 
-![既定の外観を使用したリスト ボックス](../designers/media/wpfintrofigure18.png "WPFIntroFigure18")
+![既定の外観を使用したリスト ボックス](../designers/media/wpfintrofigure18.png)
 
 既定の外観は <xref:System.Windows.Controls.ListBox> に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、 <xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、 <xref:System.Windows.DataTemplate>を使用して変更する必要があります。 次の XAML はこのような <xref:System.Windows.DataTemplate>を定義しています。これが、 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用されます。
 
@@ -649,7 +650,7 @@ WPF にはカスタマイズに対する多くのサポートが用意されて�
 
  次の図に <xref:System.Windows.Window> でホストされる `NumericUpDown` コントロールを示します。
 
- ![カスタム UserControl](../designers/media/wpfintrofigure3.png "WPFIntroFigure3")
+ ![カスタム UserControl](../designers/media/wpfintrofigure3.png)
 
 カスタム コントロールについて詳しくは、「 [コントロールの作成の概要](/dotnet/framework/wpf/controls/control-authoring-overview)」をご覧ください。
 

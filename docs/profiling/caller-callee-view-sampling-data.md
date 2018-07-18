@@ -13,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e964ec877b791fc3058068e2f89706cc5826e0f
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 9b9b740689175f91f4bc69396121da0bed336532
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335971"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548711"
 ---
-# <a name="caller--callee-view---sampling-data"></a>呼び出し元/呼び出し先ビュー - サンプリング データ
+# <a name="callercallee-view---sampling-data"></a>呼び出し元/呼び出し先ビュー - サンプリング データ
 呼び出し元/呼び出し先ビューには、選択した関数およびその親関数と子関数のプロファイル データが表示されます。 [呼び出し元/呼び出し先] ビューは、3 つのグリッドで構成されます。  
   
  **[現在の関数]** は中央のグリッドに表示されます。このグリッドには、選択した関数に関するプロファイル情報が表示されます。 値には関数のすべてのサンプル呼び出しが含まれます。  

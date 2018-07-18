@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148273"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio 用の共有の色
 共通の Visual Studio シェル要素を使用する UI を設計するまたはインターフェイス要素に同様の機能と一致するか場合、は、パッケージ定義ファイルに既存のトークン名を使用して、選択し、色を割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  

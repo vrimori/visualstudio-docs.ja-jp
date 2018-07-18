@@ -1,18 +1,19 @@
 ---
-title: "Windows ランタイム型の JavaScript 表現 | Microsoft Docs"
-ms.custom: 
+title: Windows ランタイム型の JavaScript 表現 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Runtime types [JavaScript]
 - JavaScript, Windows Runtime types
 ms.assetid: f4851802-8b40-4afa-ba6c-8a162a9a43cc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -21,6 +22,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24571532"
 ---
 # <a name="javascript-representation-of-windows-runtime-types"></a>Windows ランタイム型の JavaScript 表現
 次の表では、JavaScript で Windows ランタイム型がどのように表現されるかについて説明します。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578173"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference タスク
 1 つ以上のタイプ ライブラリ名または .tlb ファイルから成る一覧を使用して、これらのタイプ ライブラリのディスク上の位置を解決します。  

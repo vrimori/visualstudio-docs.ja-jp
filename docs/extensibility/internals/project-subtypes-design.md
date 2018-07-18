@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133800"
 ---
 # <a name="project-subtypes-design"></a>プロジェクトのサブタイプの設計
 プロジェクトのサブタイプは、Microsoft Build Engine (MSBuild) に基づくプロジェクトを拡張する Vspackage を使用できます。 集計の使用、コア管理プロジェクト システムで実装の大部分を再利用できます。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]まだ特定のシナリオの動作をカスタマイズします。  

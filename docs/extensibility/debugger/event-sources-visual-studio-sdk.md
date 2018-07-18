@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099839"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>イベント ソース (Visual Studio SDK)
 イベントの 2 つのソースがあります。 デバッグ エンジン (DE) と、セッションは、マネージャー (SDM) をデバッグします。 DE から送信されるイベント NULL 以外では、エンジンを持ち、SDM から送信されたイベントが NULL エンジンを持ちます。  

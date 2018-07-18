@@ -24,6 +24,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263138"
 ---
 # <a name="controls-on-office-documents"></a>Office ドキュメントのコントロール
   Visual Studio の Office 開発ツールを使用し、Windows フォーム コントロールと *ホスト コントロール* を Word 文書と Excel ワークシートに追加できます。 ホスト コントロールは Word オブジェクト モデルと Excel オブジェクト モデルのさまざまなユーザー インターフェイス (UI) オブジェクトを拡張するオブジェクトです。  

@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6198cfc874eb8a547b77bfabe8b3fb3473fa92ef
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 6c68c7870430033d9ff20b94f51e516038c9eba6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749188"
 ---
 # <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider 関数
 既定のプロバイダーの既定のマーカー系列を作成します。  
@@ -43,7 +44,7 @@ HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
  プロバイダーとマーカー系列の両方が作成されると S_OK を、エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** cvmarkers.h  
+ **ヘッダー:** *cvmarkers.h*  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

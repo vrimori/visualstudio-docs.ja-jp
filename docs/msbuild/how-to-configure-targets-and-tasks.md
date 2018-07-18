@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31578414"
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>方法 : ターゲットとタスクを構成する
 一部の MSBuild タスクは、開発コンピューターの環境に関係なく、それがターゲットとする環境で実行されるように設定できます。 たとえば、64 ビット コンピューターを使用し、32 ビット アーキテクチャをターゲットとするアプリケーションを構築するとき、一部のタスクが 32 ビット プロセスで実行されます。  

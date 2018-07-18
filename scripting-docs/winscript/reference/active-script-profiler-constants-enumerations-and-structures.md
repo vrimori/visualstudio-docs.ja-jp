@@ -1,14 +1,14 @@
 ---
-title: "アクティブ スクリプト プロファイラーの定数、列挙型および構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: アクティブ スクリプト プロファイラーの定数、列挙型および構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6e079d84-9dde-46fc-8a6a-18e902f60ecc
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24642052"
 ---
 # <a name="active-script-profiler-constants-enumerations-and-structures"></a>アクティブ スクリプト プロファイラーの定数、列挙型、および構造体
 次の列挙型は、アクティブ スクリプトのプロファイラーのインターフェイスで使用されます。  

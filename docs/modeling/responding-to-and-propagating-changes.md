@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954006"
 ---
 # <a name="responding-to-and-propagating-changes"></a>変更内容への対応および変更内容の反映
 要素では、作成、削除、または更新は、ときに、モデルの他の部分、またはファイル、データベース、またはその他のコンポーネントなどの外部のリソースへの変更を伝達するコードを記述することができます。

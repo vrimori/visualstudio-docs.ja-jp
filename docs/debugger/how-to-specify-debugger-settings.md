@@ -26,13 +26,14 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472725"
 ---
 # <a name="how-to-specify-debugger-settings"></a>方法 : デバッガー設定を指定する
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、変数の表示方法、特定の警告を表示するかどうか、ブレークポイントの設定方法、実行中のプログラムを中断した場合の影響など、デバッガーの動作のさまざまな設定を指定できます。 [デバッガーの設定を指定する、**オプション**] ダイアログ ボックス。  
   
 ### <a name="to-set-debugger-options"></a>デバッガー オプションを設定するには  
   
-1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
 2.  **オプション**ダイアログ ボックスで、開く、**デバッグ**フォルダーです。  
   

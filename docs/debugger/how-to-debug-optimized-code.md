@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478081"
 ---
 # <a name="how-to-debug-optimized-code"></a>方法 : 最適化されたコードをデバッグする
 > [!NOTE]
@@ -66,9 +67,9 @@ ms.lasthandoff: 04/18/2018
   
 4.  **プロパティ ページ** ダイアログ ボックスで確認`Debug`でが選択されている、**構成**ドロップダウン リスト。  
   
-5.  左側のフォルダー ビューで、選択、 **C/C++**フォルダーです。  
+5.  左側のフォルダー ビューで、選択、 **C/C++** フォルダーです。  
   
-6.  下にある、 **C++**フォルダーを選択`Optimization`です。  
+6.  下にある、 **C++** フォルダーを選択`Optimization`です。  
   
 7.  右側のプロパティ リストで、[`Optimization`] を探します。 その横の設定がになっているはず`Disabled (` [/Od](/cpp/build/reference/od-disable-debug)`)`です。 その他のオプションのいずれかを選択 (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)`、または`Custom`)。  
   

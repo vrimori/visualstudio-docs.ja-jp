@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132816"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio テンプレート)
 プロジェクトに追加されるフォルダーを指定します。  

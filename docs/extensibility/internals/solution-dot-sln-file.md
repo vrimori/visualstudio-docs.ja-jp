@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133407"
 ---
 # <a name="solution-sln-file"></a>ソリューション (です。Sln) ファイル
 ソリューションは、Visual Studio でプロジェクトを整理するための構造体です。 ソリューションでは、(テキスト ベース、共有) .sln および .suo (バイナリ、ユーザー固有のソリューションのオプション) ファイル内のプロジェクトの状態情報を保持します。 .Suo ファイルについては、次を参照してください。[ソリューション ユーザー オプション (です。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)です。  

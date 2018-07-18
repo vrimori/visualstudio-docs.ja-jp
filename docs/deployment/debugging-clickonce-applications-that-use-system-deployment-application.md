@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31561663"
 ---
 # <a name="debugging-clickonce-applications-that-use-systemdeploymentapplication"></a>System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開では、アプリケーションを更新する方法を構成することができます。 ただし、使用およびカスタマイズする必要がある場合は、高度な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置機能によって提供される展開のオブジェクト モデルにアクセスする必要がある<xref:System.Deployment.Application>です。 使用することができます、<xref:System.Deployment.Application>高度なタスクをなどの Api:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465526"
 ---
 # <a name="idiasymbolgethasalloca"></a>IDiaSymbol::get_hasAlloca
 関数が呼び出しを含むかどうかを指定するフラグを取得`alloca`(スタックにメモリの割り当てを使用するが)。  

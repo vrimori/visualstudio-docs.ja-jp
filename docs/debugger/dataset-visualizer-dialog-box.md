@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457268"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>[DataSet ビジュアライザー] ダイアログ ボックス
 DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataView、または DataViewManager オブジェクトの内容を表示できます。 このビジュアライザーにアクセスするには、デバッガー変数ウィンドウまたは DataTip 内の各オブジェクトに対応する [値] の隣に表示される、虫眼鏡アイコンをクリックします。  

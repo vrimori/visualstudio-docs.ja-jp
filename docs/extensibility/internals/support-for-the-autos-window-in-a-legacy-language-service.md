@@ -19,16 +19,17 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135823"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>従来の言語サービスで自動変数 ウィンドウのサポート
-**自動変数**  ウィンドウに変数とスコープでは、デバッグ中のプログラムには、(いずれかにより、ブレークポイントまたは例外) が一時停止されてパラメーターなどの式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **自動変数**  ウィンドウでは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 式エバリュエーターが評価できるものに可能性のある表示できる、 **[自動変数]**ウィンドウです。  
+**自動変数**  ウィンドウに変数とスコープでは、デバッグ中のプログラムには、(いずれかにより、ブレークポイントまたは例外) が一時停止されてパラメーターなどの式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **自動変数**  ウィンドウでは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 式エバリュエーターが評価できるものに可能性のある表示できる、 **[自動変数]** ウィンドウです。  
   
- Managed package framework (MPF) はの直接サポートを提供していない、 **[自動変数]**ウィンドウです。 ただし、オーバーライドする場合、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで示される式のリストを返すことができます、 **[自動変数]**ウィンドウです。  
+ Managed package framework (MPF) はの直接サポートを提供していない、 **[自動変数]** ウィンドウです。 ただし、オーバーライドする場合、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで示される式のリストを返すことができます、 **[自動変数]** ウィンドウです。  
   
 ## <a name="implementing-support-for-the-autos-window"></a>[自動変数] ウィンドウのサポートを実装します。  
- サポートするために必要な**[自動変数]**を実装するのには、ウィンドウ、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスです。 指定の式のようにソース ファイルの場所に、実装を決定する必要があります、 **[自動変数]**ウィンドウです。 メソッドは、各文字列が 1 つの式を表す文字列の一覧を返します。 戻り値の<xref:Microsoft.VisualStudio.VSConstants.S_OK>一覧に、式が含まれていることを示します、<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>を表示する式がないことを示します。  
+ サポートするために必要な **[自動変数]** を実装するのには、ウィンドウ、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスです。 指定の式のようにソース ファイルの場所に、実装を決定する必要があります、 **[自動変数]** ウィンドウです。 メソッドは、各文字列が 1 つの式を表す文字列の一覧を返します。 戻り値の<xref:Microsoft.VisualStudio.VSConstants.S_OK>一覧に、式が含まれていることを示します、<xref:Microsoft.VisualStudio.VSConstants.S_FALSE>を表示する式がないことを示します。  
   
- 実際に返される式は、変数やコード内の場所に表示されるパラメーターの名前です。 これらの名前は、値とで表示される、型を取得する、式エバリュエーターに渡される、 **[自動変数]**ウィンドウです。  
+ 実際に返される式は、変数やコード内の場所に表示されるパラメーターの名前です。 これらの名前は、値とで表示される、型を取得する、式エバリュエーターに渡される、 **[自動変数]** ウィンドウです。  
   
 ### <a name="example"></a>例  
  次の例の実装を示しています、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>から式のリストを取得するメソッド、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドを使用する解析理由<xref:Microsoft.VisualStudio.Package.ParseReason>です。 それぞれの式としてラップ、`TestVsEnumBSTR`を実装する、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR>インターフェイスです。  

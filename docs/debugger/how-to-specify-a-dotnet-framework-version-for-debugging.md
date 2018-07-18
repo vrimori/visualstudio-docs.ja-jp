@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476674"
 ---
 # <a name="how-to-specify-a-net-framework-version-for-debugging"></a>方法 : デバッグで .NET Framework のバージョンを指定する
 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] デバッガーでは、Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] の現在のバージョンだけでなく、古いバージョンのデバッグもサポートしています。 デバッガーが適切なバージョンを常に特定できます Visual Studio からアプリケーションを起動する場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デバッグしているアプリケーションにします。 使用すると、アプリケーションが既に実行されている**にアタッチ**、デバッガー常にできないことがありますの古いバージョンを識別する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。 この場合、次のようなエラー メッセージが出力されます。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/18/2018
   
 7.  **文字列の編集**ボックスに、.NET Framework のバージョン番号を入力、**値**ボックス。 たとえば、「V1.1.4322」などです。  
   
-8.  **[OK]**をクリックします。  
+8.  **[OK]** をクリックします。  
   
 9. 閉じる、**レジストリ エディター**です。  
   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31953041"
 ---
 # <a name="customizing-the-model-explorer"></a>モデル エクスプローラーのカスタマイズ
 ことができます、エクスプ ローラーの動作と外観、ドメイン固有言語デザイナー用よう変更。

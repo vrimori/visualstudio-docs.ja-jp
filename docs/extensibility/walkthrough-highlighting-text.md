@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147220"
 ---
 # <a name="walkthrough-highlighting-text"></a>チュートリアル: テキストを強調表示
 エディターにさまざまな視覚効果を追加するには、Managed Extensibility Framework (MEF) コンポーネント パーツを作成します。 このチュートリアルでは、テキスト ファイルの現在の単語のすべての出現箇所を強調表示する方法を示します。 Word では、テキスト ファイルの 1 つ以上の時間が 1 つにキャレットを配置する場合は、すべての出現箇所が強調表示されます。  

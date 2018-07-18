@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134966"
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>テストの領域 3: チェック アウト/チェック アウトを元に戻す
 このソース管理プラグインのテストの領域の説明を使用して、バージョン ストアから項目を編集し、元に戻す、**チェック アウト**と**チェック アウトの取り消し**コマンド。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2018
+ms.locfileid: "30863626"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。 

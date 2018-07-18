@@ -41,6 +41,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927454"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用します。
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。  

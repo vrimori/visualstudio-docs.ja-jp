@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126898"
 ---
 # <a name="security-issues"></a>セキュリティ上の問題
 Visual Studio を使用してプログラムをデバッグするには必要なアクセス許可は、開発者がプログラムを実行する必要があるものと同じです。 これは、ほとんどの状況が (インターネット インフォメーション サービスなど、他のサービスに関連するいくつかの状況はより高いレベルのアクセス許可にあります) のリモート デバッグが含まれます。  

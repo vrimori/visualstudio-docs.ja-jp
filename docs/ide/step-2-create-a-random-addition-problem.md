@@ -11,11 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7747892e9c206fa0844c913bca3da92bb8e417d9
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: abd70e53c06da53f22bcac4c7f041aaef75bd412
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747868"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>手順 2: ランダムな加算問題の作成
 このチュートリアルの第 2 部では、乱数に基づく計算問題を追加して、クイズに挑みます。 また、`StartTheQuiz()` という名前の、問題に記入して、カウントダウン タイマーを開始するメソッドを作成します。 このチュートリアルの後半では、減算、乗算、除算問題を追加します。
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/28/2018
 
      コードで `randomizer` の後にドット (.) を入力すると、IntelliSense ウィンドウが開き、呼び出すことができる Random オブジェクトのすべてのメソッドが表示されることにご注意ください。 たとえば、IntelliSense は `Next()` メソッドを次のように一覧表示します。
 
-     ![次のメソッド](../ide/media/express_randomwhite.png "Express_RandomWhite") Next メソッド
+     ![Next メソッド](../ide/media/express_randomwhite.png) Next メソッド
 
      オブジェクトの後にドットを入力すると、IntelliSense はプロパティ、メソッド、イベントなどのオブジェクトのメンバーの一覧を表示します。
 
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/28/2018
 
      次の図に示すように、ランダムな加算問題が表示されます。
 
-     ![ランダムな加算の問題](../ide/media/express_additionproblem.png "Express_AdditionProblem") ランダムな加算の問題
+     ![ランダムな加算の問題](../ide/media/express_additionproblem.png) ランダムな加算の問題
 
      チュートリアルの次の手順では、合計を追加します。
 

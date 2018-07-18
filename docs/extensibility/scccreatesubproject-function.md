@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145036"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject 関数
 この関数が、指定した名前で指定された既存の親プロジェクトの下にサブプロジェクトを作成、`lpParentProjPath`引数。  

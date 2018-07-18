@@ -23,6 +23,7 @@ ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32425349"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現の使用
 

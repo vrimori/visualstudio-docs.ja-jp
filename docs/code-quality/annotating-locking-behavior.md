@@ -39,6 +39,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31901529"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 常に、マルチ スレッド プログラムでバグを同時実行を避けるためには、以下の適切なロック作業分野と SAL 注釈を使用します。

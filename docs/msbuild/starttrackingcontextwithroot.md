@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31571322"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 応答ファイルにルート マーカーを指定し、追跡コンテキストを開始します。  

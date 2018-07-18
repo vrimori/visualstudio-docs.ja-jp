@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2018
+ms.locfileid: "30862999"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>管理者責任の概要
 管理者には、組織のサブスクリプションを管理する役割が与えられます。  この役割には、ライセンス条項に基づいてサブスクリプションを管理するという責任も伴います。 この記事では、管理者の役割に伴う責任、特権、制限について説明します。

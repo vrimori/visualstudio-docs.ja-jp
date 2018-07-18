@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31965178"
 ---
 # <a name="writing-user-commands-and-actions"></a>ユーザー コマンドおよびユーザー アクションの記述
 図にコマンドを追加し、ドラッグ アンド ドロップ、クリック、およびダブルクリック イベントなどのジェスチャに応答することで、ドメイン固有言語をカスタマイズできます。

@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 290eebefbe02284222278fd665ce87fb0db0e010
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 54a15080e84187c53841ba03edeeaff3ccce0d30
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751833"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストを作成する
 
@@ -45,11 +46,11 @@ ms.lasthandoff: 04/26/2018
 
      このチュートリアルでは、テスト プロジェクトの名前は `NativeRooterTest`です。
 
-     ![C++ 単体テスト プロジェクトの作成](../test/media/utecpp01.png "UteCpp01")
+     ![C++ 単体テスト プロジェクトの作成](../test/media/utecpp01.png)
 
 2.  新しいプロジェクトで、 **unittest1.cpp**を検査します。
 
-     ![TEST&#95;CLASS と TEST&#95;METHOD が表示されたテスト プロジェクト](../test/media/utecpp2.png "UteCpp2")
+     ![TEST&#95;CLASS と TEST&#95;METHOD が表示されたテスト プロジェクト](../test/media/utecpp2.png)
 
      以下の点に注意してください。
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/26/2018
 
          **[合格したテスト]** の下にテストが表示されます。
 
-         ![1 つのテストが成功したことを示す単体テスト エクスプローラー](../test/media/utecpp04.png "UteCpp04")
+         ![1 つのテストが成功したことを示す単体テスト エクスプローラー](../test/media/utecpp04.png)
 
 ##  <a name="create_dll_project"></a> DLL プロジェクトを作成する
 
@@ -90,17 +91,17 @@ ms.lasthandoff: 04/26/2018
 
      このチュートリアルでは、プロジェクトの名前を `RootFinder`とします。
 
-     ![C++ Win32 プロジェクトの作成](../test/media/utecpp05.png "UteCpp05")
+     ![C++ Win32 プロジェクトの作成](../test/media/utecpp05.png)
 
 2.  [Win32 アプリケーション ウィザード] で **[DLL]** と **[シンボルのエクスポート]** を選択します。
 
      **[シンボルのエクスポート]** オプションは、エクスポートされたメソッドの宣言に使用できる便利なマクロを生成します。
 
-     ![[DLL] と [シンボルのエクスポート] が設定された C++ プロジェクト ウィザード](../test/media/utecpp06.png "UteCpp06")
+     ![[DLL] と [シンボルのエクスポート] が設定された C++ プロジェクト ウィザード](../test/media/utecpp06.png)
 
 3.  プリンシパル .h ファイルでエクスポートされた関数を宣言します。
 
-     ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](../test/media/utecpp07.png "UteCpp07")
+     ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](../test/media/utecpp07.png)
 
      宣言子 `__declspec(dllexport)` は、クラスのパブリック メンバーと保護されるメンバーが DLL の外部で表示できるようにします。 詳細については、「 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)」を参照してください。
 
@@ -120,13 +121,13 @@ ms.lasthandoff: 04/26/2018
 
     1.  テスト プロジェクトのプロパティを開き、 **[共通プロパティ]**、 **[フレームワークと参照]** の順に選択します。
 
-         ![C++ プロジェクト プロパティ | Framework と参照](../test/media/utecpp08.png "UteCpp08")
+         ![C++ プロジェクト プロパティ | Framework と参照](../test/media/utecpp08.png)
 
     2.  **[新しい参照の追加]** をクリックします。
 
          **[参照の追加]** ダイアログ ボックスで、DLL プロジェクトを選択し、 **[追加]** をクリックします。
 
-         ![C++ プロジェクト プロパティ | 新しい参照の追加](../test/media/utecpp09.png "UteCpp09")
+         ![C++ プロジェクト プロパティ | 新しい参照の追加](../test/media/utecpp09.png)
 
 2.  プリンシパルの単体テストの .cpp ファイルに、DLL コードの .h ファイルを含めます。
 
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  テスト エクスプローラーで **[すべて実行]** をクリックします。
 
-     ![単体テスト エクスプローラー &#45 基本テスト成功](../test/media/utecpp10.png "UteCpp10")
+     ![単体テスト エクスプローラー &#45 基本テスト成功](../test/media/utecpp10.png)
 
  テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
 
@@ -189,7 +190,7 @@ ms.lasthandoff: 04/26/2018
 
      新しいテストは失敗します。
 
-     ![RangeTest 失敗](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![RangeTest 失敗](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
     > 各テストが記述した後すぐに失敗することを確認します。 これは、絶対に失敗しないテストを記述するという簡単なミスを避けることに役立ちます。
@@ -217,7 +218,7 @@ ms.lasthandoff: 04/26/2018
 
      両方のテストが合格します。
 
-     ![単体テスト エクスプローラー &#45 範囲テスト成功](../test/media/utecpp12.png "UteCpp12")
+     ![単体テスト エクスプローラー &#45 範囲テスト成功](../test/media/utecpp12.png)
 
     > [!TIP]
     > 一度に 1 つのテストを追加してコードを開発します。 各反復処理の後にすべてのテストが合格することを確認します。
@@ -263,7 +264,7 @@ ms.lasthandoff: 04/26/2018
 
      失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。
 
-     ![Negativerangetest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+     ![NegativeRangeTest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
 4.  テストが失敗した理由を表示するには、関数をステップ実行します。
 
@@ -291,10 +292,10 @@ ms.lasthandoff: 04/26/2018
 
 6.  今回は、すべてのテストに合格します。
 
-     ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+     ![すべてのテストの成功](../test/media/ute_ult_alltestspass.png)
 
 > [!TIP]
-> 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
+> 個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
 
 
 ##  <a name="refactor"></a> テストを変更せずにコードをリファクタリングする

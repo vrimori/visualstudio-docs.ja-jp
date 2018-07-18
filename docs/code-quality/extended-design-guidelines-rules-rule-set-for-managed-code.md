@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927101"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>マネージ コードの "拡張デザイン ガイドライン規則" 規則セット
 Microsoft 拡張デザイン ガイドライン規則規則セットは、報告される、使いやすさと保守容易性の問題を最大化する基本デザイン ガイドライン規則を展開します。 特に、命名に関するガイドラインに重点が置かれています。 この規則セットを保守が容易なコードを記述する最高レベルの基準を適用するか、プロジェクトにライブラリ コードが含まれている場合を検討する必要があります。

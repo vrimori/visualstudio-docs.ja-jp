@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135792"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef ユーティリティ
 .Dll ファイルをパラメーターとして Visual Studio 拡張機能の受け取りを .dll に付随する .pkgdef ファイルを作成します。 .Pkgdef ファイルには、拡張機能がインストールされている場合にシステム レジストリに書き込むことはそれ以外の場合、すべての情報が含まれています。  

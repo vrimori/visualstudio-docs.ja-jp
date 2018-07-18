@@ -49,6 +49,18 @@
           href: learn-django-in-visual-studio-step-05-django-authentication.md
         - name: 6 - ポーリング Django Web プロジェクト テンプレートを使用する
           href: learn-django-in-visual-studio-step-06-polls-django-web-project-template.md
+    - name: Visual Studio での Flask の詳細情報
+      items:
+        - name: 1 - プロジェクトとソリューションを作成する
+          href: learn-flask-visual-studio-step-01-project-solution.md
+        - name: 2 - Flask アプリを作成する
+          href: learn-flask-visual-studio-step-02-create-app.md
+        - name: 3 - 静的ファイルを提供してページを追加する
+          href: learn-flask-visual-studio-step-03-serve-static-files-add-pages.md
+        - name: 4 - Flask Web プロジェクト テンプレートを使用する
+          href: learn-flask-visual-studio-step-04-full-flask-project-template.md
+        - name: 5 - ポーリング Flask Web プロジェクト テンプレートを使用する
+          href: learn-flask-visual-studio-step-05-polls-flask-web-project-template.md
 - name: 概念
   items:
     - name: Python プロジェクト

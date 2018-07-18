@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134761"
 ---
 # <a name="managing-configuration-options"></a>構成オプションの管理
 新しいプロジェクトの種類を作成するときに、プロジェクトの構築方法、パッケージ、展開、および実行を決定するプロジェクトとソリューションの構成設定を管理する必要があります。 次のトピックでは、プロジェクトとソリューションの構成について説明します。  

@@ -826,3 +826,5 @@
   items:
     - name: Visual Studio のデバッガーの新機能
       href: what-s-new-for-the-debugger-in-visual-studio.md
+    - name: 入門者向けのデバッグ
+      href: debugging-absolute-beginners.md

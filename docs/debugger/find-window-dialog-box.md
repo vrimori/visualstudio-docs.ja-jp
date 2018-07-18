@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472046"
 ---
 # <a name="find-window-dialog-box"></a>[ウィンドウ検索] ダイアログ ボックス
 ウィンドウを選択し、そのプロパティまたはメッセージを表示するには、このダイアログ ボックスを使用します。 このダイアログ ボックスを表示するには、**ウィンドウ検索**から、**スパイ**メニュー。  

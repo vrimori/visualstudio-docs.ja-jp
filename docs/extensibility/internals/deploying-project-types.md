@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127976"
 ---
 # <a name="deploying-project-types"></a>プロジェクトの種類を展開します。
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 新しいプロジェクトの種類アグリゲーター (ProjectAggregator2.dll) とも再配布 (ProjectAggregator2.msi) 用の Windows インストーラー パッケージをインストールします。 マネージ コード プロジェクトの種類に対して、新しいアグリゲーターを使用する必要があります。 ProjectAggregator2 で策制限の動作、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プロジェクトのマネージ コード プロジェクトの種類が正しく動作するを防ぐアグリゲーター。 次の手順では、新しいアグリゲーターを使用する VSPackage を変更する方法について説明します。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472890"
 ---
 # <a name="debugging-options-dialog-box"></a>[デバッグ] ([オプション] ダイアログ ボックス)
 **デバッグ**フォルダーで、**オプション** ダイアログ ボックスで、**ツール** メニューの は、次のページは、デバッガーを指定することを有効にするツール オプションを提供します。  

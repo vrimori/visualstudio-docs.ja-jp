@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b7569b36b954553dbb03e8a3934c375012a4349
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 27922f227c6791ad4b64b3258f9107d28b21a964
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476731"
 ---
-# <a name="understanding-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当ておよびオブジェクトの有効期間のデータ値について
+# <a name="understand-memory-allocation-and-object-lifetime-data-values"></a>メモリの割り当てとオブジェクトの有効期間のデータ値について
 
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの  *.NET メモリ割り当て*のプロファイル方法は、イベントが発生したときの割り当てで作成されたオブジェクトやガベージ コレクションで破棄されたオブジェクトのサイズと数に関する情報と、関数の*呼び出し履歴*に関する追加情報を収集します。 *呼び出し履歴*は、プロセッサ上で実行されている関数に関する情報を格納する動的な構造です。
 

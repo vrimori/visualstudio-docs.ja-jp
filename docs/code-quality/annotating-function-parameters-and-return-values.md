@@ -132,6 +132,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31900447"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 単純な関数のパラメーターの注釈の典型的な使用方法を説明 — スカラー、および構造体とクラスへのポインター- とほとんどの種類のバッファー。  注釈の一般的な使用パターンについても説明します。 関数に関連付けられている注釈を追加している、次を参照してください[に注釈を付ける関数の動作。](../code-quality/annotating-function-behavior.md)

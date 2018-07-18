@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31103241"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API リファレンス (Visual Studio のデバッグ)
 参照セクションにには、API、構文と、すべての API 要素の使用方法を示すガイドの概念の概要およびさまざまなコード例が含まれます。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  

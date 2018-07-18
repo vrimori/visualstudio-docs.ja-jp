@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio のローカル フォルダーに配置 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 05/08/2018
@@ -14,7 +14,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 016538bded47a5186294c161cc7f310b26818d15
 ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/05/2018
 ms.locfileid: "34764220"
@@ -22,6 +22,7 @@ ms.locfileid: "34764220"
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
 
 ローカル フォルダーにアプリを公開するために **発行**ツール を使用することができます。
+ 
 
 次の手順は、ASP.NET、ASP.NET Core、.NET Core および Visual Studio での Python アプリに適用されます。 For Node.js、手順がサポートされますが、ユーザー インターフェイスが異なる。
 

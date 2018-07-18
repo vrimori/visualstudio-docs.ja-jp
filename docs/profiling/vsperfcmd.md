@@ -16,20 +16,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86aada9d28300a2fdb2cd20072afa383c6f3f9e1
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: a1770fd1b6c9fef29592d1a4e1c85875513058a5
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573142"
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
-**VSPerfCmd.exe** ツールはパフォーマンス データ収集の開始と停止に使用されます。 このツールでは、次の構文が使用されます。  
+*VSPerfCmd.exe* ツールはパフォーマンス データ収集の開始と停止に使用されます。 このツールでは、次の構文が使用されます。  
   
 ```cmd  
 VSPerfCmd [/U] [/options]  
 ```  
   
- 次の表は、**VSPerfCmd.exe** ツール オプションの説明です。  
+ 次の表は、*VSPerfCmd.exe* ツール オプションの説明です。  
   
 |オプション|説明|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ VSPerfCmd [/U] [/options]
 |[QueryCounters](../profiling/querycounters.md)|現在のマシンで有効な CPU カウンターの一覧を表示します。|  
 |[WinCounter](../profiling/wincounter.md) **:** *path*|プロファイル マーク データと共に含める Windows パフォーマンス カウンター イベントを指定します。 **Start** との併用でのみ使用します。|  
 |[AutoMark](../profiling/automark.md) **:** *n*|Windows パフォーマンス カウンター データ コレクション イベントの間隔をミリ秒単位で指定します。 **WinCounter** と併用します。|  
-|[Events](../profiling/events-vsperfcmd.md) **:** `option`|指定した Windows イベント トレーシング (ETW) の収集を制御します。 ETW データは、プロファイリング データ .itl ファイルではない (.vsp) ファイルに収集されます。|  
+|[Events](../profiling/events-vsperfcmd.md) **:** `option`|指定した Windows イベント トレーシング (ETW) の収集を制御します。 ETW データは、プロファイリング データ .*itl* ファイルではない (.*vsp*) ファイルに収集されます。|  
 |[状態](../profiling/status.md)|プロファイラーの状態、現在プロファイリングされているプロセスに関する情報、プロファイラーを制御する権限が与えられたアカウントを表示します。|  
 |[Shutdown](../profiling/shutdown.md)[**:**`n`]|プロファイリング データ ファイルを閉じ、プロファイラーをオフにします。|  
 |[GlobalOn](../profiling/globalon-and-globaloff.md)|**VSPerfCmdGlobalOff** の呼び出し後、データ コレクションを再開します。|  
@@ -90,7 +91,7 @@ VSPerfCmd [/U] [/options]
 ## <a name="vsperfcmd-driver"></a>VSPerfCmd /Driver  
  **VSPerfCmd /Driver** オプションは現在使われていません。 この機能には **VsPerfCmdAdmin** オプションを使用してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSInstr](../profiling/vsinstr.md)   
  [VSPerfMon](../profiling/vsperfmon.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

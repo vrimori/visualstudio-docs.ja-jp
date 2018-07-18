@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31463053"
 ---
 # <a name="idiasymbolgethasseh"></a>IDiaSymbol::get_hasSEH
 関数がいずれかであるかどうかを指定するフラグを取得[構造化例外処理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (たとえば、_ _try/\__except ブロック) します。  

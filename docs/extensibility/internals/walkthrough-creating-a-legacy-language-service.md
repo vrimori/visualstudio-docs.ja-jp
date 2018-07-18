@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144935"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>チュートリアル: 従来の言語サービスの作成
 マネージ パッケージ フレームワーク (MPF) 言語のクラスを使用して、言語のサービスを実装する[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]は簡単です。 VSPackage、言語サービス、言語サービス自体、および言語パーサーをホストする必要があります。  
@@ -44,15 +45,15 @@ ms.lasthandoff: 04/16/2018
   
      必要な任意の名前を使用することができます。 ここで詳細な手順では、名前として MyLanguagePackage と仮定します。  
   
-3.  選択[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]言語と、新しいキー ファイルを生成するオプションとして。 **[次へ]**をクリックします。  
+3.  選択[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]言語と、新しいキー ファイルを生成するオプションとして。 **[次へ]** をクリックします。  
   
-4.  適切な会社とパッケージの情報を入力します。 **[次へ]**をクリックします。  
+4.  適切な会社とパッケージの情報を入力します。 **[次へ]** をクリックします。  
   
-5.  選択**メニュー コマンド**です。 **[次へ]**をクリックします。  
+5.  選択**メニュー コマンド**です。 **[次へ]** をクリックします。  
   
      コード スニペットをサポートする予定がない場合だけ完了 をクリックし、次の手順を無視します。  
   
-6.  入力**スニペットを挿入**として、**コマンド名**と`cmdidInsertSnippet`の**コマンド ID**です。 **[完了]**をクリックします。  
+6.  入力**スニペットを挿入**として、**コマンド名**と`cmdidInsertSnippet`の**コマンド ID**です。 **[完了]** をクリックします。  
   
      **コマンド名**と**コマンド ID**何でも使用できますが、これらは単なる例です。  
   

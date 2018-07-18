@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d81438ef284464fb23ebc5a41c19e59d20739cf4
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 02f0c8dd142f9517dcaef3a40d613d43b8e650a3
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "36235346"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -36,7 +37,7 @@ CodeLens では、エディターを離れずにコードに関する情報を�
 
 C# コードまたは Visual Basic コードでの参照を検索することができます。
 
-1. **参照**インジケーターを選択するか、**Alt** + **2** キーを押します。
+1. **参照**インジケーターを選択するか、**Alt**+**2** キーを押します。
 
    ![CodeLens 参照](../ide/media/codelens-view-references.png)
 
@@ -83,7 +84,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 ![CodeLens: TFVC で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes.png)
 
-既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、[TFSConfig](/vsts/tfs-server/command-line/tfsconfig-cmd) コマンドおよび **/indexHistoryPeriod** フラグを指定した [CodeIndex](../ide/codeindex-command.md) コマンドを実行することにより、この期間を変更できます。
+既定の時間は直近 12 か月です。 Team Foundation Server にコードが格納される場合、[TFSConfig](/tfs/server/ref/command-line/tfsconfig-cmd) コマンドおよび **/indexHistoryPeriod** フラグを指定した [CodeIndex](../ide/codeindex-command.md) コマンドを実行することにより、この期間を変更できます。
 
 1 年以上前のものを含む、すべての変更の詳細な履歴を表示するには、**[すべてのファイルの変更を表示する]** を選択します。
 
@@ -205,23 +206,25 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 1. [単体テスト コード](../test/unit-test-your-code.md)に関連付けられたアプリケーション コードに移動します。
 
-2. コード用のテストをレビューするには、**Alt** + **3** キーを押します。
+2. CodeLens テスト インジケーターを読み込むためにアプリケーションをまだビルドしていない場合は、ビルドします。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on)がオンになっていることを確認します。
+
+3. コード用のテストをレビューするには、**Alt** + **3** キーを押します。
 
      ![CodeLens - コード エディターでテスト状態を選択する](../ide/media/codelens-choose-test-indicator.png)
 
-3. 警告アイコン ![警告アイコン](../ide/media/codelenstestwarningicon.png)が表示された場合、まだ実行されていないので、テストを実行します。
+4. 警告アイコン ![警告アイコン](../ide/media/codelenstestwarningicon.png)が表示された場合、まだ実行されていないので、テストを実行します。
 
      ![CodeLens - 未実行の単体テストを表示する](../ide/media/codelens-tests-not-yet-run.png)
 
-4. テストの定義を確認するには、CodeLens インジケーターのウィンドウでテスト項目をダブルクリックして、エディターでコード ファイルを開きます。
+5. テストの定義を確認するには、CodeLens インジケーターのウィンドウでテスト項目をダブルクリックして、エディターでコード ファイルを開きます。
 
      ![CodeLens - 単体テストの定義に移動する](../ide/media/codelens-unit-test-definition.png)
 
-5. テスト結果を確認するには、テスト状態インジケーター (![テスト失敗アイコン](../ide/media/codelenstestfailedicon.png)または![テスト成功アイコン](../ide/media/codelenstestpassedicon.png)) を選択するか、**Alt** + **1** キーを押します。
+6. テスト結果を確認するには、テスト状態インジケーター (![テスト失敗アイコン](../ide/media/codelenstestfailedicon.png)または![テスト成功アイコン](../ide/media/codelenstestpassedicon.png)) を選択するか、**Alt** + **1** キーを押します。
 
      ![CodeLens - 単体テストの結果を表示する](../ide/media/codelens-unit-test-result.png)
 
-6. 何人のユーザーによってこのテストが変更されたか、だれがこのテストを変更したか、また、このテストに対していくつの変更が行われたかを確認するには、[コードの履歴とリンクされた項目を検索](#find-code-history)します。
+7. 何人のユーザーによってこのテストが変更されたか、だれがこのテストを変更したか、また、このテストに対していくつの変更が行われたかを確認するには、[コードの履歴とリンクされた項目を検索](#find-code-history)します。
 
 ## <a name="keyboard-shortcuts"></a>キーボード ショートカット
 
@@ -252,7 +255,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 - CodeLens が有効になっていることを確認します。 **[ツール]**、**[オプション]**、**[テキスト エディター]**、**[すべての言語]**、**[CodeLens]** の順に進みます。
 
-- コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd)を使用することによって、コード インデックス作成が有効になっていることを確認します。
+- コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/tfs/server/ref/command-line/tfsconfig-cmd)を使用することによって、コード インデックス作成が有効になっていることを確認します。
 
 - TFS 関連のインジケーターは、作業項目がコードにリンクされていて、リンクされた作業項目を開くアクセス許可をユーザーが持っている場合にだけ表示されます。 [チーム メンバーのアクセス許可](/vsts/work/scale/multiple-teams)があることを確認してください。
 
@@ -320,7 +323,11 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Q: 履歴やリンク された項目が表示されるように CodeLens によるコードの処理方法を管理することはできますか。
 
-**A:** できます。 コードが TFS にある場合は、[TFS Config コマンド](/vsts/tfs-server/command-line/tfsconfig-cmd) と共に [CodeIndex コマンド](../ide/codeindex-command.md)を使用します。
+**A:** できます。 コードが TFS にある場合は、[TFS Config コマンド](/tfs/server/ref/command-line/tfsconfig-cmd) と共に [CodeIndex コマンド](../ide/codeindex-command.md)を使用します。
+
+### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Q: ソリューションを最初に開いたときに、ファイルに CodeLens テスト インジケーターが表示されなくなります。 これを読み込むにはどうすればよいですか。
+
+**A:** プロジェクトをリビルドし、ファイルに読み込む CodeLens テスト インジケーターを取得します。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on)がオンになっていることを確認します。 パフォーマンスを向上させるため、Visual Studio では、コード ファイルが読み込まれるときにテスト インジケーターのソース情報がフェッチされなくなります。 テスト インジケーターは、ビルド後、または**テスト エクスプローラー**でダブルクリックしてテストに移動するときに読み込まれます。
 
 ## <a name="see-also"></a>関連項目
 

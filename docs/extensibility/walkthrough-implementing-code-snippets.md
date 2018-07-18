@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148689"
 ---
 # <a name="walkthrough-implementing-code-snippets"></a>チュートリアル: コード スニペットの実装
 コード スニペットを作成し、エディターの拡張機能に含める拡張機能のユーザーが独自のコードを追加できるようにできます。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
      **%InstallDir%\TestSnippets\Snippets\1033\\**  
   
-     ここで*%installdir%*は Visual Studio インストール フォルダーです。 (はこのパスは、コード スニペットをインストールする通常使用されますが、パスを指定できます、します。)  
+     ここで *%installdir%* は Visual Studio インストール フォルダーです。 (はこのパスは、コード スニペットをインストールする通常使用されますが、パスを指定できます、します。)  
   
 2.  \1033\ フォルダーに .xml ファイルを作成し、名前**TestSnippets.xml**です。 (はこの名前は、インデックス ファイルのスニペット通常使用されますが、指定できます任意の名前、.xml ファイル名拡張子がある限り。)次のテキストを追加しプレース ホルダーの GUID を削除し、独自に追加します。  
   

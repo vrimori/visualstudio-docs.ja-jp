@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128105"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>デバッガーを拡張するためのロードマップ
 このドキュメントを拡張するためのガイドとリファレンスの情報を提供、[!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)]とデバッガー、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476225"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>方法: WPF トレース情報を表示する
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] WPF アプリケーションからデバッグ トレース情報を受信してでその情報を表示できます、**出力**ウィンドウです。 デバッグ トレース情報を表示するには、WPF トレースを有効にする必要があります。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/18/2018
   
      これらのトレース情報レベルが持つ意味の詳細については、「<xref:System.Diagnostics.SourceLevels>」を参照してください。  
   
-9. **[OK]**をクリックします。  
+9. **[OK]** をクリックします。  
   
 ### <a name="to-disable-wpf-trace-information"></a>WPF トレース情報を無効にするには  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/18/2018
   
 7.  ドロップダウン リストをクリックし、選択**オフ**です。  
   
-8.  **[OK]**をクリックします。  
+8.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
  [WPF のデバッグ](../debugger/debugging-wpf.md)

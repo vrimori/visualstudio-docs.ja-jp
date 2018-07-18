@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146846"
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
 このセクションには、Visual Studio SDK を使用する開発者の Visual Studio の名前空間、関連する名前空間、および関心のある他の領域に関する情報が含まれています。  

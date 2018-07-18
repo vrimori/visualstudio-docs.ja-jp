@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954138"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 、ドラッグ アンド ドロップおよびダブルクリック ハンドラーと呼ばれる*ジェスチャ ハンドラー*です。

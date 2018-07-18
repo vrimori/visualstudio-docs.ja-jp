@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31558933"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista の ClickOnce 配置
 Visual Studio でアプリケーションの構築 Windows Vista でユーザー アカウント制御 (UAC) は、通常、埋め込みマニフェストを生成するには、アプリケーションの実行可能ファイルに XML データをバイナリとしてにエンコードされます。 ClickOnce と登録を必要としない COM アプリケーションは外部マニフェストが必要なために、Visual Studio はこれらの種類の埋め込まれたマニフェストではなく、UAC データを含むプロジェクト ファイルを生成します。 Visual Studio の既定では、ユーザーが (ClickOnce と登録を必要としない COM デプロイメント用)、外部の UAC マニフェスト情報を生成するか、アプリケーションの実行可能ファイル (それ以外の場合は) に埋め込むアプリケーション マニフェストと呼ばれるファイルから情報が使用されます。 Visual Studio には、マニフェスト生成のための次のオプションが用意されています。  

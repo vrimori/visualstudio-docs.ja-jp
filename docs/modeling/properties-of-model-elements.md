@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947717"
 ---
 # <a name="properties-of-model-elements"></a>モデル要素のプロパティ
 このセクションでは、DSL 定義ダイアグラムまたは DSL のエクスプ ローラーで要素を選択するときに、[プロパティ] ウィンドウに表示されるプロパティを一覧表示します。

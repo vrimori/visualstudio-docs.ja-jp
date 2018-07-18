@@ -1,13 +1,13 @@
 ---
-title: "JsParseSerializedScriptWithCallback 関数 | Microsoft Docs"
-ms.custom: 
+title: JsParseSerializedScriptWithCallback 関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a93ecfb-4b82-4a85-b24c-6816db2332ea
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -16,6 +16,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24568842"
 ---
 # <a name="jsparseserializedscriptwithcallback-function"></a>JsParseSerializedScriptWithCallback 関数
 シリアル化されたスクリプトを解析し、スクリプトを表す関数を返します。     必要な場合のみ、スクリプト ソースの遅延読み込みを行う機能を提供します。  

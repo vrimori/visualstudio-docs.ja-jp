@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d82b40c7f0f06925be0fc6f55c5a01a4114946e
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 6fabaa7b1df2522abd9e76a8e4772a2f8111cfe9
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748086"
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 
@@ -35,29 +36,29 @@ IntelliSense は、コード作成をより便利にするための一連の機�
 
 アイコンとその意味の一覧は、「[[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン](../ide/class-view-and-object-browser-icons.md)」を参照してください。
 
-![Visual C&#43;&#43; の [入力候補] ウィンドウ](../ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")
+![Visual C&#43;&#43; の入力候補ウィンドウ](../ide/media/vs2015_cpp_complete_word.png)
 
 メンバーの一覧を最初に起動するときに、現在のコンテキストにアクセス可能であるメンバーだけが表示されます。 その後 **Ctrl**+**J** キーを押すと、アクセシビリティにかかわらず、すべてのメンバーが表示されます。 3 回目に実行すると、プログラム要素のより多くの一覧が表示されます。 **[テキスト エディター]** > **[C/C++]** > **[ 全般]** > **[自動メンバー表示]** の **[オプション]** ダイアログ ボックスでメンバーの一覧をオフに切り替えることができます。
 
-![Visual C&#43;&#43; メンバーの一覧](../ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")
+![Visual C&#43;&#43; のメンバー リスト](../ide/media/vs2015_cpp_list_members.png)
 
 ### <a name="parameter-help"></a>パラメーターのヘルプ
 
 関数呼び出しで左中かっこを入力するか、クラス テンプレートの変数宣言で山かっこを入力すると、エディターは関数またはコンストラクターの各オーバーロードのパラメーターの型を含む小さいウィンドウを表示します。 &mdash;カーソルの場所&mdash;に基づく「現在」のパラメーターは、太字で表示します。 **[テキスト エディター]** > **[C/C++]** > **[全般]** > **[パラメーター情報]** の **[オプション]** ダイアログ ボックスでパラメーター情報をオフにすることができます。
 
-![Visual C&#43;&#43; のパラメーターのヘルプ](../ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")
+![Visual C&#43;&#43; パラメーターのヘルプ](../ide/media/vs_2015_cpp_param_help.png)
 
 ### <a name="quick-info"></a>クイック ヒント
 
 変数の上にマウス カーソルを移動すると、小さなウィンドウがインラインで表示され、型の情報と型が定義されているヘッダーが表示されます。 関数のシグネチャを表示するには、関数呼び出しの上にカーソルを置きます。 **[テキスト エディター]** > **[C/C++]** > **[詳細]** > **[自動クイック ヒント]** の **[オプション]** ダイアログ ボックスでクイック ヒントをオフにすることができます。
 
-![Visual C&#43;&#43; のクイックヒント](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
+![Visual C&#43;&#43; の QuickInfo](../ide/media/vs2015_cpp_quickinfo.png)
 
 ### <a name="error-squiggles"></a>エラーの波線
 
 プログラム要素 (変数、キーワード、中かっこ、型名など) の下の波線は、コード内のエラーや潜在的なエラーに注意を引くためのものです。 まだ実装を記述する必要があることを通知するために、事前宣言を記述するときに、緑の波線が表示されます。 Windows のコンテキストで作業しているものの、Android のコンテキストではエラーになる内容を入力するなど、現在アクティブでないコードにエラーがある場合、共有プロジェクトに紫の波線が表示されます。 赤の波線は、コンパイラ エラーまたは警告が現在のコードにあり、対処する必要があることを示します。
 
-![Visual C&#43;&#43; のエラーの波線](../ide/media/vs2015_cpp_error_quiggles.png "vs2015_cpp_error_quiggles")
+![Visual C&#43;&#43; のエラーの波線](../ide/media/vs2015_cpp_error_quiggles.png)
 
 ### <a name="code-colorization-and-fonts"></a>コードの色付けとフォント
 
@@ -69,7 +70,7 @@ IntelliSense は、コード作成をより便利にするための一連の機�
 
 ここでは、Android や iOS 用にビルドするように構成されている OpenGLES アプリケーションを示します。 この図は編集中の共有コードを示します。 最初の図では、Android がアクティブなプロジェクトです。
 
-![Android プロジェクトはアクティブなプロジェクトです。](../ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")
+![Android プロジェクトは、アクティブなプロジェクトです。](../ide/media/intellisensecppcrossplatform.png)
 
 次の点に注意してください。
 
@@ -81,7 +82,7 @@ IntelliSense は、コード作成をより便利にするための一連の機�
 
 ここで、アクティブなプロジェクトを **iOS.StaticLibrary** に変更し、波線がどう変化するかに注目してください。
 
-![アクティブなプロジェクトとして iOS が選択されています。](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")
+![アクティブなプロジェクトとして iOS が選択されています。](../ide/media/intellisensecppcrossplatform2.png)
 
 次の点に注意してください。
 
@@ -95,11 +96,11 @@ IntelliSense は、コード作成をより便利にするための一連の機�
 
 プロジェクトの外部で 1 つのファイルを開いても、やはり IntelliSense を取得します。 **[テキスト エディター]** > **[C/C++]** > **[詳細設定]** の **[オプション]** ダイアログ ボックスで特定の IntelliSense 機能を有効または無効にすることができます。 プロジェクトの一部ではない 1 つのファイルに IntelliSense を構成するには、**IntelliSense を表示し、非プロジェクト ファイルのセクション**を確認します。
 
-![Visual C&#43;&#43; の単一ファイルの IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")
+![Visual C&#43;&#43; の単一ファイルの Intellisense](../ide/media/vs2015_cpp_single_file_intellisense.png)
 
 既定では、単一ファイルの IntelliSense は標準のインクルード ディレクトリだけを使用してヘッダー ファイルを検索します。 他にディレクトリを追加するには、次の図に示すとおり、**ソリューション** ノードのショートカット メニューを開き、**[デバッグ ソース ファイル]** リストにディレクトリを追加します。
 
-![ヘッダー ファイルまでのパスを追加しています。](../ide/media/intellisensedebugyourcode.jpg "IntelliSenseDebugYourCode")
+![ヘッダー ファイルまでのパスを追加しています。](../ide/media/intellisensedebugyourcode.jpg)
 
 ## <a name="see-also"></a>関連項目
 

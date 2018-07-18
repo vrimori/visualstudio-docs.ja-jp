@@ -1,16 +1,16 @@
 ---
-title: "IActiveScriptSiteDebugEx インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScriptSiteDebugEx インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IActiveScriptSiteDebugEx Interface
 ms.assetid: 76869378-1a7b-47bd-8cd0-acc31f91d58d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24725042"
 ---
 # <a name="iactivescriptsitedebugex-interface"></a>IActiveScriptSiteDebugEx インターフェイス
 と共にこのインターフェイスを実装して、`IActiveScriptSiteDebug`インターフェイスのアプリケーションの実行時エラーの通知を取得し、必要に応じて、デバッグ用のアプリケーションにアタッチする必要があるホストを作成している場合。 プロセスをデバッグ マネージャーを使用して通知を提供する`IActiveScriptDebug`ジャスト イン タイム スクリプト デバッガーが見つからない場合は、コンピューターにします。 ジャスト イン タイム スクリプト デバッガーがない場合は、PDM 提供を通じて通知`IActiveScriptDebugEx`代わりにします。  

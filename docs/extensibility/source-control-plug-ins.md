@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140217"
 ---
 # <a name="source-control-plug-ins"></a>ソース管理プラグイン
 ソース管理プラグイン SDK リファレンス セクションには、により、ソース管理システムと統合する完全なインターフェイスの仕様が含まれています。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 ソース管理プラグインを持つインターフェイスを実装する必要がある、さまざまな関数とデータ型のセマンティクスと構文を指定、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。  

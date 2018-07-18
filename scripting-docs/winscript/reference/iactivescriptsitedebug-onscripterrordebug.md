@@ -1,11 +1,11 @@
 ---
-title: "IActiveScriptSiteDebug::OnScriptErrorDebug |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScriptSiteDebug::OnScriptErrorDebug |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptSiteDebug.OnScriptErrorDebug
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptSiteDebug::OnScriptErrorDebug
 ms.assetid: 87f201da-36eb-49a2-b000-e1e1e8c4cdb7
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24724992"
 ---
 # <a name="iactivescriptsitedebugonscripterrordebug"></a>IActiveScriptSiteDebug::OnScriptErrorDebug
 により、スマート ホストは実行時エラーを処理する方法を決定します。  

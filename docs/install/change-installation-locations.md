@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio 2017 でインストールの場所を変更する
 description: ダウンロード キャッシュ、共有コンポーネント、SDK、ツールの場所を異なるドライブに変更することによって、システム ドライブのインストール占有領域を減らす方法について説明します。
 ms.date: 05/07/2018
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33995781"
 ---
 # <a name="change-the-installation-locations-in-visual-studio-2017"></a>Visual Studio 2017 でインストールの場所を変更する
 

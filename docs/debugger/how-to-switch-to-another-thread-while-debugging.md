@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475685"
 ---
 # <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio"></a>方法: Visual Studio でのデバッグ中に別のスレッドに切り替える
 マルチ スレッド アプリケーションをデバッグするときに、別のスレッドで作業しているスレッドから切り替えるにはいくつかの方法のいずれかを使用できます。

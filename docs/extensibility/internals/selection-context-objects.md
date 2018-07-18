@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131266"
 ---
 # <a name="selection-context-objects"></a>コンテキスト オブジェクトの選択
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) では、グローバルの選択コンテキスト オブジェクトを使用して、IDE で何を表示するかを判断します。 IDE では、各ウィンドウは、グローバルの選択コンテキストにプッシュされた独自の選択コンテキスト オブジェクトができます。 IDE は、そのウィンドウにフォーカスがあるときにウィンドウから値を持つグローバルの選択コンテキストを更新します。 詳細については、次を参照してください。[をユーザーにフィードバック](../../extensibility/internals/feedback-to-the-user.md)です。  

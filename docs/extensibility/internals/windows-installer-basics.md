@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144751"
 ---
 # <a name="windows-installer-basics"></a>Windows インストーラーの基本操作
 Windows インストーラーは、Windows インストーラー コンポーネント (WICs またはだけコンポーネントとも呼ばれます) と呼ばれる単位でこれらのタスクを実行するアプリケーションやユーザーのコンピューター上のソフトウェア製品をアンインストールします。 インストールと Windows インストーラーを使用して設定に対する参照カウントの基本単位は、各 WIC を識別する GUID。  

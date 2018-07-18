@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952301"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 次の手順では、図形、またはアイコン デコレーターのクリックをインターセプトする方法を示します。 クリックをインターセプトできますをダブルクリックしたにドラッグすると、その他のジェスチャ、し応答要素を作成します。

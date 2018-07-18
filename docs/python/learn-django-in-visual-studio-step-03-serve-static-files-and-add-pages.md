@@ -11,17 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b267c4963eede53f433bd929eb7944ad53e9a8ba
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: d94ef95b8ba50f4cf9359bb925d41243ea58df7d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750335"
 ---
 # <a name="tutorial-step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>チュートリアル手順 3: 静的ファイルを提供し、ページを追加して、テンプレートの継承を使用する
 
 **前の手順: [ビューおよびページ テンプレートを使用して Django アプリを作成する](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
-このチュートリアルの前の手順では、自己完結型 HTML の単一のページを使って最小限の Django アプリを作成する方法を学びました。 しかし、最新の Web アプリは通常、多数のページで構成されており、CSS や JavaScript などの共有リソースと、一貫したスタイル設定や動作を提供するファイルを活用します。
+このチュートリアルの前の手順では、自己完結型 HTML の単一のページを使って最小限の Django アプリを作成する方法を学びました。 ただし、最新の Web アプリは通常、多数のページで構成されており、CSS や JavaScript ファイルなどの共有リソースを活用して、一貫したスタイル設定や動作を提供します。
 
 この手順では、次の方法を学習します。
 
@@ -40,8 +41,6 @@ Django アプリを開発する場合、通常、より多くの Python、HTML�
 ![Visual Studio の新しい項目の追加ダイアログ](media/django/step03-add-new-item-dialog.png)
 
 テンプレートを使用するには、目的のテンプレートを選択して、ファイルの名前を指定し、**[OK]** をクリックします。 この方法で項目を追加すると、Visual Studio プロジェクトに自動的にファイルを追加して、ソース管理への変更にマーク付けされます。
-
-また、Visual Studio では、よく使用されるオプションが **[追加]** メニューに直接追加されます。 たとえば、Python プロジェクトでは、**[追加]** メニューの下部に **[HTML ページ]** または **[スタイル シート]** コマンドが表示されます。これらのコマンドでは、ファイル名の入力を求め、ファイルを作成します。
 
 ### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>質問: Visual Studio では、提供する項目テンプレートをどのように把握していますか。
 
@@ -183,11 +182,11 @@ Django のテンプレート システムでは、複数のテンプレート間
 
 どちらの場合も、`<template_path>` はアプリの `templates` フォルダーへの相対です (`../` または `./` も許可されます)。
 
-基本テンプレートでは、`{% block <block_name> %}` と `{% endblock %}` タグを使用してブロックを表現します。 参照元テンプレートで同じブロック名のタグを使用している場合、基本テンプレートの内容は、そのブロックの内容で上書きされます。
+基本テンプレートでは、`{% block <block_name> %}` と `{% endblock %}` タグを使用してブロックを表現します。 参照元テンプレートで同じブロック名のタグを使用している場合、基本テンプレートの内容は、そのブロックの内容でオーバーライドされます。
 
 次の手順では、継承を例示します。
 
-1. アプリの `templates/HelloDjangoApp` フォルダーで、`layout.html` という新しい HTML ファイルを作成し (**[追加]** > **[新しい項目]** コンテキスト メニュ、または **[追加]** > **[HTML ページ]** を使用する)、以下の内容を貼り付けます。 このテンプレートが含む "content" というブロックは、参照元ページで置き換える必要があることがわかります。
+1. アプリの `templates/HelloDjangoApp` フォルダーで、`layout.html` という新しい HTML ファイルを作成し (**[追加]** > **[新しい項目]** コンテキスト メニュー、または **[追加]** > **[HTML ページ]** を使用)、以下のマークアップで置き換えます。 このテンプレートが含む "content" というブロックは、参照元ページで置き換える必要があることがわかります。
 
     ```html
     <!DOCTYPE html>
@@ -249,7 +248,7 @@ Django のテンプレート システムでは、複数のテンプレート間
     }
     ```
 
-1. 基本テンプレートを参照して content ブロックを上書きするように、`templates/HelloDjangoApp/index.html` を変更します。 継承を使用することで、このテンプレートがシンプルになることがわかります。
+1. 基本テンプレートを参照して content ブロックをオーバーライドするように、`templates/HelloDjangoApp/index.html` を変更します。 継承を使用することで、このテンプレートがシンプルになることがわかります。
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -258,7 +257,7 @@ Django のテンプレート システムでは、複数のテンプレート間
     {% endblock %}
     ```
 
-1. また、基本テンプレートを参照して content ブロックを上書きするように、`templates/HelloDjangoApp/about.html` を次のように変更します。
+1. また、基本テンプレートを参照して content ブロックをオーバーライドするように、`templates/HelloDjangoApp/about.html` を次のように変更します。
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}

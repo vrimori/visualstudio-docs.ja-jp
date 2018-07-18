@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135653"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>従来の言語サービスでのアウトライン
 アウトライン表示できるようになります概要またはアウトラインに複雑なプログラムを折りたたみます。 たとえば、c# ですべてのメソッドを折りたためるメソッド シグネチャのみを示す 1 つの行にします。 さらに、構造体とクラスは、構造体とクラス名のみを表示のために折りたたむことができます。 1 つのメソッドの内部に複雑なロジックを折りたためるなどのステートメントの最初の行だけを表示することによって、全体的なフローを表示する`foreach`、 `if`、および`while`です。  

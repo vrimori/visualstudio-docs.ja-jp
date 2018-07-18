@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31572518"
 ---
 # <a name="updatemanifest-task"></a>UpdateManifest タスク
 マニフェスト内の選択したプロパティを更新し、再署名します。  

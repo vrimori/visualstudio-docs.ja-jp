@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476898"
 ---
 # <a name="threads-view"></a>スレッド ビュー
 スレッド ビューでは、システム上のウィンドウに関連付けられているすべてのスレッドのフラットな一覧を示します。 各スレッドのモジュール名とスレッド ID が表示されます。 プロセスは含まれていませんが、選択したスレッドを所有するプロセスを簡単に見つけることができます。  

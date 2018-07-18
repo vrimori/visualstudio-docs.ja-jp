@@ -24,6 +24,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31558010"
 ---
 # <a name="how-to-specify-a-publish-page-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションの発行ページを指定する
 発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションで、既定の Web ページ (publish.htm) が生成され、アプリケーションと共に発行します。 このページは、アプリケーション、アプリケーションや、前提条件のインストールへのリンク、および説明するヘルプ トピックへのリンクの名前を含む[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 **ページを公開**、プロジェクトのプロパティでは、Web ページの名前を指定することができます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-specify-a-custom-web-page-for-a-clickonce-application"></a>ClickOnce アプリケーションのカスタム Web ページを指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  選択、**発行**ウィンドウです。  
   
@@ -44,11 +45,11 @@ ms.lasthandoff: 04/19/2018
   
 5.  **発行オプション** ダイアログ ボックスで、ことを確認して、**発行後に web ページを開いている配置** チェック ボックスをオン (既定では、選択する必要があります)。  
   
-6.  **配置 web ページ:**ボックスで、Web ページの名前を入力し、をクリックして**OK**です。  
+6.  **配置 web ページ:** ボックスで、Web ページの名前を入力し、をクリックして**OK**です。  
   
 ### <a name="to-prevent-the-publish-page-from-launching-each-time-you-publish"></a>[発行] ページを発行するたびを起動できないようにするには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  選択、**発行**ウィンドウです。  
   

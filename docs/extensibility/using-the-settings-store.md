@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139290"
 ---
 # <a name="using-the-settings-store"></a>設定ストアを使用します。
 2 つの種類の設定ストアがあります。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  実験用インスタンスの上、**ツール** メニューのをクリックして**呼び出す SettingsStoreCommand**です。  
   
-     示すメッセージ ボックスが表示されるはず**Microsoft Windows Phone 開発者ツール:**続く**True**または**False**です。  
+     示すメッセージ ボックスが表示されるはず**Microsoft Windows Phone 開発者ツール:** 続く**True**または**False**です。  
   
  Visual Studio では、システム レジストリの設定ストアを保存します。  
   

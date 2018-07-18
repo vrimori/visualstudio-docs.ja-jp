@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139761"
 ---
 # <a name="ngen-support-in-vsix-v3"></a>VSIX v3 の Ngen のサポート
 
@@ -59,7 +60,7 @@ Visual Studio 2017 と新しい VSIX v3 (バージョン 3) の拡張機能マ�
 </ProjectReference>
  ```
 
- >**注:**したい場合、.csproj ファイルを直接、編集することができます。
+ >**注:** したい場合、.csproj ファイルを直接、編集することができます。
 
 ## <a name="extra-information"></a>追加情報
 

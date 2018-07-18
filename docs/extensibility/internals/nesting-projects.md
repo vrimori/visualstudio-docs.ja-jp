@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131161"
 ---
 # <a name="nesting-projects"></a>入れ子のプロジェクト
 VS パッケージを使用するエンタープライズ アプリケーション開発者が類似した種類のプロジェクトでまとめてグループ化できます便利[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を使用して*プロジェクトの入れ子*です。 たとえば、エンタープライズ テンプレート プロジェクトは、カテゴリにプロジェクトをグループ化の入れ子になったプロジェクトを使用します。 ビジネス ファサード プロジェクトや Web UI プロジェクトの場合は、1 つのカテゴリにグループ化。  

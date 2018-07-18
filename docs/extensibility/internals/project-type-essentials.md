@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134422"
 ---
 # <a name="project-type-essentials"></a>プロジェクトの種類の基本事項
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] などの言語のいくつかのプロジェクトの種類が含まれる[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]または[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]です。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 独自のプロジェクトの種類を作成することもできます。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137477"
 ---
 # <a name="understanding-and-diagnosing-ui-unresponsiveness-caused-by-extensions"></a>理解して、UI の応答がない拡張機能で原因を診断します。
 

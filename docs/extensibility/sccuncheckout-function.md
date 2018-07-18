@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137341"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout 関数
 この関数には、選択したファイルまたはファイルの内容をチェック アウト前の状態に復元できるため、前のチェック アウト操作が元に戻します。 チェック アウト後ファイルに加えられたすべての変更は失われます。  

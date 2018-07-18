@@ -33,6 +33,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31575726"
 ---
 # <a name="midl-task"></a>MIDL タスク
 Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Definition Language) コンパイラ ツール (midl.exe) をラップします。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトの「MIDL Command-Line Reference (MIDL コマンド ライン リファレンス)」を参照してください。  

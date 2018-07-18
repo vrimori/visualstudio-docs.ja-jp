@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31953598"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK により、ドメイン固有言語 (DSL) モデルのロックの一部またはすべてのプログラムの読み取りが変更されていないことができるようにします。 この読み取り専用のオプションでしたするなど、使用できるように、ユーザーが仕事仲間に注釈を付け、DSL モデルの確認を求めることができますが、変更、元の変更を禁止することができます。

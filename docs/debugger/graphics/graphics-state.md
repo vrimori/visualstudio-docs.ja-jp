@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476381"
 ---
 # <a name="graphics-state"></a>グラフィックスの状態
 Visual Studio のグラフィックス診断の [状態] ウィンドウでは、描画呼び出しなど、現在のイベントの時点でアクティブになっているグラフィックスの状態を理解することができます。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24645872"
 ---
 # <a name="iactivescriptparseprocedure32"></a>IActiveScriptParseProcedure32
 実装する、Windows スクリプト エンジンでは、スクリプトに追加する手順については、ソース コードのテキストを許可している場合、`IActiveScriptParseProcedure32`インターフェイスです。 これにより、VBScript などの独立したオーサリング環境がない変換のスクリプト言語は代替メカニズム (以外の`IActiveScriptParse32`または`IPersist`*) スクリプト プロシージャを名前空間に追加するのにします。  

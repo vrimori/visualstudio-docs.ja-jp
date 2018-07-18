@@ -22,6 +22,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263455"
 ---
 # <a name="data-in-office-solutions"></a>Office ソリューションにおけるデータ
   多くの Office ソリューションでは、ユーザーがデータを取得したり変更したりできるようにします。 Visual Studio を使用して Office ソリューションを作成する場合、さまざまな方法でデータを操作できます。  

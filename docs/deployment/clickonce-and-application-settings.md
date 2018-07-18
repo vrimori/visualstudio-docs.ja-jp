@@ -21,6 +21,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31561702"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
 Windows フォームのアプリケーション設定を簡単を作成、格納、およびカスタム アプリケーションと、クライアント上のユーザー設定を管理できます。 次のドキュメントでは、ClickOnce アプリケーションにおけるアプリケーション設定ファイルのしくみし、ユーザーは、次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  

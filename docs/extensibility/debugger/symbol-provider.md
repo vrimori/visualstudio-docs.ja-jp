@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126173"
 ---
 # <a name="symbol-provider"></a>プロバイダーのシンボル
 式エバリュエーターの実装は、変数や式を評価するために、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスする必要があります。 これには、シンボル ハンドラーとも呼ばれます。 シンボル プロバイダー (SP) のインターフェイスを使用します。  

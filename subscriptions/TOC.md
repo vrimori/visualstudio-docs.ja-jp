@@ -1,4 +1,5 @@
 # [Visual Studio サブスクリプション](index.md)
+## [新機能](whats-new-in-subscriptions.md)
 ## サブスクライバーのエクスペリエンス
 ### [サブスクライバー ポータルの使用](using-the-subscriber-portal.md)
 #### [リテール サブスクリプションのアクティブ化](activate-store-subscriptions.md)
@@ -64,7 +65,7 @@
 #### [有効期限が切れたサブスクリプション](handle-expired-license.md)
 #### [個人用電子メール サインインを持つサブスクライバー](personal-email-sign-ins.md)
 ## Visual Studio サブスクリプションを取得する
-### [サブスクリプション オプションを比較する](https://www.visualstudio.com/vs/pricing)
+### [サブスクリプション オプションを比較する](https://visualstudio.microsoft.com/vs/pricing)
 ### クラウド サブスクリプションの購入
 #### [概要](vscloud-overview.md)
 #### [請求に関する FAQ](vscloud-billing-faq.md)
@@ -75,8 +76,8 @@
 #### [Microsoft for Startups](program-startups.md)
 ## リソース
 ### [Visual Studio ライセンス ホワイト ペーパー](http://aka.ms/vslicensing)
-### [サブスクリプション オプションと価格を比較する](https://www.visualstudio.com/vs/pricing)
-### [Visual Studio IDE 機能を比較する](https://www.visualstudio.com/vs/compare)
-### [Visual Studio の管理とサブスクリプションのサポート](https://www.visualstudio.com/support/support-overview-vs)
+### [サブスクリプション オプションと価格を比較する](https://visualstudio.microsoft.com/vs/pricing)
+### [Visual Studio IDE 機能を比較する](https://visualstudio.microsoft.com/vs/compare)
+### [Visual Studio の管理とサブスクリプションのサポート](https://visualstudio.microsoft.com/support/support-overview-vs)
 ### [ボリューム ライセンスの契約条件](https://www.microsoft.com/en-us/licensing/product-licensing/products.aspx)
 ### [Microsoft Products and Services Agreement (MPSA)](https://www.microsoft.com/en-us/licensing/mpsa/default.aspx)

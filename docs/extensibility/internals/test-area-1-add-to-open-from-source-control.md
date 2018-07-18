@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134735"
 ---
 # <a name="test-area-1-add-toopen-from-source-control"></a>テスト範囲 1: ソース管理からに/開いてを追加します。
 このソース管理プラグインをテスト ソリューションまたはプロジェクトをソース管理下に配置して、ソース管理から取得して、領域について説明します。  

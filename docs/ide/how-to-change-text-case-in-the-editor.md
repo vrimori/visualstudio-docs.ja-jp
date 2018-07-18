@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446063"
 ---
 # <a name="how-to-change-text-case-in-the-editor"></a>方法 : エディター内のテキストの大文字と小文字を変更する
 

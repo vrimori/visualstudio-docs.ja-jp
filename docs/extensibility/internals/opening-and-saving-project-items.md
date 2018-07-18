@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130603"
 ---
 # <a name="opening-and-saving-project-items"></a>開くと、プロジェクト項目の保存
 新しいプロジェクトの種類を追加すると、する場合は、開始タグとに、プロジェクト ファイルの保存を管理する必要があります、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 次のトピックでは、オープンとファイルを保存する別の方法について説明します。  

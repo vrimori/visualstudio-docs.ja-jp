@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948263"
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>方法: ドメイン固有言語の名前空間を変更する
 ドメイン固有言語の名前空間を変更することができます。 変更を行う必要があります、 **DSL のエクスプ ローラー**、Dsl パッケージ プロジェクトのプロパティおよびアセンブリ情報です。
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/26/2018
 
 10. Visual Studio 実験用インスタンスをリセットします。
 
-    1.  削除 **\Users\\***、{name}*** \AppData\Local\Microsoft\VisualStudio\\\*Exp**
+    1.  削除**\Users\\ ***、{name}*** \AppData\Local\Microsoft\VisualStudio\\\*Exp**
 
     2.  Windows の**開始**] メニューの [選択**すべてのプログラム**、 **Microsoft Visual Studio 2010 SDK**、**ツール**、**リセット、実験用インスタンス**です。
 

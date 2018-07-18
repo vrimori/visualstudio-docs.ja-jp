@@ -1,18 +1,18 @@
 ---
-title: "Windows ランタイムの非同期メソッドの使用 | Microsoft Docs"
-ms.custom: 
+title: Windows ランタイムの非同期メソッドの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - JavaScript, Windows Runtime asynchronous methods
 ms.assetid: 70756833-44f7-4383-827f-2ac781558082
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -21,6 +21,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24571452"
 ---
 # <a name="using-windows-runtime-asynchronous-methods"></a>Windows ランタイムの非同期メソッドの使用
 完了するまでに時間のかかるメソッドをはじめ、Windows ランタイム メソッドの多くは、非同期メソッドです。 一般に、非同期メソッドは非同期アクションまたは非同期操作を返します (`Windows.Foundation.IAsyncAction`、`Windows.Foundation.IAsyncOperation`、`Windows.Foundation.IAsyncActionWithProgress`、`Windows.Foundation.IAsyncOperationWithProgress` など)。 JavaScript では、これらのメソッドは [CommonJS/Promises/A](http://go.microsoft.com/fwlink/p/?LinkId=244434) のパターンで表されます。 つまり、これらのメソッドは [then](https://msdn.microsoft.com/en-us/library/windows/apps/br229728.aspx) 関数を含む Promise オブジェクトを返すため、操作が成功した場合に結果を処理する `completed` 関数を提供する必要があります。 エラー ハンドラーを提供しない場合は、`then` 関数の代わりに [done](https://msdn.microsoft.com/en-us/library/windows/apps/hh701079.aspx) 関数を使用してください。  

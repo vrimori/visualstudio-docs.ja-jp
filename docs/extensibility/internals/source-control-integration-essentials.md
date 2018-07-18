@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132035"
 ---
 # <a name="source-control-integration-essentials"></a>ソース コントロール Essentials の統合
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース管理の統合の 2 つの種類をサポートします: ソース管理プラグインを基本的な機能を提供し、使用して (旧称 MSSCCI API)、ソース管理プラグイン API と VSPackage に基づくソース コントロールの統合ソリューションをビルドします。堅牢な機能を提供します。  

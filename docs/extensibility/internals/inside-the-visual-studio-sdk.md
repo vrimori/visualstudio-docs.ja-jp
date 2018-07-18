@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134563"
 ---
 # <a name="inside-the-visual-studio-sdk"></a>Visual Studio SDK の内部
 このセクションでは、Visual Studio アーキテクチャ、コンポーネント、サービス、スキーマ、ユーティリティ、および、like をなど、Visual Studio 拡張機能に関する詳細情報を提供します。  

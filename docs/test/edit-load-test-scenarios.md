@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのロード テスト シナリオの編集 | Microsoft Docs
+title: Visual Studio でのロード テスト シナリオの編集
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,14 @@ ms.assetid: fec04f2e-bf38-4d44-b2ec-fa50f58fd0d9
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 69416ed6a4e06cccd606e705d97bef94d0825bd7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 91d314d1903598392737d9f72fdfc9fa02239a47
+ms.sourcegitcommit: 893c09d58562c378a4ba057bf2a06bde1c80df90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "35669122"
 ---
 # <a name="edit-load-test-scenarios"></a>ロード テスト シナリオの編集
 
@@ -31,9 +33,8 @@ ms.lasthandoff: 04/16/2018
 
 シナリオには次のコンポーネントが含まれます。
 
-|||
-|-|-|
 |用語|定義|
+|-|-|
 |ブラウザー ミックス|さまざまな Web ブラウザーを使用して仮想ユーザーが Web サイトにアクセスする状況をシミュレートします。|
 |ロード パターン|ロード テスト中にアクティブである仮想ユーザーの数および新しいユーザーが開始される割合を指定します。 たとえば、ステップ、持続、およびゴール志向です。|
 |テスト ミックス モデル|ロード テスト シナリオで仮想ユーザーが指定のテストを実行する確率を指定します。 たとえば、TestA を実行する確率が 20% で、TestB を実行する確率が 80% などです。 テスト ミックス モデルは、特定のシナリオにおけるテストの目的を反映している必要があります。|

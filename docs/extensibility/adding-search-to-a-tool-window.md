@@ -18,6 +18,7 @@ ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32032071"
 ---
 # <a name="adding-search-to-a-tool-window"></a>ツール ウィンドウに検索を追加します。
 作成または拡張機能のツール ウィンドウを更新するときは、Visual Studio で別の場所に表示される同じの検索機能を追加できます。 この機能では、次の機能があります。  

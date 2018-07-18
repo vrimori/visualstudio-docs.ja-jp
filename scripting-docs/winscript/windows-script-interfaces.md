@@ -1,14 +1,14 @@
 ---
-title: "Microsoft スクリプト インターフェイス | Microsoft Docs"
-ms.custom: 
+title: Microsoft スクリプト インターフェイス | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c750627-6797-4857-9f5e-e5f54371f83c
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24571852"
 ---
 # <a name="windows-script-interfaces"></a>Windows スクリプト インターフェイス
 Microsoft Windows スクリプト インターフェイスでは、アプリケーションにスクリプトと OLE オートメーションを追加する手段を提供します。 Windows スクリプトに依存しているスクリプト ホストは、複数のソースおよびベンダーからのスクリプト エンジンを使用して、コンポーネント間のスクリプトを管理することができます。 スクリプト自体の実装 (言語、構文、永続的な形式、実行モデルなど) はスクリプト ベンダーに任されます。  

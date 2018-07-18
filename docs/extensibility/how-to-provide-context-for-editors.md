@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135604"
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを指定
 エディターのコンテキストはアクティブなエディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみです。 次の手順を実行して、エディターのコンテキストを指定できます。  

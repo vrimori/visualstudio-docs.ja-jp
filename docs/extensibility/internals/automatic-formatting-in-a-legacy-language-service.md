@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126701"
 ---
 # <a name="automatic-formatting-in-a-legacy-language-service"></a>自動レガシ言語サービスで書式設定
 自動書式を使用する言語サービスでは、ユーザーは、既知のコード構成体の入力を開始するとコード スニペットが自動的に挿入します。  

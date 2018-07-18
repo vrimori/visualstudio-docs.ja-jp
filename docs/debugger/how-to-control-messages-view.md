@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473200"
 ---
 # <a name="how-to-control-messages-view"></a>方法: メッセージ ビューを制御する
 Spy++ では、内容を細かく制御がある、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウです。 実行できます[開始および停止](../debugger/how-to-start-and-stop-the-message-log-display.md)を指定して、いつでもにメッセージを表示することができます。  

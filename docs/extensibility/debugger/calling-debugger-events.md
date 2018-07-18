@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31100028"
 ---
 # <a name="calling-debugger-events"></a>呼び出し元のデバッガー イベント
 デバッグ セッションのイベントは、特定の順序で発生します。  

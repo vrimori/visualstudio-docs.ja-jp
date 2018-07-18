@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139352"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ です。SCC ファイル
 IDE を使用してソース管理下にある、Visual Studio ソリューションまたはプロジェクトが配置されると、IDE は、文字列の形式でプラグイン ソース管理から 2 つの重要な情報を受信します。 これらの文字列では、"AuxPath"と"ProjName"は、IDE に不透明なは、バージョン管理でソリューションまたはプロジェクトを検索するが、プラグインで使用します。 IDE 通常取得これらの文字列を初めて呼び出すことによって、 [SccGetProjPath](../extensibility/sccgetprojpath-function.md)、それらを以降の呼び出しをソリューションまたはプロジェクト ファイルに保存し、 [SccOpenProject](../extensibility/sccopenproject-function.md)です。 ソリューションとプロジェクト ファイルに埋め込まれているときに、"AuxPath"および"ProjName"文字列が自動的に更新されません、ユーザーは、分岐を分岐します。 または、バージョン管理では、ソリューションおよびプロジェクトのファイルをコピーします。 ソリューションとプロジェクト ファイルがバージョン管理で、正しい場所を指していることを確認するに、ユーザーは、文字列を手動で更新する必要があります。 文字列は不透明にすることを意図した、ので可能性がありますいない常に明確にあります更新方法です。  

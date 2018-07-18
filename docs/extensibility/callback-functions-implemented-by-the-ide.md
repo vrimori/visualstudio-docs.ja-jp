@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109689"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE によって実装されているコールバック関数
 統合してには、、統合されたエンド ユーザー エクスペリエンスを提供できるだけシームレスな統合開発環境 (IDE) ソース管理プラグイン使用できますは IDE によって実装されるコールバック関数。 プラグインを呼び出せるこれらの関数、IDE に情報を渡すのソース管理操作中に適切なタイミングでIDE では、ネイティブ UI に埋め込まれた要素として、この情報を表示できます。 ユーザーは、プラグイン採用独自の UI 場合よりも、このシナリオでは、断片化のエクスペリエンスを持ちます。  

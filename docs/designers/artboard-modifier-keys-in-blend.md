@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31923098"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend のアートボードの修飾キー
 キーボード ショートカットの中には、対応するメニュー項目がないものがあります。このようなショートカットは、[!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] のユーザー インターフェイスに表示されません。 次の表に、オブジェクトのサイズを変更する場合などに、行う操作を変更するショートカットを示します。

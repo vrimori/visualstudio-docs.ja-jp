@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474922"
 ---
 # <a name="message-options-dialog-box"></a>[メッセージ オプション] ダイアログ ボックス
 このダイアログ ボックスを使用して、メッセージは、「[メッセージ ビュー](../debugger/messages-view.md)です。 このダイアログ ボックスを表示するには、**ログ メッセージ**から、**スパイ**メニュー。  

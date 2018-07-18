@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31975067"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>階層リンク バーを使用する方法
 

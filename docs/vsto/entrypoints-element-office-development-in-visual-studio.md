@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448390"
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt;要素 (Visual Studio での Office 開発)
   `entryPoints` 名前空間の `vstav3` の要素には、Office ソリューションに関連付けるすべての `entryPoint` 要素を格納します。  

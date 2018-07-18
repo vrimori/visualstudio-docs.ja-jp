@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130881"
 ---
 # <a name="project-priority"></a>プロジェクトの優先度
 プロジェクト項目は、通常、ソリューション内の 1 つだけのプロジェクトのメンバーです。 そのため、IDE を容易に判別するプロジェクトを使用して、項目を開きます。 ただし、項目が 1 つ以上のプロジェクトのメンバーである場合は、IDE は、最適なプロジェクトの項目を開くことを確認するに優先順位スキームを使用しています。  

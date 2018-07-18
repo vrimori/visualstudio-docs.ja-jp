@@ -18,11 +18,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a61f2cd0e961aaa726f9a56cf75c4efb0ed77ae9
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: caedbf46ce3d56d57a22541f1ddc042d8e41eb48
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572648"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -74,6 +75,7 @@ none または silent | このルールに違反した場合、ユーザーに�
         - dotnet\_style\_require\_accessibility_modifiers
         - csharp\_preferred\_modifier_order
         - visual\_basic\_preferred\_modifier_order
+        - dotnet\_style\_readonly\_field
     - [式レベル基本設定](#expression_level)
         - dotnet\_style\_object_initializer
         - dotnet\_style\_collection_initializer
@@ -238,7 +240,7 @@ dotnet_style_qualification_for_event = false:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
-| dotnet_style_predefined_type_for_locals_ parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
+| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
 | dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし |
 
 **dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**
@@ -298,7 +300,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 #### <a name="normalize_modifiers"></a>修飾子の基本設定
 
-このセクションのスタイル ルールは、アクセシビリティ修飾子を必要とする、必要な修飾子の並べ替え順序を指定するなど、修飾子の基本設定に関するものです。
+このセクションのスタイル ルールは、アクセシビリティ修飾子を必要にする、必要な修飾子の並べ替え順序を指定する、読み取り専用修飾子を必要にするなど、修飾子の基本設定に関するものです。
 
 次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
 
@@ -307,6 +309,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | dotnet_style_require_ accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
 | visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:none | 15.5 |
+| dotnet_style_readonly_field | IDE0044 | C# および Visual Basic | true:提案 | 15.7 |
 
 **dotnet\_style\_require\_accessibility_modifiers**
 
@@ -315,7 +318,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | [値] | 説明 |
 | ----- |:----------- |
 | always | アクセシビリティ修飾子を指定します。 |
-| for\_non\_interface_members | パブリック インターフェイス メンバーの場合を除き、アクセシビリティ修飾子を宣言します。 現時点では、これは **always** とは変わらず、C# で既定のインターフェイス メソッドが追加される場合、将来的には文章校正として機能します。 |
+| for\_non\_interface_members | パブリック インターフェイス メンバーの場合を除き、アクセシビリティ修飾子を宣言します。 これは、**always** と同じであり、C# が既定のインターフェイス メソッドを追加する場合の将来の対策のために追加されています。 |
 | never | アクセシビリティ修飾子を指定しません。 |
 
 コード例:
@@ -325,13 +328,13 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 // dotnet_style_require_accessibility_modifiers = for_non_interface_members
 class MyClass
 {
-    private const string thisFieldIsConst= "constant";
+    private const string thisFieldIsConst = "constant";
 }
 
 // dotnet_style_require_accessibility_modifiers = never
 class MyClass
 {
-    const string thisFieldIsConst= "constant";
+    const string thisFieldIsConst = "constant";
 }
 ```
 
@@ -364,12 +367,35 @@ Public Class MyClass
 End Class
 ```
 
+**dotnet_style_readonly_field**
+
+- このルールが **true** に設定されている場合は、フィールドがインラインまたはコンストラクターの内部でのみ割り当てられている場合は、フィールドを `readonly` (C#) または `ReadOnly` (Visual Basic) でマークする必要があります。
+- このルールが **false** に設定されている場合は、フィールドを `readonly` (C#) または `ReadOnly` (Visual Basic) でマークする必要があるかどうかに関して特に規定がないことを指定します。
+
+コード例:
+
+```csharp
+// dotnet_style_readonly_field = true
+class MyClass
+{
+    private readonly int _daysInYear = 365;
+}
+```
+
+```vb
+' dotnet_style_readonly_field = true
+Public Class MyClass
+    Private ReadOnly daysInYear As Int = 365
+End Class
+```
+
 これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
 [*.{cs,vb}]
 dotnet_style_require_accessibility_modifiers = always:suggestion
+dotnet_style_readonly_field = true:warning
 
 # CSharp code style settings:
 [*.cs]

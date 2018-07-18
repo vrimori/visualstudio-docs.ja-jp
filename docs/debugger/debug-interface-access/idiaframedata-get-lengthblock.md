@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31460597"
 ---
 # <a name="idiaframedatagetlengthblock"></a>IDiaFrameData::get_lengthBlock
 フレームによって記述されたコードのブロックのバイト単位の長さを取得します。  

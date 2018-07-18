@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139277"
 ---
 # <a name="private-galleries"></a>Private Galleries
 コントロール、テンプレート、および投稿することにで開発したツールを共有することができます、*プライベート ギャラリー*次のように、組織のイントラネット上。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>プライベート ギャラリーの拡張機能と更新プログラムを追加するには  
   
-1.  メニュー バーの **[ツール]**、 **[オプション]**の順にクリックします。  
+1.  メニュー バーの **[ツール]**、 **[オプション]** の順にクリックします。  
   
 2.  **環境**ノード、**拡張機能と更新プログラム**です。  
   

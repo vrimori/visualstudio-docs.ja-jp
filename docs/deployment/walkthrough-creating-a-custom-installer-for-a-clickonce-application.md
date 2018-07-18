@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31565420"
 ---
 # <a name="walkthrough-creating-a-custom-installer-for-a-clickonce-application"></a>チュートリアル: ClickOnce アプリケーションのカスタム インストーラーの作成
 .Exe ファイルに基づく ClickOnce アプリケーションをサイレントでインストールおよびカスタム インストーラーによって更新できます。 カスタム インストーラーは、インストール中に、セキュリティやメンテナンスの操作のカスタム ダイアログ ボックスを含むカスタム ユーザー エクスペリエンスを実装できます。 インストールの操作を実行するカスタム インストーラーを使用して、<xref:System.Deployment.Application.InPlaceHostingManager>クラスです。 このチュートリアルでは、ClickOnce アプリケーションをサイレント モードでインストール済みのカスタム インストーラーを作成する方法を示します。  

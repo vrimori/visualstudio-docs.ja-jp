@@ -1,11 +1,11 @@
 ---
-title: "IDebugDocumentText::GetPositionOfLine |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugDocumentText::GetPositionOfLine |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugDocumentText.GetPositionOfLine
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IDebugDocumentText::GetPositionOfLine
 ms.assetid: d1e6e81b-ddec-4a7c-9b6a-d199e3debfc2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24726712"
 ---
 # <a name="idebugdocumenttextgetpositionofline"></a>IDebugDocumentText::GetPositionOfLine
 行の最初の文字に対応する文字位置を返します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31103176"
 ---
 # <a name="implementing-and-registering-a-port-supplier"></a>実装して、ポートのサプライヤーの登録
 ポートのサプライヤーの役割は、追跡し、さらにプロセスの管理のポートを指定します。 ポートを作成する必要がある時点で、(ポート仕入先ユーザーが選択したか、プロジェクト システムによって指定されたポート サプライヤーは、セッション デバッグ マネージャー [SDM] を使用して)、ポート業者の GUID を持つ CoCreate を使用して、ポート業者がインスタンス化されます。 次に呼び出されます、SDM [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)を表示するかどうかは、任意のポートを追加できます。 呼び出して、新しいポートが要求された場合は、ポートを追加することができます、 [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)を渡すこと、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)ポートをについて説明します。 `AddPort` によって表される新しいポートを返す、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイスです。  

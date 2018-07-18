@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31097784"
 ---
 # <a name="accessing-thetext-view-by-using-the-legacy-api"></a>レガシ API を使用してテキスト ビューにアクセスします。
 テキスト ビューは、テキスト バッファーに格納されているテキストのプレゼンテーションです。 テキスト ビューは、次のセクションで示すようにレガシ API を使用してアクセスできます。
