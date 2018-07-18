@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによってドキュメントのプロパティを Word の表を作成 |Microsoft ドキュメント'
+title: '方法: プログラムによって document プロパティを Word の表に読み込む'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,20 +16,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e0feb203e517cffcd859e3094abcee95d532eafc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c202a663f87a77da9a40116b76c2f09e84464ceb
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257447"
 ---
-# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>方法: プログラムによって Document プロパティを Word の表に読み込む
+# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>方法: プログラムによって document プロパティを Word の表に読み込む
   次の例ではドキュメントの先頭に Microsoft Office Word の表を作成し、ホスト ドキュメントのプロパティのデータをそこに読み込みます。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="populating-tables-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズでの表データの読み込み  
+## <a name="populate-tables-in-a-document-level-customization"></a>ドキュメント レベル カスタマイズ内のテーブルを設定します。  
   
-#### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには  
+### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには  
   
 1.  ドキュメントの先頭に、範囲を設定します。  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#89)]
  [!code-csharp[Trin_VstcoreWordAutomation#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#89)]  
   
-## <a name="populating-tables-in-a-vsto-add-in"></a>VSTO アドインでの表データの読み込み  
+## <a name="populate-tables-in-a-vsto-add-in"></a>VSTO アドインのテーブルに設定します。  
   
-#### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには  
+### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには  
   
 1.  ドキュメントの先頭に、範囲を設定します。  
   
@@ -96,8 +97,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_VstcoreWordAutomationAddIn#89](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#89)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって Word の表を作成します。](../vsto/how-to-programmatically-create-word-tables.md)   
- [方法: プログラムによって Word の表のセルにテキストと書式を追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
+ [方法: プログラムによって Word の表を作成](../vsto/how-to-programmatically-create-word-tables.md)   
+ [方法: プログラムによって Word の表のセルにテキストと書式の追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
  [方法: プログラムによって Word の表に行と列を追加](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   

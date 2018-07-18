@@ -1,5 +1,5 @@
 ---
-title: IntelliTrace 機能拡張の API リファレンス |Microsoft ドキュメント
+title: IntelliTrace 機能拡張の API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 907b47aacf7ad0d63c79f22dcf992ac042dd2e7e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0542912c15a92728cd7476b7482782fa7cf65fb2
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457463"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433146"
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace 機能拡張の API リファレンス
 このセクションの情報を使用すると、IntelliTrace 機能拡張 API を使用して、使用しているアプリケーションで .itrace ファイルを読み取ってデコードできます。  
@@ -31,5 +31,5 @@ ms.locfileid: "31457463"
  [IntelliTrace](../debugger/intellitrace.md)  
  IntelliTrace によるデバッグの方法について説明します。  
   
- [MSDN コード ギャラリー](http://go.microsoft.com/fwlink/?LinkId=166091)  
+ [MSDN コード ギャラリー](https://code.msdn.microsoft.com/)  
  IntelliTrace 機能拡張の使用方法を示すサンプル アプリケーションを提供します。

@@ -1,5 +1,5 @@
 ---
-title: DebuggerDisplay 属性の使用 |Microsoft ドキュメント
+title: DebuggerDisplay 属性の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.technology: vs-ide-debug
@@ -14,19 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 054e66914172447e96e2977f81985c52430af115
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 8da672193dcbe12581122a48559c9027f01e77c9
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34573246"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057587"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
 [DebuggerDisplayAttribute クラス](/dotnet/api/system.diagnostics.debuggerdisplayattribute)デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
   
  `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ (`{` と `}`) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
   
- クラスに上書きされた `ToString()` メソッドがある場合、デバッガーは、既定の `{<typeName>}`の代わりに、上書きされたメソッドを使用します。 したがって、 `ToString()` メソッドを上書きした場合、デバッガーは、既定の`{<typeName>}`の代わりに、上書きされたメソッドを使用し、 `DebuggerDisplay`を使用する必要はありません。 両方を使用すると、 `DebuggerDisplay` 属性は、上書きされた `ToString()` メソッドよりも優先されます。  
+ クラスにオーバーライドされた `ToString()` メソッドがある場合、デバッガーは、既定の `{<typeName>}` の代わりに、オーバーライドされたメソッドを使用します。 したがって、`ToString()` メソッドをオーバーライドした場合、デバッガーは、既定の `{<typeName>}` の代わりに、オーバーライドされたメソッドを使用し、`DebuggerDisplay` を使用する必要はありません。 両方を使用すると、`DebuggerDisplay` 属性は、オーバーライドされた `ToString()` メソッドよりも優先されます。  
   
  この暗黙的な `ToString()` 呼び出しがデバッガーで評価されるかどうかは、 **[ツール] / [オプション] / [デバッグ]** ダイアログ ボックスのユーザー設定によって異なります。 Visual Basic は、この暗黙的な `ToString()` 評価を実装しません。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34573246"
   
  autoexp.cs をビルドするには、VS2015 の開発者コマンド プロンプトを開いて、次のコマンドを実行します  
   
-```  
+```cmd
 cd <directory containing autoexp.cs>  
 csc /t:library autoexp.cs  
 ```  
@@ -61,7 +61,7 @@ csc /t:library autoexp.cs
 ## <a name="using-expressions-in-debuggerdisplay"></a>DebuggerDisplay での式の使用  
  DebuggerDisplay 属性では、中かっこ内で一般的な式を使用できますが、この方法はお勧めしません。  
   
- DebuggerDisplay で使用される一般的な式は、対象となる型の現在のインスタンスのみの `this` ポインターに暗黙的にアクセスします。 この式には、エイリアス、ローカル、またはポインターに対するアクセスはありません。 式からプロパティを参照しても、そのプロパティに関する属性は処理されません。 たとえば、c# コード`[DebuggerDisplay("Object {count - 2}")]`表示`Object 6`場合フィールド`count`が 8 です。  
+ DebuggerDisplay で使用される一般的な式は、対象となる型の現在のインスタンスのみの `this` ポインターに暗黙的にアクセスします。 この式には、エイリアス、ローカル、またはポインターに対するアクセスはありません。 式からプロパティを参照しても、そのプロパティに関する属性は処理されません。 たとえば、c# のコード`[DebuggerDisplay("Object {count - 2}")]`表示`Object 6`場合、フィールド`count`が 8。  
   
  DebuggerDisplay で式を使用すると、次のような問題が発生する可能性があります。  
   
@@ -88,7 +88,7 @@ public sealed class MyClass
     }  
 }  
 ```  
-"、Nq"サフィックスが、式エバリュエーターを最終的な値を表示するときに、引用符を削除するように指示 (nq 引用符 = なし)。 
+"、Nq"サフィックスが最終的な値を表示するときに、引用符を削除する、式エバリュエーターを示します (nq = 引用符はありません)。 
   
 ## <a name="example"></a>例  
  次のコード例では、 `DebuggerDisplay`を `DebuggerBrowseable` および `DebuggerTypeProxy`と組み合わせて使用する方法を示します。 **[ウォッチ]** ウィンドウなど、デバッガーの変数ウィンドウに表示されると、次のように展開が作成されます。  
@@ -178,6 +178,6 @@ class MyHashtable
   
 ## <a name="see-also"></a>関連項目  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
- [カスタム ビューの管理オブジェクトを作成します。](../debugger/create-custom-views-of-dot-managed-objects.md)   
+ [管理対象オブジェクトのカスタム ビューを作成します。](../debugger/create-custom-views-of-dot-managed-objects.md)   
  [C# の書式指定子](../debugger/format-specifiers-in-csharp.md)   
  [デバッガー表示属性によるデバッグ機能の拡張](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
