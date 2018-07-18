@@ -1,5 +1,5 @@
 ---
-title: '方法: SharePoint フィーチャーをカスタマイズ |Microsoft ドキュメント'
+title: '方法: SharePoint フィーチャーをカスタマイズ |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,79 +21,79 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f22ec947e9aa3cae15427915bd5aff4122a67797
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9be9ba70bb94e743a788db11b55c188275bcad64
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119423"
 ---
-# <a name="how-to-customize-a-sharepoint-feature"></a>方法: SharePoint フィーチャーをカスタマイズする
-  作成し、Visual Studio で、フィーチャー デザイナーを使用して、SharePoint の機能をカスタマイズできます。 たとえば、フィーチャーのスコープを設定でき、依存関係として他の機能を追加できます。 既定では、ソリューション エクスプ ローラーまたは SharePoint の パッケージ エクスプ ローラーで、新しい機能を追加するときに、フィーチャー デザイナーが開きます。  
+# <a name="how-to-customize-a-sharepoint-feature"></a>方法: SharePoint フィーチャーをカスタマイズ
+  作成し、Visual Studio でフィーチャー デザイナーを使用して、SharePoint の機能をカスタマイズできます。 たとえば、フィーチャーのスコープを設定でき、依存関係としてその他の機能を追加できます。 既定では、ソリューション エクスプ ローラーまたは SharePoint の パッケージ エクスプ ローラーで新しい機能を追加するときに、フィーチャー デザイナーが開きます。  
   
 ## <a name="opening-the-feature-designer"></a>フィーチャー デザイナーを開く  
- 追加するか、フィーチャー デザイナーを使用して機能を SharePoint プロジェクト項目を削除します。  
+ 追加またはフィーチャー デザイナーを使用して機能する SharePoint プロジェクト項目を削除できます。  
   
-#### <a name="to-open-the-feature-designer"></a>開くには、フィーチャー デザイナー  
+#### <a name="to-open-the-feature-designer"></a>フィーチャー デザイナーを開く
   
 1.  **ソリューション エクスプ ローラー**、展開**機能**します。  
   
-2.  ダブルクリックして、 *Feature1*アイテム、または、ショートカット メニューを開き、 *Feature1*項目し、**ビュー デザイナー**です。  
+2.  ダブルクリックして、 *Feature1*項目、または、ショートカット メニューを開き、 *Feature1*項目選び、**ビュー デザイナー**します。  
   
-## <a name="viewing-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示します。  
- フィーチャー デザイナーを使用して、変更および機能 (feature.xml) のパッケージ マニフェスト ファイルを生成することができます。 次に、Visual Studio でこのファイルの XML コードを表示できます。  
+## <a name="view-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示します。  
+ 変更および機能のパッケージ マニフェスト ファイルを生成するフィーチャー デザイナーを使用することができます (*feature.xml*)。 次に、Visual Studio でこのファイルの XML コードを表示できます。  
   
 #### <a name="to-view-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示するには  
   
-1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブです。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブ。  
   
 #### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>ソリューション エクスプ ローラーを使用してパッケージのマニフェスト ファイルを表示するには  
   
 1.  **ソリューション エクスプ ローラー**、選択、 **すべてのファイル**アイコン。  
   
-2.  機能を展開、展開、FeatureName.feature を展開し、開きます、 *FeatureName*です。Template.xml ファイルです。  
+2.  機能を展開し、展開を FeatureName.feature を展開し、開く、  *\<FeatureName >。Template.xml*ファイル。  
   
     > [!NOTE]  
-    >  機能テンプレート マニフェスト XML ファイルを開くし、ファイルは自動的に検証エラー一覧 ウィンドウに表示される警告を無視することができます。  
+    >  機能のテンプレート マニフェスト XML ファイルを開くし、ファイルは自動的に検証エラー一覧 ウィンドウに表示される警告を無視できます。  
   
-## <a name="changing-the-manifest-template"></a>マニフェスト テンプレートの変更  
- Visual Studio XML エディターまたはマニフェスト テンプレート ペインでフィーチャー マニフェスト ファイルの XML コードを変更することができます。 XML コードを変更するは、機能のパッケージ マニフェスト ファイルにマージされます。 たとえば、フィーチャーのプロパティをカスタマイズするマニフェスト テンプレートを変更することがあります。  
+## <a name="change-the-manifest-template"></a>マニフェスト テンプレートを変更します。  
+ Visual Studio XML エディターまたはマニフェスト テンプレート ペインでフィーチャー マニフェスト ファイルの XML コードを変更することができます。 XML コードに対する変更は、機能のパッケージ マニフェスト ファイルにマージされます。 たとえば、フィーチャーのプロパティをカスタマイズするマニフェスト テンプレートを変更する可能性があります。  
   
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML エディターを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**オプションの編集** ノードを選択し、 **XML エディターで開いている**リンクします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**オプションの編集**ノードを選択し、 **XML エディターで開いている**リンク。  
   
      XML への変更は、パッケージ マニフェスト ファイルにマージされます。  
   
 #### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>マニフェスト テンプレート ペインを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**編集オプション**ノードを展開し、マニフェスト テンプレート ペインに表示する XML を変更します。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト** タブで、展開、**編集オプション**ノード、およびマニフェスト テンプレート ペインに表示される XML を変更します。  
   
-     XML への変更が表示される、**プレビューのパッケージ化されたマニフェスト**ウィンドウです。  
+     XML への変更に表示される、**プレビューのパッケージ化されたマニフェスト**ウィンドウ。  
   
-## <a name="overwriting-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを上書きします。  
- フィーチャー デザイナーを無効にし、feature.xml ファイルを手動で作成できます。 この手順を実行する最初に、フィーチャー デザイナーの現在の設定は、機能のテンプレート XML ファイルに保存されます。 次に、変更したり、XML コードを上書きします。  
+## <a name="overwrite-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを上書き  
+ フィーチャー デザイナーを無効にし、作成することができます、 *feature.xml*ファイルを手動でします。 この手順を実行する最初にフィーチャー デザイナーの現在の設定は、機能のテンプレート XML ファイルに保存されます。 次に、変更したり、XML コードを上書きできます。  
   
 > [!NOTE]  
->  追加またはフィーチャー デザイナーが無効になっているときに、XML ファイルの SharePoint プロジェクト項目を削除した場合、それらのプロジェクト項目はパッケージ化されません。  
+>  追加またはフィーチャー デザイナーを無効にして、XML ファイルの SharePoint プロジェクト アイテムを削除する場合、これらのプロジェクト項目はパッケージ化されません。  
   
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>デザイナーを無効にすると、パッケージ マニフェスト ファイルを上書きするには  
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>デザイナーを無効にして、パッケージ マニフェスト ファイルを上書きするには  
   
-1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブです。  
+1.  **フィーチャー デザイナー**、選択、**マニフェスト**タブ。  
   
-2.  展開、**編集オプション** ノードを選択、**上書き生成された XML と編集、XML エディターでマニフェスト**リンクをクリックして、 **はい**ボタンをクリックします。  
+2.  展開、**オプションの編集**ノード、選択、**上書き生成された XML と編集マニフェスト XML エディターで**リンクをクリックして、**はい**ボタン。  
   
      テンプレートは、現在のパッケージ マニフェスト ファイルで更新されます。  
   
-## <a name="enabling-the-feature-designer"></a>フィーチャー デザイナーを有効にします。  
- Feature.xml ファイルをカスタマイズするフィーチャー デザイナーを再度有効にすることができます。  
+## <a name="enable-the-feature-designer"></a>フィーチャー デザイナーを有効にします。  
+ カスタマイズするフィーチャー デザイナーを再度有効にできる、 *feature.xml*ファイル。  
   
 #### <a name="to-re-enable-the-designer"></a>デザイナーを再度有効にするには  
   
-1.  **フィーチャー デザイナー**、選択、**マニフェストの編集を破棄してデザイナーを再度有効に**リンクをクリックして、**はい**ボタンをクリックします。  
+1.  **フィーチャー デザイナー**、選択、**マニフェストの編集を破棄し、デザイナーを再度有効に**リンクをクリックして、**はい**ボタン。  
   
-2.  元のテキストで、テンプレートが更新され、XML に変更は失われます。  
+2.  元のテキストで、テンプレートが更新され、XML への変更は失われます。  
   
-## <a name="see-also"></a>関連項目  
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>関連項目
+ [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
