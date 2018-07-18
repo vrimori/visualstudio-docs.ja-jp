@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の診断データ アダプターのタイムアウト | Microsoft Docs
+title: Visual Studio の診断データ アダプターのタイムアウト
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: 39fff4fc-9233-4f67-96ac-e81bbaf7ca82
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 61572a323fa29892096c963ad94a5e201dd61ec9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 093b937f7a957ef1d3a912c31d57a03f1a433ab0
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844239"
 ---
 # <a name="how-to-prevent-time-outs-for-diagnostic-data-adapters"></a>方法: 診断データ アダプターがタイムアウトしないようにする
 
@@ -62,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 
 4.  タイムアウト値を増やすには、テスト実行設定セクションを変更する必要があります。 このセクションは、次の形式になっています。
 
-    ```
+    ```text
     <!-- Begin: Test execution settings -->
 
         <!-- How long test runner will wait for an event raised to all local data collectors to complete.  Default is 300. -->
@@ -80,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 
 7.  バグが発生したかテストが終了したときに収集されたデータを、テストを実行しているコンピューターに転送する場合のタイムアウト値を増やすには、**mtm.exe.config** ファイルの appSettings セクションに次のタイムアウト値を追加する必要があります。
 
-    ```
+    ```text
     <!-- How long test runner waits for data collected by diagnostic data adapters to be transferred to the computer. Default is 60 seconds. -->
     <add key="GetCollectorDataTimeout" value="300"/>
     ```
