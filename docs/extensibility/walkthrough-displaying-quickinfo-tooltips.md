@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146765"
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ツールヒントの表示
 QuickInfo はメソッドのシグネチャを表示する IntelliSense 機能である場合、ユーザーの説明が、ポインターをメソッド名の上に移動します。 QuickInfo の説明を提供する識別子を定義して、コンテンツを表示するツールヒントを作成して QuickInfo などの機能の言語に基づくを実装できます。 QuickInfo を定義するには、言語サービスのコンテキストで独自ファイル名拡張子とコンテンツの種類を定義してその種類のクィック ヒントを表示またはクイック ヒントを表示するには、既存のコンテンツの種類 ("text") などの。 このチュートリアルでは、"text"コンテンツ タイプのクィック ヒントを表示する方法を示します。  

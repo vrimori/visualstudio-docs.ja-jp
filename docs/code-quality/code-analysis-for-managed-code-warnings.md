@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919896"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>マネージ コードの警告に対応するコードの解析
 マネージ コード分析ツールには、マネージ コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージ コード分析規則の違反がわかります。 ここでは、マネージ コード分析の各警告について、詳細な説明と例を紹介します。

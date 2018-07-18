@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31944649"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>方法: インポートした名前空間を追加または削除する (Visual Basic)
 

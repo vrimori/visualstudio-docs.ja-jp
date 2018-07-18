@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477330"
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>コード エディターでデータヒントのデータ値の表示
 DataTips は、デバッグ中にプログラムの変数に関する情報を確認するときに便利です。 データヒントは、中断モードのときにのみ機能します。また、実行の現在のスコープ内にある変数に対してだけ使用できます。
@@ -72,7 +73,7 @@ DataTips は、デバッグ中にプログラムの変数に関する情報を�
   
 #### <a name="to-expand-a-variable-to-see-its-elements"></a>変数を展開して要素を表示するには  
   
--   データヒントで、経由でマウス ポインターを置き、 **+**変数名の前に来る記号。  
+-   データヒントで、経由でマウス ポインターを置き、 **+** 変数名の前に来る記号。  
   
     変数が展開され、ツリー形式で要素が表示されます。
 

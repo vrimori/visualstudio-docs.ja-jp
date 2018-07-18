@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130246"
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>方法: レガシ言語サービスのアウトライン表示をサポート
 アウトライン表示は、展開または折りたたみのテキストのさまざまな地域に使用されます。 アウトライン方法が使用されるさまざまな言語で定義が異なることができます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。  

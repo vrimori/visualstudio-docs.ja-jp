@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131581"
 ---
 # <a name="providing-automation-for-vspackages"></a>Vspackage の自動化を提供します。
 Vspackage の自動化を提供する 2 つの主な方法があります: VSPackage に固有のオブジェクトを実装することで、標準のオートメーション オブジェクトを実装することによってです。 一般に、これらを併用するを環境のオートメーション モデルを拡張します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465331"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
 .Pdb ファイルに情報を使用して、スタックを行う方法の説明を提供します。  

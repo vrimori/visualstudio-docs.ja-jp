@@ -22,6 +22,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264370"
 ---
 # <a name="cache-data"></a>データのキャッシュ
   ドキュメント レベル カスタマイズでデータ オブジェクトをキャッシュするには、データは、オフライン、または Microsoft Office Word または Microsoft Office Excel を開くことがなく、アクセスできるようにします。 オブジェクトをキャッシュするには、オブジェクトにデータ型を特定の要件を満たすことが必要です。 .NET Framework の多くの一般的なデータ型など、これらの要件を満たしている<xref:System.String>、 <xref:System.Data.DataSet>、および<xref:System.Data.DataTable>です。  

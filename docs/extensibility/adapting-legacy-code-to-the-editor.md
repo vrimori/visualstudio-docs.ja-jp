@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31105139"
 ---
 # <a name="adapting-legacy-code-to-the-editor"></a>エディターにレガシ コードを改変.
 Visual Studio エディターには、既存のコード コンポーネントからアクセスできる多くの機能があります。 次の手順では、非 MEF コンポーネント、エディターの機能を使用するが、VSPackage ではなどを適合させる方法を示します。 アダプターを使用して、マネージとアンマネージ コードの両方で、エディターのサービスを取得する方法についても説明します。  

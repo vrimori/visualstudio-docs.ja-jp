@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31920655"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>マネージ コードの "グローバリゼーション規則" 規則セット
 さまざまな言語、ロケール、およびカルチャに正しく表示されないアプリケーションでのデータを妨げる可能性のある問題に重点を置く設定 Microsoft グローバリゼーション規則規則を使用することができます。 この規則セットの場合は、アプリケーションをローカライズすると、グローバル化された、またはその両方を含める必要があります。

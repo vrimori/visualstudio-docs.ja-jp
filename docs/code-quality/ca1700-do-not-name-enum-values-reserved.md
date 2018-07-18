@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31918450"
 ---
 # <a name="ca1700-do-not-name-enum-values-39reserved39"></a>1700 ca: いない名前列挙型値&#39;予約済み&#39;
 |||

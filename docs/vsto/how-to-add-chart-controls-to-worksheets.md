@@ -21,6 +21,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548737"
 ---
 # <a name="how-to-add-chart-controls-to-worksheets"></a>方法: ワークシートに Chart コントロールを追加します。
   追加することができます<xref:Microsoft.Office.Tools.Excel.Chart>デザイン時およびドキュメント レベルのカスタマイズで実行時に、Microsoft Office Excel ワークシートにコントロールできます。 追加することも<xref:Microsoft.Office.Tools.Excel.Chart>VSTO アドインにおける実行時にコントロールできます。  

@@ -1,9 +1,9 @@
 ---
-title: Visual Studio にサインイン | Microsoft ドキュメント
+title: Visual Studio にサインイン
 ms.custom: ''
 ms.date: 11/16/2017
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: TerryGLee
@@ -11,11 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e33d59be1be9049d8abdaf4f43dac221569cb7b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bdfa8e854049e7de6c6edd49454d1efa55e2a05b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948341"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
@@ -29,13 +30,13 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 - **Visual Studio Dev Essentials プログラムにアクセスする** - このプログラムには、無料のソフトウェア提供サービス、トレーニング、サポートなどが含まれます。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。
 
-- **Visual Studio の設定を同期する** - どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「 [Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。
+- **Visual Studio の設定を同期する** - どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。
 
 - **Visual Studio Community エディションのロックを解除する** - Community エディションのインストール時にライセンスを求めるプロンプトが表示された場合は、IDE にサインインして自分でロックを解除します。
 
 - **Visual Studio の評価期間を拡張する** - 30 日の評価期間にとらわれることなく、Visual Studio Professional または Visual Studio Enterprise を 90 日間延長して使用できます。
 
-- **MSDN または Visual Studio Team Services サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除されます**。 「 [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
+- **MSDN または Visual Studio Team Services サブスクリプションに関連付けられたアカウントを使用すると、Visual Studio のロックが解除されます**。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
 
 - IDE で、**Azure や Visual Studio Team Services などのサービスに自動的に接続**され、同じアカウントの資格情報を再度要求されることはなくなります。
 
@@ -65,5 +66,5 @@ Visual Studio を初めて起動すると、サインインして基本登録情
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)  
-[Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+* [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)  
+* [Visual Studio IDE の概要](../ide/visual-studio-ide.md)

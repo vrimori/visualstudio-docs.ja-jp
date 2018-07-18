@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476953"
 ---
 # <a name="visualizer-api-reference"></a>ビジュアライザー API リファレンス
 ビジュアライザー API は Visual Studio デバッガーのビジュアライザーを記述する必要のあるユーザー向けに用意されています。 ビジュアライザーは、Visual Studio デバッガー ユーザー インターフェイスの機能を拡張した小規模なアプリケーションです。 ビジュアライザーと表示できます (必要に応じて編集)、ビジュアライザーの設計対象となる特定の種類のデータ オブジェクト。  

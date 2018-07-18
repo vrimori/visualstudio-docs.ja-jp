@@ -24,6 +24,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31922654"
 ---
 # <a name="insert-new-records-into-a-database"></a>データベースに新しいレコードを挿入します。
 データベースに新しいレコードを挿入するに使用することができます、`TableAdapter.Update`メソッド、または、TableAdapter の DBDirect メソッドのいずれか (具体的には、`TableAdapter.Insert`メソッド)。 詳細については、次を参照してください。 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。

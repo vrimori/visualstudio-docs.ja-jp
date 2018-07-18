@@ -2,6 +2,7 @@
 title: 'クイック スタート: Visual Studio で XAML と C# を使用して最初のユニバーサル Windows プラットフォーム アプリを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 04/04/2018
+ms.prod: visual-studio-dev15
 ms.technology:
 - vs-acquisition
 ms.topic: quickstart
@@ -13,17 +14,18 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: d1263b752a27522b9a551d8015689f60422984ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d8585d2f8ec34371226c2211e318b71e356a331
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765870"
 ---
 # <a name="quickstart-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>クイック スタート: Visual Studio で XAML と C# を使用して最初のユニバーサル Windows プラットフォーム アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、任意の Windows 10 デバイスで実行できる "Hello World" アプリケーションを作成します。 これの実行には、ユニバーサル Windows プラットフォーム (UWP) のプロジェクト テンプレート、Extensible Application Markup Language (XAML) および C# のプログラミング言語を使用します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -31,7 +33,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. Visual Studio 2017 を開きます。
 
-2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 3. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで **[Visual C#]** を展開し、**[Windows ユニバーサル]** を選択します。 中央のペインで **[空のアプリ (ユニバーサル Windows)]** を選択します。 次いで、プロジェクトに「*HelloWorld*」という名前を付け、**[OK]** を選択します。
 
@@ -54,11 +56,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ### <a name="add-a-button-to-the-design-canvas"></a>デザイン キャンバスにボタンを追加する
 
-1. **ソリューション エクスプローラー**で、**MainPage.xaml** をダブルクリックして分割ビューを開きます。
+1. **ソリューション エクスプローラー**で、*MainPage.xaml* をダブルクリックして分割ビューを開きます。
 
   ![ソリューション エクスプローラーで MainPage.xaml を開く ](../ide/media/uwp-solution-explorer-MainPage-xaml.png)
 
-  デザイン キャンバスを含む **XAML デザイナー**と、コードを追加または変更できる **XAML エディター**の 2 つのウィンドウがあります。    
+  デザイン キャンバスを含む **XAML デザイナー**と、コードを追加または変更できる **XAML エディター**の 2 つのウィンドウがあります。
 
   ![XAML エディターの XAML デザイナー ウィンドウ](../ide/media/uwp-xaml-editor.png)
 
@@ -66,7 +68,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
   ![[ツールボックス] をクリックしてツールボックスのスライド アウト ウィンドウを開く](../ide/media/uwp-toolbox.png)
 
-  (ツールボックスのオプションが表示されない場合は、メニュー バーから開くことができます。 これを行うには、**[ビュー]** > **[ツールバー]** の順に選択します。 または、**Ctrl**+**Alt**+**X** キーを押します)。
+  (**ツールボックス**のオプションが表示されない場合は、メニュー バーから開くことができます。 これを行うには、**[ビュー]** > **[ツールバー]** の順に選択します。 または、**Ctrl**+**Alt**+**X** キーを押します)。
 
 3. **[ピン設定]** アイコンをクリックして、[ツールボックス] ウィンドウをドッキングします。
 
@@ -76,17 +78,17 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    ![[ボタン] コントロールをクリックしデザイン キャンバスまでドラッグする](../ide/media/uwp-toolbox-add-button-control.png)
 
-  XAML エディターでコードを参照すると、そこにもボタンが追加されていることを確認できます。
+  **XAML エディター**でコードを参照すると、そこにもボタンが追加されていることを確認できます。
 
   ![[ボタン] コントロールをクリックしデザイン キャンバスまでドラッグする](../ide/media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>ボタンにラベルを追加する
 
-1. XAML エディターで、ボタンのコンテンツ値を "Button" から "Hello World!" に変更します。
+1. **XAML エディター**で、ボタンのコンテンツ値を "Button" から "Hello World!" に変更します。
 
    ![ボタンのコンテンツ値を Hello World に変更する](../ide/media/uwp-change-button-text-in-xaml-code-window.png)
 
-2. XAML デザイナーのボタンも変更されることに注目してください。
+2. **XAML デザイナー**のボタンも変更されることに注目してください。
 
    ![デザイン キャンバスでボタンが Hello World に変更する](../ide/media/uwp-button-text-change-in-design-canvas.png)
 
@@ -96,7 +98,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. デザイン キャンパスでボタン コントロールをダブルクリックします。
 
-2.  分離コード ページの *MainPage.xaml.cs* でイベント ハンドラー コードを編集します。
+2. 分離コード ページの *MainPage.xaml.cs* でイベント ハンドラー コードを編集します。
 
  ポイントはここからです。 既定のイベント ハンドラーは次のようになります。
 
@@ -121,7 +123,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 #### <a name="what-did-we-just-do"></a>行った処理
 
-コードでいくつかの Windows API が使用され、いくつかのテキストを読み上げられる、音声合成オブジェクトが作成されました。 (SpeechSynthesis の使用方法の詳細については、「<xref:System.Speech.Synthesis>」を参照してください)。
+コードでいくつかの Windows API が使用され、いくつかのテキストを読み上げられる、音声合成オブジェクトが作成されました。 (`SpeechSynthesis` の使用に関する詳細は、「<xref:System.Speech.Synthesis>」をご覧ください)。
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
@@ -129,7 +131,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. **[ローカル マシン]** を選択してアプリケーションを起動します。
 
-   ![[ローカル マシン] をクリックして UWP アプリを起動およびデバッグする](../ide/media/uwp-start-or-debug.png "[ローカル マシン] をクリックして UWP アプリを起動およびデバッグする")
+   ![[ローカル マシン] をクリックし、UWP アプリを起動してデバッグする](../ide/media/uwp-start-or-debug.png)
 
    (または、メニュー バーから **[デバッグ]** > **[デバッグの開始]** を選択するか、**F5** キーを押してアプリを開始します)。
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135353"
 ---
 # <a name="related-services-and-interfaces-source-control-vspackage"></a>関連するサービスとインターフェイス (ソース コントロール VSPackage)
 このセクションでは、ソース管理のインターフェイスの VSPackage に関連するすべて一覧表示、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]です。 ソース コントロール VSPackage では、これらのインターフェイスの一部を実装し、他のユーザーを使用してソース管理のタスクを実現します。  

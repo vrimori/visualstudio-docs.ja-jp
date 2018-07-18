@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31482036"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>呼び出し履歴を表示して、呼び出し履歴 ウィンドウで、Visual Studio デバッガーを使用します。
 
@@ -108,7 +109,7 @@ Visual Studio Enterprise (のみ) を使用している場合は、デバッグ�
 
 ## <a name="change-the-optional-information-displayed"></a>表示される省略可能な情報を変更します。  
   
--   右クリックし、**呼び出し履歴**ウィンドウとセットまたはクリア**表示\<***情報***>**です。  
+-   右クリックし、**呼び出し履歴**ウィンドウとセットまたはクリア**表示\<***情報***>** です。  
   
 ## <a name="bkmk_symbols"></a> モジュールのシンボルの読み込み
 **呼び出し履歴**ウィンドウで、デバッグ シンボルが読み込まれたを現在持っていないコードのシンボルを読み込むことができます。 これらのシンボルには、Microsoft のパブリック シンボル サーバーからダウンロードされる .NET Framework シンボルやシステム シンボル、または、デバッグしているコンピューター上のシンボル パス内のシンボルを指定できます。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476859"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>[ウィンドウ] タブ ([メッセージ オプション] ダイアログ ボックス)
 使用して、 **Windows**メッセージの一覧のスコープを設定するタブ[メッセージ ビュー](../debugger/messages-view.md)です。 表示する、[メッセージ オプション ダイアログ ボックス](../debugger/message-options-dialog-box.md)、選択**ログ メッセージ**から、**スパイ**メニュー。  

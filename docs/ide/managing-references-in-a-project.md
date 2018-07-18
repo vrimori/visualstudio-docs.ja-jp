@@ -1,6 +1,7 @@
 ---
 title: プロジェクト内の参照の管理
 ms.date: 04/11/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef62d3ab0436ff8b20766f2ffe88506d73c8f03b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e772f4d861e4b16499ad9be9d7c814320e1a14f9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950947"
 ---
 # <a name="manage-references-in-a-project"></a>プロジェクト内の参照の管理
 
@@ -52,13 +54,13 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="project-references"></a>プロジェクト参照
 
-ユニバーサル Windows プラットフォーム (UWP) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、あるいは Windows 8.1 プロジェクトまたはバイナリへの参照を作成できます (ただし、これらのプロジェクトが、Windows 10 で使用されなくなった API を使用していない場合)。 詳細については、「 [Windows Runtime 8 から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) プロジェクトでは、ソリューション内の他の UWP プロジェクトへの参照、あるいは Windows 8.1 プロジェクトまたはバイナリへの参照を作成できます (ただし、これらのプロジェクトが、Windows 10 で非推奨とされた API を使用していない場合)。 詳細については、「 [Windows Runtime 8 から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。
 
 Windows 8.1 プロジェクトの Windows 10 への再ターゲットを選択した場合は、「[Visual Studio プロジェクトのポート、移行、アップグレード](../porting/port-migrate-and-upgrade-visual-studio-projects.md)」を参照してください。
 
 ### <a name="extension-sdk-references"></a>拡張 SDK の参照
 
-Visual Basic、C#、C++、JavaScript の各ユニバーサル Windows プラットフォーム (UWP) アプリは、Windows 8.1 を対象とする拡張 SDK を参照できます (ただし、Windows 10 で使用されなくなった API をこれらの拡張 SDK が使用していない場合)。 UWP アプリから拡張 SDK を参照できるかどうかを確認するには、その拡張 SDK の販売元のサイトを調べてください。
+Visual Basic、C#、C++、JavaScript の各ユニバーサル Windows プラットフォーム (UWP) アプリは、Windows 8.1 を対象とする拡張 SDK を参照できます (ただし、Windows 10 で非推奨された API をこれらの拡張 SDK が使用していない場合)。 UWP アプリから拡張 SDK を参照できるかどうかを確認するには、その拡張 SDK の販売元のサイトを調べてください。
 
 アプリで参照している拡張 SDK がサポートされていないことがわかった場合、次の手順を実行する必要があります。
 
@@ -89,9 +91,9 @@ Visual Basic、C#、C++、JavaScript の各ユニバーサル Windows プラッ�
 - 同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[プロジェクト]** タブに表示されます。
 
 > [!NOTE]
-> - すべてのプロジェクトには、mscorlib への暗黙的な参照が含まれます。
+> - すべてのプロジェクトには、**mscorlib** への暗黙的な参照が含まれます。
 > - `System.Core` が参照のリストから削除された場合でも、すべてのプロジェクトに `System.Core` への暗黙的な参照が含まれます。
-> - Visual Basic プロジェクトには、 `Microsoft.VisualBasic`への暗黙的な参照が含まれます。
+> - Visual Basic プロジェクトには、 <xref:Microsoft.VisualBasic>への暗黙的な参照が含まれます。
 
 ## <a name="references-to-shared-components-at-run-time"></a>実行時の共有コンポーネントへの参照
 
@@ -111,7 +113,7 @@ GAC に登録されているカスタム コンポーネントへの参照を含
 
 プロジェクト間参照とは、アセンブリを格納するプロジェクトへの参照です。これは **[プロジェクト]** タブを使用して作成します。Visual Studio は、プロジェクトへのパスが指定されると、アセンブリを見つけることができます。
 
-アセンブリを生成するプロジェクトがある場合は、ファイル参照 (下記参照) を使用せず、プロジェクトを参照してください。 プロジェクト間参照の利点は、ビルド システム内のプロジェクト間に依存関係が作成されることです。 参照元のプロジェクトの前回のビルド以降に依存プロジェクトが変更されていると、依存プロジェクトのビルドが行われます。 ファイル参照ではビルド依存関係が作成されないため、依存プロジェクトをビルドせずに参照元のプロジェクトをビルドできます。したがって、参照が古くなる可能性があります。 つまり、プロジェクトから、同じプロジェクトの以前にビルドされたバージョンが参照される場合があります。その結果、bin ディレクトリ内に 1 つの DLL の複数のバージョンが求められる場合がありますが、これを実現するのは不可能です。 この矛盾が生じた場合は、"警告: プロジェクト 'project' の依存関係 'file' は、参照 'file' を上書きするため、実行ディレクトリにコピーできません" などのメッセージが表示されます。 詳細については、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」および「[方法: プロジェクトの依存関係を作成および削除する](../ide/how-to-create-and-remove-project-dependencies.md)」を参照してください。
+アセンブリを生成するプロジェクトがある場合は、ファイル参照 (下記参照) を使用せず、プロジェクトを参照してください。 プロジェクト間参照の利点は、ビルド システム内のプロジェクト間に依存関係が作成されることです。 参照元のプロジェクトの前回のビルド以降に依存プロジェクトが変更されていると、依存プロジェクトのビルドが行われます。 ファイル参照ではビルド依存関係が作成されないため、依存プロジェクトをビルドせずに参照元のプロジェクトをビルドできます。したがって、参照が古くなる可能性があります。 つまり、プロジェクトから、同じプロジェクトの以前にビルドされたバージョンが参照される場合があります。その結果、*bin* ディレクトリ内に 1 つの DLL の複数のバージョンが求められる場合がありますが、これを実現するのは不可能です。 この矛盾が生じた場合は、"警告: プロジェクト 'project' の依存関係 'file' は、参照 'file' を上書きするため、実行ディレクトリにコピーできません" などのメッセージが表示されます。 詳細については、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」および「[方法: プロジェクトの依存関係を作成および削除する](../ide/how-to-create-and-remove-project-dependencies.md)」を参照してください。
 
 > [!NOTE]
 > あるプロジェクトが対象とする .NET Framework のバージョンが Version 4.5 であり、他のプロジェクトが対象とする .NET Framework が Version 2、3.0、3.5、または 4.0 である場合は、プロジェクト間参照ではなくファイル参照が作成されます。

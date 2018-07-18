@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb86d36429f8695222f69fbf6d78635a338bfe5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a2831dd07bcbb5e909357ebdf89496cf92bb815d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573168"
 ---
 # <a name="threads-view-parallel-performance"></a>スレッド ビュー (並行処理のパフォーマンス)
 **スレッド ビュー**は、同時実行ビジュアライザーで最も詳細かつ豊富な機能を備えたビューです (**[分析]** > **[同時実行ビジュアライザー]** を選択して、同時実行ビジュアライザーを開始します)。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/19/2018
   
 -   ワーカー スレッドと実行のクリティカル パスの間の依存関係を理解します。  
   
-## <a name="examining-specific-time-intervals-and-threads"></a>特定の時間間隔とスレッドを確認します。  
+## <a name="examine-specific-time-intervals-and-threads"></a>特定の時間間隔とスレッドを調べる  
  スレッド ビューでは、タイムラインを示します。 タイムライン内でズームと手のひらツールを使って、特定の間隔と、アプリケーションのスレッドを調べることができます。 x 軸は時間を示し、y 軸は次のようないくつかのチャネルを示します。  
   
 -   システム上のディスク ドライブごとに 2 つの I/O チャネル。1 つのチャネルは読み取り用で、もう 1 つは書き込み用です。  
@@ -147,5 +148,5 @@ ms.lasthandoff: 04/19/2018
 #### <a name="disk-operations"></a>ディスク操作  
  このタブでは、現在のプロセスのために、ディスク I/O に関与したプロセスとスレッド、それによって影響を受けたファイル (読み込まれた DLL など)、読み取られたバイト数、その他の情報を示します。 このレポートを使用して、実行中にファイルへのアクセスに費やされる時間を評価できます (特に、I/O バウンドなプロセスと思われる場合に役立ちます)。 詳細については、「[ディスク操作レポート](../profiling/disk-operations-report-threads-view.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)

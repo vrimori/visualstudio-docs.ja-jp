@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141452"
 ---
 # <a name="using-msbuild"></a>MSBuild の使用
 MSBuild では、プロジェクト項目を作成、ビルド タスク、およびビルド構成を完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張可能な XML 形式を指定します。  

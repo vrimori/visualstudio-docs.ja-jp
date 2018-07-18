@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131273"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>選択範囲と、IDE の通貨
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) の保持の選択を使用して、ユーザーの情報がオブジェクトに現在選択されている*コンテキスト*です。 選択コンテキスト、Vspackage が、2 つの方法での追跡の通貨でパーツを受け取ることができます。  

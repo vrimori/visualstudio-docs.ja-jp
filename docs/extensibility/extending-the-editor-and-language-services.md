@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132575"
 ---
 # <a name="extending-the-editor-and-language-services"></a>エディターと言語サービスの拡張
 言語サービスの機能 (IntelliSense) などを独自のエディターに追加して、Visual Studio code エディターのほとんどの機能を拡張できます。  拡張することができますの一覧については、次を参照してください。[言語サービスとエディター拡張機能ポイント](../extensibility/language-service-and-editor-extension-points.md)です。  

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストの実行設定を選択する | Microsoft Docs
+title: Visual Studio でロード テストの実行設定を選択する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dc521cf8e0218fabd691493fdb65fb46471e05bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8566964ab8dd3fbfa1fca15ce8362218c99c27e6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31967610"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>方法: ロード テストのアクティブな実行設定を選択する
 
@@ -43,7 +45,8 @@ ms.lasthandoff: 04/16/2018
      選択した実行設定がアクティブになり、別の実行設定を選択してアクティブにするまでアクティブのままになります。
 
 > [!NOTE]
->  アクティブな実行設定は、`Test.UseRunSetting=<run setting name>` という名前の環境変数を設定することでオーバーライドできます。 これは、ロード テストをコマンド ラインまたはバッチ ファイルから実行する場合に便利です。 これを使用すると、ロード テストを開くことなく異なる実行設定を選択できます。
+> アクティブな実行設定は、`Test.UseRunSetting=<run setting name>` という名前の環境変数を設定することでオーバーライドできます。 これは、ロード テストをコマンド ラインまたはバッチ ファイルから実行する場合に便利です。 これを使用すると、ロード テストを開くことなく異なる実行設定を選択できます。
+
 
 ## <a name="specifying-the-run-setting-to-use-from-the-command-line"></a>使用する実行設定のコマンド ラインからの指定
  コマンド ラインから次の環境変数を設定することで、ロード テストの既定の実行設定をオーバーライドできます。

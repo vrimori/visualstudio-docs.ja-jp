@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142790"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage の構造 (ソース コントロール VSPackage)
 ソース コントロールのパッケージの SDK を提供する VSPackage を作成するためのガイドラインと自分のソース管理機能を統合するソース コントロールの実行者を許可する、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境。 VSPackage は、COM コンポーネントによって、要求時に読み込まれた通常、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、そのレジストリ エントリで、パッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>です。 VSPackage によって提供されるサービスを通常使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers、独自のいくつかのサービスとします。  

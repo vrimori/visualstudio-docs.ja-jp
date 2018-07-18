@@ -1,14 +1,14 @@
 ---
-title: "JsRT API での Edge エンジンとレガシ エンジン | Microsoft Docs"
-ms.custom: 
+title: JsRT API での Edge エンジンとレガシ エンジン | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cbc7df6c-0bc9-48f5-b9ad-b9ed31c42f92
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569602"
 ---
 # <a name="targeting-edge-vs-legacy-engines-in-jsrt-apis"></a>JsRT API での Edge エンジンとJsRT API のレガシ エンジン
 Windows 10 以降、Chakra (JavaScript エンジン) に加えられた変更点の 1 つは、2 つの異なる Chakra エンジンをサポートすることです。これは、新しい Microsoft Edge のレンダリング エンジンをサポートするための Windows 10 のブラウザー戦略に沿った変更です。  

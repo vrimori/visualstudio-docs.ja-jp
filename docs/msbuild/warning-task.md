@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31568437"
 ---
 # <a name="warning-task"></a>Warning タスク
 条件付きステートメントの評価に基づいてビルド中の警告をログに記録します。  

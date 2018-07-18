@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108415"
 ---
 # <a name="guidarray"></a>GUID_ARRAY
 使用可能なデバッグ エンジンの一意の識別子の配列について説明します。  

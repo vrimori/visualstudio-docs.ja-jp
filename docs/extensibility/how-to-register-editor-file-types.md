@@ -17,6 +17,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129171"
 ---
 # <a name="how-to-register-editor-file-types"></a>方法: エディター ファイルの種類の登録
 エディターのファイルの種類を登録する最も簡単な方法は、の一部として定義されている登録属性を使用して、 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] managed package framework (MPF) クラス。 ネイティブに、パッケージを実装する場合は[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]エディターと関連付けられている拡張機能を登録するレジストリ スクリプトを記述することもできます。

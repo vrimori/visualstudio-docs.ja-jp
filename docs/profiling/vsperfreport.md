@@ -17,14 +17,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0c0c67664cfc111483e27bc28cf39afb315b80f
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 1c679acf7ce6a767702da05bde6fb4a1e6f8a7df
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572216"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
-VSPerfReport コマンド ライン ツールは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのプロファイル データ ファイルを使用してレポートを作成するために使用されます。 既定のレポート形式は .csv ファイルです。  
+VSPerfReport コマンド ライン ツールは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのプロファイル データ ファイルを使用してレポートを作成するために使用されます。 既定のレポート形式は .*csv* ファイルです。  
   
  VSPerfReport では次の構文が使用されます。  
   
@@ -32,15 +33,15 @@ VSPerfReport コマンド ライン ツールは、[!INCLUDE[vsprvs](../code-qua
 VSPerfReport [/U] vspfilename [/options]  
 ```  
   
- `filename` は有効な .vsp ファイルまたは .vsps ファイルである必要があることに注意してください。  
+ `filename` は有効な .*vsp* ファイルまたは .*vsps* ファイルである必要があることに注意してください。  
   
- .vsp ファイルまたは .vsps ファイルの比較には、VSPerfReport コマンド ライン ツールも使用されます。 相違点 ("diff") レポートを生成するには、次の構文を使用します。  
+ .*vsp* ファイルまたは .*vsps* ファイルの比較には、VSPerfReport コマンド ライン ツールも使用されます。 相違点 ("diff") レポートを生成するには、次の構文を使用します。  
   
 ```cmd  
 VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]  
 ```  
   
- `vspfilename1 and vspfilename2` は有効な .vsp ファイルまたは .vsps ファイルである必要があります。  
+ `vspfilename1 and vspfilename2` は有効な .*vsp* ファイルまたは .*vsps* ファイルである必要があります。  
   
 ## <a name="symbol-files"></a>シンボル ファイル  
  関数名や行番号などのシンボル情報を表示するには、VSPerfReport が、プロファイルしたコンポーネントのシンボル (.pdb) ファイルおよび Windows シンボル ファイルにアクセスできる必要があります。 詳細については、「[方法: コマンド ラインからシンボル ファイルの場所を指定する](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md)」を参照してください。  
@@ -57,7 +58,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |**ClearPackedSymbols**|プロファイラー データ ファイルから以前に埋め込まれたシンボルを削除します。 PackSymbols を 2 回目に実行する前にこのコマンドを実行します。|  
 |**SymbolPath:** `path`|プロファイラー データ ファイルのシンボルを含む 1 つ以上の検索パスまたはシンボル サーバーを指定します。|  
 |**DebugSymPath**|シンボルが検索された場所、およびシンボルが見つかったかどうかを示します。 このオプションは、シンボル解決の問題を解決するのに便利です。|  
-|**PackSymbols**|シンボルをプロファイル データ (.vsp) ファイルに保存して、シンボル (.pdb) ファイルが分析に不要になるようにします。|  
+|**PackSymbols**|シンボルをプロファイル データ (.vsp) ファイルに保存して、シンボル (.*pdb*) ファイルが分析に不要になるようにします。|  
 |**Output:** *path*&#124;*filename*|生成されたレポート ファイルの代替の場所を指定します。 既定では、レポートは現在のディレクトリに作成されます。|  
 |**SummaryFile**|分析を行い、分析情報を .vsps 概要ファイルに保存します。|  
 |**PrintMarks**|指定されたレポート ファイル内のすべてのマークについて、名前とタイムスタンプを表示します。|  
@@ -84,7 +85,7 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
   
 |オプション|説明|  
 |-------------|-----------------|  
-|**Diff**  `vspfile1 vspfile2`|2 つレポート ファイル (.vsp または .vsps) を比較します。 diff オプションを使用すると Summary オプションは無視されます。|  
+|**Diff**  `vspfile1 vspfile2`|2 つレポート ファイル (.*vsp* または .*vsps*) を比較します。 diff オプションを使用すると Summary オプションは無視されます。|  
 |**Diff:**[*value*]|このしきい値を下回ると、2 つの値の相違は無視されます。 また、値がこのしきい値を下回る新しいデータは表示されません。|  
 |**DiffTable:**[*tablename*]|このテーブルを使用して、ファイルを比較します。 既定では関数テーブルが使用されます。|  
 |**DiffColumn:**[*columnname*]|この列を使用して、値を比較します。 既定では排他サンプルのパーセント列が使用されます。|  

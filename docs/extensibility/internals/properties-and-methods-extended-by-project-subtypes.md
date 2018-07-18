@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132092"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>プロパティとプロジェクトのサブタイプによって拡張メソッド
 プロジェクトのサブタイプでは、多数の基本プロジェクトのアグリゲーターとして構成するために、プロジェクトの動作を決定するための電力があります。 このセクションでは、いくつかの拡張またはプロジェクトのサブタイプで変更できる機能をまとめたものです。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31572770"
 ---
 # <a name="writecontexttlogs"></a>WriteContextTLogs
 現在のコンテキストのログ ファイルを書き込みます。  

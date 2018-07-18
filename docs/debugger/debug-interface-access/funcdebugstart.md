@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465075"
 ---
 # <a name="funcdebugstart"></a>FuncDebugStart
 関数がどのデバッグで定義されたポイントを持つ場合は、最初に、ポイントが、シンボルで識別されることは、`SymTagFuncDebugStart`タグ。  

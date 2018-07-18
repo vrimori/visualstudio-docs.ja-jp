@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481075"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>方法: メッセージ ログの表示を開始および終了する
 ときに、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウがアクティブで、**ログ開始**または**ログの停止**Spy++ での選択項目が表示されます**メッセージ**] メニューの [および対応する**ログ開始**または**ログの停止**ツール バー ボタンがアクティブになります。  

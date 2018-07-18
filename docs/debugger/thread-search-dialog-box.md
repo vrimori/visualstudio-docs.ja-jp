@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475127"
 ---
 # <a name="thread-search-dialog-box"></a>[スレッド検索] ダイアログ ボックス
 検索で特定のスレッドのノードを選択してこのダイアログ ボックスを使用して[スレッド ビュー](../debugger/threads-view.md)です。 このダイアログ ボックスを表示するには、フォーカスを移動、**スレッド**ビュー ウィンドウ。 選択し、**スレッド**から、**検索**メニュー。  

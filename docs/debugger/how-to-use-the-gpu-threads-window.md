@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476729"
 ---
 # <a name="how-to-use-the-gpu-threads-window"></a>方法: GPU スレッド ウィンドウを使用する
 GPU スレッド ウィンドウでは、デバッグ中のアプリケーション内の GPU 上で実行されているスレッドを調べて操作できます。 GPU 上で実行されるアプリケーションの詳細については、次を参照してください。 [C++ AMP の概要](/cpp/parallel/amp/cpp-amp-overview)です。  
@@ -53,7 +54,7 @@ GPU スレッド ウィンドウでは、デバッグ中のアプリケーショ
   
 ### <a name="to-display-the-gpu-threads-window"></a>GPU スレッド ウィンドウを表示するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。  
   
 2.  **プロパティ ページ**、プロジェクトのウィンドウで**構成プロパティ**、選択**デバッグ**です。  
   

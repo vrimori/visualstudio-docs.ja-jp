@@ -20,6 +20,7 @@ ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31619703"
 ---
 # <a name="disassemblydata"></a>DisassemblyData
 表示する、統合開発環境 (IDE) の 1 つの逆アセンブリ命令について説明します。  

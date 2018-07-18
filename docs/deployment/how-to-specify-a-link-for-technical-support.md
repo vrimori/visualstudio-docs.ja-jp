@@ -27,6 +27,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31556593"
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>方法: テクニカル サポートのリンクを指定する
 発行するときに、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 、アプリケーション、**サポート URL**プロパティは、Web ページやファイル共有のアプリケーションに関する情報を取得するユーザーの行き先を識別します。 このプロパティは省略可能です。アプリケーションのエントリで、URL が表示されます指定した場合、**プログラム追加と削除** ダイアログ ボックス。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-specify-a-support-url"></a>サポート URL を指定するには  
   
-1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]**をクリックします。  
+1.  **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
 2.  **発行**タブをクリックします。  
   

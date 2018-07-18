@@ -25,6 +25,7 @@ ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32031645"
 ---
 # <a name="ca2217-do-not-mark-enums-with-flagsattribute"></a>CA2217: enums を FlagsAttribute に設定しません
 

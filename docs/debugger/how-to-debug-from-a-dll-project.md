@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475812"
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>方法: Visual Studio で、DLL プロジェクトからデバッグ
 DLL プロジェクトをデバッグする方法の 1 つは、DLL プロジェクトのプロジェクト プロパティで呼び出し元のアプリケーションを指定して、DLL プロジェクトからデバッグを開始する、します。 このメソッドを使用するには、アプリケーションが DLL を呼び出す必要があります、DLL は、アプリケーションがそれを検索する場所にする必要があります (それ以外の場合、アプリケーションを別のバージョンの DLL を検索して代わりに、読み込む可能性があり、、ブレークポイントをヒットしません)。 他の Dll のデバッグの方法では、次を参照してください。 [DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)です。
@@ -67,7 +68,7 @@ C++ のプロパティ ページは、C# と Visual Basic のプロパティ ペ
 
 5.  する必要がある場合は、URL としてアプリケーションも呼び出すことができます。 ローカル ASP.NET アプリケーションが使用するマネージ DLL をデバッグする場合は、この手順を実行します。  
   
-     **開始動作**、select、 **URL でブラウザーを開始:**ラジオ ボタンをクリックし、URL を入力します。
+     **開始動作**、select、 **URL でブラウザーを開始:** ラジオ ボタンをクリックし、URL を入力します。
   
 ### <a name="to-start-debugging-from-the-dll-project"></a>DLL プロジェクトからデバッグを開始するには  
   

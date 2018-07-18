@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131911"
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>相互運用機能アセンブリのコマンド ハンドラーを登録します。
 VSPackage に登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、そのコマンドを正しくルーティングされるようにします。  
@@ -30,10 +31,10 @@ VSPackage に登録する必要があります[!INCLUDE[vsprvs](../../code-quali
  [コマンドの表形式の参照](http://msdn.microsoft.com/en-us/09e9c6ef-9863-48de-9483-d45b7b7c798f)アンマネージ サテライト UI dll にリソースがあります。  
   
 ## <a name="command-handler-registration-of-a-vspackage"></a>VSPackage のコマンド ハンドラーの登録  
- ユーザー インターフェイス (UI) のハンドラーとして機能する VSPackage のベースのコマンドは、VSPackage にちなんだ名前のレジストリ エントリを必要と`GUID`です。 このレジストリ エントリでは、VSPackage の UI リソース ファイルとそのファイル内のメニュー リソースの場所を指定します。 レジストリ エントリ自体が HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio 下にある\\*\<バージョン >*\Menus、場所*\<バージョン >*バージョンは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、たとえば 9.0 です。  
+ ユーザー インターフェイス (UI) のハンドラーとして機能する VSPackage のベースのコマンドは、VSPackage にちなんだ名前のレジストリ エントリを必要と`GUID`です。 このレジストリ エントリでは、VSPackage の UI リソース ファイルとそのファイル内のメニュー リソースの場所を指定します。 レジストリ エントリ自体が HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio 下にある\\*\<バージョン >* \Menus、場所*\<バージョン >* バージョンは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、たとえば 9.0 です。  
   
 > [!NOTE]
->  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >*代替で上書きすることができますルートの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルを初期化します。 ルート パスの詳細については、次を参照してください。 [Windows インストーラーで Vspackage をインストールする](../../extensibility/internals/installing-vspackages-with-windows-installer.md)です。  
+>  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >* 代替で上書きすることができますルートの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルを初期化します。 ルート パスの詳細については、次を参照してください。 [Windows インストーラーで Vspackage をインストールする](../../extensibility/internals/installing-vspackages-with-windows-installer.md)です。  
   
 ### <a name="the-ctmenu-resource-registry-entry"></a>CTMENU のリソースのレジストリ エントリ  
  レジストリ エントリの構造です。  
@@ -46,7 +47,7 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\
   
  \<*GUID*> は、 `GUID` {XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX} の形式で、VSPackage のです。  
   
- *\<リソース情報 >*コンマで区切られた 3 つの要素で構成されます。 これらの要素は、次の順序で。  
+ *\<リソース情報 >* コンマで区切られた 3 つの要素で構成されます。 これらの要素は、次の順序で。  
   
  \<*リソース DLL へのパス*>、 \<*メニュー リソース ID*>、 \<*メニュー バージョン*>  
   

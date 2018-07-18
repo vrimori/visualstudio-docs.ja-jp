@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31922430"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: 安全ではない DTD の処理
 |||
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 
 -   <xref:System.Xml.XmlSecureResolver> を使用して、XmlTextReader がアクセスできるリソースを制限します。
 
--   <xref:System.Xml.XmlReader> プロパティを <xref:System.Xml.XmlResolver> null **に設定して、**がどの外部リソースも開けないようにします。
+-   <xref:System.Xml.XmlReader> プロパティを <xref:System.Xml.XmlResolver> null **に設定して、** がどの外部リソースも開けないようにします。
 
 -   <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A> の <xref:System.Data.DataViewManager> プロパティが信頼できるソースから割り当てられていることを確認します。
 

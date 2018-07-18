@@ -12,20 +12,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47bd3081256ee3354b9e8fc03050570938fd7499
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: d47afc99a16b2501cadc70f8820b295675d98aa0
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691148"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>同時実行ビジュアライザー コマンドライン ユーティリティ (CVCollectionCmd)
-同時実行ビジュアライザーのコマンド ライン ユーティリティ (CVCollectionCmd.exe) を使用して、コマンド ラインからトレースを収集することで、Visual Studio 用の同時実行ビジュアライザーでトレースを表示できます。 これらのツールは、Visual Studio がインストールされていないコンピューターで使用できます。  
+同時実行ビジュアライザーのコマンド ライン ユーティリティ (*CVCollectionCmd.exe*) を使用して、コマンド ラインからトレースを収集することで、Visual Studio 用の同時実行ビジュアライザーでトレースを表示できます。 これらのツールは、Visual Studio がインストールされていないコンピューターで使用できます。  
   
 > [!NOTE]
 >  Visual Studio 2013 以降、同時実行ビジュアライザーは任意の拡張機能となっています。 (以前は、Visual Studio に含まれていました。)ダウンロード センターから [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103) をダウンロードできます。  
   
 ## <a name="download-the-concurrency-visualizer-command-line-utility"></a>同時実行ビジュアライザーのコマンド ライン ユーティリティのダウンロード  
- コマンド ライン ユーティリティをダウンロードしてインストールするには、 [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103) に移動して指示に従います。 既定では、CVCollectionCmd.exe のインストール先は %ProgramFiles%\Microsoft Concurrency Visualizer Collection Tools\ (%ProgramFiles(x86)%\Microsoft Concurrency Visualizer Collection Tools\ on x64 computers) となっています。  
+ コマンド ライン ユーティリティをダウンロードしてインストールするには、 [Concurrency Visualizer Collection Tools for Visual Studio 2015](http://www.microsoft.com/en-in/download/details.aspx?id=49103) に移動して指示に従います。 既定では、*CVCollectionCmd.exe* のインストール先は %ProgramFiles%\Microsoft Concurrency Visualizer Collection Tools\ (%ProgramFiles(x86)%\Microsoft Concurrency Visualizer Collection Tools\ on x64 computers) となっています。  
   
 ## <a name="collect-a-trace-with-cvcollectioncmd"></a>CVCollectionCmd を使用したトレースの収集  
  トレースを収集するには、CVCollectionCmd でアプリを起動するか、CVCollectionCmd にアタッチします。 オプションについては、以下のコマンド リファレンスを参照してください。 次に例を示します。  
@@ -51,13 +52,13 @@ ms.lasthandoff: 05/14/2018
 |プロセス|Attach コマンドの実行時にアタッチするプロセス、または Analyze コマンドの実行時にトレースで分析するプロセスを指定します。 Attach コマンドと Analyze コマンドに適用されます。|PID またはプロセスの名前。|なし。|  
 |構成|既定以外のコレクション設定が必要な場合、構成ファイルのパスを指定します。   Launch コマンド、Attach コマンド、および Analyze コマンドに適用されます。|XML 構成ファイルのディレクトリ パスまたは相対パス。|なし。|  
   
-## <a name="customizing-configuration-settings"></a>構成設定のカスタマイズ  
+## <a name="customize-configuration-settings"></a>構成設定のカスタマイズ  
  CVCollectionCmd を使用してトレースを収集する際に、コレクション設定をカスタマイズする必要がある場合には、構成ファイルを使用してコレクション設定を指定します。  
   
 > [!NOTE]
 >  Visual Studio を使用してトレースを収集する場合は、構成ファイルを直接変更しないでください。  代わりに、 [[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを使用して設定を変更します。  
   
- コレクション設定を変更するには、CVCollectionCmd ユーティリティを実行するコンピューター上に構成ファイルを作成します。 新しい構成ファイルを作成することも、Visual Studio がインストールされているコンピューター上の構成ファイルをコピーして、そのコピーを変更することもできます。 構成ファイルの名前は `UserConfig.xml` で、保管先は **[Local AppData]** フォルダーです。 ユーティリティを実行するときに、Launch、Attach、または Analyze コマンドと共に Config オプションを使用します。  Config オプションに関連付けられているパラメータに、構成ファイルのパスを指定します。  
+ コレクション設定を変更するには、CVCollectionCmd ユーティリティを実行するコンピューター上に構成ファイルを作成します。 新しい構成ファイルを作成することも、Visual Studio がインストールされているコンピューター上の構成ファイルをコピーして、そのコピーを変更することもできます。 構成ファイルの名前は *UserConfig.xml* で、保管先は *Local AppData* フォルダーです。 ユーティリティを実行するときに、Launch、Attach、または Analyze コマンドと共に Config オプションを使用します。  Config オプションに関連付けられているパラメータに、構成ファイルのパスを指定します。  
   
 ### <a name="configuration-file-tags"></a>構成ファイルのタグ  
  構成ファイルは、XML ベースです。 有効なタグと値を次に示します。  

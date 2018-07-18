@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31106049"
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>ソース管理プラグインを実装するためのベスト プラクティス
 次の技術的な詳細を使用して、ソース管理のプラグインを確実に実装できる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
  API を介して、IDE によって特定のオプションの設定を使用して、`fOptions`パラメーター。 これらのオプションの説明を[ビットフラグが特定のコマンドで使用される](../extensibility/bitflags-used-by-specific-commands.md)と共にに影響を与えるコマンド。 一般に、これらがオプションをユーザーがない入力が求められます。  
   
- 最もユーザー構成可能なオプションの設定は、ソース管理プラグインの間で大きく異なるため、この方法で定義されていません。そのため、推奨される機構、**詳細**ボタンをクリックします。 インスタンスで、**取得**ダイアログ ボックスで、IDE を表示情報のみを認識するが、表示することも、 **[詳細設定]**プラグインがこのコマンドのオプション ボタンをクリックします。 ユーザーがクリックしたとき、 **[詳細設定]**  ボタン、IDE の呼び出し、 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)ビットフラグまたは日付/時刻などの情報をユーザーに確認するプラグインのソース管理を有効にします。 プラグインに戻る時に渡される構造体でこの情報を返します、`SccGet`コマンド。  
+ 最もユーザー構成可能なオプションの設定は、ソース管理プラグインの間で大きく異なるため、この方法で定義されていません。そのため、推奨される機構、**詳細**ボタンをクリックします。 インスタンスで、**取得**ダイアログ ボックスで、IDE を表示情報のみを認識するが、表示することも、 **[詳細設定]** プラグインがこのコマンドのオプション ボタンをクリックします。 ユーザーがクリックしたとき、 **[詳細設定]**  ボタン、IDE の呼び出し、 [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)ビットフラグまたは日付/時刻などの情報をユーザーに確認するプラグインのソース管理を有効にします。 プラグインに戻る時に渡される構造体でこの情報を返します、`SccGet`コマンド。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)   

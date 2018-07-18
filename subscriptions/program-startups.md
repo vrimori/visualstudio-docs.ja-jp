@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2018
+ms.locfileid: "30863652"
 ---
 # <a name="visual-studio-subscriptions-offered-to-startups"></a>スタートアップ企業に提供される Visual Studio サブスクリプション
 Microsoft for Startups のプログラムに参加する対象のスタートアップ企業は、[Visual Studio Enterprise の月間クラウド サブスクリプション](https://www.visualstudio.com/vs/pricing/)を 5 つ取得できます。 これらは特別な制限のない市販されているものと同じサブスクリプションです。 ユーザーが Visual Studio を実行して、VSTS の Visual Studio Enterprise サブスクライバーとして認識されるようにするには、各サブスクリプションをエンド ユーザー (ライセンス ユーザー) に割り当てる必要があります。

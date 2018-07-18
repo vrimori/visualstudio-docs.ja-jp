@@ -1,17 +1,17 @@
 ---
-title: "アクティブ スクリプト デバッガー インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: アクティブ スクリプト デバッガー インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Active Script Debugger interfaces
 - activdbg.h
 ms.assetid: bf4750b1-4e58-442b-ab56-254e640de61d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -20,6 +20,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24642672"
 ---
 # <a name="active-script-debugger-interfaces"></a>アクティブ スクリプト デバッガー インターフェイス
 activdbg.h および activdbg100.h ヘッダー ファイルは、このセクションに記載されているインターフェイス、列挙型、および構造体を提供します。 これらはデバッグ スクリプト用です。  

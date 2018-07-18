@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099338"
 ---
 # <a name="changing-view-settings-by-using-the-legacy-api"></a>レガシ API を使用してビューの設定を変更します。
 ワード ラップ、マージン、および仮想の領域などのコア エディター機能の設定は、のユーザーによって変更できます、**オプション** ダイアログ ボックス。 ただし、これらの設定を変更することはもプログラムでします。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31566200"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;コマンド&gt;要素 (ブートス トラップ)
 `Commands`テスト下にある要素の説明を実装する要素、`InstallChecks`要素、どのパッケージを宣言し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ブートス トラップがテストに失敗した場合にインストールする必要があります。  

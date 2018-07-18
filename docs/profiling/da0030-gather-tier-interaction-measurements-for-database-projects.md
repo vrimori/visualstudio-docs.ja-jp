@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dca42fb108c2465db2b882957ea2bbcb25cd5ef8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7d53bd0975edfcaf02b0383834eb53db7716c982
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766195"
 ---
-# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: データベース プロジェクトの階層の相互作用の測定を収集します。
+# <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: データベース プロジェクトの階層相互作用の測定値を収集します
 |||  
 |-|-|  
 |規則 ID|DA0030|  
@@ -42,4 +43,4 @@ ms.lasthandoff: 04/19/2018
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則は情報提供用であるため、是正措置は必要ない場合があります。  
   
- Visual Studio IDE から階層の相互作用データをプロファイル データに追加する方法については、「[階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)」を参照してください。 コマンド ラインから階層の相互作用データを追加する方法の詳細については、「[階層相互作用データの収集](../profiling/adding-tier-interaction-data-from-the-command-line.md)」を参照してください。
+ Visual Studio IDE から階層の相互作用データをプロファイル データに追加する方法については、「[階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)」を参照してください。 コマンド ラインから階層の相互作用データを追加する方法については、「[階層相互作用データを収集する](../profiling/adding-tier-interaction-data-from-the-command-line.md)」を参照してください。

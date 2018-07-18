@@ -16,6 +16,7 @@ ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32425752"
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -50,7 +51,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. `.py` ファイルの `import` および `from` ステートメントのみを選択し、右クリックして **[Interactive に送信]** を選択します (または Ctrl + Enter を押します)。 コードの断片がすぐに対話型ウィンドウに貼り付けられて、実行されます。 ここで、`make_dot_string` 関数を選択し、そのコード フラグメントをもう一度実行する同じコマンドを繰り返し実行します。 このコードでは関数を定義しているため、この関数を数回呼び出すことですばやくテストすることができます。
+1. `.py` ファイルの `import` および `from` ステートメントのみを選択し、右クリックして **[Interactive に送信]** を選択します (または Ctrl + Enter を押します)。 コードの断片がすぐに対話型ウィンドウに貼り付けられて、実行されます。 ここで `make_dot_string` 関数を選択し、同じコマンドを繰り返します。これにより、そのコード フラグメントがもう一度実行されます。 このコードでは関数を定義しているため、この関数を数回呼び出すことですばやくテストすることができます。
 
     ![対話型ウィンドウへのコードの送信とそのテスト](media/vs-getting-started-python-14-interactive4.png)
 

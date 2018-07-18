@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31100742"
 ---
 # <a name="adding-a-toolbar-to-a-tool-window"></a>ツール ウィンドウにツールバーを追加します。
 このチュートリアルでは、ツール ウィンドウにツールバーを追加する方法を示します。  
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/16/2018
   
      上部のツールバーのような既定のアイコン) が、タイトルのすぐ下のツール ウィンドウの左に表示されます。  
   
-3.  ツールバーで、メッセージを表示するアイコンをクリックして**TWTestCommandPackage 内 TWToolbar.TWTestCommand.MenuItemCallback()**です。  
+3.  ツールバーで、メッセージを表示するアイコンをクリックして**TWTestCommandPackage 内 TWToolbar.TWTestCommand.MenuItemCallback()** です。  
   
 ## <a name="see-also"></a>関連項目  
  [ツール バーの追加](../extensibility/adding-a-toolbar.md)

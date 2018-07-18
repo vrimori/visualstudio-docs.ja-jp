@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31900631"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>マネージ コードの "基本正確性規則" 規則セット
 基本正確性規則の規則セットは、論理エラーやフレームワーク Api の使用の一般的なミスについて説明します。 基本正確性規則には、最小推奨規則規則セット内の規則が含まれます。 詳細については、次を参照してください。[マネージ推奨規則ルール セットのマネージ コードの](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)このルールの最小推奨規則で報告する警告の一覧でを展開する設定を含める必要があります。

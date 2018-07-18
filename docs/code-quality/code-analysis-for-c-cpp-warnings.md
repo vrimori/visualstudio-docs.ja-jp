@@ -25,6 +25,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919678"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>C/C++ コードの警告に対応するコードの分析
 このセクションで発生したものを除く C/C++ コード分析の警告を一覧表示、 [C++ コア ガイドライン チェッカー](code-analysis-for-cpp-corecheck.md)です。 コード分析の詳細については、次を参照してください。 [/analyze (コード分析)](/cpp/build/reference/analyze-code-analysis)と[クイック スタート: c/c++ コード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)です。

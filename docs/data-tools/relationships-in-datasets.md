@@ -22,6 +22,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927205"
 ---
 # <a name="create-relationships-between-datasets"></a>データセット間のリレーションシップを作成します。
 関連データを含むデータセット テーブルを使用して<xref:System.Data.DataRelation>をいずれかの別の関連するレコードを返すと、テーブル間の親/子リレーションシップを表すオブジェクト。 使用してデータセットの関連テーブルの追加、**データ ソース構成ウィザード**、または**データセット デザイナー**が作成され、構成、<xref:System.Data.DataRelation>オブジェクト。

@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31947168"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>色、線のスタイル、およびその他のシェイプのプロパティの管理
 一部の図形のプロパティ色 '公開できる' - などは、リンクされている図形のドメイン プロパティにします。 他のユーザーは、直接制御する必要があります。

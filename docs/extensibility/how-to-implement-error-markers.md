@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127857"
 ---
 # <a name="how-to-implement-error-markers"></a>方法: エラー マーカーを実装します。
 エラー マーカー (または赤色の波下線) は、テキスト エディターのカスタマイズを実装するが最も難しいです。 ただし、VSPackage のユーザーに提供する利点を提供するためのコストを上回ることができます。 エラー マーカーは微妙に、言語パーサーが波または波赤色の線で正しくないと判断されるテキストをマークします。 このインジケーターには、視覚的に不適切なコードを表示してプログラマが役立ちます。  

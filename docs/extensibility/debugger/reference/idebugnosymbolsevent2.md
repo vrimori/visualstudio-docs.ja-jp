@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31112409"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
 信号、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]デバッガーの UI をシンボルことができない、起動した実行可能ファイルのあるユーザーに警告します。  

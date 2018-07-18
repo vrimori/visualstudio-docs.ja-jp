@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946365"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio アーキテクチャ ツーリング ガイダンス
 このアーキテクチャ Tooling ガイダンスは、Visual Studio 2010 でモデリング ツールの使用に関する実用的なガイダンスのダウンロード可能なパッケージです。 統合の方法ですべてのモデリング ツールを使用する方法の概要を表示され、ツールを使用する最も一般的なシナリオについて説明します。

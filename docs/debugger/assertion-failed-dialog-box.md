@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31456426"
 ---
 # <a name="assertion-failed-dialog-box"></a>[アサートに失敗しました] ダイアログ ボックス
 アサート ステートメントでは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true にならない場合、アサーションは失敗し、プログラムの実行が停止し、このダイアログ ボックスが表示されます。  

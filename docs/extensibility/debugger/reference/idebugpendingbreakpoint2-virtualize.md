@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31122432"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 ブレークポイントの保留中の仮想化された状態を切り替えます。 保留中のブレークポイントを仮想化すると、デバッグ エンジンは、プログラムに新しいコードを読み込むたびにバインドしようとします。  

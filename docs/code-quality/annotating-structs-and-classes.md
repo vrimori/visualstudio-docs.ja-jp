@@ -30,6 +30,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31894349"
 ---
 # <a name="annotating-structs-and-classes"></a>構造体とクラスに注釈を付ける
 不変式のように動作する注釈を使用して、構造体とクラスのメンバーに注釈を付けることができます: これらは任意の関数呼び出しまたは関数の開始/終了パラメーターまたは結果の値として、囲み構造を含むで true であると見なされます。

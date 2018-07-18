@@ -1,7 +1,7 @@
 ---
-title: コード スニペット | Microsoft Docs
-ms.custom: ''
+title: コード スニペット
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +19,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 520aa870f85ddc3768720eafb17b0109fb270393
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a054ba07596135b08260ded028f07701fce9196d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31924473"
 ---
 # <a name="code-snippets"></a>コード スニペット
 
@@ -95,10 +96,10 @@ End Property
 
 ## <a name="see-also"></a>関連項目
 
-[チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)  
-[方法: コード スニペットを配布する](../ide/how-to-distribute-code-snippets.md)  
-[コード スニペットを使用するためのベスト プラクティス](../ide/best-practices-for-using-code-snippets.md)  
-[スニペットのトラブルシューティング](../ide/troubleshooting-snippets.md)  
-[C# コード スニペット](../ide/visual-csharp-code-snippets.md)  
-[Visual C++ のコード スニペット](../ide/visual-cpp-code-snippets.md)  
-[コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)
+- [チュートリアル: コード スニペットを作成する](../ide/walkthrough-creating-a-code-snippet.md)
+- [方法: コード スニペットを配布する](../ide/how-to-distribute-code-snippets.md)
+- [コード スニペットを使用するためのベスト プラクティス](../ide/best-practices-for-using-code-snippets.md)
+- [スニペットのトラブルシューティング](../ide/troubleshooting-snippets.md)
+- [C# コード スニペット](../ide/visual-csharp-code-snippets.md)
+- [Visual C++ のコード スニペット](../ide/visual-cpp-code-snippets.md)
+- [コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)

@@ -1,11 +1,11 @@
 ---
-title: "IActiveScript::InterruptScriptThread |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScript::InterruptScriptThread |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScript.InterruptScriptThread
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScript_InterruptScriptThread
 ms.assetid: 2304d035-6d39-4811-acd3-8a9640fdbef6
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641852"
 ---
 # <a name="iactivescriptinterruptscriptthread"></a>IActiveScript::InterruptScriptThread
 実行中のスクリプト スレッド (イベント シンク、即時実行の場合、またはマクロの呼び出し) の実行を中断します。 このメソッドは、(たとえば、無限ループ) に残っているスクリプトを終了するのには使用できます。 ホスト オブジェクトまたはベース以外吹き出しの結果として得られることがなくベース以外のスレッドから呼び出すことが、 [IActiveScriptSite](../../winscript/reference/iactivescriptsite.md)メソッドです。  

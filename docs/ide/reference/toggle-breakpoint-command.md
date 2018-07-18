@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946807"
 ---
 # <a name="toggle-breakpoint-command"></a>ToggleBreakpoint コマンド
 ファイル内の現在位置で、現在の状態に基づいてブレークポイントのオン/オフを切り替えます。

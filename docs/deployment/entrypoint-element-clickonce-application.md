@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31565251"
 ---
 # <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint&gt;要素 (ClickOnce アプリケーション)
 識別する必要のあるアセンブリ実行すると実行この[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]クライアント コンピューターでアプリケーションを実行します。  

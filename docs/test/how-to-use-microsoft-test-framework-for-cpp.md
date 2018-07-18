@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: dac63faa3c34983a8ac0be9ccd7cbd9fae9a1cbe
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 171cdd59d3fd40d640aea2e5896a0179a303bd19
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751690"
 ---
 # <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Microsoft 単体テスト フレームワークを使用する
 
@@ -55,7 +56,7 @@ DLL でエクスポートされない関数をテストするときなど、場�
 2.  テスト エクスプローラーで、**[すべて実行]** を選択するか、または実行する特定のテストを選択します。 ブレークポイントを有効にした場合のデバッグ モードでのテストの実行など他のオプションについては、テストを右クリックします。
 3. **[出力ウィンドウ]** で、ドロップダウンから **[テスト]** を選択し、`Logger` クラスによって書き出されたメッセージを表示します。
 
-  ![テスト メッセージを表示した C++ 出力ウィンドウ](media/cpp-test-output-window.png "出力ウィンドウ")
+  ![テスト メッセージを示す C++ 出力ウィンドウ](media/cpp-test-output-window.png)
 
 ## <a name="define-traits-to-enable-grouping"></a>グループ化を有効にするための特徴を定義する
 **テスト エクスプローラー**でテストを分類してグループ化するための特徴をテスト メソッドに対して定義できます。 特徴を定義するには、 `TEST_METHOD_ATTRIBUTE` マクロを使用します。 たとえば、特徴 `TEST_MY_TRAIT`を定義するには、次のように記述します。

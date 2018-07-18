@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447870"
 ---
 # <a name="document-protection-in-document-level-solutions"></a>ドキュメント レベルのソリューションでドキュメントの保護
   ドキュメント レベルのプロジェクトでは、Microsoft Office Word および Microsoft Office Excel の保護機能を使用することができます。 これらの機能は、ドキュメントの保護された部分を変更する権限のないユーザーをブロックします。  

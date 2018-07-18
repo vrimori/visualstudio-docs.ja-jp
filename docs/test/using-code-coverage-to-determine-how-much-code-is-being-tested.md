@@ -15,11 +15,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ec694fc904df2fd15ada008d9cb9f64f1df8492e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d27bc7fe308d7fc268291f58c64f902ff021dbd1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752093"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるコード割合の確認
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/26/2018
 
  たとえば、入力が "2" のテストを実行したときに、特定の関数の 50% がカバーされるとします。 入力を "-2" にして再度テストを実行すると、カバレッジの色分けビューで、関数の残りの 50% がカバーされていることがわかるとします。 ここで、2 つのテスト実行の結果をマージすると、レポートやカバレッジの色分けビューで、関数の 100% がカバーされたことが表示されます。
 
- そのためには、![[コード カバレッジ] ウィンドウの [マージ] ボタンのアイコン](../test/media/codecoverage-mergeicon.png "CodeCoverage-MergeIcon") **[コード カバレッジの結果のマージ]** を使用します。 最新の実行またはインポートされた結果を任意の組み合わせで選択できます。 エクスポートされた結果を結合する場合は、まず、それらをインポートする必要があります。
+ そのためには、![[コード カバレッジ] ウィンドウの [マージ] ボタンのアイコン](../test/media/codecoverage-mergeicon.png)**[コード カバレッジの結果のマージ]** を使用します。 最新の実行またはインポートされた結果を任意の組み合わせで選択できます。 エクスポートされた結果を結合する場合は、まず、それらをインポートする必要があります。
 
  マージ操作の結果を保存するには、**[コード カバレッジの結果のエクスポート]** を使用します。
 
@@ -258,7 +259,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
    複数のテスト ソース定義がある場合は、各定義に対してこの手順を繰り返します。
 
-   ![コード カバレッジのビルド定義の設定](../test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")
+   ![コード カバレッジのビルド定義の設定](../test/media/codecoverage-plaincc.png)
 
 > [!TIP]
 > 「**実行設定ファイルの種類**」という名前のフィールドがない場合、**[テスト ランナー]** プロパティを変更します。 **[自動テスト]** の下の **[テスト アセンブリ]** を選択し、行の末尾の省略記号 (**[...]**) ボタンを選択します。 **[テストの実行の追加と編集]** ダイアログ ボックスで、**[テスト ランナー]** の下の **[Visual Studio テスト ランナー]** を選択します。

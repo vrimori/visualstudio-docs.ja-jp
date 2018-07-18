@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31113347"
 ---
 # <a name="idebugerrorbreakpoint2"></a>IDebugErrorBreakpoint2
 このインターフェイスは、エラーまたは無効な場所、無効な式、または理由保留中のブレークポイントがバインドされていない (コードが、まだ読み込まれていない) 上の理由からなど、警告ブレークポイントを表します。  

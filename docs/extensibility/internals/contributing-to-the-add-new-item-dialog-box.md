@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129223"
 ---
 # <a name="contributing-to-the-add-new-item-dialog-box"></a>原因となっている、新しい項目 ダイアログ ボックスを追加
 プロジェクトのサブタイプが項目の完全な新しいディレクトリを指定できます、**新しい項目の追加** ダイアログ ボックスを登録して**項目の追加**下のテンプレート、`Projects`レジストリ サブキー。  

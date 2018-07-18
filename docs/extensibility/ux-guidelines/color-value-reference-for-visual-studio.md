@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148738"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio のカラー値の参照
 このトピックでは、新しい色のトークンを作成するための参照です。 新しい UI を作成するときは、各主要なテーマの色とハイ コントラスト テーマ用には、その要素のシステムの色の名前を選択するのに既存の UI からのような色を使用できます。 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472033"
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>エラー: 必要はありません、プロセスを検査する権限&#39;id
 プロセスの ID を検査する権限がありません。 これは、システムの混が原因である可鉢があります。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/18/2018
   
 7.  **ターミナル サービスのプロパティ**ウィンドウに移動して、**全般** タブで設定し、**スタートアップの種類**に**手動**です。  
   
-8.  **[OK]**をクリックします。  
+8.  **[OK]** をクリックします。  
   
 9. コンピューターを再起動します。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/18/2018
   
 4.  **リモート デスクトップ****ユーザーをこのコンピューターにリモートで接続できるように**です。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

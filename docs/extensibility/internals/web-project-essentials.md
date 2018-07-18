@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140996"
 ---
 # <a name="web-project-essentials"></a>Web プロジェクトの基礎
 Web プロジェクトでは、Web アプリケーションを作成します。 Web プロジェクトを使用して、Web アプリケーションに含まれるスマートの Web ページを作成することができます。 スマート Web ページには、要求時に Web ページを表示するサーバー側コードがあります。  
@@ -34,7 +35,7 @@ Web プロジェクトでは、Web アプリケーションを作成します。
   
     -   Web アプリケーション プロジェクト (WAP) は、スマートのすべての Web ページだけでなく場合は/App_Code フォルダー内のすべてのソース ファイルのコードを結合する 1 つの実行可能ファイルを生成します。  
   
--   Web プロジェクトのソリューション ファイルが Web サイト自体から個別に配置します。 既定では、ソリューションのファイルは、\Documents and 設定\\*自分のアカウント*\My Documents\\*\<Visual Studio ### >*\Projects\\ *YourWebSite*です。  
+-   Web プロジェクトのソリューション ファイルが Web サイト自体から個別に配置します。 既定では、ソリューションのファイルは、\Documents and 設定\\*自分のアカウント*\My Documents\\*\<Visual Studio ### >* \Projects\\ *YourWebSite*です。  
   
     > [!NOTE]
     >  Web サイトとソリューション ファイルを保持する場合は、だけその場所に移動し、ウィンドウを開きます。  

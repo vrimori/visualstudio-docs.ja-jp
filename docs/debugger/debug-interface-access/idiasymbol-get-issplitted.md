@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31464798"
 ---
 # <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
 データ シンボルが、集計またはその他のシンボルのコレクションに分割されているかどうかを指定するフラグを取得しますコンパイラは、本当に大規模なシンボルの一部である場合でも、個別のエンティティとして、シンボルを扱います。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137883"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
 指定されたグループの下に表示されるように、プロジェクト テンプレートをカテゴリに分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>コメント  
  `ProjectType` は `TemplateData` に必須の子要素です。  
   
- 値、`ProjectType`要素は、内のテンプレートの場所を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。 テンプレートなど、`ProjectType`の値`CSharp`下に表示されます、 **Visual c#**内のノード、**新しいプロジェクト** ダイアログ ボックス。  
+ 値、`ProjectType`要素は、内のテンプレートの場所を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。 テンプレートなど、`ProjectType`の値`CSharp`下に表示されます、 **Visual c#** 内のノード、**新しいプロジェクト** ダイアログ ボックス。  
   
  使用してテンプレートのサブタイプを指定することができます、 [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)要素。  
   

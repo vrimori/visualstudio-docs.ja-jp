@@ -14,16 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7855ddd258faf6b5c7b4b7825a67171d0fce0818
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9964da1521852d942490c09b83135c62f6be3ed9
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749500"
 ---
 # <a name="current-tab"></a>現在のタブ
 **現在**のタブをクリックすると、CPU スレッド セグメントが選択されている場合、現在の選択ポイントに最も近い呼び出し履歴 (利用できる場合) が表示されます。  その場合、選択ポイントはタイムラインの上に黒い矢印またはキャレットで表示されます。 ブロッキング セグメントが選択されているとき、実行がないため、キャレットは表示されません。 しかしながら、セグメントは強調表示され、呼び出し履歴が表示されます。  
   
  **現在**タブには、DirectX アクティビティ セグメント、マーカー、I/O アクセスに関する情報も表示されます。  DirectX アクティビティの場合、DMA パケットがハードウェア キューにより処理される方法に関する情報が表示されます。  マーカーの場合、説明とマーカーの種類に関する情報が表示されます。  I/O アクセスの場合、ファイルと読み込まれた (または書き込まれた) バイトの数に関する情報が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)

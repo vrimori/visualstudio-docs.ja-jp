@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140292"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 関数
 この関数は、特定のソース管理コマンドのファイルの一覧を更新し、指定されたすべてのファイルのソース管理の状態を提供します。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480333"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 開始し、実行を停止および、ブレークポイントの設定で変数を確認する方法を示します、**ウォッチ**ウィンドウです。  
@@ -50,9 +51,9 @@ ms.lasthandoff: 04/18/2018
   
 4.  **場所**行で、 **HTTP**リストから、テキスト ボックスに、入力 **http://localhost/WebSite**です。  
   
-5.  **言語**一覧で、クリックして**Visual c#**または**Visual Basic**です。  
+5.  **言語**一覧で、クリックして**Visual c#** または**Visual Basic**です。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
      [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で新しいプロジェクトが作成され、既定の HTML ソース コードが表示されます。 という名前の新しい仮想ディレクトリも作成**web サイト** **Default Web Site** IIS でします。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/18/2018
     TextBox1.Text = "Button was clicked!";  
     ```  
   
-13. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+13. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      プロジェクトがエラーのない状態でビルドされます。  
   

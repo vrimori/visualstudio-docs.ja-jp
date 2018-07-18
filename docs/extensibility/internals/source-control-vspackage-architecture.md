@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131895"
 ---
 # <a name="source-control-vspackage-architecture"></a>ソース コントロールの VSPackage のアーキテクチャ
 ソース管理パッケージは、サービスを使用して、VSPackage、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE を提供します。 代わりに、ソース管理パッケージは、ソース管理サービスとしての機能を提供します。 さらに、ソース管理パッケージは、ソース管理プラグインにソース管理を統合するためのよりも柔軟性の高い代替[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143892"
 ---
 # <a name="strings-element"></a>文字列の要素
 文字列要素を含める必要がありますが、少なくとも**ButtonText**子要素です。 その他のすべての子要素は省略できます。 などの無効な XML 文字 '&' と '<' のエンティティとしてコーディングする必要があります ('&amp;'および'&lt;' など)。  

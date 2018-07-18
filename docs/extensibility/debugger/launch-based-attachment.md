@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099377"
 ---
 # <a name="launch-based-attachment"></a>添付ファイルの起動に基づく
 プログラムを起動ベースの添付ファイルは自動です。 プログラムをホストしているプロセスを開始するには、SDM によって、起動ベースの添付ファイルは手動の添付ファイルのメソッドと同様のパスに従います。 詳細については、次を参照してください。[プログラムへのアタッチ](../../extensibility/debugger/attaching-to-the-program.md)です。  

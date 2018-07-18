@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31566135"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>方法: アプリケーション マニフェストおよび配置マニフェストに再署名する
 Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション (xbap)、Office ソリューション用アプリケーション マニフェストにある展開プロパティを変更した後、両方のアプリケーションを再署名する必要がありでの配置マニフェスト、証明書です。 このプロセスにより、エンドユーザーのコンピューターに改ざんされたファイルがインストールされていないことを確認してください。  

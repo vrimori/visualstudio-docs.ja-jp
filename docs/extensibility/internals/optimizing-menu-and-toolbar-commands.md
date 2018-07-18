@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130730"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>メニューとツールバーのコマンドを最適化します。
 Vspackage とそれに対応するコマンドへの追加[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]過密状態 UI が発生する可能性があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI コマンド混乱を最小限に抑える方法を提供します。  

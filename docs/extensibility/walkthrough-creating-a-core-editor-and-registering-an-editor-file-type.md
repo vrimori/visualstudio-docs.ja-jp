@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147410"
 ---
 # <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。
 このチュートリアルを開始する VSPackage を作成する方法を示しています、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターと .myext ファイル名拡張子を持つファイルが読み込まれています。  

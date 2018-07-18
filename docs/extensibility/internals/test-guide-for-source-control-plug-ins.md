@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145959"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>テスト ソース管理プラグインのガイド
 このセクションでは、ソース管理のプラグインをテストするためのガイダンスを提供[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 広範な概要、最も一般的なテスト領域と同様の問題がある可能性があるより複雑な領域の一部が表示されます。 この概要はテスト_ケースの網羅するものではありません。  

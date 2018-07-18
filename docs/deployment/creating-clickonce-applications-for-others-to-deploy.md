@@ -31,6 +31,7 @@ ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34065079"
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>開発者以外が配置する ClickOnce アプリケーションの作成
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体の展開を計画します。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大規模な企業など、顧客に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 では、新しい「信頼のマニフェストを使用して」機能を使用して、新しい解決し、について説明します。 最後に、.NET Framework の旧バージョンを使用して引き続きお客様の ClickOnce 配置を作成するための推奨される方針にで終わりです。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31145010"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-13"></a>どのような&#39;ソースのプラグイン API バージョン 1.3 の制御
 ソース管理プラグイン API バージョン 1.3 より高度な制御を提供する次の関数について説明します。  

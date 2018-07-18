@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126491"
 ---
 # <a name="extensibility-in-visual-studio"></a>Visual Studio の機能拡張
 Visual Studio では、多くの機能拡張オプションを提供しています。 独自の Sdk を作成し、Windows、Windows Phone、および Azure Sdk (Visual Studio の一部としてインストールされます) を使用して、Visual Studio 自体を拡張することができます。  

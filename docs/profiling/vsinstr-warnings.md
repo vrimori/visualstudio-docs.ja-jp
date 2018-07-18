@@ -16,19 +16,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ffe35d7b2467147c5f9f244357371f2d5dadb76b
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: a306276e015d06fe3becf297d0bb5834f640a1a7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571647"
 ---
 # <a name="vsinstr-warnings"></a>VSInstr の警告
-次の表に、VSInstr.exe ツールで発行される警告をリストします。 NOWARN オプションに警告番号を指定することで、警告を非表示にできます。  
+次の表に、*VSInstr.exe* ツールで発行される警告をリストします。 NOWARN オプションに警告番号を指定することで、警告を非表示にできます。  
   
 |警告番号|説明|  
 |--------------------|-----------------|  
 |**VSP2000**|内部エラーです。 この実行可能ファイルのモジュール ファイル名を取得できません。|  
-|**VSP2001**|\<assembly name> は、厳密な名前付きのアセンブリです。 実行するには、再署名する必要があります。<br /><br /> この警告は、署名付きのアセンブリがインストルメントされたときに発生します。 sn.exe ツールを使用して、バイナリを再署名するか、厳密な名前の必要性を一時的に無効にすることができます。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。|  
+|**VSP2001**|\<assembly name> は、厳密な名前付きのアセンブリです。 実行するには、再署名する必要があります。<br /><br /> この警告は、署名付きのアセンブリがインストルメントされたときに発生します。 *sn.exe* ツールを使用して、バイナリを再署名するか、厳密な名前の必要性を一時的に無効にすることができます。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。|  
 |**VSP2002**|ファイル \<filename> で関数 \<funcname> が見つかりませんでした。<br /><br /> この警告は、関数が指定したファイルで見つからない場合に発生します。|  
 |**VSP2003**|ファイル \<filename> で関数 \<funcname> へのクロス ジャンプが見つかりませんでした。<br /><br /> この警告は、VSInstr でクロス ジャンプを無効にできない場合に発生します。 クロス ジャンプはコードの最適化に使用されます。|  
 |**VSP2004**|関数 \<funcname> は、EXCLUDE コマンド ライン スイッチを使用して除外されましたが、クロス ジャンプが含まれていたため省略することはできませんでした。<br /><br /> この警告は、EXCLUDE オプションを使用して除外された関数がインストルメンテーション プロセスに必要である場合に発生します。 プロファイラーは、必要な関数を自動的に含めます。|  

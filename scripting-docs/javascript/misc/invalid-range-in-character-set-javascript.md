@@ -1,13 +1,13 @@
 ---
-title: "文字の範囲が無効です (JavaScript) の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字の範囲が無効です (JavaScript) の設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5021
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 971e9d5a-f88a-47a8-af94-f3c7c4aed5ab
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24633002"
 ---
 # <a name="invalid-range-in-character-set-javascript"></a>文字セットの範囲が無効です (JavaScript)
 無効な文字セットの範囲で、正規表現を作成しようとするとします。 文字セットの 1 つの文字のみが a ~ z、0 ~ 9; など範囲する必要があります。文字セットで \w などの文字クラスを含めることはできません。 範囲の最初の文字は、範囲の 2 番目の文字の前にもあります。 例:  

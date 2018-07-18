@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141097"
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows インストーラーで VSPackage をアンインストールします。
 ほとんどの場合、Windows インストーラーをアンインストールできます VSPackage だけで「元に戻す」は、VSPackage をインストールします。 カスタム アクションは、後ほど[コマンドする必要がある実行後にインストール](../../extensibility/internals/commands-that-must-be-run-after-installation.md)もアンインストール後に実行する必要があります。 Devenv.exe への呼び出しは、インストールとアンインストールの両方の installfinalize が標準的な操作の直前に発生する、CustomAction と InstallExecuteSequence テーブルのエントリはどちらの場合に機能します。  

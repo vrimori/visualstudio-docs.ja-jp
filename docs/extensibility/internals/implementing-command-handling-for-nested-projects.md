@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129001"
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>入れ子になったプロジェクトの処理コマンドの実装
 IDE が経由で渡されるコマンドを渡すことができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>と<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>入れ子になったプロジェクト、または親プロジェクトへのインターフェイスのフィルター処理または、コマンドを無視できます。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126911"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>型のビジュアライザーとカスタム ビューアー
 型のビジュアライザーは、非常に特定の形式でデータを表示するコンポーネントです。 この形式は、ビジュアライザーの実行者の次第、エンドユーザーまたはビジュアライザー サード パーティ製品を供給します。  

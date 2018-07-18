@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5a584402473d9576376d6357dd67e6c47f391c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0a6312a674cc3e9764971f2add59c8e1f0441790
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477484"
 ---
-# <a name="understanding-performance-collection-methods"></a>パフォーマンス収集方法について
+# <a name="understand-performance-collection-methods"></a>パフォーマンス収集方法について
 
 Visual Studio プロファイリング ツールには、パフォーマンス データを収集するための 5 つの方法が用意されています。 ここでは、これらの方法について説明し、特定の方法がデータの収集方法としてどのようなシナリオに適しているのかを示します。
 
@@ -36,7 +37,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 一部のプロファイル方法では、ソフトウェアおよびハードウェアのパフォーマンス カウンターなど、ここで示した以外の情報も収集できます。 詳細については、「[追加のパフォーマンス データの収集](../profiling/collecting-additional-performance-data.md)」を参照してください。
 
-## <a name="sampling"></a> サンプリング
+## <a name="sampling"></a>サンプリング
 
 サンプリング プロファイル方式では、プロファイリング実行中にアプリケーションが実行した作業に関する統計データを収集します。 サンプリング方式は負荷が少ないため、アプリケーション メソッドの実行にほとんど影響しません。
 
@@ -55,7 +56,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 [サンプリング メソッドのデータ ビュー](../profiling/profiler-sampling-method-data-views.md)
 
-## <a name="instrumentation"></a> インストルメンテーション
+## <a name="instrumentation"></a>インストルメンテーション
 
 インストルメンテーション プロファイル方式では、プロファイル対象アプリケーションにおける関数呼び出しのタイミングに関する詳細情報を収集します。 インストルメンテーション プロファイル方式は、次のような用途に適しています。
 
@@ -80,7 +81,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 [インストルメンテーション メソッドのデータ ビュー](../profiling/instrumentation-method-data-views.md)
 
-## <a name="concurrency"></a> 同時実行
+## <a name="concurrency"></a>同時実行
 
 同時実行プロファイルでは、マルチスレッド アプリケーションに関する情報が収集されます。 リソース競合プロファイルでは、競合するスレッドによる共有リソースへのアクセスで待機が発生するたびに、詳細な呼び出し履歴情報が収集されます。 また、同時実行の視覚化では、マルチスレッド アプリケーションが、アプリケーション自体、ハードウェア、オペレーティング システム、およびホスト コンピューター上の他のプロセスと対話する方法に関する、より一般的な情報が収集されます。
 
@@ -90,13 +91,13 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 [リソース競合データ値について](../profiling/understanding-resource-contention-data-values.md)
 
-[スレッドおよびプロセスの同時実行データの収集](../profiling/collecting-thread-and-process-concurrency-data.md)
+[スレッドとプロセスの同時実行データの収集](../profiling/collecting-thread-and-process-concurrency-data.md)
 
 [リソース競合データのビュー](../profiling/resource-contention-data-views.md)
 
 [同時実行ビジュアライザー](../profiling/concurrency-visualizer.md)
 
-## <a name="net_memory"></a> .NET メモリ
+## <a name="net-memory"></a>.NET メモリ
 
 .NET メモリ割り当てプロファイル方式では、プロファイリング対象アプリケーションで .NET Framework オブジェクトにメモリが割り当てられるたびに、コンピューター プロセッサに対して割り込みを行います。 オブジェクトの有効期間データも収集する場合は、.NET Framework のガベージ コレクションの実行後に、毎回プロファイラーがコンピューター プロセッサに対して割り込みを行います。
 
@@ -112,13 +113,13 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 - .NET メモリのプロファイリングをインストルメンテーション モードで実行すると、タイミングに関する詳細情報と共に、包括的割り当て値および排他的割り当て値が収集されます。
 
-[メモリの割り当ておよびオブジェクトの有効期間のデータ値について](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
+[メモリの割り当てとオブジェクトの有効期間のデータ値について](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)
 
-[.NET メモリの割り当ておよび有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
+[.NET メモリの割り当てと有効期間データの収集](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
 [.NET メモリのデータ ビュー](../profiling/dotnet-memory-data-views.md)
 
-## <a name="tier_interaction"></a> 階層の相互作用
+## <a name="tier-interaction"></a>階層の相互作用
 
 階層の相互作用のプロファイリングでは、[!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] ページまたはその他のアプリケーションと [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] データベースとの間で行われた同期的な [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 呼び出しに関する情報が、プロファイリング データ ファイルに追加されます。 データには、呼び出しの回数と時間、および最長時間と最短時間が含まれます。 階層の相互作用データは、サンプリング、インストルメンテーション、.NET メモリ、または同時実行の各方式で収集されたプロファイリング データに追加できます。
 
@@ -126,7 +127,7 @@ Visual Studio プロファイリング ツールには、パフォーマンス �
 
 プロファイリング ツールによって収集される階層の相互作用データ
 
-[階層相互作用データの収集](../profiling/collecting-tier-interaction-data.md)
+[階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)
 
 [階層相互作用のビュー](../profiling/tier-interaction-views.md)
 

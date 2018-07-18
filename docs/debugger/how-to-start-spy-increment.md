@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473859"
 ---
 # <a name="how-to-start-spy"></a>方法: Spy++ を起動する
 まず、spy++、コマンド プロンプトまたは Visual Studio からします。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/18/2018
   
 ### <a name="to-start-spy-from-visual-studio"></a>Visual Studio から spy++ を起動するには  
   
--   **ツール** メニューのをクリックして**spy++**です。  
+-   **ツール** メニューのをクリックして**spy++** です。  
   
      Spy++ で実行されるためいない個別に開始した後、Visual Studio を閉じることができます。  
   

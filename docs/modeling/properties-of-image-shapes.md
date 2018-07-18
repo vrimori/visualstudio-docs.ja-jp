@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952629"
 ---
 # <a name="properties-of-image-shapes"></a>イメージ シェイプのプロパティ
 イメージの図形を使用すると、ドメイン クラスが生成されたデザイナーで表示する方法を指定します。 設定して、イメージの図形を定義、`Image`定義済みのイメージ ファイルのクラスのプロパティです。 次の形式がサポートされています。

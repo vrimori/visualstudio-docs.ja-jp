@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147595"
 ---
 # <a name="managing-universal-windows-projects"></a>ユニバーサル Windows プロジェクトを管理します。
 ユニバーサル Windows アプリとは、Windows 8.1 と Windows Phone 8.1、両方のプラットフォームでコードやその他のアセットを使用する開発者の両方を対象とするアプリです。 共有コードおよびリソースは、プラットフォーム固有のコードおよびリソースが個別のプロジェクト、Windows と Windows Phone 用に保持されるときに、共有プロジェクトに保持されます。 ユニバーサル Windows アプリの詳細については、次を参照してください。[ユニバーサル Windows アプリ](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx)です。 プロジェクトを管理する、visual Studio 拡張機能は、ユニバーサル Windows アプリ プロジェクトが 1 つのプラットフォームのアプリとは異なる構造を持つことに注意してください。 このチュートリアルでは、共有プロジェクトを移動し、共有項目を管理する方法を示します。  

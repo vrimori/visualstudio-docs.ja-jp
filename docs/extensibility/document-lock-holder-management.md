@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130545"
 ---
 # <a name="document-lock-holder-management"></a>ドキュメントのロック所有者の管理
 実行しているドキュメント テーブル (RDT) は、開いているドキュメントとがあるすべての編集ロックの数を保持します。 編集しているときにプログラムでバック グラウンドでユーザーがドキュメント ウィンドウで開いているドキュメントが表示されることがなく、RDT 内のドキュメントに対する編集ロックを配置できます。 この機能はグラフィカル ユーザー インターフェイスからの複数のファイルを変更するデザイナーでよく使用されます。  

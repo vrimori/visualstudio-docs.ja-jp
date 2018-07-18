@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130743"
 ---
 # <a name="legacy-language-service-features"></a>レガシ言語サービス機能
 次のトピックには、使用できる従来の言語サービス機能の一部が一覧表示します。  

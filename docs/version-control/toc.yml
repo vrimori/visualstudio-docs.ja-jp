@@ -1,4 +1,4 @@
-- name: バージョン管理
+- name: バージョン コントロール
   href: /visualstudio/version-control/index
 - name: 概要
   items:
@@ -85,5 +85,5 @@
       href: /vsts/git/tutorial/howto?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json
 - name: リソース
   items:
-    - name: Git についての情報
-      href: 'https://www.visualstudio.com/learn-git/'
+    - name: Git とは
+      href: /azure/devops/git/what-is-git

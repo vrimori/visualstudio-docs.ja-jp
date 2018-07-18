@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31922555"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>方法: 前乗算されたアルファを持つテクスチャをエクスポートする
 イメージ コンテンツ パイプラインを使用すると、前乗算されたアルファを含むテクスチャをソース イメージから生成できます。 これらのテクスチャは、前乗算されたアルファを含まないテクスチャよりも簡単に使用でき、堅牢です。

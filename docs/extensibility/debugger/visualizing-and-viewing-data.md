@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132483"
 ---
 # <a name="visualizing-and-viewing-data"></a>視覚化とデータを表示します。
 ビジュアライザーの型とカスタム ビューアーを開発者に迅速にわかりやすい方法でデータを表示します。 式エバリュエーター (EE) サード パーティ製の種類のビジュアライザーをサポートしたりできるよう、独自のカスタム ビューアーを指定します。  

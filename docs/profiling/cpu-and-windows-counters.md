@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5031481ddf785a85b77747c28d76e79d32a0d599
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8166645f9e767b63d22ebf36bb056c16d339131f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748739"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 
@@ -45,7 +46,7 @@ Visual Studio プロファイラーは、特定のプラットフォームの特
 
 ポータブル イベントとは、特定のプロセッサに固有ではない CPU カウンターのグループです。 他のすべての CPU カウンターはプラットフォーム イベントと呼ばれ、さまざまなプラットフォームでサポートされていない可能性があります。
 
- ポータブル イベントとプラットフォーム イベント両方のカウンターは .XML ファイルで定義されており、カウンターに関連する特定の値が提供されます。 たとえば Intel と AMD の CPU ではデータが異なるので、異なる CPU ごとに複数のファイルがあります。 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] プロファイラーは、この情報を使用して、ポータブルとプラットフォーム両方の適切なカウンターを、パフォーマンス測定用にユーザーに提示します。
+ ポータブル イベントとプラットフォーム イベント両方のカウンターは *.xml* ファイルで定義されており、カウンターに関連する特定の値が提供されます。 たとえば Intel と AMD の CPU ではデータが異なるので、異なる CPU ごとに複数のファイルがあります。 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] プロファイラーは、この情報を使用して、ポータブルとプラットフォーム両方の適切なカウンターを、パフォーマンス測定用にユーザーに提示します。
 
 ### <a name="portable-events"></a>Portable Events
 
@@ -78,7 +79,7 @@ Visual Studio プロファイラーは、特定のプラットフォームの特
 |L2 Cache Read Misses|第 2 レベルのキャッシュ読み取りミスの数を示します。|
 |L2 Cache Read References|第 2 レベルのキャッシュ読み取り参照の数を示します。 読み込みミスおよび RFO (read for ownership) のミスとヒットを含みます。|
 
-## <a name="viewing-available-counters"></a>使用可能なカウンターの表示
+## <a name="view-available-counters"></a>使用可能なカウンターの表示
 
 Visual Studio IDE またはコマンド プロンプト ウィンドウで、使用可能な CPU カウンターを一覧表示できます。
 
@@ -126,13 +127,13 @@ Visual Studio IDE でコンピューターの使用可能なカウンターを�
 
      「**\<Visual Studio パフォーマンス ツール ディレクトリ>\VSPerfCmd /querycounters**」と入力します。
 
-     ここで、**\<Visual Studio パフォーマンス ツール ディレクトリ>** は Visual Studio インストールのパフォーマンス ツール ディレクトリへのパスであり、通常は
+     ここで、*\<Visual Studio パフォーマンス ツール ディレクトリ>* は Visual Studio インストールのパフォーマンス ツール ディレクトリへのパスであり、通常は
 
-     C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools です。
+     *C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools*
 
 ## <a name="see-also"></a>関連項目
 
 [概要](../profiling/overviews-performance-tools.md)  
-[方法: サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)  
-[方法: CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)  
+[方法 : サンプリング イベントを選択する](../profiling/how-to-choose-sampling-events.md)  
+[方法 : CPU カウンター データを収集する](../profiling/how-to-collect-cpu-counter-data.md)  
 [方法: Windows カウンター データを収集する](../profiling/how-to-collect-windows-counter-data.md)

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137178"
 ---
 # <a name="objects"></a>オブジェクト
 次の参照情報には、主要なテキスト エディターのインスタンスを作成に使用されるオブジェクトについて説明します。  

@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dc5260c50fde7137ed2c598483fd2647d73f4112
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: ab725659207813bb88d505b1318a175e602c5ade
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750494"
 ---
 # <a name="tutorial-step-6-use-the-polls-django-web-project-template"></a>チュートリアル手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
@@ -253,7 +254,7 @@ urlpatterns = [
 ]
 ```
 
-ここで使用されている複雑な正規表現に慣れていない場合は、正規表現を [regex101.com](https://regex101.com/) に貼り付けて、わかりやすい説明を確認することができます  (スラッシュ `/` をエスケープするには、その前にバック スラッシュ `\` を追加する必要があります。Python では、文字列に対する `r` プレフィックス (つまり "生") があるため、エスケープする必要はありません)。
+ここで使用されている複雑な正規表現に慣れていない場合は、正規表現を [regex101.com](https://regex101.com/) に貼り付けて、わかりやすい説明を確認することができます  (スラッシュ `/` をエスケープするには、その前にバック スラッシュ `\` を追加する必要があります。Python では、文字列に "raw (生)" を意味する `r` プレフィックスがあるため、エスケープする必要はありません)。
 
 Django では、構文 `?P<name>pattern` で `name` というグループが作成されます。これは出現順でビューの引数として渡されます。 前述のコードでは、`PollsDetailView` と `PollsResultsView` は `pk` という引数を受け取り、`app.views.vote` は `poll_id` という引数を受け取ります。
 

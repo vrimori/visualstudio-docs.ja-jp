@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477282"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio からの UWP アプリを配置します。
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/18/2018
   
      ![ローカル コンピューター上で実行](../debugger/media/vsrun_f5_local.png "VSRUN_F5_Local")  
   
-3.  **[ビルド]** メニューで **[配置]**を選択  
+3.  **[ビルド]** メニューで **[配置]** を選択  
   
 ##  <a name="BKMK_How_to_specify_a_remote_device"></a> リモート デバイスの指定方法  
 
@@ -102,14 +103,14 @@ Windows 10 のリモート デバイスを有効にする必要があります[�
   
 -   C# および VB のデバッグ プロパティ ページで、 **[ネットワーク ループバックの許可]** チェック ボックスをクリアします。  
   
--   JavaScript およびデバッグ プロパティ ページで、 **[ネットワーク ループバックの許可]** の値を **[いいえ]**に設定します。  
+-   JavaScript およびデバッグ プロパティ ページで、 **[ネットワーク ループバックの許可]** の値を **[いいえ]** に設定します。  
   
  **起動しない。ただし開始した場合にはコードをデバッグ (C# および VB) / アプリケーションを起動 (JavaScript および C++)**  
  アプリが起動した場合はデバッグ セッションを自動駅に開始するように、配置を構成するには  
   
 -   C# および VB のデバッグ プロパティ ページで、 **[起動しないが、開始時にコードをデバッグ]** チェック ボックスをオンにします。  
   
--   JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]**に設定します。  
+-   JavaScript およびデバッグ プロパティ ページで、 **[アプリケーションの起動]** の値を **[はい]** に設定します。  
   
 ## <a name="see-also"></a>関連項目  
  [リモート展開のオプションの詳細](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)  

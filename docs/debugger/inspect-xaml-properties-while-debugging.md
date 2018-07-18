@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480216"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>デバッグ中に XAML のプロパティを調べます。
 実行中の XAML コードのリアルタイム ビューを取得することができます、 **Live Visual Tree**と**Live Property Explorer**です。 これらのツールは、実行中の XAML アプリケーションの UI 要素のツリー ビューを提供し、選択した UI 要素のランタイム プロパティを表示します。  
@@ -82,7 +83,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  アプリケーション ウィンドウに戻り、さらにいくつかの項目を追加します。 表示される複数のリスト ボックス項目が表示されます、 **Live Visual Tree**です。  
   
- これで、リスト ボックス項目のいずれかのプロパティを見てみましょう。 内の最初のリスト ボックス項目を選択して、 **Live Visual Tree**  をクリックし、**プロパティを表示**ツールバーのアイコン。 **Live Property Explorer**が表示されます。 なお、**コンテンツ**フィールドは"Item1"、および**バック グラウンド**フィールドは**#ffffffe0** (薄い黄色)。 戻り、 **Live Visual Tree** 2 番目のリスト ボックス項目を選択します。 **Live Property Explorer**を表示する必要があります、**コンテンツ**フィールドが"Item2"、および**背景**フィールドは**#ffd3d3d3** (薄い灰色).  
+ これで、リスト ボックス項目のいずれかのプロパティを見てみましょう。 内の最初のリスト ボックス項目を選択して、 **Live Visual Tree**  をクリックし、**プロパティを表示**ツールバーのアイコン。 **Live Property Explorer**が表示されます。 なお、**コンテンツ**フィールドは"Item1"、および**バック グラウンド**フィールドは **#ffffffe0** (薄い黄色)。 戻り、 **Live Visual Tree** 2 番目のリスト ボックス項目を選択します。 **Live Property Explorer**を表示する必要があります、**コンテンツ**フィールドが"Item2"、および**背景**フィールドは **#ffd3d3d3** (薄い灰色).  
   
  XAML の実際の構造は多数の関心がある可能性があります直接、要素を持ち、コードをよく理解していない場合は、探しているものを検索するツリーを移動するハード時を必要があります。 そのため、 **Live Visual Tree**いくつかの方法を確認する場合の要素を検索するため、アプリケーションの UI を使用することができますがします。  
   

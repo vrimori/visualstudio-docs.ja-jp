@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138747"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 要素 (Visual Studio テンプレート)
 別の項目テンプレートのグループに分類される項目テンプレートの識別子を指定、 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)要素。  

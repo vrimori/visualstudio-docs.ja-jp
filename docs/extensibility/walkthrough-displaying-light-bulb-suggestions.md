@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148702"
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>チュートリアル: 電球候補を表示します。
 電球マークは、一連のアクションを表示するを展開し、組み込みのコード アナライザーまたはコードのリファクタリングによって特定した問題の修正例を Visual Studio エディターで使用されるアイコン。  

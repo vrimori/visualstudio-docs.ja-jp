@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109452"
 ---
 # <a name="creating-an-extension-with-a-vspackage"></a>VSPackage で拡張機能を作成します。
 このチュートリアルでは、VSIX プロジェクトを作成し、VSPackage プロジェクト アイテムを追加する方法を示します。 メッセージ ボックスを表示するために UI シェル サービスを取得するのに VSPackage を使用します。  
@@ -75,4 +76,4 @@ ms.lasthandoff: 04/16/2018
   
 3.  プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-4.  実験用インスタンスで、ソリューションを開きます。 示すメッセージ ボックスを表示する必要があります**最初のパッケージの内部 Initialize()**です。
+4.  実験用インスタンスで、ソリューションを開きます。 示すメッセージ ボックスを表示する必要があります**最初のパッケージの内部 Initialize()** です。

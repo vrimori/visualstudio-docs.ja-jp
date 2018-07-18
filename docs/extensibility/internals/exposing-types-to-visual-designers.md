@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135975"
 ---
 # <a name="exposing-types-to-visual-designers"></a>ビジュアル デザイナーで型を公開します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] クラスと型の定義へのアクセスをビジュアル デザイナーを表示するためにデザイン時に必要です。 クラスは、定義済みの (参照とその依存関係) は、現在のプロジェクトの依存関係の完全なセットが含まれるアセンブリのセットから読み込まれます。 ビジュアルなデザイナーのクラスのアクセスとカスタム ツールによって生成されたファイルで定義されている型に必要もあります。  

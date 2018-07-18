@@ -15,6 +15,7 @@ ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34477822"
 ---
 # <a name="context-menus-xml-schema-explorer"></a>コンテキスト メニュー (XML スキーマ エクスプ ローラー)
 

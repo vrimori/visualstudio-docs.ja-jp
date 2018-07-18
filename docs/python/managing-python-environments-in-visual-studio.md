@@ -1,7 +1,7 @@
 ---
 title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
-ms.date: 03/21/2018
+ms.date: 06/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,17 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fbefd6a09537227f9b2343d2311dd1e68b9f0a23
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 9ce601d169654c4fddca30b5e9853e18dcae9ac5
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37342755"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
 Python *環境*は、その中で Python コードを実行するコンテキストであり、グローバル環境、仮想環境、および conda 環境が含まれます。 1 つの環境は、インタープリター、ライブラリ (通常は Python 標準ライブラリ)、およびインストールされているパッケージのセットで構成されます。 これらのコンポーネントがすべて合わさって、有効な言語の構造と構文、アクセスできるオペレーティング システム機能、使用できるパッケージが決まります。
 
-Windows の Visual Studio では、この記事で説明する [[Python 環境]](#the-python-environments-window) ウィンドウで、これらの環境を管理し、新しいプロジェクトの既定値として 1 つの環境を選択します。 特定のプロジェクトに対して、既定ではなく、特定の環境を選択することもできます。
+Windows の Visual Studio では、この記事で説明する [[Python 環境]](#the-python-environments-window) ウィンドウで、これらの環境を管理し、新しいプロジェクトの既定値として 1 つの環境を選択します。 特定のプロジェクトに対して、既定ではなく、[特定の環境を選択](selecting-a-python-environment-for-a-project.md)することもできます。
 
 **注**: Visual Studio で Python を初めて使用される場合は、次の記事で必要な予備知識についてご確認ください。
 
@@ -30,7 +31,7 @@ Windows の Visual Studio では、この記事で説明する [[Python 環境]]
 
 **[ファイル]** > **[開く]** > **[フォルダー]** コマンドを使用してフォルダーとしてのみ開かれた Python コードの環境は管理できないことにも注意してください。 Visual Studio の環境機能を使用するには、[既存のコードから Python プロジェクトを作成](quickstart-01-python-in-visual-studio-project-from-existing-code.md)します。
 
-環境にパッケージをインストールする場合は、[[パッケージ] タブ](python-environments-window-tab-reference.md#packages-tab)を参照してください。
+環境にパッケージをインストールする場合は、[[パッケージ] タブのリファレンス](python-environments-window-tab-reference.md#packages-tab)を参照してください。
 
 ## <a name="types-of-environments"></a>環境の種類
 
@@ -55,9 +56,10 @@ conda 環境は `conda` ツールを使用して作成される環境です。Vi
 
 conda 環境が格納されている conda バージョンや、その他の情報を参照するには、Anaconda コマンド プロンプト (つまり、Anaconda がパス内に存在するコマンド プロンプト) で `conda info` を実行します。
 
-```bash
+```cli
 conda info
 ```
+
 conda 環境フォルダーは次のように表示されます。
 
 ```output
@@ -85,17 +87,18 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 
 ![[Python Environments (Python 環境)] ウィンドウ](media/environments-default-view.png)
 
-太字で表示される既定の環境は Python 3.6 で、Visual Studio では新しいプロジェクトに対してこれを使用します。 リストされている環境はいずれも (種類に関係なく) 既定値として使用することができます。
+Visual Studio では、[PEP 514](https://www.python.org/dev/peps/pep-0514/) に従い、レジストリを使用してインストールされた環境を識別します。 一覧に想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」を参照してください。
 
-ウィンドウの下部に表示されるコマンドは、選択されたインタープリターに適用されます。これは `C:\Python36-32` の固有のインストールです (太字で表示された既定の環境は Anaconda インストールの一部です)。 想定した環境が見つからない場合は、「[既存の環境を手動で識別する](#manually-identify-an-existing-environment)」を参照してください。
+一覧から環境を選択すると、**[概要]** タブにその環境用のさまざまなプロパティとコマンドが表示されます。たとえば、上の図でインタープリターの場所は `C:\Python36-32` であることをご確認いただけます。 以下の環境の一覧のドロップダウン リストを使用して、**Package** や **IntelliSense** など異なるタブに切り替えることができます。 これらのタブの説明は、「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)」でご覧いただけます。
 
-表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 (Visual Studio 2017 15.5 以前のバージョンでは、環境の IntelliSense データベースを更新する別のコントロールが表示されます。 データベースの詳細については、[環境ウィンドウ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)に関するページを参照してください)。
+環境を選択しても、それがアクティブになることはありません。 この一覧で太字で表示されている既定の環境が、Visual Studio ですべての新しいプロジェクトに使用されている現在アクティブになっている環境です。 別の環境をアクティブにするには、**Make this environment the default for new project** (これを新しいプロジェクトに対する既定の環境にする) コマンドを使用します。 さまざまな環境を常にプロジェクトのコンテキスト内でアクティブにできます。 詳細については、「[プロジェクト用の環境の選択](selecting-a-python-environment-for-a-project.md)」をご覧ください。
 
-環境の一覧の下には、[[Python 環境] ウィンドウ タブ リファレンス](python-environments-window-tab-reference.md)に説明がある **[概要]**、**[パッケージ]**、および **[IntelliSense]** の各オプション用のドロップダウン セレクターが表示されます。 また、**[Python 環境]** ウィンドウを大きく広げると、これらのオプションがタブとして表示され、より操作しやすくなります。
+表示されている各環境の右側に、その環境の対話型のウィンドウを開くコントロールがあります。 (Visual Studio 2017 15.5 以前のバージョンでは、環境の IntelliSense データベースを更新する別のコントロールが表示されます。 データベースの詳細については、「[[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md#intellisense-tab)」参照してください)。
 
-![[Python Environments (Python 環境)] ウィンドウを広げた表示](media/environments-expanded-view.png)
-
-上図には、この特定のコンピューター上に存在する環境の完全なリストに加えて、環境を作成するための追加のコマンドも表示されています。
+> [!Tip]
+> **[Python 環境]** ウィンドウを大きく広げると、環境の表示が拡張され、より操作しやすくなります。
+>
+> ![[Python Environments (Python 環境)] ウィンドウを広げた表示](media/environments-expanded-view.png)
 
 > [!Note]
 > Visual Studio はシステム サイト パッケージのオプションを尊重しますが、Visual Studio 内からそれを変更する方法は用意されていません。
@@ -115,7 +118,27 @@ Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表
 >
 > ただし、ファイル システムを使用してインタープリターとその環境を手動で移動している場合、Visual Studio は新しい場所がわかりません。 詳細については、「[、インタープリターを移動する](installing-python-interpreters.md#moving-an-interpreter)」を参照してください。
 
-<a name="manually-identifying-an-existing-environment></a>
+## <a name="fix-invalid-environments"></a>無効な環境を修正する
+
+Visual Studio で環境のレジストリ エントリが検出されたものの、インタープリターへのパスが無効である場合、[Python 環境] ウィンドウに取り消し線の付いた名前が表示されます。
+
+![無効な環境を示す [Python 環境] ウィンドウ](media/environments-invalid-entry.png)
+
+保持する環境を修正するには、まず、そのインストーラーの**修復**プロセスを使用してみます。 たとえば、標準的な Python 3.x のインストーラーにはそのオプションが含まれます。
+
+修復オプションがない環境を修正する場合や、無効な環境を削除する場合は、次の手順を使用して直接レジストリを変更します。 Visual Studio では、レジストリの変更時に [Python 環境] ウィンドウが自動的に更新されます。
+
+1. `regedit.exe` を実行します。
+1. 32 ビットのインタープリターの場合は `HKEY_LOCAL_MACHINE\SOFTWARE\Python` に、64 ビットのインタープリターの場合は `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python` に移動します。 IronPython の場合は、代わりに `IronPython` を検索します。
+1. `PythonCore` (CPython の場合) や `ContinuumAnalytics` (Anaconda の場合) など、ディストリビューションと一致するノードを展開します。 IronPython の場合は、バージョン番号のノードを展開します。
+1. `InstallPath` ノードの下の値を検査します。
+
+    ![CPython の標準インストールのレジストリ エントリ](media/environments-registry-entries.png)
+
+    - コンピューター上にまだ環境が存在する場合は、`ExecutablePath` の値を正しい場所に変更します。 必要に応じて、`(Default)` と `WindowedExecutablePath` の値も修正します。
+    - コンピューター上に環境が既に存在せず、[Python 環境] ウィンドウから削除する場合は、上のイメージの `3.6` など、`InstallPath` の親ノードを削除します。
+
+<a name="manually-identifying-an-existing-environment"></a>
 
 ## <a name="manually-identify-an-existing-environment"></a>既存の環境を手動で識別する
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262383"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt;要素 (Visual Studio での Office 開発)
   **Addin**の要素、`vstav3`名前空間には、Microsoft Office VSTO アドインおよび Visual Studio で開発したドキュメント レベルのカスタマイズに固有の情報が含まれています。  

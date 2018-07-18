@@ -16,6 +16,7 @@ ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34065118"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio でコードを機能させる
 

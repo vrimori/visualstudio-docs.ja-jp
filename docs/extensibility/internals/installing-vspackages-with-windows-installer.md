@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131007"
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows インストーラーで Vspackage をインストールします。
 VSPackage を統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]単ユーザーのコンピューターにファイルのコピーが必要です。 VSPackage とその依存ファイルをインストールし、登録およびにそれらを統合する必要があります、VSPackage のインストーラー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 VSPackage がのアイコンを表示するなどの統合機能の活用、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]スプラッシュ スクリーンとについて ダイアログ ボックス。  

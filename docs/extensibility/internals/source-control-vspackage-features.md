@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134953"
 ---
 # <a name="source-control-vspackage-features"></a>ソース管理の VSPackage の機能
 このセクションでは、ソース管理の VSPackage のさまざまな機能について説明します。 登録について概要を説明し、選択は、このような VSPackage のについて詳しく説明し、3 つのメイン ソース コントロールに関連する機能について説明しますクエリ編集クエリの保存 (QEQS) イベント、グリフの置換、およびソース コントロールのカスタム ユーザー インターフェイス (UI) の処理。関数。  

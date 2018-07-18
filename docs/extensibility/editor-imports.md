@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132735"
 ---
 # <a name="editor-imports"></a>エディターのインポート
 エディターのサービス、ファクトリ、およびコア エディターをさまざまな種類のアクセスと、拡張機能を提供するブローカーの番号をインポートすることができます。 たとえば、インポートすることができます、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>を提供するために、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>特定のコンテンツ タイプ用。 (このナビゲーター許可テキスト バッファーでさまざまな検索を実行します。)  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472238"
 ---
 # <a name="how-to-change-fonts"></a>方法: フォントを変更する
 フォント、フォント スタイル、および Spy++ は windows のフォント サイズを変更することができます。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/18/2018
   
 2.  フォント、フォント スタイル、およびフォント サイズを選択します。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
  選択すると**フォント既定値として保存**このフォントを使用するすべての将来 Spy++ は windows になります。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126072"
 ---
 # <a name="extending-properties-and-the-property-window"></a>プロパティと、[プロパティ] ウィンドウの拡張
 **プロパティ**ウィンドウは、デザイン時のプロパティとイベントを選択したオブジェクトの表示および編集に使用します。  

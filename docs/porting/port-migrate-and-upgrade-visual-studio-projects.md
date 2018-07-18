@@ -1,8 +1,14 @@
 ---
-title: Visual Studio プロジェクトのポート、移行、アップグレード
+title: プロジェクトの移植、移行、およびアップグレード
+description: 以前のバージョンの Visual Studio で作成されたプロジェクトに対する Visual Studio 2017 でのサポートと、Visual Studio がプロジェクトを移行する必要があるタイミングを決定する方法のリファレンス。
 ms.date: 03/14/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
+author: kraigb
+ms.author: kraigb
+manager: douge
+ms.workload: multiple
 f1_keywords:
 - Win8ExpressDesktopBlock
 - w8trefactor
@@ -13,18 +19,14 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-author: kraigb
-ms.author: kraigb
-manager: douge
-ms.workload:
-- multiple
-ms.openlocfilehash: 82c92365d3e77631dd2cbbce4079ac982d80ef14
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 28b2f4df3cba1c0dd56cda6c8ba4e6c7f5cbe495
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32032204"
 ---
-# <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio プロジェクトのポート、移行、アップグレード
+# <a name="project-migration-and-upgrade-reference-for-visual-studio-2017"></a>Visual Studio 2017 のプロジェクトの移行とアップグレードのリファレンス
 
 通常、新しいバージョンの Visual Studio はいずれも、以前の種類のプロジェクト、ファイル、その他のアセットに対応しています。 それらのオブジェクトは[これまでと同様に](../ide/solutions-and-projects-in-visual-studio.md)操作できます。新しい機能を利用していない場合でも、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 など、以前のバージョンとの下位互換性の維持が一般に試みられています。 (どの機能がどのバージョンに固有の機能であるかについては、[リリース ノート](https://www.visualstudio.com/vs/release-notes/)を参照してください。)
 
@@ -80,7 +82,7 @@ Visual Studio の各新規バージョンでは、一般に、バージョンが
 
 - Visual Studio 2013 RTM まで遡る、プラットフォームのターゲット バージョンとの互換性。
 
-- 以前のバージョンの Visual Studio との、デザイン時資産の互換性 (つまり、Visual Studio 2017 の異なるチャネル、Visual Studio 2015 RTM & Update 3、Visual Studio 2013 RTM & Update 5、Visual Studio 2012 Update 4、Visual Studio 2010 SP 1)。Visual Studio 2017 は、以前のバージョンでプロジェクトをまだ開くことができるように、使用されていないデザイン時資産を、破壊することなく正常に失敗させます。
+- 以前のバージョンの Visual Studio との、デザイン時資産の互換性 (つまり、Visual Studio 2017 の異なるチャネル、Visual Studio 2015 RTM & Update 3、Visual Studio 2013 RTM & Update 5、Visual Studio 2012 Update 4、Visual Studio 2010 SP 1)。Visual Studio 2017 は、以前のバージョンでプロジェクトをまだ開くことができるように、非推奨のデザイン時資産を、破壊することなく正常に失敗させます。
 
 - 新しいデザイン時資産により、Visual Studio 2013 RTM & Update 5 までの以前のバージョンとの互換性がなくなるかどうか。
 

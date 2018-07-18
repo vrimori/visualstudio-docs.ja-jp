@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458246"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>[ブレークポイントの選択] ダイアログ ボックス
 **[ブレークポイントの**あいまいな入力からブレークポイントを設定しようとすると、ダイアログ ボックスが開きます、**新しいブレークポイント**] ダイアログ ボックス。 あいまいな入力の例としては、オーバーロードされた関数の名前があります。  

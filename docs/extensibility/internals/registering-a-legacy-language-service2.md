@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134140"
 ---
 # <a name="registering-a-legacy-language-service"></a>レガシ言語サービスを登録します。
 次のセクションでは、レジストリ エントリのリスト、さまざまな言語で使用できるサービス オプション[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
@@ -68,7 +69,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
   
 |名前|型|範囲|説明|  
 |----------|----------|-----------|-----------------|  
-|(既定)|REG_SZ|テキスト|既定値は、ドキュメントの言語の名前を使用できます。 このキーの名前は、対応するエントリが、式エバリュエーターの GUID  *\<VS Reg ルート >*\AD7Metrics\Expression エバリュエーター。|  
+|(既定)|REG_SZ|テキスト|既定値は、ドキュメントの言語の名前を使用できます。 このキーの名前は、対応するエントリが、式エバリュエーターの GUID  *\<VS Reg ルート >* \AD7Metrics\Expression エバリュエーター。|  
   
 ### <a name="example"></a>例  
   
@@ -159,7 +160,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```  
   
 ## <a name="registry-entries-for-logical-view-options"></a>論理ビューのオプションのレジストリ エントリ  
- *VS Reg ルート*\Editors\\*エディター GUI >*\LogicalViews キーは、次の値を含めることができます。  
+ *VS Reg ルート*\Editors\\*エディター GUI >* \LogicalViews キーは、次の値を含めることができます。  
   
 |名前|型|範囲|説明|  
 |----------|----------|-----------|-----------------|  

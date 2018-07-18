@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138855"
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
 この関数は、ソース管理システムが表示され、変更を保存して、新しいバージョンを作成する以前のチェック アウトしたファイルをチェックインします。 この関数がカウントとにチェックインするファイルの名前の配列と呼ばれます。  

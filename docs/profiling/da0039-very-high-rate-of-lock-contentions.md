@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b6d3c83feb1a5fcb65940ee05344cb88cf08de74
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 153b979dffed48dbce355faae7125f2bd338fd08
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750442"
 ---
 # <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: 非常に高率のロック競合
 |||  
@@ -35,9 +36,9 @@ ms.lasthandoff: 04/19/2018
  プロファイル データを使用して収集したシステム パフォーマンス データは、アプリケーションの実行中に極端に高率のロック競合が発生したことを示しています。 競合の原因を見つけるために、同時実行プロファイルの方法を使用して、プロファイリングを再度実行することを検討してください。  
   
 ## <a name="rule-description"></a>規則の説明  
- ロックは、マルチスレッド アプリケーション内で、一度に 1 つのスレッドで連続的に実行する必要があるコードのクリティカル セクションを保護するために使用されます。 Microsoft .NET 共通言語ランタイム (CLR: Common Language Run-time) には、同期とロックのプリミティブの完全なセットが用意されています。 たとえば、C# 言語ではロック ステートメントがサポートされています (Visual Basic では SyncLock)。 マネージ アプリケーションは、System.Threading 名前空間内で Monitor.Enter メソッドと Monitor.Exit メソッドを呼び出すことで、ロックを直接取得および解放できます。 .NET Framework は、ミューテックス、ReaderWriter ロック、およびセマフォをサポートするクラスをはじめとする、追加の同期と競合のプリミティブをサポートします。 詳細については、MSDN Web サイトの .NET Framework 開発者ガイドの「[Overview of Synchronization Primitives](http://go.microsoft.com/fwlink/?LinkId=177867)」 (同期プリミティブの概要) を参照してください。 .NET Framework のクラスは、それ自体が、Windows オペレーティング システムに組み込まれている下位のレベルの同期サービスの上層に配置されています。 これらには、クリティカル セクション オブジェクト、および多数のさまざまな待機機能やイベント通知機能が含まれます。 詳細については、MSDN ライブラリの Win32 および COM 開発の[同期](http://go.microsoft.com/fwlink/?LinkId=177869)に関するセクションを参照してください。  
+ ロックは、マルチスレッド アプリケーション内で、一度に 1 つのスレッドで連続的に実行する必要があるコードのクリティカル セクションを保護するために使用されます。 Microsoft .NET 共通言語ランタイム (CLR: Common Language Run-time) には、同期とロックのプリミティブの完全なセットが用意されています。 たとえば、C# 言語ではロック ステートメントがサポートされています (Visual Basic では SyncLock)。 マネージド アプリケーションは、System.Threading 名前空間内で Monitor.Enter メソッドと Monitor.Exit メソッドを呼び出すことで、ロックを直接取得および解放できます。 .NET Framework は、ミューテックス、ReaderWriter ロック、およびセマフォをサポートするクラスをはじめとする、追加の同期と競合のプリミティブをサポートします。 詳細については、MSDN Web サイトの .NET Framework 開発者ガイドの「[Overview of Synchronization Primitives](http://go.microsoft.com/fwlink/?LinkId=177867)」 (同期プリミティブの概要) を参照してください。 .NET Framework のクラスは、それ自体が、Windows オペレーティング システムに組み込まれている下位レベルの同期サービスの上層に配置されています。 これらには、クリティカル セクション オブジェクト、および多数のさまざまな待機機能やイベント通知機能が含まれます。 詳細については、MSDN ライブラリの Win32 および COM 開発の「[Synchronization](http://go.microsoft.com/fwlink/?LinkId=177869)」 (同期) セクションを参照してください。  
   
- 同期と競合に使用される .NET Framework クラスとネイティブの Windows オブジェクトは両方とも、共有メモリの位置を基にしています。これは、インタロックされた操作を使用して変更する必要があります。 インタロックされた操作では、共有メモリの位置を操作するハードウェア固有の命令を使用して、アトミックな操作によってその状態を変更します。 アトミックな操作は、コンピューター内のすべてのプロセッサにわたって一貫していることが保証されています。 Locks と WaitHandles は、設定およびリセットされるときに自動的にインタロックされた操作を使用する .NET オブジェクトです。 アプリケーション内には、スレッド セーフな方法で更新するためにはインタロックされた操作も使用する必要がある、その他の共有メモリ データ構造体が存在する場合があります。 詳細については、MSDN ライブラリの .NET Framework のセクションの「[Interlocked Operations](http://go.microsoft.com/fwlink/?LinkId=177870)」 (インタロックされた操作) を参照してください。  
+ 同期と競合に使用される .NET Framework クラスとネイティブの Windows オブジェクトは両方とも、共有メモリの位置を基にしています。これは、インタロックされた操作を使用して変更する必要があります。 インタロックされた操作では、共有メモリの位置を操作するハードウェア固有の命令を使用して、アトミックな操作によってその状態を変更します。 アトミックな操作は、コンピューター内のすべてのプロセッサにわたって一貫していることが保証されています。 Locks と WaitHandles は、設定およびリセットされるときに自動的にインタロックされた操作を使用する .NET オブジェクトです。 アプリケーション内には、スレッド セーフな方法で更新するためにはインタロックされた操作も使用する必要がある、その他の共有メモリ データ構造体が存在する場合があります。 詳細については、MSDN ライブラリの .NET Framework セクションの「[インタロックされた操作](http://go.microsoft.com/fwlink/?LinkId=177870)」を参照してください。  
   
  同期とロックは、マルチスレッド アプリケーションが正しく実行されるようにするために使用される機構です。 マルチスレッド アプリケーションの各スレッドは、独立した実行単位であり、オペレーティング システムによって個別にスケジュールされます。 ロックの競合は、あるスレッドがロックを保持しているために、ロックを取得しようとしている別のスレッドが遅延されると発生します。  
   

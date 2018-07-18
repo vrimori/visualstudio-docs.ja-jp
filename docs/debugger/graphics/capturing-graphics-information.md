@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478094"
 ---
 # <a name="capturing-graphics-information"></a>グラフィックス情報をキャプチャする
 Visual Studio Graphics Analyzer を使用してレンダリングに関する問題とパフォーマンスに関する問題を診断できるように、Direct3D アプリからグラフィックス情報をキャプチャします。  
@@ -47,7 +48,7 @@ Visual Studio Graphics Analyzer を使用してレンダリングに関する問
   
      ![GPU 使用率ツールを使用してフレームをキャプチャする。](media/pix_gpu_usage_tool_capture_frame.png)  
   
-     キャプチャしたフレームを確認する準備ができたら、開始、 **Visual Studio Graphics Analyzer**に従って、**フレームしています.**サムネール画像の上またはサムネイルをダブルクリックしてリンクします。  
+     キャプチャしたフレームを確認する準備ができたら、開始、 **Visual Studio Graphics Analyzer**に従って、**フレームしています.** サムネール画像の上またはサムネイルをダブルクリックしてリンクします。  
   
  記録されている次のフレームからグラフィックス情報が実際に、キャプチャを開始するときに、フレーム全体のみをキャプチャできます。 記録は、キャプチャを開始したフレームが表示された直後に開始され、キャプチャするフレームが表示されると終了します。 アプリがグラフィックス診断の下で実行されている間、フレームを必要なだけキャプチャできます。 どのフレームもキャプチャしない場合、グラフィックス ログは破棄されます。  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949424"
 ---
 # <a name="defining-shapes-and-connectors"></a>シェイプとコネクタの定義
 いくつかの基本的な種類のシェイプを使用して、ドメイン固有言語 (DSL) で図に情報を表示できます。

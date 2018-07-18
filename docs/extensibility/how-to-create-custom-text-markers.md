@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132274"
 ---
 # <a name="how-to-create-custom-text-markers"></a>方法: カスタム テキスト マーカーを作成します。
 カスタム テキストを強調したり、コードの整理にマーカーを作成する場合は、以下の手順を実行する必要があります。  
@@ -34,18 +35,18 @@ ms.lasthandoff: 04/16/2018
   
 1.  次のようにレジストリ エントリを作成します。  
   
-     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<バージョン >*\Text Editor\External マーカー\\*\<MarkerGUID >*  
+     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<バージョン >* \Text Editor\External マーカー\\*\<MarkerGUID >*  
   
-     *\<MarkerGUID >*は、`GUID`追加される、マーカーを識別するために使用  
+     *\<MarkerGUID >* は、`GUID`追加される、マーカーを識別するために使用  
   
-     *\<バージョン >*のバージョンは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]8.0 などの  
+     *\<バージョン >* のバージョンは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]8.0 などの  
   
-     *\<PackageGUID >*オートメーション オブジェクトを実装する VSPackage の GUID です。  
+     *\<PackageGUID >* オートメーション オブジェクトを実装する VSPackage の GUID です。  
   
     > [!NOTE]
-    >  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >*詳細については、「Visual Studio シェルが初期化される場合、代替ルートで上書きすることができます[コマンド ライン スイッチ](../extensibility/command-line-switches-visual-studio-sdk.md)です。  
+    >  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio のルート パス\\*\<バージョン >* 詳細については、「Visual Studio シェルが初期化される場合、代替ルートで上書きすることができます[コマンド ライン スイッチ](../extensibility/command-line-switches-visual-studio-sdk.md)です。  
   
-2.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio 下にある 4 つの値を作成する\\*\<バージョン >*\Text Editor\External マーカー\\*\<MarkerGUID>*  
+2.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio 下にある 4 つの値を作成する\\*\<バージョン >* \Text Editor\External マーカー\\*\<MarkerGUID>*  
   
     -   (既定)  
   

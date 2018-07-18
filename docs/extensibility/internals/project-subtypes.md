@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130670"
 ---
 # <a name="project-subtypes"></a>プロジェクトのサブタイプ
 プロジェクトのサブタイプでは、カスタマイズしたりのプロジェクト システムの動作を flavor[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 カスタマイズには、プロジェクト ファイルを追加または内の項目をフィルター処理で追加のデータを保存、**新しい項目の追加**ダイアログ ボックスで、アセンブリのデバッグし、配置方法を制御して、プロジェクトの拡張**プロパティページ** ダイアログ ボックス。 Vspackage では、COM の集計を使用してプロジェクトのサブタイプを実装します。  

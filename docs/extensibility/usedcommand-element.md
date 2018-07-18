@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139069"
 ---
 # <a name="usedcommand-element"></a>UsedCommand 要素
 他の .vsct ファイルで定義されているコマンドにアクセスする VSPackage を有効にします。 たとえば、VSPackage は、標準を使用して**コピー**で定義されているコマンド、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]シェル、ことができます、コマンドを追加するメニューまたはツールバー再実装しなくてもします。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31582086"
 ---
 # <a name="profiling-tools-usage-rules"></a>プロファイリング ツールの使用に関する規則
 プロファイリング ツールの使用カテゴリのパフォーマンス規則は、プロファイラーを使用してデータを最も効率よく収集する方法に関するガイダンスを提供します。  

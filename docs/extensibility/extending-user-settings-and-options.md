@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135541"
 ---
 # <a name="extending-user-settings-and-options"></a>拡張ユーザー設定とオプション
 Visual Studio では、ユーザー設定を維持するために 2 つのメイン方法があります。 **ツール/オプション**ページがユーザーに、それぞれの値の設定、[全般]、言語固有のさまざまな種類の設定を使用します。 ユーザーの設定では、Visual Studio の [全般] の構成プロパティを指定するようにします。 [オプション] ページの詳細については、次を参照してください。[オプションと [オプション] ページ](../extensibility/internals/options-and-options-pages.md)です。 ユーザー設定の詳細については、次を参照してください。[ユーザー設定のサポート](../extensibility/internals/support-for-user-settings.md)です。  

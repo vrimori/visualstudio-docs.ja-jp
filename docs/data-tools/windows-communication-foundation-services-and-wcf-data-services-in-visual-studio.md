@@ -42,6 +42,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31925915"
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Visual Studio での Windows Communication Foundation サービスと WCF データ サービス
 Visual Studio には、Windows Communication Foundation (WCF) を操作するためのツールが用意されていて、 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]、分散アプリケーションを作成するための Microsoft テクノロジです。 このトピックでは、サービスからの概要、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]パースペクティブです。 完全なドキュメントを参照してください。 [WCF データ サービス 4.5](/dotnet/framework/data/wcf/index)です。
@@ -103,7 +104,7 @@ Visual Studio には、Windows Communication Foundation (WCF) を操作するた
  WCF サービス ホストの詳細については、次を参照してください。 [WCF サービス ホスト (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe)です。
 
 #### <a name="wcf-test-client"></a>WCF のテスト用クライアント
- WCF テスト クライアント ツールでは、テスト パラメーターを入力し、WCF サービスへの入力を送信することができ、サービスを返信する応答を表示します。 WCF サービス ホストと結合するときのエクスペリエンスのテストの便利なサービスを提供します。 ここでは、c: ドライブにインストールされている Visual Studio 2015 用を \Common7\IDE フォルダーに、ツールが見つかりません: **C:\Program Files (x86) \Microsoft Visual Studio 14.0\Common7\IDE\\** です。
+ WCF テスト クライアント ツールでは、テスト パラメーターを入力し、WCF サービスへの入力を送信することができ、サービスを返信する応答を表示します。 WCF サービス ホストと結合するときのエクスペリエンスのテストの便利なサービスを提供します。 ここでは、c: ドライブにインストールされている Visual Studio 2015 用を \Common7\IDE フォルダーに、ツールが見つかりません: **C:\Program Files (x86) \Microsoft Visual Studio 14.0\Common7\IDE\\**です。
 
  WCF サービス プロジェクトをデバッグする場合は F5 キーを押したときに WCF テスト クライアントが開き、構成ファイルで定義されているサービス エンドポイントの一覧が表示されます。 パラメーターをテスト サービスを開始し、継続的にテストし、サービスを検証するには、このプロセスを繰り返します。
 

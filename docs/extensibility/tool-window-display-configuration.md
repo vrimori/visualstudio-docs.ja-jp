@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143694"
 ---
 # <a name="tool-window-display-configuration"></a>ツール ウィンドウの表示の構成
 VSPackage でツール ウィンドウ、既定の位置、サイズ、ドッキング スタイル、およびその他の可視性の情報を登録するときは、省略可能な値で指定されます。 ツール ウィンドウの登録の詳細については、次を参照してください[レジストリのツール ウィンドウ。](../extensibility/tool-windows-in-the-registry.md)  

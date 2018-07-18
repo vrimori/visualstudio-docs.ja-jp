@@ -16,6 +16,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31952480"
 ---
 # <a name="model-your-app39s-architecture"></a>アプリのモデル&#39;s アーキテクチャ
 ソフトウェア システムまたはアプリケーションがユーザーを満たしていることを確認する必要があります、全体的な構造の説明と、ソフトウェア システムまたはアプリケーションの動作の一部として Visual Studio でモデルを作成することができます。 モデルを使用して、設計全体で使用するパターンを記述することもできます。 これらのモデルは、既存のアーキテクチャの理解、変更についての話し合い、開発者の意図の伝達に役立ちます。

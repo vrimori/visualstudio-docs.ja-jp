@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31567071"
 ---
 # <a name="combinepath-task"></a>CombinePath タスク
 指定されたパスを 1 つのパスに結合します。  

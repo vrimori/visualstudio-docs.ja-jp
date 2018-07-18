@@ -23,6 +23,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31565719"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>方法 : ClickOnce 配置エラー用にカスタム ログ ファイルの場所を設定する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] すべての展開のログ ファイルのアクティブ化を保持します。 これらのログ記録のインストールと初期化に関連するすべてのエラー、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]各展開のライセンス認証のための 1 つのログ ファイルを作成します。 インターネット一時ファイル フォルダーに、これらのログ ファイルを格納します。 アクティベーション エラーが発生し、ユーザーがクリックしたときに、展開のログ ファイルが、ユーザーに表示される**詳細**結果のエラー ダイアログ ボックス。  

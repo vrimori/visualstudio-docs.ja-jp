@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133210"
 ---
 # <a name="checklist-creating-a-legacy-language-service"></a>チェックリスト: 従来の言語サービスを作成します。
 次のチェックリストは、言語サービスを作成するために行う必要がありますの基本的な手順をまとめたもの、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コア エディターです。 言語サービスに統合する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッグの式エバリュエーターを作成する必要があります。 詳細については、次を参照してください。 [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)で、 [Visual Studio デバッガーの機能拡張](../../extensibility/debugger/visual-studio-debugger-extensibility.md)です。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31195323"
 ---
 # <a name="setting-up-an-azure-devtest-pay-as-you-go-subscription"></a>Azure の開発テスト用の従量課金制サブスクリプションを設定する
 クラウドでチームとコラボレーションしましょう。  開発テスト用の従量課金制サブスクリプションを複数作成し、チームと環境の間を分離しながら、他のサブスクライバーとのコラボレーションを可能にします。  Azure におけるサブスクリプション ソフトウェアの開発/テストおよびクラウドの使用権を、サブスクライバーだけの割引価格 (時間当たり) で利用できます。

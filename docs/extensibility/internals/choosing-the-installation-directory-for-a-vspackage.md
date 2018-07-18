@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134442"
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
 VSPackage とそのサポート ファイルは、ユーザーのファイル システム上でなければなりません。 場所は、VSPackage がかどうかの管理や、アンマネージ、サイド バイ サイドのバージョン管理スキーム、およびユーザーの選択によって異なります。  
@@ -38,9 +39,9 @@ VSPackage とそのサポート ファイルは、ユーザーのファイル �
  [ProgramFilesFolder]MyCompany\MyVSPackageProduct\V1.0\2005\  
   
 ## <a name="managed-vspackages"></a>マネージ VSPackage  
- マネージ Vspackage は、任意の場所にインストールすることもできます。 ただし、常にグローバル アセンブリ キャッシュ (GAC) アセンブリの読み込み時間を短縮するへのインストールを検討してください。 マネージ Vspackage は、厳密な名前付きアセンブリでは常に、GAC にインストールするので、厳密な名前の署名の検証がインストール時にのみを取ることです。 ファイル システムで他の場所にインストールされている厳密な名前のアセンブリの署名が読み込まれるたびに検証が必要です。 マネージ Vspackage を GAC にインストールするときに使用 regpkg ツールの**/assembly**アセンブリの厳密な名前を指すレジストリ エントリを記述するスイッチです。  
+ マネージ Vspackage は、任意の場所にインストールすることもできます。 ただし、常にグローバル アセンブリ キャッシュ (GAC) アセンブリの読み込み時間を短縮するへのインストールを検討してください。 マネージ Vspackage は、厳密な名前付きアセンブリでは常に、GAC にインストールするので、厳密な名前の署名の検証がインストール時にのみを取ることです。 ファイル システムで他の場所にインストールされている厳密な名前のアセンブリの署名が読み込まれるたびに検証が必要です。 マネージ Vspackage を GAC にインストールするときに使用 regpkg ツールの **/assembly**アセンブリの厳密な名前を指すレジストリ エントリを記述するスイッチです。  
   
- GAC 以外の場所にマネージ Vspackage をインストールする場合は、以前アドバイス アンマネージ Vspackage 用のディレクトリ階層を選択に従ってください。 Regpkg ツールの使用**/codebase** VSPackage アセンブリのパスを指すレジストリ エントリを記述するスイッチです。  
+ GAC 以外の場所にマネージ Vspackage をインストールする場合は、以前アドバイス アンマネージ Vspackage 用のディレクトリ階層を選択に従ってください。 Regpkg ツールの使用 **/codebase** VSPackage アセンブリのパスを指すレジストリ エントリを記述するスイッチです。  
   
  詳細については、次を参照してください。[の登録および登録解除 Vspackage](../../extensibility/registering-and-unregistering-vspackages.md)です。  
   

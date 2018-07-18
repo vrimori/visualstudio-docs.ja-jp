@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481711"
 ---
 # <a name="how-to-display-process-properties"></a>方法: プロセスのプロパティを表示する
 表示されているプロセスに関する詳細を確認する[プロセス ビュー](../debugger/processes-view.md)を使用して、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)です。  

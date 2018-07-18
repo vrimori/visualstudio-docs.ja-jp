@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31948094"
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>ドメイン固有言語からのコード生成
 Microsoft[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]モデルで表されるデータからコード、ドキュメント、構成ファイル、および他の成果物を生成する強力な手段を提供します。 使用して[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]データを表すクラスのセットを作成することができますとで記述できるテキスト テンプレートをクラス名およびプロパティがそのデータを反映します。

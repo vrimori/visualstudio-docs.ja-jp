@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132912"
 ---
 # <a name="manifest-to-code"></a>コードにマニフェスト
 マニフェスト コード ツールは、コンソール アプリケーションを Visual Studio イメージ サービスの .imagemanifest ファイルを受け取ってラッパー ファイルまたは C++、c#、VB、または Visual Studio 拡張機能の .vsct ファイル内のイメージ マニフェストの値を参照するためのファイルが生成されます。 このツールは、要求元のイメージから Visual Studio イメージ サービスを直接、またはコードがすべての UI と表示を処理しない場合は、Api を介してマニフェストの値を渡すために使用できるラッパー ファイルを生成します。  

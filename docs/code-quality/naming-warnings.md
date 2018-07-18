@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31927088"
 ---
 # <a name="naming-warnings"></a>名前付けに関する警告
 名前付けに関する警告の名前付け規則に準拠しているサポート、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]デザイン ガイドラインです。

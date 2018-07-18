@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131990"
 ---
 # <a name="checklist-creating-new-project-types"></a>チェックリスト: 新しいプロジェクトの種類を作成します。
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、それらのタスクにガイドを提供します。  

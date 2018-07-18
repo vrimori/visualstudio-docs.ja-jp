@@ -23,6 +23,7 @@ ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33704721"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 統合開発環境 (IDE) 内の文字列、通貨、およびその他の値に使用する既定の言語を設定します。

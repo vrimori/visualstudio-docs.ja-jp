@@ -1,13 +1,13 @@
 ---
-title: "条件付きコンパイル変数 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 条件付きコンパイル変数 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,7 +16,7 @@ dev_langs:
 helpviewer_keywords:
 - conditional compilation, variables
 ms.assetid: d6f9827d-c558-412c-8e68-de04c19c3d9d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569122"
 ---
 # <a name="conditional-compilation-variables-javascript"></a>条件付きコンパイル変数 (JavaScript)
 条件付きコンパイルで使用可能な定義済み変数を次に示します。 変数が **true** ではない場合は定義されていないので、アクセスされると `NaN` として動作します。  

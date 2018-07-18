@@ -1,11 +1,11 @@
 ---
-title: "IActiveScript::Close |Microsoft ドキュメント"
-ms.custom: 
+title: IActiveScript::Close |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScript.Close
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScript_Close
 ms.assetid: cc7dd63b-1d7e-410a-857b-09ea3aade275
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24640972"
 ---
 # <a name="iactivescriptclose"></a>IActiveScript::Close
 現在読み込まれているスクリプトの破棄の状態が失われるおよびその他のオブジェクトは、したがって closed の状態を入力する必要があるインターフェイス ポインターを解放するには、スクリプト エンジンが発生します。 イベント シンク、すぐに実行されたスクリプトのテキスト、およびが既に実行中のマクロの呼び出しが完了した後、状態の変更 (を使用して[IActiveScript::InterruptScriptThread](../../winscript/reference/iactivescript-interruptscriptthread.md)スクリプトの実行中のスレッドをキャンセルする)。 このメソッドは、循環参照の問題を防ぐために、インターフェイスが解放される前に、作成元のホストによって呼び出さ必要があります。  

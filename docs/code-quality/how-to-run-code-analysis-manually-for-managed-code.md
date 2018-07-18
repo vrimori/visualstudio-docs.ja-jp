@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919429"
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code"></a>方法: マネージ コードについて手動でコード分析を実行する
 コード分析ツールに、ソース コードの障害に関する情報を提供します。 コード分析は、コード プロジェクトをビルドするたびに自動的に実行することができ、手動でコード分析を実行することもできます。 します。 コード分析の実行時にオンになっているルールは、プロジェクトのプロパティ ページの [コード分析] ページで指定されます。 詳細については、次を参照してください[する方法: マネージ コード プロジェクトのコード分析を構成する。](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130454"
 ---
 # <a name="exposing-project-objects"></a>プロジェクト オブジェクトを公開します。
 カスタム プロジェクトの種類は、オートメーション インターフェイスを使用してプロジェクトへのアクセスを許可するために、オートメーション オブジェクトを提供できます。 標準を提供するすべてのプロジェクトの種類が期待どおり<xref:EnvDTE.Project>からアクセスされるオートメーション オブジェクト<xref:EnvDTE.Solution>IDE で開かれているすべてのプロジェクトのコレクションを含むです。 プロジェクト内の各項目をによって公開されると予想される、<xref:EnvDTE.ProjectItem>オブジェクトを使用してアクセス`Project.ProjectItems`です。 これらの標準的なオートメーション オブジェクトだけでなくプロジェクト固有のオートメーション オブジェクトを提供する、プロジェクトを選択できます。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475104"
 ---
 # <a name="spy-views"></a>Spy++ ビュー
 Spy++ では、コンピューターで windows、メッセージ、プロセス、および使用可能なスレッドのツリー ビューが表示されます。  

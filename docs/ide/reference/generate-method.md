@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31944740"
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Visual Studio でメソッドを生成する
 

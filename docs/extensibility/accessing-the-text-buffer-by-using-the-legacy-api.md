@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099474"
 ---
 # <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>レガシ API を使用してテキスト バッファーにアクセスします。
 テキストがテキスト ストリームとファイルの永続性の管理を担当します。 バッファーの読み取りまたはその他の形式を書き込み、すべての通常の通信バッファーと Unicode を使用して実行されます。 従来の Api でテキスト バッファーは、バッファー内の文字の位置を識別するのに 1 つのまたは 2 次元座標系を使用できます。  

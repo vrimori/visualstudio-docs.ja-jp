@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457359"
 ---
 # <a name="about-microsoft-spy"></a>[Microsoft Spy++ のバージョン情報]
 このダイアログ ボックスを使用すると、著作権、バージョン、所有権、および spy++ に関する他の情報を表示できます。

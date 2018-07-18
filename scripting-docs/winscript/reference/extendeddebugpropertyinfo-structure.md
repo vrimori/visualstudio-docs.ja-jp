@@ -1,11 +1,11 @@
 ---
-title: "ExtendedDebugPropertyInfo 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: ExtendedDebugPropertyInfo 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ExtendedDebugPropertyInfo
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - ExtendedDebugPropertyInfo structure
 ms.assetid: f2cf6477-454b-4d13-95da-ae4c90daa175
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24641332"
 ---
 # <a name="extendeddebugpropertyinfo-structure"></a>ExtendedDebugPropertyInfo 構造体
 拡張、`DebugPropertyInfo`構造体メンバーを追加して拡張プロパティを設定します。  

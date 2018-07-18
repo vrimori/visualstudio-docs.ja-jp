@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140421"
 ---
 # <a name="when-to-create-project-types"></a>プロジェクトの種類を作成する場合
 カスタマイズするための基礎を提供新しいプロジェクトの種類を作成する[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ユーザー向けです。 ただし、新しいプロジェクトの種類を作成する必要はありませんすべて[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]カスタマイズします。 次のガイドラインには、新しいプロジェクトの種類が、シナリオに必要かどうかを判断するのに役立ちます。  

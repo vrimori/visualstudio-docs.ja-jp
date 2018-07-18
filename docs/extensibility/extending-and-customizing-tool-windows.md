@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129236"
 ---
 # <a name="extending-and-customizing-tool-windows"></a>拡張して、ツール ウィンドウをカスタマイズします。
 Visual Studio には、windows、ツール ウィンドウ、ドキュメント ウィンドウおよびダイアログ ウィンドウなどのさまざまな種類が用意されています。 [プロパティ] ウィンドウ、出力ウィンドウ、[タスク一覧] ウィンドウなどの他のウィンドウは、ツール ウィンドウの種類です。  

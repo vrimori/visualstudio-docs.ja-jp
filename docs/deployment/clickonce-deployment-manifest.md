@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31560324"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 配置マニフェスト
 配置マニフェストは、配置する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの現在のバージョン情報などを含む、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の配置に関して記述した XML ファイルです。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128174"
 ---
 # <a name="determining-command-status-by-using-interop-assemblies"></a>相互運用機能アセンブリを使用してコマンドのステータスを決定します。
 VSPackage 必要がありますの追跡を処理できるコマンドの状態。 ときに VSPackage 内で処理コマンドを有効または無効になります、環境を特定できません。 コマンドの状態について、環境を通知するために VSPackage の責任は、たとえば、[全般] の状態などのコマンド**切り取り**、**コピー**、および**貼り付け**です。  

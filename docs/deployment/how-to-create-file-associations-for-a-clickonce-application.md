@@ -22,6 +22,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31557763"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのファイルの関連付けを作成する
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションでく 1 つまたは複数のファイル名拡張子に関連付けられているように、ユーザーの種類のファイルを開くときに、アプリケーションを自動的に開始されます。 ファイル名拡張子のサポートを追加する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションは簡単です。  

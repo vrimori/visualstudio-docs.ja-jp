@@ -17,11 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8430e81cc0f4c15bdcb9d7ed3accaa041afa8d8e
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 7a529c52472eca82d3b78860087c9e81aace45d5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750481"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
@@ -57,7 +58,7 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 必要なワークロードを選択し、必要に応じてそれらを変更します。
 
- ![Visual Studio 2017 のセットアップ ダイアログ](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 のセットアップ画面")
+ ![Visual Studio 2017 のセットアップ ダイアログ](../install/media/install-visual-studio-enterprise.png)
 
 また、インストールを調整するオプションもあります。
 
@@ -89,7 +90,7 @@ Visual Studio の新しいパフォーマンス センターは、IDE の起動�
 
 Visual Studio では、独自およびサードパーティの拡張機能が IDE の起動時ではなく必要に応じて読み込まれるように取り組みを進めています。 どの拡張機能が起動、ソリューションの読み込み、および入力パフォーマンスに影響があるかについて関心をお持ちですか? この情報については、**[ヘルプ]**、**[Visual Studio のパフォーマンスの管理]** の順に選択して確認することができます。
 
-  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 2017 の [ヘルプ] ダイアログ ボックス - パフォーマンス管理")
+  ![Visual Studio 2017 の [オプション] ダイアログ ボックス](../ide/media/vs2017ide-manage-vs-perf.png)
 
 #### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>[拡張機能マネージャーのローミング] で拡張機能を管理する
 
@@ -97,19 +98,19 @@ Visual Studio にサインインすると、お気に入りの拡張機能を使
 
 Visual Studio の拡張機能の一覧を表示するには、**[ツール]**、**[拡張機能と更新プログラム]** の順にクリックし、**[拡張機能マネージャーのローミング]** をクリックします。
 
-![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Tools > Extensions and Updates dialog")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ ボックス](../ide/media/vs2017ide-extensions-and-updates.png)
 
 [拡張機能マネージャーのローミング] では、インストールするすべての拡張機能を追跡しますが、どの拡張機能をローミング リストに追加するかを選択することができます。
 
-![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Roaming Extension Manager")
+![Visual Studio 2017 - [拡張機能と更新プログラム] ダイアログ ボックス](../ide/media/vs2017ide-RoamingExtensionManager.png)
 
 [拡張機能マネージャーのローミング] を使用する場合、リストに次の 3 つの種類のアイコンが表示されます。
 
-* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png "ローミング済みアイコン") "***ローミング済み***": ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
+* ![ローミング済みアイコン](../ide/media/vs2017ide-roamedicon.png) ***ローミング済み***: ローミング リストにあり、このコンピューターにはインストールされていない拡張機能を示します。
   (これらの拡張機能は、**[ダウンロード]** ボタンでインストールできます。)
-* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png "ローミングおよびインストール済みアイコン") "***ローミングおよびインストール済み***": ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
+* ![ローミングおよびインストール済みアイコン](../ide/media/vs2017ide-roamedinstalledicon.png) ***ローミングおよびインストール済み***: ローミング リストにあり、お使いの開発環境にインストールされているすべての拡張機能を示します。
   (ローミングしない場合は、**[ローミングの停止]** ボタンで削除することができます。)
-* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png "インストール済みアイコン") "***インストール済み***": この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
+* ![インストール済みアイコン](../ide/media/vs2017ide-installedicon.png) ***インストール済み***: この環境にインストールされ、ローミング リストにはないすべての拡張機能を示します。
   (**[ローミングの開始]** ボタンを使用して、拡張機能をローミング リストに追加できます。)
 
 サインイン中にダウンロードするすべての拡張機能が **[ローミングおよびインストール済み]** としてリストに追加されます。 拡張機能はローミング リストの一部となり、任意のコンピューターからアクセスできるようになります。
@@ -118,7 +119,7 @@ Visual Studio の拡張機能の一覧を表示するには、**[ツール]**、
 
 Visual Studio Enterprise 2017 では、ライブ単体テストを実行することで、コーディング中にエディターで単体テストの結果とコード カバレッジをライブで確認できます。 .NET Framework と .NET Core の両方で C# プロジェクトと Visual Basic プロジェクトと連動し、MSTest、xUnit、NUnit の 3 つのテスト フレームワークをサポートします。
 
-![ライブ単体テスト](../ide/media/lut-codewindow.png "Visual Studio の Enterprise エディションの新しいライブ単体テスト機能の例")
+![Live Unit Testing](../ide/media/lut-codewindow.png)
 
 詳細については、「[Introducing Live Unit Testing](../test/live-unit-testing-intro.md)」(Live Unit Testing の概要) を参照してください。 Visual Studio Enterprise 2017 の各リリースで追加された新機能の一覧は、「[What's new in Live Unit Testing](../test/live-unit-testing-whats-new.md)」(Live Unit Testing の新機能) を参照してください。
 
@@ -153,27 +154,27 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 
 Visual Studio でプロジェクトを操作する際に、コードを迅速にセットアップしてコミットし、Git サービスにコードを公開できます。 また、IDE の右下隅のボタンからメニュー クリックを使用して、Git リポジトリを管理することもできます。
 
-![Visual Studio 2017 と Git ダイアログのやり取り](../ide/media/vsIDE-GitInteraction.png "Visual Studio IDE の Git ツール")
+![Visual Studio 2017 と Git の対話のダイアログ](../ide/media/vsIDE-GitInteraction.png)
 
 #### <a name="experience-improved-navigation-controls"></a>操作性が改善されたナビゲーション コントロール
 
 より確実に混乱なく A から B に移動できるようにナビゲーション エクスペリエンスを更新しました。
 
-* **15.4 の新機能**: **定義へ移動** (**Ctrl** + **クリック**または **F12**) &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。  
+* **15.4 の新機能**: **定義へ移動** (**Ctrl** + **クリック**または **F12**) &ndash; マウスを使っているユーザーは、**Ctrl** キーを押しながらメンバーをクリックすることで、メンバーの定義に簡単に移動することができます。 **Ctrl** キーを押しながらコード記号の上にマウスを置くと、下線が引かれ、リンクに変わります。 詳細については、「[Go To Definition and Peek Definition](../ide/go-to-and-peek-definition.md)」([定義へ移動] および [定義をここに表示]) を参照してください。
 
 * **実装に移動** (**Ctrl** + **F12**) &ndash; 任意の基本データ型やメンバーから各種実装に移動します。
 
 * **すべてにジャンプ** (**Ctrl** + **T** または **Ctrl** + **,**) &ndash; 任意のファイル/型/メンバー/シンボル宣言に直接移動します。 結果の一覧をフィルターしたり、クエリ構文 (例: ファイルは “f searchTerm”、型は “t searchTerm” など) を使用したりできます。
 
-  ![[すべてにジャンプ] の機能強化](../ide/media/vs2017ide-navigation-go-to.png "強化された [すべてにジャンプ] 機能")
+  ![[すべてにジャンプ] の改善](../ide/media/vs2017ide-navigation-go-to.png)
 
 * **すべての参照の検索** (**Shift** + **F12**) &ndash; 構文の色付けにより、[すべての参照の検索] の結果をプロジェクト、定義、パスの組み合わせでグループ化できます。 また、結果を "ロック" して元の結果を失うことなく別の参照を検索できます。
 
-  ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png "新しい [すべての参照の検索] ツールの例")
+  ![新しい [すべての参照の検索] ツール](../ide/media/vs2017ide-find-all-references.png)
 
-* **Structure Visualizer\(構造ビジュアライザ\)** &ndash; 灰色の縦の点線 (インデント ガイド) がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 おすすめの Productivity Power Tools で認識できます。 これを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。  
+* **Structure Visualizer\(構造ビジュアライザ\)** &ndash; 灰色の縦の点線 (インデント ガイド) がコード内のランドマークとしての役割を果たし、ビューのフレーム内のコンテキストを提供します。 おすすめの Productivity Power Tools で認識できます。 これを使用することで、スクロールすることなく現在作業しているコード ブロックを視覚化して検出できます。 行にカーソルを置くとツールチップが表示され、そのブロックの開始地点とその親を確認できます。 TextMate 文法を介してサポートされるすべての言語のほか、C#、Visual Basic、XAML で使用できます。
 
-  ![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png "Visual Studio の構造体ビジュアライザー")
+  ![Visual Studio 2017 の構造ビジュアライザー](../ide/media/vsIDE-StructureVisualizer.png)
 
 新しい生産性向上機能の詳細については、[Visual Studio 2017 での生産性向上](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/)に関する Mark Wilson-Thomas のブログ投稿を参照してください。
 
@@ -191,13 +192,13 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 デバッグ中に必要な行に止まるためにブレークポイントを設定することなく、簡単に前方にスキップできるようになりました。 デバッガーが停止した場合は、コード行の横に表示されるアイコンをクリックします。 次にコード パスでその地点に到達すると、その行でコードが実行されて停止します。
 
-![Visual Studio 2017 のデバッグ - クリックで実行](../ide/media/vs2017ide-RunToClick.png "Visual Studio 2017 のデバッグと診断のクリックで実行")
+![Visual Studio 2017 のデバッグ - クリックで実行](../ide/media/vs2017ide-RunToClick.png)
 
 #### <a name="the-new-exception-helper"></a>新しい例外ヘルパー
 
 新しい例外ヘルパーを使用すると、例外情報を一目で確認できます。 情報はコンパクトな形式で表示され、内部の例外に簡単にアクセスできます。 NullReferenceException を診断するときに、例外ヘルパー内の null をすばやく確認できます。
 
-![新しい例外ヘルパー ダイアログ](../ide/media/vs2017ide-ExceptionHelper.png "新しい例外ヘルパー ダイアログ")
+![Visual Studio の新しい例外ヘルパー ダイアログ](../ide/media/vs2017ide-ExceptionHelper.png)
 
 詳細については、「[Use the new Exception Helper in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/)」 (Visual Studio で新しい例外ヘルパーを使用する) のブログの投稿を参照してください。
 
@@ -247,7 +248,7 @@ Visual Studio には、C++ Core ガイドラインの配信、C++11 および C+
 
 ユニバーサル Windows プラットフォーム (UWP) は Windows 10 用のアプリ プラットフォームです。 API セット、アプリ パッケージ、ストアをそれぞれ 1 つ使用するだけで、すべての Windows 10 デバイス (PC、タブレット、電話、Xbox、HoloLens、Surface Hub など) で利用可能な UWP 用アプリを開発できます。 UWP では、異なる画面サイズやさまざまな相互作用モデル (タッチ、マウスとキーボード、ゲーム コントローラー、ペン) がサポートされます。 UWP アプリの中核となるのは、ユーザーがすべてのデバイスでモバイル エクスペリエンスを手に入れたい、目の前の作業に最も便利または効率的なデバイスを使用したいという考え方です。
 
- ![ユニバーサル Windows プラットフォーム](../cross-platform/media/uwp_coreextensions.png "UWP_CoreExtensions")
+ ![ユニバーサル Windows プラットフォーム](../cross-platform/media/uwp_coreextensions.png)
 
 希望する開発言語を &mdash;C#、Visual Basic、C++ または JavaScript の中から&mdash;選び、Windows 10 デバイスを対象とするユニバーサル Windows プラットフォーム アプリを作成します。 Visual Studio 2017 には、各言語の UWP アプリ テンプレートが用意されており、すべてのデバイスを対象とした単一のプロジェクトを作成できます。 作業が終わったら、アプリ パッケージを生成し、Visual Studio 内から Microsoft Store に提出できます。これで、すべての Windows 10 デバイスのユーザーにアプリが公開されます。
 
@@ -270,7 +271,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 **15.3 の新機能**: iOS 開発で必要になることから、スタンドアロンの権利エディターを追加しました。 使いやすい UI で簡単に閲覧できます。 *entitlements.plist* ファイルをダブルクリックすると起動します。
 
-![Xamarin の権利エディター](../ide/media/xamarin-entitlements-editor.png "Xamarin の権利エディター")
+![Xamarin のエンタイトルメント エディター](../ide/media/xamarin-entitlements-editor.png)
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Xamarin 用の Visual Studio ツール
 
@@ -309,9 +310,9 @@ Visual Studio 2017 のすべてのエディションに付属:
 
 .NET Core プラットフォームは複数コンポーネントで構成され、マネージ コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
 
-Docker 対応にもなりました。  
+Docker 対応にもなりました。
 
-**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。  
+**15.3 の新機能**: Visual Studio 2017 バージョン 15.3 は .NET Core 2.0 開発に対応しています。 .NET Core 2.0 を使用するには、.NET Core 2.0 SDK を別にダウンロードし、インストールする必要があります。
 
 詳細については、「[.NET Core ガイド](/dotnet/core/index)」ページを参照してください。
 

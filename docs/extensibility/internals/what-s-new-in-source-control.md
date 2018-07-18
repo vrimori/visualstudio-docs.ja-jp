@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137769"
 ---
 # <a name="what39s-new-in-source-control"></a>どのような&#39;ソース コントロールの
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]ソース コントロール VSPackage の実装によって深く統合ソース管理ソリューションを提供できます。 このセクションでは、ソース管理の Vspackage の機能について説明し、実装の手順の概要を説明します。  

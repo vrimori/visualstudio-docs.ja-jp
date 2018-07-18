@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136784"
 ---
 # <a name="installing-outside-the-extensions-folder"></a>拡張機能フォルダー外にインストールします。
 
@@ -51,7 +52,7 @@ Visual Studio 2017 と VSIX v3 以降 (バージョン 3)、今すぐに対す�
  </ProjectReference>
 ```
 
->**注:**したい場合、.csproj ファイルを直接、編集することができます。
+>**注:** したい場合、.csproj ファイルを直接、編集することができます。
 
 ## <a name="how-to-set-a-subpath-under-the-installroot"></a>として「installroot」下サブパスを設定する方法
 

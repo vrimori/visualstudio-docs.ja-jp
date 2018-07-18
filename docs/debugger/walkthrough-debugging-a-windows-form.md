@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477954"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>チュートリアル : Windows フォームのデバッグ
 Windows フォームは、最も一般的なマネージ アプリケーションの 1 つです。 Windows フォームは、標準 Windows アプリケーションを作成します。 このチュートリアルは、Visual Basic、C#、または C++ を使用して実行できます。  
@@ -58,7 +59,7 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
 4.  **名前**ボックスで、プロジェクトの一意名 (Walkthrough_SimpleDebug など) を付けます。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
      新しいプロジェクトが作成され、Windows フォーム デザイナーに新しいフォームが表示されます。 詳細については、次を参照してください。 [Windows フォーム デザイナー](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15)です。  
   
@@ -124,9 +125,9 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
 4.  **デバッグ** メニューの 選択**Windows**、し**ウォッチ**、 をクリック**ウォッチ 1**です。  
   
-5.  **[ウォッチ 1]**ウィンドウで、空白行をクリックします。 **名前**列に「 `textBox1.Text` (使用するかどうか Visual Basic または Visual c#) または`textBox1->Text`(使用するかどうか C++)、ENTER キーを押します。  
+5.  **[ウォッチ 1]** ウィンドウで、空白行をクリックします。 **名前**列に「 `textBox1.Text` (使用するかどうか Visual Basic または Visual c#) または`textBox1->Text`(使用するかどうか C++)、ENTER キーを押します。  
   
-     **[ウォッチ 1]**ウィンドウは、引用符でこの変数の値を示しています。  
+     **[ウォッチ 1]** ウィンドウは、引用符でこの変数の値を示しています。  
   
     ```  
     ""  
@@ -134,7 +135,7 @@ Windows フォームは、最も一般的なマネージ アプリケーショ�
   
 6.  **デバッグ**] メニューの [選択**ステップ イン**です。  
   
-     Textbox1.text」と入力の変更の値、 **[ウォッチ 1]**ウィンドウ。  
+     Textbox1.text」と入力の変更の値、 **[ウォッチ 1]** ウィンドウ。  
   
     ```  
     Button was clicked!  

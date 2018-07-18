@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137496"
 ---
 # <a name="wizard-support-for-nested-projects"></a>ウィザードでサポートされる入れ子になったプロジェクト
 IDE は、親プロジェクトの入れ子になったプロジェクトを実装できる 2 つのウィザードを実行します。**新しいプロジェクト**ウィザードと**項目の追加**ウィザード。  

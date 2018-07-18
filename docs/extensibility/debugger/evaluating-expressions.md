@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31102793"
 ---
 # <a name="evaluating-expressions"></a>式を評価します。
 式は、[自動変数]、ウォッチ、[クイック ウォッチ]、またはイミディ エイト ウィンドウから渡される文字列から作成されます。 式を評価するときに、変数または引数とその値の型と名前を含む印刷可能な文字列を生成します。 この文字列は、対応する IDE のウィンドウに表示されます。  

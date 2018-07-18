@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31945130"
 ---
 # <a name="notifications-environment-options-dialog-box"></a>[通知] ([オプション] ダイアログ ボックス - [環境])
 以前に [通知] ダイアログで無視することを選択した通知を無視しないようにするには、このオプションを使用します。 詳しくは、「[通知](../../ide/visual-studio-notifications.md)」をご覧ください。

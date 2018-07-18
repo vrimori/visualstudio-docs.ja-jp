@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d49b5076076b61d0234bf8e252b62684a67e79b3
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 50b77a343f8fe918fa079a3b4f148407701276c8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572983"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル: プロファイラー API の使用
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/22/2018
   
  Visual Studio プロファイラーでは、データの収集を制限できます。 このチュートリアルでは、プロファイラー API を使用してデータの収集を制限する方法の例を説明します。 Visual Studio プロファイラーには、アプリケーションからのデータ収集を制御する API があります。  
   
- ネイティブ コード用の Visual Studio プロファイラー API は VSPerf.dll にあります。 ヘッダー ファイルの VSPerf.h とインポート ライブラリの VSPerf.lib は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。  
+ ネイティブ コード用の Visual Studio プロファイラー API は *VSPerf.dll* にあります。 ヘッダー ファイル *VSPerf.h* とインポート ライブラリ *VSPerf.lib* は、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにあります。  
   
- マネージ コード用のプロファイラー API は、Microsoft.VisualStudio.Profiler.dll にあります。 この DLL は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。  
+ マネージド コード用のプロファイラー API は、*Microsoft.VisualStudio.Profiler.dll* にあります。 この DLL は、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにあります。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、ユーザーが選択した開発環境で、デバッグとサンプリングがサポートされていることを前提としています。 以下のトピックでは、これらの前提条件の概要について説明しています。  
@@ -58,7 +59,7 @@ DataCollection.CurrentId);
 1.  Visual Studio で、新しい C# プロジェクトを作成するか、希望に応じて、コマンド ライン ビルドを使用します。  
   
     > [!NOTE]
-    >  ビルドは、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにある、Microsoft.VisualStudio.Profiler.dll ライブラリを参照している必要があります。  
+    >  ビルドは、*Microsoft Visual Studio 9\Team Tools\Performance Tools* ディレクトリにある、*Microsoft.VisualStudio.Profiler.dll* ライブラリを参照している必要があります。  
   
 2.  プロジェクトに次のコードをコピーし、貼り付けます。  
   
@@ -157,7 +158,7 @@ DataCollection.CurrentId);
   
 8.  **VSPerfReport /calltrace:\<filename>.vsp** のコマンドを入力します。  
   
-     現在のディレクトリに、結果のパフォーマンス データが含まれた .csv ファイルが作成されます。  
+     現在のディレクトリに、結果のパフォーマンス データが含まれた .*csv* ファイルが作成されます。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Profiler>   

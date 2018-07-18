@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134748"
 ---
 # <a name="automation-model-overview"></a>オートメーション モデルの概要
 オートメーション モデルは、Visual Studio アドインまたは拡張機能を記述する対象となるオブジェクトのセットで構成されます。 アドインでは、Visual Studio 環境を操作および一般的なタスクを自動化できるアプリケーションです。 Visual Studio 拡張機能では、Visual Studio のカスタム コンポーネントを作成したり、テキスト エディターなどの標準的なコンポーネントの機能を追加することができます。  

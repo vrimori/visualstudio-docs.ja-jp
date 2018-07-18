@@ -28,6 +28,7 @@ ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549078"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>方法: コントロール、Backstage ビューを追加します。
   リボン デザイナーを使用するには、をクリックしたときに表示されるメニューにコントロールを追加、**ファイル**タブです。アプリケーションに追加するコントロールを実行すると、**ファイル** タブに表示されるという名前のグループ**アドイン**です。  

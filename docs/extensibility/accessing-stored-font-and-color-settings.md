@@ -20,12 +20,13 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31105796"
 ---
 # <a name="accessing-stored-font-and-color-settings"></a>ストアドのフォントおよび色の設定にアクセスします。
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) がフォントを変更した設定を格納し、レジストリの色します。 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>これらの設定にアクセスするインターフェイスです。
 
 ## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>フォントおよび色の状態の永続化を開始するには
- 次のレジストリの場所のカテゴリによってフォントと色の情報が格納されている: [HKCU\SOFTWARE\Microsoft \Visual Studio\\*\<Visual Studio version >*\FontAndColors\\ *\<CategoryGUID >*] ここで、  *\<CategoryGUID >*カテゴリの GUID です。
+ 次のレジストリの場所のカテゴリによってフォントと色の情報が格納されている: [HKCU\SOFTWARE\Microsoft \Visual Studio\\*\<Visual Studio version >* \FontAndColors\\ *\<CategoryGUID >*] ここで、  *\<CategoryGUID >* カテゴリの GUID です。
 
  そのため、永続化を開始するには、VSPackage が必要です。
 

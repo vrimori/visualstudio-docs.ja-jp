@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140178"
 ---
 # <a name="saving-data-in-project-files"></a>プロジェクト ファイル内のデータを保存
 プロジェクトのサブタイプでは、保存でき、プロジェクト ファイル内のサブタイプに固有のデータを取得することができます。 Managed Package Framework (MPF) は、このタスクを実行する 2 つのインターフェイスを提供します。  

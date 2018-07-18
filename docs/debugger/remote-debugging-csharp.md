@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477707"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio での c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに配置されている Visual Studio アプリケーションをデバッグするをインストール、アプリの展開先コンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するようにプロジェクトを構成して、アプリを実行します。

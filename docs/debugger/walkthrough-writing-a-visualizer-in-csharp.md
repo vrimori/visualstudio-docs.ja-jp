@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479839"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>チュートリアル : C# でビジュアライザーを記述する #
 このチュートリアルでは、C# を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この簡単な文字列ビジュアライザーは、それ自体ではそれほど役に立ちませんが、他のデータ型を表示する、より役に立つビジュアライザーを作成するために必要な基本手順として使用できます。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/18/2018
   
 4.  **名前**ボックスに、適切な (MyFirstVisualizer など)、クラス ライブラリの名前を入力します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
  クラス ライブラリを作成したら、Microsoft.VisualStudio.DebuggerVisualizers.DLL への参照を追加し、この DLL で定義されているクラスを使用できるようにします。 ただし、参照を追加する前に、クラス名をわかりやすい名前に変更する必要があります。  
   
@@ -58,9 +59,9 @@ ms.lasthandoff: 04/18/2018
   
 3.  **ソリューション エクスプ ローラー**を右クリックして**参照**選択**参照の追加**ショートカット メニューの します。  
   
-4.  **参照の追加**ダイアログ ボックスの**.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
+4.  **参照の追加**ダイアログ ボックスの **.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  DebuggerSide.cs の `using` ステートメントに次のステートメントを追加します。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/18/2018
   
 2.  **参照の追加** ダイアログ ボックスで、 **.NET**  タブで、System.Windows.Forms.DLL をクリックします。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
 4.  DebuggerSide.cs の `using` ステートメントに次のステートメントを追加します。  
   
@@ -168,7 +169,7 @@ ms.lasthandoff: 04/18/2018
   
 3.  **名前**ボックスで、コンソール アプリケーションのわかりやすい名前を入力します。`MyTestConsole`です。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
  次に、必要な参照を追加して、MyTestConsole が MyFirstVisualizer を呼び出すことができるようにします。  
   
@@ -178,13 +179,13 @@ ms.lasthandoff: 04/18/2018
   
 2.  **参照の追加**ダイアログ ボックスで、 **.NET**  タブで、Microsoft.VisualStudio.DebuggerVisualizers.DLL をクリックします。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
 4.  右クリック**MyTestConsole**選択**参照の追加**もう一度です。  
   
 5.  **参照の追加**ダイアログ ボックスで、をクリックして、**プロジェクト**タブし、MyFirstVisualizer をクリックします。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
  次に、コードを追加してテスト ハーネスを完成させます。  
   
@@ -238,7 +239,7 @@ ms.lasthandoff: 04/18/2018
   
 4.  **名前**ボックスに、適切な MySecondVisualizer など、クラス ライブラリの名前を入力します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
  これで、ビジュアライザー項目を追加できます。  
   

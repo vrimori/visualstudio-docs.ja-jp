@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129390"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>IDE 定義コマンド、メニューのおよびグループ
 多くのメニューのコマンドおよびコマンド グループは既に定義されていますが使用する、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。 これらのコマンドを拡張するときにも、使用できる[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 -   ShellCmdPlace.vsct  
   
- これらのファイルにある *\<Visual Studio SDK インストール パス >*\VisualStudioIntegration\Common\Inc\\です。 これらのファイルは、定義と、メニューとメニューのグループ、およびコマンドのコンテナーとして、VSPackage のコマンド テーブル (.vsct) の構成ファイルでを使用できるグループの Guid を提供します。  
+ これらのファイルにある *\<Visual Studio SDK インストール パス >* \VisualStudioIntegration\Common\Inc\\です。 これらのファイルは、定義と、メニューとメニューのグループ、およびコマンドのコンテナーとして、VSPackage のコマンド テーブル (.vsct) の構成ファイルでを使用できるグループの Guid を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Visual Studio メニューの GUID および ID](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31462381"
 ---
 # <a name="block"></a>ブロック
 各コード ブロックがによって識別される、`SymTagBlock`シンボル。 ブロック シンボルを使用して、関数内で入れ子になったスコープを識別します。  

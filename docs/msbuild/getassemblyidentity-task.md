@@ -25,6 +25,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31568826"
 ---
 # <a name="getassemblyidentity-task"></a>GetAssemblyIdentity タスク
 指定されたファイルからアセンブリ ID を取得し、その ID を出力します。  

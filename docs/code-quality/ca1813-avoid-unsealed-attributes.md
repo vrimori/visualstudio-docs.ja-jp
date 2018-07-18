@@ -21,6 +21,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31915717"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: シールされていない属性を使用しません
 |||

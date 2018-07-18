@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148599"
 ---
 # <a name="language-service-and-editor-extension-points"></a>言語サービスとエディターの拡張点
 エディターでは、ほとんどの言語サービス機能を含め、Managed Extensibility Framework (MEF) コンポーネント パーツとして拡張できる拡張ポイントを提供します。 主要な拡張機能ポイントのカテゴリを次に示します。  

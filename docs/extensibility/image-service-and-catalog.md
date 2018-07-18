@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134676"
 ---
 # <a name="image-service-and-catalog"></a>イメージ サービスとカタログ
 このクックブックには、ガイダンスとベスト プラクティスを採用する Visual Studio イメージ サービスと Visual Studio 2015 で導入されたイメージ カタログが含まれています。  
@@ -165,7 +166,7 @@ ms.lasthandoff: 04/16/2018
 |-|-|  
 |**属性**|**定義**|  
 |URI|[必須]定義する URI からイメージを読み込むことができます。 次のいずれかを指定できます。<br /><br /> A [Pack URI](http://msdn.microsoft.com/en-US/library/aa970069\(v=vs.100\).aspx)アプリケーションを使用して:///機関<br />-絶対コンポーネント リソース参照<br />-ネイティブ リソースを含むファイルへのパス|  
-|背景|[オプション]ソースを使用するものではバック グラウンドの種類にどのようなことを示します。<br /><br /> 次のいずれかを指定できます。<br /><br /> *ライト:*ソースは、明るい背景で使用できます。<br /><br /> *濃い:*ソースは、暗い背景で使用できます。<br /><br /> *ハイコントラスト:*ソースは、ハイ コントラスト モードで、色の背景で使用できます。<br /><br /> *HighContrastLight:*ハイ コントラスト モードのライト バック グラウンドでは、ソースを使用できます。<br /><br /> *HighContrastDark:*ソースは、ハイ コントラスト モードで、暗い背景で使用できます。<br /><br /> バック グラウンド属性を省略すると、すべてのバック グラウンドで、ソースを使用できます。<br /><br /> バック グラウンドがある場合*ライト*、*濃い*、 *HighContrastLight*、または*HighContrastDark*ソースの色を反転ことはありません。 バック グラウンドを省略した場合またはに設定*ハイコントラスト*、ソースの色の反転は、イメージのによって制御されます**AllowColorInversion**属性。|  
+|背景|[オプション]ソースを使用するものではバック グラウンドの種類にどのようなことを示します。<br /><br /> 次のいずれかを指定できます。<br /><br /> *ライト:* ソースは、明るい背景で使用できます。<br /><br /> *濃い:* ソースは、暗い背景で使用できます。<br /><br /> *ハイコントラスト:* ソースは、ハイ コントラスト モードで、色の背景で使用できます。<br /><br /> *HighContrastLight:* ハイ コントラスト モードのライト バック グラウンドでは、ソースを使用できます。<br /><br /> *HighContrastDark:* ソースは、ハイ コントラスト モードで、暗い背景で使用できます。<br /><br /> バック グラウンド属性を省略すると、すべてのバック グラウンドで、ソースを使用できます。<br /><br /> バック グラウンドがある場合*ライト*、*濃い*、 *HighContrastLight*、または*HighContrastDark*ソースの色を反転ことはありません。 バック グラウンドを省略した場合またはに設定*ハイコントラスト*、ソースの色の反転は、イメージのによって制御されます**AllowColorInversion**属性。|  
 |||  
   
  A\<ソース > 要素には、次の省略可能なサブ要素の 1 つだけ持つことができます。  
@@ -237,7 +238,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Microsoft.VisualStudio.Utilities.dll**  
   
-    -   使用するかどうかは必ず、 **BrushToColorConverter** 、ImageThemingUtilities 用**。ImageBackgroundColor**の WPF UI  
+    -   使用するかどうかは必ず、 **BrushToColorConverter** 、ImageThemingUtilities 用 **。ImageBackgroundColor**の WPF UI  
   
 -   **Microsoft.VisualStudio.Shell です。\<VSVersion >.0**  
   
@@ -688,7 +689,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
   
 -   CPS プロジェクト システムを更新しているところです。 変更点を**ImageName**と**StockIconService**しますか?  
   
-    -   o モニカーを使用する CPS が更新されたときにこれらは削除されました。 呼び出すが不要になった、 **StockIconService**、目的を渡すだけ**KnownMoniker**メソッドまたはプロパティを使用して、 **ToProjectSystemType()**でも拡張メソッドCPS のユーティリティです。 マッピングを見つけることができます**ImageName**に**KnownMonikers**下。  
+    -   o モニカーを使用する CPS が更新されたときにこれらは削除されました。 呼び出すが不要になった、 **StockIconService**、目的を渡すだけ**KnownMoniker**メソッドまたはプロパティを使用して、 **ToProjectSystemType()** でも拡張メソッドCPS のユーティリティです。 マッピングを見つけることができます**ImageName**に**KnownMonikers**下。  
   
         |||  
         |-|-|  

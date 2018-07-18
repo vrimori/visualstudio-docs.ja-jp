@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31107752"
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォームのツールボックス コントロールの作成
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォームのツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成することができます、**ツールボックス**拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できるカウンターの単純なコントロールを作成するテンプレートを使用する方法を示します。  
@@ -138,7 +139,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-8.  クラス定義のすぐ上に、`ProvideToolboxControl`属性の宣言から最初のパラメーターの値を変更`"MyWinFormsControl.Counter"`に`"General"`です。 これにより、 **[ツールボックス]**のコントロールをホストする項目グループの名前が設定されます。  
+8.  クラス定義のすぐ上に、`ProvideToolboxControl`属性の宣言から最初のパラメーターの値を変更`"MyWinFormsControl.Counter"`に`"General"`です。 これにより、 **[ツールボックス]** のコントロールをホストする項目グループの名前が設定されます。  
   
      次の例では、 `ProvideToolboxControl` の属性と、調整されたクラス定義を示しています。  
   
@@ -191,7 +192,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
      **カウント: 0**  
   
-14. **[テスト]**をクリックします。  
+14. **[テスト]** をクリックします。  
   
      カウンターがインクリメントされると Visual Studio は、メッセージ ボックスを表示します。  
   
@@ -203,7 +204,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
      **リセット**が再度表示されるボタンをクリックします。  
   
-17. **[リセット]**をクリックします。  
+17. **[リセット]** をクリックします。  
   
      カウンターをリセットする**0**します。  
   

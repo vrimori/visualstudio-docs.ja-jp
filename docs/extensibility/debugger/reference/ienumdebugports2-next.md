@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31124158"
 ---
 # <a name="ienumdebugports2next"></a>IEnumDebugPorts2::Next
 列挙体から次の要素のセットを返します。  

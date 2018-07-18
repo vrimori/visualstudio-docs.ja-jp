@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146820"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Visual Studio 相互運用機能アセンブリを使用します。
 Visual Studio 相互運用機能アセンブリでは、マネージ アプリケーションの Visual Studio 拡張機能を提供する COM インターフェイスにアクセスできるようにします。 直線の COM インターフェイスとの相互運用機能のバージョンに違いがあります。 たとえば、Hresult int 値として表される一般的に、例外と同じ方法で処理する必要があり、(特に out パラメーター) のパラメーターが異なる方法で扱われます。  

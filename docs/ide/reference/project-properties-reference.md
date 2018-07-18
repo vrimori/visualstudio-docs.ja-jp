@@ -18,6 +18,7 @@ ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102655"
 ---
 # <a name="project-properties-reference"></a>プロジェクトのプロパティのリファレンス
 プロジェクトのプロパティを構成およびカスタマイズする方法について詳しく学習します。

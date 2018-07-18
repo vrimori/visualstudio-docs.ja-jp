@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132150"
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>方法: レガシ言語サービスでの展開のアウトライン サポートを提供
 使用する言語をサポートする以外のアウトラインのサポートを拡張するための 2 つのオプションがある、**定義に縮小**コマンド。 エディター コントロールのアウトライン領域を追加し、クライアント管理されているアウトライン領域を追加できます。  

@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2e3aee55728f312aaa1ff7d8c44a6bbd6c04bfd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e295c08568e13fade750cadcea03b61d2a7ca9d3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766702"
 ---
 # <a name="profile-application-performance-in-visual-studio"></a>Visual Studio でのアプリケーション パフォーマンスのプロファイリング
 Visual Studio プロファイリング ツールを使用して、アプリケーションでパフォーマンスの問題を分析することができます。 このガイドでは、診断ツールの **[CPU 使用率]** タブを使用し、アプリのパフォーマンス データを取得する方法について説明します。 診断ツールは Visual Studio の .NET 開発 (ASP.NET を含む) とネイティブ/C++ 開発で利用できます。
@@ -35,7 +36,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 |---------|---------|
 |  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    CPU 使用率の分析方法とメモリ使用率の分析方法については、診断ツールの使用に関する[こちらのビデオ](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171)をご覧ください。 |
 
-このトピックでは、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析することもできます。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
+この記事では、通常のデバッグ ワークフローで CPU 使用率を分析する方法について説明します。 デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析することもできます。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
 
 > [!NOTE]
 > .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
@@ -46,7 +47,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 > * CPU 使用率のデータの収集
 > * CPU 使用率データの分析
   
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
+## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
   
 1.  Visual Studio でデバッグするプロジェクトを開き、CPU 使用率を調べるポイントでアプリのブレークポイントを設定します。
 
@@ -97,7 +98,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
      この時点で、データの分析を開始できます。
 
-## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
@@ -143,9 +144,9 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 
 - **モジュール** 関数が含まれるモジュールの名前です。あるいは、[外部コード] ノード内の関数が含まれるモジュールの数です。
 
-## <a name="BKMK_External_Code"></a>外部コードの表示
+## <a name="view-external-code"></a>外部コードの表示
 
-外部コードとは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数です。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率ツールはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。
+外部コードは、作成したコードによって実行されるシステムおよびフレームワーク コンポーネント内の関数です。 外部コードには、アプリの開始と停止、UI の描画、スレッドの制御、およびアプリへの他の低レベル サービスの提供を行う関数が含まれます。 外部コードを確認することはほとんどないため、CPU 使用率ツールはユーザー メソッドの外部関数を 1 つの **[外部コード]** ノードにまとめます。
   
 外部コードのコール パスを表示する場合、 **[フィルター ビュー]** リストから **[外部コードの表示]** をクリックし、 **[適用]** をクリックします。  
   
@@ -156,7 +157,7 @@ Visual Studio プロファイリング ツールを使用して、アプリケ�
 検索ボックスを使って目的のノードを探した後、水平スクロール バーを使ってデータを表示させます。
 
 > [!TIP]
-> Windows 関数を呼び出す外部コードをプロファイリングする場合は、最新の .pdb ファイルを入手しておく必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[Specify Symbol (.pdb) and Source Files in the Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (デバッガーにシンボル (.pdb) とソース ファイルを指定する) を参照してください。
+> Windows 関数を呼び出す外部コードをプロファイリングする場合は、最新の .*pdb* ファイルがあることを確認する必要があります。 これらのファイルがない場合、レポート ビューに暗号のようなわかりにくい Windows 関数名が一覧表示されます。 必要なファイルがあることを確認する方法の詳細については、「[Specify symbol (.*pdb*) and source files in the debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (デバッガーにシンボル (.pdb) とソース ファイルを指定する) を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

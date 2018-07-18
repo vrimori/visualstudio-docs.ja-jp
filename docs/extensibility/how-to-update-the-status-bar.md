@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134497"
 ---
 # <a name="how-to-update-the-status-bar"></a>方法: ステータス バーの更新
 **ステータス バー**ステータス テキスト行またはインジケーターの 1 つ以上含まれている多くのアプリケーション ウィンドウの下部にあるコントロール バーがあります。  

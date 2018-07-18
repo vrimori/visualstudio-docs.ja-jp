@@ -1,6 +1,7 @@
 ---
 title: '方法: 基本カラー シェーダーを作成する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c301328a-079a-49e8-b688-4749c01657c0
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f4a30315014c4405b811c3e343aee170bfbd365
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fba456d6a06281e0472e907b27bcd76b57b17e93
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747119"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>方法: 基本カラー シェーダーを作成する
 
@@ -40,7 +42,7 @@ RGB 色定数のカラー値を最終的な出力の色に書き込めば、単�
 > [!NOTE]
 > この図では、シェーダーの効果をわかりやすく示すために、オレンジ色が指定されました。
 
-![3&#45;D モデルのシェーダー グラフとその結果](../designers/media/digit-flat-color-effect.png "Digit-Flat-Color-Effect")
+![3&#45;D モデルのシェーダー グラフとその結果](../designers/media/digit-flat-color-effect.png)
 
 シェーダーによっては、特定の図形を使用すると、より適切にプレビューできる可能性があります。 シェーダー デザイナーでシェーダーをプレビューする方法に関する詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」を参照してください。
 

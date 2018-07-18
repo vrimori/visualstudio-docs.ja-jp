@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130684"
 ---
 # <a name="supporting-source-control"></a>ソース管理をサポートします。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ファイルのチェック アウト、チェックイン、およびプロジェクトまたはエディターの他のソース管理操作をサポートしています。 ソース管理クライアントとして[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]など、ソース管理パッケージと対話するように設計された[!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)]、アーカイブ、バージョン管理、および、動的に定義された一連のファイル制御機能を提供します。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481179"
 ---
 # <a name="report-hook-functions"></a>レポート用のフック関数
 レポート用のフック関数の場合を使用してインストール[_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook)、たびに呼び出されます[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)デバッグ レポートが生成されます。 レポート用のフック関数を使用して、特定の割り当て型に関するレポートだけを出力できます。 レポート用のフック関数には、次のようなプロトタイプが必要です。  
@@ -38,13 +39,13 @@ ms.lasthandoff: 04/18/2018
 int YourReportHook(int nRptType, char *szMsg, int *retVal);  
 ```  
   
- 渡すポインター **_CrtSetReportHook**の種類は**_CRT_REPORT_HOOK**CRTDBG で定義されている、します。H:  
+ 渡すポインター **_CrtSetReportHook**の種類は **_CRT_REPORT_HOOK**CRTDBG で定義されている、します。H:  
   
 ```  
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);  
 ```  
   
- ランタイム ライブラリが独自のフック関数を呼び出したときに、 *nRptType*引数には、レポートのカテゴリが含まれています (**前述**、 **_CRT_ERROR**、または**_CRT_ASSERT**)、 *szMsg* 、完全に組み立てられたレポートのメッセージ文字列へのポインターが含まれていますと*retVal*を指定するかどうか`_CrtDbgReport`通常の実行を続行する必要がありますレポートまたは開始デバッガーが生成されます。 (A *retVal*実行を継続する値は 0、1 の値は、デバッガーを起動します)。  
+ ランタイム ライブラリが独自のフック関数を呼び出したときに、 *nRptType*引数には、レポートのカテゴリが含まれています (**前述**、 **_CRT_ERROR**、または **_CRT_ASSERT**)、 *szMsg* 、完全に組み立てられたレポートのメッセージ文字列へのポインターが含まれていますと*retVal*を指定するかどうか`_CrtDbgReport`通常の実行を続行する必要がありますレポートまたは開始デバッガーが生成されます。 (A *retVal*実行を継続する値は 0、1 の値は、デバッガーを起動します)。  
   
  返すかかどうかフック関数は、以降のレポートは必要ありませんされるように、完全に対象のメッセージを処理、 **TRUE**です。 返された場合**FALSE**、`_CrtDbgReport`レポート メッセージを通常されます。  
   

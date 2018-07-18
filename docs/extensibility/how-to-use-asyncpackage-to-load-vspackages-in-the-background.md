@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135382"
 ---
 # <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>方法: AsyncPackage を使用して、バック グラウンドで Vspackage を読み込む
 読み込みと初期化 VS パッケージは、ディスク I/O になります。 UI スレッドでこのような I/O が発生した場合、応答性の問題になることができます。 これに対処するには、Visual Studio 2015 が導入された、<xref:Microsoft.VisualStudio.Shell.AsyncPackage>をバック グラウンド スレッドでパッケージの読み込みを有効にするクラス。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
     ```  
   
-4.  オーバーライドする必要がある場合は非同期の初期化作業を行うには、<xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>です。 削除、 **Initialize()** VSIX テンプレートによって提供されるメソッド。 (、 **Initialize()**メソッド**AsyncPackage**が封印されている)。 いずれかを使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>非同期サービスをパッケージに追加する方法です。  
+4.  オーバーライドする必要がある場合は非同期の初期化作業を行うには、<xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>です。 削除、 **Initialize()** VSIX テンプレートによって提供されるメソッド。 (、 **Initialize()** メソッド**AsyncPackage**が封印されている)。 いずれかを使用することができます、<xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A>非同期サービスをパッケージに追加する方法です。  
   
      注: 呼び出す**ベースです。InitializeAsync()**、ソース コードを変更することができます。  
   

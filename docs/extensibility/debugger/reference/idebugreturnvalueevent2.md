@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31120636"
 ---
 # <a name="idebugreturnvalueevent2"></a>IDebugReturnValueEvent2
 このインターフェイスは、または、この関数をステップ実行した後、デバッグ エンジン (DE) によって、セッションのデバッグ マネージャー (SDM) に送信されます。  
@@ -44,7 +45,7 @@ IDebugReturnValueEvent2 : IUnknown
 |[GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md)|関数からステップ実行で返される値を取得します。|  
   
 ## <a name="remarks"></a>コメント  
- 呼び出すことによって、関数によって返される値を取得する[GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md)です。 返される値に表示されます、 **[自動変数]**ウィンドウです。  
+ 呼び出すことによって、関数によって返される値を取得する[GetReturnValue](../../../extensibility/debugger/reference/idebugreturnvalueevent2-getreturnvalue.md)です。 返される値に表示されます、 **[自動変数]** ウィンドウです。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する | Microsoft Docs
+title: Visual Studio で Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,14 @@ ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c53d4db3f413ad8cf4f0b615db18bd5fb6368128
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c3f5e60f8cde791f571c5a6663356ad7d2ca80f9
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750696"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>方法: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 
@@ -51,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 
 5.  **ツールボックス**の **[コモン コントロール]** カテゴリで、<xref:System.Windows.Forms.RichTextBox> を UserControl1 のサーフェイスにドラッグします。
 
-6.  <xref:System.Windows.Forms.RichTextBox> コントロールの右上隅にあるアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) を選んで、**[親コンテナーにドッキングする]** を選択します。
+6.  <xref:System.Windows.Forms.RichTextBox> コントロールの右上隅にあるアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif)) を選び、親コンテナーを選択して**ドッキング**します。
 
 7.  ソリューション エクスプローラーで、Windows フォーム ライブラリ プロジェクトを右クリックし、**[プロパティ]** を選択します。
 

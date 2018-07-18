@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137512"
 ---
 # <a name="managing-undo-and-redo-by-using-the-legacy-api"></a>管理元に戻すと、レガシ API を使用して再実行
 エディターでは、ユーザーがコードを変更するときに、最近の変更内容を反転できる元に戻す操作をサポートする必要があります。 ほとんどのエディターで実装[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]と[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]統合開発環境 (IDE) によって自動的に提供元に戻す機能を持つことができます。  

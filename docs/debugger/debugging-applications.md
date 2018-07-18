@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472663"
 ---
 # <a name="debugging-applications"></a>アプリケーションのデバッグ
 次のセクションでは、特定の種類のアプリケーションのデバッグを処理します。 さまざまなアプリケーションの種類とさまざまな言語には、異なる設定と手法が必要であり、デバッグする必要がある問題もさまざまに発生します。  

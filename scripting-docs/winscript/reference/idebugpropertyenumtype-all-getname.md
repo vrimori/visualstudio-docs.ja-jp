@@ -1,11 +1,11 @@
 ---
-title: "IDebugPropertyEnumType_All::GetName |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugPropertyEnumType_All::GetName |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugPropertyEnumType_All.GetName
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IDebugPropertyEnumType_All::GetName
 ms.assetid: 24bbe4d5-4263-48d0-8e8d-bff957ffcad2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24727242"
 ---
 # <a name="idebugpropertyenumtypeallgetname"></a>IDebugPropertyEnumType_All::GetName
 名前を含む BSTR を返します、`EnumType`です。  

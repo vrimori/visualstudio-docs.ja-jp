@@ -19,6 +19,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31924305"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>方法 : コード分析辞書をカスタマイズする
 コード分析のスペル チェック、文法的な場合も、およびその他の名前付け規則のエラー コード内の識別子を確認する組み込みの辞書を使用して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]ガイドラインです。 追加、削除、または条項、省略形、および組み込みの辞書に頭字語を変更するカスタム辞書 Xml ファイルを作成することができます。

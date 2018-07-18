@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31116998"
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 このインターフェイスは、ポート サプライヤーことができます (それらをディスクに書き込む) によって、デバッガーの呼び出しの間でポートを保持してし、それらの保存されたポートの一覧を取得するかどうかを確認する呼び出し元を使用します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140263"
 ---
 # <a name="message-enumerator"></a>メッセージの列挙子
 次のフラグの使用、`TEXTOUTPROC`関数を呼び出すときに IDE が提供するコールバック関数、 [SccOpenProject](../extensibility/sccopenproject-function.md) (を参照してください[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)詳細については、コールバックで関数の場合)。  

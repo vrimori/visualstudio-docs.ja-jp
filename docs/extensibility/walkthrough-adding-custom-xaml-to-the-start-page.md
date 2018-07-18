@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140060"
 ---
 # <a name="walkthrough-adding-custom-xaml-to-the-start-page"></a>チュートリアル: カスタム XAML をスタート ページに追加します。
 このチュートリアルでは、カスタム Visual Studio スタート ページを含む Web ブラウザーを作成する方法を示します。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  選択**スタートアップ**です。 **スタート ページのカスタマイズ**一覧で、.xaml ファイルを選択し、をクリックして**OK**です。  
   
-4.  **[表示]** メニューの **[スタート ページ]**をクリックします。  
+4.  **[表示]** メニューの **[スタート ページ]** をクリックします。  
   
 5.  クリックして、 **Bing**タブです。  
   

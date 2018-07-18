@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31101662"
 ---
 # <a name="control-events"></a>コントロールのイベント
 プログラムの制御された実行中にイベントを送信する必要があります。 使用して送信されるすべてのイベントは、 [IDebugEvent2](../../extensibility/debugger/reference/idebugevent2.md)インターフェイスし、属性を実装する必要がありますが、 [IDebugEvent2::GetAttributes](../../extensibility/debugger/reference/idebugevent2-getattributes.md)メソッドです。  

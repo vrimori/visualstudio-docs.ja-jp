@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473278"
 ---
 # <a name="how-to-display-message-properties"></a>方法: メッセージのプロパティを表示する
 記載されているメッセージに関する詳細を確認する[メッセージ ビュー](../debugger/messages-view.md)を使用して、[メッセージのプロパティ ダイアログ ボックス](../debugger/message-properties-dialog-box.md)です。  

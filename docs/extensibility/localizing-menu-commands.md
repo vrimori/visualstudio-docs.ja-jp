@@ -23,6 +23,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142709"
 ---
 # <a name="localizing-menu-commands"></a>メニュー コマンドのローカライズ
 メニューのローカライズされたテキストを指定することができ、ツールバーがローカライズされた .vsct ファイルを作成するコマンドしローカライズされた .resx ファイルを VSPackage とするために、プロジェクト ファイルを更新し、変更を反映します。  

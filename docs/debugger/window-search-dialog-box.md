@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476632"
 ---
 # <a name="window-search-dialog-box"></a>[ウィンドウ検索] ダイアログ ボックス
 検索で特定のウィンドウのノードを選択してこのダイアログ ボックスを使用して[ウィンドウ ビュー](../debugger/windows-view.md)です。 このダイアログ ボックスを表示するには、Windows のビュー ウィンドウにフォーカスを移動します。 選択し、**ウィンドウ検索**から、**検索**メニュー。  

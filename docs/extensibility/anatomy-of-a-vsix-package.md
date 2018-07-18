@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31099552"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSIX パッケージの構造
 VSIX パッケージは、Visual Studio は分類し、拡張機能のインストールを使用してメタデータと共に、1 つまたは複数の Visual Studio 拡張を含む .vsix ファイルです。 そのメタデータは、VSIX マニフェストと [Content_Types] .xml ファイルに含まれます。 VSIX パッケージでは、セットアップのローカライズされたテキストを提供する 1 つ以上の Extension.vsixlangpack ファイルを含めることがありますもと、依存関係をインストールする追加の VSIX パッケージを含めることがあります。  

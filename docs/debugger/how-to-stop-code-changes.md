@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481945"
 ---
 # <a name="how-to-stop-code-changes"></a>方法 : コード変更を中断する
 エディット コンティニュがコード変更を適用するプロセスを実行している間、その操作は中断できます。  

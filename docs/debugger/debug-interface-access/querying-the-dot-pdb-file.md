@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31470063"
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb ファイルの照会
 プログラム データベース ファイル (拡張子 .pdb) とは、型とコンパイルとリンク、プロジェクトの過程で収集されたシンボリック デバッグ情報を含むバイナリ ファイルです。 C と C++ プログラムをコンパイルするときに PDB ファイルが作成された **/ZI**または **/Zi**または[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または[!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)]使用したプログラミング、 **/debug**オプション。 オブジェクト ファイルには、デバッグ情報の .pdb ファイルへの参照が含まれます。 Pdb ファイルの詳細については、次を参照してください。 [PDB ファイル](http://msdn.microsoft.com/en-us/1761c84e-8c2c-4632-9649-b5f99964ed3f)です。 DIA アプリケーションは、さまざまなシンボル、オブジェクト、および実行可能イメージ内のデータ要素の詳細を取得するのに、次の手順を使用できます。  

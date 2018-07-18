@@ -23,6 +23,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126233"
 ---
 # <a name="session-debug-manager"></a>セッションのデバッグ マネージャー
 セッションのデバッグ マネージャー (SDM) は、任意の数の任意の数のマシンの数にかかわらず複数のプロセスでプログラムをデバッグするデバッグ エンジン (DE) を管理します。 マルチプレクサー デバッグ エンジンだけでなく、SDM は IDE に、デバッグ セッションの統一されたビューを提供します。  

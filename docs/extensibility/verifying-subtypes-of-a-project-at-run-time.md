@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31136830"
 ---
 # <a name="verifying-subtypes-of-a-project-at-run-time"></a>実行時に、プロジェクトのサブタイプを確認しています
 カスタム プロジェクトのサブタイプに依存する VSPackage は、サブタイプのサブタイプが存在しない場合に正常に失敗できるようにするロジックを探してを含める必要があります。 次の手順では、指定されたサブタイプの存在を確認する方法を示します。  

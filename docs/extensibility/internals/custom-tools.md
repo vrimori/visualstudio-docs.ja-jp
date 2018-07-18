@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128885"
 ---
 # <a name="custom-tools"></a>カスタム ツール
 *カスタム ツール*ツールをプロジェクト内の項目に関連付けるし、ファイルを保存するたびに、そのツールを実行できます。 特定のカスタム ツールとも呼ば*単一ファイル ジェネレーター*、データから、その逆のコードを生成する翻訳者を実装するのには頻繁に使用します。 たとえば、単一ファイル ジェネレーターを作成[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)].settings および .resx ファイルからコードをソースします。 生成されたソース コードでは、.settings、.resx ファイル内のデータへの厳密に型指定されたアクセスを提供します。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]; のカスタム ツールをサポートするプロジェクトの種類[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]プロジェクトの種類がありません。 独自のプロジェクトの種類には、カスタム ツールもサポートできます。  

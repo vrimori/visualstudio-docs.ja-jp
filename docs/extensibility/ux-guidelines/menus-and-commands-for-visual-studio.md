@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148208"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>メニューと Visual Studio のコマンド
 ## <a name="command-usage"></a>コマンドの使用方法  
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 -   既定のツールバーに表示されます。  
   
--   ユーザーが経由のツールバーに追加する可能性が高い、**カスタマイズしています.**ダイアログ。  
+-   ユーザーが経由のツールバーに追加する可能性が高い、**カスタマイズしています.** ダイアログ。  
   
 -   別のマイクロソフト製品に同じアクションに関連付けられたアイコンがあります。  
   
@@ -250,7 +251,7 @@ ms.lasthandoff: 04/16/2018
   
 -   コマンドは、既定のツールバーに配置されます。  
   
--   ユーザーがツールバーを使用してに追加すると思われる specialty コマンドは、コマンド、 **「カスタマイズ…」**ダイアログ。  
+-   ユーザーがツールバーを使用してに追加すると思われる specialty コマンドは、コマンド、 **「カスタマイズ…」** ダイアログ。  
   
 ## <a name="access-and-shortcut-keys"></a>アクセスやショートカット キー  
   

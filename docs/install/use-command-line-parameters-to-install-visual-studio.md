@@ -16,11 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3369fde3a9363951bf08b7af04ed35afc38a45c5
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: a27148619879ea90dba21704a0aa57fdf5f04551
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477367"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/10/2018
 | `--installPath <dir>` | 操作するインスタンスのインストール ディレクトリです。 インストール コマンドの場合、これは**省略可能**で、インスタンスがインストールされる場所になります。 その他のコマンドではこれは**必須**で、以前にインストール済みのインスタンスがインストールされた場所になります。 |
 | `--addProductLang <language-locale>` | **省略可能**: インストールまたは変更操作時に、製品にインストールされる UI 言語パックを決定します。 コマンド ラインに複数回指定して複数の言語パックを追加できます。 指定しない場合、インストール時にはコンピューターのロケールが使用されます。 詳しくは、このページの「[言語ロケールの一覧](#list-of-language-locales)」セクションをご覧ください。|
 | `--removeProductLang <language-locale>` | **省略可能**: インストールまたは変更操作時に、製品から削除される UI 言語パックを決定します。 コマンド ラインに複数回指定して複数の言語パックを追加できます。 詳しくは、このページの「[言語ロケールの一覧](#list-of-language-locales)」セクションをご覧ください。|
-| `--add <one or more workload or component IDs>` | **省略可能**: 1 つ以上のワークロード ID またはコンポーネント ID を追加します。 成果物の必須のコンポーネントはインストールされますが、推奨されるコンポーネントまたは省略可能なコンポーネントはインストールされません。 `--includeRecommended` や `--includeOptional` を使用して、他のコンポーネントをグローバルに制御できます。 詳細に制御するために、ID に `;includeRecommended` または `;includeOptional` を追加できます (例: `--add Workload1;includeRecommended` または `--add Workload2;includeRecommended;includeOptional`)。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。 必要に応じて、このオプションを繰り返すことができます。|
+| `--add <one or more workload or component IDs>` | **省略可能**: 1 つ以上のワークロード ID またはコンポーネント ID を追加します。 成果物の必須のコンポーネントはインストールされますが、推奨されるコンポーネントまたは省略可能なコンポーネントはインストールされません。 `--includeRecommended` や `--includeOptional` を使用して、他のコンポーネントをグローバルに制御できます。 複数のワークロードやコンポーネントを含める場合、`--add` コマンドを繰り返します (例: `--add Workload1 --add Workload2`)。 詳細に制御するために、ID に `;includeRecommended` または `;includeOptional` を追加できます (例: `--add Workload1;includeRecommended` または `--add Workload2;includeRecommended;includeOptional`)。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。 必要に応じて、このオプションを繰り返すことができます。|
 | `--remove <one or more workload or component IDs>` | **省略可能**: 1 つ以上のワークロード ID またはコンポーネント ID を削除します。 詳しくは、[ワークロード ID とコンポーネント ID](workload-and-component-ids.md) に関するページをご覧ください。 必要に応じて、このオプションを繰り返すことができます。|
 | `--in <path>` | **省略可能**: 応答ファイルへの URI またはパスです。  |
 | `--all` | **省略可能**: 製品のすべてのワークロードおよびコンポーネントをインストールするかどうかを指定します。 |
@@ -97,13 +98,13 @@ ms.lasthandoff: 05/10/2018
 | `--productId <id>` | **省略可能**: インストールされるインスタンスの製品 ID です。 これは、通常のインストールの条件下では事前に配布されています。 |
 | `--wait` | **省略可能**: インストールが完了し、終了コードが返されるまでプロセスは待機します。 このオプションは、インストールが完了するまで待ってから、そのインストールからのリターン コードを処理する必要があるインストールの自動化に役立ちます。 |
 | `--locale <language-locale>` | **省略可能**: インストーラー自体のユーザー インターフェイスの表示言語を変更します。 設定は保持されます。 詳しくは、このページの「[言語ロケールの一覧](#list-of-language-locales)」セクションをご覧ください。|
-| `--cache` | **15.2 の新機能、省略可能**: 指定した場合、インストールされた後、その後の修復用にパッケージが保持されます。 このオプションでは、その後のインストール、修復、または修正に使用されるグローバル ポリシー設定が上書きされます。 既定のポリシーでは、パッケージをキャッシュします。 アンインストール コマンドでは、これは無視されます。 詳細については、「[disable or move the package cache](disable-or-move-the-package-cache.md)」 (パッケージ キャッシュの無効化または移動) を参照してください。 |
-| `--nocache` | **15.2 の新機能、省略可能**: 指定した場合、パッケージはインストールまたは修復された後、削除されます。 必要な場合にのみ、もう一度ダウンロードされ、使用後はもう一度削除されます。 このオプションでは、その後のインストール、修復、または修正に使用されるグローバル ポリシー設定が上書きされます。 既定のポリシーでは、パッケージをキャッシュします。 アンインストール コマンドでは、これは無視されます。 詳細については、「[disable or move the package cache](disable-or-move-the-package-cache.md)」 (パッケージ キャッシュの無効化または移動) を参照してください。 |
+| `--cache` | **15.2 の新機能、省略可能**: 指定した場合、インストールされた後、その後の修復用にパッケージが保持されます。 このオプションでは、その後のインストール、修復、または修正に使用されるグローバル ポリシー設定がオーバーライドされます。 既定のポリシーでは、パッケージをキャッシュします。 アンインストール コマンドでは、これは無視されます。 詳細については、「[disable or move the package cache](disable-or-move-the-package-cache.md)」 (パッケージ キャッシュの無効化または移動) を参照してください。 |
+| `--nocache` | **15.2 の新機能、省略可能**: 指定した場合、パッケージはインストールまたは修復された後、削除されます。 必要な場合にのみ、もう一度ダウンロードされ、使用後はもう一度削除されます。 このオプションでは、その後のインストール、修復、または修正に使用されるグローバル ポリシー設定がオーバーライドされます。 既定のポリシーでは、パッケージをキャッシュします。 アンインストール コマンドでは、これは無視されます。 詳細については、「[disable or move the package cache](disable-or-move-the-package-cache.md)」 (パッケージ キャッシュの無効化または移動) を参照してください。 |
 | `--noUpdateInstaller` | **15.2 の新機能、省略可能**: 指定した場合、quiet が指定されていると、インストーラーはインストーラー自体を更新しません。 インストーラーの更新が必要な場合に、noUpdateInstaller と quiet の両方が指定されていると、インストーラーはコマンドを失敗させて、0 以外の終了コードを返します。 |
 | `--noWeb` | **15.3 の新機能、省略可能**: インターネットからインストールしているコンテンツのダウンロードが即時セットアップされます。  インストールされるすべてのコンテンツがオフライン レイアウトで使用できる必要があります。  レイアウトにコンテンツがない場合、セットアップは失敗します。  詳細については、「[ネットワーク インストールから展開する](create-a-network-installation-of-visual-studio.md)」をご覧ください。 |
 | `--path <name>=<path>` | **15.7 の新機能、省略可能**: インストール用のカスタム インストール パスを指定するために使用します。 サポートされているパス名は、shared、cache、および install です。 |
 | `--path cache=<path>` | **15.7 の新機能、省略可能**: 指定した場所を使用してインストール ファイルをダウンロードします。 この場所は、Visual Studio を初めてインストールするときにのみ設定することができます。 例 : `--path cache="C:\VS\cache"` |
-| `--path shared=<path>` | **15.7 の新機能、省略可能**: Visual Studio のサイド バイ サイド インストール用の共有ファイルが含まれています。 ツールおよび SDK については、このドライブ上の場所にインストールされるものもあれば、この設定を上書きして、別のドライブにインストールされるものもあります。 例 : `--path shared="C:\VS\shared"` <br><br>重要: これは Visual Studio を初めてインストールするときに 1 回のみ設定できます。 |
+| `--path shared=<path>` | **15.7 の新機能、省略可能**: Visual Studio のサイド バイ サイド インストール用の共有ファイルが含まれています。 ツールおよび SDK については、このドライブ上の場所にインストールされるものもあれば、この設定をオーバーライドして、別のドライブにインストールされるものもあります。 例 : `--path shared="C:\VS\shared"` <br><br>重要: これは Visual Studio を初めてインストールするときに 1 回のみ設定できます。 |
 | `--path install=<path>` | **15.7 の新機能、省略可能**: `–-installPath` と等価です。 具体的には、`--installPath "C:\VS"` と `--path install="C:\VS"` が等価です。 これらは、一度に 1 つずつしか使用できません。 |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>ワークロード ID とコンポーネント ID の一覧

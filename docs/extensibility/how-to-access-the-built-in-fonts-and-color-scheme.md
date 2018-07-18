@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131148"
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>方法: 組み込みのフォントと配色へのアクセス
 Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウに関連付けられているフォントおよび色のスキームがします。 このスキームを通じてアクセスできる、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>インターフェイスです。
@@ -32,7 +33,7 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
 
 -   IDE をアドバイスする特定のウィンドウでは、組み込みの表示項目とカテゴリを使用して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyCategoryContainer>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextEditorPropertyContainer>インターフェイスです。
 
- IDE では、ウィンドウのハンドルとして、結果として得られるカテゴリを使用します。 カテゴリの名前に表示されます、**設定の表示:**ドロップダウン ボックスで、**フォントおよび色**プロパティ ページ。
+ IDE では、ウィンドウのハンドルとして、結果として得られるカテゴリを使用します。 カテゴリの名前に表示されます、**設定の表示:** ドロップダウン ボックスで、**フォントおよび色**プロパティ ページ。
 
 ### <a name="to-define-a-category-using-built-in-fonts-and-colors"></a>組み込みのフォントおよび色を使用してカテゴリを定義するには
 
@@ -51,9 +52,9 @@ Visual Studio 統合開発環境 (IDE) では、エディター ウィンドウ�
 
 1.  次の場所にレジストリ エントリのカテゴリの特殊な型を作成します。
 
-     [Hklm \software\microsoft \Visual Studio\\*\<Visual Studio version >*\FontAndColors\\*\<カテゴリ >*]
+     [Hklm \software\microsoft \Visual Studio\\*\<Visual Studio version >* \FontAndColors\\*\<カテゴリ >*]
 
-     *\<カテゴリ >*カテゴリのローカライズされていない名前を指定します。
+     *\<カテゴリ >* カテゴリのローカライズされていない名前を指定します。
 
 2.  ストック フォントと配色 4 つの値を使用するレジストリを作成します。
 

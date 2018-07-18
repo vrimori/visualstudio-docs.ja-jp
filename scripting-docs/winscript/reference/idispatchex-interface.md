@@ -1,17 +1,17 @@
 ---
-title: "IDispatchEx インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IDispatchEx インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDispatchEx interface, about IDispatchEx
 - IDispatchEx interface
 ms.assetid: 37a3303f-f78e-4b5b-aac8-b836c92819de
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -20,6 +20,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24730302"
 ---
 # <a name="idispatchex-interface"></a>IDispatchEx インターフェイス
 `IDispatchEx`での拡張機能、`IDispatch`インターフェイスをサポートする機能に適したスクリプト言語などの動的言語。 このセクションの内容について説明します、`IDispatchEx`インターフェイス自体の間の相違点`IDispatch`と`IDispatchEx`、および拡張機能の論理的根拠は、します。 リーダーが慣れていることを想定して`IDispatch`にアクセスし、`IDispatch`ドキュメント。  

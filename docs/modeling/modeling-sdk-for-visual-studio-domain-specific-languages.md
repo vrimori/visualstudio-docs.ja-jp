@@ -17,6 +17,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950843"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Modeling SDK for Visual Studio - ドメイン固有言語
 Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に統合できる強力なモデル ベースの開発ツールを作成する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。

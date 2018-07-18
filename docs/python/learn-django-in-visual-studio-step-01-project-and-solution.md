@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de9726b6716ff66178b90792a25f7bf02bec8ede
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 64883c217d700468942b16a9e628adb15f1db746
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750299"
 ---
 # <a name="tutorial-step-1-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル手順 1: Visual Studio での Django Web フレームワークの概要
 
@@ -33,11 +34,13 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Visual Studio 2017 と以下のオプション:
+- Windows 上の Visual Studio 2017 と以下のオプション:
   - **Python 開発ワークロード** (インストーラーの **[ワークロード]** タブ)。 手順については、「[Visual Studio での Python サポートのインストール](installing-python-support-in-visual-studio.md)」をご覧ください。
   - **Windows 向け Git** と **Visual Studio 向け GitHub 拡張** (**[個別のコンポーネント]** タブの **[コード ツール]**)。
 
 Django プロジェクト テンプレートは Python Tools for Visual Studio のすべての旧バージョンにも含まれていますが、詳細は、このチュートリアルの説明と異なる場合があります (特に、Django フレームワークの旧バージョンでは異なります)。
+
+現在、Visual Studio for Mac では Python 開発はサポートされていません。 Mac および Linux では、[Visual Studio Code で Python 拡張](https://code.visualstudio.com/docs/python/python-tutorial)を使用します。
 
 ### <a name="visual-studio-projects-and-django-projects"></a>"Visual Studio プロジェクト" と "Django プロジェクト"
 
@@ -116,7 +119,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
 ## <a name="step-1-3-create-the-virtual-environment-and-exclude-it-from-source-control"></a>手順 1-3: 仮想環境を作成し、ソース管理から除外する
 
-プロジェクトのソース管理を構成したら、プロジェクトに必要な Django パッケージの仮想環境を作成できます。 その後、**[チーム エクスプローラー]** を使用して、環境のフォルダーをソース管理から除外できます。
+プロジェクトのソース管理を構成したら、プロジェクトに必要な Django パッケージを含む仮想環境を作成できることに注意してください。 その後、**[チーム エクスプローラー]** を使用して、環境のフォルダーをソース管理から除外できます。
 
 1. **ソリューション エクスプローラー**で **[Python 環境]** ノードを右クリックし、**[仮想環境を追加]** を選択します。
 

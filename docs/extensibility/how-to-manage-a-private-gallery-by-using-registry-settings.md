@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126784"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>方法: レジストリ設定を使用してプライベート ギャラリーの管理
 管理者または分離シェル拡張機能の開発者の場合は、コントロール、テンプレート、およびツールでは、Visual Studio ギャラリー、サンプル ギャラリー、またはプライベート ギャラリーへのアクセスを制御できます。 ギャラリーを使用可能または利用不可にするには、変更されたレジストリ キーとその値を記述する .pkgdef ファイルを作成します。  

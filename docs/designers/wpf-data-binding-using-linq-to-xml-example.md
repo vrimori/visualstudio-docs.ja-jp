@@ -15,6 +15,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921431"
 ---
 # <a name="wpf-data-binding-using-linq-to-xml-example"></a>LINQ to XML を使用した WPF のデータ バインディングの例
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131518"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>クエリ (ソース コントロール VSPackage) 保存クエリの編集
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] エディターには、クエリの編集のクエリを保存 (QEQS) イベントをブロードキャストできます。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース コントロールのスタブを QEQS イベントを受け取ることができるように、QEQS サービスを実装します。 これらのイベントは、現在アクティブなソース管理 VSPackage にし、委任されます。 VSPackage の実装、アクティブなソース管理、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>とそのメソッドです。 メソッド、`IVsQueryEditQuerySave2`文書を編集すると、最初に、ドキュメントを保存する直前に直前に、インターフェイスが通常呼び出されます。  

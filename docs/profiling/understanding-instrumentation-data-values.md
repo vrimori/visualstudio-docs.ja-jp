@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec882cc5797eb99370beac5e28b87ca0b981cf2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 524f6f575725fed754c3873af8a9ff62a3c3686f
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34477549"
 ---
-# <a name="understanding-instrumentation-data-values"></a>インストルメンテーション データ値について
+# <a name="understand-instrumentation-data-values"></a>インストルメンテーション データ値について
 
 Visual Studio の*インストルメンテーション* プロファイル メソッドは、プロファイリングされたアプリケーションの関数呼び出し、行、命令についての詳しいタイミング情報を記録します。
 
-インストルメンテーション メソッドは、プロファイリングされたバイナリの、その関数から他の関数に対する各呼び出しの前後の対象の関数の開始時と終了時にコードを挿入します。 挿入されたコードは次のものを記録します。
+インストルメンテーション メソッドは、プロファイリングされたバイナリの、その関数から他の関数に対する各呼び出しの前後の対象の関数の開始時と終了時にコードを挿入します。 挿入されたコードは次の情報を記録します。
 
 - この収集イベントとその前の収集イベントの間の間隔。
 
@@ -99,4 +100,4 @@ Visual Studio の*インストルメンテーション* プロファイル メ�
 ## <a name="see-also"></a>関連項目
 
 [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)  
-[方法: 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)
+[方法 : 収集方法を選択する](../profiling/how-to-choose-collection-methods.md)

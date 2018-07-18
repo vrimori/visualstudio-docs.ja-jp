@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31107947"
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>基本的なプロジェクト システムを作成するには、パート 2
 このシリーズの最初のチュートリアル[基本プロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示します。 このチュートリアルでは、Visual Studio のテンプレート、プロパティ ページ、およびその他の機能を追加することで、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
@@ -154,11 +155,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examining-the-visual-studio-template-build-steps"></a>Visual Studio テンプレートのビルド ステップを確認します。  
  VSPackage プロジェクトのビルド システムは、.vstemplate ファイルが変更されたか、.vstemplate ファイルを含むプロジェクトがリビルドされるときに通常 Visual Studio とセットアップ モードで実行されます。 Normal またはそれ以降は、MSBuild の詳細レベルを設定していくことができます。  
   
-1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
 2.  展開、**プロジェクトおよびソリューション**ノードをクリックして**ビルドおよび実行する**です。  
   
-3.  設定**MSBuild プロジェクトのビルド出力の詳細度**に**標準**です。 **[OK]**をクリックします。  
+3.  設定**MSBuild プロジェクトのビルド出力の詳細度**に**標準**です。 **[OK]** をクリックします。  
   
 4.  SimpleProject プロジェクトをリビルドします。  
   

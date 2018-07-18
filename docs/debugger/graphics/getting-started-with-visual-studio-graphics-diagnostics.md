@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477522"
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の使用を開始する
 このセクションでは、まずグラフィックス診断を初めて使用するための準備をしてから、Direct3D アプリケーションのフレームをキャプチャして Graphics Analyzer でそれらを確認します。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/18/2018
 ### <a name="1---create-a-direct3d-app"></a>1 -、Direct3D アプリを作成する  
  グラフィックス診断を試す独自の Direct3D アプリが既にある場合! それ以外の場合、次のいずれかを使用します。
 
-- **DirectX 11 アプリ (ユニバーサル Windows)**または**DirectX 12 アプリ (ユニバーサル Windows)** Windows 10 用のプロジェクト テンプレート。
+- **DirectX 11 アプリ (ユニバーサル Windows)** または**DirectX 12 アプリ (ユニバーサル Windows)** Windows 10 用のプロジェクト テンプレート。
 - [Direct3d12 UAP サンプル](https://code.msdn.microsoft.com/Direct3D-12-UAP-Sample-ecb1779f)Windows 10 用です。  
   
  先に進む前に、アプリをビルドできるかどうかを確認します。  

@@ -11,11 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb6d338217d3112fc56307ddc2f9af696c99e96a
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: 6960f7ca6db9584af8d43b9cee0d0c6bc810bc7f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747894"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>手順 6: 減算問題の追加
 このチュートリアルの第 6 部では、減算問題を追加し、次のタスクを実行する方法を説明します。
@@ -51,12 +52,12 @@ ms.lasthandoff: 04/28/2018
 
      複数の方法で、このチュートリアルで前に randomizer と名付けた、Random クラスの `Next()` メソッドを呼び出すことができます。 複数の方法で呼び出すことができるメソッドをオーバーロード メソッドと呼び、IntelliSense を使用して確認することができます。 `Next()` メソッドについての IntelliSense ウィンドウのツールヒントをもう一度見てください。
 
-     ![IntelliSense ウィンドウのツールヒント](../ide/media/express_overloads.png "Express_Overloads")
+     ![IntelliSense ウィンドウのツールヒント](../ide/media/express_overloads.png)
 **IntelliSense** ウィンドウのツールヒント
 
      ツールヒントには "**(+ 2 オーバーロード)**" と表示され、これは他の 2 つの方法で `Next()` メソッドを呼び出せることを意味します。 オーバーロードには、異なる数または型の引数が含まれていて、互いに動作が若干異なります。 たとえば、メソッドは単一の整数引数を受け取ることがあり、さらにオーバーロードの 1 つは整数と文字列を受け取ることがありますが、 目的に基づいて適切なオーバーロードを選択します。 `StartTheQuiz()` メソッドにコードを追加すると、`randomizer.Next(` を入力するとすぐに、詳細情報が IntelliSense ウィンドウに表示されます。 別のオーバーロードに切り替えるには、次の図に示すように、**上矢印**キーおよび**下矢印**キーを押します。
 
-     ![IntelliSense 内での Next&#40;&#41; メソッドのオーバーライド](../ide/media/express_nextoverload.png "Express_NextOverload") **IntelliSense** 内での **Next()** メソッドのオーバーライド
+     ![IntelliSense での Next&#40;&#41; メソッドのオーバーロード](../ide/media/express_nextoverload.png) **IntelliSense** での **Next()** メソッドのオーバーロード
 
      この場合、最小値と最大値を指定できるため、最後のオーバーロードを選択する必要があります。
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/28/2018
 
      プログラムには、次の図に示すように減算問題が含まれます。
 
-     ![減算の問題のある計算クイズ](../ide/media/express_addsubtract.png "Express_AddSubtract")
+     ![減算の問題のある計算クイズ](../ide/media/express_addsubtract.png)
 減算の問題のある**計算クイズ**
 
 ## <a name="to-continue-or-review"></a>続行または確認するには

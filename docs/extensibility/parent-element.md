@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137106"
 ---
 # <a name="parent-element"></a>Parent 要素
 ボタンやコンボ ボックスの親のみグループがあります。 メニューまたはグループの親には、その他のメニューまたはグループがあります。 [CommandPlacement 要素](../extensibility/commandplacement-element.md)、この要素は必須です。 その他のすべてのインスタンスでは省略可能です。 この要素を省略すると、親の`Group_Undefined:0`暗黙的に指定されます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141514"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>レガシ言語サービスでの単語補完
 入力語の完了は、部分的に型指定された単語の文字がない場合に格納します。 1 つだけの補完候補があると、入力候補の文字を入力するときに、単語は完了します。 単語の一部には、複数の可能性が一致すると、候補の一覧が表示されます。 入力候補の文字は、識別子の使用されていない任意の文字を指定できます。  

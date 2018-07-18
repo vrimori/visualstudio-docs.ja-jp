@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128878"
 ---
 # <a name="determining-whether-to-implement-a-source-control-vspackage"></a>ソース コントロールの VSPackage を実装するかどうかを決定します。
 このセクションでは、適切な統合パスの選択方法の大まかなガイドラインをソリューションと、ソース管理を拡張するため、ソース管理プラグインとソース管理の Vspackage の選択を詳しく説明します。  

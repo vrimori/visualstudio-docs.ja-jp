@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141120"
 ---
 # <a name="web-projects"></a>Web プロジェクト
 Web プロジェクト システムは、Web プロジェクトを作成するプロジェクト システムです。 Web プロジェクトは、Web アプリケーションを作成します。 ユーザーが Web ページなどの従来のプログラミング言語を使用して、プログラム[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]または[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]収集プロセスのユーザーから情報をデータベースに格納しに、します。 関連付けられているコードを含む web ページは、スマートの Web ページと呼ばれます。  

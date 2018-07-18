@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135008"
 ---
 # <a name="commands-and-menus-that-use-interop-assemblies"></a>コマンドおよび相互運用機能アセンブリを使用してメニュー
 相互運用機能アセンブリを使用してメニューやツールバーを実装する VSPackage 必要があります。  

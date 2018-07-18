@@ -15,6 +15,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147191"
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand とOleMenuCommand
 メニュー コマンドは、 <xref:System.ComponentModel.Design.MenuCommand> または <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトから派生させて、適切なイベント ハンドラーを実装することによって作成できます。 ほとんどのケースでは、VSPackage プロジェクト テンプレートの場合と同様に <xref:System.ComponentModel.Design.MenuCommand>を使用できますが、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>を使用することが必要になることもあります。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/16/2018
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
   
 ## <a name="template-locations-for-the-visual-studio-package-template"></a>Visual Studio パッケージ テンプレートの場所  
- Visual Studio パッケージ テンプレートは、 **Visual Basic / 機能拡張** 、 **C# / 機能拡張**、または **その他のプロジェクトの種類 / 機能拡張**の **[新しいプロジェクト]**ダイアログ ボックスにあります。  
+ Visual Studio パッケージ テンプレートは、 **Visual Basic / 機能拡張** 、 **C# / 機能拡張**、または **その他のプロジェクトの種類 / 機能拡張**の **[新しいプロジェクト]** ダイアログ ボックスにあります。  
   
 ## <a name="creating-a-command"></a>コマンドの作成  
  すべてのコマンド、コマンド グループ、メニュー、ツール バー、およびツール ウィンドウは、.vsct ファイルで定義します。 詳細については、「 [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。  

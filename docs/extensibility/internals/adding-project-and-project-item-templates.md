@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128748"
 ---
 # <a name="adding-project-and-project-item-templates"></a>プロジェクトとプロジェクト項目テンプレートを追加します。
 独自のプロジェクトの種類を作成する場合は、標準を使用して新しいプロジェクトとプロジェクト アイテムを追加するサポートを指定する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]開発環境 (IDE) ダイアログ ボックスを統合します。 次のトピックでは、プロジェクトとプロジェクト アイテムを追加するためのさまざまな手法について説明します。  

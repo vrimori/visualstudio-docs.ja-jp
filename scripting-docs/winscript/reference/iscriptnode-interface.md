@@ -1,16 +1,16 @@
 ---
-title: "IScriptNode インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IScriptNode インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IScriptNode interface
 ms.assetid: cfa76c4a-6543-48e8-a946-d212cd0bf934
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24733782"
 ---
 # <a name="iscriptnode-interface"></a>IScriptNode インターフェイス
 実装するオブジェクト、`IScriptNode`インターフェイスが Web ページを表します。  

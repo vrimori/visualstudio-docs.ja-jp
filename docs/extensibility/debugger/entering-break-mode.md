@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31098210"
 ---
 # <a name="entering-break-mode"></a>中断モード
 次の例は、関数にステップ インするか、カーソルが含まれる、ソース コードの行に実行するか、または、ブレークポイントまでの実行後に、ブレークポイントが発生したときに発生するプロセスを説明します。  

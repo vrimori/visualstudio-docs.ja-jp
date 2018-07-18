@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130704"
 ---
 # <a name="properties-window-buttons"></a>プロパティ ウィンドウのボタン
 開発言語、製品の種類に応じて特定のボタンがツールバーに既定で表示される、**プロパティ**ウィンドウです。 すべての場合、 **Categorized**、 **Alphabetized**、**プロパティ**、および**プロパティ ページ**ボタンが表示されます。 Visual c# および Visual Basic で、**イベント**ボタンも表示されます。 特定の Visual C プロジェクトで、 **vc++ メッセージ**と**VC オーバーライド**ボタンが表示されます。 その他のプロジェクトの種類の他のボタンが表示されます。 ボタンの詳細については、**プロパティ**ウィンドウを参照してください[プロパティ ウィンドウ](../../ide/reference/properties-window.md)します。  

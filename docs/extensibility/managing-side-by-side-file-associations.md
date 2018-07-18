@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146807"
 ---
 # <a name="managing-side-by-side-file-associations"></a>サイド バイ サイドのファイルの関連付けを管理します。
 VSPackage では、ファイルの関連付けを提供する場合をサイド バイ サイド インストールを処理する方法を決定する必要がありますの特定のバージョン[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ファイルを開くに呼び出す必要があります。 互換性のないファイル形式は複合問題です。  

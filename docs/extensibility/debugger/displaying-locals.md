@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108431"
 ---
 # <a name="displaying-locals"></a>ローカル変数を表示します。
 > [!IMPORTANT]
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
  DE 呼び出し[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)を取得する、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)オブジェクトでは、フィルター選択を唯一のローカル変数を取得および列挙の一覧を生成するためには、 [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)構造体。 各構造体には、名前、型、およびローカルの値が含まれています。 型および値は、表示に適切な形式の文字列として格納されます。 名前、型、および値が通常表示まとめての 1 つの行で、**ローカル**ウィンドウです。  
   
 > [!NOTE]
->  **[クイック ウォッチ]**と**ウォッチ**ウィンドウも、同じ形式の名前、値、および種類を持つ変数を表示します。 ただし、これらの値が呼び出すことによって取得[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)の代わりに`IDebugProperty2::EnumChildren`です。  
+>  **[クイック ウォッチ]** と**ウォッチ**ウィンドウも、同じ形式の名前、値、および種類を持つ変数を表示します。 ただし、これらの値が呼び出すことによって取得[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)の代わりに`IDebugProperty2::EnumChildren`です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)  

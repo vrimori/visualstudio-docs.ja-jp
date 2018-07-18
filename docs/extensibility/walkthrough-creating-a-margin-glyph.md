@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142631"
 ---
 # <a name="walkthrough-creating-a-margin-glyph"></a>チュートリアル: 余白グリフを作成します。
 カスタム エディターの拡張機能を使用して、エディターのマージンの外観をカスタマイズできます。 このチュートリアルは、"todo"という単語がコード コメント内に表示されるたびに、インジケーター マージンにカスタム グリフを格納します。  

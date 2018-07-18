@@ -15,6 +15,7 @@ ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34477458"
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>方法: を作成し、XSD スキーマ ファイルを編集します。
 

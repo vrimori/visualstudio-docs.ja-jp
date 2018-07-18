@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1e713292421613e835697037d5298a4a2c854f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4f59167b356f4a04b4b37e699fbe49f1ea82943e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34692302"
 ---
 # <a name="concurrency-visualizer-markers"></a>同時実行ビジュアライザー マーカー
 同時実行ビジュアライザーのマーカーはアプリ内のイベントを表すアイコンです。  通常、アプリはこれらのイベントを生成して、アプリケーションでのフェーズまたは出現回数を指定します。  アプリ、またはアプリで使用するライブラリとランタイムでイベントを生成することができます。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/19/2018
  マーカーを生成するスレッドにはそれぞれ別のタイムライン チャネルがあります。  マーカー イベントを生成するスレッドの ID は、マーカー チャネルの説明の横に表示されます。  マーカー チャネルの左側に表示される ID は、現在のプロセス内の別のスレッドの ID と一致します。  
   
 ## <a name="marker-importance"></a>マーカーの重要度  
- マーカーでは、4 つの重要度レベル (低、通常、高、重大) のいずれかを設定できます。  重要度レベルに基づいて、マーカーのソースをフィルター処理することができます。  たとえば、重要度が通常または重大である特定のソースのみのマーカーを表示する場合、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスでフィルターを構成することができます。マーカーの重要度はそのヒント、および [[マーカー レポート]](../profiling/markers-report.md) に表示されます。  
+ マーカーでは、4 つの重要度レベル (低、通常、高、重大) のいずれかを設定できます。  重要度レベルに基づいて、マーカーのソースをフィルター処理することができます。  たとえば、重要度が通常または重大である特定のソースのみのマーカーを表示する場合、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスでフィルターを構成することができます。 マーカーの重要度はそのヒント、および [[マーカー レポート]](../profiling/markers-report.md) に表示されます。  
   
 ## <a name="marker-category"></a>マーカーのカテゴリ  
  マーカーのカテゴリは、同じソースからのマーカー イベントのグループを示します。  同時実行ビジュアライザーでは色を使用して、さまざまなカテゴリのフラグとスパンを区別します。 特定のイベント プロバイダーからのマーカー イベントをフィルター処理するために、カテゴリを使用するように同時実行ビジュアライザーを構成することができます。  フィルターを構成するには、[[詳細設定]](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) ダイアログ ボックスを使用します。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="markers-from-eventsource"></a>EventSource からのマーカー  
  同時実行ビジュアライザーでは、EventSource イベントも表示できます。  詳細については、「[マーカーとしての EventSource イベントの視覚化](../profiling/visualizing-eventsource-events-as-markers.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フラグ マーカー](../profiling/flag-markers.md)   
  [メッセージ マーカー](../profiling/message-markers.md)   
  [スパン マーカー](../profiling/span-markers.md)   

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134443"
 ---
 # <a name="delayed-document-loading"></a>ドキュメントの読み込みの遅延
 ユーザーは、Visual Studio ソリューションを再度、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントを実行しているドキュメント テーブル (RDT) では配置されます。  
@@ -64,4 +65,4 @@ ms.lasthandoff: 04/16/2018
 ## <a name="testing-extensions-to-see-if-they-force-initialization"></a>表示かどうかは、強制的に初期化する拡張機能のテスト  
  初期化かどうか、拡張機能で強制的に確認するが困難にするため、ドキュメントが初期化されているかどうかを示すためにキューを表示することはありません。 簡単に検証、レジストリ キーを設定するには、テキストが、完全に初期化されていないすべてのドキュメントのタイトルが発生するため`[Stub]`タイトルにします。  
   
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]**設定、 **StubTabTitleFormatString**に**{0} [スタブ]**です。
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]** 設定、 **StubTabTitleFormatString**に **{0} [スタブ]** です。

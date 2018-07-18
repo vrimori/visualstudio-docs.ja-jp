@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テスト プラグインを作成する | Microsoft Docs
+title: Visual Studio でロード テスト プラグインを作成する
 ms.date: 10/19/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +12,14 @@ ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6e585fe66bde573f8bb133b0c8cda0900b0d6d16
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 482336bca7c177b3c4fdcb0f16faf7ea96d6c34b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31975922"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>方法 : ロード テスト プラグインを作成する
 
@@ -102,7 +104,8 @@ ms.lasthandoff: 04/16/2018
 LoadTestFinished イベントが発生した後でカスタム コードを実行するロード テスト プラグインを次のコードに示します。 このコードがリモート コンピューターのテスト エージェントで実行され、テスト エージェントにローカル ホスト SMTP サービスがない場合、メッセージ ボックスが開いているためにロード テストの状態は "処理中" のままです。
 
 > [!NOTE]
->  次のコードでは、System.Windows.Forms への参照を追加する必要があります。
+> 次のコードでは、System.Windows.Forms への参照を追加する必要があります。
+
 
 ```csharp
 using System;

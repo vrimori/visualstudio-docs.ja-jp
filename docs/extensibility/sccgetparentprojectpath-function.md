@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142028"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath 関数
 この関数は、指定されたプロジェクトの親プロジェクト パスを決定します。 この関数は、ユーザーがソース管理に、Visual Studio プロジェクトを追加するときに呼び出されます。  

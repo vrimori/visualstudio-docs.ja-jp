@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127938"
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>方法: Visual Studio 2015 への機能拡張プロジェクトの移行
 次に、拡張機能をアップグレードする方法を示します。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  VS SDK の参照アセンブリをプロジェクトから選択して削除を右クリックし、**削除**です。  
   
-3.  NuGet のバージョンの VS SDK の参照アセンブリを追加します。  **ソリューション エクスプ ローラーの参照**ノードを開いて、 **NuGet パッケージを管理しています.**ダイアログ。  このダイアログ ボックスの詳細につく場合は、「[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)です。 VS SDK の参照アセンブリの発行は  [nuget.org](http://www.nuget.org)によって[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)です。  
+3.  NuGet のバージョンの VS SDK の参照アセンブリを追加します。  **ソリューション エクスプ ローラーの参照**ノードを開いて、 **NuGet パッケージを管理しています.** ダイアログ。  このダイアログ ボックスの詳細につく場合は、「[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)です。 VS SDK の参照アセンブリの発行は  [nuget.org](http://www.nuget.org)によって[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)です。  
   
 4.  使用して**nuget.org**として、**パッケージ ソース**、必要な参照アセンブリに一致する NuGet パッケージ名の検索 (たとえば: Microsoft.VisualStudio.Shell.14.0) にインストールし、プロジェクトです。  NuGet は、初期のアセンブリの依存関係を満たすために複数の参照アセンブリを追加することがあります。  
   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31127638"
 ---
 # <a name="how-to-use-linked-undo-management"></a>方法: リンクされた Undo 管理を使用
 リンク元に戻すには、ユーザーが同時に複数のファイルで同じ編集の取り消しができます。 たとえば、ヘッダー ファイルと、Visual C ファイルなど、複数のプログラム ファイルのテキストの同時変更は、リンクされた undo トランザクションです。 リンク元に戻す機能が元に戻す manager の環境の実装に組み込まれていると<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager>この機能を操作することができます。 リンク元に戻すは、単一の元に戻す単位として扱われますを同時に元に戻すスタックをリンクできる親元に戻す単位によって実装されます。 リンク元に戻すを使用する手順については、次のセクションで詳しく説明します。  

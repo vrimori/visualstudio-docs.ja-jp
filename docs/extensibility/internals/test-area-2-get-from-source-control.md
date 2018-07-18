@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133246"
 ---
 # <a name="test-area-2-get-from-source-control"></a>ソース管理からのテスト領域 2: Get
 このテストの領域では、Get コマンドを使用して、バージョン ストアから項目を取得するためのテスト_ケースについて説明します。 これらのテスト_ケースは、両方のローカルにし、Web プロジェクトに適用できます。  

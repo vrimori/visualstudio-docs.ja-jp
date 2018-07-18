@@ -1,16 +1,16 @@
 ---
-title: "IDebugExpression インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: IDebugExpression インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExpression interface
 ms.assetid: 36c00ffb-7160-4c30-a2c9-c9d70c8213cd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24727792"
 ---
 # <a name="idebugexpression-interface"></a>IDebugExpression インターフェイス
 非同期的に評価される式を表します。 スクリプト エンジンは、通常、このインターフェイスを実装します。 通常、デバッガーの IDE は、即時実行ウィンドウを有効にするか、[ウォッチ] ウィンドウにこのインターフェイスを使用します。  

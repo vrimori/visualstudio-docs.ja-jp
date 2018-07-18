@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31109832"
 ---
 # <a name="bppasscountstyle"></a>BP_PASSCOUNT_STYLE
 ブレークポイントが発生する原因となったブレークポイント パスの数に関連付けられている条件を指定します。  

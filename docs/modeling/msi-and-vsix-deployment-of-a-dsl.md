@@ -14,6 +14,7 @@ ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31954585"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 自分のコンピューター上またはその他のコンピューター上、ドメイン固有言語をインストールすることができます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ターゲット コンピューターに既にインストールする必要があります。

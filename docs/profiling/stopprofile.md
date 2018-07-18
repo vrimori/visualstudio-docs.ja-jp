@@ -17,6 +17,7 @@ ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264196"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile` 関数は、指定されたプロファイル レベルのカウンターを 0 (オフ) に設定します。  

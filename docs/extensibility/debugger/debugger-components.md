@@ -20,21 +20,22 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31108350"
 ---
 # <a name="debugger-components"></a>デバッガー コンポーネント
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーが VSPackage として実装され、全体のデバッグ セッションを管理します。 デバッグ セッションには、次の要素が構成されています。  
   
 -   **デバッグ パッケージ:** 、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーの新機能は、デバッグ中に関係なく同じユーザー インターフェイスを提供します。  
   
--   **セッション デバッグ マネージャー (SDM):**に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+-   **セッション デバッグ マネージャー (SDM):** に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
--   **プロセスのデバッグ マネージャー (PDM):**のすべての実行中インスタンスの管理[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、またはデバッグ中のすべてのプログラムの一覧です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+-   **プロセスのデバッグ マネージャー (PDM):** のすべての実行中インスタンスの管理[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、またはデバッグ中のすべてのプログラムの一覧です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
   
--   **デバッグ エンジン (DE):**をデバッグするプログラムの監視のリアルタイム分析を提供するには、式エバリュエーターとシンボルのプロバイダーと対話すると、SDM と、PDM を実行中のプログラムの状態を通信して、プログラムのメモリと変数の状態です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の実行時間をサポートします。  
+-   **デバッグ エンジン (DE):** をデバッグするプログラムの監視のリアルタイム分析を提供するには、式エバリュエーターとシンボルのプロバイダーと対話すると、SDM と、PDM を実行中のプログラムの状態を通信して、プログラムのメモリと変数の状態です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の実行時間をサポートします。  
   
--   **式エバリュエーター (EE):**変数と、プログラムが特定の時点で停止された時に、ユーザーが指定の式を動的に評価するためのサポートを提供します。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の言語をサポートします。  
+-   **式エバリュエーター (EE):** 変数と、プログラムが特定の時点で停止された時に、ユーザーが指定の式を動的に評価するためのサポートを提供します。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の言語をサポートします。  
   
--   **シンボル プロバイダー (SP):**とも呼ばれるシンボル ハンドラーでは、マップ、プログラムのデバッグ シンボル、プログラムの実行中のインスタンスに (ソース コード レベルのデバッグ、式の評価) など意味のある情報を指定することができるようにします。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](共通言語ランタイム [CLR] のシンボルと、プログラム データベース [PDB] シンボル ファイルの形式) と、デバッグ情報を格納するが自分独自のメソッドが含まれているサード パーティ ベンダーによってです。  
+-   **シンボル プロバイダー (SP):** とも呼ばれるシンボル ハンドラーでは、マップ、プログラムのデバッグ シンボル、プログラムの実行中のインスタンスに (ソース コード レベルのデバッグ、式の評価) など意味のある情報を指定することができるようにします。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](共通言語ランタイム [CLR] のシンボルと、プログラム データベース [PDB] シンボル ファイルの形式) と、デバッグ情報を格納するが自分独自のメソッドが含まれているサード パーティ ベンダーによってです。  
   
  次の図は、Visual Studio デバッガーのこれらの要素間の関係を示します。  
   

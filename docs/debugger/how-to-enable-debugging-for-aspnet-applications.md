@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479391"
 ---
 # <a name="debug-aspnet-applications-in-visual-studio"></a>Visual Studio での ASP.NET アプリケーションをデバッグします。
 
@@ -51,7 +52,7 @@ Visual Studio から ASP.NET アプリケーションをデバッグすること
 
     プロジェクトの種類によっては、選択**プロパティ > デバッグ**代わりにします。 フォームの ASP.NET Web プロジェクトの場合、プロジェクトを右クリックし **プロパティ ページ > 開始オプション**です。
   
-3.  **[デバッガー]**の下で、 **[ASP.NET]** チェック ボックスをオンにします。
+3.  **[デバッガー]** の下で、 **[ASP.NET]** チェック ボックスをオンにします。
 
     ![デバッガーの設定](../debugger/media/dbg-aspnet-enable-debugging.png "デバッガーの設定")
 
@@ -145,7 +146,7 @@ IIS express、web サーバーを構成する必要はありません (このセ
 
 3. **接続**左側のウィンドウに移動**サイト**です。
 
-4. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]**を選択します。
+4. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]** を選択します。
 
 5. 設定、**エイリアス**フィールドを**MyASPApp**、既定のアプリケーション プール (**DefaultAppPool**)、し、設定、**物理パス**に**C:\inetpub\myNewFolder** (アプリ用の新しいフォルダーの作成) します。
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31126878"
 ---
 # <a name="icon-element"></a>Icon 要素
 アイコンのタグの guid 属性は、定義済みのビットマップの guid です。  Id 属性は、ビットマップ ストリップのスロットを選択します。 この要素は省略可能です。  この要素を省略した場合の値**guidOfficeIcon:msotcidNoIcon**暗黙的に指定されます。  

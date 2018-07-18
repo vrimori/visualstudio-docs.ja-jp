@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473639"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>方法: Spy++ ツリーの展開と折りたたみを行う
 2 つのメソッドを使用して、Windows、プロセス、およびスレッド ビューを閉じたりできます: ウィンドウで、またはを使用してアイコンをクリックすると、**ツリー**メニュー。 +/Visual C プロジェクトのウィンドウで同じように、ツリー内のアイコンが動作します。  

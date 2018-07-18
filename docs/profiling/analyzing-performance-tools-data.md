@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36b5f5000ab18360d5146603862381e056b37284
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: b67db666c61d70c4fdfe4530e3249c5d86c1a6a7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690853"
 ---
 # <a name="analyze-performance-tools-data"></a>パフォーマンス ツール データの分析
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのパフォーマンス レポートを使用すると、アプリケーション パフォーマンスの問題を表示して分析することができます。 このセクションでは、パフォーマンス レポートとパフォーマンス データを確認するために使用できるビューの概要を示します。  

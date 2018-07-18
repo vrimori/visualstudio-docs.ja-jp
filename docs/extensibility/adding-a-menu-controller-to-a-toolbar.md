@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31104632"
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>ツールバーにメニュー コント ローラーを追加します。
 このチュートリアルの[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルし、ツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法を示しています。 次に示す手順もに適用できますで作成される、ツールバー、[ツールバーを追加する](../extensibility/adding-a-toolbar.md)チュートリアルです。  

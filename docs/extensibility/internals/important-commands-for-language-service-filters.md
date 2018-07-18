@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130676"
 ---
 # <a name="important-commands-for-language-service-filters"></a>言語サービスのフィルターの重要なコマンド
 全機能を備えた言語サービスのフィルターを作成する場合は、次のコマンドの処理を検討してください。 コマンド識別子の完全な一覧が定義されている、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>アンマネージ列挙体のマネージ コードと Stdidcmd.h ヘッダー ファイル[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]コード。 Stdidcmd.h ファイルを検索する*Visual Studio SDK インストール パス*\VisualStudioIntegration\Common\Inc です。  
