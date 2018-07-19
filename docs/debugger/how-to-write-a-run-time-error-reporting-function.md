@@ -1,5 +1,5 @@
 ---
-title: '方法: 実行時エラー レポート関数を記述 |Microsoft ドキュメント'
+title: '方法: 実行時のエラー レポート関数の記述 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 331a29b8ec34a33ea43ede68ea477138cca58e16
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 381ba20b233f143cb63128368a710debb25a0abb
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474883"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057874"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function"></a>方法 : ランタイム エラー レポート関数を記述する
 ランタイム エラーのカスタム レポート関数には、`_CrtDbgReportW` と同じ宣言を使用する必要があります。 デバッガーへの戻り値は 1 です。  
@@ -33,7 +33,7 @@ ms.locfileid: "31474883"
   
 ## <a name="example"></a>例  
   
-```  
+```cpp
 #include <stdio.h>  
 int errorhandler = 0;  
 void configureMyErrorFunc(int i)  
@@ -63,9 +63,9 @@ int MyErrorFunc(int errorType, const wchar_t *filename,
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、より複雑なカスタム レポート関数を示しています。 この例では、switch ステートメントによって、各種のエラーが `reportType` の `_CrtDbgReportW` パラメーターの定義に従って処理されます。 `_CrtDbgReportW` を置き換えるため、`_CrtSetReportMode` は使用できません。 関数では、出力を処理する必要があります。 この関数の最初の可変個の引数には、ランタイム エラー番号を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype)です。  
+ 次の例は、より複雑なカスタム レポート関数を示しています。 この例では、switch ステートメントによって、各種のエラーが `reportType` の `_CrtDbgReportW` パラメーターの定義に従って処理されます。 `_CrtDbgReportW` を置き換えるため、`_CrtSetReportMode` は使用できません。 関数では、出力を処理する必要があります。 この関数の最初の可変個の引数には、ランタイム エラー番号を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorType](/cpp/c-runtime-library/reference/rtc-seterrortype)します。  
   
-```  
+```cpp
 #include <windows.h>  
 #include <stdarg.h>  
 #include <rtcapi.h>  
@@ -108,9 +108,9 @@ int Catch_RTC_Failure(int errType, const wchar_t *file, int line,
 ```  
   
 ## <a name="example"></a>例  
- `_RTC_SetErrorFuncW` の代わりにカスタム関数を組み込むには、`_CrtDbgReportW` を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw)です。 `_RTC_SetErrorFuncW` の戻り値は、直前のレポート関数であり、必要に応じて保存して復元できます。  
+ `_RTC_SetErrorFuncW` の代わりにカスタム関数を組み込むには、`_CrtDbgReportW` を使用します。 詳細については、次を参照してください。 [_RTC_SetErrorFuncW](/cpp/c-runtime-library/reference/rtc-seterrorfuncw)します。 `_RTC_SetErrorFuncW` の戻り値は、直前のレポート関数であり、必要に応じて保存して復元できます。  
   
-```  
+```cpp
 #include <rtcapi.h>  
 int main()  
 {  

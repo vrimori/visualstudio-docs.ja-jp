@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumDebugStreamData |Microsoft ドキュメント
+title: IDiaEnumDebugStreamData |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bf5fe2d4a627b9d607607ba53c3962d244c5c369
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 67b71fb229172049d11a036d5a98275f93fe2cd3
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460626"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058283"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
-デバッグ データ ストリーム内のレコードへのアクセスを提供します。  
+デバッグのデータ ストリーム内のレコードへのアクセスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ IDiaEnumDebugStreamData : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e)この列挙子のバージョン。|  
-|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|デバッグ データ ストリーム内のレコードの数を取得します。|  
-|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|デバッグ データ ストリームの名前を取得します。|  
+|[IDiaEnumDebugStreamData::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)この列挙子のバージョン。|  
+|[IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)|デバッグのデータ ストリーム内のレコードの数を取得します。|  
+|[IDiaEnumDebugStreamData::get_name](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-name.md)|デバッグのデータ ストリームの名前を取得します。|  
 |[IDiaEnumDebugStreamData::Item](../../debugger/debug-interface-access/idiaenumdebugstreamdata-item.md)|指定されたレコードを取得します。|  
 |[IDiaEnumDebugStreamData::Next](../../debugger/debug-interface-access/idiaenumdebugstreamdata-next.md)|列挙のシーケンスから指定されたレコード数を取得します。|  
-|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|指定した列挙のシーケンス内のレコード数をスキップします。|  
+|[IDiaEnumDebugStreamData::Skip](../../debugger/debug-interface-access/idiaenumdebugstreamdata-skip.md)|指定された数の列挙のシーケンス内のレコードをスキップします。|  
 |[IDiaEnumDebugStreamData::Reset](../../debugger/debug-interface-access/idiaenumdebugstreamdata-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|現在の列挙子として同じ列挙のシーケンスを含む列挙子を作成します。|  
+|[IDiaEnumDebugStreamData::Clone](../../debugger/debug-interface-access/idiaenumdebugstreamdata-clone.md)|現在の列挙子と同じ列挙型のシーケンスを格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>コメント  
- このインターフェイスは、デバッグ データ ストリーム内のレコードのストリームを表します。 各レコードの解釈とサイズは、レコードの取得元のデータ ストリームに依存します。 このインターフェイスは、実質的にシンボル ファイルに生データのバイトへのアクセスを提供します。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスは、デバッグ データのストリーム内のレコードのストリームを表します。 各レコードの解釈とサイズは、レコードの取得元のデータ ストリームに依存します。 このインターフェイスは、シンボル ファイルの生データのバイトへのアクセスを効果的に提供します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  呼び出す、 [idiaenumdebugstreams::item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)または[idiaenumdebugstreams::next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)を取得する方法、`IDiaEnumDebugStreamData`オブジェクト。  
@@ -104,7 +104,7 @@ void PrintStreamData(IDiaEnumDebugStreamData* pStream)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

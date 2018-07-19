@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadProperties |Microsoft ドキュメント
+title: IDebugThread2::GetThreadProperties |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 19c31fdc648d59879e03d97862f2b9518720a3eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76b2f11e53f8fca5fdf277ce982bcb767d7c8828
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120817"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36234606"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
 このスレッドを記述するプロパティを取得します。  
@@ -43,19 +43,19 @@ int GetThreadProperties (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFields`  
- [in]フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)のどのフィールドを決定する列挙体`ptp`を入力するのには、します。  
+ [in]フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)のどのフィールドを決定する列挙型`ptp`入力します。  
   
  `ptp`  
- [入力、出力].A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)構造体のスレッドのプロパティで設定されています。  
+ [入力、出力]A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)構造体のスレッドのプロパティが入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドから返される情報は、一般的で示されます、**スレッド**デバッグ ウィンドウです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドから返される情報は、一般的で示されます、**スレッド**デバッグ ウィンドウ。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CProgram`を実装するオブジェクト、 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CProgram`を実装するオブジェクト、 [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)インターフェイス。  
   
 ```cpp  
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,  

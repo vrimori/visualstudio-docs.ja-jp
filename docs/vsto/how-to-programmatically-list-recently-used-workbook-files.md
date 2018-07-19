@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによってリスト最近使用したブック ファイル |Microsoft ドキュメント'
+title: '方法: 最近使用ブック ファイルをプログラムで一覧表示'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,26 +18,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c2d9c333b6d96329abec3fd52ecaa5da1cf97c74
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d3e909ad3e1509689d953e0ad6c6b8346ff97f91
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257590"
 ---
-# <a name="how-to-programmatically-list-recently-used-workbook-files"></a>方法: 最近使用したブック ファイルをプログラムによって一覧表示する
-  <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>プロパティ最近使ったファイルの Microsoft Office Excel リストに表示されるすべてのファイルの名前を含むコレクションを返します。 リストの長さは、保持する、ユーザーが選択したファイルの数によって異なります。 範囲の結果を表示することができます。  
+# <a name="how-to-programmatically-list-recently-used-workbook-files"></a>方法: 最近使用ブック ファイルをプログラムで一覧表示
+  <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A>プロパティは、最近使用したファイルの Microsoft Office Excel リストに表示されるすべてのファイルの名前を含むコレクションを返します。 リストの長さは、保持する、ユーザーが選択したファイルの数によって異なります。 範囲内で結果を表示することができます。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-### <a name="to-list-recently-used-workbooks-in-a-range-object"></a>Range オブジェクトで使用されるブックを最近を一覧表示するには  
+## <a name="to-list-recently-used-workbooks-in-a-range-object"></a>Range オブジェクトの一覧を最近使用したブックを  
   
-1.  最近使ったファイルの一覧をループし、に対して相対的なセルに名前を表示、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクト。  
+1.  最近使ったファイルの一覧をループしを基準とするセルの名前を表示、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクト。  
   
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#9)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#9](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#9)]  
   
 ## <a name="see-also"></a>関連項目  
- [ブックの操作](../vsto/working-with-workbooks.md)   
+ [ブックを操作します。](../vsto/working-with-workbooks.md)   
  [NamedRange コントロール](../vsto/namedrange-control.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   

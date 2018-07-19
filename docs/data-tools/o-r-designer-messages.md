@@ -1,5 +1,5 @@
 ---
-title: O R デザイナー メッセージ
+title: O/R デザイナーのメッセージ
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 42178ae8-be6c-4df6-9b7a-cdac24d71dd2
@@ -10,12 +10,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c88134bb3b0df901ecb20cb91ed41ceb7e472b9f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b9b9b52cd09801d7b9435a354249e5d2d6296d35
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922311"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089055"
 ---
 # <a name="or-designer-messages"></a>O/R デザイナーのメッセージ
 
@@ -23,9 +23,9 @@ ms.locfileid: "31922311"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
- [関連付けを作成できません\<association 名 > のプロパティが 2 回一覧表示](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
+ [関連付けを作成できません\<アソシエーション名 >-プロパティが 2 回一覧表示](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
 
- [関連付けを作成できません\<association 名 > のプロパティの型が一致しません](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
+ [関連付けを作成できません\<アソシエーション名 >-プロパティの型が一致しません](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
 
  [DataContext メソッドの戻り値の型を変更すると、元に戻せなくなります。](../data-tools/changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md)
 
@@ -43,7 +43,7 @@ ms.locfileid: "31922311"
 
  [プロパティ\<プロパティ名 > を削除できません](../data-tools/the-property-property-name-cannot-be-deleted.md)
 
- [プロパティ\<プロパティ名 > の関連付けに関与しているために、削除できません\<association 名 >](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
+ [プロパティ\<プロパティ名 > の関連付けに関与しているために削除できません\<アソシエーション名 >](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
 
  [選択したクラスは、1 つ以上の DataContext メソッドで戻り値の型として使用されているため、削除できません](../data-tools/the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md)
 
@@ -61,5 +61,5 @@ ms.locfileid: "31922311"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio の LINQ to SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

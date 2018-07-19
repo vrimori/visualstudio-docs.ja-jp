@@ -1,5 +1,5 @@
 ---
-title: ワークフロー デザイナーで制御フロー アクティビティ デザイナー
+title: ワークフロー デザイナーの制御フロー アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
@@ -10,16 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dea0806b1abc4febbdcf89c59025452c5879addb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7e525d2529ce47059025e76dbefaeec1eb15ef81
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967401"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36758395"
 ---
 # <a name="control-flow-activity-designers"></a>制御フロー アクティビティ デザイナー
 
-Windows ワークフロー デザイナーには、ワークフローを構築するときに使用できるシステム標準のアクティビティの数が含まれています。 このセクションでは、ワークフロー内のフローの制御を目的とした、システムによって提供されるアクティビティを紹介します。 次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。
+ワークフロー デザイナーには、さまざまなワークフローを構築するときに使用できるシステム標準アクティビティが含まれています。 このセクションでは、ワークフロー内のフローの制御を目的とした、システムによって提供されるアクティビティを紹介します。 次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。
 
 ## <a name="reference"></a>参照
 

@@ -13,36 +13,34 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 3d68fa1b777663ff8975f8ce99100d8eddc5f05d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e3d802000bede1a654b088fb80b134a36a0185be
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31976920"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36758528"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
-**InvokeDelegate**デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.InvokeDelegate>アクティビティ。
+**InvokeDelegate**を作成および構成デザイナーを使用する<xref:System.Activities.Statements.InvokeDelegate>アクティビティ。
 
 ## <a name="the-invokedelegate-activity"></a>InvokeDelegate アクティビティ
 
 <xref:System.Activities.Statements.InvokeDelegate> はパブリック デリゲートを呼び出します。
 
-### <a name="using-the-invokedelegate-activity-designer"></a>InvokeDelegate アクティビティ デザイナーの使用
+### <a name="use-the-invokedelegate-activity-designer"></a>InvokeDelegate アクティビティ デザイナーを使用します。
 
-**InvokeDelegate**アクティビティ デザイナーは含まれて、**プリミティブ**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**  メニューまたは CRTL + ALT + X です)。
-
-**InvokeDelegate**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**、ずっとアクティビティを通常配置しているような内に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>です。 この操作により、InvokeDelegate という既定の <xref:System.Activities.Statements.InvokeDelegate> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeDelegate**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
+アクセス、 **InvokeDelegate**内のアクティビティ デザイナー、**プリミティブ**のカテゴリ、**ツールボックス**します。 **InvokeDelegate**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**がずっと、アクティビティを通常配置など内に、ワークフロー デザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>します。 アクティビティ デザイナーをドロップを作成、 <xref:System.Activities.Statements.InvokeDelegate> 、既定値は、アクティビティ<xref:System.Activities.Activity.DisplayName%2A>InvokeDelegate の。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InvokeDelegate**アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。
 
 ### <a name="the-invokedelegate-properties"></a>InvokeDelegate プロパティ
 
-次の表に、<xref:System.Activities.Statements.InvokeDelegate> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集することができ、一部は、ワークフロー Designerdesigner 画面で編集することができます。
+次の表に、<xref:System.Activities.Statements.InvokeDelegate> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集できるし、一部は、ワークフロー デザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> アクティビティの表示名。 既定値は InvokeDelegate です。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|アクティビティの実行時に呼び出す <xref:System.Activities.ActivityDelegate> の名前。 このプロパティは、デザイナー画面で設定することもできます。 これは必須プロパティです。|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。 キーのパラメーター オブジェクトの名前は、<xref:System.Activities.ActivityDelegate>値は、引数の式が評価され、対応するパラメーター オブジェクトに割り当てられているとします。 プロパティ グリッドでの省略記号ボタンをクリックして、 **DelegateArguments**フィールドが表示されます、 **DelegateArguments**ダイアログ ボックスをこのプロパティを設定できます。 クリックして、**引数の作成**引数を追加するフィールドです。|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> アクティビティの表示名。 既定値は InvokeDelegate です。<br /><br /> ただし、<xref:System.Activities.Activity.DisplayName%2A>必須ではありませんいずれかを使用することをお勧めします。|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|アクティビティの実行時に呼び出す <xref:System.Activities.ActivityDelegate> の名前。 このプロパティは、デザイナー画面で編集でき、必須です。|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。 キーがパラメーター オブジェクトの名前、<xref:System.Activities.ActivityDelegate>式を持つが評価され、対応するパラメーター オブジェクトに割り当てられている引数を値とします。 表示する、 **DelegateArguments** 、このプロパティを設定するダイアログで、省略記号ボタンをクリックして、 **DelegateArguments**プロパティ グリッドのフィールド。 をクリックして、**引数の作成**引数を追加するフィールド。|
 
 ## <a name="see-also"></a>関連項目
 

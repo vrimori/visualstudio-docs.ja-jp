@@ -1,5 +1,5 @@
 ---
-title: '方法: 最適化されたコードのデバッグ |Microsoft ドキュメント'
+title: '方法: 最適化されたコードのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -23,21 +23,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9610f71a197c47521e2139d40aff1afde6a8a894
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6d6ada3b5375737cb4deec777f64344096fbdaae
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31478081"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058511"
 ---
 # <a name="how-to-debug-optimized-code"></a>方法 : 最適化されたコードをデバッグする
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、[ツール] メニューの [設定のインポートとエクスポート] をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 > [!NOTE]
->  [(強化に最適化されたデータのデバッグ)/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)(Visual Studio Update 3 で導入) コンパイラ オプションには、最適化されたコードについて豊富なデバッグ情報が生成されます (プロジェクトに組み込まれていない、 **/Od**コンパイラ オプション。 参照してください[/O オプション (コードの最適化)](/cpp/build/reference/o-options-optimize-code))。 これにはローカル変数とインライン関数のデバッグのサポートの強化が含まれます。  
+>  [(デバッグ機能の強化に最適化された)/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)(Visual Studio Update 3 で導入) コンパイラ オプションには、最適化されたコードに関する豊富なデバッグ情報が生成されます (に組み込まれていないプロジェクト、 **/Od**コンパイラ オプション。 参照してください[/O オプション (コードの最適化)](/cpp/build/reference/o-options-optimize-code))。 これにはローカル変数とインライン関数のデバッグのサポートの強化が含まれます。  
 >   
->  [エディット コンティニュ](../debugger/edit-and-continue-visual-csharp.md)は無効になっている場合、 **/Zo**コンパイラ オプションを使用します。  
+>  [エディット コンティニュ](../debugger/edit-and-continue-visual-csharp.md)場合は無効ですが、 **/Zo**コンパイラ オプションを使用します。  
   
  コンパイラは、ソース コードを最適化するときに命令を再配置したり再構成したりします。 これにより、コンパイル後のコードの実行効率が向上します。 しかし、この命令の整理が原因となり、一連の命令に対応するソース コードをデバッガーが識別できなくなる場合があります。  
   
@@ -59,36 +59,36 @@ ms.locfileid: "31478081"
   
 ### <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>デバッグ ビルド構成で最適化をオンにするには  
   
-1.  新しいプロジェクトの作成時に、`Win32 Debug` ターゲットを選択します。 使用して、`Win32``Debug`対象とするまで、プログラムを完全にデバッグおよびビルドする準備ができたら、`Win32 Release`ターゲットです。 コンパイラは、`Win32 Debug` ターゲットの最適化は行いません。  
+1.  新しいプロジェクトの作成時に、`Win32 Debug` ターゲットを選択します。 使用して、`Win32``Debug`なるまで、プログラムを完全にデバッグおよびビルドする準備が整ったら、`Win32 Release`ターゲット。 コンパイラは、`Win32 Debug` ターゲットの最適化は行いません。  
   
 2.  ソリューション エクスプローラーでプロジェクトを選択します。  
   
-3.  **ビュー**  メニューのをクリックして**プロパティ ページ**です。  
+3.  **ビュー**  メニューのをクリックして**プロパティ ページ**します。  
   
-4.  **プロパティ ページ** ダイアログ ボックスで確認`Debug`でが選択されている、**構成**ドロップダウン リスト。  
+4.  **プロパティ ページ** ダイアログ ボックスに、必ず`Debug`でが選択されている、**構成**ドロップダウン リスト。  
   
-5.  左側のフォルダー ビューで、選択、 **C/C++** フォルダーです。  
+5.  左側のフォルダー ビューで、選択、 **C/C++** フォルダー。  
   
-6.  下にある、 **C++** フォルダーを選択`Optimization`です。  
+6.  で、 **C++** フォルダーで、`Optimization`します。  
   
-7.  右側のプロパティ リストで、[`Optimization`] を探します。 その横の設定がになっているはず`Disabled (` [/Od](/cpp/build/reference/od-disable-debug)`)`です。 その他のオプションのいずれかを選択 (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)`、または`Custom`)。  
+7.  右側のプロパティ リストで、[`Optimization`] を探します。 その横にある設定`Disabled (` [/Od](/cpp/build/reference/od-disable-debug)`)`します。 その他のオプションのいずれかを選択 (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`、 `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)`、または`Custom`)。  
   
 8.  [`Custom`] に対して [`Optimization`] オプションを選択すると、プロパティ リストに表示されているその他のプロパティについてオプションを設定できるようになります。  
   
-9. 構成プロパティ、C と C++ プロジェクト プロパティ ページのコマンドライン ノードを選択し、追加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`を**追加オプション**テキスト ボックス。  
+9. 構成プロパティ、C と C++ のプロジェクト プロパティ ページで、コマンド ライン ノードを選択し、追加`(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)`を**追加オプション**テキスト ボックス。  
   
     > [!WARNING]
     >  `/Zo` には、Visual Studio 2013 更新プログラム 3 以降のバージョンが必要です。  
     >   
-    >  追加`/Zo`が無効になります[エディット コンティニュ](../debugger/edit-and-continue-visual-csharp.md)です。  
+    >  追加`/Zo`が無効になります[エディット コンティニュ](../debugger/edit-and-continue-visual-csharp.md)します。  
   
- 最適化されたコードをデバッグするときに使用して、**逆アセンブル**をどのような手順を実際に作成、実行を表示するウィンドウです。 ブレークポイントを設定する場合は、ブレークポイントが命令と共に移動する可能性があるため注意が必要です。 次に例を示します。  
+ 最適化されたコードをデバッグするときに使用して、**逆アセンブル**命令が実際に作成され、実行を表示するウィンドウ。 ブレークポイントを設定する場合は、ブレークポイントが命令と共に移動する可能性があるため注意が必要です。 次に例を示します。  
   
-```  
+```cpp
 for (x=0; x<10; x++)  
 ```  
   
- この行にブレークポイントを設定したとします。 ブレークポイントは 10 回ヒットするように思われますが、このコードを最適化した場合、ブレークポイントは 1 回しかヒットしません。 これは、最初の命令によって `x` の値が 0 に設定されるためです。 コンパイラは、その最初の命令を 1 回だけ実行すると見なしてループの外に移動します。 このとき、ブレークポイントもこの命令と共に移動します。 `x` を比較してインクリメントする命令はループ内に残ったままになります。 表示すると、**逆アセンブル** ウィンドウで、[ステップ単位](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)大きいコントロールは、最適化されたコードをステップ実行する場合に有用な命令に自動的に設定します。  
+ この行にブレークポイントを設定したとします。 ブレークポイントは 10 回ヒットするように思われますが、このコードを最適化した場合、ブレークポイントは 1 回しかヒットしません。 これは、最初の命令によって `x` の値が 0 に設定されるためです。 コンパイラは、その最初の命令を 1 回だけ実行すると見なしてループの外に移動します。 このとき、ブレークポイントもこの命令と共に移動します。 `x` を比較してインクリメントする命令はループ内に残ったままになります。 表示すると、**逆アセンブリ**ウィンドウで、[ステップ単位](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)より詳細に制御、最適化されたコードをステップ実行している場合に有用な命令に自動的に設定します。  
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   

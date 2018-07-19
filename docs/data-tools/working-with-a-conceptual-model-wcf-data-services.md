@@ -1,5 +1,5 @@
 ---
-title: 概念モデル (WCF Data Services) の操作
+title: 概念モデル (WCF Data Services) の使用
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e109092764cbe377daa3928454f4e33e8ff44701
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0adab4da28cffa3f56cb68ef4b2fd703b1d3c71f
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922352"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116836"
 ---
-# <a name="working-with-a-conceptual-model-wcf-data-services"></a>概念モデル (WCF Data Services) の操作
+# <a name="work-with-a-conceptual-model-wcf-data-services"></a>概念モデル (WCF Data Services) の使用します。
 
 概念モデルを使用してデータベースのデータを記述すると、データベース スキーマとオブジェクト モデル間で双方向の変換を行うのではなく、オブジェクトを使用してデータを照会できます。
 
@@ -29,8 +29,8 @@ ms.locfileid: "31922352"
 
 |トピック|説明|
 |-----------|-----------------|
-|[方法: データ サービス クエリを実行する](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。|
-|[方法: クエリ結果を射影する](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services)|データ サービス クエリによって返されるデータの量を削減する方法について説明します。|
+|[方法: データ サービス クエリを実行](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。|
+|[方法: クエリ結果の射影](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services)|データ サービス クエリによって返されるデータの量を削減する方法について説明します。|
 
  概念モデルを使用すると、ドメインに対応する言語で有効なデータの種類を定義できます。 モデルの有効なデータを定義したり、エンティティまたはデータ サービスで実行する操作に検証を追加したりできます。
 
@@ -38,14 +38,14 @@ ms.locfileid: "31922352"
 
 |トピック|説明|
 |-----------|-----------------|
-|[方法: データ サービス メッセージを先に取得する](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|
+|[方法: Intercept データ サービス メッセージ](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|
 
  以下のトピックでは、エンティティに対して操作を実行して、データを作成、更新、および削除する方法について説明します。
 
 |トピック|説明|
 |-----------|-----------------|
-|[方法: エンティティを追加、変更、および削除する](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|データ サービスでエンティティ データを作成、更新、および削除する方法について説明します。|
-|[方法: エンティティ リレーションシップを定義する](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|
+|[方法: 追加、変更、およびエンティティの削除](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|データ サービスでエンティティ データを作成、更新、および削除する方法について説明します。|
+|[方法: エンティティ リレーションシップを定義](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|
 
 ## <a name="see-also"></a>関連項目
 

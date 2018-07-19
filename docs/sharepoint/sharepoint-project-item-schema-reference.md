@@ -1,5 +1,5 @@
 ---
-title: SharePoint プロジェクト項目のスキーマ リファレンス |Microsoft ドキュメント
+title: SharePoint プロジェクト項目スキーマ リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -26,34 +26,34 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9b039b1cf31a04a24819b03114c661a3ab1b108a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b94856d4e00cd15f324040ccd49c90bb1be29a7d
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119367"
 ---
 # <a name="sharepoint-project-item-schema-reference"></a>SharePoint プロジェクト項目スキーマのリファレンス
-  Visual Studio では、SharePoint プロジェクト項目のスキーマを使用して、.spdata ファイルの内容を検証します。 .Spdata ファイルは、SharePoint プロジェクト項目の動作と内容を指定します。 SharePoint プロジェクト項目の内容に関する詳細については、次を参照してください。[項目テンプレートを作成し、SharePoint プロジェクト項目用のプロジェクト テンプレート](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)です。  
+  Visual Studio の内容を検証する SharePoint プロジェクト項目のスキーマを使用して *.spdata*ファイル。 *.Spdata*ファイルは、SharePoint プロジェクト項目の動作とコンテンツを指定します。 SharePoint プロジェクト アイテムの内容に関する詳細については、次を参照してください。[項目テンプレートとの SharePoint プロジェクト アイテムのプロジェクト テンプレートを作成する](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)します。  
   
- SharePoint プロジェクト項目のスキーマは ProjectItemModelSchema.xsd という % プログラム ファイル (x86)%\Microsoft Visual Studio 11.0\Xml\Schemas 既定でインストールされます。  
+ SharePoint プロジェクト項目スキーマ ProjectItemModelSchema.xsd という名前が既定では、%program files (x86)%\Microsoft Visual Studio 11.0\Xml\Schemas インストールされています。  
   
- ルート要素が、 [ProjectItem](../sharepoint/projectitem-element.md)要素。 次の表では、すべてのスキーマで定義されている要素について説明します。  
+ ルート要素は、 [ProjectItem](../sharepoint/projectitem-element.md)要素。 次の表では、すべてのスキーマによって定義される要素について説明します。  
   
 |要素|説明|  
 |-------------|-----------------|  
 |[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint プロジェクト アイテムに関連付けられているカスタム データ項目のコレクションを表します。|  
-|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|キー/値の形式で、SharePoint プロジェクト項目に関連付けられているカスタム データ項目を表します。 キーと値の両方には、文字列がある場合があります。|  
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint に配置されるときに、機能に含まれているプロパティ値のコレクションを表します。 フィーチャーが配置されると、プロパティの値をコードでアクセスできます。|  
+|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|キー/値の形式で、SharePoint プロジェクト アイテムに関連付けられているカスタム データ項目を表します。 キーと値の両方には、文字列がある場合があります。|  
+|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint に配置されるときに、機能に含まれているプロパティ値のコレクションを表します。 フィーチャーが配置されると、プロパティ値をコードでアクセスできます。|  
 |[FeatureProperty](../sharepoint/featureproperty-element.md)|SharePoint に配置されるときに、機能に含まれているカスタム プロパティを表します。 フィーチャーが配置されると、コードでプロパティにアクセスすることができます。|  
-|[ファイル](../sharepoint/files-element.md)|フィーチャー要素ファイルまたはプロジェクトの出力など、SharePoint プロジェクト項目と共に配置するファイルを指定します。|  
+|[ファイル](../sharepoint/files-element.md)|機能の要素ファイルまたはプロジェクトの出力など、SharePoint プロジェクト アイテムと共に配置するファイルを指定します。|  
 |[ProjectItem](../sharepoint/projectitem-element.md)|SharePoint プロジェクト項目を表します。|  
-|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|フィーチャー要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなどの SharePoint ファイルを表します。|  
+|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|機能の要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなど、SharePoint のファイルを表します。|  
 |[ProjectItemFolder](../sharepoint/projectitemfolder-element.md)|マップされたフォルダーを表します。|  
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|SharePoint に配置されるときに、プロジェクト項目に含めるプロジェクトの出力を表します。|  
-|[SafeControl](../sharepoint/safecontrol-element.md)|ASPX コントロールまたは SharePoint サイト上の任意の ASPX ページにアクセスするすべてのユーザーのセキュリティで保護されたとして指定されている Web パーツを表します。|  
-|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX コントロールと、SharePoint サイト上の任意の ASPX ページにアクセスするすべてのユーザーのセキュリティで保護されたとして指定されている Web パーツのコレクションを表します。|  
+|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|SharePoint に展開するときに、プロジェクト項目に含めるプロジェクトの出力を表します。|  
+|[SafeControl](../sharepoint/safecontrol-element.md)|ASPX コントロールまたは SharePoint サイトのいずれかの ASPX ページにアクセスするすべてのユーザーに対してセキュリティで保護されたとして指定されている Web パーツを表します。|  
+|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX コントロールと、SharePoint サイト上のいずれかの ASPX ページにアクセスするすべてのユーザーに対してセキュリティで保護されたとして指定されている Web パーツのコレクションを表します。|  
   
-## <a name="see-also"></a>関連項目  
- [SharePoint プロジェクト項目の項目テンプレートとプロジェクト テンプレートの作成](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)  
-  
+## <a name="see-also"></a>関連項目
+ [項目テンプレートとの SharePoint プロジェクト アイテムのプロジェクト テンプレートを作成します。](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)  
   

@@ -10,16 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03809ffdf421e97b993b840fe4a352b344554e47
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 97279d92b9853f183778d069aa81182fa6cf8b56
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974337"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755232"
 ---
 # <a name="messaging-activity-designers"></a>メッセージング アクティビティ デザイナー
 
-Messaging アクティビティ デザイナーは、作成してから、Windows Workflow Foundation (WF) アプリケーション内での Windows Communication Foundation (WCF) メッセージを送受信するメッセージング アクティビティの構成に使用されます。 .NET Framework 4 が 5 つのメッセージング アクティビティを導入し、Windows ワークフロー デザイナーがワークフロー内でメッセージを管理することを有効にする 2 つの新しいテンプレート デザイナーを提供します。 このセクションに含まれる次の表に示すトピックでは、アクティビティをワークフロー デザイナーおよびテンプレート デザイナーを使用する方法についてガイダンスを提供します。
+メッセージング アクティビティ デザイナーは、作成し、Windows Workflow Foundation (WF) アプリケーション内から Windows Communication Foundation (WCF) メッセージを送受信するメッセージング アクティビティの構成に使用されます。 .NET Framework 4 が 5 つのメッセージング アクティビティを紹介し、ワークフロー デザイナーには、ワークフロー内でメッセージングを管理するための 2 つの新しいテンプレート デザイナーが用意されています。 このセクションに含まれているし、次の表に示すトピックでは、アクティビティをワークフロー デザイナーおよびテンプレート デザイナーを使用する方法のガイダンスを提供します。
 
 ## <a name="reference"></a>参照
  <xref:System.Activities.Activity>

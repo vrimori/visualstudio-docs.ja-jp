@@ -14,16 +14,20 @@ ms.assetid: a7007714-f9b4-4730-94e0-67d3dc68991f
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 056b1d254b8544f9a1f0abe364bcb40f15235e64
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d84fdd4f352a823614832cc8d5d1b9e57c7a9dfb
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31899481"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058075"
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Auto 配置の型を COM 参照可能にすることはできません
+
 |||
 |-|-|
 |TypeName|AutoLayoutTypesShouldNotBeComVisible|
@@ -32,27 +36,35 @@ ms.locfileid: "31899481"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- コンポーネント オブジェクト モデル (COM) 参照可能な値の型が付いて、<xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName>属性に設定<xref:System.Runtime.InteropServices.LayoutKind?displayProperty=fullName>です。
+
+コンポーネント オブジェクト モデル (COM) 参照可能な値の型が付いて、<xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName>属性に設定<xref:System.Runtime.InteropServices.LayoutKind.Auto?displayProperty=fullName>します。
 
 ## <a name="rule-description"></a>規則の説明
- <xref:System.Runtime.InteropServices.LayoutKind> レイアウトのタイプは、共通言語ランタイムによって管理されます。 これらの型のレイアウトは、COM クライアントが特定のレイアウトが予期される動作しなくなる .NET Framework のバージョン間で変更できます。 されている場合、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性が指定されていない、c#、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]、C++ コンパイラを指定し、<xref:System.Runtime.InteropServices.LayoutKind>のレイアウトを値型です。
 
- 他のマークがない限り、すべてのパブリックの非ジェネリック型は COM; から参照できます。すべてのパブリックでないとジェネリック型を COM に表示されません。 ただし、偽陽性を減らすためには、この規則が必要、COM 型の可視性、明示的に指定します。格納しているアセンブリをマークする必要があります、 <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> 'éý'`false`で型をマークする必要がありますと、 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 'éý'`true`です。
+<xref:System.Runtime.InteropServices.LayoutKind> レイアウトの種類は、共通言語ランタイムによって管理されます。 これらの型のレイアウトは、特定のレイアウトを期待する COM クライアントを中断する .NET Framework のバージョン間で変更できます。 場合、 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 、c#、Visual Basic、および C++ コンパイラの指定の属性が指定されていない[参照](<xref:System.Runtime.InteropServices.LayoutKind.Auto>)値の型。
+
+すべてのパブリックな非ジェネリックの型が、COM から参照できる他のマークがない限り、すべてのパブリックでないとジェネリック型が COM に表示されません。 ただし、偽陽性を減らすためには、この規則を明示的に指定する型の COM の参照範囲が必要です。 格納しているアセンブリをマークする必要があります、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>に設定`false`で型をマークする必要があり、<xref:System.Runtime.InteropServices.ComVisibleAttribute>に設定`true`します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、値を変更、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性を<xref:System.Runtime.InteropServices.LayoutKind>または<xref:System.Runtime.InteropServices.LayoutKind>、か、com 型を非表示
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。
+この規則違反を解決するには、値を変更、<xref:System.Runtime.InteropServices.StructLayoutAttribute>属性を[LayoutKind.Explicit](<xref:System.Runtime.InteropServices.LayoutKind.Explicit>)または[LayoutKind.Sequential](<xref:System.Runtime.InteropServices.LayoutKind.Sequential>)、か、com 型を非表示
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+
+この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
- 次の例では、規則に違反する型と、規則に適合する型を示します。
 
- [!code-csharp[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/CSharp/ca1403-auto-layout-types-should-not-be-com-visible_1.cs)]
- [!code-vb[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/VisualBasic/ca1403-auto-layout-types-should-not-be-com-visible_1.vb)]
+次の例では、規則に違反する型と、規則に適合する型を示します。
 
-## <a name="related-rules"></a>関連規則
- [CA1408: AutoDual ClassInterfaceType を使用しないでください](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+[!code-csharp[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/CSharp/ca1403-auto-layout-types-should-not-be-com-visible_1.cs)]
+[!code-vb[FxCop.Interoperability.AutoLayout#1](../code-quality/codesnippet/VisualBasic/ca1403-auto-layout-types-should-not-be-com-visible_1.vb)]
+
+## <a name="related-rules"></a>関連するルール
+
+[CA1408: AutoDual ClassInterfaceType を使用しないでください](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>関連項目
- [相互運用のための .NET 型の条件を満たす](/dotnet/framework/interop/qualifying-net-types-for-interoperation)[アンマネージ コードと相互運用](/dotnet/framework/interop/index)
+
+- [相互運用のための .NET 型を修飾します。](/dotnet/framework/interop/qualifying-net-types-for-interoperation)
+- [アンマネージ コードと相互運用します。](/dotnet/framework/interop/index)
