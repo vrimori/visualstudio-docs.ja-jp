@@ -13,11 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4afd84dfaccc632143b380619a2324e607e833fd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8d67ef259309750e115be0065a6eb2024e4cf1c8
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280352"
 ---
 # <a name="optimize-visual-studio-performance"></a>Visual Studio のパフォーマンスの最適化
 
@@ -25,9 +26,9 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="upgrade-to-visual-studio-2017-version-156-or-later"></a>Visual Studio 2017 バージョン 15.6 以降にアップグレードする
 
-Visual Studio 2015 を現在使用している場合、[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) を無料でダウンロードし、パフォーマンスの改善をご確認ください。 Visual Studio 2017 では、ソリューションの読み込みが 2 ～ 3 倍速くなります。その他の面でもパフォーマンスが改善されます。 Visual Studio 2017 と Visual Studio 2015 の間には並行互換性があるので、試しても失うものはありません。
+Visual Studio 2015 を現在使用している場合、[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を無料でダウンロードし、パフォーマンスの改善をご確認ください。 Visual Studio 2017 では、ソリューションの読み込みが 2 ～ 3 倍速くなります。その他の面でもパフォーマンスが改善されます。 Visual Studio 2017 と Visual Studio 2015 の間には並行互換性があるので、試しても失うものはありません。
 
-Visual Studio 2017 を現在使用している場合、15.6 以降のバージョンを実行していることを確認してください。 バージョン 15.6 ではソリューションの読み込みが最大 2 ～ 3 倍速くなることがデータによって示されています。 [ここから](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)ダウンロードしてください。
+Visual Studio 2017 を現在使用している場合、15.6 以降のバージョンを実行していることを確認してください。 バージョン 15.6 ではソリューションの読み込みが最大 2 ～ 3 倍速くなることがデータによって示されています。 [ここから](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)ダウンロードしてください。
 
 ## <a name="extensions-and-tool-windows"></a>拡張機能とツール ウィンドウ
 
@@ -45,7 +46,7 @@ SSD を追加する場合、最適なパフォーマンスを得るために、�
 
 ## <a name="help-us-improve"></a>改善にご協力ください
 
-お客様からのフィードバックは品質向上に役立ちます。 **問題の報告**機能を利用してトレースを “記録” し、Microsoft にご送信ください。 **[クイック起動]** の横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]**、**[フィードバックの送信]**、**[問題の報告]** の順に選択します。 詳細については、「[Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)」をご覧ください。
+お客様からのフィードバックは品質向上に役立ちます。 **問題の報告**機能を利用してトレースを “記録” し、Microsoft にご送信ください。 **[クイック起動]** の横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]**、**[フィードバックの送信]**、**[問題の報告]** の順に選択します。 詳細については、「[Visual Studio 2017 で問題を報告する方法](../ide/how-to-report-a-problem-with-visual-studio-2017.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

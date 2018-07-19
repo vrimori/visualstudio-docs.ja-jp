@@ -1,5 +1,5 @@
 ---
-title: 展開する、発行、および SharePoint ソリューション パッケージのアップグレード |Microsoft ドキュメント
+title: 配置、発行、および SharePoint ソリューション パッケージのアップグレード |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,53 +21,53 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 76dce0877a5b8726249b0cdaa617e8e503de8d32
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 17578fbfb58d354f06e91c78f067d228b92860fe
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765987"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36327204"
 ---
 # <a name="deploy-publish-and-upgrade-sharepoint-solution-packages"></a>配置、発行、および SharePoint ソリューション パッケージのアップグレード
-  Visual Studio での SharePoint ソリューションを開発した後、いずれかローカル SharePoint サーバーにそのパッケージ (.wsp) ファイルを配置したり、リモートまたはローカルの SharePoint サーバーにパブリッシュできます。 ファイルを展開する場合は、パッケージ ファイル (.wsp) を展開する方法をカスタマイズできます。  
+  Visual Studio で SharePoint ソリューションを開発した後か、そのパッケージ (.wsp) ファイルをローカル SharePoint サーバーにデプロイしたりリモートまたはローカルの SharePoint サーバーにパブリッシュできます。 ファイルを展開する場合は、パッケージ ファイル (.wsp) を展開する方法をカスタマイズできます。  
   
 > [!NOTE]  
->  現時点では、サンド ボックス ソリューションのみがリモートの SharePoint サーバーにパブリッシュできます。 詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)です。  
+>  現時点では、サンド ボックス ソリューションのみがリモートの SharePoint サーバーにパブリッシュできます。 詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
 ## <a name="deploy-publish-and-upgrade"></a>配置、発行、およびアップグレード
- *展開する*ローカル ホストに Visual Studio での SharePoint プロジェクトからビルドされた SharePoint ソリューション ファイルのコピーを指します。 展開されたソリューションでは、ソリューションの配置後、アクティブ化、展開手順については、インターネット インフォメーション サービス (IIS) プールのリサイクルなどを構成しなどできます。 展開するには、使用、**展開**コマンドを**ビルド**メニュー。 詳細については、次を参照してください。[する方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)と[する方法: 展開と SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)です。  
+ *展開*ローカル ホストに、Visual Studio での SharePoint プロジェクトからビルドされた SharePoint ソリューション ファイルのコピーを参照します。 デプロイ済みのソリューションでは、展開後、ソリューションのアクティブ化など、インターネット インフォメーション サービス (IIS) プールのリサイクル、展開の手順を構成してなど。 展開するには、使用、**デプロイ**コマンドを**ビルド**メニュー。 詳細については、次を参照してください。[方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)と[方法: 展開と SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)します。  
   
- *発行*参照サンド ボックス化された SharePoint ソリューション ファイルをリモートの SharePoint にアップロードするサイトです。 つまり、別のシステム上にあるサイトです。 ローカルの SharePoint サイトに、SharePoint サンド ボックス ソリューション ファイルを公開することもできますが、かどうか、サイトにパブリッシュされたでローカルまたはリモートに関係なく、その展開の手順を構成することはできません。  
+ *発行*参照をリモートの sharepoint サンド ボックス化された SharePoint ソリューション ファイルをアップロードするサイト。 つまり、別のシステム上にあるサイトです。 ローカルの SharePoint サイトに SharePoint のサンド ボックス ソリューション ファイルを発行することもできますが、かどうかに発行されたサイトは、ローカルまたはリモートに関係なく、その展開の手順を構成することはできません。  
   
- *アップグレード*は既存のリモートまたはローカルで発行済みの SharePoint ソリューションの更新を参照します。 Visual Studio で SharePoint ソリューションに変更を加えた後、ソリューションのパッケージ ファイル名を変更、ソリューションを再パブリッシュおよびが正常に再パブリッシュした後、ソリューションをアップグレードします。 ローカルで発行済みのソリューションを再発行する場合は、既存のソリューション ファイルを上書きできます。  
+ *アップグレード*既存のリモートまたはローカルで発行済みの SharePoint ソリューションの更新を参照します。 Visual Studio で SharePoint ソリューションに変更を加えた後は、ソリューションを再パブリッシュ、およびが正常に再パブリッシュした後、ソリューションをアップグレードするソリューションのパッケージ ファイル名を変更します。 ローカルで発行済みのソリューションを再パブリッシュした場合は、既存のソリューション ファイルを上書きできます。  
   
-## <a name="deploy-packages"></a>パッケージを展開します。
- テストおよびデバッグのため、開発用コンピューターで、SharePoint サーバーにパッケージ ファイルを配置できます。 選択して別のコンピューターにインストールできるパッケージ ファイルを作成することも、**ファイル システムに公開**内のオプション ボタン、**発行** ダイアログ ボックス。 パッケージが作成され、指定したローカル ファイル パスにコピーします。 SharePoint ソリューションをローカル サーバーを展開するには、**展開**コマンドを**ビルド**メニュー。 詳細については、次を参照してください。[する方法: 展開と SharePoint ソリューションをローカル SharePoint サイトにパブリッシュ](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)です。  
+## <a name="deploy-packages"></a>パッケージを配置します。
+ テストとデバッグ用の開発用コンピューターで、SharePoint サーバーにパッケージ ファイルを配置できます。 パッケージ ファイルを選択して別のコンピューターにインストールできることを作成することも、**ファイル システムに公開**内のオプション ボタン、**発行** ダイアログ ボックス。 パッケージが作成され、指定したローカル ファイル パスにコピーします。 ローカル サーバーに SharePoint ソリューションを展開するには、使用、**デプロイ**コマンドを**ビルド**メニュー。 詳細については、次を参照してください。[方法: デプロイと、SharePoint ソリューションをローカル SharePoint サイトに発行](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)します。  
   
- リストの定義を展開、イベント レシーバーを追加して、フィーチャー デザイナーとパッケージ デザイナーを使用する方法については、次を参照してください。[チュートリアル: プロジェクト タスク リスト定義の配置](../sharepoint/walkthrough-deploying-a-project-task-list-definition.md)です。  
+ リスト定義の展開、イベント レシーバーを追加して、フィーチャー デザイナーとパッケージ デザイナーを使用する方法については、次を参照してください。[チュートリアル: プロジェクト タスク リスト定義の展開](../sharepoint/walkthrough-deploying-a-project-task-list-definition.md)します。  
   
 ## <a name="customize-the-deployment-process"></a>展開プロセスをカスタマイズします。
- 次の表は、デバッグ、および SharePoint ソリューションを展開するときに使用できる 2 つの展開構成を示します。  
+ 次の表では、デバッグ、および SharePoint ソリューションを展開するときに使用できる 2 つの展開構成を示します。  
   
 |展開の構成|説明|  
 |------------------------------|-----------------|  
 |既定値|既定の配置構成。 次の展開手順が実行されます。<br /><br /> 1.配置前コマンドを実行します。<br />2.IIS アプリケーション プールをリサイクルします。<br />3.ソリューションを取り消します。<br />4.ソリューションを追加します。<br />5.機能を有効にします。<br />6.配置後コマンドを実行します。<br /><br /> パッケージがアンインストールされると、次の取り消し手順が実行されます。<br /><br /> 1.IIS アプリケーション プールをリサイクルします。<br />2.ソリューションを取り消します。|  
-|アクティブ化しません。|この配置構成は、既定の構成として、同じ手順を実行が、アクティブ化の手順をスキップします。|  
+|アクティベーション不可|この配置構成は、既定の構成として同じ手順を実行しますが、アクティブ化の手順をスキップします。|  
   
- 1 つの手順を完了するか、展開プロセスの手順の順序を変更する、独自の展開構成を作成できます。 詳細については、次を参照してください。[する方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)です。  
+ 1 つの手順を完了したり、展開プロセスの手順の順序を変更、独自の展開構成を作成できます。 詳細については、次を参照してください。[方法: SharePoint の配置構成を編集](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)します。  
 
- 展開の前後に実行するためのコマンドを追加することもできます。 詳細については、次を参照してください。[する方法: SharePoint の配置コマンドを設定](../sharepoint/how-to-set-sharepoint-deployment-commands.md)です。  
+ デプロイの前後に実行するためのコマンドを追加することもできます。 詳細については、次を参照してください。[方法: SharePoint の設定の配置コマンド](../sharepoint/how-to-set-sharepoint-deployment-commands.md)します。  
   
 ## <a name="publish-packages-to-a-remote-or-local-server"></a>リモートまたはローカル サーバーにパッケージを公開します。
- メニュー バーでのリモート サーバーにセキュリティで保護された SharePoint ソリューションを発行するには選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン **https://someremoteserver.sharepoint.microsoftonline.com**です。  
+ メニュー バーでのリモート サーバーをセキュリティで保護された SharePoint ソリューションを発行する選択**ビルド**、**発行**、[、**発行**] ダイアログ ボックスで、選択、 **SharePoint サイトに発行**など、リモート サーバーの URL を提供する、オプション ボタン **https://someremoteserver.sharepoint.microsoftonline.com**します。  
   
- ローカル サーバーに SharePoint ソリューションを発行する、**発行** ダイアログ ボックスで、選択、**ファイル システムに公開**ローカル システム パスを提供する、オプション ボタンをクリックします。  
+ ローカル サーバーに SharePoint ソリューションの発行、**発行** ダイアログ ボックスで、選択、**ファイル システムに公開**オプション ボタン、ローカル システム パスを指定します。  
   
- 正常に SharePoint に発行すると、ソリューション、ソリューションが表示されます、**ソリューション ギャラリー**がアクティブ化できます。 詳細については、次を参照してください。[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
+ ソリューションが SharePoint に正常に発行した後、ソリューションが表示されます、**ソリューション ギャラリー**がアクティブ化できます。 詳細については、次を参照してください。[方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)します。  
   
-### <a name="upgrade-published-packages"></a>公開されたパッケージをアップグレードします。
- パブリッシュした後に、Visual Studio での SharePoint プロジェクトに変更を加えた場合は、変更を含める発行済みのパッケージをアップグレードしてください。 正常にアップグレードするには、一意の名前がパッケージに必要です。 同じ名前のパッケージが見つかった場合 - これは、既存のアプリケーションを更新する場合に発生することが、SharePoint サイトでエラー アラート ファイル名を競合およびパッケージの名前を変更することができます。 再発行されない後は、新しいパッケージは、SharePoint サイトに表示され、アップグレードすることができます。 アップグレードされたパッケージは、古いパッケージからデータを使用してソリューションを更新し、し、SharePoint のソリューションがアクティブにします。 詳細については、次を参照してください。[する方法: 配置、発行、およびリモート サーバー上の SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)です。  
+### <a name="upgrade-published-packages"></a>公開済みのパッケージをアップグレードします。
+ パブリッシュした後に、Visual Studio での SharePoint プロジェクトに変更を加えた場合、変更を含める公開されたパッケージをアップグレードする必要があります。 正常にアップグレードするには、一意の名前がパッケージに必要です。 同じ名前のパッケージは、エラー アラート - 既存のアプリケーションを更新するときに発生するのと、SharePoint サイトで見つかった場合、ファイル名を競合し、パッケージの名前を変更することができます。 、再発行後は、新しいパッケージは、SharePoint サイトに表示され、アップグレードすることができます。 アップグレードされたパッケージは、以前のパッケージからデータを使用して、ソリューションを更新し、し、SharePoint でソリューションがアクティブにします。 詳細については、次を参照してください。[方法: 配置、発行、およびリモート サーバー上で SharePoint ソリューションのアップグレード](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)します。  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
+ [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

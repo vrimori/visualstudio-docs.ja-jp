@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7952ccfb8a2574bca5f297da5e675f76e8725f83
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: eaa3a852ad67b0d1ffb4e0fb5c121adca81091a9
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815166"
 ---
 # <a name="exploration-bounds"></a>探索の範囲
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/26/2018
 
 この属性とその派生属性の名前付きプロパティを使用して、設定を変更することができます。
 
-```
+```csharp
 [PexClass(MaxRuns = 10)]
 public partial class FooTest {...}
 ```
@@ -75,7 +76,7 @@ IntelliTest がプログラムの実行パスを深く探索すればするほ�
 
 たとえば、次のコードでは約 100 の分岐を使用します。
 
-```
+```csharp
 for (int i=0; i<100; i++) { }
 ```
 
@@ -104,7 +105,7 @@ for (int i=0; i<100; i++) { }
 
 たとえば、次のコード内の各パスは、n+1 条件を使用します。
 
-```
+```csharp
 [PexMethod]
 void ParameterizedTest(int n) 
 {

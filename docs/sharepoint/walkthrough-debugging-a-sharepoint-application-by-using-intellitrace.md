@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: IntelliTrace を使用して SharePoint アプリケーションのデバッグ |Microsoft ドキュメント'
+title: 'チュートリアル: IntelliTrace を使用して SharePoint アプリケーションのデバッグ |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,19 +19,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 173dbc74a24166f69ca97da6d5f68332345b90ea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76654568825bd0761097a1edd3ec8eb3bbc7060d
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119866"
 ---
-# <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ
+# <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用して SharePoint アプリケーションをデバッグします。
 
 IntelliTrace を使用すると、SharePoint ソリューション簡単にデバッグできます。 従来のデバッガーでは、現時点のソリューションを示すスナップショットだけを取得できました。 IntelliTrace を使用すると、ソリューション内で過去に発生したイベントと、そのイベントが発生したコンテキストをレビューし、コードに移動できます。
 
- このチュートリアルでは、展開済みのアプリケーションから IntelliTrace データを収集する Microsoft Monitoring Agent を使用して Visual Studio での SharePoint 2010 または SharePoint 2013 プロジェクトをデバッグする方法を示します。 そのデータを分析するには、Visual Studio Enterprise を使用する必要があります。 このプロジェクトには、フィーチャーがアクティブ化されたときに、タスク リストにタスクを、お知らせリストにお知らせを追加するフィーチャー レシーバーが組み込まれます。 フィーチャーが非アクティブ化されると、タスクは完了とマークされ、次のお知らせがお知らせリストに追加されます。 ただし、このプロシージャには、プロジェクトの正常な実行を妨げる論理エラーが含まれています。 IntelliTrace を使用することで、このエラーを見つけて修正できます。
+ このチュートリアルでは、デプロイされたアプリケーションから IntelliTrace データを収集する Microsoft Monitoring Agent を使用して Visual Studio で SharePoint 2010 または SharePoint 2013 プロジェクトをデバッグする方法を示します。 そのデータを分析するには、Visual Studio Enterprise を使用する必要があります。 このプロジェクトには、フィーチャーがアクティブ化されたときに、タスク リストにタスクを、お知らせリストにお知らせを追加するフィーチャー レシーバーが組み込まれます。 フィーチャーが非アクティブ化されると、タスクは完了とマークされ、次のお知らせがお知らせリストに追加されます。 ただし、このプロシージャには、プロジェクトの正常な実行を妨げる論理エラーが含まれています。 IntelliTrace を使用することで、このエラーを見つけて修正できます。
 
- **適用されます:**このトピックの情報が Visual Studio で作成された SharePoint 2010 および SharePoint 2013 ソリューションに適用されます。
+ **適用対象:** このトピックの情報は、Visual Studio で作成された SharePoint 2010 および SharePoint 2013 ソリューションに適用されます。
 
  このチュートリアルでは、次の作業について説明します。
 
@@ -43,23 +44,23 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 - [Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。](#BKMK_CollectDiagnosticData)
 
-- [デバッグおよび SharePoint ソリューションを修正](#BKMK_DebugSolution)
+- [デバッグし、SharePoint ソリューションを修正](#BKMK_DebugSolution)
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
-- サポート対象エディションの Windows と SharePoint 参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。
+- サポート対象エディションの Windows と SharePoint 参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
 
 - Visual Studio Enterprise。
 
-## <a name="BKMK_CreateReceiver"></a> フィーチャー レシーバーを作成します。
+## <a name="create-a-feature-receiver"></a>フィーチャー レシーバーを作成します。
 
 最初に、フィーチャー レシーバーがある空の SharePoint プロジェクトを作成します。
 
-1. SharePoint 2010 または SharePoint 2013 ソリューション プロジェクトを作成し、名前を付けます**IntelliTraceTest**です。
+1. SharePoint 2010 または SharePoint 2013 ソリューション プロジェクトを作成し、名前**IntelliTraceTest**します。
 
      **SharePoint カスタマイズ ウィザード**が表示されたら、プロジェクトとソリューションの信頼レベルの SharePoint サイトを指定できます。
 
@@ -67,13 +68,13 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
      IntelliTrace は、ファーム ソリューションに対してのみ動作します。
 
-3. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能** ノードを選択し**フィーチャーの追加**です。
+3. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能**ノードを選び、**機能の追加**します。
 
-     Feature1.feature が表示されます。
+     *Feature1.feature*が表示されます。
 
-4. クリックして、Feature1.feature のショートカット メニューを開き**イベント レシーバーの追加**コード モジュールをフィーチャーに追加します。
+4. 、Feature1.feature のショートカット メニューを開き、選択し、**イベント レシーバーの追加**機能にコード モジュールを追加します。
 
-## <a name="BKMK_AddCode"></a> フィーチャー レシーバーにコードを追加します。
+## <a name="add-code-to-the-feature-receiver"></a>フィーチャー レシーバーにコードを追加します。
 
 次に、フィーチャー レシーバー内の 2 つのメソッド (`FeatureActivated` と `FeatureDeactivating`) にコードを追加します。 これらのメソッドは、SharePoint でフィーチャーがアクティブ化または非アクティブ化されたときにトリガーされます。
 
@@ -247,7 +248,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
     }
     ```
 
-## <a name="BKMK_Test1"></a> プロジェクトをテストします。
+## <a name="test-the-project"></a>プロジェクトをテストします。
 
 コードがフィーチャー レシーバーに追加され、データ コレクターが実行されているので、SharePoint ソリューションを配置して実行し、それが正常に動作するかどうかをテストします。
 
@@ -260,79 +261,79 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 2. お知らせリストとタスク一覧の内容を表示します。
 
-     という名前の新しいお知らせがお知らせリストに必要**Activated feature: IntelliTraceTest_Feature1**、タスク一覧、新しいタスクがという名前と**Deactivate feature: IntelliTraceTest_Feature1**です。 このいずれかがない場合は、フィーチャーがアクティブになっているかどうかを確認します。 アクティブになっていない場合は、アクティブにします。
+     という新しいお知らせをお知らせリストがあります**Activated feature: IntelliTraceTest_Feature1**、という新しいタスクがタスク一覧**Deactivate feature: IntelliTraceTest_Feature1**します。 このいずれかがない場合は、フィーチャーがアクティブになっているかどうかを確認します。 アクティブになっていない場合は、アクティブにします。
 
 3. 次の手順を実行して、フィーチャーを非アクティブにします。
 
-    1. **サイトの操作**メニューを SharePoint では、**サイト設定**です。
+    1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
 
-    2. **サイトの操作**、選択、**サイト機能の管理**リンクします。
+    2. **サイトの操作**、選択、**サイト機能の管理**リンク。
 
-    3. 横に**IntelliTraceTest Feature1**、選択、 **Deactivate**ボタンをクリックします。
+    3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
 
-    4. [警告] ページで、選択、**このフィーチャーを非アクティブ**リンクします。
+    4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
 
      FeatureDeactivating() イベント ハンドラーによってエラーがスローされます。
 
-## <a name="BKMK_CollectDiagnosticData"></a> Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。
+## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。
 
-SharePoint を実行しているシステムに Microsoft Monitoring Agent をインストールする場合は、IntelliTrace から返されるジェネリック情報よりも限定的なデータを使用して SharePoint ソリューションをデバッグすることができます。 エージェントは、PowerShell コマンドレットを使用して Visual Studio 外で動作し、SharePoint ソリューションの実行中にデバッグ情報をキャプチャします。
+SharePoint を実行しているシステムに Microsoft Monitoring Agent をインストールする場合は、IntelliTrace から返されるジェネリック情報よりも具体的であるデータを使用して SharePoint ソリューションをデバッグできます。 エージェントは、PowerShell コマンドレットを使用して Visual Studio 外で動作し、SharePoint ソリューションの実行中にデバッグ情報をキャプチャします。
 
 > [!NOTE]
-> このセクションの構成情報は、この例に固有です。 その他の構成オプションの詳細については、次を参照してください。 [IntelliTrace スタンドアロン コレクターを使用して](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector)です。
+> このセクションの構成情報は、この例に固有です。 その他の構成オプションの詳細については、次を参照してください。 [IntelliTrace スタンドアロン コレクターを使用して](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector)します。
 
-1. SharePoint を実行しているコンピューターで[Microsoft Monitoring Agent を設定し、ソリューションの監視を開始](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector)です。
+1. SharePoint を実行しているコンピューターで[Microsoft Monitoring Agent を設定し、ソリューションの監視を開始](/visualstudio/debugger/using-the-intellitrace-stand-alone-collector)します。
 
 2. フィーチャーを非アクティブ化します。
 
-    1. **サイトの操作**メニューを SharePoint では、**サイト設定**です。
+    1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
 
-    2. **サイトの操作**、選択、**サイト機能の管理**リンクします。
+    2. **サイトの操作**、選択、**サイト機能の管理**リンク。
 
-    3. 横に**IntelliTraceTest Feature1**、選択、 **Deactivate**ボタンをクリックします。
+    3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
 
-    4. [警告] ページで、選択、**このフィーチャーを非アクティブ**リンクします。
+    4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
 
      エラーが発生します (この場合は、FeatureDeactivating() イベント ハンドラーでスローされたエラーが原因)。
 
-3. PowerShell ウィンドウで、実行、 [Stop-webapplicationmonitoring](http://go.microsoft.com/fwlink/?LinkID=313687)コマンド .iTrace ファイルを作成、監視を停止し、SharePoint ソリューションを再起動します。
+3. PowerShell ウィンドウで実行、 [Stop-webapplicationmonitoring](http://go.microsoft.com/fwlink/?LinkID=313687)コマンドを .iTrace ファイルを作成、監視を停止し、SharePoint ソリューションを再起動します。
 
      **Stop-WebApplicationMonitoring**  *"\<SharePointSite>\\<SharePointAppName\>"*
 
-## <a name="BKMK_DebugSolution"></a> デバッグおよび SharePoint ソリューションを修正
+## <a name="debug-and-fix-the-sharepoint-solution"></a>デバッグし、SharePoint ソリューションを修正
 
 この時点で、Visual Studio で IntelliTrace ログ ファイルを表示し、SharePoint ソリューションのエラーを見つけて修正することができます。
 
 1. Visual Studio で、\IntelliTraceLogs フォルダーにある .iTrace ファイルを開きます。
 
-     **IntelliTrace の概要**ページが表示されます。 未処理の例外の領域で、SharePoint 相関 ID (GUID) が表示されます、エラーは処理されなかったため、 **Analysis**セクションです。 選択、**呼び出し履歴**場合は、エラーが発生した呼び出し履歴を表示するボタンをクリックします。
+     **IntelliTrace の概要**ページが表示されます。 ハンドルされない例外領域に SharePoint 相関 ID (GUID) が表示されます、エラーは処理されなかったため、 **Analysis**セクション。 選択、**呼び出し履歴**場合は、エラーが発生した呼び出し履歴を表示するボタンをクリックします。
 
 2. 選択、**例外のデバッグ**ボタンをクリックします。
 
-     プロンプトが表示されたら、シンボル ファイルを読み込みます。 **IntelliTrace**ウィンドウで、この例外として強調表示されます。"スロー: 重大なエラーが発生しました!"です。
+     プロンプトが表示されたら、シンボル ファイルを読み込みます。 **IntelliTrace**ウィンドウで、例外として強調表示されます。"スロー: 重大なエラーが発生しました!"。
 
      [IntelliTrace] ウィンドウで、例外を選択して失敗したコードを表示します。
 
-3. SharePoint ソリューションを開くと、コメント アウトまたは削除してエラーを修正、**スロー** featuredeactivating () プロシージャの上部にあるステートメントです。
+3. SharePoint ソリューションを開くと、コメント アウトまたは削除してエラーを修正、**スロー** featuredeactivating () プロシージャの上部にあるステートメント。
 
 4. Visual Studio でソリューションをリビルドし、SharePoint に再配置します。
 
 5. 次の手順を実行して、フィーチャーを非アクティブにします。
 
-    1. **サイトの操作**メニューを SharePoint では、**サイト設定**です。
+    1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
 
-    2. **サイトの操作**、選択、**サイト機能の管理**リンクします。
+    2. **サイトの操作**、選択、**サイト機能の管理**リンク。
 
-    3. 横に**IntelliTraceTest Feature1**、選択、 **Deactivate**ボタンをクリックします。
+    3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
 
-    4. [警告] ページで、選択、**このフィーチャーを非アクティブ**リンクします。
+    4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
 
-6. タスクの一覧を開き、いることを確認、**ステータス**の非アクティブ化タスクの値が「完了」とその**達成率**値は 100% です。
+6. タスクの一覧を開き、いることを確認、**状態**非アクティブ化タスクの値が「完了」とその **% 完了**値は 100% です。
 
      コードは、適切に実行されています。
 
 ## <a name="see-also"></a>関連項目
 
-[SharePoint コードの検証およびデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)  
+[検証し、SharePoint コードのデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)  
 [IntelliTrace](/visualstudio/debugger/intellitrace)  
 [チュートリアル: 単体テストを使用した SharePoint コードの確認します。](https://msdn.microsoft.com/library/gg599006(v=vs.100).aspx)

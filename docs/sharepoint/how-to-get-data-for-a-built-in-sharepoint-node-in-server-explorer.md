@@ -1,5 +1,5 @@
 ---
-title: '方法: サーバー エクスプ ローラーで組み込みの SharePoint ノードのデータ取り出し |Microsoft ドキュメント'
+title: '方法: サーバー エクスプ ローラーで、組み込みの SharePoint ノードのデータを取得 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,26 +16,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f448ec8d7cfe22495aa3f7b2ce9191f106205c33
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 06965449cd07fb39480eb1974fc1c90e2d126c73
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119817"
 ---
-# <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>方法: サーバー エクスプローラーの組み込みの SharePoint ノードのデータを取得する
-  組み込みの SharePoint ノードごとに**サーバー エクスプ ローラー**ノードが表す基になる SharePoint コンポーネントのデータを取得することができます。 詳細については、次を参照してください。[サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張する](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)です。  
+# <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>方法: サーバー エクスプ ローラーで、組み込みの SharePoint ノードのデータを取得します。
+  内の各組み込み SharePoint ノードの**サーバー エクスプ ローラー**ノードが表す基になる SharePoint コンポーネントのデータを取得できます。 詳細については、次を参照してください。[サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)します。  
   
 ## <a name="example"></a>例  
- 次のコード例は、リストのノードが表す基になっている SharePoint リストのデータを取得する方法を示します**サーバー エクスプ ローラー**です。 既定では、一覧のノードにある、**ブラウザーで表示**コンテキスト メニュー項目をリストを開く Web ブラウザーでクリックします。 この例では、一覧のノードを拡張を追加して、 **Visual Studio でのビュー**コンテキスト メニュー項目を直接 Visual Studio でのリストを開きます。 コードでは、リスト ボックスの一覧を開くには Visual Studio での URL を取得するノードのデータにアクセスします。  
+ 次のコード例は、[リスト] ノードを表す基になる SharePoint リストのデータを取得する方法を示します**サーバー エクスプ ローラー**します。 既定では、一覧のノードにある、**ブラウザーで表示**コンテキスト メニュー項目を Web ブラウザーで、リストを開く をクリックしたことができます。 この例では、一覧のノードを拡張を追加して、 **Visual Studio でのビュー**リストを Visual Studio で直接表示されるコンテキスト メニュー項目。 コードでは、Visual Studio で開きますリストの URL を取得するノードのリストのデータにアクセスします。  
   
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#10)]
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#10)]  
   
- この例では、SharePoint プロジェクト サービスを使用して、取得、 <xref:EnvDTE.DTE> Visual Studio で開くために使用できるオブジェクトを一覧表示します。 SharePoint プロジェクト サービスの詳細については、次を参照してください。 [SharePoint プロジェクト サービスを使用して](../sharepoint/using-the-sharepoint-project-service.md)です。  
+ この例では、SharePoint プロジェクト サービスを使用して、取得、 <xref:EnvDTE.DTE> Visual Studio で開くために使用するオブジェクトを一覧表示します。 SharePoint プロジェクト サービスの詳細については、次を参照してください。 [SharePoint プロジェクト サービスを使用して、](../sharepoint/using-the-sharepoint-project-service.md)します。  
   
- 拡張機能の SharePoint ノードを作成する基本的なタスクの詳細については、次を参照してください。[する方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)です。  
+ 拡張機能の SharePoint ノードを作成する基本的なタスクの詳細については、次を参照してください。[方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)します。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードをコンパイルします  
  この例では、次のアセンブリへの参照が必要です。  
   
 -   EnvDTE  
@@ -46,13 +47,12 @@ ms.lasthandoff: 04/16/2018
   
 -   System.ComponentModel.Composition  
   
-## <a name="deploying-the-extension"></a>拡張機能の配置  
- 展開する、**サーバー エクスプ ローラー**拡張機能、作成、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)です。  
+## <a name="deploy-the-extension"></a>拡張機能をデプロイします。  
+ 展開する、**サーバー エクスプ ローラー**拡張機能、作成、[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]アセンブリおよびその他の拡張機能を配布するファイルの拡張機能 (VSIX) にパッケージ化します。 詳細については、次を参照してください。 [Visual Studio の SharePoint ツールの拡張機能を展開](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [サーバー エクスプ ローラーで SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
+## <a name="see-also"></a>関連項目
+ [サーバー エクスプ ローラーで、SharePoint 接続 ノードを拡張します。](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [方法: サーバー エクスプ ローラーでの SharePoint ノードを拡張](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
- [SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)   
- [Visual Studio での SharePoint ツールの拡張機能の配置](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
-  
+ [SharePoint プロジェクト サービスを使用します。](../sharepoint/using-the-sharepoint-project-service.md)   
+ [Visual Studio の SharePoint ツールの拡張機能をデプロイします。](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   

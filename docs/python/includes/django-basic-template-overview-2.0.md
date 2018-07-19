@@ -1,10 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: b629de8144e08c7c0019a0a116f84e5877c3a477
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 0ee0234e91cdf07c2b52c39d065d527a776dc4ce
+ms.sourcegitcommit: 64bf371ffe294e9b3cf769db03cf0f5c1a9b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666979"
 ---
 ### <a name="create-a-project-using-django-20"></a>Django 2.0 を使用してプロジェクトを作成する
 
@@ -16,7 +17,7 @@ ms.lasthandoff: 04/27/2018
 
 1. `pip install django` を実行して、グローバルな Python 環境にある最新の Django パッケージをインストールします。
 
-1. `django-admin startproject <project_name>` を実行します。`<project_name>` は、"HelloDjango" など手順 1 で使用したものと同じプロジェクト名に置き換えてください。 `startproject` コマンドによって、ファイル `__init.py__`、`settings.py`、`urls.py`、および `wsgi.py` を格納する `<project_name>` と一致するフォルダーに加えて、`manage.py` ファイルが作成されます。
+1. `django-admin startproject <project_name>` を実行します。`<project_name>` は、"HelloDjango" など手順 1 で使用したものと同じプロジェクト名に置き換えてください。 `startproject` コマンドによって、ファイル `__init__.py`、`settings.py`、`urls.py`、および `wsgi.py` を格納する `<project_name>` と一致するフォルダーに加えて、`manage.py` ファイルが作成されます。
 
 1. Visual Studio で、次のようにプロジェクト内の Django 1.x ファイルを Django 2.x ファイルに置き換えます。
 

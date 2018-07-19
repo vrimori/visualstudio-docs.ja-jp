@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a529c52472eca82d3b78860087c9e81aace45d5
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 542814c5902f2dba1c76b33f78273aadfb583eff
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750481"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282974"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
@@ -50,7 +50,7 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 ### <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス
 
-[Visual Studio 2017 をダウンロードする](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
+[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
 
  Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
 
@@ -308,7 +308,7 @@ Visual Studio 2017 のすべてのエディションに付属:
 
 .NET Core は、モジュール形式のクロスプラットフォームかつオープン ソースを実装した汎用の .NET Standard です、.NET Framework と同じ API がたくさん含まれています。
 
-.NET Core プラットフォームは複数コンポーネントで構成され、マネージ コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
+.NET Core プラットフォームは複数コンポーネントで構成され、マネージド コンパイラ、ランタイム、基本クラス ライブラリ、および ASP.NET Core などの多数のアプリケーション モデルが含まれます。 .NET Core は、Windows、Linux、macOS の 3 つの主要オペレーティング システムをサポートしています。 .NET Core は、デバイス、クラウド、埋め込み/IoT のシナリオで使用できます。
 
 Docker 対応にもなりました。
 
@@ -338,8 +338,8 @@ Docker 対応にもなりました。
 
 Visual Studio 2017 は、より優れた開発を可能にする新機能で頻繁に更新されています。 現在、試験的プレビュー状態にある、特に重要な更新のいくつかをご紹介します。
 
-* **[Live Share](https://www.visualstudio.com/services/live-share/)**。コードベースとそのコンテキストをチームメイトと共有し、Visual Studio 内で直接、双方向のインスタント コラボレーションができるようにする新しいツールです。 Live Share では自分が共有したプロジェクトをチームメイトがシームレスかつ安全に読み取り、移動、編集、デバッグすることができます。<br><br>詳細については、[Live Share の FAQ](/visualstudio/liveshare/faq) を参照してください。<br><br>
-* **[IntelliCode](https://www.visualstudio.com/services/intellicode/)**。AI を使用してコンテキスト対応の優れた入力候補を提示したり、開発者のコードをチームのパターンとスタイルに誘導したり、見つけにくいコードの問題を検出したり、非常に重要な領域のコード レビューに注目したりすることでソフトウェア開発を拡張する新機能です。 <br><br>詳細については、[IntelliCode の FAQ](../ide/not-in-toc/intellicode-faq.md) を参照してください。
+* **[Live Share](https://visualstudio.microsoft.com/services/live-share/)**。コードベースとそのコンテキストをチームメイトと共有し、Visual Studio 内で直接、双方向のインスタント コラボレーションができるようにする新しいツールです。 Live Share では自分が共有したプロジェクトをチームメイトがシームレスかつ安全に読み取り、移動、編集、デバッグすることができます。<br><br>詳細については、[Live Share の FAQ](/visualstudio/liveshare/faq) を参照してください。<br><br>
+* **[IntelliCode](https://visualstudio.microsoft.com/services/intellicode/)**。AI を使用してコンテキスト対応の優れた入力候補を提示したり、開発者のコードをチームのパターンとスタイルに誘導したり、見つけにくいコードの問題を検出したり、非常に重要な領域のコード レビューに注目したりすることでソフトウェア開発を拡張する新機能です。 <br><br>詳細については、[IntelliCode の FAQ](../ide/not-in-toc/intellicode-faq.md) を参照してください。
 
 Visual Studio 2017 のその他の機能について知りたい場合は、 [Visual Studio のロードマップ](/visualstudio/productinfo/vs2018-roadmap)のページを参照してください。
 
@@ -358,5 +358,5 @@ Visual Studio を向上させることができるご提案がある場合、ま
 * [Visual Studio 2017 リリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# の新機能](/dotnet/csharp/whats-new)
-* [Team Foundation Server の新機能](https://www.visualstudio.com/docs/whats-new)
-* [Visual Studio for Mac の新機能](https://www.visualstudio.com/vs/visual-studio-mac/)
+* [Team Foundation Server の新機能](/tfs/server/whats-new?view=vsts)
+* [Visual Studio for Mac の新機能](https://visualstudio.microsoft.com/vs/visual-studio-mac/)

@@ -1,5 +1,5 @@
 ---
-title: FeatureProperties 要素 |Microsoft ドキュメント
+title: FeatureProperties 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3b03de87c13744e3b678d4f51e3950352fa2d475
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 26fcdb1dd7fa3b62f7882deb1a077b9466e52018
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34766715"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324998"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties 要素
-  SharePoint に配置されるときに、機能に含まれているプロパティの値のコレクション。 フィーチャーが配置されると、プロパティの値をコードでアクセスできます。  
+  SharePoint に配置されるときに、機能に含まれているプロパティ値のコレクション。 フィーチャーが配置されると、プロパティ値をコードでアクセスできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,20 +51,20 @@ ms.locfileid: "34766715"
 |-------------|-----------------|  
 |[ProjectItem](../sharepoint/projectitem-element.md)|SharePoint プロジェクト項目を表します。 この要素の必須のルート要素の`.spdata`ファイル。|  
   
-## <a name="remarks"></a>コメント  
- フィーチャーのプロパティの詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)です。  
+## <a name="remarks"></a>Remarks  
+ 機能プロパティの詳細については、次を参照してください。[プロジェクト項目でパッケージ化と配置の情報を提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)します。  
   
 ## <a name="element-information"></a>要素情報
   
 |要素|説明|  
 |-------------|-----------------|  
-|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|  
+|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
-|**検証ファイル**|ProjectItemModelSchema.xsd|  
+|**ファイルの検証**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint プロジェクト項目のスキーマ リファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
- [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
+ [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
+ [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
   
   

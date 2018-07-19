@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 20c692e648e094d6d7c62cc5099b73ba2f27e3c7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7313c12558da4ddda6cd38c8a1dff135a6f55cb8
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844304"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps でラボ環境を使用する
 
@@ -35,8 +36,8 @@ ms.lasthandoff: 04/26/2018
 |![クラウドのラボ環境](../media/topology_cloud.png)| このラボ環境は、_サーバー トポロジ_と同様に機能します。ローカルで物理または仮想マシンを実行する必要がないため、設定に費やす時間を減らせ、メンテナンスが簡単になり、コストを抑えことができます。 Microsoft Azure などのクラウド環境には、複数の Web サイトや仮想マシンをカスタム ネットワークで早く簡単に構成できます。|
 |![クライアント サーバーのラボ環境](../media/topology_clientserver.png)| このラボ環境は、*クライアント/サーバー トポロジ*を備えています。これはサーバーとクライアントのコンポーネントを備えたアプリケーションをテストするために、よく使用されます。 クライアント/サーバー トポロジでは、アプリケーションのテストに使用されるクライアントとサーバーのすべてのコンピューターはラボ環境内にあります。 このトポロジを使用すると、テストに影響を与える各コンピューターからテスト データを収集することができます。|
 
-|         |         |
-|---------|---------|
+|   |   |
+|---|---|
 |  ![ビデオのムービー カメラ アイコン](../../install/media/video-icon.png)  |    テスト用のラボ環境の管理に関する[ビデオを視聴します](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing)。 |
 
 ## <a name="use-the-cloud-with-team-services-or-team-foundation-server-build-and-release"></a>Team Services や Team Foundation Server ビルドとリリースをクラウドと共に使用する
@@ -74,7 +75,8 @@ Visual Studio Lab Management で作成できるラボ環境には、**標準環�
 
 **標準環境:** 標準環境には、仮想マシンと物理マシンを混在させることができます。 また、サードパーティの仮想フレームワークで管理されている標準環境に、仮想マシンを追加することもできます。 標準環境では、SCVMM サーバーなどの追加のサーバー リソースは必要ありません。
 
-**SCVMM 環境:** SCVMM 環境には、SCVMM (System Center Virtual Machine Manager) で管理されている仮想マシンのみ含めることができるため、SCVMM 環境内の仮想マシンは、Hyper-V の仮想フレームワークでのみ実行できます。 ただし SCVMM 環境には、標準環境では使用できない、次の自動機能および管理機能が用意されています。
+
+  **SCVMM 環境:** SCVMM 環境には、SCVMM (System Center Virtual Machine Manager) で管理されている仮想マシンのみ含めることができるため、SCVMM 環境内の仮想マシンは、Hyper-V の仮想フレームワークでのみ実行できます。 ただし SCVMM 環境には、標準環境では使用できない、次の自動機能および管理機能が用意されています。
 
 - **環境スナップショット:** 環境スナップショットには、ラボ環境の状態が含まれているため、クリーンな環境へすぐに復元したり、変更した環境の状態を保存したりできます。 また、ビルド、配置、テストのワークフローを使用して、環境スナップショットの保存および復元のプロセスを自動化することもできます。
 

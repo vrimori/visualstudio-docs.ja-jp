@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bdfa8e854049e7de6c6edd49454d1efa55e2a05b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ff5d9646d6715b546179058074f2279810b9ca48
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948341"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282231"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
@@ -26,9 +26,10 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 サインインすると、Visual Studio エクスペリエンスが強化されます。 たとえば、数例を挙げると、サインイン後にデバイス全体の設定を同期したり、評価期間を延長したり、Azure サービスに自動的に接続したりできます。
 
-期待できる内容とサイン後に行うことができる内容の完全なリストを以下に示します。  
+期待できる内容とサイン後に行うことができる内容の完全なリストを以下に示します。
 
-- **Visual Studio Dev Essentials プログラムにアクセスする** - このプログラムには、無料のソフトウェア提供サービス、トレーニング、サポートなどが含まれます。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。
+- 
+  **Visual Studio Dev Essentials プログラムにアクセスする** - このプログラムには、無料のソフトウェア提供サービス、トレーニング、サポートなどが含まれます。 詳細については、「 [Visual Studio Dev Essentials](http://aka.ms/vsdevhelp) 」をご覧ください。
 
 - **Visual Studio の設定を同期する** - どのデバイス上の Visual Studio にサインインしても、ユーザーがカスタマイズした設定 (キー バインド、ウィンドウのレイアウト、配色テーマなど) がすぐに適用されます。 「[Visual Studio での同期された設定](../ide/synchronized-settings-in-visual-studio.md)」をご覧ください。
 
@@ -62,9 +63,9 @@ Visual Studio を初めて起動すると、サインインして基本登録情
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-サインイン時に問題が発生した場合は、[アカウントのサポート ページ](https://www.visualstudio.com/subscriptions/support/)を参照してヘルプを表示してください。
+サインイン時に問題が発生した場合は、[アカウントのサポート ページ](https://visualstudio.microsoft.com/subscriptions/support/)を参照してヘルプを表示してください。
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)  
+* [Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)
 * [Visual Studio IDE の概要](../ide/visual-studio-ide.md)

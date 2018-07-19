@@ -1,5 +1,5 @@
 ---
-title: '方法: SharePoint ソリューション パッケージをカスタマイズ |Microsoft ドキュメント'
+title: '方法: SharePoint ソリューション パッケージをカスタマイズ |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -22,78 +22,76 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9ffe532653abf58e4af6297e69c1049a916144cf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fd1ebe9e49a0b3e26d090fdbbdbbe4dd37c0344a
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119886"
 ---
-# <a name="how-to-customize-a-sharepoint-solution-package"></a>方法: SharePoint ソリューション パッケージをカスタマイズする
-  パッケージ デザイナーを使用して、作成およびパッケージ (.wsp) をカスタマイズすることができます。 たとえば、SharePoint プロジェクト項目と機能の追加、Web サーバーがソリューションを展開するときのリセットし、配置サーバーの種類を設定するかどうかを指定できます。  
+# <a name="how-to-customize-a-sharepoint-solution-package"></a>方法: SharePoint ソリューション パッケージをカスタマイズします。
+  パッケージ デザイナーを使用して作成およびパッケージをカスタマイズすることができます (*.wsp*)。 たとえば、SharePoint プロジェクト項目と機能の追加、Web サーバーが、ソリューションを展開するときにリセットし、配置サーバーの種類を設定するかどうかを指定できます。  
   
-## <a name="opening-the-package-designer"></a>パッケージ デザイナーを開く  
+## <a name="open-the-package-designer"></a>パッケージ デザイナーを開く  
   
-#### <a name="to-open-the-package-designer"></a>パッケージ デザイナーを開く  
+#### <a name="to-open-the-package-designer"></a>パッケージ デザイナーを開く
   
--   **ソリューション エクスプ ローラー**をダブルクリックして**パッケージ**を選択または**ビュー デザイナー**のショートカット メニューの **パッケージ**です。  
+-   **ソリューション エクスプ ローラー**、ダブルクリック**パッケージ**、選択または**ビュー デザイナー**のショートカット メニューの **パッケージ**。  
   
-## <a name="viewing-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを表示します。  
- パッケージ デザイナーを使用して、変更およびパッケージのマニフェスト ファイルを生成することができます。 次に、Visual Studio でこのファイルの XML コードを表示できます。  
+## <a name="view-the-packaged-manifestffile"></a>パッケージ化された manifestfFile を表示します。  
+ パッケージ デザイナーを使用して、変更し、パッケージ マニフェスト ファイルを生成することができます。 次に、Visual Studio でこのファイルの XML コードを表示できます。  
   
 #### <a name="to-view-the-xml-source-file"></a>XML ソース ファイルを表示するには  
   
-1.  **パッケージ デザイナー**、選択**マニフェスト**です。  
+1.  **パッケージ デザイナー**、選択**マニフェスト**します。  
   
 #### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>ソリューション エクスプ ローラーを使用してパッケージのマニフェスト ファイルを表示するには  
   
-1.  **ソリューション エクスプ ローラー**、選択**すべてのファイル**です。  
+1.  **ソリューション エクスプ ローラー**、選択**すべてのファイル**します。  
   
-2.  パッケージを展開し、Package.package を展開し、Package.Template.xml ファイルを開きます。  
+2.  パッケージを展開し、Package.package を展開し、開きます、 *Package.Template.xml*ファイル。  
   
     > [!NOTE]  
-    >  パッケージ テンプレートのマニフェスト XML ファイルを開くし、ファイルが自動的に検証されたら、エラー一覧 ウィンドウに表示される警告を無視することができます。  
+    >  パッケージ テンプレートについてはマニフェスト XML ファイルを開くし、ファイルが自動的に検証、エラー一覧 ウィンドウに表示される警告を無視することができます。  
   
-## <a name="changing-the-manifest-template"></a>マニフェスト テンプレートの変更  
- Visual Studio XML エディターまたはマニフェスト テンプレート ペインでパッケージ マニフェスト ファイルの XML コードを変更することができます。 XML コードを変更するは、パッケージのパッケージ マニフェスト ファイルにマージされます。  
+## <a name="change-the-manifest-template"></a>マニフェスト テンプレートを変更します。  
+ Visual Studio XML エディターまたはマニフェスト テンプレート ペインで、パッケージのマニフェスト ファイルの XML コードを変更することができます。 XML コードに対する変更は、パッケージのパッケージのマニフェスト ファイルにマージされます。  
   
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML エディターを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **パッケージ デザイナー**、選択、**マニフェスト** タブで、展開、**オプションの編集** ノードを選択し、 **XML エディターで開いている**リンクします。  
+1.  **パッケージ デザイナー**、選択、**マニフェスト** タブで、展開、**オプションの編集**ノードを選択し、 **XML エディターで開いている**リンク。  
   
      XML への変更は、パッケージ マニフェスト ファイルにマージされます。  
   
 #### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>マニフェスト テンプレート ペインを使用して、マニフェスト テンプレートを変更するには  
   
-1.  **パッケージ デザイナー**、選択、**マニフェスト** タブで、展開、**編集オプション**ノードを展開し、マニフェスト テンプレート ペインに表示する XML を変更します。  
+1.  **パッケージ デザイナー**、選択、**マニフェスト** タブで、展開、**編集オプション**ノード、およびマニフェスト テンプレート ペインに表示される XML を変更します。  
   
-     XML への変更が表示される、**プレビューのパッケージ化されたマニフェスト**ウィンドウです。  
+     XML への変更に表示される、**プレビューのパッケージ化されたマニフェスト**ウィンドウ。  
   
-## <a name="overwriting-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを上書きします。  
- パッケージ デザイナーを無効にし、マニフェスト xml ファイルを手動で作成できます。 この手順を実行する最初に、パッケージ デザイナーの現在の設定は、パッケージのテンプレート XML ファイルに保存されます。 次に、変更したり、XML コードを上書きします。  
+## <a name="overwrite-the-packaged-manifest-file"></a>パッケージ マニフェスト ファイルを上書き  
+ パッケージ デザイナーを無効にし、作成することができます、 *manifest.xml*ファイルを手動でします。 この手順を実行する最初に、パッケージ デザイナーの現在の設定は、パッケージのテンプレート XML ファイルに保存されます。 次に、変更したり、XML コードを上書きできます。  
   
 > [!NOTE]  
->  追加またはパッケージ デザイナーが無効になっている間は、XML ファイルで SharePoint プロジェクト項目およびフィーチャーを削除した場合は、これらのプロジェクト項目およびフィーチャーはパッケージ化されます。  
+>  追加パッケージ デザイナーが無効になっているときに、XML ファイルの SharePoint プロジェクト項目と機能を削除するか、これらのプロジェクト項目と機能がパッケージ化されません。  
   
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>デザイナーを無効にすると、パッケージ マニフェスト ファイルを上書きするには  
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>デザイナーを無効にして、パッケージ マニフェスト ファイルを上書きするには  
   
-1.  **パッケージ デザイナー**、選択、**マニフェスト**タブです。  
+1.  **パッケージ デザイナー**、選択、**マニフェスト**タブ。  
   
-2.  である必要があります。  
-  
-3.  展開、**編集オプション** ノードを選択、**上書き生成された XML と編集、XML エディターでマニフェスト**リンクをクリックして、 **はい**ボタンをクリックします。  
+2.  展開、**オプションの編集**ノード、選択、**上書き生成された XML と編集マニフェスト XML エディターで**リンクをクリックして、**はい**ボタン。  
   
      テンプレートは、現在のパッケージ マニフェスト ファイルで更新されます。  
   
-## <a name="enabling-the-package-designer"></a>パッケージ デザイナーを有効にします。  
- マニフェスト xml ファイルをカスタマイズする、パッケージ デザイナーを再度有効にすることができます。  
+## <a name="enable-the-package-designer"></a>パッケージ デザイナーを有効にします。  
+ 再度パッケージをカスタマイズするデザイナーが有効にすることができます、 *manifest.xml*ファイル。  
   
 #### <a name="to-re-enable-the-designer"></a>デザイナーを再度有効にするには  
   
-1.  **パッケージ デザイナー**、選択、**マニフェストの編集を破棄してデザイナーを再度有効に**リンクをクリックして、**はい**ボタンをクリックします。  
+1.  **パッケージ デザイナー**、選択、**マニフェストの編集を破棄し、デザイナーを再度有効に**リンクをクリックして、**はい**ボタン。  
   
-     元のテキストで、テンプレートが更新され、XML に変更は失われます。  
+     元のテキストで、テンプレートが更新され、XML への変更は失われます。  
   
-## <a name="see-also"></a>関連項目  
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>関連項目
+ [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

@@ -9,28 +9,28 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c6cd992eb5eb7dcafbf99eb99207a8f823a97a54
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: b8f2a7457500ccde75fb0ac8ce698eb27c760459
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34477633"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280425"
 ---
 # <a name="the-opsgility-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Opsgility 特典
 
-選択されている Visual Studio サブスクリプションには、1 年間のオンデマンド トレーニングへのアクセスおよびインストラクターによるトレーニングの 15% の割引に加えて、ハンズ オン ラボへのアクセス、認定パスなどが含まれています。  
+選択されている Visual Studio サブスクリプションには、1 年間のオンデマンド トレーニングへのアクセスおよびインストラクターによるトレーニングの 15% の割引に加えて、ハンズ オン ラボへのアクセス、認定パスなどが含まれています。
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2.  [特典] ページの [ツール] セクションで、Opsgility のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。  
+2.  [特典] ページの [ツール] セクションで、Opsgility のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。
 
 3.  Opsgility 特典を使うには、特典タイルの下部にある **[コードの取得]** リンクをクリックします。   クーポン コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックして続行します。
 
     ![Opsgility 特典タイル](_img\vs-opsgility\vs-opsgility-tile.png)
 
 
-4.  [Visual Studio Enterprise 向け Opsgility オンライン トレーニング](https://www.opsgility.com/vse)のランディング ページにリダイレクトされます   (サポート担当者とのチャット セッションを開始する機会を提供されることがあります。  チャットを始めない場合は、ウィンドウを最小化できます)。要求された連絡先情報を入力し、**[Register]\(登録\)** をクリックします。  
+4.  [Visual Studio Enterprise 向け Opsgility オンライン トレーニング](https://www.opsgility.com/vse)のランディング ページにリダイレクトされます   (サポート担当者とのチャット セッションを開始する機会を提供されることがあります。  チャットを始めない場合は、ウィンドウを最小化できます)。要求された連絡先情報を入力し、**[Register]\(登録\)** をクリックします。
 
     ![Opsgility 特典のランディング ページ](_img\vs-opsgility\vs-opsgility-registration.png)
 
@@ -50,9 +50,9 @@ ms.locfileid: "34477633"
 
 *Microsoft Partner Network (MPN)、Microsoft Valued Partner (MVP)、Microsoft Certified Trainer、BizSpark、Imagine、NFR、FTE は含まれません。*
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="support-resources"></a>サポート リソース
--  Opsgility に関するヘルプが必要ですか。  「[問い合わせ](https://www.opsgility.com/SupportTicket)」ページからサポート チケットを送信してください。 
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 
+-  Opsgility に関するヘルプが必要ですか。  「[問い合わせ](https://www.opsgility.com/SupportTicket)」ページからサポート チケットを送信してください。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

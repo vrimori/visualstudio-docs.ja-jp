@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 19de1453722629e880a5fc64ad0b5f4d63175eba
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 75cda2b45137d982038587ee1dcb73661b77f0df
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815796"
 ---
 # <a name="warnings-and-errors"></a>警告とエラー
 
@@ -62,13 +63,13 @@ IntelliTest は、[入力生成](input-generation.md)中に探索する実行パ
 
 たとえば、次のコードは、約 100 の分岐を使用します。
 
-```
+```csharp
 for (int i=0; i<100; i++) { }
 ```
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxBranches** オプションを編集することができます。 次の例では、この上限は実質的になくなります。
 
-```
+```csharp
 [PexMethod(MaxBranches=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -79,7 +80,7 @@ public void MyTest(...) {
 
 テスト コードでは、[PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) を使用して、ループ条件によって生成される制約を無視することができます。
 
-```
+```csharp
 for (int i=0; 
     PexSymbolicValue.Ignore(i<100); // IntelliTest will 'forget' about this path condition
     i++) 
@@ -102,7 +103,7 @@ IntelliTest は、[入力生成](input-generation.md)中に探索する実行パ
 
 たとえば、次のコード内の各パスは、**n+1** 条件を使用します。
 
-```
+```csharp
 [PexMethod]
 void ParameterizedTest(int n) {
     // conditions are "0<n", "1<n", ..., "!(n<n)"
@@ -117,7 +118,7 @@ void ParameterizedTest(int n) {
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxConditions** オプションを編集することができます。 例:
 
-```
+```csharp
 [PexMethod(MaxConditions=10000)]
 void ParameterizedTest(int n) {
     // ...
@@ -128,7 +129,7 @@ void ParameterizedTest(int n) {
 
 [PexSymbolicValue](static-helper-classes.md#pexsymbolicvalue) を使用して、ループ条件によって生成される制約を無視することができます。
 
-```
+```csharp
 [PexMethod]
 void ParameterizedTest(int n) {
     int nshadow = PexSymbolicValue.Ignore(n); // IntelliTest looses track of 'n'
@@ -148,7 +149,7 @@ IntelliTest は、[入力生成](input-generation.md)中に探索する実行パ
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxCalls** オプションを編集することができます。 次の例では、この上限は実質的になくなります。
 
-```
+```csharp
 [PexMethod(MaxCalls=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -164,7 +165,7 @@ IntelliTest は、[入力生成](input-generation.md)中に探索する実行パ
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxStack** オプションを編集することができます。 次の例では、この上限は実質的になくなります (推奨されません)。
 
-```
+```csharp
 [PexMethod(MaxStack=int.MaxValue)]
 public void MyTest(...) {
     // ....
@@ -182,7 +183,7 @@ IntelliTest が特定の入力を持つパラメーター化されたテスト�
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxRuns** オプションを編集することができます。 次の例では、この上限は実質的になくなります (推奨されません)。
 
-```
+```csharp
 [PexMethod(MaxRuns=2000)]
 public void MyTest(...) {
     // ....
@@ -200,7 +201,7 @@ IntelliTest は多くの場合、多くの興味深いテスト入力を最初�
 
 [PexClass](attribute-glossary.md#pexclass) や [PexMethod](attribute-glossary.md#pexmethod) などの **PexSettingsAttributeBase** から派生した属性の **MaxRunsWithoutNewTests** オプションを編集することができます。 次の例では、この上限は実質的になくなります (推奨されません)。
 
-```
+```csharp
 [PexMethod(MaxRunsWithoutNewTests=2000)]
 public void MyTest(...) {
     // ....
@@ -236,7 +237,7 @@ IntelliTest は、すべての .NET 型の[テスト入力を生成します](in
 
   たとえば、IntelliTest が "**System.Collections.IDictionary** に割り当てることができる型を知らない" ことを報告した場合、次の **PexUseTypeAttribute** をテスト (またはフィクスチャ クラス) に添付することで補助できます。
 
-  ```
+  ```csharp
   [PexMethod]
   [PexUseType(typeof(System.Collections.Hashtable))]
   public void MyTest(IDictionary[] dictionaries) { ... }
@@ -244,7 +245,7 @@ IntelliTest は、すべての .NET 型の[テスト入力を生成します](in
 
 * **アセンブリ レベル属性**
 
-  ```
+  ```csharp
   [assembly: PexUseType(typeof(System.Collections.Hashtable))]
   ```
 

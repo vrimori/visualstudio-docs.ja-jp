@@ -5,18 +5,18 @@ author: dantogno
 ms.author: v-davian
 ms.date: 05/25/2018
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: f80debf3098fd8296ddfa205db3ed296707e23c0
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: c527a27bcca51748b146f60541dd02019e2853ac
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572418"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36279851"
 ---
 # <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
 
 ![図案化された Unity and Visual Studio for Mac の画像](media/vsmac-tools-unity-image1.png)
 
-Visual Studio for Mac Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。 
+Visual Studio for Mac Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio for Mac を Unity プラットフォームでクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。
 
 Visual Studio for Mac には Unity の統合が既に含まれており、Unity 2018.1 以降では、Visual Studio for Mac が Unity プロジェクト用の既定の C# IDE です。
 
@@ -26,7 +26,7 @@ Visual Studio for Mac には Unity の統合が既に含まれており、Unity 
 
 ### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Visual Studio for Mac Community Edition との互換性
 
-[Visual Studio for Mac Community Edition](https://www.visualstudio.com/) は無料で利用でき、Unity 2018.1 以降では Unity のインストールにバンドルされています。 詳しくは、Visual Studio for Mac Tools for Unity の[セットアップ ドキュメント](setup-vsmac-tools-unity.md)をご覧ください。
+[Visual Studio for Mac Community Edition](https://visualstudio.microsoft.com/) は無料で利用でき、Unity 2018.1 以降では Unity のインストールにバンドルされています。 詳しくは、Visual Studio for Mac Tools for Unity の[セットアップ ドキュメント](setup-vsmac-tools-unity.md)をご覧ください。
 
 ### <a name="intellisense-for-unity-messages"></a>Unity メッセージ用の IntelliSense
 
