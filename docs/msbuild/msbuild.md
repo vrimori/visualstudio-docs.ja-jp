@@ -13,17 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26646ecef952a6f4ff761f4e7239fc6e7e920ea1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e56cc8671da9639344b6531a530029a97c02e707
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31576002"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36327155"
 ---
 # <a name="msbuild"></a>MSBuild
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] は、アプリケーションをビルドするためのプラットフォームです。 MSBuild とも呼ばれるこのエンジンには、ビルド プラットフォームでソフトウェアを処理およびビルドする方法を制御する、プロジェクト ファイル用の XML スキーマが用意されています。 Visual Studio は MSBuild を使用しますが、MSBuild は Visual Studio に依存しません。 プロジェクト ファイルまたはソリューション ファイルに対して msbuild.exe を実行すると、Visual Studio がインストールされていない環境で、製品の統合とビルドを実行できます。  
   
- Visual Studio は、マネージ プロジェクトの読み込みとビルドを行う MSBuild をホストしています。 Visual Studio のプロジェクト ファイル (.csproj、vbproj、vcxproj など) には、IDE を使用してプロジェクトをビルドするときに実行される MSBuild XML コードが含まれています。 Visual Studio プロジェクトには、一般的な開発作業を行う必要なすべての設定とビルド プロセスがインポートされますが、Visual Studio 内のエディターや任意の XML エディターを使用してそれらを拡張または変更することもできます。  
+ Visual Studio は、マネージド プロジェクトの読み込みとビルドを行う MSBuild をホストしています。 Visual Studio のプロジェクト ファイル (.csproj、vbproj、vcxproj など) には、IDE を使用してプロジェクトをビルドするときに実行される MSBuild XML コードが含まれています。 Visual Studio プロジェクトには、一般的な開発作業を行う必要なすべての設定とビルド プロセスがインポートされますが、Visual Studio 内のエディターや任意の XML エディターを使用してそれらを拡張または変更することもできます。  
   
  C++ に対する MSBuild の詳細については、「[MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp)」をご覧ください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "31576002"
 ##  <a name="BKMK_CommandPrompt"></a> コマンド プロンプトでの MSBuild の使用  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をコマンド プロンプトで実行するには、MSBuild.exe にプロジェクト ファイルを渡し、適切なコマンド ライン オプションを指定して実行します。 コマンド ライン オプションでは、プロパティを設定したり、特定のターゲットを実行したりできるほか、ビルド処理を制御するその他のオプションも設定できます。 たとえば、`MyProj.proj` プロパティを `Configuration` に設定してファイル `Debug` をビルドするには、次のコマンド ライン構文を使用します。  
   
-```  
+```cmd  
 MSBuild.exe MyProj.proj /property:Configuration=Debug  
 ```  
   
@@ -136,7 +136,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 ###  <a name="BKMK_Tasks"></a> タスク  
  タスクとは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトでビルド処理を実行するために使用される一連の実行可能コードです。 たとえば、タスクでは入力ファイルをコンパイルしたり、外部ツールを実行したりします。 タスクは再利用が可能で、複数の開発者が複数のプロジェクトで共有できます。  
   
- タスクの実行ロジックはマネージ コードで記述され、[UsingTask](../msbuild/usingtask-element-msbuild.md) 要素を使用して [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にマップされます。 <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するマネージ型を記述することにより、独自のタスクを作成できます。 タスクを記述する方法の詳細については、「[タスクの作成](../msbuild/task-writing.md)」をご覧ください。  
+ タスクの実行ロジックはマネージド コードで記述され、[UsingTask](../msbuild/usingtask-element-msbuild.md) 要素を使用して [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にマップされます。 <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するマネージド型を記述することにより、独自のタスクを作成できます。 タスクを記述する方法の詳細については、「[タスクの作成](../msbuild/task-writing.md)」をご覧ください。  
   
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、実際の要件に合わせて変更できる一般的なタスクが含まれています。  例は、ファイルをコピーする [Copy](../msbuild/copy-task.md)、ディレクトリを作成する [MakeDir](../msbuild/makedir-task.md)、Visual C# ソース コード ファイルをコンパイルする [Csc](../msbuild/csc-task.md) などです。 使用可能なタスクと使用法については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」をご覧ください。  
   
@@ -167,7 +167,9 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
  コンソールまたは別の出力デバイスにビルド エラー、警告、およびメッセージを記録できます。 詳細については、「[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」と「[MSBuild でのログ](../msbuild/logging-in-msbuild.md)」をご覧ください。  
   
 ##  <a name="BKMK_VisualStudio"></a> Visual Studio での MSBuild の使用  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル形式を使用して、マネージ プロジェクトに関するビルド情報を保存します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インターフェイスを使用してプロジェクト設定に追加や変更が加えられると、プロジェクトごとに生成される .*proj ファイルにその内容が反映されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のホスト インスタンスを使用して、マネージ プロジェクトをビルドします。 つまり、マネージ プロジェクトは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でも、コマンド プロンプトを使用しても ([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされていない場合でも)、同じようにビルドできます。  
+ 
+  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル形式を使用して、マネージド プロジェクトに関するビルド情報を保存します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インターフェイスを使用してプロジェクト設定に追加や変更が加えられると、プロジェクトごとに生成される .*proj ファイルにその内容が反映されます。 
+  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のホスト インスタンスを使用して、マネージド プロジェクトをビルドします。 つまり、マネージド プロジェクトは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でも、コマンド プロンプトを使用しても ([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がインストールされていない場合でも)、同じようにビルドできます。  
   
  Visual Studio で MSBuild を使用する方法のチュートリアルについては、「[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)」をご覧ください。  
   

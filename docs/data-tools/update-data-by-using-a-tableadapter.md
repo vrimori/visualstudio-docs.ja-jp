@@ -1,5 +1,5 @@
 ---
-title: TableAdapter を使用してデータを更新します。
+title: TableAdapter を使用してデータを更新する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,31 +20,31 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: fba0258839af6675f07c0962ee4281516dce3295
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 88d4da868174396bfed148fc6088e5675e1198b2
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921577"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116894"
 ---
-# <a name="update-data-by-using-a-tableadapter"></a>TableAdapter を使用してデータを更新します。
+# <a name="update-data-by-using-a-tableadapter"></a>TableAdapter を使用してデータを更新する
 
-データセット内のデータを変更して検証後に送信できます、更新されたデータをデータベースに戻すを呼び出して、`Update`のメソッド、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)です。 `Update`メソッドを 1 つのデータ テーブルを更新して、に基づいて正しいコマンド (INSERT、UPDATE、または DELETE) を実行、<xref:System.Data.DataRow.RowState%2A>テーブル内の各データ行のです。 データセット関連テーブルがあるときに、Visual Studio は、更新プログラムを実行するために使用 TableAdapterManager クラスを生成します。 TableAdapterManager クラスにより、更新プログラムがデータベースで定義されている外部キー制約に基づく正しい順序で行われること。 データ バインド コントロールを使用する場合、データ バインディング アーキテクチャは、tableAdapterManager と呼ばれる TableAdapterManager クラスのメンバー変数を作成します。
+データセット内のデータを変更して検証した後のデータベースの更新されたデータを送信呼び出すことによって、`Update`のメソッド、 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)します。 `Update`メソッドを 1 つのデータ テーブルを更新してに基づいて適切なコマンド (INSERT、UPDATE、または DELETE) の実行、<xref:System.Data.DataRow.RowState%2A>表内の各データ行のできます。 データセットの関連するテーブルが、Visual Studio は、更新プログラムを実行するために使用 TableAdapterManager クラスを生成します。 TableAdapterManager クラスにより、データベースで定義されている外部キー制約に基づく正しい順序で更新が行われるようになります。 データ バインド コントロールを使用すると、データ バインディング アーキテクチャには、tableAdapterManager と呼ばれる TableAdapterManager クラスのメンバー変数が作成されます。
 
 > [!NOTE]
-> データセットの内容でデータ ソースを更新しようとすると、エラーが発生することができます。エラーを回避することをお勧め、アダプターを呼び出すコードを配置すること`Update`メソッドの中、 `try` / `catch`ブロックします。
+> データセットの内容でデータ ソースを更新しようとするときにエラーが発生することができます。 エラーを回避するをお勧め、アダプターを呼び出すコードを配置する`Update`メソッド内で、 `try` / `catch`ブロックします。
 
- データ ソースを更新する詳細な手順は、ビジネス ニーズによって異なることができますが、次の手順が含まれています。
+ データ ソースを更新するための実際の手順は、ビジネス ニーズによって異なることができますが、次の手順が含まれています。
 
-1.  呼び出し、アダプターの`Update`メソッドで、 `try` / `catch`ブロックします。
+1.  アダプターの呼び出す`Update`メソッドで、 `try` / `catch`ブロック。
 
 2.  例外が検出された場合は、エラーを引き起こしたデータ行を探します。
 
-3.  データの問題を調整 (プログラムですることはできますかに無効な行を変更するためのユーザーに提示することにより) を行し、更新プログラムをもう一度やり直して (<xref:System.Data.DataRow.HasErrors%2A>、 <xref:System.Data.DataTable.GetErrors%2A>)。
+3.  データの問題を調整 (プログラムを使用できる場合、または無効な行を変更するためのユーザーに提示することで) 行、および更新プログラムをもう一度やり直して (<xref:System.Data.DataRow.HasErrors%2A>、 <xref:System.Data.DataTable.GetErrors%2A>)。
 
 ## <a name="save-data-to-a-database"></a>データをデータベースに保存します。
 
-呼び出す、 `Update` TableAdapter のメソッドです。 データベースに書き込まれる値を含むデータ テーブルの名前を渡します。
+呼び出す、 `Update` TableAdapter のメソッド。 データベースに書き込まれる値を含むデータ テーブルの名前を渡します。
 
 ### <a name="to-update-a-database-by-using-a-tableadapter"></a>TableAdapter を使用してデータベースを更新するには
 

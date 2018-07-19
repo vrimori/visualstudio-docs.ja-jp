@@ -26,9 +26,6 @@
   items:
     - name: CPU 使用率の分析
       href: cpu-usage.md
-      items:
-        - name: ユニバーサル Windows アプリ (UWP) での CPU 使用率を分析します
-          href: analyze-cpu-usage-in-a-windows-universal-app.md
     - name: メモリ使用量の分析
       href: analyze-memory-usage.md
       items:
@@ -44,16 +41,10 @@
       href: perftips.md
     - name: JavaScript メモリの分析
       href: javascript-memory.md
-      items:
-        - name: 'チュートリアル: メモリ リークの検出 (JavaScript)'
-          href: walkthrough-find-a-memory-leak-javascript.md
     - name: ネットワーク使用量の分析
       href: network-usage.md
     - name: HTML UI の応答性の分析
       href: html-ui-responsiveness.md
-      items:
-        - name: 'チュートリアル: UI の応答性の向上 (HTML)'
-          href: walkthrough-improving-ui-responsiveness-html.md
     - name: パフォーマンス エクスプローラーの使用
       href: performance-explorer.md
       items:
@@ -194,7 +185,7 @@
                           href: da0012-significant-amount-of-reflection.md
                         - name: 'DA0013: String.Split/String.Substring が頻繁に使用されています'
                           href: da0013-high-usage-of-string-split-or-string-substring.md
-                        - name: 'DA0018: 32 ビット アプリケーションがプロセスのマネージ メモリ制限で実行されています'
+                        - name: 'DA0018: 32 ビット アプリケーションがプロセスのマネージド メモリ制限で実行されています'
                           href: da0018-32-bit-application-running-at-process-managed-memory-limits.md
                         - name: 'DA0021: ジェネレーション 1 のガベージ コレクションが高率です'
                           href: da0021-high-rate-of-gen-1-garbage-collections.md

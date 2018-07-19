@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumSectionContribs |Microsoft ドキュメント
+title: IDiaEnumSectionContribs |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47577b3a2abfef3b6c6741d2e25af418318340ce
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5903c276b82f8b689e67c20310ccc6d6a6514896
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463778"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057061"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
-データ ソースに含まれるさまざまなセクション貢献度を列挙します。  
+データ ソースに含まれるさまざまなセクションの投稿を列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,21 +35,21 @@ IDiaEnumSectionContribs : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDiaEnumSectionContribs::get__NewEnum](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e)この列挙子のバージョン。|  
-|[IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)|セクションのコントリビューションの数を取得します。|  
-|[IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)|インデックスを使用してセクション貢献度を取得します。|  
-|[IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)|列挙のシーケンス内の投稿をセクションの指定した数を取得します。|  
-|[IDiaEnumSectionContribs::Skip](../../debugger/debug-interface-access/idiaenumsectioncontribs-skip.md)|指定された数の列挙のシーケンス内の投稿をセクションをスキップします。|  
-|[IDiaEnumSectionContribs::Reset](../../debugger/debug-interface-access/idiaenumsectioncontribs-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IDiaEnumSectionContribs::Clone](../../debugger/debug-interface-access/idiaenumsectioncontribs-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[IDiaEnumSectionContribs::get__NewEnum](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)この列挙子のバージョン。|  
+|[IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)|セクションの投稿物の数を取得します。|  
+|[IDiaEnumSectionContribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)|インデックスを使用して、セクションの投稿を取得します。|  
+|[IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)|指定した列挙体シーケンス内のセクションの投稿数を取得します。|  
+|[IDiaEnumSectionContribs::Skip](../../debugger/debug-interface-access/idiaenumsectioncontribs-skip.md)|指定された数の列挙体シーケンスにおけるのセクションをスキップします。|  
+|[IDiaEnumSectionContribs::Reset](../../debugger/debug-interface-access/idiaenumsectioncontribs-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
+|[IDiaEnumSectionContribs::Clone](../../debugger/debug-interface-access/idiaenumsectioncontribs-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="note-for-callers"></a>呼び出し元に注意してください。  
- このインターフェイスから取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッドです。 詳細については例を参照してください。  
+ このインターフェイスから取得、 [idiasession::getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッド。 詳細については、例を参照してください。  
   
 ## <a name="example"></a>例  
- この例は、取得する方法を示します (、`GetEnumSectionContribs`関数) を使用し、(、`ShowSectionContribs`関数)、`IDiaEnumSectionContribs`インターフェイスです。 複数の完全な例の投稿をセクションを使用して、次を参照してください。、 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)インターフェイスです。  
+ この例は、取得する方法を示します (、`GetEnumSectionContribs`関数) を使用して、(、`ShowSectionContribs`関数)、`IDiaEnumSectionContribs`インターフェイス。 セクションの投稿物を使用してのより完全な例を参照してください、 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)インターフェイス。  
   
 ```C++  
   
@@ -101,7 +101,7 @@ void ShowSectionContribs(IDiaSession *pSession)
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

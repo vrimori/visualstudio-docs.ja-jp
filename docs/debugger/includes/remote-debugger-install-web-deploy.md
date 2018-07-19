@@ -14,18 +14,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: c22ba73b464f91bf3036541304cdf94e8660970d
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38811922"
 ---
-1. Visual Studio での Web 配置でアプリケーションを配置する場合は、サーバーで Web Deploy の最新バージョンをインストールします。
+1. Visual Studio での Web 配置にアプリケーションを配置する場合は、サーバーで Web Deploy の最新バージョンをインストールします。
 
-    Web Deploy をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)です。 (を IIS から Web Platform Installer のリンクを検索する  **IIS**サーバー マネージャーの左側のウィンドウでします。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
+    Web Deploy をインストールするには、使用、 [Web Platform Installer (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)します。 (IIS から Web Platform Installer のリンクを検索する選択**IIS**でサーバー マネージャーの左側のウィンドウ。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**)。
 
-    Web Platform Installer で、アプリケーション タブで、Web Deploy を検索します。直接インストーラーを入手することも、 [Microsoft ダウンロード センター](https://www.microsoft.com/search/result.aspx?q=webdeploy&form=dlc)です。 
+    Web Platform Installer で [アプリケーション] タブで、Web Deploy を紹介します。インストーラーを入手することも、 [Microsoft ダウンロード センター](https://www.microsoft.com/search/result.aspx?q=webdeploy&form=dlc)します。 
 
-2. Web Deploy が実行される確認正しく開くことによって**コントロール パネル > システムとセキュリティ > 管理ツール > サービス**ことを確認および**Web Deployment Agent サービス**が実行されている (サービス名は旧バージョンでは異なる) です。
+2. Web Deploy が実行されて正しく開いて**コントロール パネル > システムとセキュリティ > 管理ツール > サービス**ことを確認し、 **Web Deployment Agent サービス**が実行されている (、サービス名が以前のバージョンでは異なる) です。
 
-    エージェント サービスが実行されていない場合は、それを開始します。 これが存在しない場合を参照してください。**コントロール パネル > プログラム > プログラムのアンインストール**、検索**Microsoft Web Deploy <version>** です。 選択**変更**インストールを選択することを確認し、**はローカル ハード ドライブにインストールする**Web 配置のコンポーネントです。 変更のインストール手順を完了します。
+    エージェント サービスが実行されていない場合は、それを起動します。 それが存在しない場合を参照してください。**コントロール パネル > プログラム > プログラムのアンインストール**、検索**Microsoft Web Deploy <version>** します。 **変更**インストールを選択することを確認して**はローカル ハード ドライブにインストールされます**Web 配置のコンポーネント。 変更のインストール手順を完了します。

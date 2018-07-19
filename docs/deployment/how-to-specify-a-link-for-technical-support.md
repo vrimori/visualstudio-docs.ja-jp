@@ -1,5 +1,5 @@
 ---
-title: '方法: テクニカル サポートについてのリンクを指定 |Microsoft ドキュメント'
+title: '方法: テクニカル サポートのリンクを指定 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -22,17 +22,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24052420ecc04ab8a369f739efa885a6fa821fbd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 27014dd06f3d368ea0777a8f9e16c27a6d7d7884
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31556593"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078827"
 ---
-# <a name="how-to-specify-a-link-for-technical-support"></a>方法: テクニカル サポートのリンクを指定する
-発行するときに、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 、アプリケーション、**サポート URL**プロパティは、Web ページやファイル共有のアプリケーションに関する情報を取得するユーザーの行き先を識別します。 このプロパティは省略可能です。アプリケーションのエントリで、URL が表示されます指定した場合、**プログラム追加と削除** ダイアログ ボックス。  
+# <a name="how-to-specify-a-link-for-technical-support"></a>方法: テクニカル サポートのリンクを指定
+発行するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション、**サポート URL**プロパティは、Web ページまたはアプリケーションに関する情報を取得するユーザーにアクセスできるファイル共有を識別します。 このプロパティは省略可能です。アプリケーションのエントリで、URL が表示されます、指定されている場合**プログラム追加と削除** ダイアログ ボックス。  
   
- **サポート URL**でプロパティを設定することができます、**発行**のページ、**プロジェクト デザイナー**です。  
+ **サポート URL**でプロパティを設定することができます、**発行**のページ、**プロジェクト デザイナー**します。  
   
 ### <a name="to-specify-a-support-url"></a>サポート URL を指定するには  
   
@@ -44,8 +44,8 @@ ms.locfileid: "31556593"
   
 4.  **説明**をクリックします。  
   
-5.  **サポート URL**フィールドに、Web サイト、Web ページ、または UNC 共有への完全修飾パスを入力します。  
+5.  **サポート URL**フィールドに、Web サイト、Web ページ、または UNC 共有に完全修飾パスを入力します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

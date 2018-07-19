@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: コード Visual c# プロジェクト内の VBA から呼び出す |Microsoft ドキュメント'
+title: 'チュートリアル: VBA から Visual c# プロジェクトでコードを呼び出します。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -22,13 +22,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8fa0edceac7ca98e958419efe4a70acf278857da
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e2803ef31ec1009215d4490ac527c42cbdc90571
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781690"
 ---
-# <a name="walkthrough-calling-code-from-vba-in-a-visual-c-project"></a>チュートリアル : VBA から Visual C# プロジェクトのコードを呼び出す
+# <a name="walkthrough-call-code-from-vba-in-a-visual-c-project"></a>チュートリアル: VBA から Visual c# プロジェクトでコードを呼び出します。
   このチュートリアルでは、ブック内の Visual Basic for Applications (VBA) コードから Microsoft Office Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。 このプロシージャには次の 3 つの基本的な手順が含まれます。 `Sheet1` ホスト項目クラスにメソッドを追加する、ブックの VBA コードにメソッドを公開する、および、ブック内の VBA コードからメソッドを呼び出す、の 3 つです。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -52,56 +53,56 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Excel  
   
-## <a name="creating-a-workbook-that-contains-vba-code"></a>VBA コードが含まれるブックを作成する  
+## <a name="create-a-workbook-that-contains-vba-code"></a>VBA コードが含まれたブックを作成します。  
  最初の手順では、単純な VBA マクロを含むマクロ対応のブックを作成します。 カスタマイズ内のコードを VBA に公開する前に、ブックに VBA コードを含めておく必要があります。 含めないと、Visual Studio は VBA プロジェクトを変更して、VBA コードがカスタマイズ アセンブリを呼び出せるようにすることができません。  
   
  使用する VBA コードを含むブックが既にある場合は、この手順を省略できます。  
   
-#### <a name="to-create-a-workbook-that-contains-vba-code"></a>VBA コードが含まれるブックを作成するには  
+### <a name="to-create-a-workbook-that-contains-vba-code"></a>VBA コードが含まれるブックを作成するには  
   
 1.  Excel を起動します。  
   
-2.  作業中の文書を保存、 **excel マクロ有効ブック (\*.xlsm)**名前を持つ**WorkbookWithVBA**です。 このブックは、デスクトップなどの便利な場所に保存します。  
+2.  アクティブなドキュメントを保存、 **excel マクロ有効ブック (\*.xlsm)** 名前**WorkbookWithVBA**します。 このブックは、デスクトップなどの便利な場所に保存します。  
   
 3.  リボンの **[開発]** タブをクリックします。  
   
     > [!NOTE]  
-    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [方法 : [開発] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。  
+    >  **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、次を参照してください。[方法: リボンの [開発] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)します。  
   
-4.  **[コード]** グループの **[Visual Basic]**をクリックします。  
+4.  **[コード]** グループの **[Visual Basic]** をクリックします。  
   
      Visual Basic エディターが開きます。  
   
-5.  **[プロジェクト]** ウィンドウで、 **[ThisWorkbook]**をダブルクリックします。  
+5.  **[プロジェクト]** ウィンドウで、 **[ThisWorkbook]** をダブルクリックします。  
   
      `ThisWorkbook` オブジェクトのコード ファイルが開きます。  
   
 6.  コード ファイルに次の VBA コードを追加します。 このコードは何も実行しない単純な関数を定義します。 この関数の唯一の目的は、VBA プロジェクトがブック内に確実に存在するようにすることです。 これは、このチュートリアルの後の手順に必要です。  
   
-    ```  
+    ```vb  
     Sub EmptySub()  
     End Sub  
     ```  
   
 7.  ドキュメントを保存して、Excel を終了します。  
   
-## <a name="creating-the-project"></a>プロジェクトの作成  
+## <a name="create-the-project"></a>プロジェクトの作成  
  これで、先ほど作成したマクロ対応のブックを使用する、Excel のドキュメント レベルのプロジェクトを作成できます。  
   
-#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
+### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
 1.  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  テンプレート ウィンドウで、 **[Visual C#]**を展開してから、 **[Office/SharePoint]**を展開します。  
+3.  テンプレート ウィンドウで、 **[Visual C#]** を展開してから、 **[Office/SharePoint]** を展開します。  
   
 4.  **[Office アドイン]** ノードを選択します。  
   
@@ -109,20 +110,20 @@ ms.lasthandoff: 04/16/2018
   
 6.  **[名前]** ボックスに、「 **CallingCodeFromVBA**」と入力します。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
      **Visual Studio Tools for Office プロジェクト ウィザード** が開きます。  
   
-8.  **[既存のドキュメントをコピーする]**を選択し、 **[既存のドキュメントの完全なパス]** ボックスで、先ほど作成した **WorkbookWithVBA** ブックの場所を指定します。 独自のマクロ対応ブックを使用している場合は、代わりにそのブックの場所を指定します。  
+8.  **[既存のドキュメントをコピーする]** を選択し、 **[既存のドキュメントの完全なパス]** ボックスで、先ほど作成した **WorkbookWithVBA** ブックの場所を指定します。 独自のマクロ対応ブックを使用している場合は、代わりにそのブックの場所を指定します。  
   
-9. **[完了]**をクリックします。  
+9. **[完了]** をクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] はデザイナーで **WorkbookWithVBA** ブックを開き、 **ソリューション エクスプローラー** に **CallingCodeFromVBA**プロジェクトを追加します。  
   
-## <a name="trusting-the-location-of-the-workbook"></a>ブックの場所を信頼する  
+## <a name="trust-the-location-of-the-workbook"></a>ブックの場所を信頼します。  
  ソリューションのコードをブック内の VBA コードに公開する前に、実行するブック内の VBA を信頼する必要があります。 これにはいくつかの方法があります。 このチュートリアルでは、ブックの場所を Excel の **セキュリティ センター** で信頼することにより、この作業を実行します。  
   
-#### <a name="to-trust-the-location-of-the-workbook"></a>ブックの場所を信頼するには  
+### <a name="to-trust-the-location-of-the-workbook"></a>ブックの場所を信頼するには  
   
 1.  Excel を起動します。  
   
@@ -130,32 +131,32 @@ ms.lasthandoff: 04/16/2018
   
 3.  **[Excel のオプション]** ボタンをクリックします。  
   
-4.  [カテゴリ] ウィンドウで **[セキュリティ センター]**をクリックします。  
+4.  [カテゴリ] ウィンドウで **[セキュリティ センター]** をクリックします。  
   
-5.  詳細ウィンドウで **[セキュリティ センターの設定]**をクリックします。  
+5.  詳細ウィンドウで **[セキュリティ センターの設定]** をクリックします。  
   
-6.  [カテゴリ] ウィンドウで **[信頼できる場所]**をクリックします。  
+6.  [カテゴリ] ウィンドウで **[信頼できる場所]** をクリックします。  
   
-7.  詳細ウィンドウで **[新しい場所の追加]**をクリックします。  
+7.  詳細ウィンドウで **[新しい場所の追加]** をクリックします。  
   
 8.  **[Microsoft Office の信頼できる場所]** ダイアログ ボックスで、 **CallingCodeFromVBA** プロジェクトを含むフォルダーを参照します。  
   
-9. **[この場所のサブフォルダも信頼する]**を選択します。  
+9. **[この場所のサブフォルダも信頼する]** を選択します。  
   
-10. **[Microsoft Office の信頼できる場所]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+10. **[Microsoft Office の信頼できる場所]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-11. **[セキュリティ センター]** ダイアログ ボックスで **[OK]**をクリックします。  
+11. **[セキュリティ センター]** ダイアログ ボックスで **[OK]** をクリックします。  
   
-12. **[Excel のオプション]** ダイアログ ボックスで **[OK]**をクリックします。  
+12. **[Excel のオプション]** ダイアログ ボックスで **[OK]** をクリックします。  
   
 13. **Excel**を終了します。  
   
-## <a name="adding-a-method-to-the-sheet1-class"></a>Sheet1 クラスにメソッドを追加する  
+## <a name="add-a-method-to-the-sheet1-class"></a>Sheet1 クラスにメソッドを追加します。  
  VBA プロジェクトのセットアップができたので、今度は VBA コードから呼び出すことのできる `Sheet1` ホスト項目クラスにパブリック メソッドを追加します。  
   
-#### <a name="to-add-a-method-to-the-sheet1-class"></a>Sheet1 クラスにメソッドを追加するには  
+### <a name="to-add-a-method-to-the-sheet1-class"></a>Sheet1 クラスにメソッドを追加するには  
   
-1.  **ソリューション エクスプローラー**で **Sheet1.cs**を右クリックし、 **[コードの表示]**をクリックします。  
+1.  **ソリューション エクスプローラー**で **Sheet1.cs**を右クリックし、 **[コードの表示]** をクリックします。  
   
      コード エディターで **Sheet1.cs** ファイルが開きます。  
   
@@ -171,18 +172,18 @@ ms.lasthandoff: 04/16/2018
   
      [!code-csharp[Trin_CallingCSCustomizationFromVBA#1](../vsto/codesnippet/CSharp/CallingCodeFromVBA/Sheet1.cs#1)]  
   
-## <a name="extracting-an-interface-for-the-sheet1-class"></a>Sheet1 クラスのインターフェイスを抽出する  
+## <a name="extract-an-interface-for-the-sheet1-class"></a>Sheet1 クラスのインターフェイスを抽出します。  
  `CreateVstoNamedRange` メソッドを VBA コードに公開する前に、このメソッドを定義するパブリック インターフェイスを作成し、そのインターフェイスを COM に公開する必要があります  
   
-#### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Sheet1 クラスのインターフェイスを抽出するには  
+### <a name="to-extract-an-interface-for-the-sheet1-class"></a>Sheet1 クラスのインターフェイスを抽出するには  
   
 1.  **Sheet1.cs** コード ファイルで、 `Sheet1` クラスの任意の場所をクリックします。  
   
-2.  **[リファクター]** メニューの **[インターフェイスの抽出]**をクリックします。  
+2.  **[リファクター]** メニューの **[インターフェイスの抽出]** をクリックします。  
   
 3.  **[インターフェイスの抽出]** ダイアログ ボックスの **[インターフェイスを形成するパブリック メンバーを選択してください]** ボックスで、 `CreateVstoNamedRange` メソッドのエントリをクリックします。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] により、 `ISheet1`という名前の新しいインターフェイスが生成され、 `Sheet1` インターフェイスを実装できるように `ISheet1` クラスの定義が変更されます。 また、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によりコード エディターで **ISheet1.cs** ファイルが開きます。  
   
@@ -192,10 +193,10 @@ ms.lasthandoff: 04/16/2018
   
 6.  プロジェクトをビルドします。  
   
-## <a name="exposing-the-method-to-vba-code"></a>VBA コードにメソッドを公開する  
+## <a name="expose-the-method-to-vba-code"></a>VBA コードにメソッドを公開します。  
  `CreateVstoNamedRange` メソッドをブック内の VBA コードに公開するには、 **ホスト項目の** ReferenceAssemblyFromVbaProject `Sheet1` プロパティを **True**に設定します。  
   
-#### <a name="to-expose-the-method-to-vba-code"></a>メソッドを VBA コードに公開するには  
+### <a name="to-expose-the-method-to-vba-code"></a>メソッドを VBA コードに公開するには  
   
 1.  **ソリューション エクスプローラー**で、 **Sheet1.cs**をダブルクリックします。  
   
@@ -207,27 +208,27 @@ ms.lasthandoff: 04/16/2018
   
 4.  プロジェクトをビルドします。  
   
-## <a name="calling-the-method-from-vba-code"></a>VBA コードからメソッドを呼び出す  
+## <a name="call-the-method-from-vba-code"></a>VBA コードからメソッドを呼び出す  
  これで、ブック内の VBA コードから `CreateVstoNamedRange` メソッドを呼び出せます。  
   
 > [!NOTE]  
->  このチュートリアルでは、プロジェクトのデバッグ中に VBA コードをブックに追加します。 Visual Studio はビルド出力フォルダー内のドキュメントをメイン プロジェクト フォルダーからのドキュメントのコピーで置き換えるので、このドキュメントに追加したすべての VBA コードは次にプロジェクトをビルドすると上書きされます。 VBA コードを保存したい場合は、プロジェクト フォルダー内のドキュメントにコピーします。 詳細については、「 [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)」を参照してください。  
+>  このチュートリアルでは、プロジェクトのデバッグ中に VBA コードをブックに追加します。 Visual Studio はビルド出力フォルダー内のドキュメントをメイン プロジェクト フォルダーからのドキュメントのコピーで置き換えるので、このドキュメントに追加したすべての VBA コードは次にプロジェクトをビルドすると上書きされます。 VBA コードを保存したい場合は、プロジェクト フォルダー内のドキュメントにコピーします。 詳細については、次を参照してください。[結合 VBA とドキュメント レベルのカスタマイズ](../vsto/combining-vba-and-document-level-customizations.md)します。  
   
-#### <a name="to-call-the-method-from-vba-code"></a>VBA コードからメソッドを呼び出すには  
+### <a name="to-call-the-method-from-vba-code"></a>VBA コードからメソッドを呼び出すには  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  キーを押して**F5**プロジェクトを実行します。  
   
-2.  **[開発者]** タブで、 **[コード]** グループの、 **[Visual Basic]**をクリックします。  
+2.  **[開発者]** タブで、 **[コード]** グループの、 **[Visual Basic]** をクリックします。  
   
      Visual Basic エディターが開きます。  
   
-3.  **[挿入]** メニューで **[モジュール]**をクリックします。  
+3.  **[挿入]** メニューで **[モジュール]** をクリックします。  
   
 4.  次のコードを新しいモジュールに追加します。  
   
      このコードはカスタマイズ アセンブリの `CreateTable` メソッドを呼び出します。 マクロは VBA コードに公開する `GetManagedClass` ホスト項目クラスにアクセスするために、グローバル `Sheet1` メソッドを使用してこのメソッドにアクセスします。 `GetManagedClass` メソッドは、このチュートリアルで先ほど **ReferenceAssemblyFromVbaProject** プロパティを設定したときに自動的に生成されたものです。  
   
-    ```  
+    ```vb  
     Sub CallVSTOMethod()  
         Dim VSTOSheet1 As CallingCodeFromVBA.Sheet1  
         Set VSTOSheet1 = GetManagedClass(Sheet1)  
@@ -235,7 +236,7 @@ ms.lasthandoff: 04/16/2018
     End Sub  
     ```  
   
-5.  F5 キーを押します。  
+5.  **F5**キーを押します。  
   
 6.  開いたブックで **Sheet1** のセル **A1**をクリックします。 メッセージ ボックスが表示されることを確認します。  
   
@@ -244,14 +245,14 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>次の手順  
  Office ソリューションでの VBA からのコード呼び出しについて詳しくは、次のトピックを参照してください。  
   
--   VBA から Visual Basic カスタマイズのホスト項目のコードを呼び出します。 このプロセスは、Visual C# のプロセスとは異なります。 詳細については、次を参照してください。[チュートリアル: Visual Basic プロジェクト内の VBA からのコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)です。  
+-   VBA から Visual Basic カスタマイズのホスト項目のコードを呼び出します。 このプロセスは、Visual C# のプロセスとは異なります。 詳細については、次を参照してください。[チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)します。  
   
--   VBA から VSTO アドインのコードを呼び出します。 詳細については、次を参照してください。[チュートリアル: VBA から VSTO アドインでのコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)です。  
+-   VBA から VSTO アドインのコードを呼び出します。 詳細については、次を参照してください。[チュートリアル: VBA から VSTO アドイン内のコードを呼び出す](../vsto/walkthrough-calling-code-in-a-vsto-add-in-from-vba.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [VBA とドキュメント レベルのカスタマイズの結合](../vsto/combining-vba-and-document-level-customizations.md)   
- [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
- [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [方法: Visual C# での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
- [チュートリアル: VBA から Visual Basic プロジェクトのコードを呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
+ [VBA とドキュメント レベルのカスタマイズを結合します。](../vsto/combining-vba-and-document-level-customizations.md)   
+ [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
+ [方法: Visual Basic プロジェクトでは、VBA に公開コード](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
+ [方法: Visual C では、VBA に公開コード&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出します。](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)  
   

@@ -9,16 +9,16 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 76384697d6bc0b56f8d7a1664b0c9fa72812f280
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ded290950425801f4e75dc03156f4260db264cfd
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31199184"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280378"
 ---
-# <a name="azure-community"></a>Azure コミュニティ  
+# <a name="azure-community"></a>Azure コミュニティ
 
-Azure コミュニティを通じて、選ばれたサポート フォーラム内で Azure チームから直接ヘルプを受けます。  Azure コミュニティ特典は、Azure 関連のトピックに重点を置いたフォーラムのコレクションへのアクセスを提供します。  
+Azure コミュニティを通じて、選ばれたサポート フォーラム内で Azure チームから直接ヘルプを受けます。  Azure コミュニティ特典は、Azure 関連のトピックに重点を置いたフォーラムのコレクションへのアクセスを提供します。
 
 |                                       |                                                    |                                      |
 |---------------------------------------|----------------------------------------------------|--------------------------------------|
@@ -33,18 +33,18 @@ Azure コミュニティを通じて、選ばれたサポート フォーラム�
 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
-Azure コミュニティの開始は簡単です。  
+Azure コミュニティの開始は簡単です。
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2. [サポート] セクションで Azure コミュニティ タイルを見つけ、**[Get help]\(ヘルプの表示\)** リンクをクリックします。 
+2. [サポート] セクションで Azure コミュニティ タイルを見つけ、**[Get help]\(ヘルプの表示\)** リンクをクリックします。
 
    ![Azure コミュニティ タイル](_img/vs-azure-community/vs-azure-community-tile.png)
 
-3. 使用可能なフォーラムの一覧が表示されます。  選択するフォーラムをクリックします。  
+3. 使用可能なフォーラムの一覧が表示されます。  選択するフォーラムをクリックします。
 
    ![Azure コミュニティ フォーラム](_img/vs-azure-community/vs-azure-community-forums.png)
 
-4.  フォーラム内では、トピックと回答を表示したり、自分の質問に対する回答を検索したり、新しい質問を投稿することができます。 
+4.  フォーラム内では、トピックと回答を表示したり、自分の質問に対する回答を検索したり、新しい質問を投稿することができます。
 
    ![Azure コミュニティの例](_img/vs-azure-community/vs-azure-community-example.png)
 
@@ -62,10 +62,10 @@ Azure コミュニティ特典を利用できるかどうかは、以下のよ�
 |
 <sup>1</sup>  *Not for Resale (NFR)、Microsoft FTE、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、BizSpark、Imagine、Microsoft Certified Trainer (MCT) が含まれます*
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="support-resources"></a>サポート リソース
 -  その他の Azure コミュニティのリソースは、Azure コミュニティの[サポート ページ](https://azure.microsoft.com/support/forums/)をご覧ください。
 -  [Azure ドキュメント](/azure/)。
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートが必要な場合は、  Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートが必要な場合は、  Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

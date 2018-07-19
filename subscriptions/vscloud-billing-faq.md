@@ -9,15 +9,16 @@ description: クラウド サブスクリプションの請求に関する質問
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e77cebba49447dcab4d30979753357a64075b1f2
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 2df0604cff45f6af63070be6c1ba10f23a84b060
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957133"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303323"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio クラウド サブスクリプションの請求に関してよくあるご質問
-必ず[クラウド サブスクリプションの特典と価格を比較](https://www.visualstudio.com/vs/pricing/)して、各 Visual Studio サブスクリプションの特典、クラウドと標準の Visual Studio サブスクリプションの比較、サブスクライバー特典の詳細などを理解してください。
+
+必ず[クラウド サブスクリプションの特典と価格を比較](https://visualstudio.microsoft.com/vs/pricing/)して、各 Visual Studio サブスクリプションの特典、クラウドと標準の Visual Studio サブスクリプションの比較、サブスクライバー特典の詳細などを理解してください。
 
 ## <a name="general-purchasing-questions"></a>一般的な購入に関する質問
 
@@ -30,17 +31,19 @@ A: ほとんどすべての Azure サブスクリプションを使うことが�
 注意する必要のある唯一の例外として、[Azure 無料試用版](https://azure.microsoft.com/pricing/free-trial/)を使うことはできません。
 
 ### <a name="q-am-i-required-to-buy-other-azure-services"></a>Q: 他の Azure サービスを購入する必要はありますか?
-A: いいえ、ありませえん。 Azure で Visual Studio クラウド サブスクリプションだけを購入したい場合は、そうすることができます。 
+A: いいえ、ありませえん。 Azure で Visual Studio クラウド サブスクリプションだけを購入したい場合は、そうすることができます。
 
 ## <a name="enterprise-agreement-ea-customers"></a>Enterprise Agreement (EA) のお客様
 
 ### <a name="q-can-i-use-an-enterprise-agreement-to-buy-visual-studio-cloud-subscriptions"></a>Q: Enterprise Agreement を使って、Visual Studio クラウド サブスクリプションを購入できますか?
 
-A: はい、できます。 お使いの EA 用に作成された Azure サブスクリプションの所有者または共同作成者である必要があります。 Visual Studio クラウド サブスクリプションの購入は、Visual Studio Marketplace 内で直接行うようにしてください。 発注書を使って Visual Studio クラウド サブスクリプションを購入することはできません。 
+A: はい、できます。 お使いの EA 用に作成された Azure サブスクリプションの所有者または共同作成者である必要があります。 Visual Studio クラウド サブスクリプションの購入は、Visual Studio Marketplace 内で直接行うようにしてください。 発注書を使って Visual Studio クラウド サブスクリプションを購入することはできません。
 
 ### <a name="q-how-can-i-tell-whether-i-have-the-necessary-privileges-to-buy-services-in-the-visual-studio-marketplace-through-my-organizations-enterprise-agreement"></a>Q: 組織の Enterprise Agreement を使って Visual Studio Marketplace でサービスを購入するために必要な特権があるかどうかは、どうすれば確認できますか?
 
-A: 適切な特権があるかどうかを確認する最も簡単な方法は、Visual Studio Marketplace で提供されているサービスの **[購入]** ボタンをクリックしてみることです。 お使いのログインに現在リンクされている Azure サブスクリプションの一覧が表示されるので、そこから Azure サブスクリプション (請求先アカウント) を選ぶ必要があります。 Azure サブスクリプションの名前として既定で表示される種類は請求先アカウント ("従量課金制"、"Enterprise Agreement" など) なので、通常、Azure サブスクリプションが Enterprise Agreement の一部かどうかは明白です。
+A: 適切な特権があるかどうかを確認する最も簡単な方法は、Visual Studio Marketplace で提供されているサービスの **[購入]** ボタンをクリックしてみることです。
+お使いのログインに現在リンクされている Azure サブスクリプションの一覧が表示されるので、そこから Azure サブスクリプション (請求先アカウント) を選ぶ必要があります。
+Azure サブスクリプションの名前として既定で表示される種類は請求先アカウント ("従量課金制"、"Enterprise Agreement" など) なので、通常、Azure サブスクリプションが Enterprise Agreement の一部かどうかは明白です。
 
 もう 1 つの方法は、[Azure Enterprise Portal](http://ea.azure.com) にアクセスしてみることです。  正常にアクセスできる場合、エンタープライズ管理者ロールまたはアカウント所有者ロールを既に持っています。 Enterprise Agreement で新しい Azure 請求先アカウントを設定できるのは、アカウント所有者だけです。 Azure Enterprise Portal にアクセスできない場合は、組織のエンタープライズ管理者を調べて、その管理者に Azure Enterprise Portal で自分をアカウント所有者として追加するよう依頼してください。  誰に頼めばよいかわからない場合は、[サポート チケットを送信](http://aka.ms/AzureEntSupport)して、連絡先情報を要求できます。  サポート チケットを送信するときは、組織の名前と、Enterprise Agreement の登録番号が必要です。
 
@@ -51,15 +54,17 @@ A: いいえ、これらの前払い資金では、Visual Studio クラウド �
 ## <a name="how-charges-are-processed"></a>料金の処理方法
 
 ### <a name="q-how-are-monthly-cloud-subscription-charges-processed"></a>Q: **月間プラン**のクラウド サブスクリプション料金はどのように処理されますか?
-A:、最初の購入時は、現在の月の残りの日数をカバーする日割り計算された数量を請求します。 たとえば、10 個の Visual Studio Professional クラウド サブスクリプション月間プランを 4 月 15 日に購入した場合、月の 50% (30 日の月の 15 日) が残っているため、5 ユニット分を請求します。 5 月 1 日およびそれ以降は毎月、ユーザーがキャンセルするまで、10 ユニット分が請求されます。
+A:、最初の購入時は、現在の月の残りの日数をカバーする日割り計算された数量を請求します。 たとえば、10 個の Visual Studio Professional クラウド サブスクリプション月間プランを 4 月 15 日に購入した場合、月の 50% (30 日の月の 15 日) が残っているため、5 ユニット分を請求します。
+5 月 1 日およびそれ以降は毎月、ユーザーがキャンセルするまで、10 ユニット分が請求されます。
 
-後で支払い数量を増やした場合も、現在の月の残りの日数について、増加ユニット分が日割りで請求されます。 したがって、1 個の Visual Studio Professional クラウド サブスクリプション月間プランを 5 月 10 日に追加購入した場合は、約 0.677 ユニット (5 月の 31 日間の残り 21 日分) が請求されます。 
+後で支払い数量を増やした場合も、現在の月の残りの日数について、増加ユニット分が日割りで請求されます。 したがって、1 個の Visual Studio Professional クラウド サブスクリプション月間プランを 5 月 10 日に追加購入した場合は、約 0.677 ユニット (5 月の 31 日間の残り 21 日分) が請求されます。
 
 ### <a name="q-how-are-annual-cloud-subscription-charges-processed"></a>Q: **年間プラン**のクラウド サブスクリプション料金はどのように処理されますか?
 A: 購入ごとに、購入された全数量が直ちに請求されます。 料金は 1 年間に分散されず、日割り計算は行われません。 同じ年の異なる時期にクラウド サブスクリプション年間プランを購入した場合、サブスクリプションは異なる月に更新されます。 Microsoft ボリューム ライセンス契約の購入で一般に行われている方法とは異なり、お客様のすべてのクラウド サブスクリプション年間プランを同じ期間にすることはありません。
 
 ### <a name="q-how-do-cancelations-work"></a>Q: キャンセルはどのように行われますか?
-A: Visual Studio クラウド サブスクリプションをキャンセルすると、自動更新がキャンセルされます。 サブスクリプションは通常の更新日まで継続した後、単に期限切れになります。 期限が切れると、Visual Studio サブスクライバーは、Visual Studio またはサブスクリプションからの他のすべての特典を使用できなくなります。
+A: Visual Studio クラウド サブスクリプションをキャンセルすると、自動更新がキャンセルされます。 サブスクリプションは通常の更新日まで継続した後、単に期限切れになります。
+期限が切れると、Visual Studio サブスクライバーは、Visual Studio またはサブスクリプションからの他のすべての特典を使用できなくなります。
 
 クラウド サブスクリプション月間プランでは、キャンセルは次の月の最初の日に有効になります。 クラウド サブスクリプション月間プランの一部だけをキャンセルする場合は、次の月の最初の日にユーザーを削除し、適切なユーザーが引き続きアクティブなサブスクリプションを割り当てられるようにしてください。
 
@@ -87,12 +92,12 @@ A: いいえ、Visual Studio サブスクライバーとしての[毎月の Azur
 
 ### <a name="q-whats-the-difference-between-annual-and-monthly-cloud-subscriptions"></a>Q: クラウド サブスクリプションの年間プランと月間プランは何が違うのですか?
 
-A: クラウド サブスクリプション月間プランには、Visual Studio に加えて VSTS と TFS の使用が含まれます。 クラウド サブスクリプション年間プランにもこれらは含まれますが、それだけでなく、開発のテストを目的とするインストールと実行のための Windows および他の Microsoft ソフトウェアの使用、Azure サービスでの実験およびクラウドでの開発とテストのために使用できる毎月の Azure クレジット、トレーニング、サポート、その他のサブスクライバー特典が含まれます。 
-[クラウド サブスクリプションの特典と価格を比較する](https://www.visualstudio.com/vs/pricing/)
+A: クラウド サブスクリプション月間プランには、Visual Studio に加えて VSTS と TFS の使用が含まれます。 クラウド サブスクリプション年間プランにもこれらは含まれますが、それだけでなく、開発のテストを目的とするインストールと実行のための Windows および他の Microsoft ソフトウェアの使用、Azure サービスでの実験およびクラウドでの開発とテストのために使用できる毎月の Azure クレジット、トレーニング、サポート、その他のサブスクライバー特典が含まれます。
+[クラウド サブスクリプションの特典と価格を比較する](https://visualstudio.microsoft.com/vs/pricing/)
 
 ### <a name="q-do-i-get-new-versions-of-visual-studio-if-i-buy-a-visual-studio-cloud-subscription"></a>Q: Visual Studio クラウド サブスクリプションを購入した場合、新しいバージョンの Visual Studio を入手できますか?
 
-A: できます。 新しいバージョンがリリースされたら、ダウンロードして実行できます。 さらに、以前のバージョンを引き続き実行することもできます。 
+A: できます。 新しいバージョンがリリースされたら、ダウンロードして実行できます。 さらに、以前のバージョンを引き続き実行することもできます。
 
 ### <a name="q-can-i-buy-visual-studio-cloud-subscriptions-from-my-software-reseller"></a>Q: ソフトウェア リセラーから Visual Studio クラウド サブスクリプションを購入することはできますか?
 
@@ -108,5 +113,5 @@ A: はい、リセラーがクラウド ソリューション プロバイダー
 ## <a name="related-resources"></a>関連資料
 
 * [Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com/)
-* [Visual Studio サブスクリプションのサポート](https://www.visualstudio.com/vs/support/)
+* [Visual Studio サブスクリプションのサポート](https://visualstudio.microsoft.com/vs/support/)
 * [CSP 向けの Visual Studio クラウド サブスクリプションの購入](vscloud-csp.md)

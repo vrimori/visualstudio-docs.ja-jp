@@ -1,6 +1,7 @@
 ---
-title: Visual Studio でテストの自動化にビルドまたはリリース管理を使用する | Microsoft Docs
+title: Visual Studio でテストの自動化にビルドまたはリリース管理を使用する
 ms.date: 03/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 706d68299e0275314eff89746a05980e86bbd3e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 454407c3572f7a7c7a1c0f795462d2aec539049a
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845380"
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
@@ -57,7 +59,7 @@ MTM と Lab Management は、アプリケーションのビルド、配置、テ
 
 | 手順 | ラボ センターを使用する場合 | ビルドまたはリリース管理を使用する場合 |
 |-------|----------------------|-----------------|
-| 環境テンプレートのライブラリを管理します。 | ラボ環境を作成します。 仮想マシンに必要なソフトウェアをインストールします。 Sysprep を実行し、ライブラリに環境をテンプレートとして格納します。 | SCVMM 管理コンソールを直接使用して、仮想マシン テンプレートまたはサービス テンプレートのいずれかを作成および管理します。 Azure を使用する場合は、[Azure クイックスタート テンプレート](/resources/templates/)のいずれかを選択します。 |
+| 環境テンプレートのライブラリを管理します。 | ラボ環境を作成します。 仮想マシンに必要なソフトウェアをインストールします。 Sysprep を実行し、ライブラリに環境をテンプレートとして格納します。 | SCVMM 管理コンソールを直接使用して、仮想マシン テンプレートまたはサービス テンプレートのいずれかを作成および管理します。 Azure を使用する場合は、[Azure クイックスタート テンプレート](https://azure.microsoft.com/resources/templates/)のいずれかを選択します。 |
 | ラボ環境を作成します。 | ライブラリで環境テンプレートを選択し、それを配置します。 必要なパラメーターを入力し、仮想マシンの構成をカスタマイズします。 | SCVMM 管理コンソールを使用すると、テンプレートから VM またはサービス インスタンスを直接作成できます。 リソースを作成するには、Azure Portal を直接使用します。 または、環境のリリース定義を作成します。 [SCVMM Integration の拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)の Azure のタスクを使用し、新しい仮想マシンを作成します。 この定義の新しいリリースの作成は、ラボ センターで新しい環境を作成することと同じです。 |
 | マシンに接続します。 | 環境ビューアーでラボ環境を開きます。 | 仮想マシンに接続するために、SCVMM 管理コンソールを直接使用します。 または、仮想マシンの IP アドレスまたは DNS 名を使用して、リモート デスクトップ セッションを開きます。 |
 | 環境のチェックポイントを取得するか、クリーンなチェックポイントに環境を復元します。 | 環境ビューアーでラボ環境を開きます。 チェックポイントを取得するまたは前のチェックポイントに復元するオプションを選択します。 | 仮想マシンでこれらの操作を実行するために、直接 SCVMM 管理コンソールを使用します。 または、これらの手順をより大規模な自動化の一環として実行するには、リリース定義の環境の一部として [SCVMM Integration 拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)からチェックポイント タスクを含めます。 |

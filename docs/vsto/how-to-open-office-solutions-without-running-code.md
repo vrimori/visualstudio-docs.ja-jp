@@ -1,5 +1,5 @@
 ---
-title: '方法: コードを実行せずに Office ソリューションを開く |Microsoft ドキュメント'
+title: '方法: コードを実行せず、Open Office ソリューション'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,40 +21,41 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 86a44d2a6c82f65d91c558c76743a8fbbd2fa1e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f7ced7b38a4f32d96b397e7f9eebb1d40be03ae3
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254989"
 ---
-# <a name="how-to-open-office-solutions-without-running-code"></a>方法 : コードを実行せずに Office ソリューションを開く
-  マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が高に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティが Microsoft Office ではなく、Microsoft .NET Framework によって管理されているためです。  
+# <a name="how-to-open-office-solutions-without-running-code"></a>方法: コードを実行せず、Open Office ソリューション
+  マネージ コード拡張機能で作成された Microsoft Office ソリューションでは、エンドユーザーの Office アプリケーションのセキュリティ設定が [高] に設定されている場合でも実行されます。 これは、.NET アセンブリのコードのセキュリティは、Microsoft Office ではなく、Microsoft .NET Framework によって管理されるためです。  
   
- ただし、コードを実行せずに文書を開いたりする場合もあります。 たとえば、ドキュメントを開くときに実行されるコードは、内容を変わる可能性がありますが、文書の外観、コードの変更の前にそれを更新します。 または、他の人にある特定の情報を使用してドキュメントを送信して、コードを実行し、可能性のある内容が変更されないようにするには。  
+ ただし、コードを実行せず、ドキュメントを開きたい場合もあります。 たとえば、ドキュメントを開くときに実行されるコードが、内容に変わる可能性がありますが、ドキュメントのコードを変更する前に表示する方法を更新します。 だれかが特定の情報を使用してドキュメントを送信する場合や、コードを実行し、場合によって、内容を変更したくないです。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 開くには、文書またはブックをアセンブリ コードを実行しなくてもマネージ コード拡張機能を含むいくつかの方法はあります。  
+ ドキュメントまたはアセンブリのコードを実行しなくてもマネージ コード拡張機能を含むブックを開くのいくつかの方法はあります。  
   
-### <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>SHIFT キーを使用してアセンブリをバイパスするには  
+## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>Shift キーを使用して、アセンブリをバイパスするには  
   
--   ドキュメントのブックを開き、**ファイル**を Word と Excel がドキュメントを開くときに、初期化イベントを発生させることを防ぐために、SHIFT キーを押しながらメニュー。  
+-   ドキュメントおよびからブックを開く、**ファイル**メニューを押しながら、 **Shift** Word および Excel のドキュメントを開くときに、初期化イベントを発生させるようにするキー。  
   
     > [!NOTE]  
-    >  ドキュメントまたはブックから開いた場合、**作業の開始**shift キーを押し、作業ウィンドウはコードをバイパスしていません。 また、shift キーを押しは防止しませんイベント ドキュメントが開かれた後に発生します。  
+    >  ドキュメントまたはブックを開いた場合、 **Getting Started**を押し、作業ウィンドウ**Shift**コードをバイパスしていません。 また、shift キーを押しができないイベントが、ドキュメントを開いた後に発生します。  
   
      このメソッドは、変更を加えるコードを実行していると、文書の変更がないドキュメントを開きたい場合に便利です。  
   
-### <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>アセンブリをバイパスするには、名前の変更または削除するのには  
+## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>アセンブリをバイパスするには、名前を変更または削除するのには  
   
--   アセンブリが配置されているコンピューターに必要なアクセス許可があれば、名前を変更したり、ドキュメントまたはブックは、見つからないため、アセンブリを削除できます。 これは、結果、Office ドキュメントが開かれるたびに発生します。  
+-   アセンブリが配置されているコンピューターで必要なアクセス許可があれば、名前を変更または文書またはブックが見つけられないため、アセンブリを削除できます。 Office ドキュメントが開かれるたびに発生するエラーが発生します。  
   
-     複数のユーザーで、ソリューションを使用する場合、このメソッドは、それらのすべての実行から、ソリューションを防ぎます。 これはする、コードまたは参照先のサーバーで問題が検出され、すべてのユーザーから実行を停止する場合に役立ちます。  
+     複数の人が、ソリューションを使用する場合、このメソッドは、それらのすべての実行から、ソリューションを防ぎます。 これは、コードまたは参照先のサーバーで問題が見つかるし、実行のすべてのユーザーを停止する場合に役立ちます。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)   
- [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [Office ソリューションにおけるアプリケーション マニフェストと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
+ [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)   
+ [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
+ [Office ソリューションにおけるアプリケーションと配置マニフェスト](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
   
   

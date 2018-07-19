@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって電子メール メッセージが受信したときにアクションを実行 |Microsoft ドキュメント'
+title: '方法: プログラムによって電子メール メッセージを受信したときにアクションを実行'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 28b9936d1d3e1ffd3b4ec04af6719d0699000f8c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cb3ab28a70904d7f7bedbf126dc5fcdce77f176a
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257388"
 ---
-# <a name="how-to-programmatically-perform-actions-when-an-e-mail-message-is-received"></a>方法: プログラムによって電子メール メッセージを受信したときにアクションを実行する
-  この例では、ユーザーが電子メール メッセージを受信するときのカスタム動作を実行します。  
+# <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>方法: プログラムによって電子メール メッセージを受信したときにアクションを実行
+  この例では、ユーザーが電子メール メッセージを受信すると、カスタム アクションが実行します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -34,8 +35,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_Outlook_RL_PerformActions#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_PerformActions/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: Office プロジェクトでイベント ハンドラーを作成します。](../vsto/how-to-create-event-handlers-in-office-projects.md)   
- [メール アイテムの操作](../vsto/working-with-mail-items.md)   
- [VSTO アドインのプログラミングについて](../vsto/getting-started-programming-vsto-add-ins.md)  
+ [方法: Office プロジェクトでのイベント ハンドラーの作成](../vsto/how-to-create-event-handlers-in-office-projects.md)   
+ [メールの項目を操作します。](../vsto/working-with-mail-items.md)   
+ [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)  
   
   

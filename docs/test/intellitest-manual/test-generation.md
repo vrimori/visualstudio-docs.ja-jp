@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f621520f6303e72bdb4cd778218378af9ebd2323
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2eab01a560cebb3bed644df044fcee0af4039ffb
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815023"
 ---
 # <a name="test-generation"></a>テスト生成
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/26/2018
 
 テスト構造の例を以下に示します。
 
-```
+```csharp
 [Test]
 void MyTest() {
     // data
@@ -60,7 +61,7 @@ IntelliTest がオブジェクトを構築する必要がある場合、必要�
 
 PUT は、MSTest (または NUnit、xUnit) と同様に、[PexMethod](attribute-glossary.md#pexmethod) カスタム属性を利用して定義されます。 PUT は、[PexClass](attribute-glossary.md#pexclass) でタグ付けされるクラスで論理的にグループ化されるインスタンス メソッドです。 次は **MyPexTest** クラスに保存されている単純な PUT の例です。
 
-```
+```csharp
 [PexMethod]
 void ReplaceFirstChar(string target, char c) {
 
@@ -72,7 +73,7 @@ void ReplaceFirstChar(string target, char c) {
 
 **ReplaceFirstChar** は、文字列の最初の文字を置換するメソッドです。
 
-```
+```csharp
 class StringHelper {
     static string ReplaceFirstChar(string target, char c) {
         if (target == null) throw new ArgumentNullException();
@@ -84,7 +85,7 @@ class StringHelper {
 
 このテストから、IntelliTest は、テストされるコードのたくさんの実行パスをカバーする PUT の[入力を自動的に生成](input-generation.md)できます。 異なる実行パスをカバーする各入力が単体テストとして "シリアル化" されます。
 
-```
+```csharp
 [TestMethod, ExpectedException(typeof(ArgumentNullException))]
 void ReplaceFirstChar0() {
     this.ReplaceFirstChar(null, 0);
@@ -101,7 +102,7 @@ void ReplaceFirstChar10() {
 
 パラメーター化された単体テストはジェネリック メソッドにすることができます。 その場合、[PexGenericArguments](attribute-glossary.md#pexgenericarguments) を利用し、メソッドのインスタンス化に使用する種類を指定する必要があります。
 
-```
+```csharp
 [PexClass]
 public partial class ListTest {
     [PexMethod]
@@ -119,7 +120,7 @@ IntelliTest は、予想される例外と予想外の例外に例外を選別�
 
 予想される例外の場合、ネガティブなテスト ケースが生成され、**ExpectedException(typeof(*xxx*))** のような注釈が付けられます。予想外の例外の場合、失敗のテスト ケースが生成されます。
 
-```
+```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]
 void SomeTest() {...}
 ```
@@ -136,7 +137,7 @@ void SomeTest() {...}
 
 IntelliTest は認識可能な内部型を "テスト" できます。 IntelliTest が型を認識するには、Visual Studio IntelliTest ウィザードを利用し、製品またはテスト製品に次の属性を追加します。
 
-```
+```csharp
 [assembly: InternalsVisibleTo("Microsoft.Pex, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293
 ```
 
@@ -147,7 +148,7 @@ IntelliTest は認識可能な内部型を "テスト" できます。 IntelliTe
 
 アサーションは、通常の単体テスト フレームワークでよく知られた概念です。IntelliTest は、サポートされている各テスト フレームワークにより提供される組み込み **Assert** クラスを既に "理解" しています。 ただし、ほとんどのフレームワークで **Assume** クラスは提供されません。 Assume クラスが提供されない場合、IntelliTest は [PexAssume](static-helper-classes.md#pexassume) クラスを提供します。 既存のテスト フレームワークを使用しない場合、IntelliTest には [PexAssert](static-helper-classes.md#pexassert) クラスも与えられます。
 
-```
+```csharp
 [PexMethod]
 public void Test1(object o) {
     // precondition: o should not be null
@@ -159,7 +160,7 @@ public void Test1(object o) {
 
 具体的には、null を利用しない前提事項をカスタム属性としてエンコードできます。
 
-```
+```csharp
 [PexMethod]
 public void Test2([PexAssumeNotNull] object o)
 // precondition: o should not be null
@@ -205,7 +206,7 @@ IntelliTest では、[パラメーター化された単体テスト](#parameteri
 
 **例**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 using NUnit.Framework;
 

@@ -10,11 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 0a2688b540b9256b43b674714c6c123e90acaaeb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: aa1c2e97b52027c81749d0e4cd75ea767f2d1c13
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280391"
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 このセクションでは、Visual Studio Tools for Unity をインストールする方法と、Visual Studio で操作できるように Unity プロジェクトを構成する方法を説明します。
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 
 -   拡張機能をサポートしているバージョンの **Visual Studio** (Visual Studio Community、Professional、Premium、Enterprise など)。 Visual Studio Community は無料でダウンロードできます。
 
-     [Visual Studio Community をダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs)
+     [Visual Studio Community をダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 -   **Unity** バージョン 4.0.0 以降、 **Unity** バージョン 5.2.0 以降 (Visual Studio Tools for Unity バージョン 2.1 以降の組み込みサポートを利用する場合)
 

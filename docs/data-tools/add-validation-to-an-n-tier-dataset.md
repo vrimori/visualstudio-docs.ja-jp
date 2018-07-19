@@ -1,5 +1,5 @@
 ---
-title: N 層データセットに検証を追加します。
+title: n 層データセットに検証を追加する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,27 +17,28 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8fbbf6a28d63e755929cc9d8a6c62ff7649b2f1c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 81d929aaffb6f08e5e1cda1cf3329de81fe13bc8
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38778062"
 ---
-# <a name="add-validation-to-an-n-tier-dataset"></a>N 層データセットに検証を追加します。
+# <a name="add-validation-to-an-n-tier-dataset"></a>n 層データセットに検証を追加する
 n 層ソリューションに分離されたデータセットへの検証の追加は、単一ファイルのデータセット (1 つのプロジェクト内のデータセット) に検証を追加するのと基本的には同じです。 データで検証を実行する位置として推奨されるのは、データ テーブルの <xref:System.Data.DataTable.ColumnChanging> イベントや <xref:System.Data.DataTable.RowChanging> イベントの発生時です。
 
- データセットは、データセット内のデータ テーブルの列と行変更イベントにユーザー コードを追加する先部分クラスを作成する機能を提供します。 N 層ソリューション内のデータセットにコードを追加する方法の詳細については、次を参照してください。 [n 層アプリケーションのデータセットにコードを追加](../data-tools/add-code-to-datasets-in-n-tier-applications.md)、および[n 層アプリケーションの TableAdapters にコードを追加](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)です。 部分クラスの詳細については、次を参照してください。[する方法: クラスを部分クラス (クラス デザイナー) に分割](../ide/how-to-split-a-class-into-partial-classes-class-designer.md)または[部分クラスとメソッド](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)です。
+ データセットは、データセット内のデータ テーブルの列と行変更イベントにユーザー コードを追加するを部分クラスを作成する機能を提供します。 N 層ソリューション内のデータセットにコードを追加する方法の詳細については、次を参照してください。 [n 層アプリケーションでのデータセットにコードを追加](../data-tools/add-code-to-datasets-in-n-tier-applications.md)、および[n 層アプリケーションの TableAdapters にコードを追加](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)します。 部分クラスの詳細については、次を参照してください。[方法: クラスを部分クラス (クラス デザイナー) に分割](../ide/how-to-split-a-class-into-partial-classes-class-designer.md)または[部分クラスとメソッド](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)します。
 
 > [!NOTE]
->  データセットを Tableadapter から分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスを自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。
+>  データセットを Tableadapter から分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動しません。 既存のデータセット部分クラスは、データセット プロジェクトに手動で移動する必要があります。
 
 > [!NOTE]
 >  データセット デザイナーでイベント ハンドラーが自動的に c# で作成されません、<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>イベント。 手動でイベント ハンドラーを作成し、基になるイベントのイベント ハンドラーをフックする必要があります。 次の手順では、Visual Basic と c# の両方で必要なイベント ハンドラーを作成する方法について説明します。
 
-## <a name="validate-changes-to-individual-columns"></a>個々 の列に対する変更を検証します。
- 個々の列の値は、<xref:System.Data.DataTable.ColumnChanging> イベントを処理することにより検証します。 <xref:System.Data.DataTable.ColumnChanging>イベントは、列の値が変更されたときに発生します。 イベント ハンドラーを作成、<xref:System.Data.DataTable.ColumnChanging>イベントには、該当する列をダブルクリックして、**データセット デザイナー**です。
+## <a name="validate-changes-to-individual-columns"></a>個々 の列に変更を検証します。
+ 個々の列の値は、<xref:System.Data.DataTable.ColumnChanging> イベントを処理することにより検証します。 <xref:System.Data.DataTable.ColumnChanging>列の値が変更されたときにイベントが発生します。 イベント ハンドラーを作成、<xref:System.Data.DataTable.ColumnChanging>必要な列をダブルクリックして、イベント、**データセット デザイナー**します。
 
- 最初に列をダブルクリックすると、デザイナーにより <xref:System.Data.DataTable.ColumnChanging> イベントのイベント ハンドラーが生成されます。 `If...Then`ステートメントは、特定の列をテストします。 たとえば、Northwind Orders テーブルの RequiredDate 列をダブルクリックすると、次のコードが生成されます。
+ 最初に列をダブルクリックすると、デザイナーにより <xref:System.Data.DataTable.ColumnChanging> イベントのイベント ハンドラーが生成されます。 `If...Then`明細書が作成、特定の列をテストすることもできます。 ダブルクリックしたときに次のコードを生成するなど、 **RequiredDate** Northwind の Orders テーブルの列。
 
 ```vb
 Private Sub OrdersDataTable_ColumnChanging(ByVal sender As System.Object, ByVal e As System.Data.DataColumnChangeEventArgs) Handles Me.ColumnChanging
@@ -48,22 +49,22 @@ End Sub
 ```
 
 > [!NOTE]
->  C# プロジェクトでは、データセットの部分クラスとデータセットの個々のテーブルのみがデータセット デザイナーにより作成されます。 C# では、Visual Basic と同様に <xref:System.Data.DataTable.ColumnChanging> イベントおよび <xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーはデータセット デザイナーにより自動作成されません。 C# プロジェクトで、イベントを処理し、メソッドを基になるイベントをフックするためのメソッドを手動で構築するために必要があります。 次の手順では、必要なイベント ハンドラーを Visual Basic と C# の両方で作成する方法について説明します。
+>  C# プロジェクトでは、データセットの部分クラスとデータセットの個々のテーブルのみがデータセット デザイナーにより作成されます。 C# では、Visual Basic と同様に <xref:System.Data.DataTable.ColumnChanging> イベントおよび <xref:System.Data.DataTable.RowChanging> イベントのイベント ハンドラーはデータセット デザイナーにより自動作成されません。 C# プロジェクトでは、イベントを処理し、メソッドは、基になるイベントをフックする方法を手動で作成する必要があります。 次の手順では、必要なイベント ハンドラーを Visual Basic と C# の両方で作成する方法について説明します。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 #### <a name="to-add-validation-during-changes-to-individual-column-values"></a>個々の列値の変更時に検証を追加するには
 
-1.  ダブルクリックして、データセットを開き、 **.xsd**ファイル**ソリューション エクスプ ローラー**です。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)です。
+1.  ダブルクリックして、データセットを開き、 *.xsd*ファイル**ソリューション エクスプ ローラー**します。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
 2.  検証する列をダブルクリックします。 この操作によって <xref:System.Data.DataTable.ColumnChanging> イベント ハンドラーが作成されます。
 
     > [!NOTE]
-    >  データセット デザイナーでは、C# イベントのイベント ハンドラーは自動作成されません。 次のセクションでは、c# でイベントを処理するために必要なコードが含まれます。 `SampleColumnChangingEvent` 作成され、フックし、<xref:System.Data.DataTable.ColumnChanging>内のイベント、<xref:System.Data.DataTable.EndInit%2A>メソッドです。
+    >  データセット デザイナーでは、C# イベントのイベント ハンドラーは自動作成されません。 次のセクションでは、c# でイベントを処理するために必要なコードが含まれます。 `SampleColumnChangingEvent` 作成され、フックし、<xref:System.Data.DataTable.ColumnChanging>内のイベント、<xref:System.Data.DataTable.EndInit%2A>メソッド。
 
 3.  アプリケーションの要件を満たすデータが `e.ProposedValue` に含まれていることを検証するコードを追加します。 指定された値が受け入れられない場合、エラーがあることを表すように該当する列を設定します。
 
-     次のコード例を検証する、**数量**列には、0 より大きい値が含まれています。 場合**数量**以下は、エラーに設定されている列を 0 にします。 `Else`場合、句が、エラーをクリア**数量**0 よりも高い設定です。 列変更イベント ハンドラー内のコードは、次のようになります。
+     次のコード例を検証する、**数量**列には、0 より大きい値が含まれています。 場合**数量**は以下を 0 に、列はエラーに設定します。 `Else`場合、句は、エラーをクリアします。**数量**が 0 を超えています。 列変更イベント ハンドラー内のコードは、次のようになります。
 
     ```vb
     If (e.Column.ColumnName = Me.QuantityColumn.ColumnName) Then
@@ -101,16 +102,16 @@ End Sub
     }
     ```
 
-## <a name="validate-changes-to-whole-rows"></a>行全体に対する変更を検証します。
+## <a name="validate-changes-to-whole-rows"></a>行全体の変更を検証します。
  行全体の値は、<xref:System.Data.DataTable.RowChanging> イベントを処理することにより検証します。 <xref:System.Data.DataTable.RowChanging> イベントは、すべての列の値がコミットされたときに発生します。 ある列の値が別の列の値に依存している場合は、<xref:System.Data.DataTable.RowChanging> イベントで検証を行う必要があります。 たとえば、Northwind の Orders テーブルの OrderDate と RequiredDate について考えます。
 
  注文が入力されると、RequiredDate が OrderDate と同じか、それより前の日付の注文が入力されていないかを検証します。 この例では、RequiredDate 列と OrderDate 列の両方を比較する必要があるため、個々の列の変更を検証しても意味がありません。
 
- イベント ハンドラーを作成、<xref:System.Data.DataTable.RowChanging>イベントをテーブルのタイトル バー内のテーブル名をダブルクリックすると、**データセット デザイナー**です。
+ イベント ハンドラーを作成、<xref:System.Data.DataTable.RowChanging>イベントで、テーブルのタイトル バー内のテーブル名をダブルクリックして、**データセット デザイナー**します。
 
 #### <a name="to-add-validation-during-changes-to-whole-rows"></a>行全体の変更時に検証を追加するには
 
-1.  ダブルクリックして、データセットを開き、 **.xsd**ファイル**ソリューション エクスプ ローラー**です。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)です。
+1.  ダブルクリックして、データセットを開き、 *.xsd*ファイル**ソリューション エクスプ ローラー**します。 詳細については、次を参照してください。[チュートリアル: データセット デザイナーでデータセットを作成する](walkthrough-creating-a-dataset-with-the-dataset-designer.md)します。
 
 2.  デザイナーでデータ テーブルのタイトル バーをダブルクリックします。
 
@@ -121,7 +122,7 @@ End Sub
 
 3.  部分クラスの宣言内にユーザー コードを追加します。
 
-4.  次のコードを検証中にユーザー コードを追加する場所を示しています、<xref:System.Data.DataTable.RowChanging>イベント。 C# の例には、最大イベント ハンドラー メソッドをフックするコードも含まれています、`OrdersRowChanging`イベント。
+4.  次のコードを検証中にユーザー コードを追加する場所を示しています、<xref:System.Data.DataTable.RowChanging>イベント。 C# の例は、最大のイベント ハンドラー メソッドをフックするコードも含まれています。、`OrdersRowChanging`イベント。
 
     ```vb
     Partial Class OrdersDataTable
@@ -167,6 +168,6 @@ End Sub
 
 ## <a name="see-also"></a>関連項目
 
-- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
-- [チュートリアル : n 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
+- [チュートリアル: N 層データ アプリケーションの作成](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [データセットのデータの検証](../data-tools/validate-data-in-datasets.md)

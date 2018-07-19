@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: アプリケーション ページをワークフローに追加する |Microsoft ドキュメント'
+title: 'チュートリアル: ワークフローへのアプリケーション ページの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8ed3278a237633cbf7f15806fa0efa9b3bc33bb6
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 937fb2d5b41c2fce9fb11cc683f7abd771718e89
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119470"
 ---
-# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページの追加
-  このチュートリアルでは、ワークフロー プロジェクトへワークフローから派生したデータを表示するためのアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)です。  
+# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページを追加します。
+  このチュートリアルでは、ワークフローから派生したワークフロー プロジェクトにデータを表示するアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
@@ -33,29 +34,29 @@ ms.lasthandoff: 05/22/2018
   
 -   ワークフロー プロジェクトからデータを取得し、操作します。  
   
--   [アプリケーション] ページ上のテーブルにデータを表示しています。  
+-   [アプリケーション] ページではテーブルのデータを表示しています。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
   
 -   Visual Studio  
   
--   このトピックで、プロジェクトを完了する必要も[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)です。  
+-   トピック内のプロジェクトを完了する必要も[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。  
   
-## <a name="amending-the-workflow-code"></a>ワークフロー コードの修正  
- まず、経費報告書の量に結果列の値を設定するワークフローに、行のコードを追加します。 この値は、経費レポートの集計計算の後で使用されます。  
+## <a name="ammend-the-workflow-code"></a>追記ワークフロー コード
+ 最初に、経費報告書の金額に結果列の値を設定するワークフローのコード行を追加します。 この値は、経費レポートの集計計算の後で使用されます。  
   
-#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>ワークフローの結果の列の値を設定するには  
+#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>ワークフローの結果列の値を設定するには
   
-1.  トピックから完成したプロジェクトを読み込む[チュートリアル: アソシエーションと開始フォームを使用するワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
+1.  トピックから完成したプロジェクトを読み込む[チュートリアル: 関連付けと開始フォームを持つワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)に[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
   
-2.  Workflow1.cs または Workflow1.vb (使用するプログラミング言語) に応じて、コードを開きます。  
+2.  コードを開きます*Workflow1.cs*または*Workflow1.vb* (使用するプログラミング言語) によって異なります。  
   
-3.  下に、`createTask1_MethodInvoking`メソッド、次のコードを追加します。  
+3.  下部に、`createTask1_MethodInvoking`メソッドを次のコードを追加します。  
   
     ```vb  
     createTask1_TaskProperties1.ExtendedProperties("Outcome") =   
@@ -67,14 +68,14 @@ ms.lasthandoff: 05/22/2018
       workflowProperties.InitiationData;  
     ```  
   
-## <a name="creating-an-application-page"></a>アプリケーション ページを作成する  
- 次に、ASPX フォームをプロジェクトに追加します。 経費レポート ワークフロー プロジェクトから取得したデータは、このフォームが表示されます。 これを行うには、アプリケーション ページを追加します。 アプリケーション ページでは、SharePoint サイト上の他のページはようになります、つまり、他の SharePoint ページとして同じマスター ページを使用します。  
+## <a name="create-an-application-page"></a>アプリケーション ページを作成します。
+ 次に、ASPX フォームをプロジェクトに追加します。 このフォームには、経費報告のワークフロー プロジェクトから取得したデータが表示されます。 これを行うには、アプリケーション ページを追加します。 アプリケーション ページは、SharePoint サイト上の他のページはようになります、つまり、その他の SharePoint ページとして同じマスター ページを使用します。  
   
-#### <a name="to-add-an-application-page-to-the-project"></a>アプリケーション ページをプロジェクトに追加するには  
+#### <a name="to-add-an-application-page-to-the-project"></a>アプリケーション ページのプロジェクトに追加するには  
   
-1.  ExpenseReport プロジェクトを選択し、メニュー バーで、次のように選択します。**プロジェクト**、**新しい項目の追加**です。  
+1.  ExpenseReport プロジェクトを選択し、次に、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
   
-2.  **テンプレート** ウィンドウで、選択、**アプリケーション ページ**テンプレート プロジェクト項目の既定の名前を使用して (**ApplicaitonPage1.aspx**)、を選択し、**追加**ボタンをクリックします。  
+2.  **テンプレート**ウィンドウで、選択、**アプリケーション ページ**テンプレート、プロジェクト項目の既定の名前を使用して (**ApplicaitonPage1.aspx**)、選び、 **追加**ボタンをクリックします。  
   
 3.  [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1.aspx の置換、`PlaceHolderMain`を次のセクション。  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/22/2018
     </asp:Content>  
     ```  
   
-     このコードは、タイトルと共にページにテーブルを追加します。  
+     このコードでは、タイトルとページにテーブルを追加します。  
   
 4.  置き換えることで、アプリケーションのページにタイトルを追加、`PlaceHolderPageTitleInTitleArea`を次のセクション。  
   
@@ -98,14 +99,14 @@ ms.lasthandoff: 05/22/2018
     </asp:Content>  
     ```  
   
-## <a name="coding-the-application-page"></a>アプリケーション ページのコーディング  
- 次に、コードを経費明細書アプリケーションの概要ページに追加します。 ページを開くと、コードは、割り当てられた使用制限を超える経費の SharePoint タスク リストをスキャンします。 レポートには、各項目と共に、コストの合計が一覧表示します。  
+## <a name="code-the-application-page"></a>コード アプリケーション ページ
+ 次に、経費明細書アプリケーションの概要ページにコードを追加します。 ページを開くと、コードは、割り当てられた使用制限を超える経費の SharePoint でのタスク一覧をスキャンします。 レポートには、経費の各項目が一覧表示します。  
   
 #### <a name="to-code-the-application-page"></a>アプリケーション ページをコーディングするには  
   
-1.  選択、 **ApplicationPage1.aspx**ノード、次に、メニュー バーで、次のように選択します。**ビュー**、**コード**アプリケーション ページで、分離コードを表示します。  
+1.  選択、 **ApplicationPage1.aspx**ノードで、次に、メニュー バーで、次のように選択します。**ビュー** > **コード**アプリケーション ページの背後にあるコードを表示します。  
   
-2.  置換、**を使用して**または**インポート**に次のクラスの上部にもよりますが、プログラミング言語) ステートメント。  
+2.  置換、**を使用して**または**インポート**に次のクラスの上部にある (によって、プログラミング言語) ステートメント。  
   
     ```vb  
     Imports System  
@@ -299,60 +300,59 @@ ms.lasthandoff: 05/22/2018
     > [!WARNING]  
     >  必ず、"TestServer"をコードで SharePoint を実行している有効なサーバーの名前で置き換えます。  
   
-## <a name="testing-the-application-page"></a>アプリケーション ページのテスト  
- 次に、アプリケーション ページが正しく経費報告データを表示するかどうかを決定します。  
+## <a name="test-the-application-page"></a>アプリケーション ページをテストします。
+ 次に、アプリケーション ページが正しく支出データを表示するかどうかを決定します。  
   
 #### <a name="to-test-the-application-page"></a>アプリケーション ページをテストするには  
   
-1.  実行し、プロジェクトを SharePoint に配置するには、F5 キーを選択します。  
+1.  選択、 **F5**キーを実行し、プロジェクトを SharePoint に配置します。  
   
-2.  選択、**ホーム**ボタンをクリックしを選択し、 **Shared Documents**クイック起動バーを SharePoint サイトで共有ドキュメント の一覧を表示するリンクです。  
+2.  選択、**ホーム**ボタンをクリックし、選択し、 **Shared Documents** SharePoint サイトで共有ドキュメント の一覧を表示する quicklaunch バーのリンク。  
   
-3.  この例の経費報告書を表すを選択してのドキュメント一覧にいくつか新しいドキュメントをアップロードします、**ドキュメント**リンクを、**ライブラリ**、をクリックして、ページの上部にあるタブ。**ドキュメントのアップロード**ツール リボンのボタンをクリックします。  
+3.  この例の経費報告書を表すを選択して、ドキュメントの一覧にいくつかの新しいドキュメントをアップロードします、**ドキュメント**リンクを、**ライブラリ**、を選択し、ページの上部にあるタブ。**ドキュメントのアップロード**ツール リボンのボタンをクリックします。  
   
-4.  一部のドキュメントをアップロードした後を選択して、ワークフローをインスタンス化、**ライブラリ**リンクを**ライブラリ**ページおよびクリックして、上部のタブ、**ライブラリ設定**ツール リボンのボタンをクリックします。  
+4.  いくつかのドキュメントをアップロードした後を選択して、ワークフローをインスタンス化、**ライブラリ**リンクを**ライブラリ**とクリックした後にページの上部にあるタブ、**ライブラリ設定**ツール リボンのボタンをクリックします。  
   
-5.  **ドキュメント ライブラリ設定**ページで、選択、**ワークフロー設定**内のリンク、**権限と管理**セクションです。  
+5.  **ドキュメント ライブラリ設定**ページで、選択、**ワークフロー設定**のリンクを**権限と管理**セクション。  
   
-6.  **ワークフロー設定**ページで、選択、 **、ワークフローの追加**リンクします。  
+6.  **ワークフロー設定**ページで、選択、**ワークフローに追加**リンク。  
   
-7.  **、ワークフローの追加**ページで、選択、 **ExpenseReport - Workflow1** 、ワークフローなど、ワークフローの名前を入力**ExpenseTest**、を選択し**次**ボタンをクリックします。  
+7.  **ワークフローに追加**ページで、選択、 **ExpenseReport - Workflow1** 、ワークフローなどのワークフローの名前を入力します**ExpenseTest**、を選択し**次**ボタンをクリックします。  
   
-     ワークフロー関連付けフォームが表示されます。 これを使用して、支出限度額をレポートします。  
+     ワークフロー関連付けフォームが表示されます。 これを使用して、経費の上限金額のレポートします。  
   
-8.  関連付けフォームに入力**1000**に、**自動承認制限**ボックスをクリックして、**関連付けるワークフロー**ボタンをクリックします。  
+8.  関連付けフォームでは、次のように入力します。 **1000**に、**自動承認制限**ボックスを選び、、**関連付けるワークフロー**ボタンをクリックします。  
   
-9. 選択、**ホーム**SharePoint ホーム ページに戻るにはボタンをクリックします。  
+9. 選択、**ホーム**SharePoint ホーム ページに戻るボタンをクリックします。  
   
-10. 選択、 **Shared Documents**クイック起動バー上にリンクします。  
+10. 選択、 **Shared Documents**クイック起動バーにリンクします。  
   
-11. ドロップダウン矢印を表示したり、 を選択してを選択し、アップロードしたドキュメントの 1 つを選択して、**ワークフロー**項目。  
+11. 下矢印を表示、それを選択し、アップロードされたドキュメントのいずれかを選択、**ワークフロー**項目。  
   
 12. ワークフロー開始フォームを表示する ExpenseTest の横にあるイメージを選択します。  
   
-13. **経費合計**テキスト ボックスは、1000 を超える値を入力し、、**ワークフローの開始**ボタンをクリックします。  
+13. **費用合計**テキスト ボックスに、1000 よりも大きい値を入力し、、**ワークフローの開始**ボタンをクリックします。  
   
-     報告された経費が、割り当て済みの費用の金額を超えているときに、タスクは、タスクの一覧に追加されます。 という名前の列**ExpenseTest**値を持つ**完了**も共有ドキュメント の一覧で、経費レポート アイテムに追加されます。  
+     報告された経費、割り当て済みの費用の金額を超えた場合は、タスクがタスク一覧に追加されます。 という名前の列**ExpenseTest**値を持つ**完了**Shared Documents の一覧で、経費レポート アイテムにも追加されます。  
   
-14. 共有ドキュメント の一覧内の他のドキュメントの手順 11 ~ 13 を繰り返します。 (ドキュメントの正確な数重要ではありません。)  
+14. Shared Documents の一覧内の他のドキュメントの手順 11 ~ 13 を繰り返します。 (ドキュメントの正確な数重要ではありません。)  
   
-15. Web ブラウザーで次の URL を開くことで、経費明細書概要アプリケーション ページを表示: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**です。  
+15. Web ブラウザーで次の URL を開き、経費明細書アプリケーションの概要ページを表示: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**します。  
   
-     経費明細書概要ページには、すべての割り当て済みの容量を超えている支出、量を超過していたことによって、すべてのレポートの合計金額が一覧表示します。  
+     経費レポートの概要 ページには、すべてを割り当てられている量を超えた経費報告書の値を超えている金額とすべてのレポートの合計金額が表示されます。  
   
-## <a name="next-steps"></a>次の手順  
- SharePoint アプリケーション ページの詳細については、次を参照してください。 [for SharePoint アプリケーション ページを作成する](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
+## <a name="next-steps"></a>次の手順
+ SharePoint アプリケーション ページの詳細については、次を参照してください。[用 SharePoint アプリケーション ページを作成](../sharepoint/creating-application-pages-for-sharepoint.md)です。  
   
- 複数をこれらのトピックから Visual Studio でビジュアル Web デザイナーを使用して、SharePoint ページの内容をデザインする方法について学習できます。  
+ これらのトピックから Visual Studio で Visual Web Designer を使用して、SharePoint ページの内容を設計する方法について詳細ことができます。  
   
--   [SharePoint の Web パーツの作成](../sharepoint/creating-web-parts-for-sharepoint.md)です。  
+-   [SharePoint の web パーツを作成](../sharepoint/creating-web-parts-for-sharepoint.md)です。  
   
--   [Web パーツまたはアプリケーション ページの再利用可能なコントロールの作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)です。  
+-   [Web パーツまたはアプリケーション ページの再利用可能なコントロール作成](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)です。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: アソシエーションと開始フォーム、ワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
- [方法: アプリケーション ページを作成します。](../sharepoint/how-to-create-an-application-page.md)   
- [For SharePoint アプリケーション ページの作成](../sharepoint/creating-application-pages-for-sharepoint.md)   
- [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>関連項目
+ [チュートリアル: 関連付けフォームと開始フォームとワークフローを作成します。](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)   
+ [方法: アプリケーション ページを作成](../sharepoint/how-to-create-an-application-page.md)   
+ [For SharePoint アプリケーション ページを作成します。](../sharepoint/creating-application-pages-for-sharepoint.md)   
+ [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
   

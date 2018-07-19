@@ -17,19 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 059c3015bf542dda6a420c80620bc74c9ee6ca6b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b36da837ae1f4c327969b398c3964bfd6dd2aea3
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567227"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302751"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 グローバルなスレッド カウントを設定し、そのカウントを現在のスレッドに割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cmd  
 HRESULT WINAPI SetThreadCount(int threadCount);  
 ```  
   

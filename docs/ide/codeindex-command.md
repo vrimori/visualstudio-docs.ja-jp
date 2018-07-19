@@ -14,19 +14,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52f557807dd1275526b4fc0d7f8a8584df922325
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 2216a4678436a9d7811adbdb4bef2ee930fbabb2
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297607"
 ---
 # <a name="codeindex-command"></a>CodeIndex コマンド
 
 **CodeIndex** コマンドを使用して、Team Foundation Server でコード インデックス作成を管理します。 たとえば、インデックスをリセットして CodeLens 情報を修正したり、コード インデックス作成をオフにしてサーバー パフォーマンスの問題を調査したりします。
 
-**必要なアクセス許可**
+## <a name="required-permissions"></a>必要なアクセス許可
 
-**CodeIndex** コマンドを使用するには、**Team Foundation 管理者**セキュリティ グループのメンバーである必要があります。 「[Permissions and groups defined for Team Services and TFS](https://www.visualstudio.com/docs/setup-admin/permissions)」 (チーム サービスと TFS に定義されているアクセス許可とグループ) を参照してください。
+**CodeIndex** コマンドを使用するには、**Team Foundation 管理者**セキュリティ グループのメンバーである必要があります。 「[Permissions and groups defined for Team Services and TFS](/vsts/organizations/security/permissions?view=vsts)」 (チーム サービスと TFS に定義されているアクセス許可とグループ) を参照してください。
 
 > [!NOTE]
 > 管理資格情報を使ってログオンしている場合でも、このコマンドを実行するには、昇格した特権でコマンド プロンプト ウィンドウを開く必要があります。 また、Team Foundation のアプリケーション層からこのコマンドを実行する必要があります。
@@ -126,4 +127,4 @@ TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"
 ## <a name="see-also"></a>関連項目
 
 - [CodeLens によるコード変更とその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)
-- [TFSConfig でのサーバー構成の管理](/vsts/tfs-server/command-line/tfsconfig-cmd)
+- [TFSConfig でのサーバー構成の管理](/tfs/server/ref/command-line/tfsconfig-cmd)

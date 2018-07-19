@@ -1,5 +1,5 @@
 ---
-title: Visio 図形の操作 |Microsoft ドキュメント
+title: Visio 図形を操作します。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,19 +16,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ea904dd2d6d41394323b2ddc2ff3f4fcd66e5d69
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 385b546e812c3772188abf3ee2d1a2767d28eb46
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35258386"
 ---
-# <a name="working-with-visio-shapes"></a>Visio の図形の操作
+# <a name="work-with-visio-shapes"></a>Visio 図形を操作します。
   このセクションのトピックでは、Microsoft Office Visio のオブジェクト モデルを使用して Office プロジェクトで図形を操作する手順とコード例を提供します。  
   
 |タスク|プロシージャ|  
 |----------|---------------|  
-|ステンシルから Visio 図面に図形を追加します。|[方法: プログラムによって Visio 図面に図形を追加する](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)|  
-|Visio のページから図形をコピーし、別のページに貼り付けます。|[方法: Visio 図面の図形をプログラムによってコピーして貼り付ける](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)|  
+|ステンシルから Visio 図面に図形を追加します。|[方法: プログラムによって Visio 図面に図形を追加](../vsto/how-to-programmatically-add-shapes-to-a-visio-document.md)|  
+|Visio のページから図形をコピーし、別のページに貼り付けます。|[方法: プログラムによってコピーして、Visio 図面に図形を貼り付けます](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)|  
   
 ## <a name="see-also"></a>関連項目  
  [Visio ソリューション](../vsto/visio-solutions.md)   

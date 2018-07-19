@@ -1,5 +1,5 @@
 ---
-title: テーブルの操作 |Microsoft ドキュメント
+title: テーブルを操作します。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,21 +18,22 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cf1611226e16ca54c412845b6e6fa46d5ae6ae26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ada371daaba53783cff11975a4490f1730bd9c18
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35258513"
 ---
-# <a name="working-with-tables"></a>テーブルの操作
+# <a name="work-with-tables"></a>テーブルを操作します。
   このセクションのトピックでは、Microsoft Office Word のオブジェクト モデルを使用して Office プロジェクト内のテーブルを操作する手順とコード例を示します。 以下のタスクは、VSTO アドインとドキュメント レベルのカスタマイズとで実行方法が異なる場合があります。  
   
 |タスク|プロシージャ|  
 |----------|---------------|  
-|テーブルを作成し、スタイルを適用して、コード内のテーブルにアクセスします。|[方法: プログラムによって Word の表を作成する](../vsto/how-to-programmatically-create-word-tables.md)|  
-|テーブルを作成し、書式設定して、セルにデータを挿入します。|[方法: プログラムによって Document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|  
-|テーブルに行または列を追加します。|[方法: プログラムによって Word の表に行と列を追加する](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)|  
-|セルにテキストを追加して、書式設定します。|[方法: プログラムによって Word の表のセルにテキストと書式設定を追加する](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)|  
+|テーブルを作成し、スタイルを適用して、コード内のテーブルにアクセスします。|[方法: プログラムによって Word の表を作成](../vsto/how-to-programmatically-create-word-tables.md)|  
+|テーブルを作成し、書式設定して、セルにデータを挿入します。|[方法: プログラムによって document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)|  
+|テーブルに行または列を追加します。|[方法: プログラムによって Word の表に行と列を追加](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)|  
+|セルにテキストを追加して、書式設定します。|[方法: プログラムによって Word の表のセルにテキストと書式の追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)|  
   
 ## <a name="see-also"></a>関連項目  
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   

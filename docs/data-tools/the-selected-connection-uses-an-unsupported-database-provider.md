@@ -10,20 +10,20 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 77519a5497c26553e2023862e46f3ba618e4f99f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d102404cf14fecc89fc65773d283d748914bc0a5
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174173"
 ---
 # <a name="the-selected-connection-uses-an-unsupported-database-provider"></a>選択した接続では、サポートされていないデータベース プロバイダーが使用されています
 
-SQL Server からの .NET Framework データ プロバイダーを使用しない項目をドラッグすると、このメッセージが表示される**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [LINQ to SQLVisual Studio tools](../data-tools/linq-to-sql-tools-in-visual-studio2.md)です。
+.NET Framework Data Provider for SQL Server を使用しない項目をドラッグすると、このメッセージが表示されます**サーバー エクスプ ローラー**または**データベース エクスプ ローラー**上に、[ビジュアルでの LINQ to SQL ツールStudio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)します。
 
-[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]では、.NET Framework Provider for SQL Server を使用するデータ接続のみがサポートされます。 有効な接続は、Microsoft SQL Server または Microsoft SQL Server データベース ファイルへの接続だけです。
+**O/R デザイナー** for SQL Server、.NET Framework Provider を使用するデータ接続のみをサポートします。 有効な接続は、Microsoft SQL Server または Microsoft SQL Server データベース ファイルへの接続だけです。
 
-このエラーを修正する項目のみを追加する SQL Server の .NET Framework データ プロバイダーを使用するデータ接続から、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]です。
+このエラーを修正するには、SQL server、.NET Framework Data Provider を使用するデータ接続から項目のみを追加、 **O/R デザイナー**します。
 
 ## <a name="see-also"></a>関連項目
 

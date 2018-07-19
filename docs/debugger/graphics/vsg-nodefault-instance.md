@@ -1,5 +1,5 @@
 ---
-title: VSG_NODEFAULT_INSTANCE |Microsoft ドキュメント
+title: VSG_NODEFAULT_INSTANCE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d064f4a5b983058d9f1ad4428e2b37cf2e82dcf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4655b6105a940b7f2c742ba8bcd0812d0be5ab95
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31473161"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433186"
 ---
 # <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
-既定のインスタンスかどうかをその存在によって定義、 [VsgDbg クラス](vsgdbg-class.md)クラス: プログラムによるキャプチャ インターフェイスを提供する — を指定します。  
+既定のインスタンスかどうかをその存在によって定義、 [VsgDbg クラス](vsgdbg-class.md)クラス: プログラムによるキャプチャ インターフェイスを提供する — が指定されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,21 +31,21 @@ ms.locfileid: "31473161"
   
  プログラムによるキャプチャ インターフェイスは、グローバル スコープを持つポインター `g_pVsgDbg` を通じて提供されます。  
   
-```  
+```cpp
 VsgDbg *g_pVsgDbg;  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ほとんどの場合は既定のインスタンスで十分ですが、D3D デバイスが DLL の外部で作成されたときのその DLL 内部のプログラムによるキャプチャ インターフェイスを使用するには、`VsgDbg` クラスの独自のインスタンスを作成および管理する必要があります。 プログラムによるキャプチャの API への独自のインターフェイスをこのように管理している場合は、オーバーヘッドを避けるために、`VSG_NODEFAULT_INSTANCE` を定義して既定のインスタンスを無効にします。  
   
  既定のインスタンスが無効になっていない場合は、プログラムの実行前に自動的に初期化され、プログラムの終了時に自動的に破棄されます。 このインスタンスの初期化および初期化解除を明示的に行う必要はありません。  
   
- 既定のインスタンスを無効にする必要がありますを定義する`VSG_NODEFAULT_INSTANCE`インクルードする前に`vsgcapture.h`プログラムでします。  
+ 定義する必要があります、既定のインスタンスを無効にする`VSG_NODEFAULT_INSTANCE`インクルードする前に`vsgcapture.h`プログラムでします。  
   
 ## <a name="example"></a>例  
  次の例は、既定のインスタンスを無効にする方法を示しています。  
   
-```  
+```cpp
 // Define VSG_NODEFAULT_INSTANCE before including vsgcapture.h  
 #define VSG_NODEFAULT_INSTANCE  
   

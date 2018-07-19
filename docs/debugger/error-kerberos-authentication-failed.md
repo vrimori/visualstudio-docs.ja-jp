@@ -1,5 +1,5 @@
 ---
-title: 'エラー: Kerberos 認証に失敗しました |Microsoft ドキュメント'
+title: 'エラー: Kerberos 認証に失敗しました |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -16,17 +16,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 63b3ed3349403bef0c85af9775f77cc980fc4e63
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 085b120974ee23d0d7e3712cdbb0a8f7f7021e83
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474217"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056858"
 ---
 # <a name="error-kerberos-authentication-failed"></a>エラー : Kerberos 認証に失敗しました。
 リモート デバッグを実行するときに、次のエラー メッセージが表示されることがあります。  
   
-```  
+```cmd
 Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Kerberos authentication failed.  
 ```  
   
@@ -40,23 +40,23 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
   
 -   ドメイン コントローラーで Kerberos が無効になっている。  
   
- Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー: 対象のコンピューター上の Visual Studio リモート デバッガー サービスは、このコンピューターに接続できません](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)です。  
+ Kerberos 認証が使用できない場合は、Visual Studio リモート デバッグ モニターの実行に使用するアカウントを変更してください。 手順については、次を参照してください。[エラー: ターゲット コンピューターで、Visual Studio リモート デバッガー サービスは、このコンピューターに接続できない](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)します。  
   
  両方のコンピューターが同じドメインに接続しているにもかかわらず、このメッセージが表示される場合は、ターゲット コンピューターの DNS がデバッガー ホスト コンピューターの名前を正しく解決していることを確認してください。 以降の手順を参照してください。  
   
 ### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>ターゲット コンピューターの DNS がデバッガー ホスト コンピューター名を正しく解決していることを確認するには  
   
-1.  ターゲット コンピューターで開く、**開始** メニューのをポイント**アクセサリ**順にクリック**コマンド プロンプト**。  
+1.  ターゲット コンピューターで開く、**開始**メニューで、**アクセサリ**順にクリックします**コマンド プロンプト**。  
   
 2.  **コマンド プロンプト**ウィンドウで、種類。  
   
-    ```  
+    ```cmd
     ping <debugger_host_computer_name>  
     ```  
   
 3.  `ping` の応答の 1 行目には、DNS が返した完全なコンピューター名と IP アドレスが表示されます。  
   
-4.  デバッガー ホスト コンピューターで開く、**コマンド プロンプト**ウィンドウと実行`ipconfig`です。  
+4.  デバッガー ホスト コンピューターでは、開く、**コマンド プロンプト**ウィンドウと実行`ipconfig`します。  
   
 5.  IP アドレス値を比較します。  
   

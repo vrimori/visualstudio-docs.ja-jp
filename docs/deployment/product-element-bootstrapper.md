@@ -1,5 +1,5 @@
 ---
-title: '&lt;製品&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+title: '&lt;製品&gt;要素 (ブートス トラップ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,19 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa27f5b2af87ec3a174c26ccae1ad4e4e47749b3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 90179df4595ea58a771dd941ea388555b52c7374
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31559440"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080406"
 ---
 # <a name="ltproductgt-element-bootstrapper"></a>&lt;製品&gt;要素 (ブートス トラップ)
-`Product`要素は、製品ファイル内で最上位の XML 要素です。  
+`Product`要素は、製品ファイル内の最上位の XML 要素。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Product  
 ProductCode  
 >  
@@ -140,16 +140,16 @@ ProductCode
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `Product`製品ファイルに要素が必要です。 これにより、次の属性があります。  
+ `Product`製品ファイルに要素が必要です。 次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`ProductCode`|製品の一意の識別子。|  
   
 ## <a name="example"></a>例  
- 次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
+ 次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Product  

@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 171cdd59d3fd40d640aea2e5896a0179a303bd19
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 068e49c1fb095691cfa68f7a744a2159a8c173a3
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751690"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845494"
 ---
 # <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Microsoft 単体テスト フレームワークを使用する
 
@@ -32,7 +32,7 @@ DLL でエクスポートされない関数をテストするときなど、場�
 
     3.  次の行の下向きの矢印をクリックし、**[<Edit>]** を選択します:
 
-        |||
+        |ディレクトリ|プロパティ|
         |-|-|
         |**インクルード ディレクトリ**|**$(VCInstallDir)UnitTest\include;$(IncludePath)**|
         |**ライブラリ ディレクトリ**|**$(VCInstallDir)UnitTest\lib;$(LibraryPath)**|
@@ -67,7 +67,7 @@ DLL でエクスポートされない関数をテストするときなど、場�
 
  定義された特徴を単体テストで使用するには、次のように記述します。
 
-```
+```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(Method1)
     TEST_OWNER(L"OwnerName")
     TEST_PRIORITY(1)

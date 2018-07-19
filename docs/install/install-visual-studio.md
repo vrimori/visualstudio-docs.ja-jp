@@ -19,17 +19,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee4a75ba456184ffe48cb59f77668625acf673d1
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 51543921049082b4fca5a04f20b8adfc753d8112
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283446"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
 ここでは、Visual Studio の新しいインストール方法について説明します。 最新バージョンでは、必要な機能だけを簡単に選んでインストールできるようになりました。 また、Visual Studio の最小フットプリントも減らしているため、以前よりもシステムへの影響が少なくなり、より迅速にインストールできます。
 
-このバージョンの他の新機能については、 [リリース ノート](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)を参照してください。
+このバージョンの他の新機能については、 [リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
 インストールの準備ができたら、 各ステップを順に実行していきます。
 
@@ -37,19 +38,19 @@ ms.lasthandoff: 05/22/2018
 
 Visual Studio のインストールを開始する前に
 
-1. [システム要件](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)を確認します。 これらの要件により、ご利用のコンピューターが Visual Studio 2017 に対応しているかどうかを確認できます。
+1. [システム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)を確認します。 これらの要件により、ご利用のコンピューターが Visual Studio 2017 に対応しているかどうかを確認できます。
 2. 最新の Windows 更新プログラムを適用します。 これらの更新プログラムにより、Visual Studio の最新のセキュリティ更新プログラムと必要なシステム コンポーネントの両方がコンピューターにインストールされます。
 3. 再起動します。 この再起動により、Visual Studio のインストールの際に妨げとなる、保留中のインストールや更新プログラムがないようにします。
 4. 記憶域を解放します。 ディスク クリーンアップ アプリを実行するなどして、%SystemDrive% から不要なファイルとアプリケーションを削除します。
 
-Visual Studio 2017 と以前のバージョンの Visual Studio を共存させて実行することについて疑問点があれば、[Visual Studio の互換性の詳細](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases)に関する記事をご覧ください。
+Visual Studio 2017 と以前のバージョンの Visual Studio を共存させて実行することについて疑問点があれば、[Visual Studio の互換性の詳細](/visualstudio/productinfo/vs2017-compatibility-vs#compatibility-with-previous-releases)に関する記事をご覧ください。
 
 ## <a name="step-2---download-visual-studio"></a>手順 2 - Visual Studio をダウンロードする
 
 次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、以下のボタンをクリックし、必要な Visual Studio 2017 のエディションを選択して、**[保存]**、**[フォルダーを開く]** の順にクリックします。
 
  > [!div class="button"]
- > [Visual Studio 2017 をダウンロードする](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ > [Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 <br/>
 
 |         |         |
@@ -68,7 +69,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
   ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
 
-2. Microsoft の[ライセンス条項](https://www.visualstudio.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]** をクリックします。  
+2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]** をクリックします。
 
    ![ライセンス条項とプライバシーに関する声明](media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")
 
@@ -80,16 +81,16 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
  ![Visual Studio 2017 の設定ダイアログからワークロードを選択する](../install/media/install-visual-studio-community.png)
 
-     たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。  
+     たとえば、".NET デスクトップ開発" ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。
 
 2. 必要なワークロード (複数可) を選択したら、**[インストール]** をクリックします。
 
     そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
-3. 新しいワークロードとコンポーネントがインストールされたら、**[起動]** をクリックします。  
+3. 新しいワークロードとコンポーネントがインストールされたら、**[起動]** をクリックします。
 
 > [!TIP]
-> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択し、**[変更]** をクリックします。  
+> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択し、**[変更]** をクリックします。
 
 |         |         |
 |---------|---------|
@@ -139,7 +140,7 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 
 ## <a name="get-support"></a>サポートを受ける
 
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
 

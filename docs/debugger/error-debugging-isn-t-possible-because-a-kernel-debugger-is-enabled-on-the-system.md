@@ -1,5 +1,5 @@
 ---
-title: 'エラー: デバッグではありません&#39;t Possible Because カーネル デバッガーがシステムで有効になっている |Microsoft ドキュメント'
+title: 'エラー: デバッグではありません&#39;Possible Because カーネル デバッガーがシステムで有効になっている t |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -18,21 +18,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba943057da003a0fafee6d6fb8c6082d228779f9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 75e1628f461c813e07634838f57c0335bdf6a1b5
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31482114"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058725"
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>エラー: デバッグではありません&#39;t Possible Because カーネル デバッガーがシステムで有効になっています。
-マネージ コードのデバッグ時に、次のエラー メッセージが表示されることがあります。  
+マネージド コードのデバッグ時に、次のエラー メッセージが表示されることがあります。  
   
-```  
+```cmd
 Debugging isn't possible because a kernel debugger is enabled on the system  
 ```  
   
- このメッセージは次の場合にマネージ コードをデバッグしようとすると表示されます。  
+ このメッセージは次の場合にマネージド コードをデバッグしようとすると表示されます。  
   
 -   [!INCLUDE[win7](../debugger/includes/win7_md.md)] または [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] システムがデバッグ モードで起動している。  
   
@@ -60,7 +60,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 -   コマンド プロンプトで、次のコマンドを入力します。  
   
-    ```  
+    ```cmd
     Kdbgctrl.exe -d  
     ```  
   
@@ -68,7 +68,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 1.  コマンド プロンプトで、次のコマンドを入力します。  
   
-    ```  
+    ```cmd
     bcdedit /debug off   
     ```  
   
@@ -76,15 +76,15 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 #### <a name="to-disable-kernel-debugging-for-all-sessions-other-windows-operating-systems"></a>すべてのセッションでカーネル デバッグを無効にするには (その他の Windows オペレーティング システム)  
   
-1.  システム ドライブの boot.ini を探します (通常は c:\\)。 boot.ini ファイルは、読み取り専用で非表示になっていることがあります。 この場合、次のコマンドを使用して表示する必要があります。  
+1.  Boot.ini、システム ドライブを探します (通常は c:\\)。 boot.ini ファイルは、読み取り専用で非表示になっていることがあります。 この場合、次のコマンドを使用して表示する必要があります。  
   
-    ```  
+    ```cmd
     dir /ASH  
     ```  
   
 2.  boot.ini をメモ帳で開き、次のオプションを削除します。  
   
-    ```  
+    ```cmd
     /debug  
     /debugport  
     /baudrate  
@@ -102,4 +102,5 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)
+ 
+  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)

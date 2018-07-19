@@ -1,5 +1,5 @@
 ---
-title: IDiaEnumLineNumbers |Microsoft ドキュメント
+title: IDiaEnumLineNumbers |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fb0b457a0efef1c860be7174f012575aec64f99
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 388bb5e16ae54199989dd125e0c3580102bca292
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463277"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057322"
 ---
 # <a name="idiaenumlinenumbers"></a>IDiaEnumLineNumbers
 データ ソースに含まれるさまざまな行番号を列挙します。  
@@ -35,18 +35,18 @@ IDiaEnumLineNumbers : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IDiaEnumLineNumbers::get__NewEnum](../../debugger/debug-interface-access/idiaenumlinenumbers-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](http://msdn.microsoft.com/en-us/139e3c93-faef-4003-9079-e0e94494db3e)この列挙子のバージョン。|  
+|[IDiaEnumLineNumbers::get__NewEnum](../../debugger/debug-interface-access/idiaenumlinenumbers-get-newenum.md)|取得、 [IEnumVARIANT インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)この列挙子のバージョン。|  
 |[IDiaEnumLineNumbers::get_Count](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md)|行番号の数を取得します。|  
 |[IDiaEnumLineNumbers::Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md)|インデックスを使用して、行番号を取得します。|  
-|[IDiaEnumLineNumbers::Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)|列挙のシーケンス内の行番号の指定した数を取得します。|  
-|[IDiaEnumLineNumbers::Skip](../../debugger/debug-interface-access/idiaenumlinenumbers-skip.md)|列挙のシーケンス内の行番号の指定した数をスキップします。|  
-|[IDiaEnumLineNumbers::Reset](../../debugger/debug-interface-access/idiaenumlinenumbers-reset.md)|列挙のシーケンスを先頭にリセットします。|  
-|[IDiaEnumLineNumbers::Clone](../../debugger/debug-interface-access/idiaenumlinenumbers-clone.md)|現在の列挙子と同じ列挙の状態を含む列挙子を作成します。|  
+|[IDiaEnumLineNumbers::Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md)|指定された数の列挙体シーケンス内の行番号を取得します。|  
+|[IDiaEnumLineNumbers::Skip](../../debugger/debug-interface-access/idiaenumlinenumbers-skip.md)|指定された数の列挙体シーケンス内の行番号をスキップします。|  
+|[IDiaEnumLineNumbers::Reset](../../debugger/debug-interface-access/idiaenumlinenumbers-reset.md)|先頭に、列挙体シーケンスをリセットします。|  
+|[IDiaEnumLineNumbers::Clone](../../debugger/debug-interface-access/idiaenumlinenumbers-clone.md)|現在の列挙子と同じ列挙状態を格納する列挙子を作成します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- 次のメソッドのいずれかを呼び出すことによってこのインターフェイスを取得、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)インターフェイス。  
+ このインターフェイスは、次のメソッドのいずれかを呼び出すことによって取得は、 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)インターフェイス。  
   
 -   [IDiaSession::findLines](../../debugger/debug-interface-access/idiasession-findlines.md)  
   
@@ -59,7 +59,7 @@ IDiaEnumLineNumbers : IUnknown
 -   [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)  
   
 ## <a name="example"></a>例  
- この例は、取得する方法を示します、`IDiaEnumLineNumbers`セッションからのインターフェイスです。 ここでは、例は関数の行番号の列挙を取得する方法を示しています。 (によって表される`pSymbol`)。 行番号を使用するより詳細な例については、 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)インターフェイスです。  
+ この例は、取得する方法を示します、`IDiaEnumLineNumbers`セッションからのインターフェイス。 関数行番号の列挙を取得する方法を示しますこの場合、(によって表される`pSymbol`)。 行番号を使用してのより完全な例を参照してください、 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)インターフェイス。  
   
 ```C++  
 void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )  
@@ -87,7 +87,7 @@ void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

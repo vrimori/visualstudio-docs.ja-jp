@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ed99b0e7dbccbee99dbc290d79d2b25b9c84874
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b16d3b5feeadc033083cbd051497cb973372c3bb
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578589"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302793"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup 要素
 `UsingTask``TaskFactory` によって生成されるタスクで使用される省略可能なパラメーターのリストが格納されます。 詳細については、「[UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md)」(UsingTask 要素 (MSBuild)) を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "31578589"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <ParameterGroup />  
 ```  
 

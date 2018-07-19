@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Azure の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: af36faf2345364386c85814b685dcd3211884fe2
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 00a69bf03c47ddf57b2b45ba1f3d9e2547132521
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34336085"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280658"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -94,7 +94,7 @@ Visual Studio の Azure クレジットと割引の使用を続けるには、�
 1.  Visual Studio Marketplace から Visual Studio [Enterprise](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual) または Visual Studio [Professional](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual) のクラウド年間サブスクリプションを購入します。
 2.  [Microsoft Store](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription) で現在のサブスクリプションを更新すれば、50% 以上の割引が受けられます。
 
-すべての[サブスクリプションとその特典](https://www.visualstudio.com/vs/pricing/)を比較してみてください。
+すべての[サブスクリプションとその特典](https://visualstudio.microsoft.com/vs/pricing/)を比較してみてください。
 
 Microsoft アカウントに**同じ**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、Visual Studio サブスクリプション ポータルで[代替アカウント](manage-vs-subscriptions.md#linking-my-subscription-to-existing-vsts-or-azure-subscriptions)を追加することで、そのアクティブ サブスクリプションをこの Azure 特典にリンクできます。 それがうまくいかない場合、Visual Studio のアクティブ サブスクリプションに [Azure 特典を転送](/azure/billing/billing-subscription-transfer/)してみることができます。
 
@@ -111,5 +111,5 @@ Microsoft アカウントに**異なる**サブスクリプション レベル�
 -  Azure に関するヘルプが必要ですか。  以下のリソースを確認してください。
     - テクニカル サポート: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
     - [Azure ドキュメント](/azure/)
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

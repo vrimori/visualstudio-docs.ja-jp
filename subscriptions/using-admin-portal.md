@@ -9,11 +9,12 @@ mescription: Learn how to manage your organization's Visual Studio subscriptions
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 22351b94923777d5eb1fe40cd2e43e9dc20f2449
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 41f594057051625acb6771ee9d66cad60b4508fd
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36327393"
 ---
 #  <a name="using-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルを使用する
 
@@ -50,7 +51,7 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 > [!NOTE]
 > 主要ご担当者様および連絡先ご担当者様が、複数の電子メールを受信した場合、複数の PCN があることを意味しています。 管理者は、各電子メールで参照されている PCN の一意のリンクを使用してプロセスを完了する必要があります。*
 
-新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、「[主要連絡先を確認する方法](/find-primary-contact/)」トピックを参照してください。
+新しい Visual Studio サブスクリプションの管理ポータルに追加される必要があるときに、主要/通知連絡先が誰かわからない場合は、[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) にサインインした後にこの情報を見つけることができます。 VLSC で主要/通知連絡先を見つける手順については、「[主要連絡先を確認する方法](find-primary-contact.md)」トピックを参照してください。
 管理者として既に設定されている場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com)に直接進むことができます。
 
 ### <a name="understanding-the-subscribers-page"></a>[サブスクライバー] ページを理解する
@@ -67,11 +68,9 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 - サインイン以外の通信に使用される別の電子メール アドレスのオプションのフィールド。 
 
 このページの左側には、購入済みかつ割り当て済みで組織が各契約でまだ使用できるサブスクリプション ライセンスの数に関する追加情報が表示されます。
-
-   ![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
+    ![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
 
 ### <a name="understanding-the-details-page"></a>[詳細] ページを理解する
 表示されている契約の詳細を参照するには、[詳細] タブを選択します。契約の状態、購入アカウント、組織の詳細、主要連絡先 (VLSC )、スーパー管理者 (使用可能な場合)、および他の関連情報が表示されます。
-
-   ![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
+    ![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
 

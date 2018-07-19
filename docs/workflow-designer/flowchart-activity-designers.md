@@ -1,5 +1,5 @@
 ---
-title: ワークフロー デザイナーにフローチャート アクティビティ デザイナー
+title: ワークフロー デザイナー、フローチャート アクティビティ デザイナー
 ms.date: 11/04/2016
 ms.topic: reference
 ms.prod: visual-studio-dev15
@@ -10,16 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb6294b2e2392c81e20c984972ec875c589a7167
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ef7fc3e956c6b31b1df8346e9b347ca3e094d878
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967840"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755721"
 ---
 # <a name="flowchart-activity-designers"></a>フローチャート アクティビティ デザイナー
 
-Windows ワークフロー デザイナーには、ワークフローを構築するときに使用できるシステム標準のアクティビティの数が含まれています。 このセクションでは、ワークフロー内のフローチャートの管理を目的とした、システムによって提供されるアクティビティを紹介します。 次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。
+ワークフロー デザイナーには、さまざまなワークフローを構築するときに使用できるシステム標準アクティビティが含まれています。 このセクションでは、ワークフロー内のフローチャートの管理を目的とした、システムによって提供されるアクティビティを紹介します。 次のトピックでは、これらのアクティビティについて説明し、その使用方法についてのガイドラインを示します。
 
 ## <a name="reference"></a>参照
  <xref:System.Activities.Activity>

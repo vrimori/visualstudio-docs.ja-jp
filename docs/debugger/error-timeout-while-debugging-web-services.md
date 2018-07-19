@@ -1,5 +1,5 @@
 ---
-title: 'エラー: Web サービスのデバッグ中にタイムアウトしました |Microsoft ドキュメント'
+title: エラー Web サービスのデバッグ中にタイムアウトしました |。Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,17 +17,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f7b97aa665062b0d0388764cb0ab75956087924
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 41c6793e1fdf4e3ed2d7e42fbd32bd20ad9f494a
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31479891"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056269"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>エラー ： Web サービスのデバッグ中にタイムアウトになりました。
 呼び出し元のコードから XML Web サービスにステップ インしている場合は、呼び出しがタイムアウトになってデバッグを継続できなくなることがあります。 この場合は、次のエラー メッセージが表示されます。  
   
-```  
+```cmd
 An unhandled exception of type 'System.Net.WebException' occurred in   
 system.Web.services.dll  
 Additional information: The operation has timed-out.  
@@ -36,7 +36,7 @@ Additional information: The operation has timed-out.
 ## <a name="solution"></a>ソリューション  
  この問題を回避するには、次の例で示すように、XML Web サービス呼び出しのタイムアウト値を無限に設定します。  
   
-```  
+```csharp
 Service1 obj = new Service1();  
 obj.TimeOut = -1; // infinite time out.  
 ```  

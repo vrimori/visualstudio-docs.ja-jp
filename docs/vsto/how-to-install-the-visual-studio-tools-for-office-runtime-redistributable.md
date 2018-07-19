@@ -1,5 +1,5 @@
 ---
-title: '方法: for Office Runtime の再頒布可能パッケージの Visual Studio Tools のインストール |Microsoft ドキュメント'
+title: '方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージのインストール'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 552ef84dc5b4bba8b9f63173d41a43a4efd82a14
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 15e3c1b25d4834808fb17e596fcc7babe7dd969f
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255851"
 ---
-# <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>方法: Visual Studio Tools for Office の再頒布可能なランタイムをインストールする
-  Microsoft Office developer tools を使用して作成したソリューションを実行する各コンピューターに Visual Studio 2010 Tools for Office Runtime をインストールする必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 ランタイムは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、および Microsoft Office をインストールすると自動的にインストールされます。 詳細については、「 [Visual Studio Tools for Office Runtime Installation Scenarios](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)」を参照してください。  
+# <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>方法: Visual Studio Tools for Office ランタイム再頒布可能パッケージのインストール
+  Microsoft Office developer tools を使用して作成したソリューションを実行する各コンピューターで、Visual Studio 2010 Tools for Office ランタイムをインストールする必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 ランタイムは、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、および Microsoft Office をインストールすると自動的にインストールされます。 詳細については、次を参照してください。 [Visual Studio Tools for Office runtime のインストール シナリオ](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)します。  
   
  次の場合は、手動による以下のインストール手順を実行する必要があります。  
   
@@ -34,28 +35,28 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  .NET Framework および [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をインストールするには、開発コンピューターの管理者である必要があります。  
   
-### <a name="to-install-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office ランタイムをインストールするには  
+## <a name="to-install-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office ランタイムをインストールするには  
   
 1.  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降をインストールします。  
   
-    -   ダウンロードする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を参照してください[Microsoft .NET Framework 4 (Web インストーラー)](http://go.microsoft.com/fwlink/?LinkId=178957)です。  
+    -   ダウンロードする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]を参照してください[Microsoft .NET Framework 4 (Web インストーラー)](http://go.microsoft.com/fwlink/?LinkId=178957)します。  
   
-    -   ダウンロードする、[!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]を参照してください[Microsoft .NET Framework 4 Client Profile (Web インストーラー)](http://go.microsoft.com/fwlink/?LinkId=178958)です。  
+    -   ダウンロードする、[!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]を参照してください[Microsoft .NET Framework 4 Client Profile (Web インストーラー)](http://go.microsoft.com/fwlink/?LinkId=178958)します。  
   
-    -   ダウンロードする、[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を参照してください[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)です。  
+    -   ダウンロードする、[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]を参照してください[Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653)します。  
   
-2.  vstor_redist.exe を実行して [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をインストールします。  
+2.  実行*vstor_redist.exe*をインストールする、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]します。  
   
-     これらのセットアップ ファイルをダウンロードする[Visual Studio 2010 Tools for Office Runtime](http://go.microsoft.com/fwlink/?LinkId=140384)です。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] の必須コンポーネントは .NET Framework の場合と同じです。  
+     これらのセットアップ ファイルをダウンロードする[Visual Studio 2010 Tools for Office ランタイム](http://go.microsoft.com/fwlink/?LinkId=140384)します。 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] の必須コンポーネントは .NET Framework の場合と同じです。  
   
-     [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]言語パックが含まれています。 Windows のインストールが英語以外の言語に設定されている場合、Windows と同じ言語でランタイム メッセージを表示できます。 同様に、エンド ユーザーが [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をインストールし、英語以外の言語に設定されている Windows のインストールでソリューションを実行すると、Windows と同じ言語でランタイム メッセージが表示されます。 場合によっては、追加の言語パックが必要になる場合があります。 たとえば、Windows のコピーが複数の言語設定を使用して、または既にインストールされている後に別の言語に切り替えるを使用する追加の言語パックを必要があります、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]です。 言語パックを検索できる[Microsoft Visual Studio の 2010 Tools for Microsoft Office System (バージョン 4.0 ランタイム) Language Pack](http://go.microsoft.com/fwlink/?LinkId=140386)です。  
+     [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]言語パックが含まれています。 Windows のインストールが英語以外の言語に設定されている場合、Windows と同じ言語でランタイム メッセージを表示できます。 同様に、エンド ユーザーが [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] をインストールし、英語以外の言語に設定されている Windows のインストールでソリューションを実行すると、Windows と同じ言語でランタイム メッセージが表示されます。 場合によっては、追加の言語パックが必要になる場合があります。 たとえば、既にインストールした後に、別の言語に切り替えることも、Windows のコピーが 1 つ以上の言語設定を使用してを使用する追加の言語パックを必要があります、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]します。 言語パックを検索する[Microsoft Visual Studio の 2010 Tools for Microsoft Office system (バージョン 4.0 ランタイム) language pack](http://go.microsoft.com/fwlink/?LinkId=140386)します。  
   
 ## <a name="see-also"></a>関連項目  
- [作業の開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
- [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
+ [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [Office ソリューションを開発コンピューターを構成します。](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
  [方法: Office ソリューションを開発コンピューターを構成します。](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
- [方法: Office プライマリ相互運用機能アセンブリをインストール](../vsto/how-to-install-office-primary-interop-assemblies.md)   
+ [方法: Office プライマリ相互運用機能アセンブリ](../vsto/how-to-install-office-primary-interop-assemblies.md)   
  [ServerDocument クラスを使用してサーバー上のドキュメントを管理します。](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
+ [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)  
   
   

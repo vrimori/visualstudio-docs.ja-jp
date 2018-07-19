@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Word の操作ウィンドウ上のコントロールへのデータのバインド |Microsoft ドキュメント'
+title: 'チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,226 +20,227 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d84c42e2b51d55cbbb73a7f26d6d6853ff7a3392
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4202b14fce4c914737989e4a408cd74040c4d0a
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781933"
 ---
-# <a name="walkthrough-binding-data-to-controls-on-a-word-actions-pane"></a>チュートリアル : Word の操作ウィンドウ上のコントロールへのデータ バインディング
+# <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。
   このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングを示します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
  このチュートリアルでは、次の作業について説明します。  
   
--   データにバインドされている Windows フォーム コントロールで、[操作] ウィンドウを作成しています。  
+-   データにバインドされている Windows フォーム コントロールの操作ウィンドウを作成します。  
   
--   マスター/詳細関係を使用して、コントロールにデータを表示します。  
+-   マスター/詳細リレーションシップを使用して、コントロールにデータを表示します。  
   
 -   アプリケーションを開いたときに、[操作] ウィンドウを表示します。  
   
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
   
--   Northwind SQL Server サンプル データベースを持つサーバーにアクセスします。  
+-   SQL Server の Northwind サンプル データベースでのサーバーへのアクセス。  
   
--   読み取りと書き込みの SQL Server データベースにアクセスを許可します。  
+-   SQL Server データベースの読み書きアクセス許可。  
   
-## <a name="creating-the-project"></a>プロジェクトの作成  
+## <a name="create-the-project"></a>プロジェクトの作成  
  最初に、Word 文書のプロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
+### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  名前の Word 文書プロジェクトを作成**My Word の操作ウィンドウ**します。 ウィザードで、次のように選択します。**新しいドキュメントを作成する**です。  
+1.  名前の Word 文書プロジェクトを作成**My Word の操作ウィンドウ**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。  
   
-     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
   
-     デザイナーで新しい Word 文書を開き、 **My Word の操作ウィンドウ**プロジェクトを**ソリューション エクスプ ローラー**です。  
+     デザイナーで新しい Word 文書を開き、 **My Word の操作ウィンドウ**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
-## <a name="adding-controls-to-the-actions-pane"></a>[操作] ウィンドウにコントロールを追加します。  
- このチュートリアルでは、操作ウィンドウ コントロールをデータ バインド Windows フォーム コントロールを含む必要があります。 プロジェクトにデータ ソースを追加し、後からコントロールをドラッグ、**データソース**操作ウィンドウ コントロールにウィンドウです。  
+## <a name="add-controls-to-the-actions-pane"></a>[操作] ウィンドウにコントロールを追加します。  
+ このチュートリアルでは、データ バインド Windows フォーム コントロールを含む操作ウィンドウ コントロールが必要です。 プロジェクトにデータ ソースを追加し、後からコントロールをドラッグ、**データソース**操作ウィンドウ コントロールにウィンドウ。  
   
-#### <a name="to-add-an-actions-pane-control"></a>操作ウィンドウ コントロールを追加するには  
+### <a name="to-add-an-actions-pane-control"></a>操作ウィンドウ コントロールを追加するには  
   
-1.  選択、 **My Word の操作ウィンドウ**プロジェクト**ソリューション エクスプ ローラー**です。  
+1.  選択、 **My Word の操作ウィンドウ**プロジェクト**ソリューション エクスプ ローラー**します。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-3.  **新しい項目の追加**ダイアログ ボックスで、**操作ウィンドウ コントロール**、名前を付けます**ActionsControl**、クリックして**追加**です。  
+3.  **新しい項目の追加**ダイアログ ボックスで、**操作ウィンドウ コントロール**、名前を付けます**ActionsControl**、 をクリックし、**追加**。  
   
-#### <a name="to-add-a-data-source-to-the-project"></a>データ ソースをプロジェクトに追加するには  
+### <a name="to-add-a-data-source-to-the-project"></a>データ ソースをプロジェクトに追加するには  
   
-1.  **[データ ソース]** ウィンドウが表示されていない場合は、メニュー バーの **[表示]**、 **[その他のウィンドウ]**、 **[データ ソース]**の順にクリックして表示します。  
+1.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
   
     > [!NOTE]  
-    >  場合**データ ソースの表示**使用できない場合、Word 文書をクリックし、もう一度確認します。  
+    >  場合**データ ソースの**使用できない場合、Word 文書をクリックし、もう一度確認します。  
   
-2.  をクリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**です。  
+2.  クリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。  
   
-3.  選択**データベース** をクリックし、**次**です。  
+3.  選択**データベース**順にクリックします**次**します。  
   
 4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
-6.  クリックしてオンになっている場合、接続を保存するオプションをオフに**次**です。  
+6.  クリックしてが選択されている場合、接続を保存するオプションをオフに**次**します。  
   
-7.  展開して、**テーブル**内のノード、**データベース オブジェクト**ウィンドウです。  
+7.  展開、**テーブル**内のノード、**データベース オブジェクト**ウィンドウ。  
   
 8.  次のチェック ボックスをオン、 **Suppliers**と**製品**テーブル。  
   
-9. **[完了]**をクリックします。  
+9. **[完了]** をクリックします。  
   
- ウィザードでは追加、 **Suppliers**テーブルと**製品**テーブル、**データ ソース**ウィンドウです。 表示されているプロジェクトにも型指定されたデータセットを追加**ソリューション エクスプ ローラー**です。  
+ ウィザードでは追加、 **Suppliers**テーブルと**製品**テーブル、**データ ソース**ウィンドウ。 表示されているプロジェクトに型指定されたデータセットを追加**ソリューション エクスプ ローラー**します。  
   
-#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>操作ウィンドウ コントロールにデータ バインド Windows フォーム コントロールを追加するには  
+### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>操作ウィンドウ コントロールにデータ バインド Windows フォーム コントロールを追加するには  
   
 1.  **データソース**ウィンドウで、展開、 **Suppliers**テーブル。  
   
-2.  ドロップダウン矢印をクリックして、**会社名**ノード、および選択**ComboBox**です。  
+2.  ドロップダウン矢印をクリックして、**会社名**ノード、および選択**ComboBox**します。  
   
-3.  ドラッグ**CompanyName**から、**データソース**操作ウィンドウ コントロールするウィンドウです。  
+3.  ドラッグ**CompanyName**から、**データソース**操作ウィンドウ コントロールにウィンドウ。  
   
-     A<xref:System.Windows.Forms.ComboBox>操作ウィンドウ コントロールにコントロールを作成します。 同時に、<xref:System.Windows.Forms.BindingSource>という名前`SuppliersBindingSource`、テーブルのアダプターでは、および<xref:System.Data.DataSet>コンポーネント トレイにプロジェクトに追加されます。  
+     A<xref:System.Windows.Forms.ComboBox>操作ウィンドウ コントロールにコントロールが作成されます。 、同時に、<xref:System.Windows.Forms.BindingSource>という名前`SuppliersBindingSource`、テーブル アダプターの場合は、および<xref:System.Data.DataSet>コンポーネント トレイ内のプロジェクトに追加されます。  
   
-4.  選択`SuppliersBindingNavigator`で、**コンポーネント**トレイし、DEL キーを押します。 使用しない、`SuppliersBindingNavigator`このチュートリアルでします。  
+4.  選択`SuppliersBindingNavigator`で、**コンポーネント**トレイとキーを押して**削除**します。 使用しない、`SuppliersBindingNavigator`このチュートリアルでします。  
   
     > [!NOTE]  
-    >  削除すると、`SuppliersBindingNavigator`のすべての生成されたコードは削除されません。 このコードを削除することができます。  
+    >  削除、`SuppliersBindingNavigator`すべての生成されたコードは削除されません。 このコードを削除することができます。  
   
-5.  ラベルと変更されるように、コンボ ボックスを移動、**サイズ**プロパティを**171, 21**です。  
+5.  ラベルと変更されるように、コンボ ボックスを移動、**サイズ**プロパティを**171, 21**します。  
   
-6.  **データ ソース**ウィンドウで、展開、**製品**の子テーブルには、 **Suppliers**テーブル。  
+6.  **データ ソース**ウィンドウで、展開、**製品**の子でテーブルには、 **Suppliers**テーブル。  
   
-7.  ドロップダウン矢印をクリックして、 **ProductName**ノード、および選択**ListBox**です。  
+7.  ドロップダウン矢印をクリックして、 **ProductName**ノード、および選択**ListBox**します。  
   
 8.  ドラッグ**ProductName**操作ウィンドウ コントロールにします。  
   
-     A<xref:System.Windows.Forms.ListBox>操作ウィンドウ コントロールにコントロールを作成します。 同時に、<xref:System.Windows.Forms.BindingSource>という`ProductBindingSource`されテーブル アダプターがコンポーネント トレイに、プロジェクトに追加されます。  
+     A<xref:System.Windows.Forms.ListBox>操作ウィンドウ コントロールにコントロールが作成されます。 、同時に、<xref:System.Windows.Forms.BindingSource>という`ProductBindingSource`テーブル アダプターがコンポーネント トレイ内のプロジェクトに追加されます。  
   
-9. ラベルと変更されるように、リスト ボックスを移動、**サイズ**プロパティを**171, 95**です。  
+9. ラベルと変更されるように、リスト ボックスを移動、**サイズ**プロパティを**171, 95**します。  
   
-10. ドラッグ、<xref:System.Windows.Forms.Button>から、**ツールボックス**[操作] ウィンドウに制御し、リスト ボックスの下に配置します。  
+10. ドラッグ、<xref:System.Windows.Forms.Button>から、**ツールボックス**操作ウィンドウ上に制御し、リスト ボックスの下に配置します。  
   
-11. 右クリックし、 <xref:System.Windows.Forms.Button>、 をクリックして**プロパティ**ショートカット メニューで、次のプロパティを変更します。  
+11. 右クリックし、 <xref:System.Windows.Forms.Button>、 をクリックして**プロパティ**ショートカット メニューで、次のプロパティを変更するとします。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
     |**Name**|**[挿入]**|  
     |**[テキスト]**|**[挿入]**|  
   
-12. コントロールに合わせて、ユーザー コントロールのサイズを変更します。  
+12. コントロールに合わせてユーザー コントロールのサイズを変更します。  
   
-## <a name="setting-up-the-data-source"></a>データ ソースの設定  
- データ ソースを設定するコードを追加、<xref:System.Windows.Forms.UserControl.Load>コントロールにデータを格納から操作ウィンドウ コントロールのイベント、 <xref:System.Data.DataTable>、設定と、<xref:System.Windows.Forms.Binding.DataSource%2A>と<xref:System.Windows.Forms.BindingSource.DataMember%2A>各コントロールのプロパティです。  
+## <a name="set-up-the-data-source"></a>データ ソースを設定します。  
+ データ ソースを設定するには、コードを追加、<xref:System.Windows.Forms.UserControl.Load>からデータをコントロールに入力する操作ウィンドウ コントロールのイベント、 <xref:System.Data.DataTable>、設定、<xref:System.Windows.Forms.Binding.DataSource%2A>と<xref:System.Windows.Forms.BindingSource.DataMember%2A>各コントロールのプロパティ。  
   
-#### <a name="to-load-the-control-with-data"></a>コントロールにデータを読み込めません  
+### <a name="to-load-the-control-with-data"></a>コントロールにデータを読み込む  
   
 1.  <xref:System.Windows.Forms.UserControl.Load>のイベント ハンドラー、`ActionsControl`クラスで、次のコードを追加します。  
   
      [!code-vb[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#1)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#1)]  
   
-2.  C# の場合は、イベント ハンドラーをアタッチする必要があります、<xref:System.Windows.Forms.UserControl.Load>イベント。 このコードを配置することができます、`ActionsControl`コンス トラクターの呼び出しの後に、`InitializeComponent`です。 イベント ハンドラーを作成する方法の詳細については、次を参照してください。[する方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)です。  
+2.  C# でイベント ハンドラーをアタッチする必要があります、<xref:System.Windows.Forms.UserControl.Load>イベント。 このコードを配置することができます、`ActionsControl`コンス トラクターの呼び出しの後、`InitializeComponent`します。 イベント ハンドラーを作成する方法の詳細については、次を参照してください。[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)します。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#33](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#33)]  
   
-#### <a name="to-set-data-binding-properties-of-the-controls"></a>コントロールのデータ バインディング プロパティを設定するには  
+### <a name="to-set-data-binding-properties-of-the-controls"></a>コントロールのデータ バインディングのプロパティを設定するには  
   
 1.  `CompanyNameComboBox` コントロールを選択します。  
   
-2.  **プロパティ** ウィンドウの右側にあるボタンをクリックして、**データソース**プロパティ、および選択**場合**です。  
+2.  **プロパティ**ウィンドウの右ボタンをクリックして、**データソース**プロパティ、および選択**場合**。  
   
-3.  右側にあるボタンをクリックして、 **DisplayMember**プロパティ、および選択**CompanyName**です。  
+3.  右ボタンをクリックして、 **DisplayMember**プロパティ、および選択**CompanyName**します。  
   
-4.  展開、 **DataBindings**プロパティの右側にあるボタンをクリックして、**テキスト**プロパティ、および選択**None**です。  
+4.  展開、 **DataBindings**プロパティの右側のボタンをクリックして、**テキスト**プロパティ、および選択**None**。  
   
 5.  `ProductNameListBox` コントロールを選択します。  
   
-6.  **プロパティ** ウィンドウの右側にあるボタンをクリックして、**データソース**プロパティ、および選択**productsBindingSource**です。  
+6.  **プロパティ**ウィンドウの右ボタンをクリックして、**データソース**プロパティ、および選択**productsBindingSource**。  
   
-7.  右側にあるボタンをクリックして、 **DisplayMember**プロパティ、および選択**ProductName**です。  
+7.  右ボタンをクリックして、 **DisplayMember**プロパティ、および選択**ProductName**します。  
   
-8.  展開、 **DataBindings**プロパティの右側にあるボタンをクリックして、 **SelectedValue**プロパティ、および選択**None**です。  
+8.  展開、 **DataBindings**プロパティの右側のボタンをクリックして、 **SelectedValue**プロパティ、および選択**None**。  
   
-## <a name="adding-a-method-to-insert-data-into-a-table"></a>テーブルにデータを挿入するメソッドを追加します。  
- 次のタスクを開始、バインドされたコントロールからデータを読み取るし、Word 文書にテーブルを作成します。 まず、プロシージャ、テーブルの見出しの書式設定を作成し、追加、`AddData`メソッドを作成し、Word の表の書式を設定します。  
+## <a name="add-a-method-to-insert-data-into-a-table"></a>テーブルにデータを挿入するメソッドを追加します。  
+ 次に、バインドされたコントロールからデータを読み取るし、Word 文書にテーブルを作成します。 まず、プロシージャ、テーブルの見出しの書式設定を作成し、追加、`AddData`メソッドを作成し、Word の表の書式を設定します。  
   
-#### <a name="to-format-the-table-headings"></a>テーブルの見出しの書式を設定するには  
+### <a name="to-format-the-table-headings"></a>テーブルの見出しの書式設定するには  
   
 1.  `ActionsControl`クラス、テーブルの見出しの書式設定するメソッドを作成します。  
   
      [!code-vb[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#2)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#2)]  
   
-#### <a name="to-create-the-table"></a>テーブルを作成するには  
+### <a name="to-create-the-table"></a>テーブルを作成するには  
   
-1.  `ActionsControl`クラス、1 つが存在する、[操作] ウィンドウからデータをテーブルに追加されていない場合に、テーブルを作成するメソッドを記述します。  
+1.  `ActionsControl`クラスを 1 つが存在する、[操作] ウィンドウからデータをテーブルに追加されていない場合にテーブルを作成するメソッドを記述します。  
   
      [!code-vb[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#3)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#3)]  
   
-#### <a name="to-insert-text-into-a-word-table"></a>Word の表にテキストを挿入するには  
+### <a name="to-insert-text-into-a-word-table"></a>Word の表に、テキストを挿入するには  
   
 1.  次のコードを追加、<xref:System.Windows.Forms.Control.Click>のイベント ハンドラー、**挿入**ボタンをクリックします。  
   
      [!code-vb[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb#4)]
      [!code-csharp[Trin_VstcoreActionsPaneWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#4)]  
   
-2.  C# でのイベント ハンドラーを作成する必要があります、<xref:System.Windows.Forms.Control.Click>ボタンのイベントです。  このコードを配置することができます、<xref:System.Windows.Forms.UserControl.Load>のイベント ハンドラー、`ActionsControl`クラスです。  
+2.  C# でのイベント ハンドラーを作成する必要があります、<xref:System.Windows.Forms.Control.Click>ボタンのイベント。  このコードを配置することができます、<xref:System.Windows.Forms.UserControl.Load>のイベント ハンドラー、`ActionsControl`クラス。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#5](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs#5)]  
   
-## <a name="showing-the-actions-pane"></a>操作ウィンドウの表示  
- これにコントロールを追加した後、[操作] ウィンドウが表示されます。  
+## <a name="show-the-actions-pane"></a>[操作] ウィンドウを表示します。  
+ コントロールを追加した後、[操作] ウィンドウが表示されます。  
   
-#### <a name="to-show-the-actions-pane"></a>[操作] ウィンドウを表示するには  
+### <a name="to-show-the-actions-pane"></a>[操作] ウィンドウを表示するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**ThisDocument.vb**または**ThisDocument.cs**、クリックして**コードの表示**ショートカット メニューの します。  
+1.  **ソリューション エクスプ ローラー**を右クリックして**ThisDocument.vb**または**ThisDocument.cs**、] をクリックし、**コードの表示**ショートカット メニューの [します。  
   
-2.  上部にあるコントロールの新しいインスタンスを作成、`ThisDocument`クラスの次の例のように見えるようにします。  
+2.  上部にあるコントロールの新しいインスタンスを作成、`ThisDocument`クラスに次の例のようになります。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#6)]
      [!code-vb[Trin_VstcoreActionsPaneWord#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#6)]  
   
-3.  コードを追加して、<xref:Microsoft.Office.Tools.Word.Document.Startup>のイベント ハンドラー`ThisDocument`次の例のように見えるようにします。  
+3.  コードを追加して、<xref:Microsoft.Office.Tools.Word.Document.Startup>イベント ハンドラーの`ThisDocument`次の例のように見えるようにします。  
   
      [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
      [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]  
   
-## <a name="testing-the-application"></a>アプリケーションのテスト  
- これで、ドキュメントが開いているときに、操作ウィンドウが表示されることを確認するドキュメントをテストできます。 操作ウィンドウ上のコントロールにマスター/詳細リレーションシップをテストし、単語内のデータが表示されていることを確認時にテーブル、**挿入**ボタンをクリックします。  
+## <a name="test-the-application"></a>アプリケーションをテストする  
+ これで、ドキュメントが開いているときに、操作ウィンドウが表示されることを確認するドキュメントをテストできます。 単語内のデータが表示されているかどうかを確認して、操作ウィンドウ上のコントロールのマスター/詳細リレーションシップをテスト時にテーブル、**挿入**ボタンをクリックします。  
   
-#### <a name="to-test-your-document"></a>文書をテストするには  
+### <a name="to-test-your-document"></a>文書をテストするには  
   
-1.  F5 キーを押してプロジェクトを実行します。  
+1.  キーを押して**F5**プロジェクトを実行します。  
   
 2.  [操作] ウィンドウが表示されていることを確認します。  
   
-3.  コンボ ボックスに会社を選択し、いることを確認内の項目、**製品**ボックス変更を一覧表示します。  
+3.  コンボ ボックスに会社を選択し、いることを確認内の項目、**製品**ボックスの一覧を表示します。  
   
-4.  製品を選択し、をクリックして**挿入**操作 ウィンドウで、製品の詳細が単語内のテーブルに追加されたことを確認してください。  
+4.  製品を選択して、**挿入**操作ウィンドウで、Word の表に、製品の詳細が追加されたことを確認します。  
   
-5.  さまざまな企業から追加の製品を挿入します。  
+5.  さまざまな企業から、その他の製品を挿入します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータのバインドの基礎を説明します。 ここでは、次のタスクを行います。  
+ このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングの基礎を説明します。 ここでは、次のタスクを行います。  
   
--   データを Excel でのコントロールをバインドします。 詳細については、次を参照してください。[チュートリアル: Excel の操作ウィンドウ上のコントロールへのデータ バインディング](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)です。  
+-   データを Excel でのコントロールをバインドします。 詳細については、次を参照してください。[チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインド](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)します。  
   
--   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)です。  
+-   プロジェクトを配置します。 詳細については、次を参照してください。 [ClickOnce を使用して Office ソリューションを配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [操作ウィンドウの概要](../vsto/actions-pane-overview.md)   
- [方法: Word 文書や Excel ブックに操作ウィンドウを追加](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
+ [方法: Word 文書に操作ウィンドウを追加したり、Excel ブック](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)   
+ [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

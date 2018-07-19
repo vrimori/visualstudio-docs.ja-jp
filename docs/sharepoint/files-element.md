@@ -1,5 +1,5 @@
 ---
-title: 要素のファイル |Microsoft ドキュメント
+title: 要素のファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 330c408aa0e283eb282b93f77726ccc5d9547795
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 37fc7bb582482f645fe5699196ca33d79304a5c3
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34766907"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36327295"
 ---
 # <a name="files-element"></a>Files 要素
-  フィーチャー要素ファイルなど、SharePoint プロジェクト項目と依存する以外の SharePoint プロジェクトの出力を配置するファイルを指定します。  
+  SharePoint プロジェクト項目の 機能の要素ファイルなど、および SharePoint 以外の依存プロジェクトの出力と共に配置するファイルを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,8 +47,8 @@ ms.locfileid: "34766907"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|省略可能な**ProjectItemFileType**要素。<br /><br /> フィーチャー要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなどの SharePoint ファイルを表します。|  
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|省略可能な**ProjectOutputFileType**要素。<br /><br /> SharePoint に配置されるときに、プロジェクト項目に含めるプロジェクトの出力を表します。|  
+|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|省略可能な**ProjectItemFileType**要素。<br /><br /> 機能の要素ファイルが SharePoint に展開するときに、プロジェクト項目に含めるなど、SharePoint のファイルを表します。|  
+|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|省略可能な**ProjectOutputFileType**要素。<br /><br /> SharePoint に展開するときに、プロジェクト項目に含めるプロジェクトの出力を表します。|  
   
 ### <a name="parent-elements"></a>親要素
   
@@ -60,9 +60,9 @@ ms.locfileid: "34766907"
   
 |||  
 |-|-|  
-|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|  
+|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
-|**検証ファイル**|ProjectItemModelSchema.xsd|  
+|**ファイルの検証**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
   
 ## <a name="see-also"></a>関連項目

@@ -1,5 +1,5 @@
 ---
-title: グローバル設定を監視するテキスト マネージャーを使用して |Microsoft ドキュメント
+title: テキスト マネージャーを使用して、グローバル設定を監視する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6c61a6859a2e8d359b2185ce959aa941944380f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d0378d4c8c021cb47362220b49c8d7cb5a4ebc82
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31141673"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079788"
 ---
-# <a name="using-the-text-manager-to-monitor-global-settings"></a>テキスト マネージャーを使用して、グローバル設定を監視するには
-コア エディターを実装すると場合、は、これらの変更は、エディターのインスタンスを与える可能性がありますので、グローバル設定に加えられた変更を監視する必要があります。 変更を追跡するには、テキスト マネージャーによって生成されるイベントをリッスンしています。 たとえば、コア エディターで、そのドキュメント データ オブジェクトなどの表示やコンポーネントの動作のグローバル設定を指定するときにテキスト マネージャーはこの情報を格納し、影響を受けるすべてのクライアントに通信します。  
+# <a name="use-the-text-manager-to-monitor-global-settings"></a>テキスト マネージャーを使用して、グローバル設定を監視するには
+コア エディターを実装する場合、エディターのインスタンスがこれらの変更の影響を与えるため、グローバル設定に加えられた変更を監視する必要があります。 変更を追跡するには、テキスト マネージャーによって生成されるイベントをリッスンします。 たとえば、そのドキュメント データ オブジェクトなどのコア エディターでの表示やコンポーネントの動作のグローバル設定を指定するとテキスト マネージャーはこの情報を格納し、影響を受けるすべてのクライアントと通信すること。  
   
 ## <a name="text-manager-functions"></a>テキスト マネージャー関数  
- テキスト マネージャーは、いくつかの設定は、次のようにイベントを発生させます。  
+ テキスト マネージャーは、さまざまな設定は、次のようにイベントを発生させます。  
   
--   バッファーはソース コード管理下にある、かどうか  
+-   バッファーはソース コード管理、かどうか  
   
 -   ファイル変更通知を登録する方法  
   
--   どのビューは、特定のバッファーに関連付けられているを追跡する方法  
+-   ビューは、特定のバッファーに関連付けられたを追跡する方法  
   
 -   テキストの色づけの基本設定  
   
--   タブ領域の基本設定との比較  
+-   タブとスペースの基本設定  
   
- 特定の言語に固有の設定は、テキスト マネージャーで管理されていません。 これらの設定は、各言語サービスで管理する必要があります。  
+ 特定の言語に固有の設定は、テキスト マネージャーによって管理されていません。 各言語サービスでは、これらの設定を管理する必要があります。  
   
- テキスト マネージャーのイベント通知は、によって提供される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>インターフェイスです。 このインターフェイスを実装して、クライアントでテキスト マネージャーに発生するイベントを処理するオブジェクト。 使用してこれらのイベントの登録、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>テキスト マネージャー上のインターフェイスです。  
+ によって、テキスト マネージャーのイベント通知が提供される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>インターフェイス。 このインターフェイスを実装して、クライアントでイベントを処理するオブジェクトにはテキスト マネージャーが発生します。 使用してこれらのイベントの登録、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>テキスト マネージャーのインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
- [コア エディター内](../extensibility/inside-the-core-editor.md)   
+ [コア エディター](../extensibility/inside-the-core-editor.md)   
  [エディターの機能](http://msdn.microsoft.com/en-us/bdac940d-1f14-4019-a01f-fd0bb3dc7198)

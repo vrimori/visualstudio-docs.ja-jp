@@ -1,5 +1,5 @@
 ---
-title: SharePoint のエラーに関する追加情報 |Microsoft ドキュメント
+title: SharePoint のエラーに関する追加情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,37 +21,37 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9c4585ace17669205345554477cafefb7965dd15
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 85d4dc4ab6b18cf7e9aa1f26167234572362231b
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34691356"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36326022"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint のエラーに関する追加情報
-  トラブルシューティングに役立つことができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーや警告のトラブルシューティングのトピックと、Microsoft Developer Network (MSDN) のパブリック フォーラム。  
+  トラブルシューティングで支援が見つかります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールのエラーと警告のトラブルシューティングのトピックと、Microsoft Developer Network (MSDN) のパブリック フォーラム。  
   
 ## <a name="troubleshoot-errors-and-issues"></a>エラーおよび問題をトラブルシューティングします。
- 一般的なエラーとその他の問題でサポートが必要な[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールには、次のトピックを参照してください。  
+ 一般的なエラーとその他の問題の支援について[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint ツールでは、次のトピックを参照してください。  
   
--   [SharePoint ソリューションのトラブルシューティング](../sharepoint/troubleshooting-sharepoint-solutions.md)  
+-   [SharePoint ソリューションをトラブルシューティングします。](../sharepoint/troubleshooting-sharepoint-solutions.md)  
   
--   [SharePoint ソリューションのデバッグ](../sharepoint/debugging-sharepoint-solutions.md)  
+-   [SharePoint ソリューションをデバッグします。](../sharepoint/debugging-sharepoint-solutions.md)  
   
--   [SharePoint のパッケージ化と配置のトラブルシューティング](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)  
+-   [SharePoint のパッケージ化とデプロイをトラブルシューティングします。](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)  
   
 ## <a name="other-resources"></a>その他のリソース
- 次の表、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールのフォーラムや MSDN で利用できるその他のリソース。  
+ 次の表、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ツールのフォーラムその他のリソースは MSDN で利用できます。  
   
 |用語|定義|  
 |----------|----------------|  
-|[SharePoint 開発](http://go.microsoft.com/fwlink/?LinkId=179593)|SharePoint 開発に関する質問をフォーラムを提供[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。|  
-|[Visual Studio フォーラム](http://go.microsoft.com/fwlink/?LinkID=150452)|に関する質問については、フォーラムを提供[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。|  
+|[SharePoint 開発](http://go.microsoft.com/fwlink/?LinkId=179593)|SharePoint 開発に関する質問フォーラムを提供[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。|  
+|[Visual Studio フォーラム](http://go.microsoft.com/fwlink/?LinkID=150452)|に関する質問については、フォーラムを提供します。[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。|  
 |[Microsoft ヘルプおよびサポート](http://go.microsoft.com/fwlink/?LinkID=108287)|サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、Support Webcast、およびその他のサービスへのアクセスを提供します。|  
   
- 必要な回答が見つからない場合は、マイクロソフト製品サポート サービスに連絡またはサポート技術情報の記事を検索などのオンライン サポート オプションを表示できます。 詳細については、次を参照してください。、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371)ページ。  
+ 必要な回答が見つからない場合は、Microsoft 製品サポート サービスに連絡またはサポート技術情報の記事を検索してなどのオンライン サポート オプションを表示できます。 詳細については、次を参照してください。、 [Microsoft ヘルプとサポート](http://go.microsoft.com/fwlink/?LinkID=155371)ページ。  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+ [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
  

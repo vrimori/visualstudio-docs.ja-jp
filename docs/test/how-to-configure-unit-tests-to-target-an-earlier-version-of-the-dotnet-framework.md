@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 084ac617cb36fdf6f0d8067e82cb0c862665e244
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: ea86ce4b977f1b8a664944bca2fcef65f8f5132f
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750741"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233491"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>方法: .NET Framework の旧バージョンを対象とした単体テストを構成する
 
@@ -32,7 +32,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 **テスト用 SharePoint アプリケーション**
 
-上記の機能を使用すると、Visual Studio で SharePoint アプリケーションの単体テストおよび統合テストを記述することもできます。 Visual Studio を使用した SharePoint アプリケーションの開発方法に関する詳細については、「[SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)」、「[SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)」、「[SharePoint コードの検証およびデバッグ](/office-dev/office-dev/verifying-and-debugging-sharepoint-code)」を参照してください。
+上記の機能を使用すると、Visual Studio で SharePoint アプリケーションの単体テストおよび統合テストを記述することもできます。 Visual Studio を使用した SharePoint アプリケーションの開発方法に関する詳細については、「[SharePoint ソリューションの作成](../sharepoint/create-sharepoint-solutions.md)」、「[SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)」、「[SharePoint コードの検証およびデバッグ](../sharepoint/verifying-and-debugging-sharepoint-code.md)」を参照してください。
 
 **制限事項**
 
@@ -126,6 +126,6 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 ## <a name="see-also"></a>関連項目
 
-- [SharePoint ソリューションの作成](/office-dev/office-dev/create-sharepoint-solutions)
-- [SharePoint ソリューションのビルドとデバッグ](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)
+- [SharePoint ソリューションの作成](../sharepoint/create-sharepoint-solutions.md)
+- [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [[ビルドの詳細設定] ダイアログ ボックス (Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

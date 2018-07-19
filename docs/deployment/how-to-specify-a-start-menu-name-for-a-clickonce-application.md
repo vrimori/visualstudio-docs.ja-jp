@@ -1,5 +1,5 @@
 ﻿---
-title: '方法: ClickOnce アプリケーションのスタート メニューの名前を指定 |Microsoft ドキュメント'
+title: '方法: ClickOnce アプリケーションのスタート メニューの名前を指定します |。Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a089fa67c975496c56d29d2d55c2f055888c96d9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d6bf265b2e3761ba1fd929e72e29f4c2c47cd449
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31558868"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079557"
 ---
-# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>方法 : ClickOnce アプリケーションのスタート メニューの名前を指定する
+# <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>方法: ClickOnce アプリケーションのスタート メニューの名前を指定します。
 オンラインまたはオフラインで利用できる [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションがインストールされると、**スタート**メニューおよび**プログラムの追加と削除** の一覧にエントリが追加されます。 既定では、表示される名前はアプリケーション アセンブリの名前と同じですが、**発行オプション** のダイアログ ボックスで**製品名**を設定することで表示名を変更することがきます。  
 
- **製品名** は publish.htm のページに表示されます；インストールされたオフライン アプリケーションの場合、この名前が **スタート** メニューに表示されるエントリの名前になり、**プログラムの追加または削除** にも同じ名前が表示されます。  
+ **製品名**に表示される、 *publish.htm*ページは、インストールされているオフライン アプリケーション内のエントリの名前をことが、**開始** メニューともなりますに表示される名前**を追加または削除プログラム**します。  
 
- **パブリッシャー名** は publish.htm ページの**製品名**の上に表示され、インストールされたオフライン アプリケーションの場合、**スタート**メニューの中で、アプリケーションのアイコンが含まれているフォルダーの名前として表示されます。  
+ **発行元名**に表示されます、 *publish.htm*ページ上部**製品名**、オフライン アプリケーションのインストールされている場合も可能になりますを含む、アプリケーションのフォルダーの名前とアイコン、**開始**メニュー。  
 **製品名**と**パブリッシャー名**のプロパティは、**プロジェクト デザイナー**の**発行**ページにある**発行オプション** ダイアログ ボックスで設定することができます。
  **製品名**と**パブリッシャー名**のプロパティは、**プロジェクト デザイナー**の**発行**ページにある**発行オプション** ダイアログ ボックスで設定することができます。  
 
@@ -49,5 +49,5 @@ ms.locfileid: "31558868"
 6.  必要に応じて、**パブリッシャー名**にパブリッシャー名を入力します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

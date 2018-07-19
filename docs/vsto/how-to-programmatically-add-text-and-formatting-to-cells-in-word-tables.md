@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Word の表のセルにテキストと書式を追加 |Microsoft ドキュメント'
+title: '方法: プログラムによって Word の表のセルにテキストと書式の追加'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,18 +18,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c7d50a5531bdb4e073c2760ae6d4e746b4970af6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7fff8451c469e58d7c23ab6bd3366db2fa10d59
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256345"
 ---
-# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>方法: プログラムによって Word の表のセルにテキストと書式設定を追加する
+# <a name="how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables"></a>方法: プログラムによって Word の表のセルにテキストと書式の追加
   表はセルの集まりで構成されます。 個々の <xref:Microsoft.Office.Interop.Word.Cell> オブジェクトが表内の 1 つのセルを表します。 各セルは、表内の場所を指定して参照します。 次の例では、表の最初の行の最初の列のセルを参照し、そのセルにテキストを追加して、書式を適用します。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### <a name="to-add-text-and-formatting-to-cells"></a>セルにテキストと書式設定を追加するには  
+## <a name="to-add-text-and-formatting-to-cells"></a>セルにテキストと書式設定を追加するには  
   
 1.  表内の場所を指定してセルを参照し、そのセルにテキストを追加して書式を適用します。  
   
@@ -44,8 +45,8 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#97](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#97)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって Word の表を作成します。](../vsto/how-to-programmatically-create-word-tables.md)   
+ [方法: プログラムによって Word の表を作成](../vsto/how-to-programmatically-create-word-tables.md)   
  [方法: プログラムによって Word の表に行と列を追加](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
- [方法: プログラムによって Document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
+ [方法: プログラムによって document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)  
   
   

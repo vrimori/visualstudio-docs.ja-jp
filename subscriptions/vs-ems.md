@@ -9,28 +9,28 @@ description: Visual Studio サブスクリプションに含まれる Enterprise
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: acf1028890dfcee3194beaeff930d514ea1c812f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d116e4c08f3a95eeceded590b6384e97ab47e839
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31197179"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36281652"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Enterprise Mobility + Security (EMS)
 
-Visual Studio Enterprise の年間クラウド サブスクリプションと標準サブスクリプションには、Enterprise Mobility + Security (EMS) が含まれます。  EMS - Azure Active Directory、Microsoft Intune、Azure Information Protection、Microsoft Advanced Threat Analytics、Microsoft Cloud App Security で ID、デバイス、アプリ、データを保護および管理できます。  
+Visual Studio Enterprise の年間クラウド サブスクリプションと標準サブスクリプションには、Enterprise Mobility + Security (EMS) が含まれます。  EMS - Azure Active Directory、Microsoft Intune、Azure Information Protection、Microsoft Advanced Threat Analytics、Microsoft Cloud App Security で ID、デバイス、アプリ、データを保護および管理できます。
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
-EMS を使うには、アカウントを設定するか、既存のアカウントを使ってサインインする必要があります。 
+EMS を使うには、アカウントを設定するか、既存のアカウントを使ってサインインする必要があります。
 
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
-2.  [ツール] セクションで、Enterprise Mobility & Security のタイルを見つけて、タイルの下部にある **[コードを取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。 
+2.  [ツール] セクションで、Enterprise Mobility & Security のタイルを見つけて、タイルの下部にある **[コードを取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
 
     ![EMS 特典タイル](_img\vs-ems\vs-ems-tile.png)
 
-2.  Enterprise Mobility + Security E5 ページでは、既存サブスクリプションでのサインインまたは新しいサブスクリプションの作成が可能です。  新しいサブスクリプションを作るには、必要な情報を入力して、**[次へ]** をクリックします。 
+2.  Enterprise Mobility + Security E5 ページでは、既存サブスクリプションでのサインインまたは新しいサブスクリプションの作成が可能です。  新しいサブスクリプションを作るには、必要な情報を入力して、**[次へ]** をクリックします。
 
     ![EMS 特典アカウント作成](_img\vs-ems\vs-ems-create-account-cropped.png)
 
@@ -62,10 +62,10 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 
 <sup>2</sup>  *Microsoft Partner Network (Professional) は含まれません*
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 ## <a name="support-resources"></a>サポート リソース
 -  EMS に関するヘルプが必要ですか。  オンラインの [EMS ドキュメント](/enterprise-mobility-security/)を参照してください。
 -  EMS のコンポーネントのテクニカル サポートについては、https://support.microsoft.com/allproducts にアクセスして製品を選択してください。
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。 
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

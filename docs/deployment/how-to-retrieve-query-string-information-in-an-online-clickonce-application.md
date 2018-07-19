@@ -1,5 +1,5 @@
 ---
-title: '方法: オンライン ClickOnce アプリケーションでクエリ文字列情報の取得 |Microsoft ドキュメント'
+title: '方法: オンライン ClickOnce アプリケーションでは、クエリ文字列の情報の取得 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47d20cf156cfdb6aaa18e37160dbf027bb3fb519
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 251f175112a03bbe158c529b669b56378913f020
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31561442"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080429"
 ---
-# <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法 : オンライン ClickOnce アプリケーションでクエリ文字列を取得する
+# <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法: オンライン ClickOnce アプリケーションでは、クエリ文字列の情報の取得
 *クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] でホストされている `WindowsApp1` という `servername`アプリケーションがあり、このアプリケーションを起動するときに、 `username` という変数に値を渡すとします。 URL は次のようになります。  
   
  `http://servername/WindowsApp1.application?username=joeuser`  
@@ -41,7 +41,7 @@ ms.locfileid: "31561442"
 > [!NOTE]
 >  この機能を有効にする前に、この後の「セキュリティ」を参照してください。  
   
- 作成する方法については、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Mage.exe または MageUI.exe を使用して展開を参照してください[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)です。  
+ 作成する方法については、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]を使用して展開*Mage.exe*または*MageUI.exe*を参照してください[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
 > [!NOTE]
 >  .NET Framework 3.5 SP1 以降では、オフラインの [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションにコマンド ライン引数を渡すことができます。 このアプリケーションに引数を提供する場合は、.APPREF-MS 拡張子を持つショートカット ファイルにパラメーターを渡すことができます。  
@@ -59,7 +59,7 @@ ms.locfileid: "31561442"
   
 1.  .NET Framework のコマンド プロンプトを開き、次のように入力します。  
   
-    ```  
+    ```cmd  
     MageUI  
     ```  
   
@@ -77,8 +77,8 @@ ms.locfileid: "31561442"
   
  アプリケーションがオンラインでのみ使用される場合は、常に URL を通じてそのアプリケーションがアクティブ化されます。 ただしその場合でも、クエリ文字列パラメーターが失われたり壊れたりしても正しく機能するようにアプリケーションを作成する必要があります。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 悪意のある文字の入力を使用前に削除する予定である場合にのみ、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、「 [Script Exploits Overview](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+ 悪意のある文字の入力を使用前に削除する予定である場合にのみ、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、次を参照してください。[スクリプトによる攻略の概要](http://msdn.microsoft.com/Library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)
+ [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)

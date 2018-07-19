@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって会議出席依頼を作成 |Microsoft ドキュメント'
+title: '方法: プログラムによって会議出席依頼を作成'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 02a3e462e356ce3bf144ca51c0d62162596188b3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5cada5d337eb4f72caf9077afc9bcd42706b21d1
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257372"
 ---
-# <a name="how-to-programmatically-create-a-meeting-request"></a>方法: プログラムによって会議出席依頼を作成する
+# <a name="how-to-programmatically-create-a-meeting-request"></a>方法: プログラムによって会議出席依頼を作成
   この例では、Microsoft Office Outlook で会議出席依頼を作成し、必須出席者に要求を送信します。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_Outlook_RL_MeetingRequest#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_MeetingRequest/thisaddin.vb#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [予定表アイテムの操作](../vsto/working-with-calendar-items.md)   
- [VSTO アドインのプログラミングについて](../vsto/getting-started-programming-vsto-add-ins.md)  
+ [予定表項目を操作します。](../vsto/working-with-calendar-items.md)   
+ [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)  
   
   

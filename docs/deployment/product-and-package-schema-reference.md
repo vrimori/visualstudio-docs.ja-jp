@@ -1,5 +1,5 @@
 ---
-title: 製品およびパッケージ スキーマ リファレンス |Microsoft ドキュメント
+title: 製品およびパッケージ スキーマ リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -27,35 +27,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc613a95f6c0051690e9371cd3c5c8e401df6b86
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: 4fae53ad5143df91d74ad9c5e3cd19c1bdafd0da
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815575"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080650"
 ---
 # <a name="product-and-package-schema-reference"></a>製品およびパッケージ スキーマ リファレンス
-A*製品ファイル*すべてに必要な外部の依存関係を記述する XML マニフェストには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 外部の依存関係の例として、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]および Microsoft Data Access Components (MDAC)。 パッケージ ファイルは、製品のファイルに似ていますが、ローカライズ済みのアセンブリ、ライセンス契約、ドキュメントなど、依存関係のカルチャに依存するコンポーネントをインストールするために使用します。  
+A*製品ファイル*で必要な外部の依存関係のすべてを記述する XML マニフェストには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 外部の依存関係の例、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]および Microsoft Data Access Components (MDAC)。 パッケージ ファイルは、製品ファイルに似ていますが、ローカライズ済みのアセンブリ、ライセンスの契約ドキュメントなどの依存関係のカルチャに依存するコンポーネントをインストールするために使用します。  
   
- 製品およびパッケージ ファイルには、いずれかの最上位`Product`または`Package`要素、それぞれに、次の要素が含まれています。  
+ 製品およびパッケージ ファイルには、いずれかの最上位`Product`または`Package`要素は、それぞれに、次の要素が含まれています。  
   
 |要素|説明|属性|  
 |-------------|-----------------|----------------|  
-|[\<Product > 要素](../deployment/product-element-bootstrapper.md)|製品ファイルの最上位要素が必要です。|なし|  
-|[\<パッケージ > 要素](../deployment/package-element-bootstrapper.md)|パッケージ ファイルの最上位要素が必要です。|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
+|[\<製品 > 要素](../deployment/product-element-bootstrapper.md)|製品ファイルの最上位の要素が必要です。|なし|  
+|[\<パッケージ > 要素](../deployment/package-element-bootstrapper.md)|パッケージ ファイルの最上位の要素が必要です。|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|  
 |[\<RelatedProducts > 要素](../deployment/relatedproducts-element-bootstrapper.md)|製品ファイルの省略可能な要素です。 その他の製品をこの製品はインストールかによって異なります。|なし|  
-|[\<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)|必須の要素です。 リストの依存関係はインストール中に、ローカル コンピューターで実行を確認します。|なし|  
-|[\<コマンド > 要素](../deployment/commands-element-bootstrapper.md)|必須の要素です。  によって記述された 1 つまたは複数のインストール チェックを実行`InstallChecks`はどのパッケージをインストールするには、チェックする必要がありますは失敗します。|なし|  
-|[\<PackageFiles > 要素](../deployment/packagefiles-element-bootstrapper.md)|必須の要素です。 このインストール プロセスによってインストールされるパッケージが一覧表示します。|なし|  
-|[\<文字列 > 要素](../deployment/strings-element-bootstrapper.md)|必須の要素です。 ストアのローカライズ版、製品名とエラーの文字列。|なし|  
+|[\<InstallChecks > 要素](../deployment/installchecks-element-bootstrapper.md)|必須の要素です。 リストのインストール時に、ローカル コンピューターで実行する依存関係を確認します。|なし|  
+|[\<コマンド > 要素](../deployment/commands-element-bootstrapper.md)|必須の要素です。  によって記述されたは、1 つまたは複数のインストールのチェックを実行します。 `InstallChecks`、、をインストールすると、パッケージには、チェックする必要がありますを表します失敗します。|なし|  
+|[\<PackageFiles > 要素](../deployment/packagefiles-element-bootstrapper.md)|必須の要素です。 このインストール プロセスがインストールされているパッケージを一覧表示します。|なし|  
+|[\<文字列 > 要素](../deployment/strings-element-bootstrapper.md)|必須の要素です。 ストアはローカライズ版の製品の名前およびエラーの文字列です。|なし|  
   
-## <a name="remarks"></a>コメント  
- パッケージのスキーマは、Setup.exe、独自のほとんどのハード コーディングされたロジックを含む Msbuild ブートス トラップ タスクで生成されたスタブ プログラムにより消費されます。 スキーマは、インストール プロセスのすべての側面をドライブです。  
+## <a name="remarks"></a>Remarks  
+ パッケージのスキーマは、によって消費される*Setup.exe*、独自のほとんどのハード コーディングされたロジックを含むタスクをブートス トラップ MS ビルドによって生成されたスタブ プログラム。 スキーマは、インストール プロセスのすべての側面をドライブします。  
   
- `InstallChecks` テスト特定のパッケージの存在をその setup.exe を実行する必要があります。 `PackageFiles` すべてのセットアップ プロセスが存在する可能性をインストールする必要があります指定されたテストが失敗するパッケージの一覧を表示します。 コマンドの下にある各コマンドの入力を実行して説明するテストのいずれかの`InstallChecks`を指定して`PackageFile`を実行する必要があります、テストは失敗します。 使用することができます、`Strings`任意の数の言語のアプリケーションをインストールする 1 つのインストール バイナリを使用できるように、製品名と、エラー メッセージをローカライズする要素。  
+ `InstallChecks` テストの特定のパッケージが存在するその setup.exe を実行する必要があります。 `PackageFiles` すべてのパッケージが指定されたテストの失敗をインストールする必要があるセットアップ プロセスの一覧を表示します。 [コマンド] で各コマンドの入力がで説明するテストの 1 つを実行`InstallChecks`を指定して`PackageFile`を実行する必要があります、テストは失敗します。 使用することができます、`Strings`任意の数の言語のアプリケーションをインストールするバイナリの 1 つ 1 つのインストールを使用できるように、製品名と、エラー メッセージをローカライズする要素。  
   
 ## <a name="example"></a>例  
- 次のコード例は、インストールするための完全な製品ファイルを示しています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。  
+ 次のコード例は、インストールするための完全な製品ファイルを示します、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -1,5 +1,5 @@
 ---
-title: ミップマップ生成バリアント |Microsoft ドキュメント
+title: ミップマップ生成バリアント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8804c4b559d2755dd0caec000a58751b9697b23
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b91c0cb6357d465f612d1002476c03781822475c
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475722"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433169"
 ---
 # <a name="mip-map-generation-variant"></a>ミップマップ生成バリアント
 レンダー ターゲットではないテクスチャで MIP マップを有効にします。  
@@ -27,7 +27,7 @@ ms.locfileid: "31475722"
   
  このバリアントでパフォーマンスが大幅に向上する場合は、MIP マップを有効にしないでテクスチャを使用いるため、テクスチャのキャッシュを最大限に利用できていないことを示しています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MIP マップの生成は、ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに強制的に行われます。 具体的には、MIP マップの生成は、`pDesc` に渡された D3D11_TEXTUR2D_DESC オブジェクトが、不変のシェーダー リソースを記述する場合に強制的に行われます。つまり、  
   
 -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
@@ -45,9 +45,9 @@ ms.locfileid: "31475722"
  テクスチャに対して MIP マップが自動的に生成された場合は、再生中に `ID3D11Device::CreateShaderResourceView` に対する呼び出しが修正され、テクスチャのサンプリング中に MIP チェーンを使用できるようになります。  
   
 ## <a name="example"></a>例  
- **の Mip マップ生成**バリアントは次のようにコードを使用して再現することができます。  
+ **Mip-map Generation**このようなコードを使用してバリアントを再現することができます。  
   
-```  
+```cpp
 D3D11_TEXTURE2D_DESC texture_description;  
   
 // ...  
@@ -64,7 +64,7 @@ for (auto&& mip_level : initial_data)
 d3d_device->CreateTexture2D(&texture_description, initial_data.data(), &texture)  
 ```  
   
- 完全な MIP チェーンを持つテクスチャを作成するには、`D3D11_TEXTURE2D_DESC::MipLevels` を 0 に設定します。 完全な mip チェーンの mip レベルの数が floor(log2(n) は + 1)、n は、テクスチャの最大のディメンションです。  
+ 完全な MIP チェーンを持つテクスチャを作成するには、`D3D11_TEXTURE2D_DESC::MipLevels` を 0 に設定します。 完全な mip チェーンの mip レベルの数は floor(log2(n) + 1)、n は、テクスチャの最大のディメンションです。  
   
  `CreateTexture2D` に初期データを提供する場合は、各 MIP レベルに D3D11_SUBRESOURCE_DATA オブジェクトを提供しなければならないことに注意してください。  
   

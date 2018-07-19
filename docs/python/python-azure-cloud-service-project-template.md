@@ -1,7 +1,7 @@
 ---
 title: Python 用 Azure クラウド サービス プロジェクト テンプレート
 description: 役割の展開、依存関係、トラブルシューティングなど、Python で記述された Azure クラウド サービス用の Visual Studio テンプレートの概要です。
-ms.date: 07/13/2017
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 42b2cf1fda241e178804847d86e6af9e4f33e7bd
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 2e1518b387f859e4be4427b05b2010167c7205c6
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32031814"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058660"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
@@ -29,7 +29,7 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-1. クラウド サービス テンプレートを使用するために必要な [Azure .NET SDK for Visual Studio](https://www.visualstudio.com/vs/azure-tools/) をインストールします。
+1. クラウド サービス テンプレートを使用するために必要な [Azure .NET SDK for Visual Studio](https://visualstudio.microsoft.com/vs/azure-tools/) をインストールします。
 1. Visual Studio で、**[ファイル] > [新規] > [プロジェクト...]** を選択し、"Azure Python" を検索して **[Azure クラウド サービス]** を一覧から選びます。
 
     ![Python 用 Azure クラウド プロジェクト テンプレート](media/template-azure-cloud-project.png)

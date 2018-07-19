@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SharePoint アプリケーションのプロファイリング |Microsoft ドキュメント'
+title: 'チュートリアル: SharePoint アプリケーションのプロファイリング |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,65 +18,66 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f6eb4e9f78a9defaafb774551e301d6101cc40d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c52fdfd2a4598c63073476ae6b0ce3ee96bd94a
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37119846"
 ---
-# <a name="walkthrough-profiling-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションのプロファイリング
-  このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーでは、見つけてとも呼ばれる、プロジェクトの最も負荷の高い (最も遅い) 部分を排除することができます、*ホット パス*です。  
+# <a name="walkthrough-profile-a-sharepoint-application"></a>チュートリアル: SharePoint アプリケーションをプロファイリングします。
+  このチュートリアルでは、Visual Studio のプロファイル ツールを使用し、SharePoint アプリケーションのパフォーマンスを最適化する方法について説明します。 アプリケーション例は SharePoint フィーチャー イベント レシーバーで、これにはフィーチャー イベント レシーバーのパフォーマンスを低下させるアイドル ループが含まれています。 Visual Studio プロファイラーを使用するとも呼ばれるプロジェクトの最も負荷の高い (実行する最も遅い) 部分を排除を見つけて、*ホット パス*します。  
   
  このチュートリアルでは、次のタスクについて説明します。  
   
--   [機能とフィーチャー イベント レシーバーの追加](#BKMK_AddFtrandFtrEvntReceiver)です。  
+-   [機能とフィーチャー イベント レシーバーを追加する](#BKMK_AddFtrandFtrEvntReceiver)します。  
   
--   [構成および SharePoint アプリケーションを展開する](#BKMK_ConfigSharePointApp)です。  
+-   [SharePoint アプリケーションをデプロイして構成する](#BKMK_ConfigSharePointApp)します。  
   
--   [SharePoint アプリケーションの実行](#BKMK_RunSPApp)です。  
+-   [SharePoint アプリケーションを実行している](#BKMK_RunSPApp)します。  
   
--   [表示とプロファイルの結果を解釈](#BKMK_ViewResults)です。  
+-   [表示とプロファイルの結果を解釈](#BKMK_ViewResults)します。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)です。  
+-   サポート対象エディションの Microsoft Windows および SharePoint。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]。  
   
-## <a name="creating-a-sharepoint-project"></a>SharePoint プロジェクトを作成する  
+## <a name="create-a-sharepoint-project"></a>SharePoint プロジェクトを作成します。
  まずは、SharePoint プロジェクトを作成します。  
   
 #### <a name="to-create-a-sharepoint-project"></a>SharePoint プロジェクトを作成するには  
   
-1.  メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
+1.  メニュー バーで、**ファイル** > **新規** > **プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  展開、 **SharePoint**ノード**Visual c#**または**Visual Basic**を選択し、 **2010**ノード。  
+2.  展開、 **SharePoint**のどちらかのノード**Visual c#** または**Visual Basic**を選択し、 **2010**ノード。  
   
-3.  [テンプレート] ペインで、選択、 **SharePoint 2010 プロジェクト**テンプレート。  
+3.  [テンプレート] ペインで選択、 **SharePoint 2010 プロジェクト**テンプレート。  
   
-4.  **名前**ボックスに、入力**ProfileTest**を選択し、 **OK**ボタンをクリックします。  
+4.  **名前**ボックスに、入力**ProfileTest**、選択し、 **OK**ボタン。  
   
      **SharePoint カスタマイズ ウィザード**が表示されます。  
   
-5.  **デバッグのサイトとセキュリティ レベルを指定して**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/).  
+5.  **デバッグのサイトとセキュリティのレベルを指定**ページで、サイト定義をデバッグする SharePoint サーバー サイトの URL を入力するか、既定の場所を使用して (http://*システム名*/).  
   
-6.  **この SharePoint ソリューションの信頼レベルは何ですか?**セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
+6.  **この SharePoint ソリューションの信頼レベルとは何ですか?** セクションで、選択、**ファーム ソリューションとして配置**オプション ボタンをクリックします。  
   
-     現時点では、ファーム ソリューションのプロファイルのみを実行できます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)です。  
+     現時点では、ファーム ソリューションのプロファイルのみを実行できます。 サンド ボックス ソリューションとファーム ソリューションの詳細については、次を参照してください。[サンド ボックス ソリューションの考慮事項](../sharepoint/sandboxed-solution-considerations.md)します。  
   
-7.  選択、**完了**ボタンをクリックします。 プロジェクトが表示されます**ソリューション エクスプ ローラー**です。  
+7.  選択、**完了**ボタンをクリックします。 プロジェクトが表示されます**ソリューション エクスプ ローラー**します。  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> 機能とフィーチャー イベント レシーバーの追加  
+## <a name="add-a-feature-and-feature-event-receiver"></a>機能とフィーチャー イベント レシーバーを追加します。
  次に、フィーチャーを、そのイベント レシーバーと共にプロジェクトに追加します。 このイベント レシーバーには、プロファイル対象のコードが含まれます。  
   
 #### <a name="to-add-a-feature-and-feature-event-receiver"></a>機能とフィーチャー イベント レシーバーを追加するには  
   
-1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能** ノードを選択**フィーチャーの追加**は既定値の名前をそのままと**Feature1**.  
+1.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、**機能**ノード選択**機能の追加**、名前の既定値のままにして、 **Feature1**.  
   
-2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **Feature1**を選択し**イベント レシーバーの追加**です。  
+2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き**Feature1**を選び、**イベント レシーバーの追加**します。  
   
      これにより、いくつかのコメント アウトされたイベント ハンドラーを持つコード ファイルが機能に追加され、編集のためにファイルが開かれます。  
   
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-5.  次の手順を追加、`FeatureActivated`プロシージャです。  
+5.  次の手順を追加、`FeatureActivated`プロシージャ。  
   
     ```vb  
   
@@ -180,82 +181,82 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  **ソリューション エクスプ ローラー**、プロジェクトのショートカット メニューを開きます (**ProfileTest**) を選択し**プロパティ**です。  
+6.  **ソリューション エクスプ ローラー**、プロジェクトのショートカット メニューを開き (**ProfileTest**) を選び、**プロパティ**します。  
   
-7.  **プロパティ** ダイアログ ボックスで、選択、 **SharePoint**タブです。  
+7.  **プロパティ** ダイアログ ボックスで、選択、 **SharePoint**タブ。  
   
-8.  **アクティブな配置構成**一覧で、選択**アクティブ化しない**です。  
+8.  **アクティブな配置構成**一覧で、選択**アクティブ化しない**します。  
   
      この配置構成を選択することにより、後で SharePoint 内から手動でフィーチャーをアクティブ化できます。  
   
 9. プロジェクトを保存します。  
   
-##  <a name="BKMK_ConfigSharePointApp"></a> 構成および SharePoint アプリケーションを展開します。  
+## <a name="configure-and-deploy-the-sharepoint-application"></a>構成して SharePoint アプリケーションの展開
  SharePoint プロジェクトの準備ができたので、それを構成し、SharePoint サーバーに配置します。  
   
 #### <a name="to-configure-and-deploy-the-sharepoint-application"></a>SharePoint アプリケーションを構成し、配置するには  
   
-1.  **分析**] メニューの [選択**パフォーマンス ウィザードの起動**です。  
+1.  **分析**] メニューの [選択**パフォーマンス ウィザードの起動**します。  
   
-2.  いずれかのページで、**パフォーマンス ウィザード**、プロファイリングは任意のメソッドのままにして**CPU サンプリング**を選択し、 **[次へ]**ボタンをクリックします。  
+2.  いずれかのページで、**パフォーマンス ウィザード**、プロファイリングは任意のメソッドのままに**CPU サンプリング**を選択し、**次**ボタン。  
   
      他のプロファイル方法は、より高度なプロファイルを行う場合に使用できます。 詳細については、「[パフォーマンス収集方法について](/visualstudio/profiling/understanding-performance-collection-methods)」を参照してください。  
   
-3.  2 ページ目で、**パフォーマンス ウィザード**、プロファイルをターゲットとしてのままにして**ProfileTest**を選択し、 **[次へ]**ボタンをクリックします。  
+3.  2 ページ目で、**パフォーマンス ウィザード**、プロファイルをターゲットとしてのままに**ProfileTest**を選択し、 **[次へ]** ボタンをクリックします。  
   
      ソリューションに複数のプロジェクトがある場合は、この一覧に表示されます。  
   
-4.  3 ページ目で、**パフォーマンス ウィザード**チェック ボックスをオフ、**階層相互作用のプロファイリングを有効にする**チェック ボックスをオンにして、 **[次へ]**ボタンをクリックします。  
+4.  3 ページ目で、**パフォーマンス ウィザード**チェック ボックスをオフ、**階層相互作用のプロファイリングを有効にする**チェック ボックスをオンにして、**次**ボタンをクリックします。  
   
      階層の相互作用のプロファイル (TIP) 機能は、データベースを照会するアプリケーションのパフォーマンスの測定や、Web ページが要求された回数の表示に便利です。 そのようなデータはこの例では不要なため、この機能は有効にしません。  
   
-5.  4 ページ目で、**パフォーマンス ウィザード**のままにして、**ウィザードの完了後にプロファイルを起動して**チェック ボックスをオンにして、**完了**ボタンをクリックします。  
+5.  4 ページ目で、**パフォーマンス ウィザード**のままに、**ウィザードの完了後にプロファイルを起動**チェック ボックスをオンにして、**完了**ボタンをクリックします。  
   
-     ウィザードがサーバーでアプリケーションのプロファイリングを有効に、表示、**パフォーマンス エクスプ ローラー**ウィンドウ、およびビルド、配置、および SharePoint アプリケーションを実行します。  
+     ウィザード アプリケーションが、サーバー上でプロファイリングを有効に、表示、**パフォーマンス エクスプ ローラー**ウィンドウ、およびビルド、配置、および SharePoint アプリケーションを実行します。  
   
-##  <a name="BKMK_RunSPApp"></a> SharePoint アプリケーションの実行  
+## <a name="run-the-sharepoint-application"></a>SharePoint アプリケーションを実行します。
  `FeatureActivation` イベント コードの実行をトリガーし、SharePoint 内の機能をアクティブ化します。  
   
 #### <a name="to-run-the-sharepoint-application"></a>SharePoint アプリケーションを実行するには  
   
-1.  SharePoint では、開く、**サイトの操作** メニューを選択し**サイト設定**です。  
+1.  SharePoint では、開く、**サイトの操作**] メニューの [選び、**サイト設定**します。  
   
-2.  **サイトの操作**一覧で、選択、**サイト機能の管理**リンクします。  
+2.  **サイトの操作**一覧で、選択、**サイト機能の管理**リンク。  
   
-3.  **機能**一覧で、選択、 **Activate**横に**ProfileTest Feature1**です。  
+3.  **機能**一覧で、選択、 **Activate**横に**ProfileTest Feature1**します。  
   
      この操作を実行すると、`FeatureActivated` 関数内でアイドル ループが呼び出されることによって一時停止が発生します。  
   
-4.  **クイック起動**バーで、**を一覧表示**し、**を一覧表示**一覧で、選択**お知らせ**です。  
+4.  **クイック起動**バーで、選択**を一覧表示**し、**を一覧表示**一覧で、選択**お知らせ**します。  
   
      機能がアクティブになったことを示す新しいお知らせが一覧に追加されていることを確認します。  
   
 5.  SharePoint サイトを閉じます。  
   
-     SharePoint を閉じると、プロファイラーによって作成およびサンプル プロファイル レポートを表示され、.vsp ファイルとして保存、 **ProfileTest**プロジェクトのフォルダーです。  
+     SharePoint を閉じると、プロファイラーを作成しますサンプル プロファイル レポートを表示し、.vsp ファイルとして保存します、 **ProfileTest**プロジェクトのフォルダー。  
   
-##  <a name="BKMK_ViewResults"></a> 表示とプロファイルの結果の解釈  
+## <a name="view-and-interpret-the-profile-results"></a>表示し、プロファイルの結果の解釈
  SharePoint アプリケーションを実行してプロファイルを行ったので、次はテスト結果を表示します。  
   
-#### <a name="to-view-and-interpret-the-profiling-results"></a>プロファイル結果を表示し、解釈するには  
+#### <a name="to-view-and-interpret-the-profile-results"></a>表示し、プロファイルの結果を解釈するには
   
-1.  **個別作業が一番を実行している関数**セクション サンプル プロファイル レポートのことに注意して`TimeCounter`は一覧の先頭付近にあります。  
+1.  **最も個々 の作業を実行している関数**セクション サンプル プロファイル レポートのことに注意して`TimeCounter`はリストの先頭付近にあります。  
   
      この場所は、`TimeCounter` がサンプル数の最も多い関数の 1 つ、つまり、アプリケーション内で最大のパフォーマンス ボトルネックの 1 つであることを示しています。 ただし、これは驚くような状況はではありません。デモンストレーションのために、意図してこのようにデザインされたものであるからです。  
   
-2.  **個別作業が一番を実行している関数**セクションで、選択、`ProcessRequest`のコスト配分を表示するリンク、`ProcessRequest`関数。  
+2.  **最も個々 の作業を実行している関数**セクションで、選択、`ProcessRequest`のコスト配分を表示するリンク、`ProcessRequest`関数。  
   
-     **関数と呼ばれる**については、「 `ProcessRequest`、ことに注意して、 **FeatureActiviated**関数が表示されている最も高価な関数が呼び出されます。  
+     **関数と呼ばれる**セクション`ProcessRequest`、ことに注意して、 **FeatureActiviated**関数が、最も高価な関数と呼ばれる一覧表示します。  
   
 3.  **関数と呼ばれる**セクションで、選択、 **FeatureActivated**ボタンをクリックします。  
   
-     **関数と呼ばれる**については、「 **FeatureActivated**、`TimeCounter`関数が表示されている最も高価な関数が呼び出されます。 **関数コード ビュー**  ウィンドウで、強調表示されたコード (`TimeCounter`) ホット スポットであり、修正が必要なことを示します。  
+     **関数と呼ばれる**セクション**FeatureActivated**、`TimeCounter`関数が、最も高価な関数と呼ばれる一覧表示します。 **関数コード ビュー**  ウィンドウで、強調表示されたコード (`TimeCounter`)、ホット スポットであり、修正が必要な場所を示します。  
   
 4.  サンプル プロファイル レポートを閉じます。  
   
-     レポートを表示する、いつでもでも、.vsp ファイルを開く、**パフォーマンス エクスプ ローラー**ウィンドウです。  
+     いつでもでも、レポートを表示するで .vsp ファイルを開きます、**パフォーマンス エクスプ ローラー**ウィンドウ。  
   
-## <a name="fixing-the-code-and-reprofiling-the-application"></a>コードの修正とアプリケーションの再プロファイル  
+## <a name="fix-the-code-and-reprofile-the-application"></a>コードを修正し、アプリケーションのプロファイルを再作成
  SharePoint アプリケーション内のホットスポット関数を特定したので、次はこれを修正します。  
   
 #### <a name="to-fix-the-code-and-reprofile-the-application"></a>コードを修正し、アプリケーションを再プロファイルするには  
@@ -264,20 +265,19 @@ ms.lasthandoff: 04/16/2018
   
 2.  プロジェクトを保存します。  
   
-3.  **パフォーマンス エクスプ ローラー**ターゲット フォルダーを開きを選択し、 **ProfileTest**ノード。  
+3.  **パフォーマンス エクスプ ローラー**ターゲット フォルダーを開き、選択し、 **ProfileTest**ノード。  
   
 4.  **パフォーマンス エクスプ ローラー**ツールバーで、**アクション** タブで、選択、**プロファイリングの開始**ボタンをクリックします。  
   
-     任意のアプリケーションを再プロファイル前にプロファイルのプロパティを変更するを選択する場合、**パフォーマンス ウィザードの起動**代わりにボタンをクリックします。  
+     アプリケーションの再プロファイル前にプロファイル プロパティのいずれかを変更するには、選択する場合、**パフォーマンス ウィザードの起動**代わりにボタンをクリックします。  
   
-5.  指示に従って、 **SharePoint アプリケーションの実行**このトピックの前のセクションです。  
+5.  指示に従って、 **SharePoint アプリケーションの実行**このトピックの前のセクション。  
   
      これで、アイドル ループへの呼び出しが削除されたため、機能のアクティブ化がより高速になりました。 このことは、サンプル プロファイル レポートに反映されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [パフォーマンス エクスプローラー](/visualstudio/profiling/performance-explorer)   
  [パフォーマンス セッションの概要](/visualstudio/profiling/performance-session-overview)   
  [パフォーマンス プロファイリングのビギナーズ ガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Visual Studio プロファイラーでアプリケーションのボトルネックを見つける](http://go.microsoft.com/fwlink/?LinkID=137266)  
-  
+ [Visual Studio Profiler でアプリケーションのボトルネックを見つける](http://go.microsoft.com/fwlink/?LinkID=137266)  
   

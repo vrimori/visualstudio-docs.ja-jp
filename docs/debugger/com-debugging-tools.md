@@ -1,5 +1,5 @@
 ---
-title: デバッグ ツール COM |Microsoft ドキュメント
+title: COM のデバッグ ツール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -23,26 +23,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00c801ddfce436d4867af9f7012c0abe785ed68a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c2d2cd73ece3129e4719b50e5d140481e9210edb
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458991"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36757189"
 ---
 # <a name="com-debugging-tools"></a>COM 用のデバッグ ツール
-ここでは、COM プログラムのテストと調査に役立つツールを紹介します。  
-  
- OLE/COM オブジェクト ビューアー  
- OLEVIEW は、コンピューターにインストールされている ActiveX や OLE オブジェクトと、これらがサポートしているインターフェイスを表示します。 また、レジストリを編集したり、タイプ ライブラリを確認できます。 詳細については、次を参照してください。 [OLE/COM オブジェクト ビューアーを使用して](/cpp/data/ado-rdo/using-the-ole-com-object-viewer)です。  
-  
- Microsoft Foundation Class のサンプル  
- MFC ActiveX サンプルの OCLIENT および SUPERPAD も、アプリケーションのテストに利用できます。 これらのサンプルの完全なソース コードが用意されています。  
-  
-## <a name="see-also"></a>関連項目  
- [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)   
- [COM 用のデバッグ ツール](../debugger/com-debugging-tools.md)  
- [Visual Studio でのデバッグ](../debugger/index.md)  
- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
- [サンプルの OCLIENT: ビジュアル編集コンテナー アプリケーションを示しています。](http://msdn.microsoft.com/en-us/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)   
- [SUPERPAD サンプル: ビジュアル CEditView を使用してテキストを編集するサーバーの編集](http://msdn.microsoft.com/en-us/7b14e975-d986-4e6a-8289-226485cfcb72)
+
+ここでは、COM プログラムのテストと調査に役立つツールを紹介します。
+
+OLE/COM オブジェクト ビューアー
+
+OLEVIEW は、コンピューターにインストールされている ActiveX や OLE オブジェクトと、これらがサポートしているインターフェイスを表示します。 また、レジストリを編集したり、タイプ ライブラリを確認できます。
+
+Microsoft Foundation Class のサンプル
+
+MFC ActiveX サンプルの OCLIENT および SUPERPAD も、アプリケーションのテストに利用できます。 これらのサンプルの完全なソース コードが用意されています。
+
+### <a name="see-also"></a>関連項目
+
+- [COM および ActiveX のデバッグ](../debugger/com-and-activex-debugging.md)
+- [COM 用のデバッグ ツール](../debugger/com-debugging-tools.md)
+- [Visual Studio でのデバッグ](../debugger/index.md)
+- [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+- [サンプルの OCLIENT: ビジュアル編集コンテナー アプリケーションを示しています。](http://msdn.microsoft.com/en-us/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
+- [SUPERPAD サンプル: ビジュアル編集サーバー CEditView を使用してテキストを編集します。](http://msdn.microsoft.com/en-us/7b14e975-d986-4e6a-8289-226485cfcb72)

@@ -1,7 +1,7 @@
 ﻿---
-title: Visual Studio のローカル フォルダーに配置 |Microsoft ドキュメント
+title: ローカル フォルダーに配置する
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 06/22/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,68 +12,49 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 016538bded47a5186294c161cc7f310b26818d15
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
-ms.translationtype: HT
+ms.openlocfilehash: 517698aa2e042d74138579dae3633930b338cd61
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34764220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781914"
 ---
-# <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Web アプリまたは .NET Core アプリを Visual Studio 発行ツールを使用してローカル フォルダーに配置します。
+# <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Visual Studio を使用したローカル フォルダーにアプリをデプロイします。
 
-ローカル フォルダーにアプリを公開するために **発行**ツール を使用することができます。
- 
+使用することができます、**発行**Visual Studio からローカル フォルダーに ASP.NET、ASP.NET Core、.NET Core、および Python のアプリを発行するためのツール。 For Node.js が手順がサポートされていますが、ユーザー インターフェイスは異なります。
 
-次の手順は、ASP.NET、ASP.NET Core、.NET Core および Visual Studio での Python アプリに適用されます。 For Node.js、手順がサポートされますが、ユーザー インターフェイスが異なる。
-
-## <a name="prerequisites"></a>必須コンポーネント
-
-* インストールされている Visual Studio 2017 が必要とします。**NET デスクトップ開発**ワークロードと **。NET コア**ワークロード。
-
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
-
-## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
-
-1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
-
-1. **Visual c#** または**Visual Basic**、選択 **.NET Core**、し、中央のペインで次のように選択します。**コンソール アプリケーション (.NET Core)** です。
-
-1. ような名前を入力**MyLocalApp**  をクリック**OK**です。
-
-    Visual Studio によってプロジェクトが作成されます。
+[!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 ## <a name="deploy-to-a-local-folder"></a>ローカル フォルダーに配置する
 
-1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
+1. ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**発行**(を使用して、または、**ビルド** > **発行**メニュー項目)。
 
-    ![選択発行](../deployment/media/quickstart-publish.png "選択発行")
+    ![ソリューション エクスプ ローラーでプロジェクトのコンテキスト メニューの [発行] コマンド](../deployment/media/quickstart-publish.png "発行の選択")
 
-1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
+1. 以前に任意の発行プロファイルを構成する場合、**発行**ウィンドウが表示されます。 選択**新しいプロファイルを作成する**します。
 
-1. **発行先の選択** ダイアログ ボックスで、選択**フォルダー**です。
+1. **発行先を選択** ダイアログ ボックスで、選択**フォルダー**します。
 
-    ![フォルダーを選択](../deployment/media/quickstart-publish-folder.png "フォルダーを選択します")
+    ![公開ターゲットとしてローカル フォルダーを選択](../deployment/media/quickstart-publish-folder.png "フォルダーの選択")
 
-1. パスを入力またはクリックして**参照**ローカル フォルダーを参照します。
+1. パスを入力または選択**参照**ローカル フォルダーを指定します。
 
-1. **[発行]** をクリックします。
+1. **[発行]** を選びます。 Visual Studio は、プロジェクトをビルドし、指定したフォルダーに発行します。 プロジェクトのプロパティ**発行**概要プロファイルを示すウィンドウが表示されます。
 
-    Visual Studio は、プロジェクトをビルドし、指定されたフォルダーに発行します。
+    ![発行プロファイルの概要を示すプロパティ ウィンドウ](../deployment/media/quickstart-publish-folder-summary.png)
 
-    発行ペインは、概要、プロファイルを示しています。
+1. 展開の設定を構成するには、選択**構成**概要や選択プロファイルで、**設定**タブ。
 
-1. 展開設定を構成する をクリックして**設定**プロファイルの概要にします。
+    ![プロファイルの設定](../deployment/media/quickstart-profile-settings.png "プロファイルの設定")
 
-    ![プロファイルの設定](../deployment/media/quickstart-profile-settings.png "プロファイルの設定") 
+1. など、デバッグまたはリリース構成をデプロイしを選択するかどうかのオプションを構成する**保存**します。
 
-1. デバッグまたはリリース構成を展開し、をクリックするかどうかなどのオプションを構成する**保存**です。
+1. 再発行するには、次のように選択します。**発行**します。
 
-1. クリックして、再パブリッシュする**発行**です。
-
-発行したファイルは、任意の方法で展開できます。 たとえば、Zip ファイル内にパッケージ化、単純なコピー コマンドを使用して、または任意のインストール パッケージに配置できます。
+発行したファイルは、任意の方法で展開できます。 パッケージなど、 *.zip*ファイル、単純なコピー コマンドを使用または好みの任意のインストール パッケージに配置します。
 
 ## <a name="next-steps"></a>次の手順
 
 - [発行ツールを使用して .NET Core アプリケーションを配置する](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- (.NET)[.NET Framework とアプリケーションを展開しています.](/dotnet/framework/deployment/)
+- (.NET)[.NET Framework およびアプリケーションのデプロイ](/dotnet/framework/deployment/)
