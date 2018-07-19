@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f9dcf9079a444b581cacbe4e013149259b3ecb87
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
-ms.translationtype: HT
+ms.openlocfilehash: aef6236b896495f81e91cbdd7befd2923c013a33
+ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38801124"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39131961"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>データセットへの WPF コントロールのバインド
 
@@ -240,7 +240,7 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルを完了後するしてみてくださいに関する次のタスク。
+このチュートリアルを完了すると、次の関連タスクをお試しください可能性があります。
 
 - 使用する方法について説明します、**データソース**WPF のバインドを Visual Studio のウィンドウを他の種類のデータ ソースを制御します。 詳細については、次を参照してください。 [WCF data service にコントロールをバインドする WPF](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)します。
 

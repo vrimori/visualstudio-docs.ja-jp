@@ -1,7 +1,5 @@
 - name: 概要
-  items:
-    - name: Visual Studio でのデータへのアクセス
-      href: accessing-data-in-visual-studio.md
+  href: accessing-data-in-visual-studio.md
 - name: チュートリアル
   items:
     - name: ADO.NET を使用して単純なデータ アプリを作成する

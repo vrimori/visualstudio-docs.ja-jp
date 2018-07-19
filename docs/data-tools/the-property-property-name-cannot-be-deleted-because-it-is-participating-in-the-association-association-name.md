@@ -1,5 +1,5 @@
 ---
-title: プロパティは、関連付けに関与しているために、削除できません。
+title: プロパティは、アソシエーションに参加しているために削除できません。
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 389873cc-92dd-48da-bfca-0f6c8e0ae3c2
@@ -10,26 +10,26 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 98f95c489758b808ae7a210f7d83332f84571d1f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6ed6b14f64d16d1f18d4b358761169c3d424cee8
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174063"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>プロパティ&lt;プロパティ名&gt;関連付けに関与しているために、削除できません&lt;association 名&gt;
+# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>プロパティ&lt;プロパティ名&gt;関連付けに関与しているために削除できません&lt;関連付けの名前&gt;
 
-選択したプロパティとして設定されて、**関連付けプロパティ**クラス間の関連付けのエラー メッセージに示されています。 プロパティがデータ クラス間の関連付けに関与している場合、そのプロパティを削除することはできません。
+選択したプロパティとして設定されて、**関連付けプロパティ**クラス間の関連付けには、エラー メッセージに示されています。 プロパティがデータ クラス間の関連付けに関与している場合、そのプロパティを削除することはできません。
 
-設定、**関連付けプロパティ**を目的のプロパティが正常に削除を有効にするデータ クラスの別のプロパティです。
+設定、**関連付けプロパティ**を目的のプロパティが正常に削除を有効にするデータ クラスの別のプロパティ。
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. O/R デザイナーで、エラー メッセージに示されているデータ クラスを接続する関連行を選択します。
+1. 関連行を選択、 **O/R デザイナー**エラー メッセージに示されているデータ クラスを接続します。
 
-2. 開くには行をダブルクリックして、 **[関連付けエディター** ] ダイアログ ボックス。
+2. 開く行をダブルクリックして、**関連付けエディター**  ダイアログ ボックス。
 
-3. プロパティを削除、**関連付けのプロパティ**です。
+3. プロパティを削除、**関連プロパティ**します。
 
 4. プロパティの削除を再試行します。
 
