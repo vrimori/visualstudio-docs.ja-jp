@@ -10,14 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b759d5ac7f86fe366a5a0394b4c288904ef5c589
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 62c7f173f278e03f5e28d6b03c117c7b69415abb
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255146"
 ---
 # <a name="profiling-tools-apis"></a>プロファイリング ツールの API
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの API のマネージ メソッドまたはネイティブ メソッドを挿入すると、プロファイリング実行のデータ収集を制御できます。 ここでは、API のメソッドとその使い方について説明します。  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの API のマネージド メソッドまたはネイティブ メソッドを挿入すると、プロファイリング実行のデータ収集を制御できます。 ここでは、API のメソッドとその使い方について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)  
@@ -32,5 +33,5 @@ ms.lasthandoff: 04/19/2018
 ## <a name="related-sections"></a>関連項目  
  [データ収集の制御](../profiling/controlling-data-collection.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)
