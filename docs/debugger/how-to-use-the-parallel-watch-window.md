@@ -1,5 +1,5 @@
 ---
-title: 並列スレッド内の変数のウォッチを設定 |Microsoft ドキュメント
+title: 並列スレッドの変数にウォッチを設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
@@ -20,25 +20,25 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a142b512c5bbaf5d93dc0302aa39db92fb7c7ae
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808075"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Visual Studio での並列スレッド内の変数のウォッチを設定します。
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio"></a>Visual Studio での並列スレッドの変数のウォッチ ポイントを設定します。
 [並列ウォッチ] ウィンドウには、複数のスレッドで 1 つの式が保持している値を同時に表示できます。 各行は、1 つのアプリケーションで実行中のスレッドを表しますが、スレッドは複数の行に表示される場合があります。 具体的には、各行は関数シグネチャが現在のスタック フレーム上の関数に一致する関数呼び出しを表します。 列内の項目の並べ替え、順序変更、削除、およびグループ化を行うことができます。 スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 次の列が表示されます、**並列ウォッチ**ウィンドウ。  
   
 -   フラグ列。特に注意する必要のあるスレッドをマークできます。  
   
--   これでは、黄色の矢印は、現在のスレッドを示します。 現在のスレッド列 (巻いた尾の付いた緑色の矢印は、現在ではないスレッドの現在のデバッガーのコンテキストであることを示します)。  
+-   スレッドの現在の列の黄色の矢印が、現在のスレッドを示します (巻いた尾の付いた緑色の矢印は、現在ではないスレッドの現在のデバッガーのコンテキストであることを示します)。  
   
 -   構成可能な列。コンピューター、プロセス、タイル、タスク、スレッドを表示できます。  
   
     > [!TIP]
-    >  Dislay タスク情報を**並列ウォッチ** ウィンドウで開く必要があります最初、**タスク**ウィンドウです。  
+    >  Dislay タスク情報を**並列ウォッチ**ウィンドウを開く必要があります最初、**タスク**ウィンドウ。  
   
--   空白*ウォッチ式の追加*列、ウォッチする式を入力できます。  
+-   空白*ウォッチ式の追加*列、ウォッチする式を入力することができます。  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "31475948"
   
 2.  メニュー バーで、**[デバッグ]**、**[デバッグ開始]** の順に選択します。 アプリケーションがブレークポイントに到達するを待機します。  
   
-3.  メニュー バーで、次のように選択します。**デバッグ**、 **Windows**、**並列ウォッチ**、[ウォッチ] ウィンドウを選択します。 最大で 4 つのウィンドウを開くことができます。  
+3.  メニュー バーで、**デバッグ**、 **Windows**、**並列ウォッチ**、ウォッチ ウィンドウを選択します。 最大で 4 つのウィンドウを開くことができます。  
   
 ### <a name="to-add-a-watch-expression"></a>ウォッチ式を追加するには  
   
@@ -56,15 +56,15 @@ ms.locfileid: "31475948"
   
 ### <a name="to-flag-or-unflag-a-thread"></a>スレッドのフラグを設定または設定解除するには  
   
--   行のフラグ列を選択 (最初の列)、またはスレッドのショートカット メニューを開き**フラグ**または**フラグ解除**です。  
+-   行のフラグ列を選択します (最初の列) のスレッドのショートカット メニューを開き、または選択**フラグ**または**フラグ解除**します。  
   
 ### <a name="to-display-only-flagged-threads"></a>フラグが設定されたスレッドのみ表示するには  
   
--   選択、**表示のみにフラグが設定された**の左上隅にあるボタン、**並列ウォッチ**ウィンドウです。  
+-   選択、**表示のみにフラグが設定された**の左上隅のボタン、**並列ウォッチ**ウィンドウ。  
   
-### <a name="to-switch-to-another-thread"></a>別のスレッドに切り替えるには  
+### <a name="to-switch-to-another-thread"></a>別のスレッドに切り替える  
   
--   現在のスレッドの列をダブルクリックして (2 番目の列)。 (キーボード: 行を選択し、Enter キーを押します)。  
+-   現在のスレッドの列をダブルクリックします (2 番目の列)。 (キーボード: 行を選択し、Enter キーを押します)。  
   
 ### <a name="to-sort-a-column"></a>列を並べ替えるには  
   
@@ -76,17 +76,17 @@ ms.locfileid: "31475948"
   
 ### <a name="to-freeze-or-thaw-threads"></a>スレッドを凍結/凍結解除するには  
   
--   行のショートカット メニューを開き**凍結**または**凍結解除**です。  
+-   行のショートカット メニューを開いて**固定**または**凍結解除**します。  
   
 ### <a name="to-export-the-data-in-the-parallel-watch-window"></a>[並列ウォッチ] ウィンドウ内のデータをエクスポートするには  
   
--   選択、 **Excel で開く**ボタンをクリックし、 **Excel で開く**または**CSV にエクスポート**です。  
+-   選択、 **Excel で開く**ボタンをクリックし、 **Excel で開く**または**CSV にエクスポート**します。  
   
 ### <a name="to-filter-by-a-boolean-expression"></a>ブール式でフィルター処理するには  
   
--   ブール式を入力、**ブール式でフィルター**ボックス。 デバッガーは、スレッド コンテキストの式を評価します。 値が `true` である行だけが表示されます。  
+-   ブール式を入力してください、**ブール式でフィルター**ボックス。 デバッガーは、スレッド コンテキストの式を評価します。 値が `true` である行だけが表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [方法: GPU スレッド ウィンドウを使用します。](../debugger/how-to-use-the-gpu-threads-window.md)   
+ [方法: GPU スレッド ウィンドウを使用](../debugger/how-to-use-the-gpu-threads-window.md)   
  [チュートリアル: C++ AMP アプリケーションのデバッグ](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

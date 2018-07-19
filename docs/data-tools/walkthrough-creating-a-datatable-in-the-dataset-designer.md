@@ -14,76 +14,56 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: baf4fca6c45bb81473b5b4fa0169c7958105803f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 2cff383b6e06d8793a7730c36df01e2538b02c36
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174497"
 ---
-# <a name="walkthrough-creating-a-datatable-in-the-dataset-designer"></a>チュートリアル : データセット デザイナーでの DataTable の作成
+# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>チュートリアル: データセット デザイナーでの DataTable を作成します。
 
-このチュートリアルで説明を作成する方法、 <xref:System.Data.DataTable> (せずに、TableAdapter) を使用して、**データセット デザイナー**です。 Tableadapter を含むデータ テーブルを作成する方法については、次を参照してください。[作成し、Tableadapter を構成](../data-tools/create-and-configure-tableadapters.md)です。
+このチュートリアルを作成する方法を説明する、 <xref:System.Data.DataTable> (せずに、TableAdapter) を使用して、**データセット デザイナー**。 Tableadapter を含むデータ テーブルを作成する方法の詳細については、次を参照してください。[作成し、Tableadapter 構成](../data-tools/create-and-configure-tableadapters.md)します。
 
-このチュートリアルでは、以下のタスクを行います。
+## <a name="create-a-new-windows-forms-application"></a>新しい Windows フォーム アプリケーションを作成します。
 
--   新しい Windows フォーム アプリケーション プロジェクトを作成します。
+1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
 
--   アプリケーションに新しいデータセットの追加
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のウィンドウでを選択し、 **Windows デスクトップ**します。
 
--   データセットに新しいデータ テーブルを追加します。
+3. 中央のペインで選択、 **Windows フォーム アプリ**プロジェクトの種類。
 
--   データ テーブルに列を追加します。
+4. プロジェクトに名前を**DataTableWalkthrough**を選び、 **OK**。
 
--   テーブルの主キーの設定
+     **DataTableWalkthrough**プロジェクトが作成されに追加**ソリューション エクスプ ローラー**します。
 
-## <a name="creating-a-new-windows-forms-application"></a>新しい Windows フォーム アプリケーションを作成します。
+## <a name="add-a-new-dataset-to-the-application"></a>アプリケーションに新しいデータセットを追加します。
 
-### <a name="to-create-a-new-windows-forms-application-project"></a>新しい Windows フォーム アプリケーション プロジェクトを作成するには
+1.  **プロジェクト**メニューの **新しい項目の追加**します。
 
-1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
+     **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
-
-3. 中央のペインで、 **Windows フォーム アプリ**プロジェクトの種類。
-
-4. プロジェクトに名前を**DataTableWalkthrough**を選択し**OK**です。
-
-     **DataTableWalkthrough**プロジェクトが作成され、追加する**ソリューション エクスプ ローラー**です。
-
-## <a name="adding-a-new-dataset-to-the-application"></a>アプリケーションに新しいデータセットの追加
-
-### <a name="to-add-a-new-dataset-item-to-the-project"></a>プロジェクトに新しいデータセット項目を追加するには
-
-1.  **プロジェクト**メニューの **新しい項目の追加.**.
-
-     [新しい項目の追加] ダイアログ ボックスが表示されます。
-
-2.  左側のペインで選択**データ**選択してから、**データセット**中央のペインでします。
+2.  左側のウィンドウで次のように選択します。**データ**を選択し、**データセット**中央のペインでします。
 
 3.  **[追加]** をクリックします。
 
-     Visual Studio がという名前のファイルを追加**DataSet1.xsd**プロジェクトでそのソリューションを開きます、**データセット デザイナー**です。
+     Visual Studio がという名前のファイルを追加します**DataSet1.xsd**プロジェクトで開くと、**データセット デザイナー**。
 
-## <a name="adding-a-new-datatable-to-the-dataset"></a>データセットに新しいデータ テーブルを追加します。
+## <a name="add-a-new-datatable-to-the-dataset"></a>データセットに新しい DataTable を追加します。
 
-### <a name="to-add-a-new-data-table-to-the-dataset"></a>データセットに新しいデータ テーブルを追加するには
+1.  ドラッグ、 **DataTable**から、**データセット**のタブ、**ツールボックス**上に、**データセット デザイナー**します。
 
-1.  ドラッグ、 **DataTable**から、**データセット**のタブ、**ツールボックス**上に、**データセット デザイナー**です。
+     という名前のテーブル**DataTable1**データセットに追加されます。
 
-     という名前のテーブル**DataTable1**データセットに追加します。
+2.  タイトル バーをクリックします。 **DataTable1**名前を変更および`Music`します。
 
-2.  タイトル バーをクリックして**DataTable1**し、名前変更`Music`です。
+## <a name="add-columns-to-the-datatable"></a>列を DataTable に追加します。
 
-## <a name="adding-columns-to-the-datatable"></a>データ テーブルに列を追加します。
+1.  右クリックし、**音楽**テーブル。 をポイント**追加**、 をクリックし、**列**します。
 
-### <a name="to-add-columns-to-the-datatable"></a>DataTable に列を追加するには
+2.  列の名前を付けます`SongID`します。
 
-1.  右クリックし、**音楽**テーブル。 をポイント**追加**、クリックして**列**です。
-
-2.  列の名前`SongID`です。
-
-3.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataColumn.DataType%2A>プロパティを<xref:System.Int16?displayProperty=fullName>です。
+3.  **プロパティ**ウィンドウで、設定、<xref:System.Data.DataColumn.DataType%2A>プロパティを<xref:System.Int16?displayProperty=fullName>します。
 
 4.  このプロセスを繰り返して、次の列を追加します。
 
@@ -93,25 +73,18 @@ ms.locfileid: "34747444"
 
      `Genre`: <xref:System.String?displayProperty=fullName>
 
-## <a name="setting-the-primary-key-for-the-table"></a>テーブルの主キーの設定
+## <a name="set-the-primary-key-for-the-table"></a>テーブルの主キーを設定します。
 
-すべてのデータ テーブルには、主キーを設定する必要があります。 主キーは、データ テーブル内の特定のレコードを一意に識別します。
+すべてのデータ テーブルには、主キーを持つ必要があります。 主キーは、データ テーブル内の特定のレコードを一意に識別します。
 
-### <a name="to-set-the-primary-key-of-the-data-table"></a>データ テーブルの主キーを設定するには
+主キーを設定するを右クリックし、 **SongID**列、およびクリック**主キーの設定**します。 鍵のアイコンが横に表示されます、 **SongID**列。
 
--   右クリックし、 **SongID**列、およびクリック**主キーの設定**です。
+## <a name="save-your-project"></a>プロジェクトを保存します。
 
-     隣に鍵のアイコンが表示されます、 **SongID**列です。
-
-## <a name="saving-your-project"></a>プロジェクトの保存
-
-### <a name="to-save-the-datatablewalkthrough-project"></a>DataTableWalkthrough プロジェクトを保存するには
-
--   **ファイル** メニューのをクリックして**すべて保存**です。
+保存する、 **DataTableWalkthrough**プロジェクトで、**ファイル**メニューの **すべて保存**します。
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio でデータセットを作成および構成する](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
 - [データの検証](../data-tools/validate-data-in-datasets.md)
-- [データの保存](../data-tools/saving-data.md)

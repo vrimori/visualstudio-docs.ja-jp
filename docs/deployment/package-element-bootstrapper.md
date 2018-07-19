@@ -1,5 +1,5 @@
 ---
-title: '&lt;パッケージ&gt;要素 (ブートス トラップ) |Microsoft ドキュメント'
+title: '&lt;パッケージ&gt;要素 (ブートス トラップ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,15 +17,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b304cc3bee93b367cc3b401328749ee6aca89625
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: a0c1ab7a2e304fcaede2a51a1047691343f34783
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815601"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080787"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;パッケージ&gt;要素 (ブートス トラップ)
-`Package`要素は、パッケージ ファイル内で最上位の XML 要素です。  
+`Package`要素は、パッケージ ファイル内の最上位の XML 要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -147,12 +147,12 @@ ms.locfileid: "34815601"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Culture`|必須。 このパッケージは、使用する言語を特定のカルチャを定義します。 この属性はキーに、`Strings`要素は、インストール中に製品名とエラー メッセージ用のカルチャに固有の文字列を一覧表示します。|  
-|`Name`|必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 この属性はキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`のプロパティ`Package`です。|  
-|`LicenseAgreement`|任意。 ライセンス契約 (EULA) を含む配布パッケージで、ファイルの名前を指定します。  このファイルは、プレーン テキスト (.txt) またはリッチ テキスト形式のいずれかにできます。 式 (.rtf)|  
+|`Culture`|必須。 このパッケージには、使用する言語を決定するカルチャを定義します。 この属性がキーに、`Strings`要素で、インストール時に製品名とエラー メッセージのカルチャに固有の文字列の一覧を表示します。|  
+|`Name`|必須。 などのツールで開発者に表示されるパッケージの名前[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 この属性がキーに、`Strings`要素が含まれている、`String`を持つ要素、`Name`と`Culture`プロパティが一致するように設定、`Name`と`Culture`プロパティの`Package`します。|  
+|`LicenseAgreement`|任意。 ライセンス契約 (EULA) を含む配布パッケージでは、ファイルの名前を指定します。  このファイルは、プレーン テキストを指定できます (*.txt*) またはリッチ テキスト形式。 (*.rtf*)|  
   
 ## <a name="example"></a>例  
- 次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。  
+ 次のコード例は、再配布するための完全なパッケージ ファイルを示しています、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

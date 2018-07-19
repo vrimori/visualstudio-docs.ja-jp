@@ -10,20 +10,20 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 857c9436b3a1279671702575d3ab479d9c2282f4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: db0ac06d26e7e597d9f8d4b3c11a9cf8db188e80
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174128"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません
 
-アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません。 .dbml ファイルの接続文字列が代わりに使用されます。
+アプリケーション設定ファイルの接続プロパティが、存在しないか、正しくありません。 接続文字列を *.dbml*ファイルは、その場所で使用されています。
 
-.dbml ファイルには、アプリケーション設定ファイルに見つからない接続文字列への参照が含まれています。 このメッセージは情報です。ときに、接続文字列設定が作成されます**OK**をクリックします。
+*.Dbml*ファイルが見つからないことをアプリケーション設定ファイル内の接続文字列への参照が含まれています。 このメッセージは情報です。時に設定する接続文字列を作成、 **OK**をクリックします。
 
-このメッセージに応答して、次のように選択します。 **OK**です。 .dbml ファイルに含まれている接続情報がアプリケーション設定に追加されます。
+このメッセージに応答すると、次のように選択します。 **OK**します。 含まれている接続情報、 *.dbml*ファイルは、アプリケーションの設定に追加されます。
 
 ## <a name="see-also"></a>関連項目
 

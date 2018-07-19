@@ -1,5 +1,5 @@
 ---
-title: 従来のインターフェイスをエディターで |Microsoft ドキュメント
+title: エディターでの従来のインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,38 +13,38 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64e867430c2ae55f530bdb66844240a887bd5545
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 867bef2ddf1463005e1d6b0d9ca6c508ede97014
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31142901"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079508"
 ---
-# <a name="legacy-interfaces-in-the-editor"></a>エディターでの従来のインターフェイス
-Visual Studio エディターは、従来のインターフェイスからアクセスできます。 Visual Studio SDK と呼ばれるアダプタが含まれています。 *shim*、新しいエディターと対話するこれらのインターフェイスを有効にします。 ただし、新しいエディター API を使用して従来のコードを更新することをお勧めします。 コードがパフォーマンスを向上させ、Windows Presentation Foundation (WPF) および Managed Extensibility Framework (MEF) などの新しいテクノロジを使用することができます。  
+# <a name="legacy-interfaces-in-the-editor"></a>エディターでのレガシー インターフェイス
+Visual Studio エディターは、従来のインターフェイスからアクセスできます。 Visual Studio SDK と呼ばれるアダプタが含まれています。 *shim*、これらの新しいエディターと対話するインターフェイスを有効にします。 ただし、新しいエディターの API を使用して従来のコードを更新することをお勧めします。 コードのパフォーマンスが向上し、Windows Presentation Foundation (WPF) と Managed Extensibility Framework (MEF) などの新しいテクノロジを使用することができます。  
   
 ## <a name="related-topics"></a>関連トピック  
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[エディターにレガシ コードを改変.](../extensibility/adapting-legacy-code-to-the-editor.md)|新しいエディターにコードを改変する方法について説明します。|  
-|[エディターのアダプターで新しいまたは変更された動作](../extensibility/new-or-changed-behavior-with-editor-adapters.md)|エディターのアダプターの動作の違いを以前のバージョンのエディターについて説明します。|  
-|[コア エディター内](../extensibility/inside-the-core-editor.md)|エディターの以前のバージョンのさまざまなコンポーネントをについて説明します。|  
-|[レガシ API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)|従来の API を使用して、コア エディターのインスタンスを作成する方法について説明します。|  
+|[エディターにレガシ コードを改変します。](../extensibility/adapting-legacy-code-to-the-editor.md)|新しいエディターにコードを改変する方法について説明します。|  
+|[エディターのアダプターを搭載した新規または変更された動作](../extensibility/new-or-changed-behavior-with-editor-adapters.md)|エディターの以前のバージョンの動作のエディターのアダプターの違いについて説明します。|  
+|[コア エディター](../extensibility/inside-the-core-editor.md)|エディターの以前のバージョンのさまざまなコンポーネントをについて説明します。|  
+|[従来の API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)|従来の API を使用して、コア エディターのインスタンスを作成する方法について説明します。|  
 |[エディター ファクトリ](../extensibility/editor-factories.md)|従来の API でエディター ファクトリを使用する方法について説明します。|  
-|[方法: エディター ファイルの種類の登録](../extensibility/how-to-register-editor-file-types.md)|ファイル名拡張子をエディターにリンクする方法について説明します。|  
-|[チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)|コア エディターを作成し、ファイル名拡張子をリンクする方法について説明します。|  
-|[方法: エディターのコンテキストを指定](../extensibility/how-to-provide-context-for-editors.md)|エディターのコンテキストを提供する方法について説明します。|  
-|[言語サービスとコア エディター](../extensibility/language-services-and-the-core-editor.md)|言語サービスと、エディターの間の相互作用をについて説明します。|  
-|[レガシ API を使用してテキスト バッファーにアクセスします。](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)|従来の API を使用してテキスト バッファーにアクセスする方法について説明します。|  
-|[レガシ API を使用してテキスト ビューにアクセスします。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)|従来の API を使用して、テキスト ビューにアクセスする方法について説明します。|  
-|[レガシ API を使用してコード ウィンドウをカスタマイズします。](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)|従来の API を使用してコード ウィンドウをカスタマイズする方法について説明します。|  
-|[レガシ API を使用してテキストのレイヤーにアクセスします。](../extensibility/accessing-text-layers-by-using-the-legacy-api.md)|従来の API を使用して、テキストのさまざまなレイヤーにアクセスする方法について説明します。|  
-|[レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)|従来の API を使用してテキスト マーカーを追加する方法について説明します。|  
-|[レガシ API を使用して、エディター コントロールやメニューをカスタマイズします。](../extensibility/customizing-editor-controls-and-menus-by-using-the-legacy-api.md)|従来の API を使用して、エディター コントロールをカスタマイズする方法について説明します。|  
-|[管理元に戻すと、レガシ API を使用して再実行](../extensibility/managing-undo-and-redo-by-using-the-legacy-api.md)|元に戻すを管理し、従来の API を使用して再実行する方法について説明します。|  
-|[方法: 検索の実装とメカニズムを置換](../extensibility/how-to-implement-the-find-and-replace-mechanism.md)|検索を管理し、従来の API を使用して、置換する方法について説明します。|  
-|[方法: ファイル変更通知を抑制します。](../extensibility/how-to-suppress-file-change-notifications.md)|従来の API を使用してファイル変更通知を抑制する方法について説明します。|  
-|[カスタム エディターとデザイナーの作成](../extensibility/creating-custom-editors-and-designers.md)|カスタム エディターおよびデザイナーを作成する方法について説明します。|  
-|[従来の言語サービスの開発](../extensibility/internals/developing-a-legacy-language-service.md)|カスタマイズ機能を提供する機能に関するドキュメントへのリンクを提供、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターの言語サービスのサポートを追加します。|  
-|[フォントおよび色を使用します。](../extensibility/using-fonts-and-colors.md)|従来のインターフェイスで、フォントおよび色を使用する方法について説明します。|
+|[方法: エディター ファイルの種類の登録](../extensibility/how-to-register-editor-file-types.md)|エディターにファイル名拡張子をリンクする方法について説明します。|  
+|[チュートリアル: エディターを作成するには、コアとエディター ファイルの種類の登録](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)|コア エディターを作成して、ファイル名拡張子をリンクする方法について説明します。|  
+|[方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)|エディターのコンテキストを提供する方法について説明します。|  
+|[言語サービスとコア エディター](../extensibility/language-services-and-the-core-editor.md)|言語サービスとエディター間の相互作用をについて説明します。|  
+|[従来の API を使用してテキスト バッファーへのアクセスします。](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)|従来の API を使用して、テキスト バッファーにアクセスする方法について説明します。|  
+|[従来の API を使用してアクセス テキスト ビュー](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)|従来の API を使用して、テキスト ビューにアクセスする方法について説明します。|  
+|[従来の API を使用してコード ウィンドウをカスタマイズします。](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)|従来の API を使用してコード ウィンドウをカスタマイズする方法について説明します。|  
+|[従来の API を使用してアクセス テキスト レイヤー](../extensibility/accessing-text-layers-by-using-the-legacy-api.md)|従来の API を使用してテキストの異なる層にアクセスする方法について説明します。|  
+|[テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)|従来の API を使用してテキスト マーカーを追加する方法について説明します。|  
+|[従来の API を使用して、エディター コントロールやメニューをカスタマイズします。](../extensibility/customizing-editor-controls-and-menus-by-using-the-legacy-api.md)|従来の API を使用して、エディター コントロールをカスタマイズする方法について説明します。|  
+|[元に戻すを管理し、従来の API を使用して再実行](../extensibility/managing-undo-and-redo-by-using-the-legacy-api.md)|元に戻すを管理し、従来の API を使用して再実行する方法について説明します。|  
+|[方法: 検索の実装し、メカニズムを置換](../extensibility/how-to-implement-the-find-and-replace-mechanism.md)|検索の管理し、従来の API を使用して置き換える方法について説明します。|  
+|[方法: ファイル変更通知を抑制します。](../extensibility/how-to-suppress-file-change-notifications.md)|従来の API を使用して、ファイル変更通知を抑制する方法について説明します。|  
+|[カスタム エディターとデザイナーを作成します。](../extensibility/creating-custom-editors-and-designers.md)|カスタム エディターとデザイナーを作成する方法について説明します。|  
+|[従来の言語サービスを開発します。](../extensibility/internals/developing-a-legacy-language-service.md)|カスタマイズ機能を提供する機能に関するドキュメントへのリンクを提供します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターの言語サービスのサポートを追加します。|  
+|[フォントおよび色を使用して、](../extensibility/using-fonts-and-colors.md)|従来のインターフェイスで、フォントおよび色を使用する方法について説明します。|

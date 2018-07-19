@@ -5,12 +5,12 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: d1bb23d03ac613c12df54f1a11e19ee5a8c2edb0
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 6117d4e32e20972130eb733fb70bc6c0145bc2ea
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34453869"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283303"
 ---
 # <a name="enable-subscription"></a>サブスクリプションを有効にする
 
@@ -24,21 +24,22 @@ Visual Studio for Mac には、3 つの異なるサブスクリプション レ�
 
 ![ユーザー ライセンスの表示ダイアログ](media/user-accounts-login.png)
 
-## <a name="update-expired-licenses"></a>有効期限が切れたライセンスを更新する 
+## <a name="update-expired-licenses"></a>有効期限が切れたライセンスを更新する
 
 サブスクリプションの有効期限が切れた場合は、2 つの選択肢があります。
 
-1. サブスクリプションを更新します。 [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/) を参照して、サブスクリプションを更新することができます。
+1. サブスクリプションを更新します。 [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) を参照して、サブスクリプションを更新することができます。
 
-2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細については、[複数のユーザー アカウントの追加](signing-in.md)に関する記事を参照してください。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。 
+2. サブスクリプションが有効な別のアカウントをお持ちであれば、それを Visual Studio for Mac に追加できます。詳細については、[複数のユーザー アカウントの追加](signing-in.md)に関する記事を参照してください。 Visual Studio for Mac は、追加されているすべてのアカウントから最良のライセンスを検出します。
 
 ## <a name="product-key-usage"></a>プロダクト キーの使用法
 
-現時点では、プロダクト キーを使用して Visual Studio for Mac の Professional または Enterprise の権利を有効にする方法はありません。 Visual Studio Enterprise for Mac または Visual Studio Professional for Mac を使用するには、関連する[サブスクリプション](https://www.visualstudio.com/subscriptions/)があり、IDE に[サインイン](signing-in.md)している必要があります。
+現時点では、プロダクト キーを使用して Visual Studio for Mac の Professional または Enterprise の権利を有効にする方法はありません。 Visual Studio Enterprise for Mac または Visual Studio Professional for Mac を使用するには、関連する[サブスクリプション](https://visualstudio.microsoft.com/subscriptions/)があり、IDE に[サインイン](signing-in.md)している必要があります。
 
 ## <a name="offline-activation"></a>オフラインのライセンス認証
 
 > [!NOTE]
-> オフライン アクティベーションは、Visual Studio for Mac では使用できません。 Visual Studio 2017 for Mac Professional または Enterprise サブスクリプションのライセンスを認証するには、サインイン時、インターネットに接続する必要があります。
+> オフライン アクティベーションは、Visual Studio for Mac では使用できません。
+> Visual Studio 2017 for Mac Professional または Enterprise サブスクリプションのライセンスを認証するには、サインイン時、インターネットに接続する必要があります。
 
 インターネット接続のないマシンのために Visual Studio Enterprise 2017 を購入した場合、ライセンス認証なしで Visual Studio for Mac を引き続き利用できますが、Xamarin Inspector、Xamarin Profiler、組み込みアセンブリといった機能は利用できません。

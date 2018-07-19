@@ -21,12 +21,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 57387cecfdf58667998cc3766617d37c62e0f4ab
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
-ms.translationtype: HT
+ms.openlocfilehash: 673c364c1750afbaa4b319c40550be7cfac3b53b
+ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757082"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39131974"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter を使用してデータセットを入力します。
 
@@ -106,7 +106,7 @@ TableAdapter では、データ コマンドを使用して、データベース
 TableAdapter を使用して、実質的には、通常実行するコマンドを使用して同じ操作を実行します。 たとえば、アダプターを呼び出すと`Fill`メソッドでは、アダプターのデータでコマンドを実行その`SelectCommand`プロパティ データ リーダーを使用して (たとえば、 <xref:System.Data.SqlClient.SqlDataReader>) データ テーブルに結果セットを読み込めません。 同様に、アダプターを呼び出すと`Update`メソッドでは、適切なコマンド実行 (で、 `UpdateCommand`、 `InsertCommand`、および`DeleteCommand`プロパティ) の各データ テーブル内のレコードを変更します。
 
 > [!NOTE]
-> メインのクエリでは、十分な情報がある場合、 `InsertCommand`、`UpdateCommand`と`DeleteCommand`コマンドが既定で作成されたときに、TableAdapter が生成されます。 クエリが 1 つのテーブルを超える場合は、TableAdapter のメイン`SELECT`ステートメントでは、デザイナーは生成できないことは`InsertCommand`、 `UpdateCommand`、および`DeleteCommand`します。 実行するときにエラーが発生する場合、これらのコマンドは生成されません。、`TableAdapter.Update`メソッド。
+> メインのクエリに十分な情報がある場合、TableAdapter の生成時に既定で `InsertCommand`、`UpdateCommand`、および `DeleteCommand` の各コマンドが作成されます。 クエリが 1 つのテーブルを超える場合は、TableAdapter のメイン`SELECT`ステートメントでは、デザイナーは生成できないことは`InsertCommand`、 `UpdateCommand`、および`DeleteCommand`します。 実行するときにエラーが発生する場合、これらのコマンドは生成されません。、`TableAdapter.Update`メソッド。
 
 ## <a name="tableadapter-generatedbdirectmethods"></a>TableAdapter の GenerateDbDirectMethods
 

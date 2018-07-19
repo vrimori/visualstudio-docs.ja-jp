@@ -1,5 +1,5 @@
 ---
-title: '&lt;customErrorReporting&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+title: '&lt;customErrorReporting&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -16,33 +16,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41ade854a37127443735e1c197c080aad3d5bd93
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c060c419fa72bb5914491a8ee666a9b1a2c6a622
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31556343"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080354"
 ---
 # <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting&gt;要素 (ClickOnce 配置)
 エラー発生時に表示する URI を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <customErrorReporting  
    uri  
 />  
 ```  
   
-## <a name="remarks"></a>コメント  
- この要素は省略可能です。 これがないと[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]例外スタックを示すエラー ダイアログ ボックスが表示されます。 場合、`customErrorReporting`要素が含まれている[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]によって示される URI を代わりに表示されます、`uri`パラメーター。 ターゲット URI では、外側の例外クラス、内部例外クラスおよび内部例外メッセージをパラメーターとして含まれます。  
+## <a name="remarks"></a>Remarks  
+ この要素は省略可能です。 これがない[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]例外スタックを示すエラー ダイアログ ボックスが表示されます。 場合、`customErrorReporting`要素が存在する場合は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]によって示される URI が代わりに表示されます、`uri`パラメーター。 ターゲット URI では、外側の例外クラス、内部例外クラス、および内部例外メッセージをパラメーターとして含まれます。  
   
- この要素を使用すると、アプリケーションにエラー レポート機能を追加できます。 生成された URI には、エラーの種類に関する情報が含まれているため、Web サイトなど、適切なトラブルシューティングの画面の表示、およびその情報を解析できます。  
+ この要素を使用すると、アプリケーションにエラー レポート機能を追加できます。 生成された URI には、エラーの種類に関する情報が含まれているために、Web サイトは、その情報と、適切なトラブルシューティング画面などの表示に解析できます。  
   
 ## <a name="example"></a>例  
- 次のスニペットで示す、`customErrorReporting`要素、および生成された URI が生じる可能性があります。  
+ 次の例では、`customErrorReporting`要素と共に生成された URI が生じる可能性があります。  
   
-```  
+```xml
 <customErrorReporting uri=http://www.contoso.com/applications/error.asp />  
   
 Example Generated Error:  
@@ -50,4 +50,4 @@ http://www.contoso.com/applications/error.asp? outer=System.Deployment.Applicati
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)
+ [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)

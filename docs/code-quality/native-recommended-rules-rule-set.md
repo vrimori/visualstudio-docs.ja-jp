@@ -9,25 +9,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebf6339a6b26d6db66d20c31e17236db76eea291
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d398d22944ae4c0e5be725169b9d7ceaadb0667d
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31927257"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945833"
 ---
 # <a name="native-recommended-rules-rule-set"></a>"ネイティブ推奨規則" 規則セット
 
-ネイティブ推奨規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードの最も重大で一般的な問題に注目します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。
+ネイティブ推奨規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードで最も重大で一般的な問題に集中します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。
 
 |ルール|説明|
 |----------|-----------------|
 |[C6001](../code-quality/c6001.md)|初期化されていないメモリの使用|
 |[C6011](../code-quality/c6011.md)|Null ポインターの逆参照|
 |[C6029](../code-quality/c6029.md)|未確認の値の使用|
-|[C6031](../code-quality/c6031.md)|戻り値は無視されました|
+|[C6031](../code-quality/c6031.md)|戻り値が無視されました|
 |[C6053](../code-quality/c6053.md)|呼び出しの 0 での終了|
-|[C6054](../code-quality/c6054.md)|ゼロの終了がありません。|
+|[C6054](../code-quality/c6054.md)|ゼロの終了がないです。|
 |[C6059](../code-quality/c6059.md)|不適切な連結|
 |[C6063](../code-quality/c6063.md)|Format 関数への文字列引数がない|
 |[C6064](../code-quality/c6064.md)|Format 関数への整数引数がない|
@@ -43,44 +43,44 @@ ms.locfileid: "31927257"
 |[C6220](../code-quality/c6220.md)|-1 に無効な HRESULT 比較|
 |[C6226](../code-quality/c6226.md)|-1 に無効な HRESULT 割り当て|
 |[C6230](../code-quality/c6230.md)|ブール値として無効な HRESULT 使用|
-|[C6235](../code-quality/c6235.md)|論理的に 0 以外の定数、または|
+|[C6235](../code-quality/c6235.md)|0 でない定数と論理のまたは|
 |[C6236](../code-quality/c6236.md)|論理- または 0 でない定数|
-|[C6237](../code-quality/c6237.md)|0 と論理の副作用を失うと|
-|[C6242](../code-quality/c6242.md)|ローカル アンワインドを強制|
-|[C6248](../code-quality/c6248.md)|Null DACL を作成します。|
+|[C6237](../code-quality/c6237.md)|0 と論理の副作用を失うと、|
+|[C6242](../code-quality/c6242.md)|ローカル アンワインドの強制|
+|[C6248](../code-quality/c6248.md)|Null DACL の作成|
 |[C6250](../code-quality/c6250.md)|解放されていないアドレス記述子|
 |[C6255](../code-quality/c6255.md)|Alloca の保護されていない使用|
 |[C6258](../code-quality/c6258.md)|使用してスレッドを終了|
-|[C6259](../code-quality/c6259.md)|デッドロックのビットごとのコードでスイッチを制限または|
+|[C6259](../code-quality/c6259.md)|配信不能でビットごとのコードのスイッチを制限または|
 |[C6260](../code-quality/c6260.md)|バイト算術の使用|
-|[C6262](../code-quality/c6262.md)|過剰なスタックの使用|
-|[C6263](../code-quality/c6263.md)|ループでの Alloca の使用|
-|[C6268](../code-quality/c6268.md)|キャストでのかっこの不足|
+|[C6262](../code-quality/c6262.md)|過剰なスタック使用|
+|[C6263](../code-quality/c6263.md)|ループ内での Alloca の使用|
+|[C6268](../code-quality/c6268.md)|キャストのかっこの不足|
 |[C6269](../code-quality/c6269.md)|ポインターの逆参照は無視されます|
 |[C6270](../code-quality/c6270.md)|Format 関数への Float 引数がない|
 |[C6271](../code-quality/c6271.md)|Format 関数への余分な引数|
 |[C6272](../code-quality/c6272.md)|Format 関数への Float でない引数|
-|[C6273](../code-quality/c6273.md)|Format 関数への整数でない引数|
+|[C6273](../code-quality/c6273.md)|Format 関数への整数以外の引数|
 |[C6274](../code-quality/c6274.md)|Format 関数への文字でない引数|
 |[C6276](../code-quality/c6276.md)|無効な文字列のキャスト|
 |[C6277](../code-quality/c6277.md)|無効な CreateProcess 呼び出し|
 |[C6278](../code-quality/c6278.md)|配列の New とスカラーの Delete の不一致|
-|[C6279](../code-quality/c6279.md)|スカラー新しい配列の Delete の不一致|
-|[C6280](../code-quality/c6280.md)|メモリ割り当ての割り当て解除の不一致|
+|[C6279](../code-quality/c6279.md)|スカラーの New と配列の Delete の不一致|
+|[C6280](../code-quality/c6280.md)|メモリ割り当てと解放の不一致|
 |[C6281](../code-quality/c6281.md)|ビットごとの関係の優先順位|
-|[C6282](../code-quality/c6282.md)|割り当てには、テストが置き換えられます|
-|[C6283](../code-quality/c6283.md)|プリミティブの配列の New とスカラーの Delete が一致しません|
+|[C6282](../code-quality/c6282.md)|割り当てをテストに置き換え|
+|[C6283](../code-quality/c6283.md)|プリミティブの配列の New とスカラーの Delete の不一致|
 |[C6284](../code-quality/c6284.md)|Format 関数への無効なオブジェクト引数|
 |[C6285](../code-quality/c6285.md)|論理- または定数|
-|[C6286](../code-quality/c6286.md)|0 ではない論理の副作用が失われるか|
-|[C6287](../code-quality/c6287.md)|冗長なテスト|
-|[C6288](../code-quality/c6288.md)|論理での相互包括-が False と|
-|[C6289](../code-quality/c6289.md)|論理上の相互排他のかが満たされました。|
+|[C6286](../code-quality/c6286.md)|0 ではない論理の副作用を失うことまたは|
+|[C6287](../code-quality/c6287.md)|冗長テスト|
+|[C6288](../code-quality/c6288.md)|論理相互包括-が False と|
+|[C6289](../code-quality/c6289.md)|論理相互排除のかが満たされました。|
 |[C6290](../code-quality/c6290.md)|論理 Not とビットごとの And の優先順位|
 |[C6291](../code-quality/c6291.md)|論理 Not とビットごとの Or の優先順位|
 |[C6292](../code-quality/c6292.md)|ループ カウントの最大値をアップ|
 |[C6293](../code-quality/c6293.md)|ループ カウントの最小値|
-|[C6294](../code-quality/c6294.md)|ループ本体が実行されません。|
+|[C6294](../code-quality/c6294.md)|ループの本体が実行されません。|
 |[C6295](../code-quality/c6295.md)|無限ループ|
 |[C6296](../code-quality/c6296.md)|1 回だけ実行ループ|
 |[C6297](../code-quality/c6297.md)|シフトの結果がより大きなサイズにキャスト|
@@ -89,21 +89,21 @@ ms.locfileid: "31927257"
 |[C6303](../code-quality/c6303.md)|Format 関数への無効なワイド文字列引数|
 |[C6305](../code-quality/c6305.md)|サイズと数の使用の不一致|
 |[C6306](../code-quality/c6306.md)|不適切な変数引数の関数呼び出し|
-|[C6308](../code-quality/c6308.md)|Realloc リーク|
+|[C6308](../code-quality/c6308.md)|Realloc のリーク|
 |[C6310](../code-quality/c6310.md)|無効な例外フィルター定数|
 |[C6312](../code-quality/c6312.md)|Exception Continue Execution ループ|
 |[C6314](../code-quality/c6314.md)|ビットごとの Or の優先順位|
 |[C6317](../code-quality/c6317.md)|補数されません。|
-|[C6318](../code-quality/c6318.md)|例外は、検索を続行します。|
-|[C6319](../code-quality/c6319.md)|コンマでは無視されます。|
-|[C6324](../code-quality/c6324.md)|文字列比較ではなく文字列のコピー|
+|[C6318](../code-quality/c6318.md)|Exception Continue Search|
+|[C6319](../code-quality/c6319.md)|コンマによる無視|
+|[C6324](../code-quality/c6324.md)|文字列の比較ではなく文字列のコピー|
 |[C6328](../code-quality/c6328.md)|引数の型の不一致の可能性|
-|[C6331](../code-quality/c6331.md)|VirtualFree 無効なフラグ|
-|[C6332](../code-quality/c6332.md)|VirtualFree 無効なパラメーター|
-|[C6333](../code-quality/c6333.md)|VirtualFree 無効なサイズ|
+|[C6331](../code-quality/c6331.md)|VirtualFree の無効なフラグ|
+|[C6332](../code-quality/c6332.md)|VirtualFree の無効なパラメーター|
+|[C6333](../code-quality/c6333.md)|VirtualFree の無効なサイズ|
 |[C6335](../code-quality/c6335.md)|プロセス ハンドルのリーク|
-|[C6381](../code-quality/c6381.md)|シャット ダウンの情報がありません。|
-|[C6383](../code-quality/c6383.md)|要素の数バイトの数のバッファー オーバーラン|
+|[C6381](../code-quality/c6381.md)|シャット ダウン情報がありません。|
+|[C6383](../code-quality/c6383.md)|要素の数バイトのバッファー オーバーランの数|
 |[C6384](../code-quality/c6384.md)|ポインターのサイズの除算|
 |[C6385](../code-quality/c6385.md)|読み取りのオーバーラン|
 |[C6386](../code-quality/c6386.md)|書き込みのオーバーラン|
@@ -140,48 +140,48 @@ ms.locfileid: "31927257"
 |[C6706](../code-quality/c6706.md)|注釈に対する、予期しない注釈エラーです|
 |[C6995](../code-quality/c6995.md)|XML ログ ファイルを保存できませんでした。|
 |[C26100](../code-quality/c26100.md)|競合状態|
-|[C26101](../code-quality/c26101.md)|インタロックされた操作を正しく使用するには、失敗した場合|
+|[C26101](../code-quality/c26101.md)|インタロックされた操作を正しく使用の失敗|
 |[C26110](../code-quality/c26110.md)|呼び出し元でロックを保持するために失敗|
-|[C26111](../code-quality/c26111.md)|呼び出し元でロックの解除に失敗|
-|[C26112](../code-quality/c26112.md)|呼び出し元のロックを保持することはできません。|
+|[C26111](../code-quality/c26111.md)|呼び出し元でロックの解放の失敗|
+|[C26112](../code-quality/c26112.md)|呼び出し元がロックを保持できません。|
 |[C26115](../code-quality/c26115.md)|ロックの解放の失敗|
-|[C26116](../code-quality/c26116.md)|取得するか、ロックを保持するために障害が発生しました。|
+|[C26116](../code-quality/c26116.md)|取得またはロックを保持するために失敗|
 |[C26117](../code-quality/c26117.md)|保持されていないロックを解放します。|
 |[C26140](../code-quality/c26140.md)|同時実行 SAL 注釈のエラーです。|
-|[C28020](../code-quality/c28020.md)|式でこの呼び出しで true ではありません。|
+|[C28020](../code-quality/c28020.md)|式がこの呼び出しで true ではありません。|
 |[C28021](../code-quality/c28021.md)|注釈が付けられているパラメーターはポインターである必要があります|
-|[C28022](../code-quality/c28022.md)|この関数の関数クラス定義に使用されている typedef の関数クラスが一致しません。|
-|[C28023](../code-quality/c28023.md)|割り当てられているされたり、渡された関数が、_Function_class 必要\_クラスの少なくとも 1 つの注釈|
-|[C28024](../code-quality/c28024.md)|関数クラスのリストに含まれない関数クラスとは、関数ポインターに割り当てられているが付きます。|
+|[C28022](../code-quality/c28022.md)|この関数の関数クラスでは、それを定義するために使用された typedef の関数クラスが一致しません。|
+|[C28023](../code-quality/c28023.md)|割り当てられているされたり、渡された関数が必要、\_関数\_クラス\_クラスの少なくとも 1 つの注釈|
+|[C28024](../code-quality/c28024.md)|割り当てられる関数ポインターが関数クラスの一覧に含まれていないが関数クラスを使用して注釈を付けます。|
 |[C28039](../code-quality/c28039.md)|実際のパラメーターの型の種類と一致する必要があります。|
 |[C28112](../code-quality/c28112.md)|Interlocked 関数経由でアクセスされる変数は、Interlocked 関数経由で常にアクセスする必要があります。|
-|[C28113](../code-quality/c28113.md)|Interlocked 関数経由でローカル変数へのアクセス|
+|[C28113](../code-quality/c28113.md)|Interlocked 関数経由でローカル変数にアクセスします。|
 |[C28125](../code-quality/c28125.md)|関数は、try/ブロックを除くからを呼び出す必要があります。|
-|[C28137](../code-quality/c28137.md)|変数の引数 (リテラル) 定数である必要があります。|
-|[C28138](../code-quality/c28138.md)|変数、定数の引数である必要があります。|
+|[C28137](../code-quality/c28137.md)|可変個引数必要があります (リテラル) 定数|
+|[C28138](../code-quality/c28138.md)|定数の引数は、変数である必要があります。|
 |[C28159](../code-quality/c28159.md)|代わりに別の関数を使用してください。|
 |[C28160](../code-quality/c28160.md)|エラーの注釈|
 |[C28163](../code-quality/c28163.md)|Try/ブロックを除く、関数をからを呼び出すことはありません必要があります。|
 |[C28164](../code-quality/c28164.md)|オブジェクト (ポインターにポインターではなく) へのポインターを受け取る関数に引数が渡される|
 |[C28182](../code-quality/c28182.md)|Null ポインターの逆参照 このポインターは、もう 1 つのポインターと同じ Null 値を持ちます。|
-|[C28183](../code-quality/c28183.md)|引数は 1 つの値とがポインターで見つかった値のコピー|
-|[C28193](../code-quality/c28193.md)|変数を調べる必要があります値を保持します。|
+|[C28183](../code-quality/c28183.md)|引数は 1 つの値である可能性があり、、ポインターで見つかった値のコピー|
+|[C28193](../code-quality/c28193.md)|調査する必要があります値を保持する変数|
 |[C28196](../code-quality/c28196.md)|要件が満たされていません。 (式は true に評価されません)|
 |[C28202](../code-quality/c28202.md)|静的でないメンバーへの参照が正しくありません|
 |[C28203](../code-quality/c28203.md)|クラス メンバーへのあいまいな参照です。|
-|[C28205](../code-quality/c28205.md)|_Success\_ または _On_failure\_ が無効なコンテキスト内で使用されています|
+|[C28205](../code-quality/c28205.md)|\_成功\_または\_で\_エラー\_が無効なコンテキストで使用されます。|
 |[C28206](../code-quality/c28206.md)|左側のオペランドは構造体をポイントするため、'-> ' を使用します|
 |[C28207](../code-quality/c28207.md)|左側のオペランドは構造体であるため、'.' を使用します|
-|[C28209](../code-quality/c28209.md)|シンボルの宣言が競合している宣言|
+|[C28209](../code-quality/c28209.md)|シンボルの宣言が競合する宣言|
 |[C28210](../code-quality/c28210.md)|__on_failure コンテキストの注釈を明示的なプリ コンテキストに含めることはできません|
 |[C28211](../code-quality/c28211.md)|SAL_context には静的コンテキスト名が必要です|
 |[C28212](../code-quality/c28212.md)|注釈にはポインター式が必要です|
-|[C28213](../code-quality/c28213.md)|_Use_decl_annotations\_ 注釈は、変更、先行する宣言なしで、参照に使用される必要があります。|
+|[C28213](../code-quality/c28213.md)|\_使用\_宣言\_注釈\_先行する宣言を変更しない限り、参照に注釈を使用する必要があります。|
 |[C28214](../code-quality/c28214.md)|属性パラメーター名は、p1...p9 である必要があります|
 |[C28215](../code-quality/c28215.md)|typefix は、既に typefix のあるパラメーターには適用できません|
 |[C28216](../code-quality/c28216.md)|checkReturn 注釈は、特定の関数パラメーターの事後条件にのみ適用されます。|
 |[C28217](../code-quality/c28217.md)|関数について、注釈へのパラメーター数がファイルで検出されたものと一致しません|
-|[C28218](../code-quality/c28218.md)|関数パラメーターの注釈のパラメーターと一致しませんファイルで検出されました。|
+|[C28218](../code-quality/c28218.md)|関数のパラメーターの注釈のパラメーターと一致しませんファイルで検出されました。|
 |[C28219](../code-quality/c28219.md)|注釈 (注釈のパラメーター) には列挙型のメンバーが必要です|
 |[C28220](../code-quality/c28220.md)|注釈 (注釈のパラメーター) には整数式が必要です|
 |[C28221](../code-quality/c28221.md)|注釈のパラメーターには文字列式が必要です|
@@ -206,7 +206,7 @@ ms.locfileid: "31927257"
 |[C28240](../code-quality/c28240.md)|パラメーターの注釈は、param2 を含みますが param1 は含みません|
 |[C28241](../code-quality/c28241.md)|パラメーターの関数の注釈は認識されません|
 |[C28243](../code-quality/c28243.md)|パラメーターの関数の注釈には、注釈が付けられた実際の型に許可された数よりも多くの逆参照が必要です|
-|[C28244](../code-quality/c28244.md)|関数の注釈が解析できないパラメーター/外部注釈|
+|[C28244](../code-quality/c28244.md)|関数に対する注釈が解析できないパラメーター/外部注釈|
 |[C28245](../code-quality/c28245.md)|関数に対する注釈は、非メンバー関数上で 'this' に注釈を付けます。|
 |[C28246](../code-quality/c28246.md)|関数に対するパラメーターの注釈が、パラメーターの型に一致しません|
 |[C28250](../code-quality/c28250.md)|関数に対する一貫性のない注釈: 前のインスタンスにはエラーが含まれます。|
@@ -219,24 +219,24 @@ ms.locfileid: "31927257"
 |[C28267](../code-quality/c28267.md)|注釈での構文エラーが、関数の注釈で見つかりました。|
 |[C28272](../code-quality/c28272.md)|検査中の関数とパラメーターに対する注釈に関数宣言との一貫性がありません|
 |[C28273](../code-quality/c28273.md)|関数について、手がかりには関数宣言との一貫性がありません。|
-|[C28275](../code-quality/c28275.md)|_Macro_value\_ のパラメーターは null です|
+|[C28275](../code-quality/c28275.md)|パラメーターを\_マクロ\_値\_が null|
 |[C28279](../code-quality/c28279.md)|シンボルについて、'begin' はありましたが、対応する 'end' がありません|
 |[C28280](../code-quality/c28280.md)|シンボルについて、'end' はありましたが、対応する 'begin' がありません|
 |[C28282](../code-quality/c28282.md)|書式指定文字列は、前提条件の中に存在する必要があります|
 |[C28285](../code-quality/c28285.md)|関数について、パラメーターに構文エラーがあります|
 |[C28286](../code-quality/c28286.md)|関数について、構文エラーが最後の近くにあります|
-|[C28287](../code-quality/c28287.md)|関数について、_At\_() 注釈 (認識されないパラメーター名) に構文エラーがあります|
-|[C28288](../code-quality/c28288.md)|関数について、_At\_() 注釈 (無効のパラメーター名) に構文エラーがあります|
+|[C28287](../code-quality/c28287.md)|関数について、構文エラーで\_で\_() 注釈 (認識できないパラメーター名)|
+|[C28288](../code-quality/c28288.md)|関数について、構文エラーで\_で\_() 注釈 (無効なパラメーター名)|
 |[C28289](../code-quality/c28289.md)|関数について: ReadableTo または WritableTo には、パラメーターとして limit-spec がありませんでした|
 |[C28290](../code-quality/c28290.md)|関数の注釈は、実際のパラメーターの数より多い外部参照を含みます|
 |[C28291](../code-quality/c28291.md)|deref レベル 0 での post null/notnull は、関数に対して意味がありません。|
 |[C28300](../code-quality/c28300.md)|演算子に対する互換性のない型の、式のオペランドです|
 |[C28301](../code-quality/c28301.md)|関数の最初の宣言に対して注釈がありません。|
-|[C28302](../code-quality/c28302.md)|余分な _Deref\_ 演算子が注釈に見つかりました。|
-|[C28303](../code-quality/c28303.md)|あいまいな _Deref\_ 演算子が注釈に見つかりました。|
-|[C28304](../code-quality/c28304.md)|不適切に設定された _Notref\_ 演算子がトークンに適用されました。|
+|[C28302](../code-quality/c28302.md)|余分な\_Deref\_演算子が注釈に見つかりました。|
+|[C28303](../code-quality/c28303.md)|あいまいな\_Deref\_演算子が注釈に見つかりました。|
+|[C28304](../code-quality/c28304.md)|不適切に\_Notref\_トークンに適用される演算子が見つかりました。|
 |[C28305](../code-quality/c28305.md)|トークンの解析中にエラーが発生しました。|
-|[C28306](../code-quality/c28306.md)|パラメーターの注釈は使用されなくなった|
-|[C28307](../code-quality/c28307.md)|パラメーターの注釈は使用されなくなった|
+|[C28306](../code-quality/c28306.md)|パラメーターの注釈には使用されなくなりました|
+|[C28307](../code-quality/c28307.md)|パラメーターの注釈には使用されなくなりました|
 |[C28350](../code-quality/c28350.md)|注釈には、条件付きで適用できない状況の説明が表示されます。|
 |[C28351](../code-quality/c28351.md)|注釈には、動的な値 (変数) が使用できない条件が記述されています。|

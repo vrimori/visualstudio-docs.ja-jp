@@ -1,7 +1,7 @@
 ---
-title: Azure App Service の Visual Studio への公開 |Microsoft ドキュメント
+title: Azure App Service に発行する
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 06/22/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,74 +12,42 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: f91fd6e8c101b674b745c120978a47adb17c9b91
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 7761164182188366425a81518f3d0513361b6f19
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765376"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077844"
 ---
-# <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service に ASP.NET または ASP.NET Core アプリケーションを公開します。
+# <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service への Web アプリを発行します。
 
-**発行**ツールを使用して、ASP.NET、ASP.NET Core、Python、Node.js、および .NET Core のアプリを Azure App Service に発行することができます。
+使用することができます、**発行**ASP.NET、ASP.NET Core、Node.js、および .NET Core アプリを Azure App Service または Azure App Service の Linux (コンテナーを使用) に発行するツール。 Python アプリの場合は、手順[Python - Azure App Service に発行](../python/publishing-python-web-applications-to-azure-from-visual-studio.md)します。
 
-Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。
-
-## <a name="prerequisites"></a>必須コンポーネント
-
-* Visual Studio 2017 年 1 をインストールする必要があります、 **ASP.NET および web 開発**ワークロードと **。NET デスクトップ開発**ワークロード。 アプリについては、.NET Core する必要があります、します。**NET コア**ワークロード。
-
-    Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
-
-## <a name="create-a-new-project"></a>新しいプロジェクトを作成する 
-
-1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
-
-1. **Visual c#** または**Visual Basic**、選択**Web**、し、中央のペインで  **ASP.NET Web アプリケーション (.NET Framework)**(C# の場合のみ)、または**ASP.NET Core Web アプリケーション**、クリックして**OK**です。
-
-1. 選択**MVC** (かを選択して**Web アプリケーション (モデル-ビュー-コント ローラー)** .NET core)、ことを確認して**認証なし**を選択して、をクリックして **[ok]**.
-
-1. **MyWebApp** のような名前を入力して**OK**をクリックします。
-
-    Visual Studio によってプロジェクトが作成されます。
-
-1. **ビルド > ソリューションのビルド** を選択して、プロジェクトをビルドします。
+[!INCLUDE [quickstart-prereqs-azure](includes/quickstart-prereqs-azure.md)]
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service に発行する
 
-1. ソリューション エクスプローラーで、プロジェクトを右クリックして、**[発行]** を選択します。
+1. ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**発行**(を使用して、または、**ビルド** > **発行**メニュー項目)。
 
-    ![選択発行](../deployment/media/quickstart-publish-aspnet.png "選択発行")
+    ![ソリューション エクスプ ローラーでプロジェクトのコンテキスト メニューの [発行] コマンド](../deployment/media/quickstart-publish.png "発行の選択")
 
-1. 任意の発行プロファイルを構成していない場合、**発行**ウィンドウが表示されます。 をクリックして**新しいプロファイルを作成**です。
+1. 以前に任意の発行プロファイルを構成する場合、**発行**ウィンドウが表示されたらでどのケースを選択します**新しいプロファイルを作成する**します。
 
-1. **発行先の選択** ダイアログ ボックスで、選択**App Service**です。
+1. **発行先を選択** ダイアログ ボックスで、選択**App Service**します。
 
-    ![Azure App Service の選択](../deployment/media/quickstart-publish-azure.png "Azure App Service の選択")
+    ![Azure App Service を選択](../deployment/media/quickstart-publish-azure.png "Azure App Service の選択")
 
-1. **[発行]** をクリックします。
+1. **[発行]** を選びます。 **App Service の作成** ダイアログ ボックスが表示されます。 Azure アカウントでサインインし、必要に応じて、既定の app service の設定は、フィールドを設定する場合。
 
-    **App Service の作成** ダイアログ ボックスが表示されます。
+    ![App Service の作成](../deployment/media/quickstart-publish-settings-app-service.png "Azure App Service の作成")
 
-    ![App Service を作成する](../deployment/media/quickstart-publish-settings-app-service.png "Azure App Service の作成")
-    
-1. Visual Studio にサインインしていない場合にサインインし、アプリ サービスの既定の設定フィールドに入力します。
+1. **[作成]** を選択します。 Visual Studio は、Azure App Service にアプリを配置し、ブラウザーで web アプリを読み込みます。 プロジェクトのプロパティ**発行**サイトの URL とその他の詳細ウィンドウに表示されます。
 
-    プロファイル、発行設定 ダイアログ ボックスが表示されます。
-
-    ![フォルダーを選択](../deployment/media/quickstart-publish-settings-web.png "フォルダーを選択します")
-
-    このダイアログ ボックスで使用しているサブスクリプションを選択を選択したり Azure リソース グループなどを作成します。
-
-1. **[作成]** をクリックします。
-
-    Visual Studio が、Azure App Service にアプリを展開し、web アプリがお使いのブラウザーで読み込まれます。
-
-    **発行** ウィンドウの概要から、新しい Azure App Service のサイトの URL を参照してください。
+    ![発行プロファイルの概要を示すプロパティ ウィンドウ](../deployment/media/quickstart-publish-app-service-summary.png)
 
 ## <a name="next-steps"></a>次の手順
 
-このクイック スタートでは、Visual Studio を使用して Azure へのデプロイの発行プロファイルを作成する方法について学習しました。 パブリッシングを構成することもできます。 プロファイルをインポートしてから Azure App Service の設定を発行します。
+このクイック スタートでは、Visual Studio を使用して Azure へのデプロイの発行プロファイルを作成する方法について説明しました。 発行を構成することもできます。 プロファイルをインポートして Azure App Service の設定を発行します。
 
 > [!div class="nextstepaction"]
 > [発行設定のインポートと Azure へのデプロイ](tutorial-import-publish-settings-azure.md)

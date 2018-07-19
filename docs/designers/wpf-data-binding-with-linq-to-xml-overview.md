@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0263aba7d732c766d08bda05c6700c47d58f3d44
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 15f726527a743e70cced0e274fbde6b7afa8691a
+ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31925157"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890371"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML による WPF のデータ バインディングの概要
 
@@ -79,13 +79,13 @@ C# で動的プロパティへアクセスするには、実行時に <xref:Syst
 
 一方、XML ソースでは、次のような形式の単純な表記法を使用して動的プロパティにアクセスできます。
 
-```
+```xml
 <object>.<dynamic-property>
 ```
 
 この 2 つのクラスの動的プロパティは、1 つの値またはインデクサーのいずれかに解決されます。1 つの値の場合は直接使用できますが、インデクサーの場合は、結果の値または値のコレクションを取得するにはインデックスを渡す必要があります。 インデクサーの場合の構文は次のようになります。
 
-```
+```xml
 <object>.<dynamic-property>[<index-value>]
 ```
 

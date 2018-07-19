@@ -5,12 +5,12 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 29c6baaa4da4eae4a2302ec3916a156b59a49272
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 89463ca785a995f475519eeba5e2d4af07563428
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34453884"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283150"
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Visual Studio for Mac のコンパイルとビルド
 
@@ -20,7 +20,7 @@ Visual Studio for Mac は、プロジェクトの開発中、アプリケーシ�
 
 Visual Studio for Mac を使用すると、ビルドをすぐに作成し、実行できます。また、ビルド機能を制御できます。 Visual Studio for Mac では、基礎ビルド システムとして MSBuild が使用されます。
 
-IDE で作成されたすべてのプロジェクトとソリューションに既定のビルド構成が与えられます。この構成がビルドのコンテキストを定義します。 構成は編集可能です。独自の構成を作成するともできます。 構成を作成したり、変更したりすると、プロジェクト ファイルが自動的に更新されます。それが MSBuild で使用され、プロジェクトがビルドされます。  
+IDE で作成されたすべてのプロジェクトとソリューションに既定のビルド構成が与えられます。この構成がビルドのコンテキストを定義します。 構成は編集可能です。独自の構成を作成するともできます。 構成を作成したり、変更したりすると、プロジェクト ファイルが自動的に更新されます。それが MSBuild で使用され、プロジェクトがビルドされます。
 
 IDE でプロジェクトやソリューションをビルドする方法については、「[プロジェクトとソリューションのビルドおよびクリーン](building-and-cleaning-projects-and-solutions.md)」ガイドを参照してください。
 
@@ -42,9 +42,9 @@ Visual Studio for Mac は以下にも使用できます。
 
 MSBuild Build Engine を使用し、コマンド ラインからアプリケーションをビルドできます。
 
-MSBuild の使用方法については、[MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild) コンテンツをご覧ください。
+MSBuild の使用方法については、[MSBuild](/visualstudio/msbuild/msbuild) コンテンツをご覧ください。
 
 ## <a name="building-from-visual-studio-team-services"></a>Visual Studio Team Services からのビルド
 
-* [Xamarin アプリをビルドする](https://www.visualstudio.com/docs/build/apps/mobile/xamarin)
+* [Xamarin アプリをビルドする](/vsts/pipelines/apps/mobile/xamarin?view=vsts&tabs=vsts)
 * [Xamarin との継続的な統合](https://developer.xamarin.com/guides/cross-platform/ci/)

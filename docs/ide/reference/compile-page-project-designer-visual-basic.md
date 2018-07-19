@@ -21,11 +21,11 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: 6d1b5c55c3bc1732d0b394473f25c0b103c917f4
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808375"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)
 
@@ -65,7 +65,7 @@ ms.locfileid: "33106935"
   
  この設定は、[/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit) コンパイラ オプションに相当します。  
   
- ソース コード ファイルに [Option Explicit ステートメント](/dotnet/visual-basic/language-reference/statements/option-explicit-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Explicit]** 設定よりも優先されます。  
+ ソース コード ファイルに [Option Explicit ステートメント](/dotnet/visual-basic/language-reference/statements/option-explicit-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Explicit]** 設定をオーバーライドします。  
   
  新しいプロジェクトを作成するときに、**[コンパイル]** ページの **[Option Explicit]** 設定が **[オプション]** ダイアログ ボックスの **[Option Explicit]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Explicit]** の初期の既定値は **[オン]** です。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "33106935"
   
 **[Option Strict]** 設定は、[/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) コンパイラ オプションに相当します。  
   
-ソース コード ファイルに [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Strict]** 設定よりも優先されます。  
+ソース コード ファイルに [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Strict]** 設定をオーバーライドします。  
   
 プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Strict]** 設定が **[オプション]** ダイアログ ボックスの **[Option Strict]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Strict]** の初期の既定値は **[オフ]** です。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33106935"
   
 この設定は、[/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) コンパイラ オプションに相当します。  
   
-ソース コード ファイルに [Option Compare ステートメント](/dotnet/visual-basic/language-reference/statements/option-compare-statement)が含まれている場合、ステートメント内の `Binary` または `Text` の値が、**[コンパイル]** ページの **[Option Compare]** 設定よりも優先されます。  
+ソース コード ファイルに [Option Compare ステートメント](/dotnet/visual-basic/language-reference/statements/option-compare-statement)が含まれている場合、ステートメント内の `Binary` または `Text` の値が、**[コンパイル]** ページの **[Option Compare]** 設定をオーバーライドします。  
   
 プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Compare]** 設定が **[オプション]** ダイアログ ボックスの **[Option Compare]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Compare]** の初期の既定値は **[バイナリ]** です。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "33106935"
   
 この設定は、[/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer) コンパイラ オプションに相当します。  
   
-ソース コード ファイルに [Option Infer ステートメント](/dotnet/visual-basic/language-reference/statements/option-infer-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Infer]** 設定よりも優先されます。  
+ソース コード ファイルに [Option Infer ステートメント](/dotnet/visual-basic/language-reference/statements/option-infer-statement)が含まれている場合、ステートメント内の `On` または `Off` の値が、**[コンパイル]** ページの **[Option Infer]** 設定をオーバーライドします。  
   
 プロジェクトを作成するときに、**[コンパイル]** ページの **[Option Infer]** 設定が **[オプション]** ダイアログ ボックスの **[Option Infer]** 設定の値に設定されます。 このダイアログ ボックスの設定を表示または変更するには、**[ツール]** メニューで **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 **[VISUAL BASIC の既定値]** での **[Option Infer]** の初期の既定値は **[オン]** です。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "33106935"
 この設定は、[/doc](/dotnet/visual-basic/reference/command-line-compiler/doc) コンパイラ オプションに相当します。  
   
 **COM の相互運用機能に登録**  
-マネージ アプリケーションで、COM オブジェクトがアプリケーションとやり取りできるようにする COM オブジェクト (COM 呼び出し可能ラッパー) を公開するかどうかを指定します。  
+マネージド アプリケーションで、COM オブジェクトがアプリケーションとやり取りできるようにする COM オブジェクト (COM 呼び出し可能ラッパー) を公開するかどうかを指定します。  
   
 既定では、このチェック ボックスはオフになっており、アプリケーションで COM 相互運用を許可しないことを指定します。 COM 相互運用を許可するには、このチェック ボックスを選択します。  
   

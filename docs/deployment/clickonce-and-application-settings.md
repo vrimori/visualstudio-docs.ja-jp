@@ -1,5 +1,5 @@
 ---
-title: ClickOnce とアプリケーションの設定 |Microsoft ドキュメント
+title: ClickOnce とアプリケーションの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -16,46 +16,46 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e325ed1d66729eaed18c577c27f09a3db45d98f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3d3cf6320401f58cd8ea1733e3b972202ba9b6d3
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31561702"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081095"
 ---
-# <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーション設定
-Windows フォームのアプリケーション設定を簡単を作成、格納、およびカスタム アプリケーションと、クライアント上のユーザー設定を管理できます。 次のドキュメントでは、ClickOnce アプリケーションにおけるアプリケーション設定ファイルのしくみし、ユーザーは、次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
+# <a name="clickonce-and-application-settings"></a>ClickOnce とアプリケーションの設定
+Windows フォームのアプリケーション設定を簡単に作成、保存、およびカスタム アプリケーションとクライアント上のユーザー設定を管理します。 次のドキュメントでは、ClickOnce アプリケーションでのアプリケーション設定ファイルのしくみし、ユーザーが次のバージョンにアップグレードしたときに、ClickOnce が設定を移行する方法について説明します。  
   
- 以下の情報が既定のアプリケーションの設定プロバイダーにのみ適用されます、<xref:System.Configuration.LocalFileSettingsProvider>クラスです。 カスタム プロバイダーを提供する場合、そのプロバイダーは、そのデータを格納するしくみと、バージョン間で設定をアップグレードする方法に判断されます。 アプリケーション設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)です。  
+ 以下の情報は、既定のアプリケーション設定プロバイダーにのみ適用されます、 \<xref:System.Configuration.LocalFileSettingsProvider > クラス。 カスタム プロバイダーを指定すると、そのデータを格納する方法と、バージョン間で設定をアップグレードする方法、そのプロバイダーが判断されます。 アプリケーション設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)します。  
   
 ## <a name="application-settings-files"></a>アプリケーション設定ファイル  
- アプリケーションの設定は、2 つのファイルを消費:*アプリ*.exe.config に変更し、user.config 場所*アプリ*Windows フォーム アプリケーションの名前を指定します。 user.config がアプリケーションには、ユーザー スコープ設定が格納されて、クライアント、最初の時間に作成されます。 *アプリ*.exe.config でこれに対し、が存在して展開する前に設定の既定値を定義する場合。 Visual Studio はこのファイルは自動的に追加するときにその**発行**コマンド。 このファイルに含まれることを確認する必要があります Mage.exe または MageUI.exe を使用して ClickOnce アプリケーションを作成する場合、アプリケーション マニフェストを作成するときに、アプリケーションの他のファイルです。  
+ アプリケーションの設定は、2 つのファイルを使用: *\<アプリ >. exe.config*と*user.config*ここで、*アプリ*Windows フォーム アプリケーションの名前を指定します。 *user.config*アプリケーションには、ユーザー スコープの設定が格納されます。 クライアントの最初の時間に作成されます。 *\<アプリ >. exe.config*設定の既定値を定義する場合は展開する前にこれに対し、存在されます。 Visual Studio は、このファイルに自動的に使用すると、**発行**コマンド。 使用して ClickOnce アプリケーションを作成する場合*Mage.exe*または*MageUI.exe*、このファイルに含まれていることを確認しておく必要があります、アプリケーション マニフェストを設定するときに、アプリケーションの他のファイル。  
   
- ClickOnce を使用して、アプリケーションの展開されていない Windows フォーム アプリケーションで*アプリ*. ユーザーの user.config ファイルが格納されているアプリケーション ディレクトリに *.exe.config ファイルが格納されている**Documents and Settings**フォルダーです。 ClickOnce アプリケーションに*アプリ*.exe.config に変更は、ClickOnce アプリケーションのキャッシュ内でアプリケーションのディレクトリに存在しており、user.config がそのアプリケーションの ClickOnce データ ディレクトリ内に存在します。  
+ ClickOnce を使用して、アプリケーションの展開されていない Windows フォーム アプリケーションで*\<アプリ >. exe.config*アプリケーション ディレクトリに保存されているときに、 *user.config*ファイルが格納されています。ユーザーの**Documents and Settings**フォルダー。 ClickOnce アプリケーションで*\<アプリ >. exe.config* 、ClickOnce アプリケーション キャッシュ内のアプリケーション ディレクトリ内に存在し、 *user.config* ClickOnce データ ディレクトリにそのアプリケーション。  
   
- アプリケーションの設定により、セーフの読み取りアクセスをアプリケーションの展開方法に関係なく*アプリ*.exe.config に変更、および user.config にセーフの読み取り/書き込みアクセス。  
+ アプリケーションをデプロイする方法に関係なくセーフの読み取りアクセス権をアプリケーション設定*\<アプリ >. exe.config*、およびセーフの読み取り/書き込みアクセスを*user.config*します。  
   
- ClickOnce アプリケーションには、アプリケーションの設定で使用される構成ファイルのサイズは、ClickOnce キャッシュのサイズによって制限されます。 詳細については、次を参照してください。 [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)です。  
+ ClickOnce アプリケーションでは、アプリケーションの設定で使用される構成ファイルのサイズは、ClickOnce キャッシュのサイズによって制限されます。 詳細については、次を参照してください。 [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)します。  
   
 ## <a name="version-upgrades"></a>バージョンのアップグレード  
- ClickOnce アプリケーションの各バージョンは、その他のすべてのバージョンから分離されているのと同様、ClickOnce アプリケーションのアプリケーションの設定は、他のバージョンでも同様の設定から分離されます。 アプリケーションの新しいバージョンにアップグレードする、ユーザー、アプリケーションの設定は新しい設定ファイルのセットに設定をマージ、更新されたバージョンに付属している設定に対して最新 (番号が最大) のバージョンの設定を比較します。  
+ ClickOnce アプリケーションの各バージョンが他のすべてのバージョンから分離されたのと同様、ClickOnce アプリケーションのアプリケーションの設定は、その他のバージョンも設定から分離されます。 ユーザーは、アプリケーションの以降のバージョンにアップグレードして、アプリケーションの設定は最も新しい (最も高い数字) バージョンの設定、更新されたバージョンとマージに新しい設定ファイルのセットの設定で指定した設定を比較します。  
   
  次の表では、アプリケーションの設定はコピーする設定を決定する方法について説明します。  
   
 |変更の種類|アップグレード アクション|  
 |--------------------|--------------------|  
-|追加設定*アプリ*.exe.config に変更。|新しい設定が、現在のバージョンにマージ*アプリ*.exe.config に変更。|  
-|設定から削除*アプリ*.exe.config に変更。|現在のバージョンから、以前の設定が削除された*アプリ*.exe.config に変更。|  
-|設定の既定値が変更されています。ローカルの設定がまだ user.config で元の既定値に設定|設定が、値として新しい既定値は、現在のバージョンの user.config にマージします。|  
-|設定の既定値が変更されています。user.config で既定以外に設定|設定が保持される既定以外の値と現在のバージョンの user.config にマージします。|  
+|設定に追加*\<アプリ >. exe.config*|新しい設定が現在のバージョンにマージされる*\<アプリ >. exe.config*|  
+|設定から削除*\<アプリ >. exe.config*|現在のバージョンから、以前の設定が削除された*\<アプリ >. exe.config*|  
+|設定の既定値が変更されています。ローカル設定は、引き続き元の既定値に設定*user.config*|設定が現在のバージョンにマージされる*user.config*値として新しい既定値|  
+|設定の既定値が変更されています。既定以外に設定されて*user.config*|設定が現在のバージョンにマージされる*user.config*で既定以外の値が保持されます|  
   
- ラッパー クラス アプリケーションの設定を作成して更新ロジックをカスタマイズする場合は、上書き、<xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A>メソッドです。  
+オーバーライドすることができます独自のアプリケーション設定ラッパー クラスを作成し、更新ロジックをカスタマイズする場合、 \<xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A > メソッドです。  
   
-## <a name="clickonce-and-roaming-settings"></a>ClickOnce と設定のローミング  
- ClickOnce では機能しませんローミング設定は、これにより、ネットワーク上のコンピューター間で後に、設定ファイルです。 設定をローミングする場合は、ネットワーク経由での設定を格納するアプリケーションの設定プロバイダーを実装するか、リモート コンピューター上の設定を格納するためには、独自のカスタム設定クラスを開発する必要があります。 設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)です。  
+## <a name="clickonce-and-roaming-settings"></a>ClickOnce とローミングの設定  
+ ClickOnce 機能しません、ローミングの設定で、設定ファイルをネットワーク上のコンピューター間で利用できます。 ローミングの設定が必要な場合は、ネットワーク経由で設定を格納するアプリケーション設定プロバイダーを実装するか、リモート コンピューター上の設定を格納するため、独自のカスタム設定クラスを開発する必要があります。 設定プロバイダーの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](/dotnet/framework/winforms/advanced/application-settings-architecture)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
  [アプリケーション設定の概要](/dotnet/framework/winforms/advanced/application-settings-overview)   
  [ClickOnce キャッシュの概要](../deployment/clickonce-cache-overview.md)   
- [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
+ [ClickOnce アプリケーションにおけるローカルおよびリモート データにアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

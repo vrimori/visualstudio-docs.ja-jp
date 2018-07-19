@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad8cfdb54b690dd9f5639bea71d790ef0d79a19a
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 64a8fbd599667c7c28a48f80ff97932161c9e2f7
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31620454"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282562"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio のネットワーク ベース インストールを更新する
 
@@ -41,10 +41,10 @@ ms.locfileid: "31620454"
   vs_enterprise.exe --layout c:\VS2017Layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --lang en-US
   ```
 
-* 以下は、同じレイアウトを新しいバージョンに更新する場合です。 追加のコマンド ライン パラメーターを指定する必要はありません。 このレイアウト フォルダーに保存されている以前の設定が、後続のすべてのレイアウト コマンドで使用されます。  
+* 以下は、同じレイアウトを新しいバージョンに更新する場合です。 追加のコマンド ライン パラメーターを指定する必要はありません。 このレイアウト フォルダーに保存されている以前の設定が、後続のすべてのレイアウト コマンドで使用されます。
 
   ```cmd
-  vs_enterprise.exe --layout c:\VS2017Layout  
+  vs_enterprise.exe --layout c:\VS2017Layout
   ```
 
 * ここでは、お使いのレイアウトを無人方式で新しいバージョンに更新する方法を示します。 レイアウト操作は、新しいコンソール ウィンドウでセットアップ プロセスを実行します。 ユーザーが最終的な結果と、発生した可能性のあるエラーの概要を確認できるように、ウィンドウは開いたままになります。 無人方式でレイアウト操作を実行している場合は (たとえば、定期的に実行してお使いのレイアウトを最新バージョンに更新するスクリプトがある場合)、`--passive` パラメーターを使うと、プロセスは自動的にウィンドウを閉じます。
@@ -96,7 +96,7 @@ layoutDir 内の vs_enterprise.exe を呼び出すことができます。
 > [!NOTE]
 > レイアウト オフライン キャッシュには `--verify` オプションで必要とされるいくつかの重要なメタデータ ファイルが必要です。 これらのメタデータ ファイルが見つからない場合、"--verify" が実行できず、セットアップでエラーが返されます。 このエラーが発生した場合、新しいオフライン レイアウトを別のフォルダー (または同じオフライン キャッシュ フォルダー) に再作成してください。 そのためには、初期オフライン レイアウトの作成に使用したものと同じレイアウト コマンドを実行します。 たとえば、`Vs_enterprise.exe --layout <layoutDir>` のようにします。
 
-Microsoft は定期的に Visual Studio の更新プログラムを提供しているため、作成した新しいレイアウトが初期レイアウトと同じバージョンでない可能性があります。  
+Microsoft は定期的に Visual Studio の更新プログラムを提供しているため、作成した新しいレイアウトが初期レイアウトと同じバージョンでない可能性があります。
 
 ## <a name="how-to-fix-a-layout"></a>レイアウトの修正方法
 
@@ -114,9 +114,9 @@ layoutDir 内の vs_enterprise.exe を呼び出すことができます。
 
 これを行うには、その古いパッケージが含まれるカタログ マニフェストのファイル パスが必要になります。 カタログ マニフェストは、オフライン レイアウト キャッシュの "Archive" フォルダーにあります。 これは、レイアウトの更新時に保存されたものです。 "Archive" フォルダーには、1 つまたは複数の "GUID" 名フォルダーがあり、そのそれぞれに古いカタログ マニフェストが含まれています。 "GUID" フォルダーの数は、オフライン キャッシュに対する更新プログラムの数と同じである必要があります。
 
-各 "GUID" フォルダー内にいくつかのファイルが保存されています。 特に関係のあるファイルが "catalog.json" ファイルと "version.txt" ファイルの 2 つです。 "catalog.json" ファイルは `--clean` オプションに渡す必要がある古いカタログ マニフェストです。 その他の version.txt ファイルには、この古いカタログ マニフェストのバージョンが含まれています。 バージョン番号に基づき、このカタログ マニフェストから古いパッケージを削除するかどうかを決定できます。 他の "GUID" フォルダーでも同じように行います。 クリーンアップを実行するカタログが決まったら、そのカタログのファイル パスを指定して `--clean` カタログを実行します。  
+各 "GUID" フォルダー内にいくつかのファイルが保存されています。 特に関係のあるファイルが "catalog.json" ファイルと "version.txt" ファイルの 2 つです。 "catalog.json" ファイルは `--clean` オプションに渡す必要がある古いカタログ マニフェストです。 その他の version.txt ファイルには、この古いカタログ マニフェストのバージョンが含まれています。 バージョン番号に基づき、このカタログ マニフェストから古いパッケージを削除するかどうかを決定できます。 他の "GUID" フォルダーでも同じように行います。 クリーンアップを実行するカタログが決まったら、そのカタログのファイル パスを指定して `--clean` カタログを実行します。
 
---clean オプションを使用するいくつかの例を示します。   
+--clean オプションを使用するいくつかの例を示します。
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> <file-path-of-catalog2> …
@@ -128,7 +128,7 @@ vs_enterprise.exe --layout <layoutDir> --clean <file-path-of-catalog1> --clean <
 
 &lt;layoutDir&gt; 内の vs_enterprise.exe を呼び出すことができます。 次に例を示します。
 
-```cmd   
+```cmd
 c:\VS2017Layout\vs_enterprise.exe --layout c:\VS2017Layout --clean c:\VS2017Layout\Archive\1cd70189-fc55-4583-8ad8-a2711e928325\Catalog.json --clean c:\VS2017Layout\Archive\d420889f-6aad-4ba4-99e4-ed7833795a10\Catalog.json
 ```
 
@@ -136,7 +136,7 @@ c:\VS2017Layout\vs_enterprise.exe --layout c:\VS2017Layout --clean c:\VS2017Layo
 
 ## <a name="get-support"></a>サポートを受ける
 
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
 

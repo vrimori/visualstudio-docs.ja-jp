@@ -1,5 +1,5 @@
 ---
-title: FeatureProperty 要素 |Microsoft ドキュメント
+title: FeatureProperty 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a937310ddbb866cbe046ea2975f8d76e75fe2a98
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: ccc9e0d628d5c17283368de135c8e83dbd40bec1
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34766966"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36325983"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty 要素
   SharePoint に配置されるときに、機能に含まれているカスタム プロパティを表します。 フィーチャーが配置されると、コードでプロパティにアクセスすることができます。  
@@ -39,7 +39,7 @@ ms.locfileid: "34766966"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**Key**|必要な**xs:string**属性。<br /><br /> 保存し、プロパティ値を取得するために使用するキー。 各プロパティ機能内で一意であるキーが必要です。|  
+|**Key**|必要な**xs:string**属性。<br /><br /> このキーは、格納およびプロパティの値を取得するために使用します。 各プロパティが、機能内で一意キーが必要です。|  
 |**[値]**|必要な**xs:string**属性。<br /><br /> プロパティ値。|  
   
 ### <a name="child-elements"></a>子要素
@@ -51,20 +51,20 @@ ms.locfileid: "34766966"
 |-------------|-----------------|  
 |[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint に配置されるときに、機能に含まれているプロパティ値のコレクションを表します。|  
   
-## <a name="remarks"></a>コメント  
- フィーチャーのプロパティの詳細については、次を参照してください。[を提供するパッケージとプロジェクト項目での展開情報](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)です。  
+## <a name="remarks"></a>Remarks  
+ 機能プロパティの詳細については、次を参照してください。[プロジェクト項目でのパッケージと展開の情報を提供する](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)します。  
   
 ## <a name="element-information"></a>要素情報
   
 |||  
 |-|-|  
-|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|  
+|**名前空間**|http<nolink>://schemas.microsoft.com/VisualStudio/<br>SharePointProjectItemModel SharePointTools/2010/|  
 |**スキーマ名**|SharePoint プロジェクト項目のスキーマ|  
-|**検証ファイル**|ProjectItemModelSchema.xsd|  
+|**ファイルの検証**|ProjectItemModelSchema.xsd|  
 |**空にすることができます。**|いいえ|  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint プロジェクト項目のスキーマ リファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
- [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
+ [SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)   
+ [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
   
   

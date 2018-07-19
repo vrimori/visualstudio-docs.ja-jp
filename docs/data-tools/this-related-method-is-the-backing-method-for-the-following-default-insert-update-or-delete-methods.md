@@ -10,18 +10,18 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: fdb359ebe4a42e0ddad8b93c1e746922ac609f60
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 30e08cb10b6e1912fe5962620faf34a1c6250cf3
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174167"
 ---
 # <a name="this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods"></a>この関連メソッドは、次の既定の挿入、更新、または削除メソッドのバッキング メソッドです
 
-この関連メソッドは、次の既定の挿入、更新、または削除メソッドのバッキング メソッドです。 削除されると、これらのメソッドも削除されます。 続行しますか?
+これは関連メソッドは次の既定のバッキング メソッド`Insert`、 `Update`、または`Delete`メソッド。 削除されると、これらのメソッドも削除されます。 続行しますか?
 
-選択した `DataContext` メソッドは、O/R デザイナーで、いずれかのエンティティ クラスの挿入、更新、または削除メソッドとして現在使用されています。 選択したメソッドを削除すると、このメソッドを使用していたエンティティ クラスの更新時の挿入、更新、または削除の動作は、既定のランタイムの動作に戻ることになります。
+選択した`DataContext`メソッドは、現在の 1 つとして使用されて、 `Insert`、 `Update`、または`Delete`でエンティティ クラスのいずれかのメソッド、 **O/R デザイナー**します。 メソッドを選択した原因を削除、挿入を実行するための既定の実行時動作に戻すには、このメソッドを使用していたエンティティ クラスを更新、または更新中に削除します。
 
 ## <a name="to-delete-the-selected-method-causing-the-entity-class-to-use-runtime-updates"></a>選択したメソッドを削除して、エンティティ クラスでランタイムの更新動作が使用されるようにするには
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;publisherIdentity&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+title: '&lt;publisherIdentity&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 92b0082d7a2b062d946d132c5a86fbceb5208802
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: f33772a35e8e47a77e0fdaddd28b7471ef5abcce
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815143"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081411"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt;要素 (ClickOnce 配置)
 この配置マニフェストに署名した発行元についての情報が含まれます。  
@@ -38,7 +38,7 @@ ms.locfileid: "34815143"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `publisherIdentity`要素は署名付きマニフェストに必須です。 次の表は、属性を`publisherIdentity`要素をサポートしています。  
+ `publisherIdentity`要素が署名付きマニフェストに必要です。 次の表は、属性を`publisherIdentity`要素をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "34815143"
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>必要条件  
   

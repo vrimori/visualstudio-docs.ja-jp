@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cba770195ced84083e67ae42afbef53631e5ba1
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
-ms.translationtype: HT
+ms.openlocfilehash: 42a04a64f5ed7f62f4b01f703efa85e36aa854ff
+ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890215"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39131870"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者向けのデバッグ方法
 
@@ -322,7 +322,7 @@ Visual Studio でのコード行の横にある左の余白をクリックして
 
 * [変数の検査](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)をする必要がありますが含まれている値の型が含まれているかどうかを確認します。 無効な値を検索する場合は、不適切な値が設定されたを調べる (値の設定を検索するには、デバッガーを再起動いずれかを確認する必要がある可能性があります、[コール スタック](../debugger/how-to-use-the-call-stack-window.md)、またはその両方)。
 
-* アプリケーションが必要なコードを実行するかどうかを確認します。 (たとえば、サンプル アプリケーションで予想に不規則な galaxy 型を設定する switch ステートメントのコードが、アプリは、入力ミスにより、コードをスキップします)。
+* アプリケーションが必要なコードを実行するかどうかを確認します。 (たとえば、サンプル アプリケーションで不規則な場合に galaxy 型を設定する switch ステートメントのコードが必要ですが、アプリは、入力ミスにより、コードをスキップ)。
 
 > [!TIP]
 > デバッガーを使用して、バグを見つけるのに役立ちます。 デバッグ ツールがバグを発見*を*し、コードの意図を認識している場合にのみです。 その意図を表現する、開発者は場合、ツールは、コードの意図を把握のみできます。 書き込み[単体テスト](../test/improve-code-quality.md)はその方法。

@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: VSTO でのサービスからのデータへのバインディング アドイン プロジェクト |Microsoft ドキュメント'
+title: 'チュートリアル: VSTO アドイン プロジェクトでのサービス データにバインドします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,68 +17,69 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a89b9455051031b3faa0a44102f2fe97dca97d89
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d3c7ed095d0efe756e7a23409cd5a54f9e6dcda8
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808658"
 ---
-# <a name="walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project"></a>チュートリアル : VSTO アドイン プロジェクトでサービスのデータをバインドする
+# <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>チュートリアル: VSTO アドイン プロジェクトでサービスにデータ バインドします。
   VSTO アドイン プロジェクトでは、データをホスト コントロールにバインドできます。 このチュートリアルでは、実行時に Microsoft Office の Word ドキュメントにコントロールを追加し、それらのコントロールを MSDN コンテンツ サービスから取得されたデータにバインドして、イベントに応答する方法について説明します。  
   
  **対象:** このトピックの情報は、Word 2010 のアプリケーション レベルのプロジェクトに適用されます。 詳細については、「[Office アプリケーションおよびプロジェクトの種類別の使用可能な機能](../vsto/features-available-by-office-application-and-project-type.md)」を参照してください。  
   
  このチュートリアルでは、次の作業について説明します。  
   
--   実行時にドキュメントに <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールを追加する  
+-   追加、<xref:Microsoft.Office.Tools.Word.RichTextContentControl>実行時にドキュメントにコントロール。  
   
--   <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールを Web サービスのデータにバインドする  
+-   バインド、 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> web サービスからデータを制御します。  
   
 -   <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> コントロールの <xref:Microsoft.Office.Tools.Word.RichTextContentControl> イベントに応答する  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] または [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]。  
   
-## <a name="creating-a-new-project"></a>新規プロジェクトの作成  
+## <a name="create-a-new-project"></a>新しいプロジェクトを作成する  
  まず、Word VSTO アドイン プロジェクトを作成します。  
   
-#### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
+### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
 1.  Visual Basic または C# のいずれかを使用して、「 **MTPS コンテンツ サービス**」という名前の Word VSTO アドイン プロジェクトを作成します。  
   
-     詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。  
+     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
   
      `ThisAddIn.vb` または `ThisAddIn.cs` ファイルが Visual Studio で開かれ、プロジェクトが **ソリューション エクスプローラー**に追加されます。  
   
-## <a name="adding-a-web-service"></a>Web サービスの追加  
- このチュートリアルでは、「MTPS コンテンツ サービス」という Web サービスを使用します。 この Web サービスは、指定された MSDN の記事を XML 文字列またはプレーンテキストの形式で返します。 返された情報をコンテンツ コントロールに表示する方法については、後の手順で説明します。  
+## <a name="add-a-web-service"></a>Web サービスを追加します。  
+ このチュートリアルでは、MTPS コンテンツ サービスと呼ばれる web サービスを使用します。 この web サービスは、XML 文字列またはプレーン テキストの形式で指定された MSDN の記事の情報を返します。 返された情報をコンテンツ コントロールに表示する方法については、後の手順で説明します。  
   
-#### <a name="to-add-the-mtps-content-service-to-the-project"></a>MTPS コンテンツ サービスをプロジェクトを追加するには  
+### <a name="to-add-the-mtps-content-service-to-the-project"></a>MTPS コンテンツ サービスをプロジェクトに追加するには  
   
-1.  **[データ]** メニューの **[新しいデータ ソースの追加]**をクリックします。  
+1.  **[データ]** メニューの **[新しいデータ ソースの追加]** をクリックします。  
   
-2.  **データ ソース構成ウィザード**で、 **[サービス]**をクリックし、 **[次へ]**をクリックします。  
+2.  **データ ソース構成ウィザード**で、 **[サービス]** をクリックし、 **[次へ]** をクリックします。  
   
 3.  **[アドレス]** フィールドに、次の URL を入力します。  
   
      **http://services.msdn.microsoft.com/ContentServices/ContentService.asmx**  
   
-4.  **[検索]**をクリックします。  
+4.  **[検索]** をクリックします。  
   
-5.  **[名前空間]** フィールドに「 **ContentService**」と入力し、 **[OK]**をクリックします。  
+5.  **[名前空間]** フィールドに「 **ContentService**」と入力し、 **[OK]** をクリックします。  
   
-6.  **[参照の追加ウィザード]** ダイアログ ボックスで **[完了]**をクリックします。  
+6.  **[参照の追加ウィザード]** ダイアログ ボックスで **[完了]** をクリックします。  
   
-## <a name="adding-a-content-control-and-binding-to-data-at-run-time"></a>実行時のコンテンツ コントロールの追加とデータへのバインディング  
- VSTO アドイン プロジェクトでは、実行時にコントロールを追加してバインドします。 このチュートリアルでは、ユーザーがコントロールの内部をクリックしたときに Web サービスからデータを取得するようにコンテンツ コントロールを構成します。  
+## <a name="add-a-content-control-and-bind-to-data-at-runtime"></a>コンテンツ コントロールを追加し、実行時にデータにバインドします。  
+ VSTO アドイン プロジェクトでは、追加し、実行時にコントロールをバインドします。 このチュートリアルでは、コントロール内にユーザーがクリックしたときに、web サービスからデータを取得するコンテンツ コントロールを構成します。  
   
-#### <a name="to-add-a-content-control-and-bind-to-data"></a>コンテンツ コントロールを追加してデータにバインドするには  
+### <a name="to-add-a-content-control-and-bind-to-data"></a>コンテンツ コントロールを追加してデータにバインドするには  
   
 1.  `ThisAddIn` クラスで、MTPS コンテンツ サービス、コンテンツ コントロール、およびデータ バインディングのための変数を宣言します。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#4)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#4)]  
   
-3.  `ThisAddIn` クラスに次のメソッドを追加します。 このメソッドは、要求を作成して Web サービスに送信するために必要なオブジェクトを初期化します。  
+3.  `ThisAddIn` クラスに次のメソッドを追加します。 このメソッドは、作成し、web サービスに要求を送信するために必要なオブジェクトを初期化します。  
   
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#6)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#6)]  
@@ -105,10 +106,10 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#3)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#3)]  
   
-## <a name="testing-the-add-in"></a>アドインのテスト  
+## <a name="test-the-add-in"></a>アドインのテストします。  
  Word を開くと、 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> コントロールが表示されます。 コントロールの内部をクリックすると、コントロールのテキストが変わります。  
   
-#### <a name="to-test-the-vsto-add-in"></a>VSTO アドインをテストするには  
+### <a name="to-test-the-vsto-add-in"></a>VSTO アドインをテストするには  
   
 1.  **F5**キーを押します。  
   
@@ -117,6 +118,6 @@ ms.lasthandoff: 04/16/2018
      MTPS コンテンツ サービスから情報がダウンロードされて、コンテンツ コントロール内部に表示されます。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションでのコントロールへのデータのバインド](../vsto/binding-data-to-controls-in-office-solutions.md)  
+ [Office ソリューションでのコントロールにデータをバインドします。](../vsto/binding-data-to-controls-in-office-solutions.md)  
   
   

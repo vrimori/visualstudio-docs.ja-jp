@@ -1,5 +1,5 @@
 ---
-title: データセットを XML として保存します。
+title: データセットを XML として保存する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,31 +18,31 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 07c0b4b508acf90aac6e65e0a5f4a426bd2fce50
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5a1b0c453f3b48b12c5a77fce86789a66fe77c26
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173998"
 ---
-# <a name="save-a-dataset-as-xml"></a>データセットを XML として保存します。
+# <a name="save-a-dataset-as-xml"></a>データセットを XML として保存する
 
-データセット内の XML データは、データセットで使用可能な XML メソッドを呼び出すことによりアクセスできます。 XML 形式で、データを保存する、いずれかを呼び出すことができます、<xref:System.Data.DataSet.GetXml%2A>メソッドまたは<xref:System.Data.DataSet.WriteXml%2A>のメソッド、<xref:System.Data.DataSet>です。
+データセットで使用可能な XML メソッドを呼び出すことにより、データセット内の XML データにアクセスします。 XML 形式でデータを保存する、いずれかを呼び出すことができます、<xref:System.Data.DataSet.GetXml%2A>メソッドまたは<xref:System.Data.DataSet.WriteXml%2A>のメソッド、<xref:System.Data.DataSet>します。
 
-呼び出す、<xref:System.Data.DataSet.GetXml%2A>メソッドを XML としてフォーマットされているデータセット内のすべてのデータ テーブルからデータを含む文字列を返します。
+呼び出す、<xref:System.Data.DataSet.GetXml%2A>メソッドは XML として書式設定するデータセット内のすべてのデータ テーブルからデータを含む文字列を返します。
 
 呼び出す、<xref:System.Data.DataSet.WriteXml%2A>メソッドは、指定したファイルに XML 形式のデータを送信します。
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>変数にデータセットの XML 形式のデータを保存するには
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>データセット内の変数に XML としてデータを保存するには
 
-- <xref:System.Data.DataSet.GetXml%2A>メソッドを返します、<xref:System.String>です。 型の変数を宣言<xref:System.String>の結果を割り当てると、<xref:System.Data.DataSet.GetXml%2A>メソッドです。
+- <xref:System.Data.DataSet.GetXml%2A>メソッドが返す、<xref:System.String>します。 型の変数を宣言<xref:System.String>の結果を割り当てると、<xref:System.Data.DataSet.GetXml%2A>メソッド。
 
      [!code-vb[VbRaddataSaving#12](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_1.vb)]
      [!code-csharp[VbRaddataSaving#12](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_1.cs)]
 
-## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>データセットのデータを XML 形式でファイルに保存するには
+## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>データセット内のデータをファイルに XML として保存するには
 
-- <xref:System.Data.DataSet.WriteXml%2A>メソッドいくつかのオーバー ロードがあります。 変数を宣言し、ファイルを保存する有効なパスを割り当てます。 次のコードでは、データをファイルに保存する方法を示します。
+- <xref:System.Data.DataSet.WriteXml%2A>メソッドが複数のオーバー ロードします。 変数を宣言し、ファイルを保存する有効なパスを割り当てます。 次のコードでは、データをファイルに保存する方法を示します。
 
      [!code-vb[VbRaddataSaving#13](../data-tools/codesnippet/VisualBasic/save-a-dataset-as-xml_2.vb)]
      [!code-csharp[VbRaddataSaving#13](../data-tools/codesnippet/CSharp/save-a-dataset-as-xml_2.cs)]

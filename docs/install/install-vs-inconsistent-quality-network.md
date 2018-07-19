@@ -13,18 +13,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbe4c8a1e1aa561a8a7fca1f3b8e9e0469bf6dc9
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 1b60df36240b332e74e63aaef7fab75ff19c7d77
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297627"
 ---
 # <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>低帯域幅または信頼性の低いネットワーク環境に Visual Studio 2017 をインストールする
 
 Visual Studio Web インストーラーを試してみてください。ほとんどの場合にその利便性を実感していただけるものと考えております。
 
  > [!div class="button"]
- > [Visual Studio 2017 をダウンロードする](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocsOL)
+ > [Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 <br/>
 
 ただし、インターネット接続を利用できない場合、またはその信頼性が低い場合は、コマンド ラインを使って、オフライン インストールを実行するために必要なファイルのローカル キャッシュを作成できます。 ここではその方法を説明します。
@@ -46,7 +47,7 @@ Visual Studio Web インストーラーを試してみてください。ほと�
 
 ## <a name="step-2---create-a-local-install-cache"></a>ステップ 2 - ローカル インストール キャッシュを作成する
 
-このステップを実行するにはインターネット接続が必要です。 ローカル レイアウトを作成するには、コマンド プロンプトを開き、次の例にあるいずれかのコマンドを使います。この例では、Visual Studio の Community Edition を使っていることを前提としています。お使いのエディションに応じてコマンドを適切に調整してください。
+このステップを実行するにはインターネット接続が必要です。 ローカル レイアウトを作成するには、コマンド プロンプトを開き、次の例にあるいずれかのコマンドを使用します。 この例では、Visual Studio の Community Edition を使用することを前提としています。ご利用のエディションに応じて適切なコマンドに修正してください。
 
 - .NET Web と .NET デスクトップ開発の場合、次を実行します。
 
@@ -106,7 +107,7 @@ Visual Studio Web インストーラーを試してみてください。ほと�
 
 ## <a name="get-support"></a>サポートを受ける
 
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
 
@@ -120,3 +121,4 @@ Visual Studio Web インストーラーを試してみてください。ほと�
 * [Visual Studio のインストール](install-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
 * [コマンド ライン パラメーターを使用して Visual Studio をインストールする](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio 2017 のワークロード ID とコンポーネント ID](workload-and-component-ids.md)

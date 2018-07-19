@@ -16,27 +16,27 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 329214cded185a15fa1ef21b162955957523f5fc
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 007a0a85bf9d7200860194b881a3d0505f6bee45
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175344"
 ---
-# <a name="walkthrough-creating-an-n-tier-data-application"></a>チュートリアル : n 層データ アプリケーションの作成
-*N 層*データ アプリケーションは複数の論理レイヤーに分離され、データにアクセスするアプリケーションまたは*階層*です。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)です。
+# <a name="walkthrough-create-an-n-tier-data-application"></a>チュートリアル: n 層データ アプリケーションを作成します。
+*N 層*データ アプリケーションは、データにアクセスし、複数の論理レイヤーに分割されているアプリケーションまたは*層*します。 アプリケーション コンポーネントをこのように別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 これは、ソリューション全体を再設計しなくても 1 つの層に適用できる、新しい技術を簡単に導入できるようにすることで実現されます。 n 層アーキテクチャには、プレゼンテーション層、中間層、およびデータ層が存在します。 通常、中間層には、データ アクセス層、ビジネス ロジック層、および認証や検証などの共有コンポーネントが含まれます。 データ層には、リレーショナル データベースが含まれます。 通常、n 層アプリケーションでは、機密情報が中間層のデータ アクセス層に格納され、プレゼンテーション層にアクセスするエンド ユーザーから分離されます。 詳細については、次を参照してください。 [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)します。
 
 n 層アプリケーションで各層を分離する 1 つの方法は、アプリケーションに組み込む層ごとに別個のプロジェクトを作成することです。 型指定されたデータセットには、生成されたデータセットと `DataSet Project` コードの格納先となるプロジェクトを決定する、`TableAdapter` プロパティが含まれています。
 
-このチュートリアルのデータセットを分割する方法について説明し、`TableAdapter`を使用して別個のクラス ライブラリ プロジェクトにコードを**データセット デザイナー**です。 作成するが、データセットと TableAdapter のコードを分離する、 [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)データ アクセス層への呼び出しをサービスします。 最後に、プレゼンテーション層として Windows フォーム アプリケーションを作成します。 この層は、データ サービスからデータにアクセスします。
+このチュートリアルのデータセットを分割する方法について説明し、`TableAdapter`を使用して別個のクラス ライブラリ プロジェクトにコードを**データセット デザイナー**。 作成したデータセットと TableAdapter コードを分離する、 [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)データ アクセス層を呼び出すサービス。 最後に、プレゼンテーション層としての Windows フォーム アプリケーションを作成します。 この層は、データ サービスからデータにアクセスします。
 
 このチュートリアルでは、次の手順を実行します。
 
--   複数のプロジェクトを含む新しい n 層ソリューションを作成する。
+-   複数のプロジェクトを含む新しい n 層ソリューションを作成します。
 
 -   この n 層ソリューションに 2 つのクラス ライブラリ プロジェクトを追加する。
 
--   使用して型指定されたデータセットを作成、**データ ソース構成ウィザード**です。
+-   使用して型指定されたデータセットを作成、**データ ソース構成ウィザード**します。
 
 -   生成された分離[Tableadapter](create-and-configure-tableadapters.md)と別々 のプロジェクトにデータセット コード。
 
@@ -50,83 +50,83 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 -   データ テーブルにデータを読み込むコードを記述する。
 
-![ビデオへのリンク](../data-tools/media/playvideo.gif)、このトピックのビデオ版については、次を参照してください。[ビデオ デモ: N 層データ アプリケーションの作成](http://go.microsoft.com/fwlink/?LinkId=115188)です。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版について、次を参照してください。 [Video How to: n 層データ アプリケーションを作成する](http://go.microsoft.com/fwlink/?LinkId=115188)します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
-1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**です。 一部として、Visual Studio インストーラーで、SQL Server Express LocalDB をインストールすることができます、 **.NET デスクトップ開発**ワークロード、または個々 のコンポーネントとして。
+1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**します。 **Visual Studio インストーラー**の一部として SQL Server Express LocalDB をインストールすることができます、 **.NET デスクトップ開発**ワークロード、または個々 のコンポーネントとして。
 
 2.  次の手順に従って、Northwind サンプル データベースをインストールします。
 
-    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウです。 (の一部として SQL Server オブジェクト エクスプ ローラーがインストールされている、**データ ストレージと処理**Visual Studio インストーラーでのワークロードです)。展開して、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリしています.**.
+    1. Visual Studio で開く、 **SQL Server オブジェクト エクスプ ローラー**ウィンドウ。 (**SQL Server オブジェクト エクスプ ローラー**がの一部としてインストールされている、**データ ストレージと処理**Visual Studio インストーラーにワークロード)。展開、 **SQL Server**ノード。 LocalDB インスタンスを右クリックし、選択**新しいクエリ**します。
 
        クエリ エディター ウィンドウが開きます。
 
-    2. コピー、 [Northwind TRANSACT-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトは、最初から、Northwind データベースを作成し、データを設定します。
+    2. コピー、 [Northwind Transact SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにします。 この T-SQL スクリプトでは、最初から、Northwind データベースを作成し、データを設定します。
 
-    3. T-SQL スクリプトをクエリ エディターに貼り付けを選択し、 **Execute**ボタンをクリックします。
+    3. T-SQL スクリプトをクエリ エディターに貼り付けて選択し、 **Execute**ボタンをクリックします。
 
-       短期間のうち、クエリの実行が終了し、Northwind データベースを作成します。
+       しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
 
-## <a name="creating-the-n-tier-solution-and-class-library-to-hold-the-dataset-dataentitytier"></a>n 層ソリューションの作成とデータセットを保持するクラス ライブラリ (DataEntityTier) の作成
- このチュートリアルでは、まず、1 つのソリューションと 2 つのクラス ライブラリ プロジェクトを作成します。 最初のクラス ライブラリは、データセット (生成した型指定された DataSet クラスと、アプリケーションのデータを保持する DataTable) を保持します。 このプロジェクトは、アプリケーションのデータ エンティティ層として使用され、通常は中間層に配置されます。 初期データセットを作成し、2 つのクラス ライブラリに、コードを自動的に分離するために使用する datasetis です。
+## <a name="create-the-n-tier-solution-and-class-library-to-hold-the-dataset-dataentitytier"></a>データセット (DataEntityTier) を保持する n 層ソリューションとクラス ライブラリを作成します。
+ このチュートリアルでは、まず、1 つのソリューションと 2 つのクラス ライブラリ プロジェクトを作成します。 最初のクラス ライブラリは、データセットを保持 (生成された型指定された`DataSet`クラスと、アプリケーションのデータを保持する Datatable)。 このプロジェクトは、アプリケーションのデータ エンティティ層として使用され、通常は中間層に配置されます。 データセットは、初期データセットを作成し、2 つのクラス ライブラリにコードを自動的に分割します。
 
 > [!NOTE]
->  クリックする前に、プロジェクトとソリューションを正しく名を必ず**OK**です。 これにより、チュートリアルの完了が容易になります。
+>  クリックする前に、プロジェクトとソリューションを正しく名前を必ず**OK**します。 これにより、チュートリアルの完了が容易になります。
 
-#### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>n 層ソリューションと DataEntityTier クラス ライブラリを作成するには
+### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>n 層ソリューションと DataEntityTier クラス ライブラリを作成するには
 
-1. Visual Studio での**ファイル**メニューの **新規**、**プロジェクト.**.
+1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
 
-2. いずれかを展開**Visual c#** または**Visual Basic**左側のペインでを選択し、 **Windows デスクトップ**です。
+2. いずれかを展開**Visual c#** または**Visual Basic**左側のウィンドウでを選択し、 **Windows デスクトップ**します。
 
-3. 中央のペインで、**クラス ライブラリ**プロジェクトの種類。
+3. 中央のペインで選択、**クラス ライブラリ**プロジェクトの種類。
 
-4. プロジェクトに名前を**DataEntityTier**です。
+4. プロジェクトに名前を**DataEntityTier**します。
 
-5. ソリューションの名前を付けます**NTierWalkthrough**を選択し**OK**です。
+5. ソリューションの名前を**NTierWalkthrough**を選び、 **OK**します。
 
-     DataEntityTier プロジェクトを含む NTierWalkthrough ソリューションが作成され、追加**ソリューション エクスプ ローラー**です。
+     DataEntityTier プロジェクトを含む NTierWalkthrough ソリューションが作成されに追加**ソリューション エクスプ ローラー**します。
 
-## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>TableAdapter (DataAccessTier) を保持するクラス ライブラリの作成
- DataEntityTier プロジェクトを作成したら、次に、クラス ライブラリ プロジェクトをもう 1 つ作成します。 このプロジェクトを生成された保持`TableAdapter`s 呼び出されて、*データ アクセス層*アプリケーションのです。 データ アクセス層は、データベースへの接続に必要な情報を格納し、通常、中間層に置かれます。
+## <a name="create-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>Tableadapter (DataAccessTier) を保持するために、クラス ライブラリを作成します。
+ DataEntityTier プロジェクトを作成したら、次に、クラス ライブラリ プロジェクトをもう 1 つ作成します。 このプロジェクトが生成された Tableadapter を保持しと呼ばれますが、*データ アクセス層*アプリケーション。 データ アクセス層は、データベースへの接続に必要な情報を格納し、通常、中間層に置かれます。
 
-#### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>Tableadapter の別のクラス ライブラリを作成するには
+### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>Tableadapter の別のクラス ライブラリを作成するには
 
-1.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**追加**、**新しいプロジェクト.**.
+1.  ソリューションを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しいプロジェクト**します。
 
-2.  **新しいプロジェクト**ダイアログ ボックスで、中央のペインで、**クラス ライブラリ**です。
+2.  **新しいプロジェクト** ダイアログ ボックスで、選択の中央のペインで**クラス ライブラリ**します。
 
-3.  プロジェクトに名前を**DataAccessTier**選択**OK**です。
+3.  プロジェクトに名前を**DataAccessTier**選択**OK**します。
 
      DataAccessTier プロジェクトが作成され、NTierWalkthrough ソリューションに追加されます。
 
-## <a name="creating-the-dataset"></a>データセットの作成
- 次に、型指定されたデータセットを作成します。 型指定されたデータセットは、データセット クラス (DataTable クラスを含む) と `TableAdapter` クラスの両方を含む単一のプロジェクトとして作成されます  (すべてのクラスが 1 つのファイルに生成されます)。データセットと `TableAdapter` を別個のプロジェクトに分離すると、データセット クラスが別のプロジェクトに移動し、`TableAdapter` クラスは元のプロジェクトに残ります。 このため、最終的に `TableAdapter` が含まれるプロジェクト (DataAccessTier プロジェクト) にデータセットを作成します。 使用して、データセットを作成、**データ ソース構成ウィザード**です。
+## <a name="create-the-dataset"></a>データセットを作成します。
+ 次に、型指定されたデータセットを作成します。 Dataset クラスで型指定されたデータセットが作成されます (含む`DataTables`クラス) と`TableAdapter`1 つのプロジェクト内のクラス。 (すべてのクラスが 1 つのファイルに生成されます)。まま、その他のプロジェクトに移動されたデータセット クラスが、データセットと TableAdapters を別々 のプロジェクトに分離する場合、`TableAdapter`元のプロジェクト内のクラス。 そのため、Tableadapter (DataAccessTier プロジェクト) を含む最終的にプロジェクトで、データセットを作成します。 使用して、データセットを作成して、**データ ソース構成ウィザード**します。
 
 > [!NOTE]
->  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[する方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)です。
+>  接続を作成するには、Northwind サンプル データベースへのアクセス権を持っている必要があります。 Northwind サンプル データベースを設定する方法については、次を参照してください。[方法: サンプル データベースをインストール](../data-tools/installing-database-systems-tools-and-samples.md)します。
 
-#### <a name="to-create-the-dataset"></a>データセットを作成するには
+### <a name="to-create-the-dataset"></a>データセットを作成するには
 
-1.  選択 DataAccessTier**ソリューション エクスプ ローラー**です。
+1.  選択、 **DataAccessTier**で**ソリューション エクスプ ローラー**します。
 
-2.  **データ**メニューの **データ ソースの表示**です。
+2.  **データ**メニューの  **データ ソースの**します。
 
-3.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**です。
+3.  **データソース**ウィンドウで、**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。
 
-4.  **データ ソースの種類を選択** ページで、**データベース**し、**次**です。
+4.  **データ ソースの種類を選択** ページで、**データベース**し、**次**します。
 
-5.  **データ接続の選択** ページで、次の操作のいずれかを実行します。
+5.  **データ接続の選択**ページで、次の操作のいずれかを実行します。
 
      Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。
 
      - または -
 
-     選択**新しい接続**を開くには、**接続の追加** ダイアログ ボックス。
+     選択**新しい接続**を開く、**接続の追加** ダイアログ ボックス。
 
-6.  データベースは、パスワードを必要とする場合にクリックして、デリケートなデータを含めるオプションを選択**次**です。
+6.  データベースは、パスワードを必要とする場合、機密データを含めるし、オプションを選択**次**します。
 
     > [!NOTE]
     >  SQL Server に接続するのではなく、ローカル データベース ファイルを選択した場合は、ファイルをプロジェクトに追加するかどうかをたずねるメッセージが表示されます。 選択**はい**データベース ファイルをプロジェクトに追加します。
@@ -135,102 +135,102 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 8.  **[データベース オブジェクトの選択]** ページの **[テーブル]** ノードを展開します。
 
-9.  チェック ボックスをオン、**顧客**と**Orders**テーブルにし、**完了**です。
+9.  チェック ボックスをオン、**顧客**と**注文**テーブル、および選択**完了**します。
 
-     NorthwindDataSet が DataAccessTier プロジェクトに追加されに表示されます、**データソース**ウィンドウです。
+     NorthwindDataSet が DataAccessTier プロジェクトに追加されに表示されます、**データソース**ウィンドウ。
 
-## <a name="separating-the-tableadapters-from-the-dataset"></a>データセットと TableAdapter の分離
- データセットを作成したら、生成されたデータセット クラスを TableAdapter から分離します。 設定して、これを行う、 **DataSet プロジェクト**プロパティを分離されたデータセット クラスを格納するためのプロジェクトの名前にします。
+## <a name="separate-the-tableadapters-from-the-dataset"></a>データセットから、Tableadapter を分離します。
+ データセットを作成したら、生成されたデータセット クラスを TableAdapter から分離します。 これを行う、 **DataSet プロジェクト**プロパティを分離されたデータセット クラスを格納するためのプロジェクトの名前にします。
 
-#### <a name="to-separate-the-tableadapters-from-the-dataset"></a>データセットと TableAdapter を分離するには
+### <a name="to-separate-the-tableadapters-from-the-dataset"></a>データセットと TableAdapter を分離するには
 
-1.  ダブルクリックして**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**を開くには、データセットで、**データセット デザイナー**です。
+1.  ダブルクリック**NorthwindDataSet.xsd**で**ソリューション エクスプ ローラー**でデータセットを開きます、**データセット デザイナー**します。
 
 2.  デザイナーの空の領域を選択します。
 
-3.  検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウです。
+3.  検索、 **DataSet プロジェクト**内のノード、**プロパティ**ウィンドウ。
 
-4.  **DataSet プロジェクト**一覧で、 **DataEntityTier**です。
+4.  **DataSet プロジェクト**一覧で、 **DataEntityTier**します。
 
 5.  **[ビルド]** メニューの **[ソリューションのビルド]** を選択します。
 
- データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 最初にデータセット全体 (DataAccessTier) を含んでいたプロジェクトには、現在は TableAdapter しか含まれません。 指定した、プロジェクト、 **DataSet プロジェクト**プロパティ (DataEntityTier) には、型指定されたデータセットが含まれています。 (NorthwindDataSet.Dataset.Designer.vb または NorthwindDataSet.Dataset.Designer.cs)。
+ データセットと TableAdapter が、2 つのクラス ライブラリ プロジェクトに分離されます。 データセット全体を含んでいたプロジェクト (`DataAccessTier`) には Tableadapter しか含まれています。 指定したプロジェクト、 **DataSet プロジェクト**プロパティ (`DataEntityTier`)、型指定されたデータセットが含まれています: *NorthwindDataSet.Dataset.Designer.vb* (または*NorthwindDataSet.Dataset.Designer.cs*)。
 
 > [!NOTE]
 >  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。
 
-## <a name="creating-a-new-service-application"></a>新しいサービス アプリケーションの作成
-このチュートリアルでは、WCF サービスを使用して、データ アクセス層へのアクセス、では、新しい WCF サービス アプリケーションを作成する方法を示します。
+## <a name="create-a-new-service-application"></a>新しいサービス アプリケーションを作成します。
+このチュートリアルでは、WCF サービスを使用して、データ アクセス層へのアクセス、それでは、新しい WCF サービス アプリケーションを作成する方法を示します。
 
-#### <a name="to-create-a-new-wcf-service-application"></a>新しい WCF サービス アプリケーションを作成するには
+### <a name="to-create-a-new-wcf-service-application"></a>新しい WCF サービス アプリケーションを作成するには
 
-1.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**追加**、**新しいプロジェクト.**.
+1.  ソリューションを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しいプロジェクト**します。
 
-2.  **新しいプロジェクト**ダイアログ ボックスで、左側のペインで、select、 **WCF**です。  中央のペインで選択**WCF サービス ライブラリ**です。
+2.  **新しいプロジェクト** ダイアログ ボックスで、選択の左側のウィンドウで**WCF**します。  中央のペインで選択**WCF サービス ライブラリ**します。
 
-3.  プロジェクトの名前**DataService**選択**OK**です。
+3.  プロジェクトに名前を**DataService**選択**OK**。
 
      DataService プロジェクトが作成されて NTierWalkthrough ソリューションに追加されます。
 
-## <a name="creating-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>Customers および Orders のデータを返すデータ アクセス層のメソッドの作成
- データ サービスは、データ アクセス層の 2 つのメソッド (GetCustomers および GetOrders) を呼び出す必要があります。 これらのメソッドは、Northwind の Customers テーブルと Orders テーブルを返します。 GetCustomers メソッドと GetOrders メソッドは、DataAccessTier プロジェクトに作成します。
+## <a name="create-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>顧客と注文データを返すデータ アクセス層のメソッドを作成します。
+ データ サービスが、データ アクセス層に 2 つのメソッドを呼び出すには:`GetCustomers`と`GetOrders`します。 これらのメソッドは、Northwind を返す`Customers`と`Orders`テーブル。 作成、`GetCustomers`と`GetOrders`メソッド、`DataAccessTier`プロジェクト。
 
-#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Customers テーブルを返すメソッドをデータ アクセス層に作成するには
+### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Customers テーブルを返すメソッドをデータ アクセス層に作成するには
 
-1.  **ソリューション エクスプ ローラー**NorthwindDataset.xsd を開くには、データセットをダブルクリックします。
+1.  **ソリューション エクスプ ローラー**、ダブルクリックして**NorthwindDataset.xsd**データセットを開きます。
 
-2.  CustomersTableAdapter を右クリックし、をクリックして**クエリの追加**です。
+2.  右クリック**CustomersTableAdapter**クリック**クエリの追加**します。
 
-3.  **コマンドの種類を選択** ページで、既定値のままにして**SQL ステートメントを使用** をクリック**次**です。
+3.  **コマンドの種類を選択** ページで、既定値のままにして**SQL ステートメントを使用** をクリック**次**。
 
-4.  **クエリの種類を選択** ページで、既定値のままにして**を行を返す SELECT**  をクリック**次**です。
+4.  **クエリの種類を選択** ページで、既定値のままにして**を行を返す SELECT**  をクリック**次**。
 
-5.  **SQL SELECT ステートメントを指定して** ページで、既定のクエリのままにしてをクリックして**次**です。
+5.  **SQL SELECT ステートメントを指定して** ページで、既定のクエリのままにしてをクリックして**次**します。
 
-6.  **生成するメソッドの選択** ページで、入力**GetCustomers**の**メソッド名**で、 **DataTable を返す**セクションです。
+6.  **生成するメソッドの選択**ページで、入力**GetCustomers**の**メソッド名**で、 **DataTable を返す**セクション。
 
 7.  **[完了]** をクリックします。
 
-#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Orders テーブルを返すメソッドをデータ アクセス層に作成するには
+### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Orders テーブルを返すメソッドをデータ アクセス層に作成するには
 
-1.  OrdersTableAdapter を右クリックし、をクリックして**クエリの追加**です。
+1.  右クリック**OrdersTableAdapter**クリック**クエリの追加**します。
 
-2.  **コマンドの種類を選択** ページで、既定値のままにして**SQL ステートメントを使用** をクリック**次**です。
+2.  **コマンドの種類を選択** ページで、既定値のままにして**SQL ステートメントを使用** をクリック**次**。
 
-3.  **クエリの種類を選択** ページで、既定値のままにして**を行を返す SELECT**  をクリック**次**です。
+3.  **クエリの種類を選択** ページで、既定値のままにして**を行を返す SELECT**  をクリック**次**。
 
-4.  **SQL SELECT ステートメントを指定して** ページで、既定のクエリのままにしてをクリックして**次**です。
+4.  **SQL SELECT ステートメントを指定して** ページで、既定のクエリのままにしてをクリックして**次**します。
 
-5.  **生成するメソッドの選択** ページで、入力**GetOrders**の**メソッド名**で、 **DataTable を返す**セクションです。
+5.  **生成するメソッドの選択**ページで、入力**GetOrders**の**メソッド名**で、 **DataTable を返す**セクション。
 
 6.  **[完了]** をクリックします。
 
 7.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>データ サービスへの、データ エンティティ層およびデータ アクセス層への参照の追加
- データ サービスはデータセットと TableAdapter の情報を必要とするため、DataEntityTier プロジェクトおよび DataAccessTier プロジェクトへの参照を追加します。
+## <a name="add-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>データ サービスにデータ エンティティへの参照およびデータ アクセス層を追加します。
+ 参照を追加、データ サービスには、データセットと Tableadapter の情報が必要であるため、 **DataEntityTier**と**DataAccessTier**プロジェクト。
 
-#### <a name="to-add-references-to-the-data-service"></a>データ サービスに参照を追加するには
+### <a name="to-add-references-to-the-data-service"></a>データ サービスに参照を追加するには
 
-1.  [DataService を右クリックして**ソリューション エクスプ ローラー** ] をクリック**参照の追加**です。
+1.  右クリック**DataService**で**ソリューション エクスプ ローラー**クリック**参照の追加**します。
 
-2.  クリックして、**プロジェクト** タブで、**参照の追加** ダイアログ ボックス。
+2.  をクリックして、**プロジェクト** タブで、**参照の追加** ダイアログ ボックス。
 
 3.  両方を選択、 **DataAccessTier**と**DataEntityTier**プロジェクト。
 
 4.  **[OK]** をクリックします。
 
-## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>データ アクセス層の GetCustomers メソッドおよび GetOrders メソッドを呼び出す関数のサービスへの追加
+## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>関数をデータ アクセス層の getcustomers メソッドおよび GetOrders メソッドを呼び出すサービスの追加します。
  これで、データを返すメソッドをデータ アクセス層に含めることができました。次に、データ サービスにメソッドを作成して、データ アクセス層のメソッドを呼び出します。
 
 > [!NOTE]
 >  C# プロジェクトの場合は、次のコードをコンパイルするために `System.Data.DataSetExtensions` アセンブリへの参照を追加する必要があります。
 
-#### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>データ サービスに GetCustomers 関数と GetOrders 関数を作成するには
+### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>データ サービスに GetCustomers 関数と GetOrders 関数を作成するには
 
-1.  **DataService**プロジェクトで、IService1.vb または IService1.cs をダブルクリックします。
+1.  **DataService**プロジェクトで、ダブルクリックして**IService1.vb**または**IService1.cs**します。
 
-2.  次のコードを追加、**サービス操作をここに追加**コメント。
+2.  次のコードを追加、**ここにサービス操作を追加**コメント。
 
     ```vb
     <OperationContract()> _
@@ -248,9 +248,9 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
     DataEntityTier.NorthwindDataSet.OrdersDataTable GetOrders();
     ```
 
-3.  DataService プロジェクトで、Service1.vb または Service1.cs をダブルクリックします。
+3.  DataService プロジェクトでダブルクリック**Service1.vb** (または**Service1.cs**)。
 
-4.  Service1 クラスに次のコードを追加します。
+4.  次のコードを追加、 **Service1**クラス。
 
     ```vb
     Public Function GetCustomers() As DataEntityTier.NorthwindDataSet.CustomersDataTable Implements IService1.GetCustomers
@@ -283,62 +283,62 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
 
 5.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>データ サービスのデータを表示するプレゼンテーション層の作成
- これで、データ アクセス層を呼び出すメソッドを持つデータ サービスをソリューションに含めることができました。次に、データ サービスを呼び出してデータをユーザーに表示する別のプロジェクトを作成します。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。これは n 層アプリケーションのプレゼンテーション層です。
+## <a name="create-a-presentation-tier-to-display-data-from-the-data-service"></a>データ サービスからデータを表示するプレゼンテーション層を作成します。
+ これで、ソリューションには、データ サービスであり、メソッド、データにどの呼び出しは、層にアクセス、データ サービスを呼び出す別のプロジェクトを作成し、データをユーザーに提供が含まれています。 このチュートリアルでは、Windows フォーム アプリケーションを作成します。これは n 層アプリケーションのプレゼンテーション層です。
 
-#### <a name="to-create-the-presentation-tier-project"></a>プレゼンテーション層プロジェクトを作成するには
+### <a name="to-create-the-presentation-tier-project"></a>プレゼンテーション層プロジェクトを作成するには
 
-1.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**追加**、**新しいプロジェクト.**.
+1.  ソリューションを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しいプロジェクト**します。
 
-2.  **新しいプロジェクト**ダイアログ ボックスで、左側のペインで、select、 **Windows デスクトップ**です。 中央のペインで選択**Windows フォーム アプリ**です。
+2.  **新しいプロジェクト** ダイアログ ボックスで、選択の左側のウィンドウで**Windows デスクトップ**します。 中央のペインで選択**Windows フォーム アプリ**します。
 
-3.  プロジェクトに名前を**PresentationTier**  をクリック**OK**です。
+3.  プロジェクトに名前を**PresentationTier**  をクリック**OK**します。
 
     PresentationTier プロジェクトが作成され、NTierWalkthrough ソリューションに追加されます。
 
-## <a name="setting-the-presentationtier-project-as-the-startup-project"></a>スタートアップ プロジェクトとしての PresentationTier プロジェクトの設定
-データの表示や操作に使用される実際のクライアント アプリケーションになっているため、PresentationTier プロジェクト、ソリューションのスタートアップ プロジェクトを設定します。
+## <a name="set-the-presentationtier-project-as-the-startup-project"></a>PresentationTier プロジェクトをスタートアップ プロジェクトとして設定します。
+設定、 **PresentationTier**プロジェクト、ソリューションのスタートアップ プロジェクトを提示し、そのデータにアクセスする実際のクライアント アプリケーションであります。
 
-#### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>新しいプレゼンテーション層プロジェクトをスタートアップ プロジェクトとして設定するには
+### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>新しいプレゼンテーション層プロジェクトをスタートアップ プロジェクトとして設定するには
 
--   **ソリューション エクスプ ローラー**を右クリックして**PresentationTier**  をクリック**スタートアップ プロジェクトとして設定**です。
+-   **ソリューション エクスプ ローラー**を右クリックして**PresentationTier**クリック**スタートアップ プロジェクトとして設定**します。
 
-## <a name="adding-references-to-the-presentation-tier"></a>プレゼンテーション層への参照の追加
- クライアント アプリケーションである PresentationTier には、サービスのメソッドにアクセスできるように、データ サービスへのサービス参照が必要です。 また、WCF サービスによる型の共有を有効にするために、データセットへの参照も必要です。 データセット部分クラスに追加したコードは、データ サービスを介した型の共有を有効にするまで、プレゼンテーション層で使用することはできません。 通常は、データ テーブルの行と列の変更イベントに検証などのコードを追加するため、クライアントからこのコードにアクセスすることが必要になります。
+## <a name="add-references-to-the-presentation-tier"></a>プレゼンテーション層への参照を追加します。
+ クライアント アプリケーションで、PresentationTier、サービスのメソッドにアクセスするためにデータ サービスにサービス参照が必要です。 また、WCF サービスによる型の共有を有効にするために、データセットへの参照も必要です。 型のデータ サービスを介した共有を有効にするまでは、データセット部分クラスに追加したコードは、プレゼンテーション層を使用できません。 通常、行と列の変更をデータ テーブルのイベントに検証コードなどのコードを追加するためには、クライアントからこのコードにアクセスしますが高くなります。
 
-#### <a name="to-add-a-reference-to-the-presentation-tier"></a>プレゼンテーション層に参照を追加するには
+### <a name="to-add-a-reference-to-the-presentation-tier"></a>プレゼンテーション層に参照を追加するには
 
-1.  **ソリューション エクスプ ローラー**PresentationTier を右クリックし、選択、**参照の追加**です。
+1.  **ソリューション エクスプ ローラー**、右クリック**PresentationTier**選択と**参照の追加**します。
 
-2.  **参照の追加**ダイアログ ボックスで、**プロジェクト**タブです。
+2.  **参照の追加**ダイアログ ボックスで、**プロジェクト**タブ。
 
-3.  選択**DataEntityTier**選択**OK**です。
+3.  選択**DataEntityTier**選択**OK**します。
 
-#### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>プレゼンテーション層にサービス参照を追加するには
+### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>プレゼンテーション層にサービス参照を追加するには
 
-1.  **ソリューション エクスプ ローラー**PresentationTier を右クリックし、選択、**サービス参照の追加**です。
+1.  **ソリューション エクスプ ローラー**、右クリック**PresentationTier**選択**サービス参照の追加**します。
 
-2.  **サービス参照の追加**ダイアログ ボックスで、 **Discover**です。
+2.  **サービス参照の追加**ダイアログ ボックスで、 **Discover**します。
 
-3.  選択**Service1**選択**OK**です。
+3.  選択**Service1**選択**OK**します。
 
     > [!NOTE]
-    >  現在のコンピューターに複数のサービスがある場合は、このチュートリアルで以前に作成したサービス (GetCustomers メソッドおよび GetOrders メソッドを含むサービス) を選択します。
+    >  現在のコンピューターに複数のサービスがあれば、このチュートリアルで以前に作成したサービスを選択します。 (含まれているサービス、`GetCustomers`と`GetOrders`メソッド)。
 
-## <a name="adding-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>フォームへの DataGridView の追加とデータ サービスから返されたデータの表示
- データ サービスへのサービス参照を追加した後、**データソース**ウィンドウは、サービスによって返されるデータが設定されます。
+## <a name="add-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>データ サービスによって返されるデータを表示するフォームに Datagridview を追加します。
+ データ サービスにサービス参照を追加した後、**データソース**ウィンドウは、サービスによって返されるデータが設定されます。
 
-#### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>フォームに 2 つのデータ バインド DataGridView を追加するには
+### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>フォームに 2 つのデータ バインド DataGridView を追加するには
 
-1.  **ソリューション エクスプ ローラー**、PresentationTier プロジェクトを選択します。
+1.  **ソリューション エクスプ ローラー**を選択、 **PresentationTier**プロジェクト。
 
-2.  **データ ソース**ウィンドウで、展開**NorthwindDataSet**を検索し、**顧客**ノード。
+2.  **データ ソース**ウィンドウで、展開**NorthwindDataSet**探し、**顧客**ノード。
 
 3.  ドラッグ、**顧客**ノードを Form1 にします。
 
-4.  **データ ソース**ウィンドウで、展開、**顧客**ノード、関連する検索**Orders**ノード (、 **Orders** で入れ子にされたノード**顧客**ノード)。
+4.  **データ ソース**ウィンドウで、展開、**顧客**ノードと、関連する検索**注文**ノード (、**注文**で入れ子になったノード**顧客**ノード)。
 
-5.  関連するドラッグ**Orders**ノードを Form1 にします。
+5.  関連するドラッグ**注文**ノードを Form1 にします。
 
 6.  フォームの空の領域をダブルクリックして、`Form1_Load` イベント ハンドラーを作成します。
 
@@ -357,20 +357,20 @@ n 層アプリケーションで各層を分離する 1 つの方法は、アプ
     northwindDataSet.Orders.Merge(DataSvc.GetOrders());
     ```
 
-## <a name="increasing-the-maximum-message-size-allowed-by-the-service"></a>サービスで許可されるメッセージの最大サイズの増加
-MaxReceivedMessageSize の既定値は、Customers テーブルと Orders テーブルから取得されたデータを保持するのに十分ではありません。 次の手順で 6553600 に値が増加します。 サービス参照を自動的に更新すると、クライアント上の値が変わります。
+## <a name="increase-the-maximum-message-size-allowed-by-the-service"></a>サービスで許可されている最大メッセージ サイズを増やす
+既定値`maxReceivedMessageSize`から取得されたデータを保持するために十分な大きさでない、`Customers`と`Orders`テーブル。 次の手順では、値を 6553600 が増加します。 サービス参照を自動的に更新すると、クライアントで値を変更するとします。
 
 > [!NOTE]
 >  既定のサイズが低く設定されているのは、サービス拒否 (DoS) 攻撃を受けるリスクを低減するためです。 詳細については、「<xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>」を参照してください。
 
-#### <a name="to-increase-the-maxreceivedmessagesize-value"></a>maxReceivedMessageSize 値を増やすには
+### <a name="to-increase-the-maxreceivedmessagesize-value"></a>maxReceivedMessageSize 値を増やすには
 
-1.  **ソリューション エクスプ ローラー**、PresentationTier プロジェクトの app.config ファイルをダブルクリックします。
+1.  **ソリューション エクスプ ローラー**、ダブルクリックして、 **app.config**ファイル、 **PresentationTier**プロジェクト。
 
-2.  検索、 **maxReceivedMessage**サイズ属性に値を変更して`6553600`です。
+2.  検索、 **maxReceivedMessage**サイズ属性を値に変更`6553600`します。
 
-## <a name="testing-the-application"></a>アプリケーションのテスト
-キーを押してアプリケーションを実行**f5 キーを押して**です。 Customers テーブルと Orders テーブルのデータがデータ サービスから取得され、フォームに表示されます。
+## <a name="test-the-application"></a>アプリケーションをテストする
+キーを押してアプリケーションを実行**F5**します。 データ、`Customers`と`Orders`テーブルがデータ サービスから取得され、フォームに表示します。
 
 ## <a name="next-steps"></a>次の手順
  Windows ベース アプリケーションに関連データを保存した後で、アプリケーションの要件によってはさらに操作を追加する必要があります。 たとえば、このアプリケーションに対して次のような拡張を行うことができます。

@@ -1,5 +1,5 @@
 ---
-title: 警告 - 加えられた変更が適用されていない動作の構成 ダイアログ ボックス
+title: 警告 - 適用されていない動作の構成 ダイアログ ボックスの変更が加えられました
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
@@ -10,26 +10,26 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: fa63b567a99d2701078e8f172bda78767e3af2c0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6e23bfe676a8e6852d6bd38bd75a9198ad4bf233
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31923984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174261"
 ---
-# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告: 加えられた変更が適用されていない動作の構成 ダイアログ ボックス
+# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>警告: 変更が加えられましたが適用されていない動作の構成 ダイアログ ボックス
 
 警告: [動作の構成] ダイアログ ボックスで行った変更が適用されていません。 変更を適用しますか?
 
-**動作の構成** ダイアログ ボックスでは、使用可能なすべてのクラスの Insert、Update、および Delete の動作を構成することができます。 新しいを選択すると、このメッセージが表示されます**クラス**と**動作**組み合わせと、前の変更がまだ適用されていません。
+**動作の構成** ダイアログ ボックスでは、構成できます。 `Insert`、 `Update`、および`Delete`使用可能なすべてのクラスの動作。 新しい選択すると、このメッセージが表示されます**クラス**と**動作**と組み合わせ、以前の変更がまだ適用されていません。
 
 ## <a name="to-apply-the-change-and-continue"></a>変更を適用して続行するには
 
-- をクリックして**はい**、選択した変更を適用する**クラス**と**動作**です。
+- をクリックして**はい**に、選択した変更を適用する**クラス**と**動作**します。
 
 ## <a name="to-cancel-the-previous-change-and-continue"></a>前の変更を取り消して続行するには
 
-- をクリックして**いいえ**、選択した変更をキャンセルする**クラス**と**動作**です。
+- クリックして**いいえ**に、選択した変更をキャンセルする**クラス**と**動作**します。
 
 ## <a name="see-also"></a>関連項目
 
