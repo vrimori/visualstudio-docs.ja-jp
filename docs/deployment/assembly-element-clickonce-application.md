@@ -1,5 +1,5 @@
 ---
-title: '&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション) |Microsoft ドキュメント'
+title: '&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c72dd684092784c88b1ef6dd76d410ac9ff84d5
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: fd872053117388e9e08dcb8c4c2bfedcba622fd4
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704224"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077091"
 ---
 # <a name="ltassemblygt-element-clickonce-application"></a>&lt;アセンブリ&gt;要素 (ClickOnce アプリケーション)
-アプリケーション マニフェストの最上位要素です。  
+アプリケーション マニフェストの最上位要素。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
   
       <assembly  
    manifestVersion  
@@ -38,7 +38,7 @@ ms.locfileid: "33704224"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `assembly`要素はルート要素がありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は、次の名前空間のいずれかである必要があります。  
+ `assembly`要素はルート要素でありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は、次の名前空間のいずれかである必要があります。  
   
  `urn:schemas-microsoft-com:asm.v1`  
   
@@ -46,18 +46,18 @@ ms.locfileid: "33704224"
   
  `http://www.w3.org/2000/09/xmldsig#`  
   
- アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもする必要があります。  
+ アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもあります。  
   
- `assembly`要素には、次の属性です。  
+ `assembly`要素には、次の属性。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`manifestVersion`|必須。 `manifestVersion`に属性を設定する必要があります`1.0`です。|  
+|`manifestVersion`|必須。 `manifestVersion`に属性を設定する必要があります`1.0`します。|  
   
 ## <a name="example"></a>例  
- 次のコード例を示しています、`assembly`アプリケーション マニフェストの要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションです。 このコード例に示されている例の一部である[ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)です。  
+ 次のコード例を示しています、`assembly`に対するアプリケーション マニフェスト内の要素を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 このコード例で示されている例の一部は、 [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)します。  
   
-```  
+```xml
 <asmv1:assembly   
   xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"   
   manifestVersion="1.0"   
@@ -73,4 +73,4 @@ ms.locfileid: "33704224"
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)   
- [\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md)
+ [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-deployment.md)

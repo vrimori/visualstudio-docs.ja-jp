@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 83dfee8bc028ff92e01b18d6cb50933b46907354
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 29b6bd8abb99d269a91b2eaf7af8872ab7f41a73
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751424"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845757"
 ---
 # <a name="quickstart-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 
@@ -22,7 +22,7 @@ ms.locfileid: "34751424"
 
  テスト エクスプローラーは、Visual Studio の以前のエディションにあった単体テスト ウィンドウに代わる機能です。 これには次のような利点があります。
 
--   .NET、アンマネージド、データベース、およびその他の種類のテストを 1 つのインターフェイスで実行できます。
+-   .NET、アンマネージ、データベース、およびその他の種類のテストを 1 つのインターフェイスで実行できます。
 
 -   NUnit や MSTest など、任意の単体テスト フレームワークを使用できます。
 
@@ -66,11 +66,11 @@ ms.locfileid: "34751424"
 
 
 > [!NOTE]
-> テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「 [テスト エクスプローラーでさまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。
+> テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)」をご覧ください。
 
 
 ##  <a name="walkthrough"></a> チュートリアル: 単体テストを使用してメソッドを開発する
- このチュートリアルでは、Microsoft 単体テスト フレームワークを使用して、テスト済みメソッドを C# で開発する方法を示します。 他の言語に適合させることも、NUnit など他のテスト フレームワークを使用することも、容易です。 詳細については、「 [さまざまなテスト フレームワークを使用する](#frameworks)」を参照してください。
+ このチュートリアルでは、Microsoft 単体テスト フレームワークを使用して、テスト済みメソッドを C# で開発する方法を示します。 他の言語に適合させることも、NUnit など他のテスト フレームワークを使用することも、容易です。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)」をご覧ください。
 
 #### <a name="creating-the-test-and-method"></a>テストとメソッドを作成する
 
@@ -190,7 +190,7 @@ ms.locfileid: "34751424"
 
 3.  テスト対象のメソッドを調べて、問題点を確認します。 `MyMath.Rooter` クラスで、コードを書き直します。
 
-    ```
+    ```csharp
     public double SquareRoot(double input)
     {
       double result = input;

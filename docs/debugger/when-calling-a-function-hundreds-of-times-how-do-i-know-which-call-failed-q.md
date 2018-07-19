@@ -29,21 +29,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac6edf60616a3cbf67d05282ebd15798749b263f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bdae654dacf7c5965d51cc39f7970bd0347b9dcf
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481737"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056236"
 ---
 # <a name="when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed"></a>ある関数が何回も呼び出される場合、どの呼び出しでエラーが発生するのかを調べるには
 ## <a name="problem-description"></a>問題の説明  
  `CnvtV` という関数を呼び出すとプログラムでエラーが発生します。 プログラムでエラーが発生するまでに、その関数は 200 回から 300 回は呼び出されているようです。 `CnvtV` に位置ブレークポイントを設定すると、この関数を呼び出すたびにプログラムが停止してしまうため、このブレークポイントは使用したくありません。 どのような条件で呼び出しが失敗するのかが不明なため、条件付きブレークポイントは設定できません。 どうしたらいいのでしょうか。  
   
 ## <a name="solution"></a>ソリューション  
- 持つ関数にブレークポイントを設定することができます、**ヒット カウント**フィールドを絶対に到達することが非常に高い値にします。 この場合、関数と思われるため`CnvtV`が呼び出されたいくつか設定することがありますから 300 回は、**ヒット カウント**に 1000 以上です。 その後、プログラムを実行し、エラーが発生するのを待ちます。 エラーが発生したら、[ブレークポイント] ウィンドウを開き、ブレークポイントの一覧を確認します。 `CnvtV` に設定されたブレークポイントは、次のように、後ろにヒット カウントと残りの繰り返し回数が付いた状態で表示されます。  
+ 使用して、関数にブレークポイントを設定することができます、**ヒット カウント**フィールドの値の非常に高いため、絶対に到達することにします。 この場合、関数と思われるため、`CnvtV`いくつかが呼び出されます設定が数百回**ヒット カウント**に 1000 以上。 その後、プログラムを実行し、エラーが発生するのを待ちます。 エラーが発生したら、[ブレークポイント] ウィンドウを開き、ブレークポイントの一覧を確認します。 `CnvtV` に設定されたブレークポイントは、次のように、後ろにヒット カウントと残りの繰り返し回数が付いた状態で表示されます。  
   
-```  
+```cpp
 CnvtV(int) (no condition) when hit count is equal to 1000 (currently 101)  
 ```  
   

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 033eeff34c095b4598a02a386794379d06086450
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 08c8aadb3c452a59f1b44cd030331164384d23bb
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978136"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36758338"
 ---
 # <a name="flowdecision-activity-designer"></a>FlowDecision アクティビティ デザイナー
 
@@ -28,16 +28,18 @@ ms.locfileid: "31978136"
 <xref:System.Activities.Statements.FlowDecision> は、フローを 2 つに分岐できる場合に使用します。 <xref:System.Activities.Statements.FlowDecision> ノードには、<xref:System.Activities.Statements.FlowDecision.Condition%2A> および <xref:System.Activities.Statements.FlowNode> があり、<xref:System.Activities.Statements.FlowDecision.True%2A> または <xref:System.Activities.Statements.FlowDecision.False%2A> という、想定される 2 つの結果のそれぞれに関連付けられています。 <xref:System.Activities.Statements.FlowDecision.Condition%2A> が評価され、この評価の値により、次に <xref:System.Activities.Statements.FlowNode> 内で処理される <xref:System.Activities.Statements.Flowchart> が決定されます。
 
 ### <a name="using-the-flowdecision-designer"></a>FlowDecision デザイナーの使用
- **FlowDecision**デザイナーは含まれて、**フローチャート**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューのまたは CTRL + ALT + X です)。
 
- **FlowDecision**からデザイナーをドラッグすることができます、**ツールボックス**内で、ワークフロー デザイナー画面にドロップし、**フローチャート**アクティビティ デザイナー。 これを作成、<xref:System.Activities.Statements.FlowDecision>というラベルの付いた**デシジョン**内で、<xref:System.Activities.Statements.Flowchart>アクティビティ。 デザイナーでマウスを動かすと、 **True**と**False** 2 つの分岐用の正方形のハンドルが表示されます。
+**FlowDecision**で見つかるデザイナー、**フローチャート**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ。 または、選択**ツールボックス**から、**ビュー**メニューのまたはキーを押して**Ctrl**+**Alt** + **X**します。
 
- ドラッグした後、 **FlowDecision**デザイナーおよびその他のデザイナーを**フローチャート**ノードをリンクする実行の順序を指定するためにします。 送信元ノード間のリンクを作成する (など、 **True**と**False**の分岐、 **FlowDecision**) と移動先のノード、ソース ノードのデザイナーでマウスを動かすその両側に正方形のハンドルが表示されます。 そのハンドルのどちらかをクリックし、マウス ボタンを押したまま、接続先ノードにマウス ポインターを置いたときと同じように表示されるハンドルのどちらかにドラッグします。 マウス ボタンを放すと、これら 2 つのノードの間にリンクが作成されます。このリンクは、接続元デザイナーから接続先デザイナーへの矢印で表されます。
+**FlowDecision**からデザイナーをドラッグすることができます、**ツールボックス**内でワークフロー デザイナー画面にドロップし、**フローチャート**アクティビティ デザイナー。 これを作成、<xref:System.Activities.Statements.FlowDecision>というラベルの付いた**デシジョン**内、<xref:System.Activities.Statements.Flowchart>アクティビティ。 デザイナー上にマウス、 **True**と**False** 2 つの分岐の正方形のハンドルが表示されます。
 
- 示す式、<xref:System.Activities.Statements.FlowDecision.Condition%2A>で入力することができます、**条件**のボックス、**プロパティ**というヒント テキストが「VB の式の入力」を表示 ウィンドウをクリックするとします。
+ドラッグした後、 **FlowDecision**デザイナーおよびその他のデザイナー上に、**フローチャート**ノードをリンクする実行の順序を指定するために。 ソース ノード間のリンクを作成する (など、 **True**と**False**の分岐、 **FlowDecision**) と、ソース ノードのデザイナー上にマウスを移動先のノードその両側に正方形のハンドルが表示されます。 そのハンドルのどちらかをクリックし、マウス ボタンを押したまま、接続先ノードにマウス ポインターを置いたときと同じように表示されるハンドルのどちらかにドラッグします。 マウス ボタンを放すと、これら 2 つのノードの間にリンクが作成されます。このリンクは、接続元デザイナーから接続先デザイナーへの矢印で表されます。
+
+示す式、<xref:System.Activities.Statements.FlowDecision.Condition%2A>で入力することができます、**条件**のボックス、**プロパティ**というヒント テキストが「VB の式を入力」を表示 ウィンドウをクリックします。
 
 ### <a name="the-flowdecision-properties"></a>FlowDecision プロパティ
- 次の表に、<xref:System.Activities.Statements.FlowDecision> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたはデザイナー画面で編集できます。
+
+次の表に、<xref:System.Activities.Statements.FlowDecision> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたはデザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|

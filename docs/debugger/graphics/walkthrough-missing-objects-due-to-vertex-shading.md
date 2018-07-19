@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 頂点の網かけによるオブジェクトの不足 |Microsoft ドキュメント'
+title: 'チュートリアル: 頂点の網かけによるオブジェクトの不足 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b669962fe1a0668b42aec29745072f3451966323
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0bc2ded6217346de3f1633f31a7e03d25f012aa8
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31482010"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36234258"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>チュートリアル: 頂点の網かけによるオブジェクトの不足
 このチュートリアルでは、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断ツールを使用して、頂点シェーダー ステージの間に発生するエラーが原因で欠落しているオブジェクトを調査する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "31482010"
   
  このシナリオでは、テストのためにアプリを実行すると、背景は期待どおりにレンダリングされますが、オブジェクトの 1 つが表示されません。 グラフィックス診断を使うと、問題点をグラフィックス ログにキャプチャし、アプリのデバッグを実行できます。 問題は、アプリケーションでは次のように見えます。  
   
- ![オブジェクトを表示できません。] (media/gfx_diag_demo_missing_object_shader_problem.png "gfx_diag_demo_missing_object_shader_problem")  
+ ![オブジェクトは見えないことができます。] (media/gfx_diag_demo_missing_object_shader_problem.png "gfx_diag_demo_missing_object_shader_problem")  
   
 ## <a name="investigation"></a>調査  
  グラフィックス診断ツールを使うと、グラフィックス ログ ファイルを読み込んで、テスト中にキャプチャされたフレームを検査できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "31482010"
   
 2.  **[フレーム一覧]** で、オブジェクトが表示されないことを示すフレームを選択します。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックス ログのタブは次のように表示されます。  
   
-     ![Visual Studio では、グラフィックス ログ ドキュメント](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")  
+     ![Visual Studio のグラフィックス ログ ドキュメント](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")  
   
  問題を示しているフレームを選んだら、 **[グラフィックス イベント一覧]** を使用して診断を開始できます。 **[グラフィックス イベント一覧]** には、アクティブなフレームをレンダリングするために実行されたすべての Direct3D API 呼び出しが含まれています。たとえば、デバイスの状態の設定、バッファーの作成と更新、フレームに表示するオブジェクトの描画などを行う API 呼び出しです。 アプリが想定どおりに動作しているときは、描画、ディスパッチ、コピー、クリア呼び出しなどのさまざまな種類の呼び出しが関与します。(必ずではありませんが) 多くの場合、対応する変更がレンダー ターゲットで発生するからです。 描画呼び出しは、それぞれがアプリでレンダリングされたジオメトリを表すため、特に重要です (ディスパッチ呼び出しでもジオメトリをレンダリングできます)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "31482010"
   
 4.  表示されないオブジェクトに対応する描画呼び出しに到達したら、停止します。 このシナリオで、 **[グラフィックス パイプライン ステージ]** ウィンドウは、ジオメトリが GPU に発行された (入力アセンブラー サムネイルによって示されます) にもかかわらず、頂点シェーダー ステージで何か問題が発生したためレンダー ターゲットに表示されなかった (頂点シェーダー サムネイルによって示されます) ことを示します。  
   
-     ![DrawIndexed イベントとパイプラインに対するその効果](media/gfx_diag_demo_missing_object_shader_step_2.png "gfx_diag_demo_missing_object_shader_step_2")  
+     ![DrawIndexed イベントと、パイプラインに与える影響](media/gfx_diag_demo_missing_object_shader_step_2.png "gfx_diag_demo_missing_object_shader_step_2")  
   
  表示されないオブジェクトのジオメトリについてアプリによって描画呼び出しが発行され、問題が頂点シェーダー ステージの間に発生したことを確認したら、HLSL デバッガーを使用して頂点シェーダーを調べ、オブジェクトのジオメトリで何が起こったのかを確認できます。 HLSL デバッガーを使用して、実行中の HLSL 変数の状態を調べ、HLSL コードをステップスルーし、ブレークポイントを設定することによって、問題の診断に役立てることができます。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "31482010"
   
 3.  最初に `output` が変更されている部分には、メンバー `worldPos` が書き込まれています。  
   
-     !["Output.worldPos"の値は、](media/gfx_diag_demo_missing_object_shader_step_4.png "gfx_diag_demo_missing_object_shader_step_4")  
+     !["Output.worldPos"の値が妥当な](media/gfx_diag_demo_missing_object_shader_step_4.png "gfx_diag_demo_missing_object_shader_step_4")  
   
      値は適切であるように見えるため、 `output`が変更される次の行までコードをステップスルーします。  
   
 4.  次に `output` が変更されている部分には、メンバー `pos` が書き込まれています。  
   
-     !["Output.pos"の値がゼロに設定されて](media/gfx_diag_demo_missing_object_shader_step_5.png "gfx_diag_demo_missing_object_shader_step_5")  
+     !["Output.pos"の値がゼロ (0) クリアされる](media/gfx_diag_demo_missing_object_shader_step_5.png "gfx_diag_demo_missing_object_shader_step_5")  
   
      今回、 `pos` のメンバーの値はすべてゼロであるため、疑わしいように見えます。 次に、 `output.pos` の値がすべてゼロになった理由を確認します。  
   
@@ -103,12 +103,12 @@ ms.locfileid: "31482010"
   
 2.  アプリのソース コードの呼び出し履歴の上へ移動します。 **[グラフィックス イベント呼び出し履歴]** ウィンドウで、最上位の呼び出しを選んで定数バッファーがそこに指定されているかどうかを確認します。 指定されていない場合、指定されている場所が見つかるまで呼び出し履歴の上へ検索を続けます。 このシナリオでは、 `UpdateSubresource` Direct3D API を使用して、定数バッファーが呼び出し履歴のさらに上にある `MarbleMaze::Render`という名前の関数に指定されていて、その値は `m_marbleConstantBufferData`という名前の定数バッファー オブジェクトから取得されたことがわかります。  
   
-     ![オブジェクトの定数バッファーを設定するコード](media/gfx_diag_demo_missing_object_shader_step_7.png "gfx_diag_demo_missing_object_shader_step_7")  
+     ![オブジェクトの定数バッファーを設定するコードの](media/gfx_diag_demo_missing_object_shader_step_7.png "gfx_diag_demo_missing_object_shader_step_7")  
   
     > [!TIP]
     >  同時にアプリのデバッグを行っている場合、この位置にブレークポイントを設定して次のフレームが表示されるとヒットするようにできます。 これで、定数バッファーが指定されたときに `m_marbleConstantBufferData` のメンバーを調べ、 `projection` メンバーの値がすべてゼロに設定されていることを確認できます。  
   
- 定数バッファーが指定されている場所を確認し、その値が変数 `m_marbleConstantBufferData`から取得されたことがわかったら、次の手順では、 `m_marbleConstantBufferData.projection` メンバーがすべてゼロに設定されている場所を検索します。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
+ 定数バッファーが指定されている場所を検索し、その値が元の変数を検出した後に`m_marbleConstantBufferData`、場所を確認する次の手順では、`m_marbleConstantBufferData.projection`メンバーすべてゼロに設定されます。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
   
 #### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>アプリのソース コード内で projection メンバーが設定されている場所を検索するには  
   
@@ -126,4 +126,4 @@ ms.locfileid: "31482010"
   
  コードを修正したら、それをリビルドし、もう一度アプリを実行してレンダリングの問題が解決されたかどうかを確認します。  
   
- ![現在のオブジェクトが表示されます。] (media/gfx_diag_demo_missing_object_shader_resolution.png "gfx_diag_demo_missing_object_shader_resolution")
+ ![オブジェクトが現在が表示されます。] (media/gfx_diag_demo_missing_object_shader_resolution.png "gfx_diag_demo_missing_object_shader_resolution")

@@ -10,16 +10,16 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f3ab7375db8c3adfe769cf1c344937b60695eb25
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5b6eef41ebd3ae6fc08029a618cf276e22001235
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921141"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116880"
 ---
 # <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>サポートされていないデータベース プロバイダーのデータベース オブジェクトが選択されています
 
-O/R デザイナーは、SQL Server の .NET Framework Data Provider のみをサポートしています (<xref:System.Data.SqlClient>)。 クリックしたり、 **OK**とサポートされないデータベース プロバイダーからオブジェクトの処理は引き続き、実行時に予期しない動作が発生する可能性があります。
+**O/R デザイナー** for SQL Server、.NET Framework Data Provider のみをサポートしています (<xref:System.Data.SqlClient>)。 クリックすることができますが**OK**とサポートされていないデータベース プロバイダーからオブジェクトを使用して、実行時に予期しない動作が発生する可能性があります。
 
 > [!NOTE]
 > .NET Framework Data Provider for SQL Server を使用するデータ接続のみがサポートされます。
@@ -28,11 +28,11 @@ O/R デザイナーは、SQL Server の .NET Framework Data Provider のみを�
 
 - **[OK]** をクリックします。
 
-   サポートされていないデータベース プロバイダーを使用する接続にマップされるエンティティ クラスのデザインを続行することができます。 サポートされないデータベース プロバイダーを使用すると、予期しない動作が発生することがあります。
+   サポートされていないデータベース プロバイダーを使用する接続にマップされるエンティティ クラスのデザインを続行できます。 サポートされないデータベース プロバイダーを使用すると、予期しない動作が発生することがあります。
 
     - または -
 
-- をクリックして**キャンセル**です。
+- クリックして**キャンセル**します。
 
    操作が停止されます。 .NET Framework Provider for SQL Server を使用するデータ接続を作成または使用してください。
 

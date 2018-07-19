@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef060f77a7ac580cb93c93f8e48889b7f19e4fab
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0029dc1599005cfe100bebbf9069dce672dd61b1
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31622056"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282243"
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>応答ファイルの設定を定義する方法
 
@@ -32,7 +32,7 @@ vs_enterprise.exe --in customInstall.json
 
 応答ファイルは、その内容がコマンド ライン引数を反映する [JSON](http://json-schema.org/) ファイルです。  一般的に、コマンド ライン パラメーターが引数を取らない場合 (`--quiet` や `--passive` など)、応答ファイルの値は true/false にしてください。  引数を取る場合 (`--installPath <dir>` など)、応答ファイルの値は文字列にしてください。  引数を取り、コマンド ラインに何回も出てくる場合 (`--add <id>` など)、文字列の配列にしてください。
 
-コマンド ラインで指定されているパラメーターは、パラメーターが複数入力を受け付ける場合 (`--add` など) を除き、応答ファイルの設定を上書きします。 複数入力がある場合、コマンドラインで指定された入力が応答ファイルの設定と結合されます。
+コマンド ラインで指定されているパラメーターは、パラメーターが複数入力を受け付ける場合 (`--add` など) を除き、応答ファイルの設定をオーバーライドします。 複数入力がある場合、コマンドラインで指定された入力が応答ファイルの設定と結合されます。
 
 ## <a name="setting-a-default-configuration-for-visual-studio"></a>Visual Studio の既定構成を設定する
 
@@ -98,7 +98,7 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
 
 ## <a name="get-support"></a>サポートを受ける
 
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
 

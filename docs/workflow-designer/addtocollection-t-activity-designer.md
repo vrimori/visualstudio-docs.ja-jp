@@ -12,26 +12,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b32df48f79d60500cb23a40c5273ceeedfc9c56
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0302ef4c974179619800ece37fa7650ea2b4ebd0
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31976703"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755825"
 ---
 # <a name="addtocollectiont-activity-designer"></a>AddToCollection\<T > アクティビティ デザイナー
 
-**AddToCollection\<T >** アクティビティ デザイナーを使用して作成し、構成、<xref:System.Activities.Statements.AddToCollection%601>アクティビティ。
+**AddToCollection\<T >** 作成および構成するアクティビティ デザイナーが使用される、<xref:System.Activities.Statements.AddToCollection%601>アクティビティ。
 
 ## <a name="the-addtocollectiont-activity"></a>AddToCollection\<T > アクティビティ
 
 <xref:System.Activities.Statements.AddToCollection%601> アクティビティでは、項目をコレクションに追加します。
 
-### <a name="using-the-addtocollectiont-activity-designer"></a>使用して、AddToCollection\<T > アクティビティ デザイナー
+### <a name="using-the-addtocollectiont-activity-designer"></a>AddToCollection を使用して\<T > アクティビティ デザイナー
 
-**AddToCollection\<T >** アクティビティ デザイナーは含まれて、**コレクション**のカテゴリ、**ツールボックス**、 をクリックしてアクセスします。**ツールボックス**、ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
+**AddToCollection\<T >** アクティビティ デザイナーが記載されて、**コレクション**のカテゴリ、**ツールボックス**をクリックしてアクセスします。**ツールボックス**ワークフロー デザイナーのタブ。 または、選択**ツールボックス**から、**ビュー**メニューのまたはキーを押して**Ctrl**+**Alt** + **X**します。
 
-**AddToCollection\<T >** からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを配置しているなど、内に限り、ワークフローデザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>. 削除する、 **AddToCollection\<T >** アクティビティ デザイナーを作成、 <xref:System.Activities.Statements.AddToCollection%601> 、既定値を持つアクティビティ<xref:System.Activities.Activity.DisplayName%2A>の AddToCollection < Int32\>です。 (既定では、 *TypeArgument*は**Int32**です。 TypeArgument は、プロパティ グリッドでします。)<xref:System.Activities.Activity.DisplayName%2A>ヘッダーの値を編集できます、 **AddToCollection < T\>** アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。 他のプロパティは、プロパティ グリッドで編集する必要があります。
+**AddToCollection\<T >** からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**アクティビティを配置して、このような内で任意の場所は、ワークフローデザイナー画面にドロップし、<xref:System.Activities.Statements.Sequence>. 削除、 **AddToCollection\<T >** アクティビティ デザイナーを作成、 <xref:System.Activities.Statements.AddToCollection%601> 、既定値は、アクティビティ<xref:System.Activities.Activity.DisplayName%2A>AddToCollection の < Int32\>します。 (既定で、 *TypeArgument*は**Int32**します。 TypeArgument はプロパティ グリッドでします。)<xref:System.Activities.Activity.DisplayName%2A>のヘッダーに値を編集できる、 **AddToCollection < T\>** アクティビティ デザイナーまたは、 **DisplayName**プロパティ グリッドのボックスです。 他のプロパティは、プロパティ グリッドで編集する必要があります。
 
 ### <a name="the-addtocollectiont-properties"></a>AddToCollection\<T > のプロパティ
 
@@ -39,10 +39,10 @@ ms.locfileid: "31976703"
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.AddToCollection%601> アクティビティの表示名。 既定値は AddToCollection < Int32\>です。 <xref:System.Activities.Activity.DisplayName%2A> 値は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.AddToCollection%601.Item%2A>|True|コレクションに追加する項目\<T > です。 この項目の型は*T*、種類がある*TypeArgument*です。 項目を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
-|<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|True|項目の追加先のコレクション。 このコレクションの型は**ICollection < TypeArgument\>** です。 コレクションを指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
-|*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601> に格納される項目の T 型。 既定では、この*TypeArgument*に設定されている型**Int32**です。 型を変更するには、値を変更、 *TypeArgument*プロパティ グリッドのコンボ ボックスにします。|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.AddToCollection%601> アクティビティの表示名。 既定値は AddToCollection < Int32\>します。 <xref:System.Activities.Activity.DisplayName%2A> 値は必須ではありませんが、使用することをお勧めします。|
+|<xref:System.Activities.Statements.AddToCollection%601.Item%2A>|True|コレクションに追加する項目\<T >。 この項目の種類は*T*、型の*TypeArgument*します。 項目を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
+|<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|True|項目の追加先のコレクション。 このコレクションは、型の**ICollection < TypeArgument\>** します。 コレクションを指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
+|*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601> に格納される項目の T 型。 既定では、この*TypeArgument*に設定されている型**Int32**します。 型を変更するには、値を変更、 *TypeArgument*プロパティ グリッドでコンボ ボックス。|
 
 ## <a name="see-also"></a>関連項目
 

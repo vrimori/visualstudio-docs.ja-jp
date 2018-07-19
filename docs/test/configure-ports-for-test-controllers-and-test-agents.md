@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのテスト コントローラーおよびテスト エージェント用のポートの構成 | Microsoft Docs
+title: Visual Studio でのテスト コントローラーおよびテスト エージェント用のポートの構成
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,14 @@ ms.assetid: 211edbd7-9fe4-4251-ba85-8bec4363261b
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5ae620904929f6e2da5c727751e46fe9d0874276
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f41e372f6c75e10ebf4d66fcd68eb4652b02f0f
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297597"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>テスト コントローラーおよびテスト エージェント用のポートの構成
 
@@ -32,22 +34,22 @@ ms.lasthandoff: 04/16/2018
 
 テスト コントローラーが使用する既定のポートは 6901 で、テスト エージェントの既定のポートは 6910 です。 クライアントは既定ではランダムなポートを使用して、テスト コントローラーからのテスト結果を受信します。 すべての着信接続に対して、テスト コントローラーは呼び出しを行っているパーティを認証し、そのパーティが特定のセキュリティ グループに所属しているかを検証します。
 
-- **テスト コントローラー** 着信接続は TCP ポート 6901 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+- **テスト コントローラー** 着信接続は TCP ポート 6901 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの構成](#configure-the-incoming-ports)」をご覧ください。
 
     テスト コントローラーは、テスト エージェントとクライアントに対して発信接続できる必要があります。
 
     > [!NOTE]
     > テスト コントローラーでは、着信である **[ファイルとプリンターの共有]** 接続が開いていることが必要です。
 
-- **テスト エージェント** 着信接続は TCP ポート 6910 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+- **テスト エージェント** 着信接続は TCP ポート 6910 で行われます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの構成](#configure-the-incoming-ports)」をご覧ください。
 
    テスト エージェントは、テスト コントローラーに対して発信接続できる必要があります。
 
-- **クライアント** 既定では、着信接続に対してランダム TCP ポートが使用されます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの設定](#ConfigurePorts)」を参照してください。
+- **クライアント** 既定では、着信接続に対してランダム TCP ポートが使用されます。 必要に応じて着信ポートを設定することができます。 詳細については、「[着信ポートの構成](#configure-the-incoming-ports)」をご覧ください。
 
    テスト コントローラーがクライアントに初めて接続しようとするとき、ファイアウォールの通知を受け取る場合があります。
 
-   Windows Server 2008 では既定でファイアウォールの通知は無効になっていますが、着信接続を受け取ることができるように、クライアント プログラム (devenv.exe、mstest.exe、 mlm.exe) に対するファイアウォールの例外を手動で追加する必要があります。
+   Windows Server 2008 のファイアウォールの通知は既定で無効になっています。着信接続を受け取ることができるように、クライアント プログラム (*devenv.exe*、*mstest.exe*、*mlm.exe*) に対するファイアウォールの例外を手動で追加する必要があります。
 
 ## <a name="outgoing-connections"></a>発信接続
 
@@ -63,7 +65,7 @@ ms.lasthandoff: 04/16/2018
 
 テスト コントローラーおよびテスト エージェントのポートを設定するには、次の手順に従います。
 
-- **コントローラー サービス** %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config ファイルを編集してポートの値を変更します。
+- **コントローラー サービス** *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config* ファイルを編集してポートの値を変更します。
 
     ```xml
     <appSettings>
@@ -71,7 +73,7 @@ ms.lasthandoff: 04/16/2018
     </appSettings>
     ```
 
-- **エージェント サービス** %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config ファイルを編集してポートを変更します。
+- **エージェント サービス** *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config* ファイルを編集してポートを変更します。
 
     ```xml
     <appSettings>
@@ -79,11 +81,11 @@ ms.lasthandoff: 04/16/2018
     </appSettings>
     ```
 
-- **クライアント** レジストリ エディターを使用して次のレジストリ (ダブルワード) 値を追加します。 クライアントは指定した範囲のポートの 1 つを使用して、テスト コントローラーからのデータを受信します。
+- **クライアント** レジストリ エディターを使用して次のレジストリ (**ダブルワード**) 値を追加します。 クライアントは指定した範囲のポートの 1 つを使用して、テスト コントローラーからのデータを受信します。
 
-     HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart
+     **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 
-     HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd
+     **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeEnd**
 
 ## <a name="see-also"></a>関連項目
 

@@ -12,38 +12,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 24d319af36b5d07661213edb3cff48d376bd3736
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8b210b5e0d3d0f3638e78331d9db093f7e86079e
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977537"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117174"
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation アクティビティ デザイナー
 
-**InitializeCorrelation**アクティビティ デザイナーを使用して作成し、構成、<xref:System.ServiceModel.Activities.InitializeCorrelation>送信または受信する前にメッセージ間の相関関係を確立するために使用されるアクティビティ。
+**InitializeCorrelation**作成および構成するアクティビティ デザイナーが使用される、<xref:System.ServiceModel.Activities.InitializeCorrelation>アクティビティ。 <xref:System.ServiceModel.Activities.InitializeCorrelation>アクティビティが送信または受信する前に、メッセージ間の相関関係を確立します。
 
 ## <a name="the-initializecorrelation-activity"></a>InitializeCorrelation アクティビティ
 
 <xref:System.ServiceModel.Activities.InitializeCorrelation> アクティビティを使用すると、メッセージが送受信されずに関連付けが初期化されます。 通常、関連付けはメッセージを送受信するときに初期化されます。 メッセージを送受信する前に関連付けを確立する必要がある場合は、<xref:System.ServiceModel.Activities.InitializeCorrelation> を使用して関連付けを初期化できます。
 
 ### <a name="using-the-initializecorrelation-activity-designer"></a>InitializeCorrelation アクティビティ デザイナーの使用
- **InitializeCorrelation**アクティビティ デザイナーは含まれて、**メッセージング**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**ワークフロー デザイナーのタブ (または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X です)。
 
- **InitializeCorrelation**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**し、ワークフロー デザイナー画面にドロップします。 これを作成、 <xref:System.ServiceModel.Activities.InitializeCorrelation> 、既定値を持つアクティビティ<xref:System.Activities.Activity.DisplayName%2A>InitializeCorrelation.The の<xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InitializeCorrelation**アクティビティ デザイナーまたは、 **DisplayName**のボックス、**プロパティ**ウィンドウです。
+アクセス、 **InitializeCorrelation**内のアクティビティ デザイナー、**メッセージング**のカテゴリ、**ツールボックス**します。
 
- <xref:System.ServiceModel.Activities.CorrelationHandle>できますでを指定します、**相関**フィールドに**プロパティ**上のウィンドウ、 **InitializeCorrelation**アクティビティ デザイナー画面。
+**InitializeCorrelation**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**し、ワークフロー デザイナー画面にドロップします。 アクティビティ デザイナーをドロップを作成、 <xref:System.ServiceModel.Activities.InitializeCorrelation> 、既定値は、アクティビティ<xref:System.Activities.Activity.DisplayName%2A>InitializeCorrelation の。 <xref:System.Activities.Activity.DisplayName%2A>のヘッダーで編集できる、 **InitializeCorrelation**アクティビティ デザイナーまたは、 **DisplayName**のボックス、**プロパティ**ウィンドウ。
 
- 他の省略記号ボタンをクリックすると、 **CorrelationData**フィールドに**プロパティ**ウィンドウまたは上の「表示…」ヒント テキスト**InitializeCorrelation**アクティビティ デザイナー画面が表示されます、**関連付けの初期化** ダイアログ ボックスの関連付けハンドルとそれを初期化するために使用されるキー/値ペアを指定できます。 このダイアログ ボックスの使用に関する詳細については、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピックです。
+<xref:System.ServiceModel.Activities.CorrelationHandle>できますでを指定します、**相関**フィールドに**プロパティ**上のウィンドウ、 **InitializeCorrelation**アクティビティ デザイナー画面。
+
+表示する、**関連付けの初期化**関連付けハンドルとそれを初期化するために使用するキー/値ペア横にある省略記号ボタンを選択を指定 ダイアログ ボックス、 **CorrelationData**フィールドに**プロパティ**ウィンドウ。 または、「表示…」ヒント テキストを選択、 **InitializeCorrelation**アクティビティ デザイナー画面。 このダイアログ ボックスの使用に関する詳細については、次を参照してください。、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)記事。
 
 ### <a name="the-initializecorrelation-properties"></a>InitializeCorrelation プロパティ
- 次の表に、<xref:System.ServiceModel.Activities.InitializeCorrelation> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティを編集できます**プロパティ**ウィンドウまたはワークフロー デザイナー画面にします。
+
+次の表は、<xref:System.ServiceModel.Activities.InitializeCorrelation>プロパティと、デザイナーでの使用方法について説明します。 これらのプロパティを編集できます**プロパティ**ウィンドウまたはワークフロー デザイナー画面。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.ServiceModel.Activities.InitializeCorrelation> アクティビティの表示名。 既定値は InitializeCorrelation です。<br /><br /> 既定値以外の <xref:System.Activities.Activity.DisplayName%2A> の使用は必須ではありませんが、使用することをお勧めします。|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.ServiceModel.Activities.InitializeCorrelation> アクティビティの表示名。 既定値は InitializeCorrelation です。<br /><br /> ですが、わかりやすい既定以外の値の使用<xref:System.Activities.Activity.DisplayName%2A>は厳密に必要ありませんをお勧めします。|
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|False|関連付け内のワークフロー アクティビティを関連付けるために使用される <xref:System.ServiceModel.Activities.CorrelationHandle>。|
-|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|False|メッセージをワークフロー インスタンスに関連付ける、関連付けデータのディクショナリ。<br /><br /> 使用して、**関連付けの初期化**を構成するダイアログ ボックス、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>です。 使用の詳細についてはこのダイアログ ボックスを参照してください、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)トピックです。|
+|<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|False|メッセージをワークフロー インスタンスに関連付ける、関連付けデータのディクショナリ。<br /><br /> 使用して、**関連付けの初期化**を構成するダイアログ ボックス、<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>します。 使用の詳細についてはこのダイアログ ボックスを参照してください、[型コレクション エディター ダイアログ ボックス](../workflow-designer/type-collection-editor-dialog-box.md)記事。|
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: プロジェクト出力参照の追加 |Microsoft ドキュメント'
+title: '方法: プロジェクト出力参照の追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,35 +19,35 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 97bfe044ef89691afdb1a8e845867ce2e177dbb9
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 47b6a3d164bbe1ddcda6d131275427fb1f815198
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34767963"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755478"
 ---
-# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照の追加
-  以外の SharePoint プロジェクトのアセンブリ (または Silverlight プロジェクトでの .xap ファイル) を SharePoint を展開するには、それらをプロジェクト出力参照として追加します。  
+# <a name="how-to-add-a-project-output-reference"></a>方法: プロジェクト出力参照を追加
+  SharePoint 以外のプロジェクト アセンブリ (または Silverlight プロジェクトの .xap ファイル) を SharePoint に展開するには、それらをプロジェクト出力参照として追加します。  
   
- このプロセスでは、2 つのプロジェクト間ソリューション ビルドの依存関係を作成します。 SharePoint プロジェクトをビルドおよび配置する前に、プロジェクト出力参照に関連付けられているプロジェクトが構築されます。  
+ このプロセスは、2 つのプロジェクト間ソリューション ビルドの依存関係を作成します。 SharePoint プロジェクトをビルドおよび配置する前に、プロジェクト出力参照に関連付けられているプロジェクトが構築されます。  
   
 ### <a name="to-add-a-project-output-reference"></a>プロジェクト出力参照を追加するには
   
-1.  少なくとも 1 つの SharePoint プロジェクトと 1 つ以外の SharePoint プロジェクトを含むソリューションを読み込みます。  
+1.  少なくとも 1 つの SharePoint プロジェクトと 1 つの SharePoint 以外のプロジェクトを含むソリューションを読み込みます。  
   
-2.  **ソリューション エクスプ ローラー**項目、SharePoint プロジェクト ノードを選択します。  
+2.  **ソリューション エクスプ ローラー**、SharePoint プロジェクト ノードから項目をクリックします。  
   
-3.  **プロパティ**ウィンドウで、選択、**プロジェクト出力参照**プロパティを選択し、省略記号 (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP です。NET モバイル デザイナー楕円")) ボタンをクリックします。  
+3.  **プロパティ**ウィンドウで、選択、**プロジェクト出力参照**プロパティ、省略記号を選択し (![ASP.NET モバイル デザイナー楕円](../sharepoint/media/mwellipsis.gif "ASP します。NET モバイル デザイナー楕円")) ボタンをクリックします。  
   
 4.  **プロジェクト出力参照** ダイアログ ボックスで、選択、**追加**ボタンをクリックします。  
   
-5.  プロパティ ウィンドウを選択 の横に矢印、**展開の種類**プロパティ以外の SharePoint アイテムを参照しているなどの適切な値を選択し**ElementFile**です。  
+5.  プロパティ ペインでに横に矢印を選択、**展開の種類**プロパティなど、参照は、SharePoint 以外の項目に対して適切な値を選択し、 **ElementFile**します。  
   
-6.  横の矢印を選択**プロジェクト名**、以外の SharePoint プロジェクト項目の名前を選択し、、 **OK**ボタンをクリックします。  
+6.  横にある矢印を選択**プロジェクト名**、非 SharePoint プロジェクト項目の名前を選択し、、 **OK**ボタンをクリックします。  
   
 ## <a name="see-also"></a>関連項目
- [パッケージとプロジェクト アイテムの展開情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
- [方法: 安全なコントロールとしてマークの制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
- [SharePoint ソリューションのパッケージ化と配置](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
+ [プロジェクト項目でパッケージ化と配置の情報を提供します。](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
+ [方法: 安全なコントロールとしてマークを制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
+ [パッケージ化し、SharePoint ソリューションのデプロイ](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

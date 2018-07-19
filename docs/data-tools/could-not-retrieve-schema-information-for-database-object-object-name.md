@@ -1,5 +1,5 @@
 ---
-title: データベース オブジェクトのスキーマ情報を取得できませんでした。
+title: データベース オブジェクトのスキーマ情報を取得できませんでした
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: a1c8f833-c918-4a86-9679-d2a791f938a9
@@ -10,18 +10,18 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 30536dae7e0da76f0252240b98f1ed5af5f28916
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c342b738269acbb4b2b089fc8e33a0fe9dc770dd
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920298"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36758284"
 ---
 # <a name="could-not-retrieve-schema-information-for-database-object-object-name"></a>データベース オブジェクトのスキーマ情報を取得できませんでした\<オブジェクト名 >
 
-このメッセージが表示されるは通常のオブジェクト**サーバー エクスプ ローラー/データベース エクスプ ローラー**クリップボードにコピー、データベースから削除、デザイナーに貼り付けたです。 データベース オブジェクトはもう存在しないので、このメッセージが表示されます。
+このメッセージが表示されるは通常のオブジェクトと**サーバー エクスプ ローラー**または**データベース エクスプ ローラー**がクリップボードにコピー、データベースから削除し、デザイナーに貼り付けたおよびします。 データベース オブジェクトはもう存在しないので、このメッセージが表示されます。
 
-このエラーを解決するには選択**OK**  ダイアログ ボックスを閉じます。
+このエラーを修正するには、選択**OK**ダイアログ ボックスを閉じます。
 
 ## <a name="see-also"></a>関連項目
 

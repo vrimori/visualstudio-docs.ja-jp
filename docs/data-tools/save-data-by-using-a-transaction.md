@@ -18,35 +18,35 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f4c865dcf55f8796748308822b8a6dde5f96ef8e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1c5d8d9f961db7c6560f1dd7a73f2ea62a974bac
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174219"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>方法: トランザクションを使用してデータを保存
-使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>を自動的に管理されているトランザクションに参加するオブジェクト。
+使用して、トランザクションでデータを保存する、<xref:System.Transactions>名前空間。 使用して、<xref:System.Transactions.TransactionScope>オブジェクトが自動的に管理されているトランザクションに参加します。
 
-トランザクションを使用するプロジェクトへの参照を手動で追加する必要があるために、System.Transactions アセンブリへの参照ではプロジェクトは作成されません。
+参照を含むプロジェクトは作成されません、 *System.Transactions*アセンブリ、手動でトランザクションを使用するプロジェクトへの参照を追加する必要があるようにします。
 
-トランザクションを実装する最も簡単な方法がインスタンスを作成するには、<xref:System.Transactions.TransactionScope>内のオブジェクト、`using`ステートメントです。 (詳細については、次を参照してください[Using ステートメント](/dotnet/visual-basic/language-reference/statements/using-statement)、および[ステートメントを使用して](/dotnet/csharp/language-reference/keywords/using-statement)。)。内で実行されるコード、`using`ステートメントが、トランザクションに参加します。
+トランザクションを実装する最も簡単な方法がインスタンス化するには、<xref:System.Transactions.TransactionScope>オブジェクト、`using`ステートメント。 (詳細については、次を参照してください[ステートメントを使用して](/dotnet/visual-basic/language-reference/statements/using-statement)、および[ステートメントを使用して](/dotnet/csharp/language-reference/keywords/using-statement)。)。内で実行されるコード、`using`ステートメントがトランザクションに参加します。
 
-トランザクションをコミットするには、呼び出し、<xref:System.Transactions.TransactionScope.Complete%2A>メソッドを使用して、最後のステートメントとしてをブロックします。
+トランザクションをコミットするには、呼び出し、<xref:System.Transactions.TransactionScope.Complete%2A>メソッドを使用して、最後のステートメントをブロックします。
 
-トランザクションをロールバックしてを呼び出す前に例外をスロー、<xref:System.Transactions.TransactionScope.Complete%2A>メソッドです。
+トランザクションをロールバックするには、呼び出す前に例外をスロー、<xref:System.Transactions.TransactionScope.Complete%2A>メソッド。
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll への参照を追加するには
 
-1.  **プロジェクト**メニューの **参照の追加**です。
+1.  **プロジェクト**メニューの **参照の追加**します。
 
-2.  **.NET**  タブ (**SQL Server**プロジェクトの SQL Server タブ) を選択**System.Transactions**、し、 **OK**です。
+2.  **.NET**  タブ (**SQL Server**の SQL Server プロジェクト タブ) を選択します**System.Transactions**、し、 **OK**。
 
-     System.Transactions.dll への参照がプロジェクトに追加されます。
+     参照を*System.Transactions.dll*プロジェクトに追加されます。
 
 ## <a name="to-save-data-in-a-transaction"></a>トランザクションでデータを保存するには
 
--   使用して、内のデータを保存するコードを追加トランザクションを含むステートメント。 次のコードを作成およびインスタンス化する方法を示しています、<xref:System.Transactions.TransactionScope>オブジェクトを使用して、ステートメント。
+-   使用して、データを保存するコードを追加するが、トランザクションを含むステートメント。 次のコードを作成し、インスタンス化する方法を示しています、<xref:System.Transactions.TransactionScope>オブジェクトを使用して、ステートメント。
 
      [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]

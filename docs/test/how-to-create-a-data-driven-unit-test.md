@@ -1,6 +1,7 @@
 ---
-title: '方法: Visual Studio でデータ ドリブン単体テストを作成する | Microsoft Docs'
+title: '方法: Visual Studio でデータ ドリブン単体テストを作成する'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 f1_keywords:
@@ -15,15 +16,16 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 4e243afbdd5df41cf3b4716cafd7c82f5d4f7984
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8811d2c9b1d27a2a436004da29711a7a4e34f55
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117597"
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>方法: データ ドリブン単体テストを作成する
 
-マネージ コード用の Microsoft の単体テスト フレームワークを使用して、データ ソースからテスト メソッドで使用される値を取得するための単体テスト メソッドを設定できます。 メソッドはデータ ソース内の各行に対して連続して実行されるため、単一のメソッドを使用してさまざまな入力を簡単にテストできます。
+マネージド コード用の Microsoft の単体テスト フレームワークを使用して、データ ソースからテスト メソッドで使用される値を取得するための単体テスト メソッドを設定できます。 メソッドはデータ ソース内の各行に対して連続して実行されるため、単一のメソッドを使用してさまざまな入力を簡単にテストできます。
 
 データ ドリブン単体テストの作成には、次の手順が含まれます。
 
@@ -112,13 +114,13 @@ public void AddIntegers_FromDataSourceTest()
 ###  <a name="BKMK_Specifying_the_DataSourceAttribute"></a> DataSourceAttribute の指定
  `DataSource` 属性は、データ ソースの接続文字列とテスト メソッドで使用するテーブル名を指定します。 接続文字列の正確な情報は、使用しているデータ ソースの種類によって異なります。 この例では、SqlServerCe データベースを使用しました。
 
-```
+```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]
 ```
 
 DataSource 属性には 3 つのコンストラクターがあります。
 
-```
+```csharp
 [DataSource(dataSourceSettingName)]
 ```
 
@@ -126,7 +128,7 @@ DataSource 属性には 3 つのコンストラクターがあります。
 
  app.config ファイルを使用すると、単体テスト自体に変更を加えずに、データ ソースの場所を変更できます。 app.config ファイルの作成と使用方法については、「[チュートリアル : データ ソースを定義するための構成ファイルの使用](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)」を参照してください
 
-```
+```csharp
 [DataSource(connectionString, tableName)]
 ```
 
@@ -134,7 +136,7 @@ DataSource 属性には 3 つのコンストラクターがあります。
 
  接続文字列は、データ ソースの種類によって異なりますが、データ プロバイダーの不変名を指定する Provider 要素を含んでいる必要があります。
 
-```
+```csharp
 [DataSource(
     dataProvider,
     connectionString,
@@ -151,7 +153,7 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```
 
 ##  <a name="BKMK_Running_the_test_and_viewing_results"></a>テストの実行と結果の表示
- テスト メソッドの記述が完了したら、テスト プロジェクトを構築します。 **[テストを実行しない]** グループのテスト エクスプローラー ウィンドウに、テスト メソッドが表示されます。 テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、**[成功したテスト]**、および **[テストを実行しない]** のグループの結果が表示されます。 **[すべて実行]** を選択してテストをすべて実行することも、**[実行...]** を選択して実行するテストのサブセットを選択することもできます。
+ テスト メソッドの記述が完了したら、テスト プロジェクトを構築します。 **[テストを実行しない]** グループのテスト エクスプローラー ウィンドウに、テスト メソッドが表示されます。 テストを実行して、記述し、再実行すると、テスト エクスプローラーに **[失敗したテスト]**、**[成功したテスト]**、および **[テストを実行しない]** のグループの結果が表示されます。 **[すべて実行]** を選択してテストをすべて実行することも、 **[実行]** を選択してテストのサブセットを実行することもできます。
 
  テストの実行中は、エクスプローラーの上部にあるテスト結果バーがアニメーションで表示されます。 テストの実行の終了時に、すべてのテストが成功した場合はバーが緑色になり、いずれかのテストが失敗した場合は赤色になります。 テスト エクスプローラー ウィンドウの下部の詳細ウィンドウに、テストの実行の概要が表示されます。 テストを選択すると、そのテストの詳細が下部のペインに表示されます。
 
@@ -167,4 +169,5 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>
 - [コードの単体テスト](../test/unit-test-your-code.md)
 - [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)
-- [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+- 
+  [マネージド コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)

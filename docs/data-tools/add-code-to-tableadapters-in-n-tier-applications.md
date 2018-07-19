@@ -1,5 +1,5 @@
 ---
-title: N 層アプリケーションの TableAdapters にコードを追加します。
+title: n 層アプリケーションの TableAdapters にコードを追加する
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,38 +16,39 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 70c889f6cccd5605758dce05b2a0c4d405aa6714
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e5a9aad4aaecb629f5860fadf56e35a55455be63
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38783091"
 ---
-# <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N 層アプリケーションの TableAdapters にコードを追加します。
-TableAdapter の部分クラス ファイルを作成し、コードを追加して、TableAdapter の機能を拡張することができます (コードを追加するのではなく、 *DatasetName*です。DataSet.Designer ファイル) です。 部分クラスでは、コードを複数の物理ファイルに分割する特定のクラスを有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[partial (型)](/dotnet/csharp/language-reference/keywords/partial-type)です。
+# <a name="add-code-to-tableadapters-in-n-tier-applications"></a>n 層アプリケーションの TableAdapters にコードを追加する
+TableAdapter の部分クラス ファイルを作成し、コードを追加して、TableAdapter の機能を拡張することができます (コードを追加するのではなく、 *DatasetName.DataSet.Designer*ファイル)。 部分クラスには、特定のクラスを複数の物理ファイルに分割するためのコードが有効にします。 詳細については、次を参照してください。[部分](/dotnet/visual-basic/language-reference/modifiers/partial)または[partial (型)](/dotnet/csharp/language-reference/keywords/partial-type)します。
 
-データセットに TableAdapter を変更するたびに、TableAdapter を定義するコードが生成されます。 このコードは、TableAdapter の構成を変更するウィザードの実行中に変更が加えられても生成されます。 コードが、TableAdapter の再生時に削除されないようにするには、TableAdapter の部分クラス ファイルにコードを追加します。
+データセットに TableAdapter を変更するたびに、TableAdapter を定義するコードが生成されます。 このコードは、TableAdapter の構成を変更するウィザードの実行中に変更されたときにも生成されます。 コードが、TableAdapter の再生成中に削除されないようにするには、TableAdapter の部分クラス ファイルにコードを追加します。
 
-既定では、データセットと TableAdapter のコードを分離する、結果は、プロジェクトごとに別個のクラス ファイルです。 元のプロジェクトがという名前のファイル*DatasetName*です。(または*DatasetName*です。Designer.cs) TableAdapter のコードを含むです。 指定されているプロジェクト、 **Dataset プロジェクト**プロパティという名前のファイルは、 *DatasetName*です。DataSet.Designer.vb (または*DatasetName*です。DataSet.Designer.cs)、データセット コードを格納しています。
-
-> [!NOTE]
->  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、手動でデータセット プロジェクトに移動する必要があります。
+既定では、データセットと TableAdapter コードを分離したら、結果はプロジェクトごとに別個のクラス ファイルが。 元のプロジェクトにという名前のファイル*DatasetName.Designer.vb* (または*DatasetName.Designer.cs*) TableAdapter コードを格納しています。 指定されているプロジェクト、 **Dataset プロジェクト**プロパティという名前のファイルは、 *DatasetName.DataSet.Designer.vb* (または*DatasetName.DataSet.Designer.cs*) します。データセット コードが含まれています。
 
 > [!NOTE]
-> データセットを生成するための機能を提供する<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>検証が必要なときにイベント ハンドラー。 詳細については、次を参照してください。 [n 層データセットに検証を追加](../data-tools/add-validation-to-an-n-tier-dataset.md)です。
+>  データセットと Tableadapter を分離する場合 (設定して、 **DataSet プロジェクト**プロパティ)、プロジェクト内の既存のデータセット部分クラスが自動的に移動されません。 既存のデータセット部分クラスは、データセット プロジェクトに手動で移動する必要があります。
+
+> [!NOTE]
+> データセットを生成するための機能を提供する<xref:System.Data.DataTable.ColumnChanging>と<xref:System.Data.DataTable.RowChanging>検証が必要なときにイベント ハンドラー。 詳細については、次を参照してください。 [n 層データセットに検証を追加](../data-tools/add-validation-to-an-n-tier-dataset.md)します。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="to-add-user-code-to-a-tableadapter-in-an-n-tier-application"></a>N 層アプリケーションの TableAdapter にユーザー コードを追加するには
+## <a name="to-add-user-code-to-a-tableadapter-in-an-n-tier-application"></a>N 層アプリケーションでの TableAdapter にユーザー コードを追加するには
 
-1.  .Xsd ファイルを含むプロジェクトを見つけます。
+1.  含むプロジェクトを見つけ、 *.xsd*ファイル。
 
-2.  ダブルクリックして、 **.xsd**ファイルを開くには、**データセット デザイナー**です。
+2.  ダブルクリックして、 *.xsd*ファイルを開く、**データセット デザイナー**します。
 
-3.  コードを追加し、選択する TableAdapter を右クリックして**コードの表示**です。
+3.  コードを追加し、選択する TableAdapter を右クリックして**コードの表示**します。
 
      部分クラスが作成され、コード エディターで開きます。
 
-4.  部分クラス宣言内のコードを追加します。
+4.  部分クラス宣言内でコードを追加します。
 
 5.  次の例では、コードを追加する場所、`CustomersTableAdapter`で、 `NorthwindDataSet`:
 
@@ -68,7 +69,7 @@ TableAdapter の部分クラス ファイルを作成し、コードを追加し
 
 ## <a name="see-also"></a>関連項目
 
-- [n 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
+- [N 層データ アプリケーションの概要](../data-tools/n-tier-data-applications-overview.md)
 - [n 層アプリケーションのデータセットにコードを追加する](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
-- [作成し、Tableadapter を構成します。](create-and-configure-tableadapters.md)
+- [Tableadapter の作成および構成](create-and-configure-tableadapters.md)
 - [階層更新の概要](hierarchical-update.md)

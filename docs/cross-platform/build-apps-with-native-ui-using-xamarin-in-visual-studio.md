@@ -10,12 +10,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: a46ab4db647c60f451ae2f9d5c9d68e654de7084
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 1b70ea2cc12530065b2a297e54ff494bcc765c9c
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747431"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36757254"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 
@@ -50,7 +50,7 @@ ms.locfileid: "34747431"
 >  -   ネイティブ UI を使用した Xamarin アプリ:
 >     -   [Hello, Android](/xamarin/android/get-started/hello-android/) (1 つの画面を使用した簡単なアプリ)
 >     -   [Hello, Android マルチスクリーン](/xamarin/android/get-started/hello-android-multiscreen/) (画面間でナビゲーションを使用したアプリ)
->     -   [Android フラグメント チュートリアル](/xamarin/android/platform/fragments/fragments/implementing-with-fragments/walkthrough/) (特に、マスター/詳細画面で使用)
+>     -   [Android フラグメント チュートリアル](/xamarin/android/platform/fragments/implementing-with-fragments/) (特に、マスター/詳細画面で使用)
 >     -   [Hello, iOS](/xamarin/ios/get-started/hello-iOS/)
 >     -   [Hello, iOS マルチスクリーン](/xamarin/ios/get-started/hello-iOS-multiscreen/)
 

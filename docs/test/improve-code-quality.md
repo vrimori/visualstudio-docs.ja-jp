@@ -12,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d0312b3aaffb12757466b11aa117170387f01c19
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 68bed424da371fa2c959b906e029942314fef3c4
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967222"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36281616"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Visual Studio のテスト ツール
 
@@ -25,7 +25,8 @@ Visual Studio のテスト ツールを使用することで、チームと共�
 
 - **テスト エクスプローラー** ウィンドウを使用すると、開発の手法において[単体テスト](../test/unit-test-your-code.md)を容易に統合できるようになります。 Microsoft 単体テスト フレームワークまたは複数のサードパーティ フレームワークやオープン ソース フレームワークの 1 つを使用できます。
 
-- [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) は、マネージ コードの単体テストとテスト データを自動生成します。
+- 
+  [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) は、マネージド コードの単体テストとテスト データを自動生成します。
 
 - [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)は、プロジェクトのコードの中で、単体テストなどのコード化されたテストによって実際にテストされる割合を判断します。
 
@@ -38,7 +39,7 @@ Visual Studio のテスト ツールを使用することで、チームと共�
 - [ロード テスト](../test/quickstart-create-a-load-test-project.md)では、単体テストと Web パフォーマンス テストを実行することでサーバー アプリケーションの負荷をシミュレーションします。
 
 > [!NOTE]
-> 単体テストは、Visual Studio のすべてのエディションで使用できます。 ライブ単体テスト、IntelliTest、Coded UI テストなど、その他のテスト ツールは Visual Studio Enterprise エディションでのみ使用できます。 エディションの詳細については、「[Visual Studio 2017 IDE の比較](https://www.visualstudio.com/vs/compare/)」を参照してください。
+> 単体テストは、Visual Studio のすべてのエディションで使用できます。 ライブ単体テスト、IntelliTest、Coded UI テストなど、その他のテスト ツールは Visual Studio Enterprise エディションでのみ使用できます。 エディションの詳細については、「[Visual Studio 2017 IDE の比較](https://visualstudio.microsoft.com/vs/compare/)」を参照してください。
 
 ## <a name="related-scenarios"></a>関連するシナリオ
 

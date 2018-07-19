@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d018b26f2df32b9e3cc1e3fae65ec8b3d3394806
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 26c561c259641ce7bed118d8e4aa71c383b29b67
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31570081"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36327012"
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise 要素 (MSBuild)
 すべての `When` 要素が `false` と評価された場合にのみ実行するコード ブロックを指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "31570081"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <Otherwise>  
     <PropertyGroup>... </PropertyGroup>  
     <ItemGroup>... </ItemGroup>  

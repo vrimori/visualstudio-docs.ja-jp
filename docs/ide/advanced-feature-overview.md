@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e50bd5231387261e56a62234858d10c3806de3dc
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: a60e340639a023adf50b739870035c0b81a82643
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34694084"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282526"
 ---
 # <a name="features-of-visual-studio-2017"></a>Visual Studio 2017 の機能
 
@@ -24,7 +24,7 @@ Visual Studio の基礎についてはトピック「[Visual Studio IDE の概�
 
 Visual Studio のモジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 この方法により、Visual Studio のインストールのフットプリントが小さくなり、インストールと更新に要する時間が短縮されました。
 
-Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 お使いのシステムに Visual Studio をセットアップする方法について詳しくは、「[Visual Studio 2017 のインストール](../install/install-visual-studio.md)」をご覧ください。
 
@@ -52,17 +52,17 @@ Visual Studio の [Cloud Explorer](/azure/vs-azure-tools-resources-managing-with
 
 ![Visual Studio の接続済みサービス](media/connected-services.png)
 
-詳細については、[Visual Studio および Azure を使用したクラウドへの移行](https://www.visualstudio.com/vs/azure-tools/)に関するページを参照してください。
+詳細については、[Visual Studio および Azure を使用したクラウドへの移行](https://visualstudio.microsoft.com/vs/azure-tools/)に関するページを参照してください。
 
 ## <a name="create-apps-for-the-web"></a>Web 用のアプリの作成
 
 現在世界を動かしているのは Web であり、Visual Studio は Web 用のアプリの作成をサポートします。 Web アプリは ASP.NET、Node.js、Python、JavaScript、TypeScript を使用して作成できます。 Visual Studio は、Angular、jQuery、Express などの Web フレームワークを理解します。 ASP.NET Core と .NET Core は、Windows、Mac、Linux の各オペレーティング システムで実行できます。 [ASP.NET Core](http://www.asp.net/core/overview) は、MVC、WebAPI、および SignalR へのメジャー アップデートであり、Windows、Mac、および Linux で実行されます。  ASP.NET Core は、最新のクラウド ベースの Web アプリとサービスをビルドするための効率的で構成可能な .NET スタックを提供するために、まったく新たに設計されました。
 
-詳細については、「[最新の Web ツール](https://www.visualstudio.com/vs/modern-web-tooling/)」をご覧ください。
+詳細については、「[最新の Web ツール](https://visualstudio.microsoft.com/vs/modern-web-tooling/)」をご覧ください。
 
 ## <a name="build-cross-platform-apps-and-games"></a>クロス プラットフォーム アプリとゲームをビルドする
 
-Visual Studio を使用して、macOS、Linux、Windows 用のアプリおよびゲームをビルドし、Android、iOS、およびその他の[モバイル デバイス](https://www.visualstudio.com/vs/mobile-app-development/)用のアプリおよびゲームもビルドします。
+Visual Studio を使用して、macOS、Linux、Windows 用のアプリおよびゲームをビルドし、Android、iOS、およびその他の[モバイル デバイス](https://visualstudio.microsoft.com/vs/mobile-app-development/)用のアプリおよびゲームもビルドします。
 
 - Windows、macOS、および Linux で実行される [.NET Core](/dotnet/core/) アプリをビルドします。
 
@@ -122,7 +122,7 @@ Visual Studio に必要な機能がない場合は、機能を追加できます
 
 Microsoft 開発者や開発コミュニティが作成した Visual Studio の[既存の拡張機能](https://marketplace.visualstudio.com/vs) を検索してください。
 
-Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://www.visualstudio.com/vs/extend/)」をご覧ください。
+Visual Studio の拡張について詳しくは、「[Visual Studio IDE を機能拡張する](https://visualstudio.microsoft.com/vs/extend/)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

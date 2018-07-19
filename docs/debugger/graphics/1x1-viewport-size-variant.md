@@ -1,5 +1,5 @@
 ---
-title: 1 x 1 ビューポート サイズ バリアント |Microsoft ドキュメント
+title: 1 x 1 ビューポート サイズ バリアント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,28 +10,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c2f97793c838316d252aa56dcadd9fbb045decf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 168b358bf58dcb2c91814f5460b203873255e275
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472059"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433247"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 ビューポイント サイズ バリアント
 すべてのレンダー ターゲットでビューポートのディメンションを 1x1 ピクセルに減らします。  
   
 ## <a name="interpretation"></a>解釈  
- ビューポートを小さくすると、シェードが必要なピクセル数は減りますが、処理が必要な頂点の数は減りません。 ビューポートのディメンションを 1x1 ピクセルに設定すると、アプリケーションでピクセルのシェーディングを効果的に除去することができます。  
+ ビューポートを小さくでは、網掛けする必要があるピクセルの数を減らします。 ビューポートを小さくする必要がある頂点の数を削減しませんが、処理します。 ビューポートのディメンションを 1x1 ピクセルに設定すると、アプリケーションでピクセルのシェーディングを効果的に除去することができます。  
   
- このバリアントによりパフォーマンスが大幅に向上する場合は、アプリケーションで使用しているフィルレートが多すぎることを示しています。 これは、選択した解像度がターゲット プラットフォームに対して高すぎる、またはアプリケーションで、後に上書き (範囲を超えて描画) されるピクセルのシェーディングに多くの時間を消費していることを示している場合もあります。 この結果は、フレームバッファーのサイズを小さくすること、または範囲を超えて描画する領域を小さくすることによってアプリケーションのパフォーマンスが改善されることを意味しています。  
+ このバリアントでは、大規模なパフォーマンスの向上を示している場合、アプリが多すぎるのフィル レートを使用していることを示す場合します。 さらの解像度は、ターゲット プラットフォームに対して高すぎる可能性がありますか、アプリは、後で上書きされるピクセルの膨大な時間シェーディングを費やすことができました、別名*オーバー ドロー*します。 小さなフレーム バッファーまたはアルファブレンディングを減らすには、アプリのパフォーマンスが向上します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ID3D11DeviceContext::OMSetRenderTargets` または `ID3D11DeviceContext::RSSetViewports` への呼び出しが行われるたびに、ビューポートのディメンションは 1x1 ピクセルにリセットされます。  
   
 ## <a name="example"></a>例  
- このバリアントは次のようなコードを使用して再現することができます。  
+ このバリアントは、次のコードで再現ことができます。  
   
-```  
+```cpp
 D3D11_VIEWPORT viewport;  
 viewport.TopLeftX = 0;  
 viewport.TopLeftY = 0;  

@@ -10,21 +10,21 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bf8a8fc3bb024c1eb8ee7baf91856a54dcb9d21f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bcd459208529441022669e799e3c59b16b4ef682
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174076"
 ---
 # <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>接続文字列にはクリア テキスト パスワード付きの資格情報が含まれていて、統合セキュリティは使用されていません
 
-重要情報を含む接続文字列を現在の DBML ファイルとアプリケーション構成ファイルに保存しますか?   重要情報を含めずに接続文字列を保存する場合は、[いいえ] をクリックします。
+重要情報を含む接続文字列を現在の DBML ファイルとアプリケーション構成ファイルに保存しますか?   をクリックして**いいえ**機密情報がない接続文字列に保存します。
 
 機密情報 (接続文字列に含まれているパスワード) を含むデータ接続を扱う場合は、接続文字列をプロジェクトの DBML ファイルおよびアプリケーション構成ファイルに保存するときに、機密情報を含めるかどうかを選択するオプションが提供されます。
 
 > [!WARNING]
-> 明示的に設定する、**接続**プロパティ**アプリケーション設定**プロパティを**False**パスワードは DBML ファイルに追加されます。
+> 明示的に設定、**接続**プロパティ**アプリケーション設定**プロパティを**False**は DBML ファイルにパスワードを追加します。
 
 ## <a name="to-save-the-connection-string-with-the-sensitive-information-in-the-projects-application-settings"></a>接続文字列を機密情報と共にプロジェクトのアプリケーション設定に保存するには
 

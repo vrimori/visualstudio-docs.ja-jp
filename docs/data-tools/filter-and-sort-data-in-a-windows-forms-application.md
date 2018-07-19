@@ -1,5 +1,5 @@
 ---
-title: Windows フォーム アプリケーションでデータのフィルターと並べ替え
+title: Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -21,20 +21,20 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f8f693e0a370a05508753dc6881b99157c21ea47
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 21ebae03dd2ba58a751a839f5e3151654faa39e0
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924970"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36757596"
 ---
-# <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Windows フォーム アプリケーションでデータのフィルターと並べ替え
+# <a name="filter-and-sort-data-in-a-windows-forms-application"></a>Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う
 データをフィルター処理するには、<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに目的のレコードを返す文字列式を設定します。
 
- データを並べ替えるには、<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列の名前を設定し、降順の場合は末尾に `DESC` を、昇順の場合は末尾に `ASC` を付けます。
+ 設定してデータを並べ替える、<xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティを並べ替える。 追加の列名を`DESC`を降順で並べ替える付加したり`ASC`を昇順で並べ替えます。
 
 > [!NOTE]
->  アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>コンポーネントをフィルター処理できますを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)です。
+>  アプリケーションを使用しない場合<xref:System.Windows.Forms.BindingSource>フィルター処理できる、コンポーネントを使用してデータを並べ替えると<xref:System.Data.DataView>オブジェクト。 詳細については、次を参照してください。 [Dataview](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)します。
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータをフィルター処理するには
 

@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e83d964cf4c17542f8741a03963f317e234bca01
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 59d52895b9eccd80427759fb9a3819be5ab86329
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815900"
 ---
 # <a name="static-helper-classes"></a>静的ヘルパー クラス
 
@@ -41,7 +42,7 @@ IntelliTest は、[パラメーター化された単体テスト](test-generatio
 
 次のパラメーター化されたテストでは **j=0** が考慮されません。
 
-```
+```csharp
 public void TestSomething(int i, int j) {
      PexAssume.AreNotEqual(j, 0);
      int k = i/j;
@@ -53,7 +54,7 @@ public void TestSomething(int i, int j) {
 
 上のコードは次とほぼ等しくなります。
 
-```
+```csharp
      if (j==0)
           return;
 ```
@@ -73,7 +74,7 @@ public void TestSomething(int i, int j) {
 
 次の例では、整数の絶対値が正であることが前提となります。
 
-```
+```csharp
 public void TestSomething(int i) {
      int j = Maths.Abs(i);
      PexAssert.IsTrue(j >= 0);
@@ -100,7 +101,7 @@ public void TestSomething(int i) {
 
 * **PexChoose.Value** を呼び出し、新しい値を生成します。
 
-```
+```csharp
 public int Foo() {
     return PexChoose.Value<int>("foo");
 }
@@ -113,13 +114,13 @@ public int Foo() {
 
 IntelliTest がコードを調べるとき、**PexObserve** により、書式設定された文字列表現を利用し、計算された値が記録されます。 値は一意の名前に関連付けられます。
 
-```
+```csharp
 PexObserve.Value<string>("result", result);
 ```
 
 **例**
 
-```
+```csharp
 // product code
 public static class MathEx {
      public static int Square(int value) { return value * value; }
@@ -151,7 +152,7 @@ public partial class MathExTests {
 
 これは **PexAssume.Arrays.ElementsAreNotNull** メソッドの実装例です。 このメソッドでは、IntelliTest がさまざまなサイズの配列の生成を試行しないように、配列値の長さに対する制約を無視します。 制約はここだけで無視されます。 配列の長さが異なると、テストされるコードの動作も異なる場合、IntelliTest はテストされるコードの制約とは異なるサイズの配列を生成できません。
 
-```
+```csharp
 public static void AreElementsNotNull<T>(T[] value)
     where T : class
 {

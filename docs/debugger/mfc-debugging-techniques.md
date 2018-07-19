@@ -1,5 +1,5 @@
 ---
-title: MFC のデバッグ手法 |Microsoft ドキュメント
+title: MFC のデバッグ手法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -27,11 +27,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe2ae47be54f175f798e321da7644540f8ea5049
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ccaafc15d2aff7e9ecfd32dbdb225d450198780c
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37059319"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC のデバッグ技術
 MFC プログラムをデバッグする場合は、次のデバッグ技術が役立ちます。  
@@ -62,16 +63,16 @@ MFC プログラムをデバッグする場合は、次のデバッグ技術が�
     -   [選択したモジュールのデバッグ情報を持つ MFC アプリケーションのビルド](#BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules)  
   
 ##  <a name="BKMK_AfxDebugBreak"></a> AfxDebugBreak  
- MFC には、特殊な[AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak)関数のソース コードにハードコーディングされたブレークポイントを。  
+ MFC には、特別な[AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak)ソース コードにブレークポイントをハード コーディングするための関数。  
   
-```  
+```cpp
 AfxDebugBreak( );  
   
 ```  
   
  Intel プラットフォームでは、 `AfxDebugBreak` は次のコードを生成します。このコードは、カーネル コードではなく、ソース コードでプログラムの実行を停止します。  
   
-```  
+```cpp
 _asm int 3  
 ```  
   
@@ -86,7 +87,7 @@ _asm int 3
   
  **TRACE** マクロの使用例を次に示します。 `printf`と同様に、 **TRACE** マクロは多数の引数を処理できます。  
   
-```  
+```cpp
 int x = 1;  
 int y = 16;  
 float z = 32.0;  
@@ -101,7 +102,7 @@ TRACE( "x = %d and y = %x and z = %f\n", x, y, z );
   
  TRACE マクロは、char *、wchar_t の両方に適切に処理\*パラメーター。 TRACE マクロと異なる型の文字列パラメーターを組み合わせて使用する例を次に示します。  
   
-```  
+```cpp
 TRACE( "This is a test of the TRACE macro that uses an ANSI string: %s %d\n", "The number is:", 2);  
   
 TRACE( L"This is a test of the TRACE macro that uses a UNICODE string: %s %d\n", L"The number is:", 2);  
@@ -122,7 +123,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
  ソース ファイルで次のように `DEBUG_NEW` マクロを定義すると、プログラム全体を書き直さなくても、 **new**の代わりにこのマクロを使用できます。  
   
-```  
+```cpp
 #define new DEBUG_NEW  
 ```  
   
@@ -159,15 +160,15 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 ###  <a name="BKMK_Taking_memory_snapshots"></a> メモリのスナップショットの取得  
   
-1.  作成、[行い](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2)オブジェクトと呼び出し、 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint)メンバー関数。 これにより、メモリの最初のスナップショットが作成されます。  
+1.  作成、 [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2)オブジェクトと呼び出し、 [cmemorystate::checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)メンバー関数。 これにより、メモリの最初のスナップショットが作成されます。  
   
 2.  プログラムでメモリの割り当てと解放が行われた後、別の `CMemoryState` オブジェクトを作成し、このオブジェクトの `Checkpoint` を呼び出します。 これにより、メモリ状態の 2 番目のスナップショットが取得されます。  
   
-3.  3 番目の `CMemoryState` オブジェクトを作成し、そのメンバー関数 [CMemoryState::Difference](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Difference) を呼び出します。このとき、前に作成した 2 つの `CMemoryState` オブジェクトを引数として渡します。 2 つのメモリ状態に違いがある場合、 `Difference` 関数は 0 以外の値を返します。 この値は、解放されていないメモリ ブロックがあることを示します。  
+3.  3 つ目の作成`CMemoryState`オブジェクトと呼び出しの[:difference](/cpp/mfc/reference/cmemorystate-structure#difference)メンバー関数は、前の 2 つの引数として渡します`CMemoryState`オブジェクト。 2 つのメモリ状態に違いがある場合、 `Difference` 関数は 0 以外の値を返します。 この値は、解放されていないメモリ ブロックがあることを示します。  
   
      コードの例を次に示します。  
   
-    ```  
+    ```cpp
     // Declare the variables needed  
     #ifdef _DEBUG  
         CMemoryState oldMemState, newMemState, diffMemState;  
@@ -188,18 +189,18 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
     #endif  
     ```  
   
-     メモリ チェック ステートメントで囲まれていることを確認**#ifdef _DEBUG と #endif**ブロックは、プログラムのデバッグ バージョンでのみコンパイルできるようにします。  
+     メモリ チェック用のステートメントがかっこで囲まれた通知 **#ifdef _DEBUG と #endif**ブロックは、プログラムのデバッグ バージョンでのみコンパイルします。  
   
-     メモリ リークが発生していることを確認できたので、別のメンバー関数 [CMemoryState::DumpStatistics](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpStatistics) を使用してメモリ リークの位置を特定できます。  
+     別のメンバー関数を使用することができますが、メモリ リークがわかったら、 [cmemorystate::dumpstatistics](/cpp/mfc/reference/cmemorystate-structure#dumpstatistics)役立つそれを特定します。  
   
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ###  <a name="BKMK_Viewing_memory_statistics"></a> メモリ統計情報の表示  
- [CMemoryState::Difference](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Difference) 関数は、2 つのメモリ状態オブジェクトを参照し、1 つ目の状態から 2 つ目の状態までの間にヒープから解放されなかったオブジェクトを検出します。 メモリのスナップショットを取得して、それらのメモリを `CMemoryState::Difference`を使用して比較した後、 [CMemoryState::DumpStatistics](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpStatistics) を呼び出すと、解放されなかったオブジェクトに関する情報を取得できます。  
+ [:Difference](/cpp/mfc/reference/cmemorystate-structure#difference)関数は、2 つのメモリ状態オブジェクトを参照し、先頭と末尾の状態の間にヒープから解放されなかったオブジェクトを検出します。 メモリのスナップショットを取得し、それらを比較した後を使用して`CMemoryState::Difference`、呼び出すことができます[cmemorystate::dumpstatistics](/cpp/mfc/reference/cmemorystate-structure#dumpstatistics)解放されなかったオブジェクトに関する情報を取得します。  
   
  次に例を示します。  
   
-```  
+```cpp  
 if( diffMemState.Difference( oldMemState, newMemState ) )  
 {  
    TRACE( "Memory leaked!\n" );  
@@ -209,7 +210,7 @@ if( diffMemState.Difference( oldMemState, newMemState ) )
   
  このコード例では、次の情報がダンプされます。  
   
-```  
+```cpp
 0 bytes in 0 Free Blocks  
 22 bytes in 1 Object Blocks  
 45 bytes in 4 Non-Object Blocks  
@@ -230,7 +231,7 @@ Total allocations: 67 bytes
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ###  <a name="BKMK_Taking_object_dumps"></a> オブジェクト ダンプの取得  
- MFC プログラムで使用できます[cmemorystate::dumpallobjectssince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince)解放されていないヒープ上のすべてのオブジェクトの説明をダンプします。 `DumpAllObjectsSince` は、前回の [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint)を呼び出します。 `Checkpoint` が一度も呼び出されていない場合、 `DumpAllObjectsSince` はメモリ上に存在するオブジェクトと非オブジェクトをすべてダンプします。  
+ MFC プログラムで使用できます[cmemorystate::dumpallobjectssince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince)解放されていないヒープ上のすべてのオブジェクトの説明をダンプします。 `DumpAllObjectsSince` 最後に割り当てられたすべてのオブジェクトをダンプ[cmemorystate::checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)します。 `Checkpoint` が一度も呼び出されていない場合、 `DumpAllObjectsSince` はメモリ上に存在するオブジェクトと非オブジェクトをすべてダンプします。  
   
 > [!NOTE]
 >  MFC のオブジェクト ダンプ機能を使用する場合は、あらかじめ [診断トレースを有効にしておく](#BKMK_Enabling_Memory_Diagnostics)必要があります。  
@@ -240,7 +241,7 @@ Total allocations: 67 bytes
   
  次のコードは、2 つのメモリ状態を比較することによってメモリ リークを調べ、リークが検出された場合はすべてのオブジェクトをダンプします。  
   
-```  
+```cpp
 if( diffMemState.Difference( oldMemState, newMemState ) )  
 {  
    TRACE( "Memory leaked!\n" );  
@@ -250,7 +251,7 @@ if( diffMemState.Difference( oldMemState, newMemState ) )
   
  次のような情報がダンプされます。  
   
-```  
+```cmd
 Dumping objects ->  
   
 {5} strcore.cpp(80) : non-object block at $00A7521A, 9 bytes long  
@@ -278,7 +279,7 @@ Phone #: 581-0215
 ####  <a name="BKMK_Interpreting_memory_dumps"></a> メモリ ダンプの解釈  
  次のオブジェクト ダンプを詳しく検討してください。  
   
-```  
+```cmd
 {5} strcore.cpp(80) : non-object block at $00A7521A, 9 bytes long  
 {4} strcore.cpp(80) : non-object block at $00A751F8, 5 bytes long  
 {3} strcore.cpp(80) : non-object block at $00A751D6, 6 bytes long  
@@ -293,7 +294,7 @@ Phone #: 581-0215
   
  このダンプを生成したプログラムでは、メモリが明示的に割り当てられているのは 2 か所だけ (1 つはスタック上、もう 1 つはヒープ上) です。  
   
-```  
+```cpp
 // Do your memory allocations and deallocations.  
 CString s("This is a frame variable");  
 // The next object is a heap object.  
@@ -302,7 +303,7 @@ CPerson* p = new CPerson( "Smith", "Alan", "581-0215" );
   
  `CPerson` コンストラクターは、引数として `char`への 3 つのポインターをとり、これらの引数を使用して `CString` メンバー変数を初期化します。 メモリ ダンプ情報を調べてみると、 `CPerson` オブジェクトと一緒に 3 つの非オブジェクト ブロック (non-object block) (3、4、5) が表示されています。 これらのブロックは `CString` メンバー変数の文字を格納しており、 `CPerson` オブジェクトのデストラクターが呼び出されても削除されないことがわかります。  
   
- 2 番目にメモリが割り当てられたブロックは `CPerson` オブジェクト自体です。 `$51A4` はブロックのアドレスを表し、その後にオブジェクトの内容が表示されています。この情報は、 `CPerson`DumpAllObjectsSince`Dump` によって呼び出された [::](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince)が出力したものです。  
+ 2 番目にメモリが割り当てられたブロックは `CPerson` オブジェクト自体です。 `$51A4` ブロックのアドレスを表しが出力される、オブジェクトの内容が続く`CPerson`::`Dump`によって呼び出されると[DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince)します。  
   
  1 番目にメモリが割り当てられたブロックは、その割り当て番号とサイズから、 `CString` のフレーム変数に割り当てられていることがわかります。ブロック サイズは、 `CString` のフレーム変数の文字数と一致しています。 フレーム上に割り当てられた変数は、フレームがスコープ外に出ると自動的に解放されます。  
   
@@ -310,7 +311,7 @@ CPerson* p = new CPerson( "Smith", "Alan", "581-0215" );
   
  通常、フレーム変数に割り当てられているヒープ オブジェクトについては、フレーム変数がスコープ外に出ると自動的に解放されるため、メモリ リークについて心配する必要はありません。 メモリ ダンプの診断出力にフレーム変数の記述が含まれないようにするには、フレーム変数のスコープ外で `Checkpoint` を呼び出す必要があります。 たとえば、次のように、前のプログラム例のメモリ割り当てコードを中かっこで囲んでスコープを限定します。  
   
-```  
+```cpp
 oldMemState.Checkpoint();  
 {  
     // Do your memory allocations and deallocations ...  
@@ -323,7 +324,7 @@ newMemState.Checkpoint();
   
  中かっこでスコープを限定したため、この例から出力されるメモリ ダンプ情報は次のようになります。  
   
-```  
+```cmd 
 Dumping objects ->  
   
 {5} strcore.cpp(80) : non-object block at $00A7521A, 9 bytes long  
@@ -338,7 +339,7 @@ Phone #: 581-0215
   
  **非オブジェクトへの割り当て**  
   
- 割り当てには、 `CPerson`などのオブジェクトへの割り当てと、非オブジェクトへの割り当てがあります。 「非オブジェクトへの割り当て」は、オブジェクトから派生していないために割り当て`CObject`または C のプリミティブ型などの割り当て`char`、 `int`、または`long`です。 **CObject** の派生クラスによって内部バッファーなどの領域が追加で割り当てられる場合、これらのオブジェクトについては、オブジェクトへの割り当てと非オブジェクトへの割り当ての両方が表示されます。  
+ 割り当てには、 `CPerson`などのオブジェクトへの割り当てと、非オブジェクトへの割り当てがあります。 「非オブジェクトへの割り当て」は、オブジェクトから派生していないために割り当て`CObject`など、C のプリミティブ型の割り当てまたは`char`、 `int`、または`long`します。 **CObject** の派生クラスによって内部バッファーなどの領域が追加で割り当てられる場合、これらのオブジェクトについては、オブジェクトへの割り当てと非オブジェクトへの割り当ての両方が表示されます。  
   
  **メモリ リークの防止**  
   
@@ -346,7 +347,7 @@ Phone #: 581-0215
   
  一方、ヒープ上に割り当てられたオブジェクトについては、メモリ リークを防ぐために明示的に削除する必要があります。 前のプログラム例で、最後のメモリ リークを解消するには、ヒープ上に割り当てられた `CPerson` オブジェクトを次のように削除します。  
   
-```  
+```cpp  
 {  
     // Do your memory allocations and deallocations.  
     CString s("This is a frame variable");  
@@ -359,7 +360,7 @@ Phone #: 581-0215
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ####  <a name="BKMK_Customizing_object_dumps"></a> オブジェクト ダンプのカスタマイズ  
- [CObject](/cpp/mfc/reference/cobject-class)から派生クラスを作成するときに `Dump` メンバー関数をオーバーライドすると、 [DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince) を使用して [出力ウィンドウ](../ide/reference/output-window.md)にオブジェクトをダンプするときに、追加情報を提供できます。  
+ クラスを派生する[CObject](/cpp/mfc/reference/cobject-class)、オーバーライドすることができます、`Dump`メンバー関数を使用する場合は、追加情報を提供する[DumpAllObjectsSince](/cpp/mfc/reference/cmemorystate-structure#dumpallobjectssince) にオブジェクトをダンプする[出力ウィンドウ](../ide/reference/output-window.md)します。  
   
  `Dump` 関数は、オブジェクトのメンバー変数の内容をテキスト形式でダンプ コンテキスト ([CDumpContext](/cpp/mfc/reference/cdumpcontext-class)) に書き込みます。 ダンプ コンテキストは、入出力ストリームに類似しています。 追加演算子 (**<<**) を使用して、 `CDumpContext`を呼び出します。  
   
@@ -367,7 +368,7 @@ Phone #: 581-0215
   
  `Dump` 関数の宣言例を次に示します。  
   
-```  
+```cpp  
 class CPerson : public CObject  
 {  
 public:  
@@ -385,7 +386,7 @@ public:
   
  次の例の `Dump` 関数は、まず基底クラスの `Dump` 関数を呼び出します。 その後、各メンバー変数の簡単な説明を各メンバーの値と一緒に診断ストリームに書き込みます。  
   
-```  
+```cpp  
 #ifdef _DEBUG  
 void CPerson::Dump( CDumpContext& dc ) const  
 {  
@@ -401,7 +402,7 @@ void CPerson::Dump( CDumpContext& dc ) const
   
  ダンプの出力先を指定するために、 `CDumpContext` に引数を渡す必要があります。 MFC のデバッグ バージョンでは、 `CDumpContext` という定義済みの `afxDump` オブジェクトを渡して、出力をデバッガーに送ります。  
   
-```  
+```cpp 
 CPerson* pMyPerson = new CPerson;  
 // Set some fields of the CPerson object.  
 //...  
@@ -416,9 +417,9 @@ pMyPerson->Dump( afxDump );
 ##  <a name="BKMK_Reducing_the_size_of_an_MFC_Debug_build"></a> MFC デバッグ ビルドのサイズの縮小  
  大型の MFC アプリケーションでは、デバッグ情報でかなりのディスク容量が占有される場合があります。 次のいずれかの手順を使用して、サイズを縮小できます。  
   
-1.  使用して MFC ライブラリを再構築、 [/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)オプションの代わりに**/Z7**です。 これらのオプションを指定すると、ライブラリ全体のデバッグ情報を格納する単一のプログラム データベース (PDB) ファイルがビルドされます。これによって、無駄をなくしてディスク容量を節約できます。  
+1.  使用して MFC ライブラリを再構築、 [/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)オプションの代わりに **/Z7**します。 これらのオプションを指定すると、ライブラリ全体のデバッグ情報を格納する単一のプログラム データベース (PDB) ファイルがビルドされます。これによって、無駄をなくしてディスク容量を節約できます。  
   
-2.  デバッグ情報なしの MFC ライブラリを再構築 (ありません[/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)オプション)。 この場合、デバッグ情報がないため、MFC ライブラリのコード内で大半のデバッガー機能を使用できなくなります。しかし、MFC ライブラリは完全にデバッグ済みであるため、このことは問題にはなりません。  
+2.  デバッグ情報なしの MFC ライブラリをリビルド (ありません[/Z7、/Zi、/ZI (デバッグ情報の形式)](/cpp/build/reference/z7-zi-zi-debug-information-format)オプション)。 この場合、デバッグ情報がないため、MFC ライブラリのコード内で大半のデバッガー機能を使用できなくなります。しかし、MFC ライブラリは完全にデバッグ済みであるため、このことは問題にはなりません。  
   
 3.  次に示すように、選択したモジュールのデバッグ情報だけを追加してアプリケーションをビルドする。  
   
@@ -429,19 +430,19 @@ pMyPerson->Dump( afxDump );
   
 1.  ソリューション エクスプローラーでプロジェクトを選択します。  
   
-2.  **[表示]** メニューの **[プロパティ ページ]**をクリックします。  
+2.  **[表示]** メニューの **[プロパティ ページ]** をクリックします。  
   
 3.  まず、新しいプロジェクト構成を作成します。  
   
     1.  **\<プロジェクト > プロパティ ページ**ダイアログ ボックスで、をクリックして、 **Configuration Manager**ボタンをクリックします。  
   
-    2.  [[構成マネージャー] ダイアログ ボックス](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)のグリッド内でプロジェクトを見つけます。 **構成**列で、選択**\<新規… >**です。  
+    2.  [[構成マネージャー] ダイアログ ボックス](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)のグリッド内でプロジェクトを見つけます。 **構成**列で、 **\<新規作成 >** します。  
   
     3.  [[新規プロジェクト構成] ダイアログ ボックス](http://msdn.microsoft.com/en-us/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)の **[Project Configuration Name]** ボックスに、新しいプロジェクト構成に付ける名前を "Partial Debug" のように入力します。  
   
-    4.  **[設定のコピー元]** ボックスの **[Release]**をクリックします。  
+    4.  **[設定のコピー元]** ボックスの **[Release]** をクリックします。  
   
-    5.  をクリックして**OK**を閉じる、**新規プロジェクト構成** ダイアログ ボックス。  
+    5.  をクリックして**OK**を閉じる、**新しいプロジェクト構成** ダイアログ ボックス。  
   
     6.  **[構成マネージャー]** ダイアログ ボックスを閉じます。  
   
@@ -451,15 +452,15 @@ pMyPerson->Dump( afxDump );
   
     2.  プロジェクト設定グリッドで、 **[プロジェクトの既定値]** が展開されていない場合は展開します。  
   
-    3.  **[プロジェクトの既定値]**の下の **[MFC の使用]**を見つけます。 現在の設定値がグリッドの右列に表示されます。 現在の設定値をクリックし、 **[スタティック ライブラリで MFC を使用する]**に変更します。  
+    3.  **[プロジェクトの既定値]** の下の **[MFC の使用]** を見つけます。 現在の設定値がグリッドの右列に表示されます。 現在の設定値をクリックし、 **[スタティック ライブラリで MFC を使用する]** に変更します。  
   
-    4.  **[プロパティ ページ]** ダイアログ ボックスの左ペインで、 **[C/C++]** フォルダーを開き、 **[プリプロセッサ]**を選択します。 プロパティ グリッドで、 **[プロセッサの定義]** を見つけ、"NDEBUG" を "_DEBUG" に置き換えます。  
+    4.  **[プロパティ ページ]** ダイアログ ボックスの左ペインで、 **[C/C++]** フォルダーを開き、 **[プリプロセッサ]** を選択します。 プロパティ グリッドで、 **[プロセッサの定義]** を見つけ、"NDEBUG" を "_DEBUG" に置き換えます。  
   
-    5.  **[プロパティ ページ]** ダイアログ ボックスの左ペインで、 **[リンカー]** フォルダーを開き、 **[入力]** カテゴリを選択します。 プロパティ グリッドで、 **[追加の依存ファイル]**を見つけます。 **[追加の依存ファイル]** の設定値として「NAFXCWD.LIB」および「LIBCMT」と入力します。  
+    5.  **[プロパティ ページ]** ダイアログ ボックスの左ペインで、 **[リンカー]** フォルダーを開き、 **[入力]** カテゴリを選択します。 プロパティ グリッドで、 **[追加の依存ファイル]** を見つけます。 **[追加の依存ファイル]** の設定値として「NAFXCWD.LIB」および「LIBCMT」と入力します。  
   
     6.  **[OK]** をクリックして、新しいビルド オプションを保存し、 **[プロパティ ページ]** ダイアログ ボックスを閉じます。  
   
-5.  **[ビルド]** メニューの **[リビルド]**をクリックします。 これにより、モジュールからデバッグ情報がすべて削除されますが、MFC ライブラリに影響はありません。  
+5.  **[ビルド]** メニューの **[リビルド]** をクリックします。 これにより、モジュールからデバッグ情報がすべて削除されますが、MFC ライブラリに影響はありません。  
   
 6.  次に、選択したアプリケーション モジュールに、デバッグ情報を改めて追加します。 ブレークポイントの設定やその他のデバッガー機能を使用できるのは、デバッグ情報を追加してコンパイルしたモジュールだけです。 デバッグ情報を追加するプロジェクト ファイルごとに、次の手順を実行します。  
   
@@ -467,15 +468,15 @@ pMyPerson->Dump( afxDump );
   
     2.  デバッグ情報を設定するファイルを選択します。  
   
-    3.  **[表示]** メニューの **[プロパティ ページ]**をクリックします。  
+    3.  **[表示]** メニューの **[プロパティ ページ]** をクリックします。  
   
     4.  **[プロパティ ページ]** ダイアログ ボックスで、 **[構成プロパティ]** フォルダーの下の **[C/C++]** フォルダーを開き、 **[全般]** カテゴリを選択します。  
   
-    5.  プロパティ グリッドで、検索**デバッグ情報の形式です。**  
+    5.  プロパティ グリッドで検索**デバッグ情報の形式。**  
   
     6.  **[デバッグ情報の形式]** の設定値をクリックし、デバッグ情報のオプション (通常は **/ZI**) を選択します。  
   
-    7.  アプリケーション ウィザードで生成されたアプリケーションを使用している場合や、プリコンパイル済みヘッダーがある場合は、他のモジュールをコンパイルする前に、プリコンパイル済みヘッダーを無効にするか再コンパイルする必要があります。 この処理を行わないと、警告メッセージ C4650 とエラー メッセージ C2855 が表示されます。 変更することでプリコンパイル済みヘッダーを無効にすることができます、**プリコンパイル済みヘッダーの作成/使用**での設定、 **\<プロジェクト > プロパティ** ダイアログ ボックス (**構成プロパティ**フォルダー、 **C/C++**サブフォルダー、**プリコンパイル済みヘッダー**カテゴリ)。  
+    7.  アプリケーション ウィザードで生成されたアプリケーションを使用している場合や、プリコンパイル済みヘッダーがある場合は、他のモジュールをコンパイルする前に、プリコンパイル済みヘッダーを無効にするか再コンパイルする必要があります。 この処理を行わないと、警告メッセージ C4650 とエラー メッセージ C2855 が表示されます。 プリコンパイル済みヘッダーをオフするには、変更することで、**プリコンパイル済みヘッダーの作成/使用**での設定、 **\<プロジェクト > プロパティ** ダイアログ ボックス (**構成プロパティ**フォルダー、 **C/C++** サブフォルダー、**プリコンパイル済みヘッダー**カテゴリ)。  
   
 7.  **[ビルド]** メニューの **[ビルド]** をクリックし、最新ではないプロジェクト ファイルをリビルドします。  
   

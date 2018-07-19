@@ -1,13 +1,13 @@
 ---
-title: "JavaScript リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: JavaScript リファレンス |Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vs.htmldesigner.html
@@ -18,18 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - JavaScript, reference
 ms.assetid: 29f83a2c-48c5-49e2-9ae0-7371d2cda2ff
-caps.latest.revision: 
+caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a4fd8a514abcc42b7ec34340f963326cd9a66762
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 41d2a3f72b07c947faae2f70f1f5f0b0dffac9ad
+ms.sourcegitcommit: c842955aa9ee9f149bb63e66e46c5c29be6e9881
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36962851"
 ---
 # <a name="javascript-reference"></a>JavaScript リファレンス
 これらのセクションでは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 言語を構成する要素について説明します。  
+
+> [!NOTE]
+> コミュニティ全体での取り組みに参加したので[MDN web docs](https://developer.mozilla.org/en-US/) (500 + のすべてのページ) マイクロソフトの JavaScript API のリファレンスを docs.microsoft.com から、MDN をリダイレクトすることにより、web のワンストップのプレミア開発リソース対応します。 詳細については、これを「[アナウンス](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)します。
   
  Internet Explorer の [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] コードは、HTML、CSS、およびドキュメント オブジェクト モデル (DOM) (HTML オブジェクトおよびブラウザー オブジェクトを表す) と対話できます。  
   
@@ -41,15 +45,15 @@ ms.lasthandoff: 10/27/2017
   
  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] コードは、ブラウザー アプリケーション、または [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリで使用できます。 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] アプリは [!INCLUDE[win8](../../javascript/includes/win8-md.md)] を使用して [!INCLUDE[vs_dev11_long](../../javascript/includes/vs-dev11-long-md.md)] でサポートされ、[!INCLUDE[win81](../../javascript/includes/win81-md.md)] を使用して [!INCLUDE[vs_dev12](../../javascript/includes/vs-dev12-md.md)] でサポートされます。  
   
--   JavaScript について[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリを参照してください[JavaScript のロードマップ](http://msdn.microsoft.com/en-us/4f28182b-1e4b-4bbd-8ae9-dcc504de4341)です。  
+-   JavaScript の詳細については[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリを参照してください[JavaScript のロードマップ](http://msdn.microsoft.com/en-us/4f28182b-1e4b-4bbd-8ae9-dcc504de4341)します。  
   
--   HTML および CSS にについて[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリを参照してください[Windows ストア アプリ用 HTML/CSS](http://go.microsoft.com/fwlink/p/?LinkId=250939)です。  
+-   HTML と CSS のについて[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]アプリを参照してください[Windows ストア アプリ用 HTML/CSS](http://go.microsoft.com/fwlink/p/?LinkId=250939)します。  
   
--   について[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]API を参照してください[Windows ランタイムおよび JavaScript 用 Windows ライブラリの API リファレンス](http://go.microsoft.com/fwlink/p/?LinkID=250938)です。  
+-   について[!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)]API を参照してください[Windows ランタイムおよび JavaScript 用 Windows ライブラリ API リファレンス](http://go.microsoft.com/fwlink/p/?LinkID=250938)します。  
   
- Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。 詳細については、次を参照してください。 [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense.md)です。  
+ Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。 詳細については、次を参照してください。 [JavaScript IntelliSense](/visualstudio/ide/javascript-intellisense)します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="reference-information"></a>参照情報
  [バージョン情報](../../javascript/reference/javascript-version-information.md)  
  [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 言語の機能と、導入された Internet Explorer のバージョンの一覧を示します。  
   
@@ -87,8 +91,6 @@ ms.lasthandoff: 10/27/2017
  将来の予約語の一覧を示します。 これらの予約語を識別子として使用することはできません。  
   
 ## <a name="related-sections"></a>関連項目  
- [JavaScript の基礎](../../javascript/javascript-fundamentals.md)  
- [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] を使用する方法について説明します。  
-  
+
  [HTML および DHTML のリファレンス](http://go.microsoft.com/fwlink/?LinkId=148095)  
- リファレンス情報についてダイナミック HTML (DHTML) API を提供します。
+ 参照情報についてダイナミック HTML (DHTML) API を提供します。

@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによってカスタム フォルダーのアイテムを作成 |Microsoft ドキュメント'
+title: '方法: プログラムによってカスタム フォルダーのアイテムを作成'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ebd3bbc365212b2c6a1ab0691e8e16a7936c9955
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 45423b134f3bc9e0a4e9c791bef8ea24761e38f4
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257661"
 ---
-# <a name="how-to-programmatically-create-custom-folder-items"></a>方法: プログラムによってカスタム フォルダーのアイテムを作成する
+# <a name="how-to-programmatically-create-custom-folder-items"></a>方法: プログラムによってカスタム フォルダーのアイテムを作成
   この例では、Microsoft Office Outlook で新しいフォルダーを作成します。 ログオンしたユーザーの名前は、フォルダー名に使用されます。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -31,8 +32,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_OL_CustFolderItem#1](../vsto/codesnippet/CSharp/Trin_OL_CustFolderItem/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [フォルダーの操作](../vsto/working-with-folders.md)   
+ [フォルダーを操作します。](../vsto/working-with-folders.md)   
  [方法: プログラムによって Outlook の連絡先にエントリを追加](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)   
- [方法: プログラムによって予定を作成する](../vsto/how-to-programmatically-create-appointments.md)  
+ [方法: プログラムによって予定を作成](../vsto/how-to-programmatically-create-appointments.md)  
   
   

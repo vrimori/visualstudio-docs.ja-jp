@@ -1,5 +1,5 @@
 ---
-title: 0 の x-2 x-4 msaa バリアント |Microsoft ドキュメント
+title: 0 の x-2 x-4 の msaa バリアント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f77e5635a333d6fb2f041f88ee96d817fe36ba2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d1540e66893aeb99c4932c4667fa384b837e15a7
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31475769"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433316"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA バリアント
 すべてのレンダー ターゲットおよびスワップ チェーン上で multi-sample anti-aliasing (MSAA) の設定をオーバーライドします。  
@@ -30,7 +30,7 @@ ms.locfileid: "31475769"
 > [!NOTE]
 >  ご利用のハードウェアでは、MSAA をすべての形式で完全にサポートしていないことがあります。 いずれかのバリアントで、対処できないハードウェアの制限に直面した場合は、パフォーマンスのサマリー テーブルの該当する列が空白になり、エラー メッセージが生成されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのバリアントは、レンダー ターゲットを作成する `ID3DDevice::CreateTexture2D` への呼び出しが行われるときに sample count および sample-quality 引数をオーバーライドします。 具体的には、以下の場合にこれらのパラメーターがオーバーライドされます。  
   
 -   `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトがレンダー ターゲットを記述する場合。つまり  
@@ -59,7 +59,7 @@ ms.locfileid: "31475769"
 ## <a name="example"></a>例  
  これらのバリアントは、`ID3D11Device::CreateTexture2D` を使用して作成されたレンダー ターゲットに対して、次のようなコードを使用して再生することができます。  
   
-```  
+```cpp
 D3D11_TEXTURE2D_DESC target_description;  
 target_description.BindFlags = D3D11_BIND_RENDER_TARGET;  
 target_description.SampleDesc.Count = 4; // 4x MSAA, can be 2 or 0 instead  
@@ -70,7 +70,7 @@ d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ## <a name="example"></a>例  
  または、IDXGISwapChain::CreateSwapChain または D3D11CreateDeviceAndSwapChain を使用して作成されたスワップ チェーンに対して、次のようなコードを使用して再生することができます。  
   
-```  
+```cpp
 DXGI_SWAP_CHAIN_DESC chain_description;  
 chain_description.SampleDesc.Count = 4; // 4x MSAA, can be 2 or 0 instead  
 chain_description.SampleDesc.Quality = 0;  

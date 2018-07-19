@@ -10,12 +10,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 84a910d75c7c91aa2abb381781a731dfbe646cfe
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fd679e9275aedc8db9f65864a240e1c12e4faffc
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920324"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089465"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>1 つ以上の選択されたデータベース オブジェクトがターゲット データ クラスのスキーマに一致しないスキーマを返しました
 
@@ -25,9 +25,9 @@ ms.locfileid: "31920324"
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. をクリックして**OK**  ダイアログ ボックスを閉じます。
+1. クリックして**OK**ダイアログ ボックスを閉じます。
 
-2. ターゲット クラス (O/R デザイナーでデータベース オブジェクトのドロップ先となるクラス) のスキーマと一致するデータを返すデータベース オブジェクトを選択します。
+2. ターゲット クラスのスキーマに一致するデータを返すデータベース オブジェクトを選択します (でデータベース オブジェクトがドロップされるクラス、 **O/R デザイナー**)。
 
 ## <a name="see-also"></a>関連項目
 

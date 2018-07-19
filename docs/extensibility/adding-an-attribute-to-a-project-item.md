@@ -1,5 +1,5 @@
 ---
-title: プロジェクト項目に属性が追加 |Microsoft ドキュメント
+title: プロジェクト アイテムへの属性の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d601a4cb3a7804520f0c9c95e746275e27db4bcd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 65df74335bd6a79941f588f00d2b1c129e4e022c
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31104538"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081381"
 ---
-# <a name="adding-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加します。
-メソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>を取得し、プロジェクト項目の属性の値を設定します。 SetItemAttribute を作成、属性が既にがない場合、プロジェクト項目のメタデータに追加します。  
+# <a name="add-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加します。
+メソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>を取得し、プロジェクト項目の属性の値を設定します。 SetItemAttribute 属性を作成、それが存在しない場合、プロジェクト項目のメタデータに追加すること。  
   
-## <a name="adding-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加します。  
+## <a name="add-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加します。  
   
-#### <a name="to-add-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加するには  
+-   次のコードでは、<xref:EnvDTE.DTE>オートメーション オブジェクト、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>プロジェクト項目に属性を追加します。 プロジェクト項目の ID は、プロジェクト項目の名前"program.cs"から取得されます。 属性"MyAttribute"がこのプロジェクト アイテムに追加され、"MyValue"の値を指定します。  
   
--   次のコードでは、<xref:EnvDTE.DTE>オートメーション オブジェクト、および<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A>プロジェクト項目に属性を追加するメソッド。 プロジェクト項目の ID は、プロジェクト アイテム名"program.cs"から取得されます。 属性"MyAttribute"がこのプロジェクト項目に追加され、"MyValue"の値を指定します。  
-  
-    ```  
+    ```csharp  
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));  
     EnvDTE.Project project = dte.Solution.Projects.Item(1);  
   
@@ -50,4 +48,4 @@ ms.locfileid: "31104538"
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [MSBuild プロジェクト ファイルでのデータの保持](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+ [MSBuild プロジェクト ファイル内のデータを永続化します。](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

@@ -1,5 +1,4 @@
 # [Visual Studio for Mac の概要](index.md)
-## [Xamarin Studio 上の Visual Studio for Mac の利点](benefits-vsmac-over-xs.md)
 # [IDE ツアー](ide-tour.md)
 
 # [インストール](installation.md)

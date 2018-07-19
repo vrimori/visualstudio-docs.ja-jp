@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ac173785804ce2ed2874b9628c68d3ab78be6e1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: caacdd787f1765721d281db885364aafc36c5183
+ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31923266"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890010"
 ---
 # <a name="attribute-xelement-dynamic-property"></a>Attribute (XElement 動的プロパティ)
 
@@ -23,7 +23,7 @@ ms.locfileid: "31923266"
 
 ## <a name="syntax"></a>構文
 
-```
+```xaml
 elem.Attribute[{namespaceName}attribName]
 ```
 

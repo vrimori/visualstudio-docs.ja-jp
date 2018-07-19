@@ -14,10 +14,11 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 0f23b4a602b707dbe126d0a97824694fc51d3ddf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38809248"
 ---
 ### <a name="supported-operating-systems"></a>Supported Operating Systems  
 リモート コンピューターで次のいずれかのオペレーティング システムが実行されている必要があります。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/27/2017
 -   Windows Server 2008 Service Pack 2、Windows Server 2008 R2 Service Pack 1
 
 > [!NOTE]
-> Windows Phone には、デバッグに USB 接続が必要です (リモート ツールが不要)。
+> Windows Phone のデバッグに USB 接続が必要です (リモート ツールが不要)。
   
 ### <a name="supported-hardware-configurations"></a>サポートされているハードウェア構成  
   
@@ -48,4 +49,4 @@ ms.lasthandoff: 10/27/2017
 -   1024 x 768 以上のディスプレイ解像度の DirectX 9 対応ビデオ カード  
   
 ### <a name="network-configuration"></a>ネットワーク構成  
- リモート コンピューターと Visual Studio コンピューターは、ネットワーク、ワークグループ、またはホームグループを介して接続されているか、あるいはイーサネット ケーブルによって直接接続されている必要があります。 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。
+ リモート コンピューターと Visual Studio コンピューターは、ネットワーク、ワークグループ、またはホームグループを介して接続されているか、あるいはイーサネット ケーブルによって直接接続されている必要があります。 プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での高待機時間またはダイヤルアップ、インターネットなどの低帯域幅接続経由またはインターネット経由でのデバッグは使用しないでと失敗は、ある非常に遅く。

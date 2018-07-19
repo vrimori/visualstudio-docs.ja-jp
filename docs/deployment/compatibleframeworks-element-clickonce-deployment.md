@@ -1,5 +1,5 @@
 ---
-title: '&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
+title: '&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d406ecf058bf1c570b57ed8f50815cc3d9378cbe
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 44329fc4c2ec5e9f2f8352d69ea487f23cbe3c5a
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31560779"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077686"
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt;要素 (ClickOnce 配置)
 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。  
   
 > [!NOTE]
->  [MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)はサポートしていません、`compatibleFrameworks`アプリケーション マニフェストを保存するときに要素を使用して、証明書で署名済みの[MageUI.exe](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)です。 代わりに [Mage.exe](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) を使用する必要があります。  
+>  [*MageUI.exe* ](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)はサポートしていません、`compatibleFrameworks`アプリケーション マニフェストを保存するときに要素を使用して、証明書で署名済みの[ *MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)します。 代わりに、使用する必要があります[ *Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <compatibleFrameworks  
       SupportUrl>   
    <framework  
@@ -43,29 +43,29 @@ ms.locfileid: "31560779"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `compatibleFrameworks`要素は、配置マニフェストをターゲットとする場合の必要な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ランタイムによって提供される[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]またはそれ以降。 `compatibleFrameworks`要素は、1 つ以上含まれています。`framework`このアプリケーションを実行できる .NET Framework のバージョンを指定する要素。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ランタイムは、最初に、アプリケーションを実行する使用可能な`framework`この一覧にします。  
+ `compatibleFrameworks`配置マニフェストを対象とする要素が必要、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ランタイムによって提供される[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]またはそれ以降。 `compatibleFrameworks`要素は、1 つ以上含まれています。`framework`このアプリケーションが実行できる .NET Framework のバージョンを指定する要素。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ランタイムは、最初に、アプリケーションを実行する使用可能な`framework`この一覧にします。  
   
  次の表に、属性を`compatibleFrameworks`要素をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`S` `upportUrl`|任意。 推奨される互換性のある .NET Framework のバージョンをダウンロードできる URL を指定します。|  
+|`S` `upportUrl`|任意。 推奨される互換性のある .NET Framework バージョンをダウンロードできる URL を指定します。|  
   
 ## <a name="framework"></a>フレームワーク  
  必須。 次の表に、属性を`framework`要素をサポートしています。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`targetVersion`|必須。 対象とする .NET Framework のバージョン番号を指定します。|  
-|`profile`|必須。 対象とする .NET Framework のプロファイルを指定します。|  
+|`targetVersion`|必須。 ターゲット .NET Framework のバージョン番号を指定します。|  
+|`profile`|必須。 ターゲット .NET Framework のプロファイルを指定します。|  
 |`supportedRuntime`|必須。 .NET Framework を対象に関連付けられているランタイムのバージョン番号を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>例  
- 次のコード例は、`compatibleFrameworks`内の要素、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 この展開が実行できる、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]です。 も実行でき、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]のスーパー セットであるため、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]です。  
+ 次のコード例は、`compatibleFrameworks`内の要素を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 この配置を実行できる、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]します。 も実行でき、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]のスーパー セットである、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]します。  
   
-```  
+```xml  
 <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">  
   <framework   
       targetVersion="4.0"   
@@ -75,4 +75,4 @@ ms.locfileid: "31560779"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce 配置マニフェス](../deployment/clickonce-deployment-manifest.md)
+ [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)

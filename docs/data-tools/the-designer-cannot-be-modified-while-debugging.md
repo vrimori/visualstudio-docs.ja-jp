@@ -10,18 +10,18 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 760edee404ac609c16942489c1ff33f647013594
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1bed9629c40d4d7b7e93ccd250474ea90b44ab7c
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174102"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>デバッグ中はデザイナーを変更できません
 
-このメッセージは、アプリケーションがデバッグ モードで実行されているときに、O/R デザイナーで項目を変更しようとした場合に表示されます。 アプリケーションがデバッグ モードで実行されている場合、O/R デザイナーは読み取り専用です。
+項目を変更する試行したときに、このメッセージが表示されます、 **O/R デザイナー**アプリケーションがデバッグ モードで実行されています。 アプリケーションがデバッグ モードで実行されている場合、 **O/R デザイナー**は読み取り専用です。
 
-このエラーを解決するには選択**デバッグの停止**上、**デバッグ**メニュー。 アプリケーションのデバッグが停止し、O/R デザイナーの項目を変更できるようになります。
+このエラーを修正するには、選択**デバッグの停止**上、**デバッグ**メニュー。 アプリケーションのデバッグが停止し、項目を変更することができます、 **O/R デザイナー**します。
 
 ## <a name="see-also"></a>関連項目
 

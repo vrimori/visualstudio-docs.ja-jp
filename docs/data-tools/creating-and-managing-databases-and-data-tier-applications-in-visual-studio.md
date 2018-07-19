@@ -15,25 +15,25 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 84b275f2238774aacff143af17161f09006e8506
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 03dca206f38d98c44e711e945f5d4015142f0af9
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31921541"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36758408"
 ---
 # <a name="database-projects-and-data-tier-applications-in-visual-studio"></a>データベース プロジェクトと Visual Studio でのデータ層アプリケーション
-データベース プロジェクトを使用するには、新しいデータベースを作成する新しいデータ層アプリケーション (Dac) と既存のデータベースとデータ層アプリケーションを更新します。 データベース プロジェクトと DAC プロジェクトの両方と同じようマネージ コードまたはネイティブ コードには、これらの方法を適用することで、データベース開発作業をバージョン コントロールおよびプロジェクトの管理手法を適用することを有効にします。 開発チームを作成してデータベースとデータベース サーバーに変更を管理することができます、 *DAC プロジェクト*、*データベース プロジェクト*、または*サーバー プロジェクト*およびそのバージョン管理します。 チームのメンバーがファイルをチェック アウトを作成、ビルド、およびで変更をテストする*分離開発環境*、またはチームと共有する前に、サンド ボックス。 コード品質を確保するためには、チームが完了し、実稼働環境に変更を配置する前に、ステージング環境で、データベースの特定のリリースのすべての変更をテストできます。
+データベース プロジェクトを使用するには、新しいデータベースを作成する新しいデータ層アプリケーション (Dac) と、既存のデータベースとデータ層アプリケーションを更新します。 データベース プロジェクトと DAC プロジェクトの両方を使用すると、マネージまたはネイティブ コードには、これらの手法を適用することと同じように、データベース開発作業をバージョン管理やプロジェクト管理手法を適用できます。 開発チームで DAC プロジェクト、データベース プロジェクトまたはサーバー プロジェクトを作成し、バージョン管理下にあるデータベースおよびデータベース サーバーへの変更を管理することができます。 チームのメンバーは、作成、ビルド、および分離開発環境、または、サンド ボックスで、チームと共有する前に変更をテストするファイルは確認できます。 コードの品質を確保するために、チームが完了し、運用環境に変更をデプロイする前に、データベースの特定のリリースのすべての変更をステージング環境でテストできます。
 
-データ層アプリケーションでサポートされているデータベース機能の一覧は、次を参照してください。[データ層アプリケーションでサポートする機能](http://go.microsoft.com/fwlink/?LinkId=164239)、Microsoft web サイトにします。 データ層アプリケーションでサポートされていない、データベース内の機能を使用する場合は、データベースに変更を管理するデータベース プロジェクトを代わりに使用する必要があります。
+データ層アプリケーションでサポートされているデータベース機能の一覧は、次を参照してください。[機能は、データ層アプリケーションでサポートされている](http://go.microsoft.com/fwlink/?LinkId=164239)、Microsoft web サイト。 データ層アプリケーションでサポートされていない、データベース内の機能を使用する場合は、データベースに変更を管理するデータベース プロジェクトを代わりに使用する必要があります。
 
 ## <a name="common-high-level-tasks"></a>一般的な高度なタスク
 
 |高レベルのタスク|関連する参照先|
 |----------------------|------------------------|
-|**データ層アプリケーションの開発の開始:** DAC がで導入された新しい概念[!INCLUDE[sskatmai_r2](../data-tools/includes/sskatmai_r2_md.md)]の定義を含む、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]インスタンス クライアント サーバーまたは 3 層で使用されるオブジェクトのデータベースとサポートアプリケーション。 DAC には、テーブルやビューなど、ログインなどのエンティティのインスタンスと共に、データベース オブジェクトが含まれています。 使用することができます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]DAC プロジェクトを作成するには DAC パッケージ ファイルをビルドしのインスタンスへの配置のデータベース管理者にその DAC パッケージ ファイルを送信、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベース エンジン。|-   [データ層アプリケーションの作成および管理する](http://go.microsoft.com/fwlink/?LinkId=160741)(Microsoft web サイト)<br />-   [SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=227328)|
-|**反復的なデータベース開発を実行する:** チェック アウト、プロジェクトの一部を分離開発環境で更新するようにする場合は、開発者やテスターは、します。 このような環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更の完了後に、バージョン管理、他のチーム メンバーおよび、変更を取得でき、ビルド、テスト サーバーに配置を場所にファイルを確認します。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web サイト)<br />-   [TRANSACT-SQL デバッガー](http://go.microsoft.com/fwlink/?LinkId=227324) (Microsoft web サイト)|
-|**プロトタイプを作成、検証テストの結果、および変更データベース スクリプト オブジェクト:** 使用することができます、[!INCLUDE[tsql](../data-tools/includes/tsql_md.md)]エディターいずれかの一般的なタスクの実行にします。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web サイト)|
+|**データ層アプリケーションの開発の開始:** A DAC がで導入された新しい概念[!INCLUDE[sskatmai_r2](../data-tools/includes/sskatmai_r2_md.md)]の定義を格納している、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベースとサポートしているクライアントとサーバー間または 3 層で使用されるオブジェクトをインスタンス化アプリケーション。 DAC には、テーブルやビュー、ログインなどのエンティティのインスタンスと共になどのデータベース オブジェクトが含まれます。 Visual Studio を使用して DAC プロジェクトを作成、DAC パッケージ ファイルを作成およびデータベース管理者のインスタンスに展開するためにその DAC パッケージ ファイルを送信することができます、[!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)]データベース エンジン。|-   [データ層アプリケーションの作成および管理する](http://go.microsoft.com/fwlink/?LinkId=160741)(Microsoft web サイト)<br />-   [SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=227328)|
+|**反復的なデータベース開発を実行する:** チェック アウト、プロジェクトの部分を分離開発環境で更新するようにする場合は、開発者やテスト担当者は、します。 この種の環境を使用すると、チームの他のメンバーの影響を与えずに変更をテストすることができます。 変更が完了した後は、バージョン管理、他のチーム メンバーと、変更を取得できますとビルド、テスト サーバーに配置をどこにファイルを確認します。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web サイト)<br />-   [TRANSACT-SQL デバッガー](http://go.microsoft.com/fwlink/?LinkId=227324) (Microsoft web サイト)|
+|**結果、および変更のデータベースのスクリプトとオブジェクトのプロトタイプ作成、検証テスト:** を使用することができます、[!INCLUDE[tsql](../data-tools/includes/tsql_md.md)]エディターのいずれかの一般的なタスクを実行します。|-   [クエリおよびテキスト エディター (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=227327) (Microsoft web サイト)|
 
 ## <a name="see-also"></a>関連項目
 

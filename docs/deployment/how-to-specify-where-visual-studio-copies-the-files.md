@@ -1,5 +1,5 @@
 ---
-title: '方法: Visual Studio がファイルをコピーする場所を指定して |Microsoft ドキュメント'
+title: '方法: Visual Studio がファイルをコピーする場所の指定 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,17 +17,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b4e626253d9d07a9f263304d02739bdb3f4b012
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2b2a4d642bc551127f34fe7a64ec01665b7ace70
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31557893"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078629"
 ---
-# <a name="how-to-specify-where-visual-studio-copies-the-files"></a>方法: Visual Studio がファイルをコピーする場所を指定する
+# <a name="how-to-specify-where-visual-studio-copies-the-files"></a>方法: Visual Studio がファイルをコピーする場所を指定します。
 ClickOnce を使用してアプリケーションを発行する場合、`Publish Location` プロパティによってアプリケーション ファイルとマニフェストが配置される場所が指定されます。 これには、ファイル パスまたは FTP サーバーへのパスを指定できます。  
   
- 指定することができます、`Publish Location`プロパティを**発行**のページ、**プロジェクト デザイナー**、または発行ウィザードを使用しています。 詳細については、次を参照してください。[する方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)です。  
+ 指定できます、`Publish Location`プロパティを**発行**のページ、**プロジェクト デザイナー**、または発行ウィザードを使用しています。 詳細については、次を参照してください。[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)します。  
   
 > [!NOTE]
 >  ClickOnce を使用してアプリケーションの複数のバージョンをインストールすると、以前のバージョンのアプリケーションは、指定した発行場所の Archive というフォルダーに移されます。 以前のバージョンがこのようにアーカイブされることで、インストール ディレクトリが以前のバージョンのフォルダーから分離されます。  
@@ -40,12 +40,12 @@ ClickOnce を使用してアプリケーションを発行する場合、`Publis
   
 3.  **発行場所**フィールドに、次の形式のいずれかを使用して、発行場所を入力します。  
   
-    -   ファイル共有またはディスク パスに発行する場合に、UNC パスを使用して、パスを入力 (\\\Server\ApplicationName) またはファイル パス (C:\Deploy\ApplicationName)。  
+    -   にファイル共有またはディスク パスを発行するには、UNC パスを使用してパスを入力 (*\\\Server\ApplicationName*) またはファイル パス (*C:\Deploy\ApplicationName*)。  
   
-    -   FTP サーバーを発行するには、ftp://ftp.microsoft.com/ApplicationName という形式を使用して、パスを入力します。  
+    -   FTP サーバーに発行するには、形式を使用してパスを入力します。 *ftp://ftp.microsoft.com/\<ApplicationName >* します。  
   
-     テキスト内に存在する必要があります、**発行場所**ボックスの 参照の順序で (**.**) ボタンが機能します。  
+     テキスト内に存在する必要があります、**発行場所**ボックスに、参照ボタン (**.**) ボタンが機能します。  
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
- [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [方法: 発行ウィザードを使用して ClickOnce アプリケーションの発行](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

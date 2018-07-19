@@ -1,5 +1,5 @@
 ---
-title: Folder 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント
+title: Folder 要素 (Visual Studio プロジェクト テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2ecf9c2973a5fb09cf1a217bd700882dce41626
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec8a5520716f6073d49ab2b5a64becfb760092d2
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132816"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36234924"
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio テンプレート)
 プロジェクトに追加されるフォルダーを指定します。  
@@ -47,27 +47,27 @@ ms.locfileid: "31132816"
 |属性|説明|  
 |---------------|-----------------|  
 |`Name`|必須の属性です。<br /><br /> プロジェクト フォルダーの名前。|  
-|`TargetFolderName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトの作成時に、フォルダーに付ける名前を指定します。 この属性は、パラメーター置換を使用して、フォルダー名を作成するのに役立ちますか .zip ファイルで直接、国際対応の文字列でフォルダーの名前は使用できません。|  
+|`TargetFolderName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるフォルダーを指定する名前を指定します。 この属性は、パラメーター置換を使用して、フォルダー名を作成するのに役立ちます。 または .zip ファイルで直接、国際対応の文字列でフォルダーの名前は使用できません。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|`Folder`|プロジェクトに追加するフォルダーを指定します。 `Folder` 要素は子を含めることができる`Folder`要素。|  
+|`Folder`|プロジェクトに追加するフォルダーを指定します。 `Folder` 要素が子を含めることができます`Folder`要素。|  
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|プロジェクトに追加するファイルを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Project](../extensibility/project-element-visual-studio-templates.md)|省略可能な子要素の[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)です。|  
+|[Project](../extensibility/project-element-visual-studio-templates.md)|省略可能な子要素の[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Folder` 省略可能な子の`Project`します。  
   
- テンプレート内のフォルダーにプロジェクト項目を整理するには、以下の方法のいずれかを使用できます。  
+ テンプレート内のフォルダーにプロジェクト項目を整理するのにには、次の方法のいずれかを使用できます。  
   
--   テンプレートの .zip ファイル、フォルダーに含めるし、でファイルへのパスを指定することで、.vstemplate ファイルでプロジェクトに追加、`ProjectItem`せず、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
+-   テンプレートの .zip ファイルとフォルダーを含めるしでファイルへのパスを指定することで、.vstemplate ファイルでプロジェクトに追加、`ProjectItem`なしで、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
   
      `...`  
   
@@ -77,7 +77,7 @@ ms.locfileid: "31132816"
   
      `...`  
   
--   テンプレートの .zip ファイル、フォルダーに含めるしで .vstemplate ファイルでプロジェクトに追加`Folder`要素。 例えば:  
+-   テンプレートの .zip ファイルとフォルダーを含めるし、.vstemplate ファイルでプロジェクトに追加`Folder`要素。 例えば:  
   
      `...`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "31132816"
   
      `...`  
   
--   テンプレート .zip ファイルにフォルダーを含めないでくださいを使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
+-   テンプレートの .zip ファイル内のフォルダーを含めないでくださいを使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
   
      `...`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "31132816"
      `...`  
   
 ## <a name="example"></a>例  
- 次の例では、用のプロジェクト テンプレートのメタデータ、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーション。  
+ 次の例のためのプロジェクト テンプレート メタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]Windows アプリケーション。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

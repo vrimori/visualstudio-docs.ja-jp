@@ -1,5 +1,5 @@
 ---
-title: リモートの IIS のリモート コンピューター上の ASP.NET のデバッグ |Microsoft ドキュメント
+title: リモートの IIS コンピューター上の ASP.NET のリモート デバッグ |Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 05/21/2018
 ms.technology: vs-ide-debug
@@ -10,69 +10,69 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 759615311478f1b428edc2a800c61b9252a3a84a
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 4a08c957e03dd2df80d9b3b770e569ba1e64104f
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746859"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38780989"
 ---
-# <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>IIS: リモート コンピューター上の ASP.NET のリモート デバッグ
-IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリが展開されているコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチし、します。
+# <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>リモートの IIS コンピューター上の ASP.NET のリモート デバッグ
+IIS に配置されている ASP.NET アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行して Visual Studio から、実行中のアプリにアタッチします。
 
 ![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
 
-このガイドでは、設定、Visual Studio 2017 ASP.NET MVC 4.5.2 アプリケーションを構成して、IIS に展開、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
+このガイドでは、設定、Visual Studio 2017 ASP.NET MVC 4.5.2 アプリケーションを構成して、IIS にデプロイ、および Visual Studio からリモート デバッガーをアタッチする方法について説明します。
 
 > [!NOTE]
-> リモート ASP.NET Core を代わりにデバッグを参照してください[IIS コンピューター上のリモート デバッグ ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)です。 Azure App Service を簡単に展開でき、いずれかを使用して、IIS の構成済みのインスタンス上でのデバッグ、[スナップショット デバッガー](../debugger/debug-live-azure-applications.md) (.NET 4.6.1 が必要な) または[サーバー エクスプ ローラーから、デバッガーのアタッチ](../debugger/remote-debugging-azure.md)です。
+> リモートへの ASP.NET Core の代わりにデバッグを参照してください[IIS コンピューター上のリモート デバッグ ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)します。 Azure App Service は、容易に導入し、いずれかを使用して IIS の構成済みのインスタンス上でデバッグすることができます、[スナップショット デバッガー](../debugger/debug-live-azure-applications.md) (.NET 4.6.1 が必要) または[サーバー エクスプ ローラーから、デバッガーのアタッチ](../debugger/remote-debugging-azure.md)。
 
 これらの手順は、これらのサーバー構成でテストされています。
-* Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 のサーバーの手順が異なる)
+* Windows Server 2012 R2 と IIS 8 (Windows Server 2008 R2 の server 手順は異なります)
 
 ## <a name="requirements"></a>必要条件
 
-リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降ではサポートします。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
+リモート デバッガーは、Windows Server の Windows Server 2008 Service Pack 2 以降でサポートされます。 要件の完全な一覧を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)します。
 
 > [!NOTE]
-> プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。
+> プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での高待機時間またはダイヤルアップ、インターネットなどの低帯域幅接続経由またはインターネット経由でのデバッグは使用しないでと失敗は、ある非常に遅く。
 
-## <a name="app-already-running-in-iis"></a>アプリが既に IIS で実行されていますか。
+## <a name="app-already-running-in-iis"></a>アプリが IIS で既に実行されているか。
 
-この記事には、Windows server 上の IIS の基本的な構成設定、および Visual Studio からアプリの展開のステップが含まれます。 ここでは、サーバーがインストールされているアプリが正常に実行できることと、リモート デバッグする準備ができたらコンポーネントを必要なことを確認する手順。
+この記事には、Windows server 上の IIS の基本構成の設定および Visual Studio からアプリを展開する方法の手順が含まれています。 ここでは、サーバーにインストールされているアプリが正常に実行できることと、リモート デバッグする準備が整ったらコンポーネントに必要なあるかどうかを確認する手順。
 
-* IIS で、アプリが実行されていて、リモート デバッガーをダウンロードし、デバッグを開始に移動したい[ダウンロードして、Windows Server のリモート ツールをインストール](#BKMK_msvsmon)です。
+* アプリが IIS で実行されていると、リモート デバッガーをダウンロードし、デバッグを開始に移動したい場合[をダウンロードして Windows Server のリモート ツールをインストール](#BKMK_msvsmon)します。
 
-* アプリがセットアップされている、展開するかどうかを確認するのに役立つこのトピックのすべての手順に従いますをデバッグすることができるように、IIS で正しく実行する場合。
+* アプリが設定されている、展開されると、かどうかを確認するのに役立つこのトピックのすべての手順に従いますデバッグできるように、IIS で正しく実行する場合は。
 
-## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターにアプリケーション
+## <a name="create-the-aspnet-452-application-on-the-visual-studio-computer"></a>ASP.NET 4.5.2 を作成する Visual Studio コンピューターでアプリケーション
   
-1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**選択してから、* * Visual c# > Web > ASP.NET Web アプリケーションです。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]** を選択します。 確認して**Docker のサポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**です。 プロジェクトに名前を**MyASPApp**)。
+1. MVC の ASP.NET アプリケーションを新規作成します。 (**ファイル > 新規 > プロジェクト**を選択し、* * Visual c# > Web > ASP.NET Web アプリケーション。 **[ASP.NET 4.5.2** テンプレート] セクションで、 **[MVC]** を選択します。 確認します**Docker サポートを有効にする**が選択されていないことと**認証**に設定されている**認証なし**します。 プロジェクトに名前を**MyASPApp**)。
 
 2. HomeController.cs ファイルを開き、 `About()` メソッドにブレークポイントを設定します。
 
-## <a name="bkmk_configureIIS"></a> インストールして Windows Server で IIS を構成します。
+## <a name="bkmk_configureIIS"></a> インストールし、Windows Server で IIS を構成します。
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
 ## <a name="update-browser-security-settings-on-windows-server"></a>Windows Server 上のブラウザーのセキュリティ設定を更新します。
 
-(これは既定で有効)、Internet explorer セキュリティ強化の構成が有効な場合は、いくつかの web サーバー コンポーネントをダウンロードするために信頼済みサイトとしていくつかのドメインを追加する必要があります。 移動して、信頼済みサイトを追加**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**です。 次のドメインを追加します。
+(既定では有効です)、Internet explorer セキュリティ強化の構成が有効な場合は、一部の web サーバー コンポーネントをダウンロードするための信頼済みサイトとして、一部のドメインを追加する必要があります。 移動して、信頼済みサイトを追加**インターネット オプション > セキュリティ > 信頼済みサイト > サイト**します。 次のドメインを追加します。
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
 - iis.net
 
-ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むための権限を許可する要求を取得することがあります。 これらのリソースの一部は必要ありません、クリックしてプロセスを簡易化、**追加**されたらです。
+ソフトウェアをダウンロードするときに、さまざまな web サイトのスクリプトおよびリソースを読み込むためのアクセス許可を与える要求を取得する可能性があります。 必須ではありませんが、プロセスを簡略化する次のようにクリックします。 これらのリソースのいくつか**追加**入力を求められたらします。
 
-## <a name="BKMK_deploy_asp_net"></a> Windows Server に ASP.NET 4.5 をインストールします。
+## <a name="BKMK_deploy_asp_net"></a> Windows Server での ASP.NET 4.5 をインストールします。
 
-詳細な情報を IIS で ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 と ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)です。
+詳細な情報を IIS に ASP.NET をインストールする場合は、「 [IIS 8.0 を使用して ASP.NET 3.5 および ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)します。
 
-1. サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**です。
+1. サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**します。
 
-1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**新しい Web Platform コンポーネントの取得**、ASP.NET の検索)。
+1. Web Platform Installer (WebPI) を使用して ASP.NET 4.5 をインストールする (Windows Server 2012 R2 で、サーバー ノードから次のように選択します**Web プラットフォームの新しいコンポーネントの取得**、ASP.NET の検索)。
 
     ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg_iis_aspnet_45.png "RemoteDBG_IIS_AspNet_45")
 
@@ -81,71 +81,71 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 
      **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
 
-2. システムを再起動 (実行または**net stop が/y**続く**net 開始 w3svc**システム パスへの変更を取得するコマンド プロンプトから)。
+2. システムの再起動 (実行または**net stop was/y**続けて**net start w3svc**システム パスに変更を適用するコマンド プロンプトから)。
 
-## <a name="choose-a-deployment-option"></a>展開オプションを選択します
+## <a name="choose-a-deployment-option"></a>デプロイ オプションを選択します。
 
-アプリを展開する、IIS にする必要がある場合は、これらのオプションを考慮してください。
+IIS にアプリをデプロイする必要があります問題が解決する場合は、これらのオプションを検討してください。
 
-* IIS で、発行設定ファイルを作成して、Visual Studio での設定をインポートして展開します。 シナリオによっては、これは、アプリの配置に高速な方法です。 発行設定ファイルを作成するときに権限 IIS で自動的に設定されます。
+* Visual Studio での設定のインポートを IIS で発行設定ファイルを作成してデプロイします。 一部のシナリオをすばやくアプリをデプロイする方法です。 発行設定ファイルを作成するときに権限 IIS に自動的に設定されます。
 
-* ローカル フォルダーに発行し、IIS で準備済みのアプリのフォルダーに優先の方法で出力をコピーして展開します。
+* ローカルのフォルダーに発行し、推奨される方法によって、出力を IIS で準備済みのアプリ フォルダーにコピーしてデプロイします。
 
-## <a name="optional-deploy-using-a-publish-settings-file"></a>(省略可能)発行設定ファイルを使用した展開します。
+## <a name="optional-deploy-using-a-publish-settings-file"></a>(省略可能)発行設定ファイルを使用してデプロイします。
 
-このオプションを使用する、発行設定ファイルを作成し、Visual Studio にインポートします。
+このオプションを使用する発行設定ファイルを作成し、Visual Studio にインポートします。
 
 > [!NOTE]
-> この展開方法は、Web Deploy を使用します。 Web 配置を手動で構成 Visual Studio で、設定をインポートする代わりにする場合をホストしているサーバーの Web 展開 3.6 ではなく Web 展開 3.6 をインストールできます。 ただし、Web Deploy を手動で構成する場合、必要がありますに正しい値および権限を持つサーバー上のアプリ フォルダーが構成されていることを確認してください (を参照してください[を構成する ASP.NET Web サイト](#BKMK_deploy_asp_net))。
+> この展開方法では、Web Deploy を使用します。 Web 配置を手動で構成 Visual Studio で、設定をインポートする代わりにする場合は、ホスティング サーバーの Web デプロイ 3.6 ではなく Web デプロイ 3.6 をインストールできます。 ただし場合 Web Deploy 手動で構成する、する必要があります、サーバー上のアプリ フォルダーが正しい値とアクセス許可で構成されているかどうかを確認する (を参照してください[を構成する ASP.NET Web サイト](#BKMK_deploy_asp_net))。
 
-### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>インストールして Windows Server 上のホスト サーバーの Web 配置を構成します。
+### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>インストールし、Windows server ホスティング サーバーの Web 配置の構成
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
 
-### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS に発行設定ファイルを作成します。
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server 上の IIS での発行設定ファイルを作成します。
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
-### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定のインポートおよび展開
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio で発行設定をインポートおよび展開
 
 [!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-アプリが正常に配置した後、自動的に開始する必要があります。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。
+アプリが正常がデプロイした後、自動的に開始する必要があります。 Visual Studio からアプリが起動しない場合は、IIS でアプリを起動します。
 
-1. **設定**ダイアログ ボックスをクリックしてデバッグを有効にする**次**を選択、**デバッグ**構成を選択し**の追加ファイルを削除します。移行先**下にある、**ファイルを発行**オプション。
+1. **設定**ダイアログ ボックスをクリックしてデバッグを有効にする **[次へ]**、選択、**デバッグ**構成を選び、**追加ファイルを削除移行先**下、**ファイル発行**オプション。
 
     > [!NOTE]
-    > デバッグを無効にする、リリース構成を選択した場合、 *web.config*ファイルの公開時にします。
+    > デバッグを無効にするリリース構成を選択した場合、 *web.config*ファイルの公開時にします。
 
-1. をクリックして**保存**し、アプリを再発行します。
+1. クリックして**保存**し、アプリを再発行します。
 
-## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(省略可能)ローカル フォルダーに発行して展開します。
+## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(省略可能)ローカル フォルダーに発行してデプロイします。
 
-このオプションを使用すると、Powershell、RoboCopy を使用して IIS にアプリケーションをコピーするか、ファイルを手動でコピーする場合、アプリを展開します。
+このオプションを使用するには、RoboCopy、Powershell を使用して IIS にアプリケーションをコピーするか、ファイルを手動でコピーする場合は、アプリをデプロイします。
 
-### <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターで ASP.NET Web サイトを構成します。
+### <a name="BKMK_deploy_asp_net"></a> Windows Server コンピューターに ASP.NET Web サイトを構成します。
 
-1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後で配置されます。
+1. Windows エクスプ ローラーを開き、新しいフォルダーを作成**C:\Publish**、ASP.NET プロジェクトを後でデプロイされます。
 
-2. これがまだ開いていない場合は開きます、**インターネット インフォメーション サービス (IIS) マネージャー**です。 (サーバー マネージャーの左側のウィンドウで選択**IIS**です。 サーバーを右クリックし **インターネット インフォメーション サービス (IIS) マネージャー**)。
+2. 開くことがまだ開いていない場合、**インターネット インフォメーション サービス (IIS) マネージャー**します。 (サーバー マネージャーの左側のウィンドウで次のように選択します。 **IIS**します。 サーバーを右クリックして**インターネット インフォメーション サービス (IIS) マネージャー**)。
 
-3. **接続**左側のウィンドウに移動**サイト**です。
+3. **接続**で左側のウィンドウに移動**サイト**します。
 
-4. 選択、**既定の Web サイト**、選択**基本設定**、設定と、**物理パス**に**C:\Publish**です。
+4. 選択、**既定の Web サイト**、選択**基本設定**、設定と、**物理パス**に**C:\Publish**します。
 
 5. **[既定の Web サイト]** ノードを右クリックして、 **[アプリケーションの追加]** を選択します。
 
-6. 設定、**エイリアス**フィールドを**MyASPApp**、既定のアプリケーション プール (**DefaultAppPool**)、し、設定、**物理パス**に**C:\Publish**です。
+6. 設定、**エイリアス**フィールドを**MyASPApp**、アプリケーション プールの既定値を受け入れます (**DefaultAppPool**)、設定、**物理パス**に**C:\Publish**します。
 
-7. **接続****アプリケーション プール**です。 開いている**DefaultAppPool**にアプリケーション プール フィールドを設定および**ASP.NET v4.0** (ASP.NET 4.5 は、アプリケーション プールのオプションではありません)。
+7. **接続**、**アプリケーション プール**します。 開いている**DefaultAppPool**にアプリケーション プールのフィールドを設定および**ASP.NET v4.0** (ASP.NET 4.5 は、アプリケーション プールのオプションではありません)。
 
-8. IIS マネージャーで選択されているサイトで次のように選択します。**アクセス許可の編集**、その IUSR、IIS_IUSRS、または読み取りと実行権限を持つ承認済みユーザーにアプリケーション プールが構成されているユーザーを確認します。 これらのユーザーが存在しない場合、読み取りと実行権限を持つユーザーとして IUSR を追加します。
+8. サイトでは、IIS マネージャーで選択されて、次のように選択します。**アクセス許可の編集**、その IUSR、IIS_IUSRS、またはユーザーのアプリケーション プールが読み取りと実行権限を持つ権限を持つユーザー用に構成されたことを確認します。 これらのユーザーの [なし] が存在する場合は、読み取りと実行権限を持つユーザーとして IUSR を追加します。
 
-### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>発行および Visual Studio から、ローカル フォルダーに発行してアプリを配置
+### <a name="publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>発行して、Visual Studio からローカル フォルダーにパブリッシュすることによって、アプリをデプロイ
 
-発行し、ファイル システムまたはその他のツールを使用してアプリを展開することもできます。
+発行し、ファイル システムまたはその他のツールを使用してアプリをデプロイすることもできます。
 
-1. (ASP.NET 4.5.2)Web.config ファイルが .NET Framework の正しいバージョンを一覧表示されることを確認してください。  など、ASP.NET 4.5.2 を対象とする場合は、web.config でこのバージョンが表示されていることを確認してください。
+1. (ASP.NET 4.5.2)Web.config ファイルが .NET Framework の正しいバージョンを一覧表示されることを確認します。  たとえば、ASP.NET 4.5.2 を対象とする場合は、web.config にこのバージョンが表示されていることを確認すること。
   
     ```xml
     <system.web>
@@ -158,7 +158,7 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
   
     ```
 
-    たとえば、4.5.2 ではなく ASP.NET 4 をインストールする場合は、バージョンは 4.0 をする必要があります。
+    たとえば、4.5.2 ではなく ASP.NET 4 をインストールする場合、バージョンは 4.0 をある必要があります。
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
@@ -171,63 +171,63 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
 > [!TIP]
-> 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
+> 一部のシナリオでは、ファイル共有からリモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からリモート デバッガーを実行](../debugger/remote-debugging.md#fileshare_msvsmon)します。
   
 ## <a name="BKMK_setup"></a> Windows Server のリモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> 必要があるその他のユーザーのアクセス許可を追加または変更した場合、認証モード リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)です。
+> 必要がある追加のユーザーのアクセス許可を追加または変更した場合、認証モード、リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)します。
 
-サービスとしてリモート デバッガーを実行する方法については、次を参照してください。[リモート デバッガーをサービスとして実行](../debugger/remote-debugging.md#bkmk_configureService)です。
+サービスとしてリモート デバッガーの実行方法の詳細については、次を参照してください。[リモート デバッガーをサービスとして実行](../debugger/remote-debugging.md#bkmk_configureService)します。
 
 ## <a name="BKMK_attach"></a> Visual Studio コンピューターから ASP.NET アプリケーションにアタッチする
 
-1. Visual Studio コンピューターには、デバッグしようとしているソリューションを開きます (**MyASPApp**この記事の手順に従っている場合)。
-2. Visual Studio で、**デバッグ > プロセスにアタッチする**(Ctrl + Alt + P)。
+1. Visual Studio コンピューターでは、デバッグしようとしているソリューションを開きます (**MyASPApp**この記事の手順に従っている場合)。
+2. Visual Studio で、次のようにクリックします。**デバッグ > プロセスにアタッチ**(Ctrl + Alt + P)。
 
     > [!TIP]
-    > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスを再アタッチできます**デバッグ > プロセスを再アタッチしています.**(Shift + Alt + P)。 
+    > Visual Studio 2017 を使用して、以前にアタッチした同じプロセスに再アタッチできる**デバッグ > プロセスに再アタッチしています.**(Shift + Alt + P)。 
 
-3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**です。
-4. をクリックして**更新**です。
+3. 修飾子のフィールドに設定**\<リモート コンピューター名 >: 4022**します。
+4. クリックして**更新**します。
     **[選択可能なプロセス]** ウィンドウにプロセスがいくつか表示されます。
 
-    すべてのプロセスが見つからない場合は、(ポートが必要です) リモート コンピューター名の代わりに IP アドレスを使用して再試行してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
+    すべてのプロセスが表示されない場合は、(ポートが必要です)、リモート コンピューター名ではなく IP アドレスを使用してください。 使用することができます`ipconfig`IPv4 アドレスを取得するコマンド ラインでします。
 
 5. **[すべてのユーザーからのプロセスを表示する]** をオンにします。
-6. すばやく検索するプロセス名の最初の文字を入力**w3wp.exe** ASP.NET 4.5 用です。
+6. すばやく検索するプロセス名の最初の文字を入力**w3wp.exe** ASP.NET 4.5。
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess.png "RemoteDBG_AttachToProcess")
 
-7. をクリックして**アタッチ**
+7. クリックして**アタッチ**
 
-8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動**http://\<リモート コンピューター名 >** です。
+8. リモート コンピューターの Web サイトを開きます。 ブラウザーに移動します。 **http://\<リモート コンピューター名 >** します。
     
     ASP.NET の Web ページが表示されるはずです。
-9. ASP.NET アプリケーションの実行では、リンクをクリックして、**に関する**ページ。
+9. 実行中の ASP.NET アプリケーションでリンクをクリックして、**について**ページ。
 
     Visual Studio で、ブレークポイントにヒットするはずです。
 
-## <a name="bkmk_openports"></a> Windows Server で必要なポートを開くのトラブルシューティング。
+## <a name="bkmk_openports"></a> トラブルシューティング: Windows Server で必要なポートを開く
 
 ほとんどの設定では、ASP.NET とリモート デバッガーのインストールに必要なポートが開かれます。 ただし、ポートが開いていることを確認する必要があります。
 
 > [!NOTE]
-> Azure vm を使用して、ポートを開く必要があります、[ネットワーク セキュリティ グループ](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80)です。 
+> Azure VM 上でポートを開く必要があります、[ネットワーク セキュリティ グループ](/azure/virtual-machines/virtual-machines-windows-hero-role#open-port-80-for-web-traffic)します。 
 
 必要なポート:
 
-- 80 - IIS の必要な
-- 8172 - (Web は、Visual Studio からアプリを展開する展開のために必要な省略可能)
-- 4022-Visual Studio 2017 からのリモート デバッグに必要な (を参照してください[リモート デバッガーのポート割り当て](../debugger/remote-debugger-port-assignments.md)詳細です。
-- UDP 3702 - (省略可能) 検出ポートを使用する、**検索**Visual Studio でリモート デバッガーをアタッチするときにボタンをクリックします。
+- 80 に必要な IIS 用。
+- 8172 - (Visual Studio からアプリのデプロイへの Web 配置のために必要な省略可能)
+- 4022-Visual Studio 2017 からのリモート デバッグに必要な (を参照してください[Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)の詳細。
+- UDP 3702 - (省略可能) 検出ポート使用すると、**検索**Visual Studio でリモート デバッガーをアタッチするときにボタンをクリックします。
 
-1. Windows Server 上のポートを開く、**開始**メニューで、検索**セキュリティが強化された Windows ファイアウォール**です。
+1. Windows Server 上のポートを開くを開き、**開始**メニューで、検索**セキュリティが強化された Windows ファイアウォール**します。
 
-2. 選択し、**受信の規則 > 新しいルールの追加 > ポート**です。 選択**次へ**し、**特定のローカル ポート**をポート番号を入力し、をクリックして**次へ**、し**接続を許可する**、次へ をクリックし、名前を追加 (**IIS**、 **Web Deploy**、または**msvsmon**)、受信の規則にします。
+2. クリックして**受信の規則 > 新しい規則 > ポート**します。 選択**次へ** **特定のローカル ポート**をポート番号を入力し、をクリックして**次へ**、し**接続を許可する**、次へ をクリックし、名前を追加 (**IIS**、 **Web Deploy**、または**msvsmon**)、受信の規則にします。
 
-    詳細について Windows ファイアウォールを構成する場合を参照してください。[リモート デバッグ用の Windows ファイアウォールを構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)です。
+    詳細について、Windows ファイアウォールを構成する場合を参照してください。[リモート デバッグ用の Windows ファイアウォールを構成する](../debugger/configure-the-windows-firewall-for-remote-debugging.md)します。
 
-3. 必要なその他のポートの追加の規則を作成します。
+3. その他の必要なポートの追加の規則を作成します。

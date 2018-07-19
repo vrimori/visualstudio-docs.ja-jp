@@ -1,7 +1,17 @@
 ---
-title: ClickOnce アンマネージ API リファレンス |Microsoft ドキュメント
+title: ClickOnce アンマネージ API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
+api_name:
+- CleanOnlineAppCache
+- GetDeploymentDataFromManifest
+- LaunchApplication
+api_location:
+- dfshim.dll
+api_type:
+- COM
+topic_type:
+- apiref
 ms.technology: vs-ide-deployment
 ms.topic: reference
 dev_langs:
@@ -20,65 +30,66 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0651c42abb410b55af956744da7a5e37952770b4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 121b9b3be3c7f942f3ed1d5f7f2600f24d684e2d
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082140"
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce アンマネージ API リファレンス
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll からアンマネージのパブリック Api です。  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll から非管理対象のパブリック Api。  
   
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
  消去またはからのすべてのオンライン アプリケーションのアンインストール、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション キャッシュします。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
+ 成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
   
-### <a name="remarks"></a>コメント  
- 開始 CleanOnlineAppCache を呼び出して、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]サービスが実行されていない場合。  
+### <a name="remarks"></a>Remarks  
+ CleanOnlineAppCache の呼び出しが開始されます、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]サービスが実行されていない場合。  
   
 ## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest  
- マニフェストとアクティベーションの URL からの展開情報を取得します。  
+ マニフェストとアクティベーション URL からの展開情報を取得します。  
   
 ### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|型|  
 |---------------|-----------------|----------|  
-|`pcwzActivationUrl`|ポインター、`ActivationURL`です。|LPCWSTR|  
-|`pcwzPathToDeploymentManifest`|ポインター、`PathToDeploymentManifest`です。|LPCWSTR|  
+|`pcwzActivationUrl`|ポインター、`ActivationURL`します。|LPCWSTR|  
+|`pcwzPathToDeploymentManifest`|ポインター、`PathToDeploymentManifest`します。|LPCWSTR|  
 |`pwzApplicationIdentity`|完全なアプリケーション id が返されるを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
-|`pdwIdentityBufferLength`|長さを DWORD へのポインター、 `pwzApplicationIdentity` WCHARs 内のバッファー。 これには、NULL 終端文字のスペースが含まれます。|LPDWORD|  
-|`pwzProcessorArchitecture`|マニフェストからのアプリケーションの配置のプロセッサ アーキテクチャを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
-|`pdwArchitectureBufferLength`|長さを DWORD へのポインター、 `pwzProcessorArchitecture` WCHARs 内のバッファー。|LPDWORD|  
-|`pwzApplicationManifestCodebase`|マニフェストからのアプリケーション マニフェストのコードベースを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
-|`pdwCodebaseBufferLength`|長さを DWORD へのポインター、 `pwzApplicationManifestCodebase` WCHARs 内のバッファー。|LPDWORD|  
-|`pwzDeploymentProvider`|NULL で終わる文字列を受け取るバッファーへのポインターを指定するマニフェストから配置プロバイダ存在する場合。 それ以外の場合、空の文字列が返されます。|LPWSTR|  
-|`pdwProviderBufferLength`|長さを DWORD へのポインター、`pwzProviderBufferLength`です。|LPDWORD|  
+|`pdwIdentityBufferLength`|長さである DWORD へのポインター、 `pwzApplicationIdentity` WCHARs でのバッファー。 これには、NULL 終端文字のための領域が含まれます。|LPDWORD|  
+|`pwzProcessorArchitecture`|マニフェストからのアプリケーションの展開のプロセッサ アーキテクチャを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
+|`pdwArchitectureBufferLength`|長さである DWORD へのポインター、 `pwzProcessorArchitecture` WCHARs でのバッファー。|LPDWORD|  
+|`pwzApplicationManifestCodebase`|マニフェストから、アプリケーション マニフェストのコードベースを指定する NULL で終わる文字列を受け取るバッファーへのポインター。|LPWSTR|  
+|`pdwCodebaseBufferLength`|長さである DWORD へのポインター、 `pwzApplicationManifestCodebase` WCHARs でのバッファー。|LPDWORD|  
+|`pwzDeploymentProvider`|NULL で終わる文字列を受け取るバッファーへのポインターを指定するマニフェストから配置プロバイダー存在する場合。 それ以外の場合、空の文字列が返されます。|LPWSTR|  
+|`pdwProviderBufferLength`|長さである DWORD へのポインター、`pwzProviderBufferLength`します。|LPDWORD|  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 バッファーが小さすぎる場合は、HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER) を返します。  
+ 成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 バッファーが小さすぎる場合は、HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER) を返します。  
   
-### <a name="remarks"></a>コメント  
- ポインターを null にするにはできません。 `pcwzActivationUrl` および`pcwzPathToDeploymentManifest`空にしないでください。  
+### <a name="remarks"></a>Remarks  
+ ポインターを null にするにはできません。 `pcwzActivationUrl` `pcwzPathToDeploymentManifest`空にできません。  
   
- 呼び出し元のライセンス認証の URL をクリーンアップします。 たとえば、エスケープを追加する文字が必要な場所またはクエリ文字列を削除します。  
+ アクティベーション URL をクリーンアップする、呼び出し元の役目です。 必要な場所またはクエリ文字列を削除するが、文字エスケープを追加します。  
   
- 入力文字列の長さを制限する、呼び出し元の役割です。 たとえば、URL の最大長は 2 KB です。  
+ 入力文字列の長さを制限する、呼び出し元の責任です。 たとえば、URL の最大長は、2 KB です。  
   
 ## <a name="launchapplication"></a>LaunchApplication  
- 起動するか、デプロイメント URL を使用して、アプリケーションをインストールします。  
+ 起動または配置の URL を使用してアプリケーションをインストールします。  
   
 ### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|型|  
 |---------------|-----------------|----------|  
-|`deploymentUrl`|配置マニフェストの URL を表す NULL で終わる文字列へのポインター。|LPCWSTR|  
+|`deploymentUrl`|配置マニフェストの URL を含む NULL で終わる文字列へのポインター。|LPCWSTR|  
 |`data`|将来使用するために予約されています。 NULL にする必要があります。|LPVOID|  
-|`flags`|将来使用するために予約されています。 0 にする必要があります。|DWORD|  
+|`flags`|将来使用するために予約されています。 0 を指定する必要があります。|DWORD|  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。それ以外の場合、失敗を表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
+ 成功した場合、S_OK を返します。それ以外の場合、エラーを表す HRESULT を返します。 マネージ例外が発生した場合は、0x80020009 (DISP_E_EXCEPTION) を返します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

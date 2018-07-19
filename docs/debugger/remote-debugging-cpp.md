@@ -1,5 +1,5 @@
 ---
-title: リモート Visual C プロジェクトのデバッグ |Microsoft ドキュメント
+title: Visual C プロジェクトのリモート デバッグ |Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2017
 ms.technology: vs-ide-debug
@@ -19,50 +19,50 @@ manager: douge
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 334a0b964033282458c211d69af30aad20dbd6bc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31478110"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781946"
 ---
 # <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>リモート Visual Studio での Visual C プロジェクトのデバッグ
-別のコンピューターに Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続しと展開、アプリを実行するプロジェクトを構成します。
+別のコンピューター上の Visual Studio アプリケーションをデバッグ、インストールして、アプリを展開するコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続して、デプロイして、アプリを実行するプロジェクトを構成します。
 
 ![リモート デバッガー コンポーネント](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
-リモート ユニバーサル Windows アプリ (UWP) をデバッグする方法については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)です。
+リモート デバッグのユニバーサル Windows アプリ (UWP) の詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-リモート デバッガーは、Windows 7 でサポートされていると新しい (phone ではない) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の一覧については、次を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)です。
+リモート デバッガーは Windows 7 でサポートされている以降 (phone ではありません) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の完全な一覧を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)します。
 
 > [!NOTE]
-> プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での待機時間の長いまたはダイヤルアップ、インターネットなどの低帯域幅接続またはインターネット経由でのデバッグはお勧めしませんが失敗することも非常に遅くします。
+> プロキシを介して接続されている 2 台のコンピューター間でのデバッグはサポートされていません。 国の間での高待機時間またはダイヤルアップ、インターネットなどの低帯域幅接続経由またはインターネット経由でのデバッグは使用しないでと失敗は、ある非常に遅く。
   
 ## <a name="download-and-install-the-remote-tools"></a>ダウンロードして、リモート ツールのインストール
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
   
 > [!TIP]
-> 一部のシナリオでは、ファイル共有から、リモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からのリモート デバッガーの実行](../debugger/remote-debugging.md#fileshare_msvsmon)です。
+> 一部のシナリオでは、ファイル共有からリモート デバッガーを実行する最も効率的なができます。 詳細については、次を参照してください。[ファイル共有からリモート デバッガーを実行](../debugger/remote-debugging.md#fileshare_msvsmon)します。
   
 ## <a name="BKMK_setup"></a> リモート デバッガーを設定します。
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
-> 必要があるその他のユーザーのアクセス許可を追加または変更した場合、認証モード リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)です。
+> 必要がある追加のユーザーのアクセス許可を追加または変更した場合、認証モード、リモート デバッガーのポート番号を参照してください。[リモート デバッガーを構成する](../debugger/remote-debugging.md#configure_msvsmon)します。
 
-## <a name="remote_cplusplus"></a> リモート デバッグ、Visual C プロジェクト  
- 次の手順で名前とプロジェクトのパスは C:\remotetemp\MyMfc、およびリモート コンピューターの名前は**MJO DL**です。  
+## <a name="remote_cplusplus"></a> Visual C プロジェクトのリモート デバッグ  
+ 次の手順で名前と、プロジェクトのパスは C:\remotetemp\MyMfc、およびリモート コンピューターの名前は**MJO DL**します。  
   
-1.  という名前の MFC アプリケーションを作成する**mymfc です。**  
+1.  という名前の MFC アプリケーションの作成**mymfc します。**  
   
-2.  簡単に達するの例の場合、アプリケーションのどこかにブレークポイントを設定**MainFrm.cpp**、先頭の`CMainFrame::OnCreate`します。  
+2.  例では、簡単に到達したアプリケーションのどこかにブレークポイントを設定**MainFrm.cpp**、先頭の`CMainFrame::OnCreate`します。  
   
-3.  ソリューション エクスプ ローラーでクリックし、プロジェクトを右クリックして**プロパティ**です。 開く、**デバッグ**タブです。  
+3.  ソリューション エクスプ ローラーでクリックし、プロジェクトを右クリックして**プロパティ**します。 開く、**デバッグ**タブ。  
   
-4.  設定、**起動するデバッガー**に**リモート Windows デバッガー**です。  
+4.  設定、**起動するデバッガー**に**リモート Windows デバッガー**します。  
   
      ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")  
   
@@ -80,26 +80,26 @@ ms.locfileid: "31478110"
   
      (省略可能) 追加のファイルを展開する場合、両方のコンピューターでフォルダーが存在する必要があります。  
   
-6.  ソリューション エクスプ ローラーでソリューションを右クリックして選択**Configuration Manager**です。  
+6.  ソリューション エクスプ ローラーでソリューションを右クリックし、選択**Configuration Manager**します。  
   
-7.  **デバッグ**構成では、select、**展開**チェック ボックスをオンします。  
+7.  **デバッグ**構成では、選択、**デプロイ**チェック ボックスをオンします。  
   
      ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
-8.  デバッグを開始 (**デバッグ > [デバッグ開始]**、または**f5 キーを押して**)。  
+8.  デバッグを開始 (**デバッグ > [デバッグ開始]**、または**F5**)。  
   
 9. 実行可能ファイルが、リモート コンピューターに自動的に配置されます。  
   
-10. メッセージが表示されたら、リモート コンピューターに接続するネットワーク資格情報を入力します。  
+10. メッセージが表示されたら、リモート マシンに接続するネットワーク資格情報を入力します。  
   
-     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターにセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターでは、可能性がありますを入力するマシン名と有効なユーザー アカウント名では、like **MJO-DL\name@something.com**、正しいパスワードとします。  
+     必要な資格情報は、ネットワークのセキュリティの構成に固有です。 たとえば、ドメインのコンピューターでセキュリティ証明書を選択または、ドメイン名とパスワードを入力します。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような**MJO-DL\name@something.com**、正しいパスワードと共にします。  
   
 11. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。  
   
     > [!TIP]
-    >  また、これらのファイルは別の手順でも配置できます。 **ソリューション エクスプ ローラーで、** を右クリックし、 **mymfc**ノードを選択し**展開**です。  
+    >  また、これらのファイルは別の手順でも配置できます。 **ソリューション エクスプ ローラー**を右クリックし、 **mymfc**ノード選び、**デプロイ**します。  
   
- アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加のファイル用のプロジェクト フォルダーを作成 (で、**ソリューション エクスプ ローラー**をクリックして**追加 > 新しいフォルダー**)。フォルダーにファイルを追加 (で、**ソリューション エクスプ ローラー**をクリックして**追加 > 既存項目の**、してファイルを選択) します。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**です。
+ アプリケーションで使用する必要がある、コード以外のファイルがある場合は、Visual Studio プロジェクトに含める必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
   
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ 
 
@@ -108,7 +108,7 @@ ms.locfileid: "31478110"
 ## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
- [リモート デバッグ用に Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
+ [リモート デバッグ用の Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
  [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

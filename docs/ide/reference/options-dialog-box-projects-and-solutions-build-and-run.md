@@ -1,5 +1,5 @@
 ---
-title: '[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]'
+title: '[ビルド/実行] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])'
 ms.date: 07/14/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -17,13 +17,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bd6056c332725b4c44a56480fa21a064c52095d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f6a569162105ffb577bdad854d973fff91b3c81b
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845039"
 ---
-# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]
+# <a name="options-dialog-box-projects-and-solutions-build-and-run"></a>[ビルド/実行] ([オプション] ダイアログ ボックス - [プロジェクトおよびソリューション])
 
 このダイアログ ボックスで、同時にビルドできる Visual C++ または C# のプロジェクトの最大数、特定の既定のビルドの動作、およびいくつかのビルドのログ設定を指定することができます。 これらのオプションにアクセスするには、**[ツール]、[オプション]** の順に選択し、**[プロジェクトおよびソリューション]** を展開し、**[ビルド/実行]** を選択します。
 

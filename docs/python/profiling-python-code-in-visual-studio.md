@@ -1,7 +1,7 @@
 ---
 title: Python コードのパフォーマンスの測定
 description: CPython ベースのインタープリターを使っているときに、Visual Studio プロファイラーを使って Python コードのパフォーマンスを調べる方法を説明します。
-ms.date: 01/09/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2f0bd25221f975cd8df122af51af20d125a43a65
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 971eb7ce863fc4281d73e2d4d363805de22810f4
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31584075"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058631"
 ---
 # <a name="profiling-python-code"></a>Python コードのプロファイリング
 

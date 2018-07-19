@@ -1,5 +1,5 @@
 ---
-title: 基本的なプロジェクト システムを作成するには、パート 2 |Microsoft ドキュメント
+title: 基本的なプロジェクト システムの作成、パート 2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,41 +15,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f39150f02481e18997035a8027518648fa410f48
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e0a9c128e2662400e8c13cf09e0c5272078ee07
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107947"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080328"
 ---
-# <a name="creating-a-basic-project-system-part-2"></a>基本的なプロジェクト システムを作成するには、パート 2
-このシリーズの最初のチュートリアル[基本プロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示します。 このチュートリアルでは、Visual Studio のテンプレート、プロパティ ページ、およびその他の機能を追加することで、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
+# <a name="create-a-basic-project-system-part-2"></a>基本的なプロジェクト システム、第 2 部を作成します。
+このシリーズでは、最初のチュートリアル[基本的なプロジェクト システム、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)、基本的なプロジェクト システムを作成する方法を示しています。 このチュートリアルでは、Visual Studio テンプレート、プロパティ ページでは、その他の機能を追加して、基本的なプロジェクト システムに基づいています。 この 1 つを開始する前に、最初のチュートリアルを完了する必要があります。  
   
- このチュートリアルでは、プロジェクト ファイル名拡張子 .myproj のあるプロジェクトの種類を作成する方法を説明します。 このチュートリアルを完了するには、チュートリアルは、既存の Visual c# プロジェクト システムから借用するために、独自の言語を作成する必要はありません。  
+ このチュートリアルでは、プロジェクト ファイル名拡張子を持つプロジェクトの種類を作成する方法を説明します *.myproj*します。 チュートリアルを完了するには、既存の Visual c# プロジェクト システムからでは、チュートリアルを利用するために、独自の言語を作成する必要はありません。  
   
- このチュートリアルでこれらのタスクを実行する方法について説明します。  
+ このチュートリアルでは、これらのタスクを実行する方法について説明します。  
   
--   Visual Studio のテンプレートを作成します。  
+-   Visual Studio テンプレートを作成します。  
   
--   Visual Studio のテンプレートを展開します。  
+-   Visual Studio テンプレートをデプロイします。  
   
 -   プロジェクトの種類の子ノードを作成、**新しいプロジェクト** ダイアログ ボックス。  
   
--   Visual Studio のテンプレートでパラメーター置換を有効にします。  
+-   Visual Studio テンプレートでパラメーター置換を有効にします。  
   
 -   プロジェクトのプロパティ ページを作成します。  
   
 > [!NOTE]
->  このチュートリアルの手順では、c# プロジェクトに基づきます。 ただし、ファイル名拡張子とコードなどの詳細を除く、Visual Basic プロジェクトと同じ手順を使用できます。  
+>  このチュートリアルの手順は、c# プロジェクトに基づいています。 ただし、ファイル名拡張子とコードなどの詳細を除く、Visual Basic プロジェクトと同じ手順を使用できます。  
   
-## <a name="creating-a-visual-studio-template"></a>Visual Studio テンプレートの作成  
- [基本的なプロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)基本的なプロジェクト テンプレートを作成し、プロジェクト システムに追加する方法を示します。 使用して、このテンプレートを Visual Studio に登録する方法も示しています、<xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute>属性は、システム レジストリの \Templates\Projects\SimpleProject\ フォルダーの完全なパスを書き込みます。  
+## <a name="create-a-visual-studio-template"></a>Visual Studio テンプレートを作成します。  
+ [基本的なプロジェクト システム、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)基本的なプロジェクト テンプレートを作成し、プロジェクト システムに追加する方法を示します。 Visual Studio でこのテンプレートを使用して登録する方法も示します、 <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> 、属性の完全なパスを書き込む、 *\\Templates\Projects\SimpleProject\\*システム内のフォルダーレジストリ。  
   
- Visual Studio のテンプレート (.vstemplate ファイル) を使用すると、基本的なプロジェクト テンプレートではなくでのテンプレートの表示方法を制御できます、**新しいプロジェクト** ダイアログ ボックスとテンプレート パラメーターが次のように置き換えられます。  .Vstemplate ファイルは、ソース ファイルのプロジェクト システム テンプレートを使用して、プロジェクトが作成されるときに含まれる方法を記述する XML ファイルです。 プロジェクト システム自体は、.vstemplate ファイルとファイルは .zip ファイル内のソース ファイルを収集してビルドされ、Visual Studio に認識されている場所に .zip ファイルをコピーして配置します。 このプロセスは、このチュートリアルの後半で詳しく説明します。  
+ Visual Studio テンプレートを使用して (*.vstemplate*ファイル)、基本的なプロジェクト テンプレートではなく、テンプレートでの表示方法を制御できます、**新しいプロジェクト** ダイアログ ボックスとテンプレートのパラメーターは代わりに使用します。  A *.vstemplate*ファイルはソース ファイルのプロジェクト システムのテンプレートを使用して、プロジェクトが作成されるときに含まれる方法を説明する XML ファイルです。 収集することで、プロジェクト システム自体が構築された、 *.vstemplate*ファイルとソース ファイルで、 *.zip*ファイルを開き、コピーすることによって展開されている、 *.zip*ファイルをある場所にVisual Studio に正常。 このプロセスは、このチュートリアルの後半で詳しく説明します。  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、に従って作成した SimpleProject ソリューションを開く[基本プロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)です。  
+1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、に従って作成した SimpleProject ソリューションを開きます[基本的なプロジェクト システム、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)です。  
   
-2.  SimpleProjectPackage.cs ファイルの検索、ProvideProjectFactory 属性。 Null、2 番目のパラメーター (プロジェクト名) と 4 番目のパラメーター (プロジェクト テンプレート フォルダーへのパス) で置き換えられます"。\\\NullPath"次のようにします。  
+2.  *SimpleProjectPackage.cs*ファイル、ProvideProjectFactory 属性を検索します。 2 番目のパラメーター (プロジェクト名) で、null、および 4 番目のパラメーター (プロジェクト テンプレート フォルダーへのパス) に置き換えます"。\\\NullPath"次のようにします。  
   
     ```  
     [ProvideProjectFactory(typeof(SimpleProjectFactory), null,  
@@ -58,9 +58,9 @@ ms.locfileid: "31107947"
     LanguageVsTemplate = "SimpleProject")]  
     ```  
   
-3.  SimpleProject.vstemplate \Templates\Projects\SimpleProject\ フォルダーに名前の付いた XML ファイルを追加します。  
+3.  という名前の XML ファイルを追加*SimpleProject.vstemplate*を*\\Templates\Projects\SimpleProject\\*フォルダー。  
   
-4.  SimpleProject.vstemplate の内容を次のコードに置き換えます。  
+4.  内容を置き換える*SimpleProject.vstemplate*を次のコード。  
   
     ```xml  
     <VSTemplate Version="2.0.0" Type="Project"  
@@ -86,44 +86,44 @@ ms.locfileid: "31107947"
     </VSTemplate>  
     ```  
   
-5.  **プロパティ**ウィンドウで、\Templates\Projects\SimpleProject\ フォルダーとセット内のすべての 5 のファイルを選択、**ビルド アクション**に**ZipProject**です。  
+5.  **プロパティ**ウィンドウで、内のすべての 5 つのファイルを選択、 *\\Templates\Projects\SimpleProject\\*フォルダーと設定、**ビルド アクション****ZipProject**します。  
   
- ![](../extensibility/media/simpproj2.png "SimpProj2")  
+ ![単純なプロジェクト フォルダー](../extensibility/media/simpproj2.png "SimpProj2")  
   
- \<TemplateData > セクション SimpleProject プロジェクトの種類の外観と場所を決定する、**新しいプロジェクト**ダイアログ ボックスで、次のようにします。  
+ \<TemplateData > セクションは、SimpleProject プロジェクトの種類の外観と場所を決定します。、**新しいプロジェクト** ダイアログ ボックスで、次のようにします。  
   
--   \<名 > 要素を SimpleProject アプリケーション プロジェクト テンプレートの名前します。  
+-   \<名 > 要素は SimpleProject アプリケーション プロジェクト テンプレートの名前します。  
   
--   \<説明 > 要素が含まれている説明を表す、**新しいプロジェクト**ダイアログ ボックスのプロジェクト テンプレートが選択されているとします。  
+-   \<説明 > 要素に表示される説明が含まれています、**新しいプロジェクト**ダイアログ ボックスのプロジェクト テンプレートが選択されているとします。  
   
--   \<アイコン > 要素が SimpleProject プロジェクトの種類と共に表示されるアイコンを指定します。  
+-   \<アイコン > 要素を SimpleProject プロジェクトの種類と共に表示されるアイコンを指定します。  
   
--   \<ProjectType > 要素の名前でプロジェクトの種類、**新しいプロジェクト** ダイアログ ボックス。 この名前は、プロジェクトの name パラメーター ProvideProjectFactory 属性を置き換えます。  
+-   \<ProjectType > 要素の名前でプロジェクトの種類、**新しいプロジェクト** ダイアログ ボックス。 この名前は、ProvideProjectFactory 属性のプロジェクトの name パラメーターを置き換えます。  
   
     > [!NOTE]
-    >  \<ProjectType > 要素に一致する必要があります、`LanguageVsTemplate`の引数、 `ProvideProjectFactory` SimpleProjectPackage.cs ファイル内の属性です。  
+    >  \<ProjectType > 要素に一致する必要があります、`LanguageVsTemplate`の引数、 `ProvideProjectFactory` SimpleProjectPackage.cs ファイル内の属性。  
   
- \<TemplateContent > セクションでは、新しいプロジェクトが作成されるときに生成されるこれらのファイルをについて説明します。  
+ \<TemplateContent > セクションには、新しいプロジェクトが作成されるときに生成されるこれらのファイルがについて説明します。  
   
--   SimpleProject.myproj  
+-   *SimpleProject.myproj*  
   
--   Program.cs  
+-   *Program.cs*  
   
--   AssemblyInfo.cs  
+-   *AssemblyInfo.cs*  
   
- 次の 3 つのすべてのファイルが`ReplaceParameters`true で、パラメーター置換を有効に設定します。  Program.cs ファイルに`OpenInEditor`true の場合、これにより、プロジェクトを作成すると、コード エディターで開かれるファイルに設定します。  
+ 次の 3 つのすべてのファイルが`ReplaceParameters`true で、パラメーター置換を有効に設定します。  *Program.cs*ファイルが`OpenInEditor`プロジェクトを作成するときに、コード エディターで開くファイルを true に設定します。  
   
- Visual Studio テンプレート スキーマの要素の詳細については、次を参照してください。、 [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)です。  
+ Visual Studio テンプレート スキーマの要素の詳細については、次を参照してください。、 [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)します。  
   
 > [!NOTE]
->  プロジェクトに 1 つ以上の Visual Studio テンプレートがある場合は、すべてのテンプレートは、別のフォルダーです。 そのフォルダー内のすべてのファイルが必要、**ビルド アクション**'éý' **ZipProject**です。  
+>  プロジェクトには、複数の Visual Studio テンプレートがある場合は、すべてのテンプレートは、別のフォルダーには。 そのフォルダー内のすべてのファイルがあります、**ビルド アクション**設定**ZipProject**します。  
   
 ## <a name="adding-a-minimal-vsct-file"></a>最小限の .vsct ファイルを追加します。  
- Visual Studio は、新しいまたは変更された Visual Studio のテンプレートを認識するようにセットアップ モードで実行する必要があります。 セットアップ モードには、存在する .vsct ファイルが必要です。 そのため、プロジェクトに最低限の .vsct ファイルを追加する必要があります。  
+ Visual Studio は、新しいまたは変更された Visual Studio のテンプレートを認識するセットアップ モードで実行する必要があります。 セットアップ モードが必要です、 *.vsct*存在するファイル。 最小構成を追加する必要がありますそのため、 *.vsct*ファイルをプロジェクトにします。  
   
-1.  SimpleProject.vsct SimpleProject プロジェクトに名前の付いた XML ファイルを追加します。  
+1.  という名前の XML ファイルを追加*SimpleProject.vsct* SimpleProject プロジェクトへです。  
   
-2.  SimpleProject.vsct ファイルの内容を次のコードに置き換えます。  
+2.  内容を置き換える、 *SimpleProject.vsct*を次のコード ファイル。  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -132,17 +132,17 @@ ms.locfileid: "31107947"
     </CommandTable>  
     ```  
   
-3.  設定、**ビルド アクション**するには、このファイルの**VSCTCompile**です。 これを行う、.csproj ファイルでのみではなく、**プロパティ**ウィンドウです。 確認して、**ビルド アクション**のこのファイルに設定されている**None**この時点でします。  
+3.  設定、**ビルド アクション**するには、このファイルの**VSCTCompile**します。 これを行うだけで、 *.csproj*ファイルではなく、**プロパティ**ウィンドウ。 確認、**ビルド アクション**のこのファイルに設定されて**None**この時点でします。  
   
-    1.  SimpleProject ノードを右クリックし、をクリックして**編集 SimpleProject.csproj**です。  
+    1.  SimpleProject ノードを右クリックし、**編集 SimpleProject.csproj**します。  
   
-    2.  .Csproj ファイルでは、SimpleProject.vsct アイテムを探します。  
+    2.  *.Csproj*を探し、ファイル、 *SimpleProject.vsct*項目。  
   
         ```  
         <None Include="SimpleProject.vsct" />  
         ```  
   
-    3.  ビルドのアクションを変更する**VSCTCompile**です。  
+    3.  ビルドのアクションを変更する**VSCTCompile**します。  
   
         ```  
         <VSCTCompile Include="SimpleProject.vsct" />  
@@ -150,20 +150,20 @@ ms.locfileid: "31107947"
   
     4.  プロジェクト ファイルと、エディターを閉じます。  
   
-    5.  SimpleProject ノードを保存し、次に、**ソリューション エクスプ ローラー**クリックして**プロジェクトの再読み込み**です。  
+    5.  SimpleProject ノードを保存し、、**ソリューション エクスプ ローラー**クリックして**プロジェクトの再読み込み**します。  
   
-## <a name="examining-the-visual-studio-template-build-steps"></a>Visual Studio テンプレートのビルド ステップを確認します。  
- VSPackage プロジェクトのビルド システムは、.vstemplate ファイルが変更されたか、.vstemplate ファイルを含むプロジェクトがリビルドされるときに通常 Visual Studio とセットアップ モードで実行されます。 Normal またはそれ以降は、MSBuild の詳細レベルを設定していくことができます。  
+## <a name="examine-the-visual-studio-template-build-steps"></a>Visual Studio テンプレートのビルド手順を確認します。  
+ VSPackage プロジェクトのビルド システムは、セットアップ モードでの Visual Studio を通常実行されるときに、 *.vstemplate*ファイルが変更されたか、プロジェクトを含む、 *.vstemplate*ファイルが再構築します。 Normal またはそれ以降、MSBuild の詳細レベルを設定して理解できます。  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  展開、**プロジェクトおよびソリューション**ノードをクリックして**ビルドおよび実行する**です。  
+2.  展開、**プロジェクトおよびソリューション**ノードをクリックして**をビルドおよび実行**します。  
   
-3.  設定**MSBuild プロジェクトのビルド出力の詳細度**に**標準**です。 **[OK]** をクリックします。  
+3.  設定**MSBuild プロジェクト ビルドの出力の詳細**に**標準**します。 **[OK]** をクリックします。  
   
 4.  SimpleProject プロジェクトをリビルドします。  
   
- .Zip プロジェクト ファイルを作成するビルド ステップは、次の例のようになります。  
+ 作成するビルド ステップ、 *.zip*プロジェクト ファイル例を次のようになります。  
   
 ```  
 ZipProjects:  
@@ -177,56 +177,56 @@ ZipProjects:
 1>  SimpleProject ->  
 ```  
   
-## <a name="deploying-a-visual-studio-template"></a>Visual Studio テンプレートを展開します。  
- Visual Studio のテンプレートでは、パス情報は含まれません。 そのため、Visual Studio に認識されている場所にテンプレート .zip ファイルを展開する必要があります。 ProjectTemplates フォルダーの場所は、通常 **\<%localappdata% > \Microsoft\VisualStudio\14.0Exp\ProjectTemplates**です。  
+## <a name="deploy-a-visual-studio-template"></a>Visual Studio テンプレートをデプロイします。  
+ Visual Studio のテンプレートでは、パス情報は含まれません。 そのため、テンプレート *.zip*ファイルは、Visual Studio に認識されている場所にデプロイする必要があります。 ProjectTemplates フォルダーの場所は、通常 *< %localappdata% > \Microsoft\VisualStudio\14.0Exp\ProjectTemplates*します。  
   
- インストール プログラムは、プロジェクト ファクトリを展開するには、管理者特権が必要です。 テンプレート [Visual Studio のインストール] ノードを展開します。 **...\Microsoft Visual Studio 14.0\Common7\IDE\ProjectTemplates**です。  
+ プロジェクト ファクトリをデプロイするには、インストール プログラムは、管理者特権が必要です。 Visual Studio のインストールのノードの下のテンプレートをデプロイします。 *...\Microsoft Visual Studio 14.0\Common7\IDE\ProjectTemplates*します。  
   
-## <a name="testing-a-visual-studio-template"></a>Visual Studio テンプレートのテスト  
- Visual Studio テンプレートを使用して、プロジェクト階層を作成するかどうかを表示する、プロジェクト ファクトリをテストします。  
+## <a name="test-a-visual-studio-template"></a>Visual Studio テンプレートをテストします。  
+ Visual Studio テンプレートを使用して、プロジェクト階層を作成し、かどうかをプロジェクト ファクトリをテストします。  
   
-1.  Visual Studio SDK の実験用インスタンスをリセットします。  
+1.  Visual Studio SDK 実験用インスタンスをリセットします。  
   
-     [!INCLUDE[win7](../debugger/includes/win7_md.md)]: [スタート] メニューで、検索、 **Microsoft Visual Studio/Microsoft Visual Studio SDK/Tools**フォルダー、および選択**Microsoft Visual Studio 実験用インスタンスをリセット**です。  
+     [!INCLUDE[win7](../debugger/includes/win7_md.md)]: で、**開始**] メニューの [検索、 **Microsoft Visual Studio または Microsoft Visual Studio SDK/Tools**フォルダー、および選択**Microsoft Visual Studio 実験をリセットインスタンス**します。  
   
-     以降のバージョンの Windows: [スタート] 画面で、型**Microsoft Visual Studio をリセット\<バージョン > 実験用インスタンス**です。  
+     以降のバージョンの Windows 上: で、**開始**画面で「 **Microsoft Visual Studio をリセット\<バージョン > 実験用インスタンス**します。  
   
-2.  コマンド プロンプト ウィンドウが表示されます。 単語が表示されている場合`Press any key to continue`、enter キーを押します。 ウィンドウを閉じた後は、Visual Studio を開きます。  
+2.  コマンド プロンプト ウィンドウが表示されます。 単語が表示されたら**任意のキーを押して続行**、 をクリックして**ENTER**します。 ウィンドウを閉じた後は、Visual Studio を開きます。  
   
 3.  SimpleProject プロジェクトをリビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-4.  実験用インスタンスの SimpleProject プロジェクトを作成します。 **新しいプロジェクト**ダイアログ ボックスで、 **SimpleProject**です。  
+4.  実験用インスタンスの SimpleProject プロジェクトを作成します。 **新しいプロジェクト**ダイアログ ボックスで、 **SimpleProject**します。  
   
 5.  SimpleProject の新しいインスタンスを表示する必要があります。  
   
- ![](../extensibility/media/simpproj2_newproj.png "SimpProj2_NewProj")  
+ ![単純なプロジェクトの新しいインスタンス](../extensibility/media/simpproj2_newproj.png "SimpProj2_NewProj")  
   
- ![](../extensibility/media/simpproj2_myproj.png "SimpProj2_MyProj")  
+ ![プロジェクトの新しいインスタンス](../extensibility/media/simpproj2_myproj.png "SimpProj2_MyProj")  
   
-## <a name="creating-a-project-type-child-node"></a>プロジェクトの種類の子ノードを作成します。  
- プロジェクトの種類のノードに子ノードを追加することができます、**新しいプロジェクト** ダイアログ ボックス。  たとえば、SimpleProject プロジェクトの種類のコンソール アプリケーション、ウィンドウのアプリケーション、web アプリケーション、およびなどの子ノードをことができます。  
+## <a name="create-a-project-type-child-node"></a>プロジェクトの種類の子ノードを作成します。  
+ プロジェクトの種類のノードに子ノードを追加することができます、**新しいプロジェクト** ダイアログ ボックス。  たとえば、SimpleProject プロジェクトの種類のコンソール アプリケーション、ウィンドウのアプリケーション、web アプリケーション、およびなどの子ノードがある可能性があります。  
   
- 子ノードは、プロジェクト ファイルを変更し、追加することによって作成された\<OutputSubPath > の子、 \<ZipProject > 要素。 ビルドまたは配置中に、テンプレートをコピーすると、すべての子ノードは、プロジェクト テンプレート フォルダーのサブフォルダーになります。  
+ 子ノード、プロジェクト ファイルを変更および追加で作成されます\<OutputSubPath > の子、 \<ZipProject > 要素。 ビルドまたは配置中に、テンプレートがコピーされると、すべての子ノードは、プロジェクト テンプレート フォルダーのサブフォルダーになります。  
   
- このセクションでは、コンソール SimpleProject プロジェクトの種類の子ノードを作成する方法を示します。  
+ このセクションでは、SimpleProject プロジェクトの種類のコンソールの子ノードを作成する方法を示します。  
   
-1.  \Templates\Projects\SimpleProject\ フォルダーの名前を \Templates\Projects\ConsoleApp\\です。  
+1.  名前の変更、 *\\Templates\Projects\SimpleProject\\*フォルダー  *\\Templates\Projects\ConsoleApp\\*します。  
   
-2.  **プロパティ**ウィンドウで、\Templates\Projects\ConsoleApp\ フォルダー内のすべての 5 つのファイルを選択し、確認、**ビルド アクション**に設定されている**ZipProject**です。  
+2.  **プロパティ**ウィンドウで、内のすべての 5 つのファイルを選択、 *\\Templates\Projects\ConsoleApp\\*フォルダーを確認、**ビルド アクション**に設定されている**ZipProject**します。  
   
-3.  SimpleProject.vstemplate ファイルの末尾に次の行を追加、 \<TemplateData > セクションでは、終了タグの直前にします。  
+3.  SimpleProject.vstemplate ファイルの末尾に次の行を追加、 \<TemplateData > 終了タグの直前のセクション。  
   
     ```  
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>  
     ```  
   
-     これにより、コンソール アプリケーション テンプレートをコンソールの子ノードとすると、SimpleProject 親ノードの子ノード上の 1 つのレベルの両方を表示します。  
+     これにより、コンソール アプリケーション テンプレートをコンソールの子ノードと子ノードの 1 つである SimpleProject 親ノードの両方を表示します。  
   
-4.  SimpleProject.vstemplate ファイルを保存します。  
+4.  保存、 *SimpleProject.vstemplate*ファイル。  
   
-5.  .Csproj ファイルで追加\<OutputSubPath > ZipProject 要素のそれぞれにします。 以前のように、プロジェクトをアンロードし、プロジェクト ファイルを編集します。  
+5.  *.Csproj*ファイルを追加\<OutputSubPath > ZipProject 要素のそれぞれにします。 以前のように、プロジェクトをアンロードし、プロジェクト ファイルを編集します。  
   
-6.  検索、 \<ZipProject > 要素。 それぞれに\<ZipProject > 要素を追加、 \<OutputSubPath > 要素コンソール値を指定するとします。 ZipProject  
+6.  検索、 \<ZipProject > 要素。 各\<ZipProject > 要素を追加、 \<OutputSubPath > 要素コンソールの値を指定するとします。 ZipProject  
   
     ```  
     <ZipProject Include="Templates\Projects\ConsoleApp\AssemblyInfo.cs">  
@@ -246,7 +246,7 @@ ZipProjects:
         </ZipProject>  
     ```  
   
-7.  この追加\<PropertyGroup > をプロジェクト ファイル。  
+7.  この追加\<PropertyGroup > プロジェクト ファイル。  
   
     ```  
     <PropertyGroup>  
@@ -256,45 +256,45 @@ ZipProjects:
   
 8.  プロジェクト ファイルを保存し、プロジェクトの再読み込みします。  
   
-## <a name="testing-the-project-type-child-node"></a>プロジェクトの種類の子ノードのテスト  
- 変更されたプロジェクトを表示するファイルをテストするかどうか、**コンソール**子ノードに表示されます、**新しいプロジェクト** ダイアログ ボックス。  
+## <a name="test-the-project-type-child-node"></a>プロジェクトの種類の子ノードをテストします。  
+ 変更されたプロジェクト ファイルをテストするかどうか、**コンソール**子ノードに表示されます、**新しいプロジェクト** ダイアログ ボックス。  
   
-1.  実行、 **Microsoft Visual Studio の実験用インスタンスをリセット**ツールです。  
+1.  実行、 **Microsoft Visual Studio の実験用インスタンスをリセット**ツール。  
   
 2.  SimpleProject プロジェクトをリビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-3.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして、 **SimpleProject**ノード。 **コンソール アプリケーション**テンプレートを表示する必要があります、**テンプレート**ウィンドウです。  
+3.  **新しいプロジェクト**ダイアログ ボックスで、をクリックして、 **SimpleProject**ノード。 **コンソール アプリケーション**テンプレートを表示する必要があります、**テンプレート**ウィンドウ。  
   
-4.  展開して、 **SimpleProject**ノード。 **コンソール**子ノードが表示されます。 **SimpleProject アプリケーション**テンプレートに引き続き表示されます、**テンプレート**ウィンドウです。  
+4.  展開、 **SimpleProject**ノード。 **コンソール**子ノードが表示されます。 **SimpleProject アプリケーション**テンプレートに引き続き表示されます、**テンプレート**ウィンドウ。  
   
-5.  である必要があります。 をクリックして**キャンセル**およびデバッグの停止  
+5.  クリックして**キャンセル**デバッグを停止します。  
   
- ![](../extensibility/media/simpproj2_rollup.png "SimpProj2_Rollup")  
+ ![単純なプロジェクト ロールアップ](../extensibility/media/simpproj2_rollup.png "SimpProj2_Rollup")  
   
- ![](../extensibility/media/simpproj2_subfolder.png "SimpProj2_Subfolder")  
+ ![単純なプロジェクト コンソール ノード](../extensibility/media/simpproj2_subfolder.png "SimpProj2_Subfolder")  
   
-## <a name="substituting-project-template-parameters"></a>プロジェクト テンプレートのパラメーターの置換  
- [基本的なプロジェクト システムでは、第 1 部を作成する](../extensibility/creating-a-basic-project-system-part-1.md)を上書きする方法を示しました、`ProjectNode.AddFileFromTemplate`メソッドをテンプレート パラメーター置換の基本的な種類の操作を行います。 このセクションより高度な Visual Studio のテンプレート パラメーターを使用する方法を説明します。  
+## <a name="substitute-project-template-parameters"></a>プロジェクト テンプレートのパラメーターを置き換える  
+ [基本的なプロジェクト システムを作成するには、パート 1](../extensibility/creating-a-basic-project-system-part-1.md)を上書きする方法を示しました、`ProjectNode.AddFileFromTemplate`メソッドをテンプレート パラメーター置換の基本的な種類の操作を行います。 このセクションより高度な Visual Studio テンプレートのパラメーターを使用する方法を説明します。  
   
- Visual Studio テンプレートを使用して、プロジェクトを作成する場合、**新しいプロジェクト**ダイアログ ボックスで、プロジェクトをカスタマイズする文字列をテンプレート パラメーターが置き換えられます。 テンプレート パラメーターは、特別なトークンを開始し、たとえば、$time$ がドル記号で終了します。 次の 2 つのパラメーターは、テンプレートに基づいてプロジェクトでカスタマイズを有効にするために特に便利です。  
+ Visual Studio テンプレートを使用してプロジェクトを作成するときに、**新しいプロジェクト**ダイアログ ボックスで、プロジェクトをカスタマイズする文字列のテンプレートとパラメーターが置き換えられます。 テンプレート パラメーターは、始まり $time$ など、ドル記号で終了する特別なトークンです。 次の 2 つのパラメーターは、テンプレートに基づいてプロジェクトでカスタマイズを有効にするために特に便利です。  
   
--   1 ~ 10 の $GUID$ は、新しい Guid に置き換えられます。 最大 10 の Guid、guid1 $$ などを指定できます。  
+-   1 ~ 10 $GUID$ は、新しい Guid に置き換えられます。 最大 10 個の一意な Guid guid1 $$ などを指定することができます。  
   
--   $safeprojectname$ がユーザーによって指定された名前、**新しいプロジェクト**ダイアログ ボックスで、安全でない文字とスペースをすべて削除するように変更します。  
+-   $safeprojectname$ がユーザーによって指定された名前、**新しいプロジェクト** ダイアログ ボックスで、すべての安全でない文字とスペースを削除するように変更します。  
   
- テンプレート パラメーターの完全な一覧については、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
+ テンプレート パラメーターの完全な一覧については、「[テンプレート パラメーター](../ide/template-parameters.md)」を参照してください。  
   
-#### <a name="to-substitute-project-template-parameters"></a>プロジェクト テンプレートのパラメーターを置換するには  
+### <a name="to-substitute-project-template-parameters"></a>プロジェクト テンプレートのパラメーター値  
   
-1.  SimpleProjectNode.cs ファイルの削除、`AddFileFromTemplate`メソッドです。  
+1.  *SimpleProjectNode.cs*ファイルで、削除、`AddFileFromTemplate`メソッド。  
   
-2.  \Templates\Projects\ConsoleApp\SimpleProject.myproj ファイルで探します、 \<RootNamespace > プロパティ $safeprojectname$ をその値を変更します。  
+2.  *\\Templates\Projects\ConsoleApp\SimpleProject.myproj*を探し、ファイル、 \<RootNamespace > プロパティ $safeprojectname$ にその値を変更します。  
   
     ```  
     <RootNamespace>$safeprojectname$</RootNamespace>  
     ```  
   
-3.  \Templates\Projects\SimpleProject\Program.cs ファイル内のファイルの内容を次のコードに置き換えます。  
+3.  *\\Templates\Projects\SimpleProject\Program.cs*ファイルで、ファイルの内容を次のコードに置き換えます。  
   
     ```  
     using System;  
@@ -318,11 +318,11 @@ ZipProjects:
   
 4.  SimpleProject プロジェクトをリビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-5.  新しい SimpleProject コンソール アプリケーションを作成します。 (で、**プロジェクトの種類**ペインで、 **SimpleProject**です。 **Visual Studio にインストールされたテンプレート****コンソール アプリケーション**)。  
+5.  新しい SimpleProject コンソール アプリケーションを作成します。 (で、**プロジェクトの種類**ペインで、 **SimpleProject**します。 **Visual Studio にインストールされたテンプレート**、**コンソール アプリケーション**)。  
   
-6.  新しく作成されたプロジェクトで Program.cs を開きます。 次のような項目が表示されます (、ファイルの GUID 値が異なります。)。  
+6.  新しく作成されたプロジェクトで開く*Program.cs*します。 次のように表示されます (、ファイルの GUID 値は異なります。)。  
   
-    ```  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Text;  
@@ -342,31 +342,31 @@ ZipProjects:
     }  
     ```  
   
-## <a name="creating-a-project-property-page"></a>プロジェクト プロパティ ページを作成します。  
- ユーザーを表示し、テンプレートに基づいてプロジェクトのプロパティを変更するために、プロジェクトの種類のプロパティ ページを作成できます。 このセクションでは、構成に依存しないプロパティ ページを作成する方法を示します。 この基本的なプロパティ ページでは、プロパティ グリッドを使用して、プロパティ ページ クラスで公開するパブリック プロパティを表示します。  
+## <a name="creatr-a-project-property-page"></a>Creatr プロジェクトのプロパティ ページ  
+ 種類のプロジェクト プロパティ ページを作成するには、ユーザーを表示し、テンプレートに基づくプロジェクトのプロパティを変更することができます。 このセクションでは、構成に依存しないプロパティ ページを作成する方法を示します。 この基本的なプロパティ ページでは、プロパティ グリッドを使用して、プロパティ ページ クラスで公開されるパブリック プロパティを表示します。  
   
- クラスのプロパティ ページから、`SettingsPage`基本クラスです。 によって提供されるプロパティ グリッド、`SettingsPage`クラスがほとんどのプリミティブ データ型を認識しており、それらを表示する方法を認識します。  さらに、`SettingsPage`クラスは、プロジェクト ファイルにプロパティ値を保持する方法を認識しています。  
+ プロパティ ページ クラスを派生、`SettingsPage`基本クラス。 によって提供されるプロパティ グリッド、`SettingsPage`クラスはほとんどのプリミティブ データ型を認識し、それらを表示する方法を認識します。  さらに、`SettingsPage`クラスは、プロジェクト ファイルにプロパティ値を保持する方法を認識します。  
   
- このセクションの内容を作成するプロパティ ページでは、alter、およびこれらのプロジェクト プロパティを保存できます。  
+ このセクションで作成するプロパティ ページでは、alter、およびこれらのプロジェクト プロパティを保存できます。  
   
 -   AssemblyName  
   
 -   OutputType  
   
--   RootNamespace です。  
+-   RootNamespace します。  
   
-1.  SimpleProjectPackage.cs ファイルでこれを追加`ProvideObject`属性を`SimpleProjectPackage`クラス。  
+1.  *SimpleProjectPackage.cs*ファイルに、この追加`ProvideObject`属性を`SimpleProjectPackage`クラス。  
   
     ```  
     [ProvideObject(typeof(GeneralPropertyPage))]  
     public sealed class SimpleProjectPackage : ProjectPackage  
     ```  
   
-     これにより、プロパティ ページ クラスが登録`GeneralPropertyPage`com  
+     これは、プロパティ ページ クラスを登録します`GeneralPropertyPage`com。  
   
-2.  SimpleProjectNode.cs ファイル内に 2 つのオーバーライドされたメソッドを追加、`SimpleProjectNode`クラス。  
+2.  *SimpleProjectNode.cs*ファイルで、これら 2 つのオーバーライドされたメソッドを追加、`SimpleProjectNode`クラス。  
   
-    ```  
+    ```csharp  
     protected override Guid[] GetConfigurationIndependentPropertyPages()  
     {  
         Guid[] result = new Guid[1];  
@@ -381,13 +381,13 @@ ZipProjects:
     }  
     ```  
   
-     これら両方のメソッドは、プロパティ ページ Guid の配列を返します。  GeneralPropertyPage GUID は、配列内の唯一の要素をため、**プロパティ ページ**ダイアログ ボックスは 1 ページのみを表示します。  
+     これら両方のメソッドは、プロパティ ページ Guid の配列を返します。  GeneralPropertyPage GUID は、配列内の唯一の要素、**プロパティ ページ** ダイアログ ボックスが 1 つだけのページに表示されます。  
   
-3.  SimpleProject プロジェクトに GeneralPropertyPage.cs をという名前のクラス ファイルを追加します。  
+3.  という名前のクラス ファイルを追加*GeneralPropertyPage.cs* SimpleProject プロジェクトへです。  
   
-4.  次のコードを使用してこのファイルの内容を置き換えます。  
+4.  次のコードを使用してこのファイルの内容に置き換えます。  
   
-    ```  
+    ```csharp  
     using System;  
     using System.Runtime.InteropServices;  
     using Microsoft.VisualStudio;  
@@ -462,37 +462,37 @@ ZipProjects:
     }  
     ```  
   
-     `GeneralPropertyPage`クラス AssemblyName、OutputType、および RootNamespace は、次の 3 つのパブリック プロパティを公開します。 AssemblyName に set メソッドがあるないために、読み取り専用プロパティとして表示されます。 OutputType は列挙型の定数は、ドロップダウン リストとして表示されます。  
+     `GeneralPropertyPage`クラスは、AssemblyName、OutputType、および RootNamespace は、次の 3 つのパブリック プロパティを公開します。 AssemblyName に set メソッドがあるないために、読み取り専用プロパティとして表示されます。 OutputType は列挙型の定数は、ドロップダウン リストとして表示されます。  
   
-     `SettingsPage`基本クラスを提供`ProjectMgr`プロパティを保持します。 `BindProperties`メソッドを使用`ProjectMgr`を永続化されたプロパティ値を取得し、対応するプロパティを設定します。  `ApplyChanges`メソッドを使用`ProjectMgr`プロパティの値を取得し、プロジェクト ファイルに保存します。 プロパティ メソッドのセットを設定する`IsDirty`プロパティを永続化する必要があることを示すために true にします。  永続化は、プロジェクトまたはソリューションを保存するときに発生します。  
+     `SettingsPage`基底クラスを提供します`ProjectMgr`プロパティを保持します。 `BindProperties`メソッドは`ProjectMgr`を永続化されたプロパティの値を取得し、対応するプロパティを設定します。  `ApplyChanges`メソッドは`ProjectMgr`プロパティの値を取得し、プロジェクト ファイルに保存します。 プロパティ設定メソッドのセット`IsDirty`プロパティを永続化する必要があることを指定する場合は true にします。  永続化は、プロジェクトまたはソリューションを保存するときに発生します。  
   
 5.  SimpleProject ソリューションをリビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
-6.  実験用インスタンスの新しい SimpleProject アプリケーションを作成します。  
+6.  実験用のインスタンスでは、新しい SimpleProject アプリケーションを作成します。  
   
-7.  Visual Studio では、Visual Studio テンプレートを使用してプロジェクトを作成する、プロジェクト ファクトリを呼び出します。 新しい Program.cs ファイルがコード エディターで開きます。  
+7.  Visual Studio では、Visual Studio テンプレートを使用してプロジェクトを作成する、プロジェクト ファクトリを呼び出します。 新しい*Program.cs*ファイルがコード エディターで開きます。  
   
-8.  プロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**、クリックして**プロパティ**です。 **[プロパティ ページ]** ダイアログ ボックスが表示されます。  
+8.  プロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**、 をクリックし、**プロパティ**します。 **[プロパティ ページ]** ダイアログ ボックスが表示されます。  
   
- ![](../extensibility/media/simpproj2_proppage.png "SimpProj2_PropPage")  
+ ![単純なプロジェクト プロパティ ページ](../extensibility/media/simpproj2_proppage.png "SimpProj2_PropPage")  
   
-## <a name="testing-the-project-property-page"></a>プロジェクト プロパティ ページのテスト  
- 今すぐ変更でき、プロパティ値を変更するかどうかをテストできます。  
+## <a name="test-the-project-property-page"></a>テスト プロジェクトのプロパティ ページ
+ ここで変更してプロパティ値を変更するかどうかをテストできます。  
   
-1.  **MyConsoleApplication プロパティ ページ** ダイアログ ボックスで、変更、**に DefaultNamespace**に**MyApplication**です。  
+1.  **MyConsoleApplication プロパティ ページ** ダイアログ ボックスで、変更、 **DefaultNamespace**に**MyApplication**します。  
   
-2.  選択、 **OutputType**プロパティ、および選択**クラス ライブラリ**です。  
+2.  選択、 **OutputType**プロパティ、および選択**クラス ライブラリ**します。  
   
-3.  をクリックして**適用**、順にクリック**OK**です。  
+3.  クリックして**適用**、順にクリックします**OK**します。  
   
-4.  再び開き、**プロパティ ページ** ダイアログ ボックスし、変更内容が永続化されていることを確認します。  
+4.  再度、**プロパティ ページ** ダイアログ ボックスし、変更が保存されていることを確認します。  
   
 5.  Visual Studio の実験用インスタンスを終了します。  
   
-6.  実験用インスタンスを再度開きます。  
+6.  実験用インスタンスをもう一度開きます。  
   
-7.  再び開き、**プロパティ ページ** ダイアログ ボックスし、変更内容が永続化されていることを確認します。  
+7.  再度、**プロパティ ページ** ダイアログ ボックスし、変更が保存されていることを確認します。  
   
 8.  Visual Studio の実験用インスタンスを終了します。  
   
- ![](../extensibility/media/simpproj2_proppage2.png "SimpProj2_PropPage2")
+ ![実験用インスタンスを閉じて](../extensibility/media/simpproj2_proppage2.png "SimpProj2_PropPage2")

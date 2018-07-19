@@ -99,7 +99,7 @@ ms.locfileid: "37119471"
  フィールドのソース XML の形式が間違っている場合、有効な XML ファイルでない場合、またはその他の問題がある場合、"ファイルを解析できません" エラーが発生します。  
   
 ## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>デプロイ後にサイトの作成 ページに新しい英語以外のサイト定義は表示されません。
- 作成しの英語以外のバージョンを使用してサイト定義を展開すると[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)](ロケールとバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外)、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**にボックスと、新しいサイト テンプレートがない、**新しい SharePoint サイト**ページ。  
+ 作成しの英語以外のバージョンを使用してサイト定義を展開すると[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (ロケールとバージョンは、 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] 1033 以外)、 **SharePoint のカスタマイズ**タブが表示されず、 **テンプレートの選択**にボックスと、新しいサイト テンプレートがない、**新しい SharePoint サイト**ページ。  
   
 ### <a name="error-message"></a>エラー メッセージ
  なし。  
