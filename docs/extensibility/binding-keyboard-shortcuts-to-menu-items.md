@@ -1,5 +1,5 @@
 ---
-title: メニュー項目へのキーボード ショートカットのバインド |Microsoft ドキュメント
+title: メニュー項目にバインドのキーボード ショートカット |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,54 +17,54 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: db02cf763ee4bf171d862129c88687accab00cc4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9870f02877488c2c571a7134e79aa37ec270a741
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103358"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154873"
 ---
-# <a name="binding-keyboard-shortcuts-to-menu-items"></a>メニュー項目にバインドのキーボード ショートカット
-カスタム メニュー コマンドをキーボード ショートカットをバインドするにのみ、パッケージの .vsct ファイルにエントリを追加します。 このトピックでは、カスタム ボタン、メニュー項目、またはツール バー コマンドにショートカット キーをマップする方法と、既定のエディターのキーボード マッピングを適用またはカスタム エディターを制限する方法について説明します。  
+# <a name="bind-keyboard-shortcuts-to-menu-items"></a>キーボード ショートカットをメニュー項目にバインドします。
+カスタム メニュー コマンドをキーボード ショートカットをバインドするだけにエントリを追加、 *.vsct*パッケージのファイル。 このトピックでは、カスタム ボタン、メニュー項目、またはツールバーのコマンドをキーボード ショートカットをマップする方法と、既定のエディターのキーボード マッピングを適用またはカスタム エディターに制限する方法について説明します。  
   
- キーボード ショートカットを既存の Visual Studio のメニュー項目に割り当てるを参照してください。[の識別とカスタマイズのキーボード ショートカット](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)です。  
+ キーボード ショートカットを既存の Visual Studio のメニュー項目に割り当てるを参照してください。[を識別するキーボード ショートカットとカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)します。  
   
-## <a name="choosing-a-key-combination"></a>キーの組み合わせを選択します。  
- さまざまなキーボード ショートカットは、Visual Studio で既に使用されます。 重複するバインドを検出することは難しいとも予期しない結果になるためには、1 つ以上のコマンドを同じショートカットを割り当てる必要がありますされません。 そのため、これを割り当てる前に、ショートカットの可用性を確認することをお勧めを勧めします。  
+## <a name="choose-a-key-combination"></a>キーの組み合わせを選択します。  
+ 多くのキーボード ショートカットは、Visual Studio で既に使用されます。 重複するバインドを検出するが困難とも予期しない結果になるためは、1 つ以上のコマンドを同じショートカットを割り当てる必要がありますされません。 そのためは割り当てる前に、ショートカットの可用性を確認することをお勧めします。  
   
-#### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>キーボード ショートカットの可用性を確認するには  
+### <a name="to-verify-the-availability-of-a-keyboard-shortcut"></a>キーボード ショートカットの可用性を検証するには  
   
-1.  **ツール/オプション/環境**ウィンドウで、**キーボード**です。  
+1.  **ツール** > **オプション** > **環境**ウィンドウで、**キーボード**します。  
   
-2.  確認して**で使用する新しいショートカット**に設定されている**グローバル**です。  
+2.  確認します**で新しいショートカットを使用して**に設定されている**Global**します。  
   
-3.  **ショートカット キーを押して**ボックスを使用するキーボード ショートカットを入力します。  
+3.  **ショートカット キーを押して**ボックスに、使用するキーボード ショートカットを入力します。  
   
-     ショートカットが Visual Studio で既に使用されている場合、**によって現在使用ショートカット**ボックスには、ショートカットを現在呼び出すコマンドを表示します。  
+     ショートカットが Visual Studio で既に使用されている場合、**現在使用されているショートカット**ボックスに、ショートカットを現在呼び出すコマンドを表示します。  
   
-4.  マップされていないものが見つかるまで、さまざまなキーの組み合わせを試してください。  
+4.  マップされていないものが見つかるまで、さまざまなキーの組み合わせをお試しください。  
   
     > [!NOTE]
-    >  Alt キーを使用するキーボード ショートカットは、メニューを開くし、直接コマンドを実行可能性があります。 したがって、**によって現在使用ショートカット**alt キーを含むショートカットを入力するときにボックスを空白にすることがあります。 ショートカットを閉じて、メニューが開始できなかったことを確認することができます、**オプション** ダイアログ ボックスと、キーを押します。  
+    >  キーボード ショートカットを使用する**Alt**メニューを開き、コマンドを直接実行可能性があります。 そのため、**によって現在使用ショートカット**が含まれるショートカットを入力するときにボックスを空白にすることがあります**Alt**します。ショートカットを閉じて、メニューが開きますしないことを確認することができます、**オプション** ダイアログ ボックスとし、キーを押します。  
   
- 次の手順では、メニュー コマンドを使用して既存の VSPackage があることを前提としています。 この操作の説明を必要がある場合を見て[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
+ 次の手順では、メニュー コマンドを使用して既存の VSPackage があることを前提としています。 この操作の説明を必要がある場合について見て[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
   
-#### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>コマンドをキーボード ショートカットを割り当てる  
+### <a name="to-assign-a-keyboard-shortcut-to-a-command"></a>コマンドにキーボード ショートカットを割り当てる  
   
-1.  パッケージの .vsct ファイルを開きます。  
+1.  開く、 *.vsct*パッケージ ファイル。  
   
-2.  空、作成`<KeyBindings>`セクションの後に、`<Commands>`が存在しない場合。  
+2.  空の作成`<KeyBindings>`セクションの後に、`<Commands>`が存在しない場合。  
   
     > [!WARNING]
-    >  キー バインドの詳細については、次を参照してください。 [Keybinding](../extensibility/keybinding-element.md)です。  
+    >  キー バインドの詳細については、次を参照してください。 [Keybinding](../extensibility/keybinding-element.md)します。  
   
-     `<KeyBindings>`セクションで、作成、`<KeyBinding>`エントリです。  
+     `<KeyBindings>`セクションで、作成、`<KeyBinding>`エントリ。  
   
-     設定、`guid`と`id`を起動するコマンドの属性です。  
+     設定、`guid`と`id`を起動するコマンドの属性します。  
   
-     設定、`mod1`属性を**コントロール**、 **Alt**、または**Shift**です。  
+     設定、`mod1`属性を**コントロール**、 **Alt**、または**Shift**します。  
   
-     KeyBindings セクションでは、次のようになります。  
+     キー バインド セクションは、次のようになります。  
   
     ```xml  
     <KeyBindings>  
@@ -76,16 +76,16 @@ ms.locfileid: "31103358"
   
  キーボード ショートカットは、複数の 2 つのキーを必要とする場合は、設定、`mod2`と`key2`属性。  
   
- ほとんどの状況で**Shift**文字の大文字または記号を入力するほとんどの英数字キーによって、既にキーを押してため 2 番目の修飾子を指定せず使用しないでです。  
+ ほとんどの状況で**Shift**文字の大文字または記号を入力するほとんどの英数字キー既にキーを押すと、ために、2 つ目の修飾子を指定せず使用できません必要があります。  
   
- 仮想キー コードでは、それらのなどのファンクション キーに関連付けられた文字がない特殊なキーにアクセスできます。 および**BACKSPACE**キー。 詳細については、次を参照してください。[仮想キー コード](http://go.microsoft.com/fwlink/?LinkID=105932)です。  
+ 仮想キー コードに、たとえば、ファンクション キーに関連付けられている文字がない特殊なキーにアクセスできるように、 **Backspace**キー。 詳細については、次を参照してください。[仮想キー コード](https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes)します。  
   
- コマンドは、使用できるようにする、Visual studio エディター、設定、`editor`属性を`guidVSStd97`です。  
+ コマンドで使用できるように、Visual studio エディターの設定、`editor`属性を`guidVSStd97`します。  
   
- コマンドは、カスタム エディターでのみ使用可能な設定、`editor`属性によって生成されたカスタム エディターの名前を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage を作成したときのパッケージ テンプレートには、カスタム エディターが含まれています。 名前の値を検索するファイルの場所、`<Symbols>`については、「、`<GuidSymbol>`ノードが`name`属性が、"`editorfactory`"。これは、カスタム エディターの名前です。  
+ で、コマンドをカスタム エディターでのみ使用できるようにするには設定、`editor`属性によって生成されたカスタム エディターの名前を、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、VSPackage を作成したときに、パッケージのテンプレートには、カスタム エディターが含まれています。 場所を名の値を検索する、`<Symbols>`のセクションを`<GuidSymbol>`ノードが`name`で属性の末尾が"`editorfactory`"。これは、カスタム エディターの名前です。  
   
 ## <a name="example"></a>例  
- この例では、という名前のコマンドをキーボード ショートカット CTRL + ALT + C をバインド`cmdidMyCommand`という名前のパッケージで`MyPackage`です。  
+ この例では、キーボード ショートカットをバインドします**Ctrl**+**Alt**+**C**という名前のコマンドを`cmdidMyCommand`という名前のパッケージで`MyPackage`.  
   
 ```  
 <CommandTable>  
@@ -102,11 +102,11 @@ ms.locfileid: "31103358"
 ```  
   
 ## <a name="example"></a>例  
- この例では、という名前のコマンドをキーボード ショートカット CTL + B をバインド`cmdidBold`という名前のプロジェクトで`TestEditor`です。 コマンドは、および他のエディターではなくカスタム エディターでのみ利用できます。  
+ この例では、キーボード ショートカットをバインドします。 **Ctrl**+**B**という名前のコマンドを`cmdidBold`という名前のプロジェクト`TestEditor`します。 コマンドは、および他のエディターではなく、カスタム エディターでのみ利用できます。  
   
 ```xml  
 <KeyBinding guid="guidVSStd97" id="cmdidBold" editor="guidTestEditorEditorFactory" key1="B" mod1="Control" />  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)
+ [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)

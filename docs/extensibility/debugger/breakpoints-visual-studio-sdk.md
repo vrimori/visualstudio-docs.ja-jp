@@ -1,5 +1,5 @@
 ---
-title: ブレークポイント (Visual Studio SDK) |Microsoft ドキュメント
+title: ブレークポイント (Visual Studio SDK) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,39 +13,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42f2efe2785f508bedb104e495309ed40fc6ce39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1aa5fe2ffba7660b3a5774a865572bf10446f09a
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100544"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152644"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>ブレークポイント (Visual Studio SDK)
-ブレークポイントの 3 種類があります。 保留中の、バインド、およびエラーです。  
+ブレークポイントの 3 種類があります。 保留中、バインド、およびエラー。  
   
  **保留中のブレークポイント A:**  
   
--   1 つまたは複数のプログラム内の 1 つまたは複数のコード コンテキストにブレークポイントをバインドするために必要なすべての情報を含む抽象です。 たびに、原因を読み込むコードをデバッグ対象のプログラム デバッグ エンジン チェックすべて保留中のブレークポイントで連結することができますを参照してください。  
+-   1 つまたは複数のプログラム内の 1 つまたは複数のコード コンテキストにブレークポイントをバインドするために必要なすべての情報を格納する抽象化。 毎回、原因を読み込むコードをデバッグ対象のプログラム デバッグ エンジンを確認します保留中のすべてのブレークポイントをバインドできるかどうかを参照してください。  
   
-     自体保留中のブレークポイントことはありません、コードにバインドしますが、ではなく収集し、言います生成されたすべてのバインドされたブレークポイントを含むです。  
+     自体保留中のブレークポイントことはありませんコードにバインドしますではなく収集し、言いますを生成するすべてのバインドされたブレークポイントを含みます。  
   
--   によって表される、 [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイスです。  
+-   によって表される、 [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)インターフェイス。  
   
- **バインドされたブレークポイント:**  
+ **バインドされたブレークポイント。**  
   
--   ブレークポイントの抽象化に関連付けられているか、1 つのコードのコンテキストにバインドされています。 バインドされた各ブレークポイントは、保留中のブレークポイントに応答が生成されます。 保留中のブレークポイントでは、バインドされた 2 つ以上のブレークポイントを生成できます、ただし。  
+-   ブレークポイントの抽象化に関連付けられているか 1 つのコード コンテキストに制限されます。 バインドされた各ブレークポイントは保留中のブレークポイントへの応答で生成されます。 ただし、保留中のブレークポイントは、複数のバインドされたブレークポイントが生成ことができます。  
   
      コードが読み込まれると、バインドされたブレークポイントはバインドされていないし、破棄されます。  
   
--   によって表される、 [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイスです。  
+-   によって表される、 [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイス。  
   
  **エラー ブレークポイントの場合:**  
   
--   抽象コード コンテキストに保留中のブレークポイントをバインドするときにエラーを記述するためです。 エラー ブレークポイントでは、場所や、ブレークポイント式自体、どちらのエラーについて説明します。 詳細については、次を参照してください。[ブレークポイントのバインディング](../../extensibility/debugger/binding-breakpoints.md)です。  
+-   コードのコンテキストに保留中のブレークポイントをバインドするときにエラーを説明するための抽象型です。 エラー、ブレークポイントでは、またはブレークポイント式自体の場所で、いずれかのエラーについて説明します。 詳細については、次を参照してください。[ブレークポイントのバインディング](../../extensibility/debugger/binding-breakpoints.md)します。  
   
-     ブレークポイントのエラー、エラーまたは警告を使用できます。  
+     ブレークポイントのエラーは、エラーまたは警告のいずれかにできます。  
   
--   によって表される、 [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)インターフェイスです。  
+-   によって表される、 [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラム](../../extensibility/debugger/programs.md)   

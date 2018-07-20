@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder&lt;TResult&gt;.m_task フィールド |Microsoft ドキュメント
+title: AsyncTaskMethodBuilder&lt;TResult&gt;.m_task フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,25 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9c2bbd8e0cb148f7575f2adbc6fec8fa62052e2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c22566247a773beffa5f6fb79f1cb2aac51ac6b
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097664"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154360"
 ---
 # <a name="asynctaskmethodbuilderlttresultgtmtask-field"></a>AsyncTaskMethodBuilder&lt;TResult&gt;.m_task フィールド
-遅れて初期化されるビルド タスクを表します。  
+遅延初期化タスクの構築を表します。  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (mscorlib.dll 内)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .field private class System.Threading.Tasks.Task`1<!TResult> m_task  
 ```  
   

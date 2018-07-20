@@ -1,11 +1,11 @@
 - name: Visual Studio テスト ツール
   href: improve-code-quality.md
-- name: テストのシナリオ
+- name: テスト シナリオ
   href: developer-testing-scenarios.md
 - name: 単体テスト
   href: unit-test-your-code.md
   items:
-    - name: 作業の開始
+    - name: 作業開始
       href: getting-started-with-unit-testing.md
     - name: 単体テストの基本
       href: unit-test-basics.md
@@ -43,13 +43,15 @@
       items:
         - name: テスト エクスプローラーに関する FAQ
           href: test-explorer-faq.md
+    - name: コマンド ラインからテストを実行する
+      href: vstest-console-options.md
     - name: 64 ビット プロセスとして単体テストを実行する
       href: run-a-unit-test-as-a-64-bit-process.md
     - name: .runsettings ファイルを使用して単体テストを構成する
       href: configure-unit-tests-by-using-a-dot-runsettings-file.md
-    - name: マネージ コード用の単体テストを記述する
+    - name: マネージド コード用の単体テストを記述する
       items:
-        - name: 'チュートリアル: マネージ コードに対する単体テストの作成と実行'
+        - name: 'チュートリアル: マネージド コードの単体テストを作成し、実行する'
           href: walkthrough-creating-and-running-unit-tests-for-managed-code.md
         - name: 'クイック スタート: テスト エクスプローラーによるテスト駆動開発'
           href: quick-start-test-driven-development-with-test-explorer.md
@@ -69,13 +71,13 @@
         - name: データ ドリブン単体テストを作成する
           href: how-to-create-a-data-driven-unit-test.md
           items:
-            - name: 'チュートリアル : データ ソースを定義するための構成ファイルの使用'
+            - name: 'チュートリアル: データ ソースを定義するための構成ファイルの使用'
               href: walkthrough-using-a-configuration-file-to-define-a-data-source.md
         - name: ジェネリック メソッドの単体テスト
           href: unit-tests-for-generic-methods.md
         - name: .NET Framework の旧バージョンを対象とした単体テストを構成する
           href: how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md
-        - name: 単体テストを作成するサンプル プロジェクト
+        - name: 単体テスト作成用のサンプル プロジェクト
           href: sample-project-for-creating-unit-tests.md
     - name: C/C++ コード用の単体テストの記述
       href: writing-unit-tests-for-c-cpp.md
@@ -100,7 +102,7 @@
           href: unit-testing-a-visual-cpp-dll-for-store-apps.md
         - name: 'UWP アプリの Visual C# コードの単体テスト'
           href: unit-testing-visual-csharp-code-in-a-store-app.md
-        - name: 'チュートリアル: UWP アプリに対する単体テストの作成と実行'
+        - name: 'チュートリアル: UWP アプリ用の単体テストの作成および実行'
           href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
     - name: コード カバレッジを使用した、テストされるコード割合の確認
       href: using-code-coverage-to-determine-how-much-code-is-being-tested.md

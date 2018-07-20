@@ -5,16 +5,16 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: 31459717e9a2c001a9ae4f0efef5ebb0930af1c8
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 738964deed9aa1e51d5a6e4788879bc3165284a7
+ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693693"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37889886"
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Visual Studio for Mac の概要
 
-Visual Studio for Mac は、モバイル、デスクトップ、および Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の種類の開発がサポートされています。
+Visual Studio for Mac は、モバイル、デスクトップ、Web アプリケーションを作成するときに役立つ多くの機能が搭載された最新の高度な IDE です。 次の種類の開発がサポートされています。
 
 * モバイルと .NET: Android、iOS、tvOS、watchOS
 * Mac デスクトップ アプリ
@@ -24,7 +24,7 @@ Visual Studio for Mac は、モバイル、デスクトップ、および Web �
 
 リッチ エディター、デバッグ、iOS、Mac、Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
 
-この記事では、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能の一部を紹介します。
+この記事では、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能を紹介します。
 
 ## <a name="installation"></a>インストール
 
@@ -36,7 +36,7 @@ Visual Studio for Mac は、既定で C# と F# での開発をサポートし�
 
 ### <a name="c"></a>C#
 
-Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、C# が最もよく使用される言語です。 IDE にはすべての C# 7 機能の完全なサポートが含まれています。
+Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、最もよく使用される言語は C# です。 IDE にはすべての C# 7 機能の完全なサポートが含まれています。
 
 ### <a name="f"></a>F#
 
@@ -46,7 +46,7 @@ F# は、.NET 上で実行するように設計されている、厳密に型指
 
 ## <a name="net-core"></a>.NET Core
 
-[.NET Core](https://www.microsoft.com/net/core#macos) は、Windows、Linux、Mac で実行されるアプリケーションを作成するためのプラットフォームです。 Visual Studio for Mac では、.NET Core プロジェクトを読み込み、作成し、実行し、デバッグできます。
+[.NET Core](https://www.microsoft.com/net/core#macos) は、Windows、Linux、Mac で実行されるアプリケーションを作成するためのプラットフォームです。 Visual Studio for Mac は .NET Core プロジェクトの読み込み、作成、実行、デバッグをサポートしています。 
 
 .NET Core プロジェクトを実行するには、.NET Core SDK をダウンロードし、インストールする必要があります。
 
@@ -71,11 +71,11 @@ F# は、.NET 上で実行するように設計されている、厳密に型指
 
 Visual Studio には、独自の統合 Android SDK マネージャーがあります。
 
-Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次の画像のように Android デザイナーでこれらのファイルを開きます。
+Android アプリケーションの場合、Visual Studio for Mac には独自のデザイナーがあり、Android の `.axml` ファイルと連携してユーザー インターフェイスを視覚的に構築できます。 Visual Studio for Mac は次の画像のように Android Designer でこれらのファイルを開きます。
 
 ![Android UI デザイナー](media/intro-image31.png)
 
-Android デザイナーの詳細については、[デザイナーの概要](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)に関するドキュメントを参照してください。
+Android Designer の詳細については、[Designer の概要](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview)に関するドキュメントを参照してください。
 
 ### <a name="ios"></a>iOS
 
@@ -108,11 +108,11 @@ Xamarin Profiler には、プロファイルに使用できる 3 つのツール
 
 ### <a name="inspector"></a>Inspector
 
-Xamarin Inspector は、対話型 C# コンソールとツールをユーザーに提供しています。 ライブ アプリケーションを調査するときのデバッグまたは診断支援として、教育ツール、ドキュメント作成ツール、または実験ツールとして使用できます。
+Xamarin Inspector は、対話型 C# コンソールをユーザー ツールで提供しています。 ライブ アプリケーションを調査するときのデバッグまたは診断支援として、教育ツール、ドキュメント作成ツール、または実験ツールとして使用できます。
 
 ![Xamarin Inspector](media/intro-inspector.png)
 
-多様なプログラミング プラットフォーム (Android、iOS、Mac、および Windows) を対象にすることができる高機能な C# コンソールを提供するスタンドアロン アプリケーションと、IDE のデバッグ ワークフローへの統合から構成されます。
+多様なプログラミング プラットフォーム (Android、iOS、Mac、および Windows) を対象にすることができ、お使いの IDE のデバッグ ワークフローに統合できる高機能な C# コンソールを提供するスタンドアロン アプリケーションから構成されます。 
 
 詳細については、「[Xamarin Inspector](https://developer.xamarin.com/guides/cross-platform/inspector/)」のガイドを参照してください。
 
