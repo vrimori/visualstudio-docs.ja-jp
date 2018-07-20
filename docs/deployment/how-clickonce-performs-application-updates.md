@@ -1,5 +1,5 @@
 ---
-title: ClickOnce がアプリケーションの更新プログラムを実行する方法 |Microsoft ドキュメント
+title: ClickOnce がアプリケーションの更新プログラムを実行する方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,25 +18,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe09cfe546d947bf07334e9dd6468226884e9e3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a1f5d9b67633ffa2b14f780b9588f526372a4f5d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31557698"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152520"
 ---
-# <a name="how-clickonce-performs-application-updates"></a>ClickOnce がアプリケーションの更新を実行するしくみ
-ClickOnce では、アプリケーションの配置マニフェストで指定されたファイル バージョン情報を使用して、アプリケーションのファイルを更新するかどうかを決定します。 ClickOnce と呼ばれる手法を使用して更新プログラムの開始後*ファイル パッチ*をアプリケーション ファイルが重複してダウンロードを回避します。  
+# <a name="how-clickonce-performs-application-updates"></a>ClickOnce がアプリケーションの更新プログラムを実行する方法
+ClickOnce では、アプリケーションの配置マニフェストで指定されたファイル バージョン情報を使用して、アプリケーションのファイルを更新するかどうかを決定します。 ClickOnce と呼ばれる手法を使用して更新プログラムの開始後*ファイル パッチ*アプリケーション ファイルが重複してダウンロードを回避するためにします。  
   
-## <a name="file-patching"></a>ファイル パッチ  
- アプリケーションを更新するときに ClickOnce をダウンロードしませんのすべてのアプリケーションの新しいバージョンのファイルのファイルが変更された場合を除き、します。 代わりに、新しいバージョンのマニフェストに署名に対して現在のアプリケーションのアプリケーション マニフェストで指定されたファイルのハッシュ署名を比較します。 ファイルの署名が異なる場合は、ClickOnce は、新しいバージョンをダウンロードします。 署名が一致する場合、ファイルが変更されていない 1 つのバージョンから、次にします。 この場合、ClickOnce では、既存のファイルをコピーし、新しいバージョンのアプリケーションで使用します。 この手法により、ClickOnce は、1 つまたは 2 つのファイルが変更された場合でも、アプリケーション全体をダウンロードすることです。  
+## <a name="file-patching"></a>ファイルの修正  
+ アプリケーションを更新するときに ClickOnce ダウンロードしませんのすべてのアプリケーションの新しいバージョンのファイル、ファイルが変更されていない場合。 代わりに、新しいバージョンのマニフェストに署名に対して現在のアプリケーションのアプリケーション マニフェストで指定されたファイルのハッシュの署名と比較します。 ファイルの署名が異なる場合は、ClickOnce は、新しいバージョンをダウンロードします。 署名が一致する場合、ファイルは 1 つのバージョンから、[次へ] をしない変更されました。 この場合は、ClickOnce では、既存のファイルをコピーし、アプリケーションの新しいバージョンでそれを使用します。 この手法により、ClickOnce は、1 つまたは 2 つのファイルが変更された場合でも、再度、アプリケーション全体をダウンロードすることです。  
   
- 使用してオンデマンドでダウンロードされたアセンブリに対しても機能ファイルが修正プログラム、<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A>と<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A>メソッドです。  
+ 使用してオンデマンドでダウンロードされたアセンブリ ファイルの修正機能も、<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A>と<xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A>メソッド。  
   
- Visual Studio を使用して、アプリケーションをコンパイルする場合、プロジェクト全体を再構築するときにすべてのファイルに対して新しいハッシュ署名が生成されます。 ここでは、すべてのアセンブリはいくつかのアセンブリだけが変更された可能性がありますが、クライアントにダウンロードされます。  
+ Visual Studio を使用してアプリケーションをコンパイルする場合は、プロジェクト全体を再構築するたびにすべてのファイルの新しいハッシュの署名が生成されます。 ここでは、すべてのアセンブリはいくつかのアセンブリだけが変更されていますが、クライアントにダウンロードされます。  
   
- データとしてマークされ、データ ディレクトリに格納されているファイルのファイルが修正プログラムは機能しません。 これらは、ファイルのハッシュの署名に関係なく常にダウンロードします。 データ ディレクトリの詳細については、次を参照してください。[ローカルへのアクセスと ClickOnce アプリケーションでのリモート データ](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)です。  
+ ファイルの修正は、データとしてマークされ、データ ディレクトリに格納するファイルに対しては機能しません。 これらは、ファイルのハッシュの署名に関係なく常にダウンロードします。 データ ディレクトリの詳細については、次を参照してください。 [ClickOnce アプリケーションにおけるローカルおよびリモートのデータにアクセス](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)   
- [ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)
+ [ClickOnce の更新方法を選択します。](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [ClickOnce 配置ストラテジを選択します。](../deployment/choosing-a-clickonce-deployment-strategy.md)

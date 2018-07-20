@@ -1,5 +1,5 @@
 ---
-title: BuildProjectOnLoad (Visual Studio テンプレート) |Microsoft ドキュメント
+title: BuildProjectOnLoad (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58493c8e3c4668f1cd94c7f892d727479b755f3f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b70cc3522d59c2abe4633f38f746aeeb3159fe8a
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097882"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39150666"
 ---
 # <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad (Visual Studio テンプレート)
-作成された直後後に、プロジェクトをビルドするかどうかを指定します。  
+作成後すぐにプロジェクトをビルドするかどうかを指定します。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -36,7 +36,7 @@ ms.locfileid: "31097882"
 <BuildProjectOnLoad> true/false </BuildProjectOnLoad>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -54,9 +54,9 @@ ms.locfileid: "31097882"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`が作成された直後後に、プロジェクトをビルドするかどうかを示すです。  
+ テキストがいずれかにする必要があります`true`または`false`、作成後すぐにプロジェクトをビルドするかどうかを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `BuildProjectOnLoad` は省略可能な属性です。 既定値は `false` です。  
   
 ## <a name="example"></a>例  
@@ -89,5 +89,5 @@ ms.locfileid: "31097882"
   
 ## <a name="see-also"></a>関連項目  
  [TemplateContent 要素 (Visual Studio テンプレート)](../extensibility/templatecontent-element-visual-studio-templates.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

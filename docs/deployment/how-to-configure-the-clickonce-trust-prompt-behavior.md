@@ -20,14 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85657ed886b7eb2b164f9b5e05b2c59391e1147b
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: badee4bfb98ef34f8d730f35d29f456d783d7d43
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233582"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155098"
 ---
-# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>方法: ClickOnce 信頼プロンプトの動作を構成する
+# <a name="how-to-configure-the-clickonce-trust-prompt-behavior"></a>方法: ClickOnce 信頼プロンプトの動作を構成します。
 コントロールに、ClickOnce 信頼プロンプトを構成するには、エンドユーザーの Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション、コンソール アプリケーション、WPF ブラウザーなどの ClickOnce アプリケーションをインストールするオプションが提供されるかどうかアプリケーション、および Office ソリューション。 信頼プロンプトを構成するには、各エンドユーザーのコンピューターでレジストリ キーを設定します。  
   
  次の表では、それぞれの 5 つのゾーン (インターネット、UntrustedSites、MyComputer、LocalIntranet、およびしません) に適用できる構成オプションを示します。  
@@ -50,7 +50,7 @@ ms.locfileid: "36233582"
   
  有効にする、制限、または、ClickOnce 信頼プロンプトを無効にすると、これらの設定をオーバーライドできます。  
   
-## <a name="enabling-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトの有効化  
+## <a name="enable-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトの表示を有効にします。  
  エンドユーザーをインストールし、そのゾーンに由来する ClickOnce アプリケーションを実行するためのオプションが表示する場合は、ゾーンの信頼のプロンプトを有効にします。  
   
 #### <a name="to-enable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>レジストリ エディターを使用して、ClickOnce 信頼プロンプトを有効にするには  
@@ -63,7 +63,7 @@ ms.locfileid: "36233582"
   
 2.  次のレジストリ キーを探します。  
   
-     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\します。NETFramework\Security\TrustManager\PromptingLevel**  
+     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\.NETFramework\Security\TrustManager\PromptingLevel**  
   
      キーが存在しない場合は、それを作成します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36233582"
   
 1.  Visual Studio で Visual Basic または Visual c# コンソール アプリケーションを作成します。  
   
-2.  Program.vb または Program.cs ファイルを開いて編集し、次のコードを追加します。  
+2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -109,7 +109,7 @@ ms.locfileid: "36233582"
   
 3.  アプリケーションをビルドして実行します。  
   
-## <a name="restricting-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトの表示を制限します。  
+## <a name="restrict-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトの表示を制限します。  
  信頼プロンプトの表示を制限して、ソリューションは、ユーザーは、信頼の決定に求められる前に、既知の id が Authenticode 証明書で署名する必要があります。  
   
 #### <a name="to-restrict-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>レジストリ エディターを使用して ClickOnce 信頼プロンプトの表示を制限するには  
@@ -122,7 +122,7 @@ ms.locfileid: "36233582"
   
 2.  次のレジストリ キーを探します。  
   
-     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\\します。NETFramework\Security\TrustManager\PromptingLevel** 
+     **\HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\.NETFramework\Security\TrustManager\PromptingLevel** 
   
      キーが存在しない場合は、それを作成します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36233582"
   
 1.  Visual Studio で Visual Basic または Visual c# コンソール アプリケーションを作成します。  
   
-2.  Program.vb または Program.cs ファイルを開いて編集し、次のコードを追加します。  
+2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -166,7 +166,7 @@ ms.locfileid: "36233582"
   
 3.  アプリケーションをビルドして実行します。  
   
-## <a name="disabling-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトを無効にします。  
+## <a name="disable-the-clickonce-trust-prompt"></a>ClickOnce 信頼プロンプトを無効にします。  
  信頼プロンプトを無効にするには、エンドユーザーは、セキュリティ ポリシーで既に信頼されていないソリューションをインストールするオプションを指定しないようにします。  
   
 #### <a name="to-disable-the-clickonce-trust-prompt-by-using-the-registry-editor"></a>レジストリ エディターを使用して、ClickOnce 信頼プロンプトを無効にするには  
@@ -197,7 +197,7 @@ ms.locfileid: "36233582"
   
 1.  Visual Studio で Visual Basic または Visual c# コンソール アプリケーションを作成します。  
   
-2.  Program.vb または Program.cs ファイルを開いて編集し、次のコードを追加します。  
+2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。  
   
     ```vb  
     Dim key As Microsoft.Win32.RegistryKey  
@@ -225,13 +225,13 @@ ms.locfileid: "36233582"
 3.  アプリケーションをビルドして実行します。  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)   
+ [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)   
  [ClickOnce アプリケーションのコード アクセス セキュリティ](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)   
- [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
- [方法 : ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)   
- [方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [方法: ClickOnce アプリケーション用のクライアント コンピューターに信頼された発行元を追加](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
- [方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+ [信頼されたアプリケーション展開の概要](../deployment/trusted-application-deployment-overview.md)   
+ [方法: ClickOnce のセキュリティ設定を有効にします。](../deployment/how-to-enable-clickonce-security-settings.md)   
+ [方法: ClickOnce アプリケーションのセキュリティ ゾーンの設定](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [方法: ClickOnce アプリケーションをデバッグ アクセス許可の制限](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [方法: ClickOnce アプリケーションのクライアント コンピューターに信頼された発行元を追加](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
+ [方法: アプリケーション マニフェストと配置マニフェストに再署名](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

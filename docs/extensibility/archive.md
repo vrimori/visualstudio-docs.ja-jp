@@ -1,5 +1,5 @@
 ---
-title: アーカイブ |Microsoft ドキュメント
+title: アーカイブ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,18 +11,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd683ee7edc2a8641d38ef84d69c30badd5b14db
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 476e711f8b2e65652bb750c4933a5dfa98fbbf63
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097212"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153736"
 ---
 # <a name="archive"></a>アーカイブ
-このセクションには、Visual Studio 機能拡張テクノロジはまだサポートされている、新しい交換テクノロジの説明が含まれています。  
+このセクションには、Visual Studio 機能拡張テクノロジもサポートされている、新しい代替テクノロジのディスカッションが含まれています。  
   
-## <a name="legacy-interfaces-in-the-editor"></a>エディターでの従来のインターフェイス  
- このセクションの内容が新しい MEF コードではなく、レガシ (Iv *) インターフェイスをエディターにアクセスする方法について説明します。[従来のインターフェイスをエディターで](../extensibility/legacy-interfaces-in-the-editor.md)です。  
+## <a name="legacy-interfaces-in-the-editor"></a>エディターでのレガシー インターフェイス  
+ このセクションでは、新しい MEF コードではなく、レガシ (Iv *) インターフェイス エディターにアクセスする方法を説明します。[レガシー インターフェイス エディター](../extensibility/legacy-interfaces-in-the-editor.md)します。  
   
 ## <a name="tool-windows-in-the-registry"></a>レジストリのツール ウィンドウ  
- このセクションの内容がレジストリに直接ツール ウィンドウを設定する方法について説明します:[レジストリのツール ウィンドウ](../extensibility/tool-windows-in-the-registry.md)します。
+ このセクションは、ツールの windows レジストリで直接設定する方法を説明します。[ツール ウィンドウで、レジストリ](../extensibility/tool-windows-in-the-registry.md)。

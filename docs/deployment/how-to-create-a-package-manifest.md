@@ -1,5 +1,5 @@
 ---
-title: '方法: パッケージ マニフェストを作成する |Microsoft ドキュメント'
+title: '方法: パッケージ マニフェストを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -20,31 +20,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54c2e6a231ce597e2ec6a3e04cf74521b6c10d2e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 38a0c448bcf629c4e914393cb8eabad93ced574c
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31563675"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154630"
 ---
-# <a name="how-to-create-a-package-manifest"></a>方法: パッケージ マニフェストを作成する
-アプリケーションの前提条件を展開するには、ブートス トラップ パッケージを使用できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 別のローカライズされたバージョン間で共有機能は、製品マニフェストに変わります必要があります。  
+# <a name="how-to-create-a-package-manifest"></a>方法: パッケージ マニフェストを作成します。
+アプリケーションの必須コンポーネントを展開するには、ブートス トラップ パッケージを使用できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 別のローカライズされたバージョン間で共有機能は、製品マニフェストに移動してください。  
   
- パッケージ マニフェストの詳細については、次を参照してください。[する方法: 製品マニフェストを作成](../deployment/how-to-create-a-product-manifest.md)です。  
+ パッケージ マニフェストの詳細については、次を参照してください。[方法: 製品マニフェストを作成する](../deployment/how-to-create-a-product-manifest.md)します。  
   
-## <a name="creating-the-package-manifest"></a>パッケージ マニフェストの作成  
+## <a name="create-the-package-manifest"></a>パッケージ マニフェストを作成します。  
   
 #### <a name="to-create-the-package-manifest"></a>パッケージ マニフェストを作成するには  
   
-1.  ブートス トラップ パッケージのディレクトリを作成します。 この例では、C:\package を使用します。  
+1.  ブートス トラップ パッケージ用のディレクトリを作成します。 この例では*C:\package*します。  
   
-2.  英語など、ロケールの名前を持つサブディレクトリを作成します。  
+2.  など、ロケールの名前を持つサブディレクトリを作成*en*英語の場合。  
   
-3.  Visual Studio で、という XML ファイルを作成する`package.xml`、C:\package\en フォルダーに保存します。  
+3.  Visual Studio では、という XML ファイルを作成*package.xml*、保存して、 *C:\package\en*フォルダー。  
   
-4.  ブートス トラップ パッケージの名前、このローカライズされたパッケージ マニフェスト、および省略可能なライセンス契約のカルチャを列挙する XML を追加します。 次の XML は、変数を使用して`DisplayName`と`Culture`、以降の要素で定義されています。  
+4.  このローカライズされたパッケージ マニフェストと省略可能なライセンス契約のカルチャにブートス トラップ パッケージの名前を一覧表示する XML を追加します。 次の XML は、変数を使用して`DisplayName`と`Culture`、以降の要素で定義されています。  
   
-    ```  
+    ```xml  
     <Package  
         xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
         Name="DisplayName"  
@@ -52,17 +52,17 @@ ms.locfileid: "31563675"
         LicenseAgreement="eula.txt">  
     ```  
   
-5.  ロケール固有のディレクトリ内にあるすべてのファイルを列挙する XML を追加します。 次の XML に適用できる eula.txt というファイルを使用して、 **en**ロケール。  
+5.  ロケール固有のディレクトリ内にあるすべてのファイルを一覧表示の XML を追加します。 次の XML という名前のファイルを使用して*eula.txt*に適用される、 **en**ロケール。  
   
-    ```  
+    ```xml  
     <PackageFiles>  
       <PackageFile Name="eula.txt"/>  
     </PackageFiles>  
     ```  
   
-6.  ブートス トラップ パッケージのローカライズ可能な文字列を定義する XML を追加します。 次の XML では、en ロケールのエラー文字列を追加します。  
+6.  ブートス トラップ パッケージのローカライズ可能な文字列を定義する XML を追加します。 次の XML に追加のエラー文字列、 **en**ロケール。  
   
-    ```  
+    ```xml  
       <Strings>  
         <String Name="DisplayName">Custom Bootstrapper Package</String>  
         <String Name="CultureName">en</String>  
@@ -73,12 +73,12 @@ ms.locfileid: "31563675"
     </Strings>  
     ```  
   
-7.  C:\package フォルダーを Visual Studio ブートス トラップ ディレクトリにコピーします。 Visual Studio 2010 の場合、これは、\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages ディレクトリです。  
+7.  コピー、 *C:\package*を Visual Studio ブートス トラップ ディレクトリのフォルダー。 これは Visual Studio 2010 の場合、 *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*ディレクトリ。  
   
 ## <a name="example"></a>例  
  パッケージ マニフェストには、エラー メッセージ、ソフトウェア ライセンス条項、および言語パックなど、ロケールに固有の情報が含まれています。  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Package  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
