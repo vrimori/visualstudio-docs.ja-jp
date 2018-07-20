@@ -22,14 +22,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6438bbb905244902a8f5407a2ad8dea74430c430
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 79c5616a9233466c71ca036c4c0cb70d43649979
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233465"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154860"
 ---
-# <a name="walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>チュートリアル : デザイナーを使用し、ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードする
+# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてサテライト アセンブリをダウンロードします。
 サテライト アセンブリを使用すると、複数のカルチャに対して Windows フォーム アプリケーションを構成できます。 *サテライト アセンブリ* とは、アプリケーションの既定のカルチャ以外のカルチャ用アプリケーション リソースを含むアセンブリのことです。  
   
  説明したよう[ClickOnce アプリケーションのローカライズ](../deployment/localizing-clickonce-applications.md)、同じ内に複数のカルチャ用の複数のサテライト アセンブリを含めることができます[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] により配置に含まれるすべてのサテライト アセンブリがクライアント コンピューターにダウンロードされます。ただし、多くの場合、1 つのクライアントに必要なサテライト アセンブリは 1 つだけです。  
@@ -49,15 +49,15 @@ ms.locfileid: "36233465"
   
 4.  選択、**ファイルをすべて表示**サテライト アセンブリを表示する チェック ボックス。 既定では、すべてのサテライト アセンブリが配置対象に含められ、このダイアログ ボックスに表示されます。  
   
-     サテライト アセンブリは、フォームで、名前を持ちます*isoCode*\ApplicationName.resources.dll、場所*isoCode*は RFC 1766 形式の言語識別子です。  
+     サテライト アセンブリは、フォームで、名前を持ちます *\<isoCode > \ApplicationName.resources.dll*ここで、 \<isoCode > は RFC 1766 形式の言語識別子です。  
   
 5.  クリックして**新規**で、**ダウンロード グループ**各言語識別子のリスト。 ダウンロード グループ名の入力を求めるメッセージが表示されたら、言語識別子を入力します。 たとえば、日本語のサテライト アセンブリの場合は指定する、ダウンロード グループ名`ja-JP`します。  
   
 6.  閉じる、**アプリケーション ファイル** ダイアログ ボックス。  
   
-### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>必要に応じてサテライト アセンブリをダウンロードするには (C#) #
+### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>必要に応じてサテライト アセンブリをダウンロードするには (C#) 
   
-1.  Program.cs ファイルを開きます。 ソリューション エクスプ ローラーで、プロジェクトを選択します。 表示されない場合で、**プロジェクト**] メニューの [] をクリック **[すべてのファイル**します。  
+1.  *Program.cs* ファイルを開きます。 ソリューション エクスプ ローラーで、プロジェクトを選択します。 表示されない場合で、**プロジェクト**] メニューの [] をクリック **[すべてのファイル**します。  
   
 2.  該当するサテライト アセンブリをダウンロードし、アプリケーションを起動するには、次のコードを使用します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36233465"
   
 2.  タブ ページの下部には、次のようにクリックします。**アプリケーション イベントの表示**します。  
   
-3.  ApplicationEvents.VB ファイルの先頭に、次の Imports ステートメントを追加します。  
+3.  先頭に次の imports を追加、 *ApplicationEvents.VB*ファイル。  
   
      [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]  
   
@@ -82,4 +82,4 @@ ms.locfileid: "36233465"
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードします。](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)   
- [ClickOnce アプリケーションのローカライズ](../deployment/localizing-clickonce-applications.md)
+ [ClickOnce アプリケーションをローカライズします。](../deployment/localizing-clickonce-applications.md)

@@ -21,24 +21,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22feab436d701124b7e3843a0e6855d2830d570d
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 5fb0e6d011868f56375def1516bd0e41410da662
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38808443"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152501"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを使用してカスタム ブートストラップを作成する
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   Visual Studio 2010。  
   
-## <a name="create-an-update-consent-dialog-box"></a>更新の同意 ダイアログ ボックスを作成します。  
+## <a name="create-an-update-consent-dialog-box"></a>更新プログラムの同意 ダイアログ ボックスを作成します。  
  プライバシー プロンプトを表示するには、アプリケーションの自動更新に同意するリーダーを要求しているアプリケーションを作成します。  
   
 #### <a name="to-create-a-consent-dialog-box"></a>同意ダイアログ ボックスを作成するには  
@@ -116,7 +116,7 @@ ms.locfileid: "38808443"
   
     2.  **プロジェクト** メニューのをクリックして**モジュールの追加**、 をクリックし、**追加**します。  
   
-    3.  Module1.vb コード ファイルでは、次のコードを追加します。  
+    3.  *Module1.vb*コード ファイルで、次のコードを追加します。  
   
          [!code-vb[ConsentDialog#7](../deployment/codesnippet/VisualBasic/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_6.vb)]  
   
@@ -131,7 +131,7 @@ ms.locfileid: "38808443"
   
      Visual c# 開発者の場合のみ。  
   
-     Program.cs コード ファイルを開き、次のコードを追加します。  
+     開く、 *Program.cs*コード ファイル、および次のコードを追加します。  
   
      [!code-csharp[ConsentDialog#5](../deployment/codesnippet/CSharp/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt_7.cs)]  
   
@@ -142,29 +142,29 @@ ms.locfileid: "38808443"
   
  この手順では、次のドキュメントを作成してカスタム ブートス トラップ パッケージを作成する方法を示します。  
   
--   Product.xml はマニフェスト ブートス トラップの内容を記述するファイルです。  
+-   A *product.xml*ブートス トラップの内容を記述するマニフェスト ファイル。  
   
--   文字列や、ソフトウェア ライセンス条項など、パッケージのローカライズに固有の要素の一覧を package.xml マニフェスト ファイル。  
+-   A *package.xml*マニフェスト ファイルを文字列と、ソフトウェア ライセンス条項など、パッケージのローカライズに固有の要素を一覧表示します。  
   
 -   ソフトウェアのライセンス条項のドキュメントです。  
   
 #### <a name="step-1-to-create-the-bootstrapper-directory"></a>手順 1: ブートス トラップ ディレクトリを作成するには  
   
-1.  という名前のディレクトリを作成する**UpdateConsentDialog** %PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages にあります。  
+1.  という名前のディレクトリを作成する**UpdateConsentDialog**で、 *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages*します。  
   
     > [!NOTE]
     >  このフォルダーを作成する管理者特権を必要があります。  
   
-2.  UpdateConsentDialog ディレクトリでは、en という名前のサブディレクトリを作成します。  
+2.  *UpdateConsentDialog*ディレクトリ、サブディレクトリを作成*en*します。  
   
     > [!NOTE]
     >  ロケールごとに新しいディレクトリを作成します。 たとえば、フランス、ドイツのロケールのサブディレクトリを追加できます。 必要に応じて、フランス語、ドイツ語の文字列と言語パック、これらのディレクトリが含まれます。  
   
 #### <a name="step-2-to-create-the-productxml-manifest-file"></a>手順 2: product.xml マニフェスト ファイルを作成するには  
   
-1.  という名前のテキスト ファイルを作成する`product.xml`します。  
+1.  という名前のテキスト ファイルを作成する*product.xml*します。  
   
-2.  Product.xml ファイルでは、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
+2.  *Product.xml*ファイルに、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
     ```xml  
     <Product  
@@ -194,9 +194,9 @@ ms.locfileid: "38808443"
   
 #### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>手順 3: package.xml マニフェストを作成するには、ファイルと、ソフトウェア ライセンス条項  
   
-1.  という名前のテキスト ファイルを作成する`package.xml`します。  
+1.  という名前のテキスト ファイルを作成する*package.xml*します。  
   
-2.  Package.xml ファイルでは、ロケールを定義し、ソフトウェア ライセンス条項を含めるには、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
+2.  *Package.xml*ファイルに、ロケールを定義し、ソフトウェア ライセンス条項を含めるには、次の XML コードを追加します。 既存の XML コードを上書きしないことを確認します。  
   
     ```xml  
     <Package   
@@ -220,14 +220,14 @@ ms.locfileid: "38808443"
   
 3.  UpdateConsentDialog ブートス トラップ ディレクトリに en サブディレクトリに保存します。  
   
-4.  ソフトウェアのライセンス条項 eula.rtf というドキュメントを作成します。  
+4.  という名前のドキュメントを作成する*eula.rtf*のソフトウェア使用許諾条件。  
   
     > [!NOTE]
     >  ソフトウェアのライセンス条項は、ライセンス、保証、負債、および現地の法律に関する情報を含める必要があります。 これらのファイルは、ロケール固有のもの、MBCS または UNICODE 文字をサポートする形式でファイルを保存するようにする必要があります。 ソフトウェアのライセンス条項のコンテンツについて、法務部門を参照してください。  
   
-5.  UpdateConsentDialog ブートス トラップ ディレクトリに en サブディレクトリに、ドキュメントを保存します。  
+5.  En のサブディレクトリにドキュメントを保存、 *UpdateConsentDialog*ブートス トラップ ディレクトリ。  
   
-6.  必要に応じて、各ロケールのソフトウェア ライセンス条項の新しい package.xml マニフェスト ファイルと新しい eula.rtf ドキュメントを作成します。 たとえば、fr および de ロケールのサブディレクトリを作成した場合は、package.xml 個別マニフェスト ファイルおよびソフトウェア ライセンス条項を作成し、fr および de サブディレクトリに保存します。  
+6.  必要に応じて、作成、新しい*package.xml*マニフェストのファイルと新しい*eula.rtf*各ロケールのソフトウェア ライセンス条項のドキュメント。 たとえば、fr および de ロケールのサブディレクトリを作成した場合は、package.xml 個別マニフェスト ファイルおよびソフトウェア ライセンス条項を作成し、fr および de サブディレクトリに保存します。  
   
 ## <a name="set-the-update-consent-application-as-a-prerequisite"></a>前提条件としての更新プログラムの同意を求めるアプリケーションを設定します。  
  Visual Studio で、前提条件として、更新プログラムの同意を求めるアプリケーションを設定できます。  
@@ -260,7 +260,7 @@ ms.locfileid: "38808443"
   
 4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
-5.  Setup.exe プログラムを実行します。  
+5.  実行、 *Setup.exe*プログラム。  
   
      セットアップ プログラムは、同意ダイアログの更新プログラムのソフトウェア使用許諾契約書を示しています。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "38808443"
   
 4.  発行の出力が自動的に開かない場合は、発行の出力に移動します。  
   
-5.  Setup.exe プログラムを実行します。  
+5.  実行、 *Setup.exe*プログラム。  
   
      セットアップ プログラムは、同意ダイアログの更新プログラムのソフトウェア使用許諾契約書を示しています。  
   
@@ -301,8 +301,8 @@ ms.locfileid: "38808443"
 8.  アプリケーションのインストール ダイアログ ボックスが表示されたら、クリックして**インストール**します。  
   
 ## <a name="see-also"></a>関連項目  
- [アプリケーション配置の必要条件](../deployment/application-deployment-prerequisites.md)   
- [ブートストラップ パッケージの作成](../deployment/creating-bootstrapper-packages.md)   
+ [アプリケーション展開の前提条件](../deployment/application-deployment-prerequisites.md)   
+ [ブートス トラップ パッケージを作成します。](../deployment/creating-bootstrapper-packages.md)   
  [方法: 製品マニフェストを作成します。](../deployment/how-to-create-a-product-manifest.md)   
  [方法: パッケージ マニフェストを作成します。](../deployment/how-to-create-a-package-manifest.md)   
  [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

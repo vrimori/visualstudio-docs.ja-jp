@@ -1,5 +1,5 @@
 ---
-title: コマンド ライン スイッチを追加する |Microsoft ドキュメント
+title: コマンド ライン スイッチを追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,49 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: daef07d0b8dd02f6823717b0c0cb5d68d837ccde
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bb6b739d91bfe5931d1af853ec01e145a0cb2c85
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098419"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153299"
 ---
-# <a name="adding-command-line-switches"></a>コマンド ライン スイッチを追加します。
-Devenv.exe を実行すると、VSPackage に適用されるコマンド ライン スイッチを追加することができます。 使用して<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、VSPackage という名前のサブクラスの MySwitch スイッチを追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage を使用しています。  
+# <a name="add-command-line-switches"></a>コマンド ライン スイッチを追加します。
+VSPackage に適用されるコマンド ライン スイッチを追加するときに*devenv.exe*を実行します。 使用<xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>スイッチとそのプロパティの名前を宣言します。 この例では、MySwitch スイッチがという名前の VSPackage のサブクラスの追加**AddCommandSwitchPackage**引数なしで、自動的に読み込まれる VSPackage とします。  
   
 ```csharp  
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]  
 ```  
   
- 名前付きパラメーターは、次の表に表示されます。  
+ 名前付きパラメーターは、次の説明に表示されます。
+
+||||
+|-|-|-|-|
+| パラメーター | 説明|
+| 引数 | スイッチの引数の数。 "*"、または引数のリスト。 |
+| DemandLoad |  この設定で 1、それ以外の場合は 0 に設定されている場合は、VSPackage を自動的に読み込みます。 |  
+| HelpString | ヘルプ文字列またはリソースの ID 文字列と共に表示する**devenv/でしょうか。** します。 |
+| name | スイッチ。 |
+| PackageGuid | パッケージの GUID。 |  
   
- 引数  
- スイッチの引数の数。 "*"、または引数の一覧です。  
+ 引数の最初の値が 0 または 1 では、通常は。 特殊な値を ' *'、コマンドラインの残りの部分全体が、引数であることを示すために使用できます。 これは、ユーザーが、デバッガー コマンド文字列で渡す必要がありますのシナリオのデバッグに役立つことができます。  
   
- DemandLoad  
- この設定で 1、それ以外の場合は 0 に設定されている場合は、VSPackage を自動的に読み込みます。  
+ DemandLoad 値は`true`(1) または`false`(0)、VSPackage が自動的に読み込まれることを示します。  
   
- HelpString  
- ヘルプ文字列またはリソースの ID 文字列の表示に**devenv/?** です。  
+ HelpString 値が含まれている文字列のリソース ID、 **devenv/でしょうか。** ヘルプを表示します。 この値は、フォーム"#nnn"nnn は整数でなければなりません。 リソース ファイル内の文字列値は、改行文字で終わる必要があります。  
   
- 名前  
- スイッチです。  
-  
- PackageGuid  
- パッケージの GUID です。  
-  
- 引数の最初の値は、通常 0 または 1 です。 特殊な値 ' *' のコマンドラインの残りの部分全体が、引数であることを示すために使用できます。 これは、ユーザーがデバッガー コマンド文字列で渡す必要がありますのシナリオのデバッグに役立つことができます。  
-  
- DemandLoad 値は、いずれかの`true`(1) または`false`(0)、VSPackage が自動的に読み込まれることを示します。  
-  
- HelpString 値は、devenv に表示される文字列のリソース ID/しますか?ヘルプを表示します。 この値は、フォーム"#nnn"nnn には、整数でなければなりません。 リソース ファイル内の文字列値は、改行文字で終了する必要があります。  
-  
- 名前の値は、スイッチの名前です。  
+ 名前値は、スイッチの名前です。  
   
  PackageGuid 値は、このスイッチを実装するパッケージの GUID です。 IDE では、この GUID を使用して、コマンド ライン スイッチを適用するレジストリで、VSPackage を見つけます。  
   
-## <a name="retrieving-command-line-switches"></a>コマンド ライン スイッチを取得します。  
- パッケージが読み込まれるときに、次の手順を完了して、コマンド ライン スイッチを取得できます。  
+## <a name="retrieve-command-line-switches"></a>コマンド ライン スイッチを取得します。  
+ パッケージが読み込まれるときに、次の手順を実行して、コマンド ライン スイッチを取得できます。  
   
-1.  VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイスです。  
+1.  VSPackage の<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>実装、呼び出し`QueryService`で<xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine>を取得する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>インターフェイス。  
   
 2.  呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A>をユーザーが入力したコマンド ライン スイッチを取得します。  
   
- 次のコードは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示しています。  
+ 次のコードでは、MySwitch コマンド ライン スイッチがユーザーによって入力されたかどうかを確認する方法を示します。  
   
 ```csharp  
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));  
@@ -75,7 +69,7 @@ string optionValue = "";
 cmdline.GetOption("MySwitch", out isPresent, out optionValue);  
 ```  
   
- ユーザーの責任で、パッケージが読み込まれるたびに、コマンド ライン スイッチをチェックすることをお勧めします。  
+ パッケージが読み込まれるたびに、コマンド ライン スイッチをチェックするユーザーの責任になります。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>   
