@@ -1,9 +1,9 @@
 ---
-title: Web プロジェクトのプロパティ ページ設定 |Microsoft ドキュメント
+title: Web プロジェクトのプロパティ ページ設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - CSharp
 - VB
@@ -22,25 +22,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e2559ad8e1c2d233ffcb1873b0f7f5212bd6cf7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5584d5c5f971231712fb79f4ad40d330dd659b33
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31480717"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151634"
 ---
 # <a name="property-pages-settings-for-web-projects"></a>Web プロジェクトのプロパティ ページ設定
-Web サイト デバッグ構成のプロパティ設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)です。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
+Web サイトのデバッグ構成のプロパティの設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
   
 ### <a name="configuration-properties-folder-start-options-category"></a>[構成プロパティ] フォルダー ([開始オプション] カテゴリ)  
   
 |**設定**|**説明**|  
 |-----------------|---------------------|  
 |**開始アクション**|アプリケーションの起動に関するオプション グループの見出しです。|  
-|**現在のページを使用します。**|デバッグの開始点として現在のページを指定します。|  
+|**現在のページを使用して、**|デバッグの開始点として現在のページを指定します。|  
 |**特定のページ:**|デバッグを開始する Web ページを指定します。|  
-|**外部プログラムを起動します。**|デバッグするプログラムを起動するコマンドを指定します。|  
-|**コマンドライン引数。**|上で指定したコマンドの引数を指定します。|  
+|**外部プログラムを開始します。**|デバッグするプログラムを起動するコマンドを指定します。|  
+|**コマンドライン引数:**|上で指定したコマンドの引数を指定します。|  
 |**作業ディレクトリ:**|デバッグするプログラムの作業ディレクトリを指定します。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] では、作業ディレクトリはアプリケーションが起動されるディレクトリであり、既定では \bin\debug です。|  
 |**URL を開始します。**|デバッグする Web アプリケーションの場所を指定します。|  
 |**[ページを開かずに外部アプリケーションからの要求を待つ]外部アプリケーションからの要求を待つ**|外部のアプリケーションからの要求を待つように指示します。 このオプションは、Internet Explorer やその他のアプリケーションを起動しません。 アプリケーションから呼び出されたときにデバッグの準備をするだけです。|  
@@ -48,8 +48,8 @@ Web サイト デバッグ構成のプロパティ設定を変更することが
 |**既定の Web サーバーを使用します。**|既定の Web サーバーを使用するように指定します。|  
 |**カスタム サーバーを使用します。**|サーバーとして使用するベース URL を入力できます。|  
 |**デバッガー**|実行するデバッグの種類に関するオプション グループの見出しです。|  
-|**ASP.NET のデバッグ**|[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 開発プラットフォーム用に記述されたサーバー ページのデバッグを有効にします。 URL を指定する必要があります**URL の開始**です。|  
-|**ネイティブ コードのデバッグ**|マネージ アプリケーションからネイティブ (アンマネージ) Win32 コードの呼び出しをデバッグできます。|  
+|**ASP.NET のデバッグ**|[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 開発プラットフォーム用に記述されたサーバー ページのデバッグを有効にします。 URL を指定する必要があります**URL の開始**します。|  
+|**ネイティブ コードのデバッグ**|マネージド アプリケーションからネイティブ (アンマネージド) Win32 コードの呼び出しをデバッグできます。|  
 |**SQL Server のデバッグ**|SQL Server データベース オブジェクトのデバッグを許可します。|  
 |**Silverlight デバッグ**|Silverlight コンポーネントをデバッグできます。|  
   
