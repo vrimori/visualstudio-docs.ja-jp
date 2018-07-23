@@ -1,5 +1,5 @@
 ---
-title: デバッガーの Visual Studio での Windows |Microsoft ドキュメント
+title: Visual Studio での Windows のデバッガー |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa0c7fb04b05ef1ec1c83fe744458fdcc6ca3743
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ebf9896626a26d1462c2f1d8639722b28ef1e1ea
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481490"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178307"
 ---
-# <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio のデバッガー ウィンドウについてください。
+# <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio で Windows をデバッガーについて説明します
 
-プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイントと実行の終了位置をヒットしたときにクリックして**デバッグ > Windows**です。
+プログラムのデバッグ中に、ほとんどのデバッガー ウィンドウを開くことができます。 デバッガー ウィンドウの一覧を表示するには、ブレークポイントを設定し、デバッグを開始します。 ブレークポイント、実行を停止しがヒットしたら、クリックして**デバッグ > Windows**します。
 
 ||||
 |-|-|-|
@@ -34,12 +34,12 @@ ms.locfileid: "31481490"
 |呼び出し履歴|Ctrl + Alt + C|[方法 : [呼び出し履歴] ウィンドウを使用する](../debugger/how-to-use-the-call-stack-window.md)|
 |イミディエイト|Ctrl + Alt + I|[イミディエイト ウィンドウ](../ide/reference/immediate-window.md)|
 |並列スタック|Ctrl + Shift + D、S|[[並列スタック] ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)|
-|並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[取得マルチ スレッド アプリケーションのデバッグの開始](../debugger/get-started-debugging-multithreaded-apps.md)|
+|並列ウォッチ|Ctrl + Shift + D、(1、2、3、4)|[取得マルチ スレッド アプリケーションのデバッグを開始](../debugger/get-started-debugging-multithreaded-apps.md)|
 |スレッド|Ctrl + Alt + H|[[スレッド] ウィンドウを使用したデバッグします。](../debugger/how-to-use-the-threads-window.md)|
 |モジュール|Ctrl + Alt + U|[方法 : [モジュール] ウィンドウを使用する](../debugger/how-to-use-the-modules-window.md)|
 |GPU スレッド|-|[方法: GPU スレッド ウィンドウを使用する](../debugger/how-to-use-the-gpu-threads-window.md)|
 |[タスク]|Ctrl + Shift + D、K|[[タスク] ウィンドウの使用](../debugger/using-the-tasks-window.md)|
-|Python 対話形式デバッグ|Shift + Alt + I|[Python 対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
+|Python 対話形式デバッグ|Shift + Alt + I|[Python の対話型 REPL](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript コンソール|Ctrl + Alt + V、C|[クイック スタート: JavaScript をデバッグします。](../debugger/quickstart-debug-javascript-using-the-console.md)|
 |DOM Explorer|Ctrl + Alt + V、D|[DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)|
 |ライブ ビジュアル ツリー|-|[デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)|
@@ -51,4 +51,4 @@ ms.locfileid: "31481490"
 
 ## <a name="see-also"></a>関連項目
 
-[デバッガーの基本事項](../debugger/debugger-basics.md)
+[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

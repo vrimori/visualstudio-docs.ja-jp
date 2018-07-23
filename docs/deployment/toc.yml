@@ -19,9 +19,9 @@
     - name: .NET
       items:
         - name: 発行ツールを使用して .NET Core アプリケーションを配置する
-          href: /dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /dotnet/core/deploying/deploy-with-vs
         - name: Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
         - name: ClickOnce を使用してデスクトップ アプリを配置する
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: ClickOnce アプリケーションのコマンド ラインからのビルド
@@ -29,15 +29,15 @@
     - name: ASP.NET
       items:
         - name: Azure に ASP.NET Core アプリを発行する
-          href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
+        - name: Web 配置を使用して IIS に配置する
+          href: deploy-iis-with-web-deploy.md
         - name: 発行設定のインポートと Azure へのデプロイ
           href: tutorial-import-publish-settings-azure.md
         - name: 発行の設定のインポートおよび IIS へのデプロイ
           href: tutorial-import-publish-settings-iis.md
-        - name: Web 配置を使用して IIS に配置する
-          href: deploy-iis-with-web-deploy.md
         - name: Git を使用した Azure への ASP.NET Core の継続的な配置
-          href: /aspnet/core/publishing/azure-continuous-deployment?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /aspnet/core/publishing/azure-continuous-deployment
         - name: Visual Studio Kubernetes ツールを使用して Kubernetes に発行する
           href: tutorial-kubernetes-tools.md
     - name: ネイティブ
@@ -45,21 +45,21 @@
         - name: Visual C++ に配置...
           href: /cpp/ide/deployment-in-visual-cpp
         - name: Microsoft ストアのデスクトップ アプリをパッケージ化する (デスクトップ ブリッジ)
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
         - name: ClickOnce を使用してネイティブ アプリを配置...
           href: /cpp/ide/clickonce-deployment-for-visual-cpp-applications
     - name: UWP
       items:
         - name: Visual Studio を使用して UWP アプリをパッケージ化する
-          href: /windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /windows/uwp/packaging/packaging-uwp-apps
     - name: Node.js
       items:
-        - name: Web 配置を使用して Azure Web サイトに発行する
-          href: 'https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json'
+        - name: Linux App Service に発行する
+          href: /visualstudio/javascript/publish-nodejs-app-azure
     - name: Python
       items:
         - name: Azure App Service に発行する
-          href: /visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json
+          href: /visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio
 - name: 使い方ガイド
   items:
     - name: ClickOnce のセキュリティと配置

@@ -21,14 +21,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c37bcfb086acf265a719abe688c6738fbcbfc01
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 121171dc71746f2c9f91df32b103be8292cce3fa
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234011"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153600"
 ---
-# <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置の固有のエラーのトラブルシューティング
+# <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置で特定のエラーをトラブルシューティングします。
 この記事では、展開するときに発生する可能性がある次の一般的なエラーを示します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションでは、各問題を解決する手順を示します。  
   
 ## <a name="general-errors"></a>一般的なエラー  
@@ -36,7 +36,7 @@ ms.locfileid: "36234011"
 #### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>ときに何も問題が発生すると、アプリケーション ファイルを検索しようとするまたは Internet Explorer で、XML を表示または実行または名前を付けて保存 ダイアログ ボックスが表示されます。  
  このエラーは、サーバーまたはクライアントに正しく登録されていないコンテンツの種類 (MIME の種類とも呼ばれます) による可能性があります。  
   
- まずに関連付けるサーバーが構成されていることを確認、`.application`コンテンツを含む拡張機能の種類「/x ms-アプリケーションです」。  
+ まずに関連付けるサーバーが構成されていることを確認、 *.application*コンテンツを含む拡張機能の種類「/x ms-アプリケーションです」。  
   
  場合は、サーバーが正しく構成されていることを確認、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]がコンピューターにインストールされています。 場合、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]がインストールされているアンインストールと再インストールしてみてください、この問題が引き続き発生して、[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]クライアントでコンテンツの種類を再登録します。  
   
@@ -45,20 +45,20 @@ ms.locfileid: "36234011"
   
 -   かどうか、ログ ファイルは "(403) Forbidden"または"(404) Not found"がこのファイルのダウンロードをブロックしないようにする Web サーバーが構成されていることを確認します。 詳細については、「[ClickOnce 配置でのサーバーおよびクライアント構成の問題](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)」を参照してください。  
   
--   場合は、.config ファイルは、サーバーによってブロックされているは、「"をインストールしようすると、エラーをダウンロード、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .config ファイルがあるアプリケーション"この記事で後述します。  
+-   場合、 *.config*ファイルがサーバーによってブロックされてを参照してください"をインストールしようとすると、エラーをダウンロード、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .config ファイルがあるアプリケーション"この記事で後述します。  
   
--   このため、発生されているかどうかを判断、`deploymentProvider`配置マニフェストで URL がアクティブ化に使用する URL とは異なる場所を指しています。  
+-   に、このエラーが発生したかどうかを判断、`deploymentProvider`配置マニフェストで URL がアクティブ化に使用する URL とは異なる場所を指しています。  
   
 -   すべてのファイルがサーバー上に存在することを確認します。[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ログがどのように指示するファイルが見つかりませんでした。  
   
 -   ネットワーク接続の問題があるかどうかを参照してください。ダウンロード中に、クライアント コンピューターがオフラインになった場合、このメッセージが表示されることができます。  
   
 #### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>.Config ファイルがある ClickOnce アプリケーションをインストールしようとすると、エラーをダウンロードします。  
- 既定では、Visual Basic の Windows ベースのアプリケーションには、App.config ファイルが含まれています。 問題があるユーザーはオペレーティング システムがセキュリティ上の理由の .config ファイルのインストールをブロックするため、Windows Server 2003 を使用する Web サーバーからインストールしようとしています。 インストールする .config ファイルを有効にするには、 **".deploy"ファイル拡張子を使用して、** で、**発行オプション** ダイアログ ボックス。  
+ 既定では、Visual Basic の Windows ベースのアプリケーションには、App.config ファイルが含まれています。 問題があるユーザーが、そのオペレーティング システムのインストールをブロックしているため、Windows Server 2003 を使用する Web サーバーからインストールしようとしています。 *.config*ファイル セキュリティ上の理由。 有効にする、 *.config*インストールには、をクリックしてファイル **".deploy"ファイル拡張子を使用して、** で、**発行オプション** ダイアログ ボックス。  
   
  設定することも必要があります、コンテンツの種類 (MIME の種類とも呼ばれます) は、適切の .application、.manifest、および .deploy ファイル。 詳細については、Web サーバーのマニュアルを参照してください。  
   
- 詳細については、「Windows Server 2003:: ロックダウンされたコンテンツの種類」を参照してください[サーバーおよびクライアント構成の問題では、ClickOnce 配置](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)します。  
+ 詳細については、「Windows Server 2003:: ロックダウンされたコンテンツの種類」を参照してください[ClickOnce 配置でサーバーとクライアントの構成に関する問題](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)します。  
   
 #### <a name="error-message-application-is-improperly-formatted-log-file-contains-xml-signature-is-invalid"></a>エラー メッセージ:「アプリケーションの形式が正しくありません」。ログ ファイルには、「XML 署名が無効です」が含まれています。  
  マニフェスト ファイルを更新して、再度署名されたことを確認してください。 使用して、アプリケーションを再発行[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または Mage を使用して、もう一度アプリケーションに署名します。  
@@ -140,4 +140,4 @@ ms.locfileid: "36234011"
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   
- [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)
+ [ClickOnce 配置をトラブルシューティングします。](../deployment/troubleshooting-clickonce-deployments.md)

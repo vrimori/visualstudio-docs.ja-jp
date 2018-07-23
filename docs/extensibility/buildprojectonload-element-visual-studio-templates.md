@@ -1,5 +1,5 @@
 ---
-title: BuildProjectOnload 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: BuildProjectOnload 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,15 +11,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 689d2510a8513b880f3c2cddca584449c03217b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e5cbcc06fcc7a936918de8b1a9d4c44d9938d94
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097823"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154159"
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload 要素 (Visual Studio テンプレート)
-作成して、ソリューションに追加すると、新しいプロジェクトのみを構築します。 ソリューション全体はビルドされません。  
+作成して、ソリューションに追加するときは、新しいプロジェクトのみをビルドします。 ソリューション全体はビルドされません。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -31,7 +31,7 @@ ms.locfileid: "31097823"
 <BuildProjectOnLoad> true/false </BuildOnLoad>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -44,14 +44,14 @@ ms.locfileid: "31097823"
   
 |要素|説明|  
 |-------------|-----------------|  
-|TemplateData|テンプレートをカテゴリに分類し、両方での表示方法を定義、**新しいプロジェクト**と**新しい項目の追加** ダイアログ ボックス。|  
+|`TemplateData`|テンプレートを分類し、両方での表示方法を定義、**新しいプロジェクト**と**新しい項目の追加** ダイアログ ボックス。|  
   
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`テンプレートから作成時に、新しいプロジェクトのみをビルドするかどうかを示すためにします。  
+ テキストがいずれかにする必要があります`true`または`false`をテンプレートから作成時に新しいプロジェクトのみをビルドするかどうかを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `BuildProjectOnLoad` は、省略可能な要素です。 既定値は `false` です。  
   
 ## <a name="example"></a>例  
@@ -83,5 +83,5 @@ ms.locfileid: "31097823"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

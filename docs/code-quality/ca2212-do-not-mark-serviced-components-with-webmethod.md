@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67d2e2790db4a3e8061dcd949b79c127e67f022d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 88708fdcb41a43d3e8b3f78b4e66decb7211a4b4
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922718"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177423"
 ---
 # <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: サービス コンポーネントを WebMethod に設定しません
+
 |||
 |-|-|
 |TypeName|DoNotMarkServicedComponentsWithWebMethod|
@@ -32,16 +33,22 @@ ms.locfileid: "31922718"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 継承する型のメソッド<xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName>でマークされた<xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>です。
+
+継承する型のメソッド<xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName>でマークされた<xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>します。
 
 ## <a name="rule-description"></a>規則の説明
- <xref:System.Web.Services.WebMethodAttribute> ASP.NET; を使用して作成された XML Web サービス内のメソッドに適用されます。これにより、メソッド呼び出し可能なリモートの Web クライアントから。 メソッドとクラスは、パブリックにし、ASP.NET Web アプリケーションで実行する必要があります。 <xref:System.EnterpriseServices.ServicedComponent> 型は、COM + アプリケーションによってホストされ、COM + サービスを使用することができます。 <xref:System.Web.Services.WebMethodAttribute> 適用されません<xref:System.EnterpriseServices.ServicedComponent>同じシナリオに対するものではありません、ために、型です。 具体的には、属性を追加する、<xref:System.EnterpriseServices.ServicedComponent>メソッドは行いませんメソッド呼び出し可能なリモートの Web クライアントからです。 <xref:System.Web.Services.WebMethodAttribute>と<xref:System.EnterpriseServices.ServicedComponent>メソッド競合する動作があり、コンテキストおよびトランザクション フロー、メソッドの動作の要件は一部のシナリオでは不正確になります。
+
+<xref:System.Web.Services.WebMethodAttribute> ASP.NET; を使用して作成された XML web サービス内のメソッドに適用されます。これは、リモート web クライアントからメソッドを呼び出し可能にします。 メソッドとクラスは、パブリックにし、ASP.NET web アプリケーションで実行する必要があります。 <xref:System.EnterpriseServices.ServicedComponent> 種類は、COM + アプリケーションでホストされており、COM + サービスを使用することができます。 <xref:System.Web.Services.WebMethodAttribute> 適用されません<xref:System.EnterpriseServices.ServicedComponent>型同じシナリオに対する意図されていないためです。 具体的には、属性を追加する、<xref:System.EnterpriseServices.ServicedComponent>メソッドを行わない、メソッド呼び出し可能なリモートの web クライアントから。 <xref:System.Web.Services.WebMethodAttribute>と<xref:System.EnterpriseServices.ServicedComponent>メソッドがある動作が競合して、コンテキストとトランザクション フロー、メソッドの動作の要件は一部のシナリオでは不正確になります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するから属性を削除する、<xref:System.EnterpriseServices.ServicedComponent>メソッドです。
+
+この規則違反を解決するからの属性を削除、<xref:System.EnterpriseServices.ServicedComponent>メソッド。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 これらの要素を組み合わせることが適切であるシナリオはありません。
+
+この規則による警告は抑制しないでください。 これらの要素を組み合わせることが適切であるシナリオではありません。
 
 ## <a name="see-also"></a>関連項目
- <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName> <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>
+
+- <xref:System.EnterpriseServices.ServicedComponent?displayProperty=fullName>
+- <xref:System.Web.Services.WebMethodAttribute?displayProperty=fullName>

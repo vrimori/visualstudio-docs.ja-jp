@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1437728a75e0c6e8babff690bb18c7bd30d3add4
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: c514458d6b7e8cfd4837ca907d14055af8a624ce
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057471"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180219"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーでの例外を管理します。
 
@@ -197,4 +197,4 @@ public class GenericException<T> : Exception
  [方法: 例外の後にシステム コードを調べる](../debugger/how-to-examine-system-code-after-an-exception.md)   
  [方法: ネイティブ ランタイム チェックを使用](../debugger/how-to-use-native-run-time-checks.md)   
  [C ランタイム ライブラリなしのチェックの実行時に使用します。](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)
+ [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

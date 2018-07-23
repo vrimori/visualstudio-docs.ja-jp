@@ -24,6 +24,8 @@
       href: how-to-debug-managed-and-native-code.md
     - name: IntelliTrace ステップ バックを使用してスナップショットを表示する
       href: how-to-use-intellitrace-step-back.md
+    - name: 入門者向けのデバッグ
+      href: debugging-absolute-beginners.md
 - name: 使い方ガイド
   items:
     - name: デバッガーでのコード間の移動
@@ -105,8 +107,6 @@
           items:
             - name: エディット コンティニュの中断モード時に編集を適用する
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
-            - name: Visual Basic エディット コンティニュでサポートされていない編集
-              href: unsupported-edits-in-visual-basic-edit-and-continue.md
         - name: 'F# ではエディット コンティニュはサポートされません。'
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: デバッガー データの表示
@@ -397,7 +397,7 @@
             - name: 'デバッグの準備: プロジェクトの種類が C#、F#、および Visual Basic のプロジェクト'
               href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
               items:
-                - name: 'マネージ デバッグ : プロパティの推奨設定'
+                - name: 'マネージド デバッグ : プロパティの推奨設定'
                   href: managed-debugging-recommended-property-settings.md
                 - name: 'デバッグの準備 : Windows フォーム アプリケーション'
                   href: debugging-preparation-windows-forms-applications.md
@@ -826,5 +826,3 @@
   items:
     - name: Visual Studio のデバッガーの新機能
       href: what-s-new-for-the-debugger-in-visual-studio.md
-    - name: 入門者向けのデバッグ
-      href: debugging-absolute-beginners.md

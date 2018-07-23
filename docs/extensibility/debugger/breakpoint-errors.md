@@ -1,5 +1,5 @@
 ---
-title: ブレークポイント エラー |Microsoft ドキュメント
+title: ブレークポイント エラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e3c7271cc573388231045143f275d1032bef437
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b08b9bee82a2505411be95ef2e6634e7897c15ec
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099884"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153762"
 ---
-# <a name="breakpoint-errors"></a>ブレークポイントのエラー
-次のブレークポイントがコードにバインドしようとしたときにプロセスを説明は失敗します。  
+# <a name="breakpoint-errors"></a>ブレークポイント エラー
+次は、ブレークポイントがコードにバインドしようとしたときにプロセスを説明しますが、失敗します。  
   
-## <a name="troubleshooting-a-breakpoint-error"></a>ブレークポイントのエラーのトラブルシューティング  
+## <a name="troubleshoot-a-breakpoint-error"></a>ブレークポイント エラーをトラブルシューティングします。  
   
-1.  デバッグ エンジン (DE) の送信、 [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)セッション デバッグ マネージャー (SDM) にします。  
+1.  デバッグ エンジン (DE) を送信する[IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md)セッション デバッグ マネージャー (SDM)。  
   
-2.  SDM 呼び出し[IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP`) エラー ブレークポイントを取得します。  
+2.  SDM コール[IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP`) エラーのブレークポイントを取得します。  
   
-3.  SDM 呼び出し[IDebugErrorBreakpoint2::GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)エラー ブレークポイントの発生元となる保留中のブレークポイントを取得します。  
+3.  SDM コール[IDebugErrorBreakpoint2::GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md)エラー ブレークポイントが元の保留中のブレークポイントを取得します。  
   
-4.  SDM 呼び出し[IDebugErrorBreakpoint2::GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)エラー ブレークポイントがバインドに失敗した理由を取得します。  
+4.  SDM コール[IDebugErrorBreakpoint2::GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md)エラー ブレークポイントがバインドに失敗した理由を取得します。  
   
 ## <a name="see-also"></a>関連項目  
- [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)
+ [デバッガー イベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

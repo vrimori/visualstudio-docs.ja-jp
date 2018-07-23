@@ -8,11 +8,12 @@
 - name: クイックスタート
   items:
     - name: Flask での Web アプリの作成
-      href: ../ide/quickstart-python.md?context=visualstudio/python/default
+      href: ../ide/quickstart-python.md
+      maintainContext: true
     - name: テンプレートからプロジェクトを作成する
       href: quickstart-02-python-in-visual-studio-project-from-template.md
     - name: 既存のコードからプロジェクトを作成する
-      href: quickstart-01-project-from-existing.md
+      href: quickstart-01-python-in-visual-studio-project-from-existing-code.md
     - name: リポジトリからプロジェクトを作成する
       href: quickstart-03-python-in-visual-studio-project-from-repository.md
     - name: Cookiecutter テンプレートからプロジェクトを作成する
@@ -87,10 +88,10 @@
           href: search-paths.md
         - name: 環境ウィンドウ リファレンス
           href: python-environments-window-tab-reference.md
-    - name: コードの編集
+    - name: Python コードの編集
       href: editing-python-code-in-visual-studio.md
       items:
-        - name: コードの書式設定
+        - name: '[書式コード]'
           href: formatting-python-code.md
         - name: コードのリファクタリング
           href: refactoring-python-code.md

@@ -1,9 +1,9 @@
 ---
-title: デバッガーのプロジェクトの設定 |Microsoft ドキュメント
+title: デバッガーのプロジェクトの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea878114d940f8b9881a1a1d0204da58ca6519f5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a027307ef960a8b0185daa34374e20270bf2fa19
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474025"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152987"
 ---
 # <a name="debugger-project-settings"></a>デバッガーに関連するプロジェクト設定
 一部のプロジェクト設定がデバッグに影響することもあります。 これらの設定により、デバッガーで参照するディレクトリ、プログラムを起動するためのコマンドとコマンド引数、プログラム用に作成されるデバッグ情報の種類などが決まります。 デバッグ設定は、 **[プロパティ ページ]** ダイアログ ボックスで変更できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "31474025"
  **プロジェクトの** [プロパティ ページ] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ダイアログ ボックスで設定できるプロパティを一覧します。  
   
 ## <a name="related-sections"></a>関連項目  
- [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+ [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
  デバッグの情報を表示するためにシンボル ファイルおよびソース ファイルがデバッガーでどのように使用されるかについて説明します。  
   
  [Visual Studio でアプリをデバッグします。](../debugger/debug-store-apps-in-visual-studio.md)  

@@ -425,6 +425,8 @@
       href: getting-started-with-the-vsix-project-template.md
     - name: 'チュートリアル: Visual Studio の拡張機能を発行する'
       href: walkthrough-publishing-a-visual-studio-extension.md
+    - name: 'チュートリアル: コマンド ラインを使用して Visual Studio の拡張機能を発行する'
+      href: walkthrough-publishing-a-visual-studio-extension-via-command-line.md
     - name: VSIX パッケージへの依存関係の追加
       href: how-to-add-a-dependency-to-a-vsix-package.md
     - name: VSIX パッケージの構造

@@ -3,21 +3,22 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-mobile
 title: C++ によるモバイル開発のドキュメント | Microsoft Docs
 description: iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: e190ad0dbe908fb1d4549023729d60db88177ea6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cc428cd4b961fe42f3d1f80cd18982a2420aafd3
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31060952"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924175"
 ---
 # <a name="mobile-development-with-c-documentation"></a>C++ ドキュメントによるモバイル開発
 
-iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
+iOS、Android、Windows デバイス用のネイティブ C++ アプリを Visual Studio で作成します。
 
 <ul class="panelContent cardsF">
     <li>
@@ -32,7 +33,7 @@ iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で
                     </div>
                     <div class="cardText">
                         <h3>Visual C++ for Cross-Platform Mobile Development のインストール</h3>
-                        <p>クロス プラットフォーム モバイル アプリの構築に必要なツールをセットアップします。</p>
+                        <p>クロス プラットフォーム モバイル アプリの構築に必要なツールを設定します。</p>
                     </div>
                 </div>
             </div>
@@ -69,8 +70,8 @@ iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Cross-Platform Mobile Development Examples</h3>
-                        <p>クロス プラットフォーム モバイル開発を開始するためのサンプル。</p>
+                        <h3>クロス プラットフォーム モバイル開発の例</h3>
+                        <p>クロス プラットフォーム モバイル開発を開始するためのサンプルをご覧ください。</p>
                     </div>
                 </div>
             </div>

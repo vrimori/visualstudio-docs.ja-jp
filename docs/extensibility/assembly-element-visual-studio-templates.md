@@ -1,5 +1,5 @@
 ---
-title: Assembly 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: Assembly 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97e6209fdf446d88ed79ef741c3584b2bc4f5602
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 195faf23ecb2fca019b4948b3150ab6f9c00f5ec
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099110"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155465"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly 要素 (Visual Studio テンプレート)
 そのアセンブリの参照をプロジェクトに追加するテンプレートを使用して、アセンブリに関する情報を指定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "31099110"
 <Assembly> AssemblyName </Assembly>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -56,7 +56,7 @@ ms.locfileid: "31099110"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- このテキストは、項目テンプレートがインスタンス化されるときに、プロジェクトに追加するアセンブリを指定します。 次の方法のいずれかでは、このアセンブリ名を指定する必要があります。  
+ このテキストは、項目テンプレートがインスタンス化されるときに、プロジェクトに追加するアセンブリを指定します。 このアセンブリの名前は、次の方法のいずれかで指定する必要があります。  
   
 -   アセンブリの完全名。 例えば:  
   
@@ -72,13 +72,13 @@ ms.locfileid: "31099110"
     <Assembly> System </Assembly>  
     ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Assembly` は `Reference` に必須の子要素です。  
   
- `Reference`、`References,`と`Assembly`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`します。  
+ `Reference`、`References,`と`Assembly`要素でのみ使用できます *.vstemplate*を持つファイルを`Type`属性の値`Item`します。  
   
 ## <a name="example"></a>例  
- 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML は、System.dll および System.Data.dll アセンブリへの参照を追加します。  
+ 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML への参照の追加、 *System.dll*と*System.Data.dll*アセンブリ。  
   
 ```  
 <TemplateContent>  
@@ -100,4 +100,4 @@ ms.locfileid: "31099110"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

@@ -1,6 +1,8 @@
+- name: コード分析のドキュメント
+  href: index.md
 - name: 概要
   items:
-    - name: マネージ コードのコード分析
+    - name: マネージド コードのコード分析
       href: code-analysis-for-managed-code-overview.md
     - name: Roslyn アナライザー
       href: roslyn-analyzers-overview.md
@@ -23,7 +25,7 @@
           href: demo-sample.md
 - name: 使い方ガイド
   items:
-    - name: マネージ コードのコード分析
+    - name: マネージド コードのコード分析
       items:
         - name: Roslyn アナライザーのインストール
           href: install-roslyn-analyzers.md
@@ -113,19 +115,19 @@
       items:
         - name: '"すべての規則" 規則セット'
           href: all-rules-rule-set.md
-        - name: マネージ コードの "基本正確性規則" 規則セット
+        - name: マネージド コードの "基本正確性規則" 規則セット
           href: basic-correctness-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "基本デザイン ガイドライン規則" 規則セット
+        - name: マネージド コードの "基本デザイン ガイドライン規則" 規則セット
           href: basic-design-guideline-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "拡張正確性規則" 規則セット
+        - name: マネージド コードの "拡張正確性規則" 規則セット
           href: extended-correctness-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "拡張デザイン ガイドライン規則" 規則セット
+        - name: マネージド コードの "拡張デザイン ガイドライン規則" 規則セット
           href: extended-design-guidelines-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "グローバリゼーション規則" 規則セット
+        - name: マネージド コードの "グローバリゼーション規則" 規則セット
           href: globalization-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "マネージ最小規則" 規則セット
+        - name: マネージド コードの "マネージ最小規則" 規則セット
           href: managed-minimun-rules-rule-set-for-managed-code.md
-        - name: マネージ コードの "マネージ推奨規則" 規則セット
+        - name: マネージド コードの "マネージ推奨規則" 規則セット
           href: managed-recommended-rules-rule-set-for-managed-code.md
         - name: '"混合最小規則" 規則セット'
           href: mixed-minimum-rules-rule-set.md
@@ -135,12 +137,12 @@
           href: native-minimum-rules-rule-set.md
         - name: '"ネイティブ推奨規則" 規則セット'
           href: native-recommended-rules-rule-set.md
-        - name: マネージ コードの "セキュリティ規則" 規則セット
+        - name: マネージド コードの "セキュリティ規則" 規則セット
           href: security-rules-rule-set-for-managed-code.md
-    - name: マネージ コードの警告に対応するコードの解析
+    - name: マネージド コードの警告に対応するコード分析
       href: code-analysis-for-managed-code-warnings.md
       items:
-        - name: マネージ コードのコード分析警告 (CheckId 別)
+        - name: マネージド コードのコード分析警告 (CheckId 別)
           href: code-analysis-warnings-for-managed-code-by-checkid.md
         - name: 暗号化警告
           href: cryptography-warnings.md
@@ -149,7 +151,7 @@
               href: ca5350-do-not-use-weak-cryptographic-algorithms.md
             - name: CA5351 破られた暗号アルゴリズムを使用しないでください
               href: ca5351-do-not-use-broken-cryptographic-algorithms.md
-        - name: デザイン上の警告
+        - name: デザインの警告
           href: design-warnings.md
           items:
             - name: 'CA1000: ジェネリック型の静的メンバーを宣言しません'
@@ -582,7 +584,7 @@
               href: ca2202-do-not-dispose-objects-multiple-times.md
             - name: 'CA2204: リテラルは正しく入力されていなければなりません'
               href: ca2204-literals-should-be-spelled-correctly.md
-            - name: 'CA2205: Win32 API に相当するマネージ API を使用します'
+            - name: 'CA2205: Win32 API に相当するマネージド API を使用します'
               href: ca2205-use-managed-equivalents-of-win32-api.md
             - name: 'CA2207: 値型の静的フィールドのインラインを初期化します'
               href: ca2207-initialize-value-type-static-fields-inline.md

@@ -1,5 +1,5 @@
 ---
-title: ローカルの値を変更する |Microsoft ドキュメント
+title: ローカルの値を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,41 +14,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 422d1702f319db6da21892bcaa1bd50adad7909d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 788f496f2afeb3b6392cb165d243a9d83f8ea005
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109586"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151074"
 ---
-# <a name="changing-the-value-of-a-local"></a>ローカルの値を変更します。
+# <a name="change-the-value-of-a-local"></a>ローカルの値を変更します。
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 値フィールドに新しい値を入力するときに、**ローカル**ウィンドウで、デバッグ パッケージ文字列を渡します、式エバリュエーター (EE) を入力したとします。 EE は、この文字列は、単純な値または式を含めることができ、関連付けられているローカルの結果として得られる値を格納するを評価します。  
+ 値フィールドに新しい値を入力するときに、**ローカル**ウィンドウで、パッケージのデバッグ、文字列、ように入力すると、式エバリュエーター (EE)。 EE は、この文字列は、単純な値、または式に含めることができ、関連付けられているローカルを結果の値を評価します。  
   
- これは、ローカルの値を変更するプロセスの概要です。  
+ これは、ローカルの値を変更するプロセスの概要を示します。  
   
 1.  新しい値を入力すると、Visual Studio は呼び出し[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)上、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)ローカルに関連付けられているオブジェクト。  
   
 2.  `IDebugProperty2::SetValueAsString` では次のタスクを実行します。  
   
-    1.  値を生成するために文字列を評価します。  
+    1.  値を生成する文字列を評価します。  
   
-    2.  関連付けられたバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)を取得するオブジェクト、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
+    2.  関連付けられているバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクトを取得する、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
     3.  一連のバイト値に変換します。  
   
-    4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)デバッグ中のプログラムがアクセスできるように、メモリに値のバイトを格納します。  
+    4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)デバッグ中のプログラムがアクセスできるように、メモリに、値のバイトを格納します。  
   
-3.  Visual Studio の更新、**ローカル**表示 (を参照してください[を表示するローカル](../../extensibility/debugger/displaying-locals.md)詳細については)。  
+3.  Visual Studio の更新、**ローカル**表示 (を参照してください[表示の [ローカル]](../../extensibility/debugger/displaying-locals.md)詳細については)。  
   
- このプロシージャは、内の変数の値を変更するのには使用も、**ウォッチ**それ以外のウィンドウが、`IDebugProperty2`の代わりに使用されるローカル変数の値に関連付けられているオブジェクト、`IDebugProperty2`ローカルに関連付けられているオブジェクトできません。  
+ 内の変数の値を変更するこの手順を使用しても、**ウォッチ**ウィンドウで、ある点を除く、`IDebugProperty2`の代わりに使用されるローカル変数の値に関連付けられているオブジェクト、`IDebugProperty2`オブジェクトに関連付けられたローカル自体。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [値の変更の実装のサンプル](../../extensibility/debugger/sample-implementation-of-changing-values.md)  
+ [値を変更するサンプルの実装](../../extensibility/debugger/sample-implementation-of-changing-values.md)  
  値を変更するプロセスをステップ MyCEE サンプルを使用します。  
   
 ## <a name="see-also"></a>関連項目  
- [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
+ [CLR の式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [ローカルの表示](../../extensibility/debugger/displaying-locals.md)
