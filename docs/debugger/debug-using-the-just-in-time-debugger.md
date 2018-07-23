@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99a57f217cc92051f2b85b1b210ce3adf5a189be
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
-ms.translationtype: HT
+ms.openlocfilehash: aa31d9d9b536a614cc1000f7c25ae6fbb5e4d510
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058764"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176442"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual studio Just-In-Time デバッガーを使用してデバッグします。
 ジャストイン タイム デバッグ Visual Studio が自動的に起動 Visual Studio の外部を実行しているアプリケーションで例外またはクラッシュが発生したとき。 これにより、Visual Studio が実行されていない場合に、アプリケーションをテストし、問題が発生したときに、Visual Studio でデバッグを開始することができます。
@@ -176,4 +176,4 @@ static void Main(string[] args)
      この問題を解決するには、セットアップ ディスクを使って Visual Studio を再インストールするか、既存のインストールを修復します。
 
 ## <a name="see-also"></a>関連項目
- [デバッガーのセキュリティ](../debugger/debugger-security.md)[デバッガーの基本事項](../debugger/debugger-basics.md) [Just ポイントイン タイムをデバッグするには、オプション ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチすることができます危険です。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)
+ [デバッガーのセキュリティ](../debugger/debugger-security.md)[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md) [Just ポイントイン タイムをデバッグするには、オプション] ダイアログ ボックス](../debugger/just-in-time-debugging-options-dialog-box.md)[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチすることができます危険です。以下の情報に関して疑わしい点がある場合や、不明な場合は、このプロセスにアタッチしないでください。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

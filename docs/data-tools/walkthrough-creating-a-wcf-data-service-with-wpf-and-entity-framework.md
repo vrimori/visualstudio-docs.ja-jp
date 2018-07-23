@@ -18,19 +18,19 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b796bf5b17460425d25ec91f3ecca7c147784039
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
-ms.translationtype: HT
+ms.openlocfilehash: d4fa9ea1538d051aebd025c641c0520197f986ef
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174987"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178388"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF と Entity Framework を使用する WCF Data Service の作成
-このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされる、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションと Windows フォーム アプリケーションからアクセスします。
+このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされる、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web アプリケーションと Windows フォーム アプリケーションからアクセスします。
 
 このチュートリアルでしました。
 
--   [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] をホストする Web アプリケーションを作成します。
+-   ホストする web アプリケーションを作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]します。
 
 -   作成、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を表す、 `Customers` Northwind データベースのテーブル。
 
@@ -60,9 +60,9 @@ ms.locfileid: "37174987"
        しばらくすると、クエリの実行が完了し、Northwind データベースを作成します。
 
 ## <a name="creating-the-service"></a>サービスの作成
-[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を作成するには、Web プロジェクトを追加し、[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]を作成した後、そのモデルからサービスを作成します。
+作成する、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]が web プロジェクトを追加、作成、 [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]、モデルからサービスを作成します。
 
-最初の手順では、サービスをホストする Web プロジェクトを追加します。
+最初の手順では、サービスをホストする web プロジェクトを追加します。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -164,7 +164,7 @@ ms.locfileid: "37174987"
 
 5.  メニュー バーで、**プロジェクト**、**スタートアップ プロジェクトとして設定**します。
 
-次の手順でサービスへの参照を追加する、 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] Web プロジェクトにします。
+次の手順でサービスへの参照を追加する、 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] web プロジェクトにします。
 
 #### <a name="to-add-a-service-reference"></a>サービス参照を追加するには
 
