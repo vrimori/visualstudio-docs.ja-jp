@@ -236,6 +236,8 @@
           href: remote-debugger-port-assignments.md
         - name: Windows ファイアウォールをリモート デバッグ用に構成する
           href: configure-the-windows-firewall-for-remote-debugging.md
+        - name: Windows Server 上でのダウンロードをブロック解除する
+          href: remote-debugging-unblock-file-download.md
         - name: リモート デバッグ エラーとトラブルシューティング
           href: remote-debugging-errors-and-troubleshooting.md
           items:
@@ -319,7 +321,7 @@
           href: how-to-set-a-thread-name-in-native-code.md
         - name: マネージド コードのスレッド名を設定する
           href: how-to-set-a-thread-name-in-managed-code.md
-    - name: '[IntelliTrace]'
+    - name: IntelliTrace
       href: intellitrace.md
       items:
         - name: 'チュートリアル: IntelliTrace の使用'
@@ -385,7 +387,7 @@
             - name: コンソールを使用した JavaScript のデバッグ
               href: quickstart-debug-javascript-using-the-console.md
               items:
-                - name: JavaScript Console commands
+                - name: JavaScript コンソール コマンド
                   href: javascript-console-commands.md
             - name: 中断イベント、再開イベント、バックグラウンド イベントをトリガーする方法
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
