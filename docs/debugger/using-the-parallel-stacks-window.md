@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9bc66f2017b243f94ae0012b354230aae66c76fd
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: cd35f8545c1c768b07ff45ff8a6cdf84d24f3c58
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058738"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176968"
 ---
 # <a name="view-threads-and-tasks-using-the-parallel-stacks-window"></a>スレッドと並列スタック ウィンドウを使用してタスクを表示します。
 **並列スタック**ウィンドウで、マルチ スレッド アプリケーションをデバッグする場合に便利です。 その**スレッド ビュー**アプリケーションのすべてのスレッドの呼び出し履歴情報が表示されます。 これを使用して、スレッドとそれらのスレッドのスタック フレームの間を移動できます。 マネージ コードで、**タスク ビュー**呼び出しの履歴が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト。 ネイティブ コードで、**タスク ビュー**呼び出しの履歴が表示されます[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)、および[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)します。  
@@ -118,7 +118,7 @@ ms.locfileid: "37058738"
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
  [チュートリアル: 並行アプリケーションのデバッグ](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)   
+ [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
  
   [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)   

@@ -1,5 +1,5 @@
 ---
-title: デバッガーのセキュリティ |Microsoft ドキュメント
+title: デバッガーのセキュリティ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f0b97564c48255ea8b8f37e370402fa8f7499aa
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 640c127d9e82a78f629365141c5948d21eafcf3c
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34065007"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175996"
 ---
 # <a name="debugger-security"></a>デバッガーのセキュリティ
 別プロセスでデバッグする機能によって、リモート環境からのデバッグをはじめとした、さまざまな操作を行うことができます。 ただし、デバッガーに悪意があると、デバッグ対象のコンピューターに広範囲の損害を与える可能性があります。  
@@ -36,10 +36,10 @@ ms.locfileid: "34065007"
   
  攻撃を受ける可能性を減らすには、運用コンピューターでのデバッグは無効にする必要があります。 同じ理由から、無期限にデバッグを有効にしないようにします。  
   
-### <a name="managed-debugging-security"></a>マネージ デバッグのセキュリティ  
- すべてのマネージ デバッグに適用される全般的な推奨事項を次に示します。  
+### <a name="managed-debugging-security"></a>マネージド デバッグのセキュリティ  
+ すべてのマネージド デバッグに適用される全般的な推奨事項を次に示します。  
   
--   信頼されていないユーザーのプロセスにアタッチするときに注意してください: が信頼できることを想定するようにするとします。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするのは危険です。次の情報に関して疑わしい点またはことを確認して場合、このプロセスに接続しないで](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)です。  
+-   信頼されていないユーザーのプロセスにアタッチするときに注意してください: 信頼可能であると仮定するようにするとします。 信頼関係のないユーザーのプロセスにアタッチするときに、セキュリティの警告ダイアログ ボックスが表示され、プロセスにアタッチするかどうかが確認されます。 "信頼関係のあるユーザー" には、自分と、.NET Framework をインストールしたコンピューターで一般的に定義されている標準のユーザーが含まれます。たとえば、 **aspnet**、 **localsystem**、 **networkservice**、および **localservice**です。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしない](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)します。  
   
 -   プロジェクトをインターネットからダウンロードするとき、およびそのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に読み込むときは注意します。 デバッグを実行しない場合でも、これはリスクの高い方法です。 この場合、含まれるプロジェクトとコードが信頼できるかどうかを判断します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34065007"
   
  リモート コンピューターでは未知のプロセスをデバッグしないでください。デバッガーを実行するコンピューターや msvsmon.exe (Visual Studio リモート デバッグ モニター) に悪影響を及ぼす攻略行為が行われる可能性があります。 それでも未知のプロセスをデバッグする必要がある場合は、ローカルでデバッグし、セキュリティ上の脅威をローカルの問題に抑えるためにファイアウォールを使用します。  
   
- 詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)です。  
+ 詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)します。  
   
 ### <a name="web-services-debugging-security"></a>Web サービスをデバッグするときのセキュリティ  
  ローカルでデバッグする方が安全ですが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が Web サーバーにインストールされていない可能性があるため、ローカル デバッグを実行できない場合があります。 通常、Web サービスのデバッグは、開発時を除いてリモートで行われます。そのため、Web サービスのデバッグにも、リモート デバッグのセキュリティに関する推奨事項が適用されます。 次に、その他の推奨される手順を示します。 詳細については、「 [Debugging XML Web Services](http://msdn.microsoft.com/en-us/c900b137-9fbd-4f59-91b5-9c2c6ce06f00)」を参照してください。  
@@ -77,10 +77,10 @@ ms.locfileid: "34065007"
   
 -   シンボル サーバー。システム コール時のクラッシュをデバッグするときに必要な、シンボルを提供するときに使用されます。  
   
- 参照してください[シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+ 参照してください[シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)   
- [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい点またはことを確認して場合がこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
+ [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
+ [セキュリティ警告: 信頼されていないユーザーが所有するプロセスにアタッチするには危険が伴います。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチできません。](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
  [セキュリティ警告: デバッガーは信頼されないコマンドを実行する必要があります](../debugger/security-warning-debugger-must-execute-untrusted-command.md)

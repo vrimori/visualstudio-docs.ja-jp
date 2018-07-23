@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d840f6c12de20fb613ee27d59395afeb15a5c34b
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 610372abd2aa8b4c45a18f5f1b3b171262308a66
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37059300"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179997"
 ---
 # <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
 
@@ -96,7 +96,7 @@ JavaScript では、promise を使用する場合、タスク ウィンドウを
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッガーの基本事項](../debugger/debugger-basics.md)
+- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
 - 
   [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
 - [並列プログラミング](/dotnet/standard/parallel-programming/index)

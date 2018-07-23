@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3cf0b0cc79baf49b4792cd009d3e634b8d10574
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: ef7daf2cdf6ee27863f8239999a436f17a5d6866
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056073"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176942"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001: 問題が発生する可能性のあるメソッドは呼び出しません
 
@@ -45,7 +45,7 @@ ms.locfileid: "37056073"
 |<xref:System.GC.Collect%2A?displayProperty=fullName>|GC を呼び出しています。収集は、アプリケーションのパフォーマンスに大きく影響し、必要はほとんどありません。 詳細については、次を参照してください。 [Rico Mariani のパフォーマンスに関するニュース](http://go.microsoft.com/fwlink/?LinkId=169256)msdn ブログ エントリ。|
 |<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Thread.Suspend および Thread.Resume が、予期しない動作のために使用されなくなりました。  他のクラスを使用して、<xref:System.Threading>名前空間など<xref:System.Threading.Monitor>、<xref:System.Threading.Mutex>と<xref:System.Threading.Semaphore>スレッドを同期またはリソースを保護します。|
 |<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|DangerousGetHandle メソッドでは、無効なハンドルを返すことができますので、セキュリティ リスクが生じます。 参照してください、<xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A>と<xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A>DangerousGetHandle メソッドを安全に使用する方法の詳細についてのメソッド。|
-|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|これらのメソッドは、予期しない場所からアセンブリを読み込むことができます。 たとえば、Suzanne Cook の .NET CLR のノートのブログ投稿を参照して[LoadFile vs します。LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450)と[バインド コンテキストを選択する](http://go.microsoft.com/fwlink/?LinkId=164451)アセンブリを読み込む方法については、MSDN Web サイト。|
+|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|これらのメソッドは、予期しない場所からアセンブリを読み込むことができます。 たとえば、Suzanne Cook の .NET CLR のノートのブログ投稿を参照して[LoadFile vs します。LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450)と[バインド コンテキストを選択する](http://go.microsoft.com/fwlink/?LinkId=164451)アセンブリを読み込む方法についてはします。|
 |[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|ユーザー コードがマネージ プロセスで実行を開始するのには遅すぎます CoSetProxyBlanket を確実に呼び出すです。 共通言語ランタイム (CLR) は、次の位置からユーザーの P/invoke を妨げる可能性のある初期化アクションを実行します。<br /><br /> マネージ アプリケーションの CoSetProxyBlanket を呼び出すを持っている場合は、ネイティブ コード (C++) の実行可能ファイルを使用して、プロセスを開始し、CoSetProxyBlanket を呼び出すネイティブ コードでのプロセスでマネージ コード アプリケーションを起動ことを勧めします。 (するランタイムのバージョン番号を指定してください)。|
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法

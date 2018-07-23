@@ -1,5 +1,5 @@
 ---
-title: デバッガーで式 |Microsoft ドキュメント
+title: デバッガー内の式 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.technology: vs-ide-debug
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 063fe4f61e6e3d8e8ed9e54b990029f2cf408e24
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: caaa13d67c30e07cd95c7a959e17117199188c0c
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454545"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056649"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio デバッガーで式
 Visual Studio デバッガーには式エバリュエーターという機能があり、 **[クイック ウォッチ]** ダイアログ ボックス、 **[ウォッチ]** ウィンドウ、または **[イミディエイト]** ウィンドウで式を入力するときに役立ちます。 式エバリュエーターは **[ブレークポイント]** ウィンドウなど、他のデバッガー機能でも使用できます。
@@ -123,7 +123,7 @@ int main()
 ## <a name="c---unsupported-expressions"></a>C# - サポートされていない式  
   
 ### <a name="dynamic-objects"></a>動的オブジェクト  
- デバッガー式では、静的に型指定された変数を動的として使用できます。 実装するオブジェクト<xref:System.Dynamic.IDynamicMetaObjectProvider>[動的ビュー] ノードの追加 [ウォッチ] ウィンドウで評価されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ デバッガー式では、静的に型指定された変数を動的として使用できます。 実装するオブジェクトが<xref:System.Dynamic.IDynamicMetaObjectProvider>動的ビュー ノードの追加 ウォッチ ウィンドウで評価されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  動的オブジェクトでは、以下の機能はサポートされていません。  
   
@@ -147,7 +147,7 @@ int main()
 ## <a name="visual-basic---unsupported-expressions"></a>Visual Basic - サポートされていない式  
   
 ### <a name="dynamic-objects"></a>動的オブジェクト  
- デバッガー式では、静的に型指定された変数を動的として使用できます。 [IDynamicMetaObjectProvider Interface](http://msdn.microsoft.com/Library/e887a72d-ebe2-4253-a7e8-3d8d05154647) を実装するオブジェクトがウォッチ ウィンドウで評価されると、[動的ビュー] ノードが追加されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ デバッガー式では、静的に型指定された変数を動的として使用できます。 実装するオブジェクトが、 [IDynamicMetaObjectProvider Interface](/dotnet/api/system.dynamic.idynamicmetaobjectprovider)動的ビュー ノードの追加 [ウォッチ] ウィンドウで評価されます。 [動的ビュー] ノードにはオブジェクトのメンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  動的オブジェクトでは、以下の機能はサポートされていません。  
   

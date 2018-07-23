@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 93d39aedc04cbdaebc35c892a8393ca394f44898
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: f1b2c37f551bf7b5e0a781b91420881c594ade68
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281067"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180465"
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
 
@@ -50,7 +50,7 @@ ms.locfileid: "36281067"
 
  **アドレス**
 
- サービス参照がサービスを検索する Web アドレスを更新します。 たとえば、開発中は、サービスを開発サーバーでホストされているし、し、後で、アドレスの変更を加えなくて、実稼働サーバーに移動する可能性があります。
+ サービス参照がサービスを検索する web アドレスを更新します。 たとえば、開発中は、サービスを開発サーバーでホストされているし、し、後で、アドレスの変更を加えなくて、実稼働サーバーに移動する可能性があります。
 
 > [!NOTE]
 > 場合、Address 要素は使用できません、**サービス参照の構成**からダイアログ ボックスが表示されます、**サービス参照の追加 ダイアログ ボックス**します。
@@ -96,7 +96,7 @@ ms.locfileid: "36281067"
 
  **参照先アセンブリの一覧**
 
- プロジェクトまたは Web サイトで参照されたアセンブリの一覧を含みます。 選択すると**参照されたアセンブリを指定した型を再利用**を選択または個々 のアセンブリをオフにすることができます。
+ プロジェクトまたは web サイトの参照先アセンブリの一覧が含まれています。 選択すると**参照されたアセンブリを指定した型を再利用**を選択または個々 のアセンブリをオフにすることができます。
 
  **Web 参照を追加します。**
 
