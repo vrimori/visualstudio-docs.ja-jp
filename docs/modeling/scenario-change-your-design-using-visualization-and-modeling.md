@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f60b2f1cdb609c5686f834ef147a2f121dc27b11
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 5e87ece3deb5d55f1e184974135eeddcec1ebbfc
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281337"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177332"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -55,11 +55,11 @@ ms.locfileid: "36281337"
 
 ## <a name="scenario-overview"></a>シナリオの概要
 
-このシナリオでは、Dinner Now と Lucerne Publishing という 2 つの架空の企業のソフトウェア開発ライフサイクルの事例について説明します。 Dinner Now は、シアトルで Web ベースの料理宅配サービスを提供しています。 顧客は、Dinner Now の Web サイトで料理を注文し、料金を支払うことができます。 注文は最寄りのレストランに送信され、そこから料理が配達されます。 ニューヨークを拠点とする Lucerne Publishing は、オフラインとオンラインでさまざまなビジネスを展開しています。 その 1 つに、顧客がレストランのレビューを投稿できる Web サイトがあります。
+このシナリオでは、Dinner Now と Lucerne Publishing という 2 つの架空の企業のソフトウェア開発ライフサイクルの事例について説明します。 Dinner Now は、シアトルで Web ベースの料理宅配サービスを提供しています。 Dinner Now web サイトに支払いし、料理を注文できます。 注文は最寄りのレストランに送信され、そこから料理が配達されます。 ニューヨークを拠点とする Lucerne Publishing は、オフラインとオンラインでさまざまなビジネスを展開しています。 たとえば、顧客がレストランのレビューを投稿できる web サイトが実行します。
 
 先ごろ Dinner Now を買収した Lucerne は、現在次のような変更を計画しています。
 
-- Dinner Now にレストランのレビューの機能を追加して両社の Web サイトを統合する。
+- Dinner Now にレストランのレビューの機能を追加することで、web サイトを統合します。
 
 - Dinner Now の支払いシステムを Lucerne のシステムに置き換える。
 

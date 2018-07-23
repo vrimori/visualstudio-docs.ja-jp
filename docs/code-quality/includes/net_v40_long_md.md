@@ -18,6 +18,6 @@ ms.sourcegitcommit: 39dd38ccc24de96818c065e8af2ef8382e9c94ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/21/2018
-ms.locfileid: "39191558"
+ms.locfileid: "39191696"
 ---
 .NET Framework 4

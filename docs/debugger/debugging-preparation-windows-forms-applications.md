@@ -1,5 +1,5 @@
 ---
-title: 'デバッグの準備: Windows フォーム アプリケーションの |Microsoft ドキュメント'
+title: 'デバッグの準備: Windows フォーム アプリケーション |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,19 +21,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bde2b6d2885a83057a0211f6da4f9e4ff65ef46f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5a34111ed357e38693b3cdb74c490b07cc8386b7
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31471675"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178853"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>デバッグの準備 : Windows フォーム アプリケーション
-Windows フォーム プロジェクト テンプレートは、Windows フォーム アプリケーションを作成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、この種類のアプリケーションを簡単にデバッグできます。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)です。  
+Windows フォーム プロジェクト テンプレートは、Windows フォーム アプリケーションを作成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、この種類のアプリケーションを簡単にデバッグできます。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)します。  
   
  プロジェクト テンプレートを使用して Windows フォーム プロジェクトを作成する場合、デバッグ構成とリリース構成に必要な設定は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に作成されます。 この設定は必要に応じて変更できます。 これらの設定を変更することができます、 **\<プロジェクト名 > プロパティ ページ** ダイアログ ボックス (**My Project** Visual Basic で)。  
   
- 詳細については、次を参照してください。[推奨プロパティ設定](../debugger/managed-debugging-recommended-property-settings.md)です。  
+ 詳細については、次を参照してください。[推奨プロパティ設定](../debugger/managed-debugging-recommended-property-settings.md)します。  
   
  推奨される追加のプロパティ設定を次の表に示します。  
   
@@ -41,9 +41,9 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
   
 |**プロパティ名**|**設定**|  
 |-----------------------|-----------------|  
-|**開始アクション**|-設定**スタート プロジェクト**時間のほとんどです。 設定**外部プログラムの開始**を別の実行可能ファイルを開始する場合とデバッグを開始する (通常は Dll のデバッグ) します。|  
+|**開始アクション**|-設定**スタート プロジェクト、** ほとんどの時間。 設定**外部プログラムの開始**を別の実行可能ファイルを開始する場合とデバッグを開始する (通常は Dll のデバッグ)。|  
   
- Windows フォーム アプリケーションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内から、または既に実行中のアプリケーションにアタッチすることによってデバッグできます。 アタッチの詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)です。  
+ Windows フォーム アプリケーションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内から、または既に実行中のアプリケーションにアタッチすることによってデバッグできます。 インポートに関する詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)します。  
   
 ### <a name="to-debug-a-c-f-or-visual-basic-windows-forms-application"></a>C#、F#、または Visual Basic の Windows フォーム アプリケーションをデバッグするには  
   
@@ -61,12 +61,13 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
   
      詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](/dotnet/framework/winforms/creating-event-handlers-in-windows-forms)」を参照してください。  
   
-3.  **デバッグ** メニューのをクリックして**開始**です。  
+3.  **デバッグ** メニューのをクリックして**開始**します。  
   
-4.  説明した手法を使用してデバッグ[デバッガーの基礎](../debugger/debugger-basics.md)です。  
+4.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [マネージ コードをデバッグする](../debugger/debugging-managed-code.md)   
+ 
+  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [方法: セット デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)   
  [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   

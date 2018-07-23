@@ -39,7 +39,7 @@
       href: install/repair-visual-studio.md
     - name: Visual Studio のアンインストール
       href: install/uninstall-visual-studio.md
-    - name: Visual Studio Administrator Guide
+    - name: Visual Studio 管理者ガイド
       href: install/visual-studio-administrator-guide.md
       items:
         - name: コマンド ラインを使用する
@@ -132,7 +132,7 @@
     - name: Visual Studio での R...
       href: rtvs/getting-started-with-r.md
     - name: Visual Studio での Node.js
-      href: nodejs/tutorial-nodejs.md
+      href: javascript/tutorial-nodejs.md
     - name: 'Visual Studio での C#'
       href: ide/tutorial-csharp-aspnet-core.md
     - name: Visual Studio での Visual Basic
@@ -153,8 +153,6 @@
               href: ide/creating-solutions-and-projects.md
             - name: プロジェクトの移植、移行、およびアップグレード
               href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-            - name: プロジェクト アイテムの追加と削除
-              href: ide/adding-and-removing-project-items.md
             - name: プロジェクトおよびソリューションのプロパティの管理
               href: ide/managing-project-and-solution-properties.md
             - name: プロジェクト内の参照の管理
@@ -344,9 +342,6 @@
               items:
                 - name: Visual Basic の IntelliSense
                   href: ide/visual-basic-specific-intellisense.md
-                  items:
-                    - name: Visual Basic でのフィルター処理されたコンプリート リスト
-                      href: ide/filtered-completion-lists-in-visual-basic.md
                 - name: 'C# IntelliSense'
                   href: ide/visual-csharp-intellisense.md
                 - name: JavaScript IntelliSense
@@ -475,6 +470,11 @@
           href: ide/find-and-fix-code-errors.md
         - name: クロス プラットフォームのモバイル開発
           href: cross-platform/cross-platform-mobile-development-in-visual-studio.md
+        - name: 'F# の開発'
+          href: ide/fsharp-visual-studio.md
+          items:
+            - name: 以前の .NET バージョンをターゲットにする
+              href: ide/fsharp-target-older-dotnet-versions.md
         - name: Office および SharePoint の開発
           href: vsto/office-and-sharepoint-development-in-visual-studio.md
         - name: XML ファイルと XSLT ファイルの操作
@@ -605,15 +605,15 @@
         - name: 'チュートリアル: 複数のコンピューターを使用するビルド環境の作成'
           href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
     - name: デバッグ...
-      href: debugger/debugger-feature-tour.md
+      href: debugger/index.md
     - name: テスト...
       href: test/improve-code-quality.md
     - name: パフォーマンスの計測...
-      href: profiling/profiling-feature-tour.md
+      href: profiling/index.md
     - name: コード品質の分析...
-      href: code-quality/analyzing-application-quality-by-using-code-analysis-tools.md
+      href: code-quality/index.md
     - name: 配置...
-      href: deployment/deploying-applications-services-and-components.md
+      href: deployment/index.md
     - name: Visual Studio を拡張する...
       href: extensibility/visual-studio-sdk.md
     - name: アーキテクチャの分析とモデル化...
@@ -686,8 +686,6 @@
       items:
         - name: テンプレート パラメーター
           href: ide/template-parameters.md
-        - name: テンプレート スキーマ参照 (拡張性)
-          href: extensibility/visual-studio-template-schema-reference.md?context=visualstudio/default
     - name: 一般的なユーザー インターフェイス要素
       items:
         - name: 呼び出し階層
@@ -801,7 +799,7 @@
           items:
             - name: '[アプリケーション] ページ (プロジェクト デザイナー) (UWP)'
               href: ide/reference/application-page-project-designer-uwp.md
-            - name: 'Application Page, Project Designer (Visual Basic)'
+            - name: '[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)'
               href: ide/reference/application-page-project-designer-visual-basic.md
               items:
                 - name: '[アセンブリ情報] ダイアログ ボックス'
@@ -854,7 +852,7 @@
               href: ide/reference/signing-page-project-designer.md
         - name: プロパティ ページ、JavaScript
           href: ide/reference/property-pages-javascript.md
-        - name: '[プロパティ] ウィンドウ'
+        - name: プロパティ ウィンドウ
           href: ide/reference/properties-window.md
         - name: ツールボックス
           href: ide/reference/toolbox.md
@@ -915,7 +913,7 @@
     - name: Visual Studio コマンド
       href: ide/reference/visual-studio-commands.md
       items:
-        - name: Visual Studio Command Aliases
+        - name: Visual Studio コマンドの定義済みのエイリアス
           href: ide/reference/visual-studio-command-aliases.md
         - name: AddExistingSolutionItem コマンド
           href: ide/reference/add-existing-item-command.md
@@ -957,8 +955,6 @@
           href: ide/reference/open-file-command.md
         - name: OpenProject コマンド
           href: ide/reference/open-project-command.md
-        - name: OpenSolution コマンド
-          href: ide/reference/open-solution-command.md
         - name: Print コマンド
           href: ide/reference/print-command.md
         - name: QuickWatch コマンド

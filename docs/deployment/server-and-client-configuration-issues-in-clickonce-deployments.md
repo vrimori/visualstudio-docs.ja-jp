@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb3d1aa14e404cbc4e8efdc425a4c3099f7a42f5
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 65929ec5b58e0629b3f52e31299f670543b3cd08
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078853"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154386"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でサーバーとクライアントの構成に関する問題
 Windows Server で、インターネット インフォメーション サービス (IIS) を使用する、展開には、Windows で認識されない種類のファイルが含まれている場合は、Microsoft Word ファイルなど、そのファイルを送信する IIS は拒否し、配置は失敗します。  
@@ -93,7 +93,7 @@ Windows Server で、インターネット インフォメーション サービ
 ## <a name="clickonce-and-mapped-drives"></a>ClickOnce とマップされたドライブ  
  Visual Studio を使用して ClickOnce アプリケーションを発行する場合は、インストール場所として、マップされたドライブを指定できません。 ただし、マニフェスト ジェネレーターおよびエディター (Mage.exe および MageUI.exe) を使用してマップされたドライブからインストールする ClickOnce アプリケーションを変更できます。 詳細については、次を参照してください。 [Mage.exe (マニフェスト生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)と[MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)します。  
   
-## <a name="ftp-protocol-nt-supported-for-installing-applications"></a>FTP プロトコルの nt がアプリケーションのインストールのサポート  
+## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP プロトコルのアプリケーションをインストールするためにサポートされていません  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] HTTP 1.1 の Web サーバーまたはファイル サーバーからアプリケーションのインストールをサポートします。 アプリケーションをインストールするのには、FTP、ファイル転送プロトコルはサポートされていません。 アプリケーションのみを公開するのに FTP を使用することができます。 次の表は、これらの違いをまとめたものです。  
   
 |URL の種類|説明|  

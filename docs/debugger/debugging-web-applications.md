@@ -1,5 +1,5 @@
 ---
-title: Web アプリケーションのデバッグ |Microsoft ドキュメント
+title: Web アプリケーションのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8638bccca59bdcf497feeeef2b311cc22e5d79c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0e649e5d795df537e48afe3dad738c73ee5b7b51
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472398"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178918"
 ---
 # <a name="debugging-web-applications"></a>Web アプリケーションのデバッグ
 ここでは、いくつかの種類の Web アプリケーションのデバッグ方法について説明します。  
@@ -41,6 +41,6 @@ ms.locfileid: "31472398"
 ## <a name="see-also"></a>関連項目  
  [Web アプリケーションとスクリプトのデバッグ](../debugger/debugging-web-applications-and-script.md)   
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)   
+ [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)   
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)

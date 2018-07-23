@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 01028cd0c2a838335cdaab2705bf5c9bbcd73b44
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: e499aea3793e5c496930fe255133d51361e6f394
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34548412"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178349"
 ---
 # <a name="how-to-start-debugging-xslt"></a>方法: XSLT のデバッグを開始
 
@@ -38,7 +38,7 @@ XSLT デバッガーを使用すると、XSLT スタイル シートや XSLT ア
 
 1. 選択**XSL のデバッグ**から、 **XML**メニュー。
 
-## <a name="xslt-from-other-languages"></a>その他の言語の XSLT
+## <a name="xslt-from-other-languages"></a>その他の言語から XSLT
 
 アプリケーションのデバッグ中に XSLT にステップ インすることもできます。 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> 呼び出しで F11 キーを押すと、デバッガーは XSLT コードにステップ インできます。
 
@@ -94,4 +94,4 @@ namespace ConsoleApplication
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: XSLT スタイル シートをデバッグします。](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)
-- [デバッガーの基本事項](../debugger/debugger-basics.md)
+- [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

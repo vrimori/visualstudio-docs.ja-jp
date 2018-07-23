@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e21e749cd676ec137fa91e6466e4b6b665a990
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: ff3c50274c9860033d247df14c17d5fe745d1893
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056298"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178427"
 ---
 # <a name="about-the-registers-window-in-visual-studio"></a>Visual Studio で [レジスタ] ウィンドウについて
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
@@ -52,4 +52,4 @@ ms.locfileid: "37056298"
   
 ## <a name="see-also"></a>関連項目  
  [方法: [レジスタ] ウィンドウの使用](../debugger/how-to-use-the-registers-window.md)   
- [デバッガーの基本事項](../debugger/debugger-basics.md)
+ [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

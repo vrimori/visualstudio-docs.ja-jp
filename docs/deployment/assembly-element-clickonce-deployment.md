@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b12f1a5d50e2636d3c8478e6b6a9efe50384a5
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: c9d72eafb03f22a01d22894bb887085648c324e3
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815666"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080634"
 ---
-# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly&gt;要素 (ClickOnce 配置)
-配置マニフェストの最上位要素です。  
+# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;アセンブリ&gt;要素 (ClickOnce 配置)
+配置マニフェストの最上位要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,16 +38,16 @@ ms.locfileid: "34815666"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `assembly`要素はルート要素がありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は、次の名前空間である必要があります: `urn:schemas-microsoft-com:asm.v1`、 `urn:schemas-microsoft-com:asm.v2`、および`http://www.w3.org/2000/09/xmldsig#`です。 アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもする必要があります。  
+ `assembly`要素はルート要素でありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は次の名前空間内に存在する必要があります: `urn:schemas-microsoft-com:asm.v1`、 `urn:schemas-microsoft-com:asm.v2`、および`http://www.w3.org/2000/09/xmldsig#`します。 アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもあります。  
   
- `assembly`要素には、次の属性です。  
+ `assembly`要素には、次の属性。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`manifestVersion`|必須。 この属性に設定する必要があります`1.0`です。|  
+|`manifestVersion`|必須。 この属性に設定する必要があります`1.0`します。|  
   
 ## <a name="example"></a>例  
- 次のコード例を示しています、`assembly`を使用してデプロイされたアプリケーションの配置マニフェスト内の要素[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]です。 このコード例に示されている例の一部である、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピックです。  
+ 次のコード例を示しています、`assembly`要素を使用してデプロイされたアプリケーションの配置マニフェストで[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]します。 このコード例が示されている例の一部、 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)トピック。  
   
 ```xml  
 <asmv1:assembly   
@@ -66,4 +66,4 @@ ms.locfileid: "34815666"
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [\<assembly> 要素](../deployment/assembly-element-clickonce-application.md)
+ [\<アセンブリ > 要素](../deployment/assembly-element-clickonce-application.md)
