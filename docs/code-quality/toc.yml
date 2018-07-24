@@ -1,6 +1,7 @@
 - name: コード分析のドキュメント
   href: index.md
 - name: 概要
+  expanded: true
   items:
     - name: マネージド コードのコード分析
       href: code-analysis-for-managed-code-overview.md
@@ -80,10 +81,12 @@
     - name: 規則セット
       href: using-rule-sets-to-group-code-analysis-rules.md
       items:
+        - name: アナライザー パッケージの規則セット
+          href: analyzer-rule-sets.md
         - name: マネージド コードの規則セット
           href: how-to-configure-code-analysis-for-a-managed-code-project.md
           items:
-            - name: ASP.NET Web アプリケーション用にコード分析を構成する
+            - name: ASP.NET Web アプリケーション用のコード分析を構成する
               href: how-to-configure-code-analysis-for-an-aspnet-web-application.md
         - name: C++ コードの規則セット
           href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
@@ -126,7 +129,7 @@
         - name: マネージド コードの "グローバリゼーション規則" 規則セット
           href: globalization-rules-rule-set-for-managed-code.md
         - name: マネージド コードの "マネージ最小規則" 規則セット
-          href: managed-minimun-rules-rule-set-for-managed-code.md
+          href: managed-minimum-rules-rule-set-for-managed-code.md
         - name: マネージド コードの "マネージ推奨規則" 規則セット
           href: managed-recommended-rules-rule-set-for-managed-code.md
         - name: '"混合最小規則" 規則セット'

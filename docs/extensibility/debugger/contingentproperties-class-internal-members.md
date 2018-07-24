@@ -1,5 +1,5 @@
 ---
-title: ContingentProperties クラスの内部メンバー |Microsoft ドキュメント
+title: ContingentProperties クラスの内部メンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b44bec34394df6f976416a827d7eb5d67cb99f6a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8e3497b31e663967417544d8e87d40d860c2e4a8
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097849"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204415"
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties クラスの内部メンバー
 追加のプロパティを含む、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (mscorlib.dll 内)  
   
- .NET Framework からこれらの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこれらの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .class auto ansi nested assembly beforefieldinit ContingentProperties  
        extends System.Object  
 ```  
@@ -41,11 +41,11 @@ ms.locfileid: "31097849"
   
 ### <a name="fields"></a>フィールド  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[m_children](../../extensibility/debugger/m-children-field.md)|このタスクに登録されている子タスクの一覧。|  
+|[m_children](../../extensibility/debugger/m-children-field.md)|このタスクで登録されている子タスクの一覧。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  .NET Framework は、必要な場合にのみ、このクラスのフィールドを初期化します。  
   
 ## <a name="see-also"></a>関連項目  

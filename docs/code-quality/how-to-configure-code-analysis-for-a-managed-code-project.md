@@ -15,16 +15,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c79791a56bdf1ea17e0dcf13cbfb0bdc866d67b9
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 72d9986a01482972154e228923073782a77a93d5
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179561"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204233"
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>方法: マネージド コード プロジェクトのコード分析を構成する
 
-Visual Studio では、コード分析の一覧から選択できる*ルール セット*マネージ コード プロジェクトに適用します。 既定のルール セットは*Microsoft 最小推奨規則*します。 ソリューション内の 1 つのプロジェクトまたはすべてのプロジェクトに別の規則セットを適用することもできます。
+Visual Studio でコード分析の一覧から選択することができます[ルール セット](../code-quality/rule-set-reference.md)) マネージ コード プロジェクトに適用します。 既定で、 **Microsoft 最小推奨規則**規則セットを選択するが必要な場合は、設定、別の規則を適用できます。 規則セットは、ソリューション内の 1 つまたは複数のプロジェクトに適用できます。
 
 > [!TIP]
 > ASP.NET web アプリケーションのルール セットを構成する方法については、次を参照してください。[方法: ASP.NET のコード分析を構成する web アプリケーション](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)します。
@@ -76,4 +76,5 @@ Visual Studio では、コード分析の一覧から選択できる*ルール �
 
 ## <a name="see-also"></a>関連項目
 
+- [コード分析規則セットの参照](../code-quality/rule-set-reference.md)
 - [方法: ASP.NET web アプリケーションのコード分析を構成します。](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)

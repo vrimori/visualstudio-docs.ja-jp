@@ -1,5 +1,5 @@
 ---
-title: デバッガーのコンポーネント |Microsoft ドキュメント
+title: デバッガーのコンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,66 +15,66 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b465772f8d3ddba173ecb406845f978765f63cdc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: efdba3366168a6e60fa88bd23e36f6ef487e979a
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108350"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203600"
 ---
-# <a name="debugger-components"></a>デバッガー コンポーネント
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーが VSPackage として実装され、全体のデバッグ セッションを管理します。 デバッグ セッションには、次の要素が構成されています。  
+# <a name="debugger-components"></a>デバッガーのコンポーネント
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーは、VSPackage として実装され、全体のデバッグ セッションを管理します。 デバッグ セッションには、次の要素が構成されています。  
   
--   **デバッグ パッケージ:** 、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーの新機能は、デバッグ中に関係なく同じユーザー インターフェイスを提供します。  
+-   **パッケージのデバッグ:** 、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]デバッガーがデバッグ中に関係なく同じユーザー インターフェイスを提供します。  
   
--   **セッション デバッグ マネージャー (SDM):** に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+-   **セッション デバッグ マネージャー (SDM):** に一貫性のあるプログラム インターフェイスを提供、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]さまざまなデバッグ エンジンの管理用のデバッガーです。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
--   **プロセスのデバッグ マネージャー (PDM):** のすべての実行中インスタンスの管理[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、またはデバッグ中のすべてのプログラムの一覧です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+-   **プロセス デバッグ マネージャー (PDM):** 管理、実行中のすべてのインスタンスの[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、またはデバッグ中のすべてのプログラムの一覧。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
--   **デバッグ エンジン (DE):** をデバッグするプログラムの監視のリアルタイム分析を提供するには、式エバリュエーターとシンボルのプロバイダーと対話すると、SDM と、PDM を実行中のプログラムの状態を通信して、プログラムのメモリと変数の状態です。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の実行時間をサポートします。  
+-   **デバッグ エンジン (DE):** のデバッグ中のプログラムを監視、SDM を PDM は、実行中のプログラムの状態との相互作用のリアルタイム分析を提供するには、式エバリュエーターとシンボル プロバイダー、プログラムのメモリと変数の状態。 によって実装されます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](の対応言語) と、独自のランタイムをサポートするサード パーティ ベンダー。 
   
--   **式エバリュエーター (EE):** 変数と、プログラムが特定の時点で停止された時に、ユーザーが指定の式を動的に評価するためのサポートを提供します。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](のサポート言語) およびサード パーティ ベンダーが独自の言語をサポートします。  
+-   **式エバリュエーター (EE):** 変数と、プログラムが特定の時点で停止したときに、ユーザーが指定した式を動的に評価するためのサポートを提供します。 によって実装されます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](の対応言語) とは自分の言語をサポートするサード パーティ ベンダー。  
   
--   **シンボル プロバイダー (SP):** とも呼ばれるシンボル ハンドラーでは、マップ、プログラムのデバッグ シンボル、プログラムの実行中のインスタンスに (ソース コード レベルのデバッグ、式の評価) など意味のある情報を指定することができるようにします。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](共通言語ランタイム [CLR] のシンボルと、プログラム データベース [PDB] シンボル ファイルの形式) と、デバッグ情報を格納するが自分独自のメソッドが含まれているサード パーティ ベンダーによってです。  
+-   **シンボル プロバイダー (SP):** とも呼ばれるシンボル ハンドラーでは、プログラムのデバッグ シンボルにマップ、プログラムの実行中のインスタンス (ソース コード レベルのデバッグ、式の評価) など意味のある情報を提供できるようにします。 によって実装されている[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)](共通言語ランタイム [CLR] のシンボルと [PDB] プログラム データベース シンボル ファイルの形式)、デバッグ情報を保存する独自の専用メソッドを持つサード パーティ ベンダー。  
   
  次の図は、Visual Studio デバッガーのこれらの要素間の関係を示します。  
   
  ![コンポーネント デバッグの概要](../../extensibility/debugger/media/dbugcompovrview.gif "DBugCompOvrview")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [パッケージのデバッグ](../../extensibility/debugger/debug-package.md)  
- 実行するデバッグ パッケージについて説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルし、すべての UI を処理します。  
+ [パッケージをデバッグします。](../../extensibility/debugger/debug-package.md)  
+ 実行されるデバッグ パッケージについて説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]シェルし、すべての UI を処理します。  
   
  [プロセス デバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)  
- デバッグ可能なプロセスの管理者であると、PDM の機能の概要を示します。  
+ デバッグ可能なプロセス マネージャーであると、PDM の機能の概要を示します。  
   
  [セッション デバッグ マネージャー](../../extensibility/debugger/session-debug-manager.md)  
- IDE に、デバッグ セッションの統一されたビューを提供すると、SDM を定義します。 SDM デを管理します。  
+ IDE、デバッグ セッションの統合ビューを提供すると、SDM を定義します。 SDM は、DE を管理します。  
   
  [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)  
- デが提供するデバッグ サービスをについて説明します。  
+ デバッグ、DE を提供するサービスについて説明します。  
   
  [操作モード](../../extensibility/debugger/operational-modes.md)  
  IDE の操作に使用できる 3 つのモードの概要を説明します。 デザイン モード、実行モードと中断モード。 移行方法についても説明します。  
   
  [式エバリュエーター](../../extensibility/debugger/expression-evaluator.md)  
- 実行時に、EE の目的を説明します。  
+ 実行時に、EE の目的について説明します。  
   
  [シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)  
- 方法については、実装にシンボル プロバイダー評価変数および式について説明します。  
+ 方法については、実装、シンボル プロバイダー評価変数よぶ式について説明します。  
   
  [型のビジュアライザーとカスタム ビューアー](../../extensibility/debugger/type-visualizer-and-custom-viewer.md)  
- 新機能について説明します型のビジュアライザーとカスタム ビューアーがあり、どのような役割の両方をサポートする、式エバリュエーターを再生します。  
+ について説明します型のビジュアライザーおよびカスタム ビューアーし、どのような役割の両方をサポートしている、式エバリュエーターを再生します。  
   
 ## <a name="related-sections"></a>関連項目  
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)  
- デバッグ アーキテクチャ、主要な概念をについて説明します。  
+ デバッグ アーキテクチャの主要な概念をについて説明します。  
   
  [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)  
- デの動作方法に同時にコード、ドキュメント、および式の評価のコンテキスト内でについて説明します。 3 つのコンテキスト、場所、位置、またはそれに関連する評価ごとに説明します。  
+ コード、ドキュメント、および式の評価のコンテキスト内で、DE がどの同時に動作について説明します。 3 つのコンテキスト、場所、位置、またはそれに関連する評価ごとに説明します。  
   
- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)  
- プログラムを起動して、式を評価するなど、さまざまなデバッグ タスクへのリンクが含まれています。  
+ [タスクをデバッグします。](../../extensibility/debugger/debugging-tasks.md)  
+ プログラムを起動して、式の評価などのさまざまなデバッグ タスクへのリンクが含まれています。  
   
 ## <a name="see-also"></a>関連項目  
- [はじめに](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)
+ [開始するには](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)
