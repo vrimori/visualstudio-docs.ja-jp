@@ -2,7 +2,7 @@
 title: ネイティブ オブジェクトのカスタム ビューの作成
 description: Natvis フレームワークを使用して、Visual Studio がデバッガーでネイティブ型を表示する方法をカスタマイズするには
 ms.custom: ''
-ms.date: 06/27/2017
+ms.date: 067/20/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49cb94e11f4ce5c472ef4fa445037cfcd2861fd4
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: b03e7809cb0958760e1a4fcc7b4bb5b4260a7429
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433575"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204246"
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでネイティブ オブジェクトのカスタム ビューを作成します。
 Visual Studio の Natvis フレームワークでは、Visual Studio デバッガー変数ウィンドウでのネイティブ型の表示方法をカスタマイズすることができます (たとえば、**ウォッチ**ウィンドウで、 **[ローカル]** ウィンドウで、および**データヒント**します。
@@ -631,7 +631,7 @@ Visual Studio の Natvis フレームワークでは、Visual Studio デバッ�
 </Type>  
 ```  
   
- メモリ内のビットマップの表示に使用するイメージ ウォッチ拡張機能の UIVisualizer の例については、「 [ImageWatch](https://visualstudiogallery.msdn.microsoft.com/e682d542-7ef3-402c-b857-bbfba714f78d)」をご覧ください。  
+ メモリ内のビットマップを表示するために使用するイメージ ウォッチ拡張機能の UIVisualizer の例を確認できます: [ImageWatch](https://marketplace.visualstudio.com/items?itemName=VisualCPPTeam.ImageWatch2017)  
   
 ### <a name="customvisualizer-element"></a>CustomVisualizer 要素  
  `CustomVisualizer` は、Visual Studio で実行されるコードの中で、視覚エフェクトを制御するために書くことができる VSIX 拡張機能を指定する機能拡張ポイントです。 VSIX 拡張機能の記述方法について詳しくは、「 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)」をご覧ください。 どのような natvis がサポートしているか、サポートされていませんについての制約から解放されますが、XML natvis 定義を記述するよりもはるかに多くの作業は、カスタム ビジュアライザーを記述します。 カスタム ビジュアライザーを使用すると、デバッガーの拡張性 API の全セットにアクセスできます。これらの API は、デバッグ対象のプロセスの照会および変更、または Visual Studio の他の部分との通信に使用できます。  

@@ -1,5 +1,5 @@
 ---
-title: コンテキストのコード |Microsoft ドキュメント
+title: コード コンテキスト |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,25 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a84596246ae930cdffc0265f2f2e09652661819
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31b1f3d91fd44308c1737f8066c13af730454abe
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097836"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203346"
 ---
 # <a name="code-context"></a>コード コンテキスト
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 、デバッグ、**コード コンテキスト**:  
   
--   認識されているため、デバッグ エンジン (DE) は、コード内の位置の抽象化を提供します。 ほとんどのランタイム アーキテクチャ今日では、コードのコンテキストできますと見なすプログラムの命令ストリーム内のアドレス。 従来とは異なる言語では、ここで、命令コードを表すことができましていない、他のいくつかの方法でコードのコンテキストを表すことができます。  
+-   デバッグ エンジン (DE) に既知としては、コード内の位置の抽象化を提供します。 ほとんどのランタイム アーキテクチャの今日では、コードのコンテキストできます見なすことがプログラムの命令ストリーム内のアドレス。 従来とは異なる言語では、コードは、命令表現いない可能性があります、その他のいくつかの方法でコードのコンテキストを表すことができます。  
   
--   デバッグ中のプログラムの実行ストリーム内の現在位置をについて説明します。  
+-   デバッグ中のプログラムの実行のストリームの現在の位置をについて説明します。  
   
--   ブレークポイントの位置にプログラムが停止時にのみ存在します。  
+-   ブレークポイントにプログラムが停止時にのみ存在します。  
   
--   関連付けられているドキュメントのコンテキストがあります。  
+-   関連付けられているドキュメント コンテキストがあります。  
   
--   によって実装される、 [IDebugCodeContext2](../../extensibility/debugger/reference/idebugcodecontext2.md)インターフェイスです。  
+-   によって実装される、 [IDebugCodeContext2](../../extensibility/debugger/reference/idebugcodecontext2.md)インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメントのコンテキスト](../../extensibility/debugger/document-context.md)   

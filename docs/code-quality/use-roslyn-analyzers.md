@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 81a26c4aa8ebbf436ba58ee40ceb02ff8f92b0aa
-ms.sourcegitcommit: c87b0d9f65dc7ebe95071f66ea8da4d4bc52d360
+ms.openlocfilehash: 6668b3727e5df17c3d436e37f2edd78a67a79eba
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993916"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204155"
 ---
 # <a name="configure-and-use-roslyn-analyzer-rules"></a>構成し、Roslyn アナライザーの規則を使用
 
@@ -79,7 +79,7 @@ A[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-ru
 
 取得したルールの重大度を変更する**ソリューション エクスプ ローラー**、内、または、  *\<projectname > .ruleset* でルールの重大度を変更した後、ソリューションに追加されるファイル**ソリューション エクスプ ローラー**します。
 
-![ソリューション エクスプ ローラーでルール セット ファイル](media/ruleset-in-solution-explorer.png)
+![ソリューション エクスプ ローラーで、規則セット ファイル](media/ruleset-in-solution-explorer.png)
 
 ### <a name="to-set-rule-severity-from-solution-explorer"></a>ソリューション エクスプ ローラーから規則の重要度を設定するには
 
@@ -99,7 +99,7 @@ A[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-ru
 
 1. **アクション**列が、ドロップダウン リストを開く値を選択し、一覧から目的の重大度を選択します。
 
-   ![ルールセット ファイル エディターで開く](media/ruleset-file-in-editor.png)
+   ![規則セット ファイルがエディターで開く](media/ruleset-file-in-editor.png)
 
 ## <a name="suppress-violations"></a>違反を抑制します。
 
