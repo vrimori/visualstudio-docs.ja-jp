@@ -1,5 +1,5 @@
 ---
-title: m_parent フィールド |Microsoft ドキュメント
+title: m_parent フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,29 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c50bb06a7aa87e06768e55849ca1e7c2bd4d1c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f2246a846324710cee0cb49913c1debd3bad0436
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099195"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231130"
 ---
 # <a name="mparent-field"></a>m_parent フィールド
-バッキング フィールド、 <xref:System.Threading.Tasks.Task?displayProperty=fullName> `Parent`プロパティです。  
+バッキング フィールドは、 <xref:System.Threading.Tasks.Task?displayProperty=fullName> `Parent`プロパティ。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .field private initonly class System.Threading.Tasks.Task m_parent  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

@@ -1,5 +1,5 @@
 ---
-title: 式エバリュエーターを実装する |Microsoft ドキュメント
+title: 式エバリュエーターの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed1df74c187b3f0a93e1a1ec84e8803bc164d223
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8bdf4f290c3312be234f491debe95f532c85802b
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103345"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232508"
 ---
-# <a name="implementing-an-expression-evaluator"></a>式エバリュエーターを実装します。
+# <a name="implement-an-expression-evaluator"></a>式エバリュエーターを実装します。
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- デバッグ エンジン (DE)、シンボル プロバイダー (SP)、バインダー オブジェクト、および、式エバリュエーター自体 (EE) の間の複雑な相互作用は、式を評価します。 これら 4 つのコンポーネントは、1 つのコンポーネントによって実装され、他で使用されるインターフェイスによって接続されます。  
+ デバッグ エンジン (DE)、シンボル プロバイダー (SP)、バインダー オブジェクト、および、式エバリュエーター (EE) の間で複雑な相互作用は、式を評価します。 これら 4 つのコンポーネントは、1 つのコンポーネントによって実装され、別で使用されるインターフェイスで接続されます。  
   
- EE は、文字列の形式で DE から式を取得および解析または評価します。 EE は、DE で使用される、次のインターフェイスを実装します。  
+ EE は、文字列の形式で DE から式を取得および解析または評価します。 EE には、次のインターフェイスは、DE によって使用されますが実行されます。  
   
 -   [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
   
 -   [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
   
- EE は、シンボルとオブジェクトの値を取得、DE、によって提供される、バインダー オブジェクトを呼び出します。 EE は、デを実装する次のインターフェイスを使用します。  
+ EE は、シンボルとオブジェクトの値を取得する、DE、によって提供されるバインダー オブジェクトを呼び出します。 EE、DE によって実装される次のインターフェイスを使用します。  
   
 -   [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "31103345"
   
 -   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
- EE 実装[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)です。 `IDebugProperty2` ローカル変数、プリミティブまたは Visual Studio は、適切な情報を表示する、オブジェクトなど、式の評価の結果を記述するためのメカニズムを提供、**ローカル**、 **ウォッチ**、または**イミディ エイト**ウィンドウです。  
+ EE 実行[IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)します。 `IDebugProperty2` ローカル変数、プリミティブ型、型の適切な情報が表示されますが、Visual Studio のオブジェクトなど、式の評価の結果を記述するためのメカニズムを提供、**ローカル**、**ウォッチ**、または**イミディ エイト**ウィンドウ。  
   
- SP は、情報のメッセージが表示されたら、DE、EE に付与されます。 SP では、アドレスと、次のインターフェイスとその派生物などのフィールドを表すインターフェイスを実装します。  
+ SP は、情報の入力を求められたらときに、DE、EE に付与されます。 SP は、アドレスと、次のインターフェイスおよびその派生物などのフィールドを記述するインターフェイスを実行します。  
   
 -   [IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "31103345"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [式エバリュエーターの実装方法](../../extensibility/debugger/expression-evaluator-implementation-strategy.md)  
- 式エバリュエーター (EE) の実装方法の 3 段階のプロセスを定義します。  
+ 式エバリュエーター (EE) の実装方法の 3 つの手順を定義します。  
   
 ## <a name="see-also"></a>関連項目  
- [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+ [CLR の式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

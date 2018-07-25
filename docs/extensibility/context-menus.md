@@ -1,5 +1,5 @@
 ---
-title: コンテキスト メニュー |Microsoft ドキュメント
+title: コンテキスト メニュー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa957e949127663eca7d4e619919edcc07c7a29b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: afd67578bee63408b50e402fb0bd8b29be3fc6eb
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108561"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232534"
 ---
 # <a name="context-menus"></a>コンテキスト メニュー
-コンテキスト メニューは、ユーザーがクライアント領域のアクティブな領域で右クリックしたときに表示し、マウスの右ボタンが離されたときにクリアします。  
+コンテキスト メニューでは、クライアント領域のアクティブなリージョンでユーザーを右クリックしたときに表示され、マウスの右ボタンが離されたときをオフにします。  
   
 ## <a name="editor-context-menus"></a>エディター コンテキスト メニュー  
- インターセプトして`ECMD_SHOWCONTEXTMENU`、言語サービスは、エディターに表示されるコンテキスト メニューを制御できます。 表示するには、独自のコンテキスト メニューに渡されるときにこのコマンドを処理して<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>を呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>です。 このコマンドを処理しない場合は、エディターの提供される標準のコンテキスト メニューが表示されます。 マーカーあたりごとに、コンテキスト メニューの内容を制御することもできます。 詳細については、次を参照してください。[レガシ API でテキスト マーカーを使用して](../extensibility/using-text-markers-with-the-legacy-api.md)と[レガシ言語サービス コマンドの傍受](../extensibility/internals/intercepting-legacy-language-service-commands.md)です。  
+ インターセプトすることで`ECMD_SHOWCONTEXTMENU`、言語サービスは、エディターに表示されるコンテキスト メニューを制御できます。 独自のコンテキスト メニューを表示するには、次のコマンド処理に渡されると、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>します。 このコマンドを処理しない場合は、エディターの提供される標準のコンテキスト メニューが表示されます。 マーカーあたりごとに、コンテキスト メニューの内容を制御することもできます。 詳細については、次を参照してください。[テキスト マーカーを使用して、従来の API を使用した](../extensibility/using-text-markers-with-the-legacy-api.md)と[従来の言語サービスのコマンドをインターセプト](../extensibility/internals/intercepting-legacy-language-service-commands.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [レガシ言語サービスの開発](../extensibility/internals/developing-a-legacy-language-service.md)   
- [メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)
+ [従来の言語サービスを開発します。](../extensibility/internals/developing-a-legacy-language-service.md)   
+ [メニューとコマンドを拡張します。](../extensibility/extending-menus-and-commands.md)

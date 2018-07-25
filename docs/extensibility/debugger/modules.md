@@ -1,5 +1,5 @@
 ---
-title: モジュール |Microsoft ドキュメント
+title: モジュール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f587e015263336436588d14edeeb5c6935872950
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8750c1f6676966be8564fbf4a175a66fa180a401
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098145"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233166"
 ---
 # <a name="modules"></a>モジュール
-デバッガーのアーキテクチャの観点から、**モジュール**:  
+デバッガーのアーキテクチャの観点から、*モジュール*:  
   
--   実行可能ファイルまたは DLL などのコードの物理的なコンテナーです。  
+-   実行可能ファイルや DLL などのコードの物理的なコンテナーです。  
   
--   そのシンボルを再読み込みし、自己記述できます。 モジュールの説明は、IDE の [モジュール] ウィンドウに表示されます。  
+-   そのシンボルを再読み込みし、それ自体を記述できます。 モジュールの説明は、IDE の [モジュール] ウィンドウに表示されます。  
   
 -   によって表される、 [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)モジュールを記述するデバッグ エンジンによって作成されるインターフェイス。  
   

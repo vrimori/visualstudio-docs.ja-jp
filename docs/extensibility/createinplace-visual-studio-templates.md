@@ -1,5 +1,5 @@
 ---
-title: CreateInPlace (Visual Studio テンプレート) |Microsoft ドキュメント
+title: CreateInPlace (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e032a5fa57bd85aefdb5e8b7e0d270f491503e65
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 33d4a05f3c1f7a3aff83d05e1816308511414ad2
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099214"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231396"
 ---
 # <a name="createinplace-visual-studio-templates"></a>CreateInPlace (Visual Studio テンプレート)
-プロジェクトを作成し、指定した場所にパラメーター置換を実行または一時的な場所でパラメーター置換を実行し、指定した場所にプロジェクトを保存するかどうかを指定します。  
+プロジェクトを作成し、指定した場所でパラメーター置換を実行または一時的な場所でパラメーター置換を実行し、指定した場所にプロジェクトを保存するかどうかを指定します。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -36,7 +36,7 @@ ms.locfileid: "31099214"
 <CreateInPlace> true/false </CreateInPlace>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -54,9 +54,9 @@ ms.locfileid: "31099214"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストは、`true` または `false` である必要があります。 場合`true`、プロジェクトが作成されで指定した場所にパラメーターの置換が実行される、**新しいプロジェクト** ダイアログ ボックス。 場合`false`一時的な場所でパラメーター置換を実行、およびプロジェクトが、指定した場所にコピーされます。  
+ テキストは、`true` または `false` である必要があります。 場合`true`、プロジェクトが作成され、パラメーター置換がで指定された場所で実行される、**新しいプロジェクト** ダイアログ ボックス。 場合`false`、パラメーター置換は一時的な場所で実行され、プロジェクトは、指定した場所にコピーされます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CreateInPlace` は、省略可能な要素です。 既定値は `true` です。  
   
 ## <a name="example"></a>例  
@@ -88,5 +88,5 @@ ms.locfileid: "31099214"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

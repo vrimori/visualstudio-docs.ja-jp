@@ -1,5 +1,5 @@
 ---
-title: CommandPlacement 要素 |Microsoft ドキュメント
+title: CommandPlacement 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49de1e1cb41c13ef9b587689f36e302bcadf890c
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: c5da750b3f33127fdcfdf2e2a76d4df1556561b2
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34267976"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232430"
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 要素
-CommandPlacement 要素は、1 つ以上のグループまたはメニューに含まれるには、ボタン、グループ、およびメニューを使用します。 CommandPlacement 要素を使用すると、ユーザー インターフェイスの外観を変更するのには、これらの項目を完全に再定義するはありません。  
+CommandPlacement 要素では、ボタン、グループ、および 1 つ以上のグループまたはメニューに含まれるメニューを使用します。 CommandPlacement 要素を使用すると、ユーザー インターフェイスの外観を変更するには、これらの項目を完全に再定義する必要はありません。  
   
- 詳細については、次を参照してください。[ボタンの再利用可能なグループの作成](../extensibility/creating-reusable-groups-of-buttons.md)です。  
+ 詳細については、次を参照してください。[ボタンの再利用可能なグループ作成](../extensibility/creating-reusable-groups-of-buttons.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,23 +34,23 @@ CommandPlacement 要素は、1 つ以上のグループまたはメニューに�
 </CommandPlacement>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須。 定義されているコマンド セットの guid、[シンボル要素](../extensibility/symbols-element.md)です。|  
-|ID|必須。 メニューのグループ、または配置されるで定義されているコマンドの id、`Symbols Element`です。|  
-|priority|必須。 その親要素内の項目の visual の位置を決定します。|  
-|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 定義されている、コマンド セットの guid、 [Symbols 要素](../extensibility/symbols-element.md)します。|  
+|ID|必須。 メニューのグループ、または配置するで定義されているコマンドの id、`Symbols Element`します。|  
+|priority|必須。 その親要素で項目の表示位置を決定します。|  
+|条件|任意。 参照してください[条件付き Aattributes](../extensibility/vsct-xml-schema-conditional-attributes.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|必須。 メニューまたはグループを配置する項目をホストしています。|  
+|親|必須。 メニューまたはグループを配置する項目をホストします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -71,4 +71,4 @@ CommandPlacement 要素は、1 つ以上のグループまたはメニューに�
   
 ## <a name="see-also"></a>関連項目  
  [CommandPlacements 要素](../extensibility/commandplacements-element.md)   
- [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

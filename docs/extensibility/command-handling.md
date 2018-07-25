@@ -1,5 +1,5 @@
 ---
-title: コマンド処理 |Microsoft ドキュメント
+title: コマンド処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,24 +13,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 542277c5d8ab1b9b130f31bbb06215d8da7bc2ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a155927bb69c55c15a06cb058692038c8b309a30
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099959"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230870"
 ---
 # <a name="command-handling"></a>コマンド処理
-エディターには、新しいコマンドを定義できます。 コマンドは通常、ツールバー、またはコンテキスト メニューのメニューに表示されます。  
+エディターでは、新しいコマンドを定義できます。 コマンドは通常、メニューのツールバー、またはコンテキスト メニューに表示されます。  
   
- コマンドおよびメニューの定義の詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)です。  
+ コマンドとメニューの定義の詳細については、次を参照してください。[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)します。  
   
- 言語サービスがインターセプトし、エディターで、表示されるコンテキスト メニューを制御することができます、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>列挙します。 代わりに、マーカーあたりごとに、コンテキスト メニューを制御できます。 詳細については、次を参照してください。[言語サービスのフィルターの重要なコマンド](../extensibility/internals/important-commands-for-language-service-filters.md)です。  
+ 言語サービスがインターセプトすることで、エディターで表示されるコンテキスト メニューを制御することができます、<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>列挙体。 または、マーカーあたりごとに、コンテキスト メニューを制御できます。 詳細については、次を参照してください。[言語サービス フィルターの重要なコマンド](../extensibility/internals/important-commands-for-language-service-filters.md)します。  
   
-## <a name="adding-commands-to-the-editor-context-menu"></a>エディター コンテキスト メニューにコマンドを追加します。  
- コンテキスト メニューにコマンドを追加するには、最初一連の特定のグループに属しているメニュー コマンドを定義する必要があります。 次の例は、このチュートリアルの一部として生成 .vsct ファイルから取得[チュートリアル: カスタム エディターに追加する機能](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
+## <a name="add-commands-to-the-editor-context-menu"></a>エディター コンテキスト メニューにコマンドを追加します。  
+ コンテキスト メニューにコマンドを追加するには、一連の特定のグループに属しているメニュー コマンドをまず定義する必要があります。 次の例がから取得した、 *.vsct*チュートリアルの一部として生成されたファイル[チュートリアル: カスタム エディターに機能を追加](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
   
- \<メニューの guid"guidCustomEditorCmdSet"id ="IDMX_RTF"優先度を = ="0x0000"種類"context">  
+ \<メニューの guid"guidCustomEditorCmdSet"id ="IDMX_RTF"優先度の = ="0x0000"型「コンテキスト」= >  
   
  \<親 guid ="guidCustomEditorCmdSet"id =「0」/>  
   
@@ -46,9 +46,9 @@ ms.locfileid: "31099959"
   
  \</メニュー >  
   
- 上記のテキストを追加、コンテキスト メニューのコマンドをテキスト**CustomEditor コンテキスト メニュー**です。 メニュー GUID は、このエディターでは、コマンド セットの作成され、型が「コンテキスト」ことです。  
+ 上のテキストがテキストをコンテキスト メニュー コマンドを追加します**CustomEditor コンテキスト メニュー**します。 メニューの GUID は、このエディターで作成されたコマンド セットの一部です。 型は、「コンテキスト」です。  
   
- .Vsct ファイルで定義する必要はありません定義済みのコマンドを使用することもできます。 たとえば、Visual Studio パッケージ テンプレートによって生成された EditorPane.cs ファイルを確認する場合と考えることが、定義済みのコマンドのセットなど<xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID>によって定義された<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>、onSelectAll メソッドなどのコマンド ハンドラーで処理されます。  
+ 定義する必要はありませんが、定義済みのコマンドを使用することも、 *.vsct*ファイル。 たとえば、確認、 *EditorPane.cs* Visual Studio パッケージ テンプレートによって生成されたファイル。 表示されますが、定義済みのコマンドのセットなど<xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID>によって定義された<xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>、コマンド ハンドラーでなどの処理、`onSelectAll`メソッド。  
   
 ## <a name="see-also"></a>関連項目  
- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)
+ [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
