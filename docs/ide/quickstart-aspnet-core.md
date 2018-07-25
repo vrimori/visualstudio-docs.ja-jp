@@ -2,7 +2,7 @@
 title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
 description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
 ms.custom: mvc
-ms.date: 10/10/2017
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: quickstart
@@ -14,17 +14,18 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 1b74f47201c706cbb4fe4a4f0eca647b350d9a72
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 9d8aa6a6147ff57ba72f1cc69240ef5a7137cd73
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089300"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
 ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な C# ASP.NET Core Web アプリケーションを作成します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -52,7 +53,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    ![[定義に移動] コンテキスト メニュー](../ide/media/quickstart-aspnet-gotodefinition.png)
 
-1. 次に、単純なショートカットを使用して、ファイルの上部にある `using` ディレクティブをクリーンアップします。 灰色表示の using ディレクティブのいずれかを選択すると、キャレットのすぐ下、または左余白に[クイック アクション](../ide/quick-actions.md) (電球) が表示されます。 電球を選択してから、**[不要な using の削除]** を選択します。
+1. 次に、シンプルなショートカットを使用して、ファイルの上部にある `using` ディレクティブをクリーンアップします。 灰色表示の using ディレクティブのいずれかを選択すると、キャレットのすぐ下、または左余白に[クイック アクション](../ide/quick-actions.md) (電球) が表示されます。 電球を選択してから、**[不要な using の削除]** を選択します。
 
      不要な using がファイルから削除されます。
 
@@ -86,7 +87,10 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
 
 ## <a name="next-steps"></a>次の手順
-このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 詳細については、引き続き以下のチュートリアルをご覧ください。
+
+このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 パブリック サーバー上で実行されているアプリを表示するには、次のボタンを選択します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
+> [Azure App Service へのアプリの展開](..//deployment/quickstart-deploy-to-azure.md)
+
+さらに学習するには、チュートリアルを続けて、「[Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)」と「[ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)」に進みます。

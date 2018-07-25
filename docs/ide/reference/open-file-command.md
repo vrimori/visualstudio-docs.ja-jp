@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d238370586a9256d91f89f06fddbe3c58abc27e8
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 4be55cb2108b24c7a8f912844b719e6aa3135a06
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33703822"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924001"
 ---
-# <a name="open-file-command"></a>OpenFile コマンド
+# <a name="open-file-command"></a>Openfile コマンド
+
 既存のファイルを開き、エディターを指定できます。
 
 ## <a name="syntax"></a>構文
@@ -33,37 +34,41 @@ File.OpenFile filename [/e:editorname]
 ```
 
 ## <a name="arguments"></a>引数
- `filename`
 
- 必須。 開くファイルの完全パスまたは部分パス、およびファイル名。 パスに空白が含まれる場合は、引用符で囲む必要があります。
+`filename`
+
+必須。 開くファイルの完全パスまたは部分パス、およびファイル名。 パスに空白が含まれる場合は、引用符で囲む必要があります。
 
 ## <a name="switches"></a>スイッチ
- /e:`editorname`
 
- 任意。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。
+/e:`editorname`
 
- /e:`editorname` 引数の構文では、[ファイルを開くアプリケーションの選択] ダイアログ ボックスで表示されるようにエディター名を入力し、引用符で囲みます。
+任意。 ファイルを開くために使用するエディターの名前です。 引数は指定されていても、エディター名がない場合、**[プログラムから開く]** ダイアログ ボックスが表示されます。
 
- たとえば、ソース コード エディターでファイルを開くには、/e:`editorname` 引数に対して次のように入力します。
+/e:`editorname` 引数の構文では、[ファイルを開くアプリケーションの選択] ダイアログ ボックスで表示されるようにエディター名を入力し、引用符で囲みます。
+
+たとえば、ソース コード エディターでファイルを開くには、/e:`editorname` 引数に対して次のように入力します。
 
 ```cmd
 /e:"Source Code (text) Editor"
 ```
 
 ## <a name="remarks"></a>コメント
- パスを入力する場合、オート コンプリートによって正しいパス名とファイル名が検索されます。
+
+パスを入力する場合、オート コンプリートによって正しいパス名とファイル名が検索されます。
 
 ## <a name="example"></a>例
- 次の例では、スタイル ファイル "Test1.css" をソース コード エディターで開きます。
+
+次の例では、スタイル ファイル "Test1.css" をソース コード エディターで開きます。
 
 ```cmd
 >File.OpenFile "C:\My Projects\project1\Test1.css" /e:"Source Code (text) Editor"
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio コマンド](../../ide/reference/visual-studio-commands.md)
 - [コマンド ウィンドウ](../../ide/reference/command-window.md)
 - [イミディエイト ウィンドウ](../../ide/reference/immediate-window.md)
-- [検索コマンド ボックス](../../ide/find-command-box.md)
+- [[検索/コマンド] ボックス](../../ide/find-command-box.md)
 - [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)

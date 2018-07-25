@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f43f585320c34da17948e30d2672de9c9aa51e4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7928ceb1f99e86f84247af3376edd3119deac8ea
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567809"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945784"
 ---
 # <a name="error-task"></a>Error タスク
 ビルドを停止し、条件付きステートメントの評価に基づいてエラーをログに記録します。  
@@ -41,11 +41,11 @@ ms.locfileid: "31567809"
 |`Text`|省略可能な `String` 型のパラメーターです。<br /><br /> `Condition` パラメーターが `true` と評価された場合に、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] がログに記録するエラー テキストです。|  
   
 ## <a name="remarks"></a>コメント  
- `Error` タスクで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトはロガーに対してメッセージ テキストを発行し、ビルドの実行を中断します。  
+ `Error` タスクにより、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトはロガーに対してメッセージ テキストを発行し、ビルドの実行を中断することができます。  
   
- `Condition` パラメーターが `true` と評価されると、ビルドを中止し、ログにエラーを記録します。 `Condition` パラメーターが存在しない場合には、エラーがログ記録され、ビルドの実行が中止されます。 ログ処理の詳細については、[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)に関するページを参照してください。  
+ `Condition` パラメーターが `true` と評価されると、ビルドを中止し、ログにエラーを記録します。 `Condition` パラメーターが存在しない場合には、エラーがログ記録され、ビルドの実行が中止されます。 ログ処理の詳細については、[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)に関するページをご覧ください。  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例では、すべての必須のプロパティが設定されていることを検証します。 該当するプロパティが設定されていない場合、`Error` タスクの `Text` パラメーターの値をログに記録します。  
@@ -64,6 +64,6 @@ ms.locfileid: "31567809"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)

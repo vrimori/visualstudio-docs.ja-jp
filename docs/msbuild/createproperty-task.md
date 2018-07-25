@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 817d888a14d20b4778b28f81811b876c6d97ad61
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4843262862501377fd3740639d6a22a79e77879d
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31566694"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946346"
 ---
 # <a name="createproperty-task"></a>CreateProperty タスク
 渡された値をプロパティに入力します。 プロパティ間または文字列間で値をコピーできます。  
@@ -39,7 +39,7 @@ ms.locfileid: "31566694"
 |`ValueSetByTask`|省略可能な `String` 型の出力パラメーターです。<br /><br /> `Value` パラメーターと同じ値を含みます。 出力が最新の状態であるため、含まれているターゲットをスキップするとき、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によって出力プロパティが設定されることを回避する場合にのみ、このパラメーターを使用します。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`CreateProperty` タスクによって `NewFile` プロパティが作成されます。`SourceFilename` および `SourceFileExtension` プロパティの値の組み合わせが使用されます。  
@@ -66,8 +66,8 @@ ms.locfileid: "31566694"
 </Project>  
 ```  
   
- プロジェクトの実行後、`NewFile` プロパティの値は `Module1.vb` になります。  
+ プロジェクトの実行後、`NewFile` プロパティの値は *Module1.vb* になります。  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)

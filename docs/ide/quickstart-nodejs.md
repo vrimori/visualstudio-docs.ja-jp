@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: Visual Studio を使用して初めての Node.js アプリを作成する'
 description: このクイック スタートでは、Visual Studio で Node.js アプリを作成します
-ms.date: 11/15/2017
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-nodejs
 ms.topic: quickstart
@@ -14,17 +14,19 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0a78f9fdfd1ea3612d86432619c463d526eed5c2
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 67443cdfa640c0dca020feb34f10ec3a636c982e
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924500"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>クイック スタート: Visual Studio を使用して初めての Node.js アプリを作成する
 
-ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な Node.js Web アプリケーションを作成します。 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な Node.js Web アプリケーションを作成します。 Visual Studio 2017 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
+
 まず、Node.js Web アプリケーション プロジェクトを作成します。
 
 1. Node.js ランタイムがまだインストールされていない場合は、LTS バージョンを [Node.js](https://nodejs.org/en/download/) Web サイトからインストールしてください。
@@ -41,7 +43,7 @@ ms.lasthandoff: 05/23/2018
 
      ![VS インストーラーの Node.js ワークロード](../ide/media/quickstart-nodejs-workload.png)
 
-    Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 *server.js* が左側のウィンドウのエディターで開きます。
+    **[空の Node.js Web アプリケーション]** テンプレートを選択し、**[OK]** をクリックすると、Visual Studio は新しいソリューションを作成し、プロジェクトを開きます。 *server.js* が左側のウィンドウのエディターで開きます。
 
 ## <a name="explore-the-ide"></a>IDE を探索する
 
@@ -49,13 +51,13 @@ ms.lasthandoff: 05/23/2018
 
    ![ソリューション エクスプローラー](../ide/media/quickstart-nodejs-solution-explorer.png)
 
-  - **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。
+   - **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ディスク上では、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。
 
-  - 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
+   - 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
 
-  - npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
+   - npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
 
-1. コマンド プロンプトから npm パッケージまたは node.js コマンドをインストールする場合は、プロジェクト ノードを右クリックし、**[ここでコマンド プロンプトを開く]** を選択します。
+1. コマンド プロンプトから npm パッケージまたは Node.js コマンドをインストールする場合は、プロジェクト ノードを右クリックし、**[ここでコマンド プロンプトを開く]** を選択します。
 
    ![Node.js コマンド プロンプト](../ide/media/quickstart-nodejs-command-prompt.png)
 
@@ -83,9 +85,12 @@ ms.lasthandoff: 05/23/2018
 
 1. Web ブラウザーを閉じます。
 
-このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
+Visual Studio IDE と Node.js の入門となるこのクイック スタートは以上で完了です。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
 
 ## <a name="next-steps"></a>次の手順
 
-- [Node.js と Express のチュートリアル](../nodejs/tutorial-nodejs.md)を読む
-- [Node.js と React のチュートリアル](../nodejs/tutorial-nodejs-with-react-and-jsx.md)を読む
+> [!div class="nextstepaction"]
+> [Azure App Service へのアプリの展開](..//deployment/quickstart-deploy-to-azure.md)
+
+- [Node.js と Express のチュートリアル](../nodejs/tutorial-nodejs.md)
+- [Node.js と React のチュートリアル](../nodejs/tutorial-nodejs-with-react-and-jsx.md)

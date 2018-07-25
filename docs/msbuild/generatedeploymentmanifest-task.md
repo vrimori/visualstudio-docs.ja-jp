@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1eb989972f8cfd2e44516b798c25e5f579e5f66
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 470e08454d39bf63542a63359359b1577e70f5b3
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31571478"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945358"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest タスク
 
@@ -45,16 +45,16 @@ ms.locfileid: "31571478"
 |`EntryPoint`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 生成されるマニフェスト アセンブリのエントリ ポイントを指定します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの場合には、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストを指定します。<br /><br />`EntryPoint` タスク パラメーターが指定されていない場合は、次のように `<customHostSpecified>` タグが `<entryPoint>` タグの子として挿入されます。<br /><br /> `<entryPoint xmlns="urn:schemas-`<br /><br /> `microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 次の手順を使用して、アプリケーション マニフェストに DLL 依存関係を追加できます。<br /><br /> 1.<xref:Microsoft.Build.Tasks.ResolveAssemblyReference> への呼び出しでアセンブリの参照を解決します。<br />2.前のタスクの出力とアセンブリ自体を <xref:Microsoft.Build.Tasks.ResolveManifestFiles> に渡します。<br />3.`Dependencies` パラメーターを使用して <xref:Microsoft.Build.Tasks.GenerateApplicationManifest> に依存関係を渡します。|
 |`ErrorReportUrl`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> ClickOnce のインストール時にダイアログ ボックスに表示される Web ページの URL を指定します。|
 |`InputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> マニフェスト ジェネレーターのベースとして使用する、入力 XML ドキュメントを指定します。 これによって、カスタム マニフェスト定義など、構造化されたデータが出力マニフェストに反映されます。 XML ドキュメントのルート要素は、asmv1 名前空間内のアセンブリ ノードである必要があります。|
-|`Install`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションがインストールされているアプリケーションであるか、オンライン専用アプリケーションであるかを指定します。 このパラメーターを `true` にすると、アプリケーションはユーザーの [スタート] メニューにインストールされ、[プログラムの追加と削除] ダイアログ ボックスから削除できるようになります。 このパラメーターを `false` にすると、アプリケーションは Web ページからオンラインで使用するためのものになります。 このパラメーターの既定値は、`true` です。|
-|`MapFileExtensions`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> .deploy ファイル名拡張子の割り当てを使用するかどうかを指定します。 このパラメーターを `true` にすると、各プログラム ファイルは、.deploy のファイル名拡張子で発行されます。 このオプションを使用すると、ブロックを解除して [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション配置を有効にする必要があるファイル名拡張子の数を制限できるので、Web サーバーのセキュリティに役立ちます。 このパラメーターの既定値は、`false` です。|
+|`Install`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションがインストールされているアプリケーションであるか、オンライン専用アプリケーションであるかを指定します。 このパラメーターを `true` にすると、アプリケーションはユーザーの **[スタート]** メニューにインストールされ、**[プログラムの追加と削除]** ダイアログ ボックスから削除できるようになります。 このパラメーターを `false` にすると、アプリケーションは Web ページからオンラインで使用するためのものになります。 このパラメーターの既定値は、`true` です。|
+|`MapFileExtensions`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> *.deploy* ファイル名拡張子の割り当てを使用するかどうかを指定します。 このパラメーターを `true` にすると、各プログラム ファイルは、*.deploy* のファイル名拡張子で発行されます。 このオプションを使用すると、ブロックを解除して [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション配置を有効にする必要があるファイル名拡張子の数を制限できるので、Web サーバーのセキュリティに役立ちます。 このパラメーターの既定値は、`false` です。|
 |`MaxTargetPath`|省略可能な `String` 型のパラメーターです。<br /><br /> [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション配置におけるファイル パスの最大許容長を指定します。 このパラメーターを指定した場合、アプリケーションで指定されている各ファイル パスの長さが、この制限に照らしてチェックされます。 この制限を超える項目に対しては、ビルド警告が出力されます。 入力を指定しないか、ゼロを指定した場合、チェック処理は行われません。|
 |`MinimumRequiredVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> ユーザーが更新をスキップできるかどうかを指定します。 最低限必要なバージョンよりも前のバージョンをユーザーが所有している場合、ユーザーは更新をスキップできません。 この入力は、`Install` パラメーターの値が `true` である場合のみ適用されます。|
 |`OutputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> 生成される出力マニフェスト ファイルの名前を指定します。 このパラメーターが指定されていない場合、出力ファイルの名前は、生成されるマニフェストの ID から推測されます。|
 |`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの対象プラットフォームを指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> 既定値は `AnyCPU` です。|
-|`Product`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーション名を示します。 このパラメーターが指定されていない場合、名前は、生成されるマニフェストの ID から推測されます。 この名前は、[スタート] メニューに表示する名前として使用され、[プログラムの追加と削除] ダイアログ ボックスに表示される名前の一部としても使用されます。|
-|`Publisher`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの発行者を指定します。 このパラメーターが指定されていない場合、名前は、登録されているユーザー名または生成されるマニフェストの ID から推測されます。 この名前は、[スタート] メニューに表示するフォルダー名として使用され、[プログラムの追加と削除] ダイアログ ボックスに表示される名前の一部としても使用されます。|
-|`SuiteNamel`|省略可能な `String` 型のパラメーターです。<br /><br /> ClickOnce の配置後にアプリケーションが存在する、[スタート] メニューのフォルダーの名前を指定します。|
-|`SupportUrl`|省略可能な `String` 型のパラメーターです。<br /><br /> [プログラムの追加と削除] ダイアログ ボックスで、このアプリケーションのエントリに表示されるリンクを指定します。 値には、完全修飾 URL または UNC パスを指定します。|
+|`Product`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーション名を示します。 このパラメーターが指定されていない場合、名前は、生成されるマニフェストの ID から推測されます。 この名前は、**[スタート]** メニューに表示する名前として使用され、**[プログラムの追加と削除]** ダイアログ ボックスに表示される名前の一部としても使用されます。|
+|`Publisher`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの発行者を指定します。 このパラメーターが指定されていない場合、名前は、登録されているユーザー名または生成されるマニフェストの ID から推測されます。 この名前は、**[スタート]** メニューに表示するフォルダー名として使用され、**[プログラムの追加と削除]** ダイアログ ボックスに表示される名前の一部としても使用されます。|
+|`SuiteNamel`|省略可能な `String` 型のパラメーターです。<br /><br /> ClickOnce の配置後にアプリケーションが存在する、**[スタート]** メニューのフォルダーの名前を指定します。|
+|`SupportUrl`|省略可能な `String` 型のパラメーターです。<br /><br /> **[プログラムの追加と削除]** ダイアログ ボックスで、このアプリケーションのエントリに表示されるリンクを指定します。 値には、完全修飾 URL または UNC パスを指定します。|
 |`TargetCulture`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションのカルチャを指定し、生成されるマニフェストのアセンブリ ID の `Language` フィールドを指定します。 このパラメーターを指定しなかった場合、アプリケーションは、カルチャに依存しないと仮定されます。|
 |`TrustUrlParameters`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションで、URL クエリ文字列パラメーターが使用できるかどうかを指定します。 このパラメーターの既定値は、アプリケーションでパラメーターが使用できないことを示す `false` です。|
 |`UpdateEnabled`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションが更新プログラムに対して有効であるかどうかを指定します。 このパラメーターの既定値は、`false` です。 このパラメーターは、`Install` パラメーターが `true` である場合のみ適用されます。|
@@ -64,11 +64,11 @@ ms.locfileid: "31571478"
 
 ## <a name="remarks"></a>コメント
 
-上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.GenerateManifestBase> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 Task クラスのパラメーターの一覧については、[「Task Base Class」](../msbuild/task-base-class.md) を参照してください。
+上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.GenerateManifestBase> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 Task クラスのパラメーターの一覧については、「[Task Base Class](../msbuild/task-base-class.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [タスク](../msbuild/msbuild-tasks.md)  
 [GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)  
 [SignFile タスク](../msbuild/signfile-task.md)  
-[Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+[タスク リファレンス](../msbuild/msbuild-task-reference.md)

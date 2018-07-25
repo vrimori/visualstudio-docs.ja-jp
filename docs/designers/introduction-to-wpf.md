@@ -13,12 +13,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 34c0b1a09a6483d45adda63f0fa1bf9d3ff032fa
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 121cd95e55b17ea8e93b6a9ad8beb1a9d9d3feca
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747282"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978350"
 ---
 # <a name="introduction-to-wpf"></a>WPF の概要
 
@@ -32,13 +32,13 @@ Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユ
 
 ## <a name="program-with-wpf"></a>WPF でのプログラミング
 
-WPF は、ほとんどの部分が <xref:System.Windows> 名前空間に格納されている .NET Framework 型のサブセットとして存在します。 ASP.NET や Windows フォームのようなマネージ テクノロジを使用して .NET Framework で以前にアプリケーションを構築したことがあるユーザーは、基本的な WPF のプログラミングの経験には慣れているはずです。クラスのインスタンス化、プロパティの設定、メソッドの呼び出し、イベントの処理など、すべての操作は C# または Visual Basic などの使い慣れた .NET プログラミング言語を使用して行うことができます。
+WPF は、ほとんどの部分が <xref:System.Windows> 名前空間に格納されている .NET Framework 型のサブセットとして存在します。 ASP.NET や Windows フォームのようなマネージド テクノロジを使用して .NET Framework で以前にアプリケーションを構築したことがあるユーザーは、基本的な WPF のプログラミングの経験には慣れているはずです。クラスのインスタンス化、プロパティの設定、メソッドの呼び出し、イベントの処理など、すべての操作は C# または Visual Basic などの使い慣れた .NET プログラミング言語を使用して行うことができます。
 
 WPF には、プロパティとイベントを拡張する追加のプログラミング構成要素である、 [依存関係プロパティ](/dotnet/framework/wpf/advanced/dependency-properties-overview) と [ルーティング イベント](/dotnet/framework/wpf/advanced/routed-events-overview)が含まれています。
 
 ## <a name="markup-and-code-behind"></a>マークアップおよび分離コード
 
-WPF では *マークアップ* と *分離コード*の両方を使用したアプリケーションを開発できます。これは ASP.NET 開発者にとってなじみ深いエクスペリエンスに違いありません。 一般に、アプリケーションの外観を実装するには XAML マークアップを使用し、一方、その動作を実装するには、マネージ プログラミング言語 (分離コード) を使用します。 外観と動作の実装を別々に行うことには、次の利点があります。
+WPF では "*マークアップ*" と "*分離コード*" の両方を使用したアプリケーションを開発できます。これは ASP.NET 開発者にとってなじみ深いエクスペリエンスに違いありません。 一般に、アプリケーションの外観を実装するには XAML マークアップを使用し、一方、その動作を実装するには、マネージド プログラミング言語 (分離コード) を使用します。 外観と動作の実装を別々に行うことには、次の利点があります。
 
 - 外観固有のマークアップが動作固有のコードと密接に結び付いていないので、開発と保守のコストが削減されます。
 
@@ -48,7 +48,7 @@ WPF では *マークアップ* と *分離コード*の両方を使用したア
 
 ### <a name="markup"></a>マークアップ
 
-XAML は、アプリケーションの外観を宣言的に実装するために使用される XML ベースのマークアップ言語です。 一般的に、ウィンドウ、ダイアログ ボックス、ページ、ユーザー コントロールの作成と、これらにコントロール、図形、グラフィックスを入れるために使用されます。
+XAML は、アプリケーションの外観を宣言的に実装する XML ベースのマークアップ言語です。 一般的に、ウィンドウ、ダイアログ ボックス、ページ、ユーザー コントロールの作成と、これらにコントロール、図形、グラフィックスを入れるために使用されます。
 
  次の例では XAML を使用して、1 つのボタンが入っているウィンドウの外観を実装しています。
 
@@ -149,7 +149,7 @@ End Namespace
 
 ## <a name="controls"></a>コントロール
 
-アプリケーション モデルにより提供されるユーザー エクスペリエンスは、構築済みのコントロールです。 WPF において、「コントロール」とはウィンドウまたはページによりホストされ、ユーザー インターフェイスを持ち、何らかの動作を実装する WPF クラスのカテゴリに適用される総称です。
+アプリケーション モデルにより提供されるユーザー エクスペリエンスは、構築済みのコントロールです。 WPF において、"*コントロール*" とはウィンドウまたはページによりホストされ、ユーザー インターフェイスを持ち、何らかの動作を実装する WPF クラスのカテゴリに適用される総称です。
 
 詳しくは、「 [コントロール](/dotnet/framework/wpf/controls/index)」をご覧ください。
 
@@ -260,7 +260,7 @@ End Namespace
 
 WPF データ バインディング エンジンは、検証、並べ替え、フィルター処理、グループ化などのその他のサポートを提供します。 さらにデータ バインディングでは、標準の WPF コントロールによって表示されたユーザー インターフェイスが適切ではない場合に、バインドされたデータを操作するためのカスタム ユーザー インターフェイスをデータ テンプレートで作成することをサポートしています。
 
-詳しくは、「 [データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。
+詳しくは、「[データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。
 
 ## <a name="graphics"></a>グラフィックス
 
@@ -291,7 +291,7 @@ WPF には、次の図に示す四角形や楕円のような、一般的なベ�
 
 !["you clicked the ellipse&#33;" というテキストを含むウィンドウ](../designers/media/wpfintrofigure12.png)
 
-詳しくは、「 [WPF での図形と基本描画の概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。
+詳しくは、「[WPF での図形と基本描画の概要](/dotnet/framework/wpf/data/data-binding-overview)」をご覧ください。
 
 ### <a name="2d-geometries"></a>2D ジオメトリ
 
@@ -311,7 +311,7 @@ WPF の 2D 機能のサブセットには、グラデーション、ビットマ
 
 ![さまざまなブラシの図](../designers/media/wpfintrofigure6.png)
 
-詳しくは、「 [WPF のブラシの概要](/dotnet/framework/wpf/graphics-multimedia/wpf-brushes-overview)」をご覧ください。
+詳しくは、「[WPF のブラシの概要](/dotnet/framework/wpf/graphics-multimedia/wpf-brushes-overview)」をご覧ください。
 
 ### <a name="3d-rendering"></a>3D レンダリング
 
@@ -327,7 +327,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 ![アニメーション キューブのイメージ](../designers/media/wpfintrofigure7.png)
 
-詳しくは、「 [アニメーションの概要](/dotnet/framework/wpf/graphics-multimedia/animation-overview)」をご覧ください。
+詳しくは、「[アニメーションの概要](/dotnet/framework/wpf/graphics-multimedia/animation-overview)」をご覧ください。
 
 ## <a name="media"></a>メディア
 
@@ -339,7 +339,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 ![サムネイル イメージとフルサイズのイメージ](../designers/media/wpfintrofigure8.png)
 
-詳しくは、「 [イメージングの概要](/dotnet/framework/wpf/graphics-multimedia/imaging-overview)」をご覧ください。
+詳しくは、「[イメージングの概要](/dotnet/framework/wpf/graphics-multimedia/imaging-overview)」をご覧ください。
 
 ### <a name="video-and-audio"></a>ビデオとオーディオ
 
@@ -426,11 +426,11 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 ![複数の種類の内容を含むボタン](../designers/media/wpfintrofigure22.png)
 
-さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「 [WPF コンテンツ モデル](/dotnet/framework/wpf/controls/wpf-content-model)」をご覧ください。
+さまざまなコントロールでサポートされているコンテンツの種類について詳しくは、「[WPF コンテンツ モデル](/dotnet/framework/wpf/controls/wpf-content-model)」をご覧ください。
 
 ### <a name="triggers"></a>トリガー
 
-XAML マークアップの主な目的はアプリケーションの外観を実装することですが、XAML を使用してアプリケーションの動作の一部の機能を実装することもできます。 その一例として、ユーザーの操作に基づいて、アプリケーションの外観を変更するトリガーの使用があります。 詳しくは、「 [スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。
+XAML マークアップの主な目的はアプリケーションの外観を実装することですが、XAML を使用してアプリケーションの動作の一部の機能を実装することもできます。 その一例として、ユーザーの操作に基づいて、アプリケーションの外観を変更するトリガーの使用があります。 詳しくは、「[スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。
 
 ### <a name="control-templates"></a>コントロール テンプレート
 
@@ -512,7 +512,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 <xref:System.Windows.Controls.ListBox> の動作と全体的な外観は保持されていることにご注意ください。リスト ボックスにより表示されるコンテンツの外観のみが変更されています。
 
-詳しくは「 [データ テンプレートの概要](/dotnet/framework/wpf/data/data-templating-overview)」をご覧ください。
+詳しくは「[データ テンプレートの概要](/dotnet/framework/wpf/data/data-templating-overview)」をご覧ください。
 
 ### <a name="styles"></a>スタイル
 
@@ -547,7 +547,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 ![2 つのオレンジ色のボタン](../designers/media/wpfintrofigure20.png)
 
-詳しくは、「 [スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。
+詳しくは、「[スタイルとテンプレート](/dotnet/framework/wpf/controls/styling-and-templating)」をご覧ください。
 
 ### <a name="resources"></a>リソース
 
@@ -652,7 +652,7 @@ WPF にはカスタマイズに対する多くのサポートが用意されて�
 
  ![カスタム UserControl](../designers/media/wpfintrofigure3.png)
 
-カスタム コントロールについて詳しくは、「 [コントロールの作成の概要](/dotnet/framework/wpf/controls/control-authoring-overview)」をご覧ください。
+カスタム コントロールについて詳しくは、「[コントロールの作成の概要](/dotnet/framework/wpf/controls/control-authoring-overview)」をご覧ください。
 
 ## <a name="wpf-best-practices"></a>WPF のベスト プラクティス
 

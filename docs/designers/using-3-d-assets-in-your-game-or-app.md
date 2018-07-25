@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b9ed78375438dd699959ce40a3427692ae1649af
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7ba9cd561c80aec7a0b1b47b98f75ff8046d8a1b
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917108"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081310"
 ---
 # <a name="use-3d-assets-in-your-game-or-app"></a>ゲームまたはアプリで 3D アセットを使用する
 
@@ -36,7 +36,7 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 
 ### <a name="to-add-the-build-customizations-to-your-project"></a>プロジェクトにビルドのカスタマイズを追加するには
 
-1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[ビルド依存関係]**、**[ビルドのカスタマイズ]** の順にクリックします。 **[Visual C++ ビルド カスタマイズ ファイル]** ダイアログ ボックスが表示されます。
+1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[ビルド依存関係]** > **[ビルドのカスタマイズ]** の順に選択します。 **[Visual C++ ビルド カスタマイズ ファイル]** ダイアログ ボックスが表示されます。
 
 2.  **[使用できるビルド カスタマイズ ファイル]** で、次の表に示すように、プロジェクトで使用するアセットの種類に対応するチェック ボックスをオンにします。
 
@@ -68,9 +68,9 @@ Visual Studio のツールを使用して 3D アセットを作成したら、�
 
 |項目の種類|ソース ファイルの種類|出力ファイル形式|
 |---------------|-----------------------|------------------------|
-|**イメージ コンテンツ パイプライン**|ポータブル ネットワーク グラフィックス (PNG) (.png)<br /><br /> JPEG (.jpg、.jpeg、.jpe、.jfif)<br /><br /> DirectDraw Surface (dds)<br /><br /> グラフィックス インターチェンジ形式 (GIF) (.gif)<br /><br /> ビットマップ (.bmp、.dib)<br /><br /> TIFF 形式 (.tif、.tiff)<br /><br /> Targa (.tga)|DirectDraw Surface (dds)|
-|**メッシュ コンテンツ パイプライン**|AutoDesk FBX インターチェンジ ファイル (.fbx)<br /><br /> Collada DAE ファイル (.dae)<br /><br /> Wavefront OBJ ファイル (.obj)|3D メッシュ ファイル (.cmo)|
-|**シェーダー コンテンツ パイプライン**|視覚シェーダー グラフ (.dgsl)|コンパイル済みシェーダー出力 (.cso)|
+|**イメージ コンテンツ パイプライン**|ポータブル ネットワーク グラフィックス (*.png*)<br /><br /> JPEG (*.jpg*、*.jpeg*、*.jpe*、*.jfif*)<br /><br /> DirectDraw Surface (*.dds*)<br /><br /> グラフィックス インターチェンジ形式 (*.gif*)<br /><br /> ビットマップ (*.bmp*、*.dib*)<br /><br /> TIFF 形式 (*.tif*、*.tiff*)<br /><br /> Targa (*.tga*)|DirectDraw Surface (*.dds*)|
+|**メッシュ コンテンツ パイプライン**|AutoDesk FBX インターチェンジ ファイル (*.fbx*)<br /><br /> Collada DAE ファイル (*.dae*)<br /><br /> Wavefront OBJ ファイル (*.obj*)|3D メッシュ ファイル (*.cmo*)|
+|**シェーダー コンテンツ パイプライン**|視覚シェーダー グラフ (*.dgsl*)|コンパイル済みシェーダー出力 (*.cso*)|
 
 ## <a name="configure-asset-content-pipeline-properties"></a>アセット コンテンツ パイプラインのプロパティを構成する
 
@@ -145,7 +145,7 @@ struct PixelShaderInput
 
 シェーダーで使用するシェーダー デザイナーのノードによっては、次の定義に従い、追加データを指定する必要がある場合もあります。
 
-```
+```hlsl
 Texture2D Texture1 : register( t0 );
 Texture2D Texture2 : register( t1 );
 Texture2D Texture3 : register( t2 );

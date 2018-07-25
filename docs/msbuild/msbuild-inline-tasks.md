@@ -12,20 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39bc1acd059c9a915f330c74140c89d5f4fa40ff
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c8390638179443b5e8abe847a0f0421402361f25
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574641"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080393"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild インライン タスク
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
   
  .NET Framework Version 4 以降では、プロジェクト ファイルでタスクをインラインで作成できます。 個別のアセンブリを作成してタスクをホストする必要はありません。 これにより、ソース コードの追跡やタスクの配置が簡単になります。 ソース コードはスクリプトに統合されます。  
   
+
+ MSBuild 15.8 では、[RoslynCodeTaskFactory](../msbuild/msbuild-roslyncodetaskfactory.md) が追加され、.NET Standard クロスプラット フォーム インライン タスクを作成できるようになりました。  .NET Core 上でインライン タスクを使用する必要がある場合は、RoslynCodeTaskFactory を使用しなければなりません。
 ## <a name="the-structure-of-an-inline-task"></a>インライン タスクの構造  
- インライン タスクは [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素に格納されます。 インライン タスクとそれを格納する `UsingTask` 要素は通常、.targets ファイルに含められ、必要に応じて他のプロジェクト ファイルにインポートされます。 基本的なインライン タスクの例を次に示します。 このタスクでは何も実行されないことに注意してください。  
+ インライン タスクは [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素に格納されます。 インライン タスクとそれを格納する `UsingTask` 要素は通常、*.targets* ファイルに含められ、必要に応じて他のプロジェクト ファイルにインポートされます。 基本的なインライン タスクの例を次に示します。 このタスクでは何も実行されないことに注意してください。  
   
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -55,7 +57,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
  `DoNothing` タスクの残りの要素は空になっていますが、ここではインライン タスクの順序と構造を示すために含めてあります。 具体的な例については、この後の例を参照してください。  
   
--   `ParameterGroup` 要素は省略可能です。 指定する場合は、タスクのパラメーターを宣言します。 入力パラメーターと出力パラメーターの詳細については、この後の「入力パラメーターと出力パラメーター」を参照してください。  
+-   `ParameterGroup` 要素は省略可能です。 指定する場合は、タスクのパラメーターを宣言します。 入力パラメーターと出力パラメーターの詳細については、この後の「[入力パラメーターと出力パラメーター](#input-and-output-parameters)」を参照してください。  
   
 -   `Task` 要素にはタスクのソース コードを記述して格納します。  
   
@@ -88,7 +90,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 > [!NOTE]
 >  ソース ファイル内のタスク クラスを定義する場合は、クラス名が、対応する [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素の `TaskName` 属性と一致する必要があります。  
   
-## <a name="hello-world"></a>Hello World  
+## <a name="helloworld"></a>HelloWorld  
  具体的なインライン タスクの例を次に示します。 HelloWorld タスクは、既定のエラー ログ デバイスに "Hello, world!" と表示します。通常、既定のデバイスは、システム コンソールまたは Visual Studio の**出力**ウィンドウです。 この例の `Reference` 要素は、例を示す目的でのみ含めてあります。  
   
 ```xml  
@@ -114,7 +116,7 @@ Log.LogError("Hello, world!");
 </Project>  
 ```  
   
- HelloWorld タスクを HelloWorld.targets という名前のファイルに保存すると、次のようにしてプロジェクトから呼び出すことができます。  
+ HelloWorld タスクを *HelloWorld.targets* という名前のファイルに保存すると、次のようにしてプロジェクトから呼び出すことができます。  
   
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -142,7 +144,7 @@ Log.LogError("Hello, world!");
   
 -   `Output` は省略可能な属性で、既定値は `false` です。 `true` の場合、そのパラメーターの値を、Execute メソッドから戻る前に指定する必要があります。  
   
- たとえば、オブジェクトに適用された  
+たとえば、オブジェクトに適用された  
   
 ```xml  
 <ParameterGroup>  
@@ -152,7 +154,7 @@ Log.LogError("Hello, world!");
 </ParameterGroup>  
 ```  
   
- この例では、以下の 3 つのパラメーターを定義しています。  
+この例では、以下の 3 つのパラメーターを定義しています。  
   
 -   `Expression` は、System.String 型の必須の入力パラメーターです。  
   
@@ -190,6 +192,6 @@ File.WriteAllText(Path, content);
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [チュートリアル: インライン タスクの作成](../msbuild/walkthrough-creating-an-inline-task.md)

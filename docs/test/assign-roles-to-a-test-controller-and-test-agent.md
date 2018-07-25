@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1294083fa14bd71ca0d46aed481a963b8dfd39d1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f939947c4b96584439d85c33c234dc769531888d
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31968769"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280612"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>ロールをテスト コントローラーとテスト エージェントに割り当てる
 
@@ -41,7 +41,7 @@ ms.locfileid: "31968769"
 
 ## <a name="to-create-and-configure-a-test-setting"></a>テスト設定を作成および構成するには
 
-1.  ソリューション エクスプローラーで、**[ソリューション項目]** を右クリックし、**[追加]** をポイントして、**[新しい項目]** を選択します。
+1.  **ソリューション エクスプローラー**で、**[ソリューション項目]** を右クリックし、**[追加]** をポイントして、**[新しい項目]** を選択します。
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
@@ -51,7 +51,7 @@ ms.locfileid: "31968769"
 
 4.  **[追加]** をクリックします。
 
-     ソリューション エクスプローラーの **[ソリューション項目]** フォルダーに、TestSettingDistributedTestWalkthrough.testsettings という新しいテスト ファイルが表示されます。
+     **ソリューション エクスプローラー**の **[ソリューション項目]** フォルダーに、*TestSettingDistributedTestWalkthrough.testsettings* という新しいテスト ファイルが表示されます。
 
      **[テストの設定]** ダイアログ ボックスが表示されます。 **[全般]** ページが選択されています。
 

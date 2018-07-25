@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9ac84cce32c6de0310257cb62c29f93726ecb6c
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 718400212d29d6bc2d45855eadbe9d1089468744
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748037"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081047"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>チュートリアル: リアルな 3D のビリヤード ボールを作成する
 
@@ -159,19 +159,19 @@ ms.locfileid: "34748037"
 
      ![キューブ マップの上部のテクスチャ](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png)
 
- キューブ マップの面について個々のテクスチャを作成したので、ツールを使用して、1 つの .dds のテクスチャに格納できるキューブ マップにそれらのテクスチャを統合できます。 キューブ マップを .dds テクスチャ形式で保存できれば、キューブ マップを作成するどのプログラムでも使用できます。 このチュートリアルでは、June 2010 DirectX SDK の一部である DirectX テクスチャ ツールを使用して、テクスチャを作成する方法を説明します。
+ キューブ マップの面について個々のテクスチャを作成したので、ツールを使用して、1 つの *.dds* のテクスチャに格納できるキューブ マップにそれらのテクスチャを統合できます。 キューブ マップを .dds テクスチャ形式で保存できれば、キューブ マップを作成するどのプログラムでも使用できます。 このチュートリアルでは、June 2010 DirectX SDK の一部である DirectX テクスチャ ツールを使用して、テクスチャを作成する方法を説明します。
 
 ### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>DirectX テクスチャ ツールを使用してキューブ マップを統合するには
 
-1.  DirectX テクスチャ ツールのメイン メニューで、**[ファイル]**、**[New Texture]** の順に選択します。 **[New Texture]** ダイアログ ボックスが表示されます。
+1.  DirectX テクスチャ ツールのメイン メニューで、**[ファイル]** > **[New Texture]\(新しいテクスチャ\)** の順に選択します。 **[New Texture]** ダイアログ ボックスが表示されます。
 
 2.  **[Texture Type]** グループで、**[Cubemap Texture]** を選択します。
 
 3.  **[サイズ]** グループの **[幅]** と **[高さ]** に適切な値を入力し、**[OK]** をクリックします。 新しいテクスチャ ドキュメントが表示されます。 既定では、テクスチャ ドキュメントに最初に表示されるテクスチャは、**Positive X** のキューブ面に対応します。
 
-4.  テクスチャ キューブの面に作成したテクスチャを、キューブ面に読み込みます。 メイン メニューで、**[ファイル]**、**[Open Onto This Cubemap Face]** の順に選択し、キューブの面に作成したテクスチャを選択したら、**[開く]** を選択します。
+4.  テクスチャ キューブの面に作成したテクスチャを、キューブ面に読み込みます。 メイン メニューで、**[ファイル]** > **[Open Onto This Cubemap Face]\(このキューブ マップ面の上に開く\)** の順に選択し、キューブの面に作成したテクスチャを選択したら、**[開く]** を選択します。
 
-5.  **Negative X**、**Positive Z**、および **Negative Z** キューブ面について、手順 4. を繰り返します。 そのためには、読み込む面を表示する必要があります。 別のキューブ マップの面を表示するには、メイン メニューで、**[表示]**、**[Cube Map Face]** の順に選択し、表示する面を選択します。
+5.  **Negative X**、**Positive Z**、および **Negative Z** キューブ面について、手順 4. を繰り返します。 そのためには、読み込む面を表示する必要があります。 別のキューブ マップの面を表示するには、メイン メニューで、**[表示]** > **[Cube Map Face]\(キューブ マップ面\)** の順に選択し、表示する面を選択します。
 
 6.  **Positive Y** キューブ面について、テクスチャ キューブの上部に作成したテクスチャを読み込みます。
 

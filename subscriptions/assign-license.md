@@ -1,64 +1,95 @@
 ---
 title: Visual Studio サブスクリプションにライセンスを割り当てる | Microsoft Docs
-author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 10/03/2017
-ms.topic: Get-Started-Article
+author: TerryGLee
+ms.author: tglee
+manager: douge
+ms.date: 07/16/2018
+ms.topic: conceptual
 description: 管理者がサブスクライバーにライセンスを割り当てる方法を説明します
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d0dbd509d60ed3528186e41c98f374ab6db60fa3
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: e43e9050e2b021025ed4ae104f4345bce6e8eee3
+ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "36327025"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39131932"
 ---
-# <a name="assigning-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
+# <a name="assign-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 
-Visual Studio サブスクリプションの管理者は、Visual Studio サブスクリプションの管理者ポータルを使用して、個々のユーザーにサブスクリプションを割り当てることができます。  
-ユーザー 1 人ずつに割り当てることも、[一括追加] 機能を使用して迅速かつ簡単にサブスクリプション情報でサブスクライバーの一覧をアップロードすることも可能です。 
+Visual Studio サブスクリプションの管理者は、管理者ポータルを使用して、個々のユーザーおよびユーザーのグループにサブスクリプションを割り当てることができます。
 
-## <a name="assigning-a-single-user"></a>1 人のユーザーの割り当て
-Visual Studio サブスクリプションに利用可能なライセンスがある場合は、新しいユーザーにそのライセンスを割り当てて、サブスクリプションの特典にアクセスできるようにすることができます。 
-1.  [管理者ポータル](https://manage.visualstudio.com)へのサインイン
+ユーザーのグループの場合、一度に 1 つずつグループにサブスクリプションを割り当てることも、**[一括追加]** 機能を使用して迅速かつ簡単にサブスクリプション情報でサブスクライバーの一覧をアップロードすることも可能です。 
 
-2.  1 人の Visual Studio サブスクライバーを割り当てるには、テーブルの上部にある **[追加]** をクリックします。
-   
-3.  フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます (下図参照)。 
+## <a name="individual-assignments"></a>個別の割り当て
 
-    組織が Azure Active Directory (Azure AD) を使用しておらず、メール受信用の電子メール アドレスがサインイン用と異なる場合は、ここで入力できます。 [Add a different email for receiving communication]\(連絡の受信用に別の通知電子メール アドレスを追加する\) というハイパーリンクを選択します。 
+新しいユーザーがサブスクリプションの特典にアクセスできるように、新しいユーザーに Visual Studio サブスクリプション ライセンスを割り当てる方法を次に示します。
 
-    **ダウロードへのアクセス:**  
-    このサブスクライバーが [Visual Studio サブスクリプション ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、必ず、ダウンロードのトグルをオンのままにしてください。 ダウンロードを無効にすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。 
-    
-    このサブスクライバーのオプション選択が完了したら、**[追加]** をクリックします。
+1. [管理者ポータル](https://manage.visualstudio.com)にサインインします。
 
-    <img alt="Enter subscriber information" src="_img\assign-license-add\add-subscriber-1.png" style="border: 1px solid #CCCCCC" />
-    <img alt="Enter subscriber information" src="_img\assign-license-add\add-subscriber-2.png" style="border: 1px solid #CCCCCC" />
+2. 1 人の Visual Studio サブスクライバーにライセンスを割り当てるには、テーブルの上部にある **[追加]** を選択します。
 
-4.  サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
+   ![1 人のサブスクライバーを追加する](media\add-single-subscriber.png)
 
+3. フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます。 
+
+   ![新しい通知メール アドレスを追加する](media\add-new-subscriber-notification-email.png)
+
+   このサブスクライバーが [Visual Studio サブスクリプション ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインするときにソフトウェアのダウンロードにアクセスできるようにする場合は、**[ダウンロードの設定]** セクションでダウンロードのトグルをオンのままにします。 ダウンロードを無効にすると、ユーザーはソフトウェアのダウンロードにアクセスできなくなりますが、サブスクリプションに含まれる他のすべての特典には引き続きアクセスできます。
+
+   ![ダウロードにアクセスする](media\access-to-downloads.png)
+
+   サブスクライバーが受け取る情報の言語を変更する場合は、**[Communication Preferences]\(通信設定\)** セクションで変更できます。
+
+   ![通知メールを送信するときに使用する言語を変更する](media\change-subscriber-communication-preference.png)
+
+   サブスクリプションに独自の参照メモを追加する場合は、**[Add reference]\(参照の追加\)** セクションで追加できます。
+
+   ![サブスクリプションごとに独自の参照メモを追加する](media\add-subscriber-reference-notes.png) 
+
+    オプションの選択とサブスクライバーのデータの入力が終わったら、**[Add Subscriber]\(サブスクライバーの追加\)** フライアウトの下部にある **[追加]** を選択します。
+
+   ![[追加] ボタンを選択する](media\add-button.png)
+
+4. サブスクライバーを追加すると、詳細な説明が記載された割り当てメールがサブスクライバーに自動的に送信されます。 サブスクライバーを選択して、上部メニューの **[再送信]** ボタンをクリックすることで、いつでも割り当てメールを送信し直すことができます。
+
+   ![必要なときにいつでもアクティブ化メールを任意または複数のユーザーに再送する](media\resend-subscriber-activation-emails.png) 
 
 ## <a name="bulk-assignments"></a>一括割り当て
-1.  複数のサブスクライバーを一度に追加するには、**[サブスクライバーの管理]** タブに移動します。上部リボンの **[一括追加]** をクリックします。 
 
-2. 一括割り当てでは、Microsoft Excel テンプレートを使ってサブスクライバーをアップロードします。 [Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで、**[ダウンロード]** をクリックしてテンプレートをダウンロードします。 常にこのテンプレートの最新バージョンをダウンロードしてください。 古いバージョンを使うと、一括アップロードが失敗する可能性があります。
+1. 複数のサブスクライバーを一度に追加するには、**[サブスクライバーの管理]** タブに移動します。上部リボンの **[一括追加]** をクリックします。
 
-3.  Excel スプレッドシートのフィールドに、サブスクリプションを割り当てるユーザーの情報を入力します。 [Reference] は省略可能なフィールドです。 テンプレートに正しく入力されていない箇所があると、問題を説明するエラー メッセージが表示されます。 完了したら、ファイルをローカルに保存します。
-**問題なくアップロードできるよう、次のベスト プラクティスに従ってください**。
+  ![複数のサブスクライバーを追加する](media\add-multiple-subscribers.png)
+
+1. 一括割り当てでは、Microsoft Excel テンプレートを使ってサブスクライバーをアップロードします。 [Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで、**[ダウンロード]** をクリックしてテンプレートをダウンロードします。
+
+  ![複数のサブスクライバーをアップロードするための Excel テンプレートをダウンロードする](media\download-template-upload-subscribers.png)
+
+  >![NOTE] 常にこのテンプレートの最新バージョンをダウンロードしてください。 古いバージョンを使うと、一括アップロードが失敗する可能性があります。
+
+1. Excel スプレッドシートのフィールドに、サブスクリプションを割り当てるユーザーの情報を入力します。 *[Reference]* は省略可能なフィールドです。完成したらローカルにファイルを保存します。
+
+  問題なくアップロードできるよう、次のベスト プラクティスに従ってください。
+
     - フォームのどのフィールドにもコンマが含まれていないことを確認します。
-    - フォームのフィールド (ユーザー名など) の前後のスペースを削除します。
-    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名を "Maggie        May" と入力してはいけません。システムは余分なスペースを除去しません)。
+    - フォームのフィールドの前後のスペースを削除します。
+    - ユーザーの名前の名または姓が 2 つの部分からなる場合、それらの間に余分なスペースがないようにします (たとえば、"Maggie May" のように 2 つの部分からなる名前は、"MaggieMay" と入力する必要があります。システムは余分なスペースを除去しません)。
 
-4.  Visual Studio サブスクリプション管理ポータルに戻り、[Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\) ダイアログ ボックスで **[参照]** をクリックします。 保存した Excel ファイルを選んで、**[OK]** をクリックします。 アップロードの進行状況が画面に表示されます。 
+1. Visual Studio サブスクリプション管理ポータルに戻ります。 **[Upload Multiple Subscribers]\(複数のサブスクライバーのアップロード\)** ダイアログ ボックスで、**[参照]** をクリックします。
 
-    <img alt="Bulk add upload" src="_img\assign-license-add\bulk-assign-upload-2.png" style="border: 1px solid #CCCCCC" />
+  ![複数のサブスクライバーをアップロードするために保存したテンプレートを参照する](media\bulk-add-browse-saved-template.png)
 
-テンプレートにエラーが含まれていると、アップロードは失敗してエラーが表示されるので、テンプレートを修正して一括アップロードを再試行します。
-    <img alt="Upload fail" src="_img\assign-license-add\bulk-assign-upload-fail.png" style="border: 1px solid #CCCCCC" />
+1. 保存した Excel ファイルを選んで、**[OK]** をクリックします。
 
-アップロードが成功すると、サブスクライバーの一覧と確認メッセージが表示されます。
+  ![複数のサブスクライバーをアップロードするための Excel テンプレートをアップロードする](media\bulk-upload-subscribers.png)
 
+  アップロードの進行状況を示すダイアログが表示されます。
+
+  テンプレートにエラーが含まれていると、アップロードは失敗してエラーが表示されるので、テンプレートを修正して一括アップロードを再試行します。
+
+  ![複数サブスクライバーのアップロードが失敗した場合のエラー メッセージ](media\bulk-add-template-failed.png)
+
+  アップロードが成功すると、サブスクライバーの一覧と確認メッセージが表示されます。
+
+  ![複数サブスクライバーのアップロードが成功した場合の確認メッセージ](media\bulk-add-template-success.png)

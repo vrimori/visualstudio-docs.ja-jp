@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf30e53f8d62f98b5e18b4e9a64e43d32aa498b0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 04a8209ca6856ba550a45c7f67480d1e89db49a3
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567474"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946210"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile タスク
-指定したリスト内で app.config ファイルを検索します。  
+指定したリスト内で *app.config* ファイルを検索します。  
   
 ## <a name="parameters"></a>パラメーター  
  `FindAppConfigFile` タスクのパラメーターの説明を次の表に示します。  
@@ -39,8 +39,8 @@ ms.locfileid: "31567474"
 |`TargetPath`|必須の `String` 型のパラメーターです。<br /><br /> メタデータとして追加する値を指定します。|  
   
 ## <a name="remarks"></a>コメント  
- 表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 表に示されているパラメーターを使用できるだけでなく、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

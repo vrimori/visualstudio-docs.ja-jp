@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションを最大限に活用す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a1e1baed18eb592386d45f436c5d4988b91ea1b3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 2ab7675b5c354cf619d3daca38b05d5d473091fd
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34548724"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36326999"
 ---
 # <a name="managing-subscriptions"></a>サブスクリプションを管理する
 
@@ -102,8 +102,8 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 3.  **[詳細情報]** タブでは、名前、メール アドレス、国/地域、プロファイルの画像、連絡先の設定を変更することができます。  **[ユーザー設定]** タブでは、優先する言語、日付と時間のパターン、タイム ゾーン、ユーザー インターフェイスのテーマを選択することができます。  
 4.  変更が終わったら、**[保存]** をクリックします。 
 5.  ブラウザーの **[戻る]** ボタンをクリックして特典ページに戻ります。 
+    ![プロファイルの情報を編集する](_img\manage-vs-subscriptions\edit-profile-resized.png)
 
-![プロファイルの情報を編集する](_img\manage-vs-subscriptions\edit-profile-resized.png)
 
 ### <a name="linking-my-subscription-to-existing-vsts-or-azure-subscriptions"></a>既存の VSTS または Azure サブスクリプションにサブスクリプションをリンクする
 個人の Microsoft アカウント (MSA) を使ってサブスクリプションにサインインしていて、Azure によって管理される職場または学校アカウントを使う Visual Studio Team Services または Microsoft Azure を含むサブスクリプションがある場合は、2 つのサブスクリプションをリンクできます。 これは "代替アカウント" と呼ばれ、サブスクリプションへのサインインに MSA を使い続けることができるだけでなく、職場または学校アカウントに関連付けられている既存の Azure、VSTS、IDE リソースにアクセスすることもできます。 
@@ -111,12 +111,11 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 両方のアカウントで同じメール アドレスを使っている場合でも、両方のアカウントで特典を使うためには、代替として職場/学校アカウントを追加する必要があります。 
 
 代替アカウントを追加するには:
-1. Microsoft アカウント (MSA) で[サブスクライバー ポータル](https://my.visualstudio.com)にサインインします。
+1. Microsoft アカウント (MSA) で[サブスクライバー ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にサインインします。
 2. **[サブスクリプション]** タブをクリックします。
 3. **[Related Links]** の下にある **[代替アカウントを追加する]** を選びます。
 4. 職場/学校アカウントのメール アドレスを入力して、**[追加]** をクリックします。 
-
-![代替アカウント](_img\manage-vs-subscriptions\alternate-account-resized.png)
+    ![代替アカウント](_img\manage-vs-subscriptions\alternate-account-resized.png)
 
 代替アカウントを追加した後は、**[サブスクリプション]** タブをクリックして **[Related Links]** セクションで適切なオプションを選ぶことにより、いつでも更新または削除できます。  
 

@@ -18,20 +18,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1406e687a4d84fd2d6ebe0ac7b327afa2c9fffd
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: f720c86f98aa484a6f83721dcf6d6c0881822b22
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34477510"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079639"
 ---
-# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>方法 : プロジェクト ファイルの名前または場所を参照する
+# <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>方法: プロジェクト ファイルの名前または場所を参照する
 独自のプロパティを作成することなく、プロジェクト ファイル自体のプロジェクトの名前または場所を使用できます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、プロジェクトのファイル名とプロジェクトに関連するその他のプロパティを参照する、予約済みのプロパティを提供します。 予約済みのプロパティの詳細については、「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」を参照してください。  
   
-## <a name="using-the-msbuildprojectname-property"></a>MSBuildProjectName プロパティの使用  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、毎回定義することなくプロジェクト ファイルで使用できる、いくつかの予約済みプロパティを提供します。 たとえば、予約済みプロパティ `MSBuildProjectName` はプロジェクト ファイル名への参照を提供します。  
+## <a name="use-the-project-properties"></a>プロジェクトのプロパティを使用する
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、毎回定義することなくプロジェクト ファイルで使用できる、いくつかの予約済みプロパティを提供します。 たとえば、予約済みプロパティ `MSBuildProjectName` はプロジェクト ファイル名への参照を提供します。 予約済みプロパティ `MSBuildProjectDirectory` はプロジェクト ファイルの場所への参照を提供します。
   
-#### <a name="to-use-the-msbuildprojectname-property"></a>MSBuildProjectName プロパティを使用するには  
+#### <a name="to-use-the-project-properties"></a>プロジェクトのプロパティを使用するには
   
 -   他のすべてのプロパティの場合と同様に、$() 表記でプロジェクト ファイルのプロパティを参照します。 例:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34477510"
     <CSC Sources = "@(CSFile)"   
         OutputAssembly = "$(MSBuildProjectName).exe"/>  
     </CSC>  
-    ```  
+    ```          
   
  予約済みのプロパティを使用する利点は、プロジェクト ファイル名への変更がすべて自動的に組み込まれることです。 次回プロジェクトをビルドするとき、出力ファイルに新しい名前が付けられ、追加の操作は必要ありません。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34477510"
     <!-- Specify the inputs -->  
     <ItemGroup>  
         <CSFile Include = "consolehwcs1.cs"/>  
-    </ItemGroup>  
+     </ItemGroup>  
     <Target Name = "Compile">  
         <!-- Run the Visual C# compilation using  
         input files of type CSFile -->  
@@ -73,7 +73,20 @@ ms.locfileid: "34477510"
     </Target>  
 </Project>  
 ```  
+
+## <a name="example"></a>例
+ 次のプロジェクト ファイルの例では、`MSBuildProjectDirectory` 予約済みプロパティを使用して、プロジェクト ファイルの場所にあるファイルへの完全パスを作成します。  
   
-## <a name="see-also"></a>参照  
+```xml  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">     
+    
+    <!-- Build the path to a file in the root of the project -->  
+    <PropertyGroup>  
+        <NewFilePath>$([System.IO.Path]::Combine($(MSBuildProjectDirectory), `BuildInfo.txt`))</NewFilePath>
+    </PropertyGroup>  
+</Project>  
+```  
+  
+## <a name="see-also"></a>関連項目  
 [MSBuild](../msbuild/msbuild.md)  
- [MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)

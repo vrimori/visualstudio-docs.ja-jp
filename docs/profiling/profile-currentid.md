@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cbd7e03ef5e8272d3decee9b6f7a344f5f659e67
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: d19671e0f9280f02a012ad02b5421f2d62d30926
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255211"
 ---
 # <a name="profilecurrentid"></a>PROFILE_CURRENTID
 PROFILE_CURRENTID は、NameProfile、StartProfile、StopProfile、SuspendProfile、および ResumeProfile の各関数呼び出しで、スレッド ID またはプロセス ID の疑似トークンを返します。 指定されたスレッドやプロセスではなく、現在のスレッドまたはプロセスで関数を実行する場合に使用します。  
   
 ## <a name="example"></a>例  
- PROFILE_CURRENTID は VSPerf.h で次のように定義されます。  
+ PROFILE_CURRENTID は *VSPerf.h* で次のように定義されます。  
   
 ```cpp  
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;  
@@ -58,7 +59,7 @@ void ExerciseProfileCurrentID()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [NameProfile](../profiling/nameprofile.md)   
  [ResumeProfile](../profiling/resumeprofile.md)   

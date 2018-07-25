@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc5a4c5774a4290d8811026d4c522e4d9e972e4e
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: db4b47582d03a7f040850dd69e61d5fee2b80020
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572154"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815257"
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>チュートリアル: サンプリングを使ったコマンド ライン プロファイリング
 
 このチュートリアルでは、コマンド ライン ツールを使用したアプリケーションのプロファイリング方法と、パフォーマンス上の問題をサンプリングによって特定する方法について説明します。
 
-このチュートリアルでは、コマンド ライン ツールを使用してマネージ アプリケーションのプロファイリングを行う方法と、サンプリングを使用してアプリケーションのパフォーマンス上の問題を特定および識別する方法の各手順を説明します。
+このチュートリアルでは、コマンド ライン ツールを使用してマネージド アプリケーションのプロファイリングを行う方法と、サンプリングを使用してアプリケーションのパフォーマンス上の問題を特定および識別する方法の各手順を説明します。
 
 このチュートリアルでは、次の手順を行います。
 

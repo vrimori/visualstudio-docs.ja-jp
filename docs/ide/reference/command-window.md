@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6594b87ad313b7f452f579059af377e6128a887a
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 54a6dee20c35b290b50306d5484dc139e8a7600a
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704760"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235103"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 **[コマンド]** ウィンドウは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE) でコマンドやエイリアスを実行するときに使用します。 メニュー コマンドと、メニューに表示されないコマンドの両方を実行できます。 **[コマンド]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[コマンド ウィンドウ]** をクリックします。
@@ -75,7 +75,7 @@ ms.locfileid: "33704760"
  一方、**[イミディエイト]** ウィンドウの場合、等号 (=) は、代入演算子と解釈されます。 たとえば、コマンド `>Debug.EvaluateStatement(varA=varB)` は変数 `varA` に変数 `varB` の値を代入します。
 
 ## <a name="parameters-switches-and-values"></a>パラメーター、スイッチ、および値
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コマンドには、引数、スイッチ、および値を必要とするコマンドと省略できるコマンドがあります。 このようなコマンドを処理するときは、いくつかの規則が適用されます。 リッチ コマンドの例を次に示し、用語について説明します。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コマンドには、引数、スイッチ、値を必要とするコマンドと省略できるコマンドがあります。 このようなコマンドを処理するときは、いくつかの規則が適用されます。 リッチ コマンドの例を次に示し、用語について説明します。
 
 ```cmd
 Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar

@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: eea5a55f57ed6b3fb710195dfe94839bdb17fb7e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1a4380d3367177bec4036aecd819ed6513c0efd6
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238148"
 ---
 # <a name="functions-view---net-memory-sampling-data"></a>関数ビュー - .NET メモリ サンプリング データ
 サンプリング メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数が一覧表示され、割り当てのサイズと数が報告されます。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/19/2018
 |**割り当てバイト数 (関数のみ)**|この関数によって割り当てられたメモリのバイト数。その子関数によるものは含まれません。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイル実行で割り当てられたすべてのメモリのバイト数に対する、この関数の排他バイトであったバイト数の割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [関数ビュー](../profiling/functions-view-sampling-data.md)   
  [関数 ビュー](../profiling/functions-view-instrumentation-data.md)

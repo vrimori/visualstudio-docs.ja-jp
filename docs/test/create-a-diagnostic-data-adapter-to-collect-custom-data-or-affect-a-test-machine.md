@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a12cac4e3a0c7144fd2e2cca2044ad416ac966d0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a514459e834e5652e544991eb061f0c96767dd32
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31964952"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302641"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>診断データ アダプターを作成してカスタム データを収集する、またはテスト コンピューターに影響を与える
 
@@ -24,7 +24,7 @@ ms.locfileid: "31964952"
 
 構成設定ファイルを使用して、カスタム診断データ アダプターに既定の入力を渡すことができます。 たとえば、収集してテスト結果にアタッチするファイルの場所、またはシステムの残りのディスク容量についての情報を指定できます。 このデータは、作成するテストの設定ごとに構成できます。 これは、Microsoft Test Manager に用意されている既定のエディターを使用して表示および編集できるほか、エディターとして使用する独自のユーザー コントロールを作成することもできます。 エディターでアダプター構成に加えたすべての変更はテストの設定と共に保存されます。
 
-Visual Studio からテストを実行する場合は、これらのテスト設定をアクティブとして設定する必要があります。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+Visual Studio からテストを実行する場合は、これらのテスト設定をアクティブとして設定する必要があります。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 ## <a name="tasks"></a>[タスク]
 

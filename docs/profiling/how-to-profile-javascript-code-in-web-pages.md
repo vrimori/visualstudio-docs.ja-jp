@@ -13,15 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da608523430724e279efc3d5c7c5d5b27564845
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 007603f0695a658b6bfa6c1ab1173b4483004c13
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843924"
 ---
 # <a name="how-to-profile-javascript-code-in-web-pages"></a>方法: Web ページ内の JavaScript コードをプロファイリングする
 
-Visual Studio プロファイリング ツールは、インストルメンテーション プロファイリング メソッドを使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション、任意の Web ページ、または JavaScript アプリケーションで実行する JavaScript コードのパフォーマンス データを収集できます。 Internet Explorer 8 以降が必要です。
+Visual Studio プロファイル ツールは、インストルメンテーション プロファイル メソッドを使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション、任意の Web ページ、または JavaScript アプリケーションで実行する JavaScript コードのパフォーマンス データを収集できます。 Internet Explorer 8 以降が必要です。
 
 > [!WARNING]
 > UWP アプリで JavaScript をプロファイリングするには、「[JavaScript メモリ](../profiling/javascript-memory.md)」をご覧ください 
@@ -46,7 +47,7 @@ JavaScript のプロファイルを指定すると、ブラウザーで実行す
 
 5. ウィザードの 3 番目のページで、 **[プロファイル JavaScript]** チェック ボックスを選び、 **[次へ]** をクリックします。
 
-6. ウィザードの 4 番目のページで、 **[完了]** をクリックして、ブラウザーで Web アプリケーションを開始します。
+6. ウィザードの 4 番目のページで、**[完了]** をクリックして、ブラウザーで Web アプリケーションを開始します。
 
 7. プロファイリングする機能を実行します。
 
@@ -68,7 +69,7 @@ JavaScript のプロファイルを指定すると、ブラウザーで実行す
 
     2. **[プロファイル JavaScript]** チェック ボックスを選び、 **[次へ]** をクリックします。
 
-6. ウィザードの 4 番目のページで、 **[完了]** をクリックし、ブラウザーで Web ページを開始します。
+6. ウィザードの 4 番目のページで、**[完了]** をクリックし、ブラウザーで Web ページを開始します。
 
 7. プロファイリングする機能を実行します。
 

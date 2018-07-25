@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: ac32063f61baa33b9b28eea51988b95edde579eb
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: d3b010998a56771cab1416c19a311f8bcbcf855b
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751872"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117629"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL をテストする方法
 
@@ -46,7 +46,7 @@ ms.locfileid: "34751872"
 
     -   テスト メソッドは、 `TEST_CLASS(YourClassName){...}`を使用してクラスにグループ化されます。
 
-         テストが実行されると、各テスト クラスのインスタンスが作成されます。 テスト メソッドが呼び出される順序は決まっていません。 各モジュール、クラス、またはメソッドの前後に呼び出される特殊なメソッドを定義することができます。 詳細については、MSDN ライブラリの「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)」をご覧ください。
+         テストが実行されると、各テスト クラスのインスタンスが作成されます。 テスト メソッドが呼び出される順序は決まっていません。 各モジュール、クラス、またはメソッドの前後に呼び出される特殊なメソッドを定義することができます。 詳細については、MSDN ライブラリの「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](how-to-use-microsoft-test-framework-for-cpp.md)」をご覧ください。
 
 ##  <a name="Verify_that_the_tests_run_in_Test_Explorer"></a> テストがテスト エクスプローラーで実行されることを確認する
 
@@ -113,7 +113,7 @@ ms.locfileid: "34751872"
 
 5.  宣言された関数の最小限の実装を追加します。 **RooterLib.cpp** を開き、次のコードを追加します。
 
-    ```
+    ```cpp
     // constructor
     CRooterLib::CRooterLib()
     {
@@ -131,11 +131,11 @@ ms.locfileid: "34751872"
 
 1.  RooterLibTests プロジェクトに RooterLib を追加します。
 
-    1.  ソリューション エクスプローラーで **RooterLibTests** プロジェクトを選択し、ショートカット メニューの **[参照...]** を選択します。
+    1.  ソリューション エクスプローラーで **RooterLibTests** プロジェクトを選択し、ショートカット メニューの **[参照]** を選択します。
 
     2.  RooterLib の [プロジェクトのプロパティ] ダイアログ ボックスで **[共通プロパティ]** を展開し、**[Framework と参照]** を選択します。
 
-    3.  **[新しい参照の追加...]** をクリックします。
+    3.  **[新しい参照の追加]** を選択します。
 
     4.  **[参照の追加]** ダイアログ ボックスで **[ソリューション]** を展開し、**[プロジェクト]** を選択します。 次に **[RouterLib]** 項目を選択します。
 
@@ -151,7 +151,7 @@ ms.locfileid: "34751872"
 
 3.  インポートした関数を使用するテストを追加します。 **unittest1.cpp** に次のコードを追加します。
 
-    ```
+    ```cpp
     TEST_METHOD(BasicTest)
     {
         CRooterLib rooter;
@@ -245,7 +245,7 @@ ms.locfileid: "34751872"
 
 1.  **unittest1.cpp** に別のテストを追加します。
 
-    ```
+    ```cpp
     // Verify that negative inputs throw an exception.
      TEST_METHOD(NegativeRangeTest)
      {
@@ -291,7 +291,7 @@ ms.locfileid: "34751872"
 
     3.  例外をキャッチするには、**RooterLib.cpp** にコードを追加します。
 
-        ```
+        ```cpp
         #include <stdexcept>
         ...
         double CRooterLib::SquareRoot(double v)

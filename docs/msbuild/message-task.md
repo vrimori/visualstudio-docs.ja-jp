@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0555ae538cb473d436727da67af40be037c992a4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11e4318b9a59f51e7e20ce36aa39d33d4b96725a
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569281"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077175"
 ---
 # <a name="message-task"></a>Message タスク
 ビルド中のメッセージをログに記録します。  
@@ -45,7 +45,7 @@ ms.locfileid: "31569281"
   
  既定では、メッセージは MSBuild のコンソール ロガーに送信されます。 これは、<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A> プロパティを設定することにより変更できます。 ロガーによって `Importance` パラメーターが解釈されます。  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例は、登録されているすべてのロガーにメッセージをログ記録します。  
@@ -60,6 +60,6 @@ ms.locfileid: "31569281"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)

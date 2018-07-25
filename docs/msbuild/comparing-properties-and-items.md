@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d2464acb75d8ea8a309d788aa95dc86b44d47e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ffaf1bf06a39036845dc6a2f48c3f0d5f537da01
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37967927"
 ---
 # <a name="comparing-properties-and-items"></a>プロパティと項目の比較
 MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
@@ -41,7 +42,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 </PropertyGroup>  
 ```  
   
- 通常、`BuildDependsOn` プロパティは、ターゲットの `DependsOnTargets` 属性の引数として使用され、項目一覧に変換されます。 このプロパティを上書きして、ターゲットを追加したり、ターゲットの実行順を変更したりすることができます。 たとえば、オブジェクトに適用された  
+ 通常、`BuildDependsOn` プロパティは、ターゲットの `DependsOnTargets` 属性の引数として使用され、項目一覧に変換されます。 このプロパティをオーバーライドして、ターゲットを追加したり、ターゲットの実行順を変更したりすることができます。 たとえば、オブジェクトに適用された  
   
 ```xml  
 <PropertyGroup>  
@@ -54,7 +55,7 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
   
  CustomBuild ターゲットをターゲット一覧に追加し、`BuildDependsOn` に値 `BeforeBuild;CoreBuild;AfterBuild;CustomBuild` を付与します。  
   
- MSBuild 4.0 以降、ターゲットの依存関係の挿入は推奨されていません。 代わりに `AfterTargets` 属性と `BeforeTargets` 属性を使用してください。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
+ MSBuild 4.0 以降、ターゲットの依存関係の挿入は非推奨とされます。 代わりに `AfterTargets` 属性と `BeforeTargets` 属性を使用してください。 詳細については、「[ターゲットのビルド順序](../msbuild/target-build-order.md)」を参照してください。  
   
 ### <a name="conversions-between-strings-and-item-lists"></a>文字列と項目一覧との変換  
  MSBuild は、項目の種類と文字列値の変換を必要に応じて実行します。 項目一覧を文字列値にする方法については、MSBuild プロパティの値として項目の種類を使用すると何が起こるかを考えます。  
@@ -87,9 +88,10 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 -   項目定義が出現順に定義および修正されます。  
   
 -   項目が出現順に定義および修正されます。  
-  
+ 
+ 
  ビルドの実行フェーズでは、ターゲット内で定義されるプロパティおよび項目は、出現順に、1 つの段階でまとめて評価されます。  
-  
+ 
  ただし、これだけでは済みません。 プロパティ、項目定義、または項目を定義するときに、その値も評価されます。 式エバリュエーターで、値を指定する文字列が展開されます。 文字列の展開はビルド フェーズによって変わります。 プロパティと項目の詳細な評価順は次のとおりです。  
   
 -   ビルドの評価フェーズ:  
@@ -127,9 +129,9 @@ MSBuild のプロパティと項目は、いずれもタスクに情報を渡し
 KeyFileVersion: 1.0.0.3  
 ```  
   
- これは、`KeyFileVersion` の値が実際には文字列 "@(KeyFile->'%(Version)')" であるためです。 プロパティが最初に定義されたときに項目と項目の変換が展開されなかったため、`KeyFileVersion` プロパティには展開されていない文字列値が割り当てられました。  
+ これは、`KeyFileVersion` の値が実際には文字列 "\@(KeyFile->'%(Version)')" であるためです。 プロパティが最初に定義されたときに項目と項目の変換が展開されなかったため、`KeyFileVersion` プロパティには展開されていない文字列値が割り当てられました。  
   
- ビルドの実行フェーズで Message タスクを処理するときに、MSBuild は文字列 "@(KeyFile->'%(Version)')" を展開して "1.0.0.3" を生成します。  
+ ビルドの実行フェーズで Message タスクを処理するときに、MSBuild は文字列 "\@(KeyFile->'%(Version)')" を展開して "1.0.0.3" を生成します。  
   
  プロパティと項目グループの順序が変わった場合でも、同じメッセージが表示されます。  
   
@@ -173,11 +175,11 @@ KeyFileVersion:
 </Target>  
 ```  
   
- `KeyFileVersion` の値は "@(KeyFile->'%(Version)')" ではなく "1.0.0.3" に設定されます。 Message タスクを実行すると、次のメッセージが表示されます。  
+ `KeyFileVersion` の値は "\@(KeyFile->'%(Version)')" ではなく "1.0.0.3" に設定されます。 Message タスクを実行すると、次のメッセージが表示されます。  
   
 ```  
 KeyFileVersion: 1.0.0.3  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

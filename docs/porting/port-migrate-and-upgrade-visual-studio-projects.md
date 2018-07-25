@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの移植、移行、およびアップグレード
 description: 以前のバージョンの Visual Studio で作成されたプロジェクトに対する Visual Studio 2017 でのサポートと、Visual Studio がプロジェクトを移行する必要があるタイミングを決定する方法のリファレンス。
-ms.date: 03/14/2018
+ms.date: 06/19/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -19,24 +19,23 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-ms.openlocfilehash: 28b2f4df3cba1c0dd56cda6c8ba4e6c7f5cbe495
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 747e2aa80e49877128d694d9eb1f799f25b33985
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32032204"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058751"
 ---
 # <a name="project-migration-and-upgrade-reference-for-visual-studio-2017"></a>Visual Studio 2017 のプロジェクトの移行とアップグレードのリファレンス
 
-通常、新しいバージョンの Visual Studio はいずれも、以前の種類のプロジェクト、ファイル、その他のアセットに対応しています。 それらのオブジェクトは[これまでと同様に](../ide/solutions-and-projects-in-visual-studio.md)操作できます。新しい機能を利用していない場合でも、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 など、以前のバージョンとの下位互換性の維持が一般に試みられています。 (どの機能がどのバージョンに固有の機能であるかについては、[リリース ノート](https://www.visualstudio.com/vs/release-notes/)を参照してください。)
+通常、新しいバージョンの Visual Studio はいずれも、以前の種類のプロジェクト、ファイル、その他のアセットに対応しています。 それらのオブジェクトは[これまでと同様に](../ide/solutions-and-projects-in-visual-studio.md)操作できます。新しい機能を利用していない場合でも、Visual Studio 2015、Visual Studio 2013、Visual Studio 2012 など、以前のバージョンとの下位互換性の維持が一般に試みられています。 (どの機能がどのバージョンに固有の機能であるかについては、[リリース ノート](https://visualstudio.microsoft.com/vs/release-notes/)を参照してください。)
 
-一部の種類のプロジェクトに対するサポートは、今後変更される場合もあります。 新しいバージョンの Visual Studio では、特定のプロジェクトがサポートされなくなったり、下位互換性がないプロジェクトの更新が必要になったりすることがあります。 移行に関する問題の現在の状況については、[Visual Studio Developer Community のサイト](https://developercommunity.visualstudio.com)を参照してください。
+一部の種類のプロジェクトに対するサポートは、今後変更される場合もあります。 新しいバージョンの Visual Studio では、特定のプロジェクトが一切サポートされなくなったり、下位互換性がないプロジェクトの更新が必要になったりすることがあります。 移行に関する問題の現在の状況については、[Visual Studio Developer Community のサイト](https://developercommunity.visualstudio.com)を参照してください。
+
+現在、この記事では、Visual Studio 2017 の移行が可能なプロジェクト タイプに対してのみ詳細を提供しています。 この記事では、Visual Studio 2017 でサポートされなくなったことで移行できないプロジェクト タイプは除外されています。 また、移行に関する問題がないサポート対象のプロジェクト タイプ ([対象プラットフォームと互換性](/visualstudio/productinfo/vs2017-compatibility-vs)に関するページでその一覧を確認できます) もこの記事では除外されています。
 
 > [!Important]
-> 現在、この記事では、Visual Studio 2017 の移行を伴うプロジェクトのみの詳細を提供しています。 サポート対象のプロジェクトで、移行に関する問題のない種類 ([対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)に関するページでその一覧を確認できます) は含まれていません。 一部の種類のプロジェクトは Visual Studio 2017 ではまったくサポートされないため、移行することができません。
-
-> [!Important]
-> 特定の種類のプロジェクトでは、Visual Studio インストーラーで適切なワークロードをインストールする必要があります。 ワークロードがインストールされていない場合、Visual Studio は不明な、または互換性のないプロジェクトの種類を報告します。 その場合、インストール オプションを確認して、やり直してください。 Visual Studio 2017 でサポートされているプロジェクトの詳細について、[対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)に関する記事をもう一度ご覧ください。
+> 特定の種類のプロジェクトでは、Visual Studio インストーラーで適切なワークロードをインストールする必要があります。 ワークロードがインストールされていない場合、Visual Studio は不明な、または互換性のないプロジェクトの種類を報告します。 その場合、インストール オプションを確認して、やり直してください。 Visual Studio 2017 でサポートされているプロジェクトの詳細について、[対象プラットフォームと互換性](/visualstudio/productinfo/vs2017-compatibility-vs)に関する記事をもう一度ご覧ください。
 
 ## <a name="project-types"></a>プロジェクトの種類
 
@@ -76,7 +75,7 @@ ms.locfileid: "32032204"
 
 ## <a name="how-visual-studio-decides-when-to-migrate-a-project"></a>Visual Studio がプロジェクトを移行するタイミングを決定する方法
 
-Visual Studio の各新規バージョンでは、一般に、バージョンが異なっても同じプロジェクトを開き、変更し、ビルドできるように、以前のバージョンとの互換性が維持されます。 ただし、時間の経過と共に、一部のプロジェクトの種類のサポート終了など、避けられない変更が発生します (Visual Studio 2017 でサポートされているプロジェクトの種類については「[Visual Studio 2017 の対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)」をご覧ください)。このような場合、新しいバージョンの Visual Studio はプロジェクトを読み込まず、移行パスを提供しません。そのようなプロジェクトは、それをサポートしている以前のバージョンの Visual Studio で管理する必要があります。
+Visual Studio の各新規バージョンでは、一般に、バージョンが異なっても同じプロジェクトを開き、変更し、ビルドできるように、以前のバージョンとの互換性が維持されます。 ただし、時間の経過と共に、一部のプロジェクトの種類のサポート終了など、避けられない変更が発生します (Visual Studio 2017 でサポートされているプロジェクトの種類については「[Visual Studio 2017 の対象プラットフォームと互換性](/visualstudio/productinfo/vs2017-compatibility-vs)」をご覧ください)。このような場合、新しいバージョンの Visual Studio はプロジェクトを読み込まず、移行パスを提供しません。そのようなプロジェクトは、それをサポートしている以前のバージョンの Visual Studio で管理する必要があります。
 
 つまり、新しいバージョンの Visual Studio ではプロジェクトを開くことはできますが、以前のバージョンとの互換性がなくなる可能性がある方法でプロジェクトを更新または移行する必要があります。 Visual Studio は、複数の条件を使って、このような移行が必要かどうかを判断します。
 
@@ -92,7 +91,7 @@ Visual Studio の各新規バージョンでは、一般に、バージョンが
 
 このような一方向の変更には、プロジェクト ファイルでの `ToolsVersion` プロパティの変更が含まれます。これは、最終的に必要な実行可能で配置可能なアーティファクトにプロジェクトのソース コードを変換できる MSBuild の正確なバージョンを示します。 つまり、プロジェクトと以前のバージョンの Visual Studio との互換性を損なうものは、*Visual Studio* のバージョンではなく、`ToolsVersion` によって決定される *MSBuild* のバージョンです。 お使いの Visual Studio のバージョンに、プロジェクトでの `ToolsVersion` と一致する MSBuild ツールチェーンが含まれている限り、Visual Studio をそのツールチェーンを呼び出してプロジェクトをビルドできます。
 
-以前のバージョンで作成されたプロジェクトとの最大限の互換性を維持するため、Visual Studio 2017 には、`ToolsVersion` 15、14、12、4 をサポートするために必要な MSBuild ツールチェーンが含まれています。 これらの `ToolsVersion` 値のいずれかを使うプロジェクトでは、ビルドが成功するはずです (やはり、「[Visual Studio 2017 の対象プラットフォームと互換性](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs)」で説明されているように、Visual Studio 2017 がプロジェクトの種類をサポートするかどうかに依存します)。
+以前のバージョンで作成されたプロジェクトとの最大限の互換性を維持するため、Visual Studio 2017 には、`ToolsVersion` 15、14、12、4 をサポートするために必要な MSBuild ツールチェーンが含まれています。 これらの `ToolsVersion` 値のいずれかを使うプロジェクトでは、ビルドが成功するはずです (やはり、「[Visual Studio 2017 の対象プラットフォームと互換性](/visualstudio/productinfo/vs2017-compatibility-vs)」で説明されているように、Visual Studio 2017 がプロジェクトの種類をサポートするかどうかに依存します)。
 
 このコンテキストでの必然的な疑問は、新しい `ToolsVersion` 値にプロジェクトを手動で更新または移行する必要があるかどうかということです。 そのような変更は不要であり、行うと、修正するにはプロジェクトの再ビルドが必要な多くのエラーと警告が発生する可能性があります。 さらに、将来 Visual Studio が特定の `ToolsVersion` をサポートしなくなった場合、プロジェクトを開くと、`ToolsVersion` の値を変更する必要があるため、プロジェクト移行プロセスが開始されます。 そのような場合、その特定のプロジェクトの種類のサブシステムは、変更が必要なものを正確に知っており、この記事で前述したように自動的にこれらの変更を行うことができます。
 

@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45115b03fe62ecd78815861d6e82f1a0e6b98449
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 506222b3c0f140d6a6a941d50dddc4cebd92188b
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814887"
 ---
 # <a name="how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーによってスタンドアロンのネイティブ アプリケーションを起動し、同時実行データを収集する
 ここでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、ネイティブのスタンドアロン (クライアント) アプリケーションを起動し、プロセスおよびスレッドの同時実行データを収集する方法について説明します。  
@@ -28,9 +29,9 @@ ms.lasthandoff: 04/19/2018
 -   プロファイル セッションの終了  
   
 > [!NOTE]
->  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 コマンド プロンプトでプロファイラーを使用するには、**[コマンド プロンプト]** ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
+>  プロファイル ツールのコマンドライン ツールは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] インストール ディレクトリの *\Team Tools\Performance Tools* サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 コマンド プロンプトでプロファイラーを使用するには、**[コマンド プロンプト]** ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
   
-## <a name="starting-the-application-with-the-profiler"></a>プロファイラーによるアプリケーションの起動  
+## <a name="start-the-application-with-the-profiler"></a>プロファイラーによるアプリケーションの起動  
  プロファイラーを使用して対象アプリケーションを起動するには、[VSPerfCmd.exe](../profiling/vsperfcmd.md)**/start** オプションと **/launch** オプションを使用して、プロファイラーを初期化し、アプリケーションを起動します。 **/start** と **/launch**、およびそれぞれのオプションを指定できます。 **/globaloff** オプションを追加して、対象アプリケーションの起動時にデータ収集を一時停止することもできます。 次に、**/globalon** を使用してデータの収集を開始します。  
   
 #### <a name="to-start-an-application-with-the-profiler"></a>プロファイラーを使用してアプリケーションを起動するには  
@@ -61,8 +62,8 @@ ms.lasthandoff: 04/19/2018
     |[/console](../profiling/console.md)|対象のコマンド ライン アプリケーションを別のウィンドウで起動でします。|  
     |[/targetclr](../profiling/targetclr.md) **:** `CLRVersion`|アプリケーションに複数のバージョンの CLR (共通言語ランタイム) が読み込まれている場合に、プロファイリングを行う CLR のバージョンを指定します。|  
   
-## <a name="controlling-data-collection"></a>データ コレクションの制御  
- 対象アプリケーションの実行中は、VSPerfCmd.exe のオプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ収集を制御することにより、アプリケーションの起動や終了など、プログラム実行の特定部分のデータを収集できます。  
+## <a name="control-data-collection"></a>データ収集の制御  
+ 対象アプリケーションの実行中は、*VSPerfCmd.exe* オプションを使用してファイルへのデータ書き込みを開始および停止することにより、データ収集を制御できます。 データ収集を制御することにより、アプリケーションの起動や終了など、プログラム実行の特定部分のデータを収集できます。  
   
 #### <a name="to-start-and-stop-data-collection"></a>データ収集を開始および停止するには  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/19/2018
   
 -   **VSPerfCmd.exe**[/mark](../profiling/mark.md) オプションを使用して、データ ファイルにプロファイル マークを挿入することもできます。 **/mark** コマンドは、識別子、タイム スタンプ、およびオプションのユーザー定義文字列を追加します。 マークは、プロファイラー レポートおよびデータ ビューでデータをフィルター処理するために使用できます。  
   
-## <a name="ending-the-profiling-session"></a>プロファイル セッションの終了  
+## <a name="end-the-profiling-session"></a>プロファイル セッションの終了  
  プロファイル セッションを終了するには、プロファイラーがデータ収集を停止している必要があります。 同時実行データの収集を停止するには **VSPerfCmd /detach** オプションを呼び出して、プロファイリング対象のアプリケーションを終了する必要があります。 次に、**VSPerfCmd /shutdown** オプションを呼び出して、プロファイラーをオフにし、プロファイル データ ファイルを閉じます。  
   
 #### <a name="to-end-a-profiling-session"></a>プロファイル セッションを終了するには  

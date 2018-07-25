@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44d128df04ef13ea6ee4b5b20368b5932842cc3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3ce43a9b2acae5589e4b746ce4bf2b2a47b0111
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578688"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946834"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath タスク
 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] へのパスを取得します。  
@@ -41,7 +41,7 @@ ms.locfileid: "31578688"
 |`Path`|省略可能な `String` 型の出力パラメーターです。<br /><br /> 何らかのバージョンが存在する場合、最新の .NET SDK のパスが含まれます。 それ以外の場合は、`String.Empty` を返します。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`GetFrameworkSdkPath` タスクを使用し、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] のパスを `SdkPath` プロパティに保存します。  
@@ -59,6 +59,6 @@ ms.locfileid: "31578688"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

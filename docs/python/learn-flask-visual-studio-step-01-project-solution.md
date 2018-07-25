@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2420beaa7f200ca281e04189667c1534e2a0f991
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: a9e69986b74928b9488f468283b9dc1c7aff03f0
+ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752152"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36947116"
 ---
-# <a name="tutorial-step-1-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル手順 1: Visual Studio での Flask Web フレームワークの概要
+# <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Flask Web フレームワークの概要
 
 [Flask](http://flask.pocoo.org/) は Web アプリケーション用の軽量 Python フレームワークであり、URL のルーティングとページのレンダリングの基礎を提供します。
 
@@ -251,7 +251,7 @@ def hello(name, msg):
 > [!div class="nextstepaction"]
 > [ビューおよびページ テンプレートを使用して Flask アプリを作成する](learn-flask-visual-studio-step-02-create-app.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [Flask クイック スタート](http://flask.pocoo.org/docs/1.0/quickstart/)(flask.pocoo.org)
 - GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

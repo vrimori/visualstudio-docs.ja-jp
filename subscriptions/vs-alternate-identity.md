@@ -9,11 +9,12 @@ description: VSTS と Azure で使用するために Visual Studio サブスク�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: vs subscription
-ms.openlocfilehash: 9a83f78f35b9533c554c81cecd181c00eca05568
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 70d11f83584d776fef9dae7e771bcdeb40a3c477
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36326307"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio サブスクライバー向けの ID
 
@@ -34,42 +35,35 @@ Visual Studio サブスクリプションに代替アカウントを追加する
 
 すべてのサブスクリプションで、"職場または学校のアカウント" を追加できます。ログインを必要とする特典 (VS IDE、VSTS、Azure) でそのアカウントを使用できます。
 
-### <a name="prerequisites"></a>必須コンポーネント
-
-* [VSTS プロジェクト コレクションの管理者またはアカウント所有者のアクセス許可](https://docs.microsoft.com/en-us/vsts/accounts/faq-add-delete-users#find-owner)。
-
-* 代替アカウントを使用するには、自分のアカウントに関連付けられているサブスクリプションに Visual Studio Team Services または Microsoft Azure が含まれている必要があります。
-
-> [!Note]
-> 代替 ID でサブスクリプション特典の使用を継続できますが、サブスクリプションは元のアカウントに関連付けられています。
 
 ### <a name="add-the-alternate-account"></a>代替アカウントを追加する
 
-1. 自分の Microsoft アカウントで Visual Studio にサインインします (https://{あなたのアカウント}.visualstudio.com)。
+
+1. Microsoft アカウント (https://my.visualstudio.com) で Visual Studio サブスクライバー ポータルにサインインします。
 
 2. **サブスクリプション**に移動します。
 
-  ![代替アカウントの追加 - VS でサブスクリプションに移動する](_img/vs-alternate-identity/my-vs-subscriptions.png)
+
+   ![代替アカウントの追加 - VS でサブスクリプションに移動する](_img/vs-alternate-identity/my-vs-subscriptions.png)
 
 3. **[代替アカウントを追加する]** を選択します。
 
-  ![代替アカウントの追加を選択する ](_img/vs-alternate-identity/choose-add-alternate-account.png)
+   ![代替アカウントの追加を選択する ](_img/vs-alternate-identity/choose-add-alternate-account.png)
 
 4. 職場または学校アカウントを追加します。
 
-  ![職場または学校のアカウントを追加する](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png)
+   ![職場または学校のアカウントを追加する](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png)
 
-5. 職場または学校のアカウントを使用し、Visual Studio にサインインします (https://{あなたのアカウント}.visualstudio.com)。
+5. 職場または学校のアカウントを使用し、Visual Studio Team Services にサインインします (https://{あなたのアカウント}.visualstudio.com)。
 
-  ![職場または学校アカウントを使用する](_img/vs-alternate-identity/sign-in-with-alternate-account.png)
+   ![職場または学校アカウントを使用する](_img/vs-alternate-identity/sign-in-with-alternate-account.png)
 
-  代替アカウントが Visual Studio に追加されました。代替アカウントでのサインインを要求するサブスクリプション特典 (IDE、VSTS、Azure) を両方の ID で活用できます。
-
-代替アカウントの追加については、[My Visual Studio のよく寄せられる質問](https://www.visualstudio.com/my/myvsfaq#alternate)ページを参照してください。
+代替アカウントが Visual Studio に追加されました。代替アカウントでのサインインを要求するサブスクリプション特典 (IDE、VSTS、Azure) を両方の ID で活用できます。
 
 ## <a name="faq"></a>FAQ
 
 ### <a name="q--why-doesnt-vsts-recognize-me-as-a-visual-studio-subscriber"></a>Q: VSTS で Visual Studio サブスクライバーとして認識されないのはなぜですか?
+
 A: プライマリ ID または代替 ID を使用してサインインすると、VSTS で自動的にサブスクリプションが認識されます。 認識されない場合は、次のいくつかのことを試すことができます。
 
 * [特典として VSTS を含む](vs-vsts.md)アクティブな Visual Studio サブスクリプションがあることを確認します。
@@ -78,4 +72,4 @@ A: プライマリ ID または代替 ID を使用してサインインすると
 
 * VSTS にサインインする前に、少なくとも 1 回は [Visual Studio サブスクライバー ポータル](https://my.visualstudio.com?wt.mc_id=o~msft~docs)にアクセスします。
 
-引き続き VSTS でサブスクリプションが認識されない場合は、[サポートにお問い合わせください](https://www.visualstudio.com/team-services/support/)。
+引き続き VSTS でサブスクリプションが認識されない場合は、[サポートにお問い合わせください](https://visualstudio.microsoft.com/team-services/support/)。

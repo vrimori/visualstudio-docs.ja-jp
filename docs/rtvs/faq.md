@@ -10,11 +10,12 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: a8b9dd119aba9a5c28b450db11b2eb380b1872a0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 832d581a4147b8b050da16b1a1f72d8a3909fc35
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235308"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -33,7 +34,7 @@ A:  いいえ。
 A:  もちろん、できます。 以下に R を使用するユーザーに人気の拡張機能を示しますが、これらはごく一部です。
 
 - [VsVim で Vim のキー バインド](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
-- [Github](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
+- [GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
 - [Markdown editor によるライブ プレビュー](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor)
 
 詳細については、[Visual Studio Marketplace](https://marketplace.visualstudio.com/) をご覧ください。
@@ -50,7 +51,7 @@ A:  RTVS の 1.0 リリースは英語版のみです。 1.1 リリースでは�
 
 **Q.現在の Visual Studio の設定を本当に気に入っていますが、新しいデータ サイエンスの設定も試してみたいです。どうしたらいいのでしょうか?**
 
-A:  **[ツール] > [設定のインポートとエクスポート...]** を使用して現在の Visual Studio 設定を保存し、次にデータ サイエンスの設定に切り替えます。 保存した設定を復元するには、**[設定のインポートとエクスポート...]** コマンドを再度使用します。
+A:  **[ツール]** の **[設定のインポートとエクスポート]** を使用して現在の Visual Studio 設定を保存し、次にデータ サイエンスの設定に切り替えます。 保存した設定を復元するには、**[設定のインポートとエクスポート]** コマンドを再度使用します。
 
 **Q.ネットワーク共有上で Visual Studio プロジェクトを保存できますか?**
 
@@ -78,9 +79,9 @@ A:  いいえ。RTVS では、Windows の 64 ビット エディションで動�
 
 A:  はい。Visual Studio に統合されている任意のソース管理システムを使用できます。
 
-**Q.RTVS プロジェクトで推奨される `.gitignore` の設定はどのようなものですか?**
+**Q.RTVS プロジェクトで推奨される *.gitignore* の設定はどのようなものですか?**
 
-A:  Github に、`.gitignore` の推奨ファイルのマスター リポジトリが用意されています。 [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore) をご覧ください。
+A:  Github に、*.gitignore* の推奨ファイルのマスター リポジトリが用意されています。 [R .gitignore](https://github.com/github/gitignore/blob/master/R.gitignore) をご覧ください。
 
 ## <a name="remote-services"></a>リモート サービス
 
@@ -88,9 +89,9 @@ Q. **Visual Studio のリモート サービスとは?**
 
 A:  Remote R Services for Visual Studio を使用すると、Windows または Linux のコンピューターをセットアップし、RTVS から接続することができます。 「[リモート ワークスペースの設定](setting-up-remote-r-workspaces.md)」を参照してください。
 
-Q. **RTVS は Microsoft R Server に接続できますか?**
+Q. **RTVS は Microsoft Machine Learning Server に接続できますか?**
 
-A:  いいえ。Microsoft R Server は異なるテクノロジを採用しており、RTVS で必要とされる接続メカニズムを備えていません。
+A:  いいえ。Microsoft ML Server は異なるテクノロジを採用しており、RTVS で必要とされる接続メカニズムを備えていません。
 
 Q. **RTVS は Azure 上でデータ サイエンス VM イメージを使用して作成された VM に接続できますか?**
 

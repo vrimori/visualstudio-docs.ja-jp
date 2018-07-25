@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e7b769cc89095aca5b22aed46375f56c2ab4c987
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f27bc6149ec82bd1c3d14e0c60e8d7747c290ccb
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31570630"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081141"
 ---
 # <a name="msbuild-batching"></a>MSBuild バッチ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目一覧をさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのターゲットまたはタスクを実行する機能があります。  
@@ -26,10 +26,10 @@ ms.locfileid: "31570630"
 ## <a name="task-batching"></a>タスクのバッチ処理  
  タスクのバッチ処理を利用すると、項目一覧をさまざまバッチに分割し、各バッチをタスクに個別に渡すことができます。プロジェクト ファイルが扱いやすくなります。 つまり、プロジェクト ファイルは複数回実行できますが、タスクとその属性は一回宣言すれば十分です。  
   
- タスク属性の 1 つで %(*ItemMetaDataName*) という表記を利用し、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] でタスクのバッチ処理を実行するように指定します。 次の例では、`Example` 項目一覧が `Color` 項目メタデータ値に基づいてバッチに分割し、各バッチを `MyTask` タスクに個別に渡します。  
+ タスク属性の 1 つで %(\<ItemMetaDataName>) という表記を利用し、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] でタスクのバッチ処理を実行するように指定します。 次の例では、`Example` 項目一覧が `Color` 項目メタデータ値に基づいてバッチに分割し、各バッチを `MyTask` タスクに個別に渡します。  
   
 > [!NOTE]
->  タスク属性の他の場所で項目一覧を参照しない場合、あるいはメタデータ名があいまいな場合、%(*ItemCollection.ItemMetaDataName*) という表記を利用し、バッチ処理に使用する項目メタデータ値を完全修飾できます。  
+>  タスク属性の他の場所で項目一覧を参照しない場合、あるいはメタデータ名があいまいな場合、%(\<ItemCollection.ItemMetaDataName>) という表記を利用し、バッチ処理に使用する項目メタデータ値を完全修飾できます。  
   
 ```xml  
 <Project  
@@ -58,7 +58,7 @@ ms.locfileid: "31570630"
 ## <a name="target-batching"></a>ターゲットのバッチ処理  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、ターゲットを実行する前に、ターゲットの入力と出力が最新の状態になっているか確認します。 入力と出力の両方が最新の状態になっている場合、ターゲットはスキップされます。 ターゲット内のタスクがバッチ処理を利用する場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目の各バッチの入力と出力が最新の状態になっているか判断する必要があります。 最新の状態ではない場合、ターゲットにヒットするたびにターゲットが実行されます。  
   
- 次の例では、%(*ItemMetaDataName*) 表記がある `Outputs` 属性を含む `Target` 要素を確認できます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は `Color` メタデータに基づいて `Example` 項目一覧をバッチに分割し、バッチごとに出力ファイルのタイムスタンプを分析します。 バッチからの出力が最新の状態ではない場合、ターゲットが実行されます。 最新の状態であれば、ターゲットはスキップされます。  
+ 次の例では、%(\<ItemMetaDataName>) 表記がある `Outputs` 属性を含む `Target` 要素を確認できます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は `Color` メタデータに基づいて `Example` 項目一覧をバッチに分割し、バッチごとに出力ファイルのタイムスタンプを分析します。 バッチからの出力が最新の状態ではない場合、ターゲットが実行されます。 最新の状態であれば、ターゲットはスキップされます。  
   
 ```xml  
 <Project  
@@ -101,7 +101,7 @@ ms.locfileid: "31570630"
   
  プロパティ関数の詳細については、「[プロパティ関数](../msbuild/property-functions.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ItemMetadata 要素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

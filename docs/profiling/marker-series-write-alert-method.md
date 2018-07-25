@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ae17a44b37536359a5f09fd75fda82ce34b50c3
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: a8d6909ee08984d0bff57f993538957b8958dcf2
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237368"
 ---
 # <a name="markerserieswritealert-method"></a>marker_series::write_alert メソッド
 同時実行ビジュアライザーのトレース ファイルにアラートを書き込みます。  
@@ -37,9 +38,9 @@ void write_alert(
  0 個以上の書式項目が混在したテキストを含む複合書式指定文字列。各書式項目は、引数リスト内のオブジェクトに対応します。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** cvmarkersobj.h  
+ **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [marker_series クラス](../profiling/marker-series-class.md)

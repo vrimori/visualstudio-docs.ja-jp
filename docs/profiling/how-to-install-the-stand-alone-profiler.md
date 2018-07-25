@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 21a285c95e3649cc7aaa53995070091f0abea509
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3898f61987f1767dba57a63bfb3b5b753e8d37aa
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815614"
 ---
-# <a name="how-to-install-the-stand-alone-profiler"></a>方法 : スタンドアロンのプロファイラーをインストールする
+# <a name="how-to-install-the-stand-alone-profiler"></a>方法: スタンドアロンのプロファイラーをインストールする
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE をインストールしなくても実行できるコマンドライン ベースのスタンドアロン プロファイラーを利用できます。 このような状況は、コンピューターに開発環境がインストールされていないときに発生します。 たとえば、本稼働中の Web サーバーには開発環境をインストールするべきではありません。  
   
 > [!NOTE]
@@ -27,12 +28,12 @@ ms.lasthandoff: 04/19/2018
   
 ### <a name="to-install-the-stand-alone-profiler"></a>スタンドアロンのプロファイラーをインストールするには  
   
-1.  \Standalone Profiler パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (vs_profiler.exe) を見つけて実行します。  
+1.  *\Standalone Profiler* パスが含まれるディレクトリの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インストール メディアでスタンドアロン プロファイル インストーラー (*vs_profiler.exe*) を検索して実行します。  
   
-2.  vsintr.exe と msdis150.dll のパスをシステム パスに追加します。  
+2.  *vsintr.exe* と *msdis150.dll* のパスをシステム パスに追加します。  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、vsinstr.exe と msdis150.dll は \Program Files\Visual Studio 10\Team Tools\Performance Tools にあります。  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の既定のインストールでは、*vsinstr.exe* と *msdis150.dll*は *\Program Files\Visual Studio 10\Team Tools\Performance Tools* にあります。  
   
 3.  コマンド プロンプトで、「**VSInstr**」と入力します。  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 04/19/2018
   
 6.  [VSPerfReport](../profiling/vsperfreport.md) ツールを利用し、シンボルをシリアル化してプロファイリング データ ファイル (.vsp) を生成します。 **VSPerfReport /summary:all /packsymbols** スイッチを使用します。 データ ファイルにシンボルが挿入されていない場合、_NT_SYMBOL_PATH 環境変数が設定されていることを確認します。  
   
-## <a name="see-also"></a>参照  
- [コマンドラインからのプロファイル](../profiling/using-the-profiling-tools-from-the-command-line.md)   
+## <a name="see-also"></a>関連項目  
+ [コマンド ラインからのプロファイリング](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [チュートリアル: サンプリングを使ったコマンド ライン プロファイリング](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
  [チュートリアル: インストルメンテーションを使ったコマンド ライン プロファイリング](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
  [方法: Windows シンボル情報を参照する](../profiling/how-to-reference-windows-symbol-information.md)   

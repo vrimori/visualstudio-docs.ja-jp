@@ -16,11 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2ec4a797b7018a7a9e017760afd8849912cd35
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 460251aaa89c22d7bb1320d19882af4f68736cc0
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815185"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>方法: レポート ビューでノイズ除去を設定する
 パフォーマンス レポートは、コール ツリー ビューや 割り当て ビューに表示されるデータの数を制限して、ノイズを除去するように構成できます。 ノイズ除去を行うことで、パフォーマンスの問題を発見しやすくなります。 これは、パフォーマンス レポートの分析に役立ちます。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/19/2018
   
 4.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)   
  [方法: インストルメンテーションで短い関数を除外または含める](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
  [コール ツリー ビュー](../profiling/call-tree-view.md)   

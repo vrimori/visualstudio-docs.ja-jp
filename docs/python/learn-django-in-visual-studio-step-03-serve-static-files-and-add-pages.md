@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 3
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、静的ファイルを提供する方法、アプリにページを追加する方法、およびテンプレートの継承を使用する方法を示します。
-ms.date: 04/25/2018
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d94ef95b8ba50f4cf9359bb925d41243ea58df7d
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 558353fcae63172273e4e2070a51dfafdea6913e
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750335"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089588"
 ---
-# <a name="tutorial-step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>チュートリアル手順 3: 静的ファイルを提供し、ページを追加して、テンプレートの継承を使用する
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
 **前の手順: [ビューおよびページ テンプレートを使用して Django アプリを作成する](learn-django-in-visual-studio-step-02-create-an-app.md)**
 
@@ -277,8 +277,9 @@ Django のテンプレート システムでは、複数のテンプレート間
 > [!div class="nextstepaction"]
 > [Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-04-full-django-project-template.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
+- [Azure App Service への Web アプリの展開](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - [最初の Django アプリの作成、パート 3 (ビュー)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/) (docs.djangoproject.com)
 - 制御フローなど Django テンプレートの詳細な機能について、「[The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)」(Django テンプレート言語) (docs.djangoproject.com) を確認する
 - `{% url %}` タグの使用に関する完全な詳細について、Django テンプレート リファレンスの「[Built-in template tags and filters](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/)」(組み込みのテンプレート タグとフィルター) (docs.djangoproject.com) にある [URL](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url) を確認する

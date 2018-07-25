@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: efaeed873630113382630421258338e6624e14ee
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 072c1860183b29e8d389f70e19a6517ff09b2caa
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578547"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945586"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly タスク
 <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> タスクは、プロジェクト内の少なくとも 1 つの [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] ページが、そのプロジェクトでローカルに宣言されている型を参照している場合に、アセンブリを生成します。 生成されたアセンブリは、ビルド処理が完了した後、またはビルド処理が失敗した場合に削除されます。  
@@ -34,13 +34,14 @@ ms.locfileid: "31578547"
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`AssemblyName`|必須の **String** 型のパラメーターです。<br /><br /> プロジェクトのために生成されるアセンブリの短い名前を指定します。この名前は、一時的に生成されるターゲット アセンブリの名前にもなります。 たとえば、プロジェクトが **WinExeAssembly.exe** という名前の [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 実行可能ファイルを生成する場合、**AssemblyName** パラメーターの値は **WinExeAssembly** になります。|  
+|`AssemblyName`|必須の **String** 型のパラメーターです。<br /><br /> プロジェクトのために生成されるアセンブリの短い名前を指定します。この名前は、一時的に生成されるターゲット アセンブリの名前にもなります。 たとえば、プロジェクトが *WinExeAssembly.exe* という名前の [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 実行可能ファイルを生成する場合、**AssemblyName** パラメーターの値は **WinExeAssembly** になります。|  
 |`CompileTargetName`|必須の **String** 型のパラメーターです。<br /><br /> ソース コード ファイルからアセンブリを生成するために使用される [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] ターゲットの名前を指定します。 **CompileTargetName** の一般的な値は、**CoreCompile** です。|  
 |`CompileTypeName`|必須の **String** 型のパラメーターです。<br /><br /> **CompileTargetName** パラメーターで指定したターゲットによって実行されるコンパイルの種類を指定します。 **CoreCompile** ターゲットでは、この値は **Compile** です。|  
 |`CurrentProject`|必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリを必要とするプロジェクトの、[!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] プロジェクト ファイルの完全なパスを指定します。|  
-|`GeneratedCodeFiles`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) タスクによって生成された言語固有のマネージ コード ファイルの一覧を指定します。|  
+|`GeneratedCodeFiles`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 
+  [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) タスクによって生成された言語固有のマネージド コード ファイルの一覧を指定します。|  
 |`IntermediateOutputPath`|必須の **String** 型のパラメーターです。<br /><br /> 生成される一時ターゲット アセンブリが格納されるディレクトリを指定します。|  
-|`MSBuildBinPath`|必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリをコンパイルするために必要な **MSBuild.exe** の場所を指定します。|  
+|`MSBuildBinPath`|必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリをコンパイルするために必要な *MSBuild.exe* の場所を指定します。|  
 |`ReferencePath`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 一時ターゲット アセンブリにコンパイルされる型によって参照されるアセンブリの一覧を、パスおよびファイル名を使用して指定します。|  
 |`ReferencePathTypeName`|必須の **String** 型のパラメーターです。<br /><br /> コンパイル ターゲット (**CompileTargetName**) パラメーターによって使用される、アセンブリ参照の一覧 (**ReferencePath**) を指定するパラメーターを指定します。 適切な値は、**ReferencePath** です。|  
   
@@ -50,7 +51,7 @@ ms.locfileid: "31578547"
  代わりに、**MarkupCompilePass1** は、同じプロジェクト内の型への参照を含む [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルの変換を、[MarkupCompilePass2](../msbuild/markupcompilepass2-task.md) によって実行される 2 番目のマークアップ コンパイル パスまで延期します。 **MarkupCompilePass2** が実行される前に、一時アセンブリが生成されます。 このアセンブリには、マークアップ コンパイル パスが延期された [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルによって使用される型が含まれます。 **MarkupCompilePass2** の実行時には、生成されたアセンブリへの参照を指定します。これにより、コンパイルが延期された [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルをバイナリ形式にコンパイルできるようになります。  
   
 ## <a name="example"></a>例  
- 次の例では、`Page1.xaml` が同じプロジェクト内の型への参照を含んでいるため、一時アセンブリが作成されます。  
+ 次の例では、*Page1.xaml* が同じプロジェクト内の型への参照を含んでいるため、一時アセンブリが作成されます。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -72,10 +73,10 @@ ms.locfileid: "31578547"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
- [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
  [WPF XAML ブラウザー アプリケーションの概要](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

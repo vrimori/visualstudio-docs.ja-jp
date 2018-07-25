@@ -20,15 +20,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 2f6554a1c29618d8d3373fc3fb8f46f24816531e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 69971e72569dcae1f02f1e2b7988ef15f881fe85
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567955"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945170"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler タスク
-`AspNetCompiler` タスクは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをプリコンパイルするためのユーティリティである aspnet_compiler.exe をラップします。  
+`AspNetCompiler` タスクは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをプリコンパイルするためのユーティリティである *aspnet_compiler.exe* をラップします。  
   
 ## <a name="task-parameters"></a>タスク パラメーター  
  `AspNetCompiler` タスクのパラメーターの説明を次の表に示します。  
@@ -36,22 +36,22 @@ ms.locfileid: "31567955"
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`AllowPartiallyTrustedCallers`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、厳密な名前のアセンブリは部分的に信頼された呼び出し元を許可します。|  
-|`Clean`|省略可能な `Boolean` 型のパラメーターです<br /><br /> このパラメーターが `true` の場合、プリコンパイルされたアプリケーションはクリーン ビルドされます。 以前にコンパイルされたコンポーネントは、再コンパイルされます。 既定値は `false` です。 このパラメーターは、aspnet_compiler.exe の **-c** スイッチに対応します。|  
-|`Debug`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、コンパイル中にデバッグ情報 (.PDB ファイル) が生成されます。 既定値は `false` です。 このパラメーターは、aspnet_compiler.exe の **-d** スイッチに対応します。|  
+|`Clean`|省略可能な `Boolean` 型のパラメーターです<br /><br /> このパラメーターが `true` の場合、プリコンパイルされたアプリケーションはクリーン ビルドされます。 以前にコンパイルされたコンポーネントは、再コンパイルされます。 既定値は `false` です。 このパラメーターは、*aspnet_compiler.exe* の **-c** スイッチに対応します。|  
+|`Debug`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、コンパイル中にデバッグ情報 (.PDB ファイル) が生成されます。 既定値は `false` です。 このパラメーターは、*aspnet_compiler.exe* の **-d** スイッチに対応します。|  
 |`DelaySign`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、アセンブリは作成時に完全に署名されません。|  
 |`FixedNames`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、コンパイルされたアセンブリに固定名が指定されます。|  
-|`Force`|省略可能な `Boolean` 型のパラメーターです<br /><br /> このパラメーターが `true` の場合、タスクはターゲット ディレクトリが既に存在する場合は上書きします。 既存の内容は失われます。 既定値は `false` です。 このパラメーターは、aspnet_compiler.exe の **-f** スイッチに対応します。|  
+|`Force`|省略可能な `Boolean` 型のパラメーターです<br /><br /> このパラメーターが `true` の場合、タスクはターゲット ディレクトリが既に存在する場合は上書きします。 既存の内容は失われます。 既定値は `false` です。 このパラメーターは、*aspnet_compiler.exe* の **-f** スイッチに対応します。|  
 |`KeyContainer`|省略可能な `String` 型のパラメーターです。<br /><br /> 厳密な名前のキー コンテナーを指定します。|  
 |`KeyFile`|省略可能な `String` 型のパラメーターです。<br /><br /> 厳密な名前のキー ファイルへの物理パスを指定します。|  
-|`MetabasePath`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの IIS メタベースの完全パスを指定します。 このパラメーターを `VirtualPath` または `PhysicalPath` パラメーターと組み合わせることはできません。 このパラメーターは、aspnet_compiler.exe の **-m** スイッチに対応します。|  
-|`PhysicalPath`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイルされるアプリケーションの物理パスを指定します。 このパラメーターを指定しないと、アプリケーションの場所の特定には IIS メタベースが使われます。 このパラメーターは、aspnet_compiler.exe の **-p** スイッチに対応します。|  
-|`TargetFrameworkMoniker`|省略可能な `String` 型のパラメーターです。<br /><br /> 使う必要がある aspnet_compiler.exe の .NET Framework バージョンを示す TargetFrameworkMoniker を指定します。 .NET Framework モニカーのみを受け付けます。|  
+|`MetabasePath`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの IIS メタベースの完全パスを指定します。 このパラメーターを `VirtualPath` または `PhysicalPath` パラメーターと組み合わせることはできません。 このパラメーターは、*aspnet_compiler.exe* の **-m** スイッチに対応します。|  
+|`PhysicalPath`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイルされるアプリケーションの物理パスを指定します。 このパラメーターを指定しないと、アプリケーションの場所の特定には IIS メタベースが使われます。 このパラメーターは、*aspnet_compiler.exe* の **-p** スイッチに対応します。|  
+|`TargetFrameworkMoniker`|省略可能な `String` 型のパラメーターです。<br /><br /> 使う必要がある *aspnet_compiler.exe* の .NET Framework バージョンを示す TargetFrameworkMoniker を指定します。 .NET Framework モニカーのみを受け付けます。|  
 |`TargetPath`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションのコンパイル先の物理パスを指定します。 指定しないと、アプリケーションはインプレースでプリコンパイルされます。|  
-|`Updateable`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、プリコンパイルされたアプリケーションは更新可能です。  既定値は `false` です。 このパラメーターは、aspnet_compiler.exe の **-u** スイッチに対応します。|  
-|`VirtualPath`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイル対象のアプリケーションの仮想パス。 `PhysicalPath` を指定すると、アプリケーションの場所の指定に物理パスが使われます。 それ以外の場合は IIS メタベースが使われ、アプリケーションは既定のサイトにあるものと想定されます。 このパラメーターは、aspnet_compiler.exe の **-v** スイッチに対応します。|  
+|`Updateable`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> このパラメーターが `true` の場合、プリコンパイルされたアプリケーションは更新可能です。  既定値は `false` です。 このパラメーターは、*aspnet_compiler.exe* の **-u** スイッチに対応します。|  
+|`VirtualPath`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイル対象のアプリケーションの仮想パス。 `PhysicalPath` を指定すると、アプリケーションの場所の指定に物理パスが使われます。 それ以外の場合は IIS メタベースが使われ、アプリケーションは既定のサイトにあるものと想定されます。 このパラメーターは、*aspnet_compiler.exe* の **-v** スイッチに対応します。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコード例では、`AspNetCompiler` タスクを使って [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションをプリコンパイルします。  
@@ -70,6 +70,6 @@ ms.locfileid: "31567955"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

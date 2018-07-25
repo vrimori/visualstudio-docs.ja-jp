@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 08e1a6b8bab7e6336f764f871328e0d56ad0c2f2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 12fc18532888dbf688c3fcc0e5695edfaf47d953
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917397"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924136"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>方法: シェーダーを 3D モデルに適用する
 

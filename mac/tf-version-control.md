@@ -7,12 +7,12 @@ ms.date: 05/03/2018
 ms.topic: article
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: 58d0fc5c31b02574661f8b86a4ae8bcaf393be3a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 51d066289809842cd50974cbb37a89bc7a73d5dc
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693774"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37438410"
 ---
 # <a name="connecting-to-team-foundation-version-control"></a>Team Foundation バージョン管理に接続する 
 
@@ -23,8 +23,8 @@ Visual Studio Team Services (VSTS) と Team Foundation Server (TFS) には、バ
 
 ## <a name="requirements"></a>必要条件
 
-* Visual Studio for Mac バージョン 7.5 以降。
-* Visual Studio Team Services、または Team Foundation Server 2013 以降
+* Visual Studio Community、Visual Studio Professional、Enterprise for Mac バージョン 7.5 以降。
+* Visual Studio Team Services、または Team Foundation Server 2013 以降。
 * Team Foundation バージョン管理を使用するように設定された、Visual Studio Team Services または Team Foundation Server のプロジェクト。
 
 ## <a name="installation"></a>インストール
@@ -35,79 +35,142 @@ Visual Studio for Mac でメニューから **[Visual Studio] > [拡張機能]**
 
 画面の指示に従って、拡張機能をインストールします。 インストールした後、IDE を再起動します。
 
+## <a name="updating-the-extension"></a>拡張機能の更新
+
+TFVC 拡張機能への更新プログラムは、定期的に作成されます。 更新プログラムにアクセスするには、メニューから **[Visual Studio]、[拡張機能]** の順に選び、**[更新]** タブを選択します。リスト内の拡張機能を選択して、**[更新]** ボタンを押します。
+
+  ![更新プログラムが表示されている拡張機能マネージャー](media/tfvc-update.png) 
+
+次のダイアログで **[インストール]** を押して古いパッケージをアンインストールし、新しいパッケージをインストールします。
+
+各リリースの新着情報については、[リリース ノート](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes#team-foundation-version-control-extension--release-notes)に関するページを参照してください。
+
 ## <a name="using-the-add-in"></a>アドインの使用
 
-拡張機能をインストールした後、**[バージョン管理] > [TFS/VSTS] > [Connect to Team Foundation Version Control...]\(Team Foundation バージョン管理に接続する...\)** メニュー項目を順に選択します。 **[追加]** をクリックして新しいアカウントを追加します。 
+拡張機能をインストールしたら、**[バージョン管理]、[TFS/VSTS]、[Open from Remote Repository]\(リモート リポジトリから開く\)** メニュー項目の順に選択します。 
 
-![TFVC Server を追加する](media/tfvc-add-remove-server.png)
+最初に Visual Studio Team Services または Team Foundation Server のいずれかを選択して、**[続行]** を押します。
 
-最初に Visual Studio Team Services または Team Foundation Server を選択します。
+  ![サーバーで接続する](media/tfvc-choose-server-type.png)
 
-![TFVC Server に接続する](media/tfvc-choose-server-type.png)
+### <a name="vsts-authentication"></a>VSTS 認証
 
-資格情報を入力して、**[ログイン]** をクリックします。 
+VSTS でホストされているプロジェクトを選択すると、Microsoft アカウントの情報を入力する画面が表示されます。
 
-![TFVC Server にログインする](media/tfvc-login.png)
+  ![VSTS Server で接続する](media/tfvc-vsts-login.png)
 
-正常にログインした後、アクセスするプロジェクトを選択して、**[OK]** をクリックします。 
+### <a name="tfs-authentication"></a>TFS 認証
 
-![プロジェクトを選択する](media/tfvc-choose-projects.png)
+TFS に接続するには、サーバーの詳細とアカウントの資格情報を入力します。 NTLM 認証するドメインを入力します。それ以外の場合は、空白のままにして基本認証を使用します。 **[サーバーの追加]** を選択します。 
 
-**[バージョン管理] > [TFS/VSTS] > [ソース管理エクスプローラー]** メニュー項目を順に選択して、ソースを参照できるソース管理エクスプローラーを開きます。
+![TFS Server にサインインする](media/tfvc-login.png)
 
-> [!IMPORTANT]
-> **既知の問題**: このプレビュー リリースでは、ソース管理エクスプローラーを初めて開いたとき、[新しいワークスペースを作成する](#creating-a-new-workspace)必要があります。
+## <a name="selecting-a-project"></a>プロジェクトの選択
 
-![ソース エクスプローラー](media/tfvc-source-explorer.png)
+認証が正常に行われると、**[Open from Source Control]\(ソース管理から開く\)** ダイアログでアカウントに関連付けられているリポジトリのリストを確認できます。
 
-ソース コード エクスプローラーから、サーバーのソース コードを閲覧し、次の操作を実行できます。
+  ![プロジェクトを表示しているソース管理から開くダイアログ](media/tfvc-vsts-projects.png)
 
-- ワークスペースの管理 (作成、編集、削除)。
-- プロジェクトの構造間の移動。
-- プロジェクトのマッピング。
-- プロジェクトの取得。
-- ファイルのロックとロック解除。
-- ファイルの名前変更。
-- ファイルの削除。
-- 新しいファイルの追加。
-- チェックアウト。
-- チェックイン。
-- 変更履歴の表示。
-- 変更の比較。
+このダイアログは、次のノードで構成されています。
+
+- VSTS アカウントまたはコレクション – ここには、ログインに使用した Microsoft アカウントに接続されているアカウントがすべて表示されます。
+- チーム プロジェクト – 各 VSTS 内にいくつかのチーム プロジェクトを持つことができます。 チーム プロジェクトは、ソース コード、作業項目、自動化されたビルドがホストされている場所です。
+
+この時点で、プロジェクトまたはアカウントの名前で検索およびフィルター処理を行うことができます。
+
+### <a name="adding-a-new-server"></a>新しいサーバーの追加
+
+新しいサーバーをリストに追加するには、**[Open from Source Control]\(ソース管理から開く\)** ダイアログの **[ホストの追加]** ボタンを押します。
+
+![新しいサーバーをリストに追加するための強調表示された追加ボタン](media/tfvc-add-new-server.png)
+
+リストからプロバイダーを選択して、資格情報を入力します。
+
+![ソース管理プロバイダー用のオプションを示すダイアログ](media/tfvc-add-new-creds.png)
 
 ## <a name="creating-a-new-workspace"></a>新しいワークスペースの作成。
 
-ソース管理エクスプローラーで、**[ワークスペースの管理]** ボタンをクリックします。 
+プロジェクトの操作を開始するには、_ワークスペース_が必要です。 まだワークスペースがない場合は、**[Open from Source Control]\(ソース管理から開く\)** ダイアログ内の **[ワークスペース]** コンボ ボックスからワークスペースを作成できます。
 
-![ワークスペースの管理](media/tfvc-manage-workspaces.png)
+![新しいワークスペースの作成コンボ ボックスのオプション](media/tfvc-create-new-workspace.png)
 
-**[追加]** ボタンをクリックして、新しいワークスペースを作成します。
+新しいワークスペースの名前とローカル パスを設定して、**[ワークスペースの作成]** を選択します。
 
-![ワークスペースの作成](media/tfvc-create-workspace.png)
+![新しいワークスペースの名前とローカル パスの入力](media/tfvc-local-workspace.png)
 
-ワークスペースの名前を入力し、**[Add Working Folder]\(作業フォルダーの追加\)** をクリックし、コンピューター上のローカル フォルダーにプロジェクトをマッピングします。
+## <a name="using-the-source-code-explorer"></a>ソース コード エクスプローラーの使用
 
-完了したら、**[OK]** をクリックし、[ワークスペースの管理] ダイアログを閉じます。 これでソース コード エクスプローラーからファイルを取得して開始できます。
+ワークスペースを作成してプロジェクトをマップしたら、_ソース コード エクスプローラー_の操作を開始できます。
+
+ソース コード エクスプローラーを開くには、**[バージョン コントロール]、[TFS/VSTS]、[ソース管理エクスプローラー]** の順に選択します。
+
+![ソース コード エクスプローラーを開くメニュー項目](media/tfvc-source-control-explorer.png)
+
+ソース コード エクスプローラーを使用すると、すべてのマップされているプロジェクト、そのファイルやフォルダー内を移動できます。 また、次のような基本のソース コントロール アクションをすべて実行することもできます。
+
+- 最新バージョンの取得
+- 特定バージョンの取得
+- ファイルのチェックインとチェックアウト
+- ファイルのロックとロック解除
+- ファイルの追加、削除、名前の変更
+- 履歴の表示
+- 変更の比較。
+
+これらのアクションの多くは、プロジェクトのコンテキスト アクションで使用できます。
+
+![プロジェクトに対するコンテキスト メニューのアクション](media/tfvc-sourcecode-actions.png)
+
+## <a name="managing-workspaces"></a>ワークスペースの管理
+
+「[新しいワークスペースの作成](#creating-a-new-workspace)」セクションで説明されたように、まだワークスペースを作成していない場合は、ソース コード エクスプローラーが空であることが表示されます。
+
+![空のソース コード エクスプローラー](media/tfvc-setup-empty-sce.png) 
+
+ローカル ワークスペースを使ってリモート プロジェクトを設定するには、次の手順を使用します。
+
+1. コンボ ボックスから**サーバー**を選択します。
+1. "ワークスペースがありません" とローカル パスが "対応付けされていません" が示されていることに注意してください。 **[対応付けされていません]** リンクを選択して、**[新しいワークスペースの作成]** ダイアログを表示します。
+1. ワークスペースの名前を入力し、**[Add Working Folder]\(作業フォルダーの追加\)** をクリックし、コンピューター上のローカル フォルダーにプロジェクトをマッピングします。
+    
+    ![既定のオプションを示している [新しいワークスペースの作成] ダイアログ](media/tfvc-workspace1.png) 
+
+1. "$" フォルダーを選択してサーバー上のすべてのチーム プロジェクトを同じワークスペースにマッピングするか、個別のプロジェクトを選択して、**[OK]** をクリックします。
+    
+    ![すべてのプロジェクトを示している [フォルダーの参照] ダイアログ](media/tfvc-workspace2.png) 
+
+1. プロジェクトをマッピングするローカル コンピューター上の場所を選択して、**[フォルダーの選択]** をクリックします。
+1. **[OK]** を押して、新しいワークスペースの詳細を確認します。
+    
+    ![追加された作業フォルダーを含む [新しいワークフローの追加] ダイアログ](media/tfvc-workspace3.png) 
+
+ワークスペースを設定したら、ソース コード エクスプローラーの **[ワークスペースの管理]** をクリックすることによって、変更または削除することができます。
+
+![ワークスペースの管理](media/tfvc-workspace4.png)
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
 ### <a name="problems-using-basic-authentication"></a>基本認証の使用に関する問題
 
-サーバーでの認証実行にはさまざまなオプションを使用できます。
+次のオプションを使用して、サーバーで認証できます。
 
 - Oauth
 - Basic
 - Ntlm
 
-基本認証を使用できるようにするには、以下の手順に従って、VSTS で **代替認証資格情報**を有効にする必要があります。
+基本認証を使用するには、以下の手順に従って、VSTS で**代替認証資格情報**を有効にする必要があります。
 
 1. VSTS アカウントにアカウント所有者としてサインインします (https://{youraccount}.visualstudio.com)。
-2. アカウント ツール バーの歯車アイコンを選択し、**[ポリシー]** を選択します。![選択されたポリシー設定オプション](media/tfvc-auth2.png) 
-3. アプリケーションの接続設定を確認します。 セキュリティ ポリシーに基づいてこれらの設定を変更します。![選択されたポリシー設定オプション](media/tfvc-auth.png)  
+2. アカウント ツール バーの歯車アイコンを選択し、**[ポリシー]** を選択します。
+    
+    ![選択されたポリシー設定オプション](media/tfvc-auth2.png) 
+
+3. アプリケーションの接続設定を確認します。 セキュリティ ポリシーに基づいてこれらの設定を変更します。
+    
+    ![選択されたポリシー設定オプション](media/tfvc-auth.png)  
 
 ### <a name="i-do-not-see-anything-in-tfvc"></a>TFVC に何も表示されない
 
-開発用コンピューターに Team Foundation バージョン管理 (TFVC) を設定するには、「[新しいワークスペースの作成](#creating-a-new-workspace)」セクションの説明に従って、ワークスペースを作成する**必要があります**。
+開発用コンピューターに Team Foundation バージョン管理 (TFVC) を設定するには、「[ワークスペースの管理](#managing-workspaces)」セクションの説明に従って、ワークスペースを作成する**必要があります**。
 
 ソース管理エクスプローラーで、**[ワークスペースの管理]** ボタンをクリックします。 手順に従って、開発用コンピューター上にあるフォルダーに、チーム プロジェクトをマップします。
 

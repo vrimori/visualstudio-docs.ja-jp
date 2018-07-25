@@ -11,17 +11,17 @@ ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.openlocfilehash: 348a026815d0d48390fed5741e6dba741fda9937
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 619f2c17d3653895c8c969e89d7a342e73f8c8d9
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578602"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081476"
 ---
-# <a name="how-to-ignore-errors-in-tasks"></a>方法 : タスクで発生したエラーを無視する
+# <a name="how-to-ignore-errors-in-tasks"></a>方法: タスクで発生したエラーを無視する
 ビルド時に一部のタスクのエラーを許容するとよい場合があります。 そのような重要でないタスクが失敗しても必要な出力は生成できるため、ビルドを続行させる場合です。 たとえば、各コンポーネントのビルド後にプロジェクトで `SendMail` タスクを使ってメール メッセージを送信する場合、メール サーバーが利用できず、ステータス メッセージを送信できなくても、完了までビルドを続行させるのは許容範囲と見なせる場合があります。 別の例として、通常、ビルド中に中間ファイルが削除される場合、それらのファイルを削除できなくても、完了までビルドを続行させるのは許容範囲と見なせる場合があります。  
   
-## <a name="using-the-continueonerror-attribute"></a>ContinueOnError 属性の使用  
+## <a name="use-the-continueonerror-attribute"></a>ContinueOnError 属性を使用する  
  `Task` 要素の `ContinueOnError` 属性は、タスク エラーの発生時にビルドを停止するか続行するかを制御します。 この属性は、ビルドを続行するときに、エラーをエラーとして扱うか、それとも警告として扱うかも制御します。  
   
  `ContinueOnError` 属性には、次の値のいずれかを含めることができます。  
@@ -61,7 +61,7 @@ ms.locfileid: "31578602"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [MSBuild](../msbuild/msbuild.md)  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
- [タスク](../msbuild/msbuild-tasks.md)
+[タスク リファレンス](../msbuild/msbuild-task-reference.md)   
+[タスク](../msbuild/msbuild-tasks.md)

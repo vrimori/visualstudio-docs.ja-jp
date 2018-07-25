@@ -12,19 +12,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5865597f9833ab04fbd5ca287ba0bc61217d7088
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c86b5ec3918526f461b39080967d5bc4a8a32e30
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924845"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079475"
 ---
 # <a name="work-with-3d-assets-for-games-and-apps"></a>ゲームとアプリ用の 3D アセットを操作する
 
 このドキュメントでは、DirectX ベースのゲームおよびアプリケーション向けの 3D モデル、テクスチャ、シェーダーの作成または変更に使用できる、Visual Studio のツールについて説明します。
 
 ## <a name="directx-app-development-in-visual-studio"></a>Visual Studio における DirectX アプリケーションの開発
- DirectX アプリケーションは、通常、プログラミング ロジック、DirectX API、および HLSL (High Level Shading Language) プログラムを、オーディオおよび 3D ビジュアル アセットと組み合わせることによって、リッチで対話型のマルチメディア エクスペリエンスを提供します。Visual Studio には、イメージとテクスチャ、3D モデル、シェーダーなどの操作を行うために使用できるツールが用意されており、別のツールを使用するために IDE を終了する必要がありません。 Visual Studio のツールは、*プレースホルダー* アセットの作成に特に適しています。プレースホルダーを使用すると、稼動準備のできたアセットをコミッションする前にコードのテストやプロトタイプの構築を行ったり、稼動準備のできたアセットをアプリケーションのデバッグ時に検査および変更したりすることができます。
+ DirectX アプリケーションは、通常、プログラミング ロジック、DirectX API、および HLSL (High Level Shading Language) プログラムを、オーディオおよび 3D ビジュアル アセットと組み合わせることによって、リッチで対話型のマルチメディア エクスペリエンスを提供します。 Visual Studio には、イメージとテクスチャ、3D モデル、シェーダーなどの操作を行うために使用できるツールが用意されています。そのため、別のツールを使用するために IDE を終了する必要がありません。 Visual Studio のツールは、*プレースホルダー* アセットの作成に特に適しています。プレースホルダーを使用すると、稼動準備のできたアセットをコミッションする前にコードのテストやプロトタイプの構築を行ったり、稼動準備のできたアセットをアプリケーションのデバッグ時に検査および変更したりすることができます。
 
  Visual Studio で使用できるアセットの種類に関する詳細を以下に示します。
 

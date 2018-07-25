@@ -13,30 +13,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a7667cac2a26a3e98d2e92dfeb13cee36d870e9
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 38491757da5010d015553f1d3c562e27914b28a9
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34691161"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078980"
 ---
-# <a name="visual-studio-ide-overview"></a>Visual Studio IDE の概要
+# <a name="visual-studio-overview"></a>Visual Studio の概要
 
-Visual Studio 統合開発環境 (IDE) は、ほぼすべての種類のコードの表示や編集が可能で、アプリをデバッグ、ビルド、発行するために使用できるクリエイティブなランチパッドです。
+Visual Studio "*統合開発環境*" は、コードの編集、デバッグ、およびビルドを行ってから、アプリを発行するために使用できるクリエイティブなランチパッドです。 対話型開発環境 (IDE) は、ソフトウェア開発の多くの側面で使用できる機能を豊富に備えたプログラムです。 大部分の IDE が備える標準的なエディターおよびデバッガーに加えて、Visual Studio ではコンパイラ、コード補完ツール、グラフィック デザイナーなど、ソフトウェア開発プロセスを容易にする多くの機能を用意しています。
 
 Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2017 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。
 
-この記事では、Windows 用の Visual Studio 2017 について説明します。 IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての IntelliSense の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
+この記事では、Windows 用の Visual Studio 2017 について説明します。 IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての [IntelliSense](using-intellisense.md) の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
 
-まず、[Visual Studio 2017 をダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)してシステムにインストールします。
+まず、[Visual Studio 2017 をダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)してシステムにインストールします。
 
-モジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 [プログラムの作成](#create-a-program)手順に従う場合は、インストール時に必ず、**[.NET Core クロスプラットフォームの開発]** ワークロードを選択します。 「[Visual Studio での C++ の概要](getting-started-with-cpp-in-visual-studio.md)」などのクイック スタートのトピックに、他のワークロードのインストールの説明があります。
+モジュラー インストーラーでは、*ワークロード* (好みのプログラミング言語やプラットフォームで必要な機能のグループ) を選択してインストールできます。 [プログラムの作成](#create-a-program)手順に従う場合は、インストール時に必ず、**[.NET Core クロスプラットフォームの開発]** ワークロードを選択します。
 
-![Visual Studio インストーラー](../ide/media/overview-net-core-workload.png)
+![Visual Studio インストーラーの [.NET Core クロスプラットフォームの開発] ワークロード](../ide/media/dotnet-core-cross-platform-workload.png)
 
-Visual Studio を初めて起動する際には、Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインすることもできます。
+Visual Studio を初めて起動する際には、Microsoft アカウント、仕事用アカウント、または学校用アカウントを使って[サインイン](signing-in-to-visual-studio.md)することもできます。
 
 ## <a name="tour-of-the-ide"></a>IDE のツアー
 
@@ -44,47 +44,65 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 ![Visual Studio IDE](../ide/media/visualstudioide.png)
 
-- [ソリューション エクスプローラー](../ide/solutions-and-projects-in-visual-studio.md)では、コード ファイルを表示、移動、および管理できます。 ソリューション エクスプローラーでは、ファイルをソリューションやプロジェクトにまとめ、コードを整理できます。
+- [**ソリューション エクスプローラー**](../ide/solutions-and-projects-in-visual-studio.md) (右上) では、コード ファイルを表示、移動、および管理できます。 **ソリューション エクスプローラー**では、ファイルを[ソリューションやプロジェクト](quickstart-projects-solutions.md)にまとめ、コードを整理できます。
 
-- 大部分の時間を費やすことになる[エディター](../ide/writing-code-in-the-code-and-text-editor.md) ウィンドウではコードが表示され、ソース コードの編集や UI の設計を行うことができます。
+- 大部分の時間を費やすことになる[エディター ウィンドウ](../ide/writing-code-in-the-code-and-text-editor.md) (中央) にはファイルの内容が表示されます。 ここでは、コードを編集したり、ボタンやテキスト ボックスを持つウィンドウなどのユーザー インターフェイスをデザインすることができます。
 
-- [[出力]](../ide/reference/output-window.md) ウィンドウには、デバッグ メッセージ、エラー メッセージ、コンパイラの警告、公開状態メッセージなど、Visual Studio の通知が出力されます。 メッセージ ソースごとに独自のタブがあります。
+- [[出力]](../ide/reference/output-window.md) ウィンドウ (下中央) には、デバッグ メッセージ、エラー メッセージ、コンパイラの警告、公開状態メッセージなど、Visual Studio の通知が出力されます。 メッセージ ソースごとに独自のタブがあります。
 
-- [チーム エクスプローラー (VSTS)](/vsts/user-guide/work-team-explorer) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/vsts/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
+- [チーム エクスプローラー](/vsts/user-guide/work-team-explorer) (右下) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/vsts/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
 
-Visual Studio には他にも次のような一般的な生産性を高める機能が用意されています。
+### <a name="popular-productivity-features"></a>よく使われる生産性機能
 
-- [リファクタリング](../ide/refactoring-in-visual-studio.md)。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
+ソフトウェアを開発する際に、生産性を高めるために Visual Studio でよく使われる機能のいくつかを以下に示します。
 
-   ![リファクタリング](../ide/media/VSIDE_refactor.png)
+- [リファクタリング](../ide/refactoring-in-visual-studio.md)
 
-- [IntelliSense](../ide/using-intellisense.md) 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の IntelliSense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」、および [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md) に関するページを参照してください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
+   リファクタリングには、変数の名前をインテリジェントに変更する、1 つまたは複数のコード行を新しいメソッドに抽出する、メソッド パラメーターを並べ替える、などの操作が含まれます。
 
-   ![Visual Studio のメンバーの一覧](../ide/media/vs2017_Intellisense.png)
+   ![Visual Studio でのリファクタリング](../ide/media/refactoring-menu.png)
 
-- [クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md)検索ボックスは、Visual Studio で必要な情報を迅速に見つけるに役立ちます。 探している内容を表す名前を入力するだけで、Visual Studio に結果がリストされ、目的の場所に正確に移動できます。 また、**クイック起動**にはすべてのワークロードまたは個々のコンポーネントに対応する **Visual Studio インストーラー**を起動するリンクが表示されます。
+- [IntelliSense](../ide/using-intellisense.md)
 
-   ![クイック起動検索ボックス](../ide/media/VSIDE_Tour_QuickLaunch.png)
+   IntelliSense は、コードに関する情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする機能のセットを表す用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、他の場所で型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳細については、「[C# の IntelliSense](../ide/visual-csharp-intellisense.md)」、「[Visual C++ の IntelliSense](../ide/visual-cpp-intellisense.md)」、「[JavaScript IntelliSense](../ide/javascript-intellisense.md)」、および [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md) に関するページを参照してください。 次の図は、IntelliSense によって型のメンバー リストがどのように表示されるかを示したものです。
 
-- **波線**は波打った下線で、コード入力時にエラーや潜在的な問題をリアルタイムに警告します。 これにより、コンパイル時や実行時にエラーが検出されるのを待たずに即時に修正できます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球とエラーを修正する方法が左余白に表示される場合もあります。 詳細については、[クイック アクション](../ide/quick-actions.md)に関するページを参照してください。
+   ![Visual Studio のメンバーの一覧](../ide/media/intellisense-list-members.png)
 
-   ![波線](../ide/media/vs2017_squiggle.png)
+- [クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md)
 
-- [[呼び出し階層]](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで開き、キャレット (挿入ポイント) の下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
+   Visual Studio には非常に多くのメニュー、オプション、およびプロパティがあるため、手に負えないもののように思える場合があるかもしれません。 **クイック起動**検索ボックスは、Visual Studio で必要な情報を迅速に見つけるに役立ちます。 探しているものを表す名前の入力を開始すると、Visual Studio に結果がリストされ、目的の場所に正確に移動できます。 Visual Studio に機能を追加する必要がある場合 (追加のプログラミング言語に対するサポートを追加するなど)、**クイック起動**の結果としてワークロードまたは個々のコンポーネントをインストールする Visual Studio インストーラーが開かれます。
 
-   ![[呼び出し階層] ウィンドウ](../ide/media/VSIDE_call_hierarchy.png)
+   ![Visual Studio でのクイック起動検索ボックス](../ide/media/quick-launch-nuget.png)
 
-- [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md)。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。
+- 波線と[クイック アクション](../ide/quick-actions.md)
+
+   波線は波打った下線で、コード入力時にエラーや潜在的な問題を警告します。 このような視覚的な手がかりを利用することにより、ビルド中またはプロフラム実行時にエラーが検出されるのを待たなくても問題をすぐに修正することができます。 波線の上に移動すると、エラーに関する追加情報が表示されます。 電球とエラーを修正する方法 (クイック アクションとして知られている) が左余白に表示される場合もあります。
+
+   ![Visual Studio での波線](../ide/media/squiggles-error.png)
+
+- [呼び出し階層](../ide/reference/call-hierarchy.md)
+
+   **[呼び出し階層]** ウィンドウには、選択したメソッドを呼び出すメソッドが表示されます。 この情報は、メソッドの変更や削除について考えるとき、またはバグの追跡を試みるときに有用です。
+
+   ![[呼び出し階層] ウィンドウ](../ide/reference/media/call-hierarchy-csharp-expanded.png)
+
+- [CodeLens](../ide/find-code-changes-and-other-history-with-codelens.md)
+
+   CodeLens を使用すると、コードへの参照、コードへの変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターから離れずに楽に検索できます。
 
    ![CodeLens](../ide/media/codelensoverview.png)
 
-- [ [ピークの定義](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md) ] ウィンドウ。現在のコンテキストから移動せずに、メソッドまたは型の定義インラインが表示されます。
+- [定義に移動](../ide/go-to-and-peek-definition.md)
 
-   ![ピークの定義](../ide/media/VSIDE_peek_definition.png)
+  [定義に移動] 機能では、関数または型が定義されている場所に直接移動できます。
 
-- [ [定義に移動](../ide/go-to-and-peek-definition.md) ] コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
+   ![定義へ移動](../ide/media/go-to-definition-menu.png)
 
-   ![定義へ移動](../ide/media/VSIDE_go_to_definition.png)
+- [ピークの定義](../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+
+   **[ピークの定義]** ウィンドウには、実際に個々のファイルを開かなくても、メソッドまたは型の定義が表示されます。
+
+   ![ピークの定義](../ide/media/peek-definition.png)
 
 ## <a name="create-a-program"></a>プログラムの作成
 
@@ -92,24 +110,22 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
 1. Visual Studio を開きます。 メニューで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
 
-  ![メニュー バーで [ファイル]、[新しいプロジェクト] の順に選択します。](../ide/media/VSIDE_Tour_NewProject1.png)
+   ![メニュー バーで [ファイル]、[新しいプロジェクト] の順に選択します。](../ide/media/file-new-project-menu.png)
 
 1. **[新しいプロジェクト]** ダイアログ ボックスには複数のプロジェクト "*テンプレート*" が表示されます。 テンプレートには、特定のプロジェクト タイプに必要な基本的なファイルと設定が含まれています。 **[Visual C#]** で **[.NET Core]** カテゴリを選択し、**[Console App (.NET Core)]\(コンソール アプリ (.NET Core)\)** テンプレートを選択します。 **[名前]** テキスト ボックスに「**HelloWorld**」と入力し、**[OK]** ボタンを選びます。
 
-  ![.NET Core アプリ テンプレート](../ide/media/overview-new-project-dialog.png)
+   ![.NET Core アプリ テンプレート](../ide/media/overview-new-project-dialog.png)
 
-   Visual Studio によってプロジェクトが作成されます。 これは、リテラル文字列 "Hello World!" を表示する <xref:System.Console.WriteLine?displayProperty=nameWithType> メソッドを呼び出す単純な "Hello World" アプリケーションです。 コンソール ウィンドウに表示します。
+   Visual Studio によってプロジェクトが作成されます。 これは、リテラル文字列 "Hello World!" を表示する <xref:System.Console.WriteLine?displayProperty=nameWithType> メソッドを呼び出す単純な "Hello World" アプリケーションです。 コンソール (プログラムの出力) ウィンドウでに表示されます。
 
   > [!NOTE]
-  > **[.NET Core]** カテゴリが表示されない場合は、**[.NET Core クロスプラットフォームの開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 **Visual Studio インストーラー**が開いたら、**[.NET Core クロスプラットフォームの開発]** ワークロードまで下にスクロールして選択してから **[変更]** を選択します。
+  > **[.NET Core]** カテゴリが表示されない場合は、**[.NET Core クロスプラットフォームの開発]** ワークロードをインストールする必要があります。 これを実行するには、**[新しいプロジェクト]** ダイアログ ボックスの左下側の **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが開いたら、**[.NET Core クロスプラットフォームの開発]** ワークロードまで下にスクロールして選択してから **[変更]** を選択します。
 
    すぐに次のようなグラフが表示されます。
 
    ![Visual Studio IDE](../ide/media/overview-ide-console-app.png)
 
-   アプリケーションの C# コードは領域の大部分を占めるエディター ウィンドウに表示されます。 テキストは、キーワードや型など、コードの異なる要素を示すように自動的に色分けされます。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコードが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。
-
-   プロジェクト ファイルは右側の**ソリューション エクスプローラー**と呼ばれるウィンドウに一覧表示されます。
+   アプリケーションの C# コードは領域の大部分を占めるエディター ウィンドウに表示されます。 キーワードや型など、コードの異なる部分を示すようにテキストが自動的に色分けされているのに注目してください。 また、コードの縦の小さな点線は互いに一致する括弧を示し、行番号は後でコードの場所を探すのに役立ちます。 小さな四角で囲まれたマイナス記号を選択するとコード ブロックが折りたたまれ、折りたたまれている場合は展開できます。 このコードのアウトライン機能を使用すると、必要のないコードを非表示にして画面を整理できます。 プロジェクト ファイルは右側の**ソリューション エクスプローラー**と呼ばれるウィンドウに一覧表示されます。
 
   ![赤色のボックスを持つ Visual Studio IDE](../ide/media/overview-ide-console-app-red-boxes.png)
 
@@ -158,7 +174,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
 1. 変数 `name` をダブルクリックして選択します。
 
-1. 変数の新しい名前として「`username`」と入力します。
+1. 変数の新しい名前として「**username**」と入力します。
 
    変数の周りに灰色のボックスが表示され、余白に電球が表示されることに注意してください。
 
@@ -206,7 +222,7 @@ Visual Studio には他にも次のような一般的な生産性を高める機
 
 ## <a name="debug-code"></a>コードのデバッグ
 
-コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 指定した条件が True の場合にのみヒットするブレークポイントを設定することができます。 コードの実行中に変数の値などを監視できます。
+コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 特定の行でコードの実行を停止する "*ブレークポイント*" を設定できます。 コードが実行されたときに変数の値がどのように変わるかなどを確認できます。
 
 ブレークポイントを設定して、プログラムが "実行中" の `username` 変数の値を見てみましょう。
 
@@ -232,7 +248,7 @@ Visual Studio でのデバッグの詳細については、[デバッガーの�
 
 ## <a name="customize-visual-studio"></a>Visual Studio をカスタマイズする
 
-既定の配色テーマの変更など、IDE をカスタマイズすることができます。 **濃色**テーマに変更するには:
+既定の配色テーマの変更など、Visual Studio ユーザー インターフェイスをカスタマイズできます。 **濃色**テーマに変更するには:
 
 1. メニュー バーから **[ツール]** > **[オプション]** の順に選択して、**[オプション]** ダイアログを開きます。
 
@@ -255,6 +271,6 @@ Android または iOS のスマートフォン用のアプリを作成したい�
 ## <a name="see-also"></a>関連項目
 
 * [Visual Studio のその他の機能](../ide/advanced-feature-overview.md)
-* [www.visualstudio.com](https://www.visualstudio.com/vs/)
+* [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)
-* [Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+* [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)

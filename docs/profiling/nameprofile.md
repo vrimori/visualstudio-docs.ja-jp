@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f7f3b6ddfd52863585e26a1972f00e55515996d
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 3f52b647cb6d110d111666df172d7243b0fd8ea4
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256137"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile` 関数は、指定したプロセスまたはスレッドに文字列を割り当てます。  
@@ -85,14 +86,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 >  CreateProcess() API および CreateThread() API 関数は、スレッドまたはプロセスが初期化される前に値を返す場合があります。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
   
 |||  
 |-|-|  
-|**Header**|VSPerf.h をインクルードします。|  
-|**Library**|VSPerf.lib を使用します。|  
+|**Header**|*VSPerf.h* をインクルードします。|  
+|**Library**|*VSPerf.lib* を使用します。|  
 |**Unicode**|`NameProfileW` (Unicode) および `NameProfileA` (ANSI) として実装します。|  
   
 ## <a name="example"></a>例  
@@ -133,5 +134,5 @@ void ExerciseNameProfile()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

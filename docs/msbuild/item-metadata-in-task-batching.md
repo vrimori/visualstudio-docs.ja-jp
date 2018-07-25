@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c55bd7be84b118f08fbedff1931c4517e963b5a7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9cbe01c15e9798a29d4832b8c189718d95cf5a0d
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31573566"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078993"
 ---
 # <a name="item-metadata-in-task-batching"></a>タスクのバッチの項目メタデータ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目リストをさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのタスクを実行する機能があります。 厳密にどの項目がどのバッチで渡されるのかは少々複雑です。 このトピックでは、バッチ処理を伴う一般的なシナリオについて説明します。  
@@ -32,10 +32,10 @@ ms.locfileid: "31573566"
 -   一度に 1 つの項目をバッチ処理する  
   
 -   項目リストをフィルター処理する  
+
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によるバッチ処理については、「[バッチ処理](../msbuild/msbuild-batching.md)」を参照してください。  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によるバッチ処理については、「[バッチ処理](../msbuild/msbuild-batching.md)」を参照してください。  
-  
-## <a name="dividing-an-item-list-into-batches"></a>1 つの項目リストをバッチに分割する  
+## <a name="divide-an-item-list-into-batches"></a>1 つの項目リストをバッチに分割する  
  バッチ処理では、項目メタデータに基づいて 1 つの項目リストを複数のバッチに分割し、各バッチを 1 つのタスクに個別に渡すことができます。 サテライト アセンブリのビルドに便利です。  
   
  次の例は、項目メタデータに基づいて 1 つの項目リストをバッチに分割する方法を示しています。 `ExampColl` 項目リストが `Number` 項目メタデータに基づいて 3 つのバッチに分割されます。 `Text` 属性に `%(ExampColl.Number)` があることで、バッチ処理の実行が [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知されます。 `ExampColl` 項目リストは `Number` メタデータに基づいて 3 つのバッチに分割され、各バッチが個別にタスクに渡されます。  
@@ -72,8 +72,8 @@ ms.locfileid: "31573566"
   
 </Project>  
 ```  
-  
- [Message タスク](../msbuild/message-task.md) タスクには、次の情報が表示されます。  
+
+[Message タスク](../msbuild/message-task.md) には、次の情報が表示されます。  
   
  `Number: 1 -- Items in ExampColl: Item1;Item4`  
   
@@ -81,13 +81,13 @@ ms.locfileid: "31573566"
   
  `Number: 3 -- Items in ExampColl: Item3;Item6`  
   
-## <a name="dividing-several-item-lists-into-batches"></a>複数の項目リストをバッチに分割する  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、同じメタデータに基づいて複数の項目をバッチに分割できます。 異なる項目リストをバッチに分割し、複数のアセンブリをビルドする作業が簡単になります。 たとえば、.cs ファイルの項目リストをアプリケーション バッチとアセンブリ バッチに分割し、リソース ファイルの項目リストをアプリケーション バッチとアセンブリ バッチに分割します。 それからバッチ処理を利用し、これらの項目リストを 1 つのタスクに私、アプリケーションとアセンブリの両方をビルドできます。  
+## <a name="divide-several-item-lists-into-batches"></a>複数の項目リストをバッチに分割する  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、同じメタデータに基づいて複数の項目をバッチに分割できます。 異なる項目リストをバッチに分割し、複数のアセンブリをビルドする作業が簡単になります。 たとえば、*.cs* ファイルの項目リストをアプリケーション バッチとアセンブリ バッチに分割し、リソース ファイルの項目リストをアプリケーション バッチとアセンブリ バッチに分割します。 それからバッチ処理を利用し、これらの項目リストを 1 つのタスクに私、アプリケーションとアセンブリの両方をビルドできます。  
   
 > [!NOTE]
 >  タスクに渡される項目リストにメタデータを参照する項目が含まれていない場合、その項目リストのすべての項目がすべてのバッチに渡されます。  
   
- 次の例は、項目メタデータに基づいて複数の項目リストをバッチに分割する方法を示しています。 `ExampColl` と `ExampColl2` の項目リストが `Number` 項目メタデータに基づいてそれぞれ 3 つのバッチに分割されます。 `Text` 属性に `%(Number)` があることで、バッチ処理の実行が [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知されます。 `ExampColl` と `ExampColl2` の項目リストは `Number` メタデータに基づいて 3 つのバッチに分割され、各バッチが個別にタスクに渡されます。  
+次の例は、項目メタデータに基づいて複数の項目リストをバッチに分割する方法を示しています。 `ExampColl` と `ExampColl2` の項目リストが `Number` 項目メタデータに基づいてそれぞれ 3 つのバッチに分割されます。 `Text` 属性に `%(Number)` があることで、バッチ処理の実行が [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知されます。 `ExampColl` と `ExampColl2` の項目リストは `Number` メタデータに基づいて 3 つのバッチに分割され、各バッチが個別にタスクに渡されます。  
   
 ```xml  
 <Project  
@@ -125,7 +125,7 @@ ms.locfileid: "31573566"
 </Project>  
 ```  
   
- [Message タスク](../msbuild/message-task.md) タスクには、次の情報が表示されます。  
+[Message タスク](../msbuild/message-task.md) には、次の情報が表示されます。  
   
  `Number: 1 -- Items in ExampColl: Item1 ExampColl2: Item4`  
   
@@ -161,7 +161,7 @@ ms.locfileid: "31573566"
 </Project>  
 ```  
   
- [Message タスク](../msbuild/message-task.md) タスクには、次の情報が表示されます。  
+[Message タスク](../msbuild/message-task.md) には、次の情報が表示されます。  
   
 ```  
 Identity: "Item1" -- Items in ExampColl: Item1  
@@ -213,13 +213,13 @@ Identity: "Item6" -- Items in ExampColl: Item6
 </Project>  
 ```  
   
- [Message タスク](../msbuild/message-task.md) タスクには、次の情報が表示されます。  
+[Message タスク](../msbuild/message-task.md) には、次の情報が表示されます。  
   
 ```  
 Items in ExampColl: Item2;Item5  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)   
  [Item 要素 (MSBuild)](../msbuild/item-element-msbuild.md)   
  [ItemMetadata 要素 (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   

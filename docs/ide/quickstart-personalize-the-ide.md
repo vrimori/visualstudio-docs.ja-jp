@@ -1,47 +1,47 @@
 ---
-title: Visual Studio での配色テーマとフォントの設定 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio での配色テーマとフォントの設定
 ms.date: 11/20/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7024213ca383ee5934df1d413501065b383f7981
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9132547055ef17e4ecd28274a0b1a3de7dd8ce2
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078226"
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>クイックスタート: Visual Studio IDE とエディターのカスタマイズ
 
-この 5 分から 10 分程度のクイックスタートでは、Visual Studio の配色テーマおよびテキスト エディターの 2 種類のテキスト色をカスタマイズします。
+この 5 分から 10 分程度のクイックスタートでは、Visual Studio の配色テーマとテキスト エディターの 2 種類のテキスト色をカスタマイズします。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="set-the-color-theme"></a>配色テーマの設定
 
-Visual Studio 2017 の既定の配色テーマは **[青]** です。 このテーマを **[濃色]** に変えてみましょう。
+Visual Studio 2017 のユーザー インターフェイスの既定の配色テーマは、**[青]** です。 このテーマを **[濃色]** に変えてみましょう。
 
-1. メニュー バーの **[ツール]**  >  **[オプション]** の順にクリックします。
+1. メニュー バー (**[ファイル]** や **[編集]** などのメニューの行) で、**[ツール]** > **[オプション]** の順に選択します。
 
 1. **[環境]**  >  **[全般]** オプションのページで、**[配色テーマ]** の選択内容を **[濃色]** に変更して **[OK]** を選択します。
 
-   IDE 全体の配色テーマが **[濃色]** に変更されます。
+   Visual Studio 開発環境 (IDE) 全体の配色テーマは、**[濃色]** に変更されます。
 
    ![濃色テーマの VS](media/quickstart-personalize-dark-theme.png)
 
 > [!TIP]
-> **Visual Studio 配色テーマ エディター**を [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) からインストールして、定義済みテーマを追加でインストールすることもできます。 このツールをインストールすると、追加の配色テーマが [配色テーマ] ドロップダウン リストに表示されます。
+> **Visual Studio 配色テーマ エディター**を [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor) からインストールして、定義済みテーマを追加でインストールすることもできます。 このツールをインストールすると、追加の配色テーマが **[配色テーマ]** ドロップダウン リストに表示されます。
 
 ## <a name="change-text-color"></a>テキストの色の変更
 
-次に、エディターのテキストの色をいくつかカスタマイズします。 まず、XML ファイルを開いて既定の色を確認しましょう。
+次に、エディターのテキストの色をいくつかカスタマイズします。 まず、新しい XML ファイルを作成して既定の色を確認しましょう。
 
-1. メニュー バーの **[ファイル]**  >  **[新規作成]**  >  **[ファイル]** の順にクリックします。
+1. メニュー バーの **[ファイル]**、**[新規作成]**、**[ファイル]** の順に選択します。
 
 1. **[新しいファイル]** ダイアログ ボックスの **[全般]** カテゴリで **[XML ファイル]** を選択し、**[開く]** を選択します。
 
@@ -73,7 +73,7 @@ Visual Studio 2017 の既定の配色テーマは **[青]** です。 このテ�
    </Catalog>
    ```
 
-   行番号は水色、XML 属性は薄い青色であることに注意してください。 これらの項目のテキスト色を変更します。
+   行番号は水色、XML 属性 (`id="bk101"` など) は薄い青色であることに注意してください。 これらの項目のテキストの色を変更します。
 
    ![XML ファイルのフォントの色](media/quickstart-personalize-xml-file.png)
 
@@ -81,7 +81,7 @@ Visual Studio 2017 の既定の配色テーマは **[青]** です。 このテ�
 
 1. **[環境]** で **[フォントおよび色]** カテゴリを選択します。
 
-   **[設定の表示]** の下のテキストは **[テキスト エディター]** になっています&mdash;これは、これから設定を行うテキスト エディターです。 このドロップダウン リストを展開すると、フォントおよびテキストの色のカスタマイズが可能な場所の一覧を確認できます。
+   **[設定の表示]** の下のテキストは **[テキスト エディター]** になっています&mdash;これは、これから設定を行うテキスト エディターです。 このドロップダウン リストを展開すると、フォントおよびテキストの色をカスタマイズできる場所の詳細な一覧が表示されます。
 
 1. 行番号のテキストの色を変更するため、**[表示項目]** リストで **[行番号]** を選択します。 **[前景色]** ボックスで **[オリーブ]** を選択します。
 

@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f90e33d17e5f54066b038da36611329bb7169de4
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: b94001c13f5925107cecb49936ecdc5fb1e73514
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254359"
 ---
 # <a name="processon-and-processoff"></a>ProcessOn と ProcessOff
 VSPerfCmd.exe の **ProcessOff** サブコマンドと **ProcessOn** サブコマンドでは、コマンド ライン プロファイル セッションの指定されたプロセスのプロファイリングを一時停止および再開します。 **ProcessOff** がプロセスのプロファイリングを停止し、**ProcessOn** がプロセスのプロファイリングを開始します。  
@@ -40,7 +41,7 @@ VSPerfCmd.exe /{ProcessOff|ProcessOn}:PID [Options]
   
 #### <a name="parameters"></a>パラメーター  
  `PID`  
- 開始または停止するプロセスの整数の ID。 プロセス ID は、Windows タスク マネージャーの [プロセス] タブにリストされます。  
+ 開始または停止するプロセスの整数の ID。 プロセス ID は、Windows タスク マネージャーの **[プロセス]** タブにリストされます。  
   
 ## <a name="required-subcommands"></a>必須のサブコマンド  
  なし  
@@ -78,8 +79,8 @@ VSPerfCmd /Shutdown
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)
+ [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)

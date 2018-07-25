@@ -9,16 +9,16 @@ description: Visual Studio サブスクリプションに含まれる Visual Stu
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 678da5c2727e69e3a9f4da7c8f692f082c485e8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 571bca9d5192f8499d36819299e76648beebe1a6
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31197842"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282627"
 ---
 # <a name="using-the-visual-studio-2017-benefit"></a>Visual Studio 2017 の特典を使用する
 
-Visual Studio のサブスクライバーは、Visual Studio IDE にアクセスできます。  具体的なバージョンは、サブスクリプションのレベルによって異なります。  特典は、サブスクリプション ポータルの [[特典]](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ページの [ツール] カテゴリのタイルとして表示されます。  
+Visual Studio のサブスクライバーは、Visual Studio IDE にアクセスできます。  具体的なバージョンは、サブスクリプションのレベルによって異なります。  特典は、サブスクリプション ポータルの [[特典]](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ページの [ツール] カテゴリのタイルとして表示されます。
 
 
 ## <a name="activation-steps"></a>アクティブ化の手順
@@ -26,30 +26,30 @@ Visual Studio のサブスクライバーは、Visual Studio IDE にアクセス
 *(次の例では Visual Studio Enterprise が使われています)*
 
 IDE をダウンロードするには:
-1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。 
-2. [ツール] セクションで、Visual Studio IDE のタイルを見つけて、特典タイルの下部にある **[ダウンロード]** リンクをクリックします。  [[ダウンロード]](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) ページからダウンロードすることもできます。 
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
+2. [ツール] セクションで、Visual Studio IDE のタイルを見つけて、特典タイルの下部にある **[ダウンロード]** リンクをクリックします。  [[ダウンロード]](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) ページからダウンロードすることもできます。
 
     ![Visual Studio Enterprise タイル](_img\vs-ide-experience\vs-ide-tile.png)
 
 3.  Visual Studio Enterprise のダウンロード結果ページにリダイレクトされ、そこで IDE をダウンロードして、ライセンス認証するためのプロダクト キーを入手できます。 青い **[キーを取得]** リンクをクリックして、プロダクト キーを要求することもできます。あるいは、後から [[プロダクト キー]](https://my.visualstudio.com/productkeys) ページでキーを要求できます。
 4.  [ダウンロードの結果] ページの [詳細] タブで、次のようにします。
     - 必要なアーキテクチャ (x86、x64) を選びます。
-    - 言語を選びます。 
+    - 言語を選びます。
 5.  青いダウンロード ボタンをクリックします。
     ![Visual Studio Enterprise ダウンロードの詳細](_img\vs-ide-experience\vs-ide-download-details.png)
 6.  すぐにインストールするには、**[実行]** をクリックします。
 7.  [ユーザー アカウント制御] ダイアログで、**[はい]** をクリックします。
 8.  **[続行]** をクリックしてライセンス条項に同意します。
-9.  インストーラーが開始したら、目的のワークロード、個々のコンポーネント、言語パックを、対応するタブで選びます。  
+9.  インストーラーが開始したら、目的のワークロード、個々のコンポーネント、言語パックを、対応するタブで選びます。
     ![Visual Studio Enterprise をカスタマイズする](_img\vs-ide-experience\vs-ide-customize-install-cropped.png)
 
-10.  **[インストール]** をクリックします。 
+10.  **[インストール]** をクリックします。
 
-11. インストールが完了したら、インストールを変更するか、Visual Studio を起動することができます。  開始するには **[起動]** をクリックします。  
+11. インストールが完了したら、インストールを変更するか、Visual Studio を起動することができます。  開始するには **[起動]** をクリックします。
 
     ![Visual Studio Enterprise を起動する](_img\vs-ide-experience\vs-ide-launch-cropped.png)
 
-12. Visual Studio サブスクリプションに関連付けられているアカウントでサインインします。 
+12. Visual Studio サブスクリプションに関連付けられているアカウントでサインインします。
 
 13. 優先するテーマを選び、**[Visual Studio の開始]** をクリックします。
 
@@ -69,11 +69,11 @@ IDE をダウンロードするには:
 <sup>1</sup> *Not for Resale (NFR)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Microsoft Valued Partner (MVP)、Region Director (RD) が含まれます。MCT Software & Services は含まれません。*
 
 
-どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。 
+どのサブスクリプション使用しているかわからない場合は次の手順を実行してください。  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) に接続し、お使いのメール アドレスに割り当てられているすべてのサブスクリプションを確認します。 すべてのサブスクリプションが表示されない場合は、1 つ以上のサブスクリプションが別のメール アドレスに割り当てられている可能性があります。  それらのサブスクリプションを表示するには、そのメール アドレスを使用してサインインする必要があります。
 
 
 ## <a name="support-resources"></a>サポート リソース
 -  Visual Studio IDE のヘルプが必要な場合は、以下のリソースを確認してください。
-    - テクニカル サポート: [https://www.visualstudio.com/support/](https://www.visualstudio.com/support/)
-    - [ドキュメント](/visualstudio/) 
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
+    - テクニカル サポート: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
+    - [ドキュメント](/visualstudio/)
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。

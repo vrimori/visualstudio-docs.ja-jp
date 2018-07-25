@@ -23,18 +23,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 396253865e01ddfe5566e6cd97424af644bd9246
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0b668e2a5f63011730cb731a4966df0bccd4721e
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578056"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946002"
 ---
 # <a name="cl-task"></a>CL タスク
-Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
+Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コンパイラは、実行可能ファイル (*.exe*)、ダイナミック リンク ライブラリ (*.dll*) ファイル、またはコード モジュール (*.netmodule*) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
- **CL** タスクのパラメーターの説明を次の表に示します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
+ 次の一覧では、**CL** タスクのパラメーターを説明します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
   
 -   **AdditionalIncludeDirectories**  
   
@@ -48,7 +48,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な String 型のパラメーター。  
   
-     コマンド ライン オプションのリスト。 "/*option1* /*option2* /*option#*" のようになります。 他のタスク パラメーターでは表されないコマンド ライン オプションを指定する場合は、このパラメーターを使用します。  
+     コマンド ライン オプションのリスト。 例: "/\<option1> /\<option2> /\<option#>" 他のタスク パラメーターでは表されないコマンド ライン オプションを指定する場合は、このパラメーターを使用します。  
   
      詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
   
@@ -202,7 +202,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な String 型のパラメーター。  
   
-     プログラムに対して作成するデバッグ情報の種類を選択し、デバッグ情報をオブジェクト (.obj) ファイルに保存するのかプログラム データベース (PDB) に保存するのかを選択します。  
+     プログラムに対して作成するデバッグ情報の種類を選択し、デバッグ情報をオブジェクト (*.obj*) ファイルに保存するのかプログラム データベース (PDB) に保存するのかを選択します。  
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
@@ -228,7 +228,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      セミコロン区切りリストで指定されている警告番号を無効にします。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の `/wd` オプションに関する記述を参照してください。  
+     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の `/wd` オプションをご覧ください。  
   
 -   **EnableEnhancedInstructionSet**  
   
@@ -380,7 +380,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` の場合は、コンパイラでソース コード ファイルのドキュメント コメントが処理され、ドキュメント コメントを含むソース コード ファイルごとに .xdc ファイルが作成されます。  
+     `true` の場合は、コンパイラでソース コード ファイルのドキュメント コメントが処理され、ドキュメント コメントを含むソース コード ファイルごとに *.xdc* ファイルが作成されます。  
   
      詳細については、「[/doc (ドキュメント コメントの処理) (C/C++)](/cpp/build/reference/doc-process-documentation-comments-c-cpp)」を参照してください。 この表の **XMLDocumentationFileName** パラメーターも参照してください。  
   
@@ -452,7 +452,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` の場合は、オブジェクト (.obj) ファイルの既定の C ランタイム ライブラリ名が省略されます。 既定では、コンパイラでライブラリ名が .obj ファイルにプッシュされ、リンカーに適切なライブラリが示されます。  
+     `true` の場合は、オブジェクト (*.obj*) ファイルの既定の C ランタイム ライブラリ名が省略されます。 既定では、コンパイラでライブラリ名が *.obj* ファイルにプッシュされ、リンカーに適切なライブラリが示されます。  
   
      詳細については、「[/Zl (既定のライブラリ名の省略)](/cpp/build/reference/zl-omit-default-library-name)」を参照してください。  
   
@@ -494,7 +494,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      省略可能な **String** 型のパラメーターです。  
   
-     ビルド時にプリコンパイル済みヘッダー (.pch) ファイルを作成または使用します。  
+     ビルド時にプリコンパイル済みヘッダー (*.pch*) ファイルを作成または使用します。  
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
@@ -536,7 +536,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      ソース ファイルの前処理シンボルを定義します。  
   
-     詳細については、「[/D (プリプロセッサの定義)](/cpp/build/reference/d-preprocessor-definitions)」を参照してください。  
+     詳細については、「[/D (プリプロセッサ定義)](/cpp/build/reference/d-preprocessor-definitions)」を参照してください。  
   
 -   **PreprocessOutput**  
   
@@ -682,7 +682,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      指定したコンパイラ警告の一覧をエラーとして扱います。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/we**`n` オプションに関する記述を参照してください。  
+     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/we**`n` オプションをご覧ください。  
   
 -   **TreatWarningAsError**  
   
@@ -690,7 +690,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、コンパイラが生成する警告がすべてエラーとして扱われます。  
   
-     詳細については、「[/w、/Wn、/WX、/Wall、/wln、/wdn、/wen、/won (警告レベル)](/cpp/build/reference/compiler-option-warning-level)」の **/WX** オプションに関する記述を参照してください。  
+     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/WX** オプションをご覧ください。  
   
 -   **TreatWChar_tAsBuiltInType**  
   
@@ -698,7 +698,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      `true` の場合、`wchar_t` 型はネイティブ型として扱われます。  
   
-     「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type)」を参照してください。  
+     詳細については、「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](/cpp/build/reference/zc-wchar-t-wchar-t-is-native-type)」を参照してください。  
   
 -   **UndefineAllPreprocessorDefinitions**  
   
@@ -752,7 +752,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
     -   **EnableAllWarnings** - **/Wall**  
   
-     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/W***n* オプションを参照してください。  
+     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/W***n* オプションをご覧ください。  
   
 -   **WholeProgramOptimization**  
   
@@ -782,7 +782,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      *ファイルの読み取り追跡ログ*を表す項目の配列を指定します。  
   
-     ファイルの読み取り追跡ログ (.tlog) には、タスクによって読み取られ、プロジェクト ビルド システムによってインクリメンタル ビルドをサポートするために使用される入力ファイルの名前が含まれています。 詳細については、この表の **TrackerLogDirectory** および **TrackFileAccess** パラメーターを参照してください。  
+     ファイルの読み取り追跡ログ (*.tlog*) には、タスクによって読み取られ、プロジェクト ビルド システムによってインクリメンタル ビルドをサポートするために使用される入力ファイルの名前が含まれています。 詳細については、この表の **TrackerLogDirectory** および **TrackFileAccess** パラメーターを参照してください。  
   
 -   **TLogWriteFiles**  
   
@@ -790,7 +790,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      *ファイルの書き込み追跡ログ*を表す項目の配列を指定します。  
   
-     ファイルの書き込み追跡ログ (.tlog) には、タスクによって読み取られ、プロジェクト ビルド システムによってインクリメンタル ビルドをサポートするために使用される出力ファイルの名前が含まれています。 詳細については、この表の **TrackerLogDirectory** および **TrackFileAccess** パラメーターを参照してください。  
+     ファイルの書き込み追跡ログ (*.tlog*) には、タスクによって読み取られ、プロジェクト ビルド システムによってインクリメンタル ビルドをサポートするために使用される出力ファイルの名前が含まれています。 詳細については、この表の **TrackerLogDirectory** および **TrackFileAccess** パラメーターを参照してください。  
   
 -   **TrackFileAccess**  
   
@@ -802,5 +802,5 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

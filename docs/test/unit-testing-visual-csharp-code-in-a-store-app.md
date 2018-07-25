@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: b409e3faa44b19cf0018e770915c8a3868f9ead4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5be318dd520cf9d7b5942200f635fa3f726634fc
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31979413"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117402"
 ---
 # <a name="unit-testing-visual-c-code"></a>Visual C# コードの単体テスト
 
@@ -116,7 +116,7 @@ ms.locfileid: "31979413"
 
 1. RooterTests プロジェクトに Maths アプリケーションへの参照を追加します。
 
-    1. ソリューション エクスプローラーで、**RooterTests** プロジェクトを選択し、ショートカット メニューの **[参照の追加...]** をクリックします。
+    1. ソリューション エクスプローラーで、**RooterTests** プロジェクトを選択し、ショートカット メニューの **[参照の追加]** を選択します。
 
     2. **[参照の追加 - RooterTests]** ダイアログ ボックスの **[ソリューション]** を展開し、**[プロジェクト]** を選択します。 次に **[Maths]** 項目を選択します。
 

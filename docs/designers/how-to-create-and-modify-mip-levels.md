@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b2948b33db198ddd8f7e002acbad155da66da58
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4bdda75e5c8796ccd6e0b1d86b717dbd9bc48926
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31925626"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924448"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>方法: MIP レベルを作成および変更する
 このドキュメントでは、**イメージ エディター**を使用して、テクスチャ空間詳細レベル (LoD) の *MIPMAP レベル*を作成および変更する方法を示します。

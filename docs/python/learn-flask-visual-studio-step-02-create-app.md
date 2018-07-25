@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9aeba681e1a4ab7bae77197d8af10a90f49a40d0
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3af16a72832c15aa8471bee0b3dfc1af773d941b
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752188"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37118201"
 ---
-# <a name="tutorial-step-2-create-a-flask-app-with-views-and-page-templates"></a>チュートリアル手順 2: ビューおよびページ テンプレートを使用して Flask アプリを作成する
+# <a name="step-2-create-a-flask-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Flask アプリを作成する
 
 **前の手順: [Visual Studio プロジェクトとソリューションを作成する](learn-flask-visual-studio-step-01-project-solution.md)**
 
@@ -36,7 +36,7 @@ ms.locfileid: "34752188"
 
 1. プロジェクト フォルダーで、`HelloFlask` という名前のアプリ フォルダーを作成します (**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[追加]**、**[新しいフォルダー]** の順に選択します)。
 
-1. `HelloFlask` フォルダーで、`__init.py__` という名前のファイルを次のコンテンツで作成します。`Flask` インスタンスが作成され、(次の手順で作成された) アプリのビューが読み込まれます。
+1. `HelloFlask` フォルダーで、`__init__.py` という名前のファイルを次のコンテンツで作成します。`Flask` インスタンスが作成され、(次の手順で作成された) アプリのビューが読み込まれます。
 
     ```python
     from flask import Flask
@@ -217,7 +217,7 @@ ms.locfileid: "34752188"
 > [!div class="nextstepaction"]
 > [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [Flask クイックスタート - レンダリング テンプレート](http://flask.pocoo.org/docs/1.0/quickstart/#rendering-templates) (flask.pocoo.org)
 - GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

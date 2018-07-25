@@ -14,18 +14,18 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d0d514c3ab7c2ecf491e1bb1adb5f7d545afd70
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c815652ae37fb04373cbf39279d54099a2d808a5
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746015"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117772"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
 
 ここでは、Visual Studio 統合開発環境 (IDE) の概要を示し、Windows ベースのユーザー インターフェイス (UI) を備えた簡単な Visual Basic アプリケーションを作成します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -33,11 +33,11 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. Visual Studio 2017 を開きます。
 
-2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** を選択します。
+2. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 3. 左側のウィンドウの **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual Basic]** を展開し、**[Windows デスクトップ]** を選択します。 中央のウィンドウで、**[Windows フォーム アプリケーション (.NET Framework)]** を選択します。 ファイルに `HelloWorld` という名前を付けます。
 
-     **[Windows フォーム アプリケーション (.NET Framework)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーで **[ツール]** > **[ツールと機能を取得]** の順に選択します。Visual Studio インストーラーが起動します。 **.NET デスクトップ開発**ワークロードを選択し、**[変更]** を選択します。
+     **[Windows フォーム アプリケーション (.NET Framework)]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスを取り消し、上部のメニュー バーで **[ツール]** > **[ツールと機能を取得]** の順に選択します。 Visual Studio インストーラーが起動します。 **.NET デスクトップ開発**ワークロードを選択し、**[変更]** を選択します。
 
      ![Visual Studio インストーラーの .NET Core ワークロード](../ide/media/install-dot-net-desktop-env.png)
 

@@ -13,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b95b0725e0cbb3a7568e51298fb83f05b74f18fb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c57229ea260ef2429273fab0d3220319b61c1dc7
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31568641"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946808"
 ---
-# <a name="creating-forwarding-loggers"></a>転送 logger の作成
+# <a name="create-forwarding-loggers"></a>転送 logger の作成
 転送 logger では、マルチプロセッサ システムでプロジェクトをビルドするときに監視の対象とするイベントを選択できるため、ログの効率を高めることができます。 転送 logger を有効にすることで、不要なイベントによる中心 logger の過負荷、ビルドの低速化、およびログの煩雑化を回避できます。  
   
  転送 logger を作成する場合は、<xref:Microsoft.Build.Framework.IForwardingLogger> インターフェイスを実装してそのメソッドを手動で実装するか、<xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> クラスとその定義済みメソッドを使用できます  (ほとんどのアプリケーションでは、後者で十分です)。  
@@ -35,12 +35,12 @@ ms.locfileid: "31568641"
  マルチプロセッサ環境では、イベント メッセージが誤った順序で受信される可能性があります。 したがって、転送 logger でイベント ハンドラーを使用してイベントを評価し、どのイベントをリダイレクターに渡して中心 logger に転送するかを判断するためにプログラミングする必要があります。 これを行うために、各メッセージにアタッチされた <xref:Microsoft.Build.Framework.BuildEventContext> クラスを使用します。このクラスによって、転送が必要なイベントを特定し、イベントの名前を <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> クラス (またはそのサブクラス) に渡すことができます。 このメソッドを使用した場合は、それ以外にイベントを転送するためのコーディングを行う必要はありません。  
   
 ## <a name="specify-a-forwarding-logger"></a>転送 logger の指定  
- 転送 logger がアセンブリにコンパイルされたら、ビルド時に使用することを [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知する必要があります。 そのためには、MSBuild.exe と共に `/FileLogger`、`/FileLoggerParameters`、および `/DistributedFileLogger` スイッチを使用します。 `/FileLogger` スイッチは、logger が直接アタッチされていることを MSBuild.exe に通知します。 `/DistributedFileLogger` スイッチは、ノードごとにログ ファイルが存在することを意味します。 転送 logger にパラメーターを設定するには、`/FileLoggerParameters` スイッチを使用します。 上記およびその他の MSBuild.exe スイッチの詳細については、[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)に関するページを参照してください。  
+ 転送 logger がアセンブリにコンパイルされたら、ビルド時に使用することを [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知する必要があります。 そのためには、*MSBuild.exe* と共に `/FileLogger`、`/FileLoggerParameters`、および `/DistributedFileLogger` スイッチを使用します。 `/FileLogger` スイッチは、ロガーが直接アタッチされていることを *MSBuild.exe* に通知します。 `/DistributedFileLogger` スイッチは、ノードごとにログ ファイルが存在することを意味します。 転送 logger にパラメーターを設定するには、`/FileLoggerParameters` スイッチを使用します。 上記およびその他の *MSBuild.exe* スイッチの詳細については、[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)に関するページを参照してください。  
   
-## <a name="multi-processor-aware-loggers"></a>マルチプロセッサ対応の logger  
+## <a name="multi-processor-aware-loggers"></a>マルチプロセッサ対応のロガー  
  マルチプロセッサ システムでプロジェクトをビルドする場合、各プロセッサからのビルド メッセージが自動的に一貫した順序でインタリーブされるわけではありません。 したがって、各メッセージにアタッチされる <xref:Microsoft.Build.Framework.BuildEventContext> クラスを使用して、メッセージ グループ化の優先順位を確立する必要があります。 マルチプロセッサ ビルドの詳細については、「[マルチプロセッサ環境でのログ](../msbuild/logging-in-a-multi-processor-environment.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [ビルド ロガー](../msbuild/build-loggers.md)   
  [マルチプロセッサ環境でのログ](../msbuild/logging-in-a-multi-processor-environment.md)

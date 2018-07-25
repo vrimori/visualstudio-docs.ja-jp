@@ -14,16 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7362f0a7495a75bc1d34d7f839bf0397787b6173
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e1481d5a6f22606875b0173bf0d3060bb455f022
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257629"
 ---
 # <a name="multiple-categories-are-present"></a>複数のカテゴリが存在します
 指定された時間範囲について複数の種類のアクティビティを含むセクションが選択されています。 2 色表示されており、これらの色は上下に重なっています。 これらの色は、指定された時間範囲で最も頻繁に発生した上位 2 つのアクティビティのみを表しています。 これらの 2 つのアクティビティの頻度は、他方との相関関係を示すように、縦棒の 3 分の 1 または 2 分の 1 として表示されます。 詳細を表示する場合は、スレッド ビューのこのセクションを拡大してみてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [実行時間 (スレッド ビュー)](../profiling/execution-time-threads-view.md)   
  [I/O 時間 (スレッド ビュー)](../profiling/i-o-time-threads-view.md)   
  [メモリ管理時間](../profiling/memory-management-time.md)   

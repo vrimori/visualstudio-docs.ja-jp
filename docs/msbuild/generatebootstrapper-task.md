@@ -20,18 +20,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fd27aa3e589957d75d504421d170735d1add6f9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4a81b02d4179c58c63c1429aa2e522bb39bb9aaf
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31573799"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945937"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper タスク
 アプリケーションとその前提条件を検出、ダウンロード、インストールする自動化方法を提供します。 これは、アプリケーションを構成するすべてのコンポーネントの別々のインストーラーを統合する単一のインストーラーとして機能します。  
   
 ## <a name="task-parameters"></a>タスク パラメーター  
- `GenerateBootstrapper` タスクのパラメーターの説明を次の表に示します。  
+ 次の表では、`GenerateBootstrapper` タスクのパラメーターを説明します。  
   
 -   `ApplicationFile`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "31573799"
     </BootstrapperItem>  
     ```  
   
-     `Include` 属性は、インストールすべき前提条件の名前を表すために使用されます。 `ProductName` 項目メタデータは省略可能であり、パッケージが見つからなかった場合にユーザー フレンドリーな名前としてビルド エンジンによって使用されます。 これらの項目は、`ApplicationFile` が指定されている場合を除き、必須の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 入力パラメーターではありません。 アプリケーション用にインストールすべき前提条件ごとに 1 つの項目を含める必要があります。  
+     `Include` 属性は、インストールする必要がある前提条件の名前を表します。 `ProductName` 項目メタデータは省略可能であり、パッケージが見つからない場合に、ユーザー フレンドリーな名前としてビルド エンジンによって使用されます。 これらの項目は、`ApplicationFile` が指定されている場合を除き、必須の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 入力パラメーターではありません。 アプリケーション用にインストールする必要がある前提条件ごとに、1 つの項目を含める必要があります。  
   
      `BootstrapperItems` パラメーターも `ApplicationFile` パラメーターも指定されていない場合、ビルド エラーが発生します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "31573799"
   
      省略可能な `String` 型のパラメーターです。  
   
-     setup.exe とすべてのパッケージ ファイルのコピー先を指定します。  
+     *setup.exe* とすべてのパッケージ ファイルのコピー先を指定します。  
   
 -   `Path`  
   
@@ -151,7 +151,7 @@ ms.locfileid: "31573799"
      `true` の場合、ブートストラップは指定された入力ブートストラップ項目に対して XSD 検証を実行します。 このパラメーターの既定値は、`false` です。  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、前提条件として [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] がインストールされていなければならないアプリケーションをインストールするために `GenerateBootstrapper` タスクが使用されています。  
@@ -177,6 +177,6 @@ ms.locfileid: "31573799"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

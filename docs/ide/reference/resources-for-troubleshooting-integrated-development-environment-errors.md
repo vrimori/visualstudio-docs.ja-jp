@@ -1,5 +1,5 @@
 ---
-title: 統合開発環境に関するエラーのトラブルシューティング情報
+title: エラーのトラブルシューティング情報
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -95,22 +95,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0b0bd982e153e7213f36574b44f9060006ebc99
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 7ea3f5575f5ba09a4d3f4a69a6ed800bb703b732
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106922"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302627"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>統合開発環境に関するエラーのトラブルシューティング情報
 
-一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、開発者コミュニティ、製品サポートなど、その他のリソースを利用できます。
+一部のエラー メッセージには、関連する固有のヘルプ トピックがありません。 エラー メッセージの情報では問題を解決できなかった場合は、サポート技術情報の文書、フォーラム、製品サポートなど、その他のリソースを利用できます。
 
 ## <a name="knowledge-base-articles"></a>サポート技術情報の文書
 
 サポート技術情報 (KB) で、製品の問題に関する文書をオンラインで検索できます。 問題に該当する KB の文書が存在しないこともありますが、多数のユーザーが経験したエラーについては、その多くが文書化されています。 KB の文書には、[Microsoft サポート](https://support.microsoft.com) Web サイトでアクセスできます。
 
-## <a name="the-developer-community"></a>開発者コミュニティ
+## <a name="developer-forums"></a>開発者フォーラム
 
 フォーラムを利用すると、他の開発者や Microsoft の社員との間でさまざまな情報を交換できます。 エラーの解決策が見つからなかった場合は、問題に関する質問をフォーラムに投稿できます。 また、ニュースグループで過去に同じような問題が投稿されていないかを検索することもできます。
 

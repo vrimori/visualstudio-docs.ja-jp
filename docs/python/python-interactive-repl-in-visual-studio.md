@@ -1,7 +1,7 @@
 ---
 title: Python Interactive ウィンドウ (REPL)
 description: コードを迅速に開発するために Visual Studio で Python コード用の対話型ウィンドウ (REPL) を使う方法について説明します。
-ms.date: 07/13/2017
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 81c4b2cceb75874135f6d18cbf167f719ced48b9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a728c164121216b259e48b502f9ca29fa7ffd1d4
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31582346"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057919"
 ---
-# <a name="working-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
+# <a name="work-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
 Visual Studio において各 Python 環境に用意されている対話型の read-evaluate-print loop (REPL) ウィンドウを使うと、コマンド ラインの `python.exe` で実行する REPL が向上します。 (**[表示] > [その他のウィンドウ] > [&lt;環境&gt;インタラクティブ**] メニュー コマンドで開いた) 対話型ウィンドウを使用すると、任意の Python コードを入力し、すぐに結果を確認することができます。 このコーディング方法は、API とライブラリの学習と実習、およびプロジェクトに含める作業コードを対話形式で開発するのに役立ちます。
 

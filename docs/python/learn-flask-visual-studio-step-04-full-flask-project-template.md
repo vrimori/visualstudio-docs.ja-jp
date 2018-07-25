@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a4c50a7b6e3fe14f27bfd78e6814f9e120864d60
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c463fdde3c22986211ed7345c3552b288516a4de
+ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752193"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36947455"
 ---
-# <a name="tutorial-step-4-use-the-full-flask-web-project-template"></a>チュートリアル手順 4: 完全な Flask Web プロジェクト テンプレートを使用する
+# <a name="step-4-use-the-full-flask-web-project-template"></a>手順 4: 完全な Flask Web プロジェクト テンプレートを使用する
 
 **前の手順: [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-flask-visual-studio-step-03-serve-static-files-add-pages.md)**
 
@@ -231,8 +231,8 @@ Jinja と Jade の構文をいろいろ試し、自分にとって何が最適�
 > [!div class="nextstepaction"]
 > [Polls Flask Web プロジェクト テンプレート](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [最初の Flask アプリの作成、パート 4 - フォームと汎用ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
 - [GitHub の Jade (ドキュメント)](https://github.com/liuliqiang/pyjade) (github.com)
-- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learn-flask](https://github.com/Microsoft/python-sample-vs-learn-flask)
+- GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

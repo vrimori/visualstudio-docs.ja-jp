@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd43d79950a39702108383f7408e1a37960e7c06
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b2219cc163332114632552fa7c3cb26fb75734af
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31573178"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079028"
 ---
 # <a name="msbuild-concepts"></a>MSBuild の概念
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、ビルド プラットフォームでソフトウェアを構築する方法を制御するために使用できる基本的な XML スキーマを提供します。 ビルド内のコンポーネントとその構築方法を指定するには、MSBuild の「プロパティ、アイテム、タスク、ターゲット」を使用します。  
@@ -30,7 +30,7 @@ ms.locfileid: "31573178"
 |[MSBuild 項目](../msbuild/msbuild-items.md)|項目と項目コレクションについて説明します。 項目はビルド システムへの入力であり、通常はファイルを表します。|  
 |[MSBuild ターゲット](../msbuild/msbuild-targets.md)|タスクを特定の順序でグループ化し、コマンド ラインからビルド処理のセクションを呼び出すことができるようにする方法について説明します。|  
 |[MSBuild タスク](../msbuild/msbuild-tasks.md)|実行可能コードにおける、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] による分割不可能なビルド処理の実行単位を作成する方法について説明します。|  
-|[プロパティとアイテムの比較](../msbuild/comparing-properties-and-items.md)|MSBuild のプロパティとアイテムを比較します。 プロパティとアイテムは、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。|  
+|[プロパティと項目の比較](../msbuild/comparing-properties-and-items.md)|MSBuild のプロパティとアイテムを比較します。 プロパティとアイテムは、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。|  
 |[MSBuild の特殊文字](../msbuild/msbuild-special-characters.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が特定のコンテキストにおける特別な用途のために予約した一部の文字をエスケープする方法について説明します。|  
 |[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)|テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。|  
 |[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)|MSBuild のビルド ブロックについて説明し、Visual Studio 統合開発環境 (IDE) を閉じずに MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。|  

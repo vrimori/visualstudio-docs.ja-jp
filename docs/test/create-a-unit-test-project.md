@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d1add4084c856db5a31cf74d75ba848e50e30d3c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3dc86281542dbedd429fae5f9976219bfa623878
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31965309"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235051"
 ---
 # <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -25,19 +25,19 @@ ms.locfileid: "31965309"
 
 ## <a name="to-create-a-unit-test-project"></a>単体テスト プロジェクトを作成するには:
 
-1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします (キーボード: Ctrl + Shift + N)。
+1.  **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします (キーボード: **Ctrl**+**Shift**+**N**)。
 
-2.  [新しいプロジェクト] ダイアログ ボックスで、**[インストール済み]** ノードを展開して、テスト プロジェクトで使用する言語を選択し、**[テスト]** をクリックします。
+2.  **[新しいプロジェクト]** ダイアログ ボックスで、**[インストール済み]** ノードを展開して、テスト プロジェクトで使用する言語を選択し、**[テスト]** をクリックします。
 
-3.  Microsoft 単体テスト フレームワークの 1 つを使用するには、プロジェクト テンプレートの一覧から **[単体テスト プロジェクト]** を選択します。 それ以外の場合は、使用する単体テスト フレームワークのプロジェクト テンプレートを選択します。 この例の Accounts プロジェクトをテストするために、プロジェクトの名前を AccountsTests に設定します。
+3.  Microsoft 単体テスト フレームワークの 1 つを使用するには、プロジェクト テンプレートの一覧から **[単体テスト プロジェクト]** を選択します。 それ以外の場合は、使用する単体テスト フレームワークのプロジェクト テンプレートを選択します。 この例の Accounts プロジェクトをテストするために、プロジェクトの名前を **AccountsTests** に設定します。
 
 4.  単体テスト プロジェクトに、テスト対象のコードへの参照を追加します。  同じソリューションのコード プロジェクトへの参照を作成する方法は次のようになります。
 
-    1.  ソリューション エクスプローラーでプロジェクトを選択します。
+    1.  **ソリューション エクスプローラー**でプロジェクトを選択します。
 
     2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。
 
-    3.  [参照マネージャー] ダイアログ ボックスで、**[ソリューション]** ノードを開き、**[プロジェクト]** を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。
+    3.  **[参照マネージャー]** ダイアログ ボックスで、**[ソリューション]** ノードを開き、**[プロジェクト]** を選択します。 コード プロジェクトの名前を選択し、ダイアログ ボックスを閉じます。
 
 5.  テストするコードが別の場所にある場合、「[プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)」を参照してください。
 
@@ -46,9 +46,11 @@ ms.locfileid: "31965309"
 
  次のいずれかのセクションを参照してください。
 
--   [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+-   [コードの単体テスト](../test/unit-test-your-code.md)
 
 -   [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)
+
+-   [単体テストでの MSTest フレームワークの使用](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 
  **単体テストの実行**
 

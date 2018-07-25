@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 322e0bdc98751cda670206667cc8580bd498f682
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c99dea00506fa838a2bb5c800fa05b7d55af3844
+ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752196"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36947103"
 ---
-# <a name="tutorial-step-5-use-the-polls-flask-web-project-template"></a>チュートリアル手順 5: Polls Flask Web プロジェクト テンプレートを使用する
+# <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
 **前の手順: [完全な Flask Web プロジェクト テンプレートを使用する](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
 

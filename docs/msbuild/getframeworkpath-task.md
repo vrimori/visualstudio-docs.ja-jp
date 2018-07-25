@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03747e9271b9eea71236a4ec3fea373b992f9068
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 25fb85642b7eb6a92c11d3d04d2c44eb6c683cff
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578069"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946317"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath タスク
 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アセンブリへのパスを取得します。  
@@ -45,7 +45,7 @@ ms.locfileid: "31578069"
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のいくつかのバージョンがインストールされている場合、このタスクは、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が実行されるように設計されているバージョンを返します。  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`GetFrameworkPath` タスクを使用し、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のパスを `FrameworkPath` プロパティに保存します。  
@@ -62,6 +62,6 @@ ms.locfileid: "31578069"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

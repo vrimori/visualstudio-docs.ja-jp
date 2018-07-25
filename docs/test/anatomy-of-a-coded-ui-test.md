@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 527a12591b05fcd1f20f8664132bf174ef553477
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5fa68a4db42874a157b5ee3a0665d3642e360486
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978259"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233998"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
 
@@ -65,7 +65,7 @@ using MouseButtons = System.Windows.Forms.MouseButtons;
 public partial class UIMap
 ```
 
-このクラスに適用される <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性からクラス コードが始まり、部分クラスとして宣言されます。 この属性は、このファイル内のすべてのクラスに対しても同様に適用されることに注意してください。 このクラスのコードをより多く格納できるその他のファイルとして `UIMap.cs` がありますが、これについては後で説明します。
+このクラスに適用される <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> 属性からクラス コードが始まり、部分クラスとして宣言されます。 この属性は、このファイル内のすべてのクラスに対しても同様に適用されることに注意してください。 このクラスのコードをより多く格納できるその他のファイルとして *UIMap.cs* がありますが、これについては後で説明します。
 
 生成された `UIMap` クラスには、テストの記録時に指定された各メソッドのコードが含まれています。
 
@@ -120,11 +120,11 @@ public void AddItems()
 }
 ```
 
-各メソッド定義の概要コメントで、そのメソッドのパラメーター値のために使用するクラスを示しています。 この場合は、`AddItemsParams` クラスです。このクラスは `UIMap.cs` ファイルの後半で定義されているほか、`AddItemsParams` プロパティによって返される値の型でもあります。
+各メソッド定義の概要コメントで、そのメソッドのパラメーター値のために使用するクラスを示しています。 この場合は、`AddItemsParams` クラスです。このクラスは *UIMap.cs* ファイルの後半で定義されているほか、`AddItemsParams` プロパティによって返される値の型でもあります。
 
  メソッド コードの先頭にあるのは `Variable Declarations` 領域です。ここでは、メソッドで使用される UI オブジェクトのローカル変数が定義されます。
 
- このメソッドでは、`UIItemWindow` と `UIItemEdit` の両方が、`UIMap.cs` ファイルの後半で定義されている `UICalculatorWindow` クラスを使用してアクセスされるプロパティです。
+ このメソッドでは、`UIItemWindow` と `UIItemEdit` の両方が、*UIMap.cs* ファイルの後半で定義されている `UICalculatorWindow` クラスを使用してアクセスされるプロパティです。
 
  その次の行では、`AddItemsParams` オブジェクトのプロパティを使用して、キーボードから電卓アプリケーションにテキストを送信しています。
 
@@ -156,7 +156,7 @@ public virtual AddItemsParams AddItemsParams
 }
 ```
 
- このプロパティでは、`mAddItemsParams` というプライベート ローカル変数を使用して、値を返す前にその値を保持します。 返されるオブジェクトのプロパティ名とクラス名は同じです。 このクラスは、`UIMap.cs` ファイルの後半で定義されます。
+ このプロパティでは、`mAddItemsParams` というプライベート ローカル変数を使用して、値を返す前にその値を保持します。 返されるオブジェクトのプロパティ名とクラス名は同じです。 このクラスは、*UIMap.cs* ファイルの後半で定義されます。
 
  プロパティによって返される各クラスは、同様の構成になっています。 `AddItemsParams` クラスを次に示します。
 
@@ -181,7 +181,7 @@ public class AddItemsParams
 }
 ```
 
-`UIMap.cs` ファイル内のすべてのクラスと同様に、このクラスも <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> で始まります。 この小さなクラスの内部は、前述した `UIMap.AddItems()` メソッドで使用される <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> メソッドのパラメーターとして使用する文字列を定義する `Fields` 領域です。 これらのパラメーターを使用するメソッドの呼び出し前に、この文字列フィールド内の値を置き換えるためのコードを記述できます。
+*UIMap.cs* ファイル内のすべてのクラスと同様に、このクラスも <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> で始まります。 この小さなクラスの内部は、前述した `UIMap.AddItems()` メソッドで使用される <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> メソッドのパラメーターとして使用する文字列を定義する `Fields` 領域です。 これらのパラメーターを使用するメソッドの呼び出し前に、この文字列フィールド内の値を置き換えるためのコードを記述できます。
 
 ###  <a name="UIMapCS"></a>UIMap.cs
  既定では、このファイルにはメソッドやプロパティを持たない `UIMap` 部分クラスが含まれています。
@@ -264,7 +264,7 @@ public void MyTestCleanup()
 ###  <a name="UIMapuitest"></a>UIMap.uitest
  これは、コード化された UI テストの記録およびそのすべての部分の構造を表す XML ファイルです。 アクションとクラス、およびクラスのメソッドとプロパティが含まれます。 [UIMap.Designer.cs](#UIMapDesignerFile) ファイルには、テストの構造を再現し、テスト フレームワークへの接続を可能にするために、コード化された UI ビルダーによって生成されたコードが含まれています。
 
- `UIMap.uitest` ファイルは直接編集できません。 ただし、コード化された UI ビルダーを使用してテストを変更することはできます。これにより、`UIMap.uitest` ファイルと [UIMap.Designer.cs](#UIMapDesignerFile) ファイルが自動的に変更されます。
+ *UIMap.uitest* ファイルは直接編集できません。 ただし、コード化された UI ビルダーを使用してテストを変更することはできます。これにより、*UIMap.uitest* ファイルと [*UIMap.Designer.cs*](#UIMapDesignerFile) ファイルが自動的に変更されます。
 
 ## <a name="see-also"></a>関連項目
 

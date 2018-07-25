@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c52cecb30bdaa4daab46c7359e255d52d71d1597
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e85e1c571ecb900d5ce7ffdecf8e85b8c367de5c
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844135"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>方法: .NET Framework ランタイムを指定する
 
@@ -37,9 +38,9 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>アプリケーションにプロファイラーをアタッチするときにプロファイリングする .NET Framework ランタイムを指定するには
 
-1. [分析] メニューの [プロファイラー] をポイントし、[アタッチ/デタッチ] をクリックします。
+1. **[分析]** メニューの **[プロファイラー]** をポイントし、**[アタッチ/デタッチ]** をクリックします。
 
-2. [プロファイラーのプロセスへのアタッチ] ダイアログ ボックスで、プロファイリングするプロセスをクリックします。
+2. **[プロファイラーのプロセスへのアタッチ]** ダイアログ ボックスで、プロファイリングするプロセスをクリックします。
 
      **[ターゲット CLR バージョン]** 一覧ボックスに **[自動]** およびコンピューターにインストールされている [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] ランタイムのバージョンが表示されます。
 

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecb590c4562c79853c86ee65e9c5d4e3c059d5da
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89a8fd27dbf16db2277b52b2def2fac1e9f06e68
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569688"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945206"
 ---
 # <a name="exec-task"></a>Exec タスク
 指定された引数を使って、指定されたプログラムまたはコマンドを実行します。  
@@ -35,7 +35,7 @@ ms.locfileid: "31569688"
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`Command`|必須の `String` 型のパラメーターです。<br /><br /> 実行するコマンドです。 attrib などのシステム コマンド、または program.exe、runprogram.bat、setup.msi などの実行可能ファイルを指定できます。<br /><br /> このパラメーターで複数のコマンド行を指定できます。 または、複数のコマンドをバッチ ファイルに入れ、このパラメーターを使ってそれを実行することもできます。|  
+|`Command`|必須の `String` 型のパラメーターです。<br /><br /> 実行するコマンドです。 attrib などのシステム コマンド、または *program.exe*、*runprogram.bat*、*setup.msi* などの実行可能ファイルを指定できます。<br /><br /> このパラメーターで複数のコマンド行を指定できます。 または、複数のコマンドをバッチ ファイルに入れ、このパラメーターを使ってそれを実行することもできます。|  
 |`ConsoleOutput`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> 各項目出力は、ツールによって生成される標準出力または標準エラー ストリームの行です。 これは、`ConsoleToMsBuild` が `true` に設定されている場合にのみキャプチャされます。|
 |`ConsoleToMsBuild`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、タスクは、ツールの標準エラーと標準出力をキャプチャして、`ConsoleOutput` 出力パラメーターで利用できるようにします。 既定値は `false` です。|
 |`CustomErrorRegularExpression`|省略可能な `String` 型のパラメーターです。<br /><br /> ツールの出力でエラー行を示すために使う正規表現を指定します。 これは、普通とは異なる書式設定の出力を生成するツールに便利です。|  
@@ -52,9 +52,9 @@ ms.locfileid: "31569688"
 ## <a name="remarks"></a>コメント  
  このタスクは、実行したいジョブの特定の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクを使用できないときに便利です。 ただし、`Exec` タスクは、固有のタスクとは異なり、実行したツールまたはコマンドの結果に基づいて追加処理や条件演算を行うことはできません。
   
- `Exec` タスクは、プロセスを直接呼び出す代わりに cmd.exe を呼び出します。  
+ `Exec` タスクは、プロセスを直接呼び出す代わりに *cmd.exe* を呼び出します。  
   
- このドキュメントにリストされているパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ このドキュメントにリストされているパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Exec` タスクを使ってコマンドを実行します。  
@@ -73,6 +73,6 @@ ms.locfileid: "31569688"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

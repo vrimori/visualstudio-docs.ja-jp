@@ -6,24 +6,33 @@ ms.author: amburns
 ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 14afeefac0bb5aa198b2f62ba00ba85831b23ffb
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: dcd305cd7cb3759483c79b75629a688d852f7c7a
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884224"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433208"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Visual Studio for Mac のアンインストール
 
 Visual Studio for Mac のようなスタンドアロン アプリなど、クロスプラットフォーム アプリケーション開発が可能な Xamarin 製品がいくつかあります。
 
-このガイドでは、関連するセクションに移動して各製品を個別にアンインストールする方法を説明します。 このガイドのすべての手順に従うことで、Xamarin ツールセット全体をアンインストールすることができます。
+このガイドを使用すると、関連するセクションに移動して各製品を個別にアンインストールすることができます。または、「[アンインストール スクリプト](#uninstall-script)」で示されるスクリプトを使用して、すべてをアンインストールすることができます。
 
-Xamarin Studio をコンピューターにインストールしてある場合は、以下の手順に加えて、developer.xamarin.com の[アンインストール](https://developer.xamarin.com/guides/cross-platform/getting_started/installation/uninstalling_xamarin/) ガイドの手順にも従うことが必要な場合があります。
+以前に Xamarin Studio を自分のマシンにインストールしてある場合は、以下の手順に加えて、「[Xamarin のアンインストール](https://docs.microsoft.com/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac)」ガイドの手順にも従うことが必要な場合もあります。
 
 ## <a name="uninstall-script"></a>アンインストール スクリプト
 
-[アンインストール スクリプト](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)を使うと、Visual Studio とそれに関連するコンポーネントを一度にアンインストールできます。
+Visual Studio for Mac とコンピューター用のすべてのコンポーネントをアンインストールするために使用できるスクリプトが 2 つあります。
+
+- [Visual Studio と Xamarin スクリプト](#visual-studio-for-mac-and-xamarin-script)
+- [.NET Core スクリプト](#net-core-script)
+
+次のセクションでは、スクリプトのダウンロードと使用に関する情報が示されます。
+
+### <a name="visual-studio-for-mac-and-xamarin-script"></a>Visual Studio for Mac と Xamarin スクリプト
+
+[アンインストール スクリプト](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)を使うと、Visual Studio と Xamarin コンポーネントを一度にアンインストールできます。
 
 このアンインストール スクリプトには、この記事で説明されているほとんどのコマンドが含まれます。 外部依存関係の可能性のためにスクリプトからは次の 2 つが除外されています。
 
@@ -45,6 +54,26 @@ Xamarin Studio をコンピューターにインストールしてある場合�
     $ sudo ./uninstall-vsmac.sh
     ```
 4. 最後に、アンインストール スクリプトを削除します。
+
+### <a name="net-core-script"></a>.NET Core スクリプト
+
+.NET Core 用のアンインストール スクリプトは、[dotnet cli repo](https://raw.githubusercontent.com/dotnet/cli/master/scripts/obtain/uninstall/dotnet-uninstall-pkgs.sh) にあります。
+
+スクリプトを実行するには、次の手順のようにします。
+
+1. スクリプトを右クリックして **[名前を付けて保存]** を選び、 Mac にファイルを保存します。
+2. ターミナルを開き、スクリプトをダウンロードした場所に作業ディレクトリを変更します。
+
+    ```bash
+    $ cd /location/of/file
+    ```
+3. スクリプトを実行可能にして、**sudo** で実行します。
+
+    ```bash
+    $ chmod +x ./dotnet-uninstall-pkgs.sh
+    $ sudo ./dotnet-uninstall-pkgs.sh
+    ```
+4. 最後に、.NET Core のアンインストール スクリプトを削除します。
 
 ## <a name="uninstall-visual-studio-for-mac"></a>Visual Studio for Mac をアンインストールする
 
