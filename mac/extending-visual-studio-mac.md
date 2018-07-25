@@ -6,12 +6,12 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 4ba57dde546ff6827c6d0d137e907174c0699dbb
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: eeca19a8724a93c46f832ead0ac16ecda84b70bf
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33865098"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178261"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Visual Studio for Mac の拡張
 
@@ -38,7 +38,7 @@ Visual Studio for Mac から拡張機能パッケージを構築するには、V
 
 拡張機能パッケージは、パッケージの名前、バージョン、依存関係などの情報に関するメタデータを C# 属性に格納します。 Add-in Maker では、この情報を格納して整理するために `AddinInfo.cs` と `AssemblyInfo.cs` という 2 つのファイルが作成されます。 拡張機能パッケージでは、*Addin 属性*で一意の ID と名前空間を指定する必要があります。
 
-```
+```csharp
 [assembly:Addin (
    "DateInserter",
    Namespace = "DateInserter",
@@ -70,7 +70,7 @@ Visual Studio for Mac から拡張機能パッケージを構築するには、V
 
 コマンド拡張機能は、`/MonoDevelop/Ide/Commands` 拡張ポイントにエントリを追加して定義されます。 ここでは、次のコードを使用して `Manifest.addin.xml` に拡張機能を定義しました。
 
- ```
+ ```xml
 <Extension path="/MonoDevelop/Ide/Commands/Edit">
   <command id="DateInserter.DateInserterCommands.InsertDate"
             _label="Insert Date"
@@ -90,7 +90,7 @@ Visual Studio for Mac から拡張機能パッケージを構築するには、V
 
 CommandItem 拡張機能を `/MonoDevelop/Ide/MainMenu/Edit` 拡張ポイントに組み込む例を、次のコード スニペットで示します。
 
-```
+```xml
 <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
   <commanditem id="DateInserter.DateInserterCommands.InsertDate" />
 </Extension>
@@ -100,18 +100,18 @@ CommandItem は、id 属性に指定されているコマンドをメニュー�
 
 ### <a name="command-handlers"></a>コマンド ハンドラー
 
-`InsertDateHandler` は `CommandHandler` クラスの拡張機能です。 `Update` と `Run` という 2 つのメソッドは上書きされます。 コマンドがメニューに表示される場合、またはキー バインドで実行される場合は常に、`Update` メソッドが照会されます。 info オブジェクトを変更することで、コマンドを無効にしたり、非表示にしたり、配列コマンドを設定したりすることができます。 テキスト情報を挿入する *TextEditor* でアクティブな*ドキュメント*が見つからない場合、`Update` メソッドを使用すると、コマンドが無効になります。
+`InsertDateHandler` は `CommandHandler` クラスの拡張機能です。 `Update` と `Run` という 2 つのメソッドはオーバーライドされます。 コマンドがメニューに表示される場合、またはキー バインドで実行される場合は常に、`Update` メソッドが照会されます。 info オブジェクトを変更することで、コマンドを無効にしたり、非表示にしたり、配列コマンドを設定したりすることができます。 テキスト情報を挿入する *TextEditor* でアクティブな*ドキュメント*が見つからない場合、`Update` メソッドを使用すると、コマンドが無効になります。
 
-```
+```csharp
 protected override void Update (CommandInfo info)
 {
     info.Enabled = IdeApp.Workbench.ActiveDocument?.Editor != null;
 }
 ```
 
-コマンドを有効または非表示にする特殊なロジックがある場合は、`Update` メソッドを上書きする必要があります。 `Run` メソッドは、ユーザーがコマンドを実行するたび (この例では、ユーザーが [編集] メニューからコマンドを選択したとき) に実行されます。 このメソッドを実行すると、テキスト エディターでカレット位置に日時が挿入されます。
+コマンドを有効または非表示にする特殊なロジックがある場合は、`Update` メソッドをオーバーライドする必要があります。 `Run` メソッドは、ユーザーがコマンドを実行するたび (この例では、ユーザーが [編集] メニューからコマンドを選択したとき) に実行されます。 このメソッドを実行すると、テキスト エディターでカレット位置に日時が挿入されます。
 
-```
+```csharp
 protected override void Run ()
 {
   var editor = IdeApp.Workbench.ActiveDocument.Editor;
@@ -122,7 +122,7 @@ protected override void Run ()
 
 `DateInserterCommands` 内の列挙型メンバーとしてコマンドの型を宣言します。
 
-```
+```csharp
 public enum DateInserterCommands
 {
   InsertDate,

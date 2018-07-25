@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb5d450f2556cf1205f39e220c8f3b3219e9d2a3
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: b93247fcce7502ce96a075dc5d297cd9c87fe640
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946746"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153190"
 ---
 # <a name="bscmake-task"></a>BscMake タスク
 > [!IMPORTANT]
@@ -46,8 +46,6 @@ ms.locfileid: "37946746"
 |**Sources**|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> タスクで使用および生成できる MSBuild ソース ファイル アイテムの配列を定義します。|  
 |**SuppressStartupBanner**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、タスクの開始時に著作権およびバージョン番号のメッセージが表示されないようにします。<br /><br /> 詳細については、「[BSCMAKE オプション](/cpp/build/reference/bscmake-options)」で **/NOLOGO** オプションの説明を参照してください。|  
 |**TrackerLogDirectory**|省略可能な **String** 型のパラメーターです。<br /><br /> トラッカー ログのディレクトリを指定します。|  
-  
-## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>関連項目  
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)

@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b668e2a5f63011730cb731a4966df0bccd4721e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 4e7c2ce059e53c44d29463f0bb9aba3c2a24e1e4
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946002"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152618"
 ---
 # <a name="cl-task"></a>CL タスク
 Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コンパイラは、実行可能ファイル (*.exe*)、ダイナミック リンク ライブラリ (*.dll*) ファイル、またはコード モジュール (*.netmodule*) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
@@ -799,8 +799,6 @@ Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コン�
      `true` の場合、ファイル アクセス パターンが追跡されます。  
   
      詳細については、この表にある **TLogReadFiles** および **TLogWriteFiles** パラメーターを参照してください。  
-  
-## <a name="remarks"></a>コメント  
   
 ## <a name="see-also"></a>関連項目  
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)
