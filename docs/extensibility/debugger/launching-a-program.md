@@ -1,5 +1,5 @@
 ---
-title: プログラムを起動 |Microsoft ドキュメント
+title: プログラムの起動 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,51 +14,51 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 714d751e9855b5567bf76ccd902fada727e14ba1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5c56fd1c82c02428f9f6b67c1d715f1c61588858
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103865"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231838"
 ---
-# <a name="launching-a-program"></a>プログラムの起動
-プログラムをデバッグするユーザーは、IDE からデバッガーを実行する f5 キーを押してことができます。 これは、一連の最終的には、IDE がさらに接続されている、または、プログラムに添付された、次のようにされているデバッグ エンジン (DE) に接続すると、イベントを開始します。  
+# <a name="launch-a-program"></a>プログラムを起動します。
+プログラムをデバッグする必要のあるユーザーがキーを押して**F5** IDE からデバッガーを実行します。 これには、一連の最終的に接続されている、または接続されているプログラムに次のようにさらにデバッグ エンジン (DE) への接続を IDE のイベントが開始されます。  
   
-1.  IDE 最初パッケージを呼び出して、プロジェクト、ソリューションのアクティブなプロジェクトのデバッグ設定を取得します。 設定には、開始ディレクトリ、環境変数、ポート、プログラムを実行する、および指定した場合に使用して、プログラムを作成する DE が含まれます。 これらの設定は、デバッグ パッケージに渡されます。  
+1.  IDE は、ソリューションのアクティブなプロジェクトのデバッグの設定を取得するプロジェクトのパッケージを最初に呼び出します。 設定には、開始ディレクトリ、環境変数、プログラムを実行するポートおよび指定されている場合に使用して、プログラムを作成する DE が含まれます。 これらの設定は、パッケージのデバッグに渡されます。  
   
-2.  デが指定されている場合、DE、プログラムを起動するオペレーティング システムを呼び出します。 プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 たとえば、プログラムが MSIL で書き込まれた場合、プログラムを実行する共通言語ランタイムは呼び出されます。  
+2.  デが指定されている場合、DE、プログラムを起動するオペレーティング システムを呼び出します。 プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 たとえば、プログラムが MSIL で書き込まれた場合、プログラムを実行する共通言語ランタイムが呼び出されます。  
   
      - または -  
   
-     デが指定されていない場合、ポートは、これにより、プログラムの実行時環境に読み込まれると、プログラムを起動するオペレーティング システムを呼び出します。  
+     デが指定されていない場合、ポートは、これにより、プログラムの実行時の環境を読み込むと、プログラムを起動するオペレーティング システムを呼び出します。  
   
     > [!NOTE]
-    >  デを使用するプログラムを起動すると、その同じ DE がプログラムに接続する可能性があります。  
+    >  プログラムを起動する、DE を使用する場合は、同じ DE をプログラムにアタッチすることが高くなります。  
   
-3.  かどうか、DE またはポートは、プログラムを起動、によって、DE または実行時環境プログラムの説明、またはノードを作成し、プログラムを実行しているポートに通知します。  
+3.  かどうか、DE またはポートは、プログラムを起動することによって、DE または実行時環境プログラムの説明、またはノードを作成し、プログラムを実行しているポートを通知します。  
   
     > [!NOTE]
-    >  プログラム ノードはデバッグ可能なプログラムの簡易表現であるために、実行時環境が、[プログラム] ノードを作成することをお勧めします。 作成して、[プログラム] ノードを登録するだけの全体の DE をロードする必要はありません。 デが設計されている場合、IDE が IDE プロセス内で実行する実際に実行して、ポートに、[プログラム] ノードを追加できるコンポーネントを使用する必要がありません。  
+    >  プログラム ノードがデバッグ可能なプログラムの簡易表現であるために、実行時環境が、[プログラム] ノードを作成することをお勧めします。 作成し、[プログラム] ノードを登録するだけの全体の DE を読み込む必要はありません。 デが設計されている場合は、IDE が IDE のプロセスで実行するが実際に実行されている、ポートに、[プログラム] ノードを追加できるコンポーネントを使用する必要がありません。  
   
- 他のすべてのプログラムと共に、新しく作成されたプログラム関連関係のない、起動または同じの IDE からデバッグ セッションを作成する接続します。  
+ 他のすべてのプログラムと共に、新しく作成されたプログラムは、関連、関係のないまたは起動、または、同じ IDE からデバッグ セッションを作成する接続を。  
   
- プログラムでは、最初に押されたとき**f5 キーを押して**、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]のデバッグ パッケージが (関連付けられているプログラムの起動の型と)、プロジェクト パッケージを呼び出してから、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>をさらに記入するメソッドを<xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2>ソリューションのアクティブなプロジェクトのデバッグ設定を含む構造体。 この構造体に返されるデバッグ パッケージを呼び出すことによって、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A>メソッドです。 デバッグ パッケージには、セッション デバッグ マネージャー (SDM) がデバッグし、関連するデバッグ エンジンをされているプログラムを起動し、インスタンス化します。  
+ プログラムでは、最初に押されたとき**F5**、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]のデバッグ パッケージがプロジェクト パッケージ (これに関連付けられた起動されるプログラムの種類) を呼び出しを通じて、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>メソッドで、順番に入力し、<xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2>ソリューションのアクティブなプロジェクトのデバッグ設定を含む構造体。 この構造体に戻されるデバッグ パッケージを呼び出すことによって、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A>メソッド。 パッケージのデバッグには、セッション デバッグ マネージャー (SDM) がデバッグし、関連するデバッグ エンジンをされているプログラムを起動し、インスタンス化します。  
   
- プログラムを起動するために使用する DE の GUID では、SDM に渡された引数のいずれか。  
+ 使用して、プログラムの起動を DE の GUID では、SDM に渡される引数のいずれか。  
   
- DE GUID がない場合`GUID_NULL`、SDM が併置、DE を作成しを呼び出してその[LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)プログラムを起動する方法です。 たとえば、プログラムは、ネイティブ コードで記述`IDebugEngineLaunch2::LaunchSuspended`が呼び出す可能性があります`CreateProcess`と`ResumeThread`(Win32 関数) をプログラムを実行します。  
+ DE GUID がない場合`GUID_NULL`、SDM は併置、DE を作成しを呼び出してその[LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)メソッドは、プログラムを起動します。 たとえば、プログラムが、ネイティブ コードで記述された`IDebugEngineLaunch2::LaunchSuspended`が呼び出す可能性があります`CreateProcess`と`ResumeThread`(Win32 関数) をプログラムを実行します。  
   
- プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 デか、実行時環境を作成し、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)プログラムを記述するインターフェイスし、このインターフェイスを通過[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)ポートがあるプログラムに通知するには実行中です。  
+ プログラムを起動するには、結果として、プログラムの実行時環境が読み込まれます。 デまたはランタイム環境を作成し、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)プログラムを記述するインターフェイスし、このインターフェイスを渡します[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)にポートがあるプログラムを通知するには実行中です。  
   
- 場合`GUID_NULL`渡されると、ポートは、プログラムを起動します。 プログラムが実行されていると、ランタイム環境を作成、`IDebugProgramNode2`プログラムを記述するインターフェイスし、に渡します`IDebugPortNotify2::AddProgramNode`です。 これにより、プログラムを実行しているポートが通知されます。 SDM はデバッグ エンジンを実行中のプログラムにアタッチします。  
+ 場合`GUID_NULL`ポートがプログラムを起動し、渡されます。 実行時環境を作成、プログラムが実行されている、`IDebugProgramNode2`プログラムを記述するインターフェイスし、それを`IDebugPortNotify2::AddProgramNode`します。 これには、プログラムを実行しているポートに通知します。 SDM は、デバッグ エンジンを実行中のプログラムにアタッチします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ポートへの通知](../../extensibility/debugger/notifying-the-port.md)  
- プログラムが起動され、ポートの通知後の動作について説明します。  
+ プログラムが起動し、ポートの通知後の動作について説明します。  
   
  [起動後のアタッチ](../../extensibility/debugger/attaching-after-a-launch.md)  
- ドキュメント、デバッグ セッションは、プログラムに、DE をアタッチする準備ができます。  
+ ドキュメント、デバッグ セッションが、DE をプログラムにアタッチする準備ができたときです。  
   
 ## <a name="related-sections"></a>関連項目  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)  
- プログラムを起動して、式を評価するなど、さまざまなデバッグ タスクへのリンクが含まれています。
+ プログラムを起動して、式の評価などのさまざまなデバッグ タスクへのリンクが含まれています。

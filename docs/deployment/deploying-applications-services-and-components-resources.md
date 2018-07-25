@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7346de998052ba68dfadf74a09fe0d4339be1614
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 1d5b15af932f8d796a27dfc060128617816b9234
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757163"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232174"
 ---
 # <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio でのデプロイの概要
 
@@ -42,9 +42,9 @@ Visual Studio で、アプリケーションに発行できる直接、次のタ
 
 ## <a name="azure-app-service"></a>Azure App Service
 
-[Azure App Service](/azure/app-service/app-service-web-overview) では、拡張性のあるさまざまな Web アプリケーションとサービスをすばやく作成でき、インフラストラクチャを保守する必要はありません。
+[Azure App Service](/azure/app-service/app-service-web-overview)と[App Service on Linux](/azure/app-service/containers/app-service-linux-intro)インフラストラクチャを保守しなくても、さまざまなスケーラブルな web アプリケーションとサービスをすばやく作成する開発者を支援します。
 
-選択して、コンピューティング能力を APp Service を決定する、[価格レベルまたはプラン](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)含む App service。 した複数の Web アプリ (およびその他のアプリの種類) は、価格レベルを変更することがなく、同じ App Service を共有します。 たとえば、同じ App Service で Web アプリを開発、ステージング、および運用環境をホストできます。
+選択して、コンピューティング能力を App Service を決定する、[価格レベルまたはプラン](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)含む App service。 した複数の Web アプリ (およびその他のアプリの種類) は、価格レベルを変更することがなく、同じ App Service を共有します。 たとえば、同じ App Service で Web アプリを開発、ステージング、および運用環境をホストできます。
 
 App Service は Azure のクラウドでホストされる仮想マシン上で実行されますが、これらの仮想マシンはユーザーが管理します。 App Service では、各アプリが割り当てられます一意\*。 azurewebsites.net の URL は、サイトへのカスタム ドメイン名の割り当てを許可するすべての価格レベル Free 以外。
 
@@ -57,7 +57,7 @@ App Service は Azure のクラウドでホストされる仮想マシン上で�
 
 > 自社のデータセンターまたは他のオンプレミス コンピューターで Azure App Service を使いたい場合は、[Azure Stack](https://azure.microsoft.com/overview/azure-stack/) を使って行うことができます。
 
-App Service への発行の詳細については、次を参照してください。[クイック スタート - Azure App Service に発行](quickstart-deploy-to-azure.md)します。
+App Service への発行の詳細については、次を参照してください。[クイック スタート - Azure App Service に発行](quickstart-deploy-to-azure.md)と[クイック スタート - Linux への ASP.NET Core の発行](quickstart-deploy-to-linux.md)します。
 
 ## <a name="azure-virtual-machines"></a>Azure Virtual Machines
 

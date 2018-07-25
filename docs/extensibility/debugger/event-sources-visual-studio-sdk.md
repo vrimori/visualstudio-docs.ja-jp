@@ -1,5 +1,5 @@
 ---
-title: イベント ソース (Visual Studio SDK) |Microsoft ドキュメント
+title: イベント ソース (Visual Studio SDK) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,20 +13,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d1dac50183422b6895f6496b7ca78d24312c33e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f196f7711db151ef2da867a11bc6a8b71394d9c8
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099839"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232658"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>イベント ソース (Visual Studio SDK)
-イベントの 2 つのソースがあります。 デバッグ エンジン (DE) と、セッションは、マネージャー (SDM) をデバッグします。 DE から送信されるイベント NULL 以外では、エンジンを持ち、SDM から送信されたイベントが NULL エンジンを持ちます。  
+イベントの 2 つのソースがあります。 デバッグ エンジン (DE) とセッション デバッグ マネージャー (SDM)。 ドイツから送信されるイベント NULL 以外のエンジンを持ち、SDM から送信されるイベントが NULL のエンジンを持ちます。  
   
 ## <a name="example"></a>例  
- 次の例は、送信する方法を示しています、 **IDebugProgramCreateEvent2** DE、SDM するからです。  
+ 次の例では、送信する方法を示しています、 **IDebugProgramCreateEvent2** SDM を DE から。  
   
-```  
+```csharp  
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();  
 if (FAILED(pCallback->Event(m_pEngine, NULL, m_pProgram, NULL, pProgramCreateEvent, IID_IDebugProgramCreateEvent2, EVENT_ASYNCHRONOUS)))  
 {  

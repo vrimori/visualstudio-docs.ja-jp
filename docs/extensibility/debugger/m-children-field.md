@@ -1,5 +1,5 @@
 ---
-title: m_children フィールド |Microsoft ドキュメント
+title: m_children フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e71bc592e77daac877b571b14acd2d62a8657b9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e27704484e5cfb320c8b65432fb3efb283054019
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109978"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231149"
 ---
 # <a name="mchildren-field"></a>m_children フィールド
-このタスクに登録されている子タスクの一覧。  
+このタスクで登録されている子タスクの一覧。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp 
 .field public class System.Collections.Generic.List`1<class System.Threading.Tasks.Task> m_children  
 ```  
   
-## <a name="remarks"></a>コメント  
- タスクの実行中にタスクを実行するスレッドのみはこの配列にアクセスする必要があります。  
+## <a name="remarks"></a>Remarks  
+ タスクの実行中にタスクを実行するスレッドのみがこの配列をアクセスする必要があります。  
   
- タスクが完了した場合、他のスレッドには何も追加または、これからすべてを削除するしないでくださいがない限りこのフィールドにアクセスすることができます。  
+ タスクが完了した場合、他のスレッドには何も追加またはそこから何も削除されない限り、このフィールドにアクセスすることができます。  
   
 ## <a name="see-also"></a>関連項目  
  [ContingentProperties クラス](../../extensibility/debugger/contingentproperties-class-internal-members.md)

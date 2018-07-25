@@ -1,5 +1,5 @@
 ---
-title: マネージ コードで COM 定数 |Microsoft ドキュメント
+title: マネージ コードの COM 定数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42a8c6cbe2b3a2b5fa559a74dd165b7a729b814d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8a273c5e53f9f7086e8dc96bcb4c36e0b0223d0
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101889"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231537"
 ---
-# <a name="com-constants-in-managed-code"></a>マネージ コードで COM 定数
-Managed Package Framework (MPF) 使用可能な標準の COM 定数にマネージ コード。 これらの定数は、参照用に以下に示します。  
+# <a name="com-constants-in-managed-code"></a>マネージ コードの COM 定数
+マネージ パッケージ フレームワーク (MPF) は、いくつかの標準の COM 定数をマネージ コードで使用可能にします。 これらの定数は、参照用に以下に示します。  
   
 ## <a name="boolean-hresult-values"></a>ブール値の HRESULT 値  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  

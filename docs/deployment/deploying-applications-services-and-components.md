@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9198e39be5149440b09ebab5115e803d60716423
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 5824876adc75430085ea0f69dc6f01be722526f5
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080264"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231227"
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: は、最初に、Visual Studio でのデプロイについてください。
 
@@ -57,9 +57,9 @@ ms.locfileid: "39080264"
 
     Python のアプリを参照してくださいも[Python - Azure App Service への発行](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)します。
 
-    Azure App Service から発行プロファイルを Visual Studio にインポートする方法の詳細については、次を参照してください。[発行設定をインポートし、Azure にデプロイ](../deployment/tutorial-import-publish-settings-azure.md)します。
+    概要については、次を参照してください。 [Publish to Azure](quickstart-deploy-to-azure.md)と[Linux への発行](quickstart-deploy-to-linux.md)します。 またを参照してください[を Azure に ASP.NET Core アプリを発行](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)します。 Git を使用して展開では、次を参照してください。 [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](/aspnet/core/publishing/azure-continuous-deployment)します。
 
-    概要については、次を参照してください。 [Publish to Azure](quickstart-deploy-to-azure.md)します。 またを参照してください[を Azure に ASP.NET Core アプリを発行](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)します。 Git を使用して展開では、次を参照してください。 [Git を使用した Azure への ASP.NET Core の継続的なデプロイ](/aspnet/core/publishing/azure-continuous-deployment)します。
+    Azure App Service から発行プロファイルを Visual Studio にインポートする方法の詳細については、次を参照してください。[発行設定をインポートし、Azure にデプロイ](../deployment/tutorial-import-publish-settings-azure.md)します。
 
     > [!NOTE]
     > Azure アカウントをもっていない場合は、ここから [サインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio) することができます。

@@ -1,5 +1,5 @@
 ---
-title: CommandName 要素 |Microsoft ドキュメント
+title: CommandName 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a18d5f15ca4c8c258e57a1018b3841b3a47746f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ca5f38febab608aedf794fb02dbfbc65debbfc5e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31097615"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230925"
 ---
 # <a name="commandname-element"></a>CommandName 要素
-`CommandName`要素がキーボード カテゴリに表示されるテキストを指定、**オプション**] ダイアログ ボックスし、[、**コマンド**一覧に、**カスタマイズ**ダイアログボックスです。  
+`CommandName`要素がキーボードのカテゴリに表示されるテキストを指定します、**オプション**ダイアログ ボックスで、および、**コマンド**の一覧で、**カスタマイズ**ダイアログボックス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,7 +30,7 @@ ms.locfileid: "31097615"
 <CommandName>MyCommand</CommandName>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -43,7 +43,7 @@ ms.locfileid: "31097615"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[ 要素](../extensibility/strings-element.md)|などのテキスト要素をグループ化`ButtonText`と`CommandName`です。|  
+|[文字列の要素](../extensibility/strings-element.md)|など、テキスト要素をグループ化`ButtonText`と`CommandName`します。|  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

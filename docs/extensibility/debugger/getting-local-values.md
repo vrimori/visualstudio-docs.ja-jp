@@ -1,5 +1,5 @@
 ---
-title: ローカル値を取得する |Microsoft ドキュメント
+title: ローカル値の取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b38b346b8429ba04fb3730ea4c5fef0b2b6da1d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d182d98b4813cfebedf113103ca515293b8d79b
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107973"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231873"
 ---
-# <a name="getting-local-values"></a>ローカル値を取得します。
+# <a name="get-local-values"></a>ローカルの値を取得します。
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- Visual Studio の呼び出しをローカルの値を取得する[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)そのローカルです。 この実装では、クラスで`CFieldProperty`各ローカル IDebugProperty2 インターフェイスを実装します。  
+ Visual Studio を呼び出し、ローカルの値を取得する[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)のローカルです。 この実装では、クラスで`CFieldProperty`の各ローカル IDebugProperty2 インターフェイスを実装します。  
   
- この実装`IDebugProperty2::GetPropertyInfo`は、次のタスクを実行します。  
+ この実装の`IDebugProperty2::GetPropertyInfo`は、次のタスクを実行します。  
   
-1.  ローカルの名前、プロパティ、および属性を取得、 [FIELD_INFO](../../extensibility/debugger/reference/field-info.md)構造体、クラスがインスタンス化し、初期化されるときに入力します。  
+1.  ローカルの名前、プロパティ、およびから属性を取得、 [FIELD_INFO](../../extensibility/debugger/reference/field-info.md)構造体、クラスがインスタンス化され、初期化されるときに入力します。  
   
 2.  ローカルの型を取得、 [IDebugField](../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
-3.  ローカルの値を取得、`IDebugField`オブジェクト。 このフィールドは、ローカルを使用するメモリの場所にバインドされて、 [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)オブジェクトと、値が、その結果から取得した[IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
+3.  ローカルの値を取得、`IDebugField`オブジェクト。 このフィールドは、ローカルを使用するメモリ位置にバインドされて、 [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)オブジェクトと、値が、その結果から取得した[IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
 4.  要求されたすべてのプロパティを返します、 [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)構造体。  
   
-## <a name="managed-code"></a>マネージ コード  
- この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのマネージ コードでローカルにします。 ヘルパー関数も示しています`Field.GetType`、つまり、フィールドの種類を取得するために使用します。 `Field.GetValue` 表示される[を評価するローカル](../../extensibility/debugger/evaluating-locals.md)です。 ヘルパー関数`Field.MapModifiersToAttributes`(非表示)、フィールドを変換して[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)フラグ[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)値。  
+## <a name="managed-code"></a>マネージド コード  
+ この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのマネージ コードでローカルです。 ヘルパー関数も示します`Field.GetType`、つまりフィールドの型を取得するために使用します。 `Field.GetValue` 示した[ローカル変数を評価](../../extensibility/debugger/evaluating-locals.md)します。 ヘルパー関数`Field.MapModifiersToAttributes`(非表示) を変換してフィールドの[FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md)フラグ[DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md)値。  
   
 ```csharp  
 namespace EEMC  
@@ -179,7 +179,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>アンマネージ コード  
- この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのアンマネージ コードでローカルにします。 2 つのヘルパー関数も示しています`FieldGetType`と`FieldGetValue`フィールドの型と値をそれぞれ取得に使用されます。 注意してください`VARIANT`s が、フィールドの値が使用され、型として、`VARIANT`さまざまな値の型を処理することができます。 この実装で`FieldGetValue`を返します、 [IDebugField](../../extensibility/debugger/reference/idebugfield.md)以降であるオブジェクトへの呼び出しで値に変換される`FieldGetPrimitiveValue`(で示した[を評価するローカル](../../extensibility/debugger/evaluating-locals.md))。  
+ この例の実装を示しています。`IDebugProperty2::GetPropertyInfo`メソッドのアンマネージ コードでローカルです。 2 つのヘルパー関数も示します`FieldGetType`と`FieldGetValue`フィールドの型と値をそれぞれ取得に使用します。 `VARIANT`S が、フィールドの値が使用され、入力として、`VARIANT`さまざまな値の型を処理することができます。 この実装で`FieldGetValue`を返します、 [IDebugField](../../extensibility/debugger/reference/idebugfield.md)以降であるオブジェクトへの呼び出しで値に変換`FieldGetPrimitiveValue`(に表示される[ローカル変数を評価](../../extensibility/debugger/evaluating-locals.md))。  
   
 ```cpp  
 STDMETHODIMP CFieldProperty::GetPropertyInfo(   
@@ -442,6 +442,6 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [ローカル プロパティの取得](../../extensibility/debugger/getting-local-properties.md)   
+ [ローカル変数のサンプルの実装](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [ローカル プロパティを取得します](../../extensibility/debugger/getting-local-properties.md)   
  [評価コンテキスト](../../extensibility/debugger/evaluation-context.md)

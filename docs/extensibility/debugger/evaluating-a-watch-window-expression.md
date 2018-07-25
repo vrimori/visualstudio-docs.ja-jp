@@ -1,5 +1,5 @@
 ---
-title: '[ウォッチ] ウィンドウの式を評価する |Microsoft ドキュメント'
+title: ウォッチ ウィンドウ式の評価 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,40 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: beb632b484659c3bc901142b35ab52d25b8067fe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 47e875f4d288c896ace377e2844192aa5c3be275
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31105798"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232104"
 ---
-# <a name="evaluating-a-watch-window-expression"></a>[ウォッチ] ウィンドウの式を評価します。
+# <a name="evaluate-a-watch-window-expression"></a>[ウォッチ] ウィンドウの式を評価します。
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 実行は一時停止、Visual Studio はデバッグ エンジンのウォッチ式のリスト内の各式の現在の値を確認するには、(DE) を呼び出します。 デは式エバリュエーター (EE) を使用して各式を評価し、Visual Studio にはその値を表示する、**ウォッチ**ウィンドウです。  
+ 実行が一時停止したときに、Visual Studio はデバッグ エンジンのウォッチ リスト内の各式の現在の値を確認するには、(DE) を呼び出します。 デは、式エバリュエーター (EE) を使用して各式を評価し、Visual Studio では、その値が表示されます、**ウォッチ**ウィンドウ。  
   
- ウォッチ式のリストの式が評価される方法の概要を次に示します。  
+ ウォッチ リストの式を評価する方法の概要を次に示します。  
   
-1.  Visual Studio は、DE を呼び出して[GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)を式の評価に使用できる式のコンテキストを取得します。  
+1.  Visual Studio 呼び出し DE の[GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md)式の評価に使用できる式のコンテキストを取得します。  
   
-2.  Visual Studio を呼び出し、ウォッチ式のリスト内の各式[ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)式のテキストを解析された式に変換します。  
+2.  ウォッチ リストの各式では、Visual Studio 呼び出し[ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)解析された式の式のテキストに変換します。  
   
-3.  `IDebugExpressionContext2::ParseText` 呼び出し[解析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)を実際の生成とテキストの解析中の作業を行うには、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。  
+3.  `IDebugExpressionContext2::ParseText` 呼び出し[解析](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)生成とテキストの解析の実際の作業を行う、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)オブジェクト。  
   
-4.  `IDebugExpressionContext2::ParseText` 作成、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクトと配置、`IDebugParsedExpression`にオブジェクト。 このすれば`DebugExpression2`オブジェクトは Visual Studio に返されます。  
+4.  `IDebugExpressionContext2::ParseText` 作成、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクトと配置、`IDebugParsedExpression`それにオブジェクト。 この`DebugExpression2`オブジェクトは Visual Studio に返されます。  
   
 5.  Visual Studio 呼び出し[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)解析された式を評価します。  
   
 6.  `IDebugExpression2::EvaluateSync` 呼び出しを渡す[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)を実際の評価を行い、生成、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) Visual Studio に返されるオブジェクト。  
   
-7.  Visual Studio 呼び出し[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)ウォッチ式の一覧に表示される、式の値を取得します。  
+7.  Visual Studio 呼び出し[GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)ウォッチ リストに表示される式の値を取得します。  
   
 ## <a name="parse-then-evaluate"></a>解析し、評価  
- 複雑な式の解析は、それを評価するよりもかなり長くかかることができます、ため、式の評価プロセスは分割 2 つの手順: 1)、式を解析し、2) 解析された式を評価します。 これにより、評価発生回数が多しますが、式が 1 回だけを解析する必要があります。 中間の解析された式で EE から返される、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)次々 にカプセル化され、として DE から返されたオブジェクト、 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクト。 `IDebugExpression`オブジェクトにすべての評価の延期、`IDebugParsedExpression`オブジェクト。  
+ 式の評価プロセスが 2 つのステップに分割する複雑な式の解析は、それを評価するよりもかなり長くかかることが、: 1) 式を解析し、2) 解析された式を評価します。 これにより、評価は回数だけ出現できますが、式が 1 回だけを解析する必要があります。 EE から中間の解析された式が返される、 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)順番にカプセル化され、として DE から返されるオブジェクトを[IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md)オブジェクト。 `IDebugExpression`オブジェクトをすべて評価の延期、`IDebugParsedExpression`オブジェクト。  
   
 > [!NOTE]
->  Visual Studio を前提としています。 この場合でも、この 2 段階のプロセスに従う、EE 必要はありません。EE は解析し、同じ手順で評価されるときに[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)は呼び出されます (これは MyCEE サンプルのしくみなど)。 場合は、言語には、複雑な式を形成できます、評価ステップから解析ステップを分割することがあります。 多くのウォッチ式、Visual Studio デバッガーでのパフォーマンスを向上このことができますが表示されています。  
+>  Visual Studio を前提としています。 この場合でも、この 2 段階のプロセスに準拠する、EE の必要はありません。EE は解析し、同じ手順で評価と[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)が呼び出されます (これは、MyCEE サンプルのしくみなど)。 場合は、言語には、複雑な式を形成できます、評価手順から解析の手順を分離したい場合があります。 Visual Studio デバッガーでのパフォーマンスを向上これには、多くのウォッチ式の場合に表示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [式の評価の実装のサンプル](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)  
@@ -62,4 +62,4 @@ ms.locfileid: "31105798"
  デバッグ エンジン (DE) は、式エバリュエーター (EE) を呼び出すときに渡される引数を提供します。  
   
 ## <a name="see-also"></a>関連項目  
- [CLR 式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+ [CLR の式エバリュエーターの書き込み](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

@@ -1,5 +1,5 @@
 ---
-title: 要素をコマンド |Microsoft ドキュメント
+title: 要素をコマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d905914c9819671cf8c77d81ec8d51302467a9d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31f34dbf974ef860ddabd29af0e94b3c65a11f32
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108483"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231009"
 ---
 # <a name="commands-element"></a>Commands 要素
-VSPackage のツールバーのコマンドのコレクションを表します。 コレクションは次のように最大 5 つのサブセクションを持つことができます: メニューのグループ、ボタン、コンボ、およびビットマップ。  
+VSPackage のツールバーのコマンドのコレクションを表します。 コレクションは次のように最大 5 つのサブセクションを持つことができます: メニューのグループ、ボタン、combos、およびビットマップ。  
   
- 各サブセクションの子要素、たとえば、\<メニュー >、GUID と数値識別子のペアである一意のコマンド ID によって識別されます。 GUID は、「コマンド セット」を識別し、論理的に関連するコマンドをグループ化するために使用します。 VSPackage では、その他の Vspackage によって定義されているコマンド Id を持つ衝突を避けるために設定の独自のコマンドを定義します。  
+ 各サブセクションの子要素、たとえば、\<メニュー >、GUID と数値識別子のペアである一意のコマンド ID によって識別されます。 GUID は、「コマンド セット」を識別し、論理的に関連するコマンドをグループ化するために使用します。 VSPackage では、その他の Vspackage で定義されているコマンド Id を持つ衝突を避けるために設定の独自のコマンドを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Commands package="GuidMyPackage" >  
   <Menus>... </Menus>  
   <Groups>... </Groups>  
@@ -40,22 +40,22 @@ VSPackage のツールバーのコマンドのコレクションを表します�
 </Commands>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|package|コマンドを提供する VSPackage を識別する GUID。<br /><br /> たとえば、パッケージ"guidVsPackage1Pkg"を = です。|  
+|package|コマンドを提供する VSPackage を識別する GUID。<br /><br /> たとえば、パッケージ化"guidVsPackage1Pkg"を = です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
 |[Menus 要素](../extensibility/menus-element.md)|VSPackage を実装するすべてのメニューを定義します。|  
-|[Groups 要素](../extensibility/groups-element.md)|VSPackage で、コマンド グループを定義するエントリが含まれています。|  
-|[Buttons 要素](../extensibility/buttons-element.md)|ボタンの要素をグループ化します。|  
+|[Groups 要素](../extensibility/groups-element.md)|VSPackage ではコマンド グループを定義するエントリが含まれています。|  
+|[Buttons 要素](../extensibility/buttons-element.md)|ボタン要素をグループ化します。|  
 |[Bitmaps 要素](../extensibility/bitmaps-element.md)|ビットマップの要素をグループ化します。|  
 |[Combos 要素](../extensibility/combos-element.md)|複合要素をグループ化します。|  
   
@@ -63,10 +63,10 @@ VSPackage のツールバーのコマンドのコレクションを表します�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[CommandTable 要素](../extensibility/commandtable-element.md)|IDE に VSPackage を提供するコマンドを表すすべての要素を定義します。 使用可能な要素は、メニュー項目、メニューのツールバー、およびコンボ ボックスです。|  
+|[CommandTable 要素](../extensibility/commandtable-element.md)|IDE に VSPackage を提供するコマンドを表すすべての要素を定義します。 使用可能な要素は、メニュー項目、メニューのツールバー、およびコンボ ボックス。|  
   
 ## <a name="example"></a>例  
- 次の例を使用する方法を示しています、[コマンド要素](../extensibility/commands-element.md)です。  
+ 次の例は、使用する方法を示します、[コマンド要素](../extensibility/commands-element.md)します。  
   
 ```  
 <Commands package="guidMyPackage">  
@@ -93,4 +93,4 @@ VSPackage のツールバーのコマンドのコレクションを表します�
   
 ## <a name="see-also"></a>関連項目  
  [Vspackage がユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)
+ [コマンド、メニューのおよびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
