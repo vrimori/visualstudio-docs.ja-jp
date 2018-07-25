@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fdecc141affcb88d0a04346767469ef5296557d
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 142aff42eff0184e957242ca09bc3b591b919d1f
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31622888"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057997"
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
@@ -121,7 +121,7 @@ response.json を変更し、セットアップの実行時に使用される既
 > [!TIP]
 > バッチ ファイルの一部として実行するとき、`--wait` オプションを利用すると、`vs_enterprise.exe` プロセスはインストールの完了を待ち、それから終了コードを返します。 これは、企業の管理者が完了したインストールに追加のアクション (たとえば、[成功したインストールにプロダクト キーを適用する](automatically-apply-product-keys-when-deploying-visual-studio.md)など) を実行したい場合に便利ですが、そのインストールからのリターン コードを処理するにはインストールが終了するまで待つ必要があります。  `--wait` を使用しない場合、インストールが完了する前に `vs_enterprise.exe` プロセスが終了し、インストール操作の状態を表していない不正確な終了コードが返されます。
 
-レイアウトからインストールする場合、インストールされる内容はレイアウトから取得されます。 ただし、レイアウトに含まれないコンポーネントを選択した場合は、インターネットから取得されます。  Visual Studio のセットアップでレイアウトにない内容がダウンロードされないようにするには、`--noWeb` オプションを使用します。  `--noWeb` が使用されていて、インストール対象として選択されている内容がレイアウトにない場合、セットアップは失敗します。  
+レイアウトからインストールする場合、インストールされる内容はレイアウトから取得されます。 ただし、レイアウトに含まれないコンポーネントを選択した場合は、インターネットから取得されます。  Visual Studio のセットアップでレイアウトにない内容がダウンロードされないようにするには、`--noWeb` オプションを使用します。  `--noWeb` が使用されていて、インストール対象として選択されている内容がレイアウトにない場合、セットアップは失敗します。
 
 ### <a name="error-codes"></a>エラー コード
 
@@ -140,7 +140,7 @@ response.json を変更し、セットアップの実行時に使用される既
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-2017-release"></a>以前の Visual Studio 2017 リリースのレイアウトを作成する方法
 
 > [!NOTE]
-> [VisualStudio.com](http://www.visualstudio.com) で入手可能な Visual Studio 2017 ブートストラップは、それを実行したときに利用できる最新の Visual Studio 2017 リリースをダウンロードし、インストールします。 Visual Studio ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる Visual Studio 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから Visual Studio をインストールすると、レイアウトに存在する特定のバージョンの Visual Studio がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの Visual Studio が取得されます。
+> [visualstudio.microsoft.com](http://visualstudio.microsoft.com) で入手可能な Visual Studio 2017 ブートストラップは、それを実行したときに利用できる最新の Visual Studio 2017 リリースをダウンロードし、インストールします。 Visual Studio ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる Visual Studio 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから Visual Studio をインストールすると、レイアウトに存在する特定のバージョンの Visual Studio がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの Visual Studio が取得されます。
 
 旧バージョンの Visual Studio 2017 のレイアウトを作成する場合、https://my.visualstudio.com に進み、Visual Studio 2017 ブートストラップの "固定" バージョンをダウンロードできます。
 
@@ -152,7 +152,7 @@ response.json を変更し、セットアップの実行時に使用される既
 
 ## <a name="get-support"></a>サポートを受ける
 
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://www.visualstudio.com/vs/support/#talktous)をご覧ください。
+ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
 
 他のいくつかのサポート オプションを次に示します。
 

@@ -10,13 +10,14 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: bc8ffe0f6d3cdc0cd572c39dedb5f059e63525cb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1bb6779e0e8174dd10f209d9825ffb861d00455d
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235302"
 ---
-# <a name="creating-r-markdown-documents"></a>R Markdown ドキュメントの作成
+# <a name="create-r-markdown-documents"></a>R Markdown ドキュメントの作成
 
 [R Markdown](https://rmarkdown.rstudio.com/) は、R の分析を、高品質のドキュメント、レポート、プレゼンテーション、およびダッシュボードに変換するドキュメント形式です。
 
@@ -34,7 +35,7 @@ R Tools for Visual Studio (RTVS) には、R Markdown 項目テンプレート、
     install.packages("rmarkdown")
 
     ```
-1. 新しい R Markdown ファイルを作成します。それには、**[ファイル]、[新規]、[ファイル]** メニュー コマンドの順に移動し、**[R] を選択し、一覧から [R Markdown]** を選択します。 プロジェクトのコンテキストで、ソリューション エクスプローラー内のプロジェクトを右クリックし、**[R Markdown を追加]** を選択します (または、**[追加]、[新しいアイテム]** の順に移動し、一覧から **[R Markdown]** を選択します)。
+1. 新しい R Markdown ファイルを作成します。それには、**[ファイル]**、**[新規]**、**[ファイル]** メニュー コマンドの順に移動し、**[R]** を選択し、一覧から **[R Markdown]** を選択します。 プロジェクトのコンテキストで、ソリューション エクスプローラー内のプロジェクトを右クリックし、**[R Markdown を追加]** を選択します (または、**[追加]**、**[新しいアイテム]** の順に移動し、一覧から **[R Markdown]** を選択します)。
 
 1. 新しいファイルの既定の内容は次のとおりです。
 
@@ -64,8 +65,8 @@ R Tools for Visual Studio (RTVS) には、R Markdown 項目テンプレート、
 
 ## <a name="previews"></a>プレビュー
 
-Visual Studio 2017 バージョン 15.5 以降では、R Markdown のライブ プレビューを自動的に提供します。 エディターとプレビュー間の自動同期を有効にするには、**[R Tools]、[Markdown]、[自動同期]** の順に選択します (Ctrl + Shift + Y)。 自動同期を使用していない場合は、**[R Tools] > [Markdown] > [R Markdown プレビューのリロード]** を使用してプレビューを更新することができます。
+Visual Studio 2017 バージョン 15.5 以降では、R Markdown のライブ プレビューを自動的に提供します。 エディターとプレビュー間の自動同期を有効にするには、**[R Tools]**、**[Markdown]**、**[自動同期]** の順に選択します (**Ctrl**+**Shift**+**Y**)。 自動同期を使用していない場合は、**[R Tools]**、**[Markdown]**、**[R Markdown プレビューのリロード]** の順に選択し、プレビューを更新できます。
 
-また、エディター内を右クリックし、**[プレビュー]** コマンドのいずれかを選択すると、ファイルを HTML、PDF、Microsoft Word の形式でプレビューすることもできます。 **[R Tools] > [Markdown]** メニューからも同じコマンドが利用できます  (Visual Studio の以前のバージョンでは、これらのコマンドは **[R Tools] > [発行]** メニューにあります)。
+また、エディター内を右クリックし、**[プレビュー]** コマンドのいずれかを選択すると、ファイルを HTML、PDF、Microsoft Word の形式でプレビューすることもできます。 **[R Tools]** の **[Markdown]** メニューからも同じコマンドが利用できます。 (Visual Studio の以前のバージョンでは、これらのコマンドは **[R Tools]** の **[発行]** メニューにあります)。
 
 ![RMarkdown ライブ プレビューおよびその他のプレビュー メニュー コマンド](media/rmarkdown-live-preview.png)

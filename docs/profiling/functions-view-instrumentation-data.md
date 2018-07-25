@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ddbffefe729f0b4c5b89b46b96b32a90f05f297
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7787e974b093156b27b2ace4353e94db05063d7d
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238226"
 ---
 # <a name="functions-view---instrumentation-data"></a>関数ビュー - インストルメンテーション データ
 関数レポート ビューでは、関数名別にプロファイル データが一覧表示されます。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/19/2018
 |**最大アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー](../profiling/functions-view-sampling-data.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   

@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 587517bdeabf9755e2678b03206059ef5b403255
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 8018f637b4c73c786d0433b1b88659fe6b8628d8
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34449170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175367"
 ---
-# <a name="working-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
+# <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
@@ -47,7 +47,7 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
 
-Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、lint 処理 (lint 処理については以下を参照してください)、型に関するヒントなどを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
+Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、lint、型に関するヒントなどを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
 
 ![Visual Studio での Python コードのオートコンプリート](media/code-editing-completions-simple.png)
 
@@ -56,8 +56,8 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 - ビデオ (2 分 30 秒): [Python コードの編集](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)
 - ドキュメント: [Python コードの編集](editing-python-code-in-visual-studio.md)
 - ドキュメント: [コードの書式設定](formatting-python-code.md)
-- ドキュメント: [リファクタリング](refactoring-python-code.md)
-- ドキュメント: [lint 処理](linting-python-code.md)
+- ドキュメント: [コードのリファクタリング](refactoring-python-code.md)
+- ドキュメント: [リンターの使用](linting-python-code.md)
 - 一般的な Visual Studio 機能のドキュメント: [コード エディターの機能](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
@@ -169,7 +169,7 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 
 [インストール ガイド](installing-python-support-in-visual-studio.md)の説明に従って、以下のエディションの Visual Studio に Python の機能をインストールできます。
 
-- [Visual Studio 2017 (全エディション)](https://www.visualstudio.com/vs/)
+- [Visual Studio 2017 (全エディション)](https://visualstudio.microsoft.com/vs/)
 - Visual Studio 2015 (全エディション)
 - Visual Studio 2013 Community Edition
 - Visual Studio 2013 Express for Web Update 2 以降
@@ -178,7 +178,7 @@ A:  一般的に、Python はインタープリター言語であり、Visual St
 - Visual Studio 2012 (Pro エディション以上)
 - Visual Studio 2010 SP1 (Pro エディション以上、.NET 4.5 が必要)
 
-Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.com/vs/older-downloads/](https://www.visualstudio.com/vs/older-downloads/) で入手できます。
+Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.microsoft.com/vs/older-downloads/](https://visualstudio.microsoft.com/vs/older-downloads/) で入手できます。
 
 > [!Important]
 > 機能が完全にサポートおよび保守されるのは、Visual Studio の最新バージョンのみです。 古いバージョンでも機能を使うことはできますが、積極的には保守されません。

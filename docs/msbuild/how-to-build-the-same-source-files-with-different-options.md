@@ -15,18 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1fc33c17c245ae06b7db35a1c1e938f7e14b95b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d524626187e95a02654f00ca7cf7921fd819e7c6
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575609"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081658"
 ---
-# <a name="how-to-build-the-same-source-files-with-different-options"></a>方法 : 同じソース ファイルを異なるオプションでビルドする
+# <a name="how-to-build-the-same-source-files-with-different-options"></a>方法: 同じソース ファイルを異なるオプションでビルドする
 プロジェクトをビルドする場合、同じコンポーネントを異なるビルド オプションでコンパイルすることがよくあります。 たとえば、シンボル情報を付ければデバッグ ビルドを作成でき、シンボル情報なしで最適化を有効にすればリリース ビルドを作成できます。 あるいは、x86 や [!INCLUDE[vcprx64](../extensibility/internals/includes/vcprx64_md.md)] などのように、特定のプラットフォーム上で実行するようにプロジェクトをビルドできます。 これらのいずれの場合も、ほとんどのビルド オプションは同じままで、ビルド構成を制御するためにいくつかのオプションが変更されるだけです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、異なるビルド構成を作成するためにプロパティと条件を使用します。  
   
-## <a name="using-properties-to-modify-projects"></a>プロパティを使用してプロジェクトを変更  
- `Property` 要素は、一時ディレクトリの場所など、1 つのプロジェクト ファイル内で何回も参照されるような変数を定義したり、デバッグ ビルドとリリース ビルドなど、複数の構成で使用されるプロパティに値を設定したりします。 プロパティの詳細については、「[MSBuild プロパティ](../msbuild/msbuild-properties.md)」を参照してください。  
+## <a name="use-properties-to-modify-projects"></a>プロパティを使用してプロジェクトを変更する  
+ `Property` 要素は、一時ディレクトリの場所など、1 つのプロジェクト ファイル内で何回も参照されるような変数を定義したり、デバッグ ビルドとリリース ビルドなど、複数の構成で使用されるプロパティに値を設定したりします。 プロパティの詳細については、「[MSBuild プロパティ](../msbuild/msbuild-properties.md)」をご覧ください。  
   
  プロパティは、プロジェクト ファイルを変更せずにビルドの構成を変更するために使用することができます。 `Property` 要素と `PropertyGroup` 要素の `Condition` 属性により、プロパティの値を変更することができます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。  
   
@@ -49,20 +49,20 @@ ms.locfileid: "31575609"
     <DebugType Condition="'$(Flavor)'=='DEBUG'">full</DebugType>  
     ```  
   
-## <a name="specifying-properties-on-the-command-line"></a>コマンド ラインでのプロパティの指定  
+## <a name="specify-properties-on-the-command-line"></a>コマンド ラインでプロパティを指定する  
  複数の構成を受け入れるようにプロジェクト ファイルを作成したら、プロジェクトをビルドするときに構成を変更できなければなりません。 それができるよう、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ではコマンド ラインで **/property** または **/p** スイッチを使用してプロパティを指定できるようになっています。  
   
 #### <a name="to-set-a-project-property-at-the-command-line"></a>コマンド ライン上でプロジェクト プロパティを設定するには  
   
 -   **/property** スイッチをプロパティおよびプロパティ値と共に使用します。 例:  
   
-    ```  
+    ```cmd  
     msbuild file.proj /property:Flavor=Debug  
     ```  
   
-     - または  
+    または  
   
-    ```  
+    ```cmd  
     Msbuild file.proj /p:Flavor=Debug  
     ```  
   
@@ -70,13 +70,13 @@ ms.locfileid: "31575609"
   
 -   **/property** または **/p** スイッチをプロパティおよびプロパティ値と共に複数回使用するか、**/property** または **/p** スイッチを 1 回使用し、複数のプロパティをセミコロン (;) で分けます。 例:  
   
-    ```  
+    ```cmd  
     msbuild file.proj /p:Flavor=Debug;Platform=x86  
     ```  
   
-     - または  
+    または
   
-    ```  
+    ```cmd  
     msbuild file.proj /p:Flavor=Debug /p:Platform=x86  
     ```  
   
@@ -91,13 +91,13 @@ ms.locfileid: "31575609"
   
  このプロジェクトのデバッグ バージョンをビルドするには、以下のように入力します。  
   
-```  
+```cmd  
 msbuild consolehwcs1.proj /p:flavor=debug  
 ```  
   
  このプロジェクトのリテール バージョンをビルドするには、以下のように入力します。  
   
-```  
+```cmd  
 msbuild consolehwcs1.proj /p:flavor=retail  
 ```  
   
@@ -154,11 +154,11 @@ msbuild consolehwcs1.proj /p:flavor=retail
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、`TreatAsLocalProperty` 属性を使用する方法を示しています。 `Color` プロパティはプロジェクト ファイル内では値 `Blue` であり、コマンド ライン上では値 `Green` です。 プロジェクト タグ内に `TreatAsLocalProperty="Color"` がある場合、コマンド ライン上のプロパティ (`Green`) はプロジェクト ファイル内で定義されているプロパティ (`Blue`) を上書きしません。  
+ 次の例は、`TreatAsLocalProperty` 属性を使用する方法を示しています。 `Color` プロパティはプロジェクト ファイル内では値 `Blue` であり、コマンド ライン上では値 `Green` です。 プロジェクト タグ内に `TreatAsLocalProperty="Color"` がある場合、コマンド ライン上のプロパティ (`Green`) はプロジェクト ファイル内で定義されているプロパティ (`Blue`) をオーバーライドしません。  
   
  プロジェクトをビルドするには、次のコマンドを入力します。  
   
-```  
+```cmd  
 msbuild colortest.proj /t:go /property:Color=Green  
 ```  
   
@@ -184,7 +184,7 @@ ToolsVersion="4.0" TreatAsLocalProperty="Color">
 -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [MSBuild](../msbuild/msbuild.md)  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

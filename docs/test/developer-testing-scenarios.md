@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 89d09a8b01dc4179f3b9de4cbdbf1905846f7002
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 5cb0899296aa24aa41c0caa2b808b02f27dc80be
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34691860"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302934"
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>開発者用テスト ツール、シナリオ、および機能
 
@@ -56,13 +56,13 @@ XAML ベースの UWP アプリ、ブラウザー アプリ、および SharePoi
 
 単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べる場合は、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。
 
-コード カバレッジ分析は、マネージ コードにもアンマネージ (ネイティブ) コードにも適用できます。
+コード カバレッジ分析は、マネージド コードにもアンマネージド (ネイティブ) コードにも適用できます。
 
 コード カバレッジは、テスト エクスプローラーを使用してテスト メソッドを実行する場合のオプションです。 結果テーブルには、各アセンブリ、クラス、およびメソッドで実行されたコードの割合が表示されます。 また、ソース エディターには、どのコードがテストされたかが表示されます。
 
 ![Visual Studio Team Services と Team Foundation Server でテストする](media/devtest-codecoverage.png)
 
-* [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+* [コード カバレッジを使用した、テストされるコード割合の確認](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 * [Visual Studio での単体テスト、コード カバレッジおよびコード クローン分析 (ラボ)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Unit%20Testing,%20Code%20Coverage%20and%20Code%20Clone%20Analysis%20with%20Visual%20Studio%202015.docx)
 * [コード カバレッジ分析のカスタマイズ](customizing-code-coverage-analysis.md)
 

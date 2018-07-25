@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3ebe16f03c185437bc0ab79fe7c038748c5eb50
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5f4cba83b1e2ed91e827c8dc09dc3b3e7a02bc61
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31570968"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077491"
 ---
 # <a name="import-element-msbuild"></a>Import 要素 (MSBuild)
 1 つのプロジェクト ファイルの内容を別のプロジェクト ファイルにインポートします。  
@@ -35,12 +35,12 @@ ms.locfileid: "31570968"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <Import Project="ProjectPath"  
     Condition="'String A'=='String B'" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -63,7 +63,7 @@ ms.locfileid: "31570968"
 ## <a name="remarks"></a>コメント  
  `Import` 要素を使用すると、複数のプロジェクト ファイルに共通するコードを再利用できます。 これにより、共有されたコードに対する更新が、そのコードをインポートしたすべてのプロジェクトに反映されるため、コードの保守が容易になります。  
 
- 慣例により、インポートされた共有プロジェクト ファイルは .targets ファイルとして保存されますが、これらは標準の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、別のファイル名拡張子を使用してプロジェクトをインポートすることもできますが、一貫性を持たせるために .targets 拡張子を使用することをお勧めします。  
+ 規則により、インポートされた共有プロジェクト ファイルは *.targets* ファイルとして保存されますが、これらは標準の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルです。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、別のファイル名拡張子を持つプロジェクトをインポートすることもできますが、一貫性を持たせるために *.targets* 拡張子を使用することをお勧めします。  
 
  インポートされるプロジェクト内の相対パスは、インポートする側のプロジェクトのディレクトリからの相対パスであると解釈されます。 したがって、あるプロジェクト ファイルを別々の場所に存在する複数のプロジェクト ファイルにインポートする場合、インポートされるプロジェクト ファイル内の相対パスは、インポートされるプロジェクトごとに異なって解釈されます。  
 
@@ -76,12 +76,12 @@ ms.locfileid: "31570968"
 > [!NOTE]
 >  条件付き import ステートメントがコマンド ライン MSBuilds で動作するときは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) の MSBuilds とは連携しません。 条件付きインポートは、プロジェクトを読み込むときに設定される構成およびプラットフォームの値を使用して評価されます。 その後、プロジェクト ファイルでの条件の再評価が必要となる変更 (プラットフォームの変更など) が加えられると、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はプロパティと項目の条件を再評価します。ただし、インポートの条件の再評価は行いません。 インポート条件は再評価されないため、インポートはスキップされます。  
 >   
->  このような状況が発生することを回避するには、.targets ファイルに条件付き import ステートメントを配置するか、または [Choose Element (MSBuild)](../msbuild/choose-element-msbuild.md) ブロックなどの条件付きブロックにコードを配置します。  
+>  これを回避するには、*.targets* ファイルに条件付き import ステートメントを配置するか、[Choose 要素 (MSBuild)](../msbuild/choose-element-msbuild.md) ブロックなどの条件付きブロックにコードを配置します。  
 
 ## <a name="wildcards"></a>ワイルドカード  
  .NET Framework 4 では、MSBuild で、Project 属性でのワイルドカードが許可されます。 ワイルドカードがある場合、見つかったすべての一致が並べ替えられ (再現可能性の確保のため)、順序が明示的に設定されていたかのように、その順序でインポートされます。  
 
- これは、機能拡張ポイントを提供して、自身がファイル名をインポート対象のファイルに明示的に追加しなくても、他のユーザーがファイルをインポートできるようにする場合に便利です。 このために、Microsoft.Common.Targets ではファイルの先頭に次の行が含まれています。  
+ これは、機能拡張ポイントを提供して、自身がファイル名をインポート対象のファイルに明示的に追加しなくても、他のユーザーがファイルをインポートできるようにする場合に便利です。 このために、*Microsoft.Common.Targets* ではファイルの先頭に次の行が含まれています。  
 
 ```xml  
 <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore\*" Condition="'$(ImportByWildcardBeforeMicrosoftCommonTargets)' == 'true' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\$(MSBuildThisFile)\ImportBefore')"/>  
@@ -113,6 +113,6 @@ ms.locfileid: "31570968"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [方法: 複数のプロジェクト ファイルで同じターゲットを使用する](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

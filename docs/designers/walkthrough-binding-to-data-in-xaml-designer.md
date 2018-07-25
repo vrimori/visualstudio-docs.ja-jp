@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 2c12d1ca9605a7591146f3d6141eb12b5f8975f6
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 557cdd14a37a52933df44c92b76fe608a1cc273c
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745712"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079889"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>チュートリアル: XAML デザイナーでデータにバインドする
 
@@ -27,13 +27,13 @@ XAML デザイナーでは、アートボードと [プロパティ] ウィン�
 
 ## <a name="to-create-a-class-to-use-as-a-data-source"></a>データ ソースとして使用するクラスを作成するには
 
-1. **[ファイル]** メニューで、**[新規]**> **[プロジェクト]** の順に選択します。
+1. **[ファイル]** メニューで、**[新規]** > **[プロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** ノードまたは **[Visual Basic]** ノードを選びます。次に、**[Windows デスクトップ]** ノードを展開し、**[WPF アプリケーション]** テンプレートを選びます。
 
 1. プロジェクトに **BindingTest** という名前を付けて、**[OK]** をクリックします。
 
-1. MainWindow.xaml.cs (または MainWindow.xaml.vb) ファイルを開き、次のコードを追加します。 C# では、`BindingTest` 名前空間 (ファイル内の最後の閉じかっこの前) にコードを追加します。 Visual Basic の場合は、単に新しいクラスを追加します。
+1. **MainWindow.xaml.cs** (または **MainWindow.xaml.vb**) ファイルを開き、次のコードを追加します。 C# では、`BindingTest` 名前空間 (ファイル内の最後の閉じかっこの前) にコードを追加します。 Visual Basic の場合は、単に新しいクラスを追加します。
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -73,7 +73,7 @@ XAML デザイナーでは、アートボードと [プロパティ] ウィン�
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount プロパティを TextBlock コントロールにバインドするには
 
-1. ソリューション エクスプローラーで、MainWindow.xaml のショートカット メニューを開き、**[デザイナーの表示]** を選びます。
+1. ソリューション エクスプローラーで、**MainWindow.xaml** のショートカット メニューを開き、**[デザイナーの表示]** を選びます。
 
 1. ツールボックスで、[グリッド](/uwp/api/Windows.UI.Xaml.Controls.Grid) コントロールを選んでフォームに追加します。
 

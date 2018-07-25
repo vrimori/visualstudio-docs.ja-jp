@@ -24,17 +24,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46426fd77e86962762f8ac3beaf8aa6a490bc6ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0ade8344b5f4189e9588fc8e75ef88fa5cf8f8c5
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569086"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080198"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild の条件構造
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、[Choose](../msbuild/choose-element-msbuild.md)、[When](../msbuild/when-element-msbuild.md)、[Otherwise](../msbuild/otherwise-element-msbuild.md) 要素で either/or 処理を行うためのメカニズムを提供します。  
   
-## <a name="using-the-choose-element"></a>Choose 要素を使用する  
+## <a name="use-the-choose-element"></a>Choose 要素を使用する  
  `Choose` 要素には、`Condition` 属性を持つ一連の `When` 要素が含まれます。この要素は、いずれかの評価結果が `true` になるまで、上から下への順序でテストされます。 複数の `When` 要素が評価の結果、`true` になる場合、最初の要素だけが使用されます。 `Otherwise` 要素が存在する場合、`When` 要素の条件がいずれも評価の結果、`true` にならない場合にのみ評価されます。  
   
  `Choose` 要素は、`Project`、`When`、`Otherwise` 要素の子要素として使用できます。 `When` 要素と `Otherwise` 要素には、子要素として `ItemGroup`、`PropertyGroup`、`Choose` を入れることができます。  
@@ -78,7 +78,7 @@ ms.locfileid: "31569086"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Choose 要素 (MSBuild)](../msbuild/choose-element-msbuild.md)   
  [When 要素 (MSBuild)](../msbuild/when-element-msbuild.md)   
  [Otherwise 要素 (MSBuild)](../msbuild/otherwise-element-msbuild.md)   

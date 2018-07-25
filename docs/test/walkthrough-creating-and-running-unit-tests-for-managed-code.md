@@ -15,22 +15,21 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 36b6eff9f37cdd50e59942ece5ba56dcfe60b8f6
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 2618b8a27ceb4ed03c8b4bb2f3e910c60e61b6cc
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34767687"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978160"
 ---
-# <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージ コードの単体テストを作成し、実行する
+# <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードの単体テストを作成し、実行する
 
 この記事では、マネージド コード用の Microsoft 単体テスト フレームワークと Visual Studio **テスト エクスプローラー**を使用して一連の単体テストを作成、実行、およびカスタマイズする手順について説明します。 開発中の C# プロジェクトで作業を開始し、そのコードを実行するテストを作成し、テストを実行し、結果を調べます。 次に、プロジェクト コードを変更し、テストを再実行します。
 
 > [!NOTE]
-> このチュートリアルでは、マネージ コード用の Microsoft 単体テスト フレームワークを使用します。 また、**テスト エクスプローラー**用のアダプターを備えたサード パーティの単体テスト フレームワークから**テスト エクスプローラー**を実行することもできます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」をご覧ください。
+> このチュートリアルでは、マネージド コード用の Microsoft 単体テスト フレームワークを使用します。 また、**テスト エクスプローラー**用のアダプターを備えたサード パーティの単体テスト フレームワークから**テスト エクスプローラー**を実行することもできます。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」をご覧ください。
 
-> [!NOTE]
-> コマンド ラインからテストを実行する方法については、「[チュートリアル: コマンド ライン テスト ユーティリティの使用](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)」を参照してください。
+コマンド ラインからテストを実行する方法については、「[VSTest.Console.exe のコマンド ライン オプション](vstest-console-options.md)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -138,7 +137,7 @@ using BankAccountNS;
 
 テスト クラスの最小要件は次のとおりです。
 
-- マネージ コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。
+- マネージド コード用の Microsoft 単体テスト フレームワークでは、テスト エクスプローラーで実行する単体テスト メソッドを含むすべてのクラスについて、 `[TestClass]` 属性が必要です。
 
 - テスト エクスプローラーで実行する各テスト メソッドには、`[TestMethod]` 属性が必要です。
 

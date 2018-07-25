@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ced0f3e882025e4a6e1bdd940f5aa0d189beb58
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: d0eaaac47470378730c526b01b2ce2b637af5cd6
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34690976"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233699"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
 `CommentMarkAtProfile` メソッドは、タイムスタンプ値、数字マーク、コメント文字列を .*vsp* ファイルに挿入します。 タイムスタンプ値は、外部イベントの同期に使用できます。 マークやコメントを挿入するには、CommentMarkAtProfile 関数が含まれるスレッドのプロファイリングをオンにする必要があります。  
@@ -65,14 +65,14 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 >  CommentMarkAtProfile メソッドは、インストルメンテーションでのみ使用してください。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
   
 |||  
 |-|-|  
-|**Header**|VSPerf.h をインクルードします。|  
-|**Library**|VSPerf.lib を使用します。|  
+|**Header**|*VSPerf.h* をインクルードします。|  
+|**Library**|*VSPerf.lib* を使用します。|  
 |**Unicode**|CommentMarkAtProfileW (Unicode) と CommentMarkAtProfileA (ANSI) として実装されます。|  
   
 ## <a name="example"></a>例  

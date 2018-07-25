@@ -9,53 +9,45 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c9b51137c6b66fe2895bcc0e70e3ffab8ebd637e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7b48fc77dd88cf327050c0bf8ba893f8d4a626fa
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303004"
 ---
 # <a name="customize-code-coverage-analysis"></a>コード カバレッジ分析のカスタマイズ
 
-既定では、Visual Studio Code カバレッジ ツールは、単体テスト中に読み込まれるすべてのソリューション アセンブリを分析します。 多くの場合は、この設定が効果的なので、既定のままにしておくことをお勧めします。 詳細については、「[コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
+既定では、コード カバレッジは、単体テスト中に読み込まれるすべてのソリューション アセンブリを分析します。 多くの場合は、この設定が効果的なので、この既定のビヘイビアーを使用することをお勧めします。 詳細については、「[コード カバレッジを使用した、テストされるコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)」を参照してください。
 
-コード カバレッジの動作をカスタマイズする前に、次のようないくつかの代替手段を検討してください。
+テスト コードをコード カバレッジの結果から除外して、アプリケーション コードのみを含めるには、<xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> 属性をテスト クラスに追加します。
 
-- *コード カバレッジの結果からテスト コードを除外して、アプリケーションのコードのみを含めます。*
+ソリューションの一部ではないアセンブリを含めるには、これらのアセンブリの *.pdb* ファイルを取得し、アセンブリ *.dll* ファイルと同じフォルダーにコピーします。
 
-     テスト クラスに `ExcludeFromCodeCoverage Attribute` を追加します。
+## <a name="run-settings-file"></a>実行設定ファイル
 
-- *ソリューションの一部ではないアセンブリを含めます。*
+[実行設定ファイル](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)は、単体テスト ツールによって使用される構成ファイルです。 詳細なコード カバレッジの設定は、*.runsettings* ファイルで指定されます。
 
-     これらのアセンブリの .pdb ファイルを取得し、アセンブリ .dll ファイルと同じフォルダーにコピーします。
+コード カバレッジをカスタマイズするには、次の手順を行います。
 
-コード カバレッジの動作をカスタマイズするには、[このトピックの最後にあるサンプル](#sample)をコピーし、ファイル拡張子を *.runsettings* にしてソリューションに追加します。 ニーズに合わせて編集し、**[テスト]** メニューで **[テストの設定]**、**[テスト設定ファイルの選択]** の順に選択します。 この記事の残りの部分では、この手順を詳しく説明します。
+1. 実行設定ファイルをソリューションに追加します。 **ソリューション エクスプローラー**でソリューションのショートカット メニューを開き、**[追加]** > **[新しい項目]**、**[XML ファイル]** の順に選択します。 *CodeCoverage.runsettings* などの名前でファイルを保存します。
 
-## <a name="the-run-settings-file"></a>実行設定ファイル
+1. この記事の最後にあるサンプル ファイルの内容を追加し、後続の各セクションの説明に従って、ニーズに合わせてカスタマイズします。
 
-詳細なコード カバレッジの設定は、*.runsettings* ファイルで指定されます。 実行設定ファイルは、単体テスト ツールによって使用される構成ファイルです。 [このトピックの最後にあるサンプル](#sample)をコピーし、ニーズに合わせて編集することをお勧めします。
+1. 実行設定ファイルを選択するには、**[テスト]** メニューで **[テストの設定]** > **[テスト設定ファイルの選択]** の順に選択します。 コマンドラインから、またはビルド ワークフローでテストを実行するための実行設定ファイルを指定するには、「[*.runsettings* ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file)」を参照してください。
 
-コード カバレッジをカスタマイズするには、ソリューションに実行設定ファイルを追加します。
+   **[コード カバレッジの分析]** を選択すると、実行設定ファイルから構成情報が読み取られます。
 
-1. *.runsettings* という拡張子で、ソリューション項目として .xml ファイルを追加します。
+   > [!TIP]
+   > 前のコード カバレッジの結果とコードの色分けは、テストを実行したりコードを更新したりしても、自動的に非表示にはなりません。
 
-     ソリューション エクスプローラーでソリューションのショートカット メニューを開き、**[追加]**、**[新しい項目]**、**[XML ファイル]** の順に選択します。 末尾が *CodeCoverage.runsettings* などになる名前でファイルを保存します。
+カスタム設定のオンとオフを切り替えるには、**[テストの設定]** メニューの **[テスト]** でファイルを選択したり選択解除したりします。
 
-2. この記事の最後にあるサンプルの内容を追加し、後続の各セクションの説明に従って、ニーズに合わせてカスタマイズします。
+![カスタム設定ファイルを持つ [テストの設定] メニュー](../test/media/codecoverage-settingsfile.png)
 
-3. **[テスト]** メニューで **[テストの設定]**、**[テスト設定ファイルの選択]** の順に選択し、ファイルを選択します。
+### <a name="specify-symbol-search-paths"></a>シンボル検索パスの指定
 
-4. これで、**[コード カバレッジの分析]** を実行すると、この実行設定ファイルが動作を制御するようになります。 コード カバレッジを必ず再実行してください。 前のカバレッジの結果とコードの色分けは、テストを実行したりコードを更新したりしても、自動的に非表示にはなりません。
-
-5. カスタム設定のオンとオフを切り替えるには、**[テストの設定]** メニューの **[テスト]** でファイルを選択したり選択解除したりします。
-
- ![カスタム設定ファイルを持つ [テストの設定] メニュー](../test/media/codecoverage-settingsfile.png)
-
-単体テストのその他の面も、同じ実行設定ファイルで構成できます。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。
-
-### <a name="specifying-symbol-search-paths"></a>シンボル検索パスの指定
-
-コード カバレッジでは、アセンブリのシンボル (.pdb ファイル) が存在している必要があります。 ソリューションによってビルドされたアセンブリには、通常、バイナリ ファイルと共にシンボル ファイルも存在しており、コード カバレッジは自動的に動作します。 ただし、場合によっては、参照されるアセンブリをコード カバレッジ分析に追加したいこともあります。 そのような場合、.pdb ファイルがバイナリと同じ場所にないこともありますが、シンボル検索パスを .runsettings ファイルで指定できます。
+コード カバレッジには、アセンブリのシンボル ファイル (*.pdb* ファイル) が必要です。 ソリューションによってビルドされたアセンブリには、通常、バイナリ ファイルと共にシンボル ファイルも存在しており、コード カバレッジは自動的に動作します。 ただし、場合によっては、参照されるアセンブリをコード カバレッジ分析に追加したいこともあります。 そのような場合、*.pdb* ファイルがバイナリと同じ場所にないこともありますが、シンボル検索パスを *.runsettings* ファイルで指定できます。
 
 ```xml
 <SymbolSearchPaths>
@@ -64,10 +56,10 @@ ms.lasthandoff: 04/26/2018
 </SymbolSearchPaths>
 ```
 
-> [!WARNING]
-> シンボルの解決には、特に多数のアセンブリでリモートのファイルの場所を使用している場合、時間がかかることがあります。 そのため、リモート .pdb ファイルをバイナリ (.dll または .exe) ファイルと同じローカルの場所にコピーすることを検討してください。
+> [!NOTE]
+> シンボルの解決には、特に多数のアセンブリでリモートのファイルの場所を使用している場合、時間がかかることがあります。 そのため、*.pdb* ファイルをバイナリ (*.dll* または *.exe*) ファイルと同じローカルの場所にコピーすることを検討してください。
 
-### <a name="excluding-and-including"></a>除外と包含
+### <a name="exclude-and-include"></a>Exclude (除外) と Include (包含)
 
 指定したアセンブリをコード カバレッジ分析から除外できます。 例:
 
@@ -91,13 +83,13 @@ ms.lasthandoff: 04/26/2018
 </ModulePaths>
 ```
 
-`<Include>` が空の場合、コード カバレッジの処理には、読み込まれ、.pdb ファイルが見つかるすべてのアセンブリが含まれます。 コード カバレッジには、`<Exclude>` 一覧の句に一致する項目が含まれません。
+**Include** が空の場合、コード カバレッジの処理には、読み込まれ、*.pdb* ファイルが見つかるすべてのアセンブリが含まれます。 コード カバレッジには、**Exclude** リスト内の句に一致する項目が含まれません。
 
-`Include` は、`Exclude` の前に処理されます。
+**Include** は **Exclude** の前に処理されます。
 
 ### <a name="regular-expressions"></a>正規表現
 
-Include ノードと Exclude ノードでは、正規表現を使用できます。 詳細については、「[Visual Studio での正規表現の使用](../ide/using-regular-expressions-in-visual-studio.md)」を参照してください。 正規表現は、ワイルドカードと同じではありません。 特に次の点に注意してください。
+Include ノードと Exclude ノードでは、正規表現を使用できます。 詳細については、[Visual Studio で正規表現を使用する](../ide/using-regular-expressions-in-visual-studio.md)方法に関するページを参照してください。 正規表現は、ワイルドカードと同じではありません。 特に次の点に注意してください。
 
 - **.\*** は任意の文字の文字列と一致します
 
@@ -131,87 +123,48 @@ Include ノードと Exclude ノードでは、正規表現を使用できます
 ```
 
 > [!WARNING]
-> 正規表現にエラー (エスケープされず、一致しないかっこなど) がある場合、コード カバレッジ分析は実行されません。
+> 正規表現にエラー (エスケープされていない、または一致しないかっこなど) がある場合、コード カバレッジ分析は実行されません。
 
 ### <a name="other-ways-to-include-or-exclude-elements"></a>要素を包含または除外するための別の方法
 
-例については、[このトピックの末尾のサンプル](#sample)を参照してください。
+- **ModulePath** - アセンブリ ファイル パスで指定されたアセンブリと一致します。
 
-- `ModulePath` - アセンブリ ファイル パスで指定されたアセンブリ。
+- **CompanyName** - **Company** 属性でアセンブリと一致します。
 
-- `CompanyName` - 会社名属性でアセンブリと一致します。
+- **PublicKeyToken** - 公開キー トークンで、署名付きアセンブリと一致します。
 
-- `PublicKeyToken` - 公開キー トークンで、署名付きアセンブリと一致します。 たとえば、すべての Visual Studio コンポーネントおよび拡張機能と一致させるには、`<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>` を使用します。
+- **Source** - 要素が定義されているソース ファイルのパス名で要素と一致します。
 
-- `Source` - 要素が定義されているソース ファイルのパス名で要素と一致します。
+- **Attribute** - 特定の属性のアタッチ先の要素と一致します。 属性の完全名を指定し、名前の末尾に "Attribute" を含めます。
 
-- `Attribute` - 特定の属性のアタッチ先の要素と一致します。 属性の完全名を指定し、名前の末尾に "Attribute" を含めます。
+- **Function** - 完全修飾名でプロシージャ、関数、またはメソッドに一致します。 関数名を一致させるには、正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 例:
 
-- `Function` - 完全修飾名でプロシージャ、関数、またはメソッドに一致します。
+   ```csharp
+   Fabrikam.Math.LocalMath.SquareRoot(double);
+   ```
 
-**関数名の一致**
+   ```cpp
+   Fabrikam::Math::LocalMath::SquareRoot(double)
+   ```
 
-正規表現が、名前空間、クラス名、メソッド名、およびパラメーター リストを含む関数の完全修飾名と一致する必要があります。 たとえば、オブジェクトに適用された
+   ```xml
+   <Functions>
+     <Include>
+       <!-- Include methods in the Fabrikam namespace: -->
+       <Function>^Fabrikam\..*</Function>
+       <!-- Include all methods named EqualTo: -->
+       <Function>.*\.EqualTo\(.*</Function>
+     </Include>
+     <Exclude>
+       <!-- Exclude methods in a class or namespace named UnitTest: -->
+       <Function>.*\.UnitTest\..*</Function>
+     </Exclude>
+   </Functions>
+   ```
 
-- C# または Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
+## <a name="sample-runsettings-file"></a>サンプル .runsettings ファイル
 
-- C++: `Fabrikam::Math::LocalMath::SquareRoot(double)`
-
-```xml
-<Functions>
-  <Include>
-    <!-- Include methods in the Fabrikam namespace: -->
-    <Function>^Fabrikam\..*</Function>
-    <!-- Include all methods named EqualTo: -->
-    <Function>.*\.EqualTo\(.*</Function>
-  </Include>
-  <Exclude>
-    <!-- Exclude methods in a class or namespace named UnitTest: -->
-    <Function>.*\.UnitTest\..*</Function>
-  </Exclude>
-</Functions>
-```
-
-## <a name="how-to-specify-run-settings-files-while-running-tests"></a>テストの実行中に実行設定ファイルを指定する方法
-
-### <a name="to-customize-run-settings-in-visual-studio-tests"></a>Visual Studio テストで実行設定をカスタマイズするには
-
-**[テスト]**、**[テストの設定]**、**[テスト設定ファイルの選択]** の順に選択し、*.runsettings* ファイルを選択します。 ファイルは、[テストの設定] メニューに表示され、選択したり取り消したりすることができます。 選択されている間、実行設定ファイルは、**[コード カバレッジの分析]** を使用するたびに適用されます。
-
-### <a name="to-customize-run-settings-in-a-command-line-test"></a>コマンド ライン テストで実行設定をカスタマイズするには
-
-コマンド ラインからテストを実行するには、*vstest.console.exe* を使用します。 設定ファイルは、このユーティリティのパラメーターです。
-
-1. Visual Studio 開発者コマンド プロンプトを起動します。
-
-    Windows の **[スタート]** メニューから、**[Visual Studio 2017]** > **[開発者コマンド プロンプト for VS 2017]** の順に選択します。
-
-2. 次のコマンドを実行します。
-
-    `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings`
-
-### <a name="to-customize-run-settings-in-a-build-definition"></a>ビルド定義で実行設定をカスタマイズするには
-
-チーム ビルドからコード カバレッジ データを取得できます。
-
-![ビルド定義に実行設定を指定する](../test/media/codecoverage-buildrunsettings.png)
-
-1. 実行設定ファイルがチェックインされていることを確認します。
-
-2. チーム エクスプローラーで、**[ビルド]** を開き、ビルド定義を追加または編集します。
-
-3. **[プロセス]** ページで、**[自動テスト]** > **[テスト ソース]** > **[実行設定]** の順に展開します。 *.runsettings* ファイルを選択します。
-
-   > [!TIP]
-   > **Test Assembly** が **Test Source** の代わりに表示され、*.testsettings* ファイルのみを選択できる場合、**Test Runner** プロパティを次のように設定します。 **[自動テスト]** の下の **[テスト アセンブリ]** を選択し、行の末尾の **[...]** ボタンを選択します。 **[テストの実行の追加と編集]** ダイアログ ボックスで、**[テスト ランナー]** を **[Visual Studio テスト ランナー]** に設定します。
-
-結果は、ビルド レポートの概要セクションに表示されます。
-
-##  <a name="sample"></a>サンプル .runsettings ファイル
-
-このコードをコピーし、独自のニーズに合わせて編集します。
-
-(.runsettings ファイルのその他の用途については、「[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)」を参照してください。)
+このコードをコピーし、自分のニーズに合わせて編集します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -326,5 +279,6 @@ Included items must then not match any entries in the exclude list to remain inc
 
 ## <a name="see-also"></a>関連項目
 
-- [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+- [.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+- [コード カバレッジを使用した、テストされるコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 - [コードの単体テスト](../test/unit-test-your-code.md)

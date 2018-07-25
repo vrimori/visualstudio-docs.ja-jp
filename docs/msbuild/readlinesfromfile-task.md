@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f05bb6e3f12dde2fbfd17120b9e2d646cb6e9f59
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9b545efb397e2dcd5052605db1d14e113ea9fc76
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567344"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152049"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile タスク
 テキスト ファイルからアイテムの一覧を読み込みます。  
@@ -39,7 +39,7 @@ ms.locfileid: "31567344"
 |`Lines`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の出力パラメーターです。<br /><br /> ファイルから読み込まれた行が含まれます。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`ReadLinesFromFile` タスクを利用し、テキスト ファイルの一覧から項目を作成します。 ファイルから読み込まれた項目は、`ItemsFromFile` 項目コレクションに保存されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "31567344"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [タスク](../msbuild/msbuild-tasks.md)

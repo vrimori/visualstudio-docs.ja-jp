@@ -9,12 +9,12 @@ description: サブスクライバーの一覧とサブスクリプションの�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2bdd9d9d77388a1e00bd7ef57071f461a39674e9
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: f78ba7f8c5d782692b7600083eeffe0ab3ff8378
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32031323"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36326268"
 ---
 # <a name="exporting-subscription-information"></a>サブスクリプション情報のエクスポート
 
@@ -23,4 +23,4 @@ Visual Studio サブスクリプションの[管理ポータル](https://manage.
 この機能は、割り当てや有効期限の追跡をはじめ、いくつかのシナリオで役立ちます。 たとえば、BAN から GUID の使用に切り替えてサブスクリプションの割り当てを追跡する場合、このレポートと Microsoft Excel の VLOOKUP 式を使用して、サブスクライバーを適切に照合することができます。  
 
 **[エクスポート]** タブを選択するだけでエクスポートが実行され、ファイルはローカル コンピューターにダウンロードされます。 このファイルには、ユーザー サブスクリプションを含む割り当ての名前と、エクスポートの日付が含まれます。  
-        ![サブスクライバーのエクスポート](_img\exporting-subscriptions\exporting-subscriptions.png)
+![サブスクライバーのエクスポート](_img\exporting-subscriptions\exporting-subscriptions.png)

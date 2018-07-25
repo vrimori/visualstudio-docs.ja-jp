@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe1ef9e06c7e14ecb28fff9ceb48b2243a129e68
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 184c7ee5fc5155b532243c51f85d8b5420892925
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569242"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079243"
 ---
 # <a name="importgroup-element"></a>ImportGroup 要素
 オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。 詳しくは、「[Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)」をご覧ください。  
@@ -33,14 +33,14 @@ ms.locfileid: "31569242"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <ImportGroup Condition="'String A' == 'String B'">  
     <Import ... />  
     <Import ... />  
 </ImportGroup>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -61,8 +61,6 @@ ms.locfileid: "31569242"
 |-------------|-----------------|  
 |[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
 
-## <a name="remarks"></a>コメント  
-
 ## <a name="example"></a>例  
  次に示すのは、`ImportGroup` 要素のコード例です。  
 
@@ -76,6 +74,6 @@ ms.locfileid: "31569242"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [項目](../msbuild/msbuild-items.md)

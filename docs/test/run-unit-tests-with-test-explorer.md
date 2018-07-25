@@ -1,5 +1,6 @@
 ---
-title: テスト エクスプローラーを使用して単体テストを実行する
+title: テスト エクスプローラーによる単体テストの実行、ビルド、およびデバッグ
+description: Visual Studio でテスト エクスプローラーを使用してテストを実行する方法について説明します。 このトピックでは、ビルドの後の自動テストの実行の有効化、テスト結果の表示、テストの一覧のグループ化とフィルター処理、再生リストの作成、テストのデバッグ、およびテストのショートカットの使用方法について説明します。
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -11,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f18086a33c150670466101485770b3541e2afa52
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3733588c1601f07c23ce9d85be9367a148e503de
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752067"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38977792"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 
@@ -44,7 +45,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
 - ソリューション内のすべてのテストを実行するには、 **[すべて実行]** をクリックします。
 
-- 既定のグループ内のすべてのテストを実行するには、 **[実行]** をクリックし、メニューでグループを選択します。
+- 既定のグループ内のすべてのテストを実行するには、**[実行]** をクリックし、メニューでグループを選択します。
 
 - 実行する個々のテストを選択し、選択したテストのコンテキスト メニューを開いて、 **[選択したテストの実行]** を選択します。
 
@@ -54,7 +55,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
 ### <a name="run-tests-after-every-build"></a>各ビルドの後にテストを実行する
 
-|||
+|ボタン|説明|
 |-|-|
 |![ビルド後に実行](../test/media/ute_runafterbuild_btn.png)|各ローカル ビルドの後で単体テストを実行するには、標準のメニューの **[テスト]** を選択し、テスト エクスプローラーのツール バーの **[ビルド後にテストを実行]** を選択します。|
 
@@ -109,9 +110,10 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
  通常、特徴はカテゴリ名/値のペアですが、1 つのカテゴリにすることもできます。 特徴は、単体テスト フレームワークによってテスト メソッドとして識別されるメソッドに割り当てることができます。 単体テスト フレームワークは、特徴のカテゴリを定義できます。 特徴のカテゴリに値を追加して、独自のカテゴリ名/値のペアを定義できます。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。
 
- **マネージド コード用の Microsoft 単体テスト フレームワークでの特徴の定義**
+ 
+  **マネージド コード用の Microsoft 単体テスト フレームワークでの特徴の定義**
 
- マネージド アプリケーション用の Microsoft 単体テスト フレームワークで、  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 属性の特徴の名前/値のペアを定義します。 テスト フレームワークには、次の定義済みの特徴も含まれています。
+ マネージド アプリケーション用の Microsoft 単体テスト フレームワークで、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 属性の特徴の名前/値のペアを定義します。 テスト フレームワークには、次の定義済みの特徴も含まれています。
 
 |特徴|説明|
 |-----------|-----------------|
@@ -153,7 +155,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
 フィルター処理結果のサブセットを除外するには、次の構文を使用します。
 
-```
+```cpp
 FilterName:"Criteria" -FilterName:"SubsetCriteria"
 ```
 

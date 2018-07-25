@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b62ad2d954435e5556f2f427d531d806dfb7be18
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 24fdf5f6c80dbb9d338b4c655b7cea05592a91ac
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34745579"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38977747"
 ---
 # <a name="how-to-model-3d-terrain"></a>方法: 3D 地形をモデル化する
 
@@ -31,7 +31,7 @@ ms.locfileid: "34745579"
 
 開始する前に、**[プロパティ]** ウィンドウと**ツールボックス**が表示されていることを確認します。
 
-1.  操作する 3D モデルを作成します。 プロジェクトにモデルを追加する方法に関する詳細については、「[モデル エディター](../designers/model-editor.md)」の「作業の開始」セクションを参照してください。
+1.  動作する 3D モデルを作成します。 プロジェクトにモデルを追加する方法に関する詳細については、「[モデル エディター](../designers/model-editor.md)」の「作業の開始」セクションを参照してください。
 
 2.  平面をシーンに追加します。 **ツールボックス**の **[図形]** で **[平面]** を選択し、デザイン サーフェイスに移動します。
 

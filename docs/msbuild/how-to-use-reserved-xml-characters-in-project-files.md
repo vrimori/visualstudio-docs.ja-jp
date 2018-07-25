@@ -13,17 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8538ffdb1093accc8446d072ecc980586b73ee7b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 647dba94840383410d06f6e5bf96ec3b0146c394
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567253"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077660"
 ---
-# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>方法 : 予約済みの XML 文字をプロジェクト ファイルで使用する
+# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>方法: 予約済みの XML 文字をプロジェクト ファイルで使用する
 プロジェクト ファイルを作成するときに、たとえばプロパティ値やタスク パラメーター値の中で、予約済み XML 文字を使用する必要が生じることがあります。 しかし、いくつかの予約文字は、プロジェクト ファイルを解析できるようにするために、名前付きエンティティに置き換える必要があります。  
   
-## <a name="using-reserved-characters"></a>予約文字の使用  
+## <a name="use-reserved-characters"></a>予約文字を使用する  
  次の表は、プロジェクト ファイルを解析できるようにするために、対応する名前付きエンティティに置き換える必要がある予約済み XML 文字を示しています。  
   
 |予約文字|名前付きエンティティ|  
@@ -72,6 +72,6 @@ ms.locfileid: "31567253"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)    
  [MSBuild](../msbuild/msbuild.md)    

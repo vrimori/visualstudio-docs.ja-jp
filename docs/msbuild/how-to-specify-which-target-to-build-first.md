@@ -14,17 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8339b475c3c93bac192f67de8234c5dab1b84abb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1e812be4927ee0232d1096fa272d8ff8e7358366
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31571950"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078801"
 ---
-# <a name="how-to-specify-which-target-to-build-first"></a>方法 : 最初にビルドするターゲットを指定する
+# <a name="how-to-specify-which-target-to-build-first"></a>方法: 最初にビルドするターゲットを指定する
 プロジェクト ファイルには、プロジェクトのビルド方法を定義する 1 つ以上の `Target` 要素を含めることができます。 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) エンジンは、見つけた最初のプロジェクトと依存関係をビルドします。ただし、プロジェクト ファイルに `DefaultTargets` 属性または `InitialTargets` 属性が含まれている場合や、コマンド ラインで **/target** スイッチを使ってターゲットが指定されている場合は例外です。  
   
-## <a name="using-the-initialtargets-attribute"></a>InitialTargets 属性を使用する  
+## <a name="use-the-initialtargets-attribute"></a>InitialTargets 属性を使用する  
  `Project` 要素の `InitialTargets` 属性は、最初に実行するターゲットを指定します。これは、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも変わりありません。  
   
 #### <a name="to-specify-one-initial-target"></a>1 つの初期ターゲットを指定するには  
@@ -41,7 +41,7 @@ ms.locfileid: "31571950"
   
      `<Project InitialTargets="Clean;Compile">`  
   
-## <a name="using-the-defaulttargets-attribute"></a>DefaultTargets 属性を使用する  
+## <a name="use-the-defaulttargets-attribute"></a>DefaultTargets 属性を使用する  
  `Project` 要素の `DefaultTargets` 属性は、ターゲットがコマンド ラインで明示的に指定されていない場合にビルドするターゲット (複数可) を指定します。 ターゲットが `InitialTargets` 属性と `DefaultTargets` 属性の両方で指定され、コマンド ラインではターゲットが指定されていない場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は、`InitialTargets` 属性で指定されたターゲットを実行し、次に `DefaultTargets` 属性で指定されたターゲットを実行します。  
   
 #### <a name="to-specify-one-default-target"></a>1 つの既定のターゲットを指定するには  
@@ -58,7 +58,7 @@ ms.locfileid: "31571950"
   
      `<Project DefaultTargets="Clean;Compile">`  
   
-## <a name="using-the-target-switch"></a>/target スイッチを使用する  
+## <a name="use-the-target-switch"></a>/target スイッチを使用する  
  既定のターゲットがプロジェクト ファイルで定義されていない場合、またはその既定のターゲットを使用しない場合は、コマンド ライン スイッチ **/target** を使用して別のターゲットを指定できます。 `DefaultTargets` 属性で指定されたターゲットではなく、**/target** スイッチで指定されたターゲットが実行されます。 `InitialTargets` 属性で指定されたターゲットが常に最初に実行されます。  
   
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>最初に既定のターゲット以外のターゲットを使用する  
@@ -73,7 +73,7 @@ ms.locfileid: "31571950"
   
      `msbuild <file name>.proj /t:Clean;Compile`  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   [MSBuild](../msbuild/msbuild.md)  
  [ターゲット](../msbuild/msbuild-targets.md)   
- [方法 : ビルドをクリーンする](../msbuild/how-to-clean-a-build.md)
+ [方法: ビルドをクリーンする](../msbuild/how-to-clean-a-build.md)

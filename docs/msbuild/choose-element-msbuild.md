@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc467b859e3a02282c6d6165dc263931900c5bc2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 276a353dbbd47e2ded3a3c562e7a4a10df157655
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569522"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945770"
 ---
 # <a name="choose-element-msbuild"></a>Choose 要素 (MSBuild)
 子要素を評価して、`ItemGroup` 要素および/または `PropertyGroup` 要素の 1 つのセットを評価対象に選択します。  
@@ -42,14 +42,14 @@ ms.locfileid: "31569522"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <Choose>  
     <When Condition="'StringA'=='StringB'">... </When>  
     <Otherwise>... </Otherwise>  
 </Choose>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -121,6 +121,6 @@ ms.locfileid: "31569522"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

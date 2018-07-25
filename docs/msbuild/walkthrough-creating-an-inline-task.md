@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b82f9813ce610979cd50a1ced7f510240299a612
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3bb1c2f43504a89ede3e9ad9e6f13c05130c9c34
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575794"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303054"
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>チュートリアル: インライン タスクの作成
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 .NET Framework Version 4 以降では、プロジェクト ファイルでタスクをインラインで作成できます。 個別のアセンブリを作成してタスクをホストする必要はありません。 詳細については、「[インライン タスク](../msbuild/msbuild-inline-tasks.md)」を参照してください。  
@@ -65,7 +65,9 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 1.  ルートの `Project` ノードで、`DefaultTargets` 属性を `TestBuild` に変更します。その結果、`Project` ノードは次の例のようになります。  
   
-     `<Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">`  
+    ```xml
+    <Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    ```
   
 2.  プロジェクト ファイルの `</Project>` タグの直前に、次のインライン タスクとターゲットを追加します。  
   
@@ -225,9 +227,13 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 3.  **コマンド プロンプト ウィンドウ**で出力を確認します。 次の行が表示されます。  
   
-     `Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs`  
+    ```
+    Input files: Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs
+    ```  
   
-     `Matched files: Form1.cs;Form1.Designer.cs;Properties\Settings.Designer.cs`  
+    ```
+    Matched files: Form1.cs;Form1.Designer.cs;Properties\Settings.Designer.cs
+    ```  
   
  このコードによって、次の 3 つのパラメーターを持つ RegX という名前のインライン タスクが定義されます。  
   
@@ -242,16 +248,16 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 ### <a name="handling-reserved-characters"></a>予約文字の処理  
  MSBuild パーサーによってインライン タスクが XML として処理されます。 XML で意味が予約されている文字 ("\<" や ">" など) は、.NET ソース コードではなく XML として検出されて処理されます。 コード式に予約文字を含めるには (`Files.Length > 0` など)、次のように `Code` 要素を記述して、その内容が CDATA 式に含まれるようにします。  
   
- `<Code Type="Fragment" Language="cs">`  
+ ```xml
+<Code Type="Fragment" Language="cs">  
+  <![CDATA[  
   
- `<![CDATA[`  
+  // Your code goes here.  
   
- `// Your code goes here.`  
-  
- `]]>`  
-  
- `</Code>`  
-  
+  ]]>  
+</Code>  
+```  
+
 ## <a name="see-also"></a>参照  
  [インライン タスク](../msbuild/msbuild-inline-tasks.md)   
  [タスク](../msbuild/msbuild-tasks.md)   

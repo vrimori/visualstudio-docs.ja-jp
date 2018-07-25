@@ -10,16 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd9f7601a7e2a24ec41a12d194aac65445c6d159
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ae99e144e2eb96d898df157c263348cdccc7ecde
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924328"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978191"
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml ソース コード
 
-このトピックでは、「 [WPF Data Binding Using LINQ to XML Example](../designers/wpf-data-binding-using-linq-to-xml-example.md)」の XAML ソース ファイル L2DBForm.xaml の内容と説明を示します。
+このトピックでは、「[LINQ to XML を使用した WPF のデータ バインディングの例](../designers/wpf-data-binding-using-linq-to-xml-example.md)」の XAML ソース ファイル *L2DBForm.xaml* の内容と説明を示します。
 
 ## <a name="overall-ui-structure"></a>UI の全体的な構造
 
@@ -37,7 +37,7 @@ WPF プロジェクトで一般に見られるように、このファイルに�
 
 最後に、28 ～ 34 行目で <xref:System.Windows.DataTemplate> という名前の `BookTemplate` が定義されています。 このテンプレートは、**[Book List]** UI セクションにエントリを表示するために使用されます。 ここでは、データ バインドおよび LINQ to XML の動的プロパティを使用し、次の代入を通じて書籍の ID と名前を取得します。
 
-```
+```xaml
 Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
 ```
 
@@ -47,25 +47,25 @@ Text="{Binding Path=Attribute[id].Value}"Text="{Binding Path=Value}"
 
 38 行目の `<StackPanel>` 開始タグでは、このパネルの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティが `LoadedBooks` データ プロバイダーに設定されています。
 
-```
+```xaml
 DataContext="{Binding Source={StaticResource LoadedBooks}}
 ```
 
 データ コンテキストを設定することにより、このデータ プロバイダーの `Xml` プロパティにバインドして、`tbRawXml` という名前の <xref:System.Windows.Controls.TextBlock> に生の XML を表示できるようになります (46 行目)。
 
-```
+```xaml
 Text="{Binding Path=Xml}"
 ```
 
 58 ～ 62 行目では、 <xref:System.Windows.Controls.ListBox> [Book List] **UI セクションの** が、その表示項目のテンプレートをウィンドウ リソース セクションで定義された `BookTemplate` に設定しています。
 
-```
+```xaml
 ItemTemplate ="{StaticResource BookTemplate}"
 ```
 
 59 ～ 62 行目では、書籍の実際の値がこのリスト ボックスにバインドされています。
 
-```
+```xaml
 <ListBox.ItemsSource>
     <Binding Path="Elements[{http://www.mybooks.com}book]"/>
 </ListBox.ItemsSource>
@@ -73,13 +73,13 @@ ItemTemplate ="{StaticResource BookTemplate}"
 
 3 番目の UI セクション **[Edit Selected Book]** では、まず親 <xref:System.Windows.FrameworkElement.DataContext%2A> の <xref:System.Windows.Controls.StackPanel> が、 **[Book List]** UI セクション (82 行目) で現在選択されている項目にバインドされています。
 
-```
+```xaml
 DataContext="{Binding ElementName=lbBooks, Path=SelectedItem}"
 ```
 
 次に、双方向データ バインドを使用して、書籍要素の現在の値がこのパネルの 2 つのテキスト ボックスに表示され、そこで更新されるようにしています。 動的プロパティへのデータ バインドは、`BookTemplate` データ テンプレートで使用されるデータ バインドと似ています。
 
-```
+```xaml
 Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 ```
 
@@ -243,9 +243,9 @@ Text="{Binding Path=Attribute[id].Value}"...Text="{Binding Path=Value}"
 
 ### <a name="comments"></a>コメント
 
-WPF UI 要素に関連付けられているイベント ハンドラーの C# ソース コードについては、「 [L2DBForm.xaml.cs Source Code](../designers/l2dbform-xaml-cs-source-code.md)」を参照してください。
+WPF UI 要素に関連付けられているイベント ハンドラーの C# ソース コードについては、「[L2DBForm.xaml.cs Source Code](../designers/l2dbform-xaml-cs-source-code.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
-- [L2DBForm.xaml.cs ソース コード](../designers/l2dbform-xaml-cs-source-code.md)
+- [チュートリアル : LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
+- [L2DBForm.xaml.cs sauce コード](../designers/l2dbform-xaml-cs-source-code.md)

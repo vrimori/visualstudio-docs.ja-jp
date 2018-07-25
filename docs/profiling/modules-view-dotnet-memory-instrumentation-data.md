@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c04ecdc1de848a95ad9f5051cc9ec54da02a3625
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0dd74f25ed5dc7f76b9d35ae3d2d9833f8e4ab8
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255526"
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>モジュール ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドで収集された .NET メモリの割り当てデータの モジュール ビューは、メモリとタイミング データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 モジュールの関数のプロファイル データが、モジュール ノードの下に一覧表示されます。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 04/19/2018
 |**最大アプリケーション排他時間 (関数のみ)**|-   関数の場合、この関数の呼び出しの最大アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|-   関数の場合、このモジュールまたは関数の呼び出しの最小アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モジュール ビュー - サンプリング](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [モジュール ビュー](../profiling/modules-view-instrumentation-data.md)   
  [モジュール ビュー](../profiling/modules-view-sampling-data.md)

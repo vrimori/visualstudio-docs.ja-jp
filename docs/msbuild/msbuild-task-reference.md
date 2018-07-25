@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 939a1220d1106330ffbec7fa1af705567ff66dd6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6cbaeaeca87c4e32a0c9db9a463e1f5f417527ae
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31576041"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058647"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] をインストールすると、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  
@@ -88,6 +88,9 @@ ms.locfileid: "31576041"
   
  [Delete タスク](../msbuild/delete-task.md)  
  指定されたファイルを削除します。  
+
+ [DownloadFile タスク](../msbuild/downloadfile-task.md)  
+ 指定した場所にファイルをダウンロードします。  
   
  [Error タスク](../msbuild/error-task.md)  
  ビルドを停止し、条件付きステートメントの評価に基づいてエラーをログに記録します。  
@@ -200,6 +203,9 @@ ms.locfileid: "31576041"
  [UnregisterAssembly タスク](../msbuild/unregisterassembly-task.md)  
  COM 相互運用のために、指定されたアセンブリの登録を解除します。  
   
+ [Unzip タスク](../msbuild/unzip-task.md)  
+ 指定した場所に `.zip` アーカイブを解凍します。
+  
  [UpdateManifest タスク](../msbuild/updatemanifest-task.md)  
  マニフェスト内の選択したプロパティを更新し、再署名します。  
   
@@ -223,6 +229,9 @@ ms.locfileid: "31576041"
   
  [XslTransformation タスク](../msbuild/xsltransformation-task.md)  
  XSLT *Extensible Stylesheet Language Transformation* (XSLT) またはコンパイル済み XSLT を使用して XML 入力を変換し、出力デバイスまたはファイルに出力します。  
+  
+  [ZipDirectory タスク](../msbuild/zipdirectory-task.md)  
+ ディレクトリのコンテンツから `.zip` アーカイブを作成します。
   
 ## <a name="see-also"></a>参照  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   

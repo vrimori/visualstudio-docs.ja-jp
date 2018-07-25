@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプション - 主要連絡先担当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a50fef244d7b656271adf36544166c9f8256c1ae
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 69ef519d18dbfd52646f8cadb27e842a14c6135c
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30862797"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36325211"
 ---
 # <a name="locating-the-primary-contact-associated-with-visual-studio-subscriptions"></a>Visual Studio サブスクリプションに関連付けられている主要連絡先を検索する
 
@@ -22,17 +22,13 @@ ms.locfileid: "30862797"
 
 1. 主要連絡先を見つけるには、ボリューム ライセンス サービス センター (https://www.Microsoft.com/licensing/servicecenter) にアクセスし、**[サインイン]** をクリックします。
 
-    ![VLSC へのサインイン](_img/locate-primary-contact/vlsc-sign-in.png)
-
 2. [ライセンス] タブのドロップダウンで **[関係サマリー]** を選択します。
-
     ![関係の選択](_img/locate-primary-contact/vlsc-relationship.png)
-
+   
 3. 該当する契約番号を選択します。 
-
     ![契約の選択](_img/locate-primary-contact/vlsc-agreement.png)
 
 4. **[連絡先]** タブを選択します。主要連絡先は、契約に関連付けられている連絡先の一覧に表示されます。 
-
     ![連絡先の選択](_img/locate-primary-contact/vlsc-contacts.png)
- 
+
+

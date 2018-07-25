@@ -13,22 +13,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a79e8c0f21a63bd5b64af69c2bf9778c07822d83
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 10ff36702f4fba2ed5093e866ac57a099fbbc904
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574936"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081811"
 ---
 # <a name="how-to-display-an-item-list-separated-with-commas"></a>方法: 項目リストをコンマ区切りで表示する
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) で項目一覧を使用するとき、項目一覧の内容を読みやすいように表示すると便利な場合があります。 あるいは、項目の一覧を特殊な区切り文字列で区切るタスクが与えられることがあります。 いずれの場合でも、項目一覧には区切り文字列を指定できます。  
   
-## <a name="separating-items-in-a-list-with-commas"></a>一覧内の項目をコンマで区切る  
+## <a name="separate-items-in-a-list-with-commas"></a>一覧内の項目をコンマで区切る  
  既定では、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はセミコロンを利用して一覧内の項目を区切ります。 たとえば、次の値を持つ `Message` 要素があります。  
   
  `<Message Text="This is my list of TXT files: @(TXTFile)"/>`  
   
- `@(TXTFile)` 項目一覧に項目 App1.txt、App2.txt、App3.txt が含まれるとき、メッセージは次のようになります。  
+ `@(TXTFile)` 項目一覧に項目 *App1.txt*、*App2.txt*、*App3.txt* が含まれるとき、メッセージは次のようになります。  
   
  `This is my list of TXT files: App1.txt;App2.txt;App3.txt`  
   
@@ -45,7 +45,7 @@ ms.locfileid: "31574936"
      `@(TXTFile, ', ')`  
   
 ## <a name="example"></a>例  
- この例では、[Exec](../msbuild/exec-task.md) タスクは findstr ツールを実行し、ファイル Phrases.txt から指定のテキスト文字列を探します。 findstr コマンドでは、リテラル検索文字列が **/c:** スイッチによって示されます。そのため、項目区切り `/c:` が `@(Phrase)` 項目一覧の項目間に挿入されます。  
+ この例では、[Exec](../msbuild/exec-task.md) タスクは findstr ツールを実行し、ファイル *Phrases.txt* から指定のテキスト文字列を探します。 findstr コマンドでは、リテラル検索文字列が **/c:** スイッチによって示されます。そのため、項目区切り `/c:` が `@(Phrase)` 項目一覧の項目間に挿入されます。  
   
  この例では、次がこれに相当するコマンドライン コマンドです。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "31574936"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [項目](../msbuild/msbuild-items.md)

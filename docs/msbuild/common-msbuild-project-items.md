@@ -17,21 +17,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ea8c1ffd52805be4f93fb59c2831f5f0fe610c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 83cdf4071be735636c9f2ffb559c68d284685892
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574260"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945521"
 ---
 # <a name="common-msbuild-project-items"></a>MSBuild プロジェクトの共通項目
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。 項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。 項目には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のすべてのプロジェクトの種類に共通のものがあります。 これらの項目は、Microsoft.Build.CommonTypes.xsd ファイルで定義されています。  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、項目は 1 つ以上のファイルに対応する名前付きの参照です。 項目には、ファイル名、パス、バージョン番号などのメタデータが含まれます。 項目には、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のすべてのプロジェクトの種類に共通のものがあります。 これらの項目は、*Microsoft.Build.CommonTypes.xsd* ファイルで定義されています。  
   
 ## <a name="common-items"></a>共通の項目  
  次に、プロジェクトの共通項目の一覧を示します。  
   
 ### <a name="reference"></a>参照  
- プロジェクト内のアセンブリ (マネージ) 参照を表します。  
+ プロジェクト内のアセンブリ (マネージド) 参照を表します。  
   
 |項目メタデータの名前|説明|  
 |---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "31574260"
 |項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |name|省略可能な文字列。 コンポーネントの表示名を指定します。|  
-|GUID|省略可能な文字列。 コンポーネントの GUID を {12345678-1234-1234-1234-123456789012} の形式で指定します。|  
+|GUID|省略可能な文字列。 コンポーネントの GUID を {12345678-1234-1234-1234-1234567891234} の形式で指定します。|  
 |VersionMajor|省略可能な文字列。 コンポーネントのメジャー バージョン番号を指定します。 たとえば、完全なバージョン番号が "5.46" である場合、"5" を指定します。|  
 |VersionMinor|省略可能な文字列。 コンポーネントのマイナー バージョン番号を指定します。 たとえば、完全なバージョン番号が "5.46" である場合、"46" を指定します。|  
 |LCID|省略可能な文字列。 コンポーネントの LocaleID です。|  
@@ -76,7 +76,7 @@ ms.locfileid: "31574260"
 |項目メタデータの名前|説明|  
 |---------------|-----------------|  
 |name|省略可能な文字列。 参照の表示名を指定します。|  
-|プロジェクト|省略可能な文字列。 参照の GUID を {12345678-1234-1234-1234-123456789012} の形式で指定します。|  
+|プロジェクト|省略可能な文字列。 参照の GUID を {12345678-1234-1234-1234-1234567891234} の形式で指定します。|  
 |Package|省略可能な文字列。 参照されるプロジェクト ファイルのパスを指定します。|  
   
 ### <a name="compile"></a>Compile  
@@ -141,5 +141,5 @@ ms.locfileid: "31574260"
 ### <a name="import"></a>インポート  
  アセンブリを表します。このアセンブリの名前空間が、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラによってインポートされます。  
   
-## <a name="see-also"></a>参照  
- [Common MSBuild Project Properties (MSBuild プロジェクトの共通プロパティ)](../msbuild/common-msbuild-project-properties.md)
+## <a name="see-also"></a>関連項目  
+ [MSBuild プロジェクトの共通プロパティ](../msbuild/common-msbuild-project-properties.md)

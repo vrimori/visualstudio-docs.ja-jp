@@ -17,18 +17,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 753cf038cf6d8129aa9a4691b0f88c046aadf640
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 882b2511c547837466f45578031c86e6b0df9d74
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750910"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36234986"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>ロード テスト アナライザーを使用したロード テストのしきい値規則違反の分析
 
 しきい値規則は、特定のパフォーマンス カウンターに関連付けられます。違反とは、パフォーマンス カウンターが設定値を上回るか下回ったことを示します。 ロード テストの実行では、あらかじめ設定したしきい値規則に対する違反を分析できます。
 
-違反が発生すると、**[しきい値の違反です]** というハイパーリンクがロード テスト アナライザーのステータス バーに表示され、発生した違反の数が示されます。 このハイパーリンクを選択すると、しきい値違反テーブルが表示されます。 しきい値違反は、**[カウンター]** ウィンドウやグラフ上でも表示できます。
+違反が発生すると、**[しきい値の違反です]** というハイパーリンクが**ロード テスト アナライザー**のステータス バーに表示され、発生した違反の数が示されます。 このハイパーリンクを選択すると、しきい値違反テーブルが表示されます。 しきい値違反は、**[カウンター]** ウィンドウやグラフ上でも表示できます。
 
 ## <a name="view-threshold-violations-in-the-table"></a>しきい値違反テーブルの表示
 

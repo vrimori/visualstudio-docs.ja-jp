@@ -1,7 +1,7 @@
 ---
 title: Python サポートのインストール
 description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法と、オプションやインストールの場所。
-ms.date: 02/15/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6f4af615091751f1076a5fe8659a8749fc41ca37
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: ae4dd83f5618ed908dee666f04c580f8c3161cbf
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058686"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -40,10 +41,10 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
 1. 最新の Visual Studio 2017 インストーラーをダウンロードし、実行します。 Visual Studio が既にインストールされている場合は、Visual Studio インストーラーを実行し、**[変更]** オプションを選択して ([Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)、手順 2 へ進みます。
 
     > [!div class="nextstepaction"]
-    > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 のインストールに関するコミュニティ</a>
+    > <a target="frameTarget" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 のインストールに関するコミュニティ</a>
 
     >[!Tip]
-    > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Enterprise</a> を使用してください。
+    > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Enterprise</a> を使用してください。
 
 1. インストーラーによって、ワークロード一覧が表示されます。これは、特定の開発分野の関連オプションのグループです。 Python の場合、**[Python 開発]** ワークロードを選択します。
 
@@ -67,7 +68,7 @@ Visual Studio 2015 以前では、任意の [Python インタープリターを�
     | Python ネイティブ開発ツール | Python のネイティブ拡張機能の開発するために必要な C++ コンパイラおよびその他のコンポーネントがインストールされます。 「[Python 用 C++ 拡張機能の作成](working-with-c-cpp-python-in-visual-studio.md)」を参照してください。 C++ を完全にサポートするには、**C++ によるデスクトップ開発**ワークロードもインストールします。 |
     | Azure Cloud Services コア ツール | Python での Azure Cloud Services で開発者に追加のサポートを提供します。 「[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」を参照してください。 |
 
-1. インストール後、Visual Studio を変更、起動、修復またはアンインストールするオプションが提供されます。 Visual Studio にインストールされているコンポーネントの更新プログラムが利用可能になると、**[変更]** ボタンは **[更新]** に変わります。 (その後、[変更] オプションは、ドロップダウン メニューから利用可能になります)。Windows の [スタート] メニューで "Visual Studio" を検索して、Visual Studio とインストーラーを起動することも可能です。
+1. インストール後、Visual Studio を変更、起動、修復またはアンインストールするオプションが提供されます。 Visual Studio への更新プログラムがインストールされているすべてのコンポーネントに利用可能になると、**[変更]** ボタンが **[更新]** に変わります。 (その後、[変更] オプションは、ドロップダウン メニューから利用可能になります)。Windows の [スタート] メニューで "Visual Studio" を検索して、Visual Studio とインストーラーを起動することも可能です。
 
     ![インストーラーからの Visual Studio の起動、変更、またはアンインストール](media/installation-vs-launch.png)
 

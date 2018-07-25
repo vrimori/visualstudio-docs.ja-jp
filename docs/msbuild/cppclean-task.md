@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a871effd2b7560cc34ae8e2a91c0b55f63bcfe44
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc66d09b16c62765848a77ea4fd4a2d9f65ad418
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31568517"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946540"
 ---
 # <a name="cppclean-task"></a>CPPClean タスク
 Visual C++ プロジェクトのビルド時に MSBuild によって作成される一時ファイルを削除します。 ビルド ファイルを削除するプロセスは、*クリーニング* と呼ばれます。  
@@ -44,5 +44,5 @@ Visual C++ プロジェクトのビルド時に MSBuild によって作成され
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

@@ -9,13 +9,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c94e8f2ba852600c14ede7419619c711b70f0b0b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2b1e2291ff5c4b7ff072e45df9e2d32768011bca
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815783"
 ---
-# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>方法: プロファイリング ツールのレポート ビューをフィルター処理してマイ コードのみを表示する
+# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>方法: プロファイル ツールのレポート ビューをフィルター処理してマイ コードのみを表示する
 
 Visual Studio では、自分が実装したコードのみをパフォーマンス レポートに表示するためのフィルタリングが提供されます。 「マイ コードのみ」と呼ばれるこの機能は、既定で有効にされています。 この機能は、**[オプション]** ダイアログ ボックスの **[マイ コードのみ]** オプションで構成されます。
 
@@ -37,4 +38,4 @@ Visual Studio では、自分が実装したコードのみをパフォーマン
 
 ## <a name="see-also"></a>関連項目
 
-[パフォーマンス ツール のレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)
+[パフォーマンス ツールのレポート ビューのカスタマイズ](../profiling/customizing-performance-tools-report-views.md)

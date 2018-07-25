@@ -10,12 +10,12 @@ ms.author: karann
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a263f361e28c515f1694238c4d60fdeffb95f03a
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 4af9ec3cffc7375dd77be72887baee6a56e1b391
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746625"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077814"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML のエラーと警告
 
@@ -32,7 +32,7 @@ Visual Studio では、XAML を作成するとき、入力したコードがす�
 |XAML エディット コンティニュ|XECxxxx|
 
 > [!Note]
-> 一部のエラー/警告には該当コードがありません。 そのようなエラーは通常、XAML デザイナーが検出したエラーです。
+> 一部のエラーや警告には該当コードがありません。 そのようなエラーは通常、XAML デザイナーが検出したエラーです。
 
 
 ## <a name="suppress-xaml-designer-errors"></a>XAML デザイナー エラー

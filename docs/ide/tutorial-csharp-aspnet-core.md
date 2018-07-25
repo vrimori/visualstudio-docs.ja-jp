@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での C# および ASP.NET Core の概要
 ms.custom: ''
-ms.date: 12/11/2017
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: tutorial
@@ -14,18 +14,18 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 3de8a60b6f9f4807bd0032fc457a9040f937c063
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 40aba1d8847b405c3e80f0d6890471f0e2065a86
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765516"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089452"
 ---
 # <a name="get-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio での C# および ASP.NET の概要
 
 Visual Studio を使用する ASP.NET Core での C# 開発に関するこのチュートリアルでは、C# ASP.NET Core Web アプリを作成し、それにコードを追加し、IDE の一部の機能を検討してアプリを実行します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -41,7 +41,7 @@ ASP.NET Core は、Web アプリやサービスなど、インターネットに
 
 ### <a name="what-is-visual-studio"></a>Visual Studio とは何ですか?
 
-Visual Studio は、開発者向け生産性向上ツールの統合開発スイートです。 プログラムやアプリケーションを作成するために使用できるプログラムのようなものと考えてください。  
+Visual Studio は、開発者向け生産性向上ツールの統合開発スイートです。 プログラムやアプリケーションを作成するために使用できるプログラムのようなものと考えてください。
 
 ## <a name="start-developing"></a>開発を始める
 
@@ -65,9 +65,9 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 
 ##### <a name="option-1-use-the-new-project-dialog-box"></a>オプション 1: [新しいプロジェクト] ダイアログ ボックスを使用する
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクをクリックします。
+1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで、**[Visual Studio インストーラーを開く]** リンクを選択します。
 
-   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクをクリックする](../ide/media/vs-open-visual-studio-installer-generic.png)
+   ![[新しいプロジェクト] ダイアログ ボックスで [Visual Studio インストーラーを開く] リンクを選択する](../ide/media/vs-open-visual-studio-installer-generic.png)
 
 2. Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
 
@@ -81,7 +81,7 @@ Visual Studio は、開発者向け生産性向上ツールの統合開発スイ
 
 #### <a name="add-a-project-template"></a>プロジェクト テンプレートを追加する
 
-1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、**[Web アプリケーション (モデル ビュー コントローラー)]** プロジェクト テンプレートを選択します。  
+1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、**[Web アプリケーション (モデル ビュー コントローラー)]** プロジェクト テンプレートを選択します。
 
 2. 上部のドロップダウン メニューから **[ASP.NET Core 2.0]** を選択します  (リストに **ASP.NET Core 2.0** が表示されない場合は、ダイアログ ボックスの上部付近にある黄色のバーに表示される **[ダウンロード]** リンクに従ってインストールしてください)。**[OK]** をクリックします。
 
@@ -126,7 +126,7 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
      ![Visual Studio のソリューション エクスプローラーの wwwroot フォルダー](../ide/media/csharp-aspnet-solution-wwwroot.png)
 
- 7. また、プロジェクトとそのパッケージ、およびアプリケーションを実行時に管理するために機能するさまざまな構成ファイルがあります。 たとえば、既定のアプリケーション[構成](/aspnet/core/fundamentals/configuration)は *appsettings.json* に格納されます。 ただし、**開発**環境用の *appsettings.Development.json* ファイルを提供するなどして、環境ごとにこれらの設定の一部/すべてを上書きすることができます。
+ 7. また、プロジェクトとそのパッケージ、およびアプリケーションを実行時に管理するために機能するさまざまな構成ファイルがあります。 たとえば、既定のアプリケーション[構成](/aspnet/core/fundamentals/configuration)は *appsettings.json* に格納されます。 ただし、**開発**環境用の *appsettings.Development.json* ファイルを提供するなどして、環境ごとにこれらの設定の一部/すべてをオーバーライドすることができます。
 
      ![Visual Studio のソリューション エクスプローラーの構成ファイル](../ide/media/csharp-aspnet-solution-explorer-config-files.png)
 
@@ -134,7 +134,7 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
 1. IDE の **[IIS Express]** ボタンを選択して、デバッグ モードでアプリをビルドして実行します  (または、**F5** キーを押すか、メニュー バーから **[デバッグ]、[デバッグの開始]** の順に選択します)。
 
-   ![Visual Studio の [IIS Express] ボタンをクリックする](../ide/media/csharp-aspnet-iis-express-button.png)
+   ![Visual Studio の [IIS Express] ボタンを選択する](../ide/media/csharp-aspnet-iis-express-button.png)
 
   > [!NOTE]
   > "**Web サーバー 'IIS Express' に接続できませんでした**" というエラー メッセージが表示された場合は、Visual Studio を閉じて、右クリックまたはコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
@@ -179,11 +179,13 @@ MVC パターンは、従来のモノリシック アプリよりテストと更
 
 11. ツール バーから **[デバッグの停止]** ボタンを選択して、デバッグを停止します  (または、**Shift**+**F5** キーを押すか、メニュー バーから **[デバッグ]** > **[デバッグの停止]** を選択します)。
 
-   ![ツール バーで [デバッグの停止] ボタンをクリックする](../ide/media/csharp-aspnet-stop-debugging.png)
+   ![ツール バーで [デバッグの停止] ボタンを選択する](../ide/media/csharp-aspnet-stop-debugging.png)
 
 ## <a name="next-steps"></a>次の手順
 
-これでこのチュートリアルは完了です。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 さらに詳しく理解するには、引き続き以下のチュートリアルをご覧ください。
+これでこのチュートリアルは完了です。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 パブリック サーバー上で実行されているアプリを表示するには、次のボタンを選択します。
 
- > [!div class="nextstepaction"]
- > [ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)
+> [!div class="nextstepaction"]
+> [Azure App Service へのアプリの展開](..//deployment/quickstart-deploy-to-azure.md)
+
+「[ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)」のチュートリアルに従って、モデル ビュー コントローラー (MVC) フレームワークの使用について学習することもできます。

@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb92e37a8bc1543cfdf2efa142768d9edbea4f69
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 518a05c72d25c5f1abc136e774d9867a9fc66c36
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845640"
 ---
 # <a name="lines-view---net-memory-sampling-data"></a>行ビュー - .NET メモリ サンプリング データ
 サンプリング メソッドを使用する .NET メモリの割り当てプロファイル データ用の行ビューには、プロファイリングの実行中にメモリを割り当てたステートメントが一覧表示されます。 列には、割り当てのサイズと数も含まれています。  
@@ -61,5 +62,5 @@ ms.lasthandoff: 04/19/2018
 |**割り当てバイト数 (関数のみ)**|この行で割り当てられた、プロファイリング実行で割り当てられたすべてのメモリ バイト数の割合。|  
 |**割り当てバイト数 % (関数のみ)**|この行で割り当てられた、プロファイリング実行で割り当てられたすべてのメモリ バイト数の割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行 ビュー](../profiling/lines-view-sampling-data.md)

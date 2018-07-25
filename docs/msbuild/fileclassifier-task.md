@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a754f5aef53eed581deb9ccafa0bf5c453d8086d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eea3fbb882a2ed2b8036b6fe5bbb280d99c0f270
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31568351"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177034"
 ---
 # <a name="fileclassifier-task"></a>FileClassifier タスク
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> タスクは、ソース リソースのセットをアセンブリに埋め込まれるリソースとして分類します。 ローカライズできないリソースは、メイン アプリケーション アセンブリに埋め込まれます。ローカライズ可能なリソースは、サテライト アセンブリに埋め込まれます。  
@@ -65,9 +65,9 @@ ms.locfileid: "31568351"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WPF MSBuild リファレンス](../msbuild/wpf-msbuild-reference.md)   
- [Task Reference (タスク リファレンス)](../msbuild/wpf-msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [WPF アプリケーション (WPF) のビルド](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

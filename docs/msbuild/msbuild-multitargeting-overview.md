@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e85bb64252a73195e4ab8226cfbdb141199107d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: deb3034c00a6f929ed728534bccf66325a45ed38
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569171"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079964"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild のマルチ ターゲットの概要
 MSBuild を使用すると、.NET Framework のいずれかのバージョンやいずれかのシステム プラットフォームで動作するように、アプリケーションをコンパイルできます。 たとえば、あるアプリケーションを 32 ビット プラットフォーム上の .NET Framework 2.0 で動作するようにコンパイルしたり、これと同じアプリケーションを 64 ビット プラットフォーム上の .NET Framework 4.5 で動作するようにコンパイルしたりできます。  
@@ -39,12 +39,12 @@ MSBuild を使用すると、.NET Framework のいずれかのバージョンや
  *ターゲット フレームワーク*は、ビルドされるプロジェクトの実行対象となる .NET Framework のバージョンを表します。また、*ターゲット プラットフォーム*は、ビルドされるプロジェクトの実行対象となるシステム プラットフォームを表します。  たとえば、802x86 プロセッサ ファミリ (x86) と互換性のある 32 ビット プラットフォームで動作する .NET Framework 2.0 アプリケーションを対象とする場合があります。 ターゲット フレームワークとターゲット プラットフォームの組み合わせは*ターゲット コンテキスト*と呼ばれます。 詳細については、「[ターゲット フレームワークおよびターゲット プラットフォーム](../msbuild/msbuild-target-framework-and-target-platform.md)」を参照してください。  
   
 ## <a name="toolset-toolsversion"></a>ツール セット (ToolsVersion)  
- ツール セットには、アプリケーションの作成に使用されるツール、タスク、ターゲットがまとめられています。 ツールセットには、csc.exe や vbc.exe などのコンパイラ、共通 targets ファイル (microsoft.common.targets)、および共通 tasks ファイル (microsoft.common.tasks) が含まれています。 4.5 ツールセットを使用すると、バージョン 2.0、3.0、3.5、4、4.5 の .NET Framework を対象とすることができます。 ただし、2.0 ツールセットは .NET Framework バージョン 2.0 のみを対象として使用できます。 詳細については、「[ツール セット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」を参照してください。  
+ ツール セットには、アプリケーションの作成に使用されるツール、タスク、ターゲットがまとめられています。 ツールセットには、*csc.exe* や *vbc.exe* などのコンパイラ、共通 targets ファイル (*microsoft.common.targets*)、および共通 tasks ファイル (*microsoft.common.tasks*) が含まれています。 4.5 ツールセットを使用すると、バージョン 2.0、3.0、3.5、4、4.5 の .NET Framework を対象とすることができます。 ただし、2.0 ツールセットは .NET Framework バージョン 2.0 のみを対象として使用できます。 詳細については、「[ツール セット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」を参照してください。  
   
 ## <a name="reference-assemblies"></a>参照アセンブリ  
  ツールセットで指定されている参照アセンブリは、アプリケーションの設計とビルドに役立ちます。 これらの参照アセンブリを利用すると、特定のターゲットのビルドが実行できるだけでなく、Visual Studio IDE のコンポーネントと機能を制限して、ターゲットと互換性のあるコンポーネントと機能のみを使用できるようになります。 詳細については、「[デザイン時のアセンブリの解決](../msbuild/resolving-assemblies-at-design-time.md)」を参照してください。  
   
-## <a name="configuring-targets-and-tasks"></a>ターゲットとタスクの構成  
+## <a name="configure-targets-and-tasks"></a>ターゲットとタスクを構成する  
  MSBuild のターゲットとタスクを、MSBuild のアウトプロセスで実行するように構成できます。これにより、開発時に実行しているコンテキストとは異なるコンテキストを対象とすることができます。  たとえば、開発用コンピューターが .NET Framework 4.5 を備えた 64 ビット プラットフォームで動作している場合でも、32 ビットの .NET Framework 2.0 アプリケーションを対象とすることができます。 詳細については、「[ターゲットとタスクの構成](../msbuild/configuring-targets-and-tasks.md)」を参照してください。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  

@@ -9,12 +9,12 @@ description: Visual Studio サブスクライバーとして Visual Studio Team 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ae0f8c27d7f82493c4ce247ee1399e4e16fb88f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f5dc617f9baa801e17d2fd9862103d9079b3368
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31196077"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36281821"
 ---
 # <a name="visual-studio-team-services-vsts-benefits-for-visual-studio-subscribers"></a>Visual Studio サブスクリプションの Visual Studio Team Services (VSTS) 特典
 
@@ -22,9 +22,10 @@ ms.locfileid: "31196077"
 
 Visual Studio サブスクリプションのアクティブ化に使用した ID または[代替 ID](vs-alternate-identity.md) を使って VSTS にサインインすると、そのことが自動的に認識されます。
 
-[無料の VSTS アカウントにサインアップする](https://www.visualstudio.com/team-services/)
+[無料の VSTS アカウントにサインアップする](https://visualstudio.microsoft.com/team-services/)
 
 ## <a name="eligibility"></a>特典を受ける条件
+
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (標準、年間クラウド、月間クラウド)   | VL、Azure、リテール、一部の NFR<sup>1</sup>、FTE  | Basic、Test Manager、Package Management、セルフホステッド CI/CD       |  [はい]          |
@@ -34,10 +35,9 @@ Visual Studio サブスクリプションのアクティブ化に使用した ID
 
 <sup>1</sup> *Not for Resale (NFR)、Microsoft Valued Partner (MVP)、Region Director (RD)、Visual Studio Industry Partner (VSIP)、Microsoft Partner Network (Enterprise)、BizSpark、MCT Software & Services Developer が含まれます。MCT Software & Services、Imagine は含まれません。*
 
-
-
 VSTS 機能の詳細
-- [基本](https://www.visualstudio.com/team-services/compare-features/)
+
+- [基本](https://visualstudio.microsoft.com/team-services/compare-features/)
 - [Test Manager](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
 - [パッケージの管理](https://marketplace.visualstudio.com/items?itemName=ms.feed)
 
@@ -46,6 +46,6 @@ VSTS 機能の詳細
 
 ## <a name="support-resources"></a>サポート リソース
 
--  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://www.visualstudio.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://www.visualstudio.com/support/)にアクセスしてください。
+-  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
+-  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
 -  [Visual Studio Team Services のドキュメント](/vsts/)を完了してください。

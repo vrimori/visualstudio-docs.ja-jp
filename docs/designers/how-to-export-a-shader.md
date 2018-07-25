@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 632cd61d3844dc6f405090081ef76e5a2d6967b7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1eb69a4662521c08fc8d2df34bbbfa41a5d1d7ea
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31924996"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924080"
 ---
 # <a name="how-to-export-a-shader"></a>方法: シェーダーをエクスポートする
 このドキュメントでは、DGSL (Directed Graph Shader Language) シェーダーをアプリで使用できるようにシェーダー デザイナーを使用してエクスポートする方法を説明します。
@@ -27,7 +27,7 @@ ms.locfileid: "31924996"
 ## <a name="exporting-a-shader"></a>シェーダーのエクスポート
  シェーダー デザイナーを使用して作成したシェーダーをアプリで使用するには、グラフィックス API が理解できる形式でシェーダーをエクスポートする必要があります。 シェーダーはニーズに応じてさまざまな方法でエクスポートできます。
 
-#### <a name="to-export-a-shader"></a>シェーダーをエクスポートするには
+### <a name="to-export-a-shader"></a>シェーダーをエクスポートするには
 
 1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で、**視覚シェーダー グラフ (.dgsl)** ファイルを開きます。
 

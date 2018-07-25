@@ -1,6 +1,6 @@
 ---
 title: '[オプション]、[テキスト エディター]、[C/C++]、[書式設定]'
-ms.date: 11/04/2016
+ms.date: 04/30/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -11,82 +11,47 @@ dev_langs:
 - CPP
 helpviewer_keywords:
 - Text Editor Options dialog box, formatting
+- ClangFormat
 ms.assetid: cb6f1cbb-5305-48da-a8e8-33fd70775d46
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikeblome
+ms.author: mblome
+manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 913413b4178a087c524ef26173fcbcc8c1d8b09b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ee7fab1564b39b29ae288e96c7aa77e0da21e88c
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946066"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235142"
 ---
 # <a name="options-text-editor-cc-formatting"></a>[オプション]、[テキスト エディター]、[C/C++]、[書式設定]
-このページでは、C または C++ でプログラムを記述する際のコード エディターの既定の動作を変更できます。
+
+これらのプロパティ ページを使用し、C または C++ でプログラムを記述する際のコード エディターの既定の動作を変更します。
+
+[C++ Formatting プロパティ ページ](media/cpp-formatting.png)
 
  このページを表示するには、左ペインの **[オプション]** ダイアログ ボックスで、**[テキスト エディター]** フォルダー、**[C/C++]** を順に展開して、**[書式設定]** をクリックします。
 
 > [!NOTE]
 > 次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
+## <a name="general-page"></a>[全般] ページ
 
-## <a name="cc-options"></a>[C/C++ オプション]
- **[自動クイック ヒントのツールヒントを有効にする]**
+このページには、入力したステートメントやブロックの書式を設定するためのオプションがあります。
 
- IntelliSense のクイック ヒント機能を有効または無効にします。
+**Visual Studio 2017 バージョン 15.7 以降**: このページにも、[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) バージョン 5.0 のサポートを構成するためのオプションがあります。 ClangFormat は、.clang-format または _clang-format ファイルで構成できる一連のルールに基づいてコードのスタイルや書式を簡単に設定できるユーティリティです。
 
-## <a name="inactive-code"></a>[アクティブでないコード]
- **[アクティブでないブロックの表示]**
+### <a name="configuring-clangformat-options"></a>ClangFormat オプションを構成する
 
- `#ifdef` 宣言によって無効化されているコードが、識別しやすいように異なる色で表示されます。
+Visual Studio 2017 バージョン 15.7 以降、ClangFormat サポートは既定で有効になります。 一般的な書式設定規則である LLVM、Google、Chromium、Mozilla、WebKit のうち、すべてのプロジェクトに適用するものを選択できます。 また、カスタム書式定義の .clang-format または _clang-format ファイルを作成できます。 そのようなファイルがプロジェクト フォルダーに置かれている場合、Visual Studio は、そのフォルダーとそのサブフォルダーのすべてのソース コード ファイルの書式設定にそのファイルを使用します。 
 
- **[アクティブでないコードの不透明度の無効化]**
+既定では、Visual Studio は clangformat.exe をバックグラウンドで実行し、ユーザーが入力すると書式設定を適用します。 書式設定コマンド **Format Document (Ctrl + K、Ctrl + D)** または **Format Selection (Ctrl + K、Ctrl + F)** を手動で呼び出す場合にのみ、clangformat.exe を実行するように指定することもできます。
 
- アクティブでないコード ブロックを不透明にする代わりに色で識別できるようにします。
 
- **[アクティブでないコードの不透明度]**
+## <a name="indentation-new-lines-spacing-wrapping-pages"></a>インデント、改行、間隔、折り返しのページ
 
- アクティブでないコード ブロックの不透明度の割合をカスタマイズできます。
-
-## <a name="indentation"></a>[インデント幅]
- **[中かっこのインデント]**
-
- 関数、`for` ループなどのコード ブロックの開始後に Enter キーを押したときの中かっこの配置を構成できます。 中かっこは、コード ブロックの最初の文字位置に合わせて、またはインデント位置に合わせて配置されます。
-
- **[自動インデントを有効にするタブ]**
-
- Tab キーを押したときに現在のコード行で発生する動作を構成できます。 行がインデントされるか、またはタブが挿入されます。
-
-## <a name="miscellaneous"></a>その他
- [**[タスク一覧] ウィンドウにコメントが列挙されます**]
-
- 開いているソース ファイルのコメント内に事前設定された語がないか、エディターでスキャンできます。 見つかったキーワードのエントリが **[タスク一覧]** ウィンドウに作成されます。
-
- **[一致するトークンの強調表示]**
-
- カーソルが中かっこの横に置かれたときに、その中かっこで囲まれているコードの内容を確認しやすいように、対応する中かっこが強調表示されます。
-
-## <a name="outlining"></a>アウトライン
- **[ファイルが開かれたときにアウトライン モードを実行する]**
-
- ファイルをテキスト エディターで開くときに、アウトライン表示機能を有効にできます。 詳細については、「[アウトライン](../../ide/outlining.md)」を参照してください。 このチェック ボックスをオンにすると、ファイルを開いたときにアウトライン表示機能が有効になります。
-
- **[#pragma 領域ブロックを自動的に縮小する]**
-
- このチェック ボックスをオンにすると、[プラグマ ディレクティブ](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword)の自動アウトラインが有効になります。 これにより、アウトライン モードでプラグマ領域ブロックの展開と折りたたみを行うことができます。
-
- **[ステートメント ブロックのアウトラインを自動的に実行する]**
-
- このオプションを選択すると、次のステートメント構造で自動アウトラインが有効になります。
-
--   [if-else](/dotnet/csharp/language-reference/keywords/if-else)
-
--   [switch ステートメント (C++)](/cpp/cpp/switch-statement-cpp)
-
--   [while ステートメント (C++)](/cpp/cpp/while-statement-cpp)
+これらのページでは、さまざまな書式設定をカスタマイズできますが、ClangFormat が有効になっている場合は無視されます。
 
 ## <a name="see-also"></a>参照
 

@@ -13,11 +13,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ea1d186f280c41d5330b3860f5b0802fb001bf84
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 487c5b4c730a4b49188857c2681aae6ff87a61e5
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237332"
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 
@@ -27,7 +28,8 @@ ms.lasthandoff: 04/26/2018
 
 * **テスト エクスプローラー**&mdash;単体テストを実行して、**テスト エクスプローラー**でその結果を確認できます。 サードパーティ製のフレームワークを含めて、**テスト エクスプローラー**のアダプターがあるすべての単体テスト フレームワークを使用できます。
 
-* **マネージ コード用の Microsoft 単体テスト フレームワーク**&mdash;マネージ コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。
+* 
+  **マネージド コード用の Microsoft 単体テスト フレームワーク**&mdash;マネージド コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。
 
 * **C++ 用の Microsoft 単体テスト フレームワーク**&mdash;C++ 用の Microsoft 単体テスト フレームワークは、**C++ によるデスクトップ開発**ワークロードの一部としてインストールされます。 これにより、ネイティブ コードをテストするためのフレームワークが提供されます。 Google Test、Boost.Test、CTest の各フレームワークも含まれており、サードパーティ製のアダプターを追加のテスト フレームワークで使用できます。 詳細については、「[C/C++ 用の単体テストの記述](../test/writing-unit-tests-for-c-cpp.md)」を参照してください。
 
@@ -43,9 +45,14 @@ ms.lasthandoff: 04/26/2018
 
 |[タスク]|関連するトピック|
 |-----------|-----------------------|
-|**クイック スタートおよびチュートリアル:** 次のトピックでは、Visual Studio での単体テストについてコード例から学習できます。|-   [チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)|
+|**クイック スタートおよびチュートリアル:** 次のトピックでは、Visual Studio での単体テストについてコード例から学習できます。|
+  -   
+  [チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)<br />-   [クイック スタート: テスト エクスプローラーによるテスト駆動開発](../test/quick-start-test-driven-development-with-test-explorer.md)<br />-   [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)|
 |**テスト エクスプローラーによる単体テスト:** テスト エクスプローラーによって、さらに生産性が高く効率的な単体テストを作成できることを学習します。|-   [単体テストの基本](../test/unit-test-basics.md)<br />-   [単体テスト プロジェクトを作成する](../test/create-a-unit-test-project.md)<br />-   [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)<br />-   [サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)|
-|**マネージ コードの単体テスト:**|-   [マネージ コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)|
+|
+  **マネージド コードの単体テスト:**|
+  -   
+  [マネージド コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)|
 |**C++ コードの単体テスト**|-   [C++ 用の Microsoft 単体テスト フレームワークを使用した C++ 用単体テストの記述](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)|
 |**単体テストの分離**|-   [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**コード カバレッジを使用して、テストされたプロジェクトのコードの割合を調べる:** Visual Studio のテスト ツールのコード カバレッジ機能について学習します。|-   [コード カバレッジを使用した、テストされるプロジェクトのコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
@@ -60,4 +67,4 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="see-also"></a>関連項目
 
-- [コード品質の向上](/visualstudio/test/improve-code-quality)
+- [コード品質の向上](../test/improve-code-quality.md)

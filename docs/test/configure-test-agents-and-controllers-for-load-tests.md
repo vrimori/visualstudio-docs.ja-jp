@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cbd654cfd05b06646346b8629b646e8450ccf081
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e2d32a6f2f8e03140ee5463f457201912c42026a
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967685"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302852"
 ---
 # <a name="configure-test-agents-and-test-controllers-for-running-load-tests"></a>ロード テストを実行するためのテスト エージェントおよびテスト コントローラーの構成
 
@@ -57,35 +57,35 @@ Visual Studio では、物理または仮想マシンを使用して、アプリ
 
 通常、1 つのテスト コントローラーは複数のテスト エージェントを管理しますが、1 つのエージェントは 1 つのコントローラーだけに関連付けることができます。 各テスト エージェントは、開発者チームで共有できます。 このアーキテクチャにより、テスト エージェントの数を簡単に増やすことができるため、より高い負荷の生成が可能になります。
 
-## <a name="test-agent-and-test-controller-interaction"></a>Test Agent とテスト コントローラーの対話
+## <a name="test-agent-and-test-controller-interaction"></a>テスト エージェントとテスト コントローラーの対話
 
 テスト コントローラーは、テスト エージェントのセットを管理してテストを実行します。 テスト コントローラーは、テストの開始、テストの停止、テスト エージェント ステータスの追跡、およびテスト結果の収集を行うためにテスト エージェントと通信します。
 
-### <a name="test-controller"></a>Test Controller
+### <a name="test-controller"></a>テスト コントローラー
 
 テスト コントローラーは、テストを実行するための一般的なアーキテクチャを提供し、ロード テストを実行するための特別な機能を備えています。 テスト コントローラーは、ロード テストをすべてのテスト エージェントに送信し、テスト エージェントがテストの初期化を完了するまで待機します。 すべてのテスト エージェントの準備が整うと、テスト コントローラーはテストを開始するためのメッセージをテスト エージェントに送信します。
 
-### <a name="test-agent"></a>Test Agent
+### <a name="test-agent"></a>テスト エージェント
 
 テスト エージェントは、新しいテストを開始するためのテスト コントローラーからの要求を待機するサービスとして実行されます。 テスト エージェント サービスが要求を受け取ると、テスト エージェント サービスはテストを実行するプロセスを開始します。 どのテスト エージェントも同じロード テストを実行します。
 
- テスト エージェントには管理者によってウェイトが割り当てられ、テスト エージェントのウェイトに従って負荷が分散されます。 たとえば、テスト エージェント 1 のウェイトが 30、テスト エージェント 2 のウェイトが 70、負荷が 1,000 ユーザーに設定されている場合、テスト エージェント 1 は 300 の仮想ユーザーをシミュレートし、テスト エージェント 2 は 700 の仮想ユーザーをシミュレートします。 「[Visual Studio でのテスト コントローラーおよびテスト エージェントの管理](../test/manage-test-controllers-and-test-agents.md)」を参照してください。
+ テスト エージェントには管理者によってウェイトが割り当てられ、テスト エージェントのウェイトに従って負荷が分散されます。 たとえば、テスト エージェント 1 のウェイトが 30、テスト エージェント 2 のウェイトが 70、負荷が 1,000 ユーザーに設定されている場合、テスト エージェント 1 は 300 の仮想ユーザーをシミュレートし、テスト エージェント 2 は 700 の仮想ユーザーをシミュレートします。 「[テスト コントローラーとテスト エージェントの管理](../test/manage-test-controllers-and-test-agents.md)」を参照してください。
 
  テスト エージェントは、テストのセットおよびシミュレーション パラメーターのセットを入力として受け取ります。 テストは、実行しているコンピューターに依存しないという概念が中心となっています。
 
-## <a name="test-controller-and-test-agent-connection-points"></a>テスト コントローラーと Test Agent のコネクション ポイント
+## <a name="test-controller-and-test-agent-connection-points"></a>テスト コントローラーとテスト エージェントのコネクション ポイント
 
 次の図は、テスト コントローラー、テスト エージェント、およびクライアント間のコネクション ポイントを示しています。 ここでは、着信および発信接続に使用されるポートに加え、これらのポートで使用されるセキュリティ要件の詳細についても説明します。
 
  ![テスト コントローラーとTest Agentのポートとセキュリティ](./media/test-controller-agent-firewall.png)
 
- 詳細については、「[Test Controller および Test Agent 用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)」を参照してください。
+ 詳細については、「[テスト コントローラーおよびテスト エージェント用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)」を参照してください。
 
 ## <a name="test-controller-and-agent-installation-information"></a>テスト コントローラーとテスト エージェントのインストールに関する情報
 
 テスト コントローラーおよびテスト エージェントのハードウェア要件とソフトウェア要件、インストール手順、およびパフォーマンスを最適化するための環境の構成方法の詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。
 
-## <a name="using-the-test-controller-and-test-agent-with-unit-tests"></a>テスト コントローラーと Test Agent を使用した単体テスト
+## <a name="use-the-test-controller-and-test-agent-with-unit-tests"></a>テスト コントローラーとテスト エージェントを使用した単体テスト
 
 テスト コントローラーと 1 つ以上のエージェントをインストールした後、ロード テストのテスト設定で、テスト コントローラーによるリモート実行を利用するかどうかを指定できます。 また、テストの設定では、エージェントに関連付けられたロールで使用するデータ診断アダプターを指定できます。
 

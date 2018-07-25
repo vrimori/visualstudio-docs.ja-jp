@@ -1,7 +1,7 @@
 ---
 title: C++ と Python の使用
 description: 混合モードのデバッグなど、Visual Studio を使用して Python 用の C++ 拡張機能を作成するチュートリアルです。
-ms.date: 04/03/2018
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c83a0bb7a8132b6daf0961f7f9d72f8b98782776
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fc885df4b85e89c85c366f033113678243fbfe0b
+ms.sourcegitcommit: 4ab232758d308bda742434beff8349a80c167890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31979270"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847818"
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -283,6 +283,8 @@ Python プロジェクトと C++ プロジェクトが同じソリューショ�
 
     [fast_tanh(x) for x in d] took 0.158 seconds
     ```
+
+    **[デバッグなしで開始]** コマンドが無効な場合、ソリューション エクスプローラーで Python プロジェクトを右クリックして、**[スタートアップ プロジェクトに設定]** を選択します。
 
 1. 違いがより顕著になるように `COUNT` 変数を増やしてみてください。 また、C++ モジュールのデバッグ ビルドの実行は、リリース ビルドよりも低速になります。これは、デバッグ ビルドが十分に最適化されず、さまざまなエラー チェックが含まれるためです。 これらの構成間を自由に切り替えて比較することができます。
 

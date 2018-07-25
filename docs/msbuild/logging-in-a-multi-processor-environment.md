@@ -13,23 +13,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dedf90c51ec2cd4f1864d5573925ed17a0d69b2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 864b60a7f2262803e9a25b967831c35202799cd5
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575379"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077579"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>マルチプロセッサ環境でのログ
 MSBuild では複数のプロセッサを使用できるため、プロジェクトのビルド時間が大幅に短縮されますが、同時にログの複雑性も高まります。 シングルプロセッサ環境であれば、logger は、イベント、メッセージ、警告、およびエラーを順序に従った予測可能な方法で処理できます。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 MSBuild には、マルチプロセッサ対応の新しい logger が用意されており、カスタム "転送 logger" を作成できます。  
   
-## <a name="logging-multiple-processor-builds"></a>マルチプロセッサ ビルドのログ  
+## <a name="log-multiple-processor-builds"></a>マルチプロセッサ ビルドのログ  
  1 つ以上のプロジェクトをマルチプロセッサ システムまたはマルチコア システムでビルドすると、すべてのプロジェクトの MSBuild ビルド イベントが同時に生成されます。 大量のイベント データが同時に、または誤った順序で logger に送られてくる可能性があります。 これにより、logger が過負荷となり、ビルド時間の増加や不正確な logger 出力をもたらすだけでなく、ビルドが破損することもあります。 これらの問題を解決するために、MSBuild の logger は順序が誤っているイベントを処理し、イベントとそのソースを関連付けます。  
   
  カスタム転送 logger を作成すると、ログの効率をさらに高めることができます。 カスタム転送 logger はフィルターの役割を果たし、ビルドを開始する前に監視の対象とするイベントを選択できます。 カスタム転送 logger を使用すると、不要なイベントが除外されるため、logger の過負荷、ログの煩雑化、ビルド時間の増加を防ぐことができます。  
   
 ### <a name="central-logging-model"></a>中央ログ モデル  
- マルチプロセッサ ビルドの場合、MSBuild では "中央ログ モデル" が使用されます。 中央ログ モデルでは、MSBuild.exe のインスタンスがプライマリ ビルド プロセスの役割を果たします。これを "中央ノード" といいます。 中央ノードには、MSBuild.exe のセカンダリ インスタンスがアタッチされます。これを "セカンダリ ノード" といいます。 中央ノードにアタッチされる ILogger ベースの logger を "中央 logger" と呼び、セカンダリ ノードにアタッチされる logger を "セカンダリ logger" と呼びます。  
+ マルチプロセッサ ビルドの場合、MSBuild では "中央ログ モデル" が使用されます。 中央ログ モデルでは、*MSBuild.exe* のインスタンスがプライマリ ビルド プロセスの役割を果たします。これを "中央ノード" といいます。 中央ノードには、*MSBuild.exe* のセカンダリ インスタンスがアタッチされます。これを "セカンダリ ノード" といいます。 中央ノードにアタッチされる ILogger ベースの logger を "中央 logger" と呼び、セカンダリ ノードにアタッチされる logger を "セカンダリ logger" と呼びます。  
   
  ビルドを開始すると、セカンダリ logger がイベント トラフィックを中央 logger にルーティングします。 イベントは複数のセカンダリ ノードで発生するため、イベント データは同時に中央ノードに到着しますが、インタリーブされます。 イベントとプロジェクト間の参照やイベントとターゲット間の参照を解決するために、イベント引数には追加のビルド イベント コンテキスト情報が含まれています。  
   
@@ -64,7 +64,7 @@ public interface IForwardingLogger: INodeLogger
 ### <a name="attaching-a-distributed-logger"></a>分散 logger のアタッチ  
  コマンド ラインでのビルドで分散 logger をアタッチするには、`/distributedlogger` (短縮形は `/dl`) スイッチを使用します。 logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 分散 logger をアタッチするコードの例を次に示します。  
   
-```  
+```cmd  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
 Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,  
 Culture=neutral  
@@ -72,6 +72,6 @@ Culture=neutral
   
  `/dl` スイッチでは、2 つの logger 名をアスタリスク (*) で区切っています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビルド ロガー](../msbuild/build-loggers.md)   
- [転送ロガーの作成](../msbuild/creating-forwarding-loggers.md)
+ [転送 logger の作成](../msbuild/creating-forwarding-loggers.md)

@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf40d5714810fd4beba9d5d75ffbffbf1895883
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6c8772bd6426632093bb23cc3094fe42ad433a8d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257814"
 ---
 # <a name="process-view---contention-data"></a>プロセス ビュー - 競合データ
 プロセス ビューには、プロファイリング実行中に実行されたプロセスとスレッドの競合データが表示されます。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 04/19/2018
 |**Name**|プロセスまたはスレッドの名前。|  
 |**ID (一意)**|プロファイラーによって生成される、プロセスまたはスレッドに固有の ID。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [プロセス ビュー](../profiling/process-view.md)

@@ -11,24 +11,24 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 8f28e451da90d9709eda1886a549819b4d46415f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 24002512ec891866839ad3bd33590c3dfe966e99
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948406"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978386"
 ---
 # <a name="how-to-create-multi-project-templates"></a>方法 : 複数プロジェクトのテンプレートを作成する
 
 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 複数プロジェクトのテンプレートに基づくプロジェクトが **[新しいプロジェクト]** ダイアログ ボックスで作成されると、テンプレート内のすべてのプロジェクトがソリューションに追加されます。
 
-複数プロジェクトのテンプレートには、2 つ以上のプロジェクト テンプレートと `ProjectGroup` 型のルート テンプレートが含まれます。
+複数プロジェクトのテンプレートには、2 つ以上のプロジェクト テンプレートと **ProjectGroup** 型のルート テンプレートが含まれます。
 
 複数プロジェクトのテンプレートは、1 つのプロジェクトのテンプレートとは動作が異なります。 これらには、次の固有の特性があります。
 
-- 複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、*vstemplate* ファイルの `ProjectTemplateLink` 要素の `ProjectName` 属性を使用して、各プロジェクトの名前を指定します。
+- 複数プロジェクトのテンプレートの個別のプロジェクトには、**[新しいプロジェクト]** ダイアログ ボックスで名前を割り当てることができません。 代わりに、*vstemplate* ファイルの **ProjectTemplateLink** 要素の **ProjectName** 属性を使用して、各プロジェクトの名前を指定します。
 
-- 複数プロジェクトのテンプレートには別の言語のプロジェクトを含めることができますが、テンプレート全体そのものは 1 つのカテゴリにのみ配置できます。 *vstemplate* ファイルの `ProjectType` 要素でテンプレートのカテゴリを指定します。
+- 複数プロジェクトのテンプレートには別の言語のプロジェクトを含めることができますが、テンプレート全体そのものは 1 つのカテゴリにのみ配置できます。 *vstemplate* ファイルの **ProjectType** 要素でテンプレートのカテゴリを指定します。
 
 複数プロジェクトのテンプレートは、次の項目を含み、*.zip* ファイルに圧縮する必要があります。
 
@@ -39,32 +39,32 @@ ms.locfileid: "31948406"
 たとえば、2 つのプロジェクトを含む複数プロジェクトのテンプレート *.zip* ファイルは、次のファイルとディレクトリを持つことが考えられます。
 
 - *MultiProjectTemplate.vstemplate*
-- *\Project1\Project1.vstemplate*
+- *\Project1\MyTemplate.vstemplate*
 - *\Project1\Project1.vbproj*
 - *\Project1\Class.vb*
-- *\Project2\Project2.vstemplate*
+- *\Project2\MyTemplate.vstemplate*
 - *\Project2\Project2.vbproj*
 - *\Project2\Class.vb*
 
 複数プロジェクトのテンプレートのルート *vstemplate* ファイルは、単一プロジェクトのテンプレートとは次の点が異なります。
 
-- `VSTemplate` 要素の `Type` 属性には `Project` の代わりに値 `ProjectGroup` が含まれます。 例:
+- **VSTemplate** 要素の **Type** 属性は、**Project** の代わりに **ProjectGroup** という値を持っています。 例:
 
     ```xml
     <VSTemplate Version="2.0.0" Type="ProjectGroup"
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- `TemplateContent` 要素には、含まれるプロジェクトの *vstemplate* ファイルへのパスを定義する 1 つ以上の `ProjectTemplateLink` 要素を持つ `ProjectCollection` 要素が含まれます。 例:
+- **TemplateContent** 要素には、含まれるプロジェクトの *vstemplate* ファイルへのパスを定義する 1 つ以上の **ProjectTemplateLink** 要素を持つ **ProjectCollection** 要素が含まれます。 例:
 
     ```xml
     <TemplateContent>
         <ProjectCollection>
             <ProjectTemplateLink>
-                Project1\Project1.vstemplate
+                Project1\MyTemplate.vstemplate
             </ProjectTemplateLink>
             <ProjectTemplateLink>
-                Project2\Project2.vstemplate
+                Project2\MyTemplate.vstemplate
             </ProjectTemplateLink>
         </ProjectCollection>
     </TemplateContent>
@@ -95,7 +95,7 @@ ms.locfileid: "31948406"
 
 1. ベース ディレクトリ内に、*.vstemplate* ファイル拡張子を持つ XML ファイルを作成します。 このファイルには、複数プロジェクトのテンプレートのメタデータが含まれます。 ファイルの構造については、この後の例をご覧ください。 プロジェクトごとに *vstemplate* ファイルの相対パスを指定してください。
 
-1. ベース ディレクトリを選び、右クリック メニューまたはコンテキスト メニューから、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選びます。
+1. ベース ディレクトリ内のすべてのファイルを選び、右クリック メニューまたはコンテキスト メニューから、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選びます。
 
    ファイルとフォルダーが *.zip* ファイルに圧縮されます。
 
@@ -105,10 +105,10 @@ ms.locfileid: "31948406"
 
 ## <a name="two-project-example"></a>2 つのプロジェクトの例
 
-基本的なマルチプロジェクトのルート *vstemplate* ファイルの例を以下に示します。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトがあります。 `ProjectTemplateLink` 要素の `ProjectName` 属性で、プロジェクトに適用する名前を指定します。
+基本的なマルチプロジェクトのルート *vstemplate* ファイルの例を以下に示します。 この例では、テンプレートに **My Windows Application** と **My Class Library** という 2 つのオブジェクトが含まれます。 **ProjectTemplateLink** 要素の **ProjectName** 属性で、プロジェクトに適用する名前を指定します。
 
 > [!TIP]
-> `ProjectName` 属性を指定しない場合、*vstemplate* ファイルの名前がプロジェクト名として使用されます。
+> **ProjectName** 属性を指定しない場合、*vstemplate* ファイルの名前がプロジェクト名として使用されます。
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -134,7 +134,7 @@ ms.locfileid: "31948406"
 
 ## <a name="example-with-solution-folders"></a>ソリューション フォルダーでの例
 
-この例では、`SolutionFolder` 要素を使用して、プロジェクトを `Math Classes` および `Graphics Classes` という 2 つのグループに分割します。 テンプレートには 4 つのプロジェクトがあり、その 2 つは各ソリューション フォルダーに配置されます。
+この例では、**SolutionFolder** 要素を使用して、プロジェクトを **Math Classes** と **Graphics Classes** という 2 つのグループに分割します。 テンプレートには 4 つのプロジェクトがあり、その 2 つは各ソリューション フォルダーに配置されます。
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"

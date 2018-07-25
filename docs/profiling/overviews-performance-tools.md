@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 709f9b62844a209450daa427efdb3333796828b8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 904ebf55e7920bfd79fec3afb502d59e5dc82a33
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254619"
 ---
 # <a name="overviews-performance-tools"></a>概要 (パフォーマンス ツール)
 このセクションでは、開発中のアプリケーションのパフォーマンス特性を測定するのに使用できる [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールの概念と用語の概要について説明します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/19/2018
  [インストルメンテーション データ値について](../profiling/understanding-instrumentation-data-values.md)  
  インストルメンテーション プロファイル方法を使用する場合に報告されるデータ値について説明します。  
   
- [メモリの割り当ておよびオブジェクトの有効期間のデータ値について](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
+ [メモリの割り当てとオブジェクトの有効期間のデータ値について](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
  .NET メモリ プロファイル方法を使用する場合に報告されるデータ値について説明します。  
   
  [リソース競合データ値について](../profiling/understanding-resource-contention-data-values.md)  
@@ -47,6 +48,6 @@ ms.lasthandoff: 04/19/2018
  [プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)  
  [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)] でのサンプリング データの収集およびセッション間のアプリケーションのプロファイリングをするのに必要な問題や手順について説明します。  
   
-## <a name="see-also"></a>参照  
- [はじめに](../profiling/getting-started-with-performance-tools.md)   
+## <a name="see-also"></a>関連項目  
+ [作業の開始](../profiling/getting-started-with-performance-tools.md)   
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)

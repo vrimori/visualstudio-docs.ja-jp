@@ -20,22 +20,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f685364bbcf69b8d4b91635cb42079f3f06e5311
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 83f8e5ad4522a47eaea978b14678fe134b4faa8e
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31571007"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081593"
 ---
 # <a name="msbuild-response-files"></a>MSBuild 応答ファイル
-応答 (.rsp) ファイルは、MSBuild.exe のコマンド ライン スイッチを含むテキスト ファイルです。 各スイッチを個別の行に記述することも、すべてのスイッチを 1 つの行に記述することもできます。 コメント行は **#** 記号で始まります。 **@** スイッチは、MSBuild.exe に別の応答ファイルを渡すために使用されます。  
+応答 (*.rsp*) ファイルは、*MSBuild.exe* のコマンド ライン スイッチを含むテキスト ファイルです。 各スイッチを個別の行に記述することも、すべてのスイッチを 1 つの行に記述することもできます。 コメント行は **#** 記号で始まります。 **@** スイッチは、*MSBuild.exe* に別の応答ファイルを渡すために使用されます。  
   
 ## <a name="msbuildrsp"></a>MSBuild.rsp
-自動応答ファイルは、プロジェクトをビルドする際に MSBuild.exe が自動的に使用する特別な .rsp ファイルです。 この MSBuild.rsp ファイルは、MSBuild.exe と同じディレクトリに配置する必要があります。それ以外の場合は検出されません。 このファイルを編集して、MSBuild.exe に既定のコマンド ライン スイッチを指定できます。 たとえば、プロジェクトをビルドする際に毎回同じロガーを使用する場合は、**/logger** スイッチを MSBuild.rsp に追加することで、プロジェクトがビルドされるたびに MSBuild.exe がそのロガーを使用するようになります。  
+自動応答ファイルは、プロジェクトをビルドする際に *MSBuild.exe* が自動的に使用する特別な *.rsp* ファイルです。 この *MSBuild.rsp* ファイルは、*MSBuild.exe* と同じディレクトリに配置する必要があります。それ以外の場合は検出されません。 このファイルを編集して、*MSBuild.exe* に既定のコマンド ライン スイッチを指定できます。 たとえば、プロジェクトをビルドする際に毎回同じロガーを使用する場合は、**/logger** スイッチを *MSBuild.rsp* に追加することで、プロジェクトがビルドされるたびに *MSBuild.exe* がそのロガーを使用するようになります。  
 
 ## <a name="directorybuildrsp"></a>Directory.Build.rsp
-バージョン 15.6 以降では、MSBuild は、プロジェクトの親ディレクトリで `Directory.Build.rsp` という名前のファイルを検索します。  これは、ソース コード リポジトリでコマンド ライン ビルド中に既定の引数を指定する場合に役立つことがあります。  ホスト型ビルドのコマンド ライン引数を指定する場合にも使用できます。
+バージョン 15.6 以降では、MSBuild は、プロジェクトの親ディレクトリで *Directory.Build.rsp* という名前のファイルを検索します。  これは、ソース コード リポジトリでコマンド ライン ビルド中に既定の引数を指定する場合に役立つことがあります。  ホスト型ビルドのコマンド ライン引数を指定する場合にも使用できます。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
- [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)
+ [コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)

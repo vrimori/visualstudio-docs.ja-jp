@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03a6bd0c570fb34fc5e1db139ccfa8d0d5d02ea4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bed3140653e586ee4fb4899e6eba2b83f97035b0
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31572505"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079097"
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 では、[ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を使用することにより、プロジェクト ファイルに項目を静的に宣言できます。 ただし、メタデータは、すべての項目に共通であっても項目単位でしか追加できません。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降には、この制限を克服する [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) という名前のプロジェクト要素が導入されました。 *ItemDefinitionGroup* を使用して一連の項目定義を定義すると、名前付きの項目の種類に含まれるすべての項目に既定のメタデータ値を追加できます。  
@@ -73,7 +73,7 @@ ms.locfileid: "31572505"
   
 -   環境変数  
   
--   グローバル プロパティ \(MSBuild.exe コマンド ラインで指定\)  
+-   グローバル プロパティ (*MSBuild.exe* コマンド ラインで指定)  
   
 -   予約済みのプロパティ  
   
@@ -91,7 +91,7 @@ ms.locfileid: "31572505"
   
 -   最後のメタデータ指定が優先されます。  
   
- 複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例:  
+複数の ItemDefinitionGroup がある場合、それ以降メタデータ指定を行うたびに、そのメタデータが前の定義に追加されます。 例:  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -107,9 +107,9 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- この例では、メタデータ "o" が "m" および "n" に追加されます。  
+この例では、メタデータ "o" が "m" および "n" に追加されます。  
   
- さらに、定義済みのメタデータ値も追加できます。 例:  
+さらに、定義済みのメタデータ値も追加できます。 例:  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -124,12 +124,12 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>    
 ```  
   
- この例では、メタデータ "m" \(m1\) の定義済みの値が新しい値 \(m2\) に追加されるため、最終的な値は "m1;m2" となります。  
+この例では、メタデータ "m" \(m1\) の定義済みの値が新しい値 \(m2\) に追加されるため、最終的な値は "m1;m2" となります。  
   
 > [!NOTE]
 >  これは同じ ItemDefinitionGroup でも発生します。  
   
- 定義済みのメタデータ指定をオーバーライドすると、最後の指定が優先されます。 次の例では、メタデータ "m" の最終的な値が "m1" から "m1a" に変わります。  
+定義済みのメタデータ指定をオーバーライドすると、最後の指定が優先されます。 次の例では、メタデータ "m" の最終的な値が "m1" から "m1a" に変わります。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -155,12 +155,12 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- この例では、"Configuration" プロパティの値が "Debug" である場合のみ項目 "i" の既定のメタデータ "m1" が追加されます。  
+この例では、"Configuration" プロパティの値が "Debug" である場合のみ項目 "i" の既定のメタデータ "m1" が追加されます。  
   
 > [!NOTE]
 >  条件では、ローカル メタデータ参照のみサポートされます。  
   
- 前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 例:  
+前の ItemDefinitionGroup に定義されたメタデータへの参照は、定義グループではなく項目に対してローカルです。 つまり、参照は項目をスコープとします。 例:  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -206,7 +206,7 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- 項目 "i" はメタデータ "m" を含んでいますが、その値は空です。  
+項目 "i" はメタデータ "m" を含んでいますが、その値は空です。  
   
 ## <a name="scope-of-metadata"></a>メタデータのスコープ  
  ItemDefinitionGroup は、それが定義されている定義済みプロパティおよびグローバル プロパティの全体をスコープとします。 ItemDefinitionGroup 内の既定のメタデータ定義は自己参照が可能です。 たとえば、次の例では簡単なメタデータ参照を使用しています。  
@@ -220,7 +220,7 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- 次のような修飾されたメタデータ参照も使用できます。  
+次のような修飾されたメタデータ参照も使用できます。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -231,7 +231,7 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- ただし、次のコードは無効です。  
+ただし、次のコードは無効です。  
   
 ```xml  
 <ItemDefinitionGroup>  
@@ -242,7 +242,7 @@ ms.locfileid: "31572505"
 </ItemDefinitionGroup>  
 ```  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 例:  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降では、ItemGroup も自己参照が可能です。 例:  
   
 ```xml  
 <ItemGroup>  
@@ -253,5 +253,5 @@ ms.locfileid: "31572505"
 </ItemGroup>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バッチ処理](../msbuild/msbuild-batching.md)

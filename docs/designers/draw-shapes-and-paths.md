@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95f3514b042b3fbe5ebbac5f79e00d235f9d8e88
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5f19cbb3a86a45d0c6732435e08ffae408631c57
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752347"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923950"
 ---
 # <a name="draw-shapes-and-paths"></a>図形とパスの描画
 XAML デザイナーでは、"*図形*" とはその名の示すとおりのものです。 たとえば、四角形、円、楕円などです。 *パス* は、より柔軟なバージョンの図形です。 図形の形状を変更したり、図形を結合して新しい図形を形成するといった操作ができます。
@@ -43,57 +43,57 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
  目的の図形をアートボードにドラッグします。 次に、図形にあるハンドルを使用して、図形の拡大縮小、回転、移動、または傾斜を行います。
 
- ![](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png)
+ ![Handles](../designers/media/84261e83-3091-4490-ab58-4218b188439e.png)
 
 ##  <a name="Path"></a> パスの描画
  パスは、直線と曲線が連結して一続きになったものです。 パスを使用すると、 **[アセット]** パネルでは使用できない面白い図形を作成できます。
 
  パスの描画には直線、ペン、または鉛筆を使用します。 これらのツールは **[ツール]** パネルにあります。
 
- ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png) ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png)
+ ![[ペン] ツール](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png) ![[ペン] ツールのオプション](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png)
 
 ### <a name="draw-a-straight-line"></a>直線の描画
- **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)または **[直線]** ツール ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png)を使用します。
+ **[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) または **[直線]** ツール ![直線ツール](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png) を使用します。
 
- **ペン ツールの使用** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)
+ **ペン ツールの使用** ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)
 
  アートボード上で 1 回クリックし、始点を定義します。次に、再度クリックして直線の終わりを定義します。
 
- **直線ツールの使用** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png)
+ **ペン ツールの使用** ![直線ツール](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png)
 
  アートボード上で、直線の始点からドラッグして、終点でマウス ボタンを放します。
 
 ### <a name="draw-a-curve"></a>曲線の描画
- **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)を使用します。
+ **[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用します。
 
  アートボード上で 1 回クリックして、直線の始点を定義してから、ポインターをクリックし、ドラッグして目的の曲線を作成します。
 
  パスを閉じる場合は、線上の最初の点をクリックします。
 
 ### <a name="change-the-shape-of-a-curve"></a>曲線のシェイプの変更
- **[個別選択]** ツール ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png)を使用します。
+ **[個別選択]** ツール ![個別選択ツール](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) を使用します。
 
  図形をクリックしてから、図形の任意のポイントをドラッグして曲線の形状を変更します。
 
 ### <a name="draw-a-free-form-path"></a>フリーハンドのパスの描画
- **[鉛筆]** ツール ![](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png)を使用します。
+ **[鉛筆]** ツール ![鉛筆ツール](../designers/media/509dc167-734f-46c9-b012-987ee63450cd.png) を使用します。
 
  アートボード上で、実際の鉛筆のように自由にパスを描画できます。
 
 ### <a name="remove-part-of-a-path"></a>パスの一部の削除
- **[個別選択]** ツール ![](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png)を使用します。
+ **[個別選択]** ツール ![個別選択ツール](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) を使用します。
 
  削除する部分を含むパスを選択して、 **[削除]** ボタンをクリックします。
 
 ### <a name="remove-a-point-in-a-path"></a>パス内のポイントの削除
- **[選択]** ツール  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png)および **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)を使用します。
+ **[選択]** ツール ![選択ツール](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) と **[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用します。
 
- **[選択]** ツール  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) を使用してパスを選択します。 次に、 **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用して、削除するポイントをクリックします。
+ **[選択]** ツール ![選択ツール](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) を使用してパスを選択します。 次に、**[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用して、削除するポイントをクリックします。
 
 ### <a name="add-a-point-to-a-path"></a>パスへのポイントの追加
- **[選択]** ツール  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png)および **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png)を使用します。
+ **[選択]** ツール ![選択ツール](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) と **[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用します。
 
- **[選択]** ツール  ![](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) を使用してパスを選択します。 **[ペン]** ツール ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用して、ポイントを追加するパス上の任意の場所をクリックします。
+ **[選択]** ツール ![選択ツール](../designers/media/2ff91340-477e-4efa-a0f7-af20851e4daa.png) を使用してパスを選択します。 **[ペン]** ツール ![ペン ツール](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png) を使用して、ポイントを追加するパス上の任意の場所をクリックします。
 
 ##  <a name="Convert"></a> 図形のパスへの変換
  パスを変更するのと同じ方法で図形を変更するには、図形をパスに変換します。
@@ -103,13 +103,13 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 ##  <a name="Combine"></a> パスの結合
  パスと図形を結合して 1 つのパスにすることができます。
 
- ![](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
+ ![パスの結合](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
 |||||
 |-|-|-|-|
-|![](../designers/media/b1_1.png)|結合前の 2 つの図形|![](../designers/media/b1_4.png)|交差|
-|![](../designers/media/b1_2.png)|合算|![](../designers/media/b1_5.png)|重複部分を除外|
-|![](../designers/media/b1_3.png)|除算|![](../designers/media/b1_6.png)|減算|
+|![結合前の 2 つの図形](../designers/media/b1_1.png)|結合前の 2 つの図形|![交差](../designers/media/b1_4.png)|交差|
+|![重複部分を除外](../designers/media/b1_2.png)|合算|![](../designers/media/b1_5.png)|重複部分を除外|
+|![減算](../designers/media/b1_3.png)|除算|![](../designers/media/b1_6.png)|減算|
 
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: パスを結合する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195)。
 
@@ -118,14 +118,14 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
  複合パスは、作成後はいつでも分離できます。
 
- ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
+ ![複合パスを分離する](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: 複合パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q)。
 
 ##  <a name="Clipping"></a> クリッピング パスの作成
  クリッピング パスは、別のオブジェクトに適用するパスまたは図形です。クリッピング パスの外側のオブジェクトがマスクされて非表示になります。
 
- ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
+ ![クリッピング パス](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
  **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: クリッピング パスを作成する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232)。
 

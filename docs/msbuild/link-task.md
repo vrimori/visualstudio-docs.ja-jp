@@ -32,18 +32,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 25cea2311043f50ec08937f72d883e9334df2f81
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c06e9a92eb6b6df82e4f45790b877286e6c52725
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575898"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081710"
 ---
 # <a name="link-task"></a>Link タスク
-Visual C++ リンカー ツール (link.exe) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (.exe) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
+Visual C++ リンカー ツール (*link.exe*) をラップします。 リンカー ツールは、COFF (Common Object File Format) オブジェクト ファイルとライブラリをリンクし、実行可能ファイル (*.exe*) やダイナミック リンク ライブラリ (DLL) を生成します。 詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
- **Link** タスクのパラメーターの説明を次の表に示します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
+ 次には、**Link** タスクのパラメーターを説明します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
   
 -   **AdditionalDependencies**  
   
@@ -67,13 +67,13 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      マニフェスト ファイルの `dependency` セクションに置かれる属性を指定します。  
   
-     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイト上の「パブリッシャー構成ファイル」も参照してください。  
+     詳細については、「[/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)](/cpp/build/reference/manifestdependency-specify-manifest-dependencies)」を参照してください。 「[Publisher configuration files](https://docs.microsoft.com/en-us/windows/desktop/SbsCs/publisher-configuration-files)」(パブリッシャー構成ファイル) も参照してください。  
   
 -   **AdditionalOptions**  
   
      省略可能な **String** 型のパラメーターです。  
   
-     コマンド ラインで指定するリンカー オプションのリストです。 たとえば、**"***/option1 /option2 /option#*" のような形式です。 他の **Link** タスク パラメーターでは表されないリンカー オプションを指定する場合は、このパラメーターを使用します。  
+     コマンド ラインで指定するリンカー オプションのリストです。 例: /\<option1> /\<option2> /\<option#> 他の **Link** タスク パラメーターでは表されないリンカー オプションを指定する場合は、このパラメーターを使用します。  
   
      詳細については、「[リンカー オプション](/cpp/build/reference/linker-options)」を参照してください。  
   
@@ -147,7 +147,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **ForceSafeILImage** - **/CLRIMAGETYPE:SAFE**  
   
-     詳細については、「[/CLRIMAGETYPE (CLR イメージのタイプの指定)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image)」を参照してください。  
+    詳細については、「[/CLRIMAGETYPE (CLR イメージのタイプの指定)](/cpp/build/reference/clrimagetype-specify-type-of-clr-image)」を参照してください。  
   
 -   **CLRSupportLastError**  
   
@@ -163,7 +163,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **SystemDlls** - **/CLRSupportLastError:SYSTEMDLL**  
   
-     詳細については、「[/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls)」を参照してください。  
+    詳細については、「[/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)](/cpp/build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls)」を参照してください。  
   
 -   **CLRThreadAttribute**  
   
@@ -179,15 +179,15 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **STAThreadingAttribute** - **/CLRTHREADATTRIBUTE:STA**  
   
-     詳細については、「[/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute)」を参照してください。  
+    詳細については、「[/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)](/cpp/build/reference/clrthreadattribute-set-clr-thread-attribute)」を参照してください。  
   
 -   **CLRUnmanagedCodeCheck**  
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     マネージ コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
+     マネージド コードからネイティブ DLL への、リンカーによって生成された P/Invoke 呼び出しに対して、**SuppressUnmanagedCodeSecurityAttribute** を適用するかどうかを指定します。  
   
-     詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](/cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute)」を参照してください。  
+    詳細については、「[/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](/cpp/build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute)」を参照してください。  
   
 -   **CreateHotPatchableImage**  
   
@@ -205,7 +205,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **ItaniumImage** - **/FUNCTIONPADMIN:16**  
   
-     詳細については、「[/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)](/cpp/build/reference/functionpadmin-create-hotpatchable-image)」を参照してください。  
+    詳細については、「[/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)](/cpp/build/reference/functionpadmin-create-hotpatchable-image)」を参照してください。  
   
 -   **DataExecutionPrevention**  
   
@@ -247,7 +247,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **WDM** - **/DRIVER:WDM**  
   
-     詳細については、「[/DRIVER (Windows NT カーネル モード ドライバー)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver)」を参照してください。  
+    詳細については、「[/DRIVER (Windows NT カーネル モード ドライバー)](/cpp/build/reference/driver-windows-nt-kernel-mode-driver)」を参照してください。  
   
 -   **EmbedManagedResourceFile**  
   
@@ -255,7 +255,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      リソース ファイルをアセンブリに埋め込みます。 必要なリソース ファイル名を指定します。 必要に応じて、論理名 (リソースの読み込みに使用される) および **PRIVATE** オプション (リソース ファイルがプライベートであることをアセンブリ マニフェストで示す) を指定します。  
   
-     詳細については、「[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](/cpp/build/reference/assemblyresource-embed-a-managed-resource)」を参照してください。  
+     詳細については、「[/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](/cpp/build/reference/assemblyresource-embed-a-managed-resource)」を参照してください。  
   
 -   **EnableCOMDATFolding**  
   
@@ -277,7 +277,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     .exe ファイルまたは DLL の開始アドレスとしてエントリ ポイント関数を指定します。 パラメーター値として関数名を指定します。  
+     *.exe* ファイルまたは DLL の開始アドレスとしてエントリ ポイント関数を指定します。 パラメーター値として関数名を指定します。  
   
      詳細については、「[/ENTRY (エントリ ポイント シンボル)](/cpp/build/reference/entry-entry-point-symbol)」を参照してください。  
   
@@ -293,7 +293,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     未定義のシンボルが参照された場合や、シンボルが複数回定義された場合でも、有効な .exe ファイルまたは DLL を作成するようリンカーを設定します。  
+     未定義のシンボルが参照された場合や、シンボルが複数回定義された場合でも、有効な *.exe* ファイルまたは DLL を作成するようリンカーを設定します。  
   
      次のいずれかの値を指定します。各値はコマンド ライン オプションに対応しています。  
   
@@ -303,7 +303,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **UndefinedSymbolOnly** - **/FORCE:UNRESOLVED**  
   
-     詳細については、「[/FORCE (ファイルを強制的に出力)](/cpp/build/reference/force-force-file-output)」を参照してください。  
+    詳細については、「[/FORCE (ファイルを強制的に出力)](/cpp/build/reference/force-force-file-output)」を参照してください。  
   
 -   **ForceSymbolReferences**  
   
@@ -325,7 +325,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     `true` の場合は、.exe ファイルまたは DLL のデバッグ情報を生成します。  
+     `true` の場合は、*.exe* ファイルまたは DLL のデバッグ情報を生成します。  
   
      詳細については、「[/DEBUG (デバッグ情報の生成)](/cpp/build/reference/debug-generate-debug-info)」を参照してください。  
   
@@ -341,7 +341,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     `true` の場合は、*マップ ファイル*を作成します。 マップ ファイルのファイル名拡張子は、.map です。  
+     `true` の場合は、*マップ ファイル*を作成します。 マップ ファイルのファイル名拡張子は、*.map* です。  
   
      詳細については、「[/MAP (マップ ファイルの生成)](/cpp/build/reference/map-generate-mapfile)」を参照してください。  
   
@@ -373,7 +373,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     `true` の場合は、ソース コード内の IDL 属性を .idl ファイルに処理しないことを指定します。  
+     `true` の場合は、ソース コード内の IDL 属性を *.idl* ファイルに処理しないことを指定します。  
   
      詳細については、「[/IGNOREIDL (属性を MIDL に挿入しない)](/cpp/build/reference/ignoreidl-don-t-process-attributes-into-midl)」を参照してください。  
   
@@ -455,7 +455,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **SendErrorReport** - **/ERRORREPORT:SEND**  
   
-     詳細については、「[/ERRORREPORT (内部リンカー エラーの報告)](/cpp/build/reference/errorreport-report-internal-linker-errors)」を参照してください。  
+    詳細については、「[/ERRORREPORT (内部リンカー エラーの報告)](/cpp/build/reference/errorreport-report-internal-linker-errors)」を参照してください。  
   
 -   **LinkIncremental**  
   
@@ -501,7 +501,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
          \- **/LTCG:PGUpdate**  
   
-     詳細については、「[/LTCG (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation)」を参照してください。  
+    詳細については、「[/LTCG (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation)」を参照してください。  
   
 -   **ManifestFile**  
   
@@ -529,7 +529,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     .idl ファイルのファイル名とファイル名拡張子を指定します。  
+     *.idl* ファイルのファイル名とファイル名拡張子を指定します。  
   
      詳細については、「[/IDLOUT (MIDL 出力ファイルの指定)](/cpp/build/reference/idlout-name-midl-output-files)」を参照してください。  
   
@@ -617,7 +617,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     `true` の場合は、リンクされたイメージをバインドしないことを Bind.exe に指示します。  
+     `true` の場合は、リンクされたイメージをバインドしないことを *Bind.exe* に指示します。  
   
      詳細については、「[/ALLOWBIND (DLL をバインドしない)](/cpp/build/reference/allowbind-prevent-dll-binding)」を参照してください。  
   
@@ -633,7 +633,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     実行プログラムに関する情報を保持するために使用される .pgd ファイルの名前を指定します。  
+     実行プログラムに関する情報を保持するために使用される *.pgd* ファイルの名前を指定します。  
   
      詳細については、「[/PGD (ガイド付き最適化のプロファイル用のデータベースの指定)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations)」を参照してください。  
   
@@ -671,7 +671,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **Boolean** 型のパラメーターです。  
   
-     `true` の場合は、.exe ファイルのヘッダー内にチェックサムを設定します。  
+     `true` の場合は、*.exe* ファイルのヘッダー内にチェックサムを設定します。  
   
      詳細については、「[/RELEASE (チェックサムの設定)](/cpp/build/reference/release-set-the-checksum)」を参照してください。  
   
@@ -697,7 +697,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **LinkVerboseCLR** - **/VERBOSE:CLR**  
   
-     詳細については、「[/VERBOSE (進行状況メッセージの出力)](/cpp/build/reference/verbose-print-progress-messages)」を参照してください。  
+    詳細については、「[/VERBOSE (進行状況メッセージの出力)](/cpp/build/reference/verbose-print-progress-messages)」を参照してください。  
   
 -   **Sources**  
   
@@ -709,7 +709,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     セクションの属性を指定します。 これは、セクションの .obj ファイルがコンパイルされるときに設定された属性をオーバーライドします。  
+     セクションの属性を指定します。 これは、セクションの *.obj* ファイルがコンパイルされるときに設定された属性をオーバーライドします。  
   
      詳細については、「[/SECTION (セクション属性の指定)](/cpp/build/reference/section-specify-section-attributes)」を参照してください。  
   
@@ -765,7 +765,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **POSIX** - **/SUBSYSTEM:POSIX**  
   
-     詳細については、「[/SUBSYSTEM (サブシステムの指定)](/cpp/build/reference/subsystem-specify-subsystem)」を参照してください。  
+    詳細については、「[/SUBSYSTEM (サブシステムの指定)](/cpp/build/reference/subsystem-specify-subsystem)」を参照してください。  
   
 -   **SupportNobindOfDelayLoadedDLL**  
   
@@ -839,7 +839,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **MachineX86** - **/MACHINE:X86**  
   
-     詳細については、「[/MACHINE (ターゲット プラットフォームの指定)](/cpp/build/reference/machine-specify-target-platform)」を参照してください。  
+    詳細については、「[/MACHINE (ターゲット プラットフォームの指定)](/cpp/build/reference/machine-specify-target-platform)」を参照してください。  
   
 -   **TerminalServerAware**  
   
@@ -875,9 +875,9 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     .tlb ファイルのファイル名とファイル名拡張子を指定します。 ファイル名、またはパスとファイル名を指定します。  
+     *.tlb* ファイルのファイル名とファイル名拡張子を指定します。 ファイル名、またはパスとファイル名を指定します。  
   
-     詳細については、「[/TLBOUT (.TLB ファイル名の指定)](/cpp/build/reference/tlbout-name-dot-tlb-file)」を参照してください。  
+     詳細については、「[/TLBOUT (.tlb ファイル名の指定)](/cpp/build/reference/tlbout-name-dot-tlb-file)」を参照してください。  
   
 -   **TypeLibraryResourceID**  
   
@@ -901,7 +901,7 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
     -   **RequireAdministrator** - `level='requireAdministrator'`  
   
-     詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `level` 引数を参照してください。  
+    詳細については、「[/MANIFESTUAC (UAC 情報をマニフェストに組み込む)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)」の `level` 引数を参照してください。  
   
 -   **UACUIAccess**  
   
@@ -921,9 +921,9 @@ Visual C++ リンカー ツール (link.exe) をラップします。 リンカ�
   
      省略可能な **String** 型のパラメーターです。  
   
-     .exe または .dll ファイルのヘッダーにバージョン番号を入れます。 "`major[.minor]`" を指定します。 `major` および `minor` 引数には、0 から 65535 までの範囲の 10 進数を指定します。  
+     *.exe* または *.dll* ファイルのヘッダーにバージョン番号を入れます。 "`major[.minor]`" を指定します。 `major` および `minor` 引数には、0 から 65535 までの範囲の 10 進数を指定します。  
   
      詳細については、「[/VERSION (バージョン情報)](/cpp/build/reference/version-version-information)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

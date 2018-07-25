@@ -16,14 +16,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fbcd319ac2a2a4a1a327388c22a57d28515a2247
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d0bf92b01828764652cd75de648b1def01bb722c
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844083"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>方法: パフォーマンス セッションを手動で作成する
-パフォーマンス セッションは手動でも作成できます。 この場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクトを開く必要はありません。 詳細については、「[Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)」(パフォーマンス セッションの構成) をご覧ください。  
+パフォーマンス セッションは手動でも作成できます。 この場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクトを開く必要はありません。 詳細については、[パフォーマンス セッションの構成](../profiling/configuring-performance-sessions.md)に関する記事を参照してください。  
   
 ### <a name="to-manually-create-a-performance-session"></a>パフォーマンス セッションを手動で作成するには  
   
@@ -37,6 +38,6 @@ ms.lasthandoff: 04/19/2018
   
      新しいバイナリが追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス エクスプローラー](../profiling/performance-explorer.md)   
  [はじめに](../profiling/getting-started-with-performance-tools.md)

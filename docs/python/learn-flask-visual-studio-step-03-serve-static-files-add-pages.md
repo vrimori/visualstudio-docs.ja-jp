@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 384905370a16cbdcd9b4c9165f079bcbdf71a250
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: dbdcf2222aab4b70ba9817792b0d72d4dadf5802
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752153"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089803"
 ---
-# <a name="tutorial-step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>チュートリアル手順 3: 静的ファイルを提供し、ページを追加して、テンプレートの継承を使用する
+# <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
 **前の手順: [ビューおよびページ テンプレートを使用して Flask アプリを作成する](learn-flask-visual-studio-step-02-create-app.md)**
 
@@ -283,8 +283,9 @@ Flask のテンプレート システム (既定では Jinja) では、複数の
 > [!div class="nextstepaction"]
 > [完全な Flask Web プロジェクト テンプレートを使用する](learn-flask-visual-studio-step-04-full-flask-project-template.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
+- [Azure App Service への Web アプリの展開](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - 制御フローなど、Jinja テンプレートの他の機能については、[Jinja Template Designer のドキュメント](http://jinja.pocoo.org/docs/2.10/templates) (jinja.pocoo.org) をご覧ください
 - `url_for` の使用方法について詳しくは、Flask アプリケーション オブジェクトのドキュメント (flask.pocoo.org) で [url_for](http://flask.pocoo.org/docs/1.0/api/?highlight=url_for#flask.url_for) をご覧ください
 - GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00b26b89232b0a0c1c01c6e3c5fe5cbca8cdb3eb
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 98530a790963d1c7fc60742dda4bb16e14a28ab4
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238161"
 ---
 # <a name="markprofile"></a>MarkProfile
-`MarkProfile` メソッドは、.vsp ファイルにプロファイル マークを挿入します。 `MarkProfile` 関数を含むスレッドのプロファイル実行は、挿入されるマークについてオンにしておく必要があります。  
+`MarkProfile` メソッドは、.*vsp* ファイルにプロファイル マークを挿入します。 `MarkProfile` 関数を含むスレッドのプロファイル実行は、挿入されるマークについてオンにしておく必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,9 +47,9 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 |MARK_OK|成功した場合は MARK_OK が返されます。|  
   
 ## <a name="remarks"></a>コメント  
- MarkProfile 関数を含むスレッドにプロファイルが実行される場合、コードが実行されるたびに .vsp ファイルにマーク値が挿入されます。 MarkProfile は複数回呼び出すことができます。  
+ MarkProfile 関数を含むスレッドにプロファイルが実行される場合、コードが実行されるたびに .*vsp* ファイルにマーク値が挿入されます。 MarkProfile は複数回呼び出すことができます。  
   
- プロファイル マークは、スコープ内でグローバルです。 たとえば、あるスレッドに挿入したプロファイルマークを、.vsp ファイル内の任意のスレッドで使用し、データ セグメントの開始または終了をマークできます。  
+ プロファイル マークは、スコープ内でグローバルです。 たとえば、あるスレッドに挿入したプロファイルマークを、.*vsp* ファイル内の任意のスレッドで使用し、データ セグメントの開始または終了をマークできます。  
   
  Mark コマンドまたは API 関数 (CommentMarkAtProfile、CommentMarkProfile、または MarkProfile) でマークとコメントが挿入されたとき、マークのプロファイル関数を含むスレッドでは、プロファイル状態をオンにする必要があります。  
   
@@ -56,12 +57,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI MarkProfile( long lMarker );
 >  MarkProfile メソッドは、インストルメンテーション プロファイリングでのみ使用してください。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : VSPerf.h で宣言  
+ ヘッダー : *VSPerf.h* で宣言  
   
- インポート ライブラリ : VSPerf.lib  
+ インポート ライブラリ : *VSPerf.lib*  
   
 ## <a name="example"></a>例  
  次のコードは、MarkProfile 関数の使用例を示しています。  
@@ -98,5 +99,5 @@ void ExerciseMarkProfile()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

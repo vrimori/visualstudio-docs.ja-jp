@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 855bd7af4372f5216abab3d6ddd45ec8f7809baa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c38d7ba577beedce8651bb291700a6c071ee7b48
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31573116"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303017"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>標準ツールセット構成とカスタム ツールセット構成
 MSBuild ツールセットには、アプリケーション プロジェクトのビルドに使用できるタスク、ターゲット、およびツールへの参照が含まれています。 MSBuild には標準ツールセットが用意されていますが、カスタム ツールセットを作成することもできます。 ツールセットを指定する方法については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」を参照してください。  
@@ -33,18 +33,18 @@ MSBuild ツールセットには、アプリケーション プロジェクト�
 |4.0|*Windows インストール パス*\Microsoft.NET\Framework\v4.0.30319\|  
 |15.0|*Visual Studio インストール パス*\MSBuild\15.0\bin|  
   
- `ToolsVersion` の値によって、Visual Studio で生成されたプロジェクトが使用するツールセットが決まります。 Visual Studio 2017 では、既定値は "15.0" です (プロジェクト ファイルにどのバージョンが指定されている場合でも)。ただし、コマンド プロンプトで **/toolsversion** スイッチを使って、この属性を上書きできます。 この属性に関する情報と `ToolsVersion` を指定するその他の方法については、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
+ `ToolsVersion` の値によって、Visual Studio で生成されたプロジェクトが使用するツールセットが決まります。 Visual Studio 2017 では、既定値は "15.0" です (プロジェクト ファイルにどのバージョンが指定されている場合でも)。ただし、コマンド プロンプトで **/toolsversion** スイッチを使って、この属性をオーバーライドできます。 この属性に関する情報と `ToolsVersion` を指定するその他の方法については、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
   
  Visual Studio 2017 では、MSBuild のパスにレジストリ キーは使われません。 Visual Studio 2017 でインストールされる 15.0 より前のバージョンの MSBuild では、以下のレジストリ キーで MSBuild.exe のインストール パスが指定されます。  
   
 |レジストリ キー|キー名|文字列キー値|  
 |------------------|--------------|----------------------|  
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\2.0\|MSBuildToolsPath|.NET Framework 2.0 インストール パス|  
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\|MSBuildToolsPath|.NET Framework 3.5 インストール パス|  
-|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\|MSBuildToolsPath|.NET Framework 4 インストール パス|  
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\  |MSBuildToolsPath|.NET Framework 2.0 インストール パス|  
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\  |MSBuildToolsPath|.NET Framework 3.5 インストール パス|  
+|\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\  |MSBuildToolsPath|.NET Framework 4 インストール パス|  
   
 ### <a name="sub-toolsets"></a>サブツールセット  
- 前の表のレジストリ キーにサブキーがある場合、MSBuild はそのサブキーを使って、親ツールセットのパスを上書きするサブツールセットを決定します。 たとえば、次のようなサブキーがあります。  
+ 前の表のレジストリ キーにサブキーがある場合、MSBuild はそのサブキーを使って、親ツールセットのパスをオーバーライドするサブツールセットを決定します。 たとえば、次のようなサブキーがあります。  
   
  \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\12.0\12.0  
   
@@ -58,7 +58,7 @@ MSBuild ツールセットには、アプリケーション プロジェクト�
 ## <a name="custom-toolset-definitions"></a>カスタム ツールセット定義  
  標準ツールセットがビルド要件に適合しない場合は、カスタム ツールセットを作成できます。 たとえば、ビルド ラボ シナリオで、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトをビルドするために個別のシステムが必要になる場合があります。 カスタム ツールセットを使用することにより、プロジェクトの作成時や MSBuild.exe の実行時に `ToolsVersion` 属性にカスタム値を割り当てることができます。 これを行うことで、`$(MSBuildToolsPath)` プロパティを使用して、該当のディレクトリから .targets ファイルをインポートできます。また、カスタム ツールセットを使用するすべてのプロジェクトで利用できる独自のカスタム ツールセット プロパティを定義することもできます。  
   
- カスタム ツールセットは、MSBuild.exe の構成ファイルに指定します。ただし、MSBuild エンジンをホストするカスタム ツールを使用している場合は、そのカスタム ツールの構成ファイルに指定します。 たとえば、ToolsVersion 15.0 の既定の動作を上書きする場合、MSBuild.exe の構成ファイルには次のようなツールセット定義を含めることができます。  
+ カスタム ツールセットは、MSBuild.exe の構成ファイルに指定します。ただし、MSBuild エンジンをホストするカスタム ツールを使用している場合は、そのカスタム ツールの構成ファイルに指定します。 たとえば、ToolsVersion 15.0 の既定の動作をオーバーライドする場合、MSBuild.exe の構成ファイルには次のようなツールセット定義を含めることができます。  
   
 ```xml  
 <msbuildToolsets default="15.0">  

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e5f1d4dec10970770202e685860381cdec15608
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 754968b95ce1332991ddc921138741a1d9235015
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31577354"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36756926"
 ---
 # <a name="output-element-msbuild"></a>Output 要素 (MSBuild)
 タスクの出力値をアイテムとプロパティに格納します。  
@@ -37,7 +37,7 @@ ms.locfileid: "31577354"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml  
 <Output TaskParameter="Parameter"  
     PropertyName="PropertyName"   
     Condition = "'String A' == 'String B'" />  
@@ -52,7 +52,7 @@ ms.locfileid: "31577354"
 |---------------|-----------------|  
 |`TaskParameter`|必須の属性です。<br /><br /> タスクの出力パラメーターの名前です。|  
 |`PropertyName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るプロパティです。 プロジェクトは、`$(`*PropertyName*`)` 構文でプロパティを参照できます。 このプロパティ名は、新しいプロパティ名でも、プロジェクトで既に定義されている名前でもかまいません。<br /><br /> `ItemName` が使われている場合、この属性を使うことはできません。|  
-|`ItemName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るアイテムです。 プロジェクトは、`@(`*ItemName*`)` 構文でアイテムを参照できます。 アイテム名は、新しいアイテム名でも、プロジェクトで既に定義されている名前でもかまいません。<br /><br /> `PropertyName` が使われている場合、この属性を使うことはできません。|  
+|`ItemName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るアイテムです。 プロジェクトは、`@(`*ItemName*`)` 構文でアイテムを参照できます。 アイテム名は、新しいアイテム名でも、プロジェクトで既に定義されている名前でもかまいません。 項目の名前が既存の項目の場合、出力パラメーターの値は既存の項目に追加されます。 <br /><br /> `PropertyName` が使われている場合、この属性を使うことはできません。|  
 |`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
 
 ### <a name="child-elements"></a>子要素  

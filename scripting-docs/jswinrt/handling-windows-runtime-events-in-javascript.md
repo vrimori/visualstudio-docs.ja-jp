@@ -17,18 +17,18 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e963472ee51f2439b50807a49425dcd7f6d8443a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f7e5780a2462e8980c22c474ae6236c87aee599b
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24571432"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302812"
 ---
 # <a name="handling-windows-runtime-events-in-javascript"></a>JavaScript での Windows ランタイム イベントの処理
-JavaScript での Windows ランタイム イベントは、C++ や .NET Framework とは異なる方法で表現されます。 これらのイベントは、クラス プロパティではなく、クラスの `addEventListener` および `removeEventListener` メソッドに渡される文字列識別子として表現されます。 たとえば、`Geolocator.addEventListener` メソッドに "positionchanged" という文字列を渡すことで、[Geolocator.PositionChanged](http://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.geolocation.geolocator.positionchanged.aspx) イベントのイベント ハンドラーを追加できます。  
+JavaScript での Windows ランタイム イベントは、C++ や .NET Framework とは異なる方法で表現されます。 これらのイベントは、クラス プロパティではなく、クラスの `addEventListener` および `removeEventListener` メソッドに渡される (小文字の) 文字列識別子として表現されます。 たとえば、`Geolocator.addEventListener` メソッドに "positionchanged" という文字列を渡すことで、[Geolocator.PositionChanged](https://msdn.microsoft.com/library/windows/apps/xaml/windows.devices.geolocation.geolocator.positionchanged.aspx) イベントのイベント ハンドラーを追加できます。  
   
 ```JavaScript  
-var locator =  new Windows.Devices.Geolocation.Geolocator();  
+var locator = new Windows.Devices.Geolocation.Geolocator();  
 locator.addEventListener(  
     "positionchanged",   
      function (ev) {  
@@ -38,27 +38,26 @@ locator.addEventListener(
   
  `locator.onpositionchanged` プロパティを設定することもできます。  
   
-```  
+```JavaScript  
 locator.onpositionchanged =    
     function (ev) {  
         console.log("Got event");  
     };  
 ```  
   
- Windows ランタイム イベント引数は、JavaScript では単一のイベント オブジェクトとして表現されます。 以下のイベント ハンドラー メソッドの例では、`ev` パラメーターは、送信元 (ターゲット プロパティ) とその他のイベント引数の両方を格納するオブジェクトです。 イベント引数とは、各イベントについてドキュメント化される引数のことです。  
+.NET/C++ と JavaScript のもう 1 つの違いは、イベント ハンドラーによって取得されるパラメーターの数です。 .NET/C++ の場合、ハンドラーはパラメーターを 2 つ取得します。イベント送信元とイベント データです。 JavaScript の場合、2 つのパラメーターは 1 つの `Event` オブジェクトとしてバンドルされます。 次の例では、`ev` パラメーターにイベントの送信元 (`target` プロパティ) とイベント データ プロパティ (ここでは、`position`) の両方が含まれています。 イベント データ プロパティとは、各イベントについてドキュメント化される引数のことです。
   
 ```JavaScript  
 function (ev) {  
-    console.log("Target: " + ev.target);  
+    console.log("Sender: " + ev.target);  
     console.log("Position: " +  
         ev.position.latitude + "," +  
         ev.position.longitude);  
 };  
-  
 ```  
   
 > [!IMPORTANT]
 >  Windows ランタイムの機能は Internet Explorer で実行されるアプリでは使用できません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [JavaScript での Windows ランタイムの使用](../jswinrt/using-the-windows-runtime-in-javascript.md)

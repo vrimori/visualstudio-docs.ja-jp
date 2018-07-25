@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 045059c1ab0c33026369b065649c4d4b82a480df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89c5727b8bc294ae28f48a6e1fc3194b258b9555
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844431"
 ---
 # <a name="manage-channels"></a>チャネルの管理
 同時実行ビジュアライザーの**スレッド ビュー**では、プロセスのチャネルを整理して、特定のパターンを調べることができます。 チャネルを並べ替えしたり、上下に移動したり、非表示/表示を切り替えることができます。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/19/2018
  選択したチャネルを一覧の一番上または一番下に移動することにより、特定のパターンを確認することができ、他のチャネルを確認できたときに一部のチャネルを除外することができます。  
   
 ## <a name="hide-selected-channels"></a>選択したチャネルを非表示にする  
- チャネルを非表示にするには、このコントロールを選択します。 たとえば、あるスレッドがマネージ プロセスの有効期間中に 100% の同期を示している場合は、他のスレッドを分析するときにはそれを非表示にすることができます。  
+ チャネルを非表示にするには、このコントロールを選択します。 たとえば、あるスレッドがマネージド プロセスの有効期間中に 100% の同期を示している場合は、他のスレッドを分析するときにはそれを非表示にすることができます。  
   
 > [!NOTE]
 >  スレッドを非表示にすると、アクティブな凡例およびプロファイル レポートに示される計算時間からも除外されます。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="group-markers-by-thread"></a>スレッド別にマーカーをグループ化  
  トレースにマーカー イベントが含まれている場合は、このコマンドを使用して、それらのマーカー イベントを生成したスレッドの下にマーカーのチャネルをグループ化することができます。  ディスクのチャネルはチャネルの一覧の先頭に移動し、GPU チャネルは、一番下に移動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ズーム コントロール (スレッド ビュー)](../profiling/zoom-control-threads-view.md)   
  [測定モード オン/オフ](../profiling/measure-mode-on-off.md)   
  [スレッド ビュー](../profiling/threads-view-parallel-performance.md)

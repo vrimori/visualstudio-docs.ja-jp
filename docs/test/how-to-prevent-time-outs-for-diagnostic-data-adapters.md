@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 093b937f7a957ef1d3a912c31d57a03f1a433ab0
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: fca48c45af5ec93519e1688ec54677c233d2fe17
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844239"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178320"
 ---
 # <a name="how-to-prevent-time-outs-for-diagnostic-data-adapters"></a>方法: 診断データ アダプターがタイムアウトしないようにする
 
@@ -23,17 +23,17 @@ ms.locfileid: "34844239"
 
 -   テスト コントローラー コンピューターでテスト コントローラー サービスが実行されていない。 サービスの再起動が必要な場合もあります。 テスト コントローラーを決定および管理する方法の詳細については、「[Visual Studio でのテスト コントローラーおよびテスト エージェントの管理](../test/manage-test-controllers-and-test-agents.md)」を参照してください。
 
--   リモート コンピューターのデータを収集する場合、ファイアウォールによって Microsoft Test Manager がブロックされる可能性がある。 Microsoft Test Manager を実行するコンピューターは、テスト コントローラーからの受信接続を受け入れる必要があります。 Microsoft Test Manager がファイアウォールのブロックのためにコントローラーからのメッセージを受信できない場合、タイムアウトが発生します。 Microsoft Test Manager を実行するコンピューター上のファイアウォール設定を確認する必要があります。 ファイアウォール設定の詳細については、[Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=184980)を参照してください。
+-   リモート コンピューターのデータを収集する場合、ファイアウォールによって Microsoft Test Manager がブロックされる可能性がある。 Microsoft Test Manager を実行するコンピューターは、テスト コントローラーからの受信接続を受け入れる必要があります。 Microsoft Test Manager がファイアウォールのブロックのためにコントローラーからのメッセージを受信できない場合、タイムアウトが発生します。 Microsoft Test Manager を実行するコンピューター上のファイアウォール設定を確認する必要があります。
 
 -   テスト コントローラーが Microsoft Test Manager を実行するコンピューターの名前を解決できない。 これは、DNS によって指定されたこのコンピューターのアドレスが誤っている場合に発生します。 この問題を解決するには、ネットワーク管理者に問い合わせることが必要な場合があります。
 
- 大量のデータを収集する必要がある長いテストを実行する場合、データの収集がタイムアウトすることがあります。この問題を解決するには、次の手順を実行します。
+大量のデータを収集する必要がある長いテストを実行する場合、データの収集がタイムアウトすることがあります。この問題を解決するには、次の手順を実行します。
 
- Microsoft Test Manager の構成ファイルまたはタイムアウトするテスト エージェントの構成ファイルを更新することで、タイムアウトの設定値を増やすことができます。
+Microsoft Test Manager の構成ファイルまたはタイムアウトするテスト エージェントの構成ファイルを更新することで、タイムアウトの設定値を増やすことができます。
 
- Microsoft Test Manager では、構成ファイルは **mtm.exe.config** と呼ばれます。この構成ファイルは、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* ディレクトリにあります。
+Microsoft Test Manager では、構成ファイルは **mtm.exe.config** と呼ばれます。この構成ファイルは、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* ディレクトリにあります。
 
- テスト エージェントを更新するには、テスト エージェント コンピューター上で次の構成ファイルを更新する必要があります。 これらのファイルは、テスト エージェント コンピューターの同じ *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* ディレクトリに格納されています。
+テスト エージェントを更新するには、テスト エージェント コンピューター上で次の構成ファイルを更新する必要があります。 これらのファイルは、テスト エージェント コンピューターの同じ *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* ディレクトリに格納されています。
 
 -   QTAgent.exe.config
 
@@ -43,9 +43,9 @@ ms.locfileid: "34844239"
 
 -   QTDCAgent32.exe.config
 
- 手動テストを実行して環境からデータを収集する場合、バグが発生するかテスト ケースが完了すると、診断データ アダプターによって収集されたすべてのデータは、手動テストを実行しているコンピューターに転送されます。 大量のデータを収集したか、ネットワーク接続速度が遅い場合、転送時間は既定値の 60 秒より長くなる場合があります。 たとえば、多数のプロセスの IntelliTrace イベントと呼び出し情報を収集するように IntelliTrace アダプターを構成した場合、このデータの転送時間は既定のタイムアウトを超過する可能性があります。この値を増やすには、次の手順に従って **mtm.exe.config** を更新します。
+手動テストを実行して環境からデータを収集する場合、バグが発生するかテスト ケースが完了すると、診断データ アダプターによって収集されたすべてのデータは、手動テストを実行しているコンピューターに転送されます。 大量のデータを収集したか、ネットワーク接続速度が遅い場合、転送時間は既定値の 60 秒より長くなる場合があります。 たとえば、多数のプロセスの IntelliTrace イベントと呼び出し情報を収集するように IntelliTrace アダプターを構成した場合、このデータの転送時間は既定のタイムアウトを超過する可能性があります。この値を増やすには、次の手順に従って **mtm.exe.config** を更新します。
 
- テスト ランナーの動作がタイムアウトした場合やテスト エージェントがタイムアウトした場合、エラー メッセージが表示されます。テスト エージェントのエラー メッセージには、どのテスト エージェント コンピューターがタイムアウトしたかに関する情報が含まれます。出力されたエラー メッセージに応じて、次の手順を使用して構成ファイルを更新します。
+テスト ランナーの動作がタイムアウトした場合やテスト エージェントがタイムアウトした場合、エラー メッセージが表示されます。テスト エージェントのエラー メッセージには、どのテスト エージェント コンピューターがタイムアウトしたかに関する情報が含まれます。出力されたエラー メッセージに応じて、次の手順を使用して構成ファイルを更新します。
 
 ## <a name="to-increase-the-time-outs-for-your-diagnostic-data-adapters"></a>診断データ アダプターのタイムアウトの設定値を増やすには
 

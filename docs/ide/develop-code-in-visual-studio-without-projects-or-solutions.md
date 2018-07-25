@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f80072e3ea2e6e9d870c6ca3b2b61400624b744b
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: a784015c57aee41488b1d8988166bea1cf7ca874
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746028"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117122"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する
 
@@ -89,7 +89,7 @@ MSBuild ベース コードベースでは、**[開始]** ボタンのドロッ�
 
 コードベースに Python または JavaScript コードが含まれている場合、*.json* ファイルを構成する必要はありませんが、対応するワークロードをインストールする必要が生じます。 また、次のようにスタートアップ スクリプトを構成する必要があります。
 
-1. **[ツール]** > **[ツールと機能を取得...]** を選択するか、または Visual Studio を複製して Visual Studio インストーラーを実行することで、[Node.js 開発](https://www.visualstudio.com/vs/node-js/)または [Python 開発](https://www.visualstudio.com/vs/python/)のワークロードをインストールします。
+1. **[ツール]** > **[ツールと機能を取得]** を選択するか、または Visual Studio を複製して Visual Studio インストーラーを実行して、[Node.js 開発](https://visualstudio.microsoft.com/vs/node-js/)または [Python 開発](https://visualstudio.microsoft.com/vs/python/)のワークロードをインストールします。
 
    ![Node.js および Python 開発のワークロード](media/python_nodejs_workloads.png)
 

@@ -19,15 +19,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e07594e9b90fabd8e0a2bcc66dd0920db0973aa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c6843e9287fd53b17329b70d331d0f37b87917f7
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815926"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
 
-**パフォーマンス ウィザード** を使用して、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのパフォーマンス データを収集できます。 Visual Studio で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、Visual Studio IDE で開かれていない [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web サイトをプロファイリングすることもできます。
+**パフォーマンス ウィザード** を使用して、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのパフォーマンス データを収集できます。 Visual Studio で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、Visual Studio IDE で開かれていない [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web サイトをプロファイリングすることもできます。
 
 > [!NOTE]
 > **パフォーマンス ウィザード** を使用して、階層の相互作用(TIP) データ、JScript パフォーマンス データ、または両方を追加してプロファイル データを収集することができます。 TIP オプションは、サーバー側のプロセスからデータを収集します。 JScript プロファイリングは、ローカルまたはリモートの Web サイトで実行されているスクリプトからデータを収集します。 ほとんどの場合、1 つのオプションのみを選択する必要があります。
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/19/2018
 
 8. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのパフォーマンス セッションが作成され、ブラウザーで Web サイトが起動します。 プロファイリングする機能を実行してからブラウザーを閉じます。
 
-     プロファイラーで、データ ファイルが生成され、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。
+     プロファイラーで、データ ファイルが生成され、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] メイン ウィンドウにデータの概要ビューが表示されます。
 
 ## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを開かずに Web サイトをプロファイリングする
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/19/2018
 
     - 階層の相互作用を収集するには、 **[階層の相互作用のプロファイルを有効にする]** チェック ボックスをオンにします。
 
-    - Web ページで実行されている JavaScript からデータを収集するには、 **[JavaScript のプロファイル]** チェック ボックスをオンにします。
+    - Web ページで実行されている JavaScript からデータを収集するには、**[JavaScript のプロファイル]** チェック ボックスをオンにします。
 
 7. **[次へ]** をクリックします。
 

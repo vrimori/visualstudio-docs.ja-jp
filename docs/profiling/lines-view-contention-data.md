@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b01c8aa176fe92cb4309990693063dcd27cf15a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ae52ad47e18a0572a883c50f43689bdaae60234d
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843852"
 ---
 # <a name="lines-view---contention-data"></a>行ビュー - 競合データ
 競合データの行ビューには、プロファイルを実行してサンプルを収集するときに実行したステートメントのパフォーマンス データが表示されます。 ソース ファイルでは、1 つのステートメントを複数の行にわたって記述することも、複数のステートメントを 1 つの行に含めることもできます。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/19/2018
 |**ソース開始行**|ステートメントが開始されるソース ファイル内の行番号。|  
 |**ソース終了行**|ステートメントが終了するソース ファイル内の行番号。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [行ビュー](../profiling/lines-view.md)   
  [行ビュー - サンプリング](../profiling/lines-view-dotnet-memory-sampling-data.md)   

@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 322e0bdc98751cda670206667cc8580bd498f682
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3fc6a1dff49c754c13fb8b94e03f956b3081f075
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752196"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232320"
 ---
-# <a name="tutorial-step-5-use-the-polls-flask-web-project-template"></a>チュートリアル手順 5: Polls Flask Web プロジェクト テンプレートを使用する
+# <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
 **前の手順: [完全な Flask Web プロジェクト テンプレートを使用する](learn-flask-visual-studio-step-04-full-flask-project-template.md)**
 
@@ -78,35 +78,35 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 このアプリのデータ モデルは、`models/__init__.py` で Poll と Choice の名前で定義されている Python クラスです。 Poll は質問を表し、Choice インスタンスのコレクションはそれに対する使用可能な回答を表します。 Poll では、(すべての選択に対する) 投票の合計数と、ビューの生成に使用される統計を計算するメソッドも保持されます。
 
-    ```python
-    class Poll(object):
-        """A poll object for use in the application views and repository."""
-        def __init__(self, key=u'', text=u''):
-            """Initializes the poll."""
-            self.key = key
-            self.text = text
-            self.choices = []
-            self.total_votes = None
+```python
+class Poll(object):
+    """A poll object for use in the application views and repository."""
+    def __init__(self, key=u'', text=u''):
+        """Initializes the poll."""
+        self.key = key
+        self.text = text
+        self.choices = []
+        self.total_votes = None
 
-        def calculate_stats(self):
-            """Calculates some statistics for use in the application views."""
-            total = 0
-            for choice in self.choices:
-                total += choice.votes
-            for choice in self.choices:
-                choice.votes_percentage = choice.votes / float(total) * 100 \
-                    if total > 0 else 0
-            self.total_votes = total
+    def calculate_stats(self):
+        """Calculates some statistics for use in the application views."""
+        total = 0
+        for choice in self.choices:
+            total += choice.votes
+        for choice in self.choices:
+            choice.votes_percentage = choice.votes / float(total) * 100 \
+                if total > 0 else 0
+        self.total_votes = total
 
-    class Choice(object):
-        """A poll choice object for use in the application views and repository."""
-        def __init__(self, key=u'', text=u'', votes=0):
-            """Initializes the poll choice."""
-            self.key = key
-            self.text = text
-            self.votes = votes
-            self.votes_percentage = None
-    ```
+class Choice(object):
+    """A poll choice object for use in the application views and repository."""
+    def __init__(self, key=u'', text=u'', votes=0):
+        """Initializes the poll choice."""
+        self.key = key
+        self.text = text
+        self.votes = votes
+        self.votes_percentage = None
+```
 
 これらのデータ モデルは、アプリのビューをさまざまな種類のバッキング データ ストア (次の手順で説明します) に対して動作できるようにする汎用の抽象化です。
 
@@ -189,32 +189,32 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 最初は、選択したデータ ストアにはポーリングが含まれていないため、アプリのホーム ページに "No polls available" (使用可能なポーリングがありません) というメッセージが **[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンとともに表示されます。 ただし、ボタンを選択するとビューが変更され、使用可能なポーリングが表示されます。 この切り替えは、`templates\index.html` で条件タグを使用して行われます (簡略化のため、一部の空白行は省略されています)。
 
-    ```html
-    {% extends "layout.html" %}
-    {% block content %}
-    <h2>{{title}}.</h2>
+```html
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{title}}.</h2>
 
-    {% if polls %}
-    <table class="table table-hover">
-        <tbody>
-            {% for poll in polls %}
-            <tr>
-                <td>
-                    <a href="/poll/{{poll.key}}">{{poll.text}}</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p>No polls available.</p>
-    <br />
-    <form action="/seed" method="post">
-        <button class="btn btn-primary" type="submit">Create Sample Polls</button>
-    </form>
-    {% endif %}
-    {% endblock %}
-    ```
+{% if polls %}
+<table class="table table-hover">
+    <tbody>
+        {% for poll in polls %}
+        <tr>
+            <td>
+                <a href="/poll/{{poll.key}}">{{poll.text}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No polls available.</p>
+<br />
+<form action="/seed" method="post">
+    <button class="btn btn-primary" type="submit">Create Sample Polls</button>
+</form>
+{% endif %}
+{% endblock %}
+```
 
 テンプレート内の `polls` 変数は `repository.get_polls` への呼び出しに由来しています。これは、データ ストアが初期化されるまで何も返しません。
 

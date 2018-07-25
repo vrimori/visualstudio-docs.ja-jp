@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: f0315027d6b0a3b57acc7b1651f0788d0b30bba1
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: da826928ff44d306c72f330b8221361579840d6a
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752080"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36235315"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -38,7 +38,7 @@ Visual Studio には次の C++ テスト フレームワークが含まれてお
 
 - **Boost.Test** は、**C++ によるデスクトップ開発**ワークロードの既定のコンポーネントとして含まれます。 **テスト エクスプローラー**とは統合されていますが、現時点ではプロジェクト テンプレートがないので、手動で構成する必要があります。 詳細については、「[How to: use Boost.Test in Visual Studio](how-to-use-boost-test-for-cpp.md)」(Visual Studio で C++ 用の Boost.Test を使用する方法) をご覧ください。
 
-- **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
+- **CTest** のサポートは、**C++ によるデスクトップ開発**ワークロードの一部である [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-visual-cpp) コンポーネントによって組み込まれています。 ただし、CTest と**テスト エクスプローラー**の統合はまだ完全ではありません。 詳細については、「[How to: use CTest in Visual Studio](how-to-use-ctest-for-cpp.md)」(Visual Studio で C++ 用の CTest を使用する方法) をご覧ください。
 
 **Visual Studio 2015 以前**
 
@@ -69,7 +69,7 @@ Google Test アダプターと Boost.Test アダプターは、それぞれ、Vi
 ### <a name="write-test-methods"></a>テスト メソッドを作成する
 
 > [!NOTE]
-> ここでは、C/C++ の Microsoft 単体テスト フレームワークの構文を示します。 詳細については、「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)」をご覧ください。 Google Test については、[Google Test の入門](https://github.com/google/googletest/blob/master/googletest/docs/Primer.md)に関するドキュメントをご覧ください。 Boost.Test については、「[Boost Test Library: The Unit Test Framework](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)」(Boost Test ライブラリ: 単体テスト フレームワーク) をご覧ください。
+> ここでは、C/C++ の Microsoft 単体テスト フレームワークの構文を示します。 詳細については、「[Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)」をご覧ください。 Google Test については、[Google Test の入門](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)に関するドキュメントをご覧ください。 Boost.Test については、「[Boost Test Library: The Unit Test Framework](http://www.boost.org/doc/libs/1_46_0/libs/test/doc/html/utf.html)」(Boost Test ライブラリ: 単体テスト フレームワーク) をご覧ください。
 
 テスト プロジェクトの .cpp ファイルには、テスト コード記述方法の例として、スタブ クラスとメソッドの定義が含まれます。 シグネチャで TEST_CLASS および TEST_METHOD マクロが使われていることに注意してください。これにより、[テスト エクスプローラー] ウィンドウでメソッドを見つけることができます。
 

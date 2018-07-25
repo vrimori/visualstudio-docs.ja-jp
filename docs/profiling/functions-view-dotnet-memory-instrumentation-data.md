@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71ea82ea9588315748a9c79eb9abd7b06eace680
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d48393a2d160e3691069a4b5f86dd814b63d935d
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237683"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
 インストルメンテーション メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数がリストされます。 関数行では、その関数の割り当てのサイズと数、およびタイミング データが報告されます。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/19/2018
 |**最大アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|この関数の呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   

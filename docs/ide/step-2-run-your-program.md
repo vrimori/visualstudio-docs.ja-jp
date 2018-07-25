@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e0430b398fa13d565de075d1f74e856587a2762
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 04c3eb73949ab84548c6eb58e7cf4389dbeb8fc4
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749285"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179061"
 ---
 # <a name="step-2-run-your-program"></a>手順 2: プログラムの実行
 新しいソリューションを作成すると、実際には実行するプログラムが作成されます。 まだ実行される処理は少なく、タイトル バーに **Form1** と表示された空のウィンドウを表示するだけのプログラムですが、 もうおわかりのように実行することはできます。
@@ -55,7 +55,7 @@ ms.locfileid: "34749285"
     -   **[Form1]** ウィンドウの上隅にある **X** ボタンを選択します。
 
     > [!NOTE]
-    >  IDE 内からプログラムを実行する作業は、通常はプログラムでバグ (エラー) を特定して修正することが目的であるためデバッグと呼ばれます。 このプログラムは小さくて、実際には何も実行しませんが、それでも実際のプログラムです。 同じ手順で他のプログラムを実行し、デバッグします。 デバッグについて詳しくは、「[デバッガーの基本事項](../debugger/debugger-basics.md)」をご覧ください。
+    >  IDE 内からプログラムを実行する作業は、通常はプログラムでバグ (エラー) を特定して修正することが目的であるためデバッグと呼ばれます。 このプログラムは小さくて、実際には何も実行しませんが、それでも実際のプログラムです。 同じ手順で他のプログラムを実行し、デバッグします。 デバッグについて詳しくは、「[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)」をご覧ください。
 
 ## <a name="to-continue-or-review"></a>続行または確認するには
 

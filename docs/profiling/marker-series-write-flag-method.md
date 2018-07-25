@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce6d809794903c0247218ce3a082112d04dd020e
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: faff304831f8f2ffabed925d2ab3dfc5d64c18af
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237459"
 ---
 # <a name="markerserieswriteflag-method"></a>marker_series::write_flag メソッド
 同時実行ビジュアライザーのトレース ファイルにフラグを書き込みます。  
@@ -59,9 +60,9 @@ void write_flag(
  カテゴリ。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** cvmarkersobj.h  
+ **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [marker_series クラス](../profiling/marker-series-class.md)

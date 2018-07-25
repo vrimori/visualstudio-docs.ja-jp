@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 50b066020b04ce39dffa5c7267b89b889cf986e9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 93aec7e83ba5af9bab8da351624df861b46e475c
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31976388"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282107"
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Microsoft Fakes におけるコード生成、コンパイル、および名前付け規則
 
@@ -32,9 +32,9 @@ ms.locfileid: "31976388"
 
 ### <a name="configure-code-generation-of-stubs"></a>スタブのコード生成を構成する
 
-スタブ型の生成は、.fakes ファイル拡張子を持つ XML ファイルで構成されます。 Fakes フレームワークは、カスタム MSBuild タスクによってビルド処理で統合され、ビルド時にそれらのファイルを検出します。 Fakes コード ジェネレーターは、スタブ型をアセンブリにコンパイルし、参照をプロジェクトに追加します。
+スタブ型の生成は、*.fakes* ファイル拡張子を持つ XML ファイルで構成されます。 Fakes フレームワークは、カスタム MSBuild タスクによってビルド処理で統合され、ビルド時にそれらのファイルを検出します。 Fakes コード ジェネレーターは、スタブ型をアセンブリにコンパイルし、参照をプロジェクトに追加します。
 
-次の例に、FileSystem.dll で定義されたスタブ型を示します。
+次の例に、*FileSystem.dll* で定義されたスタブ型を示します。
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -44,9 +44,9 @@ ms.locfileid: "31976388"
 
 ### <a name="type-filtering"></a>型のフィルター処理
 
-.fakes ファイルでフィルターを設定して、スタブされる型を制限できます。 StubGeneration 要素の下に Clear、Add、Remove 要素を無制限に追加して、選択された型の一覧を作成できます。
+*.fakes* ファイルでフィルターを設定して、スタブされる型を制限できます。 StubGeneration 要素の下に Clear、Add、Remove 要素を無制限に追加して、選択された型の一覧を作成できます。
 
-たとえば、次の .fakes ファイルは、System 名前空間と System.IO 名前空間の下に型のスタブを生成しますが、System では "Handle" が含まれる型は除外します。
+たとえば、次の *.fakes* ファイルは、System 名前空間と System.IO 名前空間の下に型のスタブを生成しますが、System では "Handle" が含まれる型は除外します。
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -86,7 +86,7 @@ ms.locfileid: "31976388"
 
 ### <a name="stub-concrete-classes-and-virtual-methods"></a>具象クラスと仮想メソッドをスタブする
 
-既定では、スタブ型はすべての非シール クラスに対して生成されます。 .fakes 構成ファイルで指定して、スタブ型を抽象クラスに制限することができます。
+既定では、スタブ型はすべての非シール クラスに対して生成されます。 *.fakes* 構成ファイルで指定して、スタブ型を抽象クラスに制限することができます。
 
 ```xml
 <Fakes xmlns="http://schemas.microsoft.com/fakes/2011/">
@@ -136,7 +136,7 @@ Fakes フレームワークは、生成されるすべてのアセンブリに�
 [assembly: InternalsVisibleTo("FileSystem.Fakes, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e92decb949446f688ab9f6973436c535bf50acd1fd580495aae3f875aa4e4f663ca77908c63b7f0996977cb98fcfdb35e05aa2c842002703cad835473caac5ef14107e3a7fae01120a96558785f48319f66daabc862872b2c53f5ac11fa335c0165e202b4c011334c7bc8f4c4e570cf255190f4e3e2cbc9137ca57cb687947bc")]
 ```
 
-**.fakes** ファイルの `Fakes`\\`Compilation` 要素に、`KeyFile` 属性値として代替キーを含む **.snk** ファイルへの完全パスを指定して、shim が適用されたアセンブリ用に作成したキーなどの別の公開キーを Fakes アセンブリに指定することができます。 例:
+*.fakes* ファイルの `Fakes`\\`Compilation` 要素に、`KeyFile` 属性値として代替キーを含む *.snk* ファイルへの完全パスを指定して、shim が適用されたアセンブリ用に作成したキーなどの別の公開キーを Fakes アセンブリに指定することができます。 例:
 
 ```xml
 <-- FileSystem.Fakes.fakes -->
@@ -145,7 +145,7 @@ Fakes フレームワークは、生成されるすべてのアセンブリに�
 </Fakes>
 ```
 
-shim が適用されたアセンブリ コード内の Fakes アセンブリの InternalVisibleTo 属性の 2 番目のパラメーターとして、代替 **.snk** ファイルの公開キーを使う必要があります。
+shim が適用されたアセンブリ コード内の Fakes アセンブリの InternalVisibleTo 属性の 2 番目のパラメーターとして、代替 *.snk* ファイルの公開キーを使う必要があります。
 
 ```csharp
 // FileSystem\AssemblyInfo.cs
@@ -163,11 +163,11 @@ Fakes アセンブリのコンパイルで、ビルド時間が非常に長く�
 
 単体テスト プロジェクトから、プロジェクト フォルダーの FakesAssemblies の下に置かれたコンパイル済みの Fakes アセンブリに参照を追加します。
 
-1.  テスト プロジェクトに一致する .NET ランタイム バージョンを含む新しいクラス ライブラリを作成します。 これに Fakes.Prebuild という名前を付けます。 プロジェクトから不要な class1.cs ファイルを削除します。
+1.  テスト プロジェクトに一致する .NET ランタイム バージョンを含む新しいクラス ライブラリを作成します。 これに Fakes.Prebuild という名前を付けます。 プロジェクトから不要な *class1.cs* ファイルを削除します。
 
 2.  Fakes が必要なすべてのシステムおよびサードパーティのアセンブリへの参照を追加します。
 
-3.  アセンブリごとに .fakes ファイルを追加し、ビルドします。
+3.  アセンブリごとに *.fakes* ファイルを追加し、ビルドします。
 
 4.  テスト プロジェクトから
 
@@ -175,17 +175,17 @@ Fakes アセンブリのコンパイルで、ビルド時間が非常に長く�
 
          *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll*
 
-    -   Fakes を作成したアセンブリごとに、プロジェクトの Fakes.Prebuild\FakesAssemblies フォルダーの対応する DLL ファイルへの参照を追加します。
+    -   Fakes を作成したアセンブリごとに、プロジェクトの *Fakes.Prebuild\FakesAssemblies* フォルダーの対応する DLL ファイルへの参照を追加します。
 
 ### <a name="avoid-assembly-name-clashing"></a>アセンブリ名の競合を回避する
 
-チーム ビルド環境では、すべてのビルド出力が 1 つのディレクトリにマージされます。 複数のプロジェクトが Fakes を使用している場合は、異なるバージョンの Fakes アセンブリが互いにオーバーライドすることがあります。 たとえば、.NET Framework 2.0 からの TestProject1 による mscorlib.dll の Fakes 処理と .NET Framework 4 の TestProject2 による mscorlib.dll の Fakes 処理は、いずれも mscorlib.Fakes.dll Fakes アセンブリを生成します。
+チーム ビルド環境では、すべてのビルド出力が 1 つのディレクトリにマージされます。 複数のプロジェクトが Fakes を使用している場合は、異なるバージョンの Fakes アセンブリが互いにオーバーライドすることがあります。 たとえば、.NET Framework 2.0 からの TestProject1 による *mscorlib.dll* の Fakes 処理と .NET Framework 4 の TestProject2 による *mscorlib.dll* の Fakes 処理は、いずれも *mscorlib.Fakes.dll* Fakes アセンブリを生成します。
 
- この問題を回避するには、.fakes ファイルを追加するとき、Fakes 処理で非プロジェクト参照用にバージョンで修飾された Fakes アセンブリ名を自動的に作成する必要があります。 バージョンで修飾された Fakes アセンブリ名の場合は、Fakes アセンブリ名を作成するときにバージョン番号が埋め込まれます。
+ この問題を回避するには、*.fakes* ファイルを追加するとき、Fakes 処理で非プロジェクト参照用にバージョンで修飾された Fakes アセンブリ名を自動的に作成する必要があります。 バージョンで修飾された Fakes アセンブリ名の場合は、Fakes アセンブリ名を作成するときにバージョン番号が埋め込まれます。
 
  アセンブリ MyAssembly とバージョン 1.2.3.4 の場合、Fakes アセンブリ名は MyAssembly.1.2.3.4.Fakes です。
 
- .fakes の Assembly 要素の Version 属性を編集して、このバージョンを変更または削除できます。
+ *.fakes* の Assembly 要素の Version 属性を編集して、このバージョンを変更または削除できます。
 
 ```xml
 attribute of the Assembly element in the .fakes:

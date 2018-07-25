@@ -10,19 +10,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0687b4f56906aeca0866f8d5d6ad7d329bb84df6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f2f9d47107d8a5e0fb4c10e058c2fc4c7ca3ed5e
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844470"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>方法: パフォーマンス データ ファイル名のオプションを設定する
 
-既定では、次の構文を使用してプロファイル データ (.vsp) ファイルを保存します。
+既定では、次の構文を使用してプロファイル データ (.*vsp*) ファイルを保存します。
 
 *Path\VSP-File\YYMMDD(N)* **.vsp**
 
-いずれの名前付けパラメーターも、パフォーマンス セッションのプロパティ ダイアログ ボックスの [全般] ページで変更できます。
+いずれの名前付けパラメーターも、パフォーマンス セッションのプロパティ ダイアログ ボックスの **[全般]** ページで変更できます。
 
 |||
 |-|-|

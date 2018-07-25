@@ -20,30 +20,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b80d43a291f5afaf9be34ad5b7f1f7a474ba93e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 870661c8c28a164b2156009e1327e03cabfcfa48
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574208"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077637"
 ---
 # <a name="lc-task"></a>LC タスク
-LC.exe をラップします。LC.exe は .licx ファイルから .license ファイルを生成します。 LC.exe の詳細については、「[Lc.exe (ライセンス コンパイラ)](/dotnet/framework/tools/lc-exe-license-compiler)」を参照してください。  
+*LC.exe* をラップします。LC.exe は *.licx* ファイルから *.license* ファイルを生成します。 *LC.exe* の詳細については、「[Lc.exe (ライセンス コンパイラ)](/dotnet/framework/tools/lc-exe-license-compiler)」を参照してください。  
   
 ## <a name="parameters"></a>パラメーター  
  `LC` タスクのパラメーターの説明を次の表に示します。  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`LicenseTarget`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> .licenses ファイルを生成する実行可能ファイルを指定します。|  
+|`LicenseTarget`|必須の <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> *.licenses* ファイルを生成する実行可能ファイルを指定します。|  
 |`NoLogo`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> Microsoft 著作権情報を表示しません。|  
-|`OutputDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力 .licenses ファイルを格納するディレクトリを指定します。|  
-|`OutputLicense`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> .licenses ファイルの名前を指定します。 名前を指定しなかった場合には、.licx ファイルの名前が使用され、.licenses ファイルは、.licx ファイルが格納されているディレクトリに作成されます。|  
-|`ReferencedAssemblies`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> .license ファイルの生成時に読み込む参照コンポーネントを指定します。|  
-|`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> resgen.exe などの SDK ツールのパスを指定します。|  
-|`Sources`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> .licenses ファイルに組み込むライセンス付きコンポーネントを格納するアイテムを指定します。 詳細については、「[Lc.exe (ライセンス コンパイラ)](/dotnet/framework/tools/lc-exe-license-compiler)」にある `/complist` スイッチの説明を参照してください。|  
+|`OutputDirectory`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力 *.licenses* ファイルを配置するディレクトリを指定します。|  
+|`OutputLicense`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> *.licenses* ファイルの名前を指定します。 名前を指定しなかった場合は、*.licx* ファイルの名前が使用され、*.licenses* ファイルは、*.licx* ファイルが含まれているディレクトリに配置されます。|  
+|`ReferencedAssemblies`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> *.license* ファイルの生成時に読み込む参照コンポーネントを指定します。|  
+|`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> *resgen.exe* などの SDK ツールのパスを指定します。|  
+|`Sources`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> *.licenses* ファイルに組み込むライセンス付きコンポーネントを格納するアイテムを指定します。 詳細については、「[Lc.exe (ライセンス コンパイラ)](/dotnet/framework/tools/lc-exe-license-compiler)」にある `/complist` スイッチの説明を参照してください。|  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  `LC` タスクを使用してライセンスをコンパイルする例を次に示します。  
@@ -68,6 +68,6 @@ LC.exe をラップします。LC.exe は .licx ファイルから .license フ�
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

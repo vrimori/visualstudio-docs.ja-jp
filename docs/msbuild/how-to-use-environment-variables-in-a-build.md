@@ -14,21 +14,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33156719cab40490b63ec945bf9c9600b3a92bda
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c2f5afe7f58e85b1ddfc5671b635d4df7fad3bd3
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31572541"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078242"
 ---
-# <a name="how-to-use-environment-variables-in-a-build"></a>方法 : ビルドで環境変数を使用する
+# <a name="how-to-use-environment-variables-in-a-build"></a>方法: ビルドで環境変数を使用する
 プロジェクトをビルドするとき、プロジェクト ファイルまたはプロジェクトを構成するファイルに含まれていない情報を使用してビルド オプションを設定する必要がある場合があります。 通常、この情報は環境変数に格納されます。  
   
-## <a name="referencing-environment-variables"></a>時間環境変数の参照  
+## <a name="reference-environment-variables"></a>環境変数を参照する  
  環境変数はすべて、プロパティとして [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] ([!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]) プロジェクト ファイルで使用可能です。  
   
 > [!NOTE]
->  プロジェクト ファイルに、環境変数と同じ名前のプロパティが明示的に定義されている場合、環境変数の値はプロジェクト ファイル内のプロパティによって上書きされます。  
+>  プロジェクト ファイルに、環境変数と同じ名前のプロパティが明示的に定義されている場合、環境変数の値はプロジェクト ファイル内のプロパティによってオーバーライドされます。  
   
 #### <a name="to-use-an-environment-variable-in-an-msbuild-project"></a>MSBuild プロジェクトで環境変数を使用するには  
   
@@ -40,7 +40,7 @@ ms.locfileid: "31572541"
   
 #### <a name="to-provide-a-default-value-for-a-property"></a>プロパティの既定値を指定するには  
   
--   プロパティに値がない場合に限り、`Condition` 属性をプロパティで使用して値を設定します。 たとえば、`ToolsPath` 環境変数が設定されていない場合に限り、次のコードによって `ToolsPath` プロパティが c:\tools に設定されます。  
+-   プロパティに値がない場合に限り、`Condition` 属性をプロパティで使用して値を設定します。 たとえば、`ToolsPath` 環境変数が設定されていない場合に限り、次のコードによって `ToolsPath` プロパティが *c:\tools* に設定されます。  
   
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`  
   
@@ -64,7 +64,7 @@ ms.locfileid: "31572541"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [MSBuild](../msbuild/msbuild.md)  
 [MSBuild プロパティ](../msbuild/msbuild-properties.md)  
 [方法: 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)  

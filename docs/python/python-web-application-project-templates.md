@@ -1,7 +1,7 @@
 ---
 title: Python 用 Web アプリケーション テンプレート
 description: デバッグの構成や Azure App Service への発行など、Bottle、Flask、および Django フレームワークを使って Python で書かれた Web アプリケーション用の Visual Studio テンプレートの概要です。
-ms.date: 05/18/2018
+ms.date: 07/03/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,18 +11,20 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f975b726b8be76af1e3daeff59a06a18988644ab
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: ce402b0df6521ac55942ded9615b6962640193c1
+ms.sourcegitcommit: 4ab232758d308bda742434beff8349a80c167890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752041"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847766"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
 Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 これらのテンプレートには、必要な依存関係を宣言する `requirements.txt` が含まれています。 これらのテンプレートのいずれかを基にプロジェクトを作成する場合は、それらのパッケージをインストールするように Visual Studio から求められます (この記事で後述する「[プロジェクト要件をインストールする](#installing-project-requirements)」を参照してください)。
 
 Pyramid などの他のフレームワークには、汎用の "Web プロジェクト" テンプレートを使用できます。 この場合、フレームワークはテンプレートと一緒にインストールされません。 そのため、プロジェクトで使用する環境に必要なパッケージをインストールします ([Python 環境の管理](managing-python-environments-in-visual-studio.md)に関する記事をご覧ください)。
+
+Python Web アプリを Azure にデプロイする方法については、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
 ## <a name="using-a-project-template"></a>プロジェクト テンプレートの使用
 
