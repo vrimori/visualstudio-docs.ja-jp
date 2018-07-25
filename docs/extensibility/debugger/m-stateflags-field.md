@@ -1,5 +1,5 @@
 ---
-title: m_stateFlags フィールド |Microsoft ドキュメント
+title: m_stateFlags フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8842b4e7a3b6c0cb13b0c0d446e0e03b525ae903
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ee0cdebe00acce67fc9032a4ba9e7e566ecd9786
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098122"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232079"
 ---
 # <a name="mstateflags-field"></a>m_stateFlags フィールド
 現在の状態に関する情報を格納、<xref:System.Threading.Tasks.Task>オブジェクト。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .field assembly int32 modreq(System.Runtime.CompilerServices.IsVolatile) m_stateFlags  
 ```  
   
-## <a name="remarks"></a>コメント  
- 通常使用する、<xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName>この値にアクセスするプロパティです。  
+## <a name="remarks"></a>Remarks  
+ 通常、使用、<xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName>プロパティをこの値にアクセスします。  
   
  このメンバーは、次の値の任意の組み合わせを指定できます。  
   

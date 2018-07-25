@@ -1,5 +1,5 @@
 ---
-title: ローカル プロパティの取得 |Microsoft ドキュメント
+title: ローカル プロパティの取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8627e3dae07b57703280359d8064cc4a4396120
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 264250ecf245f4f13504d1e8a6e78ed23b780e3b
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102877"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232622"
 ---
-# <a name="getting-local-properties"></a>ローカル プロパティの取得
+# <a name="get-local-properties"></a>ローカル プロパティを取得します
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- Visual Studio 呼び出し[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)を取得する、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)に表示されるすべてのローカル変数へのアクセスを提供するオブジェクト、**ローカル**ウィンドウです。 Visual Studio を呼び出します[次](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)各ローカルに表示される情報を取得します。 この例では、クラスで`CEnumPropertyInfo`を実装する、`IEnumDebugPropertyInfo2`インターフェイスです。  
+ Visual Studio 呼び出し[EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)を取得する、 [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)に表示されるすべてのローカル変数へのアクセスを提供するオブジェクト、**ローカル**ウィンドウ。 Visual Studio を呼び出して[次](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)各ローカルに表示される情報を取得します。 この例では、クラスで`CEnumPropertyInfo`実装、`IEnumDebugPropertyInfo2`インターフェイス。  
   
- この実装`IEnumDebugPropertyInfo2::Next`は、次のタスクを実行します。  
+ この実装の`IEnumDebugPropertyInfo2::Next`は、次のタスクを実行します。  
   
-1.  ここで、情報を格納する配列を消去します。  
+1.  情報が格納される配列をクリアします。  
   
-2.  呼び出し[[次へ]](../../extensibility/debugger/reference/ienumdebugfields-next.md) 、返されたを格納する各ローカル[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)返される配列にします。 [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)オブジェクトが指定されたときにこの`CEnumPropertyInfo`クラスをインスタンス化します。  
+2.  呼び出し[[次へ]](../../extensibility/debugger/reference/ienumdebugfields-next.md) 、返されたを格納する、各ローカル[DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md)返される配列にします。 [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md)オブジェクトが指定されたときにこの`CEnumPropertyInfo`クラスのインスタンス化します。  
   
-## <a name="managed-code"></a>マネージ コード  
+## <a name="managed-code"></a>マネージド コード  
  この例の実装を示しています。`IEnumDebugPropertyInfo2::EnumChildren`マネージ コードでメソッドのローカル変数にします。  
   
 ```csharp  
@@ -160,5 +160,5 @@ STDMETHODIMP CEnumPropertyInfo::Next(
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ローカルの実装のサンプル](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [ローカル変数のサンプルの実装](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [ローカルの列挙](../../extensibility/debugger/enumerating-locals.md)

@@ -1,5 +1,5 @@
 ---
-title: m_taskId フィールド |Microsoft ドキュメント
+title: m_taskId フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,29 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51bf2b02079d7b187c50a789910bb0a4d0871b0a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77b68e1caa0add0c013740c6a0615995a1fa8bc1
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31098324"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232365"
 ---
 # <a name="mtaskid-field"></a>m_taskId フィールド
-バッキング フィールド、<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName>プロパティです。  
+バッキング フィールドは、<xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName>プロパティ。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (で*mscorlib.dll*)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .field private int32 m_taskId  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

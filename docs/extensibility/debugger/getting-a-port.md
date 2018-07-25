@@ -1,5 +1,5 @@
 ---
-title: ポートの取得 |Microsoft ドキュメント
+title: ポートの取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c20b3e3bdc2644e7af7d9a35de06af7f96d7680
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f44ffa801ba9b76010466ca8884a36217f843b55
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102994"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231569"
 ---
-# <a name="getting-a-port"></a>ポートの取得
-ポートは、プロセスを実行しているコンピューターへの接続を表します。 ローカル コンピューターまたはリモート コンピューターにそのマシンがある可能性があります (する可能性のある実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  
+# <a name="get-a-port"></a>ポートを取得します。
+ポートは、プロセスが実行されているマシンへの接続を表します。 そのマシンは、ローカル コンピューターまたはリモート コンピューターの可能性があります (これ場合によって実行される可能性が非 Windows ベースのオペレーティング システムは、参照してください[ポート](../../extensibility/debugger/ports.md)詳細については)。  
   
- ポートがによって表される、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイスです。 ポートが接続されているコンピューターで実行されているプロセスに関する情報の取得に使用されます。  
+ ポートがによって表される、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイス。 ポートが接続されているコンピューターで実行されているプロセスに関する情報の取得に使用されます。  
   
- デバッグ エンジンには、ポートとプログラムのノードを登録するために、プロセス情報の要求を満たすために、ポートへのアクセスが必要があります。 たとえば、デバッグ エンジンを実装する場合、 [IDebugProgramProvider2](../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスの実装、 [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)メソッドは、必要なプロセスのポートを依頼する可能性があります返される情報です。  
+ デバッグ エンジンには、ポートとプログラムのノードを登録するために、プロセス情報の要求を満たすために、ポートへのアクセスが必要があります。 たとえば、デバッグ エンジンを実装する場合、 [IDebugProgramProvider2](../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスの実装、 [GetProviderProcessData](../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)メソッドは、必要なプロセスのポートを依頼する可能性があります返される情報。  
   
- Visual Studio がデバッグ エンジンに必要なポートを提供し、ポートのサプライヤーからこのポートを取得します。 プログラムにアタッチされている場合 (または例外のため、デバッガー内でいずれかからスローされた、ジャスト イン タイム [JIT] ダイアログ ボックスをトリガーする)、ユーザーが使用する、選択したトランスポート (ポート サプライヤーに別の名前) を付与します。 それ以外の場合、ユーザーが、デバッガー内からプログラムを起動、プロジェクト システムを使用するポート仕入先を指定します。 いずれの場合は、Visual Studio はによって表されるポートの仕入先のインスタンスを作成、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイス、および新しいポートを呼び出すことによって要求[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)で、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)インターフェイスです。 このポートは、1 つのフォームのデバッグ エンジンは、または別、渡されます。  
+ Visual Studio がデバッグ エンジンに必要なポートを提供し、ポートのサプライヤーからこのポートを取得します。 プログラムにアタッチされている場合 (または例外のため、デバッガー内でいずれかから、スローされた、ジャスト イン タイム [JIT] ダイアログ ボックスをトリガーする)、ユーザーが使用する、選択したトランスポート (ポート サプライヤーに別の名前) を指定します。 それ以外の場合、ユーザーが、デバッガー内からプログラムを起動、プロジェクト システムを使用するポートのサプライヤーを指定します。 いずれの場合は、Visual Studio をによって表されるポート サプライヤーは、インスタンス化します、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイスし、新しいポートを呼び出すことによって要求[AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)で、 [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)インターフェイス。 このポートは 1 つの形式でのデバッグ エンジンまたは別に渡されます。  
   
 ## <a name="example"></a>例  
- 次のコード片に指定されたポートを使用する方法を示しています。 [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)プログラムのノードを登録する[ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)です。 この概念に直接関連しないパラメーターは、わかりやすくするため除外されました。  
+ 次のコードに指定されたポートを使用する方法を示しています。 [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)内のノードでプログラムを登録する[ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)します。 この概念に直接関連しないパラメーターは、わかりやすくするため除外されました。  
   
 > [!NOTE]
->  この例を起動し、プロセスを再開するポートを使用しているものと想定、 [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)ポートでインターフェイスを実装します。 これは、これらのタスクを実行する唯一の方法ではないと、ポート可能性がありますも関与しない以外の場合、プログラムのことは[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)に指定します。  
+>  この例は、ポートを使用して起動し、プロセスを再開しを前提としています、 [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)ポートでインターフェイスを実装します。 これは、これらのタスクを実行する唯一の方法ではありませんし、ポート可能性がありますも関与しない以外のプログラムのことができます[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)に指定します。  
   
 ```cpp  
 // This is an IDebugEngineLaunch2 method.  
@@ -100,7 +100,7 @@ HRESULT CDebugEngine::ResumeProcess(IDebugProcess2 *pDebugProcess)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [プログラムを登録します。](../../extensibility/debugger/registering-the-program.md)   
+ [プログラムの登録](../../extensibility/debugger/registering-the-program.md)   
  [デバッグするプログラムを有効にします。](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)   
- [ポートの仕入先](../../extensibility/debugger/port-suppliers.md)   
+ [ポート サプライヤー](../../extensibility/debugger/port-suppliers.md)   
  [ポート](../../extensibility/debugger/ports.md)

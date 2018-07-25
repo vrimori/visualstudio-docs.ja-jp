@@ -1,5 +1,5 @@
 ---
-title: 複合要素 |Microsoft ドキュメント
+title: Combo 要素 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca91102467755610144e4d24405e89ace5a013b7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c8ab79ace55b8248b3770f2e5911bf974e724296
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100940"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233127"
 ---
-# <a name="combo-element"></a>複合要素
-コンボ ボックスに表示されるコマンドを定義します。 次のようには、コンボ ボックスの 4 つの種類があります: DropDownCombo、DynamicCombo、IndexCombo、および MRUCombo です。  
+# <a name="combo-element"></a>Combo 要素
+コンボ ボックスに表示されるコマンドを定義します。 次のようには、コンボ ボックスの 4 つの種類があります: DropDownCombo、DynamicCombo、IndexCombo、および MRUCombo します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml 
 <combo guid="guidMyCommandSet" id="MyCommand" defaultWidth="20" idCommandList="MyCommandListID" priority="0x102" type="DropDownCombo">  
   <Parent>... </Parent  
   <CommandFlag>... </CommandFlag>  
@@ -34,28 +34,28 @@ ms.locfileid: "31100940"
 </combo>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須。 GUID と ID コマンド id の GUID です。|  
-|ID|必須。 GUID と ID のコマンド識別子の ID です。|  
+|guid|必須。 コマンド id を GUID と ID の GUID です。|  
+|ID|必須。 コマンド id を GUID と ID の ID。|  
 |デフォルト|必須。 コンボ ボックスのピクセル幅を指定する整数。|  
-|idCommandList|必須。 コンボ ボックスに表示される項目の一覧を取得するアクティブなコマンドのターゲットに送信される ID です。 ID は、コントロールと同じ GUID スコープになります。|  
-|priority|任意。 優先順位を指定する数値。|  
-|型|任意。 ボタンの種類を指定する列挙値。<br /><br /> 指定されていない場合は、ボタンを使用します。<br /><br /> DropDownCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このドロップダウン リストのテキスト ボックスに何かを入力できません。<br /><br /> DynamicCombo<br /> VSPackage は、このコンボ ボックスの内容に情報を入力します。 ユーザーは、このコンボを編集しても、内の項目を選択できます。<br /><br /> IndexCombo<br /> 点を除けば DynamicCombo と同じには、そのテキストではなく、項目のインデックスを発生させます。<br /><br /> MRUCombo<br /> VSPackage の代理として、統合開発環境 (IDE) が設定されます。  ユーザーは、このコンボ ボックスで編集できます。 IDE は、コンボ ボックスあたり 16 最後のエントリまで記憶します。<br /><br /> ユーザーは、コンボ ボックスで、何かを選択したり、新しいものを入力、ときに、IDE は、適切な VSPackage に通知します。|  
-|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|idCommandList|必須。 コンボ ボックスに表示される項目の一覧を取得するアクティブなコマンドのターゲットに送信される ID です。 ID は、コントロールと同じ GUID スコープ内になります。|  
+|priority|任意。 優先度を示す数値。|  
+|型|任意。 ボタンの種類を指定する列挙値。<br /><br /> 指定しなかった場合は、ボタンを使用します。<br /><br /> DropDownCombo<br /> VSPackage は、このコンボ ボックスの内容を入力します。 ユーザーは、このドロップダウン リストのテキスト ボックスに何かを入力できません。<br /><br /> DynamicCombo<br /> VSPackage は、このコンボ ボックスの内容を入力します。 ユーザーは、このコンボを編集し、またその項目を選択します。<br /><br /> IndexCombo<br /> その点 DynamicCombo と同じテキストではなく、項目のインデックスを発生させます。<br /><br /> MRUCombo<br /> VSPackage の代わりには、統合開発環境 (IDE) が設定されます。  ユーザーは、このコンボ ボックスで編集できます。 IDE は、コンボ ボックスあたり 16 の最後のエントリまで記憶します。<br /><br /> ユーザーは、コンボ ボックスで、何かを選択したり、新しいものを入力、IDE は、適切な VSPackage を通知します。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|任意。 ボタンの親要素です。|  
-|CommandFlag|必須。 参照してください[コマンド フラグ要素](../extensibility/command-flag-element.md)です。 ボタンの有効な CommandFlag 値は次のとおりです。<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -フィルター キー機能<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
-|文字列|必須。 参照してください[要素の文字列](../extensibility/strings-element.md)です。 ButtonText の子要素を定義する必要があります。|  
+|親|任意。 ボタンの親要素。|  
+|CommandFlag|必須。 参照してください[Command flag 要素](../extensibility/command-flag-element.md)します。 ボタンの有効な CommandFlag 値は次のとおりです。<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -フィルター キー機能<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
+|文字列|必須。 参照してください[文字列要素](../extensibility/strings-element.md)します。 子 ButtonText 要素を定義する必要があります。|  
 |注釈|省略可能なコメント。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -66,7 +66,7 @@ ms.locfileid: "31100940"
   
 ## <a name="example"></a>例  
   
-```  
+```xml  
 <Combo guid="guidWidgetPackage" id="cmdidInsertOptions"  
   defaultWidth="100" idCommandList="cmdidGetInsertOptionsList">  
   <CommandFlag>DynamicVisibility</CommandFlag>  
@@ -87,4 +87,4 @@ ms.locfileid: "31100940"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
