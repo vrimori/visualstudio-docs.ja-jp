@@ -1,6 +1,6 @@
 ---
-title: Visual Studio でテスト コントローラーとテスト エージェントをインストールする
-ms.date: 03/02/2018
+title: テスト エージェントとテスト コントローラーのインストール
+ms.date: 07/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 20570d0a2d0173ca2322cb6ab1e888c7335cb4c0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8914b6b876b27b94add446a627087fb34e5082ea
+ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31972106"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37890410"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>テスト エージェントとテスト コントローラーのインストール
 
@@ -28,15 +28,15 @@ Visual Studio と Visual Studio Team Services (VSTS) または Team Foundation S
 
 | アイテム | 必要条件 |
 | ---- | ------------ |
-| **エージェント** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows XP Service Pack 3<br />Windows Server 2012、Windows Server 2012 R2<br />Windows Server 2008 Release 2 Service Pack 1 |
-| **コントローラー** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2012、Windows Server 2012 R2<br />Windows Server 2008 Release 2 Service Pack 1 |
+| **エージェント** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012、Windows Server 2012 R2 |
+| **コントローラー** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012、Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>テスト コントローラーとテスト エージェントのインストール
 
-Agents for Visual Studio 2017 は [visualstudio.com](https://www.visualstudio.com/downloads/?q=agents) からダウンロードできます。ページの一番下までスクロールし、*Agents for Visual Studio 2017* を探します。 *[エージェント]* または *[コントローラー]* を選択し、*[ダウンロード]* を選択します。 ダウンロードした実行可能ファイルを実行し、テスト エージェントまたはテスト コントローラーをインストールします。
+Agents for Visual Studio 2017 は [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/?q=agents) からダウンロードできます。 ページの一番下までスクロールし、*Agents for Visual Studio 2017* を探します。 *[エージェント]* または *[コントローラー]* を選択し、*[ダウンロード]* を選択します。 ダウンロードした実行可能ファイルを実行し、テスト エージェントまたはテスト コントローラーをインストールします。
 
-Visual Studio 2015 および Visual Studio 2013 用のエージェントは、[以前のバージョンのダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページからダウンロードできます。
+Visual Studio 2015 および Visual Studio 2013 用のエージェントは、[以前のバージョンのダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/) ページからダウンロードできます。
 
 ISO ファイル形式のインストーラーを入手できるので、仮想マシンに簡単にインストールできます。
 

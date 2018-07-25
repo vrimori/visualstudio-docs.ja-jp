@@ -12,21 +12,21 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f4e6eedead828c4c24eaf0ce57d9aa9d3119731
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 63f10359563e653dd896f47137126bb0991f7784
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31968483"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36280277"
 ---
 # <a name="introducing-live-unit-testing"></a>Live Unit Testing の概要
 
 Live Unit Testing とは、Visual Studio 2017 バージョン 15.3 で利用できるテクノロジであり、コードの変更を行いながらリアルタイムで単体テストを自動的に実行することができます。 ライブ単体テスト
 
 - 安心してコードのリファクタリングと変更を行うことができます。 Live Unit Testing を使用すると、コードの編集時に、関係するすべてのテストが自動的に実行され、加えた変更によってコードの破損が起きないことを確認することができます。
- 
+
 - 単体テストが適切にコードをカバーしているかどうかが示され、単体テストでカバーされていないコードも表示されます。 Live Unit Testing は、リアルタイムでコード カバレッジをグラフィカルに表示します。これにより、各コード行をカバーしているテストの数、および任意の単体テストでカバーされていない行をひとめで把握することができます。
- 
+
 1 つ以上の単体テスト プロジェクトを含むソリューションがある場合、Live Unit Testing を有効にするには、Visual Studio の最上位メニューから、**[テスト]**、**[Live Unit Testing]**、**[開始]** の順に選択します。
 
 Live Unit Testing について詳細を学習するには:
@@ -34,14 +34,14 @@ Live Unit Testing について詳細を学習するには:
 - 入門チュートリアル 「[Get started with Live Unit Testing in Visual Studio](live-unit-testing-start.md)」 (Visual Studio で Live Unit Testing の使用を開始する) を試してみてください。
 
 - 「[Use Live Unit testing with Visual Studio 2017 Enterprise Edition](live-unit-testing.md)」 (Visual Studio 2017 Enterprise Edition で Live Unit Testing を使用する) に記載されている詳しい説明をご覧ください。
- 
+
 - 「[Live Unit Testing に関する FAQ](live-unit-testing-faq.md)」を参照してください。Live Unit Testing の新しい機能に加えて、Live Unit Testing を使用するためのヒントとテクニックが説明されています。
- 
+
 - Live Unit Testing の概要とその機能については、Channel 9 のビデオをご覧ください。 </p>
 
    > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
 
 ## <a name="related-resources"></a>関連資料
-[コード テスト ツール](https://www.visualstudio.com/vs/testing-tools/)   
-[コードの単体テスト](unit-test-your-code.md)   
+[コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
+[コードの単体テスト](unit-test-your-code.md)
 

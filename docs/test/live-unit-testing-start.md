@@ -11,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 794f3aeab023d6b6c5c606a4c1fb8f706a4a7989
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 83cc24d72bfb679a1b683a67b995356fc887064c
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978919"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117798"
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio 2017 で Live Unit Testing の使用を開始する
 
@@ -41,7 +41,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 このソリューションは、1 つまたは複数のプロジェクト用のコンテナーにすぎません。 ソリューションを作成するには、Visual Studio 2017 を開き、次の手順を実行します。
 
-1. Visual Studio の最上位のメニューから、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順に選択します。
+1. Visual Studio の最上位のメニューから、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログの **[その他のプロジェクトの種類]** ノードを展開し、**[Visual Studio ソリューション]** を選択します。 次の図に示すように、右側のウィンドウで **[空のソリューション]** テンプレートを選択し、**[名前]** テキスト ボックスに「`UtilityLibraries`」と入力します。
 
@@ -52,7 +52,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 ソリューションが作成されたので、次に、文字列を操作するための拡張メソッドを複数格納する `StringLibrary` という名前のクラス ライブラリを作成します。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト**] の順に選択します。
+1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、C# ノードを選択し、**[.NET Standard]** を選択します。
 
@@ -80,7 +80,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 1.  Visual Studio の最上位メニューから、**[ビルド]**、**[ソリューションのビルド]** の順に選択します。 Visual Studio によって目的のライブラリが正常にビルドされるはずです。
 
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト**] の順に選択します。
+1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、Visual Basic ノードを選択し、次に **[.NET Standard]** を選択します。
 
@@ -118,7 +118,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 次のステップとして、`StringLibrary` ライブラリをテストする単体テスト プロジェクトを作成します。 次の手順を実行して、単体テストを作成します。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト**] の順に選択します。
+1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、C# ノードを選択し、次に **[.NET Core]** を選択します。
 
@@ -156,7 +156,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
-1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト**] の順に選択します。
+1. **ソリューション エクスプローラー**で、`UtilityLibraries` ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクトの追加]** ダイアログで、Visual Basic ノードを選択し、**[.NET Core]** を選択します。
 

@@ -1,7 +1,7 @@
 ---
 title: Python の概要のチュートリアル、手順 3、対話型 REPL
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 3 では、Python の対話型 REPL ウィンドウについて説明します。
-ms.date: 01/16/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aface4f125ea8c5a4209e4f220330f15c8ed6d1c
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 5a93c7f717587e5485c1eb7f0066245844069b35
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425752"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057237"
 ---
-# <a name="step-3-using-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
+# <a name="step-3-use-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
 **前の手順: [コードを記述して実行する](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
 
@@ -95,7 +95,7 @@ Visual Studio の Python 用の *対話型ウィンドウ*は、機能豊富な 
 > [!div class="nextstepaction"]
 > [デバッガーでコードを実行する](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [対話型ウィンドウの使用](python-interactive-repl-in-visual-studio.md)
 - [IPython REPL の使用](interactive-repl-ipython.md)

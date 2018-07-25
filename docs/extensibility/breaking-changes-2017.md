@@ -1,5 +1,5 @@
 ﻿---
-title: Visual Studio 2017 拡張機能における重大な変更 |Microsoft ドキュメント
+title: Visual Studio 2017 の拡張機能における重大な変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2016
 ms.technology:
@@ -11,18 +11,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bff9c97b052f359f3d03e12093b1cdae86d5dfbd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 34f7bdcf682e1baf928d3a36a828aeaafcb6d801
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107177"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231500"
 ---
-# <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 機能拡張の変更
+# <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 の機能拡張の変更
 
 Visual Studio 2017 では、Visual Studio のユーザーシステムへの影響を軽減させる[高速で軽量な Visual Studio インストール エクスペリエンス](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer)を提供するとともに、インストールされるワークロードと機能をユーザーが幅広く選択することを可能にしています。 これらの機能強化をサポートするため、機能拡張モデルに変更を加え、Visual Studio の拡張性にいくつかの重大な変更を行いました。 このドキュメントでは、これらの変更に関する技術的な詳細とその対処方法について説明します。 一部の情報は特定の時点の実装の詳細であり、後に変更される可能性がありますのでご注意ください。
 
-## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響のある変更
+## <a name="changes-affecting-vsix-format-and-installation"></a>VSIX 形式とインストールに影響する変更
 
 軽量インストール エクスペリエンスをサポートするために VSIX v3 (バージョン 3) 形式を導入しています。
 
@@ -41,28 +41,28 @@ VSIX 形式における変更は次のとおりです:
   * 言語で区切られた言語パックの依存関係。
   * [NGEN サポート](ngen-support.md)を使用したインストール。
 
-## <a name="building-an-extension-for-visual-studio-2017"></a>Visual Studio 2017 用拡張機能の構築
+## <a name="building-an-extension-for-visual-studio-2017"></a>Visual Studio 2017 の拡張機能をビルド
 
-新しい VSIX v3 マニフェスト形式を作成するためのデザイナー ツールは、現在 Visual Studio 2017 で使用できます。 デザイナー ツールの使用に関する詳細や、 VSIX v3 拡張機能を開発するためのプロジェクトおよびマニフェストの手動アップデートに関する詳細については、関連ドキュメント [How to: Migrate Extensibility Projects to Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)(方法: 機能拡張プロジェクトを Visual Studio 2017 に移行する) を参照してください。
+新しい VSIX v3 マニフェスト形式を作成するためのデザイナー ツールは、現在 Visual Studio 2017 で使用できます。 付属のドキュメントを参照してください[方法: 機能拡張プロジェクトを Visual Studio 2017 に移行](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)デザイナー ツールを使用して、または、プロジェクトを手動で更新したことの詳細と v3 の VSIX 拡張機能を開発するマニフェスト。
 
 ## <a name="change-visual-studio-user-data-path"></a>変更: Visual Studio ユーザー データ パス
 
 これまで Visual Studio の各メジャー リリースは 1 つのコンピューターにつき 1 つまでしかインストールすることができませんでした。 Visual Studio 2017 ではサイド バイ サイド インストールをサポートするために、複数の Visual Studio ユーザー データ パスをユーザーのコンピューターに存在させることができます。
 
-Visual Studio プロセスの内部で実行されているコードは Visual Studio の設定マネージャーを使用するように更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは [このガイダンスに従って](locating-visual-studio.md) 特定の Visual Studio インストールのユーザー パスを検索することができます。
+Visual Studio プロセス内で実行されているコードは、Visual Studio の設定マネージャーを使用して更新する必要があります。 Visual Studio プロセスの外部で実行されているコードは[このガイダンスに従って](locating-visual-studio.md)特定の Visual Studio インストールのユーザー パスを検索することができます。
 
 ## <a name="change-global-assembly-cache-gac"></a>変更: グローバル アセンブリ キャッシュ (GAC)
 
-ほとんどの Visual Studio コア アセンブリは GAC にインストールされません。 Visual Studio のプロセスで実行されるコードはまだ実行時に必要なアセンブリを検出できるように、次の変更が行われました。
+ほとんどの Visual Studio のコア アセンブリは GAC にインストールされません。 Visual Studio のプロセスで実行されるコードは引き続き実行時に必要なアセンブリを検出できるように、次の変更が行われました。
 
 > [!NOTE]
-> [INSTALLDIR] Visual Studio のインストールのルート ディレクトリを参照して次に示します。 自動的に、この設定が、展開のカスタム コードを記述するをお読みくださいは VSIXInstaller.exe [Visual Studio の検索](locating-visual-studio.md)です。
+> [INSTALLDIR] Visual Studio のインストールのルート ディレクトリに以下を参照します。 *VSIXInstaller.exe* 、これを自動的に設定されますが、カスタム展開コードを記述することをお読みください[Visual Studio の検出](locating-visual-studio.md)します。
 
 * アセンブリを GAC にインストールされただけの:
-  * [INSTALLDIR] \Common7\IDE にこれらのアセンブリがインストールされるようになりました\,[INSTALLDIR] \Common7\IDE\PublicAssemblies または [INSTALLDIR] \Common7\IDE\PrivateAssemblies です。 これらのフォルダーは、Visual Studio プロセスのプローブ パスの一部です。
-* 非プローブ パスに、GAC にインストールされたアセンブリの場合:
+  * これらのアセンブリがインストールされた * [INSTALLDIR] \Common7\IDE\*、 *[INSTALLDIR] \Common7\IDE\PublicAssemblies*または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*します。 これらのフォルダーは、Visual Studio プロセスのプローブ パスの一部です。
+* 非プローブのパスと、GAC にインストールされたアセンブリの場合:
   * GAC 内のコピーは、セットアップから削除されました。
-  * アセンブリのコードの基本エントリを指定する .pkgdef ファイルが追加されました。
+  * A *.pkgdef*アセンブリのコード ベースのエントリを指定するファイルが追加されました。
 
     例えば:
     
@@ -73,37 +73,37 @@ Visual Studio プロセスの内部で実行されているコードは Visual S
     "culture"="neutral"
     "version"=15.0.0.0
     ```
-    実行時に、Visual Studio pkgdef サブシステムがマージされます ([VSAPPDATA]\devenv.exe.config) Visual Studio プロセスのランタイム構成ファイルにこれらのエントリとして[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、パスがプローブによる検索しないため、Visual Studio プロセスが、アセンブリを検索することをお勧めします。
+    実行時に、Visual Studio pkgdef サブシステムが、Visual Studio プロセスのランタイム構成ファイルにこれらのエントリをマージ ( *[VSAPPDATA]\devenv.exe.config*) として[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、プローブ パスから検索を回避するので、独自のアセンブリを検索する Visual Studio のプロセスをできるようにすることをお勧めの方法です。
 
-### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
+### <a name="reacting-to-this-breaking-change"></a>この重大な変更に反応します。
 
-* 場合は、拡張機能は、Visual Studio プロセス内で実行しています。
-  * コードは、Visual Studio コア アセンブリを検索することができます。
-  * 必要に応じて、アセンブリへのパスを指定する .pkgdef ファイルを使用してください。
-* 場合は、拡張機能は Visual Studio のプロセスの外部で実行しています。
-  * [INSTALLDIR] \Common7\IDE Visual Studio コア アセンブリを探してを検討してください\,[INSTALLDIR] \Common7\IDE\PublicAssemblies または構成ファイルまたはアセンブリの競合回避モジュールを使用して、[INSTALLDIR] \Common7\IDE\PrivateAssemblies です。
+* 拡張機能は、Visual Studio プロセス内で実行している: 場合
+  * コードは Visual Studio のコア アセンブリを検索することになります。
+  * 使用を検討して、 *.pkgdef*ファイルに必要な場合に、アセンブリへのパスを指定します。
+* 拡張機能は Visual Studio プロセスの外部で実行されている: 場合
+  * Visual Studio のコア アセンブリを探してを検討してください * [INSTALLDIR] \Common7\IDE\*、 *[INSTALLDIR] \Common7\IDE\PublicAssemblies*または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*。構成ファイルまたはアセンブリ リゾルバーを使用します。
 
-## <a name="change-reduce-registry-impact"></a>レジストリの影響の削減に変更します。
+## <a name="change-reduce-registry-impact"></a>変更: レジストリの影響を軽減します。
 
 ### <a name="global-com-registration"></a>グローバルの COM 登録
 
-* 以前は、Visual Studio は、ネイティブの COM 登録をサポートするために HKEY_CLASSES_ROOT および HKEY_LOCAL_MACHINE ハイブに多くのレジストリ キーをインストールします。 Visual Studio をこの影響を回避するのには今すぐ[COM コンポーネントの登録を必要としないアクティベーション](https://msdn.microsoft.com/en-us/library/ms973913.aspx)です。
-* その結果、ほとんどの TLB/OLB/、%programfiles (x86) %\Common files \microsoft Shared\MSEnv DLL ファイルは Visual Studio で既定ではインストールされません。 Visual Studio ホスト プロセスによって使用される対応する登録を必要としない COM マニフェストでは、[INSTALLDIR] の下でこれらのファイルはインストールされました。
-* その結果、Visual Studio の COM インターフェイスの COM 登録をグローバルに依存する外部のコードは不要になったこれらの登録を検索します。 Visual Studio プロセス内で実行中のコードでは、違いは表示されません。
+* 以前は、Visual Studio では、ネイティブの COM 登録をサポートするために HKEY_CLASSES_ROOT と HKEY_LOCAL_MACHINE ハイブに多くのレジストリ キーをインストールします。 この影響を排除するために Visual Studio を今すぐ使用して[COM コンポーネントの登録を必要としないアクティベーション](https://msdn.microsoft.com/en-us/library/ms973913.aspx)します。
+* その結果、ほとんど TLB/OLB % %programfiles (x86) %\Common files \microsoft Shared\MSEnv の DLL ファイルが Visual Studio によって既定でインストールされなく/。 Visual Studio のホスト プロセスによって使用される Registration-free COM マニフェストの対応するには、[INSTALLDIR] の下でこれらのファイルはインストールされました。
+* その結果、Visual Studio COM インターフェイスの COM 登録をグローバルに依存する外部のコードは不要になったこれらの登録を検索します。 Visual Studio プロセス内で実行されているコードでは、違いが見られない。
 
 ### <a name="visual-studio-registry"></a>Visual Studio レジストリ
 
-* 以前は、Visual Studio は、Visual Studio 固有キーの下で、システムの HKEY_LOCAL_MACHINE、HKEY_CURRENT_USER ハイブに多くのレジストリ キーをインストールしました。
-  * HKLM\Software\Microsoft\VisualStudio\\**バージョン**: MSI インストーラーとコンピューターごとの拡張機能によって作成されたレジストリ キー。
-  * HKCU\Software\Microsoft\VisualStudio\\**バージョン**: ユーザーに固有の設定を格納する Visual Studio によって作成されたレジストリ キー。
-  * HKCU\Software\Microsoft\VisualStudio\\**バージョン**_Config: .pkgdef ファイルから拡張機能によって、上記の Visual Studio HKLM キーとレジストリ キーのコピーとマージします。
-* レジストリへの影響を減らすためには、Visual Studio を今すぐ使用して、 [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx) [VSAPPDATA]\privateregistry.bin 下にあるプライベートのバイナリ ファイル内のレジストリ キーを格納する関数。 Visual Studio 固有のキーの数が非常に小さいだけは、システム レジストリに残ります。
-* 既存のコードを Visual Studio プロセス内で実行中は影響はありません。 Visual Studio は HKCU Visual Studio 固有のキーの下のすべてのレジストリ操作をプライベート レジストリにリダイレクトします。 読み取りと書き込みを他のレジストリの場所は、システム レジストリを使用し続けます。
-* 外部コードは、Visual Studio のレジストリ エントリに対して、このファイルから読み込んだりする必要があります。
+* Visual Studio が、システムに多くのレジストリ キーをインストールする以前は、 **HKEY_LOCAL_MACHINE**と**HKEY_CURRENT_USER**ハイブ Visual Studio に固有のキーの下。
+  * **Hklm \software\microsoft\visualstudio\{バージョン}**: MSI インストーラーとコンピューター単位の拡張機能によって作成されたレジストリ キー。
+  * **Hkcu \software\microsoft\visualstudio\{バージョン}**: ユーザーに固有の設定を格納する Visual Studio によって作成されたレジストリ キー。
+  * **Hkcu \software\microsoft\visualstudio\{バージョン} _Config**: から、上の Visual Studio HKLM キーとレジストリ キーのコピーにマージされた *.pkgdef*拡張機能によってファイル。
+* レジストリへの影響を減らすためには、Visual Studio を今すぐ使用して、 [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx)プライベート バイナリ ファイルの下にレジストリ キーを格納する関数 *[VSAPPDATA]\privateregistry.bin*します。 Visual Studio 固有のキーの数が非常に小さいだけは、システム レジストリに残ります。
+* Visual Studio プロセス内で実行されている既存のコードは影響はありません。 Visual Studio は、HKCU Visual Studio に固有のキーの下のすべてのレジストリ操作をプライベート レジストリにリダイレクトされます。 その他のレジストリの場所に対する読み取りと書き込みは、システム レジストリを使用して続けます。
+* 外部コードを読み込むし、Visual Studio のレジストリ エントリには、このファイルから読み取る必要があります。
 
-### <a name="reacting-to-this-breaking-change"></a>この重要な変更に反応します。
+### <a name="reacting-to-this-breaking-change"></a>この重大な変更に反応します。
 
-* 同様に COM コンポーネントの登録を必要としないアクティベーションを使用する外部コードを変換する必要があります。
-* 外部コンポーネントは、Visual Studio の場所を見つけることができます[ここガイダンスに従って](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)です。
-* 外部コンポーネントが使用することをお勧め、[外部の設定マネージャー](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
-* 登録のためのもう 1 つの方法は、拡張機能を使用してコンポーネントに実装がかどうかを確認してください。 たとえば、デバッガー拡張機能があります、新しい活用するために[msvsmon JSON ファイルの COM 登録](migrate-debugger-COM-registration.md)です。
+* 同様に COM コンポーネントの登録なしのアクティベーションを使用する外部コードを変換する必要があります。
+* 外部コンポーネントは、Visual Studio の場所を見つけることができます[こちらのガイダンスに従って](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)します。
+* 外部コンポーネントが使用することをお勧め、[外部設定マネージャー](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
+* 登録のための別の手法は、拡張機能を使用して、コンポーネントに実装がかどうかを確認します。 たとえば、デバッガーの拡張機能が新しい利用することが可能性があります[msvsmon JSON ファイルの COM 登録](migrate-debugger-COM-registration.md)します。

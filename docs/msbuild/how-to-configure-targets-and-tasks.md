@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a09f2ec1af511cb789f2101e2df0a675dd065e8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5ceb9415648d4ad5bcfa4c16ca7f10b3a88a6db4
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578414"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078115"
 ---
-# <a name="how-to-configure-targets-and-tasks"></a>方法 : ターゲットとタスクを構成する
+# <a name="how-to-configure-targets-and-tasks"></a>方法: ターゲットとタスクを構成する
 一部の MSBuild タスクは、開発コンピューターの環境に関係なく、それがターゲットとする環境で実行されるように設定できます。 たとえば、64 ビット コンピューターを使用し、32 ビット アーキテクチャをターゲットとするアプリケーションを構築するとき、一部のタスクが 32 ビット プロセスで実行されます。  
   
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "31578414"
   
 -   `Architecture` 属性は、それが存在する場合、プラットフォームとビット数を設定し、値として `x86`、`x64`、`CurrentArchitecture`、`*` (任意のアーキテクチャ) のいずれかを取得します。  
   
--   `TaskFactory` 属性は、それが存在する場合、タスク インスタンスを作成して実行するタスク ファクトリを設定し、値として `TaskHostFactory` のみを取得します。 詳細については、このドキュメントで後述する「タスク ファクトリ」を参照してください。  
+-   `TaskFactory` 属性は、それが存在する場合、タスク インスタンスを作成して実行するタスク ファクトリを設定し、値として `TaskHostFactory` のみを取得します。 詳細については、このドキュメントで後述する「[タスク ファクトリ](#task-factories)」を参照してください。  
   
 ```xml  
 <UsingTask TaskName="SimpleTask"   
@@ -107,7 +107,7 @@ ms.locfileid: "31578414"
  `MSBuildRuntime` および `MSBuildArchitecture` パラメーターは、ターゲット コンテキストを設定する最も柔軟な方法を提供しますが、範囲も最も制限されています。  柔軟性の点では、これらはタスク インスタンス自体で設定され、タスクの実行直前まで評価されないため、評価時とビルド時の両方で使用できるプロパティの完全なスコープからその値を派生できます。  制限については、これらのパラメーターは、特定のターゲットのタスクの特定のインスタンスにのみ適用されます。  
   
 > [!NOTE]
->  タスク パラメーターは、タスク ホストのコンテキストではなく、親ノードのコンテキストで評価されます。ランタイムまたはアーキテクチャに依存する環境変数は (プログラム ファイルの場所など)、親ノードに一致する値として評価されます。  一方、同じ環境変数がタスクによって直接読み取られた場合は、タスク ホストのコンテキストで正しく評価されます。  
+>  タスク パラメーターは、タスク ホストのコンテキストではなく、親ノードのコンテキストで評価されます。 ランタイムまたはアーキテクチャに依存する環境変数は (*Program Files* の場所など)、親ノードに一致する値に評価されます。  一方、同じ環境変数がタスクによって直接読み取られた場合は、タスク ホストのコンテキストで正しく評価されます。  
   
-## <a name="see-also"></a>参照  
- [ターゲットとタスクの構成](../msbuild/configuring-targets-and-tasks.md)
+## <a name="see-also"></a>関連項目  
+ [ターゲットとタスクを構成する](../msbuild/configuring-targets-and-tasks.md)

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 676c8767691610349cc2eee4c09970318feda9f5
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 02d3a9dfa6496b30e7438e53754f6d3d1720e6df
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34269191"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078928"
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
 アプリに、コントロール、レイアウト、図形などの要素を追加するには、XAML、コード、または XAML デザイナーを使用します。 このトピックでは、Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。
@@ -29,7 +29,7 @@ ms.locfileid: "34269191"
 
 -   XAML デザイナーで、次のいずれかの操作を行います。
 
-    -   **[ツールボックス]** にある要素をダブルクリックします (または、ツールボックスにある要素を選択して Enter キーを押します)。
+    -   **[ツールボックス]** にある要素をダブルクリックします (または、ツールボックスにある要素を選択して **Enter** キーを押します)。
 
     -   要素を **[ツールボックス]** からアートボードにドラッグします。
 
@@ -63,7 +63,7 @@ ms.locfileid: "34269191"
 
 #### <a name="to-align-two-or-more-elements-by-using-menu-commands"></a>メニュー コマンドを使用して 2 つ以上の要素の位置を揃えるには
 
-1.  位置を揃える要素を選択します。 複数の要素を選択するには、Ctrl キーを押したまま、要素を選択します。
+1.  位置を揃える要素を選択します。 複数の要素を選択するには、**Ctrl** キーを押したまま、要素を選択します。
 
 2.  [プロパティ] ウィンドウの **[レイアウト]** セクションの **[HorizontalAlignment]** で、次のいずれかを選択します: **[Left]**、**[Center]**、**[Right]**、または **[Stretch]**。
 
@@ -100,7 +100,7 @@ ms.locfileid: "34269191"
 
 #### <a name="to-group-elements-into-a-new-layout-container"></a>要素を新しいレイアウト コンテナーに入れてグループ化するには
 
-1.  グループ化する要素を選択します。 (複数の要素を選択するには、Ctrl キーを押しながらクリックします。)
+1.  グループ化する要素を選択します。 (複数の要素を選択するには、**Ctrl** キーを押しながらクリックします。)
 
 2.  選択した要素を右クリックし、**[グループ (パネル) に含める]** をポイントし、そのグループを配置するレイアウト コンテナーの種類をクリックします。
 
@@ -118,7 +118,7 @@ ms.locfileid: "34269191"
 
 #### <a name="to-reset-the-element-layout"></a>要素のレイアウトをリセットするには
 
--   [ドキュメント アウトライン] ウィンドウまたはアートボードで要素を右クリックし、**[レイアウト]**、**[*PropertyName* のリセット]** の順に選択します。ここで、*PropertyName* は、リセットするプロパティです (あるいは、要素のすべてのレイアウト プロパティをリセットするには、**[レイアウト]**、**[すべてリセット]** の順に選択します)。
+-   [ドキュメント アウトライン] ウィンドウまたはアートボードで要素を右クリックし、**[レイアウト]** > **[*PropertyName* のリセット]** の順に選択します。ここで、*PropertyName* は、リセットするプロパティです (あるいは、要素のすべてのレイアウト プロパティをリセットするには、**[レイアウト]** > **[すべてリセット]** の順に選択します)。
 
 ## <a name="see-also"></a>関連項目
 

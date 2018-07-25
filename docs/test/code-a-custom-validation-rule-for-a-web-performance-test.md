@@ -17,14 +17,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c95e461f99a78a3241a091f7b590137e4dbc7066
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6aaba3be74e38e27f04db59cbb26b455245251be
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31971398"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282279"
 ---
-# <a name="coding-a-custom-validation-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム検証規則のコーディング
+# <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム検証規則のコーディング
 
 検証規則は独自に作成できます。 これを行うには、検証規則クラスから独自の規則クラスを派生します。 検証規則は、<xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> 基底クラスから派生します。
 

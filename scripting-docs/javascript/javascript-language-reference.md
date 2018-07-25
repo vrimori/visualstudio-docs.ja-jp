@@ -22,17 +22,20 @@ caps.latest.revision: 62
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6f1b67e86120ae4604d12b53acdafd3e7f5f3b56
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 981e04d94ac803c76705cd7014f5d29721188512
+ms.sourcegitcommit: c842955aa9ee9f149bb63e66e46c5c29be6e9881
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24569302"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36962659"
 ---
 # <a name="javascript-language-reference"></a>JavaScript 言語リファレンス
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] は、Web ページや他のアプリケーションに埋め込むことができるスクリプト言語です。  
   
  このドキュメントでは、ECMAScript 言語仕様第 5 版準拠の JavaScript の Microsoft による実装について説明します。 これは、ECMA 規格に含まれていない別の機能も提供します。  
+
+> [!NOTE]
+> Microsoft の JavaScript API のすべてのリファレンス (500 超ページ) を docs.microsoft.com から対応する MDN にリダイレクトして、[MDN Web docs](https://developer.mozilla.org/en-US/) を Web のワンストップの主要な開発リソースにするためのコミュニティ全体の取り組みに参加しました。 詳細については、この[お知らせ](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)をご覧ください。
   
  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] コードは、ブラウザー アプリケーションで HTML、CSS、およびドキュメント オブジェクト モデル (DOM) (HTML およびブラウザー オブジェクトを表す) と共に使用できます。  
   
@@ -54,20 +57,5 @@ ms.locfileid: "24569302"
   
  Visual Studio の JavaScript エディターでは IntelliSense をサポートしています。 詳細については、「 [JavaScript IntelliSense](http://go.microsoft.com/fwlink/p/?LinkId=256499)」を参照してください。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- 以降のセクションで、JavaScript について詳しく説明します。  
-  
- [JavaScript の新機能](../javascript/what-s-new-in-javascript.md)  
- JavaScript の新機能について説明します。  
-  
- [JavaScript の基礎](../javascript/javascript-fundamentals.md)  
- JavaScript の基本的な構造の概要を説明します。  
-  
- [高度な JavaScript](../javascript/advanced/advanced-javascript.md)  
- 再帰、配列、トラブルシューティングなどの高度な JavaScript 機能について説明します。  
-  
- [JavaScript リファレンス](../javascript/reference/javascript-reference.md)  
- JavaScript 言語の要素について説明します。  
-  
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドキュメント オブジェクト モデル](http://go.microsoft.com/fwlink/?LinkId=148095)

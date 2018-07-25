@@ -11,54 +11,56 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8231b36f2fe44a04e16b420eb13bfcc4eb30c696
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 265e0a4c596a78e53de6fe92d837796f2e52a703
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34573285"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079149"
 ---
 # <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
 
-この 10 分間のエディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
+この 10 分間の Visual Studio のコード エディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 
 ## <a name="create-a-new-code-file"></a>新しいコード ファイルを作成する
 
-新しいファイルを作成し、何らかのコードをそのファイルに追加することから始めます。 エディターが提供している一部の特典は、プロジェクトを作成しなくても利用できます。
+新しいファイルを作成し、何らかのコードをそのファイルに追加することから始めます。
 
 1. Visual Studio を開き、メニュー バーの **[ファイル]** メニューから、**[新規作成]**、**[ファイル]** の順に選択します。
 
 1. **[新しいファイル]** ダイアログ ボックスの **[全般]** カテゴリで、**[Visual C# クラス]** を選択し、**[開く]** を選択します。
 
-   エディターで新しいファイルが開かれ、C# クラスのスケルトンが表示されます。
+   エディターで新しいファイルが開かれ、C# クラスのスケルトンが表示されます。 (コード エディターによって提供される利点の一部を活用するために、完全な Visual Studio プロジェクトを作成する必要はありません。必要なのはコード ファイルだけです)
+
+   ![Visual Studio での C# コード ファイル](media/quickstart-editor.png)
 
 ## <a name="use-code-snippets"></a>コード スニペットを使用する
 
-Visual Studio で提供されている便利なコード スニペットを使用すると、一般的に使用されるコード ブロックを迅速かつ簡単に生成することができます。 [コード スニペット](../ide/code-snippets.md)は、C#、Visual Basic、C++ など、さまざまなプログラミング言語で使用することができます。 C# `void Main` スニペットをファイルに追加してみましょう。
+Visual Studio で提供されている便利な*コード スニペット*を使用すると、一般的に使用されるコード ブロックを迅速かつ簡単に生成することができます。 [コード スニペット](../ide/code-snippets.md)は、C#、Visual Basic、C++ など、さまざまなプログラミング言語で使用することができます。 C# `void Main` スニペットをファイルに追加してみましょう。
 
-1. `Class1` コンストラクターの右中かっこの下にカーソルを置き、文字 `svm` を入力します。
+1. ファイル内の最後の閉じかっこ **}** のちょうど上にカーソルを置き、文字 `svm` を入力します (これは、`static void Main`&mdash; の略ですが、その意味が分からなくても、あまり心配しないでください)。
 
-   `svm` スニペットに関する情報を含んだ **IntelliSense** ダイアログ ボックスが表示されているのがわかります。
+   ポップアップ ダイアログ ボックスが `svm` コード スニペットに関する情報を伴って表示されます。
 
-   ![Intellisense スニペット](media/quickstart-intellisense-snippet.png)
+   ![Visual Studio でのコード スニペット用の IntelliSense](media/quickstart-intellisense-snippet.png)
 
 1. **Tab** キーを 2 回押すと、コード スニペットが挿入されます。
 
-   `static void Main()` メソッドの署名がファイルに追加されているのがわかります。 `Main()` メソッドは、C# アプリケーションのエントリ ポイントです。
+   `static void Main()` メソッドの署名がファイルに追加されているのがわかります。 [Main()](/dotnet/csharp/programming-guide/main-and-command-args/) メソッドは、C# アプリケーションのエントリ ポイントです。
 
-利用できるコード スニペットは、言語によって異なります。 目的のプログラミング言語で使用可能なコード スニペットを確認するには、**[編集]**、**[IntelliSense]**、**[スニペットの挿入]** の順に選択し、言語のフォルダーを選択します。 C# の場合、リストは次のようになります。
+利用できるコード スニペットは、プログラミング言語によって異なります。 目的の言語で使用可能なコード スニペットを確認するには、**[編集]** > **[IntelliSense]** > **[スニペットの挿入]** の順に選択し、言語のフォルダーを選択します。 C# の場合、リストは次のようになります。
 
 ![C# コード スニペットのリスト](media/quickstart-code-snippet-list.png)
 
-このリストには、クラス、コンストラクター、`Console.WriteLine()`、`for` ループ、`if` ステートメント、`switch` ステートメントなどを作成するためのスニペットが含まれています。
+このリストには、[クラス](/dotnet/csharp/programming-guide/classes-and-structs/classes)、[コンストラクター](/dotnet/csharp/programming-guide/classes-and-structs/constructors)、[for](/dotnet/csharp/language-reference/keywords/for) ループ、[if](/dotnet/csharp/language-reference/keywords/if-else) ステートメント、[switch](/dotnet/csharp/language-reference/keywords/switch) ステートメントなどを作成するためのスニペットが含まれています。
 
 ## <a name="comment-out-code"></a>コメント アウト コード
 
-ツールバーには、コード作成時の生産性を高めるためのボタンが複数用意されています。 たとえば、IntelliSense 完了モードの切り替え、インデントの増減、ブックマークの設定、コードのコメント アウトを行うことができます。 このセクションでは、コンパイルしたくないコードをコメント アウトします。
+ツールバー (Visual Studio のメニュー バーの下にあるボタンの列) は、コード作成時の生産性を高めるのに役立ちます。 たとえば、IntelliSense 補完モードの切り替え (特に、[IntelliSense](using-intellisense.md) は、一致するメソッドの一覧を表示するコーディング支援機能)、行のインデントの増減、またはコンパイルしたくないコードをコメント アウトを行うことができます。 このセクションでは、一部のコードをコメント アウトします。
 
 ![エディターのツール バー](media/quickstart-editor-toolbar.png)
 
@@ -86,7 +88,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
                                 select word;
     ```
 
-1. `morewords` 変数は現在使用していませんが、後で使用するかもしれないので、削除したくありません。 そこで、これらの行をコメント アウトしましょう。 終了セミコロンまでの `morewords` の定義全体を選択し、ツールバーの **[選択された行をコメント アウトします。]** ボタンを選択します。あるいは、**Ctrl**+**K** キー、**Ctrl**+**C** キーを押します。
+1. `morewords` 変数は現在使用していませんが、後で使用するかもしれないので、完全に削除したくありません。 そこで、これらの行をコメント アウトしましょう。 終了セミコロンまでの `morewords` の定義全体を選択し、ツールバーの **[選択された行をコメント アウトします。]** ボタンを選択します。 キーボードを使用する場合は、**Ctrl** + **K** キー、**Ctrl** + **C** キーを押します。
 
    ![コメント アウト ボタン](media/quickstart-comment-out.png)
 
@@ -94,7 +96,7 @@ Visual Studio で提供されている便利なコード スニペットを使�
 
 ## <a name="collapse-code-blocks"></a>コード ブロックを折りたたむ
 
-生成された `Class1` の空のコンストラクターは表示したくありません。コードのビューを整理するために、ビューを折りたたみましょう。 コンストラクターの最初の行の余白にある、内部にマイナス記号が表示された小さな灰色のボックスを選択します。 または、キーボードを使用している場合は、コンストラクター コード内の任意の場所にカーソルを置き、**Ctrl**+**M** キー、**Ctrl**+**M** キーを押します。
+生成された [constructor](/dotnet/csharp/programming-guide/classes-and-structs/constructors) for `Class1` の空のコンストラクターは表示したくありません。コードのビューを整理するために、ビューを折りたたみましょう。 コンストラクターの最初の行の余白にある、内部にマイナス記号が表示された小さな灰色のボックスを選択します。 または、キーボードを使用している場合は、コンストラクター コード内の任意の場所にカーソルを置き、**Ctrl** + **M** キー、**Ctrl** + **M** キーを押します。
 
 ![アウトライン折りたたみボタン](media/quickstart-collapse.png)
 
@@ -102,9 +104,9 @@ Visual Studio で提供されている便利なコード スニペットを使�
 
 ## <a name="view-symbol-definitions"></a>シンボル定義の表示
 
-Visual Studio エディターでは、型やメソッドなどの定義の検査を容易に行うことができます。1 つの方法として、たとえば、シンボルが参照されている任意の場所で **[定義へ移動]** を選択して、定義を含むファイルに移動します。 作業中のファイルからフォーカスを移動しないより迅速な方法としては、[[定義をここに表示]](../ide/go-to-and-peek-definition.md#peek-definition) を使用します。 `string` の定義を参照してみましょう。
+Visual Studio エディターでは、型やメソッドなどの定義の検査を容易に行うことができます。1 つの方法として、たとえば、シンボルが参照されている任意の場所で **[定義へ移動]** を選択して、定義を含むファイルに移動します。 作業中のファイルからフォーカスを移動しないより迅速な方法としては、[[定義をここに表示]](../ide/go-to-and-peek-definition.md#peek-definition) を使用します。 `string` 型の定義を参照してみましょう。
 
-1. `string` が出現している箇所を右クリックし、コンテンツ メニューから **[定義をここに表示]** を選択するか&mdash;、または **Alt**+**F12** キーを押します。
+1. `string` が出現している箇所を右クリックし、コンテンツ メニューから **[定義をここに表示]** を選択します。 または、**Alt** + **F12** キーを押します。
 
    `String` クラスの定義を含むポップアップ ウィンドウが表示されます。 ポップアップ ウィンドウ内をスクロールすることも、参照しているコードから別の種類の定義を参照することもできます。
 
@@ -114,7 +116,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 ## <a name="use-intellisense-to-complete-words"></a>IntelliSense を使用した入力補完
 
-コードを記述する場合、[IntelliSense](../ide/using-intellisense.md) は貴重なリソースです。 このリソースでは、使用可能な型のメンバーに関する情報、またはメソッドの各種オーバーロードのためのパラメーターの詳細を表示できます。 また、IntelliSense を使用すると、単語を区別するために十分な文字を入力した後に入力補完を利用することができます。 順序付けされた文字列をコンソール ウィンドウに出力するコード行を追加してみましょう。
+コードを記述する場合、[IntelliSense](../ide/using-intellisense.md) は貴重なリソースです。 このリソースでは、使用可能な型のメンバーに関する情報、またはメソッドの各種オーバーロードのためのパラメーターの詳細を表示できます。 また、IntelliSense を使用すると、単語を区別するために十分な文字を入力した後に入力補完を利用することができます。 プログラムからの出力が表示される標準的な場所であるコンソール ウィンドウに、順序付けされた文字列を出力するコード行を追加してみましょう。
 
 1. `query` 変数の下で、次のコードの入力を開始します。
 
@@ -124,7 +126,7 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
    IntelliSense が `query` シンボルに関する**クイック ヒント**を表示しているのがわかります。
 
-   ![IntelliSense の入力候補](media/quickstart-intellisense-completion-list.png)
+   ![Visual Studio での IntelliSense の入力候補](media/quickstart-intellisense-completion-list.png)
 
 1. IntelliSense の "入力候補" 機能を使用して単語 `query` の残りを挿入するには、**Tab** キーを押します。
 
@@ -141,11 +143,11 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 だれも最初から適切なコードは記述できないものです。変更を必要とする可能性のある要素の 1 つに、変数またはメソッドの名前があります。 Visual Studio の[リファクタリング](../ide/refactoring-in-visual-studio.md)機能を使用して、`_words` 変数の名前を `words` に変更してみましょう。
 
-1. `words` 変数の定義にカーソルを置き、右クリックまたはコンテキスト メニューから **[名前の変更]** を選択するか、**Ctrl**+**R** キー、**Ctrl**+**R** キーを押します。
+1. `_words` 変数の定義にカーソルを置き、右クリックまたはコンテキスト メニューから **[名前の変更]** を選択するか、**Ctrl**+**R** キー、**Ctrl**+**R** キーを押します。
 
    エディターの右上に **[名前の変更]** ダイアログ ボックスがポップアップ表示されます。
 
-1. 目的のファイル名 `words` を入力します。 クエリ内の `words` への参照も名前が自動的に変更されることに注意してください。 **Enter** キーを押す前に、**[名前の変更]** ポップアップ ボックスで **[コメントを含める]** チェック ボックスを選択します。
+1. 目的の名前 **words** を入力します。 クエリ内の `words` への参照も名前が自動的に変更されることに注意してください。 **Enter** キーを押す前に、**[名前の変更]** ポップアップ ボックスで **[コメントを含める]** チェック ボックスを選択します。
 
    ![[名前の変更] ダイアログ ボックス](media/quickstart-rename.png)
 
@@ -155,12 +157,12 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 ## <a name="next-steps"></a>次の手順
 
-Visual Studio エディターにおけるこのクイックスタートは完了しました。 次に、Visual Studio IDE の他のクイックスタートを試してみる、[コード内を移動](../ide/navigating-code.md)する他の方法を参照する、またはこれまで見てきた機能の詳細情報へのリンクを確認することができます。 または他の方法でコーディングをお楽しみください。
+Visual Studio エディターにおけるこのクイック スタートは完了しました。 次に、Visual Studio 開発環境の他のクイック スタート ([クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)や[クイックスタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)など) を試してみる、[コード内を移動](../ide/navigating-code.md)する他の方法を参照する、またはこれまで見てきた機能の詳細情報へのリンクを確認することができます。 または他の方法でコーディングをお楽しみください。
 
 ## <a name="see-also"></a>関連項目
 
 - [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-- [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+- [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
 - [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
 - [コード スニペット](../ide/code-snippets.md)
 - [アウトライン](../ide/outlining.md)

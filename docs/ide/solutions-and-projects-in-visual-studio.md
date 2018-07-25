@@ -26,12 +26,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe7db915f2953bf99b9805700e1236d3d79a194a
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 7368778928384f50e96bfd8c5f3f1e107e6b411d
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747627"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089660"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
 
@@ -53,7 +53,12 @@ Visual Studio では、プロジェクト ファイルは**ソリューション
 
 プロジェクトは*ソリューション* 内に含まれます。 ソリューションには、1 つ以上の関連するプロジェクトと共に、ビルド情報、Visual Studio ウィンドウの設定、および特定のプロジェクトに関連付けられていないその他のファイルが含まれます。 ソリューションは独自の形式を持つテキスト ファイル (拡張子: *.sln*) で記述され、手動での編集を意図していません。
 
-ソリューションには、プロジェクトで作業したユーザー別の設定、優先設定、構成情報が格納される *.suo* ファイルが関連付けられています。
+Visual Studio では、ソリューションの設定を格納するために、2 種類のファイル (*.sln* および *.suo*) を使用します。
+
+|拡張子|name|説明|
+|---------------|----------|-----------------|
+|.sln|Visual Studio ソリューション|ソリューション内のプロジェクト、プロジェクト項目、およびソリューション項目を整理します。|
+|.suo|ソリューション ユーザー オプション|ユーザー レベルの設定やブレークポイントなどのカスタマイズを格納します。|
 
 ## <a name="create-new-projects"></a>プロジェクトの新規作成
 

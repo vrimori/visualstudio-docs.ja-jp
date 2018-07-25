@@ -9,12 +9,12 @@ ms.author: mblome
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadcc8f2a3e50f9a23da3e3bbc6689c643904470
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 6cca918309c0febb7b9c86b214d459a6bc8e37be
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751625"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945485"
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 
@@ -48,20 +48,20 @@ Boost.Test には [Boost](http://www.boost.org/) が必要です。 Boost がイ
 
 1. 新しいファイルには、サンプル テスト メソッドが含まれます。 プロジェクトをビルドして、**テスト エクスプ ローラー**がメソッドを検出できるようにします。
 
-項目テンプレートは、Boost.Test の単一ヘッダー バリアントを使用しますが、スタンドアロン ライブラリ バリアントを使用するように #include パスを変更できます。 詳細については、「[インクルード ディレクティブを追加する](#add_include_directives)」を参照してください。
+項目テンプレートは、Boost.Test の単一ヘッダー バリアントを使用しますが、スタンドアロン ライブラリ バリアントを使用するように #include パスを変更できます。 詳細については、「[インクルード ディレクティブを追加する](#add-include-directives)」を参照してください。
 
 ## <a name="create-a-test-project-visual-studio-2017-version-155"></a>テスト プロジェクトを作成する (Visual Studio 2017 バージョン 15.5)
 
 Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる構成済みのテスト プロジェクトまたは項目テンプレートはありません。 したがって、テストを保持するコンソール アプリケーション プロジェクトを作成して構成する必要があります。
 
-1. **ソリューション エクスプローラー**で、ソリューション ノードを右クリックして、**[追加]** > **[新しいプロジェクト...]** の順に選択します。
+1. **ソリューション エクスプローラー**で、ソリューション ノードを右クリックして、**[追加]** > **[新しいプロジェクト]** の順に選択します。
 
 1. 左側のウィンドウで **[Visual C++]** > **[Windows デスクトップ]** を選んだ後、**[Windows コンソール アプリケーション]** テンプレートを選択します。
 
 1. プロジェクト名を設定し、**[OK]** を選択します。
 1. .cpp ファイル内の `main` 関数を削除します。
 
-1. Boost.Test の単一ヘッダーまたは動的ライブラリ バージョンを使用している場合は、「[インクルード ディレクティブを追加する](#add_include_directives)」に進みます。 スタティック ライブラリ バージョンを使用している場合は、追加の構成を実行する必要があります。
+1. Boost.Test の単一ヘッダーまたは動的ライブラリ バージョンを使用している場合は、「[インクルード ディレクティブを追加する](#add-include-directives)」に進みます。 スタティック ライブラリ バージョンを使用している場合は、追加の構成を実行する必要があります。
 
    a.  プロジェクト ファイルを編集するには、最初にプロジェクト ファイルをアンロードします。 **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックして **[プロジェクトのアンロード]** を選択します。 次に、プロジェクト ノードを右クリックして、**[<名前\>.vcxproj の編集]** を選択します。
 
@@ -112,7 +112,7 @@ Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる�
 #include "../MyProgram/MyClass.h" // project being tested
 #include <string>
 
-BOOST_AUTO_TEST_CASE(my\_boost_test)
+BOOST_AUTO_TEST_CASE(my_boost_test)
 {
     std::string expected_value = "Bill";
 

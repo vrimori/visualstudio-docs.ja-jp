@@ -10,22 +10,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 749bc81ff5c1ba325f7b84e6affccc81dc88055d
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: ceee8ee3781a367f351f20ca92b83f4db000b42b
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34336033"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844766"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのインストルメンテーション方式を使用すると、動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションから、詳しいタイミング データ、.NET のメモリの割り当てデータ、.NET オブジェクトの有効期間に関するデータを収集できます。  
   
- このトピックでは、web.config 構成ファイルを変更して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのインストルメント化とプロファイルを有効にする方法について説明します。  
+ このトピックでは、*web.config* 構成ファイルを変更して [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのインストルメント化とプロファイルを有効にする方法について説明します。  
   
 > [!NOTE]
->  サンプリング プロファイル方式を使用する場合や、プリコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] モジュールをインストルメント化する場合は、web.config ファイルを変更する必要はありません。  
+>  サンプリング プロファイル方式を使用する場合や、プリコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] モジュールをインストルメント化する場合は、*web.config* ファイルを変更する必要はありません。  
   
- web.config ファイルのルートは、**configuration** 要素です。 動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをインストルメント化およびプロファイルするには、次の要素を追加するか変更する必要があります。  
+ *web.config* ファイルのルートは、**configuration** 要素です。 動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションをインストルメント化およびプロファイルするには、次の要素を追加するか変更する必要があります。  
   
 -   プロファイリングを制御する Microsoft.VisualStudio.Enterprise.ASPNetHelper アセンブリを識別する **configuration/runtime/assemblyBinding/dependentAssembly** 要素。 **dependentAssembly** 要素には、2 つの子要素、**assemblyIdentity** と **codeBase** が含まれます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34336033"
   
 -   プロファイリング ツールの場所を識別する 2 つの **add** 要素が **configuration/appSettings** セクションに追加されます。  
   
- アプリケーションの構成を復元するために使用できるように、変更前の web.config ファイルのコピーを作成することをお勧めします。  
+ アプリケーションの構成を復元するために使用できるように、変更前の *web.config* ファイルのコピーを作成することをお勧めします。  
   
 ### <a name="to-add-the-aspnethelper-assembly-as-a-configurationruntimeassemblybindingdependentassembly-element"></a>ASPNetHelper アセンブリを configuration/runtime/assemblyBinding/dependentAssembly 要素として追加するには  
   
@@ -176,7 +176,7 @@ ms.locfileid: "34336033"
 ```  
   
 ## <a name="example"></a>例  
- 次に示すのは、動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Web アプリケーションのインストルメント化とプロファイルを可能にする完全な web.config ファイルです。 この例では、変更前のファイルには他の設定が含まれていないことを前提としています。  
+ 次に示すのは、動的にコンパイルされた [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーションのインストルメント化とプロファイルを可能にする完全な *web.config* ファイルです。 この例では、変更前のファイルには他の設定が含まれていないことを前提としています。  
   
 ```xml  
 <?xml version="1.0"?>  

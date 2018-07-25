@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ab725659207813bb88d505b1318a175e602c5ade
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: d88f1e258bf8aa9801555c256f825841fff9d476
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750494"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089504"
 ---
-# <a name="tutorial-step-6-use-the-polls-django-web-project-template"></a>チュートリアル手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
+# <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
 **前の手順: [Django でユーザーを認証する](learn-django-in-visual-studio-step-05-django-authentication.md)**
 
@@ -368,11 +368,11 @@ Visual Studio で "空の Django Web プロジェクト"、"Django Web プロジ
 
 開発用コンピューター上で Web アプリを実行することは、アプリを顧客に提供するための単なる 1 つの手順です。 今後の手順には、以下のようなタスクがあります。
 
+- Web アプリを Azure App Service などの運用サーバーに展開します。 Django アプリに必要な具体的な変更などについては、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
+
 - `templates/404.html` というテンプレートを作成して、404 ページをカスタマイズします。 このテンプレートがある場合、Django は既定のテンプレートではなくこのテンプレートを使用します。 詳細については、Django ドキュメントの「[Error views](https://docs.djangoproject.com/en/2.0/ref/views/#error-views)」(エラー ビュー) を参照してください。
 
 - `tests.py` で単体テストを作成します。Visual Studio プロジェクト テンプレートには、そのための出発点が用意されています。詳細については、Django ドキュメントの「[Writing your first Django app, part 5 - testing](https://docs.djangoproject.com/en/2.0/intro/tutorial05/)」(最初の Django アプリを作成する、パート 5 - テスト) と「[Testing in Django](https://docs.djangoproject.com/en/2.0/topics/testing/)」(Django のテスト) を参照してください。
-
-- Web アプリを Azure App Service などの運用サーバーに展開します。 Django アプリに必要な具体的な変更などについては、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
 - SQLite から、PostgreSQL、MySQL、SQL Server など (これらはいずれも Azure でホストできます) の運用レベルのデータ ストアにアプリを変更します。 「[When to use SQLite](https://www.sqlite.org/whentouse.html)」(SQLite を使用する場合) (sqlite.org) で説明されているように、SQLite は、1 日あたり 100,000 ヒット未満のトラフィックが中小規模のサイトには適していますが、高ボリュームのサイトにはお勧めできません。 また、単一のコンピューターに制限されているため、負荷分散処理や geo レプリケーションなど、マルチサーバーのシナリオには使用できません。 他のデータベースに対する Django のサポートについては、「[Database setup](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup)」(データベースの設定) を参照してください。 テーブルや BLOB のような Azure ストレージ サービスを使用する場合は、[Azure SDK for Python](azure-sdk-for-python.md) も使用できます。
 

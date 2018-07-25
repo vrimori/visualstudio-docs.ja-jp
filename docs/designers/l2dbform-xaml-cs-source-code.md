@@ -10,26 +10,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 793e1cbe4c03cb5ddfec51d583437a9b5294fbd2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 405ca2a0d2f676cb56d2c5dffebc1bac1230015d
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31926058"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38977734"
 ---
-# <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs Source Code
+# <a name="l2dbformxamlcs-source-code"></a>L2DBForm.xaml.cs sauce コード
 
-このトピックでは、L2DBForm.xaml.cs ファイルの C# ソース コードの内容と説明を示します。 このファイルに含まれている L2XDBForm 部分クラスは、3 つの論理的な部分、つまりデータ メンバー、`OnRemove`、`OnAddBook` ボタン クリック イベント ハンドラーに分けることができます。
+このトピックでは、*L2DBForm.xaml.cs* ファイルの C# ソース コードの内容と説明を示します。 このファイルに含まれている L2XDBForm 部分クラスは、3 つの論理的な部分、つまりデータ メンバー、`OnRemove`、`OnAddBook` ボタン クリック イベント ハンドラーに分けることができます。
 
 ## <a name="data-members"></a>データ メンバー
 
-このクラスを L2DBForm.xaml で使用されているウィンドウ リソースに関連付けるために、2 つのプライベート データ メンバーが使用されています。
+このクラスを *L2DBForm.xaml* で使用されているウィンドウ リソースに関連付けるために、2 つのプライベート データ メンバーが使用されています。
 
 -   名前空間変数 `myBooks` は、`"http://www.mybooks.com"` に初期化されます。
 
--   メンバー `bookList` は、コンストラクター内で次の行を使用して L2DBForm.xaml 内の CDATA 文字列に初期化されます。
+-   メンバー `bookList` は、コンストラクター内で次の行を使用して *L2DBForm.xaml* 内の CDATA 文字列に初期化されます。
 
-    ```
+    ```csharp
     bookList = (XElement)((ObjectDataProvider)Resources["LoadedBooks"]).Data;
     ```
 
@@ -41,7 +41,7 @@ ms.locfileid: "31926058"
 
 -   2 番目のステートメントでは、**[Add New Book]\(新しい書籍の追加\)** ユーザー インターフェイス (UI) セクションでユーザーが入力した文字列値から新しい <xref:System.Xml.Linq.XElement> が作成されます。
 
--   最後のステートメントでは、この新しい書籍要素が、L2DBForm.xaml のデータ プロバイダーに追加されます。 その結果、動的なデータ バインドによって UI がこの新しい項目で自動的に更新されます。ユーザーがコードを追加する必要はありません。
+-   最後のステートメントでは、この新しい書籍要素が、*L2DBForm.xaml* のデータ プロバイダーに追加されます。 その結果、動的なデータ バインドによって UI がこの新しい項目で自動的に更新されます。ユーザーがコードを追加する必要はありません。
 
 ## <a name="onremove-event-handler"></a>OnRemove イベント ハンドラー
 
@@ -51,13 +51,13 @@ ms.locfileid: "31926058"
 
 -   まず、リスト ボックスで現在選択されている項目に関連する書籍要素が取得されます。
 
-    ```
+    ```csharp
     XElement selBook = (XElement)lbBooks.SelectedItem;
     ```
 
 -   次に、この要素がデータ プロバイダーから削除されます。
 
-    ```
+    ```csharp
     selBook.Remove();
     ```
 
@@ -141,5 +141,5 @@ namespace LinqToXmlDataBinding {
 
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
+- [チュートリアル : LinqToXmlDataBinding の例](../designers/walkthrough-linqtoxmldatabinding-example.md)
 - [L2DBForm.xaml ソース コード](../designers/l2dbform-xaml-source-code.md)

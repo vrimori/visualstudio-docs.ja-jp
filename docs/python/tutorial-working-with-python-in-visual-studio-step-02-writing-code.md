@@ -1,7 +1,7 @@
 ---
 title: Python の概要のチュートリアル、手順 2、コードの記述と実行
 description: コードの編集やプロジェクトの実行など、Visual Studio での Python 機能の中核となるチュートリアルの手順 2。
-ms.date: 01/16/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,16 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0769005bbf3715ae46a70e5461a6e34e50830c94
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 563b1151994f04bcecf7bc64ac802b6cacbec73c
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32031551"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174842"
 ---
-# <a name="step-2-writing-and-running-code"></a>手順 2: コードを記述して実行する
+# <a name="step-2-write-and-run-code"></a>手順 2: コードを記述して実行する
 
-**前の手順: [Python プロジェクトを作成する](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
+**前の手順: [新しい Python プロジェクトを作成する](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
 
 ソリューション エクスプローラーがプロジェクト ファイルを管理する場所であるのに対し、*エディター* ウィンドウは通常、ファイルの*コンテンツ* (ソース コードなど) を操作する場所です。 エディターは編集中のファイルの種類 を、プログラミング言語 (ファイル拡張子に基づく) などの状況から認識し、構文の色分け表示やオートコンプリートなど、その言語に適した機能を IntelliSense を使用して提供します。
 
@@ -91,7 +91,7 @@ ms.locfileid: "32031551"
 > [!div class="nextstepaction"]
 > [対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [コードの編集](editing-python-code-in-visual-studio.md)
 - [コードの書式設定](formatting-python-code.md)

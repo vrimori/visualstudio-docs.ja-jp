@@ -10,34 +10,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1757dc778c45d3b9c6afd7f289b6598728dc7687
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 485350efd38fda9c141fe0ee1ae9ee5cfbffcafd
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569304"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056372"
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15 の新機能
-MSBuild は現在 [.NET Core SDK](https://www.microsoft.com/net/download/core) の一部として利用でき、Windows、macOS、Linux で .NET Core プロジェクトをビルドできます。  
+
+MSBuild は現在 [.NET Core SDK](https://www.microsoft.com/net/download/core) の一部として利用でき、Windows、macOS、Linux で .NET Core プロジェクトをビルドできます。
 
 ## <a name="changed-path"></a>変更されたパス
+
  MSBuild は Visual Studio の各バージョンのフォルダーにインストールされます。 たとえば、`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild` のようにします。 次の PowerShell モジュールを使用して MSBuild を検索することもできます: [vssetup.powershell](https://github.com/Microsoft/vssetup.powershell)。
 
  MSBuild は、グローバル アセンブリ キャッシュにインストールされなくなりました。 MSBuild をプログラムで参照するには、NuGet パッケージを使用します。
 
-## <a name="changed-properties"></a>変更されたプロパティ  
- 新しいバージョン番号に伴い、次の MSBuild プロパティが更新されました。  
+## <a name="changed-properties"></a>変更されたプロパティ
 
--   `MSBuildToolsVersion`: このバージョンのツールでは 15.0 になります。 アセンブリのバージョンは 15.1.0.0 です。
+ 新しいバージョン番号に伴い、次の MSBuild プロパティが更新されました。
 
--   `MSBuildToolsPath`: 固定の場所はなくなりました。 既定では、Visual Studio のインストール場所に相対的な MSBuild\15.0\Bin フォルダーにありますが、Visual Studio のインストール場所はインストール時に変更できます。
+- `MSBuildToolsVersion`: このバージョンのツールでは 15.0 になります。 アセンブリのバージョンは 15.1.0.0 です。
 
--   `ToolsVersion`: 値はレジストリで設定されなくなりました。  
+- `MSBuildToolsPath`: 固定の場所はなくなりました。 既定では、Visual Studio のインストール場所に相対的な MSBuild\15.0\Bin フォルダーにありますが、Visual Studio のインストール場所はインストール時に変更できます。
 
--   `SDK35ToolsPath` と `SDK40ToolsPath`: これらのプロパティは、このバージョンの Visual Studio に含まれている .NET Framework SDK を指しています (たとえば、4.X ツールの場合は 10.0A など)。  
+- `ToolsVersion`: 値はレジストリで設定されなくなりました。
+
+- `SDK35ToolsPath` と `SDK40ToolsPath`: これらのプロパティは、このバージョンの Visual Studio に含まれている .NET Framework SDK を指しています (たとえば、4.X ツールの場合は 10.0A など)。
 
 ## <a name="updates"></a>更新
-- [Project 要素](../msbuild/project-element-msbuild.md)には新しい `SDK` 属性があります。 `Xmlns` 属性も省略できます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](/dotnet/core/packages)」および「[.NET Core の csproj 形式に追加されたもの](/dotnet/core/tools/csproj)」を参照してください。
+- [Project 要素](../msbuild/project-element-msbuild.md)には新しい `SDK` 属性があります。 `Xmlns` 属性も省略できます。 `SDK` 属性の詳細については、「[方法: MSBuild プロジェクト SDK の参照](../msbuild/how-to-use-project-sdk.md)」「[パッケージ、メタパッケージ、フレームワーク](/dotnet/core/packages)」および「[.NET Core の csproj 形式に追加されたもの](/dotnet/core/tools/csproj)」を参照してください。
 - ターゲットの外部の [Item 要素](../msbuild/item-element-msbuild.md)には新しい `Update` 属性があります。 また、`Remove` 属性に対する制限も排除されました。
 - `Directory.Build.props` は、ディレクトリの下のプロジェクトをカスタマイズできるようにする、ユーザー定義のファイルです。 `ImportDirectoryBuildTargets` プロパティを **false** に設定しない限り、このファイルは Microsoft.Common.props から自動的にインポートされます。 `Directory.Build.targets` は Microsoft.Common.targets によってインポートされます。
 - 現行の属性リストと競合しない名前のメタデータを任意で属性として表現できます。 詳しくは、[Item 要素](../msbuild/item-element-msbuild.md)に関する記事をご覧ください。

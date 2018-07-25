@@ -15,14 +15,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 02fd481455c5198a1d8ae0828072f8085d1d027a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0e5d3e501138ede3679214650e29d602a6b7cf94
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31966161"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282832"
 ---
-# <a name="coding-a-custom-extraction-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム抽出規則のコーディング
+# <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム抽出規則のコーディング
 
 独自の抽出規則を作成できます。 これを行うには、抽出規則クラスから独自の規則を派生します。 抽出規則は、<xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule> 基底クラスから派生します。
 

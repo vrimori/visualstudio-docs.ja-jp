@@ -2,7 +2,7 @@
 title: ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する | Microsoft Docs
 description: ファイアウォールまたはプロキシ サーバーを使用する場合に、ホワイトリストに登録したり開いたりすることがあるドメイン URL、ポート、プロトコルを確認します
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 07/10/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2aeb7b1fc308247d5eebb810113aba1ed4afe89c
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 911bedf391a37f64ba1f71179e2a3060be152842
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34765669"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978438"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する
 
@@ -49,7 +49,7 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | download.visualstudio.com | パッケージのダウンロード場所を設定する |
 | dl.xamarin.com | パッケージのダウンロード場所を設定する |
 | visualstudiogallery.msdn.microsoft.com | Visual Studio 拡張機能のダウンロード場所 |
-| www.visualstudio.com | ドキュメントの場所 |
+| visualstudio.microsoft.com | ドキュメントの場所 |
 | docs.microsoft.com | ドキュメントの場所 |
 | msdn.microsoft.com | ドキュメントの場所 |
 | www.microsoft.com | ドキュメントの場所 |
@@ -118,7 +118,8 @@ Visual Studio インストーラーによって、さまざまなドメインや
 | スナップショット <br>デバッガー | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6.Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022 (Visual Studio バージョン依存) | 1..json ファイルに対してクエリを実行して、アプリ サービス SKU サイズを取得します <br>2.さまざまな Azure RM 呼び出し <br>3.サイト ウォーム アップ呼び出し  <br>4.顧客の対象 App Service Kudu エンドポイント <br>5.nuget.org で発行されたサイト拡張機能バージョンに対してクエリを実行します <br>6.リモート デバッグ チャンネル |
 |Azure Stream Analytics <br><br>HDInsight | Management.azure.com |https|443 |ASA ジョブの表示、送信、実行、管理で使用されます <br><br> HDI クラスターを参照し、HDI ジョブを送信、診断、およびデバッグするために使用されます |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | ジョブのコンパイル、送信、表示、診断、およびデバッグのために使用されます。ADLS ファイルを参照するために使用されます。ファイルをアップロードおよびダウンロードするために使用されます。 |
-|パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。 パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
+| パッケージ サービス | [アカウント].visualstudio.com <br/> [アカウント].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | 特定のビルド タスク (NuGet Tool インストーラー、Node Tool インストーラーなど) にのみ、またはフィードで公共のアップストリームを使用する場合にのみ、*.npmjs.org、*.nuget.org、*.nodejs.org が必要です。 パッケージ サービスの中心的機能には、他の 3 つのドメインが必要です。 |
+| VSTS | *.vsassets.io <br/> static2.sharepointonline.com  |  |  | VSTS との接続に使用されます |
 |||||||
 
 ## <a name="troubleshoot-network-related-errors"></a>ネットワーク関連のエラーをトラブルシューティングする

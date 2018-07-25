@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e40e74dd8e7b2b83f6d4239e6b66c9852c6de604
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9368e752a2b3064c8f4b70bde6005fa5996d4f78
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575320"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945963"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest タスク
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストまたはネイティブ マニフェストを生成します。 ネイティブ マニフェストでは、コンポーネントの一意の ID を定義し、コンポーネントを構成するアセンブリおよびファイルを指定することによって、コンポーネントを記述します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストはネイティブ マニフェストを拡張するもので、アプリケーションのエントリ ポイントとセキュリティ レベルを指定します。  
@@ -40,14 +40,14 @@ ms.locfileid: "31575320"
 |`AssemblyVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> 生成されるマニフェストのアセンブリ ID の `Version` フィールドを指定します。 このパラメーターを指定しない場合は、既定値の "1.0.0.0" が使用されます。|  
 |`ClrVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションで必要な共通言語ランタイム (CLR: Common Language Runtime) の最低限のバージョンを指定します。 既定値は、ビルド システムで使用されている CLR のバージョンです。 タスクがネイティブ マニフェストを生成する場合には、このパラメーターは無視されます。|  
 |`ConfigFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アプリケーション構成ファイルがどのアイテムに含まれているのかを指定します。 タスクがネイティブ マニフェストを生成する場合には、このパラメーターは無視されます。|  
-|`Dependencies`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 作成するマニフェストが依存する一連のアセンブリを定義したアイテム一覧を指定します。 配置状態に関するその他の情報や依存関係の種類を示したアイテム メタデータを添えると、各アイテムを詳細に記述できます。 詳細については、後述する「アイテム メタデータ」を参照してください。|  
+|`Dependencies`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 作成するマニフェストが依存する一連のアセンブリを定義したアイテム一覧を指定します。 配置状態に関するその他の情報や依存関係の種類を示したアイテム メタデータを添えると、各アイテムを詳細に記述できます。 詳細については、「[項目メタデータ](#item-metadata)」を参照してください。|  
 |`Description`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションまたはコンポーネントの説明を記述します。|  
 |`EntryPoint`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 作成されるマニフェスト アセンブリのエントリ ポイントを示すアイテムを 1 つ指定します。<br /><br /> [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストの場合、このパラメーターには、アプリケーションの実行時に起動されるアセンブリを指定します。|  
 |`ErrorReportUrl`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> ClickOnce インストールのエラー報告時にダイアログ ボックスに表示される Web ページの URL を指定します。|  
 |`FileAssociations`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ClickOnce の配置マニフェストに関連付けられている 1 つまたは複数のファイルの種類のリストを指定します。<br /><br /> ファイルの関連付けは、.NET Framework 3.5 以降が対象となっている場合にのみ有効です。|  
 |`Files`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> マニフェストに含めるファイルです。 各ファイルの完全パスを指定します。|  
 |`HostInBrowser`|省略可能な <xref:System.Boolean> 型のパラメーターです。<br /><br /> `true` の場合、WPF Web ブラウザー アプリケーションのように、アプリケーションがブラウザーでホストされます。|  
-|`IconFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アプリケーション アイコンのファイルを示します。 アプリケーション アイコンは、作成されるアプリケーション マニフェストに記述され、[スタート] メニューおよび [プログラムの追加と削除] ダイアログ ボックスで使用されます。 指定しなかった場合には、既定のアイコンが使用されます。 タスクがネイティブ マニフェストを生成する場合には、このパラメーターは無視されます。|  
+|`IconFile`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アプリケーション アイコンのファイルを示します。 アプリケーション アイコンは、作成されるアプリケーション マニフェストに記述され、**[スタート]** メニューおよび **[プログラムの追加と削除]** ダイアログで使用されます。 指定しなかった場合には、既定のアイコンが使用されます。 タスクがネイティブ マニフェストを生成する場合には、このパラメーターは無視されます。|  
 |`InputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> マニフェスト ジェネレーターのベースとして使用する、入力 XML ドキュメントを指定します。 これによって、アプリケーション セキュリティまたはカスタム マニフェスト定義など、構造化されたデータが出力マニフェストに反映されます。 XML ドキュメントのルート要素は、asmv1 名前空間内のアセンブリ ノードである必要があります。|  
 |`IsolatedComReferences`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 作成されるマニフェスト内で分離する COM コンポーネントを指定します。 このパラメーターを使用すると、"登録を必要としない COM" の配置用に COM コンポーネントを分離できます。 この機能は、標準の COM 登録の定義を使用してマニフェストを自動作成することによって実現されています。 ただし、正しく動作するためには、ビルド処理を行っているコンピューターに、対象の COM コンポーネントが登録されている必要があります。|  
 |`ManifestType`|省略可能な `String` 型のパラメーターです。<br /><br /> 作成するマニフェストの種類を指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> このパラメーターが指定されていない場合は、既定の `ClickOnce` が使用されます。|  
@@ -55,8 +55,8 @@ ms.locfileid: "31575320"
 |`OSVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションで必要なオペレーティング システム (OS) の最低限のバージョンを指定します。 たとえば、"5.1.2600.0" という値は、オペレーティング システムが Windows XP であることを示しています。 このパラメーターを指定しなかった場合には、.NET Framework. でサポートされている最低限の OS である Windows 98 Second Edition を示す "4.10.0.0" が使用されます。 タスクがネイティブ マニフェストを生成する場合には、この入力は無視されます。|  
 |`OutputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型の出力パラメーターです。<br /><br /> 生成される出力マニフェスト ファイルの名前を指定します。 このパラメーターが指定されていない場合、出力ファイルの名前は、生成されるマニフェストの ID から推測されます。|  
 |`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの対象プラットフォームを指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> このパラメーターが指定されていない場合は、既定の `AnyCPU` が使用されます。|  
-|`Product`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーション名を示します。 このパラメーターが指定されていない場合、名前は、生成されるマニフェストの ID から推測されます。 この名前は、[スタート] メニューに表示する名前として使用され、[プログラムの追加と削除] ダイアログ ボックスに表示される名前の一部としても使用されます。|  
-|`Publisher`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの発行者を指定します。 このパラメーターが指定されていない場合、名前は、登録されているユーザー名または生成されるマニフェストの ID から推測されます。 この名前は、[スタート] メニューに表示するフォルダー名として使用され、[プログラムの追加と削除] ダイアログ ボックスに表示される名前の一部としても使用されます。|  
+|`Product`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーション名を示します。 このパラメーターが指定されていない場合、名前は、生成されるマニフェストの ID から推測されます。 この名前は、**[スタート]** メニューに表示する名前として使用され、**[プログラムの追加と削除]** ダイアログ ボックスに表示される名前の一部としても使用されます。|  
+|`Publisher`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの発行者を指定します。 このパラメーターが指定されていない場合、名前は、登録されているユーザー名または生成されるマニフェストの ID から推測されます。 この名前は、**[スタート]** メニューに表示するフォルダー名として使用され、**[プログラムの追加と削除]** ダイアログ ボックスに表示される名前の一部としても使用されます。|  
 |`RequiresMinimumFramework35SP1`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> true の場合、アプリケーションでは .NET Framework 3.5 SP1 またはそれ以降のバージョンが必要です。|  
 |`TargetCulture`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションのカルチャを示し、生成されるマニフェストのアセンブリ ID の `Language` フィールドを指定します。 このパラメーターを指定しなかった場合、アプリケーションは、カルチャに依存しないと仮定されます。|  
 |`TargetFrameworkMoniker`|省略可能な `String` 型のパラメーターです。<br /><br /> ターゲット フレームワーク モニカーを指定します。|  
@@ -67,18 +67,18 @@ ms.locfileid: "31575320"
 |`UseApplicationTrust`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> true の場合、`Product`、`Publisher`、および `SupportUrl` の各プロパティがアプリケーション マニフェストに書き込まれます。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.GenerateManifestBase> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 Task クラスのパラメーターの一覧については、[「Task Base Class」](../msbuild/task-base-class.md) を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.GenerateManifestBase> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 Task クラスのパラメーターの一覧については、「[Task Base Class](../msbuild/task-base-class.md)」を参照してください。  
   
  `GenerateDeploymentManifest` タスクの使用方法については、「[GenerateApplicationManifest タスク](../msbuild/generateapplicationmanifest-task.md)」を参照してください。  
   
  各アイテムの配置状態に関するその他の情報を記述したアイテム メタデータを指定すると、依存関係やファイルについての情報をさらに詳細に入力することができます。  
   
-## <a name="item-metadata"></a>アイテム メタデータ  
+## <a name="item-metadata"></a>項目メタデータ  
   
 |メタデータ名|説明|  
 |-------------------|-----------------|  
 |`DependencyType`|依存関係をアプリケーションと一緒に発行およびインストールするのか、依存関係があらかじめ必要であるのかを示します。 このメタデータは、すべての依存関係に対して有効ですが、ファイルには適用されません。 このメタデータで使用できる値は次のとおりです。<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> 既定値は Install です。|  
-|`AssemblyType`|依存関係が、マネージ アセンブリであるのかネイティブ アセンブリであるのかを示します。 このメタデータは、すべての依存関係に対して有効ですが、ファイルには適用されません。 このメタデータで使用できる値は次のとおりです。<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> 既定値は `Unspecified` です。この値は、このタスクで自動的にアセンブリの種類を判断することを意味します。|  
+|`AssemblyType`|依存関係が、マネージド アセンブリであるのかネイティブ アセンブリであるのかを示します。 このメタデータは、すべての依存関係に対して有効ですが、ファイルには適用されません。 このメタデータで使用できる値は次のとおりです。<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> 既定値は `Unspecified` です。この値は、このタスクで自動的にアセンブリの種類を判断することを意味します。|  
 |`Group`|必要に応じてダウンロードする追加のファイルのグループを示します。 グループ名は、任意の文字列を、アプリケーションで定義します。 空の文字列 (既定) の場合は、ファイルがダウンロード グループに属していないことを示します。 グループに属していないファイルは、アプリケーションの初期ダウンロードの対象になります。 グループに属しているファイルの場合は、<xref:System.Deployment.Application> を使用してアプリケーションから明示的に要求された場合にだけダウンロードされます。<br /><br /> このメタデータは、`IsDataFile` に `false` が設定されているすべてのファイル、および、`DependencyType` に `Install` が設定されているすべての依存関係に対して有効です。|  
 |`TargetPath`|作成されるマニフェストで、パスを定義する方法を指定します。 この属性はすべてのファイルに対して有効です。 この属性を指定しなかった場合には、アイテムの規定に従います。 この属性は、`DependencyType` に `Install` が設定されているすべてのファイルおよび依存関係に対して有効です。|  
 |`IsDataFile`|ファイルがデータ ファイルであるかどうかを示す `Boolean` 型のメタデータ値です。 データ ファイルは、アプリケーションを更新したときに移行されるため、特別な扱いが必要です。 このメタデータはファイルに対してのみ有効です。 既定値は `False` です。|  
@@ -92,7 +92,7 @@ ms.locfileid: "31575320"
 >  次の例では、マニフェストの作成処理に着目するために、アプリケーションのバイナリはすべてビルド済みであると仮定してあります。 この例では、完全に実用的な [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置が作成されます。  
   
 > [!NOTE]
->  この例の `Thumbprint` タスクで使用されている `SignFile` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
+>  この例の `SignFile` タスクで使用されている `Thumbprint` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -145,7 +145,7 @@ ms.locfileid: "31575320"
 >  次の例では、マニフェストの作成処理に着目するために、アプリケーションのバイナリはすべてビルド済みであると仮定してあります。 この例では、完全に実用的な [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置が作成されます。  
   
 > [!NOTE]
->  この例の `Thumbprint` タスクで使用されている `SignFile` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
+>  この例の `SignFile` タスクで使用されている `Thumbprint` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -203,7 +203,7 @@ ms.locfileid: "31575320"
 >  次の例では、マニフェストの作成処理に着目するために、アプリケーションのバイナリはすべてビルド済みであると仮定してあります。 この例では、完全に実用的な [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置が作成されます。  
   
 > [!NOTE]
->  この例の `Thumbprint` タスクで使用されている `SignFile` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
+>  この例の `SignFile` タスクで使用されている `Thumbprint` プロパティの詳細については、「[SignFile タスク](../msbuild/signfile-task.md)」を参照してください。  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -315,9 +315,9 @@ ms.locfileid: "31575320"
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、`GenerateApplicationManifest` タスクを使用して、Test.exe アプリケーション用のネイティブ マニフェストを作成しています。Test.exe は、ネイティブ コンポーネント Alpha.dll および分離 COM コンポーネント Bravo.dll を参照しています。  
+ 次の例では、`GenerateApplicationManifest` タスクを使用して、*Test.exe* アプリケーション用のネイティブ マニフェストを作成しています。Test.exe は、ネイティブ コンポーネント *Alpha.dll* および分離 COM コンポーネント *Bravo.dll* を参照しています。  
   
- この例では、Registration Free COM を利用して、XCOPY でアプリケーションを配置できる Test.exe.manifest が作成されます。  
+ この例では *Test.exe.manifest* を作成し、アプリケーションを XCOPY で配置できるようにして、Registration Free COM を利用します。  
   
 > [!NOTE]
 >  次の例では、マニフェストの作成処理に着目するために、アプリケーションのバイナリはすべてビルド済みであると仮定してあります。 この例では、完全に実用的な [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置が作成されます。  
@@ -351,8 +351,8 @@ ms.locfileid: "31575320"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
  [GenerateDeploymentManifest タスク](../msbuild/generatedeploymentmanifest-task.md)   
  [SignFile タスク](../msbuild/signfile-task.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

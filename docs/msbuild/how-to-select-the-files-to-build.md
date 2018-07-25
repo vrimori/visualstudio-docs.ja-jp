@@ -14,17 +14,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 651570ef83f5f87d96ed27538cc4f6ffd569d41f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 64e9d438547ee27588c08fb522a027cd85432094
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31570679"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079700"
 ---
 # <a name="how-to-select-the-files-to-build"></a>方法: ビルドするファイルを選択する
 複数のファイルを含むプロジェクトをビルドするときに、各ファイルを個別にプロジェクト ファイルにリストしたり、ワイルドカードを使用して、1 つのディレクトリまたは入れ子になった一連のディレクトリ内のすべてのファイルを含めたりすることができます。  
   
-## <a name="specifying-inputs"></a>入力を指定する  
+## <a name="specify-inputs"></a>入力を指定する  
  項目は、ビルドの入力を表します。 項目の詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
  ビルドのファイルを含めるには、それらのファイルが [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイル内の項目リストに含まれている必要があります。 複数のファイルを項目リストに追加するには、ファイルを個別に含めるか、ワイルドカードを使用して一度に複数のファイルを含めます。  
@@ -35,7 +35,7 @@ ms.locfileid: "31570679"
   
      `<CSFile Include="form1.cs"/>`  
   
-     - または  
+     または 
   
      `<VBFile Include="form1.vb"/>`  
   
@@ -48,44 +48,44 @@ ms.locfileid: "31570679"
   
      `<CSFile Include="form1.cs;form2.cs"/>`  
   
-     - または  
+     または 
   
      `<VBFile Include="form1.vb;form2.vb"/>`  
   
-## <a name="specifying-inputs-with-wildcards"></a>ワイルドカードを使用して入力を指定する  
+## <a name="specify-inputs-with-wildcards"></a>ワイルドカードを使用して入力を指定する  
  ワイルドカードを使用して、すべてのファイルまたはサブディレクトリから特定のファイルのみを再帰的に含めることができます。 ワイルドカードの詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。  
   
- 次の例は、次のディレクトリとサブディレクトリ内のグラフィック ファイルを含むプロジェクトに基づいており、プロジェクト ファイルは Project ディレクトリに配置されています。  
+ 次の例は、次のディレクトリとサブディレクトリ内のグラフィック ファイルを含むプロジェクトに基づいており、プロジェクト ファイルは *Project* ディレクトリに配置されています。  
   
- Project\Images\BestJpgs  
+ *Project\Images\BestJpgs*  
   
- Project\Images\ImgJpgs  
+ *Project\Images\ImgJpgs*  
   
- Project\Images\ImgJpgs\Img1  
+ *Project\Images\ImgJpgs\Img1*  
   
-#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>Images ディレクトリとサブディレクトリ内のすべての .jpg ファイルを含めるには  
+#### <a name="to-include-all-jpg-files-in-the-images-directory-and-subdirectories"></a>*Images* ディレクトリとサブディレクトリ内のすべての *.jpg* ファイルを含めるには  
   
 -   次の `Include` 属性を使用します。  
   
      `Include="Images\**\*.jpg"`  
   
-#### <a name="to-include-all-jpg-files-starting-with-img"></a>"img" で始まるすべての .jpg ファイルを含めるには  
+#### <a name="to-include-all-jpg-files-starting-with-img"></a>*img* で始まるすべての *.jpg* ファイルを含めるには  
   
 -   次の `Include` 属性を使用します。  
   
      `Include="Images\**\img*.jpg"`  
   
-#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>ディレクトリ内の "jpg" で終わる名前を持つすべてのファイルを含めるには  
+#### <a name="to-include-all-files-in-directories-with-names-ending-in-jpgs"></a>ディレクトリ内の *jpg* で終わる名前を持つすべてのファイルを含めるには  
   
 -   次のいずれかの `Include` 属性を使用します。  
   
      `Include="Images\**\*jpgs\*.*"`  
   
-     - または  
+     または
   
      `Include="Images\**\*jpgs\*"`  
   
-## <a name="passing-items-to-a-task"></a>項目をタスクに渡す  
+## <a name="pass-items-to-a-task"></a>項目をタスクに渡す  
  プロジェクト ファイルでは、タスクで @() の表記を使用して、項目リスト全体をビルドの入力として指定できます。 この表記を使用して、すべてのファイルを個別にリストすることも、ワイルドカードを使用することもできます。  
   
 #### <a name="to-use-all-visual-c-or-visual-basic-files-as-inputs"></a>すべての Visual C# ファイルまたは Visual Basic ファイルを入力として使用するには  
@@ -94,7 +94,7 @@ ms.locfileid: "31570679"
   
      `<CSC Sources="@(CSFile)">...</CSC>`  
   
-     - または  
+     または 
   
      `<VBC Sources="@(VBFile)">...</VBC>`  
   
@@ -138,7 +138,7 @@ ms.locfileid: "31570679"
 ```  
   
 ## <a name="example"></a>例  
- 次のコード例では、ワイルドカードを使用してすべての .cs ファイルを含めます。  
+ 次のコード例では、ワイルドカードを使用してすべての *.cs* ファイルを含めます。  
   
 ```xml  
 <Project DefaultTargets="Compile"  
@@ -171,6 +171,6 @@ ms.locfileid: "31570679"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)   
  [項目](../msbuild/msbuild-items.md)

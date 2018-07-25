@@ -5,12 +5,12 @@ author: dantogno
 ms.author: v-davian
 ms.date: 05/25/2018
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 18839ce37feb4f2a113c4a8875ce1c25ddba31e1
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 6e5e6b90350aa16d4e0ffee04673a1aa1063cded
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34573272"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057100"
 ---
 # <a name="setup-visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity をセットアップする
 
@@ -42,7 +42,7 @@ Unity のインストールに含まれる Visual Studio for Mac のバージョ
 
 Unity 5.6.1 以降は既にあるが、Visual Studio for Mac はない場合は、Visual Studio for Mac を手動でインストールすることができます。 無料の Community Edition を含む Visual Studio for Mac のすべてのエディションが、Visual Studio for Mac Tools for Unity にバンドルされています。
 
-* Visual Studio for Mac を [visualstudio.com](https://www.visualstudio.com/) からダウンロードします。
+* Visual Studio for Mac を [visualstudio.microsoft.com](https://visualstudio.microsoft.com/) からダウンロードします。
 * Visual Studio for Mac Tools for Unity は、インストール プロセスの間に自動的にインストールされます。
 * インストールに関するその他のヘルプについては、[インストール ガイド](installation.md)の手順に従ってください。
 

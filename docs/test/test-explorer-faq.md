@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: 151f60d21914168ea62bdb2d978d93839c8b859b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d774a0daa9cc503bde91009b9c78288a6f043721
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31975629"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303284"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -51,7 +51,8 @@ ms.locfileid: "31975629"
 
 ### <a name="5-what-languages-and-test-frameworks-can-use-real-time-test-discovery"></a>5.リアルタイムのテスト検出では、どの言語およびテスト フレームワークを使用できますか?
 
-  [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、Roslyn コンパイラを使用してビルドされているため、マネージ言語 (C# および Visual Basic) に対してのみ機能します。 今のところ、リアルタイムのテスト検出は xUnit、NUnit、MSTest のフレームワークに対してのみ機能します。
+  
+  [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、Roslyn コンパイラを使用してビルドされているため、マネージド言語 (C# および Visual Basic) に対してのみ機能します。 今のところ、リアルタイムのテスト検出は xUnit、NUnit、MSTest のフレームワークに対してのみ機能します。
 
 ### <a name="6-how-can-i-turn-on-logs-for-the-test-explorer"></a>6.どうすればテスト エクスプローラーのログを有効にできますか?
 
@@ -72,7 +73,7 @@ ms.locfileid: "31975629"
   プロジェクト、名前空間、およびクラス グループの横にあるアイコンは、そのグループ内のテストの状態を反映します。 次の表を参照してください。
 
   ![テスト エクスプローラーの階層のアイコン](media/testex-hierarchyicons.png)
-  
+
 ### <a name="10-there-is-no-longer-a-file-path-filter-in-the-test-explorer-search-box"></a>10.テスト エクスプローラーの検索ボックスの "ファイル パス" フィルターはもう存在しません。
 
 **テスト エクスプローラー**の検索ボックスのファイル パス フィルターは、Visual Studio 2017 バージョン 15.7 プレビュー 3 で削除されました。 この機能は使用頻度が低く、この機能を除外することで、テスト エクスプローラーはテスト メソッドを高速で取得できます。 この変更によって開発フローが中断される場合は、[開発者コミュニティ](https://developercommunity.visualstudio.com/)でフィードバックを送信してその旨をお知らせください。

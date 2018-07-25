@@ -1,7 +1,7 @@
 ---
 title: Python アプリケーション プロジェクトの管理
 description: Visual Studio のプロジェクトの目的、Python コードのプロジェクトの作成および管理方法、Python で使用できるさまざまなプロジェクト テンプレート。
-ms.date: 03/05/2018
+ms.date: 06/27/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a0609b23ef0ed6847fa73b0144201f70e76252e4
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 7a4374a389176273f7ceaa63b680868fd546398e
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32032191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38778522"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio の Python プロジェクト
 
@@ -109,7 +109,7 @@ Visual Studio には、新規に、または既存のコードから、Python �
 - リンク ファイルに Link メタデータが含まれ、リンク パスがプロジェクト階層の外部の相対パスである
 - リンク パスがルートになっている
 
-### <a name="working-with-linked-files"></a>リンク ファイルの使用
+### <a name="work-with-linked-files"></a>リンク ファイルの使用
 
 既存の項目をリンクとして追加するには、ファイルを追加するプロジェクトのフォルダーを右クリックし、**[追加] > [既存の項目...]** を選びます。表示されるダイアログで、ファイルを選び、**[追加]** ボタンのドロップダウンから **[リンクとして追加]** を選びます。 競合するファイルがない場合は、選んだフォルダーにリンクが作成されます。 ただし、同じ名前のファイルが既に存在する場合、またはそのファイルへのリンクがプロジェクト内に既に存在する場合は、リンクは追加されません。
 

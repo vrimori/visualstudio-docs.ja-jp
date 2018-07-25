@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b03cfca6a575cf9c91b1e60b0e44212388cc7611
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 6d511c6deb65238dc918694ec78e669dcd297789
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750364"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37090050"
 ---
-# <a name="tutorial-step-4-use-the-full-django-web-project-template"></a>チュートリアル手順 4: 完全な Django Web プロジェクト テンプレートを使用する
+# <a name="step-4-use-the-full-django-web-project-template"></a>手順 4: Django Web プロジェクト テンプレートを使用する
 
 **前の手順: [静的ファイルを提供し、ページを追加し、テンプレート継承を使用する](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
 
@@ -73,7 +73,7 @@ Visual Studio の "空の Django Web プロジェクト" テンプレート上�
   - `requirements.txt`、Django 1.x での依存関係を含む。
   - `readme.html`、プロジェクトの作成後に Visual Studio に表示されるファイル。 前のセクションで述べたように、このファイルの指示に従ってアプリのスーパー ユーザー (管理者) アカウントを作成します。
 - `app` フォルダーには、ビュー、モデル、テスト、フォーム、テンプレート、および静的ファイルなど、すべてのアプリ ファイルが含まれています (手順 4-2 を参照). 通常は、より区別しやすいアプリ名を使用するために、このフォルダー名を変更します。
-- `DjangoWeb` (Django プロジェクト) フォルダーには、一般的な Django プロジェクト ファイルである `__init.py__`、`settings.py`、`urls.py`、および `wsgi.py` が含まれています。 プロジェクト テンプレートを使用することで、`settings.py` は既にアプリおよびデータベース ファイル用に構成されており、`urls.py` は既にログイン フォームを含むすべてのアプリ ページへのルートを使って構成されています。
+- `DjangoWeb` (Django プロジェクト) フォルダーには、一般的な Django プロジェクト ファイルである `__init__.py`、`settings.py`、`urls.py`、および `wsgi.py` が含まれています。 プロジェクト テンプレートを使用することで、`settings.py` は既にアプリおよびデータベース ファイル用に構成されており、`urls.py` は既にログイン フォームを含むすべてのアプリ ページへのルートを使って構成されています。
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問: Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
 
@@ -215,7 +215,8 @@ urlpatterns = [
 > [!div class="nextstepaction"]
 > [Django でユーザーを認証する](learn-django-in-visual-studio-step-05-django-authentication.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
+- [Azure App Service への Web アプリの展開](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - [最初の Django アプリの作成、パート 4 - フォームと汎用ビュー](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
 - GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a5da37b8b86f7529ffb4a870bc74787487ec5c0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d158d3d0fade2b44cf819cf40209a901534a18ad
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967029"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283277"
 ---
 # <a name="best-practices-for-coded-ui-tests"></a>コード化された UI テストのベスト プラクティス
 
@@ -28,7 +28,7 @@ ms.locfileid: "31967029"
 
 -   可能な限り**コード化された UI テスト ビルダー**を使用します。
 
--   `UIMap.designer.cs` ファイルは直接変更しないでください。 ファイルを変更すると、その変更内容が上書きされます。
+-   *UIMap.designer.cs* ファイルを直接変更しないでください。 ファイルを変更すると、その変更内容が上書きされます。
 
 -   記録されたメソッドのシーケンスとしてテストを作成します。 メソッドを記録する方法の詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」を参照してください。
 
@@ -38,7 +38,7 @@ ms.locfileid: "31967029"
 
 -   可能な場合は、記録される各メソッドを 10 未満の操作に制限します。 このモジュール式のアプローチにより、UI が変更された場合にメソッドを置き換えやすくなります。
 
--   各アサーションは、**コード化された UI テスト ビルダー**を使用して作成します。この場合、アサーション メソッドは `UIMap.Designer.cs` ファイルに自動的に追加されます。
+-   各アサーションは、**コード化された UI テスト ビルダー**を使用して作成します。この場合、アサーション メソッドは *UIMap.Designer.cs* ファイルに自動的に追加されます。
 
 -   ユーザー インターフェイス (UI) が変更された場合は、テスト メソッドまたはアサーション メソッドを再記録するか、既存のテスト メソッドの、影響を受けるセクションを再記録します。
 
@@ -46,13 +46,13 @@ ms.locfileid: "31967029"
 
 -   テスト対象のアプリケーションの UI コントロールを作成するときは、わかりやすい名前を使用します。 意味のある名前を使うと、自動生成されたコントロール名がいっそうわかりやすくて使いやすくなります。
 
--   API を使用したコーディングによりアサーションを作成する場合は、`UIMap.cs` ファイル内の <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスの部分でアサーションごとにメソッドを作成します。 アサーションを実行するには、このメソッドをテスト メソッドから呼び出します。
+-   API を使用したコーディングによりアサーションを作成する場合は、*UIMap.cs* ファイル内の <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> クラスの部分でアサーションごとにメソッドを作成します。 アサーションを実行するには、このメソッドをテスト メソッドから呼び出します。
 
--   API を使用してコーディングを直接行う場合は、可能な限り、`UIMap.Designer.cs` ファイルに生成されたクラスのプロパティとメソッドをコードで使用します。 これらのクラスを使用すると、作業が楽になり、信頼性と生産性が高まります。
+-   API を使用してコーディングを直接行う場合は、可能な限り、*UIMap.Designer.cs* ファイルに生成されたクラスのプロパティとメソッドをコードで使用します。 これらのクラスを使用すると、作業が楽になり、信頼性と生産性が高まります。
 
 コード化された UI テストは、ユーザー インターフェイス内の多くの変更に自動的に適応します。 たとえば、UI 要素の位置や色が変更された場合、通常はコード化された UI テストにより適切な要素が検索されます。
 
-テストの実行中、テスト フレームワークは一連の検索プロパティを使って UI コントロールを特定します。 検索プロパティは、**コード化された UI テスト ビルダー**によって作成された `UIMap.Designer.cs` ファイルの定義の各コントロール クラスに適用されます。 検索プロパティには、コントロールの識別に使用できるプロパティ名とプロパティ値の名前と値のペアが含まれます (コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> プロパティなど)。 検索プロパティが変更されない場合、コード化された UI テストにより UI 内のコントロールが正常に検索されます。 検索プロパティが変更された場合、コード化された UI テストでは、UI 内のコントロールとウィンドウを検索するためのヒューリスティックを適用する高度な一致検出アルゴリズムを使用できます。 UI が変更されている場合は、以前識別された要素が確実に検出されるように、その要素の検索プロパティを変更できます。
+テストの実行中、テスト フレームワークは一連の検索プロパティを使って UI コントロールを特定します。 検索プロパティは、**コード化された UI テスト ビルダー**によって作成された *UIMap.Designer.cs* ファイルの定義の各コントロール クラスに適用されます。 検索プロパティには、コントロールの識別に使用できるプロパティ名とプロパティ値の名前と値のペアが含まれます (コントロールの <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.FriendlyName%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.Name%2A> プロパティ、<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.ControlType%2A> プロパティなど)。 検索プロパティが変更されない場合、コード化された UI テストにより UI 内のコントロールが正常に検索されます。 検索プロパティが変更された場合、コード化された UI テストでは、UI 内のコントロールとウィンドウを検索するためのヒューリスティックを適用する高度な一致検出アルゴリズムを使用できます。 UI が変更されている場合は、以前識別された要素が確実に検出されるように、その要素の検索プロパティを変更できます。
 
 ## <a name="if-your-user-interface-changes"></a>ユーザー インターフェイスが変更された場合
 

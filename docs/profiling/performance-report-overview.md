@@ -14,19 +14,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ba00d3b31761fa42f58dfdbd72eae9a7f5b44c6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: af31d6bce4f1c44fbe759423ddaeec9537054688
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255994"
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
   
 > [!CAUTION]
->  プロファイリング データ ファイルには、コンピューター名、オペレーティング システムのバージョン、ファイル パス、メモリ情報、その他のコンピューターの設定に関する情報などの機密情報が含まれます。 .vsp ネイティブ形式であっても、.csv ファイルまたは .xml ファイルにエクスポートした場合であっても、データの配布に関しては厳密に管理する必要があります。  
+>  プロファイリング データ ファイルには、コンピューター名、オペレーティング システムのバージョン、ファイル パス、メモリ情報、その他のコンピューターの設定に関する情報などの機密情報が含まれます。 *.vsp* ネイティブ形式であっても、*.csv* ファイルまたは *.xml* ファイルにエクスポートした場合であっても、データの配布に関しては厳密に管理する必要があります。  
 >   
->  イベント トレース データがパフォーマンス セッションの一部として収集された場合は、追加の情報がイベント トレース ログ (.etl) ファイルに含まれる場合があります。 このような情報には、ドメインやユーザー名が含まれます。したがって、ログ ファイルの配布に関して厳密に管理する必要があります。  
+>  イベント トレース データがパフォーマンス セッションの一部として収集された場合は、追加の情報がイベント トレース ログ (*.etl*) ファイルに含まれる場合があります。 このような情報には、ドメインやユーザー名が含まれます。したがって、ログ ファイルの配布に関して厳密に管理する必要があります。  
   
 ## <a name="performance-report-window"></a>[パフォーマンス レポート] ウィンドウ  
  [パフォーマンス レポート] ウィンドウは、パフォーマンス データの表示、管理、フィルター処理に使用するツール ウィンドウです。このウィンドウには、カスタマイズ可能なクエリ コントロールが含まれます。  
@@ -94,6 +95,6 @@ Visual Studio Team System Development Edition の統合開発環境 (IDE) の **
   
 -   **[エクスポート]** - .CVS 形式または .XML 形式のファイルに現在のレポートを保存します。別のビューで保存するためのオプションを指定できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)   
  [パフォーマンス レポートのビュー](../profiling/performance-report-views.md)

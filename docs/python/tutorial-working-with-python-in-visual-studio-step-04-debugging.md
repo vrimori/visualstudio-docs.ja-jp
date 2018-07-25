@@ -1,7 +1,7 @@
 ---
 title: Python の概要のチュートリアル、手順 4、デバッグ
 description: Visual Studio での Python 機能の中核となるチュートリアルの手順 4 では、デバッガーで Python コードを実行する方法について説明します。
-ms.date: 03/08/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8f354c9209a7180db616a7ccc622df2809cfebe9
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: a164c68a8a6f4392d91c522c9cb4f9d225e8820a
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32031983"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057818"
 ---
-# <a name="step-4-running-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
+# <a name="step-4-run-code-in-the-debugger"></a>手順 4: デバッガーでコードを実行する
 
 **前の手順: [対話型 REPL ウィンドウを使用する](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
 
@@ -106,7 +106,7 @@ Visual Studio は、プロジェクト管理、豊富な編集機能、対話型
 > [!div class="nextstepaction"]
 > [Python 環境へのパッケージのインストール](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 
-### <a name="going-deeper"></a>詳しい説明
+### <a name="go-deeper"></a>詳しい説明
 
 - [デバッグ](debugging-python-in-visual-studio.md)
 - 「[Visual Studio でのデバッグ](../debugger/debugger-feature-tour.md)」では、Visual Studio のデバッグ機能が完全に説明されています。

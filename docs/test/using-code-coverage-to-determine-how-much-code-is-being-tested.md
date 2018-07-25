@@ -15,18 +15,18 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d27bc7fe308d7fc268291f58c64f902ff021dbd1
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: ed37441efa981e2efb29a408d5d3423387e2052e
+ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752093"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978250"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>コード カバレッジを使用した、テストされるコード割合の確認
 
 単体テストなどのコード化されたテストによって実際にテストされるプロジェクトのコードの割合を調べるには、Visual Studio のコード カバレッジ機能を使用できます。 バグから効果的に保護するには、コードの大部分を "カバー" するようにテストを実行する必要があります。
 
-コード カバレッジ分析は、マネージ (CLI) コードにもアンマネージ (ネイティブ) コードにも適用できます。
+コード カバレッジ分析は、マネージド (CLI) コードにもアンマネージド (ネイティブ) コードにも適用できます。
 
 コード カバレッジは、テスト エクスプローラーを使用してテスト メソッドを実行する場合のオプションです。 結果テーブルには、各アセンブリ、クラス、およびメソッドで実行されたコードの割合が表示されます。 また、ソース エディターには、どのコードがテストされたかが表示されます。
 
@@ -266,9 +266,9 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 
 ビルドの実行後、コード カバレッジの結果はテスト実行にアタッチされ、ビルドの概要に表示されます。
 
-## <a name="analyze-code-coverage-in-a-command-line"></a>コマンド ラインでコード カバレッジを分析する
+## <a name="analyze-code-coverage-from-the-command-line"></a>コマンド ラインからコード カバレッジを分析する
 
-コマンド ラインからテストを実行するには、vstest.console.exe を使用します。 コード カバレッジは、vstest.console.exe ユーティリティのオプションです。
+コマンド ラインからテストを実行するには、*vstest.console.exe* を使用します。 コード カバレッジは、*vstest.console.exe* ユーティリティのオプションです。
 
 1.  Visual Studio 開発者コマンド プロンプトを起動します。
 
@@ -277,6 +277,8 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
 2.  次のコマンドを実行します。
 
     `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage`
+
+詳細については、「[VSTest.Console.exe のコマンド ライン オプション](vstest-console-options.md)」を参照してください。
 
 ## <a name="troubleshoot"></a>トラブルシューティング
 

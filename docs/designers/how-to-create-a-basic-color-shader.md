@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fba456d6a06281e0472e907b27bcd76b57b17e93
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 88a5b14d98dc9459aa0d0f87a4ddba52de18ac06
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747119"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924357"
 ---
 # <a name="how-to-create-a-basic-color-shader"></a>方法: 基本カラー シェーダーを作成する
 
@@ -29,7 +29,7 @@ RGB 色定数のカラー値を最終的な出力の色に書き込めば、単�
 
 1.  操作する DGSL シェーダーを作成します。 プロジェクトに DGSL シェーダーを追加する方法に関する詳細については、「[シェーダー デザイナー](../designers/shader-designer.md)」の「作業の開始」セクションを参照してください。
 
-2.  **[ポイントの色]** ノードを削除します。 **[選択]** ツールを使用して、**[ポイントの色]** ノードを選択し、メニュー バーで **[編集]**、**[削除]** を選択します。
+2.  **[ポイントの色]** ノードを削除します。 **[選択]** ツールを使用して、**[ポイントの色]** ノードを選択し、メニュー バーで **[編集]**、**[削除]** の順に選択します。
 
 3.  **[色定数]** ノードをグラフに追加します。 **ツールボックス**の **[定数]** で **[色定数]** を選択し、デザイン サーフェイスに移動します。
 

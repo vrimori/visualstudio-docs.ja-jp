@@ -14,22 +14,23 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7deb9fef0ee50ecd202cc711566795932a9f51b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1af6ac0f9a382a91d2c87e5cb84053b8b51bf961
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949712"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089673"
 ---
 # <a name="toolbox-data-tab"></a>ツールボックス、[データ] タブ
+
 フォームとコンポーネントに追加できるデータ オブジェクトを表示します。 作成しているプロジェクトに関連するデザイナーがあると、**ツールボックス**の **[データ]** タブが表示されます。 **ツールボックス**は、Visual Studio の統合開発環境 (IDE: Integrated Development Environment) に既定で表示されます。**ツールボックス**を表示する必要がある場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。
 
 > [!TIP]
 > データ ソース構成ウィザードを実行すると、ほとんどのデータ項目が自動的に作成され、構成されます。 詳細については、「[新しいデータ ソースの追加](../../data-tools/add-new-data-sources.md)」を参照してください。
 
-
 ## <a name="ui-element-list"></a>UI 要素の一覧
- コンポーネントに対する .NET Framework の参照ページを直接表示するには、**ツールボックス**の項目で、またはデザイナーのトレイにあるコンポーネントの項目で、**F1** キーを押します。
+
+コンポーネントに対する .NET Framework の参照ページを直接表示するには、**ツールボックス**の項目で、またはデザイナーのトレイにあるコンポーネントの項目で、**F1** キーを押します。
 
 |name|説明|
 |----------|-----------------|
@@ -47,4 +48,3 @@ ms.locfileid: "31949712"
 - [Visual Studio でのデータへの Windows フォーム コントロールのバインド](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [データセットのデータの編集](../../data-tools/edit-data-in-datasets.md)
 - [データセットのデータの検証](../../data-tools/validate-data-in-datasets.md)
-- [データの保存](../../data-tools/saving-data.md)

@@ -11,14 +11,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b595f08883023d1150612415fcdb6c50411db7e3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ee92d81f9b22fb0fe60f8c51ce4e9d53c606f1e7
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31569889"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077328"
 ---
-# <a name="how-to-use-msbuild-project-sdks"></a>方法: MSBuild プロジェクト SDK の参照
+# <a name="how-to-use-msbuild-project-sdks"></a>方法: MSBuild プロジェクト SDK の使用
+
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15.0 では、"プロジェクト SDK" という概念が導入されました。これによって、プロパティとターゲットをインポートする必要があるソフトウェア開発キットの使用が簡単になります。
 
 ```xml
@@ -27,8 +28,8 @@ ms.locfileid: "31569889"
         <TargetFramework>net46</TargetFramework>
     </PropertyGroup>
 </Project>
-```  
-  
+```
+
 プロジェクトの評価中に、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] によってプロジェクトの先頭と末尾に暗黙的なインポートが追加されます。
 
 ```xml
@@ -42,30 +43,36 @@ ms.locfileid: "31569889"
 
     <!-- Implicit bottom import -->
     <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
-</Project>  
-```  
+</Project>
+```
 
-## <a name="referencing-a-project-sdk"></a>プロジェクト SDK の参照
- プロジェクト SDK を参照するには 3 つの方法があります
+## <a name="reference-a-project-sdk"></a>プロジェクト SDK を参照する
+
+ プロジェクト SDK を参照するには、次の 3 つの方法があります。
 
 1. `<Project/>` 要素の `Sdk` 属性を使用する:
+
     ```xml
     <Project Sdk="My.Custom.Sdk">
         ...
     </Project>
     ```
+
     前述のように、暗黙的なインポートがプロジェクトの先頭と末尾に追加されます。  `Sdk` 属性の形式は `Name[/Version]` です (この Version は省略可能です)。  たとえば、`My.Custom.Sdk/1.2.3` を指定できます。
 
 2. 最上位の `<Sdk/>` 要素を使用する:
+
     ```xml
     <Project>
         <Sdk Name="My.Custom.Sdk" Version="1.2.3" />
         ...
     </Project>
    ```
+
    前述のように、暗黙的なインポートがプロジェクトの先頭と末尾に追加されます。  `Version` 属性は必要ありません。
 
 3. `<Import/>` は、プロジェクトの任意の場所で使用できます。
+
     ```xml
     <Project>
         <PropertyGroup>
@@ -76,11 +83,13 @@ ms.locfileid: "31569889"
         <Import Project="Sdk.targets" Sdk="My.Custom.Sdk" />
     </Project>
    ```
+
    プロジェクトに明示的にインポートを含めることで、順序を完全に制御できます。
 
    `<Import/>` 要素を使用する場合は、省略可能な `Version` 属性も指定できます。  たとえば、`<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />` を指定できます。
 
 ## <a name="how-project-sdks-are-resolved"></a>プロジェクト SDK の解決方法
+
 インポートを評価すると、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、指定した名前とバージョンに基づいて、プロジェクト SDK へのパスが動的に解決されます。  また、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、登録済み SDK リゾルバーの一覧もあります。SDK リゾルバーは、マシン上にあるプロジェクト SDK の場所を特定するプラグインです。  たとえば、次のプラグインがあります。
 
 1. NuGet ベースのリゾルバー。指定した SDK の ID とバージョンに一致する、NuGet パッケージ用に構成されたパッケージ フィードのクエリを実行します。<br/>
@@ -99,8 +108,12 @@ NuGet ベースの SDK リゾルバーでは、[global.json](https://docs.micros
     }
 }
 ```
-ビルド中には、各プロジェクト SDK の 1 つのバージョンのみを使用できます。  同じプロジェクト SDK の 2 つの異なるバージョンを参照していると、MSBuild から警告が生成されます。  **でバージョンが指定されている場合は、プロジェクトでバージョンを**指定しない`global.json`ことをお勧めします。  
 
-## <a name="see-also"></a>参照  
+ビルド中には、各プロジェクト SDK の 1 つのバージョンのみを使用できます。  同じプロジェクト SDK の 2 つの異なるバージョンを参照していると、MSBuild から警告が生成されます。  *global.json* でバージョンが指定されている場合は、プロジェクトでバージョンを指定**しない**ことをお勧めします。  
+
+## <a name="see-also"></a>関連項目
+
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [ビルドのカスタマイズ](../msbuild/customize-your-build.md)   
+ [パッケージ、メタデータ、フレームワーク](/dotnet/core/packages)   
+ [.NET Core の csproj 形式に追加されたもの](/dotnet/core/tools/csproj)

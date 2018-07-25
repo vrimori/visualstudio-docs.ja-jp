@@ -1,7 +1,7 @@
 ---
 title: Python の混合モードのデバッグ
 description: 環境間のステップ実行、値の表示、式の評価など、Visual Studio で C++ と Python を同時にデバッグする方法について説明します。
-ms.date: 01/16/2018
+ms.date: 06/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 52aca112b802789f45f0a1d667d75b53a7535919
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 56f342904e4ae2e1c11ccd7a148b8a896692d5a2
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31583152"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37057440"
 ---
 # <a name="debugging-python-and-c-together"></a>Python と C++ の同時デバッグ
 
@@ -56,7 +56,7 @@ Visual Studio インストーラーの Python 開発ワークロードで **[Pyt
 
     コードの種類の設定は永続的であるため、後で別のプロセスにアタッチするときに混合モードのデバッグを無効にする場合は、Python コードの種類の選択を解除します。
 
-    **[ネイティブ]** に加えて、またはその代わりとして他のコードの種類を選択できます。 たとえば、CPython をホストしてネイティブ拡張モジュールを使用するマネージ アプリケーションで、3 つすべてをデバッグする場合は、**[Python]**、**[ネイティブ]**、および **[マネージ]** をまとめて選択すると、結合された呼び出し履歴と 3 つすべてのランタイム間でのステップ実行を含む統合されたデバッグ エクスペリエンスを得ることができます。
+    **[ネイティブ]** に加えて、またはその代わりとして他のコードの種類を選択できます。 たとえば、CPython をホストしてネイティブ拡張モジュールを使用するマネージド アプリケーションで、3 つすべてをデバッグする場合は、**[Python]**、**[ネイティブ]**、および **[マネージド]** をまとめて選択すると、結合された呼び出し履歴と 3 つすべてのランタイム間でのステップ実行を含む統合されたデバッグ エクスペリエンスを得ることができます。
 
 1. 混合モードのデバッグを初めて開始したときに、**Python シンボルが必要である**ことを示すダイアログが表示される可能性があります (「[混合モード デバッグのシンボル](debugging-symbols-for-mixed-mode-c-cpp-python.md)」をご覧ください)。 どの Python 環境でも、シンボルは 1 回だけインストールする必要があります。 Visual Studio 2017 のインストーラーで Python のサポートをインストールすると、シンボルが自動的に組み込まれます。
 

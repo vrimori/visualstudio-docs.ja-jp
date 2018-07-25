@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f28ae1e73a22be7e1e9a677df9fb68fc4c954926
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: e2301e1c0cf2a90f701e74445d22810e67785999
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750728"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36233914"
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>コード化された UI テスト ログを使用したコード化された UI テストの分析
 
@@ -26,7 +26,7 @@ ms.locfileid: "34750728"
 
 - ターゲット .NET Framework バージョン 4 のテスト プロジェクトに、*App.config* ファイルが含まれていない。
 
-   1. **QTAgent32_40.exe.config** ファイルを開きます。 既定では、ファイルは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* にあります。
+   1. *QTAgent32_40.exe.config* ファイルを開きます。 既定では、ファイルは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* にあります。
 
    2. EqtTraceLevel の値を、目的のログ レベルに変更します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "34750728"
 
 - ターゲット .NET Framework バージョン 4.5 のテスト プロジェクトに、*App.config* ファイルが含まれていない。
 
-   1. **QTAgent32.exe.config** ファイルを開きます。 既定では、ファイルは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* にあります。
+   1. *QTAgent32.exe.config* ファイルを開きます。 既定では、ファイルは *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* にあります。
 
    2. EqtTraceLevel の値を、目的のログ レベルに変更します。
 
@@ -58,20 +58,20 @@ ms.locfileid: "34750728"
 
 ## <a name="step-2-run-your-coded-ui-test-and-view-the-log"></a>手順 2: コード化された UI テストを実行してログを表示する
 
-**QTAgent32.exe.config** ファイルに変更を加えてコード化された UI テストを実行すると、テスト エクスプローラーの結果に、出力リンクが表示されます。 トレース レベルが "verbose" に設定されていると、ログ ファイルはテストが失敗した場合だけでなく、テストが成功した場合にも生成されます。
+*QTAgent32.exe.config* ファイルに変更を加えてコード化された UI テストを実行すると、**テスト エクスプローラー**の結果に、出力リンクが表示されます。 トレース レベルが "verbose" に設定されていると、ログ ファイルはテストが失敗した場合だけでなく、テストが成功した場合にも生成されます。
 
 1.  **[テスト]** メニューの **[ウィンドウ]** を選択し、**[テスト エクスプローラー]** を選択します。
 
 2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-3.  テスト エクスプローラーで、実行するコード化された UI テストを選択し、ショートカット メニューを開いて **[選択したテストの実行]** を選択します。
+3.  **テスト エクスプローラー**で、実行するコード化された UI テストを選択し、ショートカット メニューを開いて **[選択したテストの実行]** を選択します。
 
      自動テストが実行され、成功したか失敗したかが示されます。
 
     > [!TIP]
-    > テスト エクスプローラーを表示するには、**[テスト]** > **[Windows]** を選択して、**[テスト エクスプローラー]** を選択します。
+    > **テスト エクスプローラー**を表示するには、**[テスト]**、**[Windows]** の順に選択し、**[テスト エクスプローラー]** を選択します。
 
-4.  テスト エクスプローラーの結果で、**[出力]** リンクを選択します。
+4.  **テスト エクスプローラー**の結果で、**[出力]** リンクを選択します。
 
      ![テスト エクスプローラーの出力リンク](../test/media/cuit_htmlactionlog1.png)
 

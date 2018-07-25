@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d358a5f4035d3da1dee4a391fb07931b15d68733
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 439afb9142e3e5ae795b0457f6405ba47227105f
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751047"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845306"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web パフォーマンス テストでの検出できない動的パラメーターの修正
 
@@ -198,7 +198,7 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
      [応答] タブや、前に実装した JavaScript (次に示すコード) からわかるように、クエリ文字列パラメーター CustomQueryString には "jScriptQueryString___" という値が割り当てられており、その後に var sessionId からの戻り値が連結されています。
 
-    ```
+    ```javascript
     function jScriptQueryString()          {             var Hidden = document.getElementById("HiddenFieldSessionID");             var sessionId = Hidden.value;             window.location = 'JScriptQuery.aspx?CustomQueryString=jScriptQueryString___' + sessionId;          }
 
     ```
@@ -265,4 +265,4 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
 ### <a name="q-do-i-need-to-configure-visual-studio-to-detect-dynamic-parameters"></a>Q: 動的パラメーターが検出されるように Visual Studio を構成する必要はありますか。
 
- **A:** Visual Studio の既定の構成では、Web パフォーマンス テストの記録時に動的パラメーターが検出されます。 ただし、動的パラメーターを検出しないように Visual Studio のオプションが構成されている場合や、テストする Web アプリケーションが追加の動的パラメーターで変更される場合は、[Web パフォーマンス テスト エディターで動的パラメーターの検出を実行できます](#FindingNonDetectableDynamicParamters_QA_ReRunDetection)。
+ **A:** Visual Studio の既定の構成では、Web パフォーマンス テストの記録時に動的パラメーターが検出されます。 ただし、動的パラメーターを検出しないように Visual Studio のオプションが構成されている場合や、テストする Web アプリケーションが追加の動的パラメーターで変更される場合は、Web パフォーマンス テスト エディターで動的パラメーターの検出を実行できます。

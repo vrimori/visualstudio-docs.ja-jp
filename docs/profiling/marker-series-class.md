@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 075a81dc81bb202be913f5a06e8213a8a68a010f
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: e638d9316b46a8600fe2e88ca5e4a6611fa1ec4d
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843836"
 ---
 # <a name="markerseries-class"></a>marker_series クラス
 1 つのプロバイダーによって生成されたイベントのシリアル チャネルを表します。  
@@ -36,7 +37,7 @@ class marker_series;
 |name|説明|  
 |----------|-----------------|  
 |[marker_series::marker_series コンストラクター](../profiling/marker-series-marker-series-constructor.md)|`marker_series` クラスの新しいインスタンスを初期化します。|  
-|[marker_series::~marker_series デストラクター](../profiling/marker-series-tilde-marker-series-destructor.md)|marker_series オブジェクトを破棄し、すべての割り当て済みリソースを開放します。|  
+|[marker_series::~marker_series デストラクター](../profiling/marker-series-tilde-marker-series-destructor.md)|marker_series オブジェクトを破棄し、割り当てられているすべてのリソースを解放します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
@@ -51,9 +52,9 @@ class marker_series;
  `marker_series`  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** cvmarkersobj.h  
+ **ヘッダー:** *cvmarkersobj.h*  
   
  **名前空間:** Concurrency::diagnostic  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [diagnostic 名前空間](../profiling/diagnostic-namespace.md)

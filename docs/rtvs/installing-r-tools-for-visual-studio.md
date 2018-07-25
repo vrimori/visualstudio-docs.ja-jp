@@ -10,19 +10,20 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 26f0618397ef1ccfdd23983afdde28eccb59ef29
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1b5cc415d95377cdca0d44c31ed2c3b84cd11c5c
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297617"
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>R Tools for Visual Studio のインストール方法
 
 この記事の内容:
 
 - [サポートされている Visual Studio のバージョン](#supported-versions-of-visual-studio)
-- [Visual Studio 2017 での RTVS のインストール](#installing-rtvs-in-visual-studio-2017)
-- [Visual Studio 2015 での RTVS のインストール](#installing-rtvs-in-visual-studio-2015)
+- [Visual Studio 2017 で RTVS をインストールする](#installing-rtvs-in-visual-studio-2017)
+- [Visual Studio 2015 で RTVS をインストールする](#installing-rtvs-in-visual-studio-2015)
 - [オフライン インストール](#offline-installation-of-visual-studio-and-rtvs)
 
 > [!Note]
@@ -30,13 +31,13 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="supported-versions-of-visual-studio"></a>サポートされている Visual Studio のバージョン
 
-Windows では R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) (直接ダウンロード) の両方の Community (無料)、Professional、Enterprise の各エディションでサポートされています。
+Windows では R Tools for Visual Studio (RTVS) は、[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) および [Visual Studio 2015 Update 3 (以降)](http://go.microsoft.com/fwlink/?LinkId=691129) (直接ダウンロード) の両方の Community (無料)、Professional、Enterprise の各エディションでサポートされています。
 
 現在、Visual Studio for Mac では RTVS はサポートされていません。
 
 Visual Studio Test Professional や SQL Server Management Studio などの製品に含まれている Visual Studio Shell しかない場合、RTVS はインストールされません。 Visual Studio Shell には RTVS に必要なコンポーネントがありません。
 
-## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 での RTVS のインストール
+## <a name="install-rtvs-in-visual-studio-2017"></a>Visual Studio 2017 で RTVS をインストールする
 
 1. Visual Studio インストーラーを実行して、**[変更]** オプションを選びます (詳しくは、[Visual Studio の変更](../install/modify-visual-studio.md)に関するページをご覧ください)。 Visual Studio をまだインストールしていない場合は、[Visual Studio のインストール](../install/install-visual-studio.md)に関するページをご覧ください。 Windows 7 の場合、Visual Studio 2017 バージョン *15.2 ビルド 26430.12* 以降を表示するには、インストーラーを更新する必要があります。
 
@@ -46,9 +47,9 @@ Visual Studio Test Professional や SQL Server Management Studio などの製品
 
 1. 同じワークロード名で、右側にその他のオプションを設定します。 既定では、このワークロードには F# と Python のサポートが含まれていることに注意してください。 R の場合、少なくとも **[R 言語サポート]**、**[R 開発ツールのランタイム サポート]**、および **[Microsoft R クライアント]** を選択する必要があります。
 
-RTVS は次の場所にインストールされます。 `%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio` ここで、`<version>` は、通常 `2017` で、`<edition>` は `Community`、`Professional`、または `Enterprise` です。
+RTVS は次の場所にインストールされます: *%ProgramFiles(x86)%\Microsoft Visual Studio\<version>\<edition>Common7\IDE\Extensions\Microsoft\R Tools for Visual Studio* ここで *\<version>* は通常、`2017` であり、*\<edition>* は `Community`、`Professional`、または `Enterprise` です。
 
-## <a name="installing-rtvs-in-visual-studio-2015"></a>Visual Studio 2015 での RTVS のインストール
+## <a name="install-rtvs-in-visual-studio-2015"></a>Visual Studio 2015 で RTVS をインストールする
 
 Visual Studio 2015 では、R インタープリターと R Tools を個別にインストールする必要があります。
 
@@ -86,8 +87,8 @@ RTVS for Visual Studio 2015 は、`%ProgramFiles(x86)%\Microsoft Visual Studio 1
 
 ## <a name="see-also"></a>関連項目
 
-- [R の概要](getting-started-with-r.md)
+- [R の使用を開始する](getting-started-with-r.md)
 - [R Tools のサンプル プロジェクト](getting-started-samples.md)
-- [ヘルプ情報の入手](getting-started-help.md)
-- [オプションの設定](options-for-r-tools-in-visual-studio.md)
+- [R Tools のヘルプ](getting-started-help.md)
+- [R Tools オプション](options-for-r-tools-in-visual-studio.md)
 - [Microsoft Machine Learning Server (旧称 R Server)](/machine-learning-server/)

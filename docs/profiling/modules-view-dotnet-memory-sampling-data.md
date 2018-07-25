@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: aba425823de9f6c9e935e987e2f574ac0733d262
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c5cbae58aeaa1164aab6c254f62e0959da02d31c
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257674"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>モジュール ビュー - .NET メモリ サンプリング データ
 サンプリング メソッドで収集された .NET メモリの割り当てデータの [モジュール] ビューは、メモリ データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 各モジュールが、階層ツリーのルートです。 モジュールの関数が、モジュール ノードの下に一覧表示されます。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/19/2018
 |**割り当てバイト数 (関数のみ)**|-   関数の場合、関数によって割り当てられたバイトの合計数。 この数値には、この関数によって呼び出された関数で割り当てられたバイト数は含まれません。<br />-   モジュールの場合、モジュール内の関数によって割り当てられた排他バイトの合計。<br />-   行または命令の場合、この行または命令によって割り当てられたオブジェクトの合計数。|  
 |**割り当てバイト数 % (関数のみ)**|プロファイリング実行で割り当てられたすべてのバイトに対する、そのモジュール、関数、行、命令の排他バイトであったバイトの割合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [モジュール ビュー - インストルメンテーション](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [モジュール ビュー](../profiling/modules-view-sampling-data.md)   

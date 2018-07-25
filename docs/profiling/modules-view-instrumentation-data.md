@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c7db34fb4913e3576f286aa7c34fe3cf80296ed
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c849971da7681322b15365bc0d59ce8b3529f508
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256111"
 ---
 # <a name="modules-view---instrumentation-data"></a>モジュール ビュー - インストルメンテーション データ
 モジュール ビューには、パフォーマンス データがプロファイル データ内のモジュールごとにグループ化されて表示されます。 モジュールの関数が、モジュール ノードの下に一覧表示されます。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/19/2018
 |**最大アプリケーション排他時間 (関数のみ)**|-   関数の場合、この関数の呼び出しの最大アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最大アプリケーション排他時間。|  
 |**最小アプリケーション排他時間 (関数のみ)**|-   関数の場合、このモジュールまたは関数の呼び出しの最小アプリケーション排他時間。<br />-   モジュールの場合、モジュール内の関数のすべての呼び出しの最小アプリケーション排他時間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モジュール ビュー](../profiling/modules-view-sampling-data.md)   
  [モジュール ビュー - インストルメンテーション](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [モジュール ビュー - サンプリング](../profiling/modules-view-dotnet-memory-sampling-data.md)

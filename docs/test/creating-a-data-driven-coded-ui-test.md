@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0343058b2ae2910e81f345e81139d6f5114e330b
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 442e37dfac8e7eb022ee12bfaadacae548625793
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34692188"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36303041"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>データ ドリブンのコード化された UI テストの作成
 
@@ -40,7 +40,7 @@ ms.locfileid: "34692188"
    > [!NOTE]
    > **[コード化された UI テスト プロジェクト]** テンプレートが表示されない場合は、[コード化された UI テスト コンポーネントをインストール](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)する必要があります。
 
-2.  アクションを記録することを選択します。
+2.  **アクションを記録する**ことを選択します。
 
      ![アクション記録の選択](../test/media/cuit_datadriven_generatecodedialog.png)
 
@@ -65,7 +65,7 @@ ms.locfileid: "34692188"
 
 5.  `AddNumbers()` メソッドを使用して、テストが実行されていることを確認します。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[テストの実行]** を選択します。 (キーボード ショートカット: **Ctrl** + **R**、**T**)。
 
-     テストの合格または失敗を示すテスト結果が、[テスト エクスプローラー] ウィンドウに表示されます。 [テスト エクスプローラー] ウィンドウを開くには、**[テスト]** メニューの **[Windows]** を選択し、**[テスト エクスプローラー]** を選択します。
+     テストの合格または失敗を示すテスト結果が、**[テスト エクスプローラー]** ウィンドウに表示されます。 [テスト エクスプローラー] ウィンドウを開くには、**[テスト]** メニューの **[Windows]** を選択し、**[テスト エクスプローラー]** を選択します。
 
 6.  予期される値を検証するテストでのアサーション パラメーター値のためにデータ ソースを使用する場合もあるため、2 つの数値の合計が正しいことを検証するアサーションを追加してみます。 前に示したテスト メソッドにカーソルを置き、コンテキスト メニューを開き、**[コード化された UI テストのコードの生成]**、**[コード化された UI テスト ビルダーの使用]** の順に選択します。
 
@@ -98,7 +98,7 @@ ms.locfileid: "34692188"
 
 ### <a name="step-2---create-a-data-set"></a>ステップ 2 - データ セットを作成する
 
-1.  dataDrivenSample プロジェクトにテキスト ファイルを追加し、その名前を「`data.csv`」にします。
+1.  dataDrivenSample プロジェクトにテキスト ファイルを追加し、その名前を「*data.csv*」にします。
 
      ![コンマ区切り値ファイルをプロジェクトに追加](../test/media/cuit_datadriven_addcsvfile.png)
 
@@ -180,7 +180,7 @@ ms.locfileid: "34692188"
 
      どの検索プロパティにデータをコーディングするかを確認するには、コード化された UI テスト エディターを使用します。
 
-    -   UIMap.uitest ファイルを開きます。
+    -   *UIMap.uitest* ファイルを開きます。
 
          ![コード化された UI テスト エディターを開く](../test/media/cuit_datadriven_opentesteditor.png)
 
@@ -188,7 +188,7 @@ ms.locfileid: "34692188"
 
          ![コーディング補助のためのコード化された UI テスト エディターの使用](../test/media/cuit_datadriven_testeditor.png)
 
-    -   [プロパティ] ウィンドウで、**[検索プロパティ]** を開きます。 検索プロパティ **[名前]** の値は、データ ソースを使用してコードで操作される対象です。 たとえば、`SearchProperties` には各データ行の最初の列の値 (`UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`) が割り当てられます。 3 つのイテレーションのために、このテストでは検索プロパティの **[名前]** の値を 3、5、6 の順に変更します。
+    -   **[プロパティ]** ウィンドウで、**[検索プロパティ]** を開きます。 検索プロパティ **[名前]** の値は、データ ソースを使用してコードで操作される対象です。 たとえば、`SearchProperties` には各データ行の最初の列の値 (`UIItem1Button.SearchProperties[WinButton.PropertyNames.Name] = TestContext.DataRow["Num1"].ToString();`) が割り当てられます。 3 つのイテレーションのために、このテストでは検索プロパティの **[名前]** の値を 3、5、6 の順に変更します。
 
          ![コーディング補助のためのプロパティ検索の使用](../test/media/cuit_datadriven_searchproperties.png)
 
@@ -230,9 +230,9 @@ ms.locfileid: "34692188"
 
 ### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer ファイルでコードを変更できないのはなぜですか?
 
-**A**: UIMapDesigner.cs ファイルでコードを変更しても、[UIMap - コード化された UI テスト ビルダー] を使用してコードを生成するたびに変更が上書きされます。 このサンプルも含めてほとんどの場合、テストでデータ ソースを使用できるようにするためのコード変更は、テストのソース コード ファイル (CodedUITest1.cs) に対して行うことができます。
+**A**: *UIMapDesigner.cs* ファイルでコードを変更しても、[UIMap - コード化された UI テスト ビルダー] を使用してコードを生成するたびに変更が上書きされます。 このサンプルも含めてほとんどの場合、テストでデータ ソースを使用できるようにするためのコード変更は、テストのソース コード ファイル (*CodedUITest1.cs*) に対して行うことができます。
 
-記録されたメソッドを変更する必要がある場合は、メソッドを UIMap.cs ファイルにコピーし、メソッド名を変更する必要があります。 UIMap.cs ファイルを使用すると、UIMapDesigner.cs ファイルのメソッドやプロパティをオーバーライドできます。 Coded UITest.cs ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換える必要があります。
+記録されたメソッドを変更する必要がある場合は、メソッドを *UIMap.cs* ファイルにコピーし、メソッド名を変更する必要があります。 *UIMap.cs* ファイルを使用すると、*UIMapDesigner.cs* ファイルのメソッドやプロパティをオーバーライドできます。 Coded *UITest.cs* ファイルの元のメソッドへの参照を削除し、変更したメソッド名に置き換える必要があります。
 
 ## <a name="see-also"></a>関連項目
 

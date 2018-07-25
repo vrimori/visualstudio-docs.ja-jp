@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d8e1b983dc9ec690396b7e4a8494a02f188ef77e
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 9539e8dec80afd1f334ca89e84a5130d8d47877e
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750826"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283290"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
@@ -24,7 +24,7 @@ ms.locfileid: "34750826"
 
  ![Web パフォーマンス テストにデータをバインドする](../test/media/web_test_databinding_conceptual.png)
 
- サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の .aspx ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類は単純な .aspx ページです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](http://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
+ サンプル ASP.NET アプリを使用します。 このサンプルでは、3 種類の *.aspx* ページ (既定ページ、Red ページ、Blue ページ) を使用します。 既定のページには、Red または Blue を選択するオプション ボタン コントロールと送信ボタンが表示されます。 他の 2 種類の *.aspx* ページは非常にシンプルです。 一方には Red という名前のラベルがあり、他方には Blue という名前のラベルがあります。 既定のページで送信ボタンをクリックすると、いずれかのページが表示されます。 [ColorWebApp](http://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) サンプルをダウンロードするか、ご自身の Web アプリケーションの手順に従うことができます。
 
  ![テストする Web アプリの実行](../test/media/web_test_databinding_runwebapp.png)
 
@@ -34,7 +34,7 @@ ms.locfileid: "34750826"
 
 ## <a name="create-a-sql-database"></a>SQL データベースの作成
 
-1. Visual Studio Enterprise をお持ちでない場合は、[Visual Studio のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ページからダウンロードできます。
+1. Visual Studio Enterprise をお持ちでない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページからダウンロードできます。
 
 2. SQL データベースを作成します。
 
@@ -90,11 +90,11 @@ ms.locfileid: "34750826"
 
 ## <a name="bind-the-data"></a>データのバインド
 
-1. ColorName フィールドをバインドします。
+1. **ColorName** フィールドをバインドします。
 
      ![ColorName フィールドを RadioButtonList1 値にバインドする](../test/media/web_test_databinding_sql_binddatasource.png)
 
-2. ソリューション エクスプローラーで Local.testsettings ファイルを開き、[データ ソース行ごとに 1 つ実行] をクリックします。
+2. **ソリューション エクスプローラー**で *Local.testsettings* ファイルを開き、**[データ ソース行ごとに 1 つ実行]** をクリックします。
 
      ![テスト設定ファイルを編集します。](../test/media/web_test_databinding_sql_testsettings.png)
 
@@ -106,13 +106,13 @@ ms.locfileid: "34750826"
 
      ![Web パフォーマンス テストを実行してバインドを検証する](../test/media/web_test_databinding_sql_runtest.png)
 
-     データ行ごとに 2 つの実行が表示されます。 Run 1 は Red.aspx ページに対する要求を送信し、Run 2 は Blue.aspx ページに対する要求を送信します。
+     データ行ごとに 2 つの実行が表示されます。 Run 1 は *Red.aspx* ページに対する要求を送信し、Run 2 は *Blue.aspx* ページに対する要求を送信します。
 
      ![テスト実行結果](../test/media/web_test_databinding_sql_runresults.png)
 
-     データ ソースにバインドすると、既定の応答 URL 規則に違反することがあります。 この場合、既定の応答 URL 規則によって Run 2 でエラーが発生しています。この規則では元のテストの記録から Red.aspx ページを予期していますが、データ バインディングにより Blue.aspx ページが指定されます。
+     データ ソースにバインドすると、既定の応答 URL 規則に違反することがあります。 この場合、既定の応答 URL 規則によって Run 2 でエラーが発生しています。この規則では元のテストの記録から *Red.aspx* ページを予期していますが、データ バインディングにより *Blue.aspx* ページが指定されます。
 
-2. 応答 URL 検証規則を削除し、テストを再実行して、検証エラーを修正します。
+2. **応答 URL** 検証規則を削除し、テストを再実行して、検証エラーを修正します。
 
      ![応答 URL の検証規則を削除する](../test/media/web_test_databinding_sql_deleteresponseurl.png)
 
@@ -152,13 +152,13 @@ ms.locfileid: "34750826"
 
 3. このテキスト ファイルを編集して、次の内容を追加します。
 
-    ```
+    ```text
     ColorId, ColorName
     0,Red
     1,Blue
     ```
 
-4. 「[SQL データのバインド](#AddingDataBindingWebTest_BindSQLData)」の手順を使用しますが、データ ソースとして CSV ファイルを選択します。
+4. 「[データ ソースの追加](#add-the-data-source)」の手順を使用しますが、データ ソースとして CSV ファイルを選択します。
 
      ![名前を入力して CSV ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialog.png)
 
@@ -166,13 +166,13 @@ ms.locfileid: "34750826"
 
 **A:** 列見出しを追加できない場合は、スキーマ記述ファイルを使用して CSV ファイルをデータベースとして扱うことができます。
 
-1. schema.ini という名前の新しいテキスト ファイルを追加します。
+1. *schema.ini* という名前の新しいテキスト ファイルを追加します。
 
      ![schema.ini ファイルを追加する](../test/media/web_test_databinding_schemafile.png)
 
-2. schema.ini ファイルを編集して、データの構造を記述する情報を追加します。 たとえば、CSV ファイルについて記述するスキーマ ファイルは次のようになります。
+2. *schema.ini* ファイルを編集して、データの構造を記述する情報を追加します。 たとえば、CSV ファイルについて記述するスキーマ ファイルは次のようになります。
 
-    ```
+    ```text
     [testdata.csv]
     ColNameHeader=False
     ```
@@ -181,7 +181,7 @@ ms.locfileid: "34750826"
 
      ![Web パフォーマンス テストにデータ ソースを追加する](../test/media/web_test_databinding_sql_adddatasource.png)
 
-4. schema.ini ファイルを使用する場合は、データ ソースとして (CSV ファイルではなく) データベースを選択し、名前を指定します。
+4. *schema.ini* ファイルを使用する場合は、データ ソースとして (CSV ファイルではなく) **データベース**を選択し、名前を指定します。
 
      ![データベース データ ソースの追加](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
@@ -193,11 +193,11 @@ ms.locfileid: "34750826"
 
      ![.NET Framework OLE DB データ プロバイダーを選択する](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
-7. [詳細設定] を選択します。
+7. **[詳細設定]** を選択します。
 
      ![[詳細設定] を選択する](../test/media/web_test_databinding_advanced.png)
 
-8. "プロバイダー" プロパティについて Microsoft.Jet.OLEDB.4.0 を選択し、[拡張プロパティ] を Text;HDR=NO に設定します。
+8. "プロバイダー" プロパティについて Microsoft.Jet.OLEDB.4.0 を選択し、**[拡張プロパティ]** を Text;HDR=NO に設定します。
 
      ![詳細設定プロパティの適用](../test/media/web_test_databinding_advancedproperties.png)
 
@@ -241,7 +241,7 @@ ms.locfileid: "34750826"
     </ColorData>
     ```
 
-4. 「[SQL データのバインド](#AddingDataBindingWebTest_BindSQLData)」の手順を使用しますが、データ ソースとして XML ファイルを選択します。
+4. 「[データ ソースの追加](#add-the-data-source)」の手順を使用しますが、データ ソースとして XML ファイルを選択します。
 
      ![名前を入力して XML ファイルを選択する](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
@@ -255,7 +255,7 @@ ms.locfileid: "34750826"
 
 2. 次の構文を使用して、SOAP 本体の値をデータ バインディング値に置き換えます。
 
-    ```
+    ```xml
     {{DataSourceName.TableName.ColumnName}}
     ```
 

@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e2c5f9461eafa83551ba15c36d8ef212922a52ff
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 35650e1fe22026968c06ed4bf0c9bc4cd1d2d54e
+ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103139"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36946976"
 ---
-# <a name="tutorial-step-5-authenticate-users-in-django"></a>チュートリアル手順 5: Django でユーザーを認証する
+# <a name="step-5-authenticate-users-in-django"></a>手順 5: Django でユーザーを認証する
 
 **前の手順: [完全な Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
@@ -33,7 +33,7 @@ ms.locfileid: "33103139"
 
 次の手順では、認証フローを利用して、プロジェクトの関連する部分について説明します。
 
-1. プロジェクトのルートにある `readme.html` ファイルの指示に従ってスーパー ユーザーをまだ作成していない場合は、すぐに作成します。
+1. プロジェクトのルートにある `readme.html` ファイルの指示に従ってスーパー ユーザー (管理者) アカウントをまだ作成していない場合は、すぐに作成します。
 
 1. **[デバッグ]** > **[デバッグの開始]** (F5) を使用して、Visual Studio からアプリを実行します。 ブラウザーにアプリが表示されたら、ナビゲーション バーの右上に **[ログイン]** が表示されていることを確認します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "33103139"
     {% endif %}
     ```
 
-1. 最初にアプリを起動するときはどのユーザーも認証されていないので、このテンプレートのコードは、相対パス "login" への "ログイン" リンクのみを表示します。 前のセクションで示したように `urls.py` に指定されると、そのルートは次のデータが指定された `django.contrib.auth.views.login` ビューにマップされます。
+1. 最初にアプリを起動するときはどのユーザーも認証されていないので、このテンプレートのコードは、相対パス "login" への "ログイン" リンクのみを表示します。 (前のセクションで示したように) `urls.py` に指定されると、そのルートは `django.contrib.auth.views.login` ビューにマップされます。 そのビューは、次のデータを受け取ります。
 
     ```python
     {
@@ -95,7 +95,7 @@ ms.locfileid: "33103139"
                                        'placeholder':'Password'}))
     ```
 
-    見てわかるように、このフォーム クラスは `AuthenticationForm` から派生し、明示的にユーザー名とパスワードのフィールドを上書きして、プレースホルダ― テキストを追加します。 Visual Studio テンプレートには、パスワード強度の検証を追加するなど、必要に応じてフォームをカスタマイズすることを予想して、この明示的なコードが含まれています。
+    見てわかるように、このフォーム クラスは `AuthenticationForm` から派生し、明示的にユーザー名とパスワードのフィールドをオーバーライドして、プレースホルダ― テキストを追加します。 Visual Studio テンプレートには、パスワード強度の検証を追加するなど、必要に応じてフォームをカスタマイズすることを予想して、この明示的なコードが含まれています。
 
 1. ログイン ページに移動すると、アプリは `login.html` テンプレートを表示します。 変数 `{{ form.username }}` および `{{ form.password }}` は、`BootstrapAuthenticationForm` から `CharField` フォームを表示します。 また、検証エラーを表示するための組み込みのセクションと、ソーシャル ログイン用にあらかじめ用意されている要素もあり、必要に応じてこれらのサービスを追加できます。
 
@@ -144,13 +144,13 @@ ms.locfileid: "33103139"
     {% endblock %}
     ```
 
-1. フォームを送信すると、Django は提供された資格情報 (スーパー ユーザーの資格情報など) の認証を試みます。 認証に失敗した場合、同じページに留まりますが、`form.errors` は true に設定されます。 認証に成功した場合、Django は "next" フィールド `<input type="hidden" name="next" value="/" />` にある相対 URL に移動します。この例では、ホーム ページ (`/`) になっています。
+1. フォームを送信すると、Django は資格情報 (スーパー ユーザーの資格情報など) の認証を試みます。 認証に失敗した場合、現在のページに留まりますが、`form.errors` は true に設定されます。 認証に成功した場合、Django は "next" フィールド `<input type="hidden" name="next" value="/" />` にある相対 URL に移動します。この例では、ホーム ページ (`/`) になっています。
 
 1. ここで、ホーム ページが再表示されると、`loginpartial.html` テンプレートが表示されるときに、`user.is_authenticated` プロパティが true になります。 その結果、"Hello (ユーザー名)" メッセージと "ログオフ" が表示されます。 アプリの他の部分で `user.is_authenticated` を使用して、認証を確認できます。
 
     ![[Django Web プロジェクト] アプリ ページ上の Hello メッセージとログオフ コントロール](media/django/step05-logoff-control.png)
 
-1. 認証済みユーザーに特定のリソースに対するアクセス権が付与されたかどうかを確認するには、該当のユーザーのユーザー固有のアクセス許可をデータベースから取得する必要があります。 詳細については、[Django 認証システムの使用](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization)に関するページ (Django docs) を参照してください。
+1. 認証済みユーザーに特定のリソースに対するアクセス権が付与されたかどうかを確認するには、ユーザー固有のアクセス許可をデータベースから取得する必要があります。 詳細については、[Django 認証システムの使用](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization)に関するページ (Django docs) を参照してください。
 
 1. 特に、ス―パー ユーザーまたは管理者は、相対 URL "/admin/" および "/admin/doc/" を使用して、組み込みの Django 管理者インターフェイスにアクセスします。 これらのインターフェイスを有効にするには、Django プロジェクトの `urls.py` を開き、次のエントリからコメントを削除します。
 
@@ -200,14 +200,14 @@ ms.locfileid: "33103139"
 
 ### <a name="question-what-is-the-purpose-of-the--crsftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% crsf_token %} タグの目的は何ですか。
 
-回答: `{% crsf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (crsf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素にこのタグを追加すると、テンプレートのレンダリング関数 (`render`) によって必要な保護が挿入されます。
+回答: `{% crsf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (crsf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ポーリング Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)
 
-## <a name="going-deeper"></a>詳しい説明
+## <a name="go-deeper"></a>詳しい説明
 
 - [Django でのユーザー認証](https://docs.djangoproject.com/en/2.0/topics/auth/) (docs.djangoproject.com)
 - GitHub 上のチュートリアルのソース コード: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
