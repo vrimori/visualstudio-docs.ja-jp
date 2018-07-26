@@ -48,6 +48,7 @@
 #### [ボリューム ライセンスの場合](volume-license-admins.md)
 ##### [VLSC 管理の移行に関する FAQ](vlsc-admin-faq.md)
 ##### 組織のオンボード
+###### [移行後のオンボード](post-migration-onboarding.md)
 ###### [電子メール通信のオンボード](volume-license-onboarding-email.md)
 ###### [PCN を見つける](find-pcn.md)
 ###### [プライマリ連絡先の検索](find-primary-contact.md)
