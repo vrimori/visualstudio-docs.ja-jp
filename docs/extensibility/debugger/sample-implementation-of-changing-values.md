@@ -1,5 +1,5 @@
 ---
-title: サンプルの値を変更する実装 |Microsoft ドキュメント
+title: サンプル値の変更の実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,36 +14,36 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39c662af2aa9f1fed2f36aefc60b6b2e539a0200
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 01d3a13762612f40240fb377698745088aae6618
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128634"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251791"
 ---
-# <a name="sample-implementation-of-changing-values"></a>値の変更の実装のサンプル
+# <a name="sample-implementation-of-changing-values"></a>値を変更するサンプルの実装
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 表示されるすべてのローカル、**ローカル**ウィンドウが、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)オブジェクトが関連付けられています。 これは、`IDebugProperty2`オブジェクトには、ローカルの名前、値、および種類が含まれています。 Visual Studio を呼び出すユーザーは、ローカルの値を変更するときに[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)をメモリにローカル変数の値を更新します。 この例では、ローカルで表される、`CFieldProperty`を実装するクラス、`IDebugProperty2`インターフェイスです。  
+ 表示されるすべてのローカル、**ローカル**ウィンドウには、 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)関連付けられているオブジェクト。 これは、`IDebugProperty2`オブジェクトには、ローカルの名前、値、および種類が含まれています。 ユーザーは、ローカルの値を変更するときに Visual Studio を呼び出す[SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md)ローカル メモリ内の値を更新します。 この例では、ローカルで表される、`CFieldProperty`を実装するクラス、`IDebugProperty2`インターフェイス。  
   
 > [!NOTE]
->  **ウォッチ**と **[クイック ウォッチ]** 、式によって表される値を変更する、 `CValueProperty` MyCEE サンプルのクラスです。 ただしの実装`IDebugProperty2::SetValueAsString`は次のように同じです。  
+>  **ウォッチ**と **[クイック ウォッチ]** 式によって表される値を変更する、 `CValueProperty` MyCEE サンプル クラスです。 ただし、実装の`IDebugProperty2::SetValueAsString`は次のように同じです。  
   
- この実装`IDebugProperty2::SetValueAsString`は、次のタスクを実行します。  
+ 実装`IDebugProperty2::SetValueAsString`は、次のタスクを実行します。  
   
 1.  値を生成する式を評価します。  
   
-2.  関連付けられたバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)メモリ位置にオブジェクトを生成、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
+2.  関連付けられているバインド[IDebugField](../../extensibility/debugger/reference/idebugfield.md)メモリ位置に、生成するオブジェクト、 [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)オブジェクト。  
   
 3.  一連のバイト値に変換します。  
   
-4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)メモリに格納されるバイト数。  
+4.  呼び出し[SetValue](../../extensibility/debugger/reference/idebugobject-setvalue.md)メモリ内のバイトを格納します。  
   
-## <a name="managed-code"></a>マネージ コード  
- これは、実装の`IDebugProperty2::SetValueAsString`マネージ コードでします。  
+## <a name="managed-code"></a>マネージド コード  
+ 次のコードは、実装の`IDebugProperty2::SetValueAsString`マネージ コードでします。  
   
-```  
+```csharp  
 [C#]  
 namespace EEMC  
 {  
@@ -227,9 +227,9 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>アンマネージ コード  
- これは、実装の`IDebugProperty2::SetValueAsString`マネージ コードでします。 ヘルパー関数`FieldCoerceValueType`(示されていない) の強制、 `VARIANT` 、値では、特定の種類とはことを確認するのには、型の 1 つ`FieldSetValue`を処理できます。  
+ 次のコードは、実装の`IDebugProperty2::SetValueAsString`マネージ コードでします。 ヘルパー関数`FieldCoerceValueType`(表示されていません) の力を`VARIANT`値では、特定の種類と指定するとは、型の 1 つ`FieldSetValue`を処理できます。  
   
-```  
+```cpp  
 [C++]  
 STDMETHODIMP CFieldProperty::SetValueAsString(   
         in LPCOLESTR pszValueStr,  

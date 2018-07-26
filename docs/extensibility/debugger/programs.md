@@ -1,5 +1,5 @@
 ---
-title: プログラム |Microsoft ドキュメント
+title: プログラム |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd3d1c1e72524c393fdb3adc4477ea9ae374fbfa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8bd34f72f54fe068ff39b752ddbd6348e4970db
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102273"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252376"
 ---
 # <a name="programs"></a>Programs
-デバッガーのアーキテクチャの観点から、**プログラム**:  
+デバッガーのアーキテクチャで、*プログラム*:  
   
--   スレッドのセットとモジュールのセットの両方のコンテナーです。 Windows オペレーティング システムでは、プログラムの 1 つとの類似性はありません。  
+-   スレッドのセットと、一連のモジュールの両方のコンテナーです。 Windows オペレーティング システムでは、プログラムの 1 つとの類似性はありません。  
   
-     プログラムは、一種のサブプロセスです。 たとえば、Web サイトをデバッグする際にスクリプトをプログラムとして表示できます。 スクリプトのスクリプト作成のエンジン プロセスの実行中に他のスクリプトの独立したさらに、独自のスレッドのセット。 デバッグ エンジン (DE) は、プログラム、していないプロセスまたはスレッドにアタッチします。  
+     プログラムは、ある種のサブプロセスです。 たとえば、Web サイトをデバッグする場合、スクリプトをプログラムとして確認できます。 スクリプトのエンジン プロセスでスクリプトの実行中の他のスクリプトでは、独立したも、独自のスレッドのセット。 デバッグ エンジン (DE) は、プログラム、およびプロセスまたはスレッドにアタッチします。  
   
--   それ自体で実行されているからデタッチして、存在する場合に、それを作成した DE の記述に関連付けることが、プロセスを識別できます。 プログラムは、実行、停止、続行、終了するとします。  
+-   それ自体とで実行されているプロセスを識別できます。 プログラムから、デタッチ、および、存在する場合、それを作成した DE をについて説明しますにアタッチすることができます。 プログラムも実行、停止、続行でき終了します。  
   
--   そのすべてのスレッドを列挙できます。 プログラムでは、独自の逆アセンブル ストリームも提供でき、特定のドキュメントの位置のすべてのコード コンテキストを列挙できます。  
+-   そのすべてのスレッドを列挙できます。 プログラムでは、独自の逆アセンブリのストリームを指定することもし、特定のドキュメントの位置のすべてのコード コンテキストを列挙できます。  
   
--   によって表される、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)インターフェイス、プログラムをアタッチすると、前に、または実装によって、attach プロセスの一部として作成します。 に従って、対応する各プログラムが作成されたポートは、プロセスのプログラムを列挙するときに[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)への引数として渡されたインターフェイス[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)です。 またデバッグ エンジンを作成中に`IDebugProgram2`プログラム ノードに従ってプログラム、これらのプログラムを表すためのインターフェイスは作成されません。 `IDebugProgramNode2` DE によって作成されたインターフェイスは、ポートが作成されたもののみ使用されるプロセスで実行中のプログラムを検出中に、実際のデバッグでは、使用できます。  
+-   によって表される、 [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)インターフェイスをプログラムがアタッチされている場合、前に、または実装によって、アタッチ プロセスの一部として作成します。 に従って、対応する各プログラムが作成されたポートは、プロセスのプログラムを列挙するときに[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)への引数として渡されたインターフェイス[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)します。 デバッグ エンジンを作成も`IDebugProgram2`に従ってプログラム ノードを表すプログラムでは、これらのプログラム インターフェイスは作成されません。 `IDebugProgramNode2` DE によって作成されたインターフェイスは、され、検出プロセスで実行中のプログラムにのみ使用ポートによって作成された、実際のデバッグでは、使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [プロセス](../../extensibility/debugger/processes.md)   
- [プログラムのノード](../../extensibility/debugger/program-nodes.md)   
+ [プログラム ノード](../../extensibility/debugger/program-nodes.md)   
  [モジュール](../../extensibility/debugger/modules.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   
  [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)   

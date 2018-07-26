@@ -1,5 +1,5 @@
 ---
-title: セキュリティの問題 |Microsoft ドキュメント
+title: セキュリティの問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d45ebd8c4d80b84749838c2034d72159c9e39627
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6cd4d07721f202169ca0689882ac1a41045a4d61
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126898"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252324"
 ---
-# <a name="security-issues"></a>セキュリティ上の問題
-Visual Studio を使用してプログラムをデバッグするには必要なアクセス許可は、開発者がプログラムを実行する必要があるものと同じです。 これは、ほとんどの状況が (インターネット インフォメーション サービスなど、他のサービスに関連するいくつかの状況はより高いレベルのアクセス許可にあります) のリモート デバッグが含まれます。  
+# <a name="security-issues"></a>セキュリティの問題
+Visual Studio を使用してプログラムをデバッグするために必要なアクセス許可は、開発者がプログラムの実行に必要なものと同じです。 これは、ほとんどの場合、リモート デバッグが含まれます。 インターネット インフォメーション サービスなどの他のサービスに関連するいくつかの状況より高いレベルのアクセス許可を必要があります。  
   
- Visual Studio の実行中に、プロセスのデバッグ マネージャー (PDM) は、ローカル コンピューターでデバッグ プロセスを追跡します。 リモートで msvsmon.exe と呼ばれるプログラムは、リモート デバッグを処理し、PDM を利用できるようにする開発者によってが開始されます。 (その msvsmon.exe がサービスではないと、そのコンピューター上でリモート デバッギングを有効にするのには手動で開始する必要がありますに注意してください)。Visual Studio (msvsmon.exe) が実行されていない場合、デバッグ用のプロセスは追跡されません。  
+ Visual Studio の実行中に、プロセス デバッグ マネージャー (PDM) は、ローカル コンピューター上のデバッグ プロセスを追跡します。 リモートでというプログラム*msvsmon.exe*リモート デバッグを処理し、PDM を使用できるようにするために開発者が開始します。 (*msvsmon.exe*サービスではないと、そのコンピューターにリモート デバッグを有効にするのには手動で開始する必要があります)。ときに Visual Studio (または*msvsmon.exe*) が実行されていないプロセスが追跡されなかったデバッグします。  
   
- これは、開発者が特別な権限を自分が起動されたプログラムをデバッグすることを意味します。 であっても、開発者は、その他の人が、同じセキュリティ グループのメンバーである場合は、他のユーザーによって開始されたプロセスをデバッグできます。 リモート デバッグを有効にする必要があるだけで、必要なをコピーするファイルをリモート コンピューターし、msvsmon.exe を起動し、(を参照してください[リモート デバッグ](../../debugger/remote-debugging.md)詳細)。  
+ 開発者は、特別なアクセス許可なしで開始したプログラムをデバッグできます。 開発者は、その他の人が同じセキュリティ グループのメンバーである場合は、他のユーザーによって開始されたプロセスをデバッグもできます。 また、リモート デバッグを有効にするのには、リモート コンピューターに必要なファイルをコピーし、起動にのみ必要な*msvsmon.exe*します。 詳細については、次を参照してください。[リモート デバッグ](../../debugger/remote-debugging.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)   
- [プロセスのデバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)   
- [Remote Debugging](../../debugger/remote-debugging.md)
+ [プロセス デバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)   
+ [リモート デバッグ](../../debugger/remote-debugging.md)
