@@ -9,12 +9,12 @@ title: C++ によるモバイル開発のドキュメント | Microsoft Docs
 description: iOS、Android、Windows 用のネイティブ C++ アプリを Visual Studio で作成します。
 ms.workload:
 - apexprodleads
-ms.openlocfilehash: cc428cd4b961fe42f3d1f80cd18982a2420aafd3
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: d10f0409b30198d7976f08a78b1d45d0099ac093
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924175"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232021"
 ---
 # <a name="mobile-development-with-c-documentation"></a>C++ ドキュメントによるモバイル開発
 
@@ -28,11 +28,11 @@ iOS、Android、Windows デバイス用のネイティブ C++ アプリを Visua
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_setup.svg" alt="">
+                            <img src="/media/common/i_setup.svg" alt="Set up Visual C++ for cross-platform mobile apps">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual C++ for Cross-Platform Mobile Development のインストール</h3>
+                        <h3>クロス プラットフォーム モバイル開発のための Visual C++ のインストール</h3>
                         <p>クロス プラットフォーム モバイル アプリの構築に必要なツールを設定します。</p>
                     </div>
                 </div>
@@ -47,11 +47,11 @@ iOS、Android、Windows デバイス用のネイティブ C++ アプリを Visua
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="">
+                            <img src="/media/common/i_learn-about.svg" alt="Learn about Visual C++ for cross-platform mobile develpment">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>クロス プラットフォーム モバイル開発用 Visual C++ について</h3>
+                        <h3>クロス プラットフォーム モバイル開発のための Visual C++ について</h3>
                         <p>Visual C++ を使用したクロス プラットフォーム モバイル開発の概要を取得します。</p>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ iOS、Android、Windows デバイス用のネイティブ C++ アプリを Visua
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_xplat-code.svg" alt="">
+                            <img src="/media/common/i_xplat-code.svg" alt="Cross-platform mobile development examples">
                         </div>
                     </div>
                     <div class="cardText">
@@ -90,7 +90,7 @@ iOS、Android、Windows デバイス用のネイティブ C++ アプリを Visua
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">Visual C++ 開発用 IDE とツール</a><p>
+                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">IDE と Visual C++ 開発用ツール</a><p>
                     </div>
                 </div>
             </div>
