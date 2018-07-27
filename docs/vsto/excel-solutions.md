@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2018
 ### <a name="excel-customization-programming-model"></a>Excel カスタマイズのプログラミング モデル  
  Excel 用のドキュメント レベルのプロジェクトを作成すると、ソリューションの基礎となるクラス ( `ThisWorkbook`、 `Sheet1`、 `Sheet2`、および `Sheet3`) が Visual Studio によって生成されます。 これらのクラスはソリューションに関連付けられたブックおよびワークシートを表し、コードを記述するための開始点となります。  
   
- これらの生成クラスとその他ドキュメント レベル プロジェクトで使用できる機能については、[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)を参照してください  
+ これらの生成クラスとその他ドキュメント レベル プロジェクトで使用できる機能については、[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)を参照してください。	
   
 ##  <a name="applevel"></a> Excel 用の VSTO アドインを開発します。  
  Microsoft Office Excel の VSTO アドインは、Excel によって読み込まれるアセンブリで構成されます。 このアセンブリは、一般には UI のカスタマイズと Excel の自動化によって Excel の機能を拡張します。 特定のブックに関連付けられるドキュメント レベルのカスタマイズとは異なり、VSTO アドインに実装する機能の対象は 1 つのブックだけに制限されません。  
