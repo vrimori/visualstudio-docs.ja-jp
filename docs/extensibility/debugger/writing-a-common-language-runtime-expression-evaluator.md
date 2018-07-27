@@ -1,5 +1,5 @@
 ---
-title: 共通言語ランタイムの式エバリュエーターを作成 |Microsoft ドキュメント
+title: 共通言語ランタイム式エバリュエーターの書き込み |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,45 +15,45 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ff2189bd80d2c5bbbc5253763e2ba07ef917d19
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d93299702db0c56963eb8f404d05e8e67ab08b0
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31135851"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276820"
 ---
-# <a name="writing-a-common-language-runtime-expression-evaluator"></a>共通言語ランタイムの式エバリュエーターの書き込み
+# <a name="writing-a-common-language-runtime-expression-evaluator"></a>共通言語ランタイム式エバリュエーターの書き込み
 > [!IMPORTANT]
->  Visual Studio 2015 では、式エバリュエーターを実装するには、この方法は推奨されなくなりました。 CLR 式エバリュエーターを実装する方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)です。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 式エバリュエーター (EE) は、構文を処理するデバッグ エンジン (DE) の一部とデバッグ中のコードを生成するプログラミング言語のセマンティクスです。 式は、プログラミング言語のコンテキスト内で評価される必要があります。 たとえば、一部の言語で式"A B"、"A の合計と B" 他の言語では、同じ式が「A または b.」を可能性があります。 したがって、個別の EE 書き込む必要があります、Visual Studio IDE でデバッグ対象のオブジェクト コードを生成するプログラミング言語ごとにします。  
+ 式エバリュエーター (EE) は、構文を処理するデバッグ エンジン (DE) の一部と、デバッグ中のコードを生成したプログラミング言語のセマンティクスです。 プログラミング言語のコンテキスト内で式を評価する必要があります。 たとえば、一部の言語で式の"A + B"、"A の合計と B の" 他の言語で同じ式は「A または b.」可能性があります。 そのため、個別の EE 書き込む必要がある各プログラミング言語、Visual Studio IDE でデバッグ対象のオブジェクト コードを生成します。  
   
- Visual Studio デバッグ パッケージの一部の機能は、プログラミング言語のコンテキストでコードを解釈する必要があります。 他の式に入力したユーザーをブレークポイントで実行を停止したときなど、**ウォッチ**ウィンドウを評価して表示する必要があります。 式を入力して、ユーザーがローカル変数の値を変更するも、**ウォッチ**ウィンドウに、または、**イミディ エイト**ウィンドウです。  
+ Visual Studio のデバッグ パッケージの一部の側面は、プログラミング言語のコンテキストでコードを解釈する必要があります。 他の式に入力したユーザーをブレークポイントで実行を停止したときなど、**ウォッチ**ウィンドウを評価および表示する必要があります。 ユーザーに式を入力してローカル変数の値を変更することができます、**ウォッチ**ウィンドウまたはに、**イミディ エイト**ウィンドウ。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [共通言語ランタイムおよび式の評価](../../extensibility/debugger/common-language-runtime-and-expression-evaluation.md)  
- Visual Studio IDE に独自のプログラミング言語を統合するときに、EE を記述独自の言語のコンテキスト内で式を評価することでは、Microsoft intermediate language (MSIL) にコンパイルするについて説明します。デバッグ エンジンを書き込まずにします。  
+ [共通言語ランタイムよぶ式の評価](../../extensibility/debugger/common-language-runtime-and-expression-evaluation.md)  
+ 独自のプログラミング言語を Visual Studio IDE に統合するときに、EE を記述独自の言語のコンテキスト内で式を評価するのに対応できることを Microsoft intermediate language (MSIL) にコンパイルするについて説明します。デバッグ エンジンを書かずにします。  
   
  [式エバリュエーターのアーキテクチャ](../../extensibility/debugger/expression-evaluator-architecture.md)  
- EE の必要なインターフェイスを実装し、共通言語ランタイムのシンボル プロバイダー (SP) およびバインダー インターフェイスを呼び出す方法について説明します。  
+ EE の必要なインターフェイスを実装し、共通言語ランタイムのシンボル プロバイダー (SP) とバインダー インターフェイスを呼び出す方法について説明します。  
   
- [式エバリュエーターの登録](../../extensibility/debugger/registering-an-expression-evaluator.md)  
- ノート EE 必要があります、共通言語ランタイムと Visual Studio のランタイム環境でクラス ファクトリとしてそれ自体に登録されています。  
+ [式エバリュエーターを登録します。](../../extensibility/debugger/registering-an-expression-evaluator.md)  
+ ノート EE する必要があります、共通言語ランタイムと Visual Studio のランタイム環境でクラス ファクトリとして自体に登録します。  
   
- [式エバリュエーターの実装](../../extensibility/debugger/implementing-an-expression-evaluator.md)  
- 式を評価するプロセスがデバッグ エンジン (DE)、シンボル プロバイダー (SP)、バインダー オブジェクト、および、式エバリュエーター (EE) に含まれますについて説明します。  
+ [式エバリュエーターを実装します。](../../extensibility/debugger/implementing-an-expression-evaluator.md)  
+ 式の評価プロセスを含むデバッグ エンジン (DE)、シンボル プロバイダー (SP)、バインダー オブジェクト、式エバリュエーター (EE) および方法について説明します。  
   
- [ローカルの表示](../../extensibility/debugger/displaying-locals.md)  
- 方法については、実行が一時停止、ときにデバッグ パッケージを呼び出すローカル変数と引数の一覧を取得する DE について説明します。  
+ [ローカル変数の表示](../../extensibility/debugger/displaying-locals.md)  
+ 方法については、実行が一時停止したときに、デバッグ パッケージを呼び出すローカル変数と引数の一覧を取得する DE について説明します。  
   
- [[ウォッチ] ウィンドウの式の評価](../../extensibility/debugger/evaluating-a-watch-window-expression.md)  
- Visual Studio デバッグ パッケージがそのウォッチ式のリスト内の各式の現在の値を決定する DE を呼び出す方法について説明します。  
+ [[ウォッチ] ウィンドウの式を評価します。](../../extensibility/debugger/evaluating-a-watch-window-expression.md)  
+ Visual Studio のデバッグ パッケージがそのウォッチ リスト内の各式の現在の値を決定する DE を呼び出す方法について説明します。  
   
- [ローカルの値の変更](../../extensibility/debugger/changing-the-value-of-a-local.md)  
- ローカルの値を変更するには、[ローカル] ウィンドウの各行が名、型、およびローカルの現在の値を提供する関連付けられているオブジェクトについて説明します。  
+ [ローカルの値を変更します。](../../extensibility/debugger/changing-the-value-of-a-local.md)  
+ ローカルの値を変更するには、[ローカル] ウィンドウの各行が、名前、種類、およびローカルの現在の値を提供する関連付けられているオブジェクトについて説明します。  
   
- [型のビジュアライザーおよびカスタム ビューアーの実装](../../extensibility/debugger/implementing-type-visualizers-and-custom-viewers.md)  
- ビジュアライザーの型とカスタム ビューアーをサポートするコンポーネントによって実装される必要があるどのインターフェイスについて説明します。  
+ [型のビジュアライザーおよびカスタム ビューアーを実装します。](../../extensibility/debugger/implementing-type-visualizers-and-custom-viewers.md)  
+ 型のビジュアライザーおよびカスタム ビューアーをサポートするためにコンポーネントによって実装される必要があるインターフェイスについて説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

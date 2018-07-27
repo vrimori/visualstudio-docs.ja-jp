@@ -1,5 +1,5 @@
 ---
-title: サーバー (Visual Studio SDK) |Microsoft ドキュメント
+title: サーバー (Visual Studio SDK) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2904641e8188abc6ef2382b2da272a9f96fd0f81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 871eeb59832c640ede32e0fcd188941605c4afcb
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125495"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276654"
 ---
 # <a name="servers-visual-studio-sdk"></a>サーバー (Visual Studio SDK)
-デバッガーのアーキテクチャの観点から、**サーバー**:  
+デバッガーのアーキテクチャで、 *server*:  
   
--   ポートとポートの仕入先のコンテナーでありと通信するためのポートおよびポート サプライヤー セッション デバッグ マネージャー (SDM) をデバッグ エンジンを使用します。  
+-   ポートおよびポート サプライヤーのコンテナーと、セッション デバッグ マネージャー (SDM) とデバッグ エンジンにポートとポート サプライヤーを通信します。  
   
--   名前では自身を識別し、そのポートとポートのサプライヤーを列挙できます。  
+-   名前で識別し、そのポートとポート サプライヤーを列挙できます。  
   
--   によって表される、 [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) Visual Studio (Visual Studio の実行中の各インスタンスのサーバーの 1 つのインスタンス) でのみ実装されたインターフェイスです。  
+-   によって表される、 [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)インターフェイスで、Visual Studio (Visual Studio の実行の各インスタンスのサーバーの 1 つのインスタンス) によってのみ実装されます。  
   
 ## <a name="see-also"></a>関連項目  
  [ポート](../../extensibility/debugger/ports.md)   
- [ポートの仕入先](../../extensibility/debugger/port-suppliers.md)   
+ [ポート サプライヤー](../../extensibility/debugger/port-suppliers.md)   
  [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)
