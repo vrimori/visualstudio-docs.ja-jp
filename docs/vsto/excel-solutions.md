@@ -1,4 +1,4 @@
----
+﻿---
 title: Excel ソリューション
 ms.custom: ''
 ms.date: 02/02/2017
@@ -31,9 +31,10 @@ ms.workload:
 - office
 ms.openlocfilehash: 8e2c6e25c3acdfb4c90eb0ba74d66670be339588
 ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448572"
 ---
 # <a name="excel-solutions"></a>Excel ソリューション
   Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次の  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) を参照してください。
@@ -68,12 +69,12 @@ ms.lasthandoff: 05/22/2018
 ### <a name="excel-customization-programming-model"></a>Excel カスタマイズのプログラミング モデル  
  Excel 用のドキュメント レベルのプロジェクトを作成すると、ソリューションの基礎となるクラス ( `ThisWorkbook`、 `Sheet1`、 `Sheet2`、および `Sheet3`) が Visual Studio によって生成されます。 これらのクラスはソリューションに関連付けられたブックおよびワークシートを表し、コードを記述するための開始点となります。  
   
- これらの生成クラスとその他ドキュメント レベル プロジェクトで使用できる機能については、[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)を参照してください。	
+ これらの生成クラスとその他ドキュメント レベル プロジェクトで使用できる機能については、[ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)を参照してください。  
   
 ##  <a name="applevel"></a> Excel 用の VSTO アドインを開発します。  
  Microsoft Office Excel の VSTO アドインは、Excel によって読み込まれるアセンブリで構成されます。 このアセンブリは、一般には UI のカスタマイズと Excel の自動化によって Excel の機能を拡張します。 特定のブックに関連付けられるドキュメント レベルのカスタマイズとは異なり、VSTO アドインに実装する機能の対象は 1 つのブックだけに制限されません。  
   
- Excel 用 VSTO アドイン プロジェクトを作成するには、Visual Studio の**新しいプロジェクト**ダイアログ ボックスで、 Excel ブックまたは Excel テンプレート プロジェクト テンプレートを使用します。詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
+ Excel 用 VSTO アドイン プロジェクトを作成するには、Visual Studio の**新しいプロジェクト**ダイアログ ボックスで、 Excel ブックまたは Excel テンプレート プロジェクト テンプレートを使用します。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
  VSTO アドインが機能するしくみの概要については、次の [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md) を参照してください。  
   
