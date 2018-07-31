@@ -1,5 +1,5 @@
 ---
-title: 要求ポート業者インターフェイス |Microsoft ドキュメント
+title: ポート サプライヤー インターフェイスに必要な |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,48 +14,48 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e34627effce5e2f0d1401da683536548a32d3f6e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1c727cb39b480d72a3e0aa2083ca795bb65ac0ff
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128658"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252415"
 ---
-# <a name="required-port-supplier-interfaces"></a>必要なポート業者インターフェイス
-ポートのサプライヤーを実装する必要があります、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイス[。IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)  
+# <a name="required-port-supplier-interfaces"></a>必要なポート サプライヤー インターフェイス
+ポート サプライヤーを実装する必要があります、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)インターフェイス[。IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)  
   
- ポートのサプライヤーは、ポートを提供、しているため、必要がありますもそれらを実装します。 そのため、次のインターフェイスを実装してする必要があります。  
+ ポート サプライヤーは、ポートを提供し、それらを実装します。 そのため、実行、次のインターフェイス必要があります。  
   
 -   [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)  
   
-     ポートをについて説明し、ポートで実行されているすべてのプロセスを列挙できます。  
+     ポートをについて説明し、ポートで実行されているすべてのプロセスを列挙します。  
   
 -   [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)  
   
-     起動して、ポート上のプロセスの終了を提供します。  
+     起動して、ポート上のプロセスを終了しています。  
   
 -   [IDebugPortNotify2](../../extensibility/debugger/reference/idebugportnotify2.md)  
   
-     プログラムのノードの作成と破棄の通知にこのポートのコンテキスト内で実行されているプログラムのメカニズムを提供します。 詳細については、次を参照してください。[プログラム ノード](../../extensibility/debugger/program-nodes.md)です。  
+     プログラム ノードの作成と破棄のことを通知にこのポートのコンテキスト内で実行されるプログラム メカニズムを提供します。 詳細については、次を参照してください。[プログラム ノード](../../extensibility/debugger/program-nodes.md)します。  
   
 -   `IConnectionPointContainer`  
   
-     接続ポイントを提供[IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)です。  
+     接続ポイントを提供します[IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)します。  
   
-## <a name="port-supplier-operation"></a>ポートのサプライヤーの操作  
- [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)シンクが処理されるときに通知を受信し、プログラムが作成され、ポートを破棄します。 ポートが送信するために必要な[IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md)プロセスの作成時に、 [IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md)ポートでプロセスが破棄されるときです。 ポートが送信するために必要なも[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)プログラムが作成されたときと[IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)ポートで実行中のプロセスで、プログラムが破棄されるとき。  
+## <a name="port-supplier-operation"></a>ポート サプライヤーの操作  
+ [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md)シンクの場合、プロセスの通知を受信し、プログラムが作成され、ポートを破棄します。 ポートが送信に必要な[IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md)プロセスが作成されたときと[IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md)ポートでプロセスを破棄する場合。 ポートが送信する必要も[IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)プログラムが作成されたときと[IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)ポートで実行中のプロセスでプログラムを破棄する場合。  
   
- ポート通常送信プログラムの作成し、破棄イベントへの応答、 [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)と[RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)メソッド、それぞれします。  
+ ポート通常送信プログラムの作成し、破棄イベントへの応答、 [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)と[RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md)メソッドでは、それぞれします。  
   
- ポートが起動し、両方の物理プロセスと論理のプログラムを終了するため、デバッグ エンジンによってもこのこれらのインターフェイスを実装する必要があります。  
+ ポートを起動し、両方の物理プロセスと論理プログラムの終了、ため、次のインターフェイスもデバッグ エンジンが実装する必要があります。  
   
 -   [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)  
   
-     物理プロセスをについて説明します。 少なくとも次のメソッドを実装する必要があります。  
+     物理的なプロセスをについて説明します。 少なくとも、次のメソッドを実装する必要があります。  
   
     -   [EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)  
   
-    -   [getName](../../extensibility/debugger/reference/idebugprocess2-getname.md)  
+    -   [GetName](../../extensibility/debugger/reference/idebugprocess2-getname.md)  
   
     -   [GetServer](../../extensibility/debugger/reference/idebugprocess2-getserver.md)  
   
@@ -67,13 +67,13 @@ ms.locfileid: "31128658"
   
 -   [IDebugProcessEx2](../../extensibility/debugger/reference/idebugprocessex2.md)  
   
-     SDM のアタッチし、自体をプロセスからデタッチするための手段を提供します。  
+     アタッチし、自身のプロセスからデタッチ SDM の方法を提供します。  
   
 -   [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)  
   
-     論理プログラムをについて説明します。 少なくとも次のメソッドを実装する必要があります。  
+     論理プログラムをについて説明します。 少なくとも、次のメソッドを実装する必要があります。  
   
-    -   [getName](../../extensibility/debugger/reference/idebugprogram2-getname.md)  
+    -   [GetName](../../extensibility/debugger/reference/idebugprogram2-getname.md)  
   
     -   [GetProcess](../../extensibility/debugger/reference/idebugprogram2-getprocess.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "31128658"
   
 -   [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)  
   
-     このプログラムにアタッチする SDM のための手段を提供します。  
+     このプログラムにアタッチする SDM の方法を提供します。  
   
 ## <a name="see-also"></a>関連項目  
- [ポートのサプライヤーの実装](../../extensibility/debugger/implementing-a-port-supplier.md)
+ [ポート サプライヤーの実装](../../extensibility/debugger/implementing-a-port-supplier.md)

@@ -10,6 +10,8 @@
       href: deploying-applications-services-and-components.md
     - name: Azure App Service に配置する
       href: quickstart-deploy-to-azure.md
+    - name: Linux 用 App Service に配置する
+      href: quickstart-deploy-to-linux.md
     - name: Web サイトに配置する
       href: quickstart-deploy-to-a-web-site.md
     - name: ローカル フォルダーに配置する

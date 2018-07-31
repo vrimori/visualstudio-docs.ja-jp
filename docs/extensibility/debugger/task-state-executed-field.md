@@ -1,5 +1,5 @@
 ---
-title: TASK_STATE_EXECUTED フィールド |Microsoft ドキュメント
+title: TASK_STATE_EXECUTED フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac2627c8c7e7275b646fc38ce44910a8d275fe98
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fc8e98bec78973fe1309f3521c5f95bd9b3f50e
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125454"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276859"
 ---
 # <a name="taskstateexecuted-field"></a>TASK_STATE_EXECUTED フィールド
 タスクは実行中で、まだ完了していません。  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **アセンブリ:** (mscorlib.dll) の mscorlib  
+ **アセンブリ:** mscorlib (mscorlib.dll 内)  
   
- .NET Framework からこの内部のメンバーにアクセスすることはできません、ため、次の構文は共通中間言語 (CIL) に提供されます。  
+ .NET Framework からこの内部メンバーにアクセスできないため、次の構文には共通中間言語 (CIL) が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 .field static assembly literal int32 TASK_STATE_EXECUTED = int32(0x00020000)  
 ```  
   
-## <a name="remarks"></a>コメント  
- 場合、 [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)フィールドには、この値が含まれています、<xref:System.Threading.Tasks.Task.Status%2A>プロパティから返される<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>です。  
+## <a name="remarks"></a>Remarks  
+ 場合、 [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md)フィールドには、この値が含まれています、<xref:System.Threading.Tasks.Task.Status%2A>プロパティが返す<xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>します。  
   
 ## <a name="see-also"></a>関連項目  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

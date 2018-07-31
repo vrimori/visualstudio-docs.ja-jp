@@ -1,5 +1,5 @@
 ---
-title: .NET Framework の拡張機能の内部の並列 |Microsoft ドキュメント
+title: .NET Framework の拡張機能の内部を並列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,37 +13,37 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4936efe50023ed1e193d0c2ec0d9c3423ac5cc64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 84b4106509f62f1929f20283bc86c7930c22d39b
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100612"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251086"
 ---
 # <a name="parallel-extension-internals-for-the-net-framework"></a>.NET Framework の並列拡張機能の内部
-このセクションでは、内部の型、メソッドをについて説明し、できるようにするクラスのフィールドは、.NET framework の並列拡張機能のカスタムのデバッガーを実装します。  
+内部の型、メソッド、について説明し、できるようにするクラスのフィールドは、.NET Framework の parallel extensions のカスタムのデバッガーを実装します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Task クラス](../../extensibility/debugger/task-class-internal-members.md)  
- 内部データ メンバーについて説明します、<xref:System.Threading.Tasks.Task?displayProperty=fullName>クラスです。  
+ 内部データ メンバーについて説明します、<xref:System.Threading.Tasks.Task?displayProperty=fullName>クラス。  
   
  [TaskScheduler クラス](../../extensibility/debugger/taskscheduler-class-internal-members.md)  
- 内部データ メンバーについて説明します、<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>クラスです。  
+ 内部データ メンバーについて説明します、<xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>クラス。  
   
  [ContingentProperties クラス](../../extensibility/debugger/contingentproperties-class-internal-members.md)  
- 内部データ メンバーについて説明します、`System.Threading.Tasks.ContingentProperties`クラスです。  
+ 内部データ メンバーについて説明します、`System.Threading.Tasks.ContingentProperties`クラス。  
   
  [AsyncTaskMethodBuilder 構造体](../../extensibility/debugger/asynctaskmethodbuilder-structure-internal-members.md)  
- 内部メンバーを示します、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>構造体。  
+ 内部メンバーについて説明します、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>構造体。  
   
  [AsyncTaskMethodBuilder\<TResult > 構造体](../../extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members.md)  
- 内部メンバーを示します、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>構造体。  
+ 内部メンバーについて説明します、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>構造体。  
   
  [AsyncVoidMethodBuilder 構造体](../../extensibility/debugger/asyncvoidmethodbuilder-structure-internal-members.md)  
- 内部メンバーを示します、<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>構造体。  
+ 内部メンバーについて説明します、<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>構造体。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Threading.Tasks.Task?displayProperty=fullName>   
  <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName>   
- [Visual Studio デバッガー拡張機能](../../extensibility/debugger/visual-studio-debugger-extensibility.md)   
+ [Visual Studio デバッガーの拡張性](../../extensibility/debugger/visual-studio-debugger-extensibility.md)   
  [並列プログラミング](/dotnet/standard/parallel-programming/index)

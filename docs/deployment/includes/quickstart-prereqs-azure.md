@@ -2,6 +2,7 @@
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)選択した言語の適切なワークロードと共にインストールされます。
   * ASP.NET: **ASP.NET および web 開発**
+  * ASP.NET Core: ASP.NET ワークロードと **.NET Core クロス プラットフォーム開発**ワークロード
   * Node.js: **Node.js 開発**
 
 * Azure サブスクリプション。 サブスクリプションを既に持っていない場合[無料でサインアップ](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)、30 日間と人気の無料サービスの 12 か月のクレジットで $200 を含むです。

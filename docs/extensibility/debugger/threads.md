@@ -1,5 +1,5 @@
 ---
-title: スレッド |Microsoft ドキュメント
+title: スレッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a2754d3b1b15771f876855e7ca7d1dc510748308
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 456ec81c5f39f533bddd58d0a9e4d9d5889f066d
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125787"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276635"
 ---
 # <a name="threads"></a>スレッド
-デバッガーのアーキテクチャの観点から、**スレッド**:  
+デバッガーのアーキテクチャで、*スレッド*:  
   
--   計算の基本単位です。 スレッドは、順番に、1 回の呼び出し履歴は、次に、1 つのコードのコンテキストから移動のコンテキスト内では、その手順を実行します。  
+-   計算の基本的な単位です。 スレッドには、その手順を次に、1 つのコード コンテキストから移動を単一の呼び出し履歴のコンテキスト内で順番に実行します。  
   
--   それ自体で実行されているとという名前、中断して再開プログラムを識別できます。 スレッドはまた、その関連付けられているスタック フレームを列挙し、いくつかの条件下では、別のスタック フレームに移動できます。 スタック フレームのコンテキストを指定するには、スレッド返すことができます、関連付けられた論理スレッド存在する場合。 スレッドは中断カウント、IDE の [スレッド] ウィンドウで表示できるなどのプロパティを持ちます。  
+-   それ自体とで実行されているプログラムを識別できます。 スレッドは、という名前の中断、および再開できます。 スレッドはまた、関連付けられているスタック フレームを列挙し、いくつかの条件下では、別のスタック フレームに移動できます。 スタック フレームのコンテキストを指定するには、スレッドを返せるその関連付けられた論理スレッド存在する場合。 スレッドが中断カウントに表示されることがあるなどのプロパティ、**スレッド**IDE のウィンドウ。  
   
--   によって表される、 [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md)インターフェイス、通常、デバッグ エンジン (DE) またはプログラムの実行の結果としての仮想マシンによって作成します。  
+-   によって表される、 [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md)インターフェイス、通常、デバッグ エンジン (DE) またはプログラムを実行するための仮想マシンを作成します。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラム](../../extensibility/debugger/programs.md)   

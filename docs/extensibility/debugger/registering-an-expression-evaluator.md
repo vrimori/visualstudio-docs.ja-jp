@@ -14,28 +14,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3e764220fe5fe01e20b66af403dfd8b423e34e7
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 2031657091a2209d4e358998159581d2159a5443
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234027"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251206"
 ---
-# <a name="registering-an-expression-evaluator"></a>式エバリュエーターの登録
+# <a name="register-an-expression-evaluator"></a>式エバリュエーターを登録します。
 > [!IMPORTANT]
->  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細についてを参照してください[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
+>  Visual Studio 2015 での式エバリュエーターの実装には、この方法は非推奨とされます。 CLR 式エバリュエーターの実装方法の詳細については、次を参照してください。 [CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)と[マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)します。  
   
- 式エバリュエーター (EE) は、Windows COM 環境と Visual Studio の両方でクラス ファクトリとして自体を登録する必要があります。 EE は、これは、デバッグ エンジン (DE) のアドレス空間またはエンティティが、EE をインスタンス化によって、Visual Studio のアドレス空間のいずれかに挿入することがありますように DLL として実装されます。  
+ 式エバリュエーター (EE) は、Windows COM 環境と Visual Studio の両方でクラス ファクトリとして自体を登録する必要があります。 デバッグ エンジン (DE) のアドレス空間またはエンティティが、EE をインスタンス化によって、Visual Studio のアドレス空間のいずれかに挿入がそのように、EE が DLL として設定されます。  
   
 ## <a name="managed-code-expression-evaluator"></a>マネージ コードの式エバリュエーター  
- EE が自ら COM 環境は、通常、VSIP プログラムへの呼び出しにより起動を登録する DLL は、クラス ライブラリとして実装されているマネージ コード**regpkg.exe**します。 COM 環境のレジストリ キーの書き込みの実際のプロセスが自動的に処理されます。  
+ EE が自ら COM 環境は、通常、VSIP プログラムへの呼び出しにより起動を登録する DLL は、クラス ライブラリとして実装されているマネージ コード*regpkg.exe*します。 COM 環境のレジストリ キーの書き込みの実際のプロセスが自動的に処理されます。  
   
  メイン クラスのメソッドが付いた<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>DLL が COM に登録されているときに呼び出されるメソッドであることを示す この登録メソッドは、多くの場合と呼ばれる`RegisterClass`、Visual Studio で DLL を登録するためのタスクを実行します。 対応する`UnregisterClass`(でマークされた、 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>) の効果を元に戻します`RegisterClass`DLL がアンインストールされます。  
-  
- アンマネージ コードで記述された、EE の場合と同じのレジストリ エントリが作成されます。唯一の違いがあるないヘルパー関数など`SetEEMetric`に仕事ができます。 この登録または登録解除プロセスの例のようになります。  
+ アンマネージ コードで記述された、EE の場合と同じのレジストリ エントリが作成されます。唯一の違いがあるないヘルパー関数など`SetEEMetric`に仕事ができます。 登録および登録解除プロセスの例を次に示します。  
   
 ### <a name="example"></a>例  
- この関数は、マネージ コード EE の登録し、Visual Studio を使用したそのものの登録を解除を示しています。  
+ 次の関数は、マネージ コード EE の登録し、Visual Studio を使用したそのものの登録を解除を示しています。  
   
 ```csharp  
 namespace EEMC  
@@ -105,14 +104,14 @@ namespace EEMC
  EE DLL に実装する、 `DllRegisterServer` COM 環境として Visual Studio に登録する関数。  
   
 > [!NOTE]
->  MyCEE コード サンプル レジストリ コードは、VSIP インストール EnVSDK\MyCPkgs\MyCEE の下にあるファイル dllentry.cpp で確認できます。  
+>  Yoou ファイル内の MyCEE コード サンプル レジストリ コードが見つかります*dllentry.cpp*、EnVSDK\MyCPkgs\MyCEE VSIP インストール内に配置されています。  
   
 ### <a name="dll-server-process"></a>サーバー プロセスの DLL  
  EE、DLL サーバーを登録する: 場合  
   
 1.  クラス ファクトリを登録します`CLSID`通常の COM 規則に従ってします。  
   
-2.  ヘルパー関数を呼び出す`SetEEMetric`EE メトリックが、次の表に示すように Visual Studio で登録します。 関数は、`SetEEMetric`以下で指定したメトリック dbgmetric.lib ライブラリの一部であるとします。 参照してください[デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)詳細についてはします。  
+2.  ヘルパー関数を呼び出す`SetEEMetric`EE メトリックが、次の表に示すように Visual Studio で登録します。 関数は、 `SetEEMetric` 、次のように指定されたメトリックの一部では、 *dbgmetric.lib*ライブラリ。 参照してください[デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)詳細についてはします。  
   
     |メトリック|説明|  
     |------------|-----------------|  
@@ -127,7 +126,7 @@ namespace EEMC
 3.  Hkey_local_machine \software\microsoft\visualstudio の下にキーを作成して Visual Studio を使用した登録\\*X.Y*ここで、 *X.Y*を登録する Visual Studio のバージョンです。  
   
 ### <a name="example"></a>例  
- この関数は、アンマネージ コード (C++) EE の登録し、Visual Studio を使用した登録を解除します自体を表示します。  
+ 次の関数は、アンマネージ コード (C++) EE の登録し、Visual Studio を使用した登録を解除します自体を表示します。  
   
 ```cpp  
 /*---------------------------------------------------------  

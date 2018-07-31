@@ -26,7 +26,7 @@
       href: getting-started-with-visual-studio-tools-for-unity.md
     - name: Visual Studio Tools for Unity を使用する
       href: using-visual-studio-tools-for-unity.md
-    - name: Visual Studio Tools for Unity のプログラミング
+    - name: Visual Studio Tools for Unity をプログラミングする
       href: programming-visual-studio-tools-for-unity.md
       items:
         - name: VSTU によって作成されるプロジェクト ファイルのカスタマイズ
