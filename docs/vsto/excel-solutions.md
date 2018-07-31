@@ -1,4 +1,4 @@
----
+﻿---
 title: Excel ソリューション
 ms.custom: ''
 ms.date: 02/02/2017
@@ -37,12 +37,12 @@ ms.lasthandoff: 05/22/2018
 ms.locfileid: "34448572"
 ---
 # <a name="excel-solutions"></a>Excel ソリューション
-  Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次の [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) を参照してください。  
+  Visual Studio には、Microsoft Office Excel のドキュメント レベルのカスタマイズおよび VSTO アドインの作成に使用できるプロジェクト テンプレートが用意されています。 これらのソリューションを使用して、Excel の自動化、Excel の機能拡張、Excel のユーザー インターフェイス (UI) のカスタマイズを行うことができます。 ドキュメント レベルのカスタマイズと VSTO アドインの違いの詳細については、次の  [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md) を参照してください。
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
 > [!NOTE]  
->  [複数のプラットフォーム](https://dev.office.com/add-in-availability)にまたがる Office を拡張するソリューション開発に関心がありますか？ 新しい [Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)をチェックして下さい。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、HTML5、JavaScript、CSS3、XML などのほぼすべての web プログラミング テクノロジを使用して、ビルドすることができます。  
+>  [複数のプラットフォーム](https://dev.office.com/add-in-availability)にまたがる Office を拡張するソリューション開発に関心がありますか？新しい [Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)をチェックして下さい。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、HTML5、JavaScript、CSS3、XML などのほぼすべての web プログラミング テクノロジを使用して、ビルドすることができます。
   
  ここでは、次の情報について説明します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34448572"
  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次の [Excel アドインから PowerPoint を自動化するには？](http://go.microsoft.com/fwlink/?LinkID=130300)を参照してください。  
   
 ### <a name="excel-add-in-programming-model"></a>Excel アドインのプログラミング モデル  
- Excel VSTO アドイン プロジェクトを作成すると、 `ThisAddIn`と呼ばれる、ソリューションの基礎となるクラスが Visual Studio によって生成されます。 このクラスは、コードを記述するための開始点となり、Excel のオブジェクト モデルを VSTO アドインに公開します。  
+ Excel VSTO アドイン プロジェクトを作成すると、 `ThisAddIn` と呼ばれる、ソリューションの基礎となるクラスが Visual Studio によって生成されます。 このクラスは、コードを記述するための開始点となり、Excel のオブジェクト モデルを VSTO アドインに公開します。  
   
  詳細については、`ThisAddIn` クラスおよび VSTO アドインで使用できるその他の Visual Studio の機能については、次の [VSTO アドインをプログラミングします](../vsto/programming-vsto-add-ins.md)を参照してください。  
   
@@ -123,5 +123,4 @@ ms.locfileid: "34448572"
 |[チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)|VSTO アドインを使用して、 Windows フォームのボタン、 <xref:Microsoft.Office.Tools.Excel.NamedRange>、および<xref:Microsoft.Office.Tools.Excel.ListObject>を、実行時にワークシートへ追加する方法を示します。|
 |[共同編集し、アドインを理解します。](./understanding-coauthoring-and-addins.md)|ソリューションに共同編集に対応させるために必要な場合があります調整をについて説明します。|  
 |[Office 開発における Excel 2010](http://go.microsoft.com/fwlink/?LinkId=199011)|Excel ソリューションの開発に関する記事およびリファレンス ドキュメントへのリンクを提供します。 Visual Studio を使用した Office 開発だけの情報ではありません。|  
-  
   
