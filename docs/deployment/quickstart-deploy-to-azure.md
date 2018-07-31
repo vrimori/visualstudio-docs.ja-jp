@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: 7761164182188366425a81518f3d0513361b6f19
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: a8de7175b33a91c310da4b3d6d9e4c05c40c3522
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077844"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341691"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio を使用して Azure App Service への Web アプリを発行します。
 
@@ -44,6 +44,13 @@ ms.locfileid: "39077844"
 1. **[作成]** を選択します。 Visual Studio は、Azure App Service にアプリを配置し、ブラウザーで web アプリを読み込みます。 プロジェクトのプロパティ**発行**サイトの URL とその他の詳細ウィンドウに表示されます。
 
     ![発行プロファイルの概要を示すプロパティ ウィンドウ](../deployment/media/quickstart-publish-app-service-summary.png)
+
+## <a name="clean-up-resources"></a>リソースをクリーンアップする
+
+上記の手順では、リソース グループ内の Azure リソースを作成します。 これらのリソースを今後必要に予定がない場合は、リソース グループを削除することによって削除できます。
+Azure portal で左側のメニューから選択**リソース グループ**選び**myResourceGroup**します。
+リソース グループ ページで、表示されたリソースが削除するものになっていることを確認します。
+選択**削除**、型**myResourceGroup**でクリックしてテキスト ボックスに、**削除**します。
 
 ## <a name="next-steps"></a>次の手順
 
