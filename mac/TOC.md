@@ -21,6 +21,7 @@
 ## [プロジェクト内の参照の管理](managing-references-in-a-project.md)
 ### [チュートリアル - プロジェクトに NuGet パッケージを含める](nuget-walkthrough.md)
 ## [アプリ リソースの管理](managing-app-resources.md)
+## [方法: 複数のソリューションまたはインスタンスを開く](open-multiple-solutions.md)
 
 # [ソース エディター](source-editor.md)
 ## [リファクタリング](refactoring.md)
