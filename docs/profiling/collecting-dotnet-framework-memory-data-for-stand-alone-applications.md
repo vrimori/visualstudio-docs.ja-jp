@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: f4d6f35b5cae65708a0be4393710ef1d5934977a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: c9b863fa8b3571dc0f29ebc762295a4832536046
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34549065"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276843"
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用して .NET Framework メモリ データを収集する
 
@@ -25,8 +25,8 @@ ms.locfileid: "34549065"
   
 |タスク|関連コンテンツ|  
 |----------|---------------------|  
-|**アプリケーションの起動と .NET メモリのプロファイリング**|-   [方法: プロファイラーによって .NET Framework アプリケーションを起動し、メモリ データを収集する](../profiling/how-to-launch-a-stand-alone-dotnet-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line.md)|  
-|**プロファイラーを NET アプリケーションにアタッチする**|-   [方法: プロファイラーを .NET Framework アプリケーションにアタッチし、メモリ データを収集する](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md)|  
+|**アプリケーションの起動と .NET メモリのプロファイリング**|-   [方法: プロファイラーによって .NET Framework アプリケーションを起動し、メモリ データを収集する](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|  
+|**プロファイラーを NET アプリケーションにアタッチする**|-   [方法: プロファイラーを .NET Framework アプリケーションにアタッチし、メモリ データを収集する](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|  
 |**アプリケーションをインストルメント化して .NET メモリ データを収集する**|-   [方法: プロファイラーを使用してスタンドアロンの .NET Framework コンポーネントをインストルメント化し、メモリ データを収集する](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|  
   
 ## <a name="related-tasks"></a>関連するタスク

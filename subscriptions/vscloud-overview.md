@@ -9,12 +9,12 @@ description: 長期契約ではなく、月または年単位の一定期間だ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 73e8b5927d9d02fb8ebb1414a735c67604f750d9
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 99c03b19281ef9e53695b956a34b0682fb042f56
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302832"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380604"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional および Visual Studio Enterprise クラウド サブスクリプションの購入
 
@@ -36,7 +36,7 @@ ms.locfileid: "36302832"
 
 0.  請求に使用する Azure サブスクリプションを選択します。 お持ちでなければ、新しい Azure サブスクリプションを作成できます。
 
-    <img alt="Select Azure subscription for biling" src="_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Select Azure subscription for billing" src="_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png" style="border: 1px solid #CCCCCC" />
 
 0.  購入するサブスクリプションの数を選択します。
 
