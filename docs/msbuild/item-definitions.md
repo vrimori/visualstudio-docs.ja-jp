@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bed3140653e586ee4fb4899e6eba2b83f97035b0
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 0c267c8a0d76fdda08112e428c0fc7403daa1f30
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079097"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178563"
 ---
 # <a name="item-definitions"></a>項目定義
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0 では、[ItemGroup](../msbuild/itemgroup-element-msbuild.md) 要素を使用することにより、プロジェクト ファイルに項目を静的に宣言できます。 ただし、メタデータは、すべての項目に共通であっても項目単位でしか追加できません。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降には、この制限を克服する [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md) という名前のプロジェクト要素が導入されました。 *ItemDefinitionGroup* を使用して一連の項目定義を定義すると、名前付きの項目の種類に含まれるすべての項目に既定のメタデータ値を追加できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "39079097"
  この例では、項目 "i" ではメタデータ "m" が明示的に定義されていないため、既定のメタデータ "m" が項目 "i" に適用されます。 ただし、項目 "i" でメタデータ "n" が既に定義されているため、既定のメタデータ "n" は項目 "i" には適用されません。  
   
 > [!NOTE]
->  XML 要素名およびパラメーター名では、大文字と小文字が区別されます。 項目メタデータ名と項目/プロパティ名では、大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
+>  XML 要素名およびパラメーター名では、\-大文字と小文字が区別されます。 項目メタデータ名と項目\//プロパティ名では、\-大文字と小文字は区別されません。 したがって、大文字と小文字のみが異なる名前の ItemDefinitionGroup 項目は同じ ItemGroup として扱う必要があります。  
   
 ## <a name="value-sources"></a>値のソース  
  ItemDefinitionGroup に定義されたメタデータには、以下のさまざまなソースから値を割り当てることができます。  
@@ -144,7 +144,7 @@ ms.locfileid: "39079097"
 </ItemDefinitionGroup>    
 ```  
   
-## <a name="using-conditions-in-an-itemdefinitiongroup"></a>ItemDefinitionGroup での条件の使用  
+## <a name="use-conditions-in-an-itemdefinitiongroup"></a>ItemDefinitionGroup での条件の使用  
  ItemDefinitionGroup では、条件を使用してメタデータの追加を制御できます。 例:  
   
 ```xml  
@@ -190,7 +190,7 @@ ms.locfileid: "39079097"
 
 上の例では、条件が項目 "yes" に対して項目 "i" のメタデータ値を参照するので、"m" が値 "m1" に設定されます。 
   
-## <a name="overriding-and-deleting-metadata"></a>メタデータのオーバーライドと削除  
+## <a name="override-and-delete-metadata"></a>メタデータのオーバーライドと削除  
  ItemDefinitionGroup 要素に定義されたメタデータは、値を空白に設定することにより、後の ItemDefinitionGroup 要素でオーバーライドできます。 また、メタデータ項目は空の値に設定することによって削除できます。 例:  
   
 ```xml  

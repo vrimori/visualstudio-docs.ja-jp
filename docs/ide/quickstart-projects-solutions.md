@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e02be3774d0da28b96af0fb14ef64fd4bec6456e
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 95203738486b7e1304bc2a26032a5d0193d1e2e8
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080725"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180273"
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -51,7 +51,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 次に、最初のプロジェクトをソリューションに追加してみましょう。 空のプロジェクトから始めて、そのプロジェクトに必要なアイテムを追加します。
 
-1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、**[新しいプロジェクト]** を選択します。
+1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、 > **[新しいプロジェクト]** を選択します。
 
    **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -108,7 +108,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 単体テスト プロジェクトをソリューションに追加してみましょう。 今度はプロジェクト テンプレートから開始します。これにより、プロジェクトに追加のコード ファイルを追加する必要がなくなります。
 
-1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、**[新しいプロジェクト]** を選択します。
+1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、 > **[新しいプロジェクト]** を選択します。
 
    **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 

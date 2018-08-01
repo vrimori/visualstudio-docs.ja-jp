@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 439afb9142e3e5ae795b0457f6405ba47227105f
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 379291059157980a86d0379c69c0d592eee83a99
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845306"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177826"
 ---
 # <a name="fix-non-detectable-dynamic-parameters-in-a-web-performance-test"></a>Web パフォーマンス テストでの検出できない動的パラメーターの修正
 
@@ -35,11 +35,11 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
 検出可能な動的パラメーターと検出不可能な動的パラメーターの両方を示すために、単純な ASP.NET Web アプリケーションを作成します。これには、いくつかのコントロールとカスタム コードを使用する 3 つの Web フォームが含まれています。 また、動的パラメーターを特定する方法と、それらの処理方法も説明します。
 
-1.  DynamicParamaterSample という名前の新しい ASP.NET プロジェクトを作成します。
+1.  **DynamicParameterSample** という名前の新しい ASP.NET プロジェクトを作成します。
 
      ![空の ASP.NET Web アプリケーション プロジェクトを作成する](../test/media/web_test_dynamicparameter_aspproject.png)
 
-2.  Querystring.aspx という名前の Web フォームを追加します。
+2.  *Querystring.aspx* という名前の Web フォームを追加します。
 
 3.  デザイン ビューで、HiddenField をページにドラッグし、(ID) プロパティの値を HiddenFieldSessionID に変更します。
 
@@ -62,7 +62,7 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
     </html>
     ```
 
-5.  Querystring.aspx.cs ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
+5.  *Querystring.aspx.cs* ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
 
     ```csharp
     public partial class Querystring : System.Web.UI.Page
@@ -74,25 +74,25 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
     }
     ```
 
-6.  ASPQuery.aspx という名前で 2 つ目の Web フォームを追加します。
+6.  *ASPQuery.aspx* という名前で 2 つ目の Web フォームを追加します。
 
-7.  デザイン ビューで、Label をページにドラッグし、(ID) プロパティの値を IndexLabel に変更します。
+7.  デザイン ビューで、**Label** をページにドラッグし、**(ID)** プロパティの値を **IndexLabel** に変更します。
 
      ![ラベルを Web フォームに追加する](../test/media/web_test_dynamicparameter_label.png)
 
-8.  HyperLink をページにドラッグし、Text プロパティを Back に変更します。
+8.  **HyperLink** をページにドラッグし、**Text** プロパティを **Back** に変更します。
 
      ![ハイパーリンクを Web フォームに追加する](../test/media/web_test_dynamicparameter_hyperlink.png)
 
-9. NavigationURL プロパティの (...) をクリックします。
+9. **NavigationURL** プロパティの **(...)** をクリックします。
 
      ![NavigateURL プロパティを編集する](../test/media/web_test_dynamicparameter_hyperlink_navurl.png)
 
-     Querystring.aspx をクリックします。
+     *Querystring.aspx* をクリックします。
 
      ![URL として Querystring.aspx を選択する](../test/media/web_test_dynamicparameter_hyperlink_navurl2.png)
 
-10. ASPQuery.aspx.cs ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
+10. *ASPQuery.aspx.cs* ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
 
     ```csharp
     protected void Page_Load(object sender, EventArgs e)
@@ -101,13 +101,13 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
             }
     ```
 
-11. JScriptQuery.aspx という名前で 3 つ目の Web フォームを追加します。
+11. *JScriptQuery.aspx* という名前で 3 つ目の Web フォームを追加します。
 
-     2 番目のページの場合と同様に、Label をフォームにドラッグし、(ID) プロパティを IndexLabel に設定します。Hyperlink をフォームにドラッグし、Text プロパティを Back に設定して、NavigationURL プロパティを Querystring.aspx に設定します。
+     2 番目のページの場合と同様に、**Label** をフォームにドラッグし、**(ID)** プロパティを **IndexLabel** に設定します。**Hyperlink** をフォームにドラッグし、**Text** プロパティを **Back** に設定して、**NavigationURL** プロパティを **Querystring.aspx** に設定します。
 
      ![3 つ目の Web フォームを追加および構成する](../test/media/web_test_dynamicparameter_addwebform3.png)
 
-12. JScriptQuery.aspx.cs ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
+12. *JScriptQuery.aspx.cs* ファイルを開き、次の強調表示されたコードを Page_Load メソッドに追加します。
 
     ```csharp
     protected void Page_Load(object sender, EventArgs e)
@@ -118,11 +118,11 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
 13. プロジェクトを保存します。
 
-14. ソリューション エクスプローラーで、Querystring.aspx をスタート ページとして設定します。
+14. **ソリューション エクスプローラー**で、*Querystring.aspx* をスタート ページとして設定します。
 
      ![Querystring.aspx をスタート ページとして設定する](../test/media/web_test_dynamicparameter_setstartpage.png)
 
-15. Ctrl キーを押しながら F5 キーを押して、ブラウザーで Web アプリケーションを実行します。 URL をコピーします。 この URL は、テストを記録するときに必要になります。
+15. **Ctrl** キーを押しながら **F5** キーを押して、ブラウザーで Web アプリケーションを実行します。 URL をコピーします。 この URL は、テストを記録するときに必要になります。
 
 16. 両方のリンクを試します。 どちらについても、"Success.  Dynamic querystring parameter found." というメッセージが示されます。
 
@@ -152,21 +152,21 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
      Web アプリ内を移動するとき、Web テスト レコーダーに HTTP 要求と応答 URL が表示されます。
 
-6.  テスト レコーダーの [停止] ボタンをクリックします。
+6.  テスト レコーダーの **[停止]** ボタンをクリックします。
 
      動的パラメーターを検出するためのダイアログ ボックスには、受信した HTTP 応答でのパラメーターの検出状況を示す進行状況バーも表示されます。
 
 7.  ASPQuery ページの CustomQueryString の動的パラメーターは自動的に検出されています。 ただし、JScriptQuery ページの CustomQueryString の動的パラメーターは検出されていません。
 
-     Querystring.aspx に抽出規則を追加し、ASPQuery ページにバインドするには、[OK] をクリックします。
+     *Querystring.aspx* に抽出規則を追加し、ASPQuery ページにバインドするには、**[OK]** をクリックします。
 
      ![検出された動的パラメーターを昇格させる](../test/media/web_test_dynamicparameter_promotedialog.png)
 
-     抽出規則は、Querystring.aspx への 1 つ目の要求に追加されます。
+     抽出規則は、*Querystring.aspx* への 1 つ目の要求に追加されます。
 
      ![要求に追加された抽出規則](../test/media/web_test_dynamicparameter_autoextractionrule.png)
 
-     ASPQuery.aspx の要求ツリーで 2 番目の要求を展開し、CustomQueryString の値が抽出規則にバインドされていることを確認します。
+     *ASPQuery.aspx* の要求ツリーで 2 番目の要求を展開し、CustomQueryString の値が抽出規則にバインドされていることを確認します。
 
      ![抽出規則にバインドされた CustomQueryString](../test/media/web_test_dynamicparameter_autoextractionrule2.png)
 
@@ -178,21 +178,21 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
      ![Web パフォーマンス テストを実行する](../test/media/web_test_dynamicparameter_runtest.png)
 
-2.  JScriptQuery.aspx ページに対する 4 番目の要求は失敗します。 Web テストに移動します。
+2.  *JScriptQuery.aspx* ページに対する 4 番目の要求は失敗します。 Web テストに移動します。
 
      ![テスト結果に示された動的パラメーター エラー](../test/media/web_test_dynamicparameter_runresults.png)
 
-     エディターで、JScriptQuery.aspx 要求ノードが強調表示されます。 このノードを展開します。CustomQueryString の "1v0yhyiyr0raa2w4j4pwf5zl" が動的な部分と思われます。
+     エディターで、*JScriptQuery.aspx* 要求ノードが強調表示されます。 このノードを展開します。CustomQueryString の "1v0yhyiyr0raa2w4j4pwf5zl" が動的な部分と思われます。
 
      ![CustomQueryString で動的パラメーターと思われる部分](../test/media/web_test_dynamicparameter_runresults2.png)
 
-3.  Web パフォーマンス テスト結果ビューアーに戻って、失敗した JScriptQuery.aspx ページを選択します。 次に、[要求] タブをクリックし、[生データの表示] チェック ボックスがオフになっていることを確認します。スクロール ダウンし、CustomQueryString の [クイック検索] をクリックします。
+3.  Web パフォーマンス テスト結果ビューアーに戻って、失敗した *JScriptQuery.aspx* ページを選択します。 次に、[要求] タブをクリックし、[生データの表示] チェック ボックスがオフになっていることを確認します。スクロール ダウンし、CustomQueryString の [クイック検索] をクリックします。
 
      ![クイック検索を使用して動的パラメーターを特定する](../test/media/web_test_dynamicparameter_runresultsquckfind.png)
 
-4.  テスト エディターに表示された内容から、JScriptQuery.aspx 要求の CustomQueryString には "`jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl`" という値が割り当てられており、動的と思われる部分は "1v0yhyiyr0raa2w4j4pwf5zl" だということがわかっています。 [検索する文字列] ドロップダウン リストで、動的と思われる部分を検索文字列から削除します。 文字列は、"CustomQueryString=jScriptQueryString___" のようになります。
+4.  テスト エディターに表示された内容から、*JScriptQuery.aspx* 要求の CustomQueryString には `jScriptQueryString___1v0yhyiyr0raa2w4j4pwf5zl` という値が割り当てられており、動的と思われる部分は "1v0yhyiyr0raa2w4j4pwf5zl" だということがわかっています。 [検索する文字列] ドロップダウン リストで、動的と思われる部分を検索文字列から削除します。 文字列は、"CustomQueryString=jScriptQueryString___" のようになります。
 
-     動的パラメーターには、エラーが存在する要求より前の要求で値が割り当てられます。 このため、[上へ検索] チェック ボックスをオンにして、[次を検索] をクリックし、[要求] パネルで先行する Querystring.aspx の要求が強調表示されるまで検索を続けます。 [次を検索] を 3 回クリックすると、その状態になります。
+     動的パラメーターには、エラーが存在する要求より前の要求で値が割り当てられます。 このため、[上へ検索] チェック ボックスをオンにして、[次を検索] をクリックし、[要求] パネルで先行する *Querystring.aspx* の要求が強調表示されるまで検索を続けます。 [次を検索] を 3 回クリックすると、その状態になります。
 
      ![クイック検索を使用して動的パラメーターを特定する](../test/media/web_test_dynamicparameter_runresultsquckfind4.png)
 
@@ -215,7 +215,7 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
      ![[記録された結果] を選択する](../test/media/web_test_dynamicparameter_recordedresult.png)
 
-7.  記録された結果で、3 番目の要求を選択します。これは、テスト実行の結果で特定した Querystringrequest.aspx 要求と同じです。
+7.  記録された結果で、3 番目の要求を選択します。これは、テスト実行の結果で特定した *Querystringrequest.aspx* 要求と同じです。
 
      ![記録された結果で同じ要求を選択する](../test/media/web_test_dynamicparameter_recordedresultsselectnode.png)
 
@@ -223,25 +223,25 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
      ![動的パラメーターに抽出規則を追加する](../test/media/web_test_dynamicparameter_recordedresultaddextractionrule.png)
 
-     新しい抽出規則が Querystring.aspx 要求に追加され、"Param0" という値が割り当てられます。
+     新しい抽出規則が *Querystring.aspx* 要求に追加され、"Param0" という値が割り当てられます。
 
-     パラメーターをバインドするための、抽出されたテキストに対する一致が見つかったことを示すメッセージがダイアログ ボックスに表示された場合は、[はい] をクリックします。
+     パラメーターをバインドするための、抽出されたテキストに対する一致が見つかったことを示すメッセージがダイアログ ボックスに表示された場合は、**[はい]** をクリックします。
 
      ![作成された抽出規則](../test/media/web_test_dynamicparameter_addextractiondialog.png)
 
-8.  [次を検索] をクリックします。 最初の一致は、JScriptQuery ページの CustomQueryString のパラメーターであり、変更が必要です。
+8.  **[次を検索]** をクリックします。 最初の一致は、JScriptQuery ページの CustomQueryString のパラメーターであり、変更が必要です。
 
      ![パラメーターのテキストを検索/置換する](../test/media/web_test_dynamicparameter_addextractionfindreplace.png)
 
-9. [置換] をクリックします。
+9. **[置換]** をクリックします。
 
      ![テキストをパラメーターで置き換える](../test/media/web_test_dynamicparameter_addextractionfindreplace2.png)
 
-     JScriptQuery.aspx 要求の下の QueryString パラメーターが、新しいコンテキスト パラメーターの "CustomQueryString=jScriptQueryString___{{Param0}}" を使って更新されます。
+     *JScriptQuery.aspx* 要求の下の QueryString パラメーターが、新しいコンテキスト パラメーターの "CustomQueryString=jScriptQueryString___{{Param0}}" を使って更新されます。
 
      ![QueryString に適用されたパラメーター](../test/media/web_test_dynamicparameter_addextractionfindreplace3.png)
 
-10. 検索と置換のダイアログ ボックスを閉じます。 要求ツリーで、検出された動的パラメーターと、関連付けた検出されない動的パラメーターとの間に同様の構造があることを確認します。
+10. **検索と置換**のダイアログ ボックスを閉じます。 要求ツリーで、検出された動的パラメーターと、関連付けた検出されない動的パラメーターとの間に同様の構造があることを確認します。
 
      ![検出され関連付けられた動的パラメーター](../test/media/web_test_dynamicparameter_conclusion.png)
 
@@ -253,13 +253,13 @@ Web サイトによっては、一部の Web 要求の処理に動的パラメ�
 
  **A:** はい。次の手順を使用してください。
 
-1.  ツール バーの [動的パラメーターを Web テスト パラメーターに昇格] をクリックします。
+1.  ツール バーの **[動的パラメーターを Web テスト パラメーターに昇格]** をクリックします。
 
-     検出プロセスの完了後、動的パラメーターが検出された場合、[動的パラメーターを Web テスト パラメーターに昇格] ダイアログ ボックスが表示されます。
+     検出プロセスの完了後、動的パラメーターが検出された場合、**[動的パラメーターを Web テスト パラメーターに昇格]** ダイアログ ボックスが表示されます。
 
      動的パラメーターは、[動的パラメーター] 列に表示されます。 動的パラメーターの抽出元およびバインド先の要求が、[応答からパラメーターを抽出] 列と [要求にバインド] 列の下に表示されます。
 
-     [動的パラメーターを Web テスト パラメーターに昇格] ダイアログ ボックスで動的パラメーターを選択すると、Web パフォーマンス テスト エディターの要求ツリーで 2 つの要求が強調表示されます。 最初の要求は、抽出規則が追加される要求です。 2 番目の要求では、抽出された値がバインドされます。
+     **[動的パラメーターを Web テスト パラメーターに昇格]** ダイアログ ボックスで動的パラメーターを選択すると、Web パフォーマンス テスト エディターの要求ツリーで 2 つの要求が強調表示されます。 最初の要求は、抽出規則が追加される要求です。 2 番目の要求では、抽出された値がバインドされます。
 
 2.  自動的に関連付ける動的パラメーターの横にあるチェック ボックスをオンまたはオフにします。 既定では、すべての動的パラメーターがオンになっています。
 
