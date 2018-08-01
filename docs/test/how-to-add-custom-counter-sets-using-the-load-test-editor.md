@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 862afc0755e8d478d5e8bca76019abd899d842f8
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: d9143306b9f3894e7f8f6742420f90aa30008340
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752015"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204090"
 ---
 # <a name="how-to-add-custom-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカスタム カウンター セットを追加する
 
@@ -39,9 +39,9 @@ ms.locfileid: "34752015"
 3.  **[カウンター セット]** ノードを右クリックし、**[カスタム カウンター セットの追加]** を選択します。
 
     > [!NOTE]
-    > カウンター セットには、**Custom1** のような既定の名前が付けられます。 名前は **[プロパティ]** ウィンドウを使用して変更できます。 F4 キーを押して **[プロパティ]** ウィンドウを表示します。
+    > カウンター セットには、**Custom1** のような既定の名前が付けられます。 名前は **[プロパティ]** ウィンドウを使用して変更できます。 **F4** キーを押して **[プロパティ]** ウィンドウを表示します。
 
-4.  カウンターをカスタム カウンター セットに追加するには、新しいカウンター セットを右クリックし、**[カウンターの追加]** を選択します。 カウンターを追加する方法の詳細については、[カウンターをカウンター セットに追加する方法](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)に関するページを参照してください。
+4.  カウンターをカスタム カウンター セットに追加するには、新しいカウンター セットを右クリックし、**[カウンターの追加]** を選択します。 カウンターを追加する方法の詳細については、「[方法: カウンターをカウンター セットに追加する](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)」を参照してください。
 
     > [!NOTE]
     > カスタム カウンター セットも追加できます。追加するには、既存のカウンター セットを右クリックし、[コピー] を選択して、カウンター セット ノードに貼り付けます。 コピーされた追加のカウンターで不要になったものは削除できます。 新しいカウンター セットの名前は、**[プロパティ]** ウィンドウを使用して変更できます。

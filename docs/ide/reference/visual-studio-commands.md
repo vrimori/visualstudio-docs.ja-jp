@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cfc5c90e8fbc1a08eddaab2fad3bca1ba16a414
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 75b2a889c00245b983305d56e9eb79d78d0d4966
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924275"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176867"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio コマンド
 Visual Studio のコマンドを使用すると、 **[コマンド]** ウィンドウ、 **[イミディエイト]** ウィンドウ、または **[検索]** ボックスからコマンドを呼び出すことができます。 どちらに入力する場合でも、後続の操作が検索またはデバッグではなく、コマンドであることを示す不等号 (`>`) を使用します。

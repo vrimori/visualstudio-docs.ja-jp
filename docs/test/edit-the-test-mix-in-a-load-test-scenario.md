@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: cd3511d138fb6416d8309a3e32c1e96c9b70502b
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3fd2ab4689128ca06ab463aed1743a244597b9ea
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750936"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179516"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>テスト ミックスを編集して、ロード テスト シナリオに含める Web パフォーマンス テスト、単体テスト、コード化された UI テストを指定
 
@@ -33,9 +33,9 @@ ms.locfileid: "34750936"
 
 ## <a name="add-new-tests-to-a-test-mix-in-an-existing-scenario"></a>既存のシナリオにおけるテスト ミックスへの新しいテストの追加
 
-新しいロード テスト ウィザードを使用してシナリオを新規作成する場合、Web パフォーマンスと単体テストを指定し、新しいシナリオのテスト ミックスに追加できます。
+**新しいロード テスト ウィザード**を使用してシナリオを新規作成する場合、Web パフォーマンスと単体テストを指定し、新しいシナリオのテスト ミックスに追加できます。
 
-ロード テスト エディターを使用して、より多くの Web パフォーマンスと単体テストをシナリオのテキスト ミックスに追加できます。
+**ロード テスト エディター**を使用して、より多くの Web パフォーマンスと単体テストをシナリオのテキスト ミックスに追加できます。
 
 ![既存のロード テストへのテストの追加](../test/media/ltest_addingtests.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "34750936"
 
 1.  ロード テストを開きます。
 
-2.  ロード テスト エディターで、既存のシナリオを右クリックし、**[テストの追加]** を選択します。
+2.  **ロード テスト エディター**で、既存のシナリオを右クリックし、**[テストの追加]** を選択します。
 
      **[テストの追加]** ダイアログ ボックスが表示されます。 まだシナリオに追加されていないソリューション内のすべての Web パフォーマンス テスト、単体テスト、コード化された UI テストが、シナリオに追加できるよう表示されます。
 
@@ -53,16 +53,16 @@ ms.locfileid: "34750936"
 
      これでテストがテスト ミックスに追加されます。 新規の配分が自動的にテスト ミックス内のテストに割り当てられます。
 
-5.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、「[ミックス コントロールについて](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)」を参照してください。
+5.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、[ミックス コントロール](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)に関するページを参照してください。
 
-##  <a name="EditingTestMixRemoveTest"></a>シナリオからのテストの削除
+##  <a name="remove-tests-from-a-scenario"></a>シナリオからテストを削除する
  ![既存のロード テストからのテストの削除](../test/media/ltest_removetest.png)
 
 ### <a name="to-remove-tests-from-a-scenario"></a>シナリオからテストを削除するには
 
 1.  ロード テストを開きます。
 
-2.  ロード テスト エディターのロード テスト ツリーでテストを削除するシナリオを右クリックし、**[テスト ミックスの編集]** を選択します。 **[テスト ミックスの編集]** ダイアログ ボックスが表示されます。
+2.  **ロード テスト エディターの**ロード テスト ツリーでテストを削除するシナリオを右クリックし、**[テスト ミックスの編集]** を選択します。 **[テスト ミックスの編集]** ダイアログ ボックスが表示されます。
 
 3.  グリッドにある Web パフォーマンス テスト、単体テスト、またはコード化された UI テストを選択し、**[削除]** を選択します。
 

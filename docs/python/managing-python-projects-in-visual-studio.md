@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7a4374a389176273f7ceaa63b680868fd546398e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: c28876a9bd8eaf055a5657047c966b0740b15765
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38778522"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232271"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio の Python プロジェクト
 
@@ -139,7 +139,18 @@ Visual Studio のプロジェクトは、プロジェクトと拡張機能への
 
 IronPython を使う場合は、.NET アセンブリへの参照を追加して IntelliSense を有効にすることができます。 ソリューション内の .NETプロジェクトの場合は、Python プロジェクトで **[参照]** ノードを右クリックし、**[参照の追加]** を選び、**[プロジェクト]** タブを選んで、目的のプロジェクトを参照します。 別にダウンロードした DLL の場合は、代わりに **[参照]** タブを選び、目的の DLL を参照します。
 
-IronPython での参照は、`clr.AddReference('AssemblyName')` への呼び出しが行われるまで使えないので、`clr.AddReference` の呼び出しをアセンブリに追加する必要もあります。
+IronPython での参照は、`clr.AddReference('<AssemblyName>')` への呼び出しが行われるまで使えないので、`clr.AddReference` の適切な呼び出しをアセンブリに追加する必要もあります (通常は、コードの先頭)。 たとえば、Visual Studio で **IronPython Windows フォーム アプリケーション** プロジェクト テンプレートによって作成されるコードには、ファイルの先頭に次の 2 つの呼び出しが含まれます。
+
+```python
+import clr
+clr.AddReference('System.Drawing')
+clr.AddReference('System.Windows.Forms')
+
+from System.Drawing import *
+from System.Windows.Forms import *
+
+# Other code omitted
+```
 
 ### <a name="webpi-projects"></a>WebPI プロジェクト
 

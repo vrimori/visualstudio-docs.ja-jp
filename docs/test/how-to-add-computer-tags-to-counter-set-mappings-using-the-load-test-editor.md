@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d6b14ef4ae42ef978c449f7cb4bafaa08bf8a1a6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 96ce122c78c20b741613ed45820f585236a0383b
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31968136"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203668"
 ---
 # <a name="how-to-add-computer-tags-to-counter-set-mappings-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してコンピューター タグをカウンター セットのマップに追加する
 
@@ -49,7 +49,7 @@ ms.locfileid: "31968136"
 
 ## <a name="see-also"></a>関連項目
 
-- [しきい値規則違反の分析](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [しきい値規則違反](../test/analyze-threshold-rule-violations-in-load-tests.md)
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
 - [方法: カウンター セットを管理する](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)

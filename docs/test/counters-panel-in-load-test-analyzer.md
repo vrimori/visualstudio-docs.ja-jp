@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: fd87cdb912b7e2dcf13476bab610935db5ca4fd7
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 2b85d2d20f4400e252cbfd19ea169c7b27b2aecf
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36304343"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176880"
 ---
 # <a name="use-the-counters-panel-in-graphs-view-and-tables-view"></a>グラフ ビューおよびテーブル ビューでのカウンター パネルの使用
 
@@ -51,9 +51,9 @@ ms.locfileid: "36304343"
 |-|-|
 |![カウンター パネルのシナリオ名ノード](../test/media/ltest__namenode.png)|1.ロード テストの Scenario1 に関連付けられているすべてのパフォーマンス カウンターは、このノードの下に表示されます。<br />2.シナリオのすべてのテストはシナリオ ノードの下にあります。 ラベルはテスト名を示します。<br />3.テスト ノードの下のリーフ ノードはロード テストのテスト ケース カウンターで、カウンターのインスタンス名がテスト名になります。<br />4.Web パフォーマンス テスト分岐に関連付けられたロード テスト ページ カウンターのすべてのインスタンス。 このノードには、ロード テストの Scenario1 の IBuyBrowse Web パフォーマンス テストのページ ログイン GET (レポート名) に関連付けられた、すべてのロード テスト ページ カウンター インスタンスが含まれています。<br />5.ページ ノードの下のリーフ ノードはロード テスト ページ カウンターです。<br />6.Web パフォーマンス テストに関連付けられたロード テスト要求カウンターのすべてのインスタンスは、Web パフォーマンス テスト分岐内に含まれています。 このノードには、ロード テストの Scenario1 の IBuyBrowse Web パフォーマンス テストの要求ログイン GET (レポート名) に関連付けられた、すべての要求カウンター インスタンスが含まれています。<br />7.要求ノードの下のリーフ ノードはロード テスト要求カウンターです。<br />8.Web パフォーマンス テストに関連付けられたロード テスト トランザクション カウンターのすべてのインスタンスは、Web パフォーマンス テスト分岐内に含まれています。 このノードには、ロード テストの Scenraio1 の IBuyBrowse Web パフォーマンス テストのトランザクション (Transaction1) に関連付けられた、すべてのトランザクション カウンター インスタンスが含まれています。<br />9.トランザクション ノードの下のリーフ ノードはロード テスト トランザクション カウンターです。<br />10.単体テスト ノード。|
 
-## <a name="tasks"></a>[タスク]
+## <a name="tasks"></a>タスク
 
-|[タスク]|関連するトピック|
+|タスク|関連するトピック|
 |-----------|-----------------------|
 |**グラフ ビューでパフォーマンス カウンターをグラフに追加する:** **[カウンター]** パネルで、パフォーマンス カウンターをグラフに追加することにより、さまざまなデータをロード テスト グラフに追加できます。|-   [方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)|
 |**ロード テストで指定したしきい値の違反を分析する:** **[カウンター]** パネルにしきい値違反を表すアイコンが表示されます。これは、詳しい分析用にテーブルとグラフに追加できます。|-   [方法: カウンター パネルを使用して、しきい値違反を分析する](../test/analyze-threshold-rule-violations-in-load-tests.md)|

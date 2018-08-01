@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 754968b95ce1332991ddc921138741a1d9235015
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 34c6e966a7feff00fc9b32495f3697643120f1ee
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756926"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154425"
 ---
 # <a name="output-element-msbuild"></a>Output 要素 (MSBuild)
 タスクの出力値をアイテムとプロパティに格納します。  
@@ -43,7 +43,7 @@ ms.locfileid: "36756926"
     Condition = "'String A' == 'String B'" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -51,8 +51,8 @@ ms.locfileid: "36756926"
 |属性|説明|  
 |---------------|-----------------|  
 |`TaskParameter`|必須の属性です。<br /><br /> タスクの出力パラメーターの名前です。|  
-|`PropertyName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るプロパティです。 プロジェクトは、`$(`*PropertyName*`)` 構文でプロパティを参照できます。 このプロパティ名は、新しいプロパティ名でも、プロジェクトで既に定義されている名前でもかまいません。<br /><br /> `ItemName` が使われている場合、この属性を使うことはできません。|  
-|`ItemName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るアイテムです。 プロジェクトは、`@(`*ItemName*`)` 構文でアイテムを参照できます。 アイテム名は、新しいアイテム名でも、プロジェクトで既に定義されている名前でもかまいません。 項目の名前が既存の項目の場合、出力パラメーターの値は既存の項目に追加されます。 <br /><br /> `PropertyName` が使われている場合、この属性を使うことはできません。|  
+|`PropertyName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るプロパティです。 プロジェクトは、$(\<PropertyName>) 構文でプロパティを参照できます。 このプロパティ名は、新しいプロパティ名でも、プロジェクトで既に定義されている名前でもかまいません。<br /><br /> `ItemName` が使われている場合、この属性を使うことはできません。|  
+|`ItemName`|`PropertyName` 属性と `ItemName` 属性のどちらかが必要です。<br /><br /> タスクの出力パラメーターの値を受け取るアイテムです。 プロジェクトは、@(\<ItemName>) 構文でアイテムを参照できます。 アイテム名は、新しいアイテム名でも、プロジェクトで既に定義されている名前でもかまいません。 項目の名前が既存の項目の場合、出力パラメーターの値は既存の項目に追加されます。 <br /><br /> `PropertyName` が使われている場合、この属性を使うことはできません。|  
 |`Condition`|省略可能な属性です。<br /><br /> 評価する条件です。 詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。|  
 
 ### <a name="child-elements"></a>子要素  
@@ -84,6 +84,6 @@ ms.locfileid: "36756926"
 </Target>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)

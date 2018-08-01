@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 482336bca7c177b3c4fdcb0f16faf7ea96d6c34b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8ebd3a356eab88c53d2aa7bea7f27be3ccc0749e
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31975922"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179680"
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>方法 : ロード テスト プラグインを作成する
 

@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 72b4fb0d11c1ed100b6ebd124da909e245baa1db
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 46638f92165f48fc3de20494df226590fd9450eb
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078915"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176903"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、プロジェクト ファイルに関する情報と [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のバイナリに関する情報を格納する一連の定義済みのプロパティが用意されています。 これらのプロパティは、他の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロパティと同じように評価されます。 たとえば、`MSBuildProjectFile` プロパティを使用するには、「`$(MSBuildProjectFile)`」と入力します。  
@@ -57,23 +57,23 @@ ms.locfileid: "39078915"
 |`MSBuildThisFileFullPath`|予約されています。|実行中のターゲットを含むプロジェクト ファイルまたはターゲット ファイルの絶対パス。<br /><br /> ヒント：ターゲット ファイルに対して相対的であり、元のプロジェクト ファイルに対しては相対的ではない位置を示す、ターゲット ファイルの相対パスを指定できます。|  
 |`MSBuildThisFileName`|予約されています。|`MSBuildThisFileFullPath` のファイル名の部分 (ファイル名拡張子を除く)。|  
 |`MSBuildToolsPath`|予約されています。|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] の値に関連付けられている `MSBuildToolsVersion` のバージョンのインストール パス。<br /><br /> パスに最後の円記号を含めません。<br /><br /> このプロパティはオーバーライドできません。|  
-|`MSBuildToolsVersion`|予約されています。|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、*csc.exe* や *vbc.exe* などのコンパイラが含まれます。 詳細については、「[MSBuild ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。|  
+|`MSBuildToolsVersion`|予約されています。|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、*csc.exe* や *vbc.exe* などのコンパイラが含まれます。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。|  
 
 ## <a name="names-that-conflict-with-msbuild-elements"></a>MSBuild の要素と競合する名前
 
 上記に加え、MSBuild 言語の要素に対応する名前を、ユーザー定義のプロパティ、項目、または項目メタデータに使うことはできません。
 
 * VisualStudioProject
-* ターゲット
+* Target
 * PropertyGroup
-* 出力
+* Output
 * ItemGroup
 * UsingTask
 * ProjectExtensions
 * OnError
 * ImportGroup
-* [保存]
-* 目的
+* Choose
+* When
 * Otherwise
 
 ## <a name="see-also"></a>関連項目  

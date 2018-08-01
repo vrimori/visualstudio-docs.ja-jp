@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6ed3212affbcc7cee3587780116d435b19a4706f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f4c29f3b98440c9e8462083a24012944157b848b
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31968633"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178414"
 ---
 # <a name="edit-load-tests"></a>ロード テストを編集する
 
@@ -37,13 +37,13 @@ ms.locfileid: "31968633"
 
 ## <a name="configure-and-manage-performance-counter-sets"></a>パフォーマンス カウンター セットを構成し、管理する
 
-ロード テストでは、テクノロジ単位で整理された名前付きカウンター セットが提供されます。これらのカウンター セットは、パフォーマンス カウンター データを分析する際に役立ちます。 カウンター セットには、ロード テスト、IIS、ASP.NET、SQL などがあります。 新しいロード テスト ウィザードでロード テストを作成すると、ロード テストに含めるように指定したコンピューターに対して、定義済みの重要なカウンターの初期セットが構成されます。 カウンターは、ロード テスト エディターで管理します。
+ロード テストでは、テクノロジ単位で整理された名前付きカウンター セットが提供されます。これらのカウンター セットは、パフォーマンス カウンター データを分析する際に役立ちます。 カウンター セットには、ロード テスト、IIS、ASP.NET、SQL などがあります。 **新しいロード テスト ウィザード**でロード テストを作成すると、ロード テストに含めるように指定したコンピューターに対して、定義済みの重要なカウンターの初期セットが構成されます。 カウンターは、**ロード テスト エディター**で管理します。
 
-詳細については、「[ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)」を参照してください。
+詳しくは、「[ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)」をご覧ください。
 
 ## <a name="configure-and-manage-load-test-run-settings"></a>ロード テストの実行設定を構成し、管理する
 
-実行設定とは、ロード テストの実行方法に影響を与えるプロパティです。 実行設定は、[プロパティ] ウィンドウでカテゴリ別に整理されています。
+実行設定とは、ロード テストの実行方法に影響を与えるプロパティです。 実行設定は、**[プロパティ]** ウィンドウでカテゴリ別に整理されています。
 
 詳細については、「[ロード テストの実行設定の構成](../test/configure-load-test-run-settings.md)」と「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 

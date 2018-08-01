@@ -12,12 +12,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 51555b660b51c227dd7c80da04f2eecd699c5c96
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a94490c60a8b2ccb4513cf3c6c5c9d0de1a6f392
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31066126"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233114"
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity アプリの作成
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、Visual Studio 2015 を使用して、フル機能を持つ Android Native Activity アプリを作成できます。 Android Native Development Kit (NDK) は、純粋な C/C++ コードを使用して Android アプリの大半を実装することを可能にするツールセットです。 いくつかの Java JNI コードはグルーとして機能し、C/C++ コードが Android とやり取りできるようにします。 Android NDK では、Android API レベル 9 を使用して Native Activity アプリを作成する機能が導入されました。 Native Activity コードは、Unreal Engine または OpenGL を使用したゲームやグラフィックス処理の多いアプリを作成できるので人気があります。 このトピックでは、OpenGL を使用した単純な Native Activity アプリの作成方法について説明します。 他のトピックでは、Native Activity コードの編集、ビルド、デバッグ、展開の開発ライフサイクルについて説明します。  
@@ -34,11 +34,11 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Visual Studio を開きます。 メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+1.  Visual Studio を開きます。 メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[Cross Platform]** の順に選択し、 **[Native-Activity Application (Android)]** テンプレートを選択します。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で、**[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、**[Native-Activity Application (Android)]** テンプレートを選択します。  
   
-3.  アプリケーションに `MyAndroidApp` のような名前を付けてから、**[OK]** をクリックします。  
+3.  アプリに `MyAndroidApp`などの名前を付け、 **[OK]**」を参照してください。  
   
      ![Native Activity プロジェクトの作成](../cross-platform/media/cppmdd_newproject.PNG "CppMDD_NewProject")  
   
@@ -48,9 +48,9 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
  新しい Android Native Activity アプリのソリューションには、次の 2 つのプロジェクトが含まれています。  
   
--   **MyAndroidApp.NativeActivity** には、アプリが Android 上でネイティブ アクティビティとして動作するための参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は main.cpp にあります。 プリコンパイル済みヘッダーは pch.h にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (.so) ファイルにコンパイルされ、Packaging プロジェクトで使用されます。  
+-   `MyAndroidApp.NativeActivity` には、アプリが Android 上でネイティブ アクティビティとして動作するための参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は *main.cpp* にあります。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、Packaging プロジェクトで使用されます。  
   
--   **MyAndroidApp.Packaging** は、Android デバイスまたはエミュレーターに配置する .apk ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する AndroidManifest.xml ファイルが含まれています。 Ant のビルド プロセスを制御する build.xml も含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
+-   `MyAndroidApp.Packaging` は、Android デバイスまたはエミュレーターに配置する *.apk* ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する *AndroidManifest.xml* ファイルが含まれています。 Ant のビルド プロセスを制御する *build.xml* ファイルも含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
   
 ##  <a name="BuildHello"></a> 既定の Android Native Activity アプリをビルドして実行する  
  テンプレートによって生成されたアプリをビルドして実行し、インストールとセットアップを確認します。 この初期テストでは、Visual Studio Emulator for Android によってインストールされるデバイス プロファイルのいずれかでアプリを実行します。 別の対象でアプリをテストする場合は、対象のエミュレーターを読み込むか、デバイスをコンピューターに接続してください。  
@@ -63,7 +63,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-2.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
+2.  メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。  
   
      ソリューションに含まれる 2 つのプロジェクトのビルド プロセスの出力が [出力] ウィンドウに表示されます。  
   
@@ -71,7 +71,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      別のエミュレーターをインストールしてあるか、Android デバイスを接続してある場合は、配置対象のドロップダウン リストからそれらを選択できます。  
   
-4.  F5 キーを押してデバッグを開始するか、Shift キーを押しながら F5 キーを押してデバッグなしで開始します。  
+4.  **F5** キーを押してデバッグを開始するか、Shift + F5 キーを押してデバッグなしで開始します。  
   
      Visual Studio Emulator for Android で、既定のアプリは次のようになります。  
   
@@ -79,6 +79,6 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。 アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
   
-5.  Shift キーを押しながら F5 キーを押してデバッグを停止します。  
+5.  **Shift** + **F5** キーを押してデバッグを停止します。  
   
      エミュレーターは実行され続ける独立したプロセスです。 同じエミュレーターに対して、コードを何度も編集、コンパイル、配置できます。

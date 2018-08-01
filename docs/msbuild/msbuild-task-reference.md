@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cbaeaeca87c4e32a0c9db9a463e1f5f417527ae
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 5fd171f01a44a38d9256576780c3a15a322d0a43
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058647"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155302"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild タスク リファレンス
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に含まれるタスクの一覧を次に示します。 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] をインストールすると、[!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] プロジェクトを構築するために次の追加タスクを使用できるようになります。 詳細については、「[Visual C++ に固有の MSBuild タスク](../msbuild/msbuild-tasks-specific-to-visual-cpp.md)」を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "37058647"
  モジュールまたはリソース ファイルのいずれかである 1 つ以上のファイルから、マニフェストを持つアセンブリを作成します。  
   
  [AspNetCompiler タスク](../msbuild/aspnetcompiler-task.md)  
- ASP.NET アプリケーションをプリコンパイルするためのユーティリティである aspnet_compiler.exe をラップします。  
+ ASP.NET アプリケーションをプリコンパイルするためのユーティリティである *aspnet_compiler.exe* をラップします。  
   
  [AssignCulture タスク](../msbuild/assignculture-task.md)  
  アイテムにカルチャ ID を割り当てます。  
@@ -72,7 +72,7 @@ ms.locfileid: "37058647"
  ファイルを新しい場所にコピーします。  
   
  [CreateCSharpManifestResourceName タスク](../msbuild/createcsharpmanifestresourcename-task.md)  
- 指定した .resx ファイル名または他のリソースから [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] スタイルのマニフェスト名を作成します。  
+ 指定した *.resx* ファイル名または他のリソースから [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] スタイルのマニフェスト名を作成します。  
   
  [CreateItem タスク](../msbuild/createitem-task.md)  
  入力されたアイテムからアイテム コレクションを作成し、リスト間でアイテムをコピーできるようにします。  
@@ -81,7 +81,7 @@ ms.locfileid: "37058647"
  入力された値からプロパティを作成し、プロパティ間または文字列間で値をコピーできるようにします。  
   
  [CreateVisualBasicManifestResourceName タスク](../msbuild/createvisualbasicmanifestresourcename-task.md)  
- 指定した .resx ファイル名または他のリソースから [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] スタイルのマニフェスト名を作成します。  
+ 指定した *.resx* ファイル名または他のリソースから [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] スタイルのマニフェスト名を作成します。  
   
  [Csc タスク](../msbuild/csc-task.md)  
  Visual C# コンパイラを呼び出して、実行可能ファイル、ダイナミック リンク ライブラリ、またはコード モジュールを生成します。  
@@ -99,7 +99,7 @@ ms.locfileid: "37058647"
  指定されたプログラムまたはコマンドを指定された引数で実行します。  
   
  [FindAppConfigFile タスク](../msbuild/findappconfigfile-task.md)  
- 指定したリスト内で app.config ファイルを検索します。  
+ 指定したリスト内で *app.config* ファイルを検索します。  
   
  [FindInList タスク](../msbuild/findinlist-task.md)  
  指定されたリスト内で、一致する itemspec を含むアイテムを検索します。  
@@ -123,7 +123,7 @@ ms.locfileid: "37058647"
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストを生成します。  
   
  [GenerateResource タスク](../msbuild/generateresource-task.md)  
- .txt ファイルおよび .resx ファイルを、共通言語ランタイムの .resources バイナリ ファイルに変換します。  
+ *.txt* ファイルおよび *.resx* ファイルを、共通言語ランタイムの *.resources* バイナリ ファイルに変換します。  
   
  [GenerateTrustInfo タスク](../msbuild/generatetrustinfo-task.md)  
  基本マニフェスト、`TargetZone` パラメーター、および `ExcludedPermissions` パラメーターからアプリケーションの信頼を生成します。  
@@ -141,7 +141,7 @@ ms.locfileid: "37058647"
  各種フレームワークの参照アセンブリのパスを返します。  
   
  [LC タスク](../msbuild/lc-task.md)  
- .licx ファイルから .license ファイルを生成します。  
+ *.licx* ファイルから *.license* ファイルを生成します。  
   
  [MakeDir タスク](../msbuild/makedir-task.md)  
  ディレクトリを作成します。必要な場合には、親ディレクトリも作成します。  
@@ -171,13 +171,13 @@ ms.locfileid: "37058647"
  アプリケーションで .NET Framework 3.5 SP1 が必要であるかどうかを確認します。  
   
  ResGen タスク  
- 互換性のために残されています。 [GenerateResource タスク](../msbuild/generateresource-task.md)を使用すると、.txt ファイルおよび .resx ファイルを、共通言語ランタイムのバイナリ .resources ファイルに対して、変換および再変換することができます。  
+ 互換性のために残されています。 [GenerateResource タスク](../msbuild/generateresource-task.md)を使用すると、*.txt* ファイルおよび *.resx* ファイルを、共通言語ランタイムのバイナリ *.resources* ファイルに対して、変換および再変換することができます。  
   
  [ResolveAssemblyReference タスク](../msbuild/resolveassemblyreference-task.md)  
  指定したアセンブリに依存するすべてのアセンブリを判断します。  
   
- [ResolveCOMReference タスク](../msbuild/resolvecomreference-task.md)  
- 1 つ以上のタイプ ライブラリ名または .tlb ファイルから成る一覧を使用して、これらのタイプ ライブラリのディスク上の位置を解決します。  
+ [ResolveComReference タスク](../msbuild/resolvecomreference-task.md)  
+ 1 つ以上のタイプ ライブラリ名または *.tlb* ファイルから成る一覧を使用して、これらのタイプ ライブラリのディスク上の位置を解決します。  
   
  [ResolveKeySource タスク](../msbuild/resolvekeysource-task.md)  
  厳密な名前のキーのソースを確認します。  
@@ -204,7 +204,7 @@ ms.locfileid: "37058647"
  COM 相互運用のために、指定されたアセンブリの登録を解除します。  
   
  [Unzip タスク](../msbuild/unzip-task.md)  
- 指定した場所に `.zip` アーカイブを解凍します。
+ 指定した場所に *.zip* アーカイブを解凍します。
   
  [UpdateManifest タスク](../msbuild/updatemanifest-task.md)  
  マニフェスト内の選択したプロパティを更新し、再署名します。  
@@ -231,9 +231,9 @@ ms.locfileid: "37058647"
  XSLT *Extensible Stylesheet Language Transformation* (XSLT) またはコンパイル済み XSLT を使用して XML 入力を変換し、出力デバイスまたはファイルに出力します。  
   
   [ZipDirectory タスク](../msbuild/zipdirectory-task.md)  
- ディレクトリのコンテンツから `.zip` アーカイブを作成します。
+ ディレクトリのコンテンツから *.zip* アーカイブを作成します。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [タスクの作成](../msbuild/task-writing.md)   
  [タスク](../msbuild/msbuild-tasks.md)

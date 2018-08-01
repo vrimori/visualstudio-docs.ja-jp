@@ -18,14 +18,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35c746ea76358b631cac65846b95fc355e6cc17f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fd47bc4a481a8a7e0ce15395770e7cc8bc67bbab
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31571884"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152946"
 ---
-# <a name="taskextension-base-class"></a>TaskExtension 基本クラス
+# <a name="taskextension-base-class"></a>TaskExtension 基底クラス
 多くのタスクが <xref:Microsoft.Build.Tasks.TaskExtension> クラスを継承します。このクラス自体は <xref:Microsoft.Build.Utilities.Task> クラスから継承します。 この継承チェーンにより、これらのクラスから派生したタスクにいくつかのパラメーターが追加されます。 このドキュメントでは、これらのパラメーターを示します。  
   
 ## <a name="parameters"></a>パラメーター  
@@ -39,6 +39,6 @@ ms.locfileid: "31571884"
 |<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|省略可能な <xref:Microsoft.Build.Framework.ITaskHost> 型のパラメーターです。<br /><br /> ホスト オブジェクト インスタンスを指定します (null も指定できます)。 ビルド エンジンは、ホスト IDE によってホスト オブジェクトがこの特定のタスクに関連付けられている場合にこのプロパティを設定します。|  
 |<xref:Microsoft.Build.Tasks.TaskExtension.Log%2A>|省略可能な <xref:Microsoft.Build.Utilities.TaskLoggingHelper> 型の読み取り専用パラメーターです。<br /><br /> タスク ログ メソッドを格納している `TaskLoggingHelperExtension` オブジェクトを取得します。|  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)

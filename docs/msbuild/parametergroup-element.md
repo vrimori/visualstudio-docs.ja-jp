@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b16d3b5feeadc033083cbd051497cb973372c3bb
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 7829df456540bc303993217c577bd6be3952a198
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302793"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152631"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup 要素
-`UsingTask``TaskFactory` によって生成されるタスクで使用される省略可能なパラメーターのリストが格納されます。 詳細については、「[UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md)」(UsingTask 要素 (MSBuild)) を参照してください。  
+`UsingTask` `TaskFactory` によって生成されるタスクで使用される省略可能なパラメーターのリストが格納されます。 詳細については、「[UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)」を参照してください。  
 
  \<Project>  
  \<UsingTask>  
@@ -38,7 +38,7 @@ ms.locfileid: "36302793"
 <ParameterGroup />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -48,7 +48,7 @@ ms.locfileid: "36302793"
 
 |要素|説明|  
 |-------------|-----------------|  
-|[パラメーター](../msbuild/parameter-element.md)|`UsingTask``TaskFactory` によって生成されるタスクの固有のパラメーターについての情報が格納されます。 要素の名前はパラメーターの名前です。|  
+|[パラメーター](../msbuild/parameter-element.md)|`UsingTask` `TaskFactory` によって生成されるタスクの固有のパラメーターについての情報が格納されます。 要素の名前はパラメーターの名前です。|  
 
 ### <a name="parent-elements"></a>親要素  
 
@@ -72,7 +72,7 @@ ms.locfileid: "36302793"
 </UsingTask>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

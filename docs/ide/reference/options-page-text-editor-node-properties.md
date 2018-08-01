@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f8a1c38dfac5e403d7060031d70c6c6c558eff9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8acd51675aaca979a1dce0edddb9d7d937422d49
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951649"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177813"
 ---
 # <a name="options-page-text-editor-node-properties"></a>[テキスト エディター] ノード プロパティ ([オプション] ページ)
 このドキュメントでは、**[オプション]** ダイアログ ボックスの **[テキスト エディター]** カテゴリ (`DTE.Properties("TextEditor", <Property Page>)`) に関連付けられている一部のページ (またはプロパティ コレクション) について説明します。 各サブセクションの見出しは、`Properties` コレクションにアクセスするための呼び出しです。その下の表では、コレクションのプロパティを示します。
@@ -28,7 +28,7 @@ ms.locfileid: "31951649"
 ## <a name="general"></a>全般
  `DTE.Properties("TextEditor", "General")`
 
-|プロパティ項目名|[値]|説明|
+|プロパティ項目名|値|説明|
 |------------------------|-----------|-----------------|
 |GoToAnchorAfterEscape|Get/Set (Boolean)|`True` の場合は、文字列を選択した状態で Esc キーを押すと、挿入ポイントが選択範囲の開始位置に移動します。 `False` の場合は、挿入ポイントが選択範囲の終了位置に移動します。|
 |DragNDropTextEditing|Get/Set (Boolean)|選択したテキストをドキュメント内のある場所から別の場所にドラッグして、コピー操作または切り取りと貼り付け操作を実行できるようにするかどうかを指定します。|
@@ -47,7 +47,7 @@ ms.locfileid: "31951649"
 
  `PlainText` エディター オプションは、テキスト ファイル編集時のエディターの設定に影響します。 それぞれのプログラミング言語および [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] パッケージには、固有の **[テキスト エディター]** の設定を指定できます。 たとえば、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] エディターの設定を表示または変更するには、`DTE.Properties("TextEditor", "CSharp") or DTE.Properties("TextEditor", "CSharp-Specific")` を使用します。 **[SQL スクリプト]`DTE.Properties("TextEditor", "SQL ")` エディターの設定の場合は、** を使用します。
 
-|プロパティ項目名|[値]|説明|
+|プロパティ項目名|値|説明|
 |------------------------|-----------|-----------------|
 |AutoListMembers|Get/Set (Boolean)|変数参照の後にピリオドを入力した場合に使用可能なメンバーの一覧が自動的に表示されるようにするかどうかを指定します。|
 |AutoListParams|Get/Set (Boolean)|関数名の後に "(" を入力した場合に引数リストの説明が自動的に表示されるようにするかどうかを指定します。|

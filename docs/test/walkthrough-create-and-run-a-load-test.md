@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 22014010ea0ef7d101a446b6e89591797f5f2550
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ef389ab3803aba5b6022c9d9ffa3a12d0801b49f
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977386"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178450"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>チュートリアル: 単体テストを含むロード テストを作成して実行する
 
@@ -35,13 +35,13 @@ ms.locfileid: "31977386"
 
 -   ロード テストを実行します。
 
--   「[チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を実行して、いくつかの単体テストのある Web パフォーマンス テストとロード テストのプロジェクトを含む、簡単な C# クラス ライブラリを作成します。
+-   「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を実行して、いくつかの単体テストのある Web パフォーマンス テストとロード テストのプロジェクトを含む、簡単な C# クラス ライブラリを作成します。
 
 ## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>新しいロード テスト ウィザードを使用した、単体テストを含むロード テストの作成
 
 ### <a name="to-start-the-new-load-test-wizard"></a>新しいロード テスト ウィザードを開始するには
 
-1.  「[チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」で作成した Bank ソリューションを開きます。
+1.  「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」で作成した Bank ソリューションを開きます。
 
 2.  **ソリューション エクスプローラー**で、Bank ソリューション ノードのショートカット メニューを開き、**[追加]** をポイントして、**[新しいプロジェクト]** をクリックします。
 
@@ -65,7 +65,7 @@ ms.locfileid: "31977386"
 
      *シナリオ*とは、グループ化機構です。 一連のテストおよびこれらのテストをロードの下で実行するためのプロパティで構成されています。
 
-2.  **[待ち時間のプロファイル]** を `Use normal distribution centered on recorded think times` に設定します。 待ち時間は、ユーザーが Web ページで次のページに進むまでの考慮時間を表します。
+2.  **[待ち時間のプロファイル]** を `Use normal distribution centered on recorded think times` に設定します。 待ち時間は、ユーザーが Web ページで次のページに進む前に考える時間を表します。
 
 1.  終了したら、**[次へ]** をクリックします。
 

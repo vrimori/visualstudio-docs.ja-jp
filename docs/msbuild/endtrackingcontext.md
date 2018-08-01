@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf8720efab88556092e6552a8ffa47cb1151fef
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: f3506e87c1468ff66143b672dca95cd70b0b3dff
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946382"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177410"
 ---
 # <a name="endtrackingcontext"></a>EndTrackingContext
 現在のコンテキストの追跡を終了します。  
@@ -37,7 +37,7 @@ HRESULT WINAPI EndTrackingContext();
  コンテキストの追跡が終了した場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** FileTracker.h  
+ **ヘッダー:** *FileTracker.h*  
   
 ## <a name="see-also"></a>関連項目  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

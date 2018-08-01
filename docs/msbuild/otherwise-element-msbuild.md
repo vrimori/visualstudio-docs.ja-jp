@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26c561c259641ce7bed118d8e4aa71c383b29b67
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 5f4f886e6c6d1ec09700eefa3c7289c9cb918ecc
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327012"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39155049"
 ---
 # <a name="otherwise-element-msbuild"></a>Otherwise 要素 (MSBuild)
 すべての `When` 要素が `false` と評価された場合にのみ実行するコード ブロックを指定します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36327012"
 </Otherwise>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -122,6 +122,6 @@ ms.locfileid: "36327012"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

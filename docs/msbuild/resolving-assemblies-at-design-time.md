@@ -12,21 +12,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1df70002bf2d69e6d8d41abab5007209b5caf3ef
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ad24bcf461dab05444f0e26ffd4e0c826f3f2bed
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574471"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153463"
 ---
-# <a name="resolving-assemblies-at-design-time"></a>デザイン時のアセンブリの解決
-[参照の追加] ダイアログの [.NET] タブを使用してアセンブリへの参照を追加する場合、その参照は中間参照アセンブリを指します。つまり、すべての型情報と署名情報を含んでいるが、コードを必ずしも含まないアセンブリを指します。 [.NET] タブには、.NET Framework のランタイム アセンブリに対応する参照アセンブリの一覧が表示されます。 さらに、サードパーティによって使用される、登録済みの AssemblyFoldersEx フォルダーのランタイム アセンブリに対応する参照アセンブリの一覧も表示されます。  
+# <a name="resolve-assemblies-at-design-time"></a>デザイン時のアセンブリの解決
+**[参照の追加]** ダイアログの **[.NET]** タブを使用してアセンブリへの参照を追加する場合、その参照は中間参照アセンブリを指します。つまり、すべての型情報と署名情報を含んでいるが、コードを必ずしも含まないアセンブリを指します。 **[.NET]** タブには、.NET Framework のランタイム アセンブリに対応する参照アセンブリの一覧が表示されます。 さらに、サードパーティによって使用される、登録済みの AssemblyFoldersEx フォルダーのランタイム アセンブリに対応する参照アセンブリの一覧も表示されます。  
   
-## <a name="multi-targeting"></a>マルチ ターゲット  
- [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] では、共通言語ランタイム (CLR: Common Language Runtime) Version 2.0 または Version 4 で実行される複数のバージョンの .NET Framework を対象にすることができます。 これには、.NET Framework Version 2.0、3.0、3.5、4、4.5、4.5.1 および Silverlight Version 1.0、2.0、3.0 が含まれます。 CLR Version 2.0 または Version 4 に基づいた新しいバージョンの .NET Framework がリリースされた場合、この Framework はターゲット パックを使用してインストールでき、Visual Studio でターゲットとして自動的に表示されます。  
+## <a name="multi-targeting"></a>マルチターゲット  
+ [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] では、共通言語ランタイム (CLR: Common Language Runtime) Version 2.0 または Version 4 で実行される複数のバージョンの .NET Framework を対象にすることができます。 これらのバージョンには、.NET Framework Version 2.0、3.0、3.5、4、4.5、4.5.1 および Silverlight Version 1.0、2.0、3.0 が含まれます。 CLR Version 2.0 または Version 4 に基づいた新しいバージョンの .NET Framework がリリースされた場合、この Framework はターゲット パックを使用してインストールでき、Visual Studio でターゲットとして自動的に表示されます。  
   
-## <a name="how-type-resolution-works"></a>型解決の動作  
- CLR は、実行時に GAC、bin ディレクトリ、およびすべてのプローブ パスを調べることで、アセンブリ内の型を解決します。 これは、フュージョン ローダーによって処理されます。 では、フュージョン ローダーはどうやって調査対象を認識するのでしょうか。 これは、デザイン時、アプリケーションのビルド中に行われた解決によって異なります。  
+## <a name="how-type-resolution-works"></a>型解決のしくみ  
+ CLR は、実行時に GAC、*bin* ディレクトリ、およびすべてのプローブ パスを調べることで、アセンブリ内の型を解決します。 これは、フュージョン ローダーによって処理されます。 では、フュージョン ローダーはどうやって調査対象を認識するのでしょうか。 これは、デザイン時、アプリケーションのビルド中に行われた解決によって異なります。  
   
  ビルド中、コンパイラは参照アセンブリを使用してアプリケーションの型を解決します。 .NET Framework Version 2.0、3.0、3.5、4、4.5、4.5.1 では、参照アセンブリは .NET Framework のインストール時にインストールされます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "31574471"
   
  参照アセンブリを使用できない場合、ビルド システムはランタイム アセンブリを使用してアセンブリの型を解決します。 GAC のランタイム アセンブリは、マイナー バージョン番号では区別されないため、間違ったアセンブリに解決される可能性があります。 この現象は、たとえば、.NET Framework Version 3.0 を対象としているのに、Version 3.5 で導入された新しいメソッドが参照されている場合に発生することがあります。 ビルドは成功し、アプリケーションはビルド コンピューターで動作しますが、Version 3.5 がインストールされていないコンピューターに配置すると正常に動作しなくなります。  
   
- .NET Framework SDK に現在付属しているターゲット パックには、そのバージョンの Framework のすべてのランタイム アセンブリのリストが含まれています。これは再配布 (Redist) リストと呼ばれます。 これにより、ビルド システムが型を間違ったバージョンのアセンブリに解決することはなくなっています。  
+ .NET Framework SDK に現在付属しているターゲット パックには、そのバージョンの Framework のすべてのランタイム アセンブリのリストが含まれています。これは再配布 (Redist) リストと呼ばれます。このリストによって、ビルド システムがアセンブリの間違ったバージョンに型を解決することはできなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)

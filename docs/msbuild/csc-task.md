@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36ce653c1b7f8eb3b7118fac3ab61f40ba77082e
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 1cce49157ad4c9c811c51ba0c491b3e97fea1736
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945885"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177218"
 ---
 # <a name="csc-task"></a>Csc タスク
 *csc.exe* をラップし、実行可能ファイル (*.exe* ファイル)、ダイナミック リンク ライブラリ (*.dll* ファイル)、またはコード モジュール (*.netmodule* ファイル) を生成します。 *csc.exe* の詳細については、「[C# コンパイラ オプション](/dotnet/csharp/language-reference/compiler-options/index)」を参照してください。  
@@ -60,12 +60,12 @@ ms.locfileid: "37945885"
 |`ModuleAssemblyName`|省略可能な `String` 型のパラメーターです。<br /><br /> このモジュールが一部となるアセンブリの名前を指定します。|  
 |`NoConfig`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、*csc.rsp* ファイルを使用してコンパイルしないようにコンパイラに指示します。 詳しくは、「[-noconfig (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/noconfig-compiler-option)」をご覧ください。|  
 |`NoLogo`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、コンパイラの著作権情報が表示されません。 詳しくは、「[-nologo (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nologo-compiler-option)」をご覧ください。|  
-|`NoStandardLib`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、System 名前空間の全体を定義する mscorlib.dll がインポートされません。 独自の System 名前空間およびオブジェクトを定義または作成する場合は、このパラメーターを使用します。 詳しくは、「[-nostdlib (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)」をご覧ください。|  
+|`NoStandardLib`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、System 名前空間の全体を定義する *mscorlib.dll* がインポートされません。 独自の System 名前空間およびオブジェクトを定義または作成する場合は、このパラメーターを使用します。 詳しくは、「[-nostdlib (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option)」をご覧ください。|  
 |`NoWin32Manifest`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、既定の Win32 マニフェストを含めないでください。|  
 |`Optimize`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、最適化が有効になります。 `false` の場合、最適化が無効になります。 詳しくは、「[-optimize (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/optimize-compiler-option)」をご覧ください。|  
 |`OutputAssembly`|省略可能な `String` 型の出力パラメーターです。<br /><br /> 出力ファイルの名前を指定します。 詳しくは、「[-out (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option)」をご覧ください。|  
 |`OutputRefAssembly`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力参照アセンブリ ファイルの名前を指定します。 詳細については、「[-refout (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/refout-compiler-option)」を参照してください。|  
-|`PdbFile`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグ情報ファイルの名前を指定します。 既定の名前は、出力ファイルの名前に .pdb 拡張子が付いたものになります。|  
+|`PdbFile`|省略可能な `String` 型のパラメーターです。<br /><br /> デバッグ情報ファイルの名前を指定します。 既定の名前は、出力ファイルの名前に *.pdb* 拡張子が付いたものになります。|  
 |`Platform`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのターゲットとするプロセッサ プラットフォームを指定します。 このパラメーターの値には、`x86`、`x64`、または `anycpu` を指定できます。 既定値は `anycpu` です。 詳しくは、「[-platform (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/platform-compiler-option)」をご覧ください。|  
 |`References`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 指定したアイテムから現在のプロジェクトにパブリック型の情報をインポートするようにタスクに指示します。 詳しくは、「[-reference (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/reference-compiler-option)」をご覧ください。<br /><br /> メタデータ `Aliases` を元の "参照" アイテムに追加することで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイルに [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 参照エイリアスを指定できます。 たとえば、次の Csc コマンド ラインでエイリアス "LS1" を設定する場合:<br /><br /> `CSC /r:LS1=MyCodeLibrary.dll /r:LS2=MyCodeLibrary2.dll *.cs`<br /><br /> 次を使用します。<br /><br /> `<Reference Include="MyCodeLibrary"> <Aliases>LS1</Aliases> </Reference>`|  
 |`Resources`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] リソースを出力ファイルに組み込みます。<br /><br /> このパラメーターに渡される項目には、「`LogicalName`」や「`Access`」という名前のメタデータ エントリを任意で指定できます。 `LogicalName` は `/resource` スイッチの `identifier` パラメーターに対応し、`Access` は `accessibility-modifier` パラメーターに対応します。 詳しくは、「[-resource (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/resource-compiler-option)」をご覧ください。|  
@@ -78,9 +78,9 @@ ms.locfileid: "37945885"
 |`WarningLevel`|省略可能な `Int32` 型のパラメーターです。<br /><br /> コンパイラが表示する警告レベルを指定します。 詳しくは、「[-warn (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warn-compiler-option)」をご覧ください。|  
 |`WarningsAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱う警告の一覧を指定します。 詳しくは、「[-warnaserror (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)」をご覧ください。<br /><br /> このパラメーターは `TreatWarningsAsErrors` パラメーターをオーバーライドします。|  
 |`WarningsNotAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱わない警告の一覧を指定します。 詳しくは、「[-warnaserror (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option)」をご覧ください。<br /><br /> このパラメーターは、`TreatWarningsAsErrors` パラメーターが `true` に設定されている場合にのみ役に立ちます。|  
-|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> エクスプローラーで出力ファイルを適切に表示する .ico ファイルをアセンブリに挿入します。 詳しくは、「[-win32icon (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)」を参照してください。|  
+|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> **ファイル エクスプローラー**で出力ファイルを適切に表示する *.ico* ファイルをアセンブリに挿入します。 詳しくは、「[-win32icon (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option)」を参照してください。|  
 |`Win32Manifest`|省略可能な `String` 型のパラメーターです。<br /><br /> 追加する Win32 マニフェストを指定します。|  
-|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (.res) ファイルを出力ファイルに挿入します。 詳しくは、「[-win32res (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)」をご覧ください。|  
+|`Win32Resource`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (*.res* ファイル) を出力ファイルに挿入します。 詳しくは、「[-win32res (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/win32res-compiler-option)」をご覧ください。|  
   
 ## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは `Microsoft.Build.Tasks.ManagedCompiler` クラスからパラメーターを継承します。このクラス自体は <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスから継承されますが、それにはさらに <xref:Microsoft.Build.Utilities.ToolTask> クラスという継承元が存在します。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  

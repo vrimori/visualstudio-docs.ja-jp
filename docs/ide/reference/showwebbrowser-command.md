@@ -15,14 +15,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4beed25b1cdbc9f298df32743b9fec2e59fcdd8b
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 018d94f2952b8169890377410ff00baf1a80fd41
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704877"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176386"
 ---
 # <a name="showwebbrowser-command"></a>ShowWebBrowser コマンド
+
 指定した URL を統合開発環境 (IDE: Integrated Development Environment) の内部または外部の Web ブラウザーのウィンドウに表示します。
 
 ## <a name="syntax"></a>構文

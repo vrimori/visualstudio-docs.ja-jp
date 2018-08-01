@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 923296a6eaed79edc345b9071d5e1d4e2ececefe
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: bf2b6986894d996d5307d2551ddf79ad37f8a8e9
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844743"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176981"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: カスタム診断データ アダプターを作成する
 
@@ -32,7 +32,7 @@ ms.locfileid: "34844743"
 
  診断データ アダプターを作成するときに使用できる主なイベントを次に示します。 診断データ アダプターのイベントの完全な一覧については、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> 抽象クラスを参照してください。
 
-|event|説明|
+|イベント|説明|
 |-----------|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|テストの実行を開始します。|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|テストの実行を終了します。|

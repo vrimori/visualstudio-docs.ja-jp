@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0e5d3e501138ede3679214650e29d602a6b7cf94
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: bbafd92f34671564a91926066a2353a1e0421b63
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282832"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179243"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム抽出規則のコーディング
 

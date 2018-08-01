@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8914b6b876b27b94add446a627087fb34e5082ea
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 3cfa50ef447675969110a2294d10a596469b87c3
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890410"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204207"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>テスト エージェントとテスト コントローラーのインストール
 
@@ -26,10 +26,12 @@ Visual Studio と Visual Studio Team Services (VSTS) または Team Foundation S
 
 ## <a name="system-requirements"></a>システム要件
 
+次の表では、Visual Studio 2017 のテスト エージェントまたはテスト コントローラーをインストールするためのシステム要件を示します。
+
 | アイテム | 必要条件 |
 | ---- | ------------ |
-| **エージェント** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012、Windows Server 2012 R2 |
-| **コントローラー** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012、Windows Server 2012 R2 |
+| **エージェント** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012 R2 |
+| **コントローラー** | Windows 10<br />Windows 8、Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016: Standard および Datacenter<br />Windows Server 2012 R2 |
 | **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>テスト コントローラーとテスト エージェントのインストール

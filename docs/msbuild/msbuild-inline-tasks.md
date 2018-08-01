@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c8390638179443b5e8abe847a0f0421402361f25
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 8cdb171d16b6612562ea21608cdeb622f4ef8bb5
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080393"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179048"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild インライン タスク
 MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インターフェイスを実装するクラスをコンパイルして作成します。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
@@ -54,8 +54,8 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 -   `TaskFactory` 属性は、インライン タスク ファクトリを実装するクラスの名前を指定します。  
   
 -   `AssemblyFile` 属性は、インライン タスク ファクトリの場所を指定します。 代わりに、`AssemblyName` 属性を使用してインライン タスク ファクトリ クラスの完全修飾名を指定することもできます。これは通常、グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に配置されます。  
-  
- `DoNothing` タスクの残りの要素は空になっていますが、ここではインライン タスクの順序と構造を示すために含めてあります。 具体的な例については、この後の例を参照してください。  
+
+`DoNothing` タスクの残りの要素は空になっていますが、ここではインライン タスクの順序と構造を示すために含めてあります。 具体的な例については、この後の例を参照してください。  
   
 -   `ParameterGroup` 要素は省略可能です。 指定する場合は、タスクのパラメーターを宣言します。 入力パラメーターと出力パラメーターの詳細については、この後の「[入力パラメーターと出力パラメーター](#input-and-output-parameters)」を参照してください。  
   
@@ -64,8 +64,8 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 -   `Reference` 要素は、コードで使用する .NET アセンブリへの参照を指定します。 これは、Visual Studio でプロジェクトに参照を追加することに相当します。 `Include` 属性は参照アセンブリのパスを指定します。  
   
 -   `Using` 要素には、アクセスする名前空間をリストします。 これは、Visual C# の `Using` ステートメントに似ています。 `Namespace` 属性は、含める名前空間を指定します。  
-  
- `Reference` 要素と `Using` 要素は言語に依存しません。 インライン タスクは、サポートされているどの .NET CodeDom 言語 (Visual Basic や Visual C# など) でも記述できます。  
+
+`Reference` 要素と `Using` 要素は言語に依存しません。 インライン タスクは、サポートされているどの .NET CodeDom 言語 (Visual Basic や Visual C# など) でも記述できます。  
   
 > [!NOTE]
 >  `Task` 要素に含まれる要素はタスク ファクトリによって異なります。この例では、コード タスク ファクトリが格納されています。  
@@ -82,10 +82,10 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
 -   `Type` の値が `Method` の場合、コードは `Execute` インターフェイスの <xref:Microsoft.Build.Framework.ITask> メソッドのオーバーライドを定義します。  
   
 -   `Type` の値が `Fragment` の場合、コードは `Execute` メソッドの内容を定義します。ただし、シグネチャや `return` ステートメントは含まれません。  
+
+コード自体は通常、`<![CDATA[` マーカーと `]]>` マーカーの間に記述します。 コードは CDATA セクション内に記述するため、"\<" や ">" などの予約文字のエスケープを気にする必要はありません。  
   
- コード自体は通常、`<![CDATA[` マーカーと `]]>` マーカーの間に記述します。 コードは CDATA セクション内に記述するため、"\<" や ">" などの予約文字のエスケープを気にする必要はありません。  
-  
- また、`Source` 要素の `Code` 属性を使用して、タスクのコードを含むファイルの場所を指定することもできます。 ソース ファイルのコードの種類は、`Type` 属性で指定された種類である必要があります。 `Source` 属性が指定されている場合、`Type` の既定値は `Class` です。 `Source` が指定されていない場合の既定値は `Fragment` です。  
+また、`Source` 要素の `Code` 属性を使用して、タスクのコードを含むファイルの場所を指定することもできます。 ソース ファイルのコードの種類は、`Type` 属性で指定された種類である必要があります。 `Source` 属性が指定されている場合、`Type` の既定値は `Class` です。 `Source` が指定されていない場合の既定値は `Fragment` です。  
   
 > [!NOTE]
 >  ソース ファイル内のタスク クラスを定義する場合は、クラス名が、対応する [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素の `TaskName` 属性と一致する必要があります。  
@@ -161,8 +161,8 @@ Log.LogError("Hello, world!");
 -   `Files` は、必須の項目リスト入力パラメーターです。  
   
 -   `Tally` は、System.Int32 型の出力パラメーターです。  
-  
- `Code` 要素の `Type` 属性が `Fragment` または `Method` の場合、すべてのパラメーターに対して自動的にプロパティが作成されます。 それ以外の場合は、タスクのソース コードで明示的にプロパティを宣言する必要があります。プロパティはパラメーター定義と完全に一致している必要があります。  
+
+`Code` 要素の `Type` 属性が `Fragment` または `Method` の場合、すべてのパラメーターに対して自動的にプロパティが作成されます。 それ以外の場合は、タスクのソース コードで明示的にプロパティを宣言する必要があります。プロパティはパラメーター定義と完全に一致している必要があります。  
   
 ## <a name="example"></a>例  
  指定されたファイル内のすべてのトークンを指定された値に置き換えるインライン タスクの例を次に示します。  
@@ -194,4 +194,4 @@ File.WriteAllText(Path, content);
   
 ## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [チュートリアル: インライン タスクの作成](../msbuild/walkthrough-creating-an-inline-task.md)
+ [チュートリアル: インライン タスクを作成する](../msbuild/walkthrough-creating-an-inline-task.md)

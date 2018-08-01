@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 69b1179763433213539af81bf29e34d09e98bf3b
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 886abf16e958afd2870399c7dfdef55cb27e108f
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750286"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39206849"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-managed-code"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (マネージド コード)
 
@@ -26,12 +26,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 ここで説明する **CPU 使用率**ツールでは必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/profiling-feature-tour.md)で得られる別の種類の情報が役に立つことがあります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。 診断ハブには、この種のデータを記録し、分析するためのオプションが他にもいろいろあります。
 
-> [!NOTE]
-> .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
-
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
+1. Visual Studio で、**[ファイル]** > **[新しいプロジェクト]** の順に選択します。
 
 2. **[Visual C#]** または **[Visual Basic]** の下で、**[Windows デスクトップ]** を選択し、中央のウィンドウで [**コンソール アプリ (.NET Framework)]** を選択します。
 
@@ -39,7 +36,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
     Visual Studio によってプロジェクトが作成されます。
 
-2. Program.cs を開き、すべてのコードを次のコードで置換します。
+2. *Program.cs* を開き、すべてのコードを次のコードで置換します。
 
     ```csharp
     using System;
@@ -158,9 +155,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     ```
 
     > [!NOTE]
-    > Visual Basic で、スタートアップ オブジェクトが `Sub Main` に設定されていることを確認します (**[プロパティ]、[アプリケーション]、[スタートアップ オブジェクト]**)。
+    > Visual Basic で、スタートアップ オブジェクトが `Sub Main` に設定されていることを確認します (**[プロパティ]** > **[アプリケーション]** > **[スタートアップ オブジェクト]**)。
 
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する
+##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する
 
 1.  最初に、`Main` 関数のこのコード行でアプリのブレークポイントを設定します。
 
@@ -179,9 +176,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     > [!TIP]
     > 2 つのブレークポイントを設定することで、分析するコードの部分にデータ収集を限定できます。
 
-3.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
+3.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ]** > **[ウィンドウ]** > **[診断ツールの表示]** の順にクリックします。
 
-4.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
+4.  **[デバッグ]** > **[デバッグの開始]** の順にクリックします (または、ツール バーの **[開始]** をクリックするか、**F5** キーを押します)。
 
      アプリケーションが読み込みを完了すると、診断ツールの**概要**ビューが表示されます。
 
@@ -193,7 +190,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
      **[CPU プロファイルの記録]** を選択すると、Visual Studio は関数とその実行時間の記録を開始します。時系列グラフも生成され、サンプリング セッションの特定のセグメントに注目できます。アプリケーションがブレークポイントで停止したとき、この収集されたデータのみを表示できます。
 
-6.  F5 キーを押すと、アプリケーションが 2 つ目のブレークポイントまで実行されます。
+6.  **F5** キーを押すと、アプリケーションが 2 つ目のブレークポイントまで実行されます。
 
      これで、2 つのブレークポイント間で実行されるコードのリージョンを対象に、アプリケーションのパフォーマンス データが得られました。
 
@@ -203,7 +200,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
      この時点で、データの分析を開始できます。
 
-## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
@@ -235,7 +232,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 - CPU 使用率ツールで [CPU 使用率を分析し](../profiling/cpu-usage.md)、さらに詳細な情報を取得します。
 - デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析します。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio のプロファイル](../profiling/index.md)
-- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+- [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

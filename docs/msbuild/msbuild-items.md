@@ -1,5 +1,6 @@
 ---
 title: MSBuild 項目 | Microsoft Docs
+description: ItemGroup の MSBuild Include 属性を使用して、ビルドに含めるファイルを指定します
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -12,15 +13,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a483d6dcaa4de7c2b9760704f4933a73d810061
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 5f7215817907e729b1e6cfcdfa07a0eaa307a7eb
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081837"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204129"
 ---
 # <a name="msbuild-items"></a>MSBuild 項目
-MSBuild 項目はビルド システムへの入力であり、通常はファイルを表します。 項目は要素名に基づいてアイテムの種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
+MSBuild 項目はビルド システムへの入力であり、通常はファイルを表します (ファイルは `Include` 属性で指定します)。 項目は要素名に基づいてアイテムの種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
   
  項目名はそれぞれが属するアイテムの種類によって指定されるため、「項目」と「項目値」という用語は同義です。  
   

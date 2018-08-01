@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd42c94ba5e63cdc285242f0a48556c073337671
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 2a4a9a68b00d4eed998a5ba742e640cd27db74cc
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303336"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152429"
 ---
 # <a name="when-element-msbuild"></a>When 要素 (MSBuild)
 `Choose` 要素で選ぶ対象のコード ブロックを指定します。  
@@ -49,7 +49,7 @@ ms.locfileid: "36303336"
 </When>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -125,6 +125,6 @@ ms.locfileid: "36303336"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

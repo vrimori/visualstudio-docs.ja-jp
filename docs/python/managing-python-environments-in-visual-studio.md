@@ -1,7 +1,7 @@
 ---
 title: Python 環境とインタープリターを管理する
 description: '[Python 環境] ウィンドウを使用して、グローバル環境、仮想環境、および conda 環境を管理し、Python インタープリターとパッケージをインストールし、環境を Visual Studio プロジェクトに割り当てます。'
-ms.date: 06/29/2018
+ms.date: 07/23/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9ce601d169654c4fddca30b5e9853e18dcae9ac5
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 2b134dc54e2af31bb7d9fcb3f1dcdf3d31f799b5
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37342755"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232219"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
@@ -118,7 +118,7 @@ Visual Studio では、[PEP 514](https://www.python.org/dev/peps/pep-0514/) に�
 >
 > ただし、ファイル システムを使用してインタープリターとその環境を手動で移動している場合、Visual Studio は新しい場所がわかりません。 詳細については、「[、インタープリターを移動する](installing-python-interpreters.md#moving-an-interpreter)」を参照してください。
 
-## <a name="fix-invalid-environments"></a>無効な環境を修正する
+## <a name="fix-or-delete-invalid-environments"></a>無効な環境を修正または削除する
 
 Visual Studio で環境のレジストリ エントリが検出されたものの、インタープリターへのパスが無効である場合、[Python 環境] ウィンドウに取り消し線の付いた名前が表示されます。
 

@@ -11,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2d3f0ec5108d077346eb69f1fb1236a7ecee56d5
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 92c41fec7cf481c058f158e91c486134ca6c1740
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751677"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177254"
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
-次の名前空間を使用して、Web パフォーマンス テスト結果ビューアーの UI を拡張できます。
+次の名前空間を使用して、**Web パフォーマンス テスト結果ビューアー**の UI を拡張できます。
 
 -   <xref:Microsoft.VisualStudio.TestTools.LoadTesting>
 
@@ -28,7 +28,7 @@ ms.locfileid: "34751677"
 
 また、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* フォルダーにある LoadTestPackage DLL に参照を追加する必要があります。
 
--   Web パフォーマンス テスト結果ビューアーの UI を拡張するには、Visual Studio アドインおよびユーザー コントロールを作成する必要があります。 次の手順では、アドインとユーザー コントロールの作成方法、および Web パフォーマンス テスト結果ビューアーの UI を拡張するのに必要なクラスを実装する方法について説明します。
+-   **Web パフォーマンス テスト結果ビューアー**の UI を拡張するには、Visual Studio アドインおよびユーザー コントロールを作成する必要があります。 次の手順では、アドインとユーザー コントロールの作成方法、および **Web パフォーマンス テスト結果ビューアー**の UI を拡張するのに必要なクラスを実装する方法について説明します。
 
 ## <a name="create-or-open-a-solution-that-contains-an-aspnet-web-application-and-a-web-performance-and-load-test-project"></a>ASP.NET Web アプリケーションおよび Web パフォーマンスとロード テストのプロジェクトが含まれるソリューションを作成するか開く
 
@@ -37,7 +37,7 @@ ms.locfileid: "34751677"
 テストの対象として、ASP.NET Web アプリケーションおよび Web パフォーマンスとロード テストのプロジェクト (ASP.NET Web アプリケーション用の 1 つ以上の Web パフォーマンス テストを備えたプロジェクト) が含まれている非稼動ソリューションを作成するか開きます。
 
 > [!NOTE]
-> ASP.NET Web アプリケーションの作成と、Web パフォーマンス テストを備えた Web パフォーマンスとロード テストのプロジェクトの作成を行うには、「[How to: Create a Web Service Test](../test/how-to-create-a-web-service-test.md)」(方法: Web サービス テストを作成する) および「[コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)」の手順に従ってください。
+> ASP.NET Web アプリケーションの作成と、Web パフォーマンス テストを備えた Web パフォーマンスとロード テストのプロジェクトの作成を行うには、「[方法 : Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)」および「[コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)」の手順に従ってください。
 
 ## <a name="create-a-visual-studio-add-in"></a>Visual Studio アドインの作成
 
@@ -216,7 +216,7 @@ ms.locfileid: "34751677"
     using WebPerfTestResultsViewerControl;
     ```
 
-14. Connect.cs ファイルの最下部までスクロール ダウンします。 Web パフォーマンス テスト結果ビューアーの複数のインスタンスが開いている場合は、<xref:System.Windows.Forms.UserControl> の GUID のリストを追加する必要があります。 後で、このリストを使用するコードを追加します。
+14. Connect.cs ファイルの最下部までスクロール ダウンします。 **Web パフォーマンス テスト結果ビューアー**の複数のインスタンスが開いている場合は、<xref:System.Windows.Forms.UserControl> の GUID のリストを追加する必要があります。 後で、このリストを使用するコードを追加します。
 
      文字列の 2 番目のリストは、後でコード化する OnDiscconection メソッドで使用されます。
 
@@ -227,7 +227,7 @@ ms.locfileid: "34751677"
     private Dictionary<Guid, List<UserControl>> m_controls = new Dictionary<Guid, List<UserControl>>();        private List<string> temporaryFilePaths = new List<string>();
     ```
 
-15. Connect.cs ファイルは、<xref:Extensibility.IDTExtensibility2> クラスから Connect という名前のクラスをインスタンス化します。また、このファイルには、Visual Studio アドインを実装するいくつかのメソッドが含まれています。 メソッドのうちの 1 つは OnConnection メソッドで、アドインが読み込まれている通知を受け取ります。 OnConnection メソッドでは、LoadTestPackageExt クラスを使用して、Web パフォーマンス テスト結果ビューアー用の機能拡張パッケージを作成します。 次のコードを OnConnection メソッドに追加します。
+15. Connect.cs ファイルは、<xref:Extensibility.IDTExtensibility2> クラスから Connect という名前のクラスをインスタンス化します。また、このファイルには、Visual Studio アドインを実装するいくつかのメソッドが含まれています。 メソッドのうちの 1 つは OnConnection メソッドで、アドインが読み込まれている通知を受け取ります。 OnConnection メソッドでは、LoadTestPackageExt クラスを使用して、**Web パフォーマンス テスト結果ビューアー**用の機能拡張パッケージを作成します。 次のコードを OnConnection メソッドに追加します。
 
     ```csharp
     public void OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
@@ -283,7 +283,7 @@ ms.locfileid: "34751677"
 
 2.  **[アプリケーション]** タブを選択して **[ターゲット フレームワーク]** ドロップダウン リストを選びます。次に、**[.NET Framework 4]** を選択して、[プロパティ] を閉じます。
 
-     これは、Web パフォーマンス テスト結果ビューアーの拡張に必要な DLL 参照をサポートするために必要です。
+     これは、**Web パフォーマンス テスト結果ビューアー**の拡張に必要な DLL 参照をサポートするために必要です。
 
 3.  ソリューション エクスプローラーで、WebPerfTestResultsViewerControl プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
 
@@ -347,7 +347,7 @@ ms.locfileid: "34751677"
 
 ### <a name="to-run-the-new-vs-add-in-for-the-web-test-results-viewer"></a>Web テスト結果ビューアーのための新しい VS アドインを実行するには
 
-1.  Web パフォーマンス テストを実行すると、WebPerfTestResultsViewerAddin アドインの「サンプル」というタイトルの新しいタブが Web パフォーマンス テスト結果ビューアーに表示されます。
+1.  Web パフォーマンス テストを実行すると、WebPerfTestResultsViewerAddin アドインの「サンプル」というタイトルの新しいタブが **Web パフォーマンス テスト結果ビューアー**に表示されます。
 
 2.  このタブをクリックして、DataGridView に示されているプロパティを確認します。
 

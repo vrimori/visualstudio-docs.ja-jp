@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: f44ad3a7c44f9de592d3b4d4add261fca74f5c39
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: b711c6c67eb7466d642048f2546c532b9b2e2926
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281301"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231857"
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 
@@ -45,7 +45,7 @@ Xamarin アプリでは特にそう言えます。C# と .NET で構築し、い
 
 ## <a name="modeling"></a>モデリング
 
-参照リンク: **[アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)**
+参照リンク: **[アーキテクチャの分析とモデル化](../modeling/analyze-and-model-your-architecture.md)**
 
 デザイン機能は、コーディング言語に依存しないか、または C# のような .NET 言語と一緒に機能します。 コードに関連する側面については「[ソフトウェア開発におけるアーキテクチャ図とモデル図の役割](../modeling/scenario-change-your-design-using-visualization-and-modeling.md#ModelingDiagramsTools)」を参照してください。
 
@@ -101,8 +101,7 @@ Xamarin アプリでは特にそう言えます。C# と .NET で構築し、い
 |-------------|----------------------------|-------------------------|
 |[マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|[はい]||
 |[コード クローン検出を使用した重複コードの検出](http://msdn.microsoft.com/Library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|[はい]||
-|
-  [マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|[はい]||
+|[マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|[はい]||
 |[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|×|代わりに、Xamarin Studio の [Xamarin プロファイラー](/xamarin/cross-platform/deploy-test/) を使用します。 Xamarin プロファイラーは現在プレビュー期間中であり、Windows を対象にした場合はまだ動作しないことに注意してください。|
 |[.Net Framework のメモリ分析の問題](https://msdn.microsoft.com/en-us/library/dn342825.aspx)|×|Visual Studio ツールには、プロファイリング用の Mono フレームワークへのフックはありません。|
 

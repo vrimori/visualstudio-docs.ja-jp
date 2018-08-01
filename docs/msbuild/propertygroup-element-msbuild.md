@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b7d300a1a47499f963e7ff717c12f72e2483e05
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: e8c532692b7faddd90a3a67ffdd52b512511d719
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326320"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152189"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup 要素 (MSBuild)
 ユーザー定義の [Property](../msbuild/property-element-msbuild.md) 要素のセットを格納します。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトで使用される各 `Property` 要素は、`PropertyGroup` 要素の子である必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "36326320"
 </PropertyGroup>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -74,6 +74,6 @@ ms.locfileid: "36326320"
 </PropertyGroup>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)  
  [MSBuild プロパティ](../msbuild/msbuild-properties.md)

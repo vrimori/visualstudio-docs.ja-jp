@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 051b7c7375c6b13a6f3805e358645eccdc0e33c3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7ec26a9356c0136404f6fb9fe97e88b7b40ecf7f
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31970950"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203964"
 ---
 # <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>ネットワーク アダプターに Test Controller または Test Agent をバインドする
 
@@ -31,7 +31,7 @@ ms.locfileid: "31970950"
 >
 > このエラーは、ネットワーク アダプターが複数あるコンピューターにテスト コントローラーをインストールしたことが原因で発生する場合があります。 エージェントのインストールには成功しており、テストを実行するまで問題が発覚しなかったということも考えられます。
 
-## <a name="binding-a-test-controller-to-a-specific-network-adapter"></a>特定のネットワーク アダプターへのテスト コントローラーのバインド
+## <a name="bind-a-test-controller-to-a-specific-network-adapter"></a>特定のネットワーク アダプターへのテスト コントローラーのバインド
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>ネットワーク アダプターの IP アドレスを取得するには
 
@@ -132,6 +132,6 @@ ms.locfileid: "31970950"
 
 - [テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)
 - [ロード テストのログ設定の変更](../test/modify-load-test-logging-settings.md)
-- [Test Controller および Test Agent 用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [テスト コントローラーおよびテスト エージェント用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)
 - [方法: ログ ファイルの最大サイズを指定する](../test/how-to-specify-the-maximum-size-for-the-log-file.md)
 - [方法: テスト コントローラーおよびテスト エージェントのタイムアウト期限を指定する](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)

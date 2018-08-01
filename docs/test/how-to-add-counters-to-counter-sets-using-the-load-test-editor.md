@@ -12,16 +12,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 871ba69d088e58ac1d662f254c72c406c79f86fd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7174f56febaa912873657291511ef7ba20a4bc4d
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967886"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203639"
 ---
 # <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してカウンターをカウンター セットに追加する
 
-**ロード テスト ウィザード**を使用してロード テストを作成する場合、初期のカウンター セットを追加します。 これらによって、定義済みのカウンター セットがロード テスト用に提供されます。 詳細については、「[ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)」を参照してください。
+**ロード テスト ウィザード**を使用してロード テストを作成する場合、初期のカウンター セットを追加します。 これらによって、定義済みのカウンター セットがロード テスト用に提供されます。 詳しくは、「[ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)」をご覧ください。
 
 > [!NOTE]
 > ロード テストを複数のリモート コンピューターに分散する場合、コントローラーとエージェント カウンターが、コントローラーとエージェント カウンター セットに割り当てられます。 ロード テストでリモート コンピューターを使用する方法の詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
@@ -61,7 +61,7 @@ ms.locfileid: "31967886"
 7.  **[OK]** をクリックします。
 
     > [!NOTE]
-    > カウンターをカウンター セットに追加することもできます。追加するには、既存のカウンターまたはカウンター カテゴリを右クリックし、[コピー] をクリックして、他のカウンター セット ノードに貼り付けます。 コピーされたカウンターで不要になったものは削除できます。
+    > カウンターをカウンター セットに追加することもできます。追加するには、既存のカウンターまたはカウンター カテゴリを選択し、[コピー] を選択して、他のカウンター セット ノードに貼り付けます。 コピーされたカウンターで不要になったものは削除できます。
 
 ## <a name="see-also"></a>関連項目
 

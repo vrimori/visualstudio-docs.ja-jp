@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 121be2e1eb608bde001422282c4387bb5a7290e1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9a36578753a3b50608c7c1d3fe3184a3e7ff64e8
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31967958"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176763"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>テスト ミックスを編集して、ロード テスト シナリオに含める Web ブラウザーの種類を指定する
 
@@ -30,7 +30,7 @@ ms.locfileid: "31967958"
 
  ブラウザー ミックスを指定した後で、ミックスに対して Web ブラウザーの種類を追加したり、削除したりできます。 また、ミックス コントロールを使用して、ブラウザー ミックスの配分を変更することもできます。 ミックス コントロールを使用すると、シナリオでのブラウザーの配分を簡単に調整できます。
 
-## <a name="adding-new-browsers-to-a-scenario"></a>シナリオへの新しいブラウザーの追加
+## <a name="add-new-browsers-to-a-scenario"></a>シナリオに新しいブラウザーを追加する
 
 ### <a name="to-add-new-browsers-to-a-scenario"></a>シナリオに新しいブラウザーを追加するには
 
@@ -47,7 +47,7 @@ ms.locfileid: "31967958"
 
 4.  ブラウザーの追加が終了したら、**[OK]** を選択します。
 
-##  <a name="EditingTestMixSpecifyBrowserRemovingBrowserTypes"></a> シナリオからのブラウザーの削除
+##  <a name="remove-browsers-from-a-scenario"></a>シナリオからブラウザーを削除する
 
 ### <a name="to-remove-browsers-from-a-scenario"></a>シナリオからブラウザーを削除するには
 

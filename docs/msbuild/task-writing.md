@@ -14,26 +14,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 57917b3820bac6005faa7b31f8cdd6cffd4978b5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7cf8c8a05d07d1a75a8794c52a2f89a55f01419e
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31965612"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152068"
 ---
 # <a name="task-writing"></a>タスクの作成
 タスクでは、ビルド プロセスの間に実行するコードを指定します。 タスクはターゲットに含まれます。 一般的なタスクのライブラリは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属します。独自のタスクを作成することもできます。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するタスク ライブラリの詳細については、[タスク リファレンス](../msbuild/msbuild-task-reference.md)を参照してください。  
   
 ## <a name="tasks"></a>[タスク]  
- タスクには、1 つまたは複数のファイルをコピーする [Copy](../msbuild/copy-task.md)、ディレクトリを作成する [MakeDir](../msbuild/makedir-task.md)、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ソース コード ファイルをコンパイルする [Csc](../msbuild/csc-task.md) などがあります。 各タスクは、Microsoft.Build.Framework.dll アセンブリで定義されている <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装する .NET クラスとして実装されます。  
+ タスクには、1 つまたは複数のファイルをコピーする [Copy](../msbuild/copy-task.md)、ディレクトリを作成する [MakeDir](../msbuild/makedir-task.md)、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ソース コード ファイルをコンパイルする [Csc](../msbuild/csc-task.md) などがあります。 各タスクは、*Microsoft.Build.Framework.dll* アセンブリで定義されている <xref:Microsoft.Build.Framework.ITask> インターフェイスを実装する .NET クラスとして実装されます。  
   
  タスクを実装するには 2 つの方法があります。  
   
 -   <xref:Microsoft.Build.Framework.ITask> インターフェイスを直接実装します。  
   
--   Microsoft.Build.Utilities.dll アセンブリで定義されているヘルパー クラス <xref:Microsoft.Build.Utilities.Task> からクラスを継承します。 Task は ITask を実装し、一部の ITask メンバーの既定の実装を提供します。 また、ログは簡単に記録できます。  
-  
- いずれの場合でも、クラスを `Execute` という名前のメソッドに追加する必要があります。これは、タスクの実行時に呼び出されるメソッドです。 このメソッドはパラメーターを取らず、`Boolean` 値を返します。タスクが成功した場合は `true` を、失敗した場合は `false` を返します。 次は、何のアクションも実行せず、`true` を返すタスクの例です。  
+-   *Microsoft.Build.Utilities.dll* アセンブリで定義されているヘルパー クラス <xref:Microsoft.Build.Utilities.Task> からクラスを継承します。 Task は ITask を実装し、一部の ITask メンバーの既定の実装を提供します。 また、ログは簡単に記録できます。  
+
+いずれの場合でも、クラスを `Execute` という名前のメソッドに追加する必要があります。これは、タスクの実行時に呼び出されるメソッドです。 このメソッドはパラメーターを取らず、`Boolean` 値を返します。タスクが成功した場合は `true` を、失敗した場合は `false` を返します。 次は、何のアクションも実行せず、`true` を返すタスクの例です。  
   
 ```csharp
 using System;  
@@ -98,15 +98,15 @@ namespace MyTasks
 </Project>  
 ```  
   
-## <a name="registering-tasks"></a>タスクの登録  
+## <a name="register-tasks"></a>登録タスク  
  プロジェクトがタスクを実行する場合、タスク クラスが含まれるアセンブリを見つける方法を [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に与えている必要があります。 タスクは [UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md) で登録されます。  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイルの Microsoft.Common.Tasks は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するすべてのタスクを登録する `UsingTask` 要素の一覧が含まれるプロジェクト ファイルです。 このファイルは、あらゆるプロジェクトのビルド時に自動的に追加されます。 Microsoft.Common.Tasks に登録されているタスクが現在のプロジェクト ファイルにも登録されている場合、現在のプロジェクト ファイルに優先権が与えられます。つまり、既定のタスクが、同じ名前を持つ独自のタスクでオーバーライドされます。  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイルの *Microsoft.Common.Tasks* は、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するすべてのタスクを登録する `UsingTask` 要素の一覧が含まれるプロジェクト ファイルです。 このファイルは、あらゆるプロジェクトのビルド時に自動的に追加されます。 *Microsoft.Common.Tasks* に登録されているタスクが現在のプロジェクト ファイルにも登録されている場合、現在のプロジェクト ファイルに優先権が与えられます。つまり、既定のタスクが、同じ名前を持つ独自のタスクでオーバーライドされます。  
   
 > [!TIP]
->  Microsoft.Common.Tasks のコンテンツを表示することで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するタスクの一覧を確認できます。  
+>  *Microsoft.Common.Tasks* のコンテンツを表示することで、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に付属するタスクの一覧を確認できます。  
   
-## <a name="raising-events-from-a-task"></a>タスクからイベントを生成する  
+## <a name="raise-events-from-a-task"></a>タスクからイベントを生成する  
  タスクが <xref:Microsoft.Build.Utilities.Task> ヘルパー クラスから派生する場合、<xref:Microsoft.Build.Utilities.Task> クラスで次のいずれかのヘルパー メソッドを利用して生成したイベントは、登録されているあらゆるロガーで記録され、表示されます。  
   
 ```csharp
@@ -143,7 +143,7 @@ public class SimpleTask : ITask
 }  
 ```  
   
-## <a name="requiring-task-parameters-to-be-set"></a>タスク パラメーターの設定を要求する  
+## <a name="require-task-parameters-to-be-set"></a>タスク パラメーターの設定を要求する  
  特定のタスク プロパティを "必須" に設定できます。必須にすると、タスクを実行するプロジェクト ファイルで、必須のプロパティに値を設定する必要があります。設定しないと、ビルドに失敗します。 次のように、タスクの .NET プロパティに `[Required]` 属性を適用します。  
   
 ```csharp
@@ -267,5 +267,5 @@ namespace SimpleTask2
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
