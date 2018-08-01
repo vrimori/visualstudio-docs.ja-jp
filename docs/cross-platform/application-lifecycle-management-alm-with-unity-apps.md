@@ -10,12 +10,12 @@ ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: aa36dd0f213cffa1c5f44915de6794ecc6efa0c0
-ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
+ms.openlocfilehash: eca67ab58611d9a070114bebdd3594ec66580714
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35237511"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232333"
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>Unity アプリを使用したアプリケーション ライフサイクル管理 (ALM)
 
@@ -41,7 +41,7 @@ ms.locfileid: "35237511"
 
 ## <a name="modeling"></a>モデリング
 
-参照リンク: **[アーキテクチャの分析およびモデリング](../modeling/analyze-and-model-your-architecture.md)**
+参照リンク: **[アーキテクチャの分析とモデル化](../modeling/analyze-and-model-your-architecture.md)**
 
 一般的なコメント: これらのデザイン機能は、コーディング言語に関係がないか、C# などの .NET 言語と共に使用されますが、オブジェクト階層およびクラスのリレーションシップを含む従来のアプリケーションのパラダイムで動作します。 Unity 内でのゲームの設計には、さまざまなパラダイムが含まれ、たとえばグラフィカル オブジェクト、サウンド、シェーダー、スクリプトなどのリレーションシップがあります。 このため、Visual Studio モデリング ダイアグラム ツールが、Unity プロジェクト全体に特に関連するわけではありません。 C# スクリプト内でのリレーションシップを管理するために使用することもできますが、それは全体の中の一部にすぎません。
 
@@ -102,11 +102,9 @@ ms.locfileid: "35237511"
 
 |機能|Unity でサポートされているかどうか|その他のコメント|
 |-------------|--------------------------|-------------------------|
-|
-  [マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|
+|[マネージド コードの品質の分析](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|
 |[コード クローン検出を使用した重複コードの検出](http://msdn.microsoft.com/Library/a97cd5a6-5ffa-4104-9627-8e59e513654d)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|
-|
-  [マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|
+|[マネージド コードの複雑さと保守性の測定](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|[はい]|Visual Studio 内の C# スクリプト コードを分析できます。|
 |[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|×|[Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity Web サイト)。|
 |[.Net Framework のメモリ分析の問題](https://msdn.microsoft.com/en-us/library/dn342825.aspx)|×|Visual Studio ツールには、(Unity で使用するような) プロファイリング用の Mono フレームワークへのフックはありません。 [Unity Profiler](http://docs.unity3d.com/Manual/Profiler.html) の使用 (Unity ドキュメント)。|
 

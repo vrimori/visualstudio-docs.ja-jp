@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b36da837ae1f4c327969b398c3964bfd6dd2aea3
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 9cc9a1ae5f7fb51981f3cebc4d6fa658f614de6d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302751"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151841"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 グローバルなスレッド カウントを設定し、そのカウントを現在のスレッドに割り当てます。  
@@ -41,4 +41,4 @@ HRESULT WINAPI SetThreadCount(int threadCount);
  スレッド カウントが更新された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** FileTracker.h
+ **ヘッダー:** *FileTracker.h*

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 3fc4d5a6c1a4ae3cabbbb2426d7a4fdf011b9e0e
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 0192a38e5bd84cfd17d3f7e2a0ec59e3225f4e84
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693888"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178820"
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム
 
@@ -61,11 +61,11 @@ Visual Studio Enterprise のコード化された UI テストがサポートさ
 |Windows フォーム 2.0 以降|完全にサポートされています。 **注:** NetFx コントロールは完全にサポートされていますが、一部のサードパーティ コントロールはサポートされていません。|
 |WPF 3.5 以降|完全にサポートされています。<br /><br /> **メモ** NetFx コントロールは完全にサポートされていますが、一部のサードパーティ コントロールはサポートされていません。|
 |Windows Win32|既知の問題がいくつか存在しますが、動作する可能性があります。ただし、公式にはサポートされていません。|
-|MFC|一部サポートされています。 サポートされる機能の詳細については、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=206511) を参照してください。|
+|MFC|一部サポートされています。 サポートされている機能について詳しくは、「[UITest framework](https://blogs.msdn.microsoft.com/vstsqualitytools/2010/04/15/uitest-framework-mfc-support-in-vs-2010/)」(UITest フレームワーク) をご覧ください。|
 |SharePoint|完全にサポートされています。|
 |Office クライアント アプリケーション|サポートされていません。|
 |Dynamics CRM Web クライアント|完全にサポートされています。|
-|Dynamics (Ax) 2012 クライアント|操作の記録と再生が部分的にサポートされています。 詳細については、 [Microsoft Web サイト](http://go.microsoft.com/fwlink/?LinkId=232677) を参照してください。|
+|Dynamics (Ax) 2012 クライアント|操作の記録と再生が部分的にサポートされています。 詳しくは、「[Visual Studio 10 Coded UI / Action Recordings support for Microsoft Dynamics](https://blogs.msdn.microsoft.com/dave_froslie/2011/09/01/visual-studio-10-coded-ui-action-recordings-support-for-microsoft-dynamics-ax-2012/)」(Visual Studio 10 のコード化された UI/Microsoft Dynamics の操作の記録のサポート) をご覧ください。|
 |SAP|サポートされていません。|
 |Citrix およびターミナル サービス|ターミナル サーバーに対する操作の記録はお勧めしません。 レコーダーは、複数のインスタンスの同時実行をサポートしていません。|
 |PowerBuilder|一部サポートされています。<br /><br /> サポートは、PowerBuilder コントロールに対してユーザー補助が有効である程度までです。|

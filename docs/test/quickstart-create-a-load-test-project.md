@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 89a72c115edf8eae11fc1159686dee2b7b3f44d6
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 7838b9b04aa8d95fa9476cf9720815ccb5bed122
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37118282"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176698"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>クイック スタート: ロード テスト プロジェクトを作成する
 

@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7e5e6919dbc37294ef677f3c512c51d53aea0e2f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c48928f22ceabea4d5961096e6749ccf01e46176
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751343"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180641"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する
 
@@ -58,7 +58,7 @@ ms.locfileid: "34751343"
 
 Web サーバーでパフォーマンス データを簡単に収集するために、ロード テストで使用するテクノロジに基づいて、Visual Studio Enterprise には定義済みの名前付きカウンター セットも用意されています。 これらのセットは、IIS、ASP.NET、または SQL Server を実行するサーバーを分析する場合に役立ちます。 既定のカウンター セットで提供されていないカウンターは、ロード テスト エディターを使用して追加できます。 テストしているコンピューターまたはサーバーをロード テストに追加して、これらのコンピューターでリソースの利用状況を監視できるようにすることが重要です。 詳細については、「[方法: カウンター セットを管理する](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)」を参照してください。
 
-通常、ロード テストの実行の結果分析には、収集するデータ、しきい値規則の設定箇所、および測定単位がアプリケーションの特定の問題を反映するときに通知する方法を知るために、特定の領域に関するドメイン固有の知識が必要です。 詳細については、「[しきい値規則の挿入](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md#SpecifyingCounterSetsThresholdRulesAboutThresholdRules)」を参照してください。
+通常、ロード テストの実行の結果分析には、収集するデータ、しきい値規則の設定箇所、および測定単位がアプリケーションの特定の問題を反映するときに通知する方法を知るために、特定の領域に関するドメイン固有の知識が必要です。 詳細については、「[しきい値規則の挿入](#about-threshold-rules)」を参照してください。
 
 ### <a name="performance-counter-sampling-interval-considerations"></a>パフォーマンス カウンターのサンプリング間隔に関する考慮事項
 

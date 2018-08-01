@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9aca0c3c17c64ccbc90550305e8f9673de388d98
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 9dd371d55ee4a59baf800e26b666be28aeb6cbb3
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234463"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175749"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>ロード テスト アナライザーのグラフ ビューでのテスト結果の分析
 
@@ -74,9 +74,9 @@ ms.locfileid: "36234463"
 |平均|カウンターの平均値 (ミリ秒) を示します。|
 |末尾|最新のサンプリング間隔でのカウンターの値 (ミリ秒) を示します。|
 
-## <a name="tasks"></a>[タスク]
+## <a name="tasks"></a>タスク
 
-|[タスク]|関連するトピック|
+|タスク|関連するトピック|
 |-----------|-----------------------|
 |**凡例を使用してグラフをカスタマイズする:** グラフ ビューの凡例には、グラフに関連付けられているパフォーマンス カウンターの情報が表示されます。 凡例を使用して、パフォーマンス カウンターの削除、グラフのパフォーマンス カウンターの強調表示、およびプロット オプションのカスタマイズを行うことができます。|-   [グラフ ビューの凡例を使用したロード テストの分析](../test/use-the-graphs-view-legend-to-analyze-load-tests.md)|
 |**グラフにカウンターを表示する:** グラフにカウンターを配置することにより、さまざまな種類のデータをロード テストの結果グラフに追加できます。|-   [方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)|

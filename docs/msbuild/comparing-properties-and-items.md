@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ffaf1bf06a39036845dc6a2f48c3f0d5f537da01
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 96166caefa749138371dd8a5ab2ea9d496553557
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37967927"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177115"
 ---
-# <a name="comparing-properties-and-items"></a>プロパティと項目の比較
+# <a name="compare-properties-and-items"></a>プロパティと項目を比較する
 MSBuild のプロパティと項目は、いずれもタスクに情報を渡し、条件を評価し、プロジェクト ファイルで参照する値を格納しておくために使用されます。  
   
 -   プロパティは名前と値のペアです。 詳細については、「[MSBuild プロパティ](../msbuild/msbuild-properties.md)」を参照してください。  

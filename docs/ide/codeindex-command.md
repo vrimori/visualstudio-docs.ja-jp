@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2216a4678436a9d7811adbdb4bef2ee930fbabb2
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 9ecd73fceda6916f547c67e599777a9cd139d3bb
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297607"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176373"
 ---
 # <a name="codeindex-command"></a>CodeIndex コマンド
 
@@ -42,7 +42,7 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 
 |**引数**|**説明**|
 |------------------|---------------------|
-|`CollectionName`|チーム プロジェクト コレクションの名前を指定します。 名前に空白が含まれる場合は、"Fabrikam Web Site" のように引用符で囲みます。|
+|`CollectionName`|チーム プロジェクト コレクションの名前を指定します。 名前に空白が含まれる場合は、"Fabrikam Website" のように引用符で囲みます。|
 |`CollectionId`|チーム プロジェクト コレクションの ID 番号を指定します。|
 |`ServerPath`|コード ファイルのパスを指定します。|
 
@@ -67,31 +67,31 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
  コード インデックス作成の状態と構成を表示するには:
 
 ```cmd
-TFSConfig CodeIndex /indexingStatus /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /indexingStatus /collectionName:"Fabrikam Website"
 ```
 
  すべての変更セットのインデックス作成を開始するには:
 
 ```cmd
-TFSConfig CodeIndex /setIndexing:on /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /setIndexing:on /collectionName:"Fabrikam Website"
 ```
 
  以前に作成された変更セットのインデックス作成を停止し、新しい変更セットのインデックス作成のみを開始するには:
 
 ```cmd
-TFSConfig CodeIndex /setIndexing:keepupOnly /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /setIndexing:keepupOnly /collectionName:"Fabrikam Website"
 ```
 
  10 KB を超えるファイルを最大 50 個検索するには:
 
 ```cmd
-TFSConfig CodeIndex /listLargeFiles /fileCount:50 /minSize:10 /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /listLargeFiles /fileCount:50 /minSize:10 /collectionName:"Fabrikam Website"
 ```
 
  特定のファイルをインデックス作成から除外し、無視ファイル リストに追加するには:
 
 ```cmd
-TFSConfig CodeIndex /ignoreList:add "$/Fabrikam Web Site/Catalog.cs" /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /ignoreList:add "$/Fabrikam Website/Catalog.cs" /collectionName:"Fabrikam Website"
 ```
 
  インデックスを作成しないすべてのファイルを表示するには:
@@ -103,25 +103,25 @@ TFSConfig CodeIndex /ignoreList:view
  以前にインデックスを作成したデータをクリアし、インデックス作成を再び開始するには:
 
 ```cmd
-TFSConfig CodeIndex /reindexAll /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /reindexAll /collectionName:"Fabrikam Website"
 ```
 
  すべての変更履歴を保存するには:
 
 ```cmd
-TFSConfig CodeIndex /indexHistoryPeriod:all /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /indexHistoryPeriod:all /collectionName:"Fabrikam Website"
 ```
 
  CodeLens 一時データのサイズ制限を取り払い、一時データのサイズに関係なくインデックス作成を続けるには:
 
 ```cmd
-TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /temporaryDataSizeLimit:disable /collectionName:"Fabrikam Website"
 ```
 
  確認後にコード インデックスを削除するには:
 
 ```cmd
-TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Web Site"
+TFSConfig CodeIndex /destroyCodeIndex /collectionName:"Fabrikam Website"
 ```
 
 ## <a name="see-also"></a>関連項目

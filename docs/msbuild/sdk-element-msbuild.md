@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d674e7613898816f905e0d0a11bdc2484cf4f25
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 15084b21c80967a5ebd170e175adf09d9623be5b
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325324"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154094"
 ---
 # <a name="sdk-element-msbuild"></a>Sdk 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト SDK を参照します。  
@@ -40,7 +40,7 @@ ms.locfileid: "36325324"
      Version="1.0.0" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -58,7 +58,7 @@ ms.locfileid: "36325324"
 |-------------|-----------------|  
 |[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: MSBuild プロジェクト SDK の参照](../msbuild/how-to-use-project-sdk.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [MSBuild](../msbuild/msbuild.md)

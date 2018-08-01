@@ -5,7 +5,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - custom validation rules
 - validation rules, creating
-- Web performance tests, creating custom validation rules
+- web performance tests, creating custom validation rules
 - rules, validation
 - validation rules
 ms.assetid: 989124bc-1a86-41f7-b37d-8f9e54dd4f0b
@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6aaba3be74e38e27f04db59cbb26b455245251be
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 99ed1a6db16b8e1fb765898c976b962bfe43f041
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282279"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178203"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web パフォーマンス テストのカスタム検証規則のコーディング
 

@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35534c0c6965dd7f7db01e2299ff71572b8de9e7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 788df6c5d7084398f5c1df1fffdf51e501cce4c6
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31950294"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180478"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)
 **[プロジェクト デザイナー]** の **[参照]** ページを利用し、プロジェクトの参照、Web 参照、インポートした名前空間を管理します。 プロジェクトには、COM コンポーネント、XML Web サービス、.NET Framework クラス ライブラリまたはアセンブリ、その他のクラス ライブラリの参照を含めることができます。 参照の使用方法については、「[プロジェクト内の参照の管理](../../ide/managing-references-in-a-project.md)」を参照してください。
@@ -62,7 +62,7 @@ ms.locfileid: "31950294"
 
  [参照の追加] ダイアログ ボックスを利用してプロジェクトに参照を追加するには、**[参照]** を選択します。
 
- [Web 参照の追加] ダイアログ ボックスを利用してプロジェクトに Web 参照を追加するには、**[Web 参照]** を選択します。
+ **[Web 参照の追加]** ダイアログ ボックスを利用してプロジェクトに Web 参照を追加するには、**[Web 参照]** を選択します。
 
  **削除**
 

@@ -11,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ac50f956ed45f42f77638146c1340c0ed90f68fa
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f5de1fb6890874a5aab57e357cc4488db96fb7c8
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974032"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178375"
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>方法 : 要求レベルのプラグインを作成する
 
-*要求*は、Web パフォーマンス テストを構成する宣言ステートメントです。 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 プラグインを作成し、要求を含む Web パフォーマンス テストに追加するのと同じように、個々の要求にも追加できます。 カスタマイズされた*要求プラグイン*を使用すると、Web パフォーマンス テスト中の特定の要求の実行時にコードを呼び出すことができます。
+"*要求*" は、Web パフォーマンス テストを構成する宣言ステートメントです。 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 プラグインを作成し、要求を含む Web パフォーマンス テストに追加するのと同じように、個々の要求にも追加できます。 カスタマイズされた "*要求プラグイン*" を使用すると、Web パフォーマンス テスト中の特定の要求の実行時にコードを呼び出すことができます。
 
 すべての Web パフォーマンス テスト要求プラグインには、PreRequest メソッドと PostRequest メソッドがあります。 要求プラグインを特定の HTTP 要求にアタッチすると、その要求の発行前に PreRequest イベントが発生し、応答の受信後に PostRequest が起動します。
 

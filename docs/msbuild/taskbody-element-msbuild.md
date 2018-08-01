@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c031b36501f90619369eedb9622b303ec559f6bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 96ba93b37ab8b483f899fef4d17db048db6e4532
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31568020"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152202"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody 要素 (MSBuild)
-`UsingTask``TaskFactory` に渡されるデータを含みます。 詳細については、「[UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md)」(UsingTask 要素 (MSBuild)) を参照してください。  
+`UsingTask` `TaskFactory` に渡されるデータを含みます。 詳細については、「[UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)」を参照してください。  
 
  \<Project>  
  \<UsingTask>  
@@ -38,7 +38,7 @@ ms.locfileid: "31568020"
 <TaskBody Evaluate="true/false" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -75,7 +75,7 @@ ms.locfileid: "31568020"
 </UsingTask>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

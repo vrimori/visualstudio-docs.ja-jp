@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 928efcab5c82e54e1054346fb6176fff124303bb
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: b96fca759c3a35bd7220cde4a3d2fea7463f46b5
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945534"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177618"
 ---
 # <a name="build-multiple-projects-in-parallel-with-msbuild"></a>MSBuild で複数のプロジェクトを並行ビルドする
 MSBuild では、複数のプロジェクトを並列に実行することによって、これらのプロジェクトをより速くビルドすることができます。 ビルドを並列で実行するには、マルチコア コンピューターまたはマルチプロセッサ コンピューターで次の設定を使用します。  
@@ -73,5 +73,5 @@ msbuild.exe myproj.proj /maxcpucount:3
   
 ## <a name="see-also"></a>関連項目  
  [複数のプロセッサを使用したプロジェクトのビルド](../msbuild/using-multiple-processors-to-build-projects.md)   
- [マルチプロセッサ対応の logger の記述](../msbuild/writing-multi-processor-aware-loggers.md)   
+ [マルチプロセッサ対応のロガーの記述](../msbuild/writing-multi-processor-aware-loggers.md)   
  [C++ での並列ビルドの調整に関するブログ](http://go.microsoft.com/fwlink/?LinkId=251457)

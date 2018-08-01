@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c5fffd9ac865b281dc921997f48d7609a9429f64
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 9b39adc2c2b91016d14eb73787b17f8c4da51c9f
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890228"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233153"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 
@@ -26,7 +26,7 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
 > - Visual Studio 2015 以降、Visual Studio Emulator for Android はサポートされていません。
 > - Visual Studio Emulator for Android の場合、Android バージョン 6.0 より後のエミュレーター イメージを利用できません。
 > - Google Android Emulator は現在、[Hyper-V](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#hyper-v) に対応しています。
-> - Visual Studio Tools for Apache Cordova は Google Android Emulator と連動します。 詳細については、「[Run your Apache Cordova app on Android](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)」 (Android で Apache Cordova アプリを実行する) を参照してください (この記事で説明したとおり、Hyper-V は無効にする必要はなくなりました)。
+> - Visual Studio Tools for Apache Cordova は Google Android Emulator と連動します。 詳細については、「[Run your Apache Cordova app on Android](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator)」 (Android で Apache Cordova アプリを実行する) を参照してください (この記事で説明したとおり、Hyper-V は無効にする必要はなくなりました)。
 >
 > Google Android エミュレーターの構成と使用の詳細については、「[Android Emulator のセットアップ](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)」を参照してください。
   
@@ -51,7 +51,7 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
 ##  <a name="Requirements"></a> システム要件と下位互換性  
  Visual Studio Emulator for Android のハードウェア、ソフトウェア、構成の要件に関する重要な情報については、次のトピックをご覧ください。  
   
--   [System Requirements for the Visual Studio Emulator for Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
+-   [Visual Studio Emulator for Android のシステム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
   
  Visual Studio Emulator for Android には Visual Studio 2015 が必要です。それより前のバージョンの Visual Studio との下位互換性はありません。  
   
@@ -104,6 +104,6 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
   
 -   Visual Studio またはエミュレーター マネージャーで、[気に入った機能の報告] を使用して、問題を報告します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio Emulator for Android のシステム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)   
  [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 57fab4ee4205e9b1aaf7aaa44218134649257598
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 114551c97fb64d17584bb32327c8bbc35eef4739
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974976"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178362"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>方法: Web パフォーマンス テスト プラグインを作成する
 
@@ -120,7 +120,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 次のコードでは、テスト イテレーションを表す <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> に項目を追加する、カスタマイズされた Web パフォーマンス テスト プラグインを作成します。
 
-Web パフォーマンス テストの実行後は、このプラグインを使用することにより、**TestIteratnionNumber** という名前の追加された項目を、Web パフォーマンス テスト結果ビューアーの **[コンテキスト]** タブで確認できます。
+Web パフォーマンス テストの実行後は、このプラグインを使用することにより、**TestIteratnionNumber** という名前の追加された項目を、**Web パフォーマンス テスト結果ビューアー**の **[コンテキスト]** タブで確認できます。
 
 ```csharp
 using System;

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2ae66ff032b3f43f80f8c00b12e2d344bba298b9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: de90977a239bf728de3fa98978fd134a014200db
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31970705"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180075"
 ---
 # <a name="how-to-create-a-web-service-test"></a>方法 : Web サービス テストを作成する
 
@@ -43,7 +43,7 @@ Web パフォーマンス テストを使用して、Web サービスをテス�
 
 6.  エディタの URL ノードを展開し、**[文字列ボディ]** ノードを選択して **[コンテンツの種類]** プロパティの値として「`text/xml`」と入力します。
 
-7.  手順 4 のブラウザーに戻り、[Web サービスの記述] ページから SOAP 要求の XML 部分を選択し、クリップボードにコピーします。
+7.  手順 4 のブラウザーに戻り、[Web サービスの説明] ページから SOAP 要求の XML 部分を選択し、クリップボードにコピーします。
 
 8.  次に示すのは、XML の内容の一例です。
 
@@ -71,7 +71,7 @@ Web パフォーマンス テストを使用して、Web サービスをテス�
     > [!NOTE]
     > SOAP 本体のデータ バインディングを使用すると、`{{DataSourceName.TableName.ColumnName}}` 構文を使用して、プレースホルダー値をデータ バインディングされた値に置換できます。
 
-13. テストを実行します。 Web パフォーマンス テスト結果ビューアーの上部ペインで、Web サービス要求を選択します。 下部ペインで、[Web ブラウザー] タブを選択します。Web サービスによって返された XML とあらゆる操作の結果とが表示されます。
+13. テストを実行します。 **Web パフォーマンス テスト結果ビューアー**の上部ペインで、Web サービス要求を選択します。 下部ペインで、[Web ブラウザー] タブを選択します。Web サービスによって返された XML とあらゆる操作の結果とが表示されます。
 
 ## <a name="see-also"></a>関連項目
 

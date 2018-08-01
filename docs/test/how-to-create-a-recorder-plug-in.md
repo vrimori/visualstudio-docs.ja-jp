@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 008275d4e0ff094c7933b4e0bae89055acd4bf8e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3d1204e387a10bf7b5512ca0fa6fc4528901a52f
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978178"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176214"
 ---
 # <a name="how-to-create-a-recorder-plug-in"></a>方法: レコーダー プラグインを作成する
 

@@ -24,17 +24,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a46f2a079cc35e6c1add9e53abdcbdd283ddb9e
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: f633e741cf72596708963d89973eb039b18b4e88
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37059415"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151214"
 ---
 # <a name="unzip-task"></a>Unzip タスク
-指定した場所に `.zip` アーカイブを解凍します。
+指定した場所に *.zip* アーカイブを解凍します。
 
-**注:** `Unzip` タスクは MSBuild 15.8 以降でのみ使用できます。
+>[!NOTE]
+>`Unzip` タスクは MSBuild 15.8 以降でのみ使用できます。
   
 ## <a name="parameters"></a>パラメーター  
  `Unzip` タスクのパラメーターの説明を次の表に示します。  
@@ -47,7 +48,7 @@ ms.locfileid: "37059415"
 |`SourceFiles`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 解凍する、1 つまたは複数のファイルを指定します。 複数のファイルを指定すると、同じフォルダーに整理されて解凍されます。|
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、アーカイブを解凍し、任意の読み取り専用ファイルを上書きします。
@@ -66,6 +67,6 @@ ms.locfileid: "37059415"
 </Project>
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

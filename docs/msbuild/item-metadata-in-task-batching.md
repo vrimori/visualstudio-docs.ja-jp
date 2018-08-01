@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cbe01c15e9798a29d4832b8c189718d95cf5a0d
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: f1804bde2c3da7f83658784ca1520791a930f901
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078993"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177196"
 ---
 # <a name="item-metadata-in-task-batching"></a>タスクのバッチの項目メタデータ
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] には、項目メタデータに基づき、項目リストをさまざまなカテゴリまたはバッチに分割し、各バッチで一度に 1 つのタスクを実行する機能があります。 厳密にどの項目がどのバッチで渡されるのかは少々複雑です。 このトピックでは、バッチ処理を伴う一般的なシナリオについて説明します。  
@@ -133,7 +133,7 @@ ms.locfileid: "39078993"
   
  `Number: 3 -- Items in ExampColl: Item3 ExampColl2: Item6`  
   
-## <a name="batching-one-item-at-a-time"></a>一度に 1 つの項目をバッチ処理する  
+## <a name="batch-one-item-at-a-time"></a>一度に 1 つの項目をバッチ処理する  
  バッチ処理は、作成時にすべての項目に割り当てられる既知の項目メタデータでも実行できます。 それにより、コレクション内のすべての項目にバッチ処理に使用するメタデータが与えられます。 `Identity` メタデータ値はすべての項目に固有のものであり、1 つの項目リスト内のすべての項目を 1 つの個別バッチに分割するときに役立ちます。 既知の項目メタデータの一覧については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。  
   
  次の例では、項目リストの各項目を 1 つずつバッチ処理する方法を示しています。 すべての項目の `Identity` メタデータ値が固有であるため、`ExampColl` 項目リストは 6 つのバッチに分割されます。各バッチに項目リストの 1 つの項目が含まれています。 `Text` 属性に `%(Identity)` があることで、バッチ処理の実行が [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に通知されます。  
@@ -172,7 +172,7 @@ Identity: "Item5" -- Items in ExampColl: Item5
 Identity: "Item6" -- Items in ExampColl: Item6  
 ```  
   
-## <a name="filtering-item-lists"></a>項目リストをフィルター処理する  
+## <a name="filter-item-lists"></a>項目リストをフィルター処理する  
  バッチ処理を利用すれば、1 つの項目リストをタスクに渡す前に特定の項目をフィルター処理できます。 たとえば、既知の項目メタデータ `Extension` でフィルター処理すると、特定の拡張子を持つファイルのみでタスクが実行されます。  
   
  次の例は、項目メタデータに基づいて項目リストをバッチに分割し、タスクに渡すときにバッチをフィルター処理する方法を示しています。 `ExampColl` 項目リストが `Number` 項目メタデータに基づいて 3 つのバッチに分割されます。 タスクの `Condition` 属性は、`Number` 項目メタデータ値が `2` のバッチのみをタスクに渡すことを指定します。  

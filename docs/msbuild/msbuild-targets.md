@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f6ae74ed310da6f937dcadf168630102c004877
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 3700074a1d087c0626a86559ff1342698d8a4628
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081440"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176116"
 ---
 # <a name="msbuild-targets"></a>MSBuild ターゲット
 ターゲットはタスクを特定の順序でグループ化し、ビルド プロセスを小さな単位に分割することを可能にします。 たとえば、あるターゲットは、ビルドの準備として、出力ディレクトリに含まれるすべてのファイルを削除し、別のターゲットは、プロジェクトに対する入力をコンパイルし、空のディレクトリに配置します。 タスクについて詳しくは、「[MSBuild タスク](../msbuild/msbuild-tasks.md)」をご覧ください。  
   
-## <a name="declaring-targets-in-the-project-file"></a>プロジェクト ファイルでターゲットを宣言する  
+## <a name="declare-targets-in-the-project-file"></a>プロジェクト ファイルでターゲットを宣言する  
  ターゲットは、プロジェクト ファイル内で、[Target](../msbuild/target-element-msbuild.md) 要素を使用して宣言します。 たとえば、次の XML は Construct という名前のターゲットを作成し、Compile というアイテムの種類で Csc タスクを呼び出します。  
   
 ```xml  

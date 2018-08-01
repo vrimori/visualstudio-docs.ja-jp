@@ -13,20 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2c4d828dd0f5277663c11701cd95fe1b1ea049b7
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 213824ff9be80a151d20b4906839969dce3be7d1
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302873"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175538"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>ロード テスト用のカスタム コードおよびカスタム プラグインの作成
 
 カスタム プラグインでは、ユーザーが作成してロード テストや Web パフォーマンス テストにアタッチしたコードが使用されます。 ロード テスト API または Web パフォーマンス テスト API を使用してテスト用のカスタム プラグインを作成し、組み込みの機能に拡張できます。 ロード テストには複数のプラグインを追加することができます。
 
-## <a name="tasks"></a>[タスク]
+## <a name="tasks"></a>タスク
 
-|[タスク]|関連するトピック|
+|タスク|関連するトピック|
 |-----------|-----------------------|
 |**ロード テスト用のカスタム プラグインを作成する**: ロード テスト API を使用してカスタム プラグインを作成し、ロード テストのテスト機能を拡張できます。|-   [方法: ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)<br />-   [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)|
 |**Web パフォーマンス テスト用のカスタム プラグインを作成する:** Web パフォーマンス テスト API を使用してカスタム プラグインを作成し、Web パフォーマンス テスト (要求レベルのテストを含む) のテスト機能を拡張できます。 Web サービス テストを作成することもできます。<br /><br /> さらに、Web パフォーマンス テストの記録後、Web パフォーマンス テスト結果ビューアーに表示する前にこのパフォーマンス テストを変更できる Web レコーダー プラグインを作成できます。|-   [方法: Web パフォーマンス テスト API を使用する](../test/how-to-use-the-web-performance-test-api.md)<br />-   [方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [方法: 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)<br />-   [方法: Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)<br />-   [方法: レコーダー プラグインを作成する](../test/how-to-create-a-recorder-plug-in.md)|

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f05f6b8bfc2cf75887192bcead9f55023fbddbd
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 6c57c7dcb9c6eadc3242bc09a1356d3a08399616
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326154"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154298"
 ---
 # <a name="onerror-element-msbuild"></a>OnError 要素 (MSBuild)
 失敗したタスクの `ContinueOnError` 属性が `false` の場合、1 つ以上のターゲットが実行されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "36326154"
     Condition="'String A'=='String B'" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -63,7 +63,7 @@ ms.locfileid: "36326154"
 ## <a name="remarks"></a>コメント  
  `Target` 要素のタスクの 1 つが失敗し、`ContinueOnError` 属性が `ErrorAndStop` (または `false`) に設定されている場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は `OnError` 要素を実行します。 タスクが失敗すると、`ExecuteTargets` 属性で指定されているターゲットが実行されます。 ターゲットに複数の `OnError` 要素がある場合、タスクが失敗すると `OnError` 要素は順番に実行されます。  
 
- `ContinueOnError` 属性の詳細は、「[Task Element (MSBuild) (Task 要素 (MSBuild))](../msbuild/task-element-msbuild.md)」を参照してください。 ターゲットについては、「[MSBuild ターゲット](../msbuild/msbuild-targets.md)」をご覧ください。  
+ `ContinueOnError` 属性の詳細は、「[Task 要素 (MSBuild)](../msbuild/task-element-msbuild.md)」を参照してください。 ターゲットについては、「[MSBuild ターゲット](../msbuild/msbuild-targets.md)」をご覧ください。  
 
 ## <a name="example"></a>例  
  次のコードは、`TaskOne` タスクと `TaskTwo` タスクを実行します。 `TaskOne` が失敗した場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] は `OnError` 要素を評価し、`OtherTarget` ターゲットを実行します。  
@@ -78,6 +78,6 @@ ms.locfileid: "36326154"
 </Target>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [ターゲット](../msbuild/msbuild-targets.md)

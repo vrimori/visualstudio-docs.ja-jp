@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 183e549f6f582593915a89b7b0e907aa97253b17
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: b1b886346a43e75d38a8ea8b6ed7a8b8d7391293
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326641"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152462"
 ---
 # <a name="target-element-msbuild"></a>Target 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] が順次実行するタスクのセットを格納します。  
@@ -53,7 +53,7 @@ ms.locfileid: "36326641"
 </Target>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -78,7 +78,7 @@ ms.locfileid: "36326641"
 |[Task](../msbuild/task-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクのインスタンスを作成し、実行します。 1 つのターゲットに 0 個以上のタスクを指定できます。|  
 |[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|ユーザー定義の `Property` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `PropertyGroup` 要素を格納できます。|  
 |[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|ユーザー定義の `Item` 要素のセットを格納します。 .NET Framework 3.5 以降では、`Target` 要素に `ItemGroup` 要素を格納できます。 詳細については、「[項目](../msbuild/msbuild-items.md)」を参照してください。|  
-|[OnError](../msbuild/onerror-element-msbuild.md)|失敗したタスクの `ContinueOnError` 属性が ErrorAndStop (または `false`) の場合、1 つ以上のターゲットが実行されます。 1 つのターゲットに 0 個以上の `OnError` 要素を指定できます。 `OnError` 要素がある場合は、`Target` 要素内で最後の要素である必要があります。<br /><br /> `ContinueOnError` 属性の詳細は、「[Task Element (MSBuild) (Task 要素 (MSBuild))](../msbuild/task-element-msbuild.md)」を参照してください。|  
+|[OnError](../msbuild/onerror-element-msbuild.md)|失敗したタスクの `ContinueOnError` 属性が ErrorAndStop (または `false`) の場合、1 つ以上のターゲットが実行されます。 1 つのターゲットに 0 個以上の `OnError` 要素を指定できます。 `OnError` 要素がある場合は、`Target` 要素内で最後の要素である必要があります。<br /><br /> `ContinueOnError` 属性の詳細は、「[Task 要素 (MSBuild)](../msbuild/task-element-msbuild.md)」を参照してください。|  
 
 ### <a name="parent-elements"></a>親要素  
 
@@ -118,6 +118,6 @@ ms.locfileid: "36326641"
 </Target>  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ターゲット](../msbuild/msbuild-targets.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

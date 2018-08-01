@@ -9,12 +9,12 @@ description: 管理者がサブスクライバーにライセンスを割り当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e43e9050e2b021025ed4ae104f4345bce6e8eee3
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: 473933ca94090596f11a6e8abb499621b4430b3f
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131932"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178401"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 

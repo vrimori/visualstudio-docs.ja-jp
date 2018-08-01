@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 731e8091a91c49c8e17dbcd00c3aea32001115a0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1ffbebd651087d9aa877d0e257947352a0d0275e
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31567900"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154825"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 すべての追跡を停止し、追跡セッションで使用されているメモリを解放します。  
@@ -37,7 +37,7 @@ HRESULT WINAPI StopTrackingAndCleanup(void);
  追跡が停止された場合、**HRESULT** に **SUCCEEDED** ビットが設定され、返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** FileTracker.h  
+ **ヘッダー:** *FileTracker.h*  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)
