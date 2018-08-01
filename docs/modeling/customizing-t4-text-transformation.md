@@ -12,27 +12,28 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b3960d0e511ab42de2bd81765fb395d2e013a493
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7755444781bb0205e7483e2365d80cac909c62c6
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948848"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380104"
 ---
-# <a name="customizing-t4-text-transformation"></a>T4 テキスト変換のカスタマイズ
+# <a name="customize-t4-text-transformation"></a>T4 テキスト変換をカスタマイズする
 
-テキスト テンプレートの機能は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用するプログラム コードまたは他の変換処理を使用してテキスト ファイルを生成します。 使用して[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]、テキスト テンプレート ディレクティブ プロセッサまたはテキスト テンプレート ホストをカスタマイズすることで、既定のテンプレート変換プロセスを拡張することができます。
+テキスト テンプレートは、プログラム コードまたは変換プロセスには、その他のテキスト ファイルを生成するための Visual Studio の機能です。 使用して[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]、テキスト テンプレート ディレクティブ プロセッサまたはテキスト テンプレート ホストをカスタマイズすることで、既定のテンプレートの変換プロセスを拡張することができます。
 
 ## <a name="in-this-section"></a>このセクションの内容
- [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)テキスト変換のしくみについて説明しますと、テンプレート ホストとディレクティブ プロセッサの役割について説明します。
 
- [カスタム T4 テキスト テンプレート ディレクティブ プロセッサを作成する](../modeling/creating-custom-t4-text-template-directive-processors.md)など、処理、テンプレート内のディレクティブとディレクティブ プロセッサ`<#@template#>.`テンプレートのコンパイル時に実行され、アセンブリおよびその他のリソースを読み込むことができます。 実行時にリソースを読み込むコードを挿入することもできます。 ディレクティブ プロセッサを定義するは、テンプレートの複雑さを軽減できます。
+ [テキスト テンプレート変換プロセス](../modeling/the-text-template-transformation-process.md)テキスト変換のしくみについて説明しますと、テンプレートのホストとディレクティブ プロセッサの役割について説明します。
 
- [VS 拡張機能でテキスト変換の呼び出し](../modeling/invoking-text-transformation-in-a-vs-extension.md)を記述する場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張メニュー コマンドまたはイベント ハンドラーなど、拡張機能できます使用して、テキスト テンプレート サービスを任意のテキスト テンプレートを変換します。 セッション オブジェクトを使用して、テンプレートにパラメーターのデータを渡すしを使用してから、テンプレート内の値を取得することができます、`<#@parameter#>`ディレクティブです。
+ [カスタム T4 テキスト テンプレート ディレクティブ プロセッサを作成する](../modeling/creating-custom-t4-text-template-directive-processors.md)などは、テンプレートのディレクティブを使用して、ディレクティブ プロセッサ`<#@template#>.`テンプレートのコンパイル時に実行され、アセンブリとその他のリソースを読み込むことができます。 実行時にリソースを読み込むコードを挿入することもできます。 ディレクティブ プロセッサを定義することでは、テンプレートの複雑さを軽減できます。
 
- [カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)ホストが外部のファイルおよびアプリケーションの状態へのアクセスを提供する、テキスト テンプレートのコードを実行するとき。 テキスト変換を実行しているホストなど、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション エクスプ ローラーへのアクセスを提供できます。 エラーは、エラー メッセージ ウィンドウにも表示されます。 さまざまなコンテキストでテキスト変換を実行する場合は、そのコンテキストで使用できるサービスへのアクセスを提供する、独自のホストを定義できます。
+ [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)メニュー コマンドまたはイベント ハンドラーなどの Visual Studio 拡張機能を作成する場合、拡張機能が任意のテキスト テンプレートを変換するテキスト テンプレート サービスを使用できます。 セッション オブジェクトを使用して、テンプレートにパラメーターのデータを渡すし、を使用して、テンプレート内から値を取得することができます、`<#@parameter#>`ディレクティブ。
 
- 作成している場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能を独自のホストを記述する代わりに、既存のテキスト変換サービスの使用を検討します。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)です。
+ [カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)ホストが外部のファイルとアプリケーションの状態へのアクセスを提供するテキスト テンプレートのコードを実行するとします。 たとえば、Visual Studio でテキスト変換を実行するホストにアクセスできるように**ソリューション エクスプ ローラー**します。 エラーは、エラー メッセージ ウィンドウにも表示されます。 別のコンテキストでテキスト変換を実行する場合は、そのコンテキストで使用可能なサービスへのアクセスを提供する、独自のホストを定義できます。
+
+ Visual Studio 拡張機能を作成する場合は、独自のホストを記述する代わりに既存のテキスト変換サービスの使用を検討してください。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。
 
 ## <a name="reference"></a>参照
 
