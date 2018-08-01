@@ -9,12 +9,12 @@ description: クラウド サブスクリプションの管理者を設定する
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 0ff2f63bbc253d459afea504790efee90c7e7e9f
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: a3a275ae81915ddf9eb89a59c4f90108df1f33da
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335685"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231280"
 ---
 # <a name="setting-up-administrators-for-visual-studio-cloud-subscriptions"></a>Visual Studio クラウド サブスクリプションの管理者を設定する
 
@@ -46,6 +46,8 @@ Visual Studio クラウド サブスクリプションを購入すると、そ�
 
 新しい管理者は、[管理ポータル](https://manage.visualstudio.com)にすぐにサインインし、ページの左上のリストからクラウド サブスクリプションの購入に使用したものと同じ Azure サブスクリプションを選択し、それらのサブスクリプションの管理を開始できます。 
 
+> [!NOTE]
+> 管理者として設定しなかったユーザーが、クラウド サブスクリプションを編集するアクセス権を持っている場合は、基になる Azure サブスクリプションで、サブスクリプションの管理を許可するロールを割り当てられている可能性があります。  そのようなロールとしては、所有者、共同作成者、サービス管理者、共同管理者があります。詳しくは、https://docs.microsoft.com/vsts/billing/add-backup-billing-managers?view=vsts をご覧ください。
 
 Visual Studio クラウド サブスクリプションについては、クラウド サブスクリプションの購入に関するページの[概要](vscloud-overview.md)を参照してください。 Visual Studio クラウド サブスクリプションを購入するには、Visual Studio Marketplace ([https://marketplace.visualstudio.com/subscriptions](https://marketplace.visualstudio.com/subscription)) にアクセスしてください。 
 

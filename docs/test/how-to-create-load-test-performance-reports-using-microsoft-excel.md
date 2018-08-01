@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3be74e81bcd8cebc5f102fbc6f1acb7f58f51f9f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 003bf08b0c9d7858bc5c6c9f8d875f398d9469b3
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751534"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179009"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>方法: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する
 
@@ -56,7 +56,7 @@ ms.locfileid: "34751534"
     1.  ロード テストの完了後、**[ロード テストの結果]** ページで、ツール バーの **[Excel レポートの作成]** を選びます。
 
         > [!NOTE]
-        > Web パフォーマンス テスト結果ビューアー ツール バーの **[Excel レポートの作成]** ボタンが無効になっている場合、Microsoft Excel を 1 回実行して、このボタンを有効にする必要があります。 Visual Studio Enterprise のインストール時に、Visual Studio Enterprise のロード テスト用の Microsoft Excel アドインがコンピューターにコピーされます。ただし、このアドインのインストール プロセスを完了するには、Microsoft Excel を実行する必要があります。
+        > **Web パフォーマンス テスト結果ビューアー** ツール バーの **[Excel レポートの作成]** ボタンが無効になっている場合、Microsoft Excel を 1 回実行して、このボタンを有効にする必要があります。 Visual Studio Enterprise のインストール時に、Visual Studio Enterprise のロード テスト用の Microsoft Excel アドインがコンピューターにコピーされます。ただし、このアドインのインストール プロセスを完了するには、Microsoft Excel を実行する必要があります。
 
      Microsoft Excel が開き、**ロード テスト レポートの生成**ウィザードが表示されます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "34751534"
     1.  ロード テストの完了後、**[ロード テストの結果]** ページで、ツール バーの **[Excel レポートの作成]** を選びます。
 
         > [!NOTE]
-        > Web パフォーマンス テスト結果ビューアー ツール バーの **[Excel レポートの作成]** ボタンが無効になっている場合、Microsoft Excel を 1 回実行して、このボタンを有効にする必要があります。 Visual Studio Enterprise のインストール時に、Visual Studio Enterprise のロード テスト用の Microsoft Excel アドインがコンピューターにコピーされます。ただし、このアドインのインストール プロセスを完了するには、Microsoft Excel を実行する必要があります。
+        > **Web パフォーマンス テスト結果ビューアー** ツール バーの **[Excel レポートの作成]** ボタンが無効になっている場合、Microsoft Excel を 1 回実行して、このボタンを有効にする必要があります。 Visual Studio Enterprise のインストール時に、Visual Studio Enterprise のロード テスト用の Microsoft Excel アドインがコンピューターにコピーされます。ただし、このアドインのインストール プロセスを完了するには、Microsoft Excel を実行する必要があります。
 
      Microsoft Excel が開き、**ロード テスト レポートの生成**ウィザードが表示されます。
 

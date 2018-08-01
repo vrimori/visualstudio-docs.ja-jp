@@ -22,18 +22,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b292c0bf1bc80f811cbf2f845385f91987184674
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 3eb81e05a16eb504b14e94de2c1270057311b85a
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057373"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231598"
 ---
 # <a name="xsd-task"></a>XSD タスク
-ソースからスキーマまたはクラス ファイルを生成する XML スキーマ定義ツール (xsd.exe) をラップします。  
+ソースからスキーマまたはクラス ファイルを生成する XML スキーマ定義ツール (*xsd.exe*) をラップします。  
 
 > [!NOTE]
-> Visual Studio 2017 では、C++ プロジェクトの xsd.exe のサポートは非推奨です。 **CppCodeProvider.dll** を手動で GAC に追加して、**Microsoft.VisualC.CppCodeProvider** API を引き続き使用することができます。 
+> Visual Studio 2017 では、C++ プロジェクトの *xsd.exe* のサポートは非推奨です。 *CppCodeProvider.dll* を手動で GAC に追加して、**Microsoft.VisualC.CppCodeProvider** API を引き続き使用することができます。 
   
 ## <a name="parameters"></a>パラメーター  
  **XSD** タスクのパラメーターの説明を次の表に示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "37057373"
   
      省略可能な **String** 型のパラメーターです。  
   
-     コマンド ラインで指定するオプションのリストです。 たとえば、"*/option1 /option2 /option#*" のような形式です。 他の **XSD** タスク パラメーターでは表されないオプションを指定する場合は、このパラメーターを使用します。  
+     コマンド ラインで指定するオプションのリストです。 例: /\<option1> /\<option2> /\<option#> 他の **XSD** タスク パラメーターでは表されないオプションを指定する場合は、このパラメーターを使用します。  
   
 -   **GenerateFromSchema**  
   
@@ -88,5 +88,5 @@ ms.locfileid: "37057373"
   
      トラッカー ログのディレクトリを指定します。  
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

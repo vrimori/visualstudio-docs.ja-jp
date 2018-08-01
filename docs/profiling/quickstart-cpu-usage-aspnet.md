@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 00704c236e8e0c0453a36add4cb4603b76c31bd9
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 13e8122649b1803e627576e4cf4d4bc83d1a286b
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34477289"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39206842"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (ASP.NET)
 
@@ -26,12 +26,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 ここで説明する **CPU 使用率**ツールでは必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/Profiling-Tools.md)で得られる別の種類の情報が役に立つことがあります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。
 
-> [!NOTE]
-> .NET Core と ASP.NET Core では現在、CPU 使用率ツールでポータブル PDB による正確な結果を得ることができません。 代わりにフル PDB を使用してください。
-
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
+1. Visual Studio で、**[ファイル]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[Visual C#]** の下で **[Web]** を選択し、真ん中のウィンドウで **[ASP.NET Web アプリケーション (.NET Framework)]** を選択します。
 
@@ -44,7 +41,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
     Visual Studio によってプロジェクトが作成されます。 ソリューション エクスプローラー (右ウィンドウ) にプロジェクト ファイルが表示されます。
 
-1. ソリューション エクスプローラーで、[Models] フォルダーを右クリックし、**[追加]**、**[クラス]** の順に選択します。
+1. ソリューション エクスプローラーで、[Models] フォルダーを右クリックし、**[追加]**、 > **[クラス]** の順に選択します。
 
 1. 新しいクラスに `Data.cs` という名前を付け、**[追加]** を選択します。
 
@@ -132,7 +129,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     }
     ```
 
-1. ソリューション エクスプローラーで、Controller/HomeControllers.cs を開き、次のコードを
+1. ソリューション エクスプローラーで、*Controller/HomeControllers.cs* を開き、次のコード
 
     ```csharp
     public ActionResult About()
@@ -156,7 +153,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     }
     ```
 
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
+##  <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
   
 1.  最初に、`Simple` コンストラクターのこのコード行でアプリのブレークポイントを設定します。
 
@@ -171,9 +168,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     > [!TIP]
     > 2 つのブレークポイントを設定することで、分析するコードの部分にデータ収集を限定できます。
   
-1.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
+1.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ]** > **[ウィンドウ]** > **[診断ツールの表示]** の順にクリックします。
 
-1.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
+1.  **[デバッグ]** > **[デバッグの開始]** の順にクリックします (または、ツール バーの **[開始]** をクリックするか、**F5** キーを押します)。
 
 1.  アプリが読み込みを終了したら、Web ページの一番上にある **[情報]** リンクをクリックし、新しいコードを実行します。
 
@@ -197,7 +194,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
      この時点で、データの分析を開始できます。
 
-## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
@@ -229,7 +226,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 - CPU 使用率ツールで [CPU 使用率を分析し](../profiling/cpu-usage.md)、さらに詳細な情報を取得します。
 - デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析します。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)
