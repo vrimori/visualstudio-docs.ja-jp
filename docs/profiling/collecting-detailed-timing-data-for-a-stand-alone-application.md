@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7203a337e69fd83ad97ee50c383f784ec0087d31
-ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
+ms.openlocfilehash: 63ebe0869ec0450604468283f9db1769314a3ce7
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335815"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276352"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの詳細なタイミング データの収集
 このセクションでは、コマンド ラインからインストルメンテーション メソッドを使用して、クライアント (スタンドアロン) コンポーネントの詳細なパフォーマンス データを収集する手順とオプションについて説明します。  
@@ -27,8 +27,8 @@ ms.locfileid: "34335815"
   
 |タスク|関連コンテンツ|  
 |----------|---------------------|  
-|**インストルメンテーションを使用した .NET Framework アプリケーションのプロファイリング**|-   [方法: .NET コンポーネントをインストルメント化し、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
-|**インストルメンテーションを使用した C/C++ アプリケーションのプロファイリング**|-   [方法: ネイティブ コンポーネントをインストルメント化し、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-native-stand-alone-component-and-collect-timing-data-with-the-profiler-from-the-command-line.md)|  
+|**インストルメンテーションを使用した .NET Framework アプリケーションのプロファイリング**|-   [方法: .NET コンポーネントをインストルメント化し、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|  
+|**インストルメンテーションを使用した C/C++ アプリケーションのプロファイリング**|-   [方法: ネイティブ コンポーネントをインストルメント化し、詳細なタイミング データを収集する](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|  
 |**階層の相互作用データを追加する**|-   [階層相互作用データを収集する](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
 ## <a name="related-tasks"></a>関連するタスク
