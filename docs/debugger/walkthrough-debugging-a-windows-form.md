@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15e76507b64ea15d390f10cf4896830c03a2c963
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 5fdd9dadc92143fabfaeea35d776b57b4b4c1748
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056803"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468531"
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>チュートリアル : Windows フォームのデバッグ
 Windows フォームは、最も一般的なマネージド アプリケーションの 1 つです。 Windows フォームは、標準 Windows アプリケーションを作成します。 このチュートリアルは、Visual Basic、C#、または C++ を使用して実行できます。  
@@ -51,27 +51,25 @@ Windows フォームは、最も一般的なマネージド アプリケーシ�
   
 2.  プロジェクトの種類 ウィンドウで開く、 **Visual Basic**、 **Visual c#**、または**Visual C**しノード  
   
-    1.  Visual Basic または Visual c# を選択、 **Windows**ノードを選択し、 **Windows フォーム アプリケーション**で、**テンプレート**ウィンドウ。  
+    1.  Visual Basic または Visual c#、次のように選択します。 **Windows デスクトップ** > **Windows フォーム アプリ**します。  
   
-    2.  Visual C は、選択、 **CLR**ノードを選択し、 **Windows フォーム アプリケーション**で、**テンプレート**ウィンドウ.  
+    2.  Visual c は、次のように選択します。 **Windows デスクトップ アプリケーション**します。  
   
-3.  **テンプレート**ペインで、 **Windows アプリケーション**します。  
+3.  **名前**ボックスで、プロジェクトの一意の名前 (Walkthrough_SimpleDebug など) を付けます。  
   
-4.  **名前**ボックスで、プロジェクトの一意の名前 (Walkthrough_SimpleDebug など) を付けます。  
-  
-5.  **[OK]** をクリックします。  
+4.  **[OK]** をクリックします。  
   
      新しいプロジェクトが作成され、Windows フォーム デザイナーに新しいフォームが表示されます。 詳細については、次を参照してください。 [Windows フォーム デザイナー](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15)します。  
   
-6.  **ビュー**メニューの **ツールボックス**します。  
+5.  **ビュー**メニューの **ツールボックス**します。  
   
      ツールボックスが表示されます。 詳細については、「[ツールボックス](../ide/reference/toolbox.md)」をご覧ください。  
   
-7.  ツールボックスで、クリックして、**ボタン**を制御し、フォームのデザイン サーフェイスにドラッグします。 フォームに [Button] をドロップします。  
+6.  ツールボックスで、クリックして、**ボタン**を制御し、フォームのデザイン サーフェイスにドラッグします。 フォームに [Button] をドロップします。  
   
-8.  ツールボックスで、クリックして、 **TextBox**を制御し、フォームのデザイン サーフェイスにドラッグします。 削除、 **TextBox**フォームにします。  
+7.  ツールボックスで、クリックして、 **TextBox**を制御し、フォームのデザイン サーフェイスにドラッグします。 削除、 **TextBox**フォームにします。  
   
-9. フォームのデザイン サーフェイスで、ボタンをダブルクリックします。  
+8. フォームのデザイン サーフェイスで、ボタンをダブルクリックします。  
   
      コード ページが表示されます。 カーソルは `button1_Click` 内にあります。  
   
