@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba2be58b600a57fb405b55069df1c838019bfdab
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 5de5eb0fd616e969b7a7eee628b4ef715d16b2a8
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058699"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468765"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>チュートリアル : Visual Basic でビジュアライザーを記述する
 このチュートリアルでは、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] を使用して簡単なビジュアライザーを作成する方法を説明します。 このチュートリアルで作成するビジュアライザーは、Windows フォーム メッセージ ボックスを使用して文字列の内容を表示します。 この単純な文字列のビジュアライザーは基本的な例で、プロジェクトに合わせて他のデータ型向けのビジュアライザーを作成するときに参考になります。  
@@ -39,9 +39,9 @@ ms.locfileid: "37058699"
   
 1.  **ファイル**] メニューの [選択**新規**クリック**新しいプロジェクト**。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、**プロジェクトの種類**s、 をクリックして**Visual Basic**します。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**します。  
   
-3.  **テンプレート**ボックスで、**クラス ライブラリ**します。  
+3.  [ **.NET Standard**、] をクリックして**クラス ライブラリ**します。  
   
 4.  **名前**など、クラス ライブラリの適切な名前の入力ボックスに、 **MyFirstVisualizer**します。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "37058699"
   
 1.  **ファイル** メニューのをクリックして**追加**、 をクリックし、**新しいプロジェクト**します。  
   
-2.  **新しいプロジェクトの追加**] ダイアログ ボックスで、**テンプレート**ボックスで、[**コンソール アプリケーション**します。  
+2.  **新しいプロジェクトの追加**ダイアログ ボックスで、 **Visual Basic**、 をクリックし、**コンソール アプリケーション**します。  
   
 3.  **名前**ボックスに、コンソール アプリケーションのわかりやすい名前を入力します。 **MyTestConsole**します。  
   

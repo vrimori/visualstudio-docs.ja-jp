@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bf45b224edcab42b56ca18d558ecd4c8e42842f
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 9c8e82986d890f4d453190e1da6511c42dfe8866
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177306"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468791"
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>チュートリアル: Visual Studio での並列アプリケーションのデバッグ
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**windows 並列アプリケーションをデバッグします。 これらのウィンドウでは、把握し、使用するコードの実行時の動作を検証できます。、[タスク並列ライブラリ (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)または[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)します。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 このチュートリアルで使用する方法を示します、コードでは後、**並列タスク**と**並列スタック**ことを確認する windows。  
@@ -46,7 +46,7 @@ ms.locfileid: "39177306"
   
 -   グループ化やズームなどの機能を使用してウィンドウの表示を調整する方法  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルで**マイ コードのみ**が有効 (既定より新しいバージョンの Visual Studio では有効です)。 **ツール** メニューのをクリックして**オプション**、展開、**デバッグ**ノードの **全般**、し、**を有効にします。(マネージのみ) マイ コードのみ**します。 この機能が設定されていなくてもこのチュートリアルを使用できますが、図と異なる結果になる可能性があります。  
   
 ## <a name="c-sample"></a>C# のサンプル  
@@ -65,9 +65,9 @@ ms.locfileid: "39177306"
   
 1.  Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
   
-2.  **インストールされたテンプレート**ウィンドウで、Visual c#、Visual Basic、または Visual C を選択します。 マネージド言語については、フレームワークのボックスに [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] が表示されていることを確認します。  
+2.  いずれかを選択**Visual c#**、 **Visual Basic**、または**Visual C**します。 マネージド言語については、フレームワークのボックスに [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] が表示されていることを確認します。  
   
-3.  選択**コンソール アプリケーション**順にクリックします**OK**します。 既定のデバッグ構成をそのまま使用します。  
+3.  **Windows デスクトップ**、選択**コンソール アプリケーション**順にクリックします**OK**します。 既定のデバッグ構成をそのまま使用します。  
   
 4.  プロジェクトで .cpp、.cs、または .vb コード ファイルを開きます。 その内容を削除して、空のコード ファイルを作成します。  
   
