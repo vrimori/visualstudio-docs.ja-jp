@@ -1,6 +1,6 @@
 ---
-title: Visual Studio でコード分析の警告を抑制します。
-ms.date: 01/29/2018
+title: コード分析の警告を抑制します。
+ms.date: 08/03/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -16,18 +16,18 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fe91532c3b4e020541f5f96152253f1df673ded
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1e90de7acf13ca28a20a35aa3ad3e70f58780279
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117785"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513047"
 ---
 # <a name="suppress-code-analysis-warnings"></a>コード分析の警告を抑制します。
 
 警告が適用可能でないことを示すと便利です。 これは、チーム メンバーのコードをレビューしたこと、および警告を抑制することを示します。 ソース内抑制 (ISS) は、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>警告を抑制する属性。 属性は、警告を生成したコードのセグメントの近くに配置できます。 追加することができます、<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>入力して、ソース ファイルに属性で警告のショートカット メニューを使用することも、**エラー一覧**に自動的に追加します。
 
-<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> CODE_ANALYSIS コンパイルのシンボルがコンパイル時に定義されている場合にのみ、属性は、マネージ コード アセンブリの IL メタデータに含まれている条件付き属性。
+<xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>属性は、条件付き属性、コンパイル時に CODE_ANALYSIS コンパイルのシンボルが定義されている場合にのみ、マネージ コード アセンブリの IL メタデータに含まれています。
 
 C++/cli CLI、マクロの CA を使用して\_抑制\_メッセージまたは CA\_GLOBAL\_属性を追加するヘッダー ファイルで SUPPRESS_MESSAGE。
 
@@ -35,7 +35,9 @@ C++/cli CLI、マクロの CA を使用して\_抑制\_メッセージまたは 
 > ソース内抑制をソース内抑制のメタデータを誤って発送を防ぐために、リリース ビルドで使用しないでください。 さらに、ソース内抑制の処理コスト、ため、アプリケーションのパフォーマンスが低下することができます。
 
 > [!NOTE]
-> プロジェクトを Visual Studio 2017 に移行する場合に、計り知れない数のコード分析の警告が直面突然可能性があります。 プロジェクトのプロパティ ページを開く場合は、警告を修正し、コード分析を一時的に無効にする準備ができて、(**プロジェクト** > **\<プロジェクト > プロパティ**) に移動**コード分析**タブ。選択を解除**ビルドに対するコード分析を有効にする**、プロジェクトをリビルドします。 または、コードに対して実行する異なるより小さなルールを選択することができます。 警告を解決する準備ができたらにコード分析を有効にしてください。
+> プロジェクトを Visual Studio 2017 に移行する場合にコード分析の警告の数が多いを突然直面する可能性があります。 これらの警告の発信元[Roslyn アナライザー](roslyn-analyzers-overview.md)します。 警告を解決する準備ができて場合、を選択して抑制するすべてのことができます**分析** > **コード分析を実行し、アクティブな懸案事項の抑制**します。
+>
+> ![コード分析を実行して、Visual Studio での問題を抑制します。](media/suppress-active-issues.png)
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 属性
 
@@ -57,13 +59,13 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 属性のプロパティは次のとおりです。
 
-- **ルール カテゴリ**-ルールが定義されているカテゴリ。 コード分析ルールのカテゴリの詳細については、次を参照してください。[マネージ コードの警告](../code-quality/code-analysis-for-managed-code-warnings.md)します。
+- **カテゴリ**-ルールが定義されているカテゴリ。 コード分析ルールのカテゴリの詳細については、次を参照してください。[マネージ コードの警告](../code-quality/code-analysis-for-managed-code-warnings.md)します。
 
-- **規則 Id** -ルールの識別子。 サポートには、短期および長期のルールの識別子名の両方が含まれます。 短い名前が CAXXXX;長い名前は、CAXXXX:FriendlyTypeName です。
+- **CheckId** -ルールの識別子。 サポートには、短期および長期のルールの識別子名の両方が含まれます。 短い名前が CAXXXX;長い名前は、CAXXXX:FriendlyTypeName です。
 
 - **位置揃え**-メッセージの抑制の理由を文書化に使用されるテキスト。
 
-- **メッセージ Id** -各メッセージの問題の一意識別子。
+- **MessageId** -各メッセージの問題の一意識別子。
 
 - **スコープ**-警告を抑制するターゲット。 ターゲットが指定されていない場合は、属性のターゲットに設定されます。 サポートされているスコープを以下に示します。
 

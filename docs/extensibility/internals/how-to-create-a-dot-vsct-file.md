@@ -1,5 +1,5 @@
 ---
-title: '方法: を作成します。Vsct ファイル |Microsoft ドキュメント'
+title: '方法: を作成します。Vsct ファイル |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,60 +13,60 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6456b0b866f08956862fa197719354bedf0ecf6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 266b3c4154c10f537cdc9dec78b0f0a036d94503
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132920"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512593"
 ---
-# <a name="how-to-create-a-vsct-file"></a>方法: を作成します。Vsct ファイル  
+# <a name="how-to-create-a-vsct-file"></a>方法: .vsct ファイルを作成  
   
-Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファイルを作成するいくつかの方法はあります。  
+XML ベースの Visual Studio コマンド テーブル構成を作成するいくつかの方法があります (*.vsct*) ファイル。  
   
 -   新しい VSPackage を作成することができます、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]パッケージ テンプレート。  
   
--   XML ベースのコマンド テーブルの構成のコンパイラ、Vsct.exe を使用するには既存の .ctc ファイルからファイルを生成します。  
+-   XML ベースのコマンド テーブル構成コンパイラを使用する*Vsct.exe*、既存のファイルを生成する *.ctc*ファイル。  
   
--   Vsct.exe を使用すると、既存の .cto ファイルから .vsct ファイルを生成します。  
+-   使用することができます*Vsct.exe*を生成する、 *.vsct*既存のファイル *.cto*ファイル。  
   
--   新しい .vsct ファイルを手動で作成することができます。  
+-   新しい手動で作成してできます *.vsct*ファイル。  
   
- このトピックでは、新しい .vsct ファイルを手動で作成する方法について説明します。  
+ この記事では、新たに手動で作成する方法をについて説明します *.vsct*ファイル。  
   
 ### <a name="to-manually-create-a-new-vsct-file"></a>新しい .vsct ファイルを手動で作成するには  
   
 1.  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] を起動します。  
   
-2.  **ファイル** メニューのをポイント**新規**、クリックして**ファイル**です。  
+2.  **ファイル**メニューで、**新規**、 をクリックし、**ファイル**します。  
   
-3.  **テンプレート** ウィンドウで、をクリックして**XML ファイル** をクリックし、**開く**です。  
+3.  **テンプレート**ウィンドウで、をクリックして**XML ファイル**順にクリックします**オープン**します。  
   
-4.  **ビュー**  メニューのをクリックして**プロパティ ウィンドウ**XML ファイルのプロパティを表示します。  
+4.  **ビュー**  メニューのをクリックして**プロパティ**XML ファイルのプロパティを表示します。  
   
-5.  **プロパティ**ウィンドウで、スキーマ プロパティの参照ボタン (…) ボタンをクリックします。  
+5.  **プロパティ**ウィンドウで、をクリックして、**参照**のボタンでは、**スキーマ**プロパティ。  
   
-6.  、XSD スキーマの一覧で、vsct.xsd スキーマを選択します。 一覧にない場合、クリックして**追加**し、ローカル ドライブ上のファイルを見つけます。 をクリックして**OK**が終了したらです。  
+6.  XSD スキーマの一覧で選択、 *vsct.xsd*スキーマ。 一覧にいない場合、クリックして**追加**しローカル ドライブ上のファイルを検索します。 クリックして**OK**は終了するとき。  
   
-7.  XML ファイルに次のように入力します。 `<CommandTable` TAB キーを押します。 」と入力してタグを閉じる`>`です。  
+7.  XML ファイルで次のように入力します。 *< CommandTable*押します**タブ**します。」と入力してタグを閉じる *>* します。  
   
-     これには、基本的な .vsct ファイルが作成されます。  
+     この操作により、基本的な作成 *.vsct*ファイル。  
   
-8.  追加する XML ファイルの要素を入力、に従って、 [VSCT スキーマ](../../extensibility/vsct-xml-schema-reference.md)です。 詳細については、次を参照してください。[作成します。Vsct ファイル](../../extensibility/internals/authoring-dot-vsct-files.md)  
+8.  従い、追加する XML ファイルの要素を入力、 [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)します。 詳細については、次を参照してください[.vsct ファイルの作成。](../../extensibility/internals/authoring-dot-vsct-files.md)  
   
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-ctc-file"></a>
 
-## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>方法: 既存の .Ctc ファイルから .Vsct ファイルを作成する  
+## <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>方法: 既存の .ctc ファイルから .vsct ファイルを作成します。  
   
-既存のコマンドテーブルの .ctc ソース ファイルから XML ベースの .vsct ファイルを作成できます。 これによりを活用すること、新しい XML ベース[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド テーブル (VSCT) コンパイラ形式です。  
+XML ベースを作成する *.vsct*コマンドの既存のテーブルからのファイル *.ctc*ソース ファイル。 これにより、新しい活用を行う XML ベース[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]コマンド テーブル (VSCT) コンパイラ形式。  
   
 ### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>.ctc ファイルから .vsct ファイルを作成するには  
   
 1.  Perl 言語のコピーを取得します。  
   
-2.  通常にある Perl スクリプト ConvertCTCToVSCT.pl のコピーを入手して、  *\<Visual Studio SDK インストール パス >* \VisualStudioIntegration\Tools\bin フォルダーです。  
+2.  Perl スクリプトのコピーを入手*ConvertCTCToVSCT.pl*、一般にある、  *\<Visual Studio SDK インストール パス > \VisualStudioIntegration\Tools\bin*フォルダー。  
   
-3.  変換する .ctc ソース ファイルのコピーを取得します。  
+3.  コピーを取得、 *.ctc*に変換するソース ファイル。  
   
 4.  同じディレクトリにファイルを配置します。  
   
@@ -78,41 +78,45 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
     perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct  
     ```  
   
-     PkgCmd.ctc は .ctc ファイルの名前であり、PkgCmd.vsct は作成する .vsct ファイルの名前です。  
+     場所*PkgCmd.ctc*の名前を指定します、 *.ctc*ファイルと*PkgCmd.vsct*の名前を指定します、 *.vsct*ファイルを作成します。  
   
-     新しい .vsct XML コマンド テーブル ソース ファイルが作成されます。 他の .vsct ファイルと同様に、Vsct.exe (VSCT コンパイラ) を使用してファイルをコンパイルできます。  
+     この操作は、新しい作成 *.vsct* XML コマンド テーブル ソース ファイル。 使用して、ファイルをコンパイルする*Vsct.exe*、するとき、VSCT コンパイラはその他の *.vsct*ファイル。  
   
     > [!NOTE]
-    >  XML コメントの書式を変更すると、.vsct ファイルの読みやすさを改善できます。  
+    >  読みやすさを向上させることができます、 *.vsct* XML コメントのフォーマット ファイル。  
   
 <a name="how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file"></a>
 
-## <a name="how-to-create-a-vsct-file-from-an-existing-cto-file"></a>方法: 既存の .Cto ファイルから .Vsct ファイルを作成する  
+## <a name="how-to-create-a-vsct-file-from-an-existing-cto-file"></a>方法: 既存の .cto ファイルから .vsct ファイルを作成します。  
   
-既存のバイナリ .cto ファイルから XML ベースの .vsct ファイルを作成できます。 これを行うことで、新しいコマンド テーブル コンパイラ形式を活用できます。 このプロセスは、.ctc ファイルから .cto ファイルをコンパイルした場合でも機能します。 .vsct ファイルを編集して、別の .cto ファイルにコンパイルできます。  
+XML ベースを作成する *.vsct*既存のバイナリからファイル *.cto*ファイル。 これを行うことで、新しいコマンド テーブル コンパイラ形式を活用できます。 このプロセスはいて、 *.cto*からコンパイルされたファイル、 *.ctc*ファイル。 編集およびコンパイルしたことができます、 *.vsct*ファイルを別の .cto ファイルにします。  
   
 ### <a name="to-create-a-vsct-file-from-a-cto-file"></a>.cto ファイルから .vsct ファイルを作成するには  
   
-1.  .Cto ファイルと、対応する .ctsym ファイルのコピーを取得します。  
+1.  コピーを取得、 *.cto*ファイルとそれに対応する *.ctsym*ファイル。  
   
-2.  ファイルを Vsct.exe コンパイラと同じディレクトリに配置します。  
+2.  同じディレクトリにファイルを配置、 *vsct.exe*コンパイラ。  
   
-3.  Visual Studio コマンド プロンプトで、.cto ファイルと .ctsym ファイルが保存されているディレクトリに移動します。  
+3.  Visual Studio のコマンド プロンプトでを含むディレクトリに移動、 *.cto*と *.ctsym*ファイル。  
   
-4.  型**vsct.exe** *ctofilename * * * .cto** * vsctfilename ***.vsct-s***symfilename ***.ctsym**です。  
+4.  型  
+
+    ```
+    vsct.exe <ctofilename>.cto <vsctfilename>.vsct -S<symfilename>.ctsym
+    ```
+
+     場所\<ctofilename\>の名前を指定します、 *.cto*ファイル、 \<vsctfilename\>の名前を指定します、 *.vsct*ファイルを作成して\<symfilename\>の名前を指定します、 *.ctsym*ファイル。  
   
-     `ctofilename` .cto ファイルの名前を指定`vsctfilename`を作成する vsct ファイルの名前を指定し、 `symfilename` .ctsym ファイルの名前を指定します。  
+     このプロセスを作成する新しい *.vsct* XML コマンド テーブル コンパイラ ファイル。 編集して使用して、ファイルをコンパイル*vsct.exe*、するとき、vsct コンパイラはその他の *.vsct*ファイル。  
   
-     このプロセスによって、新しい .vsct XML コマンド テーブル コンパイラ ファイルが作成されます。 他の .vsct ファイルと同様に、vsct.exe (vsct コンパイラ) を使用して、ファイルを編集およびコンパイルできます。  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- .Vsct ファイルをプロジェクトに追加するだけでは発生しませんしてコンパイルします。 ビルド プロセスでは、それを組み込む必要があります。  
+## <a name="compile-the-code"></a>コードをコンパイルします  
+ 追加するだけで、 *.vsct*ファイルをプロジェクトがコンパイルされません。 ビルド プロセスでは、それを組み込む必要があります。  
   
 ### <a name="to-add-a-vsct-file-to-project-compilation"></a>プロジェクトのコンパイルに .vsct ファイルを追加するには  
   
-1.  エディターでは、プロジェクト ファイルを開きます。 場合は、プロジェクトが読み込まれると、まずアンロードする必要があります。  
+1.  エディターで、プロジェクト ファイルを開きます。 プロジェクトが読み込まれている場合最初にアンロードする必要があります。  
   
-2.  追加、 [ItemGroup 要素](../../msbuild/itemgroup-element-msbuild.md)を格納している、VSCTCompile 要素では、次の例で示すようにします。  
+2.  追加、 [ItemGroup 要素](../../msbuild/itemgroup-element-msbuild.md)を格納している、`VSCTCompile`要素は、次の例に示すようにします。  
   
     ```xml  
     <ItemGroup>  
@@ -123,9 +127,9 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
     ```  
   
-     ResourceName 要素は常に設定する必要があります`Menus.ctmenu`です。  
+     `ResourceName`要素は常に設定する必要があります`Menus.ctmenu`します。  
   
-3.  プロジェクトに .resx ファイルが含まれている場合は、次の例で示すように MergeWithCTO 要素を含む EmbeddedResource 要素を追加します。  
+3.  プロジェクトが含まれている場合、 *.resx*ファイルを追加、`EmbeddedResource`要素を含む、`MergeWithCTO`要素は、次の例に示すように。  
   
     ```xml  
     <EmbeddedResource Include="VSPackage.resx">  
@@ -135,19 +139,19 @@ Visual Studio コマンド テーブルの XML ベースの構成 (.vsct) ファ
   
     ```  
   
-     このマークアップは、埋め込みリソースを含む、ItemGroup 要素内移動する必要があります。  
+     このマークアップは内で移動する必要があります、`ItemGroup`埋め込みリソースを含む要素。  
   
-4.  パッケージ ファイルを開いて、名前が付けられて*ProjectName*Package.cs または*ProjectName*Package.vb、エディターでします。  
+4.  という名前は、通常、パッケージ ファイルを開く *\<ProjectName\>Package.cs*または *\<ProjectName\>Package.vb*エディターでします。  
   
-5.  次の例で示すように、パッケージのクラスに ProvideMenuResource 属性を追加します。  
+5.  追加、`ProvideMenuResource`の次の例に示すように、パッケージのクラスに属性します。  
   
     ```csharp  
     [ProvideMenuResource("Menus.ctmenu", 1)]  
     ```  
   
-     最初のパラメーター値は、プロジェクト ファイルで定義されている ResourceName 属性の値に一致する必要があります。  
+     最初のパラメーター値の値に一致する必要があります、`ResourceName`プロジェクト ファイルで定義されている属性。  
   
 ## <a name="see-also"></a>関連項目  
- [作成します。Vsct ファイル](../../extensibility/internals/authoring-dot-vsct-files.md)   
- [Visual Studio コマンド テーブル (です。Vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
+ [.Vsct ファイルの作成者](../../extensibility/internals/authoring-dot-vsct-files.md)   
+ [Visual Studio コマンド テーブル (.vsct) ファイル](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML スキーマ リファレンス](../../extensibility/vsct-xml-schema-reference.md)
