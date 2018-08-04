@@ -1,5 +1,5 @@
 ---
-title: 項目を追加する、新しい項目の追加 ダイアログ ボックス |Microsoft ドキュメント
+title: 項目を追加、新しい項目の追加 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,75 +13,77 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a24a6d531812a170768f8c100f14ad64ab1e68c5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b1287bfe04a16c1e610aa9044399fa7b936d383
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31135067"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499865"
 ---
-# <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>項目を追加する、新しい項目の追加 ダイアログ ボックス
-項目を追加するプロセス、**新しい項目の追加**レジストリ キーを持つ ダイアログ ボックスを起動します。 次のレジストリ エントリのように、AddItemTemplates セクション内で使用できるようにする項目のディレクトリの名前とパスの**新しい項目の追加** ダイアログ ボックスが配置されます。  
+# <a name="add-items-to-the-add-new-item-dialog-box"></a>新しい項目の追加 ダイアログ ボックスに項目の追加
+項目を追加するプロセス、**新しい項目の追加**レジストリ キー ダイアログ ボックスを起動します。 次のレジストリ エントリのように、 **AddItemTemplates**セクションには、どの項目で利用できるように、ディレクトリの名前とパスが含まれています、**新しい項目の追加** ダイアログ ボックスが配置されます。  
   
 > [!NOTE]
->  すぐに次のコード セグメント テーブルには、レジストリ エントリに関する追加情報が含まれています。  
+>  コード セグメントの直後に続くテーブルには、レジストリ エントリに関する追加情報が含まれています。  
   
- このセクションでは、[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects] 下にあります。  
+ このセクションでは、下にある**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0Exp\Projects**します。
   
- 最初の GUID がこの型のプロジェクトの CLSID2 番目の GUID では、アイテムの追加テンプレートの登録済みのプロジェクトの種類を示します。  
+ 最初の GUID です。 この種類のプロジェクトの CLSID2 つ目の GUID では、項目の追加テンプレートの登録済みのプロジェクトの種類を示します。  
+ 
+ **\\{C061DB26-5833-11D2-96F5-000000000000}\\AddItemTemplates\\TemplatesDir\\{ACEF4EB2-57CF-11D2-96F4-000000000000}\\1**
   
- \\{C061DB26-5833-11D2-96F5-000000000000} \AddItemTemplates\TemplateDirs\ {ACEF4EB2-57CF-11D2-96F4-000000000000} \1  
+ **@** 6 = 
   
- @="#6"  
+ **TemplatesDir** = \\&lt;Visual Studio SDK インストール パス&gt;\\VSIntegration\\&lt;SomeFolder&gt; \\&lt;SomePackage&gt;\\&lt;SomeProject&gt;\\&lt;SomeProjectItems&gt;
   
- "TemplatesDir「=」\<Visual Studio SDK インストール パス\\\VSIntegration\\\SomeFolder\\\SomePackage\\\SomeProject\\\SomeProjectItems"  
+ **SortPriority** dword:00000064 を =
   
- "SortPriority"dword:00000064 を =  
-  
-|名前|型|(.Rgs ファイル) からのデータ|説明|  
+|name|型|データ (から *.rgs*ファイル)|説明|  
 |----------|----------|-----------------------------|-----------------|  
-|@ (既定値)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|リソース ID**項目の追加**テンプレート。|  
-|Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\SomeProjectItems|ダイアログ ボックスに表示されるプロジェクト アイテムのパス、**新しい項目の追加**ウィザード。|  
+|@ (既定値)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|リソース ID を**項目の追加**テンプレート。|  
+|Val TemplatesDir|REG_SZ|%Template_path\\&lt;SomeProjectItems&gt;|ダイアログ ボックスに表示されるプロジェクト項目のパス、**新しい項目の追加**ウィザード。|  
 |Val SortPriority|REG_DWORD|100 ([!INCLUDE[vcprx64](../../extensibility/internals/includes/vcprx64_md.md)])|ツリー ノードに表示されるファイルの並べ替え順序を決定、**新しい項目の追加** ダイアログ ボックス。|  
   
 > [!NOTE]
->  Visual c# および Visual Basic プロジェクトの種類の GUID は次のように、:[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}  
+>  Visual c# および Visual Basic プロジェクトの種類の GUID は次のとおりです。 
+- [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]: {FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}
+- [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]: {F184B08F-C81C-45F6-A57F-5ABD9991F28F}  
   
- ある % TEMPLATE_PATH%\SomeProjectItems TemplateDirs がの左側にあるノードでは、ディレクトリが表示されている、**新しい項目の追加** ダイアログ ボックスのツリーです。 ツリー内の他の要素は、そのルート ディレクトリ内のサブディレクトリに基づいています。 ファイルをプロジェクトに追加できるはの右側のウィンドウ内の項目、**新しい項目の追加** ダイアログ ボックス。  
+ 表示されているディレクトリ**TemplatesDir**、これは *%template_path\\&lt;SomeProjectItems&gt;* の左側にあるノードには、**追加[新しい項目の**] ダイアログ ボックスのツリーです。 ツリー内の他の要素は、そのルート ディレクトリ内のサブディレクトリに基づいています。 ファイルをプロジェクトに追加できるはの右側のウィンドウ内の項目、**新しい項目の追加** ダイアログ ボックス。  
   
- 通常、このフォルダーは、テンプレート HTML または .cpp ファイルなど、プロジェクトのテンプレート ファイルとウィザードを開始するためには、すべて .vsz ファイルに格納されます。 アイテムの表示方法を制御するにディレクトリ名とアイコンのローカライズ用 .vsdir ファイルを追加することもできます。 ローカライズされた文字列は、このノード ツリーで、新しい項目の追加 ダイアログを表す ダイアログ ボックスに表示されるキャプションです。  
+ 通常、このフォルダーは HTML テンプレートなど、プロジェクトのテンプレート ファイルを含めるまたは *.cpp*ファイル、および *.vsz*ウィザードを開始するためのファイル。 アイテムの表示方法を制御するには、含める *.vsdir*ファイルのディレクトリ名とアイコンをローカライズします。 ローカライズされた文字列がこのノードを表す ダイアログ ボックスに表示されるキャプション、**新しい項目の追加** ダイアログ ボックスのツリーです。  
   
- ただし、1 つの .vsdir ファイルにあるすべてのものにはありません。 1 つの .vsdir ファイル、ディレクトリ内のすべての項目のことができます。 詳細については、次を参照してください。[ウィザード (です。Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)と[テンプレート ディレクトリの説明 (です。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)です。  
+ ただし、すべてが 1 つである必要はない *.vsdir*ファイル。 1 つできます *.vsdir*ディレクトリ内のすべての項目のファイル。 詳細については、次を参照してください。[ウィザード (.vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)と[テンプレート ディレクトリの説明 (.vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)します。  
   
 > [!NOTE]
->  テンプレートのディレクトリに .vsdir ファイルは省略できます。 プロジェクトの要素をディレクトリに配置し、内に表示したい場合、**新しい項目の追加**ダイアログ ボックスで、TemplatesDir ステートメントで指定されたテンプレート フォルダーにそのファイルを配置することができます。 ファイルはの右側のペインに表示されます、**新しい項目の追加**そのプロジェクトのダイアログ ボックス。 ただし、ファイルやアイコンのローカライズされたキャプションを表示する場合は、テンプレート ディレクトリに .vsdir の少なくとも 1 つのファイルを含める必要があります。  
+>  *.Vsdir*テンプレート ディレクトリ内のファイルは省略可能です。 プロジェクト要素をディレクトリに置きで表示したい場合、**新しい項目の追加** ダイアログ ボックスで指定したテンプレートのディレクトリでそのファイルを配置することができます、 **TemplatesDir**ステートメント。 ファイルは、の右側のウィンドウに表示されますが、**新しい項目の追加**そのプロジェクトのダイアログ ボックス。 ただし、ファイルまたはアイコンのローカライズされたキャプションを表示する場合は、する必要がありますが含まれている、少なくとも *.vsdir*テンプレート ディレクトリ内のファイル。  
   
-## <a name="grouping-project-items"></a>プロジェクト項目のグループ化  
- 内のフォルダーにテンプレートのグループを記述するかどうか、**新しい項目の追加** ダイアログ ボックスのツリーで、項目を含むルート テンプレート ディレクトリのサブディレクトリにする必要があります。 ときに、**新しい項目の追加** ダイアログ ボックスを表示するユーザーはもサブフォルダーを参照してくださいをそこからプロジェクトの要素を選択できます。  
+## <a name="group-project-items"></a>プロジェクト項目をグループ化  
+ テンプレートのグループで、フォルダーを格納するかどうか、**新しい項目の追加** ダイアログ ボックスのツリーで、項目を含むルート テンプレートのディレクトリの下のサブディレクトリがあります。 ときに、**新しい項目の追加** ダイアログ ボックスがユーザーに表示されるはサブフォルダーを参照してからそれらのプロジェクト要素を選択できるようにもします。  
   
- 並べ替えの優先順位のコード例でこのテンプレートのディレクトリが作成されるツリー ノードの他の要素を基準としたツリーを判断します。 **新しい項目の追加**ダイアログ ボックスで、並べ替えの優先順位こと ダイアログ ボックスで、正しい位置に、項目が表示されるようにする必要があります。  
+ ツリー ノードの他の要素を基準としてツリーにこのテンプレートのディレクトリを作成する場所のコード セグメントでの並べ替えの優先順位を決定します。 **新しい項目の追加**ダイアログ ボックスで、並べ替えの優先順位 ダイアログ ボックスで、正しい位置に項目が表示されますようにを含める必要のあるすべてです。  
   
- 実装することも、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>インターフェイスに表示される内容をフィルター処理を**新しい項目の追加** ダイアログ ボックス。 このインターフェイスを実装すると、ことができますを設定する 1 つのテンプレートのディレクトリを含む、たとえば、ディスク上のテンプレートとウィザードの 50 のファイル。 この方法で 1 つのプロジェクトの種類、別の種類のプロジェクトに属している他の 30 個のファイルと一般的な種類のプロジェクトで利用可能なすべてのファイルに属している 20 個のファイルを別のプロジェクトの種類を持つことができます。 テンプレートを作成するプロジェクトにより、この方法では、異なるテンプレート ファイルのセットを表示できます。  
+ 実装することも、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>インターフェイスに表示される内容をフィルター処理する、**新しい項目の追加** ダイアログ ボックス。 このインターフェイスを実装すると、ことができますを設定する 1 つのテンプレートのディレクトリを含む、たとえば、ディスク上のテンプレートとウィザードの 50 個のファイル。 この方法で、1 つのプロジェクトの種類、別の種類のプロジェクトに属している他の 30 個のファイルと、一般的な種類のプロジェクトで使用できるすべてのファイルに属している 20 個のファイルの種類のプロジェクトもかまいません。 テンプレートを作成するプロジェクトによって、この方法では、異なる一連のテンプレート ファイルを表示できます。  
   
- たとえば、Visual Basic プロジェクトで、Web プロジェクトとクライアント プロジェクトがあります。 Windows フォームは、Web サーバー プロジェクトに追加する役に立つアイテムと web フォームは、クライアント プロジェクトに追加する役に立つアイテムではありません。 したがって、両方の種類のプロジェクトのすべてのファイルを含む 1 つのテンプレートのディレクトリを作成できます。 実装することによって、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>、プロジェクトまたはプロジェクトのプロジェクト設定の種類に基づいたが表示されない項目を非表示にすることができます。  
+ たとえば、Visual Basic プロジェクトで、Web プロジェクトとクライアント プロジェクトがあります。 Web フォームは、役に立つアイテムをクライアント プロジェクトに追加して、windows フォームは、Web サーバー プロジェクトに追加する役に立つアイテムではありません。 そのため、両方の種類のプロジェクトのすべてのファイルを含む 1 つのテンプレートのディレクトリを作成できます。 その後、実装することによって<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>が表示されないプロジェクトまたはプロジェクトのプロジェクト設定の種類に基づいて項目を非表示にすることができます。  
   
-## <a name="filtering-project-items"></a>プロジェクト項目をフィルター処理  
- `IVsFilterAddProjectItemDlg2` ツリー (左側) とプロジェクト ファイル (右ペイン) で要素の次の方法でフィルター処理について説明します。  
+## <a name="filter-project-items"></a>プロジェクト項目をフィルター処理  
+ `IVsFilterAddProjectItemDlg2` ツリー (左側) とプロジェクト ファイル (右側のウィンドウ) で要素の次の方法でフィルター処理を提供します。  
   
--   ローカライズされた名前 (.vsdir ファイルに含まれているダイアログ ボックスに表示されるキャプション) によって提供される`IVsFilterAddProjectItemDlg`です。  
+-   ローカライズされた名前で (に含まれているダイアログ ボックスに表示されるキャプション、 *.vsdir*ファイル) によって提供される`IVsFilterAddProjectItemDlg`します。  
   
--   実際のファイルとディスク上のフォルダー名を使用して (ローカライズされていない — .vsdir ファイルがありません) によって提供される`IVsFilterAddProjectItemDlg`です。  
+-   ディスク上のファイルおよびフォルダーの実際の名前で (ローカライズされていない-ありません *.vsdir*ファイル) によって提供される`IVsFilterAddProjectItemDlg`します。  
   
--   によって提供される、カテゴリ別`IVsFilterAddProjectItemDlg2`です。  
+-   カテゴリ別にによって提供される`IVsFilterAddProjectItemDlg2`します。  
   
- カテゴリでフィルタ リングするには、「Web フォーム」など、.vsdir ファイル内のアイテムまたは Visual Basic では「クライアントの項目」カテゴリ文字列を提供します。 ダイアログ ボックスのコードに、.vsdir ファイルからのカテゴリ分類を取得しに渡します。 実装にその情報を渡すことができますし、`IVsFilterAddProjectItemDlg2`をフィルター処理、**新しい項目の追加**カテゴリ ダイアログ ボックス。 クライアントの Win32 アプリケーションの場合、Web ページの項目をフィルターすることもできます。 また、どの[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]Microsoft Foundation Classes (MFC)、またはアクティブ テンプレート ライブラリ (ATL) の項目として項目をタグ付けします。 これらの項目を特定する際に、プロジェクト システムは、システムにカテゴリと分類に基づいてフィルターを選択できるように、独自の分類を定義できます。  
+ カテゴリでフィルター処理、する内の項目にカテゴリ文字列を指定、 *.vsdir*ファイルなど、 *Web フォーム*または*クライアント アイテム*Visual Basic でします。 ダイアログ ボックスのコードからのカテゴリ分類を取得し、 *.vsdir*ファイルに渡します。 実装にその情報を渡すことができますし、`IVsFilterAddProjectItemDlg2`をフィルター処理、**新しい項目の追加**カテゴリ別のダイアログ ボックス。 クライアントの Win32 アプリケーションの場合、Web ページの項目をフィルターすることもできます。 また、どの[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]Microsoft Foundation Classes (MFC) またはアクティブ テンプレート ライブラリ (ATL) の項目として項目をタグ付けします。 これらの項目を識別するときに、プロジェクト システムは、システムにカテゴリと分類に基づくフィルターを選択できるように、独自の分類を定義できます。  
   
- このフィルターの機能を実装する場合、非表示にするすべての項目のテーブルにマップするはありません。 単に項目を型に分類し、.vsdir ファイルまたはファイルの分類を配置できます。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
+ このフィルターの機能を実装する場合は、非表示にするすべての項目のテーブルにマップするはありません。 単に項目の種類に分類し、分類を配置できます、 *.vsdir*ファイルまたはファイル。 インターフェイスを実装することによって、特定の分類している項目のいずれかが非表示できます。 これにより、内の項目を行うことができます、**新しい項目の追加**プロジェクト内の状態に基づいて、ダイアログ ボックス動的です。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
- [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)   
- [プロジェクトを拡張する通常使用されるオブジェクトの Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)   
+ [プロジェクトと項目テンプレートを登録します。](../../extensibility/internals/registering-project-and-item-templates.md)   
+ [プロジェクトの拡張に通常使用されるオブジェクトの Catid](../../extensibility/internals/catids-for-objects-that-are-typically-used-to-extend-projects.md)   
  [プロジェクトとプロジェクト項目テンプレートを追加します。](../../extensibility/internals/adding-project-and-project-item-templates.md)   
- [テンプレート ディレクトリの説明 (です。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)   
- [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)
+ [テンプレート ディレクトリの説明 (.vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)   
+ [ウィザード (.vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

@@ -1,5 +1,5 @@
 ---
-title: ボタンの再利用可能なグループを作成する |Microsoft ドキュメント
+title: ボタンの再利用可能なグループを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97ee7cc2ec63a94036472ccce07b1dc9fa736504
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3868838c72b2d9a50f2a1b3dc8eedaa3d36ac67c
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102981"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498855"
 ---
-# <a name="creating-reusable-groups-of-buttons"></a>ボタンの再利用可能なグループを作成します。
-コマンド グループは、常に一緒にメニューまたはツールバーに表示されるコマンドのコレクションです。 .Vsct ファイルの CommandPlacements セクション内の別の親メニューに代入することで、任意のコマンドのグループを再利用できます。  
+# <a name="create-reusable-groups-of-buttons"></a>ボタンの再利用可能なグループを作成します。
+コマンド グループは、常に、メニューまたはツールバーにまとめて表示されるコマンドのコレクションです。 CommandPlacements セクションでは、別の親メニューに割り当てることで、任意のコマンド グループを再利用できる、 *.vsct*ファイル。  
   
- コマンド グループには、ボタン、通常が含まれます。 含めることができますも他のメニューまたはコンボ ボックス。  
+ コマンド グループには、ボタン、通常が含まれますが、他のメニューやコンボ ボックスを含めることできますも。  
   
-### <a name="to-create-a-reusable-group-of-buttons"></a>ボタンの再利用可能なグループを作成するには  
+## <a name="to-create-a-reusable-group-of-buttons"></a>ボタンの再利用可能なグループを作成するには  
   
-1.  という名前の VSIX プロジェクトを作成する`ReusableButtons`です。 詳細については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
+1.  という名前の VSIX プロジェクトを作成する`ReusableButtons`します。 詳細については、次を参照してください。[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
   
-2.  プロジェクトを開いたら、という名前のカスタム コマンド項目テンプレートの追加**ReusableCommand**です。 **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、選択、**追加/新しい項目の**します。 **新しい項目の追加**ダイアログ ボックスに移動して**Visual c#/機能拡張**選択と**にカスタム コマンド**です。 **名前**ウィンドウの下部にあるフィールドに、コマンド ファイルの名前を変更する**ReusableCommand.cs**です。  
+2.  という名前のカスタム コマンド項目テンプレートを追加、プロジェクトが開いたら、 **ReusableCommand**します。 **ソリューション エクスプ ローラー**でプロジェクト ノードを右クリックし、選択**追加** > **新しい項目の**します。 **新しい項目の追加**ダイアログ ボックスに移動して**Visual c#** > **機能拡張**選択と**カスタム コマンド**。 **名前**ウィンドウの下部にあるフィールドに、コマンド ファイル名を変更して*ReusableCommand.cs*します。  
   
-3.  .Vsct ファイルでシンボル セクションに移動し、グループ、およびプロジェクトのコマンドを含む GuidSymbol 要素を探します。 これは、ような名前 guidReusableCommandPackageCmdSet です。  
+3.  *.Vsct*ファイル、シンボルのセクションに移動し、グループ、およびプロジェクトのコマンドを含む GuidSymbol 要素を検索します。 GuidReusableCommandPackageCmdSet、名前にする必要があります。  
   
-4.  次の例のように、グループに追加する各ボタンの IDSymbol を追加します。  
+4.  次の例のように、グループに追加する各ボタン、IDSymbol を追加します。  
   
     ```xml  
     <GuidSymbol name="guidReusableCommandPackageCmdSet" value="{7f383b2a-c6b9-4c1d-b4b8-a26dc5b60ca1}">  
@@ -45,9 +45,9 @@ ms.locfileid: "31102981"
     </GuidSymbol>  
     ```  
   
-     既定では、コマンドの項目テンプレートがという名前のグループを作成**MyMenuGroup**と各 IDSymbol エントリと共に、指定された名前を持つボタンをクリックします。  
+     既定では、コマンドの項目テンプレートがという名前のグループを作成します**MyMenuGroup**と各 IDSymbol エントリと共に、指定された名前を持つボタンをクリックします。  
   
-5.  グループ セクションでは、シンボルで示されているものと同じ GUID と ID の属性を持つグループ要素を作成します。 既存のグループを使用してもまたは次の例のように、コマンド テンプレートによって提供されているエントリを使用できます。 このグループが表示されます、**ツール**メニュー  
+5.  Groups セクションでは、シンボルで示されているものと同じ GUID と ID の属性を持つグループ要素を作成します。 既存のグループを使用してもまたは次の例のように、コマンド テンプレートによって提供されるエントリを使用できます。 このグループが表示されます、**ツール**メニュー  
   
     ```xml  
     <Groups>  
@@ -57,11 +57,11 @@ ms.locfileid: "31102981"
     </Groups>  
     ```  
   
-### <a name="to-create-a-group-of-buttons-for-reuse"></a>再利用するためのボタンのグループを作成するには  
+## <a name="to-create-a-group-of-buttons-for-reuse"></a>再利用するためのボタンのグループを作成するには  
   
-1.  コマンドまたはメニューの定義内の親として、グループを使用するか、コマンドまたはメニューを CommandPlacements セクションを使用して、グループ内に配置することにより、グループ内のコマンドまたはメニューを配置できます。  
+1.  コマンドまたはメニューの定義内の親として、グループを使用するか、CommandPlacements セクションを使用して、コマンドまたはメニューをグループ内に配置することで、グループ内のコマンドまたはメニューに配置できます。  
   
-     ボタン セクションで、グループをその親として持つボタンを定義または次の例で示すようにパッケージ テンプレートによって提供される、ボタンを使用します。  
+     ボタンのセクションでは、グループ、その親を持つボタンの定義またはのパッケージ テンプレートによって提供されるボタンを使用して、次の例に示すようにします。  
   
     ```xml  
     <Button guid="guidReusableCommandPackageCmdSet" id="ReusableCommandId" priority="0x0100" type="Button">  
@@ -73,7 +73,7 @@ ms.locfileid: "31102981"
     </Button>  
     ```  
   
-2.  場合は、ボタンは、複数のグループに表示する必要があります、エントリを作成して CommandPlacements のセクションでは、コマンドのセクションの後に配置する必要があります。 ボタンを配置するのに合わせて CommandPlacement 要素の属性を GUID と ID を設定し、ように設定して、GUID とその親要素の ID、ターゲット グループの次の例に示すようにします。  
+2.  ボタンは、1 つ以上のグループに表示する必要があります、コマンド セクションの後に配置する必要があります CommandPlacements のセクションでそのエントリを作成します。 移動するボタンに合わせて CommandPlacement 要素の GUID と ID の属性を設定し、GUID とその親要素の ID がターゲット グループの次の例に示すようにします。  
   
     ```xml  
     <CommandPlacements>  
@@ -84,13 +84,13 @@ ms.locfileid: "31102981"
     ```  
   
     > [!NOTE]
-    >  優先順位 フィールドの値では、新しいコマンド グループ内のコマンドの位置を決定します。 優先順位は、項目の定義で設定されている要素が上書き CommandPlacement で設定します。 高い優先度値を持つコマンドの前に、低い優先度値を持つコマンドが表示されます。 重複する優先順位の値が許可されている場合を同じ優先度の値を持つコマンドの相対的な位置を保証できないため、順序、 **devenv/setup**コマンドでは、レジストリから最終的なインターフェイスを作成一貫性のあるできない可能性があります。  
+    >  優先順位フィールドの値は、新しいコマンド グループで、コマンドの位置を決定します。 優先順位は、項目の定義で設定されている要素がオーバーライド CommandPlacement で設定します。 高い優先順位値がコマンドの前に、低い優先順位値がコマンドが表示されます。 重複する優先度の値は許可されていますが、ために、同じ優先順位値を持つコマンドの相対位置を保証できません、順序、 **devenv/setup**コマンドでは、レジストリから最終的なインターフェイスを作成します。一貫性のあるできない可能性があります。  
   
-### <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>メニューのボタンの再利用可能なグループを配置するには  
+## <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>メニューのボタンの再利用可能なグループを配置するには  
   
-1.  内のエントリを作成、`CommandPlacements`セクションです。 GUID と ID の設定、 `CommandPlacement` 、所属するグループの要素とターゲットの場所の親の GUID と ID を設定します。  
+1.  内のエントリを作成、`CommandPlacements`セクション。 GUID と ID の設定、`CommandPlacement`グループの要素とターゲットの場所の親の GUID と ID を設定します。  
   
-     CommandPlacements セクションでは、コマンド」セクションの直後に配置する必要があります。  
+     CommandPlacements セクションは、「コマンド」セクションの直後後に配置する必要があります。  
   
     ```xml  
     <CommandTable>  
@@ -101,9 +101,9 @@ ms.locfileid: "31102981"
     </CommandTable>  
     ```  
   
-     コマンド グループは、複数のメニューに追加できます。 親メニューいずれかになります、作成したによって指定された 1 つ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)](説明するよう ShellCmdDef.vsct または SharedCmdDef.vsct)、または別の VSPackage で定義されているいずれか。 親レイヤーの数が、親メニューが最終的に接続されている限り、限られた[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または、VSPackage によって表示されるショートカット メニューにします。  
+     1 つ以上のメニューで、コマンド グループを含めることできます。 親メニュー使用できるいずれか、作成したによって指定された 1 つ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)](」の説明に従って*ShellCmdDef.vsct*または*SharedCmdDef.vsct*)、または別の VSPackage で定義されている 1 つ。 親レイヤーの数は、親メニューが最終的に接続されている限り、制限[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]または VSPackage によって表示されるショートカット メニューにします。  
   
-     次の例では、グループに、**ソリューション エクスプ ローラー**ツールバーで、他のボタンの右側にします。  
+     次の例では、配置グループ、**ソリューション エクスプ ローラー**ツールバーで、他のボタンの右側にします。  
   
     ```xml  
     <CommandPlacements>  

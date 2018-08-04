@@ -1,5 +1,5 @@
 ---
-title: レガシ API を使用してコード ウィンドウをカスタマイズする |Microsoft ドキュメント
+title: レガシ API を使用してコードの Windows をカスタマイズする |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,39 +13,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8284985003415ef3e723fe735e64481c3666180a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 454d58a48abafe9b23f8a812e5d40b9fc6477b50
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109965"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499355"
 ---
-# <a name="customizing-code-windows-by-using-the-legacy-api"></a>レガシ API を使用してコード ウィンドウをカスタマイズします。
-コード ウィンドウは、1 つまたは複数のテキスト ビューをサポートするドキュメント ウィンドウ オブジェクトです。 コード ウィンドウの正確な機能は、関連付けられた言語サービスによって異なります。 マルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウは、MDI 子フレームです。  
+# <a name="customize-code-windows-by-using-the-legacy-api"></a>従来の API を使用してコード ウィンドウをカスタマイズします。
+コード ウィンドウは、1 つまたは複数のテキスト ビューをサポートしているドキュメント ウィンドウ オブジェクトです。 コード ウィンドウの正確な機能は、関連する言語サービスに依存します。 マルチ ドキュメント インターフェイス (MDI) モードでは、コード ウィンドウは、MDI 子フレームです。  
   
- コード ウィンドウが言語サービスによって制御され、各言語サービスは、独自のコード ウィンドウ マネージャーを提供できます。 これにより、コード ウィンドウで、波線、色付けなどに、独自の表示要素を追加する言語サービス。 コア ウィンドウを作成する方法の詳細については、次を参照してください。[をインスタンス化、コア エディターを使用した、レガシ API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)です。  
+ コード ウィンドウは言語サービスによって制御され、各言語サービスは、独自のコード ウィンドウ マネージャーを提供できます。 これにより、波線、色付けなどのコード ウィンドウに、独自の表示要素を追加する言語サービス。 Core ウィンドウを作成する方法の詳細については、次を参照してください。[従来の API を使用して、コア エディターをインスタンス化](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)します。  
   
- コード ウィンドウは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>テキスト ビューとオブジェクトに配置された任意の修飾を持つオブジェクト。 エディターのコアのインスタンス化中に、コード ウィンドウを作成するときに、言語サービスが接続して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>コード ウィンドウに次の図に示すとは。  
+ コード ウィンドウは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>テキスト ビューとオブジェクトの表示要素を持つオブジェクト。 言語サービスをアタッチできるエディターのコアのインスタンス化中に、コード ウィンドウを作成するときに、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>コード ウィンドウに次の図に示すとは。  
   
  ![CodeWindow グラフィック](../extensibility/media/vscodewindow.gif "vscodewindow")  
 コード ウィンドウ  
   
- 言語サービスは、コード ウィンドウ マネージャーを実装し、ドロップダウン バーなどの表示要素の管理を行います。 コード ウィンドウの呼び出し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>コード ウィンドウの初期化中にメソッドです。 ドロップダウン バーまたは含むボタン バーが言語サービスを追加できますこの呼び出しが行われたときに (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>) をコード ウィンドウに保存します。  
+ 言語サービスは、コード ウィンドウ マネージャーを実装し、ドロップダウン バーなどの表示要素の管理を担当します。 コード ウィンドウでは、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A>メソッドのコード ウィンドウの初期化中にします。 ドロップダウン バーまたはボタン バーに、言語サービスを追加できますこの呼び出しが行われたときに (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>) のコード ウィンドウにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  `Customizing Code Windows by Using the Legacy API`  
  従来の API を使用してコード ウィンドウをカスタマイズする方法について説明します。  
   
- [方法: 別のエディターでエディターをホストします。](../extensibility/how-to-host-an-editor-in-another-editor.md)  
+ [方法: 別のエディターで、エディターのホスト](../extensibility/how-to-host-an-editor-in-another-editor.md)  
  エディター ウィンドウ内の 2 つ目のエディターをホストする方法について説明します。  
   
  [方法: エディターがフォーカスを失ったときにイベントを発生させる](../extensibility/how-to-fire-events-when-the-editor-loses-focus.md)  
- ドキュメント データ オブジェクトをドキュメント ビューをアタッチする方法について説明します。  
+ ドキュメント データ オブジェクトをドキュメント ビューを接続する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>   
- [レガシ API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)   
- [レガシ API を使用してテキスト ビューにアクセスします。](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)
+ [従来の API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)   
+ [従来の API を使用してアクセス テキスト ビュー](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)

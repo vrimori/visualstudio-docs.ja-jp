@@ -15,14 +15,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec8a5520716f6073d49ab2b5a64becfb760092d2
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: b4fca64abf91105e0363ecd67ea5244c533996f3
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234924"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497176"
 ---
-# <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio テンプレート)
+# <a name="folder-element-visual-studio-project-templates"></a>Folder 要素 (Visual Studio プロジェクト テンプレート)
 プロジェクトに追加されるフォルダーを指定します。  
   
  \<VSTemplate>  
@@ -39,7 +39,7 @@ ms.locfileid: "36234924"
 </Folder>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -47,7 +47,7 @@ ms.locfileid: "36234924"
 |属性|説明|  
 |---------------|-----------------|  
 |`Name`|必須の属性です。<br /><br /> プロジェクト フォルダーの名前。|  
-|`TargetFolderName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるフォルダーを指定する名前を指定します。 この属性は、パラメーター置換を使用して、フォルダー名を作成するのに役立ちます。 または .zip ファイルで直接、国際対応の文字列でフォルダーの名前は使用できません。|  
+|`TargetFolderName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるフォルダーを指定する名前を指定します。 この属性は、パラメーター置換を使用して、フォルダー名を作成する場合に便利ですか、国際対応の文字列を持つフォルダーを名前付けしで直接使用できません、 *.zip*ファイル。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36234924"
   
  テンプレート内のフォルダーにプロジェクト項目を整理するのにには、次の方法のいずれかを使用できます。  
   
--   テンプレートの .zip ファイルとフォルダーを含めるしでファイルへのパスを指定することで、.vstemplate ファイルでプロジェクトに追加、`ProjectItem`なしで、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
+-   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイル内のファイルへのパスを指定することによって、`ProjectItem`なしで、要素`Folder`要素。 これは、推奨される方法です。 例えば:  
   
      `...`  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36234924"
   
      `...`  
   
--   テンプレートの .zip ファイルとフォルダーを含めるし、.vstemplate ファイルでプロジェクトに追加`Folder`要素。 例えば:  
+-   テンプレート フォルダーに含める *.zip*ファイルを開き、プロジェクトに追加、 *.vstemplate*ファイルと`Folder`要素。 例えば:  
   
      `...`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36234924"
   
      `...`  
   
--   テンプレートの .zip ファイル内のフォルダーを含めないでくださいを使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
+-   テンプレートのフォルダーを含めないでください *.zip*ファイルしますが、使用してフォルダーを追加、`TargetFileName`の属性、`ProjectItem`要素。 例えば:  
   
      `...`  
   
@@ -132,5 +132,5 @@ ms.locfileid: "36234924"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 要素 (Visual Studio 項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)
