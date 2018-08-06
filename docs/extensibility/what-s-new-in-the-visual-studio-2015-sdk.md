@@ -1,5 +1,5 @@
 ---
-title: どのような&#39;、Visual Studio 2015 SDK の |Microsoft ドキュメント
+title: どのような&#39;、Visual Studio 2015 SDK の新 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,63 +11,63 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6488f28f2963e17c716c2e9d395ddf77f270e7b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4926ed9fafb64664d3ac0426466d90611cae4450
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31144708"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566694"
 ---
-# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>どのような&#39;、Visual Studio 2015 SDK の
-Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 更新、および Visual Studio 2017 の新規および更新の機能が次があります。  
+# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>どのような&#39;s を Visual Studio 2015 SDK の新機能
+Visual Studio SDK では、Visual Studio 2015、Visual Studio 2015 が更新されると、および Visual Studio 2017 の新規および更新の機能が次があります。  
   
 ## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK の更新プログラム 1  
- 更新プログラム 1 では、配色テーマと Visual Studio イメージ サービスと共に動作拡張機能のためのツールが含まれます。  
+ 更新プログラム 1 には、配色テーマと Visual Studio イメージ サービスと共に動作拡張機能のためのツールが含まれています。  
   
- これらのトピックでは、下にある、 [VSSDK ユーティリティ](../extensibility/internals/vssdk-utilities.md)セクション。  
+ これらのトピックでは、下、 [VSSDK ユーティリティ](../extensibility/internals/vssdk-utilities.md)セクション。  
   
--   [カラー テーマ ツール](../extensibility/internals/color-theming-tools.md)を作成し、Visual Studio のカスタム カラーを編集できます。  
+-   [色のテーマのツール](../extensibility/internals/color-theming-tools.md)作成し、Visual Studio のカスタム色を編集できます。  
   
--   [イメージ サービス ツール](../extensibility/internals/image-service-tools.md)Visual Studio イメージ マニフェスト ファイルで作業することができます。  
+-   [イメージ サービス ツール](../extensibility/internals/image-service-tools.md)Visual Studio のイメージのマニフェスト ファイルを操作できます。  
   
-## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Visual Studio に Visual Studio SDK を追加する新しい方法  
- Visual Studio 2015 以降、する必要はありません、Visual Studio SDK を個別にダウンロードします。 代わりに、通常のインストール プロセスの一環としてインストールすることができますか、後でインストールすることもできます。 開く、VSIX ソリューションを作成したりすると、Visual Studio が Visual Studio 機能拡張ツールをインストールするように求められます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Visual Studio SDK を Visual Studio に追加する新しい方法  
+ Visual Studio 2015 以降、Visual Studio SDK を個別にダウンロードする必要はありません。 代わりに、通常のインストール プロセスの一部としてインストールすることができますか、後でインストールすることもできます。 開くか、VSIX ソリューションを作成するときに Visual Studio から Visual Studio 機能拡張ツールのインストールを求められます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
   
-## <a name="new-ways-of-creating-extensions"></a>拡張機能を作成する新しい方法  
- 使用しているプログラミング言語に応じて、拡張機能を作成するためのさまざまなオプションがある以降、Visual Studio 2015 SDK では、します。  
+## <a name="new-ways-of-creating-extensions"></a>新しい拡張機能を作成する方法  
+ 以降、Visual Studio 2015 SDK では、プログラミング言語に応じて使用している、拡張機能を作成するためのさまざまなオプションがあります。  
   
 ### <a name="visual-c-and-visual-basic"></a>Visual C# および Visual Basic  
- C# と Visual Basic の場合は、Vspackage、メニュー コマンド、ツール ウィンドウ、エディター分類子、エディターの表示要素、およびエディターの余白の拡張機能を作成するためのプロジェクト項目テンプレートの全範囲があります。 標準の VSIX プロジェクトにこれらの一部またはすべてを追加することができます。 詳細については次を参照してください:  
+ C# と Visual Basic の場合は、Vspackage、メニュー コマンド、ツール ウィンドウ、エディターの分類子、エディターの表示要素、およびエディターの余白の拡張機能を作成するためのプロジェクト項目テンプレートの完全な範囲があります。 標準の VSIX プロジェクトには、これらのテンプレートの一部またはすべてを追加できます。 詳細については次を参照してください:  
   
--   [メニュー コマンドを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)  
+-   [メニュー コマンドを使用して拡張機能を作成します。](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
--   [ツール ウィンドウでの拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)  
+-   [ツール ウィンドウでの拡張機能を作成します。](../extensibility/creating-an-extension-with-a-tool-window.md)  
   
--   [エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)  
+-   [エディターの項目テンプレートを使用した拡張機能を作成します。](../extensibility/creating-an-extension-with-an-editor-item-template.md)  
   
--   [VSPackage を使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-vspackage.md)  
+-   [VSPackage を使用した拡張機能を作成します。](../extensibility/creating-an-extension-with-a-vspackage.md)  
   
-     VSPackage ウィザードは、c# または Visual Basic で不要になった拡張機能を作成します。  
+     VSPackage のウィザードは、c# または Visual Basic で不要になった拡張機能を作成します。  
   
 ### <a name="c"></a>C++  
- C++ の場合は、VSPackage ウィザードは、メニュー コマンド、ツール ウィンドウ、およびカスタム エディターをサポートします。 検索で、**新しいプロジェクト**でダイアログ**Visual C/機能拡張**です。  
+ C++ の場合は、VSPackage ウィザードは、メニュー コマンド、ツール ウィンドウ、およびカスタム エディターをサポートします。 探し、**新しいプロジェクト**でダイアログ**Visual C/機能拡張**します。  
   
-## <a name="vs-sdk-reference-assemblies-via-nuget"></a>NuGet 経由で VS SDK の参照アセンブリ  
- 移植性の向上と機能拡張プロジェクトの共有は、NuGet のバージョンの VS SDK の参照アセンブリを使用できます。  これらで使用できる[nuget.org](http://www.nuget.org)によって発行された[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)プロジェクトまたは Visual Studio によるソリューションを簡単に追加して**参照/管理 NuGetパッケージ**ダイアログ。 特定の拡張機能アセンブリへの個々 の参照を追加したり、VS SDK のすべてが一度に VS SDK を使用してアセンブリを参照を追加したり[メタ パッケージ](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)です。 NuGet の詳細については、次を参照してください。、 [NuGet のドキュメント](/NuGet)と[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)トピックです。  
+## <a name="vs-sdk-reference-assemblies-via-nuget"></a>NuGet を使用して VS SDK 参照アセンブリ  
+ 移植性の向上と機能拡張プロジェクトの共有は、VS SDK の参照アセンブリの NuGet のバージョンを使用できます。 これらのアセンブリは[nuget.org](http://www.nuget.org)によって発行された[VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)プロジェクトまたは Visual Studio でソリューションに簡単に追加できると**参照/管理NuGet パッケージの**ダイアログ。 固有の機能拡張アセンブリに個々 の参照を追加したり、すべての VS SDK を一度に VS SDK を使用してアセンブリの参照を追加[メタ パッケージ](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)します。 NuGet の詳細については、次を参照してください。、 [NuGet のドキュメント](/NuGet)と[パッケージ マネージャー UI](/NuGet/Tools/Package-Manager-UI)トピック。  
   
- NuGet のバージョンの VS SDK の参照アセンブリを使用して、別のユーザーが開くし、プロジェクトをビルドする VS SDK をインストールする必要はありません。  NuGet の参照アセンブリ、VS SDK ビルド ツールは、そのプロジェクトの自分のコンピューターに自動的にインストールされます。  
+ VS SDK の参照アセンブリの NuGet のバージョンを使用して、別のユーザーはいないを開いて、プロジェクトをビルドする VS SDK をインストールする必要があります。  NuGet 参照アセンブリと VS SDK ビルド ツールは、そのプロジェクトの自分のコンピューターに自動的にインストールされます。  
   
- VS SDK 項目テンプレートでは、NuGet を使用して、それらの参照用と、既定では、NuGet の利点を取得するためのビルド ツールを使用します。  
+ VS SDK の項目テンプレートは、NuGet の参照を使用し、ビルド ツールが既定で NuGet の特典を利用します。  
   
 > [!NOTE]
->  アセンブリを使用して、VS SDK がインストールされている参照プロジェクトで続行することができます (下にある\<Visual Studio のインストール場所 > \ VSSDK\VisualStudioIntegration\Common\Assemblies)、既存の機能拡張プロジェクトがある必要はありませんNuGet パッケージを使用するアップグレードされます。  プロジェクト**参照/参照の追加**ダイアログがインストールされている VS SDK の参照アセンブリを使用し続けます。  
+>  VS SDK がインストールされている参照アセンブリをプロジェクトで使用する続行することができます (下にある\<Visual Studio のインストール場所 > \ VSSDK\VisualStudioIntegration\Common\Assemblies)、既存の機能拡張プロジェクトがある必要はありませんアップグレードすると、NuGet パッケージを使用します。  プロジェクト**参照]、[参照の追加**VS SDK がインストールされている参照アセンブリを使用するダイアログが続行されます。  
 >   
->  NuGet を使用して、参照して、既存のプロジェクトを変更したい場合[する方法: Visual Studio 2015 への移行の Vspackage](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) NuGet パッケージへの機能拡張プロジェクトを更新する方法のセクションが含まれています。  
+>  NuGet を使用して、参照してください、既存のプロジェクトを変更したい場合[方法: Visual Studio 2015 への移行の Vspackage](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) NuGet パッケージへの拡張機能プロジェクトを更新する方法のセクションがあります。  
   
 ## <a name="light-bulbs"></a>電球  
- 拡張機能コードの記述最も魅力的な新しい方法の 1 つは、Roslyn プロジェクトによって提供されます。 詳細については、次を参照してください。 [Roslyn](https://github.com/dotnet/Roslyn)です。  
+ 拡張機能コードの記述の最も魅力的な新しい方法の 1 つは、Roslyn プロジェクトによって提供されます。 詳細については、次を参照してください。 [Roslyn](https://github.com/dotnet/Roslyn)します。  
   
- 電球マークは付属して VSSDK する新機能です。 これらは、展開すると、一連のコードのリファクタリング操作または組み込みのコード アナライザーによって識別される問題の修正プログラムを表示する、Visual Studio エディターで使用されるアイコンです。 詳細については、次を参照してください。[チュートリアル: 電球の推奨事項を表示する](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)です。  
+ 電球マークは VSSDK に付属する新しい機能です。 Visual Studio エディターで使用される、展開すると、一連のコードのリファクタリング操作または組み込みのコード アナライザーによって識別された問題の修正プログラムを表示するアイコンが表示されます。 詳細については、次を参照してください。[チュートリアル: を表示する Light Bulb Suggestions](../extensibility/walkthrough-displaying-light-bulb-suggestions.md)します。  
   
 ## <a name="updated-user-experience-guidelines"></a>更新されたユーザー エクスペリエンス ガイドライン  
- Visual Studio の新しい拡張機能または機能を設計しますか。 更新と展開をチェック アウト[Visual Studio ユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)です。  見つかります、[トークンの色](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md)、[フォント サイズ](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)、[ダイアログのレイアウトの仕様](../extensibility/ux-guidelines/layout-for-visual-studio.md)、およびその他のガイダンスの Visual Studio で新しい UI をシームレスに統合する必要があります。
+ Visual Studio の新しい拡張機能または機能を設計しますか。 更新と展開をチェック アウト[Visual Studio ユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。  見つかります、[色のトークン](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md)、[フォント サイズ](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md)、[ダイアログのレイアウトの仕様](../extensibility/ux-guidelines/layout-for-visual-studio.md)、および Visual Studio と、新しい UI をシームレスに統合する必要があるその他のガイダンス。

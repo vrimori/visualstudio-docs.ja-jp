@@ -9,19 +9,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 189e1020b3e96da4adf88793ba30cc78a25cd263
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 205408cc4241bb0c10b4a2e413449f7b70452187
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381033"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567078"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
+
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張できます。 または他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することがなります。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールし、その拡張機能を必要に応じてインストールすることになります。
 
- さらに、DSL で MEF を有効にするとできます簡単に、DSL の機能の一部を記述する場合でも、すべて DSL と共に構築されます。
+さらに、DSL で MEF を有効にするとできます簡単に、DSL の機能の一部を記述する場合でも、すべて DSL と共に構築されます。
 
- MEF の詳細については、次を参照してください。 [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)します。
+MEF の詳細については、次を参照してください。 [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)します。
 
 ### <a name="to-enable-your-dsl-to-be-extended-by-mef"></a>MEF で拡張する DSL を有効にするには
 
@@ -30,7 +31,7 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
      ファイル名: `CommandExtensionVSCT.tt`
 
     > [!IMPORTANT]
-    >  GUID を GUID CommandSetId DslPackage\GeneratedCode\Constants.tt で定義されているのと同じにするのには、このファイルの設定します。
+    > GUID を GUID CommandSetId DslPackage\GeneratedCode\Constants.tt で定義されているのと同じにするのには、このファイルの設定します。
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -43,30 +44,30 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>
     ```
 
-     ファイル名: `CommandExtensionRegistrar.tt`
+    ファイル名: `CommandExtensionRegistrar.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>
     ```
 
-     ファイル名: `ValidationExtensionEnablement.tt`
+    ファイル名: `ValidationExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>
     ```
 
-     ファイル名: `ValidationExtensionRegistrar.tt`
+    ファイル名: `ValidationExtensionRegistrar.tt`
 
-     このファイルに追加する場合、必要がありますで有効にする検証 DSL を少なくとも 1 つのスイッチを使用して**EditorValidation** DSL エクスプ ローラーでします。
+    このファイルに追加する場合、必要がありますで有効にする検証 DSL を少なくとも 1 つのスイッチを使用して**EditorValidation** DSL エクスプ ローラーでします。
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>
     ```
 
-     ファイル名: `PackageExtensionEnablement.tt`
+    ファイル名: `PackageExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -82,14 +83,14 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>
     ```
 
-     ファイル名: `GestureExtensionEnablement.tt`
+    ファイル名: `GestureExtensionEnablement.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>
     ```
 
-     ファイル名: `GestureExtensionController.tt`
+    ファイル名: `GestureExtensionController.tt`
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -98,17 +99,17 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
 
 3.  という名前の既存のファイルに次の行を追加**dslpackage \commands.vsct**:
 
-    ```
+    ```xml
     <Include href="MefExtension\CommandExtensionVSCT.vsct"/>
     ```
 
-     既存の後の行を挿入`<Include>`ディレクティブ。
+    既存の後の行を挿入`<Include>`ディレクティブ。
 
-4.  `Open DslDefinition.dsl.`
+4.  開いている*DslDefinition.dsl*します。
 
 5.  DSL エクスプ ローラーで選択**発します**します。
 
-6.  [プロパティ] ウィンドウでプロパティの少なくとも 1 つという名前を確認します**を使用しています.** は`true`します。
+6.  [プロパティ] ウィンドウでプロパティの少なくとも 1 つという名前を確認します**使用**は`true`します。
 
 7.  **ソリューション エクスプ ローラー**ツールバーで、をクリックして**すべてのテンプレートの変換**します。
 
@@ -116,10 +117,11 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
 
 8.  ビルドおよびがまだ動作していることを確認するソリューションを実行します。
 
- DSL は、MEF-有効になっているようになりました。 MEF 拡張機能としては、メニュー コマンド、ジェスチャ ハンドラー、および検証制約を作成できます。 その他のカスタム コードと共に、DSL ソリューションでは、これらの拡張機能を記述できます。 さらに、他の開発者またはする書き込める別[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]DSL を拡張する拡張機能。
+DSL は、MEF-有効になっているようになりました。 MEF 拡張機能としては、メニュー コマンド、ジェスチャ ハンドラー、および検証制約を作成できます。 その他のカスタム コードと共に、DSL ソリューションでは、これらの拡張機能を記述できます。 さらに、か、他の開発者は、DSL を拡張する別の Visual Studio 拡張機能を記述できます。
 
 ## <a name="creating-an-extension-for-a-mef-enabled-dsl"></a>MEF が有効な DSL の拡張機能の作成
- 自分または他のユーザーによって作成された MEF が有効な DSL へのアクセスがあれば、その拡張機能を記述できます。 メニュー コマンド、ジェスチャ ハンドラー、または検証制約を追加する拡張機能を使用できます。 これらの拡張機能を作成するを使用する、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Extension (VSIX) ソリューションです。 ソリューションに 2 つの部分: クラス ライブラリ プロジェクト、コード アセンブリをビルドして、アセンブリをパッケージ化した VSIX プロジェクト。
+
+自分または他のユーザーによって作成された MEF が有効な DSL へのアクセスがあれば、その拡張機能を記述できます。 メニュー コマンド、ジェスチャ ハンドラー、または検証制約を追加する拡張機能を使用できます。 これらの拡張機能を作成するには、Visual Studio の拡張機能 (VSIX) ソリューションを使用します。 ソリューションに 2 つの部分: クラス ライブラリ プロジェクト、コード アセンブリをビルドして、アセンブリをパッケージ化した VSIX プロジェクト。
 
 #### <a name="to-create-a-dsl-extension-vsix"></a>DSL 拡張 VSIX を作成するには
 
@@ -161,23 +163,25 @@ Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語
 
          これにより、ユーザーが同時に、DSL と拡張機能をインストールできます。 ユーザーが DSL をインストールしてある場合は、拡張機能がインストールされます。
 
-9. 確認の他のフィールドを更新して**source.extension.vsixmanifest**します。 をクリックして**エディションの**ことを確認します、正しい[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディションを設定します。
+9. 確認の他のフィールドを更新して**source.extension.vsixmanifest**します。 クリックして**エディションの**正しい Visual Studio のエディションを設定することを確認します。
 
 10. コードをクラス ライブラリ プロジェクトに追加します。 次のセクションの例をガイドとして使用します。
 
      任意の数のコマンド、ジェスチャ、および検証クラスを追加することができます。
 
-11. 拡張機能をテストするには、キーを押して**F5**します。 実験用インスタンスで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成または DSL の例は、ファイルを開きます。
+11. 拡張機能をテストするには、キーを押して**F5**します。 Visual Studio の実験用インスタンスを作成または DSL の例は、ファイルを開きます。
 
 ## <a name="writing-mef-extensions-for-dsls"></a>Dsl 用の MEF 拡張機能の記述
- 別の DSL 拡張機能ソリューションのアセンブリのコード プロジェクトでは、拡張機能を記述できます。 DSL の一部として、コマンド、ジェスチャ、および検証コードを記述する便利な方法として、DslPackage プロジェクト内の MEF を使用することもできます。
+
+別の DSL 拡張機能ソリューションのアセンブリのコード プロジェクトでは、拡張機能を記述できます。 DSL の一部として、コマンド、ジェスチャ、および検証コードを記述する便利な方法として、DslPackage プロジェクト内の MEF を使用することもできます。
 
 ### <a name="menu-commands"></a>メニュー コマンド
- メニュー コマンドを書き込むを実装するクラスを定義<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>という、DSL で定義されている属性を持つクラスをプレフィックスと*YourDsl*`CommandExtension`します。 1 つ以上のメニュー コマンド クラスを記述することができます。
 
- `QueryStatus()` ダイアグラムを右クリックしたときに呼び出されます。 現在の選択範囲を検査し、設定する必要がありますが`command.Enabled`をコマンドが該当する場合を示します。
+メニュー コマンドを書き込むを実装するクラスを定義<xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>という、DSL で定義されている属性を持つクラスをプレフィックスと*YourDsl*`CommandExtension`します。 1 つ以上のメニュー コマンド クラスを記述することができます。
 
-```
+`QueryStatus()` ダイアグラムを右クリックしたときに呼び出されます。 現在の選択範囲を検査し、設定する必要がありますが`command.Enabled`をコマンドが該当する場合を示します。
+
+```csharp
 using System.ComponentModel.Composition;
 using System.Linq;
 using Company.MyDsl; // My DSL
@@ -239,16 +243,15 @@ namespace MyMefExtension
     }
   }
 }
-
 ```
 
 ### <a name="gesture-handlers"></a>ジェスチャ ハンドラー
- ジェスチャ ハンドラーは、内部または外部から任意の場所をダイアグラムにドラッグするオブジェクトを扱うことができる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 次の例は、Windows エクスプ ローラーから対象のファイルを図にドラッグできますを示しています。 ファイル名を格納している要素を作成します。
 
- 他の DSL モデルおよび UML モデルからの障壁に対処するためのハンドラーを記述することができます。 詳細については、次を参照してください。[方法: ドラッグ アンド ドロップ ハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)します。
+ジェスチャ ハンドラーは、内で任意の場所、または Visual Studio の外部からの図にドラッグしたオブジェクトを扱うことができます。 次の例は、Windows エクスプ ローラーから対象のファイルを図にドラッグできますを示しています。 ファイル名を格納している要素を作成します。
 
-```
+他の DSL モデルおよび UML モデルからの障壁に対処するためのハンドラーを記述することができます。 詳細については、次を参照してください。[方法: ドラッグ アンド ドロップ ハンドラーを追加](../modeling/how-to-add-a-drag-and-drop-handler.md)します。
 
+```csharp
 using System.ComponentModel.Composition;
 using System.Linq;
 using Company.MyDsl;
@@ -316,15 +319,15 @@ namespace MefExtension
     }
   }
 }
-
 ```
 
 ### <a name="validation-constraints"></a>検証制約
- 検証メソッドがによってマークされている、 `ValidationExtension` 、DSL ともによって生成される属性<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>します。 メソッドは、属性でマークされていないすべてのクラスで表示できます。
 
- 詳細については、次を参照してください。[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)です。
+検証メソッドがによってマークされている、 `ValidationExtension` 、DSL ともによって生成される属性<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute>します。 メソッドは、属性でマークされていないすべてのクラスで表示できます。
 
-```
+詳細については、次を参照してください。[ドメイン固有言語における検証](../modeling/validation-in-a-domain-specific-language.md)です。
+
+```csharp
 using Company.MyDsl;
 using Company.MyDsl.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Validation;
@@ -369,7 +372,6 @@ namespace MefExtension
           // Element to highlight when user double-clicks error:
           , elementToValidate);
 } } } }
-
 ```
 
 ## <a name="see-also"></a>関連項目

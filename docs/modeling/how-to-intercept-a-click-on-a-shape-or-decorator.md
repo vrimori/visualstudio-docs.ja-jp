@@ -11,20 +11,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5e78438eba52a0e5d5d826ae2fa28503733c7ea3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a8f959595ec40f70b736c163299d8593883ee5e5
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31952301"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567404"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
-次の手順では、図形、またはアイコン デコレーターのクリックをインターセプトする方法を示します。 クリックをインターセプトできますをダブルクリックしたにドラッグすると、その他のジェスチャ、し応答要素を作成します。
+次の手順では、図形または、アイコン デコレーターに対するクリックする方法を説明します。 数回のクリックをインターセプトできるをダブルクリックしたにドラッグ、およびその他のジェスチャをし応答要素。
 
-## <a name="to-intercept-clicks-on-shapes"></a>図形の上のクリックをインターセプトするには
- Dsl のプロジェクトでは、生成されたコード ファイルから別のコード ファイルには、shape クラスの部分クラス定義を記述します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他のメソッドの 1 つ`On...`です。 例えば:
+## <a name="to-intercept-clicks-on-shapes"></a>図形のクリックをインターセプトするには
+ 生成されたコード ファイルから別のコード ファイルで、Dsl プロジェクトでは、shape クラスの部分クラス定義を作成します。 オーバーライド`OnDoubleClick()`または名前の先頭にある他の方法の 1 つ`On...`します。 例えば:
 
-```
+```csharp
 public partial class MyShape // change
   {
     public override void OnDoubleClick(DiagramPointEventArgs e)
@@ -36,22 +36,22 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
->  設定`e.Handled`に`true`を含む図形または図に渡されるイベントがない限り、します。
+>  設定`e.Handled`に`true`図形または図に渡されるイベントの場合を除き、します。
 
-## <a name="to-intercept-clicks-on-decorators"></a>デコレーターのクリックをインターセプトするには
- イメージ デコレーターは OnDoubleClick メソッドを含む ImageField クラスのインスタンスで実行されます。 ImageField サブクラスを作成する場合は、クリックをインターセプトすることができます。 フィールド InitializeShapeFields メソッドで設定されます。 そのため、インスタンス正規 ImageField ではなく、サブクラスを作成するには、そのメソッドを変更する必要があります。 InitializeShapeFields メソッドは、shape クラスの生成されたコードでです。 Shape クラスを上書きするには、設定した場合、`Generates Double Derived`プロパティが次の手順で説明します。
+## <a name="to-intercept-clicks-on-decorators"></a>デコレーターの数回のクリックをインターセプトするには
+ イメージのデコレーターは、OnDoubleClick メソッドを持つ ImageField クラスのインスタンスで実行されます。 ImageField サブクラスを作成する場合、数回のクリックをインターセプトすることができます。 フィールドは InitializeShapeFields メソッドで設定されます。 そのため、通常 ImageField ではなく、サブクラスのインスタンスを作成するには、そのメソッドを変更する必要があります。 InitializeShapeFields メソッドは、shape クラスの生成されたコード内に示します。 シェイプ クラスを上書きするには、設定した場合、`Generates Double Derived`プロパティを次の手順で説明します。
 
- InitializeShapeFields には、インスタンス メソッドが、1 回だけクラスごとに呼び出されます。 そのため、ダイアグラム内の各図形の 1 つインスタンスではなく、各クラスの各フィールドの ClickableImageField の 1 つだけのインスタンスが存在します。 ユーザーをダブルクリックすると、インスタンス場合、は、例のコードに示すよう先のインスタンスがヒットしたを識別する必要があります。
+ InitializeShapeFields はインスタンス メソッドが、1 回だけクラスごとに呼び出されます。 そのため、ダイアグラム内の各図形の 1 つインスタンスではなく、各クラスの各フィールドに対して ClickableImageField の 1 つだけのインスタンスが存在します。 ユーザーをダブルクリックすると、インスタンスは、例のコードに示すよう先のインスタンスにヒットしたを識別する必要があります。
 
-#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>アイコン デコレーターのクリックをインターセプトするには
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>アイコン、デコレーターに対するクリックするには
 
 1.  開くか、DSL ソリューションを作成します。
 
-2.  選択または、アイコン デコレーターの図形を作成し、ドメイン クラスにマップします。
+2.  選択またはアイコン デコレータでは、図形を作成し、ドメイン クラスにマップします。
 
 3.  コード ファイル内のファイルとは別に、`GeneratedCode`フォルダー、ImageField の新しいサブクラスを作成します。
 
-    ```
+    ```csharp
     using Microsoft.VisualStudio.Modeling;
     using Microsoft.VisualStudio.Modeling.Design;
     using Microsoft.VisualStudio.Modeling.Diagrams;
@@ -85,11 +85,11 @@ public partial class MyShape // change
     }
     ```
 
-     含まれる図形に渡されるイベントしたくない場合は true に Handled を設定する必要があります。
+     処理済みイベントが含まれている図形に渡されるしたくない場合は true に設定してください。
 
 4.  次の部分クラス定義を追加することで、図形渡してで InitializeShapeFields メソッドをオーバーライドします。
 
-    ```
+    ```csharp
     public partial class MyShape // change
     {
      protected override void InitializeShapeFields
@@ -116,36 +116,36 @@ public partial class MyShape // change
 
 1.  ソリューションをビルドして実行します。
 
-2.  図形のインスタンスにあるアイコンをダブルクリックします。 テスト メッセージが表示されます。
+2.  図形のインスタンス上のアイコンをダブルクリックします。 テスト メッセージが表示されます。
 
-## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>インターセプトしをクリックしておよびドラッグ CompartmentShape リスト
- 次の例では、順序にドラッグしてコンパートメントの図形で項目を変更することができます。 このコードを実行します。
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>インターセプトをクリックしておよびドラッグ CompartmentShape リスト
+ 次の例では、順序にドラッグしてコンパートメント シェイプで項目を変更することができます。 このコードを実行します。
 
-1.  使用して新しい DSL ソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。
+1.  使用して、新しい DSL ソリューションを作成、**クラス ダイアグラム**ソリューション テンプレート。
 
-     また、コンパートメントの図形を含む独自のソリューションと連携することができます。 このコードでは、図形によって表されるモデル要素と、コンパートメント リスト項目で表される要素の埋め込みの関係があることを前提としています。
+     コンパートメント シェイプを含む独自のソリューションを操作することもできます。 このコードでは、シェイプによって表されるモデル要素と、コンパートメント リスト項目で表される要素間に埋め込みリレーションシップがあることを前提としています。
 
-2.  設定、 **double 型の派生を生成**コンパートメント図形のプロパティです。
+2.  設定、 **Double Derived の生成**コンパートメント シェイプのプロパティ。
 
 3.  内のファイルに次のコードを追加、 **Dsl**プロジェクト。
 
-4.  独自の DSL の一致するようにこのコードでドメイン クラスおよび図形の名前を調整します。
+4.  独自の DSL を一致するようにこのコードではドメイン クラスとシェイプの名前を調整します。
 
- 要約すると、コードの次のように動作します。 この例では`ClassShape`コンパートメントの図形の名前を指定します。
+ 要約すると、コードの次のように動作します。 この例で`ClassShape`コンパートメント シェイプの名前を指定します。
 
--   作成時に、マウスのイベント ハンドラーのセットがコンパートメントの各インスタンスにアタッチされます。
+-   マウス イベント ハンドラーのセットは、作成時に、各コンパートメント インスタンスにアタッチされます。
 
 -   `ClassShape.MouseDown`イベントは、現在の項目を格納します。
 
--   ときに、マウスを移動、現在のアイテムから MouseAction のインスタンスが作成されたカーソルの設定し、が解放されるまでマウスをキャプチャします。
+-   移動したときに、マウス、現在のアイテムから MouseAction のインスタンスが作成されたカーソルを設定し、解放されるまでマウスをキャプチャします。
 
-     項目のテキストを選択するなど、他のマウス操作を邪魔しないように、マウスが元の項目を終了するまで、MouseAction は作成されません。
+     項目のテキストを選択するなど、他のマウス操作で干渉を避けるため、マウスが、元の項目を左になるまで、MouseAction は作成されません。
 
-     MouseAction を作成する代わりには、MouseUp リッスンするように単純になります。 ただし、これは正しく動作しない、コンパートメント外ドラッグした後、ユーザーがマウスを解放します。 MouseAction はマウス ボタンが離さ場所に関係なく、適切なアクションを実行できます。
+     MouseAction を作成する代わりには、MouseUp リッスンするように単純になります。 ただし、これは正しく機能しません、コンパートメントの外側にドラッグした後、マウスを離した場合。 MouseAction はマウスがリリースされた場所に関係なく、適切なアクションを実行できません。
 
--   マウスを離したときに、MouseAction.MouseUp は、モデル要素の間のリンクの順序を並べ替えます。
+-   マウスがリリースされると、MouseAction.MouseUp はモデル要素間のリンクの順序を並べ替えます。
 
--   ロールの順序の変更では、表示を更新するルールが適用されます。 この動作が既に定義されているし、コードを追加する必要はありません。
+-   ロールの順序の変更には、表示を更新する規則が適用されます。 この動作が既に定義されているし、コードを追加する必要はありません。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

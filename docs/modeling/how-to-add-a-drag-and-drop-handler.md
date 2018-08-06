@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 35b88e2c2c423803dda9ed85cfb820e8521ed138
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 74e4f806c6f2faeeddfc2cc13917a6b5275b1b48
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513508"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566630"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 
@@ -50,14 +50,13 @@ using System.Linq;
             e.Effect = System.Windows.Forms.DragDropEffects.Copy;
           }
         }
-
     ```
 
 -   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> 、場合は、ユーザー、マウス ボタンを離したときに、マウス ポインターがこの図形または図では、上場合にこのメソッドが呼び出されます`OnDragOver(DiagramDragEventArgs e)`以前に設定された`e.Effect`以外の値を`None`します。
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
-        {
+    {
           if (!IsAcceptableDropItem(e))
           {
             base.OnDragDrop(e);
@@ -66,8 +65,7 @@ using System.Linq;
           { // Process the dragged item, for example merging a copy into the diagram
             ProcessDragDropItem(e); // To be defined
           }
-        }
-
+    }
     ```
 
 -   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -このメソッドは、図形または図に、ユーザーがダブルクリックしたときに呼び出されます。
@@ -76,7 +74,7 @@ using System.Linq;
 
 `IsAcceptableDropItem(e)` を定義してドラッグした項目が受け入れられるかどうかを決定し、ProcessDragDropItem(e) を定義して項目がドロップされたときにモデルを更新します。 これらのメソッドは、最初にイベント引数から項目を抽出する必要があります。 その方法については、次を参照してください。[ドラッグした項目への参照を取得する方法](#extracting)します。
 
-## <a name="defining-gesture-handlers-by-using-mef"></a>MEF の使用によるジェスチャ ハンドラーの定義
+## <a name="define-gesture-handlers-by-using-mef"></a>MEF の使用によるジェスチャ ハンドラーを定義します。
 
 使用する DSL に対してサードパーティの開発者が独自のハンドラーを定義可能にする場合、この方法を使用します。 ユーザーは DSL をインストールした後で、サードパーティの拡張機能を選択的にインストールできます。
 
@@ -148,7 +146,6 @@ MEF (Managed Extensibility Framework) を使用して、最小構成でインス
             == "3866d10c-cc4e-438b-b46f-bb24380e1678"); // Accept UML class shapes.
      // Or, from another DSL: SourceNamespace.SourceShapeClass.DomainClassId
     }
-
     ```
 
      UML 図形を受け入れるには、テストを実行して UML 図形クラスの GUID を決定します。 通常、どの図でも要素の種類には複数あることに注意してください。 また、DSL または UML 図からドラッグするオブジェクトは図形であり、モデル要素ではありません。
@@ -163,7 +160,7 @@ MEF (Managed Extensibility Framework) を使用して、最小構成でインス
 
 ### <a name="to-prepare-a-dsl-project-for-model-bus"></a>モデル バス用の DSL プロジェクトを準備するには
 
-1.  以下の操作を実行して、ソース DSL が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] モデル バスによりアクセス可能にします。
+1.  ソース DSL が Visual Studio モデル バスによりアクセスできます。
 
     1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 

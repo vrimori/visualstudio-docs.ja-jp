@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Visual Studio 拡張機能の発行 |Microsoft ドキュメント'
+title: 'チュートリアル: Visual Studio 拡張機能の発行 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,151 +14,151 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f823334f3686bdba3406daac69b2a98d203780a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80bf0d3885f9dc4e4360b8516bd13a62cfbea952
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31147067"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566805"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能の発行
+# <a name="walkthrough-publish-a-visual-studio-extension"></a>チュートリアル: Visual Studio 拡張機能を公開します。
 
-このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法を示します。 開発者が使用して追加すると、拡張機能には、Marketplace、**拡張機能と更新**を新規および更新された拡張機能の参照があります。
+このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法を示します。 開発者が使用できる、拡張機能を Marketplace に追加すると**拡張機能と更新**新規および更新された拡張機能を参照します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
- このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。
 
 ## <a name="create-a-visual-studio-extension"></a>Visual Studio 拡張機能を作成します。
 
-この場合、既定の VSPackage 拡張機能を使用しておが、同じ手順がすべての種類の拡張機能の有効です。
+この記事では、既定の VSPackage 拡張機能を使用してが、手順は拡張機能のすべての種類に対して無効です。
 
-1. C# の場合、メニュー コマンドが使用できる"TestPublish"という名前の VSPackage を作成します。 詳細については、次を参照してください。 [、最初の拡張機能の作成: Hello World](../extensibility/extensibility-hello-world.md)です。
+1. C# という名前の VSPackage を作成`TestPublish`を持つメニュー コマンド。 詳細については、次を参照してください。[初めての拡張機能の作成: Hello World](../extensibility/extensibility-hello-world.md)します。
 
-## <a name="package-your-extension"></a>拡張機能をパッケージ化
+## <a name="package-your-extension"></a>拡張機能をパッケージ化します。
 
-1. 製品名、作成者、およびバージョンに関する正しい情報で拡張 vsixmanifest を更新します。
+1. 拡張機能の更新 *.vsixmanifest*製品名、作成者、およびバージョンの詳細については、正しい情報。
 
-  ![更新プログラムの拡張機能 vsixmanifest](media/update-extension-vsixmanifest.png)
+  ![更新プログラムの拡張機能の vsixmanifest](media/update-extension-vsixmanifest.png)
 
-2. 拡張機能を構築**リリース**モード。 今すぐ \bin\Release フォルダーに VSIX として、拡張機能をパッケージ化されます。
+2. 拡張機能を構築**リリース**モード。 拡張機能が \bin\Release フォルダーで、VSIX としてパッケージ化されます。
 
-3. ダブルクリック、VSIX のインストール状態を確認します。
+3. インストールを確認する VSIX をダブルクリックすることができます。
 
 ## <a name="test-the-extension"></a>拡張機能をテストします。
 
- 拡張機能を配布する前に、ビルド、およびテストを Visual Studio の実験用インスタンスで、正しくインストールされていることを確認します。
+ 拡張機能を配布する前にビルドしてテストを Visual Studio の実験用インスタンスで正しくインストールされていることを確認します。
 
-1. Visual Studio でデバッグを開始します。 Visual Studio の実験用インスタンスを開きます。
+1. Visual Studio では、Visual Studio の実験用インスタンスを開くデバッグを開始します。
 
-2. 実験用インスタンスに移動、**ツール**メニューをクリックして**拡張機能と更新しています.**.TestPublish 拡張機能では、中央のペインでが表示され、有効にします。
+2. 実験用のインスタンスに移動、**ツール**メニューをクリックします**拡張機能と更新**します。 TestPublish 拡張機能では、中央のウィンドウに表示する必要があり、有効にします。
 
 3. **ツール** メニューの テスト コマンドを表示するかどうかを確認します。
 
-## <a name="publish-the-extension-to-the-visual-studio-marketplace"></a>Visual Studio Marketplace 拡張機能を公開します。
+## <a name="publish-the-extension-to-the-visual-studio-marketplace"></a>拡張機能を Visual Studio Marketplace に公開します。
 
-1. 拡張機能のリリース バージョンが組み込まれていると、最新の状態であることを確認してください。
+1. 拡張機能のリリース バージョンが組み込まれているし、最新の状態であるようにします。
 
-2. Web ブラウザーで開く、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) web サイトです。
+2. Web ブラウザーで開く、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) web サイト。
 
-3. 右上隅をクリックして**サインイン**です。
+3. 右上隅にある次のようにクリックします。**サインイン**します。
 
-4. Microsoft アカウントを使用してサインインします。 Microsoft アカウントがない、この時点で作成することができます。
+4. Microsoft アカウントを使用してサインインします。 Microsoft アカウントがない、この時点で作成できます。
 
-5. をクリックして**拡張機能を公開**です。  これを移動する、すべての拡張機能の管理ページにします。  発行元のアカウントを持っていない場合は、この時点で作成するのには促されます。
+5. クリックして**拡張機能を公開**します。  このオプションでは、すべての拡張機能の管理ページに移動します。 発行元アカウントを持っていない場合は、この時点で 1 つを作成する求められます。
 
   ![Marketplace へのアップロードします。](media/upload-to-marketplace.png)
 
-6. 使用して、拡張機能をアップロードするパブリッシャーを選択します。  発行元を変更するには、左側に表示されている発行元の名前をクリックするとします。  をクリックして**新しい拡張子**選択**Visual Studio**です。
+6. 拡張機能のアップロードに使用するパブリッシャーを選択します。 発行元を変更するには、左側に表示されている発行元の名前をクリックします。 をクリックして**新しい拡張機能**選択**Visual Studio**します。
 
-7. **1: 拡張機能をアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードまたはだけ、独自の web サイトへのリンクを追加することもできます。 この場合、拡張機能、TestPublish.vsix をアップロードします。  ドラッグして、拡張機能の削除を使用しても、 **をクリックして**ファイルを参照するリンクです。  拡張機能は、プロジェクトの \bin\Release フォルダーで確認できます。  **[続行]** をクリックします。
+7. **1: 拡張機能のアップロード**、Visual Studio Marketplace に直接 VSIX ファイルをアップロードするか、独自の web サイトにリンクを追加することもできます。 この例では、拡張機能で*TestPublish.vsix*アップロードされます。 ドラッグ アンド、拡張機能を削除するかを使用して、**クリックして**ファイルを参照するリンク。 プロジェクトの \bin\Release フォルダーで、拡張機能を検索します。  **[続行]** をクリックします。
 
-8. **2: 拡張機能の詳細を提供**、いくつかのフィールドは、自動設定された source.extension.vsixmanifest ファイル拡張機能からです。  それぞれの詳細については、下はあります。
+8. **2: 拡張機能の詳細を提供**、一部のフィールドが自動設定から、 *source.extension.vsixmanifest*拡張機能からのファイル。 以下のそれぞれについて詳細を検索するには。
 
-    * **内部名**拡張機能の詳細ページの URL で使用されます。 例については、パブリッシャー名"myname"の下にある拡張機能を発行し、"myextension"である内部名を指定するがの URL"marketplace.visualstudio\.com/items?itemName=myname.myextension"の拡張機能の詳細ページ。
+    * **内部名**拡張機能の詳細ページの URL で使用されます。 例については、発行元名"myname"拡張機能を公開して、「my の拡張」となるように内部の名前を指定する結果の URL"marketplace.visualstudio\.com/items?itemName=myname.myextension"拡張機能の詳細ページです。
     
-    * **表示名**の拡張機能です。  これは自動に設定された source.extension.vsixmanifest ファイルからです。
+    * **表示名**の拡張機能。 この名前はから自動的に設定されます、 *source.extension.vsixmanifest*ファイル。
    
-    * **バージョン**をアップロードする拡張機能の数。  これは自動に設定された source.extension.vsixmanifest ファイルからです。
+    * **バージョン**をアップロードする拡張機能の数。 このバージョンはから自動的に設定されます、 *source.extension.vsixmanifest*ファイル。
     
-    * **VSIX ID** Visual Studio は拡張機能を使用する一意の識別子を指定します。  自動更新する、拡張子が付いている場合に必要です。  これは自動に設定された source.extension.vsixmanifest ファイルからです。
+    * **VSIX ID**拡張機能の Visual Studio を使用する一意の識別子です。 自動的に更新され、拡張機能がある場合、この識別子が必要です。 この識別子は、自動設定から、 *source.extension.vsixmanifest*ファイル。
     
-   * **ロゴ**して拡張機能を使用します。  指定した場合は、source.extension.vsixmanifest ファイルの自動設定されたこのになります。
+   * **ロゴ**拡張機能に使用されます。 このロゴはから自動的に設定されます、 *source.extension.vsixmanifest*ファイル指定されている場合。
     
-    * **短い説明文**は、拡張機能の内容。  Source.extension.vsixmanifest ファイルの自動設定されたこのになります。
+    * **短い説明文**は、拡張機能の内容。 この説明はから自動的に設定されます、 *source.extension.vsixmanifest*ファイル。
     
-    * **概要**スクリーン ショットと拡張機能の動作に関する詳細な情報を含めることをお勧めします。
+    * **概要**スクリーン ショットと、拡張機能の動作に関する詳細な情報を含めることをお勧めします。
     
-    * **サポートされている Visual Studio バージョン**拡張機能は Visual Studio のバージョンで動作を選択することができます。  拡張機能は、これらのバージョンにのみインストールされます。
+    * **サポートされている Visual Studio バージョン**拡張機能は Visual Studio のバージョンで動作を選択できます。 拡張機能は、これらのバージョンにのみインストールされます。
     
-    * **サポートされている Visual Studio エディション**どのエディションの Visual Studio 拡張機能で動作を選択することができます。  拡張機能は、これらのエディションにのみインストールされます。
+    * * * Visual Studio のエディションでは、拡張機能が取り組む Visual Studio のエディションを選択できます。 サポートされています。 拡張機能は、これらのエディションにのみインストールされます。
     
-    * **[種類]**。  拡張機能の最も一般的な型は**ツール**です。
+    * **[種類]**。 拡張機能の最も一般的な型は**ツール**します。
     
-    * **カテゴリ**です。  最大 3 つの拡張機能に最適なであるを選択します。
+    * **カテゴリ**します。 拡張機能に最適なは最大 3 の種類を選択します。
     
-    * **タグ**キーワードによってユーザーは、拡張機能を検索します。 タグは、Marketplace で、拡張機能の検索の適合性を向上できます。
+    * **タグ**キーワードによってユーザーは、拡張機能を検索します。 タグは、Marketplace で、拡張機能の検索の関連性を向上させることができます。
     
-    * **カテゴリの料金**拡張機能のコストします。
+    * **価格カテゴリ**拡張機能のコストです。
     
     * **ソース コード リポジトリ**コミュニティで、ソース コードへのリンクを共有することができます。
     
-    * **拡張機能の Q & A を許可する**によりユーザーは、拡張機能エントリ ページ上の質問のままにします。
+    * **拡張機能の Q & A を許可する**拡張機能のエントリ ページに質問を残すことができます。
 
-9. をクリックして**保存およびアップロード**です。 これは、操作により、パブリッシャーへの管理 ページ。  拡張機能はまだ公開されていません。  拡張機能と選択 を右クリックし、拡張機能を公開する**公開**です。  どの拡張機能のようになります Marketplace でを選択して表示できます**表示拡張機能**します。  買収番号 をクリックして**レポート**です。  をクリックして拡張機能を変更するには、**編集*です。
+9. クリックして**を保存してアップロード**します。 このオプションにより、パブリッシャーには、ページを管理します。 拡張機能はまだ公開されていません。 拡張機能を公開するには、拡張機能を選択しますを右クリックして**公開**します。 どの拡張機能のようになります Marketplace でを選択して表示できます**拡張機能の表示**します。 購入の数字、 をクリックして**レポート**します。 拡張機能を変更するには、をクリックして**編集**します。
 
-  ![拡張機能エントリ メニュー](media/extension-entry-menu.png)
+  ![エントリの拡張機能メニュー](media/extension-entry-menu.png)
 
-10. クリックした後**公開**、拡張機能がパブリックようになりました。  拡張機能の Visual Studio Marketplace を検索します。
+10. クリックすると**公開**、拡張機能がパブリックになりました。 拡張機能の Visual Studio Marketplace を検索します。
 
-## <a name="add-additional-users-to-manage-your-publisher-account"></a>発行元のアカウントを管理するユーザーを追加します。
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>発行元アカウントを管理するユーザーを追加します。
 
-Marketplace は、アクセスし、発行元のアカウントを管理するその他のユーザー権限の許可をサポートします。
+Marketplace では、アクセスし、発行元アカウントを管理するその他のユーザー権限の付与をサポートします。
 
 1. ユーザーを追加するパブリッシャーのアカウントに移動します。
 
-2. 選択**メンバー**  をクリック**追加**
+2. 選択**メンバー**  をクリック**追加**します。
 
   ![追加のユーザーを追加します。](media/add-users.png)
 
-3. 追加し、適切なレベルの下にあるアクセスを付与するユーザーの電子メール アドレスを指定できます**ロールを選択して**です。  次のオプションから選択できます。
+3. 追加し、適切なレベルのアクセスを付与するユーザーの電子メール アドレスを指定することができますし、**ロールを選択**します。  次のオプションから選択できます。
 
-  * **作成者**: ユーザーの拡張機能を公開ができない表示または管理できる他のユーザーによって公開された拡張機能です。
+  * **作成者**: ユーザーから、拡張機能を公開できますが、表示ことはできません、または他のユーザーによって発行された拡張機能を管理します。
   
-  * **リーダー**: ユーザーから、拡張機能の表示しますが、パブリッシュことはできません、または拡張機能を管理します。
+  * **リーダー**: ユーザーから、拡張機能を表示できますが発行ことはできません、または拡張機能を管理します。
   
-  * **共同作成者**: ユーザーをパブリッシュし、拡張機能を管理ことはできませんパブリッシャーの設定を編集またはアクセスを管理します。
+  * **共同作成者**: ユーザー発行し、拡張機能の管理ことはできませんパブリッシャーの設定を編集したり、アクセスを管理します。
   
-  * **所有者**: ユーザーが発行し拡張機能を管理、パブリッシャーの設定を編集してのアクセスを管理します。
+  * **所有者**: ユーザーが発行し、拡張機能の管理、パブリッシャーの設定を編集およびアクセスを管理します。
   
-## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から、拡張機能をインストールします。
+## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から拡張機能をインストールします。
 
-これで、拡張機能を発行すると、Visual Studio にインストールし、テストします。
+これで、拡張機能を公開すると、Visual Studio にインストールし、テストします。
 
-1. Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新しています.**.
+1. Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新**します。
 
-2. をクリックして**オンライン**TestPublish を検索します。
+2. クリックして**オンライン**し検索**TestPublish**します。
 
-3. **[ダウンロード]** をクリックします。 拡張機能は、インストールのスケジュールされます。
+3. **[ダウンロード]** をクリックします。 拡張機能は、インストールのスケジュール設定します。
 
 4. インストールを完了するには、Visual Studio のすべてのインスタンスを閉じます。
 
 ## <a name="remove-the-extension"></a>拡張機能を削除します。
 
-お使いのコンピューターと Visual Studio Marketplace から、拡張機能を削除できます。
+お使いのコンピューターと、Visual Studio Marketplace から拡張機能を削除できます。
 
-### <a name="to-remove-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から、拡張機能を削除するには
+### <a name="to-remove-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から拡張機能を削除するには
 
-1. 開く、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) web サイトです。
+1. 開く、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) web サイト。
 
-2. 右上隅にあるをクリックして**発行**拡張機能です。  TestPublish を発行するために使用するパブリッシャーを選択します。  TestPublish の一覧が表示されます。
+2. 右上隅にある次のようにクリックします。**発行**拡張機能。 発行するために使用するパブリッシャーを選択**TestPublish**します。 一覧で**TestPublish**が表示されます。
 
-3. 拡張機能エントリを右クリックし、をクリックして**削除**拡張機能を削除することを確認するように求められます。  **[OK]** をクリックします。
+3. 拡張機能のエントリを右クリックし、をクリックして**削除**します。 拡張機能を削除するかどうかの確認を求められます。 **[OK]** をクリックします。
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>お使いのコンピューターから、拡張機能を削除するには
 
-1. Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新しています.**.
+1. Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新**します。
 
-2. TestPublish を選択し、クリックして**アンインストール**です。 拡張機能は、アンインストールがスケジュールされます。
+2. 選択**TestPublish**し**アンインストール**します。 拡張機能からアンインストールされる予定です。
 
 3. アンインストールを完了するには、Visual Studio のすべてのインスタンスを閉じます。
