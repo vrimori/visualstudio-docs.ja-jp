@@ -28,14 +28,14 @@
 #### [Power BI Pro ](vs-pbi.md)
 #### [最新の Requirements4TFS](vs-modernreq.md)
 #### [Azure 重量課金](vs-azure-payg.md)
-### プロフェッショナルな開発
+### [プロフェッショナルな開発](professional-development.md)
 #### [LinkedIn Learning](vs-linkedin-learning.md)
 #### [DataCamp](vs-datacamp.md)
 #### [Opsgility](vs-opsgility.md)
 #### [Pluralsight](vs-pluralsight.md)
 #### [Xamarin University トレーニング](vs-xamarin.md)
 #### [MSDN マガジンの定期購読](vs-msdn.md)
-### サポートの特典
+### [サポートの特典](technical-support.md)
 #### [Azure Advisory Chat](vs-azure-advisory-chat.md)
 #### [Azure コミュニティ](vs-azure-community.md)
 #### [テクニカル サポート](vs-tech-support.md)
