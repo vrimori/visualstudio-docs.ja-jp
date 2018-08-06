@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34f7bdcf682e1baf928d3a36a828aeaafcb6d801
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: fb117a10a7f736e36b30806adfc5e07fe0b8aecf
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39231500"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512254"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 の機能拡張の変更
 
@@ -97,7 +97,8 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
   * **Hklm \software\microsoft\visualstudio\{バージョン}**: MSI インストーラーとコンピューター単位の拡張機能によって作成されたレジストリ キー。
   * **Hkcu \software\microsoft\visualstudio\{バージョン}**: ユーザーに固有の設定を格納する Visual Studio によって作成されたレジストリ キー。
   * **Hkcu \software\microsoft\visualstudio\{バージョン} _Config**: から、上の Visual Studio HKLM キーとレジストリ キーのコピーにマージされた *.pkgdef*拡張機能によってファイル。
-* レジストリへの影響を減らすためには、Visual Studio を今すぐ使用して、 [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx)プライベート バイナリ ファイルの下にレジストリ キーを格納する関数 *[VSAPPDATA]\privateregistry.bin*します。 Visual Studio 固有のキーの数が非常に小さいだけは、システム レジストリに残ります。
+* レジストリへの影響を減らすためには、Visual Studio を今すぐ使用して、 [RegLoadAppKey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya)プライベート バイナリ ファイルの下にレジストリ キーを格納する関数 *[VSAPPDATA]\privateregistry.bin*します。 Visual Studio 固有のキーの数が非常に小さいだけは、システム レジストリに残ります。
+
 * Visual Studio プロセス内で実行されている既存のコードは影響はありません。 Visual Studio は、HKCU Visual Studio に固有のキーの下のすべてのレジストリ操作をプライベート レジストリにリダイレクトされます。 その他のレジストリの場所に対する読み取りと書き込みは、システム レジストリを使用して続けます。
 * 外部コードを読み込むし、Visual Studio のレジストリ エントリには、このファイルから読み取る必要があります。
 

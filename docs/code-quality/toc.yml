@@ -28,13 +28,18 @@
   items:
     - name: マネージド コードのコード分析
       items:
+        - name: FxCop からの移行
+          href: fxcop-analyzers.yml
+          items:
+            - name: FxCop アナライザーのインストール
+              href: install-fxcop-analyzers.md
         - name: Roslyn アナライザーのインストール
           href: install-roslyn-analyzers.md
         - name: Roslyn アナライザーの構成と使用
           href: use-roslyn-analyzers.md
-        - name: 自動コード分析の有効化
+        - name: 自動コード分析を有効にする
           href: how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md
-        - name: 完全ソリューション解析の有効化
+        - name: 完全ソリューション解析を有効にする
           href: how-to-enable-and-disable-full-solution-analysis-for-managed-code.md
         - name: 自動機能の中断
           href: automatic-feature-suspension.md
