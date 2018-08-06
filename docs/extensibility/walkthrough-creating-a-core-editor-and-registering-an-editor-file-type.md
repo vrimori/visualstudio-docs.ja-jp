@@ -1,5 +1,5 @@
 ---
-title: コア エディターを作成して、エディター ファイルの種類を登録する |Microsoft ドキュメント
+title: コア エディターを作成してエディター ファイルの種類を登録する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,41 +13,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6bb9b9443a60e54d875d6e3992a18ac1f0691244
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc947f68dc5c220ec0bd1ecd035e2089881a80ea
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31147410"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498673"
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターを作成して、エディター ファイルの種類を登録します。
-このチュートリアルを開始する VSPackage を作成する方法を示しています、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターと .myext ファイル名拡張子を持つファイルが読み込まれています。  
+# <a name="walkthrough-create-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターとエディター ファイルの種類の登録を作成します。
+このチュートリアルを開始する VSPackage を作成する方法について説明、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターでファイルがいつ、 *.myext*ファイル名拡張子が読み込まれます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  
   
 ## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio パッケージ プロジェクト テンプレートの場所  
  Visual Studio パッケージのプロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログの次の 3 つの場所にあります。  
   
-1.  Visual Basic の機能拡張の下。 プロジェクトの既定の言語は Visual Basic です。  
+1.  **Visual Basic の拡張機能**の下。 プロジェクトの既定の言語は Visual Basic です。  
   
-2.  C# の機能拡張の下。 プロジェクトの既定の言語は C# です。  
+2.  **C# の拡張機能**の下。 プロジェクトの既定の言語は C# です。  
   
-3.  その他のプロジェクトの種類の機能拡張の下。 プロジェクトの既定の言語は C++ です。  
+3.  **その他のプロジェクトの種類の拡張機能**の下。 プロジェクトの既定の言語は C++ です。  
   
 ### <a name="to-create-the-vspackage"></a>VSPackage を作成するには  
   
--   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]いう名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンドの VSPackage を作成する](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)です。  
+-   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]という名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンド VSPackage を作成する](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)します。  
   
 ### <a name="to-add-the-editor-factory"></a>エディター ファクトリを追加するには  
   
-1.  右クリックし、 **MyPackage**プロジェクトをポイントし、**追加** をクリックし、**クラス**です。  
+1.  右クリックし、 **MyPackage**プロジェクトをポイントして、**追加**、 をクリックし、**クラス**します。  
   
-2.  **新しい項目の追加** ダイアログ ボックスで確認、**クラス**テンプレートが選択されている型`EditorFactory.cs` をクリックし、名前の**追加**をプロジェクトにクラスを追加します。  
+2.  **新しい項目の追加** ダイアログ ボックスに、必ず、**クラス**テンプレートを選択すると、型`EditorFactory.cs`名、およびクリック**追加**をプロジェクトにクラスを追加します。  
   
-     EditorFactory.cs ファイルを自動的に開く必要があります。  
+     *EditorFactory.cs*ファイルが自動的に開く必要があります。  
   
-3.  コードから次のアセンブリを参照します。  
+3.  コードから、次のアセンブリを参照します。  
   
     ```vb  
     Imports System.Runtime.InteropServices  
@@ -70,9 +70,9 @@ ms.locfileid: "31147410"
   
     ```  
   
-4.  GUID の追加、`EditorFactory`クラスを追加して、`Guid`クラス宣言の直前の属性です。  
+4.  追加するのには、GUID、`EditorFactory`クラスを追加することで、`Guid`クラス宣言の直前の属性。  
   
-     Guidgen.exe プログラムを使用して、新しい GUID を生成することができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトでは、やをクリックして**GUID の作成**上、**ツール**メニュー。 ここで使用される GUID は一例です。プロジェクトでは使用しないでください。  
+     使用して、新しい GUID を生成することができます、 *guidgen.exe*でプログラムを[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コマンド プロンプトでは、またはをクリックして**GUID の作成**上、**ツール**メニュー。 ここで使用される GUID はほんの一例です。プロジェクトでは使用しないでください。  
   
     ```vb  
     <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
@@ -82,7 +82,7 @@ ms.locfileid: "31147410"
     [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
     ```  
   
-5.  クラス定義では、親パッケージと、サービス プロバイダーを格納する 2 つのプライベート変数を追加します。  
+5.  クラスの定義では、親パッケージとサービス プロバイダーを格納するための 2 つのプライベート変数を追加します。  
   
     ```vb  
     Class EditorFactory  
@@ -114,7 +114,7 @@ ms.locfileid: "31147410"
     }  
     ```  
   
-7.  変更、`EditorFactory`クラスから派生する宣言、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイスです。  
+7.  変更、`EditorFactory`クラスから派生する宣言、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
   
     ```vb  
     Class EditorFactory Implements IVsEditorFacto  
@@ -125,9 +125,9 @@ ms.locfileid: "31147410"
   
     ```  
   
-8.  右クリック<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>をクリックして**インターフェイスの実装**、順にクリック**インターフェイスを明示的に実装**です。  
+8.  右クリック<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>、 をクリックして**インターフェイスの実装**、 をクリックし、**インターフェイスを明示的に実装**します。  
   
-     これにより、追加で実装する必要がある 4 つのメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイスです。  
+     この手順で実装する必要がある 4 つのメソッドを追加します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。  
   
 9. `IVsEditorFactory.Close` メソッドの内容を次のコードに置き換えます。  
   
@@ -321,18 +321,18 @@ ms.locfileid: "31147410"
   
 ### <a name="to-register-the-editor-factory"></a>エディター ファクトリを登録するには  
   
-1.  **ソリューション エクスプ ローラー**、Resources.resx ファイルを文字列テーブルを開くことをダブルクリックしてエントリ**String1 が**選択します。  
+1.  **ソリューション エクスプ ローラー**をダブルクリック、 **Resources.resx**これで、文字列テーブルを開くファイルをエントリ**String1 が**選択されています。  
   
-2.  識別子の名前を変更`IDS_EDITORNAME`および**MyPackage エディターです。** この文字列は、エディターの名前として表示されます。  
+2.  識別子の名前を変更`IDS_EDITORNAME`とテキストを**MyPackage エディター。** この文字列は、エディターの名前として表示されます。  
   
-3.  VSPackage.resx ファイルを開き、新しい追加文字列の名前を設定します**101**し、値を`IDS_EDITORNAME`です。 これは、作成した文字列にアクセスするリソース ID を持つパッケージを提供します。  
+3.  開く、 **VSPackage.resx**ファイル、新しい文字列を追加、名前に設定します**101**、値を設定および`IDS_EDITORNAME`します。 この手順では、作成した文字列にアクセスするリソース ID を持つパッケージを提供します。  
   
     > [!NOTE]
-    >  場合は、VSPackage.resx ファイルが含まれる別の文字列を`name`属性に設定**101**、セクションと、次の手順では、別の一意の数値の値を置き換えます。  
+    >  場合、 **VSPackage.resx**ファイルを含む別の文字列を`name`属性に設定**101**では、次の手順は、別の一意の数値の値を置き換えてください。  
   
-4.  **ソリューション エクスプ ローラー**、MyPackagePackage.cs ファイルを開きます。  
+4.  **ソリューション エクスプ ローラー**、オープン、 **MyPackagePackage.cs**ファイル。  
   
-     これは、メイン パッケージ ファイルです。  
+     このファイルは、メイン パッケージ ファイルです。  
   
 5.  直前に次のユーザー属性を追加、`Guid`属性。  
   
@@ -348,9 +348,9 @@ ms.locfileid: "31147410"
           ".myext", 32, NameResourceID = 101)]   
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性関連付けます .myext ファイル拡張子、エディター ファクトリを拡張機能が読み込まれ、エディター ファクトリが呼び出されるを持つファイルをいつでもできるようにします。  
+     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>属性に関連付け、 *.myext*ファイル エディター ファクトリは、拡張機能にいつでも拡張機能が読み込まれる、エディター ファクトリが呼び出されることを持つファイル。  
   
-6.  プライベート変数の追加、`MyPackage`クラス、コンス トラクターの直前にし、型を付けます`EditorFactory`です。  
+6.  プライベート変数の追加、 `MyPackage` 、コンス トラクターの直前に、クラスし、型を付けます`EditorFactory`します。  
   
     ```vb  
     Private editorFactory As EditorFactory  
@@ -360,7 +360,7 @@ ms.locfileid: "31147410"
     private EditorFactory editorFactory;  
     ```  
   
-7.  検索、`Initialize`メソッド (を開く必要があります、`Package Members`非表示の領域) を呼び出した後、次のコードを追加および`base.Initialize()`です。  
+7.  検索、`Initialize`メソッド (を開く必要があります、`Package Members`非表示の領域) を呼び出した後、次のコードを追加および`base.Initialize()`します。  
   
     ```vb  
     'Create our editor factory and register it.   
@@ -377,25 +377,25 @@ ms.locfileid: "31147410"
   
 8.  プログラムをコンパイルして、エラーがないかどうかを確認します。  
   
-     この手順では、エディター ファクトリを登録の実験用レジストリ ハイブ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 Resource.h ファイルを上書きするメッセージが表示されたら、クリックして**OK**です。  
+     この手順の実験用のレジストリ ハイブでエディター ファクトリを登録します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 オーバーライドするメッセージが表示されたら、 *resource.h*ファイルで、をクリックして**OK**します。  
   
-9. TextFile1.myext をという名前のサンプル ファイルを作成します。  
+9. という名前のサンプル ファイルを作成する*TextFile1.myext*します。  
   
-10. キーを押して**f5 キーを押して**の実験用インスタンスを開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。  
+10. キーを押して**F5**の実験用インスタンスを開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
   
-11. 実験用[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ファイル** メニューのをポイント**開く** をクリックし、**ファイル**です。  
+11. 実験用[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ファイル**メニューで、**オープン**順にクリックします**ファイル**します。  
   
-12. TextFile1.myext を見つけてクリックして**開く**です。  
+12. 検索**TextFile1.myext**  をクリックし、**オープン**します。  
   
-     ファイルを読み込むようになりました。  
+     ファイルを読み込むようになりました必要があります。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターは、さまざまなテキスト ベースのファイルの種類とかっこの照合、構文の強調表示などの機能の豊富なセットを提供する言語サービスと IntelliSense の単語補完とメンバー完了リストと密接に連携を処理します。 テキスト ベースのファイルで作業している場合、特定のファイルの種類をサポートするカスタム言語サービスと共にコア エディターを使用できます。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディターがさまざまな構文の強調表示、かっこの一致、および IntelliSense の単語補完などの機能の豊富なセットを提供するには、テキスト ベースのファイルの種類と言語サービスと密接に連携を処理し、メンバー入力候補が一覧表示されます。 テキスト ベースのファイルを使用すると、特定のファイルの種類をサポートするカスタムの言語サービスのコア エディターを使用することができます。  
   
- VSPackage が呼び出すことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディター ファクトリを指定することによってコア エディターです。 このエディター ファクトリはそれに関連付けられているファイルが読み込まれるたびに使用します。 ファイルがプロジェクトの一部である場合は、コア エディターが自動的に呼び出され、VSPackage によってオーバーライドされない限り、します。 ただし、ファイルがプロジェクトの外側で読み込まれている場合、コア エディター必要があります明示的に呼び出す、VSPackage によってです。  
+ VSPackage が呼び出すことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディター ファクトリを指定することによって、コア エディター。 このエディターのファクトリは、それに関連付けられているファイルが読み込まれるたびに使用されます。 ファイルがプロジェクトの一部である場合は、VSPackage によってオーバーライドされない限り、コア エディターが自動的に起動します。 ただし、プロジェクトの外側で、ファイルを読み込んだ場合、コア エディターする必要があります明示的に呼び出す、VSPackage によって。  
   
- コア エディターの詳細については、次を参照してください。 [、コア エディター内](../extensibility/inside-the-core-editor.md)です。  
+ コア エディターの詳細については、次を参照してください。[コア エディター内で](../extensibility/inside-the-core-editor.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [コア エディター内](../extensibility/inside-the-core-editor.md)   
- [レガシ API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)
+ [コア エディター](../extensibility/inside-the-core-editor.md)   
+ [従来の API を使用して、コア エディターをインスタンス化します。](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

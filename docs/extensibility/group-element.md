@@ -1,5 +1,5 @@
 ---
-title: 要素をグループ化 |Microsoft ドキュメント
+title: 要素をグループ化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,56 +14,56 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 184bb709d25c55adcc34e73b6df1ac5f4a2448bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2dad2781a0d8231c40ad16dd2c5bd2a7a0905cd3
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129158"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497109"
 ---
 # <a name="group-element"></a>Group 要素
-VSPackage のコマンドのグループを定義します。  
+VSPackage のコマンド グループを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">  
   <Parent>... </Parent>  
 </Group>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|guid|必須。 GUID と ID コマンド id の GUID です。|  
-|ID|必須。 GUID と ID のコマンド識別子の ID です。|  
-|priority|任意。 優先順位を指定する数値。|  
-|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)です。|  
+|guid|必須。 コマンド id を GUID と ID の GUID です。|  
+|ID|必須。 コマンド id を GUID と ID の ID。|  
+|priority|任意。 優先度を示す数値。|  
+|条件|任意。 参照してください[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|親|任意。 ボタンの親要素です。|  
+|親|任意。 ボタンの親要素。|  
 |注釈|省略可能なコメント。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンドのグループを定義するエントリが含まれています。|  
+|[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンド グループを定義するエントリが含まれています。|  
   
 ## <a name="example"></a>例  
   
-```  
+```xml  
 <Group guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit">  
   <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_MAINMENU"/>  
 </Group>  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

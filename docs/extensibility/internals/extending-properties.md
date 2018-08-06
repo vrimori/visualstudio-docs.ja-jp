@@ -1,5 +1,5 @@
 ---
-title: プロパティを拡張 |Microsoft ドキュメント
+title: プロパティの拡張 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,57 +13,57 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1a34edfbc6cede24f3238068549412d630827cd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77b5861dd084098e561f3642b5738dd0279d4b52
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31131663"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512110"
 ---
-# <a name="extending-properties"></a>拡張プロパティ
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウはすべてサポートしています、COM と COM + コンポーネントのユニバーサル プロパティ ブラウザー[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]製品です。 **プロパティ**ウィンドウは`ITypeInfo`情報および COM + 統合開発環境 (IDE) でその他のウィンドウで現在選択されているオブジェクトのデザイン時プロパティの一覧にメタデータを入力します。  
+# <a name="extend-properties"></a>拡張プロパティ
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **プロパティ**ウィンドウはすべてサポートしています、COM と COM + コンポーネントのユニバーサル プロパティ ブラウザーを[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]製品です。 **プロパティ**ウィンドウは`ITypeInfo`情報および COM + 統合開発環境 (IDE) でその他のウィンドウで現在選択されているオブジェクトのデザイン時プロパティの一覧にメタデータを入力します。  
   
- **プロパティ**ウィンドウで開くことができます、キーボードの F4 キーを押すかを選択して**プロパティ ウィンドウ**上、**ビュー**を表示および編集 メニューを使用構成に依存しない、デザイン時のプロパティおよび選択したオブジェクトのイベントです。 ソリューションやプロジェクトに関連付けられている構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)です。 詳細については、[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)です。  
+ **プロパティ**ウィンドウで、キーを押して開くことができます**F4** 、キーボードの選択または**プロパティ ウィンドウ**上、**ビュー**  メニューの 構成に依存しない、デザイン時のプロパティとイベントを選択したオブジェクトの表示および編集に使用されます。 ソリューションやプロジェクトの関連付けの構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)します。 詳細については、[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)します。  
   
  ![プロパティ ウィンドウの概要](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 [プロパティ] ウィンドウ  
   
- このセクションの個々 の領域に関連する詳細な情報を提供する、**プロパティ**ウィンドウとインターフェイスを実装する必要がありますを呼び出すと、ウィンドウを設定します。  
+ このセクションの個々 の領域に関連する詳細な情報を提供する、**プロパティ**ウィンドウと、ウィンドウの設定への呼び出し、インターフェイスを実装する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プロパティ ウィンドウの概要](../../extensibility/internals/properties-window-overview.md)  
- 目的について説明、**プロパティ**ウィンドウのツール ウィンドウおよびドキュメント ウィンドウと比較しています。  
+ 目的について説明します、**プロパティ**ツール ウィンドウとドキュメント ウィンドウのウィンドウ。  
   
- [テンプレート ポリシーとプロパティ ウィンドウ](../../extensibility/internals/template-policy-and-the-properties-window.md)  
- エンタープライズ テンプレート プロジェクトでは、プロジェクトが含まれている方法と、そのエンタープライズ テンプレート プロジェクトがポリシーを適用する方法について説明します。  
+ [テンプレートのポリシーと、[プロパティ] ウィンドウ](../../extensibility/internals/template-policy-and-the-properties-window.md)  
+ エンタープライズ テンプレート プロジェクトで、プロジェクトが含まれている方法と、そのエンタープライズ テンプレート プロジェクトがポリシーを適用する方法について説明します。  
   
  [プロパティ ウィンドウのフィールドとインターフェイス](../../extensibility/internals/properties-window-fields-and-interfaces.md)  
- 表示される情報を決定する選択範囲の基礎について説明します、**プロパティ**ウィンドウです。  
+ 表示される情報を決定する選択範囲の基礎について説明します、**プロパティ**ウィンドウ。  
   
- [プロパティ ウィンドウのオブジェクト一覧](../../extensibility/internals/properties-window-object-list.md)  
- 目的を記述、**プロパティ**ウィンドウ オブジェクトの一覧を記述する方法については、この一覧から別のオブジェクトには、呼び出しがトリガーされたときに、環境十分な情報に基づいて、新しいオブジェクトが選択されています。  
+ [プロパティ ウィンドウのオブジェクトの一覧](../../extensibility/internals/properties-window-object-list.md)  
+ 目的について説明します、**プロパティ**ウィンドウ オブジェクトのリストを記述する方法については、この一覧から別のオブジェクトの呼び出しがトリガーされると、環境は通知新しいオブジェクトが選択されています。  
   
  [プロパティ ウィンドウのボタン](../../extensibility/internals/properties-window-buttons.md)  
- 表示される 4 つの既定のボタンの説明、**プロパティ**ウィンドウのツールバー。  
+ 表示される 4 つの既定のボタンの目的について説明します、**プロパティ** ウィンドウのツールバー。  
   
- [プロパティ表示グリッド](../../extensibility/internals/properties-display-grid.md)  
- ここで、プロパティ名とプロパティ値フィールドは、「グリッドについて説明します。  
+ [プロパティ グリッドの表示](../../extensibility/internals/properties-display-grid.md)  
+ グリッドのプロパティの名前とプロパティの値のフィールドが検出された場所について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [プロジェクト タイプ](../../extensibility/internals/project-types.md)  
- プロジェクトのビルド ブロックとしてについて説明して、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE です。  
+ [プロジェクトの種類](../../extensibility/internals/project-types.md)  
+ 構成要素としてプロジェクトについて説明します、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE。  
   
- [コードのコンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)  
- 使用する方法について説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]プラットフォームを継続的にテストし、それらを作成すると、アプリケーションをデバッグします。  
+ [コンパイルとビルド](../../ide/compiling-and-building-in-visual-studio.md)  
+ 使用する方法について説明します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]継続的にテストし、アプリケーションを作成、アプリケーションをデバッグするためのプラットフォームです。  
   
- [IDispatch](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx)  
- について説明します、`IDispatch`インターフェイスで、最初にアクセスして、メソッドとオブジェクトのプロパティに関する情報を取得する遅延バインディング メカニズムを提供するオートメーションをサポートするように設計されました。  
+ [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)  
+ について説明します、 `IDispatch` 、最初にアクセスして、メソッドとオブジェクトのプロパティに関する情報を取得する遅延バインディング メカニズムを提供するオートメーションをサポートするために設計されたインターフェイスです。  
   
- [アプリケーションの設定 (.NET) の管理](../../ide/managing-application-settings-dotnet.md)  
- プロパティの値は、アプリケーションのコンパイル済みコードの代わりに、外部構成ファイルに格納されるように、アプリケーションを構成できるアプリケーションの設定の概要を示します。  
+ [アプリケーション設定の管理 (.NET)](../../ide/managing-application-settings-dotnet.md)  
+ アプリケーションのコンパイル済みコードではなく、外部構成ファイルでプロパティ値が格納されているように、アプリケーションを構成できるアプリケーションの設定の概要を示します。  
   
  [ソリューションおよびプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)  
- 説明方法[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]参照、データ接続、フォルダー、およびソリューションとプロジェクトを開発作業に必要なファイルなどのアイテムを効率よく管理します。  
+ 説明方法[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]参照、データ接続、フォルダー、およびソリューションとプロジェクトを通じて、開発作業に必要なファイルなどの項目を効率的に管理します。  
   
- [Visual Studio の他の部分の拡張](../../extensibility/extending-other-parts-of-visual-studio.md)  
- 使用する方法について説明します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]の残りの部分に一致する UI 要素を作成するサービス[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。
+ [Visual Studio の他の部分を拡張します。](../../extensibility/extending-other-parts-of-visual-studio.md)  
+ 使用する方法について説明します[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]の残りの部分に一致する UI 要素を作成するサービス[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。

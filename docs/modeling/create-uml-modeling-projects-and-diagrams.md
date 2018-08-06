@@ -12,23 +12,23 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 829114f763be82c776537af7dac1300f809cca0e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e3a8a03daa1aaa05ba15d78e9a85734b73b43f9a
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946209"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511731"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>UML モデリング プロジェクトおよびダイアグラムを作成する
 
-Visual Studio 2017 から始めて、UML デザイナーは、Visual Studio から削除されています。 詳細については、これを参照して[ブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)です。
+Visual Studio 2017 以降では、UML デザイナー向けは、Visual Studio から削除されています。 詳細については、この参照してください。[ブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)します。
 
-UML を使用する場合は、Visual Studio 2015 Enterprise edition は、以降のバージョンの Visual Studio とのサイド バイ サイドの互換性のあるを使用することができます。
+UML を使用する場合は、これ以降のバージョンの Visual Studio とのサイド バイ サイドでの互換性があるは、Visual Studio 2015 Enterprise edition を使用できます。
 
 Visual Studio 2015 での UML の使用方法の詳細についてを参照してください。
 
 * [アーキテクチャを分析およびモデルする](https://msdn.microsoft.com/library/57b85fsc%28v=vs.140%29.aspx)
-* [アプリのモデルを生成する](https://msdn.microsoft.com/library/dd409436%28v=vs.140%29.aspx)
-* [開発プロセス内でのモデルの使用](https://msdn.microsoft.com/library/dd409423%28v=vs.140%29.aspx)
-* [開発時のシステムの検証](https://msdn.microsoft.com/library/dd409448%28v=vs.140%29.aspx)
-* [UML モデルと図の拡張](https://msdn.microsoft.com/library/ee329484%28v=vs.140%29.aspx)
+* [アプリのモデルを生成する](create-models-for-your-app.md)
+* [開発プロセス内でのモデルの使用](use-models-in-your-development-process.md)
+* [開発時のシステムの検証](validate-your-system-during-development.md)
+* [UML モデルと図の拡張](extend-uml-models-and-diagrams.md)

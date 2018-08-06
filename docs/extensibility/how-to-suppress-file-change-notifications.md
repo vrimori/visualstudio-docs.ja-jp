@@ -1,5 +1,5 @@
 ---
-title: '方法: ファイル変更通知を抑制する |Microsoft ドキュメント'
+title: '方法: ファイル変更通知を抑制する |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,38 +13,38 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95821baec7f2f46a65e2ab0f0b0b78b0e397f2ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 28f4c2e2929fecb29da6ddeecdd6cede6b8fa4d7
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128773"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497964"
 ---
 # <a name="how-to-suppress-file-change-notifications"></a>方法: ファイル変更通知を抑制します。
-メッセージとダイアログ ボックスが表示テキスト バッファーを表す物理的なファイルが変更されると**を次の項目への変更を保存するか。** これは、ファイル変更通知と呼ばれます。 多くの変更に場合のファイルへ、ただし、このダイアログ ボックスを繰り返し表示はすぐに面倒な場合。  
+メッセージ テキスト バッファーを表す物理ファイルが変更されたとき ダイアログ ボックスを表示します**次のものに変更を保存しますか?** これは、ファイル変更通知と呼ばれます。 多くの変更が使用する場合、ファイルに、ただし、このダイアログ ボックスを繰り返し表示することがすぐに面倒な場合。  
   
- 次の手順を使用してこのダイアログ ボックスを使用するプログラムで除外できます。 これにより、再読み込みできますファイルすぐに変更を保存するたびにユーザー入力を求める必要はありません。  
+ プログラムで、次の手順を使用してこのダイアログ ボックスを抑制することができます。 ダイアログ ボックスを抑制することで再読み込みできますファイルをすぐにたびに、変更を保存するユーザーに確認する必要はありません。  
   
-### <a name="to-suppress-file-change-notification"></a>ファイル変更通知を抑制するには  
+## <a name="to-suppress-file-change-notification"></a>ファイル変更通知を抑制するには  
   
-1.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A>テキスト バッファー オブジェクトは、開いているファイルに関連付けられたを調べます。  
+1.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A>テキスト バッファー オブジェクトは、開いているファイルに関連付けを調べます。  
   
-2.  直接、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクトを無視するメモリ内を監視しているファイルの変更を取得することによって、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>からインターフェイス、 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (ドキュメント データ) オブジェクト、および実装して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A>メソッドを`fIgnore`パラメーター設定`true`です。  
+2.  直接、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクトが監視しているメモリを無視するファイルの変更を取得して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl>からインターフェイス、 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (ドキュメント データ) オブジェクト、および実装し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A>メソッドを`fIgnore`パラメーター設定`true`します。  
   
-3.  メソッドを呼び出して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>インターフェイス、メモリ内の更新を<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>(ときに、フィールドは、コンポーネントに追加される) などのファイルの変更を持つオブジェクト。  
+3.  メソッドを呼び出して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines>と<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer>インターフェイスでメモリを更新する<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>(ときに、フィールドは、コンポーネントに追加されます) などのファイルの変更を持つオブジェクト。  
   
-4.  保留中の編集中、ユーザーが持っているいずれかを考慮せず、変更内容をディスク上のファイルを更新します。  
+4.  保留中の編集が進行中のユーザーがあります。 いずれかを考慮せず、変更をディスク上のファイルを更新します。  
   
-     これにより、送信すると、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ファイルの監視を再開するオブジェクトの変更通知、メモリ内のテキスト バッファーには、その他のすべての保留中の編集だけでなく、生成した変更が反映されます。 ディスク上のファイルがによって生成された最新のコードを反映し、以前保存されたすべてのユーザーによる変更のコードのユーザーを編集します。  
+     これにより、送信すると、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ファイルの監視を再開するオブジェクトの変更通知、メモリ内のテキスト バッファーには、生成した変更が反映されます。 また、メモリ内のテキスト バッファーには、他のすべての保留中の編集が反映されます。 ディスク上のファイルは、自分で生成された最新のコードを反映し、ユーザーが編集したコードで以前に、ユーザーによる変更を保存いずれかです。  
   
-5.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A>に通知するメソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>ファイル変更通知を設定して監視を再開するオブジェクト、`fIgnore`パラメーターを`false`です。  
+5.  呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A>に通知するメソッド、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクトを設定して、ファイル変更通知の監視を再開する、`fIgnore`パラメーター`false`します。  
   
-6.  ソース コード管理 (SCC) の場合と同様に、ファイルにいくつかの変更を加える場合は、ファイル変更通知を一時的に中断するグローバル ファイル変更サービスを指定する必要があります。  
+6.  ソース コード管理 (SCC) の場合と同様、ファイルにいくつかの変更を加える場合は、ファイル変更通知を一時的に中断するグローバル ファイル変更サービスを伝える必要があります。  
   
-     たとえば、ファイルを書き直して、タイムスタンプを変更すると、別のファイルの変更イベントとして各カウントする、書き換えおよび timestample 操作とファイル変更通知を中断する必要があります。 呼び出す必要はなくグローバル ファイル変更通知を有効にする、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx.IgnoreFile%2A>メソッドです。  
+     たとえば、ファイルを再書き込みするタイムスタンプを変更して場合、書き換えおよびタイムスタンプの操作は、それぞれが別のファイルの変更イベントとしてカウントするため、ファイル変更の通知を中断する必要があります。 グローバル ファイルの変更通知を有効にする必要があります代わりに、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx.IgnoreFile%2A>メソッド。  
   
 ## <a name="example"></a>例  
- ファイル変更通知を抑制する方法を次に示します。  
+ 次のコード例では、ファイル変更通知を抑制する方法を示します。  
   
 ```cpp  
 //Misc. helper classes  
@@ -116,4 +116,4 @@ void CSuspendFileChanges::Resume()
 ```  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- 場合に、SCC の場合と同様に、ファイルに複数の変更が含まれている場合は、アラート ドキュメント データ ファイルの変更の監視を再開する前にグローバル ファイル変更通知を再開する必要があります。
+ ケースには、SCC の場合と同様、ファイルに複数の変更が含まれている場合は、アラート、ドキュメント データ ファイルの変更の監視を再開する前にグローバル ファイル変更通知を再開する必要があります。

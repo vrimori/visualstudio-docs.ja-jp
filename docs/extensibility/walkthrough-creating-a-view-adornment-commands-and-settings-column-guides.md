@@ -1,5 +1,5 @@
 ---
-title: ビューの表示要素、コマンドおよび設定の作成 |Microsoft ドキュメント
+title: ビューの表示要素、コマンドおよび設定の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,76 +11,76 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 57a7696eae0da92d88babf64c580a4767775dffd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7620922bad8f35186beb4086dd3c24a98ada6d34
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31148195"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499992"
 ---
-# <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: 作成ビュー装飾、コマンド、および設定 (列ガイド)
-コマンドのエフェクトの表示と Visual Studio テキストまたはコード エディターを拡張することができます。  このトピックでは、人気のある拡張機能、列ガイドを開始する方法を示します。  列ガイドは、コードを特定の列の幅を管理するために、テキスト エディターのビューに描画される線を視覚的に明るいできます。  具体的には書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについては重要でもあります。  
+# <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: ビューの表示要素、コマンド、および設定 (ガイドを) 作成します。
+コマンドとビューの効果を Visual Studio のテキストまたはコード エディターを拡張することができます。 この記事では、人気のある拡張機能、列ガイドを使用する方法を示します。 列ガイドは、特定の列の幅にコードを管理するために、テキスト エディターのビューに描画される視覚的にライトの線です。 具体的には、書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについてがあります。  
   
- このチュートリアルでは説明します。  
+ このチュートリアルでしました。  
   
 -   VSIX プロジェクトを作成します。  
   
 -   エディター ビューの表示要素を追加します。  
   
--   保存と設定を取得する (場所を列ガイドを描画し、色) のサポートを追加します。  
+-   保存と設定の取得 (どこに描画列ガイドと、色) のサポートを追加します。  
   
--   コマンドを追加 (列ガイドの追加と削除、その色を変更する)  
+-   コマンドの追加 (列ガイドの追加と削除、その色を変更する)  
   
--   テキスト ドキュメントのコンテキスト メニュー、[編集] メニューのコマンドを配置します。  
+-   テキスト ドキュメントのコンテキスト メニューの [編集] メニューで、コマンドを配置します。  
   
--   Visual Studio のコマンド ウィンドウからコマンドを呼び出すためのサポートを追加します。  
+-   Visual Studio コマンド ウィンドウからコマンドを呼び出すためのサポートを追加します。  
   
- この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)です。  
+ この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
   
- **注**: visual studio 拡張機能のテンプレートによって生成されたいくつかのファイルに大量のコードを貼り付けるこのチュートリアルでは、すぐにこのチュートリアルでは github でその他の拡張機能の例の完成したソリューションを参照します。  完成したコードは generictemplate アイコンを使用する代わりに実際のコマンドのアイコンがある点で若干異なります。  
+ **注**: このチュートリアルで Visual Studio 拡張機能テンプレートによって生成されるいくつかのファイルに大量のコードを貼り付けます。 しかし、すぐにこのチュートリアルでは他の拡張機能の例を使用して github で完成したソリューションを参照します。 Generictemplate アイコンを使用する代わりに実際のコマンドのアイコンがあることで、完成したコードは若干異なります。  
   
-## <a name="getting-started"></a>作業の開始  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+## <a name="get-started"></a>作業開始  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
-## <a name="setting-up-the-solution"></a>ソリューションを設定します。  
- 最初 VSIX プロジェクトを作成、エディター ビュー表示要素を追加してコマンドを追加する VSPackage のコマンドは、自分が所有する) を追加します。  基本的なアーキテクチャは次のとおりです。  
+## <a name="set-up-the-solution"></a>ソリューションをセットアップします。  
+ 最初に、VSIX プロジェクトを作成する、エディター ビュー表示要素を追加し (これは、コマンドを所有するために VSPackage を追加) コマンドを追加します。 基本的なアーキテクチャは次のとおりです。  
   
--   テキスト ビュー作成リスナーを作成する必要がある、`ColumnGuideAdornment`ビューごとにオブジェクト。  このオブジェクトがビューの変更についてイベントをリッスンまたは、必要に応じて設定を変更する、更新または再描画列ガイドです。  
+-   テキスト ビュー作成リスナーを作成するがある、`ColumnGuideAdornment`ビューごとにオブジェクト。 このオブジェクトがビューの変更に関するイベントをリッスンまたはの設定変更、列を更新または再描画が必要に応じてガイドします。  
   
--   `GuidesSettingsManager` Visual Studio の設定の記憶域からの読み書きを処理します。  設定マネージャーは、ユーザーのコマンドをサポートしている設定を更新するための操作もあります (列を追加、列の削除、色を変更する)。  
+-   `GuidesSettingsManager` Visual Studio の設定の保存場所から読み取りと書き込みを処理します。 設定マネージャーは、ユーザーのコマンドをサポートする設定を更新するための操作もあります (列を追加、列の削除、色を変更する)。  
   
--   ユーザーのコマンドがある場合に必要な VSIP パッケージがあるが、コマンドの実装オブジェクトを初期化する定型コードのみです。  
+-   ユーザーのコマンドがある場合に必要な VSIP パッケージがありますが、コマンドの実装オブジェクトを初期化する定型コードだけです。  
   
--   `ColumnGuideCommands` .Vsct ファイルで宣言されているユーザーのコマンドを実装して、コマンドのコマンド ハンドラーをフックするオブジェクト。  
+-   `ColumnGuideCommands`ユーザーを実行しているオブジェクトのコマンドで宣言されたコマンドは、コマンド ハンドラーをフック、 *.vsct*ファイル。  
   
- **VSIX**です。  使用して**ファイル &#124; です。新機能 ...** プロジェクトを作成するコマンド。  左側のナビゲーション ウィンドウで c# の機能拡張ノードを選択して、 **VSIX プロジェクト**右側のウィンドウでします。  ColumnGuides の名前を入力し、選択**OK**プロジェクトを作成します。  
+ **VSIX**します。 使用して**ファイル &#124; です。新機能 ...** プロジェクトを作成するコマンド。 選択、**拡張**ノードの下**c#** 左側のナビゲーション ウィンドウで選択**VSIX プロジェクト**右側のペインでします。 名前を入力します**ColumnGuides**選択**OK**プロジェクトを作成します。  
   
- **表示要素の表示**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加&#124;新しい項目の追加.** 新しいビュー装飾項目を追加するコマンド。  選択**機能拡張&#124;エディター**左側のナビゲーション ウィンドウでを選択**エディター ビューポート装飾**右側のウィンドウでします。  項目名として ColumnGuideAdornment 名前を入力し、選択**追加**に追加します。  
+ **装飾の表示**します。 ソリューション エクスプ ローラーでプロジェクト ノードを右ポインター ボタンを押します。 選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。 選択**拡張&#124;エディター**左側のナビゲーション ウィンドウで選択**エディターのビューポート Adornment**右側のウィンドウで。 名前を入力します**ColumnGuideAdornment**項目として名前を指定し、選択**追加**に追加します。  
   
- この項目テンプレート プロジェクト (だけでなく参照およびなど) に 2 つのファイルを追加するを参照してください: ColumnGuideAdornment.cs と ColumnGuideAdornmentTextViewCreationListener.cs です。  テンプレートは、ビュー上だけ紫の四角形を描画します。  以下、いくつかのビューの作成のリスナーに行を変更して ColumnGuideAdornment.cs の内容に置き換えます。  
+ この項目テンプレートのプロジェクト (だけでなく、参照およびなど) に 2 つのファイルを追加するを参照してください: **ColumnGuideAdornment.cs**と**ColumnGuideAdornmentTextViewCreationListener.cs**します。 テンプレートは、ビューで、紫色の四角形を描画します。 次のセクションでは、ビューの作成のリスナー内の行のいくつかの変更し、の内容を置き換えます**ColumnGuideAdornment.cs**します。  
   
- **コマンド**です。  ソリューション エクスプ ローラーでプロジェクト ノードを右のポインター ボタンを押します。  選択、**追加&#124;新しい項目の追加.** 新しいビュー装飾項目を追加するコマンド。  選択**Extensibility &#124; VSPackage**左側のナビゲーション ウィンドウでを選択し、**にカスタム コマンド**右側のウィンドウでします。  項目名として ColumnGuideCommands 名前を入力し、選択**追加**に追加します。  いくつかの参照に加えて ColumnGuideCommands.cs、ColumnGuideCommandsPackage.cs、および ColumnGuideCommandsPackage.vsct コマンドとパッケージを追加する追加されます。  以下を定義し、コマンドの実装の最初と最後のファイルの内容が置き換わります。  
+ **コマンド**します。 **ソリューション エクスプ ローラー**、プロジェクト ノードの右のポインター ボタンを押します。 選択、**追加&#124;新しい項目.** 新しいビューの表示要素項目を追加するコマンド。 選択**拡張&#124;VSPackage**左側のナビゲーション ウィンドウで選択**カスタム コマンド**右側のウィンドウでします。 名前を入力します**ColumnGuideCommands**項目として名前を指定し、選択**追加**します。 コマンドとも追加するパッケージを追加するだけでなく、複数の参照**ColumnGuideCommands.cs**、 **ColumnGuideCommandsPackage.cs**、および**ColumnGuideCommandsPackage.vsct**. 次のセクションでは、定義して、コマンドを実装する最初と最後のファイルの内容を置き換えます。  
   
-## <a name="setting-up-the-text-view-creation-listener"></a>テキスト ビューの作成のリスナーを設定します。  
- ColumnGuideAdornmentTextViewCreationListener.cs をエディターで開きます。  このコードは、for Visual Studio でのテキスト ビューを作成するときにハンドラーを実装します。  ビューの特性に応じて、ハンドラーが呼び出されたときを制御する属性があります。  
+## <a name="set-up-the-text-view-creation-listener"></a>テキスト ビューの作成のリスナーを設定します。  
+ 開いている*ColumnGuideAdornmentTextViewCreationListener.cs*エディターでします。 このコードは、for Visual Studio でのテキスト ビューを作成するたびに、ハンドラーを実装します。 ビューの特性に応じて、ハンドラーが呼び出されたときを制御する属性があります。  
   
- また、コードは、装飾層を宣言しなければなりません。  更新すると、エディター ビュー、ビューの表示要素のレイヤーを取得しをから表示要素の要素を取得します。  属性を持つ他と比較した、レイヤーの順序を宣言することができます。  次の行に置き換えます。  
+ コードは、装飾層も宣言する必要があります。 更新すると、エディター ビュー、ビューの表示要素のレイヤーを取得しをからには、表示要素の要素を取得します。 します。 属性を持つ他と比較した、レイヤーの順序を宣言することができます。 次の行に置き換えます。  
   
 ```csharp  
 [Order(After = PredefinedAdornmentLayers.Caret)]  
 ```  
   
- で 2 つの行。  
+ これらの 2 行。  
   
 ```csharp  
 [Order(Before = PredefinedAdornmentLayers.Text)]  
 [TextViewRole(PredefinedTextViewRoles.Document)]  
 ```  
   
- 交換した行は装飾層を宣言する属性のグループです。   列ガイド線が表示される場所の変更のみが変更した場合、最初の行。  線を描画"前に、ビュー内のテキストの背後にある、またはテキストの下に表示されることを意味します。  2 番目の行を列ガイド表示要素は、概念のドキュメントに合わせてテキスト エンティティに適用されますを宣言します表示要素、たとえば、編集可能なテキストの作業のみを宣言します。  詳細については[言語サービスとエディターの拡張点](../extensibility/language-service-and-editor-extension-points.md)  
+ 交換した行は、装飾層を宣言する属性のグループです。 最初の行の列のガイド線が表示される場所の変更のみを変更しました。 「前」をビュー内のテキストの背後にある、またはテキストの下に表示されることを意味に、します線を描画します。 2 行目では、列ガイドの表示要素は、概念のドキュメントに適合するエンティティをテキストに適用されますが、編集可能なテキストに対してのみ機能するなど、表示要素を宣言する可能性がありますを宣言します。 詳細については、[言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)  
   
-## <a name="implementing-the-settings-manager"></a>設定マネージャーの実装  
- 次のコード (下記参照)、GuidesSettingsManager.cs の内容に置き換えます。  
+## <a name="implement-the-settings-manager"></a>設定マネージャーを実装します。  
+ 内容を置き換える、 *GuidesSettingsManager.cs*を次のコード (詳細は後述)。  
   
 ```csharp  
 using Microsoft.VisualStudio.Settings;  
@@ -331,32 +331,32 @@ namespace ColumnGuides
   
 ```  
   
- このコードのほとんどはだけを作成し、設定の形式を解析して:"RGB (\<int >、\<int >、\<int >) \<int >、 \<int >,..."です。  最後に整数は、列ガイドする 1 から始まる列です。  列ガイド拡張機能は、1 つの設定値の文字列内のすべての設定をキャプチャします。  
+ このコードのほとんどを作成し、設定の形式を解析します:"RGB (\<int >、\<int >、\<int >) \<int >、 \<int >,..."です。  最後に、整数は、列ガイドとなる 1 から始まる列です。 列ガイドの拡張機能は、1 つの設定値の文字列内のすべての設定をキャプチャします。  
   
- 注目すべきコードの一部があります。  次のコード行は、設定の記憶域の Visual Studio のマネージ ラッパーを取得します。  ほとんどの場合、これを Windows レジストリを抽象化が、この API は、記憶域メカニズムに依存しません。  
+ 注目すべきコードの一部があります。 次のコード行では、設定の保存場所の Visual Studio のマネージ ラッパーを取得します。 ほとんどの場合、これを Windows レジストリを抽象化が、この API は、ストレージ メカニズムに依存しません。  
   
 ```csharp  
 internal static SettingsManager VsManagedSettingsManager =  
     new ShellSettingsManager(ServiceProvider.GlobalProvider);  
 ```  
   
- Visual Studio の設定の記憶域は、すべての設定を一意に識別するのに、カテゴリ識別子と設定の識別子を使用します。  
+ Visual Studio のストレージ設定は、すべての設定を一意に識別するために、カテゴリ識別子と設定の識別子を使用します。  
   
 ```csharp  
 private const string _collectionSettingsName = "Text Editor";  
 private const string _settingName = "Guides";  
 ```  
   
- 使用する必要はありません`"Text Editor"`カテゴリとして名、および、選択できる好きなです。  
+ 使用する必要はありません`"Text Editor"`カテゴリ名とします。 好きなデザインを選択することができます。  
   
- 最初のいくつかの関数は、エントリ ポイント設定を変更します。  これらは、許可されているガイドの最大数などの高度な制約を確認します。  呼び出すことが、`WriteSettings`設定文字列を作成し、プロパティを設定する`GuideLinesConfiguration`です。  Visual Studio の設定のストアと起動設定値を保存このプロパティを設定、`SettingsChanged`すべてを更新するイベント、`ColumnGuideAdornment`テキスト ビューに関連付けられている各オブジェクトです。  
+ 最初のいくつかの関数は、設定を変更するエントリ ポイントです。 これらは、許可されているガイドの最大数などの高度な制約を確認します。  次にそれらを呼び出す`WriteSettings`、設定文字列を作成し、プロパティを設定する`GuideLinesConfiguration`します。 Visual Studio 設定ストアと起動設定値を保存しますこのプロパティを設定、`SettingsChanged`すべてを更新するイベント、`ColumnGuideAdornment`テキスト ビューに関連付けられている各オブジェクトします。  
   
- など、いくつかのエントリ ポイント関数がある`CanAddGuideline`設定を変更するコマンドの実装に使用されます。  Visual Studio には、メニューが表示されている場合は、コマンドは現在有効なかどうかは、その名前を表示するコマンドの実装などを照会します。次のコマンドの実装のためのこれらのエントリ ポイントをフックする方法が表示されます。  参照してください[拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)コマンドの詳細についてはします。  
+ など、いくつかのエントリ ポイント関数がある`CanAddGuideline`設定を変更するコマンドを実装するために使用されます。 Visual Studio には、メニューが表示されている場合は、かどうかのコマンドは、有効では、その名前が表示するコマンドの実装と具合を照会します。  次のコマンドの実装には、これらのエントリ ポイントをフックする方法について参照してください。 コマンドの詳細については、次を参照してください。[メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)します。  
   
-## <a name="implementing-the-columnguideadornment-class"></a>ColumnGuideAdornment クラスの実装  
- `ColumnGuideAdornment`修飾を持つことができるテキスト ビューごとにクラスをインスタンス化します。  このクラスがビューの変更についてイベントをリッスンまたは、必要に応じて設定を変更する、更新または再描画列ガイドです。  
+## <a name="implement-the-columnguideadornment-class"></a>ColumnGuideAdornment クラスを実装します。  
+ `ColumnGuideAdornment`を修飾できるテキスト ビューごとにクラスをインスタンス化します。 このクラスは、ビューの変更や設定を変更すると、必要に応じて更新または再描画列ガイドに関するイベントをリッスンします。  
   
- 次のコード (下記参照)、ColumnGuideAdornment.cs の内容に置き換えます。  
+ 内容を置き換える、 *ColumnGuideAdornment.cs*を次のコード (詳細は後述)。  
   
 ```csharp  
 using System;  
@@ -498,33 +498,33 @@ namespace ColumnGuides
 }  
 ```  
   
- このクラスのインスタンスを関連付けられている保持<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>およびの一覧`Line`ビューで描画されるオブジェクト。  
+ このクラスのインスタンスを関連付けられている保持<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>と一連の`Line`ビュー上に描画するオブジェクト。  
   
- コンス トラクター (から呼び出される`ColumnGuideAdornmentTextViewCreationListener`Visual Studio での新しいビューを作成するときに) 列ガイドを作成`Line`オブジェクト。  コンス トラクターものハンドラーを追加、`SettingsChanged`イベント (で定義されている`GuidesSettingsManager`) と、イベントを表示する`LayoutChanged`と`Closed`です。  
+ コンス トラクター (から呼び出される`ColumnGuideAdornmentTextViewCreationListener`Visual Studio で新しいビューを作成するときに) 列ガイドを作成します。`Line`オブジェクト。  コンス トラクターものハンドラーを追加、`SettingsChanged`イベント (で定義されている`GuidesSettingsManager`) とイベントの表示`LayoutChanged`と`Closed`します。  
   
- `LayoutChanged`いくつかの種類のビューでは、Visual Studio は、ビューを作成する場合などの変更のためのイベントが発生します。  `OnViewLayoutChanged`ハンドラーの呼び出し`AddGuidelinesToAdornmentLayer`を実行します。  内のコード`OnViewLayoutChanged`などのフォント サイズの変更、ビューのとじしろ、水平スクロールの変更に基づいて行の位置を更新する必要があるかどうかを決定します。  内のコード`UpdatePositions`文字またはテキストの行に指定された文字のオフセット内にあるテキストの列の直後後を描画するガイドラインをによりします。  
+ `LayoutChanged`いくつかの種類など、Visual Studio は、ビューを作成するときに、ビュー内の変更のためのイベントが発生します。 `OnViewLayoutChanged`ハンドラー呼び出し`AddGuidelinesToAdornmentLayer`を実行します。 コードでは、`OnViewLayoutChanged`フォント サイズを変更、ビューのとじしろ、水平方向にスクロール、および具合などの変更に基づく行の位置を更新することが必要と判断します。 コードでは、`UpdatePositions`文字またはテキストの行で指定された文字のオフセット内にあるテキストの列の直後後に描画するために、ガイド線をによりします。  
   
- 設定を変更するたびに、`SettingsChanged`関数だけでは再作成すべて、`Line`な新しい設定を持つオブジェクト。  行の位置を設定した後、コードを以前のすべて削除`Line`オブジェクトから、`ColumnGuideAdornment`装飾層し、新しいものを追加します。  
+ 設定が変更されるたびに、`SettingsChanged`関数をだけ再作成すべて、`Line`な新しい設定を持つオブジェクト。 行の位置を設定した後、コードを以前のすべて削除`Line`オブジェクトから、 `ColumnGuideAdornment` adornment レイヤー、新しいものを追加します。  
   
-## <a name="defining-the-commands-menus-and-menu-placements"></a>コマンド、メニューのおよびメニューの配置を定義します。  
- 場合がありますずっとコマンドおよびメニューを宣言する、その他の各種のメニュー コマンドやメニューのグループを配置すること、およびコマンド ハンドラーをフックします。  このチュートリアルでは、この拡張機能より深いについてのコマンドの機能が強調表示されますを参照してください[拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)です。  
+## <a name="define-the-commands-menus-and-menu-placements"></a>コマンド、メニューのおよびメニューの配置を定義します。  
+ 可能性があります多くのコマンドとメニューを宣言、その他のさまざまなのメニュー コマンドやメニューのグループを配置することとコマンド ハンドラーをフックします。 このチュートリアルの詳細情報が、この拡張機能でのコマンドの機能を強調表示は、「[メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)します。  
   
 ### <a name="introduction-to-the-code"></a>コードの概要  
- 列ガイド拡張機能は一緒に属しているコマンドのグループを宣言することを示しています (列を追加する列を削除する、線の色を変更)、およびエディターのコンテキスト メニューのサブメニューをそのグループを配置します。  列ガイド拡張機能は、メイン コマンドを追加するも**編集**メニューがによって同期が非表示、次の一般的なパターンとして、について説明します。  
+ 列ガイド拡張機能が一緒に属しているコマンドのグループを宣言することを示しています (列を追加、列の削除、線の色を変更する)、エディターのコンテキスト メニューのサブメニューでそのグループを配置します。  列ガイド拡張機能は、主に、コマンドを追加するも**編集**メニューが表示しないことにより、非表示として次の一般的なパターンについて説明します。  
   
- コマンドの実装を次の 3 つの部分があります: ColumnGuideCommandsPackage.cs、ColumnGuideCommandsPackage.vsct、および ColumnGuideCommands.cs です。  テンプレートによって生成されたコードのコマンドの配置、**ツール** メニューの実装として、ダイアログ ボックスが表示されます。  での実装方法、.vsct ファイルと ColumnGuideCommands.cs ファイルがあるため簡単で確認することができます。  これらのファイルは次のコードが置き換わります。  
+ コマンドの実装を次の 3 つの部分があります: ColumnGuideCommandsPackage.cs、ColumnGuideCommandsPackage.vsct、および ColumnGuideCommands.cs します。 コマンドによって自動生成、テンプレートによって生成されるコード、**ツール**実装としてダイアログ ボックスが表示されるメニューです。 実装される方法を見て、 *.vsct*と*ColumnGuideCommands.cs*ファイルのため、これは簡単です。 これらのファイルは次のコードを置き換えるとします。  
   
- パッケージのコードは、Visual Studio 拡張機能は、コマンドとコマンドを配置する場所を検出するために必要な定型宣言です。  パッケージが初期化されるときに、コマンドの実装クラスがインスタンス化します。  コマンドの詳細については、コマンドに関連するパッケージのリンクを参照してください。  
+ パッケージのコードには、Visual Studio 拡張機能がコマンドを提供することを検出して、コマンドを配置する場所を検索するに必要な定型宣言が含まれています。 パッケージは、初期化時に、コマンドの実装クラスがインスタンス化します。 パッケージに関連するコマンドの詳細については、次を参照してください。[メニューとコマンドの拡張](../extensibility/extending-menus-and-commands.md)します。  
   
 ### <a name="a-common-commands-pattern"></a>コマンドの一般的なパターン  
- 列ガイド拡張機能のコマンドは、Visual Studio での非常に一般的なパターンの例です。  グループで、関連するコマンドを配置して、そのグループ、メイン メニューで、多くの場合と配置"`<CommandFlag>CommandWellOnly</CommandFlag>`"コマンドを非表示を設定します。  メイン メニューのコマンドを配置すること (など**編集**) この方法は便利な名前 (など**Edit.AddColumnGuide**) は再にキー バインドを割り当てるときに、コマンドを検索するために役立ちます**ツール オプション**およびからコマンドを呼び出すときに、入力候補を取得するため、**コマンド ウィンドウ**します。  
+ 列ガイド拡張機能のコマンドは、Visual Studio での非常に一般的なパターンの例です。 グループに関連するコマンドを配置するされをそのグループ メイン メニューで、多くの場合と配置"`<CommandFlag>CommandWellOnly</CommandFlag>`"コマンドを非表示を設定します。  メイン メニューのコマンドを配置すること (など**編集**) ためには便利な名前 (など**Edit.AddColumnGuide**) は再でキー バインドを割り当てるときにコマンドを見つけるに役立ちます**ツールオプション**します。 コマンドを呼び出すときに、入力候補を取得するのに役立ちますも、**コマンド ウィンドウ**します。  
   
- コンテキスト メニューにコマンドのグループを追加またはメニュー コマンドを使用するユーザーを想定した場所を sub します。  Visual Studio が取り扱う`CommandWellOnly`メイン メニューの場合のみ、非表示フラグ。  コンテキスト メニューまたはサブメニューで同じコマンドのグループを配置すると、コマンドが表示されます。  
+ コンテキスト メニューにコマンドのグループを追加または sub メニュー コマンドを使用するユーザーを想定している場所。 Visual Studio 扱います`CommandWellOnly`メイン メニューの場合のみ、非表示フラグ。 コンテキスト メニューまたはサブメニューにコマンドの同じグループを配置すると、コマンドが表示されます。  
   
- 一般的なパターンの一部としては、列ガイド拡張機能は、1 つのサブメニューを保持する 2 番目のグループを作成します。  サブメニューには、さらに 4 つの列ガイド コマンドを使用して最初のグループが含まれています。  サブメニューを保持する 2 番目のグループは、再利用可能なアセット、各種のコンテキスト メニューに配置することをそのコンテキスト メニューにサブメニューを出します。  
+ 一般的なパターンの一部として、列ガイド拡張機能は、1 つのサブメニューを保持する 2 番目のグループを作成します。 さらに、サブメニューには、4 つの列ガイド コマンドを使用して最初のグループが含まれています。 サブメニューを保持する 2 番目のグループは、再利用可能な資産をさまざまなコンテキスト メニュー上に配置するをこれらのコンテキスト メニューのサブメニューがなさないです。  
   
 ### <a name="the-vsct-file"></a>.Vsct ファイル  
- .Vsct ファイルでは、コマンドと、どこで、アイコンと共になどを宣言します。  .Vsct ファイルの内容を次のコード (下記参照) に置き換えます。  
+ *.Vsct*ファイルは、コマンドと、どこで、アイコンとこれに宣言します。 内容を置き換える、 *.vsct* (下記参照)、次のコード ファイル。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -760,22 +760,22 @@ namespace ColumnGuides
   
 ```  
   
- **GUID**です。  コマンド ハンドラーを検索し、呼び出すことを Visual Studio の一致する GUID は、(上記のコピー、.vsct ファイルで宣言されているパッケージの GUID は、(プロジェクト項目テンプレートから生成された) ColumnGuideCommandsPackage.cs ファイルで宣言されているパッケージを確認する必要があります。).  このサンプル コードを再利用する場合は他のユーザーにこのコードをコピーした場合に競合しないように、別の GUID を行ったことを確認する必要があります。  
+ **GUID**します。 コマンド ハンドラーを検索し、呼び出すことに、Visual Studio のパッケージの GUID で宣言されていることを確認する必要があります、 *ColumnGuideCommandsPackage.cs* (プロジェクト項目テンプレートから生成された) ファイルで宣言されている GUID のパッケージに一致 *.vsct*ファイル (上記のコピー) します。 このサンプル コードを再利用する場合は他のユーザーにこのコードをコピーした場合とが競合しないように、別の GUID を行ったことを確認する必要があります。  
   
- ColumnGuideCommandsPackage.cs でこの行を検索し、引用符の間から GUID をコピーします。  
+ 行を見つけます。 *ColumnGuideCommandsPackage.cs*引用符の間の GUID をコピーします。  
   
 ```csharp  
 public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";  
 ```  
   
- 次の行があるようにに .vsct ファイルの GUID を貼り付けます、`Symbols`宣言します。  
+ 内の GUID を貼り付けて、 *.vsct*に次の行があるように、ファイル、`Symbols`宣言。  
   
 ```xml  
 <GuidSymbol name="guidColumnGuideCommandsPkg"   
             value="{ef726849-5447-4f73-8de5-01b9e930f7cd}" />  
 ```  
   
- コマンドの Guid を設定し、ビットマップ イメージ ファイルなります、拡張機能の一意なすぎます。  
+ コマンドの Guid を設定、ビットマップ イメージ ファイルが一意であるため、拡張機能では、すぎます。  
   
 ```xml  
 <GuidSymbol name="guidColumnGuidesCommandSet"   
@@ -783,36 +783,36 @@ public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";
 <GuidSymbol name="guidImages" value="{2C99F852-587C-43AF-AA2D-F605DE2E46EF}">  
 ```  
   
- ただし、コマンド セットを変更し、ビットマップのイメージの Guid このチュートリアルで動作するコードを取得する必要はありません。  コマンドは、設定 ColumnGuideCommands.cs ファイル内の宣言と一致する GUID 必要がありますが、すぎます。 そのファイルの内容を置き換えられますそのため、Guid が一致します。  
+ ただし、コマンド セットを変更し、ビットマップ イメージの Guid このチュートリアルで動作するコードを取得する必要はありません。 GUID での宣言と一致する必要があるコマンドのセット、 *ColumnGuideCommands.cs*ファイルも、そのファイルの内容に置き換えます。 そのため、Guid が一致します。  
   
- その他の Guid、.vsct ファイルでは、変更しないように列ガイド コマンドを追加する、既存のメニューを識別します。  
+ 内の他の Guid、 *.vsct*ファイルには、列ガイド コマンドを追加する、既存のメニューが識別するため、変更しないでください。  
   
- **ファイルのセクションでは**します。  .Vsct が 3 つのセクションでは外部: コマンド、配置、およびシンボルです。  Commands セクションでは、コマンド グループ、メニューのボタンまたはメニュー項目、およびアイコンのビットマップを定義します。  配置のセクションでは、メニューや既存のメニューに追加の配置からのグループの移動先を宣言します。  シンボルのセクションでは、.vsct コードの Guid と 16 進数の数字をどこからでもない場合に比べてより読みやすい .vsct ファイルで別の場所で使用される識別子を宣言します。  
+ **ファイルのセクションでは**します。 *.Vsct*は外側の 3 つのセクションがあります。 コマンド、配置、およびシンボル。 コマンドのセクションでは、コマンド グループ、メニューのボタンまたはメニュー項目、およびアイコンのビットマップを定義します。 メニュー上の既存のメニューに追加の配置グループはどこに配置されたセクションを宣言します。 Symbols セクションで他の場所で使用される識別子の宣言、 *.vsct*ファイルは、これにより、 *.vsct* Guid と 16 進数よりも読みやすいコード番号のすべての場所。  
   
- **セクションのコマンドについては、定義をグループ化**です。  Commands セクションでは、最初のコマンドのグループを定義します。  コマンドのグループは、グループを区切るわずかの灰色の線のメニューに表示されるコマンドです。  グループは、この例のように、全体のサブ メニューを記入も可能性があり、灰色の線をここで分離することが表示されません。  .Vsct ファイルを 2 つのグループを宣言、`GuidesMenuItemsGroup`親になれること、 `IDM_VS_MENU_EDIT` (メイン**編集**メニュー) および`GuidesContextMenuGroup`親になれること、 `IDM_VS_CTXT_CODEWIN` (コード エディターのコンテキスト メニュー)。  
+ **コマンドのセクションを定義をグループ化**します。 コマンド セクションでは、最初のコマンド グループを定義します。 コマンドのグループは、若干の灰色の線のグループを分離することでメニューに表示するコマンドです。 グループは、この例のように、全体サブメニューを入力も可能性があり、灰色の線をここで分離することが表示されません。 *.Vsct*ファイルは、2 つのグループを宣言、`GuidesMenuItemsGroup`を親には、 `IDM_VS_MENU_EDIT` (メイン**編集**メニュー)、`GuidesContextMenuGroup`を親には、 `IDM_VS_CTXT_CODEWIN` (コードエディターのコンテキスト メニュー)。  
   
- 2 番目のグループ宣言が、`0x0600`優先順位。  
+ 2 番目のグループ宣言には、`0x0600`優先順位。  
   
 ```xml  
 <Group guid="guidColumnGuidesCommandSet" id="GuidesContextMenuGroup"   
              priority="0x0600">  
 ```  
   
- つまり、列の挿入ガイドを最後、sub メニュー グループを追加する任意のコンテキスト メニューのサブメニュー。  ただし、考えないでが最適なし、が常に最後の優先順位を使用して、あるサブメニューを強制する`0xFFFF`です。  配置するコンテキスト メニューのサブメニューに設定を表示するには、この番号が付いた試してみる必要があります。  ここでは`0x0600`が十分に高いことがわかりますを必要とされる場合に列ガイド拡張子より小さくして、拡張機能を設計する他のユーザー用の領域は確保限りメニューの最後に配置します。  
+ 考え方は、列の挿入ガイドを sub メニュー グループを追加する任意のコンテキスト メニューの最後に、サブメニューです。 しかし、よく知っているし、常に最後の優先順位を使用して、あるサブメニューを強制するとは考えないでください`0xFFFF`します。 サブメニューがショートカット メニューを配置する上にある場所を表示する数みたりする場合があります。 この場合、`0x0600`が十分に高いことがわかりますが、そのことが望ましい場合に列ガイドの拡張機能よりも少なくなる、拡張機能を設計する他のユーザー用の領域の外に出て限り、メニューの末尾に配置します。  
   
- **コマンドのセクションで、メニュー定義**です。  コマンド セクションが、サブメニューをどのように定義する次`GuidesSubMenu`に親、`GuidesContextMenuGroup`です。  `GuidesContextMenuGroup`グループのすべての関連するコンテキスト メニューに追加します。  配置セクションでは、コードは、このサブメニューに 4 つの列ガイド コマンドを使用してグループを配置します。  
+ **コマンドのセクションでは、メニュー定義**します。 次に、サブメニューの定義コマンド セクション`GuidesSubMenu`に親が設定、`GuidesContextMenuGroup`します。 `GuidesContextMenuGroup`はすべての関連するコンテキスト メニューに追加するグループです。 配置セクションでは、コードは、このサブメニューに 4 つの列ガイド コマンドを使用してグループを配置します。  
   
- **セクションのコマンドについては、ボタンの定義**です。  4 つの列は、ボタン ガイド コマンドまたは commands セクションでは、メニュー項目を定義します。  `CommandWellOnly`、上記で説明した、コマンドがメイン メニューに配置した場合に表示されないことを意味します。  宣言をボタンのメニュー項目の 2 つ (ガイドを追加およびガイドを削除する) もが、`AllowParams`フラグ。  
+ **コマンドのセクションをボタンの定義**します。 コマンドのセクションでは、4 つの列ガイド コマンド ボタン、メニュー項目を定義します。 `CommandWellOnly`、前述のように、コマンドがメイン メニューに配置する場合に表示されないことを意味します。 メニュー項目の 2 つのボタンの宣言 (ガイドを追加および削除のガイド) があることも、`AllowParams`フラグ。  
   
 ```xml  
 <CommandFlag>AllowParams</CommandFlag>  
 ```  
   
- このフラグによりにメイン メニューに配置された、Visual Studio には、コマンド ハンドラーが呼び出された場合は、引数を受け取るコマンドを持つを使用できます。  ユーザーがコマンド ウィンドウからコマンドが呼び出される場合、取得に渡される引数コマンド ハンドラー イベント引数。  
+ このフラグにより、と共に、メイン メニューに配置された、コマンドは、Visual Studio は、コマンド ハンドラーを呼び出すときに引数を受け取る必要があります。  ユーザーは、コマンド ウィンドウからコマンドを実行する場合、引数が、イベント引数のコマンド ハンドラーに渡されるが。  
   
- **コマンドのセクションでは、ビットマップ定義**です。  最後に commands セクションでは、ビットマップやコマンドに使用されるアイコンを宣言します。  これは、単純な宣言をプロジェクトのリソースを識別し、使用するアイコンの 1 から始まるインデックスを一覧表示します。  .Vsct ファイルのシンボルのセクションでは、インデックスとして使用される識別子の値を宣言します。  このチュートリアルでは、プロジェクトに追加されたカスタム コマンド項目テンプレートに用意されている、ビットマップ ストリップを使用します。  
+ **コマンドのセクションでは、ビットマップ定義**します。 最後に、commands セクションでは、ビットマップやコマンドに使用されるアイコンを宣言します。 このセクションでは、プロジェクト リソースを識別し、使用するアイコンの 1 から始まるインデックスを一覧表示する単純な宣言です。 Symbols セクション、 *.vsct*ファイルのインデックスとして使用される識別子の値を宣言します。 このチュートリアルでは、プロジェクトに追加するカスタム コマンドの項目テンプレートで提供されるビットマップ ストリップを使用します。  
   
- **配置セクション**です。  コマンドの後に、セクションは、配置セクションです。  1 つは、ここでのコードを追加する前に説明した最初のグループを保持して、4 つの列ガイド sub メニューにコマンド コマンドが表示されます。  
+ **配置セクション**します。 コマンドの後のセクションは、配置セクションです。 1 つは、場所、コードを追加する前に説明した最初のグループを保持する 4 つの列ガイド サブメニューにコマンド コマンドが表示されます。  
   
 ```xml  
 <CommandPlacement guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"   
@@ -821,14 +821,14 @@ public const string PackageGuidString = "ef726849-5447-4f73-8de5-01b9e930f7cd";
 </CommandPlacement>  
 ```  
   
- その他の配置のすべてを追加、 `GuidesContextMenuGroup` (が含まれています、 `GuidesSubMenu`) 他のエディター コンテキスト メニューにします。  コードが宣言されている場合、 `GuidesContextMenuGroup`、親がコード エディターのコンテキスト メニューになれます。  コード エディターのコンテキスト メニューの配置が表示されないためにです。  
+ その他の配置のすべてを追加、 `GuidesContextMenuGroup` (が含まれています、 `GuidesSubMenu`) 他のエディターのコンテキスト メニューにします。 コードが宣言されている場合、 `GuidesContextMenuGroup`、親がコード エディターのコンテキスト メニューに設定します。 理由コード エディターのコンテキスト メニューの配置が表示されません。  
   
- **記号は、セクション**です。  前述のように、シンボルのセクションでは、.vsct コードの Guid と 16 進数の数字をどこからでもない場合に比べてより読みやすい .vsct ファイルで別の場所で使用される識別子を宣言します。  このセクションで、重要な点は、パッケージの GUID が、パッケージのクラスと、コマンド セットで、宣言の GUID がコマンドの実装クラスの宣言と一致する必要があります同意する必要があります。  
+ **セクションのシンボル**します。 前述のように、symbols セクションがで他の場所で使用される識別子を宣言、 *.vsct*これにより、ファイル、 *.vsct* Guid と 16 進数よりも読みやすいコード番号のすべての場所。 このセクションでは、重要な点は、パッケージの GUID がパッケージ クラスで宣言同意する必要があります。 また、コマンド セットの GUID は、コマンドの実装クラスで宣言と一致する必要があります。  
   
-## <a name="implementing-the-commands"></a>コマンドを実装します。  
- ColumnGuideCommands.cs ファイルは、コマンドを実装し、ハンドラーをフックします。  Visual Studio では、パッケージを読み込みますして初期化し、ときに、パッケージを呼び出して`Initialize`コマンドの実装クラスにします。  コマンドの初期化は単に、クラスをインスタンス化し、コンス トラクターは、すべてのコマンド ハンドラーをフックします。  
+## <a name="implement-the-commands"></a>コマンドを実装します。  
+ *ColumnGuideCommands.cs*ファイルは、コマンドを実装して、ハンドラーをフックします。 Visual Studio では、パッケージを読み込みし、初期化、パッケージを呼び出して`Initialize`コマンドの実装クラス。 コマンドの初期化は単に、クラスをインスタンス化し、コンス トラクターは、すべてのコマンド ハンドラーをフックします。  
   
- ColumnGuideCommands.cs ファイルの内容を次のコード (下記参照) に置き換えます。  
+ 内容を置き換える、 *ColumnGuideCommands.cs* (下記参照)、次のコード ファイル。  
   
 ```csharp  
 using System;  
@@ -1169,11 +1169,11 @@ namespace ColumnGuides
   
 ```  
   
- **参照を修正**です。  参照は、この時点でありませんが。  ソリューション エクスプ ローラーで [参照] ノードを右のポインター ボタンを押します。  選択、**を追加しています.** コマンド。  **参照の追加**ダイアログに、右上隅の [検索] ボックスがあります。  「エディター」(引用符、二重) を入力します。  選択、 **Microsoft.VisualStudio.Editor**項目 (必要があります、チェック ボックスをオン項目を選択すれば済む左からアイテム) を選択し、 **OK**参照を追加します。  
+ **参照の修正**します。 この時点での参照をありませんしています。 ソリューション エクスプ ローラーで [参照] ノードで、右ポインター ボタンを押します。 選択、**を追加しています.** コマンド。  **参照の追加**ダイアログに、右上隅にある検索ボックスがあります。 (二重引用符) を含まない「エディター」を入力します。 選択、 **Microsoft.VisualStudio.Editor** (する必要があります、チェック ボックスをオン、しない選択された項目の左側に、項目) 項目を選択して **[ok]** 参照を追加します。  
   
- **初期化**です。  パッケージのクラスが初期化されるときに呼び出す`Initialize`コマンドの実装クラスにします。  `ColumnGuideCommands`初期化は、クラスをインスタンス化し、クラスのメンバーで、クラスのインスタンスと、パッケージの参照を保存します。  
+ **初期化**します。  パッケージ クラスが初期化されるときに呼び出す`Initialize`コマンド実装クラス。 `ColumnGuideCommands`初期化はクラスをインスタンス化し、クラス メンバーに、クラスのインスタンスと、パッケージ参照を保存します。  
   
- クラスのコンス トラクターからコマンド ハンドラーのフック ups のいずれかを見てみましょう。  
+ クラス コンス トラクターから、コマンド ハンドラーのフック ups のいずれかを見てみましょう。  
   
 ```csharp  
 _addGuidelineCommand =   
@@ -1184,17 +1184,17 @@ _addGuidelineCommand =
   
 ```  
   
- 作成する、`OleMenuCommand`です。  Visual Studio では、Microsoft Office コマンド システムを使用します。  コマンドを実装する関数には、OleMenuCommand をインスタンス化するときに、キーの引数 (`AddColumnGuideExecuted`)、Visual Studio コマンドを使用してメニューを表示するときに呼び出す関数 (`AddColumnGuideBeforeQueryStatus`)、およびコマンド id。  Visual studio では、クエリ ステータス関数を呼び出すためのコマンドは、行うことができます自体または非表示 メニューの特定のディスプレイの灰色メニューのコマンドを表示する前に (たとえば、無効にすると**コピー**選択されていない場合)、そのアイコンを変更またはも (たとえば、追加ものから削除するものに)、その名前を変更してなどです。  コマンド ID は、.vsct ファイルで宣言されたコマンド ID と一致する必要があります。  コマンドの文字列が設定され、列ガイドでは、追加のコマンドは .vsct ファイルと、ColumnGuideCommands.cs 間で一致する必要があります。  
+ 作成する、`OleMenuCommand`します。 Visual Studio では、Microsoft Office コマンドのシステムを使用します。 キーの引数をインスタンス化するときに、`OleMenuCommand`コマンドを実装する関数は、(`AddColumnGuideExecuted`)、Visual Studio コマンドを使用してメニューを表示するときに呼び出す関数 (`AddColumnGuideBeforeQueryStatus`)、およびコマンド id。 Visual studio では、クエリ ステータス関数を呼び出し、コマンドで、自身で非表示またはメニューの特定のディスプレイの灰色をメニューにコマンドを表示する前に (たとえば、無効にすると**コピー**選択されていない場合)、そのアイコンを変更またはも (たとえば、追加ものから削除するものに)、その名前を変更して、具合です。 コマンド ID がコマンドで宣言されている ID と一致する必要があります、 *.vsct*ファイル。 コマンド セットと列ガイドの文字列の追加コマンド間で一致する必要があります、 *.vsct*ファイルと*ColumnGuideCommands.cs*します。  
   
- 次の行は、ユーザーが (下記参照)、コマンド ウィンドウを使用してコマンドを呼び出すときはのアシスタンスを提供します。  
+ 次の行は、ユーザーが (詳細は後述)、コマンド ウィンドウを使用してコマンドを呼び出すときのアシスタンスを提供します。  
   
 ```csharp  
 _addGuidelineCommand.ParametersDescription = "<column>";  
 ```  
   
- **状態をクエリ**です。  状態のクエリ関数`AddColumnGuideBeforeQueryStatus`と`RemoveColumnGuideBeforeQueryStatus`(ガイドまたは max 列の最大数) などのいくつかの設定を確認して、または削除する列ガイドがある場合。  コマンドは、条件が正しい場合、有効にします。  状態のクエリ関数では、Visual Studio メニューのコマンドごとに、メニューに表示するたびに実行されるため非常に効率的である必要があります。  
+ **状態をクエリする**します。 状態のクエリ関数`AddColumnGuideBeforeQueryStatus`と`RemoveColumnGuideBeforeQueryStatus`ガイドや max の列の最大数) などのいくつかの設定を確認または削除する列ガイドがある場合。 コマンドは、条件が適切な場合は、有効にします。  状態のクエリ関数では、メニューの Visual Studio メニューに表示するたびに、コマンドごとに実行されるため、効率を必要があります。  
   
- **AddColumnGuideExecuted 関数**です。  ガイドの追加の該当部分は、現在のエディター ビューとカレットの場所を理解することです。  この関数を呼び出して最初`GetApplicableColumn`かどうかコマンド ハンドラーのイベントの引数では、ユーザーが指定した引数を指定しがない場合、関数は、チェック、エディターのビューを確認します。  
+ **AddColumnGuideExecuted 関数**します。 現在のエディターのビューとキャレット位置見極めることのガイドを追加の興味深い部分です。  最初に、この関数を呼び出して`GetApplicableColumn`かどうか、コマンド ハンドラーのイベントの引数であるユーザーが指定した引数とまったくが存在しない場合は、関数のエディターのビューを確認します。  
   
 ```csharp  
 private int GetApplicableColumn(EventArgs e)  
@@ -1213,7 +1213,7 @@ private int GetApplicableColumn(EventArgs e)
   
 ```  
   
- `GetCurrentEditorColumn` 少し詳細に分析が、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>コードの表示。  トレースする場合`GetActiveTextView`、 `GetActiveView`、および`GetTextViewFromVsTextView`を実行する方法を確認できます。  次に、関連するコードが抽象化される現在の選択範囲の始まり、選択範囲のフレームを取得し、として、フレームの DocView を取得する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>、取得してから、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> IVsTextView、ビューのホストを取得し、最後に次のような IWpfTextView があるとします。  
+ `GetCurrentEditorColumn` 取得する、もう少し詳しく説明する必要があります、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>コードのビュー。  トレースする場合`GetActiveTextView`、 `GetActiveView`、および`GetTextViewFromVsTextView`、その方法を確認できます。 次のコードは、抽象化すると、関連するコード以降では、現在の選択、選択範囲のフレームを取得し、フレームの DocView として取得する、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>、取得し、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> IVsTextView からビューのホストを取得し、最後に、IWpfTextView:  
   
 ```csharp  
    IVsMonitorSelection selection =  
@@ -1269,7 +1269,7 @@ ErrorHandler.ThrowOnFailure(selection.GetCurrentElementValue(
   
 ```  
   
- 作成したら、IWpfTextView、カーソルが置かれている列を取得できます。  
+ を作成した後、IWpfTextView キャレットが置かれている列を取得できます。  
   
 ```csharp  
 private static int GetCaretColumn(IWpfTextView textView)  
@@ -1284,19 +1284,19 @@ private static int GetCaretColumn(IWpfTextView textView)
   
 ```  
   
- 現在の列を持つ取り掛かるユーザーがクリックした場合、コードだけ呼び出しを追加または削除、列の設定マネージャーでします。  設定マネージャーがすべてにイベントを発生させる`ColumnGuideAdornment`オブジェクトをリッスンします。  イベントが発生したとき、これらのオブジェクトは、新しい列ガイドの設定で、関連付けられているテキスト ビューを更新します。  
+ 現在の列を持つ一方でユーザーがクリックした場合、コード呼び出すだけです、列を追加または削除設定マネージャーの。 設定マネージャーは、すべてのイベントを発生させます。`ColumnGuideAdornment`オブジェクトをリッスンします。 イベントが発生したとき、これらのオブジェクトは、新しい列ガイドの設定で、関連付けられているテキスト ビューを更新します。  
   
-## <a name="invoking-command-from-the-command-window"></a>コマンド ウィンドウからコマンドを呼び出し  
- 列ガイド サンプルでは、機能拡張の形式としてコマンド ウィンドウから次の 2 つのコマンドを呼び出すことができます。  使用する場合、**ビュー&#124;その他のウィンドウ&#124;コマンド ウィンドウ**コマンド、コマンド ウィンドウを確認できます。  「編集」を入力して、コマンド ウィンドウと対話でき、コマンド名の補完機能と 120 の引数を指定することは、次があります。  
+## <a name="invoke-command-from-the-command-window"></a>コマンド ウィンドウからコマンドを呼び出す  
+ 列ガイドのサンプルでは、機能拡張の形式として、コマンド ウィンドウから 2 つのコマンドを呼び出すことができます。 使用する場合、**ビュー&#124;その他の Windows&#124;コマンド ウィンドウ**コマンド、コマンド ウィンドウに表示することができます。 コマンド ウィンドウを対話するには、「編集」を入力して、コマンド名の補完と 120 引数を指定して、次の結果がある場合。  
   
-```  
+```csharp  
 > Edit.AddColumnGuide 120  
 >  
 ```  
   
- この機能には、.vsct ファイルの宣言で有効にするサンプルの部分、`ColumnGuideCommands`フック コマンド ハンドラー、およびイベントの引数をチェックするコマンドのハンドラー実装し、ときに、クラス コンス トラクターです。  
+ この動作を有効にするサンプルの部分は、 *.vsct*宣言、ファイル、`ColumnGuideCommands`コマンド ハンドラー、およびイベントの引数をチェックするコマンド ハンドラーの実装をフックし、ときに、クラス コンス トラクター。  
   
- 確認しました"`<CommandFlag>CommandWellOnly</CommandFlag>`"、.vsct ファイルだけでなく、編集のメイン メニューに配置された場合でもおを表示しないコマンドで、**編集**メニュー UI。  ような名前によって、メインの編集 メニューに**Edit.AddColumnGuide**です。  コマンドには、4 つのコマンドのグループから [編集] メニューの直接配置を保持する宣言がグループ化します。  
+ 見た"`<CommandFlag>CommandWellOnly</CommandFlag>`"で、 *.vsct*ファイルへの配置と、**編集**メイン メニューにコマンドが表示されていない場合でも、**編集**UI メニュー。 メイン**編集** メニューからそれらのような名前**Edit.AddColumnGuide**します。 4 つのコマンドを保持するコマンドのグループ宣言に、グループの配置、**編集**直接 メニュー。  
   
 ```xml  
 <Group guid="guidColumnGuidesCommandSet" id="GuidesMenuItemsGroup"  
@@ -1306,7 +1306,7 @@ private static int GetCaretColumn(IWpfTextView textView)
   
 ```  
   
- ボタンのセクションでは、コマンドを後で宣言`CommandWellOnly`メイン メニューで非表示に保持する、宣言で`AllowParams`:  
+ ボタン セクションには、コマンドは、後で宣言されている`CommandWellOnly`メイン メニューに表示されないようにするために使用して宣言されていると`AllowParams`:  
   
 ```xml  
 <Button guid="guidColumnGuidesCommandSet" id="cmdidAddColumnGuide"   
@@ -1318,14 +1318,14 @@ private static int GetCaretColumn(IWpfTextView textView)
   
 ```  
   
- 内のコードをフックするためのコマンド ハンドラーを確認しました、`ColumnGuideCommands`クラスのコンス トラクターが許可されているパラメーターの説明を提供します。  
+ コマンド ハンドラーをフックするコードを見た、`ColumnGuideCommands`クラスのコンス トラクターが許可されているパラメーターの説明を入力します。  
   
 ```csharp  
 _addGuidelineCommand.ParametersDescription = "<column>";  
   
 ```  
   
- 表示、`GetApplicableColumn`チェック機能`OleMenuCmdEventArgs`の現在の列のエディターのビューをチェックする前に値。  
+ 見た、`GetApplicableColumn`チェック関数`OleMenuCmdEventArgs`エディターのビューの現在の列を確認する前に、値。  
   
 ```csharp  
 private int GetApplicableColumn(EventArgs e)  
@@ -1341,20 +1341,20 @@ private int GetApplicableColumn(EventArgs e)
   
 ```  
   
-## <a name="trying-your-extension"></a>拡張機能をしようとしています。  
- これでキーを押します**f5 キーを押して**列ガイド拡張機能を実行します。  テキスト ファイルを開くし、ガイドの行を追加、削除したり、および色を変更するエディターのコンテキスト メニューを使用します。  テキスト内をクリックする必要があります (空白文字以外は、行の末尾を越えた) 列を追加するガイド、またはエディターに追加の行の最後の列です。  コマンド ウィンドウを使用して引数を持つコマンドを呼び出す場合は、列ガイドを任意の場所を追加できます。  
+## <a name="try-your-extension"></a>拡張機能をお試しください。  
+ これでキーを押して**F5**列ガイド拡張機能を実行します。 テキスト ファイルを開き、エディターのコンテキスト メニューを使用して、ガイド線を追加、削除、色を変更します。 テキストをクリックして (空白文字以外は、行の末尾を越えた) 列を追加するガイド、またはエディターに追加の行の最後の列。 コマンド ウィンドウを使用して引数を指定してコマンドを呼び出す場合は、列ガイドを任意の場所を追加できます。  
   
- メニューに最新のコードを示す Visual Studio での問題があるし、を異なるコマンド配置を再試行してください、名前変更、アイコン、およびを変更したい場合は、デバッグしている、実験用ハイブをリセットできます。  表示、 **Windows [スタート] メニュー** 「リセット」を入力します。  確認し、コマンドを呼び出す**次 Visual Studio の実験用インスタンスをリセット**です。  これは、すべての拡張機能コンポーネントの実験用レジストリ ハイブをクリーンアップします。  そうでないコンポーネントからの設定をクリーンアップためしていた Visual Studio の実験用ハイブをシャット ダウンするときに、ガイドが残っているコードは、次回の起動時に設定ストアを読み取る場合にします。  
+ さまざまなコマンドの配置を再試行してください、名前変更、アイコン、および、変更するメニューで、最新のコードを示す Visual Studio での問題がある場合は、デバッグしている実験用ハイブをリセットできます。 起動、 **Windows [スタート] メニュー** 「リセット」を入力します。 検索し、コマンドを実行して **[次へ] Visual Studio の実験用インスタンスをリセット**します。 このコマンドは、すべての拡張機能コンポーネントの実験用のレジストリ ハイブをクリーンアップします。 そうでないコンポーネントからの設定をクリーンアップため Visual Studio の実験用ハイブをシャット ダウンするときに行われていれば任意のガイドは引き続き行われます、コードは、次回の起動時に、設定ストアを読み取るとき。  
   
 ## <a name="finished-code-project"></a>完成したコード プロジェクト  
- すぐにある Visual Studio 機能拡張のサンプルの github プロジェクトと完成したプロジェクトがあります。  ポインターが発生したときに、このトピックが更新されます。  完全なサンプル プロジェクトでは、異なる guid があり、コマンドのアイコンのさまざまなビットマップ ストリップがします。  
+ Visual Studio 機能拡張のサンプルの github プロジェクトはまもなくし、完成したプロジェクトがあります。 この記事では、次のようが発生するとが更新されます。 完全なサンプル プロジェクトでは、異なる guid があり、コマンドのアイコンの異なるビットマップ ストリップになります。  
   
- この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)です。  
+ この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
   
 ## <a name="see-also"></a>関連項目  
- [エディター内](../extensibility/inside-the-editor.md)   
- [エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)   
- [言語サービスとエディターの拡張点](../extensibility/language-service-and-editor-extension-points.md)   
- [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
- [メニューにサブメニューを追加](../extensibility/adding-a-submenu-to-a-menu.md)   
- [エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)
+ [エディター内で](../extensibility/inside-the-editor.md)   
+ [エディターと言語サービスを拡張します。](../extensibility/extending-the-editor-and-language-services.md)   
+ [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)   
+ [メニューとコマンドを拡張します。](../extensibility/extending-menus-and-commands.md)   
+ [メニューにサブメニューを追加します。](../extensibility/adding-a-submenu-to-a-menu.md)   
+ [エディターの項目テンプレートを使用した拡張機能を作成します。](../extensibility/creating-an-extension-with-an-editor-item-template.md)

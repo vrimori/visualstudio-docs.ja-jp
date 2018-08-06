@@ -1,5 +1,5 @@
 ---
-title: ソース サーバーのセキュリティ警告 |Microsoft ドキュメント
+title: ソース サーバーのセキュリティ警告 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbb2233ffcc041a9d756ff51ac9fd3f1b9dc669e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 826669924cc538a63d61ffe5051aa32152a6152d
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474126"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511174"
 ---
 # <a name="source-server-security-alert"></a>ソース サーバー のセキュリティ警告
 ソース サーバーの使用時は、認識できて信頼できる場所からのシンボル ファイルのみを使用してください。  
@@ -33,6 +33,6 @@ ms.locfileid: "31474126"
 >  ソース サーバーを使用する場合、注意が必要なセキュリティ上の脅威があります。たとえば、アプリケーションの PDB ファイルには任意のコマンドを埋め込むことができます。そのため、srcsrv.ini ファイルには、実行するコマンドのみを配置するようにします。 srcsvr.ini ファイルにないコマンドを実行しようとすると、確認のダイアログ ボックスが表示されます。 詳細については、「 [Security Warning: Debugger Must Execute Untrusted Command](../debugger/security-warning-debugger-must-execute-untrusted-command.md)」を参照してください。 コマンド パラメーターでは何も検証されないため、コマンドを信頼するときは注意してください。 たとえば、cmd.exe を信頼した場合、悪意のあるユーザーが危険な動作を実行するようにコマンドにパラメーターを指定する可能性があります。  
   
 ## <a name="see-also"></a>関連項目  
- [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [移行元サーバー](http://msdn.microsoft.com/library/windows/desktop/ms680641.aspx)
+ [移行元サーバー](/windows/desktop/Debug/source-server-and-source-indexing)

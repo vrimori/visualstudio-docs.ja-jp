@@ -1,5 +1,5 @@
 ---
-title: オプション ページの作成 |Microsoft ドキュメント
+title: オプション ページの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,77 +14,77 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51e05c5f2660adfe8d7a35c816e5f94706631c8f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 834edb926142637a250cf4a695d5d1d54e103977
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31131289"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499479"
 ---
-# <a name="creating-options-pages"></a>[オプション] ページを作成します。
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]追加することによって IDE**オプション**ページの下にある、**ツール**メニュー。  
+# <a name="create-options-pages"></a>[オプション] ページを作成します。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を追加して IDE**オプション**ページの下で、**ツール**メニュー。  
   
- 実装するオブジェクト、指定された**ツール オプション**ページが、特定の Vspackage を関連付け、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>オブジェクト。  
+ 実装するオブジェクトを指定した**ツール オプション**ページは、特定の Vspackage に関連付け、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>オブジェクト。  
   
- 環境が特定の実装しているオブジェクトをインスタンス化するため**ツール オプション**ページ、IDE によって特定のページを表示する場合。  
+ 環境は、特定の実装のオブジェクトをインスタンス化するため**ツール オプション**IDE によって特定のページが表示されるときにページします。  
   
--   A**ツール オプション**独自のオブジェクトと、VSPackage を実装するオブジェクトではなく、ページを実装する必要があります。  
+-   A**ツール オプション**独自のオブジェクトでは、VSPackage を実装するオブジェクトではなく、ページを実装する必要があります。  
   
--   オブジェクトが複数を実装できません**ツール オプション**ページ。  
+-   オブジェクトは、複数を実装できません**ツール オプション**ページ。  
   
-## <a name="registering-as-a-tools-options-page-provider"></a>ツール オプション ページ プロバイダーとして登録します。  
- VSPackage サポート ユーザーを使って構成**ツール オプション**ページが提供するオブジェクトを示す**ツール オプション**のインスタンスを適用することによってページ<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>に適用される<xref:Microsoft.VisualStudio.Shell.Package>実装します。  
+## <a name="register-as-a-tools-options-page-provider"></a>ツール オプション ページのプロバイダーとして登録します。  
+ VSPackage サポート ユーザー構成を通じて**ツール オプション**ページを提供するオブジェクトを示します**ツール オプション**のインスタンスを適用することでページ<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>に適用される<xref:Microsoft.VisualStudio.Shell.Package>実装します。  
   
- 1 つのインスタンスである必要があります<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>のすべて<xref:Microsoft.VisualStudio.Shell.DialogPage>-派生型を実装する、**ツール オプション**ページ。  
+ 1 つのインスタンスが必要があります<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>のすべて<xref:Microsoft.VisualStudio.Shell.DialogPage>-派生型を実装する、**ツール オプション**ページ。  
   
- 各インスタンス<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>を実装する型を使用して、**ツール オプション**ページで、カテゴリとサブカテゴリの識別に使用を含む文字列、**ツール オプション**ページ、およびリソース情報を提供すると、種類を登録する、**ツール オプション**ページ。  
+ 各インスタンス<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>を実装する型を使用して、**ツール オプション**ページのカテゴリとサブカテゴリを識別するために使用を含む文字列を**ツール オプション**ページ、およびリソース情報として提供する型を登録する、**ツール オプション**ページ。  
   
-## <a name="persisting-tools-options-page-state"></a>ツール オプション ページの状態を保持します。  
- 場合、**ツール オプション**オートメーションのサポートが有効になっているページの実装が登録されている、IDE と共に他のすべてのページの状態が引き続き発生する**ツール オプション**ページ。  
+## <a name="persist-tools-options-page-state"></a>ツール オプション ページの状態を永続化します。  
+ 場合、**ツール オプション**オートメーションのサポートが有効なページの実装が登録されて、IDE と他のすべてのページの状態が解決しない**ツール オプション**ページ。  
   
- VSPackage を使用して、独自の永続化を管理できます<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>です。 1 つだけ、または永続化の他のメソッドを使用してください。  
+ VSPackage を使用して、独自の永続化を管理できる<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>します。 1 つだけまたは永続化のもう一方のメソッドを使用する必要があります。  
   
-## <a name="implementing-dialogpage-class"></a>DialogPage クラスの実装  
+## <a name="implement-dialogpage-class"></a>DialogPage クラスの実装  
  VSPackage の実装を提供するオブジェクト、 <xref:Microsoft.VisualStudio.Shell.DialogPage>-派生型は次の継承された機能を利用できます。  
   
 -   既定のユーザー インターフェイス ウィンドウです。  
   
--   A 既定の永続化メカニズムを使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されている`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
+-   既定の永続化メカニズムの使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>、クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されて`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
   
 -   オートメーションをサポートします。  
   
- 実装するオブジェクトの最小要件、**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
+ 実装するオブジェクトの最小要件を**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
   
- としてクラスが正しく登録されている場合、**ツール オプション**そのパブリック プロパティが 利用可能なプロバイダーのページ、**オプション**のセクションで、**ツール**のフォームのメニューで、プロパティ グリッドです。  
+ クラスとして正しく登録されている場合、**ツール オプション**プロバイダーは、そのパブリック プロパティが 利用可能なページ、**オプション**のセクション、**ツール**のフォームのメニューで、プロパティ グリッドです。  
   
- これらすべての既定の機能をオーバーライドすることができます。 たとえばより高度なユーザーを作成するインターフェイスが必要のみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>です。  
+ これらすべての既定の機能を無効にできます。 たとえばより高度なユーザーを作成するインターフェイス必要がありますのみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>します。  
   
 ## <a name="example"></a>例  
- オプション ページの単純な"hello world"実装は、次に示します。 既定のプロジェクトに次のコードを追加すると、Visual Studio パッケージ テンプレートによって作成された、**メニュー コマンド**オプションを選択したオプション ページの機能をデモンストレーション適切にします。  
+ オプション ページの単純な"Hello world"の実装は、以下に示します。 Visual Studio パッケージ テンプレートによって作成された既定のプロジェクトに次のコードを追加、**メニュー コマンド**オプションを選択したはオプション ページの機能に適切に紹介します。  
   
 ### <a name="description"></a>説明  
- 次のクラスでは、最小限の"hello world"オプション ページを定義します。 ユーザーがパブリックに設定できます開かれると、`HelloWorld`プロパティ グリッド内のプロパティです。  
+ 次のクラスは、最小限の"Hello world"のオプション ページを定義します。 ユーザーがパブリックに設定できる開かれると、`HelloWorld`プロパティ グリッドでプロパティ。  
   
 ### <a name="code"></a>コード  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
   
 ### <a name="description"></a>説明  
- パッケージ クラスに次の属性を適用する ページのオプション使用できるように、パッケージを読み込むときにします。 数値は、カテゴリと、ページの任意のリソース Id と、最後にブール値では、ページがオートメーションをサポートしているかどうかを指定します。  
+ パッケージ クラスに次の属性を適用するページのオプション使用できるように、パッケージの読み込み時にします。 数値は、カテゴリと、ページの任意のリソース Id と、最後にブール値では、ページがオートメーションをサポートしているかどうかを指定します。  
   
 ### <a name="code"></a>コード  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
   
 ### <a name="description"></a>説明  
- 次のイベント ハンドラーには、[オプション] ページで設定されたプロパティの値に応じて結果が表示されます。 使用して、<xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>ページによって公開されるプロパティにアクセスする、カスタム オプション ページの種類に結果を持つメソッドを明示的にキャストします。  
+ 次のイベント ハンドラーでは、[オプション] ページで設定のプロパティの値に応じて結果が表示されます。 使用して、<xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>ページによって公開されるプロパティにアクセスするカスタム オプション ページの種類に結果を持つメソッドが明示的にキャストします。  
   
- パッケージ テンプレートによって生成されたプロジェクトの場合に、この関数からを呼び出す、`MenuItemCallback`に既定のコマンドにアタッチする機能が追加された、**ツール**メニュー。  
+ パッケージ テンプレートによって生成されたプロジェクトの場合からこの関数を呼び出し、`MenuItemCallback`既定コマンドに接続する関数に追加、**ツール**メニュー。  
   
 ### <a name="code"></a>コード  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
 ## <a name="see-also"></a>関連項目  
- [拡張ユーザー設定とオプション](../../extensibility/extending-user-settings-and-options.md)   
- [オプション ページのオートメーションのサポート](../../extensibility/internals/automation-support-for-options-pages.md)
+ [ユーザー設定とオプションを拡張します。](../../extensibility/extending-user-settings-and-options.md)   
+ [[オプション] ページのオートメーションをサポートします。](../../extensibility/internals/automation-support-for-options-pages.md)

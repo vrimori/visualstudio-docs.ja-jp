@@ -1,5 +1,5 @@
 ---
-title: 構成と SelectedItem オブジェクト用のオートメーション |Microsoft ドキュメント
+title: 構成および SelectedItem オブジェクトのための自動化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d4ac269664136aed51542e53900ffc1c87f21fe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4a1c745ad8f40ac755513f49db7b522f83f075a8
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128203"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500733"
 ---
-# <a name="automation-for-configuration-and-selecteditem-objects"></a>構成と SelectedItem オブジェクト用のオートメーション
-ビルドと選択した項目のプロセスを自動化できます[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+# <a name="automation-for-configuration-and-selecteditem-objects"></a>構成および SelectedItem オブジェクトのための自動化
+ビルドと選択した項目のプロセスを自動化できます。[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
 ## <a name="automation-for-builds"></a>ビルドの自動化  
- ビルドまたは構成が実装するときに表示されるオートメーション モデル<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider>です。 詳しくは、「[ビルド構成について](../../ide/understanding-build-configurations.md)」をご覧ください。  
+ 実装するときに提供されるオートメーション モデルをビルドまたは構成が<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider>します。 詳しくは、「[ビルド構成について](../../ide/understanding-build-configurations.md)」をご覧ください。  
   
  VSPackage を作成して構成オプションを制御する場合は、オートメーション モデルを使用する必要があります。  
   
-## <a name="automation-for-selecteditem"></a>SelectedItem の自動化  
- 実装を提供する必要はありません、`SelectedItem`オブジェクトの Visual Studio には、標準的な実装が含まれているためです。 ただし、実装することができます、`SelectedItem`オブジェクトのかどうかにできます。 格納するオブジェクトを実装する必要があります、`SelectedItem`インターフェイスし、への呼び出しに応答を返す、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> VSITEMID を持つメソッドに設定<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>です。  
+## <a name="automation-for-selecteditem"></a>SelectedItem のための自動化  
+ 実装を提供する必要はありません、`SelectedItem`オブジェクトの Visual Studio には、標準的な実装が含まれています。 ただし、実装、`SelectedItem`オブジェクトの場合します。 含むオブジェクトを実装する必要があります、`SelectedItem`インターフェイスし、への呼び出しに応答を返す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>メソッド`VSITEMID`に設定<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>   
- [オートメーション モデルに貢献しています。](../../extensibility/internals/contributing-to-the-automation-model.md)   
+ [オートメーション モデルに貢献します。](../../extensibility/internals/contributing-to-the-automation-model.md)   
  [ビルド構成について](../../ide/understanding-build-configurations.md)
