@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2620a008a90b988aa80df8d3c8563163ff92d997
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: d9c97725f4d78923384d7a3ec9f327a7dd2aca7b
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078379"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512959"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>方法: visual スタイルが有効になっている WPF アプリケーションの発行
 visual スタイルを使用すると、ユーザーが選択したテーマに基づいてコモン コントロールの外観を変更できます。 既定では、Visual スタイルは、Windows Presentation Foundation (WPF) アプリケーションで有効になっていないため、手動で有効にする必要があります。 ただし、WPF アプリケーションの Visual スタイルを有効にすると、ソリューションの発行によりエラーが発生します。 このトピックでは、このエラーを解決する方法と、Visual スタイルを有効にした WPF アプリケーションを発行するためのプロセスについて説明します。 Visual スタイルの詳細については、次を参照してください。 [Visual スタイルの概要](/windows/desktop/Controls/visual-styles-overview)します。 エラー メッセージの詳細については、次を参照してください。 [ClickOnce 配置で特定のエラーのトラブルシューティング](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)します。  
@@ -161,8 +161,9 @@ cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\App
   
  これらの手順を実行した後、エンド ユーザーがアプリケーションをインストールする場所に、発行されたファイルを移動できます。 ソリューションを頻繁に更新する場合は、新しいバージョンを発行するたびに、スクリプトにこれらのコマンドを移動し、スクリプトを実行できます。  
   
-## <a name="see-also"></a>関連項目  
- [ClickOnce 配置で特定のエラーをトラブルシューティングします。](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)   
- [Visual スタイルの概要](/windows/desktop/Controls/visual-styles-overview)   
- [Visual スタイルを有効にします。](https://msdn.microsoft.com/library/bb773175.aspx)   
- [コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)
+## <a name="see-also"></a>関連項目
+
+-[ClickOnce 配置で特定のエラーのトラブルシューティング](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
+- [Visual スタイルの概要](/windows/desktop/Controls/visual-styles-overview)
+- [Visual スタイルを有効にします。](/windows/desktop/Controls/cookbook-overview)
+- [Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)

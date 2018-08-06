@@ -1,5 +1,5 @@
 ---
-title: Icon 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: Icon 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cc1c64e6347f7ea5183efa013504c9e672f5010
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23908a11c22d93ad37ee4e615f4100c5890e0fa5
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129860"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499293"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Icon 要素 (Visual Studio テンプレート)
-パスと、いずれかで表示されるアイコンとして使用するイメージ ファイルのファイル名を指定します、**新しいプロジェクト**または**新しい項目の追加**テンプレートのダイアログ ボックス。  
+パスと、いずれかで表示されるアイコンとして使用するイメージ ファイルのファイル名を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックスで、テンプレート。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -41,15 +41,15 @@ ms.locfileid: "31129860"
 <Icon Package="{PackageID}" ID="ResourceID" />  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Package`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のパッケージを指定する GUID id です。|  
-|`ID`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します|  
+|`Package`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio パッケージを指定する GUID の id。|  
+|`ID`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio のリソース ID を指定します|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -61,11 +61,11 @@ ms.locfileid: "31129860"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
 ## <a name="text-value"></a>テキスト値  
- しない限り、テキスト値が必要な`Package`と`ID`属性を使用します。  
+ しない限り、テキスト値が必要です、`Package`と`ID`属性が使用されます。  
   
- テキストに表示されるテンプレート アイコンのパスとファイル名を提供する、**新しいプロジェクト** ダイアログ ボックス。  
+ テキストに表示されるテンプレートのアイコンのパスとファイル名を提供する、**新しいプロジェクト** ダイアログ ボックス。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Icon` は `TemplateData` に必須の子要素です。  
   
 ## <a name="example"></a>例  
@@ -97,4 +97,4 @@ ms.locfileid: "31129860"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

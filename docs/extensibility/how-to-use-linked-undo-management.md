@@ -1,5 +1,5 @@
 ---
-title: '方法: リンクされた Undo 管理を使用して |Microsoft ドキュメント'
+title: '方法: リンクされた Undo 管理を使用して、|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,29 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24e39bd0bde922dbe761bc9de176d43161bb985d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d65873ae68fe7446ddd265a3af17e694bd475465
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127638"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500421"
 ---
-# <a name="how-to-use-linked-undo-management"></a>方法: リンクされた Undo 管理を使用
-リンク元に戻すには、ユーザーが同時に複数のファイルで同じ編集の取り消しができます。 たとえば、ヘッダー ファイルと、Visual C ファイルなど、複数のプログラム ファイルのテキストの同時変更は、リンクされた undo トランザクションです。 リンク元に戻す機能が元に戻す manager の環境の実装に組み込まれていると<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager>この機能を操作することができます。 リンク元に戻すは、単一の元に戻す単位として扱われますを同時に元に戻すスタックをリンクできる親元に戻す単位によって実装されます。 リンク元に戻すを使用する手順については、次のセクションで詳しく説明します。  
+# <a name="how-to-use-linked-undo-management"></a>方法: リンクされた undo 管理の使用
+リンク元に戻すには、ユーザーが同時に複数のファイルで同じの編集を元に戻すができます。 たとえば、ヘッダー ファイルと、Visual C ファイルなど、複数のプログラム ファイルのテキストの同時変更は、リンク元に戻すトランザクションです。 リンク元に戻す機能が、元に戻すマネージャーの環境の実装に組み込まれていると<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager>この機能を操作することができます。 リンク元に戻すは元に戻すスタックの 1 つの undo 単位として扱われます一緒にリンクできる親元に戻す単位によって実装されます。 リンク元に戻すを使用する手順の詳細については、次のセクション。  
   
-### <a name="to-use-linked-undo"></a>リンク元に戻すを使用するには  
+## <a name="to-use-linked-undo"></a>リンク元に戻すを使用するには  
   
-1.  呼び出す`QueryService`で`SVsLinkedUndoManager`へのポインターを取得する`IVsLinkedUndoTransactionManager`です。  
+1.  呼び出す`QueryService`で`SVsLinkedUndoManager`へのポインターを取得する`IVsLinkedUndoTransactionManager`します。  
   
-2.  呼び出すことによって、初期の親リンク元に戻す単位を作成する<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A>です。 これは、リンク元に戻すスタックにグループ化する元に戻すスタックのセットの開始位置を設定します。 `OpenLinkedUndo`メソッドは、リンク元に戻す strict または非厳格にするかどうかを指定する必要があります。 非厳格リンク元に戻す操作は、リンク元に戻す兄弟付きドキュメントのいくつか閉じることができ、もう一方のリンクのままにして、スタック上の兄弟元に戻すことを意味します。 厳密なリンクの元に戻す操作では、元に戻すかまったくないすべてのリンクされた undo 兄弟スタックがあることを指定します。 後続のリンクを元に戻すスタックを呼び出す追加[IOleUndoManager::Add](http://msdn.microsoft.com/library/windows/desktop/ms680135)メソッドです。  
+2.  初期の親のリンクされた undo 単位を呼び出して作成<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.OpenLinkedUndo%2A>です。 これには、リンク元に戻すスタックにグループ化する元に戻すスタックのセットの開始位置を設定します。 `OpenLinkedUndo`メソッドも厳密なや非厳格にするリンクされた、元に戻すかどうかを指定する必要になります。 非厳格リンク元に戻す動作は、一部のリンクされた undo 兄弟付きドキュメントを閉じることができますを他のリンクされたままにしてくださいを元に戻す、スタック上の兄弟を意味します。 厳密なリンク元に戻す操作では、すべてのリンクされた undo 兄弟スタックがまとめてまたはまったく実行されませんがあることを指定します。 後続リンク元に戻すスタックを呼び出して追加[IOleUndoManager::Add](http://msdn.microsoft.com/library/windows/desktop/ms680135)メソッド。  
   
-3.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A>を以前のバージョンすべての 1 つとしてリンクされた undo ユニットをバックアップします。  
+3.  呼び出す<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager.CloseLinkedUndo%2A>を展開するすべての 1 つとして、リンク元に戻す単位のバックアップを作成します。  
   
     > [!NOTE]
-    >  エディターでリンクされた undo 管理を実装するには、元に戻す管理を追加します。 リンク元に戻す管理の実装の詳細については、次を参照してください。[する方法: 元に戻す管理を実装](../extensibility/how-to-implement-undo-management.md)です。  
+    >  エディターでリンクされた undo 管理を実装するには、元に戻す管理を追加します。 リンクされた undo 管理の実装の詳細については、次を参照してください。[方法: 元に戻す管理を実装](../extensibility/how-to-implement-undo-management.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>   
  [IOleParentUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms682151)   
  [IOleUndoUnit](http://msdn.microsoft.com/library/windows/desktop/ms678476)   
- [方法: 元に戻す管理の実装](../extensibility/how-to-implement-undo-management.md)
+ [方法: 元に戻す管理を実装](../extensibility/how-to-implement-undo-management.md)

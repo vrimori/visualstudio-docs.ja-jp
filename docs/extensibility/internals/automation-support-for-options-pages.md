@@ -1,5 +1,5 @@
 ---
-title: オートメーション [オプション] ページのサポート |Microsoft ドキュメント
+title: オートメーション [オプション] ページのサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d27ad706d4203a3573a734a1cd11b19e3c9df6a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e72c2a55c8abb2049f03d46c8a1a5cf27eecc341
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128573"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499891"
 ---
-# <a name="automation-support-for-options-pages"></a>オートメーション [オプション] ページのサポート
-Vspackage は、ユーザー設定を提供できます**オプション** ダイアログ ボックスを**ツール**メニュー ([ツール オプション] ページ) で[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ようにことができます、オートメーション モデルを使用できます。  
+# <a name="automation-support-for-options-pages"></a>[オプション] ページのオートメーションをサポートします。
+Vspackage は、ユーザー設定を提供できる**オプション** ダイアログ ボックス、**ツール**メニュー (**ツール オプション**ページ) で[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]自動化に利用できるように、モデル。  
   
-## <a name="tools-options-pages"></a>ツール オプション ページ  
- 作成する、**ツール オプション** ページで、VSPackage の VSPackage の実装を通じて環境に返されるユーザー コントロールの実装を提供する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>メソッド (またはマネージ コードに対して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>メソッドの場合)。  
+## <a name="tools-options-pages"></a>[ツール] メニューの [オプション] ページ  
+ 作成する、**ツール オプション** ページで、VSPackage の VSPackage の実装により、環境に返されるユーザー コントロールの実装を提供する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>メソッド。 (または、マネージ コード、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A>メソッドです)。 
   
- 省略可、ただし、オートメーション モデルからこの新しいページにアクセスできるように強くお勧めします。 これは、次の手順を行うことができます。  
+ これは省略可、ただし、オートメーション モデルからこの新しいページにアクセスできるように強くお勧めします。 次の手順で行うことができます。  
   
-1.  拡張、 <xref:EnvDTE._DTE.Properties%2A> IDispatch から派生したオブジェクトの実装を通してオブジェクト。  
+1.  拡張、 <xref:EnvDTE._DTE.Properties%2A> IDispatch から派生したオブジェクトの実装を使用してオブジェクト。  
   
 2.  実装を返す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>メソッド (またはマネージ コードに対して、<xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A>メソッド) IDispatch から派生したオブジェクトにします。  
   
-3.  オートメーション コンシューマーを呼び出すと、<xref:EnvDTE._DTE.Properties%2A>カスタム メソッド**オプション**プロパティ ページで、環境を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>メソッドは、ユーザー設定を取得する**ツール オプション**ページのオートメーション実装です。  
+3.  Automation の消費者を呼び出すときに、<xref:EnvDTE._DTE.Properties%2A>カスタム メソッド**オプション**プロパティ ページで、環境を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>メソッドは、ユーザー設定を取得する**ツール オプション**ページのオートメーション実装です。  
   
-4.  各を提供する VSPackage のオートメーション オブジェクトを使用して<xref:EnvDTE.Property>によって返される<xref:EnvDTE._DTE.Properties%2A>です。  
+4.  各を提供する VSPackage のオートメーション オブジェクトを使用して<xref:EnvDTE.Property>によって返される<xref:EnvDTE._DTE.Properties%2A>します。  
   
- カスタム ツール オプション ページを実装するサンプルについては、次を参照してください。 [VSSDK のサンプル](http://aka.ms/vs2015sdksamples)です。  
+ カスタムの実装サンプル**ツール オプション**ページを参照してください[VSSDK のサンプル](http://aka.ms/vs2015sdksamples)します。  
   
 ## <a name="see-also"></a>関連項目  
- [プロジェクト オブジェクトの公開](../../extensibility/internals/exposing-project-objects.md)
+ [プロジェクト オブジェクトを公開します。](../../extensibility/internals/exposing-project-objects.md)

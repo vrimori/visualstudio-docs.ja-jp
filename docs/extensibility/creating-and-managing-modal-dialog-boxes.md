@@ -1,5 +1,5 @@
 ---
-title: 作成して、モーダル ダイアログ ボックスを管理する |Microsoft ドキュメント
+title: 作成して、モーダル ダイアログ ボックスの管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,48 +13,48 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14b1e39e4479b0b6b909c625e1e8b6ad19955d30
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b6c5a4bdcb6496bae9bf718c38bcf512fbf69756
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102201"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498750"
 ---
-# <a name="creating-and-managing-modal-dialog-boxes"></a>作成して、モーダル ダイアログ ボックスを管理します。
-Visual Studio 内のモーダル ダイアログ ボックスを作成するときに、ダイアログ ボックスが表示されている間、ダイアログ ボックスの親ウィンドウが無効になっていることを確認し、ダイアログ ボックスを閉じた後に、親ウィンドウを再度有効にする必要があります。 これを行わないと、エラーが表示される可能性があります:"Microsoft Visual Studio をシャット ダウンできないモーダル ダイアログ ボックスがアクティブであるためです。 アクティブなダイアログを閉じてもう一度やり直してください。"  
+# <a name="create-and-manage-modal-dialog-boxes"></a>作成し、管理のモーダル ダイアログ ボックス
+Visual Studio 内でのモーダル ダイアログ ボックスを作成するときにダイアログ ボックスが表示されますが、ダイアログ ボックスの親ウィンドウが無効になっていることを確認し、ダイアログ ボックスが閉じられた後に、親ウィンドウを再度有効にする必要があります。 これを行わないと、エラーが表示される可能性があります:*モーダル ダイアログがアクティブになっているために、Microsoft Visual Studio をシャット ダウンできません。アクティブになっているダイアログを閉じてやり直してください。*  
   
- これを行う 2 つの方法はあります。 派生は、WPF ダイアログ ボックスがある場合、ことをお勧め<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>、まず<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A>ダイアログ ボックスを表示します。 これを行う場合は、親ウィンドウのモーダル状態を管理する必要はありません。  
+ これを行う 2 つの方法はあります。 推奨される方法、WPF ダイアログ ボックスがある場合から派生させます<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>を呼び出して<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A>ダイアログ ボックスを表示します。 これを行う場合は、親ウィンドウのモーダル状態を管理する必要はありません。  
   
- ダイアログ ボックスが、WPF ではない場合や、その他の理由により、ダイアログ ボックスを派生させることはできませんクラス<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>を呼び出して、ダイアログ ボックスの親を取得する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A>呼び出すことによって、自分でモーダルの状態を管理し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A>メソッドをダイアログ ボックスを表示し、ダイアログ ボックスを閉じた後 1 (true) のパラメーターを使用してメソッドを呼び出す前に 0 (false) のパラメーターです。  
+ ダイアログ ボックスが、WPF ではない場合や、その他のダイアログ ボックスを派生できない理由クラス<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>、呼び出すことで、ダイアログ ボックスの親を取得する必要がありますし、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A>と呼び出すことによって、自分でモーダルの状態を管理、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A>メソッドをダイアログ ボックスを表示し、ダイアログ ボックスを閉じた後 1 (true) のパラメーターを使用してメソッドを呼び出す前に 0 (false) のパラメーター。  
   
-## <a name="creating-a-dialog-box-derived-from-dialogwindow"></a>ダイアログ ウィンドウから派生したダイアログ ボックスの作成  
+## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>ダイアログ ウィンドウから派生したダイアログ ボックスを作成します。  
   
-1.  という名前の VSIX プロジェクトを作成する**OpenDialogTest**という名前のメニュー コマンドを追加および**ダイアログ**です。 これを行う方法の詳細については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
+1.  という名前の VSIX プロジェクトを作成する**OpenDialogTest**という名前のメニュー コマンドを追加および**ダイアログ**します。 これを行う方法の詳細については、次を参照してください。[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
   
-2.  使用する、<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>クラスでは、次のアセンブリへの参照を追加する必要があります (のフレームワーク タブで、**参照の追加** ダイアログ ボックス)。  
+2.  使用する、<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>クラスでは、次のアセンブリへの参照を追加する必要があります (の Framework タブで、**参照の追加** ダイアログ ボックス)。  
   
-    -   PresentationCore  
+    -   *PresentationCore*  
   
-    -   PresentationFramework  
+    -   *PresentationFramework*  
   
-    -   WindowsBase  
+    -   *WindowsBase*  
   
-    -   System.Xaml  
+    -   *System.Xaml*  
   
-3.  次のコードを追加で OpenDialog.cs、`using`ステートメント。  
+3.  *OpenDialog.cs*、次の追加`using`ステートメント。  
   
     ```csharp  
     using Microsoft.VisualStudio.PlatformUI;  
     ```  
   
-4.  という名前のクラスを宣言**TestDialogWindow**から派生した<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>:  
+4.  という名前のクラスを宣言`TestDialogWindow`から派生した<xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>:  
   
     ```csharp  
     class TestDialogWindow : DialogWindow  
     {. . .}  
     ```  
   
-5.  最小化し、ダイアログ ボックスを最大化するには、次のように設定します。<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A>と<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A>true に設定します。  
+5.  ダイアログ ボックスを最大化を最小限に抑え、次のように設定します。<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A>と<xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A>を true にします。  
   
     ```csharp  
     internal TestDialogWindow()  
@@ -64,27 +64,27 @@ Visual Studio 内のモーダル ダイアログ ボックスを作成すると�
     }  
     ```  
   
-6.  **OpenDialog.ShowMessageBox**メソッド、既存のコードを次に置き換えます。  
+6.  `OpenDialog.ShowMessageBox`メソッドを次の既存のコードに置き換えます。  
   
     ```csharp  
     TestDialogWindow testDialog = new TestDialogWindow();  
     testDialog.ShowModal();  
     ```  
   
-7.  アプリケーションをビルドして実行します。 Visual Studio の実験用インスタンスが表示されます。 **ツール**実験用インスタンスのメニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**です。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。 最小化し、ウィンドウを最大化できる必要があります。  
+7.  アプリケーションをビルドして実行します。 Visual Studio の実験用インスタンスが表示されます。 **ツール**実験用インスタンスのメニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**します。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。 最小化し、ウィンドウを最大化できる必要があります。  
   
-## <a name="creating-and-managing-a-dialog-box-not-derived-from-dialogwindow"></a>作成と管理ダイアログ ウィンドウから派生していません ダイアログ ボックス  
+## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>作成し、管理 ダイアログ ボックスがダイアログ ウィンドウから派生していません。  
   
-1.  この手順を使用することができます、 **OpenDialogTest**は同じアセンブリの参照に、前の手順で作成したソリューションです。  
+1.  この手順で使用することができます、 **OpenDialogTest**同じアセンブリの参照を前の手順で作成したソリューションです。  
   
-2.  次の追加`using`宣言します。  
+2.  次の追加`using`宣言。  
   
     ```csharp  
     using System.Windows;  
     using Microsoft.Internal.VisualStudio.PlatformUI;  
     ```  
   
-3.  という名前のクラスを作成する**TestDialogWindow2**から派生した<xref:System.Windows.Window>:  
+3.  という名前のクラスを作成する`TestDialogWindow2`から派生した<xref:System.Windows.Window>:  
   
     ```csharp  
     class TestDialogWindow2 : Window  
@@ -106,7 +106,7 @@ Visual Studio 内のモーダル ダイアログ ボックスを作成すると�
     }  
     ```  
   
-6.  **OpenDialog.ShowMessageBox**メソッド、既存のコードを次に置き換えます。  
+6.  `OpenDialog.ShowMessageBox`メソッドを次の既存のコードに置き換えます。  
   
     ```csharp  
     IVsUIShell uiShell = (IVsUIShell)ServiceProvider.GetService(typeof(SVsUIShell));  
@@ -128,4 +128,4 @@ Visual Studio 内のモーダル ダイアログ ボックスを作成すると�
     }  
     ```  
   
-7.  アプリケーションをビルドして実行します。 **ツール**メニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**です。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。
+7.  アプリケーションをビルドして実行します。 **ツール**メニューという名前のコマンドを表示する必要があります**呼び出すダイアログ**します。 このコマンドをクリックすると、ダイアログ ウィンドウが表示されます。

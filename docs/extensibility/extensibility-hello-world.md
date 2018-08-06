@@ -1,5 +1,5 @@
 ---
-title: Hello World |Microsoft ドキュメント
+title: Hello World |Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.topic: conceptual
@@ -9,73 +9,73 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c531d8acddfebcd2656d6dca05b95244f54ec01
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a0d5ab3c86c454a547ea80307c5440441424b1c
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31134809"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499566"
 ---
-# <a name="creating-your-first-extension-hello-world"></a>最初の拡張機能の作成: Hello World
+# <a name="create-your-first-extension-hello-world"></a>初めての拡張機能の作成: Hello World
 
-この Hello World の例には、Visual Studio の最初の拡張機能の作成手順について説明します。 このチュートリアルでは、Visual Studio を新しいコマンドを追加する方法を示します。
+この Hello World の例には、Visual Studio の初めての拡張機能の作成手順について説明します。 このチュートリアルでは、Visual Studio に新しいコマンドを追加する方法を説明します。
 
-プロセスでは学習する方法。
+プロセスでは、学習する方法。
 
 * **[機能拡張プロジェクトを作成します。](#create-an-extensibility-project)**
 * **[カスタム コマンドを追加します。](#add-a-custom-command)**
 * **[ソース コードを変更します。](#modify-the-source-code)**
 * **[実行します。](#run-it)**
 
-この例に使用する Visual C# でカスタム メニュー ボタン「言う Hello World!」という名前の追加 次のように検索するには。
+この例で使用します (Visual C#)「と Hello World!」という名前のカスタム メニュー ボタンを追加するには 次に示します。
 
-![hello world コマンド](media/hello-world-say-hello-world.png)
+![Hello World コマンド](media/hello-world-say-hello-world.png)
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-作業を開始する前に、インストールされていることを確認してください、 **Visual Studio 拡張機能開発**ワークロードし、必要とするサンプル コードは、VSIX テンプレートが含まれます。
+開始する前にインストールされている確認、 **Visual Studio 拡張機能の開発**VSIX のテンプレートが必要し、サンプル コードを含むワークロード。
 
 メモ: (Community、Professional、または Enterprise) Visual Studio 機能拡張プロジェクトを作成する Visual Studio の任意のバージョンを使用することができます。
 
 ## <a name="create-an-extensibility-project"></a>機能拡張プロジェクトを作成します。
 
-手順 1. **ファイル** メニューをクリックして**新しいプロジェクト**です。 画面の下部にある、プロジェクトの名前を入力できます。
+手順 1. **ファイル** メニューのをクリックして**新しいプロジェクト**します。 画面の下部には、プロジェクトの名前を入力できます。
 
-手順 2. **テンプレート** メニューのをクリックして**Visual c#** をクリックして**機能拡張**、順にクリック**VSIX プロジェクト**です。
+手順 2. **テンプレート** メニューのをクリックして**Visual c#**、 をクリックして**拡張**、 をクリックし、 **VSIX プロジェクト**。
 
 ![新しいプロジェクト](media/hello-world-new-project.png)
 
-はじめに ページとサンプルの一部のリソースを閲覧する必要があります。
+はじめに ページといくつかのサンプル リソースがわかります。
 
-このチュートリアルのままにしてに戻る必要がある場合に新しい HelloWorld プロジェクトを見つけることができます、**スタート ページ**で、**最近使ったもの**セクションです。
+このチュートリアルのままにし、再度する必要がある場合で新しい HelloWorld プロジェクトを確認できます、**スタート ページ**で、**最近**セクション。
 
 ## <a name="add-a-custom-command"></a>カスタム コマンドを追加します。
 
-手順 1. マニフェストを選択した場合、どのようなオプションは変更できず、インスタンス、メタデータ、説明、およびバージョンが確認できます。
+手順 1. マニフェストを選択した場合、どのようなオプションは変更可能なインスタンス、メタデータ、説明、およびバージョンが確認できます。
 
-手順 2. プロジェクト (ソリューションではなく) を右クリックします。 コンテキスト メニューで、をクリックして**追加**、クリックして**ユーザー コントロール**です。
+手順 2. (ソリューションではなく) プロジェクトを右クリックします。 コンテキスト メニューで、次のようにクリックします。**追加**、 をクリックし、**ユーザー コントロール**します。
 
-手順 3. 戻り、 **Extensibility**セクションで、クリックして**にカスタム コマンド**です。
+手順 3. 戻り、**拡張**セクションで、クリックして**カスタム コマンド**。
 
-手順 4. **名前**下部にあるフィールドに、Command.cs のインスタンスの名前を指定します。
+手順 4. **名前**下部にあるフィールドに、名前を付け、たとえば*Command.cs*します。
 
 ![カスタム コマンド](media/hello-world-custom-command.png)
 
-新しいコマンドが示されます、**ソリューション エクスプ ローラー**下にある、**リソース**分岐します。 PNG および ICO ファイル、イメージを変更する場合など、コマンドに関連するその他のファイルを調べることがもできます。
+新しいコマンドが示されます、**ソリューション エクスプ ローラー**下、**リソース**分岐します。 これは、PNG および ICO ファイル、イメージを変更する場合など、コマンドに関連するその他のファイルを検索します。
 
 ## <a name="modify-the-source-code"></a>ソース コードを変更します。
 
-この時点で、ボタンを追加するは非常に一般的なです。 変更する場合に、VSCT ファイルおよび CS ファイルを変更する必要があります。
+この時点では、追加するボタンが非常に汎用です。 変更を加える必要に応じて、VSCT ファイルおよび CS ファイルを変更する必要があります。
 
-* VSCT ファイルは、場所をコマンドの名前を変更したりできるよう、Visual Studio コマンドのシステムでの移動先を定義します。 VSCT ファイルを探索するように、多くのコードは、制御の各セクションで説明するコメントが付けられたコードが表示されます。
+* VSCT ファイルは、することができます、コマンドの名前を変更として、Visual Studio のコマンドでは、どこを定義します。 VSCT ファイルを探索するときは、大量のコードのコントロールの各セクションで説明するコメントが付けられたコードが表示されます。
 
-* CS ファイルでは、クリック ハンドラーなどのアクションを定義することができます。
+* CS ファイルでは、クリック ハンドラーなどのアクションを定義できます。
 
-手順 1. **ソリューション エクスプ ローラー**、新しいコマンドの VSCT ファイルを検索します。 この場合、呼び出されます CommandPackage.vsct です。
+手順 1. **ソリューション エクスプ ローラー**、新しいコマンドの VSCT ファイルを検索します。 呼び出されるこの場合、 *CommandPackage.vsct*します。
 
-![コマンド パッケージ vsct](media/hello-world-command-package-vsct.png)
+![コマンドのパッケージ vsct](media/hello-world-command-package-vsct.png)
 
-手順 2. 変更、`ButtonText`に"Hello World!"のパラメーター
+手順 2. 変更、`ButtonText`パラメーター`Say Hello World!`します。
 
 ```xml
   ...
@@ -89,7 +89,7 @@ ms.locfileid: "31134809"
   ...
 ```
 
-手順 3. 戻る**ソリューション エクスプ ローラー** Command.cs ファイルを検索します。 文字列を変更`message`コマンドの`string.Format(..)`"Hello World!"を
+手順 3. 戻り**ソリューション エクスプ ローラー**を見つけて、 *Command.cs*ファイル。 文字列を変更`message`コマンドの`string.Format(..)`に`Hello World!`します。
 
 ```csharp
   ...
@@ -110,28 +110,28 @@ ms.locfileid: "31134809"
   ...
 ```
 
-各ファイルに変更を保存することを確認してください。
+各ファイルに変更を保存してください。
 
 ## <a name="run-it"></a>実行します。
 
-Visual Studio の実験用インスタンスで、ソース コードを実行できます。
+Visual Studio の実験用インスタンスでソース コードを実行できます。
 
-手順 1. をクリックして**開始**ツールバー。 これは、プロジェクトをビルド デバッガーを開始と呼ばれる Visual Studio の新しいインスタンスを起動する、**実験用インスタンス**です。
+手順 1. クリックして**開始**ツールバー。 プロジェクトのビルドと呼ばれる Visual Studio の新しいインスタンスを起動するデバッガーを起動され、**実験用インスタンス**します。
 
-Visual Studio タイトル バーに「実験用インスタンス」という語が表示されます。
+単語が表示されます**実験用インスタンス**Visual Studio タイトル バーにします。
 
 ![実験用インスタンスのタイトル バー](media/hello-world-exp-instance.png)
 
-手順 2. **ツール**のメニューを開き、**実験用インスタンス**をクリックして**Say Hello World!** です。
+手順 2. **ツール**のメニュー、**実験用インスタンス**、 をクリックして**Say Hello World!** します。
 
-![最終結果](media/hello-world-final-result.png)
+![最終的な結果](media/hello-world-final-result.png)
 
-この場合、センターでは、ダイアログは、"Hello World!"が表示される画面の新しいカスタムのコマンドからの出力が表示されます。 メッセージが表示されます。
+新しいカスタム コマンドからの出力が表示されます、ここでは、画面の中央のダイアログ ボックスを提供する、 **Hello World!** メッセージが表示されます。
 
 ## <a name="next-steps"></a>次の手順
 
-Visual Studio 機能拡張の操作の基礎を理解したところで、詳細については、次に示します。
+Visual Studio Extensibility の操作の基礎を理解できた次詳細についてここに示します。
 
-* [Visual Studio 拡張機能の開発を開始して](starting-to-develop-visual-studio-extensions.md)-サンプル、チュートリアルです。 拡張機能を公開します。
-* [Visual Studio 2017 SDK の新](what-s-new-in-the-visual-studio-2017-sdk.md)-Visual Studio 2017 の新しい拡張機能
-* [Visual Studio SDK 内](internals/inside-the-visual-studio-sdk.md)-Visual Studio 機能拡張の詳細
+* [Visual Studio 拡張機能の開発を始める](starting-to-develop-visual-studio-extensions.md)-サンプル、チュートリアル。 拡張機能を公開します。
+* [新機能については、Visual Studio 2017 SDK](what-s-new-in-the-visual-studio-2017-sdk.md) -Visual Studio 2017 での新しい拡張機能
+* [Visual Studio SDK の内部](internals/inside-the-visual-studio-sdk.md)-Visual Studio 機能拡張の詳細を説明します。

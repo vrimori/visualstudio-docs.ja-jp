@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: bc626ce4c9639fcd8dfdf0f0992cead484ced2c4
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 628c847817db073daeed3cd6c04b1722502e80ca
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056844"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511532"
 ---
 # <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Visual Studio でのユニバーサル Windows アプリ (UWP) のデバッグします。
 
@@ -27,8 +27,7 @@ Visual Studio デバッガーでは、UWP アプリのデバッグを完全に�
 
 |タスクをデバッグします。|記事|
 |-|-|  
-|Windows 8.1 アプリをデバッグします。|[Visual Studio でのストア アプリのデバッグ](https://msdn.microsoft.com/en-us/library/hh441472.aspx)|
-|デバッグの Windows Phone 8 アプリ|[Windows Phone 8 のアプリのデバッグ](https://msdn.microsoft.com/library/windows/apps/ff402572(v=vs.105).aspx)|
+|Windows 8.1 アプリをデバッグします。|[Visual Studio でのストア アプリのデバッグ](debug-store-apps-in-visual-studio.md)|
 |ローカル コンピューター、リモートまたは接続されたデバイスまたはアプリのシミュレーターで UWP アプリを実行します。|[UWP アプリのデバッグ セッションを開始する](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|
 |ローカルとリモートの両方のデプロイ済みのアプリをデバッグします。|[インストールされているアプリケーション パッケージをデバッグする](../debugger/debug-installed-app-package.md)|
 |UWP アプリに ContentPrefetcher クラスの影響を分析します。|[UWP アプリ用コンテンツをプリフェッチします。](../debugger/prefetch-content-for-windows-store-apps.md)|

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bea570ea8af34a7b448bbdf4b7367c96d8085907
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 59d1012a3a291c2f49cf5fd5e447ce46909c0cdd
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757620"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512279"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>階層リンク バーを使用する方法
 
@@ -29,7 +29,7 @@ ms.locfileid: "36757620"
 
 ## <a name="using-breadcrumb-navigation"></a>階層リンク バーの使用
 
-1.  ルート アクティビティをクリックしたアクティビティに変更するワークフロー デザイナーのアクティビティをダブルクリックします。 クリックしたアクティビティはルートで完全に展開され、その先祖が階層リンク バーに表示されます。 これは、アクティビティのドリル インまたはドリル アウトと呼ばれることがあります。
+1.  ルート アクティビティをクリックしたアクティビティに変更するワークフロー デザイナーのアクティビティをダブルクリックします。 クリックしたアクティビティがルートに完全に展開し、その先祖が階層リンク バーに表示されます。 これは、アクティビティのドリル インまたはドリル アウトと呼ばれることがあります。
 
 2.  現在のルート アクティビティの先祖に移動するには、階層リンク バーのアクティビティをクリックします。
 

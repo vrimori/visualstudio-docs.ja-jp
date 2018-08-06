@@ -1,5 +1,5 @@
 ---
-title: IDE Guid |Microsoft ドキュメント
+title: IDE Guid |Microsoft Docs
 ms.date: 03/22/2018
 ms.technology:
 - vs-ide-sdk
@@ -13,16 +13,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10acb5be1caacbbe496ad98f48516206bc14b1cf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dbcf81c34cae9c2f2e4e76e995666b280092b29d
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130272"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498185"
 ---
-# <a name="ide-guids"></a>IDE の Guid
+# <a name="ide-guids"></a>IDE GUIDs
 
-<xref:Microsoft.VisualStudio.VSConstants>クラスは、次の表に示すように、統合開発環境 (IDE) の一部の Guid を公開します。
+<xref:Microsoft.VisualStudio.VSConstants>クラスは次の表に記載されている統合開発環境 (IDE) の一部の Guid を発行します。
 
 ## <a name="core-systems"></a>コア システム
 
@@ -39,7 +39,7 @@ ms.locfileid: "31130272"
 |<xref:Microsoft.VisualStudio.VSConstants.GUID_TextEditorFactory>|8B382828-6202-11d1-8870-0000F87579D2|
 |<xref:Microsoft.VisualStudio.VSConstants.GUID_VsNewProjectPseudoFolder>|DCF2A94A-45B0-11d1-ADBF-00C04FB6BE4C|
 
-## <a name="broadly-visible-components"></a>広範に表示されるコンポーネント
+## <a name="broadly-visible-components"></a>広範で表示されるコンポーネント
 
 |定数|GUID|
 |--------------|----------|
@@ -49,7 +49,7 @@ ms.locfileid: "31130272"
 |<xref:Microsoft.VisualStudio.VSConstants.SID_SUIHostCommandDispatcher>|e69cd190-1276-11d1-9f64-00a0c911004f|
 |<xref:Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane>|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="files-virtual-and-physical-folders-and-subprojects"></a>ファイル、仮想および物理フォルダーおよびサブプロジェクト
+## <a name="files-virtual-and-physical-folders-and-subprojects"></a>ファイルやフォルダーの仮想および物理のサブプロジェクト
 
 |定数|GUID|
 |--------------|----------|
@@ -74,7 +74,7 @@ ms.locfileid: "31130272"
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>|93694fa0-0397-11d1-9f4e-00a0c911004f|
 |<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>|adfc4e66-0397-11d1-9f4e-00a0c911004f|
 
-## <a name="output-pane"></a>出力ペイン
+## <a name="output-pane"></a>出力ウィンドウ
 
 |定数|GUID|
 |--------------|----------|
@@ -85,7 +85,7 @@ ms.locfileid: "31130272"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
 |<xref:Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane>|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="command-sets-and-properties"></a>コマンド セットとプロパティ
+## <a name="command-sets-and-properties"></a>コマンドのセットとプロパティ
 
 |定数|GUID|
 |--------------|----------|
@@ -98,7 +98,7 @@ ms.locfileid: "31130272"
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|
 
-## <a name="task-list-guids"></a>タスク リストの Guid
+## <a name="task-list-guids"></a>タスク一覧の Guid
 
 |定数|GUID|
 |--------------|----------|
@@ -134,4 +134,4 @@ ms.locfileid: "31130272"
 
 - [マネージ コードの COM 定数](../extensibility/com-constants-in-managed-code.md)
 - [IDE 定数](../extensibility/ide-constants.md)
-- [プロジェクト システムを拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [プロジェクト %s ystems を拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

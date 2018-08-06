@@ -1,5 +1,5 @@
 ---
-title: DefaultName 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: DefaultName 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e67d8970859906e839abf89e85e38c24c2d88066
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03513b786c17e5bef3d8fa1fff79c1c3e73fe6a0
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126859"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500320"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName 要素 (Visual Studio テンプレート)
-作成時に、プロジェクトまたはアイテムの Visual Studio プロジェクト システムが生成される名前を指定します。  
+作成時にそのプロジェクトまたは項目の Visual Studio プロジェクト システムにより生成される名前を指定します。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -37,7 +37,7 @@ ms.locfileid: "31126859"
 </DefaultName>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -57,17 +57,17 @@ ms.locfileid: "31126859"
   
  このテキストは、プロジェクトまたは項目の既定の名前を指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `DefaultName` は、省略可能な要素です。  
   
- プロジェクトの場合は、この要素は、ディスク上、プロジェクトを格納するディレクトリの名前を指定します。 アイテムのソース ファイルのファイル名を示します。  
+ プロジェクトの場合は、この要素は、ディスク上、プロジェクトを格納するディレクトリの名前を指定します。 項目については、ソース ファイルのファイル名を指定します。  
   
- 既定値を使用して名前を変更するには、プロジェクトまたは項目を作成するときに、**名前**はいずれかから使用可能なオプション、**新しいプロジェクト** ダイアログ ボックスまたは**新しい項目の追加**ダイアログ ボックス。  
+ 使用して、既定の名前を変更するにはプロジェクトまたは項目を作成するときに、**名前**はいずれかから使用可能なオプション、**新しいプロジェクト** ダイアログ ボックスまたは**新しい項目の追加**ダイアログ ボックス。  
   
- プロジェクトまたは項目の既定の名前を生成するようにプロジェクト システムしたくない場合は、設定、 [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)要素を`False`です。  
+ プロジェクトまたは項目の既定の名前を生成するプロジェクト システムしたくない場合は、設定、 [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md)要素`False`します。  
   
 ## <a name="example"></a>例  
- 次の例では、メタデータの標準項目テンプレートを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]クラスです。  
+ 次の例では、用の標準的な項目テンプレートのメタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]クラス。  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  

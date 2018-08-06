@@ -13,18 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50b9b61f34ba9e78efd8bc40c7d97583ee0c25f7
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 686969c233f50dd1df743590206966183be48da9
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117018"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513199"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 
 **プロパティ**ウィンドウ、ダイアログ ボックス、または選択すると、変数デザイナーなどのデザイナー **[型の参照**一連のデータ型からは、**参照して .NET 型を選択します。** ] ダイアログ ボックスの (「型ブラウザー」として省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。
 
- このダイアログ ボックスは、次のようなさまざなユーザー シナリオで使用されます。
+このダイアログ ボックスは、次のようなさまざなユーザー シナリオで使用されます。
 
 -   変数または引数の型を設定する。
 
@@ -56,21 +56,24 @@ ms.locfileid: "37117018"
      ドロップダウン ボックスから、ジェネリックを閉じ をクリックし、使用する種類を選択します**OK**します。
 
 ## <a name="types-displayed-in-the-type-browser"></a>型ブラウザーに表示される型
- 型ブラウザーに表示される型は、型ブラウザーを起動した方法に応じて変わる場合があります。 内のワークフロー プロジェクトから型ブラウザーを起動したかどうかは**vs2010**、既定ですべての参照されたアセンブリで型および参照先のプロジェクトが表示されます。 外部から型ブラウザーを起動した場合、 **vs2010**プロジェクト (たとえば、再ホストされたワークフロー アプリケーションのように、またはスタンドアロンのワークフロー ファイルで)、システムの既定ですべての AppDomain に読み込まれたアセンブリから型を表示し、.
 
- アクティビティ デザイナーの開発者は、型ブラウザーの型をフィルター処理できます。 どのアクティビティでも、表示されるのは型のサブセットのみです。 たとえば、<xref:System.Activities.Statements.TryCatch> アクティビティでは、<xref:System.Exception> から派生した型のみが型ブラウザーに表示されます。
+型ブラウザーに表示される型は、型ブラウザーを起動した方法に応じて変わる場合があります。 内のワークフロー プロジェクトから型ブラウザーを起動したかどうかは**vs2010**、既定ですべての参照されたアセンブリで型および参照先のプロジェクトが表示されます。 外部から型ブラウザーを起動した場合、 **vs2010**プロジェクト (たとえば、再ホストされたワークフロー アプリケーションのように、またはスタンドアロンのワークフロー ファイルで)、システムの既定ですべての AppDomain に読み込まれたアセンブリから型を表示し、.
+
+アクティビティ デザイナーの開発者は、型ブラウザーの型をフィルター処理できます。 どのアクティビティでも、表示されるのは型のサブセットのみです。 たとえば、<xref:System.Activities.Statements.TryCatch> アクティビティでは、<xref:System.Exception> から派生した型のみが型ブラウザーに表示されます。
 
 ## <a name="filtering-search-results-in-the-type-browser"></a>型ブラウザーでの検索結果のフィルター処理
- 型の一覧、**型名**検索する文字を入力すると、短いボックスを取得します。 フィルター処理された一覧には、入力した文字列で完全修飾名が始まる型、または、入力した文字列で始まる短い名前を持つ型のみが表示されます。
 
- 例えば:
+型の一覧、**型名**検索する文字を入力すると、短いボックスを取得します。 Fullyqualified 名前が入力した文字列で始まる型のみまたは短い名前が入力した文字列で始まる型は、フィルター処理された一覧に表示されます。
+
+例えば:
 
 1.  入力**操作**と一致する<xref:System.OperationCanceledException>なく<xref:System.InvalidOperationException>します。 <xref:System.InvalidOperationException> と一致するためには、「System.I」または「Invalid」と入力します。
 
-2.  入力**ジェネリック**と一致する<xref:System.GenericUriParser>でない型しますが、<xref:System.Collections.Generic>名前空間。 <xref:System.Collections.Generic> 名前空間の型を検索するには、その名前空間の完全修飾名を入力します。
+2.  入力**ジェネリック**と一致する<xref:System.GenericUriParser>でない型しますが、<xref:System.Collections.Generic>名前空間。 内の型を検索する、<xref:System.Collections.Generic>名前空間、名前空間の完全修飾名を入力します。
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>型ブラウザー ダイアログを使用したサービス コントラクトの選択
- サービス コントラクト型を選択すると、型ブラウザーは <xref:System.ServiceModel.ServiceContractAttribute> 属性を持つ型だけを表示します。
+
+サービス コントラクト型を選択すると、型ブラウザーは <xref:System.ServiceModel.ServiceContractAttribute> 属性を持つ型だけを表示します。
 
 ## <a name="see-also"></a>関連項目
 

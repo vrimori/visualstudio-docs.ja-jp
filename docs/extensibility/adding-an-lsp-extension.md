@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9539fdb1a349fe7fc7331e8d3f352506eac9d00b
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 2e4d3bcd261e36d54aa84b22b32e91b89922d2f2
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081684"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499391"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能を追加します。
 
@@ -111,26 +111,6 @@ LSP に基づく言語サーバーを使用して、言語サービス拡張を�
 次に移動して新しい空白 VSIXProject を作成**ファイル** > **新しいプロジェクト** > **Visual c#**  >  **機能拡張** > **VSIX プロジェクト**:
 
 ![vsix プロジェクトを作成します。](media/lsp-vsix-project.png)
-
-プレビュー リリースでは、お客様の LSP VS サポート形式になります、VSIX の ([Microsoft.VisualStudio.LanguageServer.Client.Preview](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview))。 LSP 言語のサーバーを使用して拡張機能を作成することを希望する拡張機能の開発者は、この VSIX に対して依存関係を実行する必要があります。 言語サーバー拡張機能のインストールを希望されるお客様そのため、**言語サーバー プロトコル クライアント プレビュー VSIX をまずインストールする必要があります。**
-
-VSIX の依存関係を定義する、VSIX の VSIX マニフェスト デザイナーを開きます (ダブルクリックして、 *source.extension.vsixmanifest*プロジェクト内のファイル) に移動します**依存関係**:
-
-![言語サーバー プロトコル クライアントへの参照を追加します。](media/lsp-reference-lsp-dependency.png)
-
-次のように新しい依存関係を作成します。
-
-![言語サーバー プロトコルのクライアント依存関係を定義します。](media/lsp-define-lsp-dependency.png)
-
-* **ソース**: 手動で定義されています。
-* **名前**: 言語サーバー プロトコルのクライアントのプレビュー
-* **識別子**: Microsoft.VisualStudio.LanguageServer.Client.Preview
-* **バージョン範囲**: [1.0,2.0)
-* **依存関係の解決にはどのように**: ユーザーがインストールされています。
-* **ダウンロード URL**: [https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview)
-
-> [!NOTE]
-> **ダウンロード URL**ユーザー拡張機能のインストールが必要な依存関係をインストールする方法を知っていただけるように入力する必要があります。
 
 ### <a name="language-server-and-runtime-installation"></a>言語のサーバーとランタイムのインストール
 

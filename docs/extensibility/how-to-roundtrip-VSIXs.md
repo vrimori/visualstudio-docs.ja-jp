@@ -11,18 +11,18 @@ ms.author: willbrown
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: 9d8d0dc2e5c8c95b5f2502ef5a48e6f97c26e289
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdbd8703f3aad9a32b2a86efa01ce5922ed64144
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31133129"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498686"
 ---
-# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>方法: 拡張機能を Visual Studio 2017 と Visual Studio 2015 に対応させる
+# <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>方法: Visual Studio 2017 と Visual Studio 2015 と互換性のある拡張機能を作成
 
 このドキュメントでは、拡張機能プロジェクトを Visual Studio 2015 と Visual Studio 2017 間でラウンドトリップさせる方法について説明します。 このアップグレードを完了すると、Visual Studio 2015 と Visual Studio 2017 の両方でプロジェクトを開いてビルド、インストール、および実行できるようになります。  参考として、[ここ](https://github.com/Microsoft/VSSDK-Extensibility-Samples)に示された Microsoft の拡張機能の例に、Visual Studio 2015 と Visual Studio 2017 間でラウンドトリップできるいくつかの拡張機能が含まれています。
 
-Visual Studio 2017 でのみビルドするが、Visual Studio 2015 と Visual Studio 2017 の両方で VSIX を出力したい場合は、[拡張機能の移行に関するドキュメント](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)をご覧ください。
+Visual Studio 2017 でビルドが Visual Studio 2015 と Visual Studio 2017 の両方で VSIX を出力する場合を参照し、[拡張機能の移行のドキュメント](how-to-migrate-extensibility-projects-to-visual-studio-2017.md)します。
 
 >**注:** Visual Studio のバージョン間での変更が原因で、あるバージョンで利用できた機能が別のバージョンでは利用できないことがあります。 アクセスしようとしている機能が、両方のバージョンで利用可能であることを確認してください。この確認を行わない場合、拡張機能で予期しない結果が発生します。
 
@@ -40,7 +40,7 @@ VSIX をラウンドトリップするためにこのドキュメントで実行
 
 4. ビルドとテストを行います。
 
-## <a name="environment-setup"></a>環境の設定
+## <a name="environment-setup"></a>環境のセットアップ
 
 このドキュメントは、コンピューターに以下をインストール済みであることを前提としています。
 
@@ -53,19 +53,19 @@ VSIX をラウンドトリップするためにこのドキュメントで実行
 
 ## <a name="ensure-there-is-no-reference-to-projectjson"></a>project.json への参照を確実に排除する
 
-このドキュメントの後半で、*.csproj ファイルに条件付きインポート ステートメントを挿入します。  これは、project.json に NuGet 参照が格納されていると機能しません。 そのため、すべての NuGet 参照を packages.config ファイルに移動することをお勧めします。
-プロジェクトに project.json ファイルが含まれている場合は、次の手順に従います。
+このドキュメントの後半に条件付きインポート ステートメントを挿入、**.csproj*ファイル。  これで、NuGet 参照が格納されている場合は機能しません*project.json*します。 そのため、すべての NuGet 参照への移動お勧め、 *packages.config*ファイル。
+プロジェクトが含まれている場合、 *project.json*ファイル。
 
-* project.json に含まれる参照をメモします。
-* ソリューション エクスプローラーで、プロジェクトから project.json ファイルを削除します。
-    * これにより project.json ファイルが削除され、プロジェクトから除去されます。
+* 内の参照をメモに取ります*project.json*します。
+* **ソリューション エクスプ ローラー**、削除、 *project.json*プロジェクトからのファイル。
+    * これは、削除、 *project.json*ファイルを開き、プロジェクトから削除します。
 * プロジェクトに NuGet 参照を再度追加します。
-    * ソリューションを右クリックし、**[ソリューションの NuGet パッケージの管理...]** を選択します。
-    * Visual Studio によって packages.config ファイルが自動的に作成されます。
+    * 右クリックし、**ソリューション**選択**ソリューションの NuGet パッケージの管理**します。
+    * Visual Studio が自動的に作成、 *packages.config*ファイルが
 
 >**注:** プロジェクトに EnvDTE パッケージが含まれていた場合、**[参照]** を右クリックして **[参照の追加]** を選択し、適切な参照を追加して、このパッケージを追加することが必要な場合があります。  NuGet パッケージを使用すると、プロジェクトのビルドを試みたときにエラーが発生する可能性があります。
 
-## <a name="adding-appropriate-build-tools"></a>適切なビルド ツールを追加する
+## <a name="add-appropriate-build-tools"></a>適切なビルド ツールを追加します。
 
 ビルドとデバッグを正しく実行できるビルド ツールを確実に追加する必要があります。 そのために、Microsoft は Microsoft.VisualStudio.Sdk.BuildTasks というアセンブリを作成しました。
 
@@ -82,27 +82,27 @@ Visual Studio 2017 | Microsoft.VSSDK.BuildTool
 * プロジェクトに Microsoft.VSSDK.BuildTools が含まれていない場合は、追加します。
 * Microsoft.VSSDK.BuildTools のバージョンが 15.x 以上であることを確認します。
 
-## <a name="update-extension-manifest"></a>拡張機能マニフェストを更新する
+## <a name="update-extension-manifest"></a>拡張機能マニフェストを更新します。
 
 ### <a name="1-installation-targets"></a>1.インストールの対象
 
 VSIX をビルドする対象のバージョンを Visual Studio に指示する必要があります。  通常、これらの参照は、バージョン 14.0 (Visual Studio 2015) またはバージョン 15.0 (Visual Studio 2017) への参照です。  ここでは、両方に対応する拡張機能をインストールする VSIX をビルドしたいので、両方のバージョンを対象にする必要があります。  14.0 より前のバージョンで VSIX をビルドおよびインストールしたい場合は、前のバージョン番号を設定すれば可能です。ただし、10.0 以前のバージョンはサポートされていません。
 
-* Visual Studio で source.extension.vsixmanifest ファイルを開きます。
+* 開く、 *source.extension.vsixmanifest* Visual Studio でのファイル。
 * **[Install Targets]\(インストールの対象)\** タブを開きます。
 * **[バージョン範囲]** を [14.0, 16.0) 変更します。  '[' は、14.0 とそれより前のすべてのバージョンを含めるよう Visual Studio に指示します。  ')' は、15.0 までのすべてのバージョンを含めるが、バージョン 16.0 は含めないように Visual Studio に指示します。
 * すべての変更を保存し、Visual Studio のすべてのインスタンスを閉じます。
 
 ![インストールの対象の画像](media/visual-studio-installation-targets-example.png)
 
-### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2.extension.vsixmanifest ファイルに必須コンポーネントを追加する
+### <a name="2-adding-prerequisites-to-the-extensionvsixmanifest-file"></a>2.必須コンポーネントを追加、 *extension.vsixmanifest*ファイル
 
 必須コンポーネントは、Visual Studio 2017 からの新しい機能です。  ここでは、必須コンポーネントとして Visual Studio のコア エディターが必要です。 Visual Studio 2015 の VSIX デザイナーでは新しい `Prerequisites` セクションを処理しないため、XML コードでこの部分を 手動で編集する必要があります。  または、Visual Studio 2017 を開き、更新されたマニフェスト デザイナーを使用して必須コンポーネントを挿入することもできます。
 
 この操作を手動で行うには、次の手順に従います。
 
 * エクスプローラーでプロジェクト ディレクトリに移動します。
-* テキスト エディターで `extension.vsixmanifest` ファイルを開きます。
+* 開く、 *extension.vsixmanifest*ファイルをテキスト エディターでします。
 * 次のタグを追加します。
 
 ```xml
@@ -121,10 +121,10 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 ## <a name="modify-the-project-file-myprojectcsproj"></a>プロジェクト ファイル (myproject.csproj) を変更する
 
-この手順を実行する間、変更した .csproj への参照を開いておくことを強くお勧めします。  [ここ](https://github.com/Microsoft/VSSDK-Extensibility-Samples)でいくつかの例を入手できます。  拡張機能のサンプルを選択し、参照の .csproj ファイルを見つけて次の手順を実行します。
+この手順を実行する間、変更した .csproj への参照を開いておくことを強くお勧めします。  [ここ](https://github.com/Microsoft/VSSDK-Extensibility-Samples)でいくつかの例を入手できます。  拡張機能のサンプルを選択し、検索、 *.csproj*参照のファイルを開き、次の手順を実行します。
 
-* エクスプローラーでプロジェクト ディレクトリに移動します。
-* テキスト エディターで myproject.csproj ファイルを開きます。
+* プロジェクト ディレクトリに移動します**ファイル エクスプ ローラー**します。
+* 開く、 *myproject.csproj*ファイルをテキスト エディターでします。
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1.MinimumVisualStudioVersion を更新する
 
@@ -135,7 +135,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
 ```
 
-### <a name="2-add-the-vsixtype-property"></a>2.VsixType プロパティを追加する
+### <a name="2-add-the-vsixtype-property"></a>2.VsixType プロパティを追加します。
 
 * プロパティ グループに次のタグ `<VsixType>v3</VsixType>` を追加します。
 
@@ -153,7 +153,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 </PropertyGroup>
 ```
 
-* .csproj ファイルおよび .csproj.ユーザー ファイルから、次のすべてのインスタンスを削除します。
+* 次のコード例からのすべてのインスタンスを削除、 *.csproj*ファイルおよび *. csproj.user*ファイル。
 
 ```xml
 <StartAction>Program</StartAction>
@@ -163,7 +163,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 
 ### <a name="4-add-conditions-to-the-build-tools-imports"></a>4.ビルド ツールのインポートに条件を追加する
 
-* Microsoft.VSSDK.BuildTools 参照を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' != '14.0' And` を挿入します。  これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
+* Microsoft.VSSDK.BuildTools 参照を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。  挿入`'$(VisualStudioVersion)' != '14.0' And`条件文の先頭にあります。  これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
 
 例えば:
 
@@ -171,7 +171,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' == '14.0' And` を挿入します。 これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
+* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<import>` タグに、その他の条件付きステートメントを追加します。 挿入`'$(VisualStudioVersion)' == '14.0' And`条件文の先頭にあります。 これらのステートメントは、csproj ファイルのヘッダーとフッターに表示されます。
 
 例えば:
 
@@ -187,7 +187,7 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<Error>` タグに、その他の条件付きステートメントを追加します。  これを行うには、条件付きステートメントの前に `'$(VisualStudioVersion)' == '14.0' And` を挿入します。 これらのステートメントは、csproj ファイルのフッターに表示されます。
+* Microsoft.VisualStudio.Sdk.BuildTasks.14.0 を含んでいる `<Error>` タグに、その他の条件付きステートメントを追加します。  挿入`'$(VisualStudioVersion)' == '14.0' And`条件文の先頭にあります。 これらのステートメントは、csproj ファイルのフッターに表示されます。
 
 例えば:
 
@@ -202,13 +202,13 @@ VSIX をビルドする対象のバージョンを Visual Studio に指示する
 この時点で、プロジェクトは Visual Studio 2015 と Visual Studio 2017 の両方にインストール可能な VSIXv3 をビルドできる状態になっているはずです。
 
 * Visual Studio 2015 でプロジェクトを開きます。
-* プロジェクトをビルドし、出力で VSIX が正しくビルドされていることを確認します。
-* プロジェクトのディレクトリに移動します。
-* [bin] -> [デバッグ] フォルダーを開きます。
-* VSIX ファイルをダブルクリックし、Visual Studio 2015 と Visual Studio 2017 に拡張機能をインストールします。
-* [ツール] -> [拡張機能と更新プログラム] の [インストール済み] セクションで、拡張機能が表示されていることを確認します。
-* 拡張機能の実行/使用を試みて、機能することを確認します。
+* プロジェクトをビルドし、確認、VSIX が正しくビルド出力します。
+* プロジェクト ディレクトリに移動します。
+* 開く、 *\bin\Debug*フォルダー。
+* VSIX ファイルをダブルクリックし、Visual Studio 2015 と Visual Studio 2017 で拡張機能をインストールします。
+* 拡張機能を表示できることを確認**ツール** > **拡張機能と更新**で、**インストール済み**セクション。
+* それが動作するかを確認する拡張機能の実行/使用しようとします。
 
-![VSIX の検索](media/finding-a-VSIX-example.png)
+![VSIX を検索します。](media/finding-a-VSIX-example.png)
 
->**注:** "ファイルを開いています" というメッセージを表示してプロジェクトが停止した場合は、Visual Studio を強制的にシャットダウンしてプロジェクト ディレクトリに移動し、非表示のフォルダーを表示して、.vs フォルダーを削除します。
+>**注:** メッセージで、プロジェクトがハングした場合**ファイルを開く**、強制的にシャット ダウンは、Visual Studio、プロジェクト ディレクトリに移動し、非表示のフォルダーを表示および削除、 *.vs*フォルダー。

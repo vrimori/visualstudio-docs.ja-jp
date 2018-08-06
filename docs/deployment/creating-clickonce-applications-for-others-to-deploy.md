@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d02482d6dcf0483fe40890039faff1e50fc3695
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: da9941ab179234b9afae95a63dcaaacd66daf7fa
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39081427"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512149"
 ---
 # <a name="create-clickonce-applications-for-others-to-deploy"></a>ClickOnce アプリケーションをデプロイする他のユーザーの作成します。
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体を展開する予定です。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大企業など、お客様に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 の新しい「信頼のマニフェストを使用して、」機能を使用して新しい解決し、について説明します。 最後に、まだ .NET Framework の以前のバージョンを使用しているお客様の場合、ClickOnce 配置を作成するための推奨される方法で終了します。  
@@ -54,7 +54,7 @@ ClickOnce 配置を作成しているすべての開発者は、アプリケー�
 ## <a name="create-customer-deployments-by-using-application-manifest-for-trust"></a>信頼のアプリケーション マニフェストを使用して、顧客の展開を作成します。  
  .NET Framework 3.5 では、ClickOnce には、マニフェストの署名方法のシナリオに、新しいソリューションで開発者やお客様が提供する新しい機能が含まれています。 ClickOnce アプリケーション マニフェストは、という名前の新しい要素をサポートしている`<useManifestForTrust>`を示すアプリケーション マニフェストのデジタル署名は、どのような信頼の決定を行うために使用する必要がありますが、開発者ができるようにします。 開発者が ClickOnce パッケージ化ツールを使用 — など*Mage.exe*、 *MageUI.exe*、および Visual Studio-、アプリケーション マニフェストにこの要素を含めるだけでなく、発行元名の両方を埋め込むとマニフェストにアプリケーションの名前。  
   
- 使用する場合`<useManifestForTrust>`、配置マニフェストは、証明機関によって発行された、Authenticode 証明書で署名する必要はありません。 代わりに、自己署名証明書と呼ばれるものを署名することができます。 自己署名証明書では、標準の .NET Framework SDK ツールを使用してお客様、または開発者によって生成され、標準の ClickOnce 配置ツールを使用して、配置マニフェストに適用されます。 詳細については、次を参照してください。 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx)します。  
+ 使用する場合`<useManifestForTrust>`、配置マニフェストは、証明機関によって発行された、Authenticode 証明書で署名する必要はありません。 代わりに、自己署名証明書と呼ばれるものを署名することができます。 自己署名証明書では、標準の .NET Framework SDK ツールを使用してお客様、または開発者によって生成され、標準の ClickOnce 配置ツールを使用して、配置マニフェストに適用されます。 詳細については、次を参照してください。 [MakeCert](/windows/desktop/SecCrypto/makecert)します。  
   
  配置マニフェストに自己署名証明書を使用するには、いくつかの利点について説明します。 によって、顧客を取得または独自の Authenticode 証明書を作成する必要がなくなるため`<useManifestForTrust>`開発者は、アプリケーションで独自のブランド id を維持しながら、顧客の展開を簡略化します。 安全なは、一意のアプリケーション id が設定されている署名付きの展開の組み合わせになります。 これにより、複数の顧客に同じアプリケーションを配置からなる可能性がある潜在的な競合がなくなります。  
   

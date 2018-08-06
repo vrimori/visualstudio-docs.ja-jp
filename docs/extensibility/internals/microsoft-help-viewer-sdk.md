@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47788ccd2fb1bd03ce2f2981289d51f0d625b6a9
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: fe6dfd62d8bf9deb296d5530a5c9a371f1d2484d
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234674"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513375"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 この記事には、Visual Studio ヘルプ ビューアーのインテグレーターの次のタスクが含まれています。  
@@ -820,7 +820,7 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 12. Contoso、IDE 内で f1 キー機能をテストする、F1 キーを選択します。  
   
 ### <a name="additional-resources"></a>その他のリソース  
-ランタイム API では、次を参照してください。 [Windows API のヘルプ](http://msdn.microsoft.com/library/windows/desktop/hh447318\(v=vs.85\).aspx)します。  
+ランタイム API では、次を参照してください。 [Windows API のヘルプ](/previous-versions/windows/desktop/helpapi/helpapi-portal)します。  
   
 API のヘルプを活用する方法の詳細については、次を参照してください[ヘルプ ビューアーのコード例。](http://visualstudiogallery.msdn.microsoft.com/f08f296f-7076-4aec-8da3-8f0fbe04461e)  
   

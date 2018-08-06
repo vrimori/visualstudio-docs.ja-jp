@@ -1,5 +1,5 @@
 ---
-title: エディターでは、プロジェクトでファイルを開きますを決定する |Microsoft ドキュメント
+title: エディターがプロジェクトでファイルを開きますの決定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8fe054fa8e630b2f6c54cb78ef75b6c10ff74d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 655a5a28e3e16a1b07c52c37ef00d89d145a17a1
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130010"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498543"
 ---
-# <a name="determining-which-editor-opens-a-file-in-a-project"></a>どのエディターが開き、プロジェクトのファイルを決定します。
-プロジェクトで、ユーザーがファイルを開くと、最終的に、適切なエディターまたはそのファイルのデザイナーを開いて、ポーリング処理によって、環境が移動します。 環境内で採用されている最初の手順は、標準およびカスタムの両方のエディターに対して同じです。 ファイルを開くときに使用するエディターをポーリングするときに、環境でさまざまな条件を使用し、VSPackage は、このプロセス中に環境と連携する必要があります。  
+# <a name="determine-which-editor-opens-a-file-in-a-project"></a>特定のエディターがプロジェクトでファイルを開きます
+プロジェクトでユーザーがファイルを開くと、最終的に、適切なエディターまたはデザイナーがそのファイルを開いて、ポーリング処理によって、環境が移動します。 環境で採用されている最初の手順では、標準とカスタムの両方のエディターに同じです。 環境ではファイルを開くときに使用するエディターをポーリングするときに、さまざまな条件を使用し、VSPackage は、このプロセス中に、環境と調整する必要があります。  
   
- たとえば、ユーザーを選択すると、**開く**コマンドを**ファイル**] メニューの [を選択し、 `filename`.rtf (または .rtf 拡張子を持つ他のファイル) 環境の呼び出し、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>最終的に繰り返し、ソリューション内のすべてのプロジェクト インスタンスを各プロジェクトの実装です。 プロジェクトには、優先順位によって、ドキュメントに対する要求を識別するフラグのセットが返されます。 最高の優先順位を使用して、環境が呼び出す、適切な<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>メソッドです。 ポーリング処理の詳細については[プロジェクトに追加してプロジェクト項目テンプレート](../../extensibility/internals/adding-project-and-project-item-templates.md)です。  
+ たとえば、ユーザーが選択すると、**オープン**コマンドを**ファイル**] メニューの [を選択し、 *filename.rtf* (またはその他の任意のファイルを *.rtf*拡張機能)、環境は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>最終的に、ソリューション内のすべてのプロジェクト インスタンスを繰り返し、プロジェクトごとに実装します。 プロジェクトでは、優先順位によって、ドキュメントに対する要求を識別するフラグのセットを返します。 最高の優先順位を使用して、環境が呼び出す、適切な<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A>メソッド。 ポーリングのプロセスの詳細については、次を参照してください。[プロジェクトとプロジェクト項目テンプレートを追加](../../extensibility/internals/adding-project-and-project-item-templates.md)します。  
   
- その他のファイル プロジェクトでは、他のプロジェクトからの要求がないすべてのファイルを要求します。 これにより、標準のエディターで開く前に、カスタム エディターでドキュメントを開くことができます。 環境を呼び出す場合は、その他のファイル プロジェクト、ファイル、要求、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>標準エディターでファイルを開くメソッドです。 環境では、いずれかの .rtf ファイルを処理する登録済みのエディターの内部リストを確認します。 この一覧は、次のキーのレジストリに格納されます。  
+ その他のファイル プロジェクトでは、他のプロジェクトでは請求されないすべてのファイルを要求します。 これにより、標準のエディターで開く前に、カスタム エディターでドキュメントを開くことができます。 環境を呼び出す場合、その他のファイル プロジェクトには、ファイルが要求を<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>メソッドを標準のエディターでファイルを開きます。 環境を処理する 1 つの登録済みのエディターの内部リストを確認します。 *.rtf*ファイル。 この一覧は、レジストリ内で、次のキーにあります。  
   
- [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\<`version`> \Editors\\{<`editor factory guid`>} \Extensions]  
+ **Hkey_local_machine \software\microsoft\visualstudio\\\<バージョン > \Editors\\\<エディター ファクトリの guid > \Extensions**
   
- 環境では、クラス識別子をサブキー DocObject を持つ任意のオブジェクトの hkey_classes_root \clsid キーにも確認します。 ファイルの拡張子がある場合がありますの埋め込みバージョンの Microsoft Word など、アプリケーションでは、Visual Studio では、インプレースが作成されます。 これらのドキュメント オブジェクトを実装する複合ファイルである必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage>インターフェイス、またはオブジェクトを実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>インターフェイスです。  
+ 環境クラス id も確認します、 **hkey_classes_root \clsid**サブキーがあるすべてのオブジェクトのキー **DocObject**します。 ファイル拡張子は、そこで見つかった場合埋め込みバージョンの Microsoft Word など、アプリケーションが Visual Studio で、インプレースを作成します。 これらのドキュメント オブジェクトを実装する複合ファイルである必要があります、<xref:Microsoft.VisualStudio.OLE.Interop.IPersistStorage>インターフェイス、またはオブジェクトを実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>インターフェイス。  
   
- エディター ファクトリのレジストリで、.rtf ファイルがないかどうかは、環境で、HKEY_CLASSES_ROOT であるか\\.rtf キーと、エディターがあります指定が開きます。 HKEY_CLASSES_ROOT でファイルの拡張子が見つからない場合環境を使用して Visual Studio コアのテキスト エディター、テキスト ファイルである場合は、ファイルを開きます。  
+ エディター ファクトリがない場合は *.rtf*環境を検索し、レジストリで、ファイル、 **HKEY_CLASSES_ROOT\\.rtf**キーし、があります指定されたエディターが開きます。 ファイル拡張子が見つからない場合**HKEY_CLASSES_ROOT**環境を使用して、Visual Studio のコアのテキスト エディター ファイルを開いて、テキスト ファイルの場合は。  
   
- コアのテキスト エディターに失敗した場合、ファイルがテキスト ファイルでない場合、環境、バイナリ エディターのファイルを使用するに発生します。  
+ テキストのコア エディターが失敗した場合、ファイルがテキスト ファイルでない場合、環境、バイナリ エディターのファイルを使用するに発生します。  
   
- 環境が見つけられない場合、エディター .rtf 拡張機能のレジストリで、このエディター ファクトリを実装する VSPackage が読み込まれます。 環境の呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>新しい VSPackage のメソッドです。 VSPackage の呼び出し`QueryService`の`SID_SVsRegistorEditor`を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A>環境とエディター ファクトリを登録するメソッド。  
+ 環境でのエディターが検出した場合、 *.rtf*そのレジストリの拡張機能は、このエディターのファクトリを実装する VSPackage を読み込みます。 環境は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>新しい VSPackage のメソッド。 VSPackage 呼び出し`QueryService`の`SID_SVsRegistorEditor`を使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A>環境とエディターのファクトリを登録するメソッド。  
   
- 環境は、現在再チェック .rtf ファイルの新規登録エディター ファクトリの検索に登録されているエディターの内部リスト。 環境の実装を呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッド、ファイル名、ビューの種類を作成します。  
+ 環境では、新しく登録されたエディター ファクトリの検索に登録されているエディターの内部リストを再 *.rtf*ファイル。 環境の実装を呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッドを作成するファイル名とビューの種類。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat>   

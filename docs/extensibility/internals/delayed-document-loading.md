@@ -1,5 +1,5 @@
 ---
-title: ドキュメントの読み込みを遅延 |Microsoft ドキュメント
+title: ドキュメントの読み込みの遅延 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,58 +11,59 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc10d7807633433b38fa8587d41c2ac3c0273ebe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03ca02010586711fa1a9af463f2fde5d0f4963a5
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31134443"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500369"
 ---
 # <a name="delayed-document-loading"></a>ドキュメントの読み込みの遅延
-ユーザーは、Visual Studio ソリューションを再度、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントを実行しているドキュメント テーブル (RDT) では配置されます。  
+ユーザーは、Visual Studio ソリューションを再度開き、ときに関連付けられているドキュメントのほとんどはすぐに読み込まれません。 ドキュメント ウィンドウ フレームが初期化保留中の状態で作成され、(スタブ フレームと呼ばれます) のプレース ホルダーのドキュメントが実行されているドキュメント テーブル (RDT) に配置されます。  
   
- プロジェクトのドキュメントを読み込むことができませんが不必要に読み込まれる前に、ドキュメント内の要素のクエリを実行して、拡張機能があります。 これにより、Visual Studio の全体的なメモリ使用量が向上します。  
+For Visual Studio 全体のメモリ使用量を増やすことができますが、それらが読み込まれる前に、ドキュメント内の要素のクエリを実行して不必要に読み込まれるプロジェクト ドキュメント、拡張機能があります。  
   
 ## <a name="document-loading"></a>ドキュメントの読み込み  
- スタブのフレームとドキュメントが完全に初期化される、ユーザーにアクセスした場合、ドキュメントでは、たとえばウィンドウ フレームのタブをクリックしています。 ドキュメントは、ドキュメント データを取得するには、直接 RDT へのアクセスまたはない、RDT に直接アクセスする、次の呼び出しの 1 つで、ドキュメントのデータを要求する拡張機能により初期化できます。  
+スタブのフレームとドキュメントは、ユーザーにアクセスすると、ドキュメントなど、ウィンドウ フレームのタブをクリックして完全に初期化されます。 ドキュメントは、ドキュメントのデータを取得するには、直接 RDT へのアクセスまたはない、RDT に直接アクセスする、次の呼び出しの 1 つのいずれかのドキュメントのデータを要求する拡張機能でも初期化できます。  
   
--   ウィンドウ フレームの show メソッド:<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>です。  
+- ウィンドウ フレーム<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A>メソッド。  
   
--   ウィンドウ フレーム GetProperty メソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>で、次のプロパティ。  
+- ウィンドウ フレーム<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>メソッドを次のプロパティのいずれか。  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
-    -   <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>  
   
- 場合は、拡張機能は、マネージ コードを使用して、呼び出す必要はありません<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>初期化保留中の状態では、ドキュメントまたはドキュメントが完全に初期化することを確認してから、. これは、このメソッドは常にドキュメントを返すので、データ オブジェクト、必要な場合は作成します。 代わりに、メソッドのいずれかを IVsRunningDocumentTable4 インターフェイスで呼び出す必要があります。  
+- 場合は、拡張機能は、マネージ コードを使用して、呼び出す必要はありません<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>が特定される場合は、初期化保留中の状態では、ドキュメントまたはドキュメントが完全に初期化します。 理由は、メソッドは常にドキュメントを返すために必要な場合は作成、データ オブジェクト。 代わりを呼び出す必要がありますのいずれかで、`IVsRunningDocumentTable4`インターフェイス。  
   
- 拡張機能は、C++ を使用する場合は、渡す`null`したくないパラメーターです。  
+- 拡張機能は、C++ を使用している場合は、渡す`null`したくないパラメーター。  
   
- 関連するプロパティを要求する前に、次のメソッドのいずれかを呼び出すことによって、不要なドキュメントの読み込みを回避できます。 その他のプロパティを要求する前にします。  
+- 不要なドキュメントの他のプロパティを要求する前に、関連するプロパティを要求する前に、次のメソッドのいずれかを呼び出すことで読み込みを回避できます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>です。  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 使用して<xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>。 このメソッドが戻る、<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>オブジェクトの値を含む<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>ドキュメントが初期化されていない場合。  
+   - <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>。 このメソッドが戻る、<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>オブジェクトの値を含む<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>ドキュメントが初期化されていない場合。  
   
- ドキュメントを完全に初期化されるときに発生する RDT イベントにサブスクライブすることで、ドキュメントが読み込まれたときに調べることができます。 これには 2 つの可能性があります。  
+ドキュメントが完全に初期化されるときに発生する RDT イベントをサブスクライブして、ドキュメントが読み込まれたときに確認できます。 これには 2 つの可能性があります。  
   
--   イベント シンクを実装する場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2>、サブスクライブするには<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A>、  
+- イベント シンクが実装されている場合<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2>、購読できる<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents2.OnAfterAttributeChangeEx%2A>、  
   
--   それ以外の場合、サブスクライブするには<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A>します。  
+- サブスクライブする場合は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents.OnAfterAttributeChange%2A>します。  
   
- 仮定のドキュメントのアクセスのシナリオを次に示します。 拡張機能が開いているドキュメントに関する情報を表示する Visual Studio、インスタンスの編集をロック数と、ドキュメント データについて何か。 RDT を使用して、ドキュメントが列挙<xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>、しを呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>ドキュメントごとに、編集のロック カウントとドキュメント データを取得するためにします。 このドキュメントは、初期化保留中の状態では場合、ドキュメント データを要求しているが不必要に初期化されます。  
+
+ 次の例は架空のドキュメントへのアクセスのシナリオ: A Visual Studio 拡張機能が開いているドキュメントに関する情報を表示する、編集のロック カウントとドキュメントのデータについて何かのインスタンス。 RDT を使用して、ドキュメントに列挙<xref:Microsoft.VisualStudio.Shell.Interop.IEnumRunningDocuments>、呼び出して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.GetDocumentInfo%2A>ドキュメントごとに、編集のロック カウントとドキュメント データを取得するためにします。 ドキュメントが、初期化保留中の状態にある場合、ドキュメント データを要求が不必要に初期化されます。  
   
- 使用するにはこの実行の方法がより効率的<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A>編集ロック数を取得し、使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>ドキュメントが初期化されているかどうかを決定します。 フラグが含まれない場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>、ドキュメントは既に初期化されていると、ドキュメント データを要求して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A>不要な初期化は行われません。 フラグは含まれている場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>ドキュメントが初期化されるまで、ドキュメントのデータを要求する、拡張機能を避ける必要があります。 これは、OnAfterAttributeChange(Ex) イベント ハンドラーで検出できます。  
+ ドキュメントへのアクセスのより効率的な方法は、使用する<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentEditLockCount%2A>編集のロック カウントを取得し、使用して<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>ドキュメントが初期化されているかどうかを判断します。 フラグが含まれない場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>、ドキュメントは既に初期化されていると、ドキュメント データを要求し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentData%2A>不要な初期化は行われません。 フラグが含まれる場合<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4>、拡張機能では、ドキュメントが初期化されるまでドキュメント データを要求しないようにする必要があります。 この初期化で検出できる、`OnAfterAttributeChange(Ex)`イベント ハンドラー。  
   
-## <a name="testing-extensions-to-see-if-they-force-initialization"></a>表示かどうかは、強制的に初期化する拡張機能のテスト  
- 初期化かどうか、拡張機能で強制的に確認するが困難にするため、ドキュメントが初期化されているかどうかを示すためにキューを表示することはありません。 簡単に検証、レジストリ キーを設定するには、テキストが、完全に初期化されていないすべてのドキュメントのタイトルが発生するため`[Stub]`タイトルにします。  
+## <a name="test-extensions-to-see-if-they-force-initialization"></a>かどうか、強制的に初期化して拡張機能をテストします。  
+ 初期化かどうか、拡張機能で強制的に確認することは難しいために、ドキュメントが初期化されているかどうかを示すためにキューを表示することはありません。 テキストを完全に初期化されていないすべてのドキュメントのタイトルが発生するために、容易に確認するレジストリ キーを設定できます *[Stub]* タイトルにします。  
   
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad]** 設定、 **StubTabTitleFormatString**に **{0} [スタブ]** です。
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\BackgroundSolutionLoad**設定**StubTabTitleFormatString**に *{0} [Stub]* します。

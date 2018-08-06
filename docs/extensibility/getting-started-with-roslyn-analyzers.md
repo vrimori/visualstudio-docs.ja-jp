@@ -1,5 +1,5 @@
 ---
-title: Roslyn アナライザーの概要 |Microsoft ドキュメント
+title: Roslyn アナライザーの概要 |Microsoft Docs
 ms.date: 04/02/2018
 ms.technology: vs-ide-sdk
 ms.topic: conceptual
@@ -9,33 +9,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b887703343dab10f9cc1f0cbf8e2e2b37b0065b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 12c1bba1d07ab695f265425d6aeae6806589dcd4
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126810"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497850"
 ---
-# <a name="getting-started-with-roslyn-analyzers"></a>Roslyn アナライザーの概要
+# <a name="get-started-with-roslyn-analyzers"></a>Roslyn アナライザーを概要します。
 
-Visual Studio で、プロジェクト ベースのライブ コード アナライザーと API できます作成者ドメイン固有のコード分析、NuGet パッケージの一部として提供します。 これらのアナライザーは、.NET コンパイラ プラットフォーム (コード ネーム"Roslyn") で電源がため、(なくなるを待機している問題を検出するようにコードをビルド) 行する作業を完了する前であってもに、入力すると、コードで警告を生成できます。 アナライザーは、すぐに、コードをクリーンアップできるようにするには Visual Studio 電球のプロンプトで、コードの自動修正を画面もできます。
+Visual Studio で、プロジェクト ベースのライブ コード アナライザー、API の作成者は、NuGet パッケージの一部としてドメイン固有のコード分析を送付できます。 これらのアナライザーを活用するには、.NET コンパイラ プラットフォーム (コードネーム"Roslyn") してため、(これ以上待機している問題を検出するコードをビルドする)、行が完了する前に入力すると、コードで警告する可能性があります。 アナライザーは、すぐに、コードをクリーンアップできるようにする Visual Studio 電球プロンプトを通じて、コードの自動修正も出現できます。
 
-## <a name="getting-started"></a>作業の開始
+## <a name="get-started"></a>作業開始
 
-[Roslyn ライブ コード アナライザーの概要とチュートリアル](https://msdn.microsoft.com/magazine/dn879356.aspx)
+[Roslyn のライブ コード アナライザーの概要とチュートリアル](https://msdn.microsoft.com/magazine/dn879356.aspx)
 
-[アナライザーの問題についてのユーザーの修正プログラムを提供するチュートリアルを解決するコードを追加してください。](https://msdn.microsoft.com/magazine/dn904670.aspx)
+[チュートリアルを解決するコードを追加しますアナライザーの問題に対してユーザーの修正を提供。](https://msdn.microsoft.com/magazine/dn904670.aspx)
 
-[概要、および、現実世界アナライザー トークのチュートリアル](http://channel9.msdn.com/events/Build/2015/3-725)
+[概要と現実の世界のアナライザーのチュートリアルを説明します。](http://channel9.msdn.com/events/Build/2015/3-725)
 
-[現実の世界 Roslyn アナライザー](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md)することができますもとして、[との通信](http://channel9.msdn.com/events/Build/2015/3-725)
+[現実世界の Roslyn アナライザー](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md)としても視聴できる[説明](http://channel9.msdn.com/events/Build/2015/3-725)
 
-[アナライザーの 3 種類にグループ化、github のいくつかの例](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
+[Github、アナライザーの 3 種類にグループ化にいくつかの例](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-[概要と、いくつかのアナライザーのツアーを説明します。](http://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
+[概要と、いくつかのアナライザーのツアー](http://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
 
 ## <a name="see-also"></a>関連項目
 
 - [Roslyn アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
-- [Github OSS サイトで複数のドキュメント](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-- [Github の Roslyn アナライザーを使用して実装 FxCop 規則](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
+- [OSS の github サイトの複数のドキュメント](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
+- [FxCop ルールが GitHub で Roslyn アナライザーの実装](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

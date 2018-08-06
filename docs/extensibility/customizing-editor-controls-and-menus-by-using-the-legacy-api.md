@@ -1,5 +1,5 @@
 ---
-title: レガシ API を使用して、エディター コントロールやメニューをカスタマイズする |Microsoft ドキュメント
+title: レガシ API を使用して、エディター コントロールやメニューのカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7e6b90319d6c0e84649f52da97b2678553254b6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fb11419e6fccf4ec3ca510e91bf79702a5a4348
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102383"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498530"
 ---
-# <a name="customizing-editor-controls-and-menus-by-using-the-legacy-api"></a>レガシ API を使用して、エディター コントロールやメニューをカスタマイズします。
-言語サービスまたはテキスト ビューには、コンテキスト メニューと、エディター内のコントロールを制御できます。 このセクションのページでは、これらの機能を使用する方法について説明します。  
+# <a name="customize-editor-controls-and-mmenus-by-using-the-legacy-api"></a>従来の API を使用して、エディター コントロールと Mmenus をカスタマイズします。
+言語サービスまたはテキスト ビューには、コンテキスト メニューと、エディター内のコントロールを制御できます。 このセクションでは、ページでは、これらの機能を使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ドロップダウン バー](../extensibility/drop-down-bar.md)  
@@ -34,8 +34,8 @@ ms.locfileid: "31102383"
  エディター コンテキスト メニューをについて説明します。  
   
  [方法: ステータス バーの更新](../extensibility/how-to-update-the-status-bar.md)  
- 更新する方法について説明、**ステータス バー**です。  
+ 更新する方法について説明、**ステータス バー**します。  
   
 ## <a name="related-sections"></a>関連項目  
- [エディターと言語サービスの拡張機能](../extensibility/editor-and-language-service-extensions.md)  
+ [エディターと言語サービス拡張機能](../extensibility/editor-and-language-service-extensions.md)  
  Visual Studio で使用できるエディターのさまざまな種類をについて説明します。

@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 529f4eb53c2da7af9115fab4b063100f6e5d0c6a
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: b23d7da819a0403366260b240fa095defd0f120a
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153814"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511410"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル: 再署名不要ブランド情報を保持する ClickOnce アプリケーションを手動で展開します。
 作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを発行する顧客に渡すを展開し、顧客は、配置マニフェストを更新して再署名に従来しました。 ほとんどの場合に推奨される方法ですが、.NET Framework 3.5 を使用すると、作成[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]新しい配置マニフェストを再生成することがなく、顧客によって展開できる展開します。 詳細については、次を参照してください。[再署名なしのテストと実稼働サーバーの展開の ClickOnce アプリケーション](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)します。  
@@ -39,7 +39,7 @@ ms.locfileid: "39153814"
 > [!NOTE]
 >  このチュートリアルでデプロイ手動で作成するかを使用して、コマンド ライン ツール*Mage.exe*またはグラフィカルなツールで*MageUI.exe*します。 手動でデプロイの詳細については、次を参照してください。[チュートリアル: ClickOnce アプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルの手順を実行するには、次のものが必要。  
   
 -   Windows フォーム アプリケーションをデプロイする準備が完了したらです。 このアプリケーションが参照されますとして*WindowsFormsApp1*します。  
@@ -159,4 +159,4 @@ ms.locfileid: "39153814"
 ## <a name="see-also"></a>関連項目  
  [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
- [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx)
+ [MakeCert](/windows/desktop/SecCrypto/makecert)

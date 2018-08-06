@@ -1,5 +1,5 @@
 ---
-title: オートメーション モデルに貢献している |Microsoft ドキュメント
+title: オートメーション モデルに貢献する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,53 +13,52 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8333ed5c107f7f62e736ccd62e1b79723b5eb8f4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5d56b446914ae7345ccb0d393db8f17fc7f82c47
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31130519"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513186"
 ---
-# <a name="contributing-to-the-automation-model"></a>オートメーション モデルに貢献しています。
-Visual Studio は、環境をカスタマイズするためのオートメーション インターフェイスのセットを提供します。 オートメーション モデルは、エンドユーザーは Visual Studio のアドインおよび拡張機能を作成するオブジェクト モデルです。  
+# <a name="contribute-to-the-automation-model"></a>オートメーション モデルに貢献します。
+Visual Studio は、環境をカスタマイズするためのオートメーション インターフェイスのセットを提供します。 オートメーション モデルは、エンドユーザーは Visual Studio のアドインと拡張機能を作成するオブジェクト モデルです。  
   
- さらは開発者として、VSPackage はオートメーション モデルに貢献する適切な場合、これにより、アドインを作成して、一般に、一貫性のあるユーザー エクスペリエンスを提供モデルで VSPackage を使用するときに VSPackage のエンドユーザーを有効に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+ さらは、VSPackage 開発者は、オートメーション モデルに貢献する適切ですこれにより、アドインを作成し、一般に一貫性のあるユーザー エクスペリエンスを提供モデルで、VSPackage を使用するときに、VSPackage のエンドユーザーを有効に[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
- エンド ユーザー エクスペリエンスを一貫したさせるには、行うことができる一連のガイドライン、VSPackage のオートメーション モデルでアイデアに依存するように VSPackage を設計する際[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。  
+ エンドユーザーのエクスペリエンスを一貫したさせるには、利用できる一連のガイドライン、VSPackage のオートメーション モデルでアイデアに依存するために VSPackage をデザインする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [オートメーション モデルの概要](../../extensibility/internals/automation-model-overview.md)  
- 一般的な環境の主要なファセットを制御するオブジェクトの関連するグループとして、オートメーション モデルを定義します。 この一連のオブジェクトをオートメーション モデルの図に示しています。  
+ 一般的な環境の主要な側面を制御するオブジェクトの関連するグループとして、オートメーション モデルを定義します。 この一連のオブジェクトは、オートメーション モデルのダイアグラムに示されています。  
   
- [VSPackage でのオートメーションの提供](../../extensibility/internals/providing-automation-for-vspackages.md)  
+ [Vspackage のオートメーションを提供します。](../../extensibility/internals/providing-automation-for-vspackages.md)  
  VSPackage のオートメーションを提供する 2 つの主な方法について説明します。  
   
- [プロジェクト オブジェクトの公開](../../extensibility/internals/exposing-project-objects.md)  
- VSPackage に固有のオブジェクトを作成するための手順を説明します。  
+ [プロジェクト オブジェクトを公開します。](../../extensibility/internals/exposing-project-objects.md)  
+ VSPackage に固有のオブジェクトを作成するための手順について説明します。  
   
  [プロジェクトのモデリング](../../extensibility/internals/project-modeling.md)  
- 新しいプロジェクトの種類のオートメーションを作成するために必要な標準的なプロジェクトのオブジェクトをについて説明し、プロジェクトの自動化に続くパスを示します。 このトピックでは、宣言とクラスの実装の番組表も提供します。  
+ 新しいプロジェクトの種類の自動化を作成するために必要な標準的なプロジェクト オブジェクトを説明し、プロジェクトの自動化に続くパスを示しています。 このトピックでは、宣言と実装クラスの一覧も提供します。  
   
- [イベントの公開](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)  
- イベント、オートメーション モデルを作成する詳細な手順についてを説明します。  
+ [イベントを公開します。](../../extensibility/internals/exposing-events-in-the-visual-studio-sdk.md)  
+ オートメーション モデルのイベントを作成するための手順について説明します。  
   
- [オプション ページのオートメーションのサポート](../../extensibility/internals/automation-support-for-options-pages.md)  
- カスタムの VSPackage のプロパティをサポートするために、オートメーション オブジェクトを返す方法について説明**オプション** ダイアログ ボックスで、**ツール**メニュー拡張することによって、`DTE.Properties`オブジェクト。  
+ [[オプション] ページのオートメーションをサポートします。](../../extensibility/internals/automation-support-for-options-pages.md)  
+ VSPackage のプロパティをサポートしているカスタムのオートメーション オブジェクトを取得する方法について説明します**オプション** ダイアログ ボックスで、**ツール**メニューを拡張することによって、`DTE.Properties`オブジェクト。  
   
- [コードのオートメーションの提供](../../extensibility/internals/providing-automation-for-code.md)  
- コードのオートメーション モデルを作成する必要がないことを説明します。 ただし、リンクはコード モデルにわかりやすい情報を提供するこのトピックで提供されます。  
+ [コードのオートメーションを提供します。](../../extensibility/internals/providing-automation-for-code.md)  
+ コードのオートメーション モデルを作成する必要がないことについて説明します。 ただし、このトピックの「コード モデルに洞察力に富んだ情報を提供するリンクが提供されます。  
   
- [方法: Windows 向けのオートメーションの提供](../../extensibility/internals/how-to-provide-automation-for-windows.md)  
- 自動化を提供することがあることをお勧め、ウィンドウのオートメーション オブジェクトを使用できるようにして、環境が既製のオートメーション オブジェクトを既に提供していないときに説明します。 ツール ウィンドウおよびドキュメント ウィンドウのための自動化について説明します。  
+ [方法: Windows のオートメーションの提供](../../extensibility/internals/how-to-provide-automation-for-windows.md)  
+ オートメーションを提供することことをお勧め、ウィンドウでオートメーション オブジェクトを使用できるようにして、環境に既に既製のオートメーション オブジェクトを提供しないときに説明します。 ツール ウィンドウおよびドキュメント ウィンドウのための自動化について説明します。  
   
- [オートメーション モデルの使用](../../extensibility/internals/using-the-automation-model.md)  
- オートメーション コンシューマーを取得する方法、初期プロジェクト オートメーション オブジェクトを示す 2 つのコード例を提供します。  
+ [オートメーション モデルを使用します。](../../extensibility/internals/using-the-automation-model.md)  
+ Automation の消費者を取得する方法、初期のプロジェクト オートメーション オブジェクトを示す 2 つのコード例を提供します。  
   
- [構成および SelectedItem オブジェクトのためのオートメーション](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)  
- 構成オプションのための自動化と選択した項目の自動化についてを説明します。  
+ [構成および SelectedItem オブジェクトのための自動化](../../extensibility/internals/automation-for-configuration-and-selecteditem-objects.md)  
+ Automation の構成と SelectedItems オブジェクトについてを説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>  
- DTE オートメーション オブジェクト モデルでは、VSPackage が参加する方法を示すコード サンプルを提供します。 パラメーター、戻り値、および選択した注釈の一覧を示します。  
+ VSPackage が、DTE オートメーション オブジェクト モデルに参加する方法を示すコード サンプルを提供します。 パラメーター、戻り値、および選択した注釈の一覧を表示します。  
   
-## <a name="related-sections"></a>関連項目

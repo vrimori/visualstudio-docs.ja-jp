@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3082ca9f03ddd56f000fcaea18525c0f61903512
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f97de4818e6be66b4ee23d97d8995dfa30533985
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920800"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510505"
 ---
 # <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: 脆弱な暗号アルゴリズムを使用しないでください。
 |||
@@ -43,7 +43,7 @@ ms.locfileid: "31920800"
 
 -   TripleDES 暗号化の場合、 <xref:System.Security.Cryptography.Aes> 暗号化を使用します。
 
--   SHA1 または RIPEMD160 のハッシュ関数での操作を使用して、 [sha-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx)ファミリ (例: <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>)。
+-   SHA1 または RIPEMD160 のハッシュ関数での操作を使用して、 [sha-2](/windows/desktop/SecCrypto/hash-and-signature-algorithms)ファミリ (例: <xref:System.Security.Cryptography.SHA512>、 <xref:System.Security.Cryptography.SHA384>、 <xref:System.Security.Cryptography.SHA256>)。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
  データに必要な保護レベルがセキュリティ保証を必要としない場合には、この規則による警告を抑制してください。

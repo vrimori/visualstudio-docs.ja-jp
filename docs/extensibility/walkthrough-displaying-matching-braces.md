@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 中かっこの一致の表示 |Microsoft ドキュメント'
+title: 'チュートリアル: 対応するかっこの表示 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,33 +13,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 370340246cd75e53580d1ac2b6c591f0854cb23e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f29596c95646db78145725f1f0cead424e1de5e
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31143320"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500437"
 ---
-# <a name="walkthrough-displaying-matching-braces"></a>チュートリアル: 対応する中かっこを表示します。
-かっこの照合して、照合するかっこを定義するテキスト マーカー タグ キャレットの中かっこの 1 つである場合に対応する中かっこを追加しなどの言語に対応した機能を実装できます。 中かっこを定義するには、言語のコンテキストでまたは独自ファイル名拡張子とコンテンツの種類を定義し、その型にタグを適用することができますか、既存のコンテンツの種類 ("text") などにタグを適用することができます。 次のチュートリアルでは、かっこの一致の「テキスト」コンテンツ タイプにタグを適用する方法を示します。  
+# <a name="walkthrough-display-matching-braces"></a>チュートリアル: 対応する中かっこを表示します。
+かっこの一致を一致する中かっこを定義し、キャレットの中かっこのいずれかである場合は、対応する中かっこをテキスト マーカー タグを追加するなど、言語ベースの機能を実装します。 言語のコンテキストで中かっこを定義する、ファイル名拡張子とコンテンツの種類を定義、および入力するか、既存のコンテンツの種類 ("text") などに、タグを適用するだけにタグを適用できます。 次のチュートリアルでは、かっこの一致の「テキスト」コンテンツ タイプにタグを適用する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトの作成  
+## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトを作成します。  
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  エディター分類子プロジェクトを作成します。 ソリューションの名前を付けます`BraceMatchingTest`です。  
+1.  エディター分類子プロジェクトを作成します。 ソリューションの名前を`BraceMatchingTest`します。  
   
-2.  エディター分類子項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
+2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
 3.  既存のクラス ファイルを削除します。  
   
-## <a name="implementing-a-brace-matching-tagger"></a>一致タガーを実装します。  
- Visual Studio で使用されているいずれかのような効果を強調表示、かっこを得るには、型のタガーを実装することができます<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>です。 次のコードでは、任意の入れ子のレベルのかっこのペアのタガーを定義する方法を示します。 この例では、中かっこをペアします。 、{} がタガー コンス トラクターで定義されていて、完全な言語の実装の言語仕様に関連する中かっこのペアが定義されます。  
+## <a name="implement-a-brace-matching-tagger"></a>かっこの一致のタガーを実装します。  
+ Visual Studio で使用されている 1 つのような効果を強調表示、かっこを取得するには、型のタガーを実装できます<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>します。 次のコードでは、任意の入れ子のレベルのかっこのペアのタガーを定義する方法を示します。 この例では、の中かっこのペアと{}で完全な言語の実装では、関連する中かっこのペアが言語仕様で定義されますが、タガー コンス トラクターで定義されます。  
   
-#### <a name="to-implement-a-brace-matching-tagger"></a>一致タガーを実装するには  
+### <a name="to-implement-a-brace-matching-tagger"></a>かっこの一致のタガーを実装するには  
   
 1.  クラス ファイルを追加し、BraceMatching という名前を付けます。  
   
@@ -53,32 +53,32 @@ ms.locfileid: "31143320"
      [!code-csharp[VSSDKBraceMatchingTest#2](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_2.cs)]
      [!code-vb[VSSDKBraceMatchingTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_2.vb)]  
   
-4.  テキスト ビュー、ソース バッファーと、現在のスナップショット ポイントと中かっこのペアのセットのプロパティを追加します。  
+4.  テキスト ビュー、元のバッファー、現在のスナップショット ポイントおよびも中かっこのペアのセットのプロパティを追加します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#3](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_3.cs)]
      [!code-vb[VSSDKBraceMatchingTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_3.vb)]  
   
-5.  タガー コンス トラクターでプロパティを設定し、ビューの変更イベントをサブスクライブ<xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>です。 この例ではわかりやすくするため、一致するペアもで定義されて、コンス トラクターです。  
+5.  タガー コンス トラクターでプロパティを設定して、ビューの変更イベントをサブスクライブする<xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>します。 この例では、例示を目的として、一致するペアも定義されて、コンス トラクターで。  
   
      [!code-csharp[VSSDKBraceMatchingTest#4](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_4.cs)]
      [!code-vb[VSSDKBraceMatchingTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_4.vb)]  
   
-6.  一部として、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>実装では、TagsChanged イベントを宣言します。  
+6.  一部として、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601>実装、TagsChanged イベントを宣言します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#5](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_5.cs)]
      [!code-vb[VSSDKBraceMatchingTest#5](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_5.vb)]  
   
-7.  イベント ハンドラーは、更新の現在のキャレット位置、`CurrentChar`プロパティおよび TagsChanged イベントを発生します。  
+7.  イベント ハンドラーの更新の現在のカレット位置、`CurrentChar`プロパティと TagsChanged イベントを発生します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#6](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_6.cs)]
      [!code-vb[VSSDKBraceMatchingTest#6](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_6.vb)]  
   
-8.  実装、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>メソッドに一致する右中かっこいずれかが始め中かっこまたは前の文字が Visual Studio と同様に、かっこの場合、現在の文字です。 一致が見つかった場合、このメソッドには、2 つのタグ、始め中かっこおよびかっこがインスタンス化します。  
+8.  実装、<xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A>と一致するメソッドの中かっこいずれかが、始めかっこ、または Visual Studio のように、かっこの前の文字の場合、現在の文字。 一致が見つかった場合は、始めかっことかっこの 2 つのタグにこのメソッドがインスタンス化します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#7](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_7.cs)]
      [!code-vb[VSSDKBraceMatchingTest#7](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_7.vb)]  
   
-9. 次のプライベート メソッドでは、任意の入れ子のレベルの対応する中かっこを検索します。 最初のメソッドは、開いている文字と一致する終了文字を検索します。  
+9. 次のプライベート メソッドは、任意の入れ子のレベルに対応するかっこを検索します。 最初のメソッドは、開いている文字と一致する終了文字を検索します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#8](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_8.cs)]
      [!code-vb[VSSDKBraceMatchingTest#8](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_8.vb)]  
@@ -88,12 +88,12 @@ ms.locfileid: "31143320"
      [!code-csharp[VSSDKBraceMatchingTest#9](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_9.cs)]
      [!code-vb[VSSDKBraceMatchingTest#9](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_9.vb)]  
   
-## <a name="implementing-a-brace-matching-tagger-provider"></a>タガー プロバイダーに一致する中かっこを実装します。  
- タガーを実装するだけでなくも実装し、タガー プロバイダーをエクスポートする必要があります。 この場合、プロバイダーのコンテンツの種類は、"text"です。 これは、かっこの照合のテキスト ファイルのすべての種類で表示されますが、詳細な実装がかっこの一致の特定のコンテンツ タイプにのみに適用されることを意味します。  
+## <a name="implement-a-brace-matching-tagger-provider"></a>中かっこの一致するタガー プロバイダーを実装します。  
+ タガーを実装するだけでなくも実装し、タガー プロバイダーをエクスポートする必要があります。 ここでは、プロバイダーのコンテンツの種類は、"text"です。 そのため、かっこの照合、テキスト ファイルのすべての種類で表示されますが、完全な実装がかっこの一致の特定のコンテンツ タイプにのみ適用されます。  
   
-#### <a name="to-implement-a-brace-matching-tagger-provider"></a>中かっこの一致するタガー プロバイダーを実装するには  
+### <a name="to-implement-a-brace-matching-tagger-provider"></a>中かっこの一致するタガー プロバイダーを実装するには  
   
-1.  継承するタガー プロバイダーの宣言<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>し BraceMatchingTaggerProvider、という名前を使用してエクスポート、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"、および<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>の<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>します。  
+1.  継承するタガー プロバイダーを宣言<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider>でエクスポートし、BraceMatchingTaggerProvider という名前を付けます、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"、<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>の<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>します。  
   
      [!code-csharp[VSSDKBraceMatchingTest#10](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_10.cs)]
      [!code-vb[VSSDKBraceMatchingTest#10](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_10.vb)]  
@@ -103,14 +103,14 @@ ms.locfileid: "31143320"
      [!code-csharp[VSSDKBraceMatchingTest#11](../extensibility/codesnippet/CSharp/walkthrough-displaying-matching-braces_11.cs)]
      [!code-vb[VSSDKBraceMatchingTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-matching-braces_11.vb)]  
   
-## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
+## <a name="build-and-test-the-code"></a>ビルドし、コードのテスト  
  このコードをテストするには、BraceMatchingTest ソリューションをビルドし、実験用インスタンスで実行します。  
   
-#### <a name="to-build-and-test-bracematchingtest-solution"></a>ビルドし、BraceMatchingTest ソリューションをテストするには  
+#### <a name="to-build-and-test-bracematchingtest-solution"></a>ビルドして BraceMatchingTest ソリューションをテストするには  
   
 1.  ソリューションをビルドします。  
   
-2.  デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスがインスタンス化されます。  
+2.  デバッガーでこのプロジェクトを実行する場合は、Visual Studio の 2 番目のインスタンスが開始します。  
   
 3.  テキスト ファイルを作成し、対応する中かっこを含むいくつかのテキストを入力します。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "31143320"
     {hello}  
     ```  
   
-4.  始め中かっこの前にキャレットを配置するときにその中かっこと一致するかっこの両方は強調表示されます。 カーソルを閉じる中かっこの直後にすると、その中かっこと一致する始め中かっこの両方は強調表示されます。  
+4.  始め中かっこの前にキャレットを配置すると、その中かっこと一致する、閉じるかっこの両方を強調する必要があります。 閉じる中かっこの直後後にカーソルを配置すると、その中かっこと一致する始めかっこの両方を強調する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+ [チュートリアル: コンテンツの種類をファイル名拡張子にリンクします。](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

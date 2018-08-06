@@ -1,5 +1,5 @@
 ---
-title: 使用して、Visual Studio で Roslyn アナライザーを構成
+title: 使用して、Roslyn アナライザーを構成します。
 ms.date: 03/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6668b3727e5df17c3d436e37f2edd78a67a79eba
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 971cbe690cc53b0e4035b951570ba8c7aba19313
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204155"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512172"
 ---
 # <a name="configure-and-use-roslyn-analyzer-rules"></a>構成し、Roslyn アナライザーの規則を使用
 
@@ -141,6 +141,31 @@ A[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-ru
 > ```xml
 > <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" PrivateAssets="all" />
 > ```
+
+## <a name="command-line-usage"></a>コマンドラインの使用状況
+
+コマンドラインでプロジェクトをビルドする、次の条件が満たされた場合に、規則違反がビルド出力に表示されます。
+
+- アナライザーは、VSIX 拡張機能ではなく、Nuget パッケージとしてインストールされます。
+
+- プロジェクトのコードでは、1 つまたは複数の規則が違反しました。
+
+- [重大度](#rule-severity)違反した規則に設定されている**警告**、ビルドが失敗するを違反が発生しない場合または**エラー**違反がビルドの失敗がどのように発生する場合。
+
+ビルド出力の詳細度では、規則違反を示すかどうかには影響しません。 使用しても**quiet**詳細度、規則違反は、ビルド出力に表示されます。
+
+> [!TIP]
+> いずれかでコマンドラインからの静的コード分析を実行するのに慣れている場合*FxCopCmd.exe*または msbuild を使用、 **RunCodeAnalysis**フラグは、Roslyn アナライザーの実行をする方法を次に示します。
+
+Msbuild を使用してプロジェクトをビルドするときに、コマンドラインでアナライザーの違反を参照してくださいするには、このようなコマンドを実行します。
+
+```cmd
+msbuild myproject.csproj /target:rebuild /verbosity:minimal
+```
+
+次の図は、アナライザーの規則違反を含むプロジェクトをビルドしてからコマンド ライン ビルドの出力を示しています。
+
+![ルール違反で MSBuild 出力](media/command-line-build-analyzers.png)
 
 ## <a name="see-also"></a>関連項目
 

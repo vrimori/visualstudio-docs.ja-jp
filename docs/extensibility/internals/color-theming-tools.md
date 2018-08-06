@@ -1,5 +1,5 @@
 ---
-title: 色のテーマ ツール |Microsoft ドキュメント
+title: 色のテーマのツール |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,16 +9,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f346006cdfce5daa7cd3d572dc376024a78051f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8802a1a5d41d8ba36893d5abf1f19e901ee7b1e3
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127903"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511122"
 ---
-# <a name="color-theming-tools"></a>色のテーマ ツール
-VS SDK には、作成して、配色テーマを管理するのに役立ついくつかのツールが用意されています。  
+# <a name="color-theme-tools"></a>色のテーマのツール
+Visual Studio SDK には、作成および配色テーマを管理するためにいくつかのツールが用意されています。  
   
--   [VSIX カラー エディター](../../extensibility/internals/vsix-color-editor.md)ツールで作成し、Visual Studio のカスタム カラーを編集できます。  
+-   [VSIX カラー エディター](../../extensibility/internals/vsix-color-editor.md)ツールの作成し、Visual Studio のカスタム色を編集できます。  
   
--   [VSIX カラー コンパイラ](../../extensibility/internals/vsix-color-compiler.md)ツールは、拡張機能に .pkgdef を既存の Visual Studio のテーマの .xml ファイルを変換します。
+-   [VSIX カラー コンパイラ](../../extensibility/internals/vsix-color-compiler.md)ツールには、既存の Visual Studio のテーマに変換します *.xml*へのファイルの *.pkgdef*拡張機能のファイル。

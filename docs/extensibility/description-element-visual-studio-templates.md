@@ -1,5 +1,5 @@
 ---
-title: Description 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: Description 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 471633a4c786a879b333a09a4d7975739a56ccfa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 13a93ce9eb5bca506751e215fe74477839e961d9
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128919"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500801"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description 要素 (Visual Studio テンプレート)
 いずれかで表示されるテンプレートの説明を指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
@@ -39,15 +39,15 @@ ms.locfileid: "31128919"
 <Description Package="{PackageID}" ID="ResourceID" />  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Package`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のパッケージを指定する GUID id です。|  
-|`ID`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します|  
+|`Package`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio パッケージを指定する GUID の id。|  
+|`ID`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio のリソース ID を指定します|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -59,11 +59,11 @@ ms.locfileid: "31128919"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
 ## <a name="text-value"></a>テキスト値  
- しない限り、テキスト値が必要な`Package`と`ID`属性を使用します。  
+ しない限り、テキスト値が必要です、`Package`と`ID`属性が使用されます。  
   
  テキストは、テンプレートの説明を提供します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Description` は `TemplateData` 要素に必須の子要素です。  
   
 ## <a name="example"></a>例  

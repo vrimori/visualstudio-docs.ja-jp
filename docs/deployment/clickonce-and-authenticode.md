@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03e2ee64002d286c899f638f2fed16d4ef22abc7
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 2943766bb7b0df6d2e0974f8a8c1b52747f31526
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080774"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512211"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce と Authenticode
 *Authenticode* は、業界標準の暗号化を使用して、アプリケーションの発行元の信頼性を検証するデジタル証明書によってアプリケーション コードに署名する Microsoft テクノロジです。 アプリケーションの配置に Authenticode を使用し、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] はトロイの木馬のリスクを軽減します。 トロイの木馬は、悪意のある第三者が、確立された信頼できるソースからの正規のプログラムと偽って示すウイルスやその他の有害なプログラムです。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置のデジタル証明書による署名は、アセンブリとファイルが改ざんされていないことを確認するためのオプションの手順です。  
@@ -50,7 +50,7 @@ ms.locfileid: "39080774"
   
  これに対し、証明書販売元や企業内の部門などの CA から証明書を受け取る場合は、証明書によってユーザーのセキュリティが強化されます。 証明書によって、署名済みソフトウェアの発行者が識別されるだけでなく、署名を行った CA に問い合わせてその ID が検査されます。 CA がルート証明機関でない場合、Authenticode はルート証明機関まで "信頼チェーン" をたどって、その CA が証明書の発行を承認されているかどうかを検査します。 セキュリティを強化するために、可能であれば常に CA によって発行された証明書を使用することをお勧めします。  
   
- 自己証明書を生成する詳細については、次を参照してください。 [New-selfsignedcertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate)または[MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx)します。  
+ 自己証明書を生成する詳細については、次を参照してください。 [New-selfsignedcertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate)または[MakeCert](/windows/desktop/SecCrypto/makecert)します。  
   
 ### <a name="timestamps"></a>タイムスタンプ  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの署名に使用する証明書は、一定の期間 (通常は 12 か月) で期限切れになります。 新しい証明書を持つアプリケーションに再署名を繰り返さずに済むように、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ではタイムスタンプがサポートされています。 アプリケーションがタイムスタンプ付きで署名されると、タイムスタンプが有効な場合は、有効期限が過ぎていても、その証明書が受け付けられます。 これにより、期限切れの証明書と有効なタイムスタンプを持つ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをダウンロードして実行できます。 また、期限切れの証明書を持つインストール済みのアプリケーションでは、引き続き、更新プログラムをダウンロードしてインストールできます。  

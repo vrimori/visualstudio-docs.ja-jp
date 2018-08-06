@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c90d3878713d59975998c42cf17bf0722423666
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 3b060261bec61859f33d99ec3f666e1285413592
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152527"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498565"
 ---
 # <a name="add-search-to-a-tool-window"></a>検索ツール ウィンドウを追加します。
 作成または拡張機能でツール ウィンドウを更新するときは、Visual Studio の他の場所に表示される同じ検索機能を追加できます。 この機能には、次の機能が含まれています。  
@@ -33,7 +33,7 @@ ms.locfileid: "39152527"
   
 -   特定のフィールド、または検索対象の関連で検索をフィルター処理する権限です。  
   
- このチュートリアルでは、次のタスクを実行する方法について説明します。  
+このチュートリアルでは、次のタスクを実行する方法について説明します。  
   
 1.  VSPackage プロジェクトを作成します。  
   
