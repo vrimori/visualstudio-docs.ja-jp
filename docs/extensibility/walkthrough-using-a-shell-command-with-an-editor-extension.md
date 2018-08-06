@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: シェル コマンドを使用したエディターの拡張子を持つ |Microsoft ドキュメント'
+title: 'チュートリアル: エディター拡張機能でシェル コマンドの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,74 +13,74 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 112e78e6143d0a3bd67ff2a65814f2d77b85cdc1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 02ff8a2be0d13af193a204ee6711bf7dfa11dee7
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31148380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566961"
 ---
-# <a name="walkthrough-using-a-shell-command-with-an-editor-extension"></a>チュートリアル: シェル コマンドを使用したエディターの拡張子を持つ
+# <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>チュートリアル: エディター拡張機能でシェル コマンドを使用します。
 VSPackage からには、エディターにメニュー コマンドなどの機能を追加できます。 このチュートリアルでは、メニュー コマンドを呼び出すことによって、エディターでテキスト ビューに表示要素を追加する方法を示します。  
   
- このチュートリアルでは、Managed Extensibility Framework (MEF) コンポーネント パーツと共に VSPackage の使用を示します。 Visual Studio シェルを使用して、メニュー コマンドを登録する VSPackage を使用する必要があり、MEF コンポーネント パーツにアクセスするコマンドを使用することができます。  
+ このチュートリアルでは、VSPackage と Managed Extensibility Framework (MEF) コンポーネントの一部の使用を示します。 VSPackage を使用して、Visual Studio シェルをメニュー コマンドを登録する必要があります。 また、MEF コンポーネント パーツにアクセスするコマンドを使用することができます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+ Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
-## <a name="creating-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して、拡張機能の作成  
- という名前のメニュー コマンドを格納する VSPackage を作成**表示要素の追加**上、**ツール**メニュー。  
+## <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用して拡張機能を作成します。  
+ という名前のメニュー コマンドを配置する VSPackage を作成**追加 Adornment**上、**ツール**メニュー。  
   
-1.  という名前の C# の場合は、VSIX プロジェクトを作成する`MenuCommandTest`、項目テンプレート名をカスタム コマンドを追加および**AddAdornment**です。 詳細については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
+1.  という名前の c# VSIX プロジェクトを作成する`MenuCommandTest`、カスタム コマンドの項目テンプレート名を追加および**AddAdornment**します。 詳細については、次を参照してください。[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
   
-2.  MenuCommandTest をという名前のソリューションが開かれます。 MenuCommandTestPackage ファイルは、メニュー コマンドを作成しに配置するコードを**ツール**メニュー。 この時点では、コマンドが発生すると、メッセージ ボックスを表示します。 後の手順では、このコメントの表示要素を表示する設定を変更する方法を示します。  
+2.  MenuCommandTest という名前のソリューションを開きます。 MenuCommandTestPackage ファイルがメニュー コマンドを作成し、に配置するコードを**ツール**メニュー。 この時点では、コマンドが発生すると、メッセージ ボックスを表示します。 後の手順では、コメントの表示要素を表示するときに変更する方法を示します。  
   
-3.  VSIX マニフェスト エディターで source.extension.vsixmanifest ファイルを開きます。 `Assets`  タブ、Microsoft.VisualStudio.VsPackage MenuCommandTest をという名前の行がある必要があります。  
+3.  開く、 *source.extension.vsixmanifest* VSIX マニフェスト エディターでファイル。 `Assets`  タブ、Microsoft.VisualStudio.VsPackage MenuCommandTest をという名前の行がある必要があります。  
   
-4.  保存して、Source.extension.vsixmanifest ファイルを閉じます。  
+4.  保存して閉じます、 *source.extension.vsixmanifest*ファイル。  
   
-## <a name="adding-a-mef-extension-to-the-command-extension"></a>コマンドの拡張機能への MEF 拡張機能の追加  
+## <a name="add-a-mef-extension-to-the-command-extension"></a>コマンド拡張機能に MEF 拡張機能を追加します。  
   
-1.  **ソリューション エクスプ ローラー**ソリューション ノードを右クリックしをクリックして**追加**、クリックして**新しいプロジェクト**です。 **新しいプロジェクトの追加**ダイアログ ボックスで、をクリックして**機能拡張** **Visual c#**、し**VSIX プロジェクト**です。 プロジェクトに `CommentAdornmentTest` という名前を付けます。  
+1.  **ソリューション エクスプ ローラー**は、ソリューション ノードを右クリックし、[**追加**、] をクリックし、**新しいプロジェクト**します。 **新しいプロジェクトの追加**ダイアログ ボックスで、をクリックして**拡張** **Visual c#**、し**VSIX プロジェクト**。 プロジェクトに `CommentAdornmentTest` という名前を付けます。  
   
-2.  このプロジェクトは、VSPackage の厳密な名前付きアセンブリと対話は、ためアセンブリに署名する必要があります。 VSPackage アセンブリで既に作成キー ファイルを再利用することができます。  
+2.  このプロジェクトは、VSPackage の厳密な名前付きアセンブリと対話は、ため、アセンブリに署名する必要があります。 既に作成されて、VSPackage アセンブリのキー ファイルを再利用することができます。  
   
-    1.  プロジェクトのプロパティを開き、選択、**署名**タブです。  
+    1.  プロジェクトのプロパティを開き、選択、**署名**タブ。  
   
-    2.  選択**アセンブリに署名**です。  
+    2.  選択**アセンブリに署名**します。  
   
-    3.  **厳密な名前キー ファイルを選択して**、MenuCommandTest アセンブリに対して生成された Key.snk ファイルを選択します。  
+    3.  **厳密な名前キー ファイルを選択して**を選択、 *Key.snk* MenuCommandTest アセンブリ用に生成されたファイル。  
   
-## <a name="referring-to-the-mef-extension-in-the-vspackage-project"></a>VSPackage プロジェクト内の MEF 拡張機能を参照します。  
- VSPackage に MEF コンポーネントを追加するため、マニフェストで資産の両方の種類を指定する必要があります。  
+## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>VSPackage プロジェクトで MEF 拡張機能を参照してください。  
+ VSPackage を MEF コンポーネントを追加するため、マニフェストで両方の種類のアセットを指定する必要があります。  
   
 > [!NOTE]
->  MEF の詳細については、次を参照してください。 [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)です。  
+>  MEF の詳細については、次を参照してください。 [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)します。  
   
-#### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>VSPackage プロジェクトに MEF コンポーネントを参照するには  
+### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>VSPackage プロジェクトを MEF コンポーネントを参照するには  
   
-1.  MenuCommandTest プロジェクトでは、VSIX マニフェスト エディターで source.extension.vsixmanifest ファイルを開きます。  
+1.  MenuCommandTest プロジェクトで開き、 *source.extension.vsixmanifest* VSIX マニフェスト エディターでファイル。  
   
-2.  **資産** タブで、をクリックして**新規**です。  
+2.  **資産**] タブで [**新規**します。  
   
-3.  **型**一覧で、選択**Microsoft.VisualStudio.MefComponent**です。  
+3.  **型**一覧で、選択**Microsoft.VisualStudio.MefComponent**します。  
   
-4.  **ソース**一覧で、選択**現在のソリューション内のプロジェクト**です。  
+4.  **ソース**一覧で、選択**現在のソリューションでプロジェクトを**します。  
   
-5.  **プロジェクト**一覧で、選択**CommentAdornmentTest**です。  
+5.  **プロジェクト**一覧で、選択**CommentAdornmentTest**します。  
   
-6.  保存して、source.extension.vsixmanifest ファイルを閉じます。  
+6.  保存して閉じます、 *source.extension.vsixmanifest*ファイル。  
   
 7.  MenuCommandTest プロジェクト CommentAdornmentTest プロジェクトを参照していることを確認します。  
   
-8.  CommentAdornmentTest プロジェクトでは、アセンブリを生成するためにプロジェクトを設定します。 **ソリューション エクスプ ローラー**プロジェクトを選択して、ファイルの場所、**プロパティ**ウィンドウ、 **OutputDirectory をコピー構築出力**プロパティ、に設定し、**true**です。  
+8.  CommentAdornmentTest プロジェクトでアセンブリを生成するプロジェクトを設定します。 **ソリューション エクスプ ローラー**、プロジェクトを選択し、ファイルの場所、**プロパティ**のウィンドウ、 **OutputDirectory をコピー構築出力**プロパティ、に設定し、**true**します。  
   
-## <a name="defining-a-comment-adornment"></a>コメントの表示要素を定義します。  
- 自体のコメント表示要素から成る、<xref:Microsoft.VisualStudio.Text.ITrackingSpan>選択したテキストと、作成者およびテキストの説明を表すいくつかの文字列を追跡します。  
+## <a name="define-a-comment-adornment"></a>コメントの表示要素を定義します。  
+ コメントの表示要素自体から成る、<xref:Microsoft.VisualStudio.Text.ITrackingSpan>選択したテキストと、作成者とテキストの説明を表すいくつかの文字列を追跡します。  
   
 #### <a name="to-define-a-comment-adornment"></a>コメントの表示要素を定義するには  
   
-1.  CommentAdornmentTest プロジェクトで、新しいクラス ファイルを追加し、名前`CommentAdornment`です。  
+1.  CommentAdornmentTest プロジェクトで新しいクラス ファイルを追加し、名前`CommentAdornment`します。  
   
 2.  次の参照を追加します。  
   
@@ -102,19 +102,19 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
     9. WindowsBase  
   
-3.  次の追加`using`ステートメントです。  
+3.  次の追加`using`ステートメント。  
   
     ```vb  
     using Microsoft.VisualStudio.Text;  
     ```  
   
-4.  ファイルは、という名前のクラスを含める必要があります`CommentAdornment`です。  
+4.  ファイルは、という名前のクラスを含める必要があります`CommentAdornment`します。  
   
-    ```  
+    ```csharp  
     internal class CommentAdornment  
     ```  
   
-5.  次の 3 つのフィールドを追加、`CommentAdornment`のクラス、<xref:Microsoft.VisualStudio.Text.ITrackingSpan>作成者、および説明します。  
+5.  次の 3 つのフィールドを追加、`CommentAdornment`クラス、<xref:Microsoft.VisualStudio.Text.ITrackingSpan>作成者、および説明します。  
   
     ```csharp  
     public readonly ITrackingSpan Span;  
@@ -133,10 +133,10 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-## <a name="creating-a-visual-element-for-the-adornment"></a>表示要素のビジュアル要素の作成  
- 表示要素の視覚的要素を定義することも必要があります。 このチュートリアルでは、Windows Presentation Foundation (WPF) クラスから継承されるコントロールを定義<xref:System.Windows.Controls.Canvas>です。  
+## <a name="create-a-visual-element-for-the-adornment"></a>表示要素のビジュアル要素を作成します。  
+ 表示要素のビジュアル要素を定義します。 このチュートリアルでは、Windows Presentation Foundation (WPF) クラスから継承するコントロールを定義<xref:System.Windows.Controls.Canvas>します。  
   
-1.  CommentAdornmentTest プロジェクトでクラスを作成し、名前を付けます`CommentBlock`です。  
+1.  CommentAdornmentTest プロジェクトでクラスを作成し、名前`CommentBlock`します。  
   
 2.  次の `using` ステートメントを追加します。  
   
@@ -152,7 +152,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using Microsoft.VisualStudio.Utilities;  
     ```  
   
-3.  ように、`CommentBlock`クラスから継承する<xref:System.Windows.Controls.Canvas>です。  
+3.  ように、`CommentBlock`クラスから継承する<xref:System.Windows.Controls.Canvas>します。  
   
     ```csharp  
     internal class CommentBlock : Canvas  
@@ -238,7 +238,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-6.  実装も、<xref:System.Windows.Controls.Panel.OnRender%2A>表示要素を描画するイベント ハンドラー。  
+6.  実装することも、<xref:System.Windows.Controls.Panel.OnRender%2A>イベント ハンドラーを表示要素を描画します。  
   
     ```csharp  
     protected override void OnRender(DrawingContext dc)  
@@ -257,10 +257,10 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-## <a name="adding-an-iwpftextviewcreationlistener"></a>IWpfTextViewCreationListener を追加します。  
- <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>ビューの作成イベントをリッスンするように使用できる MEF コンポーネント パーツがします。  
+## <a name="add-an-iwpftextviewcreationlistener"></a>追加、IWpfTextViewCreationListener  
+ <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>作成イベントの表示をリッスンするように使用できる MEF コンポーネントの一部です。  
   
-1.  CommentAdornmentTest プロジェクトにクラス ファイルを追加し、名前を付けます`Connector`です。  
+1.  CommentAdornmentTest プロジェクトにクラス ファイルを追加し、名前`Connector`します。  
   
 2.  次の `using` ステートメントを追加します。  
   
@@ -270,12 +270,12 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using Microsoft.VisualStudio.Utilities;  
     ```  
   
-3.  実装するクラスを宣言<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>、およびエクスポートに、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"と<xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>の<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>します。 コンテンツの種類の属性は、コンポーネントを適用するコンテンツの種類を指定します。 テキストの種類は、すべての非バイナリ ファイルの種類の基本型です。 そのため、作成されるほとんどすべてのテキスト ビューは、この型のされます。 テキスト ビューに role 属性には、コンポーネントを適用するテキスト ビューの種類を指定します。 ドキュメントのテキスト ビュー ロールは、通常は行で構成され、ファイルに格納されているテキストを表示します。  
+3.  実装するクラスを宣言<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>でエクスポートし、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text"、<xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>の<xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document>。 コンテンツの種類の属性には、コンポーネントを適用するコンテンツの種類を指定します。 テキスト型は、すべての非バイナリ ファイルの種類の基本型です。 そのため、作成されるほぼすべてのテキスト ビューは、この型になります。 テキスト ビューの role 属性には、コンポーネントを適用するテキスト ビューの種類を指定します。 ドキュメントのテキスト ビュー ロールは、通常は行で構成され、ファイルに格納されているテキストを表示します。  
   
      [!code-vb[VSSDKMenuCommandTest#11](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_1.vb)]
      [!code-csharp[VSSDKMenuCommandTest#11](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_1.cs)]  
   
-4.  実装、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>メソッドを呼び出す、静的なので`Create()`のイベント、`CommentAdornmentManager`です。  
+4.  実装、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>メソッドを呼び出して、静的な`Create()`のイベント、`CommentAdornmentManager`します。  
   
     ```csharp  
     public void TextViewCreated(IWpfTextView textView)  
@@ -306,12 +306,12 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-## <a name="defining-an-adornment-layer"></a>装飾層を定義します。  
- 新しい装飾を追加するには、装飾層を定義する必要があります。  
+## <a name="define-an-adornment-layer"></a>装飾層を定義します。  
+ 新しい表示要素を追加するには、装飾層を定義する必要があります。  
   
-#### <a name="to-define-an-adornment-layer"></a>装飾層を定義するには  
+### <a name="to-define-an-adornment-layer"></a>装飾層を定義するには  
   
-1.  `Connector`クラス、型のパブリック フィールドを宣言<xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition>でエクスポートし、<xref:Microsoft.VisualStudio.Utilities.NameAttribute>装飾層に一意の名前を指定して、<xref:Microsoft.VisualStudio.Utilities.OrderAttribute>他のテキストをこの装飾層の Z オーダーのリレーションシップを定義します。レイヤー (テキスト、カレット、選択範囲) を表示します。  
+1.  `Connector`クラス、型のパブリック フィールドを宣言<xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition>でエクスポート、<xref:Microsoft.VisualStudio.Utilities.NameAttribute>装飾層の一意の名前を指定して、<xref:Microsoft.VisualStudio.Utilities.OrderAttribute>その他のテキストをこの装飾層の Z オーダーのリレーションシップを定義します。(テキスト、カレット、[選択]) のレイヤーを表示します。  
   
     ```csharp  
     [Export(typeof(AdornmentLayerDefinition))]  
@@ -321,10 +321,10 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
     ```  
   
-## <a name="providing-comment-adornments"></a>コメントの表示要素を提供します。  
- 表示要素を定義するときは、コメントの表示要素プロバイダーとコメント装飾マネージャーにも実装します。 コメントの表示要素のプロバイダーはコメントの表示要素の一覧を保持がリッスンする<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>基になるテキスト バッファーと、基になるテキストが削除されたときに削除コメントの表示要素のイベントです。  
+## <a name="provide-comment-adornments"></a>コメントの表示要素を提供します。  
+ 表示要素を定義するときに、コメント表示要素のプロバイダーとコメント表示要素のマネージャーにも実装します。 コメントの表示要素のプロバイダーがコメントの表示要素のリストを保持がリッスンする<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>基になるテキスト バッファー、および基になるテキストが削除されたときに削除コメントの表示要素のイベント。  
   
-1.  CommentAdornmentTest プロジェクトに新しいクラス ファイルを追加し、名前`CommentAdornmentProvider`です。  
+1.  CommentAdornmentTest プロジェクトに新しいクラス ファイルを追加し、名前`CommentAdornmentProvider`します。  
   
 2.  次の `using` ステートメントを追加します。  
   
@@ -336,7 +336,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using Microsoft.VisualStudio.Text.Editor;  
     ```  
   
-3.  という名前のクラスを追加`CommentAdornmentProvider`です。  
+3.  という名前のクラスを追加`CommentAdornmentProvider`します。  
   
     ```csharp  
     internal class CommentAdornmentProvider  
@@ -344,7 +344,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-4.  テキスト バッファーおよびバッファーに関連するコメントの表示要素の一覧のプライベート フィールドを追加します。  
+4.  テキスト バッファーとバッファーに関連するコメントの表示要素のリスト用のプライベート フィールドを追加します。  
   
     ```csharp  
     private ITextBuffer buffer;  
@@ -352,7 +352,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
     ```  
   
-5.  コンス トラクターを追加`CommentAdornmentProvider`です。 このコンス トラクターは、によって、プロバイダーがインスタンス化されるため、プライベート アクセス権がある、`Create()`メソッドです。 コンス トラクターを追加、`OnBufferChanged`イベント ハンドラーを<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>イベント。  
+5.  追加のコンス トラクター`CommentAdornmentProvider`します。 によって、プロバイダーがインスタンス化されるため、このコンス トラクターはプライベート アクセスに必要、`Create()`メソッド。 コンス トラクターを追加、`OnBufferChanged`イベント ハンドラーを<xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed>イベント。  
   
     ```csharp  
     private CommentAdornmentProvider(ITextBuffer buffer)  
@@ -420,7 +420,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     public event EventHandler<CommentsChangedEventArgs> CommentsChanged;  
     ```  
   
-10. 作成、`Add()`表示要素を追加するメソッド。  
+10. 作成、`Add()`表示要素を追加します。  
   
     ```csharp  
     public void Add(SnapshotSpan span, string author, string text)  
@@ -446,7 +446,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
     ```  
   
-11. 追加、`RemoveComments()`メソッドです。  
+11. 追加、`RemoveComments()`メソッド。  
   
     ```csharp  
     public void RemoveComments(SnapshotSpan span)  
@@ -473,7 +473,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-12. 追加、`GetComments()`を指定したスナップショットの範囲内のすべてのコメントを返すメソッド。  
+12. 追加、`GetComments()`を特定のスナップショットの範囲内のすべてのコメントを返すメソッド。  
   
     ```csharp  
     public Collection<CommentAdornment> GetComments(SnapshotSpan span)  
@@ -506,10 +506,10 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-## <a name="managing-comment-adornments"></a>コメントの表示要素の管理  
- コメントの装飾マネージャーは、表示要素を作成し、装飾層に追加します。 リッスンする、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>イベントことが移動または表示要素を削除することができます。 これもをリッスンする、`CommentsChanged`コメントの追加または削除する場合に、コメントの表示要素のプロバイダーによって発生するイベントです。  
+## <a name="manage-comment-adornments"></a>コメントの表示要素を管理します。  
+ コメントの表示要素のマネージャーは、表示要素を作成し、装飾層に追加します。 リッスンし、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>イベントを移動したり、表示要素を削除するようにします。 またをリッスンし、`CommentsChanged`コメントを追加または削除されたときに、コメントの表示要素のプロバイダーによって送出されるイベントです。  
   
-1.  CommentAdornmentTest プロジェクトにクラス ファイルを追加し、名前を付けます`CommentAdornmentManager`です。  
+1.  CommentAdornmentTest プロジェクトにクラス ファイルを追加し、名前`CommentAdornmentManager`します。  
   
 2.  次の `using` ステートメントを追加します。  
   
@@ -522,7 +522,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using Microsoft.VisualStudio.Text.Formatting;  
     ```  
   
-3.  という名前のクラスを追加`CommentAdornmentManager`です。  
+3.  という名前のクラスを追加`CommentAdornmentManager`します。  
   
     ```csharp  
     internal class CommentAdornmentManager  
@@ -538,7 +538,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     private readonly CommentAdornmentProvider provider;  
     ```  
   
-5.  管理者がサブスクライブしているコンス トラクターを追加、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>イベント、およびにも、`CommentsChanged`イベント。 静的で、マネージャーがインスタンス化されるため、コンス トラクターはプライベート`Create()`メソッドです。  
+5.  サブスクライブするには管理コンス トラクターを追加、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged>と<xref:Microsoft.VisualStudio.Text.Editor.ITextView.Closed>イベントとにも、`CommentsChanged`イベント。 静的、マネージャーがインスタンス化されるため、コンス トラクターはプライベート`Create()`メソッド。  
   
     ```csharp  
     private CommentAdornmentManager(IWpfTextView view)  
@@ -554,7 +554,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-6.  追加、`Create()`をプロバイダーを取得するか、必要な場合は、1 つを作成します。  
+6.  追加、`Create()`プロバイダーを取得または必要に応じて、1 つを作成するメソッド。  
   
     ```csharp  
     public static CommentAdornmentManager Create(IWpfTextView view)  
@@ -625,8 +625,8 @@ VSPackage からには、エディターにメニュー コマンドなどの機
      [!code-csharp[VSSDKMenuCommandTest#35](../extensibility/codesnippet/CSharp/walkthrough-using-a-shell-command-with-an-editor-extension_3.cs)]
      [!code-vb[VSSDKMenuCommandTest#35](../extensibility/codesnippet/VisualBasic/walkthrough-using-a-shell-command-with-an-editor-extension_3.vb)]  
   
-## <a name="using-the-menu-command-to-add-the-comment-adornment"></a>コメントの表示要素を追加するメニュー コマンドを使用します。  
- 実装することによってコメントの表示要素を作成するメニュー コマンドを使用することができます、 `MenuItemCallback` VSPackage のメソッドです。  
+## <a name="use-the-menu-command-to-add-the-comment-adornment"></a>メニュー コマンドを使用して、コメントの表示要素を追加するには  
+ メニュー コマンドを使用して実装することによってコメントの表示要素を作成することができます、 `MenuItemCallback` VSPackage のメソッド。  
   
 1.  MenuCommandTest プロジェクトに次の参照を追加します。  
   
@@ -636,7 +636,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
   
     -   Microsoft.VisualStudio.Text.UI.Wpf  
   
-2.  AddAdornment.cs ファイルを開き、次の追加`using`ステートメントです。  
+2.  開く、 *AddAdornment.cs*ファイルを開き、次の追加`using`ステートメント。  
   
     ```csharp  
     using Microsoft.VisualStudio.TextManager.Interop;  
@@ -645,7 +645,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     using CommentAdornmentTest;  
     ```  
   
-3.  ShowMessageBox() メソッドを削除し、次のコマンド ハンドラーを追加します。  
+3.  削除、`ShowMessageBox()`メソッドを次のコマンド ハンドラーを追加します。  
   
     ```csharp  
     private void AddAdornmentHandler(object sender, EventArgs e)  
@@ -653,7 +653,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-4.  アクティブなビューを取得するコードを追加します。 取得する必要があります、 `SVsTextManager` 、アクティブなを取得する Visual Studio シェルの`IVsTextView`します。  
+4.  アクティブなビューを取得するコードを追加します。 取得する必要があります、 `SVsTextManager` 、アクティブなを取得する Visual Studio shell の`IVsTextView`します。  
   
     ```csharp  
     private void AddAdornmentHandler(object sender, EventArgs e)  
@@ -665,7 +665,7 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-5.  このテキスト ビューがエディターのテキスト ビューのインスタンスの場合にキャストできます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData>インターフェイスを取得、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>とそれに関連する<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>です。 使用して、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>を呼び出して、`Connector.Execute()`メソッドでは、コメントの表示要素のプロバイダーを取得し、表示要素を追加します。 コマンド ハンドラーは、次のようになります。  
+5.  このテキスト ビューがエディターのテキスト ビューのインスタンスの場合にキャストできます、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData>インターフェイスを取得し、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>とそれに関連付けられた<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>します。 使用して、<xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewHost>を呼び出す、`Connector.Execute()`メソッドでは、コメントの表示要素のプロバイダーを取得し、表示要素を追加します。 コマンド ハンドラーは、このコードのようになります。  
   
     ```csharp  
     private void AddAdornmentHandler(object sender, EventArgs e)  
@@ -712,17 +712,17 @@ VSPackage からには、エディターにメニュー コマンドなどの機
     }  
     ```  
   
-## <a name="building-and-testing-the-code"></a>コードのビルドとテスト  
+## <a name="build-and-test-the-code"></a>ビルドし、コードのテスト  
   
 1.  ソリューションをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。  
   
 2.  テキスト ファイルを作成します。 いくつかのテキストを入力し、それを選択します。  
   
-3.  **ツール** メニューのをクリックして**呼び出す追加装飾**です。 バルーンは、テキスト ウィンドウの右側に表示するかし、次のようなテキストを含める必要があります。  
+3.  **ツール** メニューのをクリックして**呼び出す追加 Adornment**します。 バルーン形式は、テキスト ウィンドウの右側にある表示し、次のテキストのような文字列を含める必要があります。  
   
      YourUserName  
   
-     Fourscore しています.  
+     Fourscore.  
   
 ## <a name="see-also"></a>関連項目  
- [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+ [チュートリアル: コンテンツの種類をファイル名拡張子にリンクします。](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

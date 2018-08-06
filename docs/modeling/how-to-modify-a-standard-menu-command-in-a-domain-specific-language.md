@@ -12,27 +12,27 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: daa44f17fcf0eb61f5c4ce6c1bfada685a20f45e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f174e4dde2c96383e9f8bdf61ff63558bb1d7bb3
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951831"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566782"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>方法: ドメイン固有言語における標準のメニュー コマンドを修正する
 
-DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報は除外されるようにします。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。
+DSL で自動的に定義される標準コマンドのいくつかの動作を変更できます。 たとえば、変更する可能性があります**切り取り**機密情報を除外することです。 そのためには、コマンド セット クラス内でメソッドをオーバーライドします。 これらのクラスは DslPackage プロジェクト内の CommandSet.cs ファイルで定義され、<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> から派生します。
 
 > [!NOTE]
-> メニュー コマンドを作成する場合を参照してください。[する方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)です。
+> 独自のメニュー コマンドを作成する場合を参照してください。[方法: ショートカット メニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)します。
 
 ## <a name="what-commands-can-you-modify"></a>変更可能なコマンド
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>変更可能なコマンドを見つけるには
 
-1.  `DslPackage`プロジェクトを開き、`GeneratedCode\CommandSet.cs`です。 この c# ファイルで見つかりますソリューション エクスプ ローラーの子会社として`CommandSet.tt`です。
+1.  `DslPackage`プロジェクトを開き、`GeneratedCode\CommandSet.cs`します。 この c# ファイルは、の従属としてソリューション エクスプ ローラーで見つかんだことができます`CommandSet.tt`します。
 
-2.  名前の末尾がこのファイルのクラスが見つかりません"`CommandSet`"、たとえば`Language1CommandSet`と`Language1ClipboardCommandSet`です。
+2.  このファイルにクラスを見つけることで名前の末尾が"`CommandSet`"、たとえば`Language1CommandSet`と`Language1ClipboardCommandSet`。
 
 3.  各コマンド セット クラスで、"`override`" とその後に続けて空白文字を 1 つ入力します。 IntelliSense ではオーバーライド可能なメソッドの一覧が表示されます。 各コマンドには名前が "`ProcessOnStatus`" および "`ProcessOnMenu`" で始まるメソッドのペアが含まれます。
 
@@ -55,11 +55,11 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**です。 このフォルダーにという新しいクラス ファイルを作成する`CommandSet.cs`です。
+2.  **DslPackage**、という名前のフォルダーを作成する**カスタム コード**します。 このフォルダーの作成という名前の新しいクラス ファイル`CommandSet.cs`します。
 
 3.  新しいファイル内に、生成された部分クラスと同じ名前空間および名前を持つ部分宣言を記述します。 例えば:
 
-    ```
+    ```csharp
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.Design;
@@ -67,15 +67,15 @@ DSL で自動的に定義される標準コマンドのいくつかの動作を�
     { internal partial class Language1CommandSet { ...
     ```
 
-     **注**クラス ファイルのテンプレートを使用する新しいファイルを作成する場合は、名前空間とクラス名の両方を修正する必要があります。
+     **注**クラス ファイル テンプレートを使用して、新しいファイルを作成した場合は、名前空間とクラス名の両方を修正する必要があります。
 
 ## <a name="override-the-command-methods"></a>コマンド メソッドのオーバーライド
 
-ほとんどのコマンドは、2 つの関連付けられているメソッドを持つ: 名前を持つメソッドと同様に`ProcessOnStatus`... コマンドを表示して有効にするかどうかを決定します。 このメソッドはユーザーが図を右クリックするたびに呼び出され、すばやく実行し、何の変更も生じません。 `ProcessOnMenu`... ユーザーは、コマンドをクリックし、コマンドの機能を実行する必要があるときに呼び出されます。 これらのメソッドの一方または両方をオーバーライドする場合があります。
+ほとんどのコマンドは、2 つの関連付けられているメソッドを持つ: などの名前を持つメソッド`ProcessOnStatus`... コマンドを表示して有効にするかどうかを決定します。 このメソッドはユーザーが図を右クリックするたびに呼び出され、すばやく実行し、何の変更も生じません。 `ProcessOnMenu`... ユーザーが、コマンドをクリックし、コマンドの関数を実行するときに呼び出されます。 これらのメソッドの一方または両方をオーバーライドする場合があります。
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>メニュー上にコマンドが表示されるタイミングを変更するには
 
-... ProcessOnStatus のオーバーライド メソッド。 このメソッドは、パラメーター MenuCommand の Visible プロパティおよび Enabled プロパティを設定します。 通常、コマンドは this.CurrentSelection を見て、コマンドが選択された要素に適用されるかどうかを判断し、それらのプロパティを見て、コマンドが現在の状態で適用可能かどうかを判断します。
+Processonstatus. メソッド。 このメソッドは、パラメーター MenuCommand の Visible プロパティおよび Enabled プロパティを設定します。 通常、コマンドは this.CurrentSelection を見て、コマンドが選択された要素に適用されるかどうかを判断し、それらのプロパティを見て、コマンドが現在の状態で適用可能かどうかを判断します。
 
 一般的なガイドとして、Visible プロパティは選択される要素により判断する必要があります。 Enabled プロパティは、コマンドがメニュー上に黒で表示されるかグレーで表示されるかを決め、現在の選択状態に依存します。
 
@@ -107,7 +107,7 @@ ProcessOnStatus メソッドは、ストア内の要素の作成、削除、ま�
 
 ### <a name="to-change-the-behavior-of-the-command"></a>コマンドの動作を変更するには
 
-... ProcessOnMenu のオーバーライド メソッド。 以下の例では、Delete キーを使用しても、ユーザーは一度に複数の要素を削除できません。
+Processonmenu. メソッド。 以下の例では、Delete キーを使用しても、ユーザーは一度に複数の要素を削除できません。
 
 ```csharp
 /// <summary>
@@ -124,7 +124,7 @@ protected override void ProcessOnMenuDeleteCommand()
 }
 ```
 
-要素またはリンクの作成、削除、または更新など、コードがストアに対して変更を加える場合、トランザクション内でそれを実行する必要があります。 詳細については、次を参照してください。[モデル要素を作成し、更新する方法](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)です。
+要素またはリンクの作成、削除、または更新など、コードがストアに対して変更を加える場合、トランザクション内でそれを実行する必要があります。 詳細については、次を参照してください。[モデル要素を作成し、更新する方法](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)します。
 
 ### <a name="write-the-code-of-the-methods"></a>メソッドのコードを記述します。
 
@@ -132,7 +132,7 @@ protected override void ProcessOnMenuDeleteCommand()
 
 -   `this.CurrentSelection`。 ユーザーが右クリックした図形は常にこの図形およびコネクタの一覧に含まれます。 ユーザーが図の空白部分をクリックした場合、このリストのメンバーは図のみになります。
 
--   `this.IsDiagramSelected()` - `true` ユーザーは、図の空白部分をクリック場合します。
+-   `this.IsDiagramSelected()` - `true` 場合は、ユーザーは、図の空白部分をクリックしました。
 
 -   `this.IsCurrentDiagramEmpty()`
 
@@ -142,7 +142,7 @@ protected override void ProcessOnMenuDeleteCommand()
 
 -   `shape.ModelElement as MyLanguageElement` - 図形により表されるモデル要素。
 
-要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)です。
+要素間を移動する方法およびオブジェクトとリンクを作成する方法についての詳細については、次を参照してください。[を移動すると、プログラム コードでのモデルを更新する](../modeling/navigating-and-updating-a-model-in-program-code.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -152,5 +152,5 @@ protected override void ProcessOnMenuDeleteCommand()
 - [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 - [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)
-- [VMSDK - 回路図サンプルです。DSL の広範なカスタマイズ](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
+- [VMSDK - 回路図のサンプルです。広範な DSL のカスタマイズ](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)
 - [サンプル コード: 回路図](http://code.msdn.microsoft.com/Visualization-Modeling-SDK-763778e8)

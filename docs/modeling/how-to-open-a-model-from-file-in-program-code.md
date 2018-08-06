@@ -9,54 +9,54 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 53858b110cb16509cd9067368cbd035d7ef40c88
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 03d6d4550442c81325a8e67f8d96e52e7655dc09
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949829"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566552"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>方法: プログラム コード内のファイルからモデルを開く
-任意のアプリケーションでは、DSL モデルを開くことができます。
+任意のアプリケーションで DSL モデルを開くことができます。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能では、この目的で ModelBus を使用することができます。 ModelBus は、モデルまたはモデルでは、要素を参照しているとは移動された場合、モデルを検索するための標準のメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio Modelbus を使用してモデルを統合する](../modeling/integrating-models-by-using-visual-studio-modelbus.md)です。
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能では、この目的のため、ModelBus を使用することができます。 ModelBus はモデルまたはモデルでは、要素を参照して、移動された場合、モデルを検索するための標準的なメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio modelbus によるモデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)します。
 
 ## <a name="target-framework"></a>[対象とする Framework]
- 設定、**ターゲット フレームワーク**アプリケーション プロジェクトの **.NET Framework 4**です。
+ 設定、**ターゲット フレームワーク**をアプリケーション プロジェクトの **.NET Framework 4**します。
 
 #### <a name="to-set-the-target-framework"></a>ターゲット フレームワークを設定するには
 
-1.  開く、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL モデルを読み込むアプリケーション用のプロジェクトです。
+1.  開く、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL モデルを読み取るアプリケーション用のプロジェクト。
 
-2.  **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**です。
+2.  **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。
 
-3.  プロジェクトのプロパティ ウィンドウで 、**アプリケーション** タブで、設定、**ターゲット フレームワーク**フィールドを **.NET Framework 4**です。
+3.  プロジェクトのプロパティ ウィンドウでの**アプリケーション**タブで、設定、**ターゲット フレームワーク**フィールドを **.NET Framework 4**します。
 
 > [!NOTE]
->  これを行う場合でもを選択する必要があります **.NET Framework 4**プロジェクトの作成 ダイアログ ボックス。 ターゲット フレームワークにはなりません **.NET Framework 4 Client Profile**です。
+>  選択した場合でもこれを実行する必要があります **.NET Framework 4**プロジェクトの作成 ダイアログ ボックス。 ターゲット フレームワークがすることはできません **.NET Framework 4 Client Profile**します。
 
 ## <a name="references"></a>参照
- これらの参照を追加する必要がある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アプリケーション プロジェクト。
+ これらの参照を追加する必要が、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アプリケーション プロジェクト。
 
 -   `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-    -   これで表示されない場合、 **.NET**  タブで、**参照の追加**ダイアログ ボックスで、をクリックして、**参照** タブに移動して`%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`です。
+    -   表示されない場合、 **.NET**  タブで、**参照の追加**ダイアログ ボックスで、をクリックして、**参照**タブに移動して`%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`します。
 
--   DSL アセンブリに、DSL プロジェクト bin フォルダーの下で検索されます。 その名前の形式では通常: *yourcompany ' と*.*プロジェクト*`.Dsl.dll`です。
+-   DSL アセンブリ、DSL プロジェクト bin フォルダーの下で検索されます。 形式の名前は、通常: *yourcompany ' と*.*プロジェクト*`.Dsl.dll`します。
 
-## <a name="important-classes-in-the-dsl"></a>DSL に重要なクラス
- DSL を読み取り、コードを記述することができます、前に、DSL によって生成されたクラスの一部の名前を知っておく必要があります。 ソリューションでは、DSL、開く、 **Dsl**プロジェクトし、ファイルの場所、 **GeneratedCode**フォルダーです。 プロジェクトでの DSL アセンブリをダブルクリックしても、**参照**、DSL の名前空間を開くと**オブジェクト ブラウザー**です。
+## <a name="important-classes-in-the-dsl"></a>DSL で重要なクラス
+ DSL を読み取るコードを記述する前に、一部の DSL によって生成されたクラスの名前を知っておくべきです。 DSL ソリューションで開く、 **Dsl**プロジェクトし、ファイルの場所、 **GeneratedCode**フォルダー。 または、プロジェクトで DSL のアセンブリをダブルクリック**参照**、DSL の名前空間を開くと**オブジェクト ブラウザー**します。
 
- 特定のクラスを次に示します。
+ これらは、クラスを識別する必要があります。
 
--   *YourDslRootClass* -これは、ルート内のクラス名、`DslDefinition.dsl`です。
+-   *YourDslRootClass* -これは、内のルート クラスの名前、`DslDefinition.dsl`します。
 
--   *YourDslName* `SerializationHelper` -でこのクラスが定義されている`SerializationHelper.cs`DSL プロジェクト内です。
+-   *YourDslName* `SerializationHelper` -でこのクラスが定義されている`SerializationHelper.cs`DSL プロジェクト。
 
--   *YourDslName* `DomainModel` -でこのクラスが定義されている`DomainModel.cs`DSL プロジェクト内です。
+-   *YourDslName* `DomainModel` -でこのクラスが定義されている`DomainModel.cs`DSL プロジェクト。
 
 ## <a name="reading-from-a-file"></a>ファイルからの読み取り
- 次の例は、重要なクラスは次のように、DSL の読み取りに設計されています。
+ 次の例は、重要なクラスの次のように DSL を読み取るために設計されました。
 
 -   FamilyTreeModel
 
@@ -64,9 +64,9 @@ ms.locfileid: "31949829"
 
 -   FamilyTreeDomainModel
 
- その他のドメイン クラスは、この DSL にはユーザーです。
+ この DSL で他のドメイン クラスには、ユーザーです。
 
-```
+```csharp
 using System;
 using Microsoft.VisualStudio.Modeling;
 using Company.FamilyTree; // Your DSL namespace
@@ -102,10 +102,10 @@ namespace StandaloneReadDslConsole
 } } } }
 ```
 
-## <a name="saving-to-a-file"></a>ファイルに保存
- 上記のコードを次の追加は、モデルに変更が行われ、ファイルに保存されます。
+## <a name="saving-to-a-file"></a>ファイルに保存しています
+ 前のコードを次の追加は、モデルに変更を加えるし、ファイルに保存されます。
 
-```
+```csharp
 using (Transaction t =
   store.TransactionManager.BeginTransaction("update model"))
 {

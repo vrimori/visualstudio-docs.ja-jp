@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3c1f94637ab5e16954bdfcf209d4cf342c54deb7
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: a0d17249ad15a8d5efd7717420a8b6a94115509f
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177102"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566769"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK のロックの一部またはすべてのドメイン固有言語 (DSL) モデルをプログラムを保存できるため、読み取りが変更されていないことができます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。
@@ -31,7 +31,7 @@ ms.locfileid: "39177102"
 ## <a name="setting-and-getting-locks"></a>設定とロックの取得
  ストア、パーティション、または個々 の要素は、ロックを設定できます。 たとえば、このステートメントは、モデル要素が削除されないようにするともにより、そのプロパティの変更です。
 
-```
+```csharp
 using Microsoft.VisualStudio.Modeling.Immutability; ...
 element.SetLocks(Locks.Delete | Locks.Property);
 ```
@@ -49,7 +49,7 @@ element.SetLocks(Locks.Delete | Locks.Property);
 ### <a name="locks-on-partitions-and-stores"></a>パーティションとストアのロック
  ロックは、パーティションと、ストアにも適用できます。 パーティションが設定されているロックはパーティション内のすべての要素に適用されます。 したがって、たとえば、次のステートメントはパーティション内のすべての要素削除されないように、独自のロックの状態に関係なく。 ただし、その他のロックなど`Locks.Property`個々 の要素にも設定できます。
 
-```
+```csharp
 partition.SetLocks(Locks.Delete);
 ```
 
@@ -104,7 +104,7 @@ partition.SetLocks(Locks.Delete);
 ### <a name="to-define-a-locking-policy"></a>ロック ポリシーを定義するには
  <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 次の定義があります。
 
-```
+```csharp
 public interface ILockingPolicy
 {
   Locks RefineLocks(ModelElement element, Locks proposedLocks);
@@ -117,7 +117,7 @@ public interface ILockingPolicy
 
  例えば:
 
-```
+```csharp
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Immutability;
 namespace Company.YourDsl.DslPackage // Change
@@ -156,7 +156,7 @@ namespace Company.YourDsl.DslPackage // Change
 ### <a name="to-make-your-policy-available-as-a-service"></a>ポリシーをサービスとして使用できるようにするには
  `DslPackage`プロジェクトに、次の例のようなコードを含む新しいファイルを追加します。
 
-```
+```csharp
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Immutability;
 namespace Company.YourDsl.DslPackage // Change

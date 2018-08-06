@@ -12,24 +12,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2be7a0fdb3204647f6874d2dceaa81eb8cac3756
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8ca10b8504dc4383ad6251e3819c14b7102d32d3
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31952275"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566740"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>プログラム コードでレイヤー モデル内を移動し、レイヤー モデルを更新する
 
-この記事では、要素と移動し、プログラム コードを使用して更新できるレイヤー モデル内のリレーションシップについて説明します。 見ると、ユーザーの依存関係図についての詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)です。
+この記事では、要素と移動し、プログラム コードを使用して更新できるレイヤー モデルの関係について説明します。 ユーザーの観点から依存関係図の詳細については、次を参照してください。[依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)と[依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)します。
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>このトピックで説明されているモデルより一般的なファサード<xref:Microsoft.VisualStudio.GraphModel>モデル。 作成している場合、[メニュー コマンドまたはジェスチャ拡張](../modeling/add-commands-and-gestures-to-layer-diagrams.md)を使用して、`Layer`モデル。 作成している場合、[レイヤー検証拡張機能](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)を使用する方が簡単、`GraphModel`です。
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer>このトピックで説明されているモデルがより一般的なファサード<xref:Microsoft.VisualStudio.GraphModel>モデル。 作成する場合、[メニュー コマンドまたはジェスチャ拡張](../modeling/add-commands-and-gestures-to-layer-diagrams.md)を使用して、`Layer`モデル。 作成する場合、[レイヤー検証拡張機能](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)を使用する方が簡単、`GraphModel`します。
 
 ## <a name="transactions"></a>トランザクション
 
-モデルを更新する場合は、外側の変更を考慮して、 `ILinkedUndoTransaction`、変更を 1 つのトランザクションにグループ化します。 変更が失敗すると、トランザクション全体がロールバックします。 ユーザーが変更を元に戻す場合、すべての変更は取り消されます一緒に。
+モデルを更新するときにでの変更を囲むことを検討してください、`ILinkedUndoTransaction`変更を 1 つのトランザクションにグループ化します。 変更が失敗した場合は、トランザクション全体がロールバックします。 場合は、ユーザーは、変更を元に戻します、すべての変更は取り消されます化。
 
-```
+```csharp
 using (ILinkedUndoTransaction t =
         LinkedUndoContext.BeginTransaction("a name"))
 {
@@ -84,7 +84,7 @@ IEnumerable<ILayerComment> comments =
 
 モデルに含めることのできるタイプの要素はすべてレイヤー要素です。
 
-![依存関係図のコンテンツは ilayerelement です。](../modeling/media/layerapi_layerelements.png)
+![依存関係図のコンテンツは ilayerelement ですです。](../modeling/media/layerapi_layerelements.png)
 
 ## <a name="properties"></a>プロパティ
 
@@ -92,27 +92,27 @@ IEnumerable<ILayerComment> comments =
 
 ## <a name="artifact-references"></a>成果物参照
 
-成果物参照 (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) は、ファイル、クラス、フォルダーなどのプロジェクト アイテムとレイヤーとの間のリンクを表します。 ユーザーは、レイヤーを作成または依存関係の図に、ソリューション エクスプ ローラー、クラス ビュー、またはオブジェクト ブラウザーから項目をドラッグしてを追加したときに、成果物を作成します。 成果物参照はいくつでもレイヤーにリンクできます。
+成果物参照 (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) は、ファイル、クラス、フォルダーなどのプロジェクト アイテムとレイヤーとの間のリンクを表します。 ユーザーは、レイヤーを作成または依存関係図に、ソリューション エクスプ ローラー、クラス ビュー、またはオブジェクト ブラウザーから項目をドラッグして追加したときに、成果物を作成します。 成果物参照はいくつでもレイヤーにリンクできます。
 
-レイヤー エクスプローラーの各行には成果物参照が表示されます。 詳細については、次を参照してください。[コードから依存関係のダイアグラムを作成](../modeling/create-layer-diagrams-from-your-code.md)です。
+レイヤー エクスプローラーの各行には成果物参照が表示されます。 詳細については、次を参照してください。[コードから依存関係図を作成する](../modeling/create-layer-diagrams-from-your-code.md)します。
 
 成果物参照に関係する主な型およびメソッドは次のとおりです。
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>。 カテゴリ プロパティは、参照される成果物の種類 (クラス、実行ファイル、アセンブリなど) を示します。 カテゴリ プロパティは、識別子が対象の成果物を特定する方法を決定します。
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>。 カテゴリ プロパティは、参照される成果物の種類 (クラス、実行ファイル、アセンブリなど) を示します。 カテゴリ プロパティは、識別子が対象の成果物を識別する方法を決定します。
 
 <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> は、<xref:EnvDTE.Project> または <xref:EnvDTE.ProjectItem> から成果物参照を作成します。 これは非同期操作です。 そのため、作成が完了したときに呼び出されるコールバック通常提供します。
 
-レイヤー成果物参照は、ユースケース図の成果物に異なります。
+レイヤー成果物参照は、ユース ケース図で成果物に異なります。
 
 ## <a name="shapes-and-diagrams"></a>図形と図
 
-レイヤー モデルでは各要素を表すために 2 つのオブジェクトが使用されます。<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> および <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> です。 `IShape` は、図の位置と形のサイズを表します。 レイヤー モデルでは、すべて`ILayerElement`が 1 つ`IShape`、およびすべて`IShape`依存関係でのダイアグラムには 1 つ`ILayerElement`です。 `IShape` は UML モデルにも使用されます。 そのため、すべての `IShape` にレイヤー要素があるわけではありません。
+レイヤー モデルでは各要素を表すために 2 つのオブジェクトが使用されます。<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement> および <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> です。 `IShape` は、図の位置と形のサイズを表します。 レイヤー モデルのすべて`ILayerElement`に 1 つ`IShape`、毎回`IShape`依存関係を図に示します。 1 つ`ILayerElement`します。 `IShape` は UML モデルにも使用されます。 そのため、すべての `IShape` にレイヤー要素があるわけではありません。
 
 同様に、<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> は 1 つの <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> に表示されます。
 
 カスタム コマンドまたはジェスチャ ハンドラーのコードでは、`DiagramContext` インポートから現在の図や現在の形の選択を取得できます。
 
-```
+```csharp
 public class ... {
 [Import]
     public IDiagramContext DiagramContext { get; set; }
