@@ -1,5 +1,5 @@
 ---
-title: Visual Studio SDK |Microsoft ドキュメント
+title: Visual Studio SDK |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,84 +17,84 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3b6b75deb576e5cb4e23975e80428433fbbc143a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c527604639d701c3cda5bddba9ee61c01e5c8dd
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31144279"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586776"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
-Visual Studio SDK を使用して、Visual Studio の機能を拡張したり、新機能を Visual Studio に統合するのに役立ちます。 Visual Studio Marketplace だけでなく、他のユーザーに、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
+Visual Studio SDK を使用して、Visual Studio の機能を拡張するかを Visual Studio の新機能を統合するのに役立ちます。 他のユーザーのほか、Visual Studio Marketplace には、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
   
 -   IDE にコマンド、ボタン、メニューのおよびその他の UI 要素を追加します。  
   
--   新機能のツール ウィンドウを追加します。  
+-   ツール ウィンドウの新しい機能を追加します。  
   
--   特定の言語の IntelliSense を拡張したり、IntelliSense で新しいプログラミング言語は、  
+-   特定の言語の IntelliSense の拡張または新しいプログラミング言語に対して IntelliSense を提供  
   
--   電球を使用して、優れたコードを作成ヒントと開発者に役立つ推奨事項を提供するには  
+-   電球を使用して、優れたコードを記述のヒントと開発者に役立つ提案を提供するには  
   
 -   新しい言語のサポートを有効にします。  
   
 -   カスタム プロジェクトの種類を追加します。  
   
--   開発者が Visual Studio Marketplace を通じて何百万もを到達します。  
+-   Visual Studio Marketplace での開発者の何百万します。  
   
- 初めて作成する前に Visual Studio 拡張機能、およびこれらの機能に関する詳細がわかる必要があります[Visual Studio 拡張機能の開発を開始して](../extensibility/starting-to-develop-visual-studio-extensions.md)です。  
+ 前に Visual Studio 拡張機能を初めて作成する場合とでこれらの機能についての詳細についてを検索する必要があります[Visual Studio 拡張機能の開発を始める](../extensibility/starting-to-develop-visual-studio-extensions.md)します。  
   
-## <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK をインストールします。  
- Visual Studio SDK は、Visual Studio セットアップで省略可能な機能です。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+## <a name="install-the-visual-studio-sdk"></a>Visual Studio SDK のインストール  
+ Visual Studio SDK は、Visual Studio セットアップで省略可能な機能です。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
-## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>Visual Studio 2017 SDK の新機能  
- Visual Studio SDK には、VSIX v3 形式だけでなく、拡張機能を更新する必要がある変更の重大ななど一部の新機能があります。 詳細については、次を参照してください。 [、Visual Studio 2017 SDK の新](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)です。  
+## <a name="whats-new-in-the-visual-studio-2017-sdk"></a>新機能については、Visual Studio 2017 SDK です。  
+ Visual Studio SDK が、一部の新機能など、VSIX v3 形式と重大な変更で、拡張機能を更新する必要があります。 詳細については、次を参照してください。[新機能については、Visual Studio 2017 SDK](../extensibility/what-s-new-in-the-visual-studio-2017-sdk.md)します。  
   
 ## <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン  
- 拡張機能の UI を設計するための便利なヒントを取得[Visual Studio ユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)です。  
+ 拡張機能の UI を設計するための便利なヒントを取得[Visual Studio ユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。  
   
- 拡張機能を備えた高 DPI デバイスで見栄えを作成する方法も学習できます、 [DPI 問題の対処](../extensibility/addressing-dpi-issues2.md)トピックです。  
+ 高 DPI デバイスに美しく表示拡張機能を作成する方法を確認できます、[アドレス DPI 問題](../extensibility/addressing-dpi-issues2.md)記事。  
   
- 利用、[イメージ サービスとカタログ](../extensibility/image-service-and-catalog.md)優れたイメージの管理と高 DPI、テーマをサポートします。  
+ 利用、[イメージ サービスとカタログ](../extensibility/image-service-and-catalog.md)イメージの管理や高 DPI とテーマのサポート。  
   
-## <a name="finding-and-installing-existing-visual-studio-extensions"></a>検索して、既存の Visual Studio 拡張機能をインストールします。  
- Visual Studio 拡張機能を見つけることができます、**拡張機能と更新プログラム**ダイアログ ボックスで、**ツール**メニュー。 詳細については、「[Visual Studio 拡張機能の検索と使用](../ide/finding-and-using-visual-studio-extensions.md)」を参照してください。 拡張機能を検索することも、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)  
+## <a name="find-and-install-existing-visual-studio-extensions"></a>検索して、既存の Visual Studio 拡張機能のインストール  
+ Visual Studio 拡張機能を見つけることができます、**拡張機能と更新**ダイアログで、**ツール**メニュー。 詳細については、次を参照してください。[検索と使用の Visual Studio Extensions](../ide/finding-and-using-visual-studio-extensions.md)します。 拡張機能を検索することも、 [Visual Studio marketplace](https://marketplace.visualstudio.com/)  
   
 ## <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス  
- Visual Studio SDK の API リファレンスを検索する[Visual Studio SDK リファレンス](../extensibility/visual-studio-sdk-reference.md)です。  
+ Visual Studio SDK の API リファレンスに見つかります[Visual Studio SDK リファレンス](../extensibility/visual-studio-sdk-reference.md)します。  
   
 ## <a name="visual-studio-sdk-samples"></a>Visual Studio SDK のサンプル  
- GitHub での VS SDK 拡張機能の例についてはオープン ソースを見つけることができます[Visual Studio のサンプル](https://aka.ms/vs2015sdksamples)です。 この GitHub リポジトリには、Visual Studio でのさまざまな拡張機能を示すサンプルが含まれています。  
+ Github の VS SDK 拡張機能のオープン ソースの例が見つかります[Visual Studio のサンプル](https://aka.ms/vs2015sdksamples)します。 この GitHub リポジトリには、Visual Studio のさまざまな拡張機能を示すサンプルが含まれています。  
   
-## <a name="other-visual-studio-sdk-resources"></a>その他の Visual Studio SDK リソース  
- VSSDK に関する疑問がある場合や拡張機能の開発経験を共有する場合は場合を使用できます、 [Visual Studio 機能拡張フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)または[ExtendVS Gitter チャット ルーム](https://gitter.im/Microsoft/extendvs)です。  
+## <a name="other-visual-studio-sdk-resources"></a>その他の Visual Studio SDK のリソース  
+ 使用することができます、VSSDK について質問があるか、拡張機能の開発経験を共有する場合、 [Visual Studio 機能拡張フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)または[ExtendVS Gitter チャット ルーム](https://gitter.im/Microsoft/extendvs)します。  
   
- 詳細についてを見つけることができます、 [VSX Arcana ブログ](http://blogs.msdn.com/b/vsx/)と Microsoft Mvp によって作成されたブログの数。  
+ 詳細を確認することができます、 [VSX Arcana ブログ](http://blogs.msdn.com/b/vsx/)とブログの Microsoft Mvp によって書き込まれた数。  
   
 -   [お気に入りの Visual Studio 拡張機能](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
   
--   [Visual Studio 拡張機能](http://www.visualstudioextensibility.com/overview/vs/)  
+-   [Visual Studio 機能拡張](http://www.visualstudioextensibility.com/overview/vs/)  
   
 -   [Visual Studio の拡張](http://blog.slaks.net/2013-10-18/extending-visual-studio-part-1-getting-started/)  
   
 ## <a name="see-also"></a>関連項目  
- [メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)   
- [方法: Visual Studio 2017 を機能拡張プロジェクトの移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
- [よく寄せられる質問: VSPackage 拡張機能のアドインに変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
- [マネージ コードでの複数のスレッドを管理します。](../extensibility/managing-multiple-threads-in-managed-code.md)   
- [拡張メニューとコマンド](../extensibility/extending-menus-and-commands.md)   
+ [メニュー コマンドを使用して拡張機能を作成します。](../extensibility/creating-an-extension-with-a-menu-command.md)   
+ [方法: 機能拡張プロジェクトを Visual Studio 2017 に移行](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md)   
+ [FAQ: アドインを VSPackage 拡張機能に変換します。](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md)   
+ [マネージ コード内の複数のスレッドを管理します。](../extensibility/managing-multiple-threads-in-managed-code.md)   
+ [メニューとコマンドを拡張します。](../extensibility/extending-menus-and-commands.md)   
  [ツールバーにコマンドを追加します。](../extensibility/adding-commands-to-toolbars.md)   
- [拡張して、ツール ウィンドウをカスタマイズします。](../extensibility/extending-and-customizing-tool-windows.md)   
- [エディターと言語サービスの拡張機能](../extensibility/editor-and-language-service-extensions.md)   
- [プロジェクトの拡張](../extensibility/extending-projects.md)   
- [拡張ユーザー設定とオプション](../extensibility/extending-user-settings-and-options.md)   
+ [拡張し、カスタマイズ ツール ウィンドウ](../extensibility/extending-and-customizing-tool-windows.md)   
+ [エディターと言語サービス拡張機能](../extensibility/editor-and-language-service-extensions.md)   
+ [プロジェクトを拡張します。](../extensibility/extending-projects.md)   
+ [ユーザー設定とオプションを拡張します。](../extensibility/extending-user-settings-and-options.md)   
  [カスタム プロジェクトと項目テンプレートを作成します。](../extensibility/creating-custom-project-and-item-templates.md)   
- [プロパティと、[プロパティ] ウィンドウの拡張](../extensibility/extending-properties-and-the-property-window.md)   
+ [プロパティと、[プロパティ] ウィンドウを拡張します。](../extensibility/extending-properties-and-the-property-window.md)   
  [Visual Studio の他の部分を拡張します。](../extensibility/extending-other-parts-of-visual-studio.md)   
- [使用して、サービスを提供します。](../extensibility/using-and-providing-services.md)   
- [Vspackage の管理](../extensibility/managing-vspackages.md)   
- [Visual Studio 分離シェル](../extensibility/visual-studio-isolated-shell.md)   
- [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)   
- [Visual Studio SDK 内](../extensibility/internals/inside-the-visual-studio-sdk.md)   
+ [使用してサービスを提供します。](../extensibility/using-and-providing-services.md)   
+ [Vspackage を管理します。](../extensibility/managing-vspackages.md)   
+ [Visual Studio の分離シェル](../extensibility/visual-studio-isolated-shell.md)   
+ [Visual Studio 拡張機能を出荷します。](../extensibility/shipping-visual-studio-extensions.md)   
+ [Visual Studio SDK の内部](../extensibility/internals/inside-the-visual-studio-sdk.md)   
  [Visual Studio SDK のサポート](../extensibility/support-for-the-visual-studio-sdk.md)   
  [アーカイブ](../extensibility/archive.md)   
- [Visual Studio SDK のリファレンス](../extensibility/visual-studio-sdk-reference.md)
+ [Visual Studio SDK リファレンス](../extensibility/visual-studio-sdk-reference.md)

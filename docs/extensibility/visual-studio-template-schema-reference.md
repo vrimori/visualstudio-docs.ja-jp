@@ -1,5 +1,5 @@
 ---
-title: Visual Studio テンプレート スキーマ参照 |Microsoft ドキュメント
+title: Visual Studio テンプレート スキーマ参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb18385c32cee40ae4a6bf902bf79623c3bc2854
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 566a07af35181433b88d5c84ea461e2b7546fe4b
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34571521"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586340"
 ---
 # <a name="visual-studio-template-schema-reference"></a>Visual Studio テンプレート スキーマ参照
-このセクションでは、.vstemplate ファイル内の XML 要素について説明します.vstemplate ファイルとは、プロジェクト テンプレート、項目テンプレート、およびスタート キットのメタデータを格納するファイルのことです。
+このセクションの XML 要素に関する情報を格納する *.vstemplate*ファイルで、プロジェクト テンプレート、項目テンプレート、およびスタート キットのメタデータを格納するファイルします。
 
- カスタムの .vstemplate ファイルを検証するには、vstemplate.xsd を使用します。 このファイルは.\\ *Visual Studio インストール フォルダー*\Xml\Schemas\1033\vstemplate.xsd です。
+ 使用することができます*は、vstemplate.xsd*カスタムを検証する *.vstemplate*ファイル。 このファイルは *.\\ \<Visual Studio インストール フォルダー > \Xml\Schemas\1033\vstemplate.xsd*します。
 
 |要素|子要素|属性|
 |-------------|--------------------|----------------|
-|[appliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|なし|なし|
+|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|なし|なし|
 |[Assembly (テンプレート)](../extensibility/assembly-element-visual-studio-templates.md)|--|--|
 |[Assembly (ウィザード拡張)](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|--|--|
 |[BuildProjectOnload](../extensibility/buildprojectonload-element-visual-studio-templates.md)|--|--|

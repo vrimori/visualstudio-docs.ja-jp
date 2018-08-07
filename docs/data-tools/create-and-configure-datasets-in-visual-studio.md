@@ -13,12 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bbf478424551e446ca9853dae77edb4e5b61d974
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: a65c1960e1648dce3bb8ff40d1dd6c50534934ff
+ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756033"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39582233"
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>Visual Studio でデータセットを作成および構成する
 
@@ -72,7 +72,7 @@ ms.locfileid: "36756033"
 
 1.  データセット ノードをクリックします**ソリューション エクスプ ローラー**データセット デザイナーにフォーカスをします。
 
-2.  をクリックして、**データ ソース** タブで、Visual Studio の左側の余白または入力`Data Sources`で**クイック起動**します。
+2.  をクリックして、**データ ソース** タブで、Visual Studio、または型の左余白**データ ソース**で、**クイック起動**ボックス。
 
 3.  データセット ノードを右クリックして**ウィザードを使用してデータ ソースの構成**します。
 
