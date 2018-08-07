@@ -1,5 +1,5 @@
 ---
-title: 実行時に、プロジェクトのサブタイプを確認しています |Microsoft ドキュメント
+title: 実行時に、プロジェクトのサブタイプの確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8898da6850c01c1a248b57b0fbc5f46be2a8ff4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 22e3205f3a8bd8ef7ce7e44b775ae1ef5a30cfa5
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136830"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586210"
 ---
-# <a name="verifying-subtypes-of-a-project-at-run-time"></a>実行時に、プロジェクトのサブタイプを確認しています
-カスタム プロジェクトのサブタイプに依存する VSPackage は、サブタイプのサブタイプが存在しない場合に正常に失敗できるようにするロジックを探してを含める必要があります。 次の手順では、指定されたサブタイプの存在を確認する方法を示します。  
+# <a name="verify-subtypes-of-a-project-at-run-time"></a>実行時に、プロジェクトのサブタイプを確認します。
+カスタムのプロジェクト サブタイプに依存する VSPackage は、サブタイプのサブタイプが存在しない場合に適切に失敗できるようにするロジックを探してを含める必要があります。 次の手順では、指定されたサブタイプの存在を確認する方法を示します。  
   
 ### <a name="to-verify-the-presence-of-a-subtype"></a>サブタイプの存在を確認するには  
   
-1.  プロジェクトとソリューションのオブジェクトとしてから、プロジェクト階層を取得、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> VSPackage に次のコードを追加することによってオブジェクト。  
+1.  プロジェクトとソリューションのオブジェクトとしてから、プロジェクト階層を取得、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> VSPackage に、次のコードを追加することによってオブジェクト。  
   
-    ```  
+    ```csharp  
     EnvDTE.DTE dte;  
     dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));  
   
@@ -43,24 +43,24 @@ ms.locfileid: "31136830"
   
     ```  
   
-2.  階層のキャスト、<xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected>インターフェイスです。  
+2.  階層のキャスト、<xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected>インターフェイス。  
   
-    ```  
+    ```csharp  
     IVsAggregatableProjectCorrected AP;  
     AP = hierarchy as IVsAggregatableProjectCorrected;  
   
     ```  
   
-3.  呼び出すことによってプロジェクトの種類の Guid の一覧を取得、<xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A>です。  
+3.  呼び出すことによってプロジェクト型 Guid の一覧を取得、<xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A>します。  
   
-    ```  
+    ```csharp  
     string projTypeGuids = AP.GetAggregateProjectTypeGuids().ToUpper();  
   
     ```  
   
 4.  指定されたサブタイプの GUID の一覧を確認します。  
   
-    ```  
+    ```csharp  
     // Replace the string "MyGUID" with the GUID of the subtype.  
     string guidMySubtype = "MyGUID";  
     if (projTypeGuids.IndexOf(guidMySubtype) > 0)  
@@ -70,6 +70,6 @@ ms.locfileid: "31136830"
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [プロジェクトのサブタイプ](../extensibility/internals/project-subtypes.md)   
- [プロジェクトのサブタイプの設計](../extensibility/internals/project-subtypes-design.md)   
- [プロジェクト サブタイプによって拡張されるプロパティとメソッド](../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)
+ [プロジェクト サブタイプ](../extensibility/internals/project-subtypes.md)   
+ [プロジェクト サブタイプのデザイン](../extensibility/internals/project-subtypes-design.md)   
+ [プロパティとプロジェクト サブタイプによって拡張メソッド](../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)

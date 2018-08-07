@@ -1,5 +1,5 @@
 ---
-title: VSTemplate 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: VSTemplate 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6151dfd852a76caa1dccbae55241af89681fd81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cb4275a8cf88ccedc93695422261624801fdcf33
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31141403"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586753"
 ---
 # <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate 要素 (Visual Studio テンプレート)
 プロジェクト テンプレート、項目テンプレート、またはスタート キットに関するすべてのメタデータが含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 <VSTemplate Type="TemplateType" Version="x.x.x">  
     <TemplateData>    </TemplateData>  
     <TemplateContent>    </TemplateContent>  
@@ -35,21 +35,21 @@ ms.locfileid: "31141403"
 </VSTemplate>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Type`|プロジェクト テンプレートと項目テンプレートのテンプレートを識別します。 この属性の値をとります。`Project`または`Item`です。|  
-|`Version`|テンプレートのバージョン番号を指定します。 テンプレートで[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]と[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]が、`Version`属性の値の`3.0.0`します。|  
+|`Type`|プロジェクト テンプレートまたは項目テンプレートとしてテンプレートを識別します。 この属性の値を持つことができます`Project`または`Item`します。|  
+|`Version`|テンプレートのバージョン番号を指定します。 テンプレートで[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)]と[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]が、`Version`属性の値`3.0.0`します。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類しでの表示方法を定義するデータを指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、定義でどのように表示するデータを指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|  
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートの内容を指定します。|  
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|省略可能な要素です。|  
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|省略可能な要素です。|  
@@ -57,13 +57,13 @@ ms.locfileid: "31141403"
 ### <a name="parent-elements"></a>親要素  
  なし。  
   
-## <a name="remarks"></a>コメント  
- `VSTemplate`要素は、.vstemplate ファイルのルート要素です。  
+## <a name="remarks"></a>Remarks  
+ `VSTemplate`要素のルート要素は、 *.vstemplate*ファイル。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
   
-```  
+```xml  
 <VSTemplate Type="Project" Version="3.0.0"  
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
     <TemplateData>  
