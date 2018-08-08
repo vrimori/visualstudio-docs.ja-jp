@@ -25,12 +25,12 @@ ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: fcd5832b52c6cd9f72829c2bce8f7813b682cf4f
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: f1158b0e5f438e49acafad79af1b33ec43690e9a
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704575"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468544"
 ---
 # <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE) をアップグレードする
 
@@ -60,14 +60,6 @@ Dotfuscator Community Edition には基本的なレベルの保護機能であ�
   * その他の[アプリケーション保護動作][check-actions]。
   * アプリケーションの有効期限前の警告期間を指定する機能。
   * 有効期限の警告期間中、または有効期限後にアプリケーション コードを通知する機能。
-  * 製品利用統計情報の暗号化。
-* *アプリケーション監視*
-  * 一時的なネットワーク停止中に情報を収集し、収集された情報を保存する機能。
-  * 個人を特定できる情報を収集する機能。
-  * [機能の追跡][features]を無制限で使用可能。
-  * ハンドルされない例外に加え、コード内でキャッチされ、スローされた例外を追跡する機能。
-  * `.dll` アセンブリの例外を追跡する機能。
-  * 製品利用統計情報の暗号化。
 
 Dotfuscator Professional は業界標準の [.NET 難読化ツール][net-obfuscator]です。継続的なサポート、保守、製品の更新が必要な企業の開発者に適しています。
 また、Dotfuscator Professional は Visual Studio との統合が強化され、商業目的の使用についてライセンスが付与されます。
@@ -88,7 +80,6 @@ Dotfuscator Professional の高度なアプリケーション保護機能の詳�
 [pruning]:  https://www.preemptive.com/products/dotfuscator/features#pruning
 
 [check-actions]:  https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
-[features]:  https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
 
 [net-obfuscator]:  https://www.preemptive.com/products/dotfuscator/overview
 [eval]:  https://www.preemptive.com/eval-request

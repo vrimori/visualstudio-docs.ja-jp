@@ -11,18 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 801a0dcdca4a3a8720fdcb74a47b7be947bb4aec
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 8a6b95e375fa509c18c44c9c5ba462e1b6b27fb0
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341834"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500122"
 ---
 # <a name="edit-python-code"></a>Python コードの編集
 
 開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installing-python-support-in-visual-studio.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。
 
-また、エディターは Visual Studio の**対話型**ウィンドウと統合され、この 2 つの間で簡単にコードを交換することができます。 詳細については、[「チュートリアル」の「手順 3: 対話型 REPL ウィンドウを使用する」](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)と、[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](python-interactive-repl-in-visual-studio.md#send-code-to-interactive-command)に関するページを参照してください。
+また、エディターは Visual Studio の**対話型**ウィンドウと統合され、この 2 つの間で簡単にコードを交換することができます。 詳細については、[「チュートリアル」の「手順 3: 対話型 REPL ウィンドウを使用する」](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)と、[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](python-interactive-repl-in-visual-studio.md#send-to-interactive-command)に関するページを参照してください。
 
 |   |   |
 |---|---|

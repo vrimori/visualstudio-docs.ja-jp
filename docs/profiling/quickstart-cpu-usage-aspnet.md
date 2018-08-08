@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 13e8122649b1803e627576e4cf4d4bc83d1a286b
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 8f71ca67fc74c7cb852914bd4f66f053e722c435
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39206842"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468573"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (ASP.NET)
 
@@ -31,9 +31,6 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 1. Visual Studio で、**[ファイル]** > **[新しいプロジェクト]** の順に選択します。
 
 1. **[Visual C#]** の下で **[Web]** を選択し、真ん中のウィンドウで **[ASP.NET Web アプリケーション (.NET Framework)]** を選択します。
-
-    > [!NOTE]
-    > CPU 使用率ツールは現在、ASP.NET Core ではサポートされていません。
 
 1. **MyProfilingApp_MVC** のような名前を入力し、**[OK]** をクリックします。
 

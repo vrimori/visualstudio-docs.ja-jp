@@ -12,18 +12,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: de90977a239bf728de3fa98978fd134a014200db
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 85759cc5f9297ba2bb0706352d788ba619a8021c
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180075"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380669"
 ---
-# <a name="how-to-create-a-web-service-test"></a>方法 : Web サービス テストを作成する
+# <a name="how-to-create-a-web-service-test"></a>方法: Web サービス テストを作成する
 
 Web パフォーマンス テストを使用して、Web サービスをテストできます。 **[要求の挿入]** オプションおよび **[Web サービス要求の挿入]** オプションを使用すると、**Web パフォーマンス テスト エディター**にある個々の要求を Web サービス ページに移動するようにカスタマイズできます。 通常、Web アプリケーションでは、これらのページは表示されません。 そのため、これらのページへアクセスできるように要求をカスタマイズする必要があります。
 
-次の手順では、コマース スタート キットに含まれる Web サービスを使用します。 これは [ASP.NET Commerce スタート キット](http://go.microsoft.com/fwlink/?LinkId=181469)からダウンロードできます。
+次の手順では、コマース スタート キットに含まれる Web サービスを使用します。 これは [ASP.NET コマース スタート キット](http://go.microsoft.com/fwlink/?LinkId=181469)からダウンロードできます。
 
  **必要条件**
 
@@ -37,7 +37,7 @@ Web パフォーマンス テストを使用して、Web サービスをテス�
 
 3.  新しい要求の **[URL]** のプロパティで、**http://localhost/storecsvs/InstantOrder.asmx** などの Web サービスの名前を入力します。
 
-4.  別のセッションのブラウザーを開き、**[アドレス]** ツール バーに .asmx ページの URL を入力します。 テストするメソッドを選択して、SOAP メッセージを調べます。 これには、`SOAPAction` が含まれます。
+4.  別のセッションのブラウザーを開き、**[アドレス]** ツール バーに *.asmx* ページの URL を入力します。 テストするメソッドを選択して、SOAP メッセージを調べます。 これには、`SOAPAction` が含まれます。
 
 5.  **Web パフォーマンス テスト エディター**で、要求を右クリックし、**[ヘッダーの追加]** を選択して新しいヘッダーを追加します。 **[名前]** プロパティに「`SOAPAction`」と入力します。 **[値]** プロパティで、`SOAPAction` の値 (`"http://tempuri.org/CheckStatus"` など) を入力します。
 
@@ -60,7 +60,7 @@ Web パフォーマンス テストを使用して、Web サービスをテス�
      </soap:Envelope>
      ```
 
-9. **Web パフォーマンス テスト エディター**に戻り、**[文字列ボディ]** プロパティで省略記号 (...) を選択します。 クリップボードの内容をプロパティに貼り付けます。
+9. **Web パフォーマンス テスト エディター**に戻り、**[文字列ボディ]** プロパティで省略記号 **(...)** を選択します。 クリップボードの内容をプロパティに貼り付けます。
 
 10. テストを成功させるためには、XML に含まれているプレースホルダー値を有効な値に置き換える必要があります。 前のサンプルでは、2 つの `string` と 1 つの `int` を置換することになります。 この Web サービスの操作は、注文をした登録ユーザーが存在する場合にのみ完了します。
 

@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96ba93b37ab8b483f899fef4d17db048db6e4532
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 7a545a8ff4b4666db168a15e8cc75689d33e89fe
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152202"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567391"
 ---
 # <a name="taskbody-element-msbuild"></a>TaskBody 要素 (MSBuild)
 `UsingTask` `TaskFactory` に渡されるデータを含みます。 詳細については、「[UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "39152202"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```xml
 <TaskBody Evaluate="true/false" />  
 ```  
 

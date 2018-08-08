@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 819555851b1067cbc3720b704d3d9caabcb01f45
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: bb2a93ae9c05bef49551e3dd3fa6d68d998e09ec
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341870"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586581"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
@@ -46,7 +46,7 @@ Windows の Visual Studio では、この記事で説明する [**[Python 環境
 
 グローバル環境にインストールされたパッケージは、グローバル環境を使うすべてのプロジェクトで使用できるため、2 つのプロジェクトで、互換性のないパッケージや同じパッケージの異なるバージョンが必要な場合、競合が発生する可能性があります。 仮想環境では、このような競合を避けるために、グローバル環境のインタープリターと標準ライブラリを使用しながら、分離フォルダーで独自のパッケージ ストアを保持します。
 
-Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳細については、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#using-virtual-environments)」を参照してください。
+Visual Studio では、特定のプロジェクト用の仮想環境を作成可能で、これはプロジェクトのサブフォルダーに格納されます。 Visual Studio には、仮想環境から *requirements.txt* ファイルを生成し、他のコンピューターで環境を簡単に再作成するためのコマンドが用意されています。 詳細については、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」を参照してください。
 
 ### <a name="conda-environments"></a>conda 環境
 
