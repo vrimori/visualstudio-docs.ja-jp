@@ -11,33 +11,33 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4114a938f643cee629311a72aec72f94cfcd2fc4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3464ffc1db1a757ac20e3f77d0d901ec731a7cab
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31966655"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381935"
 ---
 # <a name="how-to-specify-how-frequently-test-logs-are-saved-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してテスト ログの保存頻度を指定する
 
 **新しいロード テスト ウィザード**でロード テストを作成した後で、**ロード テスト エディター**を使用して、ロード テストのプロパティをテストのニーズおよび目標に合わせて変更できます。 詳細については、「[Walkthrough: Create and run a load test](../test/walkthrough-create-and-run-a-load-test.md)」(チュートリアル: ロード テストの作成および実行) を参照してください。
 
 > [!NOTE]
-> 実行設定の各プロパティとその説明の一覧については、「[Load Test Run Settings Properties](../test/load-test-run-settings-properties.md)」(ロード テストの実行設定のプロパティ) を参照してください。
+> 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
-ロード テスト エディターを使用して、[プロパティ] ウィンドウで **[完了したテストのログ頻度を保存]** プロパティを変更することにより、ロード テストでテスト ログを保存する頻度を指定できます。
+**ロード テスト エディター**を使用して、**[プロパティ]** ウィンドウで **[完了したテストのログ頻度を保存]** プロパティを変更することにより、ロード テストでテスト ログを保存する頻度を指定できます。
 
 ## <a name="to-specify-the-frequency-for-saving-the-test-log-in-a-load-test"></a>ロード テストでテスト ログを保存する頻度を指定するには
 
 1.  ロード テストを開きます。
 
-     ロード テスト エディターが表示されます。 ロード テスト ツリーが表示されます。
+     **ロード テスト エディター**が表示されます。 ロード テスト ツリーが表示されます。
 
 2.  ロード テスト ツリーの **[実行設定]** フォルダーで、テスト ログを保存する頻度を指定する実行設定ノードを選択します。
 
 3.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
-     [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
+     **[プロパティ]** ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 
 4.  **[完了したテストのログ頻度を保存]** プロパティのテキスト ボックスに、テスト ログが書き込まれる頻度を示す数値を入力します。 この数値は、入力したテストの数のうち 1 回がテスト ログに保存されることを示します。 たとえば、値 10 を入力すると、10 番目、20 番目、30 番目などのテストがテスト ログに書き込まれます。
 
@@ -52,6 +52,5 @@ ms.locfileid: "31966655"
 
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
 - [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
-- [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
 - [方法: テスト ログにテストの失敗を記録するかどうかを指定する](../test/how-to-specify-if-test-failures-are-saved-to-test-logs.md)
 - [方法: すべての詳細情報を収集するように構成して仮想ユーザー アクティビティ チャートを有効にする](../test/how-to-configure-load-tests-to-collect-full-details.md)

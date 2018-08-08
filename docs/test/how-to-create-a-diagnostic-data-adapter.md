@@ -10,20 +10,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: bf2b6986894d996d5307d2551ddf79ad37f8a8e9
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 0973e110d7f321caa88bef0a3672191298f8fe8e
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176981"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380893"
 ---
-# <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: カスタム診断データ アダプターを作成する
+# <a name="how-to-create-a-diagnostic-data-adapter"></a>方法: 診断データ アダプターを作成する
 
 *診断データ アダプター*を作成するには、Visual Studio を使用してクラス ライブラリを作成し、Visual Studio Enterprise に用意されている診断データ アダプター API をクラス ライブラリに追加します。 テストの実行中に発生したイベントを処理するときに、フレームワークによって提供される <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> に対し、ストリームまたはファイルとして情報を送信します。 <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionSink> に送信したストリームまたはファイルは、テスト完了時点でテスト結果に対する添付ファイルとして保存されます。 テスト結果からバグを作成すると、または [!INCLUDE[mtrlong](../test/includes/mtrlong_md.md)] を使用すると、ファイルはバグにもリンクされます。
 
  テストを実行するマシン、またはテスト対象のアプリケーションを実行するために使用している環境の一部を構成するマシンに影響を与える診断データ アダプターを作成できます。 たとえば、テストを実行するテスト マシンでのファイルの収集や、アプリケーションに対して Web サーバー ロールで実行されているマシンでのファイルの収集などが挙げられます。
 
- 診断データ アダプターには表示名を設定できます。表示名は、Microsoft Test Manager または Visual Studio を使用してテスト設定を作成するときに表示されます。 テストの設定を使用すると、テストの実行時に、使用している環境下で、どのマシン ロールが特定の診断データ アダプターを実行するかを定義できます。 診断データ アダプターは、テストの設定を作成するときに構成することもできます。 たとえば、Web サーバーからカスタム ログを収集する診断データ アダプターを作成できます。 テストの設定を作成するとき、この Web サーバーの役割を実行しているマシン上でこの診断データ アダプターを実行するように選択できます。また、作成された最新の 3 つのログだけを収集するようにテストの設定の構成を変更できます。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+ 診断データ アダプターには表示名を設定できます。表示名は、Microsoft Test Manager または Visual Studio を使用してテスト設定を作成するときに表示されます。 テストの設定を使用すると、テストの実行時に、使用している環境下で、どのマシン ロールが特定の診断データ アダプターを実行するかを定義できます。 診断データ アダプターは、テストの設定を作成するときに構成することもできます。 たとえば、Web サーバーからカスタム ログを収集する診断データ アダプターを作成できます。 テストの設定を作成するとき、この Web サーバーの役割を実行しているマシン上でこの診断データ アダプターを実行するように選択できます。また、作成された最新の 3 つのログだけを収集するようにテストの設定の構成を変更できます。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
  イベントは、テストでイベントが発生した時点で診断データ アダプターがタスクを実行できるように、テストの実行時に発生します。
 
@@ -32,7 +32,7 @@ ms.locfileid: "39176981"
 
  診断データ アダプターを作成するときに使用できる主なイベントを次に示します。 診断データ アダプターのイベントの完全な一覧については、<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents> 抽象クラスを参照してください。
 
-|イベント|説明|
+|event|説明|
 |-----------|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionStart>|テストの実行を開始します。|
 |<xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectionEvents.SessionEnd>|テストの実行を終了します。|
@@ -48,9 +48,9 @@ ms.locfileid: "39176981"
 
  カスタムの構成エディターを含む、診断データ アダプター プロジェクトのサンプル全体については、「[診断データ アダプター作成用のサンプル プロジェクト](../test/sample-project-for-creating-a-diagnostic-data-adapter.md)」を参照してください。
 
-##  <a name="CreateAdapter"></a> 診断データ アダプターの作成とインストール
+##  <a name="create-and-install-a-diagnostic-data-adapter"></a>診断データ アダプターを作成してインストールする
 
-#### <a name="to-create-and-install-a-diagnostic-data-adapter"></a>診断データ アダプターを作成してインストールするには
+### <a name="to-create-and-install-a-diagnostic-data-adapter"></a>診断データ アダプターを作成してインストールするには
 
 1.  新しいクラス ライブラリを作成します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "39176981"
 
 2.  アセンブリ **Microsoft.VisualStudio.QualityTools.ExecutionCommon** を追加します。
 
-    1.  ソリューション エクスプローラーで、**[参照]** を右クリックし、**[参照の追加]** をクリックします。
+    1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
 
     2.  **[.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.ExecutionCommon.dll** を探します。
 
@@ -74,7 +74,7 @@ ms.locfileid: "39176981"
 
 3.  アセンブリ **Microsoft.VisualStudio.QualityTools.Common** を追加します。
 
-    1.  ソリューション エクスプローラーで、**[参照]** を右クリックし、**[参照の追加]** をクリックします。
+    1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** コマンドを選択します。
 
     2.  **[/.NET]** を選択し、**Microsoft.VisualStudio.QualityTools.Common.dll** を探します。
 
@@ -224,7 +224,7 @@ ms.locfileid: "39176981"
 
      独自のエディターを使用してテストの設定で使用するデータを収集する場合は、「[方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)」を参照してください。
 
-11. テストが終了したときに、ユーザーによるテストの設定の構成に基づいてログ ファイルを収集するには、`App.config` ファイルを作成し、ソリューションに追加する必要があります。 このファイルは次の形式で作成し、識別するために診断データ アダプターの URI が含まれる必要があります。 "Company/ProductName/Version" を実際の値に置き換えてください。
+11. テストが終了したときに、ユーザーによるテストの設定の構成に基づいてログ ファイルを収集するには、*App.config* ファイルを作成し、ソリューションに追加する必要があります。 このファイルは次の形式で作成し、識別するために診断データ アダプターの URI が含まれる必要があります。 "Company/ProductName/Version" を実際の値に置き換えてください。
 
     > [!NOTE]
     > 診断データ アダプターの情報を構成する必要がない場合は、構成ファイルを作成する必要はありません。
@@ -255,7 +255,7 @@ ms.locfileid: "39176981"
     > [!NOTE]
     > 既定の構成要素には必要なデータを含めることができます。 テストの設定で診断データ アダプターを構成しなかった場合は、実行時に既定のデータが診断データ アダプターに渡されます。 `<DefaultConfigurations>` セクションに追加する XML は、宣言されたスキーマの一部となる可能性が少ないため、生成される XML エラーを無視できます。
     >
-    > その他の構成ファイルの例については、インストール ディレクトリ内の **Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors** を参照してください。
+    > その他の構成ファイルの例については、インストール ディレクトリ内の *Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\DataCollectors* を参照してください。
 
      テストの実行時に環境を使用するようにテストの設定を構成する方法の詳細については、[手動テストで診断データを収集する方法 (VSTS) ](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)に関するページを参照してください。
 
@@ -269,7 +269,7 @@ ms.locfileid: "39176981"
 
 15. 診断データ アダプターを選択するには、まず既存のテスト設定を選択するか、Microsoft Test Manager または Visual Studio から新しく作成する必要があります。 アダプターは、テストの設定の **[データと診断]** タブに、クラスに割り当てた表示名と共に表示されます。
 
-16. これらの設定を有効に設定します。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+16. これらの設定を有効に設定します。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 17. この診断データ アダプターを選択したテストの設定を使用して、テストを実行します。
 

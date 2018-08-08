@@ -12,14 +12,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 126d5435bf5f5aa5e89120b1767a616d8ac35d51
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: f7ada2c6f3b147e103c132e3d5dfd1d8ac623065
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180374"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379820"
 ---
-# <a name="testing-a-large-application-with-multiple-ui-maps"></a>複数の UI マップでの大規模アプリケーションのテスト
+# <a name="test-a-large-application-with-multiple-ui-maps"></a>複数の UI マップで大規模アプリケーションをテストする
 
 このトピックでは、複数の UI マップを使って大規模なアプリケーションをテストする際に、コード化された UI テストを使用する方法を説明します。
 
@@ -44,11 +44,11 @@ ms.locfileid: "39180374"
 
 -   互いに関連して論理演算を実行する複雑な複合 UI コントロールのセットが複数ある場合 (Web サイトでの登録ページや、買い物カゴの購入ページなど)。
 
--   アプリケーションのさまざまな時点でアクセスする、独立したコントロールのセットがある場合 （複数の操作ページからなるウィザードなど） ウィザードのそれぞれのページが非常に複雑な場合には、ページごとに個別の UI マップを作成することもできます。
+-   アプリケーションのさまざまな時点でアクセスする、独立したコントロールのセットがある場合 (複数の操作ページからなるウィザードなど)。 ウィザードのそれぞれのページが非常に複雑な場合には、ページごとに個別の UI マップを作成することもできます。
 
-## <a name="adding-multiple-ui-maps"></a>複数の UI マップの追加
+## <a name="add-multiple-ui-maps"></a>複数の UI マップを追加する
 
-#### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>コード化された UI テスト プロジェクトに UI マップを追加するには
+### <a name="to-add-a-ui-map-to-your-coded-ui-test-project"></a>コード化された UI テスト プロジェクトに UI マップを追加するには
 
 1.  **ソリューション エクスプローラー**で、コード化された UI テスト プロジェクト内にすべての UI マップを格納するフォルダーを作成します。それには、コード化された UI テスト プロジェクト ファイルを右クリックし、**[追加]** をポイントして、**[新しいフォルダー]** を選択します。 たとえば、`UIMaps` という名前を付けます。
 

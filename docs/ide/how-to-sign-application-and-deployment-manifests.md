@@ -19,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5cee4f7ff8438c1e20f39a24e9e439e7507d655b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 903bc0df9b24cd6f944e9e92c6dc5283cd1d25ea
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951727"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381948"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>方法 : アプリケーション マニフェストおよび配置マニフェストに署名する
 
@@ -41,7 +41,7 @@ ClickOnce 配置を使用してアプリケーションを発行しようとす�
 
 ## <a name="to-sign-application-and-deployment-manifests-using-a-certificate"></a>証明書を使用してアプリケーション マニフェストおよび配置マニフェストに署名するには
 
-1.  プロジェクトのプロパティ ウィンドウに移動します (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして **[プロパティ]** を選択するか、**[クイック起動]** ウィンドウに「**プロジェクトのプロパティ**」と入力するか、あるいは**ソリューション エクスプローラー** ウィンドウ内で **Alt**+**Enter** キーを押す)。 **[署名]** タブの **[ClickOnce マニフェストに署名する]** チェック ボックスをオンにします。
+1.  プロジェクトのプロパティ ウィンドウに移動します (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして **[プロパティ]** を選択するか、**[クイック起動]** ウィンドウに「**プロジェクトのプロパティ**」と入力するか、あるいは**ソリューション エクスプローラー**内で **Alt** + **Enter** キーを押す)。 **[署名]** タブの **[ClickOnce マニフェストに署名する]** チェック ボックスをオンにします。
 
 2.  **[ストアから選択]** をクリックします。
 

@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ed3e4a32f1870e854720608270373f89c98ce940
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: cce61d9a56a0f8f79ec943b58fd4d1a1f88e8289
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175796"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382306"
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>方法: Web パフォーマンス テスト API を使用する
 
@@ -28,7 +28,7 @@ Web パフォーマンス テストのコードを記述できます。 Web パ�
 > オブジェクト ブラウザーを使用して、<xref:Microsoft.VisualStudio.TestTools.WebTesting> 名前空間を調べます。 Visual C# エディターおよび Visual Basic エディターの両方では、この名前空間のクラスを使用したコーディングの IntelliSense サポートを提供しています。
 
 
- ロード テスト用のプラグインを作成することもできます。 詳細については、[ロード テスト API を使用する方法](../test/how-to-use-the-load-test-api.md)に関するページ、および「[How to: Create a Load Test Plug-In](../test/how-to-create-a-load-test-plug-in.md)」(方法 : ロード テスト プラグインを作成する) を参照してください。
+ ロード テスト用のプラグインを作成することもできます。 詳細については、「[方法 : ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)」および「[方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
 
 ## <a name="to-use-the-webtesting-namespace"></a>WebTesting 名前空間を使用するには
 
@@ -69,5 +69,5 @@ Web パフォーマンス テストのコードを記述できます。 Web パ�
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting>
 - [ロード テスト用のカスタム コードおよびカスタム プラグインの作成](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [方法 : ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)
+- [方法: ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)
 - [方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)

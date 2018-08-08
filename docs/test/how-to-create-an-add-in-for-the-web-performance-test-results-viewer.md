@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 92c41fec7cf481c058f158e91c486134ca6c1740
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: a0ea42942fc06225bc5c64c02eba85a766a94ef1
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177254"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381108"
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する
 
@@ -41,27 +41,27 @@ ms.locfileid: "39177254"
 
 ## <a name="create-a-visual-studio-add-in"></a>Visual Studio アドインの作成
 
-アドインは、Visual Studio 統合開発環境 (IDE: Integrated Development Environment) 内部で実行されるコンパイル済み DLL です。 DLL がコンパイルされていることにより、知的財産権が保護され、パフォーマンスが向上します。 アドインは手動でも作成できますが、アドイン ウィザードを使用した方が簡単に作成できます。 このウィザードでは、作成後すぐに実行できる、基本的な機能を備えたアドインが作成されます。 アドイン ウィザードで基本プログラムが生成された後に、コードを追加してカスタマイズできます。
+アドインは、Visual Studio 統合開発環境 (IDE: Integrated Development Environment) 内部で実行されるコンパイル済み DLL です。 DLL がコンパイルされていることにより、知的財産権が保護され、パフォーマンスが向上します。 アドインは手動でも作成できますが、**アドイン ウィザード**を使用した方が簡単に作成できます。 このウィザードでは、作成後すぐに実行できる、基本的な機能を備えたアドインが作成されます。 **アドイン ウィザード**で基本プログラムが生成された後に、コードを追加してカスタマイズできます。
 
- アドイン ウィザードでは、アドインの表示名および説明を指定できます。 両方とも、**アドイン マネージャー**に表示されます。 オプションで、アドインを開くコマンドを **[ツール]** メニューに追加するコードをウィザードで生成することもできます。 また、アドインにカスタムの **[バージョン情報]** ダイアログ ボックスを表示することもできます。 ウィザードが完了すると、アドインを実装するクラスを 1 つだけ含む新しいプロジェクトが作成されます。 そのクラスには Connect という名前が付けられます。
+ **アドイン ウィザード**では、アドインの表示名および説明を指定できます。 両方とも、**アドイン マネージャー**に表示されます。 オプションで、アドインを開くコマンドを **[ツール]** メニューに追加するコードをウィザードで生成することもできます。 また、アドインにカスタムの **[バージョン情報]** ダイアログ ボックスを表示することもできます。 ウィザードが完了すると、アドインを実装するクラスを 1 つだけ含む新しいプロジェクトが作成されます。 そのクラスには Connect という名前が付けられます。
 
- このトピックの最後にある**アドイン マネージャー**を使用します。
+ この記事の最後にある**アドイン マネージャー**を使用します。
 
 ### <a name="to-create-an-add-in-by-using-the-add-in-wizard"></a>アドイン ウィザードを使用してアドインを作成するには
 
-1.  ソリューション エクスプローラーで、ソリューションを右クリックし、**[追加]** を選択して **[新しいプロジェクト]** を選択します。
+1.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** を選択して **[新しいプロジェクト]** を選択します。
 
-     [新しいプロジェクト] ダイアログ ボックスが表示されます。
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
 2.  **[インストールされたテンプレート]** で、**[その他のプロジェクトの種類]** を展開し、**[機能拡張]** を選択します。
 
 3.  テンプレート リストで、**[Visual Studio アドイン]** を選択します。
 
-4.  [名前] にアドインの名前を入力します。 例: **WebPerfTestResultsViewerAddin**。
+4.  **[名前]** にアドインの名前を入力します。 例: **WebPerfTestResultsViewerAddin**。
 
 5.  **[OK]** をクリックします。
 
-     Visual Studio アドイン ウィザードが起動します。
+     Visual Studio **アドイン ウィザード**が起動します。
 
 6.  **[次へ]** をクリックします。
 
@@ -92,19 +92,19 @@ ms.locfileid: "39177254"
 
 16. 選択したオプションが **[概要]** ページに表示され、選択した内容をレビューできます。 問題がなければ、**[完了]** を選んで、アドインを作成します。 変更を加える場合は、**[戻る]** ボタンを選びます。
 
-     新しいソリューションおよびプロジェクトが作成され、コード エディターに新しいアドインの Connect.cs ファイルが表示されます。
+     新しいソリューションおよびプロジェクトが作成され、**コード エディター**に新しいアドインの *Connect.cs* ファイルが表示されます。
 
-     この WebPerfTestResultsViewerAddin プロジェクトによって参照されるユーザー コントロールを作成した後に、コードを Connect.cs ファイルに追加します。
+     以下の手順でこの WebPerfTestResultsViewerAddin プロジェクトによって参照されるユーザー コントロールを作成した後に、コードを *Connect.cs* ファイルに追加します。
 
- 作成したアドインを**アドイン マネージャー**でアクティブ化できるようにするには、アドインを Visual Studio に登録する必要があります。 これを行うには、.addin ファイル名拡張子を持つ XML ファイルを使用します。
+ 作成したアドインを**アドイン マネージャー**でアクティブ化できるようにするには、アドインを Visual Studio に登録する必要があります。 これを行うには、*.addin* ファイル名拡張子を持つ XML ファイルを使用します。
 
- この .addin ファイルには、Visual Studio の**アドイン マネージャー**にアドインを表示するために必要な情報が記述されています。 Visual Studio は起動時に、使用できる .addin ファイルを検出するために .addin ファイルの場所を検索します。 使用できる .addin ファイルが検出された場合、この XML ファイルをクリックすると、内容が読み取られて、アドインを起動するのに必要な情報が**アドイン マネージャー**に渡されます。
+ この *.addin* ファイルには、Visual Studio の**アドイン マネージャー**にアドインを表示するために必要な情報が記述されています。 Visual Studio は起動時に、使用できる *.addin* ファイルを検出するために *.addin* ファイルの場所を検索します。 使用できる .addin ファイルが検出された場合、この XML ファイルをクリックすると、内容が読み取られて、アドインを起動するのに必要な情報が**アドイン マネージャー**に渡されます。
 
- .addin ファイルは、アドイン ウィザードを使用してアドインを作成すると、自動的に作成されます。
+ *.addin* ファイルは、**アドイン ウィザード**を使用してアドインを作成すると、自動的に作成されます。
 
 ### <a name="add-in-file-locations"></a>アドイン ファイルの場所
 
-アドイン ウィザードによって、次のような .addin ファイルのコピーが 2 つ自動的に作成されます。
+**アドイン ウィザード**によって、次のような *.addin* ファイルのコピーが 2 つ自動的に作成されます。
 
 |**.Addin ファイルの場所**|**説明**|
 |------------------------------|----------------------------|---------------------|
@@ -117,7 +117,7 @@ ms.locfileid: "39177254"
 
 ### <a name="to-create-a-control-to-be-used-in-the-web-test-results-viewer"></a>コントロールを作成して Web テスト結果ビューアーで使用するには
 
-1.  ソリューション エクスプローラーで、ソリューションを右クリックし、**[追加]** を選択して **[新しいプロジェクト]** を選択します。
+1.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** を選択して **[新しいプロジェクト]** を選択します。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
@@ -132,9 +132,9 @@ ms.locfileid: "39177254"
 
 5.  **[OK]** をクリックします。
 
-     Windows フォーム コントロール ライブラリ プロジェクト WebPerfTestResultsViewerControl がソリューション エクスプローラーに追加され、UserControl1.cs がデザイン モードで表示されます。
+     Windows フォーム コントロール ライブラリ プロジェクト WebPerfTestResultsViewerControl が**ソリューション エクスプローラー**に追加され、*UserControl1.cs* がデザイン モードで表示されます。
 
-6.  ツールボックスから userControl1 のサーフェイスに <xref:System.Windows.Forms.DataGridView> をドラッグします。
+6.  **ツールボックス**から userControl1 のサーフェイスに <xref:System.Windows.Forms.DataGridView> をドラッグします。
 
 7.  <xref:System.Windows.Forms.DataGridView> の右上隅のアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif)) をクリックし、次の手順を実行します。
 
@@ -154,11 +154,11 @@ ms.locfileid: "39177254"
 
     7.  **[閉じる]** を選択します。
 
-8.  [プロパティ] ウィンドウで、<xref:System.Windows.Forms.DataGridView> の **(Name)** プロパティを **resultControlDataGridView** に変更します。
+8.  **[プロパティ]** ウィンドウで、<xref:System.Windows.Forms.DataGridView> の **(Name)** プロパティを **resultControlDataGridView** に変更します。
 
 9. デザイン サーフェイスを右クリックし、**[コードの表示]** を選択します。
 
-     コード エディターに UserControl1.cs ファイルが表示されます。
+     **コード エディター**に *UserControl1.cs* ファイルが表示されます。
 
 10. インスタンス化された <xref:System.Windows.Forms.UserControl> クラスの名前を UserContro1 から resultControl に変更します。
 
@@ -173,15 +173,15 @@ ms.locfileid: "39177254"
             }
     ```
 
-     次の手順では、resultControl クラスを参照する WebPerfTestResultsViewerAddin プロジェクトの Connect.cs ファイルにコードを追加します。
+     次の手順では、resultControl クラスを参照する WebPerfTestResultsViewerAddin プロジェクトの *Connect.cs* ファイルにコードを追加します。
 
-     後で、Connect.cs ファイルにいくつかのコードを追加します。
+     後で、*Connect.cs* ファイルにいくつかのコードを追加します。
 
-## <a name="add-code-to-the-webperftestresultsvieweraddin"></a>コードを WebPerfTestResultsViewerAddin に追加する
+## <a name="add-code-to-the-webperftestresultsvieweraddin"></a>WebPerfTestResultsViewerAddin へのコードの追加
 
 ### <a name="to-add-code-to-the-visual-studio-add-in-to-extend-the-web-test-results-viewer"></a>コードを Visual Studio アドインに追加して Web テスト結果ビューアーを展開するには
 
-1.  ソリューション エクスプローラーで、WebPerfTestResultsViewerAddin プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
+1.  **ソリューション エクスプローラー**で、WebPerfTestResultsViewerAddin プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
 
 2.  **[参照の追加]** ダイアログ ボックスの **[.NET]** タブを選びます。
 
@@ -193,7 +193,7 @@ ms.locfileid: "39177254"
 
 6.  **[参照の追加]** ダイアログ ボックスの **[参照]** タブを選びます。
 
-7.  **[検索対象]** のドロップダウンを選んで、%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies に移動し、Microsoft.VisualStudio.QualityTools.LoadTestPackage.dll ファイルを選択します。
+7.  **[検索対象]** のドロップダウンを選んで、*%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies* に移動し、*Microsoft.VisualStudio.QualityTools.LoadTestPackage.dll* ファイルを選択します。
 
 8.  **[OK]** をクリックします。
 
@@ -203,9 +203,9 @@ ms.locfileid: "39177254"
 
 11. **[プロジェクト名]** で、**[WebPerfTestResultsViewerControl]** プロジェクトを選択し、**[OK]** を選びます。
 
-12. Connect.cs ファイルが表示されない場合、ソリューション エクスプローラーで、WebPerfTestResultsViewerAddin プロジェクトの **Connect.cs** ファイルを右クリックして、**[コードの表示]** を選択します。
+12. *Connect.cs* ファイルが表示されない場合、**ソリューション エクスプローラー**で、WebPerfTestResultsViewerAddin プロジェクトの **Connect.cs** ファイルを右クリックして、**[コードの表示]** を選択します。
 
-13. Connect.cs ファイルで、次の Using ステートメントを追加します。
+13. *Connect.cs* ファイルで、次の Using ステートメントを追加します。
 
     ```csharp
     using System.IO;
@@ -216,7 +216,7 @@ ms.locfileid: "39177254"
     using WebPerfTestResultsViewerControl;
     ```
 
-14. Connect.cs ファイルの最下部までスクロール ダウンします。 **Web パフォーマンス テスト結果ビューアー**の複数のインスタンスが開いている場合は、<xref:System.Windows.Forms.UserControl> の GUID のリストを追加する必要があります。 後で、このリストを使用するコードを追加します。
+14. *Connect.cs* ファイルの最下部までスクロール ダウンします。 **Web パフォーマンス テスト結果ビューアー**の複数のインスタンスが開いている場合は、<xref:System.Windows.Forms.UserControl> の GUID のリストを追加する必要があります。 後で、このリストを使用するコードを追加します。
 
      文字列の 2 番目のリストは、後でコード化する OnDiscconection メソッドで使用されます。
 
@@ -227,7 +227,7 @@ ms.locfileid: "39177254"
     private Dictionary<Guid, List<UserControl>> m_controls = new Dictionary<Guid, List<UserControl>>();        private List<string> temporaryFilePaths = new List<string>();
     ```
 
-15. Connect.cs ファイルは、<xref:Extensibility.IDTExtensibility2> クラスから Connect という名前のクラスをインスタンス化します。また、このファイルには、Visual Studio アドインを実装するいくつかのメソッドが含まれています。 メソッドのうちの 1 つは OnConnection メソッドで、アドインが読み込まれている通知を受け取ります。 OnConnection メソッドでは、LoadTestPackageExt クラスを使用して、**Web パフォーマンス テスト結果ビューアー**用の機能拡張パッケージを作成します。 次のコードを OnConnection メソッドに追加します。
+15. *Connect.cs* ファイルは、<xref:Extensibility.IDTExtensibility2> クラスから Connect という名前のクラスをインスタンス化します。また、このファイルには、Visual Studio アドインを実装するいくつかのメソッドが含まれています。 メソッドのうちの 1 つは OnConnection メソッドで、アドインが読み込まれている通知を受け取ります。 OnConnection メソッドでは、LoadTestPackageExt クラスを使用して、**Web パフォーマンス テスト結果ビューアー**用の機能拡張パッケージを作成します。 次のコードを OnConnection メソッドに追加します。
 
     ```csharp
     public void OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
@@ -279,13 +279,13 @@ ms.locfileid: "39177254"
 
 ### <a name="to-add-code-to-the-user-control"></a>ユーザー コントロールにコードを追加するには
 
-1.  ソリューション エクスプローラーで、WebPerfTestResultsViewerControl プロジェクト ノードを右クリックし、**[プロパティ]** を選択します。
+1.  **ソリューション エクスプローラー**で、WebPerfTestResultsViewerControl プロジェクト ノードを右クリックし、**[プロパティ]** を選択します。
 
-2.  **[アプリケーション]** タブを選択して **[ターゲット フレームワーク]** ドロップダウン リストを選びます。次に、**[.NET Framework 4]** を選択して、[プロパティ] を閉じます。
+2.  **[アプリケーション]** タブを選択して **[ターゲット フレームワーク]** ドロップダウン リストを選びます。次に、**[.NET Framework 4]** を選択して、**[プロパティ]** を閉じます。
 
      これは、**Web パフォーマンス テスト結果ビューアー**の拡張に必要な DLL 参照をサポートするために必要です。
 
-3.  ソリューション エクスプローラーで、WebPerfTestResultsViewerControl プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
+3.  **ソリューション エクスプローラー**で、WebPerfTestResultsViewerControl プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
 
 4.  **[参照の追加]** ダイアログ ボックスの **[.NET]** タブをクリックします。
 
@@ -293,14 +293,14 @@ ms.locfileid: "39177254"
 
 6.  **[OK]** をクリックします。
 
-7.  UserControl1.cs ファイルに、次の Using ステートメントを追加します。
+7.  *UserControl1.cs* ファイルに、次の Using ステートメントを追加します。
 
     ```csharp
     using Microsoft.VisualStudio.TestTools.WebTesting;
     using Microsoft.VisualStudio.TestTools.WebTesting.Rules;
     ```
 
-8.  Connect.cs ファイルの WebPerfTestResultsViewerAddin WebTestResultViewer_SelectedChanged メソッドから呼び出されて WebTestRequestResult が渡される Update メソッドを追加します。 Update メソッドは、WebTestRequestResult のメソッドに渡されるさまざまなプロパティを使用して DataGridView を設定します。
+8.  *Connect.cs* ファイルの WebPerfTestResultsViewerAddin WebTestResultViewer_SelectedChanged メソッドから呼び出されて WebTestRequestResult が渡される Update メソッドを追加します。 Update メソッドは、WebTestRequestResult のメソッドに渡されるさまざまなプロパティを使用して DataGridView を設定します。
 
     ```csharp
     public void Update(WebTestRequestResult WebTestResults)
@@ -355,15 +355,15 @@ ms.locfileid: "39177254"
 
 悪質なアドインが自動的にアクティブにならないようにしてセキュリティを強化するために、Visual Studio の **[ツール] メニューの [オプション]** ページには、**[アドイン/マクロ セキュリティ]** という名前の設定が用意されています。
 
-さらに、このオプション ページでは、Visual Studio が .AddIn 登録ファイルを検索するためのフォルダーを指定できます。 このようにフォルダーを指定すると、.AddIn 登録ファイルを読み取ることができる場所が制限されるので、セキュリティが強化されます。 これにより、悪意のある .AddIn ファイルが意図せず使用されるのを防ぐことができます。
+さらに、このオプション ページでは、Visual Studio が *.AddIn* 登録ファイルを検索するためのフォルダーを指定できます。 このようにフォルダーを指定すると、*.AddIn* 登録ファイルを読み取ることができる場所が制限されるので、セキュリティが強化されます。 これは、悪意のある *.AddIn* ファイルが意図せず使用されるのを防ぐのに役立ちます。
 
  **アドインのセキュリティ設定**
 
  アドイン セキュリティのオプション ページにある設定は、次のとおりです。
 
--   **アドイン コンポーネントに読み込みを許可する** 既定でオンになっています。 オンにすると、アドインを Visual Studio で読み込むことができます。 オフにすると、アドインを Visual Studio で読み込むことができなくなります。
+-   **アドイン コンポーネントに読み込みを許可する。** 既定でオンになっています。 オンにすると、アドインを Visual Studio で読み込むことができます。 オフにすると、アドインを Visual Studio で読み込むことができなくなります。
 
--   **アドイン コンポーネントに URL からの読み込みを許可する** 既定ではオンになっていません。 オンにすると、アドインは外部 Web サイトから読み込むことができます。 オフにすると、リモート アドインは Visual Studio で読み込むことができなくなります。 何らかの原因でアドインを読み込むことができない場合は、Web から読み込むこともできません。 この設定では、アドイン DLL の読み込みだけが制御されます。 .Addin 登録ファイルは、常にローカル システムに存在する必要があります。
+-   **アドイン コンポーネントに URL からの読み込みを許可する。** 既定ではオンになっていません。 オンにすると、アドインは外部 Web サイトから読み込むことができます。 オフにすると、リモート アドインは Visual Studio で読み込むことができなくなります。 何らかの原因でアドインを読み込むことができない場合は、Web から読み込むこともできません。 この設定では、アドイン DLL の読み込みだけが制御されます。 *.Addin* 登録ファイルは、常にローカル システムに存在する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

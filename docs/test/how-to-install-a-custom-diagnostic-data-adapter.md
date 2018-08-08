@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d24ce9f954164cd8d243edfab4387f6b174c0648
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0755f77b2eea2860a3514480504c7aed041711d4
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31968537"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379290"
 ---
 # <a name="how-to-install-a-custom-diagnostic-data-adapter"></a>方法: カスタム診断データ アダプターをインストールする
 
@@ -25,7 +25,7 @@ ms.locfileid: "31968537"
 
  次の手順に従って、カスタム診断アダプターを適切な場所にインストールします。 診断データ アダプターをインストールするコンピューターの管理アクセス許可が必要です。
 
-## <a name="installing-a-custom-diagnostic-data-adapter"></a>カスタム診断データ アダプターのインストール
+## <a name="install-a-custom-diagnostic-data-adapter"></a>カスタム診断データ アダプターをインストールする
 
 ### <a name="to-install-a-custom-diagnostic-data-adapter"></a>カスタム診断データ アダプターをインストールするには
 
@@ -35,9 +35,9 @@ ms.locfileid: "31968537"
 
      コピーするファイルは次のとおりです。
 
-    -   診断データ アダプターのアセンブリ (.dll) (必須)。
+    -   診断データ アダプターのアセンブリ (*.dll*) (必須)。
 
-    -   アダプターのデバッグ データ ファイル (.pdb) (省略可能)。
+    -   アダプターのデバッグ データ ファイル (*.pdb*) (省略可能)。
 
     -   既定の構成設定がある場合は、アダプターの構成ファイル (`<diagnostic data adapter name>.dll.config`) (省略可能)。
 
@@ -52,9 +52,9 @@ ms.locfileid: "31968537"
 
 3.  診断データ アダプター構成エディターを作成およびインストールした場合、テスト設定用の診断データ アダプターを構成するには、アダプター名の横の **[構成]** をクリックし、必要な変更を行います。 **[保存]** を選択します。 診断データ コレクターの構成エディターを作成する方法については、「[方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)」を参照してください。
 
-4.  Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+4.  Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
-     Visual Studio からテストを実行する場合は、これらのテスト設定をアクティブとして設定する必要があります。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+     Visual Studio からテストを実行する場合は、これらのテスト設定をアクティブとして設定する必要があります。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 5.  選択した診断データ アダプターを指定したテストの設定を使用して、テストを実行します。
 

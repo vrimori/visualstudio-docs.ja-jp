@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 29b6bd8abb99d269a91b2eaf7af8872ab7f41a73
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: c2988bb821a91ec1bc5f37955bef8a61897f2c4d
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845757"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382091"
 ---
 # <a name="quickstart-test-driven-development-with-test-explorer"></a>クイック スタート: テスト エクスプローラーによるテスト駆動開発
 
@@ -28,7 +28,7 @@ ms.locfileid: "34845757"
 
 -   必要な情報をすべて、1 つのウィンドウで確認できます。
 
-## <a name="using-test-explorer"></a>テスト エクスプローラーの使用
+## <a name="use-test-explorer"></a>テスト エクスプローラーの使用
  ![[すべて実行] ボタンを示す単体テスト エクスプローラー](../test/media/unittestexplorer-beta-.png)
 
 ### <a name="to-run-unit-tests-by-using-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行するには
@@ -39,7 +39,7 @@ ms.locfileid: "34845757"
 
     1.  テスト プロジェクトを作成します。
 
-         **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual Basic]**、 **[Visual C#]**、または **[Visual C++]** を展開し、 **[テスト]** をクリックします。
+         **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual Basic]** > **[Visual C#]**、または **[Visual C++]** を展開し、**[テスト]** を選択します。
 
          **[単体テスト プロジェクト]** を選択します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "34845757"
 
 2.  個々のテストに実行順序を定める依存関係がない場合、ツール バーにある ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png) トグル ボタンで並列テストの実行を有効にします。 これにより、すべてのテスト実行にかかる時間を著しく短縮できます。
 
-3.  メニュー バーで、 **[テスト]**、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。
+3.  メニュー バーで、**[テスト]** > **[単体テストの実行]** > **[すべてのテスト]** の順に選択します。
 
      ソリューションがビルドされ、テストが実行されます。
 
@@ -69,16 +69,16 @@ ms.locfileid: "34845757"
 > テストが表示されない場合は、使用するテスト フレームワークにテスト エクスプローラーを接続するためのアダプターがインストールされていることを確認してください。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)」をご覧ください。
 
 
-##  <a name="walkthrough"></a> チュートリアル: 単体テストを使用してメソッドを開発する
+##  <a name="walkthrough-using-unit-tests-to-develop-a-method"></a>チュートリアル: 単体テストを使用してメソッドを開発する
  このチュートリアルでは、Microsoft 単体テスト フレームワークを使用して、テスト済みメソッドを C# で開発する方法を示します。 他の言語に適合させることも、NUnit など他のテスト フレームワークを使用することも、容易です。 詳細については、「[サードパーティ製の単体テスト フレームワークをインストールする](install-third-party-unit-test-frameworks.md)」をご覧ください。
 
-#### <a name="creating-the-test-and-method"></a>テストとメソッドを作成する
+### <a name="create-the-test-and-method"></a>テストとメソッドを作成する
 
 1.  Visual C# クラス ライブラリ プロジェクトを作成します。 このプロジェクトには、提供するコードを含めます。 この例では、 `MyMath`という名前が付いています。
 
 2.  テスト プロジェクトを作成します。
 
-    -   **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]**、 **[テスト]** 、 **[単体テスト プロジェクト]** の順にクリックします。
+    -   **[新しいプロジェクト]** ダイアログ ボックスで、**[Visual C#]** > **[テスト]**、**[単体テスト プロジェクト]** の順に選択します。
 
          ![新しいコードとテスト プロジェクト](../test/media/unittestexplorerwalk1.png)
 
@@ -104,15 +104,15 @@ ms.locfileid: "34845757"
 
 4.  テストからメソッドを生成します。
 
-    1.  `Rooter`にカーソルを置き、ショートカット メニューで **[生成]**、 **[新しい型]** の順にクリックします。
+    1.  `Rooter` にカーソルを置き、ショートカット メニューで **[生成]** > **[新しい型]** の順に選択します。
 
     2.  **[新しい型の生成]** ダイアログ ボックスで、 **[プロジェクト]** をクラス ライブラリ プロジェクトに設定します。 この例では、 `MyMath`です。
 
-    3.  `SquareRoot`にカーソルを置き、ショートカット メニューで **[生成]**、 **[メソッド スタブ]** の順にクリックします。
+    3.  `SquareRoot` にカーソルを置き、ショートカット メニューで **[生成]** > **[メソッド スタブ]** の順に選択します。
 
 5.  単体テストを実行します。
 
-    1.  **[テスト]** メニューで、 **[単体テストの実行]**、 **[すべてのテスト]** の順にクリックします。
+    1.  **[テスト]** メニューで、**[単体テストの実行]** > **[すべてのテスト]** の順に選択します。
 
          ソリューションがビルドされ、実行されます。
 
@@ -132,7 +132,7 @@ ms.locfileid: "34845757"
 
 #### <a name="after-every-change-make-all-the-tests-pass"></a>各変更後にすべてのテストに合格する
 
-1.  `MyMath\Rooter.cs`で、 `SquareRoot`のコードを改良します。
+1.  *MyMath\Rooter.cs* で、`SquareRoot` のコードを改善します。
 
     ```csharp
     public double SquareRoot(double input)

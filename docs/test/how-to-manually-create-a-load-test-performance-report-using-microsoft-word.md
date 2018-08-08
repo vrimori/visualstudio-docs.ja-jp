@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 257377ae84249f6e55c52223478d0f4aa0c12e59
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c4bafd4e7e50838adbe8ba458191c370b4d7427d
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750884"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380695"
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>方法: Microsoft Word を使用してロード テスト パフォーマンス レポートを手動で作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "34750884"
 
 ## <a name="copy-summary-view-data"></a>概要ビューのデータのコピー
 
-1.  ロード テスト結果で、概要ビューが現在表示されていない場合に、ツール バーの **[概要]** をクリックします。
+1.  **ロード テスト結果**で、概要ビューが現在表示されていない場合に、ツール バーの **[概要]** をクリックします。
 
 2.  概要ビューで右クリックし、**[すべて選択]** を選択します。
 
@@ -42,7 +42,7 @@ ms.locfileid: "34750884"
 
 ## <a name="copy-graph-view-data"></a>グラフ ビューのデータのコピー
 
-1.  ロード テスト結果で、グラフ ビューが現在表示されていない場合に、ツールバーの **[グラフ]** を選択します。
+1.  **ロード テスト結果**で、グラフ ビューが現在表示されていない場合に、ツールバーの **[グラフ]** を選択します。
 
 2.  (省略可能) 次の図に示すように、Microsoft Word ドキュメントにコピーする特定のグラフを拡大します。 詳細については、「[方法: グラフの領域にズーム インする](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)」を参照してください。
 
@@ -57,5 +57,5 @@ ms.locfileid: "34750884"
 
 ## <a name="see-also"></a>関連項目
 
-- [テストの比較または傾向分析に備えたロード テストの結果レポートの作成](../test/compare-load-test-results.md)
+- [テストの比較または傾向分析のためにロード テストの結果レポートを作成する](../test/compare-load-test-results.md)
 - [方法: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)

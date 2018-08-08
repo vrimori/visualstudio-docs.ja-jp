@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 15298414788c112c4f6a1f761055efd38933dfde
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 63c33b98244268a086e9db63e2b56e507471c4c3
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751443"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382759"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
@@ -32,18 +32,7 @@ ms.locfileid: "34751443"
 > Internet Explorer 10 でコード化された UI テストを作成した場合、そのテストは Internet Explorer 9 または Internet Explorer 8 を使用して実行できないことがあります。 これは、Internet Explorer 10 には、オーディオ、ビデオ、ProgressBar、スライダーなどの HTML5 コントロールが含まれているためです。 これらの HTML5 コントロールは、Internet Explorer 9 または Internet Explorer 8 で認識されません。 同様に、Internet Explorer 9 を使用するコード化された UI テストには、Internet Explorer 8 で認識されない HTML5 コントロールが含まれる場合があります。
 
 
-## <a name="supported-html5-controls"></a>サポートされている HTML5 コントロール
- コード化された UI テストには、次の HTML5 コントロールの記録、再生、検証のサポートが含まれます。
-
--   [オーディオ コントロール](#UsingHTML5ControlsCodedUITestsAudio)
-
--   [ビデオ コントロール](#UsingHTML5ControlsCodedUITestsVideo)
-
--   [スライダー](#UsingHTML5ControlsCodedUITestsSlider)
-
--   [ProgressBar](#UsingHTML5ControlsCodedUITestsProgressBar)
-
-###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> オーディオ コントロール
+## <a name="audio-control"></a>オーディオ コントロール
  **オーディオ コントロール:** HTML5 オーディオ コントロールに対するアクションが正しく記録され再生されます。
 
  ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png)
@@ -57,27 +46,7 @@ ms.locfileid: "34751443"
 |**オーディオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオのミュートを解除|HtmlAudio.Unmute()|
 |**オーディオの音量の変更**|\<name> オーディオのボリュームを 79% に設定|HtmlAudio.SetVolume(float)|
 
- HtmlAudio には次のプロパティがあり、それらのすべてでアサーションを追加することができます。
-
-```
-string AutoPlay
-string Controls
-string CurrentSrc
-string CurrentTime
-string CurrentTimeAsString
-string Duration
-string DurationAsString
-string Ended
-string Loop
-string Muted
-string Paused
-string PlaybackRate
-string ReadyState
-string Seeking
-string Src
-string Volume
-
-```
+アサーションを追加できるプロパティの一連については、「[HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement)」をご覧ください。
 
  **検索プロパティ:** `HtmlAudio` の検索プロパティは、`Id`、`Name`、`Title` です。
 
@@ -87,7 +56,7 @@ string Volume
 > Seek および Pause の時間は大きな意味を持つことがあります。 再生中、コード化された UI テストは、オーディオを一時停止する前に、`(TimeSpan)` に指定された時間まで待機します。 特殊な状況において、Pause コマンドが実行される前に指定された時間が経過したとき、例外がスローされます。
 
 
-###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> ビデオ コントロール
+## <a name="video-control"></a>ビデオ コントロール
  **ビデオ コントロール:** HTML5 ビデオ コントロールに対するアクションが正しく記録され再生されます。
 
  ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png)
@@ -101,14 +70,7 @@ string Volume
 |**ビデオのミュートの解除**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオのミュートを解除|HtmlVideo.Unmute()|
 |**ビデオの音量の変更**|\<name> ビデオのボリュームを 79% に設定||
 
- HtmlVideo には、HtmlAudio のすべてのプロパティが用意されています。 さらに、次の 3 つのプロパティも使用できます。 それらのすべてでアサーションを追加することができます。
-
-```
-string Poster
-string VideoHeight
-string VideoWidth
-
-```
+アサーションを追加できるプロパティの一連については、「[HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video)」をご覧ください。
 
  **検索プロパティ:** `HtmlVideo` の検索プロパティは、`Id`、`Name`、`Title` です。
 
@@ -117,35 +79,14 @@ string VideoWidth
 > [!NOTE]
 > -30s または +30s のラベルを使用してビデオを巻き戻したり早送りしたりする場合、集計後の適切なタイミングにシークされます。
 
-
-###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> スライダー
- **スライダー コントロール:** HTML5 スライダー コントロールに対するアクションが正しく記録され再生されます。
-
- ![HTML5 スライダー コントロール](../test/media/codedui_html5_slider.png)
-
-|アクション|記録中|生成されたコード|
-|------------|---------------|--------------------|
-|**スライダーにおける位置の設定**|\<name> スライダー内の \<x> に位置を設定|HtmlSlider.ValueAsNumber=\<x>|
-
- HtmlSlider には次のプロパティがあり、それらのすべてでアサーションを追加することができます。
-
-```
-string Disabled
-string Max
-string Min
-string Required
-string Step
-string ValueAsNumber
-```
-
-###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar
- **ProgreesBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。
+## <a name="progressbar"></a>ProgressBar
+ **ProgressBar コントロール:** ProgressBar は、非対話型コントロールです。 このコントロールの `Value` プロパティと `Max` プロパティでアサーションを追加できます。 詳しくは、「[HTMLProgressElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)」をご覧ください。
 
  ![HTML5 ProgressBar コントロール](../test/media/codedui_html5_progressbar.png)
 
 ## <a name="see-also"></a>関連項目
 
-- [HTML 要素](http://go.microsoft.com/fwlink/?LinkID=232441)
+- [HTML 要素](https://developer.mozilla.org/docs/Web/HTML/Element)
 - [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)
 - [コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)
 - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

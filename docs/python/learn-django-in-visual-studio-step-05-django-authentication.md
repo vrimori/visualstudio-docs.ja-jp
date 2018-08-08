@@ -11,18 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 35650e1fe22026968c06ed4bf0c9bc4cd1d2d54e
-ms.sourcegitcommit: 4e605891d0dfb3ab83150c17c074bb98dba29d15
+ms.openlocfilehash: e9c30e2cdf0f55db5b09225768b073bb030c841b
+ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36946976"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39388372"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>手順 5: Django でユーザーを認証する
 
 **前の手順: [完全な Django Web プロジェクト テンプレートを使用する](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
-認証は Web アプリ共通のニーズであるため、"Django Web プロジェクト" テンプレートには基本認証フローが含まれています  (このチュートリアルの手順 6. で説明する "ポーリング Django Web プロジェクト" テンプレートにも、同じフローが含まれています)。いずれかの Django プロジェクト テンプレートを使用する場合、Visual Studio には Django プロジェクトの `settings.py` での認証に必要なすべてのモジュールが含まれています。
+認証は Web アプリ共通のニーズであるため、"Django Web プロジェクト" テンプレートには基本認証フローが含まれています  (このチュートリアルの手順 6. で説明する "ポーリング Django Web プロジェクト" テンプレートにも、同じフローが含まれています)。いずれかの Django プロジェクト テンプレートを使用する場合、Visual Studio には Django プロジェクトの *settings.py* での認証に必要なすべてのモジュールが含まれています。
 
 この手順では、次のことを学習します。
 
@@ -33,15 +33,15 @@ ms.locfileid: "36946976"
 
 次の手順では、認証フローを利用して、プロジェクトの関連する部分について説明します。
 
-1. プロジェクトのルートにある `readme.html` ファイルの指示に従ってスーパー ユーザー (管理者) アカウントをまだ作成していない場合は、すぐに作成します。
+1. プロジェクトのルートにある *readme.html* ファイルの指示に従ってスーパー ユーザー (管理者) アカウントをまだ作成していない場合は、すぐに作成します。
 
-1. **[デバッグ]** > **[デバッグの開始]** (F5) を使用して、Visual Studio からアプリを実行します。 ブラウザーにアプリが表示されたら、ナビゲーション バーの右上に **[ログイン]** が表示されていることを確認します。
+1. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) を使用して、Visual Studio からアプリを実行します。 ブラウザーにアプリが表示されたら、ナビゲーション バーの右上に **[ログイン]** が表示されていることを確認します。
 
     ![Django Web プロジェクトのアプリ ページ上にある login コントロール](media/django/step05-login-control.png)
 
-1. `templates/app/layout.html` を開き、`<div class="navbar ...>` 要素にタグ `{% include app/loginpartial.html %}` が含まれていることを確認します。 `{% include %}` タグは、含まれているテンプレートにこの時点でインクルードされているファイルの内容を組み入れるように、Django のテンプレート システムに指示します。
+1. *templates/app/layout.html* を開き、`<div class="navbar ...>` 要素にタグ `{% include app/loginpartial.html %}` が含まれていることを確認します。 `{% include %}` タグは、含まれているテンプレートにこの時点でインクルードされているファイルの内容を組み入れるように、Django のテンプレート システムに指示します。
 
-1. `templates/app/loginpartial.html` を開き、`{% else %}` タグと共に条件タグ `{% if user.is_authenticated %}` を使用して、ユーザーが認証済みかどうかに応じて異なる UI 要素を表示する方法を確認します。
+1. *templates/app/loginpartial.html* を開き、`{% else %}` タグと共に条件タグ `{% if user.is_authenticated %}` を使用して、ユーザーが認証済みかどうかに応じて異なる UI 要素を表示する方法を確認します。
 
     ```html
     {% if user.is_authenticated %}
@@ -62,7 +62,7 @@ ms.locfileid: "36946976"
     {% endif %}
     ```
 
-1. 最初にアプリを起動するときはどのユーザーも認証されていないので、このテンプレートのコードは、相対パス "login" への "ログイン" リンクのみを表示します。 (前のセクションで示したように) `urls.py` に指定されると、そのルートは `django.contrib.auth.views.login` ビューにマップされます。 そのビューは、次のデータを受け取ります。
+1. 最初にアプリを起動するときはどのユーザーも認証されていないので、このテンプレートのコードは、相対パス "login" への "ログイン" リンクのみを表示します。 (前のセクションで示したように) *urls.py* に指定されると、そのルートは `django.contrib.auth.views.login` ビューにマップされます。 そのビューは、次のデータを受け取ります。
 
     ```python
     {
@@ -76,7 +76,7 @@ ms.locfileid: "36946976"
     }
     ```
 
-    ここで、`template_name` は、ログイン ページ用のテンプレート (この場合は `templates/app/login.html`) を特定します。 `extra_context` プロパティは、テンプレートに指定された既定のコンテキスト データに追加されます。 最後に、`authentication_form` は、テンプレートに `form` オブジェクトとして示される、ログインに使用するフォーム クラスを定義します。 既定値は `AuthenticationForm` (`django.contrib.auth.views` より) です。Visual Studio プロジェクト テンプレートでは代わりに、アプリの `forms.py` ファイルに定義された次のフォームを使用します。
+    ここで、`template_name` は、ログイン ページ用のテンプレート (この場合は *templates/app/login.html*) を特定します。 `extra_context` プロパティは、テンプレートに指定された既定のコンテキスト データに追加されます。 最後に、`authentication_form` は、テンプレートに `form` オブジェクトとして示される、ログインに使用するフォーム クラスを定義します。 既定値は `AuthenticationForm` (`django.contrib.auth.views` より) です。Visual Studio プロジェクト テンプレートでは代わりに、アプリの *forms.py* ファイルに定義された次のフォームを使用します。
 
     ```python
     from django import forms
@@ -97,7 +97,7 @@ ms.locfileid: "36946976"
 
     見てわかるように、このフォーム クラスは `AuthenticationForm` から派生し、明示的にユーザー名とパスワードのフィールドをオーバーライドして、プレースホルダ― テキストを追加します。 Visual Studio テンプレートには、パスワード強度の検証を追加するなど、必要に応じてフォームをカスタマイズすることを予想して、この明示的なコードが含まれています。
 
-1. ログイン ページに移動すると、アプリは `login.html` テンプレートを表示します。 変数 `{{ form.username }}` および `{{ form.password }}` は、`BootstrapAuthenticationForm` から `CharField` フォームを表示します。 また、検証エラーを表示するための組み込みのセクションと、ソーシャル ログイン用にあらかじめ用意されている要素もあり、必要に応じてこれらのサービスを追加できます。
+1. ログイン ページに移動すると、アプリは *login.html* テンプレートを表示します。 変数 `{{ form.username }}` および `{{ form.password }}` は、`BootstrapAuthenticationForm` から `CharField` フォームを表示します。 また、検証エラーを表示するための組み込みのセクションと、ソーシャル ログイン用にあらかじめ用意されている要素もあり、必要に応じてこれらのサービスを追加できます。
 
     ```html
     {% extends "app/layout.html" %}
@@ -146,13 +146,13 @@ ms.locfileid: "36946976"
 
 1. フォームを送信すると、Django は資格情報 (スーパー ユーザーの資格情報など) の認証を試みます。 認証に失敗した場合、現在のページに留まりますが、`form.errors` は true に設定されます。 認証に成功した場合、Django は "next" フィールド `<input type="hidden" name="next" value="/" />` にある相対 URL に移動します。この例では、ホーム ページ (`/`) になっています。
 
-1. ここで、ホーム ページが再表示されると、`loginpartial.html` テンプレートが表示されるときに、`user.is_authenticated` プロパティが true になります。 その結果、"Hello (ユーザー名)" メッセージと "ログオフ" が表示されます。 アプリの他の部分で `user.is_authenticated` を使用して、認証を確認できます。
+1. ここで、ホーム ページが再表示されると、*loginpartial.html* テンプレートが表示されるときに、`user.is_authenticated` プロパティが true になります。 その結果、**Hello (<ユーザー名>)** メッセージと **[Log off]** が表示されます。 アプリの他の部分で `user.is_authenticated` を使用して、認証を確認できます。
 
     ![[Django Web プロジェクト] アプリ ページ上の Hello メッセージとログオフ コントロール](media/django/step05-logoff-control.png)
 
 1. 認証済みユーザーに特定のリソースに対するアクセス権が付与されたかどうかを確認するには、ユーザー固有のアクセス許可をデータベースから取得する必要があります。 詳細については、[Django 認証システムの使用](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization)に関するページ (Django docs) を参照してください。
 
-1. 特に、ス―パー ユーザーまたは管理者は、相対 URL "/admin/" および "/admin/doc/" を使用して、組み込みの Django 管理者インターフェイスにアクセスします。 これらのインターフェイスを有効にするには、Django プロジェクトの `urls.py` を開き、次のエントリからコメントを削除します。
+1. 特に、ス―パー ユーザーまたは管理者は、相対 URL "/admin/" および "/admin/doc/" を使用して、組み込みの Django 管理者インターフェイスにアクセスします。 これらのインターフェイスを有効にするには、Django プロジェクトの *urls.py* を開き、次のエントリからコメントを削除します。
 
     ```python
     from django.conf.urls import include
@@ -171,7 +171,7 @@ ms.locfileid: "36946976"
 
     ![Django 管理者インターフェイス](media/django/step05-administrator-interface.png)
 
-1. 認証フローの最後の部分は、ログオフです。 `loginpartial.html` でわかるように、**ログオフ** リンクは単純に相対 URL "/login" に対する POST を実行します。これは、組み込みのビュー `django.contrib.auth.views.logout` によって処理されます。 このビューには UI が表示されず、ホーム ページへの移動のみを行います (`urls.py` の "^logout$" パターンで確認できます)。 ログオフ ページを表示する場合は、最初に、次のように URL パターンを変更して、"template_name" プロパティを追加し "next_page" プロパティを削除します。
+1. 認証フローの最後の部分は、ログオフです。 *loginpartial.html* でわかるように、**[Log off]** リンクは単純に相対 URL "/login" に対する POST を実行します。これは、組み込みのビュー `django.contrib.auth.views.logout` によって処理されます。 このビューには UI が表示されず、ホーム ページへの移動のみを行います (*urls.py* の "^logout$" パターンで確認できます)。 ログオフ ページを表示する場合は、最初に、次のように URL パターンを変更して、"template_name" プロパティを追加し "next_page" プロパティを削除します。
 
     ```python
     url(r'^logout$',
@@ -183,7 +183,7 @@ ms.locfileid: "36946976"
         name='logout')
     ```
 
-    次に、以下の (最小限の) 内容で `templates/app/loggedoff.html` を作成します。
+    次に、以下の (最小限の) 内容で *templates/app/loggedoff.html* を作成します。
 
     ```html
     {% extends "app/layout.html" %}

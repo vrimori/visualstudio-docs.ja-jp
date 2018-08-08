@@ -11,16 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c46eda83f74b55644165997295d45ce852af9f31
-ms.sourcegitcommit: 4ab232758d308bda742434beff8349a80c167890
+ms.openlocfilehash: e20090eec7891de4c199f1f92ec0d0668e0f86e6
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847753"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251141"
 ---
 # <a name="django-web-project-template"></a>Django Web プロジェクト テンプレート
 
-[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートがいくつか用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択し、"Django" を探し、[空の Django Web プロジェクト]、"Django Web プロジェクト"、および "ポーリング Django Web プロジェクト" テンプレートから選択します。 すべてのテンプレートのチュートリアルについては、[Django チュートリアルの概要](learn-django-in-visual-studio-step-01-project-and-solution.md)に関するページを参照してください。
+[Django](https://www.djangoproject.com/) は、高速、安全、スケーラブルな Web 開発用に設計されたハイレベルの Python フレームワークです。 Visual Studio の Python サポートには、Django ベースの Web アプリケーションの構造を設定するためのプロジェクト テンプレートがいくつか用意されています。 Visual Studio でテンプレートを使用するには、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択し、"Django" を探し、**[空の Django Web プロジェクト]**、**[Django Web プロジェクト]**、および **[ポーリング Django Web プロジェクト]** テンプレートから選択します。 すべてのテンプレートのチュートリアルについては、[Django チュートリアルの概要](learn-django-in-visual-studio-step-01-project-and-solution.md)に関するページを参照してください。
 
 Visual Studio は、Django プロジェクトの完全な IntelliSense を提供します。
 
@@ -42,13 +42,13 @@ Visual Studio は、Django プロジェクトの完全な IntelliSense を提供
 
 ![ブレークポイント](media/template-django-debugging.png)
 
-Django プロジェクトは `manage.py` ファイルで管理するのが一般的であり、Visual Studio でもそのようになっています。 エントリ ポイントとしてそのファイルの使用を止めると、基本的にプロジェクト ファイルは壊れます。 その場合は、Django プロジェクトにしないで、[既存のファイルからプロジェクトを作成しなおす](managing-python-projects-in-visual-studio.md#creating-a-project-from-existing-files)必要があります。
+Django プロジェクトは *manage.py* ファイルで管理するのが一般的であり、Visual Studio でもそのようになっています。 エントリ ポイントとしてそのファイルの使用を止めると、基本的にプロジェクト ファイルは壊れます。 その場合は、Django プロジェクトにしないで、[既存のファイルからプロジェクトを作成しなおす](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files)必要があります。
 
 ## <a name="django-management-console"></a>Django 管理コンソール
 
-Django 管理コンソールには、**[プロジェクト]** メニューのさまざまなコマンドを使用するか、ソリューション エクスプローラーでプロジェクトを右クリックしてアクセスします。
+Django 管理コンソールには、**[プロジェクト]** メニューのさまざまなコマンドを使用するか、**ソリューション エクスプローラー**でプロジェクトを右クリックしてアクセスします。
 
-- **[Django シェルを開く...]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します
+- **[Django シェルを開く]**: モデルを操作できるアプリケーション コンテキストでシェルを起動します。
 
     ![コンソール](media/template-django-console-shell.png)
 
@@ -56,15 +56,15 @@ Django 管理コンソールには、**[プロジェクト]** メニューのさ
 
     ![コンソール](media/template-django-console-sync-db.png)
 
-- **[Collect Static (静的収集)]**: `manage.py collectstatic --noinput` を実行して、`settings.py` の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [[Microsoft Azure に発行]](publishing-python-web-applications-to-azure-from-visual-studio.md) を選択すると、統計ファイルは発行操作の一部として収集されます。
+- **[静的ファイルの収集]**: `manage.py collectstatic --noinput` を実行して、*settings.py* の `STATIC_ROOT` で指定されたパスにすべての統計ファイルをコピーします。 [[Microsoft Azure に発行]](publishing-python-web-applications-to-azure-from-visual-studio.md) を選択すると、統計ファイルは発行操作の一部として収集されます。
 
     ![コンソール](media/template-django-console-collect-static.png)
 
-- **[検証]**: `settings.py` の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
+- **[検証]**: *settings.py* の `INSTALLED_APPS` で指定されたインストール済みのモデルで検証エラーをレポートする `manage.py validate` を実行します。
 
     ![コンソール](media/template-django-console-validate.png)
 
 ## <a name="see-also"></a>関連項目
 
 - [Django チュートリアルの概要](learn-django-in-visual-studio-step-01-project-and-solution.md)
-- [Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)

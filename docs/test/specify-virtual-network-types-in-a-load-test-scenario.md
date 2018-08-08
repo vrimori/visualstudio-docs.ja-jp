@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a3c4a4e6db97e99d2ec2df5b27c6fd8293a182f5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b1f545260b3632c8097ce4bfed9eff7f2de0ccbd
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978298"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380229"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>ロード テスト シナリオでの仮想ネットワークの種類の指定
 
@@ -35,7 +35,7 @@ ms.locfileid: "31978298"
 
  ミックス コントロールを使用すると、シナリオでのネットワークの配分を簡単に調整できます。
 
- 詳細については、「[ミックス コントロールについて](../test/specify-virtual-network-types-in-a-load-test-scenario.md)」を参照してください。
+ 詳細については、[ミックス コントロール](../test/specify-virtual-network-types-in-a-load-test-scenario.md)に関するページを参照してください。
 
 ## <a name="true-network-emulation"></a>トゥルー ネットワーク エミュレーション
 
@@ -68,7 +68,7 @@ ms.locfileid: "31978298"
 
 2.  **[ネットワークの種類]** 列で、新しいエントリの矢印を選択します。 目的のネットワークの種類を選択します。
 
-3.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、「[ミックス コントロールについて](../test/specify-virtual-network-types-in-a-load-test-scenario.md)」を参照してください。
+3.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、[ミックス コントロール](../test/specify-virtual-network-types-in-a-load-test-scenario.md)に関するページを参照してください。
 
 4.  ネットワークの追加作業が終了したら、**[OK]** を選択します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "31978298"
 
 3.  グリッドでネットワークを選択し、**[削除]** を選択します。
 
-4.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、「[ミックス コントロールについて](../test/specify-virtual-network-types-in-a-load-test-scenario.md)」を参照してください。
+4.  (省略可能) ミックス コントロールを調整して、テストの配分を指定します。 詳細については、[ミックス コントロール](../test/specify-virtual-network-types-in-a-load-test-scenario.md)に関するページを参照してください。
 
 5.  ネットワークの削除が完了したら、**[OK]** を選択します。
 

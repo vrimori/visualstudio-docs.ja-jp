@@ -10,21 +10,21 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 20eb70b6c3c6308e41599e65a4b00a3e4043e8d1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1596c96662870118b8fa721f89b8a9ef1c6b831f
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31973605"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381534"
 ---
 # <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>方法: ステップ ロード パターンの "ステップごとの傾斜増加時間" プロパティを指定する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 詳細については、「[チュートリアル: ロード テストの作成および実行](../test/walkthrough-create-and-run-a-load-test.md)」を参照してください。
 
 > [!NOTE]
-> ロード テスト シナリオの各プロパティとその説明の完全なリストについては、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
+> ロード テスト シナリオの各プロパティとその説明の一覧については、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
 
-**[ステップごとの傾斜増加時間]** プロパティを [プロパティ] ウィンドウで設定します。 ロード テスト エディターでロード テスト シナリオのプロパティを編集します。
+**[ステップごとの傾斜増加時間]** プロパティを **[プロパティ]** ウィンドウで設定します。 **ロード テスト エディター**でロード テスト シナリオのプロパティを編集します。
 
 **[ステップごとの傾斜増加時間]** プロパティは、ステップ ロード パターンのみで使用します。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
@@ -43,7 +43,7 @@ ms.locfileid: "31973605"
 これらの設定では、100 人、200 人、300 人をはじめ、2,000 人までのユーザー ロードで、30 分 (1,800 秒) のロード テストを実行します。
 
 > [!NOTE]
-> **[ステップごとの傾斜増加時間]** プロパティは、新しいロード テスト ウィザードで選択できない唯一のプロパティです。
+> **[ステップごとの傾斜増加時間]** プロパティは、**新しいロード テスト ウィザード**で選択できない唯一のプロパティです。
 
 **[ステップごとの傾斜増加時間]** プロパティでは、1 つのステップから次のステップ (たとえば、100 人から 200 人のユーザー) に突然増加するのではなく、徐々に増加するように指定できます。 この例では、ユーザー ロードは、20 秒にわたって 100 人から 200 人のユーザーに増加します (毎秒 5 人の増加です)。
 
@@ -62,7 +62,7 @@ ms.locfileid: "31973605"
 
 4.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
-     [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
+     **[プロパティ]** ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 
 5.  **[ステップ ユーザー カウント]** プロパティで指定したユーザーを段階的に追加するステップ間の秒数を入力し、**[ステップごとの傾斜増加時間]** プロパティの値を設定します。
 
@@ -73,4 +73,4 @@ ms.locfileid: "31973605"
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)
-- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [ロード パターンを編集して、仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)

@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d5930ca6e2c416a4b212feb8662c854f9cb30c3d
-ms.sourcegitcommit: 886759fb35a88f6ef5452c5b2e33a1f71da4489a
+ms.openlocfilehash: 92097e70b026a23062f7a67ff521d60312096d5c
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34851852"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341847"
 ---
-# <a name="installing-python-interpreters"></a>Python インタープリターのインストール
+# <a name="install-python-interpreters"></a>Python インタープリターのインストール
 
 既定では、Visual Studio 2017 に Python 開発ワークロードをインストールすると、Python 3 (64 ビット) もインストールされます。 [インストール](installing-python-support-in-visual-studio.md)に関する記事で説明されているように、必要に応じて、32 ビットおよび 64 ビット バージョンの Python 2、Python 3、Anaconda 2、および Anaconda 3 のインストールも選択できます。
 
@@ -26,15 +26,15 @@ ms.locfileid: "34851852"
 
 **Visual Studio 2015 以前**では、いずれかのインタープリターを手動でインストールする必要があります。
 
-Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」(PEP 514 - Windows レジストリでの Python の登録) に従って) が確認され、インストールされている各 Python インタープリターとその環境が自動的に検出されます。 Python のインストールは、通常、`HKEY_LOCAL_MACHINE\SOFTWARE\Python` (32 ビット) および `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python` (64 ビット) 以下の "PythonCore" (CPython)、"ContinuumAnalytics" (Anaconda) などの配布用ノード内にあります。
+Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/)」(PEP 514 - Windows レジストリでの Python の登録) に従って) が確認され、インストールされている各 Python インタープリターとその環境が自動的に検出されます。 Python のインストールは、通常、**HKEY_LOCAL_MACHINE\SOFTWARE\Python** (32 ビット) および **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Python** (64 ビット) 以下の、**PythonCore** (CPython) や **ContinuumAnalytics** (Anaconda) などの配布用ノード内にあります。
 
 Visual Studio でインストール済みの環境が検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
-Visual Studio の [[Python 環境] ウィンドウ](managing-python-environments-in-visual-studio.md)には既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
+Visual Studio の [**[Python 環境]**](managing-python-environments-in-visual-studio.md) ウィンドウには既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
 
 | インタープリター | 説明 |
 | --- | --- |
-| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 をサポートしていないため、"Python バージョン 3.6 はサポートされていません" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
+| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 がサポートされていないため、"**Python バージョン 3.6 はサポートされていません**" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 |
 | [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
 | [PyPy](http://www.pypy.org/) | Python の高パフォーマンスなトレースの JIT 実装であり、実行時間の長いプログラム、およびパフォーマンスに問題があるが他の解決策が見つからない場合に、適しています。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |
@@ -42,11 +42,11 @@ Visual Studio の [[Python 環境] ウィンドウ](managing-python-environments
 
 Python 環境用に新しい検出形式を提供したい開発者は、「[PTVS Environment Detection](https://github.com/Microsoft/PTVS/wiki/Extensibility-Environments)」(PTVS 環境の検出) (github.com) をご覧ください。
 
-## <a name="moving-an-interpreter"></a>インタープリターの移動
+## <a name="move-an-interpreter"></a>インタープリターを移動する
 
 ファイル システムを使用して既存のインタープリターを新しい場所に移動すると、Visual Studio は変更を自動的に検出しません。
 
-- 元々 **[Python 環境]** ウィンドウでインタープリターの場所を指定した場合は、そのウィンドウの **[構成]** タブを使用して環境を編集して新しい場所を特定します。 「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
+- 元々 **[Python 環境]** ウィンドウでインタープリターの場所を指定している場合は、そのウィンドウの **[構成]** タブを使用して環境を編集して新しい場所を特定します。 「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
 - インストーラー プログラムを使用してインタープリターをインストールした場合は、次の手順でインタープリターを新しい場所に再インストールします。
 
@@ -59,7 +59,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 ## <a name="see-also"></a>関連項目
 
-- [Python 環境の管理](managing-python-environments-in-visual-studio.md)
+- [Python 環境を管理する](managing-python-environments-in-visual-studio.md)
 - [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)
 - [依存関係の requirements.txt の使用](managing-required-packages-with-requirements-txt.md)
 - [検索パス](search-paths.md)

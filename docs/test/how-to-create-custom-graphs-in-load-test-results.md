@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 633c309193c23834b4848e189fdf677f0abc8ef0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7de5d684b0a4299c2f3d90e4a00338c55d2d6870
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31965126"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382000"
 ---
 # <a name="how-to-create-custom-graphs-in-load-test-results"></a>方法: ロード テスト結果でカスタム グラフを作成する
 
@@ -26,17 +26,17 @@ ms.locfileid: "31965126"
 
 ## <a name="to-create-a-custom-load-test-results-graph"></a>カスタム ロード テスト結果グラフを作成するには
 
-1.  ロード テスト ツール バーで、**[新しいグラフの追加]** を選択します。
+1.  **ロード テスト** ツール バーで、**[新しいグラフの追加]** を選択します。
 
      \- または
 
-     ロード テスト アナライザーで、[カウンター] パネルまたはグラフを右クリックし、**[グラフの追加]** を選択します。
+     **ロード テスト アナライザー**で、**[カウンター]** パネルまたはグラフを右クリックし、**[グラフの追加]** を選択します。
 
      **[グラフ名の入力]** ダイアログ ボックスが表示されます。
 
 2.  **[グラフ名]** にグラフの名前を入力し、**[OK]** を選択します。
 
-     ロード テスト アナライザーに新しいグラフが表示されます。 グラフは、現在選択されているグラフ パネルに表示されます。そのパネルに表示されていたグラフが置き換えられます。
+     **ロード テスト アナライザー**に新しいグラフが表示されます。 グラフは、現在選択されているグラフ パネルに表示されます。そのパネルに表示されていたグラフが置き換えられます。
 
 3.  カウンターを追加して、新しいグラフをカスタマイズします。 詳細については、「[方法: グラフにカウンターを追加および削除する](../test/how-to-add-and-delete-counters-on-graphs-in-load-test-results.md)」を参照してください。
 

@@ -10,17 +10,17 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 500dce15e695cf53a061f8405919e808b8f7c493
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 074128d34f88346708fd344d1bba25b833f2af44
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31066939"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251563"
 ---
 # <a name="import-an-xcode-project"></a>XCode プロジェクトのインポート
 Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロジェクトを Visual Studio に移動して、クロスプラットフォーム ライブラリを作成し、他のプロジェクトとコードを共有するためのサポートが含まれています。 [XCode からインポート] ウィザードを使うと、プロジェクトをインポートするプロセスと、C++ コードを分割して XCode ターゲットに取り込み、スタティック ライブラリまたは共有コード プロジェクトとして利用するプロセスが簡略化されます。 iOS 固有のコードを Visual Studio で管理しながらも、XCode を使ってストーリーボードとビルドを行うことができます。 Visual Studio と XCode の間でコードを双方向に簡単に移動する方法については、「Move Changes Between XCode and Visual Studio (XCode と Visual Studio 間の変更の移動)」を参照してください。  
   
-## <a name="using-the-import-from-xcode-wizard"></a>[XCode からインポート] ウィザードの使用方法  
+## <a name="use-the-import-from-xcode-wizard"></a>[XCode からインポート] ウィザードの使用方法  
  このトピックでは、XCode プロジェクトを Visual Studio に移動して、コードの共有とクロスプラットフォーム ソリューションを活用する方法について説明します。 前提条件として、プロジェクトをインポート、エクスポート、ビルドできるように Mac を Visual Studio にペアリングする必要があります。 ペアリングを設定する手順については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。 また、[XCode からインポート] ウィザードで使うために、XCode プロジェクトをネットワーク経由で共有するか、Visual Studio コンピューターに移動する必要があります。  
   
 #### <a name="import-from-xcode"></a>XCode からのインポート  
@@ -29,7 +29,7 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
      ![インポートする XCode ターゲット プロジェクトを選択](../cross-platform/media/cppmdd_u2_importxcode_choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
   
-2.  **[プロジェクトを選択]** ウィンドウで、[参照] ボタンを選択して XCode の .pbxproj ファイルを選びます。 **[XCode プロジェクト ファイルの選択]** ダイアログでプロジェクト ファイルに移動し、**[開く]** を選択します。  
+2.  **[プロジェクトを選択]** ウィンドウで、[参照] ボタンを選択して XCode の *.pbxproj* ファイルを選びます。 **[XCode プロジェクト ファイルの選択]** ダイアログでプロジェクト ファイルに移動し、**[開く]** を選択します。  
   
      ![[XCode プロジェクト ファイルの選択] ダイアログでプロジェクト ファイルを選択](../cross-platform/media/cppmdd_u2_importxcode_browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
@@ -59,7 +59,7 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
      **[次へ]** を選択して続行します。  
   
-6.  **[フレームワーク]** ウィンドウでは、プロジェクトに対して参照と IntelliSense のために Visual Studio で使用されるパスを構成します。 これらのパスは、XCode プロジェクトによって参照される各フレームワークに対して、Visual Studio からアクセスできる必要があります。 ウィザードは、XCode プロジェクトのフレームワーク参照を確認し、Visual Studio からフレームワークを検索できるかどうかを表示します。 既にグローバル プロパティに設定してあるすべてのパスは、Visual Studio から検出できる必要があります。 例外は、フレームワーク リストに表示されます。 リストで X が付いているフレームワークごとに、Visual Studio がフレームワークを検索できるように、PC からアクセス可能なパスを指定してください。 参照ボタン [...] を使うと、**[フォルダーの選択]** ダイアログを使ってパスを検索できます。 フレームワークのパスは、ローカルのコピー、ネットワークでアクセスできる Mac 上の共有のいずれかを指定できます。  
+6.  **[フレームワーク]** ウィンドウでは、プロジェクトに対して参照と IntelliSense のために Visual Studio で使用されるパスを構成します。 これらのパスは、XCode プロジェクトによって参照される各フレームワークに対して、Visual Studio からアクセスできる必要があります。 ウィザードは、XCode プロジェクトのフレームワーク参照を確認し、Visual Studio からフレームワークを検索できるかどうかを表示します。 既にグローバル プロパティに設定してあるすべてのパスは、Visual Studio から検出できる必要があります。 例外は、フレームワーク リストに表示されます。 リストで X が付いているフレームワークごとに、Visual Studio がフレームワークを検索できるように、PC からアクセス可能なパスを指定してください。 参照ボタン **[...]** を使うと、**[フォルダーの選択]** ダイアログを使ってパスを検索できます。 フレームワークのパスは、ローカルのコピー、ネットワークでアクセスできる Mac 上の共有のいずれかを指定できます。  
   
      ![[XCode からインポート] の [フレームワーク] ウィンドウ](../cross-platform/media/cppmdd_u2_importxcode_frameworks.jpg "CPPMDD_U2_ImportXCode_Frameworks")  
   
@@ -67,12 +67,12 @@ Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロ
   
 7.  **[プロジェクト設定]** ウィンドウでは、ウィザードで作成した各プロジェクトのフレームワークとインクルード ヘッダー ファイルの検索パス設定を変更できます。 このウィンドウを使うと、グローバル設定とは異なるプロジェクト固有のパスを設定できます。  
   
-     特定のプロジェクトのパスを設定するには、**[宛先のプロジェクト]** ドロップダウンでプロジェクト ファイルを選択した後、**[フレームワークの検索パス]** および **[インクルードヘッダーの検索パス]** コントロールに値を設定します。 各コントロールの横にある参照ボタン [...] を使うと、**[フォルダーの選択]** ダイアログを使ってパスを検索できます。  
+     特定のプロジェクトのパスを設定するには、**[宛先のプロジェクト]** ドロップダウンでプロジェクト ファイルを選択した後、**[フレームワークの検索パス]** および **[インクルードヘッダーの検索パス]** コントロールに値を設定します。 各コントロールの横にある参照ボタン **[...]** を使うと、**[フォルダーの選択]** ダイアログを使ってパスを検索できます。  
   
      ![[XCode からインポート] の [プロジェクト] ウィンドウ](../cross-platform/media/cppmdd_u2_importxcode_projects.jpg "CPPMDD_U2_ImportXCode_Projects")  
   
-     この PC とペアリングされているリモート Mac がない場合は、[リモート コンピューターを構成] リンクが表示されます。 ペアリングを設定する手順については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。  
+     Visual Studio でこの PC とペアリングされているリモート Mac がない場合は、**[リモート コンピューターを構成]** リンクが表示されます。 ペアリングを設定する手順については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。  
   
      ウィザードの設定を使用して XCode プロジェクトをインポートするには、**[インポート]** を選択します。  
   
- [XCode からインポート] ウィザードによって、選択した XCode プロジェクト ターゲットに対応するプロジェクトが Visual Studio で作成されます。 他の C++ プロジェクトと共有できるコードは、別個の共有コード プロジェクトとスタティック ライブラリ プロジェクトに分割されます。 残りのコードは、iOS ライブラリ プロジェクトとアプリケーション プロジェクトに配置され、Visual Studio からリモートでビルドできます。 Visual Studio と XCode の間でコードを移動する方法の詳細については、「[XCode と Visual Studio 間の変更の同期](../cross-platform/sync-changes-between-xcode-and-visual-studio.md)」をご覧ください。
+ [XCode からインポート] ウィザードによって、選択した XCode プロジェクト ターゲットに対応するプロジェクトが Visual Studio で作成されます。 他の C++ プロジェクトと共有できるコードは、別個の共有コード プロジェクトとスタティック ライブラリ プロジェクトに分割されます。 残りのコードは、iOS ライブラリ プロジェクトとアプリケーション プロジェクトに配置され、Visual Studio からリモートでビルドできます。 Visual Studio と XCode の間でコードを移動する方法の詳細については、「[XCode と Visual Studio 間の変更の同期](../cross-platform/sync-changes-between-xcode-and-visual-studio.md)」を参照してください。

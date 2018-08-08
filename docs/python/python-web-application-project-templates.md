@@ -11,74 +11,74 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ce402b0df6521ac55942ded9615b6962640193c1
-ms.sourcegitcommit: 4ab232758d308bda742434beff8349a80c167890
+ms.openlocfilehash: 9edb2a87b862d6a779bb299a20a3f21c471067b0
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847766"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586548"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
-Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 これらのテンプレートには、必要な依存関係を宣言する `requirements.txt` が含まれています。 これらのテンプレートのいずれかを基にプロジェクトを作成する場合は、それらのパッケージをインストールするように Visual Studio から求められます (この記事で後述する「[プロジェクト要件をインストールする](#installing-project-requirements)」を参照してください)。
+Visual Studio の Python は、さまざまなフレームワークを処理するように構成できるプロジェクト テンプレートとデバッグ ランチャーにより、Bottle、Flask、Django などのフレームワークでの Web プロジェクトの開発をサポートします。 これらのテンプレートには、必要な依存関係を宣言する *requirements.txt* が含まれています。 これらのテンプレートのいずれかを基にプロジェクトを作成する場合は、それらのパッケージをインストールするように Visual Studio から求められます (この記事で後述する「[プロジェクト要件をインストールする](#install-project-requirements)」を参照してください)。
 
-Pyramid などの他のフレームワークには、汎用の "Web プロジェクト" テンプレートを使用できます。 この場合、フレームワークはテンプレートと一緒にインストールされません。 そのため、プロジェクトで使用する環境に必要なパッケージをインストールします ([Python 環境の管理](managing-python-environments-in-visual-studio.md)に関する記事をご覧ください)。
+Pyramid などの他のフレームワークには、汎用の **Web プロジェクト** テンプレートを使用できます。 この場合、フレームワークはテンプレートと一緒にインストールされません。 そのため、プロジェクトで使用する環境に必要なパッケージをインストールします ([Python 環境の管理](managing-python-environments-in-visual-studio.md)に関する記事を参照してください)。
 
 Python Web アプリを Azure にデプロイする方法については、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
-## <a name="using-a-project-template"></a>プロジェクト テンプレートの使用
+## <a name="use-a-project-template"></a>プロジェクト テンプレートを使用する
 
 テンプレートからプロジェクトを作成するには、**[ファイル]** > **[新規]** > **[プロジェクト]** の順に作成します。 Web プロジェクト用のテンプレートを表示するには、ダイアログ ボックスの左側で **[Python]** > **[Web]** の順に選択します。 プロジェクトとソリューションの名前を指定して必要なテンプレートを選択し、ソリューション ディレクトリと Git リポジトリのオプションを設定し、**[OK]** を選択します。
 
 ![Web アプリ用の新しいプロジェクト ダイアログ](media/projects-new-project-dialog-web.png)
 
-前述の汎用的な "Web プロジェクト" テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。 "Azure クラウド サービス" テンプレートの詳細については、「[Python 用 Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」 (python-azure-cloud-service-project-template.md) を参照してください。
+前述の汎用的な **Web プロジェクト** テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。 **Azure クラウド サービス** テンプレートの詳細については、「[Python 用 Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」を参照してください。
 
 その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、[Azure App Service にデプロイ](publishing-python-web-applications-to-azure-from-visual-studio.md)するために必要な [WSGI アプリ オブジェクト](http://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
 
 ### <a name="blank-group"></a>空白のグループ
 
-"空白 (フレームワーク) Web プロジェクト" テンプレートはいずれも、ほぼ最小限の定型コードと、`requirements.txt` ファイルに宣言されている必要な依存関係を使用してプロジェクトを作成します。
+**空の \<フレームワーク> Web プロジェクト** テンプレートはいずれも、ほぼ最小限の定型コードと、*requirements.txt* ファイルに宣言されている必要な依存関係を使用してプロジェクトを作成します。
 
 | テンプレート | 説明 |
 | --- | --- |
-| Blank Bottle Web プロジェクト | `/` に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `<name>` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `app.py` 内に生成します。 |
-| 空の Django Web プロジェクト | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と[Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事をご覧ください。 |
-| Blank Flask Web プロジェクト | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?context=visualstudio/python/default)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページもご覧ください。
+| **Blank Bottle Web プロジェクト** | *app.py* に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `/` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `<name>` 内に生成します。 |
+| **空の Django Web プロジェクト** | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事を参照してください。 |
+| **Blank Flask Web プロジェクト** | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?context=visualstudio/python/default)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
 
 ### <a name="web-group"></a>Web グループ
 
-"(フレームワーク) Web プロジェクト" テンプレートはいずれも、選択したフレームワークに関係なく同一の設計によるスタート Web アプリを作成します。 アプリにはホーム ページ、バージョン情報ページ、連絡先ページが含まれると共に、ナビゲーション バーとブートス トラップによる応答性に優れたデザインが使用されます。 各アプリはサーバーの静的ファイルに対して適切に構成され (CSS、JavaScript、フォント)、各アプリではフレームワークに適したページ テンプレート メカニズムが使用されます。
+**\<フレームワーク> Web プロジェクト** テンプレートはいずれも、選択したフレームワークに関係なく同一の設計によるスタート Web アプリを作成します。 アプリにはホーム ページ、バージョン情報ページ、連絡先ページが含まれると共に、ナビゲーション バーとブートス トラップによる応答性に優れたデザインが使用されます。 各アプリはサーバーの静的ファイルに対して適切に構成され (CSS、JavaScript、フォント)、各アプリではフレームワークに適したページ テンプレート メカニズムが使用されます。
 
 | テンプレート | 説明 |
 | --- | --- |
-| Bottle Web プロジェクト | 静的ファイルが `static` フォルダーに含まれていて、`app.py` 内のコードを通して処理されるアプリを生成します。 個々のページに対するルーティングは `routes.py` に含まれており、`views` フォルダーにはページのテンプレートが含まれています。|
-| Django Web プロジェクト | 3 つのページ、認証サポート、および SQLite データベース (データ モデルはなし) を使用して Django プロジェクトと Django アプリを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md) に関する記事と [Django 手順 4](learn-django-in-visual-studio-step-04-full-django-project-template.md) に関する記事をご覧ください。 |
-| Flask Web プロジェクト | 静的ファイルが `static` フォルダーに含まれていているアプリを生成します。 `views.py` 内のコードによってルーティングが処理され、Jinja エンジンを使用するページ テンプレートが `templates` に含まれています。 `runserver.py` ファイルはスタートアップ コードを提供します。 [Flask の詳細情報の手順 4](learn-flask-visual-studio-step-04-full-flask-project-template.md) に関する記事をご覧ください。 |
-| Flask/Jade Web プロジェクト | "Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
+| **Bottle Web プロジェクト** | 静的ファイルが *static* フォルダーに含まれていて、*app.py* 内のコードを通して処理されるアプリを生成します。 個々のページに対するルーティングは *routes.py* に含まれており、*views* フォルダーにはページのテンプレートが含まれています。|
+| **Django Web プロジェクト** | 3 つのページ、認証サポート、および SQLite データベース (データ モデルはなし) を使用して Django プロジェクトと Django アプリを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 4](learn-django-in-visual-studio-step-04-full-django-project-template.md) に関する記事を参照してください。 |
+| **Flask Web プロジェクト** | 静的ファイルが *static* フォルダーに含まれていているアプリを生成します。 *views.py* 内のコードによってルーティングが処理され、Jinja エンジンを使用するページ テンプレートが *templates* に含まれています。 *runserver.py* ファイルはスタートアップ コードを提供します。 [Flask の詳細情報の手順 4](learn-flask-visual-studio-step-04-full-flask-project-template.md) に関するページを参照してください。 |
+| **Flask/Jade Web プロジェクト** | **Flask Web プロジェクト** テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
 
 ### <a name="polls-group"></a>ポーリング グループ
 
-"ポーリング (フレームワーク) Web プロジェクト" テンプレートは、さまざまなポーリングの質問に対してユーザーが投票するために使用するスタート Web アプリを作成します。 各アプリは、"Web"プロジェクト テンプレートの構造に基づいてビルドされ、データベースを使用してポーリングとユーザー応答を管理します。 アプリには適切なデータ モデルと、`samples.json` ファイルからポーリングを読み込む特殊なアプリ ページ ("/seed") とが含まれています。
+**ポーリング \<フレームワーク> Web プロジェクト** テンプレートは、さまざまなポーリングの質問に対してユーザーが投票するために使用するスタート Web アプリを作成します。 各アプリは、**Web** プロジェクト テンプレートの構造に基づいてビルドされ、データベースを使用してポーリングとユーザー応答を管理します。 アプリには適切なデータ モデルと、*samples.json* ファイルからポーリングを読み込む特殊なアプリ ページ ("/seed") とが含まれています。
 
 | テンプレート | 説明 |
 | --- | --- |
-| Polls Bottle Web プロジェクト | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは `models` フォルダーに含まれ、`settings.py` ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 |
-| ポーリング Django Web プロジェクト | 3 つのページと SQLite データベースを使用して Django プロジェクトと Django アプリを生成します。 認証された管理者がポーリングを作成および管理できるように、Django 管理インターフェイスにカスタマイズを含めます。 詳細については、[Django テンプレート](python-django-web-application-project-template.md) に関する記事と [Django 手順 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md) に関する記事をご覧ください。 |
-| Polls Flask Web プロジェクト | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは `models` フォルダーに含まれ、`settings.py` ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 アプリでは、ページ テンプレートに対して Jinja エンジンが使用されます。 [Flask の詳細情報の手順 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md) に関する記事をご覧ください。 |
-| Polls Flask/Jade Web プロジェクト | "Polls Flask Web プロジェクト" テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
+| **Polls Bottle Web プロジェクト** | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは *models* フォルダーに含まれ、*settings.py* ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 |
+| **ポーリング Django Web プロジェクト** | 3 つのページと SQLite データベースを使用して Django プロジェクトと Django アプリを生成します。 認証された管理者がポーリングを作成および管理できるように、Django 管理インターフェイスにカスタマイズを含めます。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 6](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md) に関する記事を参照してください。 |
+| **Polls Flask Web プロジェクト** | `REPOSITORY_NAME` 環境変数を使用して構成されるメモリ内データベース、MongoDB、または Azure テーブル ストレージに対して実行できるアプリを生成します。 データ モデルとデータ ストア コードは *models* フォルダーに含まれ、*settings.py* ファイルには、どのデータ ストアを使用するかを決定するコードが含まれます。 アプリでは、ページ テンプレートに対して Jinja エンジンが使用されます。 [Flask の詳細情報の手順 5](learn-flask-visual-studio-step-05-polls-flask-web-project-template.md) に関するページを参照してください。 |
+| **Polls Flask/Jade Web プロジェクト** | **Polls Flask Web プロジェクト** テンプレートの場合と同じアプリを、Jinja テンプレート エンジン用の Jade 拡張を使用して生成します。 |
 
-## <a name="installing-project-requirements"></a>プロジェクト要件をインストールする
+## <a name="install-project-requirements"></a>プロジェクト要件をインストールする
 
-フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](selecting-a-python-environment-for-a-project.md#using-virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
+フレームワーク固有のテンプレートからプロジェクトを作成する場合、pip を使用して必要なパッケージをインストールするためのダイアログが表示されます。 Web プロジェクトの[仮想環境](selecting-a-python-environment-for-a-project.md#use-virtual-environments)を使用して、Web サイトのパブリッシュ時に正しい依存関係が含まれるようにすることもお勧めします。
 
 ![プロジェクト テンプレートに必要なパッケージをインストールするダイアログ](media/template-web-requirements-txt-wizard.png)
 
-ソース管理を使用している場合、仮想環境は `requirements.txt` でしか再作成できないので、仮想環境フォルダーは通常は省略されます。 そのフォルダーを除外する最善の方法としては、上に示したプロンプト内で **[I will install them myself]\(自分でインストールする\)**  を選択して、仮想環境を作成する前に自動コミットを無効にします。 詳細については、[Django のチュートリアル - 手順 1-2 および手順 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページと [Flask のチュートリアル - 手順 1-2 および手順 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページをご覧ください。
+ソース管理を使用している場合、仮想環境は *requirements.txt* でしか再作成できないので、仮想環境フォルダーは通常は省略されます。 そのフォルダーを除外する最善の方法としては、上に示したプロンプト内で **[I will install them myself]\(自分でインストールする\)**  を選択して、仮想環境を作成する前に自動コミットを無効にします。 詳細については、[Django のチュートリアル - 手順 1-2 および手順 1-3](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページと [Flask のチュートリアル - 手順 1-2 および手順 1-3](learn-flask-visual-studio-step-01-project-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository) に関するページを参照してください。
 
-Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに `requirements.txt` ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
+Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](https://aka.ms/PythonOnAppService)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに *requirements.txt* ファイルからパッケージを自動的にインストール**しない**ため、[aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService) の構成の詳細に従ってください。
 
-Microsoft Azure Cloud Services は `requirements.txt` ファイルをサポート*します*。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事をご覧ください。
+Microsoft Azure Cloud Services は *requirements.txt* ファイルをサポート*します*。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事をご覧ください。
 
 ## <a name="debugging"></a>デバッグ
 
@@ -92,17 +92,17 @@ Web プロジェクトのデバッグが開始されると、Visual Studio は�
 - **[起動 URL]**: ブラウザーで開かれる URL を指定します。 既定値は `localhost` です。
 - **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 この設定により、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値をオーバーライドできます。
 
-**[Run Server Command (サーバー コマンドの実行)]** と **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ (後者はイメージに表示されている内容の下にあります) のプロパティによって、Web サーバーの起動方法が決定されます。 多くのフレームワークでは、現在のプロジェクトの外部のスクリプトを使用する必要があるため、スクリプトをここで構成でき、スタートアップ モジュールの名前をパラメーターとして渡すことができます。
+**[サーバー コマンドの実行]** と **[サーバー コマンドのデバッグ]** グループ (後者はイメージに表示されている内容の下にあります) のプロパティによって、Web サーバーの起動方法が決定されます。 多くのフレームワークでは、現在のプロジェクトの外部のスクリプトを使用する必要があるため、スクリプトをここで構成でき、スタートアップ モジュールの名前をパラメーターとして渡すことができます。
 
-- **[コマンド]**: Python スクリプト (`*.py` ファイル)、モジュール名 (`python.exe -m module_name` など)、または 1 行のコード (`python.exe -c "code"` など) にすることができます。 ドロップダウンの値は、これらの種類のどれが対象であるかを示します。
+- **[コマンド]**: Python スクリプト (*\*.py* ファイル)、モジュール名 (`python.exe -m module_name` など)、または 1 行のコード (`python.exe -c "code"` など) にすることができます。 ドロップダウンの値は、これらの種類のどれが対象であるかを示します。
 - **[引数]**: これらの引数は、コマンド ラインでコマンドに続いて渡されます。
-- **[環境]**: 環境変数を指定する `NAME=VALUE` ペアの改行区切りリスト。 これらの変数は、ポート番号や検索パスなど、環境を変更できるすべてのプロパティの後に設定されるため、これらの値を上書きできます。
+- **[環境]**: 環境変数を指定する \<NAME>=\<VALUE> ペアの改行区切りリスト。 これらの変数は、ポート番号や検索パスなど、環境を変更できるすべてのプロパティの後に設定されるため、これらの値を上書きできます。
 
 MSBuild 構文を使用して任意のプロジェクト プロパティまたは環境変数を指定できます。例: `$(StartupFile) --port $(SERVER_PORT)`。
 `$(StartupFile)` はスタートアップ ファイルの相対パスで、`{StartupModule}` はスタートアップ ファイルのインポート可能な名前です。 `$(SERVER_HOST)` と `$(SERVER_PORT)` は、**[起動 URL]** プロパティと **[ポート番号]** プロパティによって自動的に設定されるか、**[環境]** プロパティによって設定される通常の環境変数です。
 
 > [!Note]
-> **[Run Server Command (サーバー コマンドの実行)]** の値は、**[デバッグ] > [サーバーを起動します]** コマンドまたは Ctrl+F5 で使用されます。**[Debug Server Command (サーバー コマンドのデバッグ)]** グループは、**[デバッグ] > [Start Debug Server (デバッグ サーバーの起動)]** コマンドまたは F5 キーをで使用されます。
+> **[サーバー コマンドの実行]** の値は、**[デバッグ]** > **[サーバーを起動します]** コマンドまたは **Ctrl** + **F5** キーで使用されます。**[サーバー コマンドのデバッグ]** グループは、**[デバッグ]** > **[デバッグ サーバーの開始]** コマンドまたは **F5** キーで使用されます。
 
 ### <a name="sample-bottle-configuration"></a>サンプルの Bottle 構成
 
@@ -120,10 +120,10 @@ MSBuild 構文を使用して任意のプロジェクト プロパティまた�
 
 ### <a name="sample-pyramid-configuration"></a>サンプルの Pyramid 構成
 
-Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[From Existing Python Code (既存の Python コードから)](managing-python-projects-in-visual-studio.md#creating-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
+Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使用して作成するのが最適です。 アプリが作成されたら、[**[既存の Python コードから]**](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) テンプレートを使用してインポートできます。 その後、**[汎用 Web プロジェクト]** カスタマイズを選択してオプションを構成します。 これらの設定は、Pyramid が `..\env` にある仮想環境にインストールされていることを想定しています。
 
 - **[デバッグ]** グループ:
-  - **[サーバー ポート]**: 6543 (または .ini ファイルで構成されているポート)
+  - **[サーバー ポート]**: 6543 (または *.ini* ファイルで構成されているポート)
 
 - **[Run Server Command (サーバー コマンドの実行)]** グループ:
   - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)
@@ -142,11 +142,11 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 ## <a name="convert-a-project-to-azure-cloud-service"></a>プロジェクトを Azure クラウド サービス プロジェクトに変換する
 
-**[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、Cloud Services にデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事をご覧ください。
+**[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、Cloud Services にデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事を参照してください。
 
 ![[Microsoft Azure クラウド サービス プロジェクトに変換] コマンド](media/template-web-convert-menu.png)
 
 ## <a name="see-also"></a>関連項目
 
 - [Python 項目テンプレートのリファレンス](python-item-templates.md)
-- [Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)

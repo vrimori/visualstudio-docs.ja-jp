@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: fbb815dc17e8b71efcefee8410faa01df0914e35
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: b0204a8e86d110fe30240b11b6323c31e79fb841
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34692357"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382739"
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>テスト用に UWP コントロールの一意のオートメーション プロパティを設定する
 
@@ -48,13 +48,13 @@ XAML ファイルに定義されているコントロールに一意のオート
 
 コントロールの XAML で **AutomationProperties.Name** を **ButtonY** に明示的に設定します。
 
-```
+```xaml
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
 ## <a name="assign-unique-names"></a>一意の名前を割り当てる
 
-Blend for Visual Studio では、ボタン、リスト ボックス、コンボ ボックス、テキスト ボックスなど、対話型要素に一意の名前を割り当てるオプションを選択することができます。 これにより、コントロールの **AutomationProperties.Name** に一意の値が割り当てられます。
+Blend for Visual Studio では、ボタン、リスト ボックス、コンボ ボックス、テキスト ボックスなど、対話型要素に一意の名前を割り当てるオプションを選択することができます。これにより、コントロールの **AutomationProperties.Name** に一意の値が割り当てられます。
 
 既存のコントロールに一意の名前を割り当てるには、**[ツール]** > **[対話型要素に名前を付ける]** の順に選択します。
 

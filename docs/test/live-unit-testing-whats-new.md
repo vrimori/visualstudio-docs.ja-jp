@@ -12,12 +12,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e6e0a812839dac9ad8962e12a610a82cb56a1fc
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4f3324d12d4bfc82e7980a690853b78321215205
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974781"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586500"
 ---
 # <a name="whats-new-in-live-unit-testing"></a>Live Unit Testing の新機能
 
@@ -39,7 +39,7 @@ Visual Studio 2017 バージョン 15.4 以降の Live Unit Testing には、さ
 
 - **信頼性とパフォーマンス**: Live Unit Testing では、プロジェクトが完全に読み込まれていないとき、Live Unit Testing のクラッシュを回避できるように、システムでそれがより検出されることが保証されるようになりました。 ビルドのパフォーマンスも向上しており、それにより、プロジェクト ファイルで何も変更されていないことをシステムが知っている場合に MSBuild プロジェクトの再評価が行わないようになりました。  
 
-- **その他のユーザー インターフェイスの強化**: 右クリック ジェスチャのわかりにくい **[Live Test Set – Include/Exclude]\(ライブ テスト セット – 必要/必要なし\)** オプションが **[Live Unit Testing Include/Exclude]\(Live Unit Testing 必要/必要なし\)** に名前変更になりました。 **[テスト]**、**[Live Unit Testing]** メニューの **[Reset clean]\(クリーンのリセット\)** オプションが削除されました。 これには、現在、**[ツール]**、**[オプション]**、**[Live Unit Testing]** を選択して **[Delete Persisted Data]\(永続データの削除\)** を選択してアクセスできます。
+- **その他のユーザー インターフェイスの強化**: 右クリック ジェスチャのわかりにくい **[Live Test Set – Include/Exclude]\(ライブ テスト セット – 必要/必要なし\)** オプションが **[Live Unit Testing Include/Exclude]\(Live Unit Testing 必要/必要なし\)** に名前変更になりました。 **[テスト]** > **[Live Unit Testing]** メニューの **[Reset clean]\(クリーンのリセット\)** オプションが削除されました。 これには、現在、**[ツール]** > **[オプション]** > **[Live Unit Testing]** の順に選択し、**[Delete Persisted Data]\(永続データの削除\)** を選択してアクセスできます。
 
 ## <a name="whats-new-in-live-unit-testing-for-visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3 の Live Unit Testing の新機能
 
@@ -65,6 +65,6 @@ Visual Studio 2017 バージョン 15.3 以降、Live Unit Testing 機能は、�
    - MSTest の場合: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
 ## <a name="see-also"></a>関連項目
-[Live Unit Testing の概要](live-unit-testing-intro.md)   
-[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md)
+- [Live Unit Testing の概要](live-unit-testing-intro.md)   
+- [Visual Studio 2017 での Live Unit Testing](live-unit-testing.md)
 

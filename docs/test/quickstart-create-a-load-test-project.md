@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7838b9b04aa8d95fa9476cf9720815ccb5bed122
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 8b18a80e8279513db6084852b10568b2327700d5
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176698"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380498"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>クイック スタート: ロード テスト プロジェクトを作成する
 
@@ -27,9 +27,9 @@ ms.locfileid: "39176698"
 
 Web パフォーマンスとロード テスト ツール コンポーネントをまだインストールしていない場合、Visual Studio インストーラーでインストールする必要があります。
 
-1. Windows の [スタート] メニューから Visual Studio インストーラーを開きます。 このインストーラーには Visual Studio の **[新しいプロジェクト]** ダイアログ ボックスからアクセスしたり、メニュー バーで **[ツール]** > **[ツールと機能を取得]** の順に選択してアクセスしたりすることもできます。
+1. Windows の **[スタート]** メニューから **Visual Studio インストーラー**を開きます。 このインストーラーには Visual Studio の **[新しいプロジェクト]** ダイアログ ボックスからアクセスしたり、メニュー バーで **[ツール]** > **[ツールと機能を取得]** の順に選択してアクセスしたりすることもできます。
 
-1. Visual Studio インストーラーで **[個々のコンポーネント]** タブを選択し、下にスクロールして **[デバッグとテスト]** セクションを表示します。 **[Web パフォーマンスとロード テスト ツール]** を選択します。
+1. **Visual Studio インストーラー**で **[個々のコンポーネント]** タブを選択し、下にスクロールして **[デバッグとテスト]** セクションを表示します。 **[Web パフォーマンスとロード テスト ツール]** を選択します。
 
    ![Web パフォーマンスとロード テスト ツール コンポーネント](media/web-perf-load-testing-tools-component.png)
 

@@ -13,18 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e1eb6a5218f9d9ea7c853733690922846443ed4c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f5f13915d248ff59e7a3ca1bde8ad4ee92c201e
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31976742"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380359"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>ロード テストの結果リポジトリ内のロード テスト結果の管理
 
 ロード テストを実行すると、ロード テストの実行中に収集されたすべての情報は、*ロード テストの結果リポジトリ*と呼ばれる SQL データベースに保存されます。 ロード テストの結果リポジトリには、パフォーマンス カウンター データおよび記録されたエラーに関するすべての情報が含まれます。 結果リポジトリ データベースは、コントローラーのセットアップによって作成されるか、ロード テストを最初にローカルで実行したときに自動的に作成されます。 ローカルで実行する場合、ロード テスト スキーマが存在しなければ、データベースは自動的に作成されます。
 
- コントローラーの結果リポジトリの接続文字列を変更して別のサーバーを使用する場合は、新しいサーバーでスキーマを作成するために、loadtestresultsrepository.sql スクリプトを実行する必要があります。
+ コントローラーの結果リポジトリの接続文字列を変更して別のサーバーを使用する場合は、新しいサーバーでスキーマを作成するために、*loadtestresultsrepository.sql* スクリプトを実行する必要があります。
 
  Visual Studio Enterprise には、テクノロジに基づいて一般的なパフォーマンス カウンターを収集する名前付きカウンター セットが用意されています。 これらのセットは、IIS サーバー、ASP.NET サーバー、または SQL サーバーを分析する場合に役立ちます。 カウンター セットで収集されたすべてのデータは、ロード テストの結果リポジトリに保存されます。
 
@@ -54,7 +54,7 @@ ms.locfileid: "31976742"
 
  [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 
- 実行中のロード テストと完了したロード テストの結果はロード テスト アナライザーを使用して表示できます。
+ 実行中のロード テストの結果と完了したロード テストの結果は両方とも**ロード テスト アナライザー**を使用して表示できます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -13,17 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0de562e1000c7c1fe8976252c046b27f4751b871
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 2552dec4e564b42d2044ce0d9da51ebfb8913901
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382679"
 ---
-# <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル : データ ソースを定義するための構成ファイルの使用
+# <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>チュートリアル: データ ソースを定義するための構成ファイルの使用
 
-このチュートリアルでは、単体テスト用に *app.config* ファイルで定義されたデータ ソースを使用する方法について説明します。 ここでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する app.config ファイルの作成方法を学習します。 このチュートリアルでは、次のタスクについて説明します。
+このチュートリアルでは、単体テスト用に *app.config* ファイルで定義されたデータ ソースを使用する方法について説明します。 ここでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> クラスで使用できるデータ ソースを定義する *app.config* ファイルの作成方法を学習します。 このチュートリアルでは、次のタスクについて説明します。
 
-- app.Config ファイルを作成する。
+- *app.config* ファイルを作成する。
 
 - カスタム構成セクションを定義する。
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="add-an-appconfig-file-to-the-project"></a>app.config ファイルをプロジェクトに追加する
 
-1. テスト プロジェクトに既に app.config ファイルが存在する場合は、「[カスタム構成セクションの定義](#DefineCustomConfigurationSection)」に進みます。
+1. テスト プロジェクトに既に *app.config* ファイルが存在する場合は、「[カスタム構成セクションを定義する](#define-a-custom-configuration-section)」に進みます。
 
 2. **ソリューション エクスプローラー**で、テスト プロジェクトを右クリックし、**[追加]** > **[新しい項目]** の順に選択します。
 
@@ -53,13 +54,13 @@ ms.lasthandoff: 05/03/2018
 
 3. **[アプリケーション構成ファイル]** テンプレートを選択し、**[追加]** をクリックします。
 
-##  <a name="DefineCustomConfigurationSection"></a> カスタム構成セクションを定義する
+##  <a name="define-a-custom-configuration-section"></a>カスタム構成セクションを定義する
 
 *app.config* ファイルを確認します。 少なくとも XML 宣言とルート要素が含まれています。
 
 ### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>app.config ファイルにカスタム構成セクションを追加するには
 
-1. app.config のルート要素は **configuration** 要素である必要があります。 **configuration** 要素内に **configSections** 要素を作成します。 **configSections** は、*app.config* ファイル内で最初の要素である必要があります。
+1. *app.config* のルート要素は **configuration** 要素である必要があります。 **configuration** 要素内に **configSections** 要素を作成します。 **configSections** は、*app.config* ファイル内で最初の要素である必要があります。
 
 2. **configSections** 要素内に **section** 要素を作成します。
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 
 **section** 要素は次のようになります。
 
-```
+```xml
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
 ```
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
 
 2 つ目の **add** 要素には、Microsoft Excel スプレッドシートに接続するための次の属性と値を作成します。
 
-|||
+|属性|値|
 |-|-|
 |`name`|`"MyExcelConn"`|
 |`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/03/2018
 
 **connectionStrings** 要素は次のようになります。
 
-```
+```xml
 <connectionStrings>
     <add name="MyJetConn" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;" providerName="System.Data.OleDb" />
     <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
@@ -142,7 +143,7 @@ ms.lasthandoff: 05/03/2018
 
 2 つ目の **add** 要素には、Microsoft Excel データ ソース用の次の属性と値を作成します。
 
-|||
+|属性|値|
 |-|-|
 |`Name`|`"MyExcelDataSource"`|
 |`connectionString`|`"MyExcelConn"`|
@@ -183,9 +184,9 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="create-a-unit-test-that-uses-data-sources-defined-in-appconfig"></a>app.config で定義したデータ ソースを使用する単体テストを作成する
 
-app.config ファイルの定義が完了したところで、app.config ファイルで定義されているデータ ソース内にあるデータを使用する単体テストを作成します。 このセクションでは、次のタスクを実行します。
+*app.config* ファイルの定義が完了したところで、*app.config* ファイルで定義されているデータ ソース内にあるデータを使用する単体テストを作成します。 このセクションでは、次のタスクを実行します。
 
-- app.config ファイルにあるデータ ソースを作成する。
+- *app.config* ファイルにあるデータ ソースを作成する。
 
 - 各データ ソースの値を比較する 2 つのテスト メソッド内のデータ ソースを使用する。
 
@@ -261,7 +262,7 @@ app.config ファイルの定義が完了したところで、app.config ファ�
     }
     ```
 
-3. DataSource 属性を確認します。 app.config ファイルの設定名に注意してください。
+3. DataSource 属性を確認します。 *app.config* ファイルの設定名に注意してください。
 
 4. ソリューションをビルドして、MyTestMethod テストと MyTestMethod2 テストを実行します。
 
@@ -271,4 +272,4 @@ app.config ファイルの定義が完了したところで、app.config ファ�
 ## <a name="see-also"></a>関連項目
 
 - [コードの単体テスト](../test/unit-test-your-code.md)
-- [方法: データドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)
+- [方法: データ ドリブン単体テストを作成する](../test/how-to-create-a-data-driven-unit-test.md)

@@ -9,12 +9,12 @@ ms.author: mblome
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cca918309c0febb7b9c86b214d459a6bc8e37be
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: eebefa7b4033de5acec313e241d13cddab7120fa
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945485"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380451"
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio で C++ 用の Boost.Test を使用する方法
 
@@ -42,7 +42,7 @@ Boost.Test には [Boost](http://www.boost.org/) が必要です。 Boost がイ
 
 ## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>項目テンプレートを追加する (Visual Studio 2017 バージョン 15.6)
 
-1. テスト用の .cpp ファイルを追加するには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[新しい項目の追加]** を選択します。
+1. テスト用の *.cpp* ファイルを追加するには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[新しい項目の追加]** を選択します。
 
    ![Boost.Test 項目テンプレート](media/boost_test_item_template.png)
 
@@ -59,7 +59,8 @@ Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる�
 1. 左側のウィンドウで **[Visual C++]** > **[Windows デスクトップ]** を選んだ後、**[Windows コンソール アプリケーション]** テンプレートを選択します。
 
 1. プロジェクト名を設定し、**[OK]** を選択します。
-1. .cpp ファイル内の `main` 関数を削除します。
+
+1. *.cpp* ファイル内の `main` 関数を削除します。
 
 1. Boost.Test の単一ヘッダーまたは動的ライブラリ バージョンを使用している場合は、「[インクルード ディレクティブを追加する](#add-include-directives)」に進みます。 スタティック ライブラリ バージョンを使用している場合は、追加の構成を実行する必要があります。
 
@@ -74,19 +75,19 @@ Visual Studio 2017 バージョン 15.5 には、Boost.Test に利用できる�
         <VcpkgEnabled>true</VcpkgEnabled>
     </PropertyGroup>
     ```
-   c. \*.vcxproj ファイルを保存して閉じた後、プロジェクトをリロードします。
+   c. *\*.vcxproj* ファイルを保存して閉じた後、プロジェクトをリロードします。
 
    d. **プロパティ ページ**を開くには、プロジェクト ノードを右クリックして、**[プロパティ]** を選択します。
 
    d. **[C/C++]** > **[コード生成]** の順に展開し、**[ランタイム ライブラリ]** を選択します。 スタティック ランタイム ライブラリをデバッグする場合は **/MTd** を、スタティック ランタイム ライブラリをリリースする場合は **/MT** を選択します。
 
-   f. **[リンカー] > [システム]** を展開します。 **[サブシステム]** が **[コンソール]** に設定されていることを確認します。
+   f. **[リンカー]** > **[システム]** の順に展開します。 **[サブシステム]** が **[コンソール]** に設定されていることを確認します。
 
    g. **[OK]** を選んで、プロパティ ページを閉じます。
 
 ## <a name="add-include-directives"></a>インクルード ディレクティブを追加する
 
-1. テストの .cpp ファイルで、必要な `#include` ディレクティブを追加して、プログラムの型と関数がテスト コードに認識されるようにします。 通常、プログラムはフォルダー階層で 1 つ上のレベルです。 「`#include "../"`」と入力すると IntelliSense ウィンドウが表示され、ヘッダー ファイルへの完全パスを選択できます。
+1. テストの *.cpp* ファイルで、必要な `#include` ディレクティブを追加して、プログラムの型と関数がテスト コードに認識されるようにします。 通常、プログラムはフォルダー階層で 1 つ上のレベルです。 「`#include "../"`」と入力すると IntelliSense ウィンドウが表示され、ヘッダー ファイルへの完全パスを選択できます。
 
    ![#include ディレクティブを追加する](media/cpp-gtest-includes.png)
 
@@ -124,7 +125,9 @@ BOOST_AUTO_TEST_CASE(my_boost_test)
 ```
 
 ## <a name="write-and-run-tests"></a>テストを作成して実行する
+
 Boost テストを作成して実行する準備が整いました。 テスト マクロについては、[Boost Test ライブラリのドキュメント](http://www.boost.org/doc/libs/release/libs/test/doc/html/index.html)をご覧ください。 **テスト エクスプローラー**を使ってテストを検出、実行、グループ化する方法については、「[テスト エクスプローラーを使用して単体テストを実行する](run-unit-tests-with-test-explorer.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
-[C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)
+
+- [C/C++ 用の単体テストの記述](writing-unit-tests-for-c-cpp.md)

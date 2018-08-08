@@ -11,12 +11,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: f9f233b5f43555f86f0a49c5e5853cad6d7456b1
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 2a8851a48d1629b5324d0eb7615c2f2c9f2719e0
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924425"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251856"
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
 
@@ -55,11 +55,11 @@ ms.locfileid: "37924425"
 
     テンプレートがない場合は、Xamarin をインストールするか、Visual Studio 2017 の機能を有効にする必要があります。 「[セットアップとインストール](../cross-platform/setup-and-install.md)」を参照してください。
 
-2.  [OK] をクリックした後、オプションをいくつか選択することがあります。 **[空のアプリ]** と **[.NET Standard]** を選択します。
+2.  **[OK]** をクリックした後、オプションをいくつか選択することがあります。 **[空のアプリ]** と **[.NET Standard]** を選択します。
 
     ![クロスプラットフォーム アプリ プロジェクトの新規作成](../cross-platform/media/crossplat-xamarin-formsguide-3.png "CrossPlat Xamarin FormsGuide 3")
 
-3.  [OK] をクリックしてソリューションを作成すると、4 つのプロジェクトを含むソリューションが与えられます。
+3.  **[OK]** をクリックしてソリューションを作成すると、4 つのプロジェクトを含むソリューションが与えられます。
 
     -   **WeatherApp**: Xamarin.Forms を使用する共通のビジネス ロジックと UI コードを含む、プラットフォーム間で共有されるコードの記述先である .NET Standard ライブラリ。
 
@@ -118,7 +118,7 @@ ms.locfileid: "37924425"
 
 1.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。
 
-2.  **Weather.cs** の内容全体を次のコードで置き換えます。
+2.  *Weather.cs* の内容全体を次のコードで置き換えます。
 
     ```csharp
     namespace WeatherApp
@@ -274,7 +274,7 @@ Xamarin.Forms を使用すると、.NET Standard ライブラリに共有 UI コ
     }
     ```
 
-4.  アプリの起動時に **WeatherPage** を最初の画面として開くには、**App.xaml.cs** の既定のコンストラクターを次のコードで置き換えます。
+4.  アプリの起動時に **WeatherPage** を最初の画面として開くには、*App.xaml.cs* の既定のコンストラクターを次のコードで置き換えます。
 
     ```csharp
     public App()
@@ -406,7 +406,7 @@ Xamarin.Forms は各プラットフォームのネイティブ UI コントロ�
 
      ここでは示されていませんが、XAML ファイルの `OnPlatform` タグを使用すると、アプリが実行されている現在のプラットフォームに固有のプロパティ値を選択できます ([基本的な XAML 構文](/xamarin/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax/)に関するページを参照してください)。分離コード ファイルでは、[`Device.iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/)、[`Device.Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/)、[`Device.UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/) という名前で [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) クラスに定義されている定数と、[`Device.RuntimePlatform`](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) プロパティを比較することで、アプリケーションが実行されているプラットフォームを判断できます。
 
-2.  **WeatherPage.xaml.cs** で、`GetWeatherBtn_Clicked` イベント ハンドラーを次のコードで置き換えます。 このコードによって、入力フィールドに郵便番号が入っていることが確認され、その郵便番号を対象とするデータが取得されます。 次に、結果的に生成された `Weather` インスタンスにページ全体のバインディング コンテキストが設定されます。 最後にボタンのテキストが "Search Again" に設定されます。 UI の各ラベルは、`Weather` クラスのプロパティにバインドされます。 画面のバインディング コンテンツを `Weather` インスタンスに設定すると、バインドされているラベルが自動的に更新されます。
+2.  *WeatherPage.xaml.cs* で、`GetWeatherBtn_Clicked` イベント ハンドラーを次のコードで置き換えます。 このコードによって、入力フィールドに郵便番号が入っていることが確認され、その郵便番号を対象とするデータが取得されます。 次に、結果的に生成された `Weather` インスタンスにページ全体のバインディング コンテキストが設定されます。 最後にボタンのテキストが "Search Again" に設定されます。 UI の各ラベルは、`Weather` クラスのプロパティにバインドされます。 画面のバインディング コンテンツを `Weather` インスタンスに設定すると、バインドされているラベルが自動的に更新されます。
 
     ```csharp
     private async void GetWeatherBtn_Clicked(object sender, EventArgs e)

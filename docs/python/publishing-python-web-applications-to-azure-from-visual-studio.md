@@ -1,7 +1,7 @@
 ---
 title: Azure App Service への Python アプリの発行
 description: web.config ファイルに必要な内容など、Visual Studio から Azure App Service に直接 Python Web アプリケーションを発行する方法を説明します。
-ms.date: 09/27/2017
+ms.date: 07/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,14 +12,17 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: e28d306ede93cc4552e085e07e5ac5e977158386
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 249774da4ef088ae1f8a0b11c932d7ed92d1bcde
+ms.sourcegitcommit: e6ef03cc415ca67f75fd1f26e0e7b8846857166d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32032243"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310099"
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service への発行
+
+> [!Important]
+> Linux の Azure App Service への Python アプリのデプロイは、現在 Visual Studio ではサポートされていません。 Microsoft では、Windows の App Service でも Python を廃止する予定です。 新しい情報は、ご利用可能になり次第この記事で公開します。 その間、コンテナーを使用して Linux の App Service に展開することが可能です。 詳細については、「[Deploy a Python web app in Web App for Containers](/azure/app-service/containers/quickstart-python)」 (Web App for Containers に Python Web アプリを展開する) を参照してください。
 
 Visual Studio には、Azure App Service に Python Web アプリを発行する機能が用意されています。 Azure App Service に発行することは、サーバーに必要なファイルをコピーし、アプリの起動方法を Web サーバーに指示する適切な `web.config` ファイルを設定することを意味します。
 

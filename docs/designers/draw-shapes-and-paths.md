@@ -10,31 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f19cbb3a86a45d0c6732435e08ffae408631c57
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 97172253a088be86f20fae77fe62d01330a3b801
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923950"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513098"
 ---
 # <a name="draw-shapes-and-paths"></a>図形とパスの描画
+
 XAML デザイナーでは、"*図形*" とはその名の示すとおりのものです。 たとえば、四角形、円、楕円などです。 *パス* は、より柔軟なバージョンの図形です。 図形の形状を変更したり、図形を結合して新しい図形を形成するといった操作ができます。
 
- 図形とパスではベクター グラフィックスを使用するため、高解像度表示に対応して拡大縮小できます。 ベクター グラフィックスの詳細については、 [ベクター グラフィックスに関するビデオ](https://www.youtube.com/watch?v=MoCSwF0n-io) や [ベクター グラフィックスに関するページ](http://www.webopedia.com/TERM/V/vector_graphics.html)を参照してください。
-
- **このトピックの内容**
-
--   [図形の描画](#Shape)
-
--   [パスの描画](#Path)
-
--   [図形のパスへの変換](#Convert)
-
--   [パスの結合](#Combine)
-
--   [複合パスの作成](#Compound)
-
--   [クリッピング パスの作成](#Clipping)
+図形とパスではベクター グラフィックスを使用するため、高解像度表示に対応して拡大縮小できます。 ベクター グラフィックスの詳細については、 [ベクター グラフィックスに関するビデオ](https://www.youtube.com/watch?v=MoCSwF0n-io) や [ベクター グラフィックスに関するページ](http://www.webopedia.com/TERM/V/vector_graphics.html)を参照してください。
 
 ##  <a name="Shape"></a> 図形の描画
  図形は **[アセット]** パネルにあります。

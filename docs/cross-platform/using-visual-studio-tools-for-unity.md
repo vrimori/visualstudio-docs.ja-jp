@@ -10,18 +10,18 @@ ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d1c68db8282a74ce230d573450a359060bb0d12c
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 84a665a39c9cfa9e0eee030d7bf4fdb9b3194bc1
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39155582"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251719"
 ---
-# <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
+# <a name="use-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 
 このセクションでは、Visual Studio Tools for Unity の統合と生産性の機能の使用法、および Unity 開発における Visual Studio デバッガーの使用法について取り上げます。
 
-## <a name="opening-unity-scripts-in-visual-studio"></a>Visual Studio で Unity スクリプトを開く
+## <a name="open-unity-scripts-in-visual-studio"></a>Visual Studio で Unity スクリプトを開く
 
 Visual Studio を [Unity の外部スクリプト エディターとして設定](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-for-use-with-visual-studio)した後、Unity エディターからスクリプトを開くと、自動的に Visual Studio が起動するか Visual Studio に切り替わり、選んだスクリプトが開かれます。 Unity プロジェクト内のスクリプトをダブルクリックします。
 
@@ -33,7 +33,7 @@ Visual Studio を [Unity の外部スクリプト エディターとして設定
 
  Visual Studio から簡単に Unity スクリプトに関するドキュメントにアクセスできます。 Visual Studio Tools for Unity は、ローカルの API ドキュメントを見つけられない場合、ドキュメントをオンラインで検索することを試みます。
 
-- Visual Studio で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、**Ctrl + Alt + M、Ctrl + H** キーの順に押します。
+- Visual Studio で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、**Ctrl** + **Alt** + **M** キー、**Ctrl** + **H** キーの順に押します。
 
 ## <a name="intellisense-for-unity-api-messages"></a>Unity API メッセージ用の IntelliSense
 
@@ -71,7 +71,7 @@ MonoBehavior ウィザードを使用して、Unity API のすべてのメソッ
 
 MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定義を作成するには:
 
-1. Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、**Ctrl + Shift + M** キーを押して MonoBehavior ウィザードを起動します。
+1. Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、**Ctrl** + **Shift** + **M** キーを押して MonoBehavior ウィザードを起動します。
 
 1. **[スクリプト メソッドの作成]** ウィンドウで、追加する各メソッドの名前の横にあるチェック ボックスをオンにします。
 
@@ -91,7 +91,7 @@ MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定�
 
  Unity Project Explorer にはすべての Unity プロジェクト ファイルとディレクトリが、Unity エディターで表示されるのと同じ方法で表示されます。 これは、通常の Visual Studio ソリューション エクスプローラーを使用して Unity スクリプト間を移動するのとは異なります。そこではそれらが Visual Studio によって生成されるプロジェクトとソリューションに編成されます。
 
-- Visual Studio のメイン メニューで、**[表示] > [Unity プロジェクト エクスプローラー]** を選択します。 キーボード ショートカット: **Alt + Shift + E**
+- Visual Studio のメイン メニューで、**[表示] > [Unity プロジェクト エクスプローラー]** を選択します。 キーボード ショートカット: **Alt** + **Shift** + **E**
 
      ![Unity プロジェクト エクスプローラー ウィンドウを表示します。](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
 
@@ -107,9 +107,9 @@ MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定�
 
  Visual Studio Tools for Unity では、Visual Studio の強力なデバッガーを使用して、Unity プロジェクトのエディター スクリプトとゲーム スクリプトの両方をデバッグできます。
 
-### <a name="debugging-in-the-unity-editor"></a>Unity エディターでのデバッグ
+### <a name="debug-in-the-unity-editor"></a>Unity エディターでのデバッグ
 
-#### <a name="start-debugging"></a>デバッグの開始
+#### <a name="start-debugging"></a>[デバッグ開始]
 
 1. **[Unity にアタッチ]** というラベルの付いた **[再生]** ボタンをクリックするか、キーボード ショートカット **F5** を使用して、Visual Studio を Unity に接続します。
 
@@ -141,9 +141,9 @@ Visual Studio でのデバッグの詳細については、「[First look at the
 
 [再生] ボタンのラベルが **[Unity にアタッチして再生]** になります。 これで、このボタンをクリックするか、キーボード ショートカット **F5** を使用すると、Visual Studio デバッガーにアタッチされるだけでなく、自動的に Unity エディターに切り替わり、エディターでゲームが実行されます。
 
-Visual Studio の **[停止]** ボタンをクリックするかキーボード ショートカット **Shift + F5** を使用すると、Unity エディターで実行されているゲームが自動的に停止します。
+Visual Studio の **[停止]** ボタンをクリックするかキーボード ショートカット **Shift** + **F5** キーを使用すると、Unity エディターで実行されているゲームが自動的に停止します。
 
-### <a name="debugging-unity-player-builds"></a>Unity プレーヤー ビルドのデバッグ
+### <a name="debug-unity-player-builds"></a>Unity プレーヤー ビルドのデバッグ
 
 さまざまな Unity プレーヤーの開発ビルドを Visual Studio でデバッグできます。
 
@@ -177,7 +177,7 @@ Visual Studio の **[停止]** ボタンをクリックするかキーボード 
 > [!IMPORTANT]
 > Visual Studio Tools for Unity と Unity インスタンスは UDP ネットワーク ソケット上で通信を行っているため、ファイアウォールからメッセージが表示されることがあります。 その場合は、VSTU と Unity が通信できるように、接続を承認する必要があります。
 
-### <a name="debugging-a-dll-in-your-unity-project"></a>Unity プロジェクトの DLL のデバッグ
+### <a name="debug-a-dll-in-your-unity-project"></a>Unity プロジェクトの DLL のデバッグ
 
  多くの Unity 開発者は、コード コンポーネントを外部 DLL として作成し、自分で開発した機能を他のプロジェクトと簡単に共有できるようにしています。 Visual Studio Tools for Unity では、これらの DLL のコードを Unity プロジェクトの他のコードとシームレスにデバッグできます。
 
@@ -214,9 +214,9 @@ Visual Studio の **[停止]** ボタンをクリックするかキーボード 
 
 |コマンド|ショートカット|シュートカット コマンド名|
 |-------------|--------------|---------------------------|
-|MonoBehavior ウィザードを開く|**Ctrl + Shift + M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
-|Unity プロジェクト エクスプローラーを開く|**Alt + Shift + E**|**View.UnityProjectExplorer**|
-|Unity のドキュメントにアクセスする|**Ctrl + Alt + M、Ctrl + H**|**Help.UnityAPIReference**|
+|MonoBehavior ウィザードを開く|**Ctrl** + **Shift** + **M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
+|Unity プロジェクト エクスプローラーを開く|**Alt** + **Shift** + **E**|**View.UnityProjectExplorer**|
+|Unity のドキュメントにアクセスする|**Ctrl** + **Alt** + **M、Ctrl** + **H**|**Help.UnityAPIReference**|
 |Unity のデバッガー (プレーヤーまたはエディター) にアタッチする|***既定値なし***|**Debug.AttachUnityDebugger**|
 
  既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」を参照してください。

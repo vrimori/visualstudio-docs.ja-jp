@@ -14,14 +14,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8ebd3a356eab88c53d2aa7bea7f27be3ccc0749e
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: ef21d270154025a52c603186ba959fad080e5bba
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179680"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380539"
 ---
-# <a name="how-to-create-a-load-test-plug-in"></a>方法 : ロード テスト プラグインを作成する
+# <a name="how-to-create-a-load-test-plug-in"></a>方法: ロード テスト プラグインを作成する
 
 ロード テスト プラグインを作成すると、ロード テストを実行するときに、さまざまな時間にコードを実行できます。 プラグインを作成して、ロード テストの組み込みの機能を拡張または変更します。 たとえば、ロード テスト プラグインのコードを作成して、ロード テストの実行中にロード テストのパターンを設定または変更できます。 これを行うには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> インターフェイスを継承するクラスを作成する必要があります。 このクラスは、このインターフェイスの <xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin.Initialize*> メソッドを実装する必要があります。 詳細については、「<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin>」を参照してください。
 
@@ -36,7 +36,7 @@ ms.locfileid: "39179680"
 
      ロード テストを作成する方法の詳細については、「[Quickstart: Create a load test project](../test/quickstart-create-a-load-test-project.md)」(クイックスタート: ロード テスト プロジェクトを作成する) を参照してください。
 
-3.  ソリューション エクスプローラーで、ソリューションを右クリックし、**[追加]** を選択して、**[新しいプロジェクト]** を選択します。
+3.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** を選択して、**[新しいプロジェクト]** を選択します。
 
      **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -48,9 +48,9 @@ ms.locfileid: "39179680"
 
 7.  **[OK]** をクリックします。
 
-8.  新しいクラス ライブラリ プロジェクトがソリューション エクスプローラーに追加され、新しいクラスがコード エディターに表示されます。
+8.  新しいクラス ライブラリ プロジェクトが**ソリューション エクスプローラー**に追加され、新しいクラスが**コード エディター**に表示されます。
 
-9. ソリューション エクスプローラーで、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
+9. **ソリューション エクスプローラー**で、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
 
 10. **[参照の追加]** ダイアログ ボックスが表示されます。
 
@@ -58,9 +58,9 @@ ms.locfileid: "39179680"
 
 12. **[OK]** をクリックします。
 
-     **Microsoft.VisualStudio.QualityTools.LoadTestFramework** への参照がソリューション エクスプローラーの **[参照設定]** フォルダーに追加されます。
+     **Microsoft.VisualStudio.QualityTools.LoadTestFramework** への参照が**ソリューション エクスプローラー**の **[参照設定]** フォルダーに追加されます。
 
-13. ソリューション エクスプローラーで、ロード テスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスおよびロード テスト プロジェクトの最上位ノードを右クリックし、**[参照の追加]** を選択します。
+13. **ソリューション エクスプローラー**で、ロード テスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスおよびロード テスト プロジェクトの最上位ノードを右クリックし、**[参照の追加]** を選択します。
 
 14. **[参照の追加]** ダイアログ ボックスが表示されます。
 
@@ -68,7 +68,7 @@ ms.locfileid: "39179680"
 
 16. **[OK]** をクリックします。
 
-17. コード エディターで、`using` 名前空間について <xref:Microsoft.VisualStudio.TestTools.LoadTesting> ステートメントを追加します。
+17. **コード エディター**で、<xref:Microsoft.VisualStudio.TestTools.LoadTesting> 名前空間について `using` ステートメントを追加します。
 
 18. クラス ライブラリ プロジェクトで作成されたクラスに対して、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> インターフェイスを実装します。 実装のサンプルについては、次の例を参照してください。
 
@@ -83,7 +83,7 @@ ms.locfileid: "39179680"
 22. **[選択したプラグインのプロパティ]** ペインで、実行時に使用するプラグインの初期値を設定します。
 
     > [!NOTE]
-    > プラグインのプロパティをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定して、任意の数だけ公開できます。 Web パフォーマンス テスト プラグインのプロパティは、後で [プロパティ] ウィンドウを使用して変更することもできます。
+    > プラグインのプロパティをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定して、任意の数だけ公開できます。 Web パフォーマンス テスト プラグインのプロパティは、後で **[プロパティ]** ウィンドウを使用して変更することもできます。
 
 23. **[OK]** をクリックします。
 

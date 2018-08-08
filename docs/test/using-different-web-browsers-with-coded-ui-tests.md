@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fc998fc5065b49ca68f4a46afa1da94cd3d23b07
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: a1c780f74e75e4c3f9f53ee186f5ef791be44ecb
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235064"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380718"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>コード化された UI テストでさまざまな Web ブラウザーを使用する
 
@@ -53,7 +53,7 @@ ms.locfileid: "36235064"
 
 1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。
 
-2.  [拡張機能と更新プログラム] ダイアログ ボックスで、`Selenium components for Cross Browser Testing` を検索します。
+2.  **[拡張機能と更新プログラム]** ダイアログ ボックスで、`Selenium components for Cross Browser Testing` を検索します。
 
 3.  拡張機能を強調表示し、**[ダウンロード]** を選択します。
 
@@ -122,4 +122,4 @@ Web アプリケーションのデバッグを有効にするには、以下の�
 
 - [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)
 - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-- [コード化された UI テスト ログを使用したコード化された UI テストの分析](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)
+- [コード化された UI テスト ログを使用してコード化された UI テストを分析する](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md)

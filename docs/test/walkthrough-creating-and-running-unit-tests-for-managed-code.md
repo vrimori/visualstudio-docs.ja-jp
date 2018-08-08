@@ -15,12 +15,12 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 2618b8a27ceb4ed03c8b4bb2f3e910c60e61b6cc
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: 50fafdb91f9a845fed8681f7b75662200c45c913
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978160"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380864"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードの単体テストを作成し、実行する
 
@@ -84,7 +84,7 @@ public void Debit(double amount)
 
 1. **[ファイル]** メニューで **[追加]** > **[新しいプロジェクト]** の順に選択します。
 
-2. [新しいプロジェクト] ダイアログ ボックスで、 **[インストール済み]**、 **[Visual C#]** の順に展開し、 **[テスト]** をクリックします。
+2. **[新しいプロジェクト]** ダイアログ ボックスで、**[インストール済み]**、**[Visual C#]** の順に展開し、**[テスト]** を選択します。
 
 3. テンプレートの一覧から、 **[単体テスト プロジェクト]** を選択します。
 
@@ -94,9 +94,9 @@ public void Debit(double amount)
 
 5. **BankTests** プロジェクトで、**Bank** プロジェクトへの参照を追加します。
 
-   ソリューション エクスプローラーで、**BankTests** プロジェクトの **[参照設定]** をクリックし、コンテキスト メニューの **[参照の追加]** をクリックします。
+   **ソリューション エクスプローラー**で、**BankTests** プロジェクトの **[参照設定]** を選択し、コンテキスト メニューの **[参照の追加]** を選択します。
 
-6. [参照マネージャー] ダイアログ ボックスで、 **[ソリューション]** を展開し、 **[Bank]** チェックボックスをオンにします。
+6. **[参照マネージャー]** ダイアログ ボックスで、**[ソリューション]** を展開し、**[Bank]** チェックボックスをオンにします。
 
 ## <a name="create-the-test-class"></a>テスト クラスを作成する
 
@@ -230,7 +230,7 @@ m_balance -= amount;
 
 ### <a name="rerun-the-test"></a>テストを再実行する
 
-テスト エクスプローラーで、 **[すべて実行]** をクリックしてテストを再実行します。 赤色/緑色のステータス バーはテストが成功したことを示す緑色になり、テストは **[成功したテスト]** グループに移動されます。
+**テスト エクスプローラー**で、**[すべて実行]** を選択してテストを再実行します。 赤色/緑色のステータス バーはテストが成功したことを示す緑色になり、テストは **[成功したテスト]** グループに移動されます。
 
 ## <a name="use-unit-tests-to-improve-your-code"></a>単体テストを使用してコードを改良する
 

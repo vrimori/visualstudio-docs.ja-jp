@@ -10,14 +10,14 @@ ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: c46b5fffb2cde0298c252c7317f82654ce6defdc
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: bdc196ed997410957412ec02ff4eb4912b3ee63c
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154223"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252467"
 ---
-# <a name="getting-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
+# <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 
 ## <a name="install-visual-studio"></a>Visual Studio のインストール
 
@@ -41,7 +41,7 @@ Unity 2018.1 以降、Visual Studio は Unity の既定の C# スクリプト �
 
 Unity のインストールに含まれる Visual Studio のバージョンが、最新でない場合があります。 更新プログラムを調べて、最新のツールと機能にアクセスできることを確認することをお勧めします。
 
-- [Visual Studio を更新する](../install/update-visual-studio.md)
+- [Visual Studio の更新](../install/update-visual-studio.md)
 
 ### <a name="manual-installation"></a>手動インストール
 
@@ -77,7 +77,7 @@ Unity 2018.1 以降では、Visual Studio を Unity の既定の外部スクリ�
 
 1. **[External Script Editor]\(外部スクリプト エディター\)** の一覧から Visual Studio を選択した後、**[Editor Attaching]\(エディターのアタッチ\)** チェックボックスがオンになっていることを確認します。
 
-1. [Preferences]\(ユーザー設定\) ダイアログを閉じて、構成プロセスを完了します。
+1. **[Preferences]\(ユーザー設定\)** ダイアログを閉じて、構成プロセスを完了します。
 
 ## <a name="support-for-older-versions"></a>古いバージョンのサポート
 
@@ -93,4 +93,4 @@ Unity 2018.1 以降では、Visual Studio を Unity の既定の外部スクリ�
 
 ## <a name="next-steps"></a>次の手順
 
- Visual Studio で Unity プロジェクトを操作およびデバッグする方法については、「 [Using Visual Studio Tools for Unity](../cross-platform/using-visual-studio-tools-for-unity.md)」をご覧ください。
+ Visual Studio で Unity プロジェクトを操作およびデバッグする方法については、「[Visual Studio Tools for Unity](../cross-platform/using-visual-studio-tools-for-unity.md)」をご覧ください。

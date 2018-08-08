@@ -10,14 +10,14 @@ ms.author: mamcle
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: ae4478b711581e332c8da980ddac9fd4d369d8e7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d2997f5f7daf04bbde467ff40c26103a0310720c
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31070013"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251830"
 ---
-# <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のトラブルシューティング
+# <a name="troubleshoot-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のトラブルシューティング
 このトピックには、Visual Studio Emulator for Android の使用時に発生する可能性のある問題の解決に役立つ情報が含まれています。  
   
 > [!WARNING]
@@ -62,7 +62,7 @@ ms.locfileid: "31070013"
 ##  <a name="BeforeYouStart"></a> 開始する前に  
  トラブルシューティングを開始する前に、次のトピックを参照すると便利です。  
   
--   [System Requirements for the Visual Studio Emulator for Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
+-   [Visual Studio Emulator for Android のシステム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)  
   
 ##  <a name="NoInstall"></a> エミュレーターをインストールできない  
  Hyper-V がインストールされていないと、エミュレーターのインストール時に次のメッセージが表示されます。 HyperV がコンピューターでサポートされていて、有効になっていなければなりません。  
@@ -72,7 +72,7 @@ ms.locfileid: "31070013"
 > [!NOTE]
 >  このメッセージは、Visual Studio Emulator for Android と Windows Phone エミュレーターの両方に適用されます。 Windows 8.1 と Windows 10 はエミュレーターをサポートします。  
   
- このメッセージが表示された場合は、 [System Requirements for the Visual Studio Emulator for Android](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md) を確認して、エミュレーターを実行できるかどうかを確認します。  
+ このメッセージが表示された場合は、「[Visual Studio Emulator for Android のシステム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)」を確認して、エミュレーターを実行できるかどうかを確認します。  
   
 ##  <a name="DomainNetwork"></a> ドメインまたは企業ネットワーク上のネットワーク接続先に接続できません  
  Visual Studio Emulator for Android は、独自の IP アドレスを持つ独立したデバイスとしてネットワーク上に表示されます。 これは Windows ドメインに参加せず、ドメインやワークグループの資格情報をホスト コンピューターと共有しません。  
@@ -179,7 +179,7 @@ ms.locfileid: "31070013"
   
     6.  Windows 8 Professional 以上を実行していることを確認します (Windows Server 2008 はサポートされていません)。 Windows Server 2012 はサポートされていますが、デスクトップ エクスペリエンスを有効にする必要があります。  
   
-     イベント ビューアーを調べて、ハイパーバイザーのエラーがないかどうかを確認することができます。 これを行うには、イベント ビューアーを開き (スタート キーを押しながら R キーを押して、「 `eventvwr`」と入力)、 **[Windows ログ]**、 **[システム]** を選択します。 次に、ソースを **Hyper-V ハイパーバイザー**に設定して、イベント ソースでログをフィルタリングします。 エラー確認は、根本原因の特定に役立ちます。  
+     イベント ビューアーを調べて、ハイパーバイザーのエラーがないかどうかを確認することができます。 これを行うには、イベント ビューアーを開き (**スタート キー** + **R** キーを押して、「`eventvwr`」と入力)、**[Windows ログ]**、**[システム]** の順に選択します。 次に、ソースを **Hyper-V ハイパーバイザー**に設定して、イベント ソースでログをフィルタリングします。 エラー確認は、根本原因の特定に役立ちます。  
   
      プロセッサが最小要件を満たしているにもかかわらず、ハイパーバイザーでまだ障害が発生する場合は、コンピューターに使用可能な BIOS アップグレードがあるかどうかを確認してみてください。 アップグレードがあり、アップグレードすることを選択する場合は、BIOS のアップグレード時に製造元からの注意事項 (BIOS が完全に破損する可能性のある、停電により BIOS ファームウェアのアップグレードが中断されないようにするなど) をすべて確認してください。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "31070013"
   
      Windows 8 と互換性を持たせるためにアップグレードが必要になる可能性がある製品には、VirtualBox、Virtual PC 7、VMWare、一部の VPN クライアント、ソフトウェア ファイアウォール、一部のバージョンの Cisco VPN クライアント、およびその他の仮想化システムがあります。 問題のある仮想化ソフトウェアの開発者と協力して、ソフトウェアをアップグレードし、Windows 8 および Hyper-V と互換性を持たせるようにしてください。  
   
-     **回避策**として、Visual Studio との通信のためにエミュレーターで使用される仮想ネットワークに干渉している可能性があるすべてのサード パーティ製のドライバーとアプリケーションを無効にすることができます。 これらのアプリケーションには以下のようなものがあります。  
+     *回避策*として、Visual Studio との通信のためにエミュレーターで使用される仮想ネットワークに干渉している可能性があるすべてのサード パーティ製のドライバーとアプリケーションを無効にすることができます。 これらのアプリケーションには以下のようなものがあります。  
   
     -   ウイルス対策アプリケーション (ネットワーク スタックにフックする)  
   
@@ -261,7 +261,7 @@ ms.locfileid: "31070013"
   
 -   スタート ボタンのコンテキスト メニューから **[ファイル名を指定して実行]** を選択して、ダイアログ ボックスに「 `regedit` 」と入力し、 **[OK]** を選択してレジストリ エディターを開きます。  
   
--   左側のフォルダー ツリーで、HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK ツールに移動します。  
+-   左側のフォルダー ツリーで、*HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Android SDK Tools* ツールに移動します。  
   
 -   Android SDK へのパスと一致するように **パス** レジストリ変数を変更します。  
   

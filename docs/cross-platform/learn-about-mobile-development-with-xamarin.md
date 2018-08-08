@@ -11,12 +11,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 562bd68722674d7b33f9be0941d5e351d8d198bc
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 98371b648dc7fe18315904d4759b55701a07f7b1
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757839"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251680"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin を使用したモバイル開発について学習します
 
@@ -90,9 +90,9 @@ Xamarin.Forms では、.NET Standard ライブラリですべてのプラット�
 
 3.  (省略可能) [Xamarin.Forms の概要](/xamarin/xamarin-forms/get-started/introduction-to-xamarin-forms/)
 
-4.  (省略可能) [デバイス クラス](/xamarin/xamarin-forms/platform/device/) ドキュメントでカスタマイズに `OnPlatform` を使用する例をご覧ください。
+4.  (省略可能) [デバイス クラス](/xamarin/xamarin-forms/platform/device/) ドキュメントでカスタマイズに `OnPlatform` を使用する例を参照してください。
 
-5.  (省略可能) Jason Smith による「[クロスプラットフォーム - Xamarin.Forms によるモバイル プラットフォーム間での UI コードの共有](https://msdn.microsoft.com/magazine/dn904669.aspx)」 (MSDN マガジン) では、Xamarin.Forms 内でのさまざまなカスタマイズ オプションの概要を説明します。オプションの詳細は[カスタム レンダラー](/xamarin/xamarin-forms/app-fundamentals/custom-renderer/)に関するページにあります。
+5.  (省略可能) Jason Smith による「[クロスプラットフォーム - Xamarin.Forms によるモバイル プラットフォーム間での UI コードの共有](https://msdn.microsoft.com/magazine/dn904669.aspx)」(MSDN マガジン) では、Xamarin.Forms 内でのさまざまなカスタマイズ オプションの概要を説明します。オプションの詳細は[カスタム レンダラー](/xamarin/xamarin-forms/app-fundamentals/custom-renderer/)に関するページにあります。
 
 ## <a name="deeper-dive-debugging-with-emulators"></a>詳細: エミュレーターでのデバッグ
 
@@ -106,7 +106,7 @@ Microsoft の [Visual Studio Emulator for Android](visual-studio-emulator-for-an
 
 ### <a name="apples-ios-simulator"></a>Apple の iOS シミュレーター
 
-詳しくは、「 [iOS シミュレーター入門](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1) 」(apple.com) をお読みください。
+詳細については、「[Get started with the iOS Simulator](https://developer.apple.com/library/prerelease/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1)」(iOS シミュレーター入門) (apple.com) を参照してください。
 
 ### <a name="microsofts-windows-phone-emulator"></a>Microsoft の Windows Phone エミュレーター
 
@@ -114,7 +114,7 @@ Microsoft の [Visual Studio Emulator for Android](visual-studio-emulator-for-an
 
 <a name="components" />
 
-## <a name="deeper-dive-xamarin-components"></a>Deeper Dive: Xamarin Components
+## <a name="deeper-dive-xamarin-components"></a>詳細: Xamarin のコンポーネント
 
 *10 分*
 
