@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 44994b7b643d63f548092aba9a878b939f3968af
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 6fcf55ed90d2fe73c37ebc6d88e9d88bbc3f11f3
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750995"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381971"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>方法: テスト設定を使用してテスト中に画面と音声の記録を含める
 
@@ -24,11 +24,11 @@ Visual Studio の構成エディターから、テストを実行しているユ
 > [!WARNING]
 > 画面と音声の記録では、複数のモニター構成はサポートされていません。
 
-画面と音声のレコーダーは、手動テストまたは自動テストで使用できます。 たとえば、コード化された UI テストをリモートで実行する場合、コード化された UI テストを実行するときにそのテストを確認するためにデスクトップを記録できます。 画面と音声の記録をリモートでキャプチャする方法については、「[方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)」を参照してください。
+画面と音声のレコーダーは、手動テストまたは自動テストで使用できます。 たとえば、コード化された UI テストをリモートで実行する場合、コード化された UI テストを実行するときにそのテストを確認するためにデスクトップを記録できます。 画面と音声の記録をリモートでキャプチャする方法については、「[方法: Test Agent を設定して、デスクトップと対話するテストを実行する](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)」を参照してください。
 
 ## <a name="to-configure-screen-and-voice-recording-for-your-test-settings"></a>テストの設定に対して画面と音声の記録を構成するには
 
-1.  画面と音声を記録するために構成するテストの設定を開きます。 詳細については、「[テスト中の診断データの収集 (VSTS)](/vsts/manual-test/collect-diagnostic-data)」または「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+1.  画面と音声を記録するために構成するテストの設定を開きます。 詳細については、「[Collect diagnostic data while testing (VSTS)](/vsts/manual-test/collect-diagnostic-data)」(テスト中の診断データの収集 (VSTS)) または「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 2.  テストの設定で、画面と音声の記録に使用する **[ロール]** をクリックします。
 
@@ -37,7 +37,7 @@ Visual Studio の構成エディターから、テストを実行しているユ
 
 3.  **[画面と音声のレコーダー]** をクリックし、**[構成]** をクリックします。
 
-     [診断データ アダプターの構成 - 画面と音声のレコーダー] ダイアログ ボックスが表示されます。
+     **[診断データ アダプターの構成 - 画面と音声のレコーダー]** ダイアログ ボックスが表示されます。
 
      ![ビデオの構成](../test/media/testsettingvideoconfiggdr.png)
 
@@ -46,7 +46,7 @@ Visual Studio の構成エディターから、テストを実行しているユ
 5.  (省略可能) **[テスト ケースに成功した場合に記録を保存する]** の横のチェック ボックスをオンにして、テストに失敗した場合も成功した場合も画面と音声の記録が保存されるように指定します。
 
     > [!WARNING]
-    > **[テスト ケースに成功した場合に記録を保存する]** をクリックすると、この記録はテスト結果と共に、サーバーのストレージ領域を使用して保存されます。 これらの添付ファイルをクリーンアップするには、Test Attachment Cleaner ツールを使用できます。
+    > **[テスト ケースに成功した場合に記録を保存する]** をクリックすると、この記録はテスト結果と共に、サーバーのストレージ領域を使用して保存されます。 これらの添付ファイルをクリーンアップするには、**Test Attachment Cleaner** ツールを使用できます。
 
 6.  **[画面記録の品質]** で、以下のボックス オプションを構成します。
 

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7a5f87a83b8c743ae869a700618051e07c8c2e75
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5df33a8cf05e4ad73b1643e2948392e49a32356e
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750923"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382322"
 ---
 # <a name="how-to-specify-plot-options-for-graphing-counters"></a>方法: グラフ作成カウンターのプロット オプションを指定する
 
@@ -25,7 +25,7 @@ ms.locfileid: "34750923"
 
 ## <a name="to-specify-plotting-options-for-graphs"></a>グラフのプロット オプションを指定するには
 
-1.  ロード テスト アナライザーで、ロード テスト ツール バーの **[グラフ]** を選択します。
+1.  **ロード テスト アナライザー**で、ロード テスト ツール バーの **[グラフ]** を選択します。
 
      ロード テストの結果がグラフ ビューに表示されます。
 
@@ -53,4 +53,3 @@ ms.locfileid: "34750923"
 
 - [グラフ ビューでのロード テスト結果の分析](../test/analyze-load-test-results-in-the-graphs-view.md)
 - [方法: カスタム グラフを作成する](../test/how-to-create-custom-graphs-in-load-test-results.md)
-- [グラフ ビューでのロード テスト結果の分析](../test/analyze-load-test-results-in-the-graphs-view.md)

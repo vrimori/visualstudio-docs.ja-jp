@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ccc41d7cc2e1150c6c4eb9ca1e62719517b194fa
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 886fc925c4053e7f9fdc9939ff33a5cda4228c0b
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31975547"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381593"
 ---
 # <a name="use-the-mstest-framework-in-unit-tests"></a>単体テストでの MSTest フレームワークの使用
 
@@ -79,7 +79,7 @@ ClassInitialize がクラスの読み込みの直後に、ClassCleanup がクラ
 
 ## <a name="assert-classes-and-related-exceptions"></a>Assert クラスおよび関連する例外
 
-単体テストでは、さまざまな種類のアサーション、例外、および属性を使用して、特定のアプリケーションの動作を確認できます。 詳細については、「[Assert クラスの使用](../test/using-the-assert-classes.md)」を参照してください。
+単体テストでは、さまざまな種類のアサーション、例外、および属性を使用して、特定のアプリケーションの動作を確認できます。 詳細については、[Assert クラスの使用](../test/using-the-assert-classes.md)に関するページを参照してください。
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 

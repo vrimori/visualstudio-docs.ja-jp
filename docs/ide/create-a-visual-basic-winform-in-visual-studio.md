@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c815652ae37fb04373cbf39279d54099a2d808a5
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 0468a3ee546659d8079d98f49b196819c44afbd1
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117772"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381661"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio で Visual Basic を使用して Windows フォーム アプリを作成する
 
@@ -82,7 +82,7 @@ Visual Basic プロジェクト テンプレートを選択し、ファイルに
 
 1. **[Form1.vb [Design]]** ウィンドウで、**[Click this]** ボタンをダブルクリックして、**[Form1.vb]** ウィンドウを開きます 
 
-      (あるいは、**[ソリューション エクスプローラー]** ウィンドウで **[Form1.vb]** を展開し、**[Form1]** をクリックします)。
+      (あるいは、**[ソリューション エクスプローラー]** で **[Form1.vb]** を展開し、**[Form1]** をクリックします)。
 
 2. **[Form1.vb]** ウィンドウの **Private Sub** 行と **End Sub** 行の間に、「`lblHelloWorld.Text = "Hello World!"`」と入力するか、貼り付けます。
 

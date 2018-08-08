@@ -10,19 +10,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d1b6655dd493a2ac62ba333f3858b299ee398f8d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ee961a3f6fa62d46feebdedd10fb62ea8a9ee2a4
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974807"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381730"
 ---
-# <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>方法: Test Agent を設定して、デスクトップと対話するテストを実行する
+# <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する
 
 デスクトップと対話する自動テストを実行する場合、エージェントをサービスではなくプロセスとして実行されるように設定する必要があります。 たとえば、テスト コントローラーとテスト エージェントを使用してコード化された UI テストをリモートで実行する場合、またはテストを実行してテストの実行時にビデオ記録をキャプチャする場合は、エージェントをプロセスとして実行されるように設定する必要があります。 Visual Studio を使用してテストの設定でエージェントをロールに割り当てる場合や、Microsoft Test Manager を使用して環境内でエージェントをロールに割り当てる場合は、デスクトップと対話する必要があるロールに割り当てられたすべてのエージェントの設定を変更する必要があります。
 
 > [!WARNING]
-> Microsoft Test Manager を使用してラボ環境を設定する場合、テスト エージェントがインストールされます。 コード化された UI テストを実行できるようにロールの 1 つを構成する場合は、環境の作成ウィザードで指定できます。
+> Microsoft Test Manager を使用してラボ環境を設定する場合、テスト エージェントがインストールされます。 コード化された UI テストを実行できるようにロールの 1 つを構成する場合は、**環境の作成ウィザード**で指定できます。
 
 > [!IMPORTANT]
 > コード化された UI テストを実行するエージェントを実行するコンピューターは、ロックしたり、スクリーン セーバーを有効にしたりできません。
@@ -79,7 +79,7 @@ ms.locfileid: "31974807"
 
      テスト エージェントを構成する各ステップの状態を示す **[構成の概要]** ダイアログ ボックスが表示されます。
 
-9. **[構成の概要]** ダイアログ ボックスを閉じるには、**[閉じる]** を選択します。 **[閉じる]** をもう一度選択して、Test Agent 構成ツールを終了します。
+9. **[構成の概要]** ダイアログ ボックスを閉じるには、**[閉じる]** を選択します。 **[閉じる]** をもう一度選択して、**Test Agent 構成ツール**を終了します。
 
     > [!NOTE]
     > コンピューターには、プロセスとして実行されているテスト エージェントに関する通知領域アイコンが表示されます。 このアイコンは、テスト エージェントの状態を示します。 このツールを使用してエージェントがプロセスとして実行されている場合は、エージェントを起動、停止、または再起動できます。 テスト エージェントが実行されていない場合にプロセスとして開始するには、**[スタート]**、**[すべてのプログラム]**、**[Microsoft Visual Studio]**、**[Microsoft Visual Studio Test Agent]** の順に選択します。

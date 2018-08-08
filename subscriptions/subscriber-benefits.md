@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる利点に�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f5df14010b17b9eeee1241b99a73769853c20036
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 0dfde28ab55ffadd08d0be3d863d0772604482ed
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283264"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381547"
 ---
 # <a name="benefits-included-in-your-visual-studio-subscription"></a>Visual Studio サブスクリプションに含まれる利点
 
@@ -37,7 +37,7 @@ Visual Studio サブスクリプションでは、Windows、iOS、Android、Linu
 ## <a name="support"></a>サポート
 質問があったり技術的なサポートが必要であったりする場合は、Visual Studio のサブスクライバーとして各種のサポートにアクセスすることができます。
 - 有料サブスクリプションには、開発/テスト環境で実行されているツールおよびアプリケーションに関する問題を解決するための専門的なテクニカル インシデントへのアクセスが含まれています。
-- 技術ドキュメントまたは製品情報が必要な場合。  Conceirge チャット サービスですぐに支援を得ることができます。
+- 技術ドキュメントまたは製品情報が必要な場合。  Concierge チャット サービスですぐに支援を得ることができます。
 - 優先サポート フォーラムのコミュニティ メンバーからの支援を得ることができます。  コミュニティ メンバーが質問に答えられない場合は、Microsoft の専門家が対応します。
 - Azure に関する質問がある場合。  Azure Community サービスと Azure Advisory Chat サービスを確認できます。
 

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cf6283b909229e2e4dc4713814cf5e4f850688a3
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 6f36fbd480f9fc14ba382b3a9a06c2821335870d
+ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232297"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39388151"
 ---
 # <a name="step-4-use-the-full-flask-web-project-template"></a>手順 4: 完全な Flask Web プロジェクト テンプレートを使用する
 
@@ -35,17 +35,17 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1: テンプレートからプロジェクトを作成する
 
-1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で成した "LearningFlask" ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
+1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で作成した **LearningFlask** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
-1. [新しいプロジェクト] ダイアログで "Flask Web プロジェクト" テンプレートを探して選択し、プロジェクト "FlaskWeb" を呼び出して、**[OK]** を選択します。
+1. [新しいプロジェクト] ダイアログで **Flask Web プロジェクト** テンプレートを探して選択し、プロジェクト "FlaskWeb" を呼び出して、**[OK]** を選択します。
 
-1. ここでも、テンプレートに `requirements.txt` ファイルが含まれているので、Visual Studio からそれらの依存関係をインストールする場所を尋ねられます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。
+1. ここでも、テンプレートに *requirements.txt* ファイルが含まれているので、Visual Studio からそれらの依存関係をインストールする場所をたずねられます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。
 
-1. Visual Studio で仮想環境の設定が完了したら、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[スタートアップ プロジェクトに設定]** を選択する方法で "FlaskWeb" プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
+1. Visual Studio で仮想環境の設定が完了したら、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[スタートアップ プロジェクトに設定]** を選択する方法で **FlaskWeb** プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
 
     ![ソリューション エクスプローラーでスタートアップ プロジェクトとして FlaskWeb プロジェクトが表示されます](media/flask/step04-second-project-in-solution-set-as-startup-project.png)
 
-1. **[デバッグ]** > **[デバッグの開始]** (F5) を選択するか、またはツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
+1. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) を選択するか、またはツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
 
     ![Visual Studio の [Web サーバー] ツールバー ボタンを実行する](media/flask/run-web-server-toolbar-button.png)
 
@@ -59,20 +59,20 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
 
 1. 以降のセクションについては、アプリにそのまま実行させることができます。
 
-    アプリを停止して[ソース コントロールへの変更をコミットする](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)場合、最初に**チーム エクスプローラー**で **[変更]** を開き、仮想環境のフォルダー (通常は `env`) を右クリックして、**[Ignore these local items]\(これらのローカルの項目を無視する\)** を選択します。
+    アプリを停止して[ソース コントロールへの変更をコミットする](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)場合、最初に**チーム エクスプローラー**で **[変更]** を開き、仮想環境のフォルダー (通常は **env**) を右クリックして、**[これらのローカル項目を無視]** を選択します。
 
 ### <a name="examine-what-the-template-creates"></a>テンプレートによって作成されたものを確認する
 
-"Flask Web プロジェクト" によって以下の構造が作成されます。 コンテンツは前の手順で作成したものに非常に似ています。 違いは、"Flask Web プロジェクト" テンプレートの場合、`static` フォルダーの構成が多いことです。応答性の良い設計のために jQuery と Bootstrap が含まれているためです。 このテンプレートによって [お問い合わせ] ページも追加されます。 全体として、このチュートリアルの前手順を完了している場合、テンプレートの内容はどれも見たことがあるはずです。
+"Flask Web プロジェクト" によって以下の構造が作成されます。 コンテンツは前の手順で作成したものに非常に似ています。 違いは、"Flask Web プロジェクト" テンプレートの場合、*static* フォルダーの構成が多いことです。応答性に優れた設計のための jQuery と Bootstrap が含まれているためです。 このテンプレートによって [お問い合わせ] ページも追加されます。 全体として、このチュートリアルの前手順を完了している場合、テンプレートの内容はどれも見たことがあるはずです。
 
 - プロジェクト ルートにある次のファイル
-  - `runserver.py`。開発サーバーでアプリを実行するスクリプト。
-  - `requirements.txt`。Flask 0.x での依存関係を含む。
-- `FlaskWeb` フォルダーにはすべてのアプリ ファイルが含まれています。
-  - `__init.py__` はアプリ コードを Python モジュールとしてマークし、Flask オブジェクトを作成し、アプリのビューをインポートします。
-  - `views.py` には、ページをレンダリングするためのコードが含まれています。
-  - `static` フォルダーには、`content` (CSS ファイル)、`fonts` (フォント ファイル)、`scripts` (JavaScript ファイル) という名前のサブフォルダーが含まれています。
-  - `templates` フォルダーには、`layout.html` 基本テンプレートと共に、`layout.html` を拡張するページのための `about.html`、`contact.html`、`index.html` が含まれています。
+  - *runserver.py*。開発サーバーでアプリを実行するスクリプト。
+  - *requirements.txt*。Flask 0.x での依存関係を含む。
+- *FlaskWeb* フォルダーにはすべてのアプリ ファイルが含まれています。
+  - *\_\_init.py\_\_* はアプリ コードを Python モジュールとしてマークし、Flask オブジェクトを作成し、アプリのビューをインポートします。
+  - *views.py* には、ページをレンダリングするためのコードが含まれています。
+  - *static* フォルダーには、*content* (CSS ファイル)、*fonts* (フォント ファイル)、*scripts* (JavaScript ファイル) という名前のサブフォルダーが含まれています。
+  - *templates* フォルダーには、*layout.html* 基本テンプレートと共に、*layout.html* を拡張するページのための *about.html*、*contact.html*、*index.html* が含まれています。
 
 ### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>質問: Visual Studio プロジェクト間で仮想環境を共有することは可能ですか。
 
@@ -86,7 +86,7 @@ Visual Studio の "空の Flask App プロジェクト" テンプレート上に
 
 ## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>手順 4 2: プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する
 
-プロジェクトを実行したときに確認すると、アプリには、[ホーム]、[About]\(詳細\)、[連絡先] という 3 つのビューが含まれています。 これらのビューに対応するコードは `FlaskWeb/views.py` にあります。 テンプレートに値を与えるために、各ビューの関数はテンプレートのパスと引数の変数一覧を利用して `flask.render_template` を呼び出します。 たとえば、[バージョン情報] ページは `about` 関数によって処理されます (そのデコレーターによって URL ルーティングが与えられます)。
+プロジェクトを実行したときに確認すると、アプリには、[ホーム]、[About]\(詳細\)、[連絡先] という 3 つのビューが含まれています。 これらのビューに対応するコードは、*FlaskWeb/views.py* フォルダーにあります。 テンプレートに値を与えるために、各ビューの関数はテンプレートのパスと引数の変数一覧を利用して `flask.render_template` を呼び出します。 たとえば、[バージョン情報] ページは `about` 関数によって処理されます (そのデコレーターによって URL ルーティングが与えられます)。
 
 ```python
 @app.route('/about')
@@ -102,7 +102,7 @@ def about():
 
 `home` 関数と `contact` 関数はほとんど同じです。デコレーターが同類で、引数が多少異なります。
 
-テンプレートはアプリの `templates` フォルダーにあります。 基本のテンプレートである `layout.html` は、最も拡張性に優れています。 このテンプレートは、すべての必要な静的ファイル (JavaScript および CSS) を参照し、他のページによってオーバーライドされる "content" という名前のブロックを定義し、"scripts" という名前のもう 1 つのブロックを提供しています。 次に示す `layout.html` からのコメント付きの抜粋は、これらの固有の領域を示しています。
+テンプレートはアプリの *templates* フォルダーにあります。 基本のテンプレートである *layout.html* は、最も拡張性に優れています。 このテンプレートは、すべての必要な静的ファイル (JavaScript および CSS) を参照し、他のページによってオーバーライドされる "content" という名前のブロックを定義し、"scripts" という名前のもう 1 つのブロックを提供しています。 次に示す *layout.html* からのコメント付きの抜粋は、これらの固有の領域を示しています。
 
 ```html
 <!DOCTYPE html>
@@ -141,7 +141,7 @@ def about():
 </html>
 ```
 
-個々のページ テンプレート `about.html`、`contact.html`、および `index.html` はそれぞれ、基本のテンプレートである `layout.html` を拡張しています。 `about.html` は最もシンプルで、次のように `{% extends %}` および `{% block content %}` タグを表示します。
+個々のページ テンプレート *about.html*、*contact.html*、*index.html* はそれぞれ、基本のテンプレートである *layout.html* を拡張します。 *about.html* は最もシンプルで、次のように `{% extends %}` および `{% block content %}` タグを表示します。
 
 ```html
 {% extends "app/layout.html" %}
@@ -156,22 +156,22 @@ def about():
 {% endblock %}
 ```
 
-`index.html` および `contact.html` では、同じ構造を使用して、"content" ブロックでより長い内容を提供しています。
+*index.html* および *contact.html* は、同じ構造を使用して、"content" ブロックでより長い内容を提供します。
 
 ## <a name="the-flaskjade-web-project-template"></a>Flask/Jade Web プロジェクト テンプレート
 
 この記事の冒頭でお話ししたように、Visual Studio には "Flask/Jade Web プロジェクト" テンプレートがあります。このテンプレートによって、"Flask Web プロジェクト" で生成されるものと見た目が同じアプリケーションが作成されます。 主な違いは、Jade テンプレート エンジンの使用です。これは Jinja の拡張であり、同じ概念をより簡潔な言語で実行します。 具体的には、たとえば、Jade は {% %} 区切り記号で囲まれたタグの代わりにキーワードが使用され、キーワードを利用して CSS スタイルや HTML 要素を参照できます。
 
-Jade を有効にするために、プロジェクト テンプレートは最初に `requirements.txt` に pyjade パッケージを含めます。 
+Jade を有効にするために、プロジェクト テンプレートは最初に *requirements.txt* に pyjade パッケージを含めます。 
 
-アプリの `__init__.py` ファイルには次の行が含まれています。
+アプリの *\_\_init\_\_.py* ファイルには次の行が含まれています。
 
 ```python
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 ```
-`templates` フォルダーには、`.html` テンプレートではなく `.jade` ファイルが表示されます。`views.py` のビューは、`flask.render_template` の呼び出しでこれらのファイルを参照します。 それ以外の点では、ビュー コードは同じです。
+*templates* フォルダーには、*.html* テンプレートではなく *.jade* ファイルが表示されます。*views.py* のビューは、`flask.render_template` の呼び出しでこれらのファイルを参照します。 それ以外の点では、ビュー コードは同じです。
 
-`.jade` ファイルの 1 つを開くと、テンプレートがより簡潔に表現されていることがわかります。 たとえば、"Flask/Jade Web プロジェクト" テンプレートで作成された `templates/layout.jade` の内容は次のようになります。
+*.jade* ファイルの 1 つを開くと、テンプレートがより簡潔に表現されていることがわかります。 たとえば、"Flask/Jade Web プロジェクト" テンプレートで作成された *templates/layout.jade* の内容は次のようになります。
 
 ```jade
 doctype html
@@ -213,7 +213,7 @@ html
     block scripts
 ```
 
-`templates/about.jade` の内容は次のようになります。プレースホルダーに `#{ <name>}` が使用されています。
+*templates/about.jade* の内容は次のようになります。プレースホルダーに `#{ <name>}` が使用されています。
 
 ```jade
 extends layout

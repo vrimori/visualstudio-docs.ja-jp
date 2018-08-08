@@ -19,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50825ea0d610625c69955deea1599206053fb889
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: e0e854cc2d271048a7d7205017710264efac0395
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32064611"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381648"
 ---
 # <a name="manage-application-resources-net"></a>アプリケーション リソースの管理 (.NET)
 
@@ -34,11 +34,11 @@ ms.locfileid: "32064611"
 
 ## <a name="work-with-resources"></a>リソースの処理
 
-マネージ コード プロジェクトで、プロジェクトのプロパティ ウィンドウを開きます。 次のいずれかで、[プロパティ] ウィンドウを開くことができます。
+マネージド コード プロジェクトで、プロジェクトのプロパティ ウィンドウを開きます。 次のいずれかで、[プロパティ] ウィンドウを開くことができます。
 
 - **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[プロパティ]** を選びます
 - **[クイック起動]** ウィンドウで、「プロジェクト プロパティ」と入力します
-- **ソリューション エクスプローラー** ウィンドウで **Alt** + **Enter** キーを押します
+- **ソリューション エクスプローラー**で **Alt** + **Enter** キーを押します。
 
 **[リソース]** タブをクリックします。プロジェクトにまだ *.resx* ファイルが含まれていない場合や、異なる種類のリソースを追加および削除する場合、また既存のリソースを変更する場合は、.resx ファイルを追加できます。
 
