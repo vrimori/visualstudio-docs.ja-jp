@@ -12,20 +12,20 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: cd8f99ffdba144d475b3d68d7509b57ad7ea4e3c
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 5dffe82511e75889ea588cb23b1f19490f991ab0
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281103"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251908"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>C++ によるクロスプラットフォーム モバイル開発をインストールする
 
-Visual Studio で C++ を使うと、Windows デスクトップ アプリ、ユニバーサル Windows プラットフォーム (UWP) アプリ、Linux アプリ、そして今では Android および iOS 用のアプリも、ビルドできます。 **C++ によるモバイル開発**ワークロードは、Visual Studio にインストール可能なコンポーネントのセットであり、クロスプラットフォームの iOS、Android、および UWP Visual Studio テンプレートを含みます。 すぐに始めるために必要なクロスプラットフォーム ツールおよび SDK がインストールされるので、それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロスプラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使って C++ でクロスプラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 概要については、「[Visual C++ クロスプラットフォーム モバイル](https://go.microsoft.com/fwlink/p/?LinkId=536383)」をご覧ください。
+Visual Studio で C++ を使うと、Windows デスクトップ アプリ、ユニバーサル Windows プラットフォーム (UWP) アプリ、Linux アプリ、そして今では Android および iOS 用のアプリも、ビルドできます。 **C++ によるモバイル開発**ワークロードは、Visual Studio にインストール可能なコンポーネントのセットであり、クロスプラットフォームの iOS、Android、および UWP Visual Studio テンプレートを含みます。 すぐに始めるために必要なクロスプラットフォーム ツールおよび SDK がインストールされるので、それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロスプラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使って C++ でクロスプラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 概要については、「[Visual C++ クロスプラットフォーム モバイル](https://go.microsoft.com/fwlink/p/?LinkId=536383)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-- インストール要件については、「[Visual Studio 2017 製品ファミリのシステム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)」をご覧ください。
+- インストール要件については、「[Visual Studio 2017 製品ファミリのシステム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)」を参照してください。
 
    > [!IMPORTANT]
    > Windows 7 または Windows Server 2008 R2 を使用している場合は、Windows デスクトップ アプリケーション、Android Native Activity アプリおよびライブラリ、iOS 用のアプリとコード ライブラリのためのコードを開発できますが、Windows Phone アプリまたは UWP アプリのコードは開発できません。
@@ -105,7 +105,7 @@ Visual Studio 2015 を使っている場合、そのインストーラーには 
 
 ## <a name="install-tools-for-ios"></a>Install tools for iOS
 
-Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションについて詳しくは、「 [Install And Configure Tools to Build using iOS](install-and-configure-tools-to-build-using-ios.md)」をご覧ください。 iOS 用にビルドするのでない場合は、この手順を省略できます。
+Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドはリモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェントをセットアップして構成する必要があります。 インストール方法、前提条件、構成オプションの詳細については、「[Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。 iOS 用にビルドするのでない場合は、この手順を省略できます。
 
 ## <a name="install-or-update-dependencies-manually"></a>手動による依存関係のインストールまたは更新
 
@@ -118,23 +118,23 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
 
 - [Java SE 開発キット](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-   既定では、インストーラーによって Java のツールが C:\Program Files (x86)\Java に格納されます。
+   既定では、インストーラーによって Java のツールが *C:\Program Files (x86)\Java* に格納されます。
 
 - [Android SDK](https://developer.android.com/sdk/index.html#command-tools)
 
-   インストール中に、推奨されたとおりに API を更新します。 最低でも Android 5.0 Lollipop (API レベル 21) の SDK がインストールされていることを確認します。 既定では、インストーラーによって Android SDK が C:\Program Files (x86)\Android\android-sdk に格納されます。
+   インストール中に、推奨されたとおりに API を更新します。 最低でも Android 5.0 Lollipop (API レベル 21) の SDK がインストールされていることを確認します。 既定では、インストーラーによって Android SDK が *C:\Program Files (x86)\Android\android-sdk* に格納されます。
 
    Android SDK ディレクトリにある SDK Manager アプリをもう一度実行すると、SDK を更新したり、オプション ツールや追加の API レベルをインストールしたりできます。 **[管理者として実行]** を使用して SDK Manager アプリを実行しなければ、更新のインストールが失敗する可能性があります。 Android アプリのビルドで問題が発生した場合は、SDK Manager を確認して、インストール済み SDK の更新プログラムの有無を調べてください。
 
-   Android SDK に付属している Android エミュレーターのいくつかを使用するには、オプションの Intel HAXM ドライバーをインストールする必要があります。 Intel HAXM ドライバーを正常にインストールするには、Windows から Hyper-V 機能を削除する必要がある場合があります。 Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android を使用するには、Hyper-V 機能を復元する必要があります。 詳しくは、「[Android Emulator ハードウェアの高速化](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)」をご覧ください。
+   Android SDK に付属している Android エミュレーターのいくつかを使用するには、オプションの Intel HAXM ドライバーをインストールする必要があります。 Intel HAXM ドライバーを正常にインストールするには、Windows から Hyper-V 機能を削除する必要がある場合があります。 Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android を使用するには、Hyper-V 機能を復元する必要があります。 詳細については、[Android Emulator ハードウェアの高速化](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)に関するページを参照してください。
 
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
 
-   既定では、インストーラーによって Android NDK が C:\ProgramData\Microsoft\AndroidNDK に格納されます。 Android NDK をもう一度ダウンロードしてインストールすると、NDK のインストールを更新できます。
+   既定では、インストーラーによって Android NDK が *C:\ProgramData\Microsoft\AndroidNDK* に格納されます。 Android NDK をもう一度ダウンロードしてインストールすると、NDK のインストールを更新できます。
 
 - [Apache Ant](https://ant.apache.org/bindownload.cgi)
 
-   既定では、インストーラーによって Apache Ant が C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps に格納されます。
+   既定では、インストーラーによって Apache Ant が *C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps* に格納されます。
 
 - [Microsoft Visual Studio Emulator for Android](https://aka.ms/vscomemudownload)
 
@@ -154,7 +154,7 @@ Visual C++ for Cross-Platform Mobile Development を使用して、iOS コード
 
 1. **[OK]** を選んで、カスタム ツール フォルダーの場所を保存します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [iOS を使用してビルドするためのツールのインストールおよび構成](install-and-configure-tools-to-build-using-ios.md)
 - [Visual C++ クロスプラットフォーム モバイル](https://go.microsoft.com/fwlink/p/?LinkId=536383)

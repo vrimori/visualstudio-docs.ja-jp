@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 241c7c424f9ef670f16eead4fc400e375584f8c2
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 4dd7e5841db4c05de5607f9aefe7b9a3a36fee19
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057955"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341239"
 ---
 # <a name="azure-sdk-for-python"></a>Azure SDK for Python
 
@@ -54,8 +54,7 @@ Azure ドキュメントの「[Python と SDK のインストール](https://doc
 
 - [ストレージの単体テスト](https://github.com/Azure/azure-storage-python/tree/master/tests)に関するページ
 - [Service Bus の単体テスト](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicebus/tests)に関するページ
-- [サービス管理の単体テスト](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicemanagement-legacy/tests)に関するページ
-- [リソース管理の単体テスト](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-mgmt/tests)に関するページ
+- [サービス管理の単体テスト](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicemanagement-legacy/tests)
 
 ## <a name="support"></a>サポート
 

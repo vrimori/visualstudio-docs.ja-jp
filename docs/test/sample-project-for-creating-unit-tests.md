@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a6627b96daefa48c9a72fd84726775fc449bde
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 93335be347e9c2ae66045bc49f9609d6cb3a929d
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704604"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379775"
 ---
 # <a name="sample-code-for-testing"></a>テスト用のサンプル コード
 
@@ -27,7 +27,7 @@ ms.locfileid: "33704604"
 このコードは、次のチュートリアルで使用されます。
 
 - [マネージド コードの単体テストを作成し、実行する](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)。 このチュートリアルでは、単体テストの作成とカスタマイズ、実行、およびテスト結果の検討の手順について説明します。
-- [コマンド ライン テスト ユーティリティを使用する](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)。 このチュートリアルでは、MSTest.exe コマンドライン ユーティリティを使用してテストを実行し、結果を表示します。
+- [コマンド ライン テスト ユーティリティを使用する](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)。 このチュートリアルでは、*MSTest.exe* コマンドライン ユーティリティを使用してテストを実行し、結果を表示します。
 
 ## <a name="sample-code"></a>サンプル コード
 

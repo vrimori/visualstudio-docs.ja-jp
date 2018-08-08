@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6d6113b9c102ff367d4b41bd4780c365c1928705
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: d36fefdaa92b488908a0de99878e341114253624
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117912"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341265"
 ---
-# <a name="defining-custom-commands-for-python-projects"></a>Python プロジェクトのカスタム コマンドを定義する
+# <a name="define-custom-commands-for-python-projects"></a>Python プロジェクトのカスタム コマンドを定義する
 
 Python プロジェクトで作業していると、特定のスクリプトやモジュール、pip コマンド、または他の任意のツールを実行するために、コマンド ウィンドウに切り替えると便利なことに気付く場合があります。 ワークフローを改良するため、Python プロジェクトのコンテキスト メニューの **[Python]** サブメニューに、カスタム コマンドを追加することができます。 これらのコマンドは、コンソール ウィンドウまたは Visual Studio の出力ウィンドウで実行できます。 また、正規表現を使って、コマンドの出力からエラーと警告を解析する方法を Visual Studio に指示することもできます。
 
@@ -26,9 +26,9 @@ Python プロジェクトで作業していると、特定のスクリプトや�
 
 ![プロジェクトのコンテキスト メニューの [Python] サブメニューの既定の外観](media/custom-commands-default-menu.png)
 
-この同じコンテキスト メニューにカスタム コマンドが表示されます。 カスタム コマンドはプロジェクト ファイルに直接追加され、その特定のプロジェクトに適用されます。 `.targets` ファイルでカスタム コマンドを定義して、複数のプロジェクト ファイルに簡単にインポートすることもできます。
+この同じコンテキスト メニューにカスタム コマンドが表示されます。 カスタム コマンドはプロジェクト ファイルに直接追加され、その特定のプロジェクトに適用されます。 *.targets* ファイルでカスタム コマンドを定義して、複数のプロジェクト ファイルに簡単にインポートすることもできます。
 
-Visual Studio の特定の Python プロジェクト テンプレートでは、`.targets` ファイルを使って独自のカスタム コマンドが既に追加されています。 たとえば、Bottle Web プロジェクトと Flask Web プロジェクトのテンプレートでは、2 つのコマンド **[サーバーの起動]** と **[デバッグ サーバーの開始]** が追加されています。 Django Web プロジェクト テンプレートでは、これら 2 つのコマンドに加えてさらにかなりの数のコマンドが追加されています。
+Visual Studio の特定の Python プロジェクト テンプレートでは、*.targets* ファイルを使って独自のカスタム コマンドが既に追加されています。 たとえば、Bottle Web プロジェクトと Flask Web プロジェクトのテンプレートでは、2 つのコマンド **[サーバーの起動]** と **[デバッグ サーバーの開始]** が追加されています。 Django Web プロジェクト テンプレートでは、これら 2 つのコマンドに加えてさらにかなりの数のコマンドが追加されています。
 
 ![Django プロジェクトのコンテキスト メニューの [Python] サブメニューの外観](media/custom-commands-django-menu.png)
 
@@ -37,21 +37,21 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 > [!Tip]
 > テキスト エディターでプロジェクト ファイルを変更するたびに、Visual Studio でプロジェクトを再度読み込んで変更を適用する必要があります。 たとえば、カスタム コマンドの定義を追加した後でプロジェクトのコンテキスト メニューにそのコマンドを表示するには、プロジェクトを読み込み直す必要があります。
 >
-> ご存知のように、Visual Studio にはプロジェクト ファイルを直接編集する手段があります。 最初にプロジェクト ファイルを右クリックして **[プロジェクトのアンロード]** を選んでから、再び右クリックして **[Edit (project-name)]\((プロジェクト名) の編集\)** を選び、Visual Studio エディターでプロジェクトを開きます。 その後、編集を行って保存し、プロジェクトをもう一度右クリックして、**[プロジェクトの再読み込み]** を選びます。エディターのプロジェクト ファイルを閉じる確認も求められます。
+> ご存知のように、Visual Studio にはプロジェクト ファイルを直接編集する手段があります。 最初にプロジェクト ファイルを右クリックして **[プロジェクトのアンロード]** を選んでから、再び右クリックして **[Edit \<project-name>]\(<プロジェクト名> の編集\)** を選び、Visual Studio エディターでプロジェクトを開きます。 その後、編集を行って保存し、プロジェクトをもう一度右クリックして、**[プロジェクトの再読み込み]** を選びます。エディターのプロジェクト ファイルを閉じる確認も求められます。
 >
-> ただし、カスタム コマンドを開発するときにこのようなクリックをすべて行うのは煩わしいことがあります。 ワークフローの効率をよくするには、Visual Studio でプロジェクトを読み込み、それと一緒に別のエディター (Visual Studio の別のインスタンス、Visual Studio Code、メモ帳など) で `'.pyproj` ファイルを開きます。 エディターで変更を保存して Visual Studio に切り替えると、Visual Studio は変更を検出し、プロジェクトの再読み込みを行うかどうかの確認を求めます ("プロジェクト '<名前>' は環境外で変更されています")。 **[再読み込み]** を選ぶと、1 ステップですぐに変更内容が適用されます。
+> ただし、カスタム コマンドを開発するときにこのようなクリックをすべて行うのは煩わしいことがあります。 ワークフローの効率をよくするには、Visual Studio でプロジェクトを読み込み、それと一緒に別のエディター (Visual Studio の別のインスタンス、Visual Studio Code、メモ帳など) で *.pyproj* ファイルを開きます。 エディターで変更を保存して Visual Studio に切り替えると、Visual Studio は変更を検出し、プロジェクトの再読み込みを行うかどうかの確認を求めます (**プロジェクト \<名前> は環境外で変更されています**)。 **[再読み込み]** を選ぶと、1 ステップですぐに変更内容が適用されます。
 
 ## <a name="walkthrough-add-a-command-to-a-project-file"></a>チュートリアル: プロジェクト ファイルにコマンドを追加する
 
-カスタム コマンドに慣れてもらうため、このセクションでは、直接 python.exe を使ってプロジェクトのスタートアップ ファイルを実行する簡単な例の手順を説明します (このようなコマンドは、実質的に **[デバッグ] > [デバッグなしで開始]** を使うのと同じです)。
+カスタム コマンドに慣れてもらうため、このセクションでは、直接 *python.exe* を使ってプロジェクトのスタートアップ ファイルを実行する簡単な例の手順を説明します (このようなコマンドは、実質的に **[デバッグ]**  >   **[デバッグなしで開始]** を使うのと同じです)。
 
-1. "Python アプリケーション" テンプレートを使って、"Python-CustomCommands" という名前の新しいプロジェクトを作成します (プロセスにまだ慣れていない場合は、「[クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)」の説明を参照してください)。
+1. **Python アプリケーション** テンプレートを使って、"Python-CustomCommands" という名前の新しいプロジェクトを作成します (プロセスにまだ慣れていない場合は、「[クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する](quickstart-02-python-in-visual-studio-project-from-template.md)」の説明を参照してください)。
 
-1. `Python_CustomCommands.py` に、`print("Hello custom commands")` というコードを追加します。
+1. *Python_CustomCommands.py*、コードを追加`print("Hello custom commands")`します。
 
 1. **ソリューション エクスプローラー**でプロジェクトを右クリックして **[Python]** を選び、サブメニューに表示されるコマンドが **[PyLint を実行]** だけであることを確認します。 カスタム コマンドはこの同じサブメニューに表示されます。
 
-1. 概要で指摘したように、`Python-CustomCommands.pyproj` を別のテキスト エディターで開きます。 次の行を、ファイル末尾の終わりの `</Project>` のすぐ内側に追加して、ファイルを保存します。
+1. 概要で指摘したように、*Python-CustomCommands.pyproj* を別のテキスト エディターで開きます。 次の行を、ファイル末尾の終わりの `</Project>` のすぐ内側に追加して、ファイルを保存します。
 
     ```xml
     <PropertyGroup>
@@ -63,7 +63,7 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 
 1. Visual Studio に戻り、ファイルの変更に関するプロンプトが表示されたら **[再読み込み]** を選びます。 次に、**[Python]** を再び表示して、**[PyLint を実行]** がまだ唯一の項目であることを確認します。これは、追加した行は、PyLint コマンドを含む既定の `<PythonCommands>` プロパティ グループを複製しているだけであるためです。
 
-1. プロジェクト ファイルのエディターに切り替え、次の `<Target>` 定義を `<PropertyGroup>` の後に追加します。 後で説明するように、この `Target` 要素では、コンソール ウィンドウで `python.exe` を使って ("StartupFile" プロパティによって示される) スタートアップ ファイルを実行するためのカスタム コマンドを定義します。 属性 `ExecuteIn="consolepause"` は、閉じる前にユーザーのキー押下を待っているコンソールを使います。
+1. プロジェクト ファイルのエディターに切り替え、次の `<Target>` 定義を `<PropertyGroup>` の後に追加します。 後で説明するように、この `Target` 要素では、コンソール ウィンドウで *python.exe* を使って ("StartupFile" プロパティによって示される) スタートアップ ファイルを実行するためのカスタム コマンドを定義します。 属性 `ExecuteIn="consolepause"` は、閉じる前にユーザーのキー押下を待っているコンソールを使います。
 
     ```xml
     <Target Name="Example_RunStartupFile" Label="Run startup file" Returns="@(Commands)">
@@ -89,11 +89,11 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 
     `$(PythonCommands)` で定義されているものより前にカスタム コマンドを表示したい場合は、そのトークンの前に配置します。
 
-1. プロジェクト ファイルを保存し、Visual Studio に切り替えて、メッセージが表示されたらプロジェクトを再度読み込みます。 "Python-CustomCommands" プロジェクトを右クリックし、**[Python]** を選択します。 **[Run startup file]** 項目がメニューに表示されるはずです。 メニュー項目が表示されない場合は、名前を `<PythonCommands>` 要素に追加したことを確認します。 また、後の「[トラブルシューティング](#troubleshooting)」も参照してください。
+1. プロジェクト ファイルを保存し、Visual Studio に切り替えて、メッセージが表示されたらプロジェクトを再度読み込みます。 Then right-click the **Python-CustomCommands** プロジェクトを右クリックし、**[Python]** を選択します。 **[Run startup file]** 項目がメニューに表示されるはずです。 メニュー項目が表示されない場合は、名前を `<PythonCommands>` 要素に追加したことを確認します。 また、後の「[トラブルシューティング](#troubleshooting)」も参照してください。
 
     ![Python コンテキスト サブメニューに表示されたカスタム コマンド](media/custom-commands-walkthrough-menu-item.png)
 
-1. **[Run startup file]** コマンドを選ぶと、コマンド ウィンドウが開き、"Hello custom commands" および "Press any key to continue . である必要があります。 ." というテキストが表示されます。  任意のキーを押して、ウィンドウを閉じます。
+1. **[Run startup file]** コマンドを選ぶと、"**Hello custom commands**" の後に、"**Press any key to continue**" と続く、コマンド ウィンドウが開きます。  任意のキーを押して、ウィンドウを閉じます。
 
     ![コンソール ウィンドウのカスタム コマンドの出力](media/custom-commands-walkthrough-console.png)
 
@@ -144,14 +144,14 @@ Visual Studio の特定の Python プロジェクト テンプレートでは、
 
 | 属性 | 必須 | 説明 |
 | --- | --- | --- |
-| TargetType | [はい] | 含まれる Target 属性と、Arguments 属性でのその使い方を指定します。<ul><li>**executable**: Target で指定されている実行可能ファイルを実行します。コマンド ラインで直接入力された場合と同じように、Arguments の値を追加します。 値には、引数なしのプログラム名のみが含まれる必要があります。</li><li>**script**: Target のファイル名とそれに続く Arguments の値で、`python.exe` を実行します。</li><li>**module**: `python -m` の後に Target のモジュール名と Arguments の値を指定して実行します。</li><li>**code**: Target に含まれるインライン コードを実行します。 Arguments の値は無視されます。</li><li>**pip**: Target のコマンドと Arguments の値で `pip` を実行します。ただし、ExecuteIn は "output" に設定され、pip は `install` コマンドを想定し、Target をパッケージ名として使います。</li></ul> |
+| TargetType | [はい] | 含まれる Target 属性と、Arguments 属性でのその使い方を指定します。<ul><li>**executable**: Target で指定されている実行可能ファイルを実行します。コマンド ラインで直接入力された場合と同じように、Arguments の値を追加します。 値には、引数なしのプログラム名のみが含まれる必要があります。</li><li>**script**: Target のファイル名とそれに続く Arguments の値で、*python.exe* を実行します。</li><li>**module**: `python -m` の後に Target のモジュール名と Arguments の値を指定して実行します。</li><li>**code**: Target に含まれるインライン コードを実行します。 Arguments の値は無視されます。</li><li>**pip**: Target のコマンドと Arguments の値で `pip` を実行します。ただし、ExecuteIn は "output" に設定され、pip は `install` コマンドを想定し、Target をパッケージ名として使います。</li></ul> |
 | ターゲット | [はい] | TargetType に応じて、使うファイル名、モジュール名、コード、または pip コマンドです。 |
-| 引数 | Optional | ターゲットに渡す引数の文字列を指定します (存在する場合)。 TargetType が `script` の場合は、引数は `python.exe` ではなく Python プログラムに渡されることに注意してください。 TargetType が `code` のときは無視されます。 |
-| ExecuteIn | [はい] | コマンドを実行する環境を指定します。<ul><li>**console**: (既定値) Target と引数を、コマンド ラインで直接入力された場合と同じように実行します。 Target の実行中はコマンド ウィンドウが表示された後、自動的に閉じられます。</li><li>**consolepause**: console と同じですが、キー押下を待ってからウィンドウを閉じます。</li><li>**output**: Target を実行し、Visual Studio の出力ウィンドウに結果を表示します。 TargetType が "pip" の場合、Visual Studio は Target をパッケージ名として使い、Arguments を付加します。</li><li>**repl**: Target を [Python Interactive ウィンドウ](python-interactive-repl-in-visual-studio.md)で実行します。ウィンドウのタイトルには、省略可能な表示名が使われます。</li><li>**none**: 動作は console と同じです。</li></ul>|
+| 引数 | Optional | ターゲットに渡す引数の文字列を指定します (存在する場合)。 TargetType が `script` の場合は、引数は *python.exe* ではなく Python プログラムに渡されることに注意してください。 TargetType が `code` のときは無視されます。 |
+| ExecuteIn | [はい] | コマンドを実行する環境を指定します。<ul><li>**console**: (既定値) Target と引数を、コマンド ラインで直接入力された場合と同じように実行します。 Target の実行中はコマンド ウィンドウが表示された後、自動的に閉じられます。</li><li>**consolepause**: console と同じですが、キー押下を待ってからウィンドウを閉じます。</li><li>**output**: Target を実行し、Visual Studio の**出力**ウィンドウに結果を表示します。 TargetType が "pip" の場合、Visual Studio は Target をパッケージ名として使い、Arguments を付加します。</li><li>**repl**: Target を [Python Interactive ウィンドウ](python-interactive-repl-in-visual-studio.md)で実行します。ウィンドウのタイトルには、省略可能な表示名が使われます。</li><li>**none**: 動作は console と同じです。</li></ul>|
 | WorkingDirectory | Optional | コマンドを実行するフォルダーです。 |
-| ErrorRegex<br>WarningRegEx | Optional | ExecuteIn が `output` の場合にのみ使われます。 どちらの値も、Visual Studio が [エラー一覧] ウィンドウにエラーと警告を表示するためにコマンド出力を解析するときに使う正規表現を指定します。 指定しないと、コマンドは [エラー一覧] ウィンドウに反映されません。 Visual Studio が想定する値の詳細については、「[正規表現の名前付きキャプチャ グループ](#named-capture-groups-for-regular-expressions)」を参照してください。 |
-| RequiredPackages | Optional | コマンドのパッケージ要件の一覧です。[requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io) と同じ形式を使います。 たとえば、**[PyLint の実行]** コマンドでは、`pylint>=1.0.0` と指定されています。 コマンドを実行する前に、Visual Studio は一覧内のすべてのパッケージがインストールされていることを確認します。 Visual Studio は、pip を使ってすべての足りないパッケージをインストールします。 |
-| 環境 | Optional | コマンドを実行する前に定義する環境変数の文字列です。 各変数では "名前=値" の形式を使い、複数の変数はセミコロンで区切ります。 複数の値を持つ変数は、一重引用符または二重引用符で囲む必要があります (例: 'NAME=VALUE1;VALUE2')。 |
+| ErrorRegex<br>WarningRegEx | Optional | ExecuteIn が `output` の場合にのみ使われます。 どちらの値も、Visual Studio が **[エラー一覧]** ウィンドウにエラーと警告を表示するためにコマンド出力を解析するときに使う正規表現を指定します。 指定しないと、コマンドは **[エラー一覧]** ウィンドウに反映されません。 Visual Studio が想定する値の詳細については、「[正規表現の名前付きキャプチャ グループ](#named-capture-groups-for-regular-expressions)」を参照してください。 |
+| RequiredPackages | Optional | コマンドのパッケージ要件の一覧です。[*requirements.txt*](https://pip.readthedocs.io/en/1.1/requirements.html) (pip.readthedocs.io) と同じ形式を使います。 たとえば、**[PyLint の実行]** コマンドでは、`pylint>=1.0.0` と指定されています。 コマンドを実行する前に、Visual Studio は一覧内のすべてのパッケージがインストールされていることを確認します。 Visual Studio は、pip を使ってすべての足りないパッケージをインストールします。 |
+| 環境 | Optional | コマンドを実行する前に定義する環境変数の文字列です。 各変数では \<名前>=\<値> の形式を使い、複数の変数はセミコロンで区切ります。 複数の値を持つ変数は、一重引用符または二重引用符で囲む必要があります (例: 'NAME=VALUE1;VALUE2')。 |
 
 #### <a name="named-capture-groups-for-regular-expressions"></a>正規表現の名前付きキャプチャ グループ
 
@@ -178,11 +178,11 @@ Visual Studio がこのような警告から適切な情報を抽出し、**[エ
 
 値の `msg_id` は、実際には `code` でなければならないことに注意してください。[問題 3680](https://github.com/Microsoft/PTVS/issues/3680) に関する説明を参照してください。
 
-## <a name="creating-a-targets-file-with-custom-commands"></a>カスタム コマンドの .targets ファイルの作成
+## <a name="create-a-targets-file-with-custom-commands"></a>カスタム コマンドの .targets ファイルの作成
 
-プロジェクト ファイルでカスタム コマンドを定義すると、そのコマンドはそのプロジェクト ファイルだけで使えるようになります。 複数のプロジェクト ファイルでコマンドを使うには、代わりに、`<PythonCommands>` プロパティ グループとすべての `<Target>` 要素を `.targets` ファイルで定義します。 そして、個々のプロジェクト ファイルにそのファイルをインポートします。
+プロジェクト ファイルでカスタム コマンドを定義すると、そのコマンドはそのプロジェクト ファイルだけで使えるようになります。 複数のプロジェクト ファイルでコマンドを使うには、代わりに、`<PythonCommands>` プロパティ グループとすべての `<Target>` 要素を *.targets* ファイルで定義します。 そして、個々のプロジェクト ファイルにそのファイルをインポートします。
 
-`.targets` ファイルの形式は次のとおりです。
+*.targets* ファイルの形式は次のとおりです。
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -201,20 +201,20 @@ Visual Studio がこのような警告から適切な情報を抽出し、**[エ
 </Project>
 ```
 
-`.targets` ファイルをプロジェクトに読み込むには、`<Import Project="(path)">` 要素を `<Project>` 要素内の任意の場所に配置します。 たとえば、プロジェクトの `targets` サブフォルダーに `CustomCommands.targets` という名前のファイルがある場合は、次のコードを使います。
+*.targets* ファイルをプロジェクトに読み込むには、`<Import Project="(path)">` 要素を `<Project>` 要素内の任意の場所に配置します。 たとえば、プロジェクトの *targets* サブフォルダーに *CustomCommands.targets* という名前のファイルがある場合は、次のコードを使います。
 
 ```xml
 <Import Project="targets/CustomCommands.targets"/>
 ```
 
 > [!Note]
-> `.targets` ファイルを変更するたびに、プロジェクト自体だけでなく、プロジェクトを含む "*ソリューション*" を再度読み込む必要があります。
+> *.targets* ファイルを変更するたびに、プロジェクト自体だけでなく、プロジェクトを含む "*ソリューション*" を再度読み込む必要があります。
 
 ## <a name="example-commands"></a>コマンドの例
 
 ### <a name="run-pylint-module-target"></a>PyLint の実行 (モジュール ターゲット)
 
-次のコードは `Microsoft.PythonTools.targets` ファイルに含まれます。
+次のコードが *Microsoft.PythonTools.targets* ファイルに表示されます。
 
 ```xml
 <PropertyGroup>
@@ -241,7 +241,7 @@ Visual Studio がこのような警告から適切な情報を抽出し、**[エ
 
 ### <a name="run-pip-install-with-a-specific-package-pip-target"></a>特定のパッケージで pip のインストールを実行する (pip ターゲット)
 
-次のコマンドは、`pip install my-package` を [出力] ウィンドウで実行します。 このようなコマンドは、パッケージを開発してそのインストールをテストするときに使う場合があります。 Target には、`install` コマンドではなくパッケージ名が含まれることに注意してください。`ExecuteIn="output"` を使うときはそのように想定されます。
+次のコマンドは、`pip install my-package` を **[出力]** ウィンドウで実行します。 このようなコマンドは、パッケージを開発してそのインストールをテストするときに使う場合があります。 Target には、`install` コマンドではなくパッケージ名が含まれることに注意してください。`ExecuteIn="output"` を使うときはそのように想定されます。
 
 ```xml
 <PropertyGroup>
@@ -373,7 +373,7 @@ Web プロジェクトの **[サーバーの起動]** および **[デバッグ 
   </Target>
 ```
 
-### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>メッセージ: "<コマンド名> の実行中にエラーが発生しました。 プロジェクトからコマンド <ターゲット名> を取得できませんでした"
+### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>メッセージ: "\<コマンド名> の実行中にエラーが発生しました。 プロジェクトからコマンド \<ターゲット名> を取得できませんでした"
 
 `<Target>` または `<CreatePythonCommandItem>` 要素の内容が正しくないことを示します。 次のような理由が考えられます。
 
@@ -383,12 +383,12 @@ Web プロジェクトの **[サーバーの起動]** および **[デバッグ 
 - `ErrorRegex` または `WarningRegex` が、`ExecuteIn="output"` を設定しないで指定されています。
 - 要素に認識されない属性が存在します。 たとえば、`Arguments` ではなく `Argumnets` (スペル ミス) を使っている可能性があります。
 
-定義されていないプロパティを参照する場合は、属性値を空にすることができます。 たとえば、トークン `$(StartupFile)` を使っていて、スタートアップ ファイルがプロジェクトで定義されていない場合、そのトークンは空の文字列に解決されます。 このような場合は、既定値を定義できます。 たとえば、Bottle、Flask、Django Project テンプレートで定義されている **[サーバーの起動]** および **[デバッグ サーバーの開始]** コマンドは、プロジェクトのプロパティでサーバーのスタートアップ ファイルに別の値が定義されていない場合、既定で `manage.py` になります。
+定義されていないプロパティを参照する場合は、属性値を空にすることができます。 たとえば、トークン `$(StartupFile)` を使っていて、スタートアップ ファイルがプロジェクトで定義されていない場合、そのトークンは空の文字列に解決されます。 このような場合は、既定値を定義できます。 たとえば、Bottle、Flask、Django Project テンプレートで定義されている **[サーバーの起動]** および **[デバッグ サーバーの開始]** コマンドは、プロジェクトのプロパティでサーバーのスタートアップ ファイルに別の値が定義されていない場合、既定で *manage.py* になります。
 
 ### <a name="visual-studio-hangs-and-crashes-when-running-the-command"></a>コマンドを実行すると Visual Studio がハングしてクラッシュする
 
 `ExecuteIn="output"` を指定してコンソール コマンドを実行しようとすると、Visual Studio が出力の解析を試みてクラッシュする場合があります。 代わりに、`ExecuteIn="console"` を使用してください。 ([問題 3682](https://github.com/Microsoft/PTVS/issues/3681) に関する説明を参照してください)
 
-### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operate-program-or-batch-file"></a>"<実行可能ファイル コマンド> は、内部コマンドまたは外部コマンド、操作可能なプログラムまたはバッチ ファイルとして認識されていません"
+### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>"<実行可能ファイル コマンド> は、内部コマンドまたは外部コマンド、操作可能なプログラムまたはバッチ ファイルとして認識されていません"
 
-`TargetType="executable"` を使うとき。`Target` の値には、引数を含まないプログラム名 "*のみ*" を指定する必要があります (例: "python" や "python.exe" のみ)。 引数はすべて `Arguments` 属性に移動します。
+`TargetType="executable"` を使うとき、`Target` の値には、引数を含まないプログラム名 *のみ* を指定する必要があります (例: *python*や *python.exe* のみ)。 引数はすべて `Arguments` 属性に移動します。

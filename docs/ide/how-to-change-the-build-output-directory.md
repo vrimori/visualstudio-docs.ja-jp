@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 721b8241a3278ddbf1be3b5477e8829b7aa4447b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: aebb4603d32f61c2d4b50355a550a1a932336962
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31942248"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379690"
 ---
 # <a name="how-to-change-the-build-output-directory"></a>方法 : ビルド出力ディレクトリを変更する
 
@@ -28,7 +28,7 @@ ms.locfileid: "31942248"
 
 ## <a name="change-the-build-output-directory"></a>ビルド出力ディレクトリを変更する
 
-1.  メニュー バーで、**[プロジェクト]** > **[\<アプリケーション名>] > [プロパティ]** の順に選択します。 **ソリューション エクスプローラー** でプロジェクト ノードを右クリックし、 **[プロパティ]** をクリックすることもできます。
+1.  メニュー バーで、**[プロジェクト]** > **[\<アプリケーション名>] > [プロパティ]** の順に選択します。 **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[プロパティ]** をクリックすることもできます。
 
 2.  Visual Basic プロジェクトの場合は、 **[コンパイル]** タブを選択します。C# プロジェクトの場合は、**[ビルド]** タブを選択します。C++ プロジェクトまたは JavaScript プロジェクトの場合は、 **[全般]** タブを選択します。
 

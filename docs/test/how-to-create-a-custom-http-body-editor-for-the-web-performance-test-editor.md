@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 138cff5920eef205cf8235ed0532754a843bbf46
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 187822c0217e6aca4f8828c82274520a35e8afe2
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177049"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380656"
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>方法: Web パフォーマンス テスト エディターのカスタム HTTP ボディ エディターを作成する
 
@@ -44,34 +44,34 @@ ms.locfileid: "39177049"
 
 3.  テンプレートの一覧で、**[Windows フォーム コントロール ライブラリ]** を選択します。
 
-4.  [名前] テキスト ボックスに名前 (`MessageEditors` など) を入力し、**[OK]** を選択します。
+4.  **[名前]** テキスト ボックスに名前 (`MessageEditors` など) を入力し、**[OK]** を選択します。
 
     > [!NOTE]
     > このサンプルでは、MessageEditors を使用しています。
 
-     プロジェクトが新しいソリューションに追加され、UserControl1.cs という名前の <xref:System.Windows.Forms.UserControl> がデザイナーに表示されます。
+     プロジェクトが新しいソリューションに追加され、*UserControl1.cs* という名前の <xref:System.Windows.Forms.UserControl> がデザイナーに表示されます。
 
 5.  **ツールボックス**の **[コモン コントロール]** カテゴリで、<xref:System.Windows.Forms.RichTextBox> を UserControl1 のサーフェイスにドラッグします。
 
 6.  <xref:System.Windows.Forms.RichTextBox> コントロールの右上隅にあるアクション タグ グリフ (![スマート タグ グリフ](../test/media/vs_winformsmttagglyph.gif)) を選び、親コンテナーを選択して**ドッキング**します。
 
-7.  ソリューション エクスプローラーで、Windows フォーム ライブラリ プロジェクトを右クリックし、**[プロパティ]** を選択します。
+7.  **ソリューション エクスプローラー**で、Windows フォーム ライブラリ プロジェクトを右クリックし、**[プロパティ]** を選択します。
 
-8.  [プロパティ] の **[アプリケーション]** タブを選択します。
+8.  **[プロパティ]** の **[アプリケーション]** タブを選択します。
 
 9. **[対象とする Framework]** ドロップダウンの一覧で、**[.NET Framework 4]** を選択します。
 
-10. [ターゲット フレームワークの変更] ダイアログ ボックスが表示されます。
+10. **[ターゲット フレームワークの変更]** ダイアログ ボックスが表示されます。
 
 11. **[はい]** をクリックします。
 
-12. ソリューション エクスプローラーで、**[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
+12. **ソリューション エクスプローラー**で、**[参照設定]** ノードを右クリックし、**[参照の追加]** を選択します。
 
 13. **[参照の追加]** ダイアログ ボックスが表示されます。
 
 14. **[.NET]** タブを選びます。下にスクロールして、**[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択して、**[OK]** を選びます。
 
-15. ソリューション エクスプローラーでビュー デザイナーがまだ開いていない場合は、**UserControl1.cs** を右クリックし、**[デザイナーの表示]** を選択します。
+15. **ソリューション エクスプローラー**で**ビュー デザイナー**がまだ開いていない場合は、**UserControl1.cs** を右クリックし、**[デザイナーの表示]** を選択します。
 
 16. デザイン サーフェイスを右クリックし、**[コードの表示]** を選択します。
 
@@ -121,7 +121,7 @@ ms.locfileid: "39177049"
    }
    ```
 
-## <a name="add-a-class-for-to-the-windows-control-library-project"></a>Windows コントロール ライブラリ プロジェクトへのクラスの追加
+## <a name="add-a-class-to-the-windows-control-library-project"></a>Windows コントロール ライブラリ プロジェクトへのクラスの追加
 
 プロジェクトにクラスを追加します。 このクラスは <xref:Microsoft.VisualStudio.TestTools.WebTesting.IStringHttpBodyEditorPlugin> インターフェイスと <xref:Microsoft.VisualStudio.TestTools.WebTesting.IBinaryHttpBodyEditorPlugin> インターフェイスの実装に使用されます。
 
@@ -139,7 +139,7 @@ private MessageEditorControl messageEditorControl
 
 ### <a name="to-create-a-class-and-implement-the-istringhttpbodyeditorplugin-interface-code"></a>クラスを作成して IStringHttpBodyEditorPlugin インターフェイス コードを実装するには
 
-1.  ソリューション エクスプローラーで、Windows フォーム コントロール ライブラリ プロジェクトを右クリックし、**[新しい項目の追加]** を選択します。
+1.  **ソリューション エクスプローラー**で、Windows フォーム コントロール ライブラリ プロジェクトを右クリックし、**[新しい項目の追加]** を選択します。
 
 2.  **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
@@ -282,14 +282,14 @@ messageEditorControl インスタンスは、<xref:Microsoft.VisualStudio.TestTo
 
 ### <a name="to-build-and-deploy-the-resulting-dll-for-the-istringhttpbodyeditorplugin-and-ibinaryhttpbodyeditorplugin"></a>IStringHttpBodyEditorPlugin および IBinaryHttpBodyEditorPlugin について生成される dll をビルドおよび配置するには
 
-1.  [ビルド] メニューの **\<[<Windows フォーム コントロール ライブラリ プロジェクト名> のビルド]** を選びます。
+1.  **[ビルド]** メニューの **[\<Windows フォーム コントロール ライブラリ プロジェクト名> のビルド]** を選びます。
 
 2.  Visual Studio のすべてのインスタンスを閉じます。
 
     > [!NOTE]
     > Visual Studio を閉じて、*.dll* ファイルがコピーしようとする前にロックされていないことを確認します。
 
-3.  プロジェクトの *bin\debug* フォルダーの生成された *.dll* ファイル (*MessageEditors.dll* など) を %ProgramFiles%\Microsoft Visual Studio\2017\\<edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins にコピーします。
+3.  プロジェクトの *bin\debug* フォルダーの生成された *.dll* ファイル (*MessageEditors.dll* など) を *%ProgramFiles%\Microsoft Visual Studio\2017\\<edition>\Common7\IDE\PrivateAssemblies\WebTestPlugins* にコピーします。
 
 4.  Visual Studio を開きます。
 
@@ -305,11 +305,11 @@ messageEditorControl インスタンスは、<xref:Microsoft.VisualStudio.TestTo
 
 3.  記録が終了したら、Web パフォーマンス テスト エディターで Web サービスの要求を展開し、**[文字列ボディ]** または **[バイナリ ボディ]** を選択します。
 
-4.  [プロパティ] ウィンドウで、[文字列ボディ] または [バイナリ ボディ] を選択し、省略記号 (...) をクリックします。
+4.  プロパティ ウィンドウで、[文字列ボディ] または [バイナリ ボディ] を選択し、省略記号 **(...)** をクリックします。
 
      **[HTTP ボディ データの編集]** ダイアログ ボックスが表示されます。
 
-5.  ここでデータを編集できます。[OK] をクリックします。 これにより、該当する GetNewValue メソッドを起動して、<xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> のコンテンツを更新できます。
+5.  ここでデータを編集できます。**[OK]** をクリックします。 これにより、該当する GetNewValue メソッドを起動して、<xref:Microsoft.VisualStudio.TestTools.WebTesting.IHttpBody> のコンテンツを更新できます。
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
@@ -325,9 +325,9 @@ Windows コントロール ライブラリ プロジェクトの対象のフレ�
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.RichTextBox>
 - [ロード テスト用のカスタム コードおよびカスタム プラグインの作成](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [方法 : 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)
+- [方法: 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)
 - [Web パフォーマンス テストのカスタム抽出規則のコーディング](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
 - [Web パフォーマンス テストのカスタム検証規則のコーディング](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
+- [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
 - [コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)
 - [方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 444c4e7214d55aad270a88325ee9e694e84987c6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 888d446d82a2f7b5fb6d8638a1c7472378b014de
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31979049"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379261"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>方法: テスト コントローラーおよびテスト エージェントのタイムアウト期限を指定する
 
@@ -26,7 +26,7 @@ ms.locfileid: "31979049"
 
  テスト コントローラーまたはテスト エージェントのさまざまなタイムアウト設定を編集するには、以下の構成ファイルを表のキー名と値を使用して変更します。
 
--   テスト コントローラー: QTController.exe.config
+-   テスト コントローラー: *QTController.exe.config*
 
     |キー名|説明|[値]|
     |--------------|-----------------|-----------|
@@ -35,7 +35,7 @@ ms.locfileid: "31979049"
     |AgentInitializeTimeout|テストの実行開始時に、すべてのエージェントとそのデータ コレクターの初期化を待機する秒数。それを超えると、テストの実行が中止されます。 この値は、データ コレクターを使用する場合は、適度に大きくする必要があります。|"n" 秒。 既定値: "120" (2 分)。|
     |AgentCleanupTimeout|すべてのエージェントとそのデータ コレクターのクリーンアップを待機する秒数。それを超えると、テストの実行が完了します。 この値は、データ コレクターを使用する場合は、適度に大きくする必要があります。|"n" 秒。 既定値: "120" (2 分)。|
 
--   テスト エージェント: QTAgentService.exe.config
+-   テスト エージェント: *QTAgentService.exe.config*
 
     |キー名|説明|[値]|
     |--------------|-----------------|-----------|
@@ -46,9 +46,9 @@ ms.locfileid: "31979049"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>テスト コントローラーのエージェント タイムアウト オプションを指定するには
 
-1. %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE にある QTCcontroller.exe.config XML 構成ファイルを開きます。
+1. *QTCcontroller.exe.config* XML configuration file located in *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* 構成ファイルを開きます。
 
-2. `<appSettings>` タグを探します。
+2. `<appSettings>` タグを検索します。
 
     ```xml
     <appSettings>
@@ -80,9 +80,9 @@ ms.locfileid: "31979049"
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>テスト エージェントのエージェント タイムアウト オプションを指定するには
 
-1. %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE にある QTAgentService.exe.config XML 構成ファイルを開きます。
+1. *QTAgentService.exe.config* XML configuration file located in *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE* を開きます。
 
-2. `<appSettings>` タグを探します。
+2. `<appSettings>` タグを検索します。
 
     ```xml
     <appSettings>
@@ -116,6 +116,6 @@ ms.locfileid: "31979049"
 
 - [テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)
 - [ロード テストのログ設定の変更](../test/modify-load-test-logging-settings.md)
-- [Test Controller および Test Agent 用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [テスト コントローラーおよびテスト エージェント用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)
 - [方法: ログ ファイルの最大サイズを指定する](../test/how-to-specify-the-maximum-size-for-the-log-file.md)
-- [方法: ネットワーク アダプターに Test Controller または Test Agent をバインドする](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)
+- [方法: ネットワーク アダプターにテスト コントローラーまたはテスト エージェントをバインドする](../test/how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md)

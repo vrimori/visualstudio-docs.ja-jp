@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6141defb2248cf79888b0ed94824a827bd36815f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e46b8af413f7f86592ed6c9362ca9f11e61c436f
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31976309"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380379"
 ---
 # <a name="how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter"></a>方法: 診断データ アダプター用のデータのカスタム エディターを作成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "31976309"
 
 診断データ アダプターで <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を使用して、診断データの構成設定の編集に使用するエディター クラスを指定できます。
 
-使用する既定の構成データも指定できます。  既定の構成のサンプルについては、「[Sample Project for Creating a Diagnostic Data Adapter](../test/sample-project-for-creating-a-diagnostic-data-adapter.md)」 (診断データ アダプター作成用のサンプル プロジェクト) を参照してください。
+使用する既定の構成データも指定できます。  既定の構成のサンプルについては、「[診断データ アダプター作成用のサンプル プロジェクト](../test/sample-project-for-creating-a-diagnostic-data-adapter.md)」を参照してください。
 
 カスタム データ診断アダプターを使用する際にテストの設定のデータを更新するためのカスタム エディターを作成するには、次の手順を実行します。
 
@@ -176,7 +176,7 @@ ms.locfileid: "31976309"
 
 12. 必要に応じてカスタム エディターでフィールドを編集し、**[保存]** をクリックします。
 
-13. Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+13. Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、**[オプションを指定して実行]** コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 14. 診断データ アダプターで新しい構成エディターを使用する前に、エディターを使用する各診断データ アダプター クラスに <xref:Microsoft.VisualStudio.TestTools.Execution.DataCollectorConfigurationEditorAttribute> を適用し、クライアント コンピューターでそれらを再コンパイルおよび再インストールする必要があります。 診断データ アダプターおよび構成エディターのインストール方法の詳細については、「[方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)」を参照してください。
 

@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Pluralsigh
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 242a8a5521d53e631e69036a94434f892fb2e19c
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 4ae10da644f61d518370605322fee842d3a4e4a7
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281181"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380793"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -91,7 +91,7 @@ ms.locfileid: "36281181"
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
 ### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>Q: Visual Studio Enterprise サブスクリプションを持っていますが、特典ページに Pluralsight タイルが表示されません。 理由
-A: すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [サブスクリプションの表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
+A: すべての Visual Studio Enterprise サブスクリプションに Pluralsight 特典が含まれるわけではありません。  [特典を受ける条件についての表](#eligibility)で、サブスクリプションが対象であるかどうかを参照してください。
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>Q: 任意のカスタマイズされた学習のプレイリストやチャネルへのアクセス権はありませすか?
 A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニング特典の一部としてチャネルをエクスポートするアクセス権を取得します。 これらのチャネルは Microsoft の専門家によって特別に作成されており、.Net、Azure、DevOps、モビリティの学習範囲を対象としています。 Visual Studio サブスクリプション ポータル [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) から Pluralsight 特典をアクティブにし、Pluralsight 学習ページでこれらのチャネルにアクセスします。
@@ -105,7 +105,7 @@ A: はい。Visual Studio サブスクライバーは、Pluralsight トレーニ
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight サブスクリプションがなくなるとどうなりますか。
 A: 無料の Pluralsight サブスクリプションの終了時には、2 つのオプションがあります。
-- クラウドでのアプリ開発、AI、機械学習およびデータ、クラウドでの DevOps の 3 つの主要領域の、50 の制限付きのコース セットに、12 か月間無料でアクセスできます (お持ちのサブスクリプションが対象かどうかを確認するには、[特典を受ける条件についての表](#eligibility)をご確認ください)。 有効期限後に無料アクセスしたい場合については、Pluralsight からの電子メールを確認してください。 それぞれの部分的なライブラリの下で[コース一覧](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)をご確認いただけます。
+- クラウドでのアプリ開発、AI、機械学習およびデータ、クラウドでの DevOps の 3 つの主要領域のいずれかにある、50 の制限付きのコース セットに、12 か月間無料でアクセスできます (お持ちのサブスクリプションが対象かどうかを確認するには、[特典を受ける条件についての表](#eligibility)をご確認ください)。 有効期限後に無料アクセスしたい場合については、Pluralsight からの電子メールを確認してください。 それぞれの部分的なライブラリの下で[コース一覧](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)をご確認いただけます。
 - Pluralsight から直接 10% 割引でサブスクリプションを購入した場合、全カタログを使用することが可能です。  詳細については、[Pluralsight](http://www.pluralsight.com) にお問い合わせください。
 
 ### <a name="q-my-company-renews-their-visual-studio-subscription-through-an-enterprise-agreement-does-the-pluralsight-benefit-reset"></a>Q: 会社が Enterprise Agreement を使用して Visual Studio サブスクリプションを更新します。 Pluralsight 特典はリセットされますか?

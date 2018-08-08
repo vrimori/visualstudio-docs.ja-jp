@@ -12,12 +12,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63f10359563e653dd896f47137126bb0991f7784
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 5b19eee80b276642f9d9254120466a7972f6af27
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280277"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379882"
 ---
 # <a name="introducing-live-unit-testing"></a>Live Unit Testing の概要
 
@@ -27,13 +27,13 @@ Live Unit Testing とは、Visual Studio 2017 バージョン 15.3 で利用で�
 
 - 単体テストが適切にコードをカバーしているかどうかが示され、単体テストでカバーされていないコードも表示されます。 Live Unit Testing は、リアルタイムでコード カバレッジをグラフィカルに表示します。これにより、各コード行をカバーしているテストの数、および任意の単体テストでカバーされていない行をひとめで把握することができます。
 
-1 つ以上の単体テスト プロジェクトを含むソリューションがある場合、Live Unit Testing を有効にするには、Visual Studio の最上位メニューから、**[テスト]**、**[Live Unit Testing]**、**[開始]** の順に選択します。
+1 つ以上の単体テスト プロジェクトを含むソリューションがある場合、Live Unit Testing を有効にするには、Visual Studio の最上位メニューから、**[テスト]** > **[Live Unit Testing]** > **[開始]** の順に選択します。
 
 Live Unit Testing について詳細を学習するには:
 
 - 入門チュートリアル 「[Get started with Live Unit Testing in Visual Studio](live-unit-testing-start.md)」 (Visual Studio で Live Unit Testing の使用を開始する) を試してみてください。
 
-- 「[Use Live Unit testing with Visual Studio 2017 Enterprise Edition](live-unit-testing.md)」 (Visual Studio 2017 Enterprise Edition で Live Unit Testing を使用する) に記載されている詳しい説明をご覧ください。
+- 詳細については、[Visual Studio 2017 Enterprise Edition での Live Unit Testing の使用](live-unit-testing.md)に関するページを参照してください。
 
 - 「[Live Unit Testing に関する FAQ](live-unit-testing-faq.md)」を参照してください。Live Unit Testing の新しい機能に加えて、Live Unit Testing を使用するためのヒントとテクニックが説明されています。
 

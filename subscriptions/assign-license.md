@@ -9,18 +9,18 @@ description: 管理者がサブスクライバーにライセンスを割り当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 473933ca94090596f11a6e8abb499621b4430b3f
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: e0baa4ee731b8d69e18ab59c958801d94fb99869
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178401"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251706"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルでライセンスを割り当てる
 
 Visual Studio サブスクリプションの管理者は、管理者ポータルを使用して、個々のユーザーおよびユーザーのグループにサブスクリプションを割り当てることができます。
 
-ユーザーのグループの場合、一度に 1 つずつグループにサブスクリプションを割り当てることも、**[一括追加]** 機能を使用して迅速かつ簡単にサブスクリプション情報でサブスクライバーの一覧をアップロードすることも可能です。 
+ユーザーのグループの場合、一度に 1 つずつグループにサブスクリプションを割り当てることも、**[一括追加]** 機能を使用して迅速かつ簡単にサブスクリプション情報でサブスクライバーの一覧をアップロードすることも可能です。
 
 ## <a name="individual-assignments"></a>個別の割り当て
 
@@ -32,7 +32,7 @@ Visual Studio サブスクリプションの管理者は、管理者ポータル
 
    ![1 人のサブスクライバーを追加する](media\add-single-subscriber.png)
 
-3. フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます。 
+3. フォームのフィールドに新しいサブスクライバーの情報を入力します。 組織が Azure Active Directory を使っている場合は、このフィールドを使って現在のディレクトリのユーザーを検索し、検索結果から適切なユーザーを選ぶことができます。 ユーザーを選ぶと、名前、サインイン メール アドレス、通知メール アドレスが自動的に設定されます。
 
    ![新しい通知メール アドレスを追加する](media\add-new-subscriber-notification-email.png)
 
@@ -66,7 +66,7 @@ Visual Studio サブスクリプションの管理者は、管理者ポータル
 
   ![複数のサブスクライバーをアップロードするための Excel テンプレートをダウンロードする](media\download-template-upload-subscribers.png)
 
-  >![NOTE] 常にこのテンプレートの最新バージョンをダウンロードしてください。 古いバージョンを使うと、一括アップロードが失敗する可能性があります。
+   > ![NOTE] 常にこのテンプレートの最新バージョンをダウンロードしてください。 古いバージョンを使うと、一括アップロードが失敗する可能性があります。
 
 1. Excel スプレッドシートのフィールドに、サブスクリプションを割り当てるユーザーの情報を入力します。 *[Reference]* は省略可能なフィールドです。完成したらローカルにファイルを保存します。
 

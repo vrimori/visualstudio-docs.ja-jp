@@ -14,16 +14,16 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: a39c042b4a4badd46f7650fe0f2530527c5d537d
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: a64674ae5a902e332ae8b9eb3cbe6a22d09a1133
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232195"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380617"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
-Visual Studio の使用方法を紹介する、この 5 ～ 10 分のクイック スタートでは、、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、簡単な "Hello World" アプリを作成します。
+Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック スタートでは、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、簡単な "Hello World" Web アプリを作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
@@ -41,13 +41,14 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    > [!NOTE]
    > **.NET Core** プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで **[Visual Studio インストーラーを開く]** リンクを選択します。
-   >![[新しいプロジェクト] ダイアログ ボックスから Visual Studio インストーラーを開く](../ide/media/open-visual-studio-installer.png)
+   >
+   > ![[新しいプロジェクト] ダイアログ ボックスから Visual Studio インストーラーを開く](../ide/media/open-visual-studio-installer.png)
    >
    > Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
    >
    > ![VS インストーラーの ASP.NET ワークロード](../ide/media/quickstart-aspnet-workload.png)
    >
-   >(新しいワークロードのインストールを続ける前に、Visual Studio を終了することが必要な場合があります。)
+   > (新しいワークロードのインストールを続ける前に、Visual Studio を終了することが必要な場合があります。)
 
 1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューに **[ASP.NET Core 2.0]** が表示されていることを確認します。 その後、**[Web アプリケーション]** を選択して **[OK]** を選択します。
 
@@ -55,7 +56,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 すぐに、Visual Studio でプロジェクト ファイルが開きます。
 
-## <a name="create-the-application"></a>アプリケーションを作成する
+## <a name="create-the-app"></a>アプリを作成する
 
 1. **ソリューション エクスプローラー**で、**Pages** フォルダーを展開し、**About.cshtml** を選択します。
 
@@ -85,7 +86,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
    ![Visual Studio エディターでアプリケーション説明領域の既定のメッセージ テキストを変更する](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
 
-## <a name="run-the-application"></a>アプリケーションの実行
+## <a name="run-the-app"></a>アプリを実行する
 
 1. **Ctrl** + **F5** キーを押してアプリを実行し、Web ブラウザーで開きます。
 

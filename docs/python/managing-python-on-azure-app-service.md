@@ -1,7 +1,7 @@
 ---
 title: Azure App Service での Python の構成
 description: Azure App Service に Python インタープリターとライブラリをインストールし、そのインタープリターを正しく参照するように Web アプリケーションを構成する方法について説明します。
-ms.date: 09/13/2017
+ms.date: 07/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,24 +12,25 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 9a71ea2210bfc6c56a235f194354c3279c8e7370
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 406a35ff484b5a6759831b76c2417bf5fcb2d12c
+ms.sourcegitcommit: e6ef03cc415ca67f75fd1f26e0e7b8846857166d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33876996"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310073"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service で Python 環境を設定する方法
 
-[Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
+> [!Important]
+> Microsoft では、この記事で説明するとおり、App Service 用の Python の拡張機能を廃止し、Linux の App Service に直接デプロイできるようにする予定です。 拡張機能はその間も動作する予定です。 Linux に App Service を展開するには、「[Deploy a Python web app in Web App for Containers](/azure/app-service/containers/quickstart-python)」 (Web App for Containers に Python Web アプリを展開する) を参照してください。
+
+
+  [Azure App Service](https://azure.microsoft.com/services/app-service/) は、Web アプリに提供するサービスとしてのプラットフォームです。Web アプリがブラウザーでアクセスされるサイト、自身のクライアントで使用される REST API、またはイベント トリガーされる処理かどうかは関係ありません。 App Service は、Python を使用してアプリの実装を完全にサポートします。
 
 Azure App Service でのカスタマイズ可能な Python のサポートは、App Service *サイトの拡張機能*のセットとして提供されます。拡張機能にはそれぞれ Python ランタイムの特定のバージョンが含まれています。 その後、この記事の説明に従って、希望のパッケージを直接環境にインストールすることができます。 App Service 自体で環境をカスタマイズすることにより、Web アプリ プロジェクトでパッケージを管理したり、アプリ コードと一緒にアップロードする必要はありません。
 
 > [!Tip]
 > 既定で App Service には、サーバーのルート フォルダーに Python 2.7 と Python 3.4 がインストールされていますが、これらの環境は、カスタマイズしたり、パッケージをインストールすることはできません。また、その存在に依存することもできません。 代わりに、この記事の説明どおりに、制御しているサイトの拡張機能に依存する必要があります。
-
-> [!Important]
-> ここで説明するプロセスは、特に改善のために変更される可能性があります。 変更は、[Python Engineering at Microsoft のブログ](https://blogs.msdn.microsoft.com/pythonengineering/)で発表されます。
 
 ## <a name="choosing-a-python-version-through-the-azure-portal"></a>Azure Portal から Python のバージョンを選択する
 

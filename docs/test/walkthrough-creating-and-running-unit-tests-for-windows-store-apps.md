@@ -14,12 +14,12 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: cf27c036f68eb4d2847c1070282c7949f59d2454
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: d8ca3f4b847e00f029b22d32965fb3ca89ff871a
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751716"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380484"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>チュートリアル: UWP アプリ用の単体テストの作成および実行
 
@@ -34,7 +34,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。
 
-     [新しいプロジェクト] ダイアログ ボックスが表示されます。
+     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
 2.  テンプレートで、単体テストを作成するプログラミング言語を選択した後、関連する Windows ユニバーサルの単体テスト ライブラリを選択します。 たとえば、 **[Visual C#]**、**[Windows ユニバーサル]**、**[単体テスト ライブラリ (ユニバーサル Windows)]** の順に選択します。
 
@@ -48,17 +48,17 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
      ![調整された単体テスト ライブラリ](../test/media/unit_test_win8_1.png)
 
-     ソリューション エクスプローラーに UWP 単体テスト プロジェクトが設定され、コード エディターに UnitTest1 という既定の単体テストが表示されます。
+     **ソリューション エクスプローラー**に UWP 単体テスト プロジェクトが設定され、コード エディターに UnitTest1 という既定の単体テストが表示されます。
 
      ![調整された新しい単体テスト プロジェクト](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
 
 ## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>単体テスト プロジェクトの UWP アプリケーション マニフェスト ファイルを編集する
 
-1.  ソリューション エクスプローラーで、*Package.appxmanifest* ファイルを右クリックし、**[開く]** を選択します。
+1.  **ソリューション エクスプローラー**で、*Package.appxmanifest* ファイルを右クリックし、**[開く]** を選択します。
 
-     マニフェスト デザイナーが編集のために表示されます。
+     **マニフェスト デザイナー**が編集のために表示されます。
 
-2.  マニフェスト デザイナーで、 **[機能]** タブをクリックします。
+2.  **マニフェスト デザイナー**で、**[機能]** タブを選択します。
 
 3.  **[機能]** リストで、単体テストを必要とする機能とコードを選択します。 たとえば、単体テストが必要で、テストするコードにインターネットにアクセスする機能が必要な場合は、 **[インターネット]** チェック ボックスをオンにします。
 
@@ -69,15 +69,15 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
 
 ## <a name="code-the-unit-test-for-a-uwp-app"></a>UWP アプリの単体テストをコーディングする
 
-コード エディターで、単体テストを編集し、テストに必要なアサートとロジックを追加します。
+**コード エディター**で、単体テストを編集し、テストに必要なアサートとロジックを追加します。
 
-## <a name="run-unit-tests"></a>単体テストの実行
+## <a name="run-unit-tests"></a>単体テストを実行する
 
 ### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>ソリューションをビルドしテスト エクスプローラーを使用して単体テストを実行するには
 
 1.  **[テスト]** メニューで **[Windows]** を選択し、 **[テスト エクスプローラー]** を選択します。
 
-     テスト エクスプローラーが表示されます。テストは表示されません。
+     **テスト エクスプローラー**が表示されます。テストは表示されません。
 
 2.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
@@ -86,7 +86,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
     > [!NOTE]
     > テスト エクスプローラーの単体テストの一覧を更新するソリューションをビルドする必要があります。
 
-3.  テスト エクスプローラーで、作成した単体テストを選択します。
+3.  **テスト エクスプローラー**で、作成した単体テストを選択します。
 
     > [!TIP]
     > テスト エクスプローラーでは、 **[ソース]** の横のソース コードへのリンクが表示されます。
@@ -102,7 +102,7 @@ Visual Studio には、ユニバーサル Windows プラットフォーム (UWP)
     >
     > ![単体テスト エクスプローラー &#45; 単体テスト コンテキスト メニュー](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 
-    単体テストが実行されます。 完了すると、テスト エクスプローラーは、テストの状態、経過時間、およびソースへのリンクを表示します。
+    単体テストが実行されます。 完了すると、**テスト エクスプローラー**は、テストの状態、経過時間、およびソースへのリンクを表示します。
 
     ![単体テスト エクスプローラー &#45; テストの完了](../test/media/unit_test_win8_unittestexplorer_done.png)
 

@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b7d2cd30faa5cbc5b4f8626c17de77c68bdf8bae
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1de27441ea5d0a6af320c031e43affd2c2e14be0
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977116"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380771"
 ---
 # <a name="sample-project-for-creating-a-diagnostic-data-adapter"></a>診断データ アダプター作成用のサンプル プロジェクト
 
@@ -324,7 +324,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
+## <a name="compile-the-code"></a>コードのコンパイル
 
 ### <a name="to-create-the-code-project-for-this-diagnostic-adapter"></a>この診断アダプター用のコード プロジェクトを作成するには
 
@@ -354,7 +354,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
 7.  アセンブリ **Microsoft.VisualStudio.QualityTools.Common** を追加します。
 
-    1.  ソリューション エクスプローラーで、**[参照]** を右クリックし、**[参照の追加]** をクリックします。
+    1.  **ソリューション エクスプローラー**で、**[参照]** を右クリックし、**[参照の追加]** を選択します。
 
     2.  **[参照]** を選択し、**Microsoft.VisualStudio.QualityTools.Common.dll** を探します。
 
@@ -364,7 +364,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
 8.  このドキュメントで既に示した診断データ アダプター クラスをクラス ライブラリのクラスにコピーします。 このクラスを保存します。
 
-9. ユーザー コントロールをプロジェクトに追加するために、ソリューション エクスプローラーの MyDataCollector プロジェクトを右クリックし、**[追加]** をポイントします。次に、**[ユーザー コントロール]** をクリックします。 **[追加]** をクリックします。
+9. ユーザー コントロールをプロジェクトに追加するために、**ソリューション エクスプローラー**の **MyDataCollector** プロジェクトを右クリックし、**[追加]** をポイントします。次に、**[ユーザー コントロール]** を選択します。 **[追加]** をクリックします。
 
 10. ツールボックスを使用して、ラベルをユーザー コントロールに追加し、Text プロパティを **ファイル名:** に変更します。
 
@@ -375,15 +375,15 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
     > [!NOTE]
     > 既定では、ユーザー コントロールに UserControl1 という名前が付けられます。 ユーザー コントロール クラスのコードでユーザー コントロールの名前が使用されていることを確認してください。
 
-13. 構成ファイルを作成するために、**ソリューション エクスプローラー**でソリューションを右クリックし、**[追加]** をポイントします。次に、**[新しい項目]** をクリックします。 **[アプリケーション構成ファイル]** をクリックして選択し、**[追加]** をクリックします。 これにより、**App.config** という名前のファイルがソリューションに追加されます。
+13. 構成ファイルを作成するために、**ソリューション エクスプローラー**でソリューションを右クリックし、**[追加]** をポイントします。次に、**[新しい項目]** をクリックします。 **[アプリケーション構成ファイル]** をクリックして選択し、**[追加]** をクリックします。 これにより、*App.config* という名前のファイルがソリューションに追加されます。
 
 14. 前に提供されたサンプルから XML ファイルに XML をコピーします。 ファイルを保存します。
 
-15. ソリューションをビルドし、ビルドしたアセンブリと `App.config` ファイルを *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\DataCollectors* ディレクトリにコピーします。
+15. ソリューションをビルドし、ビルドしたアセンブリと *App.config* ファイルを *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PrivateAssemblies\DataCollectors* ディレクトリにコピーします。
 
 16. このカスタム診断データ アダプターを使用するテストの設定を作成します。 テストの設定を構成し、存在しているファイルを収集します。
 
-     Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、[オプションを指定して実行] コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[Collect Diagnostic Information Using Test Settings](../test/collect-diagnostic-information-using-test-settings.md)」(テスト設定を使用して診断情報を収集する) を参照してください。
+     Microsoft Test Manager からテストを実行する場合は、テストを実行する前にこれらのテストの設定をテスト計画に割り当てるか、[オプションを指定して実行] コマンドを使用して、テストの設定の割り当ておよびオーバーライドを行います。 テスト設定の詳細については、「[テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)」を参照してください。
 
 17. この診断データ アダプターを選択したテストの設定を使用して、テストを実行します。
 

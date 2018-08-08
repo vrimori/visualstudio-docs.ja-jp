@@ -17,18 +17,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 24b146b9916fbdd656868a7a89daa0213ec7b659
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: ae5d4dc14cd97a81a386d3879831fce1a030673a
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752002"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379580"
 ---
 # <a name="how-to-select-a-load-test-results-repository"></a>方法 : ロード テストの結果リポジトリを選択する
 
 結果ストアはローカルの結果ストアに限定されていません。 多くの場合、ロード テストは複数のリモート エージェント コンピューターで実行されます。 エージェントをコントローラーと共に使用すると、単一のコンピューターを使用した場合と比較して、よりシミュレートされたロードを生成できます。 詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
 
-エージェントまたはローカル コンピューターからのテスト結果は、ロード テストの結果ストアを作成した SQL サーバーのいずれかに保存できます。 いずれの場合も、[テスト コントローラーの管理] ウィンドウを使用して、ロード テストの結果を保存する場所を指定する必要があります。
+エージェントまたはローカル コンピューターからのテスト結果は、ロード テストの結果ストアを作成した SQL サーバーのいずれかに保存できます。 いずれの場合も、**[テスト コントローラーの管理]** ウィンドウを使用して、ロード テストの結果を保存する場所を指定する必要があります。
 
 テスト コントローラーとテスト エージェントの詳細については、「[テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)」を参照してください。
 
@@ -36,11 +36,11 @@ ms.locfileid: "34752002"
 
 1.  **ソリューション エクスプローラー**でロード テスト ファイルを開きます。
 
-2.  **[ロード テスト]** ツール バーで、**[テスト コントローラーの管理]** を選択します。 [テスト コントローラーの管理] ダイアログ ボックスが表示されます。 エージェントをリモートで使用している場合は、コントローラーを選択する必要があります。
+2.  **[ロード テスト]** ツール バーで、**[テスト コントローラーの管理]** を選択します。 **[テスト コントローラーの管理]** ダイアログ ボックスが表示されます。 エージェントをリモートで使用している場合は、コントローラーを選択する必要があります。
 
      ![ロード テストの結果ストアの接続プロパティ](../test/media/loadtestconnectionproperties.png) ロード テストの結果ストアの接続プロパティ
 
-3.  **[ロード テストの結果ストア]** で、(...) をクリックし、**[接続のプロパティ]** ダイアログ ボックスを表示します。
+3.  **[ロード テストの結果ストア]** で、**(...)** をクリックし、**[接続のプロパティ]** ダイアログ ボックスを表示します。
 
 4.  **[サーバー名]** で、`LoadTest` スクリプトを実行したサーバーの名前を入力します。
 
@@ -57,5 +57,5 @@ ms.locfileid: "34752002"
 
 ## <a name="see-also"></a>関連項目
 
-- [ロード テストの結果リポジトリ内のロード テストの結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [ロード テストの結果リポジトリ内のロード テスト結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)

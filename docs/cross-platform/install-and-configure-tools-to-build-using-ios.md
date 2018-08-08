@@ -12,14 +12,14 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: d6acdd6433c090472e88d9973f6b28d80b8c2f8d
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: fe73510c645eadea99796b8b8aea5b6eec1f01c9
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454571"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251812"
 ---
-# <a name="install-and-configure-tools-to-build-using-ios"></a>Install and Configure Tools to Build using iOS
+# <a name="install-and-configure-tools-to-build-using-ios"></a>iOS を使用してビルドするためのツールのインストールおよび構成
 
 Visual C++ for Cross-Platform Mobile Development を使用して、iOS コードを編集およびデバッグし、iOS シミュレーターまたは iOS デバイスに配置することができます。ただし、ライセンスの制限により、コードのビルドと実行は、リモートの Mac 上で行わなければなりません。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェント [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)をセットアップして構成する必要があります。 このリモート エージェントが、Visual Studio からのビルド要求を処理し、Mac に接続された iOS デバイスまたは Mac 上の iOS シミュレーターでアプリを実行します。
 
@@ -50,11 +50,11 @@ iOS のコードを開発するためのリモート エージェントをイン
 
 - Xcode で構成されている iOS 署名 ID
 
-   iOS 署名 ID を取得する方法の詳細については、iOS Developer Library の「 [Maintaining Your Signing Identities and Certificates (署名 ID と証明書の管理)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) 」を参照してください。 Xcode で署名 ID を表示または設定するには、 **[Xcode]** メニューを開き、 **[環境設定]** を選択します。 **[アカウント]** を選択し、自分の Apple ID を選択してから、 **[詳細の表示]** ボタンを選択します。
+   iOS 署名 ID を取得する方法の詳細については、iOS Developer Library の「[Maintain your signing identities and certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)」(署名 ID と証明書の管理) を参照してください。 Xcode で署名 ID を表示または設定するには、 **[Xcode]** メニューを開き、 **[環境設定]** を選択します。 **[アカウント]** を選択し、自分の Apple ID を選択してから、 **[詳細の表示]** ボタンを選択します。
 
 - 開発用の iOS デバイスを使用している場合、デバイスのプロビジョニング プロファイルを Xcode で構成します。
 
-   プロビジョニング プロファイルを作成する方法の詳細については、iOS Developer Library の「 [Creating Provisioning Profiles Using Member Center (メンバー センターを使用したプロビジョニング プロファイルの作成)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW24) 」を参照してください。
+   プロビジョニング プロファイルを作成する方法の詳細については、iOS Developer Library の「[Create provisioning profiles using Member Center](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW24)」(メンバー センターを使用したプロビジョニング プロファイルの作成) を参照してください。
 
 - [Node.js](https://nodejs.org/)
 
@@ -70,7 +70,7 @@ iOS のコードを開発するためのリモート エージェントをイン
 
 Visual C++ for Cross-Platform Mobile Development をインストールすると、Visual Studio は、Mac 上で実行されているリモート エージェント [vcremote](https://go.microsoft.com/fwlink/p/?LinkId=534988)と通信して、ファイルを転送したり、iOS アプリをビルドして実行したり、デバッグ コマンドを送信したりできます。
 
-リモート エージェントをインストールする前に、 [前提条件](#Prerequisites) を満たしていること、 [Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)をインストール済みであることを確認してください。
+リモート エージェントをインストールする前に、[前提条件](#Prerequisites)を満たしていること、[Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools) をインストール済みであることを確認してください。
 
 ###  <a name="DownloadInstall"></a> リモート エージェントをダウンロードしてインストールするには
 
@@ -125,7 +125,7 @@ Visual Studio で iOS コードをビルドして実行するには、リモー�
 
 #### <a name="to-stop-the-remote-agent"></a>リモート エージェントを停止するには
 
-- vcremote が実行されているターミナル ウィンドウで、 `Control+C`を押します。
+- vcremote が実行されているターミナル ウィンドウで、**Control**+**C** キーを押します。
 
 ##  <a name="ConfigureVS"></a> Visual Studio でリモート エージェントを構成する
 
@@ -158,7 +158,7 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    ペアリングが成功しなかった場合は、「 [Start the remote agent](#Start)」の手順に従って、リモート エージェントが実行されていることを確認します。 リモート エージェントの PIN が生成されてから経過した時間が長すぎる場合は、Mac 上で「 [Generate a new security PIN](#GeneratePIN) 」の手順に従ってからもう一度実行します。 Mac のホスト名を使用している場合は、代わりに IP アドレスを **[ホスト名]** に使用してみてください。
 
-1. **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム (~) ディレクトリ内の リモート エージェントで使用されるフォルダーを指定します。 既定では、リモート エージェントはリモート ルートとして /Users/`username`/vcremote を使用します。
+1. **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム (*~*) ディレクトリ内のリモート エージェントで使用されるフォルダーを指定します。 既定では、リモート エージェントはリモート ルートとして /Users/`username`/vcremote を使用します。
 
 1. **[OK]** を選択して、リモート ペアリング接続設定を保存します。
 
@@ -220,7 +220,7 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    `vcremote --serverDir directory_path`
 
-   ここで *directory_path* は、ログ ファイル、ビルド、サーバー証明書を配置する Mac 上の場所です。 既定では、この場所は /Users/*username*/vcremote です。 ビルドはこの場所でビルド番号順に編成されます。
+   ここで *directory_path* は、ログ ファイル、ビルド、サーバー証明書を配置する Mac 上の場所です。 既定では、この場所は */Users/\<username>/vcremote* です。 ビルドはこの場所でビルド番号順に編成されます。
 
 - バックグラウンド プロセスを使用して、server.log という名前のファイルに `stdout` と `stderr` をキャプチャするには、次のように入力します。
 
@@ -236,4 +236,4 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
 ## <a name="see-also"></a>関連項目
 
-- [Install Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
+- [Visual C++ for Cross-Platform Mobile Development のインストール](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)

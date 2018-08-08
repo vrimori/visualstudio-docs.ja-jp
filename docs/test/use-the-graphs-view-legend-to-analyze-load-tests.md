@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 065e50b123ccf4ac96ba6bec89db74bb51990f58
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5333fe1562a9398e930bb077dd2a4cfe6aab6825
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751402"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380249"
 ---
-# <a name="using-the-graphs-view-legend-to-analyze-load-tests"></a>グラフ ビューの凡例を使用したロード テストの分析
+# <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>グラフ ビューの凡例を使用したロード テストの分析
 
 ロード テスト アナライザーのグラフ ビューには凡例パネルがあり、現在選択されているグラフに関連付けられている各パフォーマンス カウンターの情報が表示されます。
 
@@ -55,7 +55,7 @@ ms.locfileid: "34751402"
 -   カウンターの **[プロット オプション]** ダイアログ ボックスを表示する。
 
 > [!TIP]
-> ロード テスト アナライザーのツール バーにある **[グラフのオプション]** ドロップダウン ボタンを使用して、**[凡例の表示]** をクリックすると、グラフ ビューに関連付けられている **[凡例]** パネルを表示または非表示にすることができます。
+> **ロード テスト アナライザー**のツール バーにある **[グラフのオプション]** ドロップダウン ボタンを使用して、**[凡例の表示]** をクリックすると、グラフ ビューに関連付けられている **[凡例]** パネルを表示または非表示にすることができます。
 
 ## <a name="see-also"></a>関連項目
 

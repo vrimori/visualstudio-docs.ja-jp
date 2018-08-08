@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: d0994b226a80385e381fa7b738c0194ec393d87a
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: ffd6b8c66f0575ec07e66ea2a138f2761b20cc7a
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844696"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379639"
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>サードパーティ製の単体テスト フレームワークをインストールする
 
@@ -44,7 +44,7 @@ Visual Studio 拡張機能マネージャーを使用して、または Visual S
 
 2. **[検索]** ボックスに、フレームワーク名を入力します。
 
-3. 結果の一覧でフレームワークを選択してから、ツールの Visual Studio Marketplace ページに移動します。
+3. 結果の一覧でフレームワークを選択してから、ツールの **Visual Studio Marketplace** ページに移動します。
 
 フレームワークの一覧とともにその他のテスト ツールを参照するには、
 
@@ -54,7 +54,7 @@ Visual Studio 拡張機能マネージャーを使用して、または Visual S
 
 3. **[カテゴリ]** の一覧 (**[表示中]** というラベルが付けられている) で、**[ツール]** ノードを展開してから、**[テスト]** をクリックします。
 
-4. 結果の一覧でフレームワークを選択してから、ツールの Visual Studio Marketplace ページに移動します。
+4. 結果の一覧でフレームワークを選択してから、ツールの **Visual Studio Marketplace** ページに移動します。
 
 ## <a name="update-to-the-latest-test-adapters"></a>最新のテスト アダプターに更新する
 

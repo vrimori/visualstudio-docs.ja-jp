@@ -5,16 +5,16 @@ ms.author: jaunger
 manager: evelynp
 ms.date: 10/03/2017
 ms.topic: Get-Started-Article
-mescription: Learn how to manage your organization's Visual Studio subscriptions with the Administrator Portal.
+description: 管理者ポータルで組織の Visual Studio サブスクリプションを管理する方法を説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 41f594057051625acb6771ee9d66cad60b4508fd
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 956670d624a5c36547a23a06773e7ee254acd7f4
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327393"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380819"
 ---
 #  <a name="using-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルを使用する
 
@@ -25,7 +25,7 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 - ステップアップ ライセンスの購入によってサブスクリプションをアップグレードするか、低いレベルのサブスクリプションに更新した場合は、**サブスクリプション会員のサブスクリプション レベルを更新する必要があります**。 
 - **サブスクリプション会員間でサブスクリプションを共有しないでください。** サブスクリプション特典 (開発およびテスト用ソフトウェア、Microsoft Azure、e ラーニングなど) のすべてまたは一部使用するユーザーにサブスクリプションを割り当てる必要があります。 
 
-## <a name="adminstrator-roles"></a>管理者の役割
+## <a name="administrator-roles"></a>管理者ロール
 
 新しい Visual Studio サブスクリプションの管理ポータル内には、ボリューム ライセンスのお客様用の 2 つの異なるロールがあります。 これらのロールは、現在の VLSC の主要/通知連絡先ロールとサブスクリプション マネージャーに似ています。 
 

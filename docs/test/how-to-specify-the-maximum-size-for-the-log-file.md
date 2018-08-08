@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7faf5402f495eefe64000c67048bcb85c9197388
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 29329cb1403745b80d68670f5316ce570582d72c
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31965087"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379398"
 ---
 # <a name="how-to-specify-the-maximum-size-for-the-log-file-for-load-tests"></a>方法: ロード テスト用ログ ファイルの最大サイズを指定する
 
@@ -23,7 +23,7 @@ ms.locfileid: "31965087"
 
 ## <a name="specify-the-maximum-log-file-size-for-load-test"></a>ロード テスト用ログ ファイルの最大サイズの指定
 
-1.  %ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config にある XML 構成ファイル *QTCcontroller.exe.config* を開きます。
+1.  *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config* にある XML 構成ファイル *QTCcontroller.exe.config* を開きます。
 
 2.  `<add key="LogSizeLimitInMegs" value="20"/>` タグで `<appSettings>` エントリを見つけます。
 
@@ -47,4 +47,4 @@ ms.locfileid: "31965087"
 ## <a name="see-also"></a>関連項目
 
 - [ロード テストのログ設定の変更](../test/modify-load-test-logging-settings.md)
-- [Test Controller および Test Agent 用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [テスト コントローラーおよびテスト エージェント用のポートの構成](../test/configure-ports-for-test-controllers-and-test-agents.md)

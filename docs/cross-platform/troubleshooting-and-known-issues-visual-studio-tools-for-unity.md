@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: df458124be9650319f47979f7d2d98801d06a61f
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 86f547ae686176ab6361f44f4f0ba432c6466da9
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153905"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251576"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>トラブルシューティングと既知の問題 (Visual Studio Tools for Unity)
 
@@ -54,7 +54,7 @@ Unity のメニューで **[Edit] > [Preferences]** を選択し、**[External T
 
 Parse、FMOD、UMP (Universal Media Player)、ZFBrowser、Embedded Browser などの複数の Unity プラグインは、ネイティブ スレッドを使っています。 これは、プラグインがランタイムへのネイティブ スレッドのアタッチを終了した後で OS への呼び出しをブロックしている問題です。 つまり、Unity はデバッガー (またはドメインの再読み込み) のためにスレッドを中断できずにハングします。
 
-FMOD の場合は回避策があります。FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE 初期化[フラグ](https://www.fmod.org/docs/content/generated/FMOD_STUDIO_INITFLAGS.html)を渡して非同期処理を無効にし、メイン スレッドですべての処理を実行します。
+FMOD の場合は回避策があります。`FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` 初期化[フラグ](https://www.fmod.org/docs/content/generated/FMOD_STUDIO_INITFLAGS.html)を渡して非同期処理を無効にし、メイン スレッドですべての処理を実行します。
 
 ## <a name="incompatible-project-in-visual-studio"></a>Visual Studio での互換性のないプロジェクト
 
@@ -114,7 +114,7 @@ Visual Studio 2015 の Update 3 へのアップグレードを試してくださ
 
 - メソッドのステップインとステップアウトが正しく動作しないことがあります。特に、反復子または switch ステートメント内でこれが生じる可能性があります。
 
-## <a name="reporting-errors"></a>エラーの報告
+## <a name="report-errors"></a>レポート エラー
 
  クラッシュ、フリーズ、またはその他のエラーが発生する場合、エラー レポートを送信することによって、Visual Studio Tools for Unity の品質向上にご協力ください。 Visual Studio Tools for Unity における問題の調査と解決に役立ちます。 ご協力に感謝いたします。
 

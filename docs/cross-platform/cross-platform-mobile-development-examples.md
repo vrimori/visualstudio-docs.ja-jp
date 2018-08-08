@@ -12,12 +12,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9fc4b9df68890caee9d8f79b8ecf2080c408db2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7208d3086450604678b1fce78d4f6784bd38d50f
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31065596"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251622"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>クロス プラットフォーム モバイル開発の例
 Visual C++ for Cross-Platform Mobile Development でインストールされるテンプレートの中には、学習に利用できる完全なサンプルを生成できるものがあります。 さらに、Windows デベロッパー センターにはダウンロードして Visual Studio で試用できる複数のサンプル アプリケーションがあります。  
@@ -52,4 +52,4 @@ Visual C++ for Cross-Platform Mobile Development でインストールされる�
   
  いずれかのサンプルを Visual Studio で開くには、zip ファイルをダウンロードし、ダウンロードしたファイルの **[プロパティ]** ページをエクスプローラーで開きます。 **[ブロックの解除]** ボタンを選び、次に **[OK]** を選びます。 zip ファイルの内容を任意の場所に解凍し、解凍したサンプルの C++ フォルダーを開いてからソリューション ファイルを開きます。  
   
- サンプルをビルドするには、F7 キーを押すか、または、メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順に選びます。
+ サンプルをビルドするには、**F7** キーを押すか、または、メニュー バーの **[ビルド]**、**[ソリューションのビルド]** の順に選びます。

@@ -11,27 +11,27 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 91a3651dcc7fd16bec2e094fd152242e67fa2d70
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 604a14a5f8d638c3d373e4ad7ea895b73a6ae0c1
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056912"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341598"
 ---
-# <a name="formatting-python-code"></a>Python コードの書式設定
+# <a name="format-python-code"></a>Python コードの書式を設定する
 
-Visual Studio を使用すると、事前に構成した書式設定オプションに合わせて、コードの書式をすばやく設定できます。
+Visual Studio を使用すると、事前に構成した書式設定オプションに合わせて、すばやくコードの書式を再設定できます。
 
-- 選択範囲の書式を設定するには、**[編集] > [詳細設定] > [選択範囲のフォーマット]** を選択するか、Ctrl + E、F キーを押します。
-- ファイル全体の書式を設定するには、**[編集] > [詳細設定] > [ドキュメントのフォーマット]** を選択するか、Ctrl + E、D キーを押します。
+- 選択範囲の書式を設定するには、**[編集]** > **[詳細設定]** > **[選択範囲のフォーマット]** を選択するか、**Ctrl** + **E**  >  **F** キーを押します。
+- ファイル全体の書式を設定するには、**[編集]** > **[詳細設定]** > **[ドキュメントのフォーマット]** を選択するか、**Ctrl** + **E**  >  **D** キーを押します。
 
-オプションを設定するには、**[ツール]、[オプション]、[テキスト エディター]、[Python] の順に選択し、[書式設定]** とその入れ子のタブで設定します。 これらのオプションを表示するには、**[すべての設定を表示]** を選択する必要があります。
+オプションは、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[Python]** > **[書式設定]** およびその入れ子のタブを使用して設定します。 これらのオプションを表示するには、**[すべての設定を表示]** を選択する必要があります。
 
 ![Visual Studio の Python の [書式設定] オプション](media/options-editor-formatting.png)
 
 [書式設定] オプションは、既定で [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットと一致するように設定されています。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。この記事では、他の 3 つのタブについて説明します。
 
-[Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
+[Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集]**  >  **[詳細設定]** メニューに [**[コメントを段落幅に合わせる]**](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
 ## <a name="spacing"></a>スペース
 
@@ -110,7 +110,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ## <a name="fill-comment-paragraph-command"></a>[Fill Comment Paragraph(コメント段落をページ幅に合わせる)] コマンド
 
-**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり長すぎる行を複数の行に分けたりできます。
+**[編集]** > **[詳細設定]** > **[コメントを段落幅に合わせる]** (**Ctrl** + **E** > **P**) を使用すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり、長い行を複数の行に分けたりできます。
 
 例:
 

@@ -10,18 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 360c8ea61a97256a316c726954bf53e4dcf3004b
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 406c1c0c853563dc45b76e0bbcfefb3e21df0aff
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180052"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379372"
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>方法: Web キャッシュ データを使用する仮想ユーザーの割合を指定する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。 ロード テスト シナリオの各プロパティとその説明の一覧については、「[ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)」を参照してください。
 
-**新しいユーザーのパーセンテージ** プロパティは、[プロパティ] ウィンドウで設定します。 ロード テスト エディターでロード テスト シナリオのプロパティを編集します。
+**新しいユーザーのパーセンテージ** プロパティは、**[プロパティ]** ウィンドウで設定します。 **ロード テスト エディター**でロード テスト シナリオのプロパティを編集します。
 
 **[新しいユーザーのパーセンテージ]** プロパティは、Web ブラウザーによって実行されるキャッシュ処理をロード テストがシミュレートする方法に影響します。 既定では、**新しいユーザーのパーセンテージ** プロパティは 0% に設定されています。 **[新しいユーザーのパーセンテージ]** プロパティの値を 100% に設定した場合、ロード テストで Web パフォーマンス テストが実行されるたびに、Web サイトに初めてアクセスするかのように扱われます。つまり、ブラウザーのキャッシュに Web サイトへの以前のアクセスによるコンテンツがないユーザーとして扱われます。 したがって、Web テストのすべての要求が、イメージなどの依存要求もすべて含めて、ダウンロードされます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "39180052"
 
 3. **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。
 
-     [プロパティ] ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
+     **[プロパティ]** ウィンドウに、シナリオのカテゴリおよびプロパティが表示されます。
 
 4. 新しいユーザーのパーセンテージの数値を入力して、**[新しいユーザーのパーセンテージ]** プロパティの値を設定します。
 
@@ -52,4 +52,4 @@ ms.locfileid: "39180052"
 - [チュートリアル: ロード テストの作成と実行](../test/walkthrough-create-and-run-a-load-test.md)
 - [テスト コントローラーとテスト エージェント](configure-test-agents-and-controllers-for-load-tests.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)
-- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [ロード パターンを編集して、仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)

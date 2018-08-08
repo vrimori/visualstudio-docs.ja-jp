@@ -10,12 +10,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 30bc5e4d14e09852904ca93087bdd99f6f2443ef
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: ef599a67dcb81586bd31fd08836c0a95b812bde1
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280690"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251228"
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio と Xamarin
 
@@ -39,4 +39,4 @@ C#、.NET、Visual Studio に親しんだ開発者であれば、モバイル �
 >  これらの手順では、Windows や Visual Studio での開発経験がある開発者のために、コンピューターの最も簡単で単純な構成方法について説明します。 この構成を使用すると、Mac と対話するだけで iOS シミュレーターとテザリングされたデバイスを使用できるので、開発作業全体が簡略化されます。 Mac に慣れている場合には、Parallels または VMWare 内の Visual Studio を実行するか、Visual Studio for Mac を使用することをお勧めします。 詳細については、「[Setup, install, and verifications for Mac users](../cross-platform/setup-install-and-verifications-for-mac-users.md)」(Mac ユーザー向けのセットアップ、インストール、および 検証) をご覧ください。
 
 > [!NOTE]
->  HTML および CSS ベースでのクロスプラットフォーム開発ソリューションをお探しの場合は、「[Cross-Platform Development in Visual Studio](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#HTML)」(Visual Studio でのクロスプラットフォーム開発) に説明されている Visual Studio Tools for Apache Cordova をご確認ください。
+>  HTML および CSS ベースでのクロスプラットフォーム開発ソリューションをお探しの場合は、[Visual Studio でのクロスプラットフォーム開発](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#HTML)に関するページで説明されている Visual Studio Tools for Apache Cordova をご確認ください。

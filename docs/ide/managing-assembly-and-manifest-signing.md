@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bef64670c3c2631e779fda0f48810ce502db72b1
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: fb2113ed091d99ed66b13955ea468c376bba9490
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844432"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379567"
 ---
 # <a name="manage-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
 
@@ -59,7 +59,7 @@ Visual C++ プロジェクトのアセンブリへの署名については、[�
 
 ## <a name="how-to-sign-an-assembly-in-visual-studio"></a>Visual Studio 内でアセンブリに署名する方法
 
-**[署名]** タブを使用してアプリケーションまたはコンポーネントに署名するには、プロジェクトのプロパティ ウィンドウに移動します (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして **[プロパティ]** を選択するか、**[クイック起動]** ウィンドウに**プロジェクトのプロパティ**を入力するか、**ソリューション エクスプローラー ウィンドウ**内で **Alt**+**Enter** キーを押す)。 **[署名]** タブを選択し、**[アセンブリの署名]** チェック ボックスをオンにします。
+**[署名]** タブを使用してアプリケーションまたはコンポーネントに署名するには、プロジェクトのプロパティ ウィンドウに移動します (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして **[プロパティ]** を選択するか、**[クイック起動]** ウィンドウに**プロジェクトのプロパティ**を入力するか、**ソリューション エクスプローラー**内で **Alt** + **Enter** キーを押す)。 **[署名]** タブを選択し、**[アセンブリの署名]** チェック ボックスをオンにします。
 
 キー ファイルを指定します。 新しいキー ファイルを作成する場合は、新しいキー ファイルは必ず *.pfx* 形式で作成されます。 新しいファイルの名前とパスワードが必要です。
 

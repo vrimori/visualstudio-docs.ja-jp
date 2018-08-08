@@ -10,12 +10,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 928002d58a03ed6c52e85114c09e42a75b63aef0
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 3475bfff07b64c171b506ff1cefaee6c8e55cdda
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232391"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381082"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 
@@ -229,7 +229,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 ### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する
 
-1.  **ソリューション エクスプ ローラー**で、**[WeatherApp.Droid]、[リソース]、[レイアウト]** フォルダーの順に展開し、*Main.axml* を開きます。 このコマンドによって、ビジュアル デザイナーでファイルが開きます。 (Java 関連のエラーが表示された場合は、この[ブログの投稿](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)を参照してください。)
+1.  **ソリューション エクスプローラー**で、**[WeatherApp.Droid]、[リソース]、[レイアウト]** フォルダーの順に展開し、*Main.axml* を開きます。 このコマンドによって、ビジュアル デザイナーでファイルが開きます。 (Java 関連のエラーが表示された場合は、この[ブログの投稿](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)を参照してください。)
 
     > [!TIP]
     >  このプロジェクトには、他にも多くのファイルがあります。 それらの説明はこの記事の範囲を超えていますが、Android プロジェクトの構造をもう少し詳しく知りたい場合は、Hello Android という二部構成記事の第 2 部に相当する「[Hello Android: 詳細説明](/xamarin/android/get-started/hello-android/hello-android-deepdive/)」を参照してください。
