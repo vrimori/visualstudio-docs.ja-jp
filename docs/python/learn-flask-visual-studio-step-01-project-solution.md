@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dd6208c690190db3d50f35d661d6e2b53157aeee
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: f64c603d9902343d83b57d56ab891c7b41d021ae
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388268"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586405"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Flask Web フレームワークの概要
 
@@ -142,7 +142,7 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
 ### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>質問: 仮想環境を作成する理由は何ですか?
 
-回答: 仮想環境は、アプリの正確な依存関係を特定する優れた方法です。 このような特定により、グローバル Python 環境内での競合が回避され、テストとコラボレーションの両方が支援されます。 長い時間をかけて、アプリを開発するときに、多くの役立つ Python パッケージを必ず取り込むことになります。 プロジェクトに固有の仮想環境にパッケージを保持することで、ソース管理に含まれている、環境を説明するプロジェクトの *requirements.txt* ファイルを簡単に更新できます。 プロジェクトがビルド サーバー、展開サーバー、その他の開発用コンピューターなどの他のコンピューターにコピーされると、*requirements.txt* だけを使用して環境を簡単に作成し直すことができます (そのため、環境をソース管理する必要はありません)。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#using-virtual-environments)」をご覧ください。
+回答: 仮想環境は、アプリの正確な依存関係を特定する優れた方法です。 このような特定により、グローバル Python 環境内での競合が回避され、テストとコラボレーションの両方が支援されます。 長い時間をかけて、アプリを開発するときに、多くの役立つ Python パッケージを必ず取り込むことになります。 プロジェクトに固有の仮想環境にパッケージを保持することで、ソース管理に含まれている、環境を説明するプロジェクトの *requirements.txt* ファイルを簡単に更新できます。 プロジェクトがビルド サーバー、展開サーバー、その他の開発用コンピューターなどの他のコンピューターにコピーされると、*requirements.txt* だけを使用して環境を簡単に作成し直すことができます (そのため、環境をソース管理する必要はありません)。 詳しくは、「[仮想環境を使用する](selecting-a-python-environment-for-a-project.md#use-virtual-environments)」をご覧ください。
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>質問: ソース管理に既にコミットされている仮想環境を削除するにはどうすればよいですか?
 
