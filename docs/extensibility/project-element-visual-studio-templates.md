@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: Project 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3ef09516237ad30a18f9790ddae40260d834af21
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 464f6498ccf06f5087c0fa6b12a456082a36c2bd
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139264"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639140"
 ---
 # <a name="project-element-visual-studio-templates"></a>Project 要素 (Visual Studio テンプレート)
 ファイルまたはプロジェクトに追加するディレクトリを指定します。  
@@ -42,17 +42,17 @@ ms.locfileid: "31139264"
 </Project>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`File`|必須の属性です。<br /><br /> テンプレートの .zip ファイルには、プロジェクト ファイルの名前を指定します。|  
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> プロジェクト ファイルがテンプレートからプロジェクトの作成時に置き換える必要があるパラメーター値を持つかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
-|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトの作成時に、プロジェクト ファイルの名前を指定します。|  
-|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> 現在のソリューションにプロジェクトを追加するかどうかを指定します。 場合、カスタム パラメーターの値"$*myCustomParameter*$"が存在するパラメーター置換ファイルでプロジェクトを作成しても、現在開いているソリューションの一部として追加できません。|  
+|`File`|必須の属性です。<br /><br /> テンプレートでプロジェクト ファイルの名前を指定します。 *.zip*ファイル。|  
+|`ReplaceParameters`|省略可能な属性です。<br /><br /> プロジェクト ファイルが、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーター値を持つかどうかを指定するブール値。 既定値は `false`にする必要があります。|  
+|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトを作成するときは、プロジェクト ファイルの名前を指定します。|  
+|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> 現在のソリューションにプロジェクトを追加するかどうかを指定します。 場合、カスタム パラメーターの値"$*myCustomParameter*$"が存在するプロジェクトの作成が現在開いているソリューションの一部として追加していない、パラメーター置換ファイルでします。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -67,14 +67,14 @@ ms.locfileid: "31139264"
 |-------------|-----------------|  
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Project` は、`TemplateContent` の子要素で、省略可能な要素です。  
   
- `Project`要素は、プロジェクトを指定するために使用し、そのため、のみが有効ではプロジェクトのテンプレートです。  
+ `Project`要素は、プロジェクトを指定するために使用であるため、プロジェクト テンプレートでは有効で、のみです。  
   
- `Project` 要素を持つことができます[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 、子要素が、両方の混在させないように`Folder`と`ProjectItem`子要素です。  
+ `Project` 要素が[フォルダー](../extensibility/folder-element-visual-studio-project-templates.md)子要素または[ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 、子要素が、両方の組み合わせではない`Folder`と`ProjectItem`子要素。  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ユーザーが入力した名前に基づいてプロジェクト ファイルの名前が自動的に変更、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性の場合は、テンプレートで作成したプロジェクト ファイルの別のファイル名を指定する場合します。  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ユーザーが入力した名前に基づいて、プロジェクト ファイル名を自動的に変更されます、**新しいプロジェクト** ダイアログ ボックス。 使用して、`TargetFileName`属性のテンプレートを使用して作成されるプロジェクト ファイルの代替ファイル名を指定する場合。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
@@ -105,6 +105,6 @@ ms.locfileid: "31139264"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)   
  [Folder 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/folder-element-visual-studio-project-templates.md)

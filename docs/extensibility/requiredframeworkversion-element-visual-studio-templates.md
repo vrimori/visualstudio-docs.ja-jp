@@ -1,5 +1,5 @@
 ---
-title: RequiredFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: RequiredFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adc1a138c50c0fe13962f6601449eb3498d90398
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23538e8e00553322f4f04e50414a8b3ddbd73b91
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31137837"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39635921"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion 要素 (Visual Studio テンプレート)
 
-テンプレートで必要とされる .NET Framework の最小バージョンを指定します。 により、**ターゲット フレームワークのバージョン**に表示されるドロップダウン リスト、**新しいプロジェクト**ダイアログ。 `RequiredFrameworkVersion`要素も、ドロップダウン リストで使用できる最小値を決定します。
+テンプレートで必要とされる .NET Framework の最小バージョンを指定します。 **ターゲット フレームワークのバージョン**に表示するドロップダウン、**新しいプロジェクト**ダイアログ。 `RequiredFrameworkVersion`要素では、ドロップダウン リストで使用できる最小値も決定します。
 
 > [!IMPORTANT]
-> Visual Studio 2017 15.6 のバージョンでの起動、**ターゲット フレームワークのバージョン**ドロップダウン リストが表示されているテンプレートのフィルターではなくなりました、**テンプレート**のセクションで、 **新しいプロジェクト**ダイアログ。 代わりに、ドロップダウン リストは、選択したテンプレートのフレームワーク ピッカーとして機能します。
+> Visual Studio 2017 バージョン 15.6 では、以降、**ターゲット フレームワーク バージョン**ドロップダウンが表示されているテンプレートのフィルターでは不要になった、**テンプレート**のセクション、 **の新しいプロジェクト**ダイアログ。 代わりに、ドロップダウン リストでは、選択したテンプレートの framework ピッカーとして機能します。
 
  \<VSTemplate > \<TemplateData > \<RequiredFrameworkVersion >
 
@@ -36,7 +36,7 @@ ms.locfileid: "31137837"
 <RequiredFrameworkVersion> .... </RequiredFrameworkVersion>
 ```
 
-## <a name="attributes-and-elements"></a>属性および要素
+## <a name="attributes-and-elements"></a>属性と要素
  以降のセクションでは、属性、子要素、および親要素について説明します。
 
 ### <a name="attributes"></a>属性
@@ -49,16 +49,16 @@ ms.locfileid: "31137837"
 
 |要素|説明|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、いずれかでの表示方法を定義、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、いずれかでの表示方法を定義、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
  テキストは、テンプレートに必要な .NET Framework の最小バージョン番号である必要があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`RequiredFrameworkVersion` は、省略可能な要素です。 テンプレートには、特定の最小バージョン (およびそれ以降のバージョンが存在する場合) がサポートしている場合にのみ、この要素を使用して、.NET Framework のです。 指定した場合、`RequiredFrameworkVersion`要素と、テンプレートは、.NET Framework の特定の最小バージョンをサポートしない、**ターゲット フレームワークのバージョン**が適用されない場合、ドロップダウン リストが表示されます。
+`RequiredFrameworkVersion` は、省略可能な要素です。 テンプレートには、特定の最小バージョン (およびそれ以降のバージョンが存在する場合) がサポートしている場合にのみ、この要素を使用して .NET Framework の。 指定した場合、`RequiredFrameworkVersion`要素と、テンプレートは、.NET Framework の特定の最小バージョンをサポートしない、**ターゲット フレームワーク バージョン**が適用されない場合、ドロップダウン リストが表示されます。
 
 ## <a name="example"></a>例
 
@@ -82,10 +82,10 @@ ms.locfileid: "31137837"
 </VSTemplate>
 ```
 
-この例では、テンプレートで必要とされる .NET Framework の最小バージョンで表される`RequiredFrameworkVersion`、3.0。 このテンプレートで作成したプロジェクト対象に .NET Framework バージョン 3.0 から開始できます。
+この例では、テンプレートで必要とされる .NET Framework の最小バージョンで表される`RequiredFrameworkVersion`、3.0 です。 このテンプレートで作成したプロジェクトを対象に .NET Framework のバージョン 3.0 から開始できます。
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
-- [対象となる特定の .NET Framework バージョンの指定](../ide/targeting-a-specific-dotnet-framework-version.md)
+- [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)
+- [特定の .NET Framework バージョンをターゲットします。](../ide/targeting-a-specific-dotnet-framework-version.md)

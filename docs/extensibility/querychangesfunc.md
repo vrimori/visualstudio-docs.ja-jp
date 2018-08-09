@@ -1,5 +1,5 @@
 ---
-title: QUERYCHANGESFUNC |Microsoft ドキュメント
+title: QUERYCHANGESFUNC |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1df5f21ffed27c45ebee6315fcc29ee1dcc8fa4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d81b554db151577298bc45fa9be53e589bba75c7
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139810"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637407"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
-これで使用されるコールバック関数、 [SccQueryChanges](../extensibility/sccquerychanges-function.md)操作がファイル名のコレクションを列挙し、各ファイルの状態を判断します。  
+これで使用されるコールバック関数、 [SccQueryChanges](../extensibility/sccquerychanges-function.md)操作をファイル名のコレクションを列挙し、各ファイルの状態を確認します。  
   
- `SccQueryChanges`関数ポインター、およびファイルの一覧を指定、`QUERYCHANGESFUNC`コールバック。 ソース管理プラグインは、指定された一覧を列挙し、一覧内の各ファイル (このコールバック) を使用して状態を提供します。  
+ `SccQueryChanges`関数ポインター、およびファイルの一覧を指定、`QUERYCHANGESFUNC`コールバック。 ソース管理プラグインは、指定されたリストを列挙し、一覧内の各ファイル (このコールバック) を使用して状態を提供します。  
   
 ## <a name="signature"></a>署名  
   
@@ -39,13 +39,13 @@ typedef BOOL (*QUERYCHANGESFUNC)(
   
 ## <a name="parameters"></a>パラメーター  
  pvCallerData  
- [in]`pvCallerData`に呼び出し元 (IDE) によって渡されたパラメーター [SccQueryChanges](../extensibility/sccquerychanges-function.md)です。 ソース管理プラグインには、この値の内容に関する想定を行いません。  
+ [in]`pvCallerData`に呼び出し元 (IDE) によって渡されるパラメーター [SccQueryChanges](../extensibility/sccquerychanges-function.md)します。 ソース管理プラグインには、この値のコンテンツに関する仮定は行いません。  
   
  pChangesData  
- [in]ポインター、 [QUERYCHANGESDATA 構造](#LinkQUERYCHANGESDATA)ファイルへの変更を記述する構造体。  
+ [in]ポインターを[QUERYCHANGESDATA 構造](#LinkQUERYCHANGESDATA)ファイルに対する変更を記述する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- IDE では、適切なエラー コードを返します。  
+ IDE には、適切なエラー コードが返されます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -76,8 +76,8 @@ struct QUERYCHANGESDATA_W
 };  
 ```  
   
- dwSize  
- バイト単位でこの構造体のサイズ。  
+ ない dwSize  
+ この構造体をバイト単位でのサイズ。  
   
  lpFileName  
  この項目の元のファイル名。  
@@ -87,21 +87,21 @@ struct QUERYCHANGESDATA_W
   
 |コード|説明|  
 |----------|-----------------|  
-|`SCC_CHANGE_UNKNOWN`|変更内容を判断できません。|  
-|`SCC_CHANGE_UNCHANGED`|このファイルの名前変更はありません。|  
-|`SCC_CHANGE_DIFFERENT`|別の id を持つファイルが、同じ名前がデータベースに存在します。|  
-|`SCC_CHANGE_NONEXISTENT`|ファイルは、データベース内、またはローカルに存在しません。|  
+|`SCC_CHANGE_UNKNOWN`|変更内容を見分けることはできません。|  
+|`SCC_CHANGE_UNCHANGED`|このファイルの名前が変更されていません。|  
+|`SCC_CHANGE_DIFFERENT`|別の id を持つファイルがデータベースに同じ名前が存在します。|  
+|`SCC_CHANGE_NONEXISTENT`|データベース内、またはローカル ファイルは存在しません。|  
 |`SCC_CHANGE_DATABASE_DELETED`|ファイルは、データベースで削除します。|  
-|`SCC_CHANGE_LOCAL_DELETED`|ファイルがローカルで削除されましたが、ファイルは、データベースに引き続き存在します。 これを特定できない場合に返す`SCC_CHANGE_DATABASE_ADDED`です。|  
-|`SCC_CHANGE_DATABASE_ADDED`|ファイルは、データベースに追加されたが、ローカルに存在しません。|  
+|`SCC_CHANGE_LOCAL_DELETED`|ファイルがローカルで削除されましたが、ファイルは、まだデータベースに存在します。 これを特定できない場合に返す`SCC_CHANGE_DATABASE_ADDED`します。|  
+|`SCC_CHANGE_DATABASE_ADDED`|ファイルは、データベースに追加しますが、ローカルに存在しません。|  
 |`SCC_CHANGE_LOCAL_ADDED`|ファイルはデータベースに存在しません、新しいローカル ファイルです。|  
-|`SCC_CHANGE_RENAMED_TO`|ファイルの名前を変更またはとデータベースに移動`lpLatestName`です。|  
-|`SCC_CHANGE_RENAMED_FROM`|ファイルの名前を変更または元のデータベース内で移動`lpLatestName`。 これは、追跡するために、価格が高すぎる場合など、別のフラグを返す`SCC_CHANGE_DATABASE_ADDED`です。|  
+|`SCC_CHANGE_RENAMED_TO`|ファイルの名前を変更またはとデータベースに移動`lpLatestName`します。|  
+|`SCC_CHANGE_RENAMED_FROM`|ファイルの名前を変更または内からデータベースを移動`lpLatestName`。 これは、追跡するためにコストが高すぎる場合など、さまざまなフラグを返す`SCC_CHANGE_DATABASE_ADDED`します。|  
   
  lpLatestName  
  この項目の現在のファイル名。  
   
 ## <a name="see-also"></a>関連項目  
- [IDE によって実装されているコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [IDE によって実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccQueryChanges](../extensibility/sccquerychanges-function.md)   
  [エラー コード](../extensibility/error-codes.md)

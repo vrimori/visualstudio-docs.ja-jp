@@ -1,5 +1,5 @@
 ---
-title: 言語サービスとコア エディター |Microsoft ドキュメント
+title: 言語サービスとコア エディター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd9e0cdbcb10ac670ac1a0947fb9a43c16c7fccf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e7f439cf1564e14857b3a609191cc0bea05e0e04
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138481"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636240"
 ---
 # <a name="language-services-and-the-core-editor"></a>言語サービスとコア エディター
-Visual Studio でのエディターは、言語サービスに頻繁に関連付けられます。 特には、言語サービスは、構文の色分け、ステートメント入力候補、IntelliSense、およびテキストの書式設定を提供します。  
+Visual Studio のエディターは、言語サービスに頻繁に関連付けられます。 その他のものは、言語サービスは、構文の色分け表示、ステートメント入力候補、IntelliSense、およびテキストの書式設定を提供します。  
   
 ## <a name="core-editors-and-document-data-objects"></a>コア エディターやドキュメント データ オブジェクト  
- コア エディターにアクセスすると、ドキュメント データおよびドキュメント ビュー オブジェクトは作成しません。 作成され、これら 2 つのオブジェクトを制御し、ファクトリの実装をエディターでの適切な呼び出しを行うことによってそれらへのハンドルを取得します。  
+ コア エディターにアクセスする場合は、ドキュメント データとドキュメント ビュー オブジェクトは作成しません。 作成され、これら 2 つのオブジェクトを制御し、エディター ファクトリの実装で適切な呼び出しを作成してそれらへのハンドルを取得します。  
   
- 詳細については、次を参照してください。[プロジェクトでファイルを開くエディターを決定する](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)です。  
+ 詳細については、次を参照してください。[エディターがプロジェクトでファイルを開きます決定](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)します。  
   
 ## <a name="language-services-and-the-core-editor"></a>言語サービスとコア エディター  
- 言語サービスを実装すると、ドキュメントのビューでデータを表示する方法を制御できます。 言語サービスは、情報とは、Visual C などの特定の言語に固有の動作を提供します。 テキスト バッファーをレジストリ キー、HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Editors からこのファイル名拡張子に関連付けられた言語サービスを決定テキスト バッファーを作成して開いているドキュメントのファイル名拡張子を確認します。\\YourLanguageService {GUID} \Extensions です。 プロシージャを読み込み、標準的な VSPackage は、VSPackage を読み込んで、言語サービスのインスタンスを作成します。  
+ 言語サービスを実装すると、ドキュメント ビューでデータを表示する方法を制御できます。 言語サービスは、情報とは、Visual C などの特定の言語に固有の動作を提供します。 テキスト バッファーが、レジストリ キーからこのファイル名拡張子に関連付けられた言語サービスを決定するテキスト バッファーを作成して開いているドキュメントのファイル名拡張子を決定する**HKEY_LOCAL_MACHINEMicrosoft\Editors\\YourLanguageService {GUID} \Extensions**します。 プロシージャを読み込み、標準の VSPackage は、VSPackage を読み込むし、言語サービスのインスタンスが作成されます。  
   
  基本的な言語サービスは、次の図に表示されます。  
   
  ![言語サービス モデル グラフィック](../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 コア エディターと言語サービスのオブジェクト  
   
- コア エディター ドキュメント データ オブジェクトし、呼ばれ、バッファーにテキストで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクト。 ドキュメント ビュー オブジェクトし、呼ばれ、テキスト ビューで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>オブジェクト。 これら 2 つのオブジェクトは、コア エディターの統一されたビューを提供する言語サービスで共同作業します。 テキスト バッファーと、ドキュメント ウィンドウにテキスト ビューに表示される情報には、コード ウィンドウが呼び出されます。 コード ウィンドウのドキュメントは、コード ウィンドウ マネージャーによって管理されます。  
+ コア エディター ドキュメント データ オブジェクトを選択してテキスト バッファーを呼びますで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>オブジェクト。 ドキュメント ビュー オブジェクトを選択してテキスト ビューを呼びますで表される、<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>オブジェクト。 これら 2 つのオブジェクトは、コア エディターの統合ビューを提供する言語サービスを介して連携します。 テキスト バッファーと、ドキュメント ウィンドウにテキスト ビューに表示される情報には、コード ウィンドウが呼び出されます。 コード ウィンドウのドキュメントは、コード ウィンドウ マネージャーによって管理されます。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>   
@@ -44,7 +44,7 @@ Visual Studio でのエディターは、言語サービスに頻繁に関連付
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>   
- [レガシ API を使用して、言語サービス コンテキストを提供します。](../extensibility/providing-a-language-service-context-by-using-the-legacy-api.md)   
+ [従来の API を使用して、言語サービスのコンテキストを提供します。](../extensibility/providing-a-language-service-context-by-using-the-legacy-api.md)   
  [IntelliSense をホストしています。](../extensibility/intellisense-hosting.md)   
- [格納されている言語](../extensibility/contained-languages.md)   
- [従来の言語サービスの開発](../extensibility/internals/developing-a-legacy-language-service.md)
+ [含まれている言語](../extensibility/contained-languages.md)   
+ [従来の言語サービスを開発します。](../extensibility/internals/developing-a-legacy-language-service.md)

@@ -1,5 +1,5 @@
 ---
-title: Vspackage の管理 |Microsoft ドキュメント
+title: Vspackage の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e3241bae84b89b53e30c3d0949e4f8551110e7d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14aa17f4692857d650cb3bc9fe1a3498fc4f147a
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140135"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639564"
 ---
-# <a name="managing-vspackages"></a>Vspackage の管理
-ほとんどの場合、Vspackage を管理するプロジェクトと項目テンプレートが登録し、自動的にパッケージを読み込むためについて心配する必要はありません。 ただし、状況によっては、パッケージを管理するために少しを学習する必要があります。  
+# <a name="manage-vspackages"></a>Vspackage を管理します。
+ほとんどの場合は、プロジェクトと項目テンプレートの登録し、パッケージを自動的に読み込むため、Vspackage の管理について心配する必要はありません。 ただし、状況によっては、パッケージを管理するためにさらに詳しくを学習する必要があります。  
   
-## <a name="using-the-experimental-instance"></a>実験用インスタンスを使用します。  
- 実験用インスタンスの詳細についてを参照してください。 [、実験用インスタンス](../extensibility/the-experimental-instance.md)です。  
+## <a name="use-the-experimental-instance"></a>実験用インスタンスを使用して、  
+ 実験用インスタンスの詳細についてを参照してください。[実験用インスタンス](../extensibility/the-experimental-instance.md)します。  
   
-## <a name="registering-and-unregistering-vspackages"></a>Vspackage の登録および登録解除しています  
- 登録し、Vspackage とその他の種類の拡張機能の登録を解除する方法を調べるには、次を参照してください。[の登録および登録解除 Vspackage](../extensibility/registering-and-unregistering-vspackages.md)です。  
+## <a name="register-and-unregister-vspackages"></a>登録して、Vspackage の登録解除  
+ 登録し、Vspackage とその他の種類の拡張機能の登録を解除する方法については、次を参照してください。[登録し、Vspackage の登録解除](../extensibility/registering-and-unregistering-vspackages.md)します。  
   
-## <a name="loading-a-vspackage"></a>VSPackage を読み込む  
- Vspackage は、CMDUICONTEXT GUID がオンになっている特定の自動読み込みを設定できます。 詳細については、次を参照してください。[読み込み Vspackage](../extensibility/loading-vspackages.md)です。  
+## <a name="load-a-vspackage"></a>VSPackage を読み込む  
+ Vspackage は、autoload 特定 CMDUICONTEXT GUID の電源がオンに設定できます。 詳細については、次を参照してください。[ロード Vspackage](../extensibility/loading-vspackages.md)します。  
   
-## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>AsyncPackage を使用して、バック グラウンドで Vspackage をロードするには  
- AsyncPackage クラスには、Visual Studio での UI の応答性の向上のためのバック グラウンド スレッドで読み込みパッケージができるようにします。 詳細については、次を参照してください。[する方法: バック グラウンドで読み込み Vspackage を使用して AsyncPackage](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md)です。  
+## <a name="use-asyncpackage-to-load-vspackages-in-the-background"></a>AsyncPackage を使用して、バック グラウンドで Vspackage を読み込む  
+ `AsyncPackage`クラスは、Visual Studio での UI の応答性の向上のバック グラウンド スレッドでのパッケージの読み込みを使用できます。 詳細については、次を参照してください。[方法: バック グラウンドで Vspackage を読み込む使用 AsyncPackage](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md)。  
   
-## <a name="rule-based-ui-context-for-extensions"></a>拡張機能のコンテキストをルール ベースの UI  
- ルール ベースの UI コンテキストにより、拡張機能の作成者にする UI コンテキストがアクティブになり、関連付けられている Vspackage が読み込まれる正確な条件を定義します。 詳細については、次を参照してください。[する方法: Visual Studio 拡張機能の使用規則ベースの UI コンテキスト](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)です。  
+## <a name="rule-based-ui-context-for-extensions"></a>ルール ベースの UI コンテキストの拡張機能  
+ ルール ベースの UI コンテキストを使用する UI コンテキストがアクティブになるし、関連付けられている Vspackage が読み込まれる正確な条件を定義する拡張機能の作成者。 詳細については、次を参照してください。[方法: Visual Studio 拡張機能のルール ベースの UI コンテキストを使用して](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)します。  
   
-## <a name="diagnosing-extension-performance"></a>拡張機能のパフォーマンスを診断します。  
-拡張機能の起動とソリューションの読み込みのパフォーマンスに影響します。 Visual Studio 拡張機能への影響を計算する方法およびどのように分析できますローカルで拡張機能がパフォーマンスに影響する拡張機能として表示されるかどうかを説明します。 詳細については、次を参照してください。[する方法: 診断拡張機能のパフォーマンス](how-to-diagnose-extension-performance.md)です。 
+## <a name="diagnose-extension-performance"></a>拡張機能のパフォーマンスを診断する  
+拡張機能は、起動とソリューションの読み込みのパフォーマンスに影響します。 Visual Studio 拡張機能への影響を計算する方法およびどのできます分析することがローカルで拡張機能を拡張機能に影響を与えるパフォーマンスとして表示することがあるかどうかを説明します。 詳細については、次を参照してください。[方法: 拡張機能のパフォーマンス診断](how-to-diagnose-extension-performance.md)します。 
   
-## <a name="troubleshooting-vspackages"></a>Vspackage のトラブルシューティング  
- ロードまたはエラーが発生する Vspackage をトラブルシューティングするためのテクニックを調べる: [Vspackage のトラブルシューティング](../extensibility/troubleshooting-vspackages.md)  
+## <a name="troubleshoot-vspackages"></a>Vspackage をトラブルシューティングします。  
+ 読み込まれないか、エラーが発生する Vspackage のトラブルシューティングの手法を調べる: [Vspackage のトラブルシューティング](../extensibility/troubleshooting-vspackages.md)  
   
 ## <a name="see-also"></a>関連項目  
  [VSPackage](../extensibility/internals/vspackages.md)

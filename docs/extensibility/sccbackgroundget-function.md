@@ -1,5 +1,5 @@
 ---
-title: SccBackgroundGet 関数 |Microsoft ドキュメント
+title: SccBackgroundGet 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77e70720c9a26710c6d659ebac5b842bef3757eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9ac53809a5735457d7604593e975bb764bbdf81
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136758"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639088"
 ---
 # <a name="sccbackgroundget-function"></a>SccBackgroundGet 関数
-この関数は、ソース管理から各指定されたファイルのユーザー操作なしで取得します。  
+この関数は、ソース管理から各指定されたファイルのユーザーの操作なしで取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,15 @@ SCCRTN SccBackgroundGet(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pContext  
- [in]ソース管理プラグイン コンテキスト ポインターです。  
+ [in]ソース管理プラグインのコンテキストのポインター。  
   
  nFiles  
  [in]指定されたファイルの数、`lpFileNames`配列。  
   
  lpFileNames  
- [入力、出力].取得するファイルの名前の配列。  
+ [入力、出力]取得するファイルの名前の配列。  
   
 > [!NOTE]
 >  名前は、完全修飾のローカル ファイル名である必要があります。  
@@ -54,21 +54,21 @@ SCCRTN SccBackgroundGet(
  [in]コマンドのフラグ (`SCC_GET_ALL`、 `SCC_GET_RECURSIVE`)。  
   
  dwBackgroundOperationID  
- [in]この操作に関連付けられている一意の値。  
+ [in]この操作に関連付けられた一意の値。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|操作が正常に完了しました。|  
-|SCC_E_BACKGROUNDGETINPROGRESS|バック グラウンドの取得が既に進行中 (ソース管理プラグインを返すこの同時バッチ操作はサポートされていない場合にのみ)。|  
+|SCC_E_BACKGROUNDGETINPROGRESS|バック グラウンド取得が既に進行中 (ソース管理プラグインを返すこの同時バッチ操作がサポートしない場合にのみ)。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
   
-## <a name="remarks"></a>コメント  
- この関数は常にソース管理プラグインが読み込まれている 1 つから別のスレッドで呼び出されます。 この関数が完了するまでを返す必要はありません。ただし、その複数回と共に呼び出せる複数同時にすべてのファイルのリスト。  
+## <a name="remarks"></a>Remarks  
+ この関数は常にソース管理プラグインが読み込まれているものと異なるスレッドで呼び出されます。 この関数は戻りますが完了するまでは必要ありません。ただし、その複数回と共に呼び出せる複数同時にすべてのファイルのリスト。  
   
- 使用、`dwFlags`と同じ引数が、 [SccGet](../extensibility/sccget-function.md)です。  
+ 使用、`dwFlags`引数が同じ、 [SccGet](../extensibility/sccget-function.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   
