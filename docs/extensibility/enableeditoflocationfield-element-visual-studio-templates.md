@@ -1,5 +1,5 @@
 ---
-title: EnableEditOfLocationField 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: EnableEditOfLocationField 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8aee6e8b763cbc46af1cf426971e68e2e22ea1e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4a38f023da9f4603bee9c87cb119bd41ec7e6d98
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31129793"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638018"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField 要素 (Visual Studio テンプレート)
 ユーザーが [場所] フィールドを編集できるかどうかを指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "31129793"
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -51,10 +51,10 @@ ms.locfileid: "31129793"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`を示す、ユーザーが編集できるかどうか、**場所**上のテキスト ボックス、**新しいプロジェクト** ダイアログ ボックス。  
+ テキストがいずれかにする必要があります`true`または`false`かを示す、ユーザーが編集できるかどうか、**場所**上のテキスト ボックス、**新しいプロジェクト** ダイアログ ボックス。  
   
-## <a name="remarks"></a>コメント  
- `EnableEditOfLocationField` は、省略可能な要素です。 既定値は`true`、により、ユーザーの値を編集する、**場所**テキスト ボックスに、**新しいプロジェクト** ダイアログ ボックス。  
+## <a name="remarks"></a>Remarks  
+ `EnableEditOfLocationField` は、省略可能な要素です。 既定値は`true`、ユーザーがの値を編集することができます、**場所**テキスト ボックスに、**新しいプロジェクト** ダイアログ ボックス。  
   
  **新しいプロジェクト** ダイアログ ボックスで、**場所**テキスト ボックスは、新しいプロジェクトが保存されているディレクトリを指定します。  
   

@@ -1,5 +1,5 @@
 ---
-title: SccCheckin 関数 |Microsoft ドキュメント
+title: SccCheckin 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf8c8d23a89e55b272657dde0c2374c78e63bfaf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc60657eae830fa02d87f52225de780d8a688c11
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636715"
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
-この関数は、ソース管理システムが表示され、変更を保存して、新しいバージョンを作成する以前のチェック アウトしたファイルをチェックインします。 この関数がカウントとにチェックインするファイルの名前の配列と呼ばれます。  
+この関数は、変更を保存して、新しいバージョンを作成、ソース管理システムに以前のチェック アウトしたファイルをチェックインします。 この関数は、カウントにチェックインするファイルの名前の配列と呼びます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,50 +39,50 @@ SCCRTN SccCheckin (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pvContext  
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  hWnd  
- [in]IDE のウィンドウで提供されるダイアログ ボックスをすべての親として使用できるプラグインの SCC へのハンドル。  
+ [in]SCC のプラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
- [in]チェックインする選択したファイルの数。  
+ [in]選択にチェックインするファイルの数。  
   
  lpFileNames  
- [in]チェックインするファイルの完全修飾のローカル パス名の配列。  
+ [in]チェックインするファイルの完全修飾パス名の配列。  
   
  lpComment  
- [in]各チェックインされている選択したファイルに適用されるコメントです。 これは`NULL`とコメントに、ソース管理プラグインを入力する必要があります。  
+ [in]各チェックインされている選択したファイルに適用されるコメントです。 このパラメーターは`NULL`とコメントに、ソース管理プラグインを入力する必要があります。  
   
- foptions の   
- [in]コマンドのフラグ、0 または`SCC_KEEP_CHECKEDOUT`です。  
+ 方法は限られて  
+ [in]コマンドのフラグ、0 または`SCC_KEEP_CHECKEDOUT`します。  
   
  pvOptions  
  [in]SCC プラグインに固有のオプションです。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|ファイルが正常にチェックインします。|  
 |SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下ではありません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題の可能性へのアクセスに問題が発生しました。 再試行をお勧めします。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。 ファイルがチェックインされません。|  
-|SCC_E_NOTCHECKEDOUT|ユーザーがいないファイルをチェック アウト、チェックインできないようにします。|  
-|SCC_E_CHECKINCONFLICT|チェックインは実行されませんでした。<br /><br /> -別のユーザーが事前チェックし、`bAutoReconcile`が false であった。<br /><br /> - または -<br /><br /> -(たとえば、ファイルが場合バイナリ)、、自動マージを実行できません。|  
-|SCC_E_VERIFYMERGE|ファイルは、自動マージにしましたが、ユーザーの確認保留中のチェックインされていません。|  
-|SCC_E_FIXMERGE|ファイルは、自動マージにしましたが、手動で解決しなければならないマージ競合しているのためにチェックインされていません。|  
-|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
+|SCC_E_NOTCHECKEDOUT|ユーザーがチェックインできないように、ファイルはチェックされません。|  
+|SCC_E_CHECKINCONFLICT|チェックインを実行できませんでした。<br /><br /> -別のユーザーが事前チェックし、`bAutoReconcile`が false であった。<br /><br /> - または -<br /><br /> に (たとえば、ファイルはバイナリ) とき、自動マージを実行できません。|  
+|SCC_E_VERIFYMERGE|ファイルは、自動マージにしましたが、ユーザーの検証保留中のチェックインされていません。|  
+|SCC_E_FIXMERGE|ファイルは、自動マージにしましたが、手動で解決する必要のあるマージの競合によりチェックインされていません。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行できません。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
-|SCC_I_RELOADFILE|ファイルまたはプロジェクトは、再読み込みする必要があります。|  
+|SCC_I_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
 |SCC_E_FILENOTEXIST|ローカル ファイルが見つかりませんでした。|  
   
-## <a name="remarks"></a>コメント  
- コメントは、チェックインされているすべてのファイルに適用されます。 コメントの引数を指定できます、`null`文字列、ソース管理プラグインが各ファイルのコメント文字列のユーザーを要求する場合。  
+## <a name="remarks"></a>Remarks  
+ コメントは、チェックインされているすべてのファイルに適用されます。 コメントの引数を指定できます、`null`文字列の場合、ソース管理プラグインは各ファイルのコメントの文字列のユーザーを求めることもできます。  
   
- `fOptions`引数がの値を指定することができます、`SCC_KEEP_CHECKEDOUT`でファイルを確認し、再度チェック アウトするユーザーの意図を示すフラグ。  
+ `fOptions`引数の値が指定することができます、`SCC_KEEP_CHECKEDOUT`でファイルを確認し、もう一度チェック アウトするユーザーの意図を示すフラグ。  
   
 ## <a name="see-also"></a>関連項目  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)

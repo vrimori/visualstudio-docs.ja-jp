@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85eee51941f6fb549c96dcc257335f9d77b6b0f2
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 128326b869f9a1e09ffb28118af1073b1a7e57b1
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057133"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638632"
 ---
 # <a name="error-handling-and-return-values"></a>エラー処理と戻り値
 Vspackage と COM のエラーと同じアーキテクチャを使用します。 `SetErrorInfo`と`GetErrorInfo`関数は、Win32 アプリケーション プログラミング インターフェイス (API) の一部です。 統合開発環境 (IDE) ですべての VSPackage できますこれらグローバル Win32 Api を呼び出して詳細なエラー情報を記録エラー通知を受信するときにします。 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]エラー情報を管理する相互運用機能アセンブリを提供します。  

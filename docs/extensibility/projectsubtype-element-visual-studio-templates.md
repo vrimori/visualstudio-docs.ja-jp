@@ -1,5 +1,5 @@
 ---
-title: ProjectSubType 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: ProjectSubType 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4414d5f444613996312978e9033145c6b8d3d82
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 46b110acd20659dcd1660e4ce92897b1c78171bb
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139001"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636143"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 要素 (Visual Studio テンプレート)
-テンプレートで指定された値のサブカテゴリに分類、`ProjectType`要素。  
+テンプレートで指定された値のサブカテゴリには、分類、`ProjectType`要素。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -32,11 +32,11 @@ ms.locfileid: "31139001"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <ProjectSubType> SubType </ProjectSubType>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -56,23 +56,23 @@ ms.locfileid: "31139001"
   
  この値は、テンプレートのサブカテゴリを指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ProjectSubType` は、`TemplateData` の子要素で、省略可能な要素です。  
   
- `ProjectSubType`要素を提供するサブカテゴリ、 [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)要素。 この値を含むことができます。  
+ `ProjectSubType`要素は、サブカテゴリを[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)要素。 この値を含めることができます。  
   
--   `SmartDevice-NETCFv1`: を指定するテンプレートの対象、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 1.0。  
+-   `SmartDevice-NETCFv1`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 1.0。  
   
--   `SmartDevice-NETCFv2`: を指定する tempalate ターゲット、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
+-   `SmartDevice-NETCFv2`: を指定するテンプレートの対象と、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
   
- テンプレートが含まれている場合、`ProjectType`の値を持つ要素`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
+ テンプレートが含まれている場合、`ProjectType`要素の値を持つ`Web`、`ProjectSubType`要素がテンプレートのプログラミング言語を指定します。 この要素は、次の値を持つことができます。  
   
--   `CSharp`: このテンプレートを作成することを指定、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目。  
+-   `CSharp`: このテンプレートが作成を指定します、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目。  
   
--   `VisualBasic`: このテンプレートを作成することを指定、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目。  
+-   `VisualBasic`: このテンプレートが作成を指定します、 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目。  
   
 ## <a name="example"></a>例  
- 次の例では、用のプロジェクト テンプレートのメタデータ、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]デバイス アプリケーションのターゲット設定、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
+ 次の例のためのプロジェクト テンプレート メタデータを[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]デバイス アプリケーションを対象とする、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)]バージョン 2.0。  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -101,5 +101,5 @@ ms.locfileid: "31139001"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
  [ProjectType 要素 (Visual Studio テンプレート)](../extensibility/projecttype-element-visual-studio-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: Vspackage を読み込む |Microsoft ドキュメント
+title: Vspackage の読み込み |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 008cd31bc3d9f909477089e608393f596bfb0682
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 26bd199a688b1b47728aac561720224a71f1583b
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140015"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638148"
 ---
-# <a name="loading-vspackages"></a>Vspackage を読み込む
-Vspackage は、それらの機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、Visual Studio はプロジェクト ファクトリまたは VSPackage を実装するサービスを使用する場合、VSPackage が読み込まれます。 この機能は、パフォーマンスを向上させるために可能な場合に使用される、遅延読み込みと呼ばれます。  
+# <a name="load-vspackages"></a>Vspackage を読み込む
+Vspackage は、それらの機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、Visual Studio がプロジェクト ファクトリや VSPackage を実装するサービスを使用するときに VSPackage が読み込まれます。 この機能には、パフォーマンスを向上させるために可能な場合に使用される、遅延読み込みが呼び出されます。  
   
 > [!NOTE]
->  Visual Studio は、VSPackage を読み込むことがなく、VSPackage を提供するコマンドなど、特定の VSPackage の情報を確認できます。  
+>  Visual Studio では、VSPackage を読み込むことがなく、VSPackage を提供するコマンドなどの VSPackage の情報を確認できます。  
   
- Vspackage に設定できます autoload コンテキストでは特定のユーザー インターフェイス (UI)、たとえば、ソリューションが開いているときにします。 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>属性はこのコンテキストを設定します。  
+ Vspackage に設定できます、特定のユーザー インターフェイス (UI) のコンテキストでの自動読み込みなど、ソリューションが開いているとき。 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute>属性は、このコンテキストを設定します。  
   
-### <a name="autoloading-a-vspackage-in-a-specific-context"></a>特定のコンテキストで VSPackage 自動読み込み  
+### <a name="autoload-a-vspackage-in-a-specific-context"></a>特定のコンテキストで VSPackage を自動読み込み  
   
--   追加、 `ProvideAutoLoad` VSPackage の属性に属性します。  
+-   追加、 `ProvideAutoLoad` VSPackage 属性に属性します。  
   
     ```csharp  
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]  
@@ -42,22 +42,22 @@ Vspackage は、それらの機能が必要な場合にのみ、Visual Studio �
     {. . .}  
     ```  
   
-     フィールドの列挙を参照してください<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>UI コンテキストとその GUID 値の一覧についてはします。  
+     列挙型のフィールドを参照してください。 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> UI コンテキストとその GUID 値の一覧についてはします。  
   
--   ブレークポイントを設定、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッドです。  
+-   ブレークポイントを設定、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッド。  
   
 -   VSPackage をビルドしてデバッグを開始します。  
   
 -   ソリューションを読み込むか、1 つを作成します。  
   
-     VSPackage を読み込んで、ブレークポイントで停止します。  
+     VSPackage では、読み込みをブレークポイントで停止します。  
   
-## <a name="forcing-a-vspackage-to-load"></a>強制的に VSPackage を読み込む  
- 状況によっては、VSPackage を強制的に読み込まれる別の VSPackage 必要があります。 たとえば、軽量の VSPackage、CMDUIContext としては使用できませんのコンテキストでより大きな VSPackage を読み込むことがします。  
+## <a name="force-a-vspackage-to-load"></a>強制的に VSPackage を読み込む  
+ 状況によっては、VSPackage を強制的に別の VSPackage を読み込む必要があります。 たとえば、軽量の VSPackage では、つまり、CMDUIContext として使用できないコンテキストでより大きな VSPackage を読み込む可能性があります。  
   
- 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A>を読み込むために VSPackage を強制する方法です。  
+ 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A>をロードするために VSPackage を強制する方法。  
   
--   このコードに挿入、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>強制的に別の VSPackage を読み込む、VSPackage のメソッド。  
+-   次のコードを挿入、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>メソッドの VSPackage を読み込む別の VSPackage を強制します。  
   
     ```csharp  
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;  
@@ -70,9 +70,9 @@ Vspackage は、それらの機能が必要な場合にのみ、Visual Studio �
   
     ```  
   
-     VSPackage の初期化時に強制されます`PackageToBeLoaded`を読み込めません。  
+     により、VSPackage が初期化されると、`PackageToBeLoaded`を読み込めません。  
   
-     強制読み込みは、VSPackage の通信には使用されません。 使用して[を使用してサービスを提供する](../extensibility/using-and-providing-services.md)代わりにします。
+     強制読み込みは、VSPackage 通信しないに使用する必要があります。 使用[使用してサービスを提供および](../extensibility/using-and-providing-services.md)代わりにします。
   
 ## <a name="see-also"></a>関連項目  
  [VSPackage](../extensibility/internals/vspackages.md)

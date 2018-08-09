@@ -1,5 +1,5 @@
 ---
-title: 登録して、Vspackage の登録を解除する |Microsoft ドキュメント
+title: 登録と Vspackage を登録解除 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73dccc4aef061aaac5f5c33e098a591a7c51fcbb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c9abdf432664e57dd773649a88f97cf9b48675d7
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139053"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638174"
 ---
-# <a name="registering-and-unregistering-vspackages"></a>Vspackage の登録および登録解除しています
-属性を使用して、VSPackage を登録するが、  
+# <a name="register-and-unregister-vspackages"></a>登録して、Vspackage の登録解除
+属性を使用して、VSPackage の登録が、  
   
-## <a name="registering-a-vspackage"></a>VSPackage を登録します。  
- 属性を使用すると、マネージ Vspackage の登録を制御します。 すべての登録情報は、.pkgdef ファイルに含まれます。 ファイル ベースの登録の詳細については、次を参照してください。 [CreatePkgDef ユーティリティ](../extensibility/internals/createpkgdef-utility.md)です。  
+## <a name="register-a-vspackage"></a>VSPackage を登録します。  
+ マネージ Vspackage の登録を制御するのに属性を使用できます。 すべての登録情報が含まれている、 *.pkgdef*ファイル。 ファイル ベースの登録の詳細については、次を参照してください。 [CreatePkgDef ユーティリティ](../extensibility/internals/createpkgdef-utility.md)します。  
   
- 次のコードは、標準登録属性を使用して、VSPackage を登録する方法を示しています。  
+ 次のコードでは、標準登録属性を使用して、VSPackage を登録する方法を示します。  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true)]  
@@ -36,28 +36,28 @@ public sealed class BasicPackage : Package
 {. . .}  
 ```  
   
-## <a name="unregistering-an-extension"></a>拡張機能の登録を解除します。  
- 多数の異なる Vspackage で実験されて、実験用インスタンスから削除する場合、できるだけを行う、**リセット**コマンド。 探して**Visual Studio の実験用インスタンスをリセット**コンピューターのスタート ページで、コマンドラインからこのコマンドを実行または。  
+## <a name="unregister-an-extension"></a>拡張機能の登録を解除します。  
+ 多くの異なる Vspackage みる実験用インスタンスから削除する場合、実行して、**リセット**コマンド。 探して**Visual Studio の実験用インスタンスをリセット**コンピューターのスタート ページで、コマンドラインからこのコマンドを実行または。  
   
-```vb  
+```cmd  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe" /Reset /VSInstance=14.0 /RootSuffix=Exp  
 ```  
   
- Visual Studio の開発インスタンスにインストールされている拡張機能をアンインストールする場合を参照してください。**ツール/拡張機能と更新**、拡張機能を見つけて、クリック**アンインストール**です。  
+ Visual Studio の開発インスタンスにインストールされている拡張機能をアンインストールする場合を参照してください。**ツール** > **拡張機能と更新**、拡張機能を見つけて、をクリックします。**アンインストール**します。  
   
  何らかの理由には、拡張機能のアンインストールでこれらのメソッドのどちらも成功すると、コマンドラインから、VSPackage アセンブリを次のように登録解除できます。  
   
-```  
+```cmd  
 <location of Visual Studio 2015 install>\"Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Tools\Bin\regpkg" /unregister <pathToVSPackage assembly>  
 ```  
   
 <a name="using-a-custom-registration-attribute-to-register-an-extension"></a>  
   
-## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>拡張機能の登録をカスタム登録属性を使用してください。  
+## <a name="use-a-custom-registration-attribute-to-register-an-extension"></a>カスタム登録属性を使用して、拡張機能の登録  
   
-特定の状況では、拡張機能の新しい登録属性を作成する必要があります。 新しいレジストリ キーを追加したり既存のキーに新しい値を追加するには、登録属性を使用することができます。 新しい属性が派生する必要があります<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>、それをオーバーライドする必要があります、<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A>と<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A>メソッドです。  
+場合によっては、拡張機能の新しい登録属性を作成する必要があります。 新しいレジストリ キーを追加したり既存のキーに新しい値を追加する登録属性を使用することができます。 新しい属性が派生する必要があります<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>、それをオーバーライドする必要があり、<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Register%2A>と<xref:Microsoft.VisualStudio.Shell.RegistrationAttribute.Unregister%2A>メソッド。  
   
-### <a name="creating-a-custom-attribute"></a>カスタム属性を作成します。  
+### <a name="create-a-custom-attribute"></a>カスタム属性を作成します。  
   
 次のコードでは、新しい登録属性を作成する方法を示します。  
   
@@ -68,11 +68,11 @@ public sealed class BasicPackage : Package
     }  
 ```  
   
- <xref:System.AttributeUsageAttribute>属性クラスで、プログラム要素 (クラス、メソッドなど) を属性の関連する、かどうかと指定できますも複数回継承するかどうかを指定するために使用します。  
+ <xref:System.AttributeUsageAttribute>属性クラスで属性に関連する、かどうかと指定できます 2 回以上継承するかどうかをプログラム要素 (クラス、メソッドなど) を指定するために使用します。  
   
-### <a name="creating-a-registry-key"></a>レジストリ キーを作成します。  
+### <a name="create-a-registry-key"></a>レジストリ キーを作成します。  
   
-次のコードでは、カスタム属性を作成、**カスタム**登録される VSPackage のキーの下のサブキーです。  
+次のコードでは、カスタム属性を作成、**カスタム**登録される VSPackage のキーの下のサブキー。  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  
@@ -96,9 +96,9 @@ public override void Unregister(RegistrationContext context)
 }  
 ```  
   
-### <a name="creating-a-new-value-under-an-existing-registry-key"></a>既存のレジストリ キーの下で新しい値を作成します。  
+### <a name="create-a-new-value-under-an-existing-registry-key"></a>既存のレジストリ キーの下の新しい値を作成します。  
   
-カスタム値は、既存のキーを追加できます。 次のコードは、VSPackage の登録キーを新しい値を追加する方法を示しています。  
+カスタム値は、既存のキーを追加できます。 次のコードでは、VSPackage の登録キーを新しい値を追加する方法を示します。  
   
 ```csharp  
 public override void Register(RegistrationAttribute.RegistrationContext context)  

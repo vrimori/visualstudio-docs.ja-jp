@@ -1,5 +1,5 @@
 ---
-title: SccGetEvents 関数 |Microsoft ドキュメント
+title: SccGetEvents 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79e517d87acd61eafcd2eb0a12f5a8978912db81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 21cc159f4ea09d817e81f74f338cc748833e1b62
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136745"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636942"
 ---
 # <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態のイベントを取得します。  
@@ -36,32 +36,32 @@ SCCRTN SccGetEvents (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pvContext  
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  lpFileName  
- [入力、出力].ソース管理プラグインが返されたファイル名 (最大 _MAX_PATH 文字) を格納するバッファー。  
+ [入力、出力]ソース管理プラグインが (最大 _MAX_PATH 文字) 返されたファイル名を格納するバッファー。  
   
  lpStatus  
- [入力、出力].ステータス コードを返します (を参照してください[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md)使用可能な値)。  
+ [入力、出力]ステータス コードを返します (を参照してください[状態コードをファイル](../extensibility/file-status-code-enumerator.md)使用可能な値)。  
   
  pnEventsRemaining  
- [入力、出力].この呼び出しの後、キュー内の残りのエントリの数を返します。 呼び出すことが呼び出し元がこの数値が大きい場合は、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)情報を一度にすべてを取得します。  
+ [入力、出力]この呼び出しの後にキューに残ってエントリの数を返します。 呼び出し元を呼び出すことがこの数値が大きい場合、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)情報を一度にすべてを取得します。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|成功したイベントを取得します。|  
-|SCC_E_OPNOTSUPPORTED|この関数はサポートされていません。|  
+|SCC_E_OPNOTSUPPORTED|この関数がサポートされていません。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>コメント  
- この関数は加えられていないかどうか、ソース管理下にあるファイルのステータスの更新を表示するアイドル状態の処理中に呼び出されます。 ソース管理プラグインを知っている、すべてのファイルの状態を維持し、変更されるたびに状態がによって示されたプラグイン、状態と関連付けられているファイルは、キューに格納します。 ときに`SccGetEvents`が呼び出されると、上部、キューの要素が取得され、返されます。 この関数は以前にキャッシュされた情報のみを返すには制限し、非常に迅速なターンアラウンドが実現 (つまり、なし、ディスクの読み取り、または状態のソース管理システムを求める); 必要があります。それ以外の場合、IDE のパフォーマンスが低下することに開始されます。  
+## <a name="remarks"></a>Remarks  
+ この関数は加えられていないかどうか、ソース管理下にあるファイルのステータスの更新を表示するアイドル状態の処理中に呼び出されます。 ソース管理プラグインが把握しているすべてのファイルの状態を維持し、変更されるたびに状態が記載されています、プラグインによって状態と関連付けられているファイルは、キューに格納されます。 ときに`SccGetEvents`を呼び出すと、上部、キューの要素が取得され、返されます。 この関数は以前にキャッシュされた情報のみを返すに制限し、非常に高速ターンアラウンド (なし、ディスクの読み取りが、ソース管理システムの状態を求める); 必要があります。それ以外の場合、IDE のパフォーマンスが低下する開始します。  
   
- レポートへのステータスの更新がない場合は、ソース管理プラグインは、空の文字列を指すバッファーに格納`lpFileName`です。 それ以外の場合、プラグインを格納、ファイルの完全なパス名のステータス情報が変更され、適切なステータス コードを返します (で詳細に説明値の 1 つ[ファイル ステータス コード](../extensibility/file-status-code-enumerator.md))。  
+ レポートにステータスの更新がない場合は、ソース管理プラグインは空の文字列を指すバッファーに格納`lpFileName`します。 それ以外の場合、プラグインを格納、ファイルの完全なパス名には、状態情報が変更された適切な状態コードを返します (に記載された値の 1 つ[状態コードをファイル](../extensibility/file-status-code-enumerator.md))。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

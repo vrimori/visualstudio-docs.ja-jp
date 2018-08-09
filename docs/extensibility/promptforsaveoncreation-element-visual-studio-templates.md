@@ -1,5 +1,5 @@
 ---
-title: PromptForSaveOnCreation 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: PromptForSaveOnCreation 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92be0bc15542010cfeea8a9ee70e69ff52e14163
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c5b04bfa04b1b6fd6599e5fdd06d6c58210f635
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31137548"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638444"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation 要素 (Visual Studio テンプレート)
-プロジェクトの保存場所を使用して、ユーザーが求めるかどうかを指定します、**新しいプロジェクト** ダイアログ ボックスのプロジェクトを作成するときにします。 この要素が `true` に設定されている場合、ユーザーは保存場所の入力を求められます。`false` に設定されている場合は、入力を求められません  (つまり、一時プロジェクトが作成されます)。  
+プロジェクトの保存場所を使用して、ユーザーを確認するかどうかを指定します、**新しいプロジェクト**プロジェクトを作成するときに、ダイアログ ボックス。 この要素が `true` に設定されている場合、ユーザーは保存場所の入力を求められます。`false` に設定されている場合は、入力を求められません  (つまり、一時プロジェクトが作成されます)。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -31,11 +31,11 @@ ms.locfileid: "31137548"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <PromptForSaveOnCreation> true/false </PromptForSaveOnCreation>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -55,7 +55,7 @@ ms.locfileid: "31137548"
   
  テキストは `true` または `false` である必要があります。`true` は、新しいプロジェクトの作成時にユーザーに保存場所の入力を求めることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `PromptForSaveOnCreation` は、省略可能な要素です。 既定値は `false` です。  
   
  一時プロジェクトは、プロジェクトの内容を保存しないで作成および変更できるプロジェクトです。  
@@ -90,4 +90,4 @@ ms.locfileid: "31137548"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

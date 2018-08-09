@@ -1,5 +1,5 @@
 ---
-title: 要素 (Visual Studio テンプレート) を参照 |Microsoft ドキュメント
+title: 要素 (Visual Studio テンプレート) を参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e0217360b2a8e9c6c8e723561aff383ed3226d1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b1f05bc8a19377576788fdb72400bf0af566b796
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136298"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638112"
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference 要素 (Visual Studio テンプレート)
 項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。  
@@ -33,13 +33,13 @@ ms.locfileid: "31136298"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Reference>  
     <Assembly> ... </Assembly>  
 </Reference>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -49,23 +49,23 @@ ms.locfileid: "31136298"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[Assembly](../extensibility/assembly-element-visual-studio-templates.md)|必須の要素です。<br /><br /> そのアセンブリの参照をプロジェクトに追加するテンプレートを使用して、アセンブリに関する情報を指定します。 必要がある 1 つ`Assembly`内の要素すべて`Reference`要素。|  
+|[Assembly](../extensibility/assembly-element-visual-studio-templates.md)|必須の要素です。<br /><br /> そのアセンブリの参照をプロジェクトに追加するテンプレートを使用して、アセンブリに関する情報を指定します。 1 つあります`Assembly`内の要素すべて`Reference`要素。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[参照](../extensibility/references-element-visual-studio-templates.md)|テンプレートをプロジェクトに追加するアセンブリ参照をグループ化します。|  
+|[参照](../extensibility/references-element-visual-studio-templates.md)|このテンプレートはプロジェクトに追加するアセンブリ参照をグループ化します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Reference` は `References` に必須の子要素です。  
   
- `Reference`と`References`要素は、.vstemplate ファイルでのみ使用できます、`Type`属性の値の`Item`します。  
+ `Reference`と`References`要素でのみ使用できます *.vstemplate*を持つファイルを`Type`属性の値`Item`します。  
   
 ## <a name="example"></a>例  
- 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML は、System.dll および System.Data.dll アセンブリへの参照を追加します。  
+ 次の例を示しています、`TemplateContent`項目テンプレートの要素。 この XML への参照の追加、 *System.dll*と*System.Data.dll*アセンブリ。  
   
-```  
+```xml  
 <TemplateContent>  
     <References>  
         <Reference>  
@@ -85,4 +85,4 @@ ms.locfileid: "31136298"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

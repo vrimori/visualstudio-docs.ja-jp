@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 5dc8ccda83f700538ae84dd565fcdd299d7d1331
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: e39a7d770308cae7e022d419b21695f9d478aad7
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37889997"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381694"
 ---
 # <a name="design-xaml-in-visual-studio"></a>Visual Studio で XAML をデザインする
 
@@ -50,7 +50,7 @@ Visual Studio と Blend for Visual Studio は自在に切り替えることが�
 
 - **レイアウトの同期と設定:** カスタム レイアウトを使用して、ツール ウィンドウのレイアウト変更を保存および適用できます。 同じ Microsoft アカウントでサインインすると、Visual Studio は Visual Studio と Blend for Visual Studio 双方の変更や基本設定をコンピューター間で同期します。 「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
-- **共通のソリューション エクスプ ローラー:** ソリューション エクスプ ローラーによって、プロジェクトやファイルが整理して表示されるだけでなく、プロジェクトやファイルに関連付けられているコマンドに素早くアクセスできます。 ソリューション エクスプ ローラーを使用すると、大規模なエンタープライズ プロジェクトでの作業が容易になります。 「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。
+- **共通のソリューション エクスプローラー:** **ソリューション エクスプ ローラー**によって、プロジェクトやファイルが整理して表示されるだけでなく、プロジェクトやファイルに関連付けられているコマンドにすばやくアクセスできます。 ソリューション エクスプ ローラーを使用すると、大規模なエンタープライズ プロジェクトでの作業が容易になります。 「[ソリューションおよびプロジェクト](../ide/solutions-and-projects-in-visual-studio.md)」をご覧ください。
 
 - **チーム エクスプ ローラー:** チーム エクスプ ローラーを使用すると、プロジェクトを GIT または TFS リポジトリを使用して管理でき、チームのコラボレーションが容易になります。 [チーム エクスプローラーでの作業](http://msdn.microsoft.com/Library/fd7a5cf7-7916-4fa0-b5e6-5a83cf377a02)を参照してください。
 

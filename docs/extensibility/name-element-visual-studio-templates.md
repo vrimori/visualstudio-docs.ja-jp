@@ -1,5 +1,5 @@
 ---
-title: 要素 (Visual Studio テンプレート) の名前を付けます |Microsoft ドキュメント
+title: 名前を要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 202542388fc04b07c0792a550029b0d509327c74
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 743c732410c97aa795264dd6fe2495d2d14f2481
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136524"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638871"
 ---
 # <a name="name-element-visual-studio-templates"></a>Name 要素 (Visual Studio テンプレート)
-表示されるテンプレートの名前を指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
+表示されるテンプレートの名前を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -31,23 +31,23 @@ ms.locfileid: "31136524"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <Name> Template Name </Name>  
 ```  
   
-```  
+```xml  
 <Name Package="{PackageID}" ID="ResourceID" />  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Package`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のパッケージを指定する GUID id です。|  
-|`ID`|高度なユーザー シナリオについての省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します|  
+|`Package`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio パッケージを指定する GUID の id。|  
+|`ID`|省略可能な属性、高度なユーザー シナリオです。<br /><br /> Visual Studio のリソース ID を指定します|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -59,17 +59,17 @@ ms.locfileid: "31136524"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
 ## <a name="text-value"></a>テキスト値  
- しない限り、テキスト値が必要な`Package`と`ID`属性を使用します。  
+ しない限り、テキスト値が必要です、`Package`と`ID`属性が使用されます。  
   
  テキストは、テンプレートの名前を提供します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Name` は `TemplateData` に必須の子要素です。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。  
   
-```  
+```xml  
 <VSTemplate Type="Project" Version="3.0.0"  
     xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
     <TemplateData>  

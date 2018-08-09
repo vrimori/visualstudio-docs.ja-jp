@@ -11,24 +11,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e3006f14e98723068ea28f222c00fdff48af46d
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: ad8f58e1d576a738c17095b6306261964e448651
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281379"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637722"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ
 
 [.NET コンパイラ プラットフォーム](https://github.com/dotnet/roslyn)("Roslyn") を使用して、コードに対応したライブラリを作成できます。  コードに対応したライブラリでは、またはエラーを回避する最善の方法で使用できる機能とライブラリを使用するためのツール (Roslyn アナライザー) を提供します。  このトピックでは、現実の世界を使用する場合は、一般的なエラーをキャッチする Roslyn アナライザーを構築する方法、 [System.Collections.Immutable](https://www.nuget.org/packages/System.Collections.Immutable) NuGet パッケージ。  この例では、アナライザーが見つけたコードの問題のコード修正を提供する方法も示します。  ユーザーは、Visual Studio 電球 UI でのコード修正を参照してくださいし、コードの修正プログラムを自動的に適用できます。
 
-## <a name="getting-started"></a>作業の開始
+## <a name="get-started"></a>作業開始
 
 この例をビルドするには、次が必要です。
 
 * Visual Studio 2015 (Express Edition されません) またはそれ以降のバージョン。  無料で使用できます[Visual Studio Community エディション](https://visualstudio.microsoft.com/vs/community/)
-* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  確認することも、Visual Studio をインストールするときに同時に、SDK をインストールする一般的なツールでの Visual Studio 機能拡張ツール。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル&#124;新規&#124;プロジェクト.**、左側のナビゲーション ウィンドウで c# を選択し、機能拡張を選択します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。
-* [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)します。  メイン メニューに移動して、この SDK をインストールすることも**ファイル&#124;新規&#124;プロジェクト.** 選択、 **c#** で、左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  この SDK には、 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)します。  この非常に便利なツールでは、どのようなコード モデルの種類を把握する必要があります内で検索アナライザーです。  特定のコード モデルの種類のコードは、のみ必要な場合に実行し、関連するコードを分析のみに集中できますので、コードにアナライザーのインフラストラクチャは呼び出し。
+* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  確認することも、Visual Studio をインストールするときに**Visual Studio Extensibility Tools** **一般的なツール**と同時に、SDK をインストールします。  既に Visual Studio をインストールする場合、メイン メニューに移動してこの SDK をインストールすることができますもする**ファイル** > **新規** > **プロジェクト**、選択**c#** で、左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合、"**Visual Studio 機能拡張ツールをインストール**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。
+* [.NET コンパイラ プラットフォーム ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)します。  メイン メニューに移動して、この SDK をインストールすることも**ファイル** > **新規** > **プロジェクト**選択、 **c#** 左側のナビゲーション ウィンドウで、選択して、 **Extensibility**します。  選択した場合"**.NET コンパイラ プラットフォーム SDK をダウンロードして**"階層リンクのプロジェクト テンプレートを求められますをダウンロードして、SDK をインストールします。  この SDK には、 [Roslyn Syntax Visualizer](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)します。  この非常に便利なツールでは、どのようなコード モデルの種類を把握する必要があります内で検索アナライザーです。  特定のコード モデルの種類のコードは、のみ必要な場合に実行し、関連するコードを分析のみに集中できますので、コードにアナライザーのインフラストラクチャは呼び出し。
 
 ## <a name="whats-the-problem"></a>何がそんなに問題ですか。
 
@@ -54,19 +54,19 @@ Console.WriteLine("b2.Length = { 0}", b2.Length);
 
 最初のエラーは、ImmutableArray 実装の構造体を使用して、基になるデータ ストレージをラップするためです。 構造体は、パラメーターなしコンス トラクターを持つ必要がありますように`default(T)`式は、すべての構造体を返すことができます 0 または null のメンバー。  コードにアクセスするときに`b1.Length`、ImmutableArray 構造体の基になる記憶域配列がないために、実行時の null がエラーを逆参照があります。  空の ImmutableArray を作成する正しい方法は、`ImmutableArray<int>.Empty`します。
 
-ImmutableArray.Add メソッドはこのメソッドを呼び出すたびに新しいインスタンスを返すために、コレクション初期化子を含むエラーが発生します。  ImmutableArrays 決して変更ので、新しい要素を追加するときに、オブジェクトを取得するバックアップ新しい ImmutableArray (これは以前から存在 ImmutableArray とパフォーマンス上の理由からストレージを共有する可能性があります)。  `b2`呼び出す前に、最初の ImmutableArray を指す`Add()`の 5 回`b2`既定 ImmutableArray が。  エラーを逆参照呼び出しの長さにも null でクラッシュします。  手動で追加の呼び出しは、使用することがなく、ImmutableArray を初期化する正しい方法`ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`します。
+に、コレクション初期化子を含むエラーが発生、`ImmutableArray.Add`メソッドはこのメソッドを呼び出すたびに新しいインスタンスを返します。  ImmutableArrays 決して変更ので、新しい要素を追加するときに、オブジェクトを取得するバックアップ新しい ImmutableArray (これは以前から存在 ImmutableArray とパフォーマンス上の理由からストレージを共有する可能性があります)。  `b2`呼び出す前に、最初の ImmutableArray を指す`Add()`の 5 回`b2`既定 ImmutableArray が。  エラーを逆参照呼び出しの長さにも null でクラッシュします。  手動で追加の呼び出しは、使用することがなく、ImmutableArray を初期化する正しい方法`ImmutableArray.CreateRange(new int[] {1, 2, 3, 4, 5})`します。
 
-## <a name="finding-relevant-syntax-node-types-to-trigger-your-analyzer"></a>アナライザーのトリガーに関連する構文ノードの種類の検索
+## <a name="find-relevant-syntax-node-types-to-trigger-your-analyzer"></a>関連する構文アナライザーをトリガーするノードの種類を検索します。
 
- アナライザーをビルドするには、最初見つけ出す SyntaxNode の種類確認する必要があります。 メニューから、Syntax Visualizer を起動**ビュー&#124;その他の Windows &#124; Roslyn Syntax Visualizer**します。
+ アナライザーをビルドするには、最初見つけ出す SyntaxNode の種類確認する必要があります。 起動、 **Syntax Visualizer**  メニューから**ビュー** > **その他の Windows** > **Roslyn Syntax Visualizer**.
 
 宣言する行のエディターのキャレットを配置する`b1`します。  表示では、Syntax Visualizer を示しています、`LocalDeclarationStatement`構文ツリーのノード。  このノードには、`VariableDeclaration`がさらに、`VariableDeclarator`がさらに、 `EqualsValueClause`、最後には、`ObjectCreationExpression`します。  Syntax Visualizer ツリーのノードをクリックすると、そのノードによって表されるコードを表示するエディター ウィンドウで構文が強調表示されます。  SyntaxNode のサブ型の名前では、c# の文法で使用される名前と一致します。
 
-## <a name="creating-the-analyzer-project"></a>アナライザー プロジェクトを作成します。
+## <a name="create-the-analyzer-project"></a>アナライザー プロジェクトを作成します。
 
-メイン メニューから選択**ファイル&#124;新規&#124;プロジェクト.**.**新しいプロジェクト**ダイアログで、 **c#** プロジェクト、左側のナビゲーション バーで、機能拡張を選択し、右側のウィンドウで次のように選択します、 **Analyzer with Code Fix**プロジェクト。テンプレート。  名前を入力し、ダイアログ ボックスを確認します。
+メイン メニューから選択**ファイル** > **新規** > **プロジェクト**します。  **新しいプロジェクト**ダイアログで、 **c#** 、左側のナビゲーション バーでプロジェクトを選択**拡張**、右側のウィンドウで次のように選択します、 **Analyzer with。コードの修正プログラム**プロジェクト テンプレート。  名前を入力し、ダイアログ ボックスを確認します。
 
-テンプレートは、DiagnosticAnalyzer.cs ファイルを開きます。  エディター バッファー タブを選択します。このファイルには、アナライザー クラス (形成されたプロジェクトを指定した名前から) から派生した`DiagnosticAnalyzer`(Roslyn API の種類)。  新しいクラスが、`DiagnosticAnalyzerAttribute`コンパイラを検出し、アナライザーを読み込むように c# 言語に関連するが、アナライザーを宣言することです。
+テンプレートが表示されます、 *DiagnosticAnalyzer.cs*ファイル。  エディター バッファー タブを選択します。このファイルには、アナライザー クラス (形成されたプロジェクトを指定した名前から) から派生した`DiagnosticAnalyzer`(Roslyn API の種類)。  新しいクラスが、`DiagnosticAnalyzerAttribute`コンパイラを検出し、アナライザーを読み込むように c# 言語に関連するが、アナライザーを宣言することです。
 
 ```csharp
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
@@ -76,7 +76,7 @@ public class ImmutableArrayAnalyzerAnalyzer : DiagnosticAnalyzer
 
 C# のコードを対象とする Visual Basic を使用して、アナライザーを実装する、またはその逆です。  アナライザーが 1 つの言語またはその両方を対象とするかどうかを選択する DiagnosticAnalyzerAttribute でより重要になります。  言語の詳細なモデリングを必要とするアナライザーをより高度な 1 つの言語のみ対象にできます。  場合、アナライザーは、たとえば、のみチェック型名またはパブリック メンバーの名前は、Roslyn は、Visual Basic および c# で一般的な言語モデルを使用する可能性があります。  たとえば、FxCop は警告クラスを実装する<xref:System.Runtime.Serialization.ISerializable>、クラスはありません、<xref:System.SerializableAttribute>属性は、言語に依存しないし、Visual Basic および c# のコードで動作します。
 
-## <a name="initalizing-the-analyzer"></a>品詞アナライザー
+## <a name="initalize-the-analyzer"></a>アナライザーの初期化
 
  下へ少しスクロール、`DiagnosticAnalyzer`クラスを参照して、`Initialize`メソッド。  コンパイラは、アナライザーをアクティブ化する際に、このメソッドを呼び出します。  メソッドには、`AnalysisContext`アナライザー コンテキスト情報を取得して、分析するコードの種類のイベントのコールバックを登録できるようにするオブジェクト。
 
@@ -98,7 +98,7 @@ context.RegisterSyntaxNodeAction(c => AnalyzeObjectCreation(c),
 
 構文ノードとオブジェクトの作成の構文ノードのみにフィルターを登録します。  規則により、アナライザーをステートレスようにすることが、アクションを登録するときに、アナライザーの作成者は、ラムダを使用します。  Visual Studio の機能を使用する**使用法から生成**を作成する、`AnalyzeObjectCreation`メソッド。  これは、コンテキスト パラメーターの正しい型を生成するすぎるします。
 
-## <a name="setting-properties-for-users-of-your-analyzer"></a>アナライザーのユーザーのプロパティの設定
+## <a name="set-properties-for-users-of-your-analyzer"></a>アナライザーのユーザーのプロパティを設定します。
 
 表示されるよう、アナライザー Visual Studio UI で適切に、検索し、アナライザーを識別するためにコードの次の行の変更します。
 
@@ -108,11 +108,11 @@ internal const string Category = "Naming";
 
 変更`"Naming"`に`"API Guidance"`します。
 
-次に検索して開く、`Resources.resx`を使用して、プロジェクト ファイル、**ソリューション エクスプ ローラー**します。  アナライザー、タイトルなどの説明を入力できます。これらのすべての値を変更することができます`"Don't use ImmutableArray<T> constructor"`今のところです。  文字列引数を書式設定文字列を配置することができます ({0}、{1}など)、し、呼び出すときに後で`Diagnostic.Create()`を指定することができます、`params`渡される引数の配列。
+次に検索して開く、 *Resources.resx*を使用して、プロジェクト ファイル、**ソリューション エクスプ ローラー**します。  アナライザー、タイトルなどの説明を配置することができます。これらのすべての値を変更することができます`"Don't use ImmutableArray<T> constructor"`今のところです。  文字列引数を書式設定文字列を配置することができます ({0}、{1}など)、し、呼び出すときに後で`Diagnostic.Create()`を指定することができます、`params`渡される引数の配列。
 
-## <a name="analyzing-an-object-creation-expression"></a>オブジェクト作成式の分析
+## <a name="analyze-an-object-creation-expression"></a>オブジェクト作成式を分析します。
 
-`AnalyzeObjectCreation`メソッドは、異なる種類のコード アナライザーのフレームワークから提供されたコンテキストを受け取ります。  Initialize メソッドの`AnalysisContext`アナライザーを設定する操作のコールバックを登録することができます。  `SyntaxNodeAnalysisContext`などが、`CancellationToken`の周囲に渡すことができます。  ユーザーは、エディターで入力を開始する場合、Roslyn は作業を保存し、パフォーマンスが向上するアナライザーを実行中を取り消します。  このコンテキストでは、別の例として、オブジェクトの作成の構文ノードを返すノード プロパティがあります。
+`AnalyzeObjectCreation`メソッドは、異なる種類のコード アナライザーのフレームワークから提供されたコンテキストを受け取ります。  `Initialize`メソッドの`AnalysisContext`アナライザーを設定する操作のコールバックを登録することができます。  `SyntaxNodeAnalysisContext`などが、`CancellationToken`の周囲に渡すことができます。  ユーザーは、エディターで入力を開始する場合、Roslyn は作業を保存し、パフォーマンスが向上するアナライザーを実行中を取り消します。  このコンテキストでは、別の例として、オブジェクトの作成の構文ノードを返すノード プロパティがあります。
 
 構文ノードのアクションをフィルター処理する型が前提としているノードを取得します。
 
@@ -120,7 +120,7 @@ internal const string Category = "Naming";
 var objectCreation = (ObjectCreationExpressionSyntax)context.Node;
 ```
 
-### <a name="launching-visual-studio-with-your-analyzer-the-first-time"></a>最初に、アナライザーを使用して Visual Studio を起動します。
+### <a name="launch-visual-studio-with-your-analyzer-the-first-time"></a>最初に、アナライザーを使用して Visual Studio の起動します。
 
 構築とアナライザーを実行して Visual Studio を起動 (キーを押して**F5**)。  スタートアップ プロジェクトのため、**ソリューション エクスプ ローラー**コード ビルドを実行して、コードと、VSIX、VSIX プロジェクトは、次をインストールする VSIX と共に Visual Studio を起動します。  この方法で Visual Studio を起動するときにアナライザーのビルド中に、Visual Studio の主な使用が、テスト インスタンスによって影響されないように、個別のレジストリ ハイブな起動されます。  初めてこの方法を起動する Visual Studio ではいくつかの初期化を最初に起動したときに Visual Studio にインストールした後に似ています。
 
@@ -133,13 +133,13 @@ var b2 = new ImmutableArray<int> { 1, 2, 3, 4, 5 };
 Console.WriteLine("b2.Length = {0}", b2.Length);
 ```
 
-使用したコードの行`ImmutableArray`不変の NuGet パッケージを取得し、追加する必要があるため、波線がある、`using`ステートメントをコードにします。  プロジェクト ノードを右のポインター ボタンを押して、**ソリューション エクスプ ローラー**選択**NuGet パッケージの管理.**.NuGet マネージャー"Immutable"を検索 ボックスに入力し、"System.Collections.Immutable"のアイテムの選択 ("Microsoft.Bcl.Immutable"を選択しないでください) で、左側のウィンドウとキーを押して右側のウィンドウで インストール ボタンをクリックします。  パッケージをインストールすると、プロジェクト参照への参照が追加されます。
+使用したコードの行`ImmutableArray`不変の NuGet パッケージを取得し、追加する必要があるため、波線がある、`using`ステートメントをコードにします。  プロジェクト ノードを右のポインター ボタンを押して、**ソリューション エクスプ ローラー**選択**NuGet パッケージの管理**します。  NuGet マネージャーでは、"Immutable"を検索 ボックスに入力し、項目を選択**System.Collections.Immutable** (選択しないでください**Microsoft.Bcl.Immutable**) で、左側のウィンドウとキーを押して、 **インストール**右側のウィンドウでボタンをクリックします。  パッケージをインストールすると、プロジェクト参照への参照が追加されます。
 
-それでも下の赤い波線が表示`ImmutableArray`、そのため、キャレットを置き、識別子とキーを押して**CTRL + です。** (ピリオド) で推奨される修正プログラムのメニューを表示し、適切な追加`using`ステートメント。
+下の赤い波線が引き続き表示`ImmutableArray`、ためキーを押してその識別子にキャレットを配置**Ctrl**+**します。** (ピリオド) で推奨される修正プログラムのメニューを表示し、適切な追加`using`ステートメント。
 
 **すべてを保存して閉じる**続行クリーンな状態で皆さんをここでは Visual Studio の 2 番目のインスタンス。
 
-## <a name="finishing-the-analyzer-using-edit-and-continue"></a>アナライザーを使用して、終了エディット コンティニュ
+## <a name="finish-the-analyzer-using-edit-and-continue"></a>編集を使用して、アナライザーを終了し、続行
 
 Visual Studio の最初のインスタンスの先頭にブレークポイントを設定、`AnalyzeObjectCreation`キーを押してメソッド**F9**最初の行にキャレットをします。
 
@@ -149,7 +149,7 @@ Roslyn コンパイラのオブジェクト作成式を見たし、アナライ�
 
 **オブジェクトの作成のノードを取得します。** 設定する行の上の手順、`objectCreation`キーを押して変数**F10**、し、**イミディ エイト ウィンドウ**式の評価`"objectCreation.ToString()"`します。  変数が指す構文ノードが、コードを参照してください`"new ImmutableArray<int>()"`、何を探しています。
 
-**取得 ImmutableArray < T\>型オブジェクト。** 作成される型が ImmutableArray を確認する必要があります。  最初に、この型を表すオブジェクトを取得します。  正確に右の型があるし、ToString() から文字列を比較しないように、セマンティック モデルを使用して型をチェックします。  次の関数の最後のコード行を入力します。
+**取得 ImmutableArray < T\>型オブジェクト。** 作成される型が ImmutableArray を確認する必要があります。  最初に、この型を表すオブジェクトを取得します。  正確に右の型があるし、元の文字列を比較しないことを確認して、セマンティック モデルを使用して型をチェックする`ToString()`します。  次の関数の最後のコード行を入力します。
 
 ```csharp
 var immutableArrayOfTType =
@@ -214,7 +214,7 @@ private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext context)
 
 開始する前に、Visual Studio の 2 番目のインスタンスを閉じて (場所、アナライザーを開発している) Visual Studio の最初のインスタンスでのデバッグを停止します。
 
-**新しいクラスを追加します。** ソリューション エクスプ ローラーでプロジェクト ノードのショートカット メニュー (右のポインター ボタン) を使用して、新しい項目の追加を選択します。  という名前のクラスを追加`BuildCodeFixProvider`します。  このクラスから派生する必要が`CodeFixProvider`、使用する必要があります**CTRL + です。** (ピリオド) を追加、適切なコードの修正を呼び出す`using`ステートメント。  このクラスを使って注釈を付ける必要があります`ExportCodeFixProvider`属性、およびするが、追加する必要が、`using`ステートメントを解決するのには、`LanguageNames`列挙型。  これで次のコードでクラス ファイルが必要です。
+**新しいクラスを追加します。** プロジェクト ノードのショートカット メニュー (右のポインター ボタン) を使用して、**ソリューション エクスプ ローラー**と新しい項目を追加します。  という名前のクラスを追加`BuildCodeFixProvider`します。  このクラスから派生する必要が`CodeFixProvider`、使用する必要があります**Ctrl**+**します。** (ピリオド) を追加、適切なコードの修正を呼び出す`using`ステートメント。  このクラスを使って注釈を付ける必要があります`ExportCodeFixProvider`属性、およびするが、追加する必要が、`using`ステートメントを解決するのには、`LanguageNames`列挙型。  これで次のコードでクラス ファイルが必要です。
 
 ```csharp
 using Microsoft.CodeAnalysis;
@@ -228,7 +228,7 @@ namespace ImmutableArrayAnalyzer
 
 ```
 
-**派生メンバーを消します。** ここで、id に、エディターのキャレットを置き`CodeFixProvider`キーを押します**CTRL + です。** (ピリオド) をこの抽象基本クラスの実装をスタブします。  プロパティとメソッドが生成されます。
+**派生メンバーを消します。** ここで、id に、エディターのキャレットを置き`CodeFixProvider`キーを押します**Ctrl**+**します。** (ピリオド) をこの抽象基本クラスの実装をスタブします。  プロパティとメソッドが生成されます。
 
 **プロパティを実装します。** 入力、`FixableDiagnosticIds`プロパティの`get`を次のコードの本文。
 
@@ -249,14 +249,14 @@ var root = await context.Document
                         .GetSyntaxRootAsync(context.CancellationToken);
 ```
 
-**問題のノードが見つかりません。** コンテキストの範囲がコードを変更する必要がない場合がありますを検索するノードを渡します。  報告された診断では、(、波線が属していた) 型識別子の範囲のみが提供されているが、オブジェクト全体の作成式を置き換える必要があるなど、`new`先頭と末尾のかっこにキーワードを指定します。  メソッドに次のコードを追加 (および使用**CTRL + です。** 追加する、`using`ステートメント`ObjectCreationExpressionSyntax`)。
+**問題のノードが見つかりません。** コンテキストの範囲がコードを変更する必要がない場合がありますを検索するノードを渡します。  報告された診断では、(、波線が属していた) 型識別子の範囲のみが提供されているが、オブジェクト全体の作成式を置き換える必要があるなど、`new`先頭と末尾のかっこにキーワードを指定します。  メソッドに次のコードを追加 (および使用**Ctrl**+**します。** 追加する、`using`ステートメント`ObjectCreationExpressionSyntax`)。
 
 ```csharp
 var objectCreation = root.FindNode(context.Span)
                          .FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
 ```
 
-**電球の UI のコード修正を登録します。** コード修正を登録するときに Roslyn は自動的に Visual Studio 電球 UI に接続されます。  エンドユーザーが使用できる表示**CTRL + です。** アナライザー波線を表示する、無効な場合 (期間)`ImmutableArray<T>`コンス トラクターを使用します。  コード修正プロバイダーは、問題がある場合にのみ実行するため、探してオブジェクト作成式があると想定することができます。  末尾に次のコードを追加することで、新しいコード修正を登録するコンテキスト パラメーターから`RegisterCodeFixAsync`メソッド。
+**電球の UI のコード修正を登録します。** コード修正を登録するときに Roslyn は自動的に Visual Studio 電球 UI に接続されます。  エンドユーザーが使用できる表示**Ctrl**+**します。** アナライザー波線を表示する、無効な場合 (期間)`ImmutableArray<T>`コンス トラクターを使用します。  コード修正プロバイダーは、問題がある場合にのみ実行するため、探してオブジェクト作成式があると想定することができます。  末尾に次のコードを追加することで、新しいコード修正を登録するコンテキスト パラメーターから`RegisterCodeFixAsync`メソッド。
 
 ```csharp
 context.RegisterCodeFix(
@@ -267,13 +267,13 @@ context.RegisterCodeFix(
             context.Diagnostics[0]);
 ```
 
-Id に、エディターのキャレットを配置する必要がある`CodeAction`を使用して**CTRL + です。** 適切なを追加するには、(ピリオド)`using`この種類のステートメント。
+Id に、エディターのキャレットを配置する必要がある`CodeAction`を使用して**Ctrl**+**します。** 適切なを追加するには、(ピリオド)`using`この種類のステートメント。
 
-内のエディターのキャレットを配置し、`ChangeToImmutableArrayEmpty`識別子と使用**CTRL + です。** するには、このメソッド スタブを生成します。
+内のエディターのキャレットを配置し、`ChangeToImmutableArrayEmpty`識別子と使用**Ctrl**+**。** するには、このメソッド スタブを生成します。
 
 この最後のコード スニペットを追加したコードの修正プログラムを登録しますを渡すことによって、`CodeAction`と検出された問題の種類の診断の ID。  この例では、1 つしかない診断 ID をこのコードは、修正ため、診断の Id の配列の最初の要素を単に渡すことができます。  作成するときに、 `CodeAction`、電球 UI がコード修正の説明として使用するテキストを渡します。  CancellationToken を受け取り、新しいドキュメントを返す関数も渡します。  新しいドキュメントが呼び出すパッチが適用されたコードを含む新しい構文ツリー`ImmutableArray.Empty`します。  このコード スニペットでは、ラムダを使用するので、オブジェクト作成ノードとコンテキストのドキュメントに閉じることができます。
 
-**新しい構文ツリーを構築します。** `ChangeToImmutableArrayEmpty`メソッドがスタブが以前に生成するコード行を入力します:`ImmutableArray<int>.Empty;`します。  Syntax Visualizer ツール ウィンドウをもう一度表示する場合、この構文は SimpleMemberAccessExpression ノードが確認できます。  このメソッドを構築して新しい文書を返す必要があります。
+**新しい構文ツリーを構築します。** `ChangeToImmutableArrayEmpty`メソッドがスタブが以前に生成するコード行を入力します:`ImmutableArray<int>.Empty;`します。  表示する場合、 **Syntax Visualizer**ツール ウィンドウ、もう一度確認できますこの構文は SimpleMemberAccessExpression ノード。  このメソッドを構築して新しい文書を返す必要があります。
 
 最初の変更を`ChangeToImmutableArrayEmpty`を追加するには`async`する前に`Task<Document>`のためコード ジェネレーターが、メソッドが非同期にする必要がありますを想定することはできません。
 
@@ -293,23 +293,23 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 }
 ```
 
-エディターのキャレットを配置する必要があります、`SyntaxGenerator`識別子と使用**CTRL + です。** 適切なを追加するには、(ピリオド)`using`この種類のステートメント。
+エディターのキャレットを配置する必要があります、`SyntaxGenerator`識別子と使用**Ctrl**+**します。** 適切なを追加するには、(ピリオド)`using`この種類のステートメント。
 
 このコードを使用して`SyntaxGenerator`、これは、また非常に便利な型は、新しいコードを構築するためです。  コードの問題には、ドキュメントのジェネレーターを取得後`ChangeToImmutableArrayEmpty`呼び出し`MemberAccessExpression`メンバーにアクセスする必要のある型を渡すと、メンバーの名前を文字列として渡します。
 
 次に、メソッドは、ドキュメントのルートをフェッチし、任意の作業の一般的なケースがあります、ため、コードはこの呼び出しを待機し、キャンセル トークンを渡します。  Roslyn コード モデルは不変であり、.NET の文字列の操作など文字列を更新するときに、代わりに、新しい文字列オブジェクトを取得します。  呼び出すと`ReplaceNode`、新しいルート ノードを取得します。  (変更可能でない) ために、構文ツリーのほとんどが共有されるが、`objectCreation`はノードに置き換え、`memberAccess`ノード、だけでなく、構文ツリーのルートまでのすべての親ノード。
 
-## <a name="trying-your-code-fix"></a>コード修正を試みる
+## <a name="try-your-code-fix"></a>コード修正を実行してください。
 
-これでキーを押して**f5 キーを押して**を Visual Studio の 2 番目のインスタンスでアナライザーを実行します。  前に使用したコンソール プロジェクトを開きます。  場所は、新しいオブジェクトの作成式を表示する電球を表示する必要があります`ImmutableArray<int>`します。  キーを押す場合**CTRL + です。** (ピリオド)、修正、コードが表示され、light bulb UI で、自動的に生成されたコードの違いにプレビューが表示されます。  Roslyn はこれを作成します。
+これでキーを押して**f5 キーを押して**を Visual Studio の 2 番目のインスタンスでアナライザーを実行します。  前に使用したコンソール プロジェクトを開きます。  場所は、新しいオブジェクトの作成式を表示する電球を表示する必要があります`ImmutableArray<int>`します。  キーを押す場合**Ctrl**+**します。** (ピリオド)、修正、コードが表示され、light bulb UI で、自動的に生成されたコードの違いにプレビューが表示されます。  Roslyn はこれを作成します。
 
-**Pro ヒント:** 、Visual Studio の 2 番目のインスタンスを起動して、コード修正に電球が表示されない場合、Visual Studio コンポーネント キャッシュをクリアする必要があります。  キャッシュをクリアする Visual Studio で Visual Studio は、最新コンポーネントを選択し、必要がありますので、コンポーネントを再度確認を強制します。  最初に、Visual Studio の 2 番目のインスタンスをシャット ダウンします。  Windows エクスプ ローラーでの ユーザー ディレクトリに移動 (c:\users\\< userid\>) AppData\Local\Microsoft\VisualStudio\14.0Roslyn を見つけて\\します。  このディレクトリにサブディレクトリ ComponentModelCache を削除します。  「14」の変更バージョン Visual Studio を使用します。
+**Pro ヒント:** 、Visual Studio の 2 番目のインスタンスを起動して、コード修正に電球が表示されない場合、Visual Studio コンポーネント キャッシュをクリアする必要があります。  キャッシュをクリアする Visual Studio で Visual Studio は、最新コンポーネントを選択し、必要がありますので、コンポーネントを再度確認を強制します。  最初に、Visual Studio の 2 番目のインスタンスをシャット ダウンします。  次に**Windows エクスプ ローラー**で、ユーザー ディレクトリに移動 (*c:\users\\< userid\>*) を見つけて*AppData\Local\Microsoft\VisualStudio\14.0Roslyn\\*.  このディレクトリにサブディレクトリ ComponentModelCache を削除します。  「14」の変更バージョン Visual Studio を使用します。
 
-## <a name="talk-video-and-finish-code-project"></a>説明ビデオとコード プロジェクトの完了
+## <a name="talk-video-and-finish-code-project"></a>ビデオの説明し、コード プロジェクトの完了
 
 この例で開発された説明を確認できますでさらに[ここ](http://channel9.msdn.com/events/Build/2015/3-725)。  後半は、作業のアナライザーを示し、それをビルドする手順します。
 
-完成したすべてのコードを確認できます[ここ](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)します。  DoNotUseImmutableArrayCollectionInitializer と DoNotUseImmutableArrayCtor サブ フォルダーには、問題と Visual Studio 電球 UI に表示されるコード修正を実装する c# ファイルを検索するための c# ファイルがあります。  ただし、完成したコードが、ImmutableArray をフェッチを回避するために少し多くの抽象化\<T > オブジェクトを繰り返し入力します。  入れ子にされた登録済みのアクションを使用して利用可能なコンテキストでの型のオブジェクトの保存をされるたびに、サブ操作 (オブジェクトの作成を分析し、コレクションの初期化を分析) を実行します。
+完成したすべてのコードを確認できます[ここ](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)します。  サブ フォルダー *DoNotUseImmutableArrayCollectionInitializer*と*DoNotUseImmutableArrayCtor*問題を検出する (C#) ファイルがある各とコードを実装する c# ファイルでその表示を修正しますVisual Studio 電球 UI。  ただし、完成したコードが、ImmutableArray をフェッチを回避するために少し多くの抽象化\<T > オブジェクトを繰り返し入力します。  入れ子にされた登録済みのアクションを使用して利用可能なコンテキストでの型のオブジェクトの保存をされるたびに、サブ操作 (オブジェクトの作成を分析し、コレクションの初期化を分析) を実行します。
 
 ## <a name="see-also"></a>関連項目
 
