@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 97ba2d50c88d9bc4b62e39f24eafea9bd0416eb6
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: b11757990a17a867776376454142e5b84ee82510
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276991"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008269"
 ---
 # <a name="outlook-object-model-overview"></a>Outlook オブジェクト モデルの概要
   Microsoft Office Outlook 用の VSTO アドインを開発するには、Outlook オブジェクト モデルによって提供されるオブジェクトとのやり取りが可能です。 Outlook オブジェクト モデルは、ユーザー インターフェイスで項目を表すクラスとインターフェイスを提供します。 たとえば、<xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは、アプリケーション全体を表し、<xref:Microsoft.Office.Interop.Outlook.Folder> オブジェクトは、電子メール メッセージや他のアイテムを含むフォルダーを表します。<xref:Microsoft.Office.Interop.Outlook.MailItem> オブジェクトは、電子メール メッセージを表します。  
@@ -59,7 +59,7 @@ ms.locfileid: "39276991"
 ### <a name="application-object"></a>Application オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.Application> オブジェクトは Outlook のアプリケーションを表し、Outlook オブジェクト モデルで最上位レベルのオブジェクトです。 このオブジェクトの最も重要なメンバーには、次のようなものがあります。  
   
--   [CreateItem](http://msdn.microsoft.com/771707fb-5f34-473d-9fdf-09a6a7f55ece)メソッド、電子メール メッセージ、タスク、または予定などの新しい項目の作成に使用できます。  
+-   [CreateItem](/previous-versions/office/developer/office-2003/aa220082(v=office.11))メソッド、電子メール メッセージ、タスク、または予定などの新しい項目の作成に使用できます。  
   
 -   <xref:Microsoft.Office.Interop.Outlook._Application.Explorers%2A> プロパティ。これを使用して、Outlook のユーザー インターフェイス (UI) で、フォルダーの内容を表示するウィンドウにアクセスできます。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "39276991"
 ### <a name="taskitem-object"></a>TaskItem オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.TaskItem> オブジェクトは、指定した期間内で実行するタスクを表します。 <xref:Microsoft.Office.Interop.Outlook.TaskItem> オブジェクトは **[タスク]** フォルダーにあります。  
   
- タスクを作成するには使用、 [CreateItem](http://msdn.microsoft.com/771707fb-5f34-473d-9fdf-09a6a7f55ece)のメソッド、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトし、値を渡す<xref:Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem>パラメーター。  
+ タスクを作成するには使用、 [CreateItem](/previous-versions/office/developer/office-2003/aa220082(v=office.11))のメソッド、<xref:Microsoft.Office.Interop.Outlook.Application>オブジェクトし、値を渡す<xref:Microsoft.Office.Interop.Outlook.OlItemType.olTaskItem>パラメーター。  
   
 ### <a name="contactitem-object"></a>ContactItem オブジェクト  
  <xref:Microsoft.Office.Interop.Outlook.ContactItem>オブジェクト内の連絡先を表します、**連絡先**フォルダー。 <xref:Microsoft.Office.Interop.Outlook.ContactItem> オブジェクトには、住所、電子メール アドレス、電話番号など、そのオブジェクトが表す人のさまざまな連絡先情報が含まれます。  
