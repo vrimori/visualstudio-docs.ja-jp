@@ -52,13 +52,13 @@ ms.locfileid: "39081398"
   
  重要な点を除外するアプリケーション、`deploymentProvider`出荷されるは、更新プログラムが含まれるまで、更新する際のインストール場所を変更ことはできません、`deploymentProvider`タグをもう一度。  
   
- この点を明確にする 2 つの例を示します。 ない ClickOnce アプリケーションを発行する最初の例では、`deploymentProvider`してからインストールして、タグもらいますhttp://www.adatum.com/MyApplication/します。 アプリケーションからの次の更新を発行したい場合http://subdomain.adatum.com/MyApplication/、配置マニフェスト内にあるでこれを表す方法があるないhttp://www.adatum.com/MyApplication/します。 次の 2 つのいずれかの操作を行うことができます。  
+ この点を明確にする 2 つの例を示します。 ない ClickOnce アプリケーションを発行する最初の例では、`deploymentProvider`してからインストールして、タグもらいます http://www.adatum.com/MyApplication/ します。 アプリケーションからの次の更新を発行したい場合 http://subdomain.adatum.com/MyApplication/、配置マニフェスト内にあるでこれを表す方法があるない http://www.adatum.com/MyApplication/ します。 次の 2 つのいずれかの操作を行うことができます。  
   
 -   以前のバージョンをアンインストールするユーザーに通知し、新しい場所から新しいバージョンをインストールします。  
   
--   更新プログラムを含めるhttp://www.adatum.com/MyApplication/を含む、`deploymentProvider`を指すhttp://www.adatum.com/MyApplication/します。 次に、後で別の更新プログラムをリリース`deploymentProvider`を指すhttp://subdomain.adatum.com/MyApplication/します。  
+-   更新プログラムを含める http://www.adatum.com/MyApplication/ を含む、`deploymentProvider`を指す http://www.adatum.com/MyApplication/ します。 次に、後で別の更新プログラムをリリース`deploymentProvider`を指す http://subdomain.adatum.com/MyApplication/ します。  
   
- 2 番目の例を指定する ClickOnce アプリケーションを発行する`deploymentProvider`、削除対象とするとします。 なしの新しいバージョンに 1 回`deploymentProvider`ダウンロードをクライアントに更新プログラムを持つアプリケーションのバージョンをリリースするまでに使用されるパスにリダイレクトすることはできません`deploymentProvider`復元します。 最初の例と同じ`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 挿入しようとした場合、この場合、`deploymentProvider`を参照するhttp://subdomain.adatum.com/MyApplication/、次回の更新は失敗します。  
+ 2 番目の例を指定する ClickOnce アプリケーションを発行する`deploymentProvider`、削除対象とするとします。 なしの新しいバージョンに 1 回`deploymentProvider`ダウンロードをクライアントに更新プログラムを持つアプリケーションのバージョンをリリースするまでに使用されるパスにリダイレクトすることはできません`deploymentProvider`復元します。 最初の例と同じ`deploymentProvider`更新の現在の場所、新しい場所ではなく最初に指す必要があります。 挿入しようとした場合、この場合、`deploymentProvider`を参照する http://subdomain.adatum.com/MyApplication/、次回の更新は失敗します。  
   
 ## <a name="create-a-deployment"></a>展開を作成します。  
  別のネットワークの場所から展開できる展開の作成のステップ バイ ステップ ガイダンスについては、次を参照してください[チュートリアル: 再署名が要求されるされないのブランド情報を保持するClickOnceアプリケーションを手動で展開](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md).  

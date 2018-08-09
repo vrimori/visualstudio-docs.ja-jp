@@ -114,7 +114,7 @@ Visual Studio を使用してデプロイすることはできません場合、
   
 10. 配置ディレクトリのすべてのファイルを展開先またはメディアにコピーします。 これにより、Web サイトまたは FTP サイト、ファイル共有、または CD-ROM 上のフォルダーか可能性があります。  
   
-11. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定する場合は、配置マニフェストに、ユーザーの完全なパスを示す必要があります。 AppToDeploy を配置する場合の例のhttp://webserver01/AppToDeploy ディレクトリに完全な URL パスになります。http://webserver01/AppToDeploy/AppToDeploy.applicationします。  
+11. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定する場合は、配置マニフェストに、ユーザーの完全なパスを示す必要があります。 AppToDeploy を配置する場合の例の http://webserver01/ AppToDeploy ディレクトリに完全な URL パスになります。 http://webserver01/AppToDeploy/AppToDeploy.application します。  
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>MageUI.exe のグラフィカル ツールを使用してアプリケーションをデプロイするには  
   
@@ -189,7 +189,7 @@ Visual Studio を使用してデプロイすることはできません場合、
   
 28. 配置ディレクトリのすべてのファイルを展開先またはメディアにコピーします。 これにより、Web サイトまたは FTP サイト、ファイル共有、または CD-ROM 上のフォルダーか可能性があります。  
   
-29. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定すると、配置マニフェストの完全なパスをユーザーに与える必要があります。 AppToDeploy を配置する場合の例のhttp://webserver01/AppToDeploy ディレクトリに完全な URL パスになります。http://webserver01/AppToDeploy/AppToDeploy.applicationします。  
+29. URL、UNC、またはアプリケーションをインストールするために必要な物理メディアをユーザーに提供します。 URL または UNC を指定すると、配置マニフェストの完全なパスをユーザーに与える必要があります。 AppToDeploy を配置する場合の例の http://webserver01/ AppToDeploy ディレクトリに完全な URL パスになります。 http://webserver01/AppToDeploy/AppToDeploy.application します。  
   
 ## <a name="next-steps"></a>次の手順  
  アプリケーションの新しいバージョンを展開する必要がある場合は、新しいバージョンにちなんだ名前の新しいディレクトリを作成、1.0.0.1—and が、新しいディレクトリに新しいアプリケーション ファイルをコピーするなど。 次に、作成し新しいアプリケーション マニフェストに署名し、更新、および配置マニフェストに署名するには、前の手順に従う必要があります。 両方で同じより高いバージョンを指定するように注意してください、 *Mage.exe* `-New`と`-Update`呼び出しとして[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]のみ以降のバージョンが最上位の左端の整数値で更新します。 使用した場合*MageUI.exe*、選択を開き、配置マニフェストを更新することができます、**アプリケーション参照**] タブをクリックすると、 **[マニフェストの**ボタン、および更新されたアプリケーション マニフェストを選択します。  
