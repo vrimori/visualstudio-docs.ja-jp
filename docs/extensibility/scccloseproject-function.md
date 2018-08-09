@@ -1,5 +1,5 @@
 ---
-title: SccCloseProject 関数 |Microsoft ドキュメント
+title: SccCloseProject 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f977c1241408f5e33d31a63262abb5ee24670e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 49d3196fbe2eb6c3bafa1ec234e27072e50a4b7d
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31145117"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636026"
 ---
 # <a name="scccloseproject-function"></a>SccCloseProject 関数
 この関数は、特定のセッションの終了位置を示す、プロジェクトを閉じます。  
@@ -33,22 +33,22 @@ SCCRTN SccCloseProject (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pvContext  
  ソース管理プラグイン コンテキスト構造体。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|プロジェクトが正常に終了しました。|  
-|SCC_E_PROJNOTOPEN|プロジェクトが現在開いていない場合です。|  
-|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
+|SCC_OK|プロジェクトが正常に閉じられました。|  
+|SCC_E_PROJNOTOPEN|プロジェクトは、現在開いているではありません。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行できません。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>コメント  
- [SccOpenProject](../extensibility/sccopenproject-function.md)は、この関数の前に必ず呼び出されます。 この関数に対する呼び出しのいずれかを呼び出した後に、`SccOpenProject`関数または[SccUninitialize](../extensibility/sccuninitialize-function.md)、ソース管理システムへの接続を完全に終了します。  
+## <a name="remarks"></a>Remarks  
+ [SccOpenProject](../extensibility/sccopenproject-function.md)は常にこの関数の前に呼び出されます。 この関数の呼び出しのいずれかへの呼び出し後は、`SccOpenProject`関数または[SccUninitialize](../extensibility/sccuninitialize-function.md)、ソース管理システムへの接続を完全に終了します。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

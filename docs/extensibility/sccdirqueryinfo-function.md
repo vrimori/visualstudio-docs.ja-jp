@@ -1,5 +1,5 @@
 ---
-title: SccDirQueryInfo 関数 |Microsoft ドキュメント
+title: SccDirQueryInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1de32b8502e40c953bd7080d64e56047e6bb5ce9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d2c7c00f2023d7debd684b442b3901547ac8d1d2
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140369"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639420"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 関数
-この関数は、現在の状態の完全修飾ディレクトリの一覧を調べます。  
+この関数は、その現在の状態の完全修飾ディレクトリの一覧を検証します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,36 +36,36 @@ LPLONG  lpStatus
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pContext  
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  nDirs  
- [in]クエリを実行することを選択するディレクトリの数。  
+ [in]クエリを実行する選択されているディレクトリの数。  
   
  lpDirNames  
  [in]クエリを実行するディレクトリの完全修飾パスの配列。  
   
  lpStatus  
- [入力、出力].ソース管理の状態フラグを返すプラグインの配列構造体 (を参照してください[ディレクトリ ステータス コード](../extensibility/directory-status-code-enumerator.md)詳細)。  
+ [入力、出力]ソース管理の状態フラグを返すプラグインの配列構造体 (を参照してください[ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md)詳細については)。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|クエリは成功しました。|  
+|SCC_OK|クエリが正常に完了しました。|  
 |SCC_E_OPNOTSUPPORTED|ソース コード管理システムでは、この操作はサポートしません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題の可能性へのアクセスに問題が発生しました。 再試行をお勧めします。|  
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>コメント  
- 関数は、入力からのビットのビットマスクの戻り値の配列、`SCC_DIRSTATUS`ファミリ (を参照してください[ディレクトリ ステータス コード](../extensibility/directory-status-code-enumerator.md))、指定されたディレクトリごとに 1 つのエントリ。 状態配列は、呼び出し元によって割り当てられます。  
+## <a name="remarks"></a>Remarks  
+ 関数からのビットのビットマスクを指定の戻り値の配列を格納する、`SCC_DIRSTATUS`ファミリ (を参照してください[ディレクトリの状態コード](../extensibility/directory-status-code-enumerator.md))、指定されたディレクトリごとに 1 つのエントリ。 状態配列は、呼び出し元によって割り当てられます。  
   
- IDE は、対応するプロジェクトがあるかどうかを照会することで、ディレクトリがソース管理下にあるがかどうかをチェックするディレクトリの名前を変更する前に、この関数を使用します。 ディレクトリがソース管理下にない場合は、IDE は、ユーザーに適切な警告を提供できます。  
+ IDE は、対応するプロジェクトがあるかどうかクエリを実行して、ディレクトリは、ソース管理下にあるかどうかをチェックするディレクトリの名前を変更する前に、この関数を使用します。 ソース管理下にあるディレクトリでない場合、IDE は、ユーザーに適切な警告を提供できます。  
   
 > [!NOTE]
->  ソース管理プラグイン状態の値の 1 つ以上を実装しない場合、実装されていないビットが 0 に設定する必要があります。  
+>  ソース管理プラグインのステータス値の 1 つ以上を実装しない場合、実装されていないビットを 0 に設定する必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

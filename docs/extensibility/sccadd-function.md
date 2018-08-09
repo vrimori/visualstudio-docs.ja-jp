@@ -1,5 +1,5 @@
 ---
-title: SccAdd 関数 |Microsoft ドキュメント
+title: SccAdd 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2933d00b7450f946a5fd5409bcaeecc2527a9f64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d7d65d40fe3205ea3f83ecd43b72fe8bafebb3f
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139547"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639615"
 ---
 # <a name="sccadd-function"></a>SccAdd 関数
-この関数は、ソース管理システムに新しいファイルを追加します。  
+この関数では、ソース管理システムに新しいファイルを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,12 +39,12 @@ SCCRTN SccAdd(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pvContext  
  [in]ソース管理プラグイン コンテキスト構造体。  
   
  hWnd  
- [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
+ [in]ソース管理プラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  nFiles  
  [in]指定されている現在のプロジェクトに追加する選択したファイルの数、`lpFileNames`配列。  
@@ -53,37 +53,37 @@ SCCRTN SccAdd(
  [in]追加するファイルの完全修飾のローカル名の配列。  
   
  lpComment  
- [in]追加されているファイルのすべてに適用するコメント。  
+ [in]追加されるファイルのすべてに適用されるコメントです。  
   
  pfOptions  
- [in]ファイルごとに提供されるコマンド フラグの配列です。  
+ [in]ファイル単位で提供される、コマンド フラグの配列。  
   
  pvOptions  
- [in]ソース管理プラグインに固有のオプションです。  
+ [in]ソース管理プラグインに固有のオプション。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |SCC_OK|追加操作が正常に完了しました。|  
 |SCC_E_FILEALREADYEXISTS|選択したファイルは、既にソース管理下にあるいます。|  
-|SCC_E_TYPENOTSUPPORTED|ソース管理システムでは、(たとえば、バイナリ) ファイルの種類はサポートされていません。|  
+|SCC_E_TYPENOTSUPPORTED|(たとえば、バイナリ) ファイルの種類は、ソース管理システムでサポートされていません。|  
 |SCC_E_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートしません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題の可能性へのアクセスに問題が発生しました。 再試行をお勧めします。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行できません。|  
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。追加は実行されません。|  
 |SCC_I_OPERATIONCANCELED|操作が完了する前に取り消されました。|  
-|SCC_I_RELOADFILE|ファイルまたはプロジェクトは、再読み込みする必要があります。|  
+|SCC_I_RELOADFILE|ファイルまたはプロジェクトを再読み込みする必要があります。|  
 |SCC_E_FILENOTEXIST|ローカル ファイルが見つかりませんでした。|  
   
-## <a name="remarks"></a>コメント  
- 通常の`fOptions`配列では、ここで置換された`pfOptions`、いずれかで`LONG`ファイルあたりの仕様のオプションです。 これはため、ファイルの種類はファイルから別のファイルで異なる場合があります。  
+## <a name="remarks"></a>Remarks  
+ 通常の`fOptions`、配列では、ここが置き換えられます`pfOptions`、いずれかで`LONG`仕様ファイルごとのオプションします。 これはため、ファイルの種類がファイルをファイルに異なる場合があります。  
   
 > [!NOTE]
->  両方を指定することはできません`SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`が、同じファイルのオプションはどちらも指定します。 どちらの設定は、設定と同じ`SCC_FILETYPE_AUTO`ソースがプラグイン初回ファイルの種類を制御する場合。  
+>  両方とも指定することはできません`SCC_FILETYPE_TEXT`と`SCC_FILETYPE_BINARY`が同じファイルのオプションはいずれも指定するは無効です。 設定と同じでは、どちらも設定`SCC_FILETYPE_AUTO`ソースがプラグインの初回ファイルの種類を制御する場合。  
   
- 以下で使用されているフラグの一覧を示します、`pfOptions`配列。  
+ 使用されているフラグの一覧を次に示します、`pfOptions`配列。  
   
 |オプション|[値]|説明|  
 |------------|-----------|-------------|  
@@ -91,10 +91,10 @@ SCCRTN SccAdd(
 |SCC_FILETYPE_TEXT|0x01|ASCII テキスト ファイルを示します。|  
 |SCC_FILETYPE_BINARY|0x02|ASCII テキスト以外のファイルの種類を示します。|  
 |SCC_ADD_STORELATEST|0x04|デルタ ファイルの最新のコピーだけを格納しません。|  
-|SCC_FILETYPE_TEXT_ANSI|0x08|ANSI テキストとしてファイルを処理します。|  
-|SCC_FILETYPE_UTF8|0x10|UTF8 形式の Unicode テキストとしてファイルを処理します。|  
-|SCC_FILETYPE_UTF16LE|0x20|UTF16 で Unicode テキストとしてリトル エンディアン形式のファイルを処理します。|  
+|SCC_FILETYPE_TEXT_ANSI|0x08|ANSI テキストとしてファイルを扱います。|  
+|SCC_FILETYPE_UTF8|0x10|UTF8 形式での Unicode テキストとしてファイルを扱います。|  
+|SCC_FILETYPE_UTF16LE|0x20|UTF16 に Unicode テキストとしてリトル エンディアン形式のファイルを扱います。|  
 |SCC_FILETYPE_UTF16BE|0x40|UTF16 ビッグ エンディアン Unicode テキストとしてファイル形式を扱います。|  
   
 ## <a name="see-also"></a>関連項目  
- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
+ [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)

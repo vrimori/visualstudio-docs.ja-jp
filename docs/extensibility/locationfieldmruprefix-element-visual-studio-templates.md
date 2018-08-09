@@ -1,5 +1,5 @@
 ---
-title: LocationFieldMRUPrefix 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: LocationFieldMRUPrefix 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cef7e1e09d81c4ff0fb28198ff9a4d68f1e9c501
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 050d9b060fe9976dc9262b2878f570abbdc9bb42
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31136340"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636903"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix 要素 (Visual Studio テンプレート)
 最近使用した (MRU) のパスを指定します、**新しいプロジェクト**と**新しい項目の追加** ダイアログ ボックス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -47,8 +47,8 @@ ms.locfileid: "31136340"
 |-------------|-----------------|  
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|  
   
-## <a name="remarks"></a>コメント  
- この要素で生成されるテンプレートにのみ使用する必要があります、[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]です。  
+## <a name="remarks"></a>Remarks  
+ この要素は、テンプレートで生成のみ使用する必要があります、[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)]します。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   

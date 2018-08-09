@@ -1,5 +1,5 @@
 ---
-title: '方法: 標準のテキストのマーカーの追加 |Microsoft ドキュメント'
+title: '方法: 標準のテキスト マーカーの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,44 +13,44 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fc5bf34c9b4200d8d7fef2d9f4a878ca604f886
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4dd34b14b89c78d01f1d4acab57f33014860d7ba
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127987"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638822"
 ---
-# <a name="how-to-add-standard-text-markers"></a>方法: 標準のテキストのマーカーの追加
-提供される既定のテキスト マーカーの種類を作成するのには、次の手順を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターです。  
+# <a name="how-to-add-standard-text-markers"></a>方法: 標準のテキスト マーカーの追加
+次の手順を使用して、提供される既定のテキスト マーカーの種類のいずれかを作成する、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディター。  
   
-### <a name="to-create-a-text-marker"></a>テキスト マーカーを作成するには  
+## <a name="to-create-a-text-marker"></a>テキスト マーカーを作成するには  
   
-1.  1 つまたは 2 つの次元座標系、呼び出しのどちらを使用するかどうかによって、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A>メソッドまたは<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A>新しいテキスト マーカーを作成するメソッド。  
+1.  1 つまたは 2 次元座標系を使用するかに応じて呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A>メソッドまたは<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A>新しいテキスト マーカーを作成します。  
   
-     このメソッドの呼び出しで、上でマーカーを作成するテキストの範囲、マーカーの種類を指定し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスです。 このメソッドは、新しく作成されたテキスト マーカーにし、ポインターを返します。 マーカーの種類がから取得した、<xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE>列挙します。 指定して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスの場合は、マーカーのイベントを通知します。  
+     このメソッド呼び出しで、マーカーの種類、マーカーを作成するテキストの範囲を指定し、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイス。 このメソッドは、新しく作成されたテキスト マーカーにし、ポインターを返します。 マーカーの種類がから取得した、<xref:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE>列挙体。 指定、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>インターフェイスのマーカー イベントを通知する場合。  
   
     > [!NOTE]
-    >  のみのメイン UI スレッドでテキスト マーカーを作成します。 テキスト マーカーを作成するためのテキスト バッファーの内容に依存しているコア エディターとテキスト バッファーはスレッド セーフではありません。  
+    >  テキスト マーカーは、メイン UI スレッドでのみで作成します。 テキスト マーカーを作成するためのテキスト バッファーの内容に基づいて、コア エディターとテキスト バッファーはスレッド セーフではありません。  
   
-## <a name="adding-a-custom-command"></a>カスタム コマンドを追加します。  
- 実装する、`IVsTextMarkerClient`インターフェイス/マーカーからへのポインターを提供することは、いくつかの方法でマーカーの動作を拡張します。 最初に、これにより、マーカーのヒントを提供し、コマンドを実行できます。 これによりマーカーは、個別のイベント通知を受信して、マーカーの上のカスタムのコンテキスト メニューを作成するもできます。 マーカー コンテキスト メニューにカスタム コマンドを追加するのにには、次の手順を使用します。  
+## <a name="add-a-custom-command"></a>カスタム コマンドを追加します。  
+ 実装する、`IVsTextMarkerClient`インターフェイスとをマーカーからのポインターを提供するいくつかの方法でマーカー動作が向上します。 最初に、これにより、マーカーのヒントを紹介し、コマンドを実行できます。 これによりマーカーは、個別のイベント通知を受信して、マーカーの上でカスタム コンテキスト メニューを作成することもできます。 マーカー コンテキスト メニューにカスタム コマンドを追加するのにには、次の手順を使用します。  
   
-#### <a name="to-add-a-custom-command-to-the-context-menu"></a>コンテキスト メニューにカスタム コマンドを追加するには  
+### <a name="to-add-a-custom-command-to-the-context-menu"></a>コンテキスト メニューにカスタム コマンドを追加するには  
   
-1.  環境を呼び出すコンテキスト メニューを表示する前に、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A>メソッドとパスをテキスト マーカーへのポインターの影響を受けると、コンテキスト メニュー コマンド項目の数。  
+1.  コンテキスト メニューが表示される前に、環境を呼び出す、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetMarkerCommandInfo%2A>メソッドと影響を受けるテキスト マーカーへのポインターを渡すと、コンテキスト メニュー コマンド項目の数。  
   
-     たとえば、コンテキスト メニューで、ブレークポイントに関連するコマンドが含まれて**のブレークポイントを削除**を通じて**新しいブレークポイント**次のスクリーン ショットに表示されています。  
+     たとえば、コンテキスト メニューの ブレークポイントに固有のコマンドが含まれて**ブレークポイントの削除**を通じて**新しいブレークポイント**次のスクリーン ショットに表示されています。  
   
      ![マーカー コンテキスト メニュー](../extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
-2.  カスタム コマンドの名前を表すいくつかのテキストを渡します。 たとえば、**ブレークポイントの解除**環境が既に提供されていない場合に、カスタム コマンドがあります。 渡すこともバックアップするかどうかのコマンドは、サポートされている、利用可能で、有効になっている、またはのオン/オフ切り替え。 環境では、この情報を使用して、適切な方法で、コンテキスト メニューで、カスタム コマンドを表示します。  
+2.  カスタム コマンドの名前を識別するテキストをパスにバックアップします。 たとえば、**ブレークポイントの削除**環境が既に提供していない場合、カスタム コマンドがあります。 戻る渡すことも、コマンドは、サポートされている、使用可能なおよび有効にするかどうかや、オン/オフ切り替え。 環境では、この情報を使用して、適切な方法で、コンテキスト メニューにカスタム コマンドを表示します。  
   
-3.  環境の呼び出し、コマンドを実行する、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A>メソッド、テキスト マーカーおよびコンテキスト メニューから選択したコマンドの数にポインターを渡すことです。  
+3.  環境は、コマンドを実行する、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A>テキスト マーカーをコンテキスト メニューから選択したコマンドの数のポインターを渡してメソッド。  
   
-     テキスト マーカーの任意のアクション、カスタム コマンドを決定を実行するのにには、この呼び出しでこの情報を使用します。  
+     テキスト マーカーの任意のアクション、カスタム コマンドの指示を実行するのにには、この呼び出しでこの情報を使用します。  
   
 ## <a name="see-also"></a>関連項目  
- [レガシ API でテキスト マーカーの使用](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [方法: エラー マーカーを実装します。](../extensibility/how-to-implement-error-markers.md)   
- [方法: カスタム テキスト マーカーを作成します。](../extensibility/how-to-create-custom-text-markers.md)   
+ [テキスト マーカーを使用して、従来の API を使用しました。](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [方法: エラーのマーカーの実装](../extensibility/how-to-implement-error-markers.md)   
+ [方法: カスタム テキスト マーカーの作成](../extensibility/how-to-create-custom-text-markers.md)   
  [方法: テキスト マーカーを使用](../extensibility/how-to-use-text-markers.md)

@@ -1,5 +1,5 @@
 ---
-title: SccGetParentProjectPath 関数 |Microsoft ドキュメント
+title: SccGetParentProjectPath 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea52e0d4c6242c57447cd47d41b716ba5e93a2f6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f4234ac20f9c583d944ba6fdf8e52a6eb0db156
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31142028"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639683"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath 関数
-この関数は、指定されたプロジェクトの親プロジェクト パスを決定します。 この関数は、ユーザーがソース管理に、Visual Studio プロジェクトを追加するときに呼び出されます。  
+この関数は、指定されたプロジェクトの親プロジェクトのパスを決定します。 この関数は、ユーザーがソース管理に Visual Studio プロジェクトを追加するときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,62 +38,62 @@ SCCRTN SccGetParentProjectPath(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  pContext  
- [in]ソース管理プラグイン コンテキスト ポインターです。  
+ [in]ソース管理プラグインのコンテキストのポインター。  
   
  hWnd  
- [in]ソース管理プラグインで提供されるダイアログ ボックスをすべての親として使用できる IDE ウィンドウへのハンドル。  
+ [in]ソース管理プラグインが提供される任意のダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。  
   
  lpUser  
- [入力、出力].(最大 SCC_USER_SIZE、NULL 終端文字を含む) ユーザー名。  
+ [入力、出力](最大 SCC_USER_SIZE、NULL 終端文字も含めて) ユーザー名。  
   
  lpProjPath  
  [in]プロジェクトパスを識別する文字列（NULL終端文字を含むSCC_PRJPATH_SIZEまで）。  
   
  lpAuxProjPath  
- [入力、出力].(最大 SCC_PRJPATH_SIZE、NULL 終端文字を含む) プロジェクトを識別する文字列を補助します。  
+ [入力、出力](最大 SCC_PRJPATH_SIZE、NULL 終端文字も含めて) プロジェクトを識別する文字列を補助します。  
   
  lpParentProjPath  
- [入力、出力].出力する、親プロジェクトまでのパス (SCC_PRJPATH_SIZE、NULL 終端文字を含む) を識別する文字列。  
+ [入力、出力]親プロジェクトのパス (最大 SCC_PRJPATH_SIZE、NULL 終端文字を含む) を識別する文字列を出力します。  
   
 ## <a name="return-value"></a>戻り値  
- この関数のソース管理プラグイン実装は、次の値のいずれかを返す考えられます。  
+ この関数のソース管理プラグイン実装は、次の値のいずれかを返すが必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|SCC_OK|親プロジェクト パスは正常に取得されました。|  
+|SCC_OK|親プロジェクト パスが正常に取得します。|  
 |SCC_E_INITIALIZEFAILED|プロジェクトを初期化できませんでした。|  
 |SCC_E_INVALIDUSER|ユーザーは、ソース管理プラグイン ログオンできませんでした。|  
-|SCC_E_UNKNOWNPROJECT|ソース管理プラグインに不明なプロジェクトです。|  
-|SCC_E_INVALIDFILEPATH|無効であるか使用不可のファイルのパス。|  
-|SCC_E_NOTAUTHORIZED|この操作を実行するユーザーが許可されていません。|  
-|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークや競合の問題の可能性があるためのアクセスに関する問題が発生しました。 再試行することをお勧めします。|  
-|SCC_E_PROJSYNTAXERR|無効なプロジェクト構文があります。|  
+|SCC_E_UNKNOWNPROJECT|プロジェクトはソース管理プラグインを正常ではありません。|  
+|SCC_E_INVALIDFILEPATH|無効であるか使用できないファイルのパス。|  
+|SCC_E_NOTAUTHORIZED|この操作を実行できません。|  
+|SCC_E_ACCESSFAILURE|ソース管理システムのネットワークまたは競合の問題の可能性へのアクセスに問題が発生しました。 再試行をお勧めします。|  
+|SCC_E_PROJSYNTAXERR|無効なプロジェクトの構文です。|  
 |SCC_E_CONNECTIONFAILURE|接続の問題を格納します。|  
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|  
   
-## <a name="remarks"></a>コメント  
- この関数は、成功または失敗のコードを返し、成功した場合、入力変数`lpParentProjPath`を指定されたプロジェクトへのプロジェクトの完全パス。  
+## <a name="remarks"></a>Remarks  
+ この関数は、成功または失敗のコードを返すし、成功した場合、入力変数`lpParentProjPath`指定されたプロジェクトにプロジェクトの完全パスを使用します。  
   
- この関数は、既存のプロジェクトのプロジェクトのパスの親を返します。 ルート プロジェクト関数に渡されたプロジェクト パスを返します (つまり、同じルート プロジェクト パス)。 プロジェクト パスはソース管理プラグインにのみ意味のある文字列であることに注意してください。  
+ この関数は、既存のプロジェクトのプロジェクトのパスの親を返します。 ルート プロジェクトでは、関数に渡されたプロジェクト パスを返します (つまり、同じルート プロジェクト パス)。 プロジェクトのパスはソース管理プラグインにのみ意味のある文字列であることに注意してください。  
   
- IDE が変更を反映する準備ができた、`lpUser`と`lpAuxProjPath`パラメーターも同様です。 IDE はこれらの文字列を保持しに渡したり、 [SccOpenProject](../extensibility/sccopenproject-function.md)ユーザーが開いた、今後このプロジェクト。 そのため、これらの文字列は、ソース管理プロジェクトに関連付ける必要な情報を追跡するプラグインの方法を提供します。  
+ IDE が変更を適用する準備ができた、`lpUser`と`lpAuxProjPath`パラメーターも同様です。 IDE はこれらの文字列を保持しに渡したり、 [SccOpenProject](../extensibility/sccopenproject-function.md)ユーザーが開いた、今後このプロジェクト。 そのため、これらの文字列はソース管理プラグインをプロジェクトに関連付ける必要な情報を追跡する方法を提供します。  
   
- この関数がに似ていますが、 [SccGetProjPath](../extensibility/sccgetprojpath-function.md)プロジェクトを選択するユーザーに求めないする点を除いて、します。 既存のプロジェクトでのみが、新しいプロジェクトを作成します。  
+ この機能に似ています、 [SccGetProjPath](../extensibility/sccgetprojpath-function.md)プロジェクトを選択するユーザーを求めないことを除いて、します。 既存のプロジェクトでのみが、新しいプロジェクトを作成します。  
   
- ときに`SccGetParentProjectPath`が呼び出されると、`lpProjPath`と`lpAuxProjPath`が空になり、有効なプロジェクトに対応します。 以前の呼び出しから IDE でこれらの文字列を受信した通常の`SccGetProjPath`関数。  
+ ときに`SccGetParentProjectPath`が呼び出され、`lpProjPath`と`lpAuxProjPath`空にならないし、は、有効なプロジェクトに対応します。 以前の呼び出しから IDE がこれらの文字列を受信したは、通常、`SccGetProjPath`関数。  
   
- `lpUser`引数は、ユーザー名。 IDE がから既に受信していたものと同じ名前のユーザーに渡す、`SccGetProjPath`関数、およびソース管理プラグインは、既定値と名前を使用する必要があります。 ユーザーは、プラグインで開いている接続を既に持っている場合、プラグインする必要があります再試行関数がサイレント モードで動作を確認するプロンプトを回避するのにします。 ただし、ログインに失敗した場合、プラグインが求めログインとは、パスの名前がバックアップの有効なログインを受け取ると、ユーザー`lpUser`です。 この文字列は、プラグインの場合に変更することがあります、ため、IDE が常にサイズのバッファーを割り当てる (`SCC_USER_LEN`+1)。 文字列が変更された場合、新しい文字列は有効なログイン名 (少なくとも古い文字列有効) にする必要があります。  
+ `lpUser`引数は、ユーザーの名前です。 IDE から既に受信していたのと同じユーザー名が渡される、`SccGetProjPath`関数、およびソース管理プラグインは、既定値としての名前を使用する必要があります。 ユーザーが既にプラグインで開いている接続を使用して、プラグインする必要があります再試行関数はサイレント モードで動作を確認するプロンプトを回避します。 ただし、ログインに失敗した場合、プラグインのメッセージを表示するユーザー ログインと、パスの名前がバックアップの有効なログインを受信すると`lpUser`します。 プラグインがこの文字列を変更するため、IDE が常にサイズのバッファーを割り当てる (`SCC_USER_LEN`+1)。 文字列を変更すると、新しい文字列が有効なログイン名が (少なくとも古い文字列有効) にあります。  
   
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>テクニカル ノート SccCreateSubProject および SccGetParentProjectPath  
- Visual studio ユーザーは、ソース管理システムで場所を選択するように要求する回数を最小限に抑えるにソース管理にソリューションおよびプロジェクトの追加を簡素化されています。 ソース管理プラグインは、新しい関数の両方をサポートしている場合、Visual Studio によってこれらの変更がアクティブ化、 [SccCreateSubProject](../extensibility/scccreatesubproject-function.md)と`SccGetParentProjectPath`関数。 ただし、次のレジストリ エントリは、これらの変更を無効にして、Visual Studio (ソース管理プラグイン API のバージョン 1.1) の以前の動作に戻すを使用できます。  
+## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject と SccGetParentProjectPath テクニカル ノート  
+ Visual Studio で、ユーザーは、ソース管理システムでの場所を選択するように求められます回数を最小限にするソリューションとプロジェクトをソース管理に追加を簡素化されています。 ソース管理プラグインは、新しい関数の両方をサポートしている場合、Visual Studio によってこれらの変更がアクティブ化、 [SccCreateSubProject](../extensibility/scccreatesubproject-function.md)と`SccGetParentProjectPath`関数。 ただし、次のレジストリ エントリは、これらの変更を無効にして、以前の Visual Studio (ソース管理プラグイン API バージョン 1.1) 動作に戻すには使用できます。  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl"= dword:00000001  
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl"= dword:00000001**  
   
- Visual Studio が、新しい関数を使用しようとした場合、このレジストリ エントリが存在しないか、dword:00000000 に設定されている、`SccCreateSubProject`と`SccGetParentProjectPath`です。  
+ Visual Studio が、新しい関数を使用しようとした場合、このレジストリ エントリが存在しないか、dword:00000000 に設定されている、`SccCreateSubProject`と`SccGetParentProjectPath`します。  
   
- レジストリ エントリは dword:00000001 に設定されている場合は、Visual Studio はこれらの新しい関数を使用しようとはしませんおよびソース管理に追加の操作 Visual Studio の以前のバージョンで同様に動作します。  
+ レジストリ エントリが dword:00000001 に設定されている場合は、Visual Studio がこれらの新しい関数を使用しないし、Visual Studio の以前のバージョンと同じソース管理に追加する操作の動作します。  
   
 ## <a name="see-also"></a>関連項目  
  [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)   

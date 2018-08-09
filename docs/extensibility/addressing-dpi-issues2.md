@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97012b0d8b4214cdeafcaf12403948997436a212
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 838cbbe1b2f053a20113fddce238c84e646cbd62
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154331"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638666"
 ---
 # <a name="address-dpi-issues"></a>アドレス DPI 問題
 「高解像度」画面には、デバイス数が増加が付属します。 通常、これらの画面には、200 を超えるピクセル/インチ (ppi) があります。 これらのコンピューター上のアプリケーションの操作は、コンテンツをデバイスの通常の表示までの距離にあるコンテンツを表示するためのニーズに合わせてスケール アップする必要があります。 2014 年の時点では、高密度ディスプレイの主なターゲットはモバイル コンピューティング デバイス (タブレットやクラムシェル ラップトップ、携帯電話です)。  
@@ -78,7 +78,7 @@ ImageList_Create(VsUI::DpiHelper::LogicalToDeviceUnitsX(16),VsUI::DpiHelper::Log
   
  参照してください、 <xref:Microsoft.VisualStudio.PlatformUI.DpiHelper> MSDN のドキュメント。  
   
- 次の表では、スケール係数 dpi 対応するイメージをスケーリングする方法の例を示します。 緑色でイメージを表す (100 ~ 200 %dpi のスケール)、Visual Studio 2013 の時点で、ベスト プラクティス。  
+ 次の表では、スケール係数 dpi 対応するイメージをスケーリングする方法の例を示します。 オレンジ色で記載されているイメージは、(100 ~ 200 %dpi のスケール)、Visual Studio 2013 の時点で、ベスト プラクティスを示します。  
   
  ![DPI 問題 (スケーリング)](../extensibility/media/dpi-issues-scaling.png "DPI 問題 (スケーリング)")  
   

@@ -62,6 +62,7 @@
 ## [Unity によるゲーム開発](unity-tools.md)
 ### [セットアップ](setup-vsmac-tools-unity.md)
 ### [Unity ツールの使用](using-vsmac-tools-unity.md)
+### [変更ログ](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 
 # [ユーザー補助](accessibility.md)
 

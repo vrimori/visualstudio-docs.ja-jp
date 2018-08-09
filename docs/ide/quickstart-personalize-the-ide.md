@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9132547055ef17e4ecd28274a0b1a3de7dd8ce2
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 140fdf2089d44ba93b9617d2dd05b71556106fdb
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078226"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512562"
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>クイックスタート: Visual Studio IDE とエディターのカスタマイズ
 
@@ -97,11 +97,19 @@ Visual Studio 2017 のユーザー インターフェイスの既定の配色テ
 
 Visual Studio の色をカスタマイズするいくつかの方法について学習しました。 ぜひ **[オプション]** ダイアログ ボックスの他のカスタマイズ オプションも試して、Visual Studio を完全にカスタマイズしてください。
 
+## <a name="next-steps"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: エディターでのコードの作成](../ide/quickstart-editor.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+
 ## <a name="see-also"></a>関連項目
 
-- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-- [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
-- [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
 - [Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
 - [エディターのカスタマイズ](../ide/customizing-the-editor.md)
 - [Visual Studio IDE の概要](../ide/visual-studio-ide.md)

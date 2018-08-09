@@ -1,5 +1,5 @@
 ---
-title: ProjectTemplateLink 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: ProjectTemplateLink 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10ebc56e03a6582ab37126097db5f79ed9c5f2a5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c3e539824c815d62d8cf3350b4d823314996677
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31143590"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636413"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink 要素 (Visual Studio テンプレート)
-複数プロジェクトのテンプレートにある プロジェクトの .vstemplate ファイル パスを指定します。  
+パスを指定します、 *.vstemplate*複数プロジェクトのテンプレートの 1 つのプロジェクトのファイル。  
   
  \<VSTemplate>  
  \<TemplateContent >  
@@ -39,13 +39,13 @@ ms.locfileid: "31143590"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```xml  
 <ProjectTemplateLink ProjectName="Name">  
     PathToTemplateFile  
 </ProjectTemplateLink>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -53,7 +53,7 @@ ms.locfileid: "31143590"
 |属性|説明|  
 |---------------|-----------------|  
 |`ProjectName`|省略可能な属性です。<br /><br /> 複数プロジェクトのテンプレートにある各プロジェクトに個別の名前を指定します。 **新しいプロジェクト** ダイアログ ボックスは、個々 のプロジェクトに名前を割り当てることはできません。|  
-|`CopyParameters`|メインのグループ テンプレート内のすべての変数を、リンクされたテンプレートそれぞれにコピーできるようにします。<br /><br /> リンクされたテンプレート内のパラメーターには、プレフィックス `"$ext_*$"` が付きます。 例については、親のグループ テンプレート、パラメーターの場合`$projectname$`値を持つ**ExampleProject1**、リンクされたテンプレートを実行する順番を取得するときに、パラメーターを取得`$ext_projectname$`、のコピーである`$projectname$`親のグループ テンプレートからのパラメーターです。<br /><br /> これにより、リンクされたテンプレートは、親のグループ テンプレートでのみ簡単に作成できる一部の共通パラメーターを共有できるようになります。<br /><br /> この属性は省略可能であり、省略した場合は自動的に `false` に設定されます。<br /><br /> Visual Studio 2013 更新プログラム 2 で導入されました。 製品の正しいバージョンを参照するを参照してください。[を参照する、Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリ](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)です。|  
+|`CopyParameters`|メインのグループ テンプレート内のすべての変数を、リンクされたテンプレートそれぞれにコピーできるようにします。<br /><br /> リンクされたテンプレート内のパラメーターには、プレフィックス `"$ext_*$"` が付きます。 たとえば、親グループのテンプレート パラメーターの場合`$projectname$`の値を持つ**ExampleProject1**、リンクされたテンプレートを実行する順番を取得するときに、パラメーターを取得`$ext_projectname$`、のコピーである`$projectname$`、親グループのテンプレートのパラメーター。<br /><br /> これにより、リンクされたテンプレートは、親のグループ テンプレートでのみ簡単に作成できる一部の共通パラメーターを共有できるようになります。<br /><br /> この属性は省略可能であり、省略した場合は自動的に `false` に設定されます。<br /><br /> Visual Studio 2013 更新プログラム 2 で導入されました。 製品の正しいバージョンを参照するを参照してください。 [Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリを参照する](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -68,13 +68,13 @@ ms.locfileid: "31143590"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- これは、テンプレートの .vstemplate ファイルのパスを示します。  
+ このテキストへのパスを指定します、 *.vstemplate*テンプレートのファイル。  
   
-## <a name="remarks"></a>コメント  
- 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `ProjectTemplateLink` 要素は、テンプレート内にあるプロジェクトの .vstemplate ファイルの場所を指定するために使用します。 複数プロジェクトのテンプレートの .vstemplate ファイルには、1 プロジェクトにつき 1 つの `ProjectTemplateLink` 要素があります。 複数プロジェクトのテンプレートの詳細については、次を参照してください。[する方法: 複数のプロジェクト テンプレートを作成する](../ide/how-to-create-multi-project-templates.md)です。  
+## <a name="remarks"></a>Remarks  
+ 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `ProjectTemplateLink`の場所を指定する要素が使用される、 *.vstemplate*テンプレート内のプロジェクトのいずれかのファイル。 *.Vstemplate*複数プロジェクトのテンプレートのファイルには、1 つ含まれる`ProjectTemplateLink`テンプレート内の各プロジェクト要素。 複数プロジェクトのテンプレートの詳細については、次を参照してください。[方法: 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)します。  
   
 ## <a name="example"></a>例  
- 簡単なマルチプロジェクトのルート .vstemplate ファイルの例を次に示します。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。 `ProjectName` 要素の `ProjectTemplateLink` 属性は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がこのプロジェクトに割り当てる名前を設定します。 `ProjectName` 属性が存在しない場合、.vstemplate ファイルの名前がプロジェクト名として使用されます。  
+ この例は単純なマルチ プロジェクトのルート *.vstemplate*ファイル。 この例では、テンプレートには `My Windows Application` と `My Class Library` の 2 つのプロジェクトが含まれています。 `ProjectName` 要素の `ProjectTemplateLink` 属性は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がこのプロジェクトに割り当てる名前を設定します。 場合、`ProjectName`属性が存在しないの名前、 *.vstemplate*ファイルは、プロジェクト名として使用します。  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -100,5 +100,5 @@ ms.locfileid: "31143590"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
- [方法 : 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)
+ [プロジェクトと項目テンプレートを作成します。](../ide/creating-project-and-item-templates.md)   
+ [方法: 複数プロジェクトのテンプレートの作成](../ide/how-to-create-multi-project-templates.md)

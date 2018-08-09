@@ -13,19 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8004176fb64244aecde276226683a53c013d3b31
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: a47f45889744db51d68c0f8aeb51b11863823965
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513134"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639732"
 ---
-# <a name="registering-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録する
+# <a name="register-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録します。
 アプリケーションとファイル名拡張子の関連付けは、通常、ユーザーがファイルをダブルクリックしたときに発生する推奨アクションを持っています。 これは、アクションは、動詞、たとえばオープン操作に対応するにリンクさせます (推奨)。  
   
- HKEY_CLASSES_ROOT にあるシェルのキーを使用して、拡張機能のプログラム識別子 (ProgID) に関連付けられている動詞を登録する\\*progid*\shell します。 詳細については、次を参照してください。[ファイルの種類](/windows/desktop/shell/fa-file-types)します。  
+ シェルのキーを使用して拡張機能があるのプログラム識別子 (ProgID) に関連付けられている動詞を登録する**HKEY_CLASSES_ROOT\{progid} \shell**します。 詳細については、次を参照してください。[ファイルの種類](http://msdn.microsoft.com/library/windows/desktop/cc144148\(v=vs.85\).aspx)します。  
   
-## <a name="registering-standard-verbs"></a>標準的な動詞を登録します。  
+## <a name="register-standard-verbs"></a>標準的な動詞を登録します。  
  オペレーティング システムでは、次の標準的な動詞を認識します。  
   
 -   開く  
@@ -38,7 +38,7 @@ ms.locfileid: "39513134"
   
 -   [プレビュー]  
   
- 可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 たとえば、.htm のファイルを開くに表示されます、ブラウザーは HTML エディターが起動 .htm ファイルを編集します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
+ 可能であれば、標準的な動詞を登録します。 最も一般的な選択肢では、Open 動詞です。 ファイルを開くと、ファイルの編集の間の明確な違いがある場合にのみ編集動詞を使用します。 開くなど、 *.htm*ファイルが表示されますが、ブラウザーでの編集は、 *.htm*ファイルは、HTML エディターを起動します。 標準的な動詞は、オペレーティング システムのロケールでローカライズされます。  
   
 > [!NOTE]
 >  標準的な動詞を登録するときに、開いているキーの既定値を設定しないでください。 既定値には、メニューの表示文字列が含まれています。 オペレーティング システムでは、標準的な動詞にこの文字列を提供します。  
@@ -74,7 +74,7 @@ ms.locfileid: "39513134"
 @="\"C:\\Program Files\\Common Files\\Microsoft Shared\\MSEnv\\VSLauncher.exe\" \"%1\""  
 ```  
   
- 既存のインスタンスでファイルを開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、DDEEXEC キーを登録します。 次の例では、標準の動詞の登録、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .cs ファイルです。  
+ 既存のインスタンスでファイルを開く[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、DDEEXEC キーを登録します。 次の例では、標準の動詞の登録、 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] *.cs*ファイル。  
   
 ```  
 [HKEY_CLASSES_ROOT\.cs]  
@@ -108,11 +108,11 @@ ms.locfileid: "39513134"
 @="system"  
 ```  
   
-## <a name="setting-the-default-verb"></a>既定の動詞の設定  
- 既定の動詞は、ユーザーが Windows エクスプ ローラーでファイルをダブルクリックしたときに実行されるアクションです。 既定の動詞は、HKEY_CLASSES_ROOT の既定値として指定された動詞\\*progid*\Shell キー。 値が指定されていない場合、既定の動詞は、HKEY_CLASSES_ROOT に指定された最初の動詞を\\*progid*\Shell キーのリスト。  
+## <a name="set-the-default-verb"></a>既定の動詞を設定します。  
+ 既定の動詞は、ユーザーが Windows エクスプ ローラーでファイルをダブルクリックしたときに実行されるアクションです。 既定の動詞がの既定値として指定された動詞、 **HKEY_CLASSES_ROOT\\*progid*\Shell**キー。 既定の動詞は、最初の動詞で指定された値が指定されていない場合、 **HKEY_CLASSES_ROOT\\*progid*\Shell**キー リスト。  
   
 > [!NOTE]
 >  サイド バイ サイドで配置の拡張機能の既定の動詞を変更する場合は、インストールと削除の影響を検討してください。 インストール中に、元の既定値は上書きされます。  
   
 ## <a name="see-also"></a>関連項目  
- [side-by-side のファイルの関連付けを管理する](../extensibility/managing-side-by-side-file-associations.md)
+ [サイド バイ サイドでのファイルの関連付けを管理します。](../extensibility/managing-side-by-side-file-associations.md)

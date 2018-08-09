@@ -1,5 +1,5 @@
 ---
-title: レガシ API を使用して、言語サービス コンテキストを提供する |Microsoft ドキュメント
+title: 言語サービスのコンテキストを提供するレガシ API を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,42 +13,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3556fcce3d14d5069854c64d81cb780123a979d2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d9daef780847da99463811a9c10399102dc7b808
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140073"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637433"
 ---
-# <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>レガシ API を使用して、言語サービス コンテキストを提供します。
-2 つのオプションを使用してユーザー コンテキストを提供する言語サービスがある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディター: テキスト マーカーのコンテキストを指定するか、すべてのユーザー コンテキストを提供します。 それぞれの相違点は、ここで説明されています。  
+# <a name="provide-a-language-service-context-by-using-the-legacy-api"></a>従来の API を使用して、言語サービスのコンテキストを提供します。
+2 つのオプションを使用してユーザー コンテキストを提供する言語サービスがある、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]のコア エディター: テキスト マーカーのコンテキストを指定するか、すべてのユーザー コンテキストを提供します。 それぞれの違いが記載されています。  
   
- コンテキストを独自のエディターに接続されている言語サービスを提供する方法については、次を参照してください。[する方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)です。  
+ 独自のエディターに接続されている言語サービスにコンテキストを提供する詳細については、次を参照してください。[方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
   
 ## <a name="provide-text-marker-context-to-the-editor"></a>エディターにテキスト マーカー コンテキストを提供します。  
- テキスト マーカーで示されるコンパイラのエラーのコンテキストを提供する、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディター、実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスです。 このシナリオでは、言語サービスは、テキスト マーカー上にカーソルが場合にのみにコンテキストを提供します。 これにより、エディターでカーソルをキーワードを提供する、**ダイナミック ヘルプ**ウィンドウに属性がありません。  
+ テキスト マーカーで示されるコンパイラ エラーのコンテキストを提供する、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターには、実装、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイス。 このシナリオでは、言語サービスは、カーソルがテキスト マーカーに場合にのみにコンテキストを提供します。 これにより、エディターでカーソルをキーワードを提供する、**ダイナミック ヘルプ**属性を持たないウィンドウ。  
   
 ## <a name="provide-all-user-context-to-the-editor"></a>エディターにすべてのユーザー コンテキストを提供します。  
- 言語サービスを作成しを使用しているかどうか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディターを実装することができますし、コア、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>言語サービスのコンテキストを提供するインターフェイスです。  
+ 言語サービスを作成しを使用しているかどうか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディターを実装することができますし、コア、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>言語サービスのコンテキストを提供するインターフェイス。  
   
- 実装の`IVsLanguageContextProvider`、コンテキスト バッグ (コレクション) が、エディターでは、コンテキストのバッグの更新を担当に接続されています。 ときに、**ダイナミック ヘルプ**ウィンドウの呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A>コンテキスト バッグ、アイドル状態の時にこのコンテキストのバッグのインターフェイスが更新プログラム用のエディターをクエリします。 エディターでは、その、エディターを更新する必要があり、コンテキスト バッグへのポインターを渡しますに言語サービスを通知します。 これは、呼び出すことで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A>言語サービスに、エディターからのメソッドです。 コンテキストのバッグにポインターを使用して、言語サービス今すぐを追加したり属性とキーワードを削除します。 詳細については、「<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>」を参照してください。  
+ 実装の`IVsLanguageContextProvider`、コンテキスト バッグ (コレクション) がコンテキスト バッグを更新するには、エディターにアタッチされています。 ときに、**ダイナミック ヘルプ**ウィンドウの呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A>コンテキスト バッグ、アイドル状態時に、このコンテキスト バッグのインターフェイスは、更新プログラム用のエディターをクエリします。 エディターは、エディターを更新する必要があり、コンテキスト バッグへのポインターを渡しますが、言語サービスを通知します。 これは、呼び出すことで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A>言語サービスに、エディターからのメソッド。 コンテキスト バッグにポインターを使用して、言語サービスできるようになりました追加および削除の属性とキーワード。 詳細については、「<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>」を参照してください。  
   
  実装する 2 つの方法がある`IVsLanguageContextProvider`:  
   
--   コンテキストのバッグにキーワードを指定します。  
+-   コンテキスト バッグにするキーワードします。  
   
-     コンテキスト バッグを更新する、エディターが呼び出されると、適切なキーワードと属性に渡す、戻ります`S_OK`です。 この戻り値は、エディター コンテキスト バッグにカーソルをキーワードを指定するのではなく、キーワードと属性のコンテキストを保持するように指示します。  
+     コンテキスト バッグを更新する、エディターが呼び出されると、適切なキーワードと属性を渡すし、戻ります`S_OK`します。 この戻り値には、エディター コンテキスト バッグにカーソルをキーワードを指定するのではなく、キーワードと属性のコンテキストを保持するように指示します。  
   
 -   カーソル位置にキーワードからキーワードを取得します。  
   
-     コンテキスト バッグを更新する、エディターが呼び出されると、適切な属性で渡すし、返す`E_FAIL`です。 この戻り値では、エディター コンテキスト バッグ内の属性を保持するが、カーソル位置にキーワードを使用してコンテキスト バッグを更新するように指示します。  
+     コンテキスト バッグを更新する、エディターが呼び出されると、適切な属性を渡すし、戻ります`E_FAIL`します。 この戻り値には、エディター、コンテキスト バッグに、属性を保持がカーソル位置にキーワードを使用して、コンテキスト バッグを更新するように指示します。  
   
- 次の図は、言語サービスを実装するコンテキストを提供する方法を示しています`IVsLanguageContextProvider`です。  
+ 次の図は、実装する言語サービスのコンテキストを提供する方法を示します`IVsLanguageContextProvider`します。  
   
  ![LangServiceImplementation2 グラフィック](../extensibility/media/vslanguageservice2.gif "vsLanguageService2")  
 言語サービスのコンテキスト  
   
- ダイアグラムでわかるように、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア テキスト エディターが付属しているコンテキスト バッグ。 このコンテキストのバッグが 3 つの独立したサブコンテキスト バッグを指す: 言語サービス、既定のエディター、およびテキスト マーカー。 言語サービスとテキスト マーカー サブコンテキスト バッグを含む属性とキーワードが言語サービスの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスを実装すると、およびテキスト マーカー場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスを実装します。 これらのインターフェイスのいずれかを実装しない場合、エディターは、キーワードの既定のエディター サブコンテキスト バッグ内のカーソル位置のコンテキストを提供し、します。  
+ 図では、ご覧のとおり、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキストのコア エディターがコンテキスト バッグがアタッチされています。 このコンテキスト バッグが 3 つの個別のサブコンテキスト バッグを指す: 言語サービスの既定のエディターやテキスト マーカー。 言語サービスとテキスト マーカーのサブコンテキスト バッグを含む属性とキーワード、言語サービスの場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>インターフェイスを実装すると、およびテキスト マーカー場合、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerContextProvider>インターフェイスを実装します。 これらのインターフェイスのいずれかを実装しない場合、エディターは、キーワードの既定のエディターのサブコンテキスト バッグ内のカーソル位置のコンテキストを提供します。  
   
 ## <a name="context-guidelines-for-editors-and-designers"></a>エディターとデザイナーのコンテキストのガイドライン  
- デザイナーおよびエディターには、エディターまたはデザイナー ウィンドウの一般的なキーワードを指定する必要があります。 これは、できるように、ユーザーが f1 キーを押すと、デザイナーまたはエディターのジェネリックでは、適切なヘルプ トピックが表示されます。 エディター必要があります、さらに、カーソル位置の現在のキーワードを指定または現在の選択内容に基づいて、重要な用語を指定します。 これは、ユーザーが f1 キーを押したときに、表示を選択テキストや UI 要素のヘルプ トピックを指していることを確認します。 デザイナーでは、フォーム上のボタンなど、デザイナーで選択した項目のコンテキストを提供します。 エディターやデザイナー必要がありますもサービスへの接続の言語で説明したよう[レガシ言語サービス Essentials](../extensibility/internals/legacy-language-service-essentials.md)です。
+ デザイナーおよびエディターには、エディターまたはデザイナー ウィンドウの一般的なキーワードを指定する必要があります。 これは、ユーザーが押したときに、デザイナーまたはエディターのジェネリックでは、適切なヘルプ トピックが表示されますのでする**F1**します。 エディター、する必要があります。 さらに、カーソル位置の現在のキーワードを指定または現在の選択に基づく、重要な用語を指定します。 これは、ユーザーが押したときに表示を選択したテキストまたは UI 要素のヘルプ トピックを指していることを確認するため**F1**します。 デザイナーでは、フォーム上のボタンなどのデザイナーで選択した項目のコンテキストを提供します。 エディターとデザイナーする必要がありますもサービスに接続する言語」の説明に従って[レガシ言語サービスの基本情報](../extensibility/internals/legacy-language-service-essentials.md)します。
