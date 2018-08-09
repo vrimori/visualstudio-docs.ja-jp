@@ -176,7 +176,7 @@ WPF | Managed Desktop Workload コア | Microsoft.VisualStudio.Component.Managed
 
 Visual Studio 製品ごとに並べ替えコンポーネントの一覧は、「 [Visual Studio 2017 のワークロードとコンポーネント Id](https://aka.ms/vs2017componentIDs)します。 マニフェストでは、前提条件となる Id には、これらのコンポーネント Id を使用します。
 
-どのコンポーネントには、特定のバイナリが含まれていますが不明な場合は、ダウンロード、[コンポーネント バイナリ マッピング スプレッドシート]-> [](https://aka.ms/vs2017componentid-binaries)します。
+どのコンポーネントには、特定のバイナリが含まれていますが不明な場合は、ダウンロード、[コンポーネント バイナリ マッピング スプレッドシート]-> [](https://aka.ms/vs2017componentid-binaries) します。
 
 ### <a name="vs2017-componentbinarymappingxlsx"></a>vs2017 ComponentBinaryMapping.xlsx
 
