@@ -49,7 +49,7 @@
                   href: direct-selection-tool-modifier-keys-in-blend.md
             - name: アクセシビリティ製品およびサービス (Blend)
               href: accessibility-products-and-services-blend.md
-    - name: WPF の使用を開始する
+    - name: Windows Presentation Foundation (WPF)
       href: getting-started-with-wpf.md
       items:
         - name: WPF の概要
@@ -80,18 +80,18 @@
                       href: value-xelement-dynamic-property.md
                     - name: Xml (XElement 動的プロパティ)
                       href: xml-xelement-dynamic-property.md
-            - name: 例
-              href: wpf-data-binding-using-linq-to-xml-example.md
-              items:
-                - name: LinqToXmlDataBinding という例をビルドして実行する
-                  href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
-                - name: 'チュートリアル: LINQ to XML のデータ バインディング'
-                  href: walkthrough-linqtoxmldatabinding-example.md
+                - name: 例
+                  href: wpf-data-binding-using-linq-to-xml-example.md
                   items:
-                    - name: L2DBForm.xaml ソース コード
-                      href: l2dbform-xaml-source-code.md
-                    - name: L2DBForm.xaml.cs sauce コード
-                      href: l2dbform-xaml-cs-source-code.md
+                    - name: LinqToXmlDataBinding という例をビルドして実行する
+                      href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                    - name: 'チュートリアル: LINQ to XML のデータ バインディング'
+                      href: walkthrough-linqtoxmldatabinding-example.md
+                      items:
+                        - name: L2DBForm.xaml ソース コード
+                          href: l2dbform-xaml-source-code.md
+                        - name: L2DBForm.xaml.cs sauce コード
+                          href: l2dbform-xaml-cs-source-code.md
     - name: ゲームとアプリ用の 3D アセットを操作する
       href: working-with-3-d-assets-for-games-and-apps.md
       items:
