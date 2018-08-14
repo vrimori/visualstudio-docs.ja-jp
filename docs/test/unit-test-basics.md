@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d10568bebf7dfd978d553900ea46fdd35c1e97f
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: d9c49816fb412a7c52e3d9e63fd0e4ec5675e7c3
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978373"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511452"
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 
@@ -24,7 +24,7 @@ ms.locfileid: "38978373"
 
 単体テストは、ソフトウェア開発ワークフローの構成要素になったときに、コードの品質に最大の効果をもたらします。 関数またはその他のアプリケーション コードを記述したらすぐに、標準的な入力データ、境界上のデータ、および正しくないデータに対するコードの動作を検証し、コードによる明示的または暗黙的な前提を確認する単体テストを作成してください。 *テスト駆動開発*では、コードを記述する前に単体テストを作成することで、設計ドキュメントと機能仕様の両方として単体テストを使用します。
 
-コードから簡単にテスト プロジェクトとテスト メソッドを生成したり、必要に応じて手動でテストを作成したりできます。 IntelliTest を使用して .NET コードを精査する際は、テスト データと単体テストのスイートを生成できます。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 [コードの単体テストを生成する](http://msdn.microsoft.com/library/dn823749.aspx)方法をご覧ください。
+コードから簡単にテスト プロジェクトとテスト メソッドを生成したり、必要に応じて手動でテストを作成したりできます。 IntelliTest を使用して .NET コードを精査する際は、テスト データと単体テストのスイートを生成できます。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 [コードの単体テストを生成する](generate-unit-tests-for-your-code-with-intellitest.md)方法をご覧ください。
 
 テスト エクスプローラーは、テスト エクスプローラーのアドオン インターフェイスを実装した、サードパーティ製やオープン ソースの単体テスト フレームワークも実行できます。 Visual Studio 拡張機能マネージャーおよび Visual Studio ギャラリーを使用して、これらのフレームワークの多くを追加できます。 「[サードパーティ製の単体テスト フレームワークをインストールする](../test/install-third-party-unit-test-frameworks.md)」を参照してください。
 
@@ -40,7 +40,7 @@ ms.locfileid: "38978373"
 
 ## <a name="the-mybank-solution-example"></a>MyBank ソリューションの例
 
-このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述され、マネージド コード用の Microsoft 単体テスト フレームワークを使用して示されますが、その概念は他の言語やフレームワークに容易に移行できます。
+このトピックでは、例として `MyBank` という架空のアプリケーションの開発を使用します。 このトピックの説明は、実際のコードがなくても理解できます。 テスト メソッドは C# で記述されており、マネージド コード用の Microsoft 単体テスト フレームワークを使用して提供されます。 ただし、その概念は他の言語やフレームワークに簡単に移行することができます。
 
  ![MyBank ソリューション](../test/media/ute_mybanksolution.png)
 
@@ -58,7 +58,7 @@ ms.locfileid: "38978373"
 
 -   *IAccount.cs* は、アカウントで資産の預け入れや引き出しを行うメソッドや、アカウントの残高を取得するメソッドを含む、アカウントの標準の `IAccount` インターフェイスを定義します。
 
--   *CheckingAccount.cs* には、当座預金アカウントの `IAccounts` インターフェイスを実装する `CheckingAccount` クラスが含まれています。
+-   *CheckingAccount.cs* には、当座預金アカウントの `IAccount` インターフェイスを実装する `CheckingAccount` クラスが含まれています。
 
 当座預金アカウントからの引き出しの際は、引き出される金額がアカウントの残高より少ないことを確認する必要があります。 そのため、この条件をチェックするメソッドで、 `IAccount.Withdraw` の `CheckingAccount` メソッドをオーバーライドします。 メソッドは次のようになります。
 
@@ -311,7 +311,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
 
  [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md) の詳細を確認してください。
 
- **Q: 外部依存関係を含むコード内のメソッドをテストする方法を教えてください。**
+ **Q: 外部依存関係を含むコード内のメソッドをテストすることはできますか。**
 
  **A:** できます。 Visual Studio Enterprise を使用している場合は、Microsoft Fakes は、マネージド コード用の単体テスト フレームワークを使用して記述したテスト メソッドで使用できます。
 

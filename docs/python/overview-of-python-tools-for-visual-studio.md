@@ -11,18 +11,18 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8018f637b4c73c786d0433b1b88659fe6b8628d8
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 368809792e05ad418fccf65640ae99470128f6aa
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175367"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468778"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
 Python は、信頼性と柔軟性に優れ、簡単に学ぶことができ、すべてのオペレーティング システムで自由に使える一般的なプログラミング言語であり、強力な開発者コミュニティと多くの無料ライブラリによってサポートされています。 Python は、Web アプリケーション、Web サービス、デスクトップ アプリ、スクリプト、科学技術計算などのすべての開発方法をサポートし、多くの大学、科学者、一般の開発者、プロの開発者によって同様に使われています。 この言語について詳しくは、[python.org](https://www.python.org) および「[Python for Beginners](https://www.python.org/about/gettingstarted/)」(初心者向けの Python) をご覧ください。
 
-Visual Studio は、Windows 上の強力な Python IDE です。 Visual Studio では、Python の開発およびデータ サイエンス ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。
+Visual Studio は、Windows 上の強力な Python IDE です。 Visual Studio では、**Python の開発**および**データ サイエンス** ワークロードによる Python 言語の[オープンソース](https://github.com/Microsoft/ptvs) サポート (Visual Studio 2017) および無料の Python Tools for Visual Studio 拡張機能 (Visual Studio 2015 以降) が提供されています。
 
 現在、Python は Visual Studio for Mac ではサポートされていませんが、Visual Studio Code によって Mac と Linux でも使うことができます (「[質問と回答](#questions-and-answers)」を参照)。
 
@@ -42,12 +42,12 @@ Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅�
 詳細情報
 
 - ビデオ (2 分 35 秒): [Python 環境の管理](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=qrDmN4LWE_8305918567)
-- ドキュメント: [Python 環境の管理](managing-python-environments-in-visual-studio.md)
+- ドキュメント: [Python 環境を管理する](managing-python-environments-in-visual-studio.md)
 - ドキュメント: [[Python 環境] ウィンドウ リファレンス](python-environments-window-tab-reference.md)
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>豊富な編集、IntelliSense、コード読解
 
-Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、lint、型に関するヒントなどを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、[定義へ移動]、[すべての参照の検索]、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
+Visual Studio には、構文の色分け、すべてのコードとライブラリのオートコンプリート、コードの書式設定、シグネチャ ヘルプ、リファクタリング、lint、型に関するヒントなどを備える最上級の Python エディターが用意されています。 また、Visual Studio には、クラス ビュー、**[定義へ移動]**、**[すべての参照の検索]**、コード スニペットなど、独自の機能もあります。 [対話型ウィンドウ](#interactive-window)と直接統合されているので、既にファイルに保存されている Python コードを簡単に開発することができます。
 
 ![Visual Studio での Python コードのオートコンプリート](media/code-editing-completions-simple.png)
 
@@ -66,9 +66,9 @@ Visual Studio で認識されるすべての Python 環境で、別のコマン�
 
 ![Visual Studio の Python 対話型ウィンドウ](media/interactive-window.png)
 
-また、Visual Studio では、Python コード エディターと対話型ウィンドウ間の緊密な統合も提供されています。 キーボード ショートカットの **Ctrl + Enter** キーを使用すると、簡単にエディターの現在のコード行 (またはコード ブロック) を対話型ウィンドウに送信し、次の行 (またはブロック) に移動することができます。 **Ctrl + Enter** キーを使用すると、デバッガーを実行することなく簡単にコードをステップ実行できます。 また、選択されているコードを同じキー入力で対話型ウィンドウに送信し、対話型ウィンドウのコードをエディターに簡単に貼り付けることもできます。 これらの機能を組み合わせることで、対話型内のコードのセグメントについて詳しく調べ、エディターで簡単に結果をファイルに保存することができます。
+また、Visual Studio では、Python コード エディターと**対話型**ウィンドウ間の緊密な統合も提供されています。 キーボード ショートカットの **Ctrl** + **Enter** キーを使用すると、簡単にエディターの現在のコード行 (またはコード ブロック) を**対話型**ウィンドウに送信し、次の行 (またはブロック) に移動することができます。 **Ctrl** + **Enter** キーを使用すると、デバッガーを実行することなく簡単にコードをステップ実行できます。 また、選択されているコードを同じキー入力で**対話型**ウィンドウに送信し、**対話型**ウィンドウのコードをエディターに簡単に貼り付けることもできます。 これらの機能を組み合わせることで、**対話型**ウィンドウ内のコードのセグメントについて詳しく調べ、エディターで簡単に結果をファイルに保存することができます。
 
-Visual Studio は、インライン プロット、.NET、Windows Presentation Foundation (WPF) など、REPL の IPython/Jupytr もサポートしています。
+Visual Studio は、インライン プロット、.NET、Windows Presentation Foundation (WPF) など、REPL の IPython/Jupyter もサポートしています。
 
 詳細情報
 
@@ -97,7 +97,7 @@ Visual Studio は、時間と共に複雑になるプロジェクトを管理す
 
 ## <a name="full-featured-debugging"></a>フル機能のデバッグ
 
-Visual Studio の長所の 1 つは強力なデバッガーです。 特に Python 用には、Python/C++ 混合モード デバッグ、Linux 上のリモート デバッグ、Azure 上のリモート デバッグ、対話型ウィンドウ内のデバッグ、Python の単体テストのデバッグが Visual Studio に含まれています。
+Visual Studio の長所の 1 つは強力なデバッガーです。 特に Python 用には、Python/C++ 混合モード デバッグ、Linux 上のリモート デバッグ、Azure 上のリモート デバッグ、**対話型**ウィンドウ内のデバッグ、Python の単体テストのデバッグが Visual Studio に含まれています。
 
 ![例外をポップアップ表示する Python 用の Visual Studio デバッガー](media/debugging-exception-popup.png)
 
@@ -124,7 +124,7 @@ Visual Studio の長所の 1 つは強力なデバッガーです。 特に Pyth
 
 ## <a name="unit-testing-tools"></a>単体テスト ツール
 
-Visual Studio テスト エクスプローラーでテストを検出、実行、および管理し、単体テストを簡単にデバッグします。
+Visual Studio **テスト エクスプローラー**でテストを検出、実行、および管理し、単体テストを簡単にデバッグします。
 
 ![Visual Studio での Python 単体テストのデバッグ](media/unit-test-debugging.png)
 
@@ -134,15 +134,15 @@ Visual Studio テスト エクスプローラーでテストを検出、実行�
 - ドキュメント: [Python 用の単体テスト ツール](unit-testing-python-in-visual-studio.md)
 - 一般的な Visual Studio 機能のドキュメント: [コードの単体テスト](../test/unit-test-your-code.md)
 
-## <a name="publishing-to-azure-and-azure-sdk-for-python"></a>Azure と Azure SDK for Python への発行
+## <a name="publish-to-azure-and-azure-sdk-for-python"></a>Azure と Azure SDK for Python への発行
 
-Visual Studio は、Web アプリケーションとクラウド サービスを Azure に発行するための統合サポートを提供しています。 Visual Studio には、動的コンテンツと静的コンテンツの両方に必要な `web.config` 項目テンプレートが含まれています。 Python ワークロードに含まれる Azure SDK for Python を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
+Visual Studio は、Web アプリケーションとクラウド サービスを Azure に発行するための統合サポートを提供しています。 Visual Studio には、動的コンテンツと静的コンテンツの両方に必要な *web.config* 項目テンプレートが含まれています。 Python ワークロードに含まれる Azure SDK for Python を使うと、Windows、Mac OS X、Linux アプリから Azure サービスを簡単に利用できます。
 
 ![Visual Studio で Python アプリケーションを Azure に発行する](media/azure-publish-dialog.png)
 
 詳細情報
 
-- ドキュメント: [Azure への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- ドキュメント: [Azure に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - ドキュメント: [Azure SDK for Python](azure-sdk-for-python.md)
 
 ## <a name="python-training-on-microsoft-virtual-academy"></a>Microsoft Virtual Academy の Python トレーニング
@@ -163,7 +163,7 @@ A:  この分野の主なツールとして [Qt Project](https://www.qt.io/qt-fo
 
 **Q.Python プロジェクトでスタンドアロンの実行可能ファイルを作成できますか?**
 
-A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が紹介されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) を参照してください。
+A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が紹介されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) をご覧ください。
 
 ## <a name="features-matrix"></a>機能一覧
 
@@ -291,9 +291,9 @@ Visual Studio 2015 およびそれ以前のバージョンは、[visualstudio.mi
 
 1. Visual Studio 2013 の Django テンプレート エディターには、Update 2 をインストールすることで解決される既知の問題がいくつかあります。
 
-1. Windows 8 以降が必要です。 Visual Studio 2013 Express for Web には [プロセスにアタッチ] ダイアログがありませんが、Azure Web サイトのリモート デバッグはサーバー エクスプローラーの [デバッガーのアタッチ] (Python) コマンドを使って可能です。 リモート デバッグには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
+1. Windows 8 以降が必要です。 Visual Studio 2013 Express for Web には **[プロセスにアタッチ]** ダイアログがありませんが、Azure Web サイトのリモート デバッグは、**サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドを使って実行可能です。 リモート デバッグには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
 
-1. Windows 8 以降が必要です。 サーバー エクスプローラーの [デバッガーのアタッチ (Python)] コマンドには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
+1. Windows 8 以降が必要です。 **サーバー エクスプローラー**の **[デバッガーのアタッチ(Python)]** コマンドには、[Azure SDK for .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) 以降が必要です。
 
 1. Windows 8 以降が必要です。
 

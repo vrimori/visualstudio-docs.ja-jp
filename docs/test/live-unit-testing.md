@@ -11,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: c8541fd3a6f48ca6c2a1276265b7908e3ae50634
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: fcdb8a25f9f82f317a1fcf5de1dd50a90bf6c4a7
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382013"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586480"
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017 での Live Unit Testing
 
@@ -102,7 +102,7 @@ Live Unit Testing を有効にするには、Visual Studio の最上位メニュ
 
 - **[オプション]** は、「[Live Unit Testing の構成](#configure-live-unit-testing)」セクションに説明されている **[オプション]** ダイアログを開きます。
 
-##  <a name="view-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚エフェクトを表示する
+## <a name="view-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚エフェクトを表示する
 
 Live Unit Testing を有効にすると、Visual Studio エディターの各コード行が更新されて、記述しているコードが単体テストによってカバーされているかどうか、およびコードをカバーしているテストが合格かどうかが示されます。  次の図では、テストに合格したコード行と不合格のコード行、およびテストでカバーされていないコード行が示されています。 緑の "✓" で示される行は、すべてのテストに合格しています。赤い "x" で示される行は、1 つ以上のテストで不合格になっています。青い "➖" で示される行は、どのテストでもカバーされていません。
 
@@ -186,8 +186,8 @@ Live Unit Testing でのカバレッジのレポートからメソッド、ク�
 
 ## <a name="see-also"></a>関連項目
 
-[コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
-[Live Unit Testing のブログ](https://go.microsoft.com/fwlink/?linkid=842514)
-[Live Unit Testing に関する FAQ](live-unit-testing-faq.md)
-[Channel 9 ビデオ: Visual Studio 2017 での Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
+- [コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
+- [Live Unit Testing のブログ](https://go.microsoft.com/fwlink/?linkid=842514)
+- [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
+- [Channel 9 ビデオ: Visual Studio 2017 での Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
 

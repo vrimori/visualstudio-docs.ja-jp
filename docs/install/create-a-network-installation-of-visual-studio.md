@@ -14,16 +14,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 142aff42eff0184e957242ca09bc3b591b919d1f
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: ea0569172a73ab4f4187a7202f24cb65f7ac33ed
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057997"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586535"
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
-一般的に、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Visual Studio 2017 は、初期インストールのファイルがすべての製品の更新プログラムとともに単一のファイルにキャッシュできるように設計されています。 (このプロセスは_レイアウトの作成_とも呼ばれています。)これは、最新のサービスの更新プログラムに更新されていない場合でも、クライアント ワークステーションが同じネットワークの場所を使用してインストールを管理できるようにするためです。
+通常、企業の管理者はクライアント ワークステーションに展開するためのネットワーク インストール ポイントを作成します。 Visual Studio 2017 は、初期インストールのファイルがすべての製品の更新プログラムとともに単一のファイルにキャッシュできるように設計されています。 (このプロセスは_レイアウトの作成_とも呼ばれています。)これは、最新のサービスの更新プログラムに更新されていない場合でも、クライアント ワークステーションが同じネットワークの場所を使用してインストールを管理できるようにするためです。
 
  > [!NOTE]
  > 複数のエディションの Visual Studio を企業内で利用している場合 (たとえば、Visual Studio Professional と Visual Studio Enterprise の両方)、エディションごとに個別のネットワーク インストール共有を作成する必要があります。

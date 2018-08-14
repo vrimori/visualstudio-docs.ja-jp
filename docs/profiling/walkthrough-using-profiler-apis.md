@@ -13,14 +13,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50b77a343f8fe918fa079a3b4f148407701276c8
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: a6c6d4a5fce3bbd3d050d3aaae4908b59d745596
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572983"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468211"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル: プロファイラー API の使用
+
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
   
  このチュートリアルの手順は、一般に C/C++ アプリケーションに該当します。 言語ごとに、適したビルド環境を構成する必要があります。  
@@ -50,7 +51,7 @@ ProfileLevel.Global,
 DataCollection.CurrentId);  
 ```  
   
- API 呼び出しを使用せず、コマンド ラインでのデータ収集を無効にできます。 次の手順では、コマンド ライン ビルド環境がプロファイリング ツールを開発ツールとして実行するよう構成されていることが前提です。 これには、VSInstr と VSPerfCmd に必要な設定が含まれます。 コマンド ライン プロファイリング ツールに関するページを参照してください。  
+ API 呼び出しを使用せず、コマンド ラインでのデータ収集を無効にできます。 次の手順では、コマンド ライン ビルド環境がプロファイリング ツールを開発ツールとして実行するよう構成されていることが前提です。 これには、VSInstr と VSPerfCmd に必要な設定が含まれます。 [コマンド ライン プロファイリング ツール](../profiling/using-the-profiling-tools-from-the-command-line.md)に関するページをご覧ください。  
   
 ## <a name="limit-data-collection-using-profiler-apis"></a>プロファイラー API を使用したデータ収集の制限  
   
@@ -69,47 +70,51 @@ DataCollection.CurrentId);
     using System.Text;  
     using Microsoft.VisualStudio.Profiler;  
   
-    namespace ConsoleApplication2  
+    namespace ConsoleApplication1  
     {  
         class Program  
         {  
             public class A  
             {  
-             private int _x;  
+                private int _x;  
   
-             public A(int x)  
-             {  
-              _x = x;  
-             }  
+                public A(int x)  
+                {  
+                    _x = x;  
+                }  
   
-             public int DoNotProfileThis()  
-             {  
-              return _x * _x;  
-             }  
+                public int DoNotProfileThis()  
+                {  
+                    return _x * _x;  
+                }  
   
-             public int OnlyProfileThis()  
-             {  
-              return _x + _x;  
-             }  
+                public int OnlyProfileThis()  
+                {  
+                    return _x + _x;  
+                }  
   
-             public static void Main()  
-             {  
-            DataCollection.StopProfile(  
-            ProfileLevel.Global,  
-            DataCollection.CurrentId);  
-              A a;  
-              a = new A(2);  
-              int x;      
-              Console.WriteLine("2 square is {0}", a.DoNotProfileThis());  
-              DataCollection.StartProfile(  
-                  ProfileLevel.Global,  
-                  DataCollection.CurrentId);  
-              x = a.OnlyProfileThis();  
-              DataCollection.StopProfile(  
-                  ProfileLevel.Global,   
-                  DataCollection.CurrentId);  
-              Console.WriteLine("2 doubled is {0}", x);  
-             }  
+                public static void Main()  
+                {  
+                    DataCollection.StopProfile(  
+                    ProfileLevel.Global,  
+                    DataCollection.CurrentId); 
+
+                    A a = new A(2);  
+                    Console.WriteLine("2 square is {0}", a.DoNotProfileThis()); 
+
+                    DataCollection.StartProfile(  
+                    ProfileLevel.Global,  
+                    DataCollection.CurrentId);
+
+                    int x;  
+                    x = a.OnlyProfileThis();  
+
+                    DataCollection.StopProfile(  
+                    ProfileLevel.Global,   
+                    DataCollection.CurrentId);  
+
+                    Console.WriteLine("2 doubled is {0}", x);  
+                }  
             }  
   
         }  
@@ -142,21 +147,21 @@ DataCollection.CurrentId);
   
 1.  このチュートリアルで前述した「プロファイルするコードを作成するには」の手順で作成したサンプル コードのデバッグ バージョンをコンパイルします。  
   
-2.  マネージ アプリケーションをプロファイリングするには、次のコマンドを入力し、適切な環境変数を設定します。  
+2.  マネージド アプリケーションをプロファイリングするには、次のコマンドを入力し、適切な環境変数を設定します。  
   
-     **VsPefCLREnv /traceon**  
+     **VsPerfCLREnv /traceon**  
   
-3.  **VSInstr \<filename>.exe** のコマンドを入力します。  
+3.  コマンド **VSInstr \<filename>.exe** を入力します。  
   
-4.  **VSPerfCmd /start:trace /output:\<filename>.vsp** のコマンドを入力します。  
+4.  コマンド **VSPerfCmd /start:trace /output:\<filename>.vsp** を入力します。  
   
-5.  **VSPerfCmd /globaloff** のコマンドを入力します。  
+5.  コマンド **VSPerfCmd /globaloff** を入力します。  
   
 6.  プログラムを実行します。  
   
-7.  **VSPerfCmd/shutdown** のコマンドを入力します。  
+7.  コマンド **VSPerfCmd /shutdown** を入力します。  
   
-8.  **VSPerfReport /calltrace:\<filename>.vsp** のコマンドを入力します。  
+8.  コマンド **VSPerfReport /calltrace:\<filename>.vsp** を入力します。  
   
      現在のディレクトリに、結果のパフォーマンス データが含まれた .*csv* ファイルが作成されます。  
   

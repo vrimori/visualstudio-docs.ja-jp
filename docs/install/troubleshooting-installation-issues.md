@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2017 のインストール時に発生する問題を解決する
 description: ときには、問題が発生してしまうことがあります。 Visual Studio のインストールまたはアップグレードが失敗した場合、このページが役に立ちます。
-ms.date: 11/21/2017
+ms.date: 08/01/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: troubleshooting
@@ -14,22 +14,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 02ed2724f82923ed2157133c3c36b9ff06a1b7d5
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: b6a7ae2bff6d35c77dc54ce07207af375b76ee77
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282955"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511692"
 ---
-# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
+# <a name="troubleshoot-visual-studio-2017-installation-and-upgrade-issues"></a>Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング
 
-## <a name="symptoms"></a>現象
+> [!IMPORTANT]
+> インストールに関する問題がある場合、 Microsoft によるサポートを受けられます。 [**ライブ チャット**](https://visualstudio.microsoft.com/vs/support/#talktous) (英語のみ) のサポート オプションが用意されています。
 
-Visual Studio 2017 をインストールまたは更新しようとすると、操作が失敗する。
+このトラブルシューティング ガイドには、インストールに関する問題のほとんどを解決できるステップ バイ ステップの手順が含まれています。
 
-## <a name="workaround"></a>回避策
+## <a name="how-to-troubleshoot-an-online-installation"></a>オンライン インストールのトラブルシューティング方法
 
-この問題を回避するには、次の手順を実行します。
+次の手順は、通常のオンライン インストール用に最適化されています。 オフライン インストールに影響を与える問題については、「[オフライン インストールのトラブルシューティング方法](#how-to-troubleshoot-an-offline-installation)」をご覧ください。
 
 ### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>手順 1 - この問題が既知の問題であるかどうかを確認する
 
@@ -43,17 +44,17 @@ Visual Studio インストーラーには、Microsoft が修正に取り組ん�
 
 Visual Studio インストーラーのブートストラップは、Visual Studio インストーラーの残りをインストールする最小限の軽量な実行可能ファイルです。 Visual Studio インストーラー ファイルを削除して、ブートストラップを再実行すると、いくつかの更新エラーを解決できる場合があります。
 
->[!NOTE]
-次のアクションを実行すると、Visual Studio インストーラー ファイルが再インストールされ、インストール メタデータがリセットされます。
+> [!NOTE]
+> 次のアクションを実行すると、Visual Studio インストーラー ファイルが再インストールされ、インストール メタデータがリセットされます。
 
 1. Visual Studio インストーラーを閉じます。
 2. Visual Studio インストーラーのディレクトリを削除します。 通常、ディレクトリは `C:\Program Files (x86)\Microsoft Visual Studio\Installer` です。
-3. Visual Studio インストーラーのブートストラップを実行します。 [ダウンロード] フォルダーのブートストラップのファイル名には `vs_[Visual Studio edition]__*.exe` のパターンが使用されている場合があります。 アプリケーションが見つからない場合は、「[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)」ページに移動し、Visual Studio のお使いのエディションの **[ダウンロード]** をクリックして、ブートストラップをダウンロードできます。 実行可能ファイルを実行して、インストール メタデータをリセットします。
+3. Visual Studio インストーラーのブートストラップを実行します。 [ダウンロード] フォルダーのブートストラップのファイル名には `vs_[Visual Studio edition]__*.exe` のパターンが使用されている場合があります。 アプリケーションが見つからない場合は、「[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)」ページに移動し、Visual Studio のお使いのエディションの **[ダウンロード]** をクリックして、ブートストラップをダウンロードできます。 次に、実行可能ファイルを実行して、インストール メタデータをリセットします。
 4. Visual Studio のインストールまたは更新を再度試します。 インストーラーのエラーが続く場合は、次の手順に進みます。
 
 ### <a name="step-4---report-a-problem"></a>手順 4 - 問題を報告する
 
-ファイルの破損など、一部の状況では、問題をケースごとに調べなければならない場合があります。
+ファイルの破損など、一部の状況では、ケースごとに問題を調べる必要がある場合があります。 サポートに役立つように、次のことを実行します。
 
 1. セットアップ ログを収集します。 詳細については、「[Visual Studio のインストール ログを取得する方法](#how-to-get-the-visual-studio-installation-logs)」をご覧ください。
 2. Visual Studio インストーラーを開き、**[問題の報告]** をクリックして、Visual Studio フィードバック ツールを開きます。
@@ -71,22 +72,22 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 
 ### <a name="step-6---contact-us-optional"></a>手順 6 - 問い合わせる (省略可能)
 
-他のどの手順でも正常にインストールできない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
+前の手順のいずれに従っても Visual Studio のインストールまたはアップグレードに失敗する場合は、詳細なサポートのために[**ライブ チャット**](https://visualstudio.microsoft.com/vs/support/#talktous) サポート オプション (英語のみ) を使用してお問い合わせください。
 
-## <a name="how-to-troubleshoot-an-offline-installer"></a>オフライン インストーラーをトラブルシューティングする方法
+## <a name="how-to-troubleshoot-an-offline-installation"></a>オフライン インストールのトラブルシューティング方法
 
-次にローカル レイアウトからのインストール時の既知の問題と、便利な回避策をいくつか紹介します。
+ローカル レイアウトからインストールする際に役立つ可能性がある、既知の問題と回避策を次の表に示します。
 
 | 懸案事項       | アイテム                   | ソリューション |
 | ----------- | ---------------------- | -------- |
 | ユーザーにファイルへのアクセス権がない。 | アクセス許可 (ACL) | オフライン インストールを共有する*前*に、他のユーザーに読み取りアクセス権を付与するように、必ずアクセス許可 (ACL) を調整してください。 |
 | 新しいワークロード、コンポーネント、または言語をインストールできない。  | `--layout`  | 部分レイアウトからインストールし、その部分レイアウトには以前ダウンロードしなかったワークロード、コンポーネント、または言語を選択した場合は、インターネットにアクセスできることを確認してください。 |
 
-## <a name="how-to-get-the-visual-studio-installation-logs"></a>Visual Studio のインストール ログを取得する方法
+## <a name="how-to-get-visual-studio-installation-logs"></a>Visual Studio のインストール ログを取得する方法
 
 セットアップ ログは、インストールに関する問題の多くをトラブルシューティングするために必要です。 Visual Studio インストーラーの [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) を使用して問題を送信するとき、レポートには自動でこれらのログが含まれます。
 
-Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET Framework ログ収集ツール](https://aka.ms/vscollect)を使用して収集したセットアップ ログの提供が必要になる場合があります。 このログ収集ツールは、Visual Studio 2017 にインストールされている .NET Framework、Windows SDK、SQL Server などのすべてのコンポーネントからセットアップ ログを収集します。 また、コンピューター情報、Windows インストーラーのインベントリ、Visual Studio インストーラーの Windows イベント ログ情報、Windows インストーラー、システムの復元に関する情報を収集します。
+Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET Framework ログ収集ツール](https://aka.ms/vscollect)を使用して、これらのセットアップ ログを提供する必要がある場合があります。 このログ収集ツールは、Visual Studio 2017 にインストールされている .NET Framework、Windows SDK、SQL Server などのすべてのコンポーネントからセットアップ ログを収集します。 また、コンピューター情報、Windows インストーラーのインベントリ、Visual Studio インストーラーの Windows イベント ログ情報、Windows インストーラー、システムの復元に関する情報を収集します。
 
 ログを収集するには:
 
@@ -98,20 +99,13 @@ Microsoft サポートに連絡する場合、[Microsoft Visual Studio と .NET 
 > [!NOTE]
 > このツールは、インストールの実行に失敗したときと同じユーザー アカウントで実行する必要があります。 別のユーザー アカウントでこのツールを実行する場合は、`–user:<name>` オプションを設定して、インストールの実行に失敗したユーザー アカウントを指定します。 追加オプションや使用に関する情報を収集するには、管理コマンド プロンプトで `Collect.exe -?` を実行します。
 
-## <a name="more-support-options"></a>その他のサポート オプション
+## <a name="get-live-help"></a>ライブ ヘルプの取得
 
-他のどの手順でも正常にインストールできない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
-
-他のいくつかのオプションを次に示します。
-
-* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
-* [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (これには [GitHub](https://github.com/) アカウントが必要です)。
+このトラブルシューティング ガイドに記載されているソリューションの一覧に従っても Visual Studio のインストールまたはアップグレードに失敗する場合は、詳細なサポートのために[**ライブ チャット**](https://visualstudio.microsoft.com/vs/support/#talktous) サポート オプション (英語のみ) を使用してください。
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)
-* [Visual Studio インスタンスの検出および管理用のツール](tools-for-managing-visual-studio-instances.md)
-* [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio をインストールする](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
 * [Visual Studio 2017 の削除](remove-visual-studio.md)
+* [ファイアウォールまたはプロキシ サーバーの内側に Visual Studio および Azure Services をインストールして使用する](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
+* [Visual Studio インスタンスの検出および管理用のツール](tools-for-managing-visual-studio-instances.md)
+* [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)

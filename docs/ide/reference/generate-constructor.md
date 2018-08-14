@@ -9,12 +9,12 @@ ms.author: kaseyu
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d3b2aee5bd4fe8a9e65f82cbcbc90edfb583bbbb
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 091caf9db4152b7c349fdf717d97639b360bb602
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117739"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513025"
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio でコンストラクターを生成する
 
@@ -56,7 +56,7 @@ ms.locfileid: "37117739"
 
 1. ドロップダウン メニューから **[コンストラクターを生成する]** を選択します。
 
-   **[Pick memebers]\(メンバーの選択\)** ダイアログ ボックスが開きます。
+   **[メンバーの選択]** ダイアログ ボックスが開きます。
 
 1. コンストラクターのパラメーターとして含めるメンバーを選択します。 上下の矢印を使って順序を変更できます。 **[OK]** をクリックします。
 

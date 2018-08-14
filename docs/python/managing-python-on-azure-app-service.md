@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 406a35ff484b5a6759831b76c2417bf5fcb2d12c
-ms.sourcegitcommit: e6ef03cc415ca67f75fd1f26e0e7b8846857166d
+ms.openlocfilehash: 76d413e37ec7ebeabd8c76655b4c47758ffafc48
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310073"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468716"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service で Python 環境を設定する方法
 
@@ -32,7 +32,7 @@ Azure App Service でのカスタマイズ可能な Python のサポートは、
 > [!Tip]
 > 既定で App Service には、サーバーのルート フォルダーに Python 2.7 と Python 3.4 がインストールされていますが、これらの環境は、カスタマイズしたり、パッケージをインストールすることはできません。また、その存在に依存することもできません。 代わりに、この記事の説明どおりに、制御しているサイトの拡張機能に依存する必要があります。
 
-## <a name="choosing-a-python-version-through-the-azure-portal"></a>Azure Portal から Python のバージョンを選択する
+## <a name="choose-a-python-version-through-the-azure-portal"></a>Azure Portal から Python のバージョンを選択する
 
 1. Azure ポータルで Web アプリの App Service を作成します。
 1. App Service のページで、**[開発ツール]** セクションまでスクロールし、**[拡張機能]** を選択してから、**[+ 追加]** を選択します。
@@ -46,7 +46,7 @@ Azure App Service でのカスタマイズ可能な Python のサポートは、
 1. 拡張機能を選択し、法的条項に同意して、**[OK]** を選択します。
 1. インストールが完了すると、ポータルに通知が表示されます。
 
-## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager から Python のバージョンを選択する
+## <a name="choose-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager から Python のバージョンを選択する
 
 Azure Resource Manager テンプレートを使用して App Service をデプロイしている場合は、サイト拡張機能をリソースとして追加します。 具体的には、拡張機能は、入れ子になったリソース (`resources` の下の `resources` オブジェクト) として、型 `siteextensions` および [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22) からの名前で表示されます。
 
@@ -76,15 +76,15 @@ Azure Resource Manager テンプレートを使用して App Service をデプ�
   }
 ```
 
-## <a name="setting-webconfig-to-point-to-the-python-interpreter"></a>Python インタープリターをポイントする web.config の設定
+## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Python インタープリターをポイントする web.config の設定
 
-(ポータルまたは Azure Resource Manager テンプレートのいずれかを使って) サイト拡張機能をインストールすると、次はアプリの `web.config` ファイルを Python インタープリターへポイントさせます。 `web.config` ファイルは、FastCGI または HttpPlatform のいずれかを使用して Python 要求を処理する方法を、App Service 上で実行される IIS (7 以降) の Web サーバーに指示します。
+(ポータルまたは Azure Resource Manager テンプレートのいずれかを使って) サイト拡張機能をインストールすると、次はアプリの *web.config* ファイルを Python インタープリターへポイントさせます。 *web.config* ファイルは、FastCGI または HttpPlatform のいずれかを使用して Python 要求を処理する方法を、App Service 上で実行される IIS (7 以降) の Web サーバーに指示します。
 
-サイト拡張機能の `python.exe` への完全なパスを探し、適切な `web.config` ファイルを作成および変更します。
+サイト拡張機能の *python.exe* への完全なパスを探し、適切な *web.config* ファイルを作成および変更します。
 
-### <a name="finding-the-path-to-pythonexe"></a>python.exe へのパスを探す
+### <a name="find-the-path-to-pythonexe"></a>python.exe へのパスを探す
 
-Python のサイト拡張機能は、Python のバージョンとアーキテクチャ (いくつかの古いバージョンは除きます) に応じた `d:\home` フォルダー下にインストールされます。 たとえば、Python 3.6.1 x64 は、`d:\home\python361x64` にインストールされます。 この場合、Python インタープリターの完全なパスは、`d:\home\python361x64\python.exe` になります。
+Python のサイト拡張機能は、Python のバージョンとアーキテクチャ (いくつかの古いバージョンは除きます) に応じた、*d:\home* の下のフォルダー内にインストールされます。 たとえば、Python 3.6.1 x64 は、*d:\home\python361x64* にインストールされます。 この場合、Python インタープリターの完全なパスは、*d:\home\python361x64\python.exe*. になります。
 
 App Service でパスを具体的に確認するには、[App Service] ページで **[拡張機能]** を選択し、一覧から拡張機能を選択します。
 
@@ -96,13 +96,13 @@ App Service でパスを具体的に確認するには、[App Service] ページ
 
 拡張機能のパスの表示で問題がある場合、コンソールを使用して手動で検索できます。
 
-1. [App Service] ページで、**[開発ツール] > [コンソール]** の順に選択します。
-1. `ls ../home` または `dir ..\home` のコマンドを入力して、`Python361x64` などの最上位レベルの拡張機能フォルダーを表示します。
-1. `ls ../home/python361x64` または `dir ..\home\python361x64` のようなコマンドを入力して、`python.exe` やその他のインタープリター ファイルが含まれていることを確認します。
+1. [App Service] ページで、**[開発ツール]** > **[コンソール]** の順に選択します。
+1. `ls ../home` または `dir ..\home` のコマンドを入力して、*Python361x64* などの最上位レベルの拡張機能フォルダーを表示します。
+1. `ls ../home/python361x64` または `dir ..\home\python361x64` のようなコマンドを入力して、*python.exe* やその他のインタープリター ファイルが含まれていることを確認します。
 
-### <a name="configuring-the-fastcgi-handler"></a>FastCGI ハンドラーの構成
+### <a name="configure-the-fastcgi-handler"></a>FastCGI ハンドラーの構成
 
-FastCGI は、要求レベルで動作するインターフェイスです。 IIS は、受信接続を受信し、各要求を 1 つ以上の永続的な Python プロセスで実行されている WSGI アプリへ転送します。 [wfastcgi パッケージ](https://pypi.io/project/wfastcgi)は、Python の各サイト拡張機能と共にプレインストールされ構成されているため、以下の Bottle フレームワークを使用した Web アプリ用のコードのように、`web.config` に含めて簡単に有効にできます。 なお、`python.exe` と `wfastcgi.py` への完全なパスは、`PythonHandler` キーに配置します。
+FastCGI は、要求レベルで動作するインターフェイスです。 IIS は、受信接続を受信し、各要求を 1 つ以上の永続的な Python プロセスで実行されている WSGI アプリへ転送します。 [wfastcgi パッケージ](https://pypi.io/project/wfastcgi)は、Python の各サイト拡張機能と共にプレインストールされ構成されているため、以下の Bottle フレームワークを使用した Web アプリ用のコードのように、*web.config* に含めて簡単に有効にできます。 *python.exe* と *wfastcgi.py* への完全なパスが `PythonHandler` キーに配置されることに注意してください。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -129,11 +129,11 @@ FastCGI は、要求レベルで動作するインターフェイスです。 II
 - `WSGI_HANDLER` はアプリからインポート可能な WSGI アプリをポイントする必要があります。
 - `WSGI_LOG` は省略可能ですが、アプリのデバッグのために推奨します。 
 
-Bottle、Flask、および Django Web アプリ用の `web.config` コンテンツのその他の詳細については、「[Publishing to Azure](publishing-python-web-applications-to-azure-from-visual-studio.md)」 (Azure への公開) を参照してください。
+Bottle、Flask、および Django Web アプリ用の *web.config* コンテンツのその他の詳細については、[Azure への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)に関するページをご覧ください。
 
-### <a name="configuring-the-httpplatform-handler"></a>Httpplatform のハンドラーの構成
+### <a name="configure-the-httpplatform-handler"></a>Httpplatform のハンドラーの構成
 
-HttpPlatform モジュールは、スタンドアロンの Python プロセスに直接ソケット接続を渡します。 このパススルーにより、任意の Web サーバーを実行することができますが、ローカル Web サーバーを実行するスタートアップ スクリプトが必要になります。 スクリプトは、`web.config` の `<httpPlatform>` 要素で指定します。ここで、`processPath` 属性はサイト拡張機能の Python インタープリターをポイントし、`arguments` 属性はスクリプトと指定する任意の引数をポイントします。
+HttpPlatform モジュールは、スタンドアロンの Python プロセスに直接ソケット接続を渡します。 このパススルーにより、任意の Web サーバーを実行することができますが、ローカル Web サーバーを実行するスタートアップ スクリプトが必要になります。 スクリプトは、*web.config* の `<httpPlatform>` 要素で指定します。ここで、`processPath` 属性はサイト拡張機能の Python インタープリターをポイントし、`arguments` 属性はスクリプトと指定する任意の引数をポイントします。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -158,7 +158,7 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
 
 ここの `HTTP_PLATFORM_PORT` 環境変数には、ローカル サーバーが localhost からの接続をリッスンするポートが含まれています。 この例では、必要に応じて、別の環境変数 (この場合は `SERVER_PORT`) を作成する方法も示しています。
 
-## <a name="installing-packages"></a>パッケージのインストール
+## <a name="install-packages"></a>パッケージのインストール
 
 サイトの拡張機能を使用してインストールされた Python インタープリターは、Python 環境の一部にすぎません。 その環境に別のパッケージもインストールする必要があります。
 
@@ -175,30 +175,30 @@ HttpPlatform モジュールは、スタンドアロンの Python プロセス�
 
 [Kudu コンソール](https://github.com/projectkudu/kudu/wiki/Kudu-console)は、App Service サーバーとそのファイル システムに直接アクセスするための昇格されたコマンド ライン アクセスを提供します。 これは、重要なデバッグ ツールであると同時に、これでパッケージのインストールなどの CLI 操作を実行できます。
 
-1. Azure ポータルの [App Service] ページから、**[開発ツール] > [高度なツール]** を選択し、**[移動]** を選択して Kudu を開きます。 このアクションにより、`.scm` が挿入されることを除いて、ベースの App Service URL と同じ URL に移動します。 たとえば、ベースの URL が `https://vspython-test.azurewebsites.net/` の場合、Kudu は (ブックマークを設定できる) `https://vspython-test.scm.azurewebsites.net/` にあります。
+1. Azure Portal の [App Service] ページから、**[開発ツール]** > **[高度なツール]** を選択し、**[移動]** を選択して Kudu を開きます。 このアクションにより、`.scm` が挿入されることを除いて、ベースの App Service URL と同じ URL に移動します。 たとえば、ベースの URL が `https://vspython-test.azurewebsites.net/` の場合、Kudu は (ブックマークを設定できる) `https://vspython-test.scm.azurewebsites.net/` にあります。
 
     ![Azure App Service の Kudu コンソール](media/python-on-azure-console01.png)
 
-1. **[デバッグ コンソール] > [CMD]** を選択してコンソールを開きます。このコンソールで Python のインストール環境に移動し、既存のライブラリを確認できます。
+1. **[デバッグ コンソール]** > **[CMD]** を選択してコンソールを開きます。このコンソールで Python のインストール環境に移動し、既存のライブラリを確認できます。
 
 1. 1 つのパッケージをインストールするには、次の手順を実行します。
 
-    a.  パッケージのインストール先の Python のインストール フォルダーに移動します (`d:\home\python361x64` など)。
+    a.  パッケージのインストール先の Python のインストール フォルダーに移動します (*d:\home\python361x64* など)。
 
     b.  `python.exe -m pip install <package_name>` を使用してパッケージをインストールします。
 
     ![Azure App Service の Kudu コンソールを使用して bottle をインストールする例](media/python-on-azure-console02.png)
 
-1. サーバーに既にアプリ用の `requirements.txt` がデプロイ済みの場合、それらのすべての要件を次のようにインストールします。
+1. サーバーに既にアプリ用の *requirements.txt* がデプロイ済みの場合、それらのすべての要件を次のようにインストールします。
 
-    a.  パッケージのインストール先の Python のインストール フォルダーに移動します (`d:\home\python361x64` など)。
+    a.  パッケージのインストール先の Python のインストール フォルダーに移動します (*d:\home\python361x64* など)。
 
     b.  `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt` コマンドを実行します。
 
-    `requirements.txt` は、ローカルおよびサーバーで設定されたのと同じパッケージを簡単に再現できるため、これを使用することをお勧めします。 `requirements.txt` に何らかの変更を行った後に、コンソールにアクセスし、コマンドを再実行することを忘れないでください。
+    *requirements.txt* は、ローカルおよびサーバーで設定されたのと同じパッケージを簡単に再現できるため、これを使用することをお勧めします。 *requirements.txt* に何らかの変更を行った後に、コンソールにアクセスし、コマンドを再実行することを忘れないでください。
 
 > [!Note]
-> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、[requirements.txt での必要なパッケージの管理](managing-required-packages-with-requirements-txt.md)に関する記事を参照してください。
+> App Service には C コンパイラがないため、ネイティブ拡張モジュールを使用して任意のパッケージのホイールをインストールする必要があります。 多くの普及しているパッケージでは、独自のホイールを提供しています。 提供していないパッケージの場合は、ローカルの開発用コンピューターで `pip wheel <package_name>` を使用してホイールをサイトにアップロードします。 例については、「[requirements.txt での必須パッケージの管理](managing-required-packages-with-requirements-txt.md)」をご覧ください。
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 
