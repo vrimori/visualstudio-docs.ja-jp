@@ -39,7 +39,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
  拡張機能の例については、チェック アウト、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)します。 多くの拡張機能はオープン ソース、および Marketplace には、GitHub リポジトリへのリンクが含まれています。
 
 ## <a name="which-visual-studio-features-can-i-extend"></a>Visual Studio 機能を拡張できますか。
- 理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディター、およびなど。
+ 理論上は、Visual Studio のあらゆる部分を拡張することができます: メニューのツールバー、コマンド、windows、ソリューション、プロジェクト、エディターなど。
 
  実際には、ほとんどの人が拡張する機能は、コマンド、メニューとツールバー、windows、IntelliSense、およびプロジェクトが見つかりました。 関連するセクションへのリンクを次に示します。
 
