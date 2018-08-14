@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d1d05670192630e0bc4903988770c52840a5e347
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 64958097b7a5fe86cda1d2b7dee62c69cd2fea63
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37118240"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586418"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio による Python 検索パスの使用方法
 
@@ -30,13 +30,13 @@ ms.locfileid: "37118240"
 
 そのため Visual Studio では、環境とプロジェクトの両方で検索パスを直接指定するための手段が用意されています。 Visual Studio で実行またはデバッグするコードは、検索パスを `PYTHONPATH` (およびその他の同等の変数) の値で受け取ります。 検索パスを追加すると、Visual Studio はそれらの場所でライブラリを検査し、必要に応じて IntelliSense データベースを構築します (Visual Studio 2017 バージョン 15.5 以前、ライブラリの数によっては時間がかかります)。
 
-検索パスを追加するには、ソリューション エクスプローラーで **[Search Paths (検索パス)]** 項目を右クリックし、**[Add Folder to Search Path... (検索パスへのフォルダーの追加...)]** を選んで、含めるフォルダーを選びます。 このパスは、プロジェクトに関連付けられているすべての環境に使われます。 (環境が Python 3 ベースの場合に、検索パスを Python 2.7 モジュールに追加しようとすると、エラーが発生することがあります。)
+検索パスを追加するには、**ソリューション エクスプローラー**で **[Search Paths (検索パス)]** 項目を右クリックし、**[Add Folder to Search Path (検索パスへのフォルダーの追加)]** を選んで、含めるフォルダーを選びます。 このパスは、プロジェクトに関連付けられているすべての環境に使われます。 (環境が Python 3 ベースの場合に、検索パスを Python 2.7 モジュールに追加しようとすると、エラーが発生することがあります。)
 
-**[Add Zip Archive to Search Path... (検索パスへの Zip アーカイブの追加...)]** を選ぶことで、拡張子が `.zip` または `.egg` のファイルを検索パスとして追加することもできます。フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
+**[Add Zip Archive to Search Path (検索パスへの Zip アーカイブの追加)]** を選ぶことで、拡張子が *.zip* または *.egg* のファイルを検索パスとして追加することもできます。 フォルダーと同様に、これらのファイルの内容もスキャンされて、IntelliSense に利用されます。
 
 常に同じ検索パスを使い、内容があまり変化しない場合は、サイトパッケージ フォルダーにインストールする方が効率的な場合があります。 検索パスは分析されて IntelliSense データベースに格納され、常に適切な環境に関連付けられるため、各プロジェクトに検索パスを追加する必要はありません。
 
-## <a name="see-also"></a>関連項目
+### <a name="see-also"></a>関連項目
 
 - [Visual Studio での Python 環境の管理](managing-python-environments-in-visual-studio.md)
 - [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)

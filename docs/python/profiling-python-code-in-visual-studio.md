@@ -11,18 +11,20 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 971eb7ce863fc4281d73e2d4d363805de22810f4
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: feafc7d53e8d450bc980b6d842e9c2a5f0ade2e4
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058631"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468817"
 ---
-# <a name="profiling-python-code"></a>Python コードのプロファイリング
+# <a name="profile-python-code"></a>Python コードのプロファイリング
 
 CPython ベースのインタープリターを使っている場合、Python アプリケーションをプロファイリングできます  (この機能を使うことができる Visual Studio のバージョンについては、[機能一覧のプロファイリング](overview-of-python-tools-for-visual-studio.md#matrix-profiling)を参照してください)。
 
-**[分析] > [Launch Python Profiling (Python プロファイリングの開始)]** メニュー コマンドでプロファイリングを開始すると、構成ダイアログが開きます。
+## <a name="profiling-for-cpython-based-interpreters"></a>CPython ベースのインタープリターのプロファイリング
+
+**[分析]** > **[Launch Python Profiling]\(Python プロファイリングの開始\)** メニュー コマンドでプロファイリングを開始すると、構成ダイアログが開きます。
 
 ![プロファイリング構成ダイアログ](media/profiling-start.png)
 
@@ -41,6 +43,6 @@ CPython ベースのインタープリターを使っている場合、Python �
 
 IronPython は CPython ベースのインタープリターではないため、上記のプロファイリング機能は使用できません。
 
-代わりに、ターゲット アプリケーションとして `ipy.exe` を直接起動し、適切な引数を使ってスタートアップ スクリプトを起動することにより、Visual Studio .NET のプロファイラーを使います。 すべての Python コードを確実にデバッグし、プロファイリングできるようにするには、コマンド ラインに `-X:Debug` を含めます。 この引数により、IronPython ランタイムとコードの両方で費やされた時間を含むパフォーマンス レポートが生成されます。 コードは、完全修飾名を使って識別されます。
+代わりに、ターゲット アプリケーションとして *ipy.exe* を直接起動し、適切な引数を使ってスタートアップ スクリプトを起動することにより、Visual Studio .NET のプロファイラーを使います。 すべての Python コードを確実にデバッグし、プロファイリングできるようにするには、コマンド ラインに `-X:Debug` を含めます。 この引数により、IronPython ランタイムとコードの両方で費やされた時間を含むパフォーマンス レポートが生成されます。 コードは、完全修飾名を使って識別されます。
 
 または、IronPython には独自の組み込みプロファイリングがありますが、現在は適切なビジュアライザーがありません。 利用できるものについては、「[An IronPython Profiler](http://blogs.msdn.com/b/curth/archive/2009/03/29/an-ironpython-profiler.aspx)」(IronPython プロファイラー) (MSDN ブログ) をご覧ください。

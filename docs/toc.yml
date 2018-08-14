@@ -483,71 +483,73 @@
           items:
             - name: 'C# または Visual Basic を使用した WPF アプリの作成'
               href: ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md
-            - name: 'チュートリアル 1: ピクチャ ビューアーの作成 (C#)'
-              href: ide/tutorial-1-create-a-picture-viewer.md
+            - name: Windows フォーム アプリケーションのチュートリアル
               items:
-                - name: '手順 1: Windows フォーム アプリケーション プロジェクトの作成'
-                  href: ide/step-1-create-a-windows-forms-application-project.md
-                - name: '手順 2: プログラムの実行'
-                  href: ide/step-2-run-your-program.md
-                - name: '手順 3: フォームのプロパティの設定'
-                  href: ide/step-3-set-your-form-properties.md
-                - name: '手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定'
-                  href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
-                - name: '手順 5: フォームへのコントロールの追加'
-                  href: ide/step-5-add-controls-to-your-form.md
-                - name: '手順 6: ボタン コントロールの名前の設定'
-                  href: ide/step-6-name-your-button-controls.md
-                - name: '手順 7: フォームへのダイアログ コンポーネントの追加'
-                  href: ide/step-7-add-dialog-components-to-your-form.md
-                - name: '手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述'
-                  href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
-                - name: '手順 9: レビュー、コメントの追加、およびコードのテスト'
-                  href: ide/step-9-review-comment-and-test-your-code.md
-                - name: '手順 10: その他のボタンおよびチェック ボックスに対するコードの記述'
-                  href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-                - name: '手順 11: プログラムの実行とその他の機能の使用'
-                  href: ide/step-11-run-your-program-and-try-other-features.md
-            - name: 'チュートリアル 2: 制限時間ありの計算クイズの作成 (C#)'
-              href: ide/tutorial-2-create-a-timed-math-quiz.md
-              items:
-                - name: '手順 1: プロジェクトの作成とフォームへのラベルの追加'
-                  href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
-                - name: '手順 2: ランダムな加算問題の作成'
-                  href: ide/step-2-create-a-random-addition-problem.md
-                - name: '手順 3: カウントダウン タイマーの追加'
-                  href: ide/step-3-add-a-countdown-timer.md
-                - name: '手順 4: CheckTheAnswer() メソッドの追加'
-                  href: ide/step-4-add-the-checktheanswer-parens-method.md
-                - name: '手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加'
-                  href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
-                - name: '手順 6: 減算問題の追加'
-                  href: ide/step-6-add-a-subtraction-problem.md
-                - name: '手順 7: 乗算問題と除算問題の追加'
-                  href: ide/step-7-add-multiplication-and-division-problems.md
-                - name: '手順 8: クイズのカスタマイズ'
-                  href: ide/step-8-customize-the-quiz.md
-            - name: 'チュートリアル 3: 絵合わせゲームの作成 (C#)'
-              href: ide/tutorial-3-create-a-matching-game.md
-            - name: '手順 1: プロジェクトの作成とフォームへのテーブルの追加'
-              href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
-              items:
-                - name: '手順 2: Random オブジェクトおよびアイコンのリストの追加'
-                  href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
-                - name: '手順 3: 各ラベルへのランダムなアイコンの割り当て'
-                  href: ide/step-3-assign-a-random-icon-to-each-label.md
-                - name: '手順 4: 各ラベルへの Click イベント ハンドラーの追加'
-                  href: ide/step-4-add-a-click-event-handler-to-each-label.md
-                - name: '手順 5: ラベルの参照の追加'
-                  href: ide/step-5-add-label-references.md
-                - name: '手順 6: タイマーの追加'
-                  href: ide/step-6-add-a-timer.md
-                - name: '手順 7: ペアの表示の維持'
-                  href: ide/step-7-keep-pairs-visible.md
-                - name: '手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加'
-                  href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
-                - name: '手順 9: その他の機能を試す'
-                  href: ide/step-9-try-other-features.md
+                - name: 'チュートリアル 1: ピクチャ ビューアーの作成 (C#)'
+                  href: ide/tutorial-1-create-a-picture-viewer.md
+                  items:
+                    - name: '手順 1: Windows フォーム アプリケーション プロジェクトの作成'
+                      href: ide/step-1-create-a-windows-forms-application-project.md
+                    - name: '手順 2: プログラムの実行'
+                      href: ide/step-2-run-your-program.md
+                    - name: '手順 3: フォームのプロパティの設定'
+                      href: ide/step-3-set-your-form-properties.md
+                    - name: '手順 4: TableLayoutPanel コントロールを使用したフォームのレイアウトの設定'
+                      href: ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md
+                    - name: '手順 5: フォームへのコントロールの追加'
+                      href: ide/step-5-add-controls-to-your-form.md
+                    - name: '手順 6: ボタン コントロールの名前の設定'
+                      href: ide/step-6-name-your-button-controls.md
+                    - name: '手順 7: フォームへのダイアログ コンポーネントの追加'
+                      href: ide/step-7-add-dialog-components-to-your-form.md
+                    - name: '手順 8: [Show a Picture] ボタンのイベント ハンドラーのコードの記述'
+                      href: ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md
+                    - name: '手順 9: レビュー、コメントの追加、およびコードのテスト'
+                      href: ide/step-9-review-comment-and-test-your-code.md
+                    - name: '手順 10: その他のボタンおよびチェック ボックスに対するコードの記述'
+                      href: ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
+                    - name: '手順 11: プログラムの実行とその他の機能の使用'
+                      href: ide/step-11-run-your-program-and-try-other-features.md
+                - name: 'チュートリアル 2: 制限時間ありの計算クイズの作成 (C#)'
+                  href: ide/tutorial-2-create-a-timed-math-quiz.md
+                  items:
+                    - name: '手順 1: プロジェクトの作成とフォームへのラベルの追加'
+                      href: ide/step-1-create-a-project-and-add-labels-to-your-form.md
+                    - name: '手順 2: ランダムな加算問題の作成'
+                      href: ide/step-2-create-a-random-addition-problem.md
+                    - name: '手順 3: カウントダウン タイマーの追加'
+                      href: ide/step-3-add-a-countdown-timer.md
+                    - name: '手順 4: CheckTheAnswer() メソッドの追加'
+                      href: ide/step-4-add-the-checktheanswer-parens-method.md
+                    - name: '手順 5: NumericUpDown コントロールの Enter イベント ハンドラーの追加'
+                      href: ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md
+                    - name: '手順 6: 減算問題の追加'
+                      href: ide/step-6-add-a-subtraction-problem.md
+                    - name: '手順 7: 乗算問題と除算問題の追加'
+                      href: ide/step-7-add-multiplication-and-division-problems.md
+                    - name: '手順 8: クイズのカスタマイズ'
+                      href: ide/step-8-customize-the-quiz.md
+                - name: 'チュートリアル 3: 絵合わせゲームの作成 (C#)'
+                  href: ide/tutorial-3-create-a-matching-game.md
+                  items:
+                    - name: '手順 1: プロジェクトの作成とフォームへのテーブルの追加'
+                      href: ide/step-1-create-a-project-and-add-a-table-to-your-form.md
+                    - name: '手順 2: Random オブジェクトおよびアイコンのリストの追加'
+                      href: ide/step-2-add-a-random-object-and-a-list-of-icons.md
+                    - name: '手順 3: 各ラベルへのランダムなアイコンの割り当て'
+                      href: ide/step-3-assign-a-random-icon-to-each-label.md
+                    - name: '手順 4: 各ラベルへの Click イベント ハンドラーの追加'
+                      href: ide/step-4-add-a-click-event-handler-to-each-label.md
+                    - name: '手順 5: ラベルの参照の追加'
+                      href: ide/step-5-add-label-references.md
+                    - name: '手順 6: タイマーの追加'
+                      href: ide/step-6-add-a-timer.md
+                    - name: '手順 7: ペアの表示の維持'
+                      href: ide/step-7-keep-pairs-visible.md
+                    - name: '手順 8: プレーヤーが勝利したかどうかを確認するメソッドの追加'
+                      href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
+                    - name: '手順 9: その他の機能を試す'
+                      href: ide/step-9-try-other-features.md
     - name: データへのアクセス...
       href: data-tools/accessing-data-in-visual-studio.md
     - name: ユーザー インターフェイスを設計する...
@@ -657,12 +659,12 @@
           href: ide/reference/accessibility-products-and-services-from-microsoft.md
         - name: ユーザー補助アプリケーションのデザイン リソース
           href: ide/reference/resources-for-designing-accessible-applications.md
-    - name: アプリケーションのグローバライズとローカライズ
+    - name: アプリのグローバライズとローカライズ
       href: ide/globalizing-and-localizing-applications.md
       items:
-        - name: .NET Framework ベースの国際対応アプリケーションの概要
+        - name: 国際対応 .NET Framework アプリ入門
           href: ide/introduction-to-international-applications-based-on-the-dotnet-framework.md
-        - name: アプリケーションのローカライズ
+        - name: アプリのローカライズ
           href: ide/localizing-applications.md
           items:
             - name: ローカリゼーション用リソースの階層編成
@@ -673,12 +675,12 @@
               href: ide/version-numbers-for-main-and-localized-satellite-assemblies.md
             - name: ローカリゼーションのニュートラル リソース言語
               href: ide/neutral-resources-languages-for-localization.md
-        - name: アプリケーションのグローバル化
+        - name: アプリのグローバライズ
           href: ide/globalizing-applications.md
           items:
             - name: グローバルな Windows フォームおよび Web フォームにおけるカルチャ固有のクラス
               href: ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md
-        - name: Visual Studio による双方向言語用アプリケーションの作成
+        - name: 双方向言語でのアプリの作成
           href: ide/creating-applications-in-bi-directional-languages.md
 - name: 参照
   items:
@@ -799,7 +801,7 @@
           items:
             - name: '[アプリケーション] ページ (プロジェクト デザイナー) (UWP)'
               href: ide/reference/application-page-project-designer-uwp.md
-            - name: '[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)'
+            - name: 'Application Page, Project Designer (Visual Basic)'
               href: ide/reference/application-page-project-designer-visual-basic.md
               items:
                 - name: '[アセンブリ情報] ダイアログ ボックス'
@@ -852,7 +854,7 @@
               href: ide/reference/signing-page-project-designer.md
         - name: プロパティ ページ、JavaScript
           href: ide/reference/property-pages-javascript.md
-        - name: プロパティ ウィンドウ
+        - name: '[プロパティ] ウィンドウ'
           href: ide/reference/properties-window.md
         - name: ツールボックス
           href: ide/reference/toolbox.md
@@ -913,7 +915,7 @@
     - name: Visual Studio コマンド
       href: ide/reference/visual-studio-commands.md
       items:
-        - name: Visual Studio コマンドの定義済みのエイリアス
+        - name: Visual Studio Command Aliases
           href: ide/reference/visual-studio-command-aliases.md
         - name: AddExistingSolutionItem コマンド
           href: ide/reference/add-existing-item-command.md

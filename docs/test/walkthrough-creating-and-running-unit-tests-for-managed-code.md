@@ -15,12 +15,12 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 50fafdb91f9a845fed8681f7b75662200c45c913
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 13488619b38f5fd974d793d56f6a8d8cf86f15c1
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380864"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469114"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>チュートリアル: マネージド コードの単体テストを作成し、実行する
 
@@ -210,7 +210,7 @@ public void Debit_WithValidAmount_UpdatesBalance()
 
 ### <a name="analyze-the-test-results"></a>テスト結果を分析する
 
-テスト結果には失敗を示すメッセージが含まれています。 `AreEquals` メソッドについて、メッセージには、想定された事項 (**Expected\<*value*>** パラメーター) および実際に受け取られた事項 (**Actual\<*value*>** パラメーター) が示されます。 残高が減少すると予想していましたが、実際には代わりに引き出し額によって増加しています。
+テスト結果には失敗を示すメッセージが含まれています。 `AreEqual` メソッドについて、メッセージには、想定された事項 (**Expected\<*value*>** パラメーター) および実際に受け取られた事項 (**Actual\<*value*>** パラメーター) が示されます。 残高が減少することを予想していましたが、代わりに引き出し額の分だけ増加していました。
 
 単体テストにより、引き出し額は、*減算*する必要があるときに口座残高に*追加*されます。単体テストではバグがわかりました。
 

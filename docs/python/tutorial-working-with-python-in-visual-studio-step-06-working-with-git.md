@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dc9128a28ea0fd007a97b20331f15227b86d46f7
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: e0eae43e894b521cc9633df3d6e0c84e8dbb0b20
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056496"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511328"
 ---
 # <a name="step-6-work-with-git"></a>手順 6: Git の操作
 
@@ -32,7 +32,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Visua
 
     ![Visual Studio ウィンドウの Git コントロールの上にカーソルを置くと表示される追加情報](media/working-with-git-01.png)
 
-1. 新しいリポジトリを作成するか Git コントロールのいずれかを選択すると、Visual Studio によって **[チーム エクスプローラー]** ウィンドウが開きます  (このウィンドウは、**[表示] > [チーム エクスプローラー]** メニュー コマンドを使用していつでも開くことができます)。ウィンドウには 3 つのメイン ウィンドウがあります。ウィンドウを切り替えるには、**チーム エクスプローラー**のヘッダーのドロップダウンを使用します。 発行操作を行う **[同期]** ウィンドウは、[プッシュ] コントロール (上矢印アイコン) を選択したときにも表示されます。
+1. 新しいリポジトリを作成するか Git コントロールのいずれかを選択すると、Visual Studio によって **[チーム エクスプローラー]** ウィンドウが開きます  (このウィンドウは、**[表示]** > **[チーム エクスプローラー]** メニュー コマンドを使用していつでも開くことができます)。ウィンドウには 3 つのメイン ウィンドウがあります。ウィンドウを切り替えるには、**チーム エクスプローラー**のヘッダーのドロップダウンを使用します。 発行操作を行う **[同期]** ウィンドウは、**[プッシュ]** コントロール (上矢印アイコン) を選択したときにも表示されます。
 
     ![ローカル リポジトリの作成後の Visual Studio のチーム エクスプローラー](media/working-with-git-02.png)
 
@@ -48,13 +48,13 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Visua
 
     ![分岐を示す Visual Studio のチーム エクスプローラー](media/working-with-git-04.png)
 
-1. リポジトリ名の Git コントロール (前の図の "CosineWave") を選択します。**チーム エクスプローラー**に、別のリポジトリに完全にすばやく切り替えることができる**接続**インターフェイスが表示されます。
+1. リポジトリ名の Git コントロール (前の図の **CosineWave**) を選択します。**チーム エクスプローラー**に、別のリポジトリに完全にすばやく切り替えることができる**接続**インターフェイスが表示されます。
 
-1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合は、**チーム エクスプローラー**でドロップダウン ヘッダーを選択し、**[同期]** を選択して **[同期]** セクションに切り替えて、そこに表示されるプル コマンドとフェッチ コマンドを使用します。
+1. ローカル リポジトリを使用する場合、変更をコミットすると、リポジトリでも直接変更されます。 リモート リポジトリに接続している場合は、**チーム エクスプローラー**でドロップダウン ヘッダーを選択し、**[同期]** を選択して **[同期]** セクションに切り替えて、そこに表示される **[プル]** コマンドと **[フェッチ]** コマンドを使用します。
 
 ## <a name="go-deeper"></a>詳しい説明
 
-リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
+リモート Git リポジトリからプロジェクトを作成する方法のチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」をご覧ください。
 
 マージの競合、プル要求があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と VSTS の使用開始](/vsts/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)に関する記事を参照してください。
 
@@ -64,14 +64,14 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Visua
 
 - プロジェクトの作成と、プロジェクトのコンテンツの参照。
 - コード エディターの使用と、プロジェクトの実行。
-- 対話型のウィンドウを使用した新しいコードの開発と、そのコードのエディターへの簡単なコピー。
+- **対話型**のウィンドウを使用した新しいコードの開発と、そのコードのエディターへの簡単なコピー。
 - 完成したプログラムの Visual Studio デバッガーでの実行。
 - パッケージのインストールと、Python 環境の管理。
 - Git リポジトリでのコードの操作。
 
 この後は、概念と使い方に関するガイドをご確認ください。以下のような記事があります。
 
-- [Python 向け C++ 拡張機能の作成](working-with-c-cpp-python-in-visual-studio.md)
-- [Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [Python 用 C++ 拡張機能の作成](working-with-c-cpp-python-in-visual-studio.md)
+- [Azure App Service に発行する](publishing-python-web-applications-to-azure-from-visual-studio.md)
 - [プロファイル](profiling-python-code-in-visual-studio.md)
 - [単体テスト](unit-testing-python-in-visual-studio.md)

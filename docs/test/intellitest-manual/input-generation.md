@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 49316f89e640f4ff43d4914535ef6e5398c249ee
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 14aa15d53977167a61d5570d4bc2ac7edffb197d
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341884"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511653"
 ---
-# <a name="input-generatation-using-dynamic-symbolic-execution"></a>動的なシンボリック実行を使用する入力生成
+# <a name="input-generation-using-dynamic-symbolic-execution"></a>動的なシンボリック実行を使用する入力生成
 
 IntelliTest は、プログラムの分岐条件を分析して、[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の入力を生成します。 テスト入力は、プログラムの新しい分岐動作をトリガーできるかどうかに応じて、選択されます。 分析はインクリメンタル処理です。 仮テスト入力パラメーター **I** で述語 **q: I -> {true, false}** を詳細に指定します。**q** は、IntelliTest が既に監視した動作セットを表します。 最初は、まだ何も観測されていないため、**q := false** となります。
 

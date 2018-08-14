@@ -11,22 +11,22 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 563b1151994f04bcecf7bc64ac802b6cacbec73c
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 2fbd9729c02eedbcacd0955a6766b5627156090e
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174842"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513121"
 ---
 # <a name="step-2-write-and-run-code"></a>手順 2: コードを記述して実行する
 
 **前の手順: [新しい Python プロジェクトを作成する](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
 
-ソリューション エクスプローラーがプロジェクト ファイルを管理する場所であるのに対し、*エディター* ウィンドウは通常、ファイルの*コンテンツ* (ソース コードなど) を操作する場所です。 エディターは編集中のファイルの種類 を、プログラミング言語 (ファイル拡張子に基づく) などの状況から認識し、構文の色分け表示やオートコンプリートなど、その言語に適した機能を IntelliSense を使用して提供します。
+**ソリューション エクスプローラー**がプロジェクト ファイルを管理する場所であるのに対し、"*エディター*" ウィンドウは通常、ファイルの "*コンテンツ*" (ソース コードなど) を操作する場所です。 エディターは編集中のファイルの種類 を、プログラミング言語 (ファイル拡張子に基づく) などの状況から認識し、構文の色分け表示やオートコンプリートなど、その言語に適した機能を IntelliSense を使用して提供します。
 
-1. 新しい "Python Application" プロジェクトを作成すると、Visual Studio エディターで既定の `PythonApplication1.py` という名前の空のファイルが開きます。
+1. 新しい "Python Application" プロジェクトを作成すると、Visual Studio エディターで既定の *PythonApplication1.py* という名前の空のファイルが開きます。
 
-1. エディターで `print("Hello, Visual Studio")` の入力を開始します。入力の途中で、Visual Studio IntelliSense のオートコンプリートのオプションが表示される様子に注目してください。 ドロップダウン リストで四角で囲まれたオプションは既定の入力候補で、Tab キーを押して使用します。 入力候補は、長いステートメントや識別子を記述する場合に非常に便利です。
+1. エディターで `print("Hello, Visual Studio")` の入力を開始します。入力の途中で、Visual Studio IntelliSense のオートコンプリートのオプションが表示される様子に注目してください。 ドロップダウン リストで四角で囲まれたオプションは既定の入力候補で、**Tab** キーを押して使用します。 入力候補は、長いステートメントや識別子を記述する場合に非常に便利です。
 
     ![IntelliSense オートコンプリートのポップアップ](media/vs-getting-started-python-04-IntelliSense1b.png)
 
@@ -45,11 +45,11 @@ ms.locfileid: "37174842"
     ![IntelliSense の構文の色分け表示とエラーの強調表示](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > 開発環境は非常に個人的な問題であるため、Visual Studio では Visual Studio の外観と動作の完全な制御が提供されています。 **[ツール] > [オプション]** メニュー コマンドを選択し、**[環境]** と **[テキスト エディター]** タブの下の設定を調べます。 既定では限られた数のオプションしか表示されません。すべてのプログラミング言語のすべてのオプションを表示するには、ダイアログ ボックスの下部で **[すべての設定を表示]** を選択します。 
+    > 開発環境は非常に個人的な問題であるため、Visual Studio では Visual Studio の外観と動作の完全な制御が提供されています。 **[ツール]** > **[オプション]** メニュー コマンドを選択し、**[環境]** と **[テキスト エディター]** タブの下の設定を調べます。 既定では限られた数のオプションしか表示されません。すべてのプログラミング言語のすべてのオプションを表示するには、ダイアログ ボックスの下部で **[すべての設定を表示]** を選択します。 
 
-1. Ctrl キーを押しながら F5 キーを押すか、**[デバッグ] > [デバッグの開始]** メニュー項目を選択して、このポイントまでに書き込んだコードを実行します。 コードにエラーがまだある場合は、Visual Studio によって警告されます。
+1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグの開始]** メニュー項目を選択して、このポイントまでに書き込んだコードを実行します。 コードにエラーがまだある場合は、Visual Studio によって警告されます。
 
-1. プログラムを実行すると、コマンド ラインから `PythonApplication1.py` を使用して Python インタープリターを実行した場合と同じように、結果を示すコンソール ウィンドウが表示されます。 キーを押してウィンドウを閉じ、Visual Studio エディターに戻ります。
+1. プログラムを実行すると、コマンド ラインから *PythonApplication1.py* を使用して Python インタープリターを実行した場合と同じように、結果を示すコンソール ウィンドウが表示されます。 キーを押してウィンドウを閉じ、Visual Studio エディターに戻ります。
 
     ![プログラムの最初の実行の出力](media/vs-getting-started-python-07-output.png)
 
@@ -75,7 +75,7 @@ ms.locfileid: "37174842"
     ```
 
     > [!Tip]
-    > 入力候補は、入力中の部分文字列、単語の一致部分、単語の先頭の文字、および省略された文字で機能します。 詳細については、「[Editing Code - Completions](editing-python-code-in-visual-studio.md#completions)」 (コードの編集 - 入力候補) を参照してください。
+    > 入力候補は、入力中の部分文字列、単語の一致部分、単語の先頭の文字、および省略された文字で機能します。 詳細については、「Python コードの編集」の「[入力候補](editing-python-code-in-visual-studio.md#completions)」セクションをご覧ください。
 
 1. 360 度のコサイン値を出力するため、もう少しコードを追加します。
 
@@ -84,7 +84,7 @@ ms.locfileid: "37174842"
         print(cos(radians(i)))
     ```
 
-1. Ctrl キーを押しながら F5 キーを押すか、**[デバッグ] > [デバッグなしで開始]** を選択して、もう一度プログラムを実行します。 完了したら、出力ウィンドウを閉じます。
+1. **Ctrl** + **F5** キーを押すか、**[デバッグ]** > **[デバッグなしで開始]** を選択して、もう一度プログラムを実行します。 完了したら、出力ウィンドウを閉じます。
 
 ## <a name="next-step"></a>次のステップ
 

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de11159e513468a543229df5aab640142b006736
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 944dbd13472c7dda3149aef4496fab2bcd505df1
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251934"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498968"
 ---
 # <a name="debug-your-python-code"></a>Python コードのデバッグ
 
@@ -154,8 +154,6 @@ HTML、XML、JSON のビジュアライザーは別のポップアップ ウィ�
 | **インタプリターの引数** | これらの引数は、ランチャーのコマンドラインのスクリプト名の前に追加されます。 警告をコントロールする `-W ...`、プログラムを少し最適化する `-O`、バッファーなし IO を使用する `-u` などがよく使用されます。 IronPython のユーザーは、多くの場合、このフィールドを使用して `-X` オプションを渡します (`-X:Frames` や `-X:MTA` など)。 |
 | **インタープリターのパス** | 現在の環境に関連付けられているパスをオーバーライドします。 非標準のインタープリターを使用してスクリプトを起動する場合に便利です。 |
 | **環境変数** | 複数行のテキスト ボックスで、\<名前>=\<値> の形式でエントリを追加します。 この設定は最後に適用されます。既存のグローバル環境変数よりも優先され、検索パスの設定に従って `PYTHONPATH` が設定された後に適用されるため、これらの変数を手動でオーバーライドするために使用できます。 |
-
-<a name="the-debug-interactive-window"></a>
 
 ## <a name="immediate-and-interactive-windows"></a>イミディエイト ウィンドウと対話型ウィンドウ
 

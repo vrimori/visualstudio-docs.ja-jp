@@ -18,19 +18,19 @@ ms.assetid: 0ee89c58-c900-48fc-a6a2-65ace00e8bab
 author: Joe-Sewell-PreEmptive
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a087af554ab62a77562dcdf449a18e807f9d17fe
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 44c99fd2a35ffbdb1db07ed1a63613dbe79dd61e
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704448"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468181"
 ---
 # <a name="capabilities-of-dotfuscator"></a>Dotfuscator の機能
 
 このページでは、Dotfuscator Community Edition (Dotfuscator CE) の機能と、[アップグレード][upgrades]で使用できる高度なオプションの参照を中心に説明します。
 
 Dotfuscator は、.NET アプリケーションの*ビルド後*システムです。
-Dotfuscator CE を使用すると、Visual Studio ユーザーは[アセンブリを難読化し][obfuscation]、inject [アクティブな防御][checks]と[追跡分析][analytics]をアプリケーションに挿入します。どの処理でも、Dotfuscator が元のソース コードにアクセスする必要はありません。
+Dotfuscator CE を使用すると、Visual Studio のユーザーは[アセンブリを難読化][obfuscation]し、[アクティブな防御策][checks]をアプリケーションに挿入することができます。その際に Dotfuscator が元のソース コードにアクセスする必要はありません。
 Dotfuscator は、複数層の保護戦略を作成して複数の方法でアプリケーションを保護しています。
 
 Dotfuscator CE は、[Universal Windows Platform (UWP)][uwp]、[Xamarin][xamarin] など、多様な .NET アセンブリとアプリケーションの種類をサポートしています。
@@ -55,17 +55,9 @@ Dotfuscator は[デバッグ対策の動作][debug]をアプリケーション�
 
 Dotfuscator CE は、[改ざん防止][tamper]、[デバッグ防止][debug]、[ルート化されたデバイスの防止][root]の手段などの[アプリケーション検証コード][checks]をアセンブリに挿入できます。
 無効なアプリケーションの状態が検出された場合、検証コードから[アプリケーション コードを呼び出し、適切な方法で状況に対処することができます][check-app]。
-また、アプリケーションの無効な使用に対処するコードを作成したくない場合は、Dotfuscator でソース コードを変更することなく、[製品利用統計情報の報告][check-telemetry]と[応答動作][check-action]を挿入できます。
+また、アプリケーションの無効な使用に対処するコードを作成したくない場合は、Dotfuscator でソース コードを変更することなく、[応答動作][check-action]を挿入できます。
 
 これらの多くの方法は、評価版や試用版のソフトウェアの[有効期間][shelflife]を強制するためにも使用できます。
-
-## <a name="application-monitoring"></a>アプリケーション監視
-
-アプリケーションの開発時には、ベータ テスターや前のバージョンのユーザーを含め、ユーザーの動作パターンを理解することが重要です。
-アプリケーション分析を使用すると、ユーザーが経験したエラーの内容を含め、アプリケーションの使用頻度と使用方法を追跡できます。
-
-Dotfuscator CE では、アプリケーションに [exception-tracking][exceptions] コード、[session-tracking][sessions] コード、[feature-tracking][features] コードを挿入できます。
-実行すると、処理対象のアプリケーションから分析データが構成済みの [PreEmptive Analytics エンドポイント][endpoints]に送信されます。
 
 ## <a name="see-also"></a>参照
 
@@ -82,9 +74,6 @@ Dotfuscator CE では、アプリケーションに [exception-tracking][excepti
 [obfuscation]:  https://www.preemptive.com/dotfuscator/ce/docs/help/obfuscation_overview.html
 [renaming]:  https://www.preemptive.com/dotfuscator/ce/docs/help/obfuscation_renaming.html
 
-[analytics]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_overview.html
-[endpoints]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_overview.html#endpoints
-
 [checks]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html
 [check-app]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html#app-notification
 [check-action]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html#action
@@ -93,9 +82,5 @@ Dotfuscator CE では、アプリケーションに [exception-tracking][excepti
 [debug]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_debug.html
 [root]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_root.html
 [shelflife]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_shelflife.html
-[exceptions]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_exceptions.html
-[sessions]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_sessions.html
-[features]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_features.html
-[check-telemetry]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_checks.html
 
 [full]:  https://www.preemptive.com/dotfuscator/ce/docs/help/intro_capabilities.html
