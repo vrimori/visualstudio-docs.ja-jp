@@ -1,6 +1,6 @@
 ---
 title: Visual Studio での EditorConfig 設定の使用
-ms.date: 12/13/2017
+ms.date: 08/01/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [Visual Studio]
@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: c4301d69b8358375b901f329f8725ab26aa42a73
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 9758aab8d36b113a5e4ba2fea5d475f1967dabab
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117564"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469055"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -81,9 +81,15 @@ EditorConfig ファイルをプロジェクトまたはコードベースから�
    csharp_new_line_before_open_brace = methods
    ```
 
-または、[EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)をインストールできます。 この拡張機能をインストールしたら、ソリューション ノード、プロジェクト ノード、またはソリューション エクスプローラーの任意のフォルダーを右クリックするか、コンテキスト メニューから、**[追加]** > **[.editorconfig ファイル]** の順に選択するだけです。
+### <a name="other-ways-to-add-an-editorconfig-file"></a>EditorConfig ファイルを追加するその他の方法
 
-![拡張機能を使用して .editorconfig ファイルを追加する](media/editorconfig-extension-add.png)
+EditorConfig ファイルをプロジェクトに追加する方法は、他にもいくつかあります。
+
+- [EditorConfig 言語サービス拡張機能](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)をインストールして、より簡単にプロジェクトに空の *.editorconfig* ファイルを追加します。 この拡張機能をインストールしたら、ソリューション ノード、プロジェクト ノード、または**ソリューション エクスプローラー**内の任意のフォルダーを右クリックして (またはコンテキスト メニューを使って)、**[追加]** > **[.editorconfig ファイル]** の順に選択するだけです。 この拡張機能によって、*.editorconfig* ファイルを編集する際の操作性も向上します。
+
+   ![拡張機能を使用して .editorconfig ファイルを追加する](media/editorconfig-extension-add.png)
+
+- [IntelliCode 拡張機能](/visualstudio/intellicode/intellicode-visual-studio)をお試しください。 この実験的な拡張機能では、ユーザーのコード スタイルが既存のコードから推測され、既に定義したコード スタイルの設定を使用して空でない *.editorconfig* ファイルが作成されます。
 
 ## <a name="override-editorconfig-settings"></a>EditorConfig 設定をオーバーライドする
 

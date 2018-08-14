@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c756e92b6abc383cb4515a628fb81308e21a1f01
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 29a7bec902f28c67e5e6d6e9d63d9a85239c32c1
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056541"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586366"
 ---
-# <a name="refactoring-python-code"></a>Python コードのリファクタリング
+# <a name="refactor-python-code"></a>Python コードのリファクタリング
 
 Visual Studio には、Python ソース コードの変換とクリーンアップを自動的に実行するためのいくつかのコマンドが用意されています。
 
@@ -27,11 +27,9 @@ Visual Studio には、Python ソース コードの変換とクリーンアッ�
 - [[インポートの追加]](#add-import) は、不足しているインポートを追加するためのスマート タグを提供します
 - [[Remove unused imports (使用されていないインポートの削除)]](#remove-unused-imports) は、使用されていないインポートを削除します
 
-<a name="rename-variable"</a>
-
 ## <a name="rename"></a>名前の変更
 
-1. 名前を変更する識別子を右クリックして、**[名前の変更]** を選択します。または、その識別子にキャレットを置き、**[編集] > [リファクター] > [名前の変更]** メニュー (F2 キー) を選択します。
+1. 名前を変更する識別子を右クリックして、**[名前の変更]** を選択します。または、その識別子にキャレットを置き、**[編集]** > **[リファクター]** > **[名前の変更]** メニュー (**F2** キー) を選択します。
 1. 表示された **[名前の変更]** ダイアログで、識別子の新しい名前を入力し、**[OK]** を選択します。
 
   ![新しい識別子名を入力するための [名前の変更] プロンプト](media/code-refactor-rename-1.png)
@@ -45,7 +43,7 @@ Visual Studio には、Python ソース コードの変換とクリーンアッ�
 ## <a name="extract-method"></a>メソッドの抽出
 
 1. 別のメソッドに抽出するコード行または式を選択します。
-1. **[編集] > [リファクター] > [メソッドの抽出]** メニュー コマンドを選択するか、Ctrl + R、M キーを押します。
+1. **[編集]** > **[リファクター]** > **[メソッドの抽出]** メニュー コマンドを選択するか、**Ctrl** + **R**  >  **M** キーを押します。
 1. 表示されるダイアログ ボックスで新しいメソッドの名前を入力し、抽出先を指定して、クロージャ変数を選択します。 クロージャに選択されなかった変数はメソッド引数に返されます。
 
   ![[メソッドの抽出] ダイアログ](media/code-refactor-extract-method-1.png)
@@ -69,8 +67,6 @@ Visual Studio は、モジュール内で実際に定義されていないメン
 同様に、Visual Studio は他のモジュールまたは組み込みの名前空間からインポートされる関数を除外します。 たとえば、あるモジュールが `sys` モジュールから `settrace` 関数をインポートする場合、理論的にはそのモジュールから関数をインポートすることもできます。 しかし、`import settrace from sys` を直接使用する方法が最良であるため、Visual Studio はそのステートメントを明確に提示します。
 
 さらに、通常は除外される候補が、(たとえば名前がモジュール内の値に割り当てられているなどの理由で) 表示対象となる他の値を含んでいる場合でも、Visual Studio はそのインポートを除外します。 この動作は、その値が別のモジュールで定義されており、追加で割り当てるとエクスポートされないダミーの値になる可能性があるため、その値をエクスポートすべきではないということを前提としています。
-
-<a name="remove-imports"</a>
 
 ## <a name="remove-unused-imports"></a>使用されていないインポートの削除
 

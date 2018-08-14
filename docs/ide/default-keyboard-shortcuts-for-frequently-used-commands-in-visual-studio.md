@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af260a34ba7410955095b40b4f9fbee9b217401
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d2f53ae425f4942a9a14289e84798756c9fec969
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31918000"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512549"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット
 
@@ -57,7 +57,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 |コマンド|ショートカット キー [コンテキスト]|
 |--------------|-------------------------------------|
 |Edit.BreakLine|**Enter** [テキスト エディター、レポート デザイナー、Windows フォーム デザイナー]<br /><br /> または **Shift + Enter** [テキスト エディター]|
-|Edit.CollapsetoDefinitions|**Ctrl + M**、**Ctrl + O** [テキスト エディター]|
+|Edit.CollapseToDefinitions|**Ctrl + M**、**Ctrl + O** [テキスト エディター]|
 |Edit.CommentSelection|**Ctrl + K**、**Ctrl + C** [テキスト エディター]|
 |Edit.CompleteWord|**Alt + →** [テキスト エディター、ワークフロー デザイナー]<br /><br /> または **Ctrl + Space** [テキスト エディター、ワークフロー デザイナー]<br /><br /> または **Ctrl + K**、**W** [ワークフロー デザイナー]<br /><br /> または **Ctrl + K、Ctrl + W** [ワークフロー デザイナー]|
 |Edit.Copy|**Ctrl + C** [全体]<br /><br /> または **Ctrl + Insert** [全体]|
@@ -91,7 +91,8 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 |Edit.Replace|**Ctrl + H** [全体]|
 |Edit.SelectAll|**Ctrl + A** [全体]|
 |Edit.SelectCurrentWord|**Ctrl + W** [テキスト エディター]|
-|Edit.SelectionCancel|**Esc** [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージ リソース エディター]|
+|Edit.SelectionCancel|
+  **Esc** [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージド リソース エディター]|
 |Edit.SurroundWith|**Ctrl + K、Ctrl + S** [全体]|
 |Edit.TabLeft|**Shift + Tab** [テキスト エディター、レポート デザイナー、Windows フォーム エディター]|
 |Edit.ToggleAllOutlining|**Ctrl + M、Ctrl + L** [テキスト エディター]|
