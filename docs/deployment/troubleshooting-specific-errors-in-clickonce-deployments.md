@@ -1,4 +1,4 @@
----
+﻿---
 title: ClickOnce 配置で特定のエラーのトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
