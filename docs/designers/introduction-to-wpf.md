@@ -13,22 +13,22 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 121cd95e55b17ea8e93b6a9ad8beb1a9d9d3feca
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: db06323da8ccd3009c52be3ba9dd51478d1d722c
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978350"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008461"
 ---
-# <a name="introduction-to-wpf"></a>WPF の概要
+# <a name="wpf-overview"></a>WPF の概要
 
 Windows Presentation Foundation (WPF) を使用して、視覚的に美しいユーザー エクスペリエンスを持つ Windows 用のデスクトップ クライアント アプリケーションを作成できます。
 
- ![Contoso Healthcare UI のサンプル](../designers/media/wpfintrofigure24.png)
+![Contoso Healthcare UI のサンプル](../designers/media/wpfintrofigure24.png)
 
- WPF の中核を成すのは、解像度に依存しない、ベクター ベースのレンダリング エンジンであり、これは最新のグラフィックス ハードウェアを活用できるように構築されています。 この中核を拡張するため、WPF では、Extensible Application Markup Language (XAML)、コントロール、データ バインディング、レイアウト、2D および 3D グラフィックス、アニメーション、スタイル、テンプレート、ドキュメント、メディア、テキスト、タイポグラフィなどの、アプリケーション開発機能の包括的なセットを使用します。 WPF は .NET Framework に含まれるので、.NET Framework クラス ライブラリの他の要素を組み込んだアプリケーションを構築できます。
+WPF の中核を成すのは、解像度に依存しない、ベクター ベースのレンダリング エンジンであり、これは最新のグラフィックス ハードウェアを活用できるように構築されています。 この中核を拡張するため、WPF では、Extensible Application Markup Language (XAML)、コントロール、データ バインディング、レイアウト、2D および 3D グラフィックス、アニメーション、スタイル、テンプレート、ドキュメント、メディア、テキスト、タイポグラフィなどの、アプリケーション開発機能の包括的なセットを使用します。 WPF は .NET Framework に含まれるので、.NET Framework クラス ライブラリの他の要素を組み込んだアプリケーションを構築できます。
 
- この概要は初めての方を対象としており、WPF の主要な機能と概念を説明します。
+この概要は初めての方を対象としており、WPF の主要な機能と概念を説明します。
 
 ## <a name="program-with-wpf"></a>WPF でのプログラミング
 
@@ -50,7 +50,7 @@ WPF では "*マークアップ*" と "*分離コード*" の両方を使用し�
 
 XAML は、アプリケーションの外観を宣言的に実装する XML ベースのマークアップ言語です。 一般的に、ウィンドウ、ダイアログ ボックス、ページ、ユーザー コントロールの作成と、これらにコントロール、図形、グラフィックスを入れるために使用されます。
 
- 次の例では XAML を使用して、1 つのボタンが入っているウィンドウの外観を実装しています。
+次の例では XAML を使用して、1 つのボタンが入っているウィンドウの外観を実装しています。
 
 ```xaml
 <Window
@@ -64,13 +64,13 @@ XAML は、アプリケーションの外観を宣言的に実装する XML ベ�
 </Window>
 ```
 
- 具体的には、この XAML は `Window` エレメントと `Button` エレメントを使用して、ウィンドウとボタンをそれぞれ定義しています。 各エレメントは属性で構成されます。たとえば `Window` エレメントの `Title` 属性はウィンドウのタイトルバーのテキストを指定します。 マークアップで定義されている要素と属性は、実行時に WPF により、WPF クラスのインスタンスに変換されます。 たとえば、 `Window` エレメントは、 <xref:System.Windows.Window> プロパティが <xref:System.Windows.Window.Title%2A> 属性の値である `Title` クラスのインスタンスに変換されます。
+具体的には、この XAML は `Window` エレメントと `Button` エレメントを使用して、ウィンドウとボタンをそれぞれ定義しています。 各エレメントは属性で構成されます。たとえば `Window` エレメントの `Title` 属性はウィンドウのタイトルバーのテキストを指定します。 マークアップで定義されている要素と属性は、実行時に WPF により、WPF クラスのインスタンスに変換されます。 たとえば、 `Window` エレメントは、 <xref:System.Windows.Window> プロパティが <xref:System.Windows.Window.Title%2A> 属性の値である `Title` クラスのインスタンスに変換されます。
 
- 次の図は、前記の例の XAML で定義されたユーザー インターフェイス (UI) を示しています。
+次の図は、前記の例の XAML で定義されたユーザー インターフェイス (UI) を示しています。
 
- ![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png)
+![ボタンを含むウィンドウ](../designers/media/wpfintrofigure10.png)
 
- XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。
+XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](/dotnet/framework/wpf/advanced/trees-in-wpf)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。
 
 ### <a name="code-behind"></a>分離コード
 
@@ -639,18 +639,18 @@ WPF にはカスタマイズに対する多くのサポートが用意されて�
 
 次の例に <xref:System.Windows.Controls.UserControl>から派生するカスタムの数値のアップダウン コントロールを示します。
 
- [!code-xaml[IntroToWPFSnippets#UserControlMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_33.xaml)]
+[!code-xaml[IntroToWPFSnippets#UserControlMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_33.xaml)]
 
- [!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/CSharp/introduction-to-wpf_34.cs)]
- [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/VisualBasic/introduction-to-wpf_34.vb)]
+[!code-csharp[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/CSharp/introduction-to-wpf_34.cs)]
+[!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/VisualBasic/introduction-to-wpf_34.vb)]
 
- 次の例は、ユーザー コントロールを <xref:System.Windows.Window>に組み込むために必要な XAML を示しています。
+次の例は、ユーザー コントロールを <xref:System.Windows.Window>に組み込むために必要な XAML を示しています。
 
- [!code-xaml[IntroToWPFSnippets#UserControlWindowMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_37.xaml)]
+[!code-xaml[IntroToWPFSnippets#UserControlWindowMARKUP1](../designers/codesnippet/Xaml/introduction-to-wpf_37.xaml)]
 
- 次の図に <xref:System.Windows.Window> でホストされる `NumericUpDown` コントロールを示します。
+次の図に <xref:System.Windows.Window> でホストされる `NumericUpDown` コントロールを示します。
 
- ![カスタム UserControl](../designers/media/wpfintrofigure3.png)
+![カスタム UserControl](../designers/media/wpfintrofigure3.png)
 
 カスタム コントロールについて詳しくは、「[コントロールの作成の概要](/dotnet/framework/wpf/controls/control-authoring-overview)」をご覧ください。
 

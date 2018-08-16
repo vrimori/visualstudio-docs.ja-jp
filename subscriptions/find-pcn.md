@@ -9,12 +9,12 @@ description: パブリック カスタマー番号 (PCN) または認証番号�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 137da647293907b7ca57a296f558121b30c50b1f
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: da4a9f1342abfc5701aadf32798305e349eb3ed7
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325441"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637020"
 ---
 # <a name="how-do-i-locate-my-public-customer-number-pcn-or-authorization-number"></a>"パブリック カスタマー番号" (PCN) または認証番号を見つける方法を教えてください。
 
@@ -25,10 +25,12 @@ ms.locfileid: "36325441"
 1.  [https://www.Microsoft.com/licensing/servicecenter](https://www.Microsoft.com/licensing/servicecenter) のボリューム ライセンス サービス センター (VLSC) にログインします。
 
 2. **[サブスクリプション]** タブで、[Visual Studio サブスクリプション] を選びます。
-    ![VLSC でサブスクリプションの選択](_img/vlsc/vlsc-subscriptions.png)
+    > [!div class="mx-imgBorder"]
+    > ![VLSC でサブスクリプションの選択](_img/vlsc/vlsc-subscriptions.png)
 
 3. PCN またはパブリック カスタマー番号はページの中間にあります。
-    ![VLSC で PCN を検索する](_img/vlsc/vlsc-pcn.png)
+    > [!div class="mx-imgBorder"]
+    > ![VLSC で PCN を検索する](_img/vlsc/vlsc-pcn.png)
 
     
 上記のページが表示されず、Visual Studio サインイン ページにリダイレクトされる場合、https://www.microsoft.com/Licensing/servicecenter/Subscription/AgreementSearch のリンクをコピーし、お使いのブラウザーに貼り付けます。
