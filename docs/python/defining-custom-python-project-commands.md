@@ -11,16 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d36fefdaa92b488908a0de99878e341114253624
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 71d10e2a8c62f695460cb3b596acc10f01a6ca81
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341265"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008324"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python プロジェクトのカスタム コマンドを定義する
 
-Python プロジェクトで作業していると、特定のスクリプトやモジュール、pip コマンド、または他の任意のツールを実行するために、コマンド ウィンドウに切り替えると便利なことに気付く場合があります。 ワークフローを改良するため、Python プロジェクトのコンテキスト メニューの **[Python]** サブメニューに、カスタム コマンドを追加することができます。 これらのコマンドは、コンソール ウィンドウまたは Visual Studio の出力ウィンドウで実行できます。 また、正規表現を使って、コマンドの出力からエラーと警告を解析する方法を Visual Studio に指示することもできます。
+Python プロジェクトで作業していると、特定のスクリプトやモジュール、pip コマンド、または他の任意のツールを実行するために、コマンド ウィンドウに切り替えると便利なことに気付く場合があります。 ワークフローを改良するため、Python プロジェクトのコンテキスト メニューの **[Python]** サブメニューに、カスタム コマンドを追加することができます。 これらのコマンドは、コンソール ウィンドウまたは Visual Studio の**出力**ウィンドウで実行できます。 また、正規表現を使って、コマンドの出力からエラーと警告を解析する方法を Visual Studio に指示することもできます。
 
 既定では、そのメニューに含まれる **[PyLint を実行]** コマンドは 1 つのみです。
 

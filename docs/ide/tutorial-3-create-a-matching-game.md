@@ -11,14 +11,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3358d23c7c4f3fd2ad7f6beffb6a035b6c810d38
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: f64de3b95d21fdae87dd6b14754956381d60e9a3
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747979"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008243"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>チュートリアル 3: 絵合わせゲームの作成
+
 このチュートリアルでは、プレーヤーが隠されたアイコンのペアを見つける絵合わせゲームを作成します。 以下の方法について説明します。
 
 -   アイコンなどのオブジェクトを <xref:System.Collections.Generic.List%601> オブジェクトに格納する。
@@ -31,18 +32,18 @@ ms.locfileid: "34747979"
 
 -   開始されるとカウント ダウンを行い一度だけイベントを発生させるタイマーを作成する。
 
- このチュートリアルを完了すると、プログラムは次の図のようになります。
+このチュートリアルを完了すると、プログラムは次の図のようになります。
 
- ![このチュートリアルで作成するゲーム](../ide/media/express_finishedgame.png) このチュートリアルで作成するゲーム
+![このチュートリアルで作成するゲーム](../ide/media/express_finishedgame.png)
 
 ## <a name="tutorial-links"></a>チュートリアルのリンク
 
- サンプルの完全バージョンをダウンロードするには、「[Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)」(絵合わせゲームのチュートリアルの完全なサンプル) を参照してください。
+サンプルの完全バージョンをダウンロードするには、「[Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)」(絵合わせゲームのチュートリアルの完全なサンプル) を参照してください。
 
 > [!NOTE]
->  このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
+> このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
 
- プログラミングに行き詰まった場合や疑問がある場合は、MSDN フォーラムのいずれかに質問を投稿してみてください。 [Visual Basic フォーラム](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral) と [Visual C# フォーラム](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral)を参照してください。 無料で利用できる便利なビデオ学習リソースもあります。 Visual Basic でのプログラミングの詳細については、「[Visual Basic の基礎: 入門者向けの開発](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)」を参照してください。 Visual C# でのプログラミングの詳細については、「[C# の基礎: 入門者向けの開発](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)」を参照してください。
+プログラミングに行き詰まった場合や疑問がある場合は、MSDN フォーラムのいずれかに質問を投稿してみてください。 [Visual Basic フォーラム](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral) と [Visual C# フォーラム](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral)を参照してください。 無料で利用できる便利なビデオ学習リソースもあります。 Visual Basic でのプログラミングの詳細については、「[Visual Basic の基礎: 入門者向けの開発](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)」を参照してください。 Visual C# でのプログラミングの詳細については、「[C# の基礎: 入門者向けの開発](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

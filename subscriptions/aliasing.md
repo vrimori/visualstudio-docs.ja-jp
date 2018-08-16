@@ -9,12 +9,12 @@ description: 別名またはフレンドリ名の使用でサインインに失�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 838716b4cb99517977c5292ef4f3fac550ffff3c
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: d05ecb8645b9970b08ad15418a43a5c95f8b2c3c
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327064"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637683"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
 
@@ -50,11 +50,14 @@ ms.locfileid: "36327064"
 1. [ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/default.aspx) (VLSC) にアクセスしてサインインします。
 2. VLSC の管理ページから、**[サブスクリプション]**、**[Visual Studio サブスクリプション]** の順にクリックします。
 
-    ![サブスクリプション メニュー](_img//vlsc/vlsc-subscriptions.png)
+    > [!div class="mx-imgBorder"]
+    > ![サブスクリプション メニュー](_img//vlsc/vlsc-subscriptions.png)
+
 
 3. Visual Studio サブスクリプションに関連付けられている**契約番号**をクリックします。
 
-    ![契約の選択](_img/vlsc/vlsc-agreement.png)
+    > [!div class="mx-imgBorder"]
+    > ![契約の選択](_img/vlsc/vlsc-agreement.png)
 
 4. **[サブスクリプションの割り当て]** をクリックします。
 5. 目的の**サブスクリプション レベル**を選択します。

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7e0a399297d3b89a0781c3693e6ffdf763d8ea31
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 016305c47da13c879e2895660915121cd93f33e3
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388294"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637618"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
@@ -40,7 +40,7 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 1. [新しいプロジェクト] ダイアログで **Polls Flask Web プロジェクト** テンプレートを探して選択し、プロジェクト "FlaskPolls" を呼び出して、**[OK]** を選択します。
 
-1. Visual Studio の他のプロジェクト テンプレートと同様に、"Polls Flask Web プロジェクト" テンプレートには *requirements.txt* ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。 (このテンプレートには、Flask の他に、azure-storage と pymongo のパッケージも必要です。"Polls Flask/Jade Web プロジェクト" には pyjade も必要でした)。
+1. Visual Studio の他のプロジェクト テンプレートと同様に、"Polls Flask Web プロジェクト" テンプレートには *requirements.txt* ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。 (このテンプレートには、Flask の他に、azure-storage と pymongo のパッケージも必要です。"Polls Flask/Jade Web プロジェクト" には pyjade も必要でした。)
 
 1. **ソリューション エクスプローラー**を右クリックし、**[スタートアップ プロジェクトに設定]** を選択して、**FlaskPolls** プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
 

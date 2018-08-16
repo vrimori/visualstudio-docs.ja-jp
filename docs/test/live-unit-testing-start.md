@@ -11,16 +11,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c86c2d92088a7e34699e5c2fd15aef5de3ef06a
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 83507060295c294747f279dd32f96fe8b0a358fa
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586513"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008422"
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio 2017 で Live Unit Testing の使用を開始する
 
-Visual Studio ソリューションで Live Unit Testing を有効にすると、テスト カバレッジとテストの状態が視覚的に示されます。 またコードを変更するたびに、テストが動的に実行されます。 変更によってコードが破損すると即時にその旨が通知され、追加のテストを必要とする領域が示されます。
+Visual Studio ソリューションで Live Unit Testing を有効にすると、テスト カバレッジとテストの状態が視覚的に示されます。 また、コードが変更されるたびにテストが動的に実行され、変更が原因でテストが失敗した場合にはただちに通知されます。
 
 Live Unit Testing を使用すると、.NET Framework または .NET Core のいずれかを対象とするソリューションをテストすることができます。 このチュートリアルでは、Live Unit Testing の使用方法を学習するために .NET Standard を対象とする単純なクラス ライブラリを作成します。さらに、それをテストするために、.NET Core を対象とする MSTest プロジェクトを作成します。
 
@@ -200,7 +200,7 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 `StringLibrary` クラス ライブラリ用のテストを作成しましたが、まだこのテストを実行していません。 Live Unit Testing を有効にすると、テストが自動的に実行されます。 Live Unit Testing を有効にするには、次の手順を実行します。
 
-1. 必要に応じて、`StringLibrary` のコードが含まれているコード ウィンドウを選択します。 C# プロジェクトの *class1.cs* か、Visual Basic プロジェクトの *Class1.vb* のいずれかです  (このステップでは、Live Unit Testing を有効にした後で、テストの結果とコード カバレッジの範囲を視覚的に検査します)。
+1. 必要に応じて、`StringLibrary` のコードが含まれているコード ウィンドウを選択します。 C# プロジェクトの *Class1.cs* か、Visual Basic プロジェクトの *Class1.vb* のどちらかです。 (このステップでは、Live Unit Testing を有効にした後で、テストの結果とコード カバレッジの範囲を視覚的に検査します)。
 
 1. Visual Studio の最上位メニューから **[テスト]** > **[Live Unit Testing]** > **[開始]** の順に選びます。
 
@@ -295,7 +295,9 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
     [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
 
-1. 次の図に示すように、テストが実行されると、Live Unit Testing は `TestHasEmbeddedSpaces` メソッドが失敗したことを示します。![失敗したテストを示すテスト エクスプローラー](media/lut-start/test-failure.png)
+1. 次の図に示すように、テストが実行されると、Live Unit Testing は `TestHasEmbeddedSpaces` メソッドが失敗したことを示します。
+
+   ![失敗したテストを示すテスト エクスプローラー](media/lut-start/test-failure.png)
 
 1. ライブラリ コードが表示されたウィンドウを選択します。 Live Unit Testing によって `HasEmbeddedSpaces` メソッドにコード カバレッジが展開されていることに注目してください。 また、Live Unit Testing は、失敗したテストでカバーされている行に赤い "🞩" を追加することで、テスト エラーを報告しています。
 
@@ -356,7 +358,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
 ---
 
-これは、バグの予備調査を行う上で十分な情報です。 テスト ルーチンである `TestHasEmbeddedSpaces` で不適切な想定が行われたか、または`HasEmbeddedSpaces` がすべての埋め込みスペースを正しく認識していません。 問題を診断し解決するには、`StringLibrary.HasEmbeddedSpaces` メソッドから始めます。
+これは、バグの予備調査を行う上で十分な情報です。 `TestHasEmbeddedSpaces` (テスト ルーチン) で不適切な想定が行われたか、または `HasEmbeddedSpaces` がすべての埋め込みスペースを正しく認識していません。 問題を診断し解決するには、`StringLibrary.HasEmbeddedSpaces` メソッドから始めます。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. `HasEmbeddedSpaces` メソッドでの比較を確認します。 このメソッドでは、埋め込みスペースを U+0020 と見なしています。 ただし、Unicode Standard には、その他にも多くの空白文字が含まれています。 このことは、空白文字かどうかのテストが、ライブラリ コードで正しく行われていないことを示しています。
