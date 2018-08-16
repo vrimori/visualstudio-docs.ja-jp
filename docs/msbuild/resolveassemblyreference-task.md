@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b190e43be87f5436741106eb1df8884f37322a00
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: a7378aca5d06c7d1c49d7b46261060caf7a005db
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152602"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637657"
 ---
 # <a name="resolveassemblyreference-task"></a>ResolveAssemblyReference タスク
 指定したアセンブリに依存するすべてのアセンブリを判断します。これには、2 番目と `n` 番目の依存関係も含まれます。  
@@ -63,7 +63,7 @@ ms.locfileid: "39152602"
 |`LatestTargetFrameworkDirectories`|省略可能な `String[]` 型のパラメーターです。<br /><br /> コンピューター上で対象にすることができる最新のフレームワークの再領布リストを含むディレクトリの一覧を指定します。 これが設定されていない場合、指定されたターゲット フレームワーク識別子についてコンピューターにインストールされている最上位のフレームワークが使用されます。|  
 |`ProfileName`|省略可能な `String` 型のパラメーターです。<br /><br /> -   対象とするフレームワーク プロファイルの名前を指定します。 たとえば、Client、Web、Network などです。|  
 |`RelatedFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 参照と同じ基本名を持つ XML ファイルや *.pdb* ファイルなどの関連ファイルが含まれます。<br /><br /> このパラメーターに指定するファイルには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `Primary`: `Boolean` 値。 `true`の場合、ファイル アイテムは `Assemblies` 型のパラメーターです。 既定値は `false`にする必要があります。<br />-   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。|  
-|`ResolvedDependencyFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 依存関係への *n*番目のパスが含まれます。 このパラメーターには、1 番目のプライマリ参照は含まれていません。1 番目の参照は `ResolvedFiles` パラメーターに含まれています。<br /><br /> このパラメーターに指定するアイテムには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。<br />-   `FusionName`: `String` 値。 この依存関係の名前を指定します。<br />-   `ResolvedFrom`: `String` 値。 このファイルの解決元となったリテラル検索パスの SpecAssemblyFoldersBaseifies。|  
+|`ResolvedDependencyFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 依存関係への *n*番目のパスが含まれます。 このパラメーターには、1 番目のプライマリ参照は含まれていません。1 番目の参照は `ResolvedFiles` パラメーターに含まれています。<br /><br /> このパラメーターに指定するアイテムには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。<br />-   `FusionName`: `String` 値。 この依存関係の名前を指定します。<br />-   `ResolvedFrom`: `String` 値。 このファイルに解決されたリテラル検索パスを指定します。|  
 |`ResolvedFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 完全パスに解決されるすべてのプライマリ参照の一覧が含まれます。<br /><br /> このパラメーターに指定するアイテムには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。<br />-   `FusionName`: `String` 値。 この依存関係の名前を指定します。<br />-   `ResolvedFrom`: `String` 値。 このファイルに解決されたリテラル検索パスを指定します。|  
 |`SatelliteFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 見つかったすべてのサテライト ファイルを指定します。 このアイテムが存在する原因となった参照または依存関係が CopyLocal=true の場合、これらのパラメーターは CopyLocal=true となります。<br /><br /> このパラメーターに指定するアイテムには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。 このアイテムが存在する原因となった参照または依存関係の `true` true `CopyLocal` の場合、この値は `true`にする必要があります。<br />-   `DestinationSubDirectory`: `String` 値。 このアイテムのコピー先の相対ディレクトリを指定します。|  
 |`ScatterFiles`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型の読み取り専用の出力パラメーターです。<br /><br /> 指定されたアセンブリの 1 つに関連付けられた scatter ファイルが含まれています。<br /><br /> このパラメーターに指定するアイテムには、必要に応じて、次のアイテム メタデータを含めることができます。<br /><br /> -   `CopyLocal`: `Boolean` 値。 指定された参照を出力ディレクトリにコピーする必要があるかどうかを示します。|  

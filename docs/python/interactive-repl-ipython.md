@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6bd98a8b937dc5a4ff2f8227684be4fbb9a948c4
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: c4d9d7f03f8703bd549cf9e1098327a2fb59a497
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341508"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008217"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>対話型ウィンドウで IPython を使用する
 
@@ -81,7 +81,7 @@ Visual Studio の IPython モードの**対話型**ウィンドウは、対話�
 
 IPython には、システム シェルのエスケープ、変数の代入、出力のキャプチャなどの便利な機能が多数あります。詳細については、[IPython のドキュメント](http://ipython.org/documentation.html)を参照してください。
 
-## <a name="see-also"></a>関連項目
+### <a name="see-also"></a>関連項目
 
 - Jupyter をインストールせずに簡単に使用するには、無料の [Azure Notebooks ホスト サービス](https://notebooks.azure.com/)を試してください。ノートブックを保存し、他のユーザーと共有することができます。
 

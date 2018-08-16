@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションで、プロダクト キ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 810c560fcbae03678379a446f359e0a22d8ff085
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 7726470eaaec90ba5138a84901745bbde61201bd
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326816"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637839"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションでのプロダクト キーの使用
 
@@ -47,7 +47,8 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 
 ## <a name="locating-and-claiming-product-keys"></a>プロダクト キーの確認と要求
 プロダクト キーを表示するには、Visual Studio サブスクリプションにサインインする必要があります。 以下に示す [[ダウンロード]](https://my.visualstudio.com/downloads) ページで、特定の製品の青い **[キーを入手]** リンクを選択すると、その製品のプロダクト キーが表示されます。  すべてのキーをまとめて [[プロダクト キー](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)] ページで確認することもできます。 1 つの製品に対して複数のキーが存在する場合は、使用するキーを識別できるよう、該当するダウンロードの [メモ] 列にメモが表示されます。
-    ![ダウンロード ページからキーを入手する](_img/product-keys/download-get-key.png)
+> [!div class="mx-imgBorder"]   
+> ![ダウンロード ページからキーを入手する](_img/product-keys/download-get-key.png)
     
 製品によっては、1 つのダウンロードに製品の複数のエディションが含まれていることがあります。 このような場合、入力されたプロダクト キーによって、製品のどのエディションがインストールされるかが決まります。
 "静的" キーなどのように、自動的に提供されるキーもあります。これらは、ライセンス認証が必要ないので、同じキーを必要に応じて何回でも使用することができます。 他のキーについては、製品の **[キーを入手]** リンクを選択して要求する必要があります。
@@ -81,7 +82,8 @@ Microsoft は、Visual Studio サブスクリプション プログラムの健�
 1.  Visual Studio サブスクリプションにサインインします。  製品をダウンロードするかプロダクト キーを要求するには、サインインする必要があります。
 2.  [[プロダクト キー]](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) タブをクリックします。
 3.  プロダクト キーは、製品名のアルファベット順に一覧表示されます。  目的の製品の名前まで下にスクロールするか、ページの上部にある検索バーを使用して検索することができます。
-    ![プロダクト キーの検索](_img\product-keys\visio-product-key-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![プロダクト キーの検索](_img\product-keys\visio-product-key-cropped.png)
 
 この例では、検索バーを使用して Visio 2010 用のプロダクト キーを検索しています。
 ご覧のように、いくつかのバージョンの Visio 2010 が一覧表示されます。  Visio Standard 2010 と Visio Premium 2010 のそれぞれで 1 つのキーが既に要求され、両方に 4 つのキーが残っています。  要求されたキーはどちらも販売キーであり、ページに表示されています。  **[メモ]** 列に要求したキーに関する簡単なメモを記録することができます。  これと **[要求済み]** 列の日付を組み合わせて、要求したキーを追跡することができます。  たとえば、キーを使用して製品のインストールをライセンス認証するときにメモを作成する場合があります。
