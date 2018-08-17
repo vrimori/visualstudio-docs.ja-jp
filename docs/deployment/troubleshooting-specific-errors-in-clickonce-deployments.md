@@ -1,4 +1,4 @@
----
+﻿---
 title: ClickOnce 配置で特定のエラーのトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
@@ -33,7 +33,7 @@ ms.locfileid: "39153600"
   
 ## <a name="general-errors"></a>一般的なエラー  
   
-#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>アプリケーション ファイルを配置しようとしたときに、何も起きない、または XML が Internet Explorer に表示される、または「実行または名前を付けて保存」のダイアログ ボックスが表示される。  
+#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>アプリケーション ファイルを配置しようとしたときに、何も起きない、または XML が Internet Explorer に表示される、または「実行または名前を付けて保存」のダイアログ ボックスが表示される。
  このエラーは、サーバーまたはクライアントに正しく登録されていないコンテンツの種類 (MIME の種類とも呼ばれます) による可能性があります。  
   
  まずに関連付けるサーバーが構成されていることを確認、 *.application*コンテンツを含む拡張機能の種類「/x ms-アプリケーションです」。  

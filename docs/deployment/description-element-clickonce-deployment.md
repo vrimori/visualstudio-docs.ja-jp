@@ -1,5 +1,5 @@
----
-title: '&lt;説明&gt;要素 (ClickOnce 配置) |Microsoft Docs'
+﻿---
+title: '&lt;description&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
