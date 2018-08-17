@@ -1,4 +1,4 @@
----
+﻿---
 title: '&lt;description&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/17/2018
 ms.locfileid: "39079811"
 ---
 # <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;description&gt;要素 (ClickOnce 配置)
-シェル プレゼンスの作成とコントロール パネルの**プログラム追加と削除**の項目に使用されるアプリケーション情報を識別します。
+シェル プレゼンスの作成とコントロール パネルの**プログラム追加と削除**の項目に使用されるアプリケーション情報を識別します。  
   
 ## <a name="syntax"></a>構文  
   

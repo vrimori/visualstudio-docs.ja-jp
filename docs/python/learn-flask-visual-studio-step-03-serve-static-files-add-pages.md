@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: fd919296bdae626b781748a14275947723db9f36
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 38050d9ecb5956c4e782ec61b5ae2dc6801ad224
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388138"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637644"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
@@ -27,7 +27,7 @@ ms.locfileid: "39388138"
 この手順では、次の方法を学習します。
 
 > [!div class="checklist"]
-> - 便利なスケルトン コードによってさまざまな種類の新しいファイルに対して Visual Studio の項目テンプレートを使用する (手順 3-1)
+> - 便利なスケルトン コードによってさまざまな種類の新しいファイルを迅速に追加するための Visual Studio の項目テンプレートを使用する (手順 3-1)
 > - コードから静的ファイルを提供する (手順 3-2、オプション)
 > - アプリに追加ページを付け加える (手順 3-3)
 > - テンプレートの継承を使用して、複数のページで使用されるヘッダーとナビゲーション バーを作成する (手順 3-4)

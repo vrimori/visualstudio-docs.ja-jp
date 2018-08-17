@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 604a14a5f8d638c3d373e4ad7ea895b73a6ae0c1
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: c8638f9398be823b05d2575157c1992e230674f9
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341598"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008669"
 ---
 # <a name="format-python-code"></a>Python コードの書式を設定する
 
@@ -45,41 +45,41 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 | クラス定義のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- | 
-| Insert space between a class declaration's name and bases list (クラス宣言の名前と基底クラス リストの間にスペースを挿入する) | `class X (object): pass` | `class X(object): pass` | 
-| Insert space within bases list parentheses (基底クラス リストのかっこ内にスペースを挿入する) | `class X( object ): pass` | `class X(object): pass` |
-| Insert space within empty bases list parentheses (空の基底クラス リストのかっこ内にスペースを挿入する) | `class X( ): pass` | `class X(): pass` |
+| **Insert space between a class declaration's name and bases list \(クラス宣言の名前と基底クラス リストの間に空白を挿入する\)** | `class X (object): pass` | `class X(object): pass` | 
+| **基本リストのかっこ内に空白を挿入する** | `class X( object ): pass` | `class X(object): pass` |
+| **空の基本リストのかっこ内に空白を挿入する** | `class X( ): pass` | `class X(): pass` |
 
 <br/>
 
 | 関数定義のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert space between a function declaration's name and parameter list (関数宣言の名前とパラメーター リストの間にスペースを挿入する) | `def X (): pass` | `def X(): pass` | 
-| Insert space within parameter list parentheses (パラメーター リストのかっこ内にスペースを挿入する) | `def X( a, b ): pass` | `def X(a, b): pass` |
-| Insert space within empty parameter list parentheses (空のパラメーター リストのかっこ内にスペースを挿入する) | `def X( ): pass` | `def X(): pass` |
-| Insert spaces around '=' in default parameter values (既定のパラメーター値の '=' の前後にスペースを挿入する) | `includes X(a = 42): pass` | `includes X(a=42): pass` |
-| Insert space before and after return annotation operators (リターン注釈演算子の前後にスペースを挿入する) | `includes X() -> 42: pass` | `includes X()->42: pass` |
+| **Insert space between a function declaration's name and parameter list \(関数宣言の名前とパラメーター リストの間に空白を挿入する\)** | `def X (): pass` | `def X(): pass` | 
+| **パラメーター リストのかっこ内にスペースを挿入する** | `def X( a, b ): pass` | `def X(a, b): pass` |
+| **空のパラメーター リストのかっこ内にスペースを挿入する** | `def X( ): pass` | `def X(): pass` |
+| **Insert spaces around '=' in default parameter values \(既定のパラメーター値の '=' の前後にスペースを挿入する\)** | `includes X(a = 42): pass` | `includes X(a=42): pass` |
+| **Insert space before and after return annotation operators \(リターン注釈演算子の前後にスペースを挿入する\)** | `includes X() -> 42: pass` | `includes X()->42: pass` |
 
 <br/>
 
 | 演算子のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert spaces around binary operators (バイナリ演算子の前後にスペースを挿入する) | `a + b` | `a+b` |
-| Insert spaces around assignments (代入演算子の前後にスペースを挿入する) | `a = b` | `a=b` |
+| **バイナリ演算子の前後に空白を挿入する** | `a + b` | `a+b` |
+| **代入の前後に空白を挿入する** | `a = b` | `a=b` |
 
 <br/>
 
 | 式のスペースのオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert space between a function call's name and argument list (関数宣言の名前と引数リストの間にスペースを挿入する) | `X ()` | `X()` |
-| 空の引数リストのかっこ内にスペースを挿入する | `X( )` | `X()` |
-| 引数リストのかっこ内にスペースを挿入する | `X( a, b )` | `X(a, b)` |
-| Insert space within parentheses of expression (式のかっこ内にスペースを挿入する) | `( a )` | `(a)` |
-| Insert space within empty tuple parentheses (空のタプルのかっこ内にスペースを挿入する) | `( )` | `()` |
-| Insert space within tuple parentheses (タプルのかっこ内にスペースを挿入する) | `( a, b )` | `(a, b)` |
-| 空の角かっこ内にスペースを挿入する | `[ ]` | `[]` |
-| Insert spaces within square brackets of lists (リストの角かっこ内にスペースを挿入する) | `[ a, b ]` | `[a, b]` |
-| 始め角かっこの前にスペースを挿入する | `x [i]` | `x[i]` |
-| 角かっこ内にスペースを挿入する | `x[ i ]` | `x[i]` |
+| **Insert space between a function call's name and argument list \(関数呼び出しの名前と引数リストの間にスペースを挿入する\)** | `X ()` | `X()` |
+| **空の引数リストのかっこ内にスペースを挿入する** | `X( )` | `X()` |
+| **引数リストのかっこ内にスペースを挿入する** | `X( a, b )` | `X(a, b)` |
+| **Insert space within parentheses of expression \(式のかっこ内にスペースを挿入する\)** | `( a )` | `(a)` |
+| **Insert space within empty tuple parentheses \(空のタプルのかっこ内にスペースを挿入する\)** | `( )` | `()` |
+| **タプルのかっこの内側に空白を挿入する** | `( a, b )` | `(a, b)` |
+| **空の角かっこ内にスペースを挿入する** | `[ ]` | `[]` |
+| **Insert spaces within square brackets of lists \(リストの角かっこ内にスペースを挿入する\)** | `[ a, b ]` | `[a, b]` |
+| **Insert space before open square bracket \(開始角かっこの前にスペースを挿入する\)** | `x [i]` | `x[i]` |
+| **角かっこ内にスペースを挿入する** | `x[ i ]` | `x[i]` |
 
 <br/>
 
@@ -89,9 +89,9 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 | オプション | 書式設定前 | 書式設定後 |
 | --- | --- | --- |
-| Place imported modules on new line (インポートされたモジュールを新しい行に配置する) | `import sys, pickle` | `import sys`<br/>`import pickle` |
-| Remove unnecessary semicolons (不要なセミコロンを削除する) | `x = 42;` | `x = 42` |
-| Place multiple statements on new lines (複数のステートメントを新しい行に配置する) | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
+| **Place imported modules on new line \(インポートされたモジュールを新しい行に配置する\)** | `import sys, pickle` | `import sys`<br/>`import pickle` |
+| **不要なセミコロンを削除する** | `x = 42;` | `x = 42` |
+| **Place multiple statements on new lines \(複数のステートメントを新しい行に配置する\)** | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
 
 ## <a name="wrapping"></a>折り返し
 

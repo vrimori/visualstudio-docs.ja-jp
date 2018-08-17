@@ -11,14 +11,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd0c2a0d239cca67eda9454f522e5041af29c7fc
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: b28afd645351577073eb7525cf4bed321afb09c0
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747881"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008396"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>チュートリアル 2: 制限時間ありの計算クイズの作成
+
 このチュートリアルでは、クイズの受け手が制限時間内にランダムに表示される 4 つの計算問題に答えるクイズを作成します。 以下の方法について説明します。
 
 -   <xref:System.Random> クラスを使用して乱数を生成します。
@@ -29,16 +30,16 @@ ms.locfileid: "34747881"
 
 -   コードで基本的な算術演算を実行します。
 
- 完了すると、クイズは数値が異なることを除いて次の図のようになります。
+完了すると、クイズは数値が異なることを除いて次の図のようになります。
 
- ![4 つの問題がある計算クイズ](../ide/media/express_finishedquiz.png) このチュートリアルで作成するクイズ
+![4 つの問題がある計算クイズ](../ide/media/express_finishedquiz.png)
 
 ## <a name="tutorial-links"></a>チュートリアルのリンク
 
- クイズの完全バージョンをダウンロードするには、「[Complete Math Quiz tutorial sample](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)」(計算クイズのチュートリアルの完全なサンプル) を参照してください。
+クイズの完全バージョンをダウンロードするには、「[Complete Math Quiz tutorial sample](http://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c)」(計算クイズのチュートリアルの完全なサンプル) を参照してください。
 
 > [!NOTE]
->  このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
+> このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
 
 ## <a name="related-topics"></a>関連トピック
 

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c7ae99208f48ffa2c8820f8c2765f72a6ae67a6e
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: d041fb03b4a35b0ed68d386e21ca1ec92a0e3588
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586874"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008643"
 ---
 # <a name="get-started-with-wpf"></a>WPF の使用を開始する
 

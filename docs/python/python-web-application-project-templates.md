@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9edb2a87b862d6a779bb299a20a3f21c471067b0
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 75f7a7d5a30fd3fb84bfd038c55b0731ae017ef1
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586548"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638714"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -88,7 +88,7 @@ Web プロジェクトのデバッグが開始されると、Visual Studio は�
 
 **[デバッグ]** グループで、次の操作を実行します。
 
-- **[検索パス]**、**[スクリプトの引数]**、**[インタープリターの引数]**、**[インタープリター パス]**: これらのオプションは、[通常のデバッグ](debugging-python-in-visual-studio.md)の場合と同じです
+- **[検索パス]**、**[スクリプトの引数]**、**[インタープリターの引数]**、**[インタープリター パス]**: これらのオプションは、[通常のデバッグ](debugging-python-in-visual-studio.md)の場合と同じです。
 - **[起動 URL]**: ブラウザーで開かれる URL を指定します。 既定値は `localhost` です。
 - **[ポート番号]**: URL に何も指定されなかった場合に使用するポート (Visual Studio によって既定で自動的に選択されます)。 この設定により、ローカル デバッグ サーバーがリッスンするポートを構成するためにテンプレートで使用される `SERVER_PORT` 環境変数の既定値をオーバーライドできます。
 

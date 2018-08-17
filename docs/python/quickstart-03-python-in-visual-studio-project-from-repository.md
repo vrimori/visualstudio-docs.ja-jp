@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6ef9867d233d3aa8f5645793f8801f6f69f4e9be
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: a058badfecfea84841a6a857200c04ebabf42a58
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512817"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636825"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
@@ -37,7 +37,7 @@ ms.locfileid: "39512817"
 1. **[ローカル Git リポジトリ]** で **[複製]** コマンドを選択し、[URL] フィールドに「`https://github.com/gregmalcolm/python_koans`」と入力し、複製元のファイルが格納されているフォルダーを入力し、**[複製]** ボタンを選択します。
 
     > [!Tip]
-    > チーム エクスプローラーで指定するフォルダーは、複製されたファイルを受け取るフォルダーです。 `git clone` コマンドとは異なり、チーム エクスプローラーで複製を作成しても、リポジトリの名前のサブフォルダーは自動作成されません。
+    > **チーム エクスプローラー** で指定するフォルダーは、複製されたファイルを受け取るフォルダーです。 `git clone` コマンドとは異なり、**チーム エクスプローラー**で複製を作成しても、リポジトリの名前のサブフォルダーは自動作成されません。
 
 1. 複製が完了すると、リポジトリ名が **[ローカル Git リポジトリ]** の一覧に表示されます。 その名前をダブルクリックして、**チーム エクスプローラー**のリポジトリ ダッシュボードに移動します。
 
