@@ -1,5 +1,5 @@
 ---
-title: .NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) Extensibility |Microsoft ドキュメント
+title: .NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) 拡張機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,17 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09287c48285bfcdc32b1a7d558d44f9d212f1b41
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ab5a486866cb4bc97835a2977fec6e6eb6bc2820
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126937"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639901"
 ---
-# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>.NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) の機能拡張
-.NET コンパイラ プラットフォーム ("Roslyn") のコア ミッションを c# および Visual Basic コンパイラを開くと、ツールを許可して、プログラムに関する豊富な情報と、コンパイラで共有する開発者が必要です。 コード分析ツールは、コード品質の向上し、アプリケーションの構築のジェネレーターの参考情報をコードします。 スマートなツールとして、詳細とのみコンパイラ保有深いコード知識の詳細にアクセスが必要です。 不透明なトランスレータ (ソース コード内とオブジェクト コードを) するのではなく Roslyn コンパイラは、ツールやアプリケーション内のコードに関連するタスクを使用できる Api が用意されています。  
+# <a name="net-compiler-platform-quotroslynquot-extensibility"></a>.NET コンパイラ プラットフォーム (&quot;Roslyn&quot;) 拡張機能
+.NET コンパイラ プラットフォーム ("Roslyn") の主要な目的は、c# および Visual Basic コンパイラを開くと、ツールを許可して、プログラムについて豊富な情報コンパイラを共有する開発者があります。 コード分析ツールでは、コードの品質を向上させ、コード ジェネレーターの補助アプリケーションの構築にします。 スマートなツールとして、コンパイラのみが知っているコードの深い知識の詳細と詳細にアクセスが必要があります。 不透明なトランスレーター (内のソース コードおよびオブジェクト コード) ではなく、Roslyn コンパイラは、ツールやアプリケーション内のコード関連のタスクに使用できる Api を提供します。  
   
- 最も良いところはある Roslyn コンパイラでは、その Api、サンプル、チュートリアル、およびこれらの Api の上に構築される実際のツールをすべて完全にオープン ソース[github.com/dotnet/roslyn](https://github.com/dotnet/Roslyn)です。 Roslyn の概要と詳細 OSS サイトに移動してください。 リンクを最新 c# および VB の機能、エンド ユーザーとして使用できるを取得するだけでなく概要 Roslyn Api を利用してツール ビルダーとしてへのリンクが表示されます。  
+ 最も重要な部分は Roslyn コンパイラ、その Api、サンプルとチュートリアル、およびこれらの Api の上に構築された実際のツールがすべて完全にオープン ソースがある[github.com/dotnet/roslyn](https://github.com/dotnet/Roslyn)します。 詳細については、Roslyn を使用するには、OSS サイトにアクセスしてください。 Roslyn Api を利用してツール ビルダーとして開始するリンクと同様に、最新の c# と VB の機能、エンド ユーザーとして使用できるを取得へのリンクが表示されます。  
   
 ## <a name="see-also"></a>関連項目  
- [Roslyn アナライザーの概要](../extensibility/getting-started-with-roslyn-analyzers.md)
+ [Roslyn アナライザーを概要します。](../extensibility/getting-started-with-roslyn-analyzers.md)

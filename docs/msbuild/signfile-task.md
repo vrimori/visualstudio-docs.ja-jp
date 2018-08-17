@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 329cef79c529850bbe90a62cc24d5ec989379aa9
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 6d063528b67712dd16136bfd3edec29643868517
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104179"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154847"
 ---
 # <a name="signfile-task"></a>SignFile タスク
 
@@ -49,7 +49,7 @@ ms.locfileid: "33104179"
   
 ## <a name="remarks"></a>コメント
 
- 上記のパラメーターに加えて、このタスクは <xref:Microsoft.Build.Utilities.Task> クラスからパラメーターを継承します。 これらの追加パラメーターのリストとその説明については、「[Task Base Class](../msbuild/task-base-class.md)」を参照してください。
+ 上記のパラメーターに加えて、このタスクは <xref:Microsoft.Build.Utilities.Task> クラスからパラメーターを継承します。 これらの追加パラメーターのリストとその説明については、「[Task 基底クラス](../msbuild/task-base-class.md)」を参照してください。
   
 ## <a name="example"></a>例
 
@@ -73,8 +73,8 @@ ms.locfileid: "33104179"
 ```
 
 > [!NOTE]
-> 証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、「[Obtain the SHA-1 Hash of a Trusted Root CA Certificate](http://msdn.microsoft.com/en-us/dd641990-9a88-4228-a245-017797131a87)」 (信頼されたルート CA 証明書の SHA-1 ハッシュの取得) を参照してください。
+> 証明書の拇印は、証明書の SHA-1 ハッシュです。 詳細については、[信頼されたルート CA 証明書の SHA-1 ハッシュの取得](http://msdn.microsoft.com/en-us/dd641990-9a88-4228-a245-017797131a87)に関する記事を参照してください。
   
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)

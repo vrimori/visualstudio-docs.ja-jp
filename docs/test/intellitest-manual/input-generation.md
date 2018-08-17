@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: cbabbe7eed62506bc80cbf112c85cda002e409dd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 14aa15d53977167a61d5570d4bc2ac7edffb197d
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977778"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511653"
 ---
-# <a name="input-generatation-using-dynamic-symbolic-execution"></a>動的なシンボリック実行を使用する入力生成
+# <a name="input-generation-using-dynamic-symbolic-execution"></a>動的なシンボリック実行を使用する入力生成
 
 IntelliTest は、プログラムの分岐条件を分析して、[パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)の入力を生成します。 テスト入力は、プログラムの新しい分岐動作をトリガーできるかどうかに応じて、選択されます。 分析はインクリメンタル処理です。 仮テスト入力パラメーター **I** で述語 **q: I -> {true, false}** を詳細に指定します。**q** は、IntelliTest が既に監視した動作セットを表します。 最初は、まだ何も観測されていないため、**q := false** となります。
 
@@ -72,7 +72,7 @@ IntelliTest の[制約ソルバー](#constraint-solver)は、テストとテス�
 IntelliTest で[既存の .NET クラスのインスタンスを作成](#existing-classes)できます。また、特定のインターフェイスを実装し、用途に応じて異なる方法で動作する[モック オブジェクトの作成](#parameterized-mocks)を IntelliTest を使用して自動で行うこともできます。
 
 <a name="existing-classes"></a>
-## <a name="instantiating-existing-classes"></a>既存クラスのインスタンス化
+## <a name="instantiate-existing-classes"></a>既存クラスのインスタンス化
 
 **何が問題なのでしょうか。**
 
@@ -113,7 +113,7 @@ IntelliTest は、テストを生成する際に、生成されたテストの�
 
 モック オブジェクトはインターフェイスを実装 (または、非シール クラスを拡張) します。 これは実際の実装ではなく、モック オブジェクトを使用するテストの実行を許可する単なるショートカットを表します。 その動作は、使用される各テスト ケースの一部として手動で定義します。 モック オブジェクトとその予期される動作の定義を容易にするツールは多数あります。それでも、この動作は手動で定義する必要があります。
 
-モック オブジェクトのハード コーディングされた値の代わりに、IntelliTest は値を生成できます。 [パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)を有効にする場合と同じように、IntelliTest はパラメーター化された mMock を有効にすることもできます。
+モック オブジェクトのハード コーディングされた値の代わりに、IntelliTest は値を生成できます。 [パラメーター化された単体テスト](test-generation.md#parameterized-unit-testing)を有効にする場合と同じように、IntelliTest ではパラメーター化されたモックも有効にされます。
 
 パラメーター化されたモックには次の 2 つの異なる実行モードがあります。
 
@@ -135,7 +135,7 @@ IntelliTest は、テストとテスト対象のプログラムを実行する�
 IntelliTest は、適切なプログラムの動作をトリガーするのに必要な配列と文字列のサイズを最小化しようとします。
 
 <a name="additional-inputs"></a>
-## <a name="obtaining-additional-inputs"></a>追加入力の取得
+## <a name="obtain-additional-inputs"></a>追加入力の取得
 
 [PexChoose](static-helper-classes.md#pexchoose) 静的クラスを使用して、テストへの追加入力を取得することができ、[パラメーター化されたモック](#parameterized-mocks)を実装できます。
 

@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c97557b18b589ece08ce4f3a536201df3d98aa8
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 4ea57256ab85694f69d970de476ada17ada1ee74
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326803"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152488"
 ---
 # <a name="project-element-msbuild"></a>Project 要素 (MSBuild)
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。  
@@ -51,7 +51,7 @@ ms.locfileid: "36326803"
 </Project>  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -63,7 +63,7 @@ ms.locfileid: "36326803"
 |`Sdk`|省略可能な属性です。 <br /><br /> .proj ファイルに追加される暗黙的なインポート ステートメントの作成に使用する SDK 名と省略可能なバージョン。 バージョンが指定されていない場合、MSBuild は、既定のバージョンを解決しようとします。  たとえば、`<Project Sdk="Microsoft.NET.Sdk" />` または `<Project Sdk="My.Custom.Sdk/1.0.0" />` のようにします。|  
 |`ToolsVersion`|省略可能な属性です。<br /><br /> MSBuild が $(MSBuildBinPath) と $(MSBuildToolsPath) の値を決定するために使用するツールセットのバージョン。|  
 |`TreatAsLocalProperty`|省略可能な属性です。<br /><br /> グローバルとは見なされないプロパティ名。 この属性は、プロジェクトまたはターゲット ファイル、および後続のすべてのインポートに設定されているプロパティ値が特定のコマンド ライン プロパティによってオーバーライドされることを防ぎます。 複数のプロパティはセミコロン (;) で区切られます。<br /><br /> 通常、グローバル プロパティは、プロジェクト ファイルまたはターゲット ファイルで設定されたプロパティ値をオーバーライドします。 プロパティが `TreatAsLocalProperty` 値に一覧表示されている場合、グローバル プロパティ値は、そのファイルと後続のインポートに設定されているプロパティ値をオーバーライドしません。 詳細については、「[方法 : 同じソース ファイルを異なるオプションでビルドする](../msbuild/how-to-build-the-same-source-files-with-different-options.md)」を参照してください。 **注:**  グローバル プロパティは、コマンド プロンプトで **/property** (または **/p**) スイッチを使用して設定します。 また、複数プロジェクト ビルドの子プロジェクトのグローバル プロパティは、MSBuild タスクの `Properties` 属性を使用して設定または変更することもできます。 詳細については、「[MSBuild タスク](../msbuild/msbuild-task.md)」を参照してください。|  
-|`Xmlns`|省略可能な属性です。<br /><br /> `xmlns` 属性には、"http://schemas.microsoft.com/developer/msbuild/2003" の値を指定する必要があります。|  
+|`Xmlns`|省略可能な属性です。<br /><br /> `xmlns` 属性には、"`http://schemas.microsoft.com/developer/msbuild/2003`" の値を指定する必要があります。|  
 
 ### <a name="child-elements"></a>子要素  
 
@@ -81,8 +81,8 @@ ms.locfileid: "36326803"
 ### <a name="parent-elements"></a>親要素  
  なし。  
 
-## <a name="see-also"></a>参照  
- [方法 : 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)   
- [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [方法: 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)   
+ [コマンドライン リファレンス](../msbuild/msbuild-command-line-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [MSBuild](../msbuild/msbuild.md)

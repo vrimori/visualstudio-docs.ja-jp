@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 88810c2e4958e96bd5487ce1a5b059897b725b45
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: f7bb4dfea8e23941e6d9ad29b9760c9e7c85fc5f
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39132337"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567143"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -95,7 +95,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     プロジェクトの *package.json* ファイルが、パッケージのバージョンなど、新しいパッケージの情報で更新されます。
 
-1. UI を使って残りのパッケージを 1 つずつ検索して追加する代わりに、次のコードを package.json に貼り付けます。 `dependencies` セクションを次のコードに置き換えます。
+1. UI を使って残りのパッケージを 1 つずつ検索して追加する代わりに、次のコードを package.json に貼り付けます。 これを行うには、`dependencies` セクションを次のコードに置き換えます。
 
     ```js
     "dependencies": {
@@ -110,9 +110,11 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
     }
     ```
 
+    お使いのバージョンの空白のテンプレートに `dependencies` セクションがない場合は、既存のセクションを置き換えるのではなく、これを追加する必要があります。
+
 1. プロジェクトで **npm** ノードを右クリックし、**[npm パッケージを更新する]** を選択します。
 
-    **[出力]** ウィンドウを選択すると、パッケージ インストールの進行状況が表示されます。 インストールには数分かかることがあります。結果がすぐに表示されないことがあります。
+    下のウィンドウで **[出力]** ウィンドウを選択すると、パッケージ インストールの進行状況が表示されます。 インストールには数分かかることがあります。結果がすぐに表示されないことがあります。 出力を確認するには、**[出力]** ウィンドウの **[出力元の表示]** フィールドで **[Npm]** を選択していることを確認します。
 
     npm モジュールがインストールされると、ソリューション エクスプローラーの表示は次のようになります。
 
@@ -144,7 +146,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
 ## <a name="add-app-code"></a>アプリのコードを追加する
 
-1. *server.js* を開き、コードを次のものと置き換えます。
+1. *server.js* を開き、既存のコードを次のコードと置き換えます。
 
     ```javascript
     'use strict';

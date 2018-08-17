@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d88f1e258bf8aa9801555c256f825841fff9d476
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: 7844b777b1a0baf841b1ae80ddcdd67363615c29
+ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089504"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39388216"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
@@ -37,17 +37,17 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
 ## <a name="step-6-1-create-the-project-and-initialize-the-database"></a>手順 6-1: プロジェクトを作成し、データベースを初期化する
 
-1. Visual Studio で、**ソリューション エクスプローラー**に移動して、このチュートリアルで以前に作成した "LearningDjango" ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** を選択します  (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
+1. Visual Studio で、**ソリューション エクスプローラー**に移動して、このチュートリアルで以前に作成した **LearningDjango** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** を選択します  (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
-1. [新しいプロジェクト] ダイアログで "Django ポーリング Django Web プロジェクト" テンプレートを探して選択し、**[OK]** を選択します。
+1. [新しいプロジェクト] ダイアログで **Django ポーリング Web プロジェクト** テンプレートを探して選択し、**[OK]** を選択します。
 
-1. Visual Studio の他のプロジェクト テンプレートと同様に、"ポーリング Django Web プロジェクト" テンプレートには `requirements.txt` ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。
+1. Visual Studio の他のプロジェクト テンプレートと同様に、"ポーリング Django Web プロジェクト" テンプレートには *requirements.txt* ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。
 
-1. Python による仮想環境の設定が終了したら、`readme.html` に表示された指示に従って、データベースを初期化し、Django スーパー ユーザー (つまり、管理者) を作成します。 そのために、まず**ソリューション エクスプローラー**で "DjangoPolls" プロジェクトを右クリックし、**[Python]** > **[Django 移行]** コマンドを選択し、もう一度プロジェクトを右クリックして **[Python]** > **[Django でスーパー ユーザーを作成する]** コマンドを選択し、プロンプトに従います  (初めてスーパー ユーザーを作成する場合、データベースが初期化されていないため、エラーが表示されます)。
+1. Python による仮想環境の設定が終了したら、*readme.html* に表示された指示に従って、データベースを初期化し、Django スーパー ユーザー (つまり、管理者) を作成します。 そのために、まず**ソリューション エクスプローラー**で **DjangoPolls** プロジェクトを右クリックし、**[Python]** > **[Django 移行]** コマンドを選択し、もう一度プロジェクトを右クリックして **[Python]** > **[Django でスーパー ユーザーを作成する]** コマンドを選択し、プロンプトに従います  (初めてスーパー ユーザーを作成する場合、データベースが初期化されていないため、エラーが表示されます)。
 
-1. **ソリューション エクスプローラー**を右クリックし、**[スタートアップ プロジェクトに設定]** を選択して、"DjangoPolls" プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
+1. **ソリューション エクスプローラー**を右クリックし、**[スタートアップ プロジェクトに設定]** を選択して、**DjangoPolls** プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
 
-1. **[デバッグ]、[デバッグの開始]** の順に選択するか (F5 キー)、ツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
+1. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) を選択するか、またはツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
 
     ![Visual Studio の [Web サーバー] ツールバー ボタンを実行する](media/django/run-web-server-toolbar-button.png)
 
@@ -59,9 +59,9 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
     ![ポーリング Django Web プロジェクト アプリの管理ビュー](media/django/step06-polls-administrative-interface.png)
 
-1. 以降のセクションのために、アプリを実行したままにすることができます。
+1. 以降のセクションについては、アプリにそのまま実行させることができます。
 
-    アプリを停止して [ソース コントロールの変更をコミットする](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)場合は、まず**チーム エクスプローラー**で **[変更]** ページを開き、仮想環境のフォルダー (通常は `env`) を右クリックして、**[これらのローカル項目を無視]** を選択します。
+    アプリを停止して[ソース コントロールへの変更をコミットする](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)場合、最初に**チーム エクスプローラー**で **[変更]** を開き、仮想環境のフォルダー (通常は **env**) を右クリックして、**[これらのローカル項目を無視]** を選択します。
 
 ### <a name="examine-the-project-contents"></a>プロジェクトの内容を確認する
 
@@ -69,15 +69,15 @@ Visual Studio の "Django Web Project" テンプレートについて理解し�
 
 ### <a name="question-what-does-the-django-migrate-command-do"></a>質問: [Django 移行] は何を実行するコマンドですか
 
-回答: **[Django 移行]** コマンドは、具体的には `manage.py migrate` コマンドを実行します。これは、以前に実行されたことがないスクリプトが `app/migrations` フォルダー内にあれば実行するコマンドです。 この例では、そのフォルダー内の `0001_initial.py` スクリプトが実行され、データベース内の必要なスキーマが設定されます。
+回答: **[Django 移行]** コマンドは、具体的には `manage.py migrate` コマンドを実行します。これは、以前に実行されたことがないスクリプトが *app/migrations* フォルダー内にあれば実行するコマンドです。 この例では、そのフォルダー内の *0001_initial.py* スクリプトが実行され、データベース内の必要なスキーマが設定されます。
 
-移行スクリプト自体は `manage.py makemigrations` コマンドによって作成されます。このコマンドを実行すると、アプリの `models.py` ファイルがスキャンされ、データベースの現在の状態と比較され、現在のモデルに合うようにデータベース スキーマを移行するために必要なスクリプトが生成されます。 いずれはモデルを更新し、変更することになるので、この Django の機能は非常に強力です。 移行を生成して実行することで、モデルとデータベースの同期状態を簡単に維持することができます。
+移行スクリプト自体は `manage.py makemigrations` コマンドによって作成されます。このコマンドを実行すると、アプリの *models.py* ファイルがスキャンされ、データベースの現在の状態と比較され、現在のモデルに合うようにデータベース スキーマを移行するために必要なスクリプトが生成されます。 いずれはモデルを更新し、変更することになるので、この Django の機能は非常に強力です。 移行を生成して実行することで、モデルとデータベースの同期状態を簡単に維持することができます。
 
 移行は、この記事で後述する手順 6-3 で使用します。
 
 ## <a name="step-6-2-understand-data-models"></a>手順 6-2: データ モデルを理解する
 
-このアプリのモデルである Poll と Choice は、`app/models.py` で定義されています。 各モデルは `django.db.models.Model` から派生し、`CharField` や `IntegerField` のような `models` クラスのメソッドを使用してモデル内のフィールドを定義する Python クラスです (これらのフィールドはデータベースの列にマップされます)。
+このアプリのモデルである Poll と Choice は、*app/models.py* で定義されています。 各モデルは `django.db.models.Model` から派生し、`CharField` や `IntegerField` のような `models` クラスのメソッドを使用してモデル内のフィールドを定義する Python クラスです (これらのフィールドはデータベースの列にマップされます)。
 
 ```python
 from django.db import models
@@ -118,15 +118,15 @@ Choice は `poll` フィールドを介して Poll と関連しており、`text
 
 フィールドの種類をすべて挙げると、`CharField` (制限ありのテキスト) `TextField` (無制限のテキスト)、`EmailField`、`URLField`、`DateTimeField`、`IntegerField`、`DecimalField`、`BooleanField`、`ForeignKey`、および `ManyToMany` があります。 各フィールドには、`max_length` のような属性があります。 `blank=True` 属性はフィールドが省略可能であることを意味します。`null=true` は値が省略可能であることを意味します。 値を、データ値または表示値タプルの配列に含まれる値に制限する `choices` 属性もあります  (Django ドキュメントの「[Model field reference](https://docs.djangoproject.com/en/2.0/ref/models/fields/)」(Model フィールド リファレンス) を参照してください)。
 
-[SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使用してプロジェクトの `db.sqlite3` ファイルを調べることで、データベースに保存されている内容を正確に確認することができます。 データベース内には、Choice モデルの `poll` のような外部キー フィールドが `poll_id` として格納されていることがわかります。Django はこのマッピングを自動的に処理します。
+[SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使用してプロジェクトの *db.sqlite3* ファイルを調べることで、データベースに保存されている内容を正確に確認することができます。 データベース内には、Choice モデルの `poll` のような外部キー フィールドが `poll_id` として格納されていることがわかります。Django はこのマッピングを自動的に処理します。
 
 一般的に、Django でデータベースを操作するということは、Django がユーザーの代わりに基のデータベースを管理できるように、モデルを介して排他的に操作することを意味します。
 
 ### <a name="seed-the-database-from-samplesjson"></a>samples.json からデータベースをシードする
 
-最初は、データベースには投票が含まれていません。 "/admin" URL の管理インターフェイスを使用して手動で投票を追加することができます。また、実行中のサイトの "/seed" ページにアクセスして、アプリの `samples.json` ファイルに定義されている投票でデータベースのシードを追加することもできます。
+最初は、データベースには投票が含まれていません。 "/admin" URL の管理インターフェイスを使用して手動で投票を追加することができます。また、実行中のサイトの "/seed" ページにアクセスして、アプリの *samples.json* ファイルに定義されている投票でデータベースのシードを追加することもできます。
 
-Django プロジェクトの `urls.py` には追加の URL パターン `url(r'^seed$', app.views.seed, name='seed'),` があります。 `app/views.py` の `seed` ビューには `samples.json` ファイルが読み込まれ、必要なモデル オブジェクトが作成されます。 Django で、基のデータベース内の一致するレコードが自動的に作成されます。
+Django プロジェクトの *urls.py* には追加の URL パターン `url(r'^seed$', app.views.seed, name='seed'),` があります。 *app/views.py* の `seed` ビューには *samples.json* ファイルが読み込まれ、必要なモデル オブジェクトが作成されます。 Django で、基のデータベース内の一致するレコードが自動的に作成されます。
 
 `@login_required` デコレーターを使用は、ビューの承認レベルを示すことに注意してください。
 
@@ -154,7 +154,7 @@ def seed(request):
     return HttpResponseRedirect(reverse('app:home'))
 ```
 
-影響を確認するために、まずアプリを実行して投票がまだ存在しないことを確認します。 次に "/seed" URL にアクセスします。アプリがホーム ページに戻ると、投票を使用できるようになったことがわかります。 ここでも [SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使って `db.sqlite3` の生ファイルを調べてみてください。
+影響を確認するために、まずアプリを実行して投票がまだ存在しないことを確認します。 次に "/seed" URL にアクセスします。アプリがホーム ページに戻ると、投票を使用できるようになったことがわかります。 ここでも [SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使って *db.sqlite3* の生ファイルを調べてみてください。
 
 ![シードされたデータベースを使用したポーリング Django Web プロジェクト アプリ](media/django/step06-app-with-seeded-database.png)
 
@@ -164,26 +164,26 @@ def seed(request):
 
 ## <a name="step-6-3-use-migrations"></a>手順 6-3: 移行を使用する
 
-プロジェクトの作成後に (Visual Studio のコンテキスト メニューを使用して) `manage.py makemigrations` コマンドを実行した場合、Django によってファイル `app/migrations/0001_initial.py` が作成されます。 このファイルには、初期データベース テーブルを作成するスクリプトが含まれています。
+プロジェクトの作成後に (Visual Studio のコンテキスト メニューを使用して) `manage.py makemigrations` コマンドを実行した場合、Django によってファイル *app/migrations/0001_initial.py* が作成されます。 このファイルには、初期データベース テーブルを作成するスクリプトが含まれています。
 
 いずれはモデルに変更を加えることになるので、Django でこれらのモデルを使用すると、基のデータベース スキーマを簡単に最新の状態に保つことができます。 一般的なワークフローは次のとおりです。
 
-1. `models.py` ファイルのモデルに変更を加えます。
-1. Visual Studio の**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[Python]** > **[Django で移行を実行する]** コマンドを選択します。 前述のように、このコマンドは `app/migrations` にスクリプトを生成し、データベースを現在の状態から新しい状態に移行します。
+1. *models.py* ファイルのモデルに変更を加えます。
+1. Visual Studio の**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[Python]** > **[Django で移行を実行する]** コマンドを選択します。 前述のように、このコマンドは *app/migrations* にスクリプトを生成し、データベースを現在の状態から新しい状態に移行します。
 1. スクリプトを実際のデータベースに適用するには、もう一度プロジェクトを右クリックし、**[Python]** > **[Django 移行]** を選択します。
 
 Django では、移行コマンドの実行時に必要な移行が適用されるように、各データベースに適用された移行が追跡されます。 たとえば、新しい空のデータベースを作成する場合、移行コマンドを実行すると、すべての移行スクリプトが適用され、現在のモデルを使用して最新の状態になります。 同様に、開発用コンピューター上で複数のモデルを変更し、移行を生成する場合は、運用サーバー上で移行コマンドを実行して、累積的な移行を運用データベースに適用することができます。 Django は、運用データベースの最後の移行以降に生成された移行スクリプトのみを改めて適用します。
 
 モデルの変更の影響を確認するには、次の手順を実行します。
 
-1. `pub_date` フィールドの後に次の行を追加して、`app/models.py` の Poll モデルに省略可能な `author` フィールドを追加します。
+1. `pub_date` フィールドの後に次の行を追加して、*app/models.py* の Poll モデルに省略可能な `author` フィールドを追加します。
 
     ```python
     author = models.CharField(max_length=100, blank=True)
     ```
 
-1. ファイルを保存し、**ソリューション エクスプローラー**で "DjangoPolls" プロジェクトを右クリックし、**[Python]** > **[Django で移行を実行する]** コマンドを選択します。
-1. **[プロジェクト]** > **[すべてのファイルを表示]** コマンドを選択すると、`migrations` フォルダーに名前が `002_auto_` で始まる新しく生成されたスクリプトが表示されます。 ファイルを右クリックし、**[プロジェクトに含める]** を選択します。 もう一度 **[プロジェクト]** > **[すべてのファイルを表示]** コマンドを選択すると、元のビューに戻ります  (この手順の詳細については、以下の 2 つ目の質問を参照してください)。
+1. ファイルを保存し、**ソリューション エクスプローラー**で **DjangoPolls** プロジェクトを右クリックし、**[Python]** > **[Django で移行を実行する]** コマンドを選択します。
+1. **[プロジェクト]** > **[すべてのファイルを表示]** コマンドを選択すると、**migrations** フォルダーに名前が **002_auto_** で始まる新しく生成されたスクリプトが表示されます。 ファイルを右クリックし、**[プロジェクトに含める]** を選択します。 もう一度 **[プロジェクト]** > **[すべてのファイルを表示]** コマンドを選択すると、元のビューに戻ります  (この手順の詳細については、以下の 2 つ目の質問を参照してください)。
 1. 必要に応じてそのファイルを開き、Django によって以前のモデル状態から新しい状態への変更がどのようにスクリプト化されたかを確認します。
 1. もう一度 Visual Studio プロジェクトを右クリックし、**[Python]** > **[Django 移行]** を選択して変更をデータベースに適用します。
 1. 必要に応じて、適切なビューアーでデータベースを開いて変更を確認します。
@@ -192,13 +192,13 @@ Django では、移行コマンドの実行時に必要な移行が適用され�
 
 ### <a name="question-what-happens-if-i-forget-to-run-the-migrate-command-after-making-changes-to-models"></a>質問: モデルを変更した後で移行コマンドを実行し忘れた場合はどうなりますか
 
-回答: モデルがデータベースの内容と一致しない場合、実行時に適切な例外がスローされ、Django は失敗します。 たとえば、前のセクションで示したモデルの変更を移行し忘れた場合、"no such column: app_poll.author" というエラーが表示されます。
+回答: モデルがデータベースの内容と一致しない場合、実行時に適切な例外がスローされ、Django は失敗します。 たとえば、前のセクションで示したモデルの変更を移行し忘れた場合、**no such column: app_poll.author** というエラーが表示されます。
 
 ![モデルの変更が移行されなかったときに表示されるエラー](media/django/step06-exception-when-forgetting-to-migrate.png)である必要があります。
 
 ### <a name="question-why-doesnt-solution-explorer-show-newly-generated-scripts-after-running-django-make-migrations"></a>質問: [Django で移行を実行する] を実行した後、ソリューション エクスプローラーに新しく生成されたスクリプトが表示されないのはなぜですか
 
-回答: 新しく生成されたスクリプトは `app/migrations` フォルダーにあり、**[Django 移行]** コマンドを実行すると適用されますが、Visual Studio プロジェクトに追加されていないので、自動的には**ソリューション エクスプローラー**に表示されません。 表示するには、まず **[プロジェクト]** > **[すべてのファイルを表示]** メニュー コマンドまたは次の図で示されているツール バーのボタンを選択します。 このコマンドを実行すると、**ソリューション エクスプローラー**にプロジェクト フォルダー内のすべてのファイルが表示されます。そのプロジェクトに追加されていない項目には、輪郭が点線のアイコンが使用されます。 追加するファイルを右クリックし、**[プロジェクトに含める]** を選択します。こうすると、次回のコミットでソース管理にも含まれます。
+回答: 新しく生成されたスクリプトは *app/migrations* フォルダーにあり、**[Django 移行]** コマンドを実行すると適用されますが、Visual Studio プロジェクトに追加されていないので、自動的には**ソリューション エクスプローラー**に表示されません。 表示するには、まず **[プロジェクト]** > **[すべてのファイルを表示]** メニュー コマンドまたは次の図で示されているツール バーのボタンを選択します。 このコマンドを実行すると、**ソリューション エクスプローラー**にプロジェクト フォルダー内のすべてのファイルが表示されます。そのプロジェクトに追加されていない項目には、輪郭が点線のアイコンが使用されます。 追加するファイルを右クリックし、**[プロジェクトに含める]** を選択します。こうすると、次回のコミットでソース管理にも含まれます。
 
 ![ソリューション エクスプローラーの [プロジェクトに含める] コマンド](media/django/step06-include-migrations-script-in-project.png)
 
@@ -210,7 +210,7 @@ Django では、移行コマンドの実行時に必要な移行が適用され�
 
 "ポーリング Django Web プロジェクト" テンプレートで生成されるビュー ([詳細] ページや [連絡先] ページのビューなど) のほとんどは、このチュートリアルで使用した "Django Web プロジェクト" テンプレートによって作成されるビューとよく似ています。 ポーリング アプリの違いは、ホーム ページでモデルを利用している点と、投票を実行し、投票結果を表示するためのページがいくつか追加されている点です。
 
-まず、Django プロジェクトの `urls.py` ファイル内にある `urlpatterns` 配列の最初の行は、単なるアプリ ビューへのルーティングではなく、 アプリ固有の `urls.py` ファイルを取得します。
+まず、Django プロジェクトの *urls.py* ファイル内にある `urlpatterns` 配列の最初の行は、単なるアプリ ビューへのルーティングではなく、 アプリ固有の *urls.py* ファイルを取得します。
 
 ```python
 from django.conf.urls import url, include
@@ -222,7 +222,7 @@ urlpatterns = [
 ]
 ```
 
-`app/urls.py` ファイルには、さらに興味深いルーティング コードがあります (説明コメントが追加されています)。
+*app/urls.py* ファイルには、さらに興味深いルーティング コードがあります (説明コメントが追加されています)。
 
 ```python
 urlpatterns = [
@@ -258,9 +258,9 @@ urlpatterns = [
 
 Django では、構文 `?P<name>pattern` で `name` というグループが作成されます。これは出現順でビューの引数として渡されます。 前述のコードでは、`PollsDetailView` と `PollsResultsView` は `pk` という引数を受け取り、`app.views.vote` は `poll_id` という引数を受け取ります。
 
-また、ほとんどのビューは `app/views.py` のビュー関数に対する直接参照ではなく、 ほとんどは `django.views.generic.ListView` または `django.views.generic.DetailView` から派生した同じファイル内のクラスを参照していることがわかります。 基底クラスには `as_view` メソッドがあります。このメソッドは、テンプレートを識別する `template_name` 引数を受け取ります。 `ListView` 基底クラスは、ホーム ページに使用されます。この基底クラスには、データを含む `queryset` プロパティと、テンプレート内のデータを参照する変数名 (この場合は `latest_poll_list`) が指定された `context_object_name` プロパティも必要です。
+また、ほとんどのビューは *app/views.py* のビュー関数に対する直接参照ではありません。 ほとんどは `django.views.generic.ListView` または `django.views.generic.DetailView` から派生した同じファイル内のクラスを参照していることがわかります。 基底クラスには `as_view` メソッドがあります。このメソッドは、テンプレートを識別する `template_name` 引数を受け取ります。 `ListView` 基底クラスは、ホーム ページに使用されます。この基底クラスには、データを含む `queryset` プロパティと、テンプレート内のデータを参照する変数名 (この場合は `latest_poll_list`) が指定された `context_object_name` プロパティも必要です。
 
-ホーム ページの `PollListView` を確認できるようになりました。これは、`app/views.py` で次のように定義されています。
+ホーム ページの `PollListView` を確認できるようになりました。これは、*app/views.py* で次のように定義されています。
 
 ```python
 class PollListView(ListView):
@@ -276,7 +276,7 @@ class PollListView(ListView):
 
 ここでは、ビューが使用するモデル (Poll) を特定し、`get_context_data` メソッドをオーバーライドして `title` と `year` の値をコンテキストに追加する処理が行われています。
 
-テンプレート (`templates/app/index.html`) の中心部分は次のとおりです。
+テンプレート (*templates/app/index.html*) の中心部分は次のとおりです。
 
 ```html
 {% if latest_poll_list %}
@@ -296,9 +296,9 @@ class PollListView(ListView):
 {% endif %}
 ```
 
-簡単に説明すると、このテンプレートは `latest_poll_list` で Poll オブジェクトのリストを受け取り、そのリストに対して、投票の `text` 値を使用して各投票のリンクを含むテーブル行を作成する反復処理を実行しています。 `{% url %}` タグの "app:detail" は、引数として `poll.id` を使用する、"detail" という `app/urls.py` の URL パターンを指します。 この結果、Django では適切なパターンを使用して URL が作成され、それがリンクに使用されます。 つまり、今後は、この URL パターンをいつでも変更できます。また、生成されるリンクは、変更に合わせて自動的に更新されます。
+簡単に説明すると、このテンプレートは `latest_poll_list` で Poll オブジェクトのリストを受け取り、そのリストに対して、投票の `text` 値を使用して各投票のリンクを含むテーブル行を作成する反復処理を実行しています。 `{% url %}` タグの "app:detail" は、引数として `poll.id` を使用する、"detail" という *app/urls.py* の URL パターンを指します。 この結果、Django では適切なパターンを使用して URL が作成され、それがリンクに使用されます。 つまり、今後は、この URL パターンをいつでも変更できます。また、生成されるリンクは、変更に合わせて自動的に更新されます。
 
-`app/views.py` の `PollDetailView` クラスと `PollResultsView` クラス (ここには示されていません) は、代わりに `DetailView` から派生している点を除いて `PollListView` とほとんど同じです。 それぞれのテンプレート `app/templates/details.html` と `app/templates/results.html` は、さまざまな HTML コントロール内のモデルから適切なフィールドを配置します。 `details.html` に独自の点の 1 つは、送信時に /vote URL に対して POST が実行される HTML フォーム内に、投票の選択肢が含まれていることです。 前述のように、この URL パターンは `app.views.vote` にルーティングされます。これは次のように実装されます (ここでも、`poll_id` 引数は、このビューのルーティングで使用される正規表現の名前付きグループです)。
+*app/views.py* の `PollDetailView` クラスと `PollResultsView` クラス (ここには示されていません) は、代わりに `DetailView` から派生している点を除いて `PollListView` とほとんど同じです。 それぞれのテンプレート *app/templates/details.html* と *app/templates/results.html* は、さまざまな HTML コントロール内のモデルから適切なフィールドを配置します。 *details.html* に独自の点の 1 つは、送信時に /vote URL に対して POST が実行される HTML フォーム内に、投票の選択肢が含まれていることです。 前述のように、この URL パターンは `app.views.vote` にルーティングされます。これは次のように実装されます (ここでも、`poll_id` 引数は、このビューのルーティングで使用される正規表現の名前付きグループです)。
 
 ```python
 def vote(request, poll_id):
@@ -325,9 +325,9 @@ def vote(request, poll_id):
 
 "ポーリング Django Web プロジェクト" テンプレートの最後の部分は、この記事の手順 6-1 で説明したように、既定の Django 管理インターフェイスのカスタム拡張です。 ユーザーとグループの管理用に既定のインターフェイスが用意されていますが、それ以上の機能はありません。 ポーリング プロジェクト テンプレートでは、投票も管理できる機能を追加しています。
 
-まず、Django プロジェクトの `urls.py` の URL パターンには、既定で `url(r'^admin/', include(admin.site.urls)),` が含まれています。"admin/doc" パターンもコメント アウトされた状態で含まれています。
+まず、Django プロジェクトの *urls.py* の URL パターンには、既定で `url(r'^admin/', include(admin.site.urls)),` が含まれています。"admin/doc" パターンもコメント アウトされた状態で含まれています。
 
-このアプリには `admin.py` ファイルが含まれています。`settings.py` の `INSTALLED_APPS` 配列に `django.contrib.admin` が含まれているため、管理インターフェイスにアクセスしたときに、このファイルは Django によって自動的に実行されます。 プロジェクト テンプレートに含まれているこのファイルのコードは次のとおりです。
+このアプリには *admin.py* ファイルが含まれています。*settings.py* の `INSTALLED_APPS` 配列に `django.contrib.admin` が含まれているため、管理インターフェイスにアクセスしたときに、このファイルは Django によって自動的に実行されます。 プロジェクト テンプレートに含まれているこのファイルのコードは次のとおりです。
 
 ```python
 from django.contrib import admin
@@ -370,14 +370,14 @@ Visual Studio で "空の Django Web プロジェクト"、"Django Web プロジ
 
 - Web アプリを Azure App Service などの運用サーバーに展開します。 Django アプリに必要な具体的な変更などについては、「[Azure App Service への発行](publishing-python-web-applications-to-azure-from-visual-studio.md)」を参照してください。
 
-- `templates/404.html` というテンプレートを作成して、404 ページをカスタマイズします。 このテンプレートがある場合、Django は既定のテンプレートではなくこのテンプレートを使用します。 詳細については、Django ドキュメントの「[Error views](https://docs.djangoproject.com/en/2.0/ref/views/#error-views)」(エラー ビュー) を参照してください。
+- *templates/404.html* というテンプレートを作成して、404 ページをカスタマイズします。 このテンプレートがある場合、Django は既定のテンプレートではなくこのテンプレートを使用します。 詳細については、Django ドキュメントの「[Error views](https://docs.djangoproject.com/en/2.0/ref/views/#error-views)」(エラー ビュー) を参照してください。
 
-- `tests.py` で単体テストを作成します。Visual Studio プロジェクト テンプレートには、そのための出発点が用意されています。詳細については、Django ドキュメントの「[Writing your first Django app, part 5 - testing](https://docs.djangoproject.com/en/2.0/intro/tutorial05/)」(最初の Django アプリを作成する、パート 5 - テスト) と「[Testing in Django](https://docs.djangoproject.com/en/2.0/topics/testing/)」(Django のテスト) を参照してください。
+- *tests.py* で単体テストを作成します。Visual Studio プロジェクト テンプレートには、そのための出発点が用意されています。詳細については、Django ドキュメントの「[Writing your first Django app, part 5 - testing](https://docs.djangoproject.com/en/2.0/intro/tutorial05/)」(最初の Django アプリを作成する、パート 5 - テスト) と「[Testing in Django](https://docs.djangoproject.com/en/2.0/topics/testing/)」(Django のテスト) を参照してください。
 
 - SQLite から、PostgreSQL、MySQL、SQL Server など (これらはいずれも Azure でホストできます) の運用レベルのデータ ストアにアプリを変更します。 「[When to use SQLite](https://www.sqlite.org/whentouse.html)」(SQLite を使用する場合) (sqlite.org) で説明されているように、SQLite は、1 日あたり 100,000 ヒット未満のトラフィックが中小規模のサイトには適していますが、高ボリュームのサイトにはお勧めできません。 また、単一のコンピューターに制限されているため、負荷分散処理や geo レプリケーションなど、マルチサーバーのシナリオには使用できません。 他のデータベースに対する Django のサポートについては、「[Database setup](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup)」(データベースの設定) を参照してください。 テーブルや BLOB のような Azure ストレージ サービスを使用する場合は、[Azure SDK for Python](azure-sdk-for-python.md) も使用できます。
 
 - Visual Studio Team Services (VSTS) などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (VSTS、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として VSTS で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、VSTS は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体に対応することができます。 詳細については次を参照してください:
 
-  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/vsts/build-release/apps/cd/azure/azure-devops-project-python?view=vsts)
+  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
   - [Visual Studio Team Services を使用した Azure での Python 開発 (ビデオ、11 分 21 秒)](https://azure.microsoft.com/resources/videos/connect-2017-python-development-in-azure-with-visual-studio-team-services/)
 

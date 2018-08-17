@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3fc6a1dff49c754c13fb8b94e03f956b3081f075
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 016305c47da13c879e2895660915121cd93f33e3
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232320"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637618"
 ---
 # <a name="step-5-use-the-polls-flask-web-project-template"></a>手順 5: ポーリング Flask Web プロジェクト テンプレートを使用する
 
@@ -32,19 +32,19 @@ Visual Studio の "Flask Web プロジェクト" テンプレートについて�
 > - バッキング データ ストアを理解する (手順 5-3)
 > - ポーリングの詳細と結果ビューを理解する (手順 5-4)
 
-Visual Studio は、同じアプリを生成しますが、Jinja テンプレート エンジンに Jade 拡張子を使用する "Polls Flask/Jade Web プロジェクト" テンプレートも提案しています。 詳細については、「[Step 4 - The Flask/Jade Web Project template](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template)」 (手順 4 - Flask/Jade Web プロジェクト テンプレート) を参照してください。
+Visual Studio は、同じアプリを生成しますが、Jinja テンプレート エンジンに Jade 拡張子を使用する "Polls Flask/Jade Web プロジェクト" テンプレートも提供します。 詳細については、「[Step 4 - The Flask/Jade Web Project template](learn-flask-visual-studio-step-04-full-flask-project-template.md#the-flaskjade-web-project-template)」 (手順 4 - Flask/Jade Web プロジェクト テンプレート) を参照してください。
 
 ## <a name="step-5-1-create-the-project"></a>手順 5-1: プロジェクトの作成
 
-1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で成した "LearningFlask" ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
+1. Visual Studio で、**ソリューション エクスプローラー**に移動し、本チュートリアルの前述の手順で作成した **LearningFlask** ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 (または、新しいソリューションを使用する場合は、代わりに **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択します)。
 
-1. [新しいプロジェクト] ダイアログで "Polls Flask Web プロジェクト" テンプレートを探して選択し、プロジェクト "FlaskPolls" を呼び出して、**[OK]** を選択します。
+1. [新しいプロジェクト] ダイアログで **Polls Flask Web プロジェクト** テンプレートを探して選択し、プロジェクト "FlaskPolls" を呼び出して、**[OK]** を選択します。
 
-1. Visual Studio の他のプロジェクト テンプレートと同様に、"Polls Flask Web プロジェクト" テンプレートには `requirements.txt` ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。 (このテンプレートには、Flask の他に、azure-storage と pymongo のパッケージも必要です。"Polls Flask/Jade Web プロジェクト" には pyjade も必要でした)。
+1. Visual Studio の他のプロジェクト テンプレートと同様に、"Polls Flask Web プロジェクト" テンプレートには *requirements.txt* ファイルが含まれており、Visual Studio ではこれらの依存関係のインストール先を確認するメッセージが表示されます。 オプションを選択し、**仮想環境にインストール**して、**[仮想環境の追加]** ダイアログで **[作成]** を選択して、既定値を受け入れます。 (このテンプレートには、Flask の他に、azure-storage と pymongo のパッケージも必要です。"Polls Flask/Jade Web プロジェクト" には pyjade も必要でした。)
 
-1. **ソリューション エクスプローラー**を右クリックし、**[スタートアップ プロジェクトに設定]** を選択して、"FlaskPolls" プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
+1. **ソリューション エクスプローラー**を右クリックし、**[スタートアップ プロジェクトに設定]** を選択して、**FlaskPolls** プロジェクトを Visual Studio ソリューションの既定に設定します。 デバッガーを起動すると、太字で表示されているスタートアップ プロジェクトが実行されます。
 
-1. **[デバッグ]、[デバッグの開始]** の順に選択するか (F5 キー)、ツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
+1. **[デバッグ]** > **[デバッグの開始]** (**F5** キー) を選択するか、またはツールバーの **[Web サーバー]** ボタンを使用して、サーバーを実行します。
 
     ![Visual Studio の [Web サーバー] ツールバー ボタンを実行する](media/django/run-web-server-toolbar-button.png)
 
@@ -52,7 +52,7 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
     ![Polls Flask Web プロジェクト アプリの完全なビュー](media/flask/step06-full-app-view.png)
 
-1. ホーム ページの **[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンは、`models/samples.json` ページに記載されている 3 つの異なるポーリングを使用して、アプリのデータ ストアを初期化します。 既定では、アプリは ([詳細] ページに表示されているように) メモリ内データベースを使用します。これはアプリを再起動するたびにリセットされます。 アプリには、Azure Storage と Mongo DB で機能するコードも含まれています。これについてはこの記事で後述します。
+1. ホーム ページの **[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンは、*models/samples.json* ページに記載されている 3 つの異なるポーリングを使用して、アプリのデータ ストアを初期化します。 既定では、アプリは ([詳細] ページに表示されているように) メモリ内データベースを使用します。これはアプリを再起動するたびにリセットされます。 アプリには、Azure Storage と Mongo DB で機能するコードも含まれています。これについてはこの記事で後述します。
 
 1. データ ストアを初期化すると、ホーム ページに示されているように (簡略化のためナビゲーション バーとフッターは省略されています)、さまざまなポーリングに投票することができます。
 
@@ -68,7 +68,7 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 1. 以降のセクションについては、アプリにそのまま実行させることができます。
 
-    アプリを停止して [ソース コントロールの変更をコミットする](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)場合は、まず**チーム エクスプローラー**で **[変更]** ページを開き、仮想環境のフォルダー (通常は `env`) を右クリックして、**[これらのローカル項目を無視]** を選択します。
+    アプリを停止して[ソース コントロールへの変更をコミットする](learn-flask-visual-studio-step-02-create-app.md#commit-to-source-control)場合、最初に**チーム エクスプローラー**で **[変更]** を開き、仮想環境のフォルダー (通常は **env**) を右クリックして、**[これらのローカル項目を無視]** を選択します。
 
 ### <a name="examine-the-project-contents"></a>プロジェクトの内容を確認する
 
@@ -76,7 +76,7 @@ Visual Studio は、同じアプリを生成しますが、Jinja テンプレー
 
 ## <a name="step-5-2-understand-the-data-models"></a>手順 5-2: データ モデルを理解する
 
-このアプリのデータ モデルは、`models/__init__.py` で Poll と Choice の名前で定義されている Python クラスです。 Poll は質問を表し、Choice インスタンスのコレクションはそれに対する使用可能な回答を表します。 Poll では、(すべての選択に対する) 投票の合計数と、ビューの生成に使用される統計を計算するメソッドも保持されます。
+このアプリのデータ モデルは、*models/\_\_init\_\_.py* で定義されている Poll および Choice という名前の Python クラスです。 Poll は質問を表し、Choice インスタンスのコレクションはそれに対する使用可能な回答を表します。 Poll では、(すべての選択に対する) 投票の合計数と、ビューの生成に使用される統計を計算するメソッドも保持されます。
 
 ```python
 class Poll(object):
@@ -116,14 +116,14 @@ class Choice(object):
 
 データ ストレージのメカニズムは次のように機能します。
 
-1. リポジトリの種類は `REPOSITORY_NAME` 環境変数で指定されます。この変数は、"memory"、"azuretablestore" または "mongodb" に設定することができます。 `settings.py` 内のコードのビットは、"memory" を既定値として使用して、名前を取得します。 バッキング ストアを変更する場合は、環境変数を設定してアプリを再起動する必要があります。
+1. リポジトリの種類は `REPOSITORY_NAME` 環境変数で指定されます。この変数は、"memory"、"azuretablestore" または "mongodb" に設定することができます。 *settings.py* 内のコードのビットは、"memory" を既定値として使用して、名前を取得します。 バッキング ストアを変更する場合は、環境変数を設定してアプリを再起動する必要があります。
 
     ```python
     from os import environ
     REPOSITORY_NAME = environ.get('REPOSITORY_NAME', 'memory')
     ```
 
-1. `settings.py` コードは次に `REPOSITORY_SETTINGS` オブジェクトを初期化します。 Azure テーブル ストアまたは Mondo DB を使用する場合は、まずこれらのデータ ストアを他の場所に初期化してから、ストアに接続する方法をアプリに指示するために必要な環境変数を設定する必要があります。
+1. *settings.py* コードは次に `REPOSITORY_SETTINGS` オブジェクトを初期化します。 Azure テーブル ストアまたは Mondo DB を使用する場合は、まずこれらのデータ ストアを他の場所に初期化してから、ストアに接続する方法をアプリに指示するために必要な環境変数を設定する必要があります。
 
     ```python
     if REPOSITORY_NAME == 'azuretablestorage':
@@ -145,7 +145,7 @@ class Choice(object):
         raise ValueError('Unknown repository.')
     ```
 
-1. `views.py` では、アプリがファクトリ メソッドを呼び出して、データ ストアの名前と設定を使用して `Repository` オブジェクトを初期化します。
+1. *views.py* では、アプリがファクトリ メソッドを呼び出して、データ ストアの名前と設定を使用して `Repository` オブジェクトを初期化します。
 
     ```python
     from FlaskPolls.models import PollNotFound
@@ -155,7 +155,7 @@ class Choice(object):
     repository = create_repository(REPOSITORY_NAME, REPOSITORY_SETTINGS)
     ```
 
-1. `factory.create_repository` メソッドが (適切なリポジトリ モジュールを単にインポートする) `models\factory.py` で検出されると、`Repository` インスタンスを作成します。
+1. `factory.create_repository` メソッドが (適切なリポジトリ モジュールを単にインポートする) *models\factory.py* で検出されると、`Repository` インスタンスを作成します。
 
     ```python
     def create_repository(name, settings):
@@ -174,20 +174,20 @@ class Choice(object):
         return Repository(settings)
     ```
 
-1. 各データ ストアに固有の `Repository` クラスの実装は、`models\azuretablestorage.py`、`models\mongodb.py`、および`models\memory.py` で見つかります。 Azure ストレージの実装では、azure-storage パッケージを使用します。Mongo DB の実装では、pymongo パッケージを使用します。 手順 5-1 に記載されているように、どちらのパッケージもプロジェクト テンプレートの `requirements.txt` ファイルに含まれています。 詳しい調査は読者の課題として残しておきます。
+1. 各データ ストアに固有の `Repository` クラスの実装は、*models\azuretablestorage.py*、*models\mongodb.py*、*models\memory.py* で見つかります。 Azure ストレージの実装では、azure-storage パッケージを使用します。Mongo DB の実装では、pymongo パッケージを使用します。 手順 5-1 に記載されているように、どちらのパッケージもプロジェクト テンプレートの *requirements.txt* ファイルに含まれています。 詳しい調査は読者の課題として残しておきます。
 
 要するに、`Repository` クラスはデータ ストアの詳細を抽象化し、アプリは実行時に環境変数を使用して、3 つの実装のうち使用する実装を選択して構成します。
 
 次の手順は、必要な場合に、プロジェクト テンプレートによって提供される 3 つのデータ ストアとは異なるデータ ストアのサポートを追加します。
 
-1. `Repository` クラスの基本インターフェイスを得るため、`memory.py` を新しいファイルにコピーします。
+1. `Repository` クラスの基本インターフェイスを得るため、*memory.py* を新しいファイルにコピーします。
 1. 使用しているデータ ストア応じて、クラスの実装を変更します。
-1. `factory.py` を変更して、追加したデータ ストアの名前を認識し、適切なモジュールをインポートする別の `elif` ケースを追加します。
-1. `settings.py` を変更して、`REPOSITORY_NAME` 環境変数で別の名前を認識し、それに応じて `REPOSITORY_SETTINGS` を初期化します。
+1. *factory.py* を変更して、追加したデータ ストアの名前を認識し、適切なモジュールをインポートする別の `elif` ケースを追加します。
+1. *settings.py* を変更して、`REPOSITORY_NAME` 環境変数で別の名前を認識し、それに応じて `REPOSITORY_SETTINGS` を初期化します。
 
 ### <a name="seed-the-data-store-from-samplesjson"></a>samples.json からデータ ストアをシードする
 
-最初は、選択したデータ ストアにはポーリングが含まれていないため、アプリのホーム ページに "No polls available" (使用可能なポーリングがありません) というメッセージが **[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンとともに表示されます。 ただし、ボタンを選択するとビューが変更され、使用可能なポーリングが表示されます。 この切り替えは、`templates\index.html` で条件タグを使用して行われます (簡略化のため、一部の空白行は省略されています)。
+最初は、選択したデータ ストアにはポーリングが含まれていないため、アプリのホーム ページに "**No polls available**" (使用可能なポーリングがありません) というメッセージが **[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンとともに表示されます。 ただし、ボタンを選択するとビューが変更され、使用可能なポーリングが表示されます。 この切り替えは、*templates\index.html* で条件タグを使用して行われます (簡略化のため、一部の空白行は省略されています)。
 
 ```html
 {% extends "layout.html" %}
@@ -218,7 +218,7 @@ class Choice(object):
 
 テンプレート内の `polls` 変数は `repository.get_polls` への呼び出しに由来しています。これは、データ ストアが初期化されるまで何も返しません。
 
-**[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンを選択すると、/seed URL に移動します。 そのルートのハンドラーは、`views.py` で定義されています。
+**[Create Sample Polls]\(サンプル ポーリングの作成\)** ボタンを選択すると、/seed URL に移動します。 そのルートのハンドラーは、*views.py* で定義されています。
 
 ```python
 @app.route('/seed', methods=['POST'])
@@ -228,13 +228,13 @@ def seed():
     return redirect('/')
 ```
 
-`repository.add_sample_polls()` への呼び出しは、選択したデータ ストアへの特定の `Repository` の実装のうちの 1 つになります。 実装ごとに `models\__init__.py` で検出された `_load_samples_json` メソッドが呼び出され、`models\samples.json` ファイルがメモリに読み込まれます。次に、そのデータが反復処理され、データ ストア内に必要な `Poll` オブジェクトと `Choice` オブジェクトが作成されます。
+`repository.add_sample_polls()` への呼び出しは、選択したデータ ストアへの特定の `Repository` の実装のうちの 1 つになります。 実装ごとに *models\__init__.py* で検出された `_load_samples_json` メソッドが呼び出され、*models\samples.json* ファイルがメモリに読み込まれます。次に、そのデータが反復処理され、データ ストア内に必要な `Poll` オブジェクトと `Choice` オブジェクトが作成されます。
 
-この処理が完了すると、`seed` メソッドの `redirect('/')` ステートメントにより、ホーム ページに戻ります。 `repository.get_polls` でデータ オブジェクトが返されるようになったため、`templates\index.html` の条件タグはポーリングを含むテーブルをレンダリングするようになります。
+この処理が完了すると、`seed` メソッドの `redirect('/')` ステートメントにより、ホーム ページに戻ります。 `repository.get_polls` でデータ オブジェクトが返されるようになったため、*templates\index.html* の条件タグはポーリングを含むテーブルをレンダリングするようになります。
 
 ### <a name="question-how-does-one-add-new-polls-to-the-app"></a>質問: アプリに新しいポーリングを追加するにはどうすればよいですか。
 
-回答: プロジェクト テンプレートによって提供されるアプリには、ポーリングを追加または編集するための機能が含まれていません。 `models\samples.json` を変更して、新しい初期化データを作成することはできますが、これを行うことは、データ ストアがリセットされることを意味します。 編集機能を実装するには、メソッドを使用して `Repository` クラス インターフェイスを拡張して必要な `Choice` および `Poll`のインスタンスを作成してから、これらのメソッドを使用する追加ページに UI を実装します。
+回答: プロジェクト テンプレートによって提供されるアプリには、ポーリングを追加または編集するための機能が含まれていません。 *models\samples.json* を変更して、新しい初期化データを作成することはできますが、これを行うことは、データ ストアがリセットされることを意味します。 編集機能を実装するには、メソッドを使用して `Repository` クラス インターフェイスを拡張して必要な `Choice` および `Poll`のインスタンスを作成してから、これらのメソッドを使用する追加ページに UI を実装します。
 
 ## <a name="step-5-4-understand-the-poll-detail-and-results-views"></a>手順 5-4: ポーリングの詳細と結果ビューを理解する
 
@@ -242,7 +242,7 @@ def seed():
 
 ここでは、投票 (詳細) と個々のポーリングの結果ビューを確認します。
 
-ホーム ページからポーリングを選択すると、アプリは URL /poll/\<key\> に移動します。*key* はポーリングの一意の識別子です。 `views.py` では、`details` 関数が GET と要求の両方の URL ルーティングを処理するために割り当てられていることがわかります。 また、URL ルートで `<key>` を使用すると、そのフォームの任意のルートが同じ関数にマップされ、その同じ名前の関数への引数が生成されることもわかります。
+ホーム ページからポーリングを選択すると、アプリは URL /poll/\<key\> に移動します。*key* はポーリングの一意の識別子です。 *views.py* では、`details` 関数が GET と要求の両方の URL ルーティングを処理するために割り当てられていることがわかります。 また、URL ルートでの `<key>` の使用によりそのフォームの任意のルートが同じ関数にマップされ、その同じ名前の関数への引数が生成されることもわかります。
 
 ```python
 @app.route('/poll/<key>', methods=['GET', 'POST'])
@@ -266,7 +266,7 @@ def details(key):
     )
 ```
 
-ポーリング (GET 要求) を表示するため、この関数は `templates\details.html` を呼び出します。これは、ポーリングの `choices` 配列で反復処理行い、そのたびにラジオ ボタンを作成します。
+ポーリング (GET 要求) を表示するため、この関数は *templates\details.html* を呼び出します。これは、ポーリングの `choices` 配列で反復処理行い、そのたびにラジオ ボタンを作成します。
 
 ```html
 {% extends "layout.html" %}
@@ -298,7 +298,7 @@ def details(key):
 
 **[投票]** ボタンには `type="submit"` があるため、選択すると、もう一度 `details` 関数にルーティングされるのと同じ URL に戻される POST 要求が生成されます。 ただし今回は、フォーム データから選択肢が抽出され、/results/\<choice\> にリダイレクトされます。
 
-/results/\<key\> URL はその後、`views.py` の `results` 関数にルーティングされます。この関数はその後、ポーリングの `calculate_stats` を呼び出して、`templates\results.html` を使用してレンダリングします。
+/results/\<key\> URL はその後、*views.py* の `results` 関数にルーティングされます。この関数はその後、ポーリングの `calculate_stats` メソッドを呼び出し、*templates\results.html* を使用してレンダリングします。
 
 ```python
 @app.route('/results/<key>')
@@ -314,7 +314,7 @@ def results(key):
     )
 ```
 
-一方、`results.html` テンプレートはポーリングの選択肢を単純に反復処理して、それぞれの進行状況バーを生成します。
+一方、*results.html* テンプレートはポーリングの選択肢を単純に反復処理して、それぞれの進行状況バーを生成します。
 
 ```html
 {% extends "layout.html" %}
@@ -358,5 +358,5 @@ Visual Studio で "Blank Flask Web プロジェクト"、"Flask[/Jade] Web プ�
 
 - Visual Studio Team Services (VSTS) などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (VSTS、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として VSTS で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、VSTS は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体に対応することができます。 詳細については次を参照してください:
 
-  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/vsts/build-release/apps/cd/azure/azure-devops-project-python?view=vsts)
+  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
   - [Visual Studio Team Services を使用した Azure での Python 開発 (ビデオ、11 分 21 秒)](https://azure.microsoft.com/resources/videos/connect-2017-python-development-in-azure-with-visual-studio-team-services/)

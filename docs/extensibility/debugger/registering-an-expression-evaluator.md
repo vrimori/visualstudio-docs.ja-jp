@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2031657091a2209d4e358998159581d2159a5443
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: b909c1df4aa776f0f92d72c679ecdacb42227c18
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251206"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510491"
 ---
 # <a name="register-an-expression-evaluator"></a>式エバリュエーターを登録します。
 > [!IMPORTANT]
@@ -104,7 +104,7 @@ namespace EEMC
  EE DLL に実装する、 `DllRegisterServer` COM 環境として Visual Studio に登録する関数。  
   
 > [!NOTE]
->  Yoou ファイル内の MyCEE コード サンプル レジストリ コードが見つかります*dllentry.cpp*、EnVSDK\MyCPkgs\MyCEE VSIP インストール内に配置されています。  
+>  MyCEE コード サンプル レジストリ コードを検索するには、ファイルに*dllentry.cpp*、EnVSDK\MyCPkgs\MyCEE VSIP インストール内に配置されています。  
   
 ### <a name="dll-server-process"></a>サーバー プロセスの DLL  
  EE、DLL サーバーを登録する: 場合  

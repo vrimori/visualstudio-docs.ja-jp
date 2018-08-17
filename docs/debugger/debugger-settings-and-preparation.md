@@ -1,7 +1,7 @@
 ---
 title: デバッガーの設定と準備 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/01/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 412109d3beeda00dfd6f32e5644388523d067289
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 48cc5bfdf53f6a3d6e214b73b46c0fa46267787e
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151575"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468300"
 ---
 # <a name="debugger-settings-and-preparation"></a>デバッガーの設定と準備
 ここでは、デバッグに関連するプロパティ設定と、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] デバッガーを使用してプログラムをデバッグするために必要な準備について説明します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクト テンプレートを使ってプログラムを作成する場合、これらの設定はデバッグ構成で正しく設定されます。  
@@ -50,9 +50,6 @@ ms.locfileid: "39151575"
   
  [64 ビット アプリケーションをデバッグする](../debugger/debug-64-bit-applications.md)  
  64 ビット アプリケーションをデバッグする方法について説明します。  
-  
- [プロセスのデバッグとホスト](../debugger/debugging-and-the-hosting-process.md)  
- ホスト プロセスのさまざまな側面について説明します。  
   
  [方法 : デバッグで .NET Framework のバージョンを指定する](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md)  
  レジストリ キーを設定して、使用するバージョンをデバッガーに指定する方法について説明します。  

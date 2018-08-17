@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aa56cf0d0ae6d715685ee331cd60c95eedc5c60
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: bd397420652d5d70429daa7ecea35210194dd37a
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945976"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175957"
 ---
 # <a name="customize-your-build"></a>ビルドのカスタマイズ
 
 標準のビルド プロセス (*Microsoft.Common.props* と *Microsoft.Common.targets* のインポート) を使用する MSBuild プロジェクトには、ビルド プロセスのカスタマイズに使用できる拡張フックがいくつかあります。
 
-## <a name="adding-arguments-to-command-line-msbuild-invocations-for-your-project"></a>プロジェクトのコマンドライン MSBuild 呼び出しに引数を追加する
+## <a name="add-arguments-to-command-line-msbuild-invocations-for-your-project"></a>プロジェクトのコマンドライン MSBuild 呼び出しに引数を追加する
 
 ソース ディレクトリの中またはその上にある *Directory.Build.rsp* ファイルがプロジェクトのコマンドライン ビルドに適用されます。 詳細については、「[MSBuild 応答ファイル](../msbuild/msbuild-response-files.md#directorybuildrsp)」を参照してください。
 
@@ -138,7 +138,7 @@ $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.t
 
 同じディレクトリ構造が `$(MSBuildUserExtensionsPath)` で検索されます。これはユーザー別フォルダー *%LOCALAPPDATA%\Microsoft\MSBuild* です。 そのフォルダーに置かれたファイルは、そのユーザーの資格情報の下で実行される、該当するプロジェクト タイプのすべてのビルドでインポートされます。 このユーザー拡張は、パターン `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}` でインポート ファイルに基づいて名前が付けられたプロパティを設定することで無効にできます。 たとえば、`ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` を `false` に設定すると、`$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*` がインポートされません。
 
-## <a name="customizing-the-solution-build"></a>ソリューション ビルドをカスタマイズする
+## <a name="customize-the-solution-build"></a>ソリューション ビルドをカスタマイズする
 
 > [!IMPORTANT]
 > この方法によるソリューション ビルドのカスタマイズは、*MSBuild.exe* を持つコマンドライン ビルドにのみ適用されます。 Visual Studio 内のビルドには適用**されません**。

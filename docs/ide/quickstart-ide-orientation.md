@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a07062f5a79722e18ba0567f42bfb2843f84d06
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 249ea0c20bc47f63999a08962ba6cf7d1effd2b1
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078785"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513274"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
 
@@ -104,12 +104,16 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 
 ユーザー インターフェイスに慣れるため、Visual Studio の機能をいくつか確認しました。 下記に従って、さらに試してみてください。
 
-- 「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」で、Visual Studio のより詳細なツアーに参加し、デバッグも試してみてください。
+> [!div class="nextstepaction"]
+> [クイックスタート: IDE のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
 
-- [[エラー一覧]](../ide/reference/error-list-window.md)、[[出力] ウィンドウ](../ide/reference/output-window.md)、[[プロパティ] ウィンドウ](../ide/reference/properties-window.md)、[[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md)など、ウィンドウの詳細について説明した VS ドキュメントの**一般的なユーザー インターフェイス要素**に関するセクションをご覧ください。
+> [!div class="nextstepaction"]
+> [クイック スタート: エディターでのコードの作成](../ide/quickstart-editor.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [クイックスタート: IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
-- [クイック スタート: エディターでのコードの作成](../ide/quickstart-editor.md)
-- [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [Visual Studio 2017 の機能](../ide/advanced-feature-overview.md)

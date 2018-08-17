@@ -10,12 +10,12 @@ ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 80fdd724d9d5bca57e0d8dab44ac4a0bef7238f2
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 65d78b5b37396572e73928a51f2f215b72dfa311
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266077"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381056"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。

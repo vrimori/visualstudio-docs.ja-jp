@@ -1,16 +1,34 @@
-# <a name="updating-an-existing-application-for-msbuild-15"></a>MSBuild 15 用に既存のアプリケーションを更新する
+---
+title: 既存のアプリケーションの MSBuild 15 への更新 | Microsoft Docs
+ms.custom: ''
+ms.date: 11/04/2016
+ms.technology: msbuild
+ms.topic: conceptual
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: f0c18e4e895d8a0563699cf08e5a49fdecc973ab
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39152260"
+---
+# <a name="update-an-existing-application-for-msbuild-15"></a>既存のアプリケーションを MSBuild 15 用に更新する
 
 15.0 より前のバージョンの MSBuild では、MSBuild はグローバル アセンブリ キャッシュ (GAC) から読み込まれ、MSBuild の拡張機能はレジストリにインストールされました。 これにより、すべてのアプリケーションは同じバージョンの MSBuild を使用し、同じツールセットにアクセスできましたが、異なるバージョンの Visual Studio を side-by-side インストールすることはできませんでした。
 
 より速くて小さい side-by-side インストールをサポートするため、Visual Studio 2017 では、MSBuild は GAC に配置されず、レジストリは変更されなくなりました。 残念ながら、これは、MSBuild API を使ってプロジェクトを評価またはビルドしたいアプリケーションは、Visual Studio のインストールに暗黙的に依存できないことを意味します。
 
-## <a name="using-msbuild-from-visual-studio"></a>Visual Studio からの MSBuild の使用
+## <a name="use-msbuild-from-visual-studio"></a>Visual Studio から MSBuild を使用する
 
-アプリケーションからのプログラムによるビルドを、Visual Studio または MSBuild.exe 内で実行されるビルドと一致させるには、Visual Studio から MSBuild アセンブリを読み込み、Visual Studio 内で使用可能な SDK を使用します。 Microsoft.Build.Locator NuGet パッケージを使うと、これを簡略化できます。
+アプリケーションからのプログラムによるビルドを、Visual Studio または *MSBuild.exe* 内で実行されるビルドと一致させるには、Visual Studio から MSBuild アセンブリを読み込み、Visual Studio 内で使用可能な SDK を使用します。 Microsoft.Build.Locator NuGet パッケージは、このプロセスを簡略化します。
 
-## <a name="using-microsoftbuildlocator"></a>Microsoft.Build.Locator の使用
+## <a name="use-microsoftbuildlocator"></a>Microsoft.Build.Locator を使用する
 
-アプリケーションと共に `Microsoft.Build.Locator.dll` を再配布する場合は、他の MSBuild アセンブリを配布する必要はありません。
+アプリケーションと共に *Microsoft.Build.Locator.dll* を再配布する場合は、他の MSBuild アセンブリを配布する必要はありません。
 
 MSBuild 15 およびロケーター API を使用するようにプロジェクトを更新するには、以下で説明するいくつかの変更をプロジェクトで行う必要があります。 プロジェクトの更新に必要な変更の例については、[MSBuildLocator リポジトリのプロジェクトの例に対して行われたコミット](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15)をご覧ください。
 
@@ -20,9 +38,9 @@ MSBuild が中央の場所から確実に読み込まれるようにするには
 
 中央の場所から MSBuild が読み込まれないようにするためにプロジェクトを変更するメカニズムは、MSBuild を参照する方法によって異なります。
 
-#### <a name="using-nuget-packages-preferred"></a>NuGet パッケージの使用 (推奨)
+#### <a name="use-nuget-packages-preferred"></a>NuGet パッケージを使用する (推奨)
 
-以下の手順では、[`PackageReference` スタイルの NuGet の参照](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files)を使用しているものとします。
+以下の手順では、[PackageReference スタイルの NuGet の参照](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files)を使用しているものとします。
 
 NuGet パッケージから MSBuild アセンブリを参照するようにプロジェクト ファイルを変更します。 `ExcludeAssets=runtime` を指定して、アセンブリはビルド時にのみ必要であり、出力ディレクトリにコピーしてはならないことを、NuGet に伝えます。
 
@@ -37,9 +55,9 @@ MSBuild パッケージのメジャー バージョンとマイナー バージ�
 </ItemGroup>
 ```
 
-#### <a name="using-extension-assemblies"></a>拡張機能アセンブリの使用
+#### <a name="use-extension-assemblies"></a>拡張機能アセンブリを使用する
 
-NuGet パッケージを使用できない場合は、Visual Studio と共に配布される MSBuild アセンブリを参照することができます。 MSBuild を直接参照する場合は、`Copy Local` を `False` に設定することで、MSBuild が出力ディレクトリにコピーされないようにします。 プロジェクト ファイルでは次のようになります。
+NuGet パッケージを使用できない場合は、Visual Studio と共に配布される MSBuild アセンブリを参照することができます。 MSBuild を直接参照する場合は、`Copy Local` を `False` に設定することで、MSBuild が出力ディレクトリにコピーされないようにします。 プロジェクト ファイルで、この設定は次のコードのようになります。
 
 ```xml
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -49,11 +67,11 @@ NuGet パッケージを使用できない場合は、Visual Studio と共に配
 
 #### <a name="binding-redirects"></a>バインド リダイレクト
 
-Microsoft.Build.Locator パッケージを参照すると、アプリケーションは自動的に、MSBuild アセンブリのすべてのバージョンで必要なバージョン `15.1.0.0` へのバインド リダイレクトを使用するようになります。
+Microsoft.Build.Locator パッケージを参照すると、アプリケーションは、MSBuild アセンブリのすべてのバージョンで必要なバージョン `15.1.0.0` へのバインド リダイレクトを自動的に使用するようになります。
 
-### <a name="ensure-output-clean"></a>出力をクリーンにする
+### <a name="ensure-output-is-clean"></a>出力をクリーンにする
 
-プロジェクトをビルドし、出力ディレクトリを調べて、出力ディレクトリに `Microsoft.Build.*.dll` アセンブリ (次の手順で追加される `Microsoft.Build.Locator.dll` 以外) が含まれないことを確認します。
+プロジェクトをビルドし、出力ディレクトリを調べて、出力ディレクトリに *Microsoft.Build.\*.dll* アセンブリ (次の手順で追加される *Microsoft.Build.Locator.dll* 以外) が含まれないことを確認します。
 
 ### <a name="add-package-reference"></a>パッケージ参照を追加する
 
@@ -69,9 +87,9 @@ NuGet パッケージの参照を [Microsoft.Build.Locator](https://www.nuget.or
 
 MSBuild を使用するメソッドを呼び出す前に、ロケーター API への呼び出しを追加します。
 
-これを行う最も簡単な方法:
+Locator API に呼び出しを追加する最も簡単な方法は、
 
-```c#
+```csharp
 MSBuildLocator.RegisterDefaults();
 ```
 

@@ -11,19 +11,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dd19f945dec052ad2c90784252c0c85eba6889ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d6152d75d28e5c6468ccc0a484e2eae3a25214d9
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31969107"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203755"
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>方法: ロード テストの実行設定にコンテキスト パラメーターを追加する
 
 **新しいロード テスト ウィザード**でロード テストを作成した後、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
 
 > [!NOTE]
-> 実行設定の各プロパティとその説明の一覧については、「[Load Test Run Settings Properties](../test/load-test-run-settings-properties.md)」(ロード テストの実行設定のプロパティ) を参照してください。
+> 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
 ロード テスト エディターを使用して、ロード テストの実行設定で使用するコンテキスト パラメーターを作成できます。 コンテキスト パラメーターを使用すると、文字列をパラメーター化できます。
 
@@ -36,9 +36,9 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
 また、別々のロード テストの実行設定に同じ名前を使用して、コンテキスト パラメーターにさまざまな値を割り当てることにより、さまざまな環境を使用してロード テストを実行できます。
 
--   Corporate Staging Web Server の実行設定: WebServer1=http://CorporateStagingWebServer という名前のコンテキスト パラメーター
+-   Corporate Staging Web Server の実行設定: `WebServer1=http://CorporateStagingWebServer` という名前のコンテキスト パラメーター
 
--   Corporate Production Web Server の実行設定: WebServer1=http://CorporateProductionWebServer という名前のコンテキスト パラメーター
+-   Corporate Production Web Server の実行設定: `WebServer1=http://CorporateProductionWebServer` という名前のコンテキスト パラメーター
 
  **コマンド ラインからの実行設定の変更**
 
@@ -64,9 +64,9 @@ Webserver1 コンテキスト パラメーターの値を `http://CorporateStagi
 
      実行設定に **[コンテキスト パラメーター]** フォルダーが既に含まれている場合は、それを右クリックして **[コンテキスト パラメーターの追加]** を選択します。
 
-4.  [プロパティ] ウィンドウで、必要に応じて、**[名前]** の値を変更 (WebServer1 など) します。 [プロパティ] ウィンドウの **[値]** を、使用するパラメーター (http://CorporateStagingWebServer) など) に変更します。
+4.  **[プロパティ]** ウィンドウで、必要に応じて、**[名前]** の値を変更 (WebServer1 など) します。 **[プロパティ]** ウィンドウの **[値]** を、使用するパラメーター (`http://CorporateStagingWebServer` など) に変更します。
 
-5.  (省略可能) 手順 3. ～ 5. を繰り返し、**[値]** に別の文字列 (http://CorporateProductionWebServer) など) を使用します。
+5.  (省略可能) 手順 3. から 5. を繰り返し、**[値]** に別の文字列 (`http://CorporateProductionWebServer` など) を使用します。
 
 6.  どの実行設定をアクティブにするかを選択します。 実行設定のショートカット メニューを開いて **[アクティブとして設定]** を選択します。
 

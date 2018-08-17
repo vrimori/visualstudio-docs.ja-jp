@@ -24,35 +24,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f600d01765c37b3e9a896afa8b6d2a55c7df12
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b7751a53430518df9ce80fd053be5414e015143d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574569"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151655"
 ---
 # <a name="rc-task"></a>RC タスク
-Microsoft Windows リソース コンパイラ ツールである rc.exe をラップします。 **RC** タスクは、カーソル、アイコン、ビットマップ、ダイアログ ボックス、フォントなどのリソースをコンパイルし、リソース ファイル (.res) を作成します。 詳細については、[MSDN](http://go.microsoft.com/fwlink/?LinkId=737) Web サイトのリソース コンパイラに関するページをご覧ください。  
+Microsoft Windows リソース コンパイラ ツールである *rc.exe* をラップします。 **RC** タスクは、カーソル、アイコン、ビットマップ、ダイアログ ボックス、フォントなどのリソースをコンパイルし、リソース ファイル (*.res*) を作成します。 詳しくは、「[リソース コンパイラ](https://docs.microsoft.com/en-us/windows/desktop/menurc/resource-compiler)」をご覧ください。
   
 ## <a name="parameters"></a>パラメーター  
- RC タスクのパラメーターの説明を次の表に示します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
+ 以下の表で、RC タスクのパラメーターについて説明します。 タスク パラメーターの大部分とパラメーターのいくつかのセットは、コマンド ライン オプションに対応します。  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|**AdditionalIncludeDirectories**|省略可能な **String[]** 型のパラメーターです。<br /><br /> インクルード ファイルを検索するディレクトリのリストにディレクトリを追加します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/I** オプションを参照してください。|  
-|**AdditionalOptions**|省略可能な **String** 型のパラメーターです。<br /><br /> コマンドライン オプションの一覧です。**"***/option1 /option2 /option#*" のようになります。 他の **RC** タスク パラメーターでは表されないコマンド ライン オプションを指定する場合は、このパラメーターを使用します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の各種オプションを参照してください。|  
-|**カルチャ**|省略可能な **String** 型のパラメーターです。<br /><br /> リソースで使用されているカルチャを表すロケール ID を指定します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/l** オプションを参照してください。|  
-|**IgnoreStandardIncludePath**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、ヘッダー ファイルまたはリソース ファイルの検索時、リソース コンパイラが INCLUDE 環境変数を確認するのを防止します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/x** オプションを参照してください。|  
-|**NullTerminateStrings**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、文字列テーブル内のすべての文字列が null 終端されます。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/n** オプションを参照してください。|  
-|**PreprocessorDefinitions**|省略可能な **String[]** 型のパラメーターです。<br /><br /> リソース コンパイラに対して 1 つまたは複数のプリプロセッサ シンボルを定義します。 マクロ シンボルの一覧を指定します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/d** オプションを参照してください。 この表の「**UndefinePreprocessorDefinitions**」も参照してください。|  
-|**ResourceOutputFileName**|省略可能な **String** 型のパラメーターです。<br /><br /> リソース ファイルの名前を指定します。 リソース ファイル名を指定します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/fo** オプションを参照してください。|  
-|**ShowProgress**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、コンパイラの進捗状況について報告するメッセージが表示されます。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/v** オプションを参照してください。|  
+|**AdditionalIncludeDirectories**|省略可能な **String[]** 型のパラメーターです。<br /><br /> インクルード ファイルを検索するディレクトリのリストにディレクトリを追加します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/I** オプションを参照してください。|  
+|**AdditionalOptions**|省略可能な **String** 型のパラメーターです。<br /><br /> コマンドライン オプションの一覧です。例: /\<option1> /\<option2> /\<option#>。 他の **RC** タスク パラメーターでは表されないコマンド ライン オプションを指定する場合は、このパラメーターを使用します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) のオプションを参照してください。|  
+|**カルチャ**|省略可能な **String** 型のパラメーターです。<br /><br /> リソースで使用されているカルチャを表すロケール ID を指定します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/l** オプションを参照してください。|  
+|**IgnoreStandardIncludePath**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、ヘッダー ファイルまたはリソース ファイルの検索時、リソース コンパイラが INCLUDE 環境変数を確認するのを防止します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/x** オプションを参照してください。|  
+|**NullTerminateStrings**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、文字列テーブル内のすべての文字列が null 終端されます。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/n** オプションを参照してください。|  
+|**PreprocessorDefinitions**|省略可能な **String[]** 型のパラメーターです。<br /><br /> リソース コンパイラに対して 1 つまたは複数のプリプロセッサ シンボルを定義します。 マクロ シンボルの一覧を指定します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/d** オプションを参照してください。 この表の「**UndefinePreprocessorDefinitions**」も参照してください。|  
+|**ResourceOutputFileName**|省略可能な **String** 型のパラメーターです。<br /><br /> リソース ファイルの名前を指定します。 リソース ファイル名を指定します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/fo** オプションを参照してください。|  
+|**ShowProgress**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、コンパイラの進捗状況について報告するメッセージが表示されます。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/v** オプションを参照してください。|  
 |**ソース**|必須の `ITaskItem[]` 型のパラメーターです。<br /><br /> タスクで使用および生成できる MSBuild ソース ファイル アイテムの配列を定義します。|  
 |**SuppressStartupBanner**|省略可能な **Boolean** 型のパラメーターです。<br /><br /> `true` の場合、タスクの開始時に著作権およびバージョン番号のメッセージが表示されないようにします。<br /><br /> 詳細については、**/?** コマンドライン オプションを入力し、 **/nologo** オプションを確認してください。|  
 |**TrackerLogDirectory**|省略可能な **String** 型のパラメーターです。<br /><br /> トラッカー ログのディレクトリを指定します。|  
-|**UndefinePreprocessorDefinitions**|プリプロセッサ シンボルの定義を解除します。<br /><br /> 詳細については、MSDN Web サイトの「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」 (RC を使用する (RC コマンド ライン)) の **/u** オプションを参照してください。 この表の「**PreprocessorDefinitions**」も参照してください。|  
+|**UndefinePreprocessorDefinitions**|プリプロセッサ シンボルの定義を解除します。<br /><br /> 詳細については、「[Using RC (The RC Command Line)](http://go.microsoft.com/fwlink/?LinkId=155730)」(RC を使用する (RC コマンド ライン)) の **/u** オプションを参照してください。 この表の「**PreprocessorDefinitions**」も参照してください。|  
   
-## <a name="remarks"></a>コメント  
-  
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

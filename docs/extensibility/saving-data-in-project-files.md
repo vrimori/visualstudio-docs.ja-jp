@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ファイル内のデータ保存 |Microsoft ドキュメント
+title: プロジェクト ファイル内のデータ保存 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35514385a4ed1d28052ebb21d12ed0b053dd52dc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 717cff683f5f16f8f42f967c5f3b90ff2fe1e3fc
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31140178"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39635970"
 ---
-# <a name="saving-data-in-project-files"></a>プロジェクト ファイル内のデータを保存
-プロジェクトのサブタイプでは、保存でき、プロジェクト ファイル内のサブタイプに固有のデータを取得することができます。 Managed Package Framework (MPF) は、このタスクを実行する 2 つのインターフェイスを提供します。  
+# <a name="save-data-in-project-files"></a>プロジェクト ファイル内のデータを保存します。
+プロジェクト サブタイプは、保存し、プロジェクト ファイルのサブタイプに固有のデータを取得できます。 マネージ パッケージ フレームワーク (MPF) は、このタスクを実行する 2 つのインターフェイスを提供します。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>からアクセス プロパティの値により、インターフェイス、 **MSBuild**プロジェクト ファイルのセクションです。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>読み込みまたは保存にユーザーのニーズが関連するデータをビルドするたびにすべてのユーザーが呼び出すことができます。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>からアクセス プロパティの値により、インターフェイス、 **MSBuild**プロジェクト ファイルのセクション。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>ユーザーのニーズを読み込みまたは保存に関連するデータをビルドするたびにすべてのユーザーが呼び出すことができます。  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>自由形式の XML でないビルド関連のデータを保持するために使用します。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>によって呼び出される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]されるたびに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト ファイルでないビルド関連のデータを保持する必要があります。  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>自由形式の XML でないビルド関連のデータを保持するために使用します。 によって提供されるメソッド<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>によって呼び出される[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]たびに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]非ビルド プロジェクト ファイルに関連するデータを保持する必要があります。  
   
- ビルドと非ビルド関連のデータを維持する方法の詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータの永続化](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)です。  
+ ビルドと非ビルド関連のデータを維持する方法の詳細については、次を参照してください。 [MSBuild プロジェクト ファイル内のデータを永続化](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)します。  
   
-## <a name="saving-and-retrieving-build-related-data"></a>関連するデータの保存およびビルドを取得します。  
+## <a name="save-and-retrieve-build-related-data"></a>ビルド関連のデータの保存および取得  
   
-#### <a name="to-save-a-build-related-data-in-the-project-file"></a>関連するプロジェクト ファイルでデータを保存、ビルド  
+### <a name="to-save-a-build-related-data-in-the-project-file"></a>プロジェクト ファイル内のデータに関連するビルドを保存するには  
   
 -   呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>プロジェクト ファイルの完全なパスを保存するメソッド。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "31140178"
         (uint)_PersistStorageType.PST_PROJECT_FILE, newFullPath));  
     ```  
   
-#### <a name="to-retrieve-build-related-data-from-the-project-file"></a>関連するデータをプロジェクト ファイルからビルドを取得するには  
+### <a name="to-retrieve-build-related-data-from-the-project-file"></a>関連するデータをプロジェクト ファイルからビルドを取得するには  
   
 -   呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A>プロジェクト ファイルの完全なパスを取得します。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "31140178"
         (uint)_PersistStorageType.PST_PROJECT_FILE, out fullPath));  
     ```  
   
-## <a name="saving-and-retrieving-non-build-related-data"></a>保存と取得以外のビルド関連データ  
+## <a name="save-and-retrieve-non-build-related-data"></a>保存および非ビルド関連のデータの取得  
   
-#### <a name="to-save-non-build-related-data-in-the-project-file"></a>保存のないビルドに関連するプロジェクト ファイル内のデータ  
+### <a name="to-save-non-build-related-data-in-the-project-file"></a>関連するプロジェクト ファイル内のデータを非ビルドを保存するには  
   
-1.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>が最後に、XML フラグメントが変更されたかどうかを決定するメソッドが現在のファイルを保存します。  
+1.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>が最後に、XML フラグメントが変更されたかどうかを判断するメソッドは、現在のファイルを保存します。  
   
     ```  
     public int IsFragmentDirty(uint storage, out int pfDirty)  
@@ -97,7 +97,7 @@ ms.locfileid: "31140178"
     }  
     ```  
   
-2.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>メソッドをプロジェクト ファイルに XML データを保存します。  
+2.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>プロジェクト ファイルに XML データを保存するメソッド。  
   
     ```  
     public int Save(ref Guid guidFlavor, uint storage, out string pbstrXMLFragment, int fClearDirty)  
@@ -146,9 +146,9 @@ ms.locfileid: "31140178"
     }  
     ```  
   
-#### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>プロジェクト ファイルでないビルド関連のデータを取得するには  
+### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>非ビルド プロジェクト ファイルに関連するデータを取得するには  
   
-1.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>プロジェクト拡張機能プロパティおよびその他のビルドに依存しないデータを初期化します。 このメソッドは、XML 構成内のデータがプロジェクト ファイルがない場合に呼び出されます。  
+1.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>プロジェクト拡張機能のプロパティとその他のビルドに依存しないデータを初期化します。 プロジェクト ファイルに存在する XML の構成データが存在しない場合は、このメソッドが呼び出されます。  
   
     ```  
     public int InitNew(ref Guid guidFlavor, uint storage)  
@@ -164,7 +164,7 @@ ms.locfileid: "31140178"
         return VSConstants.S_OK;  
     ```  
   
-2.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>プロジェクト ファイルから XML データを読み込みます。  
+2.  実装、<xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>プロジェクト ファイルから XML データを読み込むメソッド。  
   
     ```  
     public int Load(ref Guid guidFlavor, uint storage, string pszXMLFragment)  
@@ -209,7 +209,7 @@ ms.locfileid: "31140178"
     ```  
   
 > [!NOTE]
->  このトピックで提供されるすべてのコード例は例での部分[VSSDK のサンプル](http://aka.ms/vs2015sdksamples)です。  
+>  このトピックで提供されたすべてのコード例は部分の例の[VSSDK のサンプル](http://aka.ms/vs2015sdksamples)します。  
   
 ## <a name="see-also"></a>関連項目  
- [MSBuild プロジェクト ファイルでのデータの保持](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+ [MSBuild プロジェクト ファイル内のデータを永続化します。](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

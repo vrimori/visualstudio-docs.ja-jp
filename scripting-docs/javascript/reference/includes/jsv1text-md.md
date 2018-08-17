@@ -1,1 +1,0 @@
-Internet Explorer (Internet Explorer 6 より前のバージョン)

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 57fab4ee4205e9b1aaf7aaa44218134649257598
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ad1dff59ed942c16f05176f3e26f0042234d4933
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974976"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380167"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>方法: Web パフォーマンス テスト プラグインを作成する
 
@@ -29,13 +29,13 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 記録した Web パフォーマンス テストではカスタマイズされた Web パフォーマンス テスト プラグインを使用できるため、最小限のコードを記述するだけで、Web パフォーマンス テストをより高度に制御できるようになります。 ただし、コード化された Web パフォーマンス テストでそれらを使用することもできます。 詳細については、「[Generate and run a coded web performance test](../test/generate-and-run-a-coded-web-performance-test.md)」(コード化された Web パフォーマンス テストの生成と実行) を参照してください。
 
 > [!NOTE]
-> ロード テスト プラグインも作成できます。「[How to: Create a Load Test Plug-In](../test/how-to-create-a-load-test-plug-in.md)」(方法 : ロード テスト プラグインを作成する) を参照してください。
+> ロード テスト プラグインも作成できます。「[方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)」を参照してください。
 
 ## <a name="to-create-a-custom-web-performance-test-plug-in"></a>カスタム Web パフォーマンス テスト プラグインを作成するには
 
 1.  Web パフォーマンス テストが含まれている、Web パフォーマンスとロード テストのプロジェクトを開きます。
 
-2.  ソリューション エクスプローラーで、ソリューションを右クリックし、**[追加]** を選択して、**[新しいプロジェクト]** を選択します。
+2.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** を選択して、**[新しいプロジェクト]** を選択します。
 
      **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -47,9 +47,9 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 6.  **[OK]** をクリックします。
 
-7.  新しいクラス ライブラリ プロジェクトがソリューション エクスプローラーに追加され、新しいクラスがコード エディターに表示されます。
+7.  新しいクラス ライブラリ プロジェクトが**ソリューション エクスプローラー**に追加され、新しいクラスが**コード エディター**に表示されます。
 
-8.  ソリューション エクスプローラーで、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
+8.  **ソリューション エクスプローラー**で、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
 
 9. **[参照の追加]** ダイアログ ボックスが表示されます。
 
@@ -57,17 +57,17 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 11. **[OK]** をクリックします。
 
-     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照がソリューション エクスプローラーの **[参照設定]** フォルダーに追加されます。
+     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照が**ソリューション エクスプローラー**内の **[参照設定]** フォルダーに追加されます。
 
-12. ソリューション エクスプローラーで、Web パフォーマンス テスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスおよびロード テスト プロジェクトの最上位ノードを右クリックし、**[参照の追加]** を選択します。
+12. **ソリューション エクスプローラー**で、Web パフォーマンス テスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスおよびロード テスト プロジェクトの最上位ノードを右クリックし、**[参照の追加]** を選択します。
 
 13. **[参照の追加]** ダイアログ ボックスが表示されます。
 
-14. **[プロジェクト]** タブをクリックし、[クラス ライブラリ プロジェクト] を選択します。
+14. **[プロジェクト]** タブをクリックし、**[クラス ライブラリ プロジェクト]** を選択します。
 
 15. **[OK]** をクリックします。
 
-16. コード エディターで、プラグインのコードを記述します。 まず、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> クラスから派生する新しいパブリック クラスを作成します。
+16. **コード エディター**で、プラグインのコードを記述します。 まず、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestPlugin> クラスから派生する新しいパブリック クラスを作成します。
 
 17. 1 つまたは複数のイベント ハンドラー内でコードを実装します。 実装のサンプルについては、次の例を参照してください。
 
@@ -120,7 +120,7 @@ Web パフォーマンス テスト プラグインを使用すると、Web パ�
 
 次のコードでは、テスト イテレーションを表す <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestContext> に項目を追加する、カスタマイズされた Web パフォーマンス テスト プラグインを作成します。
 
-Web パフォーマンス テストの実行後は、このプラグインを使用することにより、**TestIteratnionNumber** という名前の追加された項目を、Web パフォーマンス テスト結果ビューアーの **[コンテキスト]** タブで確認できます。
+Web パフォーマンス テストの実行後は、このプラグインを使用することにより、**TestIteratnionNumber** という名前の追加された項目を、**Web パフォーマンス テスト結果ビューアー**の **[コンテキスト]** タブで確認できます。
 
 ```csharp
 using System;
@@ -175,8 +175,8 @@ namespace SampleRules
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin>
 - [ロード テスト用のカスタム コードおよびカスタム プラグインの作成](../test/create-custom-code-and-plug-ins-for-load-tests.md)
-- [方法 : 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)
+- [方法: 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)
 - [Web パフォーマンス テストのカスタム抽出規則のコーディング](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
 - [Web パフォーマンス テストのカスタム検証規則のコーディング](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
+- [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
 - [コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)

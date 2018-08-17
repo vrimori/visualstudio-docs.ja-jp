@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b91c0cb6357d465f612d1002476c03781822475c
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: a30659fcfd1b373360dc7bf9e9e53ae442ac4992
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433169"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510150"
 ---
 # <a name="mip-map-generation-variant"></a>ミップマップ生成バリアント
 レンダー ターゲットではないテクスチャで MIP マップを有効にします。  
@@ -28,11 +28,11 @@ ms.locfileid: "37433169"
  このバリアントでパフォーマンスが大幅に向上する場合は、MIP マップを有効にしないでテクスチャを使用いるため、テクスチャのキャッシュを最大限に利用できていないことを示しています。  
   
 ## <a name="remarks"></a>Remarks  
- MIP マップの生成は、ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに強制的に行われます。 具体的には、MIP マップの生成は、`pDesc` に渡された D3D11_TEXTUR2D_DESC オブジェクトが、不変のシェーダー リソースを記述する場合に強制的に行われます。つまり、  
+ MIP マップの生成は、ソース テクスチャを作成する `ID3D11Device::CreateTexture2D` への呼び出しがあるたびに強制的に行われます。 渡される D3D11_TEXTURE2D_DESC オブジェクトがあるときに mip マップ生成を強制する具体的には、`pDesc`不変のシェーダー リソースをについて説明します。  
   
 -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
   
--   Usage メンバーは、D3D11_USAGE_DEFUALT または D3D11_USAGE_IMMUTABLE に設定されます。  
+-   Usage メンバーは、D3D11_USAGE_DEFAULT または D3D11_USAGE_IMMUTABLE に設定されます。  
   
 -   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
   

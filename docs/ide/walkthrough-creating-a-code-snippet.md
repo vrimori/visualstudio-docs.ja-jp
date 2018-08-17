@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a9890be18e3d43f4c036da72bf2794801e5ec70
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 517eb98e7ca5b32d07a4501823ca092c366e4639
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425158"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469153"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>チュートリアル: コード スニペットを作成する
 コード スニペットは、わずかな手順で作成できます。 必要な操作は、XML ファイルを作成し、適切な要素を指定して、コードを追加するだけです。 コードには、参照や置換パラメーターを追加することもできます。 Visual Studio インストールにスニペットを追加するには、**コード スニペット マネージャー** (**[ツール]** > **[コード スニペット マネージャー]**) の **[インポート]** を使用します。
@@ -34,8 +34,7 @@ ms.locfileid: "32425158"
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<CodeSnippets
-    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
     <CodeSnippet Format="1.0.0">
         <Header>
             <Title></Title>
@@ -55,7 +54,7 @@ ms.locfileid: "32425158"
 
 2.  Title 要素にスニペットのタイトルを入力します。**Title** 要素に「Hello World VB」と入力します。
 
-3.  **Code** 要素の **Languages** 属性に、スニペットの言語を指定します。 この例では、"VB" を使用します。
+3.  **Code** 要素の **Language** 属性に、スニペットの言語を指定します。 この例では、"VB" を使用します。
 
 4.  **Code** 要素内の **CDATA** セクションにコードを追加します。次に例を示します。
 

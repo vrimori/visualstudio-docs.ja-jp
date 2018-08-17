@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: ea86ce4b977f1b8a664944bca2fcef65f8f5132f
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: dad7589e09ded8994a5e687c4f4cf95283887324
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233491"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380645"
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>方法: .NET Framework の旧バージョンを対象とした単体テストを構成する
 
@@ -26,7 +26,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 - ローカル コンピューターの Visual Studio から特定のバージョンの .NET Framework を対象とする単体テストを実行できます。
 
-- コマンド プロンプトから MSTest.exe を使用して、特定のバージョンの .NET Framework を対象とする単体テストを実行できます。
+- コマンド プロンプトから *MSTest.exe* を使用して、特定のバージョンの .NET Framework を対象とする単体テストを実行できます。
 
 - ビルドの一部としてビルド エージェントで単体テストを実行できます。
 
@@ -58,7 +58,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 3.  **[名前]** テキスト ボックスに Visual Basic テスト プロジェクトの名前を入力し、**[OK]** をクリックします。
 
-4.  ソリューション エクスプローラーで、新しい Visual Basic テスト プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
+4.  **ソリューション エクスプローラー**で、新しい Visual Basic テスト プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
 
      Visual Basic テスト プロジェクトのプロパティが表示されます。
 
@@ -80,7 +80,7 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 3.  **[名前]** テキスト ボックスに Visual C# テスト プロジェクトの名前を入力し、**[OK]** をクリックします。
 
-4.  ソリューション エクスプローラーで、新しい Visual C# テスト プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
+4.  **ソリューション エクスプローラー**で、新しい Visual C# テスト プロジェクトのショートカット メニューから **[プロパティ]** を選択します。
 
      Visual C# テスト プロジェクトのプロパティが表示されます。
 
@@ -101,11 +101,11 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
 
 3.  **[名前]** テキスト ボックスに Visual C++ テスト プロジェクトの名前を入力し、**[OK]** をクリックします。
 
-4.  ソリューション エクスプローラーで、新しい Visual C++ テスト プロジェクトから **[プロジェクトのアンロード]** を選択します。
+4.  **ソリューション エクスプローラー**で、新しい Visual C++ テスト プロジェクトから **[プロジェクトのアンロード]** を選択します。
 
-5.  ソリューション エクスプローラーで、アンロードされた Visual C++ テスト プロジェクトを選択し、**[\<プロジェクト名>.vcxproj の編集]** を選択します。
+5.  **ソリューション エクスプローラー**で、アンロードされた Visual C++ テスト プロジェクトを選択し、**[\<プロジェクト名>.vcxproj の編集]** を選択します。
 
-     エディターで .vcxproj ファイルが開きます。
+     エディターで *.vcxproj* ファイルが開きます。
 
 6.  `"Globals"` というラベルが付いた `PropertyGroup` で `TargetFrameworkVersion` をバージョン 3.5 以降のバージョンに設定します。 クライアント バージョンは指定しません。
 
@@ -120,9 +120,9 @@ Microsoft Visual Studio でテスト プロジェクトを作成すると、最�
       </PropertyGroup>
     ```
 
-7.  .vcxproj ファイルを保存して閉じます。
+7.  *.vcxproj* ファイルを保存して閉じます。
 
-8.  ソリューション エクスプローラーで、新しい Visual C++ テスト プロジェクトのショートカット メニューから **[プロジェクトの再読み込み]** を選択します。
+8.  **ソリューション エクスプローラー**で、新しい Visual C++ テスト プロジェクトのショートカット メニューから **[プロジェクトの再読み込み]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: ファイルのステータス コード列挙子 |Microsoft ドキュメント
+title: 状態コードの列挙子のファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3415440c80fcaa88edbecee924a118f82a9dd99
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0b51e20c18562c1c0e6c23968577dd58eadfe59e
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31128173"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498169"
 ---
-# <a name="file-status-code-enumerator"></a>ファイルのステータス コード列挙子
-`SccStatus`列挙子には、ソース管理システムでファイルの状態を指定する名前付きの定数値が含まれています。 この列挙を使用、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)と`POPLISTFUNC`コールバック関数 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細)。  
+# <a name="file-status-code-enumerator"></a>ファイルの状態コードの列挙子
+`SccStatus`列挙子には、ソース管理システムでファイルの状態を指定する名前付き定数の値が含まれています。 この列挙体を使って、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)と`POPLISTFUNC`コールバック関数 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細については)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,19 +59,19 @@ enum SccStatus {
  ファイルはソース管理下ではありません。  
   
  SCC_STATUS_CONTROLLED  
- ファイルは、ソース管理下にあること。  
+ ファイルはソース管理です。  
   
  SCC_STATUS_CHECKEDOUT  
- ローカル ディスク上の現在のユーザーによってチェック アウトをされています。  
+ ローカル ディスク上の現在のユーザーによってチェック アウトします。  
   
  SCC_STATUS_OUTOTHER  
- ファイルは別のユーザーによってチェック アウトをされています。  
+ ファイルが別のユーザーによってチェック アウトします。  
   
  SCC_STATUS_OUTEXCLUSIVE  
- ファイルが排他的チェック アウトされています。  
+ ファイルが排他的チェック アウトします。  
   
  SCC_STATUS_OUTMULTIPLE  
- ファイルは 1 つ以上のユーザーによってチェック アウトをされています。  
+ ファイルが 1 つ以上のユーザーによってチェック アウトします。  
   
  SCC_STATUS_OUTOFDATE  
  ファイルが最新ではありません。  
@@ -80,25 +80,25 @@ enum SccStatus {
  ファイルがプロジェクトから削除されました。  
   
  SCC_STATUS_LOCKED  
- ファイルがロックされています。多くのバージョンが許可されます。  
+ ファイルがロックされています。その他のバージョンが許可されています。  
   
  SCC_STATUS_MERGED  
- ファイルがマージされましたが、まだ固定/検証します。  
+ ファイルがマージされましたが、まだ固定/検証済み。  
   
  SCC_STATUS_SHARED  
  ファイルは、プロジェクト間で共有されます。  
   
  SCC_STATUS_PINNED  
- ファイルは、明示的なバージョンで共有されます。  
+ ファイルは、特定のバージョンで共有されます。  
   
  SCC_STATUS_MODIFIED  
- ファイルは、変更/切断/に違反しました。  
+ ファイルを変更/分割/違反とされました。  
   
  SCC_STATUS_OUTBYUSER  
- ファイルは現在のユーザーによってチェック アウトをされています。  
+ 現在のユーザーによってファイルがチェック アウトします。  
   
  SCC_STATUS_NOMERGE  
- ファイルは、しないでマージすることができます、取得する前に未保存必要があります。  
+ ファイルにマージできることはありません、取得する前に未保存必要があります。  
   
  SCC_STATUS_RESERVED_1  
  内部使用のために予約されています。  

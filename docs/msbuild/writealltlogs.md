@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8de6a67be8390f2b4353b05eea489c07e095b092
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ceec441f6f0110ea514225ed0fab4c4dc2d575bb
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31570994"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153086"
 ---
 # <a name="writealltlogs"></a>WriteAllTLogs
 すべてのスレッドとコンテキストの追跡ログを書き込みます。  
@@ -44,7 +44,7 @@ HRESULT WINAPI WriteAllTLogs(LPCTSTR intermediateDirectory, LPCTSTR tlogRootName
  追跡コンテキストが作成された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** FileTracker.h  
+ **ヘッダー:** *FileTracker.h*  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WriteContextTLogs](../msbuild/writecontexttlogs.md)

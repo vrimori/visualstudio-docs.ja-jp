@@ -1,5 +1,5 @@
 ---
-title: LocationField 要素 (Visual Studio プロジェクト テンプレート) |Microsoft ドキュメント
+title: LocationField 要素 (Visual Studio プロジェクト テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0877d374317e3a7142996b012ff6abefc6b94724
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76ed39186796b692dd6bc93ab0eaea50f217b7af
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138760"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636286"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField 要素 (Visual Studio プロジェクト テンプレート)
-指定するかどうか、**場所**テキスト ボックスに、**新しいプロジェクト** ダイアログ ボックスが有効になっている、無効になっている、またはプロジェクト テンプレートの非表示になります。  
+指定するかどうか、**場所**テキスト ボックスに、**新しいプロジェクト** ダイアログ ボックスが有効になっている、無効になっている、またはプロジェクトのテンプレートの非表示になります。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -35,7 +35,7 @@ ms.locfileid: "31138760"
 <LocationField> Enabled/Disabled/Hidden </LocationField>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -48,25 +48,25 @@ ms.locfileid: "31138760"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、いずれかでどのように表示を定義、**新しいプロジェクト**です。|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、いずれかでどのように表示を定義、**新しいプロジェクト**します。|  
   
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- 有効なテキストの値は次のとおりです。  
+ 有効なテキスト値は次のとおりです。  
   
--   `Enabled`、ことを指定、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスが有効にします。  
+-   `Enabled`、いることを指定します、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスが有効にします。  
   
--   `Disabled`、ことを指定、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスが無効になります。  
+-   `Disabled`、いることを指定します、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスが無効になります。  
   
--   `Hidden`、ことを指定、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスを非表示にします。  
+-   `Hidden`、いることを指定します、**場所**のボックス、**新しいプロジェクト** ダイアログ ボックスは表示されません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  既定値は `Enabled` です。  
   
  **場所**テキスト ボックスに、**新しいプロジェクト**ダイアログ ボックスでユーザーを新しいプロジェクトを保存する既定のディレクトリを変更します。  
   
- 指定された値、`Location`要素はのみ受け入れられます、ダイアログ ボックスで、基になるプロジェクト システムでサポートされる場合。  
+ 指定された値、`Location`基になるプロジェクト システムがサポートされている場合に、要素は、ダイアログ ボックスで受け入れられますのみです。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] テンプレートのメタデータの例を次に示します。  

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 233088958605c5d03f5ad5ce932b63868729e6c0
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: cf333c5339ce9a4d6046fb5156e37157004491b9
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945508"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177881"
 ---
 # <a name="assignculture-task"></a>AssignCulture タスク
 このタスクは、有効な .NET カルチャ ID 文字列をファイル名の一部として含む可能性がある項目の一覧を受け取り、対応するカルチャ ID を含む `Culture` という名前のメタデータを持つ項目を生成します。 たとえば、ファイル名 *Form1.fr-fr.resx* には、"fr-fr" というカルチャ ID が埋め込まれています。したがって、このタスクでは、`fr-fr` と等しい値の `Culture` メタデータを持つ同じファイル名の項目が生成されます。 また、このタスクでは、ファイル名からカルチャを削除したファイル名の一覧も生成されます。  
@@ -74,10 +74,10 @@ ms.locfileid: "37945508"
   
 |項目コレクション|目次|  
 |---------------------|--------------|  
-|`OutAssignedFiles`|`MyResource1.fr.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx` (追加メタデータなし)|  
-|`OutAssignedFilesWithCulture`|`MyResource1.fr.resx (Culture="fr")`|  
-|`OutAssignedFilesWithNoCulture`|`MyResource2.XX.resx` (追加メタデータなし)|  
-|`OutCultureNeutralAssignedFiles`|`MyResource1.resx (Culture="fr")`<br /><br /> `MyResource2.XX.resx (`追加メタデータなし)|  
+|`OutAssignedFiles`|*MyResource1.fr.resx* (カルチャ = "fr")<br /><br /> *MyResource2.XX.resx* (追加メタデータなし)|  
+|`OutAssignedFilesWithCulture`|*MyResource1.fr.resx* (カルチャ = "fr")|  
+|`OutAssignedFilesWithNoCulture`|*MyResource2.XX.resx* (追加メタデータなし)|  
+|`OutCultureNeutralAssignedFiles`|*MyResource1.resx* (カルチャ = "fr")<br /><br /> *MyResource2.XX.resx* (追加メタデータなし)|  
   
 ## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   

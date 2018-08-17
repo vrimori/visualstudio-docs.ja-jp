@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1892afefa7840910c51f184ca16ef2a6c6cd771a
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 0310ac0ee0e6226f9f5685c590e4dc2e0c49b6b3
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302911"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176142"
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>ロード テスト シナリオにおけるテスト イテレーションの構成
 

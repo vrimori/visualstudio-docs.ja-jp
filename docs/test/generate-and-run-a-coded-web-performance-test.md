@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 65331aa24eee140bcba983f1360c02f0227905fe
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: b1920037b84871b388a1cc746b634b73577efd89
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750855"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179577"
 ---
 # <a name="generate-and-run-a-coded-web-performance-test"></a>コード化された Web パフォーマンス テストの生成と実行
 
@@ -85,7 +85,7 @@ Web パフォーマンス テストは、Web アプリ内を移動すること�
 ## <a name="qa"></a>Q&A
 
 ### <a name="q-can-i-run-more-than-one-test-at-a-time"></a>Q: 同時に複数のテストを実行できますか。
- **A:** はい。ソリューション エクスプローラーでコンテキスト メニューを使用してください。
+ **A:** はい。**ソリューション エクスプローラー**でコンテキスト メニューを使用してください。
 
 ### <a name="q-should-i-add-a-data-source-before-or-after-i-generate-a-coded-test"></a>Q: データ ソースは、コード化されたテストを生成する前か後のどちらに追加すべきでしょうか。
  **A:** [データ ソース](../test/add-a-data-source-to-a-web-performance-test.md)は、コード化されたテストを生成する前に追加する方が簡単です。こうすると、コードが自動的に生成されます。

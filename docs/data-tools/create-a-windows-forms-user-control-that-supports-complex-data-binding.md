@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b0189682576c495d031cf160261e16fd920a1615
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 11ab6a812701d371e86f07b3e8da5fa91f90cbcf
+ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758382"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39582318"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>複合データ バインディングをサポートする Windows フォーム ユーザー コントロールを作成します。
 
@@ -37,7 +37,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 |データの一覧またはテーブルを表示する <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> のような <xref:System.Windows.Forms.DataGridView> をコントロールに実装します。 このチュートリアルでは、このプロセスについて説明します。|
 |データの一覧またはテーブルを表示しますが、単一の列またはプロパティを表示する必要もある <xref:System.ComponentModel.LookupBindingPropertiesAttribute> のような <xref:System.Windows.Forms.ComboBox> をコントロールに実装します。 詳細については、次を参照してください。[ルックアップ データ バインディングをサポートする Windows フォーム ユーザー コントロール作成](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)です。|
 
- このチュートリアルでは、テーブルからのデータ行を表示する複合コントロールを作成します。 この例では、Northwind サンプル データベースの `Customers` テーブルを使用します。 複合ユーザー コントロールは、カスタム コントロールの <xref:System.Windows.Forms.DataGridView> で Customers テーブルを表示します。
+このチュートリアルでは、テーブルからのデータ行を表示する複合コントロールを作成します。 この例では、Northwind サンプル データベースの `Customers` テーブルを使用します。 複合ユーザー コントロールは、カスタム コントロールの <xref:System.Windows.Forms.DataGridView> で Customers テーブルを表示します。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
@@ -55,7 +55,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 - 新しいコントロールをドラッグしてから、追加、**データ ソース ウィンドウ**に**Form1**します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
@@ -75,9 +75,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="create-a-windows-forms-application"></a>Windows フォーム アプリケーションを作成します。
 
- 作成するには、まず、 **Windows フォーム アプリケーション**します。
-
-### <a name="to-create-the-new-windows-project"></a>新しい Windows プロジェクトを作成するには
+作成するには、まず、 **Windows フォーム アプリケーション**:
 
 1. Visual Studio での**ファイル**メニューの **新規** > **プロジェクト**します。
 
@@ -91,9 +89,7 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="add-a-user-control-to-the-project"></a>ユーザー コントロールをプロジェクトに追加します。
 
-このチュートリアルから複雑なデータ バインド コントロールが作成されるため、**ユーザー コントロール**、追加する必要があります、**ユーザー コントロール**をプロジェクトに項目。
-
-### <a name="to-add-a-user-control-to-the-project"></a>プロジェクトにユーザー コントロールを追加するには
+このチュートリアルから複雑なデータ バインド コントロールが作成されるため、**ユーザー コントロール**、追加、**ユーザー コントロール**をプロジェクトに項目。
 
 1. **プロジェクト**] メニューの [選択**ユーザー コントロールの追加**します。
 
@@ -103,17 +99,11 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="design-the-complexdatagridview-control"></a>ComplexDataGridView コントロールをデザインします。
 
-この手順では、ユーザー コントロールに <xref:System.Windows.Forms.DataGridView> を追加します。
-
-### <a name="to-design-the-complexdatagridview-control"></a>ComplexDataGridView コントロールを設計するには
-
-- ドラッグ、<xref:System.Windows.Forms.DataGridView>から、**ツールボックス**ユーザー コントロールのデザイン サーフェイスにします。
+追加する、<xref:System.Windows.Forms.DataGridView>ユーザー コントロールにドラッグ、<xref:System.Windows.Forms.DataGridView>から、**ツールボックス**ユーザー コントロールのデザイン サーフェイスにします。
 
 ## <a name="add-the-required-data-binding-attribute"></a>必要なデータ バインディング属性を追加します。
 
-データ バインディングをサポートする複合コントロールには、<xref:System.ComponentModel.ComplexBindingPropertiesAttribute> を実装できます。
-
-### <a name="to-implement-the-complexbindingproperties-attribute"></a>ComplexBindingProperties 属性を実装するには
+実装する複雑なデータ バインディングをサポートするをコントロールには、 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>:
 
 1. スイッチ、 **ComplexDataGridView**コントロールをコード ビューにします。 (上、**ビュー**メニューの **コード**)。
 
@@ -124,11 +114,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-## <a name="creating-a-data-source-from-your-database"></a>データベースからデータ ソースの作成
+## <a name="create-a-data-source-from-your-database"></a>データベースからデータ ソースを作成します。
 
-このステップでは、**データ ソースの構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブル。
-
-### <a name="to-create-the-data-source"></a>データ ソースを作成するには
+使用して、**データ ソースの構成**データ ソースを作成するウィザードがに基づいて、 `Customers` Northwind サンプル データベース内のテーブル。
 
 1.  **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
@@ -156,8 +144,6 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 内で、**データソース**ウィンドウで、フォームに項目をドラッグする前に作成するコントロールを設定することができます。
 
-### <a name="to-set-the-customers-table-to-bind-to-the-complexdatagridview-control"></a>Customers テーブルを ComplexDataGridView コントロールにバインドするように設定するには
-
 1. 開いている**Form1**デザイナー。
 
 1. 展開、**顧客**内のノード、**データソース**ウィンドウ。
@@ -170,15 +156,9 @@ Windows アプリケーションでフォームにデータを表示するとき
 
 ## <a name="add-controls-to-the-form"></a>コントロールをフォームに追加します。
 
-項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウから、フォームにします。
+項目をドラッグして、データ バインド コントロールを作成することができます、**データソース**ウィンドウから、フォームにします。 メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウから、フォームにします。 いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
 
-### <a name="to-create-data-bound-controls-on-the-form"></a>フォームにデータ バインド コントロールを作成するには
-
-メインのドラッグ**顧客**ノードから、**データ ソース**ウィンドウから、フォームにします。 いることを確認、 **ComplexDataGridView**テーブルのデータを表示するコントロールを使用します。
-
-## <a name="running-the-application"></a>アプリケーションの実行
-
-### <a name="to-run-the-application"></a>アプリケーションを実行するには
+## <a name="run-the-application"></a>アプリケーションの実行
 
 **F5** キーを押してアプリケーションを実行します。
 

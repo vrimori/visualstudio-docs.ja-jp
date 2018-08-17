@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fd6d3bc8dbe1ec92fd2802e6cc2b88956d74e854
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5fc3d03e42edbfa6ad4e625a1d4c77df2aadab27
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751651"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382397"
 ---
 # <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>チュートリアル: コード化された UI テストの作成、編集、管理
 
@@ -38,23 +38,23 @@ ms.locfileid: "34751651"
 
 7.  **[OK]** をクリックします。
 
-     Visual Studio の WPF デザイナーが開き、プロジェクトの MainWindow が表示されます。
+     **Visual Studio の WPF デザイナー**が開き、プロジェクトの MainWindow が表示されます。
 
 8.  ツールボックスが現在開いていない場合は開きます。 **[表示]** メニューを選択し、**[ツールボックス]** を選択します。
 
 9. **[すべての WPF コントロール]** セクションの **[Button]**、**[CheckBox]**、**[ProgressBar]** の各コントロールをデザイン サーフェイスの MainWindow にドラッグします。
 
-10. Button コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から button1 に変更します。 次に、**[コンテンツ]** プロパティの値を Button から Start に変更します。
+10. **Button** コントロールを選択します。 **[プロパティ]** ウィンドウで、**[名前]** プロパティの値を \<No Name> から button1 に変更します。 次に、**[コンテンツ]** プロパティの値を Button から Start に変更します。
 
-11. ProgressBar コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から progressBar1 に変更します。 次に、**[最大値]** プロパティの値を **100** から **10000** に変更します。
+11. **ProgressBar** コントロールを選択します。 **[プロパティ]** ウィンドウで、**[名前]** プロパティの値を \<No Name> から progressBar1 に変更します。 次に、**[最大値]** プロパティの値を **100** から **10000** に変更します。
 
-12. Checkbox コントロールを選択します。 [プロパティ] ウィンドウで、**[名前]** プロパティの値を \<No Name> から checkBox1 に変更し、**[IsEnabled]** プロパティをクリアします。
+12. **Checkbox** コントロールを選択します。 **[プロパティ]** ウィンドウで、**[名前]** プロパティの値を \<No Name> から checkBox1 に変更し、**[IsEnabled]** プロパティをクリアします。
 
      ![簡単な WPF アプリケーション](../test/media/codedui_wpfapp.png)
 
 13. ボタン コントロールをダブルクリックしてクリック イベント ハンドラーを追加します。
 
-     コード エディターに MainWindow.xmal.cs が表示され、新しい button1_Click メソッドにカーソルが置かれます。
+     コード エディターに *MainWindow.xmal.cs* が表示され、新しい button1_Click メソッドにカーソルが置かれます。
 
 14. MainWindow クラスの先頭にデリゲートを追加します。 このデリゲートはプログレス バーに使用されます。 デリゲートを追加するには、次のコードを追加します。
 
@@ -141,7 +141,7 @@ ms.locfileid: "34751651"
 
      **[UIMap - コード化された UI テスト ビルダー]** ダイアログが表示され、Visual Studio ウィンドウは最小化されます。
 
-     ダイアログ ボックスのオプションの詳細については、「[コード化された UI テストを作成する](../test/use-ui-automation-to-test-your-code.md)」を参照してください。
+     ダイアログ ボックスのオプションの詳細については、[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md)に関するページを参照してください。
 
 1. **[UIMap - コード化された UI テスト ビルダー]** ダイアログで **[記録の開始]** を選択します。
 
@@ -314,7 +314,7 @@ ms.locfileid: "34751651"
 
 10. **ソリューション エクスプローラー**で、*UIMap.Designer.cs* ファイルを開きます。
 
-11. UIMap.Designer.cs ファイルで、**UIStartButton1** プロパティを見つけます。 `SearchProperties` が `"buttonA"` に設定されていることを確認します。
+11. *UIMap.Designer.cs* ファイルで、**UIStartButton1** プロパティを検索します。 `SearchProperties` が `"buttonA"` に設定されていることを確認します。
 
     ```csharp
     public WpfButton UIStartButton1
@@ -334,7 +334,7 @@ ms.locfileid: "34751651"
             }
     ```
 
-     これで、コード化された UI テストを変更して、新しくマップされたコントロールを使用できます。 前の手順で説明したように、コード化された UI テストのメソッドまたはプロパティをオーバーライドする場合は、UIMap.cs ファイルで実行する必要があります。
+     これで、コード化された UI テストを変更して、新しくマップされたコントロールを使用できます。 前の手順で説明したように、コード化された UI テストのメソッドまたはプロパティをオーバーライドする場合は、*UIMap.cs* ファイルで実行する必要があります。
 
 12. *UIMap.cs* ファイルで、コンストラクターを追加し、値として `"buttonA":` を指定した `AutomationID` プロパティを使用するように、`SearchProperties` プロパティの `UIStartButton` プロパティを指定します。
 
@@ -367,4 +367,4 @@ ms.locfileid: "34751651"
 
 - [UI オートメーションを使用してコードをテストする](../test/use-ui-automation-to-test-your-code.md)
 - [コード化された UI テストと操作の記録でサポートされている構成とプラットフォーム](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-- [コード化された UI テスト エディターを使用したコード化された UI テストの編集](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+- [コード化された UI テスト エディターを使用してコード化された UI テストを編集する](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

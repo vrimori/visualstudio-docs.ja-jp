@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 54a15080e84187c53841ba03edeeaff3ccce0d30
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 6cc733d3d926581801391a086c7886db3cec1bcc
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751833"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382729"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストを作成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "34751833"
 
 1.  [ネイティブのテスト プロジェクトを作成する](#create_test_project)。 テスト プロジェクトは、DLL プロジェクトと同じソリューションに格納されます。
 
-2.  [DLL プロジェクトの作成](#create_dll_project)。 このチュートリアルでは新しい DLL を作成しますが、既存の DLL をテストする手順は類似しています。
+2.  [DLL プロジェクトを作成する](#create_dll_project)。 このチュートリアルでは新しい DLL を作成しますが、既存の DLL をテストする手順は類似しています。
 
 3.  [DLL 関数をテストに表示させる](#make_functions_visible)。
 
@@ -38,9 +38,9 @@ ms.locfileid: "34751833"
 
 ##  <a name="create_test_project"></a> ネイティブ単体テスト プロジェクトを作成する
 
-1.  **[ファイル]** メニューで、**[新規] > [プロジェクト]** を選びます。
+1.  **[ファイル]** メニューで、**[新規]** > **[プロジェクト]** の順に選択します。
 
-     ダイアログ ボックスで、**[インストール済み] > [テンプレート] > [Visual C++] > [テスト]** の順に展開します。
+     ダイアログ ボックスで、**[インストール済み]** > **[テンプレート]** > **[Visual C++]** > **[テスト]** の順に展開します。
 
      **ネイティブ単体テスト プロジェクト** テンプレートまたはインストールされている他の好みのフレームワークを選びます。 Google Test や Boost.Test などの別のテンプレートを選んだ場合、基本的な原則は同じですが、いくつかの詳細は異なります。
 
@@ -75,11 +75,11 @@ ms.locfileid: "34751833"
 
          `Assert` クラスは、テスト メソッドで結果を確認するために使用するいくつかの静的メソッドを提供することに注意してください。
 
-    2.  **[テスト]** メニューで **[実行] > [すべてのテスト]** の順に選びます。
+    2.  **[テスト]** メニューで **[実行]** > **[すべてのテスト]** を選びます。
 
          テストがビルドし、実行します。
 
-         テスト エクスプローラーが表示されます。
+         **テスト エクスプローラー**が表示されます。
 
          **[合格したテスト]** の下にテストが表示されます。
 
@@ -99,13 +99,13 @@ ms.locfileid: "34751833"
 
      ![[DLL] と [シンボルのエクスポート] が設定された C++ プロジェクト ウィザード](../test/media/utecpp06.png)
 
-3.  プリンシパル .h ファイルでエクスポートされた関数を宣言します。
+3.  プリンシパル *.h* ファイルでエクスポートされた関数を宣言します。
 
      ![API マクロを使用した新しい DLL コード プロジェクトと .h ファイル](../test/media/utecpp07.png)
 
      宣言子 `__declspec(dllexport)` は、クラスのパブリック メンバーと保護されるメンバーが DLL の外部で表示できるようにします。 詳細については、「 [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)」を参照してください。
 
-4.  プリンシパル .cpp ファイルでは、最小限の本体を関数に追加します。
+4.  プリンシパル *.cpp* ファイルでは、最小限の本体を関数に追加します。
 
     ```cpp
         // Find the square root of a number.
@@ -119,7 +119,7 @@ ms.locfileid: "34751833"
 
 1.  DLL プロジェクトをテスト プロジェクトのプロジェクト参照に追加します。
 
-    1.  テスト プロジェクトのプロパティを開き、 **[共通プロパティ]**、 **[フレームワークと参照]** の順に選択します。
+    1.  テスト プロジェクトのプロパティを開き、**[共通プロパティ]** > **[フレームワークと参照]** の順に選択します。
 
          ![C++ プロジェクト プロパティ | Framework と参照](../test/media/utecpp08.png)
 
@@ -129,7 +129,7 @@ ms.locfileid: "34751833"
 
          ![C++ プロジェクト プロパティ | 新しい参照の追加](../test/media/utecpp09.png)
 
-2.  プリンシパルの単体テストの .cpp ファイルに、DLL コードの .h ファイルを含めます。
+2.  プリンシパルの単体テストの *.cpp* ファイルに、DLL コードの *.h* ファイルを含めます。
 
     ```cpp
     #include "..\RootFinder\RootFinder.h"
@@ -157,9 +157,9 @@ ms.locfileid: "34751833"
 
 4.  ソリューションをビルドします。
 
-     テスト エクスプ ローラーに新しいテストが表示されます。
+     **テスト エクスプローラー**に新しいテストが表示されます。
 
-5.  テスト エクスプローラーで **[すべて実行]** をクリックします。
+5.  **テスト エクスプローラー**で **[すべて実行]** をクリックします。
 
      ![単体テスト エクスプローラー &#45 基本テスト成功](../test/media/utecpp10.png)
 
@@ -186,7 +186,7 @@ ms.locfileid: "34751833"
     >
     > ユーザーが要件を変更したら、正しくなくなったテストを無効にします。 新しいテストを作成し、一度に 1 つずつ、同じ増分方式で処理するようにします。
 
-2.  ソリューションをビルドし、テスト エクスプ ローラーで **[すべて実行]** を選択します。
+2.  ソリューションをビルドし、**テスト エクスプローラー**で **[すべて実行]** を選択します。
 
      新しいテストは失敗します。
 
@@ -214,7 +214,7 @@ ms.locfileid: "34751833"
     }
     ```
 
-4.  ソリューションをビルドし、テスト エクスプ ローラーで **[すべて実行]** を選択します。
+4.  ソリューションをビルドし、**テスト エクスプローラー**で **[すべて実行]** を選択します。
 
      両方のテストが合格します。
 
@@ -262,7 +262,7 @@ ms.locfileid: "34751833"
 
 3.  失敗したテストを開きます (またはダブルクリックします)。
 
-     失敗したアサーションが強調表示されます。 エラー メッセージは、テスト エクスプ ローラーの [詳細] ウィンドウに表示されます。
+     失敗したアサーションが強調表示されます。 エラー メッセージは、**テスト エクスプローラー**の [詳細] ウィンドウに表示されます。
 
      ![NegativeRangeTest 失敗](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
@@ -302,7 +302,7 @@ ms.locfileid: "34751833"
 
 1.  SquareRoot 関数の中心的な計算を簡素化します。
 
-    ```
+    ```cpp
     // old code:
     //   result = result - (result*result - v)/(2*result);
     // new code:
@@ -330,7 +330,7 @@ ms.locfileid: "34751833"
 ## <a name="see-also"></a>関連項目
 
 - [既存の C++ アプリケーションへの単体テストの追加](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
-- [Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)
-- [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)
+- [Microsoft.VisualStudio.TestTools.CppUnitTestFramework の使用](how-to-use-microsoft-test-framework-for-cpp.md)
+- [ネイティブ コードをデバッグする](../debugger/debugging-native-code.md)
 - [チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
 - [インポートとエクスポート](/cpp/build/importing-and-exporting)

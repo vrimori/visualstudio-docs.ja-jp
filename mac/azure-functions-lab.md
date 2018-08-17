@@ -7,12 +7,12 @@ ms.date: 05/06/2018
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 38FD2070-5151-482E-B0A9-993715128736
-ms.openlocfilehash: 80c04182733204a18ee669d3851deab867cc56cd
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 53684537d20b483f74cbc270e988b130df3ba8c8
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "33877333"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232290"
 ---
 # <a name="tutorial-getting-started-with-azure-functions"></a>チュートリアル: Azure Functions の概要
 
@@ -46,8 +46,10 @@ ms.locfileid: "33877333"
 
 1. **Solution Pad** でノードを展開します。 既定のプロジェクト テンプレートには、さまざまな Azure WebJobs パッケージと、Newtonsoft.Json パッケージへの NuGet 参照が含まれています。 
 
-     次の 3 つのファイルもあります。- ホストのグローバル構成オプションを記述するための **host.json** - サービス設定を構成するための **local.settings.json** 
-        - プロジェクト テンプレートでは、既定の HttpTrigger も作成します。 このラボの目的上、プロジェクトから **HttpTrigger.cs** ファイルを削除する必要があります。
+     次の 3 つのファイルもあります。  
+        - ホストのグローバル構成オプションを記述するための **host.json**  
+        - サービス設定を構成するための **local.settings.json**  
+        - プロジェクト テンプレートでは、既定の HttpTrigger も作成します。 このラボの目的上、プロジェクトから **HttpTrigger.cs** ファイルを削除する必要があります。  
 
     **local.settings.json** を開きます。 既定では、2 つの空の接続文字列設定が示されます。
 

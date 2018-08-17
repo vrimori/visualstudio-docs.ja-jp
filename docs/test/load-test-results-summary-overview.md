@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 41849b5ac9b55ff97735dbbda4df909d54f8a346
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: fd184f292a063823b6513e7b6a1817e2477db303
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34751859"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380565"
 ---
 # <a name="load-test-results-summary-overview"></a>ロード テスト結果の概要
 
@@ -76,11 +76,11 @@ ms.locfileid: "34751859"
 
 ## <a name="key-statistic-top-5-slowest-tests"></a>基本統計: 低速テスト トップ 5
 
-このセクションには、ロード テストで実行速度が遅かったテスト上位 5 件が表示されます。 各テストについて、テスト名と平均テスト時間が表示されます。 テストは降順に一覧されます。 テストの名前を選択すると、**[テスト]** テーブルが表示され、そのテストの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果の分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
+このセクションには、ロード テストで実行速度が遅かったテスト上位 5 件が表示されます。 各テストについて、テスト名と平均テスト時間が表示されます。 テストは降順に一覧されます。 テストの名前を選択すると、**[テスト]** テーブルが表示され、そのテストの詳細を調べることができます。 詳細については、[テーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)に関するページを参照してください。
 
 **95% テスト時間 (秒)** のパーセンタイル値は、テストの 95% が完了している時間を秒で示します。
 
-## <a name="key-statistic-top-5-slowest-sql-operations"></a>基本統計: 低速 SQL 操作 トップ 5
+## <a name="key-statistic-top-5-slowest-sql-operations"></a>基本統計: 低速 SQL 操作トップ 5
 
 ロード テストで SQL トレースを有効にした場合は、このセクションにロード テストで処理速度が遅かったクエリ上位 5 件が表示されます。 各テストについて、操作の名前と実行時間が表示されます。 期間はマイクロ秒 (SQL Server 2005) またはミリ秒 (SQL Server 2000 以前のバージョン) で表示されます。 テストは期間別に降順に一覧表示されます。 操作の名前を選択すると、**[SQL トレース]** テーブルが表示され、その操作の詳細を調べることができます。 詳細については、「[[SQL トレース データ] テーブル](../test/analyze-load-test-results-and-errors-in-the-tables-view.md#the-sql-trace-data-table)」を参照してください。
 
@@ -127,16 +127,16 @@ ms.locfileid: "34751859"
 
 ## <a name="errors"></a>エラー
 
-このセクションには、ロード テストの実行中に発生したエラーの一覧があります。 エラーのタイプとサブタイプ、カウント、および最後のメッセージが表示されます。 エラーを選択すると、**[エラー]** テーブルが表示され、そのエラーの詳細を調べることができます。 詳細については、「[Analyze Load Test Results and Errors in the Tables View](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)」(テーブル ビューでのロード テスト結果とエラーの分析) と「[方法: カウンター パネルを使用してエラーを分析する](../test/how-to-analyze-errors-using-the-counters-panel.md)」を参照してください。
+このセクションには、ロード テストの実行中に発生したエラーの一覧があります。 エラーのタイプとサブタイプ、カウント、および最後のメッセージが表示されます。 エラーを選択すると、**[エラー]** テーブルが表示され、そのエラーの詳細を調べることができます。 詳細については、「[ロード テスト アナライザーのテーブル ビューでのロード テスト結果とエラーの分析](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)」と「[方法: カウンター パネルを使用してエラーを分析する](../test/how-to-analyze-errors-using-the-counters-panel.md)」を参照してください。
 
 > [!NOTE]
 > このセクションは、セクション タイトルの左側の矢印を選択して折りたたんだり展開したりできます。
 
-## <a name="printing-a-summary"></a>概要の印刷
+## <a name="print-a-summary"></a>概要の印刷
 
 ロード テストの概要を印刷するには、概要ページを右クリックし、ショートカット メニューの **[印刷]** を選択します。 印刷プレビューを表示するには、概要ページを右クリックし、ショートカット メニューの **[印刷プレビュー]** を選択します。 プレビュー画面からそのまま印刷を開始することもできます。
 
 ## <a name="see-also"></a>関連項目
 
-- [しきい値規則違反の分析](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [しきい値規則違反](../test/analyze-threshold-rule-violations-in-load-tests.md)
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

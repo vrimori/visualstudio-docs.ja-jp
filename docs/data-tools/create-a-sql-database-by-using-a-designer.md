@@ -14,23 +14,24 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5d21ba3f239bb4c5e3fdd1ba717b1288956b8550
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 71d9be6ddc664d3b25c52d227e749421611f3512
+ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756156"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39582373"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>データベースを作成し、Visual Studio でのテーブルの追加
+
 Visual Studio を使用して作成し、SQL Server Express LocalDB にローカル データベース ファイルを更新することができます。 TRANSACT-SQL ステートメントを実行することによって、データベースを作成することも、 **SQL Server オブジェクト エクスプ ローラー** Visual Studio でツール ウィンドウです。 このトピックで作成します、 *.mdf*ファイルを開き、テーブル デザイナーを使用してテーブルおよびキーを追加します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
+
 このチュートリアルを完了する、省略可能な必要**データ ストレージと処理**ワークロードを Visual Studio でインストールします。 これをインストールするには、開く**Visual Studio インストーラー**を選択し、**ワークロード**タブ。**Web & クラウド**、選択**データ ストレージと処理**します。 選択、**変更**ワークロードを Visual Studio に追加するボタンをクリックします。
 
 ## <a name="create-a-project-and-a-local-database-file"></a>プロジェクトとローカル データベース ファイルを作成します。
 
-### <a name="to-create-a-project-and-a-database-file"></a>プロジェクトとローカル データベース ファイルを作成するには
-1.  という名前の Windows フォーム プロジェクトを作成する`SampleDatabaseWalkthrough`します。
+1.  という名前の Windows フォーム プロジェクトを作成する**SampleDatabaseWalkthrough**します。
 
 2.  メニュー バーで選択**プロジェクト** > **新しい項目の追加**します。
 
@@ -41,6 +42,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 4.  データベースの名前**SampleDatabase**を選び、**追加**ボタンをクリックします。
 
 ### <a name="to-add-a-data-source"></a>データ ソースを追加するには
+
 5.  場合、**データソース**を選択して開くウィンドウが開いていないことが、 **Shift**+**Alt**+**D**キーか、またはメニュー バーでは、select**ビュー** > **その他の Windows** > **データソース**します。
 
 6.  **データ ソース**ウィンドウで、**新しいデータ ソースの追加**リンク。
@@ -58,6 +60,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 11. 1 つ、**データベース オブジェクトの選択** ページで、すべてのオブジェクトにはが含まれていない、データベースを示すメッセージが表示されます。 **[完了]** を選択します。
 
 ### <a name="to-view-properties-of-the-data-connection"></a>データ接続のプロパティを表示するには
+
 接続文字列を表示することができます、 *SampleDatabase.mdf*データ接続のプロパティ ウィンドウを開いてファイル。
 
 -   Visual Studio で、次のように選択します。**ビュー** > **SQL Server オブジェクト エクスプ ローラー**そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノードのショートカット メニューを開き、 *SampleDatabase.mdf*を選択し、**プロパティ**します。
@@ -65,9 +68,11 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
 -   または、選択**ビュー** > **サーバー エクスプ ローラー**、そのウィンドウが開いていない場合。 展開して [プロパティ] ウィンドウを開き、**データ接続**ノード。 ショートカット メニューを開き*SampleDatabase.mdf*、し、**プロパティ**します。
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>テーブル デザイナーを使用してテーブルおよびキーを作成します。
+
 このセクションでは、2 つのテーブル、テーブルごとに、およびサンプル データのいくつかの行の主キーを作成します。 1 つのテーブル内のレコードが他のテーブル内のレコードに対応させる方法を指定する外部キーを作成することもあります。
 
 ### <a name="to-create-the-customers-table"></a>Customers テーブルを作成するには
+
 1.  **サーバー エクスプ ローラー**または**SQL Server オブジェクト エクスプ ローラー**、展開、**データ接続**ノードの順に展開し、 **SampleDatabase.mdf**ノード。
 
 2.  ショートカット メニューを開き**テーブル**、し、**新しいテーブルの追加**します。
@@ -104,6 +109,7 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
     変更はローカル データベース ファイルに保存されます。
 
 ### <a name="to-create-the-orders-table"></a>Orders テーブルを作成するには
+
 1.  別のテーブルを追加し、次の表の各エントリの行を追加します。
 
     |列名|データの種類|Null を許容|
@@ -128,11 +134,12 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
     変更はローカル データベース ファイルに保存されます。
 
 ### <a name="to-create-a-foreign-key"></a>外部キーを作成するには
+
 1.  グリッドの右側のコンテキスト ペインでショートカット メニューを開き、**外部キー**、し、**新しい外部キーを追加**、次の図します。
 
      ![テーブル デザイナーでの外部キーの追加](../data-tools/media/foreignkey.png)
 
-2.  テキスト ボックスが表示されますが、置換**ToTable**で`Customers`します。
+2.  テキスト ボックスが表示されますが、置換**ToTable**で**顧客**します。
 
 3.  T-SQL ペインで、次の例と一致する最後の行を更新します。
 
@@ -147,8 +154,6 @@ Visual Studio を使用して作成し、SQL Server Express LocalDB にローカ
     変更はローカル データベース ファイルに保存されます。
 
 ## <a name="populate-the-tables-with-data"></a>テーブルにデータを設定します。
-
-### <a name="to-populate-the-tables-with-data"></a>テーブルにデータを読み込むには
 
 1.  **サーバー エクスプ ローラー**または**SQL Server オブジェクト エクスプ ローラー**、サンプル データベースのノードを展開します。
 

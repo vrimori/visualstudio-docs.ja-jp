@@ -9,22 +9,22 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 55b31661120c5224d12485764328007dc8445a8e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: da8ff01bed6446cc497c41ad21894c70df090efb
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31979348"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380832"
 ---
 # <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim を使用して単体テストでアプリケーションを他のアセンブリから分離する
 
 **Shim 型**は、テスト中のコンポーネントを環境から簡単に分離するために Microsoft Fakes Framework が使用する 2 つのテクノロジのうちの 1 つです。 Shim は、特定のメソッドの呼び出しを、テストの一部として作成したコードに迂回させます。 多くのメソッドは、外部の状況に応じて異なる結果を返しますが、shim はテストの制御下にあり、すべての呼び出しで一定の結果を返すことができます。 そのため、テストの記述が非常に簡単になります。
 
- shim を使用して、ソリューションの一部ではないアセンブリからコードを分離します。 ソリューションの各コンポーネントを分離するには、スタブを使用することをお勧めします。
+shim を使用して、ソリューションの一部ではないアセンブリからコードを分離します。 ソリューションの各コンポーネントを分離するには、スタブを使用することをお勧めします。
 
- 概要とクイック スタート ガイドについては、「[Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。
+概要とクイック スタート ガイドについては、「[Microsoft Fakes を使用したテストでコードを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。
 
- **必要条件**
+**必要条件**
 
 -   Visual Studio Enterprise
 -   .NET Framework プロジェクト
@@ -46,11 +46,11 @@ public static class Y2KChecker {
 }
 ```
 
- このメソッドのテストが難しいのは、プログラムが `DateTime.Now` メソッドに依存しているためです。このメソッドは、コンピューターのクロックに依存する、環境依存の非確定的なメソッドです。 さらに、`DateTime.Now` は静的なプロパティであるため、ここではスタブ型を使用できません。 この問題は、単体テストで分離の問題があることを示します。直接データベース API を呼び出したり、Web サービスと通信したりするプログラムは、単体テストを行うことが困難です。それらのロジックが環境に依存するためです。
+このメソッドのテストが難しいのは、プログラムが `DateTime.Now` メソッドに依存しているためです。このメソッドは、コンピューターのクロックに依存する、環境依存の非確定的なメソッドです。 さらに、`DateTime.Now` は静的なプロパティであるため、ここではスタブ型を使用できません。 この問題は、単体テストで分離の問題があることを示します。直接データベース API を呼び出したり、Web サービスと通信したりするプログラムは、単体テストを行うことが困難です。それらのロジックが環境に依存するためです。
 
- そこで、shim 型を使用する必要があります。 shim 型には、任意の .NET メソッドをユーザー定義のデリゲートに迂回させるしくみがあります。 shim 型は Fakes ジェネレーターによってコード生成され、新しいメソッドの実装を指定するために、shim 型と呼ばれるデリゲートを使用します。
+そこで、shim 型を使用する必要があります。 shim 型には、任意の .NET メソッドをユーザー定義のデリゲートに迂回させるしくみがあります。 shim 型は Fakes ジェネレーターによってコード生成され、新しいメソッドの実装を指定するために、shim 型と呼ばれるデリゲートを使用します。
 
- 次のテストは、`ShimDateTime` という shim 型を使用して DateTime.Now のカスタム実装を提供する方法を示しています。
+次のテストは、`ShimDateTime` という shim 型を使用して DateTime.Now のカスタム実装を提供する方法を示しています。
 
 ```csharp
 //unit test code
@@ -61,23 +61,23 @@ using (ShimsContext.Create()
     ShimDateTime.NowGet = () => new DateTime(2000, 1, 1);
     Y2KChecker.Check();
 }
-
 ```
 
-##  <a name="BKMK_Fakes_requirements"></a> Shim の使用方法
+##  <a name="how-to-use-shims"></a>Shim の使用方法
 
 ###  <a name="AddFakes"></a> Fakes アセンブリを追加する
 
-1.  ソリューション エクスプローラーで、単体テスト プロジェクトの **[参照設定]** を展開します。
+1.  **ソリューション エクスプローラー**で、単体テスト プロジェクトの **[参照設定]** を展開します。
 
-    -   Visual Basic で作業している場合、参照一覧を表示するには、ソリューション エクスプローラー ツール バーの **[すべてのファイルを表示]** を選択する必要があります。
+    -   Visual Basic で作業している場合、**[参照設定]** ノードを表示するには、**ソリューション エクスプローラー** ツール バーの **[すべてのファイルを表示]** を選択する必要があります。
 
-2.  作成する shim に対応するクラス定義が含まれているアセンブリを選択します。 たとえば、shim が DateTime の場合は、System.dll を選択します。
+2.  作成する shim に対応するクラス定義が含まれているアセンブリを選択します。 たとえば、shim が **DateTime** の場合は、**System.dll** を選択します。
 
 3.  ショートカット メニューで、**[Fakes アセンブリに追加]** を選択します。
 
 ###  <a name="ShimsContext"></a> ShimsContext を使用する
- 単体テスト フレームワークで shim 型を使用する場合は、shim の有効期間を制御するために、テスト コードを `ShimsContext` でラップする必要があります。 そうしなかった場合、shim は AppDomain のシャットダウンまで存続します。 `ShimsContext` を作成するための最も簡単な方法は、次のコードに示すように、静的な `Create()` メソッドを使用することです。
+
+単体テスト フレームワークで shim 型を使用する場合は、shim の有効期間を制御するために、テスト コードを `ShimsContext` でラップする必要があります。 そうしなかった場合、shim は AppDomain のシャットダウンまで存続します。 `ShimsContext` を作成するための最も簡単な方法は、次のコードに示すように、静的な `Create()` メソッドを使用することです。
 
 ```csharp
 //unit test code
@@ -87,13 +87,13 @@ public void Y2kCheckerTest() {
     ...
   } // clear all shims
 }
-
 ```
 
- 各 shim コンテキストを適切に破棄することが重要です。 原則としては、登録した shim を適切に消去するために、常に `using` ステートメント内で `ShimsContext.Create` を呼び出します。 たとえば、`DateTime.Now` メソッドを常に 2000 年 1 月 1 日を返すデリゲートに置き換えるテスト メソッドのために shim を登録する場合があります。 テスト メソッド内で登録済み shim を消去し忘れた場合、テスト実行の残りの部分では、DateTime.Now 値として常に 2000 年 1 月 1 日が返されます。 これは、予想外で、混乱を招く可能性があります。
+各 shim コンテキストを適切に破棄することが重要です。 原則としては、登録した shim を適切に消去するために、常に `using` ステートメント内で `ShimsContext.Create` を呼び出します。 たとえば、`DateTime.Now` メソッドを常に 2000 年 1 月 1 日を返すデリゲートに置き換えるテスト メソッドのために shim を登録する場合があります。 テスト メソッド内で登録済み shim を消去し忘れた場合、テスト実行の残りの部分では、DateTime.Now 値として常に 2000 年 1 月 1 日が返されます。 これは、予想外で、混乱を招く可能性があります。
 
 ###  <a name="WriteShims"></a> shim を使用してテストを作成する
- テスト コード内で、フェイク メソッドに *detour* を挿入します。 例:
+
+テスト コード内で、フェイク メソッドに *detour* を挿入します。 例:
 
 ```csharp
 [TestClass]
@@ -124,7 +124,6 @@ public class TestClass1
             }
         }
 }
-
 ```
 
 ```vb
@@ -153,19 +152,21 @@ Public Class TestClass1
 End Class
 ```
 
- Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。
+Shim クラスの名前は、元の型名の先頭に `Fakes.Shim` を付けることで構成されます。
 
- shim は、テスト対象のアプリケーションのコードに *detours* を挿入することによって機能します。 元のメソッドへの呼び出しがどこで行われても、Fakes システムによって迂回され、実際のメソッドではなく shim コードが呼び出されます。
+shim は、テスト対象のアプリケーションのコードに *detours* を挿入することによって機能します。 元のメソッドへの呼び出しがどこで行われても、Fakes システムによって迂回され、実際のメソッドではなく shim コードが呼び出されます。
 
- 迂回の作成と削除は実行時に行われる点に注意してください。 常に `ShimsContext` の有効期間内で迂回を作成する必要があります。 これを破棄すると、これがアクティブなときに作成したすべての shim が削除されます。 このようにするための最善の方法は、`using` ステートメントの内部で対処することです。
+迂回の作成と削除は実行時に行われる点に注意してください。 常に `ShimsContext` の有効期間内で迂回を作成する必要があります。 これを破棄すると、これがアクティブなときに作成したすべての shim が削除されます。 このようにするための最善の方法は、`using` ステートメントの内部で対処することです。
 
- Fakes 名前空間が存在しないことを示すビルド エラーが表示される場合があります。 このエラーは、他のコンパイル エラーがあるときに表示されることがあります。 他のエラーを修正すると、表示されなくなります。
+Fakes 名前空間が存在しないことを示すビルド エラーが表示される場合があります。 このエラーは、他のコンパイル エラーがあるときに表示されることがあります。 他のエラーを修正すると、表示されなくなります。
 
 ##  <a name="BKMK_Shim_basics"></a> さまざまな種類のメソッドの shim
- shim 型では、任意の .NET メソッド (静的メソッドまたは非仮想メソッドを含む) を独自のデリゲートに置き換えることができます。
+
+shim 型では、任意の .NET メソッド (静的メソッドまたは非仮想メソッドを含む) を独自のデリゲートに置き換えることができます。
 
 ###  <a name="BKMK_Static_methods"></a> 静的メソッド
- shim を静的メソッドにアタッチするプロパティは、shim 型に備わっています。 各プロパティには、デリゲートを対象のメソッドにアタッチするために使用されるセッターだけが存在します。 たとえば、クラス `MyClass` に静的メソッド `MyMethod` があるとします。
+
+shim を静的メソッドにアタッチするプロパティは、shim 型に備わっています。 各プロパティには、デリゲートを対象のメソッドにアタッチするために使用されるセッターだけが存在します。 たとえば、クラス `MyClass` に静的メソッド `MyMethod` があるとします。
 
 ```csharp
 //code under test
@@ -176,7 +177,7 @@ public static class MyClass {
 }
 ```
 
- 常に 5 を返す `MyMethod` に shim をアタッチできます。
+常に 5 を返す `MyMethod` に shim をアタッチできます。
 
 ```csharp
 // unit test code
@@ -184,7 +185,8 @@ ShimMyClass.MyMethod = () =>5;
 ```
 
 ###  <a name="BKMK_Instance_methods__for_all_instances_"></a> インスタンス メソッド (すべてのインスタンス用)
- 静的メソッドと同様に、インスタンス メソッドはすべてのインスタンスに対して shim を適用できます。 これらの shim をアタッチするプロパティは、混乱を避けるために、AllInstances という名前の、入れ子になった型に配置されます。 たとえば、クラス `MyClass` にインスタンス メソッド `MyMethod` があるとします。
+
+静的メソッドと同様に、インスタンス メソッドはすべてのインスタンスに対して shim を適用できます。 これらの shim をアタッチするプロパティは、混乱を避けるために、AllInstances という名前の、入れ子になった型に配置されます。 たとえば、クラス `MyClass` にインスタンス メソッド `MyMethod` があるとします。
 
 ```csharp
 // code under test
@@ -195,14 +197,14 @@ public class MyClass {
 }
 ```
 
- どのインスタンスかにかかわらず、常に 5 を返す `MyMethod` に shim をアタッチできます。
+どのインスタンスかにかかわらず、常に 5 を返す `MyMethod` に shim をアタッチできます。
 
 ```csharp
 // unit test code
 ShimMyClass.AllInstances.MyMethod = () => 5;
 ```
 
- ShimMyClass の生成された型の構造は、次のコードのようになります。
+ShimMyClass の生成された型の構造は、次のコードのようになります。
 
 ```csharp
 // Fakes generated code
@@ -217,12 +219,13 @@ public class ShimMyClass : ShimBase<MyClass> {
 }
 ```
 
- この場合、Fakes によって実行時インスタンスがデリゲートの第 1 引数として渡されることに注意してください。
+この場合、Fakes によって実行時インスタンスがデリゲートの第 1 引数として渡されることに注意してください。
 
 ###  <a name="BKMK_Instance_methods__for_one_instance_"></a> インスタンス メソッド (1 つの実行時インスタンス用)
- インスタンス メソッドには、呼び出しのレシーバーに応じて異なるデリゲートによって shim を適用することもできます。 そうすることで、同じインスタンス メソッドに、インスタンスの型に応じて異なる動作をさせることができます。 これらの shim を設定するプロパティは、shim 型自体のインスタンス メソッドです。 インスタンス化された各 shim 型も、shim が適用された型の生のインスタンスに関連付けられます。
 
- たとえば、クラス `MyClass` にインスタンス メソッド `MyMethod` があるとします。
+インスタンス メソッドには、呼び出しのレシーバーに応じて異なるデリゲートによって shim を適用することもできます。 そうすることで、同じインスタンス メソッドに、インスタンスの型に応じて異なる動作をさせることができます。 これらの shim を設定するプロパティは、shim 型自体のインスタンス メソッドです。 インスタンス化された各 shim 型も、shim が適用された型の生のインスタンスに関連付けられます。
+
+たとえば、クラス `MyClass` にインスタンス メソッド `MyMethod` があるとします。
 
 ```csharp
 // code under test
@@ -233,7 +236,7 @@ public class MyClass {
 }
 ```
 
- MyMethod には 2 つの shim 型をセットアップし、1 つ目は常に 5 を返し、2 つ目は常に 10 を返すようにすることができます。
+MyMethod には 2 つの shim 型をセットアップし、1 つ目は常に 5 を返し、2 つ目は常に 10 を返すようにすることができます。
 
 ```csharp
 // unit test code
@@ -244,7 +247,7 @@ var myClass1 = new ShimMyClass()
 var myClass2 = new ShimMyClass { MyMethod = () => 10 };
 ```
 
- ShimMyClass の生成された型の構造は、次のコードのようになります。
+ShimMyClass の生成された型の構造は、次のコードのようになります。
 
 ```csharp
 // Fakes generated code
@@ -262,7 +265,7 @@ public class ShimMyClass : ShimBase<MyClass> {
 }
 ```
 
- shim が適用された実際の型のインスタンスには、Instance プロパティを通じてアクセスできます。
+shim が適用された実際の型のインスタンスには、Instance プロパティを通じてアクセスできます。
 
 ```csharp
 // unit test code
@@ -270,7 +273,7 @@ var shim = new ShimMyClass();
 var instance = shim.Instance;
 ```
 
- shim 型では、shim が適用された型への暗黙的な変換も行われるため、通常は shim 型を単純にそのまま使用できます。
+shim 型では、shim が適用された型への暗黙的な変換も行われるため、通常は shim 型を単純にそのまま使用できます。
 
 ```csharp
 // unit test code
@@ -280,7 +283,8 @@ MyClass instance = shim; // implicit cast retrieves the runtime
 ```
 
 ###  <a name="BKMK_Constructors"></a> コンストラクター
- shim 型を将来的なオブジェクトにアタッチするために、コンストラクターにも shim を適用できます。 各コンストラクターは、shim 型の静的メソッド Constructor として公開されます。 たとえば、コンストラクターが整数を受け取るクラス `MyClass` があるとします。
+
+shim 型を将来的なオブジェクトにアタッチするために、コンストラクターにも shim を適用できます。 各コンストラクターは、shim 型の静的メソッド Constructor として公開されます。 たとえば、コンストラクターが整数を受け取るクラス `MyClass` があるとします。
 
 ```csharp
 // code under test
@@ -292,7 +296,7 @@ public class MyClass {
 }
 ```
 
- 値ゲッターが呼び出されたときに、コンストラクター内の値にかかわらず、将来的なすべてのインスタンスが -5 を返すように、コンストラクターの shim 型をセットアップします。
+値ゲッターが呼び出されたときに、コンストラクター内の値にかかわらず、将来的なすべてのインスタンスが -5 を返すように、コンストラクターの shim 型をセットアップします。
 
 ```csharp
 // unit test code
@@ -303,7 +307,7 @@ ShimMyClass.ConstructorInt32 = (@this, value) => {
 };
 ```
 
- 各 shim 型は 2 つのコンストラクターを公開します。 新規のインスタンスが必要な場合には既定のコンストラクターを使用し、shim のみのコンストラクターでは shim が適用されたインスタンスを引数として受け取るコンストラクターを使用する必要があります。
+各 shim 型は 2 つのコンストラクターを公開します。 新規のインスタンスが必要な場合には既定のコンストラクターを使用し、shim のみのコンストラクターでは shim が適用されたインスタンスを引数として受け取るコンストラクターを使用する必要があります。
 
 ```csharp
 // unit test code
@@ -311,7 +315,7 @@ public ShimMyClass() { }
 public ShimMyClass(MyClass instance) : base(instance) { }
 ```
 
- ShimMyClass の生成された型の構造は、次のコードのようになります。
+ShimMyClass の生成された型の構造は、次のコードのようになります。
 
 ```csharp
 // Fakes generated code
@@ -330,9 +334,10 @@ public class ShimMyClass : ShimBase<MyClass>
 ```
 
 ###  <a name="BKMK_Base_members"></a> 基本メンバー
- 基本メンバーの shim プロパティにアクセスするには、基本型の shim を作成し、基本 shim クラスのコンストラクターへのパラメーターとして子インスタンスを渡します。
 
- たとえば、クラス `MyBase` にインスタンス メソッド `MyMethod` とサブタイプ `MyChild` があるとします。
+基本メンバーの shim プロパティにアクセスするには、基本型の shim を作成し、基本 shim クラスのコンストラクターへのパラメーターとして子インスタンスを渡します。
+
+たとえば、クラス `MyBase` にインスタンス メソッド `MyMethod` とサブタイプ `MyChild` があるとします。
 
 ```csharp
 public abstract class MyBase {
@@ -343,10 +348,9 @@ public abstract class MyBase {
 
 public class MyChild : MyBase {
 }
-
 ```
 
- `MyBase` の shim をセットアップするには、新しい `ShimMyBase` shim を作成します。
+`MyBase` の shim をセットアップするには、新しい `ShimMyBase` shim を作成します。
 
 ```csharp
 // unit test code
@@ -354,9 +358,9 @@ var child = new ShimMyChild();
 new ShimMyBase(child) { MyMethod = () => 5 };
 ```
 
- 子 shim 型は、基本 shim コンストラクターにパラメーターとして渡されるときに、暗黙的に子インスタンスに変換されることに注意してください。
+子 shim 型は、基本 shim コンストラクターにパラメーターとして渡されるときに、暗黙的に子インスタンスに変換されることに注意してください。
 
- ShimMyChild と ShimMyBase の生成された型の構造は、次のコードのようになります。
+ShimMyChild と ShimMyBase の生成された型の構造は、次のコードのようになります。
 
 ```csharp
 // Fakes generated code
@@ -373,18 +377,22 @@ public class ShimMyBase : ShimBase<MyBase> {
 ```
 
 ###  <a name="BKMK_Static_constructors"></a> 静的コンストラクター
- shim 型は、型の静的コンストラクターに shim を適用するために、静的メソッド `StaticConstructor` を公開します。 静的コンストラクターは 1 回だけ実行されるため、型のいずれかのメンバーがアクセスされる前に shim が構成されるようにする必要があります。
+
+shim 型は、型の静的コンストラクターに shim を適用するために、静的メソッド `StaticConstructor` を公開します。 静的コンストラクターは 1 回だけ実行されるため、型のいずれかのメンバーがアクセスされる前に shim が構成されるようにする必要があります。
 
 ###  <a name="BKMK_Finalizers"></a> ファイナライザー
- ファイナライザーは、Fakes ではサポートされません。
+
+ファイナライザーは、Fakes ではサポートされません。
 
 ###  <a name="BKMK_Private_methods"></a> プライベート メソッド
- Fakes コード ジェネレーターは、シグネチャに参照可能な型だけを持つプライベート メソッドの shim プロパティを作成します。つまり、パラメーターの型と戻り値の型が参照可能です。
+
+Fakes コード ジェネレーターは、シグネチャに参照可能な型だけを持つプライベート メソッドの shim プロパティを作成します。つまり、パラメーターの型と戻り値の型が参照可能です。
 
 ###  <a name="BKMK_Binding_interfaces"></a> バインド インターフェイス
- shim が適用された型がインターフェイスを実装する場合、コード ジェネレーターは、そのインターフェイスのすべてのメンバーを一度にバインドできるメソッドを生成します。
 
- たとえば、`IEnumerable<int>` を実装する `MyClass` クラスがあるとします。
+shim が適用された型がインターフェイスを実装する場合、コード ジェネレーターは、そのインターフェイスのすべてのメンバーを一度にバインドできるメソッドを生成します。
+
+たとえば、`IEnumerable<int>` を実装する `MyClass` クラスがあるとします。
 
 ```csharp
 public class MyClass : IEnumerable<int> {
@@ -393,19 +401,17 @@ public class MyClass : IEnumerable<int> {
     }
     ...
 }
-
 ```
 
- Bind メソッドを呼び出すことで、MyClass の `IEnumerable<int>` の実装に shim を適用できます。
+Bind メソッドを呼び出すことで、MyClass の `IEnumerable<int>` の実装に shim を適用できます。
 
 ```csharp
 // unit test code
 var shimMyClass = new ShimMyClass();
 shimMyClass.Bind(new List<int> { 1, 2, 3 });
-
 ```
 
- ShimMyClass の生成された型の構造は、次のコードのようになります。
+ShimMyClass の生成された型の構造は、次のコードのようになります。
 
 ```csharp
 // Fakes generated code
@@ -414,15 +420,15 @@ public class ShimMyClass : ShimBase<MyClass> {
         ...
     }
 }
-
 ```
 
-##  <a name="BKMK_Changing_the_default_behavior"></a> 既定の動作を変更する
- 生成された各 shim 型は、`ShimBase<T>.InstanceBehavior` プロパティを通じて、`IShimBehavior` インターフェイスのインスタンスを保持します。 明示的に shim が適用されていないインスタンス メンバーをクライアントが呼び出すたびに、この動作が使用されます。
+##  <a name="change-the-default-behavior"></a>既定の動作の変更
 
- この動作が明示的に設定されていない場合は、静的な `ShimsBehaviors.Current` プロパティによって返されるインスタンスが使用されます。 既定では、このプロパティは `NotImplementedException` 例外をスローする動作を返します。
+生成された各 shim 型は、`ShimBase<T>.InstanceBehavior` プロパティを通じて、`IShimBehavior` インターフェイスのインスタンスを保持します。 明示的に shim が適用されていないインスタンス メンバーをクライアントが呼び出すたびに、この動作が使用されます。
 
- この動作は、任意の shim インスタンスの `InstanceBehavior` プロパティを設定することによって、いつでも変更できます。 たとえば、次のスニペットは、何も行わないか、戻り値の型の既定値 (default(T)) を返す動作の shim を変更します。
+この動作が明示的に設定されていない場合は、静的な `ShimsBehaviors.Current` プロパティによって返されるインスタンスが使用されます。 既定では、このプロパティは `NotImplementedException` 例外をスローする動作を返します。
+
+この動作は、任意の shim インスタンスの `InstanceBehavior` プロパティを設定することによって、いつでも変更できます。 たとえば、次のスニペットは、何も行わないか、戻り値の型の既定値 (default(T)) を返す動作の shim を変更します。
 
 ```csharp
 // unit test code
@@ -432,7 +438,7 @@ shim.InstanceBehavior = ShimsBehaviors.DefaultValue;
 
 ```
 
- 静的 `ShimsBehaviors.Current` プロパティを設定することによって `InstanceBehavior` プロパティが明示的に設定されていない、shim が適用されているすべてのインスタンスの動作を、グローバルに変更することもできます。
+静的 `ShimsBehaviors.Current` プロパティを設定することによって `InstanceBehavior` プロパティが明示的に設定されていない、shim が適用されているすべてのインスタンスの動作を、グローバルに変更することもできます。
 
 ```csharp
 // unit test code
@@ -440,11 +446,11 @@ shim.InstanceBehavior = ShimsBehaviors.DefaultValue;
 // where the behavior has not been set
 ShimsBehaviors.Current =
     ShimsBehaviors.DefaultValue;
-
 ```
 
-##  <a name="BKMK_Detecting_environment_accesses"></a> 環境アクセスの検出
- `ShimsBehaviors.NotImplemented` 動作を、対応する shim 型の静的プロパティ `Behavior` に割り当てることによって、特定の型のすべてのメンバー (静的メソッドも含む) に動作をアタッチすることができます。
+##  <a name="detect-environment-accesses"></a>環境アクセスの検出
+
+`ShimsBehaviors.NotImplemented` 動作を、対応する shim 型の静的プロパティ `Behavior` に割り当てることによって、特定の型のすべてのメンバー (静的メソッドも含む) に動作をアタッチすることができます。
 
 ```csharp
 // unit test code
@@ -452,16 +458,17 @@ ShimsBehaviors.Current =
 ShimMyClass.Behavior = ShimsBehaviors.NotImplemented;
 // shorthand
 ShimMyClass.BehaveAsNotImplemented();
-
 ```
 
 ##  <a name="BKMK_Concurrency"></a> 同時実行
- shim 型は、AppDomain のすべてのスレッドに適用され、スレッド アフィニティを持ちません。 同時実行をサポートしているテスト ランナーを使用する予定の場合、これは重要な事実です。shim 型を含む複数のテストを同時に実行することはできません。 このプロパティが Fakes ランタイムによって強制されることはありません。
 
-##  <a name="BKMK_Calling_the_original_method_from_the_shim_method"></a> shim メソッドからの元のメソッドの呼び出し
- メソッドに渡されたファイル名を検証した後で、実際にファイル システムにテキストを書き込む場合を想像してみてください。 この場合、shim メソッドの途中で元のメソッドを呼び出したいと思うでしょう。
+shim 型は、AppDomain のすべてのスレッドに適用され、スレッド アフィニティを持ちません。 同時実行をサポートしているテスト ランナーを使用する予定の場合、これは重要な事実です。shim 型を含む複数のテストを同時に実行することはできません。 このプロパティが Fakes ランタイムによって強制されることはありません。
 
- この問題を解決するための 1 つ目の方法は、次のコードのように、デリゲートと `ShimsContext.ExecuteWithoutShims()` を使用して元のメソッドへの呼び出しをラップすることです。
+##  <a name="call-the-original-method-from-the-shim-method"></a>shim メソッドからの元のメソッドの呼び出し
+
+メソッドに渡されたファイル名を検証した後で、実際にファイル システムにテキストを書き込む場合を想像してみてください。 この場合、shim メソッドの途中で元のメソッドを呼び出したいと思うでしょう。
+
+この問題を解決するための 1 つ目の方法は、次のコードのように、デリゲートと `ShimsContext.ExecuteWithoutShims()` を使用して元のメソッドへの呼び出しをラップすることです。
 
 ```csharp
 // unit test code
@@ -473,10 +480,9 @@ ShimFile.WriteAllTextStringString = (fileName, content) => {
       Console.WriteLine("leave");
   });
 };
-
 ```
 
- もう 1 つの方法は、shim を null に設定して元のメソッドを呼び出し、shim を復元することです。
+もう 1 つの方法は、shim を null に設定して元のメソッドを呼び出し、shim を復元することです。
 
 ```csharp
 // unit test code
@@ -500,10 +506,11 @@ ShimFile.WriteAllTextStringString = shim;
 ```
 
 ##  <a name="BKMK_Limitations"></a> 制限事項
- shim は、.NET 基本クラス ライブラリ **mscorlib** および **System** のすべての型で使用できるわけではありません。
+
+shim は、.NET 基本クラス ライブラリ **mscorlib** および **System** のすべての型で使用できるわけではありません。
 
 ## <a name="see-also"></a>関連項目
 
-- [Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)
+- [Microsoft Fakes を使用したテストでコードを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)
 - [Peter Provost のブログ: Visual Studio 2012 の shim](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
 - [1 時間 16 分の動画: Visual Studio 2012 で Fakes を利用し、テスト不可能なコードをテストする](http://go.microsoft.com/fwlink/?LinkId=261837)

@@ -10,12 +10,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 1b70ea2cc12530065b2a297e54ff494bcc765c9c
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 3475bfff07b64c171b506ff1cefaee6c8e55cdda
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757254"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381082"
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio で Xamarin を使用してネイティブ UI を備えたアプリを作成する
 
@@ -110,9 +110,9 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 1.  まず、[http://openweathermap.org/appid](http://openweathermap.org/appid) で新規登録し、無料の天気 API キーを入手してください。 この API キーによって、アプリケーションは米国のあらゆる郵便番号を対象に天気を取得できます。 (米国以外の郵便番号では機能しません。)
 
-2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。
+2.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに *Weather.cs*という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。
 
-3.  **Weather.cs** の内容全体を次のコードで置き換えます。
+3.  *Weather.cs* の内容全体を次のコードで置き換えます。
 
     ```csharp
     namespace WeatherApp
@@ -132,9 +132,9 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
     }
     ```
 
-4.  **DataService.cs** という名前の .NET Standard プロジェクトに別のクラスを追加します。 このクラスは、気象データ サービスからの JSON データを処理するときに使用します。
+4.  `DataService.cs` という名前の .NET Standard プロジェクトに別のクラスを追加します。 このクラスは、気象データ サービスからの JSON データを処理するときに使用します。
 
-5.  **DataService.cs** の内容全体を次のコードで置き換えます。
+5.  *DataService.cs* の内容全体を次のコードで置き換えます。
 
     ```csharp
     using System.Net.Http;
@@ -163,9 +163,9 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
     }
     ```
 
-6.  **Core.cs** という名前の .NET Standard ライブラリに 3 つ目のクラスを追加します。 このクラスを使用して郵便番号でクエリ文字列を生成し、気象データ サービスを呼び出し、**Weather** クラスのインスタンスにデータを取り込みます。
+6.  *Core.cs* という名前の .NET Standard ライブラリに 3 つ目のクラスを追加します。 このクラスを使用して郵便番号でクエリ文字列を生成し、気象データ サービスを呼び出し、**Weather** クラスのインスタンスにデータを取り込みます。
 
-7.  **Core.cs** の内容を次のコードで置き換えます。
+7.  *Core.cs* の内容を次のコードで置き換えます。
 
     ```csharp
     using System;
@@ -217,7 +217,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 8. 最初に現れる *YOUR API KEY HERE* を手順 1 で取得した API キーで置き換えます。 ここでも引用符で囲む必要があります。
 
-9. .NET Standard ライブラリの **MyClass.cs** は使用されないため、削除します。
+9. .NET Standard ライブラリの *MyClass.cs* は使用されないため、削除します。
 
 10. **WeatherApp** プロジェクトをビルドし、コードが正しいことを確認します。
 
@@ -229,7 +229,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 ### <a name="design-the-look-and-feel-of-your-app"></a>アプリの外観を設計する
 
-1.  **ソリューション エクスプ ローラー**で、**[WeatherApp.Droid]、[リソース]、[レイアウト]** フォルダーの順に展開し、**Main.axml** を開きます。 このコマンドによって、ビジュアル デザイナーでファイルが開きます。 (Java 関連のエラーが表示された場合は、この[ブログの投稿](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)を参照してください。)
+1.  **ソリューション エクスプローラー**で、**[WeatherApp.Droid]、[リソース]、[レイアウト]** フォルダーの順に展開し、*Main.axml* を開きます。 このコマンドによって、ビジュアル デザイナーでファイルが開きます。 (Java 関連のエラーが表示された場合は、この[ブログの投稿](http://forums.xamarin.com/discussion/32365/connection-to-the-layout-renderer-failed-in-xs-5-7-and-xamarinvs-3-9)を参照してください。)
 
     > [!TIP]
     >  このプロジェクトには、他にも多くのファイルがあります。 それらの説明はこの記事の範囲を超えていますが、Android プロジェクトの構造をもう少し詳しく知りたい場合は、Hello Android という二部構成記事の第 2 部に相当する「[Hello Android: 詳細説明](/xamarin/android/get-started/hello-android/hello-android-deepdive/)」を参照してください。
@@ -256,7 +256,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
     |**textStyle**|`bold`|
 
     > [!TIP]
-    >  選択可能な値のドロップダウン リストが表示されないプロパティが多いことに注意してください。  特定のプロパティにどのような文字列値を使用すべきなのか、推測しにくい場合があります。 情報が必要な場合は、 [R.attr](http://developer.android.com/reference/android/R.attr.html) クラスのページでプロパティの名前を検索してみてください。
+    >  選択可能な値のドロップダウン リストが表示されないプロパティが多いことに注意してください。  特定のプロパティにどのような文字列値を使用すべきなのか、推測しにくい場合があります。 情報が必要な場合は、[`R.attr`](http://developer.android.com/reference/android/R.attr.html) クラスのページでプロパティの名前を検索してみてください。
     >
     >  また、クイック Web 検索を実行すると、他のユーザーが同じプロパティを使った、[http://stackoverflow.com/](http://stackoverflow.com/) のページが表示されることもよくあります。
 
@@ -347,7 +347,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
         android:width="165dp" />
     ```
 
-11. 以上で、Android デザイナーを使用して基本的な UI を構築するための知識は十分です。 ページの Main.axml ファイルにマークアップを直接追加して UI を構築することもできます。 この方法で残りの UI をビルドするには、デザイナーでソース ビューに切り替え、終了タグ `</RelativeLayout>` の "下に" 次のマークアップを貼り付けます。 (このような要素は `RelativeLayout` に含まれて*いない*ため、タグの下に置く必要があります。)
+11. 以上で、Android デザイナーを使用して基本的な UI を構築するための知識は十分です。 ページの *Main.axml* ファイルにマークアップを直接追加して UI を構築することもできます。 この方法で残りの UI をビルドするには、デザイナーでソース ビューに切り替え、終了タグ `</RelativeLayout>` の "下に" 次のマークアップを貼り付けます。 (このような要素は `RelativeLayout` に含まれて*いない*ため、タグの下に置く必要があります。)
 
     ```xml
     <TextView
@@ -457,7 +457,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 13. Open **MainActivity.cs** を開きます。 コードは次のようになります。
 
-    ```
+    ```csharp
     protected override void OnCreate (Bundle bundle)
     {
         base.OnCreate (bundle);
@@ -467,11 +467,11 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
     }
     ```
 
-14. Android プロジェクトをビルドして作業内容を確認します。 このビルド プロセスにより、**Resource.Designer.cs** ファイルにコントロール ID が追加されるため、コード中で名前を指定してコントロールを参照できるようになります。
+14. Android プロジェクトをビルドして作業内容を確認します。 このビルド プロセスにより、*Resource.Designer.cs* ファイルにコントロール ID が追加されるため、コード中で名前を指定してコントロールを参照できるようになります。
 
 ### <a name="consume-your-shared-code"></a>共有コードを使用する
 
-1.  コード エディターで **WeatherApp** プロジェクトの **MainActivity.cs** ファイルを開き、ファイルの内容を以下のコードに置き換えます。 このコードは、共有コードで定義した `GetWeather` メソッドを呼び出します。 そして、そのメソッドから取得したデータをアプリの UI に表示します。
+1.  コード エディターで **WeatherApp** プロジェクトの *MainActivity.cs* ファイルを開き、ファイルの内容を以下のコードに置き換えます。 このコードは、共有コードで定義した `GetWeather` メソッドを呼び出します。 そして、そのメソッドから取得したデータをアプリの UI に表示します。
 
     ```csharp
     using System;
@@ -545,7 +545,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
  Xamarin アプリでネイティブ UWP ユーザー インターフェイスを設計するプロセスは、他のあらゆるネイティブ UWP アプリの場合と異なりません。 そのため、デザイナーの使用についてはここではお話ししません。 詳細については、「[XAML デザイナーを使用した UI の作成](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)」を参照してください。
 
- 代わりに **MainPage.xaml** を開き、XAML コンテンツ全体を次のマークアップに置き換えます。
+ 代わりに *MainPage.xaml* を開き、XAML コンテンツ全体を次のマークアップに置き換えます。
 
 ```xaml
 <Page
@@ -634,7 +634,7 @@ Visual Studio には、.NET Standard ライブラリを共有するネイティ�
 
 ### <a name="consume-your-shared-code"></a>共有コードを使用する
 
-**MainPage.xaml.cs** 分離コード ページで、ボタン用の次のイベント ハンドラーを追加します。
+*MainPage.xaml.cs* 分離コード ページで、ボタン用の次のイベント ハンドラーを追加します。
 
 ```csharp
 private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)
@@ -663,7 +663,7 @@ private async void GetWeatherButton_Click(object sender, RoutedEventArgs e)
 
 2.  **[ソリューション プラットフォーム]** ドロップダウン ボックスで、**[x86]** を選択し、**[ローカル コンピューター]** を選択してアプリケーションを Windows 10 デスクトップに配置します。
 
-3.  F5 キーを押すとアプリが起動します。
+3.  **F5** キーを押すとアプリが起動します。
 
 4.  編集ボックスに米国の 5 桁の郵便番号を入力し、**[Get Weather]** を押します。 その地域の気象データがページに表示されます。
 

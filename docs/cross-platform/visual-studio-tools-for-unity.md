@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Tools for Unity | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 6cabc626-5310-4622-a743-210a9abb5535
@@ -10,34 +10,48 @@ ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 98c2ac925f1bcdfb4297444f8a3e52379d08d6d8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e79e58c1795ef4d19466a5f6bdf127aa302e4be4
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31063253"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251128"
 ---
 # <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
-このセクションでは Visual Studio Tools for Unity について学習します。これは無料の Visual Studio 拡張機能であり、これによって Visual Studio は Unity でゲームを作成するための強力なツールになります。
 
-## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity
- **Unity** は、クロスプラット フォームのゲームを作成するためのゲームのエンジンおよび開発環境です。 Unity エンジンは多数のプラットフォーム上で実行可能で、高性能な PC から、ゲーム コンソール、タッチ対応タブレットや携帯電話、さらには Web に至るまで多くのプラットフォームに対応します。 Unity エディターは、充実したゲームの世界を作り上げるための使いやすいインターフェイスを備えています。 機能、使いやすさ、および対象範囲の広さによって、Unity は今日のゲーム開発者から広く支持されています。
+![Visual Studio Tools for Unity](media/vstu_header.png)
 
- Unity エディターは、ゲームの世界をまとめ上げるのに適していますが、それ自体の中でコードを記述することはできません。 **Visual Studio Tools for Unity** を使用すると、Visual Studio の使い慣れたコードの編集、デバッグ、生産性の機能を使用して、C# で Unity プロジェクト用のエディターおよびゲーム スクリプトを作成できます。その後、Visual Studio の強力なデバッグ機能によってデバッグできます。
+Visual Studio Tools for Unity は、無料の Visual Studio 拡張機能であり、Visual Studio を Unity でクロスプラットフォームのゲームとアプリを開発するための強力なツールにします。
 
- しかし、Visual Studio Tools for Unity が行えるのはそれだけではありません。Unity エディターと緊密に統合されているため、簡単なタスクを行うために両者を行ったり来たりする時間が短縮されます。また、Unity 特有の生産性拡張機能を利用でき、Unity ドキュメントを簡単に利用できます。
+Unity エディターは、ゲームの世界をまとめ上げるのに適していますが、それ自体の中でコードを記述することはできません。 Visual Studio Tools for Unity を使用すると、Visual Studio の使い慣れたコードの編集、デバッグ、生産性の機能を使用して、C# で Unity プロジェクト用のエディターおよびゲーム スクリプトを作成できます。その後、Visual Studio の強力なデバッグ機能によってデバッグできます。
 
- Visual Studio Tools for Unity で提供される機能の詳細については、「[Visual Studio Tools for Unity の概要](../cross-platform/overview-of-visual-studio-tools-for-unity.md)」も参照してください。Visual Studio Tools for Unity をインストールして Unity プロジェクトで使用を開始する方法については、「[Visual Studio Tools for Unity の使用を開始する](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md)」を参照してください。
+しかし、Visual Studio Tools for Unity が行えるのはそれだけではありません。Unity エディターと緊密に統合されているため、簡単なタスクを行うために両者を行ったり来たりする時間が短縮されます。また、Unity 特有の生産性拡張機能を利用でき、Unity ドキュメントを簡単に利用できます。
 
-## <a name="more-in-this-section"></a>このセクションに内容
- [概要](../cross-platform/overview-of-visual-studio-tools-for-unity.md) このセクションでは、Visual Studio Tools for Unity の機能について詳しく説明します。
+## <a name="overview"></a>概要
 
- [はじめに](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) このセクションでは、ご使用のバージョンの Visual Studio の Visual Studio Tools for Unity をインストールする方法、および Unity プロジェクトで Visual Studio の使用を開始する方法について取り上げます。
+[Visual Studio を使用した Unity ゲームのビルド](https://visualstudio.microsoft.com/vs/unity-tools/)に関するページで Visual Studio for Unity を使用した開発の利点の概要を参照するか、先に進んで Visual Studio Tools for Unity の主な機能を詳しく調べてください。
 
- [Visual Studio Tools for Unity の使用](../cross-platform/using-visual-studio-tools-for-unity.md) このセクションでは、Visual Studio Tools for Unity の統合と生産性の機能の使用法、および Unity 開発における Visual Studio デバッガーの使用法について取り上げます。
+### <a name="compatible-with-visual-studio-community-and-bundled-with-unity"></a>Visual Studio Community との互換性と Unity とのバンドル
 
- [Visual Studio Tools for Unity のプログラミング](../cross-platform/programming-visual-studio-tools-for-unity.md) このセクションでは、Visual Studio Tools for Unity API を使用するための例が示されています。
+[Visual Studio Community](https://visualstudio.microsoft.com/) は無料で利用でき、Unity 2018.1 以降は Unity のインストールにバンドルされています。 詳しくは、Visual Studio Tools for Unity の[使用開始](getting-started-with-visual-studio-tools-for-unity.md)に関する記事をご覧ください。
 
- [トラブルシューティングと既知の問題](../cross-platform/troubleshooting-and-known-issues-visual-studio-tools-for-unity.md) このセクションには、Visual Studio Tools for Unity における一般的な問題の解決法、既知の問題についての説明、およびエラー報告によって Visual Studio Tools for Unity を改善する方法について記されています。
+### <a name="intellisense-for-unity-messages"></a>Unity メッセージ用の IntelliSense
 
- [変更ログ](../cross-platform/change-log-visual-studio-tools-for-unity.md) このセクションでは、Visual Studio Tools for Unity の新機能、バグの修正、および各バージョンにおけるその他の変更点を説明します。
+IntelliSense コードの補完を使うと、`OnCollisionEnter` などの [Unity API メッセージとそのパラメーターの実装](using-visual-studio-tools-for-unity.md#intellisense-for-unity-api-messages)が速く簡単になります。
+
+### <a name="superior-debugging"></a>優れたデバッグ機能
+
+Visual Studio Tools for Unity は、Visual Studio に期待される堅牢な[デバッグ](using-visual-studio-tools-for-unity.md#unity-debugging)機能をサポートしています。
+
+* ブレークポイント (条件付きブレークポイントを含む) の設定。
+* [ウォッチ] ウィンドウでの複雑な式の評価。
+* 変数および引数の値の検査と変更。
+* 複雑なオブジェクトやデータ構造体へのドリルダウン。
+
+### <a name="visual-studio-for-mac-tools-for-unity"></a>Visual Studio for Mac Tools for Unity
+
+Visual Studio for Mac も、Unity プロジェクトもサポートします。 詳しくは、[Visual Studio for Mac Tools for Unity のドキュメント](https://docs.microsoft.com/en-us/visualstudio/mac/unity-tools)をご覧ください。
+
+## <a name="next-steps"></a>次の手順
+
+* [Visual Studio Tools for Unity の使用を開始する](getting-started-with-visual-studio-tools-for-unity.md)

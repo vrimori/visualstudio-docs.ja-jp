@@ -17,32 +17,33 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 87e7cddd4b43464f9d10467e81931a0daafa04da
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: b3cd83a16ff3d497bd9e6a46f3a66a3d99506a1f
+ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180296"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39582396"
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF Data Service への WPF コントロールのバインド
 
-このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] でカプセル化された顧客レコードにバインドされます。 また、顧客がレコードを表示および更新するために使用できるボタンも追加します。
+このチュートリアルでは、データ バインド コントロールが含まれた WPF アプリケーションを作成します。 コントロールは、WCF Data Service にカプセル化された顧客レコードにバインドされます。 また、顧客がレコードを表示および更新するために使用できるボタンも追加します。
 
 このチュートリアルでは、次の作業について説明します。
 
 - AdventureWorksLT サンプル データベースのデータから生成される Entity Data Model を作成する。
 
-- 作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]を WPF アプリケーションに Entity Data Model でデータを公開します。
+- WCF データ サービスを作成するには、WPF アプリケーションに Entity Data Model でデータが公開します。
 
 - 項目をドラッグしてデータ バインド コントロールのセットを作成する、**データソース**WPF デザイナーにウィンドウ。
 
 - 顧客レコード間を前後に移動するためのボタンを作成する。
 
-- コントロール内のデータに変更を保存するボタンを作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]と基になるデータ ソース。
+- WCF データ サービスを基になるデータ ソース コントロール内のデータに変更を保存するボタンを作成します。
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
+
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
 -   Visual Studio
@@ -60,9 +61,8 @@ ms.locfileid: "39180296"
 -   WPF データ バインディング。 詳細については、次を参照してください。[データ バインディングの概要](/dotnet/framework/wpf/data/data-binding-overview)します。
 
 ## <a name="create-the-service-project"></a>サービス プロジェクトを作成します。
-このチュートリアルでは、まず [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] のプロジェクトを作成します。
 
-### <a name="to-create-the-service-project"></a>サービス プロジェクトを作成するには
+WCF データ サービスのプロジェクトを作成して、このチュートリアルを開始します。
 
 1.  Visual Studio を起動します。
 
@@ -72,16 +72,15 @@ ms.locfileid: "39180296"
 
 4.  **[ASP.NET Web アプリケーション]** プロジェクト テンプレートを選択します。
 
-5.  **名前**ボックスに「 `AdventureWorksService`  をクリック**OK**します。
+5.  **名前**ボックスに「 **AdventureWorksService**  をクリック**OK**します。
 
-     Visual Studio によって作成、`AdventureWorksService`プロジェクト。
+     Visual Studio によって作成、 **AdventureWorksService**プロジェクト。
 
 6.  **ソリューション エクスプ ローラー**を右クリックして**Default.aspx**選択**削除**します。 このファイルは、このチュートリアルでは必要ありません。
 
 ## <a name="create-an-entity-data-model-for-the-service"></a>サービスのエンティティ データ モデルを作成します。
-[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] を使用してアプリケーションにデータを公開するには、サービスのデータ モデルを定義する必要があります。 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] 2 種類のデータ モデルをサポートしています。 エンティティのデータ モデル、およびカスタム データ モデルを実装する共通言語ランタイム (CLR) オブジェクトを使用して定義されている、<xref:System.Linq.IQueryable%601>インターフェイス。 このチュートリアルでは、データ モデルとして Entity Data Model を作成します。
 
-### <a name="to-create-an-entity-data-model"></a>Entity Data Model を作成するには
+WCF Data Service を使用してアプリケーションにデータを公開するには、サービスのデータ モデルを定義する必要があります。 WCF データ サービスは、2 つの種類のデータ モデルをサポートしています。 エンティティのデータ モデル、およびカスタム データ モデルを実装する共通言語ランタイム (CLR) オブジェクトを使用して定義されている、<xref:System.Linq.IQueryable%601>インターフェイス。 このチュートリアルでは、データ モデルとして Entity Data Model を作成します。
 
 1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。
 
@@ -106,9 +105,8 @@ ms.locfileid: "39180296"
 8.  **[完了]** をクリックします。
 
 ## <a name="create-the-service"></a>サービスを作成します。
-作成、[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]を WPF アプリケーションに Entity Data Model でデータを公開します。
 
-### <a name="to-create-the-service"></a>サービスを作成するには
+WPF アプリケーションに Entity Data Model でデータを公開する WCF Data Service を作成します。
 
 1.  **プロジェクト**メニューの **新しい項目の追加**します。
 
@@ -119,23 +117,21 @@ ms.locfileid: "39180296"
      Visual Studio の追加、`AdventureWorksService.svc`をプロジェクトにします。
 
 ## <a name="configure-the-service"></a>サービスの構成
-作成した Entity Data Model を操作するには、サービスを構成する必要があります。
 
-### <a name="to-configure-the-service"></a>サービスを構成するには
+作成した Entity Data Model を操作するサービスを構成する必要があります。
 
-1.  `AdventureWorks.svc`ファイルのコードで置き換えます、`AdventureWorksService`クラスの次のコードで宣言します。
+1.  `AdventureWorks.svc`ファイルのコードで置き換えます、 **AdventureWorksService**クラスの次のコードで宣言します。
 
      [!code-csharp[Data_WPFWCF#1](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_1.cs)]
      [!code-vb[Data_WPFWCF#1](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_1.vb)]
 
-     このコードは更新、`AdventureWorksService`クラスから派生するよう、<xref:System.Data.Services.DataService%601>で動作する、`AdventureWorksLTEntities`オブジェクト コンテキスト クラス、エンティティ データ モデル。 また、`InitializeService` メソッドも更新され、`SalesOrderHeader` エンティティへの完全な読み取り/書き込みアクセスがサービスのクライアントに許可されます。
+     このコードは更新、 **AdventureWorksService**クラスから派生するよう、<xref:System.Data.Services.DataService%601>で動作する、`AdventureWorksLTEntities`オブジェクト コンテキスト クラス、エンティティ データ モデル。 また、`InitializeService` メソッドも更新され、`SalesOrderHeader` エンティティへの完全な読み取り/書き込みアクセスがサービスのクライアントに許可されます。
 
 2.  プロジェクトをビルドし、エラーが発生しないことを確認します。
 
 ## <a name="create-the-wpf-client-application"></a>WPF クライアント アプリケーションを作成します。
-[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] のデータを表示するには、サービスに基づくデータ ソースを使用して、新しい WPF アプリケーションを作成します。 このチュートリアルの後半で、データ バインド コントロールをアプリケーションに追加します。
 
-### <a name="to-create-the-wpf-client-application"></a>WPF クライアント アプリケーションを作成するには
+WCF データ サービスからデータを表示するには、サービスに基づいているデータ ソースと新しい WPF アプリケーションを作成します。 このチュートリアルの後半で、データ バインド コントロールをアプリケーションに追加します。
 
 1.  **ソリューション エクスプ ローラー**は、ソリューション ノードを右クリックし、**追加**、選択と**新しいプロジェクト**します。
 
@@ -161,7 +157,7 @@ ms.locfileid: "39180296"
 
      Visual Studio が使用可能なサービスは、現在のソリューションを検索し、追加`AdventureWorksService.svc`で利用可能なサービスの一覧に、**サービス**ボックス。
 
-9. **Namespace**ボックスに「`AdventureWorksService`します。
+9. **Namespace**ボックスに「 **AdventureWorksService**します。
 
 10. **サービス**ボックスで、 **AdventureWorksService.svc**、順にクリックします**OK**します。
 
@@ -171,10 +167,9 @@ ms.locfileid: "39180296"
 
      Visual Studio にサービスによって返されるデータを表すノードの追加、**データソース**ウィンドウ。
 
-## <a name="define-the-user-interface-of-the-window"></a>ウィンドウのユーザー インターフェイスを定義します。
-WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。 これらのボタンを使用して販売レコードを表示および更新できるようにするコードは、このチュートリアルで後で追加します。
+## <a name="define-the-user-interface"></a>ユーザー インターフェイスを定義します。
 
-### <a name="to-create-the-window-layout"></a>ウィンドウ レイアウトを作成するには
+WPF デザイナーで XAML を変更して、いくつかのボタンをウィンドウに追加します。 これらのボタンを使用して販売レコードを表示および更新できるようにするコードは、このチュートリアルで後で追加します。
 
 1.  **ソリューション エクスプ ローラー**、ダブルクリックして**MainWindow.xaml**します。
 
@@ -195,9 +190,8 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
 3.  プロジェクトをビルドします。
 
 ## <a name="create-the-data-bound-controls"></a>データ バインド コントロールを作成します。
-ドラッグして、顧客レコードを表示するコントロールを作成、`SalesOrderHeaders`ノードから、**データソース**をデザイナーにウィンドウ。
 
-### <a name="to-create-the-data-bound-controls"></a>データ バインディング コントロールを作成するには
+ドラッグして、顧客レコードを表示するコントロールを作成、`SalesOrderHeaders`ノードから、**データソース**をデザイナーにウィンドウ。
 
 1.  **データ ソース**ウィンドウで、ドロップダウン メニューをクリックして、 **[salesorderheaders]** ノード、および選択**詳細**します。
 
@@ -234,9 +228,8 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
     -   **販売注文番号**
 
 ## <a name="load-the-data-from-the-service"></a>サービスからデータを読み込む
-サービスのプロキシ オブジェクトを使用して、サービスからの売上データを読み込みます。 データ ソースに返されるデータを割り当てる、 <xref:System.Windows.Data.CollectionViewSource> WPF ウィンドウ。
 
-### <a name="to-load-the-data-from-the-service"></a>サービスからデータを読み込むには
+サービスのプロキシ オブジェクトを使用して、サービスからの売上データを読み込みます。 データ ソースに返されるデータを割り当てる、 <xref:System.Windows.Data.CollectionViewSource> WPF ウィンドウ。
 
 1.  作成するため、デザイナーで、`Window_Loaded`イベント ハンドラーを読み取るテキストをダブルクリックします: **MainWindow**します。
 
@@ -246,9 +239,8 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
      [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]
 
 ## <a name="navigate-sales-records"></a>販売レコード間を移動します。
-使用して販売レコード間をスクロールできるようにするコードを追加、 **\<** と**>** ボタン。
 
-### <a name="to-enable-users-to-navigate-sales-records"></a>ユーザーが販売レコード間を移動できるようにするには
+使用して販売レコード間をスクロールできるようにするコードを追加、 **\<** と**>** ボタン。
 
 1.  デザイナーをダブルクリック、 **<** ウィンドウ サーフェイスのボタンをクリックします。
 
@@ -268,10 +260,9 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
      [!code-csharp[Data_WPFWCF#4](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_4.cs)]
      [!code-vb[Data_WPFWCF#4](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_4.vb)]
 
-## <a name="saving-changes-to-sales-records"></a>販売レコードへの変更を保存しています
-ユーザーを表示およびを使用して販売レコードへの変更を保存できるようにするコードを追加、**変更を保存**ボタンをクリックします。
+## <a name="save-changes-to-sales-records"></a>販売レコードへの変更を保存します。
 
-### <a name="to-add-the-ability-to-save-changes-to-sales-records"></a>販売レコードへの変更を保存する機能を追加するには
+ユーザーを表示およびを使用して販売レコードへの変更を保存できるようにするコードを追加、**変更を保存**ボタンをクリックします。
 
 1.  デザイナーで、ダブルクリック、**変更の保存**ボタンをクリックします。
 
@@ -282,10 +273,9 @@ WPF デザイナーで XAML を変更して、いくつかのボタンをウィ�
      [!code-csharp[Data_WPFWCF#5](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_5.cs)]
      [!code-vb[Data_WPFWCF#5](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_5.vb)]
 
-## <a name="testing-the-application"></a>アプリケーションのテスト
-アプリケーションをビルドして実行し、顧客レコードを表示および更新できることを確認します。
+## <a name="test-the-application"></a>アプリケーションをテストする
 
-### <a name="to-test-the-application"></a>アプリケーションをテストするには
+ビルドし、表示および顧客レコードを更新できることを確認するアプリケーションを実行します。
 
 1.  **[ビルド]** メニューのをクリックして**ソリューションのビルド**します。 ソリューションがエラーなしでビルドされることを確認します。
 

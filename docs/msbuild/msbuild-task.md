@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 04b76df9a174bcbc03269e42ce37b1103c3bfd2f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 366e73473b442ee52ceac10e1398a7bb3e2b52f4
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31575924"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178215"
 ---
 # <a name="msbuild-task"></a>MSBuild タスク
 別の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトから [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクトをビルドします。  
@@ -37,7 +37,7 @@ ms.locfileid: "31575924"
 |---------------|-----------------|  
 |`BuildInParallel`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、`Projects` パラメーターに指定されたプロジェクトが同時にビルドされます (可能な場合)。 既定値は `false` です。|  
 |`Projects`|必須の <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> ビルドするプロジェクト ファイルを指定します。|  
-|`Properties`|省略可能な `String` 型のパラメーターです。<br /><br /> 子プロジェクトに対してグローバル プロパティとして適用するプロパティの名前/値ペアのセミコロンで区切られたリスト。 このパラメーターを指定することは、[MSBuild.exe](../msbuild/msbuild-command-line-reference.md) でビルドするときに **/property** スイッチを持つプロパティを設定することと同じ意味になります。 例:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> `Properties` パラメーター経由でプロジェクトにプロパティを渡すと、プロジェクト ファイルが既に読み込まれている場合でも、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトの新しいインスタンスを作成します。 プロジェクトの新しいインスタンスが作成されると、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はそのインスタンスを、異なるグローバル プロパティを持ち、プロジェクトの他のインスタンスと同時にビルド可能な別のプロジェクトとして扱います。 たとえば、リリース構成をデバッグ構成と同時にビルドできます。|  
+|`Properties`|省略可能な `String` 型のパラメーターです。<br /><br /> 子プロジェクトに対してグローバル プロパティとして適用するプロパティの名前/値ペアのセミコロンで区切られたリスト。 このパラメーターを指定することは、[*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md) でビルドするときに **/property** スイッチを持つプロパティを設定することと同じ意味になります。 例:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> `Properties` パラメーター経由でプロジェクトにプロパティを渡すと、プロジェクト ファイルが既に読み込まれている場合でも、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトの新しいインスタンスを作成します。 プロジェクトの新しいインスタンスが作成されると、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はそのインスタンスを、異なるグローバル プロパティを持ち、プロジェクトの他のインスタンスと同時にビルド可能な別のプロジェクトとして扱います。 たとえば、リリース構成をデバッグ構成と同時にビルドできます。|  
 |`RebaseOutputs`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、ビルド プロジェクトからのターゲットの出力項目の相対パスを、呼び出し元プロジェクトからの相対パスに合わせます。 既定値は `false` です。|  
 |`RemoveProperties`|省略可能な `String` 型のパラメーターです。<br /><br /> 削除するグローバル プロパティのセットを指定します。|  
 |`RunEachTargetSeparately`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクは [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] に渡される一覧内の各ターゲットを同時ではなく、一度に 1 つずつ呼び出します。 このパラメーターを `true` に設定すると、前に呼び出したターゲットが失敗しても、後に続くターゲットは呼び出されることが保証されます。 それ以外の場合は、ビルド エラーが発生すると、以降のすべてのターゲットの呼び出しは停止されます。 既定値は `false` です。|  
@@ -48,12 +48,12 @@ ms.locfileid: "31575924"
 |`Targets`|省略可能な `String` 型のパラメーターです。<br /><br /> プロジェクト ファイルでビルドする 1 つまたは複数のターゲットを指定します。 セミコロンを使用して、ターゲットの名前の一覧を区切ります。 `MSBuild` タスクにターゲットを指定しない場合は、プロジェクト ファイルで指定されている既定のターゲットがビルドされます。 **注:**  ターゲットは、すべてのプロジェクト ファイルに必要です。 ターゲットが存在しない場合は、ビルド エラーが発生します。|  
 |`ToolsVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> このタスクに渡されたプロジェクトのビルド時に使用する `ToolsVersion` を指定します。<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] タスクが、プロジェクトで指定されたものとは別のバージョンの [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] をターゲットとするプロジェクトをビルドできるようにします。 有効な値は `2.0`、`3.0`、`3.5` です。 既定値は `3.5`にする必要があります。|  
 |`UnloadProjectsOnCompletion`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、操作が完了したらプロジェクトはアンロードされます。|  
-|`UseResultsCache`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、キャッシュされた結果が返されます (ある場合)。 MSBuild タスクが実行された場合、その結果はスコープ (ProjectFileName, GlobalProperties)[TargetNames] に<br /><br /> ビルド項目のリストとしてキャッシュされます。|  
+|`UseResultsCache`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、キャッシュされた結果が返されます (ある場合)。<br /><br />  MSBuild タスクが実行されると、その結果がスコープ  <br /><br /> (ProjectFileName, GlobalProperties)[TargetNames]<br /><br /> にビルド項目のリストとしてキャッシュされます。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
- [Exec Task](../msbuild/exec-task.md) を使用して MSBuild.exe を起動する場合と異なり、このタスクでは、同じ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロセスを使用して子プロジェクトがビルドされます。 すでにビルドされていて、スキップできるターゲットの一覧は、親のビルドと子のビルドの両方で共有されます。 また、新しい [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロセスが作成されないため、このタスクは高速です。  
+ [Exec Task](../msbuild/exec-task.md) を使用して *MSBuild.exe* を起動する場合と異なり、このタスクでは、同じ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロセスを使用して子プロジェクトがビルドされます。 すでにビルドされていて、スキップできるターゲットの一覧は、親のビルドと子のビルドの両方で共有されます。 また、新しい [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロセスが作成されないため、このタスクは高速です。  
   
  このタスクでは、プロジェクト ファイルだけでなく、ソリューション ファイルも処理できます。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "31575924"
   
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以降、ソリューション プロジェクトは、ビルドするすべてのサブ プロジェクトから TargetOutputs を出力するようになりました。  
   
-## <a name="passing-properties-to-projects"></a>プロジェクトへのプロパティの引き渡し  
+## <a name="pass-properties-to-projects"></a>プロジェクトへのプロパティの引き渡し  
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 以前のバージョンの [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 項目に一覧表示されている別のプロジェクトに対してプロパティの別のセットを渡すことは困難でした。 [MSBuild タスク](../msbuild/msbuild-task.md)の Properties 属性を使用すると、その設定はビルド対象のすべてのプロジェクトに適用されていました (ただし、[MSBuild タスク](../msbuild/msbuild-task.md)をバッチ処理し、項目一覧内の各プロジェクトに対して別のプロパティを条件に応じて用意する場合は除く)。  
   
- しかし、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 には、新しい予約済みのメタデータ項目が 2 つあります (Properties と AdditionalProperties)。これらのメタデータ項目は、[MSBuild タスク](../msbuild/msbuild-task.md)を使用してビルドされる別プロジェクトに異なるプロパティを渡すための柔軟な方法を提供します。  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5 には、ただし、新しい予約済みのメタデータ項目が 2 つあります (Properties と AdditionalProperties)。これらのメタデータ項目は、[MSBuild タスク](../msbuild/msbuild-task.md)を使ってビルドされる別プロジェクトに異なるプロパティを渡すための柔軟な方法を提供します。  
   
 > [!NOTE]
 >  これらの新しいメタデータ項目は、[MSBuild タスク](../msbuild/msbuild-task.md)の Projects 属性に渡される項目に対してのみ適用可能です。  
@@ -188,6 +188,6 @@ ms.locfileid: "31575924"
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)

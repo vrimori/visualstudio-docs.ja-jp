@@ -16,21 +16,24 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d3a5cebc3cb04872ff9266a2fa404b261a32c2d6
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: b720072d5ccd695ff1e7006bda5221ae00db06ef
+ms.sourcegitcommit: 3a11feebad45a0dd4ac45efcbfdf172fce46e1de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757098"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39582347"
 ---
 # <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
+
 TableAdapter を使用すると、アプリケーションとデータベース間で通信できます。 データベース、クエリの実行またはストアド プロシージャに接続して、新しいデータを返すか、テーブルまたは既存の fill<xref:System.Data.DataTable>返されたデータ。 Tableadapter は、元のデータベースに、アプリケーションから更新されたデータを送信することもできます。
 
 次の操作のいずれかを実行するときの Tableadapter が作成されます。
 
--   実行、[データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)いずれかを選択し、**データベース**または**Web サービス**データ ソースの種類。
+- データベース オブジェクトをドラッグ**サーバー エクスプ ローラー**に、**データセット デザイナー**します。
 
--   データベース オブジェクトをドラッグ**サーバー エクスプ ローラー**に、**データセット デザイナー**します。
+- データ ソースの構成ウィザードを実行し、いずれかを選択、**データベース**または**Web サービス**データ ソースの種類。
+
+   ![Visual Studio でのデータ ソース構成ウィザード](media/data-source-configuration-wizard.png)
 
 また新しい TableAdapter を作成しから TableAdapter をドラッグしてデータ ソースを構成することができます、**ツールボックス**で空の領域に、**データセット デザイナー**画面。
 
@@ -39,29 +42,32 @@ Tableadapter の概要については、次を参照してください。 [Table
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter 構成ウィザードを使用
+
 実行、 **TableAdapter 構成ウィザード**Tableadapter および関連する Datatable の作成または編集します。 既存の TableAdapter を構成するには、上で右クリックし、**データセット デザイナー**します。
 
 ![raddata テーブル アダプターの構成ウィザード](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
 
 新しい TableAdapter をツールボックスからドラッグした場合と、**データセット デザイナー**集中、ウィザードが起動し、TableAdapter をソース データを指定する画面の指示に接続する必要がありますが、します。 次のページでは、ウィザードは、SQL ステートメントまたはストアド プロシージャ、データベースとの通信に使用するコマンドの種類を確認します。 (表示されませんこのデータ ソースに関連付けられている TableAdapter を構成する場合。)
 
--   データベースの適切なアクセス許可がある場合、基になるデータベースで、新しいストアド プロシージャを作成するオプションがあります。 これらのアクセス許可を持っていない場合は、このオプションはできません。
+- データベースの適切なアクセス許可がある場合、基になるデータベースで、新しいストアド プロシージャを作成するオプションがあります。 これらのアクセス許可を持っていない場合は、このオプションはできません。
 
--   既存のストアド プロシージャの実行を選択することもできます、**選択**、**挿入**、 **UPDATE**、および**削除**のコマンド、。TableAdapter。 割り当てられているストアド プロシージャ、 **Update**コマンド、たとえばを実行ときに、`TableAdapter.Update()`メソッドが呼び出されます。
+- 既存のストアド プロシージャの実行を選択することもできます、**選択**、**挿入**、 **UPDATE**、および**削除**のコマンド、。TableAdapter。 割り当てられているストアド プロシージャ、 **Update**コマンド、たとえばを実行ときに、`TableAdapter.Update()`メソッドが呼び出されます。
 
 選択したストアド プロシージャのパラメーターを、データ テーブルの対応する列に割り当てます。 たとえば、ストアド プロシージャがという名前のパラメーターを受け取る`@CompanyName`に渡される、 `CompanyName` 、テーブルの列の設定、**基になる列**の`@CompanyName`パラメーターを`CompanyName`。
 
 > [!NOTE]
->  SELECT コマンドに割り当てられているストアド プロシージャは、ウィザードの次の手順で名前を付けます TableAdapter のメソッドを呼び出すことによって実行します。 既定の方法は`Fill`ので、通常は、SELECT プロシージャの実行に使用するコードは`TableAdapter.Fill(tableName)`します。 による既定の名前を変更する場合`Fill`、置き換える`Fill`名前の割り当て、および"TableAdapter"を TableAdapter の実際の名前に置き換えます (たとえば、 `CustomersTableAdapter`)。
+> SELECT コマンドに割り当てられているストアド プロシージャは、ウィザードの次の手順で名前を付けます TableAdapter のメソッドを呼び出すことによって実行します。 既定の方法は`Fill`ので、通常は、SELECT プロシージャの実行に使用するコードは`TableAdapter.Fill(tableName)`します。 による既定の名前を変更する場合`Fill`、置き換える`Fill`名前の割り当て、および"TableAdapter"を TableAdapter の実際の名前に置き換えます (たとえば、 `CustomersTableAdapter`)。
 
--   選択すると、**データベースに直接更新を送信するためのメソッドを作成する**オプションは設定に相当、`GenerateDBDirectMethods`プロパティを true にします。 元の SQL ステートメントが十分な情報を提供していないか、クエリは更新可能なクエリではない場合は、オプションは使用できません。 この状態が発生する、たとえば、**参加**クエリと 1 つの (スカラー) 値を返すクエリです。
+- 選択すると、**データベースに直接更新を送信するためのメソッドを作成する**オプションは設定に相当、`GenerateDBDirectMethods`プロパティを true にします。 元の SQL ステートメントが十分な情報を提供していないか、クエリは更新可能なクエリではない場合は、オプションは使用できません。 この状態が発生する、たとえば、**参加**クエリと 1 つの (スカラー) 値を返すクエリです。
 
 **オプションの高度な**ウィザードで使用するとします。
+
 - 定義されている SELECT ステートメントに基づいた INSERT、UPDATE、および DELETE のステートメントを生成、 **SQL ステートメントの生成**ページ
 - [オプティミスティック同時実行制御]
 - 挿入した後に、データ テーブルを更新するかどうかを指定し、UPDATE ステートメントが実行されます。
 
 ## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter の塗りつぶし方法を構成します。
+
 場合があります、TableAdapter のテーブルのスキーマを変更する可能性があります。 TableAdapter のプライマリを変更するには、`Fill`メソッド。 Tableadapter をプライマリに`Fill`関連付けられたデータ テーブルのスキーマを定義するメソッド。 プライマリ`Fill`方法は、クエリまたはストアド プロシージャの最初に TableAdapter を構成するときに入力したに基づいています。 データセット デザイナーでデータ テーブルの下の最初の (最上位) メソッドになります。
 
 ![複数のクエリがある TableAdapter](../data-tools/media/tableadapter.gif)
@@ -74,7 +80,7 @@ TableAdapter クエリの構成ウィザードを使用して、作成して、T
 
 `CustomersTableAdapter.FillByCity(NorthwindDataSet.Customers, "Seattle")`
 
-#### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>新しいクエリを使用して、TableAdapter クエリ構成ウィザードを開始するには
+### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>新しいクエリを使用して、TableAdapter クエリ構成ウィザードを開始するには
 
 1.  データセットを開き、**データセット デザイナー**します。
 
@@ -83,33 +89,33 @@ TableAdapter クエリの構成ウィザードを使用して、作成して、T
 3.  **データ接続の選択**画面で、選択するか、クエリを使用する接続を作成します。
 
     > [!NOTE]
-    >  この画面は、デザイナーを使用する適切な接続が判断できないときに、または接続が使用できない場合にのみ表示されます。
+    > この画面は、デザイナーを使用する適切な接続が判断できないときに、または接続が使用できない場合にのみ表示されます。
 
 4.  **コマンドの種類を選択** 画面で、データベースからデータをフェッチする場合の次の方法から選択します。
 
-    -   **SQL ステートメントを使用して**データベースからデータを選択する SQL ステートメントを入力することができます。
+    - **SQL ステートメントを使用して**データベースからデータを選択する SQL ステートメントを入力することができます。
 
-    -   **新しいストアド プロシージャ作成**新規に作成するウィザードで有効には、指定した SELECT ステートメントに基づいて、(データベース) 内のプロシージャが格納されています。
+    - **新しいストアド プロシージャ作成**新規に作成するウィザードで有効には、指定した SELECT ステートメントに基づいて、(データベース) 内のプロシージャが格納されています。
 
-    -   **既存のストアド プロシージャを使用して、** クエリを実行するときに、既存のストアド プロシージャを実行することができます。
+    - **既存のストアド プロシージャを使用して、** クエリを実行するときに、既存のストアド プロシージャを実行することができます。
 
-#### <a name="to-start-the-tableadapter-query-configuration-wizard-on-an-existing-query"></a>既存のクエリで、TableAdapter クエリ構成ウィザードを開始するには
+### <a name="to-start-the-tableadapter-query-configuration-wizard-on-an-existing-query"></a>既存のクエリで、TableAdapter クエリ構成ウィザードを開始するには
 
--   既存の TableAdapter クエリを編集している場合、クエリを右クリックし、**構成**ショートカット メニューから。
+- 既存の TableAdapter クエリを編集している場合、クエリを右クリックし、**構成**ショートカット メニューから。
 
     > [!NOTE]
-    >  TableAdapter を再構成する TableAdapter のメイン クエリを右クリックし、<xref:System.Data.DataTable>スキーマ。 TableAdapter に追加のクエリを右クリックして、ただし、選択したクエリのみを構成します。 **TableAdapter 構成ウィザード**TableAdapter の定義が再構成中に、 **TableAdapter クエリ構成ウィザード**選択したクエリのみを再構成します。
+    > TableAdapter を再構成する TableAdapter のメイン クエリを右クリックし、<xref:System.Data.DataTable>スキーマ。 TableAdapter に追加のクエリを右クリックして、ただし、選択したクエリのみを構成します。 **TableAdapter 構成ウィザード**TableAdapter の定義が再構成中に、 **TableAdapter クエリ構成ウィザード**選択したクエリのみを再構成します。
 
-#### <a name="to-add-a-global--query-to-a-tableadapter"></a>TableAdapter にグローバル クエリを追加するには
+### <a name="to-add-a-global-query-to-a-tableadapter"></a>TableAdapter にグローバル クエリを追加するには
 
--   グローバル クエリは、1 つの (スカラー) 値または値のいずれかを返す SQL クエリです。 通常、グローバル関数は、挿入、更新、および削除などのデータベース操作を実行します。 テーブルまたは特定の順序ですべてのアイテムの請求額を合計顧客数などの情報を集計します。
+- グローバル クエリは、1 つの (スカラー) 値または値のいずれかを返す SQL クエリです。 通常、グローバル関数は、挿入、更新、および削除などのデータベース操作を実行します。 テーブルまたは特定の順序ですべてのアイテムの請求額を合計顧客数などの情報を集計します。
 
      グローバル クエリをドラッグして追加する、**クエリ**オブジェクトから、**データセット**のタブ、**ツールボックス**の空の領域に、**データセット デザイナー**.
 
--   たとえば、目的のタスクを実行するクエリの指定`SELECT COUNT(*) AS CustomerCount FROM Customers`します。
+- たとえば、目的のタスクを実行するクエリの指定`SELECT COUNT(*) AS CustomerCount FROM Customers`します。
 
     > [!NOTE]
-    >  ドラッグ、**クエリ**オブジェクトに直接、**データセット デザイナー**スカラー (単一) 値のみを返すメソッドを作成します。 クエリまたはストアド プロシージャを選択する複数の単一の値を返す可能性があります、中に、ウィザードによって作成されるメソッドは、単一の値のみを返します。 たとえば、クエリは、返されるデータの最初の行の最初の列を返す可能性があります。
+    > ドラッグ、**クエリ**オブジェクトに直接、**データセット デザイナー**スカラー (単一) 値のみを返すメソッドを作成します。 クエリまたはストアド プロシージャを選択する複数の単一の値を返す可能性があります、中に、ウィザードによって作成されるメソッドは、単一の値のみを返します。 たとえば、クエリは、返されるデータの最初の行の最初の列を返す可能性があります。
 
 ## <a name="see-also"></a>関連項目
 

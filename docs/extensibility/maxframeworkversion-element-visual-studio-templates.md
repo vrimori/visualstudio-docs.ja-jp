@@ -1,5 +1,5 @@
 ---
-title: MaxFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: MaxFrameworkVersion 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4bc28fcc35a4a59852ef6864886acff4dc87ef60
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 12433fd96aee78c0f8f9ead3b531ae11b1d28f17
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139878"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636361"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion 要素 (Visual Studio テンプレート)
 
-テンプレートで必要とされる .NET Framework の最大バージョンを指定します。 使用可能な最大値を決定、**ターゲット フレームワークのバージョン**のドロップダウン リスト、**新しいプロジェクト**ダイアログ。 ユーザーが、framework のバージョンを選択できないためには、する必要がありますを指定するも[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)テンプレートに最低限の .NET Framework バージョンとして。
+テンプレートで必要とされる .NET Framework の最大バージョンを指定します。 使用可能な最大値を決定、**ターゲット フレームワークのバージョン**のドロップダウン リスト、**新しいプロジェクト**ダイアログ。 ユーザーのバージョンのフレームワークを選択できるようにするためには、する必要がありますを指定するも[RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md)テンプレートについては、.NET Framework の最小バージョンとして。
 
 > [!IMPORTANT]
-> Visual Studio 2017 15.6 のバージョンでの起動、**ターゲット フレームワークのバージョン**ドロップダウン リストが表示されているテンプレートのフィルターではなくなりました、**テンプレート**のセクションで、 **新しいプロジェクト**ダイアログ。 代わりに、**ターゲット フレームワークのバージョン**ドロップダウン リストが、選択したテンプレートのフレームワーク ピッカーとして機能します。
+> Visual Studio 2017 バージョン 15.6 では、以降、**ターゲット フレームワーク バージョン**ドロップダウンが表示されているテンプレートのフィルターでは不要になった、**テンプレート**のセクション、 **の新しいプロジェクト**ダイアログ。 代わりに、**ターゲット フレームワーク バージョン**ドロップダウンが選択したテンプレートの framework ピッカーとして機能します。
 
  \<VSTemplate > \<TemplateData > \<MaxFrameworkVersion >
 
@@ -36,7 +36,7 @@ ms.locfileid: "31139878"
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>
 ```
 
-## <a name="attributes-and-elements"></a>属性および要素
+## <a name="attributes-and-elements"></a>属性と要素
  以降のセクションでは、属性、子要素、および親要素について説明します。
 
 ### <a name="attributes"></a>属性
@@ -49,16 +49,16 @@ ms.locfileid: "31139878"
 
 |要素|説明|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートをカテゴリに分類し、いずれかでの表示方法を定義、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、いずれかでの表示方法を定義、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストは、テンプレートで許可されている .NET Framework の最新のバージョン番号があります。
+ テキストは、テンプレートで許可されている .NET Framework の最上位のバージョン番号である必要があります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`MaxFrameworkVersion` は、省略可能な要素です。 `MaxFrameworkVersion`要素は、テンプレートのサポートされているさまざまな .NET Framework のバージョンを誤って制限にならないように、必要である場合を除き、省略する必要があります。 また .NET Framework がテンプレートに適用されない場合も省略する必要があります。
+`MaxFrameworkVersion` は、省略可能な要素です。 `MaxFrameworkVersion`テンプレートについては、.NET Framework のサポートされているバージョンを誤って制限にならないように、必要な場合を除き、要素を省略する必要があります。 また .NET Framework がテンプレートに適用されない場合も省略する必要があります。
 
 ## <a name="example"></a>例
 
@@ -82,7 +82,7 @@ ms.locfileid: "31139878"
 </VSTemplate>
 ```
 
-この例では、テンプレートで必要とされる .NET Framework の最大バージョンによって表される`MaxFrameworkVersion`4.7.1 は、します。 このテンプレートで作成したプロジェクトは対象 4.7.1 までの .NET Framework のバージョンになります。
+この例では、テンプレートで必要とされる .NET Framework の最大バージョンで表される`MaxFrameworkVersion`4.7.1 は、します。 このテンプレートで作成されたプロジェクト バージョンの .NET Framework 4.7.1 まで対象にできます。
 
 ## <a name="see-also"></a>関連項目
 

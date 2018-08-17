@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49044f620b928a60417e48cf368ec0d8ae1dcc85
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: b1a3ff7cbd2025a909ab0c5fb044bb61b24388ff
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36325295"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151201"
 ---
 # <a name="msbuild-transforms"></a>MSBuild 変換
 変換とは、1 つの項目一覧を別の項目コレクションに一対一で変換することです。 プロジェクトで項目一覧を変換できます。さらに変換により、ターゲットは入出力間の直接割り当てを指定できるようになります。 このトピックでは、変換と、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] で変換を利用してプロジェクトを効率的にビルドする方法について説明します。  
   
 ## <a name="transform-modifiers"></a>変換修飾子  
-変換は任意ではなく、特別な構文により制限されています。変換修飾子はすべて %(*ItemMetaDataName*) という形式にする必要があります。 あらゆる項目メタデータを変換修飾子として使用できます。 これには、作成時にすべての項目に割り当てられる既知の項目メタデータが含まれます。 既知の項目メタデータの一覧については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。  
+変換は任意ではなく、特別な構文により制限されています。変換修飾子はすべて %(\<ItemMetaDataName>) という形式にする必要があります。 あらゆる項目メタデータを変換修飾子として使用できます。 これには、作成時にすべての項目に割り当てられる既知の項目メタデータが含まれます。 既知の項目メタデータの一覧については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。  
   
 次の例では、*.resx* ファイルの一覧が *.resources* ファイルの一覧に変換されます。 %(filename) 変換修飾子は、各 *.resources* ファイルに対応する *.resx* ファイルと同じファイル名が与えられることを指定します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36325295"
 >  標準の項目一覧に区切りを指定するのと同じ方法で、変換後の項目一覧にカスタムの区切りを指定できます。 たとえば、変換後の項目一覧を既定のセミコロン (;) ではなくコンマ (,) で区切るには、次の XML を使用します。  
 > `@(RESXFile->'Toolset\%(filename)%(extension)', ',')`
   
-## <a name="using-multiple-modifiers"></a>複数の修飾子を使用する  
+## <a name="use-multiple-modifiers"></a>複数の修飾子を使用する  
  変換式には、複数の修飾子を含めることができます。複数の修飾子は任意の順序で結合したり、繰り返したりできます。 次の例では、ファイルを含むディレクトリの名前が変更されますが、ファイルは元の名前とファイル名拡張子を維持します。  
   
 ```xml  
@@ -67,7 +67,7 @@ ms.locfileid: "36325295"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、変換を使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルが確認できます。 この例では、c:\sub0\sub1\sub2\sub3 ディレクトリに .xsd ファイルが 1 つだけ存在し、作業ディレクトリが c:\sub0 であると想定されています。  
+ 次の例では、変換を使用する [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルが確認できます。 この例では、*c:\sub0\sub1\sub2\sub3* ディレクトリに *.xsd* ファイルが 1 つだけ存在し、作業ディレクトリが *c:\sub0* であると想定されています。  
   
 ### <a name="code"></a>コード  
   
@@ -104,7 +104,7 @@ relativedir: sub1\sub2\sub3\
 extension: .xsd  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)

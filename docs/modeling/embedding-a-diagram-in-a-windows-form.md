@@ -9,32 +9,30 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: db011f9842d00b6a39be3f1e9f4d4d7a090f2581
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7afd12aa6277983f8b50eb1d7adfdd8396f8f960
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31950544"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567270"
 ---
-# <a name="embedding-a-diagram-in-a-windows-form"></a>Windows フォームでのダイアグラムの埋め込み
-表示されます、Windows のコントロールに DSL 図を埋め込むことができます、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィンドウです。
+# <a name="embed-a-diagram-in-a-windows-form"></a>Windows フォームにダイアグラムを埋め込む
 
-## <a name="embedding-a-diagram"></a>ダイアグラムの埋め込み
+DSL 図は、Visual Studio ウィンドウに表示される、Windows のコントロールで埋め込むことができます。
 
-#### <a name="to-embed-a-dsl-diagram-in-a-windows-control"></a>Windows コントロールでの DSL 図を埋め込むには
+## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Windows コントロールに DSL ダイアグラムを埋め込む
 
-1.  新しい**ユーザー コントロール**DslPackage プロジェクトへのファイルです。
+1.  新しい追加**ユーザー コントロール**ファイルを DslPackage プロジェクト。
 
-2.  ユーザー コントロール パネル コントロールを追加します。 このパネルは、DSL 図が含まれます。
+2.  ユーザー コントロールをパネル コントロールを追加します。 このパネルにはは DSL 図が含まれます。
 
      必要なその他のコントロールを追加します。
 
-     コントロールのアンカー プロパティを設定します。
+     コントロールのアンカーのプロパティを設定します。
 
-3.  ソリューション エクスプ ローラーで、ユーザー コントロール ファイルを右クリックし、をクリックして**コードの表示**です。 コードにこのコンス トラクターと変数を追加します。
+3.  ソリューション エクスプ ローラーでユーザー コントロール ファイルを右クリックし、をクリックして**コードの表示**します。 コードには、このコンス トラクターと変数を追加します。
 
     ```csharp
-
     internal UserControl1(MyDSLDocView docView, Control content)
       : this()
     {
@@ -42,12 +40,11 @@ ms.locfileid: "31950544"
       this.docView = docView;
     }
     private MyDSLDocView docView;
-
     ```
 
-4.  次のコンテンツを含む、DslPackage プロジェクトに新しいファイルを追加します。
+4.  次の内容、DslPackage プロジェクトに新しいファイルを追加します。
 
-    ```
+    ```csharp
     using System.Windows.Forms;
     namespace Company.MyDSL
     {
@@ -66,19 +63,17 @@ ms.locfileid: "31950544"
             }
             return container;
     } } } }
-
     ```
 
-5.  DSL をテストするには、f5 キーを押して、サンプル モデル ファイルを開きます。 コントロール内に、ダイアグラムが表示されます。 ツールボックスおよびその他の機能が通常動作します。
+5.  DSL をテストするには、キーを押して**F5**サンプル モデル ファイルを開くとします。 コントロール内に、ダイアグラムが表示されます。 ツールボックスとその他の機能が通常動作します。
 
-#### <a name="updating-the-form-using-store-events"></a>ストアのイベントを使用してフォームの更新
+## <a name="update-the-form-using-store-events"></a>ストア イベントを使用してフォームを更新します。
 
-1.  フォーム デザイナーでは追加、 **ListBox**という`listBox1`です。 これにより、モデルに要素の一覧が表示されます。 使用して、モデルと synchronism で保持される*イベント格納*です。 詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)です。
+1.  フォーム デザイナーでは追加、 **ListBox**という`listBox1`します。 これにより、モデルに要素の一覧が表示されます。 使用して、モデルと同期されている*イベント格納*します。 詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)します。
 
 2.  カスタム コード ファイルでさらにメソッドをオーバーライド DocView クラス。
 
-    ```
-
+    ```csharp
     partial class MyDSLDocView
     {
      /// <summary>
@@ -115,14 +110,12 @@ ms.locfileid: "31950544"
      {
        container.Remove(e.ModelElement as ExampleElement);
      }
-
     ```
 
-3.  コードでは、ユーザー コントロールの内側に、要素を追加および削除をリッスンするメソッドを挿入します。
+3.  ユーザー コントロールの背後にあるコードでは、要素を追加および削除をリッスンするメソッドを挿入します。
 
-    ```
-
-          public partial class UserControl1 : UserControl { ...
+    ```csharp
+    public partial class UserControl1 : UserControl { ...
 
     private ExampleModel modelRoot;
 
@@ -144,12 +137,11 @@ ms.locfileid: "31950544"
         listBox1.Items.Add(c.Name);
       }
     }
-
     ```
 
-4.  DSL をテストするには、f5 キーを押して、実験用インスタンスの[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、サンプル モデル ファイルを開きます。
+4.  DSL をテストするには、キーを押して**F5** Visual Studio の実験用インスタンスのサンプル モデル ファイルを開くとします。
 
-     リスト ボックスでは、モデルでは、要素の一覧が表示およびが正しいことおよび元に戻す/やり直しの任意の追加または削除後に注意してください。
+     モデルでは、要素の一覧をリスト ボックスが表示されるが正しいことおよび取り消しとやり直しの任意の追加または削除後に注意してください。
 
 ## <a name="see-also"></a>関連項目
 

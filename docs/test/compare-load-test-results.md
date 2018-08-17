@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a23c6da2f27ef5b25d33caa3a464ec0f4018b40b
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: c360061e48b983007958042fd50e1e8cdcf0ac9f
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280515"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176331"
 ---
 # <a name="report-load-tests-results-for-test-comparisons-or-trend-analysis"></a>テストの比較または傾向分析のためにロード テストの結果レポートを作成する
 
@@ -35,9 +35,9 @@ ms.locfileid: "36280515"
 > [!NOTE]
 > ロード テストにコメントを追加すると、Excel レポートに表示されます。 詳細については、「[方法: 完了したロード テストの分析中にコメントを追加する](../test/how-to-add-comments-on-a-completed-load-test.md)」を参照してください。
 
-## <a name="tasks"></a>[タスク]
+## <a name="tasks"></a>タスク
 
-|[タスク]|関連するトピック|
+|タスク|関連するトピック|
 |-----------|-----------------------|
 |**パフォーマンス レポートおよびストレス レポートの作成:** Microsoft Excel を使用して、ロード テストおよび Web パフォーマンス テストのレポートを作成できます。|- [方法: Microsoft Excel を使用してロード テスト パフォーマンス レポートを作成する](../test/how-to-create-load-test-performance-reports-using-microsoft-excel.md)|
 |**Microsoft Word を使用したパフォーマンス レポートおよびストレス レポートの手動での作成:** Microsoft Word 文書に概要、表、グラフ データをコピーして貼り付けることによって、ロード テストおよび Web パフォーマンス テストについてのレポートを手動で作成できます。|- [方法: Microsoft Word を使用してロード テスト パフォーマンス レポートを手動で作成する](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md)|

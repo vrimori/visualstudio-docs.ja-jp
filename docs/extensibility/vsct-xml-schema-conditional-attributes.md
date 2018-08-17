@@ -1,5 +1,5 @@
 ---
-title: VSCT XML スキーマの条件付き属性 |Microsoft ドキュメント
+title: VSCT XML スキーマの条件付き属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 975ca2f5fa6f070baf07b26cbfa0d8c3aa3b67d2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b31b99e38eeec2ff1e5e31bc6bdaeed3d3be3d83
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31138357"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586822"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
-条件付き属性は、すべてのリストと項目に適用可能性があります。 論理演算子およびシンボル拡張式は、true または false に評価されます。 True の場合、関連付けられているリストまたは項目が、結果の出力に含まれます。  
+条件付き属性は、すべてのリストとアイテムに適用できます。 論理演算子およびシンボルの拡張の式は、true または false に評価されます。 True の場合、結果の出力で、関連付けられているリストまたは項目が含まれます。  
   
- トークンの拡張は、その他のトークンの拡張や定数に対してテストできます。 知り関数は値が存在しない場合でも、特定の名前が定義されているかどうかをテストするために使用します。  
+ その他のトークンの拡張や定数に対してトークンの拡張をテストすることができます。 関数は、`Defined()`値が存在しない場合でも、特定の名前が定義されているかどうかをテストします。  
   
- Condition 属性は、一覧に適用するときに、条件は、リスト内のすべての子要素に適用されます。 子要素自体に、Condition 属性が含まれている場合、その条件が結合親式 AND 演算によってです。  
+ Condition 属性がリストに適用されると、条件は、リスト内のすべての子要素に適用されます。 子要素自体に条件属性が含まれている場合、その条件が結合親式 AND 演算によって。  
   
- True として 1、'1' と 'true' の値が評価され、0、'0' および 'false' が false として評価されます。  
+ True の場合、値 1、'1' および 'true' に評価して 0、'0' および 'false' が false として評価されます。  
   
 ## <a name="operators"></a>演算子  
- 次の演算子は、条件付きの式の評価に使用できます。  
+ 条件付きの式を評価するのにには、次の演算子を使用します。  
   
 |演算子|定義|  
 |--------------|----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "31138357"
   
 ## <a name="examples"></a>使用例  
   
-```  
+```xml  
 <Menu Condition="Defined(DEBUG)" ...  
 </Menu>  
   
@@ -73,4 +73,4 @@ and !Defined(DEBUG)">
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio Command Table (.Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+ [Visual Studio コマンド テーブル (します。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

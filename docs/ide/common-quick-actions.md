@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: becddc01dbe668fbdb129fd6e350f28e054408b7
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 2b3c0ddc63dcf9b094b3ca6fb8b66f32a82cca59
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34063727"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638356"
 ---
 # <a name="common-quick-actions"></a>共通のクイック アクション
 
@@ -102,7 +102,7 @@ private void MyMethod()
 
 ### <a name="make-method-asynchronous"></a>メソッドを非同期にする
 
-メソッド内で `await` または `Await` のキーワードを使うときは、メソッド自体に `async` または `Async` のキーワードが指定されていることが想定されます。  ただし、そうではない場合は、クイック アクションが表示され、非同期メソッドにすることができます。 [クイック アクション] メニューの **[Make method/Function asynchronous (メソッド/関数を非同期にします)]** オプションを使います。
+メソッド内で `await` または `Await` のキーワードを使うときは、メソッド自体に `async` または `Async` のキーワードが指定されていることが想定されます。  ただし、そうではない場合は、メソッドを非同期にするクイック アクションが表示されます。 [クイック アクション] メニューの **[Make method/Function asynchronous (メソッド/関数を非同期にします)]** オプションを使います。
 
 ```csharp
 // Before
@@ -142,7 +142,7 @@ End Function
 
 ### <a name="remove-unnecessary-usingsimports"></a>不必要な using/Import を削除する
 
-**[不要な using の削除] / [不要なインポートの削除]** クイック アクションは、現在のファイルで使われていない `using` および `Import` ステートメントを削除します。  この項目を選ぶと、使われていない名前空間のインポートがすぐに削除されます。
+**[不要な using の削除]/[不要なインポートの削除]** クイック アクションは、現在のファイルで使われていない `using` および `Import` ステートメントを削除します。  この項目を選ぶと、使われていない名前空間のインポートが削除されます。
 
 |  該当言語 |  サポートされているバージョン |
 |  -------------------- | ----------------  |
@@ -150,7 +150,7 @@ End Function
 
 ### <a name="remove-unnecessary-cast"></a>不要なキャストを削除する
 
-ある型をキャストが不要な別の型にキャストしている場合、**[不要なキャストの削除]** クイック アクション項目はキャストをコードから削除します。
+ある型をキャストが不要な別の型にキャストしている場合、**[不要なキャストの削除]** クイック アクション項目によって不要なキャストが削除されます。
 
 ```csharp
 // before
@@ -868,7 +868,7 @@ Dim name = customer.name
 
 ### <a name="use-inferred-names"></a>推論による名前を使用する
 
-これらクイック アクションでは、匿名型の推論によるメンバー名を使用、または C# 7.1 の推論によるタプル要素名を使用できるタイミングを指摘します。
+このクイック アクションでは、匿名型で推論されるメンバー名やタプルで推論される要素名を使用する場合、どのようなときにコードを簡略化できるかがわかります。
 
 ```csharp
 // Before
@@ -923,7 +923,7 @@ Console.WriteLine($"{x} {y}");
 
 ### <a name="make-method-synchronous"></a>メソッドを同期させる
 
-`async` または `Async` のキーワードをメソッドで使う場合は、そのメソッド内のどこかで `await` または `Await` のキーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async` または `Async` のキーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。 [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
+`async` または `Async` のキーワードをメソッドで使う場合は、そのメソッド内で `await` または `Await` のキーワードも使われることが予想されます。  ただし、そうではない場合は、クイック アクションが表示され、`async` または `Async` のキーワードを削除して戻り値の型を変更することにより、同期メソッドにすることができます。 [クイック アクション] メニューの **[メソッドを同期させます]** オプションを選びます。
 
 ```csharp
 // Before

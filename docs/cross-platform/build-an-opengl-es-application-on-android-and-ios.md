@@ -12,12 +12,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 41d1a3a88230ed38d4d9688c2f07cdf099e2464b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 045781b8a990030fd988e07f2aa6490a5bd3ca56
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31070952"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232349"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、一般的なコードを共有する iOS アプリおよび Android アプリ用の Visual Studio ソリューションとプロジェクトを作成できます。 このトピックでは、簡単な iOS アプリと Android Native Activity アプリの両方を作成するソリューション テンプレートについて説明します。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (OpenGL for Embedded Systems または GLES) は、多くのモバイル デバイスでサポートされている 2D および 3D グラフィックス API です。  
@@ -29,7 +29,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
  [アプリのカスタマイズ](#Customize)  
   
 ##  <a name="req"></a> 要件  
- iOS および Android 用 OpenGL ES アプリを作成するには、その前にすべてのシステム要件を満たしていることを確認する必要があります。 Visual Studio 2015 の Visual C++ for Cross-Platform Mobile Development オプションをインストールしている必要があります。 インストールに必要なサード パーティのツールと SDK が含まれていること、また Visual Studio Emulator for Android がインストールされていることを確認してください。 詳細情報と詳細な手順については、「 [Install Visual C++ for Cross-Platform Mobile Development](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)」を参照してください。 iOS アプリをビルドしてテストするには、インストール手順に従って設定されている Mac コンピューターが必要になります。 iOS 開発の設定方法の詳細については、「 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)  
+ iOS および Android 用 OpenGL ES アプリを作成するには、その前にすべてのシステム要件を満たしていることを確認する必要があります。 Visual Studio 2015 の Visual C++ for Cross-Platform Mobile Development オプションをインストールしている必要があります。 インストールに必要なサード パーティのツールと SDK が含まれていること、また Visual Studio Emulator for Android がインストールされていることを確認してください。 詳細情報と詳細な手順については、「[C++ によるクロスプラットフォーム モバイル開発をインストールする](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)」をご覧ください。 iOS アプリをビルドしてテストするには、インストール手順に従って設定されている Mac コンピューターが必要になります。 iOS 開発の設定方法について詳しくは、[iOS を使用してビルドするためのツールのインストールと構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)に関するページをご覧ください。  
   
 ##  <a name="Create"></a> 新しい OpenGLES アプリケーション プロジェクトの作成  
  このチュートリアルでは、まず新しい OpenGL ES アプリケーション プロジェクトを作成します。それから、既定のアプリを Visual Studio Emulator for Android でビルドして実行します。 次に、iOS 用アプリをビルドし、iOS シミュレーターでアプリを実行します。  
@@ -50,17 +50,17 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
  新しい OpenGL ES アプリケーション ソリューションには、次の 3 つのライブラリ プロジェクトと 2 つのアプリケーション プロジェクトが含まれています。 ライブラリ フォルダーには、共有コード プロジェクトと共有コードを参照する 2 つのプラットフォーム固有のプロジェクトが含まれています。  
   
--   **MyOpenGLESApp.Android.NativeActivity** には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は、main.cpp に配置されます。ここには MyOpenGLESApp.Shared に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは pch.h にあります。 この Native Activity アプリ プロジェクトは、MyOpenGLESApp.Android.Packaging プロジェクトによって使用される共有ライブラリ (.so) ファイルにコンパイルされます。  
+-   `MyOpenGLESApp.Android.NativeActivity` には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は、*main.cpp* に配置されます。ここには `MyOpenGLESApp.Shared` に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、`MyOpenGLESApp.Android.Packaging` プロジェクトで使用されます。  
   
--   **MyOpenGLESApp.iOS.StaticLibrary** は、MyOpenGLESApp.Shared に共有コードが含まれている iOS スタティック ライブラリ (.a) ファイルを作成します。 MyOpenGLESApp.iOS.Application プロジェクトで作成されたアプリケーションにリンクされます。  
+-   `MyOpenGLESApp.iOS.StaticLibrary` は、`MyOpenGLESApp.Shared` に共有コードが含まれている iOS スタティック ライブラリ (*.a*) ファイルを作成します。 `MyOpenGLESApp.iOS.Application` プロジェクトで作成されたアプリケーションにリンクされます。  
   
--   **MyOpenGLESApp.Shared** には、プラットフォーム間で機能する共有コードが含まれています。 プラットフォーム固有のコードの条件付きコンパイルにプリプロセッサ マクロを使用します。 共有コードは MyOpenGLESApp.Android.NativeActivity と MyOpenGLESApp.iOS.StaticLibrary の両方のプロジェクト参照によって使用されます。  
+-   `MyOpenGLESApp.Shared` には、プラットフォーム間で機能する共有コードが含まれています。 プラットフォーム固有のコードの条件付きコンパイルにプリプロセッサ マクロを使用します。 共有コードは、`MyOpenGLESApp.Android.NativeActivity` と `MyOpenGLESApp.iOS.StaticLibrary` の両方のプロジェクト参照によって使用されます。  
   
  ソリューションには、Android および iOS プラットフォーム用のアプリを構築するための 2 つのプロジェクトがあります。  
   
--   **MyOpenGLESApp.Android.Packaging** は、Android デバイスまたはエミュレーターに配置する .apk ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する AndroidManifest.xml ファイルが含まれています。 Ant のビルド プロセスを制御する build.xml も含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
+-   `MyOpenGLESApp.Android.Packaging` は、Android デバイスまたはエミュレーターに配置する *.apk* ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する AndroidManifest.xml ファイルが含まれています。 Ant のビルド プロセスを制御する *build.xml* ファイルも含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
   
--   **MyOpenGLESApp.iOS.Application** には、MyOpenGLESApp.iOS.StaticLibrary で C++ スタティック ライブラリ コードにリンクする iOS アプリを作成するためのリソースと Objective-C グルー コードが含まれています。 このプロジェクトは、Visual Studio およびリモート エージェントによってご使用の Mac に転送されるビルド パッケージを作成します。 このプロジェクトをビルドする場合、Visual Studio はファイルとコマンドを送信して、アプリを Mac でビルドおよび配置します。  
+-   **MyOpenGLESApp.iOS.Application** には、`MyOpenGLESApp.iOS.StaticLibrary` で C++ スタティック ライブラリ コードにリンクする iOS アプリを作成するためのリソースと Objective-C グルー コードが含まれています。 このプロジェクトは、Visual Studio およびリモート エージェントによってご使用の Mac に転送されるビルド パッケージを作成します。 このプロジェクトをビルドする場合、Visual Studio はファイルとコマンドを送信して、アプリを Mac でビルドおよび配置します。  
   
 ##  <a name="BuildAndroid"></a> Android アプリのビルドと実行  
  テンプレートで作成したソリューションは、既定のプロジェクトとして、Android アプリを設定します。  インストールとセットアップを確認するために、このアプリをビルドおよび実行できます。 初期テストでは、Visual Studio Emulator for Android によってインストールされているデバイス プロファイルのいずれかでアプリを実行します。 別の対象でアプリをテストする場合は、対象のエミュレーターを読み込むか、デバイスをコンピューターに接続することができます。  
@@ -73,7 +73,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      x86 を使用して Android Emulator for Windows を対象にします。 デバイスを対象とする場合は、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-2.  **ソリューション エクスプローラー**で、MyOpenGLESApp.Android.Packaging プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。  
+2.  **ソリューション エクスプローラー**で `MyOpenGLESApp.Android.Packaging` プロジェクトのショートカット メニューを開き、**[ビルド]** を選択します。  
   
      ![Android パッケージ化プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")  
   
@@ -95,7 +95,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
   
-5.  Shift キーを押しながら F5 キーを押してデバッグを停止します。  
+5.  **Shift** + **F5** キーを押してデバッグを停止します。  
   
      エミュレーターは実行され続ける独立したプロセスです。 同じエミュレーターに対して、コードを何度も編集、コンパイル、配置できます。 アプリはエミュレーターのアプリ コレクションに表示され、そこから直接起動することができます。  
   
@@ -104,7 +104,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
  Visual Studio は、プラットフォーム ツールセットとして Clang を使用する Android NDK を使用して Android Native Activity プロジェクトをビルドします。 Visual Studio は、NativeActivity プロジェクトのプロパティを、ターゲット プラットフォームでコンパイル、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 詳細については、MyOpenGLESApp.Android.NativeActivity プロジェクトの **[プロパティ ページ]** ダイアログを参照してください。 コマンド ライン スイッチの詳細については、「 [Clang コンパイラ ユーザーズ マニュアル](http://clang.llvm.org/docs/UsersManual.html)」を参照してください。  
   
 ##  <a name="BuildIOS"></a> iOS アプリをビルドして実行するには  
- iOS アプリ プロジェクトの作成および編集は Visual Studio で行いますが、ライセンスの制限があるため、プロジェクトのビルドおよび配置は、Mac から行う必要があります。 Visual Studio は、Mac で実行するリモート エージェントと通信して、プロジェクト ファイルを転送し、ビルド、配置、デバッグのコマンドを実行します。 iOS アプリをビルドするには、その前に通信できるように Mac と Visual Studio を設定および構成する必要があります。 手順の詳細については、「 [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」を参照してください。 リモート エージェントを実行し、Visual Studio を Mac にペアリングすると、iOS アプリをビルドおよび実行して、インストールとセットアップを確認することができます。  
+ iOS アプリ プロジェクトの作成および編集は Visual Studio で行いますが、ライセンスの制限があるため、プロジェクトのビルドおよび配置は、Mac から行う必要があります。 Visual Studio は、Mac で実行するリモート エージェントと通信して、プロジェクト ファイルを転送し、ビルド、配置、デバッグのコマンドを実行します。 iOS アプリをビルドするには、その前に通信できるように Mac と Visual Studio を設定および構成する必要があります。 手順の詳細については、[iOS を使用してビルドするためのツールのインストールと構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)に関するページをご覧ください。 リモート エージェントを実行し、Visual Studio を Mac にペアリングすると、iOS アプリをビルドおよび実行して、インストールとセットアップを確認することができます。  
   
 #### <a name="to-build-and-run-the-ios-app"></a>iOS アプリをビルドして実行するには  
   
@@ -124,7 +124,7 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      iOS スタティック ライブラリと iOS アプリ用のビルド プロセスの出力が [出力] ウィンドウに表示されます。 Mac でリモート エージェントを実行しているターミナル ウィンドウに、コマンドおよびファイル転送アクティビティが表示されます。  
   
-     Mac コンピューターで、コード署名要求を受け入れるようにプロンプトが表示される場合があります。 [許可] を選択して続行します。  
+     Mac コンピューターで、コード署名要求を受け入れるようにプロンプトが表示される場合があります。 **[許可]** を選択して続行します。  
   
 4.  ツールバーで **[iOS シミュレーター]** を選択し、Mac の iOS シミュレーターでアプリを実行します。 シミュレーターを開始するのにはしばらく時間がかかる場合があります。 出力を表示するために、Mac 上でシミュレーターを最前面に表示する必要がある場合があります。  
   
@@ -134,16 +134,16 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
      ![iOS アプリケーションのブレークポイントにあるデバッガー](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
-5.  Shift キーを押しながら F5 キーを押してデバッグを停止します。  
+5.  **Shift** + **F5** キーを押してデバッグを停止します。  
   
      iOS シミュレーターは、Mac 上で実行し続ける独立したプロセスです。 同じ iOS シミュレーター インスタンスに対して、コードを何度も編集、コンパイル、配置できます。 展開した後は、シミュレーターで直接コードを実行することもできます。  
   
- 生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、アプリケーション プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、GameViewController.m ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。  
+ 生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、`Application` プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、*GameViewController.m* ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。  
   
  Visual Studio は、Xcode を使用してアプリをビルドするために、リモート クライアントに対してプロジェクト ファイルを転送し、コマンドを送信します。 リモート クライアントは、ビルドの状態情報を Visual Studio に返します。 アプリが正常にビルドされたら、Visual Studio を使用して、アプリを実行してデバッグするためのコマンドを送信できます。 Visual Studio のデバッガーは、iOS シミュレーター (Mac または接続されている iOS デバイス上で実行されます) で実行されるアプリを制御します。 Visual Studio は、StaticLibrary プロジェクトのプロパティを、ターゲット iOS プラットフォームでビルド、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 コンパイラ コマンド ライン オプションの詳細については、MyOpenGLESApp.iOS.StaticLibrary プロジェクトの **[プロパティ ページ]** ダイアログを開いてください。  
   
 ##  <a name="Customize"></a> アプリのカスタマイズ  
- 共通機能を追加または変更するために、共有 C++ コードを変更することができます。 一致するように MyOpenGLESApp.Android.NativeActivity および MyOpenGLESApp.iOS.Application プロジェクトの共有コードへの呼び出しを変更する必要があります。 プリプロセッサ マクロを使用して、共通コードにおけるプラットフォーム固有のセクションを指定することができます。 Android 用にビルドする場合は、プリプロセッサ マクロ `__ANDROID__` が事前に定義されます。 iOS 用にビルドする場合は、プリプロセッサ マクロ `__APPLE__` が事前に定義されます。  
+ 共通機能を追加または変更するために、共有 C++ コードを変更することができます。 一致するように `MyOpenGLESApp.Android.NativeActivity` および `MyOpenGLESApp.iOS.Application` プロジェクトの共有コードへの呼び出しを変更する必要があります。 プリプロセッサ マクロを使用して、共通コードにおけるプラットフォーム固有のセクションを指定することができます。 Android 用にビルドする場合は、プリプロセッサ マクロ `__ANDROID__` が事前に定義されます。 iOS 用にビルドする場合は、プリプロセッサ マクロ `__APPLE__` が事前に定義されます。  
   
  特定のプロジェクト プラットフォーム用の IntelliSense を表示するには、エディター ウィンドウの上部のナビゲーション バーにあるコンテキスト スイッチャーのドロップダウンでプロジェクトを選択します。  
   

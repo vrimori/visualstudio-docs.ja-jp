@@ -1,5 +1,5 @@
 ---
-title: IntelliSenseHostFlags |Microsoft ドキュメント
+title: IntelliSenseHostFlags |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a096e79a64168f74150103a5f3ba3a8683fe184e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 582dc76bfd8b76ffa4d3664ab3e28f95fe2cef50
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126758"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500015"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-IntelliSense ホスト フラグを指定します。  
+IntelliSense のホストのフラグを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,15 +39,15 @@ enum IntellisenseHostFlags
 };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
   
 |メンバー|説明|  
 |-------------|-----------------|  
-|`IHF_READONLYCONTEXT`|コンテキスト バッファーは、読み取り専用です。|  
-|`IHF_NOSEPARATESUBJECT`|件名のテキストはありません。 コンテキスト バッファーには、IntelliSense のターゲットが含まれています (意味`!IHF_READONLYCONTEXT`)。|  
+|`IHF_READONLYCONTEXT`|コンテキスト バッファーとは、読み取り専用です。|  
+|`IHF_NOSEPARATESUBJECT`|件名テキストはありません。 コンテキスト バッファーには、IntelliSense とターゲットが含まれています (意味`!IHF_READONLYCONTEXT`)。|  
 |`IHF_SINGLELINESUBJECT`|件名のテキストは、マルチ ラインことはできません。|  
 |`IHF_FORCECOMMITTOCONTEXT`|`CanCommitIntoReadOnlyBuffer` と同じ。|  
-|`IHF_OVERTYPE`|(サブジェクトまたはコンテキスト) での編集は、上書きモードで行う必要があります。|  
+|`IHF_OVERTYPE`|編集 (サブジェクトまたはコンテキスト) では、上書きモードで行う必要があります。|  
   
 ## <a name="requirements"></a>要件  
  SingleFileeditor.idl  

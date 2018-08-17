@@ -11,27 +11,27 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 91a3651dcc7fd16bec2e094fd152242e67fa2d70
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: c8638f9398be823b05d2575157c1992e230674f9
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056912"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008669"
 ---
-# <a name="formatting-python-code"></a>Python コードの書式設定
+# <a name="format-python-code"></a>Python コードの書式を設定する
 
-Visual Studio を使用すると、事前に構成した書式設定オプションに合わせて、コードの書式をすばやく設定できます。
+Visual Studio を使用すると、事前に構成した書式設定オプションに合わせて、すばやくコードの書式を再設定できます。
 
-- 選択範囲の書式を設定するには、**[編集] > [詳細設定] > [選択範囲のフォーマット]** を選択するか、Ctrl + E、F キーを押します。
-- ファイル全体の書式を設定するには、**[編集] > [詳細設定] > [ドキュメントのフォーマット]** を選択するか、Ctrl + E、D キーを押します。
+- 選択範囲の書式を設定するには、**[編集]** > **[詳細設定]** > **[選択範囲のフォーマット]** を選択するか、**Ctrl** + **E**  >  **F** キーを押します。
+- ファイル全体の書式を設定するには、**[編集]** > **[詳細設定]** > **[ドキュメントのフォーマット]** を選択するか、**Ctrl** + **E**  >  **D** キーを押します。
 
-オプションを設定するには、**[ツール]、[オプション]、[テキスト エディター]、[Python] の順に選択し、[書式設定]** とその入れ子のタブで設定します。 これらのオプションを表示するには、**[すべての設定を表示]** を選択する必要があります。
+オプションは、**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[Python]** > **[書式設定]** およびその入れ子のタブを使用して設定します。 これらのオプションを表示するには、**[すべての設定を表示]** を選択する必要があります。
 
 ![Visual Studio の Python の [書式設定] オプション](media/options-editor-formatting.png)
 
 [書式設定] オプションは、既定で [PEP 8 スタイル ガイド](http://www.python.org/dev/peps/pep-0008/)のスーパーセットと一致するように設定されています。 **[全般]** タブでは、どのような場合に書式設定を適用するかを指定します。この記事では、他の 3 つのタブについて説明します。
 
-[Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集] > [詳細設定]** には、[[コメントを段落幅に合わせる]](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
+[Visual Studio の Python のサポート](installing-python-support-in-visual-studio.md)で、**[編集]**  >  **[詳細設定]** メニューに [**[コメントを段落幅に合わせる]**](#fill-comment-paragraph-command) という便利なコマンドも追加されています。これについても後で説明します。
 
 ## <a name="spacing"></a>スペース
 
@@ -45,41 +45,41 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 | クラス定義のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- | 
-| Insert space between a class declaration's name and bases list (クラス宣言の名前と基底クラス リストの間にスペースを挿入する) | `class X (object): pass` | `class X(object): pass` | 
-| Insert space within bases list parentheses (基底クラス リストのかっこ内にスペースを挿入する) | `class X( object ): pass` | `class X(object): pass` |
-| Insert space within empty bases list parentheses (空の基底クラス リストのかっこ内にスペースを挿入する) | `class X( ): pass` | `class X(): pass` |
+| **Insert space between a class declaration's name and bases list \(クラス宣言の名前と基底クラス リストの間に空白を挿入する\)** | `class X (object): pass` | `class X(object): pass` | 
+| **基本リストのかっこ内に空白を挿入する** | `class X( object ): pass` | `class X(object): pass` |
+| **空の基本リストのかっこ内に空白を挿入する** | `class X( ): pass` | `class X(): pass` |
 
 <br/>
 
 | 関数定義のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert space between a function declaration's name and parameter list (関数宣言の名前とパラメーター リストの間にスペースを挿入する) | `def X (): pass` | `def X(): pass` | 
-| Insert space within parameter list parentheses (パラメーター リストのかっこ内にスペースを挿入する) | `def X( a, b ): pass` | `def X(a, b): pass` |
-| Insert space within empty parameter list parentheses (空のパラメーター リストのかっこ内にスペースを挿入する) | `def X( ): pass` | `def X(): pass` |
-| Insert spaces around '=' in default parameter values (既定のパラメーター値の '=' の前後にスペースを挿入する) | `includes X(a = 42): pass` | `includes X(a=42): pass` |
-| Insert space before and after return annotation operators (リターン注釈演算子の前後にスペースを挿入する) | `includes X() -> 42: pass` | `includes X()->42: pass` |
+| **Insert space between a function declaration's name and parameter list \(関数宣言の名前とパラメーター リストの間に空白を挿入する\)** | `def X (): pass` | `def X(): pass` | 
+| **パラメーター リストのかっこ内にスペースを挿入する** | `def X( a, b ): pass` | `def X(a, b): pass` |
+| **空のパラメーター リストのかっこ内にスペースを挿入する** | `def X( ): pass` | `def X(): pass` |
+| **Insert spaces around '=' in default parameter values \(既定のパラメーター値の '=' の前後にスペースを挿入する\)** | `includes X(a = 42): pass` | `includes X(a=42): pass` |
+| **Insert space before and after return annotation operators \(リターン注釈演算子の前後にスペースを挿入する\)** | `includes X() -> 42: pass` | `includes X()->42: pass` |
 
 <br/>
 
 | 演算子のオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert spaces around binary operators (バイナリ演算子の前後にスペースを挿入する) | `a + b` | `a+b` |
-| Insert spaces around assignments (代入演算子の前後にスペースを挿入する) | `a = b` | `a=b` |
+| **バイナリ演算子の前後に空白を挿入する** | `a + b` | `a+b` |
+| **代入の前後に空白を挿入する** | `a = b` | `a=b` |
 
 <br/>
 
 | 式のスペースのオプション | チェック済み | オフにした場合 |
 | --- | --- | --- |
-| Insert space between a function call's name and argument list (関数宣言の名前と引数リストの間にスペースを挿入する) | `X ()` | `X()` |
-| 空の引数リストのかっこ内にスペースを挿入する | `X( )` | `X()` |
-| 引数リストのかっこ内にスペースを挿入する | `X( a, b )` | `X(a, b)` |
-| Insert space within parentheses of expression (式のかっこ内にスペースを挿入する) | `( a )` | `(a)` |
-| Insert space within empty tuple parentheses (空のタプルのかっこ内にスペースを挿入する) | `( )` | `()` |
-| Insert space within tuple parentheses (タプルのかっこ内にスペースを挿入する) | `( a, b )` | `(a, b)` |
-| 空の角かっこ内にスペースを挿入する | `[ ]` | `[]` |
-| Insert spaces within square brackets of lists (リストの角かっこ内にスペースを挿入する) | `[ a, b ]` | `[a, b]` |
-| 始め角かっこの前にスペースを挿入する | `x [i]` | `x[i]` |
-| 角かっこ内にスペースを挿入する | `x[ i ]` | `x[i]` |
+| **Insert space between a function call's name and argument list \(関数呼び出しの名前と引数リストの間にスペースを挿入する\)** | `X ()` | `X()` |
+| **空の引数リストのかっこ内にスペースを挿入する** | `X( )` | `X()` |
+| **引数リストのかっこ内にスペースを挿入する** | `X( a, b )` | `X(a, b)` |
+| **Insert space within parentheses of expression \(式のかっこ内にスペースを挿入する\)** | `( a )` | `(a)` |
+| **Insert space within empty tuple parentheses \(空のタプルのかっこ内にスペースを挿入する\)** | `( )` | `()` |
+| **タプルのかっこの内側に空白を挿入する** | `( a, b )` | `(a, b)` |
+| **空の角かっこ内にスペースを挿入する** | `[ ]` | `[]` |
+| **Insert spaces within square brackets of lists \(リストの角かっこ内にスペースを挿入する\)** | `[ a, b ]` | `[a, b]` |
+| **Insert space before open square bracket \(開始角かっこの前にスペースを挿入する\)** | `x [i]` | `x[i]` |
+| **角かっこ内にスペースを挿入する** | `x[ i ]` | `x[i]` |
 
 <br/>
 
@@ -89,9 +89,9 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 | オプション | 書式設定前 | 書式設定後 |
 | --- | --- | --- |
-| Place imported modules on new line (インポートされたモジュールを新しい行に配置する) | `import sys, pickle` | `import sys`<br/>`import pickle` |
-| Remove unnecessary semicolons (不要なセミコロンを削除する) | `x = 42;` | `x = 42` |
-| Place multiple statements on new lines (複数のステートメントを新しい行に配置する) | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
+| **Place imported modules on new line \(インポートされたモジュールを新しい行に配置する\)** | `import sys, pickle` | `import sys`<br/>`import pickle` |
+| **不要なセミコロンを削除する** | `x = 42;` | `x = 42` |
+| **Place multiple statements on new lines \(複数のステートメントを新しい行に配置する\)** | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
 
 ## <a name="wrapping"></a>折り返し
 
@@ -110,7 +110,7 @@ Visual Studio を使用すると、事前に構成した書式設定オプショ
 
 ## <a name="fill-comment-paragraph-command"></a>[Fill Comment Paragraph(コメント段落をページ幅に合わせる)] コマンド
 
-**[編集] > [詳細設定] > [Fill Comment Paragraph (コメント段落をページ幅に合わせる)]** (Ctrl + E、P) を設定すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり長すぎる行を複数の行に分けたりできます。
+**[編集]** > **[詳細設定]** > **[コメントを段落幅に合わせる]** (**Ctrl** + **E** > **P**) を使用すると、コメント テキストがリフローおよび書式設定され、複数の短い行を 1 行にまとめたり、長い行を複数の行に分けたりできます。
 
 例:
 

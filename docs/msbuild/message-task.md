@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11e4318b9a59f51e7e20ce36aa39d33d4b96725a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: a0b61bf9def1ba37667302850527715eed1db4ff
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077175"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178333"
 ---
 # <a name="message-task"></a>Message タスク
 ビルド中のメッセージをログに記録します。  

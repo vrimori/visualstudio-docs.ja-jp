@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ede6e8d3dde3b8a6f76164b02457a98102bcbac7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f68ab9b183119c18bed51bb7faaa86993d7f34ce
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31965547"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179880"
 ---
 # <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>方法: ロード テスト エディターを使用してしきい値規則を追加する
 
@@ -36,14 +36,13 @@ ms.locfileid: "31965547"
 
      **[しきい値規則の追加]** ダイアログ ボックスが表示されます。
 
-5.  [定数の比較] および [カウンターの比較] の 2 種類の規則から選択します。 適切な種類を選択し、値を設定します。
+5.  **[定数の比較]** および **[カウンターの比較]** の 2 種類の規則から選択します。 適切な種類を選択し、値を設定します。
 
     > [!NOTE]
     > **[しきい値を超えたときに警告]** プロパティは、しきい値を上回ると問題であることを示す場合は **True** に、しきい値を下回ると問題であることを示す場合は **False** に設定します。
 
 ## <a name="see-also"></a>関連項目
 
-- [しきい値規則違反の分析](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [しきい値規則違反](../test/analyze-threshold-rule-violations-in-load-tests.md)
 - [ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
-- [ロード テストでのコンピューターのカウンター セットとしきい値規則の指定](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)

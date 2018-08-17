@@ -12,20 +12,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b12d0ae775d37a436898bb34acca0c7f4a50e649
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 841a7d7bbf10fc4bba5ed99d7ffacf1b76f3a079
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37059431"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204181"
 ---
 # <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory を使用する MSBuild インライン タスク
-[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) と同様に、RoslynCodeTaskFactory ではクロス プラットフォームの Roslyn コンパイラを使用して、インライン タスクとして使用するためのメモリ内タスク アセンブリを生成します。  RolynCodeTaskFactory タスクは、.NET Standard をターゲットとし、.NET Framework や .NET Core のランタイムだけでなく、Linux や Mac OS などの他のプラットフォームでも機能します。
+[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) と同様に、RoslynCodeTaskFactory ではクロス プラットフォームの Roslyn コンパイラを使用して、インライン タスクとして使用するためのメモリ内タスク アセンブリを生成します。  RoslynCodeTaskFactory タスクは、.NET Standard をターゲットとし、.NET Framework や .NET Core のランタイムだけでなく、Linux や Mac OS などの他のプラットフォームでも機能します。
 
-**注:** `RolynCodeTaskFactory` は MSBuild 15.8 以降でのみ使用できます。
+>[!NOTE]
+>RoslynCodeTaskFactory は MSBuild 15.8 以降でのみ使用できます。
   
 ## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory を使用したインライン タスクの構造
- RoslynCodeTaskFactory インライン タスクは、[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) とまったく同じ方法で宣言されています。 唯一の違いは、.NET Standard をターゲットとしていることです。  インライン タスクとそれを格納する `UsingTask` 要素は通常、.targets ファイルに含められ、必要に応じて他のプロジェクト ファイルにインポートされます。 基本的なインライン タスクの例を次に示します。 このタスクでは何も実行されないことに注意してください。  
+ RoslynCodeTaskFactory インライン タスクは、[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md) とまったく同じ方法で宣言されています。唯一の違いは、.NET Standard をターゲットとしていることです。  インライン タスクとそれを格納する `UsingTask` 要素は通常、*.targets* ファイルに含められ、必要に応じて他のプロジェクト ファイルにインポートされます。 基本的なインライン タスクの例を次に示します。 このタスクでは何も実行されないことに注意してください。  
   
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -52,39 +53,39 @@ ms.locfileid: "37059431"
 -   `TaskFactory` 属性は、インライン タスク ファクトリを実装するクラスの名前を指定します。  
   
 -   `AssemblyFile` 属性は、インライン タスク ファクトリの場所を指定します。 代わりに、`AssemblyName` 属性を使用してインライン タスク ファクトリ クラスの完全修飾名を指定することもできます。これは通常、グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に配置されます。  
+
+`DoNothing` タスクの残りの要素は空になっていますが、ここではインライン タスクの順序と構造を示すために含めてあります。 具体的な例については、この後の例を参照してください。  
   
- `DoNothing` タスクの残りの要素は空になっていますが、ここではインライン タスクの順序と構造を示すために含めてあります。 具体的な例については、この後の例を参照してください。  
-  
--   `ParameterGroup` 要素は省略可能です。 指定する場合は、タスクのパラメーターを宣言します。 入力パラメーターと出力パラメーターの詳細については、この後の「入力パラメーターと出力パラメーター」を参照してください。  
+-   `ParameterGroup` 要素は省略可能です。 指定する場合は、タスクのパラメーターを宣言します。 入力パラメーターと出力パラメーターの詳細については、この後の「[入力パラメーターと出力パラメーター](#input-and-output-parameters)」を参照してください。  
   
 -   `Task` 要素にはタスクのソース コードを記述して格納します。  
   
 -   `Reference` 要素は、コードで使用する .NET アセンブリへの参照を指定します。 これは、Visual Studio でプロジェクトに参照を追加することに相当します。 `Include` 属性は参照アセンブリのパスを指定します。  
   
 -   `Using` 要素には、アクセスする名前空間をリストします。 これは、Visual C# の `Using` ステートメントに似ています。 `Namespace` 属性は、含める名前空間を指定します。  
-  
- `Reference` 要素と `Using` 要素は言語に依存しません。 インライン タスクは、サポートされているどの .NET CodeDom 言語 (Visual Basic や Visual C# など) でも記述できます。  
+
+`Reference` 要素と `Using` 要素は言語に依存しません。 インライン タスクは、サポートされているどの .NET CodeDom 言語 (Visual Basic や Visual C# など) でも記述できます。  
   
 > [!NOTE]
 >  `Task` 要素に含まれる要素はタスク ファクトリによって異なります。この例では、コード タスク ファクトリが格納されています。  
   
 ### <a name="code-element"></a>コード要素  
- `Task` 要素内の最後の子要素は `Code` 要素です。 `Code` 要素では、タスクにコンパイルするコードを記述するか参照します。 `Code` 要素に含める内容は、タスクを記述する方法に応じて異なります。  
-  
- `Language` 属性は、コードを記述する言語を指定します。 指定できる値は、`cs` (C# の場合) または `vb` (Visual Basic の場合) です。  
-  
- `Type` 属性は、`Code` 要素内のコードの種類を指定します。  
+`Task` 要素内の最後の子要素は `Code` 要素です。 `Code` 要素では、タスクにコンパイルするコードを記述するか参照します。 `Code` 要素に含める内容は、タスクを記述する方法に応じて異なります。  
+
+`Language` 属性は、コードを記述する言語を指定します。 指定できる値は、`cs` (C# の場合) または `vb` (Visual Basic の場合) です。  
+
+`Type` 属性は、`Code` 要素内のコードの種類を指定します。  
   
 -   `Type` の値が `Class` の場合、`Code` 要素には <xref:Microsoft.Build.Framework.ITask> インターフェイスから派生したクラスのコードが含まれます。  
   
 -   `Type` の値が `Method` の場合、コードは `Execute` インターフェイスの <xref:Microsoft.Build.Framework.ITask> メソッドのオーバーライドを定義します。  
   
 -   `Type` の値が `Fragment` の場合、コードは `Execute` メソッドの内容を定義します。ただし、シグネチャや `return` ステートメントは含まれません。  
-  
- コード自体は通常、`<![CDATA[` マーカーと `]]>` マーカーの間に記述します。 コードは CDATA セクション内に記述するため、"\<" や ">" などの予約文字のエスケープを気にする必要はありません。  
-  
- また、`Source` 要素の `Code` 属性を使用して、タスクのコードを含むファイルの場所を指定することもできます。 ソース ファイルのコードの種類は、`Type` 属性で指定された種類である必要があります。 `Source` 属性が指定されている場合、`Type` の既定値は `Class` です。 `Source` が指定されていない場合の既定値は `Fragment` です。  
-  
+
+コード自体は通常、`<![CDATA[` マーカーと `]]>` マーカーの間に記述します。 コードは CDATA セクション内に記述するため、"\<" や ">" などの予約文字のエスケープを気にする必要はありません。  
+
+また、`Source` 要素の `Code` 属性を使用して、タスクのコードを含むファイルの場所を指定することもできます。 ソース ファイルのコードの種類は、`Type` 属性で指定された種類である必要があります。 `Source` 属性が指定されている場合、`Type` の既定値は `Class` です。 `Source` が指定されていない場合の既定値は `Fragment` です。  
+
 > [!NOTE]
 >  ソース ファイル内のタスク クラスを定義する場合は、クラス名が、対応する [UsingTask](../msbuild/usingtask-element-msbuild.md) 要素の `TaskName` 属性と一致する必要があります。  
   
@@ -113,9 +114,9 @@ Log.LogError("Hello, world!");
   </UsingTask>  
 </Project>  
 ```  
-  
- HelloWorld タスクを HelloWorld.targets という名前のファイルに保存すると、次のようにしてプロジェクトから呼び出すことができます。  
-  
+
+HelloWorld タスクを *HelloWorld.targets* という名前のファイルに保存すると、次のようにしてプロジェクトから呼び出すことができます。  
+
 ```xml  
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <Import Project="HelloWorld.targets" />  
@@ -133,17 +134,17 @@ Log.LogError("Hello, world!");
     <Text />  
 </ParameterGroup>  
 ```  
-  
- パラメーターには、以下の 1 つ以上の属性を含めることができます。  
-  
+
+パラメーターには、以下の 1 つ以上の属性を含めることができます。  
+
 -   `Required` は省略可能な属性で、既定値は `false` です。 `true` の場合、そのパラメーターは必須で、タスクを呼び出す前に値を指定する必要があります。  
   
 -   `ParameterType` は省略可能な属性で、既定値は `System.String` です。 System.Convert.ChangeType を使用して文字列との間で変換できる項目または値の完全修飾型に設定できます  (つまり、外部タスクとの受け渡しが可能なすべての型)。  
   
 -   `Output` は省略可能な属性で、既定値は `false` です。 `true` の場合、そのパラメーターの値を、Execute メソッドから戻る前に指定する必要があります。  
-  
+
 たとえば、オブジェクトに適用された  
-  
+
 ```xml  
 <ParameterGroup>  
     <Expression Required="true" />  
@@ -151,16 +152,16 @@ Log.LogError("Hello, world!");
     <Tally ParameterType="System.Int32" Output="true" />  
 </ParameterGroup>  
 ```  
-  
+
 この例では、以下の 3 つのパラメーターを定義しています。  
-  
+
 -   `Expression` は、System.String 型の必須の入力パラメーターです。  
   
 -   `Files` は、必須の項目リスト入力パラメーターです。  
   
 -   `Tally` は、System.Int32 型の出力パラメーターです。  
-  
- `Code` 要素の `Type` 属性が `Fragment` または `Method` の場合、すべてのパラメーターに対して自動的にプロパティが作成されます。 それ以外の場合は、タスクのソース コードで明示的にプロパティを宣言する必要があります。プロパティはパラメーター定義と完全に一致している必要があります。  
+
+`Code` 要素の `Type` 属性が `Fragment` または `Method` の場合、すべてのパラメーターに対して自動的にプロパティが作成されます。 それ以外の場合は、タスクのソース コードで明示的にプロパティを宣言する必要があります。プロパティはパラメーター定義と完全に一致している必要があります。  
   
 ## <a name="example"></a>例  
  次のインライン タスクは、いくつかのメッセージを記録し、文字列を返します。  
@@ -199,8 +200,8 @@ Log.LogError("Hello, world!");
 </Project>  
 ```  
 
- これらのインライン タスクは、パスを結合してファイル名を取得できます。  
-  
+これらのインライン タスクは、パスを結合してファイル名を取得できます。  
+
 ```xml  
 <Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="15.0">  
   
@@ -253,7 +254,7 @@ Log.LogError("Hello, world!");
     </Target>  
 </Project>  
 ```  
-  
-## <a name="see-also"></a>参照  
+
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [チュートリアル: インライン タスクの作成](../msbuild/walkthrough-creating-an-inline-task.md)
+ [チュートリアル: インライン タスクを作成する](../msbuild/walkthrough-creating-an-inline-task.md)

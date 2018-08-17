@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス |Microsoft ドキュメント'
+title: 'チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスする |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,26 +13,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b888136f51e7893c6ad44ab888d8079ee92d8edf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8ed4343139b3e59dfba7adc71b1c91cdf01c13db
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139641"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586249"
 ---
-# <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>チュートリアル: DTE オブジェクトからエディター拡張機能へのアクセス
-Vspackage を呼び出して、DTE オブジェクトを取得することができます、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッドです。 Managed Extensibility Framework (MEF) 拡張機能ではインポートできる<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>を呼び出すと、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>の型を持つメソッド<xref:EnvDTE.DTE>です。  
+# <a name="walkthrough-accessing-the-dte-object-from-an-editor-extension"></a>チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスします。
+Vspackage では、呼び出すことによって、DTE オブジェクトを取得できます、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> DTE オブジェクトの型を持つメソッド。 Managed Extensibility Framework (MEF) 拡張機能でインポートできる<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>を呼び出して、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>メソッドの型を持つ<xref:EnvDTE.DTE>します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)です。  
+ このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  
   
 ## <a name="getting-the-dte-object"></a>DTE オブジェクトを取得します。  
   
-#### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>DTE オブジェクトをサービス プロバイダーから取得するには  
+### <a name="to-get-the-dte-object-from-the-serviceprovider"></a>DTE オブジェクトをサービス プロバイダーから取得するには  
   
-1.  という名前の C# の場合は、VSIX プロジェクトを作成する`DTETest`です。 エディター分類子項目テンプレートを追加し、名前`DTETest`です。 詳細については、次を参照してください。[エディター項目テンプレートに、拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
+1.  という名前の c# VSIX プロジェクトを作成する`DTETest`します。 エディター分類子の項目テンプレートを追加し、名前`DTETest`します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
-2.  プロジェクトに次のアセンブリ参照を追加します。  
+2.  プロジェクトには、次のアセンブリ参照を追加します。  
   
     -   EnvDTE  
   
@@ -40,7 +40,7 @@ Vspackage を呼び出して、DTE オブジェクトを取得することがで
   
     -   Microsoft.VisualStudio.Shell.Immutable.10.0  
   
-3.  DTETest.cs ファイルに移動し、次の追加`using`ディレクティブ。  
+3.  移動して、 *DTETest.cs*ファイルを開き、次の追加`using`ディレクティブ。  
   
     ```csharp  
     using EnvDTE;  
@@ -49,7 +49,7 @@ Vspackage を呼び出して、DTE オブジェクトを取得することがで
   
     ```  
   
-4.  `GetDTEProvider`クラス、インポート、<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>です。  
+4.  `GetDTEProvider`クラスは、インポート、<xref:Microsoft.VisualStudio.Shell.SVsServiceProvider>します。  
   
     ```csharp  
     [Import]  
@@ -64,7 +64,7 @@ Vspackage を呼び出して、DTE オブジェクトを取得することがで
   
     ```  
   
-6.  使用する必要がある場合、<xref:EnvDTE80.DTE2>インターフェイス、DTE オブジェクトをそれをキャストすることができます。  
+6.  使用した場合、<xref:EnvDTE80.DTE2>インターフェイス、DTE オブジェクトをキャストすることができます。  
   
 ## <a name="see-also"></a>関連項目  
  [言語サービスとエディターの拡張ポイント](../extensibility/language-service-and-editor-extension-points.md)

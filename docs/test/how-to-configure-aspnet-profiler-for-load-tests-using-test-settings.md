@@ -10,14 +10,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8910ee5aa73e057849ad6b72b67c8b27ba9b0e6e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b12588b4e2c22a638193b7f1b0bc48e5f7dab6b7
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31969372"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379807"
 ---
-# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用して、ロード テスト用の ASP.NET プロファイラーを構成する
+# <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>方法: Visual Studio でテストの設定を使用してロード テスト用の ASP.NET プロファイラーを構成する
 
 ASP.NET プロファイラー診断データ アダプターを使用して、ASP.NET プロファイラー情報を収集できます。 この診断データ アダプターは、ASP.NET アプリケーションのパフォーマンス データを収集します。
 
@@ -29,7 +29,7 @@ ASP.NET プロファイラー診断データ アダプターを使用すると�
 > [!NOTE]
 > ASP.NET プロファイラー診断データ アダプターは、インターネット インフォメーション サービス (IIS) プロセスをプロファイルします。 そのため、開発用 Web サーバーに対しては機能しません。 ロード テスト内で Web サイトをプロファイルするには、IIS が実行されているコンピューターにテスト エージェントをインストールする必要があります。 テスト エージェントはロードを生成しませんが、収集のみを目的としたエージェントとなります。 詳細については、[テスト エージェントのインストールと構成](../test/lab-management/install-configure-test-agents.md)に関するページを参照してください。
 
-詳細については、「[方法: 分散ロード テスト用のテスト設定の作成](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
+詳細については、「[方法: 配布されたロード テストのテスト設定を作成する](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)」を参照してください。
 
 次の手順では、ASP.NET プロファイラーの診断データ アダプターを構成する方法を説明します。
 
@@ -52,7 +52,7 @@ ASP.NET プロファイラー診断データ アダプターを使用すると�
 
 4.  階層の相互作用のプロファイルを有効にするには、**[階層の相互作用のプロファイルを有効にする]** を選択します。
 
-     階層の相互作用のプロファイルでは、成果物 (MyPage.aspx、CompanyLogo.gif など) ごとに Web サーバーに送信される要求の数と、各要求の処理に要する時間がカウントされます。 さらに、ページ要求の一環として使用された ADO.NET 接続と、その要求処理の一環としてクエリやストアド プロシージャ呼び出しが実行された回数が収集されます。
+     階層の相互作用のプロファイルでは、成果物 (*MyPage.aspx*、*CompanyLogo.gif* など) ごとに Web サーバーに送信される要求の数と、各要求の処理に要する時間がカウントされます。 さらに、ページ要求の一環として使用された ADO.NET 接続と、その要求処理の一環としてクエリやストアド プロシージャ呼び出しが実行された回数が収集されます。
 
      2 つの異なるタイミング情報のセットが収集されます。
 

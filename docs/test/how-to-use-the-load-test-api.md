@@ -12,14 +12,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3a5204848c24a25514fc8eb30a81dbca704a77a3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7454b75054f06bb35237b344552a268eed3798e1
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31969645"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379277"
 ---
-# <a name="how-to-use-the-load-test-api"></a>方法 : ロード テスト API を使用する
+# <a name="how-to-use-the-load-test-api"></a>方法: ロード テスト API を使用する
 
 Visual Studio では、ロード テストの制御や拡張を行うことができるロード テスト プラグインがサポートされています。 ロード テスト プラグインは、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.ILoadTestPlugin> 名前空間にある <xref:Microsoft.VisualStudio.TestTools.LoadTesting> インターフェイスを実装するユーザー定義のクラスです。 ロード テスト プラグインを使用すると、カウンターやエラーしきい値に達した場合にロード テストを中止するなど、ロード テストのカスタム制御を行うことができます。 ユーザー定義のコードに対してロード テスト パラメーターの取得や設定を行うには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> クラスのプロパティを使用します。 ロード テストを実行するときに、通知用のデリゲートを割り当てるには、<xref:Microsoft.VisualStudio.TestTools.LoadTesting.LoadTest> クラスのイベントを使用します。
 
@@ -50,10 +50,10 @@ Web パフォーマンス テスト用のプラグインを作成することも
 
     2.  **[ロード テスト プラグインの追加]** ダイアログ ボックスが表示されます。
 
-    3.  [選択したプラグインのプロパティ] ペインで、実行時に使用するプラグインの初期値を設定します。
+    3.  **[選択したプラグインのプロパティ]** ペインで、実行時に使用するプラグインの初期値を設定します。
 
         > [!NOTE]
-        > プラグインのプロパティは、必要な数だけ公開できます。それをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定します。 ロード テスト プラグインのプロパティは、後で [プロパティ] ウィンドウを使用して編集することもできます。
+        > プラグインのプロパティは、必要な数だけ公開できます。それをパブリック、設定可能、および基本型 (整数型、ブール型、文字列型など) として設定します。 ロード テスト プラグインのプロパティは、後で **[プロパティ]** ウィンドウを使用して編集することもできます。
 
 9. ロード テストを実行します。
 
@@ -64,4 +64,4 @@ Web パフォーマンス テスト用のプラグインを作成することも
 - <xref:Microsoft.VisualStudio.TestTools.LoadTesting>
 - [ロード テスト用のカスタム コードおよびカスタム プラグインの作成](../test/create-custom-code-and-plug-ins-for-load-tests.md)
 - [方法: Web パフォーマンス テスト API を使用する](../test/how-to-use-the-web-performance-test-api.md)
-- [方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
+- [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)

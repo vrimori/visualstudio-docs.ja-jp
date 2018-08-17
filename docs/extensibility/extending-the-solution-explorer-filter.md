@@ -1,5 +1,5 @@
 ---
-title: ソリューション エクスプ ローラーのフィルターを拡張 |Microsoft ドキュメント
+title: ソリューション エクスプ ローラーのフィルターを拡張 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 890c3572bf556b92481be204f947b62e6d596264
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bf43243abc361df6c5b32b0e71e966c61a501b52
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31135510"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498789"
 ---
-# <a name="extending-the-solution-explorer-filter"></a>ソリューション エクスプ ローラーのフィルターを拡張します。
-拡張できます**ソリューション エクスプ ローラー**別のファイルを非表示機能をフィルター処理します。 たとえば、c# クラス ファクトリ内のファイルだけを表示するフィルターを作成することができます、**ソリューション エクスプ ローラー**ように、このチュートリアルで説明します。  
+# <a name="extend-the-solution-explorer-filter"></a>ソリューション エクスプ ローラーのフィルターを拡張します。
+拡張する**ソリューション エクスプ ローラー**別のファイルを非表示機能をフィルター処理します。 たとえば、c# クラス ファクトリ内のファイルのみを表示するフィルターを作成することができます、**ソリューション エクスプ ローラー**、このチュートリアルで説明します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
+ Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
 ### <a name="create-a-visual-studio-package-project"></a>Visual Studio パッケージ プロジェクトを作成します。  
   
-1.  という名前の VSIX プロジェクトを作成する`FileFilter`です。 という名前のカスタム コマンド項目テンプレートを追加する**FileFilter**です。 詳細については、次を参照してください。[メニュー コマンドを使用して、拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)です。  
+1.  という名前の VSIX プロジェクトを作成する`FileFilter`します。 という名前のカスタム コマンド項目テンプレートを追加**FileFilter**します。 詳細については、次を参照してください。[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)します。  
   
-2.  参照を追加`System.ComponentModel.Composition`と`Microsoft.VisualStudio.Utilities`です。  
+2.  参照を追加`System.ComponentModel.Composition`と`Microsoft.VisualStudio.Utilities`します。  
   
-3.  表示されるメニュー コマンド、**ソリューション エクスプ ローラー**ツールバー。 FileFilterPackage.vsct ファイルを開きます。  
+3.  表示されるメニュー コマンド、**ソリューション エクスプ ローラー**ツールバー。 開く、 *FileFilterPackage.vsct*ファイル。  
   
-4.  変更、`<Button>`には、次のブロック。  
+4.  変更、`<Button>`次のブロック。  
   
     ```xml  
     <Button guid="guidFileFilterPackageCmdSet" id="FileFilterId" priority="0x0400" type="Button">  
@@ -49,32 +49,32 @@ ms.locfileid: "31135510"
   
 ### <a name="update-the-manifest-file"></a>マニフェスト ファイルを更新します。  
   
-1.  Source.extension.vsixmanifest ファイルでは、MEF コンポーネントである資産を追加します。  
+1.  *Source.extension.vsixmanifest*ファイルを MEF コンポーネントである資産を追加します。  
   
 2.  **資産** タブで、選択、**新規**ボタンをクリックします。  
   
-3.  **型**フィールドで選択**Microsoft.VisualStudio.MefComponent**です。  
+3.  **型**フィールドで選択**Microsoft.VisualStudio.MefComponent**します。  
   
-4.  **ソース**フィールドで選択**現在のソリューション内のプロジェクト**です。  
+4.  **ソース**フィールドで選択**現在のソリューションでプロジェクトを**します。  
   
-5.  **プロジェクト**フィールドで選択**FileFilter**を選択し、 **OK**ボタンをクリックします。  
+5.  **プロジェクト**フィールドで選択**FileFilter**、選択し、 **OK**ボタン。  
   
 ### <a name="add-the-filter-code"></a>フィルターのコードを追加します。  
   
-1.  いくつかの Guid を FileFilterPackageGuids.cs ファイルに追加します。  
+1.  追加するいくつかの Guid、 *FileFilterPackageGuids.cs*ファイル。  
   
     ```csharp  
     public const string guidFileFilterPackageCmdSetString = "00000000-0000-0000-0000-00000000"; // get your GUID from the .vsct file  
     public const int FileFilterId = 0x100;  
     ```  
   
-2.  FileNameFilter.cs をという名前のファイル プロジェクトにクラス ファイルを追加します。  
+2.  という名前のファイル プロジェクトにクラス ファイルを追加*FileNameFilter.cs*します。  
   
 3.  空の名前空間と空のクラスを次のコードに置き換えます。  
   
      `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)`メソッドは、ソリューションのルートを含むコレクションを受け取ります (`rootItems`) し、フィルターに含まれる項目のコレクションを返します。  
   
-     `ShouldIncludeInFilter`メソッド内の項目をフィルター処理、**ソリューション エクスプ ローラー**基にあるという条件で指定した階層。  
+     `ShouldIncludeInFilter`メソッド内の項目をフィルター処理、**ソリューション エクスプ ローラー**階層が基づくことを条件に指定します。  
   
     ```csharp  
     using System;  
@@ -161,7 +161,7 @@ ms.locfileid: "31135510"
   
     ```  
   
-4.  FileFilter.cs では、FileFilter コンス トラクターから、コマンドの配置と処理コードを削除します。 結果は、次のようになります。  
+4.  *FileFilter.cs*FileFilter コンス トラクターからコードを処理、コマンドの配置を削除します。 このよう、結果になります。  
   
     ```csharp  
     private FileFilter(Package package)  
@@ -175,9 +175,9 @@ ms.locfileid: "31135510"
     }  
     ```  
   
-     ShowMessageBox() メソッドを削除します。  
+     削除、`ShowMessageBox()`メソッドもします。  
   
-5.  FileFilterPackage、cs では、次のように Initialize() メソッドのコードを置き換えます。  
+5.  *FileFilterPackage.cs*、コードに置き換えます、`Initialize()`を次のメソッド。  
   
     ```csharp  
     protected override void Initialize()  
@@ -187,12 +187,12 @@ ms.locfileid: "31135510"
     }  
     ```  
   
-### <a name="test-your-code"></a>コードをテストします。  
+### <a name="test-your-code"></a>コードをテストする  
   
-1.  プロジェクトをビルドして実行します。 Visual Studio の 2 番目のインスタンスが表示されます。 これは、実験用インスタンスで呼び出されます。  
+1.  プロジェクトをビルドして実行します。 Visual Studio の 2 番目のインスタンスが表示されます。 これは、実験用インスタンスと呼ばれます。  
   
 2.  Visual Studio の実験用インスタンスの c# プロジェクトを開きます。  
   
-3.  ソリューション エクスプ ローラーのツールバーに追加したボタンを探します。 左から 4 番目のボタンになります。  
+3.  追加したボタンの表示、**ソリューション エクスプ ローラー**ツールバー。 左から 4 番目のボタンが必要です。  
   
-4.  ボタンをクリックすると、すべてのファイル フィルターで、除外する必要があり、「すべての項目がフィルター選択されたビューからです」が表示されます。 ソリューション エクスプ ローラーでします。
+4.  ボタンをクリックすると、すべてのファイル フィルターで除外される必要があります、ことがわかります**ビューからすべての項目がフィルター処理されました。** **ソリューション エクスプ ローラー**します。

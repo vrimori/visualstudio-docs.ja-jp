@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Azure の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 00a69bf03c47ddf57b2b45ba1f3d9e2547132521
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 2f9a0ed97cc0792387e61bfe15e6bb94cd5e1c57
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280658"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379737"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -22,7 +22,7 @@ ms.locfileid: "36280658"
 
 Visual Studio サブスクライバーは、追加料金なしで Microsoft Azure を使うことができます。  [月々の Azure クレジット](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)で、Azure が開発/テストのための個人用サンドボックスになります。  仮想マシン、クラウド サービス、その他の Azure リソースをプロビジョニングできます。  クレジットの額はサブスクリプションのレベルによって異なります。
 
-## <a name="eligibililty"></a>サブスクリプション
+## <a name="eligibility"></a>特典を受ける条件
 
 | サブスクリプション レベル/プログラム                                 | 特長                     | 更新可能かどうか                                                   |
 |--------------------------------------------------------------|-----------------------------|--------------------------------------------------------------|

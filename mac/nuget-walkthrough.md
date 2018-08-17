@@ -5,12 +5,12 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
-ms.openlocfilehash: f251080351f1e448d250798c4f9a758114a6e5ab
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 2bdff15b101b9a9c916c8ba98cfd4964ca0f3189
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957493"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380941"
 ---
 # <a name="including-a-nuget-package-in-your-project"></a>プロジェクトに NuGet パッケージを含める
 
@@ -60,7 +60,7 @@ NuGet パッケージが追加され、プロジェクト参照が更新され�
 必ず、必要な `using` ディレクティブをファイルの先頭に追加してください。
 
 ```csharp
-using Newtownsoft.json;
+using Newtonsoft.Json;
 ```
 
 ほとんどの NuGet では、README や Nuget ソースへのプロジェクト ページ リンクなどの追加情報が提供されます。 通常は、[パッケージを追加] ページのパッケージの宣伝文にこのリンクが表示されます。

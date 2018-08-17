@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b3678e418680d034b3699286fd6e6a182936c0f8
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: b745920a6afd4fb07d1904b7587e32350bb796a3
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945898"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177839"
 ---
 # <a name="al-assembly-linker-task"></a>AL (アセンブリ リンカー) タスク
 AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] と共に配布されるツールである *AL.exe* をラップします。 アセンブリ リンカー ツールは、モジュールまたはリソース ファイルである 1 つ以上のファイルから、マニフェストを含むアセンブリを作成するために使われます。 これらの機能はコンパイラおよび開発環境で既に提供されていることがあるので、ほとんどの場合、このタスクを直接使う必要はありません。 アセンブリ リンカーは、混合言語の開発から生成されるものなど、複数のコンポーネント ファイルから 1 つのアセンブリを作成する必要がある開発者に適しています。 このタスクでは、複数のモジュールが 1 つのアセンブリ ファイルに結合されることはありません。生成されたアセンブリを正しく読み込むためには、やはり個々のモジュールを配布して使用できるようにする必要があります。 *AL.exe* について詳しくは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」をご覧ください。  
@@ -59,7 +59,7 @@ AL タスクは、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)
 |`ProductVersion`|省略可能な `String` 型のパラメーターです。<br /><br /> アセンブリの `ProductVersion` フィールドに文字列を指定します。 詳しくは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」で `/productv[ersion]` オプションのドキュメントをご覧ください。|  
 |`ResponseFiles`|省略可能な `String[]` 型のパラメーターです。<br /><br /> アセンブリ リンカーに渡す追加のオプションが含まれる応答ファイルを指定します。|  
 |`SdkToolsPath`|省略可能な `String` 型のパラメーターです。<br /><br /> resgen.exe などの SDK ツールのパスを指定します。|  
-|`SourceModules`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリにコンパイルする 1 つ以上のモジュール。 モジュールは生成されるアセンブリのマニフェストに列記され、アセンブリを読み込むにはモジュールを配布して使用できるようにする必要があります。 このパラメーターに渡すアイテムには、`Target` という名前の追加メタデータを指定できます。このメタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定します。その後は、この新しいファイルがアセンブリにコンパイルされます。 詳しくは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」のドキュメントをご覧ください。 このパラメーターは、特定のスイッチを指定しないで Al.exe に渡されるモジュールのリストに対応します。|  
+|`SourceModules`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> アセンブリにコンパイルする 1 つ以上のモジュール。 モジュールは生成されるアセンブリのマニフェストに列記され、アセンブリを読み込むにはモジュールを配布して使用できるようにする必要があります。 このパラメーターに渡すアイテムには、`Target` という名前の追加メタデータを指定できます。このメタデータでは、タスクがファイルをコピーする先のパスとファイル名を指定します。その後は、この新しいファイルがアセンブリにコンパイルされます。 詳しくは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」のドキュメントをご覧ください。 このパラメーターは、特定のスイッチを指定しないで *Al.exe* に渡されるモジュールのリストに対応します。|  
 |`TargetType`|省略可能な `String` 型のパラメーターです。<br /><br /> 出力ファイルのファイル形式として、`library` (コード ライブラリ)、`exe` (コンソール アプリケーション)、または `win` (Windows ベースのアプリケーション) を指定します。 既定値は、`library` です。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」の `/t[arget]` オプションに対応します。|  
 |`TemplateFile`|省略可能な `String` 型のパラメーターです。<br /><br /> カルチャ フィールドを除く、すべてのアセンブリ メタデータの継承元であるアセンブリを指定します。 指定するアセンブリには厳密な名前が必要です。<br /><br /> `TemplateFile` パラメーターを指定して作成したアセンブリは、サテライト アセンブリになります。 このパラメーターは、「[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)」の `/template` オプションに対応します。|  
 |`Timeout`|省略可能な `Int32` 型のパラメーターです。<br /><br /> タスク実行を終了するまでの時間をミリ秒単位で指定します。 既定値は `Int.MaxValue` であり、タイムアウト期限がないことを示します。|  

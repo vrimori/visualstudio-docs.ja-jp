@@ -1,5 +1,5 @@
 ---
-title: プロジェクトを拡張 |Microsoft ドキュメント
+title: プロジェクトの拡張 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,43 +14,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdfa33417002b58e1c1c9718637438cb1210b5af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: aab8c9608ea6bd86742ac53008c11e8ae54a9e4f
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126797"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639127"
 ---
-# <a name="extending-projects"></a>プロジェクトの拡張
-プロジェクトおよびソリューションは、Visual Studio コードおよびリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細についてを見つけることができます[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)です。  
+# <a name="extend-projects"></a>プロジェクトを拡張します。
+プロジェクトおよびソリューションは、Visual Studio コードとリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細については見つかります[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)します。  
   
- 独自のプロジェクトの種類を作成するには、Visual Studio SDK と、Managed Package Framework プロジェクトの場合にダウンロードできます[プロジェクト用 Managed Package Framework](http://mpfproj12.codeplex.com/)です。 理解する独自のプロジェクトは、実装方法を参照してください。[新しいプロジェクトの生成: 短縮、パート 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md)と[新しいプロジェクトの生成: 短縮、パート 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)です。  
+ 独自のプロジェクトの種類を作成するには、Visual Studio SDK をダウンロードできるプロジェクトでは、Managed Package Framework[プロジェクト用 Managed Package Framework](http://mpfproj12.codeplex.com/)します。 理解するカスタム プロジェクトは、実装方法を参照してください。[新しいプロジェクトの生成: 内部、パート 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md)と[新しいプロジェクトの生成: 内部、パート 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
   
- このセクションのトピックでは、さまざまな種類の Visual Studio ソリューションを管理する方法とカスタム プロジェクトを作成する方法について説明します。  
+ このセクションのトピックでは、カスタムのプロジェクトを作成する方法とさまざまな種類の Visual Studio ソリューションを管理する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [基本的なプロジェクト システムの作成、パート 1](../extensibility/creating-a-basic-project-system-part-1.md)  
+ [基本的なプロジェクト システム、第 1 部を作成します。](../extensibility/creating-a-basic-project-system-part-1.md)  
  カスタム プロジェクト システムを作成する方法について説明します。  
   
- [基本的なプロジェクト システムの作成、パート 2](../extensibility/creating-a-basic-project-system-part-2.md)  
+ [基本的なプロジェクト システム、第 2 部を作成します。](../extensibility/creating-a-basic-project-system-part-2.md)  
  カスタム プロジェクト システムを作成する方法について説明します。  
   
- [プロジェクト ファイルでのデータの保存](../extensibility/saving-data-in-project-files.md)  
- 説明をプロジェクトに追加する方法 (. * proj) ファイル。  
+ [プロジェクト ファイル内のデータを保存します。](../extensibility/saving-data-in-project-files.md)  
+ 説明をプロジェクトに追加する方法 (*.* proj *) ファイル。  
   
- [実行時のプロジェクトのサブタイプの確認](../extensibility/verifying-subtypes-of-a-project-at-run-time.md)  
- 実行時に、プロジェクトのサブタイプを確認する方法について説明します。  
+ [実行時に、プロジェクトのサブタイプを確認します。](../extensibility/verifying-subtypes-of-a-project-at-run-time.md)  
+ 実行時に、プロジェクトのサブタイプであることを確認する方法について説明します。  
   
- [プロパティ ページの追加と削除](../extensibility/adding-and-removing-property-pages.md)  
+ [追加および削除のプロパティ ページ](../extensibility/adding-and-removing-property-pages.md)  
  カスタム プロジェクトのプロパティ ページをカスタマイズする方法について説明します。  
   
- [プロジェクト項目への属性の追加](../extensibility/adding-an-attribute-to-a-project-item.md)  
+ [プロジェクト項目に属性を追加します。](../extensibility/adding-an-attribute-to-a-project-item.md)  
  カスタム プロジェクト項目に属性を追加する方法について説明します。  
   
- [プロジェクト項目のプロパティの保存](../extensibility/persisting-the-property-of-a-project-item.md)  
+ [プロジェクト項目のプロパティを永続化します。](../extensibility/persisting-the-property-of-a-project-item.md)  
  カスタム プロジェクト項目のプロパティを永続化する方法について説明します。  
   
- [ユニバーサル Windows プロジェクトの管理](../extensibility/managing-universal-windows-projects.md)  
+ [ユニバーサル Windows プロジェクトを管理します。](../extensibility/managing-universal-windows-projects.md)  
  ユニバーサル プロジェクトを管理する方法について説明します。  
-  
-## <a name="related-sections"></a>関連項目

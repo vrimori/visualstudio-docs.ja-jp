@@ -15,12 +15,12 @@ f1_keywords:
 - VC.Project.AndroidDebugger.LaunchActivity
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 7d18125c6666a8eb68becd828da36ecdab077507
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: be240ed2cea05194d51040fd29a17de9a4472fc9
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31061488"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232645"
 ---
 # <a name="android-debugger-properties"></a>Android のデバッガーのプロパティ
 
@@ -28,7 +28,7 @@ ms.locfileid: "31061488"
 --- | ---| ---
 デバッガーの種類 | デバッグするコードの種類を指定します。 | **ネイティブのみ**<br>**Java のみ**<br>
 デバッグ ターゲット | デバッグに使うエミュレーターまたはデバイスを指定します。 エミュレーターが実行されていない場合は、"Android 仮想デバイス (AVD) マネージャー" を使ってデバイスを起動してください。
-起動するパッケージ | デバッグする .apk の場所を指定します。 アプリケーションをデバッグするときに特定のパッケージ (APK) が開始されるようにこのオプションを選択します。
-起動アクティビティ | アプリケーションの起動に使う Android アクティビティは、マニフェストで使われているものと同じでなければなりません。 AndroidManifest.xml からリストを取得して動的に設定するには、[適用] を押してください。
+起動するパッケージ | デバッグする *.apk* の場所を指定します。 アプリケーションをデバッグするときに特定のパッケージ (APK) が開始されるようにこのオプションを選択します。
+起動アクティビティ | アプリケーションの起動に使う Android アクティビティは、マニフェストで使われているものと同じでなければなりません。 *AndroidManifest.xml* からリストを取得して動的に設定するには、[適用] を選択します。
 追加のシンボル検索パス | デバッグ シンボルの追加の検索パス。
 追加の Java ソース検索パス | Java ソース ファイルの追加の検索パス  (デバッガーの種類が [Java のみ] の場合にのみ適用されます)。

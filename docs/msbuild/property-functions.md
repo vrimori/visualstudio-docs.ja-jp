@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc1665b0b5a12f8e1719116e61f13ac915083c0d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7a238e0bb35efd3ddf984a692a032535c37dfd88
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31978220"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468700"
 ---
 # <a name="property-functions"></a>プロパティ関数
 
@@ -43,7 +43,7 @@ $(ProjectOutputFolder.Substring(0,3))
 
 ### <a name="static-property-functions"></a>静的プロパティ関数
 
-ビルド スクリプトで、各種システム クラスの静的プロパティおよびメソッドにアクセスできます。 静的プロパティの値を取得するには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Property* はプロパティの名前です。
+ビルド スクリプトで、各種システム クラスの静的プロパティおよびメソッドにアクセスできます。 静的プロパティの値を取得するには、次の構文を使用します。ここで、\<Class> はシステム クラスの名前、\<Property> はプロパティの名前です。
 
 ```fundamental
 $([Class]::Property)
@@ -55,7 +55,7 @@ $([Class]::Property)
 <Today>$([System.DateTime]::Now)</Today>
 ```
 
-静的メソッドを呼び出すには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Method* はメソッドの名前、*(Parameters)* はメソッドのパラメーター リストです。
+静的メソッドを呼び出すには、次の構文を使用します。ここで、\<Class> はシステム クラスの名前、\<Method> はメソッドの名前、(\<Parameters>) はメソッドのパラメーター リストです。
 
 ```fundamental
 $([Class]::Method(Parameters))
@@ -119,7 +119,7 @@ $([Class]::Method(Parameters))
 
 ### <a name="calling-instance-methods-on-static-properties"></a>静的プロパティ上でインスタンス メソッドを呼び出す
 
-オブジェクト インスタンスを返す静的プロパティにアクセスすると、そのオブジェクトのインスタンス メソッドを呼び出すことができます。 インスタンス メソッドを呼び出すには、次の構文を使用します。ここで、*Class* はシステム クラスの名前、*Property* はプロパティの名前、*Method* はメソッドの名前、*(Parameters)* はメソッドのパラメーター リストです。
+オブジェクト インスタンスを返す静的プロパティにアクセスすると、そのオブジェクトのインスタンス メソッドを呼び出すことができます。 インスタンス メソッドを呼び出すには、次の構文を使用します。ここで、\<Class> はシステム クラスの名前、\<Property> はプロパティの名前、\<Method> はメソッドの名前、(\<Parameters>) はメソッドのパラメーター リストです。
 
 ```fundamental
 $([Class]::Property.Method(Parameters))
@@ -135,7 +135,7 @@ $([Class]::Property.Method(Parameters))
 
 ### <a name="msbuild-property-functions"></a>MSBuild プロパティ関数
 
-ビルド内のいくつかの静的メソッドにアクセスすると、算術、ビットごとの論理、およびエスケープ文字のサポートが提供されます。 次の構文を使用して、これらのメソッドにアクセスします。ここで、*Method* はメソッドの名前、*Parameters* はメソッドのパラメーター リストです。
+ビルド内のいくつかの静的メソッドにアクセスすると、算術、ビットごとの論理、およびエスケープ文字のサポートが提供されます。 次の構文を使用して、これらのメソッドにアクセスします。ここで、\<Method> はメソッドの名前、(\<Parameters>) はメソッドのパラメーター リストです。
 
 ```fundamental
 $([MSBuild]::Method(Parameters))
@@ -144,7 +144,7 @@ $([MSBuild]::Method(Parameters))
 たとえば、数値を持つ 2 つのプロパティを合計するには、次のコードを使用します。
 
 ```fundamental
-$([MSBuild]::Add($(NumberOne), $(NumberTwo))
+$([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
 次に MSBuild プロパティ関数の一覧を示します。
@@ -261,7 +261,7 @@ MSBuild の `GetRegistryValueFromView` プロパティ関数は、レジスト�
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-Windows 64 ビット オペレーティング システムは、HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node というレジストリ キーを保持しています。このキーは、32 ビット アプリケーションに対して HKEY_LOCAL_MACHINE\SOFTWARE というレジストリ ビューを提供します。
+Windows 64 ビット オペレーティング システムは、**HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** というレジストリ キーを保持しています。このキーは、32 ビット アプリケーションに対して **HKEY_LOCAL_MACHINE\SOFTWARE** というレジストリ ビューを提供します。
 
 既定では、WOW64 で実行されている 32 ビット アプリケーションは 32 ビットのレジストリ ビューにアクセスし、64 ビット アプリケーションは 64 ビットのレジストリ ビューにアクセスします。
 
@@ -279,7 +279,7 @@ Windows 64 ビット オペレーティング システムは、HKEY_LOCAL_MACHI
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
-は、最初に 64 ビットのレジストリ ビュー、次に 32 ビットのレジストリ ビューを参照して、ReferenceAssemblies キーの SLRuntimeInstallPath データを取得します。
+最初に 64 ビットのレジストリ ビュー、次に 32 ビットのレジストリ ビューを参照して、**ReferenceAssemblies** キーの **SLRuntimeInstallPath** データを取得します。
 
 ## <a name="msbuild-makerelative"></a>MSBuild の MakeRelative
 
@@ -338,7 +338,8 @@ Output:
 -->
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MSBuild プロパティ](../msbuild/msbuild-properties.md)
+
 [MSBuild の概要](../msbuild/msbuild.md)

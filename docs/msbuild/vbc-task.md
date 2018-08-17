@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 511e980b8c312803a82692042d7f88f389265c3a
-ms.sourcegitcommit: c842955aa9ee9f149bb63e66e46c5c29be6e9881
+ms.openlocfilehash: 0f45cd451af252dbc62ea4ce0bc1d9edd90359a0
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36962581"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177293"
 ---
 # <a name="vbc-task"></a>Vbc タスク
 実行可能ファイル (*.exe*)、ダイナミック リンク ライブラリ (*.dll*)、またはコード モジュール (*.netmodule*) を生成する *vbc.exe* をラップします。 *vbc.exe* の詳細については、「[Visual Basic のコマンド ライン コンパイラ](/dotnet/visual-basic/reference/command-line-compiler/index)」を参照してください。  
@@ -45,7 +45,7 @@ ms.locfileid: "36962581"
 |`Deterministic`|省略可能な `Boolean` 型のパラメーターです。<br/><br/> `true` の場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます (入力が同一である場合)。<br/><br/>詳細については、「[-deterministic](/dotnet/visual-basic/reference/command-line-compiler/deterministic)」を参照してください。|
 |`DisabledWarnings`|省略可能な `String` 型のパラメーターです。<br /><br /> 指定された警告の出力を抑制します。 警告 ID の数値だけを指定します。 複数の警告を指定するときは、セミコロン (;) で区切ります。 このパラメーターは、*vbc.exe* コンパイラの [-nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) スイッチに相当します。|  
 |`DocumentationFile`|省略可能な `String` 型のパラメーターです。<br /><br /> 指定した XML ファイルにドキュメント コメントを出力します。 このパラメーターは `GenerateDocumentation` 属性をオーバーライドします。 詳細については、「[-doc](/dotnet/visual-basic/reference/command-line-compiler/doc)」を参照してください。|  
-|`EmitDebugInformation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、デバッグ情報が生成され、.pdb ファイルに格納されます。 詳細については、「[-debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)」を参照してください。|  
+|`EmitDebugInformation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、デバッグ情報が生成され、*.pdb* ファイルに格納されます。 詳細については、「[-debug (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/debug)」を参照してください。|  
 |`ErrorReport`|省略可能な `String` 型のパラメーターです。<br /><br /> 内部コンパイル エラーの報告方法を指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `prompt`<br />-   `send`<br />-   `none`<br /><br /> `prompt` を指定した場合、内部コンパイラ エラーが発生すると、ユーザーはエラー データを Microsoft に送信するかどうかを選択するように求められます。<br /><br /> `send` を指定した場合、内部コンパイラ エラーが発生すると、エラー データが Microsoft に送信されます。<br /><br /> 既定値は `none` です。テキスト出力のみでエラーが報告されます。<br /><br /> このパラメーターは、*vbc.exe* コンパイラの [-errorreport](/dotnet/visual-basic/reference/command-line-compiler/errorreport) スイッチに相当します。|  
 |`FileAlignment`|省略可能な `Int32` 型のパラメーターです。<br /><br /> 出力ファイルでセクションをアラインするサイズをバイト単位で指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `512`<br />-   `1024`<br />-   `2048`<br />-   `4096`<br />-   `8192`<br /><br /> このパラメーターは、*vbc.exe* コンパイラの [-filealign](/dotnet/visual-basic/reference/command-line-compiler/filealign) スイッチに相当します。|  
 |`GenerateDocumentation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、ドキュメント情報が生成され、タスクが作成する実行可能ファイルまたはライブラリの名前が与えられた XML ファイルに格納されます。 詳細については、「[-doc](/dotnet/visual-basic/reference/command-line-compiler/doc)」を参照してください。|  
@@ -59,7 +59,7 @@ ms.locfileid: "36962581"
 |`NoConfig`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> コンパイラで *vbc.rsp* ファイルを使用しないように指定します。 このパラメーターは、*vbc.exe* コンパイラの [-noconfig](/dotnet/visual-basic/reference/command-line-compiler/noconfig) パラメーターに相当します。|  
 |`NoLogo`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、コンパイラの著作権情報が表示されません。 このパラメーターは、*vbc.exe* コンパイラの [-nologo](/dotnet/visual-basic/reference/command-line-compiler/nologo) スイッチに相当します。|  
 |`NoStandardLib`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> コンパイラが標準ライブラリを参照しないようにします。 このパラメーターは、*vbc.exe* コンパイラの [-nostdlib](/dotnet/visual-basic/reference/command-line-compiler/nostdlib) スイッチに相当します。|  
-|`NoVBRuntimeReference`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 内部使用のみ。 true の場合、Microsoft.VisualBasic.dll の自動参照が禁止されます。|  
+|`NoVBRuntimeReference`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> 内部使用のみ。 true の場合、*Microsoft.VisualBasic.dll* の自動参照が禁止されます。|  
 |`NoWarnings`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、すべての警告が非表示になります。 詳しくは、「[-nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)」をご覧ください。|  
 |`Optimize`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、コンパイラ最適化が有効になります。 このパラメーターは、*vbc.exe* コンパイラの [-optimize](/dotnet/visual-basic/reference/command-line-compiler/optimize) スイッチに相当します。|  
 |`OptionCompare`|省略可能な `String` 型のパラメーターです。<br /><br /> 文字列比較の方法を指定します。 このパラメーターには、次の値を指定できます。<br /><br /> -   `binary`<br />-   `text`<br /><br /> 値 `binary` を指定すると、バイナリ文字列比較が使用されます。 値 `text` を指定すると、テキスト文字列比較が使用されます。 このパラメーターの既定値は、`binary` です。 このパラメーターは、*vbc.exe* コンパイラの [-optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) スイッチに相当します。|  
@@ -86,11 +86,11 @@ ms.locfileid: "36962581"
 |`Verbosity`|省略可能な `String` 型のパラメーターです。<br /><br /> コンパイラ出力の詳細度を指定します。 詳細度は `Quiet`、`Normal` (既定)、または `Verbose` です。|  
 |`WarningsAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱う警告の一覧を指定します。 詳細については、「[-warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)」を参照してください。<br /><br /> このパラメーターは `TreatWarningsAsErrors` パラメーターをオーバーライドします。|  
 |`WarningsNotAsErrors`|省略可能な `String` 型のパラメーターです。<br /><br /> エラーとして扱わない警告の一覧を指定します。 詳細については、「[-warnaserror (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)」を参照してください。<br /><br /> このパラメーターは、`TreatWarningsAsErrors` パラメーターが `true` に設定されている場合にのみ役に立ちます。|  
-|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> エクスプローラーで出力ファイルを適切に表示する *.ico* ファイルをアセンブリに挿入します。 このパラメーターは、*vbc.exe* コンパイラの [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) スイッチに相当します。|  
+|`Win32Icon`|省略可能な `String` 型のパラメーターです。<br /><br /> **ファイル エクスプローラー**で出力ファイルを適切に表示する *.ico* ファイルをアセンブリに挿入します。 このパラメーターは、*vbc.exe* コンパイラの [-win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) スイッチに相当します。|  
 |`Win32Resources`|省略可能な `String` 型のパラメーターです。<br /><br /> Win32 リソース (*.res* ファイル) を出力ファイルに挿入します。 このパラメーターは、*vbc.exe* コンパイラの [-win32resource](/dotnet/visual-basic/reference/command-line-compiler/win32resource) スイッチに相当します。|  
   
 ## <a name="remarks"></a>コメント  
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension 基本クラス](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.ToolTaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.ToolTask> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[ToolTaskExtension Base Class](../msbuild/tooltaskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、Visual Basic プロジェクトがコンパイルされます。  

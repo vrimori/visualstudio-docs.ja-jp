@@ -16,20 +16,20 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: d774a0daa9cc503bde91009b9c78288a6f043721
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 720a69b1eae8a14247027a52ef2972e43203163b
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303284"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382410"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
-## <a name="test-discovery"></a>テスト検出
+## <a name="test-discovery"></a>テスト探索
 
 ### <a name="1-the-test-explorer-is-not-discovering-my-tests-that-are-dynamically-defined-for-example-theories-custom-adapters-custom-traits-ifdefs-etc-how-can-i-discover-these-tests"></a>1.テスト エクスプローラーが、動的に定義されたテストを検出しません (理論、カスタム アダプター、カスタム特性、#ifdefs など)。これらのテストを検出するにはどうすればよいですか?
 
-  プロジェクトをビルドして、**[ツール] > [オプション] > [テスト]** の順に移動して、アセンブリベースの検出がオンになっていることを確認します。
+  プロジェクトをビルドして、**[ツール]** > **[オプション]** > **[テスト]** の順に移動して、アセンブリベースの検出がオンになっていることを確認します。
 
   [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、ソース ベースのテストの検出です。 理論、カスタム アダプター、カスタム特性、`#ifdef` ステートメントなどは実行時に定義されるため、これらを使うテストは検出できません。 これらのテストを正確に検出するには、ビルドが必要です。 15.6 プレビューでは、アセンブリベースの検出 (従来の検出プログラム) はビルドの後にのみ実行されます。 この設定は、リアルタイムのテスト検出は、ユーザーが編集中にできるだけ多くのテストを検出し、アセンブリベースの検出では、ビルド後に動的に定義されたテストを表示できるようにすることを意味します。 リアルタイムのテスト検出は、応答性を高めながら、ビルド後に完全かつ正確な結果を得ることができます。
 
@@ -41,7 +41,7 @@ ms.locfileid: "36303284"
 
 ### <a name="3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on"></a>3.プロジェクトでアセンブリベースの検出が機能しなくなりました。 元に戻すにはどうしたらよいですか?
 
-  **[ツール] > [オプション] > [テスト]** の順に移動して、**[ビルド後にビルド済みアセンブリからテストをさらに探索する]** チェック ボックスをオンにします。
+  **[ツール]** > **[オプション]** > **[テスト]** の順に移動して、**[ビルド後にビルド済みアセンブリからテストをさらに探索する]** チェック ボックスをオンにします。
 
   ![アセンブリベースのオプション](media/testex-toolsoptions.png)
 
@@ -51,12 +51,11 @@ ms.locfileid: "36303284"
 
 ### <a name="5-what-languages-and-test-frameworks-can-use-real-time-test-discovery"></a>5.リアルタイムのテスト検出では、どの言語およびテスト フレームワークを使用できますか?
 
-  
   [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、Roslyn コンパイラを使用してビルドされているため、マネージド言語 (C# および Visual Basic) に対してのみ機能します。 今のところ、リアルタイムのテスト検出は xUnit、NUnit、MSTest のフレームワークに対してのみ機能します。
 
 ### <a name="6-how-can-i-turn-on-logs-for-the-test-explorer"></a>6.どうすればテスト エクスプローラーのログを有効にできますか?
 
-  **[ツール] > [オプション] > [テスト]** の順に移動し、そこで [ログ] セクションを見つけます。
+  **[ツール]** > **[オプション]** > **[テスト]** の順に移動し、そこで [ログ] セクションを見つけます。
 
 ### <a name="7-why-are-my-tests-in-uwp-projects-not-discovered-until-i-deploy-my-app"></a>7.アプリを配置するまで UWP プロジェクトのテストが検出されないのはなぜですか?
 
@@ -100,4 +99,4 @@ vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterpri
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
 - [既存コードに対する単体テストの作成と実行](http://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
 - [コードの単体テスト](unit-test-your-code.md)
-- [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
+- [Live Unit Testing に関する FAQ](live-unit-testing-faq.md)

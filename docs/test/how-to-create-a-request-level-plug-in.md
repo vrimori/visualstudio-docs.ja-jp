@@ -11,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ac50f956ed45f42f77638146c1340c0ed90f68fa
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 749c4be37586401d48e9c4a11d8fc70b8ed44c44
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31974032"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382036"
 ---
-# <a name="how-to-create-a-request-level-plug-in"></a>方法 : 要求レベルのプラグインを作成する
+# <a name="how-to-create-a-request-level-plug-in"></a>方法: 要求レベルのプラグインを作成する
 
-*要求*は、Web パフォーマンス テストを構成する宣言ステートメントです。 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 プラグインを作成し、要求を含む Web パフォーマンス テストに追加するのと同じように、個々の要求にも追加できます。 カスタマイズされた*要求プラグイン*を使用すると、Web パフォーマンス テスト中の特定の要求の実行時にコードを呼び出すことができます。
+"*要求*" は、Web パフォーマンス テストを構成する宣言ステートメントです。 Web パフォーマンス テスト プラグインを使用すると、Web パフォーマンス テストの主要な宣言ステートメントとコードを分離し、そのコードを再利用できます。 プラグインを作成し、要求を含む Web パフォーマンス テストに追加するのと同じように、個々の要求にも追加できます。 カスタマイズされた "*要求プラグイン*" を使用すると、Web パフォーマンス テスト中の特定の要求の実行時にコードを呼び出すことができます。
 
 すべての Web パフォーマンス テスト要求プラグインには、PreRequest メソッドと PostRequest メソッドがあります。 要求プラグインを特定の HTTP 要求にアタッチすると、その要求の発行前に PreRequest イベントが発生し、応答の受信後に PostRequest が起動します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "31974032"
 
 ## <a name="to-create-a-request-level-plug-in"></a>要求レベルのプラグインを作成するには
 
-1.  ソリューション エクスプローラーでソリューションを右クリックします。 **[追加]** を選択して、**[新しいプロジェクト]** を選択します。
+1.  **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]**、**[新しいプロジェクト]** の順に選択します。
 
      **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -40,23 +40,23 @@ ms.locfileid: "31974032"
 
 4.  **[名前]** ボックスにクラスの名前を入力し、**[OK]** をクリックします。
 
-     新しいクラス ライブラリ プロジェクトがソリューション エクスプローラーに追加され、新しいクラスがコード エディターに表示されます。
+     新しいクラス ライブラリ プロジェクトが**ソリューション エクスプローラー**に追加され、新しいクラスが**コード エディター**に表示されます。
 
-5.  ソリューション エクスプローラーで、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
+5.  **ソリューション エクスプローラー**で、新しいクラス ライブラリの **[参照設定]** フォルダーを右クリックし、**[参照の追加]** を選択します。
 
      **[参照の追加]** ダイアログ ボックスが表示されます。
 
 6.  **[.NET]** タブをクリックします。スクロール ダウンし、**[Microsoft.VisualStudio.QualityTools.WebTestFramework]** を選択して、**[OK]** をクリックします。
 
-     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照がソリューション エクスプローラーの **[参照設定]** フォルダーに追加されます。
+     **Microsoft.VisualStudio.QualityTools.WebTestFramework** への参照が**ソリューション エクスプローラー**の **[参照設定]** フォルダーに追加されます。
 
-7.  ソリューション エクスプローラーで、Web パフォーマンス テスト要求のテスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスとロード テスト プロジェクトの最上位ノードを右クリックします。 **[参照の追加]** をクリックします。
+7.  **ソリューション エクスプローラー**で、Web パフォーマンス テスト要求のテスト プラグインの追加先であるロード テストを含んでいる Web パフォーマンスとロード テスト プロジェクトの最上位ノードを右クリックします。 **[参照の追加]** をクリックします。
 
      **[参照の追加]** ダイアログ ボックスが表示されます。
 
-8.  **[プロジェクト]** タブをクリックします。次に、[クラス ライブラリ プロジェクト] をクリックし、**[OK]** をクリックします。
+8.  **[プロジェクト]** タブ、**[クラス ライブラリ プロジェクト]**、**[OK]** の順に選択します。
 
-9. コード エディターで、プラグインのコードを記述します。 まず、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> クラスから派生する新しいパブリック クラスを作成します。
+9. **コード エディター**で、プラグインのコードを記述します。 まず、<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin> クラスから派生する新しいパブリック クラスを作成します。
 
 10. <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PreRequest*> イベント ハンドラーと <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRequestPlugin.PostRequest*> イベント ハンドラーのいずれかまたは両方にコードを実装します。 実装のサンプルについては、次の例を参照してください。
 
@@ -124,5 +124,5 @@ namespace RequestPluginNamespace
 - [ロード テスト用のカスタム コードおよびカスタム プラグインの作成](../test/create-custom-code-and-plug-ins-for-load-tests.md)
 - [Web パフォーマンス テストのカスタム抽出規則のコーディング](../test/code-a-custom-extraction-rule-for-a-web-performance-test.md)
 - [Web パフォーマンス テストのカスタム検証規則のコーディング](../test/code-a-custom-validation-rule-for-a-web-performance-test.md)
-- [方法 : ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
+- [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)
 - [コード化された Web パフォーマンス テストの生成と実行](../test/generate-and-run-a-coded-web-performance-test.md)

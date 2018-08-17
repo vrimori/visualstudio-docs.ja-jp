@@ -18,12 +18,12 @@ ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c34eec9f8eab1f870344ec6995bfcbd8fea8739c
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 1ff4987c49aed76cc8770d21a5d32cdf3892ea28
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704397"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468197"
 ---
 # <a name="dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE)
 
@@ -43,7 +43,7 @@ Dotfuscator は、元のアプリケーションの動作を維持しながら�
 
 **アプリケーションの整合性を保護**することも重要です。
 リバース エンジニアリングだけでなく、犯罪者がアプリケーションの違法コピーを作成したり、実行時のアプリケーションの動作を変更したり、データを操作したりしようとすることもあります。
-Dotfuscator は、改ざん、サード パーティによるデバッグ、ルート化されたデバイスを含め、[許可のない使用を検出、報告し、それに対応する][checks]機能をアプリケーションに注入します。
+Dotfuscator は、改ざん、サード パーティによるデバッグ、ルート化されたデバイスを含め、[許可のない使用を検出し、それに対応する][checks]機能をアプリケーションに注入します。
 
 保護されたソフトウェア開発ライフサイクルに Dotfuscator が適合するしくみの詳細については、PreEmptive Solution の「[SDL App Protection (SDL アプリの保護)][sdl-protection]」のページを参照してください。
 
@@ -56,12 +56,10 @@ Dotfuscator CE は、広範な[ソフトウェアの保護と強化][software-pr
 [.NET の難読化][obfuscation]および Dotfuscator CE に含まれるその他の[アプリケーションの保護][app-protection]機能の例を以下に挙げます。
 
 * 識別子の*[名前の変更][renaming]* により、コンパイル済みアセンブリのリバース エンジニアリングをさらに難しくします。
-* *[改ざん防止][tamper]* 機能により、改ざんされたアプリケーションの実行を検出し、インシデント アラートを送信して、改ざんされたセッションを終了します。
-* *[デバッグ防止][debug]* 機能により、実行中のアプリケーションに対するデバッガーの添付ファイルを検出し、インシデント アラートを送信して、デバッグ セッションを終了します。
-* *[ルート化されたデバイスの防止][root]* 機能により、ルート化された Android デバイスで実行されているアプリケーションを検出し、そのデバイスでのセッションを終了します。
-* *[アプリケーションの有効期限の動作][shelflife]* は、"有効期限" の日付をエンコードし、有効期限の後にアプリケーションが実行された際にアラートを送信し、期限切れのアプリケーション セッションを終了します。
-* *[例外の追跡][exceptions]* は、アプリケーション内で発生する未処理の例外を監視します。
-* *[セッション][sessions]および[機能][features]の使用追跡*は、実行されたアプリケーション、それらのアプリケーションのバージョン、および実行された機能を特定します。
+* *[改ざん防止][tamper]* 機能により、改ざんされたアプリケーションの実行が検出され、改ざんされたセッションが終了または対処されます。
+* *[デバッグ防止][debug]* 機能により、実行中のアプリケーションに対するデバッガーの添付ファイルが検出され、デバッグ セッションが終了または対処されます。
+* *[ルート化されたデバイスの防止][root]* 機能により、ルート化された Android デバイスで実行されているアプリケーションが検出され、そのデバイスでのセッションが終了または対処されます。
+* *[アプリケーションの有効期限の動作][shelflife]* は、"有効期限" の日付をエンコードし、期限切れのアプリケーション セッションを終了します。
 
 お客様のアプリケーション保護戦略にどのように適合するかを含めた、これらの機能の詳細については、[機能に関するページ][capabilities]を参照してください。
 
@@ -107,9 +105,5 @@ Visual Studio から Dotfuscator CE の使用を開始するには、**クイッ
 [debug]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_debug.html
 [root]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_root.html
 [shelflife]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_shelflife.html
-
-[exceptions]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_exceptions.html
-[sessions]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_sessions.html
-[features]:  https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_features.html
 
 [full]:  https://www.preemptive.com/dotfuscator/ce/docs/help/index.html

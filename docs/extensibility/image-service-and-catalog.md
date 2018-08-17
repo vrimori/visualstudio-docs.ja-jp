@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ab9a2e602bf1c92fb7dee7fe35b9d33f2d578fa
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: b4b70c800e9dff7852d2a7aaec3ee1125932dfc1
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079081"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512045"
 ---
 # <a name="image-service-and-catalog"></a>イメージ サービスとカタログ
 このクックブックには、ガイダンスと、Visual Studio イメージ サービスと Visual Studio 2015 で導入されたイメージのカタログを採用するためのベスト プラクティスが含まれています。  
@@ -165,8 +165,9 @@ ms.locfileid: "39079081"
 |||  
 |-|-|  
 |**属性**|**定義**|  
-|URI|[必須]イメージを読み込むことを定義する URI。 次のいずれかを指定できます。<br /><br /> は、 [Pack URI](http://msdn.microsoft.com/en-US/library/aa970069\(v=vs.100\).aspx)アプリケーションを使用して:///オーソリティ<br />-絶対コンポーネント リソース参照<br />-ネイティブ リソースを含むファイルへのパス|  
+|URI|[必須]イメージを読み込むことを定義する URI。 次のいずれかを指定できます。<br /><br /> は、 [Pack URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)アプリケーションを使用して:///オーソリティ<br />-絶対コンポーネント リソース参照<br />-ネイティブ リソースを含むファイルへのパス|  
 |背景|[省略可能]背景が使用するものでは、ソースの種類にどのようなことを示します。<br /><br /> 次のいずれかを指定できます。<br /><br /> *光源:* 明るい背景では、ソースを使用できます。<br /><br /> *濃い:* ソースは、暗い背景で使用できます。<br /><br /> *ハイコントラスト:* ソースは、ハイ コントラスト モードで、色の背景で使用できます。<br /><br /> *HighContrastLight:* ソースは、ハイ コントラスト モードで明るい背景で使用できます。<br /><br /> *HighContrastDark:* ソースは、ハイ コントラスト モードで暗い背景で使用できます。<br /><br /> バック グラウンド属性を省略した場合は、任意のバック グラウンドで、ソースを使用できます。<br /><br /> 背景色が場合*光*、*濃い*、 *HighContrastLight*、または*HighContrastDark*ソースの色を反転ことはありません。 バック グラウンドを省略するかに設定した場合*ハイコントラスト*、ソースの色の反転は、イメージのによって制御される**AllowColorInversion**属性。|  
+
 |||  
   
  A\<ソース > 要素は省略可能な次のサブ要素の 1 つだけであることができます。  
@@ -651,7 +652,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 3.  更新されたマッピングを使用してモニカーを要求するイメージのサービスを使用するコードを更新します。 (更新する可能性があります**CrispImages**のマネージ コード、またはイメージのサービスからのようなまたは HICONs の要求とそれらのネイティブ コードに渡すことです)。  
   
 ## <a name="testing-your-images"></a>イメージのテスト  
- イメージ ライブラリ ビューアー ツールを使用して、すべてが正しく作成されているかどうかを確認する、イメージのマニフェストをテストすることができます。 ツールを見つけることができます、 [Visual Studio 2015 SDK](http://msdn.microsoft.com/library/bb166441.aspx)します。 このツールおよびその他のドキュメントを参照して[ここ](http://aka.ms/VSImageThemeTools)します。  
+ イメージ ライブラリ ビューアー ツールを使用して、すべてが正しく作成されているかどうかを確認する、イメージのマニフェストをテストすることができます。 ツールを見つけることができます、 [Visual Studio 2015 SDK](visual-studio-sdk.md)します。 このツールおよびその他のドキュメントを参照して[ここ](http://aka.ms/VSImageThemeTools)します。  
   
 ## <a name="additional-resources"></a>その他の技術情報  
   

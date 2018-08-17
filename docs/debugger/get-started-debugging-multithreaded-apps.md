@@ -2,7 +2,7 @@
 title: マルチ スレッド アプリケーションのデバッグについて理解するには
 description: Visual Studio での並列スタック ウィンドウや 並列ウォッチ ウィンドウを使用したデバッグします。
 ms.custom: H1HackMay2017
-ms.date: 06/02/2017
+ms.date: 08/01/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a037ef99a7e1ea56f6535b99b533c1c723fd2d81
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 11cb05ea81f086cf8c26e3058850968a909b84e3
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204220"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468684"
 ---
 # <a name="get-started-debugging-multithreaded-applications-in-visual-studio"></a>Visual Studio でマルチ スレッド アプリケーションのデバッグの開始します。
 Visual Studio には、いくつかのツールとマルチ スレッド アプリケーションをデバッグする方法をユーザー インターフェイス要素が用意されています。 このチュートリアルでは、スレッド マーカーを使用する方法、**並列スタック**ウィンドウで、**並列ウォッチ**ウィンドウ、条件付きブレークポイントは、および [フィルター] ブレークポイント。 このチュートリアルでは、わずか数分ですが、完了に慣れることがするマルチ スレッド アプリケーションのデバッグ機能を使用します。
@@ -47,9 +47,9 @@ Visual Studio には、いくつかのツールとマルチ スレッド アプ�
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **プロジェクトの種類**s ボックスに、好みの言語をクリックします。 **Visual c#**、 **Visual c**、または**Visual Basic**します。  
+2.  好みの言語をクリックします。 **Visual c#**、 **Visual c**、または**Visual Basic**します。  
   
-3.  **テンプレート**ボックスで、選択**コンソール アプリ**します。  
+3.  **Windows デスクトップ**、選択**コンソール アプリ**します。  
   
 4.  **名前**ボックスの [名前] を入力します。  
   

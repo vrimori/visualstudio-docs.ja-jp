@@ -11,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4cc9ec25ab6bc69359649764074a3e908c06c4ae
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: fcdb8a25f9f82f317a1fcf5de1dd50a90bf6c4a7
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089556"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586480"
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017 での Live Unit Testing
 
@@ -55,11 +55,11 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 `Microsoft.VisualStudio.QualityTools.UnitTestFramework` を参照している以前の MSTest に基づくテスト プロジェクトを使用しており、新しい MSTest NuGet パッケージへの移行を希望されない場合は、Visual Studio 2017 バージョン 15.4 にアップグレードしてください。
 
-場合によっては、Live Unit Testing を動作させるため、ソリューションのプロジェクトによって参照されている NuGet パッケージの明示的な復元が必要になります。 そのためには、Living Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか (Visual Studio の最上位メニューから **[ビルド]** の **[ソリューションのリビルド]** を選択)、またはソリューションのパッケージを復元します (ソリューションを右クリックして **[NuGet パッケージの復元]** を選択)。
+場合によっては、Live Unit Testing を動作させるため、ソリューションのプロジェクトによって参照されている NuGet パッケージの明示的な復元が必要になります。 そのためには、Living Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか (Visual Studio の最上位メニューから **[ビルド]** >  **[ソリューションのリビルド]** の順に選択)、またはソリューションのパッケージを復元します (ソリューションを右クリックして **[NuGet パッケージの復元]** を選択)。
 
-## <a name="configuring-live-unit-testing"></a>Live Unit Testing の構成
+## <a name="configure-live-unit-testing"></a>Live Unit Testing の構成
 
-Live Unit Testing を構成するには、Visual Studio の最上位メニューから **[ツール]** の **[オプション]** を選び、**[オプション]** ダイアログの左側のウィンドウで **[Live Unit Testing]** を選びます。 次の図は、ダイアログで設定できる Live Unit Testing の構成オプションです。
+Live Unit Testing を構成するには、Visual Studio の最上位メニューから **[ツール]** > **[オプション]** の順に選び、**[オプション]** ダイアログの左側のウィンドウで **[Live Unit Testing]** を選びます。 次の図は、ダイアログで設定できる Live Unit Testing の構成オプションです。
 
   ![イメージ](./media/lut-options.png)
 
@@ -81,11 +81,11 @@ Live Unit Testing を構成するには、Visual Studio の最上位メニュー
 
 Live Unit Testing からファイルに詳細な MSBuild ログ メッセージをキャプチャするには、`LiveUnitTesting_BuildLog` ユーザー レベル環境変数に、ログを格納するファイルの名前を設定します。
 
-Live Unit Testing を有効にすると (次のセクション「[Live Unit Testing の開始、一時停止、停止](#starting-pausing-and-stopping-live-unit-testing)」を参照)、**[テスト]**、**[Live Unit Testing]**、**[オプション]** を選択して **[オプション]** ダイアログを開くこともできます。
+Live Unit Testing を有効にすると (次のセクション「[Live Unit Testing の開始、一時停止、停止](#start-pause-and-stop-live-unit-testing)」を参照)、**[テスト]** > **[Live Unit Testing]** > **[オプション]** を選択して **[オプション]** ダイアログを開くこともできます。
 
-## <a name="starting-pausing-and-stopping-live-unit-testing"></a>Live Unit Testing の開始、一時停止、停止
+## <a name="start-pause-and-stop-live-unit-testing"></a>Live Unit Testing の開始、一時停止、停止
 
-Live Unit Testing を有効にするには、Visual Studio の最上位メニューから **[テスト]**、**[Live Unit Testing]**、**[開始]** の順に選びます。 Live Unit Testing を有効にすると、**[Live Unit Testing]** メニューのオプションが、**[開始]** の 1 項目から、**[一時停止]**、**[停止]**、**[Reset Clean]/(クリーンのリセット/)** に変わります。
+Live Unit Testing を有効にするには、Visual Studio の最上位メニューから **[テスト]** > **[Live Unit Testing]** > **[開始]** の順に選びます。 Live Unit Testing を有効にすると、**[Live Unit Testing]** メニューのオプションが、**[開始]** の 1 項目から、**[一時停止]**、**[停止]**、**[Reset Clean]/(クリーンのリセット/)** に変わります。
 
 > [!NOTE]
 > 単体テスト プロジェクトが含まれていないソリューションで Live Unit Testing を開始する場合、**Live Unit Testing** メニューには **[一時停止]**、**[停止]**、**[Reset Clean]\(クリーンのリセット\)** の各オプションが表示されますが、Live Unit Testing は開始されません。 **[出力]** ウィンドウには、"このソリューションではサポートされているテスト アダプターが参照されていません..." という内容で始まるメッセージが表示されます。
@@ -100,9 +100,9 @@ Live Unit Testing を有効にするには、Visual Studio の最上位メニュ
 
 - **[Reset Clean]/(クリーンのリセット/)** は、Live Unit Testing を停止し、保持されたデータを削除し、Live Unit Testing を再起動します。
 
-- **[オプション]** は、「[Live Unit Testing の構成](#configuring-live-unit-testing)」セクションに説明されている **[オプション]** ダイアログを開きます。
+- **[オプション]** は、「[Live Unit Testing の構成](#configure-live-unit-testing)」セクションに説明されている **[オプション]** ダイアログを開きます。
 
-##  <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚化を表示する
+## <a name="view-coverage-visualization-in-the-editor-as-you-type"></a>入力しながらエディターにカバレッジの視覚エフェクトを表示する
 
 Live Unit Testing を有効にすると、Visual Studio エディターの各コード行が更新されて、記述しているコードが単体テストによってカバーされているかどうか、およびコードをカバーしているテストが合格かどうかが示されます。  次の図では、テストに合格したコード行と不合格のコード行、およびテストでカバーされていないコード行が示されています。 緑の "✓" で示される行は、すべてのテストに合格しています。赤い "x" で示される行は、1 つ以上のテストで不合格になっています。青い "➖" で示される行は、どのテストでもカバーされていません。
 
@@ -112,7 +112,7 @@ Live Unit Testing のカバレッジの視覚化は、コード エディター�
 
   ![イメージ](./media/lut-codeupdating.png)
 
-## <a name="getting-information-on-successful-or-failed-tests"></a>テストの合格または不合格に関する情報の取得
+## <a name="get-information-on-successful-or-failed-tests"></a>テストの合格または不合格に関する情報の取得
 
 コード ウィンドウの合格または不合格のシンボルをカーソルでポイントすると、その行にヒットしているテストの数を確認できます。 シンボルをクリックすると、個々のテストの状態を確認できます (次の図を参照)。
 
@@ -128,7 +128,7 @@ Live Unit Testing のカバレッジの視覚化は、コード エディター�
 
   ![イメージ](media/lut-testsource.png)
 
-## <a name="diagnosing-and-correcting-test-failures"></a>不合格になったテストの診断と修正
+## <a name="diagnose-and-correct-test-failures"></a>不合格になったテストの診断と修正
 
 不合格になったテストからは、簡単に製品コードをデバッグし、編集して、アプリケーションの開発を続けることができます。 Live Unit Testing はバックグラウンドで実行されるため、デバッグ、編集、続行のサイクルの間、Live Unit Testing を停止して再起動する必要はありません。
 
@@ -139,7 +139,7 @@ Live Unit Testing のカバレッジの視覚化は、コード エディター�
 通常、**テスト エクスプローラー**では、実行、デバッグ、およびテスト結果の分析を行うことができるインターフェイスが提供されます。 Live Unit Testing は**テスト エクスプローラー**と統合します。 Live Unit Testing が有効になっていないか、停止されていると、**テスト エクスプローラー**には最後のテスト実行時の単体テストの状態が表示されます。 ソース コードを変更すると、テストを再実行する必要があります。 これに対し、Live Unit Testing が有効になっていると、**テスト エクスプローラー**の単体テストの状態はすぐに更新されます。 単体テストを明示的に実行する必要はありません。
 
 > [!NOTE]
-> Visual Studio の上部にあるメニューで、**[テスト]**、**[Windows]**、**[テスト エクスプローラー]** の順に選択すると、**テスト エクスプローラー**を開くことができます。
+> Visual Studio の上部にあるメニューで、**[テスト]** > **[Windows]** > **[テスト エクスプローラー]** の順に選択すると、**テスト エクスプローラー**を開くことができます。
 
 **テスト エクスプローラー** ウィンドウで、一部のテストがフェード アウトしているのに気付くことがあります。たとえば、以前保存したプロジェクトを開いた後に Live Unit Testing を有効にすると、次の図のように、**テスト エクスプローラー** ウィンドウで、不合格となったテストを除くすべてがフェード アウトします。 この場合、Live Unit Testing は不合格になったテストを返しますが、合格したテストは返しません。これは、Live Unit Testing の保持されたデータにより、テストが最後に正常実行されて以降は変更されていないことが示されているためです。
 
@@ -155,11 +155,11 @@ Live Unit Testing で自動的にテストを実行してテスト結果を更�
 
 ## <a name="live-unit-testing-and-large-solutions"></a>Live Unit Testing と大規模なソリューション
 
-ご利用のソリューションに 10 個以上のプロジェクトがある場合、Live Unit Testing を開始したときに永続的データが存在しないと、または Visual Studio の上部にあるメニューで **[テスト]**、**[Live Unit Testing]**、**[Reset Clean]\(クリーンのリセット\)** オプションを順に選択すると、次のダイアログが Visual Studio に表示され、多数のプロジェクト内の多数のテストを動的に実行するとパフォーマンスに深刻な影響が出る可能性があることを警告します。 **[OK]** を選択すると、Live Unit Testing はそのソリューション内のすべてのテストを実行します。 **[キャンセル]** を選択すると、実行するテストを選択できます。 この方法の詳細については、次の「[テスト プロジェクトとテスト メソッドを含めるか除外する](#including-and-excluding-test-projects-and-test-methods)」セクションをご覧ください。
+ご利用のソリューションに 10 個以上のプロジェクトがある場合、Live Unit Testing を開始したときに永続的データが存在しないと、または Visual Studio の上部にあるメニューで **[テスト]** > **[Live Unit Testing]** > **[Reset Clean]\(クリーンのリセット\)** オプションを順に選択すると、次のダイアログが Visual Studio に表示され、大きなプロジェクトの中で数多くのテストを動的に実行するとパフォーマンスに重大な影響が出る可能性があることを警告します。 **[OK]** を選択すると、Live Unit Testing はそのソリューション内のすべてのテストを実行します。 **[キャンセル]** を選択すると、実行するテストを選択できます。 この方法の詳細については、次の「[テスト プロジェクトとテスト メソッドを含めるか除外する](#include-and-exclude-test-projects-and-test-methods)」セクションをご覧ください。
 
  ![多数のプロジェクト用の Live Unit Testing ダイアログ](media/lut-large-project.png)
 
-## <a name="including-and-excluding-test-projects-and-test-methods"></a>テスト プロジェクトとテスト メソッドを含めるか除外する
+## <a name="include-and-exclude-test-projects-and-test-methods"></a>テスト プロジェクトとテスト メソッドを含めるか除外する
 
 多くのテスト プロジェクトを含むソリューションでは、Live Unit Testing に参加するプロジェクトおよびプロジェクト内の個別メソッドを制御できます。 たとえば、数百のテスト プロジェクトを含むソリューションがある場合、Live Unit Testing に参加する対象のテスト プロジェクト セットを選ぶことができます。 このような選択を行う方法は多数あり、プロジェクトまたはソリューション内のすべてのテストを除外するか、大半のテストを含めるか除外するか、テストを個別に除外するかによって決まります。 Live Unit Testing は、包含/除外の状態をユーザー設定として保存し、ソリューションを閉じて再び開くときに記憶しています。
 
@@ -167,12 +167,12 @@ Live Unit Testing で自動的にテストを実行してテスト結果を更�
 
 単体テストで個別のプロジェクトを選ぶには、Live Unit Testing を開始した後で次のようにします。
 
-1.  ソリューション全体を除外するには、ソリューション エクスプローラーでソリューションを右クリックし、**[Live Tests (ライブ テスト)]** の **[除外する]** を選びます。
-1.  個別のテスト プロジェクトをテストに含めるには、各テスト プロジェクトを右クリックし、**[Live Tests (ライブ テスト)]** の **[含める]** を選びます。
+1.  ソリューション全体を除外するには、**ソリューション エクスプローラー**でソリューションを右クリックし、**[Live Tests]\(ライブ テスト\)** > **[除外する]** を選びます。
+1.  個別のテスト プロジェクトをテストに含めるには、各テスト プロジェクトを右クリックし、**[Live Tests]\(ライブ テスト)** > **[含める]** を選びます。
 
 **コード エディター ウィンドウからテストを個別に除外する**
 
-テスト メソッドを個別に追加または除外する場合には、コード エディター ウィンドウを使います。 コード エディター ウィンドウで、テスト メソッドのシグネチャを右クリックして、**[Live Tests]/(ライブ テスト/)** - **[[選択したメソッド] を含める]**、**[Live Tests]/(ライブ テスト/)** - **[[選択したメソッド] を除外する]**、**[Live Tests]/(ライブ テスト/)** - **[[選択したメソッド] 以外のすべてを除外する]** のいずれかを選択します。ここで、"選択したメソッド" はコード ウィンドウで選択したメソッドの名前です。
+テスト メソッドを個別に追加または除外する場合には、コード エディター ウィンドウを使います。 コード エディター ウィンドウで、テスト メソッドのシグネチャを右クリックして、**[Live Tests]/(ライブ テスト/)** > **[[選択したメソッド] を含める]** の順に選択するか、**[Live Tests]/(ライブ テスト/)** > **[[選択したメソッド] を除外する]** の順に選択するか、**[Live Tests]/(ライブ テスト/)** > **[[選択したメソッド] 以外のすべてを除外する]** の順に選択します。ここで、"選択したメソッド" はコード ウィンドウで選択したメソッドの名前です。
 
 **プログラムによってテストを除外する**
 
@@ -186,8 +186,8 @@ Live Unit Testing でのカバレッジのレポートからメソッド、ク�
 
 ## <a name="see-also"></a>関連項目
 
-[コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
-[Live Unit Testing のブログ](https://go.microsoft.com/fwlink/?linkid=842514)
-[Live Unit Testing に関する FAQ](live-unit-testing-faq.md)
-[Channel 9 ビデオ: Visual Studio 2017 での Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
+- [コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
+- [Live Unit Testing のブログ](https://go.microsoft.com/fwlink/?linkid=842514)
+- [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
+- [Channel 9 ビデオ: Visual Studio 2017 での Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)
 

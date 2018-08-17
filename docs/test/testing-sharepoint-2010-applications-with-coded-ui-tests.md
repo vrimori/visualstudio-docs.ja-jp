@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 2c6ebe43bc4237ac55eea534f12fe4a9876f93de
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 166a57cb0b3c80736761e1649da6399a9bd19807
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233543"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379713"
 ---
 # <a name="test-sharepoint-applications-with-coded-ui-tests"></a>コード化された UI テストを使用して SharePoint アプリケーションをテストする
 
@@ -28,7 +28,7 @@ ms.locfileid: "36233543"
 
 ## <a name="create-a-coded-ui-test-for-a-sharepoint-app"></a>SharePoint アプリのコード化された UI テストを作成する
 
-SharePoint アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md)方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、Web 編集インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。
+SharePoint アプリケーションでの[コード化された UI テストの作成](../test/use-ui-automation-to-test-your-code.md)方法は、他の種類のアプリケーションでのテストの作成方法と同じです。 記録と再生は、**Web 編集**インターフェイス上のすべてのコントロールでサポートされています。 カテゴリと Web パーツを選択するためのインターフェイスは、すべてが標準 Web コントロールです。
 
 ![SharePoint Web パーツ](../test/media/cuit_sharepoint.png)
 
@@ -94,8 +94,8 @@ uiGridKeyboardInputEdit.Text=value;
 
 ## See also
 
-- [Use UI Automation To Test Your Code](../test/use-ui-automation-to-test-your-code.md)
-- [Create SharePoint Solutions](../sharepoint/create-sharepoint-solutions.md)
-- [Verifying and Debugging SharePoint Code](../sharepoint/verifying-and-debugging-sharepoint-code.md)
-- [Building and Debugging SharePoint Solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Profiling the Performance of SharePoint Applications](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)
+- [Use UI automation to test your code](../test/use-ui-automation-to-test-your-code.md)
+- [Create SharePoint solutions](../sharepoint/create-sharepoint-solutions.md)
+- [Verify and debug SharePoint code](../sharepoint/verifying-and-debugging-sharepoint-code.md)
+- [Build and debug SharePoint solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Profile the performance of SharePoint applications](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)

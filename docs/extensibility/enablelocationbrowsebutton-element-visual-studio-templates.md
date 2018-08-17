@@ -1,5 +1,5 @@
 ---
-title: EnableLocationBrowseButton 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: EnableLocationBrowseButton 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d3573a1359cf7cc6347ede28b5361b01bbb7efb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7bebf88b8d5c98722226f42f9a1b1666695a3b7e
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126846"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639540"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
-指定するかどうか、**参照**でボタンは使用、**新しいプロジェクト** ダイアログ ボックスで、新しいプロジェクトが保存されている既定のディレクトリを簡単に変更できるようにします。  
+指定するかどうか、**参照**ボタンが表示されます、**新しいプロジェクト**ダイアログ ボックスで新しいプロジェクトが保存されている既定のディレクトリを簡単に変更できるようにします。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -35,7 +35,7 @@ ms.locfileid: "31126846"
 <EnableLocationBrowseButton> true/false </EnableLocationBrowseButton>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -53,12 +53,12 @@ ms.locfileid: "31126846"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`、表示するかどうかを示す、**参照**のボタンでは、**新しいプロジェクト** ダイアログ ボックス。  
+ テキストがいずれかにする必要があります`true`または`false`、表示するかどうかを示す、**参照**のボタンでは、**新しいプロジェクト** ダイアログ ボックス。  
   
-## <a name="remarks"></a>コメント  
- `EnableLocationBrowseButton` は、省略可能な要素です。 既定値は`true`が表示される、**参照**ボタンをクリックして、**新しいプロジェクト** ダイアログ ボックス。  
+## <a name="remarks"></a>Remarks  
+ `EnableLocationBrowseButton` は、省略可能な要素です。 既定値は`true`が表示される、**参照**ボタン、**新しいプロジェクト** ダイアログ ボックス。  
   
- **新しいプロジェクト** ダイアログ ボックスで、**場所**テキスト ボックスは、新しいプロジェクトが保存されているディレクトリを指定します。 **参照**ボタンでは、このディレクトリを表示することによって変更できます、**プロジェクトの場所**簡単に別のコンピューターから使用可能なディレクトリに移動できますが、ダイアログ ボックスと。新しいプロジェクトが保存されているディレクトリとそれを選択します。  
+ **新しいプロジェクト** ダイアログ ボックスで、**場所**テキスト ボックスは、新しいプロジェクトが保存されているディレクトリを指定します。 **参照**ボタンには、表示することでこのディレクトリを変更することが、**プロジェクトの場所** ダイアログ ボックスで、簡単にコンピューターから使用できる別のディレクトリに移動できますと新しいプロジェクトを保存するディレクトリとして選択します。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーションでのメタデータの例を次に示します。  

@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80acb4dd08c9785d17187f6048d7133232b0bf6f
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: a16044657b197229253f93fc6aea6130a4522f64
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078443"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512185"
 ---
 # <a name="create-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 セットアップ プログラムが検出し、Windows インストーラーなどの再頒布可能コンポーネントをインストールするように構成できる汎用インストーラー (*.msi*) ファイルと実行可能プログラムです。 インストーラーはブートストラップとも呼ばれます。 ブートストラップは、コンポーネントのインストールを管理するためのメタデータを指定する、一連の XML マニフェストによってプログラミングされます。  表示される各コンポーネントの再頒布可能パッケージ、または前提条件、**の前提条件**ClickOnce のダイアログ ボックスは、ブートス トラップ パッケージです。 ブートストラップ パッケージは、必須コンポーネントのインストール方法を記述するマニフェスト ファイルを含むディレクトリおよびファイルのグループです。 
@@ -86,10 +86,10 @@ ms.locfileid: "39078443"
 |--------------|-----------------|  
 |ApplicationName|アプリケーションの名前。|  
 |ProcessorArchitecture|実行可能ファイルが対象とするプラットフォームのプロセッサと、ワードあたりのビット数。 次の値があります。<br /><br /> -Intel<br />-IA64<br />-AMD64|  
-|[Version9x](https://msdn.microsoft.com/en-us/library/aa372490\(v=vs.140\).aspx)|Microsoft Windows 95、Windows 98、または Windows ME の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
-|[VersionNT](https://msdn.microsoft.com/en-us/library/aa372495\(v=vs.140\).aspx)|Windows NT、Windows 2000、Windows XP、Windows Vista、Windows Server 2008、または Windows 7 の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
-|[VersionMSI](https://msdn.microsoft.com/en-us/library/aa372493\(v=vs.140\).aspx)|Windows インストーラーのアセンブリ (msi.dll) のインストール中に実行するのバージョン。|  
-|[AdminUser](https://msdn.microsoft.com/en-us/library/aa367545\(v=vs.140\).aspx)|このプロパティは、ユーザーに管理者特権がある場合に設定されます。 値は true または false です。|  
+|[Version9x](/windows/desktop/Msi/version9x)|Microsoft Windows 95、Windows 98、または Windows ME の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
+|[VersionNT](/windows/desktop/Msi/versionnt)|Windows NT、Windows 2000、Windows XP、Windows Vista、Windows Server 2008、または Windows 7 の各オペレーティング システムのバージョン番号。 バージョンの構文は、Major.Minor.ServicePack です。|  
+|[VersionMSI](/windows/desktop/Msi/versionmsi)|Windows インストーラーのアセンブリ (msi.dll) のインストール中に実行するのバージョン。|  
+|[AdminUser](/windows/desktop/Msi/adminuser)|このプロパティは、ユーザーに管理者特権がある場合に設定されます。 値は true または false です。|  
 |InstallMode|インストール モードは、コンポーネントのインストール元の場所を示します。 次の値があります。<br /><br /> -HomeSite - 前提条件は、ベンダーの Web サイトからインストールされます。<br />-SpecificSite - 前提条件は、選択した場所からインストールされます。<br />-SameSite - 前提条件は、アプリケーションと同じ場所からインストールされます。|  
   
 ## <a name="separate-redistributables-from-application-installations"></a>アプリケーションのインストールから独立した再頒布可能パッケージ  

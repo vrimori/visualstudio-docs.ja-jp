@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7caabbe6875f6c51b0c84d0bb8f4b5e4e18a10d2
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 5cac2a21e15223d720089768db2f92892ec5cd43
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34750871"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178535"
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest でのコードの単体テストの生成
 IntelliTest はテスト データおよび単体テストのスイートを生成するために .NET コードを確認します。 コードにある各ステートメントについて、そのステートメントを実行するテスト入力が生成されます。 コード内の各条件付き分岐について、ケース分析が実行されます。 たとえば、`if` ステートメント、アサーション、および例外をスローするすべての操作が分析されます。 この分析は、各メソッドのパラメーター化された単体テストのためにテスト データを生成し、高いコード カバレッジを持つ単体テストを作成するために使用されます。
@@ -48,7 +48,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
      ![[精査結果] ウィンドウでのテスト表示](../test/media/pexexplorationresults.png)
 
-     クラス内のすべてのパブリック メソッドに対して単体テストを生成するには、特定のメソッドではなく、クラスで右クリックします。 その後、 **[IntelliTest の実行]** を選択します。 [精査結果] ウィンドウにあるドロップダウン リストを使用して、クラス内の各メソッドの単体テストと入力データを表示します。
+     クラス内のすべてのパブリック メソッドに対して単体テストを生成するには、特定のメソッドではなく、クラスで右クリックします。 その後、 **[IntelliTest の実行]** を選択します。 **[探索の結果]** ウィンドウにあるドロップダウン リストを使用して、クラス内の各メソッドの単体テストと入力データを表示します。
 
      ![表示するテスト結果をリストから選択](../test/media/selectpextest.png)
 
@@ -60,7 +60,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
      ![テストを選択して右クリックし、[保存] を選択](../test/media/savepextests.png)
 
-     テスト プロジェクトと作成されたパラメーター化された単体テストを表示できます。各行に対応する個々の単体テストはテスト プロジェクトの .g.cs ファイルに保存され、パラメーター化された単体テストは対応する .cs ファイルに保存されます。 単体テストは、テスト エクスプローラーから実行してその結果を表示することができます。これは、手動で作成する他の単体テストと同様です。
+     テスト プロジェクトと作成されたパラメーター化された単体テストを表示できます。各行に対応する個々の単体テストはテスト プロジェクトの *.g.cs* ファイルに保存され、パラメーター化された単体テストは対応する *.cs* ファイルに保存されます。 単体テストは、テスト エクスプローラーから実行してその結果を表示することができます。これは、手動で作成する他の単体テストと同様です。
 
      ![クラス ファイルのテスト メソッドの部分を開き、単体テストを表示](../test/media/testmethodpex.png)
 
@@ -80,7 +80,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
      ![警告を右クリックして [修正] を選択](../test/media/pexfixwarning.png)
 
-     この選択は PexAssemblyInfo.cs ファイルに追加されます。
+     この選択は *PexAssemblyInfo.cs* ファイルに追加されます。
 
      `[assembly: PexUseType(typeof(Camera))]`
 
@@ -92,11 +92,12 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 生成された単体テストで検証する入力と出力の一般的な関係を指定します。 この指定は、テスト メソッドのようになりますが、汎用的に定量化されたメソッドにカプセル化されます。 これは、パラメーター化された単体テスト メソッドであり、IntelliTest で生成されるすべての可能な入力値に対して任意のアサーションを保持する必要があります。
 
-##  <a name="QandALink"></a> Q & A
+##  <a name="q--a"></a>Q & A
 
-### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Q: アンマネージド コードに IntelliTest を使用できますか。
+### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>Q: アンマネージ コードに IntelliTest を使用できますか。
 
-**A:** いいえ。IntelliTest はマネージド コードでのみ動作します。
+
+  **A:** いいえ。IntelliTest はマネージド コードでのみ動作します。
 
 ### <a name="q-when-does-a-generated-test-pass-or-fail"></a>Q: 生成されたテストはどのような場合に合格または失敗しますか。
 
@@ -152,7 +153,7 @@ IntelliTest はテスト データおよび単体テストのスイートを生�
 
 ![IntelliTest の他の単体テスト フレームワークを選択する](../test/media/pexcreateintellitestextensions.png)
 
-これで、IntelliTest を実行すると、個々の単体テストが対応する g.cs ファイル内に生成されます。
+これで、IntelliTest を実行すると、個々の単体テストが対応する *.g.cs* ファイル内に生成されます。
 
 
 ### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>Q: テストの生成方法に関してさらに調べることができますか。

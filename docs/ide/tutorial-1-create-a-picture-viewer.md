@@ -11,15 +11,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7051997550709790d2c12f8f8f9332f67fe6abd
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 9d2c8c23be02f13646c8577d2672bc60b63a1d0a
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748128"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008682"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>チュートリアル 1: ピクチャ ビューアーの作成
-このチュートリアルでは、ピクチャをファイルから読み込んでウィンドウに表示するプログラムを作成します。 ボタンやピクチャ ボックスなどのコントロールをフォームにドラッグする方法、それらのプロパティを設定する方法、およびコンテナーを使用してフォームのサイズを滑らかに変更する方法を習得できます。 また、コードの記述の基本事項についても学習します。 以下の方法について説明します。
+
+このチュートリアルでは、ピクチャをファイルから読み込んでウィンドウに表示するプログラムを作成します。 **Windows フォーム デザイナー**を使用してボタンやピクチャ ボックスなどのコントロールをフォームにドラッグする方法、それらのプロパティを設定する方法、およびコンテナーを使用してフォームのサイズを滑らかに変更する方法を習得できます。 また、コードの記述の基本事項についても学習します。 以下の方法について説明します。
 
 -   新しいプロジェクトを作成します。
 
@@ -35,22 +36,22 @@ ms.locfileid: "34748128"
 
 -   イベント ハンドラー メソッドを記述します。
 
- 完成すると、プログラムは次の図のようになります。
+完成すると、プログラムは次の図のようになります。
 
- ![このチュートリアルで作成する画像](../ide/media/express_pictureviewerdone.png)このチュートリアルで作成する画像
+![このチュートリアルで作成する画像](../ide/media/express_pictureviewerdone.png)
 
 ## <a name="tutorial-links"></a>チュートリアルのリンク
 
- サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。
+サンプルの完全バージョンをダウンロードするには、「[Complete Picture Viewer tutorial sample](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)」 (画像ビューアーのチュートリアルの完全なサンプル) を参照してください。
 
- ![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、[Visual Basic でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205207)または [C# でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205198)に関するビデオをご覧ください。
+![ビデオへのリンク](../data-tools/media/playvideo.gif)このトピックのビデオ版については、[Visual Basic でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205207)または [C# でピクチャ ビューアーを作成する場合の操作方法](http://go.microsoft.com/fwlink/?LinkId=205198)に関するビデオをご覧ください。
 
 > [!NOTE]
->  これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
+> これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。 このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。
 >
->  Visual Basic のコードを確認するには、コード ブロックの上部にある **[VB]** タブをクリックし、Visual C# のコードについては、**[C#]** タブをクリックします。Visual C++ の学習に関心がある場合は、[概要](../ide/getting-started-with-cpp-in-visual-studio.md)に関するページと「[C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/)」(C++ 言語のチュートリアル) を参照してください。
+> Visual Basic のコードを確認するには、コード ブロックの上部にある **[VB]** タブをクリックし、Visual C# のコードについては、**[C#]** タブをクリックします。Visual C++ の学習に関心がある場合は、[概要](../ide/getting-started-with-cpp-in-visual-studio.md)に関するページと「[C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/)」(C++ 言語のチュートリアル) を参照してください。
 >
->  Visual C# アプリまたは Visual Basic UWP アプリの記述方法に興味がございましたら、「[UWP アプリの構築](https://developer.microsoft.com/windows/apps)」を参照してください。
+> Visual C# アプリまたは Visual Basic UWP アプリの記述方法に興味がございましたら、「[UWP アプリの構築](https://developer.microsoft.com/windows/apps)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

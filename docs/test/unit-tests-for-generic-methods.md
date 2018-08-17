@@ -12,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c4d752b66c65f10d46d57b69acc532d07ea8e2da
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fd45465d8eb20d802a20c1b04765afbe029a9993
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977284"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380122"
 ---
 # <a name="unit-tests-for-generic-methods"></a>ジェネリック メソッドの単体テスト
 
@@ -45,7 +45,7 @@ Visual Studio で、`MyList<T>` など、ジェネリック クラスの単体�
 
 -   `SizeOfLinkedListTest()` テスト メソッド。 各テスト メソッドは、TestMethod 属性でマークされています。
 
-#### <a name="generated-test-code"></a>生成後のテスト コード
+#### <a name="generated-test-code"></a>生成されたテスト コード
  次のテスト コードは、`SizeOfLinkedList()` メソッドから生成されました。 これは生成された編集前のテストであるため、SizeOfLinkedList メソッドを正しくテストするように変更する必要があります。
 
 ```csharp
@@ -69,7 +69,7 @@ public void SizeOfLinkedListTest()
 
  上記のコードのジェネリック型パラメーターは `GenericParameterHelper` です。 このパラメーターを編集して特定のデータ型を指定できますが、次の例で示すように、このステートメントを編集せずにテストを実行できます。
 
-#### <a name="edited-test-code"></a>編集後のテスト コード
+#### <a name="edited-test-code"></a>編集されたテスト コード
  次のコードでは、テスト対象コードの `SizeOfLinkedList()` メソッドのテストが成功するように、テスト メソッドとテスト ヘルパー メソッドを編集しました。
 
 ##### <a name="test-helper-method"></a>テスト ヘルパー メソッド

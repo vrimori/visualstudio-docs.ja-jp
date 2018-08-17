@@ -11,55 +11,55 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 63449029b6e67b04face1e9bd339df233ce01c95
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: c626bbe213ee81b8a79b55213d02bd69cc55470f
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056590"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341713"
 ---
-# <a name="installing-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルのインストール
+# <a name="install-debugging-symbols-for-python-interpreters"></a>Python インタープリターのデバッグ シンボルをインストールする
 
-完全なデバッグ エクスペリエンスを提供するため、Visual Studio の[混合モードの Python デバッガー](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)では、多数の内部データ構造を解析するために、Python インタープリターのデバッグ シンボルを使用する必要があります。 たとえば、python27.dll の場合、対応するシンボル ファイルは python27.pdb です。python36.dll の場合、シンボル ファイルは python36.pdb です。 また、各バージョンのインタープリターは、多様なモジュールに合わせてシンボル ファイルを用意しています。
+完全なデバッグ エクスペリエンスを提供するため、Visual Studio の[混合モードの Python デバッガー](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)では、多数の内部データ構造を解析するために、Python インタープリターのデバッグ シンボルを使用する必要があります。 たとえば、*python27.dll* の場合、対応するシンボル ファイルは *python27.pdb* です。*python36.dll* の場合、シンボル ファイルは *python36.pdb* です。 また、各バージョンのインタープリターは、多様なモジュールに合わせてシンボル ファイルを用意しています。
 
-Visual Studio 2017 の "Python 3" および "Anaconda 3" インタープリターの場合、それぞれのシンボルが自動的にインストールされ、Visual Studio で自動的に検出されます。 Visual Studio 2015 以前の場合、または他のインタープリターを使用している場合は、シンボルを別にダウンロードし、Visual Studio の **[デバッグ] > [シンボル]** タブの **[ツール] > [オプション]** でシンボルの場所を設定する必要があります。これらの手順については、以下のセクションで詳しく説明します。
+Visual Studio 2017 の Python 3 および Anaconda 3 インタープリターの場合、それぞれのシンボルが自動的にインストールされ、Visual Studio で自動的に検出されます。 Visual Studio 2015 以前の場合、または他のインタープリターを使用している場合は、シンボルを別にダウンロードし、**[ツール]** > **[オプション]** ダイアログにある **[デバッグ]** > **[シンボル]** タブを使用して、Visual Studio にシンボルの場所を設定する必要があります。これらの手順については、以下のセクションで詳しく説明します。
 
 Visual Studio でシンボルが必要なとき、通常は混合モードのデバッグ セッションを開始したときに、プロンプトが表示されることがあります。 この場合、ダイアログで 2 つの選択肢が示されます。
 
-- **[シンボル設定ダイアログを開く]** を選択すると、**[オプション]** ダイアログが開き、**[デバッグ] > [シンボル]** タブが表示されます。
-- **[インタープリター用のシンボルをダウンロード]** を選択すると、この現在のドキュメント ページが開きます。この場合は、**[ツール] > [オプション]** を選択し、**[デバッグ] > [シンボル]** タブに移動して続行します。
+- **[シンボル設定ダイアログを開く]** を選択すると、**[オプション]** ダイアログが開き、**[デバッグ]** > **[シンボル]** タブが表示されます。
+- **[インタープリター用のシンボルをダウンロード]** を選択すると、この現在のドキュメント ページが開きます。この場合は、**[ツール]** > **[オプション]** を選択し、**[デバッグ]** > **[シンボル]** タブに移動して続行します。
 
     ![混合モード デバッガーのシンボルのプロンプト](media/mixed-mode-debugging-symbols-required.png)
 
-## <a name="downloading-symbols"></a>シンボルをダウンロードしています
+## <a name="download-symbols"></a>シンボルをダウンロードする
 
 - Python 3.5 以前: Python インストーラーでデバッグ シンボルを取得します。 **[カスタム インストール]** を選択し、**[次へ]** を選択します。**[詳細設定]** 画面で、**[Download debugging symbols]** (デバッグ シンボルのダウンロード) と **[Download debug binaries]** (デバッグ バイナリのダウンロード) を選択します。
 
     ![デバッグ シンボルを含む Python 3.x インストーラー](media/mixed-mode-debugging-symbols-installer35.png)
 
-    シンボル ファイル (`.pdb`) はルート インストール フォルダーに保存されます (個々のモジュールのシンボル ファイルも `DLLs` フォルダーにあります)。 そのため、シンボル ファイルは Visual Studio で自動的に検出されます。追加の手順は必要ありません。
+    シンボル ファイル (*.pdb*) はルート インストール フォルダーにあります (個々のモジュールのシンボル ファイルも *DLLs* フォルダーにあります)。 そのため、シンボル ファイルは Visual Studio で自動的に検出されます。追加の手順は必要ありません。
 
-- Python 3.4.x 以前: シンボルは、[公式のディストリビューション](#official-distributions)または [Enthought Canopy](#enthought-canopy) から、ダウンロード可能な .zip ファイルとして入手できます。 ダウンロード後は、Python フォルダー内の `Symbols` などのローカル フォルダーにファイルを展開して続行します。
+- Python 3.4.x 以前: シンボルは、[公式のディストリビューション](#official-distributions)または [Enthought Canopy](#enthought-canopy) から、ダウンロード可能な *.zip* ファイルとして入手できます。 ダウンロード後は、Python フォルダー内の *Symbols* などのローカル フォルダーにファイルを展開して続行します。
 
     > [!Important]
-    > Python のマイナー ビルド間や 32 ビット ビルドと 64 ビット ビルド間でもシンボルは異なるため、バージョンを完全に一致させることをお勧めします。 使用するインタープリターを確認するには、ソリューション エクスプローラーでプロジェクトの **[Python 環境]** *ノード*を展開し、環境名をメモします。 次に **[Python 環境]** *ウィンドウ*に切り替え、インストール場所をメモします。 次にコマンド ウィンドウでその場所を開き、`python.exe` を起動します。正確なバージョンと 32 ビットか 64 ビットかが表示されます。
+    > Python のマイナー ビルド間や 32 ビット ビルドと 64 ビット ビルド間でもシンボルは異なるため、バージョンを完全に一致させることをお勧めします。 使用するインタープリターを確認するには、**ソリューション エクスプローラー**でプロジェクトの **[Python 環境]** *ノード*を展開し、環境名をメモします。 次に **[Python 環境]** *ウィンドウ*に切り替え、インストール場所をメモします。 次に、その場所でコマンド ウィンドウを開き、*python.exe* を起動します。正確なバージョンと 32 ビットか 64 ビットかが表示されます。
 
 - ActiveState Python などのサードパーティの Python ディストリビューションを使用している場合は、そのディストリビューションの作成者に連絡して、シンボルの提供を依頼する必要があります。 WinPython には、標準の Python インタープリターが変更なしで組み込まれているため、対応するバージョン番号用の公式ディストリビューションのシンボルを使用できます。
 
-## <a name="pointing-visual-studio-to-the-symbols"></a>Visual Studio にシンボルの場所を設定する
+## <a name="point-visual-studio-to-the-symbols"></a>Visual Studio にシンボルの場所を設定する
 
 シンボルを別にダウンロードした場合は、以下の手順に従って、Visual Studio にシンボルを認識させます。 Python 3.5 以降のインストーラーでシンボルをインストールした場合、Visual Studio で自動的に検出されます。
 
-1. **[ツール] > [オプション]** メニューを選択し、**[デバッグ] > [シンボル]** を選択します。
+1. **[ツール]** > **[オプション]** メニューを選択し、**[デバッグ]** > **[シンボル]** に移動します。
     
-1. ツールバーの **[追加]** ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、`c:\python34\Symbols` など、`python.pdb` がある場所) を入力し、**[OK]** を選択します。 
+1. ツールバーの **[追加]** ボタン (下図の線で囲まれたボタン) を選択し、ダウンロードしたシンボルを展開したフォルダー (下図のように、*c:\python34\Symbols* など、*python.pdb* がある場所) を入力し、**[OK]** を選びます。 
 
     ![混合モードのデバッグでのシンボルのオプション](media/mixed-mode-debugging-symbols.png)
 
 1. Visual Studio のデバッグ セッション中に、Python インタープリターのソース ファイルの場所を入力するように求められることもあります。 ソース ファイルを ([python.org/downloads](https://www.python.org/downloads) などから) ダウンロードした場合は、その場所を設定することもできます。
 
 > [!Note]
-> ダイアログに表示されているシンボルのキャッシュ機能は、オンライン ソースから取得したシンボルのローカル キャッシュを作成するときに使用します。 Python インタープリターのシンボルの場合、既にローカルに存在するので、これらの機能は必要ありません。 いずれの場合も、詳細については、「[Specify Symbols and Source Files in the Visual Studio Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」(Visual Studio デバッガーでシンボルとソース ファイルを指定する) を参照してください。
+> ダイアログに表示されているシンボルのキャッシュ機能は、オンライン ソースから取得したシンボルのローカル キャッシュを作成するときに使用します。 Python インタープリターのシンボルの場合、既にローカルに存在するので、これらの機能は必要ありません。 いずれの場合も、詳細については、「[Specify Symbols and Source Files in the Visual Studio Debugger](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)」 (Visual Studio デバッガーでシンボルとソース ファイルを指定する) を参照してください。
 
 ## <a name="official-distributions"></a>公式ディストリビューション
 
@@ -92,6 +92,6 @@ Visual Studio でシンボルが必要なとき、通常は混合モードのデ
 
 ## <a name="enthought-canopy"></a>Enthought Canopy
 
-Enthought Canopy は、バージョン 1.2 以降、バイナリのシンボルを提供します。 それらはディストリビューションと共に自動的にインストールされますが、それらが格納されたフォルダーをシンボル パスに追加する操作は手動で実行する必要があります。 Canopy の一般的なユーザーごとのインストールでは、シンボルは、64 ビット版では `%UserProfile%\AppData\Local\Enthought\Canopy\User\Scripts`に、32 ビット版では `%UserProfile%\AppData\Local\Enthought\Canopy32\User\Scripts` に配置されます。
+Enthought Canopy は、バージョン 1.2 以降、バイナリのシンボルを提供します。 それらはディストリビューションと共に自動的にインストールされますが、それらが格納されたフォルダーをシンボル パスに追加する操作は手動で実行する必要があります。 Canopy の一般的なユーザーごとのインストールでは、シンボルは *%UserProfile%\AppData\Local\Enthought\Canopy\User\Scripts* (64 ビット バージョンの場合) および *%UserProfile%\AppData\Local\Enthought\Canopy32\User\Scripts* (32 ビット バージョンの場合) に配置されます。
 
 Enthought Canopy 1.1 以前と Enthought Python Distribution (EPD) はインタープリター シンボルの提供がないため、混合モードのデバッグには対応できません。

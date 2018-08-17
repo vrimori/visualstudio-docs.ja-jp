@@ -14,16 +14,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ead5a3f15f5ba7f586c9dfcec86fb309cbda391f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f3362bae41b540ee097e1109848680a11d37a272
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917967"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512136"
 ---
 # <a name="code-snippet-functions"></a>コード スニペットの関数
 
-C# コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](../ide/code-snippets-schema-reference.md#function) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。
+C# コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](../ide/code-snippets-schema-reference.md#function-element) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。
 
 ## <a name="functions"></a>関数
 
@@ -31,9 +31,9 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
 
 |関数|説明|言語|
 |--------------|-----------------|--------------|
-|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。 `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のいずれかへの参照にする必要があります。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|
-|`ClassName()`|挿入されたスニペットを含むクラスの名前を返します。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|
-|`SimpleTypeName(` `TypeName` `)`|*TypeName* パラメーターを、スニペットが呼び出されたコンテキストで最も単純な形式に縮小します。|[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]|
+|`GenerateSwitchCases(` `EnumerationLiteral` `)`|`EnumerationLiteral` パラメーターで指定された列挙体のメンバー用に、switch ステートメントおよび一連の case ステートメントを生成します。 `EnumerationLiteral` パラメーターは、列挙体リテラルまたは列挙型のいずれかへの参照にする必要があります。|C#|
+|`ClassName()`|挿入されたスニペットを含むクラスの名前を返します。|C#|
+|`SimpleTypeName(` `TypeName` `)`|*TypeName* パラメーターを、スニペットが呼び出されたコンテキストで最も単純な形式に縮小します。|C#|
 
 ## <a name="example"></a>例
 
@@ -159,5 +159,5 @@ C# コード スニペットで使用できる関数は 3 つあります。 関
 
 ## <a name="see-also"></a>関連項目
 
-- [Function 要素](../ide/code-snippets-schema-reference.md#function)
+- [Function 要素](../ide/code-snippets-schema-reference.md#function-element)
 - [コード スニペット スキーマ リファレンス](../ide/code-snippets-schema-reference.md)

@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a81b02d4179c58c63c1429aa2e522bb39bb9aaf
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 164a0eeb8c466c2e2eb5bd03f92160a2fad78abd
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945937"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177738"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper タスク
 アプリケーションとその前提条件を検出、ダウンロード、インストールする自動化方法を提供します。 これは、アプリケーションを構成するすべてのコンポーネントの別々のインストーラーを統合する単一のインストーラーとして機能します。  
@@ -86,7 +86,7 @@ ms.locfileid: "37945937"
   
      省略可能な `String` 型の出力パラメーターです。  
   
-     setup.exe がビルドされた場所を指定します。  
+     *setup.exe* がビルドされた場所を指定します。  
   
 -   `ComponentsLocation`  
   

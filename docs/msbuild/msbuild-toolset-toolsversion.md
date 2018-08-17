@@ -15,15 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e8d46c8d3e076e194369cce2e01325f53aa6a36
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 061065b23aa8a2e7504b32358628ec4e0b3f4b47
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31578888"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153161"
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild ツールセット (ToolsVersion)
-MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。 通常、MSBuild ツールセットには、microsoft.common.tasks ファイル、microsoft.common.targets ファイル、および csc.exe や vbc.exe などのコンパイラが含まれています。 ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。 ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  
+MSBuild は、タスク、ターゲット、およびツールのツールセットを使用して、アプリケーションをビルドします。 通常、MSBuild ツールセットには、*microsoft.common.tasks* ファイル、*microsoft.common.targets* ファイル、および *csc.exe* や *vbc.exe* などのコンパイラが含まれています。 ほとんどのツールセットは、複数のバージョンの .NET Framework や複数のシステム プラットフォームを対象としてアプリケーションをコンパイルするために使用できます。 ただし、MSBuild 2.0 ツールセットは .NET Framework 2.0 のみを対象として使用できます。  
   
 ## <a name="toolsversion-attribute"></a>ToolsVersion 属性  
  プロジェクト ファイルにある [Project](../msbuild/project-element-msbuild.md) 要素の `ToolsVersion` 属性でツールセットを指定します。 次の例では、MSBuild 15.0 ツールセットを使用してプロジェクトをビルドすることを指定します。  
@@ -42,7 +42,7 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
  Visual Studio 2013 以降、MSBuild ツールセットのバージョンは Visual Studio のバージョン番号と同じになりました。 プロジェクト ファイルで指定されたツールセットのバージョンにかかわりなく、MSBuild は Visual Studio 内とコマンド ラインでこのツールセットを既定として使用します。  この動作は、/ToolsVersion フラグを使用してオーバーライドできます。 詳細については、「[ToolsVersion 設定をオーバーライドする](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
   
- 次の例では、MSBuild は `MSBuildToolsPath` 予約済みプロパティを使用して Microsoft.CSharp.targets ファイルを検索します。  
+ 次の例では、MSBuild は `MSBuildToolsPath` 予約済みプロパティを使用して *Microsoft.CSharp.targets* ファイルを検索します。  
   
 ```xml  
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
@@ -50,7 +50,7 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
  `MSBuildToolsPath` の値を変更するには、カスタム ツールセットを定義します。 詳細については、「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。  
   
- ソリューションをコマンド ラインでビルドするとき、msbuild.exe に対して `ToolsVersion` を指定すると、すべてのプロジェクトとそのプロジェクト間の依存関係がその `ToolsVersion` に基づいてビルドされます。ソリューション内の各プロジェクトで固有の `ToolsVersion` が指定されていても、その値は無視されます。 プロジェクトごとに `ToolsVersion` 値を定義する場合は、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
+ ソリューションをコマンド ラインでビルドするとき、*msbuild.exe* に対して `ToolsVersion` を指定すると、すべてのプロジェクトとそのプロジェクト間の依存関係がその `ToolsVersion` に基づいてビルドされます。ソリューション内の各プロジェクトで固有の `ToolsVersion` が指定されていても、その値は無視されます。 プロジェクトごとに `ToolsVersion` 値を定義する場合は、「[ToolsVersion 設定のオーバーライド](../msbuild/overriding-toolsversion-settings.md)」を参照してください。  
   
  `ToolsVersion` 属性はプロジェクトの移行でも使用されます。 たとえば、Visual Studio 2010 で Visual Studio 2008 プロジェクトを開く場合、プロジェクト ファイルは ToolsVersion="4.0" を含むように更新されます。 次に、そのプロジェクトを Visual Studio 2008 で開こうとすると、アップグレードされた `ToolsVersion` は認識されないため、プロジェクトは属性が 3.5 に設定された場合と同様にビルドされます。  
   
@@ -63,35 +63,39 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
 -   .NET Framework フォルダー  
   
--   追加のマネージ ツール  
+-   追加のマネージド ツール  
   
- マネージ ツールには ResGen.exe と TlbImp.exe があります。  
-  
- MSBuild には、ツールセットにアクセスするための 2 つの方法が用意されています。  
+  マネージド ツールには *ResGen.exe* と *TlbImp.exe* があります。  
+
+MSBuild には、ツールセットにアクセスするための 2 つの方法が用意されています。  
   
 -   ツールセットのプロパティの使用  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper> メソッドの使用  
-  
- ツールセットのプロパティは、ツールのパスを指定します。 Visual Studio 2017 以降、MSBuild には決まった場所はなくなりました。 既定では、Visual Studio のインストール場所を基準とする MSBuild\15.0\Bin フォルダーに格納されます。 以前のバージョンでは、MSBuild はプロジェクト ファイル内にある `ToolsVersion` 属性の値を使って、対応するレジストリ キーを検索します。その後、レジストリ キーの情報を使って、ツールセットのプロパティを設定します。 たとえば、`ToolsVersion` の値が `12.0` である場合、MSBuild は、レジストリ キー (HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0) に従ってツールセットのプロパティを設定します。  
+
+ツールセットのプロパティは、ツールのパスを指定します。 Visual Studio 2017 以降、MSBuild には決まった場所はなくなりました。 既定では、Visual Studio のインストール場所を基準とする *MSBuild\15.0\Bin* フォルダーに格納されます。 以前のバージョンでは、MSBuild はプロジェクト ファイル内にある `ToolsVersion` 属性の値を使って、対応するレジストリ キーを検索します。その後、レジストリ キーの情報を使って、ツールセットのプロパティを設定します。 たとえば、`ToolsVersion` の値が `12.0` である場合、MSBuild は、レジストリ キー (**HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0**) に従ってツールセットのプロパティを設定します。  
   
  ツールセットのプロパティを次に示します。  
   
 -   `MSBuildToolsPath`: MSBuild のバイナリのパスを指定します。  
   
--   `SDK40ToolsPath` は、MSBuild 4.x (4.0 または 4.5) に必要な追加のマネージ ツールのパスを指定します。  
+-   
+  `SDK40ToolsPath` は、MSBuild 4.x (4.0 または 4.5) に必要な追加のマネージド ツールのパスを指定します。  
   
--   `SDK35ToolsPath`: MSBuild 3.5 に必要な追加のマネージ ツールのパスを指定します。  
-  
- また、<xref:Microsoft.Build.Utilities.ToolLocationHelper> クラスのメソッドを呼び出すことによって、ツールセットをプログラムで確認することもできます。 このクラスには、次のメソッドが含まれています。  
+-   
+  `SDK35ToolsPath`: MSBuild 3.5 に必要な追加のマネージド ツールのパスを指定します。  
+
+また、<xref:Microsoft.Build.Utilities.ToolLocationHelper> クラスのメソッドを呼び出すことによって、ツールセットをプログラムで確認することもできます。 このクラスには、次のメソッドが含まれています。  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFramework%2A>: .NET Framework フォルダーのパスを返します。  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkFile%2A>: .NET Framework フォルダーに格納されているファイルのパスを返します。  
   
--   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk%2A>: マネージ ツール フォルダーのパスを返します。  
+-   
+  <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdk%2A>: マネージド ツール フォルダーのパスを返します。  
   
--   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A>: マネージ ツール フォルダーに通常格納されているファイルのパスを返します。  
+-   
+  <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToDotNetFrameworkSdkFile%2A>: マネージド ツール フォルダーに通常格納されているファイルのパスを返します。  
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A> は、ビルド ツールのパスを返します。  
   
@@ -99,7 +103,7 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
  15.0 より前のバージョンの MSBuild は、レジストリ キーを使って基本ツールのパスを指定します。 キーにサブキーがある場合、MSBuild ではそのサブキーを使用して、追加のツールを含むサブツールセットのパスを指定します。 この場合、ツールセットは両方のキーで定義されたプロパティ定義を組み合わせることによって定義されます。  
   
 > [!NOTE]
->  ツールセットのプロパティ名が競合する場合、サブキーのパスに対して定義された値が、ルート キーのパスに対して定義された値よりも優先されます。  
+>  ツールセットのプロパティ名が競合する場合、サブキーのパスに対して定義された値が、ルート キーのパスに対して定義された値よりもオーバーライドされます。  
   
  サブツールセットは、`VisualStudioVersion` ビルド プロパティがある場合にアクティブになります。 このプロパティは、次の値のいずれか 1 つを使用できます。  
   
@@ -108,15 +112,15 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
 -   "11.0": .NET Framework 4.5 のサブツールセットを指定します。  
   
 -   "12.0": .NET Framework 4.5.1 のサブツールセットを指定します。 
+
+サブツールセット 10.0 および 11.0 は ToolsVersion 4.0 と一緒に使用する必要があります。 それ以降のバージョンでは、サブツールセットのバージョンとToolsVersion は一致しています。  
+
+ビルド中に、MSBuild は `VisualStudioVersion` プロパティの既定値を自動的に決定し、設定します (このプロパティがまだ定義されていない場合)。  
+
+MSBuild には、`ToolLocationHelper` 列挙値をパラメーターとして追加する `VisualStudioVersion` メソッド用のオーバーロード機能が用意されています。  
+
+サブツールセットは .NET Framework 4.5 で導入されました。  
   
- サブツールセット 10.0 および 11.0 は ToolsVersion 4.0 と一緒に使用する必要があります。 それ以降のバージョンでは、サブツールセットのバージョンとToolsVersion は一致しています。  
-  
- ビルド中に、MSBuild は `VisualStudioVersion` プロパティの既定値を自動的に決定し、設定します (このプロパティがまだ定義されていない場合)。  
-  
- MSBuild には、`ToolLocationHelper` 列挙値をパラメーターとして追加する `VisualStudioVersion` メソッド用のオーバーロード機能が用意されています。  
-  
- サブツールセットは .NET Framework 4.5 で導入されました。  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)   
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)

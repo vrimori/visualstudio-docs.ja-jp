@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 37d545adf33a6350f3d2484e4f820ebca8f7353d
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: ef5a936de8013f2ea0426d95def96a0871839e6a
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056424"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586431"
 ---
-# <a name="setting-up-unit-testing-for-python-code"></a>Python コードの単体テストの設定
+# <a name="set-up-unit-testing-for-python-code"></a>Python コードの単体テストの設定
 
 単体テストは、アプリケーションの他のコード単位 (通常は分離された関数、クラスなど) をテストするコードの断片です。 アプリケーションがそのすべての単体テストに合格すると、少なくとも低レベルの機能が正しいことを信頼できます。
 
@@ -30,13 +30,13 @@ Python は、プログラムの設計時にシナリオを検証するために�
 |---|---|
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python の単体テストについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Testing-Python-hb46k6LWE_405918567) を参照してください (2 分 31 秒)。 |
 
-## <a name="discovering-and-viewing-tests"></a>テストの検出と表示
+## <a name="discover-and-view-tests"></a>テストを探索して表示する
 
 規則により、Visual Studio はテストをその名前が `test` で始まるメソッドとして識別します。 この動作を確認するには、次の操作を行います。
 
-1. Visual Studio に読み込まれた [Python プロジェクト](managing-python-projects-in-visual-studio.md)を開き、プロジェクトを右クリックして **[追加] > [新しい項目...]** を選択し、**[Python Unit Test (Python 単体テスト)]** に続けて **[追加]** を選択します。
+1. Visual Studio に読み込まれた [Python プロジェクト](managing-python-projects-in-visual-studio.md)を開き、プロジェクトを右クリックして **[追加]** > **[新しい項目]** を選択し、**[Python Unit Test (Python 単体テスト)]** に続けて **[追加]** を選択します。
 
-1. この操作で、標準 `unittest` モジュールをインポートし、`unittest.TestCase` からテスト クラスを派生させ、スクリプトを直接実行する場合に `unittest.main()` を起動するコードを含む `test1.py` ファイルが作成されます。
+1. このアクションにより、標準 `unittest` モジュールをインポートし、`unittest.TestCase` からテスト クラスを派生させ、スクリプトを直接実行する場合に `unittest.main()` を起動するコードを含む *test1.py* ファイルが作成されます。
 
     ```python
     import unittest
@@ -49,29 +49,29 @@ Python は、プログラムの設計時にシナリオを検証するために�
         unittest.main()
     ```
 
-1. 必要に応じてファイルを保存し、**[テスト] > [Windows] > [テスト エクスプローラー]** メニュー コマンドでテスト エクスプローラーを開きます。
+1. 必要に応じてファイルを保存し、**[テスト]** > **[Windows]** > **[テスト エクスプローラー]** メニュー コマンドで**テスト エクスプローラー**を開きます。
 
-1. テスト エクスプローラーは、テストするプロジェクトを検索し、それらを次のように表示します。 テストをダブルクリックすると、そのソース ファイルが開きます。
+1. **テスト エクスプローラー**は、テストするプロジェクトを検索し、それらを次のように表示します。 テストをダブルクリックすると、そのソース ファイルが開きます。
 
     ![既定の test_A を表示しているテスト エクスプローラー](media/unit-test-A.png)
 
-1. 他のテストをプロジェクトに追加すると、ツール バーのグループ化メニューを使用してテスト エクスプローラーのビューを整理できます。
+1. 他のテストをプロジェクトに追加すると、ツール バーの**グループ化**メニューを使用して**テスト エクスプローラー**のビューを整理できます。
 
     ![テスト エクスプローラーのグループ化ツール バー メニュー](media/unit-test-group-menu.png)
 
-1. 検索フィールドにテキストを入力してテストを名前でフィルター処理することもできます。
+1. **検索**フィールドにテキストを入力してテストを名前でフィルター処理することもできます。
 
 `unittest` モジュールとテストの記述について詳しくは、[Python 2.7 ドキュメント](https://docs.python.org/2/library/unittest.html)または [Python 3.4 ドキュメント](https://docs.python.org/3/library/unittest.html) (python.org) をご覧ください。
 
-## <a name="running-tests"></a>テストの実行
+## <a name="run-tests"></a>テストの実行
 
-テスト エクスプローラーでは、さまざまな方法でテストを実行できます。
+**テスト エクスプローラー**では、さまざまな方法でテストを実行できます。
 
 - **[Run All (すべて実行)]** は、表示されているすべてのテスト (フィルターの対象) を明確に実行します。
-- **[実行...]** メニューには、失敗、合格、または未実行のテストをグループとして実行するコマンドが用意されています。
+- **[実行]** メニューには、失敗、合格、または未実行のテストをグループとして実行するコマンドが用意されています。
 - 1 つ以上のテストを選んで右クリックし、**[選択したテストの実行]** を選択します。
 
-テストはバックグラウンドで実行され、完了するとテスト エクスプローラーが各テストの状態を更新します。
+テストはバックグラウンドで実行され、完了すると**テスト エクスプローラー**が各テストの状態を更新します。
 
 - 合格したテストには、緑のチェックマークとテストの実行にかかった時間が表示されます。
 
@@ -83,11 +83,11 @@ Python は、プログラムの設計時にシナリオを検証するために�
 
     ![test_A の失敗とその理由](media/unit-test-A-fail-reason.png)
 
-## <a name="debugging-tests"></a>テストのデバッグ
+## <a name="debug-tests"></a>テストのデバッグ
 
 単体テストはコードの断片であるため、他のコードと同様にバグが発生することがあり、デバッガーでの実行が必要になることがあります。 デバッガーでは、ブレークポイントを設定し、変数を確認し、コードをステップ実行することができます。 Visual Studio には単体テストのための診断ツールも用意されています。
 
-デバッグを開始するには、コードに最初のブレークポイントを設定し、テスト エクスプローラーでテスト (または選択範囲) を右クリックし、**[選択したテストのデバッグ]** を選択します。 アプリケーション コードの場合と同様に、Visual Studio が Python デバッガーを起動します。
+デバッグを開始するには、コードに最初のブレークポイントを設定し、**テスト エクスプローラー**でテスト (または選択範囲) を右クリックし、**[選択したテストのデバッグ]** を選択します。 アプリケーション コードの場合と同様に、Visual Studio が Python デバッガーを起動します。
 
 ![テストのデバッグ](media/unit-test-debugging.png)
 

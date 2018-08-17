@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ba6a5b666777e692fe2c214f165c0bc1da7fee9d
-ms.sourcegitcommit: 893c09d58562c378a4ba057bf2a06bde1c80df90
+ms.openlocfilehash: 1b254856b819bda2a5d05210f9cef94968197053
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "35669131"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379483"
 ---
 # <a name="how-to-view-web-page-response-time-in-a-load-test-using-the-load-test-analyzer"></a>方法: ロード テスト アナライザーを使用してロード テストにおける Web ページ応答時間を表示する
 
@@ -29,7 +29,7 @@ ms.locfileid: "35669131"
 
 -   ページの応答時間の目標を達成したテストの反復処理の割合
 
--   Web ページの応答時間を分析するには、ロード テスト アナライザーでテーブル ビューまたはグラフ ビューを使用します。
+-   Web ページの応答時間を分析するには、**ロード テスト アナライザー**でテーブル ビューまたはグラフ ビューを使用します。
 
 -   テーブル ビューでの Web ページ応答時間の分析
 
@@ -39,7 +39,7 @@ ms.locfileid: "35669131"
 
 ### <a name="to-view-response-time-data-in-a-table"></a>応答時間データを表形式で表示するには
 
-1.  ロード テスト アナライザーのツール バーの **[テーブル]** を選択し、テーブル グリッドが表示されるようにします。
+1.  **ロード テスト アナライザー**のツール バーの **[テーブル]** を選択し、テーブル グリッドが表示されるようにします。
 
 2.  **[テーブル]** ボックスの一覧の **[ページ]** を選択します。
 
@@ -68,11 +68,11 @@ ms.locfileid: "35669131"
 
 ## <a name="view-response-time-data-in-a-graph"></a>応答時間データをグラフ表示する
 
-応答時間データをグラフ表示して、ロード テスト中の時間の経過に伴う変化を確認することもできます。 これは、ロード パターンがテストの実行ごとに増える場合、たとえば、ステップ ロード パターンを使用する場合に便利です。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
+応答時間データをグラフ表示して、ロード テスト中の時間の経過に伴う変化を確認することもできます。 これは、ロード パターンがテストの実行ごとに増える場合、たとえば、ステップ ロード パターンを使用する場合に便利です。 詳細については、「[ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)」を参照してください。
 
 ### <a name="to-view-response-time-data-in-a-graph"></a>応答時間データをグラフ表示するには
 
-1.  ロード テスト アナライザーのツール バーの **[グラフ]** をクリックし、グラフが表示されるようにします。
+1.  **ロード テスト アナライザー**のツール バーの **[グラフ]** をクリックし、グラフが表示されるようにします。
 
 2.  **[カウンター]** ウィンドウで、目的のシナリオのノード、たとえば `Scenario1` を展開します。
 
@@ -86,10 +86,10 @@ ms.locfileid: "35669131"
 
      データがグラフに追加されます。
 
-7.  (省略可能) 前の手順を [Avg.Page Time]、[Page Response Time Goal]、および [Total Pages] についても繰り返します。
+7.  (省略可能) 前の手順を **[Avg.Page Time]**、**[Page Response Time Goal]**、および **[Total Pages]** についても繰り返します。
 
     > [!NOTE]
-    > [Page Response Time Goal] は定数です。
+    > **[Page Response Time Goal]** は定数です。
 
  詳細については、「[グラフ ビューでのロード テスト結果の分析](../test/analyze-load-test-results-in-the-graphs-view.md)」を参照してください。
 

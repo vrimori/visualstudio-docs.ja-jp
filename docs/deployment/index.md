@@ -8,12 +8,12 @@ ms.technology: vs-ide-deployment
 ms.author: mikejo
 author: mikejo5000
 manager: douge
-ms.openlocfilehash: 83013d3baf0c9c041a3873a223cd218c773ae20c
-ms.sourcegitcommit: 0853338831925fc63398b49f21f457b39f3c0a12
+ms.openlocfilehash: d16a7ced93364ea9143c326c93f448fec577e034
+ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030404"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341763"
 ---
 # <a name="deployment-in-visual-studio"></a>Visual Studio での配置
 
@@ -76,7 +76,7 @@ Visual Studio では、アプリの配置に役立つさまざまなツールを
         </div>
         </a>
     </li>
-        <li>
+    <li>
         <a href="quickstart-deploy-to-azure.md">
         <div class="cardSize">
             <div class="cardPadding">
@@ -88,6 +88,24 @@ Visual Studio では、アプリの配置に役立つさまざまなツールを
                     </div>
                     <div class="cardText">
                         <h3>Azure App Service に配置する</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="quickstart-deploy-to-linux.md">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="Deploy to Azure App Service">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Linux 上の App Service に配置する</h3>
                     </div>
                 </div>
             </div>

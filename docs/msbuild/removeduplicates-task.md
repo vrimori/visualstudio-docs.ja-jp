@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 596c066018a5f6f731c4ca0cefbefae458646ec1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b121090196b5b9222799cdcce4e4f9af096e483f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31574195"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153073"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates タスク
 指定されたアイテム コレクションから、重複するアイテムを削除します。  
@@ -41,7 +41,7 @@ ms.locfileid: "31574195"
 ## <a name="remarks"></a>コメント  
  このタスクでは大文字と小文字が区別されず、重複の判断時、項目メタデータは比較されません。  
   
- 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
+ 上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`RemoveDuplicates` タスクを使用し、`MyItems` 項目コレクションから重複項目を削除します。 タスクが完了すると、`FilteredItems` 項目コレクションに含まれる項目が 1 つになります。  
@@ -68,7 +68,7 @@ ms.locfileid: "31574195"
 </Project>  
 ```  
 
- `RemoveDuplicates` タスクが入力順を保持する例を次に示します。 タスクが完了すると、`FilteredItems` 項目コレクションには、"MyFile2.cs"、"MyFile1.cs"、および "MyFile3.cs" の順に項目が含まれます。  
+ `RemoveDuplicates` タスクが入力順を保持する例を次に示します。 タスクが完了すると、`FilteredItems` 項目コレクションには、*MyFile2.cs**MyFile1.cs*および *MyFile3.cs* の順に項目が含まれます。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -91,7 +91,7 @@ ms.locfileid: "31574195"
 </Project>  
 ```  
 
-## <a name="see-also"></a>参照  
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [タスク](../msbuild/msbuild-tasks.md)

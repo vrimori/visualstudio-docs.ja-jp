@@ -1,5 +1,5 @@
 ---
-title: CustomParameter 要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: CustomParameter 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 154586701386f5f8f56c128920e12ca3147deb6b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: de6f5bf513d9d3582ba05bf7a34471d13743f8de
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100570"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500684"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>CustomParameter 要素 (Visual Studio テンプレート)
 カスタム パラメーターの名前と、テンプレートからプロジェクトまたは項目を作成するときに使用する値が含まれています。  
@@ -31,14 +31,14 @@ ms.locfileid: "31100570"
 <CustomParameter Name="name" Value="value">  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 パラメーターの名前。 パラメーターの形式は $*名前*$ です。|  
+|`Name`|必須。 パラメーターの名前。 パラメーターの形式は、$*名前*$。|  
 |`Value`|必須。 パラメーターの置換値。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -48,13 +48,13 @@ ms.locfileid: "31100570"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|ウィザードを使用するパラメーターの置換時に、テンプレート ウィザードに渡すカスタム パラメーターをグループ化します。|  
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|このウィザードは、パラメーター置換時に、テンプレートのウィザードに渡されるカスタム パラメーターをグループ化します。|  
   
-## <a name="remarks"></a>コメント  
- テンプレートが含まれている場合`CustomParameter`要素、すべてのインスタンス、`Name`属性に置き換え、`Value`作成したプロジェクトまたはアイテムのファイル内の属性です。  
+## <a name="remarks"></a>Remarks  
+ テンプレートが含まれる場合`CustomParameter`要素、すべてのインスタンス、`Name`属性に置き換え、`Value`で作成したプロジェクトまたは項目のファイル属性。  
   
 ## <a name="example"></a>例  
- 次の例では、テンプレートでいくつかのカスタム パラメーターを使用する方法を示します。 次のカスタム パラメーターのすべてのインスタンスを持つテンプレートからプロジェクトまたは項目を作成するときに`$color1$`と`$color2$`テンプレートのファイルが置き換えられます`Red`と`Blue`、それぞれします。  
+ 次の例では、テンプレートでいくつかのカスタム パラメーターを使用する方法を示します。 次のカスタム パラメーターのすべてのインスタンスを使用してテンプレートからプロジェクトまたは項目を作成するときに`$color1$`と`$color2$`でテンプレート ファイルが置き換えられる`Red`と`Blue`、それぞれします。  
   
 ```  
 <CustomParameters>  

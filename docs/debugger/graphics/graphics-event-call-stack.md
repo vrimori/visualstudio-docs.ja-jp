@@ -1,5 +1,5 @@
 ---
-title: グラフィックス イベント呼び出し履歴 |Microsoft ドキュメント
+title: グラフィックス イベント呼び出し履歴 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,22 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 879189fe71a4bf9dc0b7c56afe81d85d4316b6a4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 77c53db002fd0d300a01b5cc142f6ed2daf4daa2
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31474051"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510579"
 ---
 # <a name="graphics-event-call-stack"></a>グラフィックス イベント呼び出し履歴
 Visual Studio Graphics Analyzer のグラフィックス イベント呼び出し履歴を使用すると、問題のあるグラフィックス イベントとアプリのソース コードとの間の関係をマップできます。  
   
  [イベント呼び出し履歴] ウィンドウを次に示します。  
   
- ![呼び出しスタックの先頭 DrawIndexed イベント。] (media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
+ ![DrawIndexed イベントの前の呼び出し履歴。] (media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")  
   
 ## <a name="understanding-the-graphics-event-call-stack"></a>グラフィックス イベント呼び出し履歴について  
- [イベント呼び出し履歴] を使用すると、特定の Direct3D イベントが発生するまでの実行フローを理解できます。 代わりに実行中のアプリでの現在のスレッドの現在の呼び出し履歴の表示、表示、呼び出し履歴には、選択した Direct3D イベントの発生時に存在していたする点を除いて、Visual Studio の呼び出し履歴 ウィンドウが似ています。 [イベント呼び出し履歴] から、選択した Direct3D イベントの呼び出しサイトに移動して、前後のコードを確認できます。  
+ [イベント呼び出し履歴] を使用すると、特定の Direct3D イベントが発生するまでの実行フローを理解できます。 表示する点が、現在のスレッドの現在の呼び出し履歴を表示するアプリの実行中に、代わりに、呼び出し履歴には、選択した Direct3D イベントの発生時に存在していた Visual Studio の呼び出し履歴 ウィンドウと似ています。 [イベント呼び出し履歴] から、選択した Direct3D イベントの呼び出しサイトに移動して、前後のコードを確認できます。  
   
  [イベント呼び出し履歴] を使用して、問題のイベントの発生元であるコード パスを識別することにより、コードベースの知識に基づき、問題の原因を推測できるようになります。また、アプリのソース コードにブレークポイントを追加して、従来のデバッグ手法で、アプリまたはイベント パラメーターの状態によって、どのようにイベントの不適切な動作が発生しているかを調査することもできます。 この調査は、問題がレンダリングに関連していることのみがわかっている場合に、ソース コード内の問題を見つけるのに役立ちます。  
   

@@ -1,7 +1,7 @@
 ---
 title: 変更ログ (Visual Studio Tools for Unity、Mac) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 08/06/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 33a6ac54-d997-4308-b5a0-af7387460849
@@ -10,18 +10,62 @@ ms.author: v-davian
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d43542dc78c8bc0eaeb05e1a620edff7a88efa37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f2bea6bca74fa3c97e6501a44f7d9ea950369d6c
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31084120"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639733"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>変更ログ (Visual Studio Tools for Unity、Mac)
 Visual Studio Tools for Unity の変更ログです。
 
+## <a name="1602"></a>1.6.0.2
+ リリース日: 2018 年 7 月 24 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+     -   Unity のパフォーマンスのバグの回避策がロールバックされました (Unity でこの問題が修正されたため)。
+     
+## <a name="1601"></a>1.6.0.1
+ リリース日: 2018 年 7 月 10 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+     -   シェーダー コードの配色のサポートを修正しました。
+     
+## <a name="1600"></a>1.6.0.0
+ リリース日: 2018 年 6 月 26 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+-   **ウィザード:**
+
+    -   OnApplicationFocus メッセージのタイポを修正しました。
+
+-   **プロジェクトの生成:**
+
+     -   Unity のパフォーマンスのバグの一時的な回避策: プロジェクト生成時の MonoIslands のキャッシュ。
+     
+     -   今後、新しい Unity ランタイムを使用するときにはポータブル pdb を mdb に変換しないでください。
+     
+## <a name="1502"></a>1.5.0.2
+ リリース日: 2018 年 4 月 18 日
+ 
+### <a name="new-features"></a>新機能
+
+-   **統合:**
+
+    -   基本的なシェーダー コードの補完機能のサポートが追加されました。
+    
+    -   シェーダー ファイル内でのコメント切り替えのサポートが追加されました。
+
 ## <a name="1501"></a>1.5.0.1
- リリース: 2018 年 3 月 28 日
+ リリース日: 2018 年 3 月 28 日
  
 ### <a name="new-features"></a>新機能
 
@@ -30,7 +74,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   Unity プロジェクト エクスプローラーが追加テンプレート対応になりました。
 
 ## <a name="1500"></a>1.5.0.0
- リリース: 2018 年 3 月 21 日
+ リリース日: 2018 年 3 月 21 日
  
 ### <a name="new-features"></a>新機能
 
@@ -39,7 +83,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   USB 経由で Android プレーヤーを検出し、接続できるようになりました。
 
 ## <a name="1403"></a>1.4.0.3
- リリース: 2018 年 3 月 5 日
+ リリース日: 2018 年 3 月 5 日
  
 ### <a name="new-features"></a>新機能
 
@@ -52,7 +96,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   専用設定のオプション パネルが追加されました。
 
 ## <a name="1402"></a>1.4.0.2
- リリース: 2018 年 1 月 24 日
+ リリース日: 2018 年 1 月 24 日
  
 ### <a name="bug-fixes"></a>バグ修正
 
@@ -67,7 +111,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   新しいプレーヤーを検出したときの通知を修正しました。
 
 ## <a name="1401"></a>1.4.0.1
- リリース: 2018 年 1 月 23 日
+ リリース日: 2018 年 1 月 23 日
  
 ### <a name="bug-fixes"></a>バグ修正
 
@@ -76,7 +120,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   ダブルクリックによるフォルダーの展開/折りたたみを修正しました。
 
 ## <a name="1400"></a>1.4.0.0
- リリース: 2017 年 12 月 13 日
+ リリース日: 2017 年 12 月 13 日
  
 ### <a name="new-features"></a>新機能
 
@@ -91,7 +135,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   pdb から mdb への自動デバッグ シンボル変換を修正済み
 
 ## <a name="1301"></a>1.3.0.1
- リリース: 2017 年 12 月 12 日
+ リリース日: 2017 年 12 月 12 日
  
 ### <a name="bug-fixes"></a>バグ修正
 
@@ -104,7 +148,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   roslyn コンテキストは、メソッドの挿入前に更新されます。
 
 ## <a name="1300"></a>1.3.0.0
- リリース: 2017 年 11 月 20 日
+ リリース日: 2017 年 11 月 20 日
  
 ### <a name="new-features"></a>新機能
 
@@ -115,7 +159,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   VS for Mac 7.4 で新しい入力候補 API のサポートが追加されました。
 
 ## <a name="1200"></a>1.2.0.0
- リリース: 2017 年 10 月 23 日
+ リリース日: 2017 年 10 月 23 日
  
 ### <a name="new-features"></a>新機能
 
@@ -132,7 +176,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   既定値が 'true' になったので、AllowAttachedDebuggingOfEditor Unity フラグを強要しません。
 
 ## <a name="1103"></a>1.1.0.3
- リリース: 2017 年 10 月 23 日
+ リリース日: 2017 年 10 月 23 日
  
 ### <a name="new-features"></a>新機能
 
@@ -141,7 +185,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   .NET 4.6 プロファイルのサポートが追加されました。
 
 ## <a name="1102"></a>1.1.0.2
- リリース: 2017 年 8 月 8 日
+ リリース日: 2017 年 8 月 8 日
  
 ### <a name="new-features"></a>新機能
 
@@ -154,7 +198,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   Unity 5.6 の使用時にはアンセーフ コンパイル スイッチが常に有効になります。
 
 ## <a name="1101"></a>1.1.0.1
- リリース: 2017 年 7 月 20 日
+ リリース日: 2017 年 7 月 20 日
  
 ### <a name="new-features"></a>新機能
 
@@ -163,7 +207,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   ローカライズされたリソースのサポートが追加されました。
 
 ## <a name="1100"></a>1.1.0.0
- リリース: 2017 年 7 月 12 日
+ リリース日: 2017 年 7 月 12 日
  
 ### <a name="new-features"></a>新機能
 
@@ -186,7 +230,7 @@ Visual Studio Tools for Unity の変更ログです。
     -   コンパイル時のシェーダー エラー メッセージを修正しました。
 
 ## <a name="1001"></a>1.0.0.1
- リリース: 2017 年 5 月 4 日
+ リリース日: 2017 年 5 月 4 日
  
 ### <a name="bug-fixes"></a>バグ修正
 
@@ -195,4 +239,4 @@ Visual Studio Tools for Unity の変更ログです。
     -   ハイブリッド プロジェクトと標準プロジェクトのアクティブ ドキュメント追跡を修正しました。
 
 ## <a name="1000"></a>1.0.0.0
- リリース: 2017 年 5 月 3 日
+ リリース日: 2017 年 5 月 3 日

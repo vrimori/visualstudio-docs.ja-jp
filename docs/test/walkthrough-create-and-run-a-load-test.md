@@ -12,20 +12,20 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 22014010ea0ef7d101a446b6e89591797f5f2550
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: cbe16b5e0b711783c9dfd12ab9a652fb4055fc36
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977386"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381017"
 ---
 # <a name="walkthrough-create-and-run-a-load-test-that-contains-unit-tests"></a>チュートリアル: 単体テストを含むロード テストを作成して実行する
 
 このチュートリアルでは、単体テストを含むロード テストを作成します。
 
-このチュートリアルでは、Visual Studio Enterprise を使用してロード テストを作成および実行する手順を説明します。 ロード テストは、Web パフォーマンス テストおよび単体テストのコンテナーです。 ロード テストは、新しいロード テスト ウィザードを使用して作成します。
+このチュートリアルでは、Visual Studio Enterprise を使用してロード テストを作成および実行する手順を説明します。 ロード テストは、Web パフォーマンス テストおよび単体テストのコンテナーです。 ロード テストは、**新しいロード テスト ウィザード**を使用して作成します。
 
-ロード テストでは、目的のロード シミュレーションを生成するために変更できる多くのランタイム プロパティを公開しています。 このチュートリアルでは、新しいロード テスト ウィザードを使用して、単体テストをロード テストに追加します。
+ロード テストでは、目的のロード シミュレーションを生成するために変更できる多くのランタイム プロパティを公開しています。 このチュートリアルでは、**新しいロード テスト ウィザード**を使用して、単体テストをロード テストに追加します。
 
 このチュートリアルでは、次のタスクを行います。
 
@@ -35,19 +35,19 @@ ms.locfileid: "31977386"
 
 -   ロード テストを実行します。
 
--   「[チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を実行して、いくつかの単体テストのある Web パフォーマンス テストとロード テストのプロジェクトを含む、簡単な C# クラス ライブラリを作成します。
+-   「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」に記載されている手順を実行して、いくつかの単体テストのある Web パフォーマンス テストとロード テストのプロジェクトを含む、簡単な C# クラス ライブラリを作成します。
 
 ## <a name="create-a-load-test-containing-unit-tests-using-the-new-load-test-wizard"></a>新しいロード テスト ウィザードを使用した、単体テストを含むロード テストの作成
 
 ### <a name="to-start-the-new-load-test-wizard"></a>新しいロード テスト ウィザードを開始するには
 
-1.  「[チュートリアル: マネージ コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」で作成した Bank ソリューションを開きます。
+1.  「[チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)」で作成した Bank ソリューションを開きます。
 
 2.  **ソリューション エクスプローラー**で、Bank ソリューション ノードのショートカット メニューを開き、**[追加]** をポイントして、**[新しいプロジェクト]** をクリックします。
 
-     [新しいプロジェクトの追加] ダイアログ ボックスが表示されます。
+     **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
-3.  [新しいプロジェクトの追加] ダイアログ ボックスで、**[Visual C#]** を展開し、**[テスト]** をクリックします。 テンプレートの一覧で **[Web パフォーマンスとロード テストのプロジェクト]** をクリックし、**[名前]** フィールドに「`BankLoadTest`」と入力します。 **[OK]** をクリックします。
+3.  **[新しいプロジェクトの追加]** ダイアログ ボックスで、**[Visual C#]** を展開し、**[テスト]** を選択します。 テンプレートの一覧で **[Web パフォーマンスとロード テストのプロジェクト]** をクリックし、**[名前]** フィールドに「`BankLoadTest`」と入力します。 **[OK]** をクリックします。
 
      BankLoadTest という Web パフォーマンスとロード テストのプロジェクトがソリューションに追加されます。
 
@@ -65,7 +65,7 @@ ms.locfileid: "31977386"
 
      *シナリオ*とは、グループ化機構です。 一連のテストおよびこれらのテストをロードの下で実行するためのプロパティで構成されています。
 
-2.  **[待ち時間のプロファイル]** を `Use normal distribution centered on recorded think times` に設定します。 待ち時間は、ユーザーが Web ページで次のページに進むまでの考慮時間を表します。
+2.  **[待ち時間のプロファイル]** を `Use normal distribution centered on recorded think times` に設定します。 待ち時間は、ユーザーが Web ページで次のページに進む前に考える時間を表します。
 
 1.  終了したら、**[次へ]** をクリックします。
 
@@ -88,7 +88,7 @@ ms.locfileid: "31977386"
 
 ### <a name="to-select-test-mix-model-for-the-scenario"></a>シナリオのテスト ミックス モデルを選択するには
 
-1.  [テスト ミックスを何に基づいてモデル化しますか?] で、**[テストの合計数]** を選択します。
+1.  **[テスト ミックスを何に基づいてモデル化しますか?]** で、**[テストの合計数]** を選択します。
 
 2.  **[次へ]** をクリックします。
 
@@ -98,17 +98,17 @@ ms.locfileid: "31977386"
 
 2.  **[追加]** をクリックして、テストを選択します。
 
-3.  **[使用可能なテスト]** ペインに表示される CreditTest 単体テストを選択します。このペインには、Web パフォーマンスとロード テストのプロジェクト内の Web パフォーマンス テストおよび単体テストがすべて表示されます。
+3.  **[使用可能なテスト]** ペインに表示される **CreditTest** 単体テストを選択します。このペインには、Web パフォーマンスとロード テストのプロジェクト内の Web パフォーマンス テストおよび単体テストがすべて表示されます。
 
-4.  矢印をクリックして、**[選択されたテスト]** ペインに CreditTest 単体テストを追加します。
+4.  矢印をクリックして、**[選択されたテスト]** ペインに **CreditTest** 単体テストを追加します。
 
-5.  DebitTest 単体テストおよび FreezeAccountTest 単体テストについて、手順 3. と 4. を繰り返します。
+5.  **DebitTest** 単体テストおよび **FreezeAccountTest** 単体テストについて、手順 3. と 4. を繰り返します。
 
 6.  3 つの単体テストの追加が終了したら、**[OK]** をクリックします。
 
      テスト ミックスが表示されます。
 
-7.  CreditTest の配分の下のスライダーを少し右へ動かして、テストの配分を調整します。 配分が 100% のままになるように、他のスライダーが自動的に左へ移動することに注意してください。
+7.  **CreditTest** の**配分**の下のスライダーを少し右へ動かして、テストの配分を調整します。 配分が 100% のままになるように、他のスライダーが自動的に左へ移動することに注意してください。
 
 8.  **[次へ]** をクリックします。
 
@@ -134,7 +134,7 @@ ms.locfileid: "31977386"
 
 2.  **[完了]** を選択します。 **ロード テスト エディター**で、ロード テストが開きます。
 
-## <a name="running-the-load-test"></a>ロード テストの実行
+## <a name="run-the-load-test"></a>ロード テストを実行する
  ロード テストを作成したら、そのロード テストを実行して、ロード シミュレーションに Bank アプリケーションが応答する動作を確認します。 ロード テストを実行している間、**[ロード テスト アナライザー]** ウィンドウが表示されます。
 
 ### <a name="to-run-the-load-test"></a>ロード テストを実行するには
@@ -145,8 +145,8 @@ ms.locfileid: "31977386"
 
 ## <a name="see-also"></a>関連項目
 
-- [テスト ミックスを編集して、ロード テスト シナリオに含めるテストを指定](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
+- [テスト ミックスを編集して、ロード テスト シナリオに含めるテストを指定する](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
 - [仮想ネットワークの種類の指定](../test/specify-virtual-network-types-in-a-load-test-scenario.md)
 - [ロード テスト シナリオの編集](../test/edit-load-test-scenarios.md)
-- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)
-- [テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [ロード パターンを編集して、仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [テキスト ミックス モデルを編集して、仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)

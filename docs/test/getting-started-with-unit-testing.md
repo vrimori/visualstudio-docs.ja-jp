@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 5101040d52527a80c7531d4984ead5cb4061f70f
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 6fb81ce1891a1e37670c81d1e7d0bf4b13fa2796
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117252"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469068"
 ---
 # <a name="get-started-with-unit-testing"></a>単体テストの概要
 
@@ -56,7 +56,7 @@ Visual Studio を使用して、単体テストを定義および実行してコ
 
 ## <a name="run-unit-tests"></a>単体テストを実行する
 
-1. テスト エクスプローラーを開きます。
+1. **テスト エクスプローラー**を開きます。
 
    ![[テスト] メニューで、テスト エクスプローラーを開く](media/rununittest1.png)
 
@@ -64,7 +64,7 @@ Visual Studio を使用して、単体テストを定義および実行してコ
 
    ![テスト エクスプローラーでの単体テストの実行](media/rununittest2.png)
 
-   テスト エクスプローラーに成功または失敗した単体ユニット テストが表示されます。
+   **テスト エクスプローラー**に成功または失敗した単体ユニット テストが表示されます。
 
    ![テスト エクスプローラーで単体テストの結果を確認する](media/rununittest3.png)
 
@@ -97,7 +97,7 @@ IntelliTest を実行すると、どのテストが失敗しているかを簡�
 
 ## <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 
-テスト エクスプローラーを使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。 その方法については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。
+**テスト エクスプローラー**を使用して、Visual Studio またはサードパーティの単体テスト プロジェクトから単体テストを実行し、テストをカテゴリにグループ化し、テスト リストをフィルター処理し、テストのプレイリストを作成、保存、および実行します。 テストをデバッグし、テストのパフォーマンスとコード カバレッジを分析することもできます。 その方法については、「[テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)」を参照してください。
 
 ![テスト エクスプローラーを使用した単体テストの実行](media/testexplorer.png)
 
@@ -109,13 +109,13 @@ IntelliTest を実行すると、どのテストが失敗しているかを簡�
 
 ## <a name="use-a-different-unit-test-framework"></a>別の単体テスト フレームワークを使用する
 
-Boost、Google、nUnit など、サードパーティのテスト フレームワークを利用し、Visual Studio で単体テストを実行できます。 Visual Studio のテスト ランナーがそのフレームワークで作業できるようにそのフレームワークのプラグインを使用します。
+Boost、Google、NUnit など、サードパーティのテスト フレームワークを利用して、Visual Studio で単体テストを実行できます。 Visual Studio のテスト ランナーがそのフレームワークで作業できるようにそのフレームワークのプラグインを使用します。
 
-以下は、サードパーティのテスト フレームワークを有効にする手順です。
+サードパーティのテスト フレームワークを有効にする手順は次のとおりです。
 
 1. メニュー バーで **[ツール]** > **[拡張機能と更新プログラム]** の順に選択します。
 
-1. **[拡張機能と更新プログラム]** ダイアログ ボックスで **[オンライン]** カテゴリを展開し、**[Visual Studio Marketplace]** を選択します。 **[ツール]**、**[テスト]** の順に選択します。
+1. **[拡張機能と更新プログラム]** ダイアログ ボックスで **[オンライン]** カテゴリを展開し、**[Visual Studio Marketplace]** を選択します。 **[ツール]**、 > **[テスト]** の順に選択します。
 
    ![Visual Studio Marketplace](media/extensions-and-updates-testing.png)
 

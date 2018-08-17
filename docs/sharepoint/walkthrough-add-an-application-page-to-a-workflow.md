@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 937fb2d5b41c2fce9fb11cc683f7abd771718e89
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 49cde761aa8974e80d81cfd038d65449c3c23a75
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119470"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379791"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページを追加します。
   このチュートリアルでは、ワークフローから派生したワークフロー プロジェクトにデータを表示するアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。  
@@ -38,7 +38,7 @@ ms.locfileid: "37119470"
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
@@ -75,7 +75,7 @@ ms.locfileid: "37119470"
   
 1.  ExpenseReport プロジェクトを選択し、次に、メニュー バーで、次のように選択します。**プロジェクト** > **新しい項目の追加**します。  
   
-2.  **テンプレート**ウィンドウで、選択、**アプリケーション ページ**テンプレート、プロジェクト項目の既定の名前を使用して (**ApplicaitonPage1.aspx**)、選び、 **追加**ボタンをクリックします。  
+2.  **テンプレート**ウィンドウで、選択、**アプリケーション ページ**テンプレート、プロジェクト項目の既定の名前を使用して (**ApplicationPage1.aspx**)、選び、 **追加**ボタンをクリックします。  
   
 3.  [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1.aspx の置換、`PlaceHolderMain`を次のセクション。  
   

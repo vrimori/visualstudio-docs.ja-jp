@@ -10,43 +10,43 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xamarin
-ms.openlocfilehash: 09067c881e717f5e3e2ed6295e0f550adf29f511
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a32d72869a14e22ba8707036cd4b549ef5228d3b
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31066519"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379303"
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>XCode と Visual Studio 間の変更の同期
-Microsoft Visual C++ for Mobile Development コンポーネントには、PC と Mac 間で作業を同期するリモート機能が含まれます。 Visual Studio と Mac コンピューターがペアになっている場合、Visual Studio の iOS Application プロジェクトで新しいオプションを使用して、プロジェクトを XCode で開いたり、XCode と Visual Studio 間でコードを移動したり、一時 XCode プロジェクト ディレクトリを消去したりできます。  
-  
- リモート コンピューターのオプションを使用するには、プロジェクトが iOS Application プロジェクトで、Visual Studio とお使いの Mac がペアになっている必要があります。 Mac とペアにするための前提条件と手順については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)］をご覧ください。  
-  
-## <a name="the-remote-machine-menu"></a>リモート コンピューターのメニュー  
- **ソリューション エクスプローラー**で、iOS Application プロジェクトを右クリックすると、コンテキスト メニューが表示されます。 **[リモート コンピューター]** 項目を選択すると、使用可能なリモート オプションが表示されます。  
-  
- ![ソリューション エクスプローラーの [リモート コンピューター] メニュー項目](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")  
-  
- これらのコマンドを使用すると、プロジェクトを XCode で開いたり、Visual Studio と XCode 間でローカルの変更やプロジェクト全体を移動したり、リモート コンピューターの一時ファイルを消去したりできます。  
-  
-### <a name="open-in-xcode"></a>XCode で開く  
- Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある **[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。  
-  
- ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
-  
- Mac では、コードとリソース、ストーリーボード、アクションの編集に XCode のすべてのツールを使用できます。 Visual Studio では、iOS Application プロジェクトに "XCode で開かれました" という注釈が付けられ、リモート コンピューターで変更が加えられた可能性があることを示します。 編集が完了したら、[リモートからのプル] コマンドか [リモートからの増分プル] コマンドを使用して、Visual Studio プロジェクトに変更を適用します。  
-  
-### <a name="push-to-remote-and-incremental-push-to-remote"></a>[リモートへのプッシュ] と [リモートへの増分プッシュ]  
- Visual Studio で iOS Application プロジェクトに変更を加えた場合、[リモートへのプッシュ] コマンドか [リモートへの増分プッシュ] コマンドを使用して、変更したプロジェクト ファイルをペアになっているリモート コンピューターに移動できます。 [リモートへのプッシュ] コマンドは、すべてのプロジェクト ファイルをリモート コンピューターにコピーします。 [リモートへの増分プッシュ] コマンドは、変更したファイルのみをリモート コンピューターにコピーします。 大規模なプロジェクトに小さい変更を加えた場合、増分コマンドを使用すると時間と帯域幅を節約できます。  
-  
- プロジェクト ファイルを Mac にコピーするには、Visual Studio の**ソリューション エクスプローラー** ウィンドウで、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 **リモート コンピューター** を選択し、**リモートへのプッシュ** か **リモートへの増分プッシュ** のいずれかを選んで、プロジェクト ファイルを Visual Studio から Mac にコピーします。  
-  
-### <a name="pull-from-remote-and-incremental-pull-from-remote"></a>[リモートからのプル] と [リモートからの増分プル]  
- XCode でプロジェクトを変更した後、変更を Visual Studio に適用し、プロジェクトの同期を保ちます。  
-  
- プロジェクト ファイルを Mac からコピーするには、Visual Studio の**ソリューション エクスプローラー** ウィンドウで、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 **[リモート コンピューター]** を選択し、**[リモートからのプル]** か **[リモートからの増分プル]** のいずれかを選んで、プロジェクト ファイルを Mac から Visual Studio にコピーします。  
-  
-### <a name="clean-remote"></a>リモートの消去  
- リモートの消去コマンドを使用すると、リモート コンピューター上の一時プロジェクト ディレクトリ内にあるファイルを消去できます。 ソース ファイルやビルド製品など、ディレクトリのコンテンツが Mac 上で削除されます。 リモートの消去コマンドを使用する前に、[リモートからのプル] か [リモートからの増分プル] を使用して、Visual Studio に適用する変更が同期されていることをご確認ください。  
-  
- 一時プロジェクト ディレクトリをリモート コンピューター上で消去するには、Visual Studio の**ソリューション エクスプローラー** ウィンドウで、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 プロジェクト ディレクトリ ファイルを Mac から削除するには、**[リモート コンピューター]**、**[リモートの消去]** の順に選択します。
+Microsoft Visual C++ for Mobile Development コンポーネントには、PC と Mac 間で作業を同期するリモート機能が含まれます。 Visual Studio と Mac コンピューターがペアになっている場合、Visual Studio の iOS Application プロジェクトで新しいオプションを使用して、プロジェクトを XCode で開いたり、XCode と Visual Studio 間でコードを移動したり、一時 XCode プロジェクト ディレクトリを消去したりできます。
+
+ リモート コンピューターのオプションを使用するには、プロジェクトが iOS Application プロジェクトで、Visual Studio とお使いの Mac がペアになっている必要があります。 Mac とペアにするための前提条件と手順については、「[iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)」をご覧ください。
+
+## <a name="the-remote-machine-menu"></a>リモート コンピューターのメニュー
+ **ソリューション エクスプローラー**で、iOS Application プロジェクトを右クリックすると、コンテキスト メニューが表示されます。 **[リモート コンピューター]** 項目を選択すると、使用可能なリモート オプションが表示されます。
+
+ ![ソリューション エクスプローラーの [リモート コンピューター] メニュー項目](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")
+
+ これらのコマンドを使用すると、プロジェクトを XCode で開いたり、Visual Studio と XCode 間でローカルの変更やプロジェクト全体を移動したり、リモート コンピューターの一時ファイルを消去したりできます。
+
+### <a name="open-in-xcode"></a>XCode で開く
+ Visual Studio から XCode でプロジェクトを開くには、**[リモート コンピューター]** サブメニューで、**[XCode で開く]** を選択して、ペアになっているリモート コンピューターで、選択したプロジェクトを開きます。 vcremote サーバーを使用すると、XCode をお使いの Mac で開いて、プロジェクトのコピーを含む Mac で作成した一時ディレクトリに移動できます。 Visual Studio では、プロジェクトで使用した一時ディレクトリを表示するダイアログが表示されます。 リモート コンピューターで実行されるアクションも Visual Studio の**出力**ウィンドウに表示されます。 これを表示するため、**出力**ウィンドウの上部にある **[出力元の表示]** ドロップダウンで **[Visual C++ リモート コンピューター]** を選択する必要がある場合があります。
+
+ ![出力ウィンドウには、リモート コンピューターのアクションが表示されます。](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")
+
+ Mac では、コードとリソース、ストーリーボード、アクションの編集に XCode のすべてのツールを使用できます。 Visual Studio では、iOS Application プロジェクトに "XCode で開かれました" という注釈が付けられ、リモート コンピューターで変更が加えられた可能性があることを示します。 編集が完了したら、[リモートからのプル] コマンドか [リモートからの増分プル] コマンドを使用して、Visual Studio プロジェクトに変更を適用します。
+
+### <a name="push-to-remote-and-incremental-push-to-remote"></a>[リモートへのプッシュ] と [リモートへの増分プッシュ]
+ Visual Studio で iOS Application プロジェクトに変更を加えた場合、[リモートへのプッシュ] コマンドか [リモートへの増分プッシュ] コマンドを使用して、変更したプロジェクト ファイルをペアになっているリモート コンピューターに移動できます。 [リモートへのプッシュ] コマンドは、すべてのプロジェクト ファイルをリモート コンピューターにコピーします。 [リモートへの増分プッシュ] コマンドは、変更したファイルのみをリモート コンピューターにコピーします。 大規模なプロジェクトに小さい変更を加えた場合、増分コマンドを使用すると時間と帯域幅を節約できます。
+
+ プロジェクト ファイルを Mac にコピーするには、Visual Studio の**ソリューション エクスプローラー**で、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 **リモート コンピューター** を選択し、**リモートへのプッシュ** か **リモートへの増分プッシュ** のいずれかを選んで、プロジェクト ファイルを Visual Studio から Mac にコピーします。
+
+### <a name="pull-from-remote-and-incremental-pull-from-remote"></a>[リモートからのプル] と [リモートからの増分プル]
+ XCode でプロジェクトを変更した後、変更を Visual Studio に適用し、プロジェクトの同期を保ちます。
+
+ Mac からプロジェクト ファイルをコピーするには、Visual Studio の**ソリューション エクスプローラー**で、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 **[リモート コンピューター]** を選択し、**[リモートからのプル]** か **[リモートからの増分プル]** のいずれかを選んで、プロジェクト ファイルを Mac から Visual Studio にコピーします。
+
+### <a name="clean-remote"></a>リモートの消去
+ リモートの消去コマンドを使用すると、リモート コンピューター上の一時プロジェクト ディレクトリ内にあるファイルを消去できます。 ソース ファイルやビルド製品など、ディレクトリのコンテンツが Mac 上で削除されます。 リモートの消去コマンドを使用する前に、[リモートからのプル] か [リモートからの増分プル] を使用して、Visual Studio に適用する変更が同期されていることをご確認ください。
+
+ 一時プロジェクト ディレクトリをリモート コンピューター上で消去するには、Visual Studio の**ソリューション エクスプローラー**で、iOS Application プロジェクトを右クリックしてコンテキスト メニューを開きます。 プロジェクト ディレクトリ ファイルを Mac から削除するには、**[リモート コンピューター]**、**[リモートの消去]** の順に選択します。

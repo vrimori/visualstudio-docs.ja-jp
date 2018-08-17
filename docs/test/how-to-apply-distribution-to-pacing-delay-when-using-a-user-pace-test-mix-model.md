@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 268578638524ab4f5e5db605c3d394d28414547a
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 20fa17054c3334566114c5baf9bc98a71025c225
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34448520"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204077"
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-for-a-user-pace-test-mix-model"></a>方法: ユーザー ペースのテスト ミックス モデルに対する遅延のペースに分布を適用する
 
@@ -28,9 +28,9 @@ ms.locfileid: "34448520"
 
 **"遅延のペースに分布を適用"** の値は、true または false に設定できます。
 
-- **True**: [テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
+- **True**: **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 
-     たとえば、テストの [テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **True** に設定すると、標準的な統計分布がテスト間の待機時間に適用されます。 1 時間につき 2 つのテストが実行されますが、その間隔は 30 分とは限りません。 最初のテストが 4 分後に実行されたり、2 回目のテストが 45 分後に実行されたりする場合があります。
+     たとえば、テストの **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **True** に設定すると、標準的な統計分布がテスト間の待機時間に適用されます。 1 時間につき 2 つのテストが実行されますが、その間隔は 30 分とは限りません。 最初のテストが 4 分後に実行されたり、2 回目のテストが 45 分後に実行されたりする場合があります。
 
 - **False**: **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値に指定したペースでテストを実行します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 

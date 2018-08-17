@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e02be3774d0da28b96af0fb14ef64fd4bec6456e
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 5c10d09b1fd66572b45e3fde16c999c39b803523
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080725"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512305"
 ---
 # <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
 
@@ -51,7 +51,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 次に、最初のプロジェクトをソリューションに追加してみましょう。 空のプロジェクトから始めて、そのプロジェクトに必要なアイテムを追加します。
 
-1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、**[新しいプロジェクト]** を選択します。
+1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、 > **[新しいプロジェクト]** を選択します。
 
    **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -108,7 +108,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 単体テスト プロジェクトをソリューションに追加してみましょう。 今度はプロジェクト テンプレートから開始します。これにより、プロジェクトに追加のコード ファイルを追加する必要がなくなります。
 
-1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、**[新しいプロジェクト]** を選択します。
+1. **ソリューション エクスプローラー**で**ソリューション 'QuickSolution'** の右クリックまたはコンテキスト メニューから、**[追加]**、 > **[新しいプロジェクト]** を選択します。
 
    **[新しいプロジェクトの追加]** ダイアログ ボックスが表示されます。
 
@@ -178,11 +178,17 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 このクイック スタートは完了しました。 次に、Visual Studio に関する他のクイック スタートを参照したり、[プロジェクトとソリューションの作成](../ide/creating-solutions-and-projects.md)についてより深く学習することもできます。
 
+> [!div class="nextstepaction"]
+> [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+
+> [!div class="nextstepaction"]
+> [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
+
 ## <a name="see-also"></a>関連項目
 
-- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-- [クイックスタート: Visual Studio IDE とエディターのカスタマイズ](../ide/quickstart-personalize-the-ide.md)
-- [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
 - [プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)
 - [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
 - [プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: 非表示に要素 (Visual Studio テンプレート) |Microsoft ドキュメント
+title: 要素 (Visual Studio テンプレート) を非表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b41005dc789cf464973b225c76b2845db5565772
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18c5783eb6e9572e030e4ea764ad0393f61f6049
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127306"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498263"
 ---
-# <a name="hidden-element-visual-studio-templates"></a>Hidden 要素 (Visual Studio Templates)
-いずれかで、テンプレートを表示するかどうかを指定、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
+# <a name="hidden-element-visual-studio-templates"></a>Hidden 要素 (Visual Studio テンプレート)
+いずれかで、テンプレートを表示するかどうかを指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
  \<VSTemplate>  
  \<TemplateData>  
@@ -35,7 +35,7 @@ ms.locfileid: "31127306"
 <Hidden> true/false </Hidden>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -53,12 +53,12 @@ ms.locfileid: "31127306"
 ## <a name="text-value"></a>テキスト値  
  テキスト値が必要です。  
   
- テキストはいずれかである必要があります`true`または`false`を示すに、テンプレートが表示するかどうか、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
+ テキストがいずれかにする必要があります`true`または`false`かを示すにテンプレートが表示されるかどうか、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Hidden` は、省略可能な要素です。  
   
- 指定すると、その他の子は、要素なしの場合、`TemplateData`要素が必要です。  
+ 他の子要素を指定しなかった場合、`TemplateData`要素が必要です。  
   
 ## <a name="example"></a>例  
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] テンプレートのメタデータの例を次に示します。  
@@ -90,4 +90,4 @@ ms.locfileid: "31127306"
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)   
- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+ [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

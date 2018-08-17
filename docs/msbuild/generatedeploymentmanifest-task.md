@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 470e08454d39bf63542a63359359b1577e70f5b3
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: accf8ffb81b28451f7561b027e4a11fe5a59b202
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945358"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177605"
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest タスク
 
@@ -41,8 +41,8 @@ ms.locfileid: "37945358"
 |`CreateDesktopShortcut`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> true の場合、ClickOnce アプリケーションのインストール時にデスクトップにアイコンが作成されます。|
 |`DeploymentUrl`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの更新プログラムの場所を指定します。 このパラメーターを指定しなかった場合、アプリケーションの更新プログラムの場所は定義されません。 ただし、`UpdateEnabled` パラメーターが `true` である場合、更新プログラムの場所を指定する必要があります。 値には、完全修飾 URL または UNC パスを指定します。|
 |`Description`|省略可能な `String` 型のパラメーターです。<br /><br /> アプリケーションの説明を指定します。|
-|`DisallowUrlActivation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> URL 経由で開かれたときに、アプリケーションを自動的に実行するかどうかを指定します。 このパラメーターを `true` にすると、アプリケーションの実行は [スタート] メニューからのみ行えるようになります。 このパラメーターの既定値は、`false` です。 この値は、`Install` パラメーターが `true` である場合のみ適用されます。|
-|`EntryPoint`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 生成されるマニフェスト アセンブリのエントリ ポイントを指定します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの場合には、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストを指定します。<br /><br />`EntryPoint` タスク パラメーターが指定されていない場合は、次のように `<customHostSpecified>` タグが `<entryPoint>` タグの子として挿入されます。<br /><br /> `<entryPoint xmlns="urn:schemas-`<br /><br /> `microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 次の手順を使用して、アプリケーション マニフェストに DLL 依存関係を追加できます。<br /><br /> 1.<xref:Microsoft.Build.Tasks.ResolveAssemblyReference> への呼び出しでアセンブリの参照を解決します。<br />2.前のタスクの出力とアセンブリ自体を <xref:Microsoft.Build.Tasks.ResolveManifestFiles> に渡します。<br />3.`Dependencies` パラメーターを使用して <xref:Microsoft.Build.Tasks.GenerateApplicationManifest> に依存関係を渡します。|
+|`DisallowUrlActivation`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> URL 経由で開かれたときに、アプリケーションを自動的に実行するかどうかを指定します。 このパラメーターを `true` にすると、アプリケーションの実行は **[スタート]** メニューからのみ行えるようになります。 このパラメーターの既定値は、`false` です。 この値は、`Install` パラメーターが `true` である場合のみ適用されます。|
+|`EntryPoint`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。<br /><br /> 生成されるマニフェスト アセンブリのエントリ ポイントを指定します。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの場合には、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストを指定します。<br /><br />`EntryPoint` タスク パラメーターが指定されていない場合は、次のように `<customHostSpecified>` タグが `<entryPoint>` タグの子として挿入されます。<br /><br /> `<entryPoint xmlns="urn:schemas-microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 次の手順を使用して、アプリケーション マニフェストに DLL 依存関係を追加できます。<br /><br /> 1.<xref:Microsoft.Build.Tasks.ResolveAssemblyReference> への呼び出しでアセンブリの参照を解決します。<br />2.前のタスクの出力とアセンブリ自体を <xref:Microsoft.Build.Tasks.ResolveManifestFiles> に渡します。<br />3.`Dependencies` パラメーターを使用して <xref:Microsoft.Build.Tasks.GenerateApplicationManifest> に依存関係を渡します。|
 |`ErrorReportUrl`|省略可能な <xref:System.String?displayProperty=fullName> 型のパラメーターです。<br /><br /> ClickOnce のインストール時にダイアログ ボックスに表示される Web ページの URL を指定します。|
 |`InputManifest`|省略可能な <xref:Microsoft.Build.Framework.ITaskItem> 型のパラメーターです。<br /><br /> マニフェスト ジェネレーターのベースとして使用する、入力 XML ドキュメントを指定します。 これによって、カスタム マニフェスト定義など、構造化されたデータが出力マニフェストに反映されます。 XML ドキュメントのルート要素は、asmv1 名前空間内のアセンブリ ノードである必要があります。|
 |`Install`|省略可能な `Boolean` 型のパラメーターです。<br /><br /> アプリケーションがインストールされているアプリケーションであるか、オンライン専用アプリケーションであるかを指定します。 このパラメーターを `true` にすると、アプリケーションはユーザーの **[スタート]** メニューにインストールされ、**[プログラムの追加と削除]** ダイアログ ボックスから削除できるようになります。 このパラメーターを `false` にすると、アプリケーションは Web ページからオンラインで使用するためのものになります。 このパラメーターの既定値は、`true` です。|

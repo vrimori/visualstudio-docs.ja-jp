@@ -21,6 +21,7 @@
 ## [プロジェクト内の参照の管理](managing-references-in-a-project.md)
 ### [チュートリアル - プロジェクトに NuGet パッケージを含める](nuget-walkthrough.md)
 ## [アプリ リソースの管理](managing-app-resources.md)
+## [方法: 複数のソリューションまたはインスタンスを開く](open-multiple-solutions.md)
 
 # [ソース エディター](source-editor.md)
 ## [リファクタリング](refactoring.md)
@@ -61,6 +62,7 @@
 ## [Unity によるゲーム開発](unity-tools.md)
 ### [セットアップ](setup-vsmac-tools-unity.md)
 ### [Unity ツールの使用](using-vsmac-tools-unity.md)
+### [変更ログ](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 
 # [ユーザー補助](accessibility.md)
 

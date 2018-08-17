@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7bafcec9def78d05c7c7d03f43dfc1d184348bcd
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 4bc2b55e0e287caea0db0c5fcdabccf454be0154
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117694"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567234"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。
@@ -185,7 +185,7 @@ ms.locfileid: "37117694"
 
 3.  ファイルを保存し、生成されたファイルを調べると、次のコードが含まれていることがわかります。
 
-    ```
+    ```csharp
     class MyGeneratedClass {
       private int P1 = 0;
       private int P2 = 0;
@@ -303,7 +303,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!NOTE]
 > Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
 
-```
+```xml
 <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets" />
 <PropertyGroup>
    <TransformOnBuild>true</TransformOnBuild>

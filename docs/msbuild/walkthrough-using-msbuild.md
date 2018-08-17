@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f5240ebf307973c0ca6088053aabec4e19fa852a
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: d7e862322995c7cda4a7080ee387c7a080437748
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327038"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178519"
 ---
-# <a name="walkthrough-using-msbuild"></a>チュートリアル: MSBuild の使用
+# <a name="walkthrough-use-msbuild"></a>チュートリアル: MSBuild の使用
 MSBuild は Microsoft および Visual Studio のビルド プラットフォームです。 このチュートリアルでは、MSBuild のビルド ブロックについて説明し、MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 ここで学習する内容を以下に示します。
 
 -   プロジェクト ファイルの作成と操作
@@ -28,9 +28,9 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
 
 -   ビルド項目の使用方法
 
- MSBuild は、Visual Studio から実行することも、コマンド ウィンドウから実行することもできます。 このチュートリアルでは、Visual Studio を使用して MSBuild プロジェクト ファイルを作成し、 そのプロジェクト ファイルを Visual Studio で編集した後、コマンド ウィンドウを使用してプロジェクトをビルドして、結果を確認します。
+MSBuild は、Visual Studio から実行することも、**コマンド ウィンドウ**から実行することもできます。 このチュートリアルでは、Visual Studio を使用して MSBuild プロジェクト ファイルを作成し、 そのプロジェクト ファイルを Visual Studio で編集した後、**コマンド ウィンドウ**を使用してプロジェクトをビルドして、結果を確認します。
 
-## <a name="creating-an-msbuild-project"></a>MSBuild プロジェクトの作成
+## <a name="create-an-msbuild-project"></a>MSBuild プロジェクトの作成
  Visual Studio プロジェクト システムは MSBuild に基づいています。 そのため、Visual Studio を使用して新しいプロジェクト ファイルを作成するのは簡単です。 このセクションでは、Visual C# プロジェクト ファイルを作成します。 代わりに、Visual Basic プロジェクト ファイルを作成することもできます。 このチュートリアルのコンテキストでは、2 つのプロジェクト ファイルにはわずかな違いしかありません。
 
 #### <a name="to-create-a-project-file"></a>プロジェクト ファイルを作成するには
@@ -39,18 +39,18 @@ MSBuild は Microsoft および Visual Studio のビルド プラットフォー
 
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-3.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として Visual C# を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「`BuildApp`」と入力します。 **[場所]** ボックスにソリューションの場所を入力します (「`D:\`」など)。 それ以外は、既定値をそのまま使用します (**[ソリューションのディレクトリを作成]** はオン、**[ソース管理に追加]** はオフ、**[ソリューション名]** は `BuildApp`)。
+3.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として **[Visual C#]** を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「`BuildApp`」と入力します。 **[場所]** ボックスにソリューションの場所を入力します (「*D:\\*」など)。 それ以外は、既定値をそのまま使用します (**[ソリューションのディレクトリを作成]** はオン、**[ソース管理に追加]** はオフ、**[ソリューション名]** は **BuildApp**)。
 
-     **[OK]** をクリックして、プロジェクト ファイルを作成します。
+4.    **[OK]** をクリックして、プロジェクト ファイルを作成します。
 
-## <a name="examining-the-project-file"></a>プロジェクト ファイルの確認
+## <a name="examine-the-project-file"></a>プロジェクト ファイルを確認する
  前のセクションでは、Visual Studio を使用して Visual C# プロジェクト ファイルを作成しました。 このプロジェクト ファイルは、BuildApp という名前のプロジェクト ノードとして**ソリューション エクスプローラー**に表示されます。 Visual Studio Code エディターを使用してこのプロジェクト ファイルを確認できます。
 
 #### <a name="to-examine-the-project-file"></a>プロジェクト ファイルを確認するには
 
-1.  **ソリューション エクスプローラー**で、BuildApp というプロジェクト ノードをクリックします。
+1.  **ソリューション エクスプローラー**で、**BuildApp** というプロジェクト ノードをクリックします。
 
-2.  **プロパティ** ブラウザーで、**"プロジェクト ファイル"** プロパティが "BuildApp.csproj" になっていることを確認します。 プロジェクト ファイルはすべて、名前に "proj" というサフィックスが付いています。 Visual Basic プロジェクトを作成した場合は、プロジェクト ファイルの名前が "BuildApp.vbproj" になります。
+2.  **プロパティ** ブラウザーで、**[プロジェクト ファイル]** プロパティが *BuildApp.csproj* になっていることを確認します。 プロジェクト ファイルはすべて、名前に *proj* というサフィックスが付いています。 Visual Basic プロジェクトを作成した場合は、プロジェクト ファイルの名前が *BuildApp.vbproj* になります。
 
 3.  プロジェクト ノードを右クリックし、**[プロジェクトのアンロード]** をクリックします。
 
@@ -74,7 +74,7 @@ Project 要素で xmlns 名前空間を指定する必要があります。 `Too
 
 -   ターゲットとは、一連のタスクに名前を付けたものです。 詳細については、「[MSBuild ターゲット](../msbuild/msbuild-targets.md)」をご覧ください。
 
-既定のターゲットは、このプロジェクト ファイルでは定義されていません。 代わりに、インポートされるプロジェクトで指定されています。 [Import](../msbuild/import-element-msbuild.md) 要素は、インポートされたプロジェクトを指定します。 たとえば、C# プロジェクトでは、既定のターゲットが Microsoft.CSharp.targets ファイルからインポートされます。
+既定のターゲットは、このプロジェクト ファイルでは定義されていません。 代わりに、インポートされるプロジェクトで指定されています。 [Import](../msbuild/import-element-msbuild.md) 要素は、インポートされたプロジェクトを指定します。 たとえば、C# プロジェクトでは、既定のターゲットが *Microsoft.CSharp.targets* ファイルからインポートされます。
 
 ```xml
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -87,7 +87,7 @@ Project 要素で xmlns 名前空間を指定する必要があります。 `Too
 
 MSBuild ではビルドのターゲットが追跡されるため、個々のターゲットが複数回ビルドされることはありません。
 
-## <a name="adding-a-target-and-a-task"></a>ターゲットとタスクの追加
+## <a name="add-a-target-and-a-task"></a>ターゲットとタスクを追加する
  プロジェクト ファイルにターゲットを追加し、 そのターゲットに、メッセージを出力するタスクを追加します。
 
 #### <a name="to-add-a-target-and-a-task"></a>ターゲットとタスクを追加するには
@@ -111,11 +111,11 @@ MSBuild ではビルドのターゲットが追跡されるため、個々のタ
 
 3.  プロジェクト ファイルを保存します。
 
- Message タスクは、MSBuild に含まれている数多くのタスクの 1 つです。 使用可能なすべてのタスクと使用法については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」をご覧ください。
+Message タスクは、MSBuild に含まれている数多くのタスクの 1 つです。 使用可能なすべてのタスクと使用法については、「[タスク リファレンス](../msbuild/msbuild-task-reference.md)」をご覧ください。
 
- Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが 2 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。
+Message タスクは、Text 属性の文字列値を入力として受け取り、それを出力デバイスに表示します。 HelloWorld ターゲットでは、Message タスクが 2 回実行されます。1 回目の実行で "Hello" と表示され、2 回目の実行で "World" と表示されます。
 
-## <a name="building-the-target"></a>ターゲットのビルド
+## <a name="build-the-target"></a>ターゲットをビルドする
  **Visual Studio コマンド プロンプト**から MSBuild を実行して、上で定義した HelloWorld ターゲットをビルドします。 ターゲットを選択するには、コマンド ライン スイッチの /target または /t を使用します。
 
 > [!NOTE]
@@ -125,7 +125,7 @@ MSBuild ではビルドのターゲットが追跡されるため、個々のタ
 
 1.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をクリックします。 **[Visual Studio Tools]** フォルダーで **[Visual Studio コマンド プロンプト]** をクリックします。
 
-2.  コマンド ウィンドウで、プロジェクト ファイルを含むフォルダー (この場合は D:\BuildApp\BuildApp) に移動します。
+2.  コマンド ウィンドウで、プロジェクト ファイルを含むフォルダー (この場合は *D:\BuildApp\BuildApp*) に移動します。
 
 3.  コマンド ライン スイッチ /t:HelloWorld を使用して msbuild を実行します。 HelloWorld ターゲットが選択されてビルドされます。
 
@@ -145,7 +145,7 @@ MSBuild ではビルドのターゲットが追跡されるため、個々のタ
 
  コード エディターとコマンド ウィンドウを交互に使用すると、プロジェクト ファイルを変更してすばやく結果を確認できます。
 
-## <a name="build-properties"></a>[ビルド プロパティ]
+## <a name="build-properties"></a>ビルド プロパティ
  ビルド プロパティは、ビルドを制御する名前と値のペアです。 このプロジェクト ファイルの先頭には、既にいくつかのビルド プロパティが定義されています。
 
 ```xml
@@ -175,7 +175,7 @@ MSBuild ではビルドのターゲットが追跡されるため、個々のタ
 
  上の行が、プロジェクト ファイルの後半に含まれていたり、プロジェクト ファイルの後半でインポートされるファイルに含まれていたりした場合は、TargetFrameworkVersion に "v3.5" という新しい値が割り当てられます。
 
-## <a name="examining-a-property-value"></a>プロパティ値の確認
+## <a name="examine-a-property-value"></a>プロパティ値を確認する
  プロパティの値を取得するには、次の構文を使用します。ここで、PropertyName はプロパティの名前です。
 
 ```xml
@@ -225,12 +225,12 @@ $(PropertyName)
  Condition 属性は MSBuild のほぼすべての要素に設定できます。 Condition 属性の使用の詳細については、「[MSBuild Conditions (MSBuild の条件)](../msbuild/msbuild-conditions.md)」をご覧ください。
 
 ### <a name="reserved-properties"></a>予約済みのプロパティ
- MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの 1 つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法 : プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。
+ MSBuild では、プロジェクト ファイルに関する情報や MSBuild のバイナリに関する情報を保持するために、いくつかのプロパティ名が予約されています。 たとえば、MSBuildToolsPath も予約済みのプロパティの 1 つです。 予約済みのプロパティは、他のプロパティと同じように $ 表記で参照できます。 詳細については、「[方法: プロジェクト ファイルの名前または場所を参照する](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md)」および「[MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)」をご覧ください。
 
 ### <a name="environment-variables"></a>環境変数
- プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 環境変数の使用方法の詳細については、「[方法 : ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。
+ プロジェクト ファイルで環境変数を参照する場合も、ビルド プロパティを参照するときと同じ方法を使用します。 たとえば、プロジェクト ファイルで PATH 環境変数を使用するには、$(Path) と記述します。 プロジェクト ファイルに、環境変数と同じ名前のプロパティが定義されている場合、環境変数の値はプロジェクト内のプロパティによってオーバーライドされます。 環境変数の使用方法の詳細については、「[方法: ビルドで環境変数を使用する](../msbuild/how-to-use-environment-variables-in-a-build.md)」をご覧ください。
 
-## <a name="setting-properties-from-the-command-line"></a>コマンドラインからのプロパティの設定
+## <a name="set-properties-from-the-command-line"></a>コマンドラインからプロパティを設定する
  プロパティは、コマンド ライン スイッチの /property または /p を使用してコマンド ラインで定義することもできます。 プロジェクト ファイルに設定されたプロパティ値や環境変数として設定されたプロパティ値は、コマンド ラインから渡されたプロパティ値によってオーバーライドされます。
 
 #### <a name="to-set-a-property-value-from-the-command-line"></a>コマンド ラインからプロパティ値を設定するには
@@ -247,10 +247,10 @@ $(PropertyName)
     Configuration is Release.
     ```
 
- Configuration プロパティが作成されて、値が "Release" に設定されます。
+Configuration プロパティが作成されて、値が "Release" に設定されます。
 
 ## <a name="special-characters"></a>特殊文字
- MSBuild プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (;) およびアスタリスク (*) があります。 これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 %xx でそれらの文字を指定する必要があります。xx は文字の ASCII 16 進値を表します。
+ MSBuild プロジェクト ファイルでは、特定の文字が特殊な意味を持ちます。 そのような文字の例として、セミコロン (;) およびアスタリスク (*) があります。 これらの特殊文字をプロジェクト ファイル内でリテラルとして使用するには、構文 %\<xx> でそれらの文字を指定する必要があります。ここで、\<xx> は文字の ASCII 16 進値を表します。
 
  Message タスクに変更を加えて、特殊文字を使用して Configuration プロパティの値を読みやすくします。
 
@@ -276,7 +276,7 @@ $(PropertyName)
     $(Configuration) is "Debug"
     ```
 
- 詳細については、「[MSBuild の特殊文字](../msbuild/msbuild-special-characters.md)」をご覧ください。
+詳細については、「[MSBuild の特殊文字](../msbuild/msbuild-special-characters.md)」をご覧ください。
 
 ## <a name="build-items"></a>ビルド項目
  項目とは、ファイル名など、ビルド システムへの入力として使用される情報です。 たとえば、ソース ファイルを表す項目のコレクションを Compile という名前のタスクに渡して、アセンブリにコンパイルする場合などがあります。
@@ -290,7 +290,7 @@ $(PropertyName)
 </ItemGroup>
 ```
 
- ここでは、2 つの項目を含む項目グループを定義しています。 項目の種類 Compile には、"Program.cs" と "Properties\AssemblyInfo.cs" の 2 つの値があります。
+ ここでは、2 つの項目を含む項目グループを定義しています。 項目の種類 Compile には、*Program.cs* と *Properties\AssemblyInfo.cs* の 2 つの値があります。
 
  次のコードでは、両方のファイルをセミコロンで区切って 1 つの Include 属性で宣言することで、同じ項目の種類を作成しています。
 
@@ -300,12 +300,12 @@ $(PropertyName)
 </ItemGroup>
 ```
 
- 詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。
+詳細については、「[MSBuild 項目](../msbuild/msbuild-items.md)」をご覧ください。
 
 > [!NOTE]
 >  ファイル パスは、MSBuild プロジェクト ファイルを含むフォルダーに対する相対パスです。
 
-## <a name="examining-item-type-values"></a>項目の種類の値の確認
+## <a name="examine-item-type-values"></a>項目の種類の値を確認する
  項目の種類の値を取得するには、次の構文を使用します。ここで、ItemType は項目の種類の名前です。
 
 ```xml
@@ -338,15 +338,15 @@ $(PropertyName)
     Compile item type contains Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs
     ```
 
- 項目の種類の値は、既定ではセミコロンで区切られます。
+項目の種類の値は、既定ではセミコロンで区切られます。
 
- 項目の種類の区切り記号を変更するには、次の構文を使用します。ここで、ItemType は項目の種類、Separator は 1 文字以上の区切り記号です。
+項目の種類の区切り記号を変更するには、次の構文を使用します。ここで、ItemType は項目の種類、Separator は 1 文字以上の区切り記号です。
 
 ```xml
 @(ItemType, Separator)
 ```
 
- Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用して Compile 項目を 1 行に 1 つずつ表示します。
+Message タスクに変更を加えて、復帰と改行 (%0A%0D) を使用して Compile 項目を 1 行に 1 つずつ表示します。
 
 #### <a name="to-display-item-type-values-one-per-line"></a>項目の種類の値を 1 行に 1 つずつ表示するには
 
@@ -382,13 +382,13 @@ $(PropertyName)
 <Photos Include="images\*.jpeg" />
 ```
 
- この例では、images フォルダーにある拡張子が ".jpeg" のすべてのファイルが項目の種類 Photos に追加されます。もう 1 つ例を見てましょう。
+ この例では、*images* フォルダーにある拡張子が *.jpeg* のすべてのファイルが項目の種類 Photos に追加されます。もう 1 つ例を見てましょう。
 
 ```xml
 <Photos Include="images\**.jpeg" />
 ```
 
- この例では、images フォルダーとそのすべてのサブフォルダーにある拡張子が ".jpeg" のすべてのファイルが項目の種類 Photos に追加されます。 例については、「[方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。
+ この例では、*images* フォルダーとそのすべてのサブフォルダーにある拡張子が *.jpeg* のすべてのファイルが項目の種類 Photos に追加されます。 例については、「[方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)」をご覧ください。
 
  項目を宣言すると、それらが項目の種類に追加されます。 たとえば、オブジェクトに適用された
 
@@ -397,7 +397,7 @@ $(PropertyName)
 <Photos Include="images\*.gif" />
 ```
 
- この例では、image フォルダーにある拡張子が ".jpeg" または ".gif" のすべてのファイルを含む項目の種類 Photos が作成されます。 次の行も同じ結果をもたらします。
+ この例では、*image* フォルダーにある拡張子が *.jpeg* または *.gif* のすべてのファイルを含む項目の種類 Photos が作成されます。 次の行も同じ結果をもたらします。
 
 ```xml
 <Photos Include="images\*.jpeg;images\*.gif" />
@@ -409,16 +409,16 @@ $(PropertyName)
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- この例では、拡張子が ".cs" のすべてのファイルが項目の種類 Compile に追加されますが、名前に文字列 "Designer" が含まれているファイルは除外されます。 例については、「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。
+ この例では、拡張子が *.cs* のすべてのファイルが項目の種類 Compile に追加されますが、名前に文字列 *Designer* が含まれているファイルは除外されます。 例については、「[方法: ビルドからファイルを除外する](../msbuild/how-to-exclude-files-from-the-build.md)」をご覧ください。
 
- Exclude 属性は、同一の項目要素内にある Include 属性によって追加された項目のみに作用します。 たとえば、オブジェクトに適用された
+Exclude 属性は、同一の項目要素内にある Include 属性によって追加された項目のみに作用します。 たとえば、オブジェクトに適用された
 
 ```xml
 <Compile Include="*.cs" />
 <Compile Include="*.res" Exclude="Form1.cs">
 ```
 
- この例では、Form1.cs ファイルは前の項目要素で追加されているため、除外されません。
+この例では、*Form1.cs* ファイルは前の項目要素で追加されているため、除外されません。
 
 ##### <a name="to-include-and-exclude-items"></a>項目を追加および除外するには
 
@@ -450,7 +450,7 @@ $(PropertyName)
     XFiles item type contains Form1.cs;Program.cs;Properties/Resources.resx
     ```
 
-## <a name="item-metadata"></a>アイテム メタデータ
+## <a name="item-metadata"></a>項目メタデータ
  項目には、Include および Exclude 属性から収集した情報に加えて、メタデータが含まれます。 このメタデータは、項目の値だけでなく項目に関する詳細情報を必要とするタスクで使用できます。
 
  アイテム メタデータは、そのメタデータ名を名前に持つ要素を、項目の子として作成することにより、プロジェクト ファイルで宣言します。 項目には 0 以上のメタデータ値を指定できます。 たとえば、次の CSFile 項目には、値 "Fr" の Culture メタデータがあります。
@@ -494,10 +494,10 @@ $(PropertyName)
     Compile.DependentUpon: Settings.settings
     ```
 
- "Compile.DependentUpon" というフレーズが何回か出現しています。 ターゲット内でメタデータを使用する際にこの構文を使用すると、"バッチ処理" が行われます。 バッチ処理では、ターゲット内のタスクが各メタデータ値について 1 回だけ実行されます。 これは、一般的なプログラミング構造の "for ループ" に相当します。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。
+"Compile.DependentUpon" というフレーズが何回か出現しています。 ターゲット内でメタデータを使用する際にこの構文を使用すると、"バッチ処理" が行われます。 バッチ処理では、ターゲット内のタスクが各メタデータ値について 1 回だけ実行されます。 これは、一般的なプログラミング構造の "for ループ" に相当します。 詳細については、「[MSBuild バッチ](../msbuild/msbuild-batching.md)」をご覧ください。
 
 ### <a name="well-known-metadata"></a>既知のメタデータ
- 項目リストに追加した項目には、既知のメタデータが割り当てられます。 たとえば、項目のファイル名を返す %(Filename) などです。 すべての既知のメタデータの一覧については、「[Well-known Item Metadata (既知の項目メタデータ)](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。
+ 項目リストに追加した項目には、既知のメタデータが割り当てられます。 たとえば、項目のファイル名を返す %(Filename) などです。 すべての既知のメタデータの一覧については、「[MSBuild 既知のアイテム メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。
 
 ##### <a name="to-examine-well-known-metadata"></a>既知のメタデータを確認するには
 
@@ -526,16 +526,16 @@ $(PropertyName)
     Compile Filename: Settings.Designer
     ```
 
- この例を前の例と比較すると、DependentUpon メタデータは項目の種類 Compile のすべての項目には含まれていないのに対し、既知のメタデータ Filename はすべての項目に含まれていることがわかります。
+この例を前の例と比較すると、DependentUpon メタデータは項目の種類 Compile のすべての項目には含まれていないのに対し、既知のメタデータ Filename はすべての項目に含まれていることがわかります。
 
 ### <a name="metadata-transformations"></a>メタデータの変換
- 既存の項目リストを新しい項目リストに変換できます。 項目リストを変換するには、次の構文を使用します。ここで、ItemType は項目の種類の名前、MetadataName はメタデータの名前です。
+ 既存の項目リストを新しい項目リストに変換できます。 項目リストを変換するには、次の構文を使用します。ここで、\<ItemType> は項目の種類の名前、\<MetadataName> はメタデータの名前です。
 
 ```xml
 @(ItemType -> '%(MetadataName)')
 ```
 
- たとえば、`@(SourceFiles -> '%(Filename).obj')` のような式を使用すると、ソース ファイルの項目リストをオブジェクト ファイルのコレクションに変換できます。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。
+たとえば、`@(SourceFiles -> '%(Filename).obj')` のような式を使用すると、ソース ファイルの項目リストをオブジェクト ファイルのコレクションに変換できます。 詳細については、「[MSBuild 変換](../msbuild/msbuild-transforms.md)」をご覧ください。
 
 ##### <a name="to-transform-items-using-metadata"></a>メタデータを使用して項目を変換するには
 
@@ -559,12 +559,12 @@ $(PropertyName)
     Backup files: Form1.bak;Form1.Designer.bak;Program.bak;AssemblyInfo.bak;Resources.Designer.bak;Settings.Designer.bak
     ```
 
- この構文で表されるメタデータではバッチ処理は行われないことに注意してください。
+この構文で表されるメタデータではバッチ処理は行われないことに注意してください。
 
 ## <a name="whats-next"></a>次の内容
  簡単なプロジェクト ファイルを 1 ステップずつ作成する方法については、「[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [MSBuild の概要](../msbuild/msbuild.md)
 - [MSBuild リファレンス](../msbuild/msbuild-reference.md)

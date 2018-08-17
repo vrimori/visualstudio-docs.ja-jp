@@ -10,25 +10,25 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c84099307d3a33db7b1d4861c9c0794fbf64d2f4
-ms.sourcegitcommit: e5a382de633156b85b292f35e3d740f817715d47
+ms.openlocfilehash: f5e7a56ff01e06c0d5046ab477ec78635f01f6c4
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38977607"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381912"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>方法: ロード テストのアクティブな実行設定を選択する
 
 **新しいロード テスト** ウィザードでロード テストを作成した後で、**ロード テスト エディター**を使用して、テストのニーズや目標に合わせてシナリオのプロパティを変更できます。
 
-ロード テストには、1 つ以上の*実行設定*を含めることができます。実行設定は、ロード テストの実行方法に影響を与えるプロパティのセットです。 実行設定は、[プロパティ] ウィンドウでカテゴリ別に整理されています。 ロード テストの実行時には、現在アクティブとして設定されている実行設定が使用されます。
+ロード テストには、1 つ以上の*実行設定*を含めることができます。実行設定は、ロード テストの実行方法に影響を与えるプロパティのセットです。 実行設定は、**[プロパティ]** ウィンドウでカテゴリ別に整理されています。 ロード テストの実行時には、現在アクティブとして設定されている実行設定が使用されます。
 
 > [!NOTE]
-> 実行設定の各プロパティとその説明の一覧については、「[Load Test Run Settings Properties](../test/load-test-run-settings-properties.md)」(ロード テストの実行設定のプロパティ) を参照してください。
+> 実行設定の各プロパティとその説明の一覧については、「[ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)」を参照してください。
 
 ロード テストに含まれている実行設定ノードが、**[実行設定]** フォルダー下に 1 つだけの場合は、そのノードが常にアクティブ ノードになります。 ロード テストに複数の実行設定ノードが含まれている場合は、ロード テストを実行する際に使用するノードを 1 つ選択します。 「[方法: ロード テストに追加の実行設定を追加する](../test/how-to-add-additional-run-settings-to-a-load-test.md)」を参照してください。
 
-ロード テスト エディターで、アクティブな実行設定は "[Active]" というサフィックスで識別されます。
+**ロード テスト エディター**で、アクティブな実行設定は "[Active]" というサフィックスで識別されます。
 
 ## <a name="select-the-active-run-setting"></a>アクティブな実行設定の選択
 
@@ -53,7 +53,7 @@ ms.locfileid: "38977607"
 
 **Set Test.UseRunSetting=PreProdEnvironment**
 
-次のテストを実行します。
+そして、次のテストを実行します。
 
 **mstest /testcontainer:loadtest1.loadtest**
 

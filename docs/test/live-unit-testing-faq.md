@@ -11,12 +11,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: c49c23bc9ca77721ba6c39fb6c94a0994a70e7d9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3fbe25acc776e6407a5f10bab78ff7affaef8d78
+ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31979101"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39586528"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
 
@@ -75,15 +75,15 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 - MSTest ベースのテストをプロジェクトで使っている場合、`Microsoft.VisualStudio.QualityTools.UnitTestFramework` への参照を削除し、最新の MSTest NuGet パッケージ `MSTest.TestAdapter` (1.1.11 以降のバージョンが必要) および `MSTest.TestFramework` (1.1.11 以降のバージョンが必要) への参照を追加してあることを確認します。 詳しくは、[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#supported-test-frameworks)に関する記事の「サポートされるテスト フレームワーク」セクションをご覧ください。
 
-- ソリューションの少なくとも 1 つのプロジェクトに、NuGet の参照、または xUnit、NUnit、MSTest のいずれかのテスト フレームワークへの直接参照が存在する必要があります。 このプロジェクトは、対応する Visual Studio テスト アダプター NuGet パッケージを参照する必要もあります。 Visual Studio テスト アダプターは、`.runsettings` ファイルから参照することもできます。 `.runsettings` ファイルには、次の例のようなエントリが必要です。
+- ソリューションの少なくとも 1 つのプロジェクトに、NuGet の参照、または xUnit、NUnit、MSTest のいずれかのテスト フレームワークへの直接参照が存在する必要があります。 このプロジェクトは、対応する Visual Studio テスト アダプター NuGet パッケージを参照する必要もあります。 Visual Studio テスト アダプターは、*.runsettings* ファイルから参照することもできます。 *.runsettings* ファイルには、次の例のようなエントリが必要です。
 
-   ```xml
-    <RunSettings>
-       <RunConfiguration>
+```xml
+<RunSettings>
+    <RunConfiguration>
           <TestAdaptersPaths>path-to-your-test-adapter</TestAdaptersPaths>
-       </RunConfiguration>
-    </RunSettings>
-   ```
+     </RunConfiguration>
+</RunSettings>
+```
 
 ## <a name="why-does-live-unit-testing-show-incorrect-coverage-after-you-upgrade-the-test-adapter-referenced-in-your-visual-studio-projects-to-the-supported-version"></a>Visual Studio プロジェクトで参照されているテスト アダプターをサポートされているバージョンにアップグレードした後、Live Unit Testing に正しくないカバレッジが表示されるのはなぜですか?
 
@@ -91,7 +91,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 - ソリューションの複数のプロジェクトが NuGet テスト アダプター パッケージを参照している場合は、それぞれをサポートされるバージョンにアップグレードする必要があります。
 
-- テスト アダプター パッケージからインポートされた MSBuild の .props ファイルも正しく更新されていることを確認してください。 インポートの NuGet パッケージのバージョン/パスを確認します。通常これは、次のように、プロジェクト ファイルの上部近くに表示されます。
+- テスト アダプター パッケージからインポートされた MSBuild の *.props* ファイルも正しく更新されていることを確認してください。 インポートの NuGet パッケージのバージョン/パスを確認します。通常これは、次のように、プロジェクト ファイルの上部近くに表示されます。
 
    ```xml
     <Import Project="..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" />
@@ -101,7 +101,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 **回答:**
 
-"標準の" インストルメント化されていないビルドには必要ないインストルメンテーション (Live Unit Testing) 用にビルドするためのカスタム手順がソリューションに必要な場合は、`BuildingForLiveUnitTesting` プロパティを調べてビルド前/後のカスタム手順を実行するコードを、プロジェクトまたは .targets ファイルに追加できます。 また、このプロジェクト プロパティに基づいて、Live Unit Testing のビルドから特定のビルド手順 (パッケージの発行や生成など) を削除したり、Live Unit Testing にビルド手順 (前提条件のコピーなど) を追加したりすることもできます。 これにより標準のビルドは変更されず、Live Unit Testing のビルドのみが影響を受けます。
+"標準の" インストルメント化されていないビルドには必要ないインストルメンテーション (Live Unit Testing) 用にビルドするためのカスタム手順がソリューションに必要な場合は、`BuildingForLiveUnitTesting` プロパティを調べてビルド前/後のカスタム手順を行うコードを、プロジェクトまたは *.targets* ファイルに追加できます。 また、このプロジェクト プロパティに基づいて、Live Unit Testing のビルドから特定のビルド手順 (パッケージの発行や生成など) を削除したり、Live Unit Testing にビルド手順 (前提条件のコピーなど) を追加したりすることもできます。 このプロパティに基づいてビルドをカスタマイズしても、標準のビルドは変更されず、Live Unit Testing のビルドのみが影響を受けます。
 
 たとえば、標準のビルドの間に NuGet パッケージを生成するターゲットがあるものとします。 おそらく、編集のたびに NuGet パッケージを生成する必要はありません。 そのような場合、次のようにして、Live Unit Testing のビルドでそのターゲットを無効にできます。  
 
@@ -117,7 +117,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 **回答:**
 
-このエラーは、ソリューションのビルド プロセスが `<OutputPath>` または `<OutDir>` を無条件にオーバーライドして `<BaseOutputPath>` のサブディレクトリではないようにした場合に、発生する可能性があります。 このような場合、Live Unit Testing もこれらをオーバーライドしてビルド成果物を `<BaseOutputPath>` の下のフォルダーに格納するため、Live Unit Testing は動作しなくなります。 標準ビルドでビルド成果物が格納される場所をオーバーライドする必要がある場合は、`<BaseOutputPath>` を基にして条件付きで `<OutputPath>` をオーバーライドしてください。
+このエラーは、ソリューションのビルド プロセスが `<OutputPath>` または `<OutDir>` を無条件にオーバーライドして `<BaseOutputPath>` のサブディレクトリではないようにした場合に、発生する可能性があります。 このような場合、Live Unit Testing もこれらの値をオーバーライドしてビルド成果物が `<BaseOutputPath>` の下のフォルダーにドロップされるため、Live Unit Testing は動作しなくなります。 標準ビルドでビルド成果物が格納される場所をオーバーライドする必要がある場合は、`<BaseOutputPath>` を基にして条件付きで `<OutputPath>` をオーバーライドしてください。
 
 たとえば、次のように `<OutputPath>` をオーバーライドするものとします。
 
@@ -129,7 +129,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 </Project>
 ```
 
-これは、次のように置き換えることができます。
+これは、次の XML で置き換えることができます。
 
 ```xml 
 <Project>
@@ -139,14 +139,14 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
   </PropertyGroup>
 </Project>
 ```
- 
+
 これにより、`<OutputPath>` は `<BaseOutputPath>` フォルダー内に存在するようになります。
 
 ビルド プロセスで `<OutDir>` を直接オーバーライドしないでください。ビルド成果物を特定の場所に格納するには、代わりに `<OutputPath>` をオーバーライドします。
- 
-## <a name="setting-the-location-of-live-unit-testing-build-artifacts"></a>Live Unit Testing のビルド成果物の場所の設定
 
-**Live Unit Testing のビルド成果物を、`.vs` フォルダーの下の既定の場所ではない特定の場所に格納する必要があります。どうすれば変更できますか?**
+## <a name="set-the-location-of-live-unit-testing-build-artifacts"></a>Live Unit Testing のビルド成果物の場所の設定
+
+**Live Unit Testing のビルド成果物を、*.vs* フォルダーの下の既定の場所ではない特定の場所に格納する必要があります。どうすれば変更できますか?**
 
 **回答:**
 
@@ -158,25 +158,25 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 いくつか違いがあります。
 
-- [テスト エクスプローラー] ウィンドウからテストを実行またはデバッグすると標準バイナリが実行されますが、Live Unit Testing ではインストルメント化されたバイナリが実行されます。 インストルメント化されたバイナリをデバッグする場合、テスト メソッドに [Debugger.Launch](xref:System.Diagnostics.Debugger.Launch) メソッドの呼び出しを追加し、そのメソッドが実行されると常にデバッガーが起動されるようにすることで (Live Unit Testing によって実行される場合を含みます)、インストルメント化されたバイナリをアタッチしてデバッグできます。 しかし、ほとんどのユーザー シナリオについてインストルメンテーションが透過的で、インストルメント化されたバイナリをデバッグする必要がないようにするのが理想的です。
+- **[テスト エクスプローラー]** ウィンドウからテストを実行またはデバッグすると標準バイナリが実行されますが、Live Unit Testing ではインストルメント化されたバイナリが実行されます。 インストルメント化されたバイナリをデバッグする場合、テスト メソッドに [Debugger.Launch](xref:System.Diagnostics.Debugger.Launch) メソッドの呼び出しを追加し、そのメソッドが実行されると常にデバッガーが起動されるようにすることで (Live Unit Testing によって実行される場合を含みます)、インストルメント化されたバイナリをアタッチしてデバッグできます。 しかし、ほとんどのユーザー シナリオについてインストルメンテーションが透過的で、インストルメント化されたバイナリをデバッグする必要がないようにするのが理想的です。
 
-- Live Unit Testing ではテストを実行するための新しいアプリケーション ドメインは作成されませんが、[テスト エクスプローラー] ウィンドウから実行されたテストでは新しいアプリケーション ドメインが作成されます。
+- Live Unit Testing ではテストを実行するための新しいアプリケーション ドメインは作成されませんが、**[テスト エクスプローラー]** ウィンドウから実行されたテストでは新しいアプリケーション ドメインが作成されます。
 
-- Live Unit Testing では各テスト アセンブリが順番に実行されるのに対し、**[テストを並列で実行する]** ボタンを選んで [テスト エクスプローラー] ウィンドウから複数のテストを実行した場合は、並列に実行されます。
+- Live Unit Testing では各テスト アセンブリが順番に実行されるのに対し、**[テストを並列で実行する]** ボタンを選んで **[テスト エクスプローラー]** ウィンドウから複数のテストを実行した場合は、並列に実行されます。
 
-- Live Unit Testing でのテストの探索と実行にはバージョン 2 の `TestPlatform` が使われますが、[テスト エクスプローラー] ウィンドウではバージョン 1 が使われます。 ただし、ほとんどの場合違いはわかりません。 
+- Live Unit Testing でのテストの探索と実行にはバージョン 2 の `TestPlatform` が使われますが、**[テスト エクスプローラー]** ウィンドウではバージョン 1 が使われます。 ただし、ほとんどの場合違いはわかりません。
 
-- 現在、テスト エクスプローラーは既定ではシングルスレッド アパートメント (STA) でテストを実行するのに対し、Live Unit Testing はマルチスレッド アパートメント (MTA) でテストを実行します。 Live Unit Testing において MSTest テストを STA で実行するには、テスト メソッドまたはそれを含むクラスを、`MSTest.STAExtensions 1.0.3-beta` NuGet パッケージに含まれる `<STATestMethod>` または `<STATestClass>` 属性で修飾します。 NUnit の場合はテスト メソッドを `<RequiresThread(ApartmentState.STA)>` 属性で修飾し、xUnit の場合は `<STAFact>` 属性で修飾します。
+- 現在、**テスト エクスプローラー**は既定ではシングルスレッド アパートメント (STA) でテストを実行するのに対し、Live Unit Testing はマルチスレッド アパートメント (MTA) でテストを実行します。 Live Unit Testing において MSTest テストを STA で実行するには、テスト メソッドまたはそれを含むクラスを、`MSTest.STAExtensions 1.0.3-beta` NuGet パッケージに含まれる `<STATestMethod>` または `<STATestClass>` 属性で修飾します。 NUnit の場合はテスト メソッドを `<RequiresThread(ApartmentState.STA)>` 属性で修飾し、xUnit の場合は `<STAFact>` 属性で修飾します。
 
 ## <a name="how-do-i-exclude-tests-from-participating-in-live-unit-testing"></a>Live Unit Testing からテストを除外するにはどうすればよいですか?
 
 **回答:**
 
-ユーザー固有の設定については、「[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#including-and-excluding-test-projects-and-test-methods)」記事の「テスト プロジェクトとテスト メソッドを含めるか除外する」セクションをご覧ください。 これは、特定の編集セッションに対して特定のテスト セットを実行したい場合、または個人設定を維持したい場合に便利です。
+ユーザー固有の設定については、「[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#include-and-exclude-test-projects-and-test-methods)」記事の「テスト プロジェクトとテスト メソッドを含めるか除外する」セクションをご覧ください。 テストを含めるまたは除外すると、特定の編集セッションに対して特定のテスト セットを実行したい場合、または個人設定を維持したい場合に便利です。
  
 ソリューション固有の設定では、<xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> 属性をプログラムで適用することにより、Live Unit Testing によるインストルメント化からメソッド、プロパティ、クラス、構造体を除外できます。 さらに、プロジェクト ファイルで `<ExcludeFromCodeCoverage>` プロパティを `true` に設定して、プロジェクト全体をインストルメント化から除外することもできます。 それでも Live Unit Testing はインストルメント化されていないテストを実行しますが、カバレッジは視覚化されません。
 
-`Microsoft.CodeAnalysis.LiveUnitTesting.Runtime` が現在のアプリケーション ドメインに読み込まれているかどうかを確認し、それに基づいてテストを無効にすることもできます。 たとえば、xUnit では次のような処理を行うことができます。
+`Microsoft.CodeAnalysis.LiveUnitTesting.Runtime` が現在のアプリケーション ドメインに読み込まれているかどうかを確認し、理由に基づいてテストを無効にすることもできます。 たとえば、xUnit では次のような処理を行うことができます。
 
 ```csharp
 [ExcludeFromCodeCoverage]
@@ -217,9 +217,9 @@ public class Class1
 
 **回答:**
 
-この現象は、ソリューションのビルド プロセスによってソリューション自体の一部であるソース コードが生成され、ビルド ターゲット ファイルにおいて適切な入力と出力が指定されていない場合に、発生する可能性があります。 MSBuild が適切な最新状態チェックを実行し、新しいビルドが必要かどうかを判断できるように、ターゲットに入力と出力のリストを提供する必要があります。
+編集を行っていなくても、ソリューションのビルド プロセスによってソリューション自体の一部であるソース コードが生成され、ビルド ターゲット ファイルにおいて適切な入力と出力が指定されていない場合は、ソリューションがビルドされる場合があります。 MSBuild が適切な最新状態チェックを実行し、新しいビルドが必要かどうかを判断できるように、ターゲットに入力と出力のリストを提供する必要があります。
 
-Live Unit Testing は、ソース ファイルが変更されたことを検出すると常に、ビルドを開始します。 ソリューションのビルドでソース ファイルが生成されるので、Live Unit Testing は無限ビルド ループになります。 ただし、Live Unit Testing が (前のビルドで新しく生成されたソース ファイルを検出した後) 2 回目のビルドを開始するときに、ターゲットの入力と出力を調べる場合は、入力と出力のチェックですべてが最新であることが示されるため、ループから抜け出します。  
+Live Unit Testing は、ソース ファイルが変更されたことを検出すると常に、ビルドを開始します。 ソリューションのビルドでソース ファイルが生成されるので、Live Unit Testing は無限ビルド ループになります。 ただし、Live Unit Testing が (前のビルドで新しく生成されたソース ファイルを検出した後) 2 回目のビルドを開始するときに、ターゲットの入力と出力を調べる場合は、入力と出力のチェックですべてが最新であることが示されるため、ビルド ループから抜け出します。  
 
 ## <a name="how-does-live-unit-testing-work-with-the-lightweight-solution-load-feature"></a>ライトウェイト ソリューション ロード機能では Live Unit Testing はどのように動作しますか?
 
@@ -228,9 +228,9 @@ Live Unit Testing は、ソース ファイルが変更されたことを検出�
 Live Unit Testing は現在のところ、ライトウェイト ソリューション ロード機能とうまく連動しません。 テスト プロジェクトを少なくとも 1 つ読み込まないと作動しません。 プロジェクトを読み込むまで正常に作動しない理由は、Live Unit Testing は 1 つ以上のテスト プロジェクトを利用しなければ、読み込まれるテスト アダプター (MSTest、xUnit、NUnit) を参照できないことにあります。
 
 > [!NOTE]
-> Visual Studio 2017 バージョン 15.5 以降では、ライトウェイト ソリューション ロードを使用できなくなりました。 Visual Studio 2017 バージョン 15.5 以降の場合、マネージ コードを含む大規模なソリューションで、ライトウェイト ソリューション ロードなしでも以前よりはるかに速く読み込むことができます。
+> Visual Studio 2017 バージョン 15.5 以降では、ライトウェイト ソリューション ロードを使用できなくなりました。 Visual Studio 2017 バージョン 15.5 以降の場合、マネージド コードを含む大規模なソリューションで、ライトウェイト ソリューション ロードなしでも以前よりはるかに速く読み込むことができます。
 
-## <a name="why-does-live-unit-testing-does-not-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing がテストによって作成された新しいプロセスからカバレッジをキャプチャしないのはなぜですか?
+## <a name="why-doesnt-live-unit-testing-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing がテストによって作成された新しいプロセスからカバレッジをキャプチャしないのはなぜですか?
 
 **回答:**
 
@@ -250,7 +250,7 @@ Live Unit Testing は現在のところ、ライトウェイト ソリューシ�
 
 **回答:**
 
-この現象は、Live Unit Testing が動作しているアセンブリが何らかの理由でインストルメント化されていない場合に発生します。 たとえば、Live Unit Testing は `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` を設定するプロジェクトと互換性がありません。 この場合、Live Unit Testing を動作させるには、ビルド プロセスを更新してこの設定を削除する、または `true` に変更する必要があります。 
+Live Unit Testing が動作しているアセンブリが何らかの理由でインストルメント化されていない場合に、エディターにアイコンが表示されない場合があります。 たとえば、Live Unit Testing は `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` を設定するプロジェクトと互換性がありません。 この場合、Live Unit Testing を動作させるには、ビルド プロセスを更新してこの設定を削除する、または `true` に変更する必要があります。 
 
 ## <a name="how-do-i-collect-more-detailed-logs-to-file-bug-reports"></a>ファイル バグ レポートに詳細なログを収集するにはどうすればよいですか?
 
@@ -258,7 +258,7 @@ Live Unit Testing は現在のところ、ライトウェイト ソリューシ�
 
 詳細なログを収集するにはいくつかの方法があります。
 
-- **[ツール]**、**[オプション]**、**[Live Unit Testing]** の順に移動し、ログ オプションを **[詳細]** に変更します。 こうすると、より詳細なログが出力ウィンドウに表示されます。
+- **[ツール]** > **[オプション]** > **[Live Unit Testing]** の順に移動し、ログ オプションを **[詳細]** に変更します。 詳細ログにより、より詳細なログが **[出力]** ウィンドウに表示されます。
 
 - `LiveUnitTesting_BuildLog` ユーザー環境変数に、MSBuild ログのキャプチャに使うファイルの名前を設定します。 このようにすると、Live Unit Testing のビルドからの詳細な MSBuild ログ メッセージを、そのファイルから取得できます。
 
@@ -268,5 +268,4 @@ Live Unit Testing は現在のところ、ライトウェイト ソリューシ�
 
 ## <a name="see-also"></a>関連項目
 
-[ライブ単体テスト](live-unit-testing.md)
-
+- [ライブ単体テスト](live-unit-testing.md)

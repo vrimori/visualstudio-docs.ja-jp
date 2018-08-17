@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c9a60212a3e89e8c7f445e5670858f524df9a70
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 64d3fd57f5c55a321ca09495adcd7c712964b01f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302951"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154605"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 要素 (MSBuild)
 [Task](../msbuild/task-element-msbuild.md) 要素で参照されているタスクを、タスクの実装が含まれているアセンブリにマップします。  
@@ -42,7 +42,7 @@ ms.locfileid: "36302951"
     Condition="'String A'=='String B'" />  
 ```  
 
-## <a name="attributes-and-elements"></a>属性および要素  
+## <a name="attributes-and-elements"></a>属性と要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
 
 ### <a name="attributes"></a>属性  
@@ -72,9 +72,9 @@ ms.locfileid: "36302951"
  環境変数、コマンド ライン プロパティ、プロジェクト レベル プロパティ、およびプロジェクト レベル項目は、直接、またはインポートされたプロジェクト ファイルを通じて、プロジェクト ファイルに含まれる `UsingTask` 要素内で参照できます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  
 
 > [!NOTE]
->  MSBuild エンジンを使用してグローバルに登録された .tasks ファイルの 1 つから `UsingTask` 要素が使用されている場合、プロジェクトレベル プロパティおよび項目は意味を持ちません。 プロジェクト レベルの値は、MSBuild に対してグローバルなプロパティではありません。  
+>  MSBuild エンジンを使用してグローバルに登録された *.tasks* ファイルの 1 つから `UsingTask` 要素が使用されている場合、プロジェクトレベル プロパティおよび項目は意味を持ちません。 プロジェクト レベルの値は、MSBuild に対してグローバルなプロパティではありません。  
 
- MSBuild 4.0 では、UsingTask を .overridetask ファイルから読み込むことができます。  
+ MSBuild 4.0 では、UsingTask を *.overridetask* ファイルから読み込むことができます。  
 
 ## <a name="example"></a>例  
  次の例では、`AssemblyName` 属性で `UsingTask` 要素を使用する方法を示します。  
@@ -100,7 +100,7 @@ ms.locfileid: "36302951"
               AssemblyFile="c:\myTasks\myTask.dll" />  
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク](../msbuild/msbuild-tasks.md)   
- [Task Reference (タスク リファレンス)](../msbuild/msbuild-task-reference.md)   
+ [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)

@@ -18,16 +18,19 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
 manager: ghogen
-ms.openlocfilehash: 5b13f01a1a5ba13503932c73aef3a4825115497e
-ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
+ms.openlocfilehash: ffe531cf9dab315a43a37688c2b4e9eddf89b470
+ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
-ms.locfileid: "29753298"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008409"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 の JavaScript
 
 JavaScript は Visual Studio の第一級の言語です。 Visual Studio IDE で JavaScript コードを記述する場合に、ほとんどの標準的な編集補助機能 (コード スニペット、IntelliSense など) を使用できます。 多くの種類のアプリケーションやサービスの JavaScript コードを記述できます。
+
+> [!NOTE]
+> Microsoft の JavaScript API のすべてのリファレンス (500 超ページ) を docs.microsoft.com から対応する MDN にリダイレクトして、[MDN Web docs](https://developer.mozilla.org/en-US/) を Web のワンストップの主要な開発リソースにするためのコミュニティ全体の取り組みに参加しました。 詳細については、この[お知らせ](https://blogs.windows.com/msedgedev/2018/06/26/chakra-docs-mdn-web-docs/)をご覧ください。
 
 ## <a name="ES6"></a> ECMAScript 2015 (ES6) 以降のサポート
 
@@ -153,7 +156,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 
 ほとんどの場合、プロジェクトを開くだけで、既定のプロジェクト構成で優れたエクスペリエンスが得られます。 ただし、大規模なプロジェクトまたはさまざまなフォルダー構造を持つプロジェクトでは、言語サービスをさらに構成し、独自のソース ファイルにのみ、より的確に焦点を合わせることが望ましい場合があります。
 
-### <a name="override-defaults"></a>既定値より優先
+### <a name="override-defaults"></a>既定値をオーバーライド
 
 プロジェクト ルートに `tsconfig.json` ファイルを追加して、既定の構成をオーバーライドすることができます。
 `tsconfig.json` には、プロジェクト コンテキストを操作できるいくつかの異なるオプションがあります。
@@ -183,7 +186,7 @@ var x = React.createElement(comps_1.RepoDisplay, {description: "test"});
 次のようにセットアップされたプロジェクトがあるとします。
 
 - プロジェクトのソース ファイルが `wwwroot/js` にある
-- プロジェクトの lib ファイルが `wwwrrot/lib` にある
+- プロジェクトの lib ファイルが `wwwroot/lib` にある
 - `bootstrap`、`jquery`、`jquery-validation`、および `jquery-validation-unobtrusive` が `bower.json` にリストされている
 - `kendo-ui` が lib フォルダーに手動で追加されている
 

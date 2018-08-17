@@ -9,12 +9,12 @@ description: サブスクリプション管理者の責任について説明し�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 1eb8dc3cf47241632085e86f589ba377343aa4f1
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9fdefa652a368c344f11fdaf70dbf5db9b172fbf
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30862999"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638099"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>管理者責任の概要
 管理者には、組織のサブスクリプションを管理する役割が与えられます。  この役割には、ライセンス条項に基づいてサブスクリプションを管理するという責任も伴います。 この記事では、管理者の役割に伴う責任、特権、制限について説明します。
@@ -64,6 +64,7 @@ Visual Studio サブスクリプションの管理者は責任を持って、Vis
 
 ## <a name="track-user-assignment-and-process-orders"></a>ユーザーの割り当てを追跡し、注文を処理する
 Visual Studio サブスクリプションの管理者は、Visual Studio の使用状況を追跡し、ボリューム ライセンス契約またはマイクロソフト製品/サービス契約に記載されているスケジュールに従って、使用率の増加に応じて注文を処理する必要があります。 新しい Visual Studio サブスクリプション管理ポータルは、使用可能なライセンスと使用済みのライセンスを示す便利なトラッカーにより、これを簡略化します。
+
 ### <a name="high-water-mark-of-usage"></a>使用率の高基準値
 **次の場合には、会社が Visual Studio サブスクリプションをすぐに購入する義務が生じます。**
 - ユーザーにライセンスが割り当てられた場合

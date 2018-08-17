@@ -11,12 +11,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: a0f9240cd729d26eecd3c098c28799369b48cea6
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 8bbb27ad3368b53fc3e333d3260f2f30551c4177
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924370"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251193"
 ---
 # <a name="setup-and-install"></a>セットアップとインストール
 
@@ -84,7 +84,7 @@ Visual Studio 2017 は既にインストールしているが、Xamarin プラ�
 
 1.  [https://appleid.apple.com](https://appleid.apple.com/) で無料の Apple ID を作成します (まだ作成していない場合)。 この Apple ID は Xcode をインストールしてサインインするために必要です。
 
-2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) から Xcode をダウンロードしてインストールし、apple.com の「[Adding Your Account to Xcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)」 (Xcode にアカウントを追加する) の説明に従って、Apple ID を追加します。
+2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/) から Xcode をダウンロードしてインストールし、apple.com の「[Add your account to Xcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)」(Xcode にアカウントを追加する) の説明に従って、Apple ID を追加します。
 
 3.  「[Visual Studio for Mac のセットアップとインストール](/visualstudio/mac/installation)」の説明に従い、Visual Studio for Mac をダウンロードしてインストールします。
 

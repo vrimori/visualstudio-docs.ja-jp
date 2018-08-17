@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e241af310821463f60f323b9fd20099fad44a3ba
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 2ec83d60046a74484035df9d7a7831d16b48d899
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326281"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151182"
 ---
 # <a name="resumetracking"></a>ResumeTracking
 現在のコンテキストで追跡を再開します。  
@@ -37,7 +37,7 @@ HRESULT WINAPI ResumeTracking();
  追跡が再開された場合、**HRESULT** に **SUCCEEDED** ビットが設定されます。 コンテキストが利用できず、追跡を再開できない場合、**E_FAIL** が返されます。  
   
 ## <a name="requirements"></a>必要条件  
- **ヘッダー:** FileTracker.h  
+ **ヘッダー:** *FileTracker.h*  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SuspendTracking](../msbuild/suspendtracking.md)

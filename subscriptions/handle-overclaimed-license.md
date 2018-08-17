@@ -9,12 +9,12 @@ description: 管理者が過剰に要求されたサブスクリプションを�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ae5ed6a4d459f3131250aed89ba0aef88da1ef7c
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 308ef6d310d87340c18b4f2da1e118c6859ec89e
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "36325291"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636728"
 ---
 # <a name="handling-over-claimed-subscriptions"></a>過剰に要求されたサブスクリプションに対応する
 
@@ -22,7 +22,9 @@ ms.locfileid: "36325291"
 
 > [!NOTE] 
 > Open License プログラムでは過剰に要求されたサブスクリプション シナリオは許可されません。  また、他のプログラムでは、ポータルにこの情報を別の方式で表示できます。 
-![過剰に要求されたサブスクリプションの通知](_img\over-claimed\over-claimed-alert.png)
+
+> [!div class="mx-imgBorder"]
+> ![過剰に要求されたサブスクリプションの通知](_img\over-claimed\over-claimed-alert.png)
 
 
 1.  過剰に要求されたライセンスを解決するには、アラートのテキストをクリックします。 これにより、過剰に要求されたサブスクリプション レベルに割り当てられているサブスクライバーと有効期限のフィルター処理された一覧が表示されます。 

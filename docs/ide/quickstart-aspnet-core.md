@@ -2,7 +2,7 @@
 title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
 description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
 ms.custom: mvc
-ms.date: 06/27/2018
+ms.date: 07/20/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: quickstart
@@ -14,83 +14,104 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 9d8aa6a6147ff57ba72f1cc69240ef5a7137cd73
-ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
+ms.openlocfilehash: cbb43f61aab1df099efca01b56a927cf189a808e
+ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37089300"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39468979"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
-ここでは 5 分から 10 分で Visual Studio 統合開発環境 (IDE) の概要を示し、単純な C# ASP.NET Core Web アプリケーションを作成します。
+Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック スタートでは、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、簡単な "Hello World" Web アプリを作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-まず、ASP.NET Core Web アプリケーション プロジェクトを作成します。 プロジェクトの種類は、機能的な Web アプリケーションを構成するテンプレート ファイルにあらかじめ用意されています。
+まず、ASP.NET Core Web アプリケーション プロジェクトを作成します。 このプロジェクト タイプには、Web アプリを作成するためのすべてのテンプレート ファイルが付属しているので、何も追加する必要はありません。
 
 1. Visual Studio 2017 を開きます。
 
 1. 上部のメニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスで、左ウィンドウの **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択してから **[OK]** を選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウで **[Visual C#]** を展開し、**[.NET Core]** を選択します。 中央のウィンドウで、**[ASP.NET Core Web アプリケーション]** を選択ます。 次に、ファイル名を「`HelloWorld`」にして、**[OK]** を選択します。
 
-     **.NET Core** プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで **[Visual Studio インストーラーを開く]** リンクを選択します。 Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
+   ![C# 用の新しい ASP.NET Core Web アプリケーション プロジェクトを作成する](../ide/media/csharp-aspnet-choose-template-name-file.png)
 
-     ![VS インストーラーの ASP.NET ワークロード](../ide/media/quickstart-aspnet-workload.png)
+   > [!NOTE]
+   > **.NET Core** プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで **[Visual Studio インストーラーを開く]** リンクを選択します。
+   >
+   > ![[新しいプロジェクト] ダイアログ ボックスから Visual Studio インストーラーを開く](../ide/media/open-visual-studio-installer.png)
+   >
+   > Visual Studio インストーラーが起動します。 **[ASP.NET と Web 開発]** ワークロードを選択してから **[変更]** を選択します。
+   >
+   > ![VS インストーラーの ASP.NET ワークロード](../ide/media/quickstart-aspnet-workload.png)
+   >
+   > (新しいワークロードのインストールを続ける前に、Visual Studio を終了することが必要な場合があります。)
 
-1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューから **[ASP.NET Core 2.0]** を選択します  (リストに **ASP.NET Core 2.0** が表示されない場合は、ダイアログ ボックスの上部付近にある黄色のバーに表示される **[ダウンロード]** リンクに従ってインストールしてください)。**[OK]** をクリックします。
+1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューに **[ASP.NET Core 2.0]** が表示されていることを確認します。 その後、**[Web アプリケーション]** を選択して **[OK]** を選択します。
 
    ![[新しい ASP.NET Core Web アプリケーション] ダイアログ ボックス](../ide/media/quickstart-aspnet-core20.png)
 
-## <a name="explore-the-ide"></a>IDE を探索する
+すぐに、Visual Studio でプロジェクト ファイルが開きます。
 
-1. **ソリューション エクスプローラー**のツールバーで、**Pages** フォルダーを展開し、**[About.cshtml]** を選択してエディターで開きます。 このファイルは、Web アプリケーションの **About** というページに対応します。
+## <a name="create-the-app"></a>アプリを作成する
 
-1. エディターで、`AboutModel` を選択してから **F12** キーを押すか、コンテキスト (右クリック) メニューから **[定義に移動]** を選択します。 このコマンドで `AboutModel` C# クラスの定義が示されます。
+1. **ソリューション エクスプローラー**で、**Pages** フォルダーを展開し、**About.cshtml** を選択します。
 
-   ![[定義に移動] コンテキスト メニュー](../ide/media/quickstart-aspnet-gotodefinition.png)
+   ![ソリューション エクスプローラーから About.cshtml ファイルを選択する](../ide/media/csharp-aspnet-about-page-html-file.png)
 
-1. 次に、シンプルなショートカットを使用して、ファイルの上部にある `using` ディレクティブをクリーンアップします。 灰色表示の using ディレクティブのいずれかを選択すると、キャレットのすぐ下、または左余白に[クイック アクション](../ide/quick-actions.md) (電球) が表示されます。 電球を選択してから、**[不要な using の削除]** を選択します。
+   このファイルは、Web アプリの **About** という名前のページに対応します。
 
-     不要な using がファイルから削除されます。
+   ![Web アプリの About ページ](../ide/media/csharp-aspnet-about-page.png)
 
-1. `OnGet()` メソッドで、本体を次のコードに変更します。
+   エディターに、**About** ページの "additional information" 領域の HTML コードが表示されます。
 
- ```csharp
- public void OnGet()
- {
-     string directory = Environment.CurrentDirectory;
-     Message = String.Format("Your directory is {0}.", directory);
- }
- ```
+   ![Visual Studio エディターに表示された "additional information" 領域の HTML コード](../ide/media/csharp-aspnet-about-cshtml-page.png)
 
-1. **Environment** と **String** の下には二重の波下線が表示されます。これらの型は範囲外であるためです。 **[エラー一覧]** ツール バーを開くと、そこに同じエラーが一覧表示されます  (**[エラー一覧]** ツール バーが表示されない場合は、上部のメニュー バーで **[表示]** > **[エラー一覧]** の順に選択します)。
+1. "additional information" というテキストを「**Hello World!**」に変更します。
 
-   ![エラー一覧](../ide/media/quickstart-aspnet-errorlist.png)
+   ![Visual Studio エディターに表示される既定の "additional information" 領域の HTML コードを変更する](../ide/media/csharp-aspnet-about-cshtml-page-hello-world.png)
 
-1. エディター ウィンドウで、エラーを含むいずれかの行にカーソルを置き、左余白のクイック アクション (電球) を選択します。 ドロップダウン メニューから、**[using System;]** を選択してファイルの先頭にこのディレクティブを追加し、エラーを解決します。
+1. **ソリューション エクスプローラー**で、**About.cshtml** を展開し、**About.cshtml.cs** を選択します。 (このファイルも、Web アプリの **About** ページに対応しています。)
 
-## <a name="run-the-application"></a>アプリケーションの実行
+   ![ソリューション エクスプローラーから About.cshtml ファイルを選択する](../ide/media/csharp-aspnet-about-page-code-file.png)
 
-1. **Ctrl** + **F5** キーを押してアプリケーションを実行し、Web ブラウザーで開きます。
+   エディターに、**About** ページの "application description" 領域のテキストを含む C# コードが表示されます。
 
-1. Web サイトの上部にある **[バージョン情報]** を選択すると、**About** ページの `OnGet()` メソッドに追加したディレクトリ メッセージが表示されます。
+   ![Visual Studio エディターに表示されたアプリケーション説明領域の C# コード](../ide/media/csharp-aspnet-about-cshtml-cs-code.png)
+
+1. "application description" というメッセージ テキストを「**What's my message?**」に変更します。
+
+   ![Visual Studio エディターでアプリケーション説明領域の既定のメッセージ テキストを変更する](../ide/media/csharp-aspnet-about-cshtml-cs-message.png)
+
+## <a name="run-the-app"></a>アプリを実行する
+
+1. **Ctrl** + **F5** キーを押してアプリを実行し、Web ブラウザーで開きます。
+
+   > [!NOTE]
+   > "**Web サーバー 'IIS Express' に接続できませんでした**" というエラー メッセージが表示される場合は、Visual Studio を閉じて、右クリックまたはコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
+
+1. Web ページの上部で **[About]** を選択します。
+
+   ![Web ページで [About] を選択する](../ide/media/csharp-aspnet-home-page-about.png)
+
+1. **[About]** ページに追加した更新後のテキストが表示されます。
+
+   ![追加したテキストを含む更新後の [About] ページが表示される](../ide/media/csharp-aspnet-about-page-hello-world.png)
 
 1. Web ブラウザーを閉じます。
 
-> [!NOTE]
-> **"Web サーバー 'IIS Express' に接続できませんでした"** というエラー メッセージが表示された場合は、Visual Studio を閉じて、右クリックするかコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
-
-このクイック スタートは完了しました。 Visual Studio IDE について少しはご理解いただけたかと思います。 機能についてさらに深く理解したい場合は、目次の**チュートリアル** セクションに示されているチュートリアルを続行してください。
+このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE (統合開発環境) について少しはご理解いただけたかと思います。
 
 ## <a name="next-steps"></a>次の手順
 
-このクイック スタートは完了しました。 C#、ASP.NET Core、Visual Studio IDE について少しはご理解いただけたかと思います。 パブリック サーバー上で実行されているアプリを表示するには、次のボタンを選択します。
+詳細については、引き続き以下のチュートリアルをご覧ください。
 
 > [!div class="nextstepaction"]
-> [Azure App Service へのアプリの展開](..//deployment/quickstart-deploy-to-azure.md)
+> [Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)
 
-さらに学習するには、チュートリアルを続けて、「[Visual Studio での C# および ASP.NET の概要](tutorial-csharp-aspnet-core.md)」と「[ASP.NET Core MVC と Visual Studio の概要](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)」に進みます。
+## <a name="see-also"></a>関連項目
+
+[Visual Studio を使用して Azure App Service に Web アプリを発行する](..//deployment/quickstart-deploy-to-azure.md)

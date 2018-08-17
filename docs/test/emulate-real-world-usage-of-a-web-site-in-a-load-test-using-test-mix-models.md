@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でロード テストのために Web サイトの実際の使用状況をエミュレートする
+title: ロード テストのために Web サイトの実際の使用状況をエミュレートする
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9ec5777bc1a2bfffc650497314a219d071057beb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 682370de0964e8bc96a069f015f37144f4d9a83f
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31977045"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177267"
 ---
-# <a name="emulate-expected-real-world-usage-of-a-web-site-or-application-in-a-load-test-using-a-test-mix-models"></a>テスト ミックス モデルを使用してロード テストでの Web サイトまたはアプリケーションの実際の使用状況をエミュレートする
+# <a name="emulate-expected-real-world-usage-of-a-website-or-application-in-a-load-test-using-a-test-mix-model"></a>テスト ミックス モデルを使用してロード テストでの Web サイトまたはアプリケーションの実際の使用状況をエミュレートする
 
 さまざまなロード モデリング オプションを使用して、ロード テストの対象となる Web サイトまたはアプリケーションの実際の使用状況をより正確に予測します。 正確なロード モデルに基づかないロード テストでは、誤解を招く結果が生じる可能性があるので、これを行うことが重要です。
 
@@ -66,16 +66,16 @@ ms.locfileid: "31977045"
 
  テスト ミックスのペース配分を使用する場合、**[テスト イテレーション間の待ち時間]** 設定は適用されません。
 
-#### <a name="applying-distribution-to-pacing-delay"></a>ペース配分遅れへの分布の適用
+#### <a name="apply-distribution-to-pacing-delay"></a>遅延のペースに分布を適用
  ロード テスト シナリオの **"遅延のペースに分布を適用"** プロパティの値を、true または false のどちらかに設定できます。
 
--   **True**: [テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
+-   **True**: **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値で指定された、標準的な統計分布による遅れを適用します。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 
-     たとえば、テストの [テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **True** に設定すると、標準的な統計分布がテスト間の待機時間に適用されます。 1 時間につき 2 つのテストが実行されますが、その間隔は 30 分とは限りません。 最初のテストが 4 分後に実行されたり、2 回目のテストは 45 分後に実行されたりする場合があります。
+     たとえば、テストの **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **True** に設定すると、標準的な統計分布がテスト間の待機時間に適用されます。 1 時間につき 2 つのテストが実行されますが、その間隔は 30 分とは限りません。 最初のテストが 4 分後に実行されたり、2 回目のテストは 45 分後に実行されたりする場合があります。
 
--   **False**: テストは、[テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値に指定した特定のペースで実行されます。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
+-   **False**: テストは、**[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** 列の値に指定した特定のペースで実行されます。 詳細については、「[テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)」を参照してください。
 
-     たとえば、テストの [テスト ミックスの編集] ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **False** に設定すると、基本的にテスト実行時の設定を変更する余裕はなくなります。 テストは 30 分ごとに実行されます。 これにより、1 時間あたり 2 回のテストが行われます。
+     たとえば、テストの **[テスト ミックスの編集]** ダイアログ ボックスの **[1 ユーザーの 1 時間あたりのテスト数]** の値を、1 時間あたり 2 ユーザーに設定したとします。 **"遅延のペースに分布を適用"** プロパティを **False** に設定すると、基本的にテスト実行時の設定を変更する余裕はなくなります。 テストは 30 分ごとに実行されます。 これにより、1 時間あたり 2 回のテストが行われます。
 
  詳細については、「[方法: 配分を適用してユーザー ペースのテスト ミックス モデルを使用するときの遅延をペース配分する](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md)」を参照してください。
 
@@ -102,9 +102,9 @@ ms.locfileid: "31977045"
 
 ## <a name="see-also"></a>関連項目
 
-- [テキスト ミックス モデルを編集して仮想ユーザーがテストを実行する確率を指定](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
-- [ロード パターンを編集して仮想ユーザー アクティビティをモデル化](../test/edit-load-patterns-to-model-virtual-user-activities.md)
-- [テスト ミックスを編集して、ロード テスト シナリオに含めるテストを指定](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
+- [テキスト ミックス モデルを編集して、仮想ユーザーがテストを実行する確率を指定する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [ロード パターンを編集して、仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [テスト ミックスを編集して、ロード テスト シナリオに含めるテストを指定する](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)
 - [ロード テストの実行設定の構成](../test/configure-load-test-run-settings.md)
 - [ロード テスト シナリオのプロパティ](../test/load-test-scenario-properties.md)
-- [シナリオのテスト ミックス モデルの変更](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
+- [シナリオのテスト ミックス モデルを変更する](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)

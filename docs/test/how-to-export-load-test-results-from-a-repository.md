@@ -13,16 +13,16 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3da70b7c8c476125478fef2497f084ba4a638a03
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9e9f3513cb5d7bb03f51be68d1b44b8df161a088
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31969630"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39381505"
 ---
 # <a name="how-to-export-load-test-results-from-a-repository"></a>方法: ロード テスト結果をリポジトリからエクスポートする
 
-ロード テストを実行すると、実行中に収集された情報がロード テストの結果リポジトリに保存されます。 ロード テストの結果リポジトリには、パフォーマンス カウンター データとエラー情報が含まれています。 詳細については、「[ロード テストの結果リポジトリ内のロード テストの結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)」を参照してください。
+ロード テストを実行すると、実行中に収集された情報がロード テストの結果リポジトリに保存されます。 ロード テストの結果リポジトリには、パフォーマンス カウンター データとエラー情報が含まれています。 詳細については、「[ロード テストの結果リポジトリ内のロード テスト結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)」を参照してください。
 
 ロード テストの結果をロード テスト エディターで管理するには、**[ロード テストの結果を開いて管理]** ダイアログ ボックスを使用します。 このダイアログ ボックスでは、ロード テストの結果を表示、インポート、エクスポート、および削除できます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "31969630"
 
      ロード テストの結果が使用可能な場合は、**[ロード テストの結果]** 一覧に表示されます。 この一覧の列は、**[時間]**、**[期間]**、**[ユーザー]**、**[成果]**、**[テスト]**、**[説明]** です。 **[テスト]** にはテストの名前が表示され、**[説明]** にはテストを実行する前に入力した説明が表示されます。 **[説明]** 列には、テスト結果の **[分析コメント]** に入力された簡単な説明が表示されます。
 
-5.  **[ロード テストの結果]** ボックスの一覧で、いずれかの結果を選択します。 Shift キーまたは Ctrl キー、あるいはその両方を使用して複数の結果を選択し、それらを 1 つのファイルにエクスポートできます。
+5.  **[ロード テストの結果]** ボックスの一覧で、いずれかの結果を選択します。 **Shift** キーまたは **Ctrl** キー、あるいはその両方を使用して複数の結果を選択し、それらを 1 つのファイルにエクスポートできます。
 
 6.  **[エクスポート]** を選択します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "31969630"
 
 ## <a name="see-also"></a>関連項目
 
-- [ロード テストの結果リポジトリ内のロード テストの結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)
+- [ロード テストの結果リポジトリ内のロード テスト結果の管理](../test/manage-load-test-results-in-the-load-test-results-repository.md)
 - [方法: ロード テスト結果をリポジトリから削除する](../test/how-to-delete-load-test-results-from-a-repository.md)
 - [ロード テストの結果の分析](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [方法: ロード テスト結果をリポジトリにインポートする](../test/how-to-import-load-test-results-into-a-repository.md)

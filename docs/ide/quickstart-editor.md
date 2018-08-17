@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 265e0a4c596a78e53de6fe92d837796f2e52a703
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 93f4dd635e2d90a0ed56b4732c79bb67b569f09b
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079149"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511236"
 ---
 # <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
 
@@ -157,14 +157,21 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 ## <a name="next-steps"></a>次の手順
 
-Visual Studio エディターにおけるこのクイック スタートは完了しました。 次に、Visual Studio 開発環境の他のクイック スタート ([クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)や[クイックスタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)など) を試してみる、[コード内を移動](../ide/navigating-code.md)する他の方法を参照する、またはこれまで見てきた機能の詳細情報へのリンクを確認することができます。 または他の方法でコーディングをお楽しみください。
+Visual Studio エディターにおけるこのクイック スタートは完了しました。 次に、Visual Studio 開発環境のその他のクイック スタートをいくつか試してみることができます。
+
+> [!div class="nextstepaction"]
+> [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+
+> [!div class="nextstepaction"]
+> [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-- [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
-- [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
 - [コード スニペット](../ide/code-snippets.md)
+- [コード間の移動](../ide/navigating-code.md)
 - [アウトライン](../ide/outlining.md)
 - [[定義へ移動] と [定義をここに表示]](../ide/go-to-and-peek-definition.md)
 - [リファクタリング](../ide/refactoring-in-visual-studio.md)
