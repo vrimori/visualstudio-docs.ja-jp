@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8da672193dcbe12581122a48559c9027f01e77c9
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 5dc83fc859e99a86b1057a02b7cfb9ff2e1232af
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057587"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635526"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
-[DebuggerDisplayAttribute クラス](/dotnet/api/system.diagnostics.debuggerdisplayattribute)デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
+<xref:System.Diagnostics.DebuggerDisplayAttribute>デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
   
  `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ (`{` と `}`) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
   
