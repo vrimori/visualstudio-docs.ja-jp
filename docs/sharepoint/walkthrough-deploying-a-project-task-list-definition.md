@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2af59e2d5d26a6db1ecde24ca93c3f0d737eb31d
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 80b9cfee3aed4043b8327898ad8c57a55f254c28
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119431"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42626458"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>チュートリアル: プロジェクト タスク リスト定義を展開します。
 
@@ -30,9 +30,9 @@ ms.locfileid: "37119431"
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-- サポート対象エディションの Microsoft Windows および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
+- サポート対象エディションの Microsoft Windows および SharePoint。
 
 - Visual Studio 2017 またはエディションの Visual Studio アプリケーション ライフ サイクル管理 (ALM)。
 

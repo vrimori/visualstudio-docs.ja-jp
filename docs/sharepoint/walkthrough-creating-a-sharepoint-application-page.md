@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e31b06d642947d88d1076b3ad365e62b663c8d4a
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 52ff6b3431ac3f87c85eefcf728cfe4c4875f884
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119415"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42634788"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>チュートリアル: SharePoint アプリケーション ページを作成します。
  
@@ -42,9 +42,9 @@ ms.locfileid: "37119415"
 > [!NOTE]
 > 次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-- サポート対象エディションの Windows と SharePoint 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
+- サポート対象エディションの Windows と SharePoint
 
 ## <a name="create-a-sharepoint-project"></a>SharePoint プロジェクトを作成します。
 

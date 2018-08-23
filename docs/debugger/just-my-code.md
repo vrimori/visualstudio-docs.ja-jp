@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fb5534d376cf1a0c60b20080df8c8bfc6ad6689
-ms.sourcegitcommit: 886759fb35a88f6ef5452c5b2e33a1f71da4489a
+ms.openlocfilehash: f39b2ce216ce909837f37fd09fb556a4733098ce
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34851826"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42627342"
 ---
 # <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Visual Studio での マイ コードのみを使用してユーザー コードのみをデバッグするかどうかを指定します。
 Visual Studio に自動的にステップ オーバー、システム、フレームワーク、およびその他の非ユーザー呼び出しと呼び出し履歴 ウィンドウでそれらの呼び出しを折りたたむを構成することができます。 またはこの動作を無効にする機能は呼*マイ コードのみ*します。 このトピックでは、c#、Visual Basic、C++、および JavaScript のプロジェクトでマイ コードのみを使用する方法について説明します。
@@ -67,7 +67,9 @@ Visual Studio に自動的にステップ オーバー、システム、フレ�
 ##  <a name="BKMK_C___Just_My_Code"></a> C++ マイ コードのみ  
   
 ###  <a name="BKMK_CPP_User_and_non_user_code"></a> ユーザーと非ユーザー コード  
- ステップ実行の動作が呼び出し履歴の動作に依存しないため、C++ での "マイ コードのみ" は .NET Framework での "マイ コードのみ" および JavaScript での "マイ コードのみ" とは異なります。  
+ステップ実行の動作が呼び出し履歴の動作に依存しないため、C++ での "マイ コードのみ" は .NET Framework での "マイ コードのみ" および JavaScript での "マイ コードのみ" とは異なります。  
+
+Visual Studio 2017 15.8 以降を指定できますの C++ を使用してマイ コードのみを有効にするかどうか**ツール** > **オプション** > **デバッグ** > **全般** > **マイ コードのみを有効にする**(既定では有効です)。 これを使用すると、 [(だけマイ コードのデバッグ)/JMC](/cpp/build/reference/jmc)コンパイラ スイッチ。
   
  **呼び出し履歴**  
   
@@ -88,7 +90,7 @@ Visual Studio に自動的にステップ オーバー、システム、フレ�
 ###  <a name="BKMK_CPP_Stepping_behavior"></a> ステップ実行の動作  
  ときにする**ステップ イン**(キーボード ショートカット: F11) ユーザー コードから非ユーザー コードには、ユーザー コードの次の行にコードをデバッガー手順。 ときにする**ステップ アウト**(キーボード: shift + f11)、デバッガーを実行するユーザー コードの次の行にします。 ユーザー コードが出現しない場合、アプリまで、実行終了すると、ブレークポイントがヒットしたら、または例外が発生します。  
   
- デバッガーが非ユーザー コードで実行を中断した場合 (たとえば、[すべて中断] が非ユーザー コードで停止した場合)、その非ユーザー コードでステップ実行が続けられます。  
+ デバッガーが非ユーザー コードで実行を中断した場合 (たとえば、[すべて中断] が非ユーザー コードで停止した場合)、その非ユーザー コードでステップ実行が続けられます。
   
 ###  <a name="BKMK_CPP_Exception_behavior"></a> 例外の動作  
  デバッガーでは、例外が発生すると、ユーザーまたは非ユーザー コードであるかどうかにかかわらず例外で停止します。 **User-unhandled**オプション、**例外** ダイアログ ボックスは無視されます。  

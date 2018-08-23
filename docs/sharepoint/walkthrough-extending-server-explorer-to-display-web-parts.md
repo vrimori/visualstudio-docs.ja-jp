@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b0bbea76c3c63cf562203f9a622acb2a54804bde
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 84060ed018059f4b067b4744465bf4116f72841b
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37117837"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42634739"
 ---
 # <a name="walkthrough-extend-server-explorer-to-display-web-parts"></a>チュートリアル: web パーツを表示するサーバー エクスプ ローラーの拡張します。
   Visual Studio で使用することができます、 **SharePoint 接続**のノード**サーバー エクスプ ローラー** SharePoint サイトにコンポーネントを表示します。 ただし、**サーバー エクスプ ローラー**一部のコンポーネントが既定では表示されません。 このチュートリアルで拡張します**サーバー エクスプ ローラー** SharePoint サイトが接続されている各 Web パーツ ギャラリーで表示するようです。  
@@ -45,10 +45,10 @@ ms.locfileid: "37117837"
 > [!NOTE]  
 >  For SharePoint サーバー オブジェクト モデルではなく、クライアント オブジェクト モデルを使用するこのチュートリアルの代替バージョンを参照してください。[チュートリアル: サーバー エクスプ ローラー拡張機能では、SharePoint クライアント オブジェクト モデルを呼び出す](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   Windows、SharePoint、Visual Studio のエディションがサポートされています。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   Windows、SharePoint、Visual Studio のエディションがサポートされています。  
   
 -   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   

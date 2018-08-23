@@ -1,5 +1,5 @@
 ---
-title: '[自動変数] と [ローカル] ウィンドウで変数を検査 |Microsoft ドキュメント'
+title: 自動変数 と ローカルの Windows での変数の調査 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
 ms.technology: vs-ide-debug
@@ -16,20 +16,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3b19e8bd55320a9fbd5d8af037a9577db42a2fa
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 956b3afe1308ee748ee9efa6292834754f7e8124
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454643"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42626471"
 ---
-# <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>自動変数 内の変数と Visual Studio の ローカル ウィンドウを調べる
-**[自動変数]** ウィンドウ (デバッグ中に**ctrl キーと alt キーを押しながら V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **Ctrl キーと alt キーを押しながら V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に便利です。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示は、さまざまな言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
+# <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>変数で、[自動変数] と Visual Studio でローカルの Windows を検査します。
+**[自動変数]** ウィンドウ (デバッグ中に、 **CTRL + ALT + V、A**、または**デバッグ > Windows > [自動変数]**) および**ローカル**(デバッグ中にウィンドウ、 **CTRL + ALT + V、L**、または**デバッグ > Windows > [ローカル]**) は、デバッグ中に、変数の値を表示するときに、非常に役立ちます。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 このウィンドウでどの変数が正確に表示することは、異なる言語では異なります。 以下の「 [What variables appear in the Autos Window?](#bkmk_whatvariables)   
   
 デバッグの基礎について詳しくは、「 [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md)」をご覧ください。  
   
 ## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>[自動変数] と [ローカル] ウィンドウ内のオブジェクトを調べる  
-配列とオブジェクトは、[自動変数] と [ローカル] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 例を次に示します、 [FileStream](/dotnet/api/system.io.filestream)内のオブジェクト、**ローカル**ウィンドウ。  
+配列とオブジェクトは、[自動変数] と [ローカル] ウィンドウにツリー コントロールで表示されます。 変数名の左側にある矢印をクリックするとビューが展開され、フィールドとプロパティが表示されます。 次の例に示します、<xref:System.IO.FileStream?displayProperty=fullName>オブジェクト、**ローカル**ウィンドウ。  
   
 ![[ローカル]&#45;FileStream](../debugger/media/locals-filestream.png "ローカル FileStream")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34454643"
 
  行 `e = 5;` にブレークポイントを設定した場合、デバッガーを実行して、実行が停止すると、 **[自動変数]** ウィンドウは次のようになります。  
   
- ![[自動変数]&#45;Cplus](../debugger/media/autos-cplus.png "Cplus [自動変数]")  
+ ![[自動変数]&#45;Cplus](../debugger/media/autos-cplus.png "[自動変数] Cplus")  
   
  e の変数が初期化されていないことにご注意ください。これは `e = 5;` 行目のコードがまだ実行されていないからです。  
   
@@ -132,7 +132,7 @@ private static int subtractVars(int i, int j)
 -   浮動小数点値を編集すると、小数部分の 10 進とバイナリの変換により、多少の誤差が発生する場合があります。 特に影響のないように見える編集でも、浮動小数点値の最下位バイトが変化する場合があります。  
   
 ## <a name="changing-the-window-context"></a>ウィンドウのコンテキストを変更します。  
-使用することができます、**デバッグの場所**ツールバーを必要な関数、スレッド、または変数のウィンドウのコンテキストを変更するプロセスを選択します。 ブレークポイントを設定し、デバッグを開始します。 (このツール バーが表示されていない場合は、ツール バーの領域の空白の場所をクリックして有効にできます。 ツール バーの一覧が表示されたら、 **[デバッグの場所]** を選びます。) ブレークポイントにヒットすると、実行が停止しは、次の図の一番下の行は、[デバッグの場所] ツールバーを確認できます。
+使用することができます、**デバッグの場所**ツールバーを必要な関数、スレッド、または変数ウィンドウのコンテキストを変更するには、プロセスを選択します。 ブレークポイントを設定し、デバッグを開始します。 (このツール バーが表示されていない場合は、ツール バーの領域の空白の場所をクリックして有効にできます。 ツール バーの一覧が表示されたら、 **[デバッグの場所]** を選びます。) ブレークポイントにヒットすると、実行が停止しは次の図の一番下の行は、[デバッグの場所] ツールバーを確認できます。
   
 ![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   

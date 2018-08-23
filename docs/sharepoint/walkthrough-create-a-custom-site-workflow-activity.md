@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 614a2e04cd1a7cba054ca209784619021b128e5e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: b366db32a4caadf0f454f893d8f98e2d288f2390
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119494"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42627358"
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>チュートリアル: サイトのカスタム ワークフロー アクティビティを作成します。
   このチュートリアルを使用して、サイト レベルのワークフローのカスタム アクティビティを作成する方法について説明[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 (サイト レベルのワークフローは、サイトの一覧だけでなく、サイト全体に適用)。カスタム アクティビティは、バックアップお知らせリストを作成し、そこにお知らせリストの内容をコピーします。  
@@ -45,10 +45,10 @@ ms.locfileid: "37119494"
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。
   
 -   Visual Studio  
   
@@ -129,5 +129,5 @@ ms.locfileid: "37119494"
   
 ## <a name="see-also"></a>関連項目
  [方法: イベント レシーバーを作成](../sharepoint/how-to-create-an-event-receiver.md)   
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1629e98c6d0afa4d259b7b983d1efe0633321c13
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 235e9386070d316cd9a4f9751ac1d8f1e8fd92b4
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468729"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42623671"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用してデバッグする方法を学習します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "39468729"
 |---------|---------|
 |  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を示すです。 |
 
-デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。
+デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。 C# と C++ のサンプル コードを切り替えるには、ページの右上にある言語のフィルターを使用します。
 
 このチュートリアルでは、次の作業を行います。
 
