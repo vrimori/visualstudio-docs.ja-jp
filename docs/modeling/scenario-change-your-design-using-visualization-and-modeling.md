@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e87ece3deb5d55f1e184974135eeddcec1ebbfc
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 27a4204394003f0b4ea6baf7691c9591d3a5b613
+ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177332"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42623659"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -218,7 +218,7 @@ Dinner Now と Lucerne は、作業の進行に伴って、タスクに費やさ
 
 - [Visual Studio Team Services または Team Foundation Server を使用した作業の追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)
 
-- [Visual Studio ALM のグラフ、ダッシュボード、およびレポート](http://msdn.microsoft.com/Library/1f28ba6c-c5e5-46d3-9209-ede24ae78e48)
+- [グラフとダッシュ ボードにウィジェット (VSTS)](/vsts/report/dashboards/overview?view=vsts)
 
 - [Project を使用したバックログとタスクの作成](http://msdn.microsoft.com/Library/be5cef4f-755f-4ffe-8dd7-876d1e02c330)
 

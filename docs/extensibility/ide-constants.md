@@ -18,12 +18,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23512005bed66550b4a1de0f0a2de830d9fb823b
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 4f2cf01bcc8b2854eb1e4c3c711af524a8480bdc
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498994"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635133"
 ---
 # <a name="ide-constants"></a>IDE 定数
 
@@ -54,30 +54,30 @@ ms.locfileid: "39498994"
 |[値]|説明|
 |-----------|-----------------|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_BUSY>|非同期動作をインターフェイスによって返される定数と対象のオブジェクト ビジーです|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|エラーに固有である HRESULT [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 「互換性のないドキュメント データ」です。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PACKAGENOTLOADED>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を示し、「パッケージが読み込まれていません」|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ことを示すと、「プロジェクトは既に存在します」。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTMIGRATIONFAILED>|エラーに固有である HRESULT [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] "プロジェクト構成に失敗しました"を示すと。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTNOTLOADED>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を示し、「プロジェクトは読み込まれていません」。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONALREADYOPEN>|エラーに固有である HRESULT [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 「ソリューション既に開かれている」ことを示すと|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONNOTOPEN>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を示し、「ソリューションは開いていません」|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_INCOMPATIBLEDOCDATA>|エラーの「互換性のないドキュメント データ」の Visual Studio に固有である hresult 値。|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PACKAGENOTLOADED>|エラーの Visual Studio に固有である hresult 値が「パッケージが読み込まれていない」ことを示します|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTALREADYEXISTS>|Visual Studio に固有である HRESULT エラーが示す、「プロジェクトは既に存在します」。|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTMIGRATIONFAILED>|エラーの hresult 値は、Visual Studio に固有では、"プロジェクト構成に失敗しました"ことを示します|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_PROJECTNOTLOADED>|エラーの Visual Studio に固有である hresult 値が「プロジェクトが読み込まれていない」ことを示します|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONALREADYOPEN>|Visual Studio に固有である HRESULT エラーは、「ソリューション既に開いている」ことを示します|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_SOLUTIONNOTOPEN>|エラーの hresult 値は、Visual Studio に固有では、「ソリューションを開けません」ことを示します|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_SPECIFYING_OUTPUT_UNSUPPORTED>|配列を指定するためのパラメーターを持つビルド インターフェイスによって返される、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput>インターフェイスが実装にのみ適用できるメソッドのすべての出力。|
 |<xref:Microsoft.VisualStudio.VSConstants.VS_E_UNSUPPORTEDFORMAT>|<xref:Microsoft.VisualStudio.Package.EditorFactory.CreateEditorInstance%2A>メソッドは、ドキュメントがエディターで開くことができない形式にこの値を返します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|ユーザーが [戻る] ボタンをヒットすることを示す HRESULT 値を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ウィザード。|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_E_WIZARDBACKBUTTONPRESS>|ユーザーが Visual Studio のウィザードの [戻る] ボタンをヒットすることを示す HRESULT 値。|
 
 ## <a name="visual-studio-constants"></a>Visual Studio の定数
 
 |[値]|説明|
 |-----------|-----------------|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|エラーに固有である HRESULT[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を示し、「プロジェクトを転送します」。|
-|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|固有の定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]「ツールボックス マーカー」の|
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_ENTERMODAL>|固有の定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して通知メッセージを配信するため、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>メソッド モダリティの先頭を示します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|固有の定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して通知メッセージを配信するため、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>モダリティの終了位置を示すメソッド。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|固有の定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して通知メッセージを配信するため、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>コマンド バーのメトリックが変更されたことを示すメソッド。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|固有の定数[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]cookie が設定されていないことを示します。|
-|[VSITEMID します。Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト項目がないことを表す項目の識別子。 この値は、現在選択されていないときに使用されます。|
-|[VSITEMID.Root](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]項目の識別子をプロジェクト階層のルートを表し、1 つの項目ではなく、階層全体を識別するために使用されます。|
-|[VSITEMID.Selection](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|A[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]項目の識別子を表す、現在選択されている項目または項目で、階層のルートを含めることができます。|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_S_PROJECTFORWARDED>|エラーの Visual Studio に固有である hresult 値が「プロジェクトが転送された」ことを示します|
+|<xref:Microsoft.VisualStudio.VSConstants.VS_S_TBXMARKER>|「ツールボックス マーカー」for Visual Studio に固有である定数|
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_ENTERMODAL>|使用して通知メッセージを配信するために Visual Studio 固有の定数、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>メソッド モダリティの先頭を示します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_EXITMODAL>|使用して通知メッセージを配信するために Visual Studio 固有の定数、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>モダリティの終了位置を示すメソッド。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSM_TOOLBARMETRICSCHANGE>|使用して通知メッセージを配信するために Visual Studio 固有の定数、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBroadcastMessageEvents.OnBroadcastMessage%2A>コマンド バーのメトリックが変更されたことを示すメソッド。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|Cookie が設定されていないことを示す Visual Studio に固有の定数。|
+|[VSITEMID します。Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|プロジェクト項目がないことを表す Visual Studio の項目の識別子です。 この値は、現在選択されていないときに使用されます。|
+|[VSITEMID.Root](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|プロジェクト階層のルートを表し、1 つの項目ではなく、階層全体を識別するために使用されますが、Visual Studio 項目識別子です。|
+|[VSITEMID.Selection](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|現在選択されている項目または階層のルートを含めることができますの項目を表す Visual Studio 項目の識別子です。|
 
 ## <a name="ivsselectionevents"></a>IVsSelectionEvents
  IDE のコンポーネントだけが選択されているでについて説明します、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A>を呼び出します。
