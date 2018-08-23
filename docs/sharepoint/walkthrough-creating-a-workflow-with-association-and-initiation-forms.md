@@ -22,12 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a83dbde9bbb9907ee58909c254953554ad7de285
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 4832ce22bfa0137040892ffcd1ce08b3f32646bd
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119887"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635682"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>チュートリアル: 関連付けフォームと開始フォームとワークフローを作成します。
   このチュートリアルでは、アソシエーションと開始フォームの使用方法が組み込まれている基本的なシーケンシャル ワークフローを作成する方法を示します。 これらは、まず、SharePoint 管理者 (関連付けフォーム) が関連付けられているとき、およびユーザー (開始フォーム) が、ワークフローを開始、ワークフローに追加するパラメーターを有効にする ASPX フォームです。  
@@ -59,10 +59,10 @@ ms.locfileid: "37119887"
 >   
 >  別の名前または場所の一部でも、コンピューターを表示可能性があります、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]次の手順でユーザー インターフェイス要素です。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]所有しているエディションと使用する設定は、これらの要素を決定します。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。  
   
 -   Visual Studio  
   
