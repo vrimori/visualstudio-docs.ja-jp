@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 407936d68310a675aebe1c7ea712f46aea45e807
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: b8620a51480868302fc840bffea5bbdb427c48f5
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119947"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635617"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>チュートリアル: SharePoint プロジェクト拡張機能を作成します。
   このチュートリアルでは、SharePoint プロジェクトの拡張機能を作成する方法について説明します。 プロジェクトの拡張機能を使用すると、プロジェクトを追加、削除、または名前を変更する場合など、プロジェクト レベルのイベントに応答します。 カスタム プロパティを追加またはプロパティ値を変更するときの応答もできます。 プロジェクト項目の拡張機能とは異なりプロジェクト拡張機能は、特定の SharePoint プロジェクトの種類に関連付けすることはできません。 任意の種類の SharePoint プロジェクトを開いたときに、拡張機能を読み込むプロジェクトの拡張機能を作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
@@ -43,10 +43,10 @@ ms.locfileid: "37119947"
   
 -   デバッグとプロジェクトのプロパティをテストします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]、SharePoint と[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]、SharePoint と[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
   
 -   [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、 **VSIX プロジェクト**テンプレート、[!INCLUDE[TLA2#tla_sdk](../sharepoint/includes/tla2sharptla-sdk-md.md)]プロジェクト プロパティの拡張機能を配置するための VSIX パッケージを作成します。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
