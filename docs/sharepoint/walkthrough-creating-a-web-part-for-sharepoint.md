@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c7430b6fc2afc5af872c9f03174451a223e05b3e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1a03d94b09464fd2daeeea265d5c4e8b64fac2fd
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119486"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635409"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の web パーツを作成します。
 
@@ -47,9 +47,9 @@ Web パーツを使用すると、ブラウザーから SharePoint サイト ペ
     > [!NOTE]
     > 次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-- サポート対象エディションの Microsoft Windows および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
+- サポート対象エディションの Microsoft Windows および SharePoint。
 
 - Visual Studio 2017 またはエディションの Visual Studio アプリケーション ライフ サイクル管理 (ALM)。
 
