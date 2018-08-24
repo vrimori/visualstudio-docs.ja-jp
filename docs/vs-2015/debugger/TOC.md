@@ -16,8 +16,7 @@
 #### [方法 : [メモリ] ウィンドウの上下スクロール](how-to-page-up-or-down-in-memory.md)
 ### [方法 : [呼び出し履歴] ウィンドウを使用する](how-to-use-the-call-stack-window.md)
 #### [[呼び出し履歴] ウィンドウの混合コードと不足情報](mixed-code-and-missing-information-in-the-call-stack-window.md)
-#### 
-  [方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージド コードからステップ アウトする](how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)
+#### [方法 : ネイティブ フレームが [呼び出し履歴] ウィンドウに見つからないときにマネージド コードからステップ アウトする](how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)
 ### [方法: [レジスタ] ウィンドウを使用する](how-to-use-the-registers-window.md)
 #### [デバッグの基礎 : [レジスタ] ウィンドウ](debugging-basics-registers-window.md)
 #### [方法 : レジスタ グループの表示と非表示を切り替える](how-to-display-and-hide-register-groups.md)
@@ -51,8 +50,7 @@
 ### [DLL プロジェクトのデバッグ](debugging-dll-projects.md)
 #### [方法 : DLL プロジェクトからデバッグする](how-to-debug-from-a-dll-project.md)
 #### [方法 : 混合モードでデバッグする](how-to-debug-in-mixed-mode.md)
-#### 
-  [Web コントロール ライブラリ (マネージド コード)](web-control-library-managed-code.md)
+#### [Web コントロール ライブラリ (マネージド コード)](web-control-library-managed-code.md)
 ### [コンソール プロジェクト](debugging-preparation-console-projects.md)
 ### [ASP.NET Web アプリケーション](debugging-preparation-aspnet-web-applications.md)
 ### [方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする](how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)
@@ -127,8 +125,7 @@
 ## [方法 : デバッグ中に別のスレッドに切り替える](how-to-switch-to-another-thread-while-debugging.md)
 ## [方法 : スレッドに対するフラグの設定と設定解除を行う](how-to-flag-and-unflag-threads.md)
 ## [方法 : ネイティブ コードのスレッド名を設定する](how-to-set-a-thread-name-in-native-code.md)
-## 
-  [方法 : マネージド コードのスレッド名を設定する](how-to-set-a-thread-name-in-managed-code.md)
+## [方法 : マネージド コードのスレッド名を設定する](how-to-set-a-thread-name-in-managed-code.md)
 ## [チュートリアル : マルチスレッド アプリケーションのデバッグ](walkthrough-debugging-a-multithreaded-application.md)
 ## [方法 : 高パフォーマンス クラスター上でデバッグする](how-to-debug-on-a-high-performance-cluster.md)
 ## [ネイティブ コード内のスレッドのデバッグのヒント](tips-for-debugging-threads-in-native-code.md)
@@ -174,16 +171,14 @@
 ##### [デバッガーのナビゲーションのサンプル コード (Xaml および C#)](debugger-navigation-sample-code-xaml-and-csharp.md)
 #### [Windows ストアの中断イベント、再開イベント、およびバックグラウンド イベントのトリガー](how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md)
 ### [Windows ストア アプリ用コンテンツのプリフェッチ](prefetch-content-for-windows-store-apps.md)
-## 
-  [マネージド コードをデバッグする](debugging-managed-code.md)
+## [マネージド コードをデバッグする](debugging-managed-code.md)
 ### [C#、F#、および Visual Basic のプロジェクト](debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 #### [プロパティの推奨設定](managed-debugging-recommended-property-settings.md)
 #### [Windows フォーム アプリケーション](debugging-preparation-windows-forms-applications.md)
 #### [Windows サービス](debugging-preparation-windows-services.md)
 ### [方法 : 部分信頼アプリケーションをデバッグする](how-to-debug-a-partial-trust-application.md)
 ### [出力ウィンドウの診断メッセージ](diagnostic-messages-in-the-output-window.md)
-### 
-  [マネージド コードのアサーション](assertions-in-managed-code.md)
+### [マネージド コードのアサーション](assertions-in-managed-code.md)
 ### [Visual Basic の Stop ステートメント](stop-statements-in-visual-basic.md)
 ### [チュートリアル : Windows フォームのデバッグ](walkthrough-debugging-a-windows-form.md)
 ### [方法 : OnStart メソッドをデバッグする](how-to-debug-the-onstart-method.md)

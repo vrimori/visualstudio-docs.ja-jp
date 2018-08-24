@@ -9,10 +9,8 @@
 #### [64 ビット プロセスとして単体テストを実行する](run-a-unit-test-as-a-64-bit-process.md)
 #### [チュートリアル: Windows ストア アプリに対する単体テストの作成と実行](walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md)
 ### [.runsettings ファイルを使用して単体テストを構成する](configure-unit-tests-by-using-a-dot-runsettings-file.md)
-### 
-  [マネージド コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
-#### 
-  [チュートリアル: マネージド コードに対する単体テストの作成と実行](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+### [マネージド コード用の Microsoft 単体テスト フレームワークを使用した .NET Framework 用単体テストの記述](writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+#### [チュートリアル: マネージド コードに対する単体テストの作成と実行](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 #### [クイック スタート: テスト エクスプローラーによるテスト駆動開発](quick-start-test-driven-development-with-test-explorer.md)
 #### [単体テストでの Microsoft.VisualStudio.TestTools.UnitTesting のメンバーの使用](using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md)
 #### [Assert クラスの使用](using-the-assert-classes.md)
