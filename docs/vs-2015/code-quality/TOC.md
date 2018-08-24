@@ -1,26 +1,20 @@
 # [アプリケーション品質の分析](analyzing-application-quality-by-using-code-analysis-tools.md)
-## 
-  [マネージド コードの品質の分析](analyzing-managed-code-quality-by-using-code-analysis.md)
-### 
-  [マネージド コードに対するコード分析の概要](code-analysis-for-managed-code-overview.md)
+## [マネージド コードの品質の分析](analyzing-managed-code-quality-by-using-code-analysis.md)
+### [マネージド コードに対するコード分析の概要](code-analysis-for-managed-code-overview.md)
 ### [方法: 自動コード分析を有効/無効にする](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
 ### [方法: 完全ソリューション分析を有効/無効にする](how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 ### [自動機能の中断](automatic-feature-suspension.md)
 ### [方法: 手動でコード分析を実行する](how-to-run-code-analysis-manually-for-managed-code.md)
-### 
-  [チュートリアル: マネージド コードの分析によるコード障害の検出](walkthrough-analyzing-managed-code-for-code-defects.md)
+### [チュートリアル: マネージド コードの分析によるコード障害の検出](walkthrough-analyzing-managed-code-for-code-defects.md)
 ### [SuppressMessage 属性を使用した警告の抑制](suppress-warnings-by-using-the-suppressmessage-attribute.md)
 #### [ソース内抑制の概要](in-source-suppression-overview.md)
 #### [方法: メニュー項目を使用して警告を抑制する](how-to-suppress-warnings-by-using-the-menu-item.md)
 ### [方法: 生成されたコードに対する警告を抑制する](how-to-suppress-code-analysis-warnings-for-generated-code.md)
 ### [方法 : コード分析辞書をカスタマイズする](how-to-customize-the-code-analysis-dictionary.md)
 ### [匿名メソッドとコード分析](anonymous-methods-and-code-analysis.md)
-### 
-  [方法 : マネージド コードの障害を表示する](how-to-view-managed-code-defects.md)
-### 
-  [方法: マネージド コードの障害に対する作業項目を作成する](how-to-create-a-work-item-for-a-managed-code-defect.md)
-### 
-  [マネージド コードの警告に対応するコードの解析](code-analysis-for-managed-code-warnings.md)
+### [方法 : マネージド コードの障害を表示する](how-to-view-managed-code-defects.md)
+### [方法: マネージド コードの障害に対する作業項目を作成する](how-to-create-a-work-item-for-a-managed-code-defect.md)
+### [マネージド コードの警告に対応するコードの解析](code-analysis-for-managed-code-warnings.md)
 #### [警告 (CheckId 別)](code-analysis-warnings-for-managed-code-by-checkid.md)
 #### [暗号化警告](cryptography-warnings.md)
 ##### [CA5350: 脆弱な暗号アルゴリズムを使用しないでください。](ca5350-do-not-use-weak-cryptographic-algorithms.md)
@@ -236,8 +230,7 @@
 ##### [CA2201: 予約された例外の種類を発生させません](ca2201-do-not-raise-reserved-exception-types.md)
 ##### [CA2202: オブジェクトを複数回破棄しません](ca2202-do-not-dispose-objects-multiple-times.md)
 ##### [CA2204: リテラルは正しく入力されていなければなりません](ca2204-literals-should-be-spelled-correctly.md)
-##### 
-  [CA2205: Win32 API に相当するマネージド API を使用します](ca2205-use-managed-equivalents-of-win32-api.md)
+##### [CA2205: Win32 API に相当するマネージド API を使用します](ca2205-use-managed-equivalents-of-win32-api.md)
 ##### [CA2207: 値型の静的フィールドのインラインを初期化します](ca2207-initialize-value-type-static-fields-inline.md)
 ##### [CA2208: 引数の例外を正しくインスタンス化します](ca2208-instantiate-argument-exceptions-correctly.md)
 ##### [CA2211: 非定数フィールドは表示されません](ca2211-non-constant-fields-should-not-be-visible.md)
@@ -581,8 +574,7 @@
 #### [C28351](c28351.md)
 ## [規則セットを使用したコード分析規則のグループ化](using-rule-sets-to-group-code-analysis-rules.md)
 ### [チュートリアル: カスタム規則セットの構成と使用](walkthrough-configuring-and-using-a-custom-rule-set.md)
-### 
-  [方法: マネージド コード プロジェクトのコード分析を構成する](how-to-configure-code-analysis-for-a-managed-code-project.md)
+### [方法: マネージド コード プロジェクトのコード分析を構成する](how-to-configure-code-analysis-for-a-managed-code-project.md)
 ### [方法: ASP.NET Web アプリケーション用にコード分析を構成する](how-to-configure-code-analysis-for-an-aspnet-web-application.md)
 ### [方法: コード プロジェクト規則セットをチーム プロジェクトのチェックイン ポリシーと同期させる](how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md)
 ### [方法: ソリューション内の複数のプロジェクトに対して規則セットを指定する](how-to-specify-managed-code-rule-sets-for-multiple-projects-in-a-solution.md)
@@ -591,26 +583,18 @@
 #### [規則セット エディターでの作業](working-in-the-code-analysis-rule-set-editor.md)
 ### [コード分析規則セットの参照](code-analysis-rule-set-reference.md)
 #### ["すべての規則" 規則セット](all-rules-rule-set.md)
-#### 
-  [マネージド コードの "基本正確性規則" 規則セット](basic-correctness-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "基本デザイン ガイドライン規則" 規則セット](basic-design-guideline-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "拡張正確性規則" 規則セット](extended-correctness-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "拡張デザイン ガイドライン規則" 規則セット](extended-design-guidelines-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "グローバリゼーション規則" 規則セット](globalization-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "マネージ最小規則" 規則セット](managed-minimun-rules-rule-set-for-managed-code.md)
-#### 
-  [マネージド コードの "マネージ推奨規則" 規則セット](managed-recommended-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "基本正確性規則" 規則セット](basic-correctness-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "基本デザイン ガイドライン規則" 規則セット](basic-design-guideline-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "拡張正確性規則" 規則セット](extended-correctness-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "拡張デザイン ガイドライン規則" 規則セット](extended-design-guidelines-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "グローバリゼーション規則" 規則セット](globalization-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "マネージ最小規則" 規則セット](managed-minimun-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "マネージ推奨規則" 規則セット](managed-recommended-rules-rule-set-for-managed-code.md)
 #### ["混合最小規則" 規則セット](mixed-minimum-rules-rule-set.md)
 #### ["混合推奨規則" 規則セット](mixed-recommended-rules-rule-set.md)
 #### ["ネイティブ最小規則" 規則セット](native-minimum-rules-rule-set.md)
 #### ["ネイティブ推奨規則" 規則セット](native-recommended-rules-rule-set.md)
-#### 
-  [マネージド コードの "セキュリティ規則" 規則セット](security-rules-rule-set-for-managed-code.md)
+#### [マネージド コードの "セキュリティ規則" 規則セット](security-rules-rule-set-for-managed-code.md)
 ## [コード分析のアプリケーション エラー](code-analysis-application-errors.md)
 ## [チーム プロジェクト チェックイン ポリシーによるコード品質の向上](enhancing-code-quality-with-team-project-check-in-policies.md)
 ### [コード分析を用いたチェックイン ポリシーの作成と使用](creating-and-using-code-analysis-check-in-policies.md)
@@ -618,8 +602,7 @@
 #### [マネージド コード用のカスタム チェックイン ポリシーの実装](implementing-custom-code-analysis-check-in-policies-for-managed-code.md)
 #### [方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する](how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy.md)
 #### [コード分析を用いたチェックイン ポリシーに関するバージョンの互換性](version-compatibility-for-code-analysis-check-in-policies.md)
-# 
-  [マネージド コードの複雑さと保守性の測定](measuring-complexity-and-maintainability-of-managed-code.md)
+# [マネージド コードの複雑さと保守性の測定](measuring-complexity-and-maintainability-of-managed-code.md)
 ## [コード メトリックス値](code-metrics-values.md)
 ## [方法 : コード メトリックス データを生成する](how-to-generate-code-metrics-data.md)
 ## [コード メトリックス データの操作](working-with-code-metrics-data.md)

@@ -95,8 +95,7 @@
 #### [プロジェクト タイプのデザインの方針](project-type-design-decisions.md)
 #### [チェック リスト: 新しいプロジェクト タイプの作成](checklist-creating-new-project-types.md)
 #### [プロジェクト ファクトリを使用したプロジェクト インスタンスの作成](creating-project-instances-by-using-project-factories.md)
-#### 
-  [マネージド パッケージ フレームワークを使用したプロジェクト タイプの実装 (C#)](using-the-managed-package-framework-to-implement-a-project-type-csharp.md)
+#### [マネージド パッケージ フレームワークを使用したプロジェクト タイプの実装 (C#)](using-the-managed-package-framework-to-implement-a-project-type-csharp.md)
 #### [プロジェクト タイプの登録](registering-a-project-type.md)
 #### [プロジェクトの永続化](project-persistence.md)
 #### [MSBuild の使用](using-msbuild.md)

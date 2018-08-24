@@ -78,8 +78,7 @@
 ####### [DA0011: CompareTo の負荷が高くなっています](da0011-expensive-compareto.md)
 ####### [DA0012: リフレクションが頻繁に実行されています](da0012-significant-amount-of-reflection.md)
 ####### [DA0013: String.Split/String.Substring が頻繁に使用されています](da0013-high-usage-of-string-split-or-string-substring.md)
-####### 
-  [DA0018: 32 ビット アプリケーションがプロセスのマネージド メモリ制限で実行されています](da0018-32-bit-application-running-at-process-managed-memory-limits.md)
+####### [DA0018: 32 ビット アプリケーションがプロセスのマネージド メモリ制限で実行されています](da0018-32-bit-application-running-at-process-managed-memory-limits.md)
 ####### [DA0021: ジェネレーション 1 のガベージ コレクションが高率です](da0021-high-rate-of-gen-1-garbage-collections.md)
 ####### [DA0022: ジェネレーション 2 のガベージ コレクションが高率です](da0022-high-rate-of-gen-2-garbage-collections.md)
 ####### [DA0023: 高い GC CPU 時間](da0023-high-gc-cpu-time.md)
