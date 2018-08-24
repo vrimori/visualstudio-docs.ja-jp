@@ -43,7 +43,7 @@ ms.locfileid: "39153600"
 #### <a name="error-message-says-unable-to-retrieve-application-files-missing-in-deployment-or-application-download-has-been-interrupted-check-for-network-errors-and-try-again-later"></a>エラー メッセージでは、"アプリケーションを取得できません。 ファイルの展開が見つかりません"または「アプリケーションのダウンロードが中断された、ネットワーク エラーを確認し、後でもう一度お試しください」  
  このメッセージを示すによって参照される 1 つまたは複数のファイル、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストをダウンロードすることはできません。 このエラーをデバッグする最も簡単な方法は、URL をダウンロードしようとするする[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]をダウンロードできないことを示します。 考えられる原因を次に示します。  
   
--   かどうか、ログ ファイルは "(403) Forbidden"または"(404) Not found"がこのファイルのダウンロードをブロックしないようにする Web サーバーが構成されていることを確認します。 詳細については、「[ClickOnce 配置でのサーバーおよびクライアント構成の問題](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)」を参照してください。  
+-   ログ ファイルが "(403) Forbidden" または "(404) Not found" かどうか、Web サーバーがこのファイルのダウンロードをブロックしないように構成されていることを確認します。 詳細については、「[ClickOnce 配置でのサーバーおよびクライアント構成の問題](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)」を参照してください。  
   
 -   場合、 *.config*ファイルがサーバーによってブロックされてを参照してください"をインストールしようとすると、エラーをダウンロード、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .config ファイルがあるアプリケーション"この記事で後述します。  
   
