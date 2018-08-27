@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97fee2a4480f3fe8e5439decfd4852a020a734ff
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 2343218da765ad8bb9a10d585001c5f3321a0137
+ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232258"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42902400"
 ---
 # <a name="create-a-basic-project-system-part-1"></a>基本的なプロジェクト システム、第 1 部を作成します。
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**します。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードをデプロイおよび Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
@@ -58,10 +58,10 @@ Visual Studio では、プロジェクトは、開発者は、ソース コー�
   
 -   基本的なテンプレート パラメーターの置換を実装します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
- ソース コードをダウンロードすることも必要があります、[プロジェクト用 Managed Package Framework](http://mpfproj12.codeplex.com/)します。 作成しようとするソリューションにアクセスできる場所にファイルを抽出します。  
+ ソース コードをダウンロードすることも必要があります、[プロジェクト用 Managed Package Framework](https://github.com/tunnelvisionlabs/MPFProj10)します。 作成しようとするソリューションにアクセスできる場所にファイルを抽出します。  
   
 ## <a name="create-a-basic-project-type"></a>基本的なプロジェクトの種類を作成します。  
  という名前の c# VSIX プロジェクトを作成する**SimpleProject**します。 (**ファイル** > **新しい** > **プロジェクト**し**Visual c#**  >  **機能拡張** > **VSIX プロジェクト**)。 Visual Studio パッケージ プロジェクト項目テンプレートを追加する (上、**ソリューション エクスプ ローラー**でプロジェクト ノードを右クリックし、選択**追加** > **新しい項目の**、順に移動**拡張** > **Visual Studio パッケージ**)。 ファイルに名前を*SimpleProjectPackage*します。  
