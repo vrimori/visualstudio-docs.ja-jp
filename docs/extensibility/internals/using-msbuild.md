@@ -1,5 +1,5 @@
 ---
-title: MSBuild の使用 |Microsoft ドキュメント
+title: MSBuild の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4115d6f1b368734631acf3ee4395d71dbe418c07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f27d3c5c7465314a7e9005972dec1349c1b9d89f
+ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31141452"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42902232"
 ---
 # <a name="using-msbuild"></a>MSBuild の使用
-MSBuild では、プロジェクト項目を作成、ビルド タスク、およびビルド構成を完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張可能な XML 形式を指定します。  
+MSBuild では、ビルド、ビルド タスク、および構成をビルドするプロジェクト アイテムを完全に記述するプロジェクト ファイルを作成するために適切に定義された、拡張性の高い XML 形式を提供します。  
   
-## <a name="general-msbuild-considerations"></a>一般的な MSBuild に関する考慮事項  
- MSBuild プロジェクト ファイル、たとえば、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] .csproj および[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)].vbproj ファイル、含めるデータがあるがビルド時に使用しても、デザイン時に使用されるデータを含めることができます。 MSBuild プリミティブなどを使用してビルド時のデータが格納された[Item 要素 (MSBuild)](../../msbuild/item-element-msbuild.md)と[Property 要素 (MSBuild)](../../msbuild/property-element-msbuild.md)です。 プロジェクトの種類との関連プロジェクト サブタイプに固有のデータである、デザイン時のデータは、用に予約自由形式の XML に格納されます。  
+## <a name="general-msbuild-considerations"></a>MSBuild の一般的な考慮事項  
+ MSBuild プロジェクト ファイル、たとえば、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] .csproj および[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、.vbproj ファイルには、ビルド時に使用されますが、デザイン時に使用されるデータを含めることができますもデータが含まれています。 などの MSBuild のプリミティブを使用して、ビルド時のデータが格納された[Item 要素 (MSBuild)](../../msbuild/item-element-msbuild.md)と[Property 要素 (MSBuild)](../../msbuild/property-element-msbuild.md)します。 プロジェクトの種類との関連プロジェクト サブタイプに固有のデータである、デザイン時のデータは、自由形式の XML 用に予約に格納されます。  
   
- MSBuild は構成オブジェクトのネイティブ サポートはありませんが、構成に固有のデータを指定するための条件付き属性は提供します。 例えば:  
+ MSBuild では、構成オブジェクトのネイティブ サポートはありませんが、構成に固有のデータを指定するための条件付き属性は提供します。 例えば:  
   
 ```xml  
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>  
 ```  
   
- 条件付き属性の詳細については、次を参照してください。[条件付き構築](../../msbuild/msbuild-conditional-constructs.md)です。  
+ 条件付き属性の詳細については、次を参照してください。[条件構造](../../msbuild/msbuild-conditional-constructs.md)します。  
   
-### <a name="extending-msbuild-for-your-project-type"></a>MSBuild のプロジェクトの種類の拡張  
- MSBuild は、インターフェイスの Api が将来のバージョンの変更の対象[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]です。 そのため、変更からシールドを提供するために、マネージ パッケージ フレームワーク (MPF) クラスを使用することをお勧めします。  
+### <a name="extending-msbuild-for-your-project-type"></a>種類のプロジェクトの MSBuild の拡張  
+ MSBuild のインターフェイスと Api は、の将来のバージョンで変更される可能性は[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]します。 そのため、変更からシールドを提供するために、マネージ パッケージ フレームワーク (MPF) クラスを使用することをお勧めします。  
   
- (MPFProj) のプロジェクト用 Managed Package Framework は、作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順にソースを検索できる[プロジェクトの Visual Studio 2013 の MPF](http://mpfproj12.codeplex.com/)です。  
+ Managed Package Framework (MPFProj) プロジェクトを作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順に従って、ソースを検索できる[- Visual Studio 2013 のプロジェクトの MPF](https://github.com/tunnelvisionlabs/MPFProj10)します。  
   
- プロジェクト固有の MPF クラスは次のとおりです。  
+ プロジェクトに固有の MPF クラスは次のとおりです。  
   
 |クラス|実装|  
 |-----------|--------------------|  
@@ -53,8 +53,8 @@ MSBuild では、プロジェクト項目を作成、ビルド タスク、お�
   
  `Microsoft.VisualStudio.Package.ProjectElement` クラスは、MSBuild 項目用のラッパーです。  
   
-#### <a name="single-file-generators-vs-msbuild-tasks"></a>単一ファイル ジェネレーター vs です。MSBuild タスク  
- 単一ファイル ジェネレーターは、デザイン時にのみ、アクセスできるが、デザイン時およびビルド時に MSBuild タスクを使用できます。 柔軟性を最大限に高めるそのため、MSBuild タスクを使用して変換し、コードを生成します。 詳細については、次を参照してください。[カスタム ツール](../../extensibility/internals/custom-tools.md)です。  
+#### <a name="single-file-generators-vs-msbuild-tasks"></a>単一ファイル ジェネレーターの vs します。MSBuild タスク  
+ 単一ファイル ジェネレーターは、デザイン時のみにアクセスできるが、デザイン時およびビルド時に MSBuild タスクを使用できます。 最大限の柔軟性の変換し、コードを生成する MSBuild タスクを使用してそのため。 詳細については、次を参照してください。[カスタム ツール](../../extensibility/internals/custom-tools.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [MSBuild リファレンス](../../msbuild/msbuild-reference.md)   
