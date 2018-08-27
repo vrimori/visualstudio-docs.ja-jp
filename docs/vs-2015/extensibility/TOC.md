@@ -48,8 +48,7 @@
 ## [エディターと言語サービスの拡張](extending-the-editor-and-language-services.md)
 ### [言語サービスとエディターの拡張機能の概要](getting-started-with-language-service-and-editor-extensions.md)
 ### [エディターの内部](inside-the-editor.md)
-### 
-  [エディター内の Managed Extensibility Framework](managed-extensibility-framework-in-the-editor.md)
+### [エディター内の Managed Extensibility Framework](managed-extensibility-framework-in-the-editor.md)
 ### [言語サービスとエディターの拡張ポイント](language-service-and-editor-extension-points.md)
 ### [エディターのインポート](editor-imports.md)
 ### [チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる](walkthrough-linking-a-content-type-to-a-file-name-extension.md)
@@ -316,8 +315,7 @@
 ## [GUID と定数](guids-and-constants-in-the-visual-studio-sdk.md)
 ### [IDE GUIDs](ide-guids.md)
 ### [IDE 定数](ide-constants.md)
-## 
-  [マネージド コードの COM 定数](com-constants-in-managed-code.md)
+## [マネージド コードの COM 定数](com-constants-in-managed-code.md)
 ## [ソース管理プラグイン](source-control-plug-ins.md)
 ### [ソース管理プラグインの API 関数](source-control-plug-in-api-functions.md)
 #### [SccAdd](sccadd-function.md)
