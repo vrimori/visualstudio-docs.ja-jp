@@ -206,7 +206,7 @@
 ## [方法: VSIX パッケージへの依存関係の追加](how-to-add-a-dependency-to-a-vsix-package.md)
 ## [VSIX パッケージの構造](anatomy-of-a-vsix-package.md)
 ### [VSIX 拡張機能スキーマ 2.0 リファレンス](vsix-extension-schema-2-0-reference.md)
-### [[Content_types].xml ファイルの構造](the-structure-of-the-content-types-dot-xml-file.md)
+### [Content_types].xml ファイルの構造](the-structure-of-the-content-types-dot-xml-file.md)
 ### [VSIX マニフェスト デザイナー](vsix-manifest-designer.md)
 ## [VSIX パッケージのローカライズ](localizing-vsix-packages.md)
 ### [VSX 言語パックのスキーマ リファレンス](vsx-language-pack-schema-reference.md)

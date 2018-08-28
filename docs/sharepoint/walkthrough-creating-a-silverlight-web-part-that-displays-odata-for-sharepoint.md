@@ -80,7 +80,7 @@ ms.locfileid: "42626166"
   
 3.  アドレス ボックスで、**サービス参照の追加** ダイアログ ボックスで、SharePoint サイトの URL を入力します。 **http://MySPSite**、選択し、**移動**ボタン。  
   
-     Silverlight では、SharePoint の OData サービス ListData.svc を検索、フルテキスト サービスの URL を使用して、アドレスが置き換えられます。 この例では、http://myserverなりますhttp://myserver/_vti_bin/ListData.svcします。  
+     Silverlight では、SharePoint の OData サービス ListData.svc を検索、フルテキスト サービスの URL を使用して、アドレスが置き換えられます。 この例では、 http://myserver なります http://myserver/_vti_bin/ListData.svc します。  
   
 4.  選択、 **OK**サービス参照をプロジェクトに追加するボタンをクリックし、既定のサービス名、[servicereference1] を使用します。  
   
