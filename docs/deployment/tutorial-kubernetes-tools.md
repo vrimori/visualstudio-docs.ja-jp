@@ -9,22 +9,22 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: b354045ceb464a14ff909a503aa62477c73b983c
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 26aa451aa58017720b058266813ad465fbbc740e
+ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280878"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43054573"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
 Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコンテナー化されたアプリケーションの開発を合理化に役立ちます。 Visual Studio では、Dockerfile と Helm グラフなど、Kubernetes のデプロイをサポートするために必要なコードとしての構成ファイルを自動的に作成できます。 さらに、Visual Studio から Azure Kubernetes Service (AKS) クラスターに直接発行することができます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 この新しい機能を活用するには、必要があります。
 
-- 最新のプレビュー [Visual Studio 2017](https://visualstudio.microsoft.com/vs/preview)と Azure 開発ワークロード。
+- 最新バージョンの[Visual Studio 2017](https://visualstudio.microsoft.com/download)で、 *ASP.NET および web 開発*ワークロード。
 
 - [For Visual Studio の Kubernetes ツール](https://aka.ms/get-vsk8stools)、個別のダウンロードとして入手できます。
 
