@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: 26aa451aa58017720b058266813ad465fbbc740e
-ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
+ms.openlocfilehash: f842d1f9c103e9673d3295b2b285498d6ff58045
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43054573"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43138944"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
-Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコンテナー化されたアプリケーションの開発を合理化に役立ちます。 Visual Studio では、Dockerfile と Helm グラフなど、Kubernetes のデプロイをサポートするために必要なコードとしての構成ファイルを自動的に作成できます。 さらに、Visual Studio から Azure Kubernetes Service (AKS) クラスターに直接発行することができます。
+Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコンテナー化されたアプリケーションの開発を合理化に役立ちます。 Visual Studio では、Dockerfile と Helm グラフなど、Kubernetes のデプロイをサポートするために必要なコードとしての構成ファイルを自動的に作成できます。 Azure 開発用のスペースを使用してライブ Azure Kubernetes Service (AKS) クラスターでコードをデバッグまたはから AKS クラスターに直接発行することが Visual Studio 内で。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -28,7 +28,7 @@ Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコン�
 
 - [For Visual Studio の Kubernetes ツール](https://aka.ms/get-vsk8stools)、個別のダウンロードとして入手できます。
 
-- [Windows の docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)開発用ワークステーションにインストールされている (つまり、実行する Visual Studio)
+- [Windows の docker](https://store.docker.com/editions/community/docker-ce-desktop-windows)開発用ワークステーションにインストールされている (つまり、Visual Studio を実行)、Docker イメージを作成する場合は、ローカルで実行されている Docker コンテナーをデバッグまたは AKS に発行します。
 
 - Visual Studio から AKS に発行する場合。
 
@@ -74,7 +74,7 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
 - Helm チャート、および*グラフ*フォルダー。 これらの yaml ファイルは、アプリケーションでは、Kubernetes にデプロイする際の Helm チャートを構成します。 Helm の詳細については、次を参照してください。 [ https://www.helm.sh](https://www.helm.sh)します。
 
-- *azds.yaml*します。 これには、Azure 開発用のスペース、Azure Kubernetes サービスで迅速で反復的なデバッグ エクスペリエンスを提供する新しいサービスの設定が含まれています。 このファイルは、現在使用されていないが、Azure 開発用のスペースで将来使用するために予約されています。
+- *azds.yaml*します。 これには、Azure 開発スペースは、Azure Kubernetes サービスで迅速で反復的なデバッグ エクスペリエンスの設定が含まれています。 詳細についてを参照してください[Azure Dev スペース ドキュメント](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)します。
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) への公開します。
 
