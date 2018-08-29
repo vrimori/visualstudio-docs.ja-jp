@@ -1,31 +1,39 @@
 ---
 layout: LandingPage
+title: Visual Studio で JavaScript アプリを作成する | Microsoft Docs
+description: Visual Studio 2017 を使用してアプリケーションを作成する方法について説明します。
 ms.topic: landing-page
-title: JavaScript | Microsoft Docs
-ms.openlocfilehash: 45b67c450b8165808ca8a1042e21d9c5e0b54c84
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-nodejs
+ms.author: mikejo
+author: mikejo5000
+manager: douge
+ms.openlocfilehash: a21f4ab29f498d89ffd577b5776669def319e3af
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008539"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42625888"
 ---
-# <a name="javascript-technologies-in-visual-studio"></a>Visual Studio での JavaScript テクノロジ
+# <a name="javascript-in-visual-studio"></a>Visual Studio の JavaScript
 
-このページでは、JavaScript と TypeScript をベースにしたドキュメントへのリンクを提供します。これにより、これらの言語を使用して Visual Studio 内でアプリを作成できます。
+Visual Studio には、JavaScript または TypeScript を使用してアプリを作成するのに役立つツールがいくつか用意されています。
+
+<h2>5 分間のクイック スタートで、Visual Studio で JavaScript を使用する方法を学ぶ</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/nodejs/tutorial-nodejs">
+        <a href="https://docs.microsoft.com/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/logos/logo_nodejs.svg" alt="">
+                            <img src="/media/logos/logo_nodejs.svg" alt="Create a basic Node.js app">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Node.js Tools の詳細</h3>
+                        <h3>基本的な Node.js アプリを作成する</h3>
                     </div>
                 </div>
             </div>
@@ -33,35 +41,58 @@ ms.locfileid: "40008539"
         </a>
     </li>
     <li>
+        <a href="https://docs.microsoft.com/visualstudio/javascript/quickstart-vuejs-with-nodejs">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/logos/logo_nodejs.svg" alt="Create a Vue.js app">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Vue.js アプリを作成する</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+        <li>
         <a href="https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-js-uwp">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/logos/logo_windows.svg" alt="">
+                            <img src="/media/logos/logo_windows.svg" alt="Create a UWP app">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>ユニバーサル Windows アプリ (UWP) の使用を開始する</h3>
+                        <h3>ユニバーサル Windows アプリ (UWP) を作成する</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
+</ul>
+
+<h2>チュートリアルでさらに詳しく理解する</h2>
+
+<ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/azure/app-service-web/app-service-web-nodejs-get-started">
+        <a href="https://docs.microsoft.com/visualstudio/javascript/tutorial-nodejs">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/logos/logo_nodejs.svg" alt="">
+                            <img src="/media/logos/logo_nodejs.svg" alt="Create a Node.js app with Express">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Azure と Node.js の使用を開始する</h3>
+                        <h3>Express を使用した Node.js アプリの作成</h3>
                     </div>
                 </div>
             </div>
@@ -69,35 +100,54 @@ ms.locfileid: "40008539"
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/">
+        <a href="https://docs.microsoft.com/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/logos/logo_cordova.svg" alt="">
+                            <img src="/media/logos/logo_nodejs.svg" alt="Create a Node.js app with React">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Tools for Apache Cordova</h3>
+                        <h3>React を使用した Node.js アプリの作成</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
-    <li>
+        <li>
         <a href="https://docs.microsoft.com/aspnet/core/client-side/angular">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/logos/logo_net.svg" alt="">
+                            <img src="/media/logos/logo_net.svg" alt="Create an app with ASP.NET and AngularJS">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>ASP.NET と AngularJS などのフレームワークの使用を開始する</h3>
+                        <h3>ASP.NET と AngularJS を使用してアプリを作成する</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    </li>
+        <li>
+        <a href="https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/first-steps/build-your-first-app?view=toolsforcordova-2017">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/logos/logo_cordova.svg" alt="Create an app with Apache Cordova">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Apache Cordova を使用してアプリを作成する</h3>
                     </div>
                 </div>
             </div>

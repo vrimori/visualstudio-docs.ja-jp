@@ -14,19 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f137f5044c24ec9a187868c273b1dd752cd86a5
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 4228015287be7c2dd5c34fea29f16f2a581b8a62
+ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513105"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42902624"
 ---
 # <a name="support-for-project-and-configuration-properties"></a>プロジェクトおよび構成プロパティのサポート
 **プロパティ**ウィンドウで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) は、プロジェクトと構成のプロパティを表示できます。 独自のプロジェクトの種類のプロパティ ページを指定するには、ユーザーがアプリケーションのプロパティを設定できるようにします。  
   
  プロジェクト ノードを選択して**ソリューション エクスプ ローラー**  をクリックし、**プロパティ**上、**プロジェクト** メニューの プロジェクトと構成を含むダイアログ ボックスを開くことができますプロパティ。 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]と[!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、プロジェクトの種類のタブ付きページとしてこのダイアログ ボックスが表示されます。 これらの言語から派生し、 [General, Environment, オプション ダイアログ ボックス](../../ide/reference/general-environment-options-dialog-box.md)します。 詳細については、次を参照してください。[ビルド内にありません: チュートリアル: プロジェクトの公開および構成のプロパティ (c#)](http://msdn.microsoft.com/en-us/d850d63b-25e2-4505-9f3d-eb038d7c1d0e)します。  
   
- Managed Package Framework (MPFProj) プロジェクトを作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順に従って、ソースを検索できる[- Visual Studio 2013 のプロジェクトの MPF](http://mpfproj12.codeplex.com/)します。  
+ Managed Package Framework (MPFProj) プロジェクトを作成して、新しいプロジェクト システムを管理するためのヘルパー クラスを提供します。 コードとコンパイル」の手順に従って、ソースを検索できる[- Visual Studio 2013 のプロジェクトの MPF](https://github.com/tunnelvisionlabs/MPFProj10)します。  
   
 ## <a name="persistence-of-project-and-configuration-properties"></a>プロジェクトと構成プロパティの永続化  
  プロジェクトと構成のプロパティは、たとえば、プロジェクトの種類に関連付けられているファイル名拡張子、.csproj、.vbproj、および .myproj を含むプロジェクト ファイルに保存されます。 通常、言語のプロジェクトは、プロジェクト ファイルを生成するのにテンプレート ファイルを使用します。 ただし、テンプレート プロジェクトの種類を関連付けるために実際にいくつかの方法はあります。 詳細については、次を参照してください。[テンプレート ディレクトリの説明 (します。Vsdir) ファイル](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)します。  
@@ -84,7 +84,7 @@ ms.locfileid: "39513105"
  <xref:System.ComponentModel.CategoryAttribute>、 <xref:System.ComponentModel.DisplayNameAttribute>、および<xref:System.ComponentModel.DescriptionAttribute>属性は、レイアウト、ラベル付け、および汎用プロパティ ページで、プロジェクトと構成のプロパティの説明を決定します。 これらの属性は、カテゴリを確認、名、およびオプションの説明をそれぞれ表示します。  
   
 > [!NOTE]
->  同等の属性、SRCategory、LocDisplayName、および SRDescription、ローカライズ文字列リソースを使用して、で定義されて[- Visual Studio 2013 のプロジェクトの MPF](http://mpfproj12.codeplex.com/)します。  
+>  同等の属性、SRCategory、LocDisplayName、および SRDescription、ローカライズ文字列リソースを使用して、で定義されて[- Visual Studio 2013 のプロジェクトの MPF](https://github.com/tunnelvisionlabs/MPFProj10)します。  
   
  次のコードがあるとします。  
   

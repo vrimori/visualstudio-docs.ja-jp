@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 01efc1972ea4833900b5e6f002d36ae51fa63a85
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: f569769613e4fac0b4773a755740274ec0933016
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119447"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635233"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint-by-using-a-designer"></a>チュートリアル: SharePoint のデザイナーを使用して web パーツを作成します。
 
@@ -42,11 +42,11 @@ SharePoint サイトの Web パーツを作成すれば、ユーザーはブラ�
     > [!NOTE]
     > このチュートリアルに記載されている Visual Studio ユーザー インターフェイスの一部の要素は、お使いのコンピューターに実際に表示される名前や場所と異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
-- サポート対象エディションの Windows と SharePoint 参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
+- サポート対象エディションの Windows と SharePoint
 
 ## <a name="create-a-web-part-project"></a>Web パーツのプロジェクトを作成します。
 

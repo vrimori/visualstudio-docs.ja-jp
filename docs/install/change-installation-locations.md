@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6d8741982efd5329e7c14f0a32fb66bbdd377f5
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 87698421c4992d0349e04740c120d491aa54fcc3
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282061"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43138967"
 ---
 # <a name="change-the-installation-locations-in-visual-studio-2017"></a>Visual Studio 2017 でインストールの場所を変更する
 
@@ -52,16 +52,7 @@ ms.locfileid: "36282061"
  > [!NOTE]
  > 一部のツールと SDK では、インストールできる場所に関するルールが異なります。 これらのツールおよび SDK は、ユーザーが別の場所を選択した場合でも、システム ドライブにインストールされます。
 
-## <a name="get-support"></a>サポートを受ける
-
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング](troubleshooting-installation-issues.md)」ページのヘルプをご覧ください。 インストールに関しては、[ライブ チャット](https://visualstudio.microsoft.com/vs/support/#talktous) (英語のみ) によってもお問い合わせいただけます。詳細については、[Visual Studio のお問い合わせページ](https://visualstudio.microsoft.com/vs/support/#talktous)を参照してください。
-
-他のいくつかのサポート オプションを次に示します。
-
-* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
-* [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>関連項目
 

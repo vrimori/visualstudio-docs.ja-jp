@@ -24,12 +24,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 74d1181936a5efa3b286999ea832e78dffdcccf3
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1c0359af3d55f6efe26b2ae3bde7bc7726f7d333
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119503"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635656"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>チュートリアル: SharePoint のサイト列、コンテンツの種類、および一覧を作成します。
   次の手順は、カスタムの SharePoint サイト列を作成する方法を示します: または*フィールド*— サイト内の列を使用するコンテンツの種類とします。 新しいコンテンツ タイプを使用するリストを作成する方法も示します。  
@@ -48,10 +48,10 @@ ms.locfileid: "37119503"
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの Windows と SharePoint 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの Windows と SharePoint
   
 -   Visual Studio  
   

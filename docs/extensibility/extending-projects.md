@@ -14,17 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aab8c9608ea6bd86742ac53008c11e8ae54a9e4f
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: ce2ab15d215b9758e42c0a7d973153f2f5c18f8d
+ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639127"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42902820"
 ---
 # <a name="extend-projects"></a>プロジェクトを拡張します。
 プロジェクトおよびソリューションは、Visual Studio コードとリソース ファイルをコンパイルおよび展開の単位に整理する方法です。 プロジェクトの詳細については見つかります[プロジェクト (Visual Studio SDK)](../extensibility/extending-projects.md)します。  
   
- 独自のプロジェクトの種類を作成するには、Visual Studio SDK をダウンロードできるプロジェクトでは、Managed Package Framework[プロジェクト用 Managed Package Framework](http://mpfproj12.codeplex.com/)します。 理解するカスタム プロジェクトは、実装方法を参照してください。[新しいプロジェクトの生成: 内部、パート 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md)と[新しいプロジェクトの生成: 内部、パート 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
+ 独自のプロジェクトの種類を作成するには、Visual Studio SDK をダウンロードできるプロジェクトでは、Managed Package Framework[プロジェクト用 Managed Package Framework](https://github.com/tunnelvisionlabs/MPFProj10)します。 理解するカスタム プロジェクトは、実装方法を参照してください。[新しいプロジェクトの生成: 内部、パート 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md)と[新しいプロジェクトの生成: 内部、パート 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)します。  
   
  このセクションのトピックでは、カスタムのプロジェクトを作成する方法とさまざまな種類の Visual Studio ソリューションを管理する方法について説明します。  
   

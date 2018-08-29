@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b7d0604e0e80fcb0fa14c65bd57669f60e68fd11
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: c333d38dde1d440d5bac10770d0b3386f82ad4ad
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37118266"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42626147"
 ---
 # <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類を拡張します。
   使用することができます、 **Business Data Connectivity モデル**sharepoint ビジネス データ接続 (BDC) サービスのモデルを作成するプロジェクト アイテム。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。  
@@ -39,10 +39,10 @@ ms.locfileid: "37118266"
   
 -   拡張機能をテストする。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。  
   
 -   [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、 **VSIX プロジェクト**sdk プロジェクト アイテムを配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   

@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6035b8ceb693434e2e8bc652b91ee31ceb3ebe02
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: c254f6f3e044f938ed2749567d66ee7a313081e7
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119479"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42626489"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>チュートリアル: 作成し、SharePoint ワークフロー ソリューションのデバッグ
   このチュートリアルでは、基本的なシーケンシャル ワークフロー テンプレートを作成する方法を示します。 ワークフローは、ドキュメントが確認されたかどうかを判断する共有ドキュメント ライブラリのプロパティを確認します。 ドキュメントをレビューすると、ワークフローが終了します。  
@@ -44,10 +44,10 @@ ms.locfileid: "37119479"
 >   
 >  また、コンピューター可能性がありますさまざまな名前や場所が一部の Visual Studio のユーザー インターフェイス要素次の手順で。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの Microsoft Windows および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの Microsoft Windows および SharePoint。  
   
 -   Visual Studio  
   
@@ -295,5 +295,5 @@ ms.locfileid: "37119479"
 ## <a name="see-also"></a>関連項目
  [SharePoint ワークフロー ソリューションを作成します。](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [SharePoint プロジェクトとプロジェクト項目テンプレート](../sharepoint/sharepoint-project-and-project-item-templates.md)   
- [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+ [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   

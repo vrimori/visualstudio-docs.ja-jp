@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 76654568825bd0761097a1edd3ec8eb3bbc7060d
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: e278eeb486d2a2d0150fb3ffd44176d17edbdc33
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119866"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42624449"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用して SharePoint アプリケーションをデバッグします。
 
@@ -48,11 +48,11 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
-- サポート対象エディションの Windows と SharePoint 参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。
+- サポート対象エディションの Windows と SharePoint
 
 - Visual Studio Enterprise。
 

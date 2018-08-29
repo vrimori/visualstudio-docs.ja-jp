@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71a29a5d8961688f710181dce553d0895a4bb475
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: aaba3f16ccf08fa56e6f529192ae9ad9cab6d496
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057162"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635438"
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>ウォッチ ウィンドウと クイック ウォッチ の Windows で Visual Studio を使用して変数にウォッチを設定します。
 使用することができますが、デバッグ中に、**ウォッチ**と **[クイック ウォッチ]** 変数と式をウォッチする windows。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。 
@@ -231,7 +231,7 @@ public class Program
 ## <a name="dynamic-view-and-the-watch-window"></a>動的ビューとウォッチ ウィンドウ  
  一部のスクリプト言語 (JavaScript や Python など) を使用して、動的または[アヒル](https://en.wikipedia.org/wiki/Duck_typing)、(バージョン 4.0 以降) での .NET 言語サポートのために通常のデバッグ ウィンドウを使用して観察が困難なオブジェクトと、ランタイム プロパティやメソッドを表示できない場合があります。  
   
- 実装する型から作成されたオブジェクトをウォッチ ウィンドウで表示するときに、 [IDynamicMetaObjectProvider Interface](/dotnet/api/system.dynamic.idynamicmetaobjectprovider?view=netframework-4.7)、デバッガーの追加、特殊な**動的ビュー**ノードを **[自動変数]** を表示します。 このノードには動的オブジェクトの動的メンバーが表示されますが、そのメンバーの値を編集することはできません。  
+ 実装する型から作成されたオブジェクトをウォッチ ウィンドウで表示するときに、 <xref:System.Dynamic.IDynamicMetaObjectProvider>、デバッガーは、特別なを追加します。**動的ビュー**ノードを、 **[自動変数]** を表示します。 このノードには動的オブジェクトの動的メンバーが表示されますが、そのメンバーの値を編集することはできません。  
   
  **動的ビュー** の任意の子を右クリックして **[ウォッチ式の追加]** を選択すると、デバッガーはオブジェクトを動的オブジェクトにキャストする新しいウォッチ変数を挿入します。 つまり、 **オブジェクト名** が **((動的) オブジェクト).名前**になります。  
   

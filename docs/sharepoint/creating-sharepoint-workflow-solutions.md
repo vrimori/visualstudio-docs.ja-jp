@@ -23,17 +23,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4dc27993125c41de91e069cd4c87025f3a26ec07
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: dd67173078a81c5fc250ca993474a60057076d70
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36327321"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42634723"
 ---
 # <a name="create-sharepoint-workflow-solutions"></a>SharePoint ワークフロー ソリューションを作成します。
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ドキュメントとリスト アイテム、SharePoint Web サイトでのライフ サイクルを管理するカスタム ワークフローを作成するためのツールを提供します。 用意されている項目には、デザイナー、一連のアクティビティのコントロール、および必要なアセンブリ参照が含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 含まれています、 **SharePoint カスタマイズ ウィザード**、作成や、ワークフローを構成します。
 
- SharePoint プロジェクトを作成するための前提条件の一覧については[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]を参照してください[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。 SharePoint の詳細については、次を参照してください。 [Microsoft SharePoint 製品およびテクノロジ](http://go.microsoft.com/fwlink/?LinkId=178470)します。
+[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ドキュメントとリスト アイテム、SharePoint Web サイトでのライフ サイクルを管理するカスタム ワークフローを作成するためのツールを提供します。 用意されている項目には、デザイナー、一連のアクティビティのコントロール、および必要なアセンブリ参照が含まれます。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 含まれています、 **SharePoint カスタマイズ ウィザード**、作成や、ワークフローを構成します。
+
+SharePoint の詳細については、次を参照してください。 [Microsoft SharePoint 製品およびテクノロジ](http://go.microsoft.com/fwlink/?LinkId=178470)します。
 
 ## <a name="workflows-in-sharepoint"></a>SharePoint でのワークフロー
  ワークフローを SharePoint ライブラリまたはリストに追加する場合は、ライブラリまたはリスト内のすべてのアイテムでのビジネス プロセスを適用します。 ワークフローでは、システムまたはユーザーを編集し、確認し、項目を送信するなど、各アイテムに対して実行する必要がありますアクションを説明します。 呼ばれるこれらのアクション*アクティビティ*は、ワークフローの構成要素です。
@@ -146,6 +147,6 @@ ms.locfileid: "36327321"
 
 ## <a name="see-also"></a>関連項目
 
-- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)
-- [ビルドし、SharePoint ソリューションのデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)
+- [SharePoint ソリューションのビルドとデバッグ](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [For SharePoint アプリケーション ページを作成します。](../sharepoint/creating-application-pages-for-sharepoint.md)

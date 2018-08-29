@@ -1,5 +1,5 @@
 ---
-title: 'CA3147: ValidateAntiForgeryToken と動詞のハンドラーをマークします。'
+title: 'CA3147: ValidateAntiForgeryToken で動詞ハンドラーをマークします'
 ms.date: 08/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -11,14 +11,14 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b4369cfd310be9322d17b8bdbfe79880f2aa579
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: da15a441a10f3ad3f3f84ee0cc76eeed8e4127e4
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008704"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42623652"
 ---
-# <a name="ca3147-mark-verb-handlers-with-validateantiforgerytoken"></a>CA3147: ValidateAntiForgeryToken と動詞のハンドラーをマークします。
+# <a name="ca3147-mark-verb-handlers-with-validateantiforgerytoken"></a>CA3147: ValidateAntiForgeryToken で動詞ハンドラーをマークします
 
 |||
 |-|-|
@@ -29,7 +29,7 @@ ms.locfileid: "40008704"
 
 ## <a name="cause"></a>原因
 
-ASP.NET MVC コント ローラー アクション メソッドが付いていない<xref:Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute?displayProperty=fullName>、またはなど、HTTP 動詞を指定する属性<xref:Microsoft.AspNetCore.Mvc.HttpGetAttribute?displayProperty=fullName>または<xref:Microsoft.AspNetCore.Mvc.AcceptVerbsAttribute?displayProperty=fullName>します。
+ASP.NET MVC コント ローラー アクション メソッドが付いていない[ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/web-frameworks/dd492108(v=vs.118))、またはなど、HTTP 動詞を指定する属性[HttpGetAttribute](/previous-versions/aspnet/web-frameworks/ee470993(v%3dvs.118))または[AcceptVerbsAttribute](/previous-versions/aspnet/web-frameworks/dd470553%28v%3dvs.118%29)します。
 
 ## <a name="rule-description"></a>規則の説明
 
@@ -37,17 +37,17 @@ ASP.NET MVC のコント ローラーを設計するときは、クロスサイ�
 
 このルールは、その ASP.NET MVC コント ローラーを確認します。 アクション メソッドか。
 
-- <xref:Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute>し、HTTP GET を含まない、許可されている HTTP 動詞を指定します。
+- [ValidateAntiforgeryTokenAttribute](/previous-versions/aspnet/web-frameworks/dd492108%28v%3dvs.118%29)し、HTTP GET を含まない、許可されている HTTP 動詞を指定します。
 
 - HTTP GET を許可されている動詞として指定します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
 
-- ASP.NET MVC コント ローラー アクションを HTTP GET 要求を処理し、有害な可能性のある副作用はありません、追加、<xref:Microsoft.AspNetCore.Mvc.HttpGetAttribute>メソッドにします。
+- ASP.NET MVC コント ローラー アクションを HTTP GET 要求を処理し、有害な可能性のある副作用はありません、追加、 [HttpGetAttribute](/previous-versions/aspnet/web-frameworks/ee470993%28v%3dvs.118%29)メソッドにします。
 
    HTTP GET を処理するコント ローラー アクションが要求し、有害な可能性のある副作用が伴う機密データの変更など、ASP.NET MVC があれば、アプリケーションがクロスサイト リクエスト フォージェリ攻撃に対して脆弱になります。  HTTP POST、PUT、または DELETE 要求だけが機密性の高い操作を実行するために、アプリケーションを再設計する必要があります。
 
-- HTTP POST を処理するコント ローラー アクションの ASP.NET MVC、PUT、または削除を要求する追加<xref:Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute>と使用できる HTTP 動詞を指定する属性 (<xref:Microsoft.AspNetCore.Mvc.AcceptVerbsAttribute>、 <xref:Microsoft.AspNetCore.Mvc.HttpPostAttribute>、 <xref:Microsoft.AspNetCore.Mvc.HttpPutAttribute>、または<xref:Microsoft.AspNetCore.Mvc.HttpDeleteAttribute>)。 さらを呼び出す必要があります<xref:Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.AntiForgeryToken%2A?displayProperty=nameWithType>Razor web ページまたは MVC ビューから。 例については、次を参照してください。[編集メソッドを調べると、ビューの編集](/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view)します。
+- HTTP POST を処理するコント ローラー アクションの ASP.NET MVC、PUT、または削除を要求する追加[ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/web-frameworks/dd492108(v=vs.118))と使用できる HTTP 動詞を指定する属性 ([AcceptVerbsAttribute](/previous-versions/aspnet/web-frameworks/dd470553%28v%3dvs.118%29)、 [HttpPostAttribute](/previous-versions/aspnet/web-frameworks/ee264023%28v%3dvs.118%29)、 [HttpPutAttribute](/previous-versions/aspnet/web-frameworks/ee470909%28v%3dvs.118%29)、または[HttpDeleteAttribute](/previous-versions/aspnet/web-frameworks/ee470917%28v%3dvs.118%29))。 さらを呼び出す必要があります、 [HtmlHelper.AntiForgeryToken()](/previous-versions/aspnet/web-frameworks/dd504812%28v%3dvs.118%29) MVC ビューまたは Razor web ページからのメソッド。 例については、次を参照してください。[編集メソッドを調べると、ビューの編集](/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view)します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 

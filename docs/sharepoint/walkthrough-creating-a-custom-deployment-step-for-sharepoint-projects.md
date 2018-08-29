@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: aee7c1bf7a7a8d71d02da7bab270c4df1a4a52ab
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 1e5c5856217951d15042f07edb97a918e09ba777
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119550"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635027"
 ---
 # <a name="walkthrough-create-a-custom-deployment-step-for-sharepoint-projects"></a>チュートリアル: SharePoint プロジェクトのカスタム配置手順を作成します。
   SharePoint プロジェクトを展開するときに、Visual Studio は、特定の順序で一連の展開の手順を実行します。 Visual Studio には、多くの組み込みの配置手順が含まれていますが、独自に作成することもできます。  
@@ -42,10 +42,10 @@ ms.locfileid: "37119550"
   
 -   新しい配置手順をテストします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。  
   
--   サポート対象エディションの Windows、SharePoint、Visual Studio。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの Windows、SharePoint、Visual Studio。
   
 -   Visual Studio SDK。 このチュートリアルでは、 **VSIX プロジェクト**sdk、拡張機能を配置するための VSIX パッケージを作成するテンプレート。 詳細については、次を参照してください。 [Visual Studio での SharePoint ツールを拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)します。  
   
