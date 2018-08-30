@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e7a43ce46bc34ed6341d92833ee066479ca2392b
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 70147dac62ad0aaa59a1c6823b321afe54b2d3a7
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280443"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43139125"
 ---
 # <a name="install-certificates-required-for-visual-studio-offline-installation"></a>Visual Studio オフライン インストールに必要な証明書をインストールする
 
@@ -34,6 +34,8 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
 ### <a name="option-1---manually-install-certificates-from-a-layout-folder"></a>オプション 1 - レイアウト フォルダーから手動で証明書をインストールする
 
 ネットワーク レイアウトを作成するときに、必要な証明書が Certificates フォルダーにダウンロードされます。 各証明書ファイルをダブルクリックし、証明書マネージャー ウィザードをクリックすることで証明書を手動でインストールできます。 パスワードを求められたら、空のままにしてください。
+
+**更新**: Visual Studio 2017 バージョン 15.8 プレビュー 2 以降の場合は、各証明書ファイルを右クリックして [証明書のインストール] を選択した後、証明書マネージャー ウィザードの指示に従って操作することで、手動で証明書をインストールできます。
 
 ### <a name="option-2---distribute-trusted-root-certificates-in-an-enterprise-environment"></a>オプション 2 - エンタープライズ環境で信頼されたルート証明書を配布する
 
@@ -60,6 +62,15 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
 
    certmgr.exe -add -c certificates\vs_installer_opc.SignCertificates.p12 -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
    ```
+   **更新**: Visual Studio 2017 バージョン 15.8 プレビュー 2 以降の場合は、次のコマンドでバッチ ファイルを作成します。
+
+   ```cmd
+   certmgr.exe -add [layout path]\certificates\manifestSignCertificates.cer -n "Microsoft Root Certificate Authority 2011" -s -r LocalMachine root
+
+   certmgr.exe -add [layout path]\certificates\manifestCounterSignCertificates.cer -n "Microsoft Root Certificate Authority 2010" -s -r LocalMachine root
+
+   certmgr.exe -add [layout path]\certificates\vs_installer_opc.SignCertificates.cer -n "Microsoft Root Certificate Authority" -s -r LocalMachine root
+   ```
 
 3. バッチ ファイルをクライアントに配置します。 このコマンドは、管理者特権のプロセスから実行する必要があります。
 
@@ -82,6 +93,8 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
         * すべてのシステムに必要。 Windows Update からすべての更新プログラムが適用されているシステムにはこの証明書がない場合があることに注意してください。
     * ルート証明書: **Microsoft ルート証明機関**
         * 必須。 この証明書は、Windows 7 以降を実行するシステムに付属しています。
+
+**更新**: Visual Studio 2017 バージョン 15.8 プレビュー 2 以降の場合、Visual Studio インストーラーによって求められるのは、システム上にルート証明書がインストールされることのみです。
 
 ## <a name="why-are-the-certificates-from-the-certificates-folder-not-installed-automatically"></a>Certificates フォルダーから証明書が自動的にインストールされません。
 
@@ -113,16 +126,7 @@ Visual Studio セットアップ エンジンでは、信頼されているコ�
 
 証明書をインストールしたら、「Visual Studio 2017 のネットワーク インストールを作成する」ページの「[ネットワーク インストールから展開する](create-a-network-installation-of-visual-studio.md#deploying-from-a-network-installation)」の指示に従うことで、Visual Studio の展開を続けることができます。
 
-## <a name="get-support"></a>サポートを受ける
-
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
-
-他のいくつかのサポート オプションを次に示します。
-
-* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
-* [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>関連項目
 

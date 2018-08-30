@@ -1,6 +1,6 @@
 ---
 title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
-description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
+description: Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。
 ms.custom: mvc
 ms.date: 07/20/2018
 ms.prod: visual-studio-dev15
@@ -14,16 +14,16 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: cbb43f61aab1df099efca01b56a927cf189a808e
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: db8dc29af0ccd77d2a0e201056012c726854f85c
+ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468979"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43054358"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
-Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック スタートでは、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、簡単な "Hello World" Web アプリを作成します。
+Visual Studio の使用方法を紹介する、この 5 - 10 分のクイック スタートでは、ASP.NET プロジェクト テンプレートと C# プログラミング言語を使って、シンプルな "Hello World" Web アプリを作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
