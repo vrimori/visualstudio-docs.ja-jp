@@ -11,24 +11,22 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3fbe25acc776e6407a5f10bab78ff7affaef8d78
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: d98c0c14146fe69a04c2ebe3e715fd42167180b8
+ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586528"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43054514"
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing についてよく寄せられる質問
 
-## <a name="live-unit-testing-is-improved-and-enhanced-regularly-how-can-i-find-information-about-the-latest-new-features-and-enhancements"></a>Live Unit Testing は、定期的に改善と機能強化が行われています。 最新の機能と機能強化に関する情報を確認するにはどうすればよいですか?
-
-**回答:**
+## <a name="latest-features"></a>最新の機能
+**Live Unit Testing は、定期的に改善と機能強化が行われています。最新の機能と機能強化に関する情報を確認するにはどうすればよいですか?**
 
 Live Visual Studio 2017 バージョン 15.3 以降で Live Unit Testing に対して加えられた新機能と機能強化を確認するには、「[What's New in Live Unit Testing](live-unit-testing-whats-new.md)」 (Live Unit Testing の新機能) を参照してください。
 
-## <a name="what-test-frameworks-does-live-unit-testing-support-and-what-are-the-minimum-supported-versions"></a>Live Unit Testing でサポートされているテスト フレームワークは何ですか? また、サポートされている最小バージョンはいくつですか?
-
-**回答:**
+## <a name="supported-frameworks-and-versions"></a>サポートされるフレームワークとバージョン
+**Live Unit Testing でサポートされているテスト フレームワークは何ですか? また、サポートされている最小バージョンはいくつですか?**
 
 Live Unit Testing は、次の表に示されている 3 つの一般的な単体テスト フレームワークで動作します。 アダプターやフレームワークのサポートされる最小バージョンも表に示されています。 単体テスト フレームワークはすべて NuGet.org から入手できます。
 
@@ -59,15 +57,13 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 場合によっては、Live Unit Testing を動作させるため、ソリューションのプロジェクトによって参照されている NuGet パッケージの明示的な復元が必要になります。 Live Unit Testing を有効にする前に、ソリューションの明示的なビルドを行うか (Visual Studio の最上位メニューから **[ビルド]** の **[ソリューションのリビルド]** を選択します)、ソリューションを右クリックして **[NuGet パッケージの復元]** を選択することでパッケージを復元できます。
 
-## <a name="does-live-unit-testing-work-with-net-core"></a>Live Unit Testing は .NET Core で動作しますか?
-
-**回答:**
+## <a name="net-core-support"></a>.NET Core サポート
+**Live Unit Testing は .NET Core で動作しますか?**
 
 はい。 Live Unit Testing は、.NET Core と .NET Framework で動作します。 .NET Core のサポートは、Visual Studio 2017 バージョン 15.3 で最近追加されました。 .NET Core に Live Unit Testing サポートが必要であれば、このバージョンの Visual Studio にアップグレードします。
 
-## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Live Unit Testing を有効にしても動作しないのはなぜですか?
-
-**回答:**
+## <a name="configuration"></a>構成
+**Live Unit Testing を有効にしても動作しないのはなぜですか?**
 
 **[出力ウィンドウ]** に (Live Unit Testing ドロップダウンを選んだとき)、Live Unit Testing が動作しない理由が表示されているはずです。 Live Unit Testing は、次のいずれかの理由で動作しない可能性があります。
 
@@ -85,9 +81,8 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 </RunSettings>
 ```
 
-## <a name="why-does-live-unit-testing-show-incorrect-coverage-after-you-upgrade-the-test-adapter-referenced-in-your-visual-studio-projects-to-the-supported-version"></a>Visual Studio プロジェクトで参照されているテスト アダプターをサポートされているバージョンにアップグレードした後、Live Unit Testing に正しくないカバレッジが表示されるのはなぜですか?
-
-**回答:**
+## <a name="incorrect-coverage-after-upgrade"></a>アップグレード後の正しくないカバレッジ
+**Visual Studio プロジェクトで参照されているテスト アダプターをサポートされているバージョンにアップグレードした後、Live Unit Testing に正しくないカバレッジが表示されるのはなぜですか?**
 
 - ソリューションの複数のプロジェクトが NuGet テスト アダプター パッケージを参照している場合は、それぞれをサポートされるバージョンにアップグレードする必要があります。
 
@@ -97,9 +92,8 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
     <Import Project="..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\packages\xunit.runner.visualstudio.2.2.0\build\net20\xunit.runner.visualstudio.props')" />
    ```
 
-## <a name="can-i-customize-my-live-unit-testing-builds"></a>Live Unit Testing のビルドをカスタマイズできますか?
-
-**回答:**
+## <a name="customize-builds"></a>ビルドのカスタマイズ
+**Live Unit Testing のビルドをカスタマイズできますか?**
 
 "標準の" インストルメント化されていないビルドには必要ないインストルメンテーション (Live Unit Testing) 用にビルドするためのカスタム手順がソリューションに必要な場合は、`BuildingForLiveUnitTesting` プロパティを調べてビルド前/後のカスタム手順を行うコードを、プロジェクトまたは *.targets* ファイルに追加できます。 また、このプロジェクト プロパティに基づいて、Live Unit Testing のビルドから特定のビルド手順 (パッケージの発行や生成など) を削除したり、Live Unit Testing にビルド手順 (前提条件のコピーなど) を追加したりすることもできます。 このプロパティに基づいてビルドをカスタマイズしても、標準のビルドは変更されず、Live Unit Testing のビルドのみが影響を受けます。
 
@@ -112,10 +106,7 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 ```
 
 ## <a name="error-messages-with-ltoutputpathgt-or-ltoutdirgt"></a>&lt;OutputPath&gt; または &lt;OutDir&gt; に関するエラー メッセージ
-
 **Live Unit Testing がソリューションのビルドを試みると、次のようなエラー メッセージが表示されるのはなぜですか? "...appears to unconditionally set `<OutputPath>` or `<OutDir>`.Live Unit Testing will not execute tests from the output assembly" (... が <OutputPath> または <OutDir> を無条件に設定したようです。Live Unit Testing は出力アセンブリからテストを実行しません)**
-
-**回答:**
 
 このエラーは、ソリューションのビルド プロセスが `<OutputPath>` または `<OutDir>` を無条件にオーバーライドして `<BaseOutputPath>` のサブディレクトリではないようにした場合に、発生する可能性があります。 このような場合、Live Unit Testing もこれらの値をオーバーライドしてビルド成果物が `<BaseOutputPath>` の下のフォルダーにドロップされるため、Live Unit Testing は動作しなくなります。 標準ビルドでビルド成果物が格納される場所をオーバーライドする必要がある場合は、`<BaseOutputPath>` を基にして条件付きで `<OutputPath>` をオーバーライドしてください。
 
@@ -144,17 +135,13 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 ビルド プロセスで `<OutDir>` を直接オーバーライドしないでください。ビルド成果物を特定の場所に格納するには、代わりに `<OutputPath>` をオーバーライドします。
 
-## <a name="set-the-location-of-live-unit-testing-build-artifacts"></a>Live Unit Testing のビルド成果物の場所の設定
-
+## <a name="set-the-location-of-build-artifacts"></a>ビルド成果物の場所の設定
 **Live Unit Testing のビルド成果物を、*.vs* フォルダーの下の既定の場所ではない特定の場所に格納する必要があります。どうすれば変更できますか?**
-
-**回答:**
 
 `LiveUnitTesting_BuildRoot` ユーザー レベル環境変数を、Live Unit Testing のビルド成果物を格納するパスに設定します。 
 
-## <a name="how-is-running-tests-from-test-explorer-window-different-from-running-tests-in-live-unit-testing"></a>[テスト エクスプローラー] ウィンドウと Live Unit Testing では、テストの実行方法はどのように違いますか?
-
-**回答:**
+## <a name="test-explorer-vs-live-unit-testing-test-runs"></a>テスト エクスプローラーとLive Unit Testing のテストの実行 
+**[テスト エクスプローラー] ウィンドウと Live Unit Testing では、テストの実行方法はどのように違いますか?**
 
 いくつか違いがあります。
 
@@ -168,9 +155,8 @@ Live Unit Testing は、次の表に示されている 3 つの一般的な単�
 
 - 現在、**テスト エクスプローラー**は既定ではシングルスレッド アパートメント (STA) でテストを実行するのに対し、Live Unit Testing はマルチスレッド アパートメント (MTA) でテストを実行します。 Live Unit Testing において MSTest テストを STA で実行するには、テスト メソッドまたはそれを含むクラスを、`MSTest.STAExtensions 1.0.3-beta` NuGet パッケージに含まれる `<STATestMethod>` または `<STATestClass>` 属性で修飾します。 NUnit の場合はテスト メソッドを `<RequiresThread(ApartmentState.STA)>` 属性で修飾し、xUnit の場合は `<STAFact>` 属性で修飾します。
 
-## <a name="how-do-i-exclude-tests-from-participating-in-live-unit-testing"></a>Live Unit Testing からテストを除外するにはどうすればよいですか?
-
-**回答:**
+## <a name="exclude-tests"></a>テストの除外
+**Live Unit Testing からテストを除外するにはどうすればよいですか?**
 
 ユーザー固有の設定については、「[Visual Studio 2017 での Live Unit Testing](live-unit-testing.md#include-and-exclude-test-projects-and-test-methods)」記事の「テスト プロジェクトとテスト メソッドを含めるか除外する」セクションをご覧ください。 テストを含めるまたは除外すると、特定の編集セッションに対して特定のテスト セットを実行したい場合、または個人設定を維持したい場合に便利です。
  
@@ -197,9 +183,8 @@ public class Class1
 }
 ```
 
-## <a name="why-are-win32-pe-headers-different-in-instrumented-assemblies-built-by-live-unit-testing"></a>Live Unit Testing によってビルドされたインストルメント化されたアセンブリでは Win32 PE ヘッダーが異なるのはなぜですか?
-
-**回答:**
+## <a name="win32-pe-headers"></a>Win32 PE ヘッダー
+**Live Unit Testing によってビルドされたインストルメント化されたアセンブリでは Win32 PE ヘッダーが異なるのはなぜですか?**
 
 この問題は解消されており、Visual Studio 2017 バージョン 15.3 では発生しません。 このバージョンの Visual Studio にアップグレードしてください。
 
@@ -213,48 +198,40 @@ public class Class1
 
 これらの値に依存するテストは、Live Unit Testing で実行すると失敗する場合があります。
 
-## <a name="why-does-live-unit-testing-keep-building-my-solution-all-the-time-even-if-i-am-not-making-any-edits"></a>編集を行わなかった場合でも Live Unit Testing で常にソリューションがビルドされるのはなぜですか?
-
-**回答:**
+## <a name="continuous-builds"></a>連続的なビルド
+**編集を行わなかった場合でも Live Unit Testing で常にソリューションがビルドされるのはなぜですか?**
 
 編集を行っていなくても、ソリューションのビルド プロセスによってソリューション自体の一部であるソース コードが生成され、ビルド ターゲット ファイルにおいて適切な入力と出力が指定されていない場合は、ソリューションがビルドされる場合があります。 MSBuild が適切な最新状態チェックを実行し、新しいビルドが必要かどうかを判断できるように、ターゲットに入力と出力のリストを提供する必要があります。
 
 Live Unit Testing は、ソース ファイルが変更されたことを検出すると常に、ビルドを開始します。 ソリューションのビルドでソース ファイルが生成されるので、Live Unit Testing は無限ビルド ループになります。 ただし、Live Unit Testing が (前のビルドで新しく生成されたソース ファイルを検出した後) 2 回目のビルドを開始するときに、ターゲットの入力と出力を調べる場合は、入力と出力のチェックですべてが最新であることが示されるため、ビルド ループから抜け出します。  
 
-## <a name="how-does-live-unit-testing-work-with-the-lightweight-solution-load-feature"></a>ライトウェイト ソリューション ロード機能では Live Unit Testing はどのように動作しますか?
-
-**回答:**
+## <a name="lightweight-solution-load"></a>ライトウェイト ソリューション ロード
+**ライトウェイト ソリューション ロード機能では Live Unit Testing はどのように動作しますか?**
 
 Live Unit Testing は現在のところ、ライトウェイト ソリューション ロード機能とうまく連動しません。 テスト プロジェクトを少なくとも 1 つ読み込まないと作動しません。 プロジェクトを読み込むまで正常に作動しない理由は、Live Unit Testing は 1 つ以上のテスト プロジェクトを利用しなければ、読み込まれるテスト アダプター (MSTest、xUnit、NUnit) を参照できないことにあります。
 
 > [!NOTE]
 > Visual Studio 2017 バージョン 15.5 以降では、ライトウェイト ソリューション ロードを使用できなくなりました。 Visual Studio 2017 バージョン 15.5 以降の場合、マネージド コードを含む大規模なソリューションで、ライトウェイト ソリューション ロードなしでも以前よりはるかに速く読み込むことができます。
 
-## <a name="why-doesnt-live-unit-testing-capture-coverage-from-a-new-process-created-by-a-test"></a>Live Unit Testing がテストによって作成された新しいプロセスからカバレッジをキャプチャしないのはなぜですか?
-
-**回答:**
+## <a name="new-process-coverage"></a>新しいプロセスのカバレッジ
+**Live Unit Testing がテストによって作成された新しいプロセスからカバレッジをキャプチャしないのはなぜですか?**
 
 これは既知の問題であり、Visual Studio 2017 の今後の更新プログラムで修正されるはずです。
 
-## <a name="why-does-nothing-happen-after-i-include-or-exclude-tests-from-the-live-test-set"></a>Live Test セットにテストを含めたり、セットからテストを除外した後、何も行われないのはなぜですか?
-
-**回答:**
+## <a name="including-or-excluding-tests-not-working"></a>テストの追加または除外が機能しない
+**Live Test セットにテストを含めたり、セットからテストを除外した後、何も行われないのはなぜですか?**
 
 この問題は解消されており、Visual Studio 2017 バージョン 15.3 では発生しません。 このバージョンの Visual Studio にアップグレードしてください。
 
 この問題は、以前のバージョンの Visual Studio 2017 で確認されています。 この問題を回避するには、テストを含めたり除外したりした後、任意のファイルを編集する必要があります。 
 
-## <a name="live-unit-testing-and-editor-icons"></a>Live Unit Testing とエディターのアイコン
-
+## <a name="editor-icons"></a>エディターのアイコン
 **出力ウィンドウのメッセージでは Live Unit Testing が実行しているようなのに、エディターにアイコンが表示されないのはなぜですか?**
-
-**回答:**
 
 Live Unit Testing が動作しているアセンブリが何らかの理由でインストルメント化されていない場合に、エディターにアイコンが表示されない場合があります。 たとえば、Live Unit Testing は `<UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>` を設定するプロジェクトと互換性がありません。 この場合、Live Unit Testing を動作させるには、ビルド プロセスを更新してこの設定を削除する、または `true` に変更する必要があります。 
 
-## <a name="how-do-i-collect-more-detailed-logs-to-file-bug-reports"></a>ファイル バグ レポートに詳細なログを収集するにはどうすればよいですか?
-
-**回答:**
+## <a name="capture-logs"></a>ログのキャプチャ
+**ファイル バグ レポートに詳細なログを収集するにはどうすればよいですか?**
 
 詳細なログを収集するにはいくつかの方法があります。
 

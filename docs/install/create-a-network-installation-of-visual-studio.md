@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0569172a73ab4f4187a7202f24cb65f7ac33ed
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 2b85d7f209648831900b8f7b7e1bb1f45ffd8979
+ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586535"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43139250"
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017 のネットワーク インストールを作成する
 
@@ -142,24 +142,15 @@ response.json を変更し、セットアップの実行時に使用される既
 > [!NOTE]
 > [visualstudio.microsoft.com](http://visualstudio.microsoft.com) で入手可能な Visual Studio 2017 ブートストラップは、それを実行したときに利用できる最新の Visual Studio 2017 リリースをダウンロードし、インストールします。 Visual Studio ブートストラップを今日ダウンロードし、今日から 6 か月後に実行すると、6 か月後に利用できる Visual Studio 2017 リリースがインストールされます。 レイアウトを作成する場合、そのレイアウトから Visual Studio をインストールすると、レイアウトに存在する特定のバージョンの Visual Studio がインストールされます。 新しいバージョンがオンラインに存在するとしても、レイアウトに存在するバージョンの Visual Studio が取得されます。
 
-旧バージョンの Visual Studio 2017 のレイアウトを作成する場合、https://my.visualstudio.com に進み、Visual Studio 2017 ブートストラップの "固定" バージョンをダウンロードできます。
+旧バージョンの Visual Studio 2017 のレイアウトを作成する場合、 https://my.visualstudio.com に進み、Visual Studio 2017 ブートストラップの "固定" バージョンをダウンロードできます。
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>オフライン インストーラーのサポートを受ける方法
 
 オフライン インストールに問題が発生した場合は、マイクロソフトにお知らせください。 問題報告の最善の方法として、[[問題を報告する]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールを使用できます。 このツールでは、テレメトリとログを送信できます。これを、マイクロソフトは問題の診断と解決に役立てます。
 
+インストール関連の問題については、[**ライブ チャット**](https://visualstudio.microsoft.com/vs/support/#talktous) (英語のみ) のサポート オプションも用意されています。
+
 他にも利用可能なサポート オプションがあります。 一覧については、[[ご意見]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ページをご覧ください。
-
-## <a name="get-support"></a>サポートを受ける
-
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
-
-他のいくつかのサポート オプションを次に示します。
-
-* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
-* [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
 
 ## <a name="see-also"></a>関連項目
 
