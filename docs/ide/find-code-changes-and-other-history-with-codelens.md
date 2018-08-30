@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 02f0c8dd142f9517dcaef3a40d613d43b8e650a3
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 22d3a6ea380fdbfb8f6a41fce21d0ad283808d85
+ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "36235346"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43054479"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -37,7 +37,7 @@ CodeLens では、エディターを離れずにコードに関する情報を�
 
 C# コードまたは Visual Basic コードでの参照を検索することができます。
 
-1. **参照**インジケーターを選択するか、**Alt**+**2** キーを押します。
+1. **参照**インジケーターを選択するか、**Alt** + **2** キーを押します。
 
    ![CodeLens 参照](../ide/media/codelens-view-references.png)
 
@@ -206,7 +206,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 1. [単体テスト コード](../test/unit-test-your-code.md)に関連付けられたアプリケーション コードに移動します。
 
-2. CodeLens テスト インジケーターを読み込むためにアプリケーションをまだビルドしていない場合は、ビルドします。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on)がオンになっていることを確認します。
+2. CodeLens テスト インジケーターを読み込むためにアプリケーションをまだビルドしていない場合は、ビルドします。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#assembly-based-discovery)がオンになっていることを確認します。
 
 3. コード用のテストをレビューするには、**Alt** + **3** キーを押します。
 
@@ -327,7 +327,8 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 ### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>Q: ソリューションを最初に開いたときに、ファイルに CodeLens テスト インジケーターが表示されなくなります。 これを読み込むにはどうすればよいですか。
 
-**A:** プロジェクトをリビルドし、ファイルに読み込む CodeLens テスト インジケーターを取得します。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on)がオンになっていることを確認します。 パフォーマンスを向上させるため、Visual Studio では、コード ファイルが読み込まれるときにテスト インジケーターのソース情報がフェッチされなくなります。 テスト インジケーターは、ビルド後、または**テスト エクスプローラー**でダブルクリックしてテストに移動するときに読み込まれます。
+**A:** プロジェクトをリビルドし、ファイルに読み込む CodeLens テスト インジケーターを取得します。 [ビルド済みアセンブリでの検出](../test/test-explorer-faq.md#assembly-based-discovery
+)がオンになっていることを確認します。 パフォーマンスを向上させるため、Visual Studio では、コード ファイルが読み込まれるときにテスト インジケーターのソース情報がフェッチされなくなります。 テスト インジケーターは、ビルド後、または**テスト エクスプローラー**でダブルクリックしてテストに移動するときに読み込まれます。
 
 ## <a name="see-also"></a>関連項目
 
