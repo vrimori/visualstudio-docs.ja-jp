@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d398d22944ae4c0e5be725169b9d7ceaadb0667d
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 7aab8c5796a111d90c29e7fa656749adcdf124bd
+ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945833"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43225127"
 ---
 # <a name="native-recommended-rules-rule-set"></a>"ネイティブ推奨規則" 規則セット
 
@@ -148,6 +148,9 @@ ms.locfileid: "37945833"
 |[C26116](../code-quality/c26116.md)|取得またはロックを保持するために失敗|
 |[C26117](../code-quality/c26117.md)|保持されていないロックを解放します。|
 |[C26140](../code-quality/c26140.md)|同時実行 SAL 注釈のエラーです。|
+|[C26441](../code-quality/c26441.md)|NO_UNNAMED_GUARDS|
+|[C26444](../code-quality/c26444.md)|NO_UNNAMED_RAII_OBJECTS|
+|[C26498](../code-quality/c26498.md)|USE_CONSTEXPR_FOR_FUNCTIONCALL|
 |[C28020](../code-quality/c28020.md)|式がこの呼び出しで true ではありません。|
 |[C28021](../code-quality/c28021.md)|注釈が付けられているパラメーターはポインターである必要があります|
 |[C28022](../code-quality/c28022.md)|この関数の関数クラスでは、それを定義するために使用された typedef の関数クラスが一致しません。|

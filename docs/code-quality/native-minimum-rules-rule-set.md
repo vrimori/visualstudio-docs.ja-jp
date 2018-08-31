@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4f4417651ca574bc7de3014cc96d7089df23085
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 8dd0d7b14c26038c57ce175abcff383ad9de5cf3
+ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37945807"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43225049"
 ---
 # <a name="native-minimum-rules-rule-set"></a>"ネイティブ最小規則" 規則セット
 Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、ネイティブ コードの最も重大な問題に集中します。 ネイティブ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。
@@ -81,6 +81,12 @@ Microsoft ネイティブ最小規則は、潜在的なセキュリティ ホー
 |[C6704](../code-quality/c6704.md)|予期しない注釈式エラーです|
 |[C6705](../code-quality/c6705.md)|想定した注釈の引数の数が、実際の注釈の引数の数と一致しません|
 |[C6706](../code-quality/c6706.md)|注釈に対する、予期しない注釈エラーです|
+|[C26450](../code-quality/c26450.md)|RESULT_OF_ARITHMETIC_OPERATION_PROVABLY_LOSSY|
+|[C26451](../code-quality/c26451.md)|RESULT_OF_ARITHMETIC_OPERATION_CAST_TO_LARGER_SIZE|
+|[C26452](../code-quality/c26452.md)|SHIFT_COUNT_NEGATIVE_OR_TOO_BIG|
+|[C26453](../code-quality/c26453.md)|LEFTSHIFT_NEGATIVE_SIGNED_NUMBER|
+|[C26454](../code-quality/c26454.md)|RESULT_OF_ARITHMETIC_OPERATION_NEGATIVE_UNSIGNED|
+|[C26495](../code-quality/c26495.md)|MEMBER_UNINIT|
 |[C28021](../code-quality/c28021.md)|注釈が付けられているパラメーターはポインターである必要があります|
 |[C28182](../code-quality/c28182.md)|Null ポインターの逆参照 このポインターは、もう 1 つのポインターと同じ Null 値を持ちます。|
 |[C28202](../code-quality/c28202.md)|静的でないメンバーへの参照が正しくありません|
