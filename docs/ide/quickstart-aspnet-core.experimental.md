@@ -1,6 +1,6 @@
 ---
 title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
-description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
+description: Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。
 ms.custom: mvc
 ms.date: 07/30/2018
 ms.prod: visual-studio-dev15
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 9978a7eb80a833eeb81796694b958a62a35cd347
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 4462edff04933dfcb3d334a841982ff0406270ba
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469140"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42627147"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 

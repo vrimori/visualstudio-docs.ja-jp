@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 89ba7338645ab6cc421716832a3d6f424bb57dfc
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: 3a415d49770b003c15d4394e4635a138a795cb55
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34844392"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42627316"
 ---
 # <a name="user-permissions-and-visual-studio"></a>ユーザー アクセス許可と Visual Studio
 
@@ -34,7 +34,6 @@ Visual Studio IDE のほぼすべての機能は、通常のユーザーとし�
 |----------|----------|--------------------------|
 |インストール|Visual Studio をインストールする。|[Visual Studio のインストール](../install/install-visual-studio.md)|
 ||ローカル ヘルプ コンテンツをインストール、更新、または削除する。|[ローカル ヘルプ コンテンツのインストールと管理](../ide/install-and-manage-local-content.md)|
-|アプリケーションの種類|SharePoint のソリューションを開発する。|[SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)|
 |ツールボックス|**ツールボックス**にクラシック COM コントロールを追加する。|[ツールボックス](../ide/reference/toolbox.md)|
 |ビルド|コンポーネントを登録するビルド後のイベントを使用する。|[カスタム ビルド ステップとビルド イベントについて](/cpp/ide/understanding-custom-build-steps-and-build-events)|
 ||C++ プロジェクトのビルド時に登録手順を含める。||
