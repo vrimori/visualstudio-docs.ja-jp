@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ca29232acae2b67d4e2b04c96bd1dde5e595b83f
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 2d9542e14f41722a2f339bfac5c3353dc2e89263
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119790"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635467"
 ---
 # <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>チュートリアル: 既存の SharePoint サイトからのアイテムをインポートします。
   アイテムを既存の SharePoint サイトからインポートする方法についても説明、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint プロジェクト。  
@@ -38,10 +38,10 @@ ms.locfileid: "37119790"
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。 詳細については、次を参照してください。 [SharePoint ソリューションの開発要件](../sharepoint/requirements-for-developing-sharepoint-solutions.md)します。  
+-   サポート対象エディションの[!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]および SharePoint。  
   
 -   Visual Studio  
   
@@ -58,7 +58,7 @@ ms.locfileid: "37119790"
   
 4.  **タイトル**ボックスに、入力**サイト列テスト 1**; で、 **URL 名**ボックスに、入力**columntest1**; 他の設定を既定のままにします値。選択し、**作成**ボタンをクリックします。  
   
-5.  メインのサイトにブラウザー内を移動する、サイトを作成すると、http://*システム名*/SitePages/Home.aspx します。  
+5.  メインのサイトにブラウザー内を移動する、サイトを作成すると、 http://*システム名*/SitePages/Home.aspx します。  
   
 6.  開き、メインの SharePoint サイトから空白サブサイトを作成、**サイトの操作**] メニューの [選択**新しいサイト**、クリックして、**空のサイト**型。  
   
