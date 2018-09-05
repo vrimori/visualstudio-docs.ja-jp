@@ -13,13 +13,13 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: ebd530b9db139cb232f735f7d6401199cab2f6fd
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.sourcegitcommit: e2373d40ca9829cee63519152a97172763471e21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 09/05/2018
 ms.locfileid: "36325703"
 ---
-# Visual Studio の回復不能なプロセス エラー
+# <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio の回復不能なプロセス エラー
 
 Visual Studio 2017 では、アウト プロセスのプロセスをいくつか利用し、ライブ単体テストやコード アナライザーなど、必要なバックグラウンド タスクを実行します。 このようなプロセスはアウト プロセスで実行され、Visual Studio のパフォーマンスを改善します。たとえば、リソースを集中的に使用するジョブを長時間実行するとき、Visual Studio の応答が速くなります。 また、Visual Studio は 32 ビット プロセスのため、プロセスをアウト プロセスで実行すると、メモリを集中的に使用する作業にたくさんのメモリ領域が与えられます。
 
@@ -29,7 +29,7 @@ Visual Studio 2017 では、アウト プロセスのプロセスをいくつか
 
 このメッセージが表示されたら、作業を保存し、Visual Studio を閉じ、再起動してください。
 
-## プロセスの一覧
+## <a name="list-of-processes"></a>プロセスの一覧
 
 次は、Visual Studio で使用されるアウト プロセス プロセスの一覧です。 この一覧には、特定のワークフローまたはシナリオで起動するプロセスが含まれているため、多くの場合、これらすべてが同時に実行されることはありません。
 
