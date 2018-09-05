@@ -1,17 +1,17 @@
 ---
 title: Visual Studio for Mac の拡張
 description: Visual Studio for Mac の機能は、拡張機能パッケージというモジュールを使用して拡張できます。 このガイドの最初の第 1 部では、ドキュメントに日時を挿入する単純な Visual Studio for Mac 拡張機能パッケージを作成します。 このガイドの第 2 部では、拡張機能パッケージ システムの基礎と、Visual Studio for Mac の基礎を形成するコア API の一部を紹介します。
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: eeca19a8724a93c46f832ead0ac16ecda84b70bf
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 10bfb61ae9e3750926dad39ad3c614d8daf8f867
+ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43224963"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Visual Studio for Mac の拡張
 
@@ -56,7 +56,7 @@ Visual Studio for Mac から拡張機能パッケージを構築するには、V
 
 ## <a name="extensions-and-extension-points"></a>拡張機能と拡張ポイント
 
-拡張ポイントは、データ構造 (型) を定義するプレースホルダーです。一方、拡張機能は、特定の拡張ポイントに指定されている構造に準拠するデータを定義します。 拡張ポイントは、受け入れることができる拡張機能の種類を宣言で指定します。 拡張機能は、型名または拡張機能パスを使用して宣言します。 必要な拡張ポイントを作成する詳細な説明については、[拡張ポイントのリファレンス](http://monoaddins.codeplex.com/wikipage?title=Extension%20Points&referringTitle=Description%20of%20Add-ins%20and%20Add-in%20Roots)を参照してください。
+拡張ポイントは、データ構造 (型) を定義するプレースホルダーです。一方、拡張機能は、特定の拡張ポイントに指定されている構造に準拠するデータを定義します。 拡張ポイントは、受け入れることができる拡張機能の種類を宣言で指定します。 拡張機能は、型名または拡張機能パスを使用して宣言します。 必要な拡張ポイントを作成する詳細な説明については、[拡張ポイントのリファレンス](https://github.com/mono/mono-addins/wiki/Extension-Points)を参照してください。
 
 拡張機能/拡張ポイント アーキテクチャでは、Visual Studio for Mac の開発の速度とモジュール式はそのまま利用できます。 
 
