@@ -9,12 +9,12 @@ description: 管理者ポータルで組織の Visual Studio サブスクリプ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 956670d624a5c36547a23a06773e7ee254acd7f4
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 63f3cbc3b4eb108a17c85eaa46992989a6dac742
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380819"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289446"
 ---
 #  <a name="using-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio サブスクリプション管理者ポータルを使用する
 
@@ -68,9 +68,11 @@ Visual Studio サブスクリプションを使用して管理ポータルを管
 - サインイン以外の通信に使用される別の電子メール アドレスのオプションのフィールド。 
 
 このページの左側には、購入済みかつ割り当て済みで組織が各契約でまだ使用できるサブスクリプション ライセンスの数に関する追加情報が表示されます。
-    ![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
+> [!div class="mx-imgBorder"]
+> ![Visual Studio サブスクリプションの管理ポータルのサブスクライバー ページ](_img/using-admin-portal/subscribers-page.png)
 
 ### <a name="understanding-the-details-page"></a>[詳細] ページを理解する
 表示されている契約の詳細を参照するには、[詳細] タブを選択します。契約の状態、購入アカウント、組織の詳細、主要連絡先 (VLSC )、スーパー管理者 (使用可能な場合)、および他の関連情報が表示されます。
-    ![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
+> [!div class="mx-imgBorder"]
+> ![Visual Studio サブスクリプションの管理ポータルの [詳細] ページ](_img/using-admin-portal/details-page.png)
 

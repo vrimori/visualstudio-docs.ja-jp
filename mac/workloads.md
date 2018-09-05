@@ -1,16 +1,16 @@
 ---
 title: Visual Studio for Mac ワークロード
 description: この記事では、Visual Studio for Mac で利用できるさまざまなワークロードについて説明しています
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: 42d0f9682f2f0c54b86fc24cdfd5d82569ddbb5b
-ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
+ms.openlocfilehash: 7f076d10b0c884f39fa887547e883ec4215fd74c
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454175"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43224060"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio for Mac ワークロード
 

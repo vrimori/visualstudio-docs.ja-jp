@@ -1,16 +1,16 @@
 ---
 title: ビルド構成の作成と編集
 description: この記事では、Visual Studio for Mac でビルド構成を作成する方法について説明します。
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
-ms.openlocfilehash: bf097924da2640faed75f4dcef0c82698078911b
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 1aadff851c709141f37f89431403bce857bafdbe
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33864760"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43224448"
 ---
 # <a name="creating-and-editing-build-configurations"></a>ビルド構成の作成と編集
 
