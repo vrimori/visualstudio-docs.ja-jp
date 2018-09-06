@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 289d22798b243a7276d74257b0d3b1f7213b3a32
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 4de603bd1daec4d50f3f57eaa28cdff2316e8e8c
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586562"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626946"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -48,7 +48,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 1. Visual Studio で **[ファイル]** > **[新規]** > **[プロジェクト]** の順に選択して、新しい Python プロジェクトを作成します。 "Python" を検索し、**Python アプリケーション** テンプレートを選択し、適切な名前と場所を指定し、**[OK]** を選択します。
 
-1. C++ を使用するには、32 ビットの Python インタープリターを使用する必要があります (Python 3.6 推奨)。 Visual Studio の **[ソリューション エクスプローラー]** ウィンドウに、プロジェクト ノードを展開し、**[Python 環境]** ノードを展開します。 (太字または**グローバル デフォルト** ラベルで) 既定として 32 ビット環境が表示されない場合、[プロジェクト用の Python 環境の選択](selecting-a-python-environment-for-a-project.md)に関する記事の指示に従ってください。 32 ビット インタープリターをインストールしていない場合、「[Python インタープリターのインストール](installing-python-interpreters.md)」をご覧ください。
+1. C++ を使用するには、32 ビットの Python インタープリターを使用する必要があります (Python 3.6 以降を推奨)。 Visual Studio の **[ソリューション エクスプローラー]** ウィンドウに、プロジェクト ノードを展開し、**[Python 環境]** ノードを展開します。 (太字または**グローバル デフォルト** ラベルで) 既定として 32 ビット環境が表示されない場合、[プロジェクト用の Python 環境の選択](selecting-a-python-environment-for-a-project.md)に関する記事の指示に従ってください。 32 ビット インタープリターをインストールしていない場合、「[Python インタープリターのインストール](installing-python-interpreters.md)」をご覧ください。
 
 1. プロジェクトの *.py* ファイルに、双曲正接の計算をベンチマークする次のコードを貼り付けます (簡単に比較できるよう、数値演算ライブラリを使わずに実装されています)。 自由に手動でコードを入力し、[Python の編集機能](editing-python-code-in-visual-studio.md)を体験してください。
 

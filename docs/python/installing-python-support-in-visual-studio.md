@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9dbc56994f741f48dd97c9eba365c7228585c2a3
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 8a01f8bbc90beb4e6dab5ff9b0d7d745778c3c2d
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499904"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42627116"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -26,7 +26,7 @@ Visual Studio 用の Python サポート (Python Tools for Visual Studio (PTVS) 
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 以前では、個別に任意の [Python インタープリターをインストールする](installing-python-interpreters.md)必要もあります (Python 3.5 以前の場合。3.6 はサポートされていないため、"**Python バージョン 3.6 はサポートされていません**" のようなメッセージが表示されます)。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
+Visual Studio 2015 以前では、個別に任意の [Python インタープリターをインストールする](installing-python-interpreters.md)必要もあります (Python 3.5 以前の場合。3.6 以降はサポートされていないため、**Python バージョン 3.6 はサポートされていません**というようなメッセージが生成されます)。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
 
 インストール手順に従った後、Python サポートを簡単にテストするには、**Python の対話型**ウィンドウを開きます。その場合、**Alt** + **I** キーを押して「`2+2`」と入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
 

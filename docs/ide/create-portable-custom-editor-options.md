@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: 9758aab8d36b113a5e4ba2fea5d475f1967dabab
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 8e2118564cb6e0a3eb4811cb69283256cd48a489
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626908"
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig で移植可能なカスタム エディター設定を作成する
 
@@ -23,7 +23,7 @@ Visual Studio 2017 では、[EditorConfig](http://editorconfig.org/) ファイ�
 EditorConfig の設定は、Visual Studio など、多くのコード エディターと IDE でサポートされています。 この設定は、コードと共に移動する移植可能なコンポーネントであり、Visual Studio の外部であってもコーディング スタイルを適用できます。
 
 > [!NOTE]
-> Visual Studio のプロジェクトに EditorConfig ファイルを追加するとき、ドキュメントの書式を設定しないかぎり、既存のコードの書式設定は変更されませ (**[編集]** > **[詳細設定]** > **[ドキュメントのフォーマット]**、または **Ctrl**+**K**、**Ctrl**+**D**)。 ただし、新しいコード行はすべて、EditorConfig の設定に従って書式設定されます。
+> Visual Studio のプロジェクトに EditorConfig ファイルを追加するときに、ドキュメントの書式を設定しない限り、既存のコードの書式設定は変更されません (既定のプロファイルの場合は **[編集]** > **[詳細設定]** > **[ドキュメントのフォーマット]**、または **Ctrl**+**K**、**Ctrl**+**D**)。 ただし、新しいコード行はすべて、EditorConfig の設定に従って書式設定されます。 [**[書式設定]** オプション ページ](reference/options-text-editor-csharp-formatting.md#format-document-settings)で、**ドキュメントのフォーマット**で適用する EditorConfig 設定を定義することができます。
 
 ## <a name="coding-consistency"></a>コーディングの一貫性
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でのプロジェクトとソリューションの概要
+title: プロジェクトとソリューションの概要
 ms.date: 12/11/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -9,16 +9,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c10d09b1fd66572b45e3fde16c999c39b803523
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 2995e3b71ffb46b726d17ffc2f1f7fe68f6663ff
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512305"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42627108"
 ---
-# <a name="quickstart-projects-and-solutions"></a>クイック スタート: プロジェクトとソリューション
+# <a name="learn-about-projects-and-solutions"></a>プロジェクトとソリューションについて理解する
 
-この 10 分間のクイック スタートでは、Visual Studio で "*ソリューション*" と "*プロジェクト*" を作成することの意味について説明します。 ソリューションは、1 つまたは複数の関連するコード プロジェクトを整理するために使われるコンテナーです。たとえば、クラス ライブラリとそれに対応するテスト プロジェクトなどです。 プロジェクトのプロパティと、プロジェクトに含めることができるファイルのいくつかを紹介します。 また、あるプロジェクトから別のプロジェクトへの参照も作成します。
+この入門記事では、Visual Studio で*ソリューション*と*プロジェクト*を作成することの意味について説明します。 ソリューションは、1 つまたは複数の関連するコード プロジェクトを整理するために使われるコンテナーです。たとえば、クラス ライブラリとそれに対応するテスト プロジェクトなどです。 プロジェクトのプロパティと、プロジェクトに含めることができるファイルのいくつかを紹介します。 また、あるプロジェクトから別のプロジェクトへの参照も作成します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
@@ -176,19 +176,9 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 単体テストが動作していることを確認する場合は、メニュー バーから **[テスト]** > **[実行]** > **[すべてのテスト]** を選択します。 **テスト エクスプローラー**と呼ばれるウィンドウが開くので、**TestGetCurrentDate** テストが成功しているか確認する必要があります。
 
-このクイック スタートは完了しました。 次に、Visual Studio に関する他のクイック スタートを参照したり、[プロジェクトとソリューションの作成](../ide/creating-solutions-and-projects.md)についてより深く学習することもできます。
-
-> [!div class="nextstepaction"]
-> [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-
-> [!div class="nextstepaction"]
-> [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
-
-> [!div class="nextstepaction"]
-> [クイックスタート: エディター内のコーディング](../ide/quickstart-editor.md)
-
 ## <a name="see-also"></a>関連項目
 
+- [プロジェクトとソリューションを作成する](../ide/creating-solutions-and-projects.md)
 - [プロジェクトおよびソリューションのプロパティの管理](../ide/managing-project-and-solution-properties.md)
 - [プロジェクト内の参照の管理](../ide/managing-references-in-a-project.md)
 - [プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)

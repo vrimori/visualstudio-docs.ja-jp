@@ -18,12 +18,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 046706cf5e36b9e32d6b102e167a55070fcc4a31
-ms.sourcegitcommit: c87b0d9f65dc7ebe95071f66ea8da4d4bc52d360
+ms.openlocfilehash: 04d8cd6f27f90d398d22b90f9c9bd432466fb3cd
+ms.sourcegitcommit: 58a0b227f29b95e3ed55101ef66c68913682862b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38993942"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "42626828"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -57,7 +57,8 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
 重要度 | 効果
 :------- | ------
-`none` または `silent` | このルールに違反した場合、ユーザーには何も表示されません。 ただし、コード生成機能により、このスタイルでコードが生成されます。 重大度が `none` のルールが、*[クイック アクションとリファクタリング]* メニューに表示されることはありません。 ほとんどの場合、これは "無効" または "無視" と見なされます。
+`none` | このルールに違反した場合、ユーザーには何も表示されません。 しかし、コード生成機能により、このスタイルでコードが生成されます。 重大度が `none` のルールが、**[クイック アクションとリファクタリング]** メニューに表示されることはありません。 ほとんどの場合、これは "無効" または "無視" と見なされます。
+`silent` (Visual Studio 2017 バージョン 15.8 の `refactoring` も同様) | このルールに違反した場合、ユーザーには何も表示されません。 しかし、コード生成機能により、このスタイルでコードが生成されます。 重大度が `silent` のルールはクリーンアップに関するものであり、また **[クイック アクションとリファクタリング]** メニューに表示されます。
 `suggestion` | このスタイル ルールに違反した場合、修正候補としてユーザーに表示されます。 修正候補は、最初の 2 文字の下に 3 つの灰色のドットとして表示されます。
 `warning` | このスタイル ルールに違反した場合、コンパイラの警告が表示されます。
 `error` | このスタイル ルールに違反した場合、コンパイラ エラーが表示されます。
@@ -78,6 +79,11 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
         - csharp\_preferred\_modifier_order
         - visual\_basic\_preferred\_modifier_order
         - dotnet\_style\_readonly\_field
+    - [かっこの基本設定](#parentheses)
+        - dotnet\_style\_parentheses\_in\_arithmetic\_binary\_operators
+        - dotnet\_style\_parentheses\_in\_other\_binary\_operators
+        - dotnet\_style\_parentheses\_in\_other\_operators
+        - dotnet\_style\_parentheses\_in\_relational\_binary\_operators
     - [式レベル基本設定](#expression_level)
         - dotnet\_style\_object_initializer
         - dotnet\_style\_collection_initializer
@@ -310,7 +316,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_require_ accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
+| dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
 | visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:none | 15.5 |
 | dotnet_style_readonly_field | IDE0044 | C# および Visual Basic | true:提案 | 15.7 |
@@ -410,6 +416,122 @@ csharp_preferred_modifier_order = public,private,protected,internal,static,exter
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
 ```
 
+#### <a name="parentheses"></a>かっこの基本設定
+
+このセクションのスタイル ルールは、算術演算子、関係演算子、およびその他の 2 項演算子でのかっこの使用を含む、かっこの基本設定に関するものです。
+
+次の表には、ルール名、ルール ID、適用可能なプログラミング言語、Visual Studio の既定値、および最初のサポート対象バージョンを示します。
+
+| 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
+| --------- | ------- | -------------------- | ----------------------| ---- |
+| dotnet_style_parentheses_in_arithmetic_binary_operators | IDE0047 | C# および Visual Basic | always_for_clarity:none | 15.8 |
+| dotnet_style_parentheses_in_relational_binary_operators | IDE0047 | C# および Visual Basic | always_for_clarity:none | 15.8 |
+| dotnet_style_parentheses_in_other_binary_operators | IDE0047 | C# および Visual Basic | always_for_clarity:none | 15.8 |
+| dotnet_style_parentheses_in_other_operators | IDE0047 | C# および Visual Basic | never_if_unnecessary:none | 15.8 |
+
+**dotnet\_style\_parentheses\_in\_arithmetic\_binary_operators**
+
+- このルールが **always_for_clarity** に設定されている場合は、算術演算子 (`*`、`/`、`%`、`+`、`-`、`<<`、`>>`、`&`、`^`、`|`) の基本設定を明確にするためにかっこを使用します。
+- このルールが **never_if_unnecessary** に設定されており、算術演算子 (`*`、`/`、`%`、`+`、`-`、`<<`、`>>`、`&`、`^`、`|`) の基本設定が明確な場合はかっこを使用しません。
+
+コード例:
+
+```csharp
+// dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+var v = a + (b * c);
+
+// dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary
+var v = a + b * c;
+```
+
+```vb
+' dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+Dim v = a + (b * c)
+
+' dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary
+Dim v = a + b * c
+```
+
+**dotnet\_style\_parentheses\_in\_relational\_binary_operators**
+
+- このルールが **always_for_clarity** に設定されている場合は、関係演算子 (`>`、`<`、`<=`、`>=`、`is`、`as`、`==`、`!=`) の基本設定を明確にするためにかっこを使用します。
+- このルールが **never_if_unnecessary** に設定されており、関係演算子 (`>`、`<`、`<=`、`>=`、`is`、`as`、`==`、`!=`) の基本設定が明確な場合はかっこを使用しません。
+
+コード例:
+
+```csharp
+// dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+var v = (a < b) == (c > d);
+
+// dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary
+var v = a < b == c > d;
+```
+
+```vb
+' dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+Dim v = (a < b) = (c > d)
+
+' dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary
+Dim v = a < b = c > d
+```
+
+**dotnet\_style\_parentheses\_in\_other\_binary_operators**
+
+- このルールが **always_for_clarity** に設定されている場合は、他の 2 項演算子 (`&&`、`||`、`??`) の基本設定を明確にするためにかっこを使用します。
+- このルールが **never_if_unnecessary** に設定されており、他の 2 項演算子 (`&&`、`||`、`??`) の基本設定が明確な場合はかっこを使用しません。
+
+コード例:
+
+```csharp
+// dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+var v = a || (b && c);
+
+// dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary
+var v = a || b && c;
+```
+
+```vb
+' dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+Dim v = a OrElse (b AndAlso c)
+
+' dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary
+Dim v = a OrElse b AndAlso c
+```
+
+**dotnet\_style\_parentheses\_in\_other_operators**
+
+- このルールが **always_for_clarity** に設定されている場合は、演算子の基本設定を明確にするためにかっこを使用します。
+- このルールが **never_if_unnecessary** に設定されており、演算子の基本設定が明確な場合はかっこを使用しません。
+
+コード例:
+
+```csharp
+// dotnet_style_parentheses_in_other_operators = always_for_clarity
+var v = (a.b).Length;
+
+// dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+var v = a.b.Length;
+```
+
+```vb
+' dotnet_style_parentheses_in_other_operators = always_for_clarity
+Dim v = (a.b).Length
+
+' dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+Dim v = a.b.Length
+```
+
+これらのルールは、次のように *.editorconfig* ファイルに表示されます。
+
+```EditorConfig
+# CSharp and Visual Basic code style settings:
+[*.{cs,vb}]
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:none
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:none
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:none
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:none
+```
+
 #### <a name="expression_level"></a>式レベル基本設定
 
 このセクションのスタイル ルールは式レベル基本設定に関するものです。これには、オブジェクト初期化子、コレクション初期化子、明示的または推論されたタプル名、推定された匿名型が含まれます。
@@ -425,6 +547,8 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
 | dotnet_style_prefer_auto_properties | IDE0032 | C# および Visual Basic | true:なし | 15.7 |
 | dotnet_style_prefer_is_null_check_over_reference_equality_method | IDE0041 | C# および Visual Basic | true:提案 | 15.7 |
+| dotnet_style_prefer_conditional_expression_over_assignment | IDE0045 | C# および Visual Basic | true:なし | 15.8 |
+| dotnet_style_prefer_conditional_expression_over_return | IDE0046 | C# および Visual Basic | true:なし | 15.8 |
 
 **dotnet\_style\_object_initializer**
 
@@ -621,6 +745,78 @@ If Object.ReferenceEquals(value, Nothing)
 End If
 ```
 
+
+
+**dotnet\_style\_prefer\_conditional\_expression\_over_assignment**
+
+- このルールが **true** に設定されている場合は、if-else ステートメントよりも三項条件を使用する割り当てを優先します。
+- このルールが **false** に設定されている場合は、三項条件よりも if-else ステートメントを使用する割り当てを優先します。
+
+コード例:
+
+```csharp
+// dotnet_style_prefer_conditional_expression_over_assignment = true
+string s = expr ? "hello" : "world";
+
+// dotnet_style_prefer_conditional_expression_over_assignment = false
+string s;
+if (expr)
+{
+    s = "hello";
+}
+else
+{
+    s = "world";
+}
+```
+
+```vb
+' dotnet_style_prefer_conditional_expression_over_assignment = true
+Dim s As String = If(expr, "hello", "world")
+
+' dotnet_style_prefer_conditional_expression_over_assignment = false
+Dim s As String
+If expr Then
+    s = "hello"
+Else
+    s = "world"
+End If
+```
+
+**dotnet\_style\_prefer\_conditional\_expression\_over_return**
+
+- このルールが **true** に設定されている場合は、if-else ステートメントよりも三項条件を使用する return ステートメントを優先します。
+- このルールが **false** に設定されている場合は、三項条件よりも if-else ステートメントを使用する return ステートメントを優先します。
+
+コード例:
+
+```csharp
+// dotnet_style_prefer_conditional_expression_over_return = true
+return expr ? "hello" : "world"
+
+// dotnet_style_prefer_conditional_expression_over_return = false
+if (expr)
+{
+    return "hello";
+}
+else
+{
+    return "world";
+}
+```
+
+```vb
+' dotnet_style_prefer_conditional_expression_over_return = true
+Return If(expr, "hello", "world")
+
+' dotnet_style_prefer_conditional_expression_over_return = false
+If expr Then
+    Return "hello"
+Else
+    Return "world"
+End If
+```
+
 これらのルールは、次のように *.editorconfig* ファイルに表示されます。
 
 ```EditorConfig
@@ -632,6 +828,8 @@ dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_prefer_inferred_tuple_names = true:suggestion
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 dotnet_style_prefer_auto_properties = true:none
+dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
+dotnet_style_prefer_conditional_expression_over_return = true:suggestion
 ```
 
 #### <a name="null_checking"></a>"Null" 検査設定
@@ -1287,7 +1485,7 @@ dotnet_sort_system_directives_first = true
 
 | [値] | 説明
 | ------------- |:-------------|
-| accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection、properties、types <br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
+| accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection_array_initializers、properties、types。<br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
 | すべて | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
 | none | 中かっこはすべての式の同じ行に配置する必要があります ("K&R")。 |
 
@@ -1967,12 +2165,14 @@ csharp_preserve_single_line_blocks = true
 ```
 
 ## <a name="example-editorconfig-file"></a>EditorConfig ファイルの例
+
 作業の開始に役立つように、ここでは既定のオプションを使用する *.editorconfig* ファイルの例を示します。
 
 ```EditorConfig
 ###############################
 # Core EditorConfig Options   #
 ###############################
+
 root = true
 
 # All files
@@ -1988,6 +2188,7 @@ charset = utf-8-bom
 ###############################
 # .NET Coding Conventions     #
 ###############################
+
 [*.{cs,vb}]
 # Organize usings
 dotnet_sort_system_directives_first = true
@@ -2002,6 +2203,12 @@ dotnet_style_qualification_for_event = false:none
 dotnet_style_predefined_type_for_locals_parameters_members = true:none
 dotnet_style_predefined_type_for_member_access = true:none
 
+# Parentheses preferences
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
+
 # Modifier preferences
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:none
 dotnet_style_readonly_field = true:suggestion
@@ -2012,10 +2219,12 @@ dotnet_style_collection_initializer = true:suggestion
 dotnet_style_explicit_tuple_names = true:suggestion
 dotnet_style_null_propagation = true:suggestion
 dotnet_style_coalesce_expression = true:suggestion
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:none
-dotnet_style_prefer_inferred_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
-dotnet_style_prefer_auto_properties = true:none
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:silent
+dotnet_prefer_inferred_tuple_names = true:suggestion
+dotnet_prefer_inferred_anonymous_type_member_names = true:suggestion
+dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+dotnet_style_prefer_conditional_expression_over_return = true:silent
 
 ###############################
 # Naming Conventions          #
@@ -2035,6 +2244,7 @@ dotnet_naming_symbols.constant_fields.required_modifiers          = const
 ###############################
 # C# Coding Conventions       #
 ###############################
+
 [*.cs]
 # var preferences
 csharp_style_var_for_built_in_types = true:none
@@ -2070,6 +2280,7 @@ csharp_style_inlined_variable_declaration = true:suggestion
 ###############################
 # C# Formatting Rules         #
 ###############################
+
 # New line preferences
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
@@ -2104,12 +2315,11 @@ csharp_preserve_single_line_blocks = true
 ###############################
 # VB Coding Conventions       #
 ###############################
+
 [*.vb]
 # Modifier preferences
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
-
 ```
-
 
 ## <a name="see-also"></a>関連項目
 

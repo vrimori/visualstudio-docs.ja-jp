@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 3
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、静的ファイルを提供する方法、アプリにページを追加する方法、およびテンプレートの継承を使用する方法を示します。
-ms.date: 06/27/2018
+ms.date: 08/13/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e6d4f4d9ae7be2fc196b7dada79ba89b527dd209
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 1e58ff1e9685f9f3147fc3fa199fad12b98a0ed4
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388346"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42627268"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>手順 3: 静的ファイルを提供し、ページを追加し、テンプレート継承を使用する
 
@@ -27,7 +27,7 @@ ms.locfileid: "39388346"
 この手順では、次の方法を学習します。
 
 > [!div class="checklist"]
-> - 便利なスケルトン コードによってさまざまな種類の新しいファイルに対して Visual Studio の項目テンプレートを使用する (手順 3-1)
+> - 便利なスケルトン コードによってさまざまな種類の新しいファイルを迅速に追加するための Visual Studio の項目テンプレートを使用する (手順 3-1)
 > - Django プロジェクトを構成して静的ファイルを提供する (手順 3-2)
 > - アプリに追加ページを付け加える (手順 3-3)
 > - テンプレートの継承を使用して、複数のページで使用されるヘッダーとナビゲーション バーを作成する (手順 3-4)
@@ -78,7 +78,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     }
     ```
 
-1. アプリの *templates/HelloDjangoApp/index.html* ファイルの内容を次のコードに置き換えます。これにより、手順 2 で使用した `<strong>` 要素が `message` スタイル クラスを参照する `<span>` に置き換えられます。 この方法でスタイル クラスを使用すると、要素のスタイル設定をこれまで以上に柔軟に行えます  (*index.html* を *templates* 内のサブフォルダーに移動済みの場合、手順 2 の[テンプレートの名前空間の設定](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing)に関する記述を参照してください)。
+1. アプリの *templates/HelloDjangoApp/index.html* ファイルの内容を次のコードに置き換えます。これにより、手順 2 で使用した `<strong>` 要素が `message` スタイル クラスを参照する `<span>` に置き換えられます。 この方法でスタイル クラスを使用すると、要素のスタイル設定をこれまで以上に柔軟に行えます  (VS 2017 15.7 以前の使用時、*index.html* を *templates* 内のサブフォルダーに移動済みの場合、手順 2-4 の[テンプレートの名前空間の設定](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing)に関する記述を参照してください)。
 
     ```html
     <html>
@@ -186,7 +186,7 @@ Django のテンプレート システムでは、複数のテンプレート間
 
 次の手順では、継承を例示します。
 
-1. アプリの *templates/HelloDjangoApp* フォルダーで、`layout.html` という新しい HTML ファイルを作成し (**[追加]** > **[新しい項目]** コンテキスト メニュー、または **[追加]** > **[HTML ページ]** を使用)、その内容を以下のマークアップに置き換えます。 このテンプレートが含む "content" というブロックは、参照元ページで置き換える必要があることがわかります。
+1. アプリの *templates/HelloDjangoApp* フォルダーで、*layout.html* という新しい HTML ファイルを作成し (**[追加]** > **[新しい項目]** コンテキスト メニュー、または **[追加]** > **[HTML ページ]** を使用)、その内容を以下のマークアップに置き換えます。 このテンプレートが含む "content" というブロックは、参照元ページで置き換える必要があることがわかります。
 
     ```html
     <!DOCTYPE html>

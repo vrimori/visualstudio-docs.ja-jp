@@ -2,7 +2,7 @@
 title: Visual Studio 2017 の新機能
 description: Visual Studio 2017 の新機能について説明します。
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 08/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: conceptual
@@ -17,16 +17,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 542814c5902f2dba1c76b33f78273aadfb583eff
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 3154264938753cf9be41cdd5ef8964f49664d730
+ms.sourcegitcommit: bd6f04aff96201d514157de16ed6ddb8593d02b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282974"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755510"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
-**[15.7 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)の更新**
+**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)の更新**
 
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
@@ -36,7 +36,7 @@ ms.locfileid: "36282974"
 * **[パフォーマンスと生産性](#performance-and-productivity)**。 Microsoft は、新しく、現代的なモバイル、クラウド、デスクトップの開発機能を導入することを中心に取り組んできました。 全体的な取得機能、パフォーマンス、全般的な開発者生産性も改善されています。 Visual Studio の起動が以前と比較してより高速になり、より応答性が向上し、メモリーの消費量が少なくなりました。
 * **[Azure によるクラウド アプリの開発](#cloud-app-development-with-azure)**。 Microsoft Azure を使用するクラウド ファーストのアプリを簡単に作成できる Azure ツールのビルトイン スイート。 Visual Studio を使用すれば、Azure でアプリとサービスを構成、ビルド、デバッグ、パッケージ化、デプロイするのが容易になります。
 * **[Windows アプリ開発](#windows-app-development)**。 Visual Studio 2017 で UWP テンプレートを使用して、すべての Windows 10 デバイス (PC、タブレット、電話、Xbox、HoloLens、Surface Hub など) を対象とした単一のプロジェクトを作成します。 次に、アプリ パッケージを作成し、Visual Studio 内から Microsoft Store に提出してアプリをユーザーに公開します。
-* **[モバイル アプリの開発](#mobile-app-development)**。 Visual Studio 2017 では Xamarin が導入されています。これにより、1 つのコア コードベースとスキル セットを使用することでマルチプラットフォームのモバイル要件が統合され、短期間で成果を出すことができます。 既存のチーム、テクノロジへの投資、C# コードをモバイル対応にして、コンシューマー グレードのエクスペリエンスを予定より早くかつ予算以内で提供します。 モバイル ライフサイクルのすべてのステップを加速させ、ワールドクラスのコンシューマー エクスペリエンスまたは従業員の生産性向上を支援するアプリのポートフォリオを提供します。
+* **[モバイル アプリの開発](#mobile-app-development)**。 Visual Studio 2017 では Xamarin が導入されています。これにより、1 つのコア コードベースとスキル セットを使用することでマルチプラットフォームのモバイル要件が統合され、短期間で成果を出すことができます。 既存のチーム、テクノロジへの投資、C# コードをモバイル対応にして、コンシューマー グレードのエクスペリエンスを予定より早くかつ予算以内で提供します。 モバイル ライフサイクルのすべてのステップを加速させ、ワールドクラスのコンシューマー エクスペリエンスまたは従業員の生産性向上を支援するアプリのポートフォリオを提供します。 (**15.8 の新機能**: Hyper-V を使用するモバイル アプリ開発者は、最新の Android API に常に対応し、面倒な設定なしで Google Play 開発者サービスと連動し、カメラ、位置情報、クイック起動など、Android エミュレーターのあらゆる機能に対応する高速の Android エミュレーターにアクセスできます。)
 * **[クロスプラットフォーム開発](#cross-platform-development)**。 対象となるプラットフォームにソフトウェアをシームレスに届けます。 Redgate Data Tools により DevOps プロセスを SQL Server に拡張し、Visual Studio からのデータベース配置を安全に自動化します。 あるいは、.NET Core を利用し、変更しなくても Windows、Linux、macOS オペレーティング システムをまたいで実行できるアプリやライブラリを作成します。 (**15.3 の新機能**: .NET Core 2.0 SDK の side-by-side サポート)
 * **[ゲーム開発](#games-development)**。 Visual Studio tools Unity (VSTU) を利用すると、Visual Studio を使用して C# でゲームとエディター スクリプトを記述した後、強力なデバッガーを使用してエラーを検出して修正できます。 VSTU の最新リリースでは、Unity の ShaderLab シェーダー言語の構文の色分け、デバッガーの視覚化機能の向上、および、MonoBehavior ウィザードによるコード生成の機能強化などが行われました。 また、VSTU により、Unity のプロジェクト ファイル、コンソール メッセージ、およびゲームを開始する機能が Visual Studio に統合されるため、コードの記述中に Unity エディターとの間で切り替える手間を少なくできます。
 * **[AI の開発](#ai-development)**。 Visual Studio Tools for AI (**15.5 の新機能**) では、Visual Studio の生産性機能を使用して、AI 革新を高速化することができます。 堅牢な実験機能 (たとえば、データ準備とモデル トレーニング ジョブの別の計算ターゲットへの透過的な送信など) のために、Azure Machine Learning とシームレスに統合するディープ ラーニング / AI ソリューションをビルド、テスト、展開します。 また、Visual Studio Tools for AI はカスタム メトリックと実行履歴追跡のサポートを提供し、データ サイエンスの再現性と監査を可能にします。
@@ -134,6 +134,18 @@ Visual Studio Enterprise 2017 では、ライブ単体テストを実行する�
 [Continuous Delivery Tools for Visual Studio (Visual Studio 用の継続的デリバリー ツール)](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) DevLabs 拡張の新機能の詳細については、「[Commit with confidence: Commit time code quality](https://blogs.msdn.microsoft.com/visualstudio/2017/08/21/committing-with-confidence-commit-time-code-quality-information-updated/)」 (自信を持ってコミットする: タイム コードの品質をコミットする) をご覧ください。
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE の拡張機能
+
+#### <a name="multi-caret-editing"></a>マルチキャレットの編集
+
+**15.8 の新機能**: ファイル内の複数の場所の同時編集が簡単になりました。 まず、ファイル内の複数の場所で挿入ポイントと選択範囲を作成します。 次に、マルチ キャレット編集機能を使用し、複数の場所で同時に同じ編集を行うことができます。
+
+詳細については、[[テキストの検索と置換]](finding-and-replacing-text.md) ページの [[マルチキャレット選択]](finding-and-replacing-text.md#multi-caret-selection) セクションをご覧ください。
+
+#### <a name="keep-keybinding-profiles-consistent"></a>キー バインド プロファイルの一貫性を維持する
+
+**15.8 の新機能**: 2 つの新しいキーボード プロファイル、Visual Studio Code と ReSharper (Visual Studio) を利用し、ツール間でキーバインドの一貫性を維持できるようになりました。 これらのスキームは、**[ツール]** > **[オプション]** > **[全般]** > **[キーボード]** および上部のドロップダウン メニューで見つけることができます。
+
+  ![Visual Studio Code と ReSharper の新しいキー バインド プロファイル](../ide/media/vs-keyboard-mappings-code-resharper.png)
 
 #### <a name="use-new-refactorings"></a>新しいリファクタリングの使用
 
@@ -278,6 +290,20 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 **15.4 の新機能**: Xamarin Live では、開発者は iOS および Android デバイスで直接、アプリの継続的な展開、テスト、デバッグができます。 Xamarin Live Player (&mdash;App Store または Google Play で利用可能&mdash;) をダウンロードした後、デバイスを Visual Studio とペアリングすることで、モバイル アプリの構築方法を一変させることができます。 この機能は、Visual Studio に含まれるようになりました。**[ツール]** > **[オプション]** > **[Xamarin]** > **[Other] \(その他)** > **[Xamarin Live Player を有効にする]** で有効にすることができます。
 
 ![Xamarin Live Player のペアリング、展開、ライブ エディット モードのアニメーション](../ide/media/xamarinliveplayer.gif)
+
+### <a name="support-for-google-android-emulator"></a>Google Android Emulator のサポート
+
+**15.8 の新機能**: Hyper-V を使用するとき、Google の Android エミュレーターを、Hyper-V 仮想マシン、Docker ツール、HoloLens エミュレーターなど、Hyper-V ベースの他のテクノロジと並行して利用できるようになりました。 (この機能を利用するには、Windows 10 の 2018 年 4 月以降の更新プログラムが必要です。)
+
+![Hyper-V テクノロジの Google Android Emulator](../ide/media/xamarin-hyperv-android-emulator.png)
+
+#### <a name="xamarinandroid-designer-split-view-editor"></a>Xamarin.Android Designer 分割ビュー エディター
+
+**15.8 の新機能**: デザイナーにとっての Xamarin.Android の使い勝手が大幅に改善されました。 ハイライトは、レイアウトを同時に作成、編集、プレビューできる新しい分割ビュー エディターです。
+
+![Xamarin.Android Designer 分割ビュー エディター](../ide/media/android-designer-split-view.png)
+
+詳細については、「[エミュレーター パフォーマンスのためのハードウェア高速化](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin#hyper-v-overview)」を参照してください。
 
 ### <a name="visual-studio-app-center"></a>Visual Studio アプリ センター
 

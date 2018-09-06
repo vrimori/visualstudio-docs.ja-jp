@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 64958097b7a5fe86cda1d2b7dee62c69cd2fea63
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 2a02bf78d731764b0725c03cefb4959451a40b9c
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586418"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626943"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio による Python 検索パスの使用方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "39586418"
 1. 実行している Python コードが含まれるフォルダー
 1. 該当する環境変数によって定義された "モジュール検索パス" (Python のコア ドキュメントの「[The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)」(モジュール検索パス) および「[Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH)」(環境変数) をご覧ください)。
 
-ただし、検索パス環境変数がシステム全体に対して設定されている場合でも、Visual Studio はこの変数を無視します。 実際はまさにシステム全体が設定されている*ために*無視されるので、自動的には答えられないようなある種の疑問が発生します。参照されているモジュールは Python 2.7 または Python 3.6 のどちらか。 標準ライブラリ モジュールをオーバーライドするのか。 開発者はこの動作を認識しているのか、それとも悪意のあるハイジャックの試みか。
+ただし、検索パス環境変数がシステム全体に対して設定されている場合でも、Visual Studio はこの変数を無視します。 実際はまさにシステム全体が設定されている*ために*無視されるので、自動的には答えられないようなある種の疑問が発生します。参照されているモジュールは Python 2.7 または Python 3.6 以降のどちらか。 標準ライブラリ モジュールをオーバーライドするのか。 開発者はこの動作を認識しているのか、それとも悪意のあるハイジャックの試みか。
 
 そのため Visual Studio では、環境とプロジェクトの両方で検索パスを直接指定するための手段が用意されています。 Visual Studio で実行またはデバッグするコードは、検索パスを `PYTHONPATH` (およびその他の同等の変数) の値で受け取ります。 検索パスを追加すると、Visual Studio はそれらの場所でライブラリを検査し、必要に応じて IntelliSense データベースを構築します (Visual Studio 2017 バージョン 15.5 以前、ライブラリの数によっては時間がかかります)。
 

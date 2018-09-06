@@ -12,12 +12,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: cedc3a66b3c6b73dd778011afd8e96b7e1e2d762
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3630eee4a58571277cf6a0c2c265fee95f2e37e1
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31926484"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42626975"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>EditorConfig での .NET の名前付け規則
 
@@ -46,6 +46,7 @@ ms.locfileid: "31926484"
 許容される値を次のリストに示します。個々の値をコンマで区切ることで複数の値を指定できます。
 
 - \*(この値を使用すると、すべてのシンボルが指定されます)
+- namespace
 - class
 - struct
 - interface
@@ -56,6 +57,9 @@ ms.locfileid: "31926484"
 - event
 - delegate
 - パラメーター
+- type_parameter
+- local
+- local_function
 
 ### <a name="accessibility-levels-of-symbols"></a>シンボルのアクセシビリティ レベル
 
@@ -71,6 +75,7 @@ ms.locfileid: "31926484"
 - private
 - protected
 - protected\_internal または protected_friend
+- local
 
 > [!NOTE]
 > 対象とするシンボルの種類にアクセシビリティが適用されない場合は、アクセシビリティ レベルを名前付け規則の一部には指定しません。 たとえば、パラメーターにはアクセシビリティ レベルはありません。 パラメーターの名前付け規則にアクセシビリティ レベルを指定すると、名前付け規則は正しく機能しません。
