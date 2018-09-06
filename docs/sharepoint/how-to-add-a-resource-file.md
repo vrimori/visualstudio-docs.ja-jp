@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3406e65ad96b93cd21890d61270c0ed989ad496c
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 2a2a89a0c838a91559c6066bea341924e5ca627e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756572"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774655"
 ---
 # <a name="how-to-add-a-resource-file"></a>方法: リソース ファイルを追加
   リソース ファイルを追加するためのコマンドは、ソリューション エクスプ ローラー内のノードの機能、ソリューション ノードのショートカット メニューでです。 詳細については、次を参照してください。[をローカライズする SharePoint ソリューション](../sharepoint/localizing-sharepoint-solutions.md)します。  
@@ -41,7 +41,7 @@ ms.locfileid: "36756572"
   
 4.  **リソースの追加** ダイアログ ボックスで、英語 (米国) など、リソース ファイル用のカルチャを選択します。  
   
-     この手順は、グローバル リソース ファイルをリソースの形式でソリューションに追加します * x ***。*** 。カルチャ ***.** resx、次のように、 *Resource1.en US.resx*します。  
+     この手順は、グローバル リソース ファイルを Resource_x_ の形式でソリューションに追加します **。** 。_カルチャ_**.** resx、次のように、 *Resource1.en US.resx*します。  
   
 5.  ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36756572"
   
 2.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、機能の名前、**機能**ノードを選び、**フィーチャー リソースの追加**します。  
   
-     この手順は、の形式で機能するリソース ファイルを追加します * ResourceFileName ***.*** カルチャ ***.** resx、次のように、 *Feature1.en US.resx*します。  
+     この手順では、リソース ファイルを追加の形式で機能する_ResourceFileName_**.**_カルチャ_**.resx**、次のように、 *Feature1.en US.resx*します。  
   
 3.  ときに、**リソース エディター**で開きます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、リソース ファイルにリソースを追加します。  
   
 ## <a name="see-also"></a>関連項目
- [SharePoint ソリューションを開発します。](../sharepoint/developing-sharepoint-solutions.md)  
+ [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)  
   
  

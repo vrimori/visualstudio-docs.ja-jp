@@ -18,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ef1db4f88e13575f77a88d0e2ceee7ef0621b202
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: b05406af9e10a23f37d03b30518b20343b7d3f98
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672293"
 ---
 # <a name="event-logging-for-office-solutions"></a>Office ソリューションのイベント ログ
   Windows のイベント ビューアーを使用すると、Office ソリューションのインストール時またはアンインストール時に [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] でキャプチャされる例外メッセージを表示できます。 イベント ロガーからのこれらのメッセージを使用して、インストールと配置の問題を解決できます。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/22/2018
 ## <a name="read-the-event-log"></a>イベント ログを読み取る  
  **イベント ビューアー** を開き、目的のイベントを表示するためにフィルター処理します。  
   
-### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 と Windows XP でイベント ログを読み取るには  
+### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 および Windows XP でイベント ログを読み取る  
   
 1.  [コントロール パネル] の **[管理ツール]** を開きます。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/22/2018
   
 7.  **[OK]** をクリックして、フィルター処理されたビューを表示します。  
   
-#### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Windows 7、Windows Vista、Windows Server 2008 でイベント ログを読み取るには  
+### <a name="to-read-the-event-log-in-windows-7-windows-vista-and-windows-server-2008"></a>Windows 7、Windows Vista、および Windows Server 2008 でイベント ログを読み取る  
   
 1.  [コントロール パネル] の **[管理ツール]** を開きます。  
   
@@ -76,10 +77,10 @@ ms.lasthandoff: 05/22/2018
   
  Office ソリューションをアンインストールしても、例外メッセージはイベント ログに残ります。  
   
- Office ソリューションを実行しているときに例外メッセージをログを表示またはを参照してください[デバッグ Office プロジェクト](../vsto/debugging-office-projects.md)と[デバッグ Office プロジェクト](../vsto/debugging-office-projects.md)です。  
+ Office ソリューションを実行するときに例外メッセージをログと表示を切り替えるには、次を参照してください。 [Office のデバッグ プロジェクト](../vsto/debugging-office-projects.md)と[デバッグ Office プロジェクト](../vsto/debugging-office-projects.md)します。  
   
 ### <a name="localization"></a>ローカリゼーション  
- 例外メッセージの言語は、Office ランタイム言語の Visual Studio Tools によって決まります。 たとえば、エンド ユーザーのコンピューターに日本語の言語パックがインストールされている場合、例外メッセージは日本語でイベント ログに書き込まれます。  
+ 例外メッセージの言語は、Office ランタイム言語の Visual Studio Tools によって決まります。 たとえば、エンドユーザーのコンピューターにインストールされている、日本語の言語パックがある場合は、例外メッセージは日本語でイベント ログに書き込まれます。  
   
 ## <a name="disable-the-event-logger"></a>イベント ロガーを無効にします。  
  Office ソリューションをインストールまたはアンインストールするときには、既定ではイベント ロガーが有効になります。 イベント ロガーを無効にするには、VSTO_EVENTLOGDISABLED 環境変数を「1」に設定します。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/22/2018
 6.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションを配置します。](../vsto/deploying-an-office-solution.md)   
- [Office ソリューションの配置をトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)  
+ [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)   
+ [Office ソリューションのデプロイをトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)  
   
   

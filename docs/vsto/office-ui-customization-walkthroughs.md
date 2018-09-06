@@ -18,24 +18,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8b4935d0256eb1a5aab57f24a884232e9d97b29c
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 93a945278d2565bb98706e9303bc662a78cd00ee
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693157"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672859"
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI のカスタマイズのチュートリアル
   次に示すチュートリアルでは、ドキュメント レベルのカスタマイズと VSTO アドインを使用して、Microsoft Office アプリケーションのユーザー インターフェイス (UI) をカスタマイズする方法について説明します。  
   
 ## <a name="actions-pane-walkthroughs"></a>操作ウィンドウのチュートリアル  
- [チュートリアル: アクション ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
+ [チュートリアル: 操作ウィンドウから文書にテキストを挿入します。](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)  
  Word 文書に操作ウィンドウを作成する方法について説明します。 この操作ウィンドウには、ユーザーの入力をドキュメントに送信するための 2 つのコントロールが含まれています。  
   
- [チュートリアル: Word の操作ウィンドウ上のコントロールへのデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
+ [チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)  
  Word の操作ウィンドウに配置されたコントロールをデータにバインドする方法について説明します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
   
- [チュートリアル: Excel の操作ウィンドウ上のコントロールへのデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
+ [チュートリアル: Excel 操作ウィンドウ上のコントロールにデータをバインドします。](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md)  
  データ ソースにバインドされるコントロールを Excel の操作ウィンドウに追加する方法について説明します。  
   
 ## <a name="custom-task-pane-walkthroughs"></a>カスタム作業ウィンドウのチュートリアル  
@@ -60,12 +60,12 @@ ms.locfileid: "34693157"
   
 ## <a name="controls-on-word-documents"></a>Word 文書上のコントロール  
  [チュートリアル: VSTO アドインで実行時にドキュメントにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md)  
- VSTO アドインを使用して、文書にコントロールを追加する方法について説明します。  
+ VSTO アドインを使用して文書にコントロールを追加する方法について説明します。  
   
- [チュートリアル: CheckBox コントロールを使用したドキュメント書式を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)  
+ [チュートリアル: CheckBox コントロールを使用してドキュメントの書式設定を変更します。](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)  
  ドキュメント レベルのカスタマイズでチェック ボックスを使用して、Word 文書の書式を変更する方法について説明します。  
   
- [チュートリアル: ボタンを使用してドキュメント内のテキスト ボックスにテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)  
+ [チュートリアル: ボタンを使用して文書内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)  
  Word 文書でボタンとテキスト ボックスを使用する方法について説明します。  
   
  [チュートリアル: オプション ボタンを使用してドキュメントのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)  
@@ -75,10 +75,10 @@ ms.locfileid: "34693157"
  [チュートリアル: VSTO アドイン プロジェクトでの実行時にワークシートにコントロールを追加します。](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)  
  VSTO アドインを使用してワークシートにコントロールを追加する方法について説明します。  
   
- [チュートリアル: CheckBox コントロールを使用してワークシートの書式を変更します。](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)  
+ [チュートリアル: CheckBox コントロールを使用してワークシートの書式設定を変更します。](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)  
  Excel ワークシートでチェック ボックスを使用して書式を変更する操作の基本について説明します。  
   
- [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスにテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)  
+ [チュートリアル: ボタンを使用してワークシート内のテキスト ボックスでテキストを表示します。](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)  
  Excel ワークシートでボタンやテキスト ボックスを使用する操作の基本について説明します。  
   
  [チュートリアル: オプション ボタンを使用してワークシートのグラフを更新します。](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "34693157"
  [Office ソリューションのチュートリアルにおけるデータ](../vsto/data-in-office-solutions-walkthroughs.md)   
  [セキュリティと配置のチュートリアル](../vsto/security-and-deployment-walkthroughs.md)   
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
- [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)   
- [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
+ [Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)   
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
   
   

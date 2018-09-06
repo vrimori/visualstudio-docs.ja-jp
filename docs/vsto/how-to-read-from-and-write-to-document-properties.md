@@ -1,5 +1,5 @@
 ---
-title: '方法: ドキュメント プロパティの読み書き |Microsoft ドキュメント'
+title: '方法: ドキュメント プロパティに書き込み、読み取りと'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,20 +18,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0f420968461b8f4d11416abe85521ed002cf11ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14cecb63e7f96e58b17672bbb5cb67a345b9ece8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673611"
 ---
-# <a name="how-to-read-from-and-write-to-document-properties"></a>方法 : ドキュメント プロパティの読み込みと書き込みを行う
+# <a name="how-to-read-from-and-write-to-document-properties"></a>方法: ドキュメント プロパティに書き込み、読み取りと
   ドキュメント プロパティをドキュメントと共に保存できます。 Office アプリケーションには、作成者、タイトル、件名など、多数の組み込みプロパティが用意されています。 このトピックでは、Microsoft Office Excel および Microsoft Office Word でドキュメント プロパティを設定する方法について説明します。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [i: アクセスの方法は、Microsoft Word のカスタム ドキュメント プロパティの操作?](http://go.microsoft.com/fwlink/?LinkId=136772)です。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[操作へのアクセスを行う方法と、Microsoft Word でカスタム ドキュメント プロパティを操作しますか?](http://go.microsoft.com/fwlink/?LinkId=136772)します。  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   
-## <a name="setting-document-properties-in-excel"></a>Excel のドキュメント プロパティの設定  
+## <a name="set-document-properties-in-excel"></a>Excel のドキュメント プロパティのセット  
  Excel の組み込みプロパティを操作するには、次のプロパティを使用します。  
   
 -   ドキュメント レベルのプロジェクトでは、 <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> クラスの `ThisWorkbook` プロパティを使用します。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  次のコード例は、ドキュメント レベルのプロジェクトで組み込みの **Revision Number** プロパティを変更する方法を示しています。  
   
-#### <a name="to-change-the-revision-number-property-in-excel"></a>Excel の Revision Number プロパティを変更するには  
+### <a name="to-change-the-revision-number-property-in-excel"></a>Excel の Revision Number プロパティを変更するには  
   
 1.  組み込みのドキュメント プロパティを変数に代入します。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[Trin_VstcoreProgramming#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#8)]
      [!code-csharp[Trin_VstcoreProgramming#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#8)]  
   
-## <a name="setting-document-properties-in-word"></a>Word のドキュメント プロパティの設定  
+## <a name="set-document-properties-in-word"></a>Word のドキュメント プロパティの設定  
  Word の組み込みプロパティを操作するには、次のプロパティを使用します。  
   
 -   ドキュメント レベルのプロジェクトでは、 <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> クラスの `ThisDocument` プロパティを使用します。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 04/16/2018
   
  次のコード例は、ドキュメント レベルのプロジェクトで組み込みの **Subject** プロパティを変更する方法を示しています。  
   
-#### <a name="to-change-the-subject-property"></a>Subject プロパティを変更するには  
+### <a name="to-change-the-subject-property"></a>Subject プロパティを変更するには  
   
 1.  組み込みのドキュメント プロパティを変数に代入します。  
   
@@ -83,8 +84,8 @@ ms.lasthandoff: 04/16/2018
  Word、Excel、およびそれらのオブジェクトを操作する場合でも、Microsoft Office では使用可能な組み込みドキュメント プロパティの一覧が提供されます。 未定義のプロパティにアクセスしようとすると、例外が発生します。  
   
 ## <a name="see-also"></a>関連項目  
- [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
- [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)   
- [方法: カスタム ドキュメント プロパティを作成および変更する](../vsto/how-to-create-and-modify-custom-document-properties.md)  
+ [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
+ [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
+ [方法: を作成し、カスタム ドキュメント プロパティの変更](../vsto/how-to-create-and-modify-custom-document-properties.md)  
   
   

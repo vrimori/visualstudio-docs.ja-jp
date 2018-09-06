@@ -1,5 +1,5 @@
 ---
-title: '方法: 無効になっている VSTO アドインを有効に再 |Microsoft ドキュメント'
+title: '方法: 無効になっている VSTO アドインを再度有効にします。'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,65 +19,66 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25344d23e0c9f1d6d237d008b0f6b18372490d04
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c81e44b548f4d1139810780731741a489e624047
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673227"
 ---
-# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効にされた VSTO アドインを再度有効にする
+# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効になっている VSTO アドインを再度有効にします。
   Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 VSTO アドインをデバッグする際に、アプリケーションが VSTO アドインを読み込まない場合は、アプリケーションにより VSTO アドインがハードに無効化、またはソフトに無効化されている可能性があります。  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
-## <a name="hard-disabled-vsto-add-ins"></a>ハードに無効化された VSTO アドイン  
- ハード的な無効化は、VSTO アドインによってアプリケーションが予期せずに終了した場合に発生する可能性があります。 また、開発用コンピューターで VSTO アドインの <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中にデバッガーを停止した場合にも発生することがあります。  
+## <a name="hard-disabled-vsto-add-ins"></a>ハードに無効化の VSTO アドイン  
+ ハードな無効化、VSTO アドインにより、アプリケーションは予期せず終了するときに発生します。 また、開発用コンピューターで VSTO アドインの <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中にデバッガーを停止した場合にも発生することがあります。  
   
-#### <a name="to-re-enable-a-vsto-add-in"></a>VSTO アドインを再度有効にするには  
+### <a name="to-re-enable-a-vsto-add-in"></a>VSTO アドインを再度有効にするには  
   
 1.  アプリケーションで **[ファイル]** タブをクリックします。  
   
 2.  *[ApplicationName* **オプション]** ボタンをクリックします。  
   
-3.  [カテゴリ] ウィンドウで **[アドイン]**をクリックします。  
+3.  [カテゴリ] ウィンドウで **[アドイン]** をクリックします。  
   
 4.  詳細ウィンドウで、「 **無効になっているアプリケーション アドイン** 」リストに VSTO アドインが表示されていることを確認します。  
   
      **[名前]** 列でアセンブリの名前を指定し、 **[場所]** 列でアプリケーション マニフェストの完全なパスを指定します。  
   
-5.  **[管理]** ボックスで、 **[無効になっている項目]**をクリックしてから **[移動]**をクリックします。  
+5.  **[管理]** ボックスで、 **[無効になっている項目]** をクリックしてから **[移動]** をクリックします。  
   
-6.  VSTO アドインを選択し、 **[有効にする]**をクリックします。  
+6.  VSTO アドインを選択し、 **[有効にする]** をクリックします。  
   
 7.  **[閉じる]** をクリックします。  
   
-## <a name="soft-disabled-vsto-add-ins"></a>ソフトに無効化された VSTO アドイン  
+## <a name="soft-disabled-vsto-add-ins"></a>ソフトに無効化の VSTO アドイン  
  ソフトな無効化は、VSTO アドインによってエラーが発生したが、アプリケーションが予期せずに終了するということがなかったという場合に発生する可能性があります。 たとえば、 <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中に VSTO アドインによってハンドルされない例外がスローされた場合に、アプリケーションによってそのアドインがソフトに無効化されることがあります。  
   
 > [!NOTE]  
 >  ソフトに無効化された VSTO アドインを再度有効にすると、アプリケーションはただちに VSTO アドインの読み込みを試みます。 アプリケーションにより VSTO アドインがソフトに無効化された当初の原因であった問題が解決されていない場合は、アプリケーションにより VSTO アドインが再度ソフトに無効化されます。  
   
-#### <a name="to-re-enable-an-vsto-add-in"></a>VSTO アドインを再度有効にするには  
+### <a name="to-re-enable-a-vsto-add-in"></a>VSTO アドインを再度有効にするには  
   
 1.  アプリケーションで **[ファイル]** タブをクリックします。  
   
 2.  *[ApplicationName* **オプション]** ボタンをクリックします。  
   
-3.  [カテゴリ] ウィンドウで **[アドイン]**をクリックします。  
+3.  [カテゴリ] ウィンドウで **[アドイン]** をクリックします。  
   
 4.  詳細ウィンドウで、「 **非アクティブなアプリケーション アドイン** 」リストに VSTO アドインが表示されていることを確認します。  
   
      **[名前]** 列でアセンブリの名前を指定し、 **[場所]** 列でアプリケーション マニフェストの完全なパスを指定します。  
   
-5.  **[管理]** ボックスで、 **[COM アドイン]**をクリックしてから **[移動]**をクリックします。  
+5.  **[管理]** ボックスで、 **[COM アドイン]** をクリックしてから **[移動]** をクリックします。  
   
 6.  **[COM アドイン]** ダイアログ ボックスで、無効になっている VSTO アドインの横のチェック ボックスをオンにします。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションのビルド](../vsto/building-office-solutions.md)   
- [Office プロジェクトのデバッグ](../vsto/debugging-office-projects.md)   
- [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)  
+ [Office ソリューションを構築します。](../vsto/building-office-solutions.md)   
+ [Office プロジェクトをデバッグします。](../vsto/debugging-office-projects.md)   
+ [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)  
   
   

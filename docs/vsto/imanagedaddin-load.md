@@ -14,18 +14,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b5f8e94ebcd0aec8e17cac8d651017ed1565d2ec
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: d1ea659d59e780beba3949e7cae363affa312c17
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673718"
 ---
 # <a name="imanagedaddinload"></a>IManagedAddin::Load
   管理対象の VSTO アドインが読み込まれるときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```c++
+```csharp
 HRESULT Load([in] BSTR bstrManifestURL,   
              [in] IDispatch *pdispApplication);  
 ```  
@@ -35,15 +36,15 @@ HRESULT Load([in] BSTR bstrManifestURL,
 |パラメーター|説明|  
 |---------------|-----------------|  
 |*bstrManifestURL*|VSTO アドインのマニフェストの完全なパス。|  
-|*pdispApplication*|VSTO アドインを読み込むホスト アプリケーションを表す IDispatch へのポインター。|  
+|*pdispApplication*|VSTO アドインの読み込みは、ホスト アプリケーションを表すへのポインター。|  
   
 ## <a name="return-value"></a>戻り値  
  メソッドが正常に完了したかどうかを示す HRESULT 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  マニフェストは、VSTO アドインの読み込みに使用される情報を提供するファイル (通常は XML ファイル) です。 たとえば、マニフェストには、VSTO アドイン アセンブリの場所や、VSTO アドインが読み込まれるときにインスタンス化するエントリ ポイント クラスを指定できます。  
   
- *BstrManifestURL*パラメーターには値が含まれています、`Manifest`の下のエントリ、 **HKEY_CURRENT_USER\Software\Microsoft\Office\\_\<アプリケーション名>_ \Addins\\_\<アドイン ID >_**  VSTO アドインのレジストリ キー。 詳細については、次を参照してください。 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)です。  
+ *BstrManifestURL*パラメーターには値が含まれています、`Manifest`の下のエントリ、 **HKEY_CURRENT_USER\Software\Microsoft\Office\\_\<アプリケーション名>_ \Addins\\_\<アドイン ID >_**  VSTO アドインのレジストリ キー。 詳細については、次を参照してください。 [IManagedAddin インターフェイス](../vsto/imanagedaddin-interface.md)します。  
   
  読み込まれる VSTO アドインのアプリケーション ドメインやセキュリティ ポリシーの構成などのタスクを実行するように、 [IManagedAddIn::Load](../vsto/imanagedaddin-load.md) メソッドを実装します。  
   

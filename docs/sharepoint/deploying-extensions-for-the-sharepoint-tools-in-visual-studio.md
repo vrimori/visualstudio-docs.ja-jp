@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 58b430d1331a12e080d238d34a4817afea8585d1
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 5f5ee0493a8a780710eb4b6bbbd9426e23baf48e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326866"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774917"
 ---
 # <a name="deploy-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio の SharePoint ツールの拡張機能をデプロイします。
 
@@ -134,7 +134,7 @@ VSIX パッケージの作成および展開することの詳細については
 
 6.  **ソリューション エクスプ ローラー**プロジェクト テンプレートや項目テンプレート プロジェクトのショートカット メニューを開き、選択し、**プロジェクトのアンロード**します。
 
-7.  プロジェクト ノードのショートカット メニューを再度開き、選択**編集***YourTemplateProjectName***.csproj**または**編集***YourTemplateProjectName***します。vbproj**します。
+7.  プロジェクト ノードのショートカット メニューを再度開き、選択**編集**_YourTemplateProjectName_**.csproj**または**編集**_YourTemplateProjectName_**.vbproj**します。
 
 8.  プロジェクト ファイルで次の `VSTemplate` 要素を見つけます。
 

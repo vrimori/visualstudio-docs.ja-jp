@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 095325fc8312747b61ff4312c5fe616ae79ce045
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 8bcac83d23bae3d8c269a53a95fedb9507245e9f
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152959"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775827"
 ---
 # <a name="add-user-control-to-the-start-page"></a>スタート ページにユーザー コントロールを追加します。
 このチュートリアルでは、カスタム スタート ページへの DLL の参照を追加する方法を示します。 例では、ソリューションにユーザー コントロールを追加、ユーザー コントロールをビルドおよびスタート ページからビルドされたアセンブリを参照 *.xaml*ファイル。 新しいタブでは、基本的な Web ブラウザーとして機能するユーザー コントロールをホストします。  
@@ -177,7 +177,7 @@ ms.locfileid: "39152959"
   
 1.  コピーは、XAML ファイルとサポート テキスト ファイルまたはマークアップをファイルに、 *%USERPROFILE%\My documents \visual Studio 2015 \startpages\\* フォルダー。  
   
-2.  スタート ページは、すべてのコントロールまたは Visual Studio がインストールされていないアセンブリで型を参照する場合、アセンブリをコピーし、貼り付けることで * Visual Studio インストール フォルダー ***\Common7\IDE\PrivateAssemblies\\** .  
+2.  スタート ページは、すべてのコントロールまたは Visual Studio がインストールされていないアセンブリで型を参照する場合、アセンブリをコピーし、貼り付けることで_Visual Studio インストール フォルダー_**\Common7\IDE\PrivateAssemblies\\**します。  
   
 3.  Visual Studio コマンド プロンプトで「 **devenv/rootsuffix Exp**を Visual Studio の実験用インスタンスを開きます。  
   

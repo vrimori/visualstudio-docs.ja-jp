@@ -1,5 +1,5 @@
 ---
-title: '方法: Office ソリューションの署名'
+title: '方法: Office ソリューションに署名'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,36 +17,36 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d5fa4a837de66a39502e2c9e2d8466f3998acc4d
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 161c175b6bb37ece93559f0378bbaf8e5e16d170
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262192"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776134"
 ---
-# <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションの署名
-  ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用してによる追加のセキュリティ ポリシー更新のないすべてのソリューションが信頼されます。  
+# <a name="how-to-sign-office-solutions"></a>方法: Office ソリューションに署名
+  ソリューションに署名する場合は、証拠として、証明書を使用してソリューションに信頼を付与できます。 複数のソリューションに対して、同じ証明書を使用して追加のセキュリティ ポリシーの更新プログラムのないすべてのソリューションが信頼されます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- アプリケーションを手動で編集すると、配置が、マニフェストの生成および編集ツールを使用してマニフェスト (*mage.exe*と*mageui.exe*)、使用できるようにマニフェストに再署名する必要があります。 詳細については、次を参照してください。[する方法: アプリケーション マニフェストと配置マニフェストに再署名](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)です。  
+ および配置が、マニフェストの生成および編集ツールを使用してマニフェストにアプリケーションを手動で編集する場合 (*mage.exe*と*mageui.exe*) を使用する前にマニフェストに再署名する必要があります。 詳細については、次を参照してください。[方法: アプリケーション マニフェストと配置マニフェストに再署名](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)します。  
   
-## <a name="sign-by-using-a-certificate"></a>証明書を使用して署名します。  
- 証明書は、一意のキーとソリューションの発行元の id を含むファイルです。 証明機関から証明書を購入または独自の証明書を作成し、証明機関の署名があることがことができます。  
+## <a name="sign-by-using-a-certificate"></a>証明書を使用してサインインします。  
+ 証明書は、一意のキーとソリューション発行者の id を含むファイルです。 証明書機関から証明書を購入または独自の証明書を作成し、署名証明書の権限を持つできます。  
   
- Visual Studio は、Office ソリューションのデバッグを有効に一時的な証明書で署名します。 証拠として配置されるソリューションで一時的な証明書を使用する必要がありますされません。  
+ Visual Studio は、Office ソリューションのデバッグを有効にする一時的な証明書で署名します。 証拠として、デプロイされたソリューションで一時的な証明書を使用する必要がありますできません。  
   
-### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>証明書を使用して Office ソリューションを署名するには  
+### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>証明書を使用して Office ソリューションに署名するには  
   
-1.  **プロジェクト** メニューのをクリックして * SolutionName ***プロパティ**です。  
+1.  **プロジェクト** メニューのをクリックして_SolutionName_**プロパティ**します。  
   
 2.  **[署名]** タブをクリックします。  
   
-3.  選択**ClickOnce マニフェストに署名**です。  
+3.  選択**ClickOnce マニフェストに署名**します。  
   
-4.  クリックして、証明書を探します**ストアから選択**または**ファイルから選択**し、証明書に移動します。  
+4.  クリックして証明書を見つけます**ストアから選択**または**ファイルから選択**証明書に移動するとします。  
   
-5.  適切な証明書を使用していることを確認する をクリックして**詳細**証明書情報を表示します。  
+5.  正しい証明書が使用されていることを確認するには、次のようにクリックします。**詳細**証明書情報を表示します。  
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)   

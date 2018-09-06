@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8f125a2b8a62690cd31d53d145ea9d7b1e54a3ce
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: 9bed7d523d91b43abe5455ea19567da5647f468c
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008707"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774662"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Office ソリューションのデプロイをトラブルシューティングします。
   このトピックでは、Office ソリューションを配置するときに発生する可能性がある一般的な問題を解決する方法について説明します。  
@@ -72,7 +72,7 @@ ms.locfileid: "40008707"
   
 ### <a name="to-download-assemblies-instead-of-loading-cached-copies"></a>キャッシュしたコピーではなくアセンブリをダウンロードするには  
   
-1.  メニュー バーで、**プロジェクト**、* ProjectName ***プロパティ**します。  
+1.  メニュー バーで、**プロジェクト**、 _ProjectName_**プロパティ**します。  
   
 2.  **[アプリケーション]** ページで、 **[アセンブリ情報]** を選択します。  
   

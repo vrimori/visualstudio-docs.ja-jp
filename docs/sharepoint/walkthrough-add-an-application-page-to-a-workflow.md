@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c69e6d5ddf9cd1691b3ddd736155dbd58a82419e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 841257a03e257b92b728d33751869a02e2c40db6
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626001"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774589"
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>チュートリアル: ワークフローへのアプリケーション ページを追加します。
   このチュートリアルでは、ワークフローから派生したワークフロー プロジェクトにデータを表示するアプリケーション ページを追加する方法を示します。 トピックで説明されているプロジェクトを基に、[チュートリアル: 関連付けと開始フォームでワークフローを作成する](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)します。
@@ -337,7 +337,7 @@ ms.locfileid: "42626001"
 
 14. Shared Documents の一覧内の他のドキュメントの手順 11 ~ 13 を繰り返します。 (ドキュメントの正確な数重要ではありません。)
 
-15. Web ブラウザーで次の URL を開き、経費明細書アプリケーションの概要ページを表示: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**します。
+15. Web ブラウザーで次の URL を開き、経費明細書アプリケーションの概要ページを表示: **http://**_SystemName_**/_layouts/ExpenseReport/ApplicationPage1.aspx**.
 
      経費レポートの概要 ページには、すべてを割り当てられている量を超えた経費報告書の値を超えている金額とすべてのレポートの合計金額が表示されます。
 

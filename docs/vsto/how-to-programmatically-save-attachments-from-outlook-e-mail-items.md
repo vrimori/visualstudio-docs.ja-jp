@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存 |Microsoft ドキュメント'
+title: '方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,17 +19,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b3ca0f8c86b31576fd5ce219a536725431b27007
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fd564b71622ad5f9ee6500ddc3864bad0b21686b
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672407"
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-e-mail-items"></a>方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存する
+# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>方法: プログラムによって Outlook の電子メール アイテムから添付ファイルを保存
   この例では、メールを受信トレイで受け取ったときに、電子メールの添付ファイルを指定されたフォルダーに保存します。  
   
 > [!IMPORTANT]  
->  この例は、という名前のフォルダーを追加する場合にのみ**TestFileSave** C ディレクトリのルートに位置します。  
+>  この例の動作という名前のフォルダーを追加する場合にのみ**TestFileSave** C ディレクトリのルートにあります。  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -37,9 +38,9 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_OL_SaveAttachments#1](../vsto/codesnippet/CSharp/Trin_OL_SaveAttachments/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>関連項目  
- [メール アイテムの操作](../vsto/working-with-mail-items.md)   
- [方法: プログラムによって名前のフォルダーを取得します。](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
- [方法: プログラムによって電子メール メッセージが受信したときにアクションを実行](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
- [方法: プログラムによって特定のフォルダー内を検索する](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
+ [メールの項目を操作します。](../vsto/working-with-mail-items.md)   
+ [方法: プログラムによって名前でフォルダーを取得します。](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)   
+ [方法: プログラムによって電子メール メッセージを受信したときにアクションを実行](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)   
+ [方法: プログラムによって特定のフォルダー内を検索](../vsto/how-to-programmatically-search-within-a-specific-folder.md)  
   
   

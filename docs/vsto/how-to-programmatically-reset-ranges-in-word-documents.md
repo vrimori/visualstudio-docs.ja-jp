@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Word の範囲をリセット文書 |Microsoft ドキュメント'
+title: '方法: プログラムによって Word のドキュメント内の範囲をリセット'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,18 +16,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ed267f4ed2211f2dda69b620aec9fdadbe5a76c2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0da42b0e6ad6f8761e474292532728beb3987c57
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672366"
 ---
-# <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>方法: プログラムによって Word 文書の範囲をリセットする
+# <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>方法: プログラムによって Word のドキュメント内の範囲をリセット
   <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> メソッドを使用して、Microsoft Office の Word 文書で既存の範囲のサイズを変更します。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### <a name="to-reset-an-existing-range"></a>既存の範囲をリセットするには  
+## <a name="to-reset-an-existing-range"></a>既存の範囲をリセットするには  
   
 1.  ドキュメント内の最初の 7 つの文字で始まる最初の範囲を設定します。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
   
-#### <a name="to-reset-an-existing-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで既存の範囲をリセットするには  
+### <a name="to-reset-an-existing-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで既存の範囲をリセットするには  
   
 1.  次の例は、ドキュメント レベルのカスタマイズの例全体を示しています。 このコードを使用するには、プロジェクトの `ThisDocument` クラスから実行します。  
   
@@ -57,17 +58,17 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
-#### <a name="to-reset-an-existing-range-in-an-vsto-add-in"></a>VSTO アドインで既存の範囲をリセットするには  
+### <a name="to-reset-an-existing-range-in-a-vsto-add-in"></a>VSTO アドインで既存の範囲をリセットするには  
   
-1.  次の例は、VSTO アドインの例全体を示しています。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。  
+1.  次の例では、VSTO アドインの完全な例を示します。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。  
   
      [!code-vb[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#42)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#42)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
- [方法: プログラムによってを定義し、ドキュメントで範囲を選択](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [方法: プログラムによって開始と終了文字の範囲を取得](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   
- [方法: プログラムによって文書内の範囲または選択範囲を縮小する](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)  
+ [方法: プログラムによってドキュメント内の範囲を拡張](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
+ [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
+ [方法: 範囲の先頭と末尾の文字をプログラムで取得します。](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   
+ [方法: プログラムによって範囲またはドキュメント内の選択を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)  
   
   

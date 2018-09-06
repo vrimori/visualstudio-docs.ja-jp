@@ -19,17 +19,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0152fea139d6351c947412260247c47f79bb6b66
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: dfbb7b1a10c27793133afdfdaf0d673fac9535c8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34692461"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673598"
 ---
 # <a name="office-ui-customization"></a>Office UI のカスタマイズ
   Microsoft Office アプリケーションのユーザー インターフェイス (UI) は、Visual Studio の  Office Developer Tools を使用してカスタマイズできます。 以下のトピックでは、カスタマイズできる UI 機能について説明します。  
   
--   [UI の機能の比較](#Comparison)  
+-   [UI 機能の比較](#Comparison)  
   
 -   [操作ウィンドウやカスタム作業ウィンドウ](#Actions)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34692461"
   
 -   [ショートカット メニュー](#Shortcut)  
   
-##  <a name="Comparison"></a> UI の機能の比較  
+##  <a name="Comparison"></a> UI 機能の比較  
  次の表では、Microsoft Office プロジェクトでカスタマイズできる主な UI 機能を比較します。  
   
 |機能|サポートされているプロジェクトの種類|サポートされる Microsoft Office アプリケーション|  
@@ -67,36 +67,36 @@ ms.locfileid: "34692461"
   
  操作ウィンドウやカスタム作業ウィンドウには、データ エントリなど、ユーザーの作業を支援するさまざまなコントロールが用意されています。 リボン グループと比較すると、操作ウィンドウとカスタム作業ウィンドウには、テキストやコントロールを含む大きな領域があります。  
   
- 操作ウィンドウの詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)です。 カスタム作業ウィンドウの詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  
+ 操作ウィンドウの詳細については、次を参照してください。[操作ウィンドウの概要](../vsto/actions-pane-overview.md)します。 カスタム作業ウィンドウの詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
   
 ##  <a name="Ribbon"></a> カスタム リボン UI  
  Office のアプリケーションに追加する機能を表示するようにリボン UI をカスタマイズすることができます。 リボンを使用すると、関連するコマンドを (コントロールの形式で) 見つけやすいように整理できます。 独自のリボン タブとグループを作成し、ソリューションで提供する機能にユーザーがアクセスできるようにすることができます。 旧バージョンの Microsoft Office System でメニューとツールバーを使用してアクセスしていた機能の多くは、現在ではリボンを使用してアクセスできます。  
   
- 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)です。  
+ 詳細については、次を参照してください。[リボンの概要](../vsto/ribbon-overview.md)します。  
   
 ##  <a name="Backstage"></a> Backstage ビュー  
- Office アプリケーションをクリックすると、**ファイル**タブには、Backstage ビューが表示されます。 Backstage ビューには、ファイルレベルのタスクと操作を組み合わせた UI が用意されています。Backstage は、2007 Microsoft Office System の Microsoft Office ボタンで使用できる似た機能の置き換えです。 Backstage ビューは、XML を使用してフルに拡張することができます。  
+ クリックすると、Office アプリケーションで、**ファイル**タブには、Backstage ビューが表示されます。 Backstage ビューには、ファイルレベルのタスクと操作を組み合わせた UI が用意されています。Backstage は、2007 Microsoft Office System の Microsoft Office ボタンで使用できる似た機能の置き換えです。 Backstage ビューは、XML を使用してフルに拡張することができます。  
   
- Visual Studio には、Backstage ビューをカスタマイズできるデザイナーや API が用意されていません。 ただし、追加する場合、**リボン (XML)** 項目、Office プロジェクトには、Backstage ビューをカスタマイズするリボン XML ファイルに XML を追加できます。 詳細については**リボン (XML)** 、項目を参照してください[リボン XML](../vsto/ribbon-xml.md)です。  
+ Visual Studio には、Backstage ビューをカスタマイズできるデザイナーや API が用意されていません。 ただし、追加する場合、**リボン (XML)** 項目、Office プロジェクトには、Backstage ビューをカスタマイズするリボン XML ファイルに XML を追加できます。 詳細については**リボン (XML)** 、項目を参照してください[リボン XML](../vsto/ribbon-xml.md)します。  
   
- Backstage ビューのカスタマイズの詳細については、次を参照してください。[開発者向けの Office 2010 の Backstage ビューの概要](http://go.microsoft.com/fwlink/?LinkId=182189)と[開発者向けの Office 2010 の Backstage ビューをカスタマイズ](http://go.microsoft.com/fwlink/?LinkId=182188)です。  
+ Backstage ビューをカスタマイズする方法の詳細については、次を参照してください。[開発者向け Office 2010 の Backstage ビュー](http://go.microsoft.com/fwlink/?LinkId=182189)と[開発者向け Office 2010 の Backstage ビューをカスタマイズ](http://go.microsoft.com/fwlink/?LinkId=182188)します。  
   
 ##  <a name="FormRegion"></a> Outlook フォーム領域  
  標準の Microsoft Office Outlook フォームにカスタム機能を追加するには、フォーム領域を使用します。 フィールドまたはコントロールを追加して既存のフォームを拡張するフォーム領域を作成できます。 Visual Studio で Office 開発ツールを使用して新しいフォーム領域を作成する場合、フォーム領域には Windows フォーム コントロールのみを使用できます。 Outlook で設計したフォーム領域をインポートする場合、ネイティブ Outlook コントロールのみを使用できます。  
   
  Outlook UI のさまざまな領域を占有するフォーム領域を作成できます。 たとえば、隣接するフォーム領域をフォームの最初のページの下部に表示し、隣接する各フォーム領域を展開可能にすることができます。 また、完全な追加のフォーム ページとして表示し、既存の標準フォームまたはカスタム フォームに表示できる個別のフォーム領域を追加することもできます。  
   
- 詳細については、次を参照してください。[作成 Outlook フォーム領域の](../vsto/creating-outlook-form-regions.md)します。  
+ 詳細については、次を参照してください。[作成の Outlook フォーム領域](../vsto/creating-outlook-form-regions.md)します。  
   
 ##  <a name="Controls"></a> ドキュメントのコントロール  
  Word 文書と Excel ワークシートには多様なコントロールを追加できます。 たとえば、日付選択カレンダー コントロールを文書に追加して、ユーザーが標準の形式で日付を入力できるようにしたり、データベースにデータを送信するボタンをワークシートに追加したりすることができます。  
   
- Excel または Word のドキュメント レベルのプロジェクトを開発するときに Visual Studio デザイナーを使用して、デザイン時に、プロジェクトの文書またはブックにコントロールを追加または実行時にコントロールをプログラムで追加することができます。 Excel または Word の VSTO アドイン プロジェクトを開発するときは、任意の開いている文書またはブック実行時にプログラムによってコントロールを追加できます。  
+ Excel または Word のドキュメント レベルのプロジェクトを開発する場合は、Visual Studio デザイナーを使用するには、デザイン時に、プロジェクト内のドキュメントまたはブックにコントロールを追加するまたは実行時にコントロールをプログラムで追加することができます。 Excel または Word の VSTO アドイン プロジェクトを開発する場合は、開いているドキュメントや実行時にブックをプログラムでコントロールを追加できます。  
   
- 詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)と[Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)です。  
+ 詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)と[Windows フォームでコントロールの Office ドキュメントの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)します。  
   
 ##  <a name="Shortcut"></a> ショートカット メニュー  
- ドキュメント ウィンドウやアプリケーション ウィンドウを右クリックすると、ショートカット メニューが表示されます。 ユーザーがドキュメント、ブック、またはホスト コントロールを右クリックするなど、イベントが発生した後に表示されるようにショートカット メニューを設定することができます。 ショートカット メニューには、さまざまなメニュー コマンドやコントロールを追加できます。 ショートカット メニューを作成するには、XML を使用します。 追加する場合、**リボン (XML)** 項目、Office プロジェクトにショートカット メニューを作成、リボン XML ファイルに XML を追加することができます。 XML を使用して、ショートカット メニューを作成する方法の詳細については、次を参照してください。[する方法: ショートカット メニューにコマンドを追加](../vsto/how-to-add-commands-to-shortcut-menus.md)です。  
+ ドキュメント ウィンドウやアプリケーション ウィンドウを右クリックすると、ショートカット メニューが表示されます。 ユーザーがドキュメント、ブック、またはホスト コントロールを右クリックするなど、イベントが発生した後に表示されるようにショートカット メニューを設定することができます。 ショートカット メニューには、さまざまなメニュー コマンドやコントロールを追加できます。 ショートカット メニューを作成するには、XML を使用します。 追加する場合、**リボン (XML)** 項目、Office プロジェクトには、ショートカット メニューを作成するリボン XML ファイルに XML を追加できます。 XML を使用して、ショートカット メニューを作成する方法の詳細については、次を参照してください。[方法: ショートカット メニュー コマンドを追加](../vsto/how-to-add-commands-to-shortcut-menus.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [リボンの概要](../vsto/ribbon-overview.md)   
@@ -105,7 +105,7 @@ ms.locfileid: "34692461"
  [Outlook フォーム領域を作成します。](../vsto/creating-outlook-form-regions.md)   
  [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)   
  [Office ソリューションで WPF コントロールを使用します。](../vsto/using-wpf-controls-in-office-solutions.md)   
- [方法: リボンに [開発] タブを表示](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)   
+ [方法: リボンの [開発] タブを表示します。](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)   
  [方法: アドインの表示は、ユーザー インターフェイス エラー](../vsto/how-to-show-add-in-user-interface-errors.md)   
  [チュートリアル: Windows フォームを使用してデータを収集します。](../vsto/walkthrough-collecting-data-using-a-windows-form.md)  
   

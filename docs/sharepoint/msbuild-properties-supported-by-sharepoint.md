@@ -1,5 +1,5 @@
 ---
-title: SharePoint でサポートされている MSBuild プロパティ |Microsoft ドキュメント
+title: SharePoint でサポートされる MSBuild プロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,45 +17,45 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1e60843119ee72f1164288f50b27116cdda31e9b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1695a23ba9dddc27a37f23c714678fe6b779d328
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672347"
 ---
-# <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint でサポートされている MSBuild プロパティ
-  どの[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]Microsoft.VisualStudio.SharePoint.targets ファイル、プロジェクト ファイルまたはプロジェクト ユーザー ファイルで定義されているプロパティを使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint プロジェクト。 一般的なだけでなく[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]プロジェクトでは、SharePoint によって提供されるプロパティは、SharePoint プロジェクトに固有の追加のプロパティを定義します。  
+# <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint でサポートされる MsBuild プロパティ
+  すべて[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]Microsoft.VisualStudio.SharePoint.targets ファイル、プロジェクト ファイル、またはプロジェクト ユーザー ファイルで定義されているプロパティを使用することができます[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint プロジェクト。 一般的なだけでなく[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]プロパティは、プロジェクトでは、SharePoint によって提供される SharePoint プロジェクトに固有の追加のプロパティを定義します。  
   
- 共通の一覧については[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]プロパティを参照してください[MSBuild プロジェクトの共通プロパティ](http://go.microsoft.com/fwlink/?LinkID=168687)です。 使用するプログラミング言語でサポートされるプロパティの一覧については、.targets ファイル、プロジェクト ファイル (.csproj または .vbproj)、またはプロジェクト ユーザー ファイルの参照 (csproj.user または。 vbproj.user)。  
+ 共通の一覧については[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]プロパティを参照してください[MSBuild プロジェクトの共通プロパティ](http://go.microsoft.com/fwlink/?LinkID=168687)します。 使用するプログラミング言語でサポートされるプロパティの完全な一覧、検索、 *.targets*ファイル、プロジェクト ファイル (*.csproj*または *.vbproj*)、またはプロジェクト ユーザー ファイル (*csproj.user*または *. vbproj.user*)。  
   
-## <a name="msbuild-properties-specific-to-sharepoint"></a>SharePoint 固有の MSBuild プロパティ  
- 次の表にリスト[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]の SharePoint プロジェクトに適用されるプロパティ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。 その他のプロパティが存在するが、内部で使用できます。  
+## <a name="msbuild-properties-specific-to-sharepoint"></a>SharePoint に固有の MsBuild プロパティ
+ 次の表[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]の SharePoint プロジェクトに適用するプロパティ[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 その他のプロパティが存在するが、これらは内部使用用です。  
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
 |SharePointSiteUrl|表す文字列、 [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint サイトにします。|  
 |SandboxedSolution|ソリューションがサンド ボックス ソリューションであるかどうかを示すブール値。|  
 |ActiveDeploymentConfiguration|アクティブな配置構成。|  
-|IncludeAssemblyInPackage|パッケージ ファイルにアセンブリが含まれるかどうかを示すブール値。|  
+|IncludeAssemblyInPackage|パッケージ ファイルにアセンブリを含めるかどうかを示すブール値。|  
 |PreDeploymentCommand|配置前コマンドのステップで実行するコマンドを表す文字列値。|  
-|PostDeploymentCommand|配置後コマンド ステップで実行するコマンドを表す文字列値。|  
-|CustomBeforeSharePointTargets|パスを表す文字列、[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]ターゲット ファイル。 ターゲット ファイルが存在するが定義されている場合、SharePoint ターゲット データの前にインポートされます。 このプロパティを使用して、付属の SharePoint のターゲット ファイルを変更しなくてもパッケージ関連のプロパティを事前に定義して、パッケージのプロセスをカスタマイズできます。 ただしターゲット ファイルがまだすべての SharePoint プロジェクトに適用できます。|  
-|CustomAfterSharePointTargets|パスを表す文字列、[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]ターゲット ファイル。 ターゲット ファイルが存在するが定義されている場合、ターゲットの SharePoint データのすべてのインポートはありません。 このプロパティを使用して、付属の SharePoint のターゲット ファイルを変更しなくてもパッケージ関連のプロパティとターゲットをオーバーライドすることで、パッケージのプロセスをカスタマイズできます。 ただしターゲット ファイルがまだすべての SharePoint プロジェクトに適用できます。|  
-|LayoutPath|各パッケージ化するファイルの一時的に置かれる .wsp ファイルに追加される前に、のルート ディレクトリを表す文字列。 このパスを追加、削除、または使用して、.wsp ファイルの内容を変更するためにパッケージ化するファイルを変更する BeforeLayout および AfterLayout のターゲットをオーバーライドする際に知っておくことができます。|  
+|PostDeploymentCommand|配置後コマンドのステップで実行するコマンドを表す文字列値。|  
+|CustomBeforeSharePointTargets|パスを表す文字列を[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]ターゲット ファイル。 ターゲット ファイルが存在し、定義されている場合は、SharePoint のターゲット データの前にインポートされます。 このプロパティでは、付属の SharePoint のターゲット ファイルを変更することがなくパッケージ関連のプロパティを事前に定義して、パッケージのプロセスをカスタマイズできます。 まだ、ターゲット ファイルがまだすべての SharePoint プロジェクトに適用します。|  
+|CustomAfterSharePointTargets|パスを表す文字列を[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]ターゲット ファイル。 ターゲット ファイルが存在し、定義されている場合、ターゲットの SharePoint データのすべてのインポートはありません。 このプロパティでは、付属の SharePoint のターゲット ファイルを変更する必要なくパッケージ関連のプロパティとターゲットをオーバーライドすることで、パッケージのプロセスをカスタマイズできます。 まだ、ターゲット ファイルがまだすべての SharePoint プロジェクトに適用します。|  
+|LayoutPath|これらのパッケージ化するファイルが一時的に配置に追加される前に、ルート ディレクトリを表す文字列、 *.wsp*ファイル。 このパスは、追加、削除、または使用しての内容を変更するためにパッケージ化するファイルを変更する BeforeLayout および AfterLayout のターゲットをオーバーライドする場合を把握するのに役立ちます、 *.wsp*ファイル。|  
 |BasePackagePath|パッケージが置かれているフォルダーを表す文字列。 この値は bin \debug など、プロジェクトの出力ディレクトリを使用します。|  
 |PackageExtension|パッケージに追加するファイル名拡張子を表す文字列。 既定値は、wsp です。|  
-|AssemblyDeploymentTarget|SharePoint サーバー上のプロジェクト アセンブリの展開先の場所を表す文字列。 値は GlobalAssemblyCache (既定) または web アプリケーションのいずれかです。 このプロパティは、[プロパティ] ウィンドウでも設定できます。|  
+|AssemblyDeploymentTarget|SharePoint サーバー上のプロジェクト アセンブリの配置場所を表す文字列。 その値は、GlobalAssemblyCache (既定値) または web アプリケーションのいずれかです。 このプロパティは、[プロパティ] ウィンドウでも設定できます。|  
 |PackageWithValidation|パッケージ化する前に検証を実行するかどうかを指定するブール値。 このプロパティを使用して、パッケージのビルド時に検証エラーを無視できます。|  
-|ValidatePackageDependsOn|ValidatePackage ターゲットの前に実行するその他のターゲットを定義する文字列。|  
-|TokenReplacementFileExensions|パッケージ化中に置き換えられて、トークンを持つファイルを定義する文字列。|  
+|ValidatePackageDependsOn|ValidatePackage ターゲットの前に実行する追加のターゲットを定義する文字列。|  
+|TokenReplacementFileExensions|パッケージ化中に置き換え、トークンを持つファイルを定義する文字列。|  
   
-## <a name="using-msbuild-properties-in-the-properties-page"></a>MSBuild プロパティを使用して、[プロパティ] ページ  
- ハードコーディングされた文字列を使用する代わりに、柔軟性、**配置前コマンドライン**と**配置後コマンドライン**ボックス SharePoint プロパティ ページで、SharePoint を使用することができます引数としてプロパティです。 特定を指定する代わりに、たとえば、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]文字列、SharePoint サイトを代わりに使用できます`$(SharePointSiteUrl)`です。  
+## <a name="use-msbuild-properties-in-the-properties-page"></a>MsBuild プロパティを使用して、[プロパティ] ページ
+ ハード コーディングされた文字列を使用するのではなく、柔軟性、**配置前コマンドライン**と**配置後コマンドライン**ボックス SharePoint プロパティ ページで、SharePoint を使用することができます引数としてのプロパティです。 特定の指定ではなく、たとえば、[!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)]文字列、SharePoint サイトの代わりに使える`$(SharePointSiteUrl)`します。  
   
 > [!NOTE]  
->  使用するか、[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]の変数構文`$(` *propertyName* `)`または環境変数の構文`%` *propertyName* `%`プロパティを指定します。  
+>  いずれかを使用することができます、[!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)]変数構文`$(` *propertyName* `)`または環境変数の構文`%` *propertyName* `%`プロパティを指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目
  [MSBuild リファレンス](/visualstudio/msbuild/msbuild-reference)  
-  
   
