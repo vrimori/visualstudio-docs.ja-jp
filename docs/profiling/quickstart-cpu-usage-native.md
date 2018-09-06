@@ -2,7 +2,7 @@
 title: CPU 使用率データの分析 (C++)
 description: CPU 使用率診断ツールを使用して C++ アプリでのアプリのパフォーマンスを測定する
 ms.custom: ''
-ms.date: 12/05/2017
+ms.date: 08/06/2018
 ms.technology: vs-ide-debug
 ms.topic: quickstart
 f1_keywords:
@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d5b4d67e5b23e9d875f700f9f7e5171469952c5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c4cf51a4961d6b9139d4f8fdbfd6c5df2ab0052c
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42627113"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (C++)
 
@@ -27,17 +28,21 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 ここで説明する **CPU 使用率**ツールでは必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/profiling-feature-tour.md)で得られる別の種類の情報が役に立つことがあります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。 診断ハブには、この種のデータを記録し、分析するためのオプションが他にもいろいろあります。
 
+Windows 8 以降では、デバッガーを使用してプロファイル ツールを実行する必要があります (**[診断ツール]** ウィンドウ)。 Windows 7 以降では、事後検証ツールである[パフォーマンス プロファイラー](../profiling/profiling-feature-tour.md)を使用することができます。
+
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio で、**[ファイル]、[新しいプロジェクト]** の順に選択します。
+1. Visual Studio で、**[ファイル]** > **[新しいプロジェクト]** の順に選択します。
 
 2. **[Visual C++]** の下で **[Windows デスクトップ]** を選択し、真ん中のウィンドウで **[Windows コンソール アプリケーション]** を選択します。
+
+    **[Windows コンソール アプリケーション]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[C++ によるデスクトップ開発]** ワークロード、**[変更]** の順に選択します。
 
 3. 「**Diagnostics_Get_Started_Native**」のような名前を入力し、**[OK]** をクリックします。
 
     Visual Studio によってプロジェクトが作成されます。
 
-4. MyDbgApp.cpp で次のコードを
+4. *MyDbgApp.cpp* で、次のコードを置換します
 
     ```c++
     int main()
@@ -110,7 +115,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     }
     ```
   
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 手順 1: プロファイリング データを収集する 
+## <a name="step-1-collect-profiling-data"></a>手順 1: プロファイル データを収集する 
   
 1.  最初に、`main` 関数のこのコード行でアプリのブレークポイントを設定します。
 
@@ -125,9 +130,9 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
     > [!TIP]
     > 2 つのブレークポイントを設定することで、分析するコードの部分にデータ収集を限定できます。
   
-3.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ] > [ウィンドウ] > [診断ツールの表示]** の順にクリックします。
+3.  **[診断ツール]** ウィンドウは、オフにしていない限り表示されます。 もう一度ウィンドウを表示するには、**[デバッグ]** > **[ウィンドウ]** > **[診断ツールの表示]** の順にクリックします。
 
-4.  **[デバッグ]、[デバッグの開始]** の順にクリックします (あるいは、ツール バーの **[開始]** をクリックするか、**F5** を押します)。
+4.  **[デバッグ]** > **[デバッグの開始]** の順にクリックします (または、ツール バーの **[開始]** をクリックするか、**F5** キーを押します)。
 
      アプリケーションが読み込みを完了すると、診断ツールの**概要**ビューが表示されます。
 
@@ -149,7 +154,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
      この時点で、データの分析を開始できます。
 
-## <a name="Step2"></a> 手順 2: CPU 使用率データの分析
+## <a name="step-2-analyze-cpu-usage-data"></a>手順 2: CPU 使用率データを分析する
 
 データの分析では、最初に CPU 使用率で関数の一覧を調べて最も多くの作業を行っている関数を特定し、それから個々の作業を詳しく調べることをお勧めします。
 
@@ -181,7 +186,7 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 - CPU 使用率ツールで [CPU 使用率を分析し](../profiling/cpu-usage.md)、さらに詳細な情報を取得します。
 - デバッガーをアタッチせずに、または実行中のアプリをターゲットにすることで、CPU 使用率を分析します。詳細については、「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」の「[デバッグなしでプロファイリング データを収集する](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging)」をご覧ください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

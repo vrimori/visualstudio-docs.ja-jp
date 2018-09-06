@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dbbe18bcfdc4b90960abeae9ae88dcee8817780b
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 533db5643359c245b2fc725e1eebcbb39487317b
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388125"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42627045"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
 
@@ -104,12 +104,13 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 
 ユーザー インターフェイスに慣れるため、Visual Studio の機能をいくつか確認しました。 下記に従って、さらに試してみてください。
 
-- 「[Visual Studio IDE の概要](../ide/visual-studio-ide.md)」で、Visual Studio のより詳細なツアーに参加し、デバッグも試してみてください。
+> [!div class="nextstepaction"]
+> [コード エディターについて学習する](../ide/quickstart-editor.md)
 
-- [[エラー一覧]](../ide/reference/error-list-window.md)、[[出力] ウィンドウ](../ide/reference/output-window.md)、[[プロパティ] ウィンドウ](../ide/reference/properties-window.md)、[[オプション] ダイアログ ボックス](../ide/reference/options-dialog-box-visual-studio.md)など、ウィンドウの詳細について説明した VS ドキュメントの**一般的なユーザー インターフェイス要素**に関するセクションをご覧ください。
+> [!div class="nextstepaction"]
+> [プロジェクトとソリューションについて学習する](../ide/quickstart-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [クイックスタート: IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)
-- [クイック スタート: エディターでのコードの作成](../ide/quickstart-editor.md)
-- [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+- [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
+- [テーマとフォントの色を変更する](../ide/quickstart-personalize-the-ide.md)

@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 2
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、アプリの作成およびビューとテンプレートの使用に関する手順について取り上げます。
-ms.date: 04/25/2018
+ms.date: 08/13/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cb19107cefc5638449f2acf7511cba46ef131a1d
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: f568af59a638024275bdab41b33ac4fbbaf24dd3
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388255"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42627270"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -52,7 +52,7 @@ Django アプリは、特定の目的のために関連ファイルのセット�
 | --- | --- |
 | **\_\_init\_\_.py** | アプリをパッケージとして識別するファイル。 |
 | **migrations** | Django が、モデルに対する変更に沿ってデータベースを更新するスクリプトを格納するためのフォルダー。 Django の移行ツールは、現在のモデルに適合するように、データベースの任意の以前のバージョンに必要な変更を適用します。 移行を使用して、モデルにフォーカスを保持し、Django が基になるデータベース スキーマを処理できるようにします。 移行については手順 6 で説明します。ここでは、フォルダーには単に *\_\_init\_\_.py* ファイル (フォルダーが独自の Python パッケージを定義していることを示す) が含まれています。 |
-| **templates** | 単純なファイル *index.html* を含む Django ページ テンプレートのフォルダー。 テンプレートは、ビューが動的にページを表示するための情報を追加できる HTML のブロックです。 *index.html* 内の `{{ content }}` のようなページ テンプレート "変数" は、この記事で後述する動的な値のプレースホルダーです (手順 2)。 通常、Django アプリは、アプリと名前が一致するサブフォルダーにテンプレートを配置することで、テンプレートの名前空間を作成します。 |
+| **templates** | アプリ名に一致するフォルダー内に単純なファイル *index.html* を含む Django ページ テンプレートのフォルダー。 (Visual Studio 2017 15.7 以前の場合、ファイルは *[テンプレート]* のすぐ下に含まれます。手順 2-4 には、サブフォルダーを作成するための指示があります。)テンプレートは、ビューが動的にページを表示するための情報を追加できる HTML のブロックです。 *index.html* 内の `{{ content }}` のようなページ テンプレート "変数" は、この記事で後述する動的な値のプレースホルダーです (手順 2)。 通常、Django アプリは、アプリと名前が一致するサブフォルダーにテンプレートを配置することで、テンプレートの名前空間を作成します。 |
 | **admin.py** | アプリの管理インターフェイス (手順 6 を参照) を拡張する Python ファイル。データベース内のデータを確認して編集するために、使用されます。 最初は、このファイルにはステートメント `from django.contrib import admin` のみが含まれています。 既定では、Django には、Django プロジェクトの *settings.py* ファイルにあるエントリを介して標準の管理インターフェイスが含まれています。これらは、*urls.py* の既存のエントリのコメントを解除することで、有効にできます。 |
 | **apps.py** | アプリの構成クラスを定義する Python ファイル (この表の後に、以下を参照してください)。 |
 | **models.py** | モデルとは、関数によって識別され、ビューがアプリの基本のデータベースを操作するために利用するデータ オブジェクトです (手順 6 を参照)。 アプリがこれらの詳細との関連付けを行う必要がないように、Django はデータベース接続層を提供します。 *models.py* ファイルはモデルを作成するための既定の場所であり、最初はステートメント `from django.db import models` のみを含みます。 |
@@ -149,7 +149,7 @@ def index(request):
 もう一度プロジェクトを実行すると、"**Hello Django!** on Monday, 16 April, 2018 at 16:28:10"\(ようこそ、Django へ! 2018 年 4 月 16 日、月曜日の 16 時 28 分 10 秒\)" のようなメッセージが表示されます。 ページを更新すると時間が更新され、各要求によってコンテンツが生成されていることを確認できます。 完了したら、サーバーを停止します。
 
 > [!Tip]
-> プロジェクトの停止および再起動を行う簡単な方法として、**[デバッグ]** > **[再起動]** メニュー コマンド (**Ctrl** + **Shift** + **F5** キー) を使用するか、または以下のデバッグ ツールバーの再起動ボタンを使用します。
+> プロジェクトの停止および再起動を行う簡単な方法として、**[デバッグ]** > **[再起動]** メニュー コマンド (**Ctrl**+**Shift**+**F5** キー) を使用するか、または以下のデバッグ ツールバーの **[再起動]** ボタンを使用します。
 >
 > ![Visual Studio のデバッグ ツールバーにある再起動ボタン](media/debugging-restart-toolbar-button.png)
 
@@ -176,7 +176,7 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
     'APP_DIRS': True,
     ```
 
-1. *HelloDjangoApp* フォルダーの *templates/index.html* ページ テンプレート ファイルを開き、`{{ content }}` という 1 つの変数が含まれていることを確認します。
+1. *HelloDjangoApp* フォルダーの *templates/HelloDjangoApp/index.html* ページ テンプレート ファイル (VS 2017 15.7 以前の場合、*templates/index.html*) を開き、`{{ content }}` という 1 つの変数が含まれていることを確認します。
 
     ```html
     <html>
@@ -200,7 +200,8 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 
         return render(
             request,
-            "index.html",  # Relative path from the 'templates' folder to the template file
+            "HelloDjangoApp/index.html",  # Relative path from the 'templates' folder to the template file
+            # "index.html", # Use this code for VS 2017 15.7 and earlier
             {
                 'content': "<strong>Hello Django!</strong> on " + now.strftime("%A, %d %B, %Y at %X")
             }
@@ -209,9 +210,9 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 
     見てわかるように、`render` の最初の引数は要求オブジェクトであり、その後ろにはアプリの *templates* フォルダー内の一時ファイルへの相対パスが続きます。 必要に応じて、ビューに対応する名前を付けたテンプレートがサポートされます。 `render` の 3 つ目の引数は、テンプレートが参照する変数のディクショナリです。 テンプレートの変数が `{{ object.property }}` を参照できる場合、ディクショナリにオブジェクトを含めることができます。
 
-1. プロジェクトを実行して、出力を確認します。 手順 2-2 で確認したものとほぼ同じメッセージが表示され、テンプレートが機能しているこが示されます。
+1. プロジェクトを実行して、出力を確認します。 手順 2-2 で確認したものとほぼ同じメッセージが表示され、テンプレートが機能していることが示されます。
 
-    ただし、`content` プロパティで使用した HTML がプレーン テキストとしてのみ表示されることを確認してください。`render` 関数は自動的にこの HTML をエスケープするためです。 自動エスケープによって、インジェクション攻撃に対する偶発的な脆弱性を防ぎます。開発者は、1 つのページから入力を収集し、テンプレートのプレースホルダーを介して別のページの値として使用することがよくあります。 エスケープは、HTML をコードとは別にページ テンプレートに保存する方法が最善であることを思い出すためにも役立ちます。 幸いにも、必要に応じて追加の変数を作成することは簡単です。 たとえば、以下のマークアップに合うように *templates/index.html* を変更します。これにより、ページ タイトルが追加され、ページ テンプレートのすべての書式設定がそのまま保持されます。
+    ただし、`content` プロパティで使用した HTML がプレーン テキストとしてのみ表示されることを確認してください。`render` 関数は自動的にこの HTML をエスケープするためです。 自動エスケープによって、インジェクション攻撃に対する偶発的な脆弱性を防ぎます。開発者は、1 つのページから入力を収集し、テンプレートのプレースホルダーを介して別のページの値として使用することがよくあります。 エスケープは、HTML をコードとは別にページ テンプレートに保存する方法が最善であることを思い出すためにも役立ちます。 幸いにも、必要に応じて追加の変数を作成することは簡単です。 たとえば、以下のマークアップに合うように*テンプレート*で *index.html* を変更します。これにより、ページ タイトルが追加され、ページ テンプレートのすべての書式設定がそのまま保持されます。
 
     ```html
     <html>
@@ -232,7 +233,8 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 
         return render(
             request,
-            "index.html",  # Relative path from the 'templates' folder to the template file
+            "HelloDjangoApp/index.html",  # Relative path from the 'templates' folder to the template file
+            # "index.html", # Use this code for VS 2017 15.7 and earlier
             {
                 'title' : "Hello Django",
                 'message' : "Hello Django!",
@@ -245,7 +247,7 @@ Django ページ テンプレートは、`{{ content }}` 内と同様に、`{{` 
 
     ![テンプレートを使用してアプリを実行する](media/django/step02-result.png)
 
-1. <a name="template-namespacing"></a>最後の手順として、アプリと同じ名前のサブフォルダーにテンプレートを移動します。これにより、名前空間が作成され、プロジェクトに追加する可能性がある他のアプリとの潜在的な競合が回避されます。 つまり、*templates* に *HelloDjangoApp* という名前のサブフォルダーを作成し、そのサブフォルダーに *index.html* を移動して、テンプレートの新しいパスである *HelloDjangoApp/index.html* を参照するように `index` ビュー関数を変更します。 次に、プロジェクトを実行してページが正しく表示されることを確認し、サーバーを停止します。
+1. <a name="template-namespacing"></a>Visual Studio 2017 バージョン 15.7 以前: 最後の手順として、アプリと同じ名前のサブフォルダーにテンプレートを移動します。これにより、名前空間が作成され、プロジェクトに追加する可能性がある他のアプリとの潜在的な競合が回避されます。 (VS 2017 15.8+ のテンプレートはこれを自動的に行います。)つまり、*templates* に *HelloDjangoApp* という名前のサブフォルダーを作成し、そのサブフォルダーに *index.html* を移動して、テンプレートの新しいパスである *HelloDjangoApp/index.html* を参照するように `index` ビュー関数を変更します。 次に、プロジェクトを実行してページが正しく表示されることを確認し、サーバーを停止します。
 
 1. ソース管理への変更をコミットし、必要に応じて[手順 2-2](#commit-to-source-control) の説明に従って、リモート リポジトリを更新します。
 

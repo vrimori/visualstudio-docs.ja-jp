@@ -12,12 +12,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 269f885350283520768af5dfa4cb05fe9319d51b
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: ef9101a0dbad68dd75792f34526bac550a331286
+ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468274"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42626826"
 ---
 # <a name="visual-studio-2017-c-productivity-guide"></a>Visual Studio 2017 C# の生産性ガイド
 
@@ -46,12 +46,12 @@ ms.locfileid: "39468274"
 | **Ctrl**+**.** (C# Profile では **Alt** + **Enter** でも可能) | クイック アクションとリファクタリング | そのカーソル位置またはコード選択で、どのコード修正、コード生成アクション、リファクタリング、その他クイック アクションが使用できるかを表示します |
 | **Ctrl** + **D** | 行の複製 | カーソルのあるコード行を複製します (**Visual Studio 2017 バージョン 15.6** 以降で使用可能) |
 | **Shift** + **Alt** + **+**/**-** | 選択範囲の拡大/縮小 | エディターの現在の選択範囲を拡大または縮小します (**Visual Studio 2017 バージョン 15.5** 以降で使用できます) |
-| **Shift**  +  **Alt**  +  **Ins** | 次の一致にキャレットを挿入 | 現在の選択範囲と一致する次の場所で選択内容とキャレットを追加します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
+| **Ctrl**  +  **Alt**  +  **.** | 次の一致にキャレットを挿入 | 現在の選択範囲と一致する次の場所で選択内容とキャレットを追加します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
 | **Ctrl** + **Q** | クイック起動 | すべての Visual Studio の設定を検索します |
 | **F5** | デバッグの開始 | アプリケーションのデバッグを開始します |
 | **Ctrl** + **F5** | デバッグなしで開始 | デバッグなしでアプリケーションをローカルで実行します |
-| **Ctrl** + **K**、**D** (既定のプロファイル) または **Ctrl** + **E**、**D** (C# Profile) | ドキュメントのフォーマット | 改行文字、間隔、およびインデント設定に基づき、ファイルの書式設定の違反をクリーンアップします |
-| **Ctrl** + **\\**、**E** (既定のプロファイル) または **Ctrl** + **W**、**E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
+| **Ctrl** + **K**、**D** (既定のプロファイル) または **Ctrl** + **E**、**D** (C# Profile) | [ドキュメントのフォーマット](code-styles-and-quick-actions.md#format-document-command) | 改行文字、間隔、およびインデント設定に基づき、ファイルの書式設定の違反をクリーンアップします |
+| **Ctrl** + **\\**、**Ctrl** + **E** (既定のプロファイル) または **Ctrl** + **W**、**E** (C# Profile) | エラー一覧の表示 | ドキュメント、プロジェクト、またはソリューション内のすべてのエラーを表示します |
 | **Alt**  +  **PgUp/PgDn** | 次/前の問題に移動 | ドキュメント内の前/次のエラー、警告、提案に移動します (**Visual Studio 2017 バージョン 15.8** 以降で利用可能)。 |
 
 > [!NOTE]

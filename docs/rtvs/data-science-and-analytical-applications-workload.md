@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ecbd5d1fce685243d889b39017efed24ca4492a0
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 3d9815c72a500f9edd3b01f76dae3411ac0ee50f
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626685"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Visual Studio でのデータ サイエンス サポートのインストール
 
@@ -30,7 +31,7 @@ Visual Studio のインストーラーを使って選択し、インストール
 R と Python は、データ サイエンスで使用される主要な 2 つのスクリプト言語です。 いずれの言語も学習が簡単で、パッケージの機能豊富なエコシステムのサポートがあります。 それらのパッケージは、データの取得、クリーンアップ、モデルのトレーニング、展開およびプロットなどの広範囲のシナリオに対応しています。 F# も、さまざまなデータ処理タスクに適した機能第一の強力な .NET 言語です。
 
 <!--Note link on the image because this one is large -->
-[![R、Python および F# が使用されている Visual Studio のスクリーンショット](media/data-science-workload-screens.png)](media/data-science-workload-screens.png)
+[![R、Python および F# が使用されている Visual Studio のスクリーンショット](media/data-science-workload-screens.png)](media/data-science-workload-screens.png#lightbox)
 
 ## <a name="workload-options"></a>ワークロード オプション
 
@@ -49,9 +50,9 @@ R と Python は、データ サイエンスで使用される主要な 2 つの
 
 F# はその他の多数のワークロードにも含まれており、Python には独自のワークロードがありますが、R は現在、データ サイエンスと分析のアプリケーション ワークロードのみに含まれています。ただし、ワークロードとは別に R をインストールすることもできます。 インストーラーの **[個々のコンポーネント]** のタブで、次の R オプションを選択します。
 
-- **[開発作業] > [R 言語サポート]**
-- **[開発作業] > [Microsoft R Client]**
-- **[コンパイラ、ビルド ツール、およびランタイム] > [R 開発ツールのランタイム サポート]**
+- **[開発作業]** > **[R 言語サポート]**
+- **[開発作業]** > **[Microsoft R Client]**
+- **[コンパイラ、ビルド ツール、およびランタイム]** > **[R 開発ツールのランタイム サポート]**
 
 ## <a name="sql-server-integration"></a>SQL Server の統合
 
@@ -75,7 +76,7 @@ SQL Server への統合のメリットを最大限に得るには、Visual Studi
 
 詳細情報
 
-- [SQL Server と R の使用](../rtvs/sql-server.md)
+- [SQL Server と R の使用](integrating-sql-server-with-r.md)
 - [SQL Server 2016 での R を使用したデータベース内の高度な分析 (ブログ)](https://blogs.technet.microsoft.com/dataplatforminsider/2016/03/29/in-database-advanced-analytics-with-r-in-sql-server-2016/)
 - [SQL Server 2017 での Python: データベース内機械学習の強化 (ブログ)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
@@ -88,4 +89,4 @@ Azure SDK for Python を使用すると、Windows、Mac、Linux で実行され�
 Azure Notebook (現在プレビュー中) を使用すると、クラウドで Microsoft Azure で実行されている Jupyter Notebook に自由にオンライン アクセスできます。 このサービスには、使用を開始できるように Python、R および F# のサンプル ノートブックが含まれています。 [notebooks.azure.com](https://notebooks.azure.com/) を参照してください。
 
 <!--Note link on the image because this one is large -->
-[![入門用の R のサンプルと Azure Notebook のスクリーンショット](media/data-science-workload-notebooks.png)](media/data-science-workload-notebooks.png)
+[![入門用の R のサンプルと Azure Notebooks のスクリーンショット](media/data-science-workload-notebooks.png)](media/data-science-workload-notebooks.png#lightbox)

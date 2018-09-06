@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での編集の概要
+title: 編集の概要
 ms.date: 11/30/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,20 +11,20 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 93f4dd635e2d90a0ed56b4732c79bb67b569f09b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 420250a9e8dc99d6a02505efa7efb8f44e287e12
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511236"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42627210"
 ---
-# <a name="quickstart-use-the-code-editor"></a>クイック スタート: コード エディターを使用する
+# <a name="learn-to-use-the-code-editor"></a>コード エディターを使用方法について学習する
 
 この 10 分間の Visual Studio のコード エディターの紹介では、ファイルにコードを追加した上で、Visual Studio でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページに移動し、無料試用版をインストールしてください。
 
-このクイック スタートでは、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
+この記事では、既にプログラミング言語を使い慣れていることを前提としています。 使い慣れていない場合は、[Python](../ide/quickstart-python.md) または [C#](../ide/tutorial-csharp-aspnet-core.md) による Web アプリの作成や、[Visual Basic](../ide/quickstart-visual-basic-console.md) または [C++](../ide/getting-started-with-cpp-in-visual-studio.md) によるコンソール アプリの作成など、プログラミング言語に関するいずれかのクイック スタートを最初に確認することをお勧めします。
 
 ## <a name="create-a-new-code-file"></a>新しいコード ファイルを作成する
 
@@ -157,16 +157,8 @@ Visual Studio エディターでは、型やメソッドなどの定義の検査
 
 ## <a name="next-steps"></a>次の手順
 
-Visual Studio エディターにおけるこのクイック スタートは完了しました。 次に、Visual Studio 開発環境のその他のクイック スタートをいくつか試してみることができます。
-
 > [!div class="nextstepaction"]
-> [クイックスタート: Visual Studio IDE の表示の紹介](../ide/quickstart-ide-orientation.md)
-
-> [!div class="nextstepaction"]
-> [クイック スタート: Visual Studio のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
-
-> [!div class="nextstepaction"]
-> [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+> [プロジェクトとソリューションについて学習する](../ide/quickstart-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 

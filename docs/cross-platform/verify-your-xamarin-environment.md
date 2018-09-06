@@ -11,12 +11,12 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 83dfac08058e8b01b6c6d007461f3468e91b396c
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 9ae697825d0d4a2c380c6f0d540153fbf06d4da4
+ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233088"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42627120"
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 
@@ -54,7 +54,7 @@ Visual Studio で、まず、**[ツール]** > **[拡張機能と更新プログ
 
   ![デバッグ ターゲットとして Visual Studio Emulator for Android を選択する](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")
 
-  詳細については、「[Introducing Visual Studio's Emulator for Android](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)」(Visual Studio ALM blog) (Visual Studio の Emulator for Android の概要 (Visual Studio ALM ブログ)) をご覧ください。 エミュレーターを機能させるときに問題が発生する場合は、「[Visual Studio Emulator for Android のトラブルシューティング](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)」を参照してください。 **[ツール]、[Android]、[Android Emulator マネージャー]** の順に選択し、エミュレーターの新しいデバイス プロファイルを作成することもできます。
+  詳細については、Microsoft DevOps ブログの「[Introducing Visual Studio's Emulator for Android](https://blogs.msdn.microsoft.com/devops/2014/11/12/introducing-visual-studios-emulator-for-android/)」 (Visual Studio の Emulator for Android の概要) をご覧ください。 エミュレーターを機能させるときに問題が発生する場合は、「[Visual Studio Emulator for Android のトラブルシューティング](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)」を参照してください。 **[ツール]、[Android]、[Android Emulator マネージャー]** の順に選択し、エミュレーターの新しいデバイス プロファイルを作成することもできます。
 
 3. **F5** キーを押すと、プログラムがコンパイルされ、Android デバイスまたはエミュレーターに配置されます。
 

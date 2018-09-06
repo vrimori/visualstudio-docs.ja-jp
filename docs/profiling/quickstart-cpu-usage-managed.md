@@ -2,7 +2,7 @@
 title: CPU 使用率データの分析 (マネージド コード)
 description: CPU 使用率診断ツールを使用して C# と Visual Basic でアプリのパフォーマンスを測定する
 ms.custom: mvc
-ms.date: 12/05/2017
+ms.date: 08/06/2018
 ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 886abf16e958afd2870399c7dfdef55cb27e108f
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 35c6fd1ea079dd95367bcb7763787f0b06839ecb
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39206849"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42626662"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-managed-code"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (マネージド コード)
 
@@ -26,11 +26,15 @@ Visual Studio は、アプリケーションのパフォーマンス問題の分
 
 診断ハブでは、診断セッションの実行と管理のために他の多くのオプションを提供しています。 ここで説明する **CPU 使用率**ツールでは必要なデータを得ることができない場合、[他のプロファイリング ツール](../profiling/profiling-feature-tour.md)で得られる別の種類の情報が役に立つことがあります。 多くの場合、アプリケーションのパフォーマンス上の問題は CPU 以外の何かが原因になります。メモリ、UI のレンダリング、ネットワークの要求時間などです。 診断ハブには、この種のデータを記録し、分析するためのオプションが他にもいろいろあります。
 
+Windows 8 以降では、デバッガーを使用してプロファイル ツールを実行する必要があります (**[診断ツール]** ウィンドウ)。 Windows 7 以降では、事後検証ツールである[パフォーマンス プロファイラー](../profiling/profiling-feature-tour.md)を使用することができます。
+
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
 1. Visual Studio で、**[ファイル]** > **[新しいプロジェクト]** の順に選択します。
 
 2. **[Visual C#]** または **[Visual Basic]** の下で、**[Windows デスクトップ]** を選択し、中央のウィンドウで [**コンソール アプリ (.NET Framework)]** を選択します。
+
+    **[コンソール アプリ]** プロジェクト テンプレートが表示されない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左側のウィンドウにある **[Visual Studio インストーラーを開く]** リンクをクリックします。 Visual Studio インストーラーが起動します。 **[.NET デスクトップ開発]** ワークロードを選択し、**[変更]** を選びます。
 
 3. 「**MyProfilerApp**」のような名前を入力し、**[OK]** をクリックします。
 

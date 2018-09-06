@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 249ea0c20bc47f63999a08962ba6cf7d1effd2b1
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: dbf969e6e9a37179621cad52243418a2d0536f1a
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513274"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42627109"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>クイックスタート: Visual Studio IDE の表示の紹介
 
@@ -105,15 +105,13 @@ Visual Studio の使用中に問題が発生した場合、または製品の改
 ユーザー インターフェイスに慣れるため、Visual Studio の機能をいくつか確認しました。 下記に従って、さらに試してみてください。
 
 > [!div class="nextstepaction"]
-> [クイックスタート: IDE のカスタマイズ](../ide/quickstart-personalize-the-ide.md)
+> [コード エディターについて学習する](../ide/quickstart-editor.md)
 
 > [!div class="nextstepaction"]
-> [クイック スタート: エディターでのコードの作成](../ide/quickstart-editor.md)
-
-> [!div class="nextstepaction"]
-> [クイック スタート: プロジェクトとソリューション](../ide/quickstart-projects-solutions.md)
+> [プロジェクトとソリューションについて学習する](../ide/quickstart-projects-solutions.md)
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Studio IDE の概要](../ide/visual-studio-ide.md)
-- [Visual Studio 2017 の機能](../ide/advanced-feature-overview.md)
+- [Visual Studio 2017 のその他の機能](../ide/advanced-feature-overview.md)
+- [テーマとフォントの色を変更する](../ide/quickstart-personalize-the-ide.md)

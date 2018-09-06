@@ -1,10 +1,9 @@
 ---
-title: 移動コマンドを使用したコードの検索
-ms.date: 09/26/2017
+title: ファイルへ移動、シンボルへ移動、指定行へのジャンプ
+ms.date: 08/14/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
-ms.assetid: 509b2107-23d1-4fb3-987f-ab99ef45b72e
 helpviewer_keywords:
 - code editor, go to
 - code editor, go to line
@@ -15,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aca1106bb6dfa3838890e4ae5c1886875e3e357
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 00ec7361304d76d33264b98b45cf373bc5fc9f51
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447194"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626686"
 ---
 # <a name="find-code-using-go-to-commands"></a>移動コマンドを使用したコードの検索
 
@@ -56,12 +55,13 @@ Visual Studio の **[移動]** コマンドは、特定の項目をすばやく�
 特定の種類のコード要素に検索を絞り込むには、[検索] ボックスでプレフィックスを指定するか、次の 5 つのフィルター アイコンのいずれかを選択します。
 
 プレフィックス | アイコン | ショートカット | 説明
-:----: | ---- | -------- | ---
-\#     | ![シンボル アイコン](media/gotoall_symbolicon.png) | **Ctrl** + **1**、**Ctrl** + **S** | 指定したシンボルに移動します。
-f      | ![ファイル アイコン](media/gotoall_fileicon.png)     | **Ctrl** + **1**、**Ctrl** + **F** | 指定したファイルに移動します。
-m      | ![メンバー アイコン](media/gotoall_membericon.png) | **Ctrl** + **1**、**Ctrl** + **M** | 指定したメンバーに移動します。
-t      | ![型アイコン](media/gotoall_typeicon.png)     | **Ctrl** + **1**、**Ctrl** + **T** | 指定した型に移動します。
-:      | ![行アイコン](media/gotoall_lineicon.png)     | **Ctrl** + **G**         | 指定した行番号に移動します。
+:-: | - | - | -
+:| ![行アイコン](media/gotoall-line-icon.png) | **Ctrl** + **G**         | 指定した行番号に移動します。
+f| ![ファイル アイコン](media/gotoall-files-icon.png) | **Ctrl** + **1**、**Ctrl** + **F** | 指定したファイルに移動します。
+r| ![最近使ったファイル アイコン](media/gotoall-recent-files-icon.png) | **Ctrl** + **1**、**Ctrl** + **R** | 指定した、最近アクセスしたファイルに移動します
+t| ![型アイコン](media/gotoall-types-icon.png) | **Ctrl** + **1**、**Ctrl** + **T** | 指定した型に移動します。
+m| ![メンバー アイコン](media/gotoall-members-icon.png) | **Ctrl** + **1**、**Ctrl** + **M** | 指定したメンバーに移動します。
+\#| ![シンボル アイコン](media/gotoall-symbols-icon.png) | **Ctrl** + **1**、**Ctrl** + **S** | 指定したシンボルに移動します。
 
 ### <a name="filter-to-a-specific-location"></a>フィルター処理して特定の場所に絞り込む
 
