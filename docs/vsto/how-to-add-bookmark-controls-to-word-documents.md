@@ -1,5 +1,5 @@
 ---
-title: '方法: Word 文書に Bookmark コントロールを追加します。'
+title: '方法: Word 文書に Bookmark コントロールを追加'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,14 +19,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c2814847270df70126cb8f286acdc152ddbed046
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 8f07fc3534c7963beda0d08d4ebf659979731d7f
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672396"
 ---
-# <a name="how-to-add-bookmark-controls-to-word-documents"></a>方法: Word 文書に Bookmark コントロールを追加します。
-  ドキュメント レベルのプロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>デザイン時または実行時に、プロジェクトの文書へのコントロールです。 追加することができます、VSTO アドイン プロジェクトで<xref:Microsoft.Office.Tools.Word.Bookmark>実行時に開いている文書にコントロールできます。  
+# <a name="how-to-add-bookmark-controls-to-word-documents"></a>方法: Word 文書に Bookmark コントロールを追加
+  ドキュメント レベルのプロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>デザイン時または実行時に、プロジェクトのドキュメントにコントロール。 VSTO アドイン プロジェクトに追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>実行時に開いているドキュメントのコントロール。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/25/2018
   
 -   [VSTO アドイン プロジェクトでの実行時に Bookmark コントロールを追加します。](#runtimeaddin)  
   
- 詳細については<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールを参照してください[Bookmark コントロール](../vsto/bookmark-control.md)です。  
+ 詳細については<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールを参照してください[Bookmark コントロール](../vsto/bookmark-control.md)します。  
   
 ##  <a name="designtime"></a> デザイン時に Bookmark コントロールを追加します。  
  デザイン時にドキュメント レベルのプロジェクトの文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加する方法はいくつかあります。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/25/2018
   
 -   **[データ ソース]** ウィンドウから実行する方法。  
   
-     <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを **[データ ソース]** ウィンドウから文書にドラッグできます。 これは、同時にコントロールをデータにバインドする場合に役立ちます。 Windows フォーム コントロールを追加するのと同じ方法で、 **[データ ソース]** ウィンドウからホスト コントロールを追加できます。 詳細については、次を参照してください。[データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)です。  
+     <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを **[データ ソース]** ウィンドウから文書にドラッグできます。 これは、同時にコントロールをデータにバインドする場合に役立ちます。 Windows フォーム コントロールを追加するのと同じ方法で、 **[データ ソース]** ウィンドウからホスト コントロールを追加できます。 詳細については、次を参照してください。[データ連結と Windows フォーム](/dotnet/framework/winforms/data-binding-and-windows-forms)します。  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
@@ -80,13 +81,13 @@ ms.lasthandoff: 05/25/2018
 3.  **[ブックマーク]** ダイアログ ボックスで、新しいブックマークの名前を入力し、 **[追加]** をクリックします。  
   
 ##  <a name="runtimedoclevel"></a> ドキュメント レベルのプロジェクトの実行時に Bookmark コントロールを追加します。  
- 追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>のメソッドを使用して、実行時にドキュメントにプログラムでコントロール、<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>のプロパティ、`ThisDocument`プロジェクト内のクラスです。 2 つのメソッド オーバーロードを使用して、次の方法で <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。  
+ 追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>のメソッドを使用して実行時にドキュメントにコントロールをプログラムによって、<xref:Microsoft.Office.Tools.Word.Document.Controls%2A>のプロパティ、`ThisDocument`プロジェクト内のクラス。 2 つのメソッド オーバーロードを使用して、次の方法で <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。  
   
 -   指定した範囲に <xref:Microsoft.Office.Tools.Word.Bookmark> を追加する。  
   
 -   文書のネイティブなブックマーク (つまり、 <xref:Microsoft.Office.Tools.Word.Bookmark> ) に基づいて <xref:Microsoft.Office.Interop.Word.Bookmark>を追加する。  
   
- 動的に作成された <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、文書を閉じるときに文書に残りません。 ただし、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark> は文書に残ります。 ネイティブなブックマークに基づく <xref:Microsoft.Office.Tools.Word.Bookmark> は、次に文書を開いた時点で再作成できます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)です。  
+ 動的に作成された <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、文書を閉じるときに文書に残りません。 ただし、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark> は文書に残ります。 ネイティブなブックマークに基づく <xref:Microsoft.Office.Tools.Word.Bookmark> は、次に文書を開いた時点で再作成できます。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
   
 #### <a name="to-add-a-bookmark-control-to-a-document-programmatically"></a>プログラムによって文書に Bookmark コントロールを追加するには  
   
@@ -99,15 +100,15 @@ ms.lasthandoff: 05/25/2018
     >  既存の <xref:Microsoft.Office.Tools.Word.Bookmark> から <xref:Microsoft.Office.Interop.Word.Bookmark>コントロールを作成する場合は、 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A> メソッドを使用し、既存の <xref:Microsoft.Office.Interop.Word.Bookmark>を渡します。  
   
 ##  <a name="runtimeaddin"></a> VSTO アドイン プロジェクトでの実行時に Bookmark コントロールを追加します。  
- 追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>コントロールは、VSTO アドインを使用して、実行時に開いている文書にします。 そのためには、開いている文書に基づいた <xref:Microsoft.Office.Tools.Word.Document> ホスト項目を生成し、このホスト項目の <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> プロパティのメソッドを使用します。 2 つのメソッド オーバーロードを使用して、次の方法で <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。  
+ 追加することができます<xref:Microsoft.Office.Tools.Word.Bookmark>VSTO アドインを使用して実行時に開いている文書をプログラムで制御します。 そのためには、開いている文書に基づいた <xref:Microsoft.Office.Tools.Word.Document> ホスト項目を生成し、このホスト項目の <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> プロパティのメソッドを使用します。 2 つのメソッド オーバーロードを使用して、次の方法で <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。  
   
 -   指定した範囲に <xref:Microsoft.Office.Tools.Word.Bookmark> を追加する。  
   
 -   文書のネイティブなブックマーク (つまり、 <xref:Microsoft.Office.Tools.Word.Bookmark> ) に基づいて <xref:Microsoft.Office.Interop.Word.Bookmark>を追加する。  
   
- 動的に作成された <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、文書を閉じるときに文書に残りません。 ただし、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark> は文書に残ります。 ネイティブなブックマークに基づく <xref:Microsoft.Office.Tools.Word.Bookmark> は、次に文書を開いた時点で再作成できます。 詳細については、次を参照してください。 [Office 文書で動的コントロールを永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)です。  
+ 動的に作成された <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、文書を閉じるときに文書に残りません。 ただし、ネイティブな <xref:Microsoft.Office.Interop.Word.Bookmark> は文書に残ります。 ネイティブなブックマークに基づく <xref:Microsoft.Office.Tools.Word.Bookmark> は、次に文書を開いた時点で再作成できます。 詳細については、次を参照してください。 [Office ドキュメントでのダイナミック コントロールを永続化](../vsto/persisting-dynamic-controls-in-office-documents.md)します。  
   
- VSTO アドイン プロジェクトでホスト項目の生成の詳細については、次を参照してください。[拡張 Word 文書と実行時に VSTO アドイン内の Excel ブック](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)です。  
+ VSTO アドイン プロジェクトでホスト項目の生成の詳細については、次を参照してください。[拡張 Word 文書や Excel ブックを実行時に VSTO アドインで](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)します。  
   
 #### <a name="to-add-a-bookmark-control-at-a-specified-range"></a>指定した範囲に Bookmark コントロールを追加するには  
   
@@ -128,12 +129,12 @@ ms.lasthandoff: 05/25/2018
      [!code-csharp[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#5)]  
   
 ## <a name="see-also"></a>関連項目  
- [拡張オブジェクトによる Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
+ [拡張オブジェクトを使用して Word を自動化します。](../vsto/automating-word-by-using-extended-objects.md)   
  [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)   
- [ドキュメント レベルのカスタマイズをプログラミングします。](../vsto/programming-document-level-customizations.md)   
+ [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)   
  [方法: Bookmark コントロールのサイズを変更します。](../vsto/how-to-resize-bookmark-controls.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Office ソリューションのセキュリティのトラブルシューティング |Microsoft ドキュメント
+title: Office ソリューションのセキュリティをトラブルシューティングします。
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,20 +15,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 547ba6d1e58376c50d0e01ab8fd3d55f62d5a935
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 347cd6cfa1e773d3900e7294d691f061d91a762d
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693319"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673211"
 ---
-# <a name="troubleshooting-office-solution-security"></a>Office ソリューションのセキュリティのトラブルシューティング
-  このトピックには、Office ソリューションのセキュリティ保護を使用する場合に発生する可能性がある一般的な問題を解決するためのヒントが含まれています。  
+# <a name="troubleshoot-office-solution-security"></a>Office ソリューションのセキュリティをトラブルシューティングします。
+  このトピックでには、Office ソリューションのセキュリティを使用する場合に発生する可能性がある一般的な問題を解決するためのヒントが含まれています。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="trusted-solutions-cannot-be-installed-from-restricted-sites"></a>信頼された制限付きサイトからソリューションをインストールすることはできません。  
- ユーザーは、web サイトが Internet Explorer の制限付きサイト ゾーンに表示されている場合、web 上の場所から、ソリューションをインストールできません。 これは、ソリューションが信頼された証明書で署名されている場合でも当てはまります。  
+## <a name="trusted-solutions-cannot-be-installed-from-restricted-sites"></a>信頼できるソリューションは、制限付きサイトからインストールすることはできません。  
+ ユーザーは、web サイトが Internet Explorer の制限付きサイト ゾーンで表示されている場合、web からソリューションをインストールできません。 これは、ソリューションが信頼された証明書で署名された場合でも当てはまります。  
   
  配置マニフェストの URL は、5 つのゾーンのいずれかに分類できます。  
   
@@ -42,16 +42,16 @@ ms.locfileid: "34693319"
   
 -   制限付きサイト  
   
- 配置マニフェストの場所を制限付きサイト ゾーンに割り当てられている場合[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]ソリューションではインストールされません。 場合、場所がわかっていることができます、信頼されたユーザー場所を制限付きサイト ゾーンから削除でき、ソリューションをインストールできます。 ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)です。  
+ 配置マニフェストの場所は、制限付きサイト ゾーンに割り当てられている場合[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]ソリューションではインストールされません。 場所を選択して言いますできる場合、信頼されたユーザーの場所を制限付きサイト ゾーンから削除してインストールできますソリューション。 ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)します。  
   
-## <a name="solutions-cannot-be-installed-from-network-file-shares-or-web-locations-when-internet-explorer-enhanced-security-configuration-or-internet-explorer-7-is-installed"></a>Internet Explorer セキュリティ強化の構成または Internet Explorer 7 がインストールされているときに、ネットワーク ファイル共有または Web の場所からソリューションをインストールすることはできません。  
- Internet Explorer 強化されたセキュリティ構成 (IEESC) Windows Server 2003 以降では、および Internet Explorer 7 以降が大幅にはインターネットを閲覧するユーザーの機能を制限します。 ユーザーがネットワーク ファイル共有または web 上の場所から Office ソリューションをインストールしようとすると、次のエラー メッセージを取得した可能性があります:"の配置マニフェストに署名する証明書が使用されるため、このアプリケーションのカスタマイズされた機能は動作しません*SolutionName*は信頼されていません。 管理者に問い合わせてさらに支援します。"  
+## <a name="solutions-cannot-be-installed-from-network-file-shares-or-web-locations-when-internet-explorer-enhanced-security-configuration-or-internet-explorer-7-is-installed"></a>Internet Explorer セキュリティ強化の構成または Internet Explorer 7 がインストールされている場合、ネットワーク ファイル共有または web の場所からソリューションをインストールすることはできません。  
+ Internet Explorer 拡張セキュリティ構成 (IEESC) Windows Server 2003 以降では、および Internet Explorer 7 以降、インターネットを閲覧するユーザーの機能を大幅に制限します。 ユーザーがネットワーク ファイル共有または web の場所から Office ソリューションをインストールしようとすると、次のエラー メッセージが訪れた可能性があります:"の配置マニフェストに署名する証明書が使用されるため、このアプリケーションのカスタマイズされた機能は機能しません*SolutionName*は信頼されていません。 管理者に問い合わせてください。"  
   
- IEESC と Internet Explorer 7 以降では、配置マニフェストの URL は、インターネット ゾーンの分類は、マニフェストが信頼された発行元からの証明書を持つ必要がありますかソリューションをインストールすることはできません。 Ieesc については、既定の動作は、信頼の決定にエンド ユーザー入力を求めるはします。  
+ 場合は、配置マニフェストの URL はインターネット ゾーンに分類されています IEESC と Internet Explorer 7 以降、マニフェストが信頼された発行元からの証明書を必要またはソリューションをインストールすることはできません。 Ieesc については、既定の動作は、信頼の決定にエンド ユーザー入力を求めるは。  
   
- IEESC と Internet Explorer 7 の効果を管理し、以降では、web サイトおよび汎用名前付けの規則 (UNC) パスを信頼して信頼されたセキュリティ ゾーン (イントラネットまたは信頼済みサイト) のいずれかに追加します。ゾーンを管理する方法については、次を参照してください。 [ClickOnce 信頼された発行元の構成](http://go.microsoft.com/fwlink/?LinkId=94774)です。  
+ 以降では、特定の web サイトや汎用規則 (UNC) パスを名前付けの IEESC と Internet Explorer 7 の効果を管理するのには、信頼し、のいずれか (イントラネットまたは信頼済みサイト) の信頼できるセキュリティ ゾーンに追加します。ゾーンを管理する方法については、次を参照してください。[構成 ClickOnce 信頼された発行者](http://go.microsoft.com/fwlink/?LinkId=94774)します。  
   
 ## <a name="see-also"></a>関連項目  
- [Office ソリューションのセキュリティ保護](../vsto/securing-office-solutions.md)  
+ [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)  
   
   

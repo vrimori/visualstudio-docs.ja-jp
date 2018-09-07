@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f25a5e18e78025811e26210de53413b668385539
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 5c8d06e7e06b66f119ad792d3c4fa970645aa886
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566539"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774779"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 自分のコンピューターまたは他のコンピューターでは、ドメイン固有言語をインストールできます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ターゲット コンピューターに既にインストールする必要があります。
@@ -36,7 +36,7 @@ ms.locfileid: "39566539"
 
     1.  **ソリューション エクスプ ローラー**を右クリックし、 **DslPackage**プロジェクトをクリックして**Windows エクスプ ローラーでフォルダーを開く**します。
 
-    2.  ファイルを見つけます**bin\\\*\\***プロジェクト***します。DslPackage.vsix**
+    2.  ファイルを見つけます**bin\\\*\\**_プロジェクト_**します。DslPackage.vsix**
 
 2.  コピー、 **.vsix**ファイルを DSL をインストールするターゲット コンピューターにします。 自分のコンピューターでも別のコンピューターでもかまいません。
 

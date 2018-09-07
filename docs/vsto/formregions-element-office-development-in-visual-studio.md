@@ -17,14 +17,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 36741e5e3bcd39dbb6e4ea0746e1877acc581e70
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: b978ef47db6b8803b7730aef14173c3eb19b16e8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35671958"
 ---
 # <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt;要素 (Visual Studio での Office 開発)
-  `formRegions` 名前空間の `vstov4` 要素には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれています。  
+  `formRegions`の要素、`vstov4`名前空間には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,12 +46,12 @@ ms.lasthandoff: 05/22/2018
  `formRegions` 要素には次の要素があります。  
   
 ### <a name="formregion"></a>formRegion  
- フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion`で要素が定義されている[ &#60;formRegion&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)です。  
+ フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion`で要素が定義されている[ &#60;formRegion&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)します。  
   
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
 ### <a name="description"></a>説明  
- 次のコード例は、 `formRegions` を使用して展開したアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例は、 `formRegions` を使用して展開したアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   

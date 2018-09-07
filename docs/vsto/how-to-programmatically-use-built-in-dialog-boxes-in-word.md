@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Word の組み込みダイアログ ボックスを使用して |Microsoft ドキュメント'
+title: '方法: プログラムによって Word の組み込みダイアログ ボックスを使用して、'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,42 +16,43 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 80406a8048529f811cf9cbeadc8d185577a114f4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f5ee28b0296037b9b5490ca691a27d613c793228
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672431"
 ---
-# <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>方法: プログラムによって Word の組み込みダイアログ ボックスを使用する
-  Microsoft Office Word を使用する場合は、ユーザー入力のダイアログ ボックスを表示する必要がある場合もがあります。 公開されている、Word の組み込みダイアログ ボックスを使用する方法を取る可能性がありますも作成できますが、自分、<xref:Microsoft.Office.Interop.Word.Dialogs>のコレクション、<xref:Microsoft.Office.Interop.Word.Application>オブジェクト。 これにより、200 以上の列挙型として表される組み込みダイアログ ボックスにアクセスすることができます。  
+# <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>方法: プログラムによって Word の組み込みダイアログ ボックスを使用して、
+  Microsoft Office Word を使用する場合は、ユーザーの入力 ダイアログ ボックスを表示する必要がある生じるです。 公開されている Word では、組み込みダイアログ ボックスを使用する方法をする可能性がありますも作成できますが、独自、<xref:Microsoft.Office.Interop.Word.Dialogs>のコレクション、<xref:Microsoft.Office.Interop.Word.Application>オブジェクト。 これにより、200 以上の列挙体で表される組み込みダイアログ ボックスにアクセスすることができます。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="displaying-dialog-boxes"></a>ダイアログ ボックスを表示します。  
- ダイアログ ボックスを表示するには、値のいずれかの操作を使用して、<xref:Microsoft.Office.Interop.Word.WdWordDialog>列挙体を作成する、<xref:Microsoft.Office.Interop.Word.Dialog>を表示するダイアログ ボックスを表すオブジェクト。 次に、呼び出し、<xref:Microsoft.Office.Interop.Word.Dialog.Show%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。  
+## <a name="display-dialog-boxes"></a>ダイアログ ボックスを表示します。  
+ ダイアログ ボックスを表示するには、値のいずれかを使用、<xref:Microsoft.Office.Interop.Word.WdWordDialog>列挙体を作成する、<xref:Microsoft.Office.Interop.Word.Dialog>を表示する ダイアログ ボックスを表すオブジェクト。 次に呼び出す、<xref:Microsoft.Office.Interop.Word.Dialog.Show%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。  
   
- 次のコード例を表示する方法を示しています、**ファイルを開く** ダイアログ ボックス。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
+ 次のコード例は、表示する方法を示します、**ファイルを開く** ダイアログ ボックス。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラス。  
   
  [!code-vb[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#100)]
  [!code-csharp[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#100)]  
   
-### <a name="accessing-dialog-box-members-that-are-available-through-late-binding"></a>遅延バインディングで使用できるダイアログ ボックスのメンバーにアクセスします。  
- 一部のプロパティと Word のダイアログ ボックスのメソッドは、遅延バインディングを介してのみ使用します。 Visual basic プロジェクト where **Option Strict**は、リフレクションを使用してこれらのメンバーにアクセスする必要があります。 詳細については、「 [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)」を参照してください。  
+### <a name="access-dialog-box-members-that-are-available-through-late-binding"></a>遅延バインディングで使用できるダイアログ ボックスのメンバーをへのアクセス  
+ いくつかのプロパティと Word のダイアログ ボックスのメソッドは、遅延バインディングを介してのみ使用可能なは。 Visual basic プロジェクト where **Option Strict**に、リフレクションを使用して、これらのメンバーにアクセスする必要があります。 詳細については、次を参照してください。 [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)します。  
   
- 次のコード例を使用する方法を示しています、**名前**のプロパティ、**ファイルを開く** ダイアログ ボックスで、Visual Basic プロジェクト where **Option Strict** off または Visual c# では、対象とするプロジェクト、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]です。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
+ 次のコード例は、使用する方法を示します、**名前**のプロパティ、**ファイルを開く** ダイアログ ボックスで、Visual Basic プロジェクト where **Option Strict**オフまたは Visual c# では、プロジェクトの対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]します。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラス。  
   
  [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
  [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]  
   
- 次のコード例は、リフレクションを使用してアクセスする方法を示します、**名前**のプロパティ、**ファイルを開く** ダイアログ ボックスで、Visual Basic プロジェクト where **Option Strict**はします。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
+ 次のコード例は、リフレクションを使用してアクセスする方法を示します、**名前**のプロパティ、**ファイルを開く** ダイアログ ボックスで、Visual Basic プロジェクト where **Option Strict**はします。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラス。  
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用します。](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)   
+ [方法: プログラムによって Word のダイアログ ボックスを非表示モードでを使用して、](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)   
- [Option Strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
+ [Option strict ステートメント](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [リフレクション (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
   

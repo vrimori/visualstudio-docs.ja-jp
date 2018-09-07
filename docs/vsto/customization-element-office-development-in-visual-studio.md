@@ -15,11 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 02cf84dd225eadd1dcd9c1f20040811e654ebbc0
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 1f1344b69aaf098f766aeafddfd23cea84d1a981
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672389"
 ---
 # <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;カスタマイズ&gt;要素 (Visual Studio での Office 開発)
   `customization` 名前空間の `vstov4` 要素では、特定の Office ソリューションについて記述します。 ドキュメント レベルのカスタマイズと VSTO アドインでは、子要素が異なります。  
@@ -65,18 +66,18 @@ ms.lasthandoff: 05/17/2018
  `customization` 要素には、次の子要素があります。  
   
 #### <a name="document"></a>ドキュメント  
- `document`内の要素、`vstov4`で名前空間が定義されている[&#60;ドキュメント&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/document-element-office-development-in-visual-studio.md)です。  
+ `document`内の要素、`vstov4`で名前空間が定義されている[&#60;ドキュメント&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/document-element-office-development-in-visual-studio.md)します。  
   
 ### <a name="vsto-add-ins"></a>VSTO アドイン  
  `customization` 要素には、次の子要素があります。  
   
 #### <a name="appaddin"></a>appAddin  
- `appAddin`内の要素、`vstov4`で名前空間が定義されている[ &#60;appAddin&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)です。  
+ `appAddin`内の要素、`vstov4`で名前空間が定義されている[ &#60;appAddin&#62;要素&#40;Visual Studio での Office 開発&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)します。  
   
 ## <a name="example-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの例  
   
 ### <a name="description"></a>説明  
- 次のコード例は、ドキュメント レベルのカスタマイズの `customization` 要素を示しています。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例は、ドキュメント レベルのカスタマイズの `customization` 要素を示しています。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   
@@ -87,10 +88,10 @@ ms.lasthandoff: 05/17/2018
 </vstov4:customization>  
 ```  
   
-## <a name="example-of-an-vsto-add-in"></a>VSTO アドインの例  
+## <a name="example-of-a-vsto-add-in"></a>VSTO アドインの例  
   
 ### <a name="description"></a>説明  
- 次のコード例は、VSTO アドインの `customization` 要素を示しています。 この例は、フォーム領域が含まれた Outlook VSTO アドインです。 このコード例に示されている例の一部である[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)です。  
+ 次のコード例を示しています、 `customization` VSTO アドインの要素。 この例は、フォーム領域が含まれた Outlook VSTO アドインです。 このコード例で示されている例の一部は、 [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)します。  
   
 ### <a name="code"></a>コード  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Word の表を作成 |Microsoft ドキュメント'
+title: '方法: プログラムによって Word の表を作成'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,20 +16,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f77b6ee70d56c12b6c1a6b9c88de36a9adb7d92e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d545b82c913573a5fbfb8d9397efa9ca672e1896
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673699"
 ---
-# <a name="how-to-programmatically-create-word-tables"></a>方法: プログラムによって Word の表を作成する
+# <a name="how-to-programmatically-create-word-tables"></a>方法: プログラムによって Word の表を作成
   <xref:Microsoft.Office.Interop.Word.Tables> コレクションは <xref:Microsoft.Office.Interop.Word.Document>、<xref:Microsoft.Office.Tools.Word.Document>、<xref:Microsoft.Office.Interop.Word.Selection>、および <xref:Microsoft.Office.Interop.Word.Range> の各クラスのメンバーです。したがって、これらのどのコンテキストでも表を作成できます。 指定した範囲に表を追加するには、<xref:Microsoft.Office.Interop.Word.Tables> コレクションの <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> メソッドを使用します。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="creating-tables-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでの表の作成  
+## <a name="create-tables-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでテーブルを作成します。  
   
-#### <a name="to-add-a-simple-table-to-a-document"></a>ドキュメントに単純な表を追加するには  
+### <a name="to-add-a-table-to-a-document"></a>ドキュメントにテーブルを追加するには  
   
 -   <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> メソッドを使用して、ドキュメントの先頭に 3 行 4 列の表を追加します。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
  表を作成すると、作成した表は自動的に <xref:Microsoft.Office.Tools.Word.Document> ホスト項目の <xref:Microsoft.Office.Interop.Word.Tables> コレクションに追加されます。 表を参照するには、次のコードに示すとおり、<xref:Microsoft.Office.Interop.Word.Tables.Item%2A> プロパティを使用して項目番号で参照します。  
   
-#### <a name="to-refer-to-a-table-by-item-number"></a>項目番号で表を参照するには  
+### <a name="to-refer-to-a-table-by-item-number"></a>項目番号で表を参照するには  
   
 1.  <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> プロパティを使用して、参照する表の項目番号を指定します。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  各 <xref:Microsoft.Office.Interop.Word.Table> オブジェクトには <xref:Microsoft.Office.Interop.Word.Table.Range%2A> プロパティもあり、このプロパティを使用して書式設定属性を設定できます。  
   
-#### <a name="to-apply-a-style-to-a-table"></a>表にスタイルを適用するには  
+### <a name="to-apply-a-style-to-a-table"></a>表にスタイルを適用するには  
   
 1.  <xref:Microsoft.Office.Interop.Word.Table.Style%2A> プロパティを使用して、Word のいずれかの組み込みスタイルを表に適用します。  
   
@@ -60,9 +61,9 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#88)]
      [!code-csharp[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#88)]  
   
-## <a name="creating-tables-in-vsto-add-ins"></a>VSTO アドインでの表の作成  
+## <a name="create-tables-in-vsto-add-ins"></a>VSTO アドインでテーブルを作成します。  
   
-#### <a name="to-add-a-simple-table-to-a-document"></a>ドキュメントに単純な表を追加するには  
+### <a name="to-add-a-table-to-a-document"></a>ドキュメントにテーブルを追加するには  
   
 -   <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> メソッドを使用して、ドキュメントの先頭に 3 行 4 列の表を追加します。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
  表を作成すると、作成した表は自動的に <xref:Microsoft.Office.Interop.Word.Document> の <xref:Microsoft.Office.Interop.Word.Tables> コレクションに追加されます。 表を参照するには、次のコードに示すとおり、<xref:Microsoft.Office.Interop.Word.Tables.Item%2A> プロパティを使用して項目番号で参照します。  
   
-#### <a name="to-refer-to-a-table-by-item-number"></a>項目番号で表を参照するには  
+### <a name="to-refer-to-a-table-by-item-number"></a>項目番号で表を参照するには  
   
 1.  <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> プロパティを使用して、参照する表の項目番号を指定します。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/16/2018
   
  各 <xref:Microsoft.Office.Interop.Word.Table> オブジェクトには <xref:Microsoft.Office.Interop.Word.Table.Range%2A> プロパティもあり、このプロパティを使用して書式設定属性を設定できます。  
   
-#### <a name="to-apply-a-style-to-a-table"></a>表にスタイルを適用するには  
+### <a name="to-apply-a-style-to-a-table"></a>表にスタイルを適用するには  
   
 1.  <xref:Microsoft.Office.Interop.Word.Table.Style%2A> プロパティを使用して、Word のいずれかの組み込みスタイルを表に適用します。  
   
@@ -94,9 +95,9 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#88)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって Word の表のセルにテキストと書式を追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
+ [方法: プログラムによって Word の表のセルにテキストと書式の追加](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)   
  [方法: プログラムによって Word の表に行と列を追加](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)   
- [方法: プログラムによってドキュメントのプロパティを Word の表の設定](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)   
+ [方法: プログラムによって document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   
   
