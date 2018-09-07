@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 92097e70b026a23062f7a67ff521d60312096d5c
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: 72cb3872462d4e70cdab7510385a5e903af3f7f5
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341847"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626978"
 ---
 # <a name="install-python-interpreters"></a>Python インタープリターのインストール
 
@@ -34,7 +34,7 @@ Visual Studio の [**[Python 環境]**](managing-python-environments-in-visual-s
 
 | インタープリター | 説明 |
 | --- | --- |
-| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 がサポートされていないため、"**Python バージョン 3.6 はサポートされていません**" エラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
+| [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](http://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](http://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 以降がサポートされていないため、**Python バージョン 3.6 はサポートされていません**というようなエラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 |
 | [Anaconda](https://www.continuum.io) | Python を利用するオープン データ サイエンス プラットフォームであり、最新バージョンの CPython と、インストールが困難なパッケージのほとんどを含みます。 他のインタープリターに決定できない場合にお勧めします。 |
 | [PyPy](http://www.pypy.org/) | Python の高パフォーマンスなトレースの JIT 実装であり、実行時間の長いプログラム、およびパフォーマンスに問題があるが他の解決策が見つからない場合に、適しています。 Visual Studio で動作しますが、高度なデバッグ機能のサポートには制限があります。 |

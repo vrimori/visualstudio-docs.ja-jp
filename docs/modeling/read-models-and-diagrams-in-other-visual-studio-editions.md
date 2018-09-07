@@ -11,38 +11,38 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4eb1b80eaa5b0af600fa45ba0cbe4786043f1580
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 420a17dbac9e0a3bf10b4c92baa108067ad44949
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948718"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775582"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
 
- モデルの作成をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)です。
+ モデルの作成をサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>モデルおよび図へのアクセス
- 依存関係ダイアグラムを読み取りするにはまず Visual Studio を使用して、モデリング プロジェクトを開くし、内にダイアグラムを開きます。
+ 依存関係図を読み取るには、まず Visual Studio を使用して、モデリング プロジェクトを開き、し、その中で図を開く必要があります。
 
- このため、依存関係ダイアグラムを読みたい場合もが必要が作成されたモデリング プロジェクトへのアクセスです。 これを行うには、[!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)] からプロジェクトにアクセスするか、プロジェクト ファイルのコピーを取得します。
+ このため、依存関係図を読みたい場合も必要が作成されたモデリング プロジェクトへのアクセス。 これを行うには、[!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)] からプロジェクトにアクセスするか、プロジェクト ファイルのコピーを取得します。
 
 > [!NOTE]
 >  これは、コードから生成されたコード マップおよび .NET クラス図には適用されません。 これらの図はモデリング プロジェクトとは関係なく表示できます。
 
- 依存関係ダイアグラムを読み取り、必要なファイルの最小セットのとおりです。
+ 依存関係図を読み取るには、必要なファイルの最小セットがとおりです。
 
--   読みたい、たとえば、ダイアグラムのファイルの図は、2 つ**MyDiagram.classdiagram と MyDiagram.classdiagram.layout**です。
+-   2 つのダイアグラム ファイルを読み取るには、たとえば、ダイアグラムの**MyDiagram.classdiagram と MyDiagram.classdiagram.layout**します。
 
     > [!NOTE]
-    >  依存関係図もが必要という名前のファイル * MyDiagram ***. layerdiagram.suppressions**です。
+    >  依存関係を示す図については、という名前のファイルもがする必要があります_MyDiagram_**. layerdiagram.suppressions**します。
 
 -   モデリング プロジェクト ファイル (**MyModel.modelproj**)
 
 -   ルート モデル ファイル (**ModelDefinition\MyModel.uml**)
 
--   ダイアグラムで参照されているいずれかのパッケージ用のパッケージ ファイル (**ModelDefinition\MyPackage.uml**)
+-   ダイアグラムで参照されているすべてのパッケージのパッケージ ファイル (**ModelDefinition\MyPackage.uml**)
 
 ## <a name="changes-that-you-can-make-in-read-only-mode"></a>読み取り専用モードで行える変更
  モデルの作成をサポートしていないバージョンの Visual Studio でモデルおよびその図を開く場合、モデルは変更できません。 つまり、図またはモデル エクスプローラーに表示されている要素と関係は変更できません。 ただし、図のレイアウトに次のような変更を加えることはできます:
@@ -51,7 +51,7 @@ ms.locfileid: "31948718"
 
 -   図形を展開および折りたたむ。
 
- これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、する必要がありますには、少なくとも送信する、更新された **.layout**ファイル。
+ これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、送信しなければならない以上で、更新された **.layout**ファイル。
 
 ##  <a name="RelatedTopics"></a> 関連トピック
 

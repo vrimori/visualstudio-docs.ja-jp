@@ -1,5 +1,5 @@
 ---
-title: Office ドキュメントのパスワード保護 |Microsoft ドキュメント
+title: Office ドキュメントのパスワード保護
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,31 +19,31 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a278677b40f8da703c7f3287851c2f82fb95a21c
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 02deaccdd615bae0c948d50abdd41758dc701704
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572713"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35671832"
 ---
 # <a name="password-protection-on-office-documents"></a>Office ドキュメントのパスワード保護
-  パスワードを知らない人に開けませんできるように、Microsoft Office Word 文書と Microsoft Office Excel ブックでパスワードを設定することができます。 このオプションの名前は **[パスワード]** です。  
+  パスワードを知らない人によって開けませんように、Microsoft Office Word 文書と Microsoft Office Excel ブックにパスワードを設定することになります。 このオプションの名前は **[パスワード]** します。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 既存のドキュメントおよびいるブックを使用してドキュメント レベルのプロジェクトを作成する **[パスワード]** 有効にします。 持つ Word および Excel のドキュメントの Visual Studio での動作が異なります **[パスワード]** 有効にします。  
+ 既存の文書やブックを使用してドキュメント レベルのプロジェクトを作成する **[パスワード]** を有効にします。 Visual Studio での動作が Word および Excel のドキュメントを異なる **[パスワード]** を有効にします。  
   
- 有効化については **[パスワード]**、Word または Excel でのヘルプを参照してください。  
+ 有効化について **[パスワード]**、Word または Excel のヘルプを参照してください。  
   
 ## <a name="behavior-of-excel-and-word"></a>Excel および Word の動作  
- Visual Studio で Excel ブックを開くたびに **[パスワード]** が有効な入力を求められたら、パスワードです。 ソリューションをビルドするときに求められます、パスワードをもう一度、ビルド時にドキュメントが開かれているためです。  
+ Visual Studio で Excel ブックを開くたびに **[パスワード]** が有効な入力を求められたら、パスワード。 ソリューションをビルドするときに促されます、パスワードをもう一度、ビルド中に、ドキュメントが開かれているためです。  
   
- 最初に開く、Word 文書が Visual Studio で **[パスワード]** 有効にすると、単語の入力を求め、パスワードです。 正常にパスワードを入力した後 **[パスワード]** ドキュメントから削除し、ドキュメントを開いて、パスワードは必要なくなった。 ソリューションでドキュメントをする場合は、前にパスワードを要求するように開くことができる、有効にする必要があります **[パスワード]** 最終的なビルドの後に、ソリューションを展開する前にします。  
+ 初めてが Visual Studio で Word 文書を開く **[パスワード]** 有効にすると、Word が表示されたら、パスワードの。 正常にパスワードを入力した後 **[パスワード]** ドキュメントから削除されますドキュメントを開いて、パスワードが不要になったとします。 場合は、ソリューション内、ドキュメントを要求する前にパスワードを要求するのには開くことが、有効にする必要があります **[パスワード]** 最終的なビルドの後に、ソリューションをデプロイする前にします。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメント レベルのソリューションでドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)   
  [Information rights management とマネージ コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
- [方法: ドキュメントの背後にあるアクセス許可の制限を実行するコードを許可します。](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
- [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
+ [方法: コードの制限されたアクセス許可を持つドキュメントの背後で実行を許可](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
   
   

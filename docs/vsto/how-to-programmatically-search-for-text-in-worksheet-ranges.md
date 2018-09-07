@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによってワークシートの範囲内のテキストの検索 |Microsoft ドキュメント'
+title: '方法: プログラムによってワークシートの範囲内のテキストの検索'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,25 +17,26 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2749834f459085b8d182b58f12a4c372f7493cba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ba3c4cea78e2c5c32d1bb7159243155e18fd01ce
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672390"
 ---
-# <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストを検索する
-  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストがなど、ワークシートのセルに表示される可能性がエラー文字列のいずれかに指定することできますも`#NULL!`または`#VALUE!`です。 エラー文字列の詳細については、次を参照してください。[セルのエラー値](http://msdn.microsoft.com/library/office/ff839168.aspx)です。  
+# <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>方法: プログラムによってワークシートの範囲内のテキストの検索
+  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>のメソッド、<xref:Microsoft.Office.Interop.Excel.Range>オブジェクトでは、範囲内でテキストを検索することができます。 このテキストのエラー文字列など、ワークシートのセルに表示されることができますを指定できますも`#NULL!`または`#VALUE!`します。 エラー文字列の詳細については、次を参照してください。[エラー値をセル](http://msdn.microsoft.com/library/office/ff839168.aspx)します。  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- 次の例は、名前付き範囲を検索`Fruits`"apples"を含むセルのフォントを変更します。 このプロシージャで、<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>メソッドで、事前に設定を使用して、検索の繰り返しを検索します。 検索するセルを指定して、<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>メソッドは、残りの部分を処理します。  
+ 次の例では、名前付き範囲を検索する`Fruits`"apples"という単語を含むセルのフォントを変更します。 このプロシージャで、<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>メソッドは、事前に設定を使用して検索を繰り返すの設定を検索します。 検索するセルを指定して、<xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>メソッドがすべて引き受けてくれます。  
   
 > [!NOTE]  
->  <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>範囲の末尾に達した後に、メソッドの検索が検索範囲の先頭に戻るラップします。 コードでは、ある検索周りで折り返されない無限ループを確認してください。 サンプル プロシージャを使用してこれを処理する方法を示しています、<xref:Microsoft.Office.Interop.Excel.Range.Address%2A>プロパティです。  
+>  <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>範囲の末尾に達した後、検索範囲の先頭に戻ってメソッドの検索をラップします。 コードは必要があります、検索が無限ループに入るをラップしないことを確認します。 サンプル プロシージャを使用してこれを処理する 1 つの方法を示しています、<xref:Microsoft.Office.Interop.Excel.Range.Address%2A>プロパティ。  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[操作方法: 使用 Find メソッド、Excel アドインで?](http://go.microsoft.com/fwlink/?LinkID=130294)です。  
+ ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。 [How do i: 使用を Excel アドインで検索方法でしょうか。](http://go.microsoft.com/fwlink/?LinkID=130294)します。  
   
-### <a name="to-search-for-text-in-a-worksheet-range"></a>ワークシートの範囲内のテキストを検索するには  
+## <a name="to-search-for-text-in-a-worksheet-range"></a>ワークシートの範囲内のテキストを検索するには  
   
 1.  全体の範囲、最初に見つかった範囲、および現在の検索範囲を追跡するための変数を宣言します。  
   
@@ -47,17 +48,17 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreExcelAutomation#59](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#59)]
      [!code-vb[Trin_VstcoreExcelAutomation#59](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#59)]  
   
-3.  検索の一致がある限り、続行します。  
+3.  一致がある限りの検索を続行します。  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#60)]
      [!code-vb[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#60)]  
   
-4.  最初に見つかった範囲を比較 (`firstFind`) に**Nothing**です。 場合`firstFind`見つかった範囲には値なし、休暇からコード ストアが含まれています (`currentFind`)。  
+4.  最初に見つかった範囲を比較 (`firstFind`) に**Nothing**します。 場合`firstFind`検索範囲には値なし。 すぐにコード ストアが含まれています (`currentFind`)。  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#61)]
      [!code-vb[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#61)]  
   
-5.  検索範囲のアドレスには、最初に見つかった範囲のアドレスが一致する場合は、ループを終了します。  
+5.  検索範囲のアドレスが最初に見つかった範囲のアドレスと一致する場合は、ループを終了します。  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#62](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#62)]
      [!code-vb[Trin_VstcoreExcelAutomation#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#62)]  
@@ -79,9 +80,9 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#57)]  
   
 ## <a name="see-also"></a>関連項目  
- [範囲の使用](../vsto/working-with-ranges.md)   
+ [範囲を操作します。](../vsto/working-with-ranges.md)   
  [方法: プログラムによってブック内の範囲にスタイルを適用](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [方法: プログラムによってワークシートの範囲をコード内を参照してください](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
+ [方法: プログラムによってコード内でワークシートの範囲を参照](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
  [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)  
   
   

@@ -33,12 +33,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dfd3db7a029497a0f9a5b5c2c6c89cde38524c23
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 8e9295b71248650b078415d4539f72d2b94dc315
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34692614"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672240"
 ---
 # <a name="office-project-templates-overview"></a>Office プロジェクト テンプレートの概要
   Visual Studio の Microsoft Office Developer Tools には、次の種類の Office ソリューションの作成に使用できるプロジェクト テンプレートが含まれています。  
@@ -47,14 +47,14 @@ ms.locfileid: "34692614"
   
 -   [VSTO アドイン](#AppLevel)  
   
- これらの種類の Office ソリューションの詳細な比較についてを参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)です。  
+ これらの種類の Office ソリューションの詳細な比較についてを参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
   
  Office プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログ ボックスの **[Visual C#]** 言語ノードおよび **[Visual Basic]** 言語ノードの下の **[Office]** ノードで使用できます。 各テンプレートでは、アセンブリ参照、デバッグ設定など、対象アプリケーションに適した構成を持つプロジェクトが生成されます。  
   
- 各プロジェクトには、特定の種類のソリューションの作成に使用できるファイルおよびコードが用意されています。 プロジェクトごとに生成されるコードには、スタートアップ イベントおよびシャットダウン イベントのハンドラーが含まれます。 これらのイベント ハンドラーにコードを追加して、読み込まれるときにはソリューションを初期化し、アンロードされるときにはソリューションをクリーンアップすることができます。 詳細については、次を参照してください。 [Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)と[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)です。  
+ 各プロジェクトには、特定の種類のソリューションの作成に使用できるファイルおよびコードが用意されています。 プロジェクトごとに生成されるコードには、スタートアップ イベントおよびシャットダウン イベントのハンドラーが含まれます。 これらのイベント ハンドラーにコードを追加して、読み込まれるときにはソリューションを初期化し、アンロードされるときにはソリューションをクリーンアップすることができます。 詳細については、次を参照してください。 [Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)と[Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
   
 > [!NOTE]  
->  Office 開発ツールは、Visual Studio の一部のエディションに付属しています。 詳細については、次を参照してください。 [Office ソリューションを開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)です。  
+>  Office 開発ツールは、Visual Studio の一部のエディションに付属しています。 詳細については、次を参照してください。 [Office ソリューションを開発コンピューターを構成する](../vsto/configuring-a-computer-to-develop-office-solutions.md)します。  
   
 ##  <a name="DocLevel"></a> ドキュメント レベルのカスタマイズ  
  **[新しいプロジェクト]** ダイアログ ボックスの **[Office]** ノードには、Word および Excel のドキュメント レベルのカスタマイズの作成に使用できる次のプロジェクト テンプレートが用意されています。  
@@ -80,11 +80,11 @@ ms.locfileid: "34692614"
  Word テンプレートと Excel テンプレートのプロジェクト テンプレートは、Word ドキュメントと Excel ブックのプロジェクト テンプレートと同様に動作します。 Word テンプレートと Excel テンプレートのプロジェクト テンプレートを活用すると、ソリューション内のカスタマイズされたテンプレートに基づいてローカルなドキュメントまたはブックを新しく作成するのが容易になります。 ユーザーがテンプレートに基づいて新しく作成するドキュメントでは、ソリューションの機能を利用できます。  
   
 > [!NOTE]  
->  マネージ コード拡張機能を参照する Word テンプレートは、グローバル VSTO アドインとして使用できません。テンプレートが Word の Startup ディレクトリから読み込まれた場合、アセンブリは呼び出されません。 詳細については、次を参照してください[グローバル テンプレートと Excel アドイン (.xla ファイル) の制限事項。](#Limitations)  
+>  マネージド コード拡張機能を参照する Word テンプレートは、グローバル VSTO アドインとして使用できません。テンプレートが Word の Startup ディレクトリから読み込まれた場合、アセンブリは呼び出されません。 詳細については、次を参照してください[グローバル テンプレートと Excel アドイン (.xla ファイル) の制限事項。](#Limitations)  
   
  これらのプロジェクトの種類を使用して作業を開始する場合の詳細については、次のトピックを参照してください。  
   
--   [ドキュメント レベルのカスタマイズをプログラミングします。](../vsto/programming-document-level-customizations.md)  
+-   [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)  
   
 -   [Word ソリューション](../vsto/word-solutions.md)  
   
@@ -133,17 +133,17 @@ ms.locfileid: "34692614"
   
 -   [VSTO アドインをプログラミングします。](../vsto/programming-vsto-add-ins.md)  
   
--   [Excel 用チュートリアル: を初めて VSTO アドインの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)  
+-   [Excel 用の最初の VSTO アドインのチュートリアル: 作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)  
   
--   [チュートリアル: は、最初に VSTO アドイン Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)  
+-   [チュートリアル: は、初めて VSTO アドインを Outlook の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md)  
   
--   [チュートリアル: 初めて VSTO アドインの PowerPoint を作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)  
+-   [チュートリアル: は powerpoint の場合、最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)  
   
--   [チュートリアル: は、最初に VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)  
+-   [チュートリアル: が初めて VSTO アドイン プロジェクトの作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)  
   
--   [チュートリアル: 初めて VSTO アドインの Word の作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)  
+-   [チュートリアル: Word の最初の VSTO アドイン作成します。](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)  
   
-## <a name="document-vs-template-solutions"></a>ドキュメント テンプレート ソリューションとの比較  
+## <a name="document-vs-template-solutions"></a>テンプレート ソリューションとドキュメントします。  
  Word 文書または Excel ブックのソリューションをデザインする場合は、その文書をユーザーが使用できるようにするための最善の方法を決定する必要があります。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
@@ -164,17 +164,17 @@ ms.locfileid: "34692614"
  ドキュメント、ブック、およびテンプレートは、グローバル テンプレートや Excel VSTO アドイン (.xla ファイル) として正常に機能しないことがあります。  
   
 ## <a name="word-templates"></a>Word テンプレート  
- Microsoft Office Word テンプレートにマネージ コード拡張機能が組み込まれていると、テンプレートがグローバル テンプレートに割り当てられている場合、または Word のスタートアップ ディレクトリから読み込まれた場合でも、プロジェクト アセンブリは呼び出されません。 また、ドキュメントは Office ソリューションの一部であるテンプレートの形式を認識しません。  
+ Microsoft Office Word テンプレートにマネージド コード拡張機能が組み込まれていると、テンプレートがグローバル テンプレートに割り当てられている場合、または Word のスタートアップ ディレクトリから読み込まれた場合でも、プロジェクト アセンブリは呼び出されません。 また、ドキュメントは Office ソリューションの一部であるテンプレートの形式を認識しません。  
   
 ## <a name="excel-add-ins-xla-files"></a>Excel アドイン (.xla ファイル)  
- Excel VSTO アドイン (.xla ファイル) を作成するための Office プロジェクトは存在しません。 ブックを .xla ファイルとして保存できますが、サポートされていない操作であり、推奨できません。 マネージ コード拡張機能として設定されたブックを保存するかどうか、 **Microsoft Office Excel アドイン (\*.xla)** ファイルを選択できるように、**アドイン**別のブックに適用する ダイアログ ボックス。 VSTO アドインの適用後に対象のブックでコードが実行されることもありますが、このような Office ソリューションの使用方法はサポートされていません。  
+ Excel VSTO アドインを作成するための Office プロジェクトは存在しません (*.xla*ファイル)。 ブックを .xla ファイルとして保存できますが、サポートされていない操作であり、推奨できません。 マネージ コードの拡張機能として設定されたブックを保存するかどうか、 **Microsoft Office Excel アドイン (\*.xla)** ファイルを選択できるように、**アドイン**別のブックに適用する ダイアログ ボックス。 場合によっては、コード後が実行対象のブックで VSTO アドインが適用されるが、Office ソリューションのような使用はサポートされていません。  
   
 ## <a name="see-also"></a>関連項目  
- [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)   
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
  [Office ソリューションを開発します。](../vsto/developing-office-solutions.md)   
  [方法: Visual Studio での Office プロジェクトの作成](../vsto/how-to-create-office-projects-in-visual-studio.md)   
- [Excel 用ドキュメント レベルのカスタマイズのプログラミングを始める](../vsto/getting-started-programming-document-level-customizations-for-excel.md)   
- [Word 用ドキュメント レベルのカスタマイズのプログラミングを始める](../vsto/getting-started-programming-document-level-customizations-for-word.md)   
+ [Excel 用ドキュメント レベル カスタマイズのプログラミングを開始します。](../vsto/getting-started-programming-document-level-customizations-for-excel.md)   
+ [Word 用ドキュメント レベル カスタマイズのプログラミングを開始します。](../vsto/getting-started-programming-document-level-customizations-for-word.md)   
  [VSTO アドインのプログラミングを始める](../vsto/getting-started-programming-vsto-add-ins.md)  
   
   

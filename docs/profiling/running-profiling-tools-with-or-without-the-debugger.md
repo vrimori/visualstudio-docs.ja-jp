@@ -10,15 +10,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64ea0d4d51a7dfbd9a7e1fb58e6297d0842d83b3
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: e5197ba9e1a2fda9cb6a41cfe903bd772db53331
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34268270"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42627148"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
 Visual Studio ではパフォーマンス ツールを選ぶことができます。一部のツール (たとえば、**[CPU 使用率]** と **[メモリ使用量]**) は、デバッガーがありでもなしでも実行できます。 デバッガーを使用しないパフォーマンス ツールは、リリース構成で実行することを目的とし、デバッガー統合のツールはデバッグ構成で実行するためのものです。  
+
+Windows 7 以降ではデバッガーなしでプロファイル ツールを使用することができます。 Windows 8 以降では、デバッガーを使用してプロファイル ツールを実行する必要があります (**[診断ツール]** ウィンドウ)。
   
 ## <a name="should-i-run-the-tool-with-or-without-the-debugger"></a>このツールは、デバッガーを使用して実行したほうが良いですか、使用しないほうが良いですか。  
  デバッガー統合のパフォーマンス ツールを使用すると、デバッガーなしのツールが行えない多くのことが可能になります。たとえば、ブレークポイントの設定や変数値の調査を行えます。 デバッガーを使用しないツールでは、リリースされたアプリケーションでユーザーに対して表示される内容に近いエクスペリエンスが提供されます。  

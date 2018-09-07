@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7af399ca55c1fc2355da508662fe67314a519070
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 25d6dd29f989f1ea2bbf95ce2b32e7d031e1953e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768080"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35671999"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>チュートリアル: カスタム作業ウィンドウからアプリケーションを自動化します。
   このチュートリアルでは、PowerPoint を自動化するカスタム作業ウィンドウの作成方法を示します。 このカスタム作業ウィンドウでは、カスタム作業ウィンドウに配置された <xref:System.Windows.Forms.MonthCalendar> コントロールをユーザーがクリックしたときに、日付をスライドに挿入します。  
@@ -52,16 +52,16 @@ ms.locfileid: "34768080"
   
 -   Microsoft PowerPoint 2010 または [!INCLUDE[PowerPoint_15_short](../vsto/includes/powerpoint-15-short-md.md)]。  
   
-## <a name="create-the-add-in-project"></a>アドインのプロジェクトを作成します。  
- まず、PowerPoint 用の VSTO アドイン プロジェクトを作成します。  
+## <a name="create-the-add-in-project"></a>アドイン プロジェクトを作成します。  
+ 最初の手順では、PowerPoint の VSTO アドイン プロジェクトを作成します。  
   
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  PowerPoint アドイン プロジェクト テンプレートを使用して、 **MyAddIn**という名前の PowerPoint VSTO アドイン プロジェクトを作成します。 詳細については、次を参照してください。[する方法: Visual Studio で作成する Office プロジェクト](../vsto/how-to-create-office-projects-in-visual-studio.md)です。  
+1.  PowerPoint アドイン プロジェクト テンプレートを使用して、 **MyAddIn**という名前の PowerPoint VSTO アドイン プロジェクトを作成します。 詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、 **ThisAddIn.cs** コード ファイルまたは **ThisAddIn.vb** コード ファイルが開かれ、 **ソリューション エクスプローラー** に **MyAddIn**プロジェクトが追加されます。  
   
-## <a name="design-the-user-interface-of-the-custom-task-pane"></a>カスタム作業ウィンドウのユーザー インターフェイスを設計します。  
+## <a name="design-the-user-interface-of-the-custom-task-pane"></a>カスタム作業ウィンドウのユーザー インターフェイスをデザインします。  
  カスタム作業ウィンドウにはビジュアルなデザイナーはありませんが、好みに合わせたレイアウトでユーザー コントロールを設計できます。 このチュートリアルの後半では、カスタム作業ウィンドウにユーザー コントロールを追加します。  
   
 #### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>カスタム作業ウィンドウのユーザー インターフェイスを設計するには  
@@ -126,7 +126,7 @@ ms.locfileid: "34768080"
   
 ### <a name="to-test-your-vsto-add-in"></a>VSTO アドインをテストするには  
   
-1.  キーを押して**f5 キーを押して**プロジェクトを実行します。  
+1.  キーを押して**F5**プロジェクトを実行します。  
   
 2.  カスタム作業ウィンドウが表示されていることを確認します。  
   
@@ -137,15 +137,15 @@ ms.locfileid: "34768080"
 ## <a name="next-steps"></a>次の手順  
  カスタム作業ウィンドウを作成する方法の詳細については、次のトピックで説明します。  
   
--   別のアプリケーションの VSTO アドインのカスタム作業ウィンドウを作成します。 カスタム作業ウィンドウをサポートするアプリケーションの詳細については、次を参照してください。[カスタム作業ウィンドウの](../vsto/custom-task-panes.md)します。  
+-   別のアプリケーションの VSTO アドインでカスタム作業ウィンドウを作成します。 カスタム作業ウィンドウをサポートするアプリケーションの詳細については、次を参照してください。[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)します。  
   
--   カスタム作業ウィンドウの表示/非表示の切り替えに使用できるリボン ボタンを作成する。 詳細については、次を参照してください。[チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)です。  
+-   カスタム作業ウィンドウの表示/非表示の切り替えに使用できるリボン ボタンを作成する。 詳細については、次を参照してください。[チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)します。  
   
--   Outlook で開いたそれぞれの電子メール メッセージ用に、カスタム作業ウィンドウを作成する。 詳細については、次を参照してください。[チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)です。  
+-   Outlook で開いたそれぞれの電子メール メッセージ用に、カスタム作業ウィンドウを作成する。 詳細については、次を参照してください。[チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [カスタム作業ウィンドウ](../vsto/custom-task-panes.md)   
- [方法: カスタム作業ウィンドウをアプリケーションに追加します。](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
+ [方法: カスタム作業ウィンドウをアプリケーションに追加](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [チュートリアル: リボン ボタンとカスタム作業ウィンドウを同期します。](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
  [チュートリアル: Outlook で電子メール メッセージと共にカスタム作業ウィンドウを表示します。](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
   

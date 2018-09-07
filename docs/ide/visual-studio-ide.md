@@ -13,20 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5647bbc6aa520fdf5427b61f53a54c28b9a0a48d
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 110e8477384e7f13da6a4f9ca0b81235f2f2446b
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381173"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42626940"
 ---
-# <a name="visual-studio-overview"></a>Visual Studio の概要
+# <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE へようこそ
 
 Visual Studio *統合開発環境* は、コードの編集、デバッグ、ビルドを行ってから、アプリを発行するために使用できるクリエイティブなランチパッドです。 統合開発環境 (IDE) は、ソフトウェア開発の多くの側面で使用できる機能を豊富に備えたプログラムです。 大部分の IDE が備える標準的なエディターおよびデバッガーに加えて、Visual Studio ではコンパイラ、コード補完ツール、グラフィック デザイナーなど、ソフトウェア開発プロセスを容易にする多くの機能を用意しています。
 
 Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2017 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。
 
-この記事では、Windows 用の Visual Studio 2017 について説明します。 IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての [IntelliSense](using-intellisense.md) の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
+この概要記事では、Windows 用の Visual Studio 2017 について説明します。 IDE の基本的な機能を紹介します。 簡単なプロジェクトの作成、コーディング支援としての [IntelliSense](using-intellisense.md) の使用、プログラム実行中の変数の値を確認するためのアプリのデバッグなど、Visual Studio で実行できることをいくつか見ていきます。 さまざまなツール ウィンドウについても説明します。
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE のインストール
 
@@ -256,21 +256,32 @@ Visual Studio でのデバッグの詳細については、[デバッガーの�
 
    IDE 全体の配色テーマが**濃色**に変更されます。
 
-   ![濃色テーマの VS](media/quickstart-personalize-dark-theme.png)
+   ![ダーク テーマでの Visual Studio](media/quickstart-personalize-dark-theme.png)
 
 IDE の他のカスタマイズ方法については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。
 
-## <a name="learn-more"></a>詳細情報
+## <a name="next-steps"></a>次の手順
 
-Android または iOS のスマートフォン用のアプリを作成したいですか? 3D ゲームやクラウド対応のアプリはどうですか? これらをはじめとする Visual Studio の機能については、「[Features of Visual Studio 20171](../ide/advanced-feature-overview.md)」(Visual Studio 2017 の機能) をご覧ください。
+以下の入力記事のいずれかに従って、Visual Studio をさらに詳しく調べます。
 
-コーディングをすぐに始められる場合は、目次から「[Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する](quickstart-aspnet-core.md)」などのクイック スタート トピックを選んでください。
+- [コード エディターの使用方法](quickstart-editor.md)に関する記事を参照して、テキスト エディターに慣れます
 
-[Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) で無料の Visual Studio コースを見ることもできます。
+- [プロジェクトとソリューション](quickstart-projects-solutions.md)に関する記事を参照して、Visual Studio でコードを整理する方法を学習します
+
+コーディングについてさらに詳しく調べる準備ができたら、次の言語固有のクイック スタートのいずれかを参照することをお勧めします。
+
+- [Visual Studio を使用して初めての Python Web アプリを作成する](quickstart-python.md)
+
+- [Visual Studio を使用して初めての C# Web アプリを作成する](quickstart-aspnet-core.md)
+
+- [Visual Studio を使用して初めての Node.js Web アプリを作成する](quickstart-nodejs.md)
+
+- [Visual Studio での C++ の概要](getting-started-with-cpp-in-visual-studio.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio のその他の機能](../ide/advanced-feature-overview.md)
-* [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
-* [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)
-* [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+- [Visual Studio のその他の機能](../ide/advanced-feature-overview.md)を確認します
+- [visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/) にアクセスします
+- [Visual Studio ブログ](https://blogs.msdn.microsoft.com/visualstudio/)を参照します
+- [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033) で無料の Visual Studio コースを確認します
+- [Visual Studio のダウンロード ページ](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)で Visual Studio をダウンロードします

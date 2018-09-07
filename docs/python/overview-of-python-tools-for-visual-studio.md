@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 368809792e05ad418fccf65640ae99470128f6aa
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 0176b596ecf432ab74a29c29d4af6848ee1d4820
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468778"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626911"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -84,7 +84,7 @@ Visual Studio は、時間と共に複雑になるプロジェクトを管理す
 
 プロジェクト テンプレートと項目テンプレートで、さまざまな種類のプロジェクトやファイルの設定プロセスを自動化すると、貴重な時間を節約し、複雑でエラーが発生しやすい詳細情報の管理作業を軽減できます。 Visual Studio には、Web、Azure、データ サイエンス、コンソールなどの種類のプロジェクト用のテンプレートだけでなく、Python クラス、単体テスト、Azure の Web 構成、HTML、さらには Django アプリなどのファイル用のテンプレートも用意されています。
 
-[![Visual Studio の Python プロジェクト テンプレートと項目テンプレート](media/project-and-item-templates.png)](media/project-and-item-templates.png)
+[![Visual Studio の Python プロジェクト テンプレートと項目テンプレート](media/project-and-item-templates.png)](media/project-and-item-templates.png#lightbox)
 
 詳細情報
 
@@ -114,7 +114,7 @@ Visual Studio の長所の 1 つは強力なデバッガーです。 特に Pyth
 
 プロファイリングでは、アプリケーション内で時間がどのように使用されているかを調べます。 Visual Studio は、CPython ベースのインタープリターを使用したプロファイリングをサポートし、複数のプロファイリング処理のパフォーマンスを比較する機能を備えています。
 
-[![Visual Studio プロファイラーの Python プロジェクトの結果](media/profiling-results.png)](media/profiling-results.png)
+[![Visual Studio プロファイラーの Python プロジェクトの結果](media/profiling-results.png)](media/profiling-results.png#lightbox)
 
 詳細情報
 

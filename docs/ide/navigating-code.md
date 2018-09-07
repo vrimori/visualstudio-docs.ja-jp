@@ -1,6 +1,6 @@
 ---
-title: Visual Studio でコード間を移動する
-ms.date: 09/26/2017
+title: コード ナビゲーション コマンド
+ms.date: 08/14/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -20,12 +20,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9293565b4a238b1486f491c5a343d83364fba088
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: eb711763e96cf6959a71b002f09cefa1ced44734
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34448611"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626792"
 ---
 # <a name="navigate-code"></a>コード間の移動
 
@@ -80,15 +80,23 @@ Visual Studio には、エディター内でコード間を移動するための
 
 - **[指定行へ移動]** (**Ctrl** + **G**): アクティブなドキュメントで、指定した行番号に移動します。
 
-- **[すべてに移動]** (**Ctrl** + **T** キーまたは **Ctrl** + **,** キー): 指定した行、型、ファイル、メンバー、またはシンボルに移動します。
+- **[すべてに移動]** (**Ctrl** + **T** または **Ctrl** + **,**): 指定した行、型、ファイル、メンバー、またはシンボルに移動します。
 
 - **[ファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **F**): ソリューション内の指定したファイルに移動します。
 
-- **[型に移動]** (**Ctrl** + **1**、**Ctrl** + **T**): ソリューション内の指定したファイルに移動します。
+- **[最近使ったファイルに移動]** (**Ctrl** + **1**、**Ctrl** + **R**): ソリューション内の指定した、最近アクセスしたファイルに移動します (Visual Studio 2017 バージョン 15.8 の新機能)。
 
-- **[メンバーに移動]** (**Ctrl** + **1**、**Ctrl** + **M**): ソリューション内の指定したファイルに移動します。
+- **[型に移動]** (**Ctrl** + **1**、**Ctrl** + **T**): ソリューション内の指定した型に移動します。
 
-- **[シンボルに移動]** (**Ctrl** + **1**、**Ctrl** + **S**): ソリューション内の指定したファイルに移動します。
+- **[メンバーに移動]** (**Ctrl** + **1**、**Ctrl** + **M**): ソリューション内の指定したメンバーに移動します。
+
+- **[シンボルに移動]** (**Ctrl** + **1**、**Ctrl** + **S**): ソリューション内の指定したシンボルに移動します。
+
+Visual Studio 2017 バージョン 15.8 以降では、次の **[移動]** ナビゲーション コマンドも使用できます。
+
+- **[ファイル内の次の問題へ移動]** (**Alt** + **PgDn**) と **[ファイル内の前の問題へ移動]** (**Alt** + **PgUp**)
+
+- **[最後の編集の場所へ移動]** (**Ctrl** + **Shift** + **Backspace**)
 
 これらのコマンドの詳細については、[移動コマンドを使用したファイルの検索](../ide/go-to.md)に関するページをご覧ください。
 

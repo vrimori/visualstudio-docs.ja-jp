@@ -1,5 +1,5 @@
 ---
-title: Office 開発のサンプルとチュートリアル |Microsoft ドキュメント
+title: Office 開発のサンプルとチュートリアル
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -23,22 +23,22 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dae0594107d4ffbfa09d33a3e5bff20f65ea48ba
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 925886683b274ddff704771d4939c2112003bb58
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672867"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office 開発のサンプルとチュートリアル
   このセクションには、Microsoft Office ソリューションの構築に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  
   
  サンプル コードは説明を目的としたものであり、実際に配置されるソリューションで変更を加えずに使用することは避けてください。 特に、セキュリティには十分な注意が必要です。  
   
- アプリケーションを保護する方法については、次を参照してください。[セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)です。  
+ アプリケーションをセキュリティで保護する方法の詳細については、次を参照してください。[セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)します。  
   
 > [!NOTE]  
->  間での Office エクスペリエンスを拡張するソリューションの開発に関心のある[複数のプラットフォーム](https://dev.office.com/add-in-availability)しますか? チェック アウト新しい[Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)です。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、ほぼすべての web プログラミング HTML5、JavaScript、CSS3、XML などのテクノロジを使用してそれらをビルドすることができます。  
+>  [複数のプラットフォーム](https://dev.office.com/add-in-availability)にまたがる Office を拡張するソリューション開発に関心がありますか？ 新しい [Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)をチェックして下さい。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、HTML5、JavaScript、CSS3、XML などのほぼすべての web プログラミング テクノロジを使用して、ビルドすることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -56,9 +56,9 @@ ms.locfileid: "34572687"
 |トピック|説明|  
 |-----------|-----------------|  
 |[開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)|セットアップ、プロジェクト テンプレート、Office プライマリ相互運用機能アセンブリ、および Office 開発の新機能に関する情報へのリンクが掲載されています。|  
-|[Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)|マネージ コードを使用する Office ソリューションの動作について開発者とエンド ユーザーの視点から説明し、マネージ コードと Office ドキュメントや Office アプリケーションの連携に関する情報を示します。|  
-|[Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)|Visual Studio の Office 開発を使用したプログラミングについてよく寄せられる質問の一覧と、一般的な問題の解決に役立つトピックへのリンクを示します。|  
-|[設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office ソリューションの作成方法に関する情報、およびソリューション内のアセンブリの役割に関する情報へのリンクを示します。|  
+|[Visual Studio での Office ソリューションのアーキテクチャ](../vsto/architecture-of-office-solutions-in-visual-studio.md)|マネージド コードを使用する Office ソリューションの動作について開発者とエンド ユーザーの視点から説明し、マネージド コードと Office ドキュメントや Office アプリケーションの連携に関する情報を示します。|  
+|[Office プログラミングで一般的なタスク](../vsto/common-tasks-in-office-programming.md)|Visual Studio の Office 開発を使用したプログラミングについてよく寄せられる質問の一覧と、一般的な問題の解決に役立つトピックへのリンクを示します。|  
+|[設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)|Microsoft Office ソリューションの作成方法に関する情報、およびソリューション内のアセンブリの役割に関する情報へのリンクを示します。|  
 |[操作ウィンドウの概要](../vsto/actions-pane-overview.md)|操作ウィンドウと呼ばれるドキュメント レベルの作業ウィンドウの概要を示します。|  
   
   

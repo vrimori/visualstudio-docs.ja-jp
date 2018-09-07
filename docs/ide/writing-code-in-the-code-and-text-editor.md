@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb54b8fa21ae5d2c0580c5d9bc7a570469877c3f
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 397ed4ea94aa54c8f8d31fc6ff0d08da16a93479
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283459"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626982"
 ---
 # <a name="features-of-the-code-editor"></a>コード エディターの機能
 
@@ -51,7 +51,7 @@ Visual Studio では、言語によって異なる機能がサポートされて
 
 |||
 |-|-|
-|ドキュメントのフォーマット|ドキュメント内で、コード行に適切なインデントを設定し、中かっこを移動して行を区切ります。|
+|[ドキュメントのフォーマット](code-styles-and-quick-actions.md#format-document-command)|ドキュメント内で、コード行に適切なインデントを設定し、中かっこを移動して行を区切ります。|
 |選択範囲のフォーマット|選択範囲内で、コード行に適切なインデントを設定し、中かっこを移動して行を区切ります。|
 |選択した行でのタブ化|適切な箇所で、先頭の空白をタブに変換します。|
 |選択した行でのタブ化解除|先頭のタブを空白に変換します。 ファイル内のすべての空白をタブに変換 (または、すべてのタブを空白に変換) する場合は、 `Edit.ConvertSpacesToTabs` 、 `Edit.ConvertTabsToSpaces` comm、s. これらのコマンドは、Visual Studio のメニューには表示されませんが、**クイック アクセス** ウィンドウまたはコマンド ウィンドウから呼び出すことができます。|

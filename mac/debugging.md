@@ -1,27 +1,27 @@
 ---
 title: Xamarin を使ったデバッグ
 description: デバッグは、プログラミングの中でも一般的で必要な部分です。 Visual Studio for Mac は成熟した IDE であり、デバッグが簡単になる機能一式が含まれています。 この記事では、安全なデバッグからデータの視覚化まで、Visual Studio for Mac のデバッグ機能を最大限に活用する方法について説明します。
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: dc1ac1636b27133297e5d616de0a0449517a7c06
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 66f7b33c944ced6ab662cf8e89341be6d7a2fb8b
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33877139"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43223902"
 ---
 # <a name="debugging-with-xamarin"></a>Xamarin を使ったデバッグ
 
 
 Visual Studio for Mac には、Xamarin.iOS、Xamarin.Mac、Xamarin.Android アプリケーションのデバッグをサポートするネイティブ デバッガーが備わっています。
-Visual Studio for Mac では、Visual Studio for Mac ですべてのプラットフォームでマネージ コードをデバッグするために、Mono ランタイムに実装されている [*Mono Soft Debugger*](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/) を使用しています。
+Visual Studio for Mac では、Visual Studio for Mac ですべてのプラットフォームでマネージド コードをデバッグするために、Mono ランタイムに実装されている [*Mono Soft Debugger*](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/) を使用しています。
 
 ## <a name="the-debugger"></a>デバッガー
 
-Visual Studio for Mac では、すべての Xamarin アプリケーションのマネージ コード (C# または F#) をデバッグするために Mono Soft Debugger を使用しています。 Mono Soft Debugger は通常のデバッガーとは異なり、Mono ランタイムに組み込まれている協調的なデバッガーです。生成されるコードと Mono ランタイムは IDE と連携され、デバッグ機能を使用できます。 Mono ランタイムはワイヤ プロトコルを介してデバッグ機能を公開しています。詳細については、[Mono のドキュメント](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)を参照してください。
+Visual Studio for Mac では、すべての Xamarin アプリケーションのマネージド コード (C# または F#) をデバッグするために Mono Soft Debugger を使用しています。 Mono Soft Debugger は通常のデバッガーとは異なり、Mono ランタイムに組み込まれている協調的なデバッガーです。生成されるコードと Mono ランタイムは IDE と連携され、デバッグ機能を使用できます。 Mono ランタイムはワイヤ プロトコルを介してデバッグ機能を公開しています。詳細については、[Mono のドキュメント](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger-wire-format/)を参照してください。
 
 
 [LLDB]( http://lldb.llvm.org/index.html) や [GDB]( https://www.gnu.org/software/gdb/) などのハード デバッガーの場合、デバッグ済みのプログラムの知識や連携を使用せずにプログラムを制御しますが、ネイティブ iOS または Android コードをデバッグする必要があり、Xamarin アプリケーションをデバッグするときには便利なことがあります。

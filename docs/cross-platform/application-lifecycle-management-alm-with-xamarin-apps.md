@@ -1,7 +1,6 @@
 ---
 title: Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/21/2018
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
@@ -10,24 +9,22 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: b711c6c67eb7466d642048f2546c532b9b2e2926
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 0cce9882add1443c2d9187d65b26a25081aac75b
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39231857"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42634942"
 ---
-# <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>Xamarin アプリを使用したアプリケーション ライフサイクル管理 (ALM)
+# <a name="devops-with-xamarin-apps"></a>Xamarin アプリを使用した DevOps
 
 Xamarin では、Android、iOS、および Windows を対象とするクロスプラットフォームのモバイル アプリを、C#、.NET、および Visual Studio を使用して作成することができます。 Xamarin を利用すると、コードの大部分をプラットフォーム間で共有し、プラットフォーム固有にする必要のあるコードをごく一部に抑えることができます。 Xamarin 自体の詳細については、「[Visual Studio と Xamarin](../cross-platform/visual-studio-and-xamarin.md)」を参照してください。
 
 最新のプラットフォーム向けのアプリ開発には、コードを記述するだけでなく、それ以外の多くのアクティビティが関係します。 これらのアクティビティは、アプリの完全なライフサイクルの中で DevOps (開発 + 運用) 期間になされるものあり、たとえば、作業のアジャイルな計画と追跡、コードの設計と実装、ソース コード リポジトリの管理、ビルドの実行、継続的に実行されるインテグレーションと展開の管理、テスト (単体テストと UI テストを含む)、開発環境と運用環境の両方におけるさまざまな形式の診断の実行、製品利用統計情報と分析によるアプリのパフォーマンスとユーザー動作のリアルタイムな監視などがあります。
 
-Visual Studio、Visual Studio Team Services、および Team Foundation Server は、さまざまな DevOps 機能 (アプリケーション ライフサイクル管理 (ALM) とも呼ばれる) を提供しています。 これらの多くは、クロスプラットフォームのプロジェクトに完全に適用されます。
+Visual Studio、Visual Studio Team Services、Team Foundation Server は、さまざまな DevOps 機能を提供しています。 これらの多くは、クロスプラットフォームのプロジェクトに完全に適用されます。 Xamarin アプリでは特にそう言えます。C# と .NET で構築し、いくつかの DevOps ツールはそれらを中心に構築されているからです。 その他のツールでは、ビルド環境およびランタイム環境との緊密な統合が必要です。 Xamarin アプリは Windows 以外のプラットフォームでも実行でき、.NET の Mono 実装を使用しているため、Xamarin では特定の必要に合わせて専門ツールが提供されます。
 
-Xamarin アプリでは特にそう言えます。C# と .NET で構築し、いくつかの ALM ツールはそれらを中心に構築されているからです。 その他のツールでは、ビルド環境およびランタイム環境との緊密な統合が必要です。 Xamarin アプリは Windows 以外のプラットフォームでも実行でき、.NET の Mono 実装を使用しているため、Xamarin では特定の必要に合わせて専門ツールが提供されます。
-
-次の表は、Visual Studio ALM 機能のうち Xamarin プロジェクトで機能するはずの機能と、制限がある機能を示しています。 各機能そのものの詳細については、リンク先のドキュメントを参照してください。
+次の表は、Xamarin プロジェクトで動作する Visual Studio の DevOps 機能と制限がある機能を示しています。 各機能そのものの詳細については、リンク先のドキュメントを参照してください。
 
 ## <a name="agile-tools"></a>アジャイル ツール
 

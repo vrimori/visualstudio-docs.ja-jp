@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9640d98522c74fb33f8845e255511a807e03961e
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: f06c26f2f274615058c46ecd45a6d73757b78db9
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119518"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774795"
 ---
 # <a name="how-to-edit-a-sharepoint-deployment-configuration"></a>方法: SharePoint の配置構成の編集
   配置構成を作成または既存の展開構成を変更できます。 たとえば、1 つの手順を実行したり、展開プロセスの手順の順序を変更します。 作成または組み込みおよびプログラムで追加の構成を変更できないために、展開の構成を変更することがあります。  
@@ -33,7 +33,7 @@ ms.locfileid: "37119518"
   
 #### <a name="to-create-a-sharepoint-deployment-configuration"></a>SharePoint の配置構成を作成するには  
   
-1.  **ソリューション エクスプ ローラー**を SharePoint プロジェクトを選択し、メニュー バーで、次のように選択します。**プロジェクト**、* ProjectName ***プロパティ**します。  
+1.  **ソリューション エクスプ ローラー**を SharePoint プロジェクトを選択し、メニュー バーで、次のように選択します。**プロジェクト**、 _ProjectName_**プロパティ**します。  
   
 2.  **SharePoint**  タブで、選択、**新規**ボタンをクリックします。  
   

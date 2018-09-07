@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって範囲を縮小またはドキュメントの選択 |Microsoft ドキュメント'
+title: '方法: プログラムによって範囲またはドキュメント内の選択を折りたたむ'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,14 +19,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7d4ce27e141e03b6a3cc84b00321026052893ad9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 87a4b490b7cc7b1942723e6033117571bf08cba6
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35671897"
 ---
-# <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>方法: プログラムによって文書内の範囲または選択範囲を縮小する
-  <xref:Microsoft.Office.Interop.Word.Range> または <xref:Microsoft.Office.Interop.Word.Selection> オブジェクトを使用する場合、既存のテキストが上書きされないように、テキストを挿入する前に、選択範囲を挿入ポイントに変更できます。 両方の<xref:Microsoft.Office.Interop.Word.Range>と<xref:Microsoft.Office.Interop.Word.Selection>オブジェクト折りたたみメソッドを持ちを使用する、<xref:Microsoft.Office.Interop.Word.WdCollapseDirection>列挙値。  
+# <a name="how-to-programmatically-collapse-ranges-or-selections-in-documents"></a>方法: プログラムによって範囲またはドキュメント内の選択を折りたたむ
+  <xref:Microsoft.Office.Interop.Word.Range> または <xref:Microsoft.Office.Interop.Word.Selection> オブジェクトを使用する場合、既存のテキストが上書きされないように、テキストを挿入する前に、選択範囲を挿入ポイントに変更できます。 両方の<xref:Microsoft.Office.Interop.Word.Range>と<xref:Microsoft.Office.Interop.Word.Selection>オブジェクトを利用する、折りたたみメソッドがある、<xref:Microsoft.Office.Interop.Word.WdCollapseDirection>列挙値。  
   
 -   <xref:Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart> は、選択範囲を選択範囲の先頭に向かって縮小します。 列挙値を指定しない場合は、これが既定の動作です。  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-### <a name="to-collapse-a-range-and-insert-new-text"></a>範囲を縮小して新しいテキストを挿入するには  
+## <a name="to-collapse-a-range-and-insert-new-text"></a>範囲を縮小して新しいテキストを挿入するには  
   
 1.  ドキュメントの最初の段落で構成される <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを作成します。  
   
@@ -68,11 +69,11 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreWordAutomation#50](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#50)]
  [!code-csharp[Trin_VstcoreWordAutomation#50](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#50)]  
   
- 新しい文を挿入すると、段落記号の前に挿入されると期待するかもしれませんが、それは当てはまりません。元の範囲に段落記号が含まれているためです。 詳細については、次を参照してください。[する方法: プログラムによって除外段落マークときを作成する範囲](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)です。  
+ 新しい文を挿入すると、段落記号の前に挿入されると期待するかもしれませんが、それは当てはまりません。元の範囲に段落記号が含まれているためです。 詳細については、次を参照してください。[方法: 範囲を作成するときにプログラムによって段落記号を除外する](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)します。  
   
-## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例  
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズ例  
   
-#### <a name="to-collapse-a-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで範囲を縮小するには  
+### <a name="to-collapse-a-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで範囲を縮小するには  
   
 1.  次の例は、ドキュメント レベルのカスタマイズのメソッド全体を示しています。 このコードを使用するには、プロジェクトの `ThisDocument` クラスから実行します。  
   
@@ -81,18 +82,18 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例  
   
-#### <a name="to-collapse-a-range-in-an-vsto-add-in"></a>VSTO アドインで範囲を縮小するには  
+### <a name="to-collapse-a-range-in-a-vsto-add-in"></a>VSTO アドインで範囲を縮小するには  
   
-1.  次の例は、VSTO アドインのメソッド全体を示しています。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。  
+1.  次の例では、VSTO アドインの完全なメソッドを示します。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。  
   
      [!code-vb[Trin_VstcoreWordAutomationAddIn#45](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#45)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#45](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#45)]  
   
 ## <a name="see-also"></a>関連項目  
  [方法: プログラムによって Word 文書にテキストを挿入](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
- [方法: プログラムによってを定義し、ドキュメントで範囲を選択](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [方法: プログラムによって開始と終了文字の範囲を取得](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   
+ [方法: プログラムで定義し、ドキュメントで範囲を選択します](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
+ [方法: 範囲の先頭と末尾の文字をプログラムで取得します。](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)   
  [方法: 範囲を作成するときにプログラムによって段落記号を除外します。](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)   
- [方法: プログラムによってドキュメント内の範囲を拡張します。](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
- [方法: プログラムによって Word 文書の範囲をリセットする](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)  
+ [方法: プログラムによってドキュメント内の範囲を拡張](../vsto/how-to-programmatically-extend-ranges-in-documents.md)   
+ [方法: プログラムによって Word のドキュメント内の範囲をリセット](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)  
   

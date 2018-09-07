@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 6
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、管理者用のカスタマイズなど、ポーリング Django Web プロジェクト テンプレートの機能について取り上げます。
-ms.date: 04/25/2018
+ms.date: 08/13/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7844b777b1a0baf841b1ae80ddcdd67363615c29
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: d8b8ec4495c12132b89561bcbbaaf8ebfdbe3483
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388216"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626543"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 

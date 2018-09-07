@@ -17,17 +17,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b77990219d6b31d86a919ca1a33ab415a6a9ed86
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 86426e9741e38fb2cbd782659878562e395a2cf1
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673771"
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio での Office ソリューションのアーキテクチャ
   このセクションのトピックでは、Visual Studio の作業で Office Developer Tools を使用してソリューションを作成する方法について紹介します。  
   
 > [!NOTE]  
->  間での Office エクスペリエンスを拡張するソリューションの開発に関心のある[複数のプラットフォーム](https://dev.office.com/add-in-availability)しますか? チェック アウト新しい[Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)です。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、ほぼすべての web プログラミング HTML5、JavaScript、CSS3、XML などのテクノロジを使用してそれらをビルドすることができます。  
+>  [複数のプラットフォーム](https://dev.office.com/add-in-availability)にまたがる Office を拡張するソリューション開発に関心がありますか？ 新しい [Office アドイン モデル](https://dev.office.com/docs/add-ins/overview/office-add-ins)をチェックして下さい。 Office アドインは VSTO アドインやソリューションと比較して、小さなフット プリントを持ち、HTML5、JavaScript、CSS3、XML などのほぼすべての web プログラミング テクノロジを使用して、ビルドすることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ドキュメント レベルのカスタマイズのアーキテクチャ](../vsto/architecture-of-document-level-customizations.md)  
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/17/2018
  [VSTO アドインのアーキテクチャ](../vsto/architecture-of-vsto-add-ins.md)  
  VSTO アドインのコンポーネントとそれらがアプリケーションにより読み込まれるしくみについて説明します。  
   
- [ビジュアルの Studio Tools for Office Runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)  
+ [Visual Studio のツール for Office Runtime の概要](../vsto/visual-studio-tools-for-office-runtime-overview.md)  
  Office ソリューションに使用されるランタイムのさまざまなバージョンについて説明します。  
   
  [VSTO アドインのレジストリ エントリ](../vsto/registry-entries-for-vsto-add-ins.md)  
- エンド ユーザーのコンピューターで VSTO アドインを検出し、読み込むために必要なレジストリ キーについて説明します。  
+ エンドユーザーのコンピューターを検出して VSTO アドインを読み込むために必要なレジストリ キーについて説明します。  
   
  [カスタム ドキュメント プロパティの概要](../vsto/custom-document-properties-overview.md)  
  ドキュメントレベル カスタマイズにおけるカスタム ドキュメント プロパティの動作について説明します。  
@@ -52,10 +53,10 @@ ms.lasthandoff: 05/17/2018
  [開始&#40;Visual Studio での Office 開発&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
  Office ソリューションの作成用に開発コンピューターを構成する方法、Office ソリューションの作成を開始する方法、Visual Studio の Office 開発ツールの初期バージョンからの変更点に関する情報のリンクを提供します。  
   
- [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)  
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)  
  Office ソリューションの作成に関する情報のリンクを提供します。  
   
- [一般的なリファレンス&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
+ [全般的な参照&#40;Visual Studio での Office 開発&#41;](../vsto/general-reference-office-development-in-visual-studio.md)  
  Office プロジェクトのユーザー インターフェイス要素、Office プロジェクトのアプリケーション マニフェストと展開マニフェスト、 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]の API に関する情報のリンクを提供します。  
   
   

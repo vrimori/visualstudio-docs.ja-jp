@@ -1,16 +1,16 @@
 ---
 title: Subversion リポジトリのセットアップ
 description: Visual Studio for Mac の Subversion を使用します。
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: e5f395511ad3b2b3cc4568a4d701ca5dbcc02736
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 8e8e17f7787486e5f14fd94927278bb957439e81
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34000258"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43224386"
 ---
 # <a name="setting-up-a-subversion-repository"></a>Subversion リポジトリのセットアップ
 

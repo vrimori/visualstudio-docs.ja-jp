@@ -1,16 +1,16 @@
 ---
 title: プロジェクト項目の追加と削除
 description: この文書では、Visual Studio for Mac でプロジェクト項目を追加する方法と削除する方法について説明します
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ms.assetid: 4071689D-1C21-42D7-8963-550E7BCB4B67
-ms.openlocfilehash: 2905477ca4141d555d086a680c0cd797b3c4d7c8
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: d7401395d817d4c07b179c0d096612469fed6291
+ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33864325"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43224115"
 ---
 # <a name="adding-and-removing-project-items"></a>プロジェクト項目の追加と削除
 

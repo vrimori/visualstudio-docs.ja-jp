@@ -1,21 +1,20 @@
 ---
-title: Visual Studio のパフォーマンスのヒントとテクニック
-ms.date: 08/31/2017
+title: パフォーマンスを向上させるためのヒント
+ms.date: 08/14/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
-ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd3dcd85ee926e545aa17597f5597fac985645dd
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 5215770d362e2f1ebd21f9131b82073376c28bf6
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37433536"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626980"
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio のパフォーマンスのヒントとテクニック
 
@@ -40,7 +39,13 @@ Visual Studio では、自動ドキュメント復元により、ソリューシ
 
 1. **[プロジェクトおよびソリューション]** > **[全般]** ページで、**[Reopen documents on solution load]\(ソリューションの読み込み時にドキュメントを再度開く\)** の選択を解除します。
 
-自動ファイル復元を無効にした場合に、開くファイルにすばやく移動するには、[[移動]](../ide/go-to.md) を使用します。 **[編集]** > **[移動]** > **[すべてに移動]** の順に選択するか、**Ctrl** + **T** キーを押します。
+自動ファイル復元を無効にした場合、[[移動]](../ide/go-to.md) コマンドのいずれかを使用することで、開くファイルにすばやく移動できます。
+
+- 一般的な **[移動]** 機能の場合は、**[編集]** > **[移動]** > **[すべてに移動]** の順に選択するか、**Ctrl** + **T** キーを押します。
+
+- Visual Studio 2017 バージョン 15.8 以降では、**[編集]** > **[移動]** > **[最後の編集の場所へ移動]** を使用するか、**Ctrl** + **Shift** + **Backspace** キーを押すことで、ソリューション内の最後の編集の場所に移動することができます。
+
+- Visual Studio 2017 バージョン 15.8 以降で、ソリューション内の最近アクセスしたファイルの一覧を表示するには、**[最近使ったファイルに移動]** を使用します。 **[編集]** > **[移動]** > **[最近使ったファイルに移動]** の順に選択するか、**Ctrl** + **1** キー、**Ctrl** + **R** キーを押します。
 
 ## <a name="configure-debugging-options"></a>デバッグ オプションを構成する
 

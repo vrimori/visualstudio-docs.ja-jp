@@ -10,13 +10,14 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 9e34fd9c343261626e8296488acf55214cf539ad
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 05ffd249be3d7734979f3a131a3a10423b76cb9d
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667016"
 ---
-# <a name="working-with-r-in-visual-studio"></a>Visual Studio での R の使用
+# <a name="work-with-r-in-visual-studio"></a>Visual Studio での R の使用
 
 R は、高い拡張性を備えた、統計コンピューティングおよびグラフィックス用の言語であり環境です。 R は GNU General Public License に基づき無料配布されており、コミュニティの強力なサポートを受けることができます。また、数学記号と式を含むプロットを出版品質で生成できる機能で知られています。 R の詳細については、[r-project.org](https://www.r-project.org/about.html) と「[An Introduction to R (R の概要)](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)」をご覧ください。
 
@@ -52,8 +53,8 @@ Visual Studio で R を使用するには、次の手順を実行します。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
-1. **Github の問題**: RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools] > [フィードバック]** メニューを使用して行ってください。
+1. **Github の問題**: RTVS チームへ問い合わせる場合は、[GitHub 上で問題を報告する](https://github.com/Microsoft/RTVS/issues)か、**[R Tools]** > **[フィードバック]** メニューを使用して行ってください。
 
-1. **気に入った機能の報告や問題点、改善点の報告**: **[R Tools] > [フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます (ログは、個別に送信できるように `%temp%/RTVSlogs.zip` に書き込まれています)。**[ヘルプ] > [フィードバック] > [設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry]\(Visual Studio テレメトリ\) をオフにした場合は、ログ機能が無効になります。
+1. **気に入った機能の報告や問題点、改善点の報告**: **[R Tools]** > **[フィードバック]** メニューから、フィードバックの送信と、問題の診断に役立つ RTVS ログ ファイルの添付を素早く行えます  (ログは、個別に送信できるように *%temp%/RTVSlogs.zip* に書き込まれています)。**[ヘルプ]** > **[フィードバック]** > **[設定]** メニュー コマンドから、またはインストール中に [Visual Studio telemetry]\(Visual Studio テレメトリ\) をオフにした場合は、ログ機能が無効になります。
 
 1. **電子メール**: チーム (*rtvsuserfeedback (at) microsoft.com*) 宛にフィードバックを直接送信できます。

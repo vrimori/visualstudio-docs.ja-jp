@@ -13,18 +13,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 20c4e363b11647609b67a898878dd4b4e59ba180
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 08b22ed86851a35f23306fc765f62f265da4701e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672437"
 ---
 # <a name="ensurevstocomponent-function"></a>EnsureVSTOComponent 関数
-  この API は、Office インフラストラクチャをサポートしてをコードから直接使用するためのものではありません。  
+  この API は、オフィスのインフラストラクチャをサポートしているし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```c  
+```csharp  
 HRESULT EnsureVSTOComponent(  
     IVSTProject *pProject  
 );  
@@ -37,6 +38,6 @@ HRESULT EnsureVSTOComponent(
 |*pProject*|使用しないでください。|  
   
 ## <a name="return-value"></a>戻り値  
- 関数が成功したかどうか、それを返します**S_OK**です。 関数が失敗した場合、エラー コードを返します。  
+ 返します、関数が成功したかどうかは**S_OK**します。 関数が失敗した場合、エラー コードを返します。  
   
   

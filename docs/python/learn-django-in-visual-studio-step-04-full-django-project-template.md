@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Django の詳細情報、手順 4
 description: Visual Studio プロジェクトのコンテキストにおける Django の基本のチュートリアルです。具体的には、Django Web プロジェクト テンプレートによって提供される機能について取り上げます。
-ms.date: 04/25/2018
+ms.date: 08/13/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f7b62914a1a0d895aaf3e1322c4ef7a68a555e0c
-ms.sourcegitcommit: b544e2157ac20866baf158eef9cfed3e3f1d68b9
+ms.openlocfilehash: 4e37b8f5b50a7145ca5fbaa0597fd6109b1be98a
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39388177"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42626596"
 ---
 # <a name="step-4-use-the-full-django-web-project-template"></a>手順 4: Django Web プロジェクト テンプレートを使用する
 
@@ -31,7 +31,7 @@ Visual Studio の "空の Django Web プロジェクト" テンプレート上�
 > - 基本のページ テンプレートを継承し、jQuery や Bootstrap などの静的 JavaScript ライブラリを採用した 3 つのページで構成される、プロジェクト テンプレートによって作成されたビューとページ テンプレートを理解する (手順 4-2)
 > - テンプレートによって提供された URL ルーティングを理解する (手順 4-3)
 
-また、テンプレートでは、手順 5 で取り上げる基本認証も提供しています。
+また、テンプレートでは、手順 5 で取り上げる基本認証も提供されます。
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>手順 4-1: テンプレートからプロジェクトを作成する
 

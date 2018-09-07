@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2549f8646d5289925a45737d8d5b2e7707ea301f
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 58d41395a7abd05b5bce353655f9149b7a2fbd44
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382617"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775715"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Windows インストーラーを使用して Office ソリューションを配置します。
 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]を使用して Office ソリューション用の Windows インストーラーを作成する方法について説明します。  
@@ -526,7 +526,7 @@ Office プロジェクトの出力を含めるように、 **OfficeAddInSetup** 
   
 9. メニュー バーで、**ビルド** > **OfficeAddInSetup のビルド**します。  
   
-   ビルドが完了すると、見つけることができます、 *setup.exe*のファイル、 **OfficeAddInSetup**プロジェクトの次の場所: *OfficeAddInSetupProjectRoot * * * \OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\**  
+   ビルドが完了すると、見つけることができます、 *setup.exe*のファイル、 **OfficeAddInSetup**プロジェクトの次の場所: _OfficeAddInSetupProjectRoot_ **\OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\**  
   
   
 ## <a name="see-also"></a>関連項目  

@@ -1,5 +1,5 @@
 ---
-title: '方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用して |Microsoft ドキュメント'
+title: '方法: プログラムによって Word のダイアログ ボックスを非表示モードでを使用して、'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,31 +17,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7b9d9b49783e3070e91291460e3f4aa7a4667620
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d5b123f1b58e61dffc64b5df912092edfd3fbf53
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672811"
 ---
-# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>方法: プログラムによって Word のダイアログ ボックスを非表示モードで使用する
-  ユーザーに表示することがなく、Microsoft Office Word の組み込みダイアログ ボックスを呼び出すことによって、1 つのメソッドの呼び出しで複雑な操作を行うことができます。 使用してこれを行う、<xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクトを呼び出さず、<xref:Microsoft.Office.Interop.Word.Dialog.Display%2A>メソッドです。  
+# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>方法: プログラムによって Word のダイアログ ボックスを非表示モードでを使用して、
+  ユーザーに表示することがなく、Microsoft Office Word の組み込みダイアログ ボックスを呼び出すことによって、1 つのメソッドの呼び出しで複雑な操作を実行できます。 使用してこれを行う、<xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Dialog>呼び出さずにオブジェクト、<xref:Microsoft.Office.Interop.Word.Dialog.Display%2A>メソッド。  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
 ## <a name="examples"></a>使用例  
- 次のコード例を使用する方法を示します、**ページ セットアップ**プロパティを設定する複数のページのセットアップ ユーザー入力なしで非表示モードでのダイアログ ボックス。 例を使用して、<xref:Microsoft.Office.Interop.Word.Dialog>カスタム ページ サイズを構成するオブジェクト。 ページ設定 の上余白、下の余白などの特定の設定はの遅延バインディングのプロパティとして使用できます、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。 これらのプロパティは、実行時に Word によって動的に作成されます。  
+ 次のコード例を使用する方法を示します、**ページ セットアップ**ユーザー入力なしで複数のページ設定プロパティを設定する非表示モードでのダイアログ ボックス。 例を使用して、<xref:Microsoft.Office.Interop.Word.Dialog>カスタム ページのサイズを構成するオブジェクト。 ページ設定 の上余白、下の余白などの特定の設定がの遅延バインディング プロパティとして使用できますが、<xref:Microsoft.Office.Interop.Word.Dialog>オブジェクト。 これらのプロパティは、実行時に Word によって動的に作成されます。  
   
- 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**は off および Visual c# プロジェクトで、対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]です。 これらのプロジェクトでは、Visual Basic および Visual c# コンパイラで遅延のバインド機能を使用できます。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
+ 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**オフ、および Visual c# プロジェクトを対象とするが、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]します。 これらのプロジェクトでは、Visual Basic および Visual c# コンパイラで遅延バインディングの機能を使用できます。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラス。  
   
  [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)]
  [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]  
   
- 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**にします。 これらのプロジェクトでは、リフレクションを使用して、遅延バインディングのプロパティにアクセスする必要があります。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラスです。  
+ 次の例は、Visual Basic プロジェクトでこのタスクを実行する方法を示します、 **Option Strict**にします。 これらのプロジェクトでは、リフレクションを使用して、遅延バインディングのプロパティにアクセスする必要があります。 この例を使用する実行から、`ThisDocument`または`ThisAddIn`プロジェクト内のクラス。  
   
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]  
   
 ## <a name="see-also"></a>関連項目  
- [方法: プログラムによって Word の組み込みダイアログ ボックスを使用](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
+ [方法: プログラムによって Word の組み込みダイアログ ボックスを使用して、](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
  [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)   
  [Office ソリューションの遅延バインディング](../vsto/late-binding-in-office-solutions.md)   
  [リフレクション (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  

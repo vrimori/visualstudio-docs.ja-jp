@@ -1,5 +1,5 @@
 ---
-title: '方法: Office ソリューションの構成情報を設定 |Microsoft ドキュメント'
+title: '方法: Office ソリューションの構成情報の設定'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,38 +16,39 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9659872fa6cb4e294d1757412862c10e42cde2e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 87f50856439158d6d931b519fb35e98970ef7d58
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35671915"
 ---
-# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>方法 : Office ソリューションの構成情報を設定する
+# <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>方法: Office ソリューションの構成情報の設定
   構成ファイルを使用して、Office ソリューションに固有の設定を構成することができます。 アセンブリ バインディング ポリシー、リモート処理オブジェクト、デバッグ、およびトレースの設定などの設定を指定することができます。  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-### <a name="to-add-a-configuration-file-to-your-office-project"></a>構成ファイルを Office プロジェクトに追加するには  
+### <a name="to-add-a-configuration-file-to-your-office-project"></a>Office プロジェクトに構成ファイルを追加するには  
   
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-2.  **カテゴリ** ウィンドウで、をクリックして**全般**です。  
+2.  **カテゴリ**ウィンドウで、をクリックして**全般**します。  
   
-3.  **テンプレート**ペインで、**アプリケーション構成ファイル**です。  
+3.  **テンプレート**ペインで、**アプリケーション構成ファイル**します。  
   
-4.  **名前**ボックスに、アセンブリ、.config 拡張子として同じ名前を入力します。たとえば、ExcelWorkbook1.dll という名前の Excel プロジェクト アセンブリの構成ファイルの名前は、ExcelWorkbook1.dll.config には。  
+4.  **名前**ボックスに、アセンブリと、拡張機能として、同じ名前を入力 *.config*します。たとえば、Excel プロジェクト アセンブリの構成ファイルと呼ばれる*ExcelWorkbook1.dll*という名前になります*ExcelWorkbook1.dll.config*します。  
   
 5.  **[追加]** をクリックします。  
   
-6.  アプリケーション構成ファイル スキーマに従って、構成ファイルを作成します。 詳細については、次を参照してください。 [、.NET Framework の構成ファイル スキーマ](/dotnet/framework/configure-apps/file-schema/index)です。  
+6.  アプリケーション構成ファイルのスキーマに従って、構成ファイルを作成します。 詳細については、次を参照してください。 [、.NET Framework の構成ファイル スキーマ](/dotnet/framework/configure-apps/file-schema/index)します。  
   
- Office プロジェクトで構成ファイルの使用に関する注意事項はありません。  
+ Office プロジェクトを構成ファイルを使用するための特別な考慮事項はありません。  
   
 ## <a name="see-also"></a>関連項目  
  [.NET Framework の構成ファイル スキーマ](/dotnet/framework/configure-apps/file-schema/index)   
- [設計と、Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)  
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
+ [Office ソリューションをデプロイします。](../vsto/deploying-an-office-solution.md)  
   
   

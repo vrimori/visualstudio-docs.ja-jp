@@ -13,18 +13,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d21b0d2b90441f0b9be543933e7243dd41440b02
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: e6289a0d19bc6621d98edfc974ad265791876a70
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35673635"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata 関数
-  この API は、Office インフラストラクチャをサポートしてをコードから直接使用するためのものではありません。  
+  この API は、オフィスのインフラストラクチャをサポートしているし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```c  
+```csharp
 HRESULT WINAPI GetVstoSolutionMetadata(  
     LPCWSTR lpwszSolutionMetadataKey,  
     ISolutionMetadata** ppSolutionInfo  
@@ -39,6 +40,6 @@ HRESULT WINAPI GetVstoSolutionMetadata(
 |*ppSolutionInfo*|使用しないでください。|  
   
 ## <a name="return-value"></a>戻り値  
- 関数が成功したかどうか、それを返します**S_OK**です。 関数が失敗した場合、エラー コードを返します。  
+ 返します、関数が成功したかどうかは**S_OK**します。 関数が失敗した場合、エラー コードを返します。  
   
   

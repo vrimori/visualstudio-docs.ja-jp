@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1047d7ddd3724877aa6933f20f08df39d1e2e240
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 21e2b1a7a90df2baef48483647c692c8b986c59f
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34693420"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672006"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office ソリューションのエラーをトラブルシューティングします。
   Visual Studio で Office ソリューションを開発する際、次のタスクを実行するときに問題が発生する場合があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "34693420"
   
  ドキュメント レベルのプロジェクトを作成しようとしている場合、新しいプロジェクトのドキュメントと同じ名前を持つ別のドキュメントが Excel または Word で開いている可能性があります。 Excel または Word の他のすべてのインスタンスが閉じられていることを確認してください。  
   
-### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>コントロールのプロパティは、既存のプロジェクトからのドキュメントに基づいて新しいプロジェクトを作成するときに失われます  
+### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>コントロールのプロパティは、既存のプロジェクトのドキュメントに基づく新しいプロジェクトを作成するときに失われます  
  既存のプロジェクトのドキュメントに基づいて新しい Office プロジェクトを作成する場合、既存のドキュメントにあるコントロールのプロパティが新しいプロジェクトにコピーされることはありません。 すべての既存のコントロールのプロパティを手動で設定する必要があります。 または、新しいプロジェクトを作成する代わりに既存のプロジェクトのコピーを作成するか、(デザイナーで) 新しいソリューションに既存のプロジェクトを読み込んだうえで、既存のドキュメントから新しいドキュメントにコントロールをコピーして貼り付ければ、コントロールのプロパティを保持できます。  
   
 ### <a name="errors-when-you-create-an-excel-workbook-project-based-on-an-existing-workbook"></a>既存のブックに基づいて Excel ブック プロジェクトを作成するときのエラー  
@@ -67,7 +67,7 @@ ms.locfileid: "34693420"
   
 2.  Excel でセキュリティ センターを開きます。  
   
-3.  **プライバシー オプション**] タブで [、**上のファイルのプロパティから個人情報を削除する保存**チェック ボックスをオンします。  
+3.  **プライバシー オプション**] タブで [、**でファイルのプロパティから個人情報を削除する保存**チェック ボックスをオンします。  
   
 4.  ブックを保存し、Excel を終了します。  
   
@@ -82,8 +82,8 @@ ms.locfileid: "34693420"
   
  または、Microsoft Office 2010 が既にインストールされている開発用コンピューターでのみ、移行後のプロジェクトを開くようにします。  
   
-### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Windows フォーム コントロールを含むアップグレード済みの Office 2003 ドキュメント レベルのプロジェクト内のエラー  
- Microsoft Office 2003 のドキュメント レベルのプロジェクトをアップグレードするドキュメントには、Windows フォーム コントロールが含まれている場合は、アップグレードされたプロジェクトがコンパイルまたは実行時エラーにあります。 この問題を回避するには、プロジェクトをアップグレードする前に、Visual Studio 2005 Tools for Office Second Edition Runtime を開発用コンピューターにインストールします。 このバージョンのランタイムは、Microsoft ダウンロード センターの「 [Microsoft Visual Studio 2005 Tools for Office Second Edition Runtime (VSTO 2005 SE) (x86)](http://go.microsoft.com/fwlink/?linkid=49612)」から再頒布可能パッケージとしてダウンロードできます。  
+### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Windows フォーム コントロールを含むアップグレード済みの Office 2003 ドキュメント レベル プロジェクトでのエラー  
+ Microsoft Office 2003 のドキュメント レベルのプロジェクトをアップグレードする、ドキュメントには、Windows フォーム コントロールが含まれている場合は、アップグレードされたプロジェクトがコンパイルまたは実行時エラーにあります。 この問題を回避するには、プロジェクトをアップグレードする前に、Visual Studio 2005 Tools for Office Second Edition Runtime を開発用コンピューターにインストールします。 このバージョンのランタイムは、Microsoft ダウンロード センターの「 [Microsoft Visual Studio 2005 Tools for Office Second Edition Runtime (VSTO 2005 SE) (x86)](http://go.microsoft.com/fwlink/?linkid=49612)」から再頒布可能パッケージとしてダウンロードできます。  
   
  Visual Studio 2005 Tools for Office Second Edition Runtime は、他の Office ソリューションで使用されていない場合、プロジェクトのアップグレードが完了した後に開発用コンピューターからアンインストールできます。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "34693420"
 -   開発用コンピューターにインストールされている Excel の VSTO アドインにより、Excel の開始時にダイアログ ボックスが表示される。 ドキュメント レベルの Excel プロジェクトを作成するには、まず、VSTO アドインを無効にする必要があります。  
   
 ### <a name="controls-appear-as-black-rectangles-on-the-document-or-worksheet"></a>コントロールが文書またはワークシートに黒い長方形として表示されます。  
- ドキュメントやワークシートでコントロールをグループ化すると、以降は Visual Studio がそのコントロールを認識しなくなります。 グループ化されたコントロールはアクセスできません、**プロパティ**ウィンドウと、ドキュメントやワークシートで黒い長方形として表示されます。 コントロールの機能を復元するには、グループ化を解除する必要があります。  
+ ドキュメントやワークシートでコントロールをグループ化すると、以降は Visual Studio がそのコントロールを認識しなくなります。 グループ化されたコントロールではアクセスできない、**プロパティ**ウィンドウと、ドキュメントまたはワークシートに黒い長方形として表示されます。 コントロールの機能を復元するには、グループ化を解除する必要があります。  
   
 ### <a name="controls-on-a-word-template-are-not-visible-in-visual-studio"></a>Word テンプレート上のコントロールが Visual Studio に表示されません。  
- Visual Studio デザイナーで Word テンプレートを開くと、テンプレート上のテキストの範囲内にないコントロールが表示されない場合があります。 これは、Visual Studio で Word テンプレートを開くため**標準**ビュー。 表示するには、コントロールをクリックして、**ビュー**  メニューのをポイント**Microsoft Office Word View**順にクリック**印刷レイアウト**です。  
+ Visual Studio デザイナーで Word テンプレートを開くと、テンプレート上のテキストの範囲内にないコントロールが表示されない場合があります。 これは、Visual Studio で Word テンプレートを開くため**標準**ビュー。 コントロールを表示する をクリックして、**ビュー**メニューで、 **Microsoft Office Word View**  をクリックし、**印刷レイアウト**します。  
   
 ### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>クリップアートの挿入コマンドは、Visual Studio デザイナーではありません。  
- Excel または Word が Visual Studio デザイナーで開いているときにクリックすると、**クリップアート**ボタンをクリックして、**図**をリボンにタブが開かない、**クリップアート**作業ウィンドウ。 クリップアートを追加するには、ブックまたはメイン プロジェクト フォルダーにあるドキュメントのコピーを開く必要があります (内にあるコピーではなく、 *\bin*フォルダー)、Visual Studio の外部で、クリップアートを追加し、ブックまたはドキュメントに保存します。  
+ Excel または Word が Visual Studio デザイナーで開いているときにクリックすると、**クリップアート**のボタンでは、**図**、リボン タブが開かない場合は、**クリップアート**作業ウィンドウ。 クリップアートを追加するには、ブックまたはメイン プロジェクト フォルダー内にあるドキュメントのコピーを開く必要があります (内にあるコピーではなく、 *\bin*フォルダー)、Visual Studio の外部で、クリップアートを追加して、ブックまたはドキュメントに保存します。  
   
 ##  <a name="code"></a> コードを記述します。  
  Office プロジェクトでコードを作成するときに、次のエラーが発生する場合があります。  
@@ -116,18 +116,18 @@ ms.locfileid: "34693420"
   
  "'Microsoft.Office.Interop.Excel._Application.NewWorkbook' と 'Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook' の間にあいまいさがあります"  
   
- このエラーは、オブジェクトの別のプロパティやメソッドと同じ名前を持つイベントにアクセスしようとしていることを意味します。 イベントにアクセスするには、オブジェクトをキャストする必要があります、*イベント インターフェイス*です。  
+ このエラーは、オブジェクトの別のプロパティやメソッドと同じ名前を持つイベントにアクセスしようとしていることを意味します。 イベントにアクセスするにはオブジェクトにキャストする必要があります、*イベント インターフェイス*します。  
   
- イベントを持つ Office PIA の型は、すべてのプロパティとメソッドを持つコア インターフェイスと、オブジェクトによって公開されるイベントを含むイベント インターフェイスの、2 つのインターフェイスを実装します。 これらのイベント インターフェイスが、名前付け規則を使用して*objectname*イベント*n*_Event など<xref:Microsoft.Office.Interop.Excel.AppEvents_Event>と<xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event>です。 オブジェクト上で検出できることが予想されるイベントにアクセスできない場合は、オブジェクトをそのイベント インターフェイスにキャストします。  
+ イベントを持つ Office PIA の型は、すべてのプロパティとメソッドを持つコア インターフェイスと、オブジェクトによって公開されるイベントを含むイベント インターフェイスの、2 つのインターフェイスを実装します。 これらのイベント インターフェイスを使用して、名前付け規則*objectname*イベント*n*_Event など<xref:Microsoft.Office.Interop.Excel.AppEvents_Event>と<xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event>します。 オブジェクト上で検出できることが予想されるイベントにアクセスできない場合は、オブジェクトをそのイベント インターフェイスにキャストします。  
   
  たとえば、<xref:Microsoft.Office.Interop.Excel.Application> オブジェクトが、<xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> イベントおよび <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> プロパティを持つとします。 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> イベントを処理するには、<xref:Microsoft.Office.Interop.Excel.Application> を <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> インターフェイスにキャストします。 Excel のドキュメント レベルのプロジェクトでこれを実行する方法を、次のコード例に示します。  
   
  [!code-csharp[Trin_VstcoreTroubleshootingExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs#1)]  
   
- Office pia のイベント インターフェイスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://msdn.microsoft.com/en-us/da92dc3c-8209-44de-8095-a843659368d5)です。  
+ Office Pia のイベント インターフェイスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://msdn.microsoft.com/da92dc3c-8209-44de-8095-a843659368d5)します。  
   
-### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenetv40shortsharepointincludesnet-v40-short-mdmd-or-the-includenetv45vstoincludesnet-v45-mdmd"></a>できません Office PIA の参照をプロジェクト内でクラスをターゲットとする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]  
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とするプロジェクトでは、Office PIA で定義されているクラスを参照するコードは、既定ではコンパイルされません。 Pia のクラスは、名前付け規則を使用して*objectname*クラスなど<xref:Microsoft.Office.Interop.Word.DocumentClass>と<xref:Microsoft.Office.Interop.Excel.WorkbookClass>です。 たとえば、Word の VSTO アドイン プロジェクトの次のコードはコンパイルされません。  
+### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-includenetv40shortsharepointincludesnet-v40-short-mdmd-or-the-includenetv45vstoincludesnet-v45-mdmd"></a>できません Office PIA のリファレンス内のクラス プロジェクトを対象とする、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とするプロジェクトでは、Office PIA で定義されているクラスを参照するコードは、既定ではコンパイルされません。 Pia のクラスは、名前付け規則を使用して*objectname*クラスなど、<xref:Microsoft.Office.Interop.Word.DocumentClass>と<xref:Microsoft.Office.Interop.Excel.WorkbookClass>します。 たとえば、Word の VSTO アドイン プロジェクトの次のコードはコンパイルされません。  
   
 ```vb  
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument  
@@ -141,7 +141,7 @@ Word.DocumentClass document = (Word.DocumentClass) Globals.ThisAddIn.Application
   
 -   Visual Basic の場合:「クラス 'DocumentClass' への参照は許可されません、アセンブリが NO-PIA モードを使用してリンクされている場合。」  
   
--   Visual C# の場合:"相互運用機能型 'microsoft.office.interop.word.documentclass' を埋め込むことができません。 代わりに適用可能なインターフェイスを使用してください。"  
+-   Visual c#:"相互運用機能型 'microsoft.office.interop.word.documentclass' を埋め込むことができません。 代わりに適用可能なインターフェイスを使用してください。"  
   
  このエラーを解決するには、対応するインターフェイスを代わりに参照するようにコードを変更します。 たとえば、<xref:Microsoft.Office.Interop.Word.DocumentClass> オブジェクトを参照するのではなく、代わりに <xref:Microsoft.Office.Interop.Word.Document> インターフェイスを参照します。  
   
@@ -153,15 +153,15 @@ Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument
 Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;  
 ```  
   
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とするプロジェクトは、既定で自動的に Office PIA のすべての相互運用機能型を埋め込みます。 このコンパイル エラーは、埋め込まれた相互運用機能型の機能は、クラスでなくインターフェイスでのみ機能するために発生します。 Office Pia のインターフェイスとクラスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592)です。 Office プロジェクトの埋め込み相互運用機能型の機能の詳細については、次を参照してください。[デザインおよび Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)です。  
+ [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] を対象とするプロジェクトは、既定で自動的に Office PIA のすべての相互運用機能型を埋め込みます。 このコンパイル エラーは、埋め込まれた相互運用機能型の機能は、クラスでなくインターフェイスでのみ機能するために発生します。 Office Pia のインターフェイスとクラスの詳細については、次を参照してください。 [Office プライマリ相互運用機能アセンブリのクラスおよびインターフェイスの概要](http://go.microsoft.com/fwlink/?LinkId=189592)します。 Office プロジェクトで埋め込まれた相互運用機能型の機能の詳細については、次を参照してください。[デザイン Office ソリューションの作成と](../vsto/designing-and-creating-office-solutions.md)します。  
   
 ### <a name="references-to-office-classes-are-not-recognized"></a>Office クラスへの参照は認識されません。  
- アプリケーションの例については、いくつかのクラス名が、複数の名前空間など<xref:Microsoft.Office.Interop.Word>と<xref:System.Windows.Forms>です。 このため、 **Imports**/**を使用して**プロジェクト テンプレートの上部にあるステートメントには、修飾定数などの短縮形が含まれています。  
+ など、複数の名前空間の例では、アプリケーションの一部のクラス名<xref:Microsoft.Office.Interop.Word>と<xref:System.Windows.Forms>します。 このため、 **Imports**/**を使用して**プロジェクト テンプレートの上部にあるステートメントには、修飾定数などの短縮形が含まれています。  
   
  [!code-csharp[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#2)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#2)]  
   
- この使用法、 **Imports**/**を使用して**ステートメントでは、たとえば、Word または Excel の修飾子を持つ Office クラスへの参照を区別することが必要です。  
+ この方法では、 **Imports**/**を使用して**ステートメントでは、たとえば、Word または Excel の修飾子を持つ Office クラスへの参照を区別することが必要です。  
   
  [!code-csharp[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#3)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#3)]  
@@ -171,13 +171,13 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  [!code-csharp[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs#4)]
  [!code-vb[Trin_VstcoreTroubleshootingWord#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb#4)]  
   
- Word または Excel の名前空間をインポートし、その中のすべてのクラスにアクセスできる場合でも、名前空間のあいまいさを排除するには、Word または Excel でのすべての型を完全に修飾する必要があります。  
+ Word または Excel の名前空間をインポートし、その内部のすべてのクラスにアクセスできる場合でも、名前空間のあいまいさを削除するには、Word または Excel のすべての型を完全に修飾する必要があります。  
   
 ##  <a name="building"></a> プロジェクトをビルドする  
  Office プロジェクトをビルドするときに、次のエラーが発生する場合があります。  
   
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>制限されたアクセス許可を持つドキュメントに基づくドキュメント レベルのプロジェクトをビルドすることはできません。  
- Visual Studio は、ドキュメントのアクセス許可が制限されている場合、ドキュメント レベルのプロジェクトをビルドできません。 アクセス許可が制限されているドキュメントを含むプロジェクト、プロジェクトはコンパイルされませんされで次のメッセージが表示されます、**エラー一覧**ウィンドウです。  
+ Visual Studio は、ドキュメントのアクセス許可が制限されている場合、ドキュメント レベルのプロジェクトをビルドできません。 プロジェクトには、アクセス許可が制限されているドキュメントが含まれている場合は、プロジェクトはコンパイルされませんで次のメッセージが表示されます、**エラー一覧**ウィンドウ。  
   
  "カスタマイズを追加できませんでした。"  
   
@@ -189,36 +189,36 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ##  <a name="debugging"></a> プロジェクトをデバッグします。  
  Office プロジェクトをデバッグするときに、次のエラーが発生する場合があります。  
   
-### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>発行およびソリューションを開発用コンピューターにインストールするときをアンインストールするプロンプトが表示されます。  
+### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>発行開発用コンピューターでソリューションをインストールするをアンインストールするプロンプトが表示されます。  
  Office ソリューションをデバッグするときに、次のエラー メッセージが表示されることがあります。  
   
  "現在他のバージョンがインストールされており、この場所からアップグレードすることはできないため、このカスタマイズをインストールすることはできません。"  
   
  このエラーは、開発用コンピューターで以前に Office ソリューションを発行し、インストールしたことを示しています。 メッセージが表示されないようにには、ソリューションをデバッグする前に、コンピューターにインストールされているプログラムの一覧からソリューションをアンインストールします。 または、開発コンピューターに別のユーザー アカウントを作成し、発行済みソリューションのインストールをテストすることもできます。  
   
-### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ネットワークの場所で作成されたドキュメント レベルのプロジェクトが Visual Studio から実行しないでください。  
- UNC ネットワークの場所で Excel または  Word のドキュメント レベルのプロジェクトを作成する場合は、Excel または Word の [信頼できる場所] リストに、そのドキュメントの場所を追加する必要があります。 そうしないと、Visual Studio でプロジェクトの実行またはデバッグを試行するときに、カスタマイズが読み込まれません。 信頼できる場所の詳細については、次を参照してください。[ドキュメントへの信頼を付与](../vsto/granting-trust-to-documents.md)です。  
+### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ネットワークの場所に作成されたドキュメント レベルのプロジェクトが Visual Studio から実行しないでください。  
+ UNC ネットワークの場所で Excel または  Word のドキュメント レベルのプロジェクトを作成する場合は、Excel または Word の [信頼できる場所] リストに、そのドキュメントの場所を追加する必要があります。 そうしないと、Visual Studio でプロジェクトの実行またはデバッグを試行するときに、カスタマイズが読み込まれません。 信頼できる場所の詳細については、次を参照してください。[ドキュメントに信頼を付与](../vsto/granting-trust-to-documents.md)します。  
   
 ### <a name="threads-are-not-stopped-correctly-after-debugging"></a>デバッグ後にスレッドが正しく停止されません。  
- Visual Studio の Office プロジェクトは、デバッガーがプログラムを正しく終了できるように、スレッドの名前付け規則に従うようになっています。 ソリューション内にスレッドを作成する場合、デバッグの停止時にこれらのスレッドが確実に正常に処理されるよう、各スレッドに VSTA _  というプレフィックスを付ける必要があります。 たとえば、設定することがあります、`Name`ネットワーク イベントを待機するスレッドのプロパティ**vsta_networklistener と**です。  
+ Visual Studio の Office プロジェクトは、デバッガーがプログラムを正しく終了できるように、スレッドの名前付け規則に従うようになっています。 ソリューション内にスレッドを作成する場合、デバッグの停止時にこれらのスレッドが確実に正常に処理されるよう、各スレッドに VSTA _  というプレフィックスを付ける必要があります。 たとえば、設定することがあります、`Name`ネットワーク イベントを待機するスレッドのプロパティ**VSTA_NetworkListener**します。  
   
 ### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>実行または開発用コンピューターで Office ソリューションをデバッグできません。  
  開発用コンピューターで Office プロジェクトを実行または開発できない場合に、次のエラー メッセージが表示されることがあります。  
   
  "アプリケーション ドメインが作成されなかったため、カスタマイズは読み込まれませんでした。"  
   
- Visual Studio は、Office ソリューションを読み込む前に、.NET Framework アセンブリ ローダーである Fusion を使用してアセンブリをキャッシュします。 Visual Studio が Fusion キャッシュへ書き込めることを確認し、もう一度やり直してください。 詳細については、次を参照してください。[アセンブリのシャドウ コピー](/dotnet/framework/app-domains/shadow-copy-assemblies)です。  
+ Visual Studio は、Office ソリューションを読み込む前に、.NET Framework アセンブリ ローダーである Fusion を使用してアセンブリをキャッシュします。 Visual Studio が Fusion キャッシュへ書き込めることを確認し、もう一度やり直してください。 詳細については、次を参照してください。[アセンブリのシャドウ コピー](/dotnet/framework/app-domains/shadow-copy-assemblies)します。  
   
 ### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>エディット コンティニュを使用した後、ドキュメント レベルのプロジェクトでデバッガーを停止するとエラー  
- 使用する場合**編集**と**続行**場合、プロジェクトが中断モード中には、Excel または Word のドキュメント レベルのプロジェクトでコードを変更するには、次のエラー メッセージとダイアログ ボックスが表示する可能性があります。その後、デバッガーを停止します。  
+ 使用する場合**編集**と**続行**場合、プロジェクトが中断モード中には、Excel または Word のドキュメント レベルのプロジェクトでコードを変更するには、次のエラー メッセージとダイアログ ボックスが表示する場合があります。その後、デバッガーを停止します。  
   
  "このプロセスを現在の状態で終了すると、データを消失したりシステムが不安定になったりするなど、予期しない結果になる場合があります。"   
   
- をクリックするかどうか**はい**または**いいえ** ダイアログ ボックスで、Visual Studio は Excel または Word プロセスを終了し、デバッガーを停止します。 このダイアログ ボックスを表示せずにプロジェクトのデバッグを停止するには、Visual Studio のデバッガを停止するのではなく、直接、Excel または Word を終了します。  
+ クリックするかどうか**はい**または**いいえ** ダイアログ ボックスで、Visual Studio は Excel または Word プロセスを終了し、デバッガーを停止します。 このダイアログ ボックスを表示せずにプロジェクトのデバッグを停止するには、Visual Studio のデバッガを停止するのではなく、直接、Excel または Word を終了します。  
   
 ## <a name="see-also"></a>関連項目  
  [Office ソリューションをトラブルシューティングします。](../vsto/troubleshooting-office-solutions.md)   
  [Office ソリューションのセキュリティをトラブルシューティングします。](../vsto/troubleshooting-office-solution-security.md)   
- [Office ソリューションの配置をトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)  
+ [Office ソリューションのデプロイをトラブルシューティングします。](../vsto/troubleshooting-office-solution-deployment.md)  
   
   

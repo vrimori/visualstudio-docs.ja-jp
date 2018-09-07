@@ -27,23 +27,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a5bc53512a93ad2af9fa30562e54a8419c70c813
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: c61e155cd1dc70a747c6161de3aeb0fd57752816
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672287"
 ---
 # <a name="combine-vba-and-document-level-customizations"></a>VBA とドキュメント レベルのカスタマイズを結合します。
   Microsoft Office Word または Microsoft Office Excel 用のドキュメント レベル カスタマイズの一部であるドキュメント内で Visual Basic for Applications (VBA) コードを使用できます。 カスタマイズ アセンブリからドキュメント内の VBA コードを呼び出したり、ドキュメント内の VBA コードがカスタマイズ アセンブリのコードを呼び出せるようにプロジェクトを構成したりすることができます。  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
-## <a name="behavior-of-vba-code-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズ内の VBA コードの動作  
+## <a name="behavior-of-vba-code-in-a-document-level-customization"></a>ドキュメント レベル カスタマイズ内の VBA コードの動作  
  Visual Studio でプロジェクトを開くと、ドキュメントはデザイン モードで開かれます。 ドキュメントがデザイン モードのときは VBA コードは実行しないので、VBA コードを実行しないでドキュメントとコードを作業できます。  
   
  ソリューションを実行すると、VBA およびカスタマイズ アセンブリの両方のイベント ハンドラーがドキュメント内で生成されたイベントを取得し、両方のコード セットが実行します。 どちらのコードが先に実行するかは、事前にはわかりません。個別のケースごとにテストして判断する必要があります。 2 つのコード セットを慎重に調整およびテストしないと、予期しない結果になる可能性があります。  
   
-## <a name="call-vba-code-from-the-customization-assembly"></a>VBA コードがカスタマイズ アセンブリから呼び出す  
+## <a name="call-vba-code-from-the-customization-assembly"></a>カスタマイズ アセンブリからの VBA コードを呼び出す  
  Word 文書のマクロおよび Excel ブックのマクロと関数を、呼び出すことができます。 そのためには、次のいずれかのメソッドを使用します。  
   
 -   Word の場合: <xref:Microsoft.Office.Interop.Word._Application.Run%2A>クラスの <xref:Microsoft.Office.Interop.Word.Application> メソッドを呼び出します。  
@@ -71,7 +72,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
 ```  
   
 > [!NOTE]  
->  については、グローバルを使用して`missing`Visual c# の場合、省略可能なパラメーターの代わりに変数を参照してください[Office ソリューションでコードを記述](../vsto/writing-code-in-office-solutions.md)です。  
+>  グローバルな使い方について`missing`Visual c# の場合、省略可能なパラメーターの代わりに変数を参照してください[Office ソリューションでコードを記述](../vsto/writing-code-in-office-solutions.md)します。  
   
 ## <a name="call-code-in-document-level-customizations-from-vba"></a>VBA からのドキュメント レベルのカスタマイズのコードを呼び出す  
  ドキュメント内の Visual Basic for Applications (VBA) コードがカスタマイズ アセンブリのコードを呼び出すことができるように、Word または Excel のドキュメント レベル プロジェクトを構成できます。 これは、次のシナリオで役立ちます。  
@@ -80,7 +81,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
 -   ドキュメントで VBA コードを記述することによって、ドキュメント レベル カスタマイズ内で開発したサービスに、エンド ユーザーがアクセスできるようにする場合。  
   
- Visual Studio の Office 開発ツールは、VSTO アドインに同様の機能を提供します。VSTO アドインを開発する場合、VSTO アドイン内のコードを他の Microsoft Office ソリューションから呼び出すことができます。 詳細については、次を参照してください。[他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)です。  
+ Visual Studio の Office 開発ツールは、VSTO アドインに同様の機能を提供します。VSTO アドインを開発する場合、VSTO アドイン内のコードを他の Microsoft Office ソリューションから呼び出すことができます。 詳細については、次を参照してください。[他の Office ソリューションから VSTO アドイン内のコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)します。  
   
 > [!NOTE]  
 >  この機能は、Word テンプレート プロジェクトでは使用できません。 Word 文書、Excel ブック、または Excel テンプレートの各プロジェクトでのみ使用できます。  
@@ -100,7 +101,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
 -   Office プロジェクトは、ユーザーが VBA に公開した 1 つ以上のパブリック メンバーを含むパブリック クラスを、1 つ以上含んでいる必要があります。  
   
-     メソッド、プロパティ、およびイベントを VBA に公開できます。 公開できるクラスは、ホスト項目クラス (Word の `ThisDocument` 、Excel の `ThisWorkbook` や `Sheet1` など) またはプロジェクト内で定義されている別のクラスです。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)です。  
+     メソッド、プロパティ、およびイベントを VBA に公開できます。 公開できるクラスは、ホスト項目クラス (Word の `ThisDocument` 、Excel の `ThisWorkbook` や `Sheet1` など) またはプロジェクト内で定義されている別のクラスです。 ホスト項目の詳細については、次を参照してください。[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)します。  
   
 ## <a name="enable-vba-code-to-call-into-the-customization-assembly"></a>カスタマイズ アセンブリを呼び出す VBA コードを有効にします。  
  ドキュメント内の VBA コードにカスタマイズ アセンブリ内のメンバーを公開するには 2 つの方法があります。  
@@ -117,29 +118,29 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
     3.  プロジェクトでホスト項目クラスの **ReferenceAssemblyFromVbaProject** プロパティを **True**に設定します。 これにより、カスタマイズ アセンブリのタイプ ライブラリがアセンブリに埋め込まれ、タイプ ライブラリへの参照がドキュメントの VBA プロジェクトに追加されます。  
   
- 詳細については、次を参照してください。[する方法: Visual Basic プロジェクトでコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)と[する方法: Visual C# での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)です。  
+ 詳細については、次を参照してください。[方法: Visual Basic プロジェクトでのコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)と[方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)します。  
   
- **EnableVbaCallers** および **ReferenceAssemblyFromVbaProject** プロパティは、設計時にのみ **[プロパティ]** ウィンドウで使用できます。実行時には使用できません。 プロパティを表示するには、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]でホスト項目のデザイナーを開きます。 これらのプロパティを設定すると、Visual Studio が実行される具体的なタスクの詳細については、次を参照してください。[ホスト項目プロパティによって実行されるタスク](#PropertyTasks)です。  
+ **EnableVbaCallers** および **ReferenceAssemblyFromVbaProject** プロパティは、設計時にのみ **[プロパティ]** ウィンドウで使用できます。実行時には使用できません。 プロパティを表示するには、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]でホスト項目のデザイナーを開きます。 これらのプロパティを設定すると、Visual Studio が実行される具体的なタスクの詳細については、次を参照してください。[ホスト項目プロパティによって実行されるタスク](#PropertyTasks)します。  
   
 > [!NOTE]  
 >  ブックまたはドキュメントに VBA コードがまだ含まれていない場合、またはドキュメント内の VBA コードの実行が信頼されていない場合は、 **EnableVbaCallers** または **ReferenceAssemblyFromVbaProject** プロパティを **True**に設定するとエラー メッセージが表示されます。 これは、このような状況では、Visual Studio がドキュメントのVBA プロジェクトを変更できないためです。  
   
-## <a name="use-members-in-vba-code-to-call-into-the-customization-assembly"></a>VBA コード内でメンバーを使用して、カスタマイズ アセンブリを呼び出せる  
+## <a name="use-members-in-vba-code-to-call-into-the-customization-assembly"></a>VBA コードのメンバーを使用して、カスタマイズ アセンブリを呼び出せる  
  VBA コードがカスタマイズ アセンブリを呼び出せるようにプロジェクトを構成すると、Visual Studio は次のメンバーをドキュメントの VBA プロジェクトに追加します。  
   
 -   すべてのプロジェクトに対し、Visual Studio は `GetManagedClass`という名前のグローバル メソッドを追加します。  
   
--   [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]ホストのメンバーを公開するプロジェクト項目クラスを使用して、 **EnableVbaCallers**プロパティ、Visual Studio プロパティの追加も名前付き`CallVSTOAssembly`を`ThisDocument`、 `ThisWorkbook`、 `Sheet1`、 `Sheet2`、または`Sheet3`VBA プロジェクトのモジュール。  
+-   [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]ホストのメンバーを公開するプロジェクト項目クラスを使用して、 **EnableVbaCallers**プロパティでは、Visual Studio にも追加という名前のプロパティ`CallVSTOAssembly`を`ThisDocument`、 `ThisWorkbook`、 `Sheet1`、 `Sheet2`、または`Sheet3`VBA プロジェクトのモジュール。  
   
  プロジェクトの VBA コードに公開したクラスのパブリック メンバーには、 `CallVSTOAssembly` プロパティまたは `GetManagedClass` メソッドを使用してアクセスできます。  
   
 > [!NOTE]  
->  ソリューションを開発および配置するとき、ドキュメントの複数の異なるコピーに VBA コードを追加できます。 詳細については、次を参照してください。[ドキュメントに VBA を追加するためのガイドラインがコード](#Guidelines)です。  
+>  ソリューションを開発および配置するとき、ドキュメントの複数の異なるコピーに VBA コードを追加できます。 詳細については、次を参照してください。[ドキュメントに VBA の追加に関するガイドラインがコード](#Guidelines)します。  
   
-### <a name="use-the-callvstoassembly-property-in-a-visual-basic-project"></a>Visual Basic のプロジェクトでの CallVSTOAssembly プロパティを使用します。  
+### <a name="use-the-callvstoassembly-property-in-a-visual-basic-project"></a>Visual Basic プロジェクトでの CallVSTOAssembly プロパティを使用します。  
  ホスト項目クラスに追加したパブリック メンバーにアクセスするには、 `CallVSTOAssembly` プロパティを使用します。 たとえば、次の VBA マクロは、Excel ブック プロジェクトの `MyVSTOMethod` クラスで定義されている `Sheet1` という名前のメソッドを呼び出します。  
   
-```  
+```vb
 Sub MyMacro()  
     Sheet1.CallVSTOAssembly.MyVSTOMethod()  
 End Sub  
@@ -149,7 +150,7 @@ End Sub
   
  `CallVSTOAssembly` プロパティには、次のコードのような宣言があります。 このコードでは、 `Sheet1` という名前の Excel ブック プロジェクトの `ExcelWorkbook1` ホスト項目クラスを VBA に公開してあるものとします。  
   
-```  
+```vb 
 Property Get CallVSTOAssembly() As ExcelWorkbook1.Sheet1  
     Set CallVSTOAssembly = GetManagedClass(Me)  
 End Property  
@@ -160,7 +161,7 @@ End Property
   
  たとえば、次の VBA マクロは、 `MyVSTOMethod` という名前の Excel ブック プロジェクトの `Sheet1` ホスト項目クラスで定義されている `ExcelWorkbook1`という名前のメソッドを呼び出します。  
   
-```  
+```vb
 Sub CallVSTOMethod  
     Dim VSTOSheet1 As ExcelWorkbook1.Sheet1  
     Set VSTOSheet1 = GetManagedClass(Sheet1)  
@@ -170,7 +171,7 @@ End Sub
   
  `GetManagedClass` メソッドの宣言は次のとおりです。  
   
-```  
+```vb
 GetManagedClass(pdispInteropObject Object) As Object  
 ```  
   
@@ -181,11 +182,11 @@ GetManagedClass(pdispInteropObject Object) As Object
   
  ソリューションの開発およびテスト時には、Visual Studio でのプロジェクトのデバッグまたは実行中に開かれるドキュメント (つまり、ビルド出力フォルダー内のドキュメント) に VBA コードを記述できます。 ただし、Visual Studio はビルド出力フォルダー内のドキュメントをメイン プロジェクト フォルダーからのドキュメントのコピーで置き換えるので、このドキュメントに追加したすべての VBA は次にプロジェクトをビルドすると上書きされます。  
   
- ソリューションのデバッグまたは実行の間にドキュメントに追加した VBA コードを保存する必要がある場合は、プロジェクト フォルダーのドキュメントに VBA コードをコピーします。 ビルド処理の詳細については、次を参照してください。 [office ソリューションの構築](../vsto/building-office-solutions.md)です。  
+ ソリューションのデバッグまたは実行の間にドキュメントに追加した VBA コードを保存する必要がある場合は、プロジェクト フォルダーのドキュメントに VBA コードをコピーします。 ビルド プロセスに関する詳細については、次を参照してください。 [office ソリューションの構築](../vsto/building-office-solutions.md)します。  
   
  ソリューションを配置する準備ができたら、主に次の 3 つの場所のドキュメントに VBA コードを追加できます。  
   
-### <a name="in-the-project-folder-on-the-development-computer"></a>開発用コンピューター上のプロジェクト フォルダー内  
+### <a name="in-the-project-folder-on-the-development-computer"></a>開発用コンピューターでプロジェクト フォルダー内  
  ドキュメント内の VBA コードとカスタム コードの両方を完全に制御できる場合は、この場所が便利です。 ドキュメントは開発用コンピューター上にあるため、カスタム コードを変更する場合は VBA コードを簡単に変更できます。 このドキュメント コピーに追加した VBA コードは、ソリューションをビルド、デバッグ、公開してもドキュメントに残ります。  
   
  ドキュメントがデザイナーで開かれているときは、ドキュメントに VBA コードを追加できません。 最初にデザイナーでドキュメントを閉じてから、Word または Excel で直接ドキュメントを開く必要があります。  
@@ -193,15 +194,15 @@ GetManagedClass(pdispInteropObject Object) As Object
 > [!CAUTION]  
 >  ドキュメントを開くと実行される VBA コードを追加した場合は、まれに、このコードによってドキュメントが破壊されたり、デザイナーでドキュメントが開かなくなってしまったりする可能性があります。  
   
-### <a name="in-the-publish-or-installation-folder"></a>公開フォルダーまたはインストール フォルダー内  
+### <a name="in-the-publish-or-installation-folder"></a>発行またはインストール フォルダーに  
  場合によっては、公開フォルダーまたはインストール フォルダーのドキュメントに VBA コードを追加するのが適切な場合があります。 たとえば、Visual Studio がインストールされていないコンピューターを使用する別の開発者によって VBA コードが作成およびテストされる場合、このオプションを選択することがあります。  
   
  ユーザーが公開フォルダーからソリューションを直接インストールする場合、ソリューションを公開するたびにドキュメントに VBA コードを追加する必要があります。 Visual Studio は、ソリューションが公開される公開場所のドキュメントを上書きします。  
   
  ユーザーが公開フォルダーとは異なるインストール フォルダーからソリューションをインストールする場合は、ソリューションを公開するたびにドキュメントに VBA コードを追加する必要はありません。 公開の更新を公開フォルダーからインストール フォルダーに移動する準備ができたら、ドキュメント以外のすべてのファイルをインストール フォルダーにコピーします。  
   
-### <a name="on-the-end-user-computer"></a>エンド ユーザー コンピューター上  
- ドキュメント レベル カスタマイズで提供されるサービスを呼び出す VBA 開発者がエンド ユーザーである場合、ドキュメントのコピーの `CallVSTOAssembly` プロパティまたは `GetManagedClass` メソッドを使用して、コードの呼び出し方法をユーザーに伝えることができます。 ソリューションの更新を公開するとき、ドキュメントは公開更新によって変更されないので、エンド ユーザー コンピューター上のドキュメントの VBA コードは上書きされません。  
+### <a name="on-the-end-user-computer"></a>エンドユーザーのコンピューター上  
+ ドキュメント レベル カスタマイズで提供されるサービスを呼び出す VBA 開発者がエンド ユーザーである場合、ドキュメントのコピーの `CallVSTOAssembly` プロパティまたは `GetManagedClass` メソッドを使用して、コードの呼び出し方法をユーザーに伝えることができます。 更新をソリューションを発行するときにエンドユーザーのコンピューターにドキュメント内の VBA コードは上書きされません、によってドキュメントが変更しないために、更新プログラムを発行します。  
   
 ##  <a name="PropertyTasks"></a> ホスト項目プロパティによって実行されるタスク  
  **EnableVbaCallers** および **ReferenceAssemblyFromVbaProject** プロパティを使用するとき、Visual Studio は異なるタスク セットを実行します。  
@@ -247,17 +248,17 @@ GetManagedClass(pdispInteropObject Object) As Object
 |Error|提案される解決策|  
 |-----------|----------------|  
 |**EnableVbaCallers** または **ReferenceAssemblyFromVbaProject** プロパティを設定した後、ドキュメントに VBA プロジェクトが含まれていない、またはドキュメント内の VBA プロジェクトに対するアクセス許可がないことを示すエラー メッセージが表示される。|プロジェクト内のドキュメントに少なくとも 1 つの VBA マクロが含まれていること、VBA プロジェクトに実行するための十分な信頼があること、および VBA プロジェクトがパスワードによって保護されていないことを確認します。|  
-|設定した後、 **EnableVbaCallers**または**ReferenceAssemblyFromVbaProject**プロパティ、エラー メッセージは、ことを示す、<xref:System.Runtime.InteropServices.GuidAttribute>宣言がないか破損しています。|いることを確認、<xref:System.Runtime.InteropServices.GuidAttribute>に宣言がある、 *AssemblyInfo.cs*または*AssemblyInfo.vb* 、プロジェクト ファイルに、この属性が有効な GUID に設定されています。|  
-|設定した後、 **EnableVbaCallers**または**ReferenceAssemblyFromVbaProject**プロパティを示すエラー メッセージによって、バージョン番号が指定されている、<xref:System.Reflection.AssemblyVersionAttribute>が無効です。|いることを確認、<xref:System.Reflection.AssemblyVersionAttribute>内の宣言、 *AssemblyInfo.cs*または*AssemblyInfo.vb*プロジェクト内のファイルが有効なアセンブリ バージョン番号に設定します。 有効なアセンブリのバージョン番号については、 <xref:System.Reflection.AssemblyVersionAttribute> クラスを参照してください。|  
+|設定した後、 **EnableVbaCallers**または**ReferenceAssemblyFromVbaProject**プロパティ、エラー メッセージは、ことを示す、<xref:System.Runtime.InteropServices.GuidAttribute>宣言が存在しないか破損しています。|いることを確認、<xref:System.Runtime.InteropServices.GuidAttribute>に宣言がある、 *AssemblyInfo.cs*または*AssemblyInfo.vb*プロジェクト内のファイルと、この属性が有効な GUID に設定されています。|  
+|設定した後、 **EnableVbaCallers**または**ReferenceAssemblyFromVbaProject**プロパティを示すエラー メッセージによって、バージョン番号が指定されている、<xref:System.Reflection.AssemblyVersionAttribute>が無効です。|いることを確認、<xref:System.Reflection.AssemblyVersionAttribute>内の宣言、 *AssemblyInfo.cs*または*AssemblyInfo.vb*プロジェクト ファイルには、有効なアセンブリのバージョン番号に設定されます。 有効なアセンブリのバージョン番号については、 <xref:System.Reflection.AssemblyVersionAttribute> クラスを参照してください。|  
 |カスタマイズ アセンブリの名前を変更した後、カスタマイズ アセンブリを呼び出す VBA コードが動作を停止する。|VBA コードに公開した後でカスタマイズ アセンブリの名前を変更すると、ドキュメントの VBA プロジェクトとカスタマイズ アセンブリの間のリンクが切れます。 この問題を解決するには、プロジェクトで **ReferenceFromVbaAssembly** プロパティを **False** に変更した後、 **True**に戻して、VBA コード内にある古いアセンブリ名への参照を新しいアセンブリ名に置き換えます。|  
   
 ## <a name="see-also"></a>関連項目  
- [方法: Visual Basic プロジェクトでコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [方法: Visual C# での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
- [チュートリアル: は、コードを VBA から Visual Basic プロジェクトに呼び出す](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
- [チュートリアル: Visual C# での VBA からコードを呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
- [設計および Office ソリューションを作成します。](../vsto/designing-and-creating-office-solutions.md)   
- [VBA と Office Visual Studio ソリューションの比較](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)   
- [ドキュメント レベルのカスタマイズをプログラミングします。](../vsto/programming-document-level-customizations.md)  
+ [方法: Visual Basic プロジェクトでのコードを VBA に公開](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
+ [方法: Visual C での vba コードに公開&#35;プロジェクト](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [チュートリアル: VBA から Visual Basic プロジェクトでコードを呼び出します。](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
+ [チュートリアル: Visual C での VBA からコードを呼び出す&#35;プロジェクト](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [設計および Office ソリューションの作成](../vsto/designing-and-creating-office-solutions.md)   
+ [Visual Studio の比較で VBA および Office ソリューション](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)   
+ [プログラムのドキュメント レベルのカスタマイズ](../vsto/programming-document-level-customizations.md)  
   
   

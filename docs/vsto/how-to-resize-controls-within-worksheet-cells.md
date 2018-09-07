@@ -1,5 +1,5 @@
 ---
-title: '方法: ワークシートのセル内のコントロールのサイズを変更する |Microsoft ドキュメント'
+title: '方法: ワークシートのセル内のコントロールをサイズ変更'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,49 +18,50 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b145d4435cdb295c94897424b318d328f995c340
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 91a7e66e085408b35f0ce1d8f7d4783e0c4715a8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35672894"
 ---
-# <a name="how-to-resize-controls-within-worksheet-cells"></a>方法 : ワークシートのセル内のコントロールをサイズ変更する
-  ワークシートの列または行のサイズを変更するときにサイズが変更されたセルの幅と高さをセルに自動的に含まれているすべてのホスト コントロールのサイズを変更します。 Windows フォーム コントロールは既定で自動的にサイズ変更されません。  
+# <a name="how-to-resize-controls-within-worksheet-cells"></a>方法: ワークシートのセル内のコントロールをサイズ変更
+  ワークシートの列または行のサイズを変更するときに、セル内の任意のホスト コントロールが自動的にサイズが変更されたセルの幅、高さにサイズ変更します。 Windows フォーム コントロールは既定で自動的にサイズ変更されません。  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- デザイン時にコントロールを追加する場合は、各コントロールに対して配置オプションを設定する必要があります。  
+ デザイン時に、コントロールを追加する場合は、各コントロールに配置オプションを設定する必要があります。  
   
- Windows フォーム コントロールをプログラムで追加して、範囲引数を指定して場合、コントロールに自動的に、範囲内のセルのサイズが変更されるときにサイズ変更します。 詳細については、「 [実行時の Office ドキュメントへのコントロールの追加](../vsto/adding-controls-to-office-documents-at-run-time.md)」を参照してください。  
+ Windows フォーム コントロールをプログラムで追加して、引数を範囲指定、コントロールに自動的に、範囲内のセルのサイズが変更されたときにサイズ変更します。 詳細については、次を参照してください。[実行時に Office ドキュメントにコントロールを追加](../vsto/adding-controls-to-office-documents-at-run-time.md)します。  
   
-## <a name="resizing-controls-at-design-time"></a>デザイン時にコントロールのサイズ変更  
+## <a name="resize-controls-at-design-time"></a>デザイン時にコントロールをサイズ変更します。  
   
-#### <a name="to-make-controls-resize-with-cells-at-design-time"></a>コントロールのデザイン時にセルのサイズを変更するには  
+### <a name="to-make-controls-resize-with-cells-at-design-time"></a>コントロールのデザイン時にセルのサイズを変更するには  
   
 1.  **ツールボックス**、Windows フォーム コントロールをワークシートにドラッグします。  
   
-2.  コントロールを右クリックし、をクリックして**コントロールの書式設定**です。  
+2.  コントロールを右クリックし、をクリックし、**コントロールの書式設定**します。  
   
-3.  **コントロールの書式設定**ダイアログ ボックスで、をクリックして、**プロパティ**タブです。  
+3.  **コントロールの書式設定**ダイアログ ボックスで、をクリックして、**プロパティ**タブ。  
   
-4.  **オブジェクトの位置関係**を選択、**セル合わせて移動やサイズ**オプションをクリックして**OK**です。  
+4.  **オブジェクトの位置関係**を選択、**移動やサイズのセルで、** オプションをクリックして**ok**します。  
   
-     コントロールが含まれているセルのサイズを変更するときに、コントロールがセルに合わせてサイズ変更します。  
+     コントロールを格納するセルのサイズを変更するときに、コントロールをセルに合わせてサイズ変更します。  
   
-## <a name="resizing-controls-at-run-time"></a>実行時にコントロールのサイズ変更  
- 実行時に Windows フォーム コントロールを追加しで渡すかどうか、<xref:Microsoft.Office.Interop.Excel.Range>コントロールの場所としてコントロールは自動的にサイズ変更、範囲が含まれているワークシートのセルのサイズを変更します。  
+## <a name="resize-controls-at-runtime"></a>実行時にコントロールをサイズ変更します。  
+ 実行時に Windows フォーム コントロールを追加しを渡すかどうか、<xref:Microsoft.Office.Interop.Excel.Range>コントロールの場所としてコントロールが自動的にサイズを変更する範囲を含むワークシートのセルのサイズが変更されたときにします。  
   
-#### <a name="to-make-controls-resize-with-cells-at-run-time"></a>コントロールの実行時にセルのサイズを変更するには  
+### <a name="to-make-controls-resize-with-cells-at-run-time"></a>コントロールの実行時にセルのサイズを変更するには  
   
 1.  A1 の範囲にコントロールを追加します。  
   
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#5)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#5)]  
   
-     コントロールが含まれているセルのサイズを変更するときに、コントロールがセルに合わせてサイズ変更します。  
+     コントロールを格納するセルのサイズを変更するときに、コントロールをセルに合わせてサイズ変更します。  
   
-## <a name="resetting-control-placement"></a>コントロールの配置をリセットします。  
- 設定して、コントロールのサイズを変更および配置をリセットすることができます、`Placement`プロパティに、次のいずれか<xref:Microsoft.Office.Interop.Excel.XlPlacement>値。  
+## <a name="reset-control-placement"></a>コントロールの配置をリセットします。  
+ 設定して、コントロールのサイズ変更および配置をリセットすることができます、`Placement`プロパティを次のいずれか<xref:Microsoft.Office.Interop.Excel.XlPlacement>値。  
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>  
   
@@ -68,17 +69,17 @@ ms.lasthandoff: 04/16/2018
   
 -   <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize>  
   
-#### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>サイズを変更したり、セルに移動しないように、コントロールの動作を変更するには  
+### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>サイズを変更したり、セルに移動しないように、コントロールの動作を変更するには  
   
-1.  コントロールの配置プロパティを呼び出すし、値を設定<xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>です。  
+1.  コントロールの配置プロパティを呼び出すし、値を設定<xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>します。  
   
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]  
   
 ## <a name="see-also"></a>関連項目  
  [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)   
- [方法: Windows フォーム コントロールの Office ドキュメントへの追加](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [方法: Windows フォーム コントロールを Office ドキュメントに追加します。](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
  [方法: 印刷時にワークシートのコントロールを非表示にします。](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
  [実行時に Office ドキュメントにコントロールを追加します。](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+ [Office ドキュメントに Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
