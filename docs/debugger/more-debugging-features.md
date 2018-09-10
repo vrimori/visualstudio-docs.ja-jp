@@ -1,5 +1,5 @@
 ---
-title: 多くのデバッグ機能 |Microsoft ドキュメント
+title: 多くのデバッグの機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,17 +15,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a46c62c05b762bee3233062a5b84e3ffca20e15a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 38783f5ec228965010dbe8054373803185fe2e7c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31482127"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282704"
 ---
 # <a name="more-debugging-features"></a>その他のデバッグ機能
 このセクションでは、Visual Studio デバッガーで使用できるその他の機能について説明します。  
   
- デバッグを迅速かつ容易に行うためのヒントとテクニックの一覧については、「 [デバッグのヒントとテクニック](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx)」をご覧ください。  
+ デバッグを迅速かつ容易にするヒントと秘訣の一覧は、次を参照してください。[デバッグのヒントとテクニック](https://blogs.msdn.microsoft.com/visualstudio/2015/05/22/debugging-tips-and-tricks/)します。  
   
 ## <a name="additional-features"></a>その他の機能  
  [デバッグ中にXAML のプロパティを調べる](../debugger/inspect-xaml-properties-while-debugging.md)  

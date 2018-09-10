@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3364bdcab6ac455833e33cf59391aaef4f0af81d
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 6884ec7284fa99a9221b378935250cc676d11de8
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058010"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280212"
 ---
 # <a name="diagnose-problems-after-deployment"></a>配置後の問題の診断
 IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診断するには、リリースについてのビルド情報を含めます。こうすることで、Visual Studio が、IntelliTrace ログをデバッグするために必要な正しいソース ファイルとシンボル ファイルを自動的に検索できるようになります。  
@@ -41,11 +41,11 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
  
  ####  <a name="TFS2017"></a> Team Foundation Server 2017
 
- ビルド定義を設定して、ソース、ビルド、およびシンボルの場所をビルド マニフェスト (BuildInfo.config ファイル) に追加します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。
+ ビルド マニフェスト (BuildInfo.config ファイル) に、ソース、ビルド、およびシンボルの場所を追加、ビルド パイプラインを設定します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。
   
-1.  いずれかのことが、ASP.NET Core (.NET Framework) テンプレートを使用してビルド定義が既にあるを場合[ビルド定義を編集または新しいビルド定義を作成します。](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)
+1.  いずれかのことが既に ASP.NET Core (.NET Framework) テンプレートを使用してビルド パイプラインが場合、[ビルド パイプラインを編集するか、新しいビルド パイプラインを作成します。](/azure/devops/pipelines/get-started-designer)
   
-     ![ビルド定義が TFS 2017 での表示](../debugger/media/ffr_tfs2017viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
+     ![TFS 2017 でのパイプラインをビルドする表示](../debugger/media/ffr_tfs2017viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
   
 2.  新しいテンプレートを作成する場合は、ASP.NET Core (.NET Framework) テンプレートを選択します。 
   
@@ -55,9 +55,9 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
   
      カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。 後の手順で、MSBuild 引数を追加して、シンボル ファイルの保存場所を指定できます。
   
-     ![TFS 2017 のビルド定義でシンボル パスを設定](../debugger/media/ffr_tfs2017builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+     ![ビルド パイプライン TFS 2017 でのシンボル パスを設定](../debugger/media/ffr_tfs2017builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
   
-     詳細については、シンボルは、次を参照してください。[シンボル データを発行](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6)します。  
+     詳細については、シンボルは、次を参照してください。[シンボル データを発行](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols)します。  
   
 4.  この MSBuild 引数を追加して、TFS とシンボルの場所をビルド マニフェスト ファイルに含めます。  
   
@@ -70,11 +70,11 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
     移動して[手順 2: アプリのリリース](#DeployRelease)  
 
 ####  <a name="TFS2013"></a> Team Foundation Server 2013  
- ビルド定義を設定して、ソース、ビルド、およびシンボルの場所をビルド マニフェスト (BuildInfo.config ファイル) に追加します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。  
+ ビルド マニフェスト (BuildInfo.config ファイル) に、ソース、ビルド、およびシンボルの場所を追加、ビルド パイプラインを設定します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。  
 
-1.  [ビルド定義を編集するか、新しいビルド定義を作成します。](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
+1.  [ビルド パイプラインを編集するか、新しいビルド パイプラインを作成します。](/azure/devops/pipelines/get-started-designer)  
 
-     ![ビルド定義を TFS 2013 での表示](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
+     ![TFS 2013 でのパイプラインをビルドする表示](../debugger/media/ffr_tfs2013viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")  
 
 2.  既定のテンプレート (TfvcTemplate.12.xaml) または独自のカスタム テンプレートを選択します。  
 
@@ -84,9 +84,9 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
      カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。 後の手順で、MSBuild 引数を追加して、シンボル ファイルの保存場所を指定できます。  
 
-     ![ビルド定義の TFS 2013 でのシンボル パスを設定](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+     ![ビルド パイプライン TFS 2013 でのシンボル パスを設定](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
 
-     詳細については、シンボルは、次を参照してください。[シンボル データを発行](http://msdn.microsoft.com/Library/bd6977ca-e30a-491a-a153-671d81222ce6)します。  
+     詳細については、シンボルは、次を参照してください。[シンボル データを発行](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols)します。  
 
 4.  この MSBuild 引数を追加して、TFS とシンボルの場所をビルド マニフェスト ファイルに含めます。  
 
@@ -119,11 +119,11 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
 1.  Team Foundation ビルド サーバーに、Visual Studio 2013 (任意のエディション) をインストールします。  
 
-2.  ビルド定義で、シンボル保存場所を指定します。その結果、ソースのインデックスが自動的に作成されます。  
+2.  ビルド パイプラインでは、ソースが自動的にインデックス作成できるように、シンボルを保存する場所を指定します。  
 
      カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。  
 
-3.  次の MSBuild 引数を、ビルド定義に追加します。  
+3.  ビルド パイプラインには、次の MSBuild 引数を追加します。  
 
     -   **/p:VisualStudioVersion 12.0 を =**  
 
@@ -176,7 +176,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
  **/p:BuildSymbolStorePath =**\<*シンボルへのパス*>  
 
 ##  <a name="DeployRelease"></a> 手順 2: アプリをリリースします。  
- アプリを配置するためのビルド プロセスにより作成された [Web.Deploy パッケージ](http://msdn.microsoft.com/library/dd394698.aspx) を使用する場合、ビルド マニフェストの名前は "*ProjectName*.BuildInfo.config" から "BuildInfo.config" へ自動的に変更され、Web サーバー上にあるアプリの Web.config ファイルと同じフォルダーに配置されます。  
+ 使用する場合、 [Web.Deploy パッケージ](https://msdn.microsoft.com/library/dd394698.aspx)アプリを配置するビルド プロセスによって作成されたから、ビルド マニフェストの名前が変更に自動的に"*ProjectName*します。BuildInfo.config""BuildInfo.config"へと、web サーバー上のアプリの Web.config ファイルと同じフォルダーに配置されます。  
 
  他の方法を使用してアプリを配置する場合は、ビルド マニフェストの名前が "*ProjectName*.BuildInfo.config" から "BuildInfo.config" へ変更され、Web サーバー上にあるアプリの Web.config ファイルと同じフォルダーに配置されていることを確認します。  
 
@@ -234,7 +234,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
      ![パフォーマンス イベントからアプリケーション コードに移動して](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
 
-     これで、他の記録された値、つまり呼び出し履歴を確認したり、コードをステップ実行したりできます。また、 **IntelliTrace** ウィンドウを使用して、パフォーマンス イベントの発生時に呼び出された [その他のメソッド間を "時間内に" 前後に移動することもできます](../debugger/intellitrace.md) 。 [他すべてのイベントと、IntelliTrace ログ内の情報とは](../debugger/using-saved-intellitrace-data.md)[その他の情報はここから行うことができますか?](#WhatElse)[パフォーマンス イベントに関する詳細についての情報が必要ですか?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
+     これで、他の記録された値、つまり呼び出し履歴を確認したり、コードをステップ実行したりできます。また、 **IntelliTrace** ウィンドウを使用して、パフォーマンス イベントの発生時に呼び出された [その他のメソッド間を "時間内に" 前後に移動することもできます](../debugger/intellitrace.md) 。 [他すべてのイベントと、IntelliTrace ログ内の情報とは](../debugger/using-saved-intellitrace-data.md)[その他の情報はここから行うことができますか?](#WhatElse)[パフォーマンス イベントに関する詳細についての情報が必要ですか?](https://blogs.msdn.microsoft.com/devops/2013/09/20/performance-details-in-intellitrace/)  
 
 ### <a name="diagnose-an-exception"></a>例外の診断  
 
@@ -336,7 +336,7 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
      ビルド システムに関する情報 ( `"TeamBuild"` または `"MSBuild"`) と以下の必須プロパティ:  
 
-    -   **BuildLabel** (TeamBuild の場合): ビルドの名前と番号。 このラベルは配置イベントの名前としても使用されます。 ビルド番号について詳しくは、次を参照してください。[ビルド完了したビルドにわかりやすい名前を付けるに番号を使用](http://msdn.microsoft.com/Library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3)します。  
+    -   **BuildLabel** (TeamBuild の場合): ビルドの名前と番号。 このラベルは配置イベントの名前としても使用されます。 ビルド番号について詳しくは、次を参照してください。[ビルド完了したビルドにわかりやすい名前を付けるに番号を使用](/azure/devops/pipelines/build/options)します。  
 
     -   **SymbolPath** (推奨): セミコロンで区切ったシンボル (PDB ファイル) の場所に関する URI の一覧。 これらの URI は、URL または UNC のいずれかです。 これにより、Visual Studio は対応するシンボルを容易に検索でき、デバッグに役立ちます。  
 
@@ -396,9 +396,9 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
      ![ソース管理から開く&#45;移行](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
 
 ####  <a name="WhatWorkspace"></a> Q: ワークスペースとは?  
- **A:** 、[ワークスペースは、ソースのコピーを格納](http://msdn.microsoft.com/Library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)を開発し、個別にテストする前にチェック、作業できるようにします。 検出されたソリューションまたはプロジェクトに特別に割り当てられたワークスペースがまだない場合、Visual Studio では、使用可能なワークスペースを選択するか、既定のワークスペースと同じコンピューター名で新しいワークスペースを作成するように求めるメッセージが表示されます。  
+ **A:** 、[ワークスペースは、ソースのコピーを格納](/azure/devops/repos/tfvc/create-work-workspaces)を開発し、個別にテストする前にチェック、作業できるようにします。 検出されたソリューションまたはプロジェクトに特別に割り当てられたワークスペースがまだない場合、Visual Studio では、使用可能なワークスペースを選択するか、既定のワークスペースと同じコンピューター名で新しいワークスペースを作成するように求めるメッセージが表示されます。  
 
 ####  <a name="UntrustedSymbols"></a> 信頼されていないシンボルに関するメッセージを取得する q はありますか  
- ![信頼されていないシンボル パスでデバッグしますか。] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
+ ![信頼されていないシンボル パスでデバッグしますか。](../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
 
  **A:** このメッセージを表示するときに、ビルド マニフェスト ファイルでシンボル パス (\<*ProjectName*>。BuildInfo.config) が、信頼されたシンボル パスの一覧に含まれていません。 このパスをシンボル パスの一覧に追加するには、デバッガー オプションを使用します。

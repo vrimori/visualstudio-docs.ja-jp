@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d81aa731a12dedc1237d8af661c718930318f8cd
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 62033dc78e5595cefdf4f3ae39a95e68c64b9ee4
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39231499"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283224"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>共有およびバージョン管理 Vspackage を選択します。
 異なるバージョンの Visual Studio は、同じコンピューターに共存できます。 Vspackage が任意の組み合わせをサポートできる[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]バージョン。  
@@ -38,7 +38,7 @@ ms.locfileid: "39231499"
   
     -   プログラムのバージョンに適応するために VSPackage[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]が実行されています。 次に、新しいサービスのクエリが失敗した場合、VSPackage を提供できますの旧バージョンでサポートされている他のサービス[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。  
   
--   VSPackage を適切に登録します。 詳細については、次を参照してください。 [VSPackage の登録](../extensibility/internals/vspackage-registration.md)と[マネージ VSPackage の登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)します。  
+-   VSPackage を適切に登録します。 詳細については、次を参照してください。 [VSPackage の登録](../extensibility/internals/vspackage-registration.md)と[マネージ VSPackage の登録](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)します。  
   
 -   ファイルの拡張機能を適切に登録します。 詳細については、次を参照してください。[サイド バイ サイドで配置のファイル名拡張子を登録する](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)します。  
   

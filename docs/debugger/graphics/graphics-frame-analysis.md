@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 140d140b94446cf6e778caf33252d4c95bf2334b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: f744848292c4d288be82bf4ca462d7ccae257d8a
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512058"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280080"
 ---
 # <a name="graphics-frame-analysis"></a>グラフィックス フレーム分析
 Visual Studio Graphics Analyzer のグラフィックス フレーム分析を使用して、Direct3D ゲームまたはアプリケーションのレンダリング パフォーマンスを分析し、最適化します。  
@@ -34,7 +34,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
   
  フレーム分析は主にレンダリング パフォーマンスを向上させることを意図していますが、同様に、特定のパフォーマンス ターゲットに対して表示品質を向上させる、または GPU の電力消費を低下させるうえでも有用です。  
   
- アプリのフレーム分析が実行できる操作のデモンストレーションを表示するには、見ることができます、 [Visual Studio のグラフィックス フレーム分析](http://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)Channel 9 のビデオ。  
+ アプリのフレーム分析が実行できる操作のデモンストレーションを表示するには、見ることができます、 [Visual Studio のグラフィックス フレーム分析](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)Channel 9 のビデオ。  
   
 ## <a name="using-frame-analysis"></a>フレーム分析の使用  
  フレーム分析を使用する前に、他の Graphics Analyzer ツールを使用する場合と同様に、アプリ実行時のグラフィックス情報をキャプチャする必要があります。 次に、グラフィックス ログのドキュメント (.vsglog) ウィンドウで、選択、**フレーム分析**タブ。  
@@ -72,14 +72,14 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### <a name="timeline"></a>タイムライン  
  タイムラインは、相互に関連した描画 - 呼び出しのタイミングの概要を示しています。 描画時間が長い場合には、長いバーが対応しているため、これを使用してフレーム内で最も負荷がかかっている描画呼び出しをすぐに見つけることができます。 キャプチャされたフレームに含まれている描画呼び出しの数が非常に多い場合は、複数の描画呼び出しが 1 つのバーにまとめられ、その長さは描画呼び出しの合計になっています。  
   
- ![タイムラインは描画&#45;コストを呼び出します。] (media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
+ ![タイムラインは描画&#45;コストを呼び出します。](media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
   
  バーにポインターを置くと、バーがどの描画 - 呼び出しイベントに対応しているのかわかります。 バーを選択すると、イベント リストが対象のイベントと同期されます。  
   
 #### <a name="table"></a>テーブル  
  タイムラインの下にある数のテーブルは、アプリケーションの既定のレンダリングについて、各描画呼び出しのレンダリング バリアントの相対パフォーマンスを示しています。 各列は別のレンダリング バリアントを示しており、各行は、一番左の列で確認される別の描画呼び出しを表しています。ここからリンクに従って、[グラフィックス イベント一覧] ウィンドウへナビゲートできます。  
   
- ![概要の表では、さまざまなバリエーションを示します。] (media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")  
+ ![概要の表では、さまざまなバリエーションを示します。](media/pix_frame_analysis_summary.png "pix_frame_analysis_summary")  
   
  サマリー テーブルの左から 2 番目の列は、アプリケーションのベースライン レンダリング時間を示しています。これは、アプリケーションの既定のレンダリングで描画呼び出しを完了するまでにかかる時間です。 残りの列は、各レンダリング バリアントの相対パフォーマンスをベースラインのパーセンテージとして示しているため、パフォーマンスが改善されているかどうか一目でわかります。 パーセンテージが 100 を超えている場合はベースラインよりも長い時間がかかっている、つまりパフォーマンスが低下したことを示しています。パーセンテージが 100 未満の場合は時間がかかっていない、つまりパフォーマンスが向上したことを示しています。  
   
@@ -88,7 +88,7 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### <a name="hot-draw-calls"></a>"ホット" 描画呼び出し  
  全体のレンダリング時間で大きな割合を占めている、または回避できた理由により著しく遅くなっている描画呼び出しを目立たせるために、このような "ホット" な描画呼び出しが含まれている行には赤い影が付けられます。この影は、ベースラインのタイミングが、フレーム内のすべての描画呼び出しの平均のベースライン タイミングよりも、1標準偏差以上長い場合に付けられます。  
   
- ![この DrawIndexed 呼び出しには、ホットとコールド バリアントがあります。] (media/pix_frame_analysis_hot_calls.png "pix_frame_analysis_hot_calls")  
+ ![この DrawIndexed 呼び出しには、ホットとコールド バリアントがあります。](media/pix_frame_analysis_hot_calls.png "pix_frame_analysis_hot_calls")  
   
 #### <a name="statistical-significance"></a>統計的な有意性  
  最も高い関連性を持つレンダリング バリエーションを目立たせるために、フレーム分析は、各レンダリング バリアントの統計的な有意性を決定し、重要なものを太字で示します。 パフォーマンスが向上しているものは緑で、パフォーマンスが低下しているものは赤で示されます。 統計的に重要な意味を持たない結果は、通常の書体で示されます。  
@@ -103,12 +103,12 @@ Visual Studio Graphics Analyzer のグラフィックス フレーム分析を�
 #### <a name="platforms-that-do-not-support-hardware-counters"></a>ハードウェア カウンターをサポートしていないプラットフォーム  
  ほとんどのプラットフォームは、ハードウェア GPU カウンター (Intel、AMD、nVidia から現在提供されているすべての GPU) を完全にサポートしているわけではありません。 収集するハードウェア カウンターがない場合は、詳細テーブルのみが表示され、すべてのバリアントのタイミングの絶対値の平均が示されます。  
   
- ![詳細テーブルといくつかの再生バリアント。] (media/pix_frame_analysis_details.png "pix_frame_analysis_details")  
+ ![詳細テーブルといくつかの再生バリアント。](media/pix_frame_analysis_details.png "pix_frame_analysis_details")  
   
 #### <a name="platforms-that-support-hardware-counters"></a>ハードウェア カウンターをサポートしているプラットフォーム  
  ハードウェア GPU カウンターをサポートしているプラットフォーム (nVidia T40 SOC やすべての Qualcomm SOC など) については、各バリアントに 1 つずつ、いくつかの詳細テーブルが表示されます。 使用できるすべてのハードウェア カウンターは各レンダリング バリアントに対して収集され、その詳細テーブルに表示されます。  
   
- ![サポートされている場合は、ハードウェア カウンターが表示されます。] (media/pix_frame.png "pix_frame")  
+ ![サポートされている場合は、ハードウェア カウンターが表示されます。](media/pix_frame.png "pix_frame")  
   
  ハードウェア カウンターの情報は、各描画呼び出しについて特定のハードウェアプラットフォーム動作の詳細なビューを提供します。この情報は、パフォーマンスのボトルネックとなる原因を正確に特定するうえで有用です。  
   

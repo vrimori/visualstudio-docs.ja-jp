@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1a03d94b09464fd2daeeea265d5c4e8b64fac2fd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 055e1da96ae3078c0b77597816868be5994d1223
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635409"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281274"
 ---
 # <a name="walkthrough-create-a-web-part-for-sharepoint"></a>チュートリアル: SharePoint の web パーツを作成します。
 
@@ -51,7 +51,7 @@ Web パーツを使用すると、ブラウザーから SharePoint サイト ペ
 
 - サポート対象エディションの Microsoft Windows および SharePoint。
 
-- Visual Studio 2017 またはエディションの Visual Studio アプリケーション ライフ サイクル管理 (ALM)。
+- Visual Studio 2017 または Azure DevOps サービスです。
 
 ## <a name="create-an-empty-sharepoint-project"></a>空の SharePoint プロジェクトを作成します。
 

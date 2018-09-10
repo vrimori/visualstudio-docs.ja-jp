@@ -11,19 +11,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 567b9f2651c2140f101aa3848e4136d47a75ef1e
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 6f399e0b054b5f9b112733399d644e1357837049
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39151117"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280731"
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo 要素 (Visual Studio テンプレート)
 省略可能な式を 1 つ以上の機能と一致するように指定します  (「<xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>」を参照してください)。 機能は、<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5> プロパティとして、階層を介してプロジェクトの種類によって公開されます。 このようにすると、共通の適用可能な機能を持つ複数のプロジェクトの種類によってテンプレートを共有できます。  
   
  この要素は省略可能です。 テンプレート ファイルには、最大で 1 つのインスタンスがあります。 この要素は、現在選択されているアクティブなプロジェクトの機能に基づいて、項目テンプレートを適用可能として利用できるようにするだけです。 項目テンプレートを適用不可にするためには使用できません。 `AppliesTo` が存在しない場合、または式を正常に利用できない場合は、製品の以前のバージョンの場合と同様に、テンプレートを適用可能にするために `TemplateID` または `TemplateGroupID` が使用されます。  
   
- Visual Studio 2013 更新プログラム 2 で導入されました。 正しいバージョンを参照するを参照してください。 [Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリを参照する](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)します。  
+ Visual Studio 2013 更新プログラム 2 で導入されました。 正しいバージョンを参照するを参照してください。 [Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリを参照する](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb)します。  
   
  \<VSTemplate>  
  \<TemplateData>  

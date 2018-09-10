@@ -1,5 +1,5 @@
 ---
-title: デバッガーで Dll と実行可能ファイルの表示 |Microsoft ドキュメント
+title: デバッガーでの Dll と実行可能ファイルの表示 |Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -25,25 +25,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46dc913b95396e16f208611bcfc926378609bef6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f582c435239c83503b179d6bb5e142936a41cb4b
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31476661"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279012"
 ---
-# <a name="view-dlls-and-executables-using-the-modules-window-in-the-visual-studio-debugger"></a>Dll および Visual Studio デバッガーの [モジュール] ウィンドウを使用して実行可能ファイルを表示します。
+# <a name="view-dlls-and-executables-using-the-modules-window-in-the-visual-studio-debugger"></a>Dll と Visual Studio デバッガーで [モジュール] ウィンドウを使用して実行可能ファイルを表示します。
  
-**モジュール**Dll と実行可能ファイル (EXE) は、プログラムで使用され、それぞれの関連情報を表示するウィンドウが表示されます。 
+**モジュール**Dll と実行可能ファイル (EXE) は、プログラムによって使用され、それぞれの関連情報を表示するウィンドウが表示されます。 
 
 > [!NOTE]
 >  この機能は、SQL またはスクリプトのデバッグでは使用できません。 
   
 ### <a name="to-display-the-modules-window"></a>[モジュール] ウィンドウを表示するには  
   
--   デバッグしている間は、選択**デバッグ > Windows**  をクリックし、**モジュール**です。  
+-   をデバッグするときに選択します**デバッグ > Windows**し**モジュール**します。  
   
-     既定では、**モジュール**ウィンドウは、読み込み順でモジュールを並べ替えます。 ただし、基準列を指定して並べ替えるように選択できます。  
+     既定で、**モジュール**ウィンドウは、読み込み順序でモジュールを並べ替えます。 ただし、基準列を指定して並べ替えるように選択できます。  
   
 ### <a name="to-sort-by-any-column"></a>基準列を指定して並べ替えるには  
   
@@ -52,29 +52,29 @@ ms.locfileid: "31476661"
      シンボルの読み込みまたはシンボル パスを指定することができます、**モジュール**ウィンドウ ショートカット メニューを使用します。  
   
 ## <a name="loading-symbols"></a>シンボルの読み込み  
- **モジュール**ウィンドウで、どのモジュールは、シンボルが読み込まれてをデバッグしておくことを確認できます。 この情報に表示されます、**シンボルの状態**列です。 表示されている場合**スキップ loadingCannot が見つからないか、PDB ファイルを開く**、または**読み込みを含める/除外の設定によって無効に**、Microsoft パブリック シンボルからシンボルをダウンロードするデバッガーを指示することができますサーバーまたはコンピューター上のシンボルのディレクトリからシンボルを読み込みます。 詳細については、次を参照してください[指定シンボル (.pdb) とソース ファイル。](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+ **モジュール**ウィンドウで、モジュールでは、デバッグ シンボルが読み込まれるを参照してください。 この情報が表示されます、**シンボルの状態**列。 済み状態の場合**Skipped loadingCannot が見つからないか、PDB ファイルを開く**、または**包含/除外の設定で無効にする読み込み**、Microsoft パブリック シンボルからシンボルをダウンロードするデバッガーに指示することができますサーバーまたはコンピューターにシンボルのディレクトリからシンボルを読み込みます。 詳細については、次を参照してください[指定シンボル (.pdb) とソース ファイル。](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
 #### <a name="to-load-symbols-manually"></a>シンボルを手動で読み込むには  
   
 1.  **モジュール**ウィンドウで、モジュールのシンボルが読み込まれていないを右クリックします。  
   
-2.  をポイント**シンボルの読み込み元** をクリックし、 **Microsoft シンボル サーバー**または**シンボル パス**です。  
+2.  をポイント**シンボルの読み込み元**し**Microsoft シンボル サーバー**または**シンボル パス**します。  
   
 #### <a name="to-change-symbol-load-settings"></a>シンボル読み込みの設定を変更するには  
   
 1.  **モジュール**ウィンドウで、任意のモジュールを右クリックします。  
   
-2.  をクリックして**シンボル設定**です。  
+2.  クリックして**シンボルの設定**します。  
   
-     シンボルの読み込みの設定を変更することが今すぐ[シンボルの場所を指定し、読み込み動作](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior)です。 変更内容は、デバッグ セッションを再起動しないと有効になりません。  
+     シンボルの読み込み設定を変更することができますようになりました[シンボルの場所を指定し、読み込み動作](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior)します。 変更内容は、デバッグ セッションを再起動しないと有効になりません。  
   
 #### <a name="to-change-symbol-load-behavior-for-a-specific-module"></a>特定のモジュールのシンボル読み込み動作を変更するには  
   
-1.  **モジュール** ウィンドウで、モジュールを右クリックします。  
+1.  **モジュール**ウィンドウで、モジュールを右クリックします。  
   
-2.  をポイント**自動シンボル読み込みの設定** をクリックし、**常に手動で読み込む**または**既定**です。 変更内容は、デバッグ セッションを再起動しないと有効になりません。  
+2.  をポイント**自動シンボル読み込みの設定** をクリックし、**常に手動で読み込む**または**既定**します。 変更内容は、デバッグ セッションを再起動しないと有効になりません。  
   
 ## <a name="see-also"></a>関連項目  
- [実行の中断](http://msdn.microsoft.com/en-us/30fc4643-f337-4651-b1ff-f2de2c098d40)   
+ [実行の中断](/previous-versions/visualstudio/visual-studio-2010/7z9se2d8(v=vs.100))   
  [デバッガーでのデータの表示](../debugger/viewing-data-in-the-debugger.md)   
- [シンボル (.pdb) を指定して、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+ [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

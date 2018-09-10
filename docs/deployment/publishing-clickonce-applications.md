@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0c6f931af213ff7ce97ec77c2b742d6767cf733
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 9a8ef8f2ae6ed1f198fc5f7661b79764d0a790bd
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079252"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279814"
 ---
 # <a name="publish-clickonce-applications"></a>ClickOnce アプリケーションを発行します。
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを最初に発行するときに、発行ウィザードを使用して発行プロパティを設定できます。 このウィザードで設定できるのはプロパティの一部のみです。その他のプロパティはすべて、既定値に設定されます。  
@@ -98,7 +98,7 @@ ms.locfileid: "39079252"
 |[チュートリアル: ClickOnce アプリケーションを手動で展開します。](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|.NET Framework ユーティリティを使用して ClickOnce アプリケーションを配置する方法を説明します。|  
 |[チュートリアル: 再署名不要ブランド情報を保持する ClickOnce アプリケーションを手動で展開します。](../deployment/walkthrough-manually-deploying-a-clickonce-app-no-re-signing-required.md)|.NET Framework ユーティリティを使用して、マニフェストに再署名せずに ClickOnce アプリケーションを配置する方法について説明します。|  
 |[方法: プロジェクトをターゲット プラットフォームを構成します。](../ide/how-to-configure-projects-to-target-platforms.md)|変更することで、64 ビット プロセッサを発行する方法について説明します、**ターゲット CPU**または**プラットフォーム ターゲット**プロジェクトのプロパティ。|  
-|[チュートリアル: ClickOnce アプリケーションの複数の .NET Framework のバージョンで実行を有効にします。](http://msdn.microsoft.com/en-us/7f4383af-ed87-4853-b4d4-02a3967a5fd9)|複数バージョンの .NET Framework で ClickOnce アプリケーションのインストールと実行を行う方法について説明します。|  
+|[チュートリアル: ClickOnce アプリケーションの複数の .NET Framework のバージョンで実行を有効にします。](https://msdn.microsoft.com/library/7f4383af-ed87-4853-b4d4-02a3967a5fd9)|複数バージョンの .NET Framework で ClickOnce アプリケーションのインストールと実行を行う方法について説明します。|  
 |[チュートリアル: ClickOnce アプリケーションのカスタム インストーラーを作成します。](../deployment/walkthrough-creating-a-custom-installer-for-a-clickonce-application.md)|カスタム インストーラーを作成し、ClickOnce アプリケーションをインストールする方法について説明します。|  
 |[方法: visual スタイルが有効になっている WPF アプリケーションの発行](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)|Visual スタイルが有効になっている WPF アプリケーションを発行しようとしたときに表示されるエラーを解決する手順について説明します。|  
   

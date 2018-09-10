@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aef3d25b648e99b6d7d5e7c9c6c286026a7d24be
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: da5d7eb9f3ae32097f46c5eb0436297eaa602fed
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176360"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284025"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>コードを編集し、(c#、VB、C++)、Visual Studio でデバッグを続行
 エディット コンティニュを使用すると、プログラムが中断モードのときにソース コードを変更できるため、時間を節約できます。 などの実行コマンドを選択して、プログラムの実行を再開すると**続行**または**手順**、エディット コンティニュに自動的にいくつかの制限でコード変更を適用します。 このため、デバッグ セッション中にコードを変更できます。デバッグ セッションをいったん停止し、プログラム全体を再コンパイルしてからデバッグ セッションを再開する必要がありません。  
@@ -48,5 +48,5 @@ ms.locfileid: "39176360"
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   
- [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)   
+ [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](https://msdn.microsoft.com/library/bcew296c.aspx)   
  [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)

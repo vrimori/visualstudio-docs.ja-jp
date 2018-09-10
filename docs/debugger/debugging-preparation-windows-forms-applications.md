@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a34111ed357e38693b3cdb74c490b07cc8386b7
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 5ec3fff82fcdc8db8328d1129a860495d081be2e
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178853"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282813"
 ---
 # <a name="debugging-preparation-windows-forms-applications"></a>デバッグの準備 : Windows フォーム アプリケーション
-Windows フォーム プロジェクト テンプレートは、Windows フォーム アプリケーションを作成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、この種類のアプリケーションを簡単にデバッグできます。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)します。  
+Windows フォーム プロジェクト テンプレートは、Windows フォーム アプリケーションを作成します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、この種類のアプリケーションを簡単にデバッグできます。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))します。  
   
  プロジェクト テンプレートを使用して Windows フォーム プロジェクトを作成する場合、デバッグ構成とリリース構成に必要な設定は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって自動的に作成されます。 この設定は必要に応じて変更できます。 これらの設定を変更することができます、 **\<プロジェクト名 > プロパティ ページ** ダイアログ ボックス (**My Project** Visual Basic で)。  
   
@@ -66,8 +66,7 @@ Windows フォーム プロジェクト テンプレートは、Windows フォ�
 4.  説明した手法を使用してデバッグ[デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
+ [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)   
  [C#、F#、および Visual Basic のプロジェクトの種類](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
  [方法: セット デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)   
  [C# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)   

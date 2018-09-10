@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2 |Microsoft ドキュメント
+title: IDebugProgramPublisher2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f927a3215a415745c2e9004573810101c229ab5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e085cc144c35c59a50ec7c46f8087ccbae46fcd7
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31119560"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283250"
 ---
 # <a name="idebugprogrampublisher2"></a>IDebugProgramPublisher2
-このインターフェイスは、デバッグ エンジン (DE) またはデバッグするためのプログラムを登録するカスタム ポート納入業者を使用します。  
+このインターフェイスは、デバッグ エンジン (DE) またはカスタム ポート サプライヤーがデバッグ用のプログラムを登録できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,24 +32,24 @@ IDebugProgramPublisher2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- Visual Studio では、複数のプロセスでデバッグするために表示されるようにするために、デバッグ中のプログラムを登録するには、このインターフェイスを実装します。  
+ Visual Studio では、複数のプロセス間でのデバッグに表示されるようにするにはデバッグ中のプログラムを登録するには、このインターフェイスを実装します。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
- COM の呼び出し`CoCreateInstance`で機能`CLSID_ProgramPublisher`(この例を参照してください) このインターフェイスを取得します。 DE やカスタム ポートのサプライヤーは、このインターフェイスを使用して、デバッグ中のプログラムを表すプログラム ノードを登録します。  
+ COM の呼び出し`CoCreateInstance`関数と`CLSID_ProgramPublisher`(例を参照してください) このインターフェイスを取得します。 DE、またはカスタムのポート サプライヤーは、デバッグ中のプログラムを表すプログラム ノードを登録するのにこのインターフェイスを使用します。  
   
-## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド  
- このインターフェイスでは、次のメソッドを実装します。  
+## <a name="methods-in-vtable-order"></a>Vtable 順序メソッド  
+ このインターフェイスは、次のメソッドを実装します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|プログラムのノードを使用できるように DEs およびセッション デバッグ マネージャー (SDM)。|  
+|[PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md)|プログラム ノード使用できるように DEs およびセッション デバッグ マネージャー (SDM)。|  
 |[UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)|使用できなくするようにプログラム ノードを削除します。|  
-|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|プログラムはにより DEs および、SDM を使用できます。|  
-|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|使用可能なが不要になったように、プログラムを削除します。|  
+|[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md)|プログラムを DEs および、SDM を使用できるようにします。|  
+|[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)|使用できなくするために、プログラムを削除します。|  
 |[SetDebuggerPresent](../../../extensibility/debugger/reference/idebugprogrampublisher2-setdebuggerpresent.md)|デバッガーが存在することを示すフラグを設定します。|  
   
-## <a name="remarks"></a>コメント  
- このインターフェイスを使用可能プログラムとプログラムのノード (つまり、「パブリッシュ」して) DEs およびセッション デバッグ マネージャー (SDM) で使用します。 公開されたプログラムとプログラムのノードにアクセスするには、使用、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイスです。 これは、Visual Studio は、プログラムをデバッグすることを認識できる唯一の方法です。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスを使用可能プログラムとプログラムのノード (つまり、「公開」) DEs およびセッション デバッグ マネージャー (SDM) で使用します。 公開されたプログラムとプログラムのノードにアクセスするには、使用、 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)インターフェイス。 これは、Visual Studio は、プログラムをデバッグすることを認識できる唯一の方法です。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  
@@ -59,7 +59,7 @@ IDebugProgramPublisher2 : IUnknown
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>例  
- この例では、プログラムの発行元をインスタンス化し、[プログラム] ノードを登録する方法を示します。 これは、チュートリアルから取得[プログラム ノードを公開](http://msdn.microsoft.com/en-us/d0100e02-4e2b-4e72-9e90-f7bc11777bae)です。  
+ この例では、プログラムの発行元をインスタンス化し、[プログラム] ノードを登録する方法を示します。 これは、チュートリアルから取得[公開プログラム ノード](https://msdn.microsoft.com/library/d0100e02-4e2b-4e72-9e90-f7bc11777bae)します。  
   
 ```cpp  
 // This is how m_srpProgramPublisher is defined in the class definition:  

@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4752556fadead75bb29b6920d51ebbb54a5679aa
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 26e96116ca03cad074639c5753a8cb076dc70adf
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080800"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281976"
 ---
 # <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>方法: プロジェクトが特定のロケールを発行します。
 1 つのアプリケーションに、ロケールの異なる複数のコンポーネントが含まれることも少なくありません。 その場合、複数のプロジェクトを持つソリューションを作成し、ロケールごとに個別のプロジェクトを発行することになります。 以降の手順では、マクロを使用して、ソリューションの 1 つ目のプロジェクトを 'en' ロケールを使用して発行する方法について説明しています。 この手順を 'en' 以外のロケールで実行する場合は、マクロ内の `localeString` を、使用するロケール ('de' や 'de-DE' など) に設定してください。  
@@ -165,6 +165,6 @@ ms.locfileid: "39080800"
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)   
- [開発環境のマクロ](http://msdn.microsoft.com/en-us/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
- [マクロ エクスプ ローラー ウィンドウ](http://msdn.microsoft.com/en-us/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
- [方法: 編集およびマクロをプログラムで作成](http://msdn.microsoft.com/en-us/6716f820-1feb-48ad-a718-27eb6b473c5a)
+ [開発環境のマクロ](/previous-versions/visualstudio/visual-studio-2010/fb30sxt3(v=vs.100))   
+ [マクロ エクスプ ローラー ウィンドウ](/previous-versions/visualstudio/visual-studio-2010/wwkx67sw(v=vs.100))   
+ [方法: 編集およびマクロをプログラムで作成](/previous-versions/visualstudio/visual-studio-2010/k91y6132(v=vs.100))

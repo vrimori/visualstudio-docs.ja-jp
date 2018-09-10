@@ -10,12 +10,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3209a79b0358471977a0e58e8ab5d8d7e5c08e07
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 679c91014966167c64296638d9d0a9b2d302d345
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755369"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284043"
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio での entity Framework ツール
 Entity Framework とは、.NET 開発者は、ドメイン固有オブジェクトを使用してリレーショナル データを操作できるオブジェクト リレーショナル マッピング テクノロジです。 開発者が通常記述しなければならないデータアクセス コードの多くが不要になります。 Entity Framework は、.NET アプリケーションの新しいテクノロジをモデリング推奨オブジェクト リレーショナル マッピング (ORM です)。
@@ -39,9 +39,9 @@ Visual Studio で Entity Framework のツールを構成する特定のツール
     > [!NOTE]
     >  Visual Studio 2010 以降では、Entity Framework ツールがサポートしない[!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)]します。
 
-ツールを生成または変更、 *.edmx*ファイル。 これは、 *.edmx*ファイルには、概念モデル、ストレージ モデル、およびそれらの間のマッピングについて説明する情報が含まれています。 詳細については、次を参照してください。 [EDMX](https://msdn.microsoft.com/data/jj650889.aspx)します。
+ツールを生成または変更、 *.edmx*ファイル。 これは、 *.edmx*ファイルには、概念モデル、ストレージ モデル、およびそれらの間のマッピングについて説明する情報が含まれています。 詳細については、次を参照してください。 [EDMX](https://docs.microsoft.com/ef/ef6/)します。
 
-[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)エンティティ データ モデルを使用するアプリケーションを構築できます。 パワー ツールは、概念モデルを生成、既存のモデルの検証、概念モデルに基づくオブジェクト クラスが含まれているソース コード ファイルの生成、およびモデルを生成するビューを含むソース コード ファイルを生成することができます。 詳細については、次を参照してください。 [Pre-Generated マッピング ビュー](https://msdn.microsoft.com/data/dn469601.aspx)します。
+[Entity Framework Power Tools](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4)エンティティ データ モデルを使用するアプリケーションを構築できます。 パワー ツールは、概念モデルを生成、既存のモデルの検証、概念モデルに基づくオブジェクト クラスが含まれているソース コード ファイルの生成、およびモデルを生成するビューを含むソース コード ファイルを生成することができます。 詳細については、次を参照してください。 [Pre-Generated マッピング ビュー](https://docs.microsoft.com/ef/ef6/fundamentals/performance/pre-generated-views)します。
 
 ## <a name="related-topics"></a>関連トピック
 
@@ -49,7 +49,7 @@ Visual Studio で Entity Framework のツールを構成する特定のツール
 |-----------|-----------------|
 |[ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index)|使用する方法について説明します[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)]ツールが[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]アプリケーションを作成します。|
 |[Entity Data Model](/dotnet/framework/data/adonet/entity-data-model)|上に構築されたアプリケーションによって使用されるデータを操作するための情報とリンクを示します[!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)]します。|
-|[Entity Framework (EF) のドキュメント)](https://msdn.microsoft.com/library/ee712907(v=vs.113).aspx)|ビデオ、チュートリアル、および Entity Framework を最大限に活用するための高度なドキュメントのインデックスを提供します。|
+|[Entity Framework (EF) のドキュメント)](https://docs.microsoft.com/ef/ef6/get-started)|ビデオ、チュートリアル、および Entity Framework を最大限に活用するための高度なドキュメントのインデックスを提供します。|
 |[ASP.NET 5 アプリケーションを新しいデータベース](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html)|Entity Framework 7 を使用して新しい ASP.NET 5 アプリケーションを作成する方法について説明します。|
 
 ## <a name="see-also"></a>関連項目

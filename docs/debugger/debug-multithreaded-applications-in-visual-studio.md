@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46f165896947f541a7f7be2c48658b83dfd3d102
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 80618257e61356285d9b8c9c2bcf2a7a2e11e831
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673374"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279547"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>マルチスレッド アプリケーションのデバッグ
 スレッドは、オペレーティング システムでプロセッサ時間を割り当てる命令のシーケンスです。 オペレーティング システムで実行されているプロセスは、いずれも 1 つ以上のスレッドで構成されます。 複数のスレッドで構成されるプロセスをマルチスレッド プロセスといいます。  
@@ -95,7 +95,7 @@ Visual Studio には、強力なブレークポイントとトレースポイン
  [スレッド化](/dotnet/standard/threading/index)  
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] プログラミングでのスレッドの概念についてコード例を示しながら説明します。  
   
- [コンポーネントのマルチスレッド](http://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [コンポーネントのマルチスレッド](https://msdn.microsoft.com/Library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] コンポーネントでのマルチスレッドの使用方法について説明します。  
   
  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](/cpp/parallel/multithreading-support-for-older-code-visual-cpp)  

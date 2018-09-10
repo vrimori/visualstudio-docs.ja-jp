@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4cd201a1b0a68f958cafca80fd156a5eb9ca8120
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 1d3869a9d3350daac8b08398ed5afaab0729a05c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39231634"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44278882"
 ---
 # <a name="commandtable-element"></a>CommandTable 要素
 CommandTable のルート要素は、 *.vsct*ファイル。 これは、実際のレイアウトと、IDE に VSPackage を提供するコマンドの種類を定義するファイルです。 コマンドは、メニュー項目、メニューのツールバー、およびコンボ ボックスに含めることができます。 詳細については、次を参照してください。 [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)します。  
@@ -64,7 +64,7 @@ CommandTable のルート要素は、 *.vsct*ファイル。 これは、実際�
 |[VisibilityConstraints 要素](../extensibility/visibilityconstraints-element.md)|任意。 コマンドとツールバーの静的な可視性を判断します。|  
 |[KeyBindings 要素](../extensibility/keybindings-element.md)|任意。 コマンドのショートカット キーの組み合わせを指定します。|  
 |[UsedCommands 要素](../extensibility/usedcommands-element.md)|任意。 必要に応じてその他の Vspackage で最初にサポートされる機能の独自のバージョンを実装するために VSPackage を使用できます。|  
-|[Symbols 要素](http://msdn.microsoft.com/en-us/f2ddd0aa-c3dd-439e-834d-28f136a27ffa)|任意。 コンパイラのシンボル データ--Guid、Id、およびなど--が含まれています。|  
+|[Symbols 要素](https://www.microsoft.com/download/details.aspx?id=55984)|任意。 コンパイラのシンボル データ--Guid、Id、およびなど--が含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   

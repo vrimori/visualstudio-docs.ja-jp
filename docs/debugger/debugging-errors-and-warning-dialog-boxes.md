@@ -1,5 +1,5 @@
 ---
-title: デバッグ エラーと警告のダイアログ ボックス |Microsoft ドキュメント
+title: デバッグ エラーと警告のダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b87a662b888582a14526a03edf9df13e6492880b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bb7ed7b66483bcda01df00e92907801d994553e9
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31472203"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279054"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>デバッグ エラーと警告関連のダイアログ ボックス
 ここでは、アプリケーションのデバッグ中に表示される可能性があるエラーおよび警告のダイアログ ボックスの一覧を示します。  
@@ -42,30 +42,30 @@ ms.locfileid: "31472203"
   
  [[デバッグ セッションで実行可能] ダイアログ ボックス](../debugger/executable-for-debugging-session-dialog-box.md)  
   
- [コードの変更 ダイアログ ボックスを適用できませんでした。](../debugger/edit-and-continue-dialog-box-cpp.md)  
+ [コードの変更 ダイアログ ボックスの適用に失敗しました](../debugger/edit-and-continue-dialog-box-cpp.md)  
   
  [[Microsoft Visual Studio デバッガー (例外がスローされました)] ダイアログ ボックス](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)  
   
  [現在の場所 ダイアログ ボックスのソース コードはありません。](../debugger/no-source-available.md)  
   
- [シンボリック情報 ダイアログ ボックスではありません。](http://msdn.microsoft.com/en-us/18de4888-9cca-4059-a165-48b135fee4c9)  
+ [なしのシンボリック情報 ダイアログ ボックス](https://msdn.microsoft.com/library/18de4888-9cca-4059-a165-48b135fee4c9)  
   
  [[あいまいさの解決] ダイアログ ボックス](../debugger/resolve-ambiguity-dialog-box.md)  
   
  [[古いコードの警告] ダイアログ ボックス](../debugger/stale-code-warning-dialog-box.md)  
   
- [コンピューターに接続できません。](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)  
+ [マシンに接続できません。](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)  
   
  [エラー : "Debugging Isn't Possible Because a Kernel Debugger is Enabled on the System"](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [スクリプトと Web のデバッグ: エラーとトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
+ [スクリプトと Web のデバッグ: エラーおよびトラブルシューティング](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
   
  [リモート デバッグ エラー](../debugger/remote-debugging-errors-and-troubleshooting.md)  
   
- [アタッチ エラー](http://msdn.microsoft.com/en-us/2820d904-a068-4fcb-bbfb-bbbe5195d6ae)  
+ [アタッチ エラー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))  
   
- [SQL デバッグ セットアップのトラブルシューティング](http://msdn.microsoft.com/en-us/b3ec8303-4c0d-449c-8d19-4932c1d820a7)  
+ [SQL デバッグ セットアップのトラブルシューティング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))  
   
  [Visual C のデバッグに関する Faq](../debugger/debugging-native-code-faqs.md)  
   

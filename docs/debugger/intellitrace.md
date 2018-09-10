@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ad3344d688159ded35cd8f6c6aa757cc8a7a478
-ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
+ms.openlocfilehash: 972338fa4b52a61024cabd098c29cd0f5d9c8a4f
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42623819"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280780"
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 
@@ -46,7 +46,7 @@ IntelliTrace は Visual Studio Enterprise Edition で使用できます (Profess
 |||
 |-|-|
 |**IntelliTrace を使用したアプリケーションをデバッグするには。**<br /><br /> -過去のイベント表示します。<br />-呼び出し情報過去のイベントを表示します。<br />-IntelliTrace セッションを保存します。<br />-IntelliTrace で収集されるデータを制御します。|- [チュートリアル: IntelliTrace の使用](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace の機能](../debugger/intellitrace-features.md)<br />- [デバッグ履歴](../debugger/historical-debugging.md)<br />- [IntelliTrace ステップ バックを使用してスナップショットの表示](../debugger/how-to-use-intellitrace-step-back.md)|
-|**Test Manager でのテスト セッション中に IntelliTrace データを収集します。**|- [手動テストでの複数の診断データを収集します。](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)|
+|**Test Manager でのテスト セッション中に IntelliTrace データを収集します。**|- [手動テストでの複数の診断データを収集します。](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests)|
 |**デプロイされたアプリケーションから IntelliTrace データを収集します。**|- [IntelliTrace スタンドアロン コレクターを使用します。](../debugger/using-the-intellitrace-stand-alone-collector.md)|
 |**IntelliTrace ログ ファイル (.iTrace ファイル) からデバッグを開始します。**|- [保存された IntelliTrace データを使用します。](../debugger/using-saved-intellitrace-data.md)|
 
@@ -89,7 +89,7 @@ IntelliTrace は、これらの時点で特定のイベントやデータを記�
 
 - アプリケーションは、テスト コンピューターではクラッシュしますが、開発用コンピューターでは正常に実行されます。
 
-     Microsoft Test Manager から IntelliTrace データを収集して、.iTrace ファイルにデータを保存し、後日確認できるようにこのファイルを Team Foundation Server の作業項目に添付することができます。 参照してください[手動テストでの複数の診断データの収集](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)と[保存された IntelliTrace データを使用して](../debugger/using-saved-intellitrace-data.md)します。
+     Microsoft Test Manager から IntelliTrace データを収集して、.iTrace ファイルにデータを保存し、後日確認できるようにこのファイルを Team Foundation Server の作業項目に添付することができます。 参照してください[手動テストでの複数の診断データの収集](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests)と[保存された IntelliTrace データを使用して](../debugger/using-saved-intellitrace-data.md)します。
 
 - 展開されたアプリケーションでバグまたはクラッシュが発生しています。
 
@@ -175,7 +175,7 @@ IntelliTrace で収集される呼び出し情報の量を制御するには、�
 
 既定では、選択された IntelliTrace イベントについてのみ情報が収集されます。 これが原因でアプリケーションの速度が低下するかどうかは、コードの構造と構成によって決まります。 たとえば、IntelliTrace がイベントを頻繁に記録する場合、アプリケーションの速度が低下する可能性があります。 また、アプリケーションのリファクタリングを検討する必要に迫られる場合があります。
 
-呼び出し情報を収集すると、アプリケーションの速度が大幅に低下する可能性があります。 さらに、ディスクに保存される IntelliTrace ログ ファイル (.iTrace ファイル) のサイズが増加する可能性があります。 これらの影響を最小限に抑えるには、必要なモジュールのみから呼び出し情報を収集するようにします。  .ITrace ファイルの最大サイズを変更するには**ツール**、**オプション**、 **IntelliTrace**、**詳細**します。
+呼び出し情報を収集すると、アプリケーションの速度が大幅に低下する可能性があります。 さらに、ディスクに保存される IntelliTrace ログ ファイル (.iTrace ファイル) のサイズが増加する可能性があります。 これらの影響を最小限に抑えるには、必要なモジュールのみから呼び出し情報を収集するようにします。  .ITrace ファイルの最大サイズを変更するには**ツール**、**オプション**、 **IntelliTrace**、**詳細**します。 
 
 ## <a name="in-this-section"></a>このセクションの内容
 
