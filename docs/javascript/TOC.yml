@@ -1,31 +1,40 @@
+items:
 - name: Node.js ドキュメント
 - name: クイックスタート
   items:
-    - name: Node.js プロジェクトを作成する
-      href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
-    - name: Vue.js プロジェクトを作成する
-      href: quickstart-vuejs-with-nodejs.md
+  - name: Node.js プロジェクトを作成する
+    href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
+  - name: Vue.js プロジェクトを作成する
+    href: quickstart-vuejs-with-nodejs.md
 - name: チュートリアル
   items:
-    - name: Express を使用した Node.js アプリの作成
-      href: tutorial-nodejs.md
-    - name: React を使用した Node.js アプリの作成
-      href: tutorial-nodejs-with-react-and-jsx.md
-    - name: Linux App Service に発行する
-      href: publish-nodejs-app-azure.md
+  - name: Express を使用した Node.js アプリの作成
+    href: tutorial-nodejs.md
+  - name: React を使用した Node.js アプリの作成
+    href: tutorial-nodejs-with-react-and-jsx.md
+  - name: Linux App Service に発行する
+    href: publish-nodejs-app-azure.md
 - name: 使い方ガイド
   items:
-    - name: Vue.js アプリケーションを作成する
-      href: create-application-with-vuejs.md
-    - name: npm パッケージを管理する
-      href: npm-package-management.md
-    - name: プロジェクトまたはソリューションを使用せずに開発する ("フォルダーを開く")
-      href: develop-javascript-code-without-solutions-projects.md
-    - name: JavaScript コードの単体テスト
-      href: unit-testing-javascript-with-visual-studio.md
-    - name: JavaScript IntelliSense
-      href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
+  - name: Vue.js アプリケーションを作成する
+    href: create-application-with-vuejs.md
+  - name: npm パッケージを管理する
+    href: npm-package-management.md
+  - name: プロジェクトまたはソリューションを使用せずに開発する ("フォルダーを開く")
+    href: develop-javascript-code-without-solutions-projects.md
+  - name: JavaScript コードの単体テスト
+    href: unit-testing-javascript-with-visual-studio.md
+  - name: JavaScript IntelliSense
+    href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
 - name: リソース
   items:
-    - name: Node.js ツールの Wiki ページ
-      href: 'https://github.com/Microsoft/nodejstools'
+  - name: package.json の構成
+    href: configure-packages-with-package-json.md
+  - name: Node.js ツールの Wiki ページ
+    href: https://github.com/Microsoft/nodejstools
+ms.openlocfilehash: 934d7cd68dd61dacb5bd60d06e07aef72c34dd04
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44124945"
