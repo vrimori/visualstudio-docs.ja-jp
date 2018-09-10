@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85f146d567f429c8104017ef9441676f9cf3209b
-ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
+ms.openlocfilehash: 81c538897de64f6b7cc1f832cc07604991375872
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42623749"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283744"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace スタンドアロン コレクターを使用する
 **IntelliTrace スタンドアロン コレクター** を使用すると、対象コンピューターに Visual Studio をインストールしたり、対象システムの環境を変更したりすることなく、運用サーバーまたは他の環境でアプリの IntelliTrace 診断データを収集できます。 IntelliTrace スタンドアロン コレクターは、Web、SharePoint、WPF、および Windows フォーム アプリで動作します。 データを収集したら、コレクターを削除して、アンインストールします。
@@ -72,8 +72,7 @@ ms.locfileid: "42623749"
 
      - または -
 
-     
-  [マネージド アプリからのデータの収集](#BKMK_Collect_Data_from_Executables)
+     [マネージド アプリからのデータの収集](#BKMK_Collect_Data_from_Executables)
 
 6.  [Visual Studio Enterprise で .iTrace ファイルを開く](#BKMK_View_IntelliTrace_Log_Files)
 
@@ -252,9 +251,7 @@ ms.locfileid: "42623749"
 
 6.  [Visual Studio Enterprise で .iTrace ファイルを開く](#BKMK_View_IntelliTrace_Log_Files)
 
-##  
-  <a name="BKMK_Collect_Data_from_Executables">
-  </a> マネージド アプリからのデータの収集
+##  <a name="BKMK_Collect_Data_from_Executables"></a> マネージド アプリからのデータの収集
 
 1.  アプリを起動すると同時にデータの収集を開始するには、次の構文を使用します。
 
@@ -385,7 +382,7 @@ ms.locfileid: "42623749"
 
 -   IntelliTrace デバッグ セッションを Visual Studio Enterprise から次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。
 
--   Microsoft Test Manager のテスト セッションからの場合は、「 [方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する](http://msdn.microsoft.com/Library/02b6716f-569e-4961-938a-e790a0c74b5c)」を参照します。
+-   Microsoft Test Manager でのテスト セッションから次を参照してください。[方法: 困難なの問題のデバッグを支援する IntelliTrace データの収集](/visualstudio/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues)します。
 
 ## <a name="where-can-i-get-more-information"></a>情報の入手方法
  [保存された IntelliTrace データの使用](../debugger/using-saved-intellitrace-data.md)

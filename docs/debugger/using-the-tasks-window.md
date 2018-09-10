@@ -19,22 +19,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f86812bc1258c0381adc716a883a8cbc98b48eec
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 6d22202e50c973c52bf2b47374b9eda583fb3fe8
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512292"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280884"
 ---
 # <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
 
-**タスク**ウィンドウに似ています、**スレッド**ウィンドウには、it に関する情報が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](/cpp/parallel/concrt/reference/task-group-class)、または[WinJS.Promise](http://msdn.microsoft.com/library/windows/apps/br211867.aspx)各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。
+**タスク**ウィンドウに似ています、**スレッド**ウィンドウには、it に関する情報が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](/cpp/parallel/concrt/reference/task-group-class)、または[WinJS.Promise](/previous-versions/windows/apps/br211867(v=win.10))各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。
 
 マネージ コードで使用することができます、**タスク**を操作するときにウィンドウ<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト、または、 **await**と**非同期**キーワード (**のAwait**と**Async** visual Basic で)。 マネージ コードでタスクの詳細については、次を参照してください。[並列プログラミング](/dotnet/standard/parallel-programming/index)します。
 
 ネイティブ コードで使用することができます、**タスク**を操作するときにウィンドウ[タスク グループ](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)、[並列アルゴリズム](/cpp/parallel/concrt/parallel-algorithms)、[非同期エージェント](/cpp/parallel/concrt/asynchronous-agents)と[軽量タスク](/cpp/parallel/concrt/task-scheduler-concurrency-runtime)します。 ネイティブ コードでタスクの詳細については、次を参照してください。[同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)します。
 
-JavaScript では、promise を使用する場合、タスク ウィンドウを使用できます`.then`コード。 参照してください[JavaScript (UWP アプリ) での非同期プログラミング](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx)詳細についてはします。
+JavaScript では、promise を使用する場合、タスク ウィンドウを使用できます`.then`コード。 参照してください[JavaScript (UWP アプリ) での非同期プログラミング](/previous-versions/windows/apps/hh700330(v=win.10))詳細についてはします。
 
 使用することができます、**タスク**デバッガーを中断する場合は、常にします。 上でアクセスできる、**デバッグ**メニューをクリックして**Windows**  をクリックし、**タスク**します。 次の図は、**タスク**ウィンドウの既定のモードにします。
 
@@ -97,8 +97,7 @@ JavaScript では、promise を使用する場合、タスク ウィンドウを
 ## <a name="see-also"></a>関連項目
 
 - [デバッガーの基本事項](../debugger/getting-started-with-the-debugger.md)
-- 
-  [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
+- [マネージド コードをデバッグする](../debugger/debugging-managed-code.md)
 - [並列プログラミング](/dotnet/standard/parallel-programming/index)
 - [同時実行ランタイム](/cpp/parallel/concrt/concurrency-runtime)
 - [[並列スタック] ウィンドウの使用](../debugger/using-the-parallel-stacks-window.md)

@@ -18,19 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a4a82f8974576b2a917b7bbaee7e757513501c7
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 9964621c216d058581d9298956ba90ac6cdbef86
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058036"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280793"
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster"></a>方法 : 高パフォーマンス クラスター上でデバッグする
 高パフォーマンス クラスター上でのマルチプロセス プログラムのデバッグは、リモート コンピューター上での通常のプログラムのデバッグと似ています。 ただし、追加の考慮事項がいくつかあります。 一般的なリモート セットアップ要件は、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)します。  
   
  高パフォーマンス クラスター上でデバッグするときは、リモート デバッグに使用できる [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のデバッグ ウィンドウとデバッグ手法をすべて使用できます。 ただし、リモートでデバッグするため、外部のコンソール ウィンドウは使用できません。  
   
- **スレッド**ウィンドウと**プロセス**ウィンドウは並列アプリケーションのデバッグに特に便利です。 これらのウィンドウを使用する方法のヒントについては、次を参照してください。[方法: [プロセス] ウィンドウを使用して、](http://msdn.microsoft.com/en-us/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)と[チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)します。  
+ **スレッド**ウィンドウと**プロセス**ウィンドウは並列アプリケーションのデバッグに特に便利です。 これらのウィンドウを使用する方法のヒントについては、次を参照してください。[方法: [プロセス] ウィンドウを使用して、](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))と[チュートリアル: [スレッド] ウィンドウを使用してデバッグ](../debugger/how-to-use-the-threads-window.md)します。  
   
  以下の手順では、高パフォーマンス クラスター上でのデバッグに特に役立つ手法を示します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "37058036"
 ## <a name="see-also"></a>関連項目  
  [マルチ スレッド アプリケーションをデバッグします。](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [リモート デバッグ](../debugger/remote-debugging.md)   
- [方法: [プロセス] ウィンドウの使用](http://msdn.microsoft.com/en-us/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)   
+ [方法: [プロセス] ウィンドウの使用](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))   
  [マルチ スレッド アプリケーションのデバッグの開始します。](../debugger/get-started-debugging-multithreaded-apps.md)   
- [スレッドとプロセス](http://msdn.microsoft.com/en-us/73d87480-9af3-4d1b-baf5-397d5d876ae6)   
+ [スレッドとプロセス](/previous-versions/visualstudio/visual-studio-2010/ms164740(v=vs.100))   
  [ブレークポイントの使用](../debugger/using-breakpoints.md)

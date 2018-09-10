@@ -1,5 +1,5 @@
 ---
-title: 管理対象オブジェクトのカスタム ビューを作成 |Microsoft ドキュメント
+title: カスタム ビューの管理オブジェクトの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -25,14 +25,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6be491a5c7a0ceb0ed536416cdd3b273f96b4bb1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 970051c5f53c152ea6fee334c3c1f856172b5ed9
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31457681"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280546"
 ---
-# <a name="create-custom-views-of-managed-objects"></a>カスタム ビューの管理オブジェクトを作成します。
+# <a name="create-custom-views-of-managed-objects"></a>.managed オブジェクトのカスタム ビューの作成
 Visual Studio でデバッガーの変数ウィンドウにデータ型を表示する方法をカスタマイズできます。  
   
 ## <a name="attributes"></a>属性  
@@ -41,7 +41,7 @@ Visual Studio でデバッガーの変数ウィンドウにデータ型を表示
  [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] コードでは、Visual Basic は DebuggerBrowsable 属性をサポートしません。 この制限は、.NET Framework の新しいバージョンで解除されています。  
   
 ## <a name="visualizers"></a>ビジュアライザー  
- マネージ データ型を表示するには、ビジュアライザーを記述します。 詳細については、次を参照してください。[する方法: ビジュアライザーを記述](../debugger/how-to-write-a-visualizer.md)です。  
+ マネージド データ型を表示するには、ビジュアライザーを記述します。 詳細については、次を参照してください。[方法: ビジュアライザーを記述する](../debugger/how-to-write-a-visualizer.md)します。  
   
 ## <a name="native-code"></a>ネイティブ コード  
  ネイティブ コードの場合、カスタム データ型の展開を autoexp.dat ファイルに追加します。autoexp.dat は、Program Files\Microsoft Visual Studio 11.0\Common7\Packages\Debugger ディレクトリにあります。 `autoexp` 規則の記述手順は、このファイルに含まれています。  
@@ -49,10 +49,10 @@ Visual Studio でデバッガーの変数ウィンドウにデータ型を表示
 > [!CAUTION]
 >  このファイルの構造と自動展開規則の構文は、Visual Studio のリリースごとに異なる可能性があります。  
   
- また、ネイティブ型の表示は、式エバリュエーター アドインを記述してカスタマイズできます。 詳細については、次を参照してください。 [EEAddIn サンプル: デバッグ式エバリュエーター アドイン](http://msdn.microsoft.com/en-us/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)です。  
+ また、ネイティブ型の表示は、式エバリュエーター アドインを記述してカスタマイズできます。 詳細については、次を参照してください。 [EEAddIn サンプル: デバッグ式エバリュエーター アドイン](https://msdn.microsoft.com/library/d4f6b068-c812-45bc-9ec0-7e0363c4bb9e)します。  
   
 ## <a name="see-also"></a>関連項目  
  [DebuggerTypeProxy 属性の使用](../debugger/using-debuggertypeproxy-attribute.md)   
  [DebuggerDisplay 属性の使用](../debugger/using-the-debuggerdisplay-attribute.md)   
- [ウォッチと [クイック ウォッチ] ウィンドウ](../debugger/watch-and-quickwatch-windows.md)   
+ [ウォッチ ウィンドウと [クイック ウォッチ] の Windows](../debugger/watch-and-quickwatch-windows.md)   
  [デバッガー表示属性によるデバッグ機能の拡張](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

@@ -1,5 +1,5 @@
 ---
-title: '必要です (& m); #39) &#39;正規表現 (JavaScript) |Microsoft ドキュメント'
+title: 予想&#39;)&#39;で正規表現 (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,23 +20,23 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca4560c638cc0e9209141ba9b0878208eb84eb0c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b5d1075a41d2b97d10166b1372e8df3a93dd9d8e
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633882"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279129"
 ---
-# <a name="expected-3939-in-regular-expression-javascript"></a>必要です (& m); #39) &#39;正規表現 (JavaScript)
-正規表現キャプチャ、アサーション、またはグループを作成しようとしていますが、終わりかっこが含まれていません。 かっこでは、正規表現でいくつかの目的があります。 主に、アサーション、またはパターンをグループ化、項目は、1 つの単位として扱うことができるようにする、サブ式のキャプチャに使用されます *、+、? などです。  
+# <a name="expected-3939-in-regular-expression-javascript"></a>予想&#39;)&#39;で正規表現 (JavaScript)
+正規表現キャプチャ、アサーション、またはグループを作成しようとしましたが、終わりかっこが含まれていません。 かっこでは、正規表現でいくつかの目的があります。 主に、アサーション、またはパターンをグループ化によって 1 つの単位として、アイテムを処理できるようにする、サブ式のキャプチャに使用されます *、+、? などです。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   右端にある右かっこを追加します。  
+-   右端の閉じかっこを追加します。  
   
     > [!NOTE]
-    >  かっこの 1 つに一致する場合は、円記号のエスケープ\\(によって、特殊文字として解釈されないように -[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]です。  
+    >  1 つのかっこと一致する場合は、円記号のエスケープ\\(によって特殊文字として解釈されないように -[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]します。  
   
 ## <a name="see-also"></a>関連項目  
  [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)   
- [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [正規表現構文 (JavaScript)](https://msdn.microsoft.com/library/1400241x)

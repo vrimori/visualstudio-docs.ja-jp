@@ -1,5 +1,5 @@
 ---
-title: コードの警告 ダイアログ ボックスを古い |Microsoft ドキュメント
+title: 古いコードの警告 ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -22,19 +22,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec80baa04529bcc6a9705d1c8df03e120e6bc64e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f1e212602b317127cfd14adcd246a23cdd92ed86
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481477"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281794"
 ---
 # <a name="stale-code-warning-dialog-box"></a>[古いコードの警告] ダイアログ ボックス
-このダイアログ ボックスが表示されますが完了したらネイティブへの変更のコードを**エディット コンティニュ**すぐには適用できませんでした。 結果として、現在のスタック フレーム内の一部のネイティブ コードが最新でない (陳腐化している) 場合があります。 詳細については、次を参照してください。[する方法: 古いコードを操作](http://msdn.microsoft.com/en-us/c7536e95-66a6-44a0-995d-3fe5035250b4)です。  
+このダイアログ ボックスが表示されますが完了したらネイティブへの変更がコードを**エディット コンティニュ**すぐには適用できませんでした。 結果として、現在のスタック フレーム内の一部のネイティブ コードが最新でない (陳腐化している) 場合があります。 詳細については、次を参照してください。[方法: 古いコードを操作](/visualstudio/debugger/edit-and-continue-visual-cpp#bkmk_how_to_work_with_stale_code)します。  
   
  **次回からこのダイアログ ボックスを表示しません。**  
- このチェック ボックスをオンにすると、以後エディット コンティニュは、このダイアログ ボックスを表示せずにコード変更を適用します。 再び有効にできますこの警告に移動して、**オプション**を開く ダイアログ ボックス、**デバッグ**フォルダーをクリックすると、**エディット コンティニュ**を選択して、ページ**古いコードに関する警告**です。  
+ このチェック ボックスをオンにすると、以後エディット コンティニュは、このダイアログ ボックスを表示せずにコード変更を適用します。 有効にできますこの警告もう一度に移動して、**オプション** ダイアログ ボックスで、開く、**デバッグ**フォルダーをクリックすると、**エディット コンティニュ**ページ、およびを選択すると**古いコードに関する警告**します。  
   
 ## <a name="see-also"></a>関連項目  
  [サポートされているコード変更 (C++)](../debugger/supported-code-changes-cpp.md)   
- [エディット コンティニュ、デバッグ、オプション ダイアログ ボックス](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)
+ [[エディット コンティニュ] ([オプション] ダイアログ ボックス - [デバッグ])](/visualstudio/debugger/edit-and-continue)

@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe3b8333f116ea5606a354dd9d0f88f111077a1b
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 5b9be1d03c8635b1d6b01556c8b4c3963db1d7a2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057175"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279350"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル : Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 開始し実行を停止、ブレークポイントを設定およびで変数を確認する方法を示します、**ウォッチ**ウィンドウ。  
@@ -99,7 +99,7 @@ ms.locfileid: "37057175"
     textBox1.Text = "Button was clicked!";  
     ```  
   
-     赤い点が表示され、その行のテキストが赤く強調表示されます。 赤い点はブレークポイントを表します。 デバッガーを起動した状態でアプリケーションを実行すると、そのコードに達したときにデバッガーが実行を中断します。 アプリケーションの状態を表示し、デバッグできます。 詳細については、次を参照してください。[ブレークポイント](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583)します。  
+     赤い点が表示され、その行のテキストが赤く強調表示されます。 赤い点はブレークポイントを表します。 デバッガーを起動した状態でアプリケーションを実行すると、そのコードに達したときにデバッガーが実行を中断します。 アプリケーションの状態を表示し、デバッグできます。 詳細については、次を参照してください。[ブレークポイント](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)します。  
   
 2.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   

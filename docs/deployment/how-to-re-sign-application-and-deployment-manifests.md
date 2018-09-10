@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c7368369b0c15f7ae159896f30ee59066a18728
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: cce175f487d24e528d7527c424a1f76fa2a82824
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078642"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280676"
 ---
 # <a name="how-to-re-sign-application-and-deployment-manifests"></a>方法: アプリケーション マニフェストと配置マニフェストに再署名
 Windows フォーム アプリケーション、Windows Presentation Foundation アプリケーション (xbap)、Office ソリューション用アプリケーション マニフェストの配置プロパティを変更したら、両方のアプリケーションを再署名する必要があり、配置マニフェストに、証明書。 このプロセスにより、エンドユーザーのコンピューターに改ざんされたファイルがインストールされていないことを確認します。  
@@ -33,7 +33,7 @@ Windows フォーム アプリケーション、Windows Presentation Foundation 
  マニフェストを再署名が別のシナリオは、お客様が、アプリケーションに署名して、配置マニフェストに、独自の証明書です。  
   
 ## <a name="re-sign-the-application-and-deployment-manifests"></a>アプリケーション マニフェストと配置マニフェストに再署名します。  
- この手順は、アプリケーション マニフェスト ファイルへの変更が既に行われたことを想定しています (*.manifest*)。 詳細については、次を参照してください。[方法: 配置プロパティを変更](http://msdn.microsoft.com/en-us/66052a3a-8127-4964-8147-2477ef5d1472)します。  
+ この手順は、アプリケーション マニフェスト ファイルへの変更が既に行われたことを想定しています (*.manifest*)。 詳細については、次を参照してください。[方法: 配置プロパティを変更](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)します。  
   
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Mage.exe を使用してマニフェストに、アプリケーションおよび配置を再署名するには  
   

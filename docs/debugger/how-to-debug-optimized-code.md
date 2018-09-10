@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d6ada3b5375737cb4deec777f64344096fbdaae
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 47b26883d0800611f2fba5cbf7a02907fef1d948
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058511"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280819"
 ---
 # <a name="how-to-debug-optimized-code"></a>方法 : 最適化されたコードをデバッグする
 > [!NOTE]
@@ -88,7 +88,7 @@ ms.locfileid: "37058511"
 for (x=0; x<10; x++)  
 ```  
   
- この行にブレークポイントを設定したとします。 ブレークポイントは 10 回ヒットするように思われますが、このコードを最適化した場合、ブレークポイントは 1 回しかヒットしません。 これは、最初の命令によって `x` の値が 0 に設定されるためです。 コンパイラは、その最初の命令を 1 回だけ実行すると見なしてループの外に移動します。 このとき、ブレークポイントもこの命令と共に移動します。 `x` を比較してインクリメントする命令はループ内に残ったままになります。 表示すると、**逆アセンブリ**ウィンドウで、[ステップ単位](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)より詳細に制御、最適化されたコードをステップ実行している場合に有用な命令に自動的に設定します。  
+ この行にブレークポイントを設定したとします。 ブレークポイントは 10 回ヒットするように思われますが、このコードを最適化した場合、ブレークポイントは 1 回しかヒットしません。 これは、最初の命令によって `x` の値が 0 に設定されるためです。 コンパイラは、その最初の命令を 1 回だけ実行すると見なしてループの外に移動します。 このとき、ブレークポイントもこの命令と共に移動します。 `x` を比較してインクリメントする命令はループ内に残ったままになります。 表示すると、**逆アセンブリ**ウィンドウで、[ステップ単位](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100))より詳細に制御、最適化されたコードをステップ実行している場合に有用な命令に自動的に設定します。  
   
 ## <a name="see-also"></a>関連項目  
  [デバッガーのセキュリティ](../debugger/debugger-security.md)   

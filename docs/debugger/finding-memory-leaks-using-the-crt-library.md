@@ -31,12 +31,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 58acebc2607ba05f121a7673f726d8f4bbcb38bd
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 138567792ed57aff0c1471b7f9004999c357764b
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37057214"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281107"
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>CRT ライブラリを使用したメモリ リークの検出
 メモリ リークとは、割り当て済みのメモリを適切に解放できない状態を指します。メモリ リークは、C/C++ アプリケーションで最も微妙で検出しにくいバグの 1 つです。 わずかなメモリ リークは最初は認識されないことがありますが、長期にわたる累積的なメモリ リークによりアプリケーションがメモリ不足になると、パフォーマンスの低下からクラッシュまで、さまざまな兆候が現れる可能性があります。 さらに悪い状況として、メモリ リークしているアプリケーションによってすべての使用可能なメモリが消費されると、別のアプリケーションがクラッシュし、原因となったアプリケーションの特定が困難になることもあります。 一見問題にならないように思われるメモリ リークであっても、修正が必要な別の問題につながっている可能性があります。  
@@ -108,7 +108,7 @@ Object dump complete.
   
 -   メモリの割り当て番号 (この例では " `18` ")  
   
--   [ブロックの型](http://msdn.microsoft.com/en-us/e2f42faf-0687-49e7-aa1f-916038354f97)(この例では " `normal` ")  
+-   [ブロックの型](https://msdn.microsoft.com/library/e2f42faf-0687-49e7-aa1f-916038354f97)、これは`normal`この例では。  
   
 -   16 進形式で表したメモリ位置 (この例では " `0x00780E80` ")  
   

@@ -1,5 +1,5 @@
 ---
-title: コンソールを使用して JavaScript のデバッグ |Microsoft ドキュメント
+title: コンソールを使用して JavaScript のデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,16 +17,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b21cd5a4c0e6852553c2ca601d22eb9f45bb48d7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 06d1c518b55c6f6df6a579fe1603c556201e7a18
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31478305"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280832"
 ---
-# <a name="debug-javascript-using-the-console-in-visual-studio"></a>JavaScript コンソールを使用して、Visual Studio でのデバッグします。
+# <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio でコンソールを使用して JavaScript をデバッグします。
   
- JavaScript コンソール ウィンドウは、JavaScript を使用して構築された UWP アプリのデバッグを対話的に使用できます。 UWP アプリと Visual Studio Tools Apache Cordova を使って作成されたアプリは、これらの機能がサポートされています。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
+ JavaScript を使用して開発された UWP アプリのデバッグし、やり取りして、JavaScript コンソール ウィンドウを使用できます。 UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリは、これらの機能がサポートされています。 コンソール コマンドのリファレンスの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md)」を参照してください。  
   
  JavaScript コンソール ウィンドウを使うと次の作業ができます。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "31478305"
 -   画面のクリアなどの他のタスクを実行します。 コマンドの詳細については、「 [JavaScript Console commands](../debugger/javascript-console-commands.md) 」を参照してください。  
   
 > [!TIP]
->  JavaScript コンソール ウィンドウを閉じる場合は、選択**デバッグ**> **Windows** > **JavaScript コンソール**を再度開きます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
+>  JavaScript コンソール ウィンドウが閉じている場合は、選択**デバッグ**> **Windows** > **JavaScript コンソール**を再び開くにします。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
   
- JavaScript コンソール ウィンドウを使用すると、デバッガーを停止/再起動することなくアプリと対話することができます。 詳細については、次を参照してください。[アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)です。 他の JavaScript のデバッグ、DOM Explorer を使用して、ブレークポイントの設定などの機能の詳細については「[クイック スタート: デバッグ HTML および CSS](../debugger/quickstart-debug-html-and-css.md)と[Visual Studio でアプリのデバッグ](../debugger/debug-store-apps-in-visual-studio.md)です。  
+ JavaScript コンソール ウィンドウを使用すると、デバッガーを停止/再起動することなくアプリと対話することができます。 詳細については、次を参照してください。[アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)します。 その他の JavaScript のデバッグ、DOM Explorer を使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート: デバッグの HTML および CSS](../debugger/quickstart-debug-html-and-css.md)と[Visual Studio でアプリをデバッグ](../debugger/debug-store-apps-in-visual-studio.md)します。  
   
 ##  <a name="InteractiveConsole"></a> JavaScript コンソール ウィンドウを使用したデバッグ  
  次の手順では、 `FlipView` アプリを作成し、JavaScript のコード エラーを対話的にデバッグする方法を示します。  
@@ -57,11 +57,11 @@ ms.locfileid: "31478305"
   
 1.  Visual Studio で **[ファイル]** > **[新しいプロジェクト]**」を参照してください。  
   
-2.  選択**JavaScript** > **Windows ユニバーサル**を選択し**WinJS アプリ**です。  
+2.  選択**JavaScript** > **Windows ユニバーサル**を選び、 **WinJS アプリ**します。  
   
 3.  `FlipViewApp`などのプロジェクトの名前を入力し、 **[OK]** を選んでアプリを作成します。  
   
-4.  Index.html の BODY 要素には、このコードで既存の HTML コードを置き換えます。  
+4.  Index.html の BODY 要素では、このコードで、既存の HTML コードを置き換えます。  
   
     ```html  
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -137,7 +137,7 @@ ms.locfileid: "31478305"
     })();  
     ```  
   
-7.  デバッグ対象がまだ選択されていない場合は、選択**ローカル マシン**ドロップ ダウン リストから次に、**デバイス**のボタンでは、**デバッグ**ツールバー。  
+7.  デバッグ対象が選択されていない場合は、選択**ローカル マシン**横にドロップダウン リストからリスト、**デバイス**のボタンでは、**デバッグ**ツールバー。  
   
      ![デバッグ ターゲット リスト](../debugger/media/js_select_target.png "JS_Select_Target")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "31478305"
   
      アプリが実行されますが、イメージがありません。 JavaScript コンソール ウィンドウの APPHOST のエラーは、イメージがないことを示します。  
   
-9. `FlipView`アプリを実行している型`Data.items`コンソール ウィンドウの入力プロンプト (横に、">>"シンボル) し、Enter キーを押します。  
+9. `FlipView`アプリを実行している型`Data.items`コンソール ウィンドウの入力プロンプトで (横に、">>"シンボル) し、Enter キーを押します。  
   
      `items` オブジェクトのビジュアライザーがコンソール ウィンドウに表示されます。 これは、 `items` オブジェクトがインスタンス化されて、現在のスクリプト コンテキストで使用できることを示します。 コンソール ウィンドウでは、オブジェクトのノードをクリックしてプロパティの値を表示できます (方向キーを使用します)。 `items._data` オブジェクトをクリックすると、次の図に示すように、イメージ ソースの参照が正しくないことがわかります。 既定のイメージ (logo.png) がまだオブジェクト内に存在し、不明のイメージと予期されるイメージが混在しています。  
   
@@ -181,17 +181,17 @@ ms.locfileid: "31478305"
   
 13. スクリプトを実行するには、緑色の矢印をクリックします。  
   
-14. Ctrl + Alt + M にコンソール入力プロンプトを単一行モードに切り替えてを選択し、キーを押して**入力のクリア**(赤い"X")、入力プロンプトからコードを削除します。  
+14. クリックして、コンソール入力プロンプトを単一行モードに切り替えるには Ctrl + Alt + M キーを押して**入力のクリア**(赤い"X")、入力プロンプトからコードを削除します。  
   
 15. プロンプトで `Data.items.length = 3` を入力し、Enter キーを押します。 これにより、データから余分な要素が削除されます。  
   
-16. アプリをもう一度確認し、正しいイメージが正しいことを確認`FlipView`ページ。  
+16. アプリをもう一度確認し、正しいイメージが正しいことを確認します`FlipView`ページ。  
   
 17. DOM Explorer では、更新された DIV 要素を確認でき、サブツリーに移動すると予期される IMG 要素が表示されます。  
   
 18. **[デバッグ]** > **Stop [デバッグ]ging** の順にクリックするか、または Shift + F5 キーを押してデバッグを停止し、ソース コードを修正します。  
   
-     サンプル コードを修正、完全なを含む default.html ページを参照してください[デバッグ HTML、CSS、および JavaScript サンプル コード](../debugger/debug-html-css-and-javascript-sample-code.md)です。  
+     サンプル コードを修正、含む default.html ページ全体を参照してください[デバッグ HTML、CSS、および JavaScript サンプル コード](../debugger/debug-html-css-and-javascript-sample-code.md)します。  
   
 ##  <a name="InteractiveDebuggingBreakMode"></a> 対話形式のデバッグと中断モード  
  JavaScript コンソール ウィンドウなどの JavaScript デバッグ ツールの使用中は、ブレークポイントを使用し、コードにステップ インできます。 デバッガーで実行しているプログラムがブレークポイントに達すると、デバッガーは一時的にプログラムの実行を中断します。 実行が中断されると、プログラムは実行モードから中断モードに切り替わります。 いつでも実行を再開できます。  
@@ -202,13 +202,13 @@ ms.locfileid: "31478305"
   
 1.  前に作成した `FlipView` アプリの default.html ファイルで、 `updateImages()` 関数のショートカット メニューを開き、 **[ブレークポイント]** > **[ブレークポイントの挿入]**」を参照してください。  
   
-2.  選択**ローカル マシン**横に、ドロップダウン リスト、**デバッグの開始**ボタンをクリックして、**デバッグ**ツールバー。  
+2.  選択**ローカル マシン**ドロップ ダウン リストの横に、**デバッグの開始**のボタンでは、**デバッグ**ツールバー。  
   
 3.  **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、または F5 キーを押します。  
   
      実行が `updateImages()` 関数に達するとアプリは中断モードになり、プログラム実行の現在行が黄色で強調表示されます。  
   
-     ![JavaScript コンソールを使用して中断モードを使用して](../debugger/media/js_breakmode.png "JS_BreakMode")  
+     ![JavaScript コンソールで、中断モードを使用して](../debugger/media/js_breakmode.png "JS_BreakMode")  
   
      現在のデバッグ セッションを終了することなく、変数の値を変更してプログラムの状態にすぐに反映できます。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "31478305"
   
      次の図は、この時点でのコンソール ウィンドウを示します。  
   
-     ![ビジュアライザーを表示されている JavaScript コンソール ウィンドウ](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer")  
+     ![JavaScript コンソール ウィンドウ ビジュアライザー](../debugger/media/js_console_function_visualizer.png "JS_Console_Function_Visualizer。")  
   
 6.  関数の 1 行を出力ウィンドウから入力プロンプトにコピーし、インデックス値を 3 に変更します。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "31478305"
   
  単一行モードでは入力履歴が提供されます。 上方向キーと下方向キーを使用して、入力履歴内を移動できます。 単一行モードでは、スクリプトを実行すると入力プロンプトがクリアされます。 単一行モードでスクリプトを実行するには、Enter キーを押します。  
   
- 複数行モードでは、スクリプトを実行しても入力プロンプトはクリアされません。 複数行モードから単一行モードに切り替えると、キーを押して、入力行をクリアできます**入力のクリア**(赤い"X") です。 複数行モードでスクリプトを実行するには、Ctrl + Enter キーを押すか、またはウィンドウの右下隅の矢印を選びます。  
+ 複数行モードでは、スクリプトを実行しても入力プロンプトはクリアされません。 複数行モードから単一行モードに切り替えると、キーを押して、入力行をクリアできます**入力のクリア**(赤い"X")。 複数行モードでスクリプトを実行するには、Ctrl + Enter キーを押すか、またはウィンドウの右下隅の矢印を選びます。  
   
 ##  <a name="Switching"></a> スクリプトの実行コンテキストの切り替え  
  JavaScript コンソール ウィンドウを使用すると、1 回につき、Web プラットフォーム ホスト (WWAHost.exe) の単一インスタンスを表す 1 つの実行コンテキストと対話することができます。 一部のシナリオでは (たとえば `iframe`、共有コントラクト、Web ワーカー、 `WebView` コントロールなどを使用する場合)、アプリがホストの別のインスタンスを起動することがあります。 ホストの別のインスタンスが実行中の場合は、 **[ターゲット]** リストから実行コンテキストを選択すると、アプリを実行したまま、別の実行コンテキストを選択できます。  
@@ -253,9 +253,9 @@ ms.locfileid: "31478305"
 ## <a name="see-also"></a>関連項目  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)   
- [アプリを更新する (JavaScript)](../debugger/refresh-an-app-javascript.md)   
+ [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   
  [HTML、CSS、および JavaScript サンプル コードをデバッグします。](../debugger/debug-html-css-and-javascript-sample-code.md)   
- [クイック スタート: HTML および CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
+ [クイック スタート: HTML と CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
  [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
- [製品のサポートとアクセシビリティ](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
+ [製品のサポートとアクセシビリティ](https://visualstudio.microsoft.com/vs/support/)

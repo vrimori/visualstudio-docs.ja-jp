@@ -1,5 +1,5 @@
 ---
-title: IActiveScriptProfilerControl::StartProfiling |Microsoft ドキュメント
+title: IActiveScriptProfilerControl::StartProfiling |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -16,15 +16,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5362eaba439ff7a645a8323c4eed5d9496f6d88
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 5540573991be11230acb33b088174bbb5c39f7f7
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24724872"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281716"
 ---
 # <a name="iactivescriptprofilercontrolstartprofiling"></a>IActiveScriptProfilerControl::StartProfiling
-スクリプト エンジンでプロファイリングを開始します。 スクリプト エンジンでは、プロファイラーのオブジェクトのインスタンスを作成を呼び出すことによって[CoCreateInstance](http://msdn.microsoft.com/en-us/7295a55b-12c7-4ed0-a7a4-9ecee16afdec)です。  
+スクリプト エンジンのプロファイリングを開始します。 スクリプト エンジンを呼び出すことによって、プロファイラー オブジェクトのインスタンスを作成する[CoCreateInstance](https://docs.microsoft.com/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ HRESULT StartProfiling(
  [in]クラス id (CLSID) プロファイラー オブジェクトを作成します。  
   
  `dwEventMask`  
- [in]イベントの種類を指定する 4 バイトのビットマスク。 Bits が定義されている[PROFILER_EVENT_MASK 列挙型](../../winscript/reference/profiler-event-mask-enumeration.md)です。  
+ [in]イベントの種類を指定する 4 バイトのビットマスク。 ビットが定義されている[PROFILER_EVENT_MASK 列挙型](../../winscript/reference/profiler-event-mask-enumeration.md)します。  
   
  `dwContext`  
  [in]プロファイラーのオブジェクトに渡される 4 バイト値。  

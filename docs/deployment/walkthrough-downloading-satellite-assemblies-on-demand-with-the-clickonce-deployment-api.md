@@ -23,25 +23,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b558ca0d5b8080e581dcddd07e2f89511d062cc4
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 5d7226726bc2eb9bbc53afa8920a26d342983af6
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154412"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281222"
 ---
 # <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>チュートリアル: ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードします。
 サテライト アセンブリを使用すると、複数のカルチャに対して Windows フォーム アプリケーションを構成できます。 *サテライト アセンブリ* とは、アプリケーションの既定のカルチャ以外のカルチャ用アプリケーション リソースを含むアセンブリのことです。  
   
  説明したよう[ローカライズ ClickOnce アプリケーション](../deployment/localizing-clickonce-applications.md)、同じ内に複数のカルチャ用の複数のサテライト アセンブリを含めることができます[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]展開します。 既定では、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] により配置に含まれるすべてのサテライト アセンブリがクライアント コンピューターにダウンロードされます。ただし、多くの場合、1 つのクライアントに必要なサテライト アセンブリは 1 つだけです。  
   
- このチュートリアルでは、サテライト アセンブリをオプションとしてマークする方法、および現在のカルチャ設定にクライアント コンピューターが必要とするアセンブリのみをダウンロードする方法について説明します。 次の手順では、 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]から入手できるツールを使用します。 このタスクを、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して実行することもできます。  参照してください[チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてサテライト アセンブリをダウンロード](http://msdn.microsoft.com/library/ms366788\(v=vs.110\))または[チュートリアル: ClickOnce 配置 API を使用して必要に応じてサテライト アセンブリをダウンロードデザイナー](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))します。  
+ このチュートリアルでは、サテライト アセンブリをオプションとしてマークする方法、および現在のカルチャ設定にクライアント コンピューターが必要とするアセンブリのみをダウンロードする方法について説明します。 次の手順では、 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]から入手できるツールを使用します。 このタスクを、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を使用して実行することもできます。  参照してください[チュートリアル: ClickOnce 配置デザイナーを使用して API で必要に応じてサテライト アセンブリをダウンロード](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110))または[チュートリアル: ClickOnce 配置 API を使用して必要に応じてサテライト アセンブリをダウンロードデザイナー](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))します。  
   
 > [!NOTE]
 >  次のコード例は、テストを目的としているため、プログラム内でカルチャを `ja-JP`に設定しています。 このコードを運用環境用に調整する方法については、このトピックの「次の手順」セクションを参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
- このトピックでは、ローカライズされたリソースを、Visual Studio を使用してアプリケーションに追加する方法を理解していることを想定しています。 詳細については、次を参照してください。[チュートリアル: ローカライズの Windows フォーム](https://msdn.microsoft.com/library/vstudio/y99d1cd3\(v=vs.100\).aspx)します。  
+## <a name="prerequisites"></a>必須コンポーネント  
+ このトピックでは、ローカライズされたリソースを、Visual Studio を使用してアプリケーションに追加する方法を理解していることを想定しています。 詳細については、次を参照してください。[チュートリアル: ローカライズの Windows フォーム](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))します。  
   
 ### <a name="to-download-satellite-assemblies-on-demand"></a>必要に応じてサテライト アセンブリをダウンロードするには  
   

@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0a880604f14f840c3f4712e1a8d0e4d8e9cf1822
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 463bc06bb023e973ac6fe62f5f92a3d9067b2841
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283472"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280598"
 ---
 # <a name="access-data-in-visual-studio"></a>Visual Studio でのデータへのアクセス
 
@@ -83,7 +83,7 @@ Azure サービスに接続する場合は、最新バージョンをダウン�
 
 ### <a name="data-providers"></a>データ プロバイダー
 
-ADO.NET で使用できるようにするデータベースの場合、ユーザー設定が必要*ADO.NET データ プロバイダー*またはそれ以外の場合、ODBC または OLE DB インターフェイスを公開する必要があります。 Microsoft が提供、 [ADO.NET データ プロバイダーの一覧](https://msdn.microsoft.com/data/dd363565)ODBC および OLE DB プロバイダーと、SQL Server の製品です。
+ADO.NET で使用できるようにするデータベースの場合、ユーザー設定が必要*ADO.NET データ プロバイダー*またはそれ以外の場合、ODBC または OLE DB インターフェイスを公開する必要があります。 Microsoft が提供、 [ADO.NET データ プロバイダーの一覧](https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview)ODBC および OLE DB プロバイダーと、SQL Server の製品です。
 
 ### <a name="data-modeling"></a>データ モデリング
 
@@ -99,7 +99,7 @@ ADO.NET で使用できるようにするデータベースの場合、ユーザ
 
 ## <a name="native-c"></a>ネイティブ C++
 
-SQL Server に接続する C++ アプリケーションを使用する必要があります、 [Microsoft® ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)ほとんどの場合。 使用する OLE DB では、必要に応じてとのサーバーをリンクしている場合、 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)します。 使用して他のデータベースにアクセスできます[ODBC](https://msdn.microsoft.com/library/ms710252\(v=vs.85\).aspx) OLE DB ドライバーを直接またはします。 ODBC は、現在の標準的なデータベースのインターフェイスが、ほとんどのデータベース システムは、ODBC インターフェイス経由でアクセスできないカスタムの機能を提供します。 OLE DB は、レガシ COM データ アクセス テクノロジが引き続きサポートされますが、新しいアプリケーションをお勧めしません。 詳細については、次を参照してください。 [Visual c でのデータ アクセス](/cpp/data/data-access-in-cpp)します。
+SQL Server に接続する C++ アプリケーションを使用する必要があります、 [Microsoft® ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)ほとんどの場合。 使用する OLE DB では、必要に応じてとのサーバーをリンクしている場合、 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)します。 使用して他のデータベースにアクセスできます[ODBC](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc?view=sql-server-2017) OLE DB ドライバーを直接またはします。 ODBC は、現在の標準的なデータベースのインターフェイスが、ほとんどのデータベース システムは、ODBC インターフェイス経由でアクセスできないカスタムの機能を提供します。 OLE DB は、レガシ COM データ アクセス テクノロジが引き続きサポートされますが、新しいアプリケーションをお勧めしません。 詳細については、次を参照してください。 [Visual c でのデータ アクセス](/cpp/data/data-access-in-cpp)します。
 
 REST サービスを使用する C++ プログラムで使用できる、 [C++ REST SDK](https://github.com/Microsoft/cpprestsdk)します。
 
@@ -133,7 +133,7 @@ C++ アプリからデータベースへの接続に関する詳細について�
 
 [ADO.NET](/dotnet/framework/data/adonet/index)&mdash;ADO.NET のアーキテクチャと、ADO.NET のクラスを使用してアプリケーション データを管理し、データ ソースおよび XML と対話する方法について説明します。
 
-[ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef)&mdash;開発者がリレーショナル データベースに対して直接の代わりに、概念モデルに対してプログラムを許可するデータ アプリケーションを作成する方法について説明します。
+[ADO.NET Entity Framework](https://docs.microsoft.com/ef/ef6/)&mdash;開発者がリレーショナル データベースに対して直接の代わりに、概念モデルに対してプログラムを許可するデータ アプリケーションを作成する方法について説明します。
 
 [WCF Data Services 4.5](/dotnet/framework/data/wcf/index)&mdash;を使用する方法について説明します[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]を実装する web またはイントラネット上のデータ サービスを展開する、 [Open Data Protocol (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)します。
 
