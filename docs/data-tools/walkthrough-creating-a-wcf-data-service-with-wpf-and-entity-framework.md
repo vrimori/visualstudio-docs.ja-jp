@@ -18,12 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d4fa9ea1538d051aebd025c641c0520197f986ef
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: e90e8080f8f5afb7bd670d04e0f004f433420d68
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178388"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281534"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>チュートリアル: WPF と Entity Framework を使用する WCF Data Service の作成
 このチュートリアルは、単純なを作成する方法を示します[!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]でホストされる、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web アプリケーションと Windows フォーム アプリケーションからアクセスします。
@@ -42,7 +42,7 @@ ms.locfileid: "39178388"
 
 -   必要に応じて、アプリケーションにフィルター処理機能を追加します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 このチュートリアルでは、SQL Server Express LocalDB と、Northwind サンプル データベースを使用します。
 
 1.  SQL Server Express LocalDB をお持ちでない場合は、インストールのいずれかから、 [SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)、または、 **Visual Studio インストーラー**します。 **Visual Studio インストーラー**の一部として SQL Server Express LocalDB をインストールすることができます、**データ ストレージと処理**ワークロード、または個々 のコンポーネントとして。
@@ -106,7 +106,7 @@ ms.locfileid: "39178388"
 7.  **バージョンの選択**ページで、選択、 **Entity Framework 5.0**オプション ボタンをクリックして、 **[次へ]** ボタンをクリックします。
 
     > [!NOTE]
-    >  Entity Framework 6 の最新バージョンの WCF サービスを使用するのには、WCF Data Services Entity Framework プロバイダー NuGet パッケージをインストールする必要があります。 参照してください[Services 5.6.0 with Entity Framework 6 + の WCF Data を使用して](http://blogs.msdn.com/b/odatateam/archive/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6.aspx)します。
+    >  Entity Framework 6 の最新バージョンの WCF サービスを使用するのには、WCF Data Services Entity Framework プロバイダー NuGet パッケージをインストールする必要があります。 参照してください[Services 5.6.0 with Entity Framework 6 + の WCF Data を使用して](https://blogs.msdn.microsoft.com/odatateam/2013/10/02/using-wcf-data-services-5-6-0-with-entity-framework-6/)します。
 
 8.  **データベース オブジェクトの選択** ページで、展開、**テーブル**ノードを選択、**顧客**チェック ボックスをオンにして、**完了**ボタンをクリックします。
 

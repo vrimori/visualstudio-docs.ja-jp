@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d46bbe3eb392de21cc1b165819fe469eb4de726d
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: d072dcf839f31df2dba14a3293ed962cd3a68fce
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755886"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281027"
 ---
 # <a name="use-dump-files-with-visual-studio"></a>Visual Studio でダンプ ファイルを使用します。
 ダンプ ファイルの有無にかかわらずヒープダンプ ファイルを作成します。ダンプ ファイルを開くバイナリ、pdb のダンプ ファイルのソース ファイルを検索します。
@@ -55,7 +55,7 @@ ms.locfileid: "36755886"
 
 -   Visual Studio では、ARM デバイスからのネイティブ アプリのダンプ ファイルをデバッグできます。 また、ARM デバイスからのマネージド アプリのダンプ ファイルもデバッグできますが、これはネイティブ デバッガーでのみ可能です。
 
--   デバッグする[カーネル モード](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx)ダンプ ファイルの一部である Windows 用デバッグ ツールをダウンロード、 [Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk)します。
+-   デバッグする[カーネル モード](/windows-hardware/drivers/debugger/kernel-mode-dump-files)ダンプ ファイルの一部である Windows 用デバッグ ツールをダウンロード、 [Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk)します。
 
 -   Visual Studio と呼ばれる以前のダンプ形式で保存されたダンプ ファイルをデバッグできません、[フル ユーザー モード ダンプ](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx)します。 フル ユーザー モード ダンプがヒープ情報ありのダンプとは異なることに注意してください。
 
@@ -114,5 +114,5 @@ ms.locfileid: "36755886"
 ## <a name="see-also"></a>関連項目
 
 - [Just-In-Time デバッグ](../debugger/just-in-time-debugging-in-visual-studio.md)
-- [シンボル (.pdb) を指定し、ソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [シンボルとソース コードの管理](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [IntelliTrace](../debugger/intellitrace.md)

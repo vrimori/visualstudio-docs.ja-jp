@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1ad1edbd9d093fc5f1c7f746b7b5f2a2b9d2bd31
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: 78a7abc8c0d13de7ec3c9c8d196e3b47cf867403
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131883"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279094"
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
 
@@ -44,7 +44,7 @@ Visual Studio 2017 は、2 つの方法でマネージ コードを分析: legac
 
 マネージ コードのコード分析規則にグループ化[ルール セット](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)します。 Microsoft 標準の規則セットのいずれかを使用することもできます[カスタム規則セットを作成](../code-quality/how-to-create-a-custom-rule-set.md)を特定のニーズを満たすためにします。
 
-## <a name="suppress-warnings"></a>[警告の表示なし]
+## <a name="suppress-warnings"></a>警告を表示しない
 
 警告が適用されないことを示すと役に立つことがよくあります。 これによって、開発者や、そのコードを後でレビューする担当者は、その警告が既に調査済みであり、抑制されるのかまたは無視されるのかがわかります。
 
@@ -71,14 +71,14 @@ Public class MyClass
 
 - コード分析は、最新のビルドの一部として実行されます。
 
-これは、チェックイン ポリシーを指定することにより実現できます。 詳細については、次を参照してください。[チーム プロジェクト チェックイン ポリシーによるコード品質の向上](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)します。
+これは、チェックイン ポリシーを指定することにより実現できます。 詳細については、次を参照してください。[プロジェクトでは、チェックイン ポリシーによるコード品質の向上](../code-quality/enhancing-code-quality-with-team-project-check-in-policies.md)します。
 
 ## <a name="team-build-integration"></a>チーム ビルドの統合
 
-ビルド システムの統合機能を使用すると、分析ツールをビルド プロセスの一環として実行できます。 詳細については、次を参照してください。[ビルドとリリース (VSTS)](/vsts/build-release/index)します。
+ビルド システムの統合機能を使用すると、分析ツールをビルド プロセスの一環として実行できます。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [Roslyn アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
 - [規則セットを使用したコード分析規則のグループ化](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
-- [方法: 有効にして、自動コード分析を無効にします。](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [方法: 自動コード分析を有効/無効にする](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

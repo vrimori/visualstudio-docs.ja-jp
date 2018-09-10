@@ -25,12 +25,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 093b7732f78f7257a2e58812ca2697496d65682f
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 97d39a171d812915a1cf3c1c6450c73098067949
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37056483"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284199"
 ---
 # <a name="report-hook-functions"></a>レポート用のフック関数
 レポート用のフック関数の場合を使用してインストール[_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook)、毎回と呼びます[_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw)デバッグ レポートを生成します。 レポート用のフック関数を使用して、特定の割り当て型に関するレポートだけを出力できます。 レポート用のフック関数には、次のようなプロトタイプが必要です。  
@@ -51,4 +51,4 @@ typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);
   
 ## <a name="see-also"></a>関連項目  
  [デバッグ用フック関数の作成](../debugger/debug-hook-function-writing.md)   
- [crt_dbg2 サンプル](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)
+ [crt_dbg2 サンプル](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)

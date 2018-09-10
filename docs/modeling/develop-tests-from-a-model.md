@@ -11,20 +11,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5e0ddb21e12af4c6e35274dd9a5fd572654e6119
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3cdffcb5d71d5caac11cbbb0882b79526862bffa
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31953496"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279857"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。
 
- これらの機能をサポートする Visual Studio のバージョンを参照してください[アーキテクチャおよびモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)です。
+ これらの機能をサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
 ## <a name="system-and-subsystem-testing"></a>システムとサブシステムのテスト
- *システム テスト、* とも呼ばれる*受け入れテスト*ユーザーのニーズが満たされているかどうかをテストすることを意味します。 このようなテストでは内部の設計ではなく、外部から確認できるシステムの動作に焦点が当てられます。
+ *システム テスト、* とも呼ばれます*受け入れテスト*ユーザーのニーズが満たされているかどうかをテストします。 このようなテストでは内部の設計ではなく、外部から確認できるシステムの動作に焦点が当てられます。
 
  システムの拡張またはシステムの再設計を行う場合、システム テストは非常に価値があります。 これらのテストにより、コードの変更時にバグの発生を回避することができます。
 
@@ -35,7 +35,7 @@ ms.locfileid: "31953496"
  サブシステムのテストでは、システムの主要コンポーネントに同じ原則が適用されます。 各コンポーネントは、他のコンポーネントとは別個にテストされます。 サブシステムのテストでは、コンポーネントのユーザー インターフェイスまたは API で確認できる動作を集中的にテストします。
 
 ## <a name="deriving-system-tests-from-a-requirements-model"></a>要求モデルからシステム テストを派生させる
- システム テストと要求モデル間の関係を作成して、それを維持することができます。 この関係を確立するには、要求モデルの主要な要素に対応するテストを作成します。 Visual Studio を使用すると、テストとモデルの部分間のリンクを作成することで、その関係を維持できます。 要求モデルの詳細については、次を参照してください。[ユーザー要件をモデリング](../modeling/model-user-requirements.md)です。
+ システム テストと要求モデル間の関係を作成して、それを維持することができます。 この関係を確立するには、要求モデルの主要な要素に対応するテストを作成します。 Visual Studio を使用すると、テストとモデルの部分間のリンクを作成することで、その関係を維持できます。 要件モデルの詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。
 
 ### <a name="write-tests-for-each-use-case"></a>各ユース ケースのテストの作成
  [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用している場合、要求モデル内で定義した各ユース ケースに対して、一連のテストを作成することができます。 たとえば、Create Order および Add Item to Order を含んでいる Order a Meal というユース ケースがある場合、全体に対するテストと、これらのユース ケースの細部に対する両方のテストを作成できます。
@@ -55,17 +55,17 @@ ms.locfileid: "31953496"
 -   テストを設計するときに、事後条件が満たされたかどうかを判断するコードやスクリプトから、選択したテスト データを切り離してください。 たとえばシンプルな算術関数のテストの場合、Input 4; verify that the output is 2 などになります。 代わりに、Choose an input; multiply the output by itself, verify that the result is the original input などのスクリプトを設計します。 このスタイルを使うと、テストの本体を変更することなく、テストの入力を変更できます。
 
 #### <a name="linking-tests-to-use-cases"></a>ユース ケースへのテストのリンク
- 使用している場合[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]を設計およびテストの実行、要件、ユース ケース、またはユーザー ストーリーの作業項目の下でテストを整理することができます。 モデル内のユース ケースを、このような作業項目にリンクできます。 これにより、要求の変更を迅速に追跡してテストすることができます。また、各ユース ケースの進捗も追跡しやすくなります。
+ 使用する場合[!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]を設計およびテストを実行するには、要件、ユース ケース、またはユーザー ストーリーの作業項目の下でテストを整理することができます。 モデル内のユース ケースを、このような作業項目にリンクできます。 これにより、要求の変更を迅速に追跡してテストすることができます。また、各ユース ケースの進捗も追跡しやすくなります。
 
 ###### <a name="to-link-tests-to-a-use-case"></a>テストをユース ケースにリンクするには
 
 1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
 
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業を追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)です。
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
 
 2.  モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。
 
-     ユース ケース図のユース ケースを右クリックし、をクリックして**作業項目へリンク**です。
+     ユース ケース図でユース ケースを右クリックし、順にクリックします**作業項目へリンク**します。
 
 3.  テスト スイートに追加して、ユース ケースを確認するケースをテストします。
 
@@ -112,7 +112,7 @@ Assert (countAfter == countBefore = 1);
 ## <a name="deriving-subsystem-tests-from-models"></a>モデルからサブシステム テストを派生させる
  大規模システムのハイレベル設計では、コンポーネントまたはサブシステムを特定できます。 これらは、個別に設計可能なパーツ、別のコンピューターに配置できるパーツ、さまざまな方法で再結合できる再利用可能モジュールなどを表しています。
 
- システム全体に対して使用した原則と同じ原則が、各主要コンポーネントに対しても適用できます。 大規模なプロジェクトでは、各コンポーネントは、独自の要求モデルを持つことができます。 小さいプロジェクトでは、アーキテクチャ モデルやハイレベル設計を作成して、主要コンポーネントとその相互作用を表わすことができます。 詳細については、次を参照してください。[アプリのアーキテクチャをモデル](../modeling/model-your-app-s-architecture.md)です。
+ システム全体に対して使用した原則と同じ原則が、各主要コンポーネントに対しても適用できます。 大規模なプロジェクトでは、各コンポーネントは、独自の要求モデルを持つことができます。 小さいプロジェクトでは、アーキテクチャ モデルやハイレベル設計を作成して、主要コンポーネントとその相互作用を表わすことができます。 詳細については、次を参照してください。 [、アプリケーションのアーキテクチャをモデル化](../modeling/model-your-app-s-architecture.md)します。
 
  いずれの場合でも、要求モデルとシステム テスト間と同じ方法で、モデル要素とサブシステム テスト間の関係を確立することができます。
 
@@ -130,7 +130,7 @@ Assert (countAfter == countBefore = 1);
 
  テストの観点から見た場合、要求モデルは簡略化されたテストと見なすことができます。 そのため、プロジェクト中は常に、テストとモデル間の関係を維持することが重要です。
 
-##  <a name="Attaching"></a> モデル要素へのテスト_ケースをアタッチします。
+##  <a name="Attaching"></a> モデル要素にテスト_ケースのアタッチ
  プロジェクトで [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] を使用している場合、テストをモデル内の要素にリンクすることができます。 これにより、要求内の変更によって影響を受けるテストを迅速に見つけることができ、要求が実現される範囲を追跡しやすくなります。
 
  すべての種類の要素に、テストをリンクできます。 次にいくつかの例を示します。
@@ -149,11 +149,11 @@ Assert (countAfter == countBefore = 1);
 
 1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
 
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。 [Visual Studio Team Services または Team Foundation Server を使用して作業を追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)です。
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
 
 2.  モデル内の 1 つまたは複数の要素に対して、要求の作業項目をリンクします。
 
-     モデリング図では、要素、コメントまたはリレーションシップを右クリックし、をクリックして**作業項目へリンク**です。
+     モデリング図では、要素、コメント、またはリレーションシップを右クリックし、**作業項目へリンク**します。
 
 3.  テスト スイーツに追加し、モデル要素内で表された要求を検証するケースをテストします。
 

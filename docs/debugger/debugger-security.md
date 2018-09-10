@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 640c127d9e82a78f629365141c5948d21eafcf3c
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 4d7cc0e24255da8c9fdb8ab3e4e49f030d758d11
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175996"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279571"
 ---
 # <a name="debugger-security"></a>デバッガーのセキュリティ
 別プロセスでデバッグする機能によって、リモート環境からのデバッグをはじめとした、さまざまな操作を行うことができます。 ただし、デバッガーに悪意があると、デバッグ対象のコンピューターに広範囲の損害を与える可能性があります。  
@@ -59,7 +59,7 @@ ms.locfileid: "39175996"
  詳細については、次を参照してください。[リモート デバッグ](../debugger/remote-debugging.md)します。  
   
 ### <a name="web-services-debugging-security"></a>Web サービスをデバッグするときのセキュリティ  
- ローカルでデバッグする方が安全ですが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が Web サーバーにインストールされていない可能性があるため、ローカル デバッグを実行できない場合があります。 通常、Web サービスのデバッグは、開発時を除いてリモートで行われます。そのため、Web サービスのデバッグにも、リモート デバッグのセキュリティに関する推奨事項が適用されます。 次に、その他の推奨される手順を示します。 詳細については、「 [Debugging XML Web Services](http://msdn.microsoft.com/en-us/c900b137-9fbd-4f59-91b5-9c2c6ce06f00)」を参照してください。  
+ ローカルでデバッグする方が安全ですが、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] が Web サーバーにインストールされていない可能性があるため、ローカル デバッグを実行できない場合があります。 通常、Web サービスのデバッグは、開発時を除いてリモートで行われます。そのため、Web サービスのデバッグにも、リモート デバッグのセキュリティに関する推奨事項が適用されます。 次に、その他の推奨される手順を示します。 詳細については、次を参照してください。 [XML Web サービスのデバッグ](https://msdn.microsoft.com/library/c900b137-9fbd-4f59-91b5-9c2c6ce06f00)します。  
   
 -   セキュリティに問題のある Web サーバーではデバッグを有効にしないでください。  
   

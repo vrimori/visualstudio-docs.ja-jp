@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b564c208892ac169fd88b13101945bbf7223d20
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 9d5b5eeefe2bbed542ef18689fd7e16073174bd3
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152016"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284108"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio でスナップショットのデバッグのトラブルシューティングと既知の問題
 
@@ -42,7 +42,7 @@ ms.locfileid: "39152016"
 
 - をクリックして、**シンボルの設定を変更しています.** このページにリンクします。 **デバッグ > シンボル**の設定は、シンボルのキャッシュ ディレクトリを追加します。 スナップショットのデバッグ シンボルのパスが設定された後に再起動します。
 
-   記号、またはプロジェクトで使用できる .pdb ファイルは、App Service のデプロイと一致する必要があります。 ほとんどの配置 (Visual Studio、VSTS または Kudu を使用した CI/CD の配置など) に沿って、シンボル ファイルを App Service に発行します。 シンボルのキャッシュ ディレクトリを設定すると、Visual Studio を使用して、これらのシンボルが有効になります。
+   記号、またはプロジェクトで使用できる .pdb ファイルは、App Service のデプロイと一致する必要があります。 ほとんどの配置 (Visual Studio]、[Azure パイプラインまたは Kudu を使用した CI/CD の配置など) に沿って、シンボル ファイルを App Service に発行します。 シンボルのキャッシュ ディレクトリを設定すると、Visual Studio を使用して、これらのシンボルが有効になります。
 
    ![シンボルの設定](../debugger/media/snapshot-troubleshooting-symbol-settings.png "シンボルの設定")
 

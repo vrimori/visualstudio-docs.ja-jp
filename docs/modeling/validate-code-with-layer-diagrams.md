@@ -21,12 +21,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 85c7aad0ef5f9374c722a58ec35c001695e55013
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 018b6a2f26f9b83b50498c6a0ec1e560fea94267
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567195"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280689"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係図を使用したコードの検証
 
@@ -218,7 +218,7 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 
  検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] の詳細については、以下のトピックを参照してください。
 
--   [ビルドとリリース](/vsts/build-release/index)
+-   [Azure のパイプライン](/azure/devops/pipelines/index)
 
 -   [既定のテンプレートを使用して、自分のビルド プロセス](http://msdn.microsoft.com/Library/43930b12-c21b-4599-a980-2995e3d16e31)
 

@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27a4204394003f0b4ea6baf7691c9591d3a5b613
-ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
+ms.openlocfilehash: cb3eda4cc3e8615312353cae064e9179514820c4
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42623659"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280225"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -83,10 +83,10 @@ Team Foundation Server の詳細については、次のトピックを参照し
 
 ||**ユーザー要求のモデリング**|**ビジネス プロセスのモデリング**|**システムのアーキテクチャと設計**|**コードの視覚化と精査**|**検証**|
 |------|------------------------------------|-----------------------------------|--------------------------------------|------------------------------------------|----------------------|
-|ドメイン固有言語 (DSL) 図|[はい]|[はい]|[はい]|||
-|依存関係図、レイヤー検証|||[はい]|[はい]|[はい]|
-|コード マップ|||[はい]|[はい]|[はい]|
-|クラス デザイナー (コード ベース)||||[はい]||
+|ドメイン固有言語 (DSL) 図|はい|[はい]|はい|||
+|依存関係図、レイヤー検証|||はい|[はい]|はい|
+|コード マップ|||はい|[はい]|はい|
+|クラス デザイナー (コード ベース)||||はい||
 
 依存関係図を描画するには、既存のソリューションまたは新しいリソースの一部としてモデリング プロジェクトを作成する必要があります。 これらの図はモデリング プロジェクト内に生成する必要があります。
 依存関係図の項目が、モデリング プロジェクト内にあるが、一般的なモデルでは保存されません。 コードから作成されたコード マップおよび .NET クラス図は、モデリング プロジェクトに含まれません。
@@ -216,9 +216,9 @@ Dinner Now と Lucerne は、作業の進行に伴って、タスクに費やさ
 
 参照トピック
 
-- [Visual Studio Team Services または Team Foundation Server を使用した作業の追跡](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)
+- [アジャイル ツール、アジャイル プロジェクト管理について](/azure/devops/boards/backlogs/overview?view=vsts)
 
-- [グラフとダッシュ ボードにウィジェット (VSTS)](/vsts/report/dashboards/overview?view=vsts)
+- [グラフとダッシュ ボードにウィジェット (Azure DevOps サービス)](/azure/devops/report/dashboards/overview?view=vsts)
 
 - [Project を使用したバックログとタスクの作成](http://msdn.microsoft.com/Library/be5cef4f-755f-4ffe-8dd7-876d1e02c330)
 
@@ -238,13 +238,13 @@ Dinner Now には数多くの自動テストがあり、そのほとんどを引
 
 参照トピック
 
-- [アプリケーションのテスト](/vsts/test/overview?view=vsts)
+- [アプリケーションのテスト](/azure/devops/test/overview?view=vsts)
 
 - [開発時のシステムの検証](../modeling/validate-your-system-during-development.md)
 
 - [バージョン管理の使用](http://go.microsoft.com/fwlink/?LinkID=525605)
 
-- [ビルドとリリース](/vsts/build-release/index)
+- [Azure のパイプライン](/azure/devops/pipelines/index)
 
 ## <a name="update-the-system-using-visualization-and-modeling"></a>システムを使用して視覚化およびモデリングを更新します。
 

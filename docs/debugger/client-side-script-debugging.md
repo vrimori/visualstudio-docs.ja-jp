@@ -1,5 +1,5 @@
 ---
-title: クライアント側スクリプトのデバッグ |Microsoft ドキュメント
+title: クライアント側スクリプトのデバッグ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -18,18 +18,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f31897cc4fb48fd7c814d4d25cb41ce0cb7e57da
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: aa5a21a60ab95b6dbc9aeb27a0c7d6e27ab32773
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464811"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283120"
 ---
 # <a name="client-side-script-debugging"></a>クライアント側スクリプトのデバッグ
 Visual Studio デバッガーには、ASP.NET ページ内のクライアント側スクリプトのエラーを検出および修正するための包括的なデバッグ環境が用意されています。  
   
 ## <a name="opening-script-documents"></a>スクリプト ドキュメントを開く  
-内のサーバー側およびクライアント側スクリプト ドキュメントの一覧を表示することができます、**ソリューション エクスプ ローラー**を表示します。 **ソリューション エクスプローラー**で、任意のスクリプト ドキュメントを開くことができます。 詳細については、「 [How to: View Script Documents](../debugger/how-to-view-script-documents.md)」を参照してください。  
+サーバー側およびクライアント側スクリプト ドキュメントの一覧を表示することができます、**ソリューション エクスプ ローラー**を表示します。 **ソリューション エクスプローラー**で、任意のスクリプト ドキュメントを開くことができます。 詳細については、「 [How to: View Script Documents](../debugger/how-to-view-script-documents.md)」を参照してください。  
   
 ## <a name="breakpoint-mapping"></a>ブレークポイントのマップ  
  Visual Studio では、サーバー側コードを直接デバッグすることはできませんが、サーバー側ファイルにブレークポイントを設定できます。 Visual Studio では、設定されたブレークポイントがクライアント側ファイルの対応する場所に自動的にマップされ、マップされたブレークポイントがクライアント側コードに作成されます。  
@@ -59,11 +59,11 @@ Visual Studio デバッガーには、ASP.NET ページ内のクライアント�
 ## <a name="debugging-ajax-script-applications"></a>AJAX スクリプト アプリケーションのデバッグ  
  AJAX 対応の Web アプリケーションではスクリプト コードを頻繁に使用するため、デバッグは困難になる可能性があります。 AJAX をデバッグする手法の詳細については、次を参照してください。  
   
- [Debugging and Tracing Ajax Applications Overview](http://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)で、任意のスクリプト ドキュメントを開くことができます。  
+ [デバッグと Tracing Ajax Applications Overview](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)します。  
   
 ## <a name="see-also"></a>関連項目  
- [ASP.NET アプリケーションおよび AJAX アプリケーションのデバッグ](../debugger/debugging-aspnet-and-ajax-applications.md)   
+ [ASP.NET および AJAX アプリケーションのデバッグ](../debugger/debugging-aspnet-and-ajax-applications.md)   
  [スクリプトのデバッグに関する制限事項](../debugger/limitations-on-script-debugging.md)   
- [変数ウィンドウ](../debugger/debugger-windows.md)   
+ [変数 Windows](../debugger/debugger-windows.md)   
  [イミディエイト ウィンドウ](../ide/reference/immediate-window.md)   
- [デバッグとトレースの Ajax アプリケーションの概要](http://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)
+ [デバッグと Tracing Ajax Applications Overview](https://msdn.microsoft.com/Library/92684ea0-7bb4-4a34-9203-3aa6394ce375)

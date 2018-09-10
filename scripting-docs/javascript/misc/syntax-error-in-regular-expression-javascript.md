@@ -1,5 +1,5 @@
 ---
-title: 正規表現 (JavaScript) に構文エラー |Microsoft ドキュメント
+title: 正規表現 (JavaScript) に構文エラーが |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,21 +20,21 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 23492c5a5066bf3430430b544b97ee765d26512b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b5f256639fbef222042ca3137eb9d19c2a97d702
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632922"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280378"
 ---
 # <a name="syntax-error-in-regular-expression-javascript"></a>正規表現で構文エラーが発生しました。(JavaScript)
-検索文字列の構造の文法の 1 つ以上の違反、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]正規表現。  
+検索文字列の構造体には、1 つまたは複数の文法規則に違反している、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]正規表現。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   検索文字列を正規表現の構造に準拠する、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]正規表現の構文。  
+-   正規表現検索文字列の構造に準拠することを確認、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]正規表現の構文。  
   
 ## <a name="see-also"></a>関連項目  
  [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)   
- [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)   
+ [正規表現構文 (JavaScript)](https://msdn.microsoft.com/library/1400241x)   
  [compile メソッド (Regular Expression)](../../javascript/reference/compile-method-regular-expression-javascript.md)
