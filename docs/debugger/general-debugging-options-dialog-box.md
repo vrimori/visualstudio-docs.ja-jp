@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 071f6782350a3786b1a3b61b1ef3292d76867531
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e46301c84b1a9b27eed8cb6667b312ff73af2960
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626115"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280638"
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 **ツール > オプション > デバッグ > 全般**ページのこの記事で説明するオプションを設定することができます。
@@ -72,7 +72,7 @@ ms.locfileid: "42626115"
   
 - **変数ウィンドウ (c# および JavaScript のみ) 内のオブジェクトに対して文字列変換関数を呼び出す**変数ウィンドウ内のオブジェクトを評価するときに、文字列の暗黙的な変換の呼び出しを実行します。 結果は、型名の代わりに、文字列として表示されます。 C# コードのデバッグ時にのみ適用されます。 この設定は、DebuggerDisplay 属性によってオーバーライドできます (を参照してください[DebuggerDisplay 属性を使用して](../debugger/using-the-debuggerdisplay-attribute.md))。  
   
-**ソース サーバー サポートを有効にする**SrcSrv を実装するソース サーバーからソース ファイルを取得する Visual Studio デバッガーに指示 (`srcsrv.dll`) プロトコル。 このプロトコルを実装する 2 つのソース サーバーは Team Foundation Server と Debugging Tools for Windows です。 SrcSrv のセットアップの詳細については、次を参照してください。、 [SrcSrv](https://msdn.microsoft.com/library/windows/hardware/ff558791(v=vs.85).aspx)ドキュメント。 さらを参照してください[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)します。  
+**ソース サーバー サポートを有効にする**SrcSrv を実装するソース サーバーからソース ファイルを取得する Visual Studio デバッガーに指示 (`srcsrv.dll`) プロトコル。 このプロトコルを実装する 2 つのソース サーバーは Team Foundation Server と Debugging Tools for Windows です。 SrcSrv のセットアップの詳細については、次を参照してください。、 [SrcSrv](/windows-hardware/drivers/debugger/srcsrv)ドキュメント。 さらを参照してください[指定シンボル (.pdb) とソース ファイル](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)します。  
   
 > [!IMPORTANT]
 > 読み取るため *.pdb*ファイルがファイル内の任意のコードの実行、サーバーを信頼するかどうかを確認します。  
