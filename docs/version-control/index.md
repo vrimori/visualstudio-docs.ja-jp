@@ -12,16 +12,16 @@ ms.prod: .net-core
 ms.assetid: 2c119a5f-0272-48c0-8d6c-806196944aea
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af331926cdcf1532f0672539b08426b433052bf
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: e37645f8960aae54907dffeb0bcb88848d9cd63f
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510823"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320580"
 ---
 # <a name="version-control-in-visual-studio"></a>Visual Studio でのバージョン コントロール
 
-バージョン コントロール システムは、コードに徐々に加えた変更を追跡するのに役立ちます。 ユーザーが変更を行うと、バージョン コントロール システムによってファイルのスナップショットが取得されます。 バージョン コントロール システムはスナップショットを永続的に保存するので、後で必要なときに呼び戻すことができます。 Visual Studio では、[Git](/vsts/git/index) と [Team Foundation バージョン管理 (TFVC)](/vsts/tfvc/index) を利用できます。 この 2 つのシステムのどちらかに決めるには、「[Choosing the right version control for your project (プロジェクトに適切なバージョン コントロールの選択)](/vsts/tfvc/comparison-git-tfvc?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json)」をご覧ください。
+バージョン コントロール システムは、コードに徐々に加えた変更を追跡するのに役立ちます。 ユーザーが変更を行うと、バージョン コントロール システムによってファイルのスナップショットが取得されます。 バージョン コントロール システムはスナップショットを永続的に保存するので、後で必要なときに呼び戻すことができます。 Visual Studio では、[Git](/azure/devops/repos/git/index?view=vsts) と [Team Foundation バージョン管理 (TFVC)](/azure/devops/repos/tfvc/index?view=vsts) を利用できます。 この 2 つのシステムのどちらかに決めるには、「[Choosing the right version control for your project (プロジェクトに適切なバージョン コントロールの選択)](/azure/devops/repos/tfvc/comparison-git-tfvc?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json)」をご覧ください。
 
 ## <a name="git"></a>Git
 Git は現在、最も使用されているバージョン コントロール システムであり、バージョン コントロールの標準になりました。 Git は分散型バージョン コントロール システムであり、コードのローカル コピーが完全なバージョン コントロール リポジトリになります。 このように完全な機能を備えたローカル リポジトリによって、オフラインまたはリモートでの作業が容易になりました。 作業をローカルでコミットし、次にリポジトリのコピーをサーバー上のコピーに同期させます。 このパラダイムは、コードの新しいバージョンを作成する前にクライアントがコードをサーバーと同期する必要のある集中型バージョン コントロールとは異なります。
@@ -46,7 +46,7 @@ Git は現在、最も使用されているバージョン コントロール �
         </a>
     </li>
     <li>
-        <a href="/vsts/git/share-your-code-in-git-vs-2017?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/git/share-your-code-in-git-vs-2017?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -64,7 +64,7 @@ Git は現在、最も使用されているバージョン コントロール �
         </a>
     </li>
     <li>
-        <a href="/vsts/git/tutorial/clone?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/git/clone?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -89,7 +89,7 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/vsts/tfvc/overview">
+        <a href="/azure/devops/repos/tfvc/overview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -107,7 +107,7 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
         </a>
     </li>
     <li>
-        <a href="/vsts/tfvc/share-your-code-in-tfvc-vs?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -125,7 +125,7 @@ Team Foundation バージョン管理 (TFVC) は、一元化されたバージ�
         </a>
     </li>
    <li>
-        <a href="/vsts/tfvc/get-code-reviewed-vs?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json">
+        <a href="/azure/devops/repos/tfvc/get-code-reviewed-vs?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

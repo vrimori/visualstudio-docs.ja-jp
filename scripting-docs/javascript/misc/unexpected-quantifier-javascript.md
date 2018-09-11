@@ -1,5 +1,5 @@
 ---
-title: 予期しない量指定子 (JavaScript) |Microsoft ドキュメント
+title: 予期しない量指定子 (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,26 +20,26 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb6d6d3129057c399dd7369c6f69eb7396f07ab4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ef0955bac35009d9b6c82f1856bb9005a08043ad
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633252"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282268"
 ---
 # <a name="unexpected-quantifier-javascript"></a>予期しない量指定子です (JavaScript)
-正規表現検索パターンを作成するときに、無効な繰り返し係数を持つパターン要素を作成しました。 たとえば、パターン  
+検索、正規表現パターンを作成すると、無効な繰り返しのパターン要素が作成されます。 たとえば、パターン  
   
 ```  
 /^+/  
 ```  
   
- 無効ため要素 ^ (入力の先頭) が繰り返し係数を持つことはできません。 次の表には、繰り返し要素を持つことができない要素が一覧表示します。  
+ できませんので、要素 ^ (入力の先頭) は、繰り返し要素を含めることはできません。 次の表では、繰り返しの要因を持つことができない要素を示します。  
   
 |要素|説明|  
 |-------------|-----------------|  
 |^|入力の先頭|  
-|$|入力の終わり|  
+|$|入力の終了|  
 |\b|ワード境界|  
 |\B|ワード境界以外|  
 |*|0 個以上の繰り返し|  
@@ -51,8 +51,8 @@ ms.locfileid: "24633252"
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   検索パターンの要素には、法的な繰り返し要素のみが含まれています。 を確認します。  
+-   検索パターンに要素には、法的な繰り返し要素のみが含まれています。 確認してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)   
- [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [正規表現構文 (JavaScript)](https://msdn.microsoft.com/library/1400241x)

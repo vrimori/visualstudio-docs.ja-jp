@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65929ec5b58e0629b3f52e31299f670543b3cd08
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 56b9e68767d4191aab016e3c0d976efb808aff01
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154386"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282613"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でサーバーとクライアントの構成に関する問題
 Windows Server で、インターネット インフォメーション サービス (IIS) を使用する、展開には、Windows で認識されない種類のファイルが含まれている場合は、Microsoft Word ファイルなど、そのファイルを送信する IIS は拒否し、配置は失敗します。  
@@ -41,7 +41,7 @@ Windows Server で、インターネット インフォメーション サービ
   
 -   *.deploy* 
   
- オフにすると、このオプションを無効にするただし、 **".deploy"ファイル拡張子を使用して、** オプションを[Publish Options Dialog Box](http://msdn.microsoft.com/en-us/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)、その場合、すべてのファイル拡張子のブロックを解除する Web サーバーを構成する必要がありますアプリケーションで使用されます。  
+ オフにすると、このオプションを無効にするただし、 **".deploy"ファイル拡張子を使用して、** オプションを[Publish Options Dialog Box](/previous-versions/visualstudio/visual-studio-2010/7z83t16a(v=vs.100))、その場合、すべてのファイル拡張子のブロックを解除する Web サーバーを構成する必要がありますアプリケーションで使用されます。  
   
  構成する必要があります *.manifest*、 *.application*、および *.deploy*、たとえば、IIS をインストールしていないを使用しているかどうか、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、または場合別の Web サーバー (Apache など) を使用します。  
   
@@ -51,7 +51,7 @@ Windows Server で、インターネット インフォメーション サービ
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce とプロキシの認証  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 3.5 以降で Windows 統合のプロキシ認証のサポートを提供します。 特定の machine.config ディレクティブは必要ありません。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 基本認証またはダイジェストなどの他の認証プロトコルのサポートを行いません。  
   
- この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「http://go.microsoft.com/fwlink/?LinkId=158730」を参照してください。  
+ この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「 http://go.microsoft.com/fwlink/?LinkId=158730」を参照してください。  
   
  詳細については、次を参照してください。 [ \<defaultProxy > 要素 (ネットワーク設定)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)します。  
   

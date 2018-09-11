@@ -1,5 +1,5 @@
 ---
-title: 予想 &#39;-&#39; |Microsoft ドキュメント
+title: 予想&#39;-&#39; |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -20,20 +20,20 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b6d1dbf8364ce34af090bfe35cfad965f610ea1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 141d7239ebbd32ceff9be45a8b4be97afd8887b0
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24633432"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283276"
 ---
-# <a name="expected-39-39"></a>予想 &#39;-&#39;
-正規表現をリテラルを作成しようとしていますが、スラッシュ (/) の 1 つ含まれていません。 文字列リテラルは、引用符のペア内の文字として書き込まれますが、同様の正規表現リテラルはスラッシュ (/) 文字のペア内の文字として表現されます。  
+# <a name="expected-39-39"></a>予想&#39;-&#39;
+正規表現をリテラルには、作成しようとしましたが、スラッシュ (/) の 1 つ含まれていません。 文字列リテラルが二重引用符内の文字として書き込まれると同様、正規表現リテラルは、スラッシュ (/) 文字のペア内の文字として表現されます。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   正規表現の末尾を示すための終端のスラッシュを挿入します。  
+-   正規表現の終わりをマークする終了スラッシュを挿入します。  
   
 ## <a name="see-also"></a>関連項目  
  [Regular Expression オブジェクト](../../javascript/reference/regular-expression-object-javascript.md)   
- [正規表現の構文 (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [正規表現構文 (JavaScript)](https://msdn.microsoft.com/library/1400241x)

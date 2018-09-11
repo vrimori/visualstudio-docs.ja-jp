@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a3c61fc3e2b36dfc28ee7f1a56ace7035360064
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 37ff64b5c1b5cec9a4b05f293bfc8c43ac7e1bb7
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077566"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282275"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce 配置のサンプルとチュートリアル
 このセクションには、Windows フォーム、WPF、コンソール アプリケーションの配置に使用されるサンプル アプリケーション、コード例、そして、構文、構造、および技法について説明した、詳細なチュートリアルが含まれています。  
@@ -40,5 +40,5 @@ ms.locfileid: "39077566"
 |[ClickOnce 配置デザイナーを使用して API で必要に応じてアセンブリをダウンロードします。](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|アプリケーションで初めて使用するときにのみアプリケーション アセンブリをダウンロードする方法を説明します。|  
   
 ## <a name="see-also"></a>関連項目  
- [Visual Studio のチュートリアル](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)   
+ [Visual Studio のチュートリアル](https://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)   
  [Visual Studio のサンプル](../ide/visual-studio-samples.md)
