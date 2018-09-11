@@ -27,12 +27,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ccaafc15d2aff7e9ecfd32dbdb225d450198780c
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: d22c040857db1b10d084bfdba2e4387071a8ebc1
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37059319"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283004"
 ---
 # <a name="mfc-debugging-techniques"></a>MFC のデバッグ技術
 MFC プログラムをデバッグする場合は、次のデバッグ技術が役立ちます。  
@@ -83,7 +83,7 @@ _asm int 3
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_The_TRACE_macro"></a> TRACE マクロ  
- プログラムからのメッセージをデバッガーの [[出力] ウィンドウ](../ide/reference/output-window.md)に表示するには、 [ATLTRACE](http://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e) マクロ、または MFC の [TRACE](http://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f) マクロを使用します。 [アサーション](../debugger/c-cpp-assertions.md)と同様に、トレース マクロはプログラムのデバッグ バージョンでだけ有効です。リリース バージョンでコンパイルされた場合は無効になります。  
+ デバッガーでプログラムからのメッセージを表示する[出力ウィンドウ](../ide/reference/output-window.md)、使用することができます、 [ATLTRACE](https://msdn.microsoft.com/Library/c796baa5-e2b9-4814-a27d-d800590b102e)マクロ、または MFC[トレース](https://msdn.microsoft.com/Library/7b6f42d8-b55a-4bba-ab04-c46251778e6f)マクロ。 [アサーション](../debugger/c-cpp-assertions.md)と同様に、トレース マクロはプログラムのデバッグ バージョンでだけ有効です。リリース バージョンでコンパイルされた場合は無効になります。  
   
  **TRACE** マクロの使用例を次に示します。 `printf`と同様に、 **TRACE** マクロは多数の引数を処理できます。  
   
@@ -119,7 +119,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
  MFC には、割り当てられた後、解放されていないメモリを検出するためのクラスと関数が用意されています。  
   
 ###  <a name="BKMK_Tracking_memory_allocations"></a> メモリ割り当ての追跡  
- MFC では、通常 [new](http://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d) 演算子が使用される場所で **DEBUG_NEW** マクロを使用して、メモリ リークの位置を特定できます。 プログラムのデバッグ バージョンでは、 `DEBUG_NEW` はメモリを割り当てた各オブジェクトのファイル名と行番号を記録します。 プログラムのリリース バージョンをコンパイルするときは、 `DEBUG_NEW` は単に **new** 演算として機能し、ファイル名や行番号の情報を記録しません。 したがって、プログラムのリリース バージョンの実行速度が低下することはありません。  
+ Mfc では、マクロを使用することができます[DEBUG_NEW](https://msdn.microsoft.com/Library/9b379344-4093-4bec-a3eb-e0d8a63ada9d)の代わりに、**新しい**メモリを見つけやすいように演算子リークが発生します。 プログラムのデバッグ バージョンでは、 `DEBUG_NEW` はメモリを割り当てた各オブジェクトのファイル名と行番号を記録します。 プログラムのリリース バージョンをコンパイルするときは、 `DEBUG_NEW` は単に **new** 演算として機能し、ファイル名や行番号の情報を記録しません。 したがって、プログラムのリリース バージョンの実行速度が低下することはありません。  
   
  ソース ファイルで次のように `DEBUG_NEW` マクロを定義すると、プログラム全体を書き直さなくても、 **new**の代わりにこのマクロを使用できます。  
   
@@ -138,11 +138,11 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
  **メモリ診断を有効または無効にするには**  
   
--   グローバル関数 [AfxEnableMemoryTracking](http://msdn.microsoft.com/Library/0a40e0c4-855d-46e2-9577-a8f2346f47db) を呼び出して、診断メモリ アロケーターを有効または無効にします。 デバッグ ライブラリでは既定でメモリの診断が行われるため、通常はメモリの診断を一時的にオフにするためにこの関数を使用します。診断をオフにすると、プログラムの実行速度が上がり、診断出力の量が少なくなります。  
+-   グローバル関数を呼び出す[AfxEnableMemoryTracking](https://msdn.microsoft.com/Library/0a40e0c4-855d-46e2-9577-a8f2346f47db)有効または、診断メモリ アロケーターを無効にします。 デバッグ ライブラリでは既定でメモリの診断が行われるため、通常はメモリの診断を一時的にオフにするためにこの関数を使用します。診断をオフにすると、プログラムの実行速度が上がり、診断出力の量が少なくなります。  
   
  **afxMemDF を使用して特定のメモリ診断機能を選択するには**  
   
--   メモリ診断機能をより細かく制御するには、MFC のグローバル変数 [afxMemDF](http://msdn.microsoft.com/Library/cf117501-5446-4fce-81b3-f7194bc95086)に値を設定することにより、個々のメモリ診断機能を個別にオン、オフします。 この変数には、 **afxMemDF**列挙型で指定される次の値を設定できます。  
+-   メモリ診断機能をより細かく制御する場合は、することができます個々 のメモリ診断機能を個別にオンとオフを MFC のグローバル変数の値を設定して[afxMemDF](https://msdn.microsoft.com/Library/cf117501-5446-4fce-81b3-f7194bc95086)します。 この変数には、 **afxMemDF**列挙型で指定される次の値を設定できます。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -160,7 +160,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 ###  <a name="BKMK_Taking_memory_snapshots"></a> メモリのスナップショットの取得  
   
-1.  作成、 [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2)オブジェクトと呼び出し、 [cmemorystate::checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)メンバー関数。 これにより、メモリの最初のスナップショットが作成されます。  
+1.  作成、 [CMemoryState](/previous-versions/visualstudio/visual-studio-2010/2ads32e2(v=vs.100))オブジェクトと呼び出し、 [cmemorystate::checkpoint](/cpp/mfc/reference/cmemorystate-structure#checkpoint)メンバー関数。 これにより、メモリの最初のスナップショットが作成されます。  
   
 2.  プログラムでメモリの割り当てと解放が行われた後、別の `CMemoryState` オブジェクトを作成し、このオブジェクトの `Checkpoint` を呼び出します。 これにより、メモリ状態の 2 番目のスナップショットが取得されます。  
   
@@ -436,9 +436,9 @@ pMyPerson->Dump( afxDump );
   
     1.  **\<プロジェクト > プロパティ ページ**ダイアログ ボックスで、をクリックして、 **Configuration Manager**ボタンをクリックします。  
   
-    2.  [[構成マネージャー] ダイアログ ボックス](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)のグリッド内でプロジェクトを見つけます。 **構成**列で、 **\<新規作成 >** します。  
+    2.  [構成マネージャー ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/t1hy4dhz(v=vs.100))グリッド内で、プロジェクトを検索します。 **構成**列で、 **\<新規作成 >** します。  
   
-    3.  [[新規プロジェクト構成] ダイアログ ボックス](http://msdn.microsoft.com/en-us/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)の **[Project Configuration Name]** ボックスに、新しいプロジェクト構成に付ける名前を "Partial Debug" のように入力します。  
+    3.  [新しいプロジェクト構成 ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/0eh8w4cf(v=vs.100))、"Partial Debug"のなど、新しい構成の名前を入力、**プロジェクト構成名**ボックス。  
   
     4.  **[設定のコピー元]** ボックスの **[Release]** をクリックします。  
   
