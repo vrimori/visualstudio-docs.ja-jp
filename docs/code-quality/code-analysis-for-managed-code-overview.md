@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 78a7abc8c0d13de7ec3c9c8d196e3b47cf867403
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: ad1b093c224e37ce53dc77472518d03f2dc8093b
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279094"
+ms.locfileid: "44320816"
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>マネージ コードに対するコード分析の概要
 
@@ -75,7 +75,7 @@ Public class MyClass
 
 ## <a name="team-build-integration"></a>チーム ビルドの統合
 
-ビルド システムの統合機能を使用すると、分析ツールをビルド プロセスの一環として実行できます。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index)します。
+ビルド システムの統合機能を使用すると、分析ツールをビルド プロセスの一環として実行できます。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index?view=vsts)します。
 
 ## <a name="see-also"></a>関連項目
 

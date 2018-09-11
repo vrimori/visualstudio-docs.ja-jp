@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91dc83a1599058e1357c3ac7869f4284a1fc7fc5
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 83b6449d3f9fb41280d9e0b051c5baf3edbf5a66
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279116"
+ms.locfileid: "44320554"
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: は、最初に、Visual Studio でのデプロイについてください。
 
@@ -45,7 +45,7 @@ ms.locfileid: "44279116"
 
     ![選択の発行](../deployment/media/quickstart-publish.png)
 
-- **Visual C ランタイム**: ローカル デプロイまたは静的リンクを使用して Visual C のランタイムをデプロイすることができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)します。 
+- **Visual C ランタイム**: ローカル デプロイまたは静的リンクを使用して Visual C のランタイムをデプロイすることができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)します。
 
 ## <a name="publish-to-azure"></a>Azure に発行する
 
@@ -76,7 +76,7 @@ ms.locfileid: "44279116"
 
     さまざまな他の方法で ASP.NET アプリケーションとサービスをデプロイすることもできます。 詳細については、次を参照してください。[を展開する ASP.NET web アプリケーションとサービス](http://www.asp.net/aspnet/overview/deployment)します。
 
-- **Visual C ランタイム**: 集中配置を使用して Visual C のランタイムをデプロイすることができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)します。 
+- **Visual C ランタイム**: 集中配置を使用して Visual C のランタイムをデプロイすることができます。 詳細については、次を参照してください。[ネイティブ デスクトップ アプリケーションの配置 (Visual c)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)します。
 
 - **Windows デスクトップ**web サーバーまたは ClickOnce 配置を使用してネットワーク ファイル共有を Windows デスクトップ アプリケーションを発行することができます。 その後、ユーザーはシングル クリックでアプリケーションをインストールできます。 詳細については、次を参照してください。 [ClickOnce を使用してデスクトップ アプリのデプロイ](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)と[ClickOnce を使用してネイティブ アプリのデプロイ](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)します。
 
@@ -114,7 +114,7 @@ Visual studio では、Microsoft Store へのデプロイ用のアプリ パッ�
 
 ## <a name="devops-deployment"></a>DevOps の展開
 
-チームの環境では、アプリの継続的なデプロイを有効にするのに Azure のパイプラインを使用できます。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index)と[Deploy to Azure](/azure/devops/deploy-azure/index)します。
+チームの環境では、アプリの継続的なデプロイを有効にするのに Azure のパイプラインを使用できます。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index?view=vsts)と[Deploy to Azure](/azure/devops/deploy-azure/index?view=vsts)します。
 
 ## <a name="deployment-for-other-app-types"></a>その他の種類のアプリの展開
 
@@ -122,7 +122,7 @@ Visual studio では、Microsoft Store へのデプロイ用のアプリ パッ�
 | --- | --- | --- |
 | **Office アプリ** | For Visual Studio からの Office アドインを発行できます。 | [展開して、Office アドインを発行](https://dev.office.com/docs/add-ins/publish/publish) |
 | **WCF または OData サービス**  | その他のアプリケーションでは、web サーバーに配置した WCF RIA サービスを使用できます。 | [開発と WCF Data Services の配置](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
-| **LightSwitch** | LightSwitch では、Visual Studio 2017 ではサポートされなくが、Visual Studio 2015 から、以前に引き続き展開できます。 | [LightSwitch アプリケーションの配置](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) | 
+| **LightSwitch** | LightSwitch では、Visual Studio 2017 ではサポートされなくが、Visual Studio 2015 から、以前に引き続き展開できます。 | [LightSwitch アプリケーションの配置](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
 ## <a name="next-steps"></a>次の手順
 
