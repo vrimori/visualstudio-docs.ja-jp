@@ -23,12 +23,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152d57b0b1d1659883a9096c84b650ad192c34d1
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 35f694d9cc397800249dd9b4acd86bf63d22ad93
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280988"
+ms.locfileid: "44320710"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C と C++ の概要のコード分析
 
@@ -64,7 +64,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="team-build-integration"></a>チーム ビルドの統合
 
-手順として、コード分析ツールを実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスを構築します。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index)します。
+手順として、コード分析ツールを実行するビルド システムの統合機能を使用することができます、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]プロセスを構築します。 詳細については、次を参照してください。 [Azure パイプライン](/azure/devops/pipelines/index?view=vsts)します。
 
 ## <a name="see-also"></a>関連項目
 

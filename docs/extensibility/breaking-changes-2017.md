@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb117a10a7f736e36b30806adfc5e07fe0b8aecf
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 36d001a14815e5e8e8639ba0937506a1c06d3fc2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512254"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280572"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 の機能拡張の変更
 
@@ -73,7 +73,7 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
     "culture"="neutral"
     "version"=15.0.0.0
     ```
-    実行時に、Visual Studio pkgdef サブシステムが、Visual Studio プロセスのランタイム構成ファイルにこれらのエントリをマージ ( *[VSAPPDATA]\devenv.exe.config*) として[ `<codeBase>` ](https://msdn.microsoft.com/en-us/library/efs781xb(v=vs.110).aspx)要素。 これは、プローブ パスから検索を回避するので、独自のアセンブリを検索する Visual Studio のプロセスをできるようにすることをお勧めの方法です。
+    実行時に、Visual Studio pkgdef サブシステムが、Visual Studio プロセスのランタイム構成ファイルにこれらのエントリをマージ ( *[VSAPPDATA]\devenv.exe.config*) として[ `<codeBase>` ](/dotnet/framework/configure-apps/file-schema/runtime/codebase-element)要素。 これは、プローブ パスから検索を回避するので、独自のアセンブリを検索する Visual Studio のプロセスをできるようにすることをお勧めの方法です。
 
 ### <a name="reacting-to-this-breaking-change"></a>この重大な変更に反応します。
 
@@ -87,7 +87,7 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
 
 ### <a name="global-com-registration"></a>グローバルの COM 登録
 
-* 以前は、Visual Studio では、ネイティブの COM 登録をサポートするために HKEY_CLASSES_ROOT と HKEY_LOCAL_MACHINE ハイブに多くのレジストリ キーをインストールします。 この影響を排除するために Visual Studio を今すぐ使用して[COM コンポーネントの登録を必要としないアクティベーション](https://msdn.microsoft.com/en-us/library/ms973913.aspx)します。
+* 以前は、Visual Studio では、ネイティブの COM 登録をサポートするために HKEY_CLASSES_ROOT と HKEY_LOCAL_MACHINE ハイブに多くのレジストリ キーをインストールします。 この影響を排除するために Visual Studio を今すぐ使用して[COM コンポーネントの登録を必要としないアクティベーション](https://msdn.microsoft.com/library/ms973913.aspx)します。
 * その結果、ほとんど TLB/OLB % %programfiles (x86) %\Common files \microsoft Shared\MSEnv の DLL ファイルが Visual Studio によって既定でインストールされなく/。 Visual Studio のホスト プロセスによって使用される Registration-free COM マニフェストの対応するには、[INSTALLDIR] の下でこれらのファイルはインストールされました。
 * その結果、Visual Studio COM インターフェイスの COM 登録をグローバルに依存する外部のコードは不要になったこれらの登録を検索します。 Visual Studio プロセス内で実行されているコードでは、違いが見られない。
 
@@ -106,5 +106,5 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
 
 * 同様に COM コンポーネントの登録なしのアクティベーションを使用する外部コードを変換する必要があります。
 * 外部コンポーネントは、Visual Studio の場所を見つけることができます[こちらのガイダンスに従って](https://blogs.msdn.microsoft.com/heaths/2016/09/15/changes-to-visual-studio-15-setup)します。
-* 外部コンポーネントが使用することをお勧め、[外部設定マネージャー](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.settings.externalsettingsmanager.aspx) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
+* 外部コンポーネントが使用することをお勧め、[外部設定マネージャー](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) Visual Studio のレジストリ キーに直接読み取り/書き込みの代わりにします。
 * 登録のための別の手法は、拡張機能を使用して、コンポーネントに実装がかどうかを確認します。 たとえば、デバッガーの拡張機能が新しい利用することが可能性があります[msvsmon JSON ファイルの COM 登録](migrate-debugger-COM-registration.md)します。

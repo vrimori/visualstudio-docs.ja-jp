@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8400ce0d407af2318c4fffa19bc2b41e23f034d
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 40e265e5bdc453ec658de16f288e9c184979975f
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44284136"
+ms.locfileid: "44321256"
 ---
 # <a name="using-the-code-metrics-results-window"></a>コード メトリックスの結果 ウィンドウの使用
 
@@ -102,9 +102,9 @@ ms.locfileid: "44284136"
 
 ## <a name="creating-a-work-item-based-on-code-metric-results"></a>コード メトリックの結果に基づいて作業項目を作成します。
 
-作成することができます、 [Azure ボード](/azure/devops/boards/index)に基づいている作業項目の結果、**コード メトリックスの結果**ウィンドウ。 Visual Studio が自動的にタイトルを入力して、作業項目が作成されたときに、**タイトル**フィールドとコード メトリック データの下で、**履歴**タブ。
+作成することができます、 [Azure ボード](/azure/devops/boards/index?view=vsts)に基づいている作業項目の結果、**コード メトリックスの結果**ウィンドウ。 Visual Studio が自動的にタイトルを入力して、作業項目が作成されたときに、**タイトル**フィールドとコード メトリック データの下で、**履歴**タブ。
 
-Azure のボードの詳細については、作業項目を参照してください[作業項目](/azure/devops/boards/work-items/index)します。
+Azure のボードの詳細については、作業項目を参照してください[作業項目](/azure/devops/boards/work-items/index?view=vsts)します。
 
 ### <a name="to-create-a-work-item-based-on-a-result"></a>結果に基づく作業項目を作成するには
 
