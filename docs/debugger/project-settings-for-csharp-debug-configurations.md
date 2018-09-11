@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 043bd6e2c97ad3785ab783456fc911334d3d6cd0
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: c5bd49d550cb03e8234c8740ea8c0f605ed721c2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39153690"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283263"
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>C# デバッグ構成のプロジェクト設定
 C# デバッグ構成でのプロジェクトの設定を変更することができます、**プロパティ ページ**ウィンドウで説明したよう[デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ**ウィンドウ。  
@@ -40,7 +40,7 @@ C# デバッグ構成でのプロジェクトの設定を変更することが�
 |**設定**|**説明**|  
 |-----------------|---------------------|  
 |**構成**|アプリケーションをコンパイルするためのモードを設定します。 中から選択**アクティブ (Debug)**、**デバッグ**、**リリース**、**すべて構成**します。|  
-|**開始アクション**|[デバッグ] メニューの [開始] を選択したときに発生するアクションを指定します。<br /><br /> -   **プロジェクトを開始**既定値は、デバッグのスタートアップ プロジェクトを起動します。 詳細については、次を参照してください。[スタートアップ プロジェクトの選択](http://msdn.microsoft.com/en-us/222e3f32-a6fe-4941-bf37-6b2a921129fd)します。<br />-   **外部プログラムの開始**を起動しはプログラムにアタッチすることができますの一部を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 詳細については、次を参照してください。[実行中のプログラムへのアタッチ](http://msdn.microsoft.com/en-us/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4)します。<br />-   **URL でブラウザーを起動**Web アプリケーションをデバッグすることができます。|  
+|**開始アクション**|[デバッグ] メニューの [開始] を選択したときに発生するアクションを指定します。<br /><br /> -   **プロジェクトを開始**既定値は、デバッグのスタートアップ プロジェクトを起動します。 詳細については、次を参照してください。[スタートアップ プロジェクトの選択](/previous-versions/visualstudio/visual-studio-2010/0s590bew(v=vs.100))します。<br />-   **外部プログラムの開始**を起動しはプログラムにアタッチすることができますの一部を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト。 詳細については、次を参照してください。[実行中のプログラムへのアタッチ](/previous-versions/visualstudio/visual-studio-2010/c6wf8e4z(v=vs.100))します。<br />-   **URL でブラウザーを起動**Web アプリケーションをデバッグすることができます。|  
 |**コマンド ライン引数**|デバッグするプログラムのコマンド ライン引数を指定します。 コマンド名は、[外部プログラムの開始] に指定されたプログラム名です。 [開始動作] が [URL の開始] に設定されている場合、コマンド ライン引数は指定できません。|  
 |**作業ディレクトリ**|デバッグするプログラムの作業ディレクトリを指定します。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] では、作業ディレクトリはアプリケーションが起動されるディレクトリであり、既定では \bin\debug です。|  
 |**リモート コンピューターの使用**|デバッグのため、アプリケーションが実行されるリモート マシンの名前または[Msvsmon サーバー名](../debugger/remote-debugging.md)します。 リモート コンピューター上の EXE ファイルの場所は、[構成プロパティ] フォルダー、[ビルド] カテゴリ内の [出力パス] プロパティで指定します。 また、EXE ファイルがリモート コンピューターの共有ディレクトリにあることも必要です。|

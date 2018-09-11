@@ -14,16 +14,16 @@ manager: douge
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: c14cce73da0c83fefc3461d61d16a062af365db7
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 8642d59beb845bf2784d09133a590a4716897ed4
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154373"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282210"
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio での JavaScript コンソール コマンド
   
- Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、次を参照してください。[アプリのデバッグ](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)します。 Internet Explorer F12 ツールのコンソールの使用については、 [このトピック](http://msdn.microsoft.com/library/ie/dn255006.aspx)を参照してください。  
+ Visual Studio では、JavaScript コンソール ウィンドウでコマンドを使用して、メッセージを送信したり他のタスクを実行したりすることができます。 そのウィンドウを使用する方法を示す例については、次を参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)します。 このトピックの情報は、UWP アプリと Apache Cordova の Visual Studio Tools を使用して作成されたアプリに適用されます。 Cordova アプリでサポートされているコンソール コマンドについては、次を参照してください。[アプリのデバッグ](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)します。 Internet Explorer F12 ツールで、コンソールの使用方法の詳細については、次を参照してください。[このトピックの「](/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))します。  
   
  JavaScript コンソール ウィンドウが閉じられた場合開けることを選択して、Visual Studio でデバッグ中**デバッグ** > **Windows** > **JavaScriptコンソール**します。  
   

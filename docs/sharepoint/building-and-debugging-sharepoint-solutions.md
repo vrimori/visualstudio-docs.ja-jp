@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cf89354880059b8fe743e5558b2c406467a38014
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 82733a8d3e908e82ad8f841857aa70374495e556
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326115"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283536"
 ---
 # <a name="build-and-debug-sharepoint-solutions"></a>ビルドし、SharePoint ソリューションのデバッグ
   ビルドと SharePoint ソリューションのデバッグはビルドと他の種類のプロジェクトのデバッグと同じ一般に、[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。 このセクションのトピックでは、いくつかある相違点について説明します。  
@@ -44,8 +44,8 @@ ms.locfileid: "36326115"
 ## <a name="debug-and-test-sharepoint-solutions"></a>デバッグし、SharePoint ソリューションのテスト
  デバッグをする前に[!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]コピー、 *.wsp* SharePoint サーバーにパッケージがサイトと Web スコープの機能をアクティブにし、場合によっては、プロジェクトを開始します。 それ以外の場合は、プロジェクトを手動で開く必要があります。 詳細については、次を参照してください。[のトラブルシューティングを行う SharePoint ソリューション](../sharepoint/troubleshooting-sharepoint-solutions.md)と[デバッグの SharePoint ソリューション](../sharepoint/debugging-sharepoint-solutions.md)します。  
   
-## <a name="debug-and-verify-sharepoint-solutions-by-using-alm-features"></a>デバッグおよび ALM 機能を使用して SharePoint ソリューションを確認します。
- 単体テストや IntelliTrace など visual Studio ALM の機能では、SharePoint ソリューションの正確に特定の問題の詳細に有効にします。 プロファイルを見つけて、SharePoint ソリューションのパフォーマンスの問題の領域を識別できます。 詳細については、次を参照してください。 [SharePoint コードのデバッグの検証および](../sharepoint/verifying-and-debugging-sharepoint-code.md)と[SharePoint アプリケーションのパフォーマンスのプロファイリング](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)します。  
+## <a name="debug-and-verify-sharepoint-solutions-by-using-azure-devops-services-features"></a>デバッグし、Azure DevOps サービス機能を使用して SharePoint ソリューションを確認します。
+ 単体テストや IntelliTrace などの azure DevOps サービス機能では、SharePoint ソリューションの正確に特定の問題の詳細に有効にします。 プロファイルを見つけて、SharePoint ソリューションのパフォーマンスの問題の領域を識別できます。 詳細については、次を参照してください。 [SharePoint コードのデバッグの検証および](../sharepoint/verifying-and-debugging-sharepoint-code.md)と[SharePoint アプリケーションのパフォーマンスのプロファイリング](../sharepoint/profiling-the-performance-of-sharepoint-applications.md)します。  
   
 ## <a name="security-during-the-build-process"></a>ビルド プロセス中のセキュリティ
  SharePoint のソリューションを配置またはパッケージ化する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]アクセス許可を SharePoint サーバーにファイルをコピーする必要があります。 実行する必要があります[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]として昇格されたプロセスと、ユーザー アカウントが SharePoint サーバーのサイト コレクション管理者をする必要があります。 さらに、プロジェクトがサンド ボックス ソリューションまたはファーム ソリューションであるかどうかを指定する必要があります。 詳細については、次を参照してください。 [Differences Between Sandboxed and Farm Solutions](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)します。  

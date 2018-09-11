@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7fc119bbd990dab11a144ccc4e1894bb827a2fe1
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 67623989fc8ff2bf2d44bc435a48db81fecb1fba
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37118055"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282342"
 ---
 # <a name="profile-the-performance-of-sharepoint-applications"></a>SharePoint アプリケーションのパフォーマンスをプロファイルします。
 
@@ -65,7 +65,7 @@ Web パフォーマンス テストでは、エンド ユーザーが SharePoint
 |タイトル|説明|
 |-----------|-----------------|
 |[チュートリアル: SharePoint アプリケーションをプロファイリングします。](../sharepoint/walkthrough-profiling-a-sharepoint-application.md)|SharePoint アプリケーションのサンプリング プロファイル分析を実行する方法を示します。|
-|[リリース前のアプリのパフォーマンス テスト](/vsts/test/load-test/run-performance-tests-app-before-release?view=vsts)|SharePoint アプリケーションのストレス テストに役立つロード テストを作成する方法について説明します。|
+|[リリース前のアプリのパフォーマンス テスト](/azure/devops/test/load-test/run-performance-tests-app-before-release?view=vsts)|SharePoint アプリケーションのストレス テストに役立つロード テストを作成する方法について説明します。|
 |[コードの単体テスト](/visualstudio/test/unit-test-your-code)|単体テストを使用してコードの論理エラーを検出する方法について説明します。|
 |[コード化された UI テストを使用した SharePoint 2010 アプリケーションのテスト](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests)|SharePoint アプリケーションのユーザー インターフェイスをテストする方法について説明します。|
 
