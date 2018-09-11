@@ -5,12 +5,12 @@ title: Visual Studio のドキュメント | Microsoft Docs
 description: Visual Studio 2017 を使って、アプリケーション、サービス、ツールを、任意の言語で、特定のプラットフォームやデバイス向けに開発する方法について説明します。
 ms.topic: landing-page
 searchScope: []
-ms.openlocfilehash: 728091071a7e9409ac523ee078800915cba84814
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: ee2f52f135412fb0847d3922d243383781220acb
+ms.sourcegitcommit: e942550df44f733a1349b85f0059318a28a1ac27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34690599"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339672"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -42,7 +42,7 @@ ms.locfileid: "34690599"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/vsts" title="Visual Studio Team Services">
+                                <a href="/azure/devops/" title="Azure DevOps Services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -52,7 +52,7 @@ ms.locfileid: "34690599"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio Team Services</h3>
+                                                    <h3>Azure DevOps Services</h3>
                                                     <p>アジャイル プロジェクトのツールとレポートによりチームの生産性が向上します。 最新の CI/CD ツールを使用してソース管理からプロジェクトを構築、テスト、展開します。</p>
                                                 </div>
                                             </div>
@@ -61,7 +61,7 @@ ms.locfileid: "34690599"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/tfs" title="Team Foundation Server">
+                                <a href="/tfs/" title="Team Foundation Server">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -118,7 +118,7 @@ ms.locfileid: "34690599"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/appcenter" title="Visual Studio アプリ センター">
+                                <a href="/appcenter/" title="Visual Studio アプリ センター">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -137,7 +137,7 @@ ms.locfileid: "34690599"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://aka.ms/vs-subscriptions" title="Visual Studio アプリ センター">
+                                <a href="/visualstudio/subscriptions/" title="Visual Studio サブスクリプション">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

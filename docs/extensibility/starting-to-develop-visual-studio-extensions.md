@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4e7be9da93b422a28d01b83e023ac76a05ea514
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
-ms.translationtype: HT
+ms.openlocfilehash: 50d5876f38b7c539beb33d5918387a06f45b193b
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283640"
+ms.locfileid: "44321269"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始しています
 Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑問をもたれるかもしれません。 ここでは、最も一般的なものの一部を一覧にしています。 探している情報が見つからない場合は、フィードバック ボタンを使用して (画面の下部にある **このページは役に立ちましたか?** ) お探しの情報を問い合わせてください。
@@ -76,7 +76,7 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
 
 -   基本的な Vspackage: [VSPackage を使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-vspackage.md)
 
--   VSIX プロジェクト テンプレート: [VSIX プロジェクト テンプレートの概要](../extensibility/getting-started-with-the-vsix-project-template.md) 
+-   VSIX プロジェクト テンプレート: [VSIX プロジェクト テンプレートの概要](../extensibility/getting-started-with-the-vsix-project-template.md)
 
 ## <a name="how-do-i-get-my-extension-to-look-like-visual-studio"></a>Visual Studio のように、my 拡張を取得する方法はありますか
  拡張機能の UI を設計するための便利なヒントを取得[Visual Studio ユーザー エクスペリエンス ガイドライン](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。
@@ -87,4 +87,4 @@ Visual Studio 拡張機能を初めて作成する場合に、いくつかの疑
 ## <a name="how-can-i-distribute-my-extension"></a>My 拡張を配布する方法は?
  別のコンピューターで、拡張機能をインストールしたり、.vsix ファイルをダブルクリックしてインストールすると、友人に送信することができます。 VSIX パッケージの詳細については[Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)します。
 
- Visual Studio のお客様が大量にできるように、Visual Studio Marketplace で拡張機能を公開することもできます。 Marketplace の拡張機能をパッケージ化の例は、次を参照してください。[チュートリアル: Visual Studio 拡張機能を公開](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)します。 Marketplace での発行を行う必要がある内容の詳細については、次を参照してください。[製品と Visual Studio の拡張機能](/azure/devops/extend/overview)します。
+ Visual Studio のお客様が大量にできるように、Visual Studio Marketplace で拡張機能を公開することもできます。 Marketplace の拡張機能をパッケージ化の例は、次を参照してください。[チュートリアル: Visual Studio 拡張機能を公開](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)します。 Marketplace での発行を行う必要がある内容の詳細については、次を参照してください。[製品と Visual Studio の拡張機能](/azure/devops/extend/overview?view=vsts)します。

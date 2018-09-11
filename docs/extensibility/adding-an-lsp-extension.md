@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e4d3bcd261e36d54aa84b22b32e91b89922d2f2
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: d2f6c23ea3ad48c361c12912926e0642f35f853a
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499391"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283458"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能を追加します。
 
@@ -230,7 +230,7 @@ namespace MockLanguageExtension
 
 ### <a name="mef"></a>MEF
 
-Visual Studio を使用して[MEF](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (Managed Extensibility Framework) の機能拡張ポイントを管理します。 [エクスポート](https://msdn.microsoft.com/library/system.componentmodel.composition.exportattribute(v=vs.110).aspx)属性は、このクラスを拡張ポイントとして選択し、適切な時に読み込まれることを Visual Studio を示します。
+Visual Studio を使用して[MEF](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (Managed Extensibility Framework) の機能拡張ポイントを管理します。 [エクスポート](/dotnet/api/system.componentmodel.composition.exportattribute)属性は、このクラスを拡張ポイントとして選択し、適切な時に読み込まれることを Visual Studio を示します。
 
 MEF を使用して、VSIX マニフェストで、資産として MEF を定義することもあります。
 
@@ -354,7 +354,7 @@ LSP 言語サービス拡張機能への設定のサポートを追加する以�
 ```
 
 トレースの詳細度の 3 つの値があります。
-* [オフ]: トレースは完全にオフ
+* オフ: トレースは完全にオフ
 * "Messages": トレースをオンが唯一のメソッドの名前、および応答の ID がトレースされます。
 * "Verbose"トレースを有効にする場合。全体の rpc メッセージがトレースされます。
 
