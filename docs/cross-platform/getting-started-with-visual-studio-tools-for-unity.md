@@ -5,17 +5,17 @@ ms.date: 07/03/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 66b5b4eb-13b5-4071-98d2-87fafa4598a8
-author: dantogno
-ms.author: v-davian
+author: conceptdev
+ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: bdc196ed997410957412ec02ff4eb4912b3ee63c
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: dbe546f43b0a66abc78b94480894b63dc4f5eafa
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39252467"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283113"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 
@@ -85,7 +85,7 @@ Unity 2018.1 以降では、Visual Studio を Unity の既定の外部スクリ�
 
 - Visual Studio 2015 Community、Visual Studio 2015 Professional、または Visual Studio 2015 Enterprise の場合:
 
-   [Visual Studio 2015 Tools for Unity をダウンロード](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+   [Visual Studio 2015 Tools for Unity をダウンロード](https://marketplace.visualstudio.com/items?itemName=SebastienLebreton.VisualStudio2015ToolsforUnity)
 
 > [!NOTE]
 > Visual Studio Tools for Unity では、Unity 5.2 以降と、拡張機能をサポートしているバージョンの Visual Studio (Visual Studio Community、Professional、Premium、Enterprise など) が必要です。 お使いの Unity のインストールで Visual Studio Tools for Unity が有効になっていることを確認するには、**[Help]\(ヘルプ\)** メニューから **[About Unity]\(Unity について\)** を選び、ダイアログの左下に [Microsoft Visual Studio Tools for Unity enabled]\(Microsoft Visual Studio Tools for Unity は有効です\) と表示されていることを確認します。

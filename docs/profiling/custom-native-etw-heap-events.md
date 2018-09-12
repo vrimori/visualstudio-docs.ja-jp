@@ -12,16 +12,16 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cdff316b5553a8c1425927275e1547294040002
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 98fc473a9459aa6d1a1d7c10be7b6f240a4ab7d0
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749461"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669106"
 ---
 # <a name="custom-native-etw-heap-events"></a>カスタム ネイティブ ETW ヒープ イベント
 
-Visual Studio には、[プロファイリングと診断](../profiling/profiling-tools.md)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
+Visual Studio には、[プロファイリングと診断](../profiling/profiling-feature-tour.md)のためのさまざまなツールがあります。その 1 つがネイティブ メモリ プロファイラーです。  このプロファイラーはヒープ プロバイダーから [ETW イベント](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-)をフックし、メモリの割り当て状況と使用状況を分析します。  既定では、このツールは、標準の Windows ヒープから行われた割り当てのみを分析できます。このネイティブ ヒープ外の割り当ては表示されません。
 
 カスタム ヒープを使用し、標準ヒープの割り当てオーバーヘッドを回避する方法を使用したい場合があります。  たとえば、[VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) を使用し、アプリまたはゲームの開始時に大量のメモリを割り当て、そのリスト内で独自のブロックを管理できます。  このシナリオでは、メモリ プロファイラー ツールは最初の割り当てのみを認識し、メモリ チャンク内で行われたカスタム管理は認識されません。  ただし、カスタム ネイティブ ヒープの ETW プロバイダーを使用すると、標準ヒープ外で行うあらゆる割り当てをこのツールに認識させることができます。
 
@@ -155,8 +155,8 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 標準 Windows ヒープと同様に、このツールを利用してスナップショットを比較し、カスタム ヒープのリークや破損を探すこともできます。詳しくは、[メモリ使用量](../profiling/memory-usage.md)に関する文書を参照してください。
 
 > [!TIP]
-> Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。これは、**[デバッグ]**>**[パフォーマンス プロファイラー]** メニュー オプション、または **Alt**+**F2** キーの組み合わせで有効にできます。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。このウィンドウは、**[デバッグ]**>**[Windows]**>**[診断ツールの表示]** メニュー、または **Ctrl**+**Alt**+**F2** キーの組み合わせで有効にできます。
+> Visual Studio の**パフォーマンス プロファイリング** ツールセットにも**メモリ使用量**ツールがあります。これは、**[デバッグ]** > **[パフォーマンス プロファイラー]** メニュー オプション、または **Alt**+**F2** キーの組み合わせで有効にできます。  この機能にはヒープ追跡がありません。ここの説明のようにカスタム ヒープが表示されることはありません。  この機能があるのは **[診断ツール]** ウィンドウだけです。このウィンドウは、**[デバッグ]** > **[Windows]** > **[診断ツールの表示]** メニュー、または **Ctrl**+**Alt**+**F2** キーの組み合わせで有効にできます。
 
 ## <a name="see-also"></a>関連項目
-[プロファイリング ツール](../profiling/profiling-tools.md)  
+[プロファイル ツールの概要](../profiling/profiling-feature-tour.md)  
 [メモリ使用量](../profiling/memory-usage.md)

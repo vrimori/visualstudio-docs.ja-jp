@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 396fde582c10640bae95261a696c0d752543fc8d
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 491a70cd8ef35a1401bfe0cd8b6118709751d183
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381160"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321204"
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI オートメーションを使用してコードをテストする
 
@@ -35,7 +35,7 @@ ms.locfileid: "39381160"
 
 コード化された UI テストの作成は簡単です。 **コード化された UI テスト ビルダー**をバックグラウンドで実行しているときに、テストを手動で実行するだけです。 特定のフィールドに表示する値を指定することもできます。 **コード化された UI テスト ビルダー**では、操作が記録され、それらの記録からコードを生成します。 テストの作成後、特殊なエディターでテストを編集して、操作のシーケンスを変更することができます。
 
-または、Microsoft Test Manager に記録されたテスト ケースがある場合は、それからコードを生成できます。 詳細については、「[手動テストの記録と再生](/vsts/test/mtm/record-play-back-manual-tests)」をご覧ください。
+または、Microsoft Test Manager に記録されたテスト ケースがある場合は、それからコードを生成できます。 詳細については、「[手動テストの記録と再生](/azure/devops/test/mtm/record-play-back-manual-tests?view=vsts)」をご覧ください。
 
 コーディングよりテストに集中している場合でも、特殊な**コード化されたテスト ビルダー**とエディターによって、簡単にコード化された UI テストを作成および編集できます。 ただし、開発者が高度な方法でテストを拡張する場合は、コードはコピーして調整する作業がわかりやすくなるように構成されます。 たとえば、Web サイトで商品を購入するテストを記録した後、生成されたコードを編集して多数の商品を購入するループを追加する場合があります。
 
@@ -441,7 +441,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 - [テスト エクスプローラーを使用して単体テストを実行する](../test/run-unit-tests-with-test-explorer.md)
 
-- [ビルド プロセスでのテストの実行](/vsts/build-release/test/getting-started-with-continuous-testing)
+- [ビルド プロセスでのテストの実行](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 
 - [方法: テスト エージェントを設定して、デスクトップと対話するテストを実行する](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
 
@@ -451,7 +451,7 @@ UI コントロールの特定のプロパティ値を取得および設定す�
 
 - [コード化された UI テストと操作の記録を拡張する](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-コード化された UI テストは、手動テストを自動化するためによく使用されます。 手動テストの詳細については、「[Microsoft Test Manager での手動テストの実行](/vsts/test/mtm/run-manual-tests-with-microsoft-test-manager)」を参照してください。 自動テストの詳細については、「[Visual Studio のテスト ツール](../test/improve-code-quality.md)」を参照してください。
+コード化された UI テストは、手動テストを自動化するためによく使用されます。 手動テストの詳細については、「[Microsoft Test Manager での手動テストの実行](/azure/devops/test/mtm/run-manual-tests-with-microsoft-test-manager?view=vsts)」を参照してください。 自動テストの詳細については、「[Visual Studio のテスト ツール](../test/improve-code-quality.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

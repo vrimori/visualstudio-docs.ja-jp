@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4de525650c7e93497c86fa7ebf493922d8fad6ef
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 6aa365df2d7cdc1219ceea718594682685f2a759
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669363"
 ---
 # <a name="startprofile"></a>StartProfile
 `StartProfile` 関数は、指定されたプロファイル レベルのカウンターを 1 (オン) に設定します。  
@@ -63,12 +64,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI StartProfile(
  開始/停止状態と保留/再開状態の両方がオンの場合、そのレベルのプロファイル状態はオンです。 プロファイルの対象となるスレッドでは、グローバル、プロセス、およびスレッド レベル状態がオンである必要があります。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : VSPerf.h で宣言  
+ ヘッダー : *VSPerf.h* で宣言  
   
- インポート ライブラリ : VSPerf.lib  
+ インポート ライブラリ : *VSPerf.lib*  
   
 ## <a name="example"></a>例  
  StartProfile 関数の呼び出し例を以下に示します。  
@@ -107,5 +108,5 @@ void ExerciseStartProfile()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

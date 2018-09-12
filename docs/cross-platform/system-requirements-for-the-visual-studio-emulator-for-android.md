@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c4cedcdc55d5c0103c7005289191928fa14ac7a3
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 8cd9884c950d7cf6adefe997cf13fdd78fa7203d
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251550"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279402"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のシステム要件
 Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして動作します。Hyper-V は Windows 8 以降のバージョンの仮想化テクノロジです。 エミュレーターを実行するには、このトピックで説明する Hyper-V の要件をコンピューターが満たしている必要があります。  
@@ -117,7 +117,7 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
   
 |必要条件|この要件を確認して有効にする方法|  
 |-----------------|----------------------------------------------|  
-|Hyper-V がインストールされている必要があります。|[Windows Phone エミュレーターの Hyper-V を有効にする](https://msdn.microsoft.com/en-us/library/windows/apps/jj863509\(v=vs.105\).aspx)ために使用する同じ手順に従ってください。<br /><br /> サービス スナップインで **Hyper-V 仮想マシン管理** サービスの状態を確認します。|  
+|Hyper-V がインストールされている必要があります。|[Windows Phone エミュレーターの Hyper-V を有効にする](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105))ために使用する同じ手順に従ってください。<br /><br /> サービス スナップインで **Hyper-V 仮想マシン管理** サービスの状態を確認します。|  
 |Hyper-V が実行されている必要があります。|サービスの管理の詳細については、以下のトピックを参照してください。<br /><br /> -   [サービスの開始、停止、一時停止、再開、または再起動](https://technet.microsoft.com/library/cc736564\(v=WS.10\).aspx)<br />-   [サービスを開始する方法を構成します。](https://technet.microsoft.com/%20library/cc739213\(v=ws.10\))|  
   
  ローカルの Hyper-V Administrators グループのメンバーである必要があります。  

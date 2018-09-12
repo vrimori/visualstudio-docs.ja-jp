@@ -1,8 +1,8 @@
 ---
 title: .NET 開発の生産性を向上させる
 description: より良い .NET コードをより早く書き込むのに役立つ、移動、コード分析、単体テスト、およびその他の機能の概要。
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: ef9101a0dbad68dd75792f34526bac550a331286
-ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
+ms.openlocfilehash: 47c24aecce518cc62c93fe5e6885d77f64d49cad
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42626826"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125027"
 ---
 # <a name="visual-studio-2017-c-productivity-guide"></a>Visual Studio 2017 C# の生産性ガイド
 

@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1572f1473e2da8f84887b6571755dc259e19762b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: b15c57766c2deadc65e0d2d7d2b41baa50bf50e5
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669410"
 ---
 # <a name="resumeprofile"></a>ResumeProfile
 `ResumeProfile` メソッドは、指定されたプロファイル レベルの保留/再開カウンターをデクリメントします。  
@@ -63,12 +64,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI ResumeProfile(
  開始/停止状態と保留/再開状態の両方がオンの場合、そのレベルのプロファイル状態はオンです。 プロファイルの対象となるスレッドでは、グローバル、プロセス、およびスレッド レベル状態がすべてオンである必要があります。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : VSPerf.h で宣言  
+ ヘッダー : *VSPerf.h* で宣言  
   
- インポート ライブラリ : VSPerf.lib  
+ インポート ライブラリ : *VSPerf.lib*  
   
 ## <a name="example"></a>例  
  ResumeProfile 関数の例を以下に示します。 この例は、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別される同じスレッドまたはプロセスに対して、SuspendProfile メソッドが呼び出されていることを前提としています。  
@@ -103,5 +104,5 @@ void ExerciseResumeProfile()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

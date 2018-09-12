@@ -1,7 +1,7 @@
 ---
 title: Python プロジェクトの項目テンプレート
 description: Visual Studio の [追加] > [新しい項目] ダイアログから利用できる、Python プロジェクトの項目テンプレートの参照一覧。
-ms.date: 04/25/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 814af0de0074f41884550e9238b9dab0cb073e25
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: 8319c99e5de12ce1c09a2c20fc5cf1b132f34092
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008295"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776036"
 ---
 # <a name="python-item-templates"></a>Python 項目テンプレート
 
@@ -52,7 +52,7 @@ ms.locfileid: "40008295"
 >
 > ![発行構成の変更](media/template-web-publish-config.png)
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 - [Python プロジェクトの管理 - プロジェクト テンプレート](managing-python-projects-in-visual-studio.md#project-templates)
 - [Python Web プロジェクト テンプレート](python-web-application-project-templates.md)

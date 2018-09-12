@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7e8c63316cc4ca13f74e1b66b2346cf329465e0c
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 2484072a0f85b002ff2e59512f44ca0826540fd3
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34548636"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775207"
 ---
 # <a name="collect-net-memory-allocation-and-lifetime-data"></a>.NET メモリの割り当てと有効期間データの収集
 
@@ -53,11 +53,11 @@ Visual Studio プロファイリング ツールは、.NET メモリ割り当て
 
 ## <a name="common-tasks"></a>一般的なタスク
 
-追加のオプションを、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:
+追加のオプションを、パフォーマンス セッションの [ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:
 
 - **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。
 
-次の表の各タスクでは、.NET メモリ データを収集する際に、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
+次の表の各タスクでは、.NET メモリ データを収集する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
 
 |タスク|関連するコンテンツ|
 |----------|---------------------|
