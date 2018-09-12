@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 235e9386070d316cd9a4f9751ac1d8f1e8fd92b4
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 8717c8f4c9d4bae12acf576620368b4aac64a185
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42623671"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384228"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>チュートリアル: Visual Studio を使用してデバッグする方法を学習します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "42623671"
 |---------|---------|
 |  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    [ビデオを見る](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171)のデバッグに関する同様の手順を示すです。 |
 
-デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。 C# と C++ のサンプル コードを切り替えるには、ページの右上にある言語のフィルターを使用します。
+デモ アプリは、c# および C++ にはの機能は、Visual Basic、JavaScript、および (場合を除き)、Visual Studio でサポートされている他の言語に適用されます。 スクリーン ショットは、c# では。 C# と C++ のサンプル コードでは、この記事を切り替えるには、このページの右上にある言語のフィルターを使用します。
 
 このチュートリアルでは、次の作業を行います。
 
@@ -286,9 +286,9 @@ ms.locfileid: "42623671"
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>ブレークポイントを設定し、デバッガーを起動します
 
-1. `foreach`のループ、`Main`関数 (`for` C++ でのループ`main`関数)、コードの最初の行の左余白をクリックしてブレークポイントを設定します。
+1. `foreach`のループ、`Main`関数 (`for` C++ でのループ`main`関数)、次のコード行の左余白をクリックしてブレークポイントを設定します。
 
-    ![ブレークポイントを設定する](../debugger/media/get-started-set-breakpoint.png "SetABreakPoint")
+    `shape.Draw()` (または、 `shape->Draw()` C++ で)
 
     ブレークポイントを設定した赤い円が表示されます。
 
@@ -296,7 +296,7 @@ ms.locfileid: "42623671"
 
 6. キーを押して**F5**または**デバッグの開始**ボタンをクリックして、アプリが起動し、ブレークポイントを設定したコードの行に、デバッガーが実行されます。
 
-    ![ブレークポイントにヒット](../debugger/media/get-started-hit-breakpoint.png "HitABreakPoint")
+    ![設定し、ブレークポイントにヒット](../debugger/media/get-started-set-breakpoint.gif)
 
     黄色の矢印は、デバッガーが一時停止されても (このステートメントがまだ実行) 同じ時点でアプリの実行を中断するステートメントを表します。
 
@@ -308,9 +308,7 @@ ms.locfileid: "42623671"
 
 ほとんどの場合、使用してキーボード ショートカットここでは、取得する優れた方法であるデバッガー (同等のコマンド メニューなどのコマンドは、かっこ内に表示されます) で、アプリの実行時に、高速です。
 
-1. キーを押して**F11** (選択または**デバッグ > ステップ イン**) (複数回に C# の場合) を一時停止するまで、`shape.Draw`でメソッドを呼び出す、`Main`メソッド (`shape->Draw` C++ で)。
-
-1. キーを押して**F11**のコードに進むにもう一度、`Rectangle`クラス。
+1. 一時停止中に、`shape.Draw`でメソッドを呼び出す、`Main`メソッド (`shape->Draw` C++ で)、キーを押して**F11** (選択または**デバッグ > ステップ イン**) のコードに進めておく、 `Rectangle`クラス。
 
      ![F11 キーを使用して、コードにステップ インを](../debugger/media/get-started-f11.png "ステップ イン F11")
 
@@ -364,19 +362,19 @@ ms.locfileid: "42623671"
 
 押したとき**再起動**アプリを停止して、デバッガーを再起動すると時間が節約されます。 コードを実行してヒットした最初のブレークポイントでデバッガーが一時停止します。
 
-設定するでのブレークポイントでデバッガーが再び停止する、`foreach`ループ (`for` C++ でのループ)。
+設定するでのブレークポイントでデバッガーが再び停止する、`shape.Draw()`メソッド (`shape->Draw()` C++ で)。
 
 ## <a name="inspect-variables-with-data-tips"></a>データ ヒントで変数を検査します。
 
 変数を検査できるようにする機能は、デバッガーの最も便利な機能の 1 つと、これを行う方法はあります。 多くの場合、問題をデバッグするときに、変数が期待どおりにして、特定の時刻値を格納するかどうかを確認しようとしています。
 
-1. 一時停止中に、`foreach`ループ (`for` C++ でのループ)、キーを押して**F11**とします。
-
-1. ポインターを合わせる、`shapes`オブジェクトとその既定のプロパティ値を参照してください。、`Count`プロパティ。
+1. 一時停止中に、`shape.Draw()`メソッド (`shape->Draw()` C++ で)、マウス、`shapes`オブジェクトとその既定のプロパティ値を参照してください。、`Count`プロパティ。
 
 1. 展開、`shapes`オブジェクト、配列の最初のインデックスなど、すべてのプロパティを表示する`[0]`の値を持つ`Rectangle`(c#) またはメモリ アドレス (C++)。
 
-     ![データ ヒントを表示する](../debugger/media/get-started-data-tip.png "データ ヒントを表示します。")
+     ![データ ヒントを表示する](../debugger/media/get-started-data-tip.gif "データ ヒントを表示します。")
+
+    などのプロパティを表示するオブジェクトをさらに展開することができます、`Height`四角形のプロパティ。
 
     多くの場合、オブジェクト、プロパティ値を確認する簡単な方法が必要なデバッグ時にし、データ ヒントには、これを行う良い方法です。
 

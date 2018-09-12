@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8b18a80e8279513db6084852b10568b2327700d5
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 515c5d4c1bd09d65ae23d3d1af2f3183607c6b53
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380498"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320957"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>クイック スタート: ロード テスト プロジェクトを作成する
 
@@ -59,7 +59,7 @@ Web パフォーマンスとロード テスト ツール コンポーネント�
 
    **新しいロード テスト ウィザード**が開きます。
 
-1. **[オンプレミスのロード テスト]** オプションを選択し、**[次へ]** を選択します。 クラウド ベースのロード テストに関する詳細は[こちら](/vsts/load-test/get-started-simple-cloud-load-test)をご覧ください。
+1. **[オンプレミスのロード テスト]** オプションを選択し、**[次へ]** を選択します。 クラウド ベースのロード テストに関する詳細は[こちら](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts)をご覧ください。
 
    ![新しいロード テスト ウィザード - 最初のページ](media/load-test-wizard-page-1.png)
 

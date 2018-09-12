@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b39adc2c2b91016d14eb73787b17f8c4da51c9f
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: d6799bc7d3a2a79fadfb6d0535b8ccbbf0b0cffd
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233153"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283667"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 
@@ -84,7 +84,7 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
  対象にするプロファイルのセットをインストールした後は、緑色の **[プレイ]** ボタンをクリックすることで Manager から新しいプロファイルを直接開始できます。 Visual Studio クロス プラットフォーム モバイル プロジェクト タイプのデバッグ対象ドロップダウン メニューにも表示されます。  
   
 ##  <a name="FeaturesTest"></a> エミュレーターでテストできる機能  
- エミュレーターでテストできる機能については、こちらの[ブログ投稿](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)をご覧ください。  
+ エミュレーターでテストできる機能については、こちらの[ブログ投稿](https://blogs.msdn.microsoft.com/devops/2014/11/12/introducing-visual-studios-emulator-for-android/)をご覧ください。  
   
 ##  <a name="FeaturesNonTest"></a> エミュレーターでテストできない機能  
  次の一覧は、エミュレーターでテスト**できない** Android プラットフォームの機能です。 これらの機能は物理デバイスでテストする必要があります。  

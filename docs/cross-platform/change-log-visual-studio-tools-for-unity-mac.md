@@ -5,17 +5,17 @@ ms.date: 08/06/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 33a6ac54-d997-4308-b5a0-af7387460849
-author: dantogno
-ms.author: v-davian
+author: conceptdev
+ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f2bea6bca74fa3c97e6501a44f7d9ea950369d6c
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 197701258a47b3edc49f4e9477c6634d17b22920
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639733"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775188"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>変更ログ (Visual Studio Tools for Unity、Mac)
 Visual Studio Tools for Unity の変更ログです。
@@ -27,7 +27,7 @@ Visual Studio Tools for Unity の変更ログです。
 
 -   **統合:**
 
-     -   Unity のパフォーマンスのバグの回避策がロールバックされました (Unity でこの問題が修正されたため)。
+     -   Unity により修正された Unity パフォーマンス バグの回避策がロールバックされました。
      
 ## <a name="1601"></a>1.6.0.1
  リリース日: 2018 年 7 月 10 日

@@ -10,18 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 02d3a9dfa6496b30e7438e53754f6d3d1720e6df
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 97063229e2ba72263975247b71686492ee8c64f6
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39078928"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279662"
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>XAML デザイナーでの要素の操作
 アプリに、コントロール、レイアウト、図形などの要素を追加するには、XAML、コード、または XAML デザイナーを使用します。 このトピックでは、Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。
 
 ## <a name="adding-an-element-to-a-layout"></a>レイアウトに要素を追加する
- *レイアウト*とは、UI に要素を配置してサイズ変更するプロセスです。 ビジュアル要素を配置するには、それらを [Panel](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.panel.aspx) レイアウトに配置する必要があります。 `Panel` には、[FrameworkElement](http://msdn.microsoft.com/library/windows/apps/br208706.aspx) 型のコレクションである子プロパティがあります。 `Panel` のさまざまな子要素 ([Canvas](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx)、[StackPanel](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx)、[Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) など) をレイアウト コンテナーとして利用し、ページに要素を配置して整列することができます。
+ *レイアウト*とは、UI に要素を配置してサイズ変更するプロセスです。 ビジュアル要素を配置するには、それらを [Panel](/uwp/api/Windows.UI.Xaml.Controls.Panel) レイアウトに配置する必要があります。 `Panel` には、[FrameworkElement](/uwp/api/Windows.UI.Xaml.FrameworkElement) 型のコレクションである子プロパティがあります。 `Panel` のさまざまな子要素 ([Canvas](/uwp/api/Windows.UI.Xaml.Controls.Canvas)、[StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)、[Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid) など) をレイアウト コンテナーとして利用し、ページに要素を配置して整列することができます。
 
  既定では、`Grid` パネルをページまたはフォーム内の最上位のレイアウト コンテナーとして使用します。 最上位のページ レイアウト内に、レイアウト パネル、コントロール、その他の要素を追加していきます。
 
@@ -33,7 +33,7 @@ ms.locfileid: "39078928"
 
     -   要素を **[ツールボックス]** からアートボードにドラッグします。
 
-    -   **[ツールボックス]** で、いずれかの描画ツール ([[楕円]](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx) や [[四角形]](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.rectangle.aspx) など) を選択し、アクティブなパネルに要素を描画します。
+    -   **[ツールボックス]** で、いずれかの描画ツール ([[楕円]](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse) や [[四角形]](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) など) を選択し、アクティブなパネルに要素を描画します。
 
 ## <a name="changing-the-layering-order-of-elements"></a>要素の重ね順の変更
  XAML デザイナーのアートボード上に 2 つの要素がある場合、1 つの要素はもう一方の要素より重ね順が前に表示されます。 [ドキュメント アウトライン] ウィンドウで要素の一覧の最下位にある要素が最前面の要素です (要素の **[ZIndex]** プロパティが設定されている場合を除く)。 ページ、フォーム、またはレイアウト コンテナーに要素を挿入するとき、自動的に要素はアクティブなコンテナー要素内の他の要素より前面に配置されます。 要素の順序を変更するには、**[順序]** コマンドを使用するか、[ドキュメント アウトライン] ウィンドウのオブジェクト ツリーで要素をドラッグします。

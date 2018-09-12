@@ -33,16 +33,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b451ed12f39bbac646a9cb50b5d1ff02365b0a93
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 3f6359585f13a4086a332d8a4dbcc3c435aeaa26
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626715"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384241"
 ---
 # <a name="find-and-replace-text"></a>テキストの検索と置換
 
-[[検索と置換]](#find-and-replace-control) または [[フォルダーを指定して検索]/[フォルダーを指定して置換]](#find-replace-in-files) を使用して、Visual Studio エディターでテストを検索したり、置換したりすることができます。 Visual Studio 2017 バージョン 15.8 では、*[マルチキャレット選択](#multi-caret-selection)* を使用して、パターンの*一部*のインスタンスを検索および置換できるようになりました。
+[[検索と置換]](#find-and-replace-control) または [[フォルダーを指定して検索]/[フォルダーを指定して置換]](#find-in-files-and-replace-in-files) を使用して、Visual Studio エディターでテストを検索したり、置換したりすることができます。 Visual Studio 2017 バージョン 15.8 では、*[マルチキャレット選択](#multi-caret-selection)* を使用して、パターンの*一部*のインスタンスを検索および置換できるようになりました。
 
 > [!TIP]
 > 変数やメソッドなど、コード記号の名前を変更している場合、検索と置換よりも*[リファクター](../ide/reference/rename.md)* を使用する方が適しています。 検索と置換でやみくもにすべてのインスタンスを置換しても、リファクタリングはインテリジェントで、範囲を理解します。

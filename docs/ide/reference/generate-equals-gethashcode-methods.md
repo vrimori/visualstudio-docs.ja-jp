@@ -4,17 +4,17 @@ ms.date: 01/26/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cdbb5273d046be8f11cc2fbc4a03ed6767a31e00
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: deaa0b37988e2df04bb7937c76f341af849698f0
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945312"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44124971"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio で Equals および GetHashCode メソッドのオーバーライドを生成する
 
@@ -48,13 +48,13 @@ ms.locfileid: "31945312"
      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
-   ![上書き生成のプレビュー](media/overrides-preview-cs.png)
+   ![オーバーライド生成のプレビュー](media/overrides-preview-cs.png)
 
 1. ドロップダウン メニューから **[Equals(object) を生成する]** または **[Equals および GetHashCode を生成する]** を選択します。
 
 1. **[メンバーの選択]** ダイアログ ボックスで、メソッドを生成するメンバーを選択します。
 
-    ![[上書きを生成する] ダイアログ](media/overrides-dialog-cs.png)
+    ![[オーバーライドを生成する] ダイアログ](media/overrides-dialog-cs.png)
 
     > [!TIP]
     > メンバーの一覧の下にあるチェックボックスを使って、このダイアログから演算子を生成することもできます。

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d48ca35940d9635489d65b18794604c29d7a507
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: aeda3752fdee6ce36094c68758d99c612c82fd76
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42626789"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320840"
 ---
 # <a name="quickstart-first-look-at-profiling-tools"></a>クイック スタート: プロファイリング ツールの概要
 
@@ -156,7 +156,7 @@ CPU 使用量ツールやメモリ使用量ツールに現在入っていない�
 |パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core| 
 |----------------------|---------------------|-------------|-------------|  
 |[メモリ使用量](../profiling/memory-usage.md)|可|可|可| 
-|[CPU 使用率](../profiling/cpu-usage.md)|可 (メモを参照)|可|可 (メモを参照)|
+|[CPU 使用率](../profiling/cpu-usage.md)|可|可|可|
 |[GPU 使用率](../debugger/gpu-usage.md)|可|可|Ｘ| 
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可|可|Ｘ|
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|
