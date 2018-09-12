@@ -10,12 +10,12 @@ ms.author: amburns
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: f47d5c013de34a64591100b8a459f6b18721e0b0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0251dd1630ca20e13bcc2238acb32a50031dd122
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635604"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280325"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
 
@@ -82,7 +82,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |[ユニバーサル Windows プラットフォームの紹介](/windows/uwp/get-started/universal-application-platform-guide)|
 |[最初のアプリの作成](/windows/uwp/get-started/your-first-app)|
 |[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md)|
-|[アプリを Universal Windows Platform (UWP) へ移行する](https://msdn.microsoft.com/en-us/library/mt148501.aspx)|
+|[アプリを Universal Windows Platform (UWP) へ移行する](https://msdn.microsoft.com/library/mt148501.aspx)|
 
 ##  <a name="HTML"></a> Android、iOS、および Windows 用のアプリをビルドする (HTML/JavaScript)
 
@@ -136,9 +136,9 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |**詳細を表示**|
 |--------------------|
 |[Visual Studio のダウンロード](http://visualstudio.microsoft.com/products/visual-studio-community-vs) (VisualStudio.com)|
-|[Visual C++ for Cross-Platform Mobile Development ツールのインストール](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN ライブラリ)|
+|[Visual C++ for Cross-Platform Mobile Development ツールのインストール](https://msdn.microsoft.com/library/dn707591.aspx) (MSDN ライブラリ)|
 |[C++ を使用して複数のプラットフォームを対象とすることについて学習する](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
-|[必要なものをインストールしてから、Android 用のネイティブ アクティビティ アプリケーションを作成する](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN ライブラリ)|
+|[必要なものをインストールしてから、Android 用のネイティブ アクティビティ アプリケーションを作成する](https://msdn.microsoft.com/library/dn707595.aspx) (MSDN ライブラリ)|
 |[Android と Windows アプリでの C++ コードの共有について学習する](https://visualstudio.microsoft.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[C++ のクロス プラットフォーム モバイル開発の例](https://msdn.microsoft.com/library/dn707596.aspx) (MSDN ライブラリ)|
 |[C++ のクロス プラットフォーム モバイル開発のその他の例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=android&f%5B1%5D.Type=ProgrammingLanguage&f%5B1%5D.Value=C%2B%2B&f%5B1%5D.Text=C%2B%2B) (code.msdn)|
@@ -158,12 +158,12 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |[Visual Studio での Unity ゲーム構築について学習する](https://visualstudio.microsoft.com/vs/features/game-development/#tab-4b0d0be8de5f65564ad)|
 |[Visual Studio Tools for Unity についてさらに学習する](../cross-platform/visual-studio-tools-for-unity.md) |
 |[Visual Studio Tools for Unity を使い始める](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) |
-|[Visual Studio Tools for Unity 2.0 Preview の最新の拡張機能について学習する](http://blogs.msdn.com/b/visualstudio/archive/2014/12/03/visual-studio-tools-for-unity-2-0-preview.aspx) (Visual Studio ブログ)|
+|[Visual Studio Tools for Unity 2.0 Preview の最新の拡張機能について学習する](https://blogs.msdn.microsoft.com/visualstudio/2014/12/03/visual-studio-tools-for-unity-2-0-preview/) (Visual Studio ブログ)|
 |[Visual Studio Tools for Unity 2.0 Preview の紹介ビデオを見る](http://www.bing.com/videos/search?q=visual+studio+tools+for+unity&qs=n&form=QBVLPG&pq=visual+studio+tools+for+unity&sc=6-29&sp=-1&sk=#view=detail&mid=0A13177F0BC7463A24080A13177F0BC7463A2408) (ビデオ)|
 |[Unity について学習する](http://unity3d.com/) (Unity Web サイト)|
 
 ## <a name="see-also"></a>参照
 
-- [Visual Studio プロジェクトに Office 365 API を追加する](http://msdn.microsoft.com/library/office/dn605899\(v=office.15\).aspx)
+- [Visual Studio プロジェクトに Office 365 API を追加する](https://docs.microsoft.com/office/developer-program/office-365-developer-program)
 - [Azure App Services - モバイル アプリ](https://azure.microsoft.com/services/app-service/mobile/)
 - [Visual Studio App Center](https://docs.microsoft.com/appcenter)

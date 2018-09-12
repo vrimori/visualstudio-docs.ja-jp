@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a74db80b0b13a01fbd58412666e66097971d467
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 9a8698c3402fdbbd4daa3e132b1455d722b40ef1
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669139"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP アプリのネットワーク使用量を分析する
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](/uwp/api/windows.web.http) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
@@ -71,9 +72,9 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
   
 3.  ([本文] タブ内の) [応答の整形出力] ボタンは、コンテンツをさらに読みやすくして、JSON、XML、HTML、CSS、JavaScript、および TypeScript の応答のペイロードを解析できるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
  [Visual Studio ブログ: Visual Studio のネットワーク インスペクターの紹介](http://go.microsoft.com/fwlink/?LinkId=535022)   
  [Channel 9 ビデオ: Visual Studio 診断ツール - 新しいネットワーク プロファイラー](http://channel9.msdn.com/Series/ConnectOn-Demand/206)  
  [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

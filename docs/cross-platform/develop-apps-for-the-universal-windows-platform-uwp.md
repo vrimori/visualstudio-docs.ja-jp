@@ -11,12 +11,12 @@ ms.author: shoag
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: db88545393eeda280df898ee896f54123f4a1627
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: de4306b2fa56bf00fd51a741441395b90ed314e5
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251540"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280806"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 ユニバーサル Windows プラットフォームと 1 つの Windows コアを使用することで、電話やデスクトップなどの Windows 10 デバイスで同じアプリを実行できます。 これらのユニバーサル Windows アプリは、Visual Studio とユニバーサル Windows アプリ開発ツールを使用して作成します。
@@ -47,7 +47,7 @@ ms.locfileid: "39251540"
 このソフトウェアをインストールしたら、開発用に Windows 10 デバイスを有効にする必要があります。 「[デバイスを開発用に有効にする](/windows/uwp/get-started/enable-your-device-for-development)」をご覧ください。 Windows 10 デバイスごとに開発者ライセンスは必要ありません。
 
 ## <a name="universal-windows-apps"></a>ユニバーサル Windows アプリ
-希望する開発言語を C#、Visual Basic、C++ または JavaScript の中から選び、Windows 10 デバイスを対象とするユニバーサル Windows プラットフォーム アプリを作成します。 「[最初のアプリの作成](/windows/uwp/get-started/your-first-app)」またはビデオ「[Tools for Windows 10 Overview](http://channel9.msdn.com/Series/ConnectOn-Demand/229)」(Windows 10 用ツールの概要) をご覧ください。
+希望する開発言語を C#、Visual Basic、C++ または JavaScript の中から選び、Windows 10 デバイスを対象とするユニバーサル Windows プラットフォーム アプリを作成します。 「[最初のアプリの作成](/windows/uwp/get-started/your-first-app)」またはビデオ「[Tools for Windows 10 Overview](https://channel9.msdn.com/Series/ConnectOn-Demand/229)」(Windows 10 用ツールの概要) をご覧ください。
 
 既存の Windows 8.1 のストア アプリ、Windows Phone 8.1 アプリ、または Visual Studio 2015 で作成されたユニバーサル Windows アプリがある場合、最新のユニバーサル Windows プラットフォームを使用するよう、これらのアプリを移植する必要があります。 「[Windows ランタイム 8.x から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」をご覧ください。
 

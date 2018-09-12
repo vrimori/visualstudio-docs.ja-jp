@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a156e7acfdb68d1fa523263835eeee4a573ff78
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: ae610539ded12c626fb69bffcc973d0424ca2f08
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669571"
 ---
 # <a name="suspendprofile"></a>SuspendProfile
 `SuspendProfile` メソッドは、指定されたプロファイル レベルの保留/再開カウンターをインクリメントします。  
@@ -63,12 +64,12 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
  開始/停止状態と保留/再開状態の両方がオンの場合、そのレベルのプロファイル状態はオンです。 プロファイルの対象となるスレッドでは、グローバル、プロセス、およびスレッド レベル状態がすべてオンである必要があります。  
   
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数  
- Microsoft.VisualStudio.Profiler.dll  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>関数の情報  
- ヘッダー : VSPerf.h で宣言  
+ ヘッダー : *VSPerf.h* で宣言  
   
- インポート ライブラリ : VSPerf.lib  
+ インポート ライブラリ : *VSPerf.lib*  
   
 ## <a name="example"></a>例  
  SuspendProfile メソッドの例を以下に示します。 この例では、[PROFILE_CURRENTID](../profiling/profile-currentid.md) で識別されるプロセスまたはスレッドに対して、StartProfile が既に呼び出されていることを前提としています。  
@@ -105,5 +106,5 @@ void ExerciseSuspendProfile()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio プロファイラー API リファレンス (ネイティブ)](../profiling/visual-studio-profiler-api-reference-native.md)

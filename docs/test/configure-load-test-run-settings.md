@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: acd2ccd526e32670afa947148f25606aee1299be
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: fb1f9ad69ebe012151a911bf8d7c02ded6af5e11
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283332"
 ---
 # <a name="configure-load-test-run-settings"></a>ロード テストの実行設定の構成
 
@@ -37,6 +37,6 @@ ms.locfileid: "39382423"
 |**ロード テストの実行設定でテストの反復回数を指定する:** **[テスト イテレーション]** プロパティを構成して、ロード テストのすべてのシナリオですべての Web パフォーマンス テストと単体テストを実行する回数を指定できます。|-   [方法: テスト イテレーションの数を実行設定に指定する](../test/how-to-specify-the-number-of-test-iterations-in-a-load-test.md)|
 |**ロード テストの実行設定にサンプル速度を指定する:** **[サンプル速度]** プロパティを構成して、ロード テスト中にパフォーマンス カウンター データを収集する頻度を指定できます。|-   [方法: サンプル速度を指定する](../test/how-to-specify-the-sample-rate-for-a-load-test.md)|
 |**タイミングの詳細ストレージ オプションを指定する:** **[タイミングの詳細ストレージ]** プロパティを構成して、ロード テストの詳細を保存する方法を指定できます。|-   [方法: [タイミングの詳細ストレージ] プロパティを指定する](../test/how-to-specify-the-timing-details-storage-property-for-a-load-test.md)|
-|**テスト リソースの保持時間を指定する:** **[リソース保持時間]** プロパティを設定して指定した期間、テスト リソースを保持することにより、テスト > 修正 > 再テストのサイクルを高速化することができます。|-   [ロード テストを高速化するためにリソースを保持する](/vsts/test/load-test/getting-started-with-performance-testing?view=vsts)|
+|**テスト リソースの保持時間を指定する:** **[リソース保持時間]** プロパティを設定して指定した期間、テスト リソースを保持することにより、テスト > 修正 > 再テストのサイクルを高速化することができます。|-   [ロード テストを高速化するためにリソースを保持する](/azure/devops/test/load-test/getting-started-with-performance-testing?view=vsts)|
 |**コンテキスト パラメーターを使用する:** 文字列のパラメーター化にコンテキスト パラメーターを使用できます。 たとえば、ロード テストにパラメーター化された Web サーバーを使用する Web パフォーマンス テストを含めると、別のサーバーにマップするコンテキスト パラメーターを実行設定に追加できます。|-   [方法: 実行設定にコンテキスト パラメーターを追加する](../test/how-to-add-context-parameters-to-a-load-test-run-setting.md)|
 |**テスト ログ プロパティを構成する:** ロード テストの実行設定に関連付けられているログにデータを書き込む頻度を構成できます。 大規模で複雑なロード テストを実行するとログのサイズが数ギガバイトに達する場合があるので、この設定は重要です。<br /><br /> また、アプリケーションのデバッグと分析でロード テストが失敗したときにログ ファイルが自動的に保存されるように構成できます。|-   [ロード テストのログ設定の変更](../test/modify-load-test-logging-settings.md)|

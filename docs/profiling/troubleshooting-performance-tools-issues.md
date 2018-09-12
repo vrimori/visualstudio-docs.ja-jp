@@ -10,19 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db48b940fecb27dd4f41b5fc56f32ee2cc4f5f02
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 531080945413bbc0959d2cdf91e2096c1e51f61d
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34572346"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669331"
 ---
 # <a name="troubleshoot-performance-tools-issues"></a>パフォーマンス ツールに関する問題のトラブルシューティング
 プロファイリング ツールを使用するときに、次の問題のいずれかが発生する場合があります。  
   
--   [プロファイリング ツールでデータが収集されない](#NoDataCollected)  
+-   [プロファイリング ツールでデータが収集されない](#no-data-is-collected-by-the-profiling-tools)  
   
--   [パフォーマンス ビューとレポートに関数名ではなく番号が表示される](#NoSymbols)  
+-   [パフォーマンス ビューとレポートに関数名ではなく番号が表示される](#performance-views-and-reports-display-numbers-for-function-names)  
   
 ## <a name="no-data-is-collected-by-the-profiling-tools"></a>プロファイリング ツールでデータが収集されない  
  アプリケーションをプロファイルした後に、プロファイリング データ (.*vsp*) ファイルが作成されず、**[出力]** ウィンドウまたはコマンド ウィンドウに次の警告が表示されます。  

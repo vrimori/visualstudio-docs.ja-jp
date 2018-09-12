@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c8565e6169167089ac425d7c6689c517f5ca61d
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 8a5adc68df8b56d69389807e2e1502b2891c73a0
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567214"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384306"
 ---
 # <a name="code-snippets-schema-reference"></a>コード スニペット スキーマ リファレンス
 
@@ -176,7 +176,7 @@ Visual Studio Code ファイルに挿入できる見出しと複数の IntelliSe
 
 |子要素|説明|
 |-------------------|-----------------|
-|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet)|省略可能な要素です。 すべてのコード スニペット データを下位に持つ親要素です。 `CodeSnippet` 要素に 0 個以上の `CodeSnippets` 要素があります。|
+|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet-element)|省略可能な要素です。 すべてのコード スニペット データを下位に持つ親要素です。 `CodeSnippet` 要素に 0 個以上の `CodeSnippets` 要素があります。|
 
 ## <a name="declarations-element"></a>Declarations 要素
 
@@ -196,7 +196,7 @@ Visual Studio Code ファイルに挿入できる見出しと複数の IntelliSe
 
 |親要素|説明|
 |--------------------|-----------------|
-|[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
+|[Snippet 要素](../ide/code-snippets-schema-reference.md#snippet-element)|コード スニペットの参照、インポート、宣言、およびコードが格納されます。|
 
 ## <a name="default-element"></a>Default 要素
 
@@ -279,7 +279,7 @@ IntelliSense コード スニペットの一般情報を指定します。
 
 |親要素|説明|
 |--------------------|-----------------|
-|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet)|すべてのコード スニペット データを下位に持つ親要素です。|
+|[CodeSnippet 要素](../ide/code-snippets-schema-reference.md#codesnippet-element)|すべてのコード スニペット データを下位に持つ親要素です。|
 
 ## <a name="helpurl-element"></a>HelpUrl 要素
 
@@ -422,7 +422,7 @@ IntelliSense コード スニペットによって使用されるインポート
 
 |親要素|説明|
 |--------------------|-----------------|
-|[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations)|編集が可能なコード スニペットのリテラルおよびオブジェクトを保持します。|
+|[Declarations 要素](../ide/code-snippets-schema-reference.md#declarations-element)|編集が可能なコード スニペットのリテラルおよびオブジェクトを保持します。|
 
 ## <a name="namespace-element"></a>Namespace 要素
 
@@ -491,7 +491,7 @@ IntelliSense コード スニペットによって使用されるインポート
 
 |親要素|説明|
 |--------------------|-----------------|
-|[References 要素](../ide/code-snippets-schema-reference.md#references)|`Reference` 要素のグループ化要素です。|
+|[References 要素](../ide/code-snippets-schema-reference.md#references-element)|`Reference` 要素のグループ化要素です。|
 
 ## <a name="references-element"></a>References 要素
 

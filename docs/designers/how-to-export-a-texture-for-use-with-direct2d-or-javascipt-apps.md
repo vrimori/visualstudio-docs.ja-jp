@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4666bbd295f32e9782e445661c1a4736ec6c06c1
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 4fd6a2483ebd0255056f471a37744a5b358c185f
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924041"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44278817"
 ---
 # <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps"></a>方法: Direct2D または Javascipt アプリで使用するためのテクスチャをエクスポートする
 イメージ コンテンツ パイプラインにより、Direct2D の内部レンダリング規則と互換性のあるテクスチャを生成できます。 この種のテクスチャの用途に適しているのは、Direct2D を使用するアプリや、JavaScript で作成する UWP アプリです。
@@ -53,7 +53,7 @@ ms.locfileid: "37924041"
 
 2.  イメージ コンテンツ パイプラインによって処理されるようにテクスチャ ファイルを構成します。 **ソリューション エクスプローラー**で、先ほど作成したテクスチャ ファイルのショートカット メニューを開き、**[プロパティ]** をクリックします。 **[構成プロパティ]** > **[全般]** ページの順に進み、**[項目の種類]** を **[Image Content Pipeline]\(イメージ コンテンツ パイプライン\)** に設定します。 **[コンテンツ]** が **[はい]** に、**[ビルドから除外]** が **[いいえ]** に設定されていることを確認し、**[適用]** ボタンをクリックします。 **[イメージ コンテンツ パイプライン]** の構成プロパティ ページが表示されます。
 
-3.  出力形式を、いずれかのブロック圧縮形式に設定します。 **[構成プロパティ]** で、**[イメージ コンテンツ パイプライン]**、**[全般]** ページの順にクリックし、**[圧縮]** プロパティを **[BC3_UNORM 圧縮 (/compress:BC3_UNORM)]** に設定します。 要件に応じて、他の BC1、BC2、または BC3 形式を選択することもできます。 Direct2D では現在、BC4、BC5、BC6、または BC7 テクスチャはサポートされていません。 各種の BC 形式の詳細については、「[ブロック圧縮 (Direct3D 10)](http://msdn.microsoft.com/library/windows/desktop/bb694531.aspx)」を参照してください。
+3.  出力形式を、いずれかのブロック圧縮形式に設定します。 **[構成プロパティ]** で、**[イメージ コンテンツ パイプライン]**、**[全般]** ページの順にクリックし、**[圧縮]** プロパティを **[BC3_UNORM 圧縮 (/compress:BC3_UNORM)]** に設定します。 要件に応じて、他の BC1、BC2、または BC3 形式を選択することもできます。 Direct2D では現在、BC4、BC5、BC6、または BC7 テクスチャはサポートされていません。 各種の BC 形式の詳細については、「[ブロック圧縮 (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression)」を参照してください。
 
     > [!NOTE]
     >  指定した圧縮形式により、イメージ コンテンツ パイプラインによって生成されるファイルの形式が決まります。 これは、イメージ エディターからソース イメージの **[形式]** で指定する形式とは異なります。[形式] で指定するのは、ソース イメージ ファイルがディスクに格納されるときのファイル形式 (*作業形式*) です。 通常、圧縮された作業形式は必要ありません。

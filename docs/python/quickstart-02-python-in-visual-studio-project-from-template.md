@@ -1,7 +1,7 @@
 ---
 title: クイック スタート - テンプレートを使用して Python プロジェクトを作成する
 description: このクイック スタートでは、基本的な Flask アプリ用の組み込みテンプレートを使用し、Python 向けの Visual Studio プロジェクトを作成します。
-ms.date: 05/07/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: quickstart
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3478e5b6156cdcf9c1aa6d814cb3cdd35e9579d1
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: b9f361ba73f8fd1d3963ca39a90ac01ba9effe6f
+ms.sourcegitcommit: 9ea4b62163ad6be556e088da1e2a355f31366f39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586499"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43996003"
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>クイック スタート: Visual Studio のテンプレートから Python プロジェクトを作成する
 
@@ -76,8 +76,7 @@ ms.locfileid: "39586499"
 
 1. **[デバッグ]** > **[デバッグなしで開始]** を選択し、アプリを実行してブラウザーで `localhost:5555` を開きます。
 
-
-  **質問: Visual Studio には他にどのような Python テンプレートがありますか。**
+**質問: Visual Studio には他にどのような Python テンプレートがありますか。**
 
 **回答**: Python ワークロードをインストールすると、Visual Studio にはさまざまなプロジェクト テンプレートが用意されます。[Flask、Bottle、Django Web フレームワーク](../python/python-web-application-project-templates.md)、Azure クラウド サービス、さまざまな機械学習シナリオのためのテンプレートなどがあります。Python アプリを含む既存のフォルダー構造からプロジェクトを作成するテンプレートまであります。 テンプレートには、**Python** 言語ノードとその子ノードを選択することで、**[ファイル]** > **[新規]** > **[プロジェクト]** ダイアログからアクセスできます。
 

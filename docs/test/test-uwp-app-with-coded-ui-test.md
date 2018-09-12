@@ -12,12 +12,12 @@ dev_langs:
 - VB
 ms.workload:
 - uwp
-ms.openlocfilehash: 081c61cb0d5a2db28b04ebdd12fd53713b41363f
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 92764cbb78dfc11b718d2640cd059febe913a9b2
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34694094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669395"
 ---
 # <a name="create-a-coded-ui-test-to-test-a-uwp-app"></a>UWP アプリをテストするためのコード化された UI テストの作成
 
@@ -128,7 +128,7 @@ ms.locfileid: "34694094"
         Assert.AreEqual(Me.AssertMethod1ExpectedValues.UITextBoxEditText, uITextBoxEdit.Text, "Textbox value is unexpected.")
     End Sub
     ```
-1. 次に、テストする UWP [アプリ](#create-a-simple-universal-windows-app)の **AutomationId** を取得する必要があります。 Windows の **[スタート]** メニューを開き、アプリのタイルを表示します。 その後、十字線ツール ![ターゲット アイコン](media/target-icon.png) を **[コード化された UI テスト ビルダー]** ダイアログからアプリのタイルにドラッグします。 タイルが青色のボックスで囲まれている場合は、マウスを放します。
+1. 次に、テストする UWP [アプリ](#create-a-uwp-app-to-test)の **AutomationId** を取得する必要があります。 Windows の **[スタート]** メニューを開き、アプリのタイルを表示します。 その後、十字線ツール ![ターゲット アイコン](media/target-icon.png) を **[コード化された UI テスト ビルダー]** ダイアログからアプリのタイルにドラッグします。 タイルが青色のボックスで囲まれている場合は、マウスを放します。
 
    ![十字線ツール](media/cross-hair-tool.png)
 

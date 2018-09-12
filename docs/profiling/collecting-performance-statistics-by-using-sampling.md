@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fef6883056affd6ee47da86d8f2860c8c9ca047
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 4085fa30d1732e6943453a85d25fee2638fa0638
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34548259"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774631"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>サンプリングを使用したパフォーマンス統計情報の収集
 
@@ -34,11 +34,11 @@ ms.locfileid: "34548259"
 
 ## <a name="common-tasks"></a>一般的なタスク
 
-追加のオプションを、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:
+追加のオプションを、パフォーマンス セッションの [ _パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できます。 このダイアログ ボックスを開くには:
 
 - **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。
 
- 次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、*[パフォーマンス セッション]* の **[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
+ 次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
 
 |タスク|関連するコンテンツ|
 |----------|---------------------|
