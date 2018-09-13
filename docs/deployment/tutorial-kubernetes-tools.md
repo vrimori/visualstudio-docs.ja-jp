@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: f842d1f9c103e9673d3295b2b285498d6ff58045
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 778ad9112d4133871bd15292847d21af73c3ad86
+ms.sourcegitcommit: 12e2f963dac76d53f87569c01198f6d0396d64cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138944"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44701710"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
@@ -38,7 +38,7 @@ Visual Studio の Kubernetes ツールは、Kubernetes を対象とするコン�
 
     1.  Helm CLI の開発ワークステーションにインストールします。 詳細については、次を参照してください。 [Helm のインストール](https://github.com/kubernetes/helm/blob/master/docs/install.md)します。
 
-    1.  Helm は AKS クラスターを構成します。 これを行う方法の詳細については、次を参照してください。 [Helm を構成する方法](/azure/aks/kubernetes-helm#configure-helm)します。
+    1.  Helm を使用して、AKS クラスターに対して構成されている、`helm init`コマンド。 これを行う方法の詳細については、次を参照してください。 [Helm を構成する方法](/azure/aks/kubernetes-helm#configure-helm)します。
 
 ## <a name="create-a-new-kubernetes-project"></a>新しい Kubernetes プロジェクトを作成します。
 
@@ -82,7 +82,7 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
 作成したら、希望どおりに実行されているコードを AKS クラスターに Visual Studio から直接発行することができます。
 
-これを行うには、まず、コンテナー イメージを Azure Container Registry (ACR) を発行する発行プロファイルを設定する必要があります。 AKS は ACR からコンテナー イメージをプルし、クラスターに配置できます。
+これを行うには、まずに再確認をインストールしているすべてのもの」の説明に従って、[の前提条件](#prerequisities)AKS に発行するための項目の下のセクションし、リンクで指定されたすべてのコマンドライン手順を実行します。 次に、コンテナー イメージを Azure Container Registry (ACR) を発行する発行プロファイルを設定します。 AKS は ACR からコンテナー イメージをプルし、クラスターに配置できます。
 
 1. **ソリューション エクスプ ローラー**を右クリックし、*プロジェクト*選択**発行**します。
 
