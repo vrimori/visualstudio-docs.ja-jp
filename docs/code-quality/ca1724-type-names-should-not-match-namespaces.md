@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3944aba1a8b967e8da2bee007a4bbd4bacf4d6b1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c178558743ca69fb3b62eccaf8164e4b49167ad3
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915829"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547569"
 ---
 # <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: 型名は名前空間と同一にすることはできません
 |||
@@ -40,5 +40,5 @@ ms.locfileid: "31915829"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  名前に一致しない型の名前を選択して、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリの名前空間。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 新しい開発では、されていないシナリオでは、この規則による警告を抑制する必要がありますが発生します。 警告を抑制する前に一致する名前で、ライブラリのユーザーを混同可能性がある方法慎重に検討します。 ライブラリを配布するには、この規則による警告を抑制する必要があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 新たに開発されていないシナリオが発生する、この規則による警告を抑制する必要があります。 警告を抑制する前に一致する名前で、ライブラリのユーザーを混乱する可能性がある方法慎重に検討してください。 ライブラリを配布するには、この規則による警告を抑制する必要があります。

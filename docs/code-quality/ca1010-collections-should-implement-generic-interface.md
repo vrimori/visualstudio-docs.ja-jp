@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb43481b80726171414fab6b6a65fee8a5e29cb0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f79a0e4fcb9cf4f82b85e9d62ffa51ef969293c7
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31902017"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551000"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません
 |||
@@ -32,60 +32,60 @@ ms.locfileid: "31902017"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- 外部から参照できる型が実装する、<xref:System.Collections.IEnumerable?displayProperty=fullName>インターフェイスしますが、実装されません、<xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>インターフェイスと、包含アセンブリの対象[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。 この規則を実装する型<xref:System.Collections.IDictionary?displayProperty=fullName>です。
+ 外部から参照の型を実装して、<xref:System.Collections.IEnumerable?displayProperty=fullName>インターフェイスしますが、実装されません、<xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>インターフェイス、および含んでいるアセンブリのターゲット[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。 この規則を実装する型<xref:System.Collections.IDictionary?displayProperty=fullName>します。
 
 ## <a name="rule-description"></a>規則の説明
- コレクションの操作性を拡充するために、ジェネリック コレクション インターフェイスの 1 つを実装します。 コレクションは、次などのジェネリック コレクション型を設定を使用できます。
+ コレクションの操作性を拡充するために、ジェネリック コレクション インターフェイスの 1 つを実装します。 次などのジェネリック コレクション型を設定するコレクションを使用できます。
 
--   <xref:System.Collections.Generic.List%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.List%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、次のジェネリック コレクション インターフェイスの 1 つを実装します。
 
--   <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>
 
--   <xref:System.Collections.Generic.IList%601?displayProperty=fullName>
+- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告を抑制しても安全です。ただし、コレクションより限定的に使用があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告を抑制しても安全です。ただし、コレクションより限定的な使用があります。
 
-## <a name="example-violation"></a>違反の例
+## <a name="example-violation"></a>例の違反
 
 ### <a name="description"></a>説明
- 次の例では、非ジェネリックから派生するクラス (参照型)`CollectionBase`クラスは、この規則に違反します。
+ 次の例では、非ジェネリックから派生したクラス (参照型)`CollectionBase`クラスは、この規則に違反します。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]
 
 ### <a name="comments"></a>コメント
- この規則違反を修正する必要がありますか、ジェネリック インターフェイスを実装または変更する、基本クラス既になど両方ジェネリックと非ジェネリック インターフェイスを実装する型を`Collection<T>`クラスです。
+ この規則違反を修正するのにする必要がありますジェネリック インターフェイスを実装するかを既になど両方、ジェネリックと非ジェネリック インターフェイスを実装する型に基本クラスを変更、`Collection<T>`クラス。
 
 ## <a name="fix-by-base-class-change"></a>基本クラスの変更を修正します。
 
 ### <a name="description"></a>説明
- 次の例から、非ジェネリック コレクションの基本クラスを変更することで違反を修正する`CollectionBase`ジェネリック クラス`Collection<T>`(`Collection(Of T)`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) クラス。
+ 次の例から、非ジェネリック コレクションの基本クラスを変更することで、違反を修正する`CollectionBase`クラスをジェネリック`Collection<T>`(`Collection(Of T)`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) クラス。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]
 
 ### <a name="comments"></a>コメント
- 既にリリースされてクラスの基本クラスを変更すると、既存のコンシューマーに重大な変更と見なされます。
+ リリース済みのクラスの基本クラスを変更すると、既存のコンシューマーに重大な変更と見なされます。
 
 ## <a name="fix-by-interface-implementation"></a>インターフェイスの実装を修正します。
 
 ### <a name="description"></a>説明
- 次の例は、これらのジェネリック インターフェイスを実装することで違反を修正: `IEnumerable<T>`、 `ICollection<T>`、および`IList<T>`(`IEnumerable(Of T)`、 `ICollection(Of T)`、および`IList(Of T)`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。
+ 次の例では、これらのジェネリック インターフェイスを実装することで、違反を修正する: `IEnumerable<T>`、 `ICollection<T>`、および`IList<T>`(`IEnumerable(Of T)`、 `ICollection(Of T)`、および`IList(Of T)`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1000: ジェネリック型の静的メンバーを宣言しません](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)

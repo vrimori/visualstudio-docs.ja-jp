@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f4cb5579e8632b97300a768bb203ddd3056bd72
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 817c2215245412faf0bb30d46aec40a953f239b5
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31897118"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546851"
 ---
 # <a name="ca1409-com-visible-types-should-be-creatable"></a>CA1409: COM 参照可能な型は作成可能でなければなりません
+
 |||
 |-|-|
 |TypeName|ComVisibleTypesShouldBeCreatable|
@@ -32,23 +33,25 @@ ms.locfileid: "31897118"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- コンポーネント オブジェクト モデル (COM) を参照できると明確にマークされている参照型では、パブリックのパラメーター化されたコンス トラクターが含まれていますが、パブリックの既定 (パラメーターなし) コンス トラクターが含まれていません。
+ コンポーネント オブジェクト モデル (COM) を参照できると明確にマークされている参照型では、パブリックのパラメーター化されたコンス トラクターが含まれていますが、(パラメーターなしの) パブリックの既定のコンス トラクターが含まれていません。
 
 ## <a name="rule-description"></a>規則の説明
- COM クライアントで既定のパブリック コンス トラクターのない型を作成できません。 ただし、型もアクセスできます COM クライアントで別の方法がある型を作成し、(たとえば、メソッド呼び出しの戻り値) を使用してクライアントに渡す場合。
+ COM クライアントでは、パブリックの既定のコンス トラクターのない型を作成できません。 ただし、種類もアクセスできます COM クライアントで別の手段の種類を作成し (たとえば、メソッド呼び出しの戻り値) を使用してクライアントに渡すことがある場合。
 
- この規則から派生した<xref:System.Delegate?displayProperty=fullName>です。
+ 派生した型を規則<xref:System.Delegate?displayProperty=fullName>します。
 
- 既定では、次が COM 参照可能な: アセンブリ、パブリックな型、パブリック型は、パブリック インスタンス メンバーおよびパブリック値型のすべてのメンバーです。
+ 既定では、次は COM から参照できる: アセンブリ、型のパブリック、パブリック型は、パブリック インスタンス メンバーおよびパブリック値型のすべてのメンバー。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、既定のパブリック コンス トラクターを追加または削除、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>型からです。
+ このルールの違反を修正するには、既定のパブリック コンス トラクターを追加または削除、<xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>型から。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 作成し、COM クライアントにオブジェクトを渡す他の方法が用意されている場合、この規則による警告を抑制しても安全であります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ COM クライアントを作成し、オブジェクトを他の方法が提供されている場合は、この規則による警告を抑制するのには安全です。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1017: アセンブリに ComVisibleAttribute を設定します](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>関連項目
- [相互運用のための .NET 型の条件を満たす](/dotnet/framework/interop/qualifying-net-types-for-interoperation)[アンマネージ コードと相互運用](/dotnet/framework/interop/index)
+
+- [要件 (相互運用のための .NET 型の)](/dotnet/framework/interop/qualifying-net-types-for-interoperation)
+- [アンマネージ コードとの相互運用](/dotnet/framework/interop/index)

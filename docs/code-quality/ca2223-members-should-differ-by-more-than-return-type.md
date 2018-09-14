@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aaa7671f1aa110edd42897111e746e62eab8048
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 93822dd3db325e3463c4a8f175c8ca289cac9e5d
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31922471"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549827"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: メンバーは、戻り値の型以外にも異なる点がなければなりません
+
 |||
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
@@ -32,22 +33,21 @@ ms.locfileid: "31922471"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 2 つのパブリックまたはプロテクト メンバーは、戻り値の型を除いて同一であるシグネチャを持っています。
+ 2 つのパブリックまたはプロテクト メンバーは、戻り値の型以外はまったく同じシグネチャを持っています。
 
 ## <a name="rule-description"></a>規則の説明
- 共通言語ランタイムでは、それ以外の場合と同じメンバーの区別に戻り値の型を使用できますが、この機能は共通の言語仕様ではなく、.NET プログラミング言語の共通機能でもありません。 メンバーは、戻り値の型によってのみが異なる場合、開発者や開発ツールがありますいない正しく区別します。
+ 共通言語ランタイムでは、それ以外の場合と同じメンバーを区別するために、戻り値の型を使用できますが、この機能は、共通言語仕様では、.NET プログラミング言語の一般的な機能でもありません。 メンバーは、戻り値の型によってのみが異なる場合、開発者や開発ツール可能性がありますいない正しく区別します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、一意の名前とパラメーターの型だけに基づいてまたはされるメンバーを公開しないようにメンバーのデザインを変更します。
+ この規則違反を修正するのには一意の名前とパラメーターの型のみに基づいて、またはメンバーを公開しないようにメンバーのデザインを変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
  次の例では、Microsoft intermediate language (MSIL) には、この規則に違反する型を示します。 C# または Visual Basic を使用してこの規則に違反することはできないことに注意してください。
 
 ```
-
 .namespace UsageLibrary
 {
   .class public auto ansi beforefieldinit ReturnTypeTest
@@ -94,5 +94,4 @@ ms.locfileid: "31922471"
   } // end of class ReturnTypeTest
 
 } // end of namespace UsageLibrary
-
 ```

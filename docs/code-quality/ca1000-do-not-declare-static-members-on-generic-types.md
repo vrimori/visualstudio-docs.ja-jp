@@ -14,16 +14,20 @@ ms.assetid: 5c0da594-f8d0-4f40-953d-56bf7fbd2087
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b491d49a6bd9a7ffc1164c6cfa45b5260b339192
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ec0e60302e1d6bff813a7bf0f39e1b71a6f1653
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31899379"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548386"
 ---
 # <a name="ca1000-do-not-declare-static-members-on-generic-types"></a>CA1000: ジェネリック型の静的メンバーを宣言しません
+
 |||
 |-|-|
 |TypeName|DoNotDeclareStaticMembersOnGenericTypes|
@@ -32,10 +36,10 @@ ms.locfileid: "31899379"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 外部から参照できるジェネリック型が含まれています、 `static` (`Shared` Visual Basic で) メンバー。
+ 外部から参照のジェネリック型が含まれています、 `static` (`Shared` Visual Basic で) メンバー。
 
 ## <a name="rule-description"></a>規則の説明
- ときに、`static`ジェネリック型のメンバーが呼び出されると、型の型引数を指定する必要があります。 推論をサポートしないジェネリック インスタンス メンバーを呼び出すときには、そのメンバーに型引数を指定する必要があります。 これら 2 つの場合、型引数を指定する構文は異なりますが、混同、次の呼び出しが示すようにします。
+ ときに、`static`ジェネリック型のメンバーが呼び出されると、型に対して型引数を指定する必要があります。 推論をサポートしないジェネリック インスタンス メンバーを呼び出すときには、そのメンバーに型引数を指定する必要があります。 これら 2 つの場合、型引数を指定する構文では、異なるが、混同、次の呼び出しが示すようには。
 
 ```vb
 ' Shared method in a generic type.
@@ -53,15 +57,15 @@ GenericType<int>.StaticMethod();
 someObject.GenericMethod<int>();
 ```
 
- 一般に、型引数が、メンバーが呼び出されたときに指定する必要があるないように、この前の宣言の両方を避ける必要があります。 これは、結果、構文では、非ジェネリックの構文と同じジェネリック型のメンバーを呼び出す。 詳細については、次を参照してください。 [ca 1004: ジェネリック メソッドが型パラメーターを指定する必要があります](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)です。
+ 一般に、型引数が、メンバーを呼び出すときに指定する必要があるないように、この両方の以前の宣言を回避する必要があります。 これにより、構文での非ジェネリックの構文の違いもなく、ジェネリック型のメンバーを呼び出すことです。 詳細については、次を参照してください。 [ca 1004: ジェネリック メソッドは、型パラメーターを指定する必要があります](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、静的メンバーを削除またはインスタンス メンバーを変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 新しいライブラリの導入速度になり習得に必要な時間が短縮を簡単に理解し、使用する構文でジェネリック型を提供することです。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告は抑制しないでください。 ジェネリックでは簡単に理解して使用する構文を提供するには、習得に必要なされ、新しいライブラリの導入速度を向上する時間が短縮されます。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません](../code-quality/ca1010-collections-should-implement-generic-interface.md)

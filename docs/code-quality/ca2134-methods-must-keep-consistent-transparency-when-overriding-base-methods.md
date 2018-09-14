@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c02ce23c341df377bc16b56cdd85769acf5582c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0f56b81f3f3ce16f509f29791e28992402c222f9
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917747"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45552004"
 ---
 # <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: メソッドは、基本メソッドをオーバーライドしている場合、透過性の整合性を保つ必要がある
 |||
@@ -28,20 +28,20 @@ ms.locfileid: "31917747"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- この規則はメソッドが付いている場合、<xref:System.Security.SecurityCriticalAttribute>は透過的またはでマークされているメソッドをオーバーライドして、<xref:System.Security.SecuritySafeCriticalAttribute>です。 規則は、ときに、透過的またはでマークされたメソッドを<xref:System.Security.SecuritySafeCriticalAttribute>でマークされているメソッドをオーバーライドして、<xref:System.Security.SecurityCriticalAttribute>です。
+ マークされたメソッドと、この規則が適用されます、<xref:System.Security.SecurityCriticalAttribute>を透明またはでマークされたメソッドをオーバーライドして、<xref:System.Security.SecuritySafeCriticalAttribute>します。 このルールは、ときに透明またはでマークされたメソッドにも発生、<xref:System.Security.SecuritySafeCriticalAttribute>でマークされているメソッドをオーバーライドして、<xref:System.Security.SecurityCriticalAttribute>します。
 
  この規則は、仮想メソッドをオーバーライドする場合やインターフェイスを実装する場合に適用されます。
 
 ## <a name="rule-description"></a>規則の説明
- このルールは、継承チェーンをさらにメソッドのセキュリティ アクセシビリティを変更しようとすると発生します。 たとえば、基底クラス仮想メソッドが透過的またはセーフ クリティカルである場合、し、派生クラスは、する必要がありますメソッドをオーバーライド透過的またはセーフ クリティカルなメソッドを使用しています。 逆に、仮想がセキュリティ クリティカルな場合、派生クラス必要がありますをセキュリティ クリティカルなメソッドを使用してオーバーライドします。 インターフェイス メソッドを実装するため、同じ規則が適用されます。
+ このルールは、継承チェーンをさらにメソッドのセキュリティのアクセシビリティの変更の試行に対して適用されます。 たとえば場合は、基底クラス仮想メソッドは、transparent またはセーフ クリティカルには、派生クラスする必要がありますオーバーライド透明またはセーフ クリティカル メソッドを使用。 逆に、仮想がセキュリティ クリティカルな場合、派生クラスする必要がありますをセキュリティの重要なメソッドを使用してオーバーライドします。 インターフェイス メソッドを実装するため、同じ規則が適用されます。
 
- 透過性の計算に動的な型情報が必要があるないように、コードが JIT の代わりに、実行時にコンパイルされたとき、透過性規則が適用されます。 したがって、透過性の計算の結果は、動的な型に関係なく、JIT でコンパイルされた静的な型からのみを特定することができる必要があります。
+ 透過性の計算には動的な型情報がないように、コードが JIT の代わりに、実行時にコンパイルされた場合、透過性規則が適用されます。 そのため、透過性の計算の結果は、動的な型に関係なく、JIT でコンパイルされた静的な型からのみ判断できる必要があります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するが仮想メソッドをオーバーライドするか、仮想の透明度またはインターフェイスのメソッドに一致するインターフェイスを実装するメソッドの透明度を変更します。
+ この規則違反を修正するには、仮想メソッドをオーバーライドするか、仮想の透明度またはインターフェイスのメソッドと一致するインターフェイスを実装するメソッドの透明度を変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 ランタイムにこの規則の違反が発生<xref:System.TypeLoadException>レベル 2 の透過性を使用するアセンブリ。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ このルールからの警告を抑制しないでください。 この規則の違反が、ランタイムで発生<xref:System.TypeLoadException>レベル 2 の透過性を使用するアセンブリ。
 
 ## <a name="examples"></a>使用例
 

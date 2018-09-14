@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d402bec5bf9c79b845f3bfa643c65fc07359a09
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f4dac6beddf43e88d47a54ddf2b0e0d56e387038
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900120"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547204"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: アクセラレータが重複しないようにします
+
 |||
 |-|-|
 |TypeName|AvoidDuplicateAccelerators|
@@ -32,23 +33,26 @@ ms.locfileid: "31900120"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- 型拡張<xref:System.Windows.Forms.Control?displayProperty=fullName>リソース ファイルに格納されている同じアクセス キーを持つ 2 つ以上の最上位レベルのコントロールが含まれています。
+ 型拡張<xref:System.Windows.Forms.Control?displayProperty=fullName>リソース ファイルに格納されている同じアクセス キーを持つ 2 つまたは複数のトップレベル コントロールが含まれています。
 
 ## <a name="rule-description"></a>規則の説明
- Alt キーを使用するアクセス キー (アクセラレータとも呼ばれます) によって、キーボードからコントロールにアクセスできます。 アクセス キーの重複したコントロールがあると、アクセス キーの動作は不明確になります。 ユーザーをアクセス キーを使用して目的のコントロールにアクセスすることができない可能性があり、なっているもの以外のコントロールを有効にすることがあります。
 
- このルールの現在の実装では、メニュー項目を無視します。 ただし、同じサブメニューのメニュー項目では、同じアクセス キーの必要はありません。
+アクセス キーをアクセラレータとも呼ばれますが、使用してキーボード コントロールへのアクセスを可能、 **Alt**キー。 複数のコントロールと同じアクセス キーがある、アクセス キーの動作は定義されていません。 ユーザーは、アクセス キーを使用して目的のコントロールにアクセスできない可能性があり、想定されているもの以外のコントロールが有効になっています。
+
+このルールの現在の実装では、メニュー項目は無視されます。 ただし、同じサブメニューのメニュー項目では、同じアクセス キーは必要ありません。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、すべてのコントロールの一意のアクセス キーを定義します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
- 次の例は、最小限のと同じアクセス キーを持つ 2 つのコントロールを含むフォームを示しています。 キーが示されていません。 リソース ファイルに格納されています。ただし、その値は、コメントに表示されます。 out`checkBox.Text`行です。 重複するアクセラレータの動作を交換することで調べることができます、`checkBox.Text`対応コメント アウトすると行です。 ただし、ここでは、例では、生成されません警告ルールから。
+ 次の例では、同じアクセス キーを持つ 2 つのコントロールが含まれた最小限のフォームを示します。 キーは、示されていませんが、リソース ファイルに格納されます。 ただし、その値は、コメント付きで表示されます。 out`checkBox.Text`行。 重複するアクセラレータの動作を交換することで調べることができます、`checkBox.Text`のコメント アウトされた対応する行。 ただし、ここでは、例では、生成されません警告ルールから。
 
  [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Resources.ResourceManager?displayProperty=fullName> [デスクトップ アプリでのリソース](/dotnet/framework/resources/index)
+
+- <xref:System.Resources.ResourceManager?displayProperty=fullName>
+- [デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)

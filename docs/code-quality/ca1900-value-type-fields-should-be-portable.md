@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9add21d932f7685a2dee214f396b2cbda089a5a5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4608812c85764125e9cf33dba0e4b0d0b80bbaed
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917216"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550558"
 ---
 # <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900: 値型フィールドはポータブルでなければなりません
 |||
@@ -29,16 +29,16 @@ ms.locfileid: "31917216"
 |TypeName|ValueTypeFieldsShouldBePortable|
 |CheckId|CA1900|
 |カテゴリ|Microsoft.Portability|
-|互換性に影響する変更点|互換性に影響するの場合は、フィールドは、アセンブリ外見なすことができます。<br /><br /> 非区切りのフィールドがアセンブリの外側に表示されていない場合。|
+|互換性に影響する変更点|– 場合、アセンブリの外側にフィールドを確認できます。<br /><br /> 改行のフィールドが、アセンブリの外部に表示されない場合。|
 
 ## <a name="cause"></a>原因
- このルールは、明示的なレイアウトで宣言されている構造体が、64 ビット オペレーティング システムでアンマネージ コードにマーシャ リングするときに、適切にアライメントされるを確認します。 アライメントされていないメモリにアクセスし、この違反が修正されていない場合、プロセスがクラッシュ、ia-64 では許可されません。
+ このルールは、明示的なレイアウトで宣言された構造体が、64 ビット オペレーティング システムのアンマネージ コードにマーシャ リングするときに、適切にアライメントされるかを確認します。 Ia-64 では、アラインされていないメモリにアクセスし、この違反が固定されていない場合、プロセスがクラッシュは許可されません。
 
 ## <a name="rule-description"></a>規則の説明
- 64 ビット オペレーティング システムでクラッシュを発生ずれているフィールドを含む明示的なレイアウトを含む構造体。
+ 構造体で明示的なレイアウトを含む 64 ビット オペレーティング システムでクラッシュするフィールドの不整合が発生します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 複数オフセット 8 の倍数である必要がありますか、そのサイズの倍数であるオフセットとフィールドは 8 バイト、8 バイト未満であるすべてのフィールドがあります。 別のソリューションは、使用する`LayoutKind.Sequential`の代わりに`LayoutKind.Explicit`妥当な場合は、します。
+ 詳細はオフセットが 8 の倍数である必要があります。 または 8 バイト未満であるすべてのフィールドはオフセット、サイズの倍数である、および 8 バイトであるフィールドにあります。 別のソリューションは、使用する`LayoutKind.Sequential`の代わりに`LayoutKind.Explicit`妥当な場合は、します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- エラーの発生した場合にのみ、この警告を抑制する必要があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ エラーが発生した場合にのみ、この警告を抑制する必要があります。

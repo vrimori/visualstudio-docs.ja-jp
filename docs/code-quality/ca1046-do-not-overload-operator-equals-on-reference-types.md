@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6809534d14b58d60759133e972b5220fcfd58d61
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3f0aeb519fdc22d3fb68812d24979c7aa6c23f85
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31899751"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551708"
 ---
 # <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: 参照型で、演算子 equals をオーバーロードしないでください
+
 |||
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
@@ -32,16 +33,16 @@ ms.locfileid: "31899751"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- パブリックまたは入れ子になったパブリック参照型では、等値演算子がオーバー ロードします。
+ パブリックまたは入れ子になったパブリック参照型は、等値演算子をオーバー ロードします。
 
 ## <a name="rule-description"></a>規則の説明
  参照型の場合、等値演算子は既定の実装でほぼ問題がありません。 既定で、2 つの参照が等値と見なされるのは、同じオブジェクトを参照する場合のみです。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、等値演算子の実装を削除します。
+ この規則違反を解決するには、等値演算子の実装を削除します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 参照型が組み込みの値の型と同様に動作する場合は、この規則による警告を抑制するのには安全です。 型のインスタンスで加算または減算を実行する意味である場合、正しく可能性があります、等値演算子を実装して、抑制する状況、違反が発生します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 参照型は組み込みの値型のように動作する場合は、この規則による警告を抑制するのには安全です。 型のインスタンスで加算または減算を実行する意味場合は、等値演算子を実装し、違反を抑制するのには正しい可能性があります。
 
 ## <a name="example"></a>例
  次の例は、2 つの参照を比較するときに、既定の動作を示します。
@@ -49,18 +50,25 @@ ms.locfileid: "31899751"
  [!code-csharp[FxCop.Design.RefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_1.cs)]
 
 ## <a name="example"></a>例
- 次のアプリケーションでは、いくつかの参照を比較します。
 
- [!code-csharp[FxCop.Design.TestRefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_2.cs)]
+次のアプリケーションでは、いくつかの参照を比較します。
 
- この例を実行すると、次の出力が生成されます。
+[!code-csharp[FxCop.Design.TestRefTypesNoEqualityOp#1](../code-quality/codesnippet/CSharp/ca1046-do-not-overload-operator-equals-on-reference-types_2.cs)]
 
- **新しい (2, 2) と b を = = 新しい (2, 2) が等しいか?いいえ**
-**c とが等しいか?[はい]**
-**b は = = しますか?いいえ**
-**と a c = = しますか?うん**
-## <a name="related-rules"></a>関連規則
- [CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
+この例を実行すると、次の出力が生成されます。
+
+```txt
+a = new (2,2) and b = new (2,2) are equal? No
+c and a are equal? Yes
+b and a are == ? No
+c and a are == ? Yes
+```
+
+## <a name="related-rules"></a>関連するルール
+
+[CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Object.Equals%2A?displayProperty=fullName> [等値演算子](/dotnet/standard/design-guidelines/equality-operators)
+
+- <xref:System.Object.Equals%2A?displayProperty=fullName>
+- [等値演算子](/dotnet/standard/design-guidelines/equality-operators)

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a33d6e0301894b23f4671e16b24ea0b34eac4904
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9bcc9e33974d2af824444aae586c4d429de1cdd4
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31918495"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549405"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823: 使用されていないプライベート フィールドを使用しません
 |||
@@ -40,10 +40,10 @@ ms.locfileid: "31918495"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、フィールドを削除するか、それを使用するコードを追加します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告を抑制しても安全です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ このルールから警告を抑制しても安全です。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1812: インスタンス化されていない内部クラスを使用しないでください](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
  [CA1801: 使用されていないパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)

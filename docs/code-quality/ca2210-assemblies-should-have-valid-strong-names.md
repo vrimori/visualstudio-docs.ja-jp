@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b7fb5f55ee345fa47a4a4510fe8121b82d1c0ae
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e087a7be95cfc6ba97d62720f2950672ca4bf199
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919639"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545594"
 ---
 # <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: アセンブリには有効な厳密な名前が必要です
+
 |||
 |-|-|
 |TypeName|AssembliesShouldHaveValidStrongNames|
@@ -32,66 +33,74 @@ ms.locfileid: "31919639"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- アセンブリが厳密な名前で署名されていない、厳密な名前を検証できませんでした、または厳密な名前をコンピューターの現在のレジストリ設定なしでも有効にすることはできません。
+
+アセンブリが厳密な名前で署名されていないと、厳密な名前を確認できませんでした、または、厳密な名前をコンピューターの現在のレジストリ設定なしでも有効にすることはできません。
 
 ## <a name="rule-description"></a>規則の説明
- このルールは、取得し、アセンブリの厳密な名前を確認します。 違反は、次のいずれかに当てはまる場合に発生します。
 
--   アセンブリの厳密な名前ではありません。
+このルールを取得し、アセンブリの厳密な名前を確認します。 違反は、次のいずれかに当てはまる場合に発生します。
 
--   アセンブリが署名後に変更されました。
+- アセンブリの厳密な名前ではありません。
 
--   アセンブリに遅延署名します。
+- アセンブリが署名後に変更されました。
 
--   アセンブリが正しく署名されていない、または署名できませんでした。
+- アセンブリは、遅延署名します。
 
--   アセンブリには、レジストリ設定の検証に合格する必要があります。 たとえば、アセンブリの検証をスキップする、厳密名ツール (Sn.exe) が使用されました。
+- アセンブリが正しく署名されていない、または署名に失敗しました。
 
- 厳密な名前によって、改ざんされたアセンブリを、クライアントが無意識のうちに読み込む問題を防ぐことができます。 厳密な名前のないアセンブリが配置される状況は、限定されます。 適切に署名されていないアセンブリを共有または配布すると、アセンブリが改ざんされる場合、共通言語ランタイムでアセンブリを読み込むことができない場合、またはユーザーのコンピューターで検証を無効にする必要がある場合などの問題が考えられます。 厳密な名前のないアセンブリでは、次の欠点があります。
+- アセンブリには、レジストリ設定の検証に合格する必要があります。 たとえば、アセンブリの検証をスキップする厳密な名前ツール (Sn.exe) が使用されました。
 
--   その元のドメインを確認できません。
+厳密な名前によって、改ざんされたアセンブリを、クライアントが無意識のうちに読み込む問題を防ぐことができます。 厳密な名前のないアセンブリが配置される状況は、限定されます。 適切に署名されていないアセンブリを共有または配布すると、アセンブリが改ざんされる場合、共通言語ランタイムでアセンブリを読み込むことができない場合、またはユーザーのコンピューターで検証を無効にする必要がある場合などの問題が考えられます。 厳密な名前のないアセンブリを持つ次の欠点があります。
 
--   共通言語ランタイムは、アセンブリの内容が変更されたかどうかをユーザーに警告ことはできません。
+- その生成元を検証できません。
 
--   グローバル アセンブリ キャッシュに読み込むことができません。
+- 共通言語ランタイム アセンブリの内容が変更されたかどうかのユーザーに警告ことはできません。
 
- 読み込むことに注意し、遅延署名アセンブリを分析、アセンブリの検証を無効にする必要があります。
+- それは、グローバル アセンブリ キャッシュに読み込むことができません。
+
+読み込みおよび、遅延署名アセンブリを分析するアセンブリの検証を無効する必要がありますに注意してください。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- **キー ファイルを作成するには**
 
- 次の手順のいずれかを使用します。
+### <a name="create-a-key-file"></a>キー ファイルを作成します。
 
--   によって提供されるアセンブリ リンカー ツール (Al.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。
+次の手順のいずれかを使用します。
 
--   [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] V1.0 または v1.1 を使用するか、<xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>または<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>属性。
+- によって提供されるアセンブリ リンカー ツール (Al.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。
 
--   [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、いずれかを使用して、`/keyfile`または`/keycontainer`コンパイラ オプション[/KEYFILE (を指定するキーまたはキー ペア アセンブリに署名する)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly)または[/KEYCONTAINER (アセンブリに署名するキー コンテナーを指定してください)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) c++ リンカー オプション)。
+- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] V1.0 または v1.1 を使用するか、<xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>または<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>属性。
 
- **Visual Studio での厳密な名前でアセンブリに署名するには**
+- [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、いずれかを使用して、`/keyfile`または`/keycontainer`コンパイラ オプション[/KEYFILE (指定のキーまたはキー ペア アセンブリに署名する)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly)または[/KEYCONTAINER (アセンブリに署名するキー コンテナーの指定)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) C++ でリンカー オプション)。
 
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューションを開きます。
+### <a name="sign-your-assembly-with-a-strong-name-in-visual-studio"></a>Visual Studio での厳密な名前でアセンブリに署名します。
 
-2.  **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、クリックして**プロパティです。**
+1. Visual Studio でソリューションを開きます。
 
-3.  クリックして、**署名**タブをクリックし、選択、**アセンブリに署名**チェック ボックスをオンします。
+2. **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ。**
 
-4.  **厳密な名前キー ファイルを選択して****新規**です。
+3. をクリックして、**署名**タブをクリックし、選択、**アセンブリに署名**チェック ボックスをオンします。
 
-     **厳密な名前キーの作成**ウィンドウに表示されます。
+4. **厳密な名前キー ファイルを選択して**、**新規**します。
 
-5.  **キー ファイル名**、厳密な名前キーの名前を入力します。
+   **厳密な名前キーの作成**ウィンドウに表示されます。
 
-6.  パスワードでキーを保護し、をクリックするかどうかを選択して**OK**です。
+5. **キー ファイル名**、厳密な名前キーの名前を入力します。
 
-7.  **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、クリックして**ビルド**です。
+6. クリックして、パスワードでキーを保護するかどうかを選択して**OK**します。
 
- **Visual Studio の外部の厳密な名前でアセンブリに署名するには**
+7. **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**ビルド**します。
 
--   提供されている厳密名ツール (Sn.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。
+### <a name="sign-your-assembly-with-a-strong-name-outside-visual-studio"></a>Visual Studio の外部の厳密な名前でアセンブリに署名します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- アセンブリが環境で使用されている場合のみこの規則による警告は抑制改ざんが問題にならない場合です。
+によって提供される厳密な名前ツール (Sn.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+
+アセンブリは、環境で使用する場合のみこの規則による警告を抑制する内容の改ざんが問題にならない場合。
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> [方法: 厳密な名前でアセンブリに署名](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) [Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)
+
+- <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>
+- <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>
+- [方法: 厳密な名前でアセンブリに署名する](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)
+- [Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)

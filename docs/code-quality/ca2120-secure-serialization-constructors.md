@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 449258d04b6a47fef42c56637a4de48a4e5d1d12
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 123bff32b847342f4081a73abb1d8b899cc0efec
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915392"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548505"
 ---
 # <a name="ca2120-secure-serialization-constructors"></a>CA2120: シリアル化コンストラクターをセキュリティで保護します
+
 |||
 |-|-|
 |TypeName|SecureSerializationConstructors|
@@ -32,26 +33,29 @@ ms.locfileid: "31915392"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 型が実装、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス インターフェイス、またはデリゲートではないと、部分的に信頼された呼び出し元を許可するアセンブリで宣言されています。 型を受け取るコンス トラクターがある、<xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>オブジェクトおよび<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>オブジェクト (シリアル化コンス トラクターのシグネチャ)。 このコンス トラクターは、セキュリティ チェックによって保護されませんが、型の通常のコンス トラクターの 1 つ以上のセキュリティで保護されます。
+ 型が実装、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス、デリゲートまたはインターフェイスではないと、部分的に信頼された呼び出し元を許可するアセンブリで宣言されています。 型を受け取るコンス トラクターがある、<xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>オブジェクトと<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>オブジェクト (シリアル化コンス トラクターの署名)。 このコンス トラクターが、セキュリティ チェックによって保護されていないが、型の標準コンス トラクターの 1 つ以上のセキュリティで保護されます。
 
 ## <a name="rule-description"></a>規則の説明
- このルールは、カスタムのシリアル化をサポートする型に関係します。 型は、実装している場合、カスタムのシリアル化をサポートしている、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイスです。 シリアル化コンス トラクターが必要と逆シリアル化、またはを使用してシリアル化されたオブジェクトを再作成に使用される、<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>メソッドです。 シリアル化コンス トラクターは、オブジェクトの初期化、ためセキュリティ チェックの標準コンス トラクターに組み込まれている必要がありますにも存在するシリアル化コンス トラクターです。 この規則に違反する場合、インスタンスがそれ以外の場合に作成できませんでしたの呼び出し元は、これを行うにシリアル化コンス トラクターを使用できます。
+ このルールは、カスタムのシリアル化をサポートする型に関連します。 型は、実装している場合、カスタムのシリアル化をサポートしている、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス。 シリアル化コンス トラクターが必要ですし、逆シリアル化、またはを使用してシリアル化されたオブジェクトを再作成するために使用、<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>メソッド。 シリアル化コンス トラクターでは、割り当て、オブジェクトを初期化します、ため、通常のコンス トラクターに存在するセキュリティ チェックをシリアル化コンス トラクターに存在する必要がありますも。 この規則に違反すると、インスタンスがそれ以外の場合に作成できませんでしたの呼び出し元は、これを行うにシリアル化コンス トラクターを使用できます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、他のコンス トラクターを保護するものと同じであるセキュリティ確認要求でシリアル化コンス トラクターを保護します。
+ この規則違反を修正するのには、他のコンス トラクターを保護するものと同じセキュリティ要求を使用したシリアル化コンス トラクターを保護します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 規則の違反は抑制しないでください。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ ルールの違反を抑制しないでください。
 
 ## <a name="example"></a>例
- 次の例は、規則に違反する型を示しています。
+ 次の例では、規則に違反する型を示します。
 
  [!code-csharp[FxCop.Security.SerialCtors#1](../code-quality/codesnippet/CSharp/ca2120-secure-serialization-constructors_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA2229: シリアル化コンストラクターを実装します](../code-quality/ca2229-implement-serialization-constructors.md)
 
  [CA2237: ISerializable 型を SerializableAttribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>
+
+- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

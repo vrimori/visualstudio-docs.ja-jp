@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8f86037b54b2b7ad5cce1ea683341ca6656c2b3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: eb4fc066e45017638eda863c0070e9ee067fcf8e
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915630"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548804"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: 識別子には型名を含めないでください
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
@@ -39,107 +40,107 @@ ms.locfileid: "31915630"
  外部から参照できるメンバーの名前には、言語固有のデータ型の名前が含まれています。
 
 ## <a name="rule-description"></a>規則の説明
- パラメーターの名前とメンバーは、その型は、開発ツールによって提供されると予想されるを説明するよりもその意味を通信するためにより使用されます。 データ型の名前を使用する場合、メンバーの名前は、言語固有のものではなく言語非依存の名前を使用します。 たとえば、c# の型名 'int' ではなく Int32 言語に依存しないデータ型の名前を使用します。
+ パラメーターおよびメンバーの名前は、その意味は、開発ツールが提供する予定されている、型を説明するよりもを通信に使用される向上します。 データ型の名前を使用する場合は、メンバーの名前は、言語固有ではなく、言語に依存しない名前を使用します。 など、c# の型名 'int' ではなく、言語に依存しないデータ型の名前、Int32 を使用します。
 
- 各トークン パラメーターまたはメンバーの名前は、大文字と小文字で、次の言語に固有のデータ型名に対してチェックされます。
+ 各トークンのパラメーターまたはメンバーの名前は、大文字と小文字で、次の言語に固有のデータ型名に対してチェックされます。
 
--   Bool
+- Bool
 
--   WChar
+- WChar
 
--   Int8
+- Int8
 
--   UInt8
+- UInt8
 
--   Short
+- Short
 
--   UShort
+- UShort
 
--   Int
+- Int
 
--   UInt
+- UInt
 
--   整数型
+- 整数型
 
--   UInteger
+- UInteger
 
--   Long
+- Long
 
--   ULong
+- ULong
 
--   符号なし
+- 符号なし
 
--   符号付き
+- 符号付き
 
--   Float
+- Float
 
--   Float32
+- float32
 
--   Float64
+- float64
 
- さらに、パラメーターの名前もチェックインに対して次の言語に依存しないデータ型名では、大文字と小文字。
+さらに、パラメーターの名前もチェックされます、次の言語に依存しないデータ型名に対して大文字と小文字。
 
--   Object
+- Object
 
--   obj
+- obj
 
--   ブール型
+- ブール型
 
--   Char
+- Char
 
--   String
+- String
 
--   SByte
+- SByte
 
--   Byte
+- Byte
 
--   UByte
+- UByte
 
--   Int16
+- Int16
 
--   UInt16
+- UInt16
 
--   Int32
+- Int32
 
--   UInt32
+- UInt32
 
--   Int64
+- Int64
 
--   UInt64
+- UInt64
 
--   IntPtr
+- IntPtr
 
--   Ptr
+- ptr
 
--   ポインター
+- ポインター
 
--   UInptr
+- UInptr
 
--   UPtr
+- UPtr
 
--   UPointer
+- UPointer
 
--   Single
+- Single
 
--   倍精度浮動小数点型
+- 倍精度浮動小数点型
 
--   Decimal (10 進数型)
+- Decimal (10 進数型)
 
--   GUID
+- GUID
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- **パラメーターに対して発生します。 場合**
+ **場合は、パラメーターに対して起動します。**
 
- データ型の識別子、パラメーターの名前をより深くの意味を説明する用語または 'value' などの汎用的な用語のいずれかに置き換えます。
+ パラメーターの名前のデータ型識別子をその意味をより詳しく説明している用語をまたは 'value' などの汎用的な用語のいずれかに置き換えます。
 
- **メンバーに対して発生します。 場合、**
+ **メンバーに対して起動: 場合**
 
- 用語の意味、言語に無関係なまたは 'value' などの汎用的な用語をよく表すを言語固有のデータ型識別子、メンバーの名前に置き換えます。
+ その意味、言語に依存しないに相当する、または 'value' などの汎用的な用語をより詳しく説明している用語を言語に固有のデータ型識別子、メンバーの名前に置き換えます。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 時折を型に基づくパラメーター名およびメンバー名の使用は適切なにあります。 ただし、新規の開発、されていないシナリオでは、この規則による警告を抑制する必要がありますが発生します。 ライブラリが付属してで以前では、この規則による警告を抑制する必要があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 型に基づくパラメーターおよびメンバーの名前は、適切な可能性があります。 ただし、新規の開発、されていないシナリオが発生する、この規則による警告を抑制する必要があります。 ライブラリが以前のリリースでは、この規則による警告を抑制する必要があります。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
  [CA1708: 識別子は、大文字と小文字の区別以外にも相違していなければなりません](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

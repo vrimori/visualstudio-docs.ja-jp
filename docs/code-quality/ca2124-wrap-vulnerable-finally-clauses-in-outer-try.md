@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c299652e779476f2936c193a8bdb646e7b655dd4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 738c214e845cb962bc6c28aa63806dee2858c295
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31916145"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551241"
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124: 脆弱性のある finally 句の外側を try ブロックでラップします
+
 |||
 |-|-|
 |TypeName|WrapVulnerableFinallyClausesInOuterTry|
@@ -32,28 +33,27 @@ ms.locfileid: "31916145"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- バージョン 1.0 および 1.1 では、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、パブリックまたはプロテクト メソッドが含まれています、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックがセキュリティ状態をリセットするが表示されで囲まれていない、`finally`ブロックします。
+ バージョン 1.0 および 1.1 では、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、public または protected のメソッドが含まれています、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックをセキュリティの状態をリセットしてで囲まれていない、`finally`ブロックします。
 
 ## <a name="rule-description"></a>規則の説明
- このルールを検索`try` / `finally`の version 1.0 および 1.1 を対象とするコード内のブロック、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]コール スタック内にある悪意のある例外フィルターを受ける可能性があります。 前に、フィルターが実行される偽装などの機密性の高い操作は、try ブロックで発生する、例外がスローされると場合、`finally`ブロックします。 権限借用例では、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、Visual Basic でのみ実装されています。
+ このルールでは検索`try` / `finally`バージョン 1.0 および 1.1 を対象とするコードのブロック、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]呼び出し履歴に存在する悪意のある例外フィルターを受ける可能性があります。 偽装などの機密情報の操作が、try ブロックで発生して、例外がスローされた、フィルターが実行する前に、`finally`ブロックします。 権限借用の使用例、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、現在、Visual Basic でのみ実装できます。
 
-> [!WARNING]
->  **注**2.0 以降のバージョンでは、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ランタイムが自動的に保護、 `try` / `catch` /  `finally`リセットが発生した場合、悪意のある例外フィルター ブロックメソッド内で直接例外ブロックを含むです。
+> [!NOTE]
+> 2.0 以降のバージョンでは、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ランタイムが自動的に保護を`try` / `catch` /  `finally`メソッド内で直接、リセットが発生した場合、悪意のある例外フィルターを禁止します。例外ブロックが含まれています。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 配置、ラップされていない`try` / `finally` try ブロックの外側にします。 次の 2 番目の例を参照してください。 これにより、`finally`フィルター コードの前に実行します。
+ 配置、ラップされていない`try` / `finally` try ブロックの外側でします。 次の 2 つ目の例を参照してください。 これにより、`finally`フィルター コードの前に実行します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="pseudo-code-example"></a>擬似コードの例
 
 ### <a name="description"></a>説明
- 次の擬似コードでは、このルールにより検出されたパターンを示しています。
 
-### <a name="code"></a>コード
+次の擬似コードでは、このルールにより検出されたパターンを示しています。
 
-```
+```csharp
 try {
    // Do some work.
    Impersonator imp = new Impersonator("John Doe");
@@ -65,10 +65,9 @@ finally {
 }
 ```
 
-## <a name="example"></a>例
- 次の擬似コードでは、コードを保護して、この規則を満たすために使用できるパターンを示します。
+次の擬似コードでは、コードを保護して、このルールを満たすために使用できるパターンを示します。
 
-```
+```csharp
 try {
      try {
         // Do some work.

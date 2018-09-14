@@ -14,54 +14,62 @@ ms.assetid: 3503a73c-360c-416d-8ee4-c2aa44365a05
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f35fc55d9baa59481647ee82aee5ccdeb84e7196
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 60c5e6e93c8ededc7d08d3b917f8066148f133f7
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31902140"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551796"
 ---
 # <a name="ca1008-enums-should-have-zero-value"></a>CA1008: Enums は 0 値を含んでいなければなりません
+
 |||
 |-|-|
 |TypeName|EnumsShouldHaveZeroValue|
 |CheckId|CA1008|
 |カテゴリ|Microsoft.Design|
-|互換性に影響する変更点|以外の区切りを追加するメッセージが表示されたら、 **None**フラグではない列挙値。– 場合名前か、すべての列挙値を削除するように求められます。|
+|互換性に影響する変更点|改行しない - 追加するメッセージが表示されたら、 **None**非フラグ列挙体の値。 – 場合の名前を変更またはすべての列挙値を削除するように求められます。|
 
 ## <a name="cause"></a>原因
- せず、適用した列挙体<xref:System.FlagsAttribute?displayProperty=fullName>0 ですまたは、適用した列挙体の値を持つメンバーを一切定義しません<xref:System.FlagsAttribute>メンバーを定義するゼロの値を持つが、その名前が 'None'、または列挙 0 の値を持つ複数の定義。メンバー。
+
+空の列挙定数を適用した<xref:System.FlagsAttribute?displayProperty=fullName>0; が、適用する列挙体の値を持つメンバーを一切定義しません<xref:System.FlagsAttribute>メンバーを定義します。 ゼロの値を持つが、その名が 'None'、または列挙体は、複数の値が 0 を定義します。メンバー。
 
 ## <a name="rule-description"></a>規則の説明
- その他の値の型と同じように、初期化されていない列挙型の既定値は 0 です。 フラグの属性の列挙をできるように、既定値は、列挙の有効な値に 0 の値を持つメンバーを定義する必要があります。 必要に応じて、メンバーに名前を 'None' です。 それ以外の場合、最も頻繁に使用するメンバーには 0 を割り当てます。 、既定では、宣言では、最初の列挙体メンバーの値が設定されていない場合、値がゼロであることを注意してください。
 
- 列挙型を持つ場合、<xref:System.FlagsAttribute>適用値が 0 のメンバーを定義、名前が列挙体の値が設定されていないことを示すために ' None' にする必要があります。 それ以外の目的が使用するとは対照的では、ゼロ値のメンバーを使用して、<xref:System.FlagsAttribute>で AND とまたはビットごとの演算子がメンバーと役に立ちません。 つまり、その 1 つだけのメンバーに値 0 を割り当てる必要があります。 複数のメンバーがある場合、値が 0 発生フラグ属性の列挙にメモ`Enum.ToString()`が 0 でないメンバーを正しくない結果を返します。
+その他の値の型と同じように、初期化されていない列挙型の既定値には 0 です。 フラグの属性の列挙されるため、既定値は、列挙体の有効な値に 0 の値を持つメンバーを定義する必要があります。 必要に応じて、メンバーに名前を 'None' です。 それ以外の場合、最もよく使用されるメンバーに 0 を割り当てます。 既定では、宣言で、最初の列挙体メンバーの値が設定されていない場合、値は 0 です。
+
+列挙型を持つ場合、<xref:System.FlagsAttribute>適用ゼロ値のメンバーの定義の名前には 'None' 列挙体の値が設定されていないことを示す必要があります。 使用とは異なり、他の目的は、ゼロ値のメンバーを使用して、<xref:System.FlagsAttribute>で AND とまたはビットごとの演算子がメンバーと役に立ちません。 これは、ため、その 1 つだけのメンバーに値 0 を割り当てる必要があります。 フラグの属性の列挙体の値が 0 である複数のメンバーが発生した場合`Enum.ToString()`が 0 でないメンバーが正しくない結果が返されます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 列挙型のフラグの属性に対するこの規則の違反を修正するには、0 以外の値を持つメンバーを定義しますこれは、互換性に影響する変更点以外です。 フラグ属性列挙型の値が 0 のメンバーを定義する、名前のメンバーを 'None' とゼロ以外の値を持つ他のメンバーを削除します。これは、互換性に影響する変更点です。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 以前にリリース済みフラグ属性の列挙体を除く、この規則による警告は抑制しないでください。
+列挙体のフラグの属性には、この規則の違反を修正するには、0 以外の値を持つメンバーを定義します。これは、互換性に影響しない変更です。 値が 0 のメンバーを定義する列挙型フラグの属性、名前のメンバーを 'None' と 0 以外の値を持つその他のメンバーを削除します。これは、重大な変更です。
+
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+
+以前にリリース済みフラグの属性の列挙型を除く、この規則による警告を抑制しないでください。
 
 ## <a name="example"></a>例
- 次の例は、ルールに適合する 2 つの列挙型、および列挙体、`BadTraceOptions`規則に違反しています。
 
- [!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)]
- [!code-csharp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CSharp/ca1008-enums-should-have-zero-value_1.cs)]
- [!code-vb[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/VisualBasic/ca1008-enums-should-have-zero-value_1.vb)]
+次の例は、ルールに適合する 2 つの列挙型と列挙体は、`BadTraceOptions`規則に違反しています。
 
-## <a name="related-rules"></a>関連規則
- [CA2217: enums を FlagsAttribute に設定しません](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+[!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)]
+[!code-csharp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CSharp/ca1008-enums-should-have-zero-value_1.cs)]
+[!code-vb[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/VisualBasic/ca1008-enums-should-have-zero-value_1.vb)]
 
- [CA1700: enum 値に 'Reserved' という名前を指定しません](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
+## <a name="related-rules"></a>関連するルール
 
- [CA1712: enum 値を型名のプレフィックスにしません](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
-
- [CA1028: 列挙ストレージは Int32 でなければなりません](../code-quality/ca1028-enum-storage-should-be-int32.md)
-
- [CA1027: FlagsAttribute で列挙値をマークします](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+- [CA2217: enums を FlagsAttribute に設定しません](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA1700: enum 値に 'Reserved' という名前を指定しません](../code-quality/ca1700-do-not-name-enum-values-reserved.md)
+- [CA1712: enum 値を型名のプレフィックスにしません](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+- [CA1028: 列挙ストレージは Int32 でなければなりません](../code-quality/ca1028-enum-storage-should-be-int32.md)
+- [CA1027: FlagsAttribute で列挙値をマークします](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Enum?displayProperty=fullName>
+
+- <xref:System.Enum?displayProperty=fullName>

@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 25d67c99a9c2b30461170b7e8b5090e0c08241ee
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1ac3f9116366920f833fe8d907181473d6fda106
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917870"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551286"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: ファイナライザーは保護されなければなりません
+
 |||
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
@@ -32,19 +33,19 @@ ms.locfileid: "31917870"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- パブリック型では、ファミリ (保護) アクセスが指定されていませんが、不要なファイナライザーを実装します。
+ パブリック型では、ファミリ (保護された) アクセスを指定していないファイナライザーを実装します。
 
 ## <a name="rule-description"></a>規則の説明
- ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。 このルールは、c#、Visual Basic および Visual C コンパイラによって強制されます。
+ ファイナライザーは、ファミリ アクセス修飾子を使用する必要があります。 このルールは、c#、Visual Basic、および Visual C コンパイラによって強制されます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、ファミリ アクセスできるように、ファイナライザーを変更します。
+ この規則違反を解決するには、ファミリ アクセスできるように、ファイナライザーを変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
- 高度な .NET 言語でこの規則に違反することはできません。Microsoft Intermediate Language を作成している場合は、違反することができます。
+ 高レベルの .NET 言語でこのルールに違反することはできません。Microsoft Intermediate Language を作成している場合は、違反することができます。
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================
@@ -80,4 +81,5 @@ ms.locfileid: "31917870"
 ```
 
 ## <a name="see-also"></a>関連項目
- [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
+
+- [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

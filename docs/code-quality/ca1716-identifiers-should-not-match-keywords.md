@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 514a062429168592fe46112ad008d0d1f4e60a28
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2b5ee844da2c04a1dd6eac6a7ca458957dd22a71
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31914785"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550610"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: 識別子はキーワードと同一にすることはできません
 |||
@@ -32,23 +32,23 @@ ms.locfileid: "31914785"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 名前空間、型、または viritual またはインターフェイス メンバーの名前では、プログラミング言語の予約されたキーワードと一致します。
+ 名前空間、型、または viritual またはインターフェイス メンバーの名前では、プログラミング言語で予約済みキーワードと一致します。
 
 ## <a name="rule-description"></a>規則の説明
- 識別子の名前空間、型、および仮想インターフェイスのメンバーが、共通言語ランタイムを対象とする言語で定義されているキーワードと一致する必要があります。 によって使用される言語とキーワードの場合は、コンパイラのエラーやあいまいさが困難ライブラリを使用します。
+ 識別子の名前空間、型、および仮想インターフェイス メンバーを共通言語ランタイムを対象とする言語で定義されているキーワードと一致する必要があります。 によって使用される言語とキーワードの場合は、コンパイラのエラーやあいまいさづらくなる可能性、ライブラリを使用します。
 
- このルールは、次の言語のキーワードをチェックします。
+ このルールは、次の言語のキーワードを確認します。
 
--   Visual Basic
+- Visual Basic
 
--   C#
+- C#
 
--   C++/CLI
+- C++/CLI
 
- 大文字と小文字はため[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]キーワードと区別する比較は、その他の言語に使用します。
+ 大文字と小文字が使用される[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]他の言語キーワード、および大文字小文字の比較を使用します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  キーワードの一覧に表示されていない名前を選択します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告を抑制するには、識別子は、API のユーザーを混同しないことと、ライブラリが使用可能なすべての言語で使用可能であると確信している場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ このルールから警告を抑制するには、識別子は、API のユーザーを混同しないでことと、ライブラリが使用可能なすべての言語で使用できることと確信している場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。
