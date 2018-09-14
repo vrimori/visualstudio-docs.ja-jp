@@ -13,16 +13,20 @@ ms.assetid: 09f458ac-dd88-4cd7-a47f-4106c1e80ece
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 195f64d6ccb06c551c729d1b1b640e42e689654f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ec69fc08375bb88287cfb89eb49e52fa45466e6
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31897331"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550532"
 ---
 # <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: 抽象型にはコンストラクターを含めません
+
 |||
 |-|-|
 |TypeName|AbstractTypesShouldNotHaveConstructors|
@@ -31,16 +35,16 @@ ms.locfileid: "31897331"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- パブリック型は抽象であり、パブリック コンス トラクターを持ちます。
+ パブリック型は abstract であり、パブリック コンス トラクターがあります。
 
 ## <a name="rule-description"></a>規則の説明
  抽象型上のコンストラクターは、派生型からのみ呼び出すことができます。 パブリック コンストラクターで型のインスタンスが作成され、抽象型のインスタンスは自分で作成できないため、パブリック コンストラクターが含まれる抽象型のデザインは不適切になります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、コンス トラクターを保護するか、または抽象型を宣言しません。
+ この規則違反を修正するのには、コンス トラクターを保護するか、または抽象型を宣言しないでください。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 抽象型は、パブリック コンス トラクターを持ちます。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告は抑制しないでください。 抽象型では、パブリック コンス トラクターがあります。
 
 ## <a name="example"></a>例
  次の例には、この規則に違反する抽象型が含まれています。
@@ -49,7 +53,7 @@ ms.locfileid: "31897331"
  [!code-csharp[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_1.cs)]
 
 ## <a name="example"></a>例
- 次の例では、以前の違反を修正のコンス トラクターのアクセシビリティを変更することによって`public`に`protected`です。
+ 次の例では、前の違反を修正からコンス トラクターのアクセシビリティを変更することで`public`に`protected`します。
 
  [!code-csharp[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_2.cs)]
  [!code-vb[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_2.vb)]

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 959ce5c3e108aa9a1aa339d33b7bad8243adfb7c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bcb0bfe07c9e9fb843ea6c7a0960b96cc09339b9
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915009"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549457"
 ---
 # <a name="ca1722-identifiers-should-not-have-incorrect-prefix"></a>CA1722: 識別子は不適切なプレフィックスを含むことはできません。
 |||
@@ -32,20 +32,20 @@ ms.locfileid: "31915009"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 識別子は、不適切なプレフィックスを持ちます。
+ 識別子が、不適切なプレフィックス。
 
 ## <a name="rule-description"></a>規則の説明
  規則では、特定のプログラミング要素にのみ、固有のプレフィックスで始まる名前を付けることができます。
 
- 型名は、特定のプレフィックスはありませんおよびいません 'C' を付ける必要があります。 このルールは、'CMyClass' などの型名の違反を報告し、'Cache' などの型名の違反を報告しません。
+ 型名は、特定のプレフィックスがないといません 'C' を付ける必要があります。 このルールは、'CMyClass' などの型名の違反を報告し、違反の 'Cache' などの型名はレポートされません。
 
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
+ 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 この一貫性では、学習曲線を新しいソフトウェア ライブラリに必要なライブラリがマネージ コード開発の専門知識を持つユーザーによって開発された、顧客の信頼度が高まりますが減少します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  識別子のプレフィックスを削除します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1715: 識別子は正しいプレフィックスを含んでいなければなりません](../code-quality/ca1715-identifiers-should-have-correct-prefix.md)

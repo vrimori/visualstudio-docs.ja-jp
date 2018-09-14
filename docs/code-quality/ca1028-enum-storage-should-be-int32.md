@@ -14,16 +14,20 @@ ms.assetid: 87160825-9f39-4142-8d7f-a31fe7ac7b84
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f0f9dec006f3684259541811e905eaf75a790c3a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 51e4177b01dc15177b74394d6967651905da2122
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900289"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547829"
 ---
 # <a name="ca1028-enum-storage-should-be-int32"></a>CA1028: 列挙ストレージは Int32 でなければなりません
+
 |||
 |-|-|
 |TypeName|EnumStorageShouldBeInt32|
@@ -32,21 +36,21 @@ ms.locfileid: "31900289"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- パブリック列挙型の基になる型がありません<xref:System.Int32?displayProperty=fullName>です。
+ パブリック列挙体の基になる型でない<xref:System.Int32?displayProperty=fullName>します。
 
 ## <a name="rule-description"></a>規則の説明
- 列挙型は、関連する名前付き定数が複数定義された値型です。 既定では、<xref:System.Int32?displayProperty=fullName>定数の値を格納するデータ型を使用します。 できます、この変更の種類を基になる場合でもはないために必要なまたは推奨されるほとんどのシナリオです。 も小さいデータ型を使用して大幅なパフォーマンスの向上が実現されていないことに注意してください<xref:System.Int32>です。 既定のデータ型を使用できない場合は場合、共通言語システム (CLS) のいずれかを使用する必要があります-準拠の整数型<xref:System.Byte>、 <xref:System.Int16>、 <xref:System.Int32>、または<xref:System.Int64>で列挙体のすべての値を表すことがあるかどうかを確認するにはCLS 準拠のプログラミング言語です。
+ 列挙型は、関連する名前付き定数が複数定義された値型です。 既定で、<xref:System.Int32?displayProperty=fullName>定数の値を格納するデータ型を使用します。 できます、この変更の種類を基になる場合でもないために必要なまたは推奨されるほとんどのシナリオ。 小さいデータ型を使用して大幅なパフォーマンスの向上が実現しないことに注意してください。<xref:System.Int32>します。 既定のデータ型を使用できない場合、共通言語システム (CLS) のいずれかを使用する必要があります-準拠の整数型<xref:System.Byte>、 <xref:System.Int16>、 <xref:System.Int32>、または<xref:System.Int64>列挙体のすべての値で表現できることを確認するにはCLS 準拠のプログラミング言語です。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、サイズや互換性の問題がない限り使用<xref:System.Int32>です。 場合、<xref:System.Int32>が小さすぎて値を保持するには、使用<xref:System.Int64>です。 旧バージョンとの互換性は、小さいデータ型を必要とする場合を使用して<xref:System.Byte>または<xref:System.Int16>です。
+ この規則の違反を修正するには、サイズや互換性の問題が存在しない限り、使用<xref:System.Int32>します。 場合、<xref:System.Int32>値を保持するのに十分な大きさでない<xref:System.Int64>します。 旧バージョンとの互換性は、小さいデータ型を必要とする場合は、使用<xref:System.Byte>または<xref:System.Int16>します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 旧バージョンと互換性の問題に必要な場合にのみ、この規則による警告を抑制します。 アプリケーションでは、通常この規則に準拠しないには、問題は発生しません。 ライブラリでは、言語の相互運用性が必要なこの規則に準拠しない可能性がありますに悪影響がします。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 旧バージョンと互換性の問題で必要な場合にのみ、この規則による警告を抑制します。 アプリケーションでは、通常、この規則に準拠するエラーには、問題は発生しません。 ライブラリ、言語の相互運用性が必要な場合、この規則に準拠しないは、ユーザーの悪影響を及ぼす影響可能性があります。
 
 ## <a name="example-of-a-violation"></a>違反の例
 
 ### <a name="description"></a>説明
- 次の例では、推奨される基になるデータ型を使用して 2 つの列挙型を示します。
+ 次の例では、推奨される基になるデータ型を使用して 2 つの列挙体を示します。
 
 ### <a name="code"></a>コード
  [!code-vb[FxCop.Design.EnumIntegralType#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_1.vb)]
@@ -55,13 +59,13 @@ ms.locfileid: "31900289"
 ## <a name="example-of-how-to-fix"></a>修正する方法の例
 
 ### <a name="description"></a>説明
- 次の例では、前の違反を修正する基になるデータ型を変更することによって<xref:System.Int32>です。
+ 次の例を基になるデータ型を変更することで以前の違反を修正する<xref:System.Int32>します。
 
 ### <a name="code"></a>コード
  [!code-csharp[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/CSharp/ca1028-enum-storage-should-be-int32_2.cs)]
  [!code-vb[FxCop.Design.EnumIntegralTypeFixed#1](../code-quality/codesnippet/VisualBasic/ca1028-enum-storage-should-be-int32_2.vb)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1008: Enums は 0 値を含んでいなければなりません](../code-quality/ca1008-enums-should-have-zero-value.md)
 
  [CA1027: FlagsAttribute で列挙値をマークします](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
@@ -73,4 +77,8 @@ ms.locfileid: "31900289"
  [CA1712: enum 値を型名のプレフィックスにしません](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Byte?displayProperty=fullName> <xref:System.Int16?displayProperty=fullName> <xref:System.Int32?displayProperty=fullName> <xref:System.Int64?displayProperty=fullName>
+
+- <xref:System.Byte?displayProperty=fullName>
+- <xref:System.Int16?displayProperty=fullName>
+- <xref:System.Int32?displayProperty=fullName>
+- <xref:System.Int64?displayProperty=fullName>

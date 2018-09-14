@@ -1,5 +1,5 @@
 ---
-title: Visual Studio デバッガーでのレジスタの値の表示 |Microsoft ドキュメント
+title: Visual Studio デバッガーでのレジスタの値の表示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -25,28 +25,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7630ab56ef738febcf80058916272958e267a386
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ceadd2f131a75e01cec67c21dca0d7837b02738a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31477012"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551848"
 ---
-# <a name="view-register-values-and-use-the-registers-window-in-the-visual-studio-debugger"></a>登録値を表示して、Visual Studio デバッガーの [レジスタ] ウィンドウを使用します。
-[レジスタ] ウィンドウがアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
+# <a name="view-register-values-and-use-the-registers-window-in-the-visual-studio-debugger"></a>登録の値を表示し、[レジスタ] ウィンドウで、Visual Studio デバッガーの使用
+[レジスタ] ウィンドウにアドレス レベルのデバッグが有効な場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード、**全般**カテゴリ。  
   
- **登録**レジスタの内容がウィンドウに表示されます。 保持する場合、**登録**プログラムをステップ実行する、開いたウィンドウで確認できます、コードが実行されるとレジスタ値の変更。 最近変更した値が赤で表示されます。 レジスタの値は編集できます。 詳細については、次を参照してください。[する方法: レジスタ値を編集](../debugger/how-to-edit-a-register-value.md)です。  
+ **登録**レジスタの内容がウィンドウが表示されます。 保持する場合、**登録**ウィンドウにプログラムをステップ実行すると開く、表示できる、コードが実行されるとレジスタ値の変更。 最近変更した値が赤で表示されます。 レジスタの値は編集できます。 詳細については、次を参照してください。[方法: レジスタ値を編集](../debugger/how-to-edit-a-register-value.md)します。  
   
- 、見やすくするために、**登録**レジスタ グループで、プラットフォームやプロセッサによって異なる場合に別に表示ウィンドウの種類。 必要に応じて、グループの表示/非表示を切り替えることができます。 詳細については、次を参照してください。[する方法: レジスタ グループの非表示にすると表示](../debugger/how-to-display-and-hide-register-groups.md)です。  
+ 、見やすくするために、**登録**ウィンドウは、プラットフォームやプロセッサによって異なるグループにレジスタを編成型。 必要に応じて、グループの表示/非表示を切り替えることができます。 詳細については、次を参照してください。[方法: レジスタ グループの非表示にすると表示](../debugger/how-to-display-and-hide-register-groups.md)します。  
   
- レジスタおよび [レジスタ] ウィンドウの背後にある概念を大まかな概要については、次を参照してください。[デバッグの基礎: [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)します。  
+ レジスタおよびレジスタ ウィンドウの背後にある概念について大まかな概要については、次を参照してください。[デバッグの基礎: [レジスタ] ウィンドウ](../debugger/debugging-basics-registers-window.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
 ### <a name="to-display-the-registers-window"></a>[レジスタ] ウィンドウを表示するには  
   
--   **デバッグ**] メニューの [選択**Windows**を選択し**登録**です。  
+-   **デバッグ**] メニューの [選択**Windows**、選び、**登録**(選択または**Ctrl** + **Alt**  +  **G**)。  
   
      デバッガーは動作中であるか、中断モードである必要があります。  
   

@@ -14,16 +14,20 @@ ms.assetid: 402101b6-555d-4cf7-b223-1d9fdfaaf1cd
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e605cb0188ca72cb74905e34ee5196a07f748cd6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 29bd98677715a8772143ab448206f2a5ccddd763
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31899965"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551631"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: 汎用イベント ハンドラーのインスタンスを使用します
+
 |||
 |-|-|
 |TypeName|UseGenericEventHandlerInstances|
@@ -32,29 +36,29 @@ ms.locfileid: "31899965"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 型が void を返す、2 つのパラメーター (1 つはオブジェクトと、2 つ目は EventArgs に割り当て可能な型) と包含アセンブリの対象を含むシグネチャを持つデリゲートを含む[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。
+ 型が void を返す、2 つのパラメーター (1 つはオブジェクトと、2 つ目は EventArgs に割り当て可能な型) と包含アセンブリの対象を含むシグネチャを持つデリゲートを含む[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。
 
 ## <a name="rule-description"></a>規則の説明
- 前に[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]イベント ハンドラーにカスタム情報を渡すために、新しいデリゲートを宣言するのにはから派生したクラスを指定する必要がある、<xref:System.EventArgs?displayProperty=fullName>クラスです。 これは true ではなく[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、導入された、<xref:System.EventHandler%601?displayProperty=fullName>委任します。 この汎用デリゲートにより、任意のクラスから派生した<xref:System.EventArgs>イベントのハンドラーと共に使用します。
+ 前に[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、イベント ハンドラーにカスタム情報を渡すために、新しいデリゲートを宣言から派生したクラスを指定する必要がある、<xref:System.EventArgs?displayProperty=fullName>クラス。 場合は true。 これは不要になった[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、導入された、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。 この汎用デリゲートにより、任意のクラスから派生した<xref:System.EventArgs>イベント ハンドラーと共に使用します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、デリゲートを削除しを使用してその用途を置き換えて、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。 デリゲートは、によって自動生成された場合、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]コンパイラを使用するイベントの宣言の構文を変更、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。
+ この規則の違反を修正するには、デリゲートを削除しを使用してその使用を置き換える、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。 デリゲートがによって自動生成された場合、[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]コンパイラを使用するイベントの宣言の構文を変更、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
- 次の例では、規則に違反するデリゲートを示します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]例では、コメントは、規則に適合するように例を変更する方法を説明します。 たとえば、C# の場合、次に例を修正したコードを表示します。
+ 次の例では、規則に違反するデリゲートを示します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]例では、コメント、ルールを満たすために例を変更する方法を示しています。 例では、c# の例で、変更されたコードが表示されるに従います。
 
  [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
  [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
 
 ## <a name="example"></a>例
- 次の例では、デリゲート宣言を削除、規則に適合し、その使用を置き換えますが前の例から、`ClassThatRaisesEvent`と`ClassThatHandlesEvent`メソッドを使用して、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。
+ 次の例では、デリゲート宣言を削除で使用し、ルールを満たす前の例から、`ClassThatRaisesEvent`と`ClassThatHandlesEvent`メソッドを使用して、<xref:System.EventHandler%601?displayProperty=fullName>を委任します。
 
  [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません](../code-quality/ca1010-collections-should-implement-generic-interface.md)
@@ -70,4 +74,5 @@ ms.locfileid: "31899965"
  [CA1007: 適切な場所にジェネリックを使用します](../code-quality/ca1007-use-generics-where-appropriate.md)
 
 ## <a name="see-also"></a>関連項目
- [ジェネリック](/dotnet/csharp/programming-guide/generics/index)
+
+- [ジェネリック](/dotnet/csharp/programming-guide/generics/index)

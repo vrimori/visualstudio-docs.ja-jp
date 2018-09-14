@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1ce14b7da80775a9837b5e92f25d141276226cf
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 73c52965d31d66f21cdf738816d7ea9c0a8afbdf
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900516"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549609"
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: 反復する引数を params 配列で置き換えます
 |||
@@ -32,18 +32,18 @@ ms.locfileid: "31900516"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- パブリック型のパブリックまたはプロテクト メソッドは複数の 3 つのパラメーターを持ちの最後の 3 つのパラメーターは、同じ型です。
+ パブリック型の public または protected のメソッドが複数の 3 つのパラメーターとその最後の 3 つのパラメーターは、同じ型。
 
 ## <a name="rule-description"></a>規則の説明
- 引数の正確な数が不明と、可変個の引数は、同じ型では、または同じ型で渡すことができる場合、引数を繰り返すのではなく、パラメーター配列を使用します。 たとえば、<xref:System.Console.WriteLine%2A>メソッドを任意の数を受け入れるように、パラメーター配列を使用する汎用のオーバー ロードを提供する<xref:System.Object>引数。
+ 引数の正確な数は不明であり、可変個引数は同じ型、または同じの型として渡すことができる場合、引数を繰り返すのではなく、パラメーター配列を使用します。 たとえば、<xref:System.Console.WriteLine%2A>メソッドは、パラメーター配列を使用して、任意の数をそのまま使用する汎用のオーバー ロードを提供します。<xref:System.Object>引数。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、パラメーター配列で引数を繰り返すを置き換えます。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告を抑制しても安全では常にただし、この設計では、利便性の問題が発生します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告を抑制しても安全では常にただし、この設計では、ユーザビリティの問題を生じる可能性があります。
 
 ## <a name="example"></a>例
- 次の例は、この規則に違反する型を示しています。
+ 次の例では、この規則に違反する型を示します。
 
  [!code-csharp[FxCop.Design.RepeatArgs#1](../code-quality/codesnippet/CSharp/ca1025-replace-repetitive-arguments-with-params-array_1.cs)]

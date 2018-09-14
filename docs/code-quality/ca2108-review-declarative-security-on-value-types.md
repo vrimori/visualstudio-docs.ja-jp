@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2ed7050ff7b804d3224390393c3c860bc25c30
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e2d76a0ecf6a2eeac677475eb25efe495129c213
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31916039"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548518"
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: 値型での宣言セキュリティをレビューします
+
 |||
 |-|-|
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
@@ -32,31 +33,42 @@ ms.locfileid: "31916039"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- パブリックまたはプロテクトの値の型がで保護されて、[データとモデリング](/dotnet/framework/data/index)または[リンク確認要求](/dotnet/framework/misc/link-demands)です。
+
+パブリックまたはプロテクトの値の型がによってセキュリティ保護、[データとモデリング](/dotnet/framework/data/index)または[リンク確認要求](/dotnet/framework/misc/link-demands)します。
 
 ## <a name="rule-description"></a>規則の説明
- 値の型が割り当てられているし、他のコンス トラクターの実行前に、既定のコンス トラクターによって初期化します。 値の型が Demand または LinkDemand によって保護された呼び出し元に以外の任意のコンス トラクターはセキュリティ チェックを満たすためのアクセス許可が設定されていない場合は、既定値は失敗し、セキュリティ例外がスローされます。 値の型の割り当ては解除されません。既定のコンス トラクターで設定された状態で除外されます。 値の型のインスタンスを通過する呼び出し元が作成またはインスタンスにアクセスする権限を持っているとは限りません。
+
+値の型に割り当てられ他のコンス トラクターの実行前に既定のコンス トラクターによって初期化します。 値の型が Demand または LinkDemand によってセキュリティ保護されていて、呼び出し元には、以外の任意のコンス トラクター、セキュリティ チェックに適合するアクセス許可がありません。 既定値は失敗すると、およびセキュリティ例外がスローされます。 値の型の割り当ては解除されません。既定のコンス トラクターによって設定された状態で中断するとします。 値型のインスタンスを渡す呼び出し元が作成またはインスタンスにアクセスする権限を持っているとは限りません。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 型から、セキュリティ チェックを削除して、代わりに使用するメソッドのレベルのセキュリティがチェックしない限り、この規則違反を修正することはできません。 この方法で、違反を修正していなくてもように値の型のインスタンスの取得から適切なアクセス許可を持つ呼び出し元に注意してください。 既定の状態で、値の型のインスタンスが、機密情報を公開しないと、有害な方法では使用できませんを確認する必要があります。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 任意の呼び出し元は、既定の状態にある値型のインスタンスを取得するセキュリティの脅威がない場合は、この規則による警告を抑制することができます。
+種類、セキュリティ チェックを削除して、その場所に使用してメソッド レベルのセキュリティを確認しますしない限り、この規則違反を修正することはできません。 この方法で、違反を修正、値型のインスタンスを取得するから不適切なアクセス許可を持つ呼び出し元が防止されることはできません。 既定の状態で、値型のインスタンスは、機密情報を公開しないと、有害な方法では使用できませんをことを確認する必要があります。
 
-## <a name="example"></a>例
- 次の例は、この規則に違反する値の型を含むライブラリを示しています。 なお、`StructureManager`型が値型のインスタンスを渡す呼び出し元が作成またはインスタンスにアクセスする権限を持つことを前提とします。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 
- [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]
+呼び出し元は、既定の状態にある値型のインスタンスを取得するセキュリティの脅威がない場合は、この規則による警告を抑制できます。
 
-## <a name="example"></a>例
- 次のアプリケーションでは、ライブラリの脆弱性について説明します。
+## <a name="example-1"></a>例 1
 
- [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]
+次の例では、この規則に違反する値の型を含むライブラリを示します。 `StructureManager`型では、値型のインスタンスを渡す呼び出し元が作成またはインスタンスにアクセスする権限を持っている前提としています。
 
- この例を実行すると、次の出力が生成されます。
+[!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]
 
- **構造体のカスタム コンス トラクター: 要求が失敗しました。** 
-**新しい値 SecuredTypeStructure 100 100**
-**新しい値 SecuredTypeStructure 200 200**
+## <a name="example-2"></a>例 2
+
+次のアプリケーションでは、ライブラリの脆弱性を示しています。
+
+[!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]
+
+この例を実行すると、次の出力が生成されます。
+
+```txt
+Structure custom constructor: Request failed.
+New values SecuredTypeStructure 100 100
+New values SecuredTypeStructure 200 200
+```
+
 ## <a name="see-also"></a>関連項目
- [リンク確認要求](/dotnet/framework/misc/link-demands)[データとモデリング](/dotnet/framework/data/index)
+
+- [リンク確認要求](/dotnet/framework/misc/link-demands)
+- [データとモデリング](/dotnet/framework/data/index)

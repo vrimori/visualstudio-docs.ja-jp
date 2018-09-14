@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd0927a9b8bcd0f4be7c020a25a32d6c9675ca05
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4a78ec9c7678c2f0f88d4fd08f441eedb221bbeb
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900539"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545503"
 ---
 # <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: 基本クラス メソッドを非表示にしません
 |||
@@ -32,15 +32,15 @@ ms.locfileid: "31900539"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 派生型、基本メソッドのいずれかと同じ数のパラメーターと同じ名前のメソッドを宣言します。1 つまたは複数のパラメーターは、基本メソッドの対応するパラメーターの基本型です。いて、残りのパラメーターは、基本メソッドに対応するパラメーターと同じ型です。
+ 派生型は、基本メソッドのいずれかと同じ数のパラメーターと同じ名前のメソッドを宣言します。1 つまたは複数のパラメーターはベース メソッドの対応するパラメーターの基本型です。残りのパラメーターは、基本メソッドの対応するパラメーターと同じ型であります。
 
 ## <a name="rule-description"></a>規則の説明
- 基本型のメソッドより弱い派生よりも、基本メソッドのパラメーター シグネチャ内の対応する型を型からのみ派生メソッドのパラメーター シグネチャが異なる場合に、派生型で同じ名前のメソッドによって隠ぺいされます。
+ 派生メソッドのパラメーター シグネチャより弱い派生基底メソッドのパラメーター シグネチャ内の対応する型よりも型のみが異なる場合に、派生型で同じ名前のメソッドで基本データ型のメソッドは表示されません。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、削除、メソッドの名前を変更またはパラメーター シグネチャを変更して、メソッドが基本メソッドを隠ぺいしないようにします。
+ この規則の違反を修正するには、削除、メソッドの名前を変更またはメソッドは基本メソッドを隠ぺいしないように、パラメーターのシグネチャを変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例

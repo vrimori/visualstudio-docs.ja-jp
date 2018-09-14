@@ -19,14 +19,15 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 34c03adb8ff34d3590ed93264d77536c4cdff080
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a1db0f421f72e5b63b14c95a706b738bea1a4174
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915570"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550519"
 ---
 # <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800: 不必要にキャストしません
+
 |||
 |-|-|
 |TypeName|DoNotCastUnnecessarily|
@@ -37,29 +38,30 @@ ms.locfileid: "31915570"
 ## <a name="cause"></a>原因
 メソッドは、その引数やローカル変数のいずれかで二重のキャストを実行します。
 
-このルールによって完全な分析のため、デバッグ情報を使用して、テスト対象のアセンブリをビルドする必要があり、関連付けられているプログラム データベース (.pdb) ファイルを使用する必要があります。
+このルールによって完全に解析、デバッグ情報を使用してテスト対象のアセンブリをビルドする必要があり、関連付けられたプログラム データベース (.pdb) ファイルは、使用可能なである必要があります。
 
 ## <a name="rule-description"></a>規則の説明
-二重のキャストがあるとパフォーマンスが低下します。特に、小さな繰り返しステートメントでキャストが実行される場合はそうです。 明示的な重複するキャスト操作の場合は、キャストの結果、ローカル変数に格納して重複するキャスト演算ではなく、ローカル変数を使用します。
+二重のキャストがあるとパフォーマンスが低下します。特に、小さな繰り返しステートメントでキャストが実行される場合はそうです。 、明示的な重複するキャスト操作のキャストの結果をローカル変数に格納し、重複するキャスト操作ではなくローカル変数を使用します。
 
-場合は、c#`is`演算子を使用して、実際のキャストが実行される前に、キャストが成功するかどうかをテストの結果をテストしてください、`as`演算子代わりにします。 これにより、暗黙的なキャスト操作によって実行されることがなく、同じ機能、`is`演算子。 または、c# 7.0 以降では、使用、`is`演算子[パターンに一致する](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is)型変換をチェックし、1 つの手順でその型の変数に式をキャストします。
+場合、c#`is`演算子を使用して、実際のキャストを実行すると、前に、キャストが成功するかどうかをテストの結果をテストしてください、`as`演算子代わりにします。 これにより、暗黙のキャスト操作によって実行されることがなく、同じ機能、`is`演算子。 または、c# 7.0 以降では、使用、`is`演算子[パターン マッチング](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is)型変換をチェックし、1 つの手順でその型の変数に式をキャストします。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、キャスト操作の数を最小限に抑えるメソッドの実装を変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- パフォーマンス問題がない場合、この規則による警告を抑制するか、完全には、ルールを無視するも安全です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ パフォーマンスが問題ではない場合、この規則による警告を抑制するか、ルールを完全に無視するには安全です。
 
 ## <a name="examples"></a>使用例
- 次の例は、c# を使用して、規則に違反するメソッド`is`演算子。 2 番目のメソッドに置き換えることで、規則に適合、 `is` 、テストの結果に対して指定された演算子は、`as`演算子で、2 つのイテレーションごとのキャスト操作の数が減少します。 3 番目のメソッドを使用して、規則に適合も`is`で[パターン マッチ](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is)型変換が成功した場合は、目的の型の変数を作成します。
+ 次の例は、c# を使用して、規則に違反するメソッドを示しています。`is`演算子。 2 番目のメソッドは、置き換えることで、ルールを満たす、`is`演算子と、テストの結果に対して、`as`演算子で、2 つのイテレーションあたりのキャスト操作の数を減らします。 3 番目のメソッドを使用しても、ルールを満たす`is`で[パターン マッチング](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is)型変換が成功した場合に必要な型の変数を作成します。
 
  [!code-csharp[FxCop.Performance.UnnecessaryCastsAsIs#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_1.cs)]
 
- 次の例では、メソッド、 `start_Click`、ルール、およびメソッドに違反して複数の重複する明示的なキャストを持つ`reset_Click`キャストをローカル変数に格納することによって、規則に適合します。
+ 次の例では、メソッド、 `start_Click`、ルール、およびメソッドに違反して複数の重複する明示的なキャストを持つ`reset_Click`キャストをローカル変数に格納することで、規則に適合します。
 
  [!code-vb[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/VisualBasic/ca1800-do-not-cast-unnecessarily_2.vb)]
  [!code-csharp[FxCop.Performance.UnnecessaryCasts#1](../code-quality/codesnippet/CSharp/ca1800-do-not-cast-unnecessarily_2.cs)]
 
 ## <a name="see-also"></a>関連項目
-[(c# リファレンス) として](/dotnet/csharp/language-reference/keywords/as)
-[が (c# リファレンス)](/dotnet/csharp/language-reference/keywords/is)
+
+- [as (c# リファレンス)](/dotnet/csharp/language-reference/keywords/as)
+- [is (c# リファレンス)](/dotnet/csharp/language-reference/keywords/is)

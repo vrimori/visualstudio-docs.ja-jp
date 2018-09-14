@@ -14,43 +14,47 @@ ms.assetid: 00882cf9-e10d-4d40-9126-3e6753e3c934
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 54a26c2b941289ed7a83e66e1677db172660d270
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 25bb1d9d26c9f5f4b4447af46cb48b5492429136
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920256"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549328"
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: シリアル化メソッドを正しく実装します
+
 |||
 |-|-|
 |TypeName|ImplementSerializationMethodsCorrectly|
 |CheckId|CA2238|
 |カテゴリ|Microsoft.Usage|
-|互換性に影響する変更点|– メソッドは、アセンブリ外部から参照できる場合です。<br /><br /> なしの場合、メソッドは、アセンブリ外部から参照ではありません。|
+|互換性に影響する変更点|– メソッドは、アセンブリ外部から参照できる場合。<br /><br /> なし - メソッドが、アセンブリの外部に表示されない場合|
 
 ## <a name="cause"></a>原因
  シリアル化イベントを処理するメソッドに、適切なシグネチャ、戻り値の型、または参照範囲がありません。
 
 ## <a name="rule-description"></a>規則の説明
- メソッドは、シリアル化イベントのハンドラーをシリアル化イベント属性は次のいずれかの操作を適用することによって示されます。
+ メソッドは、シリアル化イベントのハンドラーをシリアル化イベントの次の属性のいずれかの操作を適用することによって指定されます。
 
--   <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnSerializingAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute?displayProperty=fullName>
 
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
- シリアル化イベントのハンドラーが型の 1 つのパラメーターを受け取る<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>、return `void`、いて`private`表示します。
+ シリアル化イベントのハンドラーが型の 1 つのパラメーターを受け取る<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>、return `void`、いて`private`可視性。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、シグネチャ、戻り値の型、またはシリアル化イベント ハンドラーの可視性を修正します。
+ この規則違反を修正するには、シグネチャ、戻り値の型、またはシリアル化のイベント ハンドラーの可視性を修正します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
@@ -59,7 +63,7 @@ ms.locfileid: "31920256"
  [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/VisualBasic/ca2238-implement-serialization-methods-correctly_1.vb)]
  [!code-csharp[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/CSharp/ca2238-implement-serialization-methods-correctly_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA2236: ISerializable 型で基本クラス メソッドを呼び出します](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2240: ISerializable を正しく実装します](../code-quality/ca2240-implement-iserializable-correctly.md)

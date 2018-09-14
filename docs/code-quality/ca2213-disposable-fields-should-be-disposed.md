@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be4efbd197a8146789b9646f6b5c467cc42815b1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 143a094375871bf8073999f89d7fac5d6df01b4f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920486"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551861"
 ---
 # <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: 破棄可能なフィールドは破棄されなければなりません
+
 |||
 |-|-|
 |TypeName|DisposableFieldsShouldBeDisposed|
@@ -32,26 +33,28 @@ ms.locfileid: "31920486"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型のフィールドを宣言<xref:System.IDisposable>です。 <xref:System.IDisposable.Dispose%2A> 、フィールドのメソッドが呼び出されていない、<xref:System.IDisposable.Dispose%2A>宣言型のメソッドです。
+ 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型のフィールドを宣言<xref:System.IDisposable>します。 <xref:System.IDisposable.Dispose%2A>フィールドのメソッドを呼び出さない、<xref:System.IDisposable.Dispose%2A>宣言型のメソッド。
 
 ## <a name="rule-description"></a>規則の説明
- 型はすべて、アンマネージ リソースの破棄を担当します。これを実装することによって実現<xref:System.IDisposable>です。 このルールは、破棄可能な型かどうかをチェック`T`フィールドを宣言して`F`破棄可能な型のインスタンスである`FT`です。 各フィールドの`F`、ルールへの呼び出しを特定しようとしています。`FT.Dispose`です。 ルールによって呼び出されるメソッドを検索する`T.Dispose`、および下位のレベル (によって呼び出されるメソッドによって呼び出されるメソッド`FT.Dispose`)。
+ 型はすべて、アンマネージ リソースの破棄を担当これは、実装することによって実現<xref:System.IDisposable>します。 このルールは、破棄可能な型かどうかを確認します`T`フィールドを宣言して`F`破棄可能な型のインスタンスである`FT`します。 各フィールドの`F`、ルールの呼び出しを検索しようとしました。`FT.Dispose`します。 ルールによって呼び出されるメソッドを検索する`T.Dispose`、および下位のレベル (によって呼び出されるメソッドによって呼び出されるメソッド`FT.Dispose`)。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、呼び出す<xref:System.IDisposable.Dispose%2A>を実装する型のフィールドの <xref:System.IDisposable>の割り当てを担当する場合、そのフィールドによって保持されているアンマネージ リソースを解放します。
+ この規則違反を修正するに<xref:System.IDisposable.Dispose%2A>を実装する型のフィールドで<xref:System.IDisposable>を割り当て、そのフィールドによって保持されているアンマネージ リソースを解放します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- フィールドによって保持されているリソースを解放するため、担当するがない場合、または場合に、この規則による警告を抑制するのには安全では呼び出し<xref:System.IDisposable.Dispose%2A>ルール チェックよりも深い呼び出しレベルで発生します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ いないの責任者は、フィールドによって保持されているリソースを解放する場合、または場合にこの規則による警告を抑制するのには安全では、呼び出し<xref:System.IDisposable.Dispose%2A>ルール チェックよりも詳細な呼び出し元のレベルで発生します。
 
 ## <a name="example"></a>例
- 次の例は、型を示しています。`TypeA`を実装する<xref:System.IDisposable>(`FT` previosu ディスカッション内)。
+ 次の例は、型`TypeA`を実装する<xref:System.IDisposable>(`FT` previosu ディスカッションで)。
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_1.cs)]
 
 ## <a name="example"></a>例
- 次の例は、型を示しています。`TypeB`フィールドを宣言することでこの規則に違反する`aFieldOfADisposableType`(`F`上記の説明で)、破棄可能な型として (`TypeA`) を呼び出さない<xref:System.IDisposable.Dispose%2A>フィールドにします。 `TypeB` 対応する`T`で、前に説明します。
+ 次の例は、型`TypeB`フィールドを宣言することでこの規則に違反する`aFieldOfADisposableType`(`F`上記の説明で)、破棄可能な型として (`TypeA`) を呼び出さない<xref:System.IDisposable.Dispose%2A>フィールド。 `TypeB` 対応する`T`で、前に説明します。
 
  [!code-csharp[FxCop.Usage.IDisposableFields#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_2.cs)]
 
 ## <a name="see-also"></a>関連項目
- <xref:System.IDisposable?displayProperty=fullName> [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
+
+- <xref:System.IDisposable?displayProperty=fullName>
+- [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

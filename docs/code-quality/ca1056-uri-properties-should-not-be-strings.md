@@ -14,16 +14,21 @@ ms.assetid: fdc99d29-0904-4a65-baa8-4f76833c953e
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a6379598194e3836ea3e77efa68741c2c4b596b1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 71c4428596281abf0ad606624bd67c40a490ee49
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900902"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549379"
 ---
 # <a name="ca1056-uri-properties-should-not-be-strings"></a>CA1056: URI プロパティを文字列にすることはできません
+
 |||
 |-|-|
 |TypeName|UriPropertiesShouldNotBeStrings|
@@ -32,25 +37,25 @@ ms.locfileid: "31900902"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 型は、名前持つにはには、"uri"、"Uri"、"urn"、"Urn"、"url"または"Url"が含まれています。 文字列型のプロパティを宣言します。
+ 型は、名前が"uri"、"Uri"、"urn"、"Urn"、"url"または"Url"を格納する文字列プロパティを宣言します。
 
 ## <a name="rule-description"></a>規則の説明
- このルールは、プロパティ名は pascal 形式の大文字と小文字の規則に基づいて、トークンに分割し、各トークンが"uri"、"Uri"、"urn"、"Urn"、"url"または"Url"に等しいかどうかを確認します。 一致がある場合、規則が uniform resource identifier (URI) を表すことを前提とします。 URI の文字列表現は解析エラーやエンコーディング エラーが発生しやすく、セキュリティ上の脆弱性の原因となる場合があります。 <xref:System.Uri?displayProperty=fullName>クラスは、安全性とセキュリティで保護された方法でこれらのサービスを提供します。
+ このルールは、プロパティ名は pascal 形式の大文字と小文字の規則に基づいて、トークンに分割し、各トークンが"uri"、"Uri"、"urn"、"Urn"、"url"または"Url"に等しいかどうかを確認します。 一致がある場合、ルールでは、uniform resource identifier (URI) を表すこと前提としています。 URI の文字列表現は解析エラーやエンコーディング エラーが発生しやすく、セキュリティ上の脆弱性の原因となる場合があります。 <xref:System.Uri?displayProperty=fullName>クラスは、安全かつセキュリティで保護された方法でこれらのサービスを提供します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、プロパティを変更、<xref:System.Uri>型です。
+ この規則違反を修正するには、プロパティを変更、<xref:System.Uri>型。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- プロパティは、URI を表していない場合はこの規則による警告を抑制しても安全です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ プロパティは、URI を表していない場合、この規則による警告を抑制するのには安全です。
 
 ## <a name="example"></a>例
- 次の例は、型`ErrorProne`、この規則と、型に違反する`SaferWay`規則に適合します。
+ 次の例は、型`ErrorProne`、このルールとの種類に違反する`SaferWay`ルールを満たします。
 
  [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1056-uri-properties-should-not-be-strings_1.cs)]
  [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1056-uri-properties-should-not-be-strings_1.vb)]
  [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1056-uri-properties-should-not-be-strings_1.cpp)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1054: URI パラメーターを文字列にすることはできません](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
 
  [CA1055: URI 戻り値を文字列にすることはできません](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)

@@ -10,14 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fb3a7e1818013694633a5337e415a01baaae286
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 14df76b363f4df5d09b06436765b5f0c66ad2c5d
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31918705"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551898"
 ---
 # <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: クリティカル型のフィールドはセキュリティ クリティカルである必要があります
+
 |||
 |-|-|
 |TypeName||
@@ -26,7 +27,8 @@ ms.locfileid: "31918705"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 透過的セキュリティ フィールドまたはセーフ クリティカル フィールドが宣言されました。 その型は、セキュリティ クリティカルとして指定されています。 例えば:
+
+透過的セキュリティ フィールドまたはセーフ クリティカル フィールドが宣言されました。 その型は、セキュリティ クリティカルとして指定されています。 例えば:
 
 ```csharp
 [assembly: AllowPartiallyTrustedCallers]
@@ -38,16 +40,17 @@ ms.locfileid: "31918705"
    {
       Type1 m_field; // CA2151, transparent field of critical type
    }
-
 ```
 
- この例では、`m_field` はセキュリティ クリティカルな型の透過的セキュリティ フィールドです。
+この例では、`m_field` はセキュリティ クリティカルな型の透過的セキュリティ フィールドです。
 
 ## <a name="rule-description"></a>規則の説明
- セキュリティ クリティカルな型を使用するには、型を参照するコードがセキュリティ クリティカルであるか、セキュリティ セーフ クリティカルである必要があります。 これは、参照が間接的である場合にも当てはまります。 たとえば、クリティカルな型を持つ透過的フィールドを参照する場合、コードはセキュリティ クリティカルであるか、セキュリティ セーフである必要があります。 そのため、透過的セキュリティまたはセキュリティ セーフ クリティカルなフィールドが存在すると、透過的なコードはこのフィールドにアクセスできないので、紛らわしくなります。
+
+セキュリティ クリティカルな型を使用するには、型を参照するコードがセキュリティ クリティカルであるか、セキュリティ セーフ クリティカルである必要があります。 これは、参照が間接的である場合にも当てはまります。 たとえば、クリティカルな型を持つ透過的フィールドを参照する場合、コードはセキュリティ クリティカルであるか、セキュリティ セーフである必要があります。 そのため、透過的セキュリティまたはセキュリティ セーフ クリティカルなフィールドが存在すると、透過的なコードはこのフィールドにアクセスできないので、紛らわしくなります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、フィールドを <xref:System.Security.SecurityCriticalAttribute> 属性でマークするか、フィールドによって参照される型を透過的セキュリティまたはセーフ クリティカルにします。
+
+このルールの違反を修正するには、マーク、フィールドに、<xref:System.Security.SecurityCriticalAttribute>属性、または型がいずれかのセキュリティまたはセーフ フィールドによって参照されている重要な。
 
 ```csharp
 // Fix 1: Make the referencing field security critical
@@ -72,13 +75,12 @@ ms.locfileid: "31918705"
       [SecurityCritical]
       Type1 m_field; // Fixed: critical type, critical field
    }
-
 ```
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+
+この規則による警告は抑制しないでください。
 
 ### <a name="code"></a>コード
- [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]
 
-### <a name="comments"></a>コメント
+[!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]

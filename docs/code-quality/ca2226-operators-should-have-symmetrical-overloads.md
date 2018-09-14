@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 67cdfd3799b0ba3e1af53cb9e95bb426fec02ddf
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5f31abd49b2d9ef8c00e7d308d66583d968691f8
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920629"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549772"
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: 演算子は対称型オーバーロードを含まなければなりません
 |||
@@ -35,17 +35,17 @@ ms.locfileid: "31920629"
  型で等値演算子または非等値演算子を実装し、逆の働きをする演算子を実装していません。
 
 ## <a name="rule-description"></a>規則の説明
- ここで等値または非等値のいずれかは、型のインスタンスに適用され、反対側の演算子が定義されていない状況はありません。 種類は、通常、等値演算子の負数化された値を返すことによって、非等値演算子を実装します。
+ 等値または非等値のいずれかを型のインスタンスに適用できますが、反対側の演算子が定義されての状況ではありません。 型は、通常、等値演算子の符号が逆の値を返すことによって、非等値演算子を実装します。
 
- C# コンパイラでは、この規則違反のエラーを発行します。
+ C# コンパイラでは、この規則の違反のエラーを発行します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、等しいかどうかと、非等値演算子の両方を実装または存在するものを削除します。
+ この規則違反を修正するのには、等しいかどうかと非等値演算子の両方を実装または存在する 1 つを削除します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 種類と一貫性のある方法で動作しません、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告は抑制しないでください。 一貫性のある方法では、型は機能しません、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1046: 参照型で、演算子 equals をオーバーロードしないでください](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
  [CA2225: 演算子オーバーロードには名前付けされた代替が存在します](../code-quality/ca2225-operator-overloads-have-named-alternates.md)

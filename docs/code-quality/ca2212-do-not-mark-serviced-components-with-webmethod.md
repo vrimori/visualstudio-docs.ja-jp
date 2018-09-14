@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88708fdcb41a43d3e8b3f78b4e66decb7211a4b4
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 7d1595c6bdf7eafb5b86daba99e943aad3f02ac7
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177423"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550649"
 ---
 # <a name="ca2212-do-not-mark-serviced-components-with-webmethod"></a>CA2212: サービス コンポーネントを WebMethod に設定しません
 
@@ -44,7 +44,7 @@ ms.locfileid: "39177423"
 
 この規則違反を解決するからの属性を削除、<xref:System.EnterpriseServices.ServicedComponent>メソッド。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 
 この規則による警告は抑制しないでください。 これらの要素を組み合わせることが適切であるシナリオではありません。
 

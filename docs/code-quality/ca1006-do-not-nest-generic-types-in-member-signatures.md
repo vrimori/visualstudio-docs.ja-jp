@@ -14,16 +14,20 @@ ms.assetid: dfc867bc-f4af-45d7-b071-db04a248f9fc
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f6303cf96e3e8f6c4c0920336602cdbb76cc400a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e5f7021de24ec9b0a6d7c31d53893528790f2cf2
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31901163"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548880"
 ---
 # <a name="ca1006-do-not-nest-generic-types-in-member-signatures"></a>CA1006: ジェネリック型をメンバー シグネチャ内で入れ子にしません
+
 |||
 |-|-|
 |TypeName|DoNotNestGenericTypesInMemberSignatures|
@@ -32,7 +36,7 @@ ms.locfileid: "31901163"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 外部から参照できるメンバーには、入れ子にされた型引数を含む署名があります。
+ 外部から参照可能なメンバーには、入れ子にされた型引数を含む署名があります。
 
 ## <a name="rule-description"></a>規則の説明
  入れ子にされた型引数は、ジェネリック型の型引数でもあります。 入れ子にされた型引数を含むシグネチャを持つメンバーを呼び出すには、ユーザーが 1 つのジェネリック型をインスタンス化し、別のジェネリック型のコンストラクターにこの型を渡す必要があります。 複雑な手順と構文が必要となるため、これは避けるようにしてください。
@@ -40,16 +44,16 @@ ms.locfileid: "31901163"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、入れ子にされた型引数を削除する設計を変更します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 新しいライブラリの導入速度になり習得に必要な時間が短縮を簡単に理解し、使用する構文でジェネリック型を提供することです。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告は抑制しないでください。 ジェネリックでは簡単に理解して使用する構文を提供するには、習得に必要なされ、新しいライブラリの導入速度を向上する時間が短縮されます。
 
 ## <a name="example"></a>例
- 次の例では、規則に違反するメソッドとを違反するメソッドを呼び出すために必要な構文を示します。
+ 次の例では、規則に違反するメソッドと違反のメソッドを呼び出すために必要な構文を示します。
 
  [!code-vb[FxCop.Design.NestedGenerics#1](../code-quality/codesnippet/VisualBasic/ca1006-do-not-nest-generic-types-in-member-signatures_1.vb)]
  [!code-csharp[FxCop.Design.NestedGenerics#1](../code-quality/codesnippet/CSharp/ca1006-do-not-nest-generic-types-in-member-signatures_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1005: ジェネリック型でパラメーターを使用しすぎないでください](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 
  [CA1010: コレクションは、ジェネリック インターフェイスを実装しなければなりません](../code-quality/ca1010-collections-should-implement-generic-interface.md)

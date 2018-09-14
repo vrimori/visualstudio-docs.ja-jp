@@ -14,16 +14,20 @@ ms.assetid: 05ed134a-837d-43d7-bf97-906edeac44ce
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a00f78739a9287c996e87f182ca34ecba6d484c7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e56c57343ae61709b6d5875c865857a7475363fd
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31898877"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550493"
 ---
 # <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: ロケール特有の文字列をハードコードしません
+
 |||
 |-|-|
 |TypeName|DoNotHardcodeLocaleSpecificStrings|
@@ -35,21 +39,21 @@ ms.locfileid: "31898877"
  メソッドは、特定のシステム フォルダーのパスの部分を表す文字列リテラルを使用します。
 
 ## <a name="rule-description"></a>規則の説明
- <xref:System.Environment.SpecialFolder?displayProperty=fullName>列挙には、特殊なシステム フォルダーを参照するメンバーが含まれています。 これらのフォルダーの場所が異なるオペレーティング システム上の異なる値を持つことができます、ユーザーによって変更する、場所のおよび位置がローカライズされます。 特別なフォルダーの例では、"C:\WINDOWS\system32"は、[システム] フォルダーが上[!INCLUDE[winxp](../code-quality/includes/winxp_md.md)]が上には、"C:\WINNT\system32"[!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]です。 <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName>メソッドが関連付けられている場所を返します、<xref:System.Environment.SpecialFolder>列挙します。 によって返される場所<xref:System.Environment.GetFolderPath%2A>はローカライズされ、現在実行中のコンピューターに適切な。
+ <xref:System.Environment.SpecialFolder?displayProperty=fullName>列挙が特殊なシステム フォルダーを参照するメンバーが含まれます。 これらのフォルダーの場所は、さまざまなオペレーティング システムで異なる値を持つことができます、ユーザーは、いくつかの場所を変更できるし、位置がローカライズされます。 特別なフォルダーの例の"C:\WINDOWS\system32"は、[システム] フォルダーは、[!INCLUDE[winxp](../code-quality/includes/winxp_md.md)]が上には、"C:\WINNT\system32"[!INCLUDE[win2kfamily](../code-quality/includes/win2kfamily_md.md)]します。 <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName>メソッドが関連付けられている場所を返します、<xref:System.Environment.SpecialFolder>列挙体。 によって返される場所<xref:System.Environment.GetFolderPath%2A>はローカライズされ、現在実行中のコンピューターに適切な。
 
- このルールを使用して取得されるフォルダーのパスをトークン化、<xref:System.Environment.GetFolderPath%2A>個別のディレクトリのレベルにメソッドです。 各文字列リテラルは、トークンと比較されます。 一致が見つかった場合、メソッドがトークンに関連付けられているシステムの場所を表す文字列を構築するいると見なされます。 移植性と、使用、<xref:System.Environment.GetFolderPath%2A>文字列リテラルを使用する代わりに特殊なシステム フォルダーの場所を取得します。
+ このルールを使用して取得されるフォルダーのパスをトークン化、<xref:System.Environment.GetFolderPath%2A>メソッドの別のディレクトリのレベルにします。 各文字列リテラルは、トークンと比較されます。 一致が見つかった場合、メソッドがトークンに関連付けられているシステムの場所を表す文字列を構築するいると見なされます。 移植性と、使用、<xref:System.Environment.GetFolderPath%2A>文字列リテラルを使用する代わりに特殊なシステム フォルダーの場所を取得するメソッド。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するを使用して場所を取得、<xref:System.Environment.GetFolderPath%2A>メソッドです。
+ この規則違反を修正するを使用して場所を取得、<xref:System.Environment.GetFolderPath%2A>メソッド。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 関連付けられているシステムの場所のいずれかを参照する文字列リテラルを使用しない場合は、この規則による警告を抑制するのには安全では、<xref:System.Environment.SpecialFolder>列挙します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 関連付けられているシステムの場所のいずれかを参照する文字列リテラルを使用しない場合は、この規則による警告を抑制するのには安全では、<xref:System.Environment.SpecialFolder>列挙体。
 
 ## <a name="example"></a>例
- 次の例では、この規則から 3 つの警告を生成する一般的なアプリケーション データ フォルダーのパスを構築します。 次に、例では、パスを取得しますを使用して、<xref:System.Environment.GetFolderPath%2A>メソッドです。
+ 次の例では、この規則から 3 つの警告を生成します。 一般的なアプリケーション データ フォルダーのパスを構築します。 次に、例を使用して、パスを取得、<xref:System.Environment.GetFolderPath%2A>メソッド。
 
  [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/CSharp/ca1302-do-not-hardcode-locale-specific-strings_1.cs)]
  [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../code-quality/codesnippet/VisualBasic/ca1302-do-not-hardcode-locale-specific-strings_1.vb)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1303: ローカライズされたパラメーターとしてリテラルを渡さないでください](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)

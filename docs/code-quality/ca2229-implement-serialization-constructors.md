@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 72a27fefd0fa64e3218ccb6578f7dabb94ea4ae6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c1c4dea2b6b3a7f64efa06a1600c63ad7a7d9d5c
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920127"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551978"
 ---
 # <a name="ca2229-implement-serialization-constructors"></a>CA2229: シリアル化コンストラクターを実装します
+
 |||
 |-|-|
 |TypeName|ImplementSerializationConstructors|
@@ -32,30 +33,33 @@ ms.locfileid: "31920127"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- 型が実装、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス、インターフェイス、またはデリゲートではないと、次の条件のいずれかが当てはまる。
+ 型が実装、<xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>インターフェイス、デリゲートまたはインターフェイスではないと、次の条件のいずれかが true:
 
--   型が使用するコンス トラクターを持たない、<xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>オブジェクトおよび<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>オブジェクト (シリアル化コンス トラクターのシグネチャ)。
+- 型には、取得するコンス トラクターはありません、<xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>オブジェクトと<xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>オブジェクト (シリアル化コンス トラクターの署名)。
 
--   型が封印されていないと、シリアル化コンス トラクターのアクセス修飾子は保護された (ファミリー) ではありません。
+- 型が封印されていないと、そのシリアル化コンス トラクターのアクセス修飾子が保護された (ファミリ) ではありません。
 
--   型がシールされている、シリアル化コンス トラクターのアクセス修飾子がプライベートではありません。
+- 型がシールされている、シリアル化コンス トラクターのアクセス修飾子がプライベートではありません。
 
 ## <a name="rule-description"></a>規則の説明
- このルールは、カスタムのシリアル化をサポートする型に関係します。 型は、実装している場合、カスタムのシリアル化をサポートしている、<xref:System.Runtime.Serialization.ISerializable>インターフェイスです。 シリアル化コンス トラクターは、逆シリアル化、またはを使用してシリアル化されたオブジェクトを再作成に必要な<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>メソッドです。
+ このルールは、カスタムのシリアル化をサポートする型に関連します。 型は、実装している場合、カスタムのシリアル化をサポートしている、<xref:System.Runtime.Serialization.ISerializable>インターフェイス。 シリアル化コンス トラクターは、逆シリアル化、またはを使用してシリアル化されたオブジェクトを再作成に必要な<xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>メソッド。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  この規則違反を修正するには、シリアル化コンストラクターを実装します。 シールされたクラスの場合、コンストラクターをプライベートにするか、プロテクトにします。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 規則の違反は抑制しないでください。 型は、逆シリアル化されませんされ、多くのシナリオでは機能しません。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ ルールの違反を抑制しないでください。 型を使用して、逆シリアル化はならず、多くのシナリオでは機能しません。
 
 ## <a name="example"></a>例
- 次の例は、規則に適合する型を示しています。
+ 次の例では、規則に適合する型を示します。
 
  [!code-csharp[FxCop.Usage.ISerializableCtor#1](../code-quality/codesnippet/CSharp/ca2229-implement-serialization-constructors_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA2237: ISerializable 型を SerializableAttribute に設定します](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>
+
+- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>
