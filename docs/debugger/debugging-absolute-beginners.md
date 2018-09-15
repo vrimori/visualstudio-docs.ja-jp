@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb37faa194e3c370f92f9a82c7866373dd8f26d3
-ms.sourcegitcommit: a6734c4d76dae3d21b55b10f3bc618dfa6b62dea
+ms.openlocfilehash: 6c10032bf12060c8c5e42f93f6596fe576adfccf
+ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42623713"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45612676"
 ---
 # <a name="how-to-debug-for-absolute-beginners"></a>超初心者向けのデバッグ方法
 
@@ -332,4 +332,4 @@ Visual Studio でのコード行の横にある左の余白をクリックして
 この記事では、いくつかの一般的なデバッグの概念を学びました。 次に、Visual Studio でデバッグする方法を学習を開始することができます。
 
 > [!div class="nextstepaction"]
-> [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)
+> [Visual Studio を使用したデバッグについて理解する](../debugger/getting-started-with-the-debugger.md)

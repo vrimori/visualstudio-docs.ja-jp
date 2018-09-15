@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 145640d63191b72d2bce880f9ecab637dcbf0246
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b9167970030919073bf5a58ccf7368cff69dc896
+ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45552098"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45612741"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 プログラム データベース (.pdb) ファイル、シンボル ファイルとも呼ばれます。 は、クラス、メソッド、およびプロジェクトのコンパイル済み実行可能ファイルで使用される識別子には、他のコードのソース コードで作成した識別子をマップします。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーでは、この情報を使って、2 つの重要な情報を決定します。
@@ -45,7 +45,11 @@ ms.locfileid: "45552098"
 また、シンボル ファイルにはソース ファイルの元の場所、および必要に応じてソース ファイルを取得できるソース サーバーの場所が格納されています。
   
 > [!TIP]
-> プロジェクト ソース コードの外部のコードをデバッグする場合は、Windows コードやサード パーティのコードなど、プロジェクトから呼び出す必要がある .pdb ファイル (および必要に応じて、外部コードのソース ファイル) の場所を指定して、それらのファイルは、t のビルドと正確に一致する必要があります。彼の実行可能ファイルです。  
+> プロジェクト ソース コードの外部のコードをデバッグする場合は、Windows コードやサード パーティのコードなど、プロジェクトから呼び出す必要がある .pdb ファイル (および必要に応じて、外部コードのソース ファイル) の場所を指定して、それらのファイルは、t のビルドと正確に一致する必要があります。彼の実行可能ファイルです。 
+
+##  <a name="how-can-i-manage-symbol-files-while-debugging"></a>デバッグ中にシンボル ファイルを管理する方法は? 
+
+**モジュール**ウィンドウを確認するどのようなコード モジュールをデバッガーはユーザー コードでは、または自分のコードとモジュールの状態を読み込んでシンボルとして扱います。 デバッグ中にシンボルを読み込むため、このウィンドウを使用することもできます。 詳細については、次を参照してください。[をアプリにデバッガーのアタッチをより理解を深める](../debugger/debugger-tips-and-tricks.md#modules_window)します。
  
 ##  <a name="BKMK_Find_symbol___pdb__files"></a> デバッガーは、シンボル ファイルを検索しますか。 
   

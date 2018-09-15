@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f39b2ce216ce909837f37fd09fb556a4733098ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3a2873f691fdaa1251a5562e21e2bbd0467eb2e2
+ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42627342"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45612754"
 ---
 # <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Visual Studio での マイ コードのみを使用してユーザー コードのみをデバッグするかどうかを指定します。
 Visual Studio に自動的にステップ オーバー、システム、フレームワーク、およびその他の非ユーザー呼び出しと呼び出し履歴 ウィンドウでそれらの呼び出しを折りたたむを構成することができます。 またはこの動作を無効にする機能は呼*マイ コードのみ*します。 このトピックでは、c#、Visual Basic、C++、および JavaScript のプロジェクトでマイ コードのみを使用する方法について説明します。
@@ -37,6 +37,10 @@ Visual Studio に自動的にステップ オーバー、システム、フレ�
   
 > [!NOTE]
 >  **外部コードの表示**設定は、現在のユーザーのプロファイラーに保存されます。 この設定は、ユーザーによって開かれたすべての言語のすべてのプロジェクトに適用されます。
+
+##  <a name="identify-user-code-while-debugging"></a>デバッグ中にユーザー コードを識別します。 
+
+**モジュール**ウィンドウを確認する、デバッガーがモジュールの状態を読み込んでシンボルなどの情報と共にユーザー コード、または、マイ コードとして扱うはどのようなコード モジュール。 詳細については、次を参照してください。[をアプリにデバッガーのアタッチをより理解を深める](../debugger/debugger-tips-and-tricks.md#modules_window)します。
   
 ##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET framework マイ コードのみ  
   
