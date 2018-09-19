@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるテクニ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: df279c52c0e971acdac3e9f4ad22550cd05b0aa5
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 072a0c7dc7679f965c84de06c969034db02766a2
+ms.sourcegitcommit: 12e2f963dac76d53f87569c01198f6d0396d64cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "43289448"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44701768"
 ---
 # <a name="activate-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションのテクニカル サポート特典をアクティブ化する
 
@@ -32,12 +32,13 @@ ms.locfileid: "43289448"
 3.  プロセスを完了するには、担当者に以下のものを提供する必要があります。
     - 自分のサブスクリプションへのサインインに使用するメール アドレス
     - [[サブスクリプション]](https://my.visualstudio.com/subscriptions) タブで見つけることができるサブスクリプション ID。
+
     > [!div class="mx-imgBorder"]
     > ![テクニカル サポート特典のサブスクリプション ID を確認する](_img\vs-tech-support\vs-tech-support-subID-cropped.png)
 
 
-    > [!NOTE]
-    > 英語以外の言語のサポート アカウントを有効にする場合は、お住まいの国を[このリスト](https://support.microsoft.com/help/14084/activate-support-contract)から選択してください。   
+> [!NOTE]
+> 英語以外の言語のサポート アカウントを有効にする場合は、お住まいの国を[このリスト](https://support.microsoft.com/help/14084/activate-support-contract)から選択してください。   
 
 
 ## <a name="how-to-submit-an-incident"></a>インシデントを送信する方法
