@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれるコンシ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7daaca8c9a98162a115453dcd28b0b598dbb67a7
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 395b05d3b3caa7a800cc28ca1f93c944e6320d1e
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281876"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289356"
 ---
 # <a name="concierge-chat"></a>コンシェルジェ チャット
 
@@ -27,16 +27,16 @@ ms.locfileid: "36281876"
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. 特典ページの [サポート] セクションでコンシェルジェ チャット タイルを見つけ、**[今すぐチャットを開始]** をクリックします。
-
-    ![コンシェルジェ チャット タイル](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![コンシェルジェ チャット タイル](_img/vs-concierge-chat/vs-concierge-chat-tile.png)
 
 3. **[続行]** をクリックします。
 
 4. チャット ウィンドウが開き、キュー内の位置を示すカウンターが表示されます。
 
 5. エージェントが対応可能になると、チャットが開始されます。
-
-    ![コンシェルジェ チャット セッション](_img/vs-concierge-chat/vs-concierge-chat-session.png)
+    > [!div class="mx-imgBorder"]
+    > ![コンシェルジェ チャット セッション](_img/vs-concierge-chat/vs-concierge-chat-session.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

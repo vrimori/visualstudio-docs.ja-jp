@@ -9,12 +9,12 @@ description: クラウド サブスクリプションの請求に関する質問
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2df0604cff45f6af63070be6c1ba10f23a84b060
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 185b4ebcb374973fdbcc56c81a3474797161736f
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303323"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289561"
 ---
 # <a name="visual-studio-cloud-subscriptions-billing-faq"></a>Visual Studio クラウド サブスクリプションの請求に関してよくあるご質問
 
@@ -26,9 +26,9 @@ ms.locfileid: "36303323"
 A: いいえ。 すべての Visual Studio クラウド サブスクリプションは、Azure サブスクリプションを使って購入する必要があります (Azure 請求先アカウントとお考えください)。
 
 ### <a name="q-what-types-of-azure-subscriptions-can-be-used-to-buy-visual-studio-cloud-subscriptions"></a>Q: Visual Studio クラウド サブスクリプションの購入にはどのような種類の Azure サブスクリプションを使うことができますか?
-A: ほとんどすべての Azure サブスクリプションを使うことができます。[Enterprise Agreement (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/) に関連付けられた Azure サブスクリプション、クラウド ソリューション プロバイダー (CSP) によって設定された Azure サブスクリプション、Microsoft Open License リセラーによって設定された Azure サブスクリプション、従量課金制 Azure サブスクリプションなどがあり、Visual Studio サブスクライバーがサブスクライバー特典として設定した Azure サブスクリプションを使って購入することさえできます (ただし、毎月のクレジットを使ってさらに Visual Studio サブスクリプションを支払うことはできません)。
+A: ほとんどの Azure サブスクリプションを使うことができます。お使いの[エンタープライズ契約 (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/) と接続した Azure サブスクリプション、Cloud Solution Providers (CSP) によって設定された Azure サブスクリプション、Microsoft オープン ライセンス リセラーによって設定された Azure サブスクリプション、そして従量課金制 Azure サブスクリプションをサポートしています。
 
-注意する必要のある唯一の例外として、[Azure 無料試用版](https://azure.microsoft.com/pricing/free-trial/)を使うことはできません。
+[Azure 無料試用版](https://azure.microsoft.com/pricing/free-trial/)や Visual Studio サブスクリプションのサブスクライバー特典として含まれているサブスクリプションなど、一部の種類の Azure サブスクリプションは使用できません。
 
 ### <a name="q-am-i-required-to-buy-other-azure-services"></a>Q: 他の Azure サービスを購入する必要はありますか?
 A: いいえ、ありませえん。 Azure で Visual Studio クラウド サブスクリプションだけを購入したい場合は、そうすることができます。

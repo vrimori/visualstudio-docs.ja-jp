@@ -9,16 +9,16 @@ description: 長期契約ではなく、月または年単位の一定期間だ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 99c03b19281ef9e53695b956a34b0682fb042f56
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: e183b74e326efa65b810f7f46fd198e43aa796bf
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380604"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289552"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional および Visual Studio Enterprise クラウド サブスクリプションの購入
 
-[Visual Studio Professional と Visual Studio Enterprise のサブスクリプション](https://visualstudio.microsoft.com/subscriptions/)は、[Visual Studio Marketplace](https://marketplace.visualstudio.com) から購入できます。 これらは、クラウド サブスクリプションと呼ばれます。
+[Visual Studio Professional と Visual Studio Enterprise のサブスクリプション](https://visualstudio.microsoft.com/subscriptions/)は、[Visual Studio Marketplace](https://marketplace.visualstudio.com) から購入できます。 これらは、**"クラウド サブスクリプション"** と呼ばれます。
 
 [クラウド サブスクリプションの特典と価格を比較する](https://visualstudio.microsoft.com/vs/pricing/)
 
@@ -31,36 +31,41 @@ ms.locfileid: "39380604"
 0.  [[Visual Studio Marketplace]、[サブスクリプション]](https://marketplace.visualstudio.com/subscriptions) にサインインします。
 
 0.  購入するサブスクリプションを選択します。次に例を示します。
-
-    <img alt="Buy a Visual Studio subscription" src="_img/buy-vs-subscriptions/buy-vs-sub-start.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio サブスクリプションを購入する](_img/buy-vs-subscriptions/buy-vs-sub-start.png)
 
 0.  請求に使用する Azure サブスクリプションを選択します。 お持ちでなければ、新しい Azure サブスクリプションを作成できます。
-
-    <img alt="Select Azure subscription for billing" src="_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![請求に使用する Azure サブスクリプションを選択する](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
 
 0.  購入するサブスクリプションの数を選択します。
-
-    <img alt="Select number of subscriptions" src="_img/buy-vs-subscriptions/buy-vs-sub-users.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![サブスクリプションの数を選択する](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
 
     サブスクリプションを自分に割り当てない場合は、**[自分にこのサブスクリプションを割り当てる]** をオフにします。
 
 0.  確認して購入を完了します。 自分にサブスクリプションを割り当てる場合は、[Visual Studio サブスクライバー ポータル](https://my.visualstudio.com)にアクセスして、ソフトウェアをダウンロードし、その他のサブスクライバー特典を利用開始します。
 
-    <img alt="Finish purchase successfully" src="_img/buy-vs-subscriptions/buy-vs-sub-success.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![購入を完了する](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
 
-    <img alt="Go to Visual Studio subscriber portal" src="_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![Visual Studio サブスクライバー ポータルに移動する](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
 
-    複数のサブスクリプションを購入した場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com/)に進み、他のユーザーにサブスクリプションを割り当てることができます。
+複数のサブスクリプションを購入した場合は、[Visual Studio サブスクリプション管理ポータル](https://manage.visualstudio.com)に進み、他のユーザーにサブスクリプションを割り当てることができます。
 
-    <img alt="Assign subscriptions to others" src="_img/buy-vs-subscriptions/buy-vs-sub-success-many.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![サブスクリプションを他のユーザーに割り当てる](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
 
-    <img alt="View subscriptions" src="_img/buy-vs-subscriptions/assign-subscriptions.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![サブスクリプションを表示する](_img/buy-vs-subscriptions/assign-subscriptions.png)
 
 ## <a name="manage-subscriptions"></a>購入したクラウド サブスクリプションの更新のキャンセル
 
 *   購入したサブスクリプションの数を変更するには:
 
-    <img alt="Change subscriptions" src="_img/buy-vs-subscriptions/manage-subscriptions.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![サブスクリプションを変更する](_img/buy-vs-subscriptions/manage-subscriptions.png)
 
 *   これらのサブスクリプションをキャンセルするには、サブスクリプションの数をゼロ (0) に減らします。 次の請求期間の開始時に更新がありません (月間クラウド サブスクリプションの場合は次の月初、年間クラウド サブスクリプションの場合は 12 か月後)。
 

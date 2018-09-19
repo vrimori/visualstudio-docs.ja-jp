@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる MSDN Magaz
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7139bbe46b931ce32ea521eab27e7a26f77652dc
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: ea89d30c9174cc0bd3080131363edad4ef66eb77
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280315"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289321"
 ---
 # <a name="the-msdn-magazine-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの MSDN Magazine 特典
 
@@ -33,17 +33,17 @@ ms.locfileid: "36280315"
 ### <a name="printed-edition"></a>印刷エディション
 1.  MSDN Magazine サブスクリプションの受信を開始するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 2.  [プロフェッショナルな開発] セクションで MSDN Magazine のタイルを見つけて、MSDN Magazine サブスクリプションタイルの **[サブスクライブ]** をクリックします  (デジタル エディションにアクセスするには、タイルの右下にある "!" をクリックします)。
-
-    ![MSDN Magazine 特典タイル](_img\vs-msdn\vs-msdn-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![MSDN Magazine 特典タイル](_img\vs-msdn\vs-msdn-tile.png)
 
 
 3.  MSDN Magazine ページで、優先サブスクリプション タイプを選びます。  どこに住んでいても、無料でデジタル エディションを選ぶことができます。  無料の印刷版は、米国居住者が利用できます。  米国以外の住所への印刷版の送付には、配送費用がかかります。
-
-    ![MSDN Magazine 特典サブスクリプション](_img\vs-msdn\vs-msdn-subs-page-resized.png)
+    > [!div class="mx-imgBorder"]
+    > ![MSDN Magazine 特典サブスクリプション](_img\vs-msdn\vs-msdn-subs-page-resized.png)
 
 4.  要求された連絡先情報を指定し、**[送信]** をクリックします   (選んだマガジンのバージョンが、[Magazine Subscription]\(マガジン購読\) セクションに表示されます。  印刷版を選んだ場合、最初のオプションの表示は **[Yes! I want to receive 1 year (12 issues) of MSDN Magazine for FREE]\(はい、MSDN Magazine を 1 年 (12 号) 無料で受け取ります\)** です)。
-
-    ![MSDN Magazine 特典プロファイル](_img\vs-msdn\vs-msdn-profile.png)
+    > [!div class="mx-imgBorder"]
+    > ![MSDN Magazine 特典プロファイル](_img\vs-msdn\vs-msdn-profile.png)
 
 5.  以上で終了です。  選んだ雑誌のバージョンにより、印刷版マガジンまたは最新オンライン バージョンへのリンクを含むメールを次の号から受け取り始めます。  それではお楽しみください。
 

@@ -9,12 +9,12 @@ description: 一部の Visual Studio Enterprise サブスクリプションに�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 21a7d1a9ef072f13d53698a7fc09a83d7041e1bd
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 20ba0a34c54bc0b9a54282bbc50bd1e9bd61c16b
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280482"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289383"
 ---
 # <a name="the-modernrequirements4tfs-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの MODERNRequirements4TFS 特典
 
@@ -24,24 +24,24 @@ ms.locfileid: "36280482"
 ## <a name="activation-steps"></a>アクティブ化の手順
 1.  MODERNRequirementsTFS 特典を使用するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 2.  [ツール] セクションで、MODERNRequirements4TFS のタイルを見つけて、タイルの左下にある **[コードを取得]** リンクをクリックします。
-
-    ![ModernRequirements 特典タイル](_img\vs-modernreq\vs-modernreq-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![ModernRequirements 特典タイル](_img\vs-modernreq\vs-modernreq-tile.png)
 
 2.  コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
 
 3.  アカウントを作成してソフトウェアをダウンロードするため、ModernRequirements の Web サイトにリダイレクトされます。  ランディング ページで、要求された連絡先情報を入力し、**[Get License Key and Download]\(ライセンス キーの取得とダウンロード\)** をクリックします。
-
-    ![ModernRequirements ランディング ページ](_img\vs-modernreq\vs-modernreq-landing.png)
+    > [!div class="mx-imgBorder"]
+    > ![ModernRequirements ランディング ページ](_img\vs-modernreq\vs-modernreq-landing.png)
 
 
 4.  次のページにはライセンス キーが含まれます。  ページに表示されるインストールに関する情報を確認し、ページの中央にある青い **[To download the software please click here]\(ソフトウェアをダウンロードするにはここをクリックしてください\)** リンクをクリックします。
-
-    ![ModernRequirements ライセンス キー](_img\vs-modernreq\vs-modernreq-license-new-resized.png)
+    > [!div class="mx-imgBorder"]
+    > ![ModernRequirements ライセンス キー](_img\vs-modernreq\vs-modernreq-license-new-resized.png)
 
 
 5.  ダウンロード ページでは、MODERNRequirements スイートをインストールするか、SMARTOffice4TFS スイートの個別のモジュールをインストールすることができます。  適切なオプションは、ユーザーの設定と、インストールされている TFS のバージョンによって異なります。  ページの情報をよく理解し、製品の適切なバージョンを選んでください。
-
-    ![ModernRequirement ダウンロード オプション](_img\vs-modernreq\vs-modernreq-download-page-new.png)
+    > [!div class="mx-imgBorder"]
+    > ![ModernRequirement ダウンロード オプション](_img\vs-modernreq\vs-modernreq-download-page-new.png)
 
 6.  この例では、SMARTOffice4TFS を選びます。  ダウンロード ダイアログが表示され、.zip ファイルのダウンロードと保存に関する 3 つのオプションが提供されます。  この例では、**[Save]\(保存\)** を選び、PC のダウンロード フォルダーにパッケージのコピーを格納します。
 
@@ -57,7 +57,8 @@ ms.locfileid: "36280482"
     - SmartVisio4TFS_Online
     - SmartWord4TFS_Online
 
-    ![ModernRequirement ダウンロード オプション](_img\vs-modernreq\vs-modernreq-downloaded-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![ModernRequirement ダウンロード オプション](_img\vs-modernreq\vs-modernreq-downloaded-cropped.png)
 
 11. フォルダー内を右クリックして、**[Extract All]\(すべて抽出\)** を選びます。  ファイルを抽出する場所を指定し、**[Extract]\(抽出\)** をクリックします。
 

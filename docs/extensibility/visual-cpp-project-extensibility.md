@@ -11,16 +11,16 @@ ms.author: corob
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: acef2728a79b8706b0af3dad4e272ed34b222a42
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 76adb5df7fec7663f5c9bc1a4c84c378f0e14a82
+ms.sourcegitcommit: b9a32c3d94b19e7344f4872bc026efd3157cf220
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45552499"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46135660"
 ---
 # <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio の C++ プロジェクト システムの機能拡張とツールセットの統合
 
-*Visual C プロジェクト システム*.vcxproj ファイルによって使用されます。 基にして、 [Visual Studio 共通プロジェクト システム (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)し、その他新しいツールセット、ビルドのアーキテクチャおよびターゲット プラットフォームの簡単な統合のポイントを C++ 固有の機能拡張を提供します。 
+*Visual C プロジェクト システム*.vcxproj ファイルを使用します。 基にして、 [Visual Studio 共通プロジェクト システム (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)し、その他新しいツールセット、ビルドのアーキテクチャおよびターゲット プラットフォームの簡単な統合のポイントを C++ 固有の機能拡張を提供します。 
 
 ## <a name="c-msbuild-targets-structure"></a>C++ の MSBuild ターゲットの構造体
 
@@ -227,13 +227,13 @@ C++ のビルドには、次のターゲットで表されている 3 つの主�
 </Target>
 ```
 
-`ClCompile` 他のビルド ツールに固有のターゲットが Microsoft.CppBuild.targets で空のターゲットとして定義されます。
+`ClCompile` 空のターゲットとしてツールに固有のターゲットが定義されている他のビルドと*Microsoft.CppBuild.targets*:
 
 ```xml
 <Target Name="ClCompile"/>
 ```
 
-`ClCompile`で空のターゲットとしてターゲットが定義されている*Microsoft.CppBuild.targets*ツールセットでオーバーライドしない限り、実際のビルド アクションは実行されません。 ツールセットのターゲットをオーバーライドできます、`ClCompile`ターゲット、つまり、含めることができる別`ClCompile`定義をインポートした後*Microsoft.CppBuild.targets*: 
+`ClCompile`ターゲットが空の場合、ツールセットでオーバーライドしない限り、実際のビルド アクションは実行されません。 ツールセットのターゲットをオーバーライドできます、`ClCompile`ターゲット、つまり、含めることができる別`ClCompile`定義をインポートした後*Microsoft.CppBuild.targets*: 
 
 ```xml
 <Target Name="ClCompile"
@@ -243,7 +243,7 @@ C++ のビルドには、次のターゲットで表されている 3 つの主�
 </Target>
 ```
 
-名前に関係なく`ClCompile`、Visual Studio は、クロス プラットフォームのサポートを実装する前に作成された、`ClCompile`ターゲットは CL.exe を呼び出す必要はありません。 適切な MSBuild タスクを使用しても、Clang、gcc、または他のコンパイラを呼び出すことができます。
+Visual Studio は、クロス プラットフォームのサポートを実装する前に作成された、名前とは異なり、`ClCompile`ターゲットは CL.exe を呼び出す必要はありません。 適切な MSBuild タスクを使用しても、Clang、gcc、または他のコンパイラを呼び出すことができます。
 
 `ClCompile`ターゲットを除くすべての依存関係のない、`SelectClCompile`ターゲットでは、IDE で作業を 1 つのファイルのコンパイル コマンドに必要です。
 
@@ -289,7 +289,7 @@ Microsoft.Cpp.Common.Tasks.dll は、これらのタスクを実装します。
 
 1. タスクのパフォーマンスが向上するか、またはより複雑な機能が必要なだけの場合は、通常の MSBuild を使用して[タスクの作成](../msbuild/task-writing.md)プロセス。
 
-   すべての入力とツールの出力にある場合、ツールのコマンド ラインでとして、 `CL`、 `MIDL`、および`RC`、場合によっては、自動入力と出力ファイルの追跡と .tlog ファイルを作成する場合から、タスクを派生させて`TrackedVCToolTask`します。
+   すべての入力とツールの出力にある場合、ツールのコマンド ラインでとして、 `CL`、 `MIDL`、および`RC`、場合によっては、自動入力と出力ファイルの追跡と .tlog ファイルを作成する場合は、タスクを派生させて、から`Microsoft.Build.CPPTasks.TrackedVCToolTask`クラス。 現在のところ、ベースのドキュメントは[ToolTask](/dotnet/api/microsoft.build.utilities.tooltask)クラス、例やの詳細については、ドキュメントがない、`TrackedVCToolTask`クラス。 これは、興味のあるが場合、音声要求に追加で[developercommunity.visualstudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html)します。
 
 ## <a name="incremental-builds-and-up-to-date-checks"></a>インクリメンタル ビルドと最新状態チェック
 
@@ -428,7 +428,7 @@ IDE では、.vcxproj プロジェクトは、プロジェクトから追加情�
 @="{83046B3F-8984-444B-A5D2-8029DEE2DB70}"
 ```
 
-## <a name="project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE でプロジェクトの機能拡張
+## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE でビジュアルの C++ プロジェクトの機能拡張
 
 Visual C プロジェクト システムがに基づいて、 [VS プロジェクト システム](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)、し、その機能拡張ポイントが使用されます。 ただし、プロジェクト階層の実装は、Visual C に固有、CPS に基づいていない、階層の機能拡張プロジェクト項目に制限されています。
 
@@ -656,6 +656,6 @@ VSIX ファイルを作成する方法については、次を参照してくだ
 
 Microsoft ビルド システム ([MSBuild](../msbuild/msbuild.md)) ビルド エンジンと拡張可能な XML ベース形式のプロジェクト ファイルを提供します。 理解しておく必要があります basic [MSBuild の概念](../msbuild/msbuild-concepts.md)方法を使用して[Visual C の MSBuild](/cpp/build/msbuild-visual-cpp-overview)プロジェクト システムの Visual C を拡張するには動作します。
 
-Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) 拡張機能の CPS と Visual C プロジェクト システムで使用される Api を提供します。 CPS で MEF を使用する方法の概要については、次を参照してください。 [MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md)します。
+Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) 拡張機能の CPS と Visual C プロジェクト システムで使用される Api を提供します。 CPS で MEF を使用する方法の概要については、次を参照してください。 [CPS と MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef)で、 [MEF の概要については VSProjectSystem](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md)します。
 
 ビルド ステップまたは新しいファイルの種類を追加する既存のビルド システムをカスタマイズできます。 詳細については、次を参照してください。 [MSBuild (Visual c) の概要](/cpp/build/msbuild-visual-cpp-overview)と[プロジェクト プロパティの操作](/cpp/ide/working-with-project-properties)します。

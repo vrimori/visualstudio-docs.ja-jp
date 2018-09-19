@@ -9,16 +9,19 @@ description: Visual Studio サブスクリプションに含まれる Enterprise
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d116e4c08f3a95eeceded590b6384e97ab47e839
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 52da738cc6e123c435e54523c240cd1b6d83dc8d
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281652"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289342"
 ---
 # <a name="enterprise-mobility--security-ems-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Enterprise Mobility + Security (EMS)
 
 Visual Studio Enterprise の年間クラウド サブスクリプションと標準サブスクリプションには、Enterprise Mobility + Security (EMS) が含まれます。  EMS - Azure Active Directory、Microsoft Intune、Azure Information Protection、Microsoft Advanced Threat Analytics、Microsoft Cloud App Security で ID、デバイス、アプリ、データを保護および管理できます。
+
+> [!NOTE]
+> ボリューム ライセンスを通じて複数年のサブスクリプションを購入する場合、EMS 特典は現在、最初の年にのみ利用できます。  
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 
@@ -27,24 +30,24 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2.  [ツール] セクションで、Enterprise Mobility & Security のタイルを見つけて、タイルの下部にある **[コードを取得]** リンクをクリックします。   コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
-
-    ![EMS 特典タイル](_img\vs-ems\vs-ems-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![EMS 特典タイル](_img\vs-ems\vs-ems-tile.png)
 
 2.  Enterprise Mobility + Security E5 ページでは、既存サブスクリプションでのサインインまたは新しいサブスクリプションの作成が可能です。  新しいサブスクリプションを作るには、必要な情報を入力して、**[次へ]** をクリックします。
-
-    ![EMS 特典アカウント作成](_img\vs-ems\vs-ems-create-account-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![EMS 特典アカウント作成](_img\vs-ems\vs-ems-create-account-cropped.png)
 
 3. ユーザー ID とパスワードを作成します。  **[アカウントの作成]** をクリックして続けます。
-
-    ![EMS 特典ユーザー ID 作成](_img\vs-ems\vs-ems-userID-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![EMS 特典ユーザー ID 作成](_img\vs-ems\vs-ems-userID-cropped.png)
 
 4.  次に、電話またはテキストで確認コードを受け取るための電話番号を指定します。  コードを入力して、**[次へ]** をクリックします。
+    > [!div class="mx-imgBorder"]
+    > ![EMS 特典の検証](_img\vs-ems\vs-ems-robot-cropped.png)
 
-    ![EMS 特典の検証](_img\vs-ems\vs-ems-robot-cropped.png)
-
-5.  次のページでは、サインイン ページとユーザー ID が表示されます。  後で使うので情報を保存します。  **[You’re ready to go…]\(...の準備ができました\)** をクリックします。
-
-    ![EMS 特典アカウント作成済み](_img\vs-ems\vs-ems-save-info-cropped.png)
+5.  次のページでは、サインイン ページとユーザー ID が表示されます。  後で使うので情報を保存します。  **[You’re ready to go…]\(...の準備ができました\)** をクリックします
+    > [!div class="mx-imgBorder"]
+    > ![EMS 特典アカウント作成済み](_img\vs-ems\vs-ems-save-info-cropped.png)
 
 6.  EMS では、Microsoft [Azure Portal](https://azure.microsoft.com) へのアクセスが必要です。  EMS ランディング ページの 3 つのステップに従って、Azure サブスクリプションをアクティブ化し、ユーザーを追加して、EMS を構成します。
 
@@ -66,6 +69,6 @@ EMS を使うには、アカウントを設定するか、既存のアカウン�
 
 ## <a name="support-resources"></a>サポート リソース
 -  EMS に関するヘルプが必要ですか。  オンラインの [EMS ドキュメント](/enterprise-mobility-security/)を参照してください。
--  EMS のコンポーネントのテクニカル サポートについては、https://support.microsoft.com/allproducts にアクセスして製品を選択してください。
+-  EMS のコンポーネントのテクニカル サポートについては、 https://support.microsoft.com/allproducts にアクセスして製品を選択してください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
 -  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
