@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 77438e8e98e5cc64564e8903babe3dd0817067ac
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 4b7e42c274bd1ef5bb2d04db2e856418ea6719f8
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43225085"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384293"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -69,7 +69,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
   ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
 
-2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]** をクリックします。
+2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** をクリックします。
 
    ![ライセンス条項とプライバシーに関する声明](media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")
 
@@ -138,7 +138,7 @@ Visual Studio のインストールをカスタマイズする際にワークロ
    たとえば、[C++ アプリをビルドする](../ide/getting-started-with-cpp-in-visual-studio.md)には、**[インストール済み]** をクリックし、**[Visual C++]** を展開して、ビルドする C++ プロジェクトの種類を選択します。 <br><br>
    [C# アプリをビルドする](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)には、**[インストール済み]** をクリックし、**[Visual C#]** を展開して、ビルドする C# プロジェクトの種類を選択します。
 
-[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]  
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)] 
 
 ## <a name="see-also"></a>関連項目
 
