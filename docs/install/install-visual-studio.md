@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51543921049082b4fca5a04f20b8adfc753d8112
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 4b7e42c274bd1ef5bb2d04db2e856418ea6719f8
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283446"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384293"
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 のインストール
 
@@ -69,7 +69,7 @@ Visual Studio 2017 と以前のバージョンの Visual Studio を共存させ�
 
   ユーザー アカウント制御の通知を受信する場合、**[はい]** をクリックします。
 
-2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=824704)の確認を求められます。 **[続行]** をクリックします。
+2. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** をクリックします。
 
    ![ライセンス条項とプライバシーに関する声明](media/vs2017-privacy-and-license-terms.PNG "Microsoft のライセンス条項とプライバシーに関する声明")
 
@@ -138,16 +138,7 @@ Visual Studio のインストールをカスタマイズする際にワークロ
    たとえば、[C++ アプリをビルドする](../ide/getting-started-with-cpp-in-visual-studio.md)には、**[インストール済み]** をクリックし、**[Visual C++]** を展開して、ビルドする C++ プロジェクトの種類を選択します。 <br><br>
    [C# アプリをビルドする](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)には、**[インストール済み]** をクリックし、**[Visual C#]** を展開して、ビルドする C# プロジェクトの種類を選択します。
 
-## <a name="get-support"></a>サポートを受ける
-
-ときには、問題が発生してしまうことがあります。 Visual Studio のインストールが失敗した場合は、「[Troubleshooting Visual Studio 2017 installation and upgrade issues (Visual Studio 2017 のインストールとアップグレードの問題のトラブルシューティング)](troubleshooting-installation-issues.md)」ページをご覧ください。 トラブルシューティングの手順でも解決しない場合は、ライブ チャットでインストールの支援を依頼してください (英語のみ)。 詳細については、[Visual Studio のサポート ページ](https://visualstudio.microsoft.com/vs/support/#talktous)をご覧ください。
-
-他のいくつかのサポート オプションを次に示します。
-
-* Visual Studio インストーラーおよび Visual Studio IDE の両方に表示される [[問題の報告]](../ide/how-to-report-a-problem-with-visual-studio-2017.md) ツールから、製品の問題を Microsoft に報告できます。
-* [UserVoice](https://visualstudio.uservoice.com/forums/121579) で、製品に関する提案を投稿できます。
-* [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)で製品の問題を追跡したり、回答を検索したりできます。
-* [Gitter コミュニティの Visual Studio に関するスレッド](https://gitter.im/Microsoft/VisualStudio)で、Microsoft や他の Visual Studio 開発者と情報を交換することもできます。 (このオプションでは [GitHub](https://github.com/) アカウントが必要になります)。
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)] 
 
 ## <a name="see-also"></a>関連項目
 
@@ -155,6 +146,5 @@ Visual Studio のインストールをカスタマイズする際にワークロ
 * [Visual Studio 2017 の変更](modify-visual-studio.md)
 * [Visual Studio 2017 のアンインストール](uninstall-visual-studio.md)
 * [Visual Studio 2017 のオフライン インストールを作成する](create-an-offline-installation-of-visual-studio.md)
-* [Visual Studio 2017 管理者ガイド](visual-studio-administrator-guide.md)
-  * [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
-* [コンテナーにビルド ツールをインストールする](build-tools-container.md)
+* [コマンド ライン パラメーターを使用して Visual Studio 2017 をインストールする](use-command-line-parameters-to-install-visual-studio.md)
+* [Visual Studio for Mac のセットアップとインストール](/visualstudio/mac/installation)

@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Pluralsigh
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 4ae10da644f61d518370605322fee842d3a4e4a7
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 5f1582023032dc3581090937d18feddf428033ca
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380793"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289412"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Pluralsight トレーニング特典
 
@@ -27,50 +27,49 @@ ms.locfileid: "39380793"
 
 ## <a name="activation-steps"></a>アクティブ化の手順
 1. サブスクリプションをアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) に接続し、[専門能力開発] セクションにある Pluralsight 特典タイトルの **[コードを取得]** リンクをクリックします。
-
-    ![Pluralsight 特典タイル](_img\vs-pluralsight\vs-pluralsight-3month-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典タイル](_img\vs-pluralsight\vs-pluralsight-3month-tile.png)
 
     > [!IMPORTANT]
     > Pluralsight 特典タイルの [コードを取得] リンクをクリックすると、次のような内容のメッセージが表示される可能性があります。
     >
-    > 
-  **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight オファーをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
+    > **"注: 以前に Visual Studio サブスクリプションで別の Pluralsight オファーをアクティブにした場合は、このコードで新しい Pluralsight アカウントを作成できない可能性があります。"**
 
 2. クーポン コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックします。
-
-    ![Pluralsight 特典のアクティブ化](_img\vs-pluralsight\vs-pluralsight-activate.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典のアクティブ化](_img\vs-pluralsight\vs-pluralsight-activate.png)
 
 3.  Visual Studio サブスクリプションに含まれる特典の Pluralsight ページにリダイレクトされます。  この例では、Visual Studio Dev Essentials メンバーシップで提供される特典をアクティブ化します。 **[特典の有効化]** をクリックします。
-
-    ![Pluralsight VSDE ランディング ページ](_img\vs-pluralsight\vs-pluralsight-vsde-landing.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight VSDE ランディング ページ](_img\vs-pluralsight\vs-pluralsight-vsde-landing.png)
 
 4.  アクティブ化ページで次のようにします。
     - フォームで要求された連絡先情報を入力します
     - チェック ボックスをオンにして、使用条件とプライバシー ポリシーに同意します
     - **[I agree, activate benefit]\(特典のアクティブ化に同意します\)** をクリックします。
-
-    ![Pluralsight 特典アクティブ化](_img\vs-pluralsight\vs-pluralsight-create-account-no-code.png)
-
-    ![Pluralsight 特典の使用条件](_img\vs-pluralsight\vs-pluralsight-terms.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典アクティブ化](_img\vs-pluralsight\vs-pluralsight-create-account-no-code.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典の使用条件](_img\vs-pluralsight\vs-pluralsight-terms.png)
 
 5.  アカウントの設定にはしばらく時間がかかる場合があります。  完了すると、ページに確認メッセージが表示され、ログイン情報を示すメールが届きます。  メールは、アカウントを作成したときに指定した別名に送信されます。  メッセージが見つからない場合は、必ず、迷惑メール フォルダーまたはスパム メール フォルダーをご確認ください。
-
-    ![Pluralsight 特典の確認](_img\vs-pluralsight\vs-pluralsight-confirmation-vse.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典の確認](_img\vs-pluralsight\vs-pluralsight-confirmation-vse.png)
 
     > [!NOTE]
     > ご利用のアカウントに新しいプランを利用する資格がない場合、アカウントに資格がないため、作成中に問題が発生したことが受信メールで説明されます。  また、アカウントに関する質問に回答できる Pluralsight のサポート チームへの連絡先情報も含まれます。
 
 6.  アカウントが正常に作成されている場合は、受信メールにユーザー名が含まれ、パスワードを作成するよう求められます。  パスワードを入力し、確認のためもう一度入力して **[Log in to Pluralsight]\(Pluralsight にログイン\)** をクリックします。
-
-    ![Pluralsight 特典のウェルカム メール](_img\vs-pluralsight\vs-pluralsight-welcome-email.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典のウェルカム メール](_img\vs-pluralsight\vs-pluralsight-welcome-email.png)
 
 7.  ウェルカム メールに示されているユーザー名と、作成したパスワードを入力して、**[サインイン]** をクリックします。
-
-    ![Pluralsight 特典のログイン](_img\vs-pluralsight\vs-pluralsight-login.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典のログイン](_img\vs-pluralsight\vs-pluralsight-login.png)
 
 8.  これで完了です。  数千の Pluralsight コースで学習を開始する準備ができました。
-
-    ![Pluralsight 特典のホーム](_img\vs-pluralsight\vs-pluralsight-home.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pluralsight 特典のホーム](_img\vs-pluralsight\vs-pluralsight-home.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

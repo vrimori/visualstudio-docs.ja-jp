@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Visual Stu
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c30bf7ab44728d8a10eaa2f420caddcde154f9d3
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: ec1938dca476dcc04c892d183cedbf7f057aef40
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282539"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289410"
 ---
 # <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Visual Studio App Center
 
@@ -29,16 +29,16 @@ Visual Studio App Center を開始するのは簡単です。
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. Visual Studio App Center タイルを見つけて、**[開始]** をクリックします。
-
-    ![VS App Center タイル](_img/vs-app-center/vs-app-center-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![VS App Center タイル](_img/vs-app-center/vs-app-center-tile.png)
 
 3. 次に、アカウントを作成します。  Microsoft、Google、GitHub または Facebook の既存のアカウントを使用してログインできます。または、ユーザー名、電子メール、およびパスワードを入力して、新しいアカウントを作成することもできます。  **[アカウントの作成]** をクリックして続けます。
-
-    ![VS App Center の [アカウントの作成]](_img/vs-app-center/vs-app-center-create-account.png)
+    > [!div class="mx-imgBorder"]
+    > ![VS App Center の [アカウントの作成]](_img/vs-app-center/vs-app-center-create-account.png)
 
 4. これで完成です。  開始するには、**[組織の新規追加]** または **[アプリの新規追加]** をクリックします。
-
-    ![VS App Center ポータル](_img/vs-app-center/vs-app-center-portal.png)
+    > [!div class="mx-imgBorder"]
+    > ![VS App Center ポータル](_img/vs-app-center/vs-app-center-portal.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

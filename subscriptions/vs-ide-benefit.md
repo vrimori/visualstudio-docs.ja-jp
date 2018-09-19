@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Visual Stu
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 571bca9d5192f8499d36819299e76648beebe1a6
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: f65deb92684f043597256d8e2f0664f18da9cfa1
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36282627"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289434"
 ---
 # <a name="using-the-visual-studio-2017-benefit"></a>Visual Studio 2017 の特典を使用する
 
@@ -28,34 +28,36 @@ Visual Studio のサブスクライバーは、Visual Studio IDE にアクセス
 IDE をダウンロードするには:
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 2. [ツール] セクションで、Visual Studio IDE のタイルを見つけて、特典タイルの下部にある **[ダウンロード]** リンクをクリックします。  [[ダウンロード]](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) ページからダウンロードすることもできます。
-
-    ![Visual Studio Enterprise タイル](_img\vs-ide-experience\vs-ide-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio Enterprise タイル](_img\vs-ide-experience\vs-ide-tile.png)
 
 3.  Visual Studio Enterprise のダウンロード結果ページにリダイレクトされ、そこで IDE をダウンロードして、ライセンス認証するためのプロダクト キーを入手できます。 青い **[キーを取得]** リンクをクリックして、プロダクト キーを要求することもできます。あるいは、後から [[プロダクト キー]](https://my.visualstudio.com/productkeys) ページでキーを要求できます。
 4.  [ダウンロードの結果] ページの [詳細] タブで、次のようにします。
     - 必要なアーキテクチャ (x86、x64) を選びます。
     - 言語を選びます。
 5.  青いダウンロード ボタンをクリックします。
-    ![Visual Studio Enterprise ダウンロードの詳細](_img\vs-ide-experience\vs-ide-download-details.png)
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio Enterprise ダウンロードの詳細](_img\vs-ide-experience\vs-ide-download-details.png)
 6.  すぐにインストールするには、**[実行]** をクリックします。
 7.  [ユーザー アカウント制御] ダイアログで、**[はい]** をクリックします。
 8.  **[続行]** をクリックしてライセンス条項に同意します。
 9.  インストーラーが開始したら、目的のワークロード、個々のコンポーネント、言語パックを、対応するタブで選びます。
-    ![Visual Studio Enterprise をカスタマイズする](_img\vs-ide-experience\vs-ide-customize-install-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio Enterprise をカスタマイズする](_img\vs-ide-experience\vs-ide-customize-install-cropped.png)
 
 10.  **[インストール]** をクリックします。
 
 11. インストールが完了したら、インストールを変更するか、Visual Studio を起動することができます。  開始するには **[起動]** をクリックします。
-
-    ![Visual Studio Enterprise を起動する](_img\vs-ide-experience\vs-ide-launch-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio Enterprise を起動する](_img\vs-ide-experience\vs-ide-launch-cropped.png)
 
 12. Visual Studio サブスクリプションに関連付けられているアカウントでサインインします。
 
 13. 優先するテーマを選び、**[Visual Studio の開始]** をクリックします。
 
 14. [スタート ページ] が表示されます。  Visual Studio を使う準備ができました。
-
-    ![Visual Studio Enterprise を使い始める](_img\vs-ide-experience\vs-ide-start-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Visual Studio Enterprise を使い始める](_img\vs-ide-experience\vs-ide-start-cropped.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

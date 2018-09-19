@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 63fa8e83fd94be5307541ca7e070d47c8fa04488
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 813fdbccaf7bb685f0b4bf182f0bd0aede907f83
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586379"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551663"
 ---
 # <a name="how-to-assign-which-python-environment-is-used-for-a-project"></a>プロジェクトで使用される Python 環境を割り当てる方法
 
@@ -114,7 +114,7 @@ Visual Studio 内で、パッケージ (および依存関係) は [Python Packa
 また、現在 Visual Studio では、`conda` を使用して conda 環境にパッケージをインストールする操作はサポートされていません。 代わりにコマンド ラインから `conda` を使用してください。
 
 > [!Tip]
-> pip がパッケージのインストールに失敗する一般的な状況は、パッケージの *\*.pyd* ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"**エラー: vcvarsall.bat が見つかりません**" というエラー メッセージが表示されます。 多くの場合、`easy_install` を使用してコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラを [http://aka.ms/VCPython27](http://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
+> pip がパッケージのインストールに失敗する一般的な状況は、パッケージの *\*.pyd* ファイルにネイティブ コンポーネントのソース コードが含まれる場合です。 必要なバージョンの Visual Studio がインストールされていない場合、pip はこれらのコンポーネントをコンパイルできません。 このような状況では、"**エラー: vcvarsall.bat が見つかりません**" というエラー メッセージが表示されます。 多くの場合、`easy_install` を使用してコンパイル済みのバイナリをダウンロードでき、Python の古いバージョンに適したコンパイラを [https://aka.ms/VCPython27](https://aka.ms/VCPython27) からダウンロードできます。 詳しくは、Python Tools チーム ブログの「[How to deal with the pain of "unable to find vcvarsallbat"](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/)」("vcvarsallbat が見つからない" という問題への対処方法) をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
