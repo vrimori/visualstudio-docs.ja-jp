@@ -21,12 +21,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 22d51fff3dcfea81676e18c7b13d91bb5567dde8
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 8046e5fe494839c051662bf313a17c49eea8746b
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321126"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371063"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係図を使用したコードの検証
 
@@ -52,16 +52,14 @@ ms.locfileid: "44321126"
 
 -   Visual Studio
 
--   Team Foundation ビルド サーバーにインストールされた Visual Studio (Team Foundation ビルドを使用してコードを自動的に検証するために必要)
-
 -   依存関係図をモデリング プロジェクトを含むソリューションです。 この依存関係図を検証する c# または Visual Basic のプロジェクトの成果物にリンクする必要があります。 参照してください[コードから依存関係図を作成する](../modeling/create-layer-diagrams-from-your-code.md)します。
 
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
 
- Visual Studio で開いている依存関係図から手動でまたはコマンド プロンプトからコードを検証できます。 ローカル ビルドまたは Team Foundation ビルドの実行時に、コードを自動的に検証することもできます。 参照してください[Channel 9 ビデオ: デザインと依存関係図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。
+Visual Studio で開いている依存関係図から手動でまたはコマンド プロンプトからコードを検証できます。 ビルド ローカル ビルドまたは Azure のパイプラインを実行しているときにコードを自動的に検証することもできます。 参照してください[Channel 9 ビデオ: デザインと依存関係図の使用によるアーキテクチャの検証](http://go.microsoft.com/fwlink/?LinkID=252073)です。
 
 > [!IMPORTANT]
->  Team Foundation ビルドを使用してレイヤー検証を実行する場合は、ビルド サーバーに同じバージョンの Visual Studio をインストールすることも必要です。
+> Team Foundation Server を使用してレイヤー検証を実行する場合は、ビルド サーバーで同じバージョンの Visual Studio をインストールすることも必要があります。
 
 -   [項目が検証をサポートしているかを参照してください。](#SupportsValidation)
 
@@ -182,51 +180,32 @@ Visual Studio のこのリリースで、リアルタイムで依存関係の検
 |すべての抑制されたエラーを非表示にする、**エラー一覧**ウィンドウ|任意の場所を右クリックし、**エラー一覧**ウィンドウで、 をポイント**検証エラーの管理**、順にクリックします**抑制されたエラーの非表示にする**します。|
 
 ##  <a name="ValidateAuto"></a> コードを自動的に検証します。
- ローカル ビルドを実行するたびにレイヤー検証を実行できます。 チームで Team Foundation ビルドを使用する場合、ゲート チェックインを使用してレイヤー検証を実行できます。これは、カスタム MSBuild タスクを作成することで指定できます。また、ビルド レポートを使用して検証エラーを収集することもできます。 ゲート チェックイン ビルドを作成するを参照してください。[ゲート チェックイン ビルド プロセスを使用して変更を検証する](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)します。
+
+ローカル ビルドを実行するたびにレイヤー検証を実行できます。 チームは、Azure DevOps を使用している場合は、ゲート チェックイン、これは、カスタム MSBuild タスクと検証エラーを収集するビルド レポートを使用して作成して指定できますでレイヤー検証を実行できます。 ゲート チェックイン ビルドを作成するを参照してください。[ゲート チェックイン ビルド プロセスを使用して変更を検証する](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)します。
 
 #### <a name="to-validate-code-automatically-during-a-local-build"></a>ローカル ビルド時にコードを自動的に検証するには
 
--   テキスト エディターを使用してモデリング プロジェクト (.modelproj) ファイルを開き、次のプロパティを追加します。
+テキスト エディターを使用してモデリング プロジェクト (.modelproj) ファイルを開き、次のプロパティを追加します。
 
 ```xml
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- または -
+\- または -
 
 1.  **ソリューション エクスプ ローラー**依存関係図または図を含むモデリング プロジェクトを右クリックし、クリックして**プロパティ**します。
 
 2.  **プロパティ**ウィンドウで、設定、モデリング プロジェクトの**アーキテクチャの検証**プロパティを**True**します。
 
-     これには、検証プロセス内のモデリング プロジェクトが含まれます。
+    これには、検証プロセス内のモデリング プロジェクトが含まれます。
 
 3.  **ソリューション エクスプ ローラー**検証に使用する依存関係図 (.layerdiagram) ファイルをクリックします。
 
 4.  **プロパティ**ウィンドウで、ことを確認します、ダイアグラムの**ビルド アクション**プロパティに設定されて**検証**です。
 
-     これには、検証プロセスには依存関係図が含まれます。
+    これには、検証プロセスには依存関係図が含まれます。
 
- エラー一覧 ウィンドウでエラーを管理するには、次を参照してください。[検証エラーの管理](#ManageErrors)します。
-
-#### <a name="to-validate-code-automatically-during-a-team-foundation-build"></a>Team Foundation ビルド時にコードを自動的に検証するには
-
-1.  **チーム エクスプ ローラー**ビルドの定義をダブルクリックし、クリックして**プロセス**します。
-
-2.  **ビルド プロセス パラメーター**、展開**コンパイル**では、次を入力し、 **MSBuild 引数**パラメーター。
-
-     `/p:ValidateArchitecture=true`
-
- 検証エラーに関する詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] の詳細については、以下のトピックを参照してください。
-
--   [Azure のパイプライン](/azure/devops/pipelines/index?view=vsts)
-
--   [既定のテンプレートを使用して、自分のビルド プロセス](http://msdn.microsoft.com/Library/43930b12-c21b-4599-a980-2995e3d16e31)
-
--   [Upgradetemplate.xaml はレガシ ビルドの変更します。](http://msdn.microsoft.com/Library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)
-
--   [ビルド プロセス テンプレートのカスタマイズ](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)
-
--   [実行中のビルドの進行状況の監視](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)
+エラー一覧 ウィンドウでエラーを管理するには、次を参照してください。[検証エラーの管理](#ManageErrors)します。
 
 ##  <a name="TroubleshootingValidation"></a> レイヤー検証に関する問題をトラブルシューティングします。
  レイヤー検証に関する問題とその解決方法について、次の表で説明します。 これらの問題は、コードと設計の間の競合によって発生するエラーとは異なります。 これらのエラーの詳細については、次を参照してください。[を把握して解決のレイヤー検証エラー](#UnderstandingValidationErrors)します。

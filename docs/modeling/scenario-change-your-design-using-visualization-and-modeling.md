@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca90a78643b8abc1f73ca61da3d1627261fff59c
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 23b84b1ad2b29a842389fb2852abdcfb8e76ea92
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371096"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -182,7 +182,7 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 
  **依存関係図**
 
-設計との競合がコードの開発中に発生しないようにするで依存関係の検証をビルドするチームは、Team Foundation ビルドで実行されます。 また、チェックイン操作で依存関係の検証を要求するカスタム MSBuild タスクを作成します。 ビルド レポートを使用して検証エラーを収集しています。
+設計との競合がコードの開発中に発生しないようにするで依存関係の検証をビルドするチームでは、Azure DevOps で実行されます。 また、チェックイン操作で依存関係の検証を要求するカスタム MSBuild タスクを作成します。 ビルド レポートを使用して検証エラーを収集しています。
 
 参照トピック
 
@@ -234,7 +234,7 @@ Dinner Now と Lucerne は、作業が完了するたびにコードを Team Fou
 
 Dinner Now には数多くの自動テストがあり、そのほとんどを引き続き適用できるため、Lucerne でそれらを再利用することができます。 新しい機能をカバーするために、それらのテストに変更を加えたり、新しいテストを追加したりすることもできます。 Dinner Now と Lucerne の両方で Visual Studio による手動テストも実行されます。
 
-コードが設計に準拠していることを確認するには、は、チームは、依存関係の検証をインクルードする Team Foundation ビルドでのビルドを構成します。 競合が発生した場合は、詳細なレポートが生成されます。
+コードが設計に準拠していることを確認するには、は、チームは、依存関係の検証を含める Azure DevOps でのビルドを構成します。 競合が発生した場合は、詳細なレポートが生成されます。
 
 参照トピック
 

@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 06f362987a8a52692aa0b38bf921b6763dbc8a2c
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 96012a8f498fdab6dfd508906e9abf13591b9dbb
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637056"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370550"
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>デザイナーの初期化とメタデータの構成
 デザイナーまたはデザイナー コンポーネントに関連付けられているメタデータとフィルターの属性の操作は、アプリケーションで異なる処理するために、特定のデザイナーによって使用されるツールを定義するメカニズムを提供します<xref:System.Type>オブジェクト (などのデータ構造体。クラス、またはグラフィカル エンティティ)、デザイナーが使用可能な場合と、デザイナーをサポートするために、Visual Studio IDE を構成する方法 (インスタンスが**ツールボックス**カテゴリまたはタブを使用できる)。  
@@ -100,4 +100,4 @@ ms.locfileid: "39637056"
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtension>   
  <xref:Microsoft.VisualStudio.Shell.Design.DesignSurfaceExtensionAttribute>   
  <xref:System.ComponentModel.ToolboxItemFilterType>   
- [DDesign 時サポートを拡張します。](http://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+ [デザイン時サポートを拡張します。](https://msdn.microsoft.com/Library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)

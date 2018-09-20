@@ -9,12 +9,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4b70c800e9dff7852d2a7aaec3ee1125932dfc1
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 64a22cb00a90d9d5475fe89ff8c7fc800f23d86a
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512045"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371148"
 ---
 # <a name="image-service-and-catalog"></a>イメージ サービスとカタログ
 このクックブックには、ガイダンスと、Visual Studio イメージ サービスと Visual Studio 2015 で導入されたイメージのカタログを採用するためのベスト プラクティスが含まれています。  
@@ -662,7 +662,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
  確認[ http://github.com/Microsoft/VSSDK-Extensibility-Samples ](http://github.com/Microsoft/VSSDK-Extensibility-Samples)の最新のサンプルです。  
   
 ### <a name="tooling"></a>ツール  
- 一連のイメージのサービスのサポート ツールは、イメージのサービスと連携する UI の作成/更新で支援するために作成されました。 各ツールの詳細については、ツールに付属するドキュメントを確認してください。 ツールはの一部として含める、 [Visual Studio 2015 SDK。](http://msdn.microsoft.com/library/bb166441.aspx)  
+ 一連のイメージのサービスのサポート ツールは、イメージのサービスと連携する UI の作成/更新で支援するために作成されました。 各ツールの詳細については、ツールに付属するドキュメントを確認してください。 ツールはの一部として含める、 [Visual Studio 2015 SDK](visual-studio-sdk.md)します。
   
  **ManifestFromResources**  
   
