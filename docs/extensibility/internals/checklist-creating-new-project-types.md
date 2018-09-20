@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 69eaf52f9864b61cfc5045da9dbaf0ca6b4410b9
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 3da952e22515b48f06fdc50b34b2eb49f5709cc2
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370576"
 ---
 # <a name="checklist-create-new-project-types"></a>チェックリスト: 新しいプロジェクトの種類を作成します。
 新しいプロジェクトの種類を作成するいくつかのタスクを完了する必要があります。 次のチェックリストでは、これらのタスクのガイドを提供します。  
@@ -36,7 +36,7 @@ ms.locfileid: "39511666"
   
     -   新しいプロジェクトを作成して、既存のプロジェクトを開くを管理するプロジェクト ファクトリ。 詳細については、次を参照してください。[プロジェクト ファクトリを使用してプロジェクトのインスタンスを作成](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)です。  
   
-    -   プロジェクトの階層とコマンド処理します。 詳細については、次を参照してください[プロジェクトの種類 (C++) を実装するために使用 HierUtil7 プロジェクト クラス](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)、[プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)、[プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)、および。[Menucommand とOleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)します。  
+    -   プロジェクトの階層とコマンド処理します。 詳細については、次を参照してください[プロジェクトの種類 (C++) を実装するために使用 HierUtil7 プロジェクト クラス](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)、[プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)、[プロジェクト モデルのコア コンポーネント](../../extensibility/internals/project-model-core-components.md)、および。[Menucommand とOleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md)します。  
   
     -   プロジェクト項目の管理、プロジェクトの追加など、**新しいプロジェクト** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクトとプロジェクト項目テンプレートを追加](../../extensibility/internals/adding-project-and-project-item-templates.md)と[プロジェクトと項目テンプレートを登録](../../extensibility/internals/registering-project-and-item-templates.md)します。  
   

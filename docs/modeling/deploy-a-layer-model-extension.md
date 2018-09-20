@@ -12,22 +12,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0ec537ec070188c967c2db02548cf487180c0bae
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: dace2a3de8e61a92672442adbf77199232c76e12
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370914"
 ---
 # <a name="deploy-a-layer-model-extension"></a>レイヤー モデル拡張機能の配置
+
 Visual Studio の他のユーザーは、Visual Studio を使って作成されたレイヤー モデリング拡張機能をインストールできます。
 
-## <a name="installing-your-extension"></a>拡張機能のインストール
- 拡張機能をコンパイルすると VSIX ファイルが作成され、これを他のコンピューターにインストールできます。 また、このファイルを開発用コンピューターにインストールし、Visual Studio のメイン インスタンスで拡張機能を使用できるようにすることもできます。
+## <a name="install-your-extension"></a>拡張機能をインストールします。
 
-#### <a name="to-install-the-extension"></a>拡張機能をインストールするには
+拡張機能をコンパイルすると VSIX ファイルが作成され、これを他のコンピューターにインストールできます。 また、このファイルを開発用コンピューターにインストールし、Visual Studio のメイン インスタンスで拡張機能を使用できるようにすることもできます。
 
-1.  含むプロジェクトで**source.vsix.manifest**、開かれている**bin\\ \*** ファイル エクスプ ローラーでします。
+### <a name="to-install-the-extension"></a>拡張機能をインストールするには
+
+1.  含むプロジェクトで**source.vsix.manifest**オープン**bin\\ \*** ファイル エクスプ ローラーでします。
 
 2.  コピー、  **\*.vsix**ファイルを拡張機能をインストールするコンピューターにします。
 
@@ -35,18 +37,19 @@ Visual Studio の他のユーザーは、Visual Studio を使って作成され�
 
      VSIX インストーラーが起動します。
 
-#### <a name="to-uninstall-the-extension"></a>拡張機能をアンインストールするには
+### <a name="to-uninstall-the-extension"></a>拡張機能をアンインストールするには
 
-1.  Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新プログラム**です。
+1.  Visual Studio での**ツール** メニューのをクリックして**拡張機能と更新**します。
 
-2.  拡張機能の名前をクリックし、クリックして**アンインストール**です。
+2.  拡張機能の名前をクリックし、クリックして**アンインストール**します。
 
-## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Team Foundation ビルド サーバーへの拡張機能のインストール
- 通常、[!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] サーバーには Visual Studio はインストールされていないので、VSIX をダブルクリックしてインストールすることはできません。 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] のインストールには VSIX 拡張機能を実行できるコンポーネントがいくつか含まれますが、拡張機能のインストールは手動で行う必要があります。
+## <a name="install-an-extension-on-team-foundation-server"></a>Team Foundation Server の拡張機能をインストールします。
 
-#### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>レイヤー拡張機能を [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] サーバーにインストールするには
+Team Foundation Server のサーバーに通常 Visual Studio をインストールするがないと、これをダブルクリックして、VSIX をインストールすることはできません。 拡張機能を手動でインストールする必要があります。
 
-1.  コピー、 **.vsix** 、開発用コンピューターからのファイル、[!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]コンピューター。
+### <a name="to-install-your-layer-extension-on-a-team-foundation-server-server"></a>Team Foundation Server サーバーで、レイヤーの拡張機能をインストールするには
+
+1.  コピー、 **.vsix**開発用コンピューターからファイルを Team Foundation Server (TFS) のコンピューターにします。
 
      VSIX ファイルを次のいずれかの場所に置きます。
 
@@ -54,23 +57,20 @@ Visual Studio の他のユーザーは、Visual Studio を使って作成され�
 
          %ProgramFiles%\Microsoft Visual Studio [バージョン]\Common7\IDE\Extensions\Microsoft
 
-    -   [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] を実行するネットワーク サービスだけを対象にインストールする場合:
+    -   ビルドを実行するネットワーク サービスに対してのみインストールするのには。
 
          %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio\\[version]\Extensions\Microsoft
 
-    -   [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] が特定のユーザーとして対話モードで実行されるように構成されており、そのユーザーだけを対象にインストールする場合:
+    -   特定のユーザーとして対話型モードで実行するビルドを構成した場合は、そのユーザーに対してのみインストールできます。
 
          %LocalAppData%\Microsoft\VisualStudio\\[バージョン] \Extensions\Microsoft
 
-        > [!NOTE]
-        >  通常 %localappdata% *DriveName*: ユーザー*UserName*AppDataLocal です。
-
 2.  各 VSIX ファイルを同じ場所のフォルダーに展開します。
 
-    1.  ファイル名拡張子が変更 **.vsix**に **.zip**です。
+    1.  ファイル名拡張子が変更 **.vsix**に **.zip**します。
 
     2.  .zip ファイルの内容をフォルダーに抽出します。
 
     3.  .zip ファイルを削除します。
 
-3.  [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] を再起動します。
+3.  TFS を再起動します。

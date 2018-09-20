@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49b1fbf18fb0dac23fcc55b7d9765dd4d1a88d32
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 1b9d5aa4c3f649f7be44db2e18f67884acd23201
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499700"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370667"
 ---
 # <a name="get-font-and-color-information-for-text-colorization"></a>テキストの色づけのフォントと色の情報を取得します。
 レンダリングまたはユーザー インターフェイス (UI) 要素の色分けされたテキストを表示するプロセスは、プロジェクト、その技術、および開発者の環境設定の種類によって異なります。 **フォントおよび色**プロパティ ページには、設定が格納されます。
@@ -50,4 +50,4 @@ VSPackage を色分けして表示、現在を取得する必要があります*
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>
 - [使用してフォントとテキスト](/dotnet/framework/winforms/advanced/using-fonts-and-text)
 - [色を調整します。](/cpp/windows/working-with-color-image-editor-for-icons)
-- [GDI (グラフィックス デバイス インターフェイス)](http://msdn.microsoft.com/en-us/7e1d4540-bb2e-4257-8eee-eee376acba83)
+- [GDI (グラフィックス デバイス インターフェイス)](https://msdn.microsoft.com/library/7e1d4540-bb2e-4257-8eee-eee376acba83)
