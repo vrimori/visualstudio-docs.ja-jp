@@ -12,12 +12,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3dfe3f3c135cb3ed16c7550fc62d334cc548cd1
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: c194588de8dfa8746bb79a8d86bff005d90e7550
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510667"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495935"
 ---
 # <a name="vspackage-setup-scenarios"></a>VSPackage のセットアップ シナリオ
 
@@ -31,7 +31,7 @@ ms.locfileid: "39510667"
 
 ### <a name="make-your-components-independent"></a>コンポーネントを独立させる
 
-識別し、コンポーネントを設定すると、割り当て、`GUID`コンポーネントの配置しは、その構成を変更することはできません。 コンポーネントの構成を変更する場合、結果として得られるコンポーネントは新しいコンポーネントを新しいをする必要があります`GUID`します。 これらのファクトを指定するには、各コンポーネントの制御、独立したユニットのことで最大のバージョン管理の柔軟性が提供します。 コンポーネントを制御する規則の詳細については、次を参照してください。[コンポーネントのコードを変更する](/windows/desktop/Msi/changing-the-component-code)と[場合の対処、コンポーネントの規則は分割されますか?](http://msdn.microsoft.com/library/aa372795\(VS.85\).aspx)。
+識別し、コンポーネントを設定すると、割り当て、`GUID`コンポーネントの配置しは、その構成を変更することはできません。 コンポーネントの構成を変更する場合、結果として得られるコンポーネントは新しいコンポーネントを新しいをする必要があります`GUID`します。 これらのファクトを指定するには、各コンポーネントの制御、独立したユニットのことで最大のバージョン管理の柔軟性が提供します。 コンポーネントを制御する規則の詳細については、次を参照してください。[コンポーネントのコードを変更する](/windows/desktop/Msi/changing-the-component-code)と[場合の対処、コンポーネントの規則は分割されますか?](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken)。
 
 ### <a name="do-not-mix-shared-and-private-resources-in-a-component"></a>コンポーネント内の共有とプライベートのリソースを混在させないでください。
 
@@ -77,7 +77,7 @@ VSPackage を登録するレジストリ値を使用するなど、[!INCLUDE[vsi
 
 ![VS サイド バイ サイド VS パッケージ更新プログラムのインストーラー](../../extensibility/internals/media/vs_sbys_packageupdate.gif "VS_SbyS_PackageUpdate")
 
-サイド バイ サイド アセンブリの展開の詳細については、次を参照してください。[展開の簡素化すると、.NET Framework での DLL Hell の解決](http://msdn.microsoft.com/library/ms973843.aspx)します。
+サイド バイ サイド アセンブリの展開の詳細については、次を参照してください。[展開の簡素化すると、.NET Framework での DLL Hell の解決](https://msdn.microsoft.com/library/ms973843.aspx)します。
 
 ## <a name="see-also"></a>関連項目
 

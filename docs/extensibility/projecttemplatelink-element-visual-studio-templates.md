@@ -16,12 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c3e539824c815d62d8cf3350b4d823314996677
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: f0f2d810f2e6dff135230af71b10a823d22330e8
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636413"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495974"
 ---
 # <a name="projecttemplatelink-element-visual-studio-templates"></a>ProjectTemplateLink 要素 (Visual Studio テンプレート)
 パスを指定します、 *.vstemplate*複数プロジェクトのテンプレートの 1 つのプロジェクトのファイル。  
@@ -53,7 +53,7 @@ ms.locfileid: "39636413"
 |属性|説明|  
 |---------------|-----------------|  
 |`ProjectName`|省略可能な属性です。<br /><br /> 複数プロジェクトのテンプレートにある各プロジェクトに個別の名前を指定します。 **新しいプロジェクト** ダイアログ ボックスは、個々 のプロジェクトに名前を割り当てることはできません。|  
-|`CopyParameters`|メインのグループ テンプレート内のすべての変数を、リンクされたテンプレートそれぞれにコピーできるようにします。<br /><br /> リンクされたテンプレート内のパラメーターには、プレフィックス `"$ext_*$"` が付きます。 たとえば、親グループのテンプレート パラメーターの場合`$projectname$`の値を持つ**ExampleProject1**、リンクされたテンプレートを実行する順番を取得するときに、パラメーターを取得`$ext_projectname$`、のコピーである`$projectname$`、親グループのテンプレートのパラメーター。<br /><br /> これにより、リンクされたテンプレートは、親のグループ テンプレートでのみ簡単に作成できる一部の共通パラメーターを共有できるようになります。<br /><br /> この属性は省略可能であり、省略した場合は自動的に `false` に設定されます。<br /><br /> Visual Studio 2013 更新プログラム 2 で導入されました。 製品の正しいバージョンを参照するを参照してください。 [Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリを参照する](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)します。|  
+|`CopyParameters`|メインのグループ テンプレート内のすべての変数を、リンクされたテンプレートそれぞれにコピーできるようにします。<br /><br /> リンクされたテンプレート内のパラメーターには、プレフィックス `"$ext_*$"` が付きます。 たとえば、親グループのテンプレート パラメーターの場合`$projectname$`の値を持つ**ExampleProject1**、リンクされたテンプレートを実行する順番を取得するときに、パラメーターを取得`$ext_projectname$`、のコピーである`$projectname$`、親グループのテンプレートのパラメーター。<br /><br /> これにより、リンクされたテンプレートは、親のグループ テンプレートでのみ簡単に作成できる一部の共通パラメーターを共有できるようになります。<br /><br /> この属性は省略可能であり、省略した場合は自動的に `false` に設定されます。<br /><br /> Visual Studio 2013 更新プログラム 2 で導入されました。 製品の正しいバージョンを参照するを参照してください。 [Visual Studio 2013 SDK の更新プログラム 2 で提供されるアセンブリを参照する](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb)します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

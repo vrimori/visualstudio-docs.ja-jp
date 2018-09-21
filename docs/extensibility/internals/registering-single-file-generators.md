@@ -1,5 +1,5 @@
 ---
-title: 単一ファイル ジェネレーターを登録する |Microsoft ドキュメント
+title: 単一ファイル ジェネレーターの登録 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9b7d16a9e473028d85540f4447d9981382be0fd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0040a31589dd5efb48955d9143cb2febdb9eff02
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31132183"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495558"
 ---
-# <a name="registering-single-file-generators"></a>単一ファイル ジェネレーターを登録します。
-カスタム ツールで使用できるようにする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、ように登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]をインスタンス化でき、特定のプロジェクトの種類に関連付けます。  
+# <a name="registering-single-file-generators"></a>単一ファイル ジェネレーターの登録
+カスタム ツールで使用できるようにする[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、そのために登録する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]をインスタンス化でき、特定のプロジェクトの種類に関連付けます。  
   
 ### <a name="to-register-a-custom-tool"></a>カスタム ツールを登録するには  
   
-1.  カスタム ツールの DLL を登録するかで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ローカル レジストリかシステム レジストリの HKEY_CLASSES_ROOT 下です。  
+1.  カスタム ツールの DLL を登録するかで、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ローカル レジストリかシステム レジストリの HKEY_CLASSES_ROOT の下。  
   
-     たとえば、ここでは、マネージ MSDataSetGenerator カスタム ツールに付属しているの登録情報[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:  
+     たとえば、マネージ MSDataSetGenerator カスタム ツールに付属している登録情報をここでは[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]:  
   
     ```  
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\CLSID\{E76D53CC-3D4F-40A2-BD4D-4F3419755476}]  
@@ -39,24 +39,24 @@ ms.locfileid: "31132183"
     "Assembly"="Microsoft.VSDesigner, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a"  
     ```  
   
-2.  必要なレジストリ キーを作成[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ジェネレーター ハイブ\\*GUID*場所*GUID* GUID は特定の言語のプロジェクト システムまたはサービスによって定義されます。 キーの名前では、カスタム ツールのプログラム上の名前になります。 カスタム ツールのキーには、次の値があります。  
+2.  必要なレジストリ キーを作成[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ジェネレーターでの hive\\*GUID*場所*GUID* GUID は、特定の言語のプロジェクト システムまたはサービスによって定義されます。 カスタム ツールのプログラムによる名前のキーの名前になります。 カスタム ツールのキーでは、次の値があります。  
   
     -   (既定)  
   
-         任意。 カスタム ツールのわかりやすい説明を提供します。 このパラメーターは省略可、ただし推奨です。  
+         任意。 カスタム ツールのわかりやすい説明を提供します。 このパラメーターは省略可、ただし推奨されるは。  
   
     -   CLSID  
   
-         必須。 実装する COM コンポーネントのクラス ライブラリの識別子を指定<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>です。  
+         必須。 実装する COM コンポーネントのクラス ライブラリの識別子を指定します<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>します。  
   
     -   GeneratesDesignTimeSource  
   
-         必須。 このカスタム ツールによって生成されたファイルから型をビジュアル デザイナーで使用可能な作成はかどうかを示します。 このパラメーターの値は、ビジュアル デザイナーで使用できない種類の 0 (ゼロ) またはビジュアル デザイナーで使用可能な型の (1) 1 である必要があります。  
+         必須。 このカスタムのツールによって生成されたファイルからの種類をビジュアル デザイナーを使用できる構成されるかどうかを示します。 このパラメーターの値は、ビジュアル デザイナーを使用できない種類の 0 (ゼロ) やビジュアル デザイナーを使用可能な型の (1 つ) の 1 にする必要があります。  
   
     > [!NOTE]
     >  使用するカスタム ツールの対象となる言語ごとに個別にカスタム ツールを登録する必要があります。  
   
-     たとえば、MSDataSetGenerator 登録自体 1 回言語ごとに。  
+     たとえば、MSDataSetGenerator 自身を登録 1 回の各言語。  
   
     ```  
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\Generators\{164b10b9-b200-11d0-8c61-00a0c91e29d5}\MSDataSetGenerator]  
@@ -73,5 +73,5 @@ ms.locfileid: "31132183"
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>   
  [単一ファイル ジェネレーターの実装](../../extensibility/internals/implementing-single-file-generators.md)   
- [ビジュアル デザイナーで型を公開します。](../../extensibility/internals/exposing-types-to-visual-designers.md)   
- [BuildManager オブジェクトの概要](http://msdn.microsoft.com/en-us/50080ec2-c1c9-412c-98ef-18d7f895e7fa)
+ [ビジュアル デザイナーへの型を公開します。](../../extensibility/internals/exposing-types-to-visual-designers.md)   
+ [BuildManager オブジェクトの概要](https://msdn.microsoft.com/library/50080ec2-c1c9-412c-98ef-18d7f895e7fa)

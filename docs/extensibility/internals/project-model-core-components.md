@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7dd3bf8f3f31b914debc6dab4eb5c4f6e7b27086
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 863aef532e90d749f5c9c93a9d16cb2daf7f6c0b
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512224"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495987"
 ---
 # <a name="project-model-core-components"></a>プロジェクト モデルのコア コンポーネント
 次の表は、プロジェクト モデルを展開します。 テーブルは、インターフェイスと、モデルとインターフェイス、および特定のオブジェクトに関連付けられているサービスで識別されたサービスの簡単な説明を提示します。 さらに、テーブルには、プロジェクトの作成と、特定のプロジェクトの種類の要件に応じて保守で省略可能なその他のインターフェイスについて詳しく説明します。  
@@ -105,6 +105,6 @@ ms.locfileid: "39512224"
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
  [チェックリスト: 新しいプロジェクトの種類を作成します。](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](http://msdn.microsoft.com/en-us/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
+ [ビルド内にありません: HierUtil7 プロジェクト クラスを使用して、プロジェクトの種類 (C++) を実装するには](https://msdn.microsoft.com/library/a5c16a09-94a2-46ef-87b5-35b815e2f346)   
  [シンボル参照ツールのサポート](../../extensibility/internals/supporting-symbol-browsing-tools.md)   
  [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)

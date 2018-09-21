@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2919559a748769c3b30e09023ad4f10965d62ce6
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 3b5f9c7b297d98836ca3e5c017d2a0d440a30470
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639491"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495480"
 ---
 # <a name="ngen-support-in-vsix-v3"></a>VSIX v3 での Ngen のサポート
 
@@ -26,7 +26,7 @@ Visual Studio 2017 と、新しい VSIX v3 (バージョン 3) の拡張機能�
 
 >ネイティブ イメージ ジェネレーター (*Ngen.exe*) は、マネージ アプリケーションのパフォーマンスを向上させるツールです。 *Ngen.exe* 、コンパイルされたプロセッサ固有のマシン コードを含むファイルは、ローカル コンピューターのネイティブ イメージ キャッシュにインストールするネイティブ イメージを作成します。 ランタイムは、Just-In-Time (JIT) コンパイラを使用してオリジナルのアセンブリをコンパイルする代わりに、キャッシュにあるネイティブ イメージを使用できます。
 >
->[Ngen.exe (ネイティブ イメージ ジェネレーター)](https://msdn.microsoft.com/en-us/library/6t9t5wcf(v=vs.110).aspx)
+>[Ngen.exe (ネイティブ イメージ ジェネレーター)](/dotnet/framework/tools/ngen-exe-native-image-generator)
 
 アセンブリが"ngen"で、VSIX を「インスタンス単位、コンピューターごと」インストールする必要があります。 これは、「すべてのユーザー」のチェック ボックスを確認して有効にできます、`extension.vsixmanifest`デザイナー。
 
@@ -41,7 +41,7 @@ Visual Studio 2017 と、新しい VSIX v3 (バージョン 3) の拡張機能�
 1. **Ngen** (Boolean) - true の場合、Visual Studio インストーラーでの"ngen"アセンブリ。
 2. **Ngen アプリケーション**(文字列) - アプリケーションを使用する機会を提供する Ngen *app.config*アセンブリの依存関係を解決するためにファイル。 この値に設定するアプリケーションが*app.config* (Visual Studio インストール ディレクトリ) を基準に使用します。
 3. **Ngen アーキテクチャ**(列挙) のアーキテクチャをアセンブリをネイティブにコンパイルします。 オプションを: します。 B の notspecified です。 X86 c。 X64 d。 すべて
-4. **Ngen の優先度**(1 ~ 3 の範囲の整数) で、Ngen の優先度レベルについては、 [Ngen.exe の優先度レベル](https://msdn.microsoft.com/en-us/library/6t9t5wcf(v=vs.110).aspx#Anchor_3)します。
+4. **Ngen の優先度**(1 ~ 3 の範囲の整数) で、Ngen の優先度レベルについては、 [Ngen.exe の優先度レベル](/dotnet/framework/tools/ngen-exe-native-image-generator#priority-levels)します。
 
 ここを参照してください、**プロパティ**ウィンドウの動作。
 

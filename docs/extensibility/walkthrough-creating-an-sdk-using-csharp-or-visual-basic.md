@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 397147bdc5c6ae11c06bfaa47667ad24aa53e2dc
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: bf5d738751a4873858aaa1ad80179663d9a7b767
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497876"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495948"
 ---
 # <a name="walkthrough-create-an-sdk-using-c-or-visual-basic"></a>チュートリアル: c# または Visual Basic を使用して SDK を作成します。
 このチュートリアルでは、Visual c# を使用して単純な数値演算ライブラリの SDK を作成し、SDK と Visual Studio Extension (VSIX) パッケージ化する方法を学習します。 次の手順を完了します。  
@@ -93,7 +93,7 @@ ms.locfileid: "39497876"
       TargetFramework=".NETCore,version=v4.5"
       AppliesTo="WindowsAppContainer"
       SupportsMultipleVersions="Error"
-      MoreInfo="http://www.msdn.microsoft.com/">
+      MoreInfo="https://msdn.microsoft.com/">
     </FileList>
     ```
 
@@ -105,7 +105,7 @@ ms.locfileid: "39497876"
       TargetFramework=".NETCore,version=v4.5"
       AppliesTo="WindowsAppContainer"
       SupportsMultipleVersions="Error"
-      MoreInfo="http://www.msdn.microsoft.com/">
+      MoreInfo="https://msdn.microsoft.com/">
     </FileList>
     ```  
   
@@ -166,7 +166,7 @@ ms.locfileid: "39497876"
   
 6.  詳細ペインで選択、**単純な数学 SDK**拡張機能。  
   
-     SDK に関する追加情報が表示されます。 選択することができます、**詳細**を開くリンク http://www.msdn.microsoft.com 、このチュートリアルで先ほど SDKManifest.xml ファイルで指定しました。  
+     SDK に関する追加情報が表示されます。 選択することができます、**詳細**を開くリンク https://msdn.microsoft.com/ 、このチュートリアルで先ほど SDKManifest.xml ファイルで指定しました。  
   
 7.  **参照マネージャー**ダイアログ ボックスで、**単純な数学 SDK**チェック ボックスをオンにして、 **OK**ボタン。  
   
@@ -243,5 +243,5 @@ ms.locfileid: "39497876"
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: C++ を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-cpp.md)   
- [チュートリアル: JavaScript を使用して SDK を作成します。](http://msdn.microsoft.com/en-us/6195ff56-4a27-45fc-bd29-4b0451225f4b)   
+ [チュートリアル: JavaScript を使用して SDK を作成します。](../extensibility/walkthrough-creating-an-sdk-using-javascript.md)   
  [ソフトウェア開発キットを作成します。](../extensibility/creating-a-software-development-kit.md)

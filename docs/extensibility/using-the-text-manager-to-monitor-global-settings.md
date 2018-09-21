@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0378d4c8c021cb47362220b49c8d7cb5a4ebc82
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 2a90d7d900054ee1ba8dec1a278d37d5898985dd
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079788"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495428"
 ---
 # <a name="use-the-text-manager-to-monitor-global-settings"></a>テキスト マネージャーを使用して、グローバル設定を監視するには
 コア エディターを実装する場合、エディターのインスタンスがこれらの変更の影響を与えるため、グローバル設定に加えられた変更を監視する必要があります。 変更を追跡するには、テキスト マネージャーによって生成されるイベントをリッスンします。 たとえば、そのドキュメント データ オブジェクトなどのコア エディターでの表示やコンポーネントの動作のグローバル設定を指定するとテキスト マネージャーはこの情報を格納し、影響を受けるすべてのクライアントと通信すること。  
@@ -43,4 +43,4 @@ ms.locfileid: "39079788"
   
 ## <a name="see-also"></a>関連項目  
  [コア エディター](../extensibility/inside-the-core-editor.md)   
- [エディターの機能](http://msdn.microsoft.com/en-us/bdac940d-1f14-4019-a01f-fd0bb3dc7198)
+ [エディターの機能](https://msdn.microsoft.com/library/bdac940d-1f14-4019-a01f-fd0bb3dc7198)

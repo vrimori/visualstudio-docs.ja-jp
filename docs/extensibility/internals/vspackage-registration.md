@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 29592f7956177a4894967d7f393605a54f7ec07b
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 73a2dd2288ae54c184405793323cd3084b90e35a
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513162"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495285"
 ---
 # <a name="vspackage-registration"></a>VSPackage の登録
 Vspackage に通知する必要があります[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]読み込めませんがインストールされ、必要があります。 このプロセスは、レジストリの情報を記述することで実施されます。 インストーラーの標準的なジョブです。  
@@ -60,4 +60,4 @@ Vspackage に通知する必要があります[!INCLUDE[vsprvs](../../code-quali
   
 ## <a name="see-also"></a>関連項目  
  [Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)   
- [Managed Package の登録](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
+ [Managed Package の登録](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1)
