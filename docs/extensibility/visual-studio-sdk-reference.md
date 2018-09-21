@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a51c83a6048102ed3b314c3c862023004cb18bc4
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 6a14079c4d936dcc6cd632e28d7b8628983cb990
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586809"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495688"
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
 このセクションには、Visual Studio SDK を使用する開発者向けの Visual Studio の名前空間、関連する名前空間、および関心のあるその他の領域に関する情報が含まれています。  
@@ -223,7 +223,7 @@ ms.locfileid: "39586809"
  <xref:Microsoft.VisualStudio.Threading>  
  Visual Studio によるスレッド処理のために使用します。  
   
- [Microsoft.VisualStudio.ConnectedServices Namespace](https://msdn.microsoft.com/library/microsoft.visualstudio.connectedservices.aspx) Visual Studio 接続済みサービスのために使用します。  
+ [Microsoft.VisualStudio.ConnectedServices Namespace](/dotnet/api/microsoft.visualstudio.connectedservices) Visual Studio 接続済みサービスのために使用します。  
   
  [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md)列挙型  
  IntelliSense のホストのフラグを指定します。  
@@ -231,11 +231,10 @@ ms.locfileid: "39586809"
  [VSCT XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md)  
  Visual Studio コマンド テーブルのスキーマ要素のテーブルの各要素と属性に、許可されている子を提供します。  
   
- [Guid と定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md)  
+ [GUID と定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md)  
  SDK 全体で使用される Guid の一覧を示します。  
   
- 
-  [マネージド コードの COM 定数](../extensibility/com-constants-in-managed-code.md)  
+ [マネージド コードの COM 定数](../extensibility/com-constants-in-managed-code.md)  
  環境の SDK 全体で使用されるユーザー インターフェイス要素の識別子の一覧を示します。  
   
  [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)  

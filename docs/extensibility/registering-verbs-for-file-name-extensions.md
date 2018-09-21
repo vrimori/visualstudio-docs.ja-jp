@@ -13,17 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a47f45889744db51d68c0f8aeb51b11863823965
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 0b6c0bffb2ce6db081a0c8ddf82c6b603a5dddd9
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639732"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495259"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録します。
 アプリケーションとファイル名拡張子の関連付けは、通常、ユーザーがファイルをダブルクリックしたときに発生する推奨アクションを持っています。 これは、アクションは、動詞、たとえばオープン操作に対応するにリンクさせます (推奨)。  
   
- シェルのキーを使用して拡張機能があるのプログラム識別子 (ProgID) に関連付けられている動詞を登録する**HKEY_CLASSES_ROOT\{progid} \shell**します。 詳細については、次を参照してください。[ファイルの種類](http://msdn.microsoft.com/library/windows/desktop/cc144148\(v=vs.85\).aspx)します。  
+ シェルのキーを使用して拡張機能があるのプログラム識別子 (ProgID) に関連付けられている動詞を登録する**HKEY_CLASSES_ROOT\{progid} \shell**します。 詳細については、次を参照してください。[ファイルの種類](/windows/desktop/shell/fa-file-types)します。  
   
 ## <a name="register-standard-verbs"></a>標準的な動詞を登録します。  
  オペレーティング システムでは、次の標準的な動詞を認識します。  
