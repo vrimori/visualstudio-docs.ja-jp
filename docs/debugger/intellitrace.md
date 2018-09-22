@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba9f5f3ad855cdeb4f5c137ebaea04bca078cebb
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: cfa8b1430bde66416a47d2bbc93bd6f728c0709b
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46496013"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542457"
 ---
 # <a name="intellitrace"></a>[IntelliTrace]
 
@@ -45,7 +45,7 @@ IntelliTrace は Visual Studio Enterprise Edition で使用できます (Profess
 
 |||
 |-|-|
-|**IntelliTrace を使用したアプリケーションをデバッグするには。**<br /><br /> -過去のイベント表示します。<br />-呼び出し情報過去のイベントを表示します。<br />-IntelliTrace セッションを保存します。<br />-IntelliTrace で収集されるデータを制御します。|- [IntelliTrace ステップ バックを使用してスナップショットの表示](../debugger/how-to-use-intellitrace-step-back.md)<br />- [チュートリアル: IntelliTrace の使用](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace の機能](../debugger/intellitrace-features.md)<br />- [デバッグ履歴](../debugger/historical-debugging.md)|
+|**IntelliTrace を使用したアプリケーションをデバッグするには。**<br /><br /> -過去のイベント表示します。<br />-呼び出し情報過去のイベントを表示します。<br />-IntelliTrace セッションを保存します。<br />-IntelliTrace で収集されるデータを制御します。|- [IntelliTrace を使用して前のアプリ状態を調べる](../debugger/view-historical-application-state.md)<br />- [チュートリアル: IntelliTrace の使用](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace の機能](../debugger/intellitrace-features.md)<br />- [デバッグ履歴](../debugger/historical-debugging.md)|
 |**Test Manager でのテスト セッション中に IntelliTrace データを収集します。**|- [手動テストでの複数の診断データを収集します。](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
 |**デプロイされたアプリケーションから IntelliTrace データを収集します。**|- [IntelliTrace スタンドアロン コレクターを使用します。](../debugger/using-the-intellitrace-stand-alone-collector.md)|
 |**IntelliTrace ログ ファイル (.iTrace ファイル) からデバッグを開始します。**|- [保存された IntelliTrace データを使用します。](../debugger/using-saved-intellitrace-data.md)|
@@ -149,7 +149,7 @@ IntelliTrace は、これらの時点で特定のイベントやデータを記�
 
 すべてのブレークポイントでスナップショットをキャプチャおよびデバッガー ステップ イベントを IntelliTrace を構成することができます。 IntelliTrace は、各スナップショットは、複雑な変数を表示して、式を評価することができますで完全なアプリケーションの状態を記録します。
 
-参照してください[IntelliTrace ステップ バックを使用してスナップショットを表示](../debugger/how-to-use-intellitrace-step-back.md)します。
+参照してください[IntelliTrace を使用して前のアプリ状態を検査](../debugger/view-historical-application-state.md)します。
 
 **関数呼び出し情報を収集します。**
 
