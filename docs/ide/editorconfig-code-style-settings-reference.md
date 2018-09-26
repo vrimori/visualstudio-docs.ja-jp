@@ -1471,7 +1471,7 @@ dotnet_sort_system_directives_first = true
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_new_line_before_open_brace |  C# | すべて | 15.3  |
+| csharp_new_line_before_open_brace |  C# | all | 15.3  |
 | csharp_new_line_before_else |  C# | true | 15.3  |
 | csharp_new_line_before_catch |  C# | true | 15.3  |
 | csharp_new_line_before_finally |  C# | true | 15.3  |
@@ -1486,7 +1486,7 @@ dotnet_sort_system_directives_first = true
 | [値] | 説明
 | ------------- |:-------------|
 | accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection_array_initializers、properties、types。<br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
-| すべて | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
+| all | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
 | none | 中かっこはすべての式の同じ行に配置する必要があります ("K&R")。 |
 
 コード例:
