@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 75f7a7d5a30fd3fb84bfd038c55b0731ae017ef1
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 0db1d84c09c44cc39fe3fd614379c2381b915014
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638714"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029028"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -44,7 +44,7 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 | --- | --- |
 | **Blank Bottle Web プロジェクト** | *app.py* に対するホーム ページと、非常に短いインライン ページ テンプレートを使用して `/` にエコーする `/hello/<name>` ページとを備えた最小限のアプリを `<name>` 内に生成します。 |
 | **空の Django Web プロジェクト** | コア Django サイト構造を持つが Django アプリが含まれない Django プロジェクトを生成します。 詳細については、[Django テンプレート](python-django-web-application-project-template.md)に関する記事と [Django 手順 1](learn-django-in-visual-studio-step-01-project-and-solution.md)に関する記事を参照してください。 |
-| **Blank Flask Web プロジェクト** | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?context=visualstudio/python/default)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
+| **Blank Flask Web プロジェクト** | "Hello World!" を 1 つ使用した最小限のアプリを生成します。 ページの`/`します。 このアプリは、[クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成](../ide/quickstart-python.md?toc=/visualstudio/python/toc.json&bc=/visualstudio/python/_breadcrumb/toc.json)に関する記事で詳細説明した手順を実行して得られた結果と類似しています。 [Flask の詳細情報の手順 1](learn-flask-visual-studio-step-01-project-solution.md) に関するページも参照してください。
 
 ### <a name="web-group"></a>Web グループ
 
@@ -130,7 +130,7 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
   - 引数: `Production.ini`
 
 - **[Debug Server Command (サーバー コマンドのデバッグ)]** グループ:
-  - [コマンド]: `..\env\scripts\pserve-script.py` (スクリプト)
+  - コマンド: `..\env\scripts\pserve-script.py` (スクリプト)
   - 引数: `Development.ini`
 
 > [!Tip]
