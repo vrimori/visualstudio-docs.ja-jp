@@ -198,9 +198,9 @@ ms.locfileid: "42626981"
 
 1. すべて完了したら、サーバーを停止し、もう一度ソース管理に変更をコミットします。
 
-### <a name="question-what-is-the-purpose-of-the--crsftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% crsf_token %} タグの目的は何ですか。
+### <a name="question-what-is-the-purpose-of-the--crsftoken--tag-that-appears-in-the-form-elements"></a><a name="question-what-is-the-purpose-of-the--csrftoken--tag-that-appears-in-the-form-elements"></a>質問: \<form\> 要素に表示される {% csrf_token %} タグの目的は何ですか。
 
-回答: `{% crsf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (crsf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
+回答: `{% csrf_token %}` タグには Django の組み込みの[クロスサイト リクエスト フォージェリ (csrf) 保護](https://docs.djangoproject.com/en/2.0/ref/csrf/) (Django docs) が含まれています。 このタグは通常、フォームなどの POST、PUT、または DELETE 要求のメソッドに関連する任意の要素に追加します。 その後、テンプレートのレンダリング関数 (`render`) により、必要な保護が挿入されます。
 
 ## <a name="next-steps"></a>次の手順
 
