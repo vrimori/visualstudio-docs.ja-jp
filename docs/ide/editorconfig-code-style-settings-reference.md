@@ -134,10 +134,10 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 |
 | ----------- | -------------------- | ----------------------|
-| dotnet_style_qualification_for_field | C# および Visual Basic | false:なし |
-| dotnet_style_qualification_for_property | C# および Visual Basic | false:なし |
-| dotnet_style_qualification_for_method | C# および Visual Basic | false:なし |
-| dotnet_style_qualification_for_event | C# および Visual Basic | false:なし |
+| dotnet_style_qualification_for_field | C# および Visual Basic | false:none |
+| dotnet_style_qualification_for_property | C# および Visual Basic | false:none |
+| dotnet_style_qualification_for_method | C# および Visual Basic | false:none |
+| dotnet_style_qualification_for_event | C# および Visual Basic | false:none |
 
 **dotnet\_style\_qualification\_for_field**
 
@@ -250,8 +250,8 @@ dotnet_style_qualification_for_event = false:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
-| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:なし |
-| dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:なし |
+| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 と IDE0014 | C# および Visual Basic | true:none |
+| dotnet_style_predefined_type_for_member_access | IDE0013 と IDE0015 | C# および Visual Basic | true:none |
 
 **dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**
 
@@ -319,7 +319,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 | dotnet_style_require_accessibility_modifiers | IDE0040 | C# および Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:none | 15.5 |
 | visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | Partial, Default, Private, Protected, Public, Friend, NotOverridable, Overridable, MustOverride, Overloads, Overrides, MustInherit, NotInheritable, Static, Shared, Shadows, ReadOnly, WriteOnly, Dim, Const,WithEvents, Widening, Narrowing, Custom, Async:none | 15.5 |
-| dotnet_style_readonly_field | IDE0044 | C# および Visual Basic | true:提案 | 15.7 |
+| dotnet_style_readonly_field | IDE0044 | C# および Visual Basic | true:suggestion | 15.7 |
 
 **dotnet\_style\_require\_accessibility_modifiers**
 
@@ -540,15 +540,15 @@ dotnet_style_parentheses_in_other_operators = never_if_unnecessary:none
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ---- |
-| dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:提案 | 最初のリリース |
-| dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:提案 | 最初のリリース |
-| dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:提案 | 最初のリリース |
-| dotnet_style_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ および Visual Basic 15+ | true:提案 | 15.6 |
-| dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:提案 | 15.6 |
-| dotnet_style_prefer_auto_properties | IDE0032 | C# および Visual Basic | true:なし | 15.7 |
-| dotnet_style_prefer_is_null_check_over_reference_equality_method | IDE0041 | C# および Visual Basic | true:提案 | 15.7 |
-| dotnet_style_prefer_conditional_expression_over_assignment | IDE0045 | C# および Visual Basic | true:なし | 15.8 |
-| dotnet_style_prefer_conditional_expression_over_return | IDE0046 | C# および Visual Basic | true:なし | 15.8 |
+| dotnet_style_object_initializer | IDE0017 | C# および Visual Basic | true:suggestion | 最初のリリース |
+| dotnet_style_collection_initializer | IDE0028 | C# および Visual Basic | true:suggestion | 最初のリリース |
+| dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ および Visual Basic 15+ | true:suggestion | 最初のリリース |
+| dotnet_style_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ および Visual Basic 15+ | true:suggestion | 15.6 |
+| dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# および Visual Basic | true:suggestion | 15.6 |
+| dotnet_style_prefer_auto_properties | IDE0032 | C# および Visual Basic | true:none | 15.7 |
+| dotnet_style_prefer_is_null_check_over_reference_equality_method | IDE0041 | C# および Visual Basic | true:suggestion | 15.7 |
+| dotnet_style_prefer_conditional_expression_over_assignment | IDE0045 | C# および Visual Basic | true:none | 15.8 |
+| dotnet_style_prefer_conditional_expression_over_return | IDE0046 | C# および Visual Basic | true:none | 15.8 |
 
 **dotnet\_style\_object_initializer**
 
@@ -840,8 +840,8 @@ dotnet_style_prefer_conditional_expression_over_return = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ---- |
-| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:提案 | 最初のリリース |
-| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:提案 | 最初のリリース |
+| dotnet_style_coalesce_expression | IDE0029 | C# および Visual Basic | true:suggestion | 最初のリリース |
+| dotnet_style_null_propagation | IDE0031 | C# 6.0+ および Visual Basic 14+ | true:suggestion | 最初のリリース |
 
 **dotnet\_style\_coalesce_expression**
 
@@ -914,9 +914,9 @@ dotnet_style_null_propagation = true:suggestion
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 |
 | ----------- | -------------------- | ----------------------|
-| csharp_style_var_for_built_in_types | C# | true:なし |
-| csharp_style_var_when_type_is_apparent | C# | true:なし |
-| csharp_style_var_elsewhere | C# | true:なし |
+| csharp_style_var_for_built_in_types | C# | true:none |
+| csharp_style_var_when_type_is_apparent | C# | true:none |
+| csharp_style_var_elsewhere | C# | true:none |
 
 **csharp\_style\_var\_for\_built\_in_types**
 
@@ -981,12 +981,12 @@ csharp_style_var_elsewhere = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | false:なし | 15.3 |
-| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | false:なし | 15.3 |
-| csharp_style_expression_bodied_operators | IDE0023 と IDE0024 | C# 7.0+ | false:なし | 15.3 |
-| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | true:なし | 15.3 |
-| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | true:なし | 15.3 |
-| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | true:なし | 15.3 |
+| csharp_style_expression_bodied_methods | IDE0022 | C# 6.0+ | false:none | 15.3 |
+| csharp_style_expression_bodied_constructors | IDE0021 | C# 7.0+ | false:none | 15.3 |
+| csharp_style_expression_bodied_operators | IDE0023 と IDE0024 | C# 7.0+ | false:none | 15.3 |
+| csharp_style_expression_bodied_properties | IDE0025 | C# 7.0+ | true:none | 15.3 |
+| csharp_style_expression_bodied_indexers | IDE0026 | C# 7.0+ | true:none | 15.3 |
+| csharp_style_expression_bodied_accessors | IDE0027 | C# 7.0+ | true:none | 15.3 |
 
 **csharp\_style\_expression\_bodied_methods**
 
@@ -996,7 +996,7 @@ csharp_style_var_elsewhere = true:suggestion
 | ----- |:----------- |
 | true | メソッドに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、メソッドに式形式メンバーを使用します。 |
-| False | メソッドにブロック本体を使用します。 |
+| false | メソッドにブロック本体を使用します。 |
 
 コード例:
 
@@ -1016,7 +1016,7 @@ public int GetAge() { return this.Age; }
 | ----- |:----------- |
 | true | コンストラクターに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、コンストラクターに式形式メンバーを使用します。 |
-| False | コンストラクターにブロック本体を使用します。 |
+| false | コンストラクターにブロック本体を使用します。 |
 
 コード例:
 
@@ -1036,7 +1036,7 @@ public Customer(int age) { Age = age; }
 | ----- |:----------- |
 | true | 演算子に式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、演算子に式形式メンバーを使用します。 |
-| False | 演算子にブロック本体を使用します。 |
+| false | 演算子にブロック本体を使用します。 |
 
 コード例:
 
@@ -1058,7 +1058,7 @@ public static ComplexNumber operator + (ComplexNumber c1, ComplexNumber c2)
 | ----- |:----------- |
 | true | プロパティに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、プロパティに式形式メンバーを使用します。 |
-| False | プロパティにブロック本体を使用します。 |
+| false | プロパティにブロック本体を使用します。 |
 
 コード例:
 
@@ -1078,7 +1078,7 @@ public int Age { get { return _age; }}
 | ----- |:----------- |
 | true | インデクサーに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、インデクサーに式形式メンバーを使用します。 |
-| False | インデクサーにブロック本体を使用します。 |
+| false | インデクサーにブロック本体を使用します。 |
 
 コード例:
 
@@ -1098,7 +1098,7 @@ public T this[int i] { get { return _values[i]; } }
 | ----- |:----------- |
 | true | アクセサーに式形式メンバーを使用します。 |
 | when_on_single_line | 単一行になる場合は、アクセサーに式形式メンバーを使用します。 |
-| False | アクセサーにブロック本体を使用します。 |
+| false | アクセサーにブロック本体を使用します。 |
 
 コード例:
 
@@ -1131,8 +1131,8 @@ csharp_style_expression_bodied_accessors = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
-| csharp_style_pattern_matching_over_is_with_cast_check | IDE0020 | C# 7.0+ | true:提案 |
-| csharp_style_pattern_matching_over_as_with_null_check | IDE0019 | C# 7.0+ | true:提案 |
+| csharp_style_pattern_matching_over_is_with_cast_check | IDE0020 | C# 7.0+ | true:suggestion |
+| csharp_style_pattern_matching_over_as_with_null_check | IDE0019 | C# 7.0+ | true:suggestion |
 
 **csharp\_style\_pattern\_matching\_over\_is\_with\_cast_check**
 
@@ -1182,7 +1182,7 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | -------- | -------------------- | ----------------------|
-| csharp_style_inlined_variable_declaration | IDE0018 | C# 7.0+ | true:提案 |
+| csharp_style_inlined_variable_declaration | IDE0018 | C# 7.0+ | true:suggestion |
 
 **csharp\_style\_inlined\_variable_declaration**
 
@@ -1216,9 +1216,9 @@ csharp_style_inlined_variable_declaration = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_prefer_simple_default_expression | IDE0034 | C# 7.1+ | true:提案 | 15.3 |
-| csharp_style_deconstructed_variable_declaration | IDE0042 | C# 7.0+ | true:提案 | 15.5 |
-| csharp_style_pattern_local_over_anonymous_function | IDE0039 | C# 7.0+ | true:提案 | 15.5 |
+| csharp_prefer_simple_default_expression | IDE0034 | C# 7.1+ | true:suggestion | 15.3 |
+| csharp_style_deconstructed_variable_declaration | IDE0042 | C# 7.0+ | true:suggestion | 15.5 |
+| csharp_style_pattern_local_over_anonymous_function | IDE0039 | C# 7.0+ | true:suggestion | 15.5 |
 
 **csharp\_prefer\_simple\_default_expression**
 
@@ -1300,8 +1300,8 @@ csharp_style_pattern_local_over_anonymous_function = true:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 |
 | --------- | ------- | -------------------- | ----------------------|
-| csharp_style_throw_expression | IDE0016 | C# 7.0+ | true:提案 |
-| csharp_style_conditional_delegate_call | IDE0041 | C# 6.0+ | true:提案 |
+| csharp_style_throw_expression | IDE0016 | C# 7.0+ | true:suggestion |
+| csharp_style_conditional_delegate_call | IDE0041 | C# 6.0+ | true:suggestion |
 
 **csharp\_style\_throw_expression**
 
@@ -1351,7 +1351,7 @@ csharp_style_conditional_delegate_call = false:suggestion
 
 | 規則名 | ルール ID | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| csharp_prefer_braces | IDE0011 | C# | true:なし | 15.3 |
+| csharp_prefer_braces | IDE0011 | C# | true:none | 15.3 |
 
 **csharp\_prefer\_braces**
 
@@ -1471,7 +1471,7 @@ dotnet_sort_system_directives_first = true
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_new_line_before_open_brace |  C# | すべて | 15.3  |
+| csharp_new_line_before_open_brace |  C# | all | 15.3  |
 | csharp_new_line_before_else |  C# | true | 15.3  |
 | csharp_new_line_before_catch |  C# | true | 15.3  |
 | csharp_new_line_before_finally |  C# | true | 15.3  |
@@ -1486,7 +1486,7 @@ dotnet_sort_system_directives_first = true
 | [値] | 説明
 | ------------- |:-------------|
 | accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection_array_initializers、properties、types。<br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
-| すべて | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
+| all | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
 | none | 中かっこはすべての式の同じ行に配置する必要があります ("K&R")。 |
 
 コード例:
@@ -1815,17 +1815,17 @@ csharp_indent_labels = flush_left
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_space_after_cast |  C# | False | 15.3  |
+| csharp_space_after_cast |  C# | false | 15.3  |
 | csharp_space_after_keywords_in_control_flow_statements |  C# | true | 15.3  |
-| csharp_space_between_method_declaration_parameter_ list_parentheses |  C# | False | 15.3  |
-| csharp_space_between_method_call_parameter_list_parentheses |  C# | False | 15.3  |
-| csharp_space_between_parentheses |  C# | False | 15.3  |
+| csharp_space_between_method_declaration_parameter_ list_parentheses |  C# | false | 15.3  |
+| csharp_space_between_method_call_parameter_list_parentheses |  C# | false | 15.3  |
+| csharp_space_between_parentheses |  C# | false | 15.3  |
 | csharp_space_before_colon_in_inheritance_clause |  C# | true | 15.7  |
 | csharp_space_after_colon_in_inheritance_clause |  C# | true | 15.7  |
 | csharp_space_around_binary_operators |  C# | before_and_after | 15.7  |
-| csharp_space_between_method_declaration_empty_parameter_list_parentheses |  C# | False | 15.7  |
-| csharp_space_between_method_call_name_and_opening_parenthesis |  C# | False | 15.7  |
-| csharp_space_between_method_call_empty_parameter_list_parentheses |  C# | False | 15.7  |
+| csharp_space_between_method_declaration_empty_parameter_list_parentheses |  C# | false | 15.7  |
+| csharp_space_between_method_call_name_and_opening_parenthesis |  C# | false | 15.7  |
+| csharp_space_between_method_call_empty_parameter_list_parentheses |  C# | false | 15.7  |
 
 **csharp\_space\_after_cast**
 
@@ -1982,7 +1982,7 @@ class C :I
 | ----- |:------------|
 | before_and_after | バイナリ演算子の前後にスペースを挿入する |
 | none | バイナリ演算子の前後のスペースを削除する |
-| 無視 | バイナリ演算子の前後のスペースを無視する |
+| ignore | バイナリ演算子の前後のスペースを無視する |
 
 このルールを省略するか、`before_and_after`、`none`、または `ignore` 以外の値を使用する場合、設定は適用されません。
 
