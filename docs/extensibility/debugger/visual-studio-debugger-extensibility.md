@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa2f858121e8486209518f348193e8a2bbee645a
-ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
+ms.openlocfilehash: b0be4a96854315bcf8b83db86692758e198980cd
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370927"
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio デバッガーの拡張性
 Visual Studio には、プログラムでバグを追跡するための強力で使いやすいツールを提供する完全な対話型のソース コードのデバッガーが含まれています。 デバッガーでは、完全なサポート Visual Basic、c#、C と C++ および JavaScript が。 ただし、 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]、つまりから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=214453)、他のプログラミング言語は同じ豊富な機能を使用してデバッガーでサポートされます。  
@@ -28,7 +28,7 @@ Visual Studio には、プログラムでバグを追跡するための強力で
   
  [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]すべてに完全なリファレンスが含まれています[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]新しい DE の作成に必要な要素です。 さらに、あるサンプルとチュートリアルの作業を開始するのに役立つ。  
   
- デバッグのサポートと言語のプロジェクト システムの完全なサンプルを参照してください、 [IronPython サンプル](http://msdn.microsoft.com/en-us/4c41695c-12c1-4670-b43b-d8d84c9e4089)します。  
+ デバッグのサポートと言語のプロジェクト システムの完全なサンプルを参照してください、 [IronPython サンプル](https://www.microsoft.com/download/details.aspx?id=55984)します。  
   
  次のセクションを使用して、デバッガーを拡張する方法を説明します、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]します。  
   

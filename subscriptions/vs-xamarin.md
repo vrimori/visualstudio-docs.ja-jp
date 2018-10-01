@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 0ba8ec977c0a59e5ae5406cb6bb381c24338d333
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 631a8e692f494c672b8c0894ca7b8434f11525dd
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281145"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289359"
 ---
 # <a name="xamarin-university-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Xamarin University トレーニング特典
 
@@ -28,12 +28,12 @@ Visual Studio Dev Essentials のメンバーは、選択された無料コース
 ## <a name="activation-steps"></a>アクティブ化の手順
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 2.  [専門能力開発] セクションで、Xamarin University トレーニングのタイルを見つけ、特典タイルの左下にある **[Activate]\(アクティブ化\)** リンクをクリックします。
-
-    <img alt="Xamarin University Training Benefit Tile" src="_img/vs-xamarin/vs-xamarin-tile.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![Xamarin University トレーニング特典タイル](_img/vs-xamarin/vs-xamarin-tile.png)
 
 3.  "Xamarin University Mobile Training for Microsoft Visual Studio" というタイトルの Xamarin University Web ページにリダイレクトされます。  **[Activate My Subscription Now]\(サブスクリプションをすぐにアクティブ化\)** をクリックします。
-
-    <img alt="Activate My Subscription Now" src="_img/vs-xamarin/vs-xamarin-activate.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![[Activate My Subscription Now]\(サブスクリプションをすぐにアクティブ化\)](_img/vs-xamarin/vs-xamarin-activate.png)
 
     > [!NOTE]
     > 画面の解像度とズームのレベルによっては、**[Activate My Subscription Now]\(サブスクリプションをすぐにアクティブ化\)** ボタンを表示するために下にスクロールする必要があります。
@@ -47,24 +47,24 @@ Visual Studio Dev Essentials のメンバーは、選択された無料コース
     > 5. Xamarin University トレーニング特典を再びアクティブ化します。
 
 4.  サインイン ページが表示され、Xamarin は Microsoft 認証に最近移行したことが示されます。  **[Connect with Microsoft]\(Microsoft で接続\)** をクリックします。
-
-    <img alt="Connect with Microsoft" src="_img/vs-xamarin/vs-xamarin-connect.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft との接続](_img/vs-xamarin/vs-xamarin-connect.png)
 
 5. 次に、Xamarin University にユーザーをサインインさせてユーザーのメール アドレスと基本プロファイルにアクセスするためのアクセス許可を付与するよう求められます。  **[Yes]\(はい\)** をクリックして続行します。 必要に応じて、後でアプリケーションのアクセス許可を変更できます。
-
-    <img alt="Approve access" src="_img/vs-xamarin/vs-xamarin-access.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![アクセスの承認](_img/vs-xamarin/vs-xamarin-access.png)
 
     > [!NOTE]
     > Xamarin University の特典を利用するにはサインインが必要なため、**[No]\(いいえ\)** をクリックすると前のページに戻り、トレーニングを続けることはできません。
 
 
 6. 新しいアカウントに関するようこそメッセージが表示されます。  **[Start Learning]\(トレーニング開始\)** をクリックします。
-
-    <img alt="Welcome message" src="_img/vs-xamarin/vs-xamarin-confirm.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![歓迎メッセージ](_img/vs-xamarin/vs-xamarin-confirm.png)
 
 7. これで完了です。  Xamarin University ポータルが表示され、学習を始める準備ができます。
-
-     <img alt="Xamarin University portal" src="_img/vs-xamarin/vs-xamarin-portal.png" style="border: 1px solid #CCCCCC" />
+    > [!div class="mx-imgBorder"]
+    > ![Xamarin University ポータル](_img/vs-xamarin/vs-xamarin-portal.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

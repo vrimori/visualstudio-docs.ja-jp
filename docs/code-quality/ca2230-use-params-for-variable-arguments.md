@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 70492152e75d3d257b63e014e854c4b0b431d2ec
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2dbb5ba3fe1f16f5a05d01d25040de39370cddc8
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917719"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548354"
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: 可変引数に対して param を使用します
 |||
@@ -32,17 +32,17 @@ ms.locfileid: "31917719"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- パブリックまたはプロテクト型に使用するパブリックまたはプロテクト メソッドが含まれています、`VarArgs`呼び出し規約です。
+ パブリックまたはプロテクト型に使用するパブリックまたはプロテクト メソッドが含まれています、`VarArgs`呼び出し規約。
 
 ## <a name="rule-description"></a>規則の説明
- `VarArgs`呼び出し規約は、可変個のパラメーターを受け取る特定のメソッド定義で使用します。 メソッドを使用して、`VarArgs`共通言語仕様 (CLS) 準拠ではない呼び出し規約、およびプログラミング言語間でアクセスできない可能性があります。
+ `VarArgs`呼び出し規約は可変個のパラメーターを受け取る特定のメソッド定義で使用します。 メソッドを使用して、`VarArgs`共通言語仕様 (CLS) 準拠でない呼び出し規約、およびプログラミング言語でアクセスできない可能性があります。
 
- C# で、`VarArgs`呼び出し規約は、メソッドのパラメーター リストの最後にときに使用、`__arglist`キーワード。 Visual Basic はサポートしません、`VarArgs`省略記号ボタンを使用するアンマネージ コードでのみ、使用は、呼び出し規約、および Visual C`...`表記します。
+ C# で、`VarArgs`呼び出し規約は、メソッドのパラメーター リストが終わるときに使用、`__arglist`キーワード。 Visual Basic がサポートしていません、`VarArgs`呼び出し規約、および Visual C の使用が省略記号ボタンを使用するアンマネージ コードでのみ使用`...`表記します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正する C# の場合、使用、 [params](/dotnet/csharp/language-reference/keywords/params)キーワードの代わりに`__arglist`です。
+ この規則違反を修正する (C#) を使用、 [params](/dotnet/csharp/language-reference/keywords/params)キーワードの代わりに`__arglist`します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例
@@ -51,4 +51,6 @@ ms.locfileid: "31917719"
  [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Reflection.CallingConventions?displayProperty=fullName> [言語非依存および言語非依存コンポーネント](/dotnet/standard/language-independence-and-language-independent-components)
+
+- <xref:System.Reflection.CallingConventions?displayProperty=fullName>
+- [言語への非依存性、および言語非依存コンポーネント](/dotnet/standard/language-independence-and-language-independent-components)

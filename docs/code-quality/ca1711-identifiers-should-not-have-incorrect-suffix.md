@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4faed3f5d49c6c08ca0a9bc90465f4e21ef3fec8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e3c9b23e555d0752ee33f2031fb883bdf50ff897
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31916956"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549733"
 ---
 # <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: 識別子は、不適切なサフィックスを含むことはできません
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
@@ -32,12 +33,14 @@ ms.locfileid: "31916956"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 識別子のサフィックスが不適切です。
+
+識別子のサフィックスが不適切です。
 
 ## <a name="rule-description"></a>規則の説明
- 規則では、特定の基本型を拡張する型、特定のインターフェイスを実装する型、またはそのような型から派生した型の名前にのみ、固有の予約済みサフィックスを末尾に付けます。 その他の型名では、予約済みのサフィックスを使用しないでください。
 
- 予約済みのサフィックス、および関連付けられている基本型とインターフェイスを次の表に示します。
+規則では、特定の基本型を拡張する型、特定のインターフェイスを実装する型、またはそのような型から派生した型の名前にのみ、固有の予約済みサフィックスを末尾に付けます。 その他の型名では、予約済みのサフィックスを使用しないでください。
+
+予約済みのサフィックス、および関連付けられている基本型とインターフェイスを次の表に示します。
 
 |サフィックス|基本型/インターフェイス|
 |------------|--------------------------|
@@ -52,26 +55,31 @@ ms.locfileid: "31916956"
 |Stack|<xref:System.Collections.Stack?displayProperty=fullName>|
 |ストリーム|<xref:System.IO.Stream?displayProperty=fullName>|
 
- さらに、次のサフィックスが必要があります**いない**使用します。
+さらに、次のサフィックスが必要があります**いない**使用します。
 
--   Delegate
+- `Delegate`
 
--   Enum
+- `Enum`
 
--   Impl – 代わりに ”Core” を使用します。
+- `Impl` (を使用して、`Core`代わりに)
 
--   型を以前のバージョンと区別するための Ex または類似のサフィックス
+- `Ex` または、同じ種類の以前のバージョンと区別するための類似のサフィックス
 
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
+名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージド コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 型名からサフィックスを削除します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- アプリケーション ドメインでサフィックスに明確な意味がある場合を除き、この規則による警告を抑制しないでください。
+型名からサフィックスを削除します。
 
-## <a name="related-rules"></a>関連規則
- [CA1710: 識別子は、正しいサフィックスを含んでいなければなりません](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+
+アプリケーション ドメインでサフィックスに明確な意味がある場合を除き、この規則による警告を抑制しないでください。
+
+## <a name="related-rules"></a>関連するルール
+
+- [CA1710: 識別子は、正しいサフィックスを含んでいなければなりません](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
 ## <a name="see-also"></a>関連項目
- [属性](/dotnet/standard/design-guidelines/attributes)[処理とイベントを発生させる](/dotnet/standard/events/index)
+
+- [属性](/dotnet/standard/design-guidelines/attributes)
+- [処理とイベントの発生](/dotnet/standard/events/index)

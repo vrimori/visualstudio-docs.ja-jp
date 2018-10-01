@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99bcb83ad085d67d219cea7a7860994fba3e9bd7
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: b1c5044479ca08933f5088101cc088ea3011b4c4
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513427"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495545"
 ---
 # <a name="windows-installer-basics"></a>Windows インストーラーの基本事項
 Windows インストーラーは、Windows インストーラーのコンポーネント (WICs または単なるコンポーネントとも呼ばれます) と呼ばれる単位でこれらのタスクを実行するアプリケーションやユーザーのコンピューター上のソフトウェア製品をアンインストールします。 各 WIC では、インストールと参照カウントの Windows インストーラーを使用してセットアップの基本的な単位を識別する GUID。  
@@ -75,4 +75,4 @@ Windows インストーラーは、Windows インストーラーのコンポー�
 -   バージョン管理されたリソース必要がありますこれまで出荷しない 1 つ以上の WIC でします。  
   
 ## <a name="see-also"></a>関連項目  
- [コンポーネントのルールが破損するいるとどうなりますか。](http://msdn.microsoft.com/library/aa372795\(VS.85\).aspx)
+ [コンポーネントのルールが破損するいるとどうなりますか。](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken)

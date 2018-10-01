@@ -9,12 +9,12 @@ description: 一部の Visual Studio サブスクリプションに含まれる 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ab16223378e8e985c636611bc4598b70bdef20f4
-ms.sourcegitcommit: 522ba712c0d625e51352506146b0556414681964
+ms.openlocfilehash: 0220bf4a5a07fac2e9ecda8f8c638d9c5f0a6145
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890130"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289482"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの DataCamp トレーニング特典
 
@@ -27,10 +27,12 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2. "専門能力開発" カテゴリで DataCamp 特典タイルを見つけて、**[アクティブ化]** をクリックします。
-    ![DataCamp 特典のタイル](_img\vs-datacamp\vs-datacamp-tile-2.png)
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp 特典のタイル](_img\vs-datacamp\vs-datacamp-tile-2.png)
 
 3. [DataCamp] ページで、新しいアカウントを作成できます。  電子メール アドレスとパスワードを入力するか、LinkedIn、Google、または Facebook から既存のアカウントを使用してサインインすることができます。  サインイン情報を指定したら、**[Get Started]\(作業の開始\)** をクリックします。
-    ![DataCamp: 新しいアカウントの作成](_img\vs-datacamp\vs-datacamp-create-account.png)
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp: 新しいアカウントの作成](_img\vs-datacamp\vs-datacamp-create-account.png)
 
     > [!NOTE]
     > アカウントの作成を開始すると、"問題が発生しました。ご利用のプロモーション コードが無効であるか、  有効期限が切れています" という内容のエラー メッセージが表示される場合があります。  これは、作成されたプロモーション コードの有効期限が数分後に切れた場合に発生します。  このメッセージが表示された場合は、[[特典]](https://my.visualstudio.com/benefits) ページに戻り、DataCamp 特典タイルの **[アクティブ化]** リンクをクリックするだけです。
@@ -42,24 +44,27 @@ DataCamp 特典の有効期間は、Visual Studio サブスクリプションに
 
 
     開始するには、選択したパスをクリックするだけです。
-
-     ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp: パスの選択](_img\vs-datacamp\vs-datacamp-choose-path.png)
 
 5. 目的のパスを選択したら、目標を選択して、ラーニング パスを絞り込むことができます。  たとえば、"データ サイエンス スキルセットを開発する" パスを選択すると、次のオプションが表示されます。 オプションを選択するか、**[I am not sure.Show me all career paths]\(わかりません。すべてのキャリア パスを表示してください\)** をクリックしてより広範なパスを作成します。
-
-    ![DataCamp: データ サイエンス スキルセット](_img\vs-datacamp\vs-datacamp-datascience.png)
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp: データ サイエンス スキルセット](_img\vs-datacamp\vs-datacamp-datascience.png)
 
 
 6. 選択したパスとオプションに基づいて、キャリア トラックの選択が表示されます。  選択したトラックの **[登録]** ボタンをクリックします。
-
-    ![DataCamp: キャリア トラック](_img\vs-datacamp\vs-datacamp-all-tracks.png)
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp: キャリア トラック](_img\vs-datacamp\vs-datacamp-all-tracks.png)
 
 7. トラックに登録されると、そのトラックの最初のコースが開きます。  コースの操作方法 (ナビゲーションやコース演習の実行など) を説明するチュートリアルが表示されます。
 
+    > [!div class="mx-imgBorder"]
+    > ![DataCamp: 開始](_img\vs-datacamp\vs-datacamp-getting-started.png)
 
-    ![DataCamp: 開始](_img\vs-datacamp\vs-datacamp-getting-started.png)
+任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスしてサインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。
 
-任意のポイントで停止し、次のセッションでトレーニングを再開できます。  [http://www.datacamp.com](http://www.datacamp.com) にアクセスしてサインインします。  ダッシュ ボードが表示され、一時停止した箇所からトレーニングを再開できます。 **[Continue Track]\(トラックを続行\)** をクリックします。![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
+> [!div class="mx-imgBorder"]   
+> ![DataCamp: トレーニングの続行](_img\vs-datacamp\vs-datacamp-continue-training.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 

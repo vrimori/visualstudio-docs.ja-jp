@@ -17,12 +17,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c527604639d701c3cda5bddba9ee61c01e5c8dd
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: 794d1bae562bf107d9986a132a44d4fa95aec20d
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586776"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495818"
 ---
 # <a name="visual-studio-sdk"></a>Visual Studio SDK
 Visual Studio SDK を使用して、Visual Studio の機能を拡張するかを Visual Studio の新機能を統合するのに役立ちます。 他のユーザーのほか、Visual Studio Marketplace には、拡張機能を配布することができます。 Visual Studio を拡張する方法の一部を次に示します。  
@@ -68,7 +68,7 @@ Visual Studio SDK を使用して、Visual Studio の機能を拡張するかを
 ## <a name="other-visual-studio-sdk-resources"></a>その他の Visual Studio SDK のリソース  
  使用することができます、VSSDK について質問があるか、拡張機能の開発経験を共有する場合、 [Visual Studio 機能拡張フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vsx)または[ExtendVS Gitter チャット ルーム](https://gitter.im/Microsoft/extendvs)します。  
   
- 詳細を確認することができます、 [VSX Arcana ブログ](http://blogs.msdn.com/b/vsx/)とブログの Microsoft Mvp によって書き込まれた数。  
+ 詳細を確認することができます、 [VSX Arcana ブログ](https://blogs.msdn.microsoft.com/vsx/)とブログの Microsoft Mvp によって書き込まれた数。  
   
 -   [お気に入りの Visual Studio 拡張機能](http://geekswithblogs.net/sdorman/archive/2014/10/05/favorite-visual-studio-extensions.aspx)  
   

@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc947f68dc5c220ec0bd1ecd035e2089881a80ea
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 3ee391ce1200cce03e83f80b6f345ead4cd03199
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498673"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495246"
 ---
 # <a name="walkthrough-create-a-core-editor-and-registering-an-editor-file-type"></a>チュートリアル: コア エディターとエディター ファイルの種類の登録を作成します。
 このチュートリアルを開始する VSPackage を作成する方法について説明、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コア エディターでファイルがいつ、 *.myext*ファイル名拡張子が読み込まれます。  
@@ -37,7 +37,7 @@ ms.locfileid: "39498673"
   
 ### <a name="to-create-the-vspackage"></a>VSPackage を作成するには  
   
--   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]という名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンド VSPackage を作成する](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32)します。  
+-   開始[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]を作成し、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]という名前の VSPackage `MyPackage`」の説明に従って、[チュートリアル: メニュー コマンド VSPackage を作成する](https://msdn.microsoft.com/library/d699c149-5d1e-47ff-94c7-e1222af02c32)します。  
   
 ### <a name="to-add-the-editor-factory"></a>エディター ファクトリを追加するには  
   

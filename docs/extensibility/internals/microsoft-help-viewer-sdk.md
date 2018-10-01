@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe6dfd62d8bf9deb296d5530a5c9a371f1d2484d
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 808cd12386e6bf0431c3786f7afd89ecd38af372
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513375"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46496000"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 この記事には、Visual Studio ヘルプ ビューアーのインテグレーターの次のタスクが含まれています。  
@@ -822,13 +822,13 @@ Visual Studio のコンテンツ ストアを作成します。 統合シェル�
 ### <a name="additional-resources"></a>その他のリソース  
 ランタイム API では、次を参照してください。 [Windows API のヘルプ](/previous-versions/windows/desktop/helpapi/helpapi-portal)します。  
   
-API のヘルプを活用する方法の詳細については、次を参照してください[ヘルプ ビューアーのコード例。](http://visualstudiogallery.msdn.microsoft.com/f08f296f-7076-4aec-8da3-8f0fbe04461e)  
+API のヘルプを活用する方法の詳細については、次を参照してください[ヘルプ ビューアーのコード例。](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples)  
   
 これらのコンポーネントに関するフィードバックを提供するを使用して[Microsoft Connect](http://connect.microsoft.com/)します。  
   
 機能の提案を送信してください[Microsoft User Voice](http://visualstudio.uservoice.com/forums/121579-visual-studio)  
   
-追加のヘルプを取得すると、 [MSDN デベロッパー ドキュメントおよびヘルプ システムのフォーラム](http://social.msdn.microsoft.com/Forums/devdocs/threads)  
+追加のヘルプを取得すると、 [MSDN デベロッパー ドキュメントおよびヘルプ システムのフォーラム](https://social.msdn.microsoft.com/Forums)  
   
 更新プログラムの最新の問題を参照してください、[ヘルプ ビューアーの Readme](http://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409)  
   

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6d0354e7e7c5f59c070baa6e6913d85cf7c06d
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: e2339dcfe80e994b8bc9062d137263d3b25d274d
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433549"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542417"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>最初に、Visual Studio デバッガーについてください。
 
@@ -147,7 +147,7 @@ F10 キーは、(まだコードが実行される)、アプリのコードの�
 
 ![[ローカル] ウィンドウ](../debugger/media/dbg-tour-locals-window.png "[ローカル] ウィンドウ")
 
-この例で、`this`オブジェクトとオブジェクト`f`スコープ内にあります。 詳細については、次を参照してください。 [[自動変数] と ローカルの Windows での変数の検査](../debugger/autos-and-locals-windows.md)します。
+この例で、`this`オブジェクトとオブジェクト`f`スコープ内にあります。 詳細については、次を参照してください。 [[自動変数] と [ローカルの Windows での変数の検査]](../debugger/autos-and-locals-windows.md)します。
 
 ## <a name="set-a-watch"></a>ウォッチを設定します。
 
@@ -159,7 +159,7 @@ F10 キーは、(まだコードが実行される)、アプリのコードの�
 
 ウォッチがある場合、この例では、`f`オブジェクトとは、その値をデバッガー内を移動するように変更を表示できます。 その他の変数ウィンドウとは異なり、**ウォッチ**windows 常に変数を表示する、見ている (グレー場合にスコープ外)。
 
-詳細については、次を参照してください[ウォッチ ウィンドウと [クイック ウォッチ] の Windows を使用してウォッチを設定。](../debugger/watch-and-quickwatch-windows.md)
+詳細については、次を参照してください[ウォッチウィンドウと [クイック ウォッチ] の Windows を使用してウォッチを設定。](../debugger/watch-and-quickwatch-windows.md)
 
 ## <a name="examine-the-call-stack"></a>コール スタックを調べる
 
@@ -211,7 +211,7 @@ F10 キーは、(まだコードが実行される)、アプリのコードの�
 
 ![下位と転送 ボタンをステップ](../debugger/media/intellitrace-step-back-icons-description.png  "戻ると転送ボタン")
 
-詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
+詳細については、次を参照してください。、 [IntelliTrace を使用して前のアプリ状態を検査](../debugger/view-historical-application-state.md)ページ。
 
 ## <a name="next-steps"></a>次の手順
 

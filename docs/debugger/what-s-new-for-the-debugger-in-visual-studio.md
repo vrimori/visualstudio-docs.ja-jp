@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fac267dfaf27d9afccdb6236244dbd21e99b253b
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: cdb56a12f2f9fb6838579165bbe374e4dfbdca47
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433455"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542438"
 ---
 # <a name="whats-new-for-the-debugger-in-includevsdev15miscincludesvsdev15mdmd"></a>デバッガーの新機能については [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "37433455"
 
     ![下位と転送 ボタンをステップ](../debugger/media/intellitrace-step-back-icons-description.png  "戻ると転送ボタン")
 
-    詳細については、「[IntelliTrace ステップ バックを使用してスナップショットを表示する](../debugger/how-to-use-intellitrace-step-back.md)」のページ参照してください。
+    詳細については、次を参照してください。、 [IntelliTrace を使用して前のアプリ状態を検査](../debugger/view-historical-application-state.md)ページ。
 
 - **例外ヘルパー**例外処理アシスタントを置き換えるし、エラーが発生した非モーダル ダイアログ ボックスが表示されます。 **例外ヘルパー** 、内部例外、(該当する場合)、デバッガーによって追加の分析にすばやくアクセスしにすぐにアクセスを提供します、**例外設定**例外。 例外ヘルパーを表示することによってブロックされている場合浮動ビューにドラッグできます。
 

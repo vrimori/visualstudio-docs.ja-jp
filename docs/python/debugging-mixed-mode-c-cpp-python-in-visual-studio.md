@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 005ba501dff89ed26cd83bee04aa40e49e2f9dca
-ms.sourcegitcommit: 96a6d1f16d06ca28d309d05b6e9fbd52f628cdbc
+ms.openlocfilehash: 4d5ec15e6fea377e8ffc23cc5215a88081d0f9bd
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008435"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45552085"
 ---
 # <a name="debug-python-and-c-together"></a>Python と C++ を同時にデバッグする
 
@@ -104,7 +104,7 @@ Visual Studio の以前のすべてのバージョンでは、混合モードの
 
 ### <a name="step-between-python-and-native-code"></a>Python とネイティブ コード間でのステップ実行
 
-**[ステップ イン]** (**F11** キー) コマンドまたは **[ステップ アウト]** (**Shift** + **F11** キー) コマンドを使用した場合、混合モードのデバッガーでコードの種類の変更が正しく処理されます。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](http://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
+**[ステップ イン]** (**F11** キー) コマンドまたは **[ステップ アウト]** (**Shift** + **F11** キー) コマンドを使用した場合、混合モードのデバッガーでコードの種類の変更が正しく処理されます。 たとえば、C で実装されている型のメソッドをPython で呼び出しているときに、そのメソッドへの呼び出しにステップ インすると、実行は、メソッドを実装しているネイティブ関数の先頭で停止します。 同様に、ネイティブ コードが Python API 関数を呼び出しているときは、呼び出されている Python コードで停止します。 たとえば、Python で定義された関数値の `PyObject_CallObject` にステップ インすると、Python 関数の先頭で停止します。 Python からネイティブへのステップ インは、Python から [ctypes](https://docs.python.org/3/library/ctypes.html) 経由で呼び出されるネイティブ関数でもサポートされています。
 
 ### <a name="pyobject-values-view-in-native-code"></a>ネイティブ コード内の PyObject 値の表示
 
@@ -137,7 +137,7 @@ Visual Studio の以前のすべてのバージョンでは、混合モードの
 
 ただし、Python 2.x では、通常は、各オブジェクト型でヘッダーをインライン フィールドのコレクションとして宣言するため、カスタム作成された型と `PyObject` の間には、C/C++ コードの型システム レベルでの関連付けがありません。 このようなカスタム型に対して **[Python ビュー]** ノードを有効にするには、[Python ツールのインストール ディレクトリ](installing-python-support-in-visual-studio.md#install-locations)の *PythonDkm.natvis* ファイルを編集して、C 構造体または C++ クラスの XML に別の要素を追加します。
 
-別の (より優れた) 方法は、[PEP 3123](http://www.python.org/dev/peps/pep-3123/) に従って、`PyObject_HEAD` の代わりに明示的な `PyObject ob_base;` フィールドを使用することです。ただし、旧バージョンとの互換性の点で、この方法は常に可能であるとは限りません。
+別の (より優れた) 方法は、[PEP 3123](https://www.python.org/dev/peps/pep-3123/) に従って、`PyObject_HEAD` の代わりに明示的な `PyObject ob_base;` フィールドを使用することです。ただし、旧バージョンとの互換性の点で、この方法は常に可能であるとは限りません。
 
 ### <a name="native-values-view-in-python-code"></a>Python コード内のネイティブ値の表示
 

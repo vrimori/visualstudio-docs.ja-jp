@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7620922bad8f35186beb4086dd3c24a98ada6d34
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 8d4f701b58c95a08f9017043138c98b824d4e406
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499992"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46496104"
 ---
 # <a name="walkthrough-create-a-view-adornment-commands-and-settings-column-guides"></a>チュートリアル: ビューの表示要素、コマンド、および設定 (ガイドを) 作成します。
 コマンドとビューの効果を Visual Studio のテキストまたはコード エディターを拡張することができます。 この記事では、人気のある拡張機能、列ガイドを使用する方法を示します。 列ガイドは、特定の列の幅にコードを管理するために、テキスト エディターのビューに描画される視覚的にライトの線です。 具体的には、書式設定されたコードは、ドキュメント、ブログの投稿に含めるか、バグのレポートのサンプルについてがあります。  
@@ -35,7 +35,7 @@ ms.locfileid: "39499992"
   
 -   Visual Studio コマンド ウィンドウからコマンドを呼び出すためのサポートを追加します。  
   
- この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
+ この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines)します。  
   
  **注**: このチュートリアルで Visual Studio 拡張機能テンプレートによって生成されるいくつかのファイルに大量のコードを貼り付けます。 しかし、すぐにこのチュートリアルでは他の拡張機能の例を使用して github で完成したソリューションを参照します。 Generictemplate アイコンを使用する代わりに実際のコマンドのアイコンがあることで、完成したコードは若干異なります。  
   
@@ -1349,7 +1349,7 @@ private int GetApplicableColumn(EventArgs e)
 ## <a name="finished-code-project"></a>完成したコード プロジェクト  
  Visual Studio 機能拡張のサンプルの github プロジェクトはまもなくし、完成したプロジェクトがあります。 この記事では、次のようが発生するとが更新されます。 完全なサンプル プロジェクトでは、異なる guid があり、コマンドのアイコンの異なるビットマップ ストリップになります。  
   
- この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://visualstudiogallery.msdn.microsoft.com/da227a0b-0e31-4a11-8f6b-3a149cf2e459?SRC=Home)します。  
+ この Visual Studio ギャラリーで列ガイド機能のバージョンを試すことができます[拡張子](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines)します。  
   
 ## <a name="see-also"></a>関連項目  
  [エディター内で](../extensibility/inside-the-editor.md)   

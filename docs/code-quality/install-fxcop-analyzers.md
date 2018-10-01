@@ -1,5 +1,5 @@
 ---
-title: FxCop アナライザーをインストールします。
+title: FxCop アナライザーのインストール
 ms.date: 08/03/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2c03387c20601b8d0af79067d7ff8dc1ce7bc599
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 117bf47fb5a733dfba02da98b5cae610a0aab5c7
+ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39513611"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47228854"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>FxCop アナライザーを Visual Studio をインストールします。
 
@@ -26,7 +26,7 @@ Microsoft と呼ばれるアナライザーのセットを作成する[Microsoft
 
 ## <a name="to-install-fxcop-analyzers-as-a-nuget-package"></a>FxCop アナライザーを NuGet パッケージとしてインストールするには
 
-1. [アナライザー パッケージ バージョンを決定](#analyzer-package-versions)をインストールするには、Visual Studio のバージョンに基づいています。
+1. [アナライザー パッケージ バージョンを決定](#fxcopanalyzers-package-versions)をインストールするには、Visual Studio のバージョンに基づいています。
 
 1. いずれかを使用して、Visual Studio でパッケージをインストール、[パッケージ マネージャー コンソール](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)または[パッケージ マネージャー UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)します。
 
@@ -43,13 +43,13 @@ Microsoft と呼ばれるアナライザーのセットを作成する[Microsoft
 
 次のガイドラインを使用すると、Visual Studio のバージョンをインストールするのに FxCop アナライザー パッケージのバージョンを特定します。
 
-|Visual Studio バージョン|FxCop アナライザー パッケージ バージョン|
+|Visual Studio のバージョン|FxCop アナライザー パッケージ バージョン|
 |-|-|
-|Visual Studio 2017 バージョン 15.5 以降|たとえば、2.6.1 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.1|
+|Visual Studio 2017 バージョン 15.5 以降|たとえば、2.6.2 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.2|
 |Visual Studio 2017 バージョン 15.3 を 15.4|たとえば、2.3.0-beta1 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1|
 |Visual Studio 2017 バージョン 15.0 を 15.2|たとえば、2.0.0-beta2 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.0.0-beta2|
 |Visual Studio 2015 update 2 と 3|たとえば、バージョン 1.2.0-beta2 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.2.0-beta2|
-|Visual Studio 2015 更新プログラム 1|例については、バージョン 1.1.0、https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.1します。|
+|Visual Studio 2015 更新プログラム 1|例については、バージョン 1.1.0、 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.1します。|
 |Visual Studio 2015 RTW|たとえば、バージョン 1.0.1、 https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/1.0.1|
 
 ## <a name="to-install-fxcop-analyzers-as-a-vsix"></a>VSIX として FxCop アナライザーをインストールするには

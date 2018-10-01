@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 91a97983a8760d7f5df04fe6e5b0a56a782a11ce
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a985951cebc37e8f036e1babee36b9c04528f522
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915207"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548934"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: 配列フィールドは読み取り専用にできません
+
 |||
 |-|-|
 |TypeName|ArrayFieldsShouldNotBeReadOnly|
@@ -32,40 +33,46 @@ ms.locfileid: "31915207"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 配列を保持するパブリックまたはプロテクト フィールドは読み取り専用に宣言されます。
+ 読み取り専用配列を保持するパブリックまたはプロテクト フィールドが宣言されています。
 
 ## <a name="rule-description"></a>規則の説明
- 適用すると、 `readonly` (`ReadOnly`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])、別の配列を参照してくださいに配列のフィールドを含むフィールドに修飾子を変更できません。 ただし、読み取り専用フィールドに格納された配列の要素は変更できます。 決定を下すまたはパブリックにアクセスできる読み取り専用配列の要素に基づく操作を実行するコードには、利用可能なセキュリティの脆弱性が含まれます。
+ 適用すると、 `readonly` (`ReadOnly`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) 修飾子を配列フィールドを含むフィールドを変更して、別の配列を参照してくださいことはできません。 ただし、読み取り専用フィールドに格納された配列の要素は変更できます。 判断したり、パブリックにアクセスできる読み取り専用配列の要素に基づく操作を実行するコードには、悪用可能なセキュリティの脆弱性が含まれます。
 
- 注いるパブリック フィールドを持つデザイン規則に違反するも[ca 1051: 参照できるインスタンス フィールドを宣言しません](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)です。
+ メモをパブリック フィールドを持つデザイン規則に違反しても[ca 1051: 参照できるインスタンス フィールドを宣言しません](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- このルールによって識別されるセキュリティの脆弱性を修正するに依存しないパブリックにアクセスできる読み取り専用配列の内容。 次の手順のいずれかを使用することを強くお勧めします。
+ このルールで識別されるセキュリティの脆弱性を修正するのに依存しないパブリックにアクセスできる読み取り専用配列の内容。 次の手順のいずれかを使用することを強くお勧めします。
 
--   厳密に型指定されたコレクションは変更できない配列を置き換えます。 詳細については、「<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>」を参照してください。
+- 厳密に型指定されたコレクションは変更できない配列に置き換えます。 詳細については、「<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>」を参照してください。
 
--   プライベート配列のクローンを返すメソッドでパブリック フィールドを置き換えます。 コードが、複製に依存しないためにはありません危険要素が変更された場合です。
+- プライベート配列の複製を返すメソッドでは、パブリック フィールドを置き換えます。 コードが、複製に依存しないためにありません危険要素が変更された場合です。
 
- 2 番目の方法を選択した場合を置き換えないフィールド プロパティを設定します。配列を返す悪影響を及ぼすプロパティでは、パフォーマンスに影響します。 詳細については、次を参照してください。 [ca 1819: プロパティは、配列を返す必要がありますいない](../code-quality/ca1819-properties-should-not-return-arrays.md)です。
+ 2 番目の方法を選択した場合、フィールドと置き換えないでプロパティ悪影響を与える、配列を返すプロパティは、パフォーマンスに影響します。 詳細については、次を参照してください。 [ca 1819: プロパティは、配列を返す必要がありますいない](../code-quality/ca1819-properties-should-not-return-arrays.md)します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告の除外はお勧めします。 読み取り専用フィールドの内容が重要ではない場合はほとんどありませんが発生します。 場合は、シナリオの場合は、削除、`readonly`修飾子の代わりに、メッセージを除外します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告の除外はお勧めします。 読み取り専用フィールドの内容が重要ではない場合はほとんどありませんが発生します。 シナリオの場合は場合、削除、`readonly`修飾子の代わりに、メッセージを除外します。
 
-## <a name="example"></a>例
- この例では、この規則違反の危険性を示します。 最初の部分は、型を持つサンプル ライブラリを示しています。 `MyClassWithReadOnlyArrayField`、2 つのフィールドを格納している (`grades`と`privateGrades`) を安全ではありません。 フィールド`grades`がパブリックであり、したがって、呼び出し元に脆弱性が存在します。 フィールド`privateGrades`プライベートは引き続き脆弱で呼び出し元に返されるため、`GetPrivateGrades`メソッドです。 `securePrivateGrades`フィールドが、安全な方法で公開されている、`GetSecurePrivateGrades`メソッドです。 優れた設計のプラクティスに従ってくださいにプライベートとして宣言されています。 2 番目の部分に格納された値を変更するコードを示しています、`grades`と`privateGrades`メンバー。
+## <a name="example-1"></a>例 1
+ この例では、この規則に違反する危険性を示します。 最初の部分は、型を持つサンプル ライブラリを示しています。 `MyClassWithReadOnlyArrayField`、2 つのフィールドを格納している (`grades`と`privateGrades`) を安全ではありません。 フィールド`grades`はパブリックであり、そのため、呼び出し元に対して脆弱になります。 フィールド`privateGrades`はプライベートであるが、呼び出し元に返されるため、脆弱なままです、`GetPrivateGrades`メソッド。 `securePrivateGrades`フィールドが、安全な方法で公開されている、`GetSecurePrivateGrades`メソッド。 優れた設計のプラクティスに従うにはプライベートとして宣言されています。 2 番目の部分に格納された値を変更するコードを示しています、`grades`と`privateGrades`メンバー。
 
  サンプルのクラス ライブラリは、次の例が表示されます。
 
  [!code-csharp[FxCop.Security.ArrayFieldsNotReadOnly#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_1.cs)]
 
-## <a name="example"></a>例
- 次のコードは、読み取り専用配列セキュリティの問題を説明するためにサンプルのクラス ライブラリを使用します。
+## <a name="example-2"></a>例 2
 
- [!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_2.cs)]
+次のコードでは、読み取り専用配列セキュリティの問題を説明するために、例のクラス ライブラリを使用します。
 
- この例から出力されます。
+[!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_2.cs)]
 
- **改ざんする前に: グレード: 90、90、90 プライベート グレード: 90、90、90 Secure 成績、90、90、90**
-**改ざん後: グレード: 90、555、90 プライベート グレード: 90、555、90 Secure 成績、90、90、90**
+この例の出力は次のとおりです。
+
+```text
+Before tampering: Grades: 90, 90, 90 Private Grades: 90, 90, 90  Secure Grades, 90, 90, 90
+After tampering: Grades: 90, 555, 90 Private Grades: 90, 555, 90  Secure Grades, 90, 90, 90
+```
+
 ## <a name="see-also"></a>関連項目
- <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>
+
+- <xref:System.Array?displayProperty=fullName>
+- <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

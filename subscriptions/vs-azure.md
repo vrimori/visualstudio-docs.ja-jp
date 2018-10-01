@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Azure の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2f9a0ed97cc0792387e61bfe15e6bb94cd5e1c57
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 20d8474189df34dda9eb2ed7ef2b0e158f06f3b5
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379737"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289554"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -53,21 +53,22 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 1.  [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2.  [特典] ページの [ツール] セクションで、Azure のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。
-
-    ![Azure タイル](_img\vs-azure\vs-azure-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure タイル](_img\vs-azure\vs-azure-tile.png)
 
 3.  Azure サブスクリプションの作成に必要な情報を入力して、ご利用条件に同意するチェック ボックスをオンにしてから、**[サインアップ]** をクリックします。
-
-    ![Azure のサインアップ](_img\vs-azure\vs-azure-sign-up-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure のサインアップ](_img\vs-azure\vs-azure-sign-up-cropped.png)
 
 4.  アカウントの準備ができると、Azure サポート プラン (別売り) を選ぶか、Azure サブスクリプションで始めることができます。
-
-    ![Azure 準備作業](_img\vs-azure\vs-azure-getting-ready-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure 準備作業](_img\vs-azure\vs-azure-getting-ready-cropped.png)
 
 5.  Azure ダッシュボードが読み込まれ、初めて使うときはツアーを見ることができます。  ツアーは、さまざまなタスクを実行したり関連情報を検索したりする方法を示す一連の画面ヒントで構成されます。  ツアーを最後まで見るか閉じると、Azure のダッシュボードが表示されます。
 
 6.  後で簡単にアクセスできるようにするには、[Azure Portal](https://portal.azure.com) にブックマークを付けます。
-![Azure ダッシュボード](_img\vs-azure\vs-azure-dashboard-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure ダッシュボード](_img\vs-azure\vs-azure-dashboard-cropped.png)
 
 ## <a name="faq"></a>FAQ
 

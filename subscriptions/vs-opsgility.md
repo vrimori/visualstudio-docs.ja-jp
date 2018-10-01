@@ -9,12 +9,12 @@ description: 選択されている Visual Studio サブスクリプションに�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f166fe0555bf7eea68927d8c93cdea9790561368
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 036c063aa49f3f5221736f35cb3ada35f854c325
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380311"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289457"
 ---
 # <a name="the-opsgility-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Opsgility 特典
 
@@ -26,17 +26,17 @@ ms.locfileid: "39380311"
 2.  [特典] ページの [ツール] セクションで、Opsgility のタイルを見つけて、特典タイルの下部にある **[ライセンス認証]** リンクをクリックします。
 
 3.  Opsgility 特典を使うには、特典タイルの下部にある **[コードの取得]** リンクをクリックします。   クーポン コードが正常に取得された通知を受け取ります。  **[アクティブ化]** をクリックして続行します。
-
-    ![Opsgility 特典タイル](_img\vs-opsgility\vs-opsgility-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Opsgility 特典タイル](_img\vs-opsgility\vs-opsgility-tile.png)
 
 
 4.  [Visual Studio Enterprise 向け Opsgility オンライン トレーニング](https://www.opsgility.com/vse)のランディング ページにリダイレクトされます   (サポート担当者とのチャット セッションを開始する機会を提供されることがあります。  チャットを始めない場合は、ウィンドウを最小化できます)。要求された連絡先情報を入力し、**[Register]\(登録\)** をクリックします。
-
-    ![Opsgility 特典のランディング ページ](_img\vs-opsgility\vs-opsgility-registration.png)
+    > [!div class="mx-imgBorder"]
+    > ![Opsgility 特典のランディング ページ](_img\vs-opsgility\vs-opsgility-registration.png)
 
 5.  必要な作業は以上です。  学習を始める準備ができました。  学習を始めやすいよう、お勧めの学習トラックの一覧がページの左側に表示されています。  それではお楽しみください。
-
-    ![Opsgility 特典ホーム ページ](_img\vs-opsgility\vs-opsgility-home-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Opsgility 特典ホーム ページ](_img\vs-opsgility\vs-opsgility-home-cropped.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |

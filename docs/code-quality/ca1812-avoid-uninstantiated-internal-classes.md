@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2b59e9b0947c6d2b1cbb37cdc850a144976d495
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 68597c0748fbc235178da6b6e583c48b9f1b422f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915598"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551770"
 ---
 # <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: インスタンス化されていない内部クラスを使用しないでください
 |||
@@ -35,41 +35,41 @@ ms.locfileid: "31915598"
  アセンブリ レベルの型のインスタンスが、アセンブリ内のコードから作成されません。
 
 ## <a name="rule-description"></a>規則の説明
- このルールが、型のコンス トラクターのいずれかの呼び出しを特定するし、呼び出しが存在しない場合は、違反を報告します。
+ このルールは、型のコンス トラクターの 1 つの呼び出しの検索を試み、呼び出しが検出されない場合は、違反を報告します。
 
- 次の種類は、この規則ではチェックされません。
+ 次の種類は、このルールではチェックされません。
 
--   値型
+- 値型
 
--   抽象型
+- 抽象型
 
--   列挙
+- 列挙
 
--   デリゲート
+- デリゲート
 
--   コンパイラによって生成された配列型
+- コンパイラによって生成された配列型
 
--   型をインスタンス化することはできず、定義する`static`(`Shared` Visual Basic で) メソッドにのみです。
+- 型をインスタンス化することはできず、定義する`static`(`Shared` Visual Basic で) メソッドのみです。
 
- 適用する場合<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName>は、分析する、アセンブリをこの規則は発生しませんとマークされているコンス トラクターで`internal`別フィールドが使用されているかどうかがわからないため`friend`アセンブリ。
+ 適用した場合<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName>は分析されて、アセンブリをこのルールがないとマークされているすべてのコンス トラクターでトリガー`internal`別フィールドが使用されているかどうかを見分けることはできませんので`friend`アセンブリ。
 
- 場合でも、この制限を回避することはできません[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コード分析、外部のスタンドアロン FxCop は場合に発生する内部コンス トラクターすべて`friend`分析のアセンブリが存在します。
+ 場合でも、Visual Studio コード分析でのこの制限を回避することはできません、外部のスタンドアロン FxCop は場合は、すべて内部コンス トラクターに発生する`friend`アセンブリが、分析に存在します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、型を削除またはそれを使用するコードを追加します。 型に静的メソッドのみが含まれている場合をコンパイラが既定のパブリック インスタンス コンス トラクターを生成するを防ぐために、型を次のいずれかを追加します。
+ このルールの違反を修正するには、型を削除またはそれを使用するコードを追加します。 型に静的メソッドのみが含まれている場合は、コンパイラが既定のパブリック インスタンス コンス トラクターを生成するを防ぐために、型に、次のいずれかを追加します。
 
--   プライベート コンス トラクター型を対象とする[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]version 1.0 および 1.1 です。
+- プライベート コンス トラクター型を対象とする[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]version 1.0 および 1.1。
 
--   `static` (`Shared` Visual basic) 修飾子の種類を対象とする[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]です。
+- `static` (`Shared` Visual basic) 修飾子は型を対象とする[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告を抑制しても安全です。 次の状況では、この警告を抑制することをお勧めします。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ このルールから警告を抑制しても安全です。 次の状況では、この警告を抑制することをお勧めします。
 
--   など、クラスが遅延バインディングされたリフレクション メソッドによって作成された<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>です。
+- などクラスが遅延バインディング リフレクション メソッドによって作成された<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>します。
 
--   クラスは、ランタイムによって自動的に作成または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]です。 たとえば、クラスを実装する<xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName>または<xref:System.Web.IHttpHandler?displayProperty=fullName>です。
+- クラスは、ランタイムによって自動的に作成または[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]します。 たとえば、実装するクラスの<xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName>または<xref:System.Web.IHttpHandler?displayProperty=fullName>します。
 
--   クラスは、新しい制約を持つジェネリック型パラメーターとして渡されます。 たとえば、次の例では、このルールが発生します。
+- クラスは、新しい制約を持つジェネリック型パラメーターとして渡されます。 たとえば、次の例では、このルールが発生します。
 
     ```csharp
     internal class MyClass
@@ -92,7 +92,7 @@ ms.locfileid: "31915598"
 
  このような場合は、この警告を抑制することをお勧めします。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1811: 呼び出されていないプライベート コードを使用しません](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
  [CA1801: 使用されていないパラメーターをレビューします](../code-quality/ca1801-review-unused-parameters.md)

@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる WhiteSourc
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 37b71d51a62ab83f604c084ec2b5a1fda7594c14
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: e4c1039018eb745c7a04c6269b4b98e737461f7c
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280312"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289324"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの WhiteSource Bolt
 
@@ -25,40 +25,40 @@ ms.locfileid: "36280312"
 1.  WhiteSource Bolt 特典をアクティブ化するには、[https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 
 2.  [ツール] セクションで、 WhiteSource Bolt のタイルを見つけて、特典タイルの下部にある **[コードを取得]** リンクをクリックします。
-
-    ![WhiteSource 特典タイル](_img\vs-whitesource\vs-whitesource-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典タイル](_img\vs-whitesource\vs-whitesource-tile.png)
 
 2.  アクティブ化コードを表示する通知を受け取ります。  **コードをクリップボードにコピーし**、**[アクティブ化]** をクリックします。
-
-    ![WhiteSource 特典コード ](_img\vs-whitesource\vs-whitesource-code.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典コード](_img\vs-whitesource\vs-whitesource-code.png)
 
 3.  WhiteSource の Web ページで、**[Activate]\(アクティブ化\)** ボタンをクリックするか、ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションまで下にスクロールします。
-
-    ![WhiteSource 特典のアクティブ化](_img\vs-whitesource\vs-whitesource-activate-page-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典のアクティブ化](_img\vs-whitesource\vs-whitesource-activate-page-cropped.png)
 
 4.  ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションでは、4 つのステップが案内されます。
 
     - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合、「[Install free extensions for VSTS](/vsts/marketplace/install-vsts-extension?view=vsts)」 (VSTS の拡張機能を無料でインストールする) を参照してください。
 
     VSTS を使っている場合は緑の **[Install]\(インストール\)** ボタンをクリックし、Team Foundation Server の場合は **[Download]\(ダウンロード\)** ボタンをクリックします。  この例では、VSTS を使います。
-
-    ![WhiteSource 特典拡張機能のインストール](_img\vs-whitesource\vs-whitesource-download-install.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典拡張機能のインストール](_img\vs-whitesource\vs-whitesource-download-install.png)
 
     - 次に、使う VSTS アカウントを選び、**[Confirm]\(確認\)** をクリックします   (VSTS をまだセットアップしていない場合は、[[特典]](https://my.visualstudio.com/benefits) ページで VSTS 特典をアクティブ化します)。
-
-    ![WhiteSource 特典アカウントの確認](_img\vs-whitesource\vs-whitesource-confirm-account.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典アカウントの確認](_img\vs-whitesource\vs-whitesource-confirm-account.png)
 
     - 拡張機能がインストールされて使えることを示す確認が表示されます。  **[Get started]\(使用開始\)** をクリックして WhiteSource Bolt ページに戻って続けます。
-
-    ![WhiteSource 特典インストール完了](_img\vs-whitesource\vs-whitesource-install-complete.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典インストール完了](_img\vs-whitesource\vs-whitesource-install-complete.png)
 
 5.  Visual Studio Team Services (VSTS) プロジェクト ダッシュボードを開き、**[ビルドとリリース]** メニューをクリックして **[WhiteSource Bolt]** を選択します。
-
-    ![WhiteSource 特典拡張機能の追加](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典拡張機能の追加](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
 
 6. WhiteSource Bolt 特典タイルからアクティブ化コードを貼り付けて、**[アクティブ化]** をクリックします。 各アクティブ化コードでアクティブ化できるプロジェクトは 1 つだけです。
-
-    ![WhiteSource 特典アクティブ化コード](_img\vs-whitesource\vs-whitesource-activate-code-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![WhiteSource 特典アクティブ化コード](_img\vs-whitesource\vs-whitesource-activate-code-cropped.png)
 
 7.  アクティブ化が完了し、180 日間サブスクリプションに残っています。
 

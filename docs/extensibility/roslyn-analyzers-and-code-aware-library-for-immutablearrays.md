@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad8f58e1d576a738c17095b6306261964e448651
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 82f96af18400aa6a9f659144fb874c32feaf08ed
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637722"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495922"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn アナライザーと ImmutableArrays 用コード認識ライブラリ
 
@@ -307,13 +307,13 @@ private async Task<Document> ChangeToImmutableArrayEmpty(
 
 ## <a name="talk-video-and-finish-code-project"></a>ビデオの説明し、コード プロジェクトの完了
 
-この例で開発された説明を確認できますでさらに[ここ](http://channel9.msdn.com/events/Build/2015/3-725)。  後半は、作業のアナライザーを示し、それをビルドする手順します。
+この例で開発された説明を確認できますでさらに[ここ](https://channel9.msdn.com/events/Build/2015/3-725)。  後半は、作業のアナライザーを示し、それをビルドする手順します。
 
 完成したすべてのコードを確認できます[ここ](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)します。  サブ フォルダー *DoNotUseImmutableArrayCollectionInitializer*と*DoNotUseImmutableArrayCtor*問題を検出する (C#) ファイルがある各とコードを実装する c# ファイルでその表示を修正しますVisual Studio 電球 UI。  ただし、完成したコードが、ImmutableArray をフェッチを回避するために少し多くの抽象化\<T > オブジェクトを繰り返し入力します。  入れ子にされた登録済みのアクションを使用して利用可能なコンテキストでの型のオブジェクトの保存をされるたびに、サブ操作 (オブジェクトの作成を分析し、コレクションの初期化を分析) を実行します。
 
 ## <a name="see-also"></a>関連項目
 
-* [\\\Build 2015 トーク](http://channel9.msdn.com/events/Build/2015/3-725)
+* [\\\Build 2015 トーク](https://channel9.msdn.com/events/Build/2015/3-725)
 * [GitHub で完成したコード](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
 * [GitHub、アナライザーの 3 種類にグループ化にいくつかの例](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 * [GitHub の OSS サイトでは、その他のドキュメント](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d90e56eee9c68ff94b18204928ecaeeeb55ae0a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e80409a1837da3e82e375561341f4fb4c3da9c28
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919535"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548246"
 ---
 # <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219: exception 句に例外を発生させないでください
 |||
@@ -32,22 +32,22 @@ ms.locfileid: "31919535"
 |互換性に影響する変更点|なし、あり|
 
 ## <a name="cause"></a>原因
- 例外をスロー、`finally`フィルター、または fault 句。
+ 例外がスローされてから、 `finally`、フィルター処理、または fault 句。
 
 ## <a name="rule-description"></a>規則の説明
- Exception 句で例外が発生した、ときに、デバッグの難易度が大幅に増加します。
+ 例外句で例外が発生した、ときにデバッグの難しさが大幅に増加します。
 
- 例外が発生すると、`finally`または fault 句では、新しい例外非アクティブな例外が存在する場合。 これにより、元のエラーの検出およびデバッグが困難にします。
+ 例外が発生したとき、 `finally` fault 句では、新しい例外の表示と非アクティブな例外が存在する場合またはします。 これにより、元のエラーが検出およびデバッグが困難にします。
 
- 例外が発生すると、フィルター句で、ランタイムはサイレント モードで、例外をキャッチし、フィルターを false に評価されます。 False とフィルターからスローされる例外を評価するフィルターの違いを確認する方法はありません。 検出し、フィルターのロジックでエラーのデバッグが困難になります。
+ フィルター句で例外が発生した、ときに、ランタイムはサイレント モードで例外をキャッチし、フィルターが false に評価をします。 False に例外がスロー フィルターからフィルター評価の間の違いを見分ける方法はありません。 検出およびフィルターのロジックでエラーのデバッグが困難になります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則は、この違反を修正するのには明示的に例外を発生させないから、`finally`フィルター、または fault 句。
+ この規則は、この違反を修正するのには明示的に例外が発生しないから、 `finally`、フィルター処理、または fault 句。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 Exception 句で発生した例外コードの実行に利点をもたらすシナリオはありません。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則の警告を抑制しないでください。 Exception 句で発生した例外コードの実行に利点をもたらすシナリオはありません。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1065: 予期しない場所に例外を発生させません](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
 
 ## <a name="see-also"></a>関連項目

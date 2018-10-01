@@ -9,12 +9,12 @@ description: VSTS と Azure で使用するために Visual Studio サブスク�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: vs subscription
-ms.openlocfilehash: 70d11f83584d776fef9dae7e771bcdeb40a3c477
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 30aa1e918e289a6cfe8f11329d5df7682cd90239
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326307"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289387"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio サブスクライバー向けの ID
 
@@ -43,20 +43,20 @@ Visual Studio サブスクリプションに代替アカウントを追加する
 
 2. **サブスクリプション**に移動します。
 
-
-   ![代替アカウントの追加 - VS でサブスクリプションに移動する](_img/vs-alternate-identity/my-vs-subscriptions.png)
+    > [!div class="mx-imgBorder"]
+    > ![代替アカウントの追加 - VS でサブスクリプションに移動する](_img/vs-alternate-identity/my-vs-subscriptions.png)
 
 3. **[代替アカウントを追加する]** を選択します。
-
-   ![代替アカウントの追加を選択する ](_img/vs-alternate-identity/choose-add-alternate-account.png)
+    > [!div class="mx-imgBorder"]
+    > ![代替アカウントの追加を選択する](_img/vs-alternate-identity/choose-add-alternate-account.png)
 
 4. 職場または学校アカウントを追加します。
-
-   ![職場または学校のアカウントを追加する](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png)
+    > [!div class="mx-imgBorder"]
+    > ![職場または学校アカウントを追加する](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png)
 
 5. 職場または学校のアカウントを使用し、Visual Studio Team Services にサインインします (https://{あなたのアカウント}.visualstudio.com)。
-
-   ![職場または学校アカウントを使用する](_img/vs-alternate-identity/sign-in-with-alternate-account.png)
+    > [!div class="mx-imgBorder"]
+    > ![職場または学校アカウントを使用する](_img/vs-alternate-identity/sign-in-with-alternate-account.png)
 
 代替アカウントが Visual Studio に追加されました。代替アカウントでのサインインを要求するサブスクリプション特典 (IDE、VSTS、Azure) を両方の ID で活用できます。
 

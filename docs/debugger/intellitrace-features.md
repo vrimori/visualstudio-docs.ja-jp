@@ -1,7 +1,7 @@
 ---
 title: IntelliTrace の機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/19/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 608b183333d3561f9db586955142f94a8371c055
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 59ff5fa898aa808c99dd5f52df1605336edd1694
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279533"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542469"
 ---
 # <a name="intellitrace-features"></a>IntelliTrace の機能
 
@@ -42,21 +42,21 @@ IntelliTrace がオンになっていることを確認するを開き、**ツ�
 > [!NOTE]
 > すべての設定のスコープ、 **IntelliTrace**オプション ページでは、Visual Studio を全体、個々 のプロジェクトまたはソリューションとして。 これらの設定に加えた変更は、Visual Studio のすべてのインスタンス、すべてのデバッグ セッション、あるいはすべてのプロジェクトまたはソリューションに適用されます。
 
-## <a name="ChooseEvents"></a> IntelliTrace で記録するイベントを選択します。
+## <a name="ChooseEvents"></a> イベントを IntelliTrace で記録する (マネージ コードのみ) を選択します。
 
 特定の IntelliTrace イベントの記録はオンまたはオフにすることができます。
 
 デバッグ中の場合、デバッグを停止します。 移動して**ツール > オプション > IntelliTrace > IntelliTrace イベント**します。 IntelliTrace で記録するイベントを選択します。
 
-## <a name="Snapshots"></a> イベントとスナップショットを収集します。
+## <a name="Snapshots"></a> スナップショットを収集します。
 
-これが既定で有効になっていて、IntelliTrace は、すべてのブレークポイントとデバッガー ステップ イベントでのアプリケーションのスナップショットをキャプチャできます履歴デバッグ セッションでこれらのスナップショットを表示することができます。 スナップショットは、完全なアプリケーション状態のビューを提供します。 スナップショットのキャプチャを有効にするには**ツール > オプション > IntelliTrace > 全般**、選択および**IntelliTrace イベントとスナップショット**します。 詳細については、次を参照してください[IntelliTrace ステップ バックを使用してスナップショットを表示。](../debugger/how-to-use-intellitrace-step-back.md)
+これが既定で有効になっていて、IntelliTrace は、すべてのブレークポイントとデバッガー ステップ イベントでのアプリケーションのスナップショットをキャプチャできます履歴デバッグ セッションでこれらのスナップショットを表示することができます。 スナップショットは、完全なアプリケーション状態のビューを提供します。 スナップショットのキャプチャを有効にするには**ツール > オプション > IntelliTrace > 全般**、選択および**IntelliTrace スナップショット (マネージとネイティブ)** します。 詳細については、次を参照してください[IntelliTrace を使用して前のアプリ状態を調べる。](../debugger/view-historical-application-state.md)
 
-スナップショットは、Visual Studio Enterprise 2017 バージョン 15.5 以降で使用できると、Windows 10 Anniversary Update が必要がありますまたはそれ以降。  .NET Core と ASP.NET Core アプリでは、Visual Studio Enterprise 2017 バージョン 15.7 preview 1 が必要です。
+スナップショットは、Visual Studio Enterprise 2017 バージョン 15.5 以降で使用できると、Windows 10 Anniversary Update が必要がありますまたはそれ以降。  .NET Core と ASP.NET Core アプリでは、Visual Studio Enterprise 2017 バージョン 15.7 が必要です。 Windows、Visual Studio Enterprise 2017 のバージョン 15.9 を対象とするネイティブ アプリのプレビュー 2 が必要です。
 
-## <a name="GoingFurther"></a> IntelliTrace イベントの収集し、呼び出し情報
+## <a name="GoingFurther"></a> IntelliTrace イベントの収集し、呼び出し情報 (マネージ コードのみ)
 
-既定では、これを有効になっていないが、IntelliTrace イベントと共にメソッドの呼び出しを記録できます。 呼び出しメソッドのコレクションを有効にする**ツール > オプション > IntelliTrace > 全般**を選択し、 **IntelliTrace イベントと呼び出し情報**します。
+既定では、これを有効になっていないが、IntelliTrace イベントと共にメソッドの呼び出しを記録できます。 呼び出しメソッドのコレクションを有効にする**ツール > オプション > IntelliTrace > 全般**を選択し、 **IntelliTrace イベントと呼び出し情報 (マネージのみ)** します。
 
 呼び出し情報は、.NET Core と ASP.NET Core アプリを現在ご利用いただけません。 
 

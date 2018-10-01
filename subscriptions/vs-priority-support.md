@@ -9,18 +9,18 @@ description: Visual Studio サブスクリプションに含まれる優先サ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 286223c52a05e9dae709d7a07bde84f8e3c4d6b3
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 73665a2d423d5284f616354ccd341a8b5ce476f3
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567156"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289390"
 ---
 # <a name="priority-support-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの優先サポート
 
 優先サポート特典は、さまざまなサポート コミュニティ フォーラムへのアクセスを提供します。ここで既存の投稿を検索したり、新しく質問したりすることができます。  質問に対して 2 日以内にコミュニティから回答がない場合、マイクロソフトのサポート チームが回答します。
 
-選択した Visual Studio サブスクリプションのサブスクライバーは、さまざまなトピックをカバーする多数のフォーラムを通じて、優先サポートを受けることができます。
+選択した Visual Studio サブスクリプションのサブスクライバーは、さまざまなトピックをカバーする多数のフォーラムを通じて、優先サポートを受けることができます。  フォーラムに直接移動するには、以下のリンクのいずれかをクリックします。  
 
 ## <a name="included-forums"></a>含まれるフォーラム
 

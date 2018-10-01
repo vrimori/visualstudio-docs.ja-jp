@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9349321319b8bab81a2d9e7b52e7f2d25e87f796
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6d1b0bac434ad7a182dc56ac08173646068623bd
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900062"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547550"
 ---
 # <a name="ca1030-use-events-where-appropriate"></a>CA1030: 適切な場所にイベントを使用します
 |||
@@ -34,21 +34,21 @@ ms.locfileid: "31900062"
 ## <a name="cause"></a>原因
  パブリック、プロテクト、またはプライベート メソッドの名前は、次のいずれかで始まります。
 
--   アドオン
+- アドオン
 
--   RemoveOn
+- RemoveOn
 
--   Fire
+- 起動
 
--   発生させる
+- 発生させる
 
 ## <a name="rule-description"></a>規則の説明
- この規則では、通常はイベントに使用される名前を持つメソッドを検出します。 イベント、オブザーバーまたは発行/サブスクライブ デザイン パターンに従います。その他のオブジェクトに 1 つのオブジェクトの状態の変更を伝達する必要があるときに使用します。 明確に定義された状態の変化への応答で、メソッドによって呼び出された場合は、イベント ハンドラーがメソッドを呼び出す必要があります。 メソッドを呼び出すオブジェクトは、メソッドを直接呼び出すのではなく、イベントを発生させる必要があります。
+ この規則では、通常はイベントに使用される名前を持つメソッドを検出します。 イベントがオブザーバーまたは公開/定期受信デザイン パターンに従ってください。1 つのオブジェクトの状態の変更は、その他のオブジェクトに伝達する必要があるときに使用されます。 明確に定義された状態の変更に応答するメソッドの呼び出しの場合、イベント ハンドラーで、メソッドを呼び出します。 メソッドを呼び出すオブジェクトは、メソッドを直接呼び出すのではなく、イベントを発生させる必要があります。
 
- イベントの一般的な例は、ボタンのクリックしてなど、ユーザーの操作を実行するコードのセグメントによって、ユーザー インターフェイス アプリケーションが見つかりません。 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデルはユーザー インターフェイスに限定されません以外の場合は、使用する任意の場所が 1 つまたは複数のオブジェクトの変更の状態を伝える必要があります。
+ イベントの一般的な例は、ボタンのクリックしてなどのユーザー アクションを実行するコードのセグメントによって、ユーザー インターフェイス アプリケーションで表示されます。 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデルはユーザー インターフェイスに限定されません。 使用する任意の場所が 1 つまたは複数のオブジェクトの変更の状態を通信する必要があります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- メソッドが呼び出された場合、オブジェクトの状態が変更されたときに、使用する設計の変更を検討する必要があります、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデル。
+ オブジェクトの状態が変更されたときに、メソッドを呼び出す場合は、使用するデザインを変更するを検討してください、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデル。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- メソッドが使用できない場合は、この規則による警告を抑制する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデル。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告を抑制するでは、メソッドが機能しない場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]イベント モデル。

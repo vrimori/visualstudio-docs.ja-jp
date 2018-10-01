@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f5e36fef8745e4068a8dd4ad9281a69aa653ed73
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 263870511715757c8771b0b596e443d82be91525
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31917157"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549891"
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: 識別子は、正しいサフィックスを含んでいなければなりません
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectSuffix|
@@ -32,14 +33,16 @@ ms.locfileid: "31917157"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 識別子には、正しいサフィックスはありません。
+
+識別子には、正しいサフィックスはありません。
 
 ## <a name="rule-description"></a>規則の説明
- 慣例により、特定の基本型を拡張するか、特定のインターフェイス、またはこれらの型から派生した型を実装する型の名前には、基本データ型またはインターフェイスに関連付けられているサフィックスを持ちます。
 
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
+慣例により、特定の基本型を拡張するか、特定のインターフェイス、またはこれらの型から派生した型を実装する型の名前には、基本データ型またはインターフェイスに関連付けられているサフィックスを持ちます。
 
- 次の表には、基本型とサフィックスが関連付けられているインターフェイスが一覧表示します。
+名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージド コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
+
+次の表は、基本型とサフィックスが関連付けられているインターフェイスを示します。
 
 |基本型/インターフェイス|サフィックス|
 |--------------------------|------------|
@@ -54,42 +57,47 @@ ms.locfileid: "31917157"
 |<xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>|コレクション|
 |<xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|Dictionary|
 |<xref:System.Data.DataSet?displayProperty=fullName>|データセット|
-|<xref:System.Data.DataTable?displayProperty=fullName>|コレクションまたはデータ テーブル|
+|<xref:System.Data.DataTable?displayProperty=fullName>|コレクションまたは DataTable|
 |<xref:System.IO.Stream?displayProperty=fullName>|ストリーム|
 |<xref:System.Security.IPermission?displayProperty=fullName>|アクセス許可|
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|条件|
 |イベント ハンドラーのデリゲート。|EventHandler|
 
- 型を実装する<xref:System.Collections.ICollection>はディクショナリ、スタック、またはキューを使用できる型の使用目的に関する有益情報を提供する名などがあります、データ構造の一般的な型とします。
+実装する型<xref:System.Collections.ICollection>ディクショナリ、スタック、またはキューが使用できる型の使用目的について意味のある情報を提供する名などがあります、データ構造の一般的な型とします。
 
- 型を実装する<xref:System.Collections.ICollection>は特定のアイテムのコレクションが 'Collection' の単語で終わる名前を持つとします。 たとえば、一連の<xref:System.Collections.Queue>'QueueCollection' という名前のオブジェクトが必要があります。 'Collection' サフィックスを使用して、コレクションのメンバーを列挙できることを示します、 `foreach` (`For Each`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ステートメントです。
+実装する型<xref:System.Collections.ICollection>は特定の項目のコレクションが 'Collection' で終わる名前があるとします。 たとえばのコレクション<xref:System.Collections.Queue>オブジェクト名 'QueueCollection' になります。 'Collection' サフィックスを使用して、コレクションのメンバーを列挙できることを示します、 `foreach` (`For Each`で[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) ステートメント。
 
- 型を実装する<xref:System.Collections.IDictionary>も実装している場合でも、単語"ディクショナリ"で終わる名前を持つ<xref:System.Collections.IEnumerable>または<xref:System.Collections.ICollection>です。 'Collection' および 'ディクショナリ' サフィックスの名前付け規則には、次の 2 つの列挙パターンを区別するためにユーザーが有効にします。
+実装する型<xref:System.Collections.IDictionary>型も実装している場合でも、「ディクショナリ」で終わる名前を持つ<xref:System.Collections.IEnumerable>または<xref:System.Collections.ICollection>します。 'Collection' および 'ディクショナリ' サフィックス名前付け規則は、次の 2 つの列挙型パターンを区別するユーザーを有効にします。
 
- 'Collection' サフィックス付きの型では、この列挙パターンに従います。
+'Collection' サフィックスを持つ型では、この列挙型パターンに従います。
 
 ```
 foreach(SomeType x in SomeCollection) { }
 ```
 
- 'ディクショナリ' サフィックスを持つ型では、この列挙パターンに従います。
+'ディクショナリ' サフィックスを持つ型では、この列挙型パターンに従います。
 
 ```
 foreach(SomeType x in SomeDictionary.Values) { }
 ```
 
- A<xref:System.Data.DataSet>オブジェクトのコレクションから成る<xref:System.Data.DataTable>のコレクションで構成されたオブジェクト<xref:System.Data.DataColumn?displayProperty=fullName>と<xref:System.Data.DataRow?displayProperty=fullName>の他のオブジェクト。 これらのコレクションを実装<xref:System.Collections.ICollection>ベースを通じて<xref:System.Data.InternalDataCollectionBase?displayProperty=fullName>クラスです。
+A<xref:System.Data.DataSet>オブジェクトのコレクションから成る<xref:System.Data.DataTable>、オブジェクトのコレクションで構成される<xref:System.Data.DataColumn?displayProperty=fullName>と<xref:System.Data.DataRow?displayProperty=fullName>他のユーザーの間でのオブジェクト。 これらのコレクションを実装<xref:System.Collections.ICollection>ベースを通じて<xref:System.Data.InternalDataCollectionBase?displayProperty=fullName>クラス。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- 型の名前を変更して、正しいサフィックスを付けるようにします。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 型が拡張される可能性がある場合や、さまざまな項目の任意のセットを保持する、汎用的なデータ構造体の場合は、'Collection' サフィックスを使用する警告を抑制しても安全です。 この場合、実装、パフォーマンス、またはデータ構造の他の特性に関する有益情報を提供する名必要があります (たとえば、BinaryTree)。 型が、特定の種類 (たとえば、StringCollection) のコレクションを表す場合、サフィックスを使用して型を列挙することが示されているためこの規則による警告は抑制しないでください、`foreach`ステートメントです。
+型の名前を変更して、正しい用語が付くようにします。
 
- 他のサフィックスをこの規則による警告は抑制しないでください。 サフィックスにより、型名から明らかに目的の使用方法です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 
-## <a name="related-rules"></a>関連規則
- [CA1711: 識別子は、不適切なサフィックスを含むことはできません](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
+型が拡張される可能性がある場合や、さまざまな項目の任意のセットを保持する、汎用的なデータ構造の場合は、'Collection' サフィックスを使用する警告を抑制しても安全です。 ここでは、名前、実装、パフォーマンス、またはデータ構造体の他の特性に関する有益情報を提供する必要があります (たとえば、BinaryTree)。 型が、特定の種類 (たとえば、StringCollection) のコレクションを表す場合、サフィックスを使用して、型を列挙できることを示しているためこの規則による警告を抑制しないで、`foreach`ステートメント。
+
+他のサフィックスの場合は、この規則による警告を抑制しないでください。 サフィックスは、型名から明らかにする目的の使用を許可します。
+
+## <a name="related-rules"></a>関連するルール
+
+[CA1711: 識別子は、不適切なサフィックスを含むことはできません](../code-quality/ca1711-identifiers-should-not-have-incorrect-suffix.md)
 
 ## <a name="see-also"></a>関連項目
- [属性](/dotnet/standard/design-guidelines/attributes)[処理とイベントを発生させる](/dotnet/standard/events/index)
+
+- [属性](/dotnet/standard/design-guidelines/attributes)
+- [処理とイベントの発生](/dotnet/standard/events/index)

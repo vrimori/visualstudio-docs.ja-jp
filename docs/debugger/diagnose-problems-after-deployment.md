@@ -10,14 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 886ad4b022f69034bae0e6188274676522488d8b
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: cd3313957ae1cccbd3f56b1fafacfed58570531f
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320736"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542508"
 ---
-# <a name="diagnose-problems-after-deployment"></a>配置後の問題の診断
+# <a name="diagnose-problems-after-deployment-using-intellitrace"></a>IntelliTrace を使用したデプロイ後に問題を診断します。
 
 IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診断するには、リリースについてのビルド情報を含めます。こうすることで、Visual Studio が、IntelliTrace ログをデバッグするために必要な正しいソース ファイルとシンボル ファイルを自動的に検索できるようになります。
 
@@ -27,48 +27,27 @@ IntelliTrace を使用して、ASP.NET Web アプリの配置後に問題を診�
 
  **必要があります。**
 
--   Visual Studio 2017、Visual Studio 2015 または Team Foundation Server 2017、2015、2013、2012、または 2010 をビルドを設定します。
+-   Visual Studio、Azure DevOps、または Team Foundation Server 2017、2015、2013、2012、または 2010 をビルドを設定します。
 
 -   アプリを監視して診断データを記録するための Microsoft Monitoring Agent
 
 -   診断データを確認して IntelliTrace でコードをデバッグするための Visual Studio Enterprise (ただし、Professional および Community Edition を除く)
 
 ##  <a name="SetUpBuild"></a> 手順 1: 含めるビルドをリリース情報
- ビルド プロセスを設定して Web プロジェクトのビルド マニフェスト (BuildInfo.config ファイル) を作成し、このマニフェストをリリースに含めます。 このマニフェストには、特定のビルドを作成するために使用されたプロジェクト、ソース管理、およびビルド システムに関する情報が含まれます。 この情報は、IntelliTrace ログを開いて記録されたイベントを確認した後に、Visual Studio が対応するソースとシンボルを見つけるのに役立ちます。
+ ビルド マニフェストを作成するビルド プロセスを設定 (*BuildInfo.config*ファイル)、web プロジェクトし、リリースでは、このマニフェストが含まれます。 このマニフェストには、特定のビルドを作成するために使用されたプロジェクト、ソース管理、およびビルド システムに関する情報が含まれます。 この情報は、IntelliTrace ログを開いて記録されたイベントを確認した後に、Visual Studio が対応するソースとシンボルを見つけるのに役立ちます。
 
 ###  <a name="AutomatedBuild"></a> Team Foundation Server を使用して自動化されたビルドのビルド マニフェストを作成します。
 
  Team Foundation バージョン管理と Git のいずれを使用するにしても、これらの手順に従います。
 
- ####  <a name="TFS2017"></a> Team Foundation Server 2017
+####  <a name="TFS2017"></a> Azure DevOps と Team Foundation Server 2017
 
- ビルド マニフェスト (BuildInfo.config ファイル) に、ソース、ビルド、およびシンボルの場所を追加、ビルド パイプラインを設定します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。
+Visual Studio 2017 には含まれません、 *BuildInfo.config*ファイルでは、非推奨し、し、削除されました。 デプロイ後に ASP.NET web アプリをデバッグするには、次のメソッドのいずれかを使用します。
 
-1.  いずれかのことが既に ASP.NET Core (.NET Framework) テンプレートを使用してビルド パイプラインが場合、[ビルド パイプラインを編集するか、新しいビルド パイプラインを作成します。](/azure/devops/pipelines/get-started-designer?view=vsts)
+* Azure にデプロイする場合は、使用[Application Insights](https://docs.microsoft.com/en-us/azure/application-insights/)します。
 
-     ![TFS 2017 でのパイプラインをビルドする表示](../debugger/media/ffr_tfs2017viewbuilddefinition.png "FFR_TFS2013ViewBuildDefinition")
+* IntelliTrace を使用する必要がある場合は、Visual Studio でプロジェクトを開くし、一致するビルドからシンボル ファイルを読み込みます。 シンボル ファイルを読み込むことができます、**モジュール**ウィンドウ内のシンボルを構成することで、または**ツール** > **オプション** > **デバッグ**  > **シンボル**します。
 
-2.  新しいテンプレートを作成する場合は、ASP.NET Core (.NET Framework) テンプレートを選択します。
-
-     ![ビルド プロセス テンプレートの選択&#45;TFS 2017](../debugger/media/ffr_tfs2017buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")
-
-3.  ソースのインデックスが自動的に作成されるように、シンボル (PDB) ファイルの保存場所を指定します。
-
-     カスタム テンプレートを使用する場合は、ソースにインデックスを付けるアクティビティがカスタム テンプレートに含まれていることを確認します。 後の手順で、MSBuild 引数を追加して、シンボル ファイルの保存場所を指定できます。
-
-     ![ビルド パイプライン TFS 2017 でのシンボル パスを設定](../debugger/media/ffr_tfs2017builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")
-
-     詳細については、シンボルは、次を参照してください。[シンボル データを発行](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols?view=vsts)します。
-
-4.  この MSBuild 引数を追加して、TFS とシンボルの場所をビルド マニフェスト ファイルに含めます。
-
-     **/p:IncludeServerNameInBuildInfo = true**
-
-     Web サーバーにアクセスできるすべてのユーザーが、ビルド マニフェスト内のこれらの場所を確認できます。 ソース サーバーがセキュリティで保護されていることを確認してください。
-
-6.  新しいビルドを実行します。
-
-    移動して[手順 2: アプリのリリース](#DeployRelease)
 
 ####  <a name="TFS2013"></a> Team Foundation Server 2013
  ビルド マニフェスト (BuildInfo.config ファイル) に、ソース、ビルド、およびシンボルの場所を追加、ビルド パイプラインを設定します。 Team Foundation ビルドは自動的にこのファイルを作成し、そのファイルをプロジェクトの出力フォルダーに配置します。

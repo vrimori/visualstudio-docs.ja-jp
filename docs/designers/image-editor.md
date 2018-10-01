@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc8582981fc75dd0ce9c0bcb09cc7f865b0e9d43
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 4ed7c1ec10b6cc6b2eac450ea33beceaaf58bc06
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42627184"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029122"
 ---
 # <a name="image-editor"></a>イメージ エディター
 
@@ -53,8 +53,6 @@ ms.locfileid: "42627184"
    > **[新しい項目の追加]** ダイアログに**グラフィックス** カテゴリが表示されない場合は、**イメージ エディターと 3D モデル エディター** コンポーネントのインストールが必要になることがあります。 ダイアログを閉じ、メニュー バーから **[ツール]** > **[ツールと機能を取得]** を選択して、**Visual Studio インストーラー**を開きます。 **[個別のコンポーネント]** タブを選択します。次に、**[ゲームおよびグラフィックス]** カテゴリで **[イメージ エディターと 3D モデル エディター]** コンポーネントを選択します。 **[変更]** を選択します。
    >
    > ![イメージ エディターと 3D モデル エディター コンポーネント](media/image-3d-model-editors-component.png)
-   >
-   > **イメージ エディターと 3D モデル エディター** コンポーネントがインストールされていても、**グラフィックス** テンプレート カテゴリがまだ表示されない場合は、特定のプロジェクトの種類 (コンソール アプリケーションなど) に対してのみ、このカテゴリが表示されることに注意してください。
 
    要件に基づいてファイル形式を選択する方法については、「[イメージ形式を選択する](#choose-the-image-format)」を参照してください。
 

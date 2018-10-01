@@ -15,16 +15,20 @@ ms.assetid: 83639bc4-4c91-4a07-a40e-dc5e49a84494
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c695c9f6e8af0e61bed88fd5a880e5655ecb7d6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6ef5b2f3b7244762e69d87882cbf2caae63cb34b
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919004"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547881"
 ---
 # <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: 正しい引数を書式指定メソッドに指定します
+
 |||
 |-|-|
 |TypeName|ProvideCorrectArgumentsToFormattingMethods|
@@ -33,15 +37,15 @@ ms.locfileid: "31919004"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- `format`などのメソッドに渡される引数を文字列<xref:System.Console.WriteLine%2A>、 <xref:System.Console.Write%2A>、または<xref:System.String.Format%2A?displayProperty=fullName>に各オブジェクトの引数、またはその逆を対応する書式指定項目が含まれていません。
+ `format`などのメソッドに渡される引数を文字列<xref:System.Console.WriteLine%2A>、 <xref:System.Console.Write%2A>、または<xref:System.String.Format%2A?displayProperty=fullName>に各オブジェクトの引数、またはその逆に対応する書式指定項目が含まれていません。
 
 ## <a name="rule-description"></a>規則の説明
- などのメソッドの引数<xref:System.Console.WriteLine%2A>、 <xref:System.Console.Write%2A>、および<xref:System.String.Format%2A>の後にいくつかの書式指定文字列で構成されている<xref:System.Object?displayProperty=fullName>インスタンス。 書式指定文字列はテキストと、フォームの埋め込みの書式指定項目 {インデックス [, アラインメント] [: formatString]} です。 'index' を指定する書式設定対象オブジェクトの 0 から始まる整数です。 オブジェクトには、書式文字列に対応するインデックスがない、オブジェクトは無視されます。 'Index' で指定されたオブジェクトが存在しない場合、<xref:System.FormatException?displayProperty=fullName>が実行時にスローされます。
+ などのメソッドに引数<xref:System.Console.WriteLine%2A>、 <xref:System.Console.Write%2A>、および<xref:System.String.Format%2A>続くいくつかの書式指定文字列から成る<xref:System.Object?displayProperty=fullName>インスタンス。 テキストと、フォームの埋め込みの書式項目の書式指定文字列で構成されます {インデックス [, の配置] [: formatString]} です。 'インデックス' は、書式設定するオブジェクトの中を示す 0 から始まる整数です。 オブジェクトには、書式指定文字列に対応するインデックスがない、オブジェクトは無視されます。 'インデックス' で指定したオブジェクトが存在しない場合、<xref:System.FormatException?displayProperty=fullName>が実行時にスローされます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、各オブジェクトの引数の書式項目を指定および各書式項目のオブジェクトの引数を提供します。
+ この規則の違反を修正するには、書式指定項目は、各オブジェクトの引数と各書式項目のオブジェクトの引数を提供します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。
 
 ## <a name="example"></a>例

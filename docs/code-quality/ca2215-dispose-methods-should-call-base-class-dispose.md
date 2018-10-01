@@ -17,14 +17,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ce7e5de528e8b0c0a6f128fa9f7d68c1b9f385c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 11359e021d5c297c0782bf95fe35997b0a1b5be5
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919805"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548414"
 ---
 # <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Dispose メソッドから基本クラスの破棄を呼び出します
+
 |||
 |-|-|
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|
@@ -33,26 +34,28 @@ ms.locfileid: "31919805"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型から継承<xref:System.IDisposable>です。 <xref:System.IDisposable.Dispose%2A>継承する型のメソッドは呼び出しません、<xref:System.IDisposable.Dispose%2A>親の型のメソッドです。
+ 実装する型<xref:System.IDisposable?displayProperty=fullName>も実装する型から継承<xref:System.IDisposable>します。 <xref:System.IDisposable.Dispose%2A>継承する型のメソッドは呼び出しません、<xref:System.IDisposable.Dispose%2A>親の型のメソッド。
 
 ## <a name="rule-description"></a>規則の説明
- 呼び出す必要がありますが、型は、破棄可能な型から継承している場合、<xref:System.IDisposable.Dispose%2A>独自内から基本型のメソッド<xref:System.IDisposable.Dispose%2A>メソッドです。 Dispose 基本データ型メソッドを呼び出すと、基本型で作成されたすべてのリソースが解放されるようにします。
+ 呼び出す必要がありますが、型は、破棄可能な型から継承している場合、<xref:System.IDisposable.Dispose%2A>独自内から基本データ型のメソッド<xref:System.IDisposable.Dispose%2A>メソッド。 基本データ型メソッドを呼び出す Dispose は、基本型で作成されたすべてのリソースを解放することにより、します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、呼び出す`base`です。<xref:System.IDisposable.Dispose%2A> <xref:System.IDisposable.Dispose%2A>メソッドです。
+ このルールの違反を修正するには、呼び出す`base`します。<xref:System.IDisposable.Dispose%2A> <xref:System.IDisposable.Dispose%2A>メソッド。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 場合、この規則による警告を抑制するのには安全では、呼び出し`base`です。<xref:System.IDisposable.Dispose%2A> ルール チェックよりも深い呼び出しレベルで発生します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 場合、この規則による警告を抑制するのには安全では、呼び出し`base`します。<xref:System.IDisposable.Dispose%2A> ルール チェックよりも深い呼び出しレベルで発生します。
 
 ## <a name="example"></a>例
- 次の例は、型を示しています。`TypeA`を実装する<xref:System.IDisposable>です。
+ 次の例は、型`TypeA`を実装する<xref:System.IDisposable>します。
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2215-dispose-methods-should-call-base-class-dispose_1.cs)]
 
 ## <a name="example"></a>例
- 次の例は、型を示しています。`TypeB`型から継承する`TypeA`正常に呼び出し、およびその<xref:System.IDisposable.Dispose%2A>メソッドです。
+ 次の例は、型`TypeB`型から継承する`TypeA`正常に呼び出し、およびその<xref:System.IDisposable.Dispose%2A>メソッド。
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../code-quality/codesnippet/VisualBasic/ca2215-dispose-methods-should-call-base-class-dispose_2.vb)]
 
 ## <a name="see-also"></a>関連項目
- <xref:System.IDisposable?displayProperty=fullName> [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
+
+- <xref:System.IDisposable?displayProperty=fullName>
+- [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)

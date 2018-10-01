@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66e3d513188093a29aa9f7bb1c9f83b9c70e54d3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: dc6d8b78ff1b00d1c5e5a6c6a597855243ea12fb
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915314"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550726"
 ---
 # <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713: イベントは、before または after プレフィックスを含むことはできません
 |||
@@ -32,15 +32,15 @@ ms.locfileid: "31915314"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- イベントの名前は、'Before' や 'After' を開始します。
+ イベントの名前は、'Before' または 'After' で開始します。
 
 ## <a name="rule-description"></a>規則の説明
- イベント名は、イベントを発生させるアクションを記述する必要があります。 特定のシーケンスで発生する関連イベントに名前を付ける場合、現在時制または過去時制を使用して、アクション シーケンスの相対的な位置を示します。 たとえば、リソースを終了するときに発生するイベントのペアの名前に、ときに可能性がありますの名前を付ける '終了' および 'BeforeClose' および 'AfterClose' の代わりに ' Closed'、します。
+ イベント名は、イベントを発生させるアクションを示す必要があります。 特定のシーケンスで発生する関連イベントに名前を付ける場合、現在時制または過去時制を使用して、アクション シーケンスの相対的な位置を示します。 たとえば、リソースを閉じるときに発生するイベントのペアの名前付け、ときに名前を付けますが '終了' と 'BeforeClose' および 'AfterClose' ではなく ' Closed'。
 
- 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージ コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
+ 名前付け規則では、共通言語ランタイムをターゲットとするライブラリの統一的な名前の付け方が規定されています。 これにより、新しいソフトウェア ライブラリを習得するまでの時間を短縮でき、マネージド コード開発の専門家によってライブラリが開発されたという信頼を顧客に与えることができます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- イベント名のプレフィックスを削除して、現在時制または過去時制動詞に使用する名前の変更を検討してください。
+ イベントの名前から、プレフィックスを削除して、現在または過去時制の動詞を使用する名前の変更を検討してください。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1174fa0533519b551e237c685f0a6fe67661752a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 16b50ed49659891ae469f346afbf8a677bb059dc
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31915337"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546890"
 ---
 # <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: パラメーター名はメンバー名と同一にすることはできません
 |||
@@ -32,7 +32,7 @@ ms.locfileid: "31915337"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- 外部から参照できるメンバーの名前は、大文字と小文字は、そのパラメーターのいずれかの名前と一致します。
+ 外部から参照できるメンバーの名前は、大文字と小文字をそのパラメーターの 1 つの名前と一致します。
 
 ## <a name="rule-description"></a>規則の説明
  パラメーターはパラメーターの意味、メンバーはメンバーの意味を伝える名前にします。 この 2 つの名前が一致するデザインは、まれにしか見られません。 パラメーターにメンバーと同じ名前を付けるとわかりづらくなり、ライブラリの操作が難しくなります。
@@ -40,10 +40,10 @@ ms.locfileid: "31915337"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  メンバー名に一致しないパラメーター名を選択します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 新しい開発では、されていないシナリオでは、この規則による警告を抑制する必要がありますが発生します。 ライブラリを配布するには、この規則による警告を抑制する必要があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 新たに開発されていないシナリオが発生する、この規則による警告を抑制する必要があります。 ライブラリを配布するには、この規則による警告を抑制する必要があります。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1709: 識別子では、大文字と小文字が正しく区別されなければなりません](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
  [CA1708: 識別子は、大文字と小文字の区別以外にも相違していなければなりません](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

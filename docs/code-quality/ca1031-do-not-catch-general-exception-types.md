@@ -14,16 +14,21 @@ ms.assetid: cbc283ae-2a46-4ec0-940e-85aa189b118f
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cbc03edf93c6b4977fe62d72a4df0d60dff035d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 16b43aa25ef4e2d81b2d6f72e7e1c2bfa3e8b6f7
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900381"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551633"
 ---
 # <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: 一般的な例外の種類はキャッチしません
+
 |||
 |-|-|
 |TypeName|DoNotCatchGeneralExceptionTypes|
@@ -32,19 +37,19 @@ ms.locfileid: "31900381"
 |互換性に影響する変更点|なし|
 
 ## <a name="cause"></a>原因
- など、一般的な例外<xref:System.Exception?displayProperty=fullName>または<xref:System.SystemException?displayProperty=fullName>でキャッチされましたが、`catch`ステートメント、またはなどの一般的な catch 句`catch()`を使用します。
+ などの一般的な例外<xref:System.Exception?displayProperty=fullName>または<xref:System.SystemException?displayProperty=fullName>でキャッチされます、`catch`ステートメント、またはなどの一般的な catch 句`catch()`使用されます。
 
 ## <a name="rule-description"></a>規則の説明
  汎用的な例外はキャッチしないでください。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、例外をキャッチする具体的なまたは最後のステートメントで、汎用的な例外を再スロー、`catch`ブロックします。
+ このルールの違反を修正するより具体的な例外をキャッチまたは最後のステートメントとして一般的な例外を再スロー、`catch`ブロックします。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- この規則による警告は抑制しないでください。 一般的な例外の種類をキャッチして、ライブラリ ユーザーから、実行時の問題を隠すことができる、デバッグが困難なです。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ この規則による警告は抑制しないでください。 一般的な例外の種類をキャッチして、ライブラリ ユーザーから、実行時の問題を非表示にすることができます、指定するとデバッグはより難しくなります。
 
 > [!NOTE]
->  以降で、 [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)]、共通言語ランタイム (CLR) は、オペレーティング システムとのアクセス違反などのマネージ コードで発生する破損状態例外を不要になった配信[!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)]、マネージ コードで処理されることです。 アプリケーションをコンパイルする場合、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョン管理と破損状態例外の処理、割り当てることができます、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>属性を破損状態例外を処理するメソッドをします。
+> 以降では、 [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)]、共通言語ランタイム (CLR) は、オペレーティング システムとでアクセス違反などのマネージ コードで発生する破損状態例外を提供できなく[!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)]、マネージ コードで処理されます。 アプリケーションをコンパイルする場合、[!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)]以降のバージョンの管理と適用できる破損状態例外の処理、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>属性を破損状態例外を処理するメソッド。
 
 ## <a name="example"></a>例
  次の例は、この規則に違反する型と正しく実装する型、`catch`ブロックします。
@@ -53,5 +58,5 @@ ms.locfileid: "31900381"
  [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)]
  [!code-csharp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CSharp/ca1031-do-not-catch-general-exception-types_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA2200: スタック詳細を保持するために再度スローします](../code-quality/ca2200-rethrow-to-preserve-stack-details.md)

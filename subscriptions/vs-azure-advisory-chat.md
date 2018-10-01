@@ -9,12 +9,12 @@ description: Visual Studio に含まれる Azure Advisory Chat 特典を活用�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 983f253ea468be58cd9a7f24577b14342f05059e
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: ed884066f53708f01bdedaa5b21f80d7e1e1da31
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280804"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43289454"
 ---
 # <a name="azure-advisory-chat"></a>Azure Advisory Chat
 
@@ -25,16 +25,16 @@ Azure を開始するためのヘルプがリアルタイムで得られます�
 Azure Advisory Chat の使用は簡単です。
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) にサインインします。
 2. [サポート] セクションで、Azure Advisory Chat タイルを見つけ、**[今すぐチャットを開始]** をクリックします。
-
-    ![Azure Advisory Chat タイル](_img/vs-azure-advisory/vs-azure-advisory-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure Advisory Chat タイル](_img/vs-azure-advisory/vs-azure-advisory-tile.png)
 
 3. アカウント、請求、およびサブスクリプションの問題に対するサポートを除き、現在、サービスが英語でのみ提供されていることを示す通知が表示されます。  **[続行]** をクリックします。
-
-    ![Azure Advisory Chat の免責事項](_img/vs-azure-advisory/vs-azure-advisory-disclaimer.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure Advisory Chat の免責事項](_img/vs-azure-advisory/vs-azure-advisory-disclaimer.png)
 
 4. これで完成です。  チャット ウィンドウが開き、キュー内のどこにいるかを知らせるステータスが表示されます。  次に対応可能なエキスパートがチャットに応答します。
-
-    ![Azure Advisory Chat](_img/vs-azure-advisory/vs-azure-advisory-chat.png)
+    > [!div class="mx-imgBorder"]
+    > ![Azure Advisory Chat](_img/vs-azure-advisory/vs-azure-advisory-chat.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 

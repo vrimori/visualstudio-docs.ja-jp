@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dac870bde757d77e1d0025a1b387f54ca928a5f1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 67f0d5152dcdef5ffa3abb76d92e68fd99f9b637
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31900856"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550415"
 ---
 # <a name="ca1307-specify-stringcomparison"></a>CA1307: StringComparison の指定
+
 |||
 |-|-|
 |TypeName|SpecifyStringComparison|
@@ -37,13 +38,15 @@ ms.locfileid: "31900856"
 ## <a name="rule-description"></a>規則の説明
  多くの文字列操作、最も重要な<xref:System.String.Compare%2A>と<xref:System.String.Equals%2A>メソッドを受け入れるオーバー ロードを提供する、<xref:System.StringComparison>列挙値をパラメーターとして。
 
- オーバー ロードするたびに行うためにかかるが存在する場合、<xref:System.StringComparison>パラメーターをこのパラメーターを受け取らないオーバー ロードの代わりに使用する必要があります。 このパラメーターを明示的に設定するには、コードは、多くの場合、わかりやすくなり、保守が簡単にします。
+ オーバー ロードされるたびに行うためにかかるが存在する場合、<xref:System.StringComparison>パラメーターをこのパラメーターを受け取らないオーバー ロードではなくために使用する必要があります。 コードはこのパラメーターを明示的に設定するではわかりやすくなり、保守が簡単に多くの場合です。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、文字列比較メソッドを許容するオーバー ロードに変更、<xref:System.StringComparison>列挙体をパラメーターとして。 例: 変更`String.Compare(str1, str2)`に`String.Compare(str1, str2, StringComparison.Ordinal)`です。
+ この規則違反を解決するを受け取るオーバー ロードする文字列比較メソッドを変更、<xref:System.StringComparison>列挙体をパラメーターとして。 例: 変更`String.Compare(str1, str2)`に`String.Compare(str1, str2, StringComparison.Ordinal)`します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- ライブラリまたはアプリケーションは、限定されたローカル ユーザーのためのものでは、してためにローカライズされない場合は、この規則による警告を抑制しても安全です。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 限定されたローカル ユーザーのためのものでは、ライブラリまたはアプリケーションと、ためにローカライズされないときは、この規則による警告を非表示にも安全です。
 
 ## <a name="see-also"></a>関連項目
- [グローバリゼーションに関する警告](../code-quality/globalization-warnings.md) [CA1309: StringComparison を使用します](../code-quality/ca1309-use-ordinal-stringcomparison.md)
+
+- [グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)
+- [CA1309: 順序を示す StringComparison を使用します](../code-quality/ca1309-use-ordinal-stringcomparison.md)

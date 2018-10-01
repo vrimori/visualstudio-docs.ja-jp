@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b67722884a675dd991cad608ca22cf277e2d6777
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 7e2a9acf315541dcf231d774fdb37e4c82649a4c
+ms.sourcegitcommit: 7bb0225e1fd45999ce09e0b49c2cfae515c27e11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36303082"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45612728"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーの生産性に関するヒントと秘訣を学習します。
 
@@ -145,7 +145,7 @@ UWP アプリを使用して実行されたネットワーク操作を分析す�
 
 詳細については、「[ネットワーク使用率](../profiling/network-usage.md)」を参照してください。
 
-## <a name="get-more-familiar-with-how-the-debugger-attaches-to-your-app"></a>アプリにデバッガーのアタッチをより理解を深める
+## <a name="modules_window"></a> アプリにデバッガーのアタッチをより理解を深める
 
 実行中のアプリに接続するには、デバッガーは、シンボル (.pdb) ファイルをデバッグしようとするアプリの正確な同じビルドの生成を読み込みます。 一部のシナリオでシンボル ファイルの少しの知識が役に立ちます。 Visual Studio がシンボルを使用してファイルを読み込む方法を調べることができます、**モジュール**ウィンドウ。
 

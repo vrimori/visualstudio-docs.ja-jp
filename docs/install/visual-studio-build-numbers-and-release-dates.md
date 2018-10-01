@@ -5,19 +5,19 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 08/20/2018
+ms.date: 08/28/2018
 ms.topic: reference
 helpviewer_keywords: ''
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: ef62980f3e6eca10732502fa97c453628e4e33b1
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 0fa9a32bbd03a21e6bc9629f89f9c43d7d376052
+ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43224999"
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 のビルド番号とリリース日
 
@@ -25,6 +25,8 @@ ms.locfileid: "43138468"
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.8.2 | Release | 2018 年 8 月 28 日 | 15.8.28010.2016 |
+| 15.0.18 | Release | 2018 年 8 月 28 日 | 15.0.26228.52 |
 | 15.9.0 Preview 1 | [プレビュー] | 2018 年 8 月 20 日 | 15.9.28016.0 |
 | 15.8.1 | Release | 2018 年 8 月 17 日 | 15.8.28010.2003 |
 | 15.8.0 | Release | 2018 年 8 月 14 日 | 15.8.28010.0 |

@@ -3,18 +3,18 @@ title: Visual Studio サブスクリプションの Office 365 Developer 特典 
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 11/12/2018
+ms.date: 11/12/2017
 ms.topic: Get-Started-Article
 description: Visual Studio サブスクリプションに含まれる Office 365 Developer 特典について説明します。
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 1d7bd3c76bc92bd10b7ec7a814fb4819f48b5c4b
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: 5adf9a2a91f3d40c3df04a365278d6d19e59e8a6
+ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36280547"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "43289536"
 ---
 # <a name="the-office-365-developer-subscription-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの Office 365 Developer サブスクリプション特典
 
@@ -29,28 +29,28 @@ ms.locfileid: "36280547"
 3. サインイン プロセスが完了したら、サブスクリプション特典のページが表示されます。  複数のサブスクリプションがある場合は、右上隅の黒のリボンの下にあるドロップダウン矢印をクリックして、サブスクリプション間で切り替えることができます。  Office 365 Developer サブスクリプション特典タイルは、[ツール] カテゴリにあります。  タイル行の右側にある矢印を使用して、Office タイルが表示されるまでスクロールします。
 
 4. [ツール] セクションで Office 365 Developer サブスクリプション タイルを見つけます。  特典タイルの下部にある **[コードの取得]** リンクをクリックします。   コードが取得されたら、**[アクティブ化]** をクリックします。
-
-    ![Office 365 Developer 特典タイル](_img\vs-office-dev\vs-office-dev-tile.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典タイル](_img\vs-office-dev\vs-office-dev-tile.png)
 
 5.  次に、アカウントを作成します。  連絡先情報を入力して、**[次へ]** をクリックします。
-
-    ![Office 365 Developer 特典アカウント](_img\vs-office-dev\vs-office-dev-account-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典アカウント](_img\vs-office-dev\vs-office-dev-account-cropped.png)
 
 6.  サブスクリプションを使用する場所に関する要求された情報を入力し、**[次へ]** をクリックします。  この情報は、サブスクリプションの可用性と、適用される税金を決定するのに使用されます。
-
-    ![Office 365 Developer 特典の連絡先情報](_img\vs-office-dev\vs-office-dev-contact-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典の連絡先情報](_img\vs-office-dev\vs-office-dev-contact-cropped.png)
 
 7.  アカウントのユーザー名とパスワードを作成します。
-
-    ![Office 365 Developer 特典のユーザー名](_img\vs-office-dev\vs-office-dev-username-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典のユーザー名](_img\vs-office-dev\vs-office-dev-username-cropped.png)
 
 8.  電話番号を入力し、電話またはテキストを使用して確認コードを受信するかどうかを選択します。  これはアカウントが実在する人によって作成されていることを確認するのに役立ちます。 受け取ったコードを入力し、**[次へ]** をクリックします。
 
 9.  この時点でサインインを求められる場合があります。  Office 365 のログイン ページに複数のアカウントが表示されている場合は、このサブスクリプションに関連付けられているアカウントを選択してください。
 
 10. 次のページで、サブスクリプションが無料で利用可能なことを確認します。  **[次へ]** をクリックして、続行します。
-
-    ![Office 365 Developer 特典の外観](_img\vs-office-dev\vs-office-dev-price.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典の外観](_img\vs-office-dev\vs-office-dev-price.png)
 
 11. "ステップ 3" の最終処理中に、"支払方法" の選択が求められます。  2 つの支払いオプションがあります。  1 番目のオプションは、(下に示すように) **クレジット カード**を追加し、2 番目のオプションは**請求書**です。  どちらの場合も、**[Place Order]\(発注\)** をクリックすることで、$0.00 の注文が送信されます。
 
@@ -58,8 +58,8 @@ ms.locfileid: "36280547"
     > クレジット カード番号の入力を望まないサブスクライバーは、**請求書**での支払方法を選択してください。  **年払い**を選択して、請求書の受け取りを 1 年に 1 回に制限することもできます。
 
 12. この時点で、Office 365 Developer サブスクリプション特典が正常に引き換えらました。  注文の確認ページが表示されます。  ページには[サインイン ページ](https://portal.office.com "Office 365 サインイン ページ")へのリンクがあります。  後で使用できるように、このページをブックマークすることをお勧めします。  また、ページに表示されるユーザー ID を記録することもできます   (アカウントを設定すると、指定したアドレスに「ようこそ」メールも送信されます)。**[Start setup]\(セットアップを開始\)** をクリックして続行します。
-
-    ![Office 365 Developer 特典の注文の確認](_img\vs-office-dev\vs-office-dev-confirm.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典の注文の確認](_img\vs-office-dev\vs-office-dev-confirm.png)
 
 ## <a name="eligibility"></a>特典を受ける条件
 | サブスクリプション レベル                                                 |     チャネル                                            | 特長                                                          | 更新可能かどうか    |
@@ -86,8 +86,8 @@ A: Office 365 Developer サブスクリプション特典の設定
     > https://portal.office.com にサインインするには、上記の手順 7 で作成した新しい Office 365 Developer サブスクリプションのユーザー ID を使用する必要があります。
 
 2. **[Start setup]\(セットアップを開始\)** をクリックすると、"ステップ 1" で、引き換えプロセス中に既に所有している既存のドメインに接続するか、テナントのセットアップを使用して継続することを求められます。  次の例では、"appsbyjane2017.onmicrosoft.com" ドメインを使用して続行することを選択しています。
-
-    ![Office 365 Developer 特典の管理センター](_img\vs-office-dev\vs-office-dev-admin-cropped.png)
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典の管理センター](_img\vs-office-dev\vs-office-dev-admin-cropped.png)
 
 
 3.  ステップ 2 では、管理者が Office 365 アカウントにユーザーを追加することができます。  必要なユーザーを追加し、**[次へ]** をクリックします。
@@ -104,11 +104,11 @@ A: Office 365 Developer サブスクリプション特典の設定
     - OneDrive for Business
 
 5.  優先言語を選択し、**[インストール]** をクリックします。
+    > [!div class="mx-imgBorder"]
+    > ![Office 365 Developer 特典のインストール アプリ](_img\vs-office-dev\vs-office-dev-install-cropped.png)
 
-    ![Office 365 Developer 特典のインストール アプリ](_img\vs-office-dev\vs-office-dev-install-cropped.png)
 
-
-6. **[実行]** をクリックして、すぐにインストールを開始するか、**[保存]** をクリックして PC にインストール パッケージを保存して後でインストールします。
+6.  **[実行]** をクリックして、すぐにインストールを開始するか、**[保存]** をクリックして PC にインストール パッケージを保存して後でインストールします。
 
 7.  [ユーザー アカウント制御] ダイアログが表示されたら、**[はい]** をクリックしてコンピューターに Office のインストールを許可します。
 

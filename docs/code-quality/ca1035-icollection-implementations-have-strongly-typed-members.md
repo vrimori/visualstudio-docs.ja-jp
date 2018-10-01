@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9cda0790128bb279d30a15f75080c375ec68aa1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bcf5218f41a11d50b6cc3f36767190cce5deab1b
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31898326"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545529"
 ---
 # <a name="ca1035-icollection-implementations-have-strongly-typed-members"></a>CA1035: ICollection の実装は、厳密に型指定されたメンバーを含んでいます
+
 |||
 |-|-|
 |TypeName|ICollectionImplementationsHaveStronglyTypedMembers|
@@ -32,30 +33,34 @@ ms.locfileid: "31898326"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- パブリックまたはプロテクト型が実装する<xref:System.Collections.ICollection?displayProperty=fullName>を厳密に型指定されたメソッドを提供しない場合が<xref:System.Collections.ICollection.CopyTo%2A?displayProperty=fullName>です。 厳密に型指定されたバージョンの<xref:System.Collections.ICollection.CopyTo%2A>2 つのパラメーターを受け入れる必要がありすることはできません、<xref:System.Array?displayProperty=fullName>または配列の<xref:System.Object?displayProperty=fullName>最初のパラメーターとして。
+ パブリックまたはプロテクト型が実装<xref:System.Collections.ICollection?displayProperty=fullName>の厳密に型指定されたメソッドは提供されません<xref:System.Collections.ICollection.CopyTo%2A?displayProperty=fullName>します。 厳密に型指定されたバージョンの<xref:System.Collections.ICollection.CopyTo%2A>2 つのパラメーターを受け入れる必要があり、含めることはできません、<xref:System.Array?displayProperty=fullName>または配列の<xref:System.Object?displayProperty=fullName>最初のパラメーターとして。
 
 ## <a name="rule-description"></a>規則の説明
- この規則で<xref:System.Collections.ICollection>強く指定を実装する型指定されたメンバー ユーザーは引数をキャストする必要がないように、<xref:System.Object>インターフェイスによって提供される機能を使用するときに入力します。 このルールは、ある型を実装する前提としています。<xref:System.Collections.ICollection>がよりも厳密な型のインスタンスのコレクションを管理するため<xref:System.Object>です。
+ この規則で<xref:System.Collections.ICollection>を実装する厳密に型指定されたメンバー ユーザーは引数をキャストする必要がないように、<xref:System.Object>インターフェイスによって提供される機能を使用するときに入力します。 このルールは、実装する型前提としています。<xref:System.Collections.ICollection>がよりも厳密な型のインスタンスのコレクションを管理するため<xref:System.Object>します。
 
- <xref:System.Collections.ICollection> は、<xref:System.Collections.IEnumerable?displayProperty=fullName> インターフェイスを実装します。 場合は、コレクション内のオブジェクトを拡張<xref:System.ValueType?displayProperty=fullName>の厳密に型指定されたメンバーを指定する必要があります<xref:System.Collections.IEnumerable.GetEnumerator%2A>をボックス化によって発生したパフォーマンスの低下を回避します。 これは、コレクションのオブジェクトが参照型の場合に必要ありません。
+ <xref:System.Collections.ICollection> は、<xref:System.Collections.IEnumerable?displayProperty=fullName> インターフェイスを実装します。 場合は、コレクション内のオブジェクトの拡張<xref:System.ValueType?displayProperty=fullName>の厳密に型指定されたメンバーを提供する必要があります<xref:System.Collections.IEnumerable.GetEnumerator%2A>ボックス化によって発生したパフォーマンスの低下を回避するためにします。 これは、コレクションの参照型である場合に必要ありません。
 
- インターフェイス メンバーの厳密に型指定されたバージョンを実装するインターフェイスのメンバーを明示的に実装形式で名前を使用して、`InterfaceName.InterfaceMemberName`など<xref:System.Collections.ICollection.CopyTo%2A>です。 明示的なインターフェイス メンバーは、インターフェイスで宣言されているデータ型を使用します。 インターフェイス メンバーの名前を使用して、厳密に型指定されたメンバーを実装する<xref:System.Collections.ICollection.CopyTo%2A>です。 Public として厳密に型指定されたメンバーを宣言し、パラメーターを宣言し、コレクションで管理されている厳密な型の値を返します。 厳密な型がなど弱い種類を置き換える<xref:System.Object>と<xref:System.Array>インターフェイスで宣言されています。
+ インターフェイス メンバーの厳密に型指定されたバージョンを実装するインターフェイス メンバーを明示的に実装形式で名前を使用して、`InterfaceName.InterfaceMemberName`など<xref:System.Collections.ICollection.CopyTo%2A>します。 明示的なインターフェイス メンバーは、インターフェイスで宣言されているデータ型を使用します。 インターフェイス メンバーの名前を使用して、厳密に型指定されたメンバーを実装<xref:System.Collections.ICollection.CopyTo%2A>します。 Public として厳密に型指定されたメンバーを宣言して、パラメーターを宣言およびコレクションで管理されている厳密な型の値を返します。 厳密な型より強度の低い種類を置き換える<xref:System.Object>と<xref:System.Array>インターフェイスで宣言されています。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、インターフェイス メンバーを明示的に実装 (として宣言<xref:System.Collections.ICollection.CopyTo%2A>)。 として宣言されている、パブリックの厳密に型指定されたメンバーを追加`CopyTo`、最初のパラメーターとして厳密に型指定された配列を受け取ることがあるとします。
+ この規則違反を修正するには、インターフェイス メンバーを明示的に実装 (として宣言<xref:System.Collections.ICollection.CopyTo%2A>)。 として宣言されている、パブリックの厳密に型指定されたメンバーを追加`CopyTo`、最初のパラメーターとして厳密に型指定された配列を取得することです。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- 新しいオブジェクトに基づくなどのコレクション、バイナリ ツリーは、新しいコレクションを拡張する型が決まります、厳密な型を実装する場合は、この規則による警告を抑制します。 これらの型は、このルールに準拠し、厳密に型指定されたメンバーを公開する必要があります。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ バイナリ ツリーは、新しいコレクションを拡張する型が厳密な型を決定などの新しいオブジェクトに基づくコレクションを実装する場合は、この規則による警告を抑制します。 これらの型は、この規則に準拠し、厳密に型指定されたメンバーを公開する必要があります。
 
 ## <a name="example"></a>例
- 次の例では、実装するための正しい方法<xref:System.Collections.ICollection>です。
+ 次の例では、実装する正しい方法<xref:System.Collections.ICollection>します。
 
  [!code-csharp[FxCop.Design.ICollectionStrongTypes#1](../code-quality/codesnippet/CSharp/ca1035-icollection-implementations-have-strongly-typed-members_1.cs)]
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA1038: 列挙子は厳密に型指定されていなければなりません](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)
 
  [CA1039: リストは厳密に型指定されています](../code-quality/ca1039-lists-are-strongly-typed.md)
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Array?displayProperty=fullName> <xref:System.Collections.IEnumerable?displayProperty=fullName> <xref:System.Collections.ICollection?displayProperty=fullName> <xref:System.Object?displayProperty=fullName>
+
+- <xref:System.Array?displayProperty=fullName>
+- <xref:System.Collections.IEnumerable?displayProperty=fullName>
+- <xref:System.Collections.ICollection?displayProperty=fullName>
+- <xref:System.Object?displayProperty=fullName>

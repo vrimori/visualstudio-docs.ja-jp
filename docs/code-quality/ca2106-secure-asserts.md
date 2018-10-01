@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5863f4d8ca4db47f7e537f0b1abc5eb280434c80
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ff16cdce4be04bd076c93763fb6a22d2721675f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31916800"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551783"
 ---
 # <a name="ca2106-secure-asserts"></a>CA2106: アサートをセキュリティで保護します
+
 |||
 |-|-|
 |TypeName|SecureAsserts|
@@ -32,16 +33,18 @@ ms.locfileid: "31916800"
 |互換性に影響する変更点|あり|
 
 ## <a name="cause"></a>原因
- メソッドによってアクセス許可がアサートされますが、呼び出し元に対してセキュリティ チェックが実行されていません。
+ メソッドは、アクセス許可をアサートして、呼び出し元のセキュリティ チェックは行われません。
 
 ## <a name="rule-description"></a>規則の説明
- セキュリティ チェックを実行せずにセキュリティ アクセス許可をアサートすると、悪用される可能性があるセキュリティの弱点がコード内に残る場合があります。 セキュリティ アクセス許可がアサートされたときに、セキュリティのスタック ウォークが停止します。 呼び出し元に対してセキュリティ チェックを実行せずに、アクセス許可をアサートする場合、呼び出し元直接コードを実行されません、アクセス許可を使用します。 セキュリティ チェックは有害な方法で、アサートを使用できないことがわかっている場合のみで許容せずにアサートします。 呼び出すコードは、無害である場合は影響を与えません。 アサートを使用するか、ユーザーが任意の情報を呼び出すコードに渡すことはできません。
+ セキュリティ チェックを実行せずにセキュリティ アクセス許可をアサートすると、悪用される可能性があるセキュリティの弱点がコード内に残る場合があります。 セキュリティ アクセス許可がアサートされたときに、セキュリティのスタック ウォークが停止します。 呼び出し元のすべてのチェックを実行せずにアクセス許可をアサートする場合、呼び出し元直接コードを実行しない、アクセス許可を使用します。 セキュリティ チェックが、アサートは、有害な方法では使用できませんを確認する場合は、許容せずにアサートします。 呼び出すコードは、無害なのか、ユーザーが任意の情報を呼び出したコードに渡すことはできません、アサートは問題ありません。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- この規則違反を修正するには、メソッド、またはその宣言型セキュリティの要求を追加します。
+ この規則違反を修正するには、メソッド、またはその宣言型セキュリティ確認要求を追加します。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
- セキュリティを慎重確認した後のみ、この規則による警告を抑制します。
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
+ 注意が必要なセキュリティ レビュー後にのみこの規則による警告を抑制します。
 
 ## <a name="see-also"></a>関連項目
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)
+
+- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
+- [安全なコーディングのガイドライン](/dotnet/standard/security/secure-coding-guidelines)

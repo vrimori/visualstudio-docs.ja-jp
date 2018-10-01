@@ -15,16 +15,20 @@ ms.assetid: 0c3d7d8d-b94d-46e8-aa4c-38df632c1463
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b492324b87bfc25741492669b7c659c43fc9765
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 041cade3d1c65a40826920b94adf012aa9a4b021
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31920406"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549869"
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: スコープが失われる前にオブジェクトを破棄します
+
 |||
 |-|-|
 |TypeName|DisposeObjectsBeforeLosingScope|
@@ -45,11 +49,11 @@ ms.locfileid: "31920406"
 
  using ステートメントでは十分に IDisposable オブジェクトを保護できない次のような場合があります。この場合、CA2000 が発生する可能性があります。
 
--   破棄可能オブジェクトを返すには、このオブジェクトは using ブロック外の try/finally ブロックで構築される必要があります。
+- 破棄可能オブジェクトを返すには、このオブジェクトは using ブロック外の try/finally ブロックで構築される必要があります。
 
--   破棄可能オブジェクトのメンバーは、using ステートメントのコンストラクターでは初期化できません。
+- 破棄可能オブジェクトのメンバーは、using ステートメントのコンストラクターでは初期化できません。
 
--   1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 たとえば、オブジェクトに適用された
+- 1 つの例外ハンドラーによってのみ保護された入れ子のコンストラクター。 たとえば、オブジェクトに適用された
 
     ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))
@@ -58,30 +62,31 @@ ms.locfileid: "31920406"
 
      この場合、StreamReader オブジェクトの構築が失敗すると FileStream オブジェクトが閉じられなくなることがあるので、CA2000 が発生します。
 
--   動的オブジェクトは、シャドウ オブジェクトを使用して IDisposable オブジェクトの Dispose パターンを実装する必要があります。
+- 動的オブジェクトは、シャドウ オブジェクトを使用して IDisposable オブジェクトの Dispose パターンを実装する必要があります。
 
-## <a name="when-to-suppress-warnings"></a>警告を抑制する状況
+## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  `Dispose` を呼び出すオブジェクトに対して <xref:System.IO.Stream.Close%2A> などのメソッドを呼び出した場合、または警告を発生させたメソッドがオブジェクトをラップする IDisposable オブジェクトを返す場合を除き、この規則による警告を抑制しないでください。
 
-## <a name="related-rules"></a>関連規則
+## <a name="related-rules"></a>関連するルール
  [CA2213: 破棄可能なフィールドは破棄されなければなりません](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
  [CA2202: オブジェクトを複数回破棄しません](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)
 
 ## <a name="example"></a>例
- 破棄可能なオブジェクトを返すメソッドを実装している場合は、catch ブロックのない try/finally ブロックを使用して、そのオブジェクトが確実に破棄されるようにします。 try/finally ブロックを使用することによって、障害点での例外の発生が可能になり、そのオブジェクトが確実に破棄されます。
 
- OpenPort1 メソッドでは、ISerializable オブジェクトの SerialPort を開くための呼び出し、または SomeMethod の呼び出しが失敗する可能性があります。 この実装では CA2000 警告は発生しません。
+破棄可能なオブジェクトを返すメソッドを実装している場合は、catch ブロックのない try/finally ブロックを使用して、そのオブジェクトが確実に破棄されるようにします。 try/finally ブロックを使用することによって、障害点での例外の発生が可能になり、そのオブジェクトが確実に破棄されます。
 
- OpenPort2 メソッドでは、次の 2 つの SerialPort オブジェクトが宣言され、null に設定されます。
+OpenPort1 メソッドでは、ISerializable オブジェクトの SerialPort を開くための呼び出し、または SomeMethod の呼び出しが失敗する可能性があります。 この実装では CA2000 警告は発生しません。
 
--   `tempPort`。メソッド操作が成功しているかどうかをテストするのに使用されます。
+OpenPort2 メソッドでは、次の 2 つの SerialPort オブジェクトが宣言され、null に設定されます。
 
--   `port`。メソッドの戻り値に使用されます。
+- `tempPort`。メソッド操作が成功しているかどうかをテストするのに使用されます。
 
- `tempPort` は、`try` ブロックで構築され、開かれます。その他必要な作業も同じ `try` ブロック内で実行されます。 `try` ブロックの最後に、開かれたポートが `port` オブジェクトに割り当てられ、このオブジェクトが返されます。`tempPort` オブジェクトは `null` に設定されます。
+- `port`。メソッドの戻り値に使用されます。
 
- `finally` ブロックは `tempPort` 値をチェックします。 null でない場合、メソッド内の操作は失敗しています。`tempPort` は閉じられ、すべてのリソースが解放されます。 返されるオブジェクトには、メソッド操作が成功した場合、開かれた SerialPort オブジェクトが含まれます。メソッドの操作が失敗した場合は null になります。
+`tempPort` は、`try` ブロックで構築され、開かれます。その他必要な作業も同じ `try` ブロック内で実行されます。 `try` ブロックの最後に、開かれたポートが `port` オブジェクトに割り当てられ、このオブジェクトが返されます。`tempPort` オブジェクトは `null` に設定されます。
+
+`finally` ブロックは `tempPort` 値をチェックします。 null でない場合、メソッド内の操作は失敗しています。`tempPort` は閉じられ、すべてのリソースが解放されます。 返されるオブジェクトには、メソッド操作が成功した場合、開かれた SerialPort オブジェクトが含まれます。メソッドの操作が失敗した場合は null になります。
 
 ```csharp
 public SerialPort OpenPort1(string portName)
@@ -127,7 +132,6 @@ Public Function OpenPort1(ByVal PortName As String) As SerialPort
 
 End Function
 
-
 Public Function OpenPort2(ByVal PortName As String) As SerialPort
 
    Dim tempPort As SerialPort = Nothing
@@ -159,9 +163,11 @@ End Function
 
  これを修正するには、プロジェクトで Visual Basic コンパイラによるオーバーフロー チェックの実施を無効にするか、または次の CreateReader2 関数のようにコードを変更します。
 
- オーバーフロー チェックの実施を無効にするには、ソリューション エクスプ ローラーでプロジェクト名を右クリックし、をクリックして**プロパティ**です。 をクリックして**コンパイル**、 をクリックして**詳細コンパイル オプション**、し確認**整数オーバーフローのチェックを解除**です。
+ オーバーフロー チェックの実施を無効にするには、ソリューション エクスプ ローラーでプロジェクト名を右クリックし をクリックし、**プロパティ**します。 をクリックして**コンパイル**、 をクリックして**詳細コンパイル オプション**、し確認**整数オーバーフローのチェックを解除**します。
 
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope-vboverflow_1.vb)]
 
 ## <a name="see-also"></a>関連項目
- <xref:System.IDisposable> [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
+
+- <xref:System.IDisposable>
+- [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern)
