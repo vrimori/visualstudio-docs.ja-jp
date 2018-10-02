@@ -1,0 +1,79 @@
+---
+title: IDebugSymbolProvider::GetAddressesFromPosition |Microsoft Docs
+ms.custom: ''
+ms.date: 2018-06-30
+ms.prod: visual-studio-dev14
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- IDebugSymbolProvider::GetAddressesFromPosition
+helpviewer_keywords:
+- IDebugSymbolProvider::GetAddressesFromPosition method
+ms.assetid: 1b0f02cb-8ace-4614-88f3-0e10239012b3
+caps.latest.revision: 12
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d1f834705881cfb258f6c387eade5f4d10484e08
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "47545122"
+---
+# <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
+[!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
+
+このトピックの最新バージョンをご覧[IDebugSymbolProvider::GetAddressesFromPosition](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromposition)します。  
+  
+このメソッドは、デバッグ アドレスの配列にドキュメントの位置をマップします。  
+  
+## <a name="syntax"></a>構文  
+  
+```cpp#  
+HRESULT GetAddressesFromPosition(   
+   IDebugDocumentPosition2* pDocPos,  
+   BOOL                     fStatmentOnly,  
+   IEnumDebugAddresses**    ppEnumBegAddresses,  
+   IEnumDebugAddresses**    ppEnumEndAddresses  
+);  
+```  
+  
+```csharp  
+int GetAddressesFromPosition(   
+   IDebugDocumentPosition2  pDocPos,  
+   bool                     fStatmentOnly,  
+   out IEnumDebugAddresses  ppEnumBegAddresses,  
+   out IEnumDebugAddresses  ppEnumEndAddresses  
+);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ `pDocPos`  
+ [in]ドキュメントの位置。  
+  
+ `fStatmentOnly`  
+ [in]TRUE の場合は、1 つのステートメントにデバッグ アドレスを制限します。  
+  
+ `ppEnumBegAddresses`  
+ [out]このステートメントまたは行に関連付けられた開始デバッグ アドレスの列挙子を返します。  
+  
+ `ppEnumEndAddresses`  
+ [out]返します、 [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)このステートメントまたは行に関連付けられている終了のデバッグ アドレスの列挙子。  
+  
+## <a name="return-value"></a>戻り値  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
+  
+## <a name="remarks"></a>Remarks  
+ ドキュメントの位置は、通常、ソース行の範囲を示します。 このメソッドを提供開始と、これらの行に関連付けられている終了デバッグ アドレス。 一部の言語では、複数の行または複数のステートメントを含む行にまたがるステートメントを使用できます。 このメソッドは、1 つのステートメントにデバッグ アドレスを制限するためのフラグを提供します。  
+  
+ テンプレートの場合と同様、複数のデバッグ アドレスを 1 つのステートメントのことができます。  
+  
+## <a name="see-also"></a>関連項目  
+ [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
+ [GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)   
+ [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)
+
