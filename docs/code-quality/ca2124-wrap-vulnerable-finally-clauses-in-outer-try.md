@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 738c214e845cb962bc6c28aa63806dee2858c295
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 50c03a16af9562df40dc04a431fac157c1321fbb
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860083"
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124: 脆弱性のある finally 句の外側を try ブロックでラップします
 
@@ -33,13 +33,13 @@ ms.locfileid: "45551241"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- バージョン 1.0 および 1.1 では、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、public または protected のメソッドが含まれています、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックをセキュリティの状態をリセットしてで囲まれていない、`finally`ブロックします。
+ バージョン 1.0 および 1.1 の .NET Framework では、パブリックまたはプロテクト メソッドを含む、 `try` / `catch` / `finally`ブロックします。 `finally`ブロックをセキュリティの状態をリセットしてで囲まれていない、`finally`ブロックします。
 
 ## <a name="rule-description"></a>規則の説明
- このルールでは検索`try` / `finally`バージョン 1.0 および 1.1 を対象とするコードのブロック、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]呼び出し履歴に存在する悪意のある例外フィルターを受ける可能性があります。 偽装などの機密情報の操作が、try ブロックで発生して、例外がスローされた、フィルターが実行する前に、`finally`ブロックします。 権限借用の使用例、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、現在、Visual Basic でのみ実装できます。
+ このルールでは検索`try` / `finally`をバージョン 1.0 および 1.1 の脆弱性のある悪意のある例外フィルターが呼び出し履歴に存在する可能性がある .NET Framework を対象とするコードをブロックします。 偽装などの機密情報の操作が、try ブロックで発生して、例外がスローされた、フィルターが実行する前に、`finally`ブロックします。 権限借用の使用例、フィルターが権限を借用したユーザーとして実行されていることを意味します。 フィルターは、現在、Visual Basic でのみ実装できます。
 
 > [!NOTE]
-> 2.0 以降のバージョンでは、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]、ランタイムが自動的に保護を`try` / `catch` /  `finally`メソッド内で直接、リセットが発生した場合、悪意のある例外フィルターを禁止します。例外ブロックが含まれています。
+> バージョンの .NET Framework 2.0 以降では、ランタイムが自動的に保護する、 `try` / `catch` /  `finally`メソッド内で直接、リセットが発生した場合、悪意のある例外フィルターを禁止します。例外ブロックが含まれています。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  配置、ラップされていない`try` / `finally` try ブロックの外側でします。 次の 2 つ目の例を参照してください。 これにより、`finally`フィルター コードの前に実行します。

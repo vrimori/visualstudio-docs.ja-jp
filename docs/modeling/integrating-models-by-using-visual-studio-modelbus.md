@@ -9,20 +9,20 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6357fbe512b9120872fc033dd93406a7ff8eb1d1
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 64400b8844481f8b34d82c430322d240c8930cd0
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859953"
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus によるモデルの統合
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus はモデルにモデル間、およびその他のツールからリンクを作成するためのメソッドを提供します。 たとえば、ドメイン固有言語 (DSL) モデルと UML モデルをリンクする可能性があります。 DSL の統合セットを作成できます。
+Visual Studio ModelBus はモデルにモデル間、およびその他のツールからリンクを作成するためのメソッドを提供します。 たとえば、ドメイン固有言語 (DSL) モデルと UML モデルをリンクする可能性があります。 DSL の統合セットを作成できます。
 
  ModelBus により、モデルまたはモデル内の特定の要素への一意の参照を作成できます。 この参照は、たとえば、別のモデル内の要素など、モデルの外に保存できます。 後で何らかのツールにおいて要素へのアクセスを取得する必要が生じると、モデル バス インフラストラクチャは適切なモデルを読み込み、要素を返します。 必要があれば、モデルをユーザーに表示できます。 ファイルが以前の場所でアクセスできない場合、ModelBus はユーザーにファイルを見つけるように求めます。 ユーザーがファイルを見つけると、ModelBus はそのファイルへのすべての参照を解決します。
 
 > [!NOTE]
->  ModelBus の現在の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 実装では、リンクされたモデルは同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の項目である必要があります。
+>  ModelBus の現在の Visual Studio 実装では、同じ Visual Studio ソリューション内の項目が、リンクされたモデルにあります。
 
  追加情報とサンプル コードについては、以下を参照してください。
 
@@ -32,10 +32,10 @@ ms.locfileid: "39567182"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-##  <a name="provide"></a> DSL へのアクセスを提供します。
- モデルまたはその要素への ModelBus 参照を作成するには、DSL の ModelBusAdapter を定義しておく必要があります。 そのための最も簡単な方法は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] モデル バス拡張機能を使用して、コマンドを DSL デザイナーに追加することです。
+## <a name="provide"></a> DSL へのアクセスを提供します。
+ モデルまたはその要素への ModelBus 参照を作成するには、DSL の ModelBusAdapter を定義しておく必要があります。 これを行う最も簡単な方法では、使用、Visual Studio モデル バス拡張機能のコマンドを DSL デザイナーに追加します。
 
-###  <a name="expose"></a> DSL 定義をモデル バスを公開するには
+### <a name="expose"></a> DSL 定義をモデル バスを公開するには
 
 1.  Visual Studio モデル バス拡張機能をまだインストールしていない場合はダウンロードしてインストールします。 詳細については、次を参照してください。 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "39567182"
  フォルダー `ModelBusAdapters\bin\*` には、`Dsl` プロジェクトと `ModelBusAdapters` プロジェクトによりビルドされるアセンブリが含まれます。 この DSL を別の DSL から参照するには、これらのアセンブリをインポートする必要があります。
 
 ### <a name="making-sure-that-elements-can-be-referenced"></a>要素が参照可能であることの確認
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus アダプターは、既定では、要素を特定するためにその GUID を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。
+ Visual Studio ModelBus アダプターは、既定を識別するために、要素の guid を使用します。 したがって、これらの ID はモデル ファイル内に保持される必要があります。
 
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>要素 ID が保持されることを確認するには
 
@@ -84,7 +84,7 @@ ms.locfileid: "39567182"
 
 -   `ResolveElementReference` をオーバーライドし、モデル バス参照から正しい要素を特定します。
 
-##  <a name="editRef"></a> 別の DSL から DSL にアクセスします。
+## <a name="editRef"></a> 別の DSL から DSL にアクセスします。
  DSL のドメイン プロパティにモデル バス参照を保存し、それらを使用するカスタム コードを作成できます。 ユーザーがモデル ファイルとその中の要素を選択することにより、モデル バス参照を作成可能にすることもできます。
 
  別の DSL への参照を使用する DSL を有効にする必要があります最初に、*コンシューマー*モデル バス参照の。
@@ -140,10 +140,10 @@ ms.locfileid: "39567182"
 
 2.  F5 キーまたは CTRL+F5 キーを押して、DSL のいずれかを実験モードで実行します。
 
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験インスタンスのデバッグ プロジェクトで、各 DSL のインスタンスであるファイルを追加します。
+3.  Visual Studio の実験用インスタンスでのデバッグ プロジェクトでは、各 DSL のインスタンスであるファイルを追加します。
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus は、同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の項目である、モデルへの参照のみを解決できます。 たとえば、ファイル システムの別の部分にあるモデル ファイルへの参照は作成できません。
+    > Visual Studio ModelBus は、同じ Visual Studio ソリューション内の項目がモデルへの参照のみを解決できます。 たとえば、ファイル システムの別の部分にあるモデル ファイルへの参照は作成できません。
 
 4.  公開される DSL のインスタンス内に要素とリンクを作成し、インスタンスを保存します。
 
@@ -158,12 +158,12 @@ ms.locfileid: "39567182"
 ## <a name="creating-references-in-program-code"></a>プログラム コード中の参照の作成
  モデルまたは要素への参照をモデル内に保存する場合、`ModelBusReference` を作成します。 `ModelBusReference` にはモデル参照と要素参照の 2 種類があります。
 
- モデル参照を作成するには、モデルがインスタンスになっている DSL の AdapterManager と、モデルのファイル名または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト項目が必要です。
+ モデルの参照を作成するには、インスタンス、およびファイル名または Visual Studio のプロジェクト項目モデルのうち、モデルは、DSL の AdapterManager 必要があります。
 
  要素参照を作成するには、モデル ファイルと参照する要素のアダプターが必要です。
 
 > [!NOTE]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus を使用して、同じ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内の項目への参照のみを作成できます。
+>  Visual Studio ModelBus を同じ Visual Studio ソリューションでのみ項目への参照を作成できます。
 
 ### <a name="import-the-exposed-dsl-assemblies"></a>公開されている DSL アセンブリのインポート
  利用するプロジェクトで、DSL へのプロジェクト参照と公開されている DSL の ModelBusAdapter アセンブリを追加します。
@@ -349,7 +349,7 @@ ModelBusReference elementReferenceRestored =
     modelBus.DeserializeReference(serialized, null);
 ```
 
- この方法でシリアル化される MBR はコンテキストに依存しません。 単純なファイルベースのモデル バス アダプターを使用している場合、MBR には絶対ファイル パスが含まれます。 これはインスタンス モデル ファイルが絶対に移動しない場合は十分です。 ただし、モデル ファイルは通常、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト内の項目です。 ユーザーはプロジェクト全体をファイル システムの異なる場所へ移動できると期待しています。 ユーザーはプロジェクトをソース管理の下に維持し、異なるコンピューターで開くこともできると期待しています。 したがって、パス名はファイルを含むプロジェクトの場所を基準とする相対値としてシリアル化する必要があります。
+ この方法でシリアル化される MBR はコンテキストに依存しません。 単純なファイルベースのモデル バス アダプターを使用している場合、MBR には絶対ファイル パスが含まれます。 これはインスタンス モデル ファイルが絶対に移動しない場合は十分です。 ただし、モデル ファイルは、Visual Studio プロジェクト内の項目を通常になります。 ユーザーはプロジェクト全体をファイル システムの異なる場所へ移動できると期待しています。 ユーザーはプロジェクトをソース管理の下に維持し、異なるコンピューターで開くこともできると期待しています。 したがって、パス名はファイルを含むプロジェクトの場所を基準とする相対値としてシリアル化する必要があります。
 
 ### <a name="serializing-relative-to-a-specified-file-path"></a>指定されたファイル パスを基準とする相対シリアル化
  `ModelBusReference` には、相対シリアル化の基準となるファイル パスなどの情報を含めることが可能なディクショナリである `ReferenceContext` が含まれています。

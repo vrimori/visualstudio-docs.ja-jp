@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5562ed74de4dd1c7068fabef4f67fdc421ee03d6
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 22290b9a65e512ba897641b076d74927aee712c0
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860135"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。
@@ -239,7 +239,7 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ## <a name="running-validation-when-a-change-occurs"></a>変更発生時の検証実行
  モデルが無効になった直後にユーザーへの警告を表示する場合、検証を実行するストア イベントを定義できます。 ストア イベントの詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)します。
 
- カスタム コード ファイルを追加、検証コードに加えて、 **DslPackage**プロジェクトは、次の例のような内容。 このコードはドキュメントにアタッチされる `ValidationController` を使用します。 このコントローラーは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] エラー一覧に検証エラーを表示します。
+ カスタム コード ファイルを追加、検証コードに加えて、 **DslPackage**プロジェクトは、次の例のような内容。 このコードはドキュメントにアタッチされる `ValidationController` を使用します。 このコント ローラーでは、Visual Studio のエラー一覧の中に検証エラーが表示されます。
 
 ```csharp
 using System;
@@ -302,7 +302,7 @@ namespace Company.FamilyTree
 
  ハンドラーはリンクまたは要素に影響する、元に戻す操作またはやり直し操作の後でも呼び出されます。
 
-##  <a name="custom"></a> カスタム検証カテゴリ
+## <a name="custom"></a> カスタム検証カテゴリ
  「メニュー」や「開く」といった標準の検証カテゴリに加えて、独自のカテゴリを定義できます。 これらのカテゴリをプログラム コードから呼び出すことができます。 ユーザーはそれらを直接呼び出すことができません。
 
  カスタム カテゴリの一般的な使用法は、モデルが特定のツールの事前条件を満たすかどうかをテストするカテゴリを定義することです。
@@ -330,7 +330,7 @@ validationController.ValidateCustom
    "PreconditionsForGeneratePartsList");
 ```
 
-##  <a name="alternatives"></a> 検証の代替手段
+## <a name="alternatives"></a> 検証の代替手段
  検証制約はエラーを報告しますが、モデルを変更しません。 代わりに、モデルが無効になることを防ぐ場合、他の手法を使用できます。
 
  ただし、これらの手法は推奨されません。 通常、無効なモデルの修正方法をユーザーに決めてもらう方が適切です。
