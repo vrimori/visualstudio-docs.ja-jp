@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e2823933e4792dd6127ffbd4b1bfe5dfe1b71a0c
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 2ea3a470ab6b6d9cf3e7daeaf24cd82d0f7ac387
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45547552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858511"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: 未公開のリソース形式を出荷しません
 |||
@@ -32,13 +32,13 @@ ms.locfileid: "45547552"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- リソース ファイルは、のバージョンを使用して構築された、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]現在サポートされていません。
+ リソース ファイルは、現在サポートされていない .NET Framework のバージョンを使用して構築されました。
 
 ## <a name="rule-description"></a>規則の説明
- プレリリース バージョンを使用してビルドされたリソース ファイル、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]サポートされているバージョンの .NET Framework で使用できない可能性があります。
+ .NET Framework のプレリリース バージョンを使用してビルドされたリソース ファイルは、サポートされているバージョンの .NET Framework で使用できるしない場合があります。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- このルールの違反を修正するには、ビルドのサポートされているバージョンを使用して、リソース、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]k。
+ この規則違反を修正するには、.NET Frameworkk のサポートされているバージョンを使用して、リソースをビルドします。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  この規則による警告は抑制しないでください。

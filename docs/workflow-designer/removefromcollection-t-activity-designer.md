@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53fc58e231e5ef1cbbc6106e279b4925d145dd9f
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: a9bdbdd951b5d67575e9bf9283dcc054dfa25b13
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860213"
 ---
 # <a name="removefromcollectiont-activity-designer"></a>RemoveFromCollection\<T > アクティビティ デザイナー
 
@@ -33,13 +33,13 @@ ms.locfileid: "36755938"
 
 ### <a name="the-removefromcollectiont-properties"></a>RemoveFromCollection < T\>プロパティ
 
-次の表に、<xref:System.Activities.Statements.RemoveFromCollection%601> のプロパティと、デザイナーでのその使用方法を示します。
+次の表は、<xref:System.Activities.Statements.RemoveFromCollection%601>プロパティと、デザイナーでの使用方法について説明します。
 
 |プロパティ名|必須|使用方法|
 |-------------------|--------------|-----------|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.RemoveFromCollection%601> アクティビティの省略可能な表示名。 既定値は、RemoveFromCollection < Int32\>します。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|True|追加する項目、**コレクション\<T >** します。 この項目の種類は*T*、型の*TypeArgument*します。 項目を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
-|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|True|項目の追加先のコレクション。 このコレクションは、型の**ICollection < TypeArgument\>します。** コレクションを指定するには、プロパティ グリッドで Visual Basic の式に入力します。|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Item%2A>|True|削除する項目、**コレクション\<T >** します。 この項目の種類は*T*、型の*TypeArgument*します。 項目を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
+|<xref:System.Activities.Statements.RemoveFromCollection%601.Collection%2A>|True|項目を削除する対象のコレクション。 このコレクションは、型の**ICollection < TypeArgument\>します。** コレクションを指定するには、プロパティ グリッドで Visual Basic の式に入力します。|
 |*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601> に格納される項目の T 型。 既定では、この*TypeArgument*に設定されている型**Int32**します。 型を変更するには、値を変更、 *TypeArgument*プロパティ グリッドでコンボ ボックス。|
 |<xref:System.Activities.Activity%601.Result%2A>|False|指定した項目がコレクションから削除されたかどうかを示す値。 結果にバインドする変数を指定するには、プロパティ グリッドで変数を入力します。|
 

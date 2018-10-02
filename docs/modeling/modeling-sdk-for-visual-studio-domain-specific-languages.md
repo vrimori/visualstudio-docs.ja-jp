@@ -12,17 +12,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dc87ba31e1f693559384977588471af753738e7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7af41e9e66c22e514961dc888a42153c078667cf
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31950843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857782"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Modeling SDK for Visual Studio - ドメイン固有言語
-Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]に統合できる強力なモデル ベースの開発ツールを作成する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]です。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。
+Modeling SDK for Visual Studio を使用して、Visual Studio に統合できる強力なモデル ベースの開発ツールを作成できます。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。
 
- MSDK の中核は、業務分野の概念を表すために作成するモデルの定義です。 図式ビュー、コードおよびその他の成果物の生成機能、モデルを変換するためのコマンド、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のコードやその他のオブジェクトとの対話機能などのさまざまなツールでモデルを囲むことができます。 モデルを開発するとき、他のモデルやツールと組み合わせて、開発の中央に配置される強力なツール セットを形成することができます。
+ MSDK の中核は、業務分野の概念を表すために作成するモデルの定義です。 図式ビュー、コードとその他の成果物で、モデルに変換するため、コマンドを生成する機能、およびコードおよび Visual Studio の他のオブジェクトと対話する機能などのツールのさまざまなモデルを囲むことができます。 モデルを開発するとき、他のモデルやツールと組み合わせて、開発の中央に配置される強力なツール セットを形成することができます。
 
  MSDK では、ドメイン固有言語 (DSL) の形式でモデルを迅速に開発できます。 グラフィカルな表記と共にスキーマまたは抽象構文を定義する専用のエディターを使用することから始めます。 この定義から、VMSDK は次を生成します。
 
@@ -42,7 +42,7 @@ Modeling SDK for を使用して、[!INCLUDE[vsprvs](../code-quality/includes/vs
 
  [関連するブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
 
- 高度なテクニックとトラブルシューティングに関するガイダンスについては、次を参照してください。[モデリング ツールの機能拡張 (&)、Visual Studio DSL フォーラム](http://go.microsoft.com/fwlink/?LinkID=186074)です。
+ 高度な技法とトラブルシューティングに関するガイダンスについては、次を参照してください。 [Visual Studio DSL & Modeling Tools 機能拡張フォーラム](http://go.microsoft.com/fwlink/?LinkID=186074)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
  [ドメイン固有言語の概要](../modeling/getting-started-with-domain-specific-languages.md)

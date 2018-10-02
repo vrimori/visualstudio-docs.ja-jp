@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b7b5b360a6288b6ff2e13b6d7fc29df6728fad6f
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 45804f08ea25ab8582d28632baf07abea24e0406
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859485"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: シールされていない属性を使用しません
 
@@ -41,7 +41,7 @@ ms.locfileid: "45546250"
 
 ## <a name="rule-description"></a>規則の説明
 
-[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] クラス ライブラリには、カスタム属性を取得するメソッドが用意されています。 既定では、これらのメソッドで属性の継承階層が検索されます。 たとえば、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName>指定された属性型または指定された属性型を拡張する属性の型を検索します。 属性をシールする継承階層全体が検索を排除し、パフォーマンスを向上させることができます。
+.NET Framework クラス ライブラリでは、カスタム属性を取得するメソッドを提供します。 既定では、これらのメソッドで属性の継承階層が検索されます。 たとえば、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName>指定された属性型または指定された属性型を拡張する属性の型を検索します。 属性をシールする継承階層全体が検索を排除し、パフォーマンスを向上させることができます。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
 
