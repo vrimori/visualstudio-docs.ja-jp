@@ -9,24 +9,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6044dd970029b3f233f8b20eb2e334b5041ceb33
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 624afd32a9b0f44e3190fba7e3b126663b96f6f4
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31953537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860200"
 ---
 # <a name="t4-output-directive"></a>T4 出力ディレクティブ
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] テキスト テンプレートでは、`output` ディレクティブを使用してファイル名の拡張子と変換ファイルのエンコードを定義します。
+Visual Studio のテキスト テンプレートで、`output`ディレクティブを使用して、ファイル名拡張子と変換後のファイルのエンコードを定義します。
 
- たとえば場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前のテンプレート ファイルがプロジェクトに含まれる**MyTemplate.tt**次のディレクティブが含まれています。
+ たとえば、Visual Studio プロジェクトには、という名前のテンプレート ファイルが含まれています。 **MyTemplate.tt** 、次のディレクティブが含まれています。
 
  `<#@output extension=".cs"#>`
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前のファイルが生成されます**MyTemplate.cs**
+ Visual Studio はという名前のファイルを生成し、 **MyTemplate.cs**
 
- `output` ディレクティブは、実行時 (前処理済み) のテキスト テンプレートには必要ありません。 その代わりに、アプリケーションは `TextTransform()` を呼び出して、生成済みの文字列を取得します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用して実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)です。
+ `output` ディレクティブは、実行時 (前処理済み) のテキスト テンプレートには必要ありません。 その代わりに、アプリケーションは `TextTransform()` を呼び出して、生成済みの文字列を取得します。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
 
 ## <a name="using-the-output-directive"></a>出力ディレクティブの使用
 

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68597c0748fbc235178da6b6e583c48b9f1b422f
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: b82f18f4cc6ff5bb2666a51c4e8f37e22fd7d32b
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859004"
 ---
 # <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: インスタンス化されていない内部クラスを使用しないでください
 |||
@@ -58,7 +58,7 @@ ms.locfileid: "45551770"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールの違反を修正するには、型を削除またはそれを使用するコードを追加します。 型に静的メソッドのみが含まれている場合は、コンパイラが既定のパブリック インスタンス コンス トラクターを生成するを防ぐために、型に、次のいずれかを追加します。
 
-- プライベート コンス トラクター型を対象とする[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]version 1.0 および 1.1。
+- .NET Framework version 1.0 および 1.1 を対象とする型のプライベート コンス トラクターです。
 
 - `static` (`Shared` Visual basic) 修飾子は型を対象とする[!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]します。
 

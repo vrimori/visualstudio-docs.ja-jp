@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e087a7be95cfc6ba97d62720f2950672ca4bf199
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: bd22b0e28859ea153466b58f5f27ab458f5aa529
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45545594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858945"
 ---
 # <a name="ca2210-assemblies-should-have-valid-strong-names"></a>CA2210: アセンブリには有効な厳密な名前が必要です
 
@@ -66,9 +66,9 @@ ms.locfileid: "45545594"
 
 次の手順のいずれかを使用します。
 
-- によって提供されるアセンブリ リンカー ツール (Al.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。
+- .NET Framework SDK によって提供される、アセンブリ リンカー ツール (Al.exe) を使用します。
 
-- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] V1.0 または v1.1 を使用するか、<xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>または<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>属性。
+- .NET Framework v1.0 または v1.1 では、いずれかの操作を使用して、<xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName>または<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>属性。
 
 - [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]、いずれかを使用して、`/keyfile`または`/keycontainer`コンパイラ オプション[/KEYFILE (指定のキーまたはキー ペア アセンブリに署名する)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly)または[/KEYCONTAINER (アセンブリに署名するキー コンテナーの指定)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly) C++ でリンカー オプション)。
 
@@ -92,7 +92,7 @@ ms.locfileid: "45545594"
 
 ### <a name="sign-your-assembly-with-a-strong-name-outside-visual-studio"></a>Visual Studio の外部の厳密な名前でアセンブリに署名します。
 
-によって提供される厳密な名前ツール (Sn.exe) を使用して、 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] SDK。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。
+.NET Framework SDK によって提供される厳密な名前ツール (Sn.exe) を使用します。 詳細については、「[Sn.exe (厳密名ツール)](/dotnet/framework/tools/sn-exe-strong-name-tool)」を参照してください。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
 

@@ -9,15 +9,15 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 20c4c9e9c91fd93a190463bc35fe016be4cdf838
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6e5f72b079af3c1c82783cb5bb91e676c0f14bf6
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859290"
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 拡張機能内でのテキスト変換の呼び出し
-メニュー コマンドなどの Visual Studio 拡張機能を記述するかどうかまたは[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。
+メニュー コマンドなどの Visual Studio 拡張機能を記述しているかどうかまたは[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)、テキスト テンプレートを変換するテキスト テンプレート サービスを使用することができます。 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> サービスを取得し、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating> にキャストします。
 
 ## <a name="getting-the-text-templating-service"></a>テキスト テンプレート サービスの取得
 
@@ -78,9 +78,9 @@ string result = t4.ProcessTemplate("",
 ```
 
 ## <a name="error-reporting-and-the-output-directive"></a>エラー報告と出力ディレクティブ
- 処理中にエラーが発生すると、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のエラー ウィンドウに表示されます。 また、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplatingCallback> を実装したコールバックを指定することにより、エラーの通知を受けることもできます。
+ 処理中に発生するエラーは、Visual Studio のエラー ウィンドウに表示されます。 また、<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplatingCallback> を実装したコールバックを指定することにより、エラーの通知を受けることもできます。
 
- 結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。 この情報は、コールバックにも渡されます。 詳細については、次を参照してください。 [T4 出力ディレクティブ](../modeling/t4-output-directive.md)です。
+ 結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。 この情報は、コールバックにも渡されます。 詳細については、次を参照してください。 [T4 出力ディレクティブ](../modeling/t4-output-directive.md)します。
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -132,14 +132,14 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
- コンパイラの警告は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のエラー ウィンドウに表示されます。また、コンパイラの警告によって、`ErrorCallback` の呼び出しも生成されます。
+ コンパイラの警告が Visual Studio のエラー ウィンドウに表示されへの呼び出しも生成されます`ErrorCallback`します。
 
 ## <a name="reference-parameters"></a>参照パラメーター
  <xref:System.MarshalByRefObject> から派生したパラメーター クラスを使用して、テキスト テンプレートの外部に値を渡すことができます。
 
 ## <a name="related-topics"></a>関連トピック
- 前処理されたテキスト テンプレートからテキストを生成する: 呼び出し、`TransformText()`生成されたクラスのメソッドです。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用して実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)です。
+ 前処理されたテキスト テンプレートからテキストを生成する: 呼び出す、`TransformText()`生成されたクラスのメソッド。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。
 
- 範囲外でテキストを生成する、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張子: カスタム ホストを定義します。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)です。
+ Visual Studio 拡張機能の範囲外でテキストを生成する: カスタム ホストを定義します。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)します。
 
- 後でコンパイルして実行することができますをソース コードを生成する: 呼び出し、`t4.PreprocessTemplate()`メソッドの<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>します。
+ コンパイルして実行できるは後でソース コードを生成する: 呼び出す、`t4.PreprocessTemplate()`メソッドの<xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>します。

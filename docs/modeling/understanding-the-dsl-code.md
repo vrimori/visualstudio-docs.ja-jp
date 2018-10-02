@@ -11,15 +11,15 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2e5e2ee79d72d398ac72d3d087156c296aa9e7b2
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 05339a2bdc176fd44c93c744162a299809762a2e
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860292"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL コードについて
-ドメイン固有言語 (DSL) ソリューションは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内で DSL のインスタンスの読み取りと更新に使用可能な API を生成します。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。
+ドメイン固有言語 (DSL) ソリューションには、読み取りし、Visual Studio で DSL のインスタンスの更新に使用できる API が生成されます。 この API は、DSL 定義から生成されるコード中に定義されます。 このトピックでは生成される API を説明します。
 
 ## <a name="the-example-solution-component-diagrams"></a>ソリューション例: コンポーネント図
  このトピックの例のほとんどのソースでは、ソリューションを作成するから DSL を作成、**コンポーネント モデル**ソリューション テンプレート。 これは、新しい DSL ソリューションを作成するときに表示される標準のテンプレートの 1 つです。
@@ -32,7 +32,7 @@ ms.locfileid: "39567221"
  ![コンポーネントおよび相互接続ポート](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL ソリューションの構造
- **Dsl**プロジェクトは、DSL の API を定義します。 **DslPackage**プロジェクトは、その統合方法を定義します。[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 独自のプロジェクトを追加することも可能で、それらもモデルから生成されるコードを含みます。
+ **Dsl**プロジェクトは、DSL の API を定義します。 **DslPackage**プロジェクトでは、Visual Studio と統合する方法を定義します。 独自のプロジェクトを追加することも可能で、それらもモデルから生成されるコードを含みます。
 
 ### <a name="the-code-directories"></a>コード ディレクトリ
  これらの各プロジェクトでコードのほとんどがから生成された**Dsl\DslDefinition.dsl**します。 生成されたコードが、**生成されたコード**フォルダー。 生成されたファイルを表示するには、次のようにクリックします。 **[+]** 生成元の横にある **.tt**ファイル。
@@ -53,7 +53,7 @@ ms.locfileid: "39567221"
 
      たとえば、設定した場合、**カスタム コンス トラクターを持つ**ドメイン クラスのオプションとソリューションをビルドし、エラー メッセージが表示されます。 これらのエラー メッセージのいずれかをダブルクリックすると、カスタム コードが指定する必要のあるものを説明する、生成されたコード内のコメントが表示されます。
 
--   独自のテキスト テンプレートを作成し、使用するアプリケーションに固有のコードを生成します。 インクルード ファイルを使用して、多くのプロジェクトに共通のテンプレートの一部を共有することができるほか、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト テンプレートを作成して、独自のファイル構造で初期化されるプロジェクトをセットアップできます。
+-   独自のテキスト テンプレートを作成し、使用するアプリケーションに固有のコードを生成します。 使用では、多くのプロジェクトに共通のテンプレートの一部を共有するファイルを含めることができ、独自のファイル構造で初期化されているプロジェクトを設定する Visual Studio プロジェクト テンプレートを作成することができます。
 
 ## <a name="generated-files-in-dsl"></a>Dsl 内に生成されるファイル
  次に生成されたファイルに表示されます、 **Dsl**プロジェクト。
@@ -185,10 +185,10 @@ ms.locfileid: "39567221"
 
  要素ツールに要素グループ プロトタイプをインストールすることにより、ツールボックスをセットアップします。 ユーザーがツールを実行すると、これらのプロトタイプのコピーがターゲット要素とマージされます。
 
- `CreateElementPrototype()` をオーバーライドして、いくつかのオブジェクトのグループを作成するツールボックス項目を定義できます。 たとえば、項目を定義して、サブコンポーネントを持つオブジェクトを表すことができます。 コードを変更した後で、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用インスタンスをリセットし、ツールボックスのキャッシュを消去します。
+ `CreateElementPrototype()` をオーバーライドして、いくつかのオブジェクトのグループを作成するツールボックス項目を定義できます。 たとえば、項目を定義して、サブコンポーネントを持つオブジェクトを表すことができます。 コードを変更した後は、ツールボックスのキャッシュをクリアする Visual Studio の実験用インスタンスをリセットします。
 
 ## <a name="generated-files-in-the-dslpackage-project"></a>DslPackage プロジェクト内に生成されるファイル
- DslPackage DSL モデルを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] シェルに結合し、ウィンドウ、ツールボックス、およびメニュー コマンドを管理します。 クラスのほとんどは二重に派生するので、それらの任意のメソッドをオーバーライドできます。
+ DslPackage は、ウィンドウ、ツールボックス、およびメニュー コマンドを管理する Visual Studio shell に DSL モデルを結合します。 クラスのほとんどは二重に派生するので、それらの任意のメソッドをオーバーライドできます。
 
  `CommandSet.cs`
 
@@ -279,7 +279,7 @@ namespace Company.EmbedInForm
 
  `EditorFactory.cs`
 
- `DocData` および `DocView` をインスタンス化します。 DSL パッケージの開始時に [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] がエディターを開くために使用する標準インターフェイスを実現します。 Package.cs 内の `ProvideEditorFactory` 属性で参照されます。
+ `DocData` および `DocView` をインスタンス化します。 DSL パッケージの開始時にエディターの起動を Visual Studio を使用する標準インターフェイスを満たしています。 Package.cs 内の `ProvideEditorFactory` 属性で参照されます。
 
  `GeneratedVSCT.vsct`
 
@@ -335,7 +335,7 @@ explorerWindow.TreeContainer.ObjectModelBrowser.SelectedNode = treeNode;
 
  `Package.cs`
 
- このファイルは DSL と [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の統合方法を定義します。 パッケージ クラスの属性は、指定したファイル拡張子を持つファイルのハンドラーとして DSL を登録し、ツールボックスを定義し、新しいウィンドウを開く方法を定義します。 Initialize() メソッドは、最初の DSL が [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] インスタンスに読み込まれるときに、一度呼び出されます。
+ このファイルは、DSL が Visual Studio に統合する方法を定義します。 パッケージ クラスの属性は、指定したファイル拡張子を持つファイルのハンドラーとして DSL を登録し、ツールボックスを定義し、新しいウィンドウを開く方法を定義します。 Initialize() メソッドには、最初の DSL が Visual Studio インスタンスに読み込まれるときに 1 回は呼び出されます。
 
  `Source.extension.vsixmanifest`
 
