@@ -9,17 +9,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d826787a028aba4f5397ce5577acf60f67120973
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: b69015a58b4772a13c387f67f0dc9d6a2571e1b7
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859225"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>方法: トランザクションを使用してモデルを更新する
 トランザクションをストアに加えられた変更がグループとして扱われることを確認します。 グループ化されている変更をコミットまたは 1 つの単位としてロールバックできます。
 
- たびに、プログラム コードを変更しますの追加、または、ストア内の任意の要素を削除します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Visualization and Modeling SDK では、トランザクション内で行う必要があります。 アクティブなインスタンスが必要がある<xref:Microsoft.VisualStudio.Modeling.Transaction>変更が発生したときに、ストアに関連付けられています。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。
+ プログラム コードを変更するには、追加すると、またはで Visual Studio Visualization and Modeling SDK ストア内の要素を削除します。、たびに、トランザクション内でこれを実行する必要があります。 アクティブなインスタンスが必要がある<xref:Microsoft.VisualStudio.Modeling.Transaction>変更が発生したときに、ストアに関連付けられています。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。
 
  トランザクションのメカニズムを使用して、一貫性のない状態を回避できます。 トランザクション中にエラーが発生したすべての変更はロールバックされます。 ユーザーは、元に戻すコマンドを実行する場合は、最近使用した各トランザクションが 1 つのステップとして扱われます。 個別のトランザクションに明示的に配置する場合を除き、ユーザーは、直近の変更の部分を取り消すことはできません。
 

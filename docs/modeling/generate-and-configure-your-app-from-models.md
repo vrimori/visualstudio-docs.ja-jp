@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1eb8492a1f4432eb54e7333eb59cd14eb06335b9
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: b4ab0a7cf012d2230437bceb96da80c78a4b493a
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858504"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>モデルからアプリを生成し構成する
 モデルからアプリケーションのパーツを生成または構成できます。
@@ -22,7 +22,7 @@ ms.locfileid: "39176812"
  このモデルは、コードと比べて、要求をより直接的に表します。 アプリケーションの動作をモデルから直接派生させることで、コードを更新するよりも迅速かつ確実に、要求の変更に対応できます。 派生を設定するには特定の初期作業が必要ですが、要求の変更が予想される場合、または製品のバリエーションを複数予定している場合、この投資は取り戻すことができます。
 
 ## <a name="generating-the-code-of-your-application-from-a-model"></a>モデルからアプリケーション コードを生成する
- コードを生成する最も簡単な方法は、テキスト テンプレートを使用することです。 コードを生成するには、同じ[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション モデルを維持します。 詳細については次を参照してください:
+ コードを生成する最も簡単な方法は、テキスト テンプレートを使用することです。 モデルを保持している同じ Visual Studio ソリューションでコードを生成することができます。 詳細については次を参照してください:
 
 -   [T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 

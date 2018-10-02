@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 420a17dbac9e0a3bf10b4c92baa108067ad44949
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: cfd6188bc4d48f26e85ae8778d75d2fa99ef0f25
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859680"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
@@ -26,7 +26,7 @@ ms.locfileid: "43775582"
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>モデルおよび図へのアクセス
  依存関係図を読み取るには、まず Visual Studio を使用して、モデリング プロジェクトを開き、し、その中で図を開く必要があります。
 
- このため、依存関係図を読みたい場合も必要が作成されたモデリング プロジェクトへのアクセス。 これを行うには、[!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)] からプロジェクトにアクセスするか、プロジェクト ファイルのコピーを取得します。
+ このため、依存関係図を読みたい場合も必要が作成されたモデリング プロジェクトへのアクセス。 これを行うか、ソース管理からプロジェクトにアクセスするか、プロジェクト ファイルのコピーを取得します。
 
 > [!NOTE]
 >  これは、コードから生成されたコード マップおよび .NET クラス図には適用されません。 これらの図はモデリング プロジェクトとは関係なく表示できます。
@@ -53,7 +53,7 @@ ms.locfileid: "43775582"
 
  これらの変更は保存できます。 変更内容を他のユーザーに表示されるようにする場合は、送信しなければならない以上で、更新された **.layout**ファイル。
 
-##  <a name="RelatedTopics"></a> 関連トピック
+## <a name="RelatedTopics"></a> 関連トピック
 
 |Title|説明|
 |-----------|-----------------|
