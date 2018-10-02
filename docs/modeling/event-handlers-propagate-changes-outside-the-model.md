@@ -12,16 +12,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: eb9fb268ec98d60dcea46a8802592261493e4b56
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ab42f0a8b3dafebaf73c116e8ce3295d99ce6fdd
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859278"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 
-Visualization and Modeling SDK では、ストア以外の変数、ファイル、その他のストア、またはその他のモデルなど、ストアの外部リソースへの変更を反映するストア イベント ハンドラーを定義できます[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能。 ストア イベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア外の値を更新するため、最も役に立つします。 クラスにリッスンするように .NET のイベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。
+Visualization and Modeling SDK では、ストア以外の変数、ファイル、その他のストア、またはその他の Visual Studio 拡張機能でのモデルなど、ストアの外部リソースへの変更を反映するストア イベント ハンドラーを定義できます。 ストア イベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア外の値を更新するため、最も役に立つします。 クラスにリッスンするように .NET のイベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。
 
 グラフィカル サーフェイスおよびその他のユーザー インターフェイス コントロールは、ストア イベントで処理できる外部のリソースの例を示します。
 

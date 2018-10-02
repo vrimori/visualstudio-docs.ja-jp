@@ -9,15 +9,15 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b666a4870cccdd653ad77dc50a9096f1da17723d
-ms.sourcegitcommit: d7209d61e812b34d06c2aa267bdf50fbc714d0e0
+ms.openlocfilehash: aba2064ddac03f4370028a928469c7d2acee4850
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42623843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857939"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio アーキテクチャ ツーリング ガイダンス
 
 このアーキテクチャ ツー リング ガイダンスは、Visual Studio 2010 でのモデリング ツールの使用方法についての実用的なガイダンスのダウンロード可能なパッケージです。 統合では、すべてのモデリング ツールを使用する方法の概要を示し、ツールを使用する最も一般的なシナリオについて説明します。
 
-コンテンツの作成者、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ALM Rangers、特別なグループからメンバーを持つ、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]製品チーム、Microsoft のサービス、Microsoft Valued Professionals (Mvp)、および[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]コミュニティをリードです。
+コンテンツは、Visual Studio ALM Rangers、Visual Studio 製品チーム、Microsoft Services、Microsoft Valued Professionals (Mvp)、および Visual Studio コミュニティ潜在顧客からのメンバーを持つ特別なグループで作成されました。

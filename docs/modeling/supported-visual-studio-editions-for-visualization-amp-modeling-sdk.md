@@ -1,5 +1,5 @@
 ---
-title: 視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK
+title: 視覚化のサポートされている Visual Studio エディション&amp;Modeling SDK
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +11,22 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 004a6b75bb66ebf3c1797abac9c1cc6f7faa6eb9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 16a00dd5c0769cb49f5281570ba11433afa56dfe
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858861"
 ---
-# <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚エフェクトに対してサポートされている Visual Studio エディション&amp;モデリング SDK
-サポートされている Visual Studio のエディションの一覧は、次のとおり[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]オーサリングとデプロイ環境でします。 これらのエディションの詳細については、Microsoft を参照してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)です。
+# <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>視覚化のサポートされている Visual Studio エディション&amp;Modeling SDK
+サポートされている Visual Studio のエディションの一覧を以下に[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]オーサリングとデプロイ環境にします。 これらのエディションの詳細については、Microsoft Visual Studio を参照してください。[デベロッパー センター](http://go.microsoft.com/fwlink/?LinkId=75628)します。
 
 ## <a name="authoring-edition"></a>作成エディション
  DSL を定義するには、以下のコンポーネントをインストールしておく必要があります。
 
 |||
 |-|-|
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
+|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|
 |Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|
 |Visual Studio Visualization and Modeling SDK|[http://go.microsoft.com/fwlink/?LinkID=186128](http://go.microsoft.com/fwlink/?LinkID=186128)|
 
@@ -39,12 +39,12 @@ ms.locfileid: "31948195"
 
 -   Visual Studio Professional
 
--   Visual Studio Shell (integrated mode) 再頒布可能パッケージの再頒布可能パッケージ
+-   Visual Studio Shell (統合モード) 再頒布可能パッケージの再頒布可能パッケージ
 
 -   Visual Studio Shell (分離モード) 再頒布可能パッケージ
 
 > [!NOTE]
->  DSL シェル製品を実行することをするためには、設定する必要があります、 **VS エディションのサポートされている**拡張機能マニフェスト内のフィールドです。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)です。
+>  DSL を Shell 製品上で実行可能にするには、設定する必要があります、**サポートされている VS エディション**フィールドに、拡張機能マニフェストします。 詳細については、次を参照してください。[ドメイン固有言語ソリューションの配置](../modeling/deploying-domain-specific-language-solutions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

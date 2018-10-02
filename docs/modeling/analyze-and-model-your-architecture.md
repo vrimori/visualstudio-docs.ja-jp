@@ -32,38 +32,39 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be58a86ec6c3b87954ff5b5be012ce636ad52204
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 4ab47830d0d6f3c221d08f6869bd8efcbe5b4ff9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859719"
 ---
 # <a name="analyze-and-model-your-architecture"></a>アーキテクチャを分析およびモデルする
-アプリが Visual Studio アーキテクチャを使用するツールとモデリング ツールを設計およびアプリのモデルによってアーキテクチャの要件を満たしていることを確認してください。
+
+アプリは、Visual Studio のアーキテクチャを使用するツールとモデリング ツールを設計およびアプリのモデルでアーキテクチャの要件を満たしていることを確認します。
 
 * Visual Studio を使用してコードの構造、動作、および関係を視覚化することによって、既存のプログラム コードを容易に理解できるようになります。
 
-* アーキテクチャの依存関係を考慮し、必要でチームを教育します。
+* アーキテクチャの依存関係を考慮し、必要で、チームを教育します。
 
 * 開発プロセスの一部として、アプリケーション ライフサイクル全体においてさまざまな詳細レベルでモデルを作成できます。
 
-参照してください[シナリオ: 視覚化を使用するツールとモデリング デザインの変更](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)です。
+参照してください[シナリオ: 視覚化を使用して、モデリングおよびデザインの変更](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)します。
 
 ## <a name="to"></a>終了
 
 |||
 |-|-|
-|**コードの視覚化**:<br /><br /> -コード マップを作成することで、コードの編成や関係を参照します。 アセンブリ、名前空間、クラス、メソッドなどの間の依存関係を視覚化します。<br />-コードからクラス図を作成することで、クラス構造体と特定のプロジェクトのメンバーを参照します。<br />コードを検証する依存関係図を作成して、コードと設計の間の競合を検索します。|-   [コードの視覚化](../modeling/visualize-code.md)<br />-   [クラスとその他の種類 (クラス デザイナー) の使用](../ide/working-with-classes-and-other-types-class-designer.md)<br />-   [ビデオ: Visual Studio 2015 コード マップでコードが設計を理解します。](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />-   [ビデオ: リアルタイムで、アーキテクチャの依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
-|**アーキテクチャを定義する**:<br /><br /> -定義し、依存関係図を作成して、コードのコンポーネント間の依存関係の制約を適用します。|-   [ビデオ: Visual Studio (チャネル 9) とアーキテクチャの依存関係を検証します。](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**要求と、必要とされる設計を照らし合わせてシステムを検証する:**<br /><br /> アーキテクチャを記述する依存関係図でコードの依存関係を検証し、設計と競合する変更を防止します。|-   [ビデオ: Visual Studio (チャネル 9) とアーキテクチャの依存関係を検証します。](https://channel9.msdn.com/Events/Connect/2016/170)|
-|**モデルと図をカスタマイズする**:<br /><br /> -独自のドメイン固有言語を作成します。|-   [Visual Studio - ドメイン固有言語のモデリング SDK](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
-|**T4 テンプレートを使用してテキストを生成する**:<br /><br /> -テキスト ベースのファイルを生成するのに、テキスト ブロックとテンプレート内部制御ロジックを使用します。<br /> の Visual Studio に含まれる MSBuild で T4 テンプレート ビルド|-   [コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)|
-|**Team Foundation バージョン コントロールを使用してモデル、図、およびコード マップを共有する**:<br /><br /> -コード マップ、および配置するプロジェクトでは、Team Foundation バージョン管理下にある、依存関係図と共有できるようにします。| |
+|**コードの視覚化**:<br /><br /> -コード マップを作成して、コードの編成や関係を参照します。 アセンブリ、名前空間、クラス、メソッドなどの間の依存関係を視覚化します。<br />-コードからクラス ダイアグラムを作成して、クラスの構造と、特定のプロジェクト メンバーを参照します。<br />-コードを検証する依存関係図を作成して、コードと設計の間の競合を検索します。|-   [コードの視覚化](../modeling/visualize-code.md)<br />-   [クラスとその他の型 (クラス デザイナー) の使用](../ide/working-with-classes-and-other-types-class-designer.md)<br />-   [ビデオ: Visual Studio 2015 コード マップでコードから設計を理解します。](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)<br />-   [ビデオ: リアルタイムでアーキテクチャ依存関係を検証します。](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)|
+|**アーキテクチャを定義する**:<br /><br /> -定義し、依存関係図を作成して、コードのコンポーネント間の依存関係に制約を適用します。|-   [ビデオ: Visual Studio (チャネル 9) を使用したアーキテクチャの依存関係を検証します。](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**要求と、必要とされる設計を照らし合わせてシステムを検証する:**<br /><br /> 目的のアーキテクチャについて説明する依存関係図を使用したコードの依存関係を検証し、設計と競合する変更を防止します。|-   [ビデオ: Visual Studio (チャネル 9) を使用したアーキテクチャの依存関係を検証します。](https://channel9.msdn.com/Events/Connect/2016/170)|
+|**モデルと図をカスタマイズする**:<br /><br /> -独自のドメイン固有言語を作成します。|-   [Modeling SDK for Visual Studio - ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)|
+|**T4 テンプレートを使用してテキストを生成する**:<br /><br /> -テキスト ベースのファイルを生成するのにテキスト ブロックとテンプレートの内部制御ロジックを使用します。<br /> の Visual Studio に含まれる MSBuild で T4 テンプレートのビルド|-   [コードの生成と T4 テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)|
+|**Team Foundation バージョン コントロールを使用してモデル、図、およびコード マップを共有する**:<br /><br /> -共有できるようにコード マップ、プロジェクト、および Team Foundation バージョン管理下にある依存関係図を配置します。| |
 
-各機能をサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+各機能をサポートする Visual Studio のエディションを表示する、次を参照してください[アーキテクチャとモデリング ツールのエディションのサポート。](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)
 
-## <a name="types-of-models-and-typical-uses"></a>モデルの種類と一般的な使用方法
+## <a name="types-of-models-and-typical-uses"></a>モデルと一般的な使用法の種類
 
 ### <a name="code-maps"></a>コード マップ
 コード マップは、コードの編成や関係を理解するために役立ちます。
@@ -79,7 +80,7 @@ ms.locfileid: "33106961"
 -   [コード マップ アナライザーを使用して潜在的な問題を検索する](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
 ### <a name="dependency-diagram"></a>依存関係図
-依存関係の図では、レイヤーまたは明示的な依存関係があるブロックのセットとして、アプリケーションの構造を定義できます。 コード内の依存関係と依存関係図で説明された依存関係の競合を検出する検証を実行することができます。
+依存関係図を使用して、一連のレイヤーまたは明示的な依存関係を持つブロックとして、アプリケーションの構造を定義できます。 コード内の依存関係と依存関係図で説明されている依存関係の競合を検出する検証を行うことができます。
 
 **一般的な用途:**
 
@@ -110,5 +111,5 @@ DSL は、特定の目的のために設計する表記法です。 Visual Studi
 
 ## <a name="see-also"></a>関連項目
 
-- [新機能します。](../modeling/what-s-new-for-design-in-visual-studio.md)
+- [新機能](../modeling/what-s-new-for-design-in-visual-studio.md)
 - [DevOps とアプリケーション ライフ サイクル管理](http://msdn.microsoft.com/Library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)

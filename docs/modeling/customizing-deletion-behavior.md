@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5bc8ecdbbbed1d7d128a5102141c7130dcaef026
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: f7c05d76aa74e32695d20b2d5e9ed4f030e65813
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859810"
 ---
 # <a name="customizing-deletion-behavior"></a>削除動作のカスタマイズ
 通常、要素を削除すると、関連する要素も削除されます。 接続されたすべてのリレーションシップと子要素が削除されます。 この動作の名前は*削除の伝達*します。 削除の伝達をカスタマイズできます。たとえば、追加の関連要素を削除することを準備できます。 プログラム コードを作成して、モデルの状態に応じた削除の伝達を実現できます。 削除に応じて他の変更を発生させることもできます。
@@ -35,11 +35,11 @@ ms.locfileid: "43775776"
 
 -   [削除規則](#rules)-規則を使用して、1 つの変更が他のユーザーに生じる可能性があります、ストア内の任意の種類の更新を伝達します。
 
--   [削除イベント](#rules)-他の例に、ストア外の更新を伝達するストア イベントを使用して[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ドキュメント。
+-   [削除イベント](#rules)-他の Visual Studio ドキュメントの例に、ストア外の更新を伝達するストア イベントを使用します。
 
 -   [UnMerge](#unmerge) -UnMerge 操作を使用して、その親に子要素をアタッチしたマージ操作を元に戻します。
 
-##  <a name="default"></a> 既定の削除動作
+## <a name="default"></a> 既定の削除動作
  既定では、次の規則が削除の伝達を制御します。
 
 -   要素が削除された場合、埋め込まれたすべての要素も削除されます。 埋め込まれた要素は、この要素がソースである埋め込みリレーションシップのターゲットです。 埋め込みリレーションシップがある場合など**アルバム**に**曲**、特定のアルバムが削除されると、その曲をすべてはも削除されます。
@@ -52,7 +52,7 @@ ms.locfileid: "43775776"
 
 -   ソース ロールまたはターゲット ロールのいずれかで要素に接続されたすべてのリレーションシップは削除されます。 反対のロールの要素のロール プロパティには削除された要素が含まれなくなります。
 
-##  <a name="property"></a> ロールの削除伝達オプションの設定
+## <a name="property"></a> ロールの削除伝達オプションの設定
  削除によって参照リレーションシップに沿った伝達または埋め込まれた子から親への伝達を発生させることができます。
 
 #### <a name="to-set-delete-propagation"></a>削除の伝達を設定するには
@@ -77,7 +77,7 @@ ms.locfileid: "43775776"
 > [!NOTE]
 >  DSL 定義にプログラム コードを追加するで別のコード ファイルを作成、 **Dsl**プロジェクトし、生成されたコード フォルダー内のクラスを拡張する部分の定義を作成します。 詳細については、次を参照してください。[ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)します。
 
-##  <a name="closure"></a> 削除クロージャの定義
+## <a name="closure"></a> 削除クロージャの定義
  削除操作は、クラスを使用して_YourModel_**DeleteClosure**初期選択を指定を削除する要素を確認します。 これは `ShouldVisitRelationship()` および `ShouldVisitRolePlayer()` を繰り返し呼び出し、リレーションシップのグラフを検索します。 これらのメソッドをオーバーライドできます。 ShouldVisitRolePlayer はリンクおよびリンクのロールのいずれかにある要素の id で提供されます。 次のいずれかの値を返す必要があります。
 
 -   **VisitorFilterResult.Yes**- 要素を削除する必要があり、ウォーカーを続行するのには要素の他のリンク。
@@ -130,7 +130,7 @@ partial class MusicLibDeleteClosure
 
  ただし、この手法は削除がリレーションシップのグラフ内の隣にあるものにのみ影響することを仮定しています。この方法を使用してモデルの別の部分にある要素を削除することはできません。 削除に応じて要素を追加したり他の変更を実行したりする場合には使用できません。
 
-##  <a name="ondeleting"></a> OnDeleting および OnDeleted の使用
+## <a name="ondeleting"></a> OnDeleting および OnDeleted の使用
  ドメイン クラスまたはドメイン リレーションシップのいずれかで、`OnDeleting()` または `OnDeleted()` をオーバーライドできます。
 
 1.  <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A> は、要素が削除されようとしているときで、そのリレーションシップが切断されている前に呼び出されます。 まだ他の要素に対して移動可能で、`store.ElementDirectory` の中にあります。
@@ -197,7 +197,7 @@ partial class Artist
 
  要素で <xref:Microsoft.VisualStudio.Modeling.ModelElement.Delete%2A> を実行すると、OnDeleting および OnDeleted が呼び出されます。 これらのメソッドは常にインラインで実行 - は、直前に実際の削除後に。 作成するコードが複数の要素を削除する場合、それらのすべてで OnDeleting と OnDeleted が交互に呼び出されることになります。
 
-##  <a name="rules"></a> 削除規則とイベント
+## <a name="rules"></a> 削除規則とイベント
  OnDelete ハンドラーの代わりに、削除規則と削除イベントを定義できます。
 
 1.  **削除する**と**削除**および、Undo または Redo ではなく、トランザクションでのみ、ルールがトリガーされます。 それらを設定して、削除が実行されるトランザクションの最後に実行されるようにキューに配置できます。 Deleting 規則は常に、キューに配置されているすべての Deleted 規則の前に実行されます。
@@ -206,7 +206,7 @@ partial class Artist
 
      詳細については、次を参照してください。[ルール反映されるまで変更内で、モデル](../modeling/rules-propagate-changes-within-the-model.md)します。
 
-2.  **削除**ストア イベントは、トランザクションの最後に呼び出され、undo または redo の後に呼び出されます。 したがって、ファイル、データベース エントリ、または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内の他のオブジェクトなど、ストア外のオブジェクトに削除を伝達するために使用されます。
+2.  **削除**ストア イベントは、トランザクションの最後に呼び出され、undo または redo の後に呼び出されます。 ファイル、データベース エントリ、または Visual Studio の他のオブジェクトなど、ストア外のオブジェクトに削除を伝達するため使用できます。
 
      詳細については、次を参照してください。[イベント ハンドラー反映されるまで変更 Outside the モデル](../modeling/event-handlers-propagate-changes-outside-the-model.md)します。
 
@@ -287,7 +287,7 @@ partial class NestedShapesSampleDocData
 
 ```
 
-##  <a name="unmerge"></a> 結合の解除します。
+## <a name="unmerge"></a> 結合の解除します。
  子要素を親にアタッチする操作が呼び出された*マージ*します。 マージは、新しい要素または要素のグループがツールボックスから作成されたとき、またはモデルの別の部分から移動されたとき、またはクリップボードからコピーされたときに発生します。 マージ操作は親とその新しい子の間に埋め込みリレーションシップを作成するほか、追加のリレーションシップのセットアップ、補助的な要素の作成、および要素内のプロパティ値の設定も可能です。 マージ操作は要素マージ ディレクティブ (EMD) にカプセル化されています。
 
  EMD は補完的なもカプセル化*unmerge*または`MergeDisconnect`操作。 マージにより構築された要素のクラスターがある場合、残りの要素を一貫した状態のままにするには、関連する unmerge を使用して、そこから要素を削除することをお勧めします。 通常、unmerge 操作は前のセクションで説明している手法を使用します。
