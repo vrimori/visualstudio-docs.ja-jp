@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: da03087ae5f4b1e2e8044229ece5b8a6177c11ef
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 6a2388619dea31696fe4416032cc12cd1fe5b372
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860369"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 
@@ -68,19 +68,19 @@ DSL 定義を編集するために使用するデザイナーには、拡張機�
 
 ## <a name="test-and-deployment"></a>テストと展開
 
-このトピックでは、拡張機能のいずれかをテストするには、ビルドし、ソリューションを実行します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の実験用のインスタンスが開きます。 このインスタンスでは、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。
+このトピックでは、拡張機能のいずれかをテストするには、ビルドし、ソリューションを実行します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスでは、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。
 
-主に、拡張機能を展開する[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、他のコンピューターに次の手順に従います。
+メインの Visual Studio には他のコンピューターには、拡張機能を展開するには、次の手順を実行します。
 
 1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\*\\\*.vsix
 
 2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。
 
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能がインストールされていることを確認する拡張機能マネージャーを開きます。
+     拡張機能がインストールされていることを確認する Visual Studio 拡張機能マネージャーが開きます。
 
 拡張機能をアンインストールするには、次の手順を実行します。
 
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]の**ツール** メニューのをクリックして**拡張機能マネージャー**です。
+1.  Visual Studio での**ツール** メニューのをクリックして**拡張機能マネージャー**します。
 
 2.  拡張機能を選択して削除します。
 

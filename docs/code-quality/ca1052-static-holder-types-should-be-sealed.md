@@ -20,12 +20,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bc264b9e47fe9169c0b1ad9d3257323c437620f7
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 2c5d22db6a973947faf228e2e3844d63a916e24e
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45550428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859498"
 ---
 # <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: スタティック ホルダー型はシールされていなければなりません
 
@@ -43,7 +43,7 @@ ms.locfileid: "45550428"
  このルールでは、型が派生型でオーバーライド可能な機能を備えていないため、静的メンバーのみを含む型でを継承するように設計しないことを前提としています。 継承を意図していない型をマークする必要があります、`sealed`基本データ型としての使用を禁止する修飾子。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
- このルールの違反を修正するには、マークの種類は`sealed`します。 対象としている場合[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]型としてマークする方は、2.0 以降、`static`します。 この方法でクラスが作成されていることを防ぐために、プライベート コンス トラクターを宣言する必要があります。
+ このルールの違反を修正するには、マークの種類は`sealed`します。 .NET Framework 2.0 を対象としているまたは型としてマークする方は、後で、`static`します。 この方法でクラスが作成されていることを防ぐために、プライベート コンス トラクターを宣言する必要があります。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
  型が継承するように設計する場合にのみ、このルールから警告を抑制します。 ない場合、`sealed`修飾子が型が基本データ型として便利なことを示します。

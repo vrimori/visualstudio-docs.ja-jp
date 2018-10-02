@@ -1,5 +1,5 @@
 ---
-title: マネージ コードの警告に対応するコードの解析
+title: マネージド コードの警告に対応するコードの解析
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
@@ -17,15 +17,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c092543dc24be8ac84f683196f73c8fb264f9a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 600b5c7822232581cd01bd9bbf7616f4d1e9bb7c
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31919896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859069"
 ---
-# <a name="code-analysis-for-managed-code-warnings"></a>マネージ コードの警告に対応するコードの解析
-マネージ コード分析ツールには、マネージ コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージ コード分析規則の違反がわかります。 ここでは、マネージ コード分析の各警告について、詳細な説明と例を紹介します。
+# <a name="code-analysis-for-managed-code-warnings"></a>マネージド コードの警告に対応するコードの解析
+マネージド コード分析ツールには、マネージド コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージド コード分析規則の違反がわかります。 ここでは、マネージド コード分析の各警告について、詳細な説明と例を紹介します。
 
  次の表に、各警告で示される情報の種類を示しています。
 
@@ -35,7 +35,7 @@ ms.locfileid: "31919896"
 |CheckId|規則の一意の識別子。 CheckId とカテゴリは、ソース内で警告の省略表記として使用されます。|
 |カテゴリ|警告のカテゴリ。|
 |互換性に影響する変更点|規則違反を修正することが、互換性に影響する変更点かどうかを示します。 互換性に影響する変更点とは、違反の原因となった対象に対して依存関係を持つアセンブリが、新たに修正したバージョンで再コンパイルされないこと、または変更によって実行時にエラーになる可能性があることを示します。 複数の修正を適用でき、互換性に影響する変更点があるものとないものがある場合、"あり" と "なし" を併記しています。|
-|原因|規則に従って警告が生成される原因になった特定のマネージ コード。|
+|原因|規則に従って警告が生成される原因になった特定のマネージド コード。|
 |説明|警告の背景にある問題について説明します。|
 |違反の修正方法|規則に適合し、警告が生成されないようにソース コードを変更する方法について説明します。|
 |警告を抑制する状況|規則による警告を抑制しても安全な場合について説明します。|
@@ -46,17 +46,17 @@ ms.locfileid: "31919896"
 
 |||
 |-|-|
-|[警告を Checkid 別](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|すべての警告を CheckId 別に一覧表示します。|
+|[警告 (CheckId 別)](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|すべての警告を CheckId 別に一覧表示します。|
 |[暗号化警告](../code-quality/cryptography-warnings.md)|暗号化の適切な使用によって、より安全なライブラリとアプリケーションをサポートする警告です。|
-|[デザインの警告](../code-quality/design-warnings.md)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] デザイン ガイドラインで規定されている、適切なライブラリ デザインをサポートする警告です。|
+|[デザインの警告](../code-quality/design-warnings.md)|.NET Framework デザイン ガイドラインで指定された適切なライブラリの設計をサポートする警告です。|
 |[グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)|国際対応ライブラリおよびアプリケーションをサポートする警告です。|
 |[相互運用性の警告](../code-quality/interoperability-warnings.md)|COM クライアントとの相互作用をサポートする警告です。|
 |[保守性の警告](../code-quality/maintainability-warnings.md)|ライブラリとアプリケーションの保守をサポートする警告です。|
 |[Mobility Warnings](../code-quality/mobility-warnings.md)|電力の効率的な使用をサポートする警告です。|
-|[名前付けに関する警告](../code-quality/naming-warnings.md)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] デザイン ガイドラインの名前付け規則の順守をサポートする警告です。|
+|[名前付けに関する警告](../code-quality/naming-warnings.md)|.NET Framework デザイン ガイドラインの名前付け規則への準拠をサポートする警告です。|
 |[パフォーマンスに関する警告](../code-quality/performance-warnings.md)|高パフォーマンスのライブラリとアプリケーションをサポートする警告です。|
 |[Portability Warnings](../code-quality/portability-warnings.md)|異なるプラットフォーム間の移植性をサポートする警告です。|
 |[信頼性の警告](../code-quality/reliability-warnings.md)|メモリやスレッドの適切な使用など、ライブラリとアプリケーションの信頼性をサポートする警告です。|
 |[セキュリティの警告](../code-quality/security-warnings.md)|より安全なライブラリとアプリケーションをサポートする警告です。|
-|[使用法に関する警告](../code-quality/usage-warnings.md)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]の適切な使用をサポートする警告です。|
+|[使用法に関する警告](../code-quality/usage-warnings.md)|.NET Framework の適切な使用をサポートする警告です。|
 |[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|チェックインにおいてコード分析ポリシーに適合しない場合に発生するエラーです。|

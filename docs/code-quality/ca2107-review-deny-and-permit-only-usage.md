@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ef4857b88c6e18b83cdc0e43bb1b8cf031221f4
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 153077e7231aba485b6f8e08efcf5e6d5752b89a
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45550113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859329"
 ---
 # <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Deny と PermitOnly の用法を再確認します
 |||
@@ -35,7 +35,7 @@ ms.locfileid: "45550113"
  メソッドには、PermitOnly または Deny セキュリティ アクションを指定するセキュリティ チェックが含まれています。
 
 ## <a name="rule-description"></a>規則の説明
- <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>セキュリティ アクションは、高度な知識を持つユーザーだけが使用する必要がありますの[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]セキュリティ。 コードにこのセキュリティ アクションを使用する場合、セキュリティを再確認する必要があります。
+ <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>セキュリティ アクションは、.NET Framework のセキュリティの高度な知識を持つユーザーだけが使用する必要があります。 コードにこのセキュリティ アクションを使用する場合、セキュリティを再確認する必要があります。
 
  拒否するセキュリティの要求に対する応答で発生するスタック ウォークの既定の動作を変更します。 コール スタックに呼び出し元の実際のアクセス許可に関係なく、拒否、メソッドの実行中に許可する必要がありますアクセス許可を指定できます。 場合は、スタック ウォークが Deny で保護されているメソッドを検出し、要求されたアクセス許可が拒否されたアクセス許可に含まれる場合、スタック ウォークが失敗します。 PermitOnly には、スタック ウォークの既定の動作も変更します。 これにより、コード、呼び出し元のアクセス許可に関係なく、付与できるアクセス許可のみを指定できます。 場合は、スタック ウォーク PermitOnly で保護されているメソッドを検出して、PermitOnly で指定されているアクセス許可では、要求されたアクセス許可が含まれていない、スタック ウォークが失敗します。
 

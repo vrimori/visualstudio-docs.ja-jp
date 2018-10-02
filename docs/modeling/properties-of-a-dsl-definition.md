@@ -11,38 +11,38 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: be119703868316f2335f06174c9f21c2dddd2edc
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a2f919e1dce6864fa25348acd9c9858f9e4022f8
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857704"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 定義のプロパティ
-DslDefinition プロパティ定義*ドメイン固有言語*バージョン番号などのプロパティを定義します。 DslDefinition プロパティに表示されます、**プロパティ**ウィンドウで、ダイアグラムの空いている領域をクリックすると、*ドメイン固有言語デザイナー*です。
+DslDefinition プロパティ定義*ドメイン固有言語*バージョン番号などのプロパティを定義します。 DslDefinition プロパティに表示されます、**プロパティ**ウィンドウでは、図の空いている領域をクリックすると、*ドメイン固有言語デザイナー*します。
 
- 詳細については、次を参照してください。[ドメイン固有言語の定義方法](../modeling/how-to-define-a-domain-specific-language.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。
+ 詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。
 
- DslDefinition では、次の表に、プロパティがあります。
+ DslDefinition は次の表にプロパティを持ちます。
 
 |プロパティ|説明|既定値|
 |--------------|-----------------|-------------|
-|アクセス修飾子|ドメイン クラスのアクセス修飾子がパブリックまたは内部かを判断します。|public|
-|カスタム属性|カスタムは、ドメイン クラスの属性を定義します。<br /><br /> **注**属性を追加する [参照] ボタンを使用します。|\<なし >|
-|会社名|システム レジストリの現在の会社名の名前。|現在の会社名|
+|アクセス修飾子|ドメイン クラスのアクセス修飾子が public か internal かを判断します。|public|
+|カスタム属性|カスタムでは、ドメイン クラスに属性を定義します。<br /><br /> **注**属性を追加する参照ボタンを使用します。|\<なし >|
+|会社名|現在の会社名、システム レジストリの名前。|現在の会社名|
 |名前|このドメイン クラスの名前。|現在の名前|
-|名前空間|名前空間は、このドメイン クラスに関連付けます。|現在の名前空間|
-|パッケージ Guid|Guid、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]この DSL に対して生成されるパッケージ。|\<なし >|
-|パッケージ Namespace|名前空間を[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]この DSL に対して生成されるパッケージ。|\<なし >|
-|製品名|登録される製品の名前、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]この DSL に対して生成されるパッケージ。|\<なし >|
+|名前空間|このドメイン クラスに関係する、名前空間。|現在の名前空間|
+|パッケージ Guid|この DSL 用に生成された Visual Studio パッケージの guid。|\<なし >|
+|パッケージの Namespace|この DSL 用に生成された Visual Studio パッケージの名前空間。|\<なし >|
+|製品名|この DSL 用に生成された Visual Studio パッケージを登録する製品の名前。|\<なし >|
 |メモ|このドメイン クラスに関連するメモします。|\<なし >|
 |説明|このドメイン クラスの説明です。|\<なし >|
-|表示名|このドメイン クラスの生成されたデザイナーで表示される名前です。|\<なし >|
+|表示名|このドメイン クラスの生成されたデザイナーに表示される名前です。|\<なし >|
 |ヘルプ キーワード|このドメイン クラスに関連付けられているヘルプ キーワード。|\<なし >|
-|ビルド|このドメイン固有言語定義のインクリメンタル ビルド番号です。|0|
+|ビルド|このドメイン固有言語定義のインクリメンタル ビルド番号。|0|
 |メジャー バージョン|このドメイン固有言語定義の増分のメジャー ビルド番号。|1|
-|マイナー バージョン|このドメイン固有言語定義の増分のマイナー ビルド番号です。|0|
-|リビジョン|増分のリビジョンは、このドメイン固有言語定義の数をビルドします。|0|
+|マイナー バージョン|このドメイン固有言語定義の増分のマイナー ビルド番号。|0|
+|リビジョン|増分のリビジョンは、このドメイン固有言語定義の番号をビルドします。|0|
 
 ## <a name="see-also"></a>関連項目
 
