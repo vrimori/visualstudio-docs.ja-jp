@@ -30,12 +30,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a1c98007c968f12e220c0fef841e7680f299f7
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: a99899f9a909ead3db7d925cd703612a7f68bcf2
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858707"
 ---
 # <a name="map-methods-on-the-call-stack-while-debugging-in-visual-studio"></a>Visual Studio でデバッグを行うときの呼び出し履歴に対するメソッドのマップ
 デバッグ中に呼び出し履歴を視覚的にトレース コード マップを作成します。 コメントをマップに追加することでバグの発見に重点を置いてコードの動作を追跡できます。
@@ -66,7 +66,7 @@ ms.locfileid: "36283195"
 
  コマンドとコード マップを使用する場合に使用できる操作の詳細については、次を参照してください。[参照およびコード マップの再配置](../modeling/browse-and-rearrange-code-maps.md)します。
 
-##  <a name="MapStack"></a> 呼び出し履歴でマップします。
+## <a name="MapStack"></a> 呼び出し履歴でマップします。
 
 1.  デバッグを開始します。 (キーボード: **F5**)
 
@@ -80,17 +80,17 @@ ms.locfileid: "36283195"
 
      デバッグを継続している間、マップは自動的に更新されます。 参照してください[次の呼び出し履歴でマップを更新](#UpdateMap)します。
 
-##  <a name="MakeNotes"></a> コードに関するメモを作成します。
+## <a name="MakeNotes"></a> コードに関するメモを作成します。
  コードで何が起こっているかを追跡するためにコメントを追加します。 コメントで新しい行を追加するキーを押して**shift + return**します。
 
  ![コード マップの呼び出し履歴にコメントを追加](../debugger/media/debuggermap_addcomment.png)
 
-##  <a name="UpdateMap"></a> 次の呼び出し履歴でマップを更新
+## <a name="UpdateMap"></a> 次の呼び出し履歴でマップを更新
  アプリを次のブレークポイントまで実行するか、関数にステップ インします。 マップに新しい呼び出し履歴が追加されます。
 
  ![次の呼び出し履歴でコード マップを更新](../debugger/media/debuggermap_addclearcallstack.png)
 
-##  <a name="AddRelatedCode"></a> マップに関連するコードを追加します。
+## <a name="AddRelatedCode"></a> マップに関連するコードを追加します。
  作成できたマップ - どのような横でしょうか。 C# または Visual Basic で作業している場合は、フィールド、プロパティ、およびコードで何が起こっているかを追跡するために、他の方法などの項目を追加します。
 
  メソッドのコード定義を表示するには、そのメソッドをダブルクリックするか、そのメソッドのショートカット メニューを使用します。 (キーボード: マップとキーを押してでメソッドを選択**F12**)
@@ -114,7 +114,7 @@ ms.locfileid: "36283195"
 
  ![呼び出し履歴コード マップのフィールドを使用するメソッド](../debugger/media/debuggermap_foundallreferences.png)
 
-##  <a name="FindBugs"></a> マップを使用してバグを見つける
+## <a name="FindBugs"></a> マップを使用してバグを見つける
  コードの視覚化はバグをよりすばやく見つけるために役立ちます。 たとえば、描画プログラムでバグを調査するいるとします。 直線を描画して元に戻そうとしても、別の直線を描画するまで何も起こりません。
 
  そのため、`clear`、`undo`、および `Repaint` メソッドにブレークポイントを設定し、デバッグを開始して、次のようなマップを作成します。
@@ -127,7 +127,7 @@ ms.locfileid: "36283195"
 
  ![コード マップの呼び出し履歴に新しいメソッド呼び出しを追加](../debugger/media/debuggermap_addnewcallforrepaint.png)
 
-##  <a name="QA"></a> Q & A
+## <a name="QA"></a> Q & A
 
 -   **すべての呼び出しは、マップに表示されます。その理由を教えてください。**
 
@@ -159,7 +159,7 @@ ms.locfileid: "36283195"
 
 -   **マップを他のユーザーと共有できますか。**
 
-     マップをエクスポートし、Microsoft Outlook があれば、他のユーザーに送信できます。または、マップを独自のソリューションに保存し、Team Foundation バージョン管理にチェックインできます。
+     マップをエクスポート、Microsoft Outlook、またはソース管理にチェックインすることができますので、ソリューションに保存した場合は、他のユーザーに送信できます。
 
      ![呼び出し履歴コード マップを他のユーザーと共有](../debugger/media/debuggermap_sharewithothers.png)
 

@@ -9,15 +9,15 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a0d17249ad15a8d5efd7717420a8b6a94115509f
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 6567be5a82d4b344b3850a1a66e0b5b23f1b8f9d
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859095"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
-不変性 API、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK のロックの一部またはすべてのドメイン固有言語 (DSL) モデルをプログラムを保存できるため、読み取りが変更されていないことができます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。
+Visual Studio Visualization and Modeling SDK の不変性 API は、読み取りが変更されていないことができるように、ドメイン固有言語 (DSL) モデルの一部またはすべてをロックするプログラムを使用できます。 この読み取り専用オプションされる可能性があります、たとえば、ユーザーが仕事仲間の注釈を付け、DSL モデルを確認するように依頼できますが、元の変更を禁止することができますようにします。
 
  さらに、作成者は、DSL の定義、*ロック ポリシー。* ロックのポリシーは、どのロックが許可されている、許可されない、または必須を定義します。 たとえば、DSL を発行するときに、サード パーティの開発者に新しいコマンドでは拡張をお勧めすることができます。 モデルの指定した部分の読み取り専用の状態を変更することを防ぐためにロック ポリシーを使用することもできます。
 

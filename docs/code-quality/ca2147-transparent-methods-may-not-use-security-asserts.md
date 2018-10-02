@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b2dc7b322d6a1e812e88930f1586458ac892249b
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: ca9047866b5b8f030ee8e1f5a043683234edeb72
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859537"
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: 透過コードは、セキュリティ アサートを使用してはならない
 |||
@@ -40,7 +40,7 @@ ms.locfileid: "45549800"
 
  実行時に、すべての呼び出しに<xref:System.Security.CodeAccessPermission.Assert%2A>transparent コードから発生、<xref:System.InvalidOperationException>がスローされます。 これは、両方の 100% 透過的なアセンブリと透過的/クリティカルの混在のアセンブリ、メソッドまたは型が透過的な場合は、宣言されているが、宣言的または強制的 Assert が含まれていますに発生することができます。
 
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 という機能が導入*透明度*します。 個々 のメソッド、フィールド、インターフェイス、クラス、および種類は、transparent または重要なのかを指定できます。
+ .NET Framework 2.0 には、という名前の機能が導入されました。*透明度*します。 個々 のメソッド、フィールド、インターフェイス、クラス、および種類は、transparent または重要なのかを指定できます。
 
  透過的なコードは、セキュリティ特権の昇格は許可されません。 そのため、許可または要求されるアクセス許可は自動的にコードに渡さ呼び出し元またはホスト アプリケーション ドメイン。 昇格の例には、アサート、LinkDemands、SuppressUnmanagedCode、および`unsafe`コード。
 

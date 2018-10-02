@@ -12,42 +12,40 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3aa9a3157731d70971d15c514a088af761360848
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7210a5c156b779b9064f72db9cab5445d0ce20c3
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858355"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>モデルおよびエクスポート ダイアグラムの共有
 Visual Studio では、いくつかの方法でモデルと図を同僚と共有できます。
 
- この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ この機能をサポートする Visual Studio のエディションを確認するを参照してください。 [Edition のサポート アーキテクチャとモデリング ツール](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
 ## <a name="working-on-a-model-as-a-team"></a>チームとしてのモデルの操作
- Visual Studio のユーザーでは、作成でき、モデル、図の依存関係、および有向グラフを編集することができます。
+ Visual Studio のユーザーを作成し、モデル、依存関係図、および有向グラフを編集できます。
 
  別のユーザーは、モデルを同時に作業できますが、別のパッケージで作業する必要があります。
 
- [!INCLUDE[esprscc](../code-quality/includes/esprscc_md.md)] を使用することをお勧めします。
-
- 中規模または大規模プロジェクト内のモデルの整理に関するヒントについては、次を参照してください。[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)です。
+ 中規模または大規模プロジェクトでモデルの整理に関するヒントについては、次を参照してください。[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)します。
 
 ## <a name="reading-and-reviewing-models"></a>モデルの読み取りと確認
- (モデルを作成することはできません) を Visual Studio の一部のバージョンを使用してチーム メンバーは、モデリング図、有向グラフは、モデルを読み取ることができますが、編集はできません。  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ (これは、モデルを作成することはできません)、Visual Studio の一部のバージョンを使用してチーム メンバーは、図、および有向グラフをモデリング、モデルを読み取ることができますが、編集はできません。  この機能をサポートする Visual Studio のエディションを確認するを参照してください。 [Edition のサポート アーキテクチャとモデリング ツール](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
- 依存関係のダイアグラムが作成されたモデル内でのみ開くことができます。 このため、図にアクセスするには、すべてのモデリング プロジェクト ファイルまたはそのコピーへのアクセスを提供する必要があります。
+ 作成されたモデル内でのみ依存関係図を開くことができます。 このため、図にアクセスするには、すべてのモデリング プロジェクト ファイルまたはそのコピーへのアクセスを提供する必要があります。
 
- 詳細については、次を参照してください。[他の Visual Studio のエディションでモデルおよびダイアグラムを読み取る](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md)です。
+ 詳細については、次を参照してください。[他の Visual Studio のエディションでモデルおよびダイアグラムを読み取る](../modeling/read-models-and-diagrams-in-other-visual-studio-editions.md)します。
 
 ## <a name="using-diagrams-in-documents-and-presentations"></a>ドキュメントとプレゼンテーションでの図の使用
  図の一部をドキュメントやプレゼンテーションにコピーすることができます。 また、図を XPS ファイルなどに出力することもできます。
 
- 詳細については、次を参照してください。[イメージとしてダイアグラムをエクスポート](../modeling/export-diagrams-as-images.md)です。
+ 詳細については、次を参照してください。[ダイアグラムをイメージとしてエクスポート](../modeling/export-diagrams-as-images.md)します。
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)|大規模または中規模のプロジェクトでモデルを共有します。|
 |[イメージとしてダイアグラムをエクスポートする](../modeling/export-diagrams-as-images.md)|図の一部を PowerPoint や Word などのアプリケーションにコピーすることも、図 を XPS ファイルに出力することもできます。|
