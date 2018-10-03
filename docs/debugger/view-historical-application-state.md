@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e5b49e5659787420c90fb708f21b2810bb56fea1
-ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
+ms.openlocfilehash: 85b34fd85e8449949bb1e96efc1dd79aacbc1bd9
+ms.sourcegitcommit: 1c675dae7c348defb32d9f7ccf7079a1062a1c4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46542603"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48243953"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio の IntelliTrace ステップ バックを使用して前のアプリ状態を調べる
 
@@ -106,6 +106,8 @@ IntelliTrace イベントのみのモードでは、デバッガーのステッ�
 * Windows 10 Fall Creators Update (RS3) よりも古い Windows のバージョンの IntelliTrace イベントとスナップショット モードを使用している場合、およびアプリケーションのデバッグ プラットフォーム ターゲットを x86 に設定されている場合は、IntelliTrace はスナップショットを取得しません。
 
     回避策:
+    * お客様が Windows 10 Anniversary Update (RS1) にあり、10.0.14393.2273、バージョンを下回る場合[インストール KB4103720](https://support.microsoft.com/help/4103720/windows-10-update-kb4103720)します。 
+    * お客様が Windows 10 Creators Update (RS2) にあり、10.0.15063.1112、バージョンを下回る場合[インストール KB4103722](https://support.microsoft.com/help/4103722/windows-10-update-4103722)します。
     * インストールまたは Windows 10 Fall Creators Update (RS3) にアップグレードします。 
     * 別の方法として。 
         1. Visual Studio インストーラーからデスクトップ (x86、x64) コンポーネント用の VC++ 2015.3 v140 ツールセットをインストールします。
