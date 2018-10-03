@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4d5ecf02822ee0e96ffff7a4835c7ef10c06b86
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: a98edacd71132e9290cb339f3b3741a0afc25888
+ms.sourcegitcommit: e7b3fc8c788fb49d6ba4215abf27139f2a08e1a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39497406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120437"
 ---
 # <a name="get-started-with-source-control-vspackages"></a>ソース管理 Vspackage を概要します。
-ソース管理 VSPackage は、ソース管理プラグインをより高度な代替です。 ソース管理プラグインの詳細については、[ソース管理プラグインの作成] を参照してください (../../extensibility/internals/creating-a-source-control-plug-in.md です。 ソース管理 VSPackage は、ソース管理モデル、機能、およびユーザー インターフェイス (UI) を完全に制御を有効にしに統合される、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage として環境。  
+ソース管理 VSPackage は、ソース管理プラグインをより高度な代替です。 ソース管理プラグインの詳細については、次を参照してください。[ソース管理プラグインを作成する](../../extensibility/internals/creating-a-source-control-plug-in.md)します。 ソース管理 VSPackage は、ソース管理モデル、機能、およびユーザー インターフェイス (UI) を完全に制御を有効にしに統合される、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage として環境。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ソース管理 VSPackage を実装するかどうかを決定します。](../../extensibility/internals/determining-whether-to-implement-a-source-control-vspackage.md)  
