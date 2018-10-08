@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio for Mac の概要
 description: この記事では Visual Studio for Mac の機能を紹介します
 author: conceptdev
@@ -40,7 +40,7 @@ Visual Studio for Mac でクロスプラットフォーム アプリケーショ
 
 ### <a name="f"></a>F#
 
-F# は、.NET 上で実行するように設計されている、厳密に型指定されたプログラミング言語です。 Visual Studio for Mac ユーザーが Android、Mac、および iOS で使用するプログラミング言語として提供されています。 F# の使用方法と F# で作成されたサンプルについては、[F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) ガイドを参照してください。
+F# は、.NET 上で実行するように設計されている、厳密に型指定されたプログラミング言語です。 Visual Studio for Mac ユーザーが Android、Mac、および iOS で使用するプログラミング言語として提供されています。F# の使用方法と F# で作成されたサンプルについては、[F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) ガイドを参照してください。
 
 ## <a name="platform-support"></a>プラットフォームのサポート
 
@@ -79,7 +79,7 @@ Android Designer の詳細については、[Designer の概要](https://develop
 
 ### <a name="ios"></a>iOS
 
-iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib ファイルおよび Storyboard ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
+iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib ファイルおよび Storyboard ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
 
 ![iOS Storyboard デザイナー](media/intro-image30.png)
 
