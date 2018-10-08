@@ -9,16 +9,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 74e4f806c6f2faeeddfc2cc13917a6b5275b1b48
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 260a1fdb78f1a9acf72a9789f12d7024cafe0c93
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859199"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 
-ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 ドラッグ アンド ドロップやダブルクリック ハンドラーと呼ばれる、*ジェスチャ ハンドラー*します。
+ユーザーは、他の図から、または Visual Studio の他の部分を図の項目をドラッグできるように、DSL にドラッグ アンド ドロップのイベントのハンドラーを追加できます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 ドラッグ アンド ドロップやダブルクリック ハンドラーと呼ばれる、*ジェスチャ ハンドラー*します。
 
 このトピックでは他の図で発生するドラッグ アンド ドロップ ジェスチャを説明します。 単一の図内の移動イベントとコピー イベントについては、`ElementOperations` のサブクラスを定義するという代替策を検討してください。 詳細については、次を参照してください。[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)します。 DSL 定義をカスタマイズすることもできます。
 

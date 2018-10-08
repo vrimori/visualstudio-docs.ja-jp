@@ -21,12 +21,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bd26eecb1fba0aea266daf26eb071b8c29165ec
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 8716a16ea3b141e7c5053e526d92531d0a77bc1e
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45546760"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859407"
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: ローカライズされたパラメーターとしてリテラルを渡さないでください
 
@@ -38,7 +38,7 @@ ms.locfileid: "45546760"
 |互換性に影響する変更点|中断なし|
 
 ## <a name="cause"></a>原因
- メソッドを文字列リテラルをパラメーターとして渡しコンス トラクターまたはメソッドに、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリおよびローカライズ可能な文字列である必要があります。
+ メソッド、文字列リテラルをパラメーターとして渡しコンス トラクターまたはメソッドで、.NET Framework クラス ライブラリと、その文字列はローカライズ可能にする必要があります。
 
  パラメーターまたはプロパティにリテラル文字列が値として渡され、1 つ以上の次の場合は true、この警告が発生します。
 

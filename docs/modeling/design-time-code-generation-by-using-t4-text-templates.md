@@ -17,22 +17,22 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4bc2b55e0e287caea0db0c5fcdabccf454be0154
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: abb606712365108c869ee0cfe705359ad6064228
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860408"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
-デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。
+デザイン時 T4 テキスト テンプレートでは、Visual Studio プロジェクトでプログラム コードやその他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルは、ファイルまたはアプリケーションの要件に関する重要な情報を含むデータベースです。
 
  たとえば、ワークフローをテーブルまたは図として定義したモデルがあるとします。 このモデルから、ワークフローを実行するソフトウェアを生成できます。 ユーザーの要件を変更する場合は、ユーザーに新しいワークフローに簡単です。 ワークフローからコードを再生成すると、コードを手動で更新するよりも信頼性が高まります。
 
 > [!NOTE]
 >  A*モデル*はアプリケーションの特定の側面を説明するデータ ソースです。 モデルはどのような形式でもかまいません。あらゆる種類のファイルまたはデータベースを使用できます。 UML モデルやドメイン固有言語モデルなどの特定の形式である必要はありません。 標準的なモデルの形式は、テーブルまたは XML ファイルです。
 
- コード生成は決して新しい概念ではありません。 内のリソースを定義するとき、 **.resx**ファイル、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ソリューション、クラスとメソッドのセットが自動的に生成されます。 リソースの編集は、クラスやメソッドを直接編集するよりも、リソース ファイルで行った方がはるかに簡単で確実です。 同様に、テキスト テンプレートを使用すると、独自に設計したソースからコードを生成することができます。
+ コード生成は決して新しい概念ではありません。 内のリソースを定義するとき、 **.resx** Visual Studio ソリューション、クラスとメソッドのセット内のファイルが自動的に生成されます。 リソースの編集は、クラスやメソッドを直接編集するよりも、リソース ファイルで行った方がはるかに簡単で確実です。 同様に、テキスト テンプレートを使用すると、独自に設計したソースからコードを生成することができます。
 
  テキスト テンプレートには、生成するテキストと、テキストの可変部分を生成するプログラム コードの組み合わせが含まれます。 プログラム コードにより、生成されるテキストの一部を繰り返したり、条件に従って省略したりできるようになります。 生成されるテキスト自体を、アプリケーションの一部となるプログラム コードにすることもできます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "39567234"
 
 #### <a name="to-create-a-design-time-t4-template-in-visual-studio"></a>Visual Studio でデザイン時 T4 テンプレートを作成するには
 
-1.  作成、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト、または、既存のものを開きます。
+1.  Visual Studio プロジェクトを作成するか、既存のものを開きます。
 
      たとえば、上、**ファイル**] メニューの [選択**新規** > **プロジェクト**します。
 
@@ -77,15 +77,15 @@ ms.locfileid: "39567234"
 ### <a name="regenerating-the-code"></a>コードの再生成
  次のいずれかの場合に、テンプレートが実行され、従属ファイルが生成されます。
 
--   テンプレートを編集した後、フォーカスを別の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ウィンドウに切り替えたとき。
+-   テンプレートを編集し、別の Visual Studio ウィンドウにフォーカスを変更します。
 
 -   テンプレートを保存したとき。
 
--   クリックして**すべてのテンプレートの変換**で、**ビルド**メニュー。 この場合、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内のすべてのテンプレートが変換されます。
+-   クリックして**すべてのテンプレートの変換**で、**ビルド**メニュー。 これは、Visual Studio ソリューション内のすべてのテンプレートを変換します。
 
 -   **ソリューション エクスプ ローラー**、いずれかのショートカット メニューを選択して、ファイル**カスタム ツールの実行**します。 この方法は、複数のテンプレートを選択して変換する場合に使用します。
 
- 読み取り先のデータ ファイルが変更されたときにテンプレートが実行されるよう、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトを設定することもできます。 詳細については、次を参照してください。[コードを自動的に再生成](#Regenerating)します。
+ 読み取ることがデータ ファイルが変更されたときにテンプレートが実行できるように、Visual Studio プロジェクトの設定もできます。 詳細については、次を参照してください。[コードを自動的に再生成](#Regenerating)します。
 
 ## <a name="generating-variable-text"></a>可変テキストを生成する
  テキスト テンプレートから生成されるファイルのコンテンツは、プログラム コードを使用して変化させることができます。
@@ -220,7 +220,7 @@ ms.locfileid: "39567234"
 <#@ import namespace="System.IO" #>
 ```
 
- `assembly` ディレクティブでアセンブリを指定することによって、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクトの [参照設定] セクションに表示されるアセンブリと同じように、指定されたアセンブリにテンプレート コードからアクセスすることができます。 System.dll への参照を含める必要はありません。System.dll は自動的に参照されます。 `import` ディレクティブの効果は、完全修飾名を使用せずに型を指定できるようになることです。通常のプログラム ファイルで `using` ディレクティブを使用した場合と同様です。
+ `assembly`ディレクティブは、Visual Studio プロジェクトの参照」セクションと同じ方法で指定したアセンブリをテンプレート コードで利用できるようにします。 System.dll への参照を含める必要はありません。System.dll は自動的に参照されます。 `import` ディレクティブの効果は、完全修飾名を使用せずに型を指定できるようになることです。通常のプログラム ファイルで `using` ディレクティブを使用した場合と同様です。
 
  インポートした後は、たとえば、 **System.IO**を記述できます。
 
@@ -274,8 +274,8 @@ ms.locfileid: "39567234"
 
  `this.Host` (VB の場合は `Me.Host`) の型は、`Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost` です。
 
-### <a name="getting-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] からデータを取得する
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で提供されるサービスを使用するには、`hostSpecific` 属性を設定し、`EnvDTE` アセンブリを読み込みます。 その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。 次に例を示します。
+### <a name="getting-data-from-visual-studio"></a>Visual Studio からのデータの取得
+ Visual Studio で提供されるサービスを使用する設定、`hostSpecific`属性と負荷、`EnvDTE`アセンブリ。 その後、IServiceProvider.GetCOMService() を使用して、DTE などのサービスにアクセスできます。 次に例を示します。
 
 ```scr
 <#@ template hostspecific="true" language="C#" #>
@@ -293,8 +293,8 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 >  テキスト テンプレートは独自のアプリ ドメインで実行され、サービスはマーシャリングによってアクセスされます。 この状況では、GetCOMService() は GetService() よりも信頼性が高くなります。
 
-##  <a name="Regenerating"></a> コードを自動的に再生成
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューションには、1 つの入力モデルを使用して複数のファイルを生成するのが一般的です。 各ファイルはそれぞれ対応するテンプレートから生成されますが、すべてのテンプレートは同じモデルを参照します。
+## <a name="Regenerating"></a> コードを自動的に再生成
+ 通常、1 つの入力モデルでは、Visual Studio ソリューションでいくつかのファイルが生成されます。 各ファイルはそれぞれ対応するテンプレートから生成されますが、すべてのテンプレートは同じモデルを参照します。
 
  ソース モデルが変更された場合は、ソリューションのすべてのテンプレートを再度実行する必要があります。 これを手動では、次のように選択します。**すべてのテンプレートの変換**上、**ビルド**メニュー。
 
@@ -314,19 +314,19 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
  詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)します。
 
 ## <a name="error-reporting"></a>エラー レポート
- エラー メッセージおよび警告メッセージを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のエラー ウィンドウに表示するには、次のメソッドを使用します。
+ Visual Studio のエラー ウィンドウにエラーと警告メッセージを配置するには、これらのメソッドを使用できます。
 
 ```
 Error("An error message");
 Warning("A warning message");
 ```
 
-##  <a name="Converting"></a> 既存のファイルをテンプレートに変換します。
+## <a name="Converting"></a> 既存のファイルをテンプレートに変換します。
  テンプレートには、見た目は生成されるファイルとよく似ていて、そこに、プログラム コードが挿入されているという特徴があります。 このことを利用すると、テンプレートを効率的に作成することができます。 など、プロトタイプとして通常のファイルをまず作成、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]ファイルを開き、生成コードを生成されたファイルを段階的に導入します。
 
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>既存のファイルをデザイン時テンプレートに変換するには
 
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]、`.cs`、`.vb` など、生成する種類のファイルを `.resx` プロジェクトに追加します。
+1.  Visual Studio プロジェクトに追加など、生成する種類のファイル、 `.cs`、 `.vb`、または`.resx`ファイル。
 
 2.  この新しいファイルをテストして、ファイルが機能することを確認します。
 
@@ -367,7 +367,7 @@ Warning("A warning message");
 |---------------|-----------|
 |補助的な関数、インクルード ファイル、外部データなどを使用したコードを組み合わせて、より高度なテキスト テンプレートを作成し、デバッグする。|[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)|
 |実行時にテンプレートからドキュメントを生成する。|[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)|
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の外部でテキストの生成を行う。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Visual Studio の外部テキスト生成を実行します。|[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)|
 |ドメイン固有言語の形式でデータを変換する。|[ドメイン固有言語からのコード生成](../modeling/generating-code-from-a-domain-specific-language.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
 

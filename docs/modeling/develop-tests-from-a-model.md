@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3cdffcb5d71d5caac11cbbb0882b79526862bffa
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 4f741b8b47b4ddf5b07cec2a612173a52bf5fbd9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859784"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。
@@ -61,7 +61,7 @@ ms.locfileid: "44279857"
 
 1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
 
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 Team foundation プロジェクトで使用されるプロセス テンプレートによって、ユーザー ストーリー、要件、またはユース ケース作業項目があります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
 
 2.  モデル内の 1 つまたは複数のユース ケースに対して、要求の作業項目をリンクします。
 
@@ -130,7 +130,7 @@ Assert (countAfter == countBefore = 1);
 
  テストの観点から見た場合、要求モデルは簡略化されたテストと見なすことができます。 そのため、プロジェクト中は常に、テストとモデル間の関係を維持することが重要です。
 
-##  <a name="Attaching"></a> モデル要素にテスト_ケースのアタッチ
+## <a name="Attaching"></a> モデル要素にテスト_ケースのアタッチ
  プロジェクトで [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] を使用している場合、テストをモデル内の要素にリンクすることができます。 これにより、要求内の変更によって影響を受けるテストを迅速に見つけることができ、要求が実現される範囲を追跡しやすくなります。
 
  すべての種類の要素に、テストをリンクできます。 次にいくつかの例を示します。
@@ -149,7 +149,7 @@ Assert (countAfter == countBefore = 1);
 
 1.  [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] で要求を作成し、その要求に対してテスト スイートを作成します。
 
-     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 これは、[!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] でプロジェクトが使用するプロセス テンプレートに応じて、ユーザー ストーリー、要求、ユース ケースの作業項目などになります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
+     作成した要求は、[!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)] の作業項目になります。 Team foundation プロジェクトで使用されるプロセス テンプレートによって、ユーザー ストーリー、要件、またはユース ケース作業項目があります。 詳細については、次を参照してください。[のアジャイル ツール、アジャイル プロジェクト管理](/azure/devops/boards/backlogs/overview?view=vsts)します。
 
 2.  モデル内の 1 つまたは複数の要素に対して、要求の作業項目をリンクします。
 

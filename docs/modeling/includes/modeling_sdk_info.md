@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 95e3d77471f4e118c83f0fb752048383d624acfd
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 27c5c7126f66ad909264bdd6fb2505e5e8d87c3c
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38943703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "48020810"
 ---
 > [!NOTE]
-> Visual Studio 2017 では、テキスト テンプレート変換の SDK と Visual Studio Modeling SDK が自動的にインストール Visual Studio の特定の機能をインストールするときにします。 詳細については、次を参照してください。[このブログの投稿](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)します。
+> Visual Studio 2017 で、**テキスト テンプレート変換**コンポーネントがの一部として自動的にインストールされている、 **Visual Studio 拡張機能開発**ワークロード。 インストールすることも、**個々 のコンポーネント**Visual Studio インストーラーのタブで、**コード ツール**カテゴリ。 インストール、 **Modeling SDK**コンポーネントから、**個々 のコンポーネント**タブ。

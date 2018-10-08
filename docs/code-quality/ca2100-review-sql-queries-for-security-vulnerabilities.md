@@ -21,12 +21,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bbfafb78022e462c1f629019ddb40c711fcd581b
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 69c8ba3b5cd30b71828a34c4b3dc8d7b4584b613
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859047"
 ---
 # <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: セキュリティの脆弱性について、SQL クエリを確認してください
 
@@ -50,7 +50,7 @@ ms.locfileid: "45551468"
 
 - コマンド文字列をビルドする前に、型とコンテンツの両方のユーザー入力を検証します。
 
-次[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]型を実装、<xref:System.Data.IDbCommand.CommandText%2A>プロパティまたは文字列引数を使用して、プロパティを設定するコンス トラクターを提供します。
+次の .NET Framework 型の実装、<xref:System.Data.IDbCommand.CommandText%2A>プロパティまたは文字列引数を使用して、プロパティを設定するコンス トラクターを提供します。
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> および <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 

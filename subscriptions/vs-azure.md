@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる Azure の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 20d8474189df34dda9eb2ed7ef2b0e158f06f3b5
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: b8f3542fce0d04e4e6efeba6e2558740c5f5d12f
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43289554"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282314"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 
@@ -97,7 +97,7 @@ Visual Studio の Azure クレジットと割引の使用を続けるには、�
 
 すべての[サブスクリプションとその特典](https://visualstudio.microsoft.com/vs/pricing/)を比較してみてください。
 
-Microsoft アカウントに**同じ**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、Visual Studio サブスクリプション ポータルで[代替アカウント](manage-vs-subscriptions.md#linking-my-subscription-to-existing-vsts-or-azure-subscriptions)を追加することで、そのアクティブ サブスクリプションをこの Azure 特典にリンクできます。 それがうまくいかない場合、Visual Studio のアクティブ サブスクリプションに [Azure 特典を転送](/azure/billing/billing-subscription-transfer/)してみることができます。
+Microsoft アカウントに**同じ**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、Visual Studio サブスクリプション ポータルで[代替アカウント](manage-vs-subscriptions.md#linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions)を追加することで、そのアクティブ サブスクリプションをこの Azure 特典にリンクできます。 それがうまくいかない場合、Visual Studio のアクティブ サブスクリプションに [Azure 特典を転送](/azure/billing/billing-subscription-transfer/)してみることができます。
 
 Microsoft アカウントに**異なる**サブスクリプション レベルで別の Visual Studio サブスクリプションがアクティブになっている場合、[Azure サポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)にサポートを要請してください。
 
@@ -113,4 +113,4 @@ Microsoft アカウントに**異なる**サブスクリプション レベル�
     - テクニカル サポート: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
     - [Azure ドキュメント](/azure/)
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
+-  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a18abfa94d3d53c6b96558fdf1cfc8d0c1c9cc5
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 506b9b014b375b60491161c49925d49c45c79ef9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860239"
 ---
 # <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: 型は、一定の基本型を拡張することはできません
 |||
@@ -51,7 +51,7 @@ ms.locfileid: "45549707"
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
 ## <a name="rule-description"></a>規則の説明
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 1 のバージョンから新しい例外を派生させるが推奨されました<xref:System.ApplicationException>します。 推奨設定が変更され、新しい例外の派生元<xref:System.Exception?displayProperty=fullName>またはそのサブクラス内の 1 つ、<xref:System>名前空間。
+ 新しい例外を派生する .NET framework バージョン 1 では、推奨された<xref:System.ApplicationException>します。 推奨設定が変更され、新しい例外の派生元<xref:System.Exception?displayProperty=fullName>またはそのサブクラス内の 1 つ、<xref:System>名前空間。
 
  サブクラスを作成しない<xref:System.Xml.XmlDocument>かどうかは、基になるオブジェクト モデルまたはデータ ソースの XML ビューを作成します。
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2 |Microsoft ドキュメント
+title: IDebugPort2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1811ad7e46865d00eed2066d061daec78d7ab2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29b16652cdbed4f6e4ee2ab6b98e52ee3a868c48
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858237"
 ---
 # <a name="idebugport2"></a>IDebugPort2
-このインターフェイスは、コンピューター上のデバッグ ポートを表します。  
+このインターフェイスは、マシン上のデバッグ ポートを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,9 +32,9 @@ IDebugPort2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>実装についてのメモ  
- カスタム ポート仕入先では、コンピューター上のデバッグ ポートを表すためには、このインターフェイスを実装します。  
+ カスタム ポート サプライヤーは、マシン上のデバッグ ポートを表すためには、このインターフェイスを実装します。  
   
- 実装する必要がありますもポートは、送信ポート イベントをサポートする場合、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>をサポートするインターフェイス、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>をさらに提供するインターフェイス、 [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)インターフェイスです。  
+ 実装する必要がありますもポートは、ポート イベントの送信をサポートする場合、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>インターフェイスをサポートするために、<xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>さらに提供するインターフェイス、 [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md)インターフェイス。  
   
 ## <a name="notes-for-callers"></a>呼び出し元のノート  
  呼び出す[GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md)または[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)このインターフェイスは、要求されたポートを表すを返します。  
@@ -44,15 +44,15 @@ IDebugPort2 : IUnknown
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetPortName](../../../extensibility/debugger/reference/idebugport2-getportname.md)|ポートの名前を返します。|  
+|[GetPortName](../../../extensibility/debugger/reference/idebugport2-getportname.md)|ポート名を返します。|  
 |[GetPortId](../../../extensibility/debugger/reference/idebugport2-getportid.md)|ポートの識別子を返します。|  
 |[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)|(該当する場合)、ポートの作成に使用される要求を返します。|  
-|[GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)|このポートのポートのサプライヤーを返します。|  
+|[GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)|このポートのポート サプライヤーを返します。|  
 |[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)|プロセスのプロセスの識別子を指定するには、インターフェイスを返します。|  
 |[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)|ポートで実行されているすべてのプロセスを列挙します。|  
   
-## <a name="remarks"></a>コメント  
- ローカル ポートは、すべてのプロセスと、ローカル コンピューターで実行中のプログラムへのアクセスを提供します。 Windows CE ベースのデバイスへの接続をシリアル ケーブルまたはネットワーク コンピューターへの接続は DCOM 以外、他のポートを表す場合があります。 `IDebugPort2`名前と識別子、ポートの列挙、ポートで実行されているすべてのプロセスを検索して起動すると、ポート上のプロセスを終了して機能を提供するインターフェイスを使用します。  
+## <a name="remarks"></a>Remarks  
+ ローカル ポートは、すべてのプロセスと、ローカル コンピューターで実行されるプログラムへのアクセスを提供します。 その他のポートには、Windows CE ベースのデバイスにシリアル ケーブルで接続または DCOM 以外のコンピューターへのネットワーク接続を表すことができます。 `IDebugPort2`インターフェイスの名前と、ポートの識別子を検索して、ポートで実行されているすべてのプロセスを列挙に使用されます。 起動し、ポート上のプロセスを終了するための機能が実装されている、`IDebugPortEx2`インターフェイス。  
   
 ## <a name="requirements"></a>要件  
  ヘッダー: msdbg.h  

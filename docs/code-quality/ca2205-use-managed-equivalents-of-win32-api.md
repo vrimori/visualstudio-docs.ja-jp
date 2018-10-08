@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0d9ae35155009e43678aca89e388ebac721a5724
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: 8c88feb35a4699770b7a05a266168e0c3ad347e4
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45551248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860122"
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API に相当するマネージド API を使用します
 
@@ -37,7 +37,7 @@ ms.locfileid: "45551248"
 
 ## <a name="cause"></a>原因
 
-プラットフォーム呼び出しメソッドが定義されているし、に、同等の機能を持つメソッドが存在する、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]クラス ライブラリ。
+プラットフォーム呼び出しメソッドが定義されているし、.NET Framework クラス ライブラリで同等の機能を持つメソッドが存在します。
 
 ## <a name="rule-description"></a>規則の説明
 

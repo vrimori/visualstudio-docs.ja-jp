@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23b84b1ad2b29a842389fb2852abdcfb8e76ea92
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: c7a79ddd1644103d3e60f42c909706f2a3d771e9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371096"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860512"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 
@@ -112,7 +112,7 @@ Team Foundation Server の詳細については、次のトピックを参照し
 - [依存関係図を使用したコードの検証](../modeling/validate-code-with-layer-diagrams.md)
 
 > [!NOTE]
-> Visual Studio のバージョンによっては、依存関係の検証とコード マップの読み取り専用のバージョンを視覚化およびモデリングをサポートします。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+> Visual Studio のバージョンによっては、依存関係の検証とコード マップの読み取り専用のバージョンを視覚化およびモデリングをサポートします。 この機能をサポートする Visual Studio のエディションを確認するを参照してください。 [Edition のサポート アーキテクチャとモデリング ツール](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。
 
 ## <a name="understand-and-communicate-information-about-the-system"></a>理解し、システムに関する情報を通信
 
@@ -169,12 +169,12 @@ Dinner Now では、新しい要求を満たすためのコストを見積もる
 |------------------|-------------------|
 |*コード ベースのクラス図*<br /><br /> 「 [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)」を参照してください。|コード内の既存のクラス。|
 
-###  <a name="ValidatingCode"></a> コードと設計の一致の維持します。
+### <a name="ValidatingCode"></a> コードと設計の一致の維持します。
  Dinner Now では、更新されたコードが設計と一致していることを確認する必要があります。 システムの機能のレイヤーを記述、これらのレイヤーをおよび関連付けのソリューションの成果物の間で許容される依存関係を指定する依存関係図を作成します。
 
 |**図**|**記述する内容**|
 |-----------------|-------------------|
-|*依存関係図*<br /><br /> 参照トピック<br /><br /> - [コードから依存関係図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)<br />- [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)<br />- [依存関係図を使用したコードを検証します。](../modeling/validate-code-with-layer-diagrams.md)|コードの論理アーキテクチャ。<br /><br /> 依存関係図の整理し、アイテムをマップする[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]と呼ばれるグループを抽象化するためのソリューション*レイヤー*します。 これらのレイヤーは、それらの成果物がシステムで実行するロール、タスク、または機能を識別します。<br /><br /> レイヤー図は、必要とされるシステムの設計を記述し、コードの変更をその設計に照らし合わせて検証するのに便利です。<br /><br /> レイヤーを作成するには、ソリューション エクスプローラー、コード マップ、クラス ビュー、およびオブジェクト ブラウザーから項目をドラッグします。 新しいレイヤーを描画するには、ツールボックスを使用するか、図の画面を右クリックします。<br /><br /> 既存の依存関係を表示するには、レイヤー図の画面を右クリックし、 **[依存関係の生成]** をクリックします。 必要とされる依存関係を指定するには、新しい依存関係を描画します。|
+|*依存関係図*<br /><br /> 参照トピック<br /><br /> - [コードから依存関係図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />- [依存関係図: リファレンス](../modeling/layer-diagrams-reference.md)<br />- [依存関係図: ガイドライン](../modeling/layer-diagrams-guidelines.md)<br />- [依存関係図を使用したコードを検証します。](../modeling/validate-code-with-layer-diagrams.md)|コードの論理アーキテクチャ。<br /><br /> 依存関係図を整理し、マップと呼ばれるグループを抽象化するための Visual Studio ソリューションの成果物*レイヤー*します。 これらのレイヤーは、それらの成果物がシステムで実行するロール、タスク、または機能を識別します。<br /><br /> レイヤー図は、必要とされるシステムの設計を記述し、コードの変更をその設計に照らし合わせて検証するのに便利です。<br /><br /> レイヤーを作成するには、ソリューション エクスプローラー、コード マップ、クラス ビュー、およびオブジェクト ブラウザーから項目をドラッグします。 新しいレイヤーを描画するには、ツールボックスを使用するか、図の画面を右クリックします。<br /><br /> 既存の依存関係を表示するには、レイヤー図の画面を右クリックし、 **[依存関係の生成]** をクリックします。 必要とされる依存関係を指定するには、新しい依存関係を描画します。|
 
  たとえば、次の依存関係図には、レイヤーと各レイヤーに関連付けられている成果物の数の間の依存関係について説明します。
 
@@ -224,7 +224,7 @@ Dinner Now と Lucerne は、作業の進行に伴って、タスクに費やさ
 
 ### <a name="TestValidateCheckInCode"></a> テスト、検証、およびコードのチェックイン
 
-Dinner Now と Lucerne は、作業が完了するたびにコードを Team Foundation バージョン管理にチェックインします。その作業を忘れると、Team Foundation Server から通知されます。 Team Foundation Server でチェックインが受け入れ、チームは、単体テストとテスト_ケースと設計に照らし合わせてコードを確認する依存関係の検証を実行します。 Team Foundation Server を使用して、ビルド、実行、自動化された単体テスト、および依存関係検証を定期的にします。 これにより、コードが以下の基準を満たしていることを確認できます。
+チームが各タスクを完了すると、そのコードをソース管理にチェックインし、を忘れた場合、Team Foundation Server から通知を受信します。 Team Foundation Server でチェックインが受け入れ、チームは、単体テストとテスト_ケースと設計に照らし合わせてコードを確認する依存関係の検証を実行します。 Team Foundation Server を使用して、ビルド、実行、自動化された単体テスト、および依存関係検証を定期的にします。 これにより、コードが以下の基準を満たしていることを確認できます。
 
 - 正常に動作する。
 

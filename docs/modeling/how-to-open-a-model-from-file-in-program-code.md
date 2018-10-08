@@ -9,24 +9,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 03d6d4550442c81325a8e67f8d96e52e7655dc09
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 0bd6c2c2ebad1526a06cccdffef38936d201fc0b
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860421"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>方法: プログラム コード内のファイルからモデルを開く
 任意のアプリケーションで DSL モデルを開くことができます。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]拡張機能では、この目的のため、ModelBus を使用することができます。 ModelBus はモデルまたはモデルでは、要素を参照して、移動された場合、モデルを検索するための標準的なメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio modelbus によるモデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)します。
+ Visual Studio 拡張機能では、この目的の ModelBus を使用できます。 ModelBus はモデルまたはモデルでは、要素を参照して、移動された場合、モデルを検索するための標準的なメカニズムを提供します。 詳細については、次を参照してください。 [Visual Studio modelbus によるモデルの統合](../modeling/integrating-models-by-using-visual-studio-modelbus.md)します。
 
 ## <a name="target-framework"></a>[対象とする Framework]
  設定、**ターゲット フレームワーク**をアプリケーション プロジェクトの **.NET Framework 4**します。
 
 #### <a name="to-set-the-target-framework"></a>ターゲット フレームワークを設定するには
 
-1.  開く、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL モデルを読み取るアプリケーション用のプロジェクト。
+1.  DSL モデルを読み取るアプリケーションの Visual Studio プロジェクトを開きます。
 
 2.  **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "39566552"
 >  選択した場合でもこれを実行する必要があります **.NET Framework 4**プロジェクトの作成 ダイアログ ボックス。 ターゲット フレームワークがすることはできません **.NET Framework 4 Client Profile**します。
 
 ## <a name="references"></a>参照
- これらの参照を追加する必要が、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]アプリケーション プロジェクト。
+ Visual Studio アプリケーション プロジェクトにこれらの参照を追加する必要があります。
 
 -   `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 

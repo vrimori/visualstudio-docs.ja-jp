@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b5ee844da2c04a1dd6eac6a7ca458957dd22a71
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: a2c95219ea13e8d2e4d989a2ac9950c4d04e65bd
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45550610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858194"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: 識別子はキーワードと同一にすることはできません
 |||
@@ -51,4 +51,4 @@ ms.locfileid: "45550610"
  キーワードの一覧に表示されていない名前を選択します。
 
 ## <a name="when-to-suppress-warnings"></a>警告を抑制します。
- このルールから警告を抑制するには、識別子は、API のユーザーを混同しないでことと、ライブラリが使用可能なすべての言語で使用できることと確信している場合、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。
+ いる識別子は、API のユーザーを混同しないでおよびライブラリが .NET Framework で使用可能なすべての言語で使用できると確信している場合は、この規則による警告を抑制できます。

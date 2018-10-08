@@ -1,5 +1,5 @@
 ---
-title: Visual Studio で TextTransform ユーティリティを使用してファイルを生成します。
+title: Visual Studio で TextTransform ユーティリティを使用したファイルを生成します。
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,35 +12,35 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 152f8d656bf83a6ad46770e695cd64c508dcc3bb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6ca9fd11e56631061d86c35f9e6bd686b8750b50
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31951480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859381"
 ---
-# <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用してファイルを生成します。
+# <a name="generate-files-with-the-texttransform-utility"></a>TextTransform ユーティリティを使用したファイルを生成します。
 
-TextTransform.exe は、テキスト テンプレートを変換するのに使用できるコマンド ライン ツールです。 TextTransform.exe を呼び出すときに、引数として、テキスト テンプレート ファイルの名前を指定します。 TextTransform.exe は、テキスト変換エンジンを呼び出し、テキスト テンプレートを処理します。 TextTransform.exe は通常、スクリプトから呼び出されます。 ただし、これは通常必要ありません、テキスト変換を実行するには、Visual Studio で、または、ビルド処理のためです。
+TextTransform.exe は、テキスト テンプレートを変換するために使用できるコマンド ライン ツールです。 TextTransform.exe を呼び出すときに、引数として、テキスト テンプレート ファイルの名前を指定します。 TextTransform.exe では、テキスト変換エンジンを呼び出し、テキスト テンプレートを処理します。 TextTransform.exe は通常、スクリプトから呼び出されます。 ただし、必要でない、通常は、Visual Studio で、またはビルド プロセスでは、テキスト変換を実行するためです。
 
 > [!NOTE]
-> ビルド プロセスの一環として、テキスト変換を実行する場合は、MSBuild テキスト変換タスクを使用することを検討します。 詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)です。 ためのコンピューターで[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]がインストールされているアプリケーションを記述することもできます。 または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]テキスト テンプレートを変換できる拡張機能です。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)です。
+> ビルド プロセスの一部としてテキスト変換を実行する場合は、MSBuild のテキスト変換タスクを使用して検討してください。 詳細については、次を参照してください。[ビルド プロセスでのコード生成](../modeling/code-generation-in-a-build-process.md)します。 Visual Studio がインストールされているコンピューターでにアプリケーションまたはテキスト テンプレートを変換できる、Visual Studio 拡張機能を記述することもできます。 詳細については、次を参照してください。[カスタム ホストを使用してテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)します。
 
- TextTransform.exe は、次のディレクトリにあります。
+ TextTransform.exe については、次のディレクトリにあります。
 
  **\Program files (x86) \Microsoft Visual Studio\2017\Professional\Common7\IDE**
 
 Professional edition、または
 
- **\Program files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
+ **\Program files (x86) \Microsoft Visual studio \2017\enterprise\common7\ide**
 
- Enterprise エディションです。
+ Enterprise edition。
 
-Visual Studio の以前のバージョンで、次の場所にファイルが見つかりました。
+Visual Studio の以前のバージョンでは、次の場所でファイルにあります。
 
 **\Program Files (x86)\Common Files\Microsoft Shared\TextTemplating\{version}**
 
-ここで {のバージョン} は、インストールされている以前のバージョンに依存します。
+場所 {0} のバージョン} は、インストールされている以前のバージョンに依存します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,23 +52,23 @@ TextTransform [<options>] <templateName>
 
 |**引数**|**説明**|
 |------------------|---------------------|
-|`templateName`|変換するテンプレート ファイルの名前を識別します。|
+|`templateName`|変換するテンプレート ファイルの名前を示します。|
 
 |**オプション**|**説明**|
 |----------------|---------------------|
-|**-out** \<filename>|変換の出力の書き込み先となるファイル。|
+|**-out** \<filename>|変換の出力を書き込むファイル。|
 |**-r** \<assembly>|アセンブリをコンパイルすると、テキスト テンプレートを実行するために使用します。|
-|**-u** \<namespace>|テンプレートのコンパイルに使用される名前空間です。|
-|**-I** \<includedirectory>|指定されたテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|
-|**-P** \<referencepath>|またはを使用してテキスト テンプレート内で指定されたアセンブリを検索するディレクトリを **-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
-|**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型名と、テキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|
-|**-** [processorName] です [。directiveName] です。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーターの値を指定します。 パラメーター名と値のみを指定する場合、パラメーターはすべてのディレクティブ プロセッサを使用可能になります。 ディレクティブ プロセッサを指定する場合はこのパラメーターは指定したプロセッサでのみ使用できます。 ディレクティブ名を指定する場合、パラメーターの値は指定されたディレクティブが処理されている場合にのみ使用できます。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスする[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)です。 テキスト テンプレートで、含める`hostspecific`、template ディレクティブのに対して、メッセージを呼び出すと`this.Host`です。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 常に入力、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でもをマークします。 例えば:<br /><br /> `-a !!param!value`|
+|**-u** \<namespace>|テンプレートのコンパイルに使用される名前空間。|
+|**-I** \<includedirectory>|指定したテキスト テンプレートに含まれるテキスト テンプレートを格納するディレクトリ。|
+|**-P** \<referencepath>|またはを使用して、テキスト テンプレート内で指定されたアセンブリを検索するディレクトリを **-r**オプション。<br /><br /> たとえば、Visual Studio API を使用するアセンブリは、次のように使用します。<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
+|**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|名前、完全な型の名前とテキスト テンプレート内のカスタム ディレクティブの処理に使用できるディレクティブ プロセッサのアセンブリ。|
+|**-** [processorName] [。directiveName]。\<parameterName >!\<parameterValue >|ディレクティブ プロセッサのパラメーター値を指定します。 パラメーター名と値のみを指定するパラメーターはすべてのディレクティブ プロセッサにできます。 ディレクティブ プロセッサを指定する場合、パラメーターが指定したプロセッサでのみ使用できます。 ディレクティブの名前を指定する場合、パラメーターの値は、指定されたディレクティブが処理されている場合にのみ使用です。<br /><br /> ディレクティブ プロセッサまたはテキスト テンプレートからパラメーター値にアクセスするには、使用[ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)します。 テキスト テンプレートでは、 `hostspecific` template ディレクティブでのメッセージを呼び出すと`this.Host`。 例えば:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`。<br /><br /> 入力を常に、'!' の省略可能なプロセッサとディレクティブの名前を省略した場合でも、マークします。 例えば:<br /><br /> `-a !!param!value`|
 |**-h**|ヘルプを提供します。|
 
 ## <a name="related-topics"></a>関連トピック
 
 |タスク|トピック|
 |----------|-----------|
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ソリューション内にファイルを生成する。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Visual Studio ソリューションでは、ファイルを生成します。|[T4 テキスト テンプレートを使用したデザイン時コード生成](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
 |独自のデータ ソースを変換するためのディレクティブ プロセッサを作成する。|[T4 テキスト変換のカスタマイズ](../modeling/customizing-t4-text-transformation.md)|
-|使用すると、独自のアプリケーションからのテキスト テンプレートを呼び出すテキスト テンプレート ホストを記述します。|[カスタム ホストを使用したテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)|
+|独自のアプリケーションからのテキスト テンプレートを呼び出すことができるテキスト テンプレート ホストを記述します。|[カスタム ホストを使用したテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)|

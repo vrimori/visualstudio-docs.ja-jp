@@ -12,12 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: bc9d9e65cc893780c6b64dfd281d8db51fb5cce9
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 09bfb2e1a17a4832f4afa4f432e4232ce6845323
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859797"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用してコードを生成する
 
@@ -30,7 +30,7 @@ System.Xml 名前空間は、XML ドキュメントを読み込み、メモリ�
 このプロジェクト例では、テンプレートでサンプル XML ファイルを読み取り、ノードの各型に対応するクラスを生成します。 手入力のコードでは、これらのクラスを使用して XML ファイルを操作できます。 また、同じノード型を使用する他のファイルでも、アプリケーションを実行できます。 サンプル XML ファイルの目的は、アプリケーションで対応できるようにするすべてのノード型の例を提供することです。
 
 > [!NOTE]
-> [に含まれるアプリケーション](http://go.microsoft.com/fwlink/?LinkId=178765)xsd.exe [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]では、XML ファイルから厳密に型指定されたクラスを生成できます。 ここで紹介するテンプレートは、例として提供されています。
+> アプリケーション[xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765)、XML ファイルから厳密に型指定されたクラスを生成、Visual Studio に含まれていることができます。 ここで紹介するテンプレートは、例として提供されています。
 
 サンプル ファイルは次のとおりです。
 
@@ -142,7 +142,7 @@ namespace MyProject
 
 3.  ファイルの template ディレクティブで、 `hostspecific` 属性を `true`に変更します。
 
-     この変更によって、テンプレート コードが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のサービスにアクセスできるようになります。
+     この変更は、Visual Studio services にアクセスするためのテンプレート コードを有効になります。
 
 4.  output ディレクティブの extension 属性を ".cs" に変更します。これで、このテンプレートから C# ファイルが生成されるようになります。 Visual Basic プロジェクトの場合は、これを ".vb" に変更します。
 
@@ -272,7 +272,7 @@ public partial class Song {}
 
 ### <a name="access-the-visual-studio-api"></a>Visual Studio API にアクセスします。
 
-`hostspecific` ディレクティブの `<#@template#>` 属性を設定すると、テンプレートから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] API にアクセスできます。 テンプレートでは、これを使用してプロジェクト ファイルの場所を取得することにより、テンプレート コードでの絶対パスの使用を避けることができます。
+設定、`hostspecific`の属性、`<#@template#>`ディレクティブにより、テンプレートを Visual Studio API へのアクセスを取得します。 テンプレートでは、これを使用してプロジェクト ファイルの場所を取得することにより、テンプレート コードでの絶対パスの使用を避けることができます。
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>

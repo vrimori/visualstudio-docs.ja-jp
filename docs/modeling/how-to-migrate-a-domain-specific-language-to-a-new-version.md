@@ -9,24 +9,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ab671cfffdf43d9b69ecda7f06c27a0e8df6bf70
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6a238eabbcba4f28b12f899de5b2d4eae30cfef9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43775914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858770"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>方法: ドメイン固有言語を新バージョンに移行する
 ドメイン固有言語を使って定義するプロジェクトを移行する[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]のバージョンから[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]を使用して配布されて[!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]します。
 
- 一部として移行ツールが提供される[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]します。 ツールに変換します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクトおよびソリューションを使用して、または DSL Tools を定義します。
+ 一部として移行ツールが提供される[!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)]します。 このツールでは、Visual Studio プロジェクトとソリューションを使用して、またはツールを DSL 定義に変換します。
 
- 移行ツールを明示的に実行する必要があります: ことがない自動的に起動でソリューションを開くときに[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 ツールおよび詳細なガイダンスのドキュメントは、このパスで見つかんだことができます。
+ 移行ツールを明示的に実行する必要があります: が起動しない自動的に Visual Studio でソリューションを開くときにします。 ツールおよび詳細なガイダンスのドキュメントは、このパスで見つかんだことができます。
 
  **% プログラム Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL プロジェクトを移行する前に
- 移行ツールを変更します[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクト ファイル (**.csproj**) とソリューション ファイル (**.sln**)。
+ 移行ツールは Visual Studio プロジェクト ファイルを変更します (**.csproj**) とソリューション ファイル (**.sln**)。
 
 #### <a name="to-prepare-projects-for-migration"></a>移行するには、プロジェクトを準備します。
 
