@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio for Mac の概要
 description: この記事では Visual Studio for Mac の機能を紹介します
 author: conceptdev
