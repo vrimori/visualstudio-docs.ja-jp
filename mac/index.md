@@ -24,7 +24,7 @@ Visual Studio for Mac は、モバイル、デスクトップ、Web アプリケ
 
 リッチ エディター、デバッグ、iOS、Mac、Android とのネイティブ プラットフォーム統合、統合ソース制御などの機能があります。
 
-この記事では、Visual Studio for Mac の多様なセクションについて説明し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールになる機能を紹介します。
+この記事では、Visual Studio for Mac の持つさまざまな面を概説し、クロスプラットフォーム アプリケーションを作成する場合に強力なツールとなる機能を紹介します。
 
 ## <a name="installation"></a>インストール
 
@@ -36,11 +36,11 @@ Visual Studio for Mac は、既定で C# と F# での開発をサポートし�
 
 ### <a name="c"></a>C#
 
-Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、最もよく使用される言語は C# です。 IDE にはすべての C# 7 機能の完全なサポートが含まれています。
+Visual Studio for Mac でクロスプラットフォーム アプリケーションを作成する場合、最もよく使用される言語は C# です。 IDE は C# 7 のすべての機能を完全にサポートしています。
 
 ### <a name="f"></a>F#
 
-F# は、.NET 上で実行するように設計されている、厳密に型指定されたプログラミング言語です。 Android、Mac、および iOS 上の Visual Studio for Mac ユーザーがプログラミング言語として使用できます。 F# の使用方法と F# で作成されたサンプルについては、[F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) ガイドを参照してください。
+F# は、.NET 上で実行するように設計されている、厳密に型指定されたプログラミング言語です。 Visual Studio for Mac ユーザーが Android、Mac、および iOS で使用するプログラミング言語として提供されています。 F# の使用方法と F# で作成されたサンプルについては、[F#](https://developer.xamarin.com/guides/cross-platform/fsharp/) ガイドを参照してください。
 
 ## <a name="platform-support"></a>プラットフォームのサポート
 
@@ -79,9 +79,9 @@ Android Designer の詳細については、[Designer の概要](https://develop
 
 ### <a name="ios"></a>iOS
 
-iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib およびストーリーボード ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
+iOS Designer は Visual Studio for Mac と完全に統合されているので、.xib ファイルおよび Storyboard ファイルを視覚的に編集し、iOS、tvOS、および watchOS の UI と遷移を作成できます。 ツールボックスとデザイン サーフェイス間でドラッグ アンド ドロップ機能を使用してユーザー インターフェイス全体を構築できるだけでなく、直感的な方法でイベントを処理できます。 iOS Designer は、デザイン時のレンダリングにさらに役立つ[カスタム コントロール](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)もサポートしています。
 
-![iOS ストーリーボード デザイナー](media/intro-image30.png)
+![iOS Storyboard デザイナー](media/intro-image30.png)
 
 iOS Designer の使用方法については、[Designer](https://developer.xamarin.com/guides/ios/user_interface/designer) に関するドキュメントを参照してください。
 
