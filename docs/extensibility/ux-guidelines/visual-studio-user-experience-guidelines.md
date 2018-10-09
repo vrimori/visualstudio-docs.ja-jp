@@ -1,7 +1,7 @@
 ---
-title: Visual Studio ユーザー エクスペリエンス ガイドライン |Microsoft ドキュメント
+title: Visual Studio ユーザー エクスペリエンス ガイドライン |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - vs-ide-sdk
 ms.topic: conceptual
@@ -11,22 +11,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa7e90e04cc81443a38cb1c6cbc06644e2426499
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed7488702bd19e8a0e8576d2cdc21e4350e8443b
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31139865"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863986"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン
-Visual Studio ユーザー エクスペリエンス ガイドライン 』 は、対象とした Visual Studio の新機能を設計します。 次のガイドラインは、新しいユーザー インターフェイス (UI) の設計者は、シームレスな開発環境内で一貫性のあるユーザー エクスペリエンスを作成できるように、ユーザーの一般的なモデルと相互作用のパターンに関する情報を格納します。  
+Visual Studio の新機能を設計する場合は、Visual Studio ユーザー エクスペリエンス ガイドラインに従ってください。 次のガイドラインは、新しいユーザー インターフェイス (UI) の設計者はシームレスで開発環境内で一貫したユーザー エクスペリエンスを作成できるように、ユーザーの一般的なモデルと対話パターンに関する情報を格納します。  
   
- Windows で提供されたガイダンスを理解する Microsoft 製品用のソフトウェアを開発します。 注意すべき重要なリソースを次の 3 つあります。  
+Microsoft 製品のソフトウェアを開発する場合は、これらのリソースを使用するについて説明します。
   
--   [Windows ユーザー エクスペリエンス ガイドライン](https://msdn.microsoft.com/en-us/library/aa511258.aspx)です。 このガイドラインは、Windows デスクトップの動作と外観の基礎です。  
+-   [Windows ユーザー エクスペリエンス ガイドライン](https://developer.microsoft.com/windows/desktop)Windows デスクトップの動作と外観の基本事項です。  
   
--   これら Visual Studio ガイドラインをこの環境に適切な場所には、Windows の一般的なガイドラインを置き換えるプラットフォーム固有のガイドラインを示します。  
+-   この Visual Studio ガイドラインを環境に該当する場合は、Windows の一般的なガイドラインを置き換えるプラットフォームに固有のガイドラインを示します。  
   
--   [パターンと Windows ストア アプリ用ガイド](https://dev.windows.com/en-us/design/interaction-ux)の新たなパターンを Visual Studio 内で一部のインスタンスで使用できる参照します。  
+-   [パターンと Windows ストア アプリ用ガイド](https://dev.windows.com/en-us/design/interaction-ux)は Visual Studio 内でいくつかのインスタンスで使用できる新興のパターンへの参照。  
   
- 次のガイドラインが、Visual Studio を設計する場合の対処方法に関する情報を提供して、場合によってはそれを実行する方法に関する情報が含まれるもします。 実装の詳細な情報の詳細については、特定のアプリケーション プログラミング インターフェイス (Api) を Visual Studio 統合開発環境 (IDE) に統合するソリューションのコードを記述するためには、使用、 [Visual Studio ソフトウェア開発キット (SDK)](https://msdn.microsoft.com/en-us/library/bb166441.aspx)です。
+次のガイドラインは、Visual Studio を設計する場合の対処方法に関する情報を提供し、場合によってはこれを行う方法に関する情報も含まれています。 実装の詳細については、特定のアプリケーション プログラミング インターフェイス (Api)、Visual Studio 統合開発環境 (IDE) に統合するソリューションのコードを記述するための詳細については、使用、 [Visual Studio ソフトウェア開発キット (SDK)](../visual-studio-sdk.md)します。

@@ -14,16 +14,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 497aa6a85bd47813aa20bd5c2e89ca26ddffbe5a
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 8a915a8acdd9918f27a8909cdff2a790e6488566
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082132"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863899"
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用して Visual Studio 拡張機能の発行
 
-このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法、コマンドラインを使用します。 開発者が使用できる、拡張機能を Marketplace に追加すると、**拡張機能と更新**ダイアログを新規および更新された拡張機能の参照があります。
+このチュートリアルでは、Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法、コマンドラインを使用します。 開発者が使用できる、拡張機能を Marketplace に追加すると、 [**拡張機能と更新**](../ide/finding-and-using-visual-studio-extensions.md)ダイアログを新規および更新された拡張機能の参照があります。
 
 VsixPublisher.exe は、Marketplace への発行の Visual Studio 拡張機能のコマンド ライン ツールです。 ${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe からアクセスできます。 このツールで使用できるコマンドが:**発行**、 **createPublisher**、 **deletePublisher**、 **deleteExtension**、 **ログイン**、**ログアウト**します。
 
@@ -195,7 +195,7 @@ This is test extension.
 
 ## <a name="publishing-walkthrough"></a>発行のチュートリアル
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。
 
