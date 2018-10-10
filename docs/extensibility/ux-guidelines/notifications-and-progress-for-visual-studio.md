@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8018f3f72fd774a1ac64cd1d6d968ad8be65b453
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: aee6e5656142d0597ff6101da5e2e5f690f8fcc5
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512240"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863953"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>通知と Visual Studio の進行状況
 ##  <a name="BKMK_NotificationSystems"></a> 通知システム  
@@ -213,7 +213,7 @@ ms.locfileid: "39512240"
  スピン ボックス (別名「進行状況リング」) は、主にコンテキストの UI 関連して使用される、不確定な進行状況インジケーターです。 テキスト カテゴリ ヘッダー、メッセージング、またはコントロールなどの関連するコンテンツに近接するスピン ボタンを表示します。  
   
 ##### <a name="cursor-feedback"></a>カーソルからのフィードバック  
- 2 ~ 7 秒かかる操作では、カーソルからのフィードバックを提供します。 通常、オペレーティング システムによって提供される待機カーソルを使用してこれを意味します。 ガイダンスについては、MSDN の記事を参照してください。 [Cursors.Wait プロパティ](https://msdn.microsoft.com/en-us/library/system.windows.input.cursors.wait\(v=vs.110\).aspx)します。  
+ 2 ~ 7 秒かかる操作では、カーソルからのフィードバックを提供します。 通常、オペレーティング システムによって提供される待機カーソルを使用してこれを意味します。 ガイダンスについては、MSDN の記事を参照してください。 [Cursors.Wait プロパティ](/dotnet/api/system.windows.input.cursors.wait)します。  
   
 #### <a name="progress-indicator-locations"></a>進行状況インジケーターの場所  
   
