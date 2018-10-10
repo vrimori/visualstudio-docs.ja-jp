@@ -35,12 +35,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c102bba09901e55e9ec6196009965b912f8be967
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6d2c45ed2377b400fb00ac264aa2dcf8e5df8410
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549003"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879773"
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>CRT ライブラリを使用したメモリ リークの検出
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47549003"
   
  CRT 関数を正常に機能させるには、ここに示した順序で `#include` ステートメントを定義する必要があります。  
   
- Crtdbg.h、`malloc`と[無料](http://msdn.microsoft.com/library/74ded9cf-1863-432e-9306-327a42080bb8)関数のデバッグ バージョンを[_malloc_dbg](http://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb)と`free`メモリの割り当てと解放が追跡されます。 この対応付けは、 `_DEBUG`が定義されているデバッグ ビルドでだけ行われます。 リリース ビルドでは、通常の `malloc` 関数と `free` 関数が使用されます。  
+ crtdbg.h をインクルードすると、 `malloc` 関数と [free](http://msdn.microsoft.com/library/74ded9cf-1863-432e-9306-327a42080bb8) 関数は、それぞれのデバッグ バージョンである [_malloc_dbg](http://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb) と `free`に対応付けられます。これらの関数では、メモリの割り当てと解放が追跡されます。 この対応付けは、 `_DEBUG`が定義されているデバッグ ビルドでだけ行われます。 リリース ビルドでは、通常の `malloc` 関数と `free` 関数が使用されます。  
   
  `#define` ステートメントにより、CRT ヒープ関数の基本バージョンがデバッグ バージョンに対応付けられます。 `#define` ステートメントを省略した場合、メモリ リーク ダンプに含まれる情報が少なくなります。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47549003"
 _CrtDumpMemoryLeaks();  
 ```  
   
- アプリケーションに複数の終了がある場合は手動での呼び出しを配置する必要はありません[_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c)ですべての終了ポイント。 アプリケーションの先頭で `_CrtSetDbgFlag` を呼び出すと、各終了ポイントで自動的に `_CrtDumpMemoryLeaks` が呼び出されるようになります。 次に示す 2 つのビット フィールドを設定する必要があります。  
+ アプリケーションの終了ポイントが複数ある場合、すべての終了ポイントに手動で [_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) の呼び出しを配置する必要はありません。 アプリケーションの先頭で `_CrtSetDbgFlag` を呼び出すと、各終了ポイントで自動的に `_CrtDumpMemoryLeaks` が呼び出されるようになります。 次に示す 2 つのビット フィールドを設定する必要があります。  
   
 ```  
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );  
@@ -89,7 +89,7 @@ _CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
 ```  
   
 ## <a name="interpreting-the-memory-leak-report"></a>メモリ リーク レポートの解釈  
- アプリケーションが定義されていない場合`_CRTDBG_MAP_ALLOC`、 [_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c)次のようなメモリ リーク レポートが表示されます。  
+ アプリケーションで `_CRTDBG_MAP_ALLOC`を定義していない場合は、 [_CrtDumpMemoryLeaks](http://msdn.microsoft.com/library/71b2eab4-7f55-44e8-a55a-bfea4f32d34c) により次のようなメモリ リーク レポートが出力されます。  
   
 ```  
 Detected memory leaks!  
@@ -194,7 +194,7 @@ Object dump complete.
   
 2.  アプリケーションがブレークポイントで停止したら、 **ウォッチ** ウィンドウに移動します。  
   
-3.  **ウォッチ** ウィンドウの `_crtBreakAlloc` [名前] **列に、「** 」と入力します。  
+3.  **ウォッチ**ウィンドウで、「`_crtBreakAlloc`で、**名前**列。  
   
      マルチスレッド DLL バージョン (/MD オプション) の CRT ライブラリを使用している場合は、コンテキスト演算子を追加して「 `{,,ucrtbased.dll}_crtBreakAlloc`」とします。  
   

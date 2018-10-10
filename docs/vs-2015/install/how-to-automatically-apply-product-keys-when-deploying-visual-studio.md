@@ -14,17 +14,17 @@ caps.latest.revision: 11
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 45ed6a059c0a9cf9ae5063e538ec9b9c87698ef1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 07f09cbc2deedaeb701a52ffc09532e36e30c308
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546825"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879074"
 ---
 # <a name="how-to-automatically-apply-product-keys-when-deploying-visual-studio"></a>方法: Visual Studio の展開時にプロダクト キーを自動的に適用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio の展開時に、プロダクト キーを自動的に適用](https://docs.microsoft.com/en-us/visualstudio/install/automatically-apply-product-keys-when-deploying-visual-studio)します。
+Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio の展開時に、プロダクト キーを自動的に適用](/visualstudio/install/automatically-apply-product-keys-when-deploying-visual-studio)します。
 
 Visual Studio 2015 の展開を自動化するために使用するスクリプトの一部として、プログラム的にプロダクト キーを適用することができます。 プロダクト キーは、Visual Studio のインストール中またはインストール完了後に、プログラム的にデバイスで設定できます。  
   
@@ -58,7 +58,7 @@ Visual Studio 2015 の展開を自動化するために使用するスクリプ�
 |Visual Studio Professional 2013|06177|  
 |Visual Studio Test Professional 2013|06194|  
   
- プロダクト キーの取得の詳細についてを参照してください[方法: Visual Studio プロダクト キーを検索](../install/how-to-locate-the-visual-studio-product-key.md)します。  
+ プロダクト キーの取得方法の詳細については、「 [How to: Locate the Visual Studio Product Key](../install/how-to-locate-the-visual-studio-product-key.md)」を参照してください。  
   
  StorePID.exe が正常にプロダクト キーを適用した場合は 0 を返します。 エラーが検出された場合は、1 ～ 6 の範囲の数値を返します。  
   

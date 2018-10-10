@@ -24,12 +24,12 @@ caps.latest.revision: 81
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cc6cbcb4bba7e808a72ca389ab8ad9157e80375c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f658c14c75f3ec0e93ed05226a8b1192d73bf478
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546553"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880722"
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47546553"
 
 ### <a name="to-download-and-install-the-remote-tools"></a>ダウンロードして、リモート ツールをインストールするには
   
-1.  (Visual Studio を実行しているマシン) ではなくデバッグするデバイスまたはサーバー コンピューター、上の正しいバージョンを取得、リモート ツール。
+1.  デバイスまたはサーバーをデバッグするコンピューター (はなく Visual Studio を実行しているコンピューター) 上には、リモート ツールの適切なバージョンを取得します。
 
     |Version|リンク|メモ|
     |-|-|-|
@@ -59,7 +59,7 @@ ms.locfileid: "47546553"
     > [!IMPORTANT]
     >  Visual Studio のバージョンに一致する remote tools の最新バージョンをインストールすることをお勧めします。 一致しないバージョンは推奨されません。  
     >   
-    >  さらをインストールするオペレーティング システムと同じアーキテクチャを持つリモート ツールをインストールする必要があります。 つまりの 32 ビット アプリケーションをデバッグするかどうか、64 ビットのオペレーティング システムを実行しているリモート コンピューター、リモート コンピューターでリモート ツールの 64 ビット バージョンをインストールする必要があります。  
+    >  さらをインストールするオペレーティング システムと同じアーキテクチャを持つリモート ツールをインストールする必要があります。 つまり、64 ビットのオペレーティング システムを実行しているリモート コンピューター上の 32 ビット アプリケーションをデバッグする場合は、リモート コンピューターのリモート ツールの 64 ビット バージョンをインストールする必要があります。  
   
 3.  実行可能ファイルのダウンロードが完了したら、アプリケーションをリモート コンピューターにインストールするための指示に従います。 参照してください[セットアップ手順](#bkmk_setup)
 
@@ -286,7 +286,7 @@ ms.locfileid: "47546553"
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ  
  Visual Studio コンピューターで生成したシンボルを使用して、コードをデバッグすることができます。 リモート デバッガーのパフォーマンスは、ローカル シンボルを使用すると大幅に向上します。  リモート シンボルを使用する必要がある場合、リモート コンピューター上のシンボルを検索するように、リモート デバッグ モニターに指示する必要があります。  
   
- Visual Studio 2013 Update 2 以降、msvsmon コマンド ライン スイッチを使用して、マネージ コードのリモート シンボルを使用します。 `Msvsmon / /FallbackLoadRemoteManagedPdbs`  
+ Visual Studio 2013 Update 2 以降では、msvsmon コマンド ライン スイッチの `Msvsmon / /FallbackLoadRemoteManagedPdbs` を使用して、マネージド コードにリモート シンボルを使用できます。  
   
  詳細については、リモート デバッグのヘルプを参照してください (キーを押して**F1**リモート デバッガー ウィンドウで**ヘルプ/使用状況**)。 詳細についてを検索する[.NET リモート シンボルの読み込みの変更では、Visual Studio 2012 および 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)  
   
@@ -304,7 +304,7 @@ ms.locfileid: "47546553"
 ## <a name="see-also"></a>関連項目  
  [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)   
  [リモート デバッグ用の Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
- [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   
+ [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)
 

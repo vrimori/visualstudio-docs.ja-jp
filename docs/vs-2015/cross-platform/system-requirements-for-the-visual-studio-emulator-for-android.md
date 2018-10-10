@@ -13,12 +13,12 @@ ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
 caps.latest.revision: 7
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: c70cf8ae41652d0426f40d26dd5217ca4507aad8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2bf6251b8152224b521f60b0ec1694e03adeb9b1
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540098"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880480"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -135,12 +135,12 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
  エミュレーターを実行した時点で、まだ Hyper-V Administrators グループのメンバーではない場合、グループに参加するように求められます (ダイアログ ボックスは、Windows Phone エミュレーターを参照しています)。 グループに参加するには、管理者権限が必要です。  
   
 > [!IMPORTANT]
->  グループに参加した場合は、変更を有効にするためにログオフするか、再起動します。  
+> グループに参加した場合は、変更を有効にするためにログオフするか、再起動します。  
   
  ![ Hyper&#45;V Administrators セキュリティ グループに参加する](../cross-platform/media/android-emu-hyperv-admin.png "Android_Emu_HyperV_Admin")  
   
- 手動で自分をグループに追加するには、[ローカル ユーザーとグループ] スナップインを開きます。 詳細については、「 [ユーザー アカウントをグループに追加する](http://windows.microsoft.com/en-us/windows/add-user-account-to-group#1TC=windows-7)」を参照してください。 (この Windows 7 トピックは、Windows 8 にも適用できます)。  
-  
+ 手動で自分をグループに追加するには、[ローカル ユーザーとグループ] スナップインを開きます。
+ 
 ##  <a name="BootableVHD"></a> 起動可能な VHD からのエミュレーターの実行はサポートされていません  
  起動可能な VHD から Windows を実行しているときに Visual Studio Emulator for Android でアプリを実行しようとすると、一般的にエミュレーターの起動に数分かかるか、起動に失敗します。 エミュレーターの起動に失敗すると、"アプリの配置に失敗しました。 やり直してください。  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 364
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cb14269c933d8e8de191b8a8c52e9f41e63ca79d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d31863e3dfdf39481a6215a29f37186a2f528050
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539585"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880371"
 ---
 # <a name="what39s-new-in-visual-studio-2015"></a>どのような&#39;s Visual Studio 2015 の新機能
 [!INCLUDE[vs2017banner](./includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
  このページでは、Visual Studio 2013 RTM 以降新しくなったいくつかの重要な機能に焦点を当てています。これには Visual Studio 2013 更新プログラムのいずれかで最初に導入された機能が含まれます。 Visual Studio 2015 の新機能の完全な一覧については、 [リリース ノート](https://www.visualstudio.com/news/vs2015-vs)を参照してください。  
   
- 多くの改良と Visual Studio ALM の新機能に関する詳細については、次を参照してください。 [Visual Studio 2015 でのアプリケーション ライフ サイクル管理の新](http://msdn.microsoft.com/en-us/54b98a53-6083-4303-869a-8063d8fae938)します。  
+ Visual Studio ALM の多数の機能強化や新機能の詳細については、「 [Visual Studio 2015 のアプリケーション ライフサイクル管理に関する新機能](http://msdn.microsoft.com/en-us/54b98a53-6083-4303-869a-8063d8fae938)」を参照してください。  
   
 ## <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス  
  [!INCLUDE[downloadvs](./includes/downloadvs-md.md)]  
@@ -43,7 +43,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 ## <a name="sign-in-across-multiple-accounts"></a>複数のアカウント間のサインイン  
  Visual Studio 2015 では、サインインの仕組みがすっきりとしたものに更新されており、Visual Studio のアカウントが複数ある場合でもオンライン リソースへのアクセスが大幅に簡素化されるように設計されています。 Visual Studio にサインインすると、Visual Studio 2015 およびコンピューター上の Blend のすべてのインスタンスに自動的にサインインします。 サインインすると、自動的に設定のローミングが開始されます。 Visual Studio 2015 では、複数の機能で 1 つのアカウントを共通に使うことができるため、トークンが良好なものである限り、 **チーム エクスプローラー**から Visual Studio Team Services のアカウントにアクセスしたり、サーバー エクスプローラー内の自分の Microsoft Azure サブスクリプションからさまざまなリソースや Web サイトにアクセスしたりすることが可能です。 また、Application Insights のプロジェクトの [新しいプロジェクト] ダイアログに自分の Azure リソースが表示されます。さらに、新しい [[接続済みサービスの追加]](http://msdn.microsoft.com/office/aa905340.aspx) ダイアログには、Azure Mobile、Azure Storage、 [Microsoft Office 365](https://developer.salesforce.com/) 、および **Saleforce.com developer** のアカウントが表示されます。  
   
- 新しいアカウント マネージャーを実行する際に複数のユーザー アカウントを追加することによって、Visual Studio でそれらのユーザー アカウントの作業を実行できます。 そのようにすることによって、さまざまなサービスに接続したりオンライン リソースにアクセスしたりする際に、それら複数のアカウントを自在に切り替えることができます。 Visual Studio では追加されたアカウントが記憶されるため、Visual Studio または Blend のすべてのインスタンスからそれらを使用できます。 Visual Studio は、パーソナル化アカウントを使ってアカウントのリストもローミングし (重要な資格情報はローミングしません)、それらのアカウントの 1 つを使って別のデバイスですばやく操作できるようにします。 もちろん、[アカウント設定] ダイアログ ボックスでいつでもアカウントを削除できます。 最初に、次を参照してください。[複数のユーザー アカウントを使って作業](./ide/work-with-multiple-user-accounts.md)します。  
+ 新しいアカウント マネージャーを実行する際に複数のユーザー アカウントを追加することによって、Visual Studio でそれらのユーザー アカウントの作業を実行できます。 そのようにすることによって、さまざまなサービスに接続したりオンライン リソースにアクセスしたりする際に、それら複数のアカウントを自在に切り替えることができます。 Visual Studio では追加されたアカウントが記憶されるため、Visual Studio または Blend のすべてのインスタンスからそれらを使用できます。 Visual Studio は、パーソナル化アカウントを使ってアカウントのリストもローミングし (重要な資格情報はローミングしません)、それらのアカウントの 1 つを使って別のデバイスですばやく操作できるようにします。 もちろん、[アカウント設定] ダイアログ ボックスでいつでもアカウントを削除できます。 開始するには、「 [Work with multiple user accounts](./ide/work-with-multiple-user-accounts.md)」を参照してください。  
   
  ![アカウント マネージャー](./ide/media/vs2015-accountmanager.gif "VS2015_AccountManager")  
   
@@ -103,7 +103,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
  ![デバイス プレビュー メニュー](./ide/media/vs2015-device-preview.png "vs2015_device_preview")  
   
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断  
- Visual Studio 2013 では、Visual Studio グラフィックス診断に、フレーム分析、Windows Phone のサポート、シェーダーの編集と適用、コマンド ライン キャプチャ ツールなど、多くの新機能が追加されています。 DirectX12 アプリのデバッグのサポートも追加されています。 詳細については、次を参照してください。 [Visual Studio グラフィックス診断](./debugger/visual-studio-graphics-diagnostics.md)します。  
+ Visual Studio 2013 では、Visual Studio グラフィックス診断に、フレーム分析、Windows Phone のサポート、シェーダーの編集と適用、コマンド ライン キャプチャ ツールなど、多くの新機能が追加されています。 DirectX12 アプリのデバッグのサポートも追加されています。 詳しくは、「 [Visual Studio グラフィックス診断](./debugger/visual-studio-graphics-diagnostics.md)」をご覧ください。  
   
 ## <a name="connect-to-services"></a>サービスへの接続  
  Visual Studio 2015 により、サービスへのアプリの接続がさらに簡単になりました。  新しい [接続済みサービスの追加] ウィザードは、プロジェクトを構成し、必要な認証サポートを追加し、必要な NuGet パッケージをダウンロードして、サービスに対してすばやくかつ簡単にコーディングを開始できるようにします。 さらに、[接続済みサービスの追加] ウィザードは新しいアカウント マネージャーと統合され、複数のアカウントおよびサブスクリプションでの操作が簡単になります。 Visual Studio 2015 では、以下のサービスのためのサポートがすぐに利用できます (アカウントを持っていることを前提としています)。  
@@ -137,7 +137,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 -   **C++ / Android**。 [Visual C for Cross-platform Mobile Development](http://msdnstage.redmond.corp.microsoft.com/library/dn872463\(v=vs.140\).aspx) テンプレートを [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) などのサード パーティ製ツールとともに使用して、Windows および Android のネイティブ アプリを作成します。  
   
 ## <a name="debugging-and-diagnostics"></a>デバッグと診断  
- デバッグの新機能に関する情報については、次を参照してください。 [Visual Studio 2015 のデバッガーの新](./debugger/what’s-new-for-the-debugger-in-visual-studio-2015.md)します。  
+ デバッグの新機能については、「 [What’s New for the Debugger in Visual Studio 2015](./debugger/what’s-new-for-the-debugger-in-visual-studio-2015.md)」を参照してください。  
   
  診断の新機能新機能については、次を参照してください。[プロファイリング ツールの新](./profiling/what-s-new-in-profiling-tools.md)します。  
   
@@ -147,7 +147,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
  パフォーマンスのヒントはデバッグ中のメソッドの実行時間を表示し、プロファイラーを呼び出すことなくボトルネックをすばやく見つけることができるようになります。 開始するには、「 [PerfTips: Performance Information at-a-glance while Debugging with Visual Studio](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)」を参照してください  
   
 ### <a name="error-list"></a>エラー一覧  
- エラー一覧はあらゆる列のフィルター処理をサポートするようになりました。 また入力時の C# または Visual Basic ソリューション全体におけるエラー、警告、コード分析を、コードの変更によって大量の警告が発生したとしてもライブで表示します。 新しいエラー一覧は既存の使用方法と後方互換性があります。 詳細については、次を参照してください。[エラー一覧 ウィンドウ](./ide/reference/error-list-window.md)します。  
+ エラー一覧はあらゆる列のフィルター処理をサポートするようになりました。 また入力時の C# または Visual Basic ソリューション全体におけるエラー、警告、コード分析を、コードの変更によって大量の警告が発生したとしてもライブで表示します。 新しいエラー一覧は既存の使用方法と後方互換性があります。 詳細については、「 [Error List Window](./ide/reference/error-list-window.md)」を参照してください。  
   
 ### <a name="gpu-usage-tool"></a>GPU 使用率ツール  
  GPU 使用率ツールは、DirectX アプリやゲームの GPU 使用率データの収集と分析、およびパフォーマンスのボトルネックが CPU または GPU で発生したかどうかをトラブルシューティングするのに役立ちます。 このツールを開始するには、 [Visual C チーム ブログの投稿](http://blogs.msdn.com/b/vcblog/archive/2014/09/05/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1.aspx)を参照してください。  
@@ -163,7 +163,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
  Visual Studio 2013 には、テキスト エディター、ショートカット キー、テーマ & フォント & 色、スタートアップ、および環境エイリアスなどの最も一般的に構成されている設定のいくつかに対して、同期された設定が導入されています。  Visual Studio 2015 では、さらに多くの設定を同期し、Professional、Enterprise、Express SKU、Blend などの Visual Studio ファミリのアプリケーション間で設定を同期するように、この機能が改良されています。 Visual Studio 2013 で使用したアカウントで Visual Studio 2015 に初めてサインインすると、Visual Studio 2013 から適用された同期された設定が表示されます。 "Sync"を入力して、設定にアクセスする**クイック起動**に移動または**ツール > オプション > 環境 > の同期された設定**します。  
   
 ### <a name="automatic-extension-updates"></a>拡張機能の自動更新  
- インストールされている Visual Studio の拡張機能は、Visual Studio ギャラリーで新しいバージョンが使用可能なときに、自動的に更新されるようになりました。 参照してください[の検索と Visual Studio Extensions を使用して](./ide/finding-and-using-visual-studio-extensions.md)拡張機能の自動更新をカスタマイズする方法の詳細について。  
+ インストールされている Visual Studio の拡張機能は、Visual Studio ギャラリーで新しいバージョンが使用可能なときに、自動的に更新されるようになりました。 拡張機能の自動更新をカスタマイズする方法の詳細については、「 [Visual Studio の拡張機能を検索および使用する](./ide/finding-and-using-visual-studio-extensions.md) 」を参照してください。  
   
 ### <a name="title-case-menus"></a>メニューの先頭文字の大文字指定  
  お客様の声に基づいて調整されました。 Visual Studio のメニューは再び既定で先頭文字が大文字に指定されます。 ただし、すべて大文字のスタイルを希望する場合を設定できますがの起動時にまたは、**ツール > オプション > 全般**プロパティ ページ。  
@@ -176,7 +176,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
  ![エディターでのタッチ サポート](./ide/media/vs2015-touchsupport.png "VS2015_TouchSupport")  
   
 ### <a name="custom-layouts"></a>カスタム レイアウト  
- ストアを作成し、カスタム ウィンドウ レイアウトをローミングできます。 たとえば、お気に入りのレイアウトを 1 つデスクトップ コンピューターで使用するために定義し、異なるレイアウトをノート PC や画面の小さいデバイスで使用するために定義できます。 または、UI プロジェクト用にレイアウトを 1 つ選択し、データベース プロジェクト用に別のレイアウトを選択できます。 ショートカット キーを使用してすばやくレイアウトを切り替えられます。 これらのレイアウトは、サインイン中であれば Visual Studio のすべてのインスタンスで使用できます。 詳細については、次を参照してください。[カスタム ウィンドウ レイアウトを作成する](./misc/create-custom-window-layouts.md)します。  
+ ストアを作成し、カスタム ウィンドウ レイアウトをローミングできます。 たとえば、お気に入りのレイアウトを 1 つデスクトップ コンピューターで使用するために定義し、異なるレイアウトをノート PC や画面の小さいデバイスで使用するために定義できます。 または、UI プロジェクト用にレイアウトを 1 つ選択し、データベース プロジェクト用に別のレイアウトを選択できます。 ショートカット キーを使用してすばやくレイアウトを切り替えられます。 これらのレイアウトは、サインイン中であれば Visual Studio のすべてのインスタンスで使用できます。 詳細については、「 [カスタム ウィンドウ レイアウトを作成する](./misc/create-custom-window-layouts.md)」を参照してください。  
   
  ![Visual Studio カスタム レイアウト メニュー項目](./ide/media/vs2015-customlayout.png "VS2015_CustomLayout")  
   
@@ -200,7 +200,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
 -   自分のコードに影響を与える、他の分岐での変更を検索できます。  
   
- 参照してください[CodeLens](./ide/find-code-changes-and-other-history-with-codelens.md)します。  
+ 「 [CodeLens](./ide/find-code-changes-and-other-history-with-codelens.md)」を参照してください。  
   
 ### <a name="design-and-modeling-tools-enterprise-edition-only"></a>設計およびモデリング ツール (Enterprise エディションのみ)  
  **コード マップと依存関係グラフ**  
@@ -233,7 +233,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
   
 -   **クラス ビューおよびオブジェクト ブラウザーからダイアグラムを作成します**。 クラス ビューおよびオブジェクト ブラウザー ウィンドウから新規マップまたは既存マップにファイルとアセンブリをドラッグ アンド ドロップします。  
   
- 参照してください[ソリューション間の依存関係をマップする](./modeling/map-dependencies-across-your-solutions.md)します。  
+ 「 [Map dependencies across your solutions](./modeling/map-dependencies-across-your-solutions.md)」を参照してください。  
   
  **その他の設計とモデリングこのリリースで変更します。**  
   
@@ -244,7 +244,7 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 -   **アーキテクチャ エクスプローラー**。 アーキテクチャ エクスプローラーを使ってダイアグラムを作成できなくなりました。 しかし、ソリューション エクスプローラーを使って引き続き作成できます。  
   
 ## <a name="visual-studio-extensibility-tools"></a>Visual Studio 機能拡張ツール  
- Visual Studio 機能拡張ツール (VS SDK とテンプレート) はセットアップ中にオプション コンポーネントとして含まれているので、そのインストールが今まで簡易化されたことはありません。  機能拡張ツールを使用すると、開発者は拡張機能を記述して、Visual Studio に機能をカスタマイズしたり、追加したりできます。 Visual Studio 機能拡張の詳細については、次を参照してください[Visual Studio SDK。](./extensibility/visual-studio-sdk.md)  
+ Visual Studio 機能拡張ツール (VS SDK とテンプレート) はセットアップ中にオプション コンポーネントとして含まれているので、そのインストールが今まで簡易化されたことはありません。  機能拡張ツールを使用すると、開発者は拡張機能を記述して、Visual Studio に機能をカスタマイズしたり、追加したりできます。 Visual Studio の機能拡張の詳細については、「 [Visual Studio SDK](./extensibility/visual-studio-sdk.md)」を参照してください。  
   
  カスタム インストールを使用して、機能拡張ツールを含める場合は、 **[機能] / [一般的なツール] / [Visual Studio 機能拡張ツール]** で検索してください。  **[新しいプロジェクト]** ダイアログを開き、 **[Visual C#] / [機能拡張]** の下にある **[Visual Studio 機能拡張ツールをインストールする]** の項目を選択して、後で機能拡張ツールをインストールすることもできます。  
   
@@ -280,4 +280,4 @@ Visual Studio 2015 へようこそ。これは開発者用の生産性ツール�
 * [カスタム ウィンドウ レイアウトを作成する](./misc/create-custom-window-layouts.md)   
 * [電球を使ってクイック操作をする](./ide/perform-quick-actions-with-light-bulbs.md)   
 * [Visual Studio 2015 でのアプリケーション ライフ サイクル管理の新機能については](http://msdn.microsoft.com/en-us/54b98a53-6083-4303-869a-8063d8fae938)
-* [Visual Studio 2017 の新機能](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+* [Visual Studio 2017 の新機能](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)

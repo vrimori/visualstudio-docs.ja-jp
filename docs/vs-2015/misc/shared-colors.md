@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 9d3186f3-07d2-441f-b33e-435e95d8a0b8
 caps.latest.revision: 11
 ms.author: v-brickg
-ms.openlocfilehash: 3871ee1f31b2bc63f575e308b3b9008b3335a224
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2d2f36b3b5213003e65f51f7d93a2d7d90a3ff12
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537046"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48881177"
 ---
 # <a name="shared-colors"></a>共有の色
 ここにイントロダクションを挿入します。  
@@ -25,7 +25,7 @@ ms.locfileid: "47537046"
 ## <a name="shared-colors"></a>共有の色  
  共通の Visual Studio シェル要素を使用する UI を設計する場合、または類似の機能との一貫性をインターフェイス要素に持たせる場合、パッケージ定義ファイルにある既存のトークン名を使用して色を選択し、割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
   
- この記事では、類似の UI を構築する際に参照できる一般的な UI 要素と UI 要素で使用されるトークン名について説明します。 これらの色のトークンにアクセスする方法の詳細については、次を参照してください。 [The VSColor Service](../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)します。  
+ この記事では、類似の UI を構築する際に参照できる一般的な UI 要素と UI 要素で使用されるトークン名について説明します。 これらの色のトークンにアクセスする方法の詳細については、「 [The VSColor Service](../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)」を参照してください。  
   
  トークン名は次のように正しく使用してください。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "47537046"
 #####  <a name="BKMK_CommandComboBox"></a> コンボ ボックス  
   
 > [!IMPORTANT]
->  コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに、編集可能なテキスト領域が含まれていない場合は、見つかる色トークンを使用して[ドロップダウン](../misc/shared-colors.md#BKMK_CommandDropDown)します。  
+>  コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに編集可能なテキスト領域が含まれていない場合は、 [Drop-down](../misc/shared-colors.md#BKMK_CommandDropDown)に記載した色トークンを使用します。  
   
  ![コンボ ボックスの赤線](../extensibility/ux-guidelines/media/0303-029-comboboxredline.png "0303 029_ComboBoxRedline")  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47537046"
 #####  <a name="BKMK_CommandDropDown"></a> ドロップダウン リスト  
   
 > [!IMPORTANT]
->  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンにでは、編集可能なテキスト領域が含まれている場合は、見つかる色トークンを使用して[コンボ ボックス](../misc/shared-colors.md#BKMK_CommandComboBox)します。  
+>  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンに編集可能なテキスト領域が含まれる場合は、 [Combo box](../misc/shared-colors.md#BKMK_CommandComboBox)に見つかる色トークンを使用します。  
   
  ![Drop&#45;ダウンの赤線](../extensibility/ux-guidelines/media/0303-042-dropdownredline.png "0303 042_DropdownRedline")  
   
@@ -387,7 +387,7 @@ ms.locfileid: "47537046"
 |![Drop&#45;下向きの矢印ボタンを無効になっている](../extensibility/ux-guidelines/media/0303-052-dropdownbuttondisabled.png "0303 052_DropdownButtonDisabled")|前景 (グリフ)|`Environment.DropDownDisabledGlyph`|  
   
 ##### <a name="split-button"></a>分割ボタン  
- 分割ボタンは、ボタン、メニュー、コマンド バー テキストなど、他のコマンド バー コントロールと多くのトークン名を共有します。 ここでは利便性のために、すべての必要なアクション ボタンとドロップダウン ボタンのトークン名を繰り返しています。 分割ボタンのドロップダウン リストがコマンド バーの実装は[メニュー](../misc/shared-colors.md#BKMK_CommandMenus)します。  
+ 分割ボタンは、ボタン、メニュー、コマンド バー テキストなど、他のコマンド バー コントロールと多くのトークン名を共有します。 ここでは利便性のために、すべての必要なアクション ボタンとドロップダウン ボタンのトークン名を繰り返しています。 分割ボタンのドロップダウン リストは、コマンド バー [Menus](../misc/shared-colors.md#BKMK_CommandMenus)の実装です。  
   
  ![分割ボタンの赤線](../extensibility/ux-guidelines/media/0303-053-splitbuttonredline.png "0303 053_SplitButtonRedline")  
   
@@ -648,7 +648,7 @@ ms.locfileid: "47537046"
 |![ポインターを合わせるとプレビューの背景タブ](../extensibility/ux-guidelines/media/0303-082-previewbackgroundtabhover.png "0303 082_PreviewBackgroundTabHover")<br /><br /> **ポインターを合わせると、プレビュー タブ背景タブ**|境界線|`Environment.FileTabProvisionalHoverBorder`<br /><br /> 背景と同じ色に設定されます。|  
   
 ##### <a name="document-overflow-button"></a>ドキュメント オーバーフロー ボタン  
- ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 によって制御されるドキュメント オーバーフロー ドロップダウン メニュー、 **CommandBarMenu**色 (を参照してください[メニュー](../misc/shared-colors.md#BKMK_CommandMenus))、表示と非表示の両方の開いているすべてのドキュメントと、オーバーフロー グリフの変更の一覧を表示します。すべての開いているドキュメントがタブ チャネルに表示されるかどうかによって異なります。  
+ ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 **CommandBarMenu** 色 (「 [Menus](../misc/shared-colors.md#BKMK_CommandMenus)」を参照) で制御されるドキュメント オーバーフロー ドロップダウン メニューには、表示と非表示の両方の開いているすべてのドキュメントのリストが表示され、オーバーフロー グリフは開いているすべてのドキュメントがタブ チャネルに表示されるかどうかに応じて変化します。  
   
  ![オーバーフローの赤線](../extensibility/ux-guidelines/media/0303-083-overflowredline.png "0303 083_OverflowRedline")  
   
@@ -1085,7 +1085,7 @@ ms.locfileid: "47537046"
 |![情報バー](../extensibility/ux-guidelines/media/0303-139-infobar.png "0303 139_Infobar")<br /><br /> **情報バー**|境界線|`Environment.ToolWindowBorder`|  
   
 #### <a name="scroll-bar"></a>スクロール バー  
- スクロール バーは Visual Studio 環境によってスタイルが設定され、テーマを指定する必要はありません。 ただし、UI が Visual Studio 環境のこの部分と常に一貫性のある状態で表示されるように、スクロール バーで使用する色を活用することができます。  
+ スクロール バーは Visual Studio 環境によってスタイルが設定され、テーマを指定する必要はありません。 ただし、常に、UI が Visual Studio 環境のこの部分と一貫性が表示されるように、スクロール バーで使用する色を活用することをことがあります。  
   
  ![スクロール バーの赤線](../extensibility/ux-guidelines/media/0303-140-scrollbarredline.png "0303 140_ScrollbarRedline")  
   
@@ -1182,7 +1182,7 @@ ms.locfileid: "47537046"
 |![ツリー ビュー ポイントしたときに重点を置いて](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br /><br /> **重点を置いています**|背景|`TreeView.SelectedItemActive`|  
 |![ツリー ビュー ポイントしたときに重点を置いて](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br /><br /> **重点を置いています**|前景 (テキスト)|`TreeView.SelectedItemActive`|  
 |![ツリー ビュー ポイントしたときに重点を置いて](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br /><br /> **重点を置いています**|前景 (グリフ)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
-|![ツリー ビュー ポイントしたときに重点を置いて](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br /><br /> **重点を置いています**|境界線|[なし]`TreeView.FocusVisualBorder`|  
+|![ツリー ビュー ポイントしたときに重点を置いて](../extensibility/ux-guidelines/media/0303-153-treeviewfocusedhover.png "0303 153_TreeViewFocusedHover")<br /><br /> **重点を置いています**|境界線|なし`TreeView.FocusVisualBorder`|  
 |![ツリー ビュー フォーカスされていないポインターを合わせると](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 154_TreeViewUnfocusedHover")<br /><br /> **フォーカスされていません。**|背景|`TreeView.SelectedItemInactive`|  
 |![ツリー ビュー フォーカスされていないポインターを合わせると](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 154_TreeViewUnfocusedHover")<br /><br /> **フォーカスされていません。**|前景 (テキスト)|`TreeView.SelectedItemInactive`|  
 |![ツリー ビュー フォーカスされていないポインターを合わせると](../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 154_TreeViewUnfocusedHover")<br /><br /> **フォーカスされていません。**|前景 (グリフ)|`TreeView.SelectedItemActiveGlyphMouseOver`|  
@@ -1295,7 +1295,7 @@ ms.locfileid: "47537046"
  使用しないケース  
  -   ドロップダウンまたはコンボ ボックスでない UI。  
   
--   [ドロップダウン](../misc/shared-colors.md#BKMK_CommandDropDown)または[コンボ ボックス](../misc/shared-colors.md#BKMK_CommandComboBox)コマンド バーにします。  
+-   コマンド バーの [Drop-down](../misc/shared-colors.md#BKMK_CommandDropDown) または [Combo box](../misc/shared-colors.md#BKMK_CommandComboBox) 。  
   
  **既定値**  
   
@@ -1421,7 +1421,7 @@ ms.locfileid: "47537046"
 |選択済み (非アクティブ)|境界線|なし|  
   
 ### <a name="manifest-designer"></a>マニフェスト デザイナー  
- マニフェスト デザイナーは、Windows 8 および Windows Phone 8 プロジェクトのマニフェスト ファイルを編集しやすくするための手段として設計されています。 使用可能な共有フレームワークはありませんが、向き/ナビゲーション タブと全体的な構造のデザイン レイアウトおよび色を一致させることが適切な場合があります。 レイアウトの詳細については、次を参照してください。 [Layout for Visual Studio](../extensibility/ux-guidelines/layout-for-visual-studio.md)します。  
+ マニフェスト デザイナーは、Windows 8 および Windows Phone 8 プロジェクトのマニフェスト ファイルを編集しやすくするための手段として設計されています。 使用可能な共有フレームワークはありませんが、向き/ナビゲーション タブと全体的な構造のデザイン レイアウトおよび色を一致させることが適切な場合があります。 レイアウトの詳細については、「 [Layout for Visual Studio](../extensibility/ux-guidelines/layout-for-visual-studio.md)」を参照してください。  
   
  ![マニフェスト デザイナーの赤線](../extensibility/ux-guidelines/media/0303-175-manifestdesignerredline.png "0303 175_ManifestDesignerRedline")  
   
@@ -1600,22 +1600,22 @@ ms.locfileid: "47537046"
   
 |コンポーネント|要素|トークン名: Category.color|  
 |---------------|-------------|--------------------------------|  
-|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|背景|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|背景|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|境界線|`TreeView.FocusVisualBorder`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|境界線|`TreeView.FocusVisualBorder`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|前景 (グリフ)|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|前景 (グリフ)|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|前景 (テキスト)|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|前景 (テキスト)|`TreeView.SelectedItemActive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|背景|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|背景|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
+|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|背景|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|背景|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|境界線|`TreeView.FocusVisualBorder`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|境界線|`TreeView.FocusVisualBorder`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|前景 (グリフ)|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|前景 (グリフ)|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの親ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-193-toolboxparentnodefocused.png "0303 193_ToolboxParentNodeFocused")<br /><br /> **フォーカスされた親ノード**|前景 (テキスト)|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![ツールボックスの子ノードに重点を置いて](../extensibility/ux-guidelines/media/0303-194-toolboxchildnodefocused.png "0303 194_ToolboxChildNodeFocused")<br /><br /> **フォーカスされた子ノード**|前景 (テキスト)|`TreeView.SelectedItemActive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|背景|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|背景|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
 |![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|境界線|なし|  
 |![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|境界線|なし|  
-|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|前景 (グリフ)|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|前景 (グリフ)|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|前景 (テキスト)|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
-|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|前景 (テキスト)|`TreeView.SelectedItemInactive`<br /><br /> [ツリー ビュー](../misc/shared-colors.md#BKMK_TreeView)カテゴリ|  
+|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|前景 (グリフ)|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|前景 (グリフ)|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![フォーカスされていないツールボックスの親ノード](../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")<br /><br /> **フォーカスされていない親ノード**|前景 (テキスト)|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
+|![フォーカスされていないツールボックスの子ノード](../extensibility/ux-guidelines/media/0303-196-toolboxchildnodeunfocused.png "0303 196_ToolboxChildNodeUnfocused")<br /><br /> **フォーカスされていない子ノード**|前景 (テキスト)|`TreeView.SelectedItemInactive`<br /><br /> [Tree view](../misc/shared-colors.md#BKMK_TreeView) カテゴリから|  
   
 ## <a name="color-value-reference"></a>カラー値の参照  
   

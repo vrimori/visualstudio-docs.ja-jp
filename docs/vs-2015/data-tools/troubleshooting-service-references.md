@@ -20,12 +20,12 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6d9510bf667b95dde4619f469b51041c07c0b4e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 696c6f2a0e738d965b5992e3df52a77831ab27a0
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548958"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880891"
 ---
 # <a name="troubleshooting-service-references"></a>サービス参照のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -70,9 +70,9 @@ ms.locfileid: "47548958"
 ## <a name="error-debugging-service-code"></a>サービス コードのデバッグ エラー
  クライアント コードから、WCF サービスのコードにステップ インすると、シンボルが見つからないことに関するエラーが表示される可能性があります。 これは、ソリューションの一部であったサービスが移動または、ソリューションから削除されるときに発生します。
 
- 最初に現在のソリューションの一部となっている WCF サービスへの参照を追加すると、サービス プロジェクトとサービスのクライアント プロジェクトの明示的なビルドの依存関係が追加されます。 これは、クライアント常にアクセスする最新の状態のサービスのバイナリ、クライアント コードからサービスのコードにステップ インなどのシナリオのデバッグにとって特に重要なことを保証します。
+ 最初に現在のソリューションの一部となっている WCF サービスへの参照を追加すると、サービス プロジェクトとサービスのクライアント プロジェクトの明示的なビルドの依存関係が追加されます。 これにより、クライアント常にアクセスする最新のサービスのバイナリはクライアント コードからサービスのコードにステップ インなどのシナリオのデバッグに特に重要です。
 
- サービス プロジェクトをソリューションから削除する場合、この明示的なビルド依存関係は無効になります。 Visual Studio を保証できなくサービス プロジェクトが再構築を必要に応じて。
+ サービス プロジェクトをソリューションから削除する場合、この明示的なビルド依存関係は無効になります。 Visual Studio を保証できなくサービス プロジェクトがリビルドされるに応じて。
 
  このエラーを解決するには、手動でサービス プロジェクトを再構築が必要。
 

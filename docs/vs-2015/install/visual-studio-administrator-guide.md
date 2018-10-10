@@ -18,17 +18,17 @@ caps.latest.revision: 76
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: e95970c19020e28c3b7592068b0ef1df7f1c56f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b8f25b995079aeedca262dedd62b2f9c880efb52
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546957"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879214"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio Administrator Guide
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 の最新ドキュメントについては、次を参照してください。、 [Visual Studio 2017 管理者ガイド](https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-administrator-guide)します。
+Visual Studio 2017 の最新ドキュメントについては、次を参照してください。、 [Visual Studio 2017 管理者ガイド](/visualstudio/install/visual-studio-administrator-guide)します。
 
 各ターゲット コンピューターが満たしている限り、ネットワーク上の Visual Studio 2015 を展開することができます、[最小インストール要件](http://www.microsoft.com/visualstudio/eng/products/2013-editions)します。 /Layout スイッチを使用して、インストール ファイルを実行してネットワーク共有を作成することができます (上の説明に従って、[の Visual Studio オフライン インストールを作成](../install/create-an-offline-installation-of-visual-studio.md)ページ) し、ローカル コンピューターからネットワーク共有にコピーします。 ISO を使用している場合、ISO をマウントする共有し、ISO をネットワーク共有にコピーまたはできます。  
   
@@ -59,7 +59,7 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 ## <a name="controlling-what-is-installed"></a>インストール内容の制御  
  エンド ユーザーによるインストール内容を制御する場合、管理者ファイルのインストールとコマンド ラインの 2 つのオプションがあります。 エンド ユーザーが Visual Studio インストーラー エクスペリエンスから選択できる内容を制限することが目的の場合は、管理者ファイルのインストールを選択できます、 初期構成を作成しつつ、エンド ユーザーが独自の Visual Studio インストーラー エクスペリエンスから選択できるようにする場合、コマンド ラインのパラメーターを選択します。  
   
- 管理者ファイル エクスペリエンスの詳細については、次を参照してください[方法: を作成し、無人インストールの Visual Studio を実行](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md)と[方法: Visual Studioをデプロイするときに、プロダクトキーを自動的に適用](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md).  コマンドライン制御の詳細については、次を参照してください。、 [Visual Studio をインストールするコマンド ライン パラメータを使用して](../install/use-command-line-parameters-to-install-visual-studio.md)ページ。  
+ 管理者ファイル エクスペリエンスの詳細については、「 [How to: Create and Run an Unattended Installation of Visual Studio](../install/how-to-create-and-run-an-unattended-installation-of-visual-studio.md) 」および「 [How to: Automatically apply product keys when deploying Visual Studio](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md)」を参照してください。  コマンドライン制御の詳細については、次を参照してください。、 [Visual Studio をインストールするコマンド ライン パラメータを使用して](../install/use-command-line-parameters-to-install-visual-studio.md)ページ。  
   
 ## <a name="specifying-customer-feedback-settings"></a>顧客フィードバック設定の指定  
  既定では、Visual Studio をインストールすると、カスタマー フィードバックが有効になります。 次のレジストリ キーの値を文字列 "0" に変更することで、個々のコンピューターで顧客からのカスタマー フィードバックを無効にするように Visual Studio を構成できます。  

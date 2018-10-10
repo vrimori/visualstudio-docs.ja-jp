@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3a799ebced2f790d94a4062b663b59dfa3fa41c3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aab6de915d6bb26b123b931fe10b7e0116688357
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537179"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880917"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのラベルの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47537179"
 > [!NOTE]
 >  このトピックは、コーディングの基本概念に関するチュートリアル シリーズの一部です。 チュートリアルの概要については、「[チュートリアル 2: 制限時間ありの計算クイズの作成](../ide/tutorial-2-create-a-timed-math-quiz.md)」を参照してください。  
   
-### <a name="to-create-a-project-and-and-set-properties-for-a-form"></a>プロジェクトを作成し、フォームのプロパティを設定するには  
+### <a name="to-create-a-project-and-set-properties-for-a-form"></a>プロジェクトを作成し、フォームのプロパティを設定するには  
   
 1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   

@@ -13,12 +13,12 @@ ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 587da32a1216c219b1811e8fbc8c1dd9ed2b01ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b8b352b5abdeb975c09d3be95fc7384930eb022
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545826"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880930"
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio の共有の色
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47545826"
   
 共通の Visual Studio シェル要素を使用する UI を設計する場合、または類似の機能との一貫性をインターフェイス要素に持たせる場合、パッケージ定義ファイルにある既存のトークン名を使用して色を選択し、割り当てます。 これにより、UI が Visual Studio 環境全体で一貫性を保ち、テーマが追加された場合や更新された場合に自動的に更新されるようになります。  
   
- この記事では、類似の UI を構築する際に参照できる一般的な UI 要素と UI 要素で使用されるトークン名について説明します。 これらの色のトークンにアクセスする方法の詳細については、次を参照してください。 [The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)します。  
+ この記事では、類似の UI を構築する際に参照できる一般的な UI 要素と UI 要素で使用されるトークン名について説明します。 これらの色のトークンにアクセスする方法の詳細については、「 [The VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService)」を参照してください。  
   
  トークン名は次のように正しく使用してください。  
   
@@ -561,7 +561,7 @@ ms.locfileid: "47545826"
 ####  <a name="BKMK_CommandComboBox"></a> コンボ ボックス  
   
 > [!IMPORTANT]
->  コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに、編集可能なテキスト領域が含まれていない場合は、見つかる色トークンを使用して[ドロップダウン](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)します。  
+>  コンボ ボックスはドロップダウンに似ていますが、編集可能なテキスト領域が含まれます。 ドロップダウンに編集可能なテキスト領域が含まれていない場合は、 [Drop-down](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)に記載した色トークンを使用します。  
   
  ![コンボ ボックスの赤線](../../extensibility/ux-guidelines/media/0303-029-comboboxredline.png "0303 029_ComboBoxRedline")  
   
@@ -808,7 +808,7 @@ ms.locfileid: "47545826"
 ####  <a name="BKMK_CommandDropDown"></a> ドロップダウン リスト  
   
 > [!IMPORTANT]
->  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンにでは、編集可能なテキスト領域が含まれている場合は、見つかる色トークンを使用して[コンボ ボックス](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)します。  
+>  ドロップダウンはコンボ ボックスに似ていますが、編集可能なテキスト領域がありません。 ドロップダウンに編集可能なテキスト領域が含まれる場合は、 [Combo box](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)に見つかる色トークンを使用します。  
   
  ![Drop&#45;ダウンの赤線](../../extensibility/ux-guidelines/media/0303-042-dropdownredline.png "0303 042_DropdownRedline")  
   
@@ -1017,7 +1017,7 @@ ms.locfileid: "47545826"
  `Environment.DropDownDisabledGlyph`  
   
 #### <a name="split-button"></a>分割ボタン  
- 分割ボタンは、ボタン、メニュー、コマンド バー テキストなど、他のコマンド バー コントロールと多くのトークン名を共有します。 ここでは利便性のために、すべての必要なアクション ボタンとドロップダウン ボタンのトークン名を繰り返しています。 分割ボタンのドロップダウン リストがコマンド バーの実装は[メニュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)します。  
+ 分割ボタンは、ボタン、メニュー、コマンド バー テキストなど、他のコマンド バー コントロールと多くのトークン名を共有します。 ここでは利便性のために、すべての必要なアクション ボタンとドロップダウン ボタンのトークン名を繰り返しています。 分割ボタンのドロップダウン リストは、コマンド バー [Menus](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandMenus)の実装です。  
   
  ![分割ボタンの赤線](../../extensibility/ux-guidelines/media/0303-053-splitbuttonredline.png "0303 053_SplitButtonRedline")  
   
@@ -1668,7 +1668,7 @@ ms.locfileid: "47545826"
  背景と同じ色に設定されます。  
   
 #### <a name="document-overflow-button"></a>ドキュメント オーバーフロー ボタン  
- ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 によって制御されるドキュメント オーバーフロー ドロップダウン メニュー、 **CommandBarMenu**色 (を参照してください[メニュー](../../misc/shared-colors.md#BKMK_CommandMenus))、表示と非表示の両方の開いているすべてのドキュメントと、オーバーフロー グリフの変更の一覧を表示します。すべての開いているドキュメントがタブ チャネルに表示されるかどうかによって異なります。  
+ ドキュメント オーバーフロー ボタンは、すべてのドキュメント タブに適した垂直スペースが現在の構成にあるかどうかに関係なく、1 つ以上のドキュメントが開いている場合に表示されます。 **CommandBarMenu** 色 (「 [Menus](../../misc/shared-colors.md#BKMK_CommandMenus)」を参照) で制御されるドキュメント オーバーフロー ドロップダウン メニューには、表示と非表示の両方の開いているすべてのドキュメントのリストが表示され、オーバーフロー グリフは開いているすべてのドキュメントがタブ チャネルに表示されるかどうかに応じて変化します。  
   
  ![オーバーフローの赤線](../../extensibility/ux-guidelines/media/0303-083-overflowredline.png "0303 083_OverflowRedline")  
   
@@ -2802,7 +2802,7 @@ ms.locfileid: "47545826"
  `Environment.ToolWindowBorder`  
   
 ### <a name="scroll-bar"></a>スクロール バー  
- スクロール バーは Visual Studio 環境によってスタイルが設定され、テーマを指定する必要はありません。 ただし、UI が Visual Studio 環境のこの部分と常に一貫性のある状態で表示されるように、スクロール バーで使用する色を活用することができます。  
+ スクロール バーは Visual Studio 環境によってスタイルが設定され、テーマを指定する必要はありません。 ただし、常に、UI が Visual Studio 環境のこの部分と一貫性が表示されるように、スクロール バーで使用する色を活用することをことがあります。  
   
  ![スクロール バーの赤線](../../extensibility/ux-guidelines/media/0303-140-scrollbarredline.png "0303 140_ScrollbarRedline")  
   
@@ -3079,7 +3079,7 @@ ms.locfileid: "47545826"
   
  境界線  
   
- [なし]`TreeView.FocusVisualBorder`  
+ なし`TreeView.FocusVisualBorder`  
   
  ![ツリー ビュー フォーカスされていないポインターを合わせると](../../extensibility/ux-guidelines/media/0303-154-treeviewunfocusedhover.png "0303 154_TreeViewUnfocusedHover")  
   
@@ -3348,7 +3348,7 @@ ms.locfileid: "47545826"
  使用しないケース  
  -   ドロップダウンまたはコンボ ボックスでない UI。  
   
--   [ドロップダウン](../../misc/shared-colors.md#BKMK_CommandDropDown)または[コンボ ボックス](../../misc/shared-colors.md#BKMK_CommandComboBox)コマンド バーにします。  
+-   コマンド バーの [Drop-down](../../misc/shared-colors.md#BKMK_CommandDropDown) または [Combo box](../../misc/shared-colors.md#BKMK_CommandComboBox) 。  
   
  **既定値**  
   
@@ -3698,7 +3698,7 @@ ms.locfileid: "47545826"
  なし  
   
 ## <a name="manifest-designer"></a>マニフェスト デザイナー  
- マニフェスト デザイナーは、Windows 8 および Windows Phone 8 プロジェクトのマニフェスト ファイルを編集しやすくするための手段として設計されています。 使用可能な共有フレームワークはありませんが、向き/ナビゲーション タブと全体的な構造のデザイン レイアウトおよび色を一致させることが適切な場合があります。 レイアウトの詳細については、次を参照してください。 [Layout for Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md)します。  
+ マニフェスト デザイナーは、Windows 8 および Windows Phone 8 プロジェクトのマニフェスト ファイルを編集しやすくするための手段として設計されています。 使用可能な共有フレームワークはありませんが、向き/ナビゲーション タブと全体的な構造のデザイン レイアウトおよび色を一致させることが適切な場合があります。 レイアウトの詳細については、「 [Layout for Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md)」を参照してください。  
   
  ![マニフェスト デザイナーの赤線](../../extensibility/ux-guidelines/media/0303-175-manifestdesignerredline.png "0303 175_ManifestDesignerRedline")  
   
@@ -4156,25 +4156,25 @@ ms.locfileid: "47545826"
   
  `TreeView.SelectedItemActive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  境界線  
   
  `TreeView.FocusVisualBorder`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  前景 (グリフ)  
   
  `TreeView.SelectedItemActive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  前景 (テキスト)  
   
  `TreeView.SelectedItemActive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  ![フォーカスされていないツールボックスの親ノード](../../extensibility/ux-guidelines/media/0303-195-toolboxparentnodeunfocused.png "0303 195_ToolboxParentNodeUnfocused")  
   
@@ -4188,7 +4188,7 @@ ms.locfileid: "47545826"
   
  `TreeView.SelectedItemInactive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  境界線  
   
@@ -4198,11 +4198,11 @@ ms.locfileid: "47545826"
   
  `TreeView.SelectedItemInactive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ  
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから  
   
  前景 (テキスト)  
   
  `TreeView.SelectedItemInactive`  
   
- [ツリー ビュー](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView)カテゴリ
+ [Tree view](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) カテゴリから
 

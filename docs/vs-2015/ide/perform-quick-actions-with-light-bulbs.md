@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9cd00bf08a48c1763ab72e6b30579e81e870c1a9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cd0c28f55be540207c7590e068c0b5f93a2abc39
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535393"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880813"
 ---
 # <a name="perform-quick-actions-with-light-bulbs"></a>電球を使ってクイック操作をする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
+このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
   
 電球マークは、生産性を向上させる Visual Studio 2015 RC の新機能です。 これらは Visual Studio エディターに表示されるアイコンであり、クリックすると、リファクタリングやエラーの修正などのクイック操作を実行できます。 電球マークは、エラーの修正およびリファクタリングをサポートする機能を 1 か所で集中的に提供するもので、多くは入力中の行に表示されます。  
   

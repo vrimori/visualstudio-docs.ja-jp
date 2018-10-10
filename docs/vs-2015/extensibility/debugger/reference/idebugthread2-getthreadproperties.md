@@ -17,12 +17,12 @@ ms.assetid: 304403fd-f4f8-4096-ac2c-bd3b59663aad
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5eddc47f35268fd62e0d4361e5cc1a99bf082107
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ddfe67b74b53d849fd131b0968af4e8cacbc148f
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547584"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880852"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -52,7 +52,7 @@ int GetThreadProperties (
  [in]フラグの組み合わせ、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)のどのフィールドを決定する列挙型`ptp`入力します。  
   
  `ptp`  
- [入力、出力]A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)構造体をスレッドのプロパティが入力されます。  
+ [入力、出力]A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)構造体のスレッドのプロパティが入力されます。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  

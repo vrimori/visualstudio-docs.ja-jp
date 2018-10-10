@@ -17,12 +17,12 @@ ms.assetid: aee48fc6-a15f-4fd5-8420-7f18824de220
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 324eb3c0af582e32318980dac675ac483f86f31f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ea16f64d07450eabebb0ff49f8c8ea26a0214ffa
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547635"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880202"
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>基本的なプロジェクト システムの作成、パート 2
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47547635"
   
 1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、に従って作成した SimpleProject ソリューションを開きます[基本的なプロジェクト システムでは、第 1 部作成](../extensibility/creating-a-basic-project-system-part-1.md)です。  
   
-2.  SimpleProjectPackage.cs ファイルでは、検索、ProvideProjectFactory 属性。 2 番目のパラメーター (プロジェクト名) で、null、および 4 番目のパラメーター (プロジェクト テンプレート フォルダーへのパス) に置き換えます"。\\\NullPath"次のようにします。  
+2.  SimpleProjectPackage.cs ファイルでは、ProvideProjectFactory 属性を検索します。 2 番目のパラメーター (プロジェクト名) で、null、および 4 番目のパラメーター (プロジェクト テンプレート フォルダーへのパス) に置き換えます"。\\\NullPath"次のようにします。  
   
     ```  
     [ProvideProjectFactory(typeof(SimpleProjectFactory), null,  

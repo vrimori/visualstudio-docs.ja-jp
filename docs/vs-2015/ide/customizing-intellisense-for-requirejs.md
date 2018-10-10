@@ -14,17 +14,17 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fbc4d9b85a3eb8e0fe5f3a890a76bae4695912e4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 04cffba0f7bd03cbb4fb2fe228174377871c35f8
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533503"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880670"
 ---
 # <a name="customizing-intellisense-for-requirejs"></a>RequireJS 用に IntelliSense をカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
+このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
   
 Visual Studio 2013 Update 4 以降では、人気のある RequireJS JavaScript ファイルとモジュール式ローダーがサポートされるようになりました。 RequireJS を使用すると、コード モジュール間の依存関係を定義し、必要な場合にのみモジュールを動的に読み込む処理が簡単になります。 RequireJS を使用する JavaScript コードを作成する際には、モジュール定義から参照するモジュールや、コード内から `require()` への呼び出しを使用して参照するモジュールに対して、IntelliSense による候補が提示されます。  
   

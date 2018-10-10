@@ -14,19 +14,19 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 13d0bcf02bb46de9116ab4dbd33b4a034c786252
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b180eed67b617cd7e46610b78865fe0ae088d85e
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540070"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879825"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>チュートリアル: 頂点の網かけによるオブジェクトの不足
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このトピックの最新バージョンをご覧[チュートリアル: 頂点の網掛けにオブジェクトの期限を見つからない](https://docs.microsoft.com/visualstudio/debugger/graphics/walkthrough-missing-objects-due-to-vertex-shading)します。  
   
-このチュートリアルを使用する方法について説明、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]頂点シェーダー ステージ中に発生するエラーのために不足しているオブジェクトを調査するグラフィックス診断ツール。  
+このチュートリアルでは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のグラフィックス診断ツールを使用して、頂点シェーダー ステージの間に発生するエラーが原因で欠落しているオブジェクトを調査する方法を示します。  
   
  このチュートリアルでは、次の作業について説明します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47540070"
   
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>グラフィックス ログのフレームを調査するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、欠落しているオブジェクトを表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス ログのタブが表示される[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、オブジェクトの欠落を表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス ログのタブが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に表示されます。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
   
 2.  **[フレーム一覧]** で、オブジェクトが表示されないことを示すフレームを選択します。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックス ログのタブは次のように表示されます。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47540070"
     > [!TIP]
     >  同時にアプリのデバッグを行っている場合、この位置にブレークポイントを設定して次のフレームが表示されるとヒットするようにできます。 これで、定数バッファーが指定されたときに `m_marbleConstantBufferData` のメンバーを調べ、 `projection` メンバーの値がすべてゼロに設定されていることを確認できます。  
   
- 定数バッファーが指定されている場所を確認し、その値が変数 `m_marbleConstantBufferData`から取得されたことがわかったら、次の手順では、 `m_marbleConstantBufferData.projection` メンバーがすべてゼロに設定されている場所を検索します。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
+ 定数バッファーが指定されている場所を検索し、その値が元の変数を検出した後に`m_marbleConstantBufferData`、場所を確認する次の手順では、`m_marbleConstantBufferData.projection`メンバーすべてゼロに設定されます。 **[すべての参照の検索]** を使用して、 `m_marbleConstantBufferData.projection`の値を変更するコードをすばやくスキャンできます。  
   
 #### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>アプリのソース コード内で projection メンバーが設定されている場所を検索するには  
   
