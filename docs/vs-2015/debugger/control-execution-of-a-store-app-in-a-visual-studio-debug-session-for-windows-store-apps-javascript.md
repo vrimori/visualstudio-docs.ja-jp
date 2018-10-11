@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e5725dc2be204ae3b657a857c5a358a29b8c3709
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 583754b01f25509146bc3e3924e5132288a05285
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535623"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48881138"
 ---
 # <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Windows ストア アプリ用の Visual Studio デバッグ セッションでの、ストア アプリの実行制御 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47535623"
   
     -   ステートメントがソリューション内の関数の呼び出しの場合、デバッガーは呼び出された関数の最初の行に移動して、実行を中断します。  
   
-     終了ポイントに到達するまで、 `example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。  
+     終了ポイントに到達するまで、`example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。  
   
 5.  **データのヒントで変数の値を表示します。** 終了ポイントに到達するまで、 `example1` のステートメントのステップ インを続けます。 デバッガーにより、関数の終了の中かっこが強調表示されます。 変数名の上にマウス ポインターを置くと、変数の名前と値がデータのヒントに表示されます。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_2"></a> 例 2  
  この例では、関数のステップイン、ステップ オーバー、およびステップ アウトを実行します。  
   
-1.  **モジュール関数内の example2 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で`example2();`します。  
+1.  **モジュール関数内の example2 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example2();` に置き換えます。  
   
      ![Example2 関数を呼び出す](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")  
   
@@ -172,7 +172,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_3"></a> 例 3  
  この例では、ループの特定の繰り返しで中断するように条件付きブレークポイントを設定し、ループの後に配置したカーソルまで実行します。 また、テキスト ビジュアライザーで変数の値を表示します。  
   
-1.  **モジュール関数内の example3 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function";`行`example3();`します。  
+1.  **モジュール関数内の example3 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example3();` に置き換えます。  
   
      ![Example3 メソッドを呼び出す](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")  
   
@@ -188,7 +188,7 @@ ms.locfileid: "47535623"
   
 5.  **ブレークポイントまで実行します。** **デバッグ**] メニューの [選択**続行**(キーボード: **F5**)。 `i` で一時停止し、 `i` の現在の値が 500 であることを確認します。 変数 `s` が 1 行に表示され、データ ヒント ウィンドウよりかなり長いことにもご注意ください。  
   
-6.  **文字列変数を視覚化します。** データ ヒントで虫眼鏡アイコンをクリックして、`s`します。  
+6.  **文字列変数を視覚化します。** `s` のデータのヒントで虫眼鏡アイコンをクリックします。  
   
      テキスト ビジュアライザー ウィンドウが表示され、文字列の値が複数行の文字列として示されます。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> [カーソル行の前まで実行] を使用してコードに戻り、ブレークポイントを削除する  
  Microsoft またはサードパーティから提供されているライブラリ コードにステップ インしている場合、カーソル行の前まで実行すると便利な場合があります。 ライブラリ コードのステップ実行は役に立ちますが、長い時間がかかることがあります。 また、自分のコードに対する興味の方がはるかに大きいのが普通です。 この演習では、その方法を説明します。  
   
-1.  **App.start の呼び出しにブレークポイントを設定します。** `module`関数を行にブレークポイントを設定 `app.start()`  
+1.  **App.start の呼び出しにブレークポイントを設定します。** `module` 関数で、`app.start()` の行にブレークポイントを設定します。  
   
 2.  **ブレークポイントまで実行し、ライブラリ関数にステップ インします。**  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47535623"
   
 ###  <a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> オブジェクトの変数データとプロトタイプ チェーンを表示する  
   
-1.  **配列オブジェクトをモジュール関数を追加します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で `var myArray = new Array(1, 2, 3);`  
+1.  **配列オブジェクトをモジュール関数を追加します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `var myArray = new Array(1, 2, 3);` に置き換えます。  
   
      ![myArray 定義](../debugger/media/dbg-jsnav-myarray.png "DBG_JSNAV_myArray")  
   
@@ -253,7 +253,7 @@ ms.locfileid: "47535623"
   
 ###  <a name="BKMK_Example_4"></a> 例 4  
   
-1.  **モジュール関数内の example4 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function"`で、 `example4()`:  
+1.  **モジュール関数内の example4 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function"` の後の行を `example4()` に置き換えます。  
   
      ![Example4 メソッドを呼び出す](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")  
   
@@ -289,7 +289,7 @@ ms.locfileid: "47535623"
 ###  <a name="BKMK_Example_5"></a> 例 5  
  この例では、5 つのユーザー定義関数を含む呼び出しパスにステップ インします。  
   
-1.  **モジュール関数内の example5 関数を呼び出します。** 編集、`module`関数し、後の行を置換`var callTrack = "module function";`行`example5();`します。  
+1.  **モジュール関数内の example5 関数を呼び出します。** `module` 関数を編集し、`var callTrack = "module function";` の後の行を行 `example5();` に置き換えます。  
   
      ![Example5 の呼び出し](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")  
   

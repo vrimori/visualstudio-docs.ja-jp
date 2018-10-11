@@ -19,21 +19,21 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 74302bb9aea552bfc4e8fedc93fd7aebc69fb4b2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3801fb58f09ac70c26e21304957e31f7b3ec4ddc
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548145"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48881021"
 ---
 # <a name="create-xml-documentation-comments-for-javascript-intellisense"></a>JavaScript IntelliSense の XML ドキュメントのコメントを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
+このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
   
 *XML ドキュメント コメント*JavaScript コメント関数、フィールド、および変数などのコード要素に関する情報を提供するスクリプトに追加することができます。 Visual Studio で、これらの説明テキストがスクリプト関数を参照するときに IntelliSense に表示されます。  
   
- このトピックでは、XML ドキュメント コメントの使用に関する基本的なチュートリアルを提供します。 については、他の要素を使用して[ \<var >](../ide/var-javascript.md)と[\<値 >](../ide/value-javascript.md)、および追加のコード例については、次を参照してください[XML ドキュメントのコメント。](../ide/xml-documentation-comments-javascript.md). など、非同期コールバックの IntelliSense の情報を提供する方法については、`Promise`を参照してください[\<返します >](../ide/returns-javascript.md)します。  
+ このトピックでは、XML ドキュメント コメントの使用に関する基本的なチュートリアルを提供します。 については、他の要素を使用して[ \<var >](../ide/var-javascript.md)と[\<値 >](../ide/value-javascript.md)、および追加のコード例については、次を参照してください[XML ドキュメントのコメント](../ide/xml-documentation-comments-javascript.md)。 など、非同期コールバックの IntelliSense の情報を提供する方法については、`Promise`を参照してください[\<返します >](../ide/returns-javascript.md)します。  
   
 > [!NOTE]
 >  XML ドキュメントのコメントは、参照されるファイル、アセンブリ、およびサービスでのみ使用できます。  
