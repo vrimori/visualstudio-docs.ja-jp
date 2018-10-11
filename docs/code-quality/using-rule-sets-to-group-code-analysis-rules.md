@@ -1,4 +1,4 @@
-*---
+---
 title: コード分析規則セット
 ms.date: 04/02/2018
 ms.prod: visual-studio-dev15
@@ -56,7 +56,7 @@ Visual Studio でコード分析を構成するときに、組み込みの*規�
 ```
 
 > [!TIP]
-> グラフィカルな**規則セット エディター**の[規則セットの編集](../code-quality/working-in-the-code-analysis-rule-set-editor.md)使用すると、手動より簡単に編集できます。
+> グラフィカルな**規則セット エディター**の[規則セットの編集](../code-quality/working-in-the-code-analysis-rule-set-editor.md)を使用すると、手動より簡単に編集できます。
 
 プロジェクトの規則セットは Visual Studio プロジェクトファイルの **CodeAnalysisRuleSet** プロパティで指定されます。 例えば:
 
