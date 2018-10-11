@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3f52834b1983b808a2da57795dc2c5653511f88
-ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
+ms.openlocfilehash: 1096188a6cf6be34d56c6330d588e56e0c306581
+ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37058712"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49073936"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio リモート デバッグ モニターに接続できません。
 このメッセージは、リモート デバッグ モニターが正しくリモート コンピューターで設定されていないか、リモートのコンピューターによってにアクセスできないネットワークの問題またはファイアウォールが存在するために発生する可能性があります。
@@ -116,7 +116,7 @@ Windows XP および Windows 7 に固有の従来の問題があります。 こ
 
 リモート コンピューター名を使用して接続できない場合は、代わりに IP アドレスを使用してみてください。 使用することができます`ipconfig`IPv4 アドレスを取得するリモート コンピューター上のコマンド ラインでします。 ホスト ファイルを使用している場合は、正しく構成されていることを確認します。
 
-失敗した場合は、リモート コンピューターがネットワークにアクセスできることを確認 ([ping](https://technet.microsoft.com/en-us/library/cc732509(v=ws.10).aspx)リモート マシン)。 インターネット経由でリモート デバッグはサポートされていませんが、一部の Microsoft Azure のシナリオでは可します。
+失敗した場合は、リモート コンピューターがネットワークにアクセスできることを確認 ([ping](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee624059(v=ws.10))リモート マシン)。 インターネット経由でリモート デバッグはサポートされていませんが、一部の Microsoft Azure のシナリオでは可します。
   
 ### <a name="server_incorrect"></a> リモート デバッガーでサード パーティのソフトウェアが干渉しているサーバー名が間違っているか
 
@@ -153,7 +153,7 @@ Visual Studio でのプロジェクト プロパティを確認し、サーバ�
 ### <a name="the-local-and-remote-machines-have-different-authentication-modes"></a>ローカル コンピューターとリモート コンピューターの認証モードが異なる  
  ローカル コンピューターとリモート コンピューターで、同じ認証モードを使用する必要があります。 これを解決するには、両方のマシンで同じ認証モードを使用するようにします。 認証モードを変更することができます。 リモート デバッガーのウィンドウに移動、**ツール > オプション** ダイアログ ボックス。
   
- 認証モードの詳細については、「 [Windows 認証の概要](https://technet.microsoft.com/en-us/library/hh831472.aspx)」を参照してください。   
+ 認証モードの詳細については、「 [Windows 認証の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831472(v=ws.11))」を参照してください。   
   
 ### <a name="anti-virus-software-is-blocking-the-connections"></a>ウイルス対策ソフトウェアが接続をブロックしている  
  Windows のウイルス対策ソフトウェアがリモート デバッガーの接続を許可しても、その他のサード パーティ製のウイルス対策ソフトウェアがそれらの接続をブロックする可能性があります。 これらの接続を許可する方法については、ウイルス対策ソフトウェアのマニュアルを参照してください。  

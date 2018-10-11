@@ -10,20 +10,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c8bb09bd5080e82a80659905eb3db1d9dbc78dd
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 4e430ac4658cd34db34f87c6b051c9269c3b6454
+ms.sourcegitcommit: 50b19010b2e2b4736835350710e2edf93b980b56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280338"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49073663"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent の使用
-**Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent と統合できる[Application Insights](/azure/application-insights/)と[System Center Operation Manager](http://technet.microsoft.com/library/hh205987.aspx)します。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
+**Microsoft Monitoring Agent**を使用して、IIS によってホストされる ASP.NET Web アプリおよび SharePoint 2010 や SharePoint 2013 アプリケーションのエラー、パフォーマンスの問題、またはその他の問題をローカルで監視することができます。 エージェントからの診断イベントを IntelliTrace ログ (.iTrace) ファイルに保存できます。 次に、Visual Studio Enterprise (Professional Edition や Community Edition ではない) のログを開いて、すべての Visual Studio 診断ツールで問題をデバッグできます。 Agent を **トレース** モードで実行して、IntelliTrace 診断データとメソッド データを収集することもできます。 Microsoft Monitoring Agent は [Application Insights](/azure/application-insights/) および [System Center Operation Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12))と統合できます。 Microsoft Monitoring Agent がインストールされている場合、対象システムの環境が変更されます。  
   
 > [!NOTE]
 >  **IntelliTrace スタンドアロン コレクター**を使用して、対象環境を変更することなく、リモート コンピューター上の Web、SharePoint、WPF、Windows フォーム アプリの IntelliTrace 診断データとメソッド データを収集することもできます。 スタンドアロン コレクターは、Microsoft Monitoring Agent を **モニター** モードで実行するよりも、パフォーマンスに大きな影響を及ぼします。 参照してください[IntelliTrace スタンドアロン コレクターを使用して](../debugger/using-the-intellitrace-stand-alone-collector.md)します。  
   
- System Center 2012 を使用する場合は、オペレーション マネージャーと連携する Microsoft Monitoring Agent を使用して、問題についてのアラートを取得し、保存された IntelliTrace ログへのリンクを含む Team Foundation Server の作業項目を作成します。 これで、さらにデバッグを行うためにこれらの作業項目をその他の項目に割り当てることができます。 「 [Operations Manager と開発プロセスの統合](http://technet.microsoft.com/library/jj614609.aspx) 」および「 [Microsoft Monitoring Agent による監視](http://technet.microsoft.com/en-us/library/dn465153.aspx)」をご覧ください。  
+ System Center 2012 を使用する場合は、オペレーション マネージャーと連携する Microsoft Monitoring Agent を使用して、問題についてのアラートを取得し、保存された IntelliTrace ログへのリンクを含む Team Foundation Server の作業項目を作成します。 これで、さらにデバッグを行うためにこれらの作業項目をその他の項目に割り当てることができます。 「 [Operations Manager と開発プロセスの統合](/previous-versions/system-center/system-center-2012-R2/jj614609(v=sc.12)) 」および「 [Microsoft Monitoring Agent による監視](/previous-versions/system-center/system-center-2012-R2/dn465153(v=sc.12))」をご覧ください。  
   
  開始する前に、ビルドされ、配置されたコードに一致するソースとシンボルがあることを確認します。 これによって、デバッグと IntelliTrace ログの診断イベントの参照を開始するときに、アプリケーション コードに直接進むことができます。 Visual Studio が配置されたコードに一致するソースを自動的に検索して、開くことができるように[ビルドを設定](../debugger/diagnose-problems-after-deployment.md) します。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "44280338"
 3.  [手順 3.: 記録されたイベントを保存する](#SaveEvents)  
   
 ##  <a name="SetUpMonitoring"></a> 手順 1.: Microsoft Monitoring Agent を設定する  
- Web サーバーでスタンドアロン エージェントを設定して、アプリケーションを変更せずにローカルでの監視を実行します。 System Center 2012 を使用している場合は、「 [Microsoft Monitoring Agent のインストール](http://technet.microsoft.com/library/dn465156.aspx)」をご覧ください。  
+ Web サーバーでスタンドアロン エージェントを設定して、アプリケーションを変更せずにローカルでの監視を実行します。 System Center 2012 を使用している場合は、「 [Microsoft Monitoring Agent のインストール](/previous-versions/system-center/system-center-2012-R2/dn465156(v=sc.12))」をご覧ください。  
   
 ###  <a name="SetUpStandaloneMMA"></a> スタンドアロンのエージェントを設定する  
   
 1.  以下を確認します。  
   
-    -   [サポートされているバージョンのインターネット インフォメーション サービス (IIS: Internet Information Services)](http://technet.microsoft.com/en-us/library/dn465154.aspx)が Web サーバーによって実行されている。  
+    -   [サポートされているバージョンのインターネット インフォメーション サービス (IIS: Internet Information Services)](/previous-versions/system-center/system-center-2012-R2/dn465154(v=sc.12))が Web サーバーによって実行されている。  
   
     -   Web サーバーに .NET Framework 3.5、4、または 4.5 がある。  
   
