@@ -25,17 +25,17 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9b6a7e624298ae3766f67a1bd49760b9b5e066bd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e99f18122dc0be7e3a68871aa58a9109502da9c0
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535025"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880956"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でのデータに WPF コントロールをバインドします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](https://docs.microsoft.com/en-us/visualstudio/)します。  
+このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
   
 データ バインドを作成する[!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)]コントロールを使用して、**データソース**ウィンドウ。 最初に、データ ソースを追加、**データソース**ウィンドウ。 項目をドラッグし、**データ ソース**ウィンドウ、**WPF デザイナー**します。  
   

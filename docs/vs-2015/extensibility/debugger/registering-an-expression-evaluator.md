@@ -16,12 +16,12 @@ ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 34cf96f38d169994d85f758c9453b6ad15ad6390
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 99561ea9e1fe46f5e0f90bf994c8b9eaf4b11d32
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536419"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880531"
 ---
 # <a name="registering-an-expression-evaluator"></a>式エバリュエーターの登録
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47536419"
 ## <a name="managed-code-expression-evaluator"></a>マネージ コードの式エバリュエーター  
  EE が自ら COM 環境は、通常、VSIP プログラムへの呼び出しにより起動を登録する DLL は、クラス ライブラリとして実装されているマネージ コード**regpkg.exe**します。 COM 環境のレジストリ キーの書き込みの実際のプロセスが自動的に処理されます。  
   
- メイン クラスのメソッドが付いて、 <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>、そのメソッドが、DLL が COM に登録されているときに呼び出されることを示す この登録メソッドは、多くの場合と呼ばれる`RegisterClass`、Visual Studio で DLL を登録するためのタスクを実行します。 対応する`UnregisterClass`(でマークされた、 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>) の効果を元に戻します`RegisterClass`DLL がアンインストールされます。  
+ メイン クラスのメソッドが付いて、<xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>メソッドが、DLL が COM に登録されているときに呼び出されることを示す この登録メソッドは、多くの場合と呼ばれる`RegisterClass`、Visual Studio で DLL を登録するためのタスクを実行します。 対応する`UnregisterClass`(でマークされた、 <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>) の効果を元に戻します`RegisterClass`DLL がアンインストールされます。  
   
  アンマネージ コードで記述された、EE の場合と同じのレジストリ エントリが作成されます。唯一の違いがあるないヘルパー関数など`SetEEMetric`に仕事ができます。 この登録または登録解除プロセスの例のようになります。  
   

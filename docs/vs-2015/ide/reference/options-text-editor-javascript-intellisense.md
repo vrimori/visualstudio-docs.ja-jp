@@ -17,12 +17,12 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c681acc80b0646f3cb6f51435bf8358d12bf44b7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b3b17416902bac2bcc7ff03adc39e548e63fb229
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537386"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879363"
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>[オプション]、[テキスト エディター]、[JavaScript]、[IntelliSense]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -70,7 +70,7 @@ JavaScript での IntelliSense の動作設定を変更するには、 **[オプ
   
  定義済みの参照グループを使用して、特定の IntelliSense (.js) ファイルがさまざまな JavaScript プロジェクトのスコープ内にあることを指定できます。 4 つの参照グループを使用できます。  
   
--   暗黙 (Windows*バージョン*) の[!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)]JavaScript を使ったアプリ。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
+-   暗黙 (Windows *バージョン*)、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーション用。 このグループに含まれるファイルは、JavaScript を使用する [!INCLUDE[win8_appname_long](../../includes/win8-appname-long-md.md)] アプリケーションのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   
 -   暗黙 (Web)、HTML5 プロジェクト用。 このグループに含まれるファイルは、これらのプロジェクト タイプのコード エディターで開かれる、すべての .js ファイルのスコープ内にあります。  
   

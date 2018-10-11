@@ -16,12 +16,12 @@ ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8aaf608c4a03816fb109e65c2b8d71d06a279799
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5bd5fa0fd23f2608e7cfd00896b0632cfb13fa38
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544520"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880247"
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>従来の言語サービスのパーサーとスキャナー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -85,7 +85,7 @@ namespace MyNamespace
 ## <a name="parsing-for-matching-braces"></a>対応するかっこの解析  
  この例では、ユーザーが入力する終わりかっこの一致の制御のフローを示します。 このプロセスで色付けに使用するスキャナーもトークンとトークンが中かっこの一致操作をトリガーするかどうかの種類を決定する使用されます。 トリガーが見つかった場合、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッドが呼び出され、対応するかっこを検索します。 最後に、2 つの中かっこが強調表示されます。  
   
- 場合でも、中かっこは、トリガーの名前で使用され、解析上の理由から、このプロセスは実際の中かっこに限定されません。 ペアになったマッチングに指定されている文字のペアがサポートされています。 例としては、(と)、 \< >、および [と]。  
+ 場合でも、中かっこは、トリガーの名前で使用され、解析上の理由から、このプロセスは実際の中かっこに限定されません。 一致するペアに指定されている文字のペアがサポートされています。 例としては、(と)、 \< >、および [と]。  
   
  言語サービスに対応する中かっこがサポートするいると仮定します。  
   

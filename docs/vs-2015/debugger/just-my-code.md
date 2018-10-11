@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dbb444a8de184f47bc8c6915bbf0fafcaf6c7ca3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e0a9787e7e0a203a77e456ec61ea8a80057ce92
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548810"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879981"
 ---
 # <a name="just-my-code"></a>マイ コードのみ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -195,7 +195,7 @@ ms.locfileid: "47548810"
 |-|-|  
 |**MyCode**|ユーザーが所有および制御するユーザー コード。|  
 |**LibraryCode**|ユーザーが通常使用し、アプリケーションが正しく機能するために必要なライブラリからの非ユーザー コード (WinJS や jQuery など)。|  
-|**UnrelatedCode**|ユーザーのアプリケーションで実行することはできるが、ユーザーが所有せず、アプリケーションが正しく機能するために直接必要としない非ユーザー コード (広告を表示する広告 SDK など)。 Windows ストア プロジェクトでは、HTTP または HTTPS URI からアプリケーションに読み込まれるコードも UnrelatedCode と見なされます。|  
+|**UnrelatedCode**|アプリケーションが実行される可能性が非ユーザー コードを所有していないし、アプリケーションが正しく (広告を表示する広告 SDK など) の機能に依存しない直接します。 Windows ストア プロジェクトでは、HTTP または HTTPS URI からアプリケーションに読み込まれるコードも UnrelatedCode と見なされます。|  
   
  JavaScript デバッガーは、以下のコードの種類を自動的に分類します。  
   

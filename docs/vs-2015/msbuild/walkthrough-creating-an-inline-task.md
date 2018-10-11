@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7d5931d0871b0a240b0702d865787171b9acf759
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 727c8cec7309952189558d2f4b7aebc8ec99738d
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536366"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880995"
 ---
 # <a name="walkthrough-creating-an-inline-task"></a>チュートリアル: インライン タスクの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ MSBuild タスクは通常、<xref:Microsoft.Build.Framework.ITask> インター
   
 1.  Visual Studio で、**[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として Visual C# を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「`InlineTasks`」と入力します。 ソリューションの**場所**を入力します (`D:\` など)。 **[ソリューションのディレクトリを作成]** がオンになっていることと、**[ソース管理に追加]** がオフになっていること、さらに **[ソリューション名]** が `InlineTasks` になっていることを確認します。  
+2.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類として Visual C# を選択し、**[Windows フォーム アプリケーション]** テンプレートをクリックします。 **[名前]** ボックスに「 `InlineTasks`」と入力します。 ソリューションの**場所**を入力します (`D:\` など)。 **[ソリューションのディレクトリを作成]** がオンになっていることと、**[ソース管理に追加]** がオフになっていること、さらに **[ソリューション名]** が `InlineTasks` になっていることを確認します。  
   
      **[OK]** をクリックして、プロジェクト ファイルを作成します。  
   

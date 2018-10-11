@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 26fe3a9b99e1e437fd1b9007587fac97e6ae7adf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2f3c89e0bb6539cb4fb37293fe556451042127b4
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537452"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880709"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "47537452"
  では、変数 `varA` に変数 `varB` の値が代入されます。  
   
 ## <a name="parameters-switches-and-values"></a>パラメーター、スイッチ、および値  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンドには、引数、スイッチ、および値を必要とするコマンドと省略できるコマンドがあります。 このようなコマンドを処理するときは、いくつかの規則が適用されます。 リッチ コマンドの例を次に示し、用語について説明します。  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コマンドには、引数、スイッチ、値を必要とするコマンドと省略できるコマンドがあります。 このようなコマンドを処理するときは、いくつかの規則が適用されます。 リッチ コマンドの例を次に示し、用語について説明します。  
   
 ```  
 Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar   

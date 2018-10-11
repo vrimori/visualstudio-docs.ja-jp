@@ -13,12 +13,12 @@ ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
 caps.latest.revision: 25
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 469ce43d35d0fdf282a164596fa4cd48eb442534
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e8f6d371bea8927c272f97dccd1c8d033635616a
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549101"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880067"
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "47549101"
   
      ![Android&#95;Emu&#95;V&#95;Switch&#95;Man](../cross-platform/media/android-emu-v-switch-man.png "Android_Emu_V_Switch_Man")  
   
-     セットアップに誤りがあり、Windows 10 を使っている場合は、 [netcfg –d コマンドを使ってネットワーク デバイスを再インストール](http://windows.microsoft.com/en-us/windows-10/fix-network-connection-issues) (セクション 6) してみることもできます。  
+     セットアップに誤りがあり、Windows 10 を使っている場合は、 [netcfg –d コマンドを使ってネットワーク デバイスを再インストール](http://windows.microsoft.com/windows-10/fix-network-connection-issues) (セクション 6) してみることもできます。  
   
 -   これらの手順を実行しても問題が解決しない場合は、エミュレーターに干渉している可能性のあるサード パーティ ソフトウェアの情報について、「 [Emulator fails to start (first use)](#NoStart) 」をご覧ください。  
   

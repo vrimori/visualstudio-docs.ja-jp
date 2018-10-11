@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 37ace853b737f7e7031ac003240463d250fd49f9
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 4693b7e1b0b274c9166bfa4f8d25531433a566bb
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "47592527"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879305"
 ---
 # <a name="how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して動的にコンパイルされた ASP.NET Web アプリケーションをインストルメントし、メモリ データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47592527"
 このトピックでは、コマンドライン ツールの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイル ツールを利用し、インストルメンテーション プロファイル方法で、動的にコンパイルされた [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションの .NET メモリ割り当てとオブジェクト有効期間に関する詳細データを収集する方法について説明します。  
   
 > [!NOTE]
->  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラーのコマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
+>  プロファイリング ツールのコマンド ライン ツールは、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] インストール ディレクトリの \Team Tools\Performance Tools サブディレクトリにあります。 64 ビット コンピューター上では、64 ビット バージョンのツールと 32 ビット バージョンのツールの両方を使用できます。 プロファイラー コマンド ライン ツールを使用するには、コマンド プロンプト ウィンドウの PATH 環境変数にツールのパスを追加するか、コマンド自体にそれを追加します。 詳細については、「[コマンド ライン ツールへのパスの指定](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)」をご覧ください。  
   
  [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションからパフォーマンス データを収集するには、ターゲット アプリケーションの web.config ファイルを変更し、動的にコンパイルされたアプリケーション ファイルをインストルメントする [VSInstr.exe](../profiling/vsinstr.md) ツールを有効にします。 次に [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) ツールを使用し、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションをホストするサーバーを構成し、適切な環境変数を設定して .NET メモリ プロファイリングを有効にし、コンピューターを再起動します。  
   

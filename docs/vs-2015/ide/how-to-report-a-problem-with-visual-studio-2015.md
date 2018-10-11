@@ -12,17 +12,17 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dbbd84fb72c2d25c30b3012d3dfcb381dcc35050
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 80e8a8c69b0536891737741125f0313f953b421e
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533630"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880631"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2015"></a>Visual Studio 2015 で問題を報告する方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio 2017 で問題を報告する方法](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)します。
+Visual Studio 2017 の最新ドキュメントについては、次を参照してください。 [Visual Studio 2017 で問題を報告する方法](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)します。
 
 Visual Studio 2015 で問題が発生した場合について知りたいが診断して修正できるようにします。  **[問題の報告]** ツールを使うと、問題に関する詳しい情報を収集し、数回のクリックで問題を Microsoft に送信できます。  
   
