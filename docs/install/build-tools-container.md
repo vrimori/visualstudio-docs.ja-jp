@@ -33,7 +33,7 @@ Visual Studio Build Tools を Windows コンテナーにインストールして
 
 Docker for Windows を既にインストールしてある場合は、手順 3 に進んでかまいません。
 
-## <a name="step-1-enable-hyper-v"></a>手順 1. Hyper-V を無効にする
+## <a name="step-1-enable-hyper-v"></a>手順 1. Hyper-V を有効にする
 
 Hyper-V は既定では有効になっていません。 現在、Windows 10 では Hyper-V による分離のみがサポートされているので、Docker for Windows を開始するには Hyper-V を有効にする必要があります。
 
