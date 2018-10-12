@@ -17,7 +17,7 @@
 ## サブスクリプション会員の特典を使用する
 ### ツール
 #### [Visual Studio IDE ](vs-ide-benefit.md)
-#### [Azure DevOps Services](vs-azure-devops.md)
+#### [Azure DevOps](vs-azure-devops.md)
 #### [Azure クレジット](vs-azure.md)
 #### [Visual Studio App Center](vs-visual-studio-app-center.md)
 #### [Parasoft ](vs-parasoft.md)
@@ -31,7 +31,7 @@
 ### [プロフェッショナルな開発](professional-development.md)
 #### [LinkedIn Learning](vs-linkedin-learning.md)
 #### [DataCamp](vs-datacamp.md)
-#### [Opsgility](vs-opsgility.md)
+#### [Skill Me Up](vs-opsgility.md)
 #### [Pluralsight](vs-pluralsight.md)
 #### [Xamarin University トレーニング](vs-xamarin.md)
 #### [MSDN マガジンの定期購読](vs-msdn.md)
