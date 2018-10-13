@@ -1,7 +1,7 @@
 ---
 title: ディレクトリを追加する、新しい項目 ダイアログ ボックスの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 67ae8af6-3752-49e8-8ce3-007aca5f7982
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9a4623df5794ae29b97bbbdc077c465d822d6f4d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6094c4c42b4745bd68c17fe15798020215db4f0d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535774"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300236"
 ---
 # <a name="adding-directories-to-the-add-new-item-dialog-box"></a>[新しい項目の追加] ダイアログ ボックスへの新しいディレクトリの追加
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[新しい項目の追加 ダイアログ ボックスを追加するディレクトリ](https://docs.microsoft.com/visualstudio/extensibility/internals/adding-directories-to-the-add-new-item-dialog-box)します。  
-  
 次のコード例は、ディレクトリの新しいセットを登録する方法を示します、**新しい項目の追加** ダイアログ ボックス。 用のディレクトリ、**新しい項目の追加** ダイアログ ボックスは、プロジェクトごとに異なります。 プロジェクト サブキーにあるディレクトリを登録するため、 \<HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects >:  
   
 ## <a name="the-registry-script"></a>レジストリ スクリプト  

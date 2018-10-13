@@ -1,7 +1,7 @@
 ---
 title: インストルメンテーション データ値について | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,23 +17,21 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da7a4ddebb8504d4a6ac9b3d39a0ee4646f5d8f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 61e942a1c3cb43bcd2d3d7ef813ed4bd98267a1f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546463"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49298884"
 ---
 # <a name="understanding-instrumentation-data-values"></a>インストルメンテーション データ値について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[インストルメンテーション データ値について](https://docs.microsoft.com/visualstudio/profiling/understanding-instrumentation-data-values)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の*インストルメンテーション* プロファイル メソッドは、プロファイリングされたアプリケーションの関数呼び出し、行、命令についての詳しいタイミング情報を記録します  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
  インストルメンテーション メソッドは、プロファイリングされたバイナリの、その関数から他の関数に対する各呼び出しの前後の対象の関数の開始時と終了時にコードを挿入します。 挿入されたコードは次のものを記録します。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "47546463"
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
  各間隔について、プロファイラー解析は間隔の最後に存在していた呼び出し履歴を再構築します。 呼び出し履歴とは、ある時点でプロセッサ上でアクティブになっている関数のリストです。 1 つの関数 (現在の関数) だけがコードを実行しており、それ以外の関数は、現在の関数の呼び出しに至る一連の関数呼び出し (呼び出し履歴) です。  
   

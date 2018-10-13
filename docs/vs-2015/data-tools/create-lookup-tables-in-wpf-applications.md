@@ -1,7 +1,7 @@
 ---
 title: WPF アプリケーションでルックアップ テーブルを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 12940c7be5e09975c6a6cf71fad94c47f3f6db32
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6ce3b1cb07256c35949591b4d6ea012f56e432c6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536774"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303343"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF アプリケーションでルックアップ テーブルを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[WPF アプリケーションでルックアップ テーブルを作成](https://docs.microsoft.com/visualstudio/data-tools/create-lookup-tables-in-wpf-applications)です。  
-  
   
 用語*ルックアップ テーブル*(とも呼ばれる、*ルックアップ バインディング*) 別のテーブルの外部キー フィールドの値に基づいて 1 つのデータ テーブルからの情報を表示するコントロールについて説明します。 親テーブルの主ノードをドラッグして、ルックアップ テーブルを作成したり、オブジェクト、**データソース**列または関連する子テーブルのプロパティに既にバインドされているコントロールにウィンドウ。  
   
@@ -46,7 +44,7 @@ ms.locfileid: "47536774"
   
 1.  プロジェクトに関連するデータを使用してデータ ソースの種類は、次のいずれかを追加します。  
   
-    -   データセットまたはエンティティ データ モデル。 詳細については、次を参照してください。[方法: データをデータベースに接続する](../data-tools/how-to-connect-to-data-in-a-database.md)します。  
+    -   データセットまたはエンティティ データ モデル。 詳細については、「 [How to: Connect to Data in a Database](../data-tools/how-to-connect-to-data-in-a-database.md)」を参照してください。  
   
     -   WCF データ サービス、WCF サービスまたは Web サービス。 詳細については、次を参照してください。[方法: データ サービスに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)します。  
   

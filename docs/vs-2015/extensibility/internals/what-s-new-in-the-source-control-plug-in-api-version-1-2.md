@@ -1,7 +1,7 @@
 ---
 title: どのような&#39;ソース新プラグイン API バージョン 1.2 の制御 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 7c5fa471-456e-4f95-8309-5750ec4e5e85
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 439e91730ffa0c8ab3d73454198c09803df59f3d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9df28160f321cdd585cd9adba8d80c43cfcb18d6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539019"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300158"
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>どのような&#39;ソース新プラグイン API バージョン 1.2 の制御
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[何&#39;ソース管理プラグイン API バージョン 1.2 の新](https://docs.microsoft.com/visualstudio/extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2)します。  
-  
 このセクションには、ソース管理プラグイン API バージョン 1.2 での高度なソース コード管理機能が強調表示されます。 バージョン 1.2 の新機能を次に示します。  
   
 ## <a name="changes"></a>変更  

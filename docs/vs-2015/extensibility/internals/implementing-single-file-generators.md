@@ -1,7 +1,7 @@
 ---
 title: 単一ファイル ジェネレーターの実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: fe9ef6b6-4690-4c2c-872c-301c980d17fe
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30294f901f3e0536caeb84dc55af5630db24956a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f77b8dd1f28431665aae5d6c64da58d038a156b3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533390"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300960"
 ---
 # <a name="implementing-single-file-generators"></a>単一ファイル ジェネレーターの実装
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[単一ファイル ジェネレーターの実装](https://docs.microsoft.com/visualstudio/extensibility/internals/implementing-single-file-generators)します。  
-  
 カスタム ツール-単一ファイル ジェネレーターとも呼ば-拡張に使用できる、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]と[!INCLUDE[csprcs](../../includes/csprcs-md.md)]プロジェクト システムで[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 カスタム ツールは、実装する COM コンポーネント、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>インターフェイス。 このインターフェイスを使用して、カスタム ツールは、1 つの出力ファイルに 1 つの入力ファイルを変換します。 変換の結果には、ソース コードが可能性があります。 または役立つその他の出力します。 カスタム ツールで生成されたコード ファイルの 2 つの例は、ビジュアル デザイナーと Web サービス記述言語 (WSDL) を使用して生成されたファイルの変更に応答で生成されたコードです。  
   
  カスタム ツールが読み込まれると、入力ファイルが保存される際、プロジェクト システムを呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A>メソッドへの参照を渡すと、<xref:Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress>ツールがユーザーにその進行状況を報告するためのコールバック インターフェイス。  

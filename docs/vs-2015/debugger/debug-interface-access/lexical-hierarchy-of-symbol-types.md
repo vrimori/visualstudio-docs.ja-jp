@@ -1,7 +1,7 @@
 ---
 title: シンボル型の構文階層 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2d807841429a722f31f3aecdc08f1a0972b05378
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cfb8fd751d6230dd839d073a61e80cabf5d48892
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535779"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305488"
 ---
 # <a name="lexical-hierarchy-of-symbol-types"></a>シンボル型の構文階層
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シンボル型の構文階層](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/lexical-hierarchy-of-symbol-types)します。  
-  
 次の表では、構文の階層でシンボルの型を示します。  
   
 ## <a name="symbol-types"></a>シンボル型  

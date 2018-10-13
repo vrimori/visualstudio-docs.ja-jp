@@ -1,7 +1,7 @@
 ---
 title: T4 アセンブリ ディレクティブ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 072f2fe9ff82a99370677c50c6c97929c8e0b330
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3ede2e84ac644fc8e1438873ea561ef3010f670c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546577"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301005"
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 アセンブリ ディレクティブ](https://docs.microsoft.com/visualstudio/modeling/t4-assembly-directive)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のデザイン時テキスト テンプレートでは、テンプレート コードでアセンブリの型を使用できるように、`assembly` ディレクティブによってアセンブリが読み込まれます。 結果は、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトでアセンブリ参照を追加した場合と同様です。  
   
  テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
@@ -40,7 +38,7 @@ ms.locfileid: "47546577"
   
  アセンブリ名は、次のいずれかであることが必要です。  
   
--   GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「<xref:System.Reflection.AssemblyName>」を参照してください。  
+-   GAC のアセンブリの厳密な名前 (`System.Xml.dll` など)。 `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` のような長い形式を使用することもできます。 詳細については、「 <xref:System.Reflection.AssemblyName> 」を参照してください。  
   
 -   アセンブリの絶対パス。  
   

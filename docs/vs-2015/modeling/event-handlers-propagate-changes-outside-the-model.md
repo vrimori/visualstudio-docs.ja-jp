@@ -1,7 +1,7 @@
 ---
 title: イベント ハンドラーには、モデルの外部で変更が反映されるまで |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 93b971c80cdf0c13567364d507f72027d62faae9
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 38958aae1c2449145107faa7abe00a2d86baaa9a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592886"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303200"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イベント ハンドラー反映されるまで変更 Outside the モデル](https://docs.microsoft.com/visualstudio/modeling/event-handlers-propagate-changes-outside-the-model)します。  
-  
 Visualization and Modeling SDK では、ストア以外の変数、ファイル、その他のストア、またはその他のモデルなど、ストアの外部リソースへの変更を反映するストア イベント ハンドラーを定義できます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能。 ストア イベント ハンドラーは、トリガーを起動するイベントが発生したトランザクションの終了後に実行されます。 元に戻す/やり直し操作でも実行されます。 そのため、ストアの規則とは異なりストア イベントは、ストア外の値を更新するため、最も役に立つします。 クラスにリッスンするように .NET のイベントとは異なりストア イベント ハンドラーが登録されている: インスタンスごとに個別のハンドラーを登録する必要はありません。 変更を処理するさまざまな方法を選択する方法の詳細については、次を参照してください。[への対応および変更の反映](../modeling/responding-to-and-propagating-changes.md)します。  
   
  グラフィカル サーフェイスおよびその他のユーザー インターフェイス コントロールは、ストア イベントで処理できる外部のリソースの例を示します。  
