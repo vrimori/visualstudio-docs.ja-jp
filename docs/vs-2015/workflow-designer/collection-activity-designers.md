@@ -1,7 +1,7 @@
 ---
 title: コレクション アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -12,12 +12,12 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 6188660725967c301f0d2a6ad838769b30f2f1eb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d9324c49cd05d82feab670ee3b0f9d4e261ca24f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544644"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49291994"
 ---
 # <a name="collection-activity-designers"></a>コレクション アクティビティ デザイナー
 Collection アクティビティ デザイナーは、コレクションの管理に使用するアクティビティを作成および構成するために使用します。次の表に示す、このセクションに含まれるトピックでは、[!INCLUDE[wfd2](../includes/wfd2-md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

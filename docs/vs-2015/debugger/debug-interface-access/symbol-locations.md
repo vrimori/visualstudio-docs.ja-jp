@@ -1,7 +1,7 @@
 ---
 title: シンボルの場所 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dffab87abed5bb8187a5340955dea84f77ccab8f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 88d8fd37babea18aa385598cad12436b414f5ff8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548838"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49284636"
 ---
 # <a name="symbol-locations"></a>シンボルの場所
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シンボルの場所](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/symbol-locations)します。  
-  
 ほとんどのシンボル、イメージ ファイル内で定義されている場所であります。 値を持つシンボルの場所が指定されて、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)列挙体。 シンボルの場所に応じて他のプロパティをサポート可能性があります。  
   
  次の表では、最もよく使用される場所の種類とその他のプロパティを示します。  

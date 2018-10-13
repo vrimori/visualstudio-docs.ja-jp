@@ -1,7 +1,7 @@
 ---
 title: メモリ Windows |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 37
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 180abd9aed356613456790a328fb45d1c3ffcf69
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9ce78912be4e4b29e323061996de650e1f2ff255
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536410"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49297196"
 ---
 # <a name="memory-windows"></a>[メモリ] ウィンドウ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガーの変数の表示メモリ](https://docs.microsoft.com/visualstudio/debugger/memory-windows)します。  
-  
 **メモリ**ウィンドウには、アプリケーションによって使用されるメモリ領域に表示します。 **ウォッチ**ウィンドウで、 **[クイック ウォッチ]** ダイアログ ボックスで、 **[自動変数]** ウィンドウ、および**ローカル**ウィンドウには、変数の内容を表示します。メモリ内の特定の場所に格納されます。 **メモリ**ウィンドウには、大規模な画像が表示されます。 これは、ほかのウィンドウではうまく表示されない大きなデータ (バッファーや長い文字列など) をチェックする場合に便利です。 ただし、**メモリ**ウィンドウは、データの表示に制限されていません。 [メモリ] ウィンドウには、データ、コード、または未使用メモリの不要なランダム ビットを問わず、メモリ空間内のすべての要素が表示されます。  
   
  **メモリ**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。 **メモリ**ウィンドウはスクリプトや SQL などの言語は、メモリの概念を認識しないのは使用できません。  

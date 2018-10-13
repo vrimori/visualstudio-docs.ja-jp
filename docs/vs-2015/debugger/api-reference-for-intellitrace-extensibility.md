@@ -1,7 +1,7 @@
 ---
 title: IntelliTrace 機能拡張の API リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c2956378c8da8d9488ad74db58ce54614411c34f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0506044893049c54ff76ebc39e79d84629b51724
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536112"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49295089"
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace 機能拡張の API リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IntelliTrace 機能拡張の API リファレンス](https://docs.microsoft.com/visualstudio/debugger/api-reference-for-intellitrace-extensibility)します。  
-  
 このセクションの情報を使用すると、IntelliTrace 機能拡張 API を使用して、使用しているアプリケーションで .itrace ファイルを読み取ってデコードできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

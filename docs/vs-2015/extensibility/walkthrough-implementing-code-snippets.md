@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: コード スニペットの実装 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: adbc5382-d170-441c-9fd0-80faa1816478
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 86d0ef82422b5f9cd419bf31e8b92b789fac1226
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b11234cd9dda19d010eb8408c359067697d95d80
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547404"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49287158"
 ---
 # <a name="walkthrough-implementing-code-snippets"></a>チュートリアル: コード スニペットの実装
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: コード スニペットを実装する](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-implementing-code-snippets)します。  
-  
 コード スニペットを作成し、拡張機能のユーザーが、独自のコードを追加できるようにエディター拡張機能に含めることができます。  
   
  コード スニペットは、コードまたはその他のファイルに組み込むことのできるテキストの一部です。 特定のプログラミング言語では、登録されているすべてのスニペットを表示する、**ツール** メニューのをクリックして**コード スニペット マネージャー**します。 スニペットは、先を右クリックして、ファイルのスニペットを挿入する次のようにクリックします。**スニペットの挿入**または**ブロックの挿入**、スニペットを見つけて、ダブルクリックします。 スニペットの関連する部分を変更し、そのまま使用するには、」と入力または esc キーを押しますのタブまたは shift キーを押しながら TAB キーを押します。 詳細については、「[Code Snippets](../ide/code-snippets.md)」を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: マルチ インスタンスのツール ウィンドウの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca70aa6024f083cfff7de1e2ef687371eca44c8a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb5e058924d62d4c6688c95974774579f8ae81f6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286365"
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>複数インスタンスのツール ウィンドウの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マルチ インスタンスのツール ウィンドウを作成する](https://docs.microsoft.com/visualstudio/extensibility/creating-a-multi-instance-tool-window)します。  
-  
 複数のインスタンスは同時に開くできるように、ツール ウィンドウをプログラミングできます。 既定では、ツール ウィンドウには 1 つだけのインスタンスを開くことができます。  
   
  複数インスタンスのツール ウィンドウを使用すると同時に情報のいくつかの関連するソースを表示できます。 たとえば、複数の行に配置する<xref:System.Windows.Forms.TextBox>プログラミング セッション中にいくつかのコード スニペットは同時に使用できるように、複数インスタンスのツール ウィンドウを制御します。 配置例も、<xref:System.Windows.Forms.DataGrid>コントロール ドロップダウン リスト ボックスと複数インスタンスのツール ウィンドウで同時にいくつかのリアルタイムのデータ ソースを追跡できるようにします。  

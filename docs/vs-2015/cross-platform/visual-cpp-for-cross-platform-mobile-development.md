@@ -1,7 +1,7 @@
 ---
 title: Visual C++ for Cross Platform Mobile Development | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 12
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: 7890914a982ccea8754252da3e8fdbc8b3b39579
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2b4304d3ac2a00f1120d7ae631acbd656ea1b72d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548817"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49295010"
 ---
 # <a name="visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual C for Cross-platform Mobile Development](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development)します。  
-  
   
 Visual C++ for Cross-Platform Mobile Development を使用することによって、iOS、Android、および Windows デバイス対応のネイティブ C++ アプリをビルドし、iOS、Android、および Windows 用に作成されたライブラリ内で共通コードを共有できます。 これは、Visual Studio 2015 で使用できるオプションです。このオプションを選択すると、共有ライブラリとネイティブ アプリのクロスプラットフォーム開発に必要な SDK とツールがインストールされます。 インストールされている場合、Windows、Windows Phone、および Xbox に加え、iOS と Android のデバイスおよびプラットフォームで実行されるコードを、Visual C++ を使用して作成できます。  
   

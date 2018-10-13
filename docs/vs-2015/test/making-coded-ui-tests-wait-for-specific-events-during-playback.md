@@ -1,7 +1,7 @@
 ---
 title: 再生中に特定のイベントを待機するようにコード化された UI テストを設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 41981ad6-673e-492e-b739-9863b14157b1
 caps.latest.revision: 26
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 49dbf5abbf3908f1b4dda5131f3f8dcdf4426243
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4d6933a484344a5064d39e3897ea503d0f484af
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533216"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49290408"
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>再生中に特定のイベントを待機するようにコード化された UIT テストを設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を行うコード化された UI テスト待機の特定のイベント中に再生](https://docs.microsoft.com/visualstudio/test/making-coded-ui-tests-wait-for-specific-events-during-playback)します。  
-  
 コード化された UI テストの再生では、テストに対して指示することで、ウィンドウの表示やプログレス バーの非表示などの特定のイベントが発生するまで待機することができます。 これを実行するには、次の表で説明されているように、該当する UITestControl.WaitForControlXXX() メソッドを使用します。 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A> メソッドで有効化されるコントロールを待機するコード化された UI テストの例については、「[チュートリアル: コード化された UI テストの作成、編集、および保守](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)」を参照してください。  
   
  **必要条件**  

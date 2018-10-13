@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: ピクセル シェーディングによるオブジェクト不足 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,17 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b5cbe580bed0cda79a5a218109be1fd7f633f115
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f1b0d94fcc04c8f7ca8c2deb10af4c5dcc0cbbe
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545634"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293528"
 ---
 # <a name="walkthrough-missing-objects-due-to-misconfigured-pipeline"></a>チュートリアル: ピクセル シェーディングによるオブジェクトの不足
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: パイプラインを正しく構成されていないオブジェクトの期限を不足している](https://docs.microsoft.com/visualstudio/debugger/graphics/walkthrough-missing-objects-due-to-misconfigured-pipeline)します。  
-  
-このチュートリアルを使用する方法について説明、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]設定されていないピクセル シェーダーが原因で不足しているオブジェクトを調査するグラフィックス診断ツール。  
+このチュートリアルでは、ピクセル シェーダーが設定されていないことが原因で表示されないオブジェクトを調査するために、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のグラフィックス診断ツールを使用する方法を示します。  
   
  このチュートリアルでは、次の作業について説明します。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "47545634"
   
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>グラフィックス ログのフレームを調査するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、欠落しているオブジェクトを表すフレームを含むグラフィックス ログのドキュメントを読み込みます。 新しいグラフィックス ログのタブが表示される[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、オブジェクトが表示されない現象を示しているフレームを含んだグラフィックス ログのドキュメントを読み込みます。 新しいグラフィックス ログのタブが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に表示されます。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
   
 2.  **[フレーム一覧]** で、オブジェクトが表示されないことを示すフレームを選択します。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックス ログのタブは次のように表示されます。  
   

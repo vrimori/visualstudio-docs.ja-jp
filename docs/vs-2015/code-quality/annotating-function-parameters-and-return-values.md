@@ -1,7 +1,7 @@
 ---
 title: 関数パラメーターと戻り値に注釈を付ける |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -131,18 +131,16 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8c3a0cad60dc7867b31238669a612cdb0dac4097
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8e3a49283763a8de2bec7cee003610b75cc62ce2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545740"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49297168"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数パラメーターおよび戻り値の注釈設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[に注釈を付ける関数のパラメーターと戻り値](https://docs.microsoft.com/visualstudio/code-quality/annotating-function-parameters-and-return-values)します。  
-  
 この記事では、単純な関数のパラメーターの注釈の一般的な用途を説明します: スカラー、および構造体とクラスへのポインター、およびほとんどの種類のバッファー。  注釈の一般的な使用パターンについても説明します。 関数に関連する追加の注釈では、次を参照してください[関数の動作に注釈を付ける。](../code-quality/annotating-function-behavior.md)  
   
 ## <a name="pointer-parameters"></a>ポインター パラメーター  

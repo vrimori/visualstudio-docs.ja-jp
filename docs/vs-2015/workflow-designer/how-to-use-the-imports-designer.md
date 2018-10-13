@@ -1,7 +1,7 @@
 ---
 title: '方法: インポート デザイナーを使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: f1fc68f77e714efcd1d577cce6c988ef0943d71c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 776fbd9ba58268adb16957c732b96a7c8303b213
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539455"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278383"
 ---
 # <a name="how-to-use-the-imports-designer"></a>インポート デザイナーを使用する方法
 インポート デザイナーを使用すると、式で使用する型の名前空間を入力できます。 ほぼ同じように、**インポート**または**を使用して**単に完全修飾ではなく、式の型名を入力することで、Visual Basic .NET と c#、インポート デザイナーで名前空間を指定するキーワードを使用します。バージョンの型名。  

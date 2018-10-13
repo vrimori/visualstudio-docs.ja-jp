@@ -1,7 +1,7 @@
 ---
 title: プロセス ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 411de842beb616cf4ed7c51d0458e8d7bce82690
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f03a3d5b7033ae0124368425de3d7d85f9f040a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288659"
 ---
 # <a name="process-view---contention-data"></a>プロセス ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロセス ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/process-view-contention-data)します。  
-  
 プロセス ビューには、プロファイリング実行中に実行されたプロセスとスレッドの競合データが表示されます。  
   
  シンボルを使用できる場合、プロセスは名前で一覧表示されます。 シンボルを使用できない場合、プロセスはそのメモリ アドレス (16 進数形式) で一覧表示されます。 スレッドは、そのスレッドを作成したプロセスの子として一覧表示されます。  

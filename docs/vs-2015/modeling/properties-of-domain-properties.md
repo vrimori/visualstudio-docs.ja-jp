@@ -1,7 +1,7 @@
 ---
 title: ドメイン プロパティの |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3c1bd47ce583c790fdc90a4135184b21a932f449
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fa5e2f46f3fa5cce9a795c2353148d2bd3f47351
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537623"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293112"
 ---
 # <a name="properties-of-domain-properties"></a>ドメイン プロパティのプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティのドメイン プロパティ](https://docs.microsoft.com/visualstudio/modeling/properties-of-domain-properties)します。  
-  
 A*ドメイン プロパティ*値を保持できるモデル要素の機能です。 たとえば、`Person` ドメイン クラスに `Name` プロパティと `BirthDate` プロパティを指定することができます。 DSL 定義で、ドメイン プロパティは図のドメイン クラス ボックスと DSL エクスプローラーのドメイン クラスの下に一覧表示されます。 詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。  
   
 > [!NOTE]

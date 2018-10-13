@@ -1,7 +1,7 @@
 ---
 title: データセットのデータの検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 728c496548a195acb98e0b5082d862d6dc8db241
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5dd01b20e84bbe39e0c082a0b598fb6742f33d9f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279020"
 ---
 # <a name="validate-data-in-datasets"></a>データセットのデータの検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[検証データセットのデータの](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)します。  
-  
   
 データの検証は、データ オブジェクトに入力される値は、データセットのスキーマ内の制約に準拠することを確認するプロセスです。 また、検証プロセスは、これらの値が、アプリケーションに対して設定した規則に従っていることを確認します。 基になるデータベースの更新を送信する前にデータを検証することをお勧めします。 これには、エラーに加え、潜在的なアプリケーションとデータベース間のラウンド トリップ数が削減されます。  
   

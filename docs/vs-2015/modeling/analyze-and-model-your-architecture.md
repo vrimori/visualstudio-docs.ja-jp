@@ -1,14 +1,14 @@
 ---
 title: 分析し、モデルのアーキテクチャ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-devops-techdebt
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Ultimate, exploring code
 - Visual Studio Ultimate, visualizing code
@@ -37,18 +37,16 @@ caps.latest.revision: 129
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1d2accb12f172cc5a6e4b69026a58a1cc04937ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 070ee6a2f948bc808961e35735fea88882d68880
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534406"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278357"
 ---
 # <a name="analyze-and-model-your-architecture"></a>アーキテクチャを分析およびモデルする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分析アーキテクチャおよびモデルする](https://docs.microsoft.com/visualstudio/modeling/analyze-and-model-your-architecture)します。  
-  
 Visual Studio アーキテクチャおよびモデリング ツールを使用してアプリを設計およびモデル化することによって、ユーザー要件を満たすアプリを作成できます。 Visual Studio を使用してコードの構造、動作、および関係を視覚化することによって、既存のプログラム コードを容易に理解できるようになります。  
   
  開発プロセスの一部として、アプリケーション ライフサイクル全体においてさまざまな詳細レベルでモデルを作成できます。 Team Foundation Server の作業項目と自分の開発計画にモデル要素をリンクすることによって、モデルに関連付けられた要件、タスク、テスト ケース、バグ、およびその他の作業を追跡できます。 参照してください[シナリオ: 視覚化を使用して、モデリングおよびデザインの変更](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)します。  
@@ -85,7 +83,7 @@ Visual Studio アーキテクチャおよびモデリング ツールを使用�
   
 ## <a name="see-also"></a>関連項目  
  [新機能](../modeling/what-s-new-for-design-in-visual-studio.md)   
- [DevOps とアプリケーション ライフ サイクル管理](http://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)
+ [DevOps とアプリケーション ライフサイクル管理](http://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)
 
 
 

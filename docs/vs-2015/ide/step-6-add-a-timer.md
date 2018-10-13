@@ -1,7 +1,7 @@
 ---
 title: '手順 6: タイマーの追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 02ec36c9dbb6f659e3cc5c59d7ee82abffcac34d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 577ef28c49d769bac8d979330f181c67b8d35687
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536382"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293382"
 ---
 # <a name="step-6-add-a-timer"></a>手順 6: タイマーの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 6: タイマーの追加](https://docs.microsoft.com/visualstudio/ide/step-6-add-a-timer)します。  
-  
 次に、絵合わせゲームに **Timer** コントロールを追加します。 タイマーは、指定されたミリ秒間待機してから、*ティック*と呼ばれるイベントを発生させます。 タイマーは、アクションを開始したり定期的に繰り返したりする場合に便利です。 ここではタイマーの使用例として、プレーヤーが 2 つのアイコンを選択し、アイコンが一致しない場合は、短時間の経過後にその 2 つのアイコンが再び非表示になるようにします。  
   
 ### <a name="to-add-a-timer"></a>タイマーを追加するには  

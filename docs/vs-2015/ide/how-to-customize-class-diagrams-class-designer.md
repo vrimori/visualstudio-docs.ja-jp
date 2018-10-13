@@ -1,7 +1,7 @@
 ---
 title: '方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d55744331cfa0aa78649a3654d7863ecc2287835
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8ffa0506b6a7c49cdf1ba1f3c86d865df3c59a7d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539194"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296180"
 ---
 # <a name="how-to-customize-class-diagrams-class-designer"></a>方法: クラス ダイアグラムをカスタマイズする (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: クラス ダイアグラムをカスタマイズ (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-customize-class-diagrams-class-designer)します。  
-  
 クラス ダイアグラムで情報を表示する方法を変更できます。 ダイアグラム全体をカスタマイズすることも、デザイン サーフェイス上の個々の型をカスタマイズすることもできます。  
   
  たとえば、クラス ダイアグラム全体のズーム レベルの調整、個々の型のメンバーのグループ化および並べ替え方法の変更、リレーションシップの表示または非表示、ダイアグラム上での個々の型または型のセットの移動などを実行できます。  

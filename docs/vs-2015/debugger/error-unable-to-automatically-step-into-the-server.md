@@ -1,7 +1,7 @@
 ---
 title: 'エラー: サーバーに自動的にステップ インできません |。Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d75ed4ddb42705b95a5ddd834596bc828e0f3ec2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 42f97ac229eedacf0bb26730127ae0f35dfd1346
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288092"
 ---
 # <a name="error-unable-to-automatically-step-into-the-server"></a>エラー : サーバーに自動的にステップ インできません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: ステップに、サーバーを自動的にできません。](https://docs.microsoft.com/visualstudio/debugger/error-unable-to-automatically-step-into-the-server)します。  
-  
 このエラーは次のように表示されます。  
   
  サーバーに自動的にステップ インできません。 デバッガーは、リモート プロシージャが実行される前に通知されませんでした。  
@@ -47,9 +45,9 @@ ms.locfileid: "47533993"
   
  考えられる原因:  
   
--   Web.config ファイル、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]アプリケーション デバッグを"true"を設定しません (を参照してください[ASP.NET アプリケーションのデバッグ モード](../debugger/how-to-enable-debugging-for-aspnet-applications.md))。  
+-   [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションの web.config ファイルでデバッグを "true" に設定していません (「 [方法: .NET アプリケーションのデバッグを有効にする](../debugger/how-to-enable-debugging-for-aspnet-applications.md)」を参照してください)。  
   
--   バージョンの[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Visual Studio をインストールした後にインストールされました。 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Visual Studio の前にインストールする必要があります。 この問題を解決するには、Windows の **[コントロール パネル]** で **[プログラムと機能]** を使用して、Visual Studio のインストールを修復します。  
+-   いずれかのバージョンの [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] が Visual Studio のインストール後にインストールされました。 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] は Visual Studio のインストール前にインストールする必要があります。 この問題を解決するには、Windows の **[コントロール パネル]** で **[プログラムと機能]** を使用して、Visual Studio のインストールを修復します。  
   
 ## <a name="see-also"></a>関連項目  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)   

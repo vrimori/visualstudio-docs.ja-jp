@@ -1,7 +1,7 @@
 ---
 title: IDebugBinder3::GetExceptionObjectAndType |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2a313fe1-4ee1-4f01-af86-382d6c661a8f
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7ae8635e1b0888b40d668040959cade3c900f04d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f7feb3f7917ae3a8dfd83b608fb4f6dd2c43b60
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535507"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49284298"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugBinder3::GetExceptionObjectAndType](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugbinder3-getexceptionobjectandtype)します。  
-  
 このメソッドは、存在する場合に、オブジェクトに関連付けられている例外を取得します。  
   
 ## <a name="syntax"></a>構文  

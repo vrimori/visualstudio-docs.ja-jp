@@ -1,7 +1,7 @@
 ---
 title: '方法 : エディターで URL をリンクとして表示する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39dbd1db782c133500fab9ba07044645d134863e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a61794e036ff4ba5b107c085be1779e2ba79f35f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544716"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292358"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>方法 : エディターで URL をリンクとして表示する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: エディターでリンクとして表示 Url](https://docs.microsoft.com/visualstudio/ide/reference/how-to-display-urls-as-links-in-the-editor)します。  
-  
   
 コード エディターでコード内の Uniform Resource Locator (URL) をアクティブなリンクとして扱うことができます。 この機能を使うと、URL は次のように処理されます。  
   

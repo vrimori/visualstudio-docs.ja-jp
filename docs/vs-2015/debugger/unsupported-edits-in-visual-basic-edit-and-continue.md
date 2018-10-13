@@ -1,7 +1,7 @@
 ---
 title: Visual Basic でサポートされていない編集エディット コンティニュ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 31
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 44dea7dd67653a5dbde95f10a331932a9c8c14c0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ffe536b21b5569ad3427dfe4e3b281887cc00b13
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534525"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296323"
 ---
 # <a name="unsupported-edits-in-visual-basic-edit-and-continue"></a>Visual Basic エディット コンティニュでサポートされていない編集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Basic エディット コンティニュでサポートされていない編集](https://docs.microsoft.com/visualstudio/debugger/unsupported-edits-in-visual-basic-edit-and-continue)します。  
-  
 エディット コンティニュでは、プログラムの実行を中断モードで停止し、実行中のコードに変更を加え、変更結果を反映してプログラムを再開できます。 通常、クラスのパブリック構造体に影響を及ぼす宣言コードの編集は禁止されています。ただし、クラス内のメソッド、プロパティ本体、またはプライベート宣言に対しては、多くの編集を行うことができます。  
   
  サポートされていない変更を行う必要がある場合は、デバッグを停止し、変更を加えた後で新しいデバッグ セッションを開始します。  

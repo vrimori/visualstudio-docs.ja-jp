@@ -1,7 +1,7 @@
 ---
 title: '方法: 単一の値を返すストアド プロシージャの実行 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,12 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 00e5f497a01d6600d02f3de42aa487819e4dac45
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2c27c8e0fca1393e097f1244a01988052911f73a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547684"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281009"
 ---
 # <a name="how-to-execute-a-stored-procedure-that-returns-a-single-value"></a>方法 : 単一の値を返すストアド プロシージャを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

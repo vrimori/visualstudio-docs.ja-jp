@@ -1,7 +1,7 @@
 ---
 title: UML モデルの検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 12
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 42e0733668a1f96dc1881d4d4d58a575eeb9eb64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 470eadf92fa76e294ee92899a8c92cb1391a9b58
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536803"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292696"
 ---
 # <a name="validate-your-uml-model"></a>UML モデルの検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデルの検証](https://docs.microsoft.com/visualstudio/modeling/validate-your-uml-model)です。  
-  
 Visual Studio で描画できる UML モデルの一部が、プロジェクトでは無効と見なされる場合があります。 たとえば、ユース ケースのアクターを表す生存線のあるシーケンス図には必ずユース ケースをリンクするように求める場合があります。 インストールするか、定義*制約*このような要件に準拠するようにチームを支援します。 制約は、ユーザーがモデルを保存するときまたは開くときに適用することが可能で、メニュー コマンドで呼び出すことができます。  
   
  制約は、チームが UML モデルをどのように解釈して使用するかによって異なるため、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] には制約は付属していません。 しかし、独自の制約を定義したり、他のユーザーが定義した制約をインストールしたりすることはできます。 制約を定義し、配布用にパッケージ化する方法については、次を参照してください。 [UML モデルの検証制約を定義](../modeling/define-validation-constraints-for-uml-models.md)します。  
@@ -71,7 +69,7 @@ Visual Studio で描画できる UML モデルの一部が、プロジェクト�
   
      クリックして**アンインストール**拡張機能を削除します。  
   
-3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を再起動します。  
+3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を再起動します。  
   
 ## <a name="see-also"></a>関連項目  
  [UML モデルの検証制約を定義します。](../modeling/define-validation-constraints-for-uml-models.md)   

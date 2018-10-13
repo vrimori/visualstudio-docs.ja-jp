@@ -1,7 +1,7 @@
 ---
 title: ClickOnce 配置のトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 7ece1315bf95e5b24c0f689796752a5cde100654
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 20a162a8280854954a58fb0447957a3894325cea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537447"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49284753"
 ---
 # <a name="troubleshooting-clickonce-deployments"></a>ClickOnce 配置のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce 配置のトラブルシューティング](https://docs.microsoft.com/visualstudio/deployment/troubleshooting-clickonce-deployments)します。  
-  
 このトピックでは、診断し、最も一般的な問題を解決[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開します。  
   
  ほとんどの場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションがユーザーのコンピューターにダウンロードされ、問題なく実行されます。 これは、場合によっては、ただし、Web サーバーまたはアプリケーション構成の問題が予期しない問題を発生できます。  
@@ -60,7 +58,7 @@ ms.locfileid: "47537447"
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)
 
 
 

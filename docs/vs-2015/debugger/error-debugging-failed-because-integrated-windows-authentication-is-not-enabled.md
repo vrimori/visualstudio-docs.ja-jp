@@ -1,7 +1,7 @@
 ---
 title: 'エラー: デバッグ、統合 Windows 認証が有効になっていないために失敗しました |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a3ef22190b37b85256476259ee42288ffd0ef0bc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1c7855ede01c522f3e79dd4c342e38830cd2fd23
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548698"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296141"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>エラー ： Windows 統合認証が無効になっているため、デバッグに失敗しました。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: デバッグに失敗しましたので、統合 Windows 認証が有効でない](https://docs.microsoft.com/visualstudio/debugger/error-debugging-failed-because-integrated-windows-authentication-is-not-enabled)します。  
-  
 デバッグを要求したユーザーの認証が認証エラーで失敗しました。 このエラーは、Web アプリケーションまたは XML Web サービスにステップ インしようとするときに発生することがあります。 このエラーの原因の 1 つとして、統合 Windows 認証が有効ではないことが挙げられます。 その機能を有効にする場合は、「統合 Windows 認証を有効にするには」の手順を実行します。  
   
  統合 Windows 認証を有効にした、このエラーが表示される場合は、ために、このエラーが発生したことが**Windows ドメイン サーバーでダイジェスト認証を**を有効にします。 この場合は、ネットワーク管理者に問い合わせてください。  

@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語をカスタマイズするコードの記述 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d22bc992da094ea592f508f3d9e0662977e7e534
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b9debc18c9d99c9b44b66116ff2f956296fdc19f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546062"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293346"
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>ドメイン固有言語をカスタマイズするコードの記述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語をカスタマイズするコードの記述](https://docs.microsoft.com/visualstudio/modeling/writing-code-to-customise-a-domain-specific-language)します。  
-  
 このセクションでは、カスタム コードを使用して、アクセス、変更、またはドメイン固有言語でモデルを作成する方法を示します。  
   
  これには、DSL で動作するコードを記述できるいくつかのコンテキストがあります。  

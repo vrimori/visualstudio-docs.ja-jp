@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 並行アプリケーションのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 31
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 22a4d8ea3bfe98a034f485be8ceec1004f8fba75
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6c46fbd570765d8843c9e6d87f37a5395c5b0133
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538141"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279774"
 ---
 # <a name="walkthrough-debugging-a-parallel-application"></a>チュートリアル: 並行アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 並行アプリケーションのデバッグ](https://docs.microsoft.com/visualstudio/debugger/walkthrough-debugging-a-parallel-application)します。  
-  
 このチュートリアルで使用する方法、**並列タスク**と**並列スタック**windows 並列アプリケーションをデバッグします。 これらのウィンドウでは、把握し、使用するコードの実行時の動作を検証できます。、[タスク並列ライブラリ (TPL)](http://msdn.microsoft.com/library/b8f99f43-9104-45fd-9bff-385a20488a23)または[同時実行ランタイム](http://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)します。 このチュートリアルには、ブレークポイントが組み込まれたサンプル コードが用意されています。 このチュートリアルで使用する方法を示します、コードでは後、**並列タスク**と**並列スタック**ことを確認する windows。  
   
  このチュートリアルでは、次のタスクについて説明します。  

@@ -1,7 +1,7 @@
 ---
 title: Exe |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b72a1bb8448373d090f6c71e97c7c53933f7c544
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cdfa22db349718a217017684f9c816d7bba436a5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539475"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49291506"
 ---
 # <a name="exe"></a>Exe
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Exe](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/exe)します。  
-  
 Exe は、.exe または .dll ファイルのグローバル スコープを表しているために、唯一のことがなく、構文のシンボルまたは親のクラスします。 1 つだけのシンボルがある、`SymTagExe`ファイルあたりのタグ。 [Idiasession::get_globalscope](../../debugger/debug-interface-access/idiasession-get-globalscope.md)メソッドは、シンボルを返します。  
   
 ## <a name="properties"></a>プロパティ  

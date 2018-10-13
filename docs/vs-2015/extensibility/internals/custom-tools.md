@@ -1,7 +1,7 @@
 ---
 title: カスタム ツール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: d669f154-9b23-48b6-b9f6-7419c8dd61a6
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 72fb6f9f0ceb3b9f2ae04f39b2c37c416acf47b9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9c0726457567221f5adb091d543cc17621179021
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537670"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278409"
 ---
 # <a name="custom-tools"></a>カスタム ツール
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム ツール](https://docs.microsoft.com/visualstudio/extensibility/internals/custom-tools)します。  
-  
 *カスタム ツール*ツールをプロジェクト内の項目に関連付けるし、ファイルを保存するたびに、そのツールを実行することができます。 特定のカスタム ツールとも呼ば*単一ファイル ジェネレーター*、データから、またはその逆にコードを生成する翻訳者を実装するために頻繁に使用されます。 たとえば、単一ファイル ジェネレーターの作成[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].settings および .resx ファイルからコードをソースします。 生成されたソース コードは、.settings および .resx ファイル内のデータへの厳密に型指定されたアクセスを提供します。 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; のカスタム ツールをサポートするプロジェクトの種類[!INCLUDE[vcprvc](../../includes/vcprvc-md.md)]プロジェクトの種類はありません。 独自のプロジェクトの種類には、カスタム ツールもサポートできます。  
   
  カスタム ツールを実装するコンポーネントが登録されているは、`IVsSingleFileGenerator`インターフェイス。  
@@ -63,5 +61,5 @@ ms.locfileid: "47537670"
   
 ## <a name="related-sections"></a>関連項目  
  [プロジェクトの拡張](../../extensibility/extending-projects.md)  
- 使用する方法について説明します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]プロジェクトおよびソリューションのコード ファイルとリソース ファイルとソース管理を実装する方法を整理します。
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトおよびソリューションを使用してコード ファイルとリソース ファイルを編成する方法、またソース管理を実装する方法について説明します。
 

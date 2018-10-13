@@ -1,7 +1,7 @@
 ---
 title: '方法: コンパイラの警告を非表示にする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b8555c07dc62237ba202487340ad77b5e04a77e4
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 738934450536d6ae51e67223c440e607ac6b6839
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47593023"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286092"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>方法: コンパイラ警告を非表示にする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コンパイラの警告を抑制する](https://docs.microsoft.com/visualstudio/ide/how-to-suppress-compiler-warnings)します。  
-  
 必要のないコンパイラの警告の種類を指定することで、ビルド ログを見やすくすることができます。 たとえば、この方法を使って、ビルド ログの詳細さを標準、詳細、または診断に設定したときに自動的に生成される情報の全部ではなく一部だけを確認できます。 詳細さについて詳しくは「[方法: ビルド ログ ファイルを表示、保存、および構成する](../ide/how-to-view-save-and-configure-build-log-files.md)」をご覧ください。  
   
 ### <a name="to-suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# または F# の特定の警告を抑制するには  
