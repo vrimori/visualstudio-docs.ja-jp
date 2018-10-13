@@ -1,7 +1,7 @@
 ---
 title: ツール ウィンドウにツールバーの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 172f64b3-87f8-4292-9c1c-65bffa2b0970
 caps.latest.revision: 49
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2f35ed0f74f8d3fad711f7c1dd4158072b786eb7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9e55508759d1395b1b3218d7e32af9121922da28
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538706"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306411"
 ---
 # <a name="adding-a-toolbar-to-a-tool-window"></a>ツール ウィンドウへのツールバーの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツール ウィンドウにツールバーを追加する](https://docs.microsoft.com/visualstudio/extensibility/adding-a-toolbar-to-a-tool-window)します。  
-  
 このチュートリアルでは、ツール ウィンドウにツールバーを追加する方法を示します。  
   
  ツールバーは、水平方向または垂直方向のストリップで、コマンドにバインドされているボタンが含まれています。 ツール ウィンドウのツールバーの長さは、常に幅または、ツールバーのドッキング先に応じて、ツール ウィンドウの高さと同じです。  

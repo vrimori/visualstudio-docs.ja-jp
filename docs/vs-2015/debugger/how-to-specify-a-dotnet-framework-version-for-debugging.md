@@ -1,7 +1,7 @@
 ---
 title: '方法: デバッグで .NET Framework のバージョンの指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6a07975591525f9109fecfbfb5aaa27642fc9562
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 914c4bfb58485bd1d423e58bbe8fc8ab7f1a898a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49272962"
 ---
 # <a name="how-to-specify-a-net-framework-version-for-debugging"></a>方法 : デバッグで .NET Framework のバージョンを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: .NET Framework のバージョンのデバッグを指定](https://docs.microsoft.com/visualstudio/debugger/how-to-specify-a-dotnet-framework-version-for-debugging)します。  
-  
 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] デバッガーでは、Microsoft [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] の現在のバージョンだけでなく、古いバージョンのデバッグもサポートしています。 Visual Studio からアプリケーションを起動する場合、デバッガーの正しいバージョンに常に識別できます、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]をデバッグするアプリケーション。 使用すると、アプリケーションが既に実行されている**にアタッチ**、デバッガーは常にできないことがありますの以前のバージョンを識別するために、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。 この場合、次のようなエラー メッセージが出力されます。  
   
  "アプリケーションが使用しようとしている Microsoft [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] のバージョンに関してデバッガーが不適切な想定を行っています。"  

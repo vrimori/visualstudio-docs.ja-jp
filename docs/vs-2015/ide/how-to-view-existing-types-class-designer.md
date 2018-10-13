@@ -1,7 +1,7 @@
 ---
 title: '方法: 既存の型を表示する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8a65ef57bfe044a1856a81e054f058bb89946a84
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9759425659d4a7e77672442ee37fd7649e7a6751
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539666"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305287"
 ---
 # <a name="how-to-view-existing-types-class-designer"></a>方法: 既存の型を表示する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビューの既存の型 (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-view-existing-types-class-designer)します。  
-  
 既存の型とそのメンバーを表示するには、その図形をクラス ダイアグラムに追加します。  
   
  ローカル型と参照型を表示できます。 ローカル型は現在開いているプロジェクトに含まれ、読み取りと書き込みができます。 参照型は別のプロジェクトまたは参照アセンブリに含まれ、読み取り専用です。  

@@ -1,7 +1,7 @@
 ---
 title: XML エディターの IntelliSense 機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 983410eec11799fb05ad66e13df1aea95be8e8f3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0e2b3452f64e97d56cae56a2575caa6fea00d1f5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296030"
 ---
 # <a name="xml-editor-intellisense-features"></a>XML エディターの IntelliSense 機能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML エディターの IntelliSense 機能](https://docs.microsoft.com/visualstudio/xml-tools/xml-editor-intellisense-features)します。  
-  
   
 XML エディターでは、Visual Studio で提供されている他の言語のエディターに相当する、フル機能の IntelliSense を利用できます。 このセクションでは、XML スキーマ定義言語 (XSD) ドキュメントと XSLT ドキュメントで IntelliSense を使用する方法について説明します。  
   

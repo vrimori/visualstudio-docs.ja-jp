@@ -1,7 +1,7 @@
 ---
 title: 階層相互作用のビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b163642e27bfdc3e07c296eec72a6b61fa0bffc3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9483767c3e16fb39bece2d61e8384d80de9d3026
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548153"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49257596"
 ---
 # <a name="tier-interaction-views"></a>階層相互作用のビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[階層相互作用のビュー](https://docs.microsoft.com/visualstudio/profiling/tier-interaction-views)します。  
-  
 階層相互作用プロファイリングにより、[!INCLUDE[vstecado](../includes/vstecado-md.md)] を通じてデータベースと通信する多階層アプリケーションでの関数の実行時間に関する追加情報が提供されます。 データは同期の関数呼び出しについてのみ収集されます。 階層相互作用データは、すべてのプロファイル方法に含めることができます。  
   
  **必要条件**  

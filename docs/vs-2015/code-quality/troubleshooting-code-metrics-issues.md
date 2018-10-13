@@ -1,7 +1,7 @@
 ---
 title: コード メトリックに関する問題のトラブルシューティング | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 6
 author: erickson-doug
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2cadd72f23fee6b89804fdbe61b105ff36b89caf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 76cd6d3b05346ee8ed0577dcbea512b609789167
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546598"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49274587"
 ---
 # <a name="troubleshooting-code-metrics-issues"></a>コード メトリックに関する問題のトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード メトリックに関する問題のトラブルシューティング](https://docs.microsoft.com/visualstudio/code-quality/troubleshooting-code-metrics-issues)します。  
-  
 コード メトリックを収集するときに、次に示す問題が発生する場合があります。  
   
 -   [Visual Studio 2010 のコードの複雑度の計算における変更点](#Changes_in_Visual_Studio_2010_code_complexity_calculations)  

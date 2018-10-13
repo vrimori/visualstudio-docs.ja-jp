@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のフォントと書式 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: c3c3df69-83b4-4fd0-b5b1-e18c33f39376
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f563bf607c0951d1ecaaeb8cc08ccdd64f5f0ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 44f9bff7fe1508094474b7067237e8c0b6620605
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548977"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49275471"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[フォントと Visual Studio の書式](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio)します。  
-  
 ##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント  
  Visual Studio 内のすべてのフォントは、カスタマイズのユーザーに公開する必要があります。 これは、主に、**フォントおよび色**ページで、**ツール > オプション**ダイアログ。 フォントの設定の 3 つの主なカテゴリは次のとおりです。  
   

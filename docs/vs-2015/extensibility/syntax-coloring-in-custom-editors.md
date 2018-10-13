@@ -1,7 +1,7 @@
 ---
 title: 構文のカスタム エディターで色分け |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 74900b9a-baef-432a-8231-4568fb5e19ad
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6a2165d51f77103ad7f6e69a20b5b73ef04429db
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 62fd407bdb377c490d26287701cf989a64484773
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535871"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305696"
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>カスタム エディターでの構文の色分け表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム エディターで構文の色分け](https://docs.microsoft.com/visualstudio/extensibility/syntax-coloring-in-custom-editors)します。  
-  
 Visual Studio 環境の SDK エディターなどのコア エディターは、構文の特定の項目を識別し、特定のドキュメント ビューの指定した色で表示する言語サービスを使用します。  
   
 ## <a name="colorization-requirements"></a>色づけの要件  

@@ -1,7 +1,7 @@
 ---
 title: '方法: インストルメント化前のコマンドおよびインストルメント化後のコマンドを指定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,25 +20,23 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 20cf4545a217adf07cc753a1d2ab190a00e3d4f6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b152b381aaca2b9e43729616979cd7765d3a8c53
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536796"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305467"
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>方法 : インストルメント前のコマンドおよびインストルメント後のコマンドを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コマンドおよびインストルメント化後のコマンドを指定](https://docs.microsoft.com/visualstudio/profiling/how-to-specify-pre-and-post-instrument-commands)します。  
-  
 パフォーマンス セッションのバイナリがインストルメント化される前か後に実行されるコマンドを指定できます。 コマンド ラインから発行できるコマンドはすべて、インストルメント化前のイベントまたはインストルメント化後のイベントとして指定できます。 たとえば、バイナリのインストルメント化後に実行されるバッチ ファイルで、厳密な名前キーを持つアセンブリの再署名を自動化するコマンドを指定できます。  
   
  プロファイル実行におけるインストルメント化されたすべてのバイナリ、または個々のバイナリに対してコマンドを指定できます。 ただし、インストルメンテーション プロセスの前に実行するよう指定できるインストルメント化前のコマンドは 1 つだけであり、インストルメンテーション プロセスの後に実行するよう指定できるインストルメント化後のコマンドも 1 つだけです。 すべてのバイナリと個々のバイナリの両方に対してコマンドを指定することはできません。 すべてのバイナリに対してコマンドを指定すると、そのコマンドはセッションの各バイナリのインストルメンテーションの前または後に実行されます。  
   
  **Requirements**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
  コマンドが実行される作業ディレクトリは、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を実行しているオペレーティング システムと、プロファイリング対象アプリケーションの対象プラットフォームによって異なります。  
   

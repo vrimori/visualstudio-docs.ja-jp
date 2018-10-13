@@ -1,7 +1,7 @@
 ---
 title: DebuggerDisplay 属性の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,19 +23,17 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb5e47cbaea7c7a39201f25adf6955a2e22c9b9b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7e2dd3a45092c4a1a638fe6316df0dde36eb0ceb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547007"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49299417"
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 属性を使用します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DebuggerDisplay 属性を使用して](https://docs.microsoft.com/visualstudio/debugger/using-the-debuggerdisplay-attribute)します。  
-  
-<xref:System.Diagnostics.DebuggerDisplayAttribute>デバッガー変数ウィンドウで、オブジェクト、プロパティ、またはフィールドを表示する方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
+<xref:System.Diagnostics.DebuggerDisplayAttribute> は、デバッガー変数ウィンドウでのオブジェクト、プロパティ、フィールドの表示方法を制御します。 この属性は、型、デリゲート、プロパティ、フィールド、アセンブリに適用できます。  
   
  `DebuggerDisplay` 属性の引数は 1 つです。それは、型のインスタンスの値列に表示する文字列です。 この文字列には、中かっこ (`{` と `}`) を含めることができます。 かっこ内のテキストは、フィールド、プロパティ、メソッドとして評価されます。  
   

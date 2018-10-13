@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 複数のコンピューターを使用するビルド環境の作成 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: da285fd1b769aa22127a81753c6bb49ca16954cd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 93d5e45bc4e8efd146391c5dff78bcb11fcf067f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545006"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292085"
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 複数のコンピューターのビルド環境を作成する](https://docs.microsoft.com/visualstudio/ide/walkthrough-creating-a-multiple-computer-build-environment)します。  
-  
 組織内でビルド環境を作成するには、ホスト コンピューターに Visual Studio をインストールし、ビルドに参加できるように各種のファイルおよび設定を別のコンピューターにコピーします。 別コンピューターの方に Visual Studio をインストールする必要はありません。  
   
  このドキュメントは、ソフトウェアを外部に再配布する権利または第三者にビルド環境を提供する権利を付与するものではありません。  

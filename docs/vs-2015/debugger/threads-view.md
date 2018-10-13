@@ -1,7 +1,7 @@
 ---
 title: スレッド ビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 79c0443d17ed18573cdbe990474ee328f2d3678f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 12ab9170c0f071ba319c0560f55291f41174ddf9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548550"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306268"
 ---
 # <a name="threads-view"></a>スレッド ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド ビュー](https://docs.microsoft.com/visualstudio/debugger/threads-view)します。  
-  
 スレッド ビューでは、システム上のウィンドウに関連付けられているすべてのスレッドのフラットな一覧を示します。 スレッドの ID とスレッドごとのモジュール名が表示されます。 プロセスは含まれていませんが、選択したスレッドを所有するプロセスを簡単に見つけることができます。  
   
 ## <a name="procedures"></a>手順  

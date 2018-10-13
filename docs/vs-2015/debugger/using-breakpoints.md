@@ -1,14 +1,14 @@
 ---
 title: ブレークポイントの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: hero-article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpointswin
 - vs.debug.disassembly.insert
@@ -46,18 +46,15 @@ caps.latest.revision: 63
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c111b2704401ff6f98025026fc51d19b434503f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f5fcc6803144359af25d70e68a25ffe90cf7bcca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540288"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49304890"
 ---
 # <a name="using-breakpoints"></a>ブレークポイントの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ブレークポイントを使用して](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)します。 
-
 コードの変数の状態や呼び出し履歴の確認などのために、デバッガーの実行を停止するときにブレークポイントを設定できます。 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。
   
 ##  <a name="BKMK_Overview"></a> ソース コードで関数のブレークポイントを設定する  
@@ -175,7 +172,7 @@ ms.locfileid: "47540288"
  条件には、デバッガーによって認識される有効な式を指定できます。 有効な式の詳細については、「 [Expressions in the Debugger](../debugger/expressions-in-the-debugger.md)」を参照してください。  
   
 ## <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>ブレークポイント条件 (C# および F#) でのオブジェクト ID の使用  
- 特定のオブジェクトの動作を確認することが必要になる場合があります。たとえば、オブジェクトがコレクションに複数回挿入された理由を確認することが必要になる場合があります。 オブジェクト Id の特定のインスタンスを作成する c# および f# で[参照型](http://msdn.microsoft.com/library/801cf030-6e2d-4a0d-9daf-1431b0c31f47)し、ブレークポイントの条件で使用します。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  オブジェクト ID を作成するには、次の手順を実行します。  
+ 特定のオブジェクトの動作を確認することが必要になる場合があります。たとえば、オブジェクトがコレクションに複数回挿入された理由を確認することが必要になる場合があります。 C# と F# では、 [参照型](http://msdn.microsoft.com/library/801cf030-6e2d-4a0d-9daf-1431b0c31f47) の特定のインスタンスのオブジェクト ID を作成し、それらの ID をブレークポイントの条件で使用できます。 オブジェクト ID は、共通言語ランタイム (CLR) のデバッグ サービスで生成されて、オブジェクトに関連付けられます。  オブジェクト ID を作成するには、次の手順を実行します。  
   
 1.  コードで、オブジェクトが作成されてからしばらく経った時点にブレークポイントを設定します。  
   

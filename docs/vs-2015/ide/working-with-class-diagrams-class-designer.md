@@ -1,7 +1,7 @@
 ---
 title: クラス ダイアグラムの使用 (クラス デザイナー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cf7812d7d0047b71bac846e03ec15e7b3c92869f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8bf855566c24e91137d7aaeadeb2c65843eca9e1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537759"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306710"
 ---
 # <a name="working-with-class-diagrams-class-designer"></a>クラス ダイアグラムの使用 (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クラス ダイアグラム (クラス デザイナー) の使用](https://docs.microsoft.com/visualstudio/ide/working-with-class-diagrams-class-designer)します。  
-  
 クラス ダイアグラムは、他の開発者が作成した (または自分が以前に作成した) プロジェクトのクラス構造を理解するのに役立ちます。 このダイアグラムを使用すると、プロジェクト情報をカスタマイズして、開発者間で共有および提供できます。  
   
  プロジェクト情報を提供するには、まずその情報を表示するためのクラス ダイアグラムを作成します。 詳細については、「[型およびリレーションシップの表示 (クラス デザイナー)](../ide/viewing-types-and-relationships-class-designer.md)」を参照してください。 プロジェクトのクラス ダイアグラムを複数作成し、それらを使用して、プロジェクト自体のビュー、プロジェクトの型の特定のサブセット、または型のメンバーの特定のサブセットを表示できます。  

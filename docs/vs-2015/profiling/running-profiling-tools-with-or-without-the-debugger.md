@@ -1,7 +1,7 @@
 ---
 title: デバッガーを使用して、または使用せずにプロファイリング ツールを実行する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 938d1dc3e257ad4737e5fd33d831feb0c16a81d6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dfc32400f926bd62c77431bcc448e4b78dedd026
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537905"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301484"
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>デバッガーを使用して、または使用せずにプロファイリング ツールを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Running Profiling Tools With または Without the Debugger](https://docs.microsoft.com/visualstudio/profiling/running-profiling-tools-with-or-without-the-debugger)します。  
-  
 Visual Studio ではパフォーマンス ツールを選ぶことができます。一部のツール (たとえば、**[CPU 使用率]** と **[メモリ使用量]**) は、デバッガーがありでもなしでも実行できます。 デバッガーを使用しないパフォーマンス ツールは、リリース構成で実行することを目的とし、デバッガー統合のツールはデバッグ構成で実行するためのものです。  
   
 ## <a name="should-i-run-the-tool-with-or-without-the-debugger"></a>このツールは、デバッガーを使用して実行したほうが良いですか、使用しないほうが良いですか。  

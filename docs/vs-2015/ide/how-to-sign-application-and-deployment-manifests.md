@@ -1,7 +1,7 @@
 ---
 title: '方法 : アプリケーション マニフェストおよび配置マニフェストに署名する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 61
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ed26d1dec6251ef856ab9cad6b74bba2a4190b81
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3162d65f8712c7db55be1bced9f815ecfaa866f2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536752"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49299735"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>方法 : アプリケーション マニフェストおよび配置マニフェストに署名する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Sign Application and Deployment Manifests](https://docs.microsoft.com/visualstudio/ide/how-to-sign-application-and-deployment-manifests)します。  
-  
 ClickOnce 配置を使用してアプリケーションを発行しようとする場合は、アプリケーション マニフェストと配置マニフェストに、公開キーと秘密キーのペアを使用して署名し、さらに Authenticode テクノロジを使用して署名する必要があります。 これらのマニフェストには、Windows 証明書ストアの証明書またはキー ファイルを使用して署名できます。  
   
  ClickOnce 配置について詳しく、「[ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)」をご覧ください。  

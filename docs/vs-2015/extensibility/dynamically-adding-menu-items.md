@@ -1,7 +1,7 @@
 ---
 title: 動的メニュー項目の追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: edd3a97eea69843bcd09a9483a7cea196d3a4c5d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cb0cd49d8ce9f1851bd54bb3362932de775eb2c2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536437"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300203"
 ---
 # <a name="dynamically-adding-menu-items"></a>メニュー項目の動的な追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[メニュー項目を動的に追加する](https://docs.microsoft.com/visualstudio/extensibility/dynamically-adding-menu-items)します。  
-  
 実行時にメニュー項目を追加するには指定することによって、`DynamicItemStart`フラグ、Visual Studio コマンド テーブル (.vsct) ファイルでプレース ホルダー ボタンの定義を表示し、コマンドを処理する項目 (コードで) メニューの数を定義するコマンドします。 VSPackage が読み込まれるときに、プレース ホルダーは動的メニュー項目に置き換えられます。  
   
  Visual Studio での動的リストを使用して、**最近使用した**(MRU) の一覧は、最近開かれたドキュメントの名前を表示するには、および**Windows**一覧で、windows の名前を表示します現在開かれています。   `DynamicItemStart`コマンド定義のフラグは、コマンドは、VSPackage が開かれるまでのプレース ホルダーを指定します。 VSPackage が開かれたときに、プレース ホルダーは、0 または実行時に作成され、動的な一覧に追加されるその他のコマンドに置き換えられます。 VSPackage が開かれるまで、動的な一覧が表示されるメニューの位置を表示することはできません。  Visual Studio を動的リストを設定するには、最初の文字は、プレース ホルダーの ID と同じ ID を持つコマンドを検索する VSPackage を確認します。 Visual Studio には、一致するコマンドが検出されると、コマンドの名前を動的な一覧に追加します。 次に、ID をインクリメントし、以上ない動的なコマンドがあるまで、動的な一覧に追加するもう 1 つの一致するコマンドを探します。  

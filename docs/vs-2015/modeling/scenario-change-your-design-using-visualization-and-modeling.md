@@ -1,14 +1,14 @@
 ---
 title: 'シナリオ: 視覚化を使用して、モデリング、設計の変更 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-devops-techdebt
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - code visualization [Visual Studio ALM]
 - modeling software [Visual Studio ALM]
@@ -22,21 +22,19 @@ caps.latest.revision: 63
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 67fd284bca4e81c36cd6e7e185b9c4712f07e6b6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 220666e6fe12e6a5ab3bbaf1238c19d761427cea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544864"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303044"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>シナリオ: 視覚化およびモデリングを使用したデザインの変更
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シナリオ: 視覚化を使用して、モデリングおよびデザインの変更](https://docs.microsoft.com/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling)します。  
-  
 ソフトウェア システムがユーザーのニーズを確実に満たすようにするには、Visual Studio の視覚化およびモデリング ツールを使用します。 UML (Unified Modeling Language) 図、コード マップ、レイヤー図、およびクラス図などのツールを使用して、次のタスクを実行します。  
   
- どのバージョンの Visual Studio が各ツールをサポートしているかについては、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
+ どのバージョンの Visual Studio が各ツールをサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 -   ユーザーの要求およびビジネス プロセスを明らかにする。  
   
@@ -292,7 +290,7 @@ ms.locfileid: "47544864"
   
 |**図**|**記述する内容**|  
 |-----------------|-------------------|  
-|*レイヤー図*<br /><br /> 参照トピック<br /><br /> -   [コードからレイヤー図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [レイヤー図: リファレンス](../modeling/layer-diagrams-reference.md)<br />-   [レイヤー図: ガイドライン](../modeling/layer-diagrams-guidelines.md)<br />-   [レイヤー図を使用したコードを検証します。](../modeling/validate-code-with-layer-diagrams.md)|コードの論理アーキテクチャ。<br /><br /> レイヤー図の整理し、内のアイテムをマップする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]と呼ばれるグループを抽象化するためのソリューション*レイヤー*します。 これらのレイヤーは、それらの成果物がシステムで実行するロール、タスク、または機能を識別します。<br /><br /> レイヤー図は、必要とされるシステムの設計を記述し、コードの変更をその設計に照らし合わせて検証するのに便利です。<br /><br /> レイヤーを作成するには、ソリューション エクスプローラー、コード マップ、クラス ビュー、およびオブジェクト ブラウザーから項目をドラッグします。 新しいレイヤーを描画するには、ツールボックスを使用するか、図の画面を右クリックします。<br /><br /> 既存の依存関係を表示するには、レイヤー図の画面を右クリックし、 **[依存関係の生成]** をクリックします。 必要とされる依存関係を指定するには、新しい依存関係を描画します。|  
+|*レイヤー図*<br /><br /> 参照トピック<br /><br /> -   [コードからレイヤー図を作成します。](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [レイヤー図: リファレンス](../modeling/layer-diagrams-reference.md)<br />-   [レイヤー図: ガイドライン](../modeling/layer-diagrams-guidelines.md)<br />-   [レイヤー図を使用したコードを検証します。](../modeling/validate-code-with-layer-diagrams.md)|コードの論理アーキテクチャ。<br /><br /> レイヤー図では、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューション内の成果物が整理されて、 *レイヤー*と呼ばれる抽象的なグループにマップされます。 これらのレイヤーは、それらの成果物がシステムで実行するロール、タスク、または機能を識別します。<br /><br /> レイヤー図は、必要とされるシステムの設計を記述し、コードの変更をその設計に照らし合わせて検証するのに便利です。<br /><br /> レイヤーを作成するには、ソリューション エクスプローラー、コード マップ、クラス ビュー、およびオブジェクト ブラウザーから項目をドラッグします。 新しいレイヤーを描画するには、ツールボックスを使用するか、図の画面を右クリックします。<br /><br /> 既存の依存関係を表示するには、レイヤー図の画面を右クリックし、 **[依存関係の生成]** をクリックします。 必要とされる依存関係を指定するには、新しい依存関係を描画します。|  
   
  たとえば、次のレイヤー図は、レイヤー間の依存関係と、各レイヤーに関連付けられている成果物の数を記述しています。  
   
@@ -304,11 +302,11 @@ ms.locfileid: "47544864"
   
  参照トピック  
   
--   [ビルド プロセスを定義します。](http://msdn.microsoft.com/library/61593e10-d24b-492f-b19a-af4d85abea6b)  
+-   [ビルド プロセスの定義](http://msdn.microsoft.com/library/61593e10-d24b-492f-b19a-af4d85abea6b)  
   
--   [ゲート チェックイン ビルド プロセスを使用して変更を検証するには](http://msdn.microsoft.com/library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)  
+-   [変更内容を検証するためのゲート チェックイン ビルド プロセスの定義](http://msdn.microsoft.com/library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)  
   
--   [ビルド プロセス テンプレートをカスタマイズします。](http://msdn.microsoft.com/library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
+-   [ビルド プロセス テンプレートのカスタマイズ](http://msdn.microsoft.com/library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
   
 ###  <a name="GeneralTips"></a> General Tips for Creating and Using Models  
   
@@ -343,13 +341,13 @@ ms.locfileid: "47544864"
   
  参照トピック  
   
--   [Visual Studio Team Services または Team Foundation Server を使用して作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)  
+-   [Visual Studio Team Services または Team Foundation Server を使用した作業の追跡](http://msdn.microsoft.com/library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503)  
   
 -   [モデル要素と作業項目とのリンク](../modeling/link-model-elements-and-work-items.md)  
   
--   [グラフ、ダッシュ ボード、および Visual Studio ALM のレポート](http://msdn.microsoft.com/library/1f28ba6c-c5e5-46d3-9209-ede24ae78e48)  
+-   [Visual Studio ALM のグラフ、ダッシュボード、およびレポート](http://msdn.microsoft.com/library/1f28ba6c-c5e5-46d3-9209-ede24ae78e48)  
   
--   [バックログとプロジェクトを使用してタスクを作成します。](http://msdn.microsoft.com/library/be5cef4f-755f-4ffe-8dd7-876d1e02c330)  
+-   [Project を使用したバックログとタスクの作成](http://msdn.microsoft.com/library/be5cef4f-755f-4ffe-8dd7-876d1e02c330)  
   
 ###  <a name="TestValidateCheckInCode"></a> コードのテスト、検証、およびチェックイン  
  Dinner Now と Lucerne は、作業が完了するたびにコードを Team Foundation バージョン管理にチェックインします。その作業を忘れると、Team Foundation Server から通知されます。 Team Foundation Server でチェックインが受け入れられるためには、単体テストとレイヤー検証を実行して、コードをテスト ケースと設計に照らし合わせて検証する必要があります。 Dinner Now と Lucerne は、Team Foundation Server を使用して、ビルド、自動化された単体テスト、およびレイヤー検証を定期的に実行しています。 これにより、コードが以下の基準を満たしていることを確認できます。  
@@ -650,7 +648,7 @@ ms.locfileid: "47544864"
   
      コンパイル済みコードの概要をすばやく確認するには、空のコード マップを生成し、アセンブリ ファイルまたはバイナリ ファイルをそのマップにドラッグします。  
   
--   特定のコードまたはソリューション項目について調べるには、ソリューション エクスプローラーを使用して、視覚化する項目およびリレーションシップを選択し、 新しいマップを生成するか、選択した項目を既存のマップに追加します。 参照してください[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)します。  
+-   特定のコードまたはソリューション項目について調べるには、ソリューション エクスプローラーを使用して、視覚化する項目およびリレーションシップを選択し、 新しいマップを生成するか、選択した項目を既存のマップに追加します。 「 [Map dependencies across your solutions](../modeling/map-dependencies-across-your-solutions.md)」を参照してください。  
   
 -   マップを調べる際には、実行する作業に合わせてレイアウトを再配置することができます。  
   
@@ -895,7 +893,7 @@ ms.locfileid: "47544864"
  [コードを視覚化します。](../modeling/visualize-code.md)   
  [アプリのモデルを作成します。](../modeling/create-models-for-your-app.md)   
  [開発プロセスでモデルを使用します。](../modeling/use-models-in-your-development-process.md)   
- [アジャイル開発でのモデルを使用します。](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+ [アジャイル開発でのモデルの使用](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
  [開発中にシステムを検証します。](../modeling/validate-your-system-during-development.md)   
  [UML モデルと図の拡張](../modeling/extend-uml-models-and-diagrams.md)
 
