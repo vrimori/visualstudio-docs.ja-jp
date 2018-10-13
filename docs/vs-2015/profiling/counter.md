@@ -1,7 +1,7 @@
 ---
 title: カウンター | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0734e0e62cb958b9d85a29c9f591cbbd51e45fc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bd2fe9a025c4499b35c4d8aaea581c5242c00b65
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548501"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186746"
 ---
 # <a name="counter"></a>カウンター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カウンター](https://docs.microsoft.com/visualstudio/profiling/counter)します。  
-  
 **Counter** オプションは、プロセッサ (ハードウェア) のパフォーマンス カウンターからデータを収集します。  
   
 -   サンプリング プロファイリング メソッドを使っているときは、**Counter** でオンチップ パフォーマンス カウンターと、サンプリング間隔として使うカウンター イベントの数を指定します。 サンプリングを使っているときは、指定できるカウンターは 1 つだけです。  

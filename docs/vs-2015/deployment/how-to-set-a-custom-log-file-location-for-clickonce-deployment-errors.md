@@ -1,7 +1,7 @@
 ---
 title: '方法: ClickOnce 配置エラー用のカスタム ログ ファイルの場所の設定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 9f061037b6349838b145627125527f64b68a2856
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4108287e120eabb4c8fc38d1dc29f2a81ea3d47
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535869"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207702"
 ---
 # <a name="how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors"></a>方法 : ClickOnce 配置エラー用にカスタム ログ ファイルの場所を設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ClickOnce 配置エラー用のカスタム ログ ファイルの場所の設定](https://docs.microsoft.com/visualstudio/deployment/how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors)します。  
-  
 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] すべてのデプロイのアクティベーション ログ ファイルを保持します。 これらのログ記録のインストールと初期化に関連するすべてのエラー、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開します。 既定では、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]各展開のアクティブ化の 1 つのログ ファイルを作成します。 これらのログ ファイルを Temporary Internet Files フォルダーに格納します。 展開のログ ファイルは、アクティベーション エラーが発生して、ユーザーがクリックしたときに、ユーザーに表示される**詳細**結果のエラー ダイアログ ボックス。  
   
  レジストリ エディターを使用して、特定のクライアントのこの動作を変更することができます (**regedit.exe**) カスタム ログ ファイルのパスを設定します。 この場合、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 1 つのファイルにすべてのデプロイのライセンス認証の成功と失敗を記録します。  

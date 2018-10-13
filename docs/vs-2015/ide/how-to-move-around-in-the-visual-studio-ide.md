@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio IDE 内で移動する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52d5025b4758463c708d80784db71835e2807abd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ce77ac0d7d2cf7cfa131742f40f89af692982506
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534845"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49189060"
 ---
 # <a name="how-to-move-around-in-the-visual-studio-ide"></a>方法: Visual Studio IDE 内で移動する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Visual Studio IDE での移動周囲](https://docs.microsoft.com/visualstudio/ide/how-to-move-around-in-the-visual-studio-ide)。  
-  
 統合開発環境 (IDE) は、ユーザー設定やプロジェクトの要件に応じて、いくつかの異なる方法で、ウィンドウからウィンドウへ、またはファイルからファイルへ移動できるように設計されています。 エディターで開いているファイルを順番に表示することも、IDE 内でアクティブなすべてのツール ウィンドウを順番に表示することもできます。 また、最後にアクセスした順序に関係なく、エディターで開いている任意のファイルに直接切り替えることもできます。 これらの機能は、IDE で作業するときの生産性を向上するのに役立ちます。  
   
 > [!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: プログラム コードの移動およびモデルの更新 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 4ee04ef978714f2d4925ed14604bf700fd623ef7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4630c6a277c6d9698c7fd1d65b5a292862dc3438
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539480"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190679"
 ---
 # <a name="navigating-and-updating-a-model-in-program-code"></a>プログラム コードにおけるモデル内の移動およびモデルの更新
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を移動して、プログラム コードでのモデルを更新する](https://docs.microsoft.com/visualstudio/modeling/navigating-and-updating-a-model-in-program-code)します。  
-  
 作成しモデル要素を削除、プロパティの設定、および作成、要素間のリンクを削除するコードを記述することができます。 すべての変更は、トランザクション内で行われたする必要があります。 要素は、ダイアグラムで表示され場合の図は「修正する」自動的にトランザクションの最後に。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
@@ -170,7 +168,7 @@ ms.locfileid: "47539480"
 -   ElementLink - すべてのリレーションシップは ElementLinks  
   
 ##  <a name="transaction"></a> トランザクション内で変更を実行します。  
- プログラム コードが、ストアでは何も変更されるたびに、行う必要があります、トランザクション内で。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。 詳細については、「<xref:Microsoft.VisualStudio.Modeling.Transaction>」を参照してください。  
+ プログラム コードが、ストアでは何も変更されるたびに、行う必要があります、トランザクション内で。 これは、すべてのモデル要素、リレーションシップ、図形、図、およびそのプロパティに適用されます。 詳細については、「 <xref:Microsoft.VisualStudio.Modeling.Transaction> 」を参照してください。  
   
  トランザクションの管理の最も便利な方法は、`using`ステートメントで囲む、`try...catch`ステートメント。  
   

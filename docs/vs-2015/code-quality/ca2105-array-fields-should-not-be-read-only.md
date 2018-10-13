@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2105: 配列フィールドを読み取ることができませんのみ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 88e7c9413ce8d1cb31e9abd7c9e1d32ef11612ca
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: a310957f1552e289993643d39965d8a6a8693fe2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589712"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207949"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: 配列フィールドは読み取り専用にできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2105: 配列フィールドを読み取ることができませんのみ](https://docs.microsoft.com/visualstudio/code-quality/ca2105-array-fields-should-not-be-read-only)します。
-
 |||
 |-|-|
 |TypeName|ArrayFieldsShouldNotBeReadOnly|
@@ -50,7 +47,7 @@ ms.locfileid: "47589712"
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  このルールで識別されるセキュリティの脆弱性を修正するのに依存しないパブリックにアクセスできる読み取り専用配列の内容。 次の手順のいずれかを使用することを強くお勧めします。
 
--   厳密に型指定されたコレクションは変更できない配列に置き換えます。 詳細については、「<xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>」を参照してください。
+-   厳密に型指定されたコレクションは変更できない配列に置き換えます。 詳細については、「 <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName> 」を参照してください。
 
 -   プライベート配列の複製を返すメソッドでは、パブリック フィールドを置き換えます。 コードが、複製に依存しないためにありません危険要素が変更された場合です。
 

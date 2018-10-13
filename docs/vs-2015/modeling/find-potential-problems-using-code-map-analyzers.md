@@ -1,12 +1,12 @@
 ---
 title: コード マップ アナライザーを使った潜在的な問題の検索 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vs.progression.codemapanalyzers
 helpviewer_keywords:
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b15a6d95e2a64aa09d57cb4fba02ab0369be5799
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ccac7f869c0395839e2c63354558df0389ced36b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534831"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204803"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>コード マップ アナライザーを使用して潜在的な問題を検索する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[検索潜在的な問題のコードを使用してマップ アナライザー](https://docs.microsoft.com/visualstudio/modeling/find-potential-problems-using-code-map-analyzers)します。  
-  
 コード マップに対してアナライザーを実行して、複雑すぎるコードや、改良が必要なコードを特定できます。 たとえば、アナライザーを使用して次のような作業を実行できます。  
   
 |**次のものが含まれたコードを見つける**|**問題の領域を調べて次のことを確認する**|  
