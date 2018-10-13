@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2232: Mark の Windows フォームのエントリ ポイントを stathread に設定します |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 9345009b889b3c382ce0030c34b547a8fd337e0e
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 867ca9d2eb03957d15826d23583b0b36d9d10584
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589112"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260989"
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Windows フォームのエントリ ポイントを STAThread に設定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2232: Windows フォームのマークのエントリ ポイントを stathread に設定します](https://docs.microsoft.com/visualstudio/code-quality/ca2232-mark-windows-forms-entry-points-with-stathread)します。
-
 |||
 |-|-|
 |TypeName|MarkWindowsFormsEntryPointsWithStaThread|

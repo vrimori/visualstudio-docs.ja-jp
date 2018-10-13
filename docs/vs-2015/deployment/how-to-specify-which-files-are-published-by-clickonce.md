@@ -1,7 +1,7 @@
 ---
 title: '方法: ClickOnce で発行されるファイルの指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: c56d378c8adee1801fb82fc4a2ed84e5b05c0aef
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2a8d408aa7d7ae04d5ed83c2687ca34ce79e404e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536098"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268321"
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>方法: ClickOnce で発行されるファイルを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 指定するファイル ClickOnce で発行される](https://docs.microsoft.com/visualstudio/deployment/how-to-specify-which-files-are-published-by-clickonce)します。  
-  
 発行するときに、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]プロジェクト内のアプリケーション、コード以外のすべてのファイルは、アプリケーションと共にデプロイされます。 場合によっては、場合や、特定のファイルを発行する必要がない可能性がありますかを条件に基づく特定のファイルをインストールすることがあります。 Visual Studio には、ファイルを除外する、ファイルをデータ ファイルや必須コンポーネントとしてマークし、条件付きでインストールするファイルのグループを作成する機能が用意されています。  
   
  ファイルを[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]でアプリケーションが管理されている、**アプリケーション ファイル**からアクセスできるダイアログ ボックス、**発行**のページ、**プロジェクト デザイナー**します。  

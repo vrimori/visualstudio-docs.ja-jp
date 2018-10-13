@@ -1,7 +1,7 @@
 ---
 title: '方法: ビルドからプロジェクトを除外する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 8
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 569f0db1294bd7df2451c4ec496dc5064b122b73
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e1d7bfbf2b12113bd7d80a6dd6af19b4470e30b1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545123"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242854"
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>方法: ビルドからプロジェクトを除外する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビルドからプロジェクトを除外する](https://docs.microsoft.com/visualstudio/ide/how-to-exclude-projects-from-a-build)します。  
-  
 ソリューションをビルドするために、含まれるすべてのプロジェクトをビルドする必要はありません。 たとえば、ビルドを中断するプロジェクトを除外できます。 その後、問題の調査と対処を行ってからプロジェクトをビルドすることができます。  
   
  次の方法を実行することでプロジェクトを除外できます。  

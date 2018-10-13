@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: ファイル名拡張子へのコンテンツの種類のリンク |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 21ee64ce-9afe-4b08-94a0-8389cc4dc67c
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1742da19e2d99cbb22d930b7146b1f9859e19cef
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 45534f4a85cd289360c098083228ac5f28025a90
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549009"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261730"
 ---
 # <a name="walkthrough-linking-a-content-type-to-a-file-name-extension"></a>チュートリアル: コンテンツの種類とファイル名拡張子とをリンクさせる
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: コンテンツの種類をファイル名拡張子にリンク](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension)します。  
-  
 独自のコンテンツの種類を定義し、エディターの Managed Extensibility Framework (MEF) 拡張機能を使用して、ファイル名拡張子をリンクできます。 場合によっては、ファイル名拡張子が言語サービスでは; で定義されて既にそれにもかかわらず、MEF を使用してもする必要がありますをリンクするコンテンツの種類。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -34,13 +32,13 @@ ms.locfileid: "47549009"
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`ContentTypeTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `ContentTypeTest`の名前を指定します。  
   
 2.  **Source.extension.vsixmanifest**に移動して、ファイル、**資産**タブをクリックし、設定、**型**フィールドを **[microsoft.visualstudio.mefcomponent]**、**ソース**フィールドを**現在のソリューションでプロジェクトを**、および**プロジェクト**フィールドをプロジェクトの名前。  
   
 ## <a name="defining-the-content-type"></a>コンテンツの種類を定義します。  
   
-1.  クラス ファイルを追加し、名前`FileAndContentTypes`します。  
+1.  クラス ファイルを追加し、その名前を `FileAndContentTypes`にします。  
   
 2.  次のアセンブリへの参照を追加します。  
   

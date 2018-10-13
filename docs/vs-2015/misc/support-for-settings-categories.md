@@ -1,7 +1,7 @@
 ---
 title: 設定カテゴリのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3bac375d-8bd5-41be-a8de-32eb33c5cfac
 caps.latest.revision: 20
 manager: douge
-ms.openlocfilehash: 474537895af5c51c7abd7439b58f8ef5994bdc11
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 53abd3c9f35f16c2f2ae62e2c4f339a86477a8b3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538811"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244934"
 ---
 # <a name="support-for-settings-categories"></a>設定カテゴリのサポート
 設定カテゴリは統合開発環境 (IDE) をカスタマイズするためのグループで構成されます。 たとえば設定により、メニューの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のウィンドウとコンテンツのレイアウトを制御できます。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "47538811"
 -   これら 2 つは <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> で接続します。  
   
 ## <a name="support-for-settings-categories"></a>設定カテゴリのサポート  
- <xref:Microsoft.VisualStudio.Shell.Package> クラスは、カテゴリの作成をサポートしています。 <xref:Microsoft.VisualStudio.Shell.DialogPage> クラスは、カテゴリを実装しています。 <xref:Microsoft.VisualStudio.Shell.DialogPage> の既定の実装では、カテゴリとしてパブリック プロパティがユーザーに提供されます。 詳細については、次を参照してください。 [Creating a Settings Category](../extensibility/creating-a-settings-category.md)します。  
+ <xref:Microsoft.VisualStudio.Shell.Package> クラスは、カテゴリの作成をサポートしています。 <xref:Microsoft.VisualStudio.Shell.DialogPage> クラスは、カテゴリを実装しています。 <xref:Microsoft.VisualStudio.Shell.DialogPage> の既定の実装では、カテゴリとしてパブリック プロパティがユーザーに提供されます。 詳細については、「 [Creating a Settings Category](../extensibility/creating-a-settings-category.md)」を参照してください。  
   
  <xref:Microsoft.VisualStudio.Shell.DialogPage> クラスは <xref:Microsoft.VisualStudio.Shell.IProfileManager> を実装しており、オプション ページとユーザー設定の両方について保持機能を提供しています。 <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromXml%2A> メソッドと <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToXml%2A> メソッドは、設定を .vssettings ファイルに保持します。このファイルは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] がそれぞれ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsReader> または <xref:Microsoft.VisualStudio.Shell.Interop.IVsSettingsWriter> として提供します。 <xref:Microsoft.VisualStudio.Shell.IProfileManager.ResetSettings%2A> メソッドは、設定を既定値にリセットします。  
   

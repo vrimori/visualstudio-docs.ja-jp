@@ -1,7 +1,7 @@
 ---
 title: DLL プロジェクトのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,25 +24,23 @@ caps.latest.revision: 41
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 13e124c4c9c24ad298c2528f2901d5aa1d52d54c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eb1d8cf355aee56797b5c814341255cb47cf4f9b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539748"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267385"
 ---
 # <a name="debugging-dll-projects"></a>DLL プロジェクトのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DLL プロジェクトのデバッグ](https://docs.microsoft.com/visualstudio/debugger/debugging-dll-projects)します。  
-  
 DLL を作成するテンプレートは次のとおりです。  
   
 -   (C++、C#、および Visual Basic) クラス ライブラリ  
   
 -   (C++、C#、および Visual Basic): Windows フォーム コントロール ライブラリ  
   
-     Windows コントロール ライブラリのデバッグは、クラス ライブラリ プロジェクトのデバッグとほぼ同じです。 多くの場合、Windows コントロールは別のプロジェクトから呼び出します。 呼び出し元のプロジェクトをデバッグする場合は、Windows コントロールのコードにステップ インし、ブレークポイントを設定し、ほかのデバッグ操作を実行できます。 詳細については、次を参照してください。 [Windows フォーム コントロール](http://msdn.microsoft.com/library/f050de8f-4ebd-4042-94b8-edf9a1dbd52a)します。  
+     Windows コントロール ライブラリのデバッグは、クラス ライブラリ プロジェクトのデバッグとほぼ同じです。 多くの場合、Windows コントロールは別のプロジェクトから呼び出します。 呼び出し元のプロジェクトをデバッグする場合は、Windows コントロールのコードにステップ インし、ブレークポイントを設定し、ほかのデバッグ操作を実行できます。 詳細については、「 [Windows フォーム コントロール](http://msdn.microsoft.com/library/f050de8f-4ebd-4042-94b8-edf9a1dbd52a)」を参照してください。  
   
 -   (C# および Visual Basic): Web コントロール ライブラリ  
   
@@ -83,16 +81,16 @@ DLL を作成するテンプレートは次のとおりです。
 ##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> デバッグ バージョンのビルド  
  デバッグをどの方法で始める場合でも、DLL のデバッグ バージョンを先にビルドして、アプリケーションが参照する場所にデバッグ バージョンを配置するようにします。 この手順を忘れると、アプリケーションが別のバージョンの DLL を参照して読み込む可能性があります。 その場合、ブレークポイントがヒットせず、プログラムの実行が継続されます。 デバッグ時には、デバッガーの **[モジュール]** ウィンドウを開いて、プログラムが読み込んだ DLL を確認できます。 **[モジュール]** ウィンドウには、デバッグしているプロセスに読み込まれた DLL や EXE が一覧表示されます。 詳細については、「 [How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md)」を参照してください。  
   
- C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 追加するコードに自動的にリンクすることで、 [/ASSEMBLYDEBUG](http://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982)リンカー オプション。  
+ C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 [/ASSEMBLYDEBUG](http://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982) リンカー オプションを使ってリンクすると、これを自動的にコードに追加できます。  
   
 ##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Mixed-Mode Debugging  
  DLL を呼び出す呼び出し元のアプリケーションは、マネージド コードで記述されている場合と、ネイティブ コードで記述されている場合があります。 マネージド DLL とそれを呼び出すネイティブ コードの両方をデバッグする場合は、マネージド デバッガーとネイティブ デバッガーを共に有効にする必要があります。 これを選択することができます、 **\<プロジェクト > プロパティ ページ** ダイアログ ボックスまたはウィンドウ。 DLL プロジェクトからデバッグを開始するか、呼び出し元のアプリケーション プロジェクトからデバッグを開始するかによって、確認方法は異なります。 詳細については、「 [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md)」を参照してください。  
   
 ##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Changing Default Configurations  
- プロジェクト テンプレートを使用してコンソール アプリケーション プロジェクトを作成するときは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] により、デバッグ構成とリリース構成に必要な設定が自動的に作成されます。 これらの設定は必要に応じて変更できます。 詳細については、次を参照してください[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)、 [c# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)、 [Visual Basic デバッグ構成のプロジェクトの設定。](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)、および[方法: セット デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。  
+ プロジェクト テンプレートを使用してコンソール アプリケーション プロジェクトを作成するときは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] により、デバッグ構成とリリース構成に必要な設定が自動的に作成されます。 これらの設定は必要に応じて変更できます。 詳細については、次を参照してください[C++ デバッグ構成のプロジェクト設定](../debugger/project-settings-for-a-cpp-debug-configuration.md)、 [c# デバッグ構成のプロジェクト設定](../debugger/project-settings-for-csharp-debug-configurations.md)、 [Visual Basic デバッグ構成のプロジェクトの設定。](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)、および[方法: セット デバッグ構成とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。  
   
 ##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> DLL をデバッグする方法  
- このセクションの各プロジェクトでは、DLL を作成します。 DLL は直接実行できず、アプリケーション (通常は EXE) から呼び出す必要があります。 詳細については、次を参照してください。 [Visual c プロジェクトの管理の作成と](http://msdn.microsoft.com/library/11003cd8-9046-4630-a189-a32bf3b88047)します。 呼び出し元のアプリケーションは、次の条件のいずれかに該当している場合があります。  
+ このセクションの各プロジェクトでは、DLL を作成します。 DLL は直接実行できず、アプリケーション (通常は EXE) から呼び出す必要があります。 詳細については、「 [Creating and Managing Visual C++ Projects](http://msdn.microsoft.com/library/11003cd8-9046-4630-a189-a32bf3b88047)」を参照してください。 呼び出し元のアプリケーションは、次の条件のいずれかに該当している場合があります。  
   
 -   クラス ライブラリを格納する同じ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューション内の、別のプロジェクトにビルドされたアプリケーション  
   
@@ -111,12 +109,12 @@ DLL を作成するテンプレートは次のとおりです。
   
 -   DLL プロジェクトからデバッグできます。 詳細については、「 [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)」を参照してください。  
   
--   デバッグすることができます、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **イミディ エイト**ウィンドウ。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
+-   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **イミディエイト** ウィンドウを開いて、プログラムが読み込んだ DLL を確認できます。 この場合、 **イミディエイト** ウィンドウは、アプリケーションの役割をします。  
   
  呼び出し元のアプリケーションのデバッグを始める前に、通常はクラス ライブラリ内にブレークポイントを設定します。 詳細については、「 [Breakpoints and Tracepoints](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583)」を参照してください。 ブレークポイントにヒットした場合は、コードのステップ実行により、1 行ずつアクションを確認して問題を特定できます。 詳細については、「 [Code Stepping Overview](http://msdn.microsoft.com/en-us/8791dac9-64d1-4bb9-b59e-8d59af1833f9)」を参照してください。  
   
 ###  <a name="vxtskdebuggingdllprojectscontrolsonawebpage"></a> Web ページ上のコントロール  
- Web ページ コントロールをデバッグするには、それを埋め込む [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページを作成します (このようなページがまだ存在しない場合)。 次に、Web ページ コードとコントロール コードにブレークポイントを設定します。 Web ページを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] から起動します。  
+ Web ページ コントロールをデバッグするには、それを埋め込む [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページを作成します (このようなページがまだ存在しない場合)。 次に、Web ページ コードとコントロール コードにブレークポイントを設定します。 Web ページを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]から起動します。  
   
  呼び出し元のアプリケーションのデバッグを始める前に、通常は DLL 内にブレークポイントを設定します。 ブレークポイントにヒットした場合は、コードのステップ実行により、1 行ずつアクションを確認して問題を特定できます。 詳細については、「 [Breakpoints and Tracepoints](http://msdn.microsoft.com/en-us/fe4eedc1-71aa-4928-962f-0912c334d583)」を参照してください。  
   

@@ -1,7 +1,7 @@
 ---
 title: VSCT XML スキーマの条件付き属性 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 754d4f32-319b-44c9-915f-f7c60e53222e
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 018c78d10af48a946ded543210404f397eee5ca4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1ee3d25fd7d08ea52c41ef24fdfe654bbf7a2eb2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546616"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246880"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSCT XML スキーマの条件付き属性](https://docs.microsoft.com/visualstudio/extensibility/vsct-xml-schema-conditional-attributes)します。  
-  
 条件付き属性は、すべてのリストとアイテムに適用可能性があります。 論理演算子およびシンボルの拡張の式は、true または false に評価されます。 True の場合、結果の出力で、関連付けられているリストまたは項目が含まれます。  
   
  その他のトークンの拡張や定数に対してトークンの展開をテストできます。 知り関数は、値が存在しない場合でも、特定の名前が定義されているかどうかをテストに使用されます。  

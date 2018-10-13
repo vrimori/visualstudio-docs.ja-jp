@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス セッションの概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da90a5ae4e35f36306e8537ca2cd743e98ffd33f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 23de3ebb79acb342f711593200795246ded97c49
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539674"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242815"
 ---
 # <a name="performance-session-overview"></a>パフォーマンス セッションの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス セッションの概要](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)します。  
-  
 この概要では、プロファイリングの基本について説明します。 パフォーマンス作業を初めて行う開発者は、すぐに成果を上げてコードのパフォーマンスを向上させるうえで [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールがいかに役立つかを理解できます。 プロファイリングの経験がある開発者は、プロファイリング ツールに関する特定の機能やプロセスの概要を確認できます。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイル ツールを使用することで、ソース コードのパフォーマンスの問題を識別し、実行可能な解決策のパフォーマンスを比較できます。 プロファイリング ツールのウィザードと既定の設定を使用すると、多くのパフォーマンスの問題をすぐに把握できます。 プロファイリング ツールの機能とオプションを使用することで、プロファイリング プロセスを厳密に制御できます。 この制御には、コード セクションの正確な対象化、ブロックレベルのタイミング情報の収集、追加プロセッサ データやシステム パフォーマンス データをデータに組み込むことなどが含まれます。  

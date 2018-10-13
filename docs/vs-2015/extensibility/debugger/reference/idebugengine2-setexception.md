@@ -1,7 +1,7 @@
 ---
 title: IDebugEngine2::SetException |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e6f5ec48-09e8-4b9b-9dc9-55f8d883f1b7
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c730f3c4742f05a541852ee2a281bdf7bb0d4d9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0591ce53167dbd3ddd5ab20534e248510004a6a3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263847"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugEngine2::SetException](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugengine2-setexception)します。  
-  
 デバッグ エンジン (DE) を使用して、特定の例外を処理する方法を指定します。  
   
 ## <a name="syntax"></a>構文  

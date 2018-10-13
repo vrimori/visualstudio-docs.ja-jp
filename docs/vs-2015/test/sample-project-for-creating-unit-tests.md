@@ -1,7 +1,7 @@
 ---
 title: 単体テストを作成するサンプル プロジェクト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: db80aaf2-0652-4d3f-a8c5-2a98fd8502a2
 caps.latest.revision: 32
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 846783e398fc07ef4ddfff4ea1bca05f840bca81
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c3d364ffe23e79bb8842770bec0602d4bb7022c9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544518"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248587"
 ---
 # <a name="sample-project-for-creating-unit-tests"></a>単体テストを作成するサンプル プロジェクト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[単体テストを作成するためのサンプル プロジェクト](https://docs.microsoft.com/visualstudio/test/sample-project-for-creating-unit-tests)します。  
-  
 このサンプル コードは、次のチュートリアルで使用するために用意されています。  
   
 -   [チュートリアル: マネージド コードに対する単体テストの作成と実行](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)。 このチュートリアルでは、単体テストの作成とカスタマイズ、実行、およびテスト結果の検討の手順について説明します。  

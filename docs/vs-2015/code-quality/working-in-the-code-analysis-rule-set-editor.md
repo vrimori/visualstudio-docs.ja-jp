@@ -1,7 +1,7 @@
 ---
 title: セット エディターでコード分析規則の作業 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 098cf799ad99eb61a8aa53112eb7e44ee200c6c9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cd107f2ac0c377765fda2f62f175d7285eb01bb6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538359"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49269647"
 ---
 # <a name="working-in-the-code-analysis-rule-set-editor"></a>コード分析規則セット エディターでの作業
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード分析規則セット エディターでの作業](https://docs.microsoft.com/visualstudio/code-quality/working-in-the-code-analysis-rule-set-editor)します。  
-  
 コード分析規則セット エディターでは、カスタム規則セットに含まれているルールを指定して、アクションを指定できます。 コード分析規則の違反が見つかった場合に実行するアクションを指定することもできます。  
   
 |アクション|説明|  

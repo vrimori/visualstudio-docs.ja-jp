@@ -1,7 +1,7 @@
 ---
 title: VSIX カラー エディター |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f3368f61b44dc258651dc20f5de249972074c512
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a5e2ca54ae8a79ae1fa46c354e40187158ed8964
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49258090"
 ---
 # <a name="vsix-color-editor"></a>VSIX カラー エディター
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX カラー エディター](https://docs.microsoft.com/visualstudio/extensibility/internals/vsix-color-editor)します。  
-  
 Visual Studio 拡張機能カラー エディター ツールでは、作成でき、Visual Studio のカスタム色を編集することができます。 色は、コードで使用できるように、ツールは、テーマのリソース キーを生成もできます。 このツールは、色のテーマをサポートする Visual Studio 拡張機能をするのに役立ちます。 このツールは、.pkgdef および .xml ファイルを開くことができます。 Visual Studio のテーマ (.vstheme ファイル) をファイル拡張子を .xml に変更することで Visual Studio 拡張機能カラー エディターで使用できます。 さらに、.vstheme ファイルは、現在の .xml ファイルにインポートできます。  
   
  ![VSIX カラー エディターのヒーロー](../../extensibility/internals/media/vsix-color-editor-hero.png "VSIX カラー エディターのヒーロー")  

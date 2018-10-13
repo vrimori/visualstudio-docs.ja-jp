@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスのインターフェイス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 03b2d507-f463-417e-bc22-bdac68eeda52
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e68b9b5273d78d35086369f00106b1ebbde4a8ea
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 654a0d7de3ad75c541d14a38a2a897adb731ea7a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534548"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249211"
 ---
 # <a name="legacy-language-service-interfaces"></a>従来の言語サービスのインターフェイス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービス インターフェイス](https://docs.microsoft.com/visualstudio/extensibility/internals/legacy-language-service-interfaces)します。  
-  
 特定のプログラミング言語がありますの言語サービスのインスタンスを 1 つだけで。 ただし、1 つの言語サービスでは、1 つ以上のエディターを使用できます。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 特定のエディターでの言語サービスを関連付けないでしません。 したがって、言語サービスの操作を要求するときに、パラメーターとして適切なエディターを識別する必要があります。  

@@ -1,7 +1,7 @@
 ---
 title: スクリプトを使用して SQL database の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f9a2e3fdeccf8e3b094bd5fb1519d740cee7ce41
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 13816c499002f8eaf81067aba8d1854d06a41445
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49266592"
 ---
 # <a name="create-a-sql-database-by-using-a-script"></a>スクリプトを使用して SQL database を作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スクリプトを使用して SQL database を作成する](https://docs.microsoft.com/visualstudio/data-tools/create-a-sql-database-by-using-a-script)します。  
-  
   
 このチュートリアルでのサンプル コードを含む小さなデータベースを作成する Visual Studio を使用する[ADO.NET を使用して単純なデータ アプリケーションを作成する](../data-tools/create-a-simple-data-application-by-using-adonet.md)します。  
   

@@ -1,7 +1,7 @@
 ---
 title: '方法: Web アプリケーションのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,23 +24,21 @@ caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3dce1129282dc7273631e261bb32d313f65ce381
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a4e185b1b35a2462547ca8689dc1a4bfe80ff036
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536105"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260813"
 ---
 # <a name="how-to-debug-web-applications"></a>方法: Web アプリケーションをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Web アプリケーションのデバッグ](https://docs.microsoft.com/visualstudio/debugger/how-to-debug-web-applications)します。  
-  
 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションの開発の主要なテクノロジは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] デバッガーには、ローカルまたはリモート サーバーで [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションをデバッグするための強力なツールが用意されています。 このトピックでは、デバッグする方法を説明します、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]開発中のプロジェクト。 デバッグする方法については、 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションを実稼働サーバーに配置されているを参照してください[デプロイされた Web アプリケーションのデバッグ](../debugger/debugging-deployed-web-applications.md)します。  
   
  [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションをデバッグするには  
   
--   適切なアクセス許可が必要です。 詳細については、次を参照してください。[システム要件](../debugger/aspnet-debugging-system-requirements.md)します。  
+-   適切なアクセス許可が必要です。 詳細については、「 [System Requirements](../debugger/aspnet-debugging-system-requirements.md)」をご覧ください。  
   
 -   [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 有効にする必要がありますデバッグ**プロジェクト プロパティ**します。  
   

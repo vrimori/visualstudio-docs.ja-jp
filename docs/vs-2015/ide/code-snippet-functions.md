@@ -1,7 +1,7 @@
 ---
 title: コード スニペットの関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8e5009a2fcdcc9c3b94417a296bae5e0f88acf83
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3874b162719deb02813ceb7eae09b373e208f458
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270882"
 ---
 # <a name="code-snippet-functions"></a>コード スニペットの関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード スニペットの関数](https://docs.microsoft.com/visualstudio/ide/code-snippet-functions)します。  
-  
 [!INCLUDE[csprcs](../includes/csprcs-md.md)] コード スニペットで使用できる関数は 3 つあります。 関数は、コード スニペットの [Function](http://msdn.microsoft.com/en-us/572c5549-5821-4e15-8ecd-0fa86c1c65df) 要素で指定されています。 コード スニペットの作成については、「[コード スニペット](../ide/code-snippets.md)」を参照してください。  
   
 ## <a name="functions"></a>関数  

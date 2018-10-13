@@ -1,7 +1,7 @@
 ---
 title: プロファイリング ツール | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8672dd6d05b3a111ad5a1460a57a47b58d1d426a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: feeab1d1f00a681ee3af40436b395d0149cc3334
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537443"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244039"
 ---
 # <a name="profiling-tools"></a>プロファイリング ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のプロファイル](https://docs.microsoft.com/visualstudio/profiling/profiling-feature-tour)します。  
-  
 プロファイリングと診断のツールを利用すれば、メモリの利用状況、CPU の利用状況、その他のアプリケーション レベルの問題を診断できます。 これらのツールでは、デバッガーでアプリケーションを実行し、一定期間のデータを集めることができます (変数値、関数呼び出し、イベントなど)。 コードの実行中のさまざまな時点におけるアプリケーションの状態を表示できます。  
   
  一番下の概要を見ると、ある種類のプロジェクトで利用できるツールを確認できます (デスクトップ、UWP、ASP.NET など)。  
@@ -48,7 +46,7 @@ ms.locfileid: "47537443"
 ## <a name="cpu-usage"></a>CPU 使用率  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  
   
- **CPU 使用率** ツールは、CPU が C++、C#/VB、および JavaScript のコードを実行する際、どこで時間を費やしているかを示します。  このツールはデスクトップ、Windows ユニバーサル アプリ、Azure App Services アプリで使用できます。 **CPU 使用量** ツールは、デバッグ中に **[診断ツール]** ウィンドウから (**[デバッグ]、[Windows]、[診断ツールの表示]**)、またはデバッガーの外部で (**[デバッグ]、[パフォーマンス プロファイラー...]**) 実行できます。参照してください[CPU 使用率](../profiling/cpu-usage.md)詳細についてはします。  
+ **CPU 使用率** ツールは、CPU が C++、C#/VB、および JavaScript のコードを実行する際、どこで時間を費やしているかを示します。  このツールはデスクトップ、Windows ユニバーサル アプリ、Azure App Services アプリで使用できます。 **CPU 使用量** ツールは、デバッグ中に **[診断ツール]** ウィンドウから (**[デバッグ]、[Windows]、[診断ツールの表示]**)、またはデバッガーの外部で (**[デバッグ]、[パフォーマンス プロファイラー...]**) 実行できます。各種手法の詳細については、「 [CPU 使用率](../profiling/cpu-usage.md) 」を参照してください。  
   
 ## <a name="performance-explorer"></a>パフォーマンス エクスプローラー  
  ![PerfTools](../profiling/media/perftools.png "PerfTools")  

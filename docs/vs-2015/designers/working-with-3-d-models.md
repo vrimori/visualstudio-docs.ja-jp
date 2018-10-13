@@ -1,7 +1,7 @@
 ---
 title: 3-D モデルの操作 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2d0e13e1277bc46af5d8784141772f5ec9a90cf7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cd22a3efecab0e544ddab7fff4ab795020ba0a4f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536187"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251064"
 ---
 # <a name="working-with-3-d-models"></a>3-D モデルの操作
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[3-D モデルを扱う](https://docs.microsoft.com/visualstudio/designers/working-with-3-d-models)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でモデル エディターを使って 3-D モデルを作成できます。 作成したモデルは、DirectX ベースのゲームやアプリで使うことができます。  
   
 ## <a name="3-d-models"></a>3-D モデル  

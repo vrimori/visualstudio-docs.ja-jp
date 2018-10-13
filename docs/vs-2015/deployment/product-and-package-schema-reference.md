@@ -1,7 +1,7 @@
 ---
 title: 製品およびパッケージ スキーマ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 7812354ee1de5341838029e2198912840da6f0b1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6fb70a1dff0f166aabeaf0facdd4b031f3d4fb6e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547678"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271035"
 ---
 # <a name="product-and-package-schema-reference"></a>製品およびパッケージ スキーマ リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[製品およびパッケージ スキーマ リファレンス](https://docs.microsoft.com/visualstudio/deployment/product-and-package-schema-reference)します。  
-  
 A*製品ファイル*で必要な外部の依存関係のすべてを記述する XML マニフェストには、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション。 外部の依存関係の例、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]および Microsoft Data Access Components (MDAC)。 パッケージ ファイルは、製品ファイルに似ていますが、ローカライズ済みのアセンブリ、ライセンスの契約ドキュメントなどの依存関係のカルチャに依存するコンポーネントをインストールするために使用します。  
   
  製品およびパッケージ ファイルには、いずれかの最上位`Product`または`Package`要素は、それぞれに、次の要素が含まれています。  
@@ -169,7 +167,7 @@ A*製品ファイル*で必要な外部の依存関係のすべてを記述す�
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: 利用可能なサービスの一覧 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 724eb24b-b87c-4971-a2e7-adee7afc03b2
 caps.latest.revision: 50
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b09e58ee64eeb27940ea30f9a03429706b720cf0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 658a4406b16c3f79f3c485e62e6de8027bb35167
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538671"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248106"
 ---
 # <a name="list-of-available-services"></a>使用可能なサービスの一覧
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[利用可能なサービス一覧](https://docs.microsoft.com/visualstudio/extensibility/internals/list-of-available-services)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Visual Studio SDK は、次のサービスをサポートします。 一部のパッケージは、ここに記載されていない独自のサービスを提供するなど、言語サービスには 1 つのサービス GUID はありません。 言語の名前を使用して、レジストリ内で、言語サービスの GUID を検索する必要があります。  
   
  次のとおり、またはその他のソース (たとえば、言語サービス) から取得したサービスの Guid を使用すると、プライマリ インターフェイスまたはサービスごとに示されるインターフェイスを取得します。  
