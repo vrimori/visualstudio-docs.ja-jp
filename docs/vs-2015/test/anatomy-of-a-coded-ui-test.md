@@ -1,7 +1,7 @@
 ---
 title: コード化された UI テストの構造 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 9c5d82fc-3fb7-4bb1-a9ac-ac1fa3a4b500
 caps.latest.revision: 25
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c9fea94f0298212bb8c3909d4227936437b8f24c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7595a967a6dae091da6c5a7613a27c602cc1381e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537777"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202749"
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>コード化された UI テストの構造
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード化された UI テストの構造](https://docs.microsoft.com/visualstudio/test/anatomy-of-a-coded-ui-test)します。  
-  
 コード化された UI テスト プロジェクトでコード化された UI テストを作成すると、ソリューションに複数のファイルが追加されます。 このトピックでは、コード化された UI テストの例を使用して、これらのファイルを参照します。  
   
  **必要条件**  
@@ -38,9 +36,9 @@ ms.locfileid: "47537777"
   
 |ファイル|目次|編集可能かどうか|  
 |----------|--------------|---------------|  
-|[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [プロパティ](#UIMapProperties)|いいえ|  
+|[UIMap.Designer.cs](#UIMapDesignerFile)|[宣言セクション](#UIMapDesignerFile)<br /><br /> [UIMap クラス](#UIMapClass) (部分クラス、自動生成)<br /><br /> [メソッド](#UIMapMethods)<br /><br /> [Properties](#UIMapProperties)|いいえ|  
 |[UIMap.cs](#UIMapCS)|[UIMap クラス](#UIMapCS) (部分クラス)|はい|  
-|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [プロパティ](#CodedUITestProperties)|はい|  
+|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 クラス](#CodedUITestCS)<br /><br /> [メソッド](#CodedUITestMethods)<br /><br /> [Properties](#CodedUITestProperties)|はい|  
 |[UIMap.uitest](#UIMapuitest)|テストに使用する UI の XML マップ。|いいえ|  
   
 ###  <a name="UIMapDesignerFile"></a> UIMap.Designer.cs  

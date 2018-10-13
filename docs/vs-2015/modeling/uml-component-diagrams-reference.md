@@ -1,7 +1,7 @@
 ---
 title: 'UML コンポーネント図: リファレンス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 38
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: f628ebfa84246c6d991543352f4de36a51cc7fbf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b99188aa069a830d17e31733ad20b0ae727d63f9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547131"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49206742"
 ---
 # <a name="uml-component-diagrams-reference"></a>UML コンポーネント図: リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML コンポーネント図: リファレンス](https://docs.microsoft.com/visualstudio/modeling/uml-component-diagrams-reference)します。  
-  
 Visual Studio で、*コンポーネント図*ソフトウェア システムの設計の部分を示しています。 コンポーネント図は、システムの大まかな構造と、これらのパートがインターフェイスを介して提供および使用するサービス動作を視覚化するのに役立ちます。 UML コンポーネント図を作成する、**アーキテクチャ** メニューのをクリックして**新しい UML またはレイヤー図**します。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

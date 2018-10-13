@@ -1,7 +1,7 @@
 ---
 title: '1013: ca オーバー ロードで、演算子 equals をオーバー ロードを追加および減算 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,15 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5b735af635e59174a683763fa1633b0e33e0d10a
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: ad1213ad0f24ef3e98a7311719fbff4dc7667a20
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589148"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191985"
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: オーバーロードする加算および減算で、演算子 equals をオーバーロードします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1013: オーバー ロードで、演算子 equals をオーバー ロードの加算および減算](https://docs.microsoft.com/visualstudio/code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract)します。
-
 |||
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|

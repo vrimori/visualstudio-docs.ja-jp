@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: テキスト ビューのカスタマイズ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 32d32ac8-22ff-4de7-af69-bd46ec4ad9bf
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 39dca1309adeef8270ae7bb716c4274874451b91
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 661c812625856551f2f6c8194fa97e5df21efbaf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535688"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199044"
 ---
 # <a name="walkthrough-customizing-the-text-view"></a>チュートリアル: テキスト ビューのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: テキスト ビューをカスタマイズする](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-customizing-the-text-view)します。  
-  
 テキスト ビューをカスタマイズするには、そのマップをエディターの書式設定では、次のプロパティのいずれかの変更します。  
   
 -   インジケーター マージン  
@@ -46,7 +44,7 @@ ms.locfileid: "47535688"
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`ViewPropertyTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `ViewPropertyTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -54,7 +52,7 @@ ms.locfileid: "47535688"
   
 ## <a name="defining-the-content-type"></a>コンテンツの種類を定義します。  
   
-1.  クラス ファイルを追加し、名前`ViewPropertyModifier`します。  
+1.  クラス ファイルを追加し、その名前を `ViewPropertyModifier`にします。  
   
 2.  次の追加`using`ディレクティブ。  
   

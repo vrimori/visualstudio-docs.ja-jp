@@ -1,7 +1,7 @@
 ---
 title: '[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 38374893aea62af1b664065edf0ca9195f3dd301
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9669437ff47bc141c898a61c055b3a0de8d5d235
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548804"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49189294"
 ---
 # <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>[オプション] ダイアログ ボックス、[プロジェクトおよびソリューション]、[ビルド/実行]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ダイアログ ボックス、プロジェクトとソリューションをビルドおよび実行](https://docs.microsoft.com/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)します。  
-  
   
 このダイアログ ボックスで、同時にビルドできる Visual C++ または Visual C# のプロジェクトの最大数、特定の既定のビルドの動作、およびいくつかのビルドのログ設定を指定することができます。 開くには、**オプション** ダイアログ ボックスで、選択**ツール**、**オプション**メニュー バーでします。 この一連のオプションにアクセスするには、展開**プロジェクトおよびソリューション**を選び、**をビルドおよび実行**します。  
   

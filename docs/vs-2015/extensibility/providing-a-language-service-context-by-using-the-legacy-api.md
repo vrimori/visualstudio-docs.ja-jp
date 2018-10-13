@@ -1,7 +1,7 @@
 ---
 title: 言語サービスのコンテキストを提供するレガシ API を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: daa2df22-9181-4bad-b007-a7d40302bce1
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 72bcd275fab0ae8380167dbbc8a9fae21c28a36c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 950e7606292487f10ee6e901e82abaa3c6f92a08
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536090"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195730"
 ---
 # <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>レガシ API を使用して、言語サービスのコンテキストを提供します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ API を使用して、言語サービスのコンテキストを提供する](https://docs.microsoft.com/visualstudio/extensibility/providing-a-language-service-context-by-using-the-legacy-api)します。  
-  
 2 つのオプションを使用してユーザー コンテキストを提供する言語サービスがある、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のコア エディター: テキスト マーカーのコンテキストを指定するか、すべてのユーザー コンテキストを提供します。 それぞれの違いが記載されています。  
   
  独自のエディターに接続されている言語サービスにコンテキストを提供する詳細については、次を参照してください。[方法: エディターのコンテキストを提供](../extensibility/how-to-provide-context-for-editors.md)します。  
@@ -37,7 +35,7 @@ ms.locfileid: "47536090"
 ## <a name="provide-all-user-context-to-the-editor"></a>エディターにすべてのユーザー コンテキストを提供します。  
  言語サービスを作成しを使用しているかどうか、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]エディターを実装することができますし、コア、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>言語サービスのコンテキストを提供するインターフェイス。  
   
- 実装の`IVsLanguageContextProvider`、コンテキスト バッグ (コレクション) がコンテキスト バッグを更新するには、エディターにアタッチされています。 ときに、**ダイナミック ヘルプ**ウィンドウの呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A>コンテキスト バッグ、アイドル状態時に、このコンテキスト バッグのインターフェイスは、更新プログラム用のエディターをクエリします。 エディターは、エディターを更新する必要があり、コンテキスト バッグへのポインターを渡しますが、言語サービスを通知します。 これは、呼び出すことで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A>言語サービスに、エディターからのメソッド。 コンテキスト バッグにポインターを使用して、言語サービスできるようになりました追加および削除の属性とキーワード。 詳細については、「<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>」を参照してください。  
+ 実装の`IVsLanguageContextProvider`、コンテキスト バッグ (コレクション) がコンテキスト バッグを更新するには、エディターにアタッチされています。 ときに、**ダイナミック ヘルプ**ウィンドウの呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A>コンテキスト バッグ、アイドル状態時に、このコンテキスト バッグのインターフェイスは、更新プログラム用のエディターをクエリします。 エディターは、エディターを更新する必要があり、コンテキスト バッグへのポインターを渡しますが、言語サービスを通知します。 これは、呼び出すことで、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A>言語サービスに、エディターからのメソッド。 コンテキスト バッグにポインターを使用して、言語サービスできるようになりました追加および削除の属性とキーワード。 詳細については、「 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> 」を参照してください。  
   
  実装する 2 つの方法がある`IVsLanguageContextProvider`:  
   
