@@ -1,7 +1,7 @@
 ---
 title: ファイル格納処理および XML シリアル化のカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ee8a3b5a5510ef5b8a104e3a55ace3af9ce7d318
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 012805e83e0fa3fae2a58274bfa400818d6d22fd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592902"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49183021"
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理のカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル記憶域のカスタマイズと XML シリアル化](https://docs.microsoft.com/visualstudio/modeling/customizing-file-storage-and-xml-serialization)します。  
-  
 ユーザーは、インスタンスを保存するときにまたは*モデル*でドメイン固有言語 (DSL) の[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、XML ファイルを作成または更新します。 ファイルは、ストア内のモデルを再作成を再読み込みすることができます。  
   
  シリアル化方式をカスタマイズするには、の設定を調整する**Xml シリアル化動作**DSL エクスプ ローラーでします。 下のノードがある**Xml シリアル化動作**のすべてのドメイン クラス、プロパティ、および関係。 リレーションシップは、そのソース クラスの下に配置されます。 図形、コネクタ、およびダイアグラムのクラスに対応するノードもあります。  

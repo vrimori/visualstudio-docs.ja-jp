@@ -1,7 +1,7 @@
 ---
 title: 要素 (VSIX 言語パックのスキーマ) のライセンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 57dac3b7-0cdd-405c-9af5-30ed9ca45e53
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ecf1913878137d84346275beccb512027f74f8f3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 66aa5d8166ce39dee80e23af20365eca6f5f8fee
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538837"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172264"
 ---
 # <a name="license-element-vsix-language-pack-schema"></a>ライセンス要素 (VSIX 言語パックのスキーマ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ライセンス要素 (VSIX 言語パックのスキーマ)](https://docs.microsoft.com/visualstudio/extensibility/license-element-vsix-language-pack-schema)します。  
-  
 任意。 ローカライズされたバージョンの拡張機能のライセンス ファイルのパス。  
   
 ## <a name="syntax"></a>構文  

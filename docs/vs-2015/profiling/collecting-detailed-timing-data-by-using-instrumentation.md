@@ -1,7 +1,7 @@
 ---
 title: インストルメンテーションを使用した詳細なタイミング データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ae3d2335c73f68f790e9b3def8f2a1d4ced7c969
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 8355911a54e6682b763d7f3aecbf29812fa4a1e9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592719"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186265"
 ---
 # <a name="collecting-detailed-timing-data-by-using-instrumentation"></a>インストルメンテーションを使用した詳細なタイミング データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[インストルメンテーションを使用した詳細なタイミング データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-detailed-timing-data-by-using-instrumentation)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのインストルメンテーション メソッド (方式) では、モジュールのコピーにプロファイリング コードが挿入されます。 このコードでは、プロファイリングの実行中に、モジュール内の各関数の開始、終了、および関数の呼び出しをそれぞれ記録します。 このインストルメンテーション メソッドは、コード セクションに関する詳細なタイミング情報を収集し、アプリケーションのパフォーマンスに対する入出力操作の影響を理解するために役立ちます。  
   
  インストルメンテーション メソッドは、次のいずれかの手順を使用して指定できます。  

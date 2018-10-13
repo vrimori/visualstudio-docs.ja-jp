@@ -1,7 +1,7 @@
 ---
 title: オートメーション コードの提供 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 21cb3e63-f25c-404b-bc1d-a32ad0fdd4d5
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 456927337331c15b3392b03175d83f2a63f87e77
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d70958f88bcd48ce3e2a18f2b086367800541a22
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533256"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172876"
 ---
 # <a name="providing-automation-for-code"></a>コードのオートメーションの提供
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オートメーション コードを提供する](https://docs.microsoft.com/visualstudio/extensibility/internals/providing-automation-for-code)します。  
-  
 コードのオートメーション モデルを作成する必要はありません。 環境の SDK では、そのため、サンプルは提供されません。 コード モデルを把握するには、次を参照してください。、<xref:EnvDTE.CodeModel>オブジェクト。  
   
  コード モデルを実装するには、内部データ構造によって決定されるインターフェイスを実装する必要があります。 オブジェクトから派生する必要があります、`IDispatch`クラス。  

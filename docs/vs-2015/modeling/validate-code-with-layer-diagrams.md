@@ -1,7 +1,7 @@
 ---
 title: レイヤー図を使用したコードの検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 84
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5430d436684be0bbf50004204da8bcd6a18d9bee
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4aea0373c57f046b257ad51b102e5b2f1190bfbf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533861"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173720"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>レイヤー図を使用したコードの検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図を使用したコードの検証](https://docs.microsoft.com/visualstudio/modeling/validate-code-with-layer-diagrams)です。  
-  
 コードが設計と競合しないことを確認するには、Visual Studio でレイヤー図を使用してコードを検証します。 これが次の点で役立つ場合があります。  
   
 -   レイヤー図のコードと依存関係で依存関係間の競合を見つける。  
@@ -208,7 +206,7 @@ ms.locfileid: "47533861"
   
 -   [Upgradetemplate.xaml はレガシ ビルドの変更します。](http://msdn.microsoft.com/library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)  
   
--   [ビルド プロセス テンプレートをカスタマイズします。](http://msdn.microsoft.com/library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
+-   [ビルド プロセス テンプレートのカスタマイズ](http://msdn.microsoft.com/library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
   
 -   [実行中のビルドの進行状況の監視](http://msdn.microsoft.com/library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   

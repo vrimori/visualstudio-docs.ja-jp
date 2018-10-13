@@ -1,7 +1,7 @@
 ---
 title: シェーダー デザイナー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6a8a6e0bb39ee501f72c96b55575859af0ce1e26
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1c1342d97d07ab44a30768e7515521c7d08b90e6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548419"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182796"
 ---
 # <a name="shader-designer"></a>シェーダー デザイナー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シェーダー デザイナー](https://docs.microsoft.com/visualstudio/designers/shader-designer)します。  
-  
 このドキュメントでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェーダー デザイナーを使用して、*シェーダー*というカスタム視覚効果を作成、変更、およびエクスポートする方法について説明します。  
   
  シェーダー デザイナーを使用すると、HLSL プログラミングを知らなくても、ゲームまたはアプリのカスタム視覚効果を作成できます。 シェーダー デザイナーでシェーダーを作成するには、それをグラフとしてレイアウトします。つまり、データおよび操作を表す複数の*ノード*をデザイン サーフェイスに追加し、それらのノードを接続することで、それらの操作によってデータを処理する方法を定義します。 各操作ノードでは、その時点までの効果のプレビューを表示して、結果を視覚化することができます。 データは、ノード間を移動して最終ノードに到達します。この最終ノードはシェーダーの出力を表しています。  

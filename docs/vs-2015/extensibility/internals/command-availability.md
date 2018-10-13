@@ -1,7 +1,7 @@
 ---
 title: コマンドの可用性 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: c74e3ccf-d771-48c8-a2f9-df323b166784
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9933975b005241e89444c47a96b80bf0e43bfbcb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bfaff5de68bd9d81b6cba6a03a4acec4ad1f0959
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182651"
 ---
 # <a name="command-availability"></a>コマンドの可用性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンド可用性](https://docs.microsoft.com/visualstudio/extensibility/internals/command-availability)します。  
-  
 Visual Studio のコンテキストでは、コマンドが使用可能な判断します。 コンテキストによっては、現在のプロジェクト、現在のエディター、読み込まれる Vspackage および統合開発環境 (IDE) の他の側面を変更できます。  
   
 ## <a name="command-contexts"></a>コマンドのコンテキスト  

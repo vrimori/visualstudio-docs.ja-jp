@@ -1,7 +1,7 @@
 ---
 title: XCode プロジェクトのインポート | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,18 +11,16 @@ caps.latest.revision: 10
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: 793702d2d4c2f688f62fc956648d7df811b4b87d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 792107fca4aab5390101b8be64b4ea2d1c4f286a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540010"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49175579"
 ---
 # <a name="import-an-xcode-project"></a>XCode プロジェクトのインポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XCode プロジェクトのインポート](https://docs.microsoft.com/visualstudio/cross-platform/import-an-xcode-project)します。  
-  
   
 Microsoft Visual C++ for Cross-Platform Mobile Development には、XCode プロジェクトを Visual Studio に移動して、クロスプラットフォーム ライブラリを作成し、他のプロジェクトとコードを共有するためのサポートが含まれています。 [XCode からインポート] ウィザードを使うと、プロジェクトをインポートするプロセスと、C++ コードを分割して XCode ターゲットに取り込み、スタティック ライブラリまたは共有コード プロジェクトとして利用するプロセスが簡略化されます。 iOS 固有のコードを Visual Studio で管理しながらも、XCode を使ってストーリーボードとビルドを行うことができます。 Visual Studio と XCode の間でコードを双方向に簡単に移動する方法については、「Move Changes Between XCode and Visual Studio (XCode と Visual Studio 間の変更の移動)」を参照してください。  
   

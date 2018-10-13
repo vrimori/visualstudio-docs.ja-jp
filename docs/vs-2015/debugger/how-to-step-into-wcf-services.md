@@ -1,7 +1,7 @@
 ---
 title: '方法: WCF サービスにステップ イン |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b779c8bc2e6da3975f1f70265482c706c9141375
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 205dc10829227d2bb2f151687d7b4d4defbe03fe
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539302"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49184954"
 ---
 # <a name="how-to-step-into-wcf-services"></a>方法 : WCF サービスにステップ インする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: WCF サービスにステップ イン](https://docs.microsoft.com/visualstudio/debugger/how-to-step-into-wcf-services)します。  
-  
 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] では、WCF サービスにステップ インできます。 WCF サービスがクライアントと同じ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューションにある場合、WCF サービス内のブレークポイントに到達できます。  
   
  ステップ実行を使用するには、app.config ファイルまたは Web.config ファイルでデバッグを有効にする必要があります。 デバッグを有効にして、WCF サービスにステップ インする制限については、次を参照してください。 方法については[WCF デバッグの制約](../debugger/limitations-on-wcf-debugging.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2114: メソッドのセキュリティは型のスーパー セットである必要があります |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4259edf6201df2b81869f711329bf7f1de6b3e15
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: edc2d0961a107bb6d59006c9feb857f95499c9b3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188208"
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: メソッドのセキュリティは型のスーパーセットにします
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2114: メソッドのセキュリティの種類のスーパー セットである必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca2114-method-security-should-be-a-superset-of-type)します。
-
 |||
 |-|-|
 |TypeName|MethodSecurityShouldBeASupersetOfType|

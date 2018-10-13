@@ -1,7 +1,7 @@
 ---
 title: メニュー コマンドへのアイコンの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 362a0c7e-5729-4297-a83f-1aba1a37fd44
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 051fc6b33a04870f0d21e14ecbe0adc8fcd525be
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b264a6b03baf5b77796b329ef6dd05fa4614bad0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538209"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49184522"
 ---
 # <a name="adding-icons-to-menu-commands"></a>メニュー コマンドへのアイコンの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[メニュー コマンドに追加するアイコン](https://docs.microsoft.com/visualstudio/extensibility/adding-icons-to-menu-commands)します。  
-  
 コマンドは、メニューおよびツールバーの両方に表示できます。 ツールバーでは、通常、アイコンとテキストの両方で、コマンドが表示されますだけをアイコンで (スペースを節約) 中にメニューに表示されるコマンドの一般的です。  
   
  アイコンは 16 ピクセル × 16 ピクセルと 8 ビット色深度 (256 色) または 32 ビットの色深度 (true color) のいずれかを指定できます。 32 ビット カラー アイコンは、適しています。 アイコンは通常 1 つのビットマップの水平方向の行を 1 つで配置されますが、複数のビットマップが許可されます。 このビットマップは、ビットマップ内で使用可能な個々 のアイコンと共に .vsct ファイルで宣言されます。 リファレンスをご覧ください、 [Bitmaps 要素](../extensibility/bitmaps-element.md)の詳細。  

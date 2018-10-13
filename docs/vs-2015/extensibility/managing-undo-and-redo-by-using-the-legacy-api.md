@@ -1,7 +1,7 @@
 ---
 title: 元に戻したり、レガシ API を使用して再実行の管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 838c0ddf-fdf3-4df1-8d21-79610b8ba0b1
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bb1cc883941c8365e4d4341c93084beaef44d48
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb2ff049635d75608114be380c9697faf0585725
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545092"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177893"
 ---
 # <a name="managing-undo-and-redo-by-using-the-legacy-api"></a>管理元に戻すと、レガシ API を使用して再実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[管理を元に戻すと、レガシ API を使用して再実行](https://docs.microsoft.com/visualstudio/extensibility/managing-undo-and-redo-by-using-the-legacy-api)します。  
-  
 エディターでは、ユーザーがコードを変更するときに、最近の変更内容を反転できるように元に戻す操作をサポートする必要があります。 ほとんどのエディターでは実装[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]統合開発環境 (IDE) によって自動的に提供元に戻す機能を持つことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

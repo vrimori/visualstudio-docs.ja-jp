@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: プロファイラー API の使用 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7eb2d4c3acfc8f2a98de1364b1f98aa451abaed
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ad4b22be98396fe58734f9c785da201450bdafcc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534833"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172537"
 ---
 # <a name="walkthrough-using-profiler-apis"></a>チュートリアル : プロファイラー API の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: Profiler Api を使用した](https://docs.microsoft.com/visualstudio/profiling/walkthrough-using-profiler-apis)します。  
-  
 このチュートリアルでは、C# アプリケーションを使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツール API を使用する方法を説明します。 プロファイラー API を使用すると、インストルメンテーション プロファイル中に収集されるデータの量を制限することができます。  
   
  このチュートリアルの手順は、一般に C/C++ アプリケーションに該当します。 言語ごとに、適したビルド環境を構成する必要があります。  
@@ -41,7 +39,7 @@ ms.locfileid: "47534833"
   
  ネイティブ コード用の Visual Studio プロファイラー API は VSPerf.dll にあります。 ヘッダー ファイルの VSPerf.h とインポート ライブラリの VSPerf.lib は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。  
   
- マネージド コード用のプロファイラー API は、Microsoft.VisualStudio.Profiler.dll にあります。 この DLL は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。 詳細については、「<xref:Microsoft.VisualStudio.Profiler>」を参照してください。  
+ マネージド コード用のプロファイラー API は、Microsoft.VisualStudio.Profiler.dll にあります。 この DLL は、Microsoft Visual Studio 9\Team Tools\Performance Tools ディレクトリにあります。 詳細については、「 <xref:Microsoft.VisualStudio.Profiler> 」を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルでは、ユーザーが選択した開発環境で、デバッグとサンプリングがサポートされていることを前提としています。 以下のトピックでは、これらの前提条件の概要について説明しています。  

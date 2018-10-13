@@ -1,7 +1,7 @@
 ---
 title: '方法: Web ページ内の JavaScript コードをプロファイリングする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,23 +18,21 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a54321b835cad9f37983a386c93f46e26bbdd5ff
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 99e0f201ab1c61999eae1e54efb4eaf4fc475f4d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539584"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176476"
 ---
 # <a name="how-to-profile-javascript-code-in-web-pages"></a>方法: Web ページ内の JavaScript コードをプロファイリングする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Web ページの JavaScript コードをプロファイル](https://docs.microsoft.com/visualstudio/profiling/how-to-profile-javascript-code-in-web-pages)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールは、インストルメンテーション プロファイリング メソッドを使用して、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーション、任意の Web ページ、または JavaScript アプリケーションで実行する JavaScript コードのパフォーマンス データを収集できます。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 -   Internet Explorer 8 以降  
   
@@ -73,7 +71,7 @@ ms.locfileid: "47539584"
   
 ### <a name="to-profile-javascript-in-individual-web-pages-or-a-javascript-applications"></a>個々の Web ページや JavaScript アプリケーションで JavaScript をプロファイリングするには  
   
-1.  [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] を開きます。  
+1.  [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]を開きます。  
   
 2.  **[分析]** メニューの **[パフォーマンス ウィザードの起動]** をクリックします。  
   

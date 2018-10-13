@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションをデプロイする他のユーザーの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: b8f4736066501324d5428fd2634dfacd8c6537a4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5afabc774165ac001545c084a77cba6d165cf88b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545646"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181520"
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>開発者以外が配置する ClickOnce アプリケーションの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成する ClickOnce アプリケーションの他のユーザー デプロイ](https://docs.microsoft.com/visualstudio/deployment/creating-clickonce-applications-for-others-to-deploy)します。  
-  
 ClickOnce 配置を作成しているすべての開発者は、アプリケーション自体を展開する予定です。 それらの多くは、ClickOnce を使用してアプリケーションをパッケージし、し、ファイルを大企業など、お客様に渡します。 お客様は、そのネットワーク上のアプリケーションをホストする役割の 1 つになります。 このトピックでは、.NET Framework バージョン 3.5 より前のバージョンでは、このような展開に固有の問題について説明します。 .NET Framework 3.5 の新しい「信頼のマニフェストを使用して、」機能を使用して新しい解決し、について説明します。 最後に、まだ .NET Framework の以前のバージョンを使用しているお客様の場合、ClickOnce 配置を作成するための推奨される方法で終了します。  
   
 ## <a name="issues-involved-in-creating-deployments-for-customers"></a>お客様の展開の作成に関連する問題  

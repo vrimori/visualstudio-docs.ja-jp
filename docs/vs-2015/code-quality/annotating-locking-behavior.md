@@ -1,7 +1,7 @@
 ---
 title: ロック動作に注釈を付ける |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -38,18 +38,16 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f34eb22d56cc6a1e47e07229a5b3e922aee5c386
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 881fa2a0355c1524855008d508163a3012f95dff
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187513"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ロック動作の注釈を付ける](https://docs.microsoft.com/visualstudio/code-quality/annotating-locking-behavior)します。  
-  
 マルチ スレッド プログラムでの同時実行のバグを回避するには、以下の適切なロック作業分野と SAL 注釈を使用して常に。  
   
  同時実行のバグが再現、診断、およびは非決定的であるために、デバッグに非常に困難です。 スレッド インタリーブについて推論では、最高では難しく、複数のスレッドがコードの本体を設計するときに非実用的になります。 そのためはマルチ スレッド プログラムでロック規範に従うことをお勧めします。 たとえば、により、デッドロックを回避する、複数のロックの取得中に、ロック順序を無視しない方法について、競合状態を防ぎ、共有リソースにアクセスする前に、適切な guarding ロックを取得します。  

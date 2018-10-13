@@ -1,7 +1,7 @@
 ---
 title: マネージ コードの"拡張正確性規則"規則の設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: aa22234c797a47fba945ba65343532df3565aefc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cebb3f492bb3aec873f503c2efcacb7220ec9739
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187429"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>マネージド コードの "拡張正確性規則" 規則セット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[拡張正確性規則ルールセットのマネージ コードの](https://docs.microsoft.com/visualstudio/code-quality/extended-correctness-rules-rule-set-for-managed-code)します。  
-  
 Microsoft 拡張正確性規則のルール セットは、コード分析によって報告されるロジックとフレームワーク使用エラーを最大化します。 COM 相互運用性やモバイル アプリケーションなどの特定のシナリオには、重点が置かれています。 この規則セットは、プロジェクトまたはプロジェクトに追加の問題を見つけるためにこれらのシナリオのいずれかが適用される場合などを考慮する必要があります。  
   
  Microsoft 拡張正確性規則のルール セットには、Microsoft 基本正確性規則のルールで設定された規則が含まれています。 基本的な正確性規則には、Microsoft 最小推奨規則のルールで設定される規則が含まれます。 詳細については、次を参照してください[基本正確性規則ルールセットのマネージ コードの](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)と[マネージ推奨規則のルールは、マネージ コードの設定。](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)  

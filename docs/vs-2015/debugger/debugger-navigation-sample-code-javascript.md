@@ -1,7 +1,7 @@
 ---
 title: デバッガー ナビゲーションのサンプル コード (JavaScript) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10c7fb0a2ae5aa16174541010568d81787479a10
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 33703a08212c46d4207ff320fcd947f5161d4f8f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535845"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49174175"
 ---
 # <a name="debugger-navigation-sample-code-javascript"></a>デバッガー ナビゲーションのサンプル コード (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガー ナビゲーションのサンプル コード (JavaScript)](https://docs.microsoft.com/visualstudio/debugger/debugger-navigation-sample-code-javascript)します。  
-  
 このトピックのコードは、のサンプル ファイルは、[デバッグ セッション (JavaScript) で実行を制御](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md)トピック。  
   
 ## <a name="defaultjs-sample-code"></a>default.js のサンプル コード  

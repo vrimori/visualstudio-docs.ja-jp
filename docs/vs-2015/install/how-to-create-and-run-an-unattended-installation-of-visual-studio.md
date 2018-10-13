@@ -1,7 +1,7 @@
 ---
 title: '方法: を作成し、Visual Studio の無人インストールの実行 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 44
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 3604c43dc3a406c303b3b056fe3b155efe182e77
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6d4f460d39d01f231cea03bf6bc81b927528844e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173850"
 ---
 # <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>方法: Visual Studio の無人インストールを作成して実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47545989"
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のインストール アプリケーションは、DVD などのメディアの代わりに、イントラネット経由での無人インストール (つまり、カスタマイズしたサイレント インストール) として実行できます。 このトピックでは、準備する方法を説明します[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]この種のネットワーク共有からインストールします。  
   
 ## <a name="creating-a-network-image"></a>ネットワーク イメージの作成  
- 最初に、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] メディアのネットワーク イメージを作成します。  
+ 最初に、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] メディアのネットワーク イメージを作成します。  
   
 #### <a name="to-create-a-network-image"></a>ネットワーク イメージを作成するには  
   
@@ -60,13 +60,13 @@ ms.locfileid: "47545989"
 >  これを実行する別の方法は、親のオプションの子を単に省略する方法です。つまり、"Selected="no"" の項目を一切含めません。ただし、やはり、"Selected="yes"" の項目はすべて AdminDeployment.xml ファイルの最後に配置する必要があります。  
   
 > [!IMPORTANT]
->  インストール中に、コンピューターが自動的に 1 回以上再起動する場合があります。 再起動した後は、コンピューターが再起動する前にインストールを行うためにログインしていたのと同じユーザー アカウントを使用して再度ログインする必要があります。 無人インストールを実行する前に必須コンポーネントをインストールしておくと、自動再起動を回避できます。 詳細についてを参照してください、セクション「回避セットアップ中の再起動」で、 [Visual Studio 管理者ガイド](../install/visual-studio-administrator-guide.md)します。  
+>  インストール中に、コンピューターが自動的に 1 回以上再起動する場合があります。 再起動した後は、コンピューターが再起動する前にインストールを行うためにログインしていたのと同じユーザー アカウントを使用して再度ログインする必要があります。 無人インストールを実行する前に必須コンポーネントをインストールしておくと、自動再起動を回避できます。 詳細については、 [Visual Studio Administrator Guide](../install/visual-studio-administrator-guide.md)の「セットアップ中の再起動の回避」セクションを参照してください。  
   
  AdminDeployment ファイル スキーマには、次の要素が含まれています。  
   
 |要素|属性|値|説明|  
 |-------------|---------------|------------|-----------------|  
-|BundleCustomizations|TargetDir|*Path*|インストール アプリケーションのユーザー インターフェイスでパスをオーバーライドした場合と同じように動作します。 Visual Studio が既にインストールされている場合、この要素は無視されます。|  
+|BundleCustomizations|TargetDir|*パス*|インストール アプリケーションのユーザー インターフェイスでパスをオーバーライドした場合と同じように動作します。 Visual Studio が既にインストールされている場合、この要素は無視されます。|  
 |BundleCustomizations|NoWeb|[はい]&#124;既定|この要素の値が yes の場合は、セットアップ中にインストール アプリケーションが Web にアクセスすることはありません。|  
 |SelectableItemCustomization|非表示|[はい]&#124;なし|この要素の値が Yes の場合は、カスタマイズ ツリーの選択可能な項目が非表示になります。|  
 |SelectableItemCustomization|選択済み|[はい]&#124;なし|カスタマイズ ツリーの選択可能な項目を選択または選択解除します。|  
@@ -111,7 +111,7 @@ ms.locfileid: "47545989"
   
 -   **コントロール パネル**を開き、 **[プログラムと機能]** を選択します。  
   
--   選択[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を選び、**変更**します。  
+-   [ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]] を選択し、 **[変更]** を選択します。  
   
 #### <a name="to-change-admindeployment-settings-on-a-client-computer-after-visual-studio-has-been-installed"></a>Visual Studio をインストールした後にクライアント コンピューターで AdminDeployment の設定を変更するには  
   
@@ -170,7 +170,7 @@ ms.locfileid: "47545989"
         4.  最新の更新プログラムは、機能ページに表示する必要があります。 インストール をクリックするその他の機能の選択**次へ**、順にクリックします**更新**更新プログラムと新機能の両方をインストールします。  
   
 ## <a name="registering-the-product"></a>製品の登録  
- インストールが完了したら、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 内から [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のコピーを登録できます。  
+ インストールが完了したら、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 内から [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のコピーを登録できます。  
   
 #### <a name="to-register"></a>登録するには  
   

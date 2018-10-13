@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語について |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 971c63d25aee9c8676921b5ee7e112ae41a8a251
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0a9d3b89e91e0540766621f0889a12482291740a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544392"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49175267"
 ---
 # <a name="about-domain-specific-languages"></a>ドメイン固有言語について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語について](https://docs.microsoft.com/visualstudio/modeling/about-domain-specific-languages)します。  
-  
 C# または UML などの汎用言語とは異なり、ドメイン固有言語 (DSL) は、特定の問題の領域またはドメイン内のステートメントを表現する設計されています。  
   
  既知の Dsl には、正規表現と SQL が含まれます。 各 DSL は、独自のスコープ外にある考え方を説明するテキスト文字列またはデータベースがより上の操作を記述するため、汎用言語よりも好転します。 個々 の業界では、独自の Dsl もあります。 たとえば、電気通信業界で呼び出す説明の言語を使用する電話の呼び出しでの状態のシーケンスと無線で旅行業界は広く DSL は、フライトの予約の記述に使用される標準。  

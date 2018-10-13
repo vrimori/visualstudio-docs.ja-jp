@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語定義に追跡プロパティの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 7f17058f2300e607707a5f2208eebe9bb2570095
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 183c459871f991aedb3cec19c7a83105091d2706
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538326"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49183004"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義への追跡プロパティの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語定義に追跡プロパティの追加](https://docs.microsoft.com/visualstudio/modeling/adding-a-tracking-property-to-a-domain-specific-language-definition)します。  
-  
 このチュートリアルでは、ドメイン モデルにトラッキング プロパティを追加する方法を示します。  
   
  A*追跡ドメイン*プロパティは、ユーザーを更新できますが、その他のドメインのプロパティまたは要素の値を使用して計算される既定値を持つプロパティです。  

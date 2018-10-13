@@ -1,7 +1,7 @@
 ---
 title: アセンブリおよびマニフェストへの署名の管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 76ab4cc115f8c9f052f48c6e0dccd06693ddb970
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab8ab81c83f98a7a35620db7cbb10a0f700d78e4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172745"
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>アセンブリおよびマニフェストへの署名の管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[管理アセンブリおよびマニフェストへの署名](https://docs.microsoft.com/visualstudio/ide/managing-assembly-and-manifest-signing)します。  
-  
 厳密な名前の署名により、ソフトウェア コンポーネントはグローバル一意識別子 (GUID) を付与されます。 厳密な名前を使用すると、別のユーザーによるアセンブリのなりすましが不可能になることが保証され、コンポーネントの依存関係と構成ステートメントが、適切なコンポーネントとコンポーネントのバージョンに確実に対応付けられます。  
   
  厳密な名前は、アセンブリの識別子 (単純テキスト名、バージョン番号、カルチャ情報)、公開キー トークン、およびデジタル署名で構成されます。  

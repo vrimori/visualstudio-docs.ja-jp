@@ -1,7 +1,7 @@
 ---
 title: '方法: コード スニペットを配布する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2bda2aa5e7639b951b0df6bb83ff2d50fd4331e7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 14dea3842289b626b79d8dc7e294ba5f335d0351
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535850"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185706"
 ---
 # <a name="how-to-distribute-code-snippets"></a>方法: コード スニペットを配布する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コード スニペットを配布](https://docs.microsoft.com/visualstudio/ide/how-to-distribute-code-snippets)します。  
-  
 コード スニペットは、友人に配布することができます。友人は、コード スニペット マネージャーを使用して、そのスニペットを自分のコンピューターにインストールできます。 ただし、配布するスニペットが複数ある場合や、スニペットをより広範に配布する場合は、スニペット ファイルを Visual Studio 拡張機能に含めると、Visual Studio ユーザーはこれをインストールできます。  
   
  Visual Studio 拡張機能を作成するには、Visual Studio SDK をインストールする必要があります。 Visual Studio のインストールと一致する VSSDK のバージョンを見つける[Visual Studio 2015 のダウンロード](http://www.visualstudio.com/downloads/visual-studio-2015-downloads-vs.aspx)します。  

@@ -1,7 +1,7 @@
 ---
 title: 基本的なプロジェクト システムを作成するには、パート 1 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
 caps.latest.revision: 48
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8735ed6760df7d9b4ad21c673bdda75cddb6f7d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: da91c08e42604bdcf5d8f0471acdd7d74992a5e4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544669"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173826"
 ---
 # <a name="creating-a-basic-project-system-part-1"></a>基本的なプロジェクト システムの作成、パート 1
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[基本的なプロジェクト システムでは、第 1 部作成](https://docs.microsoft.com/visualstudio/extensibility/creating-a-basic-project-system-part-1)です。  
-  
 Visual Studio では、プロジェクトは、開発者は、ソース コード ファイルおよびその他の資産の分類に使用するコンテナーです。 プロジェクトがソリューション内の子として表示されます、**ソリューション エクスプ ローラー**します。 プロジェクトでは、整理、ビルド、デバッグ、およびソース コードをデプロイおよび Web サービス、データベース、およびその他のリソースへの参照を作成できます。  
   
  プロジェクトは、たとえば Visual c# プロジェクトの .csproj ファイルをプロジェクト ファイルで定義されます。 独自のプロジェクト ファイル名拡張子を持つ独自のプロジェクトの種類を作成することができます。 プロジェクトの種類の詳細については、次を参照してください。[プロジェクトの種類](../extensibility/internals/project-types.md)します。  

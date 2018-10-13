@@ -1,7 +1,7 @@
 ---
 title: クエリの編集とクエリの保存 (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c360d2ad-fe42-4d65-899d-d1588cc8a322
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8d1ab375ff40d141a0c40740a0052674ec13ef11
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 612bd94ba360f496c08ea25fd1a45e15c88edb6e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172394"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>クエリの編集とクエリの保存 (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クエリ編集クエリの保存 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/query-edit-query-save-source-control-vspackage)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] エディターでは、クエリ編集クエリの保存 (QEQS) イベントをブロードキャストできます。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] QEQS イベントの受信者をあるように、ソース コントロールのスタブは、QEQS サービスを実装します。 これらのイベントは、現在アクティブなソース管理 VSPackage に委任しされます。 VSPackage の実装、アクティブなソース コントロール、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>とそのメソッド。 メソッド、`IVsQueryEditQuerySave2`文書を編集して、文書を保存する直前に、最初にする直前に、インターフェイスは通常と呼ばれます。  
   
 ## <a name="queryeditquerysave-events"></a>QueryEditQuerySave イベント  

@@ -1,7 +1,7 @@
 ---
 title: 'UML アクティビティ図: ガイドライン |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 50
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 23665bb9e3241f9fe32913bbd5816a39404d0842
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: de4ea9890f6a39fa263129f3a0df9559ae9ab479
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545539"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176645"
 ---
 # <a name="uml-activity-diagrams-guidelines"></a>UML アクティビティ図: ガイドライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML アクティビティ図: ガイドライン](https://docs.microsoft.com/visualstudio/modeling/uml-activity-diagrams-guidelines)します。  
-  
 Visual Studio では、アクティビティ図を描画することによって、ビジネス プロセスやソフトウェア アルゴリズムを一連のアクションのワークフローとして表すことができます。 ユーザー、ソフトウェア コンポーネント、またはデバイスが、これらのアクションを実行できます。 ビデオ デモについてを参照してください: [Capture Business Workflows by using Activity Diagrams](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-4-Capture-Business-Workflows/)します。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

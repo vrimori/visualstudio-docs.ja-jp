@@ -1,7 +1,7 @@
 ---
 title: 図形とパスの描画 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 79a48b91c7d467e66be8311692a85dc1b4de25dd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0f59ecbdf9e69093d5c445cdb6d4780eb3b6f86e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535642"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188189"
 ---
 # <a name="draw-shapes-and-paths"></a>図形とパスの描画
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[図形とパスの描画](https://docs.microsoft.com/visualstudio/designers/draw-shapes-and-paths)します。  
-  
 XAML デザイナーでは、 *図形* とはその名の示すとおりのものです。 たとえば、四角形、円、楕円などです。 *パス* は、より柔軟なバージョンの図形です。 図形の形状を変更したり、図形を結合して新しい図形を形成するといった操作ができます。  
   
  図形とパスではベクター グラフィックスを使用するため、高解像度表示に対応して拡大縮小できます。 ベクター グラフィックスの詳細については、 [ベクター グラフィックスに関するビデオ](https://www.youtube.com/watch?v=MoCSwF0n-io) や [ベクター グラフィックスに関するページ](http://www.webopedia.com/TERM/V/vector_graphics.html)を参照してください。  

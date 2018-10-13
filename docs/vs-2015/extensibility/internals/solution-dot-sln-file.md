@@ -1,7 +1,7 @@
 ---
 title: ソリューション (します。Sln) ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7d7ef539-2e4b-4637-b853-8ec7626609df
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 737186560f6e1cde0fc35d16dab35fb146685fbb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0b6248bf97650212324fe9ca0791ccbd981d92ce
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544627"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173681"
 ---
 # <a name="solution-sln-file"></a>ソリューション (.Sln) ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューション (します。Sln) ファイル](https://docs.microsoft.com/visualstudio/extensibility/internals/solution-dot-sln-file)します。  
-  
 ソリューションは、Visual Studio でプロジェクトを整理するための構造です。 ソリューション内のプロジェクト (テキスト ベースの共有)、.sln および .suo (バイナリ、ユーザー固有のソリューションのオプション) ファイルの状態情報を保持します。 .Suo ファイルについては、次を参照してください。[ソリューション ユーザー オプション (します。Suo) ファイル](../../extensibility/internals/solution-user-options-dot-suo-file.md)します。  
   
  .Sln ファイルで参照されている結果として、VSPackage が読み込まれる場合、環境を呼び出す<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.ReadSolutionProps%2A>.sln ファイルを読み取るようにします。  

@@ -1,7 +1,7 @@
 ---
 title: 使用の並列スタック ウィンドウ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 01dd627143c072fea6dec99ea47ee4d6919dd62e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 353d9a39a299c0803bb4f27843fcae43375105cf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535888"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182173"
 ---
 # <a name="using-the-parallel-stacks-window"></a>[並列スタック] ウィンドウの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[並列スタック ウィンドウを使用して](https://docs.microsoft.com/visualstudio/debugger/using-the-parallel-stacks-window)します。  
-  
 **並列スタック**ウィンドウで、マルチ スレッド アプリケーションをデバッグする場合に便利です。 その**スレッド ビュー**アプリケーションのすべてのスレッドの呼び出し履歴情報が表示されます。 これを使用して、スレッドとそれらのスレッドのスタック フレームの間を移動できます。 マネージ コードで、**タスク ビュー**呼び出しの履歴が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト。 ネイティブ コードで、**タスク ビュー**呼び出しの履歴が表示されます[タスク グループ](http://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077)、[並列アルゴリズム](http://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473)、[非同期エージェント](http://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)、および[軽量タスク](http://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90)します。  
   
 ## <a name="threads-view"></a>スレッド ビュー  

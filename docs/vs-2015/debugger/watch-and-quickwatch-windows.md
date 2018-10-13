@@ -1,7 +1,7 @@
 ---
 title: ウォッチ ウィンドウと [クイック ウォッチ] Windows |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e15167169b8940d65eeca66aaf3871997300cd04
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e2a136647fc3ce8114b492e8f055efe0eb1a3889
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537632"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173629"
 ---
 # <a name="watch-and-quickwatch-windows"></a>ウォッチ ウィンドウと [クイック ウォッチ] ウィンドウ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio での変数にウォッチを設定](https://docs.microsoft.com/visualstudio/debugger/watch-and-quickwatch-windows)します。  
-  
 使用することができます、**ウォッチ**(**デバッグ/Windows/[ウォッチ]/(1、2、3、4) をご覧ください**) と **[クイック ウォッチ]** (変数を右クリックし/**デバッグ/[クイック ウォッチ]**) デバッグ セッション中に変数と式を監視する windows。  この 2 つのウィンドウの違いは、 **ウォッチ** ウィンドウでは複数の変数を表示できますが、 **[クイック ウォッチ]** ウィンドウでは一度に 1 つの変数しか表示できないことです。  
   
 ## <a name="observing-a-single-variable-with-quickwatch"></a>[クイック ウォッチ] での 1 つの変数の観察  

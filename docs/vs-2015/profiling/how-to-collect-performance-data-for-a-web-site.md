@@ -1,7 +1,7 @@
 ---
 title: '方法: Web サイトのパフォーマンス データを収集する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 38
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ca6d854345ca32500b379e68249e516f9e1efcd3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1b1ebe51079735beab22e63d595ae3a3cfbee3e5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547977"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185911"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Web サイトのパフォーマンス データの収集](https://docs.microsoft.com/visualstudio/profiling/how-to-collect-performance-data-for-a-web-site)します。  
-  
 **パフォーマンス ウィザード**を使用して、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションのパフォーマンス データを収集できます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で開かれた Web アプリケーションをプロファイリングすることも、ローカル コンピューターに置かれ、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE で開かれていない [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web サイトをプロファイリングすることもできます。  
   
 > [!NOTE]
@@ -53,7 +51,7 @@ ms.locfileid: "47547977"
   
 ### <a name="to-profile-a-web-site-project"></a>Web サイト プロジェクトをプロファイリングする  
   
-1.  [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] または [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] で [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web プロジェクト開きます。  
+1.  [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] または [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] で [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]Web プロジェクト開きます。  
   
 2.  **[分析]** メニューの **[パフォーマンス ウィザードの起動]** をクリックします。  
   
@@ -77,7 +75,7 @@ ms.locfileid: "47547977"
   
 ### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを開かずに Web サイトをプロファイリングする  
   
-1.  [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] または [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] を開きます。  
+1.  [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] または [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]を開きます。  
   
 2.  **[分析]** メニューの **[パフォーマンス ウィザードの起動]** をクリックします。  
   
@@ -93,7 +91,7 @@ ms.locfileid: "47547977"
   
     -   外部サイトで JavaScript データを収集する場合は、 http://www.contoso.com のような URL を入力します。  
   
-     詳細については、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ターゲット バイナリのプロパティ ページを参照してください。  
+     詳細については、 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ターゲット バイナリのプロパティ ページを参照してください。  
   
 6.  ウィザードの 3 番目のページで、階層相互作用プロファイリング (TIP) データ、Web ページで実行されている JavaScript からのデータ、またはその両方の追加を選択できます。  
   

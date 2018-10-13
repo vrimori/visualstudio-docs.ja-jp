@@ -1,7 +1,7 @@
 ---
 title: MSBuild プロジェクト ファイルでデータの保持 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 288fe5387a25ed74f0fd18d9d461328f4e922724
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4fb062ab2a3f3ad692c3b8aff2d6b8d5fefef207
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545109"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187695"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild プロジェクト ファイルでのデータの保持
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild プロジェクト ファイル内のデータの永続化](https://docs.microsoft.com/visualstudio/extensibility/internals/persisting-data-in-the-msbuild-project-file)します。  
-  
 プロジェクト サブタイプは、後で使用するためのプロジェクト ファイルにサブタイプ固有のデータを保持する必要があります。 プロジェクト サブタイプは、次の要件を満たすためにプロジェクト ファイルの永続化を使用します。  
   
 1.  プロジェクトのビルドの一部として使用されるデータを保持します。 (Microsoft Build Engine の詳細については、次を参照してください[MSBuild](http://msdn.microsoft.com/en-us/7c49aba1-ee6c-47d8-9de1-6f29a906e20b)。)。ビルド関連の情報を実行できますか。  

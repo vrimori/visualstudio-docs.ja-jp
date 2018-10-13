@@ -1,7 +1,7 @@
 ---
 title: IDebugReference2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8dcb8734057e3308f28cce471670bde8aed8a748
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d78a77d45183272994d05c85fe79ad84759ecb23
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548824"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187461"
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugReference2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugreference2)します。  
-  
 このインターフェイスは、スタック フレームのプロパティまたはその他のいくつかのプロパティへの参照を表します。  
   
 > [!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: '方法: アクセス許可を設定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,25 +20,23 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4bed698bd520255dd762aa223e3eb94a5d704e6f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 41641a0c5b24ea9492b2980fac998155b8ea5332
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187550"
 ---
 # <a name="how-to-set-permissions"></a>方法: アクセス許可を設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: アクセス許可の設定](https://docs.microsoft.com/visualstudio/profiling/how-to-set-permissions)します。  
-  
 このトピックでは、コンピューターの管理者が、プロファイリングに必要なセキュリティ アクセス許可を、そのコンピューター上で管理者アクセス許可を持たないユーザーまたはグループに付与する方法について説明します。  
   
  基本的なセキュリティ原則として、必要以上のアクセス許可でアプリケーションを実行しないことが規定されています。 この原則は、ユーザーにも適用されます。 ユーザーが Administrators グループではなく Users グループのメンバーとしてログオンしても必要な操作をすべて行うことができるのであれば、ユーザーに管理者アクセス許可を与えないでください。 最初の手順「ユーザー アクセス許可を持つユーザー アカウントを作成するには」では、Users グループのメンバーのユーザー アカウントを作成する方法を説明します。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
  Users グループのメンバーの場合は、チームの他のメンバーとの間で共有されるディスク上のフォルダーおよびファイルにアクセスする必要があります。 2 番目の手順「共有プロジェクト ファイルへのアクセスを許可するには」では、そのアクセスを許可する方法を説明します。  
   
