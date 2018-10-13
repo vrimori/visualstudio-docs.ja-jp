@@ -1,7 +1,7 @@
 ---
 title: '方法: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、メモリ データを収集する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 145ff7018077fcdbff7354ddcf514688d925443d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4d9ba085eaf6aa66250008c30e13442857569b6d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534058"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227292"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーを ASP.NET Web アプリケーションにアタッチし、メモリ データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コマンドラインを使用してメモリ データを収集する ASP.NET Web アプリケーションに、Profiler をアタッチ](https://docs.microsoft.com/visualstudio/profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line)します。  
-  
 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションにプロファイラーをアタッチし、.NET Framework のメモリ割り当ての数とサイズに関するデータを収集する方法について説明します。 .NET Framework メモリ オブジェクトの有効期間に関するデータも収集できます。  
   
 > [!NOTE]

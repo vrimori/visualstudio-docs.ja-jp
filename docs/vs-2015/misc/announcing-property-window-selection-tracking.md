@@ -1,7 +1,7 @@
 ---
 title: プロパティ ウィンドウの選択の追跡の発表 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7536f82-afd7-4894-9a60-84307fb92b7e
 caps.latest.revision: 13
 manager: douge
-ms.openlocfilehash: bb2f2ceb7ed7faa3165f2346a0e0d14de1371166
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9639e0347689fc99e0b43c4b69394b522af984da
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539038"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246741"
 ---
 # <a name="announcing-property-window-selection-tracking"></a>プロパティ ウィンドウの選択の追跡の発表
 使用する場合、**プロパティ**ウィンドウまたは**プロパティ**フォーム、テキスト、またはするプロパティを表示する方法の完全な知識が必要し、選択などページします。選択範囲を調整します。 たとえば、選択範囲の 1 つまたは複数の選択肢があるかどうかを認識する必要があります。 選択範囲の種類 (1 つまたは複数) を使用して、IDE を発表する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>インターフェイス。 このインターフェイスで必要な情報を提供する、**プロパティ**ウィンドウ。  

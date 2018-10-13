@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスでのメンバー補完 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6c17404b115c7e8b3f8036c52e493f6932411731
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4e375cc8d314163b277cc20685ae19f134236b0a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533946"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49240813"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでのメンバー補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスでのメンバー補完](https://docs.microsoft.com/visualstudio/extensibility/internals/member-completion-in-a-legacy-language-service)します。  
-  
 IntelliSense メンバー入力候補は、クラス、構造体、列挙型、または名前空間などの特定のスコープの可能なメンバーの一覧を表示するツールヒント。 たとえば、c# の場合は、ユーザーが"this"に続けて、ピリオドを入力クラスまたは現在のスコープでの構造体のすべてのメンバーの一覧が含まれる場合ユーザーが選択できる一覧。  
   
  Managed package framework (MPF) ツール ヒントおよび; ツール ヒントの一覧を管理するためのサポートを提供しますために必要なすべてが、一覧に表示されるデータを提供するためにパーサーからの協力します。  

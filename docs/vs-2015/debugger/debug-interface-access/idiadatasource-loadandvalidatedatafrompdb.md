@@ -1,7 +1,7 @@
 ---
 title: Idiadatasource::loadandvalidatedatafrompdb |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4e4b425406f6f6b044226b791950f7d93acc95aa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 13afc14506efb697ec5ee719892ac23531040a13
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544926"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248808"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiadatasource::loadandvalidatedatafrompdb](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb)します。  
-  
 開き、プログラム データベース (.pdb) ファイルに指定すると、署名情報と一致することを確認しますと、デバッグのデータ ソースとしての .pdb ファイルを準備します。  
   
 ## <a name="syntax"></a>構文  

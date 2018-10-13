@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: ClickOnce アプリケーションを手動で展開する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: d8f93b6d7f55659cc614969dcc1c8b8dd93ccf73
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 4e8874324c5e5cbfb5bc42e5c6c23666b5e14b67
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592895"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236172"
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>チュートリアル : ClickOnce アプリケーションを手動で配置する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: ClickOnce アプリケーションを手動で配置](https://docs.microsoft.com/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)します。  
-  
 Visual Studio を使用してデプロイすることはできませんがある場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション、または高度な展開の機能を使用する必要があります。 信頼されたアプリケーションの配置などを作成するコマンド ライン ツール Mage.exe を使用する必要があります、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]マニフェスト。 このチュートリアルを作成する方法について説明する[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]コマンド ライン バージョン (Mage.exe) またはマニフェストの生成および編集ツールのグラフィカル バージョン (MageUI.exe) を使用して展開します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -217,7 +215,7 @@ Visual Studio を使用してデプロイすることはできませんがある
  [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](http://msdn.microsoft.com/library/f9e130a6-8117-49c4-839c-c988f641dc14)   
  [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)   
  [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)   
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)
 
 
 

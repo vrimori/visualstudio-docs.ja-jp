@@ -1,7 +1,7 @@
 ---
 title: '[詳細設定] ダイアログ ボックス (コンカレンシー ビジュアライザー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 28098cceb3225162b283c81ee5fd42d49f09fead
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b09b5d3a6bb279291df64c0de720ba03f2eee16d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537797"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204433"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>[詳細設定] ダイアログ ボックス (コンカレンシー ビジュアライザー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[詳細設定 ダイアログ ボックス (同時実行ビジュアライザー)](https://docs.microsoft.com/visualstudio/profiling/advanced-settings-dialog-box-concurrency-visualizer)します。  
-  
 コンカレンシー ビジュアライザーの **[詳細設定]** ダイアログ ボックスを使うと、トレースを収集する方法を制御できます。  このダイアログ ボックスには、シンボル、マイ コードのみ、バッファリング、フィルター処理、CLR イベント、マーカー、プロバイダー、およびファイルに関するタブがあります。  
   
 ## <a name="symbols"></a>シンボル  

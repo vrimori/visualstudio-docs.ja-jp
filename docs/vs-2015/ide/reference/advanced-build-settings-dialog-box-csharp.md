@@ -1,7 +1,7 @@
 ---
 title: '[ビルドの詳細設定] ダイアログ ボックス (C#) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1a793d20a8d8e0a2773756da32ea252ef200e36c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8ca6c3c588b6434479e0ff44de4910cdc0a56be0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533485"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187175"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>[ビルドの詳細設定] ダイアログ ボックス (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[高度なビルドの設定 ダイアログ ボックス (c#)](https://docs.microsoft.com/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp)します。  
-  
   
 **プロジェクト デザイナー**の **[ビルドの詳細設定]** ダイアログ ボックスを使用して、プロジェクトの詳細なビルド構成プロパティを指定します。 このダイアログ ボックスは、[!INCLUDE[csprcs](../../includes/csprcs-md.md)] プロジェクトにのみ適用されます。  
   
