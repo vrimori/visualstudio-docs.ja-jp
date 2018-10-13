@@ -1,7 +1,7 @@
 ---
 title: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの .NET Framework メモリ データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9fb43237b030cb5c8d4dea040b5f9fc480bc7fe9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 069d930a4670cac87e31720a38afc6c857769909
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546303"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193081"
 ---
 # <a name="collecting-net-framework-memory-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションの .NET Framework メモリ データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Profiler のコマンドラインを使用したスタンドアロン アプリケーションの .NET Framework メモリ データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications-by-using-the-profiler-command-line)します。  
-  
 このセクションでは、コマンド ラインからサンプリング メソッドを使用して、.NET クライアント (スタンドアロン) アプリケーションのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

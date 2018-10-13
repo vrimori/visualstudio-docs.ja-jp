@@ -1,7 +1,7 @@
 ---
 title: '方法: ClickOnce アプリケーションにデータ ファイルを含める |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: ee465b3b4524b4f5c530369722f8bdaf36b85227
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5e954550b8d59f1d1672e1229387714ad251a38c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548540"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204699"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>方法 : ClickOnce アプリケーションにデータ ファイルを含める
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ClickOnce アプリケーションにデータ ファイルを含める](https://docs.microsoft.com/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)します。  
-  
 各[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションをインストールするには、アプリケーションが独自のデータを管理できる先のコンピューターのローカル ディスク上のデータ ディレクトリが割り当てられます。 データ ファイルは、任意の種類のファイルを含めることができます。 テキスト ファイル、XML ファイル、または偶数の Microsoft Access データベース (.mdb) ファイル。 次の手順に任意の型のデータ ファイルを追加する方法を示して、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション。  
   
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>Mage.exe を使用して、データ ファイルを追加するには  

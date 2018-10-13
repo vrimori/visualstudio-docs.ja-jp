@@ -1,7 +1,7 @@
 ---
 title: GPU 使用率 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2a917f8c9b775a8dbd85554bd703aaa9e1ad10f1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 082471c04bd8354e392a075f1ff559961cd402ea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194128"
 ---
 # <a name="gpu-usage"></a>GPU 使用率
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[GPU 使用率](https://docs.microsoft.com/visualstudio/profiling/gpu-usage)します。  
-  
 Visual Studio のパフォーマンスおよび診断ハブに含まれる GPU 使用率ツールを使用すると、Direct3D アプリのハードウェア利用状況の概要を適切に把握できます。 このツールを使用すると、アプリのパフォーマンスが CPU バインドまたは GPU バインドのどちらであるかを判断し、プラットフォームのハードウェアをより効率的に使用する方法について洞察を得ることができます。 GPU 使用率ツールは、Direct3D 12、Direct3D 11、および Direct3D 10 を使用するアプリをサポートします。その他のグラフィックス API (Direct2D や OpenGL など) はサポートしていません。  
   
  **[GPU 使用率レポート]** ウィンドウを次に示します。  

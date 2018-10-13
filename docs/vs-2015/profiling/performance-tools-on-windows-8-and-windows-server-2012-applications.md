@@ -1,7 +1,7 @@
 ---
 title: Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8138129c928a02ed5fb6684bc6ee06282435860e
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 1e495f5f07e5db2214c7eca8bc2c21df253fa49e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47593087"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195521"
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](https://docs.microsoft.com/visualstudio/profiling/performance-tools-on-windows-8-and-windows-server-2012-applications)します。  
-  
 Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio パフォーマンス ツールがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 このトピックでは、Windows 8 および Windows Server 2012 のプラットフォームでのパフォーマンス ツールの変更点について説明します。  
   
 > [!NOTE]
@@ -143,7 +141,7 @@ Windows 8 および Windows Server 2012 の強化されたセキュリティ機�
   
  **リモート コンピューターでの TIP データの収集**  
   
- コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 プロファイリング ツールを使用することはできません、 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)パッケージをダウンロードします。  
+ コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。  
   
  プロファイル データを収集するには、[VSPerfCmd](../profiling/vsperfcmd.md) または [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) を使用できます。  
   

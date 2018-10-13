@@ -1,7 +1,7 @@
 ---
 title: ストアドのフォントと色の設定へのアクセス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: beba7174-e787-45c2-b6ff-a60f67ad4998
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3387c5e611ad12ce81347e51893e8459ecd9a3c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8179262ceabe1765ee6c9eab96553bcbcbbee419
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535754"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191400"
 ---
 # <a name="accessing-stored-font-and-color-settings"></a>ストアドのフォントと色の設定にアクセスします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[にアクセスする格納されているフォントと色の設定](https://docs.microsoft.com/visualstudio/extensibility/accessing-stored-font-and-color-settings)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]統合開発環境 (IDE) フォントの変更された設定を格納し、レジストリの色します。 使用することができます、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>これらの設定にアクセスするインターフェイス。  
   
 ## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>フォントおよび色の状態の永続化を開始するには  

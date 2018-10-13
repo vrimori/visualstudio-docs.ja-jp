@@ -1,7 +1,7 @@
 ---
 title: ': Ca 1040 空のインターフェイス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 50a32f619617662297b903b680276ce39854dbfd
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: b5e2ff26842f63ea1c21e599b301e4ce4e78bf80
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589131"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190321"
 ---
 # <a name="ca1040-avoid-empty-interfaces"></a>CA1040: 空のインターフェイスは使用しないでください
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1040: 空のインターフェイスを避けるため](https://docs.microsoft.com/visualstudio/code-quality/ca1040-avoid-empty-interfaces)します。
-
 |||
 |-|-|
 |TypeName|AvoidEmptyInterfaces|

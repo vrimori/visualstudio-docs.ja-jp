@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの C++ デバッグ構成の設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -117,18 +117,16 @@ caps.latest.revision: 52
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9f92b7e61de269ab12794055870d51f99f3c7995
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 05667c982daa35910bb1d4e1d895fb2bef50fb78
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540155"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193467"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ デバッグ構成のプロジェクト設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[C++ デバッグ構成のプロジェクト設定](https://docs.microsoft.com/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)します。  
-  
 C または C++ デバッグ構成でのプロジェクトの設定を変更することができます、**プロパティ ページ** ダイアログ ボックスで説明したよう[方法: デバッグ設定とリリース構成](../debugger/how-to-set-debug-and-release-configurations.md)します。 次の表は、デバッガー関連の設定を検索する場所を示して、**プロパティ ページ** ダイアログ ボックス。  
   
 > [!WARNING]
@@ -186,7 +184,7 @@ C または C++ デバッグ構成でのプロジェクトの設定を変更す�
 |**マップ ファイルのエクスポート**([/MAPINFO:EXPORTS](http://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b))|エクスポートされた関数をマップ ファイルに含めます。 既定の設定は [いいえ] です。 詳細については、次を参照してください。 [/MAPINFO (マップ ファイルに含める情報)](http://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b)します。|  
 |**デバッグできるアセンブリ**([/ASSEMBLYDEBUG](http://msdn.microsoft.com/library/533d2bce-f9b7-4fea-ae1c-0b4864c9d10b))|リンカーの /ASSEMBLYDEBUG オプションの設定を指定します。 次の値を指定できます。<br /><br /> -   **デバッグできる属性が作成しない**します。<br />-   **ランタイム トラッキングおよび最適化の無効 (/ASSEMBLYDEBUG)** します。 これが既定の設定です。<br />-   **なしのランタイム トラッキングおよび有効にする optimizations(/ASSEMBLYDEBUG:DISABLE)** します。<br />-   **\<親またはプロジェクトの既定値から継承 >** します。<br />詳細については、次を参照してください。 [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](http://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982)します。|  
   
- [構成プロパティ] フォルダー ([デバッグ] カテゴリ) 内のこれらの設定は、Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings インターフェイスを使用してプログラムで変更できます。 詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>」を参照してください。  
+ [構成プロパティ] フォルダー ([デバッグ] カテゴリ) 内のこれらの設定は、Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings インターフェイスを使用してプログラムで変更できます。 詳細については、「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings> 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   

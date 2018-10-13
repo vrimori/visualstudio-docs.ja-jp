@@ -1,7 +1,7 @@
 ---
 title: IntelliSense を使用する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d5cc5efe7dd32fe5953012594a5bb5fce49f947d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 586a0b31166f3b7696865e54f7d2df9c415315f9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536365"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197197"
 ---
 # <a name="using-intellisense"></a>Using IntelliSense
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を使用して IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)します。  
-  
 IntelliSense とは、メンバーの一覧、パラメーター ヒント、クイック ヒント、入力候補など多数の機能を指す総称です。 これらの機能により、使用中のコードに関する情報の確認、入力中のパラメーターの追跡、プロパティおよびメソッドの呼び出しの追加などが、わずかなキーストロークで可能になります。  
   
  IntelliSense には、言語によって異なる要素が多数あります。 各言語の IntelliSense の詳細については、「参照」に示されているトピックを参照してください。  

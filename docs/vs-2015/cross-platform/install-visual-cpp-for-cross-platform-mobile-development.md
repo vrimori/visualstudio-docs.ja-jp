@@ -1,7 +1,7 @@
 ---
 title: Visual C++ for Cross-Platform Mobile Development のインストール | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 17
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: 6f341ad8c750286f8f15297c15dcdc8340ee7596
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d0732cc08c679bd3eab973632164d366efe87b3b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536097"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49203867"
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development のインストール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Install Visual C for Cross-platform Mobile Development](https://docs.microsoft.com/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)します。  
-  
   
 クロス プラットフォーム モバイル開発用 visual C] (http://go.microsoft.com/fwlink/p/?LinkId=536383) Visual Studio 2015 のインストール可能なコンポーネントです。 クロス プラットフォームの Visual Studio テンプレートが含まれており、クロス プラットフォーム ツールおよび SDK をインストールしてすぐに開始できるようにします。それらを自分で検索、ダウンロード、構成する必要はありません。 これらのツールを Visual Studio で使用することで、クロス プラットフォーム プロジェクトを簡単に作成、編集、デバッグ、テストできます。 このトピックでは、Visual Studio を使用してクロス プラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 コンポーネントの概要については、「 [Visual C++ クロスプラットフォーム モバイル](http://go.microsoft.com/fwlink/p/?LinkId=536387)」をご覧ください。  
   

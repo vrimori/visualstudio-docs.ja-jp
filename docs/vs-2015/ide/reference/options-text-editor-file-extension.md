@@ -1,7 +1,7 @@
 ---
 title: '[オプション]、[テキスト エディター]、[ファイル拡張子] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 99f6d7b90b86b4a5ffefadd98f30ef2f3326fa61
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 953417bf6d3c89df452878a3070937f29112c67c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548686"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204127"
 ---
 # <a name="options-text-editor-file-extension"></a>[オプション]、[テキスト エディター]、[ファイル拡張子]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション]、[テキスト エディター]、ファイル拡張子](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-file-extension)します。  
-  
   
 この [オプション] ダイアログでは、Visual Studio 統合開発環境 (IDE) で特定のファイル拡張子を持つすべてのファイルを処理する方法を指定できます。 入力した**拡張子**ごとに、[使用したエディター] を選択できます。 これにより、特定の種類の文書を開く IDE のエディターまたはデザイナーを選択できます。 オプションを表示するには、**[ツール]** メニューから **[オプション]** を選択し、**[テキスト エディター]** ノードを展開し、**[ファイル拡張子]** を選択します。  
   

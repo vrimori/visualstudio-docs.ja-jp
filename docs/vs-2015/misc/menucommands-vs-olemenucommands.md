@@ -1,7 +1,7 @@
 ---
 title: MenuCommand とOleMenuCommands |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 caps.latest.revision: 46
 manager: douge
-ms.openlocfilehash: b60f56c0622750751848e0d6492c4235c9458e9f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c555b306c38d852f8fbd02c6f2b9347f4a359559
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535278"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193584"
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand とOleMenuCommand
 メニュー コマンドは、 <xref:System.ComponentModel.Design.MenuCommand> または <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトから派生させて、適切なイベント ハンドラーを実装することによって作成できます。 ほとんどのケースでは、VSPackage プロジェクト テンプレートの場合と同様に <xref:System.ComponentModel.Design.MenuCommand>を使用できますが、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>を使用することが必要になることもあります。  
   
- VSPackage によって IDE で使用可能になるコマンドをユーザーが使用するには、そのコマンドを表示し、有効にする必要があります。 Visual Studio パッケージ プロジェクト テンプレートを使用して .vsct ファイルにコマンドを作成すると、そのコマンドは既定で表示され、有効になります。 一部のコマンド フラグ ( `DynamicItemStart`など) を設定すると、この既定の動作を変更できます。 コマンドの可視性や有効な状態などのプロパティは、コマンドに関連付けられている <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトにアクセスすることによって、コードで実行時に変更することもできます。  
+ VSPackage によって IDE で使用可能になるコマンドをユーザーが使用するには、そのコマンドを表示し、有効にする必要があります。 Visual Studio パッケージ プロジェクト テンプレートを使用して .vsct ファイルにコマンドを作成すると、そのコマンドは既定で表示され、有効になります。 一部のコマンド フラグ (`DynamicItemStart` など) を設定すると、この既定の動作を変更できます。 コマンドの可視性や有効な状態などのプロパティは、コマンドに関連付けられている <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトにアクセスすることによって、コードで実行時に変更することもできます。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルに従うには、Visual Studio SDK をインストールする必要があります。 詳細については、次を参照してください。 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)します。  
@@ -139,7 +139,7 @@ ms.locfileid: "47535278"
   
      [!code-csharp[ButtonGroup#22](../snippets/csharp/VS_Snippets_VSSDK/buttongroup/cs/buttongrouppackage.cs#22)]  
   
-     Visual Studio パッケージ テンプレートには、コマンドの GUID と ID を保持するために `GuidList` と `PkgCmdIDList`という 2 つのコレクションが用意されています。 これらは、テンプレートで追加するコマンドに対して自動的に設定されます。手動で追加するコマンドについては、 `PkgCmdIdList` クラスに ID エントリを追加する必要があります。  
+     Visual Studio パッケージ テンプレートには、コマンドの GUID と ID を保持するために `GuidList` と `PkgCmdIDList` という 2 つのコレクションが用意されています。 これらは、テンプレートで追加するコマンドに対して自動的に設定されます。手動で追加するコマンドについては、 `PkgCmdIdList` クラスに ID エントリを追加する必要があります。  
   
      また、GUID の生の文字列値と ID の整数値を使用して、 <xref:System.ComponentModel.Design.CommandID> オブジェクトを設定することもできます。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "47535278"
   
      <xref:System.ComponentModel.Design.MenuCommand> は、静的コマンドに適しています。 動的メニュー項目を表示するには、QueryStatus イベント ハンドラーが必要です。 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> は、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> イベント (コマンドのホスト メニューを開くと発生します) と、その他のプロパティ ( <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>など) を追加します。  
   
-     パッケージ テンプレートで作成したコマンドは、既定ではパッケージ クラスの <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> メソッドの `Initialize()` オブジェクトに渡されます。  
+     パッケージ テンプレートで作成したコマンドは、既定ではパッケージ クラスの `Initialize()` メソッドの <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> オブジェクトに渡されます。  
   
 4.  <xref:System.ComponentModel.Design.MenuCommand> は、静的コマンドに適しています。 動的メニュー項目を表示するには、QueryStatus イベント ハンドラーが必要です。 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> は、 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> イベント (コマンドのホスト メニューを開くと発生します) と、その他のプロパティ ( <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>など) を追加します。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "47535278"
   
 1.  有効なコマンドの <xref:Microsoft.VisualStudio.VSConstants.S_OK> を返します。  
   
-2.  `cmdf` パラメーターの `prgCmds` 要素を設定します。  
+2.  `prgCmds` パラメーターの `cmdf` 要素を設定します。  
   
      `cmdf` 要素の値は、論理 OR ( <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> ) 演算子を使用して結合された、`|`列挙型からの値の論理的な和集合です。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "47535278"
   
          `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXMENU`  
   
-    -   コマンドが `TEXTCHANGES` フラグを使用している場合は、 `rgwz` パラメーターの `pCmdText` 要素をコマンドの新しいテキストに設定し、 `cwActual` パラメーターの `pCmdText` 要素をコマンド文字列のサイズに設定します。  
+    -   コマンドが `TEXTCHANGES` フラグを使用している場合は、`pCmdText` パラメーターの `rgwz` 要素をコマンドの新しいテキストに設定し、`pCmdText` パラメーターの `cwActual` 要素をコマンド文字列のサイズに設定します。  
   
      エラー条件の場合、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> メソッドで次のエラー ケースを処理する必要があります。  
   

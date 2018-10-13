@@ -1,7 +1,7 @@
 ---
 title: 参照し、.NET の種類 ダイアログ ボックスの選択 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 9347ee1d06e07f983b023e0bb67f1147b91e9adc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1bff5fccfbd4998e477043188c955e3446a45d69
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537561"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49192535"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>[.NET 型の参照と選択] ダイアログ ボックス
 **プロパティ**ウィンドウ、ダイアログ ボックス、または選択すると、変数デザイナーなどのデザイナー**型を参照しています.** データ型の一覧からは、**を参照して .NET 型を選択** ダイアログ ボックスの (「型ブラウザー」として省略形で呼ばれます)。 このダイアログ ボックスでは、アセンブリとプロジェクトのツリー表示から型を選択できます。  

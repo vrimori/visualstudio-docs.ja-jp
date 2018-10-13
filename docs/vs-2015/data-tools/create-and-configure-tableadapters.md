@@ -1,7 +1,7 @@
 ---
 title: 作成し、Tableadapter の構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: df2a5313ace294c536dc1e8cdaab6ce0adcaeabb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9c1c9337fac3cde818fd8af298813c89c8c13daf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538220"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199252"
 ---
 # <a name="create-and-configure-tableadapters"></a>Tableadapter の作成および構成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[作成し、Tableadapter を構成](https://docs.microsoft.com/visualstudio/data-tools/create-and-configure-tableadapters)します。  
-  
   
 TableAdapter を使用すると、アプリケーションとデータベース間で通信できます。 データベース、クエリの実行またはストアド プロシージャに接続して、新しいデータを返すか、テーブルまたは既存の fill<xref:System.Data.DataTable>返されたデータ。 Tableadapter は、元のデータベースに、アプリケーションから更新されたデータを送信することもできます。  
   

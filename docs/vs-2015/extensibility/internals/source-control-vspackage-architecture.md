@@ -1,7 +1,7 @@
 ---
 title: ソース管理 VSPackage アーキテクチャ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 453125fc-23dc-49b1-8476-94581f05e6c7
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4d2a76a877581085b6bdffd8522bfcea24ea9e24
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 69cbcd1f8ab1f04f02d89839eed1e0cd67aa2fd9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190464"
 ---
 # <a name="source-control-vspackage-architecture"></a>ソース管理 VSPackage アーキテクチャ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理 VSPackage アーキテクチャ](https://docs.microsoft.com/visualstudio/extensibility/internals/source-control-vspackage-architecture)します。  
-  
 ソース管理パッケージとは、VSPackage を使用するサービスを[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE を提供します。 代わりに、ソース管理パッケージのソース管理のサービスとしての機能を提供します。 さらに、ソース管理パッケージには、ソース管理プラグインをソース管理を統合するためのより汎用性の高い代替[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  
   
  ソース管理プラグインのソース管理プラグイン API を実装する、コントラクトの厳密な保管します。 たとえば、プラグインを置き換えることはできません、既定[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ユーザー インターフェイス (UI)。 さらに、ソース管理プラグイン API は、独自のソース管理モデルを実装するプラグイン、できません。 ただし、ソース管理パッケージでは、これらの制限の両方は解決します。 ソース管理パッケージのソース コントロールのエクスペリエンスを完全に制御を持つ、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ユーザー。 また、ソース管理パッケージは、独自のソース管理モデルと、ロジックを使用でき、すべてのソース コントロールに関連するユーザー インターフェイスを定義できます。  

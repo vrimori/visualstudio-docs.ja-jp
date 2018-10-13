@@ -1,7 +1,7 @@
 ---
 title: '方法: 型の間の継承を表示する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 090f2475a095607f22b30a328f6ab3c9ed4fc8e8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 31d5c57408765b74ec736b8ec5c6dd8edc9d8a01
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202022"
 ---
 # <a name="how-to-view-inheritance-between-types-class-designer"></a>方法: 型の間の継承を表示する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビューの継承の種類 (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-view-inheritance-between-types-class-designer)します。  
-  
 基本型とその派生型の間に継承関係がある場合は、クラス デザイナーのクラス ダイアグラムでそのことがわかります。 2 つの型の間に継承関係が存在しない場合に作成する方法については、「[方法: 型の間の継承を作成する (クラス デザイナー)](../ide/how-to-create-inheritance-between-types-class-designer.md)」をご覧ください。  
   
 ### <a name="to-find-the-base-type"></a>基本型を特定するには  

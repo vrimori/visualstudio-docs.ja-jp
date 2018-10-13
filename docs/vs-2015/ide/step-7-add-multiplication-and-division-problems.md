@@ -1,7 +1,7 @@
 ---
 title: '手順 7: 乗算問題と除算問題の追加 | Microsoft ドキュメント'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 83c85dfdca66e9df3634f84795042b331bf3f760
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0c0c2b069ebb75cbe4547528317544172b1d7ae2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538216"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195157"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>手順 7: 乗算問題と除算問題の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 7: 追加の乗算と除算問題](https://docs.microsoft.com/visualstudio/ide/step-7-add-multiplication-and-division-problems)します。  
-  
 このチュートリアルの第 7 部では、乗算問題と除算問題を追加しますが、まず変更方法について考えてみます。 最初の手順は、値を格納することです。  
   
 ### <a name="to-add-multiplication-and-division-problems"></a>乗算問題と除算問題を追加するには  

@@ -1,7 +1,7 @@
 ---
 title: '方法 : プロジェクトを構成して複数の対象プラットフォームを設定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 07c949e392ee2203804a8675a7659e71ced5c0fb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4056a390bf2ed486df6391d48fd17c1d0af2cdad
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547237"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194741"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>方法 : プロジェクトを構成して複数の対象プラットフォームを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 複数のプラットフォームをターゲットにプロジェクトを構成する](https://docs.microsoft.com/visualstudio/ide/how-to-configure-projects-to-target-multiple-platforms)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、ソリューションは同時に複数の異なる CPU アーキテクチャまたはプラットフォームを対象にすることができます。 これを設定するプロパティには、**[構成マネージャー]** ダイアログ ボックスからアクセスします。  
   
 ## <a name="targeting-a-platform"></a>プラットフォームを対象にする  

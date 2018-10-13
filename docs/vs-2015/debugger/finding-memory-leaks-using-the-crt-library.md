@@ -1,7 +1,7 @@
 ---
 title: CRT ライブラリを使用してメモリ リークの検出 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -35,18 +35,16 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6d2c45ed2377b400fb00ac264aa2dcf8e5df8410
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 4be0ac6e3e0de77f19f63b41ec53f433478f5063
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198082"
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>CRT ライブラリを使用したメモリ リークの検出
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[検索メモリ リークを使用して、CRT ライブラリ](https://docs.microsoft.com/visualstudio/debugger/finding-memory-leaks-using-the-crt-library)します。  
-  
 メモリ リークとは、割り当て済みのメモリを適切に解放できない状態を指します。メモリ リークは、C/C++ アプリケーションで最も微妙で検出しにくいバグの 1 つです。 わずかなメモリ リークは最初は認識されないことがありますが、長期にわたる累積的なメモリ リークによりアプリケーションがメモリ不足になると、パフォーマンスの低下からクラッシュまで、さまざまな兆候が現れる可能性があります。 さらに悪い状況として、メモリ リークしているアプリケーションによってすべての使用可能なメモリが消費されると、別のアプリケーションがクラッシュし、原因となったアプリケーションの特定が困難になることもあります。 一見問題にならないように思われるメモリ リークであっても、修正が必要な別の問題につながっている可能性があります。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のデバッガーと C ランタイム (CRT) ライブラリには、メモリ リークを検出および識別するための効率的な手段が用意されています。  

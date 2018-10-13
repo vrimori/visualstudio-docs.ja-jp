@@ -1,7 +1,7 @@
 ---
 title: 式の評価コンテキスト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: a2fd3758-09bd-45ae-8ecc-2d276c0036ba
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc2c2ecc4f7867c2ad39ba72f9edcb72c0935ce5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eb3fcf4d15a1c9020b7bd64587362fcf442f79c6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538313"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194058"
 ---
 # <a name="expression-evaluation-context"></a>式の評価のコンテキスト
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[式の評価コンテキスト](https://docs.microsoft.com/visualstudio/extensibility/debugger/expression-evaluation-context)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 、デバッグ、**式の評価コンテキスト**:  
   
 -   式の評価のコンテキストを表します。 一般に、評価コンテキストは、変数、パラメーター、関数、およびメソッドを評価する構文のスコープに対応します。 たとえば、スタック フレームに関連付けられている式の評価コンテキスト (該当する) 場合は、ローカル変数、メソッド パラメーター、およびクラス メンバーを評価するため、コンテキストが提供されます。  

@@ -1,7 +1,7 @@
 ---
 title: DPI Issues2 をアドレス指定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 359184aa-f5b6-4b6c-99fe-104655b3a494
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3cb14cf601633efa6bbb022d8d1a56e62cc0f9b0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e9d86204eb79eb0dd20db45d4ffe5c1f80c2e9dc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537424"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194067"
 ---
 # <a name="addressing-dpi-issues"></a>DPI 問題への対応
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DPI Issues2 のアドレス指定](https://docs.microsoft.com/visualstudio/extensibility/addressing-dpi-issues2)します。  
-  
 「高解像度」画面には、デバイス数が増加が付属します。 通常、これらの画面には、200 を超えるピクセル/インチ (ppi) があります。 これらのコンピューター上のアプリケーションの操作は、コンテンツをデバイスの通常の表示までの距離にあるコンテンツを表示するためのニーズに合わせてスケール アップする必要があります。 2014 年の時点では、高密度ディスプレイの主なターゲットはモバイル コンピューティング デバイス (タブレットやクラムシェル ラップトップ、携帯電話です)。  
   
  Windows 8.1 以降では、これらのマシンとが表示されるマシンが高密度の両方に接続されているし、標準密度を同時に表示環境の使用を有効にするいくつかの機能が含まれています。  

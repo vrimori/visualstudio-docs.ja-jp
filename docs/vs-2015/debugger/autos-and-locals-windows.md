@@ -1,14 +1,14 @@
 ---
 title: 自動変数 と ローカル Windows |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: hero-article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.autos
 - vs.debug.locals
@@ -26,18 +26,16 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 877d145f83ce15cd5c1bb49b607519888ad0e96b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 94b583fee7f0e03fae3f194f1614d82016136e13
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535426"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191322"
 ---
 # <a name="autos-and-locals-windows"></a>[自動変数] ウィンドウと [ローカル] ウィンドウ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のデバッガーの変数の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)します。  
-  
 **[自動変数]** ウィンドウ (デバッグ中に **CTRL+ALT+V キーを押し、A を押す**か、または **[デバッグ]、[Windows]、[自動変数]** を選択) および **[ローカル]** ウィンドウ (デバッグ中に **CTRL+ALT+V キーを押し、L を押す**か、または **[デバッグ]、[Windows]、[ローカル]** を選択) は、デバッグ中に変数の値を表示するときに、非常に役立ちます。 **[ローカル]** ウィンドウにはローカル スコープで定義されている変数が表示されます。これは一般に、現在実行されている関数またはメソッドです。 **[自動変数]** ウィンドウには、現在の行 (デバッガーが停止している場所) の付近で使用されている変数が表示されます。 正確にはどの変数が表示されるかは、言語によって異なります。 [自動変数] ウィンドウに表示される変数を参照してください。以下に。  
   
  デバッグの基礎について詳しくは、「 [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md)」をご覧ください。  

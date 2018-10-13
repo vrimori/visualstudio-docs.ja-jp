@@ -1,7 +1,7 @@
 ---
 title: レガシ言語の Service1 のパラメーター ヒント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: f367295e-45b6-45d2-9ec8-77481743beef
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 14958bb3a4094831a2440bde8db269832e46b238
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6727dc1da1a91dab52c7a194dd82c51f83368e5f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533374"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196470"
 ---
 # <a name="parameter-info-in-a-legacy-language-service"></a>従来の言語サービスでのパラメーター ヒント
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パラメーター ヒントでは、従来の言語 Service1](https://docs.microsoft.com/visualstudio/extensibility/internals/parameter-info-in-a-legacy-language-service1)します。  
-  
 言語構成要素でに関するヒントと IntelliSense のパラメーター ヒントを提供します。  
   
  従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 詳細については、次を参照してください。[エディターと言語サービス拡張](../../extensibility/extending-the-editor-and-language-services.md)します。  

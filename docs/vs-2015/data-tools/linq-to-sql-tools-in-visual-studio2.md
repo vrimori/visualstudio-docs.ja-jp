@@ -1,7 +1,7 @@
 ---
 title: LINQ to SQL ツール Visual studio2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 19d9bccad36a186c93aeb8aef8e93b63320a00d2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f0ff09fea0f534343fcc5e896e082f550e6bcdcd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534811"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195378"
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to Visual Studio での SQL ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[LINQ to SQL ツール Visual studio2](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
-  
   
 LINQ to SQL では、Microsoft によってリリースされた最初のオブジェクト リレーショナル マッピング テクノロジをしました。 基本的なシナリオに適していますし、引き続き Visual Studio でサポートされますが、アクティブな開発されていません。 LINQ to SQL、既に使用しているレガシ アプリケーションを保守する際に、または SQL Server を使用して、複数のテーブルのマッピングを必要としない単純なアプリケーションで使用します。 一般に、新しいアプリケーションは、オブジェクト リレーショナル マッパー層が必要な場合、Entity Framework を使用する必要があります。  
   
@@ -59,7 +57,7 @@ LINQ to SQL では、Microsoft によってリリースされた最初のオブ�
  作成することができます<xref:System.Data.Linq.DataContext>メソッドを呼び出す (にマップされる) ストアド プロシージャと関数をドラッグしてから**サーバー エクスプ ローラー**/**データベース エクスプ ローラー** に[!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]. ストアド プロシージャと関数は、[!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]に <xref:System.Data.Linq.DataContext> のメソッドとして追加されます。  
   
 > [!NOTE]
->  ストアド プロシージャおよび関数からのドラッグと**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]、戻り値の型を生成された<xref:System.Data.Linq.DataContext>メソッドとは異なる項目をドロップする場所によって異なります。 詳細については、次を参照してください。 [DataContext メソッド (O/r デザイナー)](../data-tools/datacontext-methods-o-r-designer.md)します。  
+>  ストアド プロシージャおよび関数からのドラッグと**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**上に、 [!INCLUDE[vs_ordesigner_short](../includes/vs-ordesigner-short-md.md)]、戻り値の型を生成された<xref:System.Data.Linq.DataContext>メソッドとは異なる項目をドロップする場所によって異なります。 詳細については [DataContext メソッド (O/R デザイナー)](../data-tools/datacontext-methods-o-r-designer.md) を参照してください。  
   
 ## <a name="configuring-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>ストアド プロシージャを使用してエンティティ クラスとデータベース間でデータを保存するための DataContext の構成  
  前に述べたように、ストアド プロシージャと関数を呼び出す <xref:System.Data.Linq.DataContext> のメソッドを作成できます。 また、挿入、更新、および削除を実行する既定の [!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)] ランタイムの動作の代わりに使用できる、ストアド プロシージャを割り当てることもできます。 詳細については、次を参照してください。[方法: 更新、挿入、および削除 (O/r デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)します。  
