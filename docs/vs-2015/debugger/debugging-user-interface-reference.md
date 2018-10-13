@@ -1,7 +1,7 @@
 ---
 title: デバッグ用ユーザー インターフェイス リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8059274914093f0beaa22b3e4841c7b2cf44e6a2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d872d338bd44a561b71266243a07faa607bdcdaf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49206324"
 ---
 # <a name="debugging-user-interface-reference"></a>デバッグ用ユーザー インターフェイス リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグ ユーザー インターフェイス リファレンス](https://docs.microsoft.com/visualstudio/debugger/debugging-user-interface-reference)します。  
-  
 アプリケーションをデバッグすると、以下のダイアログ ボックスが表示されることがあります。  
   
  Visual Studio 拡張モデルを使用すると、デバッガーの多くの機能を自動化できます。 詳細については、「Visual Studio Debugging SDK」を参照してください。  

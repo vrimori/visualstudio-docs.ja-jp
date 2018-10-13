@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: カスタムの構成とルール セット |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 42
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: b17767f6bb0f8b72b9c06e2870146f6b037a7ca7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5410127cd94bc8e43de4fec82597686d4c11805
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534838"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221638"
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>チュートリアル: カスタム規則セットの構成と使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 構成とカスタム規則セットを使用して](https://docs.microsoft.com/visualstudio/code-quality/walkthrough-configuring-and-using-a-custom-rule-set)します。  
-  
 このチュートリアルは、カスタマイズされたを使用するように構成されているコード分析ツールを使用する方法を示します*ルール セット*クラス ライブラリにします。 別の規則のセットを互換性に影響しない方法で解決できる問題のレガシ コードのスキャンなどの特定のニーズを満たすために、ソリューションでは、指定したかを選択するプロジェクトの種類に関連するルール セットを選択できます。 いずれの場合も、ルール セットをプロジェクトの要件に合わせてカスタマイズもできます。  
   
  このチュートリアルでは、これらのプロセスをステップします。  

@@ -1,7 +1,7 @@
 ---
 title: ネットワーク使用率 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e324f81d4f7580a25f0f2b5c1850c1343a85c6ac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7e898620fe7b319b785e8e0d337cc04192b206bd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540004"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227748"
 ---
 # <a name="network-usage"></a>ネットワーク使用率
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio で UWP アプリでのネットワーク使用率の分析](https://docs.microsoft.com/visualstudio/profiling/network-usage)します。  
-  
 Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http API](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx) を使用して実行されたネットワーク操作についてのデータを収集します。 そのデータを分析すると、アクセスや認証の問題、不適切なキャッシュの使用、表示やダウンロードの低パフォーマンスなどの問題を解決するのに役立ちます。  
   
  ネットワーク ツールは、Windows ユニバーサル プラットフォーム アプリのみをサポートしています。 その他のプラットフォームは現時点ではサポートされていません。  
@@ -38,7 +36,7 @@ Visual Studio の **ネットワーク**診断ツールは、[Windows.Web.Http A
   
 1.  Visual Studio でプロジェクトを開きます。  
   
-2.  **[デバッグ]、[パフォーマンス プロファイラー...]** の順にクリックします。**[ネットワーク]** を選択し、**[開始]** をクリックします。  
+2.  **[デバッグ]、[パフォーマンス プロファイラー...]** の順にクリックします。[ネットワーク] を選択し、**[開始]** をクリックします。  
   
 3.  ネットワーク ツールは、アプリの HTTP トラフィックの収集を開始します。  
   

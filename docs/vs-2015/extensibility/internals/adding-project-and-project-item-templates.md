@@ -1,7 +1,7 @@
 ---
 title: プロジェクトを追加して、プロジェクト項目テンプレート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7ca77f2cfeb6dbab7a8d9be33bf7ba822f25d2a2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 81aa673eb42bf28368d01baf6a2dfb0e43a1f3b9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533246"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199889"
 ---
 # <a name="adding-project-and-project-item-templates"></a>プロジェクト テンプレートとプロジェクト項目テンプレートの追加
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトに追加してプロジェクト項目テンプレート](https://docs.microsoft.com/visualstudio/extensibility/internals/adding-project-and-project-item-templates)します。  
-  
 独自のプロジェクトの種類を作成するときに標準を使用して新しいプロジェクトとプロジェクト アイテムを追加するためのサポートを提供する必要があります[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) ダイアログ ボックス。 次のトピックでは、プロジェクトとプロジェクト アイテムを追加するためのさまざまな手法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

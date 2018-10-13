@@ -1,7 +1,7 @@
 ---
 title: SccAddFromScc 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 902e764d-200e-46e1-8c42-4da7b037f9a0
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d1dd8ee409fd1facae82a8b8c6eeb418a68b4a6b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 759bc4d64419959812a07bac90bceb940dea4391
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535392"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220734"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccAddFromScc 関数](https://docs.microsoft.com/visualstudio/extensibility/sccaddfromscc-function)します。  
-  
 この関数は、ソース管理システムに既に存在するファイルの参照をでき、その後に、現在のプロジェクトの一環としてそのファイル。 たとえば、この関数は、ファイルをコピーせず、現在のプロジェクトに共通のヘッダー ファイルを取得できます。 ファイルの戻り値の配列`lplpFileNames`ユーザーが、IDE プロジェクトを追加するファイルの一覧が含まれています。  
   
 ## <a name="syntax"></a>構文  

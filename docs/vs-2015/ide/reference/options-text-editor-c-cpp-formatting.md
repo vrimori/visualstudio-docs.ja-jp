@@ -1,7 +1,7 @@
 ---
 title: '[オプション]、[テキスト エディター]、[C/C++]、[書式設定] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 28bbc6d68d55fd76f27957a0a1ab4626dad95b66
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8589696e669c83b65951d81d155033d45533710
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534772"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49237004"
 ---
 # <a name="options-text-editor-cc-formatting"></a>[オプション]、[テキスト エディター]、[C/C++]、[書式設定]
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション、テキスト エディターでは、C/C++、書式設定](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)します。  
-  
   
 このページでは、C または C++ でプログラムを記述する際のコード エディターの既定の動作を変更できます。  
   

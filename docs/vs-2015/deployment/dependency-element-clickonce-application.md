@@ -1,7 +1,7 @@
 ---
 title: '&lt;依存関係&gt;要素 (ClickOnce アプリケーション) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 8a998e5649b45b3e442701bd78c95f85844f71d7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e76d517af1e0bd93507a47facd63bd50ae98e635
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49233858"
 ---
 # <a name="ltdependencygt-element-clickonce-application"></a>&lt;依存関係&gt;要素 (ClickOnce アプリケーション)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;依存関係&gt;要素 (ClickOnce アプリケーション)](https://docs.microsoft.com/visualstudio/deployment/dependency-element-clickonce-application)します。  
-  
 アプリケーションに必要なプラットフォームやアセンブリ依存関係を識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -112,7 +110,7 @@ ms.locfileid: "47533433"
 |`description`|任意。 説明されているオペレーティング システムを人間が判読できる形式は、説明、`dependentOS`要素。|  
   
 ### <a name="osversioninfo"></a>osVersionInfo  
- 必須。 この要素は `dependentOS` 要素の子であり、`os` 要素を含んでいます。 この要素には属性はありません。  
+ 必須。 この要素は `dependentOS` 要素の子であり、 `os` 要素を含んでいます。 この要素には属性はありません。  
   
 ### <a name="os"></a>os  
  必須。 この要素は `osVersionInfo` 要素の子です。 この要素には、次の属性があります。  
@@ -160,14 +158,14 @@ ms.locfileid: "47533433"
  `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
   
 ### <a name="dsigtransform"></a>dsig:Transform  
- `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 `dsig:Transform`要素には、次の属性。  
+ `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 `dsig:Transform` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]は`urn:schemas-microsoft-com:HashTransforms.Identity`します。|  
   
 ### <a name="dsigdigestmethod"></a>dsig:DigestMethod  
- `dsig:DigestMethod`要素の必須の子では、`hash`要素。 `dsig:DigestMethod`要素には、次の属性。  
+ `dsig:DigestMethod`要素の必須の子では、`hash`要素。 `dsig:DigestMethod` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  

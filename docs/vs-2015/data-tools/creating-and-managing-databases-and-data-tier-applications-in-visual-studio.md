@@ -1,7 +1,7 @@
 ---
 title: 作成して、データベースと Visual Studio でのデータ層アプリケーションの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1ea5370349204765932baed828ffb9c9332b088f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82caaa97e4b6471e3c585fb23c49af00b2ceef0b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545776"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241619"
 ---
 # <a name="creating-and-managing-databases-and-data-tier-applications-in-visual-studio"></a>作成して、データベースと Visual Studio でのデータ層アプリケーションの管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の作成と管理データベースおよびデータ層アプリケーション](https://docs.microsoft.com/visualstudio/data-tools/creating-and-managing-databases-and-data-tier-applications-in-visual-studio)します。  
-  
   
 重要です]
 >  データベース プロジェクトの以前のバージョンに含まれていた[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で提供されるようになりました[!INCLUDE[sql_Denali_long](../includes/sql-denali-long-md.md)]ツール。 詳細については、次を参照してください。 [SQL Server 開発者ツール](http://go.microsoft.com/fwlink/?LinkId=228126)します。  

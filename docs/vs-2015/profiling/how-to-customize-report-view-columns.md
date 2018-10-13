@@ -1,7 +1,7 @@
 ---
 title: '方法: レポート ビューの列をカスタマイズする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 14e6e751f826d0ee52db5f00712a225f2171ecc9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b5bc7b18e4df3baac4f6acb65d39c9ab66bcafa5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539997"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202814"
 ---
 # <a name="how-to-customize-report-view-columns"></a>方法: レポート ビューの列をカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: レポート ビューの列のカスタマイズ](https://docs.microsoft.com/visualstudio/profiling/how-to-customize-report-view-columns)します。  
-  
 Visual Studio Team System Development Edition のパフォーマンス ツールは、統合開発環境 (IDE) に完全に統合されており、シームレスなユーザー エクスペリエンスを提供します。 次のリストは、列を追加、削除、再配置してカスタマイズできる代表的なビューです。  
   
 -   [モジュール ビュー](../profiling/modules-view.md)  

@@ -1,7 +1,7 @@
 ---
 title: Windows ストア アプリの実行、シミュレーターで |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3007d0e6ea7a835cd9147f5f5ff94c91f9f7bda4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b17f8abed32a14aead89a685a030654e1afe32f9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190724"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>シミュレーターでの Windows ストア アプリの実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows ストア アプリの実行、シミュレーターで](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator)します。  
-  
 Windows ストア アプリ用の Visual Studio シミュレーターは、Windows ストア アプリをシミュレートするデスクトップ アプリケーションです。 開発者は、アプリケーションの実行と、一般的なタッチと回転イベントのシミュレーションを開発用コンピューター上で行うことができます。 また、エミュレートする物理的な画面サイズと解像度を選択したり、ネットワーク接続のプロパティをシミュレートしたりすることもできます。  
   
  シミュレーターは、Windows ストア アプリを設計、開発、デバッグ、テストできる環境を提供します。 ただし、Windows ストアにアプリを公開する前に、実際のデバイスでアプリをテストする必要があります。  
@@ -104,7 +102,7 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
  画面サイズと解像度は *画面の幅 (インチ)、ピクセル幅 X ピクセル高さ*で一覧表示されます。 画面のサイズと解像度の両方がシミュレートされます。 シミュレーター上の位置座標は、選択したデバイスのサイズと解像度の座標に変換されます。  
   
 > [!NOTE]
->  ビットマップ イメージのスケーリングされたバージョンをアプリに保存できます。Windows は、現在のスケールで正しいイメージを読み込みます。 詳細については、次を参照してください。[レスポンシブ デザイン 101](https://msdn.microsoft.com/library/windows/apps/dn958435.aspx)します。 ただし、Windows によって解像度に合ったイメージが選択されるようにシミュレーターの解像度を変更した場合、新しいイメージを表示するにはデバッグ セッションを停止して再度開始する必要があります。  
+>  ビットマップ イメージのスケーリングされたバージョンをアプリに保存できます。Windows は、現在のスケールで正しいイメージを読み込みます。 詳細については、「 [レスポンシブ デザイン 101](https://msdn.microsoft.com/library/windows/apps/dn958435.aspx)」をご覧ください。 ただし、Windows によって解像度に合ったイメージが選択されるようにシミュレーターの解像度を変更した場合、新しいイメージを表示するにはデバッグ セッションを停止して再度開始する必要があります。  
   
 ##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Windows ストアに送信するアプリのスクリーンショットをキャプチャする  
  Windows アプリ ストアにアプリを送信するときは、アプリのスクリーンショットを含める必要があります。  
@@ -119,9 +117,9 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
      ![設定のコンテキスト メニューのスクリーン ショット](../debugger/media/simulator-screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
   
 ##  <a name="BKMK_Simulate_network_connection_properties"></a> ネットワーク接続のプロパティをシミュレートする  
- アプリケーションのユーザーがネットワーク接続コストやデータ プランの状態の変化を認識し、アプリケーションがその情報を使用して、ローミングや指定されたデータ転送の制限の超過による追加コストの発生を避けることにより、アプリケーションのユーザーが従量制課金接続のコストを管理できるようにします。 [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) Api に応答できます。 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx)と[TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx)署名を行うイベント。 「 [従量制課金接続のコスト制約を管理する方法 (HTML)](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)」をご覧ください。  
+ アプリケーションのユーザーがネットワーク接続コストやデータ プランの状態の変化を認識し、アプリケーションがその情報を使用して、ローミングや指定されたデータ転送の制限の超過による追加コストの発生を避けることにより、アプリケーションのユーザーが従量制課金接続のコストを管理できるようにします。 [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) API を使用すると、 [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) および署名を行うイベント [TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) に応答できます。 「 [従量制課金接続のコスト制約を管理する方法 (HTML)](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)」をご覧ください。  
   
- シミュレーターをデバッグまたは、ネットワーク コストを認識するコードをテスト、を通じて公開されているネットワークのプロパティを模倣できます、 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)によって返されるオブジェクト[GetInternetConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.getinternetconnectionprofile.aspx).  
+ ネットワーク コストを認識するコードをデバッグまたはテストするには、シミュレーターを使って、 [GetInternetConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) によって返される [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.getinternetconnectionprofile.aspx)オブジェクトを通じて公開されるネットワークのプロパティを模倣します。  
   
  ネットワークのプロパティをシミュレートするには、次のようにします。  
   
@@ -131,15 +129,15 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
   
      チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
   
-3.  シミュレートされたネットワークの **[プロファイル名]** を入力します。 シミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。、 [ProfileName](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx)のプロパティ、 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx)オブジェクト。  
+3.  シミュレートされたネットワークの **[プロファイル名]** を入力します。 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx) オブジェクトの [ProfileName](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) プロパティでシミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。  
   
-4.  選択、 [NetworkCostType](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx)からプロファイルの値、**ネットワーク コストの種類**一覧。  
+4.  [[ネットワーク コストの種類]](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) の一覧からプロファイルの **NetworkCostType** 値を選択します。  
   
-5.  **データの限度の状態フラグ**] ボックスの一覧を設定できます、 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx)プロパティまたは[OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)プロパティを true を選択または**データの制限 [** 両方の値を false に設定します。  
+5.  **[データの限度の状態フラグ]** の一覧から、 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) プロパティまたは [OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)プロパティを true に設定できます。または、 **[データの限度を下回っています]** を選択すると、両方の値を false に設定できます。  
   
-6.  **ローミングの状態**一覧で、設定、[ローミング](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx)プロパティ。  
+6.  **[ローミングの状態]** の一覧から、 [Roaming](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) プロパティを設定します。  
   
-7.  選択**プロパティの設定**、前景をトリガーすることによって、ネットワークのプロパティをシミュレートするために[NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx)イベントとバック グラウンド[SystemTrigger](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx)型の**NetworkStateChange**します。  
+7.  **[プロパティの設定]** をクリックして、前景の [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) イベントおよび [NetworkStateChange](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 型の背景の **SystemTrigger**をトリガーして、ネットワーク プロパティをシミュレートします。  
   
  **ネットワーク接続の管理の詳細について**  
   

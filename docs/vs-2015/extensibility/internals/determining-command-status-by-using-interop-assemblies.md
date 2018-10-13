@@ -1,7 +1,7 @@
 ---
 title: 相互運用機能アセンブリを使用してコマンドのステータスの特定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 2f5104d1-7b4c-4ca0-a626-50530a8f7f5c
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 22648a85f8c8774896914b9519aa3d10d3dc732d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bd5e3cfc8aa330ef9f41835594b14bb29d254ac3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544649"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222426"
 ---
 # <a name="determining-command-status-by-using-interop-assemblies"></a>相互運用機能アセンブリを使用したコマンドのステータスの特定
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を決定するコマンドの状態でを使用して相互運用機能アセンブリ](https://docs.microsoft.com/visualstudio/extensibility/internals/determining-command-status-by-using-interop-assemblies)します。  
-  
 VSPackage をする必要がありますの追跡を処理できるコマンドの状態。 場合、VSPackage 内で処理コマンドを有効または無効になります、環境を特定できません。 コマンドの状態について、環境に通知するために VSPackage の責任は、たとえば、[全般] の状態などのコマンド**切り取り**、**コピー**、および**貼り付け**します。  
   
 ## <a name="status-notification-sources"></a>状態通知のソース  

@@ -1,7 +1,7 @@
 ---
 title: Idiatable::get_name |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fa86af5f563bc844e4e69c915273b59de0a77afd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 55bd9d1285d4584263bef8917dbcb73a0a8de471
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538490"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226014"
 ---
 # <a name="idiatablegetname"></a>IDiaTable::get_name
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiatable::get_name](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiatable-get-name)します。  
-  
 テーブルの名前を取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: '2149 ca: 透過的メソッドする必要があります呼び出しをネイティブ コードに |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,15 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 887252eca86205858b168c7f5a4a6c33cb0cc67d
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 3e048bd5e85388fcccf54a4a48d81acfb6cc66b3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589076"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208833"
 ---
 # <a name="ca2149-transparent-methods-must-not-call-into-native-code"></a>CA2149: 透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2149: 透過的メソッドはネイティブ コードを呼び出す必要がありますいない](https://docs.microsoft.com/visualstudio/code-quality/ca2149-transparent-methods-must-not-call-into-native-code)します。
-
 |||
 |-|-|
 |TypeName|TransparentMethodsMustNotCallNativeCode|

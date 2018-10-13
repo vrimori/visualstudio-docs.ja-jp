@@ -1,7 +1,7 @@
 ---
 title: '方法: コード分析辞書をカスタマイズする |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 345a46631e9f69c89af0e1d283c484ad71023821
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f46da0c36dfdf73fc550d57e733637ec7ab1e3fb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535764"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227918"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>方法 : コード分析辞書をカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コード分析辞書をカスタマイズ](https://docs.microsoft.com/visualstudio/code-quality/how-to-customize-the-code-analysis-dictionary)します。  
-  
 コード分析のスペル、文法の場合も、およびその他の名前付け規則のエラー コード内の識別子を確認する組み込みの辞書を使用して、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]ガイドライン。 追加、削除、または用語、略語、および組み込みの辞書に頭字語を変更するカスタム辞書の Xml ファイルを作成できます。  
   
  たとえば、コードには、という名前のクラスが含まれている**DoorKnokker**します。 コード分析は 2 つの単語の複合として名前を識別:**ドア**と**knokker**します。 警告が発生している**knokker**スペルが正しくないです。 スペルを認識するコード分析を強制するという用語を追加することができます**knokker**を追加します。  

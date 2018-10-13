@@ -1,7 +1,7 @@
 ---
 title: 関数ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1250dfc781b57f3b289cbafc9d386b27b669ddf7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 661700a9faba7886294db904d8676277dd0501d1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537180"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214579"
 ---
 # <a name="functions-view---contention-data"></a>関数ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[関数ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/functions-view-contention-data)します。  
-  
 競合データの関数レポート ビューには、プロファイリング実行中に実行がブロックされた関数が一覧表示されます。  
   
  コンカレンシー メソッドで収集されたプロファイリング データ ファイルの関数ビューに表示される値について、次の表で説明します。  
@@ -57,7 +55,7 @@ ms.locfileid: "47537180"
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   
- [関数 ビュー](../profiling/functions-view-sampling-data.md)
+ [関数ビュー](../profiling/functions-view-sampling-data.md)
 
 
 

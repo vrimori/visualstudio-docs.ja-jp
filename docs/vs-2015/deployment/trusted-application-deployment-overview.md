@@ -1,7 +1,7 @@
 ---
 title: 信頼されたアプリケーション展開の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,21 +22,19 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: afcfc0d2a494b27359de041b13a8e9595ede1bc7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1807efdefd387c4e4fa01c2acec0f7b32bbce6f8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536253"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49215918"
 ---
 # <a name="trusted-application-deployment-overview"></a>信頼されたアプリケーションの配置の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Trusted Application Deployment Overview](https://docs.microsoft.com/visualstudio/deployment/trusted-application-deployment-overview)します。  
-  
 このトピックでは、信頼されたアプリケーションの配置テクノロジを使用して、昇格されたアクセス許可を持つ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを配置する方法の概要を示します。  
   
- 信頼されたアプリケーションの配置テクノロジは、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 配置のテクノロジの一部です。このテクノロジを使用すると、どのような規模の組織でも、ユーザーに確認することなく、従来より安全な方法でマネージド アプリケーションにアクセス許可を付与できます。 信頼されたアプリケーションの配置の場合、組織に必要な処理は、信頼された発行元の一覧をクライアント コンピューターで構成することだけです。発行元は、Authenticode 証明書を使用して識別します。 その後は、信頼された発行元のいずれかによって署名されている [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションには、通常より高いレベルの信頼が与えられます。  
+ 信頼されたアプリケーションの配置テクノロジは、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 配置のテクノロジの一部です。このテクノロジを使用すると、どのような規模の組織でも、ユーザーに確認することなく、従来より安全な方法でマネージド アプリケーションにアクセス許可を付与できます。 信頼されたアプリケーションの配置の場合、組織に必要な処理は、信頼された発行元の一覧をクライアント コンピューターで構成することだけです。発行元は、Authenticode 証明書を使用して識別します。 その後は、信頼された発行元のいずれかによって署名されている [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションには、通常より高いレベルの信頼が与えられます。  
   
 > [!NOTE]
 >  信頼されたアプリケーションの配置では、ユーザー コンピューターの構成を一度だけ実行する必要があります。 管理されたデスクトップ環境では、グローバル ポリシーを使用してこの構成を実行できます。 この方法がアプリケーションに適さない場合は、代わりに、アクセス許可を昇格する機能を使用します。 詳細については、「[ClickOnce アプリケーションの発行](../deployment/securing-clickonce-applications.md)」を参照してください。  
@@ -90,12 +88,12 @@ ms.locfileid: "47536253"
 -   CertMgr.exe。これは、Internet Explorer のコンポーネントであるため、Windows 98 以降の全バージョンに含まれています。 詳細については、次を参照してください。 [Certmgr.exe (証明書マネージャー ツール)](http://msdn.microsoft.com/library/7e953b43-1374-4bbc-814f-53ca1b6b52bb)します。  
   
 ### <a name="create-a-clickonce-application"></a>ClickOnce アプリケーションを作成する  
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションは、マニフェスト ファイルと組み合わされた [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] クライアント アプリケーションです。マニフェスト ファイルでは、アプリケーションについての説明を記述し、インストール パラメーターを指定します。 プログラムを有効にすることができます、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションを使用して、**発行**コマンド[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]。 または、[!INCLUDE[winsdklong](../includes/winsdklong-md.md)] に含まれているツールを使用して、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 配置に必要なすべてのファイルを生成することもできます。 詳しい手順について[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開を参照してください[チュートリアル: ClickOnce アプリケーションを手動で配置](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションは、マニフェスト ファイルと組み合わされた [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] クライアント アプリケーションです。マニフェスト ファイルでは、アプリケーションについての説明を記述し、インストール パラメーターを指定します。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] の **[発行]** コマンドを使用すると、開発したプログラムを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]アプリケーションに変換できます。 または、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] に含まれているツールを使用して、 [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]配置に必要なすべてのファイルを生成することもできます。 詳しい手順について[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開を参照してください[チュートリアル: ClickOnce アプリケーションを手動で配置](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)します。  
   
- 信頼されたアプリケーションの配置は [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] に特有の機能であり、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションに対してのみ使用できます。  
+ 信頼されたアプリケーションの配置は [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]に特有の機能であり、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションに対してのみ使用できます。  
   
 ### <a name="sign-the-deployment"></a>配置に署名する  
- 使用する証明書を取得したら、この証明書を使用して配置に署名する必要があります。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の発行ウィザードを使用してアプリケーションを配置する場合は、独自に証明書を指定しなければ、ウィザードが自動的にテスト証明書を生成します。 使用することも、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]プロジェクト デザイナー ウィンドウ、ただし、CA によって提供される証明書を提供します。  「 [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](http://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) 」または「 [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](http://msdn.microsoft.com/library/31kztyey\(v=vs.110\))」も参照してください。  
+ 使用する証明書を取得したら、この証明書を使用して配置に署名する必要があります。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の発行ウィザードを使用してアプリケーションを配置する場合は、独自に証明書を指定しなければ、ウィザードが自動的にテスト証明書を生成します。 また、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の [プロジェクト デザイナー] ウィンドウを使用して、CA から取得した証明書を指定することもできます。  「 [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](http://msdn.microsoft.com/library/31kztyey\(v=vs.110\)) 」または「 [方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](http://msdn.microsoft.com/library/31kztyey\(v=vs.110\))」も参照してください。  
   
 > [!CAUTION]
 >  テスト証明書を使用してアプリケーションを配置することはお勧めできません。  

@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_haseha |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d5c7e0c68b796f84c8e93d6a7f0e9a85387d4105
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6a0e9bdc820483a1c4af7389c0af5bce4750163a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547423"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220494"
 ---
 # <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_haseha](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-haseha)します。  
-  
 関数が非同期 (構造化) 例外処理を含むかどうかを指定するフラグを取得します。  
   
 ## <a name="syntax"></a>構文  

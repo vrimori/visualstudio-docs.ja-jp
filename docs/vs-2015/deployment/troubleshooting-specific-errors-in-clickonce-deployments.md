@@ -1,7 +1,7 @@
 ---
 title: ClickOnce 配置で特定のエラーのトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 4ec87f12dc97ced54248c7323643b417fb14a63c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d0b7e53eba21372641bad683c442e796648a4765
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533643"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49213643"
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 配置の固有のエラーのトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce 配置での特定のエラーをトラブルシューティング](https://docs.microsoft.com/visualstudio/deployment/troubleshooting-specific-errors-in-clickonce-deployments)します。  
-  
 このトピックでデプロイするときに発生する可能性がある次の一般的なエラー、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションでは、各問題を解決する手順を示します。  
   
 ## <a name="general-errors"></a>一般的なエラー  

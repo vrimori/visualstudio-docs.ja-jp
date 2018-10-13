@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2103: 命令型のセキュリティの確認 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6aa27379c7fc505c1eddf8ad0518693f5e9930a0
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 1fe840be08b6b659f8c5307d2c7af1cc0e219e7f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47549273"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214221"
 ---
 # <a name="ca2103-review-imperative-security"></a>CA2103: 命令型のセキュリティを確認します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2103: 命令型のセキュリティをレビュー](https://docs.microsoft.com/visualstudio/code-quality/ca2103-review-imperative-security)します。
-
 |||
 |-|-|
 |TypeName|ReviewImperativeSecurity|

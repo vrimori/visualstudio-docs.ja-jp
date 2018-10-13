@@ -1,7 +1,7 @@
 ---
 title: プロジェクトのビルドの構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 799330ffa4fbedc5d1fee1ff4cb2f0dfdb3049f1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bcac8acced823f294c4e6dd33302e3eea30b0439
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539234"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221118"
 ---
 # <a name="project-configuration-for-building"></a>ビルドのためのプロジェクト構成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[構築するためのプロジェクト構成](https://docs.microsoft.com/visualstudio/extensibility/internals/project-configuration-for-building)します。  
-  
 特定のソリューションのソリューション構成の一覧は、ソリューション構成 ダイアログ ボックスによって管理されます。  
   
  ユーザーは、それぞれ独自の一意の名前を持つその他のソリューション構成を作成できます。 ユーザーは、新しいソリューション構成を作成するときは、対応する名前が存在しない場合に、IDE が プロジェクト、またはデバッグに対応する構成名を既定値です。 ユーザーには、必要に応じて特定の要件を満たすために選択を変更できます。 この動作の唯一の例外は、プロジェクトに新しいソリューション構成の名前に一致する構成がサポートされている場合です。 たとえば、ソリューションには、Project1 と Project2 が含まれています。 Project1 では、デバッグ、製品版、および MyConfig1 のプロジェクト構成を持ちます。 Project2 では、デバッグ、製品版、および MyConfig2 のプロジェクト構成を持ちます。  

@@ -1,7 +1,7 @@
 ---
 title: UML モデルからファイルを生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 21
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 20d017c8db48f2afa3732fbf99a8361775c9f6d8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f7d2987084235f88d8360bb344445faa311956dc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547024"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226500"
 ---
 # <a name="generate-files-from-a-uml-model"></a>UML モデルからファイルを生成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデルからファイルを生成](https://docs.microsoft.com/visualstudio/modeling/generate-files-from-a-uml-model)します。  
-  
 UML モデルから、プログラム コード、スキーマ、ドキュメント、リソース、およびその他さまざまな種類の成果物を生成できます。 UML モデルからテキスト ファイルを生成する 1 つの便利な方法は、使用する[テキスト テンプレート](../modeling/code-generation-and-t4-text-templates.md)します。 これを使用すると、生成するテキスト内にプログラム コードを埋め込むことができます。  
   
  主に 3 つのシナリオがあります。  

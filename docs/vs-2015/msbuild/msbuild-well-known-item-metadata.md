@@ -1,7 +1,7 @@
 ---
 title: MSBuild 既知のアイテム メタデータ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02464cd6c7116da988903d8a8f19f36c900595f1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d8d83c6eaf441b72bc3774f4117653826da47613
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548003"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49234053"
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild 既知のアイテム メタデータ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild 既知の項目メタデータ](https://docs.microsoft.com/visualstudio/msbuild/msbuild-well-known-item-metadata)します。  
-  
   
 次の表は、作成時にすべてのアイテムに割り当てられたメタデータの説明です。 それぞれの例で、ファイル `C:\MyProject\Source\Program.cs` をプロジェクトに含めるために次のアイテム宣言が使用されました。  
   

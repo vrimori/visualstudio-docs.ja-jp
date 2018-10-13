@@ -1,7 +1,7 @@
 ---
 title: System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: b57db2c1c4c5b2bd3ca91762f28b2f3360929671
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab43a3dbe75001f8713d5fff98953f6a5ce43881
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539521"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228671"
 ---
 # <a name="debugging-clickonce-applications-that-use-systemdeploymentapplication"></a>System.Deployment.Application を使用する ClickOnce アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグ ClickOnce アプリケーション System.Deployment.Application を使用する](https://docs.microsoft.com/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)します。  
-  
 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開を使用するアプリケーションを更新する方法を構成できます。 ただし、使用およびカスタマイズする必要がある場合は、高度な[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]展開の機能によって提供される展開オブジェクト モデルにアクセスする必要がある<xref:System.Deployment.Application>します。 使用することができます、<xref:System.Deployment.Application>高度なタスクをなどの Api:  
   
 -   アプリケーションで「今すぐ更新」オプションを作成します。  

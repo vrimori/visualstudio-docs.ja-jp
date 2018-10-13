@@ -1,7 +1,7 @@
 ---
 title: レポート ビューのフィルター処理 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5fe6ce49a9ffee4230cfd4c0528b53761bc1caf1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 79df08496cfa0e15f2caa648afcb1ee78c636d56
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49238291"
 ---
 # <a name="filtering-report-views"></a>レポート ビューのフィルター処理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レポート ビューのフィルタ リング](https://docs.microsoft.com/visualstudio/profiling/filtering-report-views)します。  
-  
 フィルターをプロファイル データ ファイルに適用すると、パフォーマンス レポート ビューに表示する、またはレポート ファイルにエクスポートするプロファイル データを制限することができます。 レポートはタイム スタンプ値の間のデータに制限でき、データは特定のプロセスおよびスレッドに制限できます。 フィルターをファイルに保存し、保存したフィルターをインポートすることで、別のプロファイル データ ファイルにフィルターを作成できます。  
   
  また、概要ビューのグラフィカルなタイムラインを使用することで、レポートを時間セグメントに制限することもできます。 「[方法: 概要ビューのタイムラインからレポート ビューをフィルター処理する](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)」を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: シンボル (.pdb) を指定し、Visual Studio デバッガー内のファイルをソース |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8674ee9c4141b9bfe8511e67c4cd6113f8f0fed5
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6b988a2e3defa1a434cc825ad78e7c92dd30c382
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592878"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226981"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>シンボル (.pdb) ファイル、ソース ファイル、およびバイナリ ファイルの検索
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガーでシンボル (.pdb) ファイルとソース ファイルの指定](https://docs.microsoft.com/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)します。  
-  
 プログラム データベース (.pdb) ファイルは、シンボル ファイルとも呼ばれ、クラス、メソッド、およびその他のコードのソース ファイルで作成した識別子を、プロジェクトのコンパイルされた実行可能ファイルで使用される識別子に対応付けます。 また .pdb ファイルは、ソース コード内のステートメントを実行可能ファイル内の実行命令に対応付けます。 デバッガーはこの情報を使用して 2 つの重要な情報を決定します。1 つは、Visual Studio IDE に表示されるソース ファイルと行番号です。もう 1 つは、設定されたブレークポイントによって実行可能ファイル内で停止する位置です。 また、シンボル ファイルにはソース ファイルの元の場所、および必要に応じてソース ファイルを取得できるソース サーバーの場所が格納されています。  
   
  Visual Studio IDE でプロジェクトをデバッグするとき、デバッガーにはコードの .pdb とソース ファイルの既定の場所が通知されます。 プロジェクト ソース コードの外部コード (プロジェクトから呼び出す Windows やサード パーティのコードなど) をデバッグする場合、.pdb の場所 (必要に応じて外部コードのソース ファイル) を指定する必要があります。また、それらのファイルは実行可能ファイルのビルドに正確に対応付けられる必要があります。  
@@ -101,16 +99,16 @@ ms.locfileid: "47592878"
   
  オンにすると、DLL エクスポート テーブルを読み込みます。 DLL エクスポート テーブルのシンボル情報は、対応するシンボルのない Windows メッセージ、Windows プロシージャ (WindowProc)、COM オブジェクト、マーシャリング、または DLL を操作する場合に役立ちます。 DLL エクスポート情報を読み取ると、オーバーヘッドがある程度発生します。 そのため、既定ではこの機能はオフになっています。  
   
- DLL のエクスポート テーブル内で使用できるシンボルを調べるには、 `dumpbin /exports`を使用します。 シンボルは、任意の 32 ビット システムの DLL に使用できます。 `dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるときは、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 (入れ子の一番内側) が先頭に表示されます。 詳細については、次を参照してください。 [dumpbin/exports](http://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)します。  
+ DLL のエクスポート テーブル内で使用できるシンボルを調べるには、 `dumpbin /exports`を使用します。 シンボルは、任意の 32 ビット システムの DLL に使用できます。 `dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるときは、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 (入れ子の一番内側) が先頭に表示されます。 詳細については、「 [dumpbin /exports](http://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)」を参照してください。  
   
 ###  <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a> シンボル サーバーを使用してローカル コンピューター上にないシンボル ファイルを検索する  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、symsrv プロトコルを実装するシンボル サーバーからデバッグ シンボル ファイルをダウンロードできます。 [Visual Studio Team Foundation Server](http://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6)と[ツールを Windows のデバッグ](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx)シンボル サーバーを実装できる 2 つのツールします。 使用するシンボル サーバーは VS の **[オプション]** ダイアログ ボックスで指定します。  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、symsrv プロトコルを実装するシンボル サーバーからデバッグ シンボル ファイルをダウンロードできます。 [Visual Studio Team Foundation Server](http://msdn.microsoft.com/library/bd6977ca-e30a-491a-a153-671d81222ce6) と [Debugging Tools for Windows](http://msdn.microsoft.com/library/windows/hardware/ff551063\(v=VS.85\).aspx) は、シンボル サーバーを実装できる 2 つのツールです。 使用するシンボル サーバーは VS の **[オプション]** ダイアログ ボックスで指定します。  
   
  以下のシンボル サーバーを使用できます。  
   
  **Microsoft パブリック シンボル サーバー**  
   
- システム DLL やサードパーティのライブラリの呼び出し中に発生するクラッシュをデバッグするには、多くの場合、Windows DLL、EXE、およびデバイス ドライバー用のシンボルが格納されているシステム .pdb ファイルが必要です。 これらのシンボルは Microsoft パブリック シンボル サーバーから取得できます。 Microsoft パブリック シンボル サーバーは、MDAC、IIS、ISA、および [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] のほか、Windows オペレーティング システムのシンボルを提供します。  
+ システム DLL やサードパーティのライブラリの呼び出し中に発生するクラッシュをデバッグするには、多くの場合、Windows DLL、EXE、およびデバイス ドライバー用のシンボルが格納されているシステム .pdb ファイルが必要です。 これらのシンボルは Microsoft パブリック シンボル サーバーから取得できます。 Microsoft パブリック シンボル サーバーは、MDAC、IIS、ISA、および [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]のほか、Windows オペレーティング システムのシンボルを提供します。  
   
  Microsoft シンボル サーバーを使用するには、 **[デバッグ]** メニューの **[オプションと設定]** をクリックし、 **[シンボル]** をクリックします。 **[Microsoft シンボル サーバー]** を選択します。  
   
@@ -172,9 +170,9 @@ ms.locfileid: "47592878"
   
  **C++ のオプション**  
   
- プログラム データベース (.pdb) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。 ビルドすると、.pdb ファイルが作成[/ZI または/Zi](http://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) (C/C++) 用です。  
+ プログラム データベース (.pdb) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。 [/ZI または /Zi](http://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) (C/C++ 用) を使用して構築すると、.pdb ファイルが作成されます。  
   
- [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]、 [/Fd](http://msdn.microsoft.com/library/3977a9ed-f0ac-45df-bf06-01cedd2ba85a)オプション、コンパイラによって作成される .pdb ファイルの名前します。 プロジェクトを作成するときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ウィザードを使って、 **/Fd**という名前の .pdb ファイルを作成するオプションが設定*プロジェクト*.pdb。  
+ [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]では、コンパイラにより作成される .pdb ファイルを [/Fd](http://msdn.microsoft.com/library/3977a9ed-f0ac-45df-bf06-01cedd2ba85a) オプションで指定します。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でウィザードを使ってプロジェクトを作成する場合は、 **/Fd** オプションが *project*.pdb という名前の .pdb ファイルを作成するように設定されます。  
   
  メイクファイルを使って C/C++ アプリケーションをビルドするときに、 **/ZI** または **/Zi** を指定して **/Fd**を指定しない場合は、次の 2 つの .pdb ファイルが作成されます。  
   
@@ -190,7 +188,7 @@ ms.locfileid: "47592878"
   
  **.NET Framework のオプション**  
   
- プログラム データベース (.pdb) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。 .pdb ファイルは、 **/debug**でビルドすると作成されます。 **/debug:full** または **/debug:pdbonly**でアプリケーションをビルドできます。 **/debug:full** でビルドすると、デバッグできるコードが生成されます。 **/debug:pdbonly** でビルドすると .pdb ファイルは生成されますが、JIT コンパイラにデバッグ情報が使用できることを示す `DebuggableAttribute` は生成されません。 デバッグが必要ないリリース ビルドで .pdb ファイルを生成する場合は **/debug:pdbonly** を使用します。 詳細については、次を参照してください。 [/debug (c# コンパイラ オプション)](http://msdn.microsoft.com/library/e2b48c07-01bc-45cc-a52c-92e9085eb969)または[/debug (Visual Basic)](http://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2)します。  
+ プログラム データベース (.pdb) ファイルは、デバッグとプロジェクト状態情報を保持します。この情報により、プログラムのデバッグ構成のインクリメンタル リンクが可能になります。 .pdb ファイルは、 **/debug**でビルドすると作成されます。 **/debug:full** または **/debug:pdbonly**でアプリケーションをビルドできます。 **/debug:full** でビルドすると、デバッグできるコードが生成されます。 **/debug:pdbonly** でビルドすると .pdb ファイルは生成されますが、JIT コンパイラにデバッグ情報が使用できることを示す `DebuggableAttribute` は生成されません。 デバッグが必要ないリリース ビルドで .pdb ファイルを生成する場合は **/debug:pdbonly** を使用します。 詳細については、「 [/debug (C# Compiler Options)](http://msdn.microsoft.com/library/e2b48c07-01bc-45cc-a52c-92e9085eb969) 」または「 [/debug (Visual Basic)](http://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2)」を参照してください。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] デバッガーでは、EXE ファイルまたは DLL ファイルの .pdb ファイルへのパスを使用して、project.pdb ファイルを検索します。 その場所に .pdb ファイルが見つからない場合、またはパスが無効な場合は、EXE ファイルが格納されているパスを検索した後に、 **[オプション]** ダイアログ ボックスで指定されたシンボル パスを検索します。 通常、このパスは **シンボル** ノードの **デバッグ** フォルダーです。 デバッガーはデバッグ対象の実行可能ファイルに対応付けられている .pdb ファイルのみ読み込みます。 デバッガーで .pdb ファイルが見つからない場合、 **[シンボル検索]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、シンボルを検索したり、検索パスに新しい場所を追加したりできます。  
   

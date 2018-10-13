@@ -1,7 +1,7 @@
 ---
 title: 視覚化とデータの表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 699dd0f5-7569-40b3-ade6-d0fe53e832bc
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 10d83291a8d5820241ff2837b6b4a773c7b6fdba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a88969139c993163c88f2dc16fc8cbdb7a62feb6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546677"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202775"
 ---
 # <a name="visualizing-and-viewing-data"></a>データの視覚化と表示
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[視覚化してデータの表示](https://docs.microsoft.com/visualstudio/extensibility/debugger/visualizing-and-viewing-data)します。  
-  
 型のビジュアライザーおよびカスタム ビューアーが開発者にすぐにわかりやすい方法でデータを表示します。 式エバリュエーター (EE) できますサード パーティ製の型のビジュアライザーのサポートだけでなく、独自のカスタム ビューアーを指定します。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 指定数の型のビジュアライザーおよびカスタム ビューアーに関連付けられているオブジェクトの型を呼び出して、 [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)メソッド。 Visual Studio を呼び出す場合は、少なくとも 1 つの型のビジュアライザーまたはカスタム ビューアー、 [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)ビジュアライザーとビューアーがそれらの一覧を取得するメソッド (の一覧では実際には、`CLSID`を実装する、ビジュアライザーとビューアー)、ユーザーに提示します。  

@@ -1,7 +1,7 @@
 ---
 title: インプレース アクティブ化 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
 caps.latest.revision: 26
 manager: douge
-ms.openlocfilehash: c41ac709efd980dc1f49307d4fdffb465c9c627e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5d8badf198d86e9643dbc6e98683dd3437d72f64
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232194"
 ---
 # <a name="in-place-activation"></a>インプレース アクティブ化
 エディター ビューが ActiveX などのアクティブ コントロールをホストしている場合は、インプレース アクティブ化モデルを使用して ActiveX コントロールまたはアクティブ ドキュメント データ オブジェクトとしてエディター ビューを実装する必要があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "47544641"
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>|表示|埋め込みオブジェクトがコンテナーに基本的な機能を提供し、コンテナーと通信するための主要な手段です。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject>|表示|インプレース オブジェクトのアクティブ化と非アクティブ化を管理し、インプレース オブジェクトのどのくらいの部分を表示するかを決定します。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObject>|表示|インプレース オブジェクト、関連付けられているアプリケーションの最も外側のフレーム ウィンドウ、および埋め込みオブジェクトが含まれているアプリケーションのドキュメント ウィンドウの間における、通信の直接的なチャネルとなります。|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>|表示|ActiveX オブジェクトを実装します。 注意のメソッド<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>と`T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView`個別のドキュメント データとビューが IDE で使用されないことです。|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument>|表示|ActiveX オブジェクトを実装します。 ドキュメント データとビューを分離する <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> と `T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView` のメソッドが IDE では使用されないことに注意してください。|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|表示/データ|ドキュメント データ オブジェクトまたはドキュメント ビュー オブジェクトのいずれか、あるいはその両方がコマンドの処理に参加できるようにします。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>|表示|ステータス バーを更新できるようにします。|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser>|表示|ツールボックスに項目を追加できるようにします。|  

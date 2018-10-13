@@ -1,7 +1,7 @@
 ---
 title: ボタンの再利用可能なグループを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0c561617-fb86-476d-8bd1-c6e5e7464c65
 caps.latest.revision: 45
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3bf0e2f0fd80e5d6cc4dee56b5c7c87dd7cfd8e5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b248543fa68e700ab978270c5cdb7bbd908c39d4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544845"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232976"
 ---
 # <a name="creating-reusable-groups-of-buttons"></a>再利用可能なボタンのグループの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ボタンの再利用可能なグループの作成](https://docs.microsoft.com/visualstudio/extensibility/creating-reusable-groups-of-buttons)です。  
-  
 コマンド グループは、常に、メニューまたはツールバーにまとめて表示されるコマンドのコレクションです。 .Vsct ファイルの CommandPlacements セクションでは、別の親メニューに割り当てることで、任意のコマンド グループを再使用できます。  
   
  コマンド グループには、ボタン、通常が含まれますが、他のメニューやコンボ ボックスを含めることできますも。  

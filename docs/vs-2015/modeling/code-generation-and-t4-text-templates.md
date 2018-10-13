@@ -1,7 +1,7 @@
 ---
 title: コード生成と T4 テキスト テンプレート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,19 +22,17 @@ caps.latest.revision: 84
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e57349e8c6f969986333eb8b12a9a3cf70ba3ce6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d1310d08138e4df172a5dc9f390d0407a68fe769
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533617"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229827"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>コード生成と T4 テキスト テンプレート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コードの生成と T4 テキスト テンプレート](https://docs.microsoft.com/visualstudio/modeling/code-generation-and-t4-text-templates)します。  
-  
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、 *T4 テキスト テンプレート*テキスト ブロックとテキスト ファイルを生成できる制御ロジックの組み合わせです。 制御ロジックは、プログラム コードのフラグメントとして記述は[!INCLUDE[csprcs](../includes/csprcs-md.md)]または[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]します。 Visual Studio 2015 Update 2 以降では、T4 テンプレート ディレクティブで C# バージョン 6.0 の機能を使用できます。 Web ページ、リソース ファイル、任意の言語のプログラム ソース コードなど、あらゆる種類のテキスト ファイルを生成できます。  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]では、 *T4 テキスト テンプレート* は、テキスト ファイルを生成できる、テキスト ブロックと制御ロジックが混在するファイルです。 制御ロジックは、 [!INCLUDE[csprcs](../includes/csprcs-md.md)] または [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]のプログラム コードのフラグメントとして記述します。 Visual Studio 2015 Update 2 以降では、T4 テンプレート ディレクティブで C# バージョン 6.0 の機能を使用できます。 Web ページ、リソース ファイル、任意の言語のプログラム ソース コードなど、あらゆる種類のテキスト ファイルを生成できます。  
   
  T4 テキスト テンプレートには、次の 2 種類があります。  
   
@@ -58,14 +56,14 @@ string webResponseText = new MyTemplate().TransformText();
   
 ```  
   
- ないコンピューターでアプリケーションを実行できる[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をインストールします。  
+ アプリケーションは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] がインストールされていないコンピューターでも実行できます。  
   
  実行時テンプレートを作成するには、 **前処理されたテキスト テンプレート** ファイルをプロジェクトに追加します。 または、プレーンテキスト ファイルを追加し、 **[カスタム ツール]** プロパティを **TextTemplatingFilePreprocessor**に設定することもできます。  
   
  詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。 テンプレートの構文の詳細については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
   
- **デザイン時 T4 テキスト テンプレート**で実行される[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ソース コードの一部と、アプリケーションの他のリソースを定義します。  
- 通常は、複数のテンプレートを使用して 1 つの入力ファイルまたはデータベースのデータを読み込み、一部の `.cs`ファイル、 `.vb`ファイル、または他のソース ファイルを生成します。 テンプレートごとに 1 つのファイルが生成されます。 内で実行される[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]または[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]します。  
+ **デザイン時 T4 テキスト テンプレート** は、アプリケーションのソース コードや他のリソースの一部を定義するために、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で実行されます。  
+ 通常は、複数のテンプレートを使用して 1 つの入力ファイルまたはデータベースのデータを読み込み、一部の `.cs`ファイル、 `.vb`ファイル、または他のソース ファイルを生成します。 テンプレートごとに 1 つのファイルが生成されます。 テンプレートは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] または [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]内で実行されます。  
   
  たとえば、入力データが構成データの XML ファイルであるとします。 開発中に XML ファイルを編集するたびに、テキスト テンプレートによって、アプリケーション コードの一部が再生成されます。 テンプレートの例を次に示します。  
   
@@ -112,7 +110,7 @@ namespace Fabrikam.FirstJob
  モデルからコードやその他のリソースを生成すると、モデルを更新してアプリケーションを更新することができます。  
   
  [ビルド処理でのコード生成](../modeling/code-generation-in-a-build-process.md)  
- インストールした場合[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Visualization and Modeling SDK では、生成されたソフトウェアは、モデルの変更で最新の状態を確認できます。  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Visualization and Modeling SDK がインストールされている場合は、生成されるソフトウェアをモデルの変更に合わせて最新の状態に確実に保つことができます。  
   
  [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)  
  テキスト テンプレート ファイルの構文。  

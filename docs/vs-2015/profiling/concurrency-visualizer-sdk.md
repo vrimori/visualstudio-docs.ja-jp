@@ -1,7 +1,7 @@
 ---
 title: コンカレンシー ビジュアライザー SDK | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bce206e362b64bfd27f90e7f6be11fec0d0de3e2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 78d848f5d075ed0d5cd835f4af3daf964603c371
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549145"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207936"
 ---
 # <a name="concurrency-visualizer-sdk"></a>コンカレンシー ビジュアライザー SDK
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[同時実行ビジュアライザー SDK](https://docs.microsoft.com/visualstudio/profiling/concurrency-visualizer-sdk)します。  
-  
 コンカレンシー ビジュアライザー SDK を使用してソース コードをインストルメント化し、コンカレンシー ビジュアライザーに追加情報を表示することができます。 コードでフェーズとイベントに追加データを関連付けることができます。 このような追加の視覚化機能のことを*マーカー*と呼びます。  入門用のチュートリアルについては、「[Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405)」(コンカレンシー ビジュアライザー SDK の概要) を参照してください。  
   
 ## <a name="properties"></a>プロパティ  

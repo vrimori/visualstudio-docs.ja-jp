@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 263a084f-f97a-4e09-add7-f0e8a6a27daf
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e5ebf425a4cc17db1ce58670dd17c1a83e2dd1f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d2aecbfb348c49d341afea5ad2ec98baf35a3cf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537675"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195703"
 ---
 # <a name="project-types"></a>プロジェクトの種類
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類](https://docs.microsoft.com/visualstudio/extensibility/internals/project-types)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] などの言語のいくつかのプロジェクトの種類が含まれている[!INCLUDE[csprcs](../../includes/csprcs-md.md)]と[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] また、独自のプロジェクトの種類を作成してできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

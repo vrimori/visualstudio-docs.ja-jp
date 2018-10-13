@@ -1,7 +1,7 @@
 ---
 title: '方法: エディターのコンテキストを提供 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 12df4d06-df6b-4eaf-a7bf-c83655a0c683
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9509dfeef5af4866531af96fce6f4c1717100a94
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0da7344c474fa653a63d0b134511a9b9d280492f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546409"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214613"
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: エディターのコンテキストを提供](https://docs.microsoft.com/visualstudio/extensibility/how-to-provide-context-for-editors)します。  
-  
 エディターのコンテキストは、エディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみアクティブです。 次の手順に従って、エディターのコンテキストを行うことができます。  
   
 1.  コンテキスト バッグを作成します。  

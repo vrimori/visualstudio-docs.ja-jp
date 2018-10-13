@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのウィンドウ レイアウトをカスタマイズする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c7f581c920a0f42105c1409e320b941a12dbc5f8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5d1fb044d2529e2349e7c98e810adbfe62c7c654
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547280"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49218817"
 ---
 # <a name="customizing-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でのウィンドウ レイアウトをカスタマイズ](https://docs.microsoft.com/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。  
-  
 Visual Studio では、さまざまな開発ワークフローに最も適したウィンドウのレイアウトを作成するために、ウィンドウの位置、サイズ、および動作をカスタマイズできます。 レイアウトをカスタマイズすると、IDE はそれを記憶します。 たとえば、 **ソリューション エクスプローラー** のドッキング位置を変更した後で Visual Studio を閉じた場合、次回起動時には、別のコンピューターで作業していても、 **ソリューション エクスプローラー** が同じ位置にドッキングされます。 また、カスタム レイアウトに名前を付けて保存した後、1 つのコマンドでレイアウト間を切り替えることもできます。 たとえば、編集用のレイアウトとデバッグ用のレイアウトを作成し、**[ウィンドウ &#124; ウィンドウ レイアウトを適用]** メニュー コマンドを使用してそれらを切り替えることができます。  
   
 ## <a name="kinds-of-windows"></a>ウィンドウの種類  

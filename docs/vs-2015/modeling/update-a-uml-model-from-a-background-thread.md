@@ -1,7 +1,7 @@
 ---
 title: バック グラウンド スレッドから UML モデルの更新 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 15
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 448a24d2bfe7a466a239c025046bd0e6f13ea64e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6ed72cc65535849516de35c861942913ca750fba
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549013"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49216854"
 ---
 # <a name="update-a-uml-model-from-a-background-thread"></a>バックグラウンド スレッドから UML モデルを更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[バック グラウンド スレッドから UML モデルを更新](https://docs.microsoft.com/visualstudio/modeling/update-a-uml-model-from-a-background-thread)します。  
-  
 バックグラウンド スレッドでモデルに変更を加えると便利な場合があります。 たとえば、低速な外部リソースから情報を読み込む場合は、バックグラウンド スレッドを使用して更新を管理できます。 これにより、ユーザーは、実行された更新をすぐに確認できます。  
   
  ただし、UML ストアがスレッド セーフでないことに注意してください。 重要な注意点を次に示します。  

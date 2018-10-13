@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: マルチ スレッド アプリケーションのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a13fa717cc7f3952e44fe0dffecf735e7b53345a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 47cb401bae952e8ecdfaf18848e63f9d9a320be7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545120"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186200"
 ---
 # <a name="walkthrough-debugging-a-multithreaded-application"></a>チュートリアル : マルチスレッド アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド ウィンドウを使用してマルチ スレッド アプリのデバッグ](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-threads-window)します。  
-  
 [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] では、改良された**スレッド**ウィンドウとその他のユーザー インターフェイスのマルチ スレッド アプリケーションをデバッグするが簡単に強化します。 このチュートリアルにはあまり時間がかかりませんが、これを完了することで、マルチスレッド アプリケーションのデバッグに使用する新しいインターフェイスを理解できます。  
   
  このチュートリアルを始めるには、マルチスレッド アプリケーション プロジェクトが必要です。 次の手順に従って、このようなプロジェクトを作成します。  

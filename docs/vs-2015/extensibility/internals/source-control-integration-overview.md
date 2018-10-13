@@ -1,7 +1,7 @@
 ---
 title: ソース管理の統合の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca8fc2368fd2da031342cf76ab7ba9abb85e6f4b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1658f54cb50ca1d04668f177657b8aaa80592494
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540116"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224186"
 ---
 # <a name="source-control-integration-overview"></a>ソース管理の統合の概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理の統合の概要](https://docs.microsoft.com/visualstudio/extensibility/internals/source-control-integration-overview)します。  
-  
 このセクションでは、Visual Studio ソース コントロールに統合する 2 つの方法を比較します。ソース管理プラグインと、VSPackage をソース管理のソリューションを提供し、新しいソース管理機能を強調表示されます。 Visual Studio は、ソース管理 Vspackage とソース管理プラグインの切り替えを手動と自動のソリューションに基づく切り替えできます。  
   
 ## <a name="source-control-integration"></a>ソース管理の統合  

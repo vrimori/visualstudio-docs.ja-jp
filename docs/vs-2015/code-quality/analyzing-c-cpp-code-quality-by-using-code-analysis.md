@@ -1,7 +1,7 @@
 ---
 title: コード分析を使用して C/C++ のコード品質の分析 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 37
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dda0e5ee66834c4e57f0614ca855ec8b5a251aa6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 09879cd71bfda25224653e7a51a61d048f06c095
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545759"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224959"
 ---
 # <a name="analyzing-cc-code-quality-by-using-code-analysis"></a>コード分析を使用した C/C++ コードの品質の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[C と C++ コード品質の分析を使用してコード分析によって](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis)します。  
-  
 Visual Studio のコード分析を使用してコードの障害を検出および修正することによって、C/C++ コードを改善できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

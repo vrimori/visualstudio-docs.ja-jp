@@ -1,7 +1,7 @@
 ---
 title: プロファイルを定義すると、UML を拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 44
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b54babfc6bb4350ba1cc99d6ce34a05f70dab693
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: aebac5a95a6d1b1ab6aa0d4230094003de2a2062
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47593006"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221261"
 ---
 # <a name="define-a-profile-to-extend-uml"></a>プロファイルを定義して UML を拡張する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML を拡張するプロファイルを定義して](https://docs.microsoft.com/visualstudio/modeling/define-a-profile-to-extend-uml)します。  
-  
 定義することができます、 *UML プロファイル*特定の目的で標準のモデル要素をカスタマイズします。 プロファイルは、1 つまたは複数定義されています。 *UML ステレオタイプ*します。 ステレオタイプは、特定の種類のオブジェクトを表すものとして型をマークするために使用できます。 ステレオタイプを使用して、要素のプロパティのリストを拡張することもできます。  
   
  いくつかのプロファイルは、これをサポートするエディションの Visual Studio をインストールするときに、同時にインストールされます。 この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。 これらのプロファイルとステレオタイプを適用する方法についての詳細については、次を参照してください。[プロファイルとステレオタイプを使用してモデルをカスタマイズ](../modeling/customize-your-model-with-profiles-and-stereotypes.md)します。  
@@ -358,7 +356,7 @@ ms.locfileid: "47593006"
   
     -   拡張機能が表示されなければ、次のアイテムを確認します。  
   
-5.  VSIX ファイルをリビルドし、Windows エクスプローラーで開いて再インストールします。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を再起動します。  
+5.  VSIX ファイルをリビルドし、Windows エクスプローラーで開いて再インストールします。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を再起動します。  
   
  拡張機能に拡張機能マネージャーに表示されませんが、再インストールしようとすると、次のメッセージが表示されます:**拡張機能がすべて該当する製品を既にインストールされています。**  
  1.  拡張機能ファイルのサブフォルダーから削除*LocalAppData*\Microsoft\VisualStudio\\[バージョン] \Extensions\  
@@ -367,7 +365,7 @@ ms.locfileid: "47593006"
   
     -   *LocalAppData*は一般に C:\Users\\*userName*\AppData\Local\  
   
-2.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を再起動します。  
+2.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を再起動します。  
   
 ## <a name="see-also"></a>関連項目  
  [UML モデル要素にステレオタイプを追加します。](../modeling/add-stereotypes-to-uml-model-elements.md)   

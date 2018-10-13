@@ -1,7 +1,7 @@
 ---
 title: トランザクションでのデータの保存 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e4b6d6befe4bbe29147a59b9700b8f148154e6c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 60f3014707fe9b06818bf9a47745ca8b253290d4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538126"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208905"
 ---
 # <a name="save-data-in-a-transaction"></a>トランザクションでデータを保存します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[トランザクションでデータを保存](https://docs.microsoft.com/visualstudio/data-tools/save-data-in-a-transaction)します。  
-  
   
 このチュートリアルを使用して、トランザクションでデータを保存する方法について説明、<xref:System.Transactions>名前空間。 この例では、Northwind サンプル データベースの `Customers` テーブルと `Orders` テーブルを使用します。  
   
