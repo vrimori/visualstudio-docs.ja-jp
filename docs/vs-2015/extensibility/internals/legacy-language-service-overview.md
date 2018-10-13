@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6aa3fdcbdb40dca34e17b675478b23d1fd2eef6e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6f5a060776126756b104b7f24c7b216ac881d1b5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544351"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49302706"
 ---
 # <a name="legacy-language-service-overview"></a>従来の言語サービスの概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービスの概要](https://docs.microsoft.com/visualstudio/extensibility/internals/legacy-language-service-overview)します。  
-  
 言語サービスは、特定の実装することができますエディターのサポートを提供します。[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]機能します。 マネージ パッケージ フレームワーク (MPF) 言語のサービス クラスは、頻繁に使用される機能とその他の機能の部分的なサポートについての完全なサポートを提供します。  
   
 ## <a name="fully-supported-features-in-the-mpf"></a>MPF で完全にサポートされる機能  

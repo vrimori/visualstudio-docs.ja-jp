@@ -1,7 +1,7 @@
 ---
 title: プロファイラーのコマンド ラインを使用した ASP.NET Web アプリケーションからのメモリ データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb4b6ddcad4270b451b86f3bc8df9da3acd7af1c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ce60ea0d4433253f118acaa38a36933bd2a6681
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539594"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49290525"
 ---
 # <a name="collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用した ASP.NET Web アプリケーションからのメモリ データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Profiler のコマンドラインを使用して ASP.NET Web アプリケーションからメモリ データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line)します。  
-  
 このセクションでは、**VSPerfCmd** コマンドライン ツールを使用し、ASP.NET Web アプリケーションのメモリ割り当てとオブジェクト有効期間データを収集する手順とオプションについて説明します。  
   
 > [!NOTE]

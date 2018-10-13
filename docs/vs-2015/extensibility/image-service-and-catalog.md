@@ -1,7 +1,7 @@
 ---
 title: イメージのサービスとカタログ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b3079bada9b8d3e9a0b2644e4aaa3d9e3ee3bebe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 847ac3b7ed956daf61a04c5891871c9182594877
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537709"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49265214"
 ---
 # <a name="image-service-and-catalog"></a>イメージ サービスとカタログ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イメージ サービスとカタログ](https://docs.microsoft.com/visualstudio/extensibility/image-service-and-catalog)します。  
-  
 このクックブックには、ガイダンスと、Visual Studio イメージ サービスと Visual Studio 2015 で導入されたイメージのカタログを採用するためのベスト プラクティスが含まれています。  
   
  Visual Studio 2015 で導入されたイメージのサービスでは、開発者は、デバイスと表示されるコンテキストの正しいテーマなど、イメージを表示するユーザーの選択したテーマの最適なイメージの取得ができます。 イメージのサービスを採用することと、資産管理、HDPI スケーリング、およびテーマの適用に関連する主要な問題点を排除するのに役立ちます。  

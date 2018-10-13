@@ -1,7 +1,7 @@
 ---
 title: ビルド構成について | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d847b560b2dcedcd7b6841eccff17f40016c73fe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1c7a6304683095b0a3db5c175535d7d28e38eecb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537402"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49304136"
 ---
 # <a name="understanding-build-configurations"></a>ビルド構成について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ビルド構成について](https://docs.microsoft.com/visualstudio/ide/understanding-build-configurations)します。  
-  
 異なる種類のビルドに使用できるように、ソリューションおよびプロジェクト プロパティの異なる構成を保存することができます。 構成を作成、選択、変更、または削除するには、**構成マネージャー**を使用できます。 構成マネージャーを開くには、メニュー バーで、**[ビルド]**、**[構成マネージャー]** の順にクリックするか、**[クイック起動]** ボックスに「**構成**」と入力します。 また、**[標準]** ツール バーの **[ソリューション構成]** ボックスの一覧を使用して構成を選択することも、**[構成マネージャー]** を開くこともできます。  
   
 > [!NOTE]

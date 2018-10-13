@@ -1,7 +1,7 @@
 ---
 title: プロファイラー サンプリング メソッドのデータ ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,25 +17,23 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f9ce2916705a50f01c781696770f78d4f5dff1e4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2f1ce001a1f5ee53c75001bb909d04eaa3d9222c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539643"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49302134"
 ---
 # <a name="profiler-sampling-method-data-views"></a>プロファイラー サンプリング メソッドのデータ ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Profiler サンプリング メソッドのデータ ビュー](https://docs.microsoft.com/visualstudio/profiling/profiler-sampling-method-data-views)します。  
-  
 ここでは、サンプリング メソッドを使用して生成されたプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
   
 > [!NOTE]
 >  Windows 8 および Windows Server 2012 の強化されたセキュリティ機能によって、Visual Studio プロファイラーがこれらのプラットフォームでデータを収集する方法に大幅な変更が必要になりました。 Windows ストア アプリにも新しい収集手法が必要です。 「[Windows 8 および Windows Server 2012 アプリケーションのパフォーマンス ツール](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要ビュー](../profiling/summary-view-sampling-data.md)  
+ [概要 ビュー](../profiling/summary-view-sampling-data.md)  
  サンプルの収集時に最も頻繁に実行された関数、および最も多くの個別作業を実行した関数が一覧表示されます。  
   
  [コール ツリー ビュー](../profiling/call-tree-view-sampling-data.md)  
@@ -47,7 +45,7 @@ ms.locfileid: "47539643"
  [呼び出し元/呼び出し先ビュー - サンプリング データ](../profiling/caller-callee-view-sampling-data.md)  
  選択した関数と、選択した関数を呼び出した関数および選択した関数によって呼び出された関数のプロファイル データが表示されます。  
   
- [関数 ビュー](../profiling/functions-view-sampling-data.md)  
+ [関数ビュー](../profiling/functions-view-sampling-data.md)  
  プロファイリングが関数ごとに整理され、サンプルの収集時に実行された関数が一覧表示されます。  
   
  [行 ビュー](../profiling/lines-view-sampling-data.md)  

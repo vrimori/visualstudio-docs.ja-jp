@@ -1,7 +1,7 @@
 ---
 title: DslDefinition.dsl ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 8d6df6e4957eec471e4d0f1212493c088e19703b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5bf56b06771b905ec4982f7de7f91648c2e6b3a8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539479"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306125"
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl ファイル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DslDefinition.dsl ファイル](https://docs.microsoft.com/visualstudio/modeling/the-dsldefinition-dsl-file)します。  
-  
 このトピックでは、Dsl プロジェクトの DslDefinition.dsl ファイルの構造を説明します、[!INCLUDE[dsl](../includes/dsl-md.md)]を定義するには、ソリューション、*ドメイン固有言語*します。 DslDefinition.dsl ファイルは、クラスと、図、図形、コネクタ、シリアル化形式と、ドメイン固有言語のリレーションシップについて説明しますと**ツールボックス**のドメイン固有言語とそのツールを編集します。 ドメイン固有言語ソリューションでは、これらのツールを定義するコードは DslDefinition.dsl ファイルの情報に基づいて生成されます。  
   
  一般に、使用、*ドメイン固有言語デザイナー* DslDefinition.dsl ファイルを編集します。 ただし DslDefinition.dsl ファイルの未加工の形式は XML であるため、DslDefinition.dsl ファイルを XML エディターで開くことができます。 ファイルに記述されている情報と、ファイルの編成を理解しておくと、デバッグおよび拡張を行う際に役立つことがあります。  

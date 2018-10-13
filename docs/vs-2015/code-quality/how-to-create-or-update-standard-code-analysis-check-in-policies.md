@@ -1,7 +1,7 @@
 ---
 title: '方法: 標準のコード分析チェックイン ポリシーを作成または |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 9f4e834eb02c30bee0fedfa90ddb17d3fa766fb1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 63c1b27d762f79a8933a31bb33850ad4604a9c37
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301562"
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>方法: 標準のコード分析チェックイン ポリシーを作成または更新する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: を作成または更新プログラムの標準的なコード分析チェックイン ポリシー](https://docs.microsoft.com/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies)します。  
-  
 コード分析チェックイン ポリシーを使用してチーム プロジェクト内のすべてのコード プロジェクトでコード分析を実行することを要求することができます。 コード分析を必要とすると、コード ベースにチェックインされているコードの品質を向上させることができます。  
   
 > [!NOTE]

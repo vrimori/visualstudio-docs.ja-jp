@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス レポートの概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d80fa4902ac598440f03630cb8b0906bc13808ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8449abf6fe178225f84aa65caa4d027df5021d4f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538363"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49290434"
 ---
 # <a name="performance-report-overview"></a>パフォーマンス レポートの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス レポートの概要](https://docs.microsoft.com/visualstudio/profiling/performance-report-overview)します。  
-  
 Visual Studio Team System Development Edition の統合開発環境 (IDE) の **[パフォーマンス レポート]** ウィンドウでパフォーマンス セッションのプロファイリング データを表示できます。 プロファイリング データは .vsp ファイルと .vsps ファイルに保存されます。 レポート ビュー ウィンドウでは、アプリケーションのパフォーマンス上の問題を表示して分析できます。  
   
 > [!CAUTION]

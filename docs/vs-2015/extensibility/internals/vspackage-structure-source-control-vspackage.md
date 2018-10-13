@@ -1,7 +1,7 @@
 ---
 title: VSPackage 構造 (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c27eb3c0bc977f716d3437042e1e4105eb1692d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 592f24a4fc4100f7c716c7fbec0c300c0adec906
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533495"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305033"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 構造 (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSPackage 構造 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/vspackage-structure-source-control-vspackage)します。  
-  
 ソース コントロールのパッケージの SDK には、VSPackage を作成するためのガイドラインにより、ソースのコントロール実装側で自分のソース管理機能を統合する、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]環境。 VSPackage は、COM コンポーネントからの要求時に読み込まれた通常、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) は、そのレジストリ エントリで、パッケージによって提供されているサービスに基づいています。 すべての VSPackage を実装する必要があります、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>します。 VSPackage は、通常によって提供されるサービスを消費、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE proffers、独自の一部のサービスとします。  
   
  VSPackage では、そのメニュー項目を宣言し、.vsct ファイルを使用して既定の項目の状態を確立します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE では、VSPackage が読み込まれるまでこの状態のメニュー項目を表示します。 その後、VSPackage の実装の<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>を有効にするか、メニュー項目を無効にするメソッドが呼び出されます。  

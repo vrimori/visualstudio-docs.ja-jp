@@ -1,7 +1,7 @@
 ---
 title: プロパティの拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9db64799426eea6aeaecdd0890da683a7597a129
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: be53c59cc0a1baf5331502c3079ee741751c53eb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533486"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303707"
 ---
 # <a name="extending-properties"></a>プロパティの拡張
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[拡張プロパティ](https://docs.microsoft.com/visualstudio/extensibility/internals/extending-properties)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **プロパティ**ウィンドウはすべてサポートしています、COM と COM + コンポーネントのユニバーサル プロパティ ブラウザーを[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]製品です。 **プロパティ**ウィンドウは`ITypeInfo`情報および COM + 統合開発環境 (IDE) でその他のウィンドウで現在選択されているオブジェクトのデザイン時プロパティの一覧にメタデータを入力します。  
   
  **プロパティ**ウィンドウでは、キーボード、f4 キーを押すか、選択して開くことができますが、**プロパティ ウィンドウ**上、**ビュー**を表示および編集 メニューを使用構成に依存しない、デザイン時のプロパティと選択したオブジェクトのイベント。 ソリューションやプロジェクトの関連付けの構成に依存するプロパティに表示される[プロパティ ページ](../../extensibility/internals/property-pages.md)します。 詳細については、次を参照してください。 [NIB: プロジェクト プロパティ](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50)、[構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)、および[プロジェクトにおける NIB: 項目の管理](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)します。  
@@ -96,5 +94,5 @@ ms.locfileid: "47533486"
  説明方法[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]参照、データ接続、フォルダー、およびソリューションとプロジェクトを通じて、開発作業に必要なファイルなどの項目を効率的に管理します。  
   
  [Visual Studio の他の部分の拡張](../../extensibility/extending-other-parts-of-visual-studio.md)  
- 使用する方法について説明します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の残りの部分に一致する UI 要素を作成するサービス[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] サービスを使用して、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の他の部分に相当する UI 要素を作成する方法について説明します。
 

@@ -1,7 +1,7 @@
 ---
 title: カスタム プロジェクトと項目テンプレートの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 586da5dc-f678-402b-afd0-0332959fd7a6
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cd850cf73f9d7a9c443c374bd8a83e48c3470a31
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 3135702050caf1b1825c41eb909958a7ab5d8ffb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "47593119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49304630"
 ---
 # <a name="creating-custom-project-and-item-templates"></a>カスタム プロジェクト テンプレートと項目テンプレートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成するカスタム プロジェクトと項目テンプレート](https://docs.microsoft.com/visualstudio/extensibility/creating-custom-project-and-item-templates)します。  
-  
 Visual Studio SDK には、カスタム プロジェクト テンプレートとカスタム項目テンプレートを作成するプロジェクト テンプレートが含まれています。 これらのテンプレートは、いくつかの一般的なパラメーター置換を含めるし、zip ファイルとしてビルドします。 自動的に展開されていないとは、実験用インスタンスで使用できません。 Zip ファイルをコピーする必要があります、場所にファイル  
   
  テンプレートの作成テンプレートを使用してより大きな拡張機能でテンプレートを追加できます。 これにより、ソース ファイルでバージョン管理を実装し、1 つの VSIX パッケージ プロジェクト テンプレートのグループを作成できます。  

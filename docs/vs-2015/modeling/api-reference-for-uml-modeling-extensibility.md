@@ -1,7 +1,7 @@
 ---
 title: UML モデリング機能拡張の API リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,19 +16,17 @@ caps.latest.revision: 11
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: db042d59ce5f7363d9ed45e2baebbea45d3a0de4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7109c85781c6a69e9b2db9f1f8734b9f2d1efc46
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540149"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301334"
 ---
 # <a name="api-reference-for-uml-modeling-extensibility"></a>UML モデリング機能拡張の API リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデリング機能拡張の API リファレンス](https://docs.microsoft.com/visualstudio/modeling/api-reference-for-uml-modeling-extensibility)します。  
-  
-プログラム コードを記述して、Visual Studio を使用して作成したモデルを読み取ったり、変更したりすることができます。 API リファレンスには、この操作を実行するために役に立つ、特定のクラスに関する情報が掲載されています。 タスク指向の詳細については、下にあるトピックを参照してください。 [UML を拡張モデルと図](../modeling/extend-uml-models-and-diagrams.md)します。 UML モデルをサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+プログラム コードを記述して、Visual Studio を使用して作成したモデルを読み取ったり、変更したりすることができます。 API リファレンスには、この操作を実行するために役に立つ、特定のクラスに関する情報が掲載されています。 タスク指向の詳細については、下にあるトピックを参照してください。 [UML を拡張モデルと図](../modeling/extend-uml-models-and-diagrams.md)します。 UML モデルをサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ## <a name="assemblies"></a>アセンブリ  
   

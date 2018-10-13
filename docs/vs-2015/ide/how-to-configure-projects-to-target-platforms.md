@@ -1,7 +1,7 @@
 ---
 title: '方法 : プロジェクトを構成して対象プラットフォームを設定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a79b32583b130b62dc9946acd71776ac67159817
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2e945a3a55f1ea4f9e68b96209e350c843324c30
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533609"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49294516"
 ---
 # <a name="how-to-configure-projects-to-target-platforms"></a>方法 : プロジェクトを構成して対象プラットフォームを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 構成 Projects to Target Platforms](https://docs.microsoft.com/visualstudio/ide/how-to-configure-projects-to-target-platforms)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、64 ビット プラットフォームを含む、さまざまなプラットフォーム向けにアプリケーションを設定できます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] での 64 ビット プラットフォームのサポートについて詳しくは、「[64 ビット アプリケーション](http://msdn.microsoft.com/library/fd4026bc-2c3d-4b27-86dc-ec5e96018181)」を参照してください。  
   
 ## <a name="targeting-platforms-with-the-configuration-manager"></a>構成マネージャーを使用した対象プラットフォームの指定  

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのリファクタリング | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c4af183871634a4008d48226b171383e8e87ae88
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e621d8bccdb8dceb1a6516ff0c070393962cea11
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533838"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303798"
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でのコード生成](https://docs.microsoft.com/visualstudio/ide/code-generation-in-visual-studio)します。  
-  
 リファクタリングとは、コードの動作を変更することなく、簡単にコードを維持、理解、拡張するためのプロセスです。 一般的な*リファクタリング*の一部には、次のものがあります。  
   
 1.  長い関数を短く分割する  
@@ -48,7 +46,7 @@ ms.locfileid: "47533838"
  [コードの作成とリファクタリング (C++)](http://msdn.microsoft.com/library/56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6)  
   
 ### <a name="refactoring-in-f"></a>リファクタリング [F#]  
- F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual f# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。  
+ F# のリファクタリングのサポートは、サード パーティ製の Visual Studio 拡張機能の [Visual F# Power Tool](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff) で提供されます。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio IDE](../ide/visual-studio-ide.md)   

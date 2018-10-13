@@ -1,7 +1,7 @@
 ---
 title: '&lt;PackageFiles&gt;要素 (ブートス トラップ) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: a82d60cd3bee12dcba9798826d03bd7aea7612be
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b4cddd6752872cf03ef5f5d55b0cbbb88aa1e66a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535970"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49302784"
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt;要素 (ブートス トラップ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ &lt;PackageFiles&gt;要素 (ブートス トラップ)](https://docs.microsoft.com/visualstudio/deployment/packagefiles-element-bootstrapper)します。  
-  
 `PackageFiles`要素が含まれます`PackageFile`の結果として実行されるインストール パッケージを定義するには、要素、`Command`要素。  
   
 ## <a name="syntax"></a>構文  
@@ -52,7 +50,7 @@ ms.locfileid: "47535970"
 ```  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
- `PackageFiles`要素には、次の属性。  
+ `PackageFiles` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  

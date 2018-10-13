@@ -1,7 +1,7 @@
 ---
 title: カスタム ユーザー インターフェイス (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
 caps.latest.revision: 29
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e544408f4cea3e9ec4e388ab76f4224abd7aa69
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 551154d1990eee1d7164f3dcbf5ba9cbf4984c11
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535353"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303954"
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>カスタム ユーザー インターフェイス (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム ユーザー インターフェイス (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/custom-user-interface-source-control-vspackage)します。  
-  
 VSPackage は、Visual Studio Command Table (.vsct) ファイルをそのメニュー項目と既定の状態を宣言します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackage が読み込まれるまで、統合開発環境 (IDE) が既定の状態でメニュー項目を表示します。 その後、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>を有効にするか、メニュー項目を無効にするメソッドが呼び出されます。  
   
  VSPackage では、コマンドのユーザー インターフェイス (UI) のコンテキストによって自動的に読み込むことができますので、VSPackage がレジストリ キーを設定できます、UI の特定のコンテキストに切り替えるだけではなく、オンデマンドで VSPackage を読み込む必要がありますが、通常、ソースを制御します。 AutoLoadPackages のレジストリ キーの詳細については、次を参照してください。[管理 Vspackage](../../extensibility/managing-vspackages.md)します。  

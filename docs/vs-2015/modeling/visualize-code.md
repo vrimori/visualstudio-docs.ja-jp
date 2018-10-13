@@ -1,7 +1,7 @@
 ---
 title: コードの視覚化 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 49
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b0913f88db43743abdc410f75cbfc0d56dc7b46b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b7caa6af725fc1af5551e9b705e609e25f74121b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539042"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303447"
 ---
 # <a name="visualize-code"></a>コードの視覚化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コードの視覚化](https://docs.microsoft.com/visualstudio/modeling/visualize-code)します。  
-  
 Visual Studio の視覚化ツールとモデリング ツールを使って、既存のコードを理解し、アプリケーションを記述することができます。 これにより、自分が実行した変更がコードにどのような影響を与えるかを理解し、その変更に起因する作業とリスクを評価することができます。 例:  
   
 -   コード内のリレーションシップを理解するには、そのリレーションシップをビジュアルにマッピングします。  
