@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 網かけによるレンダリング エラーのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,17 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bd3416e9a3902a77489b4d3a5547e3614376c59
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c73553e73dc2010afb03deba9a1421e76f962308
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546107"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49210172"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>チュートリアル: 網かけによるレンダリング エラーのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: デバッグのレンダリング エラー期日の網かけに](https://docs.microsoft.com/visualstudio/debugger/graphics/walkthrough-debugging-rendering-errors-due-to-shading)します。  
-  
-このチュートリアルを使用する方法について説明[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]グラフィックス診断をシェーダーのバグが原因正しく色付けがオブジェクトを調査します。  
+このチュートリアルでは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のグラフィックス診断を使用して、シェーダーのバグが原因で正しくない色が指定されたオブジェクトを調べる方法を示します。  
   
  このチュートリアルでは、次の方法を示します。  
   
@@ -48,7 +46,7 @@ ms.locfileid: "47546107"
   
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>グラフィックス ログのフレームを調査するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、不足しているモデルを表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス ログ ドキュメント ウィンドウが表示され[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 このウィンドウの上部には、選んだフレームのレンダー ターゲットの出力が表示されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、モデルの欠落を表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス ログのドキュメント ウィンドウが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に表示されます。 このウィンドウの上部には、選んだフレームのレンダー ターゲットの出力が表示されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
   
 2.  **[フレーム一覧]** で、オブジェクトが正しく表示されていないフレームを選びます。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックのログのドキュメント ウィンドウは次のようになります。  
   
@@ -92,7 +90,7 @@ ms.locfileid: "47546107"
   
 2.  頂点シェーダーの出力構造体 (ピクセル シェーダーに入力される部分) を探します。 このシナリオでは、この構造体の名前は `output`です。 頂点シェーダー コードを調べて、おそらく他のユーザーがデバッグしたことが原因で、 `color` 構造体の `output` メンバーが完全に不透明な黒に明示的に設定されていることを確認します。  
   
-3.  色のメンバーが入力構造からコピーされないことを確認します。 `output.color` 構造が返される直前に `output` の値が完全に不透明な黒に設定されているため、 `output` の値が前の行で正しく初期化されていないことを確認することをお勧めします。 `output.color` の値を観察しながら、 `output.color`を黒に設定する行に達するまで頂点シェーダー コードをステップスルーします。 黒に設定されるまで `output.color` の値は初期化されないことにご注意ください。 これにより、 `output.color` を黒に設定するコードの行を削除するのではなく、修正する必要があることが確認できます。  
+3.  色のメンバーが入力構造からコピーされないことを確認します。 `output.color` 構造が返される直前に `output` の値が完全に不透明な黒に設定されているため、 `output` の値が前の行で正しく初期化されていないことを確認することをお勧めします。 `output.color` の値を観察しながら、`output.color` を黒に設定する行に達するまで頂点シェーダー コードをステップスルーします。 黒に設定されるまで `output.color` の値は初期化されないことにご注意ください。 これにより、 `output.color` を黒に設定するコードの行を削除するのではなく、修正する必要があることが確認できます。  
   
      !["Output.color"の値は黒です。](../debugger/media/gfx-diag-demo-render-error-shader-step-7.png "gfx_diag_demo_render_error_shader_step_7")  
   

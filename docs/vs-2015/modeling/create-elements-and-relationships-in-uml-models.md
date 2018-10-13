@@ -1,7 +1,7 @@
 ---
 title: UML モデル内の要素および関係の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 55d1a54fad3a420c60cf69bc93d29a675f9e802e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d0e68a3701d4455c0a627bd275eaab2cd857abc1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545492"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198550"
 ---
 # <a name="create-elements-and-relationships-in-uml-models"></a>UML モデル内に要素および関係を生成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[で UML モデル要素および関係を作成する](https://docs.microsoft.com/visualstudio/modeling/create-elements-and-relationships-in-uml-models)します。  
-  
 Visual Studio の拡張機能のプログラム コードでは、要素とリレーションシップを作成および削除できます。  
   
 ## <a name="create-a-model-element"></a>モデル要素の作成  

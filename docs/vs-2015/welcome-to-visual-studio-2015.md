@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2015 へようこそ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,12 +16,12 @@ ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 128
 ms.author: gewarren
 manager: crdun
-ms.openlocfilehash: 71ef72b3374967cb977ad8891b66fd0b91732707
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1f950ffa99fa6c68d51349e2b059b3e621ed069d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544653"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231238"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>Visual Studio 2015 へようこそ
 [!INCLUDE[vs2017banner](includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
   
  [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=517106) を無料でダウンロードし、コーディングをすぐに開始してください。 クロス プラットフォーム開発を行う場合は、オプションのパッケージをインストールします。 ( [Visual Studio の他のエディション](http://www.visualstudio.com/products/compare-visual-studio-products-vs)にはさらに多くの機能があります。)  
   
- すぐに作業に取りかかり、新しいプロジェクトを作成し、コードの記述を開始してください。 作成するアプリの種類を選択します。 こともできます[ツアー](./ide/visual-studio-ide.md)ツールに慣れるために Visual Studio IDE の。  
+ すぐに作業に取りかかり、新しいプロジェクトを作成し、コードの記述を開始してください。 作成するアプリの種類を選択します。 あるいは、Visual Studio IDE の [ツアーを見て、](./ide/visual-studio-ide.md) ツールの理解を深めてください。  
   
  忘れずに [コード ギャラリー](https://code.msdn.microsoft.com/) を調べ、アプリをすばやく作成するのに役立つサンプルを見つけてください。  
   
@@ -57,15 +57,15 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
   
  アプリ要件に基づいて必要なツールと使用する言語を選択します。  
   
-1.  [Xamarin for Visual Studio](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): 一般的なコードのすべてのデバイス ベース (C#)  
+1.  [Xamarin for Visual Studio](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): すべてのデバイスを対象とする C# の共通コード ベース  
   
-2.  [Visual Studio での Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42): HTML、CSS、および JavaScript または Typescript の基本の共通コード  
+2.  [Apache Cordova with Visual Studio](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42): HTML、CSS、および JavaScript または Typescript 用の共通コード ベース  
   
 3.  [Visual Studio Tools for Unity](./cross-platform/visual-studio-tools-for-unity.md): c# での 2d/3d ゲーム開発  
   
-4.  [クロスプラット フォーム開発用 C++](./cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++ の共有コード ライブラリとアプリ  
+4.  [クロスプラットフォーム開発用 C++](./cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++ の共有コード ライブラリとアプリ  
   
-5.  [Visual Studio Emulator for Android](./cross-platform/visual-studio-emulator-for-android.md): Visual Studio Emulator for Android: デバッグおよび IDE に関係なく、Android アプリのテスト  
+5.  [Visual Studio Emulator for Android](./cross-platform/visual-studio-emulator-for-android.md): Visual Studio Emulator for Android: IDE とは関係なく、Android アプリをデバッグおよびテストします。  
   
 ## <a name="connect-your-apps-to-services"></a>アプリをサービスに接続する  
  追加の設定なしで以下のサービスに接続できます (各サービスのアカウントを持っていることを前提とします)。  
@@ -82,13 +82,13 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
 ## <a name="build-test-and-manage-your-code"></a>コードのビルド、テスト、管理  
   
 ### <a name="check-in-your-code"></a>コードのチェックイン  
- チームで作業している場合、最新バージョンのコードを共有して、チーム全員が同じコードベースを使用する必要があります。 Visual Studio は Visual Studio Team Services や Team Foundation Server とシームレスに統合し、Git または TFVC (Team Foundation バージョン管理) でのバージョン管理を提供します。 Visual Studio Team Services を使用してコードをクラウドに格納すると、ローカル サーバーのメンテナンスが不要になります。 オンプレミスのサーバーを使用する場合は、Team Foundation Server を使用します。 コード プロジェクトを作成するたびに、そのプロジェクトをバージョン管理に追加するオプションが表示されます。 バージョン管理についてシステムは、ニーズに最適:[バージョン管理を使用して、](http://msdn.microsoft.com/library/33267cee-fe5f-4aa3-b2cd-6d22ceace314)します。  
+ チームで作業している場合、最新バージョンのコードを共有して、チーム全員が同じコードベースを使用する必要があります。 Visual Studio は Visual Studio Team Services や Team Foundation Server とシームレスに統合し、Git または TFVC (Team Foundation バージョン管理) でのバージョン管理を提供します。 Visual Studio Team Services を使用してコードをクラウドに格納すると、ローカル サーバーのメンテナンスが不要になります。 オンプレミスのサーバーを使用する場合は、Team Foundation Server を使用します。 コード プロジェクトを作成するたびに、そのプロジェクトをバージョン管理に追加するオプションが表示されます。 ニーズに最適のバージョン管理システムを調べるには、「 [バージョン管理の使用](http://msdn.microsoft.com/library/33267cee-fe5f-4aa3-b2cd-6d22ceace314)」を参照してください。  
   
 ### <a name="build-your-app"></a>アプリのビルド  
  [アプリをローカルでビルドし、](./ide/compiling-and-building-in-visual-studio.md) それが正常に機能することを確認します。 [デバッグ ツールを使用して](./debugger/debugging-in-visual-studio.md) 、アプリの問題を修正します。 あるいは、共有ビルド サーバーまたはクラウドにプロジェクトをビルドすることもできます。 チームの開発者がバージョン管理にチェックインしたコードをビルドするよう、ビルド プロセスを自動化します。 たとえば、1 つまたは複数のプロジェクトを夜間にビルドすることも、コードのチェックインごとにビルドすることもできます。  
   
 ### <a name="test-your-app"></a>アプリのテスト  
- [単体テストを作成し](./test/unit-test-your-code.md)、アプリの品質を向上させます。 このテストはチェックインするたびに、ビルドの一部として実行できます。  
+ [単体テストを作成し](./test/unit-test-your-code.md) 、アプリの品質を向上させます。 このテストはチェックインするたびに、ビルドの一部として実行できます。  
   
  アプリの手動テストと自動化されたテストを計画、作成、実行します。 テスト計画、スイート、テスト ケース、テスト結果は、Visual Studio Team Services でクラウドに、または Team Foundation Server でオンプレミスのサーバーに格納されます。 [アプリケーションのテスト](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)について学びます。  
   
@@ -131,7 +131,7 @@ Visual Studio へようこそ。 デバイスまたはデスクトップで機�
   
 -   [Visual Studio LightSwitch](http://msdn.microsoft.com/library/2021a2cf-f684-493f-8d1b-4cdf39bc6eb3)  
   
--   [DevOps とアプリケーション ライフ サイクル管理](http://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)  
+-   [DevOps とアプリケーション ライフサイクル管理](http://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6)  
   
 -   [ご意見](./ide/talk-to-us.md)
 

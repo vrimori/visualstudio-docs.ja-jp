@@ -1,7 +1,7 @@
 ---
 title: Visual Studio から Windows ストア アプリのデプロイ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1212665b8e7e1c28fa30f50c1cd64a0dc5c217bb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 540a335365102f279f62f0707ee3cf7cc4fe1b53
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537913"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196106"
 ---
 # <a name="deploy-windows-store-apps-from-visual-studio"></a>Visual Studio からの Windows ストア アプリの配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio からデプロイの Windows ストア アプリの](https://docs.microsoft.com/visualstudio/debugger/deploy-windows-store-apps-from-visual-studio)します。  
-  
 Windows にのみ適用されます] (../Image/windows_only_content.png"windows_only_content")  
   
  Visual Studio の配置機能では、Visual Studio を使ってターゲット デバイスに作成した Windows ストア アプリをビルドおよび登録します。 アプリの厳密な登録方法は、ターゲット デバイスがローカルかリモートかによって違います。  
@@ -112,7 +110,7 @@ Windows にのみ適用されます] (../Image/windows_only_content.png"windows_
  次の配置オプションを、スタートアップ プロジェクトのデバッグ プロパティ ページに設定できます。  
   
  **ネットワーク ループバックの許可**  
- セキュリティ上の理由から、標準的な方法でインストールされた [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリは、インストール先のデバイスに対してネットワーク呼び出しを行うことはできません。 既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。 この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。 アプリを [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)] に送信する前に、アプリを適用除外せずにテストする必要があります。  
+ セキュリティ上の理由から、標準的な方法でインストールされた [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリは、インストール先のデバイスに対してネットワーク呼び出しを行うことはできません。 既定では、Visual Studio による配置では、配置されたアプリに対するこの規則の適用は免除されます。 この免除によって、1 台のコンピューター上で通信プロシージャをテストできます。 アプリを [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)]に送信する前に、アプリを適用除外せずにテストする必要があります。  
   
  アプリからネットワーク ループバックの適用除外を削除するには  
   

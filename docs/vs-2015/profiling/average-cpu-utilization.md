@@ -1,7 +1,7 @@
 ---
 title: 平均 CPU 使用状況 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 84c2069df69c63e7fee43f9241ee866f708cc8f8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6e96f396a6c4f3f2129f4d9a57add3b0495332a3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537617"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191738"
 ---
 # <a name="average-cpu-utilization"></a>平均 CPU 使用状況
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[平均 CPU 使用率](https://docs.microsoft.com/visualstudio/profiling/average-cpu-utilization)します。  
-  
 プロセスの期間におけるシステムの論理コアのプロファイリングされたプロセスの平均使用状況を示します。 任意の時点にどのコアがアクティブかは表示されません。 たとえば、特定の期間、2 つのコアがそれぞれキャパシティの 50% で動作している場合、このビューには 1 つの論理コアが使用されているものとして表示されます。  
   
 ## <a name="see-also"></a>関連項目  

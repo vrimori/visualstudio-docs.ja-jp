@@ -1,7 +1,7 @@
 ---
 title: ツールバーにメニュー コント ローラーの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 39
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f6d124b1dc6bcd16b0f4d62c47df521ba25b07b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a5389626f31fa45f04ec58723450baba5370b24f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231180"
 ---
 # <a name="adding-a-menu-controller-to-a-toolbar"></a>メニュー コントローラーのツールバーへの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツールバーにメニュー コント ローラーの追加](https://docs.microsoft.com/visualstudio/extensibility/adding-a-menu-controller-to-a-toolbar)します。  
-  
 このチュートリアルの[ツール ウィンドウにツールバーを追加する](../extensibility/adding-a-toolbar-to-a-tool-window.md)チュートリアルとツール ウィンドウのツールバーにメニュー コント ローラーを追加する方法について説明します。 以下に示す手順も適用できますで作成したツールバーに、[ツールバーの追加](../extensibility/adding-a-toolbar.md)チュートリアル。  
   
  メニュー コント ローラーは、分割コントロールです。 メニュー コント ローラーの左側にあるは、最後に使用されたコマンドを示しをクリックして実行できます。 メニュー コント ローラーの右側にある矢印をクリックすると、その他のコマンドの一覧を開きます。 コマンドの実行の一覧でコマンドをクリックして、メニュー コント ローラーの左側にあるコマンドに置き換えられます。 これで、メニュー コント ローラーは、一覧から最後に使用されたコマンドは常に表示されるコマンド ボタンのように動作します。  

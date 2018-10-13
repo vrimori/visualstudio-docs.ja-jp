@@ -1,7 +1,7 @@
 ---
 title: '[タブで、ウィンドウのプロパティ] ダイアログ ボックスの処理 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3cc1a02108708b3a9430af50d0b69b1ed1610c1b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab70bd420564735e8edaa33cec5aa494bb76fd58
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535494"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241801"
 ---
 # <a name="process-tab-window-properties-dialog-box"></a>[プロセス] タブ ([ウィンドウ プロパティ] ダイアログ ボックス)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロセス] タブの [ウィンドウ プロパティ] ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/process-tab-window-properties-dialog-box)します。  
-  
 使用して、**プロセス**タブを選択したウィンドウのプロセスを識別します。 表示する、[ウィンドウ プロパティ ダイアログ ボックス](../debugger/window-properties-dialog-box.md)、フォーカスを移動、 [Windows ビュー](../debugger/windows-view.md)ウィンドウ。 ツリーで、ウィンドウの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
  次の設定は [使用可能な**プロセス**] タブ。  

@@ -1,7 +1,7 @@
 ---
 title: XAML デザイナーでレイアウト コンテナーにオブジェクトを編成する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 329e41454431c0d19adda5175b455449d4f48e7b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c92af4e78715c608fdee860690fd58561b8bb2d5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537105"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219558"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML デザイナーでレイアウト コンテナーにオブジェクトを編成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XAML デザイナーでレイアウト コンテナーにオブジェクトを編成](https://docs.microsoft.com/visualstudio/designers/organize-objects-into-layout-containers-in-xaml-designer)します。  
-  
 イメージ、ボタン、ビデオなどのオブジェクトをどこに表示させたいか想像してください。 縦か横の単一行の行列、または固定位置に表示させたいのではないでしょうか。  
   
  ページをどのように表示するかについて考える機会が得られたら、レイアウト パネルを選択します。 オブジェクトを追加するための何かが必要になるため、すべてのページはあるものから開始します。 既定は、**グリッド**を変更することができます。  
@@ -109,7 +107,7 @@ ms.locfileid: "47537105"
   
 -   [Border](#Border)  
   
--   [Popup](#Popup)  
+-   [ポップアップ](#Popup)  
   
 -   [ScrollViewer](#Scroll)  
   

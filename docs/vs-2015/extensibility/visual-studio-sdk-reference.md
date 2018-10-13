@@ -1,7 +1,7 @@
 ---
 title: Visual Studio SDK のリファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: a6930db5-a112-4651-8de3-e520df851f82
 caps.latest.revision: 32
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 048423c5ff981b1c3b14ccb9db1ce0ffe1076209
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: db82d0ccfbd4a82686e2b8069a26d3cdadffb73b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535396"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232064"
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK のリファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio SDK リファレンス](https://docs.microsoft.com/visualstudio/extensibility/visual-studio-sdk-reference)します。  
-  
 このセクションには、Visual Studio SDK を使用する開発者向けの Visual Studio の名前空間、関連する名前空間、および関心のあるその他の領域に関する情報が含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容

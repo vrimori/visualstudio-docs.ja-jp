@@ -1,7 +1,7 @@
 ---
 title: 'エラー: リモート コンピューター上の SQL Server に接続できません |。Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a30d9747d954ef70b0400af4a412d6e8d58ee77a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 64f10867668b44c91268a6a27d61ddb1edfb3145
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221768"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>エラー : リモート コンピューター上の SQL Server に接続できません。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: リモート コンピューター上の SQL Server に接続できません](https://docs.microsoft.com/visualstudio/debugger/error-unable-to-connect-to-sql-server-on-remote-machine)します。  
-  
 リモート コンピューター上の SQL Server に接続できません*名前*します。 アクセスが拒否されました。 リモート コンピューターにリモート デバッガーをインストールしてあることを確認してください。 リモート コンピューターがドメイン上にない場合、または Visual Studio がローカル アカウントとして動作している場合は、ローカル アカウントと同一のユーザー名とパスワードをリモート コンピューターに指定しなければなりません。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  

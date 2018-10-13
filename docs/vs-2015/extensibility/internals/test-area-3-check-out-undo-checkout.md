@@ -1,7 +1,7 @@
 ---
 title: 'テスト領域 3: 発信元に戻すチェック アウトの確認 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: ce00c5a5-d472-4f45-8776-d77a1fbe9d37
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ea99ec9b182f63beced94885533c650e7a79671a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2fd293abc674059f7c0046e076e4166b7dffa631
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545093"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49178595"
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>テスト領域 3: チェック アウト/チェック アウトの取り消し
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テスト領域の 3: Out-Undo チェック アウトの確認](https://docs.microsoft.com/visualstudio/extensibility/internals/test-area-3-check-out-undo-checkout)します。  
-  
 このソース管理プラグインのテストの領域を使用して、バージョン ストアから項目を編集し、元に戻してをカバーする、**チェック アウト**と**チェック アウトの取り消し**コマンド。  
   
  **チェック アウト**: マーク バージョン ストア内の項目をチェック アウトと変更読み取り/書き込みをローカルのコピー。  

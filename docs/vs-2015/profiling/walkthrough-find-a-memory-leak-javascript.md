@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: メモリ リークの検出 (JavaScript)| Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 242dd78d7110a36e0c8baf4d1ea1e1a7f323a1c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7feaa8629078be9e5e7a915fe3c09a9599a8f292
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537641"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49234196"
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>チュートリアル: メモリ リークの検出 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: メモリ リーク (JavaScript) の検出](https://docs.microsoft.com/visualstudio/profiling/walkthrough-find-a-memory-leak-javascript)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  このチュートリアルでは、JavaScript メモリ アナライザーを使用し、単純なメモリの問題を特定して修復するプロセスについて説明します。 JavaScript メモリ アナライザーは、Visual Studio で、JavaScript を使用して Windows 用に開発された Windows ストア アプリに対して使用できます。 このシナリオでは、作成されるのと同じペースで破棄されるはずの DOM 要素がメモリに保持されてしまうアプリを作成します。  

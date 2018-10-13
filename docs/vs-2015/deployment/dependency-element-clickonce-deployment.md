@@ -1,7 +1,7 @@
 ---
 title: '&lt;依存関係&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 735b37196586f540186a3ca43c9c315ede51d084
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: af4b3fc79118e25fb5631de1a4ea4d5897355bf1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539422"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214929"
 ---
 # <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;依存関係&gt;要素 (ClickOnce 配置)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;依存関係&gt;要素 (ClickOnce 配置)](https://docs.microsoft.com/visualstudio/deployment/dependency-element-clickonce-deployment)します。  
-  
 をインストールするアプリケーションのバージョンとアプリケーション マニフェストの場所を識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -92,7 +90,7 @@ ms.locfileid: "47539422"
 |---------------|-----------------|  
 |`preRequisite`|任意。 このアセンブリが GAC に既に存在する必要があるを指定します。 有効値は `true` または `false` です。 場合`true`を実行するアプリケーションが失敗した、指定したアセンブリが GAC に存在しません。|  
 |`visible`|任意。 依存関係を含む、最上位のアプリケーション id を識別します。 によって内部的に使用される[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション記憶域とアクティブ化を管理します。|  
-|`dependencyType`|必須。 この依存関係とアプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`. コンポーネントは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`. コンポーネントは、現在のアプリケーションで必要です。|  
+|`dependencyType`|必須。 この依存関係とアプリケーション間のリレーションシップ。 次の値を指定できます。<br /><br /> -   `install`。 コンポーネントは、現在のアプリケーションから別のインストールを表します。<br />-   `preRequisite`。 コンポーネントは、現在のアプリケーションで必要です。|  
 |`codebase`|任意。 アプリケーション マニフェストの完全パスです。|  
 |`size`|任意。 (バイト単位)、アプリケーション マニフェストのサイズ。|  
   

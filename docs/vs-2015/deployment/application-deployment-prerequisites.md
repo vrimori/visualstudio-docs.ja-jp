@@ -1,7 +1,7 @@
 ---
 title: アプリケーション展開の前提条件 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 53
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 3a866105a2b9d4549fd3684dc4726f165d43a7af
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 699d7261db325b23502003f250e8ed2fc61f5c7c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534938"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49217933"
 ---
 # <a name="application-deployment-prerequisites"></a>アプリケーション配置の必要条件
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アプリケーション展開の前提条件](https://docs.microsoft.com/visualstudio/deployment/application-deployment-prerequisites)します。  
-  
 アプリケーションが正常にインストールされ、実行されるようにするには、アプリケーションが依存しているすべてのコンポーネントがターゲット コンピューターに既にインストールされていることを最初に確認する必要があります。 たとえば、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を使用して作成されたほとんどのアプリケーションは、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] に依存します。アプリケーションをインストールする前に、共通言語ランタイムの適切なバージョンが、ターゲット コンピューター上に存在している必要があります。  
   
  これらの前提条件を選択することができます、 **Prerequisites Dialog Box**し、インストールの一部として、.NET Framework およびその他の再頒布可能パッケージをインストールします。 この実習と呼ばれます*ブートス トラップ*します。 次に、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]とも呼ばれる、Setup.exe をという名前の Windows 実行可能プログラムを生成、*ブートス トラップ*します。 ブートストラップは、アプリケーションが実行される前にこれらの必須コンポーネントをインストールします。 これらの前提条件を選択する方法についての詳細については、次を参照してください。 [Prerequisites Dialog Box](../ide/reference/prerequisites-dialog-box.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: プロパティ ウィンドウのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a5ae14866780be08633f5a7cf07f70c5b94bcca7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aa690b88b5ab2d7aac3f8aea9967419dcbd43df1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545076"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241736"
 ---
 # <a name="customizing-the-properties-window"></a>プロパティ ウィンドウのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロパティ ウィンドウのカスタマイズ](https://docs.microsoft.com/visualstudio/modeling/customizing-the-properties-window)します。  
-  
 カスタマイズできますプロパティ ウィンドウの動作と外観をドメイン固有言語 (DSL) で[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 DSL 定義では、各ドメイン クラスのドメインのプロパティを定義します。 既定では、図またはモデル エクスプ ローラーで、クラスのインスタンスを選択するとすべてのドメイン プロパティが [プロパティ] ウィンドウに表示されます。 これにより、ドメイン プロパティの値を編集するダイアグラムで図形のフィールドにマップするがいない場合でもできます。  
   
 ## <a name="names-descriptions-and-categories"></a>名前、説明、およびカテゴリ  
@@ -148,7 +146,7 @@ ms.locfileid: "47545076"
   
  使用してプロパティに属性を設定することができます、**カスタム属性**プロパティ ウィンドウ内のエントリ。  
   
- 型`AnEditor`2 番目のパラメーターで指定された型から派生する必要があります。 2 番目のパラメーターはいずれかになります<xref:System.Drawing.Design.UITypeEditor>または<xref:System.ComponentModel.ComponentEditor>します。 詳細については、「<xref:System.ComponentModel.EditorAttribute>」を参照してください。  
+ 型`AnEditor`2 番目のパラメーターで指定された型から派生する必要があります。 2 番目のパラメーターはいずれかになります<xref:System.Drawing.Design.UITypeEditor>または<xref:System.ComponentModel.ComponentEditor>します。 詳細については、「 <xref:System.ComponentModel.EditorAttribute> 」を参照してください。  
   
  独自のエディターまたはで指定されたエディターのいずれかを指定することができます、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]など<xref:System.Windows.Forms.Design.FileNameEditor>または<xref:System.Drawing.Design.ImageEditor>します。 たとえば、ユーザーがファイル名を入力できるプロパティを持つ、次の手順を使用します。  
   
@@ -184,7 +182,7 @@ ms.locfileid: "47545076"
   
 -   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>、、エディターはダイアログを開くか、ドロップダウン メニューを提供するかどうかを指定します。  
   
- プロパティ グリッドで表示されるプロパティの値をグラフィカルに表したを指定することもできます。 これを行うには、オーバーライド`GetPaintValueSupported`、および`PaintValue`します。  詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+ プロパティ グリッドで表示されるプロパティの値をグラフィカルに表したを指定することもできます。 これを行うには、オーバーライド`GetPaintValueSupported`、および`PaintValue`します。  詳細については、「 <xref:System.Drawing.Design.UITypeEditor> 」を参照してください。  
   
 > [!NOTE]
 >  内の別のコード ファイルにコードを追加、 **Dsl**プロジェクト。  
@@ -213,7 +211,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- 詳細については、「<xref:System.Drawing.Design.UITypeEditor>」を参照してください。  
+ 詳細については、「 <xref:System.Drawing.Design.UITypeEditor> 」を参照してください。  
   
 ## <a name="providing-a-drop-down-list-of-values"></a>値のドロップダウン リストを指定します。  
  選択するユーザーの値の一覧を指定することができます。  

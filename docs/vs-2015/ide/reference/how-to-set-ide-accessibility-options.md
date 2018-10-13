@@ -1,7 +1,7 @@
 ---
 title: '方法: IDE アクセシビリティ オプションを設定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c51e525b097d1282add6d4404173473f43eba815
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5701efe5da55ebd85d683da55f90f41223220c91
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548252"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49205895"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>方法: IDE アクセシビリティ オプションを設定する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: IDE アクセシビリティ オプションを設定](https://docs.microsoft.com/visualstudio/ide/reference/how-to-set-ide-accessibility-options)します。  
-  
   
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] には、視力の弱い方に見やすい表示にしたり、動作に制限があっても入力しやすくするための機能が装備してあります。 たとえば、エディター内のテキストのサイズや色を変更する機能、ツール バーのテキストやボタンのサイズを変更する機能、入力する文字数を減らすためのメソッドやパラメーターのオート コンプリート機能などがあります。  
   

@@ -1,7 +1,7 @@
 ---
 title: '[フォルダーを指定して置換] | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 33
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e693e1166a1612ae8ca82f5d1e8c0e742539da0a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 92029377d5e7d4faf4c6b7f38deda1eecdeaa395
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546537"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228827"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル内の置換](https://docs.microsoft.com/visualstudio/ide/replace-in-files)します。  
-  
 * * ファイル内の置換文字列や正規表現、ファイルの指定したセットのコードを検索し、見つかった一致の一部またはすべてを変更することができます。 見つかった一致項目と実行された処理は、**[結果オプション]** で選択した **[検索結果]** ウィンドウに表示されます。  
   
 > [!NOTE]

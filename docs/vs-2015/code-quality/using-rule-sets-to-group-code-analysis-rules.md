@@ -1,7 +1,7 @@
 ---
 title: コード分析規則のグループに規則を使用して設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ae7374ae6b713fe7fa1911cdcce3effa600482b1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8af8cbc27a61369640a80dbccb4d99dd2466f3a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547956"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220585"
 ---
 # <a name="using-rule-sets-to-group-code-analysis-rules"></a>規則セットを使用したコード分析規則のグループ化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ルール セットのコード分析規則のグループを使用して](https://docs.microsoft.com/visualstudio/code-quality/using-rule-sets-to-group-code-analysis-rules)します。  
-  
 コード分析を構成するとき[!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、または[!INCLUDE[vsPro](../includes/vspro-md.md)]、Microsoft の組み込みの一覧から選択できます*ルール セット*します。 規則セットは、対象の問題および特定の条件を識別するコード分析規則の論理的なグループです。 たとえば、パブリックに利用可能な Api は、コードをスキャンするように設計された規則セットを適用することができます。 または最小推奨規則のみを含む規則セットを適用することができます。 すべてのルールを含む規則セットを適用することもできます。  
   
  表示されるを追加または削除、ルールまたはルールを変更することでの設定ルールをカスタマイズすることができます、**エラー一覧**警告またはエラーのいずれかのウィンドウ。 カスタマイズした規則セットで、特定の開発環境の要件を満たすことができます。 規則セットをカスタマイズする場合、処理に役立つ検索ツールおよびフィルター処理ツールが規則セットのページに表示されます。  

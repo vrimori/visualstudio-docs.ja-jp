@@ -1,7 +1,7 @@
 ---
 title: コード エディターとテキスト エディターでのコードの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -65,18 +65,15 @@ caps.latest.revision: 46
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cb879efdc3370578d57b529194a9a8790c9136dc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 64b8af9e995dc863fe578f61e22647726da73b35
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535889"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220533"
 ---
 # <a name="writing-code-in-the-code-and-text-editor"></a>コード エディターとテキスト エディターでのコードの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[コード エディターとテキスト エディターでコードを記述](https://docs.microsoft.com/visualstudio/ide/writing-code-in-the-code-and-text-editor)します。
-
 Visual Studio エディターには、コードの記述と管理を容易にする多数の機能が用意されています。 アウトラインを使用すると、個々のコード ブロックを展開したり折りたたんだりできます。 コードの詳細を調べるには、IntelliSense、 **オブジェクト ブラウザー**、および呼び出し階層を使用します。 コード内を移動するには、 **[移動]**、 **[定義へ移動]**、 **[すべての参照の検索]** などの機能を使用します。 コード スニペットを使用してコード ブロックを挿入し、 **[使用法から生成]** などの機能を使用してコードを生成することもできます。 初めて Visual Studio 2015 エディターを使用する場合は、簡単な概要について「 [コードの編集](https://www.visualstudio.com/features/ide-vs) 」を参照してください。  
 
  コードは、いくつかの方法で表示できます。 ソリューションのクラス ビューを表示するには、 **[クラス ビュー]** ウィンドウを開くか、 **ソリューション エクスプローラー** でクラス ファイル以下のノードを展開します。  
@@ -130,7 +127,7 @@ Visual Studio エディターには、コードの記述と管理を容易にす
 
  ![[進む] と [戻る] のナビゲーション ボタン](../ide/media/vs2015-nav-buttons.png "VS2015_Nav_buttons")  
 
- また、コード ウィンドウの強化されたスクロール バーを使用すると、コード全体を見渡すことができます。 マップ モードでは、スクロール バーでカーソルを上下に移動するときに、コードのプレビューを見ることができます。詳細については、「[方法: ScrollBar のカスタマイズによるコードの追跡](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)」を参照してください。  
+ また、コード ウィンドウの強化されたスクロール バーを使用すると、コード全体を見渡すことができます。 マップ モードでは、スクロール バーでカーソルを上下に移動するときに、コードのプレビューを見ることができます。詳細については、「 [How to: Track Your Code by Customizing the Scrollbar](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md)」を参照してください。  
 
  次のコマンドは、コード特有のナビゲーションに使用できます。  
 

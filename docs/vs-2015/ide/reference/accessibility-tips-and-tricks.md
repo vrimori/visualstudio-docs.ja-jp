@@ -1,7 +1,7 @@
 ---
 title: アクセシビリティのヒントとテクニック | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39f12a7f895d4bd1a625b22dee1fa3465a625bec
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f4fe4f45f6c858ede7bebc7cbbf3a5e734130000
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547439"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241021"
 ---
 # <a name="accessibility-tips-and-tricks"></a>アクセシビリティのヒントとテクニック
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アクセシビリティのヒントとテクニック](https://docs.microsoft.com/visualstudio/ide/reference/accessibility-tips-and-tricks)します。  
-  
   
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] にはアクセシビリティ機能が組み込まれているため、簡単にキーボードで作業したり、スクリーン リーダーやその他の支援技術デバイスを使用したりすることができます。 ここでは、便利なショートカット キーのいくつかの組み合わせのほか、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のアクセシビリティを向上するために最適化する場合の推奨事項についてもいくつか示します。  
   

@@ -1,7 +1,7 @@
 ---
 title: 'DA0022: ジェネレーション 2 のガベージ コレクションが高率です。 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1a6eb6c7bb95357bfbcfd25f9741316f59835aeb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 270f2b90894c1dc7ede8f45c34c1e4c542fae56a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546308"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49200396"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: ジェネレーション 2 のガベージ コレクションが高率です
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[da 0022: ジェネレーション 2 ガベージ コレクションの率が高い](https://docs.microsoft.com/visualstudio/profiling/da0022-high-rate-of-gen-2-garbage-collections)します。  
-  
 規則 Id |DA 0022 |  
 |カテゴリ |。NET Framework の使用 |  
 |プロファイル方法 |すべて |  

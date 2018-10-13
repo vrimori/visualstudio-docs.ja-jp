@@ -1,7 +1,7 @@
 ---
 title: コードへのブックマークの設定 | Microsoft ドキュメント
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 989333e23310009a4b3282fb4520395a32d6b270
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bbb6775411af7bc93cd8168af460974fb5c18d3d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545150"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219753"
 ---
 # <a name="setting-bookmarks-in-code"></a>コードへのブックマークの設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード内のブックマークを設定](https://docs.microsoft.com/visualstudio/ide/setting-bookmarks-in-code)します。  
-  
 ブックマークを使用してコード内の行に印を付けると、特定の位置にすぐに戻り、印を付けた位置の間をすばやく移動することができます。  
   
  ブックマークのコマンドとアイコンは、ブックマーク ウィンドウ (**[表示]/[ブックマーク ウィンドウ]**) と [テキスト エディター] ツール バーの 2 か所で使用できます。  

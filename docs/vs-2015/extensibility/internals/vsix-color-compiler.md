@@ -1,7 +1,7 @@
 ---
 title: VSIX カラー コンパイラ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 08358c8d4b77834bf0dfefe626891de44b2b754c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3594d587f9d4968127b6e81a5c5e3b5549a9df89
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538346"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207325"
 ---
 # <a name="vsix-color-compiler"></a>VSIX カラー コンパイラ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX カラー コンパイラ](https://docs.microsoft.com/visualstudio/extensibility/internals/vsix-color-compiler)します。  
-  
 Visual Studio 拡張機能カラー コンパイラ ツールは、その色は、Visual Studio で使用できるように、.pkgdef にファイルの変換は、コンソール アプリケーションを既存の Visual Studio のテーマの色を表す .xml ファイルを受け取るには。 .Xml ファイルの違いを比較しやすいため、このツールはソース管理でのカスタムの色の管理に役立ちます。 関連付けることができますビルド環境にビルドの出力は、有効な .pkgdef ファイルようにします。  
   
  **テーマの XML スキーマ**  
