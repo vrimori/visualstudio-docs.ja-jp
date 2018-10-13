@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語を定義する方法 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5a6d8e38231de3877f4b9f4087b98fa6582f7c21
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 018b14a3bd52cf097e5afa81fd3703d9ba46e087
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49295179"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>方法: ドメイン固有言語を定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語を定義する方法](https://docs.microsoft.com/visualstudio/modeling/how-to-define-a-domain-specific-language)します。  
-  
 ドメイン固有言語 (DSL) を定義するには、テンプレートから [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ソリューションを作成します。 ソリューションの主要な機能は DSL 定義図です。これは DslDefinition.dsl に保存されています。 DSL 定義は、DSL のクラスとシェイプを定義します。 これらの要素を変更および追加した後で、プログラム コードを追加して DSL を詳細にカスタマイズできます。  
   
  作業することをお勧めの Dsl に慣れていない場合、 **DSL ツール ラボ**、このサイトで入手できます: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
@@ -242,7 +240,7 @@ ms.locfileid: "47592935"
   
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>図にシェイプとして表示する要素のクラスを定義するには  
   
-1.  **定義および」の説明に従って、ドメイン クラスをテスト**[ドメイン クラスを定義する](#classes)**します。**   
+1.  **定義および」の説明に従って、ドメイン クラスをテスト**[ドメイン クラスを定義する](#classes)**します。**  
   
     -   クラスの親はルート クラスである必要があります。 つまり、ルート クラスと新しいドメイン クラスの間に埋め込みリレーションシップが存在している必要があります。  
   

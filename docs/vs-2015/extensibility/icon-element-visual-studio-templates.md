@@ -1,7 +1,7 @@
 ---
 title: Icon 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ec01d903-f4c2-4ca2-9cbc-e939ec84016c
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a0a7cc4835dc37ac5527fb5ddf7c551b19aa38c0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f05aa7ad86061158b9a36bd232ae6e80d3f22107
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546805"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281815"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Icon 要素 (Visual Studio テンプレート)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Icon 要素 (Visual Studio テンプレート)](https://docs.microsoft.com/visualstudio/extensibility/icon-element-visual-studio-templates)します。  
-  
 パスと、いずれかで表示されるアイコンとして使用するイメージ ファイルのファイル名を指定します、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックスで、テンプレート。  
   
  \<VSTemplate>  

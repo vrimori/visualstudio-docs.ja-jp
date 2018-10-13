@@ -1,7 +1,7 @@
 ---
 title: ツールおよびツールボックスのカスタマイズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 28
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 97682059e90bac38b0b8b00492ff9fd50a36ffab
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 69ee365e3bc6902ffecd755d6f788b7f9e238c52
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535015"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49290733"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>ツールおよびツールボックスのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタマイズ ツールおよびツールボックス](https://docs.microsoft.com/visualstudio/modeling/customizing-tools-and-the-toolbox)します。  
-  
 ユーザーがモデルに追加可能な要素についてツールボックス項目を定義する必要があります。 ツールには要素ツールと接続ツールの 2 種類があります。 生成されたデザイナーで、ユーザーは要素ツールを選択して図形を図へドラッグすることができ、接続ツールを選択して図形間のリンクを描画できます。 一般にユーザーは、要素ツールを使用するとドメイン クラスのインスタンスをモデルに追加することができ、接続ツールを使用するとドメイン リレーションシップのインスタンスを追加できます。  
   
  このトピックの内容:  

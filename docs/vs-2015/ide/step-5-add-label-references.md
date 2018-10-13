@@ -1,7 +1,7 @@
 ---
 title: '手順 5: ラベルの参照の追加 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2c82e271ef4dcfd1172f8fc386f77681b8f80244
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 829911bc2f08010b9e0d3d9c710862097720d4df
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547777"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285225"
 ---
 # <a name="step-5-add-label-references"></a>手順 5: ラベルの参照の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 5: ラベルの参照の追加](https://docs.microsoft.com/visualstudio/ide/step-5-add-label-references)します。  
-  
 プログラムでは、プレーヤーがどのラベル コントロールをクリックしたかを追跡する必要があります。 現在のところ、プレーヤーが選択したすべてのラベルが表示されます。 しかし、次のように変更します。 1 つ目のラベルがクリックされると、プログラムではラベルのアイコンを表示します。 2 つ目のラベルがクリックされると、一時的に両方のアイコンを表示した後に、再びアイコンを非表示にします。 *参照変数*を使用して、1 回目および 2 回目にどのラベル コントロールがクリックされたかを追跡します。  
   
 ### <a name="to-add-label-references"></a>ラベルの参照を追加するには  

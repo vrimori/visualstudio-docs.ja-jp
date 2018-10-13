@@ -1,7 +1,7 @@
 ---
 title: アクティビティ デザイナーの移行 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: steved0x
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: b144b47670f794ce29d01d3916c3f2f4295fff9e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4f699cb378ceb8ee9b236c2d2e8b47b3d7f40944
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546079"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49284519"
 ---
 # <a name="transition-activity-designer"></a>Transition アクティビティ デザイナー
 <xref:System.Activities.Statements.Transition> は、2 つの状態間の遷移を表します。  

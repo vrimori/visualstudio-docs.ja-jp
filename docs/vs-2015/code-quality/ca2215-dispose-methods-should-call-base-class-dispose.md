@@ -1,7 +1,7 @@
 ---
 title: '2215: ca Dispose メソッドを呼び出します基底クラス dispose |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,15 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: bacd16fa8c58fcbe6646e1b7c5f2a26fad8e4ce3
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 9115e661b5bd38a23e1429d545d29725a164069a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589149"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296882"
 ---
 # <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Dispose メソッドから基本クラスの破棄を呼び出します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2215: Dispose メソッドが基底クラス dispose を呼び出す必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca2215-dispose-methods-should-call-base-class-dispose)します。
-
 |||
 |-|-|
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|

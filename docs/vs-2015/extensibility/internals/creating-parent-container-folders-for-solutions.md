@@ -1,7 +1,7 @@
 ---
 title: ソリューションの親コンテナーのフォルダーを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a172598ebe54007c6b0a7b2c6843d04b49a2b72a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f731c9f441aecf5277dafffc5cc8b10d1a703a4b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545867"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307717"
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナー フォルダーの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューションの親コンテナー フォルダーを作成する](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-parent-container-folders-for-solutions)します。  
-  
 ソース管理プラグイン API バージョン 1.2 では、ユーザーは、ソリューション内のすべての Web プロジェクトの 1 つのルートのソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (サー) が呼び出されます。  
   
  ソース管理プラグイン API バージョン 1.1 では、ユーザーは、ソース管理にマルチ プロジェクト ソリューションを追加すると、ユーザーを求め Web プロジェクトごとに 1 つのソース コントロールの先を指定されました。  

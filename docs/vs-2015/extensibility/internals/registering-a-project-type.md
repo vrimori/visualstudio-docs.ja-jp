@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類を登録する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: dfc0e231-6b4e-447d-9d64-0e66dea3394a
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 336658e0a216f7fc24435715bf978ce5badefe5c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 30956d812aa2ece166231d6ae7580b226025e308
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548143"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271779"
 ---
 # <a name="registering-a-project-type"></a>プロジェクト タイプの登録
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類を登録する](https://docs.microsoft.com/visualstudio/extensibility/internals/registering-a-project-type)します。  
-  
 新しいプロジェクトの種類を作成するときに、有効にするレジストリ エントリを作成する必要があります[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を認識し、プロジェクトの種類を使用します。 通常、これらのレジストリ エントリは、レジストリ スクリプト (.rgs) ファイルを使用して作成します。  
   
  次の例で、レジストリからステートメントは、既定のパスを提供し、データ該当する場合、後の表の各ステートメントに対してレジストリ スクリプトからエントリを含みます。 テーブルでは、スクリプトのエントリと、ステートメントに関する追加情報を提供します。  

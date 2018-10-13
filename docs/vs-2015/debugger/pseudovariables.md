@@ -1,7 +1,7 @@
 ---
 title: 擬似変数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dc6c4f7240e32cd70a31ef90a2c890420bf1b336
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 028ca4630ca2e07b8f522d3cb630305d0e3ae5d4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539185"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281790"
 ---
 # <a name="pseudovariables"></a>擬似変数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[擬似変数](https://docs.microsoft.com/visualstudio/debugger/pseudovariables)します。  
-  
 擬似変数は変数ウィンドウで特定の情報を表示するために使用条件または**クイック ウォッチ**  ダイアログ ボックス。 通常の変数を入力するときと同様に、擬似変数を入力できます。 ただし、擬似変数は変数ではなく、プログラム内の変数名に対応しません。  
   
 ## <a name="example"></a>例  

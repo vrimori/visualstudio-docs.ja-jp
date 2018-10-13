@@ -1,7 +1,7 @@
 ---
 title: '方法: プロジェクトにクラス ダイアグラムを追加する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c0264aa4a514b8e508ef9d06ba75f212b629b99c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b0246975fbe5d0537c8a2f0a792e6d1acb9852e9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539935"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271389"
 ---
 # <a name="how-to-add-class-diagrams-to-projects-class-designer"></a>方法: プロジェクトにクラス ダイアグラムを追加する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: クラス ダイアグラムを追加するプロジェクト (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-add-class-diagrams-to-projects-class-designer)します。  
-  
 クラスおよび他の型の設計、編集およびリファクタリングを行うには、クラス ダイアグラムを Visual C# .NET、Visual Basic .NET、または C++ プロジェクトに追加します。 プロジェクト内のコードの異なる部分を視覚化するには、複数のクラス ダイアグラムをプロジェクトに追加します。  
   
  複数のアプリでコードを共有しているプロジェクトからは、クラス ダイアグラムを作成できません。 UML クラス ダイアグラムを作成するには、「[UML モデリング プロジェクトおよびダイアグラムを作成する](../modeling/create-uml-modeling-projects-and-diagrams.md)」を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: プロファイリング ツールの新機能 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3ab7fe2362bbf9779854bb1c79bfb4de9ffd1600
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d5cb1d89409b38fea4e3745de7a619e913c6122f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535700"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49290161"
 ---
 # <a name="what39s-new-in-profiling-tools"></a>どのような&#39;プロファイリング ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロファイリングで新](https://docs.microsoft.com/visualstudio/profiling/what-s-new-in-profiling-tools)します。  
-  
 Visual Studio 2015 Update 1 のデバッグと診断の新機能については、 [Visual Studio 2015 Update 1 のリリース ノート](https://www.visualstudio.com/news/vs2015-update1-vs#debug)を参照してください。  
   
  Visual Studio 2015 のデバッグと診断の新機能については、「 [Visual Studio 2015 のリリース ノート](https://www.visualstudio.com/news/vs2015-vs#Debug)」をご覧ください。  
@@ -42,7 +40,7 @@ Visual Studio 2015 Update 1 のデバッグと診断の新機能については�
  新しい **[診断ツール]** ウィンドウでのデバッグ中に診断ツールを実行できます。 このウィンドウは自動的に表示されますが、新しいメニュー項目 **[診断ツールの表示]** (キーボード ショートカット **Ctrl+Alt+F2**) で開くこともできます。  
   
 ## <a name="diagnostics-without-debugging-ui-and-hotkey-changes"></a>デバッグ UI およびホット キーの変更を使用しない診断  
- デバッグなしで診断を実行するには**デバッグ/診断の開始ツールをデバッグなしで**または**デバッグ/Profiler/パフォーマンス Profiler.**.Visual Studio 2013 では、これが見つかったで**分析/パフォーマンスと診断**または**デバッグ/パフォーマンスと診断**します。  
+ デバッグなしで診断を実行するには**デバッグ/診断の開始ツールをデバッグなしで**または**デバッグ/Profiler/パフォーマンス Profiler.**.Visual Studio 2013 では、これは、 **[分析]、[パフォーマンスと診断]** または **[デバッグ]、[パフォーマンスと診断]** にありました。  
   
  **パフォーマンス エクスプローラー** は今では **[デバッグ]、[プロファイラー]、[パフォーマンス エクスプローラー]** にあります。 Visual Studio 2013 では、 **[分析]、[プロファイラー]** にありました。  
   

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Monitoring Agent を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b85b115d7599cf6762806076494c862a5711bbb3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3dcaf561e54f160e19e2c330486179609c810109
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538540"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286742"
 ---
 # <a name="using-the-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,7 +31,7 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 > [!NOTE]
 >  **IntelliTrace スタンドアロン コレクター**を使用して、対象環境を変更することなく、リモート コンピューター上の Web、SharePoint、WPF、Windows フォーム アプリの IntelliTrace 診断データとメソッド データを収集することもできます。 スタンドアロン コレクターは、Microsoft Monitoring Agent を **モニター** モードで実行するよりも、パフォーマンスに大きな影響を及ぼします。 参照してください[IntelliTrace スタンドアロン コレクターを使用して](../debugger/using-the-intellitrace-stand-alone-collector.md)します。  
   
- System Center 2012 を使用する場合は、オペレーション マネージャーと連携する Microsoft Monitoring Agent を使用して、問題についてのアラートを取得し、保存された IntelliTrace ログへのリンクを含む Team Foundation Server の作業項目を作成します。 これで、さらにデバッグを行うためにこれらの作業項目をその他の項目に割り当てることができます。 参照してください[Operations Manager の統合と開発プロセス](http://technet.microsoft.com/library/jj614609.aspx)と[Microsoft Monitoring Agent による監視](http://technet.microsoft.com/library/dn465153.aspx)します。  
+ System Center 2012 を使用する場合は、オペレーション マネージャーと連携する Microsoft Monitoring Agent を使用して、問題についてのアラートを取得し、保存された IntelliTrace ログへのリンクを含む Team Foundation Server の作業項目を作成します。 これで、さらにデバッグを行うためにこれらの作業項目をその他の項目に割り当てることができます。 「 [Operations Manager と開発プロセスの統合](http://technet.microsoft.com/library/jj614609.aspx) 」および「 [Microsoft Monitoring Agent による監視](http://technet.microsoft.com/library/dn465153.aspx)」をご覧ください。  
   
  開始する前に、ビルドされ、配置されたコードに一致するソースとシンボルがあることを確認します。 これによって、デバッグと IntelliTrace ログの診断イベントの参照を開始するときに、アプリケーション コードに直接進むことができます。 Visual Studio が配置されたコードに一致するソースを自動的に検索して、開くことができるように[ビルドを設定](../debugger/diagnose-problems-after-deployment.md) します。  
   
@@ -48,7 +48,7 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
   
 1.  以下を確認します。  
   
-    -   Web サーバーが実行されている[サポートされているバージョンのインターネット インフォメーション サービス (IIS)](http://technet.microsoft.com/library/dn465154.aspx)します。  
+    -   [サポートされているバージョンのインターネット インフォメーション サービス (IIS: Internet Information Services)](http://technet.microsoft.com/library/dn465154.aspx)が Web サーバーによって実行されている。  
   
     -   Web サーバーに .NET Framework 3.5、4、または 4.5 がある。  
   

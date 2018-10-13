@@ -1,7 +1,7 @@
 ---
 title: DOM Explorer を使用してレイアウトのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,21 +23,19 @@ caps.latest.revision: 36
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 413f24ffa1927998cb9d2d98880e92de4e68f534
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 65d0bc2dbd48609f1e229691551ab2b713988471
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547806"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49272619"
 ---
 # <a name="debug-layout-using-dom-explorer"></a>DOM Explorer を使用したレイアウトのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DOM Explorer を使用してデバッグ レイアウト](https://docs.microsoft.com/visualstudio/debugger/debug-layout-using-dom-explorer)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
- **レイアウト**の DOM Explorer の表示 タブ、 [CSS ボックス モデル](http://go.microsoft.com/fwlink/?LinkID=238778)で選択した要素の[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]アプリ、Windows Phone ストア アプリ、または Apache Cordova の Visual Studio Tools を使用して作成されたアプリ。 このボックス モデルのビジュアル表現を使用して、要素の外観に影響するレイアウト関連の値を特定して変更することができます。  
+ DOM Explorer の **[レイアウト]** タブには、 [アプリ、Windows Phone ストア アプリ、または Visual Studio Tools for Apache Cordova を使用して作成されたアプリで選択される要素について、](http://go.microsoft.com/fwlink/?LinkID=238778) CSS ボックス モデル [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] が表示されます。 このボックス モデルのビジュアル表現を使用して、要素の外観に影響するレイアウト関連の値を特定して変更することができます。  
   
 > [!TIP]
 >  **[レイアウト]** タブで行った変更は永続的ではありません。 ソース コードを永続的に変更してアプリを更新するには、[デバッグ] ツール バーの **[Windows アプリケーションの更新]** ボタン (Windows ストア アプリと Windows Phone ストア アプリのみ) を使用します。 これにより、デバッガーを再起動せずに済みます。  

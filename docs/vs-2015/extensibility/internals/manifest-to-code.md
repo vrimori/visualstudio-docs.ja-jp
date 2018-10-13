@@ -1,7 +1,7 @@
 ---
 title: コードへのマニフェスト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 caps.latest.revision: 5
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f0809d44afb6777f26ea6b863ede765d93b5d24f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5c6cc419104e8fe094034b7df35cb7e731228373
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534060"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281347"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マニフェストのコードを](https://docs.microsoft.com/visualstudio/extensibility/internals/manifest-to-code)します。  
-  
 コード ツールに、マニフェストは、コンソール アプリケーションを Visual Studio イメージ サービスの .imagemanifest ファイルを受け取り、ラッパー ファイルまたはイメージ マニフェストの値では、C++、c#、VB、または Visual Studio 拡張機能の .vsct ファイルを参照するためのファイルを生成します。 このツールは、要求元のイメージから Visual Studio イメージ サービスを直接、またはコードがすべての UI とレンダリングを処理しない場合は、Api を使用してマニフェストの値を渡すために使用できるラッパー ファイルを生成します。  
   
 ## <a name="how-to-use-the-tool"></a>ツールを使用する方法  

@@ -1,7 +1,7 @@
 ---
 title: '方法 : 複数ファイルの項目テンプレートを作成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: de6d2fd4decc4d71fce1fe4f417f429c837deb7f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cda39459d0ddc0920dbb5b47157d90160ad3d166
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537771"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286794"
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>方法 : 複数ファイルの項目テンプレートを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 複数ファイル項目テンプレートを作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-multi-file-item-templates)です。  
-  
 項目テンプレートには 1 つの項目のみを指定できますが、1 つの項目が複数のファイルから構成されている場合があります。 たとえば、Visual Basic の Windows フォーム項目テンプレートには、次の 3 つのファイルが必要です。  
   
 -   フォームのコードを含む .vb ファイル。  

@@ -1,7 +1,7 @@
 ---
 title: ResolveNativeReference タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d06171281706b2395cbac0c98b5b8a76c4da363c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a874055e5af1a0aafd48296a99f12a83d56369f8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534559"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49281311"
 ---
 # <a name="resolvenativereference-task"></a>ResolveNativeReference タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ResolveNativeReference タスク](https://docs.microsoft.com/visualstudio/msbuild/resolvenativereference-task)します。  
-  
   
 ネイティブ参照を解決します。 <xref:Microsoft.Build.Tasks.ResolveNativeReference> クラスを実行します。 このクラスは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   

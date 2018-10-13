@@ -1,7 +1,7 @@
 ---
 title: '方法: ドラッグ アンド ドロップ ハンドラーを追加する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 503231fbae306c198e7c1e728f7c2b63794289b7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e163386c7f00f0646bb711617e402a1873e544e2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548176"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280528"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>方法: ドラッグ アンド ドロップ ハンドラーを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ドラッグ アンド ドロップ ハンドラーを追加](https://docs.microsoft.com/visualstudio/modeling/how-to-add-a-drag-and-drop-handler)します。  
-  
 ドラッグ アンド ドロップ イベントのハンドラーを DSL に追加し、ユーザーが他の図または [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の他の部分から項目を図の上にドラッグ可能にすることができます。 ダブルクリックなどのイベントのハンドラーを追加することもできます。 ドラッグ アンド ドロップやダブルクリック ハンドラーと呼ばれる、*ジェスチャ ハンドラー*します。  
   
  このトピックでは他の図で発生するドラッグ アンド ドロップ ジェスチャを説明します。 単一の図内の移動イベントとコピー イベントについては、`ElementOperations` のサブクラスを定義するという代替策を検討してください。 詳細については、次を参照してください。[コピー動作のカスタマイズ](../modeling/customizing-copy-behavior.md)します。 DSL 定義をカスタマイズすることもできます。  

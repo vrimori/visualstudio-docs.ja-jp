@@ -1,7 +1,7 @@
 ---
 title: MSBuild ターゲット | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 68a596eaf744649047ae912e4b9aac00922e2360
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2eab4a6085ce6756d1b55b0669008cb745b82e28
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534571"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288681"
 ---
 # <a name="msbuild-targets"></a>MSBuild ターゲット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild ターゲット](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)します。  
-  
   
 ターゲットはタスクを特定の順序でグループ化し、ビルド プロセスを小さな単位に分割することを可能にします。 たとえば、あるターゲットは、ビルドの準備として、出力ディレクトリに含まれるすべてのファイルを削除し、別のターゲットは、プロジェクトに対する入力をコンパイルし、空のディレクトリに配置します。 タスクについて詳しくは、「[MSBuild タスク](../msbuild/msbuild-tasks.md)」をご覧ください。  
   

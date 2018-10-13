@@ -1,7 +1,7 @@
 ---
 title: Spy++ の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6f219d2e15dfeef325ea6ec7be44878e674cf10e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d5e420adb00bc8972aead555eb281826db689914
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535639"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276264"
 ---
 # <a name="introducing-spy"></a>Spy++ の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[spy++ を導入](https://docs.microsoft.com/visualstudio/debugger/introducing-spy-increment)します。  
-  
 Spy++ で実行できるタスクは以下のとおりです。  
   
 -   システム オブジェクト間の関係のグラフィカルなツリーを表示します。 これには、 [プロセス](../debugger/processes-view.md)、 [スレッド](../debugger/threads-view.md)、 [ウィンドウ](../debugger/windows-view.md)が含まれます。  
@@ -40,7 +38,7 @@ Spy++ で実行できるタスクは以下のとおりです。
   
 -   [ファインダー ツール](../debugger/how-to-use-the-finder-tool.md) を使用して、マウス ポインターでウィンドウを選択します。  
   
--   設定**メッセージ オプション**複雑なメッセージ ログ選択パラメーターを使用しています。  
+-   複雑なメッセージ ログ選択パラメーターを使用して、 **メッセージ オプション** を設定します。  
   
  Spy++ には、迅速な作業に役立つツールバーとハイパーリンクがあります。 また、アクティブなビューを更新する **[更新]** コマンド、スパイを容易にする **ウィンドウ ファインダー ツール** 、ビュー ウィンドウをカスタマイズする **[フォント]** ダイアログ ボックスが用意されています。 さらに、Spy++ ではユーザー設定の保存と復元が可能です。  
   

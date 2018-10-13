@@ -1,7 +1,7 @@
 ---
 title: UML コンポーネント図の要素のプロパティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 16
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 832f293e09f14831dc9c0f44833631874d6741bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5c77c9e6be69604176c470fa8de9e33a74c05532
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539026"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49291422"
 ---
 # <a name="properties-of-elements-on-uml-component-diagrams"></a>UML コンポーネント図の要素のプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML コンポーネント図の要素のプロパティ](https://docs.microsoft.com/visualstudio/modeling/properties-of-elements-on-uml-component-diagrams)します。  
-  
 UML コンポーネント図の各要素には、プロパティがあります。 要素のプロパティを表示するには、図、または要素を右クリックして**UML モデル エクスプ ローラー**し**プロパティ**します。 プロパティが表示されます、**プロパティ**ウィンドウ。  
   
 > [!NOTE]

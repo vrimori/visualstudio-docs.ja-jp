@@ -1,7 +1,7 @@
 ---
 title: CvInitProvider 関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a65df9e9ccc61aec0a96f5f467962d46eb88b78c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aa41b1cbbba6e88a86ae5af0c471d5f6627dcca2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539604"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276214"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CvInitProvider 関数](https://docs.microsoft.com/visualstudio/profiling/cvinitprovider-function)します。  
-  
 マーカー プロバイダーを初期化します。 他のコンカレンシー ビジュアライザー SDK 関数の前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  

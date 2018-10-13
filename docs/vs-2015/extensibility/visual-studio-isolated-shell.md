@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 分離シェル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: d2620e71-be9e-44c9-b5b7-03a4c8d9cf0b
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed81e88b12e371f74adb9d3911719112bca8b139
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e28a411ff5ef70cfd32e846edb0b70caa82c4764
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547624"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49286066"
 ---
 # <a name="visual-studio-isolated-shell"></a>Visual Studio 分離シェル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 分離シェル](https://docs.microsoft.com/visualstudio/extensibility/visual-studio-isolated-shell)します。  
-  
 Visual Studio 分離シェルでは、サイド バイ サイドで実行するスタンドアロン アプリケーションを作成できます。 Visual Studio の他のバージョン。 Visual Studio サービスを使用できますが、カスタマイズされた外観でもある特別なツールをホストするには、主に使用されるとブランド化をお勧めします。 Visual Studio の機能とメニュー コマンド グループ有効にできます簡単にオンとオフ。 アプリケーションのタイトル、アプリケーションのアイコンとスプラッシュ スクリーンは、完全にカスタマイズ可能です。 カスタマイズ可能な機能の一覧は、次を参照してください。[分離シェルのカスタマイズ](../extensibility/customizing-the-isolated-shell.md)します。  
   
  分離シェル プロジェクトを使用するには、Visual Studio SDK をインストールする必要があります。 Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  

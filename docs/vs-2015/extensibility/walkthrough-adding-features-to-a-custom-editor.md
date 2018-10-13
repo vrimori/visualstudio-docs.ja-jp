@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: カスタム エディターの機能の追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: bfe083b6-3e35-4b9c-ad4f-b30b9ff412a5
 caps.latest.revision: 39
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ee6ca09f1bef7057e64287afb4ff8522fffb3f06
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f7f0d7c79590c197b7c226fb2cb2841235049bb3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544657"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283063"
 ---
 # <a name="walkthrough-adding-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターに機能を追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: カスタム エディター機能の追加](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-adding-features-to-a-custom-editor)します。  
-  
 カスタム エディターを作成した後より多くの機能を追加できます。  
   
 ### <a name="to-create-an-editor-for-a-vspackage"></a>VSPackage のエディターを作成するには  
@@ -128,7 +126,7 @@ ms.locfileid: "47544657"
   
 13. 実装することで、エディターからのオートメーション オブジェクト モデルを公開、`IDispatch`インターフェイス。  
   
-     詳細については、次を参照してください。[オートメーション モデルに貢献する](../extensibility/internals/contributing-to-the-automation-model.md)します。  
+     詳細については、「 [Contributing to the Automation Model](../extensibility/internals/contributing-to-the-automation-model.md)」を参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
   

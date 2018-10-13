@@ -1,7 +1,7 @@
 ---
 title: Visual Studio IDE | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,15 @@ caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 98d0da464c5c156d959a05410326cebd4cd870f4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 760dc4f859de68040676439d84fea60d23602aeb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544343"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292787"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[Visual Studio IDE ドキュメント](https://docs.microsoft.com/visualstudio/ide/index)します。
-
 Microsoft Visual Studio 2015 は、ソフトウェアを作成するための一連のツールです。このツールを使用して、計画の段階、UI 設計、コーディング、テスト、デバッグ、コードの品質やパフォーマンスの分析、カスタマーへの配置、使用率に関するテレメトリーの収集などを実行できます。 これらのツールは、できるだけシームレスに連携するよう設計されており、すべて Visual Studio 統合開発環境 (IDE) を通して公開されています。
 
 Visual Studio を使用すると、さまざまなアプリケーションを作成できます。モバイル クライアント向けの単純なストア アプリやゲームから、企業やデータ センターに提供するような大規模で複雑なシステムなどです。 次のように作成できます。
@@ -36,9 +33,9 @@ Visual Studio を使用すると、さまざまなアプリケーションを作
 
 - ゲームや Xbox など、DirectX を使用して、Windows デバイスのさまざまなグラフィックを多用するアプリケーション。
 
-既定では、Visual Studio は C#、C、C++、JavaScript、F#、Visual Basic のサポートを提供します。 Visual Studio の動作し、を介して Unity などのサード パーティ製アプリケーションとも統合し、 [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)拡張機能と Apache Cordova を通じて[Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42). 特殊なタスクを実行するカスタム ツールを作成することで、Visual Studio を独自に拡張できます。
+既定では、Visual Studio は C#、C、C++、JavaScript、F#、Visual Basic のサポートを提供します。 Visual Studio は、Unity ( [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md) 拡張機能を介して) および Apache Cordova ( [Visual Studio Tools for Apache Cordova](http://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42)を介して) などのサードパーティ製アプリケーションと密接に連携および統合しています。 特殊なタスクを実行するカスタム ツールを作成することで、Visual Studio を独自に拡張できます。
 
-初めての前に Visual Studio を使用した場合の基礎の学習、 [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md)チュートリアルで十分です。
+Visual Studio を初めて使用する場合は、「 [Get Started Developing with Visual Studio](../ide/get-started-developing-with-visual-studio.md) 」チュートリアルで基本を学んでください。
 
 Visual Studio 2015 の新機能について説明する場合は、「 [Visual Studio 2015 の新](../what-s-new-in-visual-studio-2015.md)します。
 
@@ -55,27 +52,27 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 ### <a name="signing-in"></a>サインイン
  Visual Studio を初めて起動する際には、まず Microsoft アカウント、仕事用アカウント、または学校用アカウントを使ってサインインできます。 サインインすると、複数のデバイス間でウィンドウのレイアウトなどの設定を最新に保つことができ、必要なサービス (Azure サブスクリプションや Visual Studio Team Services など) に自動的に接続できます。 サブスクリプションに基づくライセンスがある場合は、ライセンスのトークンを最新の状態に保つために、定期的に Visual Studio にサインインする必要があります。 プロダクト キーのライセンスがある場合、サインインする必要はありませんが、サインインすると、Visual Studio Team Services や Azure、Office 365、Salesforce.com のアカウントに接続しやすくなります。 詳しくは、「[Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)」をご覧ください。
 
- Visual Studio Team Services アカウント、Azure アカウント、または MSDN サブスクリプションが複数ある場合、それらをリンクして、単一のサインインですべてのアカウント内のリソースとサービスにアクセスできます。 詳しくは、「[複数のユーザー アカウントを使って作業する](../ide/work-with-multiple-user-accounts.md)」をご覧ください。
+ Visual Studio Team Services アカウント、Azure アカウント、または MSDN サブスクリプションが複数ある場合、それらをリンクして、単一のサインインですべてのアカウント内のリソースとサービスにアクセスできます。 詳細については、「 [Work with multiple user accounts](../ide/work-with-multiple-user-accounts.md)」を参照してください。
 
 ### <a name="staying-up-to-date"></a>最新の状態に保つ
- タイトル バーの右上の通知アイコンは、Visual Studio の更新プログラムまたはインストールされている関連コンポーネントが入手可能になると、通知します。 この通知を解除するか有効にするかを選択できます。 詳しくは、「[Visual Studio の通知](../ide/visual-studio-notifications.md)」をご覧ください。
+ タイトル バーの右上の通知アイコンは、Visual Studio の更新プログラムまたはインストールされている関連コンポーネントが入手可能になると、通知します。 この通知を解除するか有効にするかを選択できます。 詳細については、「 [Visual Studio の通知](../ide/visual-studio-notifications.md)」を参照してください。
 
 ### <a name="finding-things-and-getting-help"></a>検索とヘルプの取得
- [クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md)次に示すウィンドウがすぐに Visual Studio コマンド、ツール、機能などを検索して、キーボード ショートカットやメニューの場所がわからない場合にします。 探しているものを入力すれば、クイック起動がそのリンクを教えてくれます。
+ キーボード ショートカットやメニューの場所が分からない場合、下の [ [クイック起動](../ide/reference/quick-launch-environment-options-dialog-box.md) ] ウィンドウを使用すると、Visual Studio コマンド、ツール、機能などをすぐに見つけることができます。 探しているものを入力すれば、クイック起動がそのリンクを教えてくれます。
 
  !["新しいプロジェクト" のクイック起動結果](../ide/media/productivity-quicklaunch.png "Productivity_QuickLaunch")
 
  MSDN は、技術情報に関する Microsoft Web サイトです。今まさに、MSDN でこのページをお読みになっています。 Visual Studio で **F1** キーを押すと、アクティブ ウィンドウに関する MSDN のヘルプ ページに移動できます。 また、コード エディターで **F1** キーを押すと、現行のカーソル位置の API またはキーワードについての MSDN ヘルプ ページに移動できます。 たとえば、c# ファイル内にどこか、またはの末尾にキャレットを置き、`System.String`宣言、およびキーを押して**F1**の MSDN ヘルプ ページに移動する<xref:System.String>。
 
 ### <a name="giving-feedback"></a>フィードバックの提供
- Visual Studio では、いつでもフィードバックを簡単に提供できます。 **[クイック起動]** の横にあるタイトル バーのフィードバック アイコンをクリックして、 **[問題の報告]** または **[提案事項の送信]** をクリックします。 Visual Studio のプレリリース版にも、 **[この製品を評価する]** オプションが用意されています。 これらのすべてのコメントを拝見し、製品向上のための参考にさせていただきます。 詳しくは、「[ご意見](../ide/talk-to-us.md)」をご覧ください。
+ Visual Studio では、いつでもフィードバックを簡単に提供できます。 **[クイック起動]** の横にあるタイトル バーのフィードバック アイコンをクリックして、 **[問題の報告]** または **[提案事項の送信]** をクリックします。 Visual Studio のプレリリース版にも、 **[この製品を評価する]** オプションが用意されています。 これらのすべてのコメントを拝見し、製品向上のための参考にさせていただきます。 詳細については、「 [Talk to Us](../ide/talk-to-us.md)」を参照してください。
 
 ### <a name="personalizing-the-ide"></a>IDE のカスタマイズ
  開発スタイルに合わせてウィンドウのレイアウトをカスタマイズできます。 どのウィンドウも、任意の時にドッキング、フローティング、または非表示にすることができます。また、エディターを全画面表示モードで実行することもできます。 特定のコンテキストで必要なウィンドウのみを表示する複数のカスタム ウィンドウ レイアウトを作成して保存できます。 たとえば、表示されるものすべてがコード エディターとなるよう、全画面レイアウトを作成できます。 デバッグ用およびチームでの操作用にさまざまなレイアウトを作成できます。 詳しくは、「[ウィンドウ レイアウトをカスタマイズする](../ide/customizing-window-layouts-in-visual-studio.md)」をご覧ください。
 
  その他にも、Visual Studio をさまざまな方法でカスタマイズできます。複数のコンピューターで作業している場合は、設定をローミングできます。 詳細については、「[IDE をカスタマイズする](../ide/personalizing-the-visual-studio-ide.md)」をご覧ください。
 
- ほとんどすべてにキーボード ショートカットがあります。また、キーボード ショートカットをカスタマイズすることもできます。 新しいショートカットを作成するには、クイック起動に「キーボード」と入力して、[キーボード] ダイアログ ボックスを開きます。 オプションに関する詳細が必要な場合、そのダイアログ ボックスで F1 を押して、MSDN ヘルプ ページに移動できます。 詳しくは、「[Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。
+ ほとんどすべてにキーボード ショートカットがあります。また、キーボード ショートカットをカスタマイズすることもできます。 新しいショートカットを作成するには、クイック起動に「キーボード」と入力して、[キーボード] ダイアログ ボックスを開きます。 オプションに関する詳細が必要な場合、そのダイアログ ボックスで F1 を押して、MSDN ヘルプ ページに移動できます。 詳細については、「 [Visual Studio の既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。
 
 ## <a name="connecting-to-visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services と Team Foundation Server への接続
  Visual Studio Team Services (VSTS) は、ソフトウェア プロジェクトをホストし、チームでのコラボレーションを有効にするためのクラウド ベースのサービスです。 VSTS は、Git ソース管理システムと Team Foundation ソース管理システムの両方をサポートしています。また、Scrum、CMMI、アジャイル開発方法もサポートしています。 Team Foundation バージョン管理 (TFVC) は、単一の集中サーバー リポジトリを使用して、ファイルを追跡してバージョン管理します。 ローカルの変更は常に集中サーバーにチェックインされます。他の開発者はそこで、最新の変更を取得できます。 Team Foundation Server (TFS) 2015 は、Visual Studio のアプリケーション ライフサイクル管理のハブです。 これにより、開発プロセスに関わるすべてのユーザーが 1 つのソリューションを使用して参加できるようになります。 TFS は、異種混合のチームやプロジェクトを管理するのにも役立ちます。
@@ -94,7 +91,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
  ![Visual Studio の新しいプロジェクト ダイアログ](../ide/media/vs2015-newprojectdialog.png "VS2015_NewProjectDialog")
 
 ## <a name="designing-the-user-interface"></a>ユーザー インターフェイスの定義
- デザイナーは、コードを記述することなくユーザー インターフェイスを作成できる直感的なツールのことです。 リスト ボックス、カレンダー、およびからボタンなどの UI コントロールをドラッグすることができます、[ツールボックス](../ide/reference/toolbox.md)ウィンドウまたはダイアログ ボックスを表すデザイン サーフェイスにウィンドウ。 コードを記述することなく、要素のサイズを変更し、再配置できます。 ユーザー インターフェイスを伴うものであれば、どんな種類のプロジェクトについても、デザイナーが含まれています。
+ デザイナーは、コードを記述することなくユーザー インターフェイスを作成できる直感的なツールのことです。 リスト ボックス、カレンダー、ボタンなどの UI コントロールを [ [Toolbox](../ide/reference/toolbox.md) ] ウィンドウから、ウィンドウまたはダイアログ ボックスを表すデザイン サーフェイスにドラッグできます。 コードを記述することなく、要素のサイズを変更し、再配置できます。 ユーザー インターフェイスを伴うものであれば、どんな種類のプロジェクトについても、デザイナーが含まれています。
 
  プロジェクトに XAML ベースのユーザー インターフェイスがある場合、既定のデザイナーは、Blend for Visual Studio です。Blend for Visual Studio は、Visual Studio とシームレスに連携する高度なグラフィック ツールです。
 
@@ -119,7 +116,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  テキスト エディターには、生産性の向上に役立つ多くの機能との高度な対話性があります (望む場合)。これによって、より質の高いコードをより早く作成できます。 機能は言語によって異なり、機能をオンまたはオフにするためにそれらを使用する必要はありません (クイック起動で「エディター」を入力)。一般的な生産性向上機能として、次のものがあります。
 
-1.  [リファクタリング](../ide/refactoring-in-visual-studio.md)など、他の場所やこれ関数パラメーターでは、コードの移動、別の関数に、選択したコードの行をインテリジェント、変数の名前を変更する操作が含まれます。
+1.  [Refactoring](../ide/refactoring-in-visual-studio.md) 。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
 
 2.  *IntelliSense* 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ Intellisense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md), [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
 
@@ -131,7 +128,7 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
 4.  [ブックマーク](../ide/setting-bookmarks-in-code.md)。アクティブに作業しているファイルの特定の行にすばやく移動することができます。
 
-5.  [[呼び出し階層]](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで呼び出して、キャレットの下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
+5.  [Call Hierarchy](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで呼び出して、キャレットの下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
 
 6.  **コード レンズ** 。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。 詳しくは、「[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)」をご覧ください。
 
@@ -158,11 +155,11 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  デバッガー自体に複数のウィンドウがあり、それらのウィンドウから、ローカル変数、呼び出し履歴、ランタイム環境のその他の側面を表示および操作できます。 これらのウィンドウは **[デバッグ]** メニューにあります。
 
- [[イミディ エイト ウィンドウ]](../ide/reference/immediate-window.md) では、式に入力し、その結果を即時に表示することができます。
+ [Immediate Window](../ide/reference/immediate-window.md) では、式に入力し、その結果を即時に表示できます。
 
- [[IntelliTrace]](http://msdn.microsoft.com/en-us/629e9660-c59a-446b-8c30-290059158f61) ウィンドウでは、実行中の .NET プログラムの各メソッド呼び出しとその他のイベントを記録します。問題の発生源をすぐに見つけることができます。
+ [ [IntelliTrace](http://msdn.microsoft.com/en-us/629e9660-c59a-446b-8c30-290059158f61) ] ウィンドウでは、実行中の .NET プログラムの各メソッド呼び出しとその他のイベントを記録します。問題の発生源をすぐに見つけることができます。
 
- 詳しくは、「[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」をご覧ください。
+ 詳細については、「 [Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)」を参照してください。
 
 ## <a name="testing-your-code"></a>コードのテスト
  Visual Studio には、マネージ コード (.NET) の単体テスト フレームワークとネイティブ C++ の単体テスト フレームワークが含まれています。 単体テストを作成するには、単にテスト プロジェクトをソリューションに追加し、テストを作成し、そのテストを [テスト エクスプローラー] ウィンドウから実行します。 詳しくは、「[コードの単体テストUnit Test Your Code](../test/unit-test-your-code.md)」をご覧ください。
@@ -170,10 +167,10 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
  ![単体テスト エクスプローラー](../ide/media/ute-failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")
 
 ## <a name="analyzing-code-quality-and-performance"></a>コード品質とパフォーマンスの分析
- Visual Studio には、静的分析とランタイム分析のための強力なツールが含まれています。 静的分析ツールでは、デザイン、グローバリゼーション、相互運用性、パフォーマンス、セキュリティ、その他のカテゴリでの潜在的なエラーを特定することができます。 パフォーマンス テスト (プロファイリング) では、プログラムの実行方法を測定する必要があります。 これらのツールには、**[分析]** メニューからアクセスできます。 詳しくは、「[Visual Studio 診断ツールによる品質の向上](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)」をご覧ください。
+ Visual Studio には、静的分析とランタイム分析のための強力なツールが含まれています。 静的分析ツールでは、デザイン、グローバリゼーション、相互運用性、パフォーマンス、セキュリティ、その他のカテゴリでの潜在的なエラーを特定することができます。 パフォーマンス テスト (プロファイリング) では、プログラムの実行方法を測定する必要があります。 これらのツールには、**[分析]** メニューからアクセスできます。 詳細については、「 [Visual Studio 診断ツールによる品質の向上](http://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)」を参照してください。
 
 ## <a name="connecting-to-cloud-services-and-databases"></a>クラウド サービスとデータベースへの接続
- [サーバー エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d) Visual Studio のウィンドウは、Azure、Salesforce.com、Office 365、SQL Server のインスタンスなど、個人アカウント (ログインに使用したもの) で管理されているすべてのアカウント リソースを表示し、web サイト。
+ Visual Studio の [ [サーバー エクスプローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d) ] ウィンドウには、個人アカウント (ログインで使用するアカウント) の下で管理されているすべてのアカウントのリソースが表示されます。これには、SQL Server インスタンス、Azure、salesforce.com、Office 365、Websites が含まれます。
 
  ![サーバー エクスプ ローラー](../ide/media/vs2015-serverexplorer3.png "vs2015_ServerExplorer3")
 
@@ -184,15 +181,15 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
  ![SQL Server オブジェクト エクスプローラー](../ide/media/vs2015-sqlobjectexplorer.png "vs2015_SQLObjectExplorer")
 
 ## <a name="deploying-your-finished-application"></a>完成したアプリケーションの配置
- アプリケーションをお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストア や Sharepoint サイトへの配置、Installshield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳しくは、「[アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」をご覧ください。
+ アプリケーションをお客様に配置する用意ができたら、Visual Studio の配置するためのツールを使用できます。Windows ストア や Sharepoint サイトへの配置、Installshield または Windows インストーラー テクノロジによる配置、いずれにも対応しています。 これはすべて、IDE を使用してアクセスできます。 詳細については、「 [アプリケーション、サービス、およびコンポーネントの配置](../deployment/deploying-applications-services-and-components.md)」を参照してください。
 
 ## <a name="architecture-and-modeling-tools-enterprise-only"></a>アーキテクチャおよびモデリング ツール (Enterprise のみ)
- Visual Studio アーキテクチャおよびモデリング ツールを使用して、アプリを設計してモデル化することができます。 これらのツールを使用して、コードの構造、動作、関係を視覚化できます。 モデルは、開発プロセスの一部として、アプリケーション ライフサイクル全体で詳細のさまざまなレベルで作成できます。 Team Foundation Server の作業項目と開発計画にモデル要素をリンクすることで、要件、タスク、テスト ケース、バグ、またはモデルに関連するその他の作業を追跡できます。 詳しくは、「[アプリの設計とモデル化](../modeling/analyze-and-model-your-architecture.md)」をご覧ください。
+ Visual Studio アーキテクチャおよびモデリング ツールを使用して、アプリを設計してモデル化することができます。 これらのツールを使用して、コードの構造、動作、関係を視覚化できます。 モデルは、開発プロセスの一部として、アプリケーション ライフサイクル全体で詳細のさまざまなレベルで作成できます。 Team Foundation Server の作業項目と開発計画にモデル要素をリンクすることで、要件、タスク、テスト ケース、バグ、またはモデルに関連するその他の作業を追跡できます。 詳細については、「 [アプリの設計とモデル化](../modeling/analyze-and-model-your-architecture.md)」を参照してください。
 
 ## <a name="extending-visual-studio-through-the-visual-studio-sdk"></a>Visual Studio SDK による Visual Studio の拡張
- Visual Studio は、拡張可能なプラットフォームです。 Visual Studio の拡張は、IDE と統合するカスタム ツールです。 サード パーティ製の拡張機能を追加したり、独自の拡張機能を作成したりできます。 詳細については、次を参照してください。 [Visual Studio 拡張機能の開発](http://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14)します。
+ Visual Studio は、拡張可能なプラットフォームです。 Visual Studio の拡張は、IDE と統合するカスタム ツールです。 サード パーティ製の拡張機能を追加したり、独自の拡張機能を作成したりできます。 詳細については、「 [Visual Studio 拡張機能の開発](http://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14)」を参照してください。
 
- 「[Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)」 (Visual Studio ユーザー エクスペリエンス ガイドライン) は、Visual Studio の拡張機能を記述するすべてのユーザーにとって重要な参照です。 これらのプラットフォーム固有のガイドラインには、ダイアログのデザイン、フォント、色、アイコン、コモン コントロール、および新機能が Visual Studio とシームレスに統合できるようにするその他の相互作用のパターンについての情報が含まれています。
+ [Visual Studio User Experience Guidelines](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md) は、Visual Studio の拡張機能を記述するすべてのユーザーにとって重要な参照です。 これらのプラットフォーム固有のガイドラインには、ダイアログのデザイン、フォント、色、アイコン、コモン コントロール、および新機能が Visual Studio とシームレスに統合できるようにするその他の相互作用のパターンについての情報が含まれています。
 
 ## <a name="in-this-guide"></a>このガイドの内容
 

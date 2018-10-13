@@ -1,7 +1,7 @@
 ---
 title: 'デバッグの準備: c#、f#、および Visual Basic プロジェクトの種類 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 70bdc94339af45295599adac8fab03fbe30a93a1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 54dc950c606a78f277252b30a57e5de8c796df15
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539896"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49274912"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>デバッグの準備: プロジェクトの種類が C#、F#、および Visual Basic のプロジェクト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグの準備: c#、f#、および Visual Basic プロジェクトの種類](https://docs.microsoft.com/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)します。  
-  
 ここでは、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] プロジェクト テンプレートで作成した C#、F#、および [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のプロジェクトをデバッグする方法について説明します。  
   
  出力として Dll を作成するプロジェクトの種類に分類された注[DLL プロジェクトのデバッグ](../debugger/debugging-dll-projects.md)共有している一般的な機能のため。  

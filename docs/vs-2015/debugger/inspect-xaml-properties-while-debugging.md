@@ -1,7 +1,7 @@
 ---
 title: デバッグ中に XAML のプロパティを調べる |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eb10290e14290f59950e6b291d479de2099ac7f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 282b93ac9f04f5e547567e8380e65826f433ba2d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549160"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49282257"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>デバッグ中に XAML のプロパティを調べます。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグ中に XAML の検査プロパティ](https://docs.microsoft.com/visualstudio/debugger/inspect-xaml-properties-while-debugging)します。  
-  
 実行中の XAML コードでのリアルタイム ビューを取得できます、 **Live Visual Tree**と**ライブ プロパティ エクスプ ローラー**します。 これらのツールは、実行中の XAML アプリケーションの UI 要素のツリー ビューを提供し、選択した UI 要素のランタイム プロパティを表示します。  
   
  これらのツールは、以下の構成で使用できます。  

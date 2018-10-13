@@ -1,7 +1,7 @@
 ---
 title: データ ソース ウィンドウからドラッグするときに作成されるコントロールの設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d869f226206923a6e45646611b715786bfc5995
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 883c2ce82dc1c4b1d8d17d9be57ced0e598840e1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538152"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293684"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[設定、データ ソース ウィンドウからドラッグするときに作成されるコントロール](https://docs.microsoft.com/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window)します。  
-  
   
 項目をドラッグしてデータ バインド コントロールを作成することができます、**データソース**ウィンドウから WPF デザイナーまたは Windows フォーム デザイナーにします。 内の各項目、**データソース**ウィンドウがデザイナーにドラッグするときに作成される既定のコントロール。 ただし、別のコントロールが作成されるようにすることもできます。  
   

@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: デバイス状態によるオブジェクトの不足 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,17 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 665075ce6656d2cebb246b7591821491b1cf2f58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 95d962ec83b5d0c3a89d41ab8f8cc40ee76ffbb4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546040"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280840"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>チュートリアル: デバイス状態によるオブジェクトの不足
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: デバイス状態オブジェクトの期限を見つからない](https://docs.microsoft.com/visualstudio/debugger/graphics/walkthrough-missing-objects-due-to-device-state)します。  
-  
-このチュートリアルを使用する方法について説明[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のために不足しているオブジェクトを調査するグラフィックス診断には、デバイスの状態が正しく構成されていません。  
+このチュートリアルでは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のグラフィックス診断を使用して、デバイスの構成が正しくないために表示されないオブジェクトを調査する方法を示します。  
   
  このチュートリアルでは、次の方法を示します。  
   
@@ -45,14 +43,14 @@ ms.locfileid: "47546040"
   
  ![問題が解決される前に、アプリ](../debugger/media/vsg-walkthru1-firstview.png "vsg_walkthru1_firstview")  
   
- グラフィックスの問題をグラフィックス ログをキャプチャする方法については、次を参照してください。[グラフィックス情報のキャプチャ](../debugger/capturing-graphics-information.md)します。  
+ グラフィックスの問題をグラフィックス ログにキャプチャする方法については、「 [Capturing Graphics Information](../debugger/capturing-graphics-information.md)」をご覧ください。  
   
 ## <a name="investigation"></a>調査  
  グラフィックス診断ツールを使うと、グラフィックス ログ ファイルを読み込んで、テスト中にキャプチャされたフレームを検査できます。  
   
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>グラフィックス ログのフレームを調査するには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、不足しているモデルを表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス診断タブが表示される[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、モデルの欠落を表すフレームを含むグラフィックス ログを読み込みます。 新しいグラフィックス診断タブが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に表示されます。 このタブの上部に、選択されたフレームのレンダー ターゲットが出力されます。 下部の **[フレーム一覧]** には、キャプチャされた各フレームの縮小版が表示されます。  
   
 2.  **[フレーム一覧]** で、モデルが表示されていないことを示すフレームを選択します。 レンダー ターゲットが更新され、選択したフレームが反映されます。 このシナリオでは、グラフィックス ログのタブは次のように表示されます。  
   
@@ -104,7 +102,7 @@ ms.locfileid: "47546040"
   
 1.  **[グラフィックス オブジェクト テーブル]** ウィンドウを開きます。 **[グラフィックス診断]** ツール バーで、 **[オブジェクト テーブル]** を選びます。  
   
-2.  **[グラフィックス オブジェクト テーブル]** で **D3D10 Device**オブジェクトを探し、 **D3D10 Device** オブジェクトを開きます。 新しい**d3d10 device**でタブが開きます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 この操作を簡単に行うには、 **[種類]** を使用して **[グラフィックス オブジェクト テーブル]** を並べ替えます。  
+2.  **[グラフィックス オブジェクト テーブル]** で **D3D10 Device**オブジェクトを探し、 **D3D10 Device** オブジェクトを開きます。 新しい **[d3d10 device]** タブが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で開きます。 この操作を簡単に行うには、 **[種類]** を使用して **[グラフィックス オブジェクト テーブル]** を並べ替えます。  
   
      ![グラフィックス オブジェクト テーブルと関連するデバイスの状態](../debugger/media/vsg-walkthru1-objtable.png "vsg_walkthru1_objtable")  
   

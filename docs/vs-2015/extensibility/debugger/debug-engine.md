@@ -1,7 +1,7 @@
 ---
 title: デバッグ エンジン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89f2c2fafb397246a8a2df8dab7d59a361edc11c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 781712ad9ef199073028b62a3fc5a50b4c2cad77
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540283"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49282686"
 ---
 # <a name="debug-engine"></a>デバッグ エンジン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Debug Engine](https://docs.microsoft.com/visualstudio/extensibility/debugger/debug-engine)します。  
-  
 デバッグ エンジン (DE) は、実行の制御やブレークポイントなど、式の評価などのデバッグ サービスを提供するには、インタープリターまたはオペレーティング システムで動作します。 デはデバッグ中のプログラムの状態を監視します。 これを行うには、デは、CPU または Api からは、ランタイムによって提供されるかどうか、いずれかの方法がサポートされているランタイムで使用することを使用します。  
   
  たとえば、共通言語ランタイム (CLR) は、ICorDebugXXX インターフェイスを介して実行中のプログラムを監視するためのメカニズムを提供します。 CLR をサポートする DE では、デバッグ中のマネージ コード プログラムを追跡するのに適切な ICorDebugXXX インターフェイスを使用します。 セッション デバッグ マネージャー (SDM)、このような情報を転送する状態の変更が通信して、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE。  

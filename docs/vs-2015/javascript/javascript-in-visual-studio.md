@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の JavaScript | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 677a022d314204cf5a49c64380aa5301aa170a47
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d1ad7efda94ea3914caafa39d39870a77b08056d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537627"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278240"
 ---
 # <a name="javascript-in-visual-studio"></a>Visual Studio の JavaScript
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio の JavaScript](https://docs.microsoft.com/visualstudio/javascript/javascript-in-visual-studio)します。  
-  
 JavaScript は Visual Studio の第一級の言語です。 Visual Studio IDE で JavaScript コードを記述する場合に、ほとんどの標準的な編集補助機能 (コード スニペット、IntelliSense など) を使用できます。 多くの種類のアプリケーションやサービスの JavaScript コードを記述できます。  
   
  JavaScript 言語のリファレンス ドキュメントについては、「[JavaScript 言語リファレンス](http://msdn.microsoft.com/library/d1et7k7c\(v=vs.94\).aspx)」を参照してください。  

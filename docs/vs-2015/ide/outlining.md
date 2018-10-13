@@ -1,7 +1,7 @@
 ---
 title: アウトライン | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 939bb5ac1188a54217339c1bf3e9e3a828493d90
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: af7f854f6e097471cdd744537a4be4cbd1646400
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534519"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49282517"
 ---
 # <a name="outlining"></a>アウトライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アウトライン](https://docs.microsoft.com/visualstudio/ide/outlining)します。  
-  
 コードの領域を正符号 (+) の下に表示されるように折りたたんで、ビューの一部のコードを非表示にすることができます。 正符号 (+) をクリックして、折りたたまれた領域を展開します  (または、Ctrl + M + M を押して領域を折りたたみ、もう一度 Ctrl + M + M を押して領域を展開することもできます)。また、コードの左側に表示されるアウトライン余白の領域内の線をダブルクリックして、アウトライン領域を折りたたむこともできます。 折りたたまれた領域上にマウスを置くと、折りたたまれた領域の内容をヒントとして確認できます。  
   
  アウトライン余白の上にマウスを置くと、その余白内の領域も強調表示されます。 既定の強調表示色は、色の構成によっては多少かすかな外観になる場合があります。 強調表示色は、**[ツール]、[オプション]、[環境]、[フォントおよび色]、[折りたたみ可能な領域]** で変更できます。  
