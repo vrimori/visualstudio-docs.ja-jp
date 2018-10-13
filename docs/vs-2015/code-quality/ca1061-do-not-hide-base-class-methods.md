@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1061: 基本クラスのメソッドを隠ぺいしない |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: f018abbb864533e5c9d7b598638a4006a69ab2f3
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 4b620cb7925041ef36d5915c3ae329572a49d08c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589136"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49192921"
 ---
 # <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: 基本クラス メソッドを非表示にしません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1061: 基本クラスのメソッドを隠ぺいしない](https://docs.microsoft.com/visualstudio/code-quality/ca1061-do-not-hide-base-class-methods)します。
-
 |||
 |-|-|
 |TypeName|DoNotHideBaseClassMethods|

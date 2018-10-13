@@ -1,7 +1,7 @@
 ---
 title: '方法: コレクションの関連付けをビジュアル化する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 42cf379e9cfb2d8a84412a534eb13702febc945a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8e997cf30e4fe8508dd8e1fa8049bdc83e93d53
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546557"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197692"
 ---
 # <a name="how-to-visualize-a-collection-association-class-designer"></a>方法: コレクションの関連付けをビジュアル化する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コレクションの関連付け (クラス デザイナー) を視覚化する](https://docs.microsoft.com/visualstudio/ide/how-to-visualize-a-collection-association-class-designer)します。  
-  
 他の型のコレクションであるプロパティとフィールドを、クラス ダイアグラムでコレクションの関連付けとして表示できます。 フィールドの型に所有しているクラスをリンクする行としてフィールドまたはプロパティを表示する通常の関連付けとは異なり、コレクションの関連付けは、収集された型に所有しているクラスをリンクする行として表示されます。  
   
 ### <a name="to-create-a-collection-association"></a>コレクションの関連付けを作成するには  

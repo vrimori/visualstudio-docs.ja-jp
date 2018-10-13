@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Northwind の Customers テーブル ストアド プロシージャを更新プログラムを作成する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,12 +22,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: bbcd68b7604f7a80546168406146f326e1bac224
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4972c1341490f78bba03bdd390ac13903c55be84
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533650"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204049"
 ---
 # <a name="walkthrough-creating-update-stored-procedures-for-the-northwind-customers-table"></a>チュートリアル: Northwind の Customers テーブル用 Update ストアド プロシージャの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]

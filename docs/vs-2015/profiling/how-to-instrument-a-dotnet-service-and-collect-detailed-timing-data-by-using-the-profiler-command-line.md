@@ -1,7 +1,7 @@
 ---
 title: '方法: プロファイラーのコマンド ラインを使用して .NET サービスをインストルメントし、詳細なタイミング データを収集する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 22c0a9944c61ea03b699539b50116bd48e804bd2
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 2593dd83763d1ebc373052b0fb05649af75655dd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48879409"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191387"
 ---
 # <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>方法: プロファイラーのコマンド ラインを使用して .NET サービスをインストルメントし、詳細なタイミング データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: .NET サービスと詳細なタイミング データの収集を Profiler のコマンドラインを使用してインストルメント化](https://docs.microsoft.com/visualstudio/profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line)。  
-  
 ここでは、[!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] プロファイリング ツールのコマンド ライン ツールを使用して [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] サービスをインストルメントし、詳細なタイミング データを収集する方法について説明します。  
   
 > [!NOTE]

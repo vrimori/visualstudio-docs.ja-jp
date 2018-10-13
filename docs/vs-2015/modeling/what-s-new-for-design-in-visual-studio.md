@@ -1,7 +1,7 @@
 ---
 title: どのような&#39;s Visual Studio での設計の新機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,15 @@ caps.latest.revision: 34
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d710d17caaf60cea7b11a1ebd81d91796fdb46d6
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 3d6ab30934750f2c825029c1433ea7ca68447dcd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859108"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204283"
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio での設計向けの新機能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[何&#39;Visual Studio でデザインする場合は新しく](https://docs.microsoft.com/visualstudio/modeling/what-s-new-for-design-in-visual-studio)します。
-
 このリリースの Visual Studio では、コードの理解と設計の向上に役立つ次のような機能が強化されています。
 
  **コード マップと依存関係グラフ**
@@ -62,7 +59,7 @@ ms.locfileid: "47859108"
 
 -   **クラス ビューおよびオブジェクト ブラウザーからダイアグラムを作成します**。 クラス ビューおよびオブジェクト ブラウザー ウィンドウから新規マップまたは既存マップにファイルとアセンブリをドラッグ アンド ドロップします。
 
- 参照してください[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)します。
+ 「 [Map dependencies across your solutions](../modeling/map-dependencies-across-your-solutions.md)」を参照してください。
 
  **その他の設計とモデリングこのリリースで変更します。**
 

@@ -1,7 +1,7 @@
 ---
 title: テキスト テンプレート変換プロセス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 32
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c7b39517e5e4c88bbefe6bf378e1dffd3c233872
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 146d391cc843291b79dc34af29851cfed4c80a46
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545771"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49203776"
 ---
 # <a name="the-text-template-transformation-process"></a>テキスト テンプレート変換プロセス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、テキスト テンプレート変換プロセス](https://docs.microsoft.com/visualstudio/modeling/the-text-template-transformation-process)します。  
-  
 テキスト テンプレート変換プロセスは、入力としてのテキスト テンプレート ファイルを受け取り、出力として新しいテキスト ファイルを生成します。 たとえば、Visual Basic または c# のコードを生成するテキスト テンプレートを使用することができます。 または html 形式のレポートを生成することができます。  
   
  3 つのコンポーネントは、このプロセスに参加: エンジン、ホスト、およびディレクティブ プロセッサ。 エンジン制御プロセスです。出力ファイルを生成するために、ホストとディレクティブ プロセッサとやり取りします。 ホストは、ファイルとアセンブリの検索など、環境との対話を提供します。 ディレクティブ プロセッサは、XML ファイルまたはデータベースからデータを読み取るなどの機能を追加します。  

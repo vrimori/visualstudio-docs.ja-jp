@@ -1,7 +1,7 @@
 ---
 title: モデリング図にメニュー コマンドを定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,22 +14,20 @@ caps.latest.revision: 63
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 00cb466fc9859bc36734ee3c42a23190632f39a2
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c1a93ab331771db3303ffcbcb7c067c4c325e6a3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592782"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49193155"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>モデリング図にメニュー コマンドを定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデリング図にメニュー コマンドを定義](https://docs.microsoft.com/visualstudio/modeling/define-a-menu-command-on-a-modeling-diagram)します。  
-  
 Visual Studio では、UML 図のショートカット メニューに追加のメニュー項目を定義できます。 図上の任意の要素のショートカット メニューに対して、メニュー コマンドを表示して有効にするかどうかを制御できます。また、ユーザーがメニュー項目を選択したときに実行されるコードを記述できます。 これらの拡張機能を[VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)(Visual Studio Integration Extension) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
   
 ## <a name="requirements"></a>要件  
- 参照してください[要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)します。  
+ 「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
@@ -72,7 +70,7 @@ Visual Studio では、UML 図のショートカット メニューに追加の�
   
     |参照|実行できる操作|  
     |---------------|--------------------------------|  
-    |System.ComponentModel.Composition|使用してコンポーネントを定義する[Managed Extensibility Framework (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)します。|  
+    |System.ComponentModel.Composition|[Managed Extensibility Framework (MEF)](http://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)を使用してコンポーネントを定義する。|  
     |Microsoft.VisualStudio.Uml.Interfaces|モデル要素のプロパティを読み取り、変更する。|  
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility|モデル要素を生成する、図のシェイプを変更する。|  
     |Microsoft.VisualStudio.Modeling.Sdk.[バージョン]|モデル イベント ハンドラーを定義する。<br /><br /> モデルに対する一連の変更をカプセル化する。 詳細については、次を参照してください。[トランザクションを使用してモデルの更新をリンク UML](../modeling/link-uml-model-updates-by-using-transactions.md)します。|  
@@ -223,15 +221,15 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
   
      [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開始します。  
   
-     **トラブルシューティング**: 場合は、新しい[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]は開始されません。  
+     **トラブルシューティング**: 新しい [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動しない場合:  
   
     -   複数のプロジェクトがある場合は、VSIX プロジェクトがソリューションのスタートアップ プロジェクトとして設定されていることを確認してください。  
   
-    -   ソリューション エクスプローラーで、スタートアップまたはプロジェクトのみのショートカット メニューを開き、 **[プロパティ]** をクリックします。 プロジェクトのプロパティ エディターで、 **[デバッグ]** タブをクリックします。確認します内の文字列、**外部プログラムの開始**フィールドの完全なパス名は、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]通常は。  
+    -   ソリューション エクスプローラーで、スタートアップまたはプロジェクトのみのショートカット メニューを開き、 **[プロパティ]** をクリックします。 プロジェクトのプロパティ エディターで、 **[デバッグ]** タブをクリックします。[外部プログラムの開始]** フィールドの文字列が [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の完全なパス名であることを確認してください。通常は次のようになります。  
   
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`  
   
-2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。 メニュー コマンド クラスの属性に表示されているいずれかの種類に含まれる図を使用してください。  
+2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。 メニュー コマンド クラスの属性に表示されているいずれかの種類に含まれる図を使用してください。  
   
 3.  図の任意の場所でショートカット メニューを開きます。 コマンドがメニューに表示されます。  
   
@@ -264,7 +262,7 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
   
      **Visual Studio 拡張機能インストーラー** が起動され、拡張機能がインストールされます。  
   
-4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を起動または再起動します。  
+4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]を起動または再起動します。  
   
 #### <a name="to-uninstall-an-extension"></a>拡張機能をアンインストールするには  
   
@@ -278,8 +276,8 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
   
  *%Localappdata%* **\Local\Microsoft\VisualStudio\\[バージョン] \Extensions**  
   
-##  <a name="MenuExample"></a> 例  
- クラス図の 2 つの要素の名前を入れ替えるメニュー コマンドのコードを次の例に示します。 このコードは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能プロジェクト内でビルドし、前のセクションで説明した手順に従ってインストールする必要があります。  
+##  <a name="MenuExample"></a> 「例」  
+ クラス図の 2 つの要素の名前を入れ替えるメニュー コマンドのコードを次の例に示します。 このコードは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能プロジェクト内でビルドし、前のセクションで説明した手順に従ってインストールする必要があります。  
   
 ```  
 using System.Collections.Generic; // for IEnumerable  

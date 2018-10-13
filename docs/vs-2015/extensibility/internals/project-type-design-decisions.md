@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類の設計上の決定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 49f4b198da38a53360efffcdff82daa6fcdb350c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9b5738f3119a8e5f1f6c1d8cb3ee47d64df1541d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547458"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195482"
 ---
 # <a name="project-type-design-decisions"></a>プロジェクト タイプのデザインの方針
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類の設計に関する決定事項](https://docs.microsoft.com/visualstudio/extensibility/internals/project-type-design-decisions)します。  
-  
 新しいプロジェクトの種類を作成する前に、プロジェクトの種類に関するいくつかの設計上の決定を行う必要があります。 使用して、プロジェクトに含まれる項目、プロジェクト ファイルの保存方法、およびどのようなコミットメント モデルの種類を決定する必要があります。  
   
 ## <a name="project-items"></a>プロジェクト項目  

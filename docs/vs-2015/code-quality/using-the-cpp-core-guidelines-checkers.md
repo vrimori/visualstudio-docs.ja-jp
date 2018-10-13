@@ -1,7 +1,7 @@
 ---
 title: C++ Core ガイドライン チェッカーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,18 +11,16 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9f7813659f63e14c22ee40dc28eaa5b2d029288e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2fc975ab5c9c1e43b79ddd861bca3a61e9005f5f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533682"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194091"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[C++ Core ガイドライン チェッカーを使用して](https://docs.microsoft.com/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)します。  
-  
 C++ Core ガイドラインは、ガイドライン、ルール、および C++ 専門家とデザイナーで作成された C++ のコーディングについてのベスト プラクティスの移植可能なセットです。  Visual Studio では、アドインのパッケージを分析ツールへの準拠、C++ Core Guidelines のコードを確認し、改善点を提案するコードの追加の規則を作成できるようになりました。  
   
 ## <a name="the-c-core-guidelines-project"></a>C++ Core ガイドラインのプロジェクト  

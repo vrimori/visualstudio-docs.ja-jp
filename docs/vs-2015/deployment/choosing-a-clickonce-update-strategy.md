@@ -1,7 +1,7 @@
 ---
 title: ClickOnce の更新方法の選択 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: a4db43fd289aab969ec2d4c4031cdfbe1a3a18ba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2ed97cecb01a8e42a01a3e358ecc953857ca55b6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191348"
 ---
 # <a name="choosing-a-clickonce-update-strategy"></a>ClickOnce の更新方法の選択
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce の更新方法の選択](https://docs.microsoft.com/visualstudio/deployment/choosing-a-clickonce-update-strategy)します。  
-  
 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] では、アプリケーションを自動的に更新できます。 A[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションが定期的にアプリケーションの更新があるかどうかを確認するには、配置マニフェスト ファイルを読み取ります。 利用可能であれば、アプリケーションの新しいバージョンがダウンロードされて実行されます。 効率性を高めるために、変更されたファイルだけがダウンロードされます。  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションのデザイン時に、アプリケーションが利用可能な更新プログラムをチェックする際に使用する方法を決定する必要があります。 使用できる基本的な方法は、アプリケーションの起動時に更新プログラムをチェックする方法、アプリケーションの起動後に更新プログラムをチェックする方法 (バックグラウンド スレッドで実行)、更新用のユーザー インターフェイスを提供する方法の 3 つです。  

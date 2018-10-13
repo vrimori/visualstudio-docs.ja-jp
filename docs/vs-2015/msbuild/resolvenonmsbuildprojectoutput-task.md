@@ -1,7 +1,7 @@
 ---
 title: ResolveNonMSBuildProjectOutput タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 48a67d895c08d5966c2ea4b40140382db9157763
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a7d5ff4d38d1f494e706f833a387061323744660
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537825"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197191"
 ---
 # <a name="resolvenonmsbuildprojectoutput-task"></a>ResolveNonMSBuildProjectOutput タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ResolveNonMSBuildProjectOutput タスク](https://docs.microsoft.com/visualstudio/msbuild/resolvenonmsbuildprojectoutput-task)します。  
-  
   
 MSBuild 以外のプロジェクト参照に対する出力ファイルを確認します。  
   

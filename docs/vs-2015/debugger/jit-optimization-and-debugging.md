@@ -1,7 +1,7 @@
 ---
 title: JIT の最適化とデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb73c434c978f7a8b1847976c73fe2bff47e3b89
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e798d44371f04b955db9019c741100ce9e5e5ef6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49201987"
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT の最適化とデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[JIT の最適化とデバッグ](https://docs.microsoft.com/visualstudio/debugger/jit-optimization-and-debugging)します。  
-  
 マネージ アプリケーションをデバッグするときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]既定 - イン タイム (JIT) コードの最適化を抑制します。 JIT 最適化の省略とは、最適化されていないコードをデバッグすることを示します。 最適化されていないため、コードの実行速度はやや遅くなりますが、デバッグで操作できる内容はより詳細になります。 最適化されたコードをデバッグするのは困難であるため、最適化されたコードで発生するバグが、非最適化バージョンでは再現しないときにのみお勧めします。  
   
  JIT の最適化が制御されます[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]によって、**モジュールの読み込みで抑制の JIT 最適化**オプション。 このオプションを見つけることができます、**全般**ページで、**デバッグ**内のノード、**オプション** ダイアログ ボックス。  

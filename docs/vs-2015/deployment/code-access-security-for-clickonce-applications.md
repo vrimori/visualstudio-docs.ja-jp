@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションのコード アクセス セキュリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 71b9344e552cb03d65b0093b1d5e0707689ec6af
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5cfc8ad2be56965f691b2c114d3908172f0edfa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534677"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197978"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce アプリケーションのコード アクセス セキュリティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce アプリケーションのコード アクセス セキュリティ](https://docs.microsoft.com/visualstudio/deployment/code-access-security-for-clickonce-applications)します。  
-  
 ClickOnce アプリケーションは、.NET Framework に基づいており、コード アクセス セキュリティ制約の対象です。 このため、コード アクセス セキュリティの影響を理解し、それに応じて ClickOnce アプリケーションを作成することが重要です。  
   
  コード アクセス セキュリティとは、保護されているリソースや操作に対して、コードが持つアクセス権を制限できるようにするための .NET Framework の機構です。 アプリケーションのインストーラーの場所に適切なゾーンを使用するには、ClickOnce アプリケーションのコード アクセス セキュリティのアクセス許可を構成する必要があります。 ほとんどの場合、一連のアクセス許可を制限する **インターネット** ゾーンまたは一連のより多くのアクセス許可を与える **ローカル イントラネット** ゾーンを選択できます。  
@@ -105,7 +103,7 @@ ClickOnce アプリケーションは、.NET Framework に基づいており、�
  [方法 : ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)   
  [方法 : ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
  [方法 : ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
- [方法 : アクセス許可が制限された ClickOnce アプリケーションをデバッグする](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
+ [How to: Debug a ClickOnce Application with Restricted Permissions](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)   
  [[セキュリティ] ページ (プロジェクト デザイナー)](../ide/reference/security-page-project-designer.md)
 

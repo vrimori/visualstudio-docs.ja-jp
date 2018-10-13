@@ -1,7 +1,7 @@
 ---
 title: メニュー コマンドのローカライズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ ms.assetid: b04ee0f6-82ea-47e6-853a-72382267d6da
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ce3cbbf101e357f761ffaf256d0b130a0c005fdb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9b2486df22db8ebcbf8a9dd40a0bd374b6d8abfe
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537439"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49197707"
 ---
 # <a name="localizing-menu-commands"></a>メニュー コマンドのローカライズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[メニュー コマンドのローカライズ](https://docs.microsoft.com/visualstudio/extensibility/localizing-menu-commands)します。  
-  
 メニューのローカライズされたテキストを行うことができ、ツールバーのコマンドのローカライズされた .vsct ファイルを作成して、変更を反映する、VSPackage とし、プロジェクト ファイルの更新のローカライズされた .resx ファイル。  
   
  インストール エクスペリエンスをローカライズする方法については、次を参照してください。 [VSIX パッケージのローカライズ](../extensibility/localizing-vsix-packages.md)します。  

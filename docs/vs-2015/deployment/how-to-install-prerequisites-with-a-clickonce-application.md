@@ -1,7 +1,7 @@
 ---
 title: '方法: ClickOnce アプリケーションと共に必須コンポーネントをインストールする |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 31319b0d04ff68649996ca374e3961d8fa67c833
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 47d4355fc1b5690d6c9c76fd354a5f5bd4830d8e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545080"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196288"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>方法 : ClickOnce アプリケーションと共に必須コンポーネントをインストールする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ClickOnce アプリケーションと共に必須コンポーネントをインストール](https://docs.microsoft.com/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)します。  
-  
 すべて[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションでは、実行する前に、.NET Framework の正しいバージョンがコンピューターにインストールされている必要があります。 多くのアプリケーションもその他の前提条件があります。 発行するときに、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション、アプリケーションと共にパッケージ化する前提条件コンポーネントのセットを選択できます。 かどうかは既に存在するかを判断する各前提条件のインストール時に、チェックが実行されます。インストールする前にインストールされていない場合、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーション。  
   
  パッケージ化と発行の前提条件ではなく、コンポーネントのダウンロード場所を指定することもできます。 たとえば、発行されたすべてのアプリケーションと共に必須コンポーネントを含むではなく可能性がありますを使用する一元的なファイル共有またはすべての前提条件インストーラーを含む Web 上の場所: コンポーネントのダウンロード、インストール時に、その場所からインストールします。  

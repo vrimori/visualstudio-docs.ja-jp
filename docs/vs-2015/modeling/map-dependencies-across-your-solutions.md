@@ -1,12 +1,12 @@
 ---
 title: ソリューション間の依存関係のマップ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vs.progression.codemap
 - vs.progression.standardgraphsdialog
@@ -32,18 +32,16 @@ caps.latest.revision: 245
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 06dc2d18ab6641847e2f0edb0d34cb671bca28a0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ae5e9491b8a02293a48a3ccc3e5e21a87fa5e878
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535367"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49200773"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>ソリューション間の依存関係をマップする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューション間の依存関係をマップする](https://docs.microsoft.com/visualstudio/modeling/map-dependencies-across-your-solutions)します。  
-  
 コード内の依存関係を理解するには、コード マップを作成して視覚化します。 このことは、ファイルとコード行全体を読むことなく、コードの相関を確認するのに役立ちます。  
   
  ![複数のソリューション間の依存関係を表示](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
@@ -289,7 +287,7 @@ ms.locfileid: "47535367"
      ![フィルター ペインを使用して、表示を簡略化](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
   
 ##  <a name="SeeSourceHeader"></a> C および C++ のソース ファイルとヘッダー ファイルの間の依存関係の表示  
- C++ プロジェクトのより完全なマップを作成する場合は、そのプロジェクトに対してブラウザー情報のコンパイラ オプション (**/FR**) を設定します。 参照してください[/FR、/Fr (を作成します。Sbr ファイル)](http://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896)します。 設定されていない場合は、メッセージが表示され、このオプションを設定することが求められます。 **[OK]** を選択した場合、このオプションは現在のマップに対してのみ設定されます。 以後のすべてのマップについて、メッセージを非表示にするように選択できます。 このメッセージを非表示にしても、再び表示されるようにできます。 次のレジストリ キーを `0` に設定するか、削除します。  
+ C++ プロジェクトのより完全なマップを作成する場合は、そのプロジェクトに対してブラウザー情報のコンパイラ オプション (**/FR**) を設定します。 「 [/FR, /Fr (Create .Sbr File)](http://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896)」を参照してください。 設定されていない場合は、メッセージが表示され、このオプションを設定することが求められます。 **[OK]** を選択した場合、このオプションは現在のマップに対してのみ設定されます。 以後のすべてのマップについて、メッセージを非表示にするように選択できます。 このメッセージを非表示にしても、再び表示されるようにできます。 次のレジストリ キーを `0` に設定するか、削除します。  
   
  **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**  
   
@@ -315,12 +313,12 @@ ms.locfileid: "47535367"
 |**問題点**|**原因**|**解決策**|  
 |---------------|------------------------|--------------------|  
 |コード マップを生成できませんでした。|ソリューション内のプロジェクトが正常にビルドされませんでした。|発生したビルド エラーを修正してから、マップを再生成します。|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] コード マップを生成するときに応答しなくなった、**アーキテクチャ**メニュー。|プログラム データベース (.pdb) ファイルが壊れている可能性があります。<br /><br /> .pdb ファイルには、型、メソッド、ソース ファイル情報などのデバッグ情報が格納されます。|ソリューションをリビルドしてから、もう一度実行します。|  
-|IntelliSense 参照データベースの特定の設定が無効になる。|IntelliSense の特定の設定を無効にすることがあります、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**オプション** ダイアログ ボックス。|設定をオンにして有効にします。<br /><br /> 参照してください[オプション、テキスト エディター]、[C/C++ の高度な](../ide/reference/options-text-editor-c-cpp-advanced.md)します。|  
-|" **不明なメソッド** " という内容のメッセージがメソッド ノードで表示される。<br /><br /> この問題は、メソッドの名前を解決できないために発生します。|バイナリ ファイルにベース再配置テーブルがない可能性があります。|リンカーで **/FIXED:NO** オプションをオンにします。<br /><br /> 参照してください[/FIXED (固定ベース アドレス)](http://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5)します。|  
-||プログラム データベース (.pdb) ファイルがビルドされていない可能性があります。<br /><br /> .pdb ファイルには、型、メソッド、ソース ファイル情報などのデバッグ情報が格納されます。|リンカーで **/DEBUG** オプションをオンにします。<br /><br /> 参照してください[/debug (Generate Debug Info)](http://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103)します。|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [アーキテクチャ] **メニューからコード マップを生成しようとすると、** が応答しなくなる。|プログラム データベース (.pdb) ファイルが壊れている可能性があります。<br /><br /> .pdb ファイルには、型、メソッド、ソース ファイル情報などのデバッグ情報が格納されます。|ソリューションをリビルドしてから、もう一度実行します。|  
+|IntelliSense 参照データベースの特定の設定が無効になる。|IntelliSense の特定の設定が、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**[オプション]** ダイアログ ボックスで無効になっている可能性があります。|設定をオンにして有効にします。<br /><br /> 参照してください[オプション、テキスト エディター]、[C/C++ の高度な](../ide/reference/options-text-editor-c-cpp-advanced.md)します。|  
+|" **不明なメソッド** " という内容のメッセージがメソッド ノードで表示される。<br /><br /> この問題は、メソッドの名前を解決できないために発生します。|バイナリ ファイルにベース再配置テーブルがない可能性があります。|リンカーで **/FIXED:NO** オプションをオンにします。<br /><br /> 「 [/FIXED (Fixed Base Address)](http://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5)」を参照してください。|  
+||プログラム データベース (.pdb) ファイルがビルドされていない可能性があります。<br /><br /> .pdb ファイルには、型、メソッド、ソース ファイル情報などのデバッグ情報が格納されます。|リンカーで **/DEBUG** オプションをオンにします。<br /><br /> 「 [/DEBUG (Generate Debug Info)](http://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103)」を参照してください。|  
 ||予想される場所で .pdb ファイルを開くことができないか、ファイルが見つかりません。|.pdb ファイルが予想される場所にあることを確認します。|  
-||デバッグ情報が .pdb ファイルから取り除かれています。|**/PDBSTRIPPED** オプションをリンカーで使用した場合は、代わりに完全な .pdb ファイルを使用します。<br /><br /> 参照してください[/PDBSTRIPPED (Strip Private Symbols)](http://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55)します。|  
+||デバッグ情報が .pdb ファイルから取り除かれています。|**/PDBSTRIPPED** オプションをリンカーで使用した場合は、代わりに完全な .pdb ファイルを使用します。<br /><br /> 「 [/PDBSTRIPPED (Strip Private Symbols)](http://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55)」を参照してください。|  
 ||呼び出し元が関数ではなく、バイナリ ファイル内のサンクまたはデータ セクション内のポインターです。|呼び出し元がサンクの場合は、`_declspec(dllimport)` を使用してサンクの回避を試みます。<br /><br /> 参照トピック<br /><br /> -   [一般的な規則と制限事項](http://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [使用して関数呼び出しのインポート](http://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport、dllimport](http://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|  
   
 ##  <a name="RenderMoreQuickly"></a> コード マップをよりすばやく表示する  

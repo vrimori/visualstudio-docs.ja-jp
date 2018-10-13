@@ -1,7 +1,7 @@
 ---
 title: IDebugProcess3::GetDebugReason |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f23fbabc-8b18-4278-bebf-4cdc7091513c
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 52dfde0a966bf3fc2c9c6e12d54f68c92d2bdb51
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6e92b1ac359db329ac62a8e7ad9a4559aeff5002
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546878"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49191049"
 ---
 # <a name="idebugprocess3getdebugreason"></a>IDebugProcess3::GetDebugReason
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugProcess3::GetDebugReason](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugprocess3-getdebugreason)します。  
-  
 このメソッドは、デバッグ プロセスを起動したことの理由を返します。  
   
 ## <a name="syntax"></a>構文  

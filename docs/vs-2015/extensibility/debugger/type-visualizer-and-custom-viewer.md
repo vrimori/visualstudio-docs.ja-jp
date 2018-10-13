@@ -1,7 +1,7 @@
 ---
 title: ビジュアライザーとカスタム ビューアー入力 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d347e7b18722aa8f8901abac3966150b3dca97cf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d71aeac0c3cde321df4f77874a2d679162cf1d54
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49201891"
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>型のビジュアライザーとカスタム ビューアー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[型のビジュアライザーとカスタム ビューアー](https://docs.microsoft.com/visualstudio/extensibility/debugger/type-visualizer-and-custom-viewer)します。  
-  
 型のビジュアライザーは、非常に特定の形式でデータの一部を表示するコンポーネントです。 この形式は、ビジュアライザーの実行者責任を持って、エンド ユーザーやサード パーティ サプライヤーのビジュアライザーです。  
   
  カスタム ビューアーは、非常に特定の形式でデータの一部を表示するカスタム式エバリュエーターの一部です。 この形式では、カスタム ビューアー、形式が、式の評価 (EE) の実装者であることを意味の実行者に完全に依存します。  

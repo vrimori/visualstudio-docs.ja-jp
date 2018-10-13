@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_typeid |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8964074bb7c47a5ca732f78d70970be90a096d8f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c5ee4c603824c4b8a07cda51ed79ef89bfde5327
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546318"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196535"
 ---
 # <a name="idiasymbolgettypeid"></a>IDiaSymbol::get_typeId
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_typeid](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-typeid)します。  
-  
 シンボルの型の識別子を取得します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のメニューの Guid および Id |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: febc736d1ebd83455df363989385026639b8387b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82f6ee62167f3a56761bc74147751b9b6ce1fd69
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539624"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49196964"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio メニューの GUID および ID
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Guid と Visual Studio メニューの Id の](https://docs.microsoft.com/visualstudio/extensibility/internals/guids-and-ids-of-visual-studio-menus)します。  
-  
 このトピックでは、メニューおよび Visual Studio のメニュー バーでのグループの GUID と ID の値を列挙します。 これらの値は、Visual Studio SDK の一部としてインストールされている .vsct ファイルで定義されます。 詳細については、次を参照してください。 [IDE-Defined コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)します。  
   
  .Vsct ファイルで定義されている統合開発環境 (IDE) のオブジェクトを操作する方法の詳細については、次を参照してください。[拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)します。  

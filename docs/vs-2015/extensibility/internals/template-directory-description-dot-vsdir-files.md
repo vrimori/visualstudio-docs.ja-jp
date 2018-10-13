@@ -1,7 +1,7 @@
 ---
 title: テンプレート ディレクトリの説明 (します。Vsdir) ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b0d4281201c0aa7d699deb5c1d2d9ae1b183fd76
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 733f59b4498ccec80b1223c87e32de0fab2ded69
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548247"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49201982"
 ---
 # <a name="template-directory-description-vsdir-files"></a>テンプレート ディレクトリの説明 (.Vsdir) ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テンプレート ディレクトリの説明 (します。Vsdir) ファイル](https://docs.microsoft.com/visualstudio/extensibility/internals/template-directory-description-dot-vsdir-files)します。  
-  
 テンプレート ディレクトリの説明 (.vsdir) ファイルは、統合開発環境 (IDE) に、フォルダー、ウィザードの .vsz ファイル、およびダイアログ ボックスで、プロジェクトに関連付けられているテンプレート ファイルを表示できるテキスト ファイルです。 内容には、ファイルまたはフォルダーごとに 1 つのレコードが含まれます。 複数のフォルダー、ウィザード、またはテンプレート ファイルを記述する 1 つだけ .vsdir ファイルが用意されています一般に、参照先の場所ですべての .vsdir ファイルがマージされます。  
   
  .Vsdir ファイル、および .vsdir ファイル自体で参照されるファイルのフォルダー (サブディレクトリ) は、すべて同じディレクトリ内にあります。 IDE がウィザードを実行またはフォルダーまたはファイルが表示されます、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックスに、IDE が .vsdir ファイルがあるかを判断する実行ファイルを含むディレクトリを調べます存在します。 .Vsdir ファイルが見つかった場合、IDE は実行または表示されているフォルダーまたはファイルのエントリが含まれているかどうかを判断するために読み取ります。 エントリが見つかった場合、IDE は、ウィザードの実行、またはコンテンツの表示で、情報を使用します。  

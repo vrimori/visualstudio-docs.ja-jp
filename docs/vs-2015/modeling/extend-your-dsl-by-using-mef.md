@@ -1,7 +1,7 @@
 ---
 title: MEF による DSL の拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 378aab6aaac3c45dc0a912dc62f5ebf55fffd46c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b4b3eea594bbfca0701fc8e719af0cf481fa434c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536111"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49194136"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF による DSL の拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MEF による DSL の拡張](https://docs.microsoft.com/visualstudio/modeling/extend-your-dsl-by-using-mef)します。  
-  
 Managed Extensibility Framework (MEF) を使用して、ドメイン固有言語 (DSL) を拡張できます。 または他の開発者は、DSL 定義とプログラム コードを変更することがなく、DSL の拡張機能を記述することがなります。 このような拡張機能には、メニュー コマンド、ドラッグ アンド ドロップ ハンドラー、および検証が含まれます。 ユーザーは、DSL をインストールし、その拡張機能を必要に応じてインストールすることになります。  
   
  さらに、DSL で MEF を有効にするとできます簡単に、DSL の機能の一部を記述する場合でも、すべて DSL と共に構築されます。  
