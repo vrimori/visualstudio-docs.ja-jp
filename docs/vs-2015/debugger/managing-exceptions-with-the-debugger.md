@@ -1,7 +1,7 @@
 ---
 title: デバッガーでの例外を管理する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -38,18 +38,16 @@ caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8837a633c12277a1caac2f88af3eb85a4db2dafc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 05fda0b130d765d5028e9c257102100708908dca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539049"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285923"
 ---
 # <a name="managing-exceptions-with-the-debugger"></a>デバッガーでの例外の管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio デバッガーでの例外を管理](https://docs.microsoft.com/visualstudio/debugger/managing-exceptions-with-the-debugger)します。  
-  
 例外は、プログラムの実行中に発生したエラー状態を示します。 最も重要な例外に応答するハンドラーを提供できるようにする必要がありますが、確認したい例外が発生した場合に実行が中断されるようにデバッガーを設定する方法を理解することが重要です。  
   
  例外が発生すると、[出力] ウィンドウに例外メッセージが書き込まれます。 次のような場合、例外によって実行が中断される可能性があります。  
@@ -58,7 +56,7 @@ ms.locfileid: "47539049"
   
 -   例外がスローされた直後、ハンドラーが呼び出される前に実行を中断するようにデバッガーが設定されている場合。  
   
--   設定した場合[マイ コードのみ](../debugger/just-my-code.md)、デバッガーはユーザー コードで処理されない例外で中断するように設定します。  
+-   [ [Just My Code](../debugger/just-my-code.md)] を設定済みで、デバッガーが、ユーザー コードで処理されない例外に対して実行を中断するように設定されている場合。  
   
 > [!NOTE]
 >  ASP.NET は、エラー ページをブラウザーに表示する最上位の例外ハンドラーを持っています。 **マイ コードのみ** が有効ではない場合、実行は中断されません。 例については、以下の「 [Setting the debugger to continue on user-unhandled exceptions](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) 」をご覧ください。  

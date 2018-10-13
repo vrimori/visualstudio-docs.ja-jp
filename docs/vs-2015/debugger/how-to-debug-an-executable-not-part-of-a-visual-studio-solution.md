@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio ソリューションの一環いない実行可能ファイルのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 36acf39ce892afb2a2601b3149987aa8d7e9f4ab
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 241a1dbf3af5db726f344ab42d53de3fdd30db3c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548064"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278788"
 ---
 # <a name="how-to-debug-an-executable-not-part-of-a-visual-studio-solution"></a>方法 : Visual Studio ソリューションに含まれていない実行可能ファイルをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: デバッグ、実行可能ファイルに含まれない Visual Studio ソリューション](https://docs.microsoft.com/visualstudio/debugger/how-to-debug-an-executable-not-part-of-a-visual-studio-solution)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトに含まれない実行可能ファイルをデバッグすることが必要な場合もあります。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の外部で作成された実行可能ファイルや、他の人から受け取った実行可能ファイルなどがその例です。  
   
  この問題を解決するには、通常、Visual Studio 外部の実行可能ファイルを起動して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] デバッガーを使用してそのファイルにアタッチします。 詳細については、次を参照してください。[実行中のプロセスにアタッチ](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)します。  

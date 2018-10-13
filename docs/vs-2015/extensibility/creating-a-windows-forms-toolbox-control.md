@@ -1,7 +1,7 @@
 ---
 title: ツールボックス コントロールをフォーム、Windows の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bc1deab4439133eb43348289fcfbba204a1cf9ff
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b7f1c5f9f052253e2b18ac2f7c669b7442ac391
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545132"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49294217"
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows フォーム ツールボックス コントロールを作成する](https://docs.microsoft.com/visualstudio/extensibility/creating-a-windows-forms-toolbox-control)します。  
-  
 Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フォーム ツールボックス コントロールの項目テンプレートが自動的に追加するコントロールを作成できます。、**ツールボックス**、拡張機能がインストールされている場合。 このトピックでは、他のユーザーに配布できる単純なカウンター コントロールを作成するテンプレートを使用する方法を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -67,7 +65,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
     |`Button1`|**[テキスト]**|リセット|  
   
 ### <a name="coding-the-user-control"></a>ユーザー コントロールのコーディング  
- `Counter` コントロールは、カウンターをインクリメントするメソッド、カウンターがインクリメントされると発生するイベント、および `Reset` ボタンを公開します。また、現在のカウント、表示テキスト、および `Reset` ボタンの表示または非表示の状態を格納するための、3 つのプロパティも公開します。 `ProvideToolboxControl`属性のどの場所を指定します、**ツールボックス**、`Counter`コントロールが表示されます。  
+ `Counter` コントロールは、カウンターをインクリメントするメソッド、カウンターがインクリメントされると発生するイベント、および `Reset` ボタンを公開します。また、現在のカウント、表示テキスト、および `Reset` ボタンの表示または非表示の状態を格納するための、3 つのプロパティも公開します。 `ProvideToolboxControl` 属性は、 **[ツールボックス]** のどの場所に `Counter` コントロールが表示されるかを判断します。  
   
 ##### <a name="to-code-the-user-control"></a>ユーザー コントロールをコーディングするには  
   
@@ -145,7 +143,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
     ```  
   
-8.  クラスの定義のすぐ上で、`ProvideToolboxControl`属性宣言から最初のパラメーターの値を変更`"MyWinFormsControl.Counter"`に`"General"`します。 これにより、 **[ツールボックス]** のコントロールをホストする項目グループの名前が設定されます。  
+8.  すぐに、クラス定義の上、 `ProvideToolboxControl` 属性の宣言内で、最初のパラメーターの値を `"MyWinFormsControl.Counter"` から `"General"`に変更します。 これにより、 **[ツールボックス]** のコントロールをホストする項目グループの名前が設定されます。  
   
      次の例では、 `ProvideToolboxControl` の属性と、調整されたクラス定義を示しています。  
   
@@ -171,7 +169,7 @@ Visual Studio 機能拡張ツール (VS SDK) に含まれている Windows フ�
   
 5.  ドラッグ、`Counter`をフォームに制御し、それを選択します。 `Value`、 `Message`、および`ShowReset`でプロパティが表示されます、**プロパティ**ウィンドウから継承されるプロパティと共に<xref:System.Windows.Forms.UserControl>します。  
   
-6.  `Message` プロパティを `Count:` に設定します。  
+6.  `Message` プロパティを `Count:`に設定します。  
   
 7.  ドラッグ、<xref:System.Windows.Forms.Button>をフォームに制御し、ボタンの名前とテキストのプロパティを設定し、`Test`します。  
   

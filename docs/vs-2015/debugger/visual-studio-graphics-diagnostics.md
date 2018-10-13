@@ -1,7 +1,7 @@
 ---
 title: Visual Studio グラフィックス診断 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 42
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c708900a0eebb2f4de1515eeab2f788eb5345a03
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a1ada0fb0379846d7c0a0af5a6ab28906b29f619
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536027"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49294204"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio グラフィックス診断](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)します。  
-  
 Visual Studio*グラフィックス診断*記録し、Direct3D アプリのレンダリングとパフォーマンスの問題を分析するためのツールのセットです。 グラフィックス診断は、Windows PC でローカルに実行されているアプリ、Windows デバイス エミュレーターで実行されているアプリ、あるいはリモート PC またはデバイスで実行されているアプリに対して使用できます。  
   
  グラフィックス診断のワークフローは、アプリが Direct3D を使用する方法の記録を、アプリの実行中にライブでキャプチャすることから始まります。記録したアプリの動作は、直ちに分析し、共有し、後で使用するために保存できます。 キャプチャ セッションを開始し、Visual Studio またはコマンド ライン キャプチャ ツールを使用して手動で制御**dxcap.exe**します。 また、グラフィックス診断キャプチャ API を使用してプログラムからキャプチャ セッションを開始し、制御することもできます。  
@@ -47,7 +45,7 @@ Visual Studio*グラフィックス診断*記録し、Direct3D アプリのレ�
  [はじめに](../debugger/getting-started-with-visual-studio-graphics-diagnostics.md)  
  Visual Studio のグラフィックス診断をインストールする方法と、Direct3D アプリに対してグラフィックス診断の使用を開始する方法を説明します。  
   
- [グラフィックス情報をキャプチャする](../debugger/capturing-graphics-information.md)  
+ [Capturing Graphics Information](../debugger/capturing-graphics-information.md)  
  グラフィックス診断を使用してアプリのレンダリングの問題を調べるには、まず、アプリが DirectX を使用する方法に関する情報を記録する必要があります。 記録セッション中に、アプリとは正常に実行する*キャプチャ*(つまりを選択します) に関心があるフレーム。 キャプチャには、フレームがレンダリングされる方法に関する詳細情報が含まれています。 キャプチャした情報をグラフィックス ログのドキュメントとして保存し、後で調べたり、チームの他のメンバーと共有したりできます。  
   
  [GPU 使用率](../debugger/gpu-usage.md)  

@@ -1,7 +1,7 @@
 ---
 title: VSIX パッケージのローカライズ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 10e80b13-b39e-466c-a7c8-774a862355af
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bad0b3307e4b0e5358bd04d4990d0012685300d7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 49ec131e4fa5ec635fa63763ccac9493134e2f2c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547739"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292904"
 ---
 # <a name="localizing-vsix-packages"></a>VSIX パッケージのローカライズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX パッケージのローカライズ](https://docs.microsoft.com/visualstudio/extensibility/localizing-vsix-packages)します。  
-  
 VSIX パッケージは、各ターゲット言語 Extension.vsixlangpack ファイルを作成し、適切なフォルダーに配置してローカライズできます。 ローカライズされたパッケージがインストールされている場合は、ローカライズされた説明と共に、拡張機能のローカライズされた名前が表示されます。 ローカライズされたライセンス ファイル、またはローカライズされた情報を指す URL を指定する場合は、それらも表示されます。  
   
  コンテンツ、VSIX パッケージに追加する VSPackage が含まれている場合メニュー コマンドやその他の UI を参照してください。[メニュー コマンドのローカライズ](../extensibility/localizing-menu-commands.md)については、新しい UI 要素をローカライズします。  

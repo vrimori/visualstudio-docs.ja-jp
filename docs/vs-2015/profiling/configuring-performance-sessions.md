@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス セッションの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 41
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e804e1638574d6918a1db4effbfbc1c20c80f63e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6b858d7a521f53876e185d8d4deb2b3467833d02
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537802"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285338"
 ---
 # <a name="configuring-performance-sessions"></a>パフォーマンス セッションの構成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス セッションの構成](https://docs.microsoft.com/visualstudio/profiling/configuring-performance-sessions)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のプロファイリング ツールを使用して、多くの種類のアプリケーションのさまざまなパフォーマンス データを収集することができます。 このセクションでは、パフォーマンス ウィザードおよびパフォーマンス セッションとターゲット バイナリのプロパティを使用して、対象のデータを収集するようにプロファイリング ツールを構成する方法を示します。 プロファイリングを実行して収集するデータの量を制御するために、プロファイリング ツールの構成プロパティも使用できます。 詳細については、「[データ収集の制御](../profiling/controlling-data-collection.md)」を参照してください。  
   
 > [!NOTE]

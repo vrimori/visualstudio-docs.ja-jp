@@ -1,7 +1,7 @@
 ---
 title: AsyncTaskMethodBuilder&lt;TResult&gt;構造体の内部メンバー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,21 +16,19 @@ ms.assetid: 17ebc340-8170-4aff-bf54-dc4548c83632
 caps.latest.revision: 5
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 644d4907fc32e823fff0a7e5ea0dd29d34973b8d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7a79d9744f53190f8d795f0f2072d1b0c2e0a9cf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548670"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296284"
 ---
 # <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder&lt;TResult&gt;構造体の内部メンバー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[AsyncTaskMethodBuilder&lt;TResult&gt;構造体の内部メンバー](https://docs.microsoft.com/visualstudio/extensibility/debugger/asynctaskmethodbuilder-tresult-structure-internal-members)します。  
-  
 このトピックでの内部メンバーの説明、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>クラス。 このクラスの詳細については、次を参照してください。、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>リファレンス トピック。  
   
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **名前空間:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
  **アセンブリ:** mscorlib (mscorlib.dll 内)  
   

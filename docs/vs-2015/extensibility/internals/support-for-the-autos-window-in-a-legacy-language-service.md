@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスで、[自動変数] ウィンドウのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 47d40aae-7a3c-41e1-a949-34989924aefb
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 68d9266ce81da0819bbf0f17c06409afcb02083f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 05a3181206f9e73ffe7800a581fc93c3712c4afa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547295"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283622"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>従来の言語サービスでの自動変数ウィンドウのサポート
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスで、[自動変数] ウィンドウのサポート](https://docs.microsoft.com/visualstudio/extensibility/internals/support-for-the-autos-window-in-a-legacy-language-service)します。  
-  
 **[自動変数]** ウィンドウには、変数と (いずれかの理由、ブレークポイントまたは例外)、デバッグ中のプログラムが一時停止すると、スコープ内のパラメーターなどの式が表示されます。 式には、変数、ローカルまたはグローバル、およびローカル スコープで変更されているパラメーターを含めることができます。 **[自動変数]** ウィンドウは、クラス、構造体、またはその他の種類のインスタンスを含めることもできます。 評価できる式エバリュエーターは何も表示できる可能性がある、 **[自動変数]** ウィンドウ。  
   
  Managed package framework (MPF) に直接はサポートされていません、 **[自動変数]** ウィンドウ。 ただし、オーバーライドする場合、<xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A>メソッドで示される式のリストを返すことができます、 **[自動変数]** ウィンドウ。  

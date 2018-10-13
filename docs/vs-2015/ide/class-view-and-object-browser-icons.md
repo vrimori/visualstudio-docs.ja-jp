@@ -1,7 +1,7 @@
 ---
 title: '[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 853ec238cefd5588096b5bd0318acfba30734e52
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: af7ce3ee9b97996f92ac9ca8537c583b063a3445
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547746"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279741"
 ---
 # <a name="class-view-and-object-browser-icons"></a>[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クラス ビューおよびオブジェクト ブラウザーのアイコン](https://docs.microsoft.com/visualstudio/ide/class-view-and-object-browser-icons)します。  
-  
 クラス ビュー * *、**オブジェクト ブラウザー**コードのエンティティを表すアイコン、名前空間、クラス、関数、および変数を表示します。 各アイコンおよびその説明を次の表に示します。  
   
 |アイコン|説明|アイコン|説明|  

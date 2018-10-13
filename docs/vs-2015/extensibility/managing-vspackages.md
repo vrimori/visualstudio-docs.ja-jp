@@ -1,7 +1,7 @@
 ---
 title: Vspackage の管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 386e0ce5-4107-4164-b0cd-1cf43eb5e7cf
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 349dc380e23e5f76ad32631384bc4db8fceeff00
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5b68ad8fb8ce32c2a4a1210d38fb458518d28435
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544305"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49296349"
 ---
 # <a name="managing-vspackages"></a>VSPackage の管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[管理 Vspackage](https://docs.microsoft.com/visualstudio/extensibility/managing-vspackages)します。  
-  
 ほとんどの場合は、プロジェクトと項目テンプレートの登録し、パッケージを自動的に読み込むため、Vspackage の管理について心配する必要はありません。 ただし、状況によっては、パッケージを管理するためにさらに詳しくを学習する必要があります。  
   
 ## <a name="using-the-experimental-instance"></a>実験用インスタンスを使用します。  

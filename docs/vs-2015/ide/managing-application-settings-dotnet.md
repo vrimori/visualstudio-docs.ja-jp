@@ -1,7 +1,7 @@
 ---
 title: アプリケーションの設定の管理 (.NET) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bc739c3ad34d5ed3b3de0a72ec76245c1ba0c155
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb2623c9122b987d8e0fe781b62127cd65bde0dc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546465"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49289511"
 ---
 # <a name="managing-application-settings-net"></a>アプリケーションの設定の管理 (.NET)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[アプリケーション設定の管理 (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)します。  
-  
 アプリケーション設定を使用すると、アプリケーション情報を動的に格納できます。 たとえば、アプリケーション コードに含まれないクライアント コンピューター情報 (接続文字列など)、ユーザー設定、および実行時に必要なその他の情報を格納できます。  
   
  アプリケーション設定は、以前のバージョンの Visual Studio で使用されていた動的プロパティに代わる機能です。  

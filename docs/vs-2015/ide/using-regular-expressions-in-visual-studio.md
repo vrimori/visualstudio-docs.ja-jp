@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での正規表現の使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,15 @@ caps.latest.revision: 56
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c74ed503b13e9f5efab3e6bf0df2fab75d34e7cb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4edf0add3e29dd7fe4156a220fe0edc60e47f117
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535702"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285468"
 ---
 # <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio での正規表現を使用します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[Visual Studio で正規表現を使用して](https://docs.microsoft.com/visualstudio/ide/using-regular-expressions-in-visual-studio)します。
-
 Visual Studio では、テキスト検索し、置換を .NET Framework の正規表現を使用します。 .NET の正規表現の詳細については、「[.NET Framework の正規表現](http://msdn.microsoft.com/library/521b3f6d-f869-42e1-93e5-158c54a6895d)」を参照してください。
 
 Visual Studio 2012 より前、Visual Studio は [検索と置換] ウィンドウでカスタムの正規表現構文を使用していました。 より一般的に使用されているカスタム正規表現のシンボルの一部を .NET のバージョンに変換する方法については、「[Visual Studio での正規表現の使用](https://msdn.microsoft.com/library/2k3te2cs\(v=vs.110\).aspx)」を参照してください。

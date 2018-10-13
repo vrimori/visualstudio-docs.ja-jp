@@ -1,7 +1,7 @@
 ---
 title: '&lt;署名&gt;(JavaScript) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7d33728cfe6a05ef55f416aae3e4e4abed0ac5c5
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 0b3278087545a4d49d5f4f2f0d3f6942c4ec6d9a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48880789"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293008"
 ---
 # <a name="ltsignaturegt-javascript"></a>&lt;署名&gt;(JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
-  
 オーバーロードされた関数のドキュメントを提供するために、関数またはメソッドの一連の関連要素をグループ化します。  
   
 ## <a name="syntax"></a>構文  

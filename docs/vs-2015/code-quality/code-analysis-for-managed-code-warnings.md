@@ -1,7 +1,7 @@
 ---
 title: コード、マネージ コードの警告の分析 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 4e1d74a44db244ed83e7d05fb09e66c96475466c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 300875689a8ea6e872e287eaed6d2328bdab5170
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539383"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278916"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>マネージド コードの警告に対応するコードの解析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マネージ コードの警告のコード分析](https://docs.microsoft.com/visualstudio/code-quality/code-analysis-for-managed-code-warnings)します。  
-  
 マネージド コード分析ツールには、マネージド コード ライブラリの規則違反を示す警告機能があります。 警告は、デザイン、ローカリゼーション、パフォーマンス、セキュリティなどの規則の区分に分類されています。 個々の警告によって、マネージド コード分析規則の違反がわかります。 ここでは、マネージド コード分析の各警告について、詳細な説明と例を紹介します。  
   
  次の表に、各警告で示される情報の種類を示しています。  
@@ -56,17 +54,17 @@ ms.locfileid: "47539383"
 |-|-|  
 |[警告 (CheckId 別)](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|すべての警告を CheckId 別に一覧表示します。|  
 |[暗号化警告](../code-quality/cryptography-warnings.md)|暗号化の適切な使用によって、より安全なライブラリとアプリケーションをサポートする警告です。|  
-|[デザインの警告](../code-quality/design-warnings.md)|指定された適切なライブラリ デザインをサポートする警告、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]設計ガイドラインです。|  
+|[デザインの警告](../code-quality/design-warnings.md)|[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] デザイン ガイドラインで規定されている、適切なライブラリ デザインをサポートする警告です。|  
 |[グローバリゼーションに関する警告](../code-quality/globalization-warnings.md)|国際対応ライブラリおよびアプリケーションをサポートする警告です。|  
 |[相互運用性の警告](../code-quality/interoperability-warnings.md)|COM クライアントとの相互作用をサポートする警告です。|  
 |[保守性の警告](../code-quality/maintainability-warnings.md)|ライブラリとアプリケーションの保守をサポートする警告です。|  
 |[Mobility Warnings](../code-quality/mobility-warnings.md)|電力の効率的な使用をサポートする警告です。|  
-|[名前付けに関する警告](../code-quality/naming-warnings.md)|名前付け規則への準拠をサポートする警告、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]設計ガイドラインです。|  
+|[名前付けに関する警告](../code-quality/naming-warnings.md)|[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] デザイン ガイドラインの名前付け規則の順守をサポートする警告です。|  
 |[パフォーマンスに関する警告](../code-quality/performance-warnings.md)|高パフォーマンスのライブラリとアプリケーションをサポートする警告です。|  
 |[Portability Warnings](../code-quality/portability-warnings.md)|異なるプラットフォーム間の移植性をサポートする警告です。|  
 |[信頼性の警告](../code-quality/reliability-warnings.md)|メモリやスレッドの適切な使用など、ライブラリとアプリケーションの信頼性をサポートする警告です。|  
 |[セキュリティの警告](../code-quality/security-warnings.md)|より安全なライブラリとアプリケーションをサポートする警告です。|  
-|[使用法に関する警告](../code-quality/usage-warnings.md)|適切な使用をサポートする警告、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。|  
+|[使用法に関する警告](../code-quality/usage-warnings.md)|[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]の適切な使用をサポートする警告です。|  
 |[Code Analysis Policy Errors](../code-quality/code-analysis-policy-errors.md)|チェックインにおいてコード分析ポリシーに適合しない場合に発生するエラーです。|
 
 

@@ -1,7 +1,7 @@
 ---
 title: プロジェクト ファクトリを使用してプロジェクト インスタンスを作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 94c90012-8669-459c-af8e-307ac242c8c4
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0ae36269de9d9911092bedb87f18f9aff3ca76a2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 28ca37af638802e3b9efd160b00d1b245d3ae4a8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545733"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288341"
 ---
 # <a name="creating-project-instances-by-using-project-factories"></a>プロジェクト ファクトリを使用したプロジェクト インスタンスの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を作成するプロジェクト インスタンスで使用してプロジェクト ファクトリ](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-project-instances-by-using-project-factories)します。  
-  
 プロジェクトの種類に[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を使用して、*プロジェクト ファクトリ*プロジェクトのオブジェクトのインスタンスを作成します。 プロジェクト ファクトリは、標準のクラス ファクトリ cocreatable COM オブジェクトに似ています。 ただし、プロジェクトのオブジェクトが cocreatable: プロジェクト ファクトリを使用してのみ作成します。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE は、ユーザーが既存のプロジェクトを読み込みますかで新しいプロジェクトを作成、VSPackage の実装プロジェクト ファクトリを呼び出す[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 新しいプロジェクトのオブジェクトは、ソリューション エクスプ ローラーを設定するのに十分な情報を使用して IDE を提供します。 新しいプロジェクトのオブジェクトには、IDE によって開始されたすべての関連する UI 操作をサポートするため、必要なインターフェイスも提供します。  

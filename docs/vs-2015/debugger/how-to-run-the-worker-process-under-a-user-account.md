@@ -1,7 +1,7 @@
 ---
 title: '方法: ユーザー アカウントでワーカー プロセスの実行 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 08ac00384110cc73175286365fef6ee4b67a0170
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a07e492bf8c3ae71b430acd5bde69a852b96baee
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535941"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280190"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>方法 : ユーザー アカウントでワーカー プロセスを実行する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 実行、ワーカー プロセス ユーザー アカウントで](https://docs.microsoft.com/visualstudio/debugger/how-to-run-the-worker-process-under-a-user-account)。  
-  
 ユーザー アカウントを使用して [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ワーカー プロセス (aspnet_wp.exe または w3wp.exe) を実行できるようにコンピューターを設定するには、次の手順を実行します。  
   
 ## <a name="procedure"></a>プロシージャ  
@@ -51,15 +49,15 @@ ms.locfileid: "47535941"
   
 4.  [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)] では、既定で、IIS 6.0 がインストールされます。 対応するワーカー プロセスは w3wp.exe です。aspnet_wp.exe をワーカー プロセスとして IIS 6.0 モードで実行するには、次の手順を実行します。  
   
-    1.  クリックして**開始**、] をクリックして**管理ツール**選び、**インターネット インフォメーション サービス**します。  
+    1.  クリックして**開始**、 をクリックして**管理ツール**選び、**インターネット インフォメーション サービス**します。  
   
     2.  **インターネット インフォメーション サービス**ダイアログ ボックスを右クリックし、 **Websites**フォルダー選択**プロパティ**します。  
   
-    3.  **Web サイトのプロパティ**] ダイアログ ボックスで、選択**サービス**します。  
+    3.  **Web サイトのプロパティ** ダイアログ ボックスで、選択**サービス**します。  
   
     4.  選択**実行 WWW サービスを使用して IIS6.0 分離モードで**します。  
   
-    5.  閉じる、**プロパティ**] ダイアログ ボックスと**インターネット サービス マネージャー**します。  
+    5.  閉じる、**プロパティ** ダイアログ ボックスと**インターネット サービス マネージャー**します。  
   
 5.  Windows のコマンド プロンプトを開き、次を実行してサーバーをリセットします。  
   
@@ -73,11 +71,11 @@ ms.locfileid: "47535941"
     net start w3svc  
     ```  
   
-6.  [Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時的なを右クリックして[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]ファイルのフォルダーと選択**プロパティ**ショートカット メニューの [します。  
+6.  [Temporary [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Files] フォルダーを探します。このフォルダーは、[CONFIG] フォルダーと同じパスにあります。 一時的なを右クリックして[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]ファイルのフォルダーと選択**プロパティ**ショートカット メニューの します。  
   
 7.  **Temporary ASP.NET Files のプロパティ**ダイアログ ボックスで、をクリックして、**セキュリティ**タブ。  
   
-8.  [ **詳細設定**] をクリックします。  
+8.  **[詳細設定]** をクリックします。  
   
 9. **Temporary ASP.Net Files のセキュリティの詳細設定**ダイアログ ボックスで、をクリックして**追加**します。  
   
@@ -85,11 +83,11 @@ ms.locfileid: "47535941"
   
 10. ユーザー名を入力、**を選択するオブジェクト名を入力**ボックスし、順にクリックします**OK**。 ユーザー名は、「ドメイン名\ユーザー名」の形式で入力する必要があります。  
   
-11. **Temporary ASP.NET Files のアクセス許可エントリ**] ダイアログ ボックスで、ユーザーに与えます**フル コントロール**、順にクリックします**OK**を閉じる、**一時的な ASP のエントリ.NET ファイル**] ダイアログ ボックス。  
+11. **Temporary ASP.NET Files のアクセス許可エントリ** ダイアログ ボックスで、ユーザーに与えます**フル コントロール**、順にクリックします**OK**を閉じる、**一時的な ASP のエントリ.NET ファイル** ダイアログ ボックス。  
   
-12. A**セキュリティ**] ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかを確認します。 **[はい]** をクリックします。  
+12. A**セキュリティ** ダイアログ ボックスが表示され、システム フォルダーのアクセス許可を変更するかどうかを確認します。 **[はい]** をクリックします。  
   
-13. クリックして**OK**を閉じる、 **Temporary ASP.NET Files のプロパティ**] ダイアログ ボックス。  
+13. クリックして**OK**を閉じる、 **Temporary ASP.NET Files のプロパティ** ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  
 [ASP.NET のデバッグ : システム要件](../debugger/aspnet-debugging-system-requirements.md)  

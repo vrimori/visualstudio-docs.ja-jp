@@ -1,7 +1,7 @@
 ---
 title: '方法: Windows ビューでウィンドウの検索 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 043e3e92004eb5b0995bc285e90a138f4dc902f4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9cd33d8c7414d4db989533475a328ca8abf2ffdb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544447"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49295062"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>方法: ウィンドウ ビューでウィンドウを検索する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Windows ビューでウィンドウの検索](https://docs.microsoft.com/visualstudio/debugger/how-to-search-for-a-window-in-windows-view)します。  
-  
 Windows のビューで特定のウィンドウを検索するには、検索条件として、ハンドル、キャプション、クラス、またはキャプションとクラスの組み合わせを使用します。 検索の最初の方向を指定することもできます。 ダイアログ ボックスのフィールドは、ウィンドウのツリーで、選択したウィンドウの属性を紹介します。  
   
  (すべて windows デスクトップの子である)、2 番目のレベルに展開されたツリーで始まり、クラス名とタイトルによってデスクトップ レベルのウィンドウを識別できるように、します。 デスクトップ レベルのウィンドウを選択すると、特定の子ウィンドウを検索するには、そのレベルを展開できます。  

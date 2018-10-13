@@ -1,7 +1,7 @@
 ---
 title: LIB タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dcdcece820af764e627aafc43ef405c627724b68
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 75e15c0230526fc7647144cbde566c693be58cbe
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47593030"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285507"
 ---
 # <a name="lib-task"></a>LIB タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[LIB タスク](https://docs.microsoft.com/visualstudio/msbuild/lib-task)します。  
-  
   
 Microsoft 32-Bit Library Manager ツール (lib.exe) をラップします。 Library Manager は、COFF (Common Object File Format) オブジェクト ファイルのライブラリを作成および管理します。 また、エクスポートした定義を参照するためのエクスポート ファイルやインポート ライブラリも作成できます。 詳細については、「[LIB リファレンス](http://msdn.microsoft.com/library/ecc7f643-bbd4-47a3-8dc6-b360f880db91)」と「[LIB の実行](http://msdn.microsoft.com/library/d54f5c81-7147-4b2c-a8db-68ce6eb1eabd)」を参照してください。  
   

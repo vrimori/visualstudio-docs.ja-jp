@@ -1,7 +1,7 @@
 ---
 title: '方法: ソース管理プラグインのインストール |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a89244c35c504c3c98ef02e2360ab2daa2f660f7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 35150331ed22960bb8556a7b1175e0ed629efca7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538170"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292982"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ソース管理のプラグインをインストール](https://docs.microsoft.com/visualstudio/extensibility/internals/how-to-install-a-source-control-plug-in)します。  
-  
 ソース管理プラグインを作成するには、3 つの手順が含まれます。  
   
 1.  このドキュメントのソース管理プラグイン API リファレンスのセクションで定義された関数では、DLL を作成します。  

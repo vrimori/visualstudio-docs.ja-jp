@@ -1,7 +1,7 @@
 ---
 title: '方法: [逆アセンブル] ウィンドウを使用して |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -30,18 +30,16 @@ caps.latest.revision: 34
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 17747cdab2987a053ef5fff2bc7b8a11867d94fc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aa414aacc8b7ffc39132157686abee860cac994c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546588"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49287760"
 ---
 # <a name="how-to-use-the-disassembly-window"></a>方法 : [逆アセンブル] ウィンドウを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio のデバッガーで逆アセンブリ コードの表示](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-disassembly-window)します。  
-  
 この機能は、アドレス レベルのデバッグが有効になっている場合にのみ使用可能な**オプション**ダイアログ ボックスで、**デバッグ**ノード。 スクリプトまたは SQL のデバッグには使用できません。  
   
  **逆アセンブル**ウィンドウには、コンパイラによって作成された命令に対応するアセンブリ コードが表示されます。 マネージド コードをデバッグする場合、これらのアセンブリ命令は、Visual Studio コンパイラが生成した Microsoft Intermediate Language (MSIL) ではなく、Just-In-Time (JIT) コンパイラが作成したネイティブ コードに対応しています。  

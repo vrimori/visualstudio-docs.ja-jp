@@ -1,7 +1,7 @@
 ---
 title: CPU 使用状況グラフ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: defa2f16a18c97a10f74e8d351152442ccc0907f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fc7dace6156cbb0909c2a54294a82f848fcb5b5e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537619"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292227"
 ---
 # <a name="cpu-utilization-graph"></a>CPU 使用状況グラフ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CPU 使用状況グラフ](https://docs.microsoft.com/visualstudio/profiling/cpu-utilization-graph)します。  
-  
 CPU 使用状況グラフは、時間経過に対するアプリの使用状況のレベルを示します。 X 軸はトレースの期間を表し、Y 軸はシステム上の論理コアの数を表します。 任意の時点にどのコアがアクティブかは表示されません。 たとえば、2 つのコアが特定の期間それぞれ最大利用可能時間の 50% 実行されている場合、このビューには使用されている 1 つの論理コアが表示されます。  
   
 ## <a name="cpu-utilization-graph-colors"></a>CPU 使用状況グラフの色  

@@ -1,7 +1,7 @@
 ---
 title: クラス デザイナーの Visual C++ クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 884d8cc74ea550c804aa6dd6ac735eb6f70be789
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d4193dda70aeda8534b9dc2fa3428ca08a9d89fa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534937"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49285689"
 ---
 # <a name="visual-c-classes-in-class-designer"></a>クラス デザイナーの Visual C++ クラス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クラス デザイナーの Visual C クラス](https://docs.microsoft.com/visualstudio/ide/visual-cpp-classes-in-class-designer)します。  
-  
 クラス デザイナーは、C++ クラスをサポートし、Visual Basic および Visual C# クラスの図形と同じ方法でネイティブの C++ クラスを視覚化します。ただし、C++ クラスは複数の継承関係を持つことができる点が異なります。 クラスの図形を展開して、表示されるクラスのフィールドとメソッドを増やしたり、図形を折りたたんでスペースを節約したりすることができます。  
   
 > [!NOTE]

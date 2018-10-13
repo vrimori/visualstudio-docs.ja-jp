@@ -1,7 +1,7 @@
 ---
 title: '方法: オンライン ClickOnce アプリケーションでは、クエリ文字列の情報の取得 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,19 +21,17 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 808e6a8d6264f616eec7716ddeb173bfccb906bc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 78b4edd85d47087033cc20189f2c9edc4d7fcd34
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549163"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49278929"
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>方法 : オンライン ClickOnce アプリケーションでクエリ文字列を取得する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: オンライン ClickOnce アプリケーションでのクエリ文字列情報の取得](https://docs.microsoft.com/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)します。  
-  
-*クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、`servername` でホストされている `WindowsApp1` という [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションがあり、このアプリケーションを起動するときに、`username` という変数に値を渡すとします。 URL は次のようになります。  
+*クエリ文字列* とは、URL のうちの疑問符 (?) で始まる部分であり、 *name=value*の形式で任意の情報を記述します。 たとえば、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] でホストされている `WindowsApp1` という `servername`アプリケーションがあり、このアプリケーションを起動するときに、 `username` という変数に値を渡すとします。 URL は次のようになります。  
   
  `http://servername/WindowsApp1.application?username=joeuser`  
   
@@ -71,14 +69,14 @@ ms.locfileid: "47549163"
     MageUI  
     ```  
   
-2.  **ファイル**メニューの **開く**、配置マニフェストを開くと、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]ファイルにあるアプリケーションで終わる、`.application`拡張機能。  
+2.  **[ファイル]** メニューの **[開く]** をクリックし、対象の [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションの配置マニフェストを開きます。配置マニフェスト ファイルの拡張子は `.application` です。  
   
 3.  左側のナビゲーション ウィンドウにある **[配置オプション]** パネルをクリックし、 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。  
   
 4.  **[ファイル]** メニューの **[保存]** をクリックします。  
   
 > [!NOTE]
->  または、[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] でクエリ文字列を渡すことができるようにすることもできます。 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。このチェック ボックスは、 **[プロジェクトのプロパティ]** を開いて **[発行]** タブをクリックし、 **[オプション]** ボタンをクリックして **[マニフェスト]** を選択すると表示されます。  
+>  または、 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]でクエリ文字列を渡すことができるようにすることもできます。 **[URL パラメーターをアプリケーションに渡すことを許可する]** チェック ボックスをオンにします。このチェック ボックスは、 **[プロジェクトのプロパティ]** を開いて **[発行]** タブをクリックし、 **[オプション]** ボタンをクリックして **[マニフェスト]** を選択すると表示されます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  クエリ文字列パラメーターを使用する場合は、アプリケーションがどのようにインストールされ、アクティブ化されるかを十分に考慮する必要があります。 アプリケーションが、Web またはネットワーク共有からユーザーのコンピューターにインストールされるように構成されている場合は、ユーザーが一度だけ URL を通じてアプリケーションをアクティブにすることが予想されます。 その後ユーザーは、ほとんどの場合、 **[スタート]** メニューのショートカットを使用してアプリケーションをアクティブにします。 その結果、アプリケーションはその有効期間中に一度だけクエリ文字列引数を受け取ることが保証されます。 これらの引数を後から使用できるようにユーザーのコンピューターに格納する場合は、それらが安全かつ確実に格納されるようにする必要があります。  
@@ -86,7 +84,7 @@ ms.locfileid: "47549163"
  アプリケーションがオンラインでのみ使用される場合は、常に URL を通じてそのアプリケーションがアクティブ化されます。 ただしその場合でも、クエリ文字列パラメーターが失われたり壊れたりしても正しく機能するようにアプリケーションを作成する必要があります。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 悪意のある文字の入力を使用前に削除する予定である場合にのみ、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、次を参照してください。 [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)します。  
+ 悪意のある文字の入力を使用前に削除する予定である場合にのみ、 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションに URL パラメーターを渡すことができるようにしてください。 たとえば、引用符、スラッシュ、またはセミコロンが埋め込まれた文字列を、フィルターしないままデータベースに対する SQL クエリに使用すると、任意のデータ操作が行われる可能性があります。 クエリ文字列のセキュリティの詳細については、「 [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションのセキュリティ](../deployment/securing-clickonce-applications.md)

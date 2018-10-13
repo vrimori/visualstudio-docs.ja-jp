@@ -1,7 +1,7 @@
 ---
 title: ダンプ ファイル概要機能拡張 API |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7230886147d3e594dffa27b776efb995391d635b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9e0bab08cdbfb28aed77ebb90c5c0fb67f92c726
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540254"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279423"
 ---
 # <a name="dump-file-summary-extensibility-api"></a>ダンプ ファイルの概要機能拡張 API
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ダンプ ファイル概要機能拡張の API](https://docs.microsoft.com/visualstudio/debugger/dump-file-summary-extensibility-api)します。  
-  
 拡張できる機能拡張 Api を使用して、このセクションでは、します。Exe プロジェクト システムと**ダンプの概要**独自のカスタム デバッグ エンジンで使用するためのページ。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

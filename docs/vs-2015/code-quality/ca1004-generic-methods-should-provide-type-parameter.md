@@ -1,7 +1,7 @@
 ---
 title: 'Ca 1004: ジェネリック メソッドは型パラメーターを指定する必要があります |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: bb32ab837ce7431f90c6a7ccdc178aa62b8145cf
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 26fa2296625c9fae66c29c76b26b6cc4abf6f37e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589584"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288185"
 ---
 # <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: ジェネリック メソッドは型パラメーターを指定しなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 1004: ジェネリック メソッドは、型パラメーターを指定する必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca1004-generic-methods-should-provide-type-parameter)します。
-
 |||
 |-|-|
 |TypeName|GenericMethodsShouldProvideTypeParameter|

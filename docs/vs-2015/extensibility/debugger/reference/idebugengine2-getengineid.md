@@ -1,7 +1,7 @@
 ---
 title: IDebugEngine2::GetEngineID |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 0d5674c8-a9b9-4b72-8211-d2d68695775a
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0326f165b31ab2597b01561fc2b86854eda04c61
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ce9736720c54cd820645404fa6d4fc46d5c095f1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547662"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49292223"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugEngine2::GetEngineID](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugengine2-getengineid)します。  
-  
 デバッグ エンジン (DE) の GUID を取得します。  
   
 ## <a name="syntax"></a>構文  

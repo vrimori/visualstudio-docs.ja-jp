@@ -1,7 +1,7 @@
 ---
 title: '[エクスポート] ボタン (コンカレンシー ビジュアライザー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9c7130b080e30a33b5689a5421fdd5a4d9cdb2ac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4c85d005aa7fbb0b7b9287cd6e390b7dde0fc94a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536380"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49297662"
 ---
 # <a name="export-button-concurrency-visualizer"></a>[エクスポート] ボタン (コンカレンシー ビジュアライザー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[[エクスポート] ボタン (同時実行ビジュアライザー)](https://docs.microsoft.com/visualstudio/profiling/export-button-concurrency-visualizer)します。  
-  
 **[エクスポート]** ボタンでは、独自のレコードのためや、Microsoft Excel など、別のツールで使用するために、.csv ファイルとして呼び出し履歴をエクスポートできます。  
   
 ## <a name="see-also"></a>関連項目  

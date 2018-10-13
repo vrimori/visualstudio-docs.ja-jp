@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 候補の表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 caps.latest.revision: 37
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9d7cd7a1ea3ffa3fd85cbe8ed7088347298f849c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2ceb59310597cd0481007ec9c08f5312a8d75090
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548671"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280583"
 ---
 # <a name="walkthrough-displaying-statement-completion"></a>チュートリアル: 入力候補の表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 候補を表示する](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-displaying-statement-completion)します。  
-  
 入力候補を提供する識別子を定義し、補完セッションをトリガーし、言語ベースのステートメント入力候補を実装できます。 言語サービスのコンテキストでステートメント入力候補を定義する、独自のファイル名拡張子とコンテンツの種類を定義および補完機能をその型だけを表示し、または既存のコンテンツ タイプの完了をトリガーする — たとえば、「プレーン テキスト」。 このチュートリアルでは、「プレーン テキスト」コンテンツ タイプ、テキスト ファイルのコンテンツの種類の入力候補をトリガーする方法を示します。 「テキスト」コンテンツの種類は、すべての他のコンテンツの種類のコードと XML ファイルを含む先祖です。  
   
  ステートメント入力候補が特定の文字の入力によってトリガーされる通常、"using"などの識別子の先頭を入力してなど。 これが通常選択をコミットする space キー、タブ、または Enter キーを押しても閉じられます。 キーストロークのコマンド ハンドラーを使用して文字を入力することによってトリガーされる IntelliSense 機能を実装することができます (、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>インターフェイス)、および実装するハンドラー プロバイダー、<xref:Microsoft.VisualStudio.Editor.IVsTextViewCreationListener>インターフェイス。 完了に参加している識別子のリストである、入力候補のソースを作成するには、実装、<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>インターフェイスと完了のソース プロバイダー (、<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>インターフェイス)。 プロバイダーは、Managed Extensibility Framework (MEF) コンポーネント パーツです。 サービスとブローカー、ソースおよびコント ローラー クラスをエクスポートおよびインポートを担います — など、 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService>、テキスト バッファー内のナビゲーションを有効にして<xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker>、完了セッションが開始します。  
@@ -40,7 +38,7 @@ ms.locfileid: "47548671"
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`CompletionTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `CompletionTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -65,7 +63,7 @@ ms.locfileid: "47548671"
   
 #### <a name="to-implement-the-completion-source"></a>入力候補のソースを実装するには  
   
-1.  クラス ファイルを追加し、名前`TestCompletionSource`します。  
+1.  クラス ファイルを追加し、その名前を `TestCompletionSource`にします。  
   
 2.  これらのインポートを追加します。  
   
