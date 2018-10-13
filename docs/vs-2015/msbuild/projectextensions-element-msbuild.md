@@ -1,7 +1,7 @@
 ---
 title: ProjectExtensions 要素 (MSBuild) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 156a35a953169c5b1ed8208c8d4f044f7b9fa36f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 41b3ed5fc742f95cde3c834e5d8612daafef5d6d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548579"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49189112"
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions 要素 (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ProjectExtensions 要素 (MSBuild)](https://docs.microsoft.com/visualstudio/msbuild/projectextensions-element-msbuild)します。  
-  
   
 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] プロジェクト ファイルに、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 以外の情報を含めることを可能にします。 `ProjectExtensions` 要素内のすべてのものは、[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] によって無視されます。  
   

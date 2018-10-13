@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol::get_acceleratorPointerTags |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e4dd78c3b028d1cd20c6a03a2fe072470a2dc1a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 28b38d7e87862822d9bf8f1e5c729629486f44d5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536772"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236094"
 ---
 # <a name="idiasymbolgetacceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaSymbol::get_acceleratorPointerTags](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags)します。  
-  
 C++ AMP のアクセラレータのスタブ関数に対応するすべてのアクセラレータ ポインター タグ値を返します。  
   
 ## <a name="syntax"></a>構文  

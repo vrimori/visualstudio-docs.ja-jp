@@ -1,7 +1,7 @@
 ---
 title: 'UML クラス図: リファレンス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 43
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 239b5427c4e19b15e44d683def0e2d6c82dccdfe
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 890c69a4cde928e645dd2ede9fbbb27f66a44794
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544335"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220130"
 ---
 # <a name="uml-class-diagrams-reference"></a>UML クラス図: リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML クラス図: リファレンス](https://docs.microsoft.com/visualstudio/modeling/uml-class-diagrams-reference)します。  
-  
 UML クラス図は、アプリケーションが内部的に使用したり、ユーザーとのやり取りにおいて使用したりするオブジェクトおよび情報の構造を記述するものです。 そこで情報を記述する際に、詳細な実装は考慮されません。 クラスおよび関係は、データベース テーブル、XML ノード、ソフトウェア オブジェクトの組み合わせ、といったさまざまな方法で実装できます。  
   
 > [!NOTE]

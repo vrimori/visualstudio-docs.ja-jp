@@ -1,7 +1,7 @@
 ---
 title: プロジェクトと項目テンプレートのカスタマイズ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 594b8a73cab470b29b2e3a81da8739ec6965f14e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c26203fe5a3cd187ef53a573d31697ef16567f59
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49234274"
 ---
 # <a name="customizing-project-and-item-templates"></a>プロジェクトと項目テンプレートのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタマイズ プロジェクトと項目テンプレート](https://docs.microsoft.com/visualstudio/ide/customizing-project-and-item-templates)します。  
-  
 プロジェクトと項目テンプレートを作成した後も、ニーズに合わせてさらにカスタマイズできます。  
   
  たとえば、次のタスクを実行できます。  

@@ -1,7 +1,7 @@
 ---
 title: トリガーする方法を中断、再開、およびバック グラウンド イベントを Visual Studio での Windows ストア アプリ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0466441d83d3d0203167f86e6f1afa8c85acb32d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5496e9b5122d2f2206118445a4e7316c2717bc37
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545444"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214761"
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio"></a>Visual Studio で Windows ストア アプリの中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[をトリガーする方法を中断、再開、およびバック グラウンド イベントを Visual Studio での Windows ストア アプリ](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)します。  
-  
 デバッグが行われていないときは、Windows の **プロセス継続時間管理** (PLM) によってアプリの実行状態 (ユーザー アクションに応じたアプリの開始、中断、再開、および終了) とデバイスの状態が管理されます。 デバッグが行われているとき、これらのアクティブ化イベントは Windows によって無効にされます。 このトピックでは、デバッガーでこれらのイベントを発生させる方法について説明します。  
   
  このトピックでは、 **バックグラウンド タスク**をデバッグする方法についても説明します。 バックグラウンド タスクは、アプリが実行されていない場合でもバックグラウンド プロセスで特定の操作を行うことを可能にします。 デバッガーを使用してアプリをデバッグ モードに変更した後、UI の起動なしでバックグラウンド タスクを開始してデバッグできます。  
@@ -135,7 +133,7 @@ ms.locfileid: "47545444"
  [Visual Studio でのストア アプリのテスト](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [アプリケーションのライフ サイクル](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
- [起動する、再開、およびマルチタス キング](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)
+ [Launching, resuming, and multitasking](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)
 
 
 

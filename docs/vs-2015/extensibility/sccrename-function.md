@@ -1,7 +1,7 @@
 ---
 title: SccRename 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: b467ade6-a1db-4c0b-b60f-7850ec4f79eb
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 455b49790d0d7a6ba84b7d8c39d84f6e4a7ed6a7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ef59da920e8011e5b2a23e14dcd58cdc07365d7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534965"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232213"
 ---
 # <a name="sccrename-function"></a>SccRename 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccRename 関数](https://docs.microsoft.com/visualstudio/extensibility/sccrename-function)します。  
-  
 この関数は、ソース管理システムでファイルを変更します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: (Visual Studio のデバッグ) API リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e4e429da-3667-41f7-9158-a8207d13e91a
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7a4348e6e60c722d8116b682386785a8cfba6cde
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 979a6b999e34b5cec57e4a0d324f8c273fbe5dc2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539609"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222101"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API 参照 (Visual Studio のデバッグ)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[API のリファレンス (Visual Studio のデバッグ)](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/api-reference-visual-studio-debugging)します。  
-  
 リファレンス セクションには、API、構文と、API のすべての要素の使用法を示すガイドの概念の概要とコード例のアソートメントが含まれています。 すべての参照は、カテゴリでアルファベット順に一覧表示されます。  
   
  次の表は、一般的な`HRESULT`メソッドによって返される値。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: キーボード主体で操作する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a0f1ca0ccf38911c8614bf1429c6f658bb9c957c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 588f93a89713d42efaba61a34b0dabe5eb2af523
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535634"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49238525"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>方法: キーボード主体で操作する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: キーボード主体で操作を使用して、](https://docs.microsoft.com/visualstudio/ide/reference/how-to-use-the-keyboard-exclusively)します。  
-  
   
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で提供されているさまざまな既定のショートカット キーの組み合わせを使うと、統合開発環境 (IDE) 内で移動やコーディングを簡単に行うことができます。 Visual Studio で使われるすべてのショートカット キーの一覧については、「[既定のキーボード ショートカット](../../ide/default-keyboard-shortcuts-in-visual-studio.md)」をご覧ください。 他の Microsoft 製品で利用できるキーボード ショートカットについては、[http://www.microsoft.com/enable/products/keyboard.aspx](http://go.microsoft.com/fwlink/?LinkID=40400) をご覧ください。  
   

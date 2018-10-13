@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Shell |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2d96d4204e105324a9c209f74f9aee160c3eddde
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5f0ef1e207fffc4d44963b968caad392b9d976c6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535863"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222405"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio Shell](https://docs.microsoft.com/visualstudio/extensibility/internals/visual-studio-shell)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]シェルは、プライマリのエージェントでの統合の[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 シェルは、一般的なサービスを共有する Vspackage を有効にするために必要な機能を提供します。 のアーキテクチャの目的は、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Vspackage では主要な機能をというには、シェルは、基本的な機能を提供し、Vspackage のコンポーネント間の相互通信をサポートするためのフレームワークです。  
   
 ## <a name="shell-responsibilities"></a>シェルの責任  

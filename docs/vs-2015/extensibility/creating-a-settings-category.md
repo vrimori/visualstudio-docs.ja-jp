@@ -1,7 +1,7 @@
 ---
 title: Creating a Settings Category |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
 caps.latest.revision: 40
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 91c46e5a222526dd68d98be0c855067cd96b10f9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b1a59e2c185460ffd9b9326c8458681f5953de76
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535885"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186150"
 ---
 # <a name="creating-a-settings-category"></a>設定カテゴリの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Creating a Settings Category](https://docs.microsoft.com/visualstudio/extensibility/creating-a-settings-category)します。  
-  
 このチュートリアルでは、Visual Studio の設定のカテゴリを作成し、使用する値を保存し、値の設定ファイルから復元します。 設定のカテゴリは「カスタム設定ポイント」; として表示される関連するプロパティのグループです。つまりのチェック ボックスと、**インポートおよびエクスポート設定**ウィザード。 (で検索することができます、**ツール**メニュー)。設定の保存や、カテゴリとして復元し、個々 の設定は、ウィザードに表示されません。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
  派生することによって設定のカテゴリを作成する、<xref:Microsoft.VisualStudio.Shell.DialogPage>クラス。  

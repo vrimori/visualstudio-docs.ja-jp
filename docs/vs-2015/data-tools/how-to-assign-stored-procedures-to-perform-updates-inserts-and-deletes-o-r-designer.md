@@ -1,7 +1,7 @@
 ---
 title: '方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 802627f59f54b9a4b1179ba5c643b4671f4f7ce0
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 4f65af06a275dc50afafc70fd95c9b93d9bba458
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878955"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232715"
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](https://docs.microsoft.com/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)します。  
-  
   
 ストアド プロシージャは O/R デザイナーに追加でき、通常の <xref:System.Data.Linq.DataContext> メソッドとして実行できます。 既定値も使用[!INCLUDE[vbtecdlinq](../includes/vbtecdlinq-md.md)]実行時の動作を挿入、更新を実行し、データベースに、エンティティ クラスから変更が保存されたときに削除します (などを呼び出すときに、<xref:System.Data.Linq.DataContext.SubmitChanges%2A>メソッド)。  
   

@@ -1,7 +1,7 @@
 ---
 title: プロバイダーのシンボル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 5fce651b-fead-4418-81b0-a011df7644ab
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f09fbe350afff983bb5fefe880104201441430c3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ec512dc9b200550996e9e82f0c1f3cbd616087d3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537817"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236731"
 ---
 # <a name="symbol-provider"></a>シンボル プロバイダー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シンボル プロバイダー](https://docs.microsoft.com/visualstudio/extensibility/debugger/symbol-provider)します。  
-  
 式エバリュエーターの実装は、変数や式を評価するために、言語コンパイラによって生成されたシンボリック デバッグ情報にアクセスする必要があります。 そのためには、シンボル ハンドラーとも呼ばれるシンボル プロバイダー (SP) のインターフェイスを使用します。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プログラム データベース (PDB) シンボル ファイルの形式を使用したネイティブ コードとマネージ コードには、SPs を提供します。 強力ながない限り、プログラムをカスタム形式で格納されているシンボルを使用するために必要ながによって提供される SPs を使用することをお勧めします[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。  

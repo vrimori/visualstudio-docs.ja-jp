@@ -1,7 +1,7 @@
 ---
 title: InvokeDelegate |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: steved0x
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0abb68a1cb123be7463d0fe3ec102f438eb8a2ba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3b47a975c12cfcfd02b01925685b47cba47cc1fc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534662"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228853"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
@@ -44,7 +44,7 @@ ms.locfileid: "47534662"
 |-------------------|--------------|-----------|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeDelegate> アクティビティの表示名。 既定値は InvokeDelegate です。<br /><br /> <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
 |<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|アクティビティの実行時に呼び出す <xref:System.Activities.ActivityDelegate> の名前。 このプロパティは、デザイナー画面で設定することもできます。 これは必須プロパティです。|
-|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。 キーは <xref:System.Activities.DelegateArgument> の <xref:System.Activities.ActivityDelegate> オブジェクトの名前であり、値は、式が評価され対応する <xref:System.Activities.DelegateArgument> オブジェクトに割り当てられる引数です。 プロパティ グリッドで、省略記号ボタンをクリックします。、 **DelegateArguments**フィールドが表示されます、 **DelegateArguments**ダイアログ ボックスを使用するこのプロパティを設定できます。 をクリックして、**引数の作成**引数を追加するフィールド。|
+|<<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|呼び出されたデリゲートの引数コレクション。 キーは <xref:System.Activities.ActivityDelegate> の <xref:System.Activities.DelegateArgument> オブジェクトの名前であり、値は、式が評価され対応する <xref:System.Activities.DelegateArgument> オブジェクトに割り当てられる引数です。 プロパティ グリッドで、省略記号ボタンをクリックします。、 **DelegateArguments**フィールドが表示されます、 **DelegateArguments**ダイアログ ボックスを使用するこのプロパティを設定できます。 をクリックして、**引数の作成**引数を追加するフィールド。|
 
 ## <a name="see-also"></a>関連項目
 

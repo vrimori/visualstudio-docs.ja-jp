@@ -1,7 +1,7 @@
 ---
 title: ツール ウィンドウに検索の追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: f78c4892-8060-49c4-8ecd-4360f1b4d133
 caps.latest.revision: 39
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8bdee40e2af2e09844314cd1727f480b3cd33462
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab478d6a007081787d8b076e906f5094caea8b2d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548381"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49206922"
 ---
 # <a name="adding-search-to-a-tool-window"></a>ツール ウィンドウへの検索の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ツール ウィンドウに追加の検索](https://docs.microsoft.com/visualstudio/extensibility/adding-search-to-a-tool-window)します。  
-  
 作成または拡張機能でツール ウィンドウを更新するときは、Visual Studio の他の場所に表示される同じ検索機能を追加できます。 この機能には、次の機能が含まれています。  
   
 -   常に、ツールバーのカスタムの領域にある検索ボックス。  
@@ -57,7 +55,7 @@ ms.locfileid: "47548381"
   
 ## <a name="to-create-a-vsix-project"></a>VSIX プロジェクトを作成するには  
   
-1.  という名前の VSIX プロジェクトを作成する`TestToolWindowSearch`というツール ウィンドウと**TestSearch**します。 この作業の説明を必要がある場合は、次を参照してください。[ツール ウィンドウで、拡張機能を作成する](../extensibility/creating-an-extension-with-a-tool-window.md)します。  
+1.  という名前の VSIX プロジェクトを作成する`TestToolWindowSearch`というツール ウィンドウと**TestSearch**します。 この作業の説明が必要な場合は、「 [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md)」を参照してください。  
   
 ## <a name="to-create-a-tool-window"></a>ツール ウィンドウを作成するには  
   

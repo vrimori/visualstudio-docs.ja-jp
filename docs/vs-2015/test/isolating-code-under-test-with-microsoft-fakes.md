@@ -1,7 +1,7 @@
 ---
 title: Microsoft Fakes を使用したテストでのコードの分離 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: a03c2e83-a41f-4854-bcf2-fcaa277a819d
 caps.latest.revision: 18
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b91678cf5fa4cd0620a5b8e860339baa8ee0d75a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a918b8077693ea199c20e776eaddc57c79b3975a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537276"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228008"
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes を使用したテストでのコードの分離
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テスト コードの分離 Microsoft Fakes で](https://docs.microsoft.com/visualstudio/test/isolating-code-under-test-with-microsoft-fakes)します。  
-  
 Microsoft Fakes では、アプリケーションの別の部分を*スタブ*または *shim* で置き換えることにより、テストするコードを分離できます。 これらは、テストの制御下にある小さいコードです。 テストのコードを分離することにより、テストが失敗した場合に、原因が別の場所ではなくそこにあることを確認できます。 また、アプリケーションの別の部分がまだ機能していない場合でも、スタブと shim を使用すると、コードをテストできます。  
   
  Fakes には 2 種類のフレーバーがあります。  

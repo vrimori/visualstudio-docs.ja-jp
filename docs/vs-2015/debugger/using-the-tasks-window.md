@@ -1,7 +1,7 @@
 ---
 title: '[タスク] ウィンドウを使用して |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 23
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e7e5d4c979d8160e9b2a9cee1a937bcc8049fc5b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 638c0c44be94398da8b1964a849ad99011044f78
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226201"
 ---
 # <a name="using-the-tasks-window"></a>[タスク] ウィンドウの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[タスク ウィンドウを使用して](https://docs.microsoft.com/visualstudio/debugger/using-the-tasks-window)します。  
-  
 **タスク**ウィンドウに似ています、**スレッド**ウィンドウには、it に関する情報が表示されます<xref:System.Threading.Tasks.Task?displayProperty=fullName>、 [task_handle](http://msdn.microsoft.com/library/b4af5b28-227d-4488-8194-0a0d039173b7)、または[WinJS.Promise](http://msdn.microsoft.com/library/windows/apps/br211867.aspx)各スレッドではなくオブジェクト。 スレッドと同様、タスクは、同時に実行できる非同期操作を表します。ただし、複数のタスクが同じスレッドで実行される場合もあります。 参照してください[JavaScript (Windows ストア アプリ) での非同期プログラミング](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx)詳細についてはします。  
   
  マネージ コードで使用することができます、**タスク**を操作するときにウィンドウ<xref:System.Threading.Tasks.Task?displayProperty=fullName>オブジェクト、または、 **await**と**非同期**キーワード (**のAwait**と**Async** visual Basic で)。 マネージ コードでタスクの詳細については、次を参照してください。[並列プログラミング](http://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d)します。  

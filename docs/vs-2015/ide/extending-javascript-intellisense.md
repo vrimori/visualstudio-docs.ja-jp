@@ -1,7 +1,7 @@
 ---
 title: JavaScript IntelliSense の拡張 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 59189ae35ce43877e59309382dfd9cbf278ce8f0
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 4c961d0a8e313760db20a74fb1397706d5890b96
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881125"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214254"
 ---
 # <a name="extending-javascript-intellisense"></a>JavaScript IntelliSense の拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
-  
 JavaScript IntelliSense の拡張機能では、サードパーティ製のライブラリの JavaScript エディターで IntelliSense の結果をカスタマイズすることができます。 これにより、これらのライブラリを使用する開発者のエクスペリエンスが向上することができます。  
   
  JavaScript language service は、プロジェクトに追加されるサードパーティ製の JavaScript ライブラリの IntelliSense 機能を提供します。 ほとんどのライブラリには、言語サービスで、ステートメント入力候補が自動的に提供します。 次の図は、ステートメント入力候補の例を示します。  

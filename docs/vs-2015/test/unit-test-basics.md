@@ -1,7 +1,7 @@
 ---
 title: 単体テストの基本 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: a80ba9cd-4575-483c-b957-af7ed8dc7e20
 caps.latest.revision: 29
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: aa9a7bf84dbb50d54e065b56837f675c64112aab
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f98990cfe1a3451b9932eb5614de614c05434edb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537946"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221579"
 ---
 # <a name="unit-test-basics"></a>単体テストの基本
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[単体テストの基本](https://docs.microsoft.com/visualstudio/test/unit-test-basics)します。  
-  
 コードが予想どおりに動作することを確認するには、単体テストを作成して実行します。 単体テストと呼ばれる理由は、プログラムの機能を、個々の *単体*としてテストできる独立したテスト可能な動作に分解するためです。 Visual Studio テスト エクスプローラーには、Visual Studio で単体テストを実行して結果を表示するための柔軟で効率的な方法が用意されています。 Visual Studio と共に、マネージド コードおよびネイティブ コード用の Microsoft 単体テスト フレームワークがインストールされます。 *単体テスト フレームワーク* を使用して、単体テストを作成して実行し、テストの結果を報告します。 変更を加えたときは単体テストを再実行し、コードが正しく機能するかテストします。 Visual Studio Enterprise を使用すると、ビルドの後でテストを自動的に実行できます。  
   
  単体テストは、ソフトウェア開発ワークフローの構成要素になったときに、コードの品質に最大の効果をもたらします。 関数またはその他のアプリケーション コードを記述したらすぐに、標準的な入力データ、境界上のデータ、および正しくないデータに対するコードの動作を検証し、コードによる明示的または暗黙的な前提を確認する単体テストを作成してください。 *テスト駆動開発*では、コードを記述する前に単体テストを作成することで、設計ドキュメントと機能仕様の両方として単体テストを使用します。  

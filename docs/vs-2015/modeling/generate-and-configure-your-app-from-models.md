@@ -1,7 +1,7 @@
 ---
 title: 生成し、モデルからのアプリの構成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 9
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d972e56ebd434f9e302d48ce325c66320f50be74
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c236a0b0896c135035d4d20eecfe5379b62522a3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548695"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49240644"
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>モデルからアプリを生成し構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[生成モデルからアプリを構成および](https://docs.microsoft.com/visualstudio/modeling/generate-and-configure-your-app-from-models)します。  
-  
 モデルからアプリケーションのパーツを生成または構成できます。 モデルは、UML または DSL のどちらかになります。  
   
  このモデルは、コードと比べて、要求をより直接的に表します。 アプリケーションの動作をモデルから直接派生させることで、コードを更新するよりも迅速かつ確実に、要求の変更に対応できます。 派生を設定するには特定の初期作業が必要ですが、要求の変更が予想される場合、または製品のバリエーションを複数予定している場合、この投資は取り戻すことができます。  

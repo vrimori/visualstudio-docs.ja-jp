@@ -1,7 +1,7 @@
 ---
 title: '方法: 引数デザイナーを使用して |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: eaff53dc04c0ad2367147ae91c7de756e5ca4366
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 81b24b8c0344cc6a8cf1559126a4faf0bc2b6f4e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537637"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49206623"
 ---
 # <a name="how-to-use-the-argument-designer"></a>引数デザイナーを使用する方法
 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] の以前のバージョンと比べ、引数デザイナーを使用した場合は、アクティビティとの間のデータの受け渡しを簡単に実行できます。 デザイナーにアクセスする をクリックして、**引数**デザイン キャンバスの左下隅のボタンをクリックします。 デザイナーには、表形式で表示され、以外の各列見出しで並べ替えることができますを引数のリストが含まれています、**既定値**列。 各引数には、名前、方向 (入力、出力、入力/出力、またはプロパティ)、型、および既定の式の値 (存在する場合) が含まれます。 名前および既定の式の値は編集可能なテキスト フィールドで、型および方向はドロップダウンです。 [!INCLUDE[crabout](../includes/crabout-md.md)] 引数を参照してください[変数と引数](http://msdn.microsoft.com/library/d03dbe34-5b2e-4f21-8b57-693ee49611b8)します。  

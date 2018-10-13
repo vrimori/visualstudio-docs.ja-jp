@@ -1,7 +1,7 @@
 ---
 title: Visual Studio2 でデータに WPF コントロールをバインドする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e99f18122dc0be7e3a68871aa58a9109502da9c0
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 9cd13723e1483a33e4b98dc544c6e8448dc9a980
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48880956"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208244"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio でのデータに WPF コントロールをバインドします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 2017 ドキュメント](/visualstudio/)します。  
-  
 データ バインドを作成する[!INCLUDE[TLA#tla_titlewinclient](../includes/tlasharptla-titlewinclient-md.md)]コントロールを使用して、**データソース**ウィンドウ。 最初に、データ ソースを追加、**データソース**ウィンドウ。 項目をドラッグし、**データ ソース**ウィンドウ、**WPF デザイナー**します。  
   
 ##  <a name="adding"></a> データ ソース ウィンドウにデータ ソースを追加します。  

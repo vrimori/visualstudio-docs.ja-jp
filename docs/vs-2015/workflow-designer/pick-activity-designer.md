@@ -1,7 +1,7 @@
 ---
 title: Pick アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: d5bf361d2217c199fa2818a94c441e1d2b105e7f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f0a3d5487d60a796f8bf9727c07df1afc959de5c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534649"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221521"
 ---
 # <a name="pick-activity-designer"></a>Pick アクティビティ デザイナー
 <xref:System.Activities.Statements.Pick> アクティビティでは、イベント ベースの制御フローを提供します。 このアクティビティは、トリガー起動イベントに応答して、複数の分岐のいずれか 1 つを実行します。  
@@ -30,7 +30,7 @@ ms.locfileid: "47534649"
 ### <a name="how-to-use-the-pick-activity-designer"></a>Pick アクティビティ デザイナーの使用方法  
  **選択**アクティビティ デザイナーが記載されて、**制御フロー**のカテゴリ、**ツールボックス**をクリックしてアクセスする、**ツールボックス**タブ[!INCLUDE[wfd2](../includes/wfd2-md.md)](または、選択**ツールバー**から、**ビュー**メニューまたは CTRL + ALT + X)。  
   
- **選択**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**ドロップ、[!INCLUDE[wfd2](../includes/wfd2-md.md)]サーフェス任意の場所のアクティビティ デザイナー通常配置している、内部の例については、 **シーケンス**アクティビティ デザイナー。 [!INCLUDE[wfd2](../includes/wfd2-md.md)]にドロップすると、<xref:System.Activities.Statements.Pick> アクティビティが作成されます。このアクティビティには、既定で、Branch1 および Branch2 という表示名を持つ 2 つの空の <xref:System.Activities.Statements.PickBranch> アクティビティが要素として格納されます。 これらそれぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティ値を編集できる、 **PickBranch**アクティビティ デザイナーのヘッダー内、または、**プロパティ**各分岐はウィンドウ。  
+ **選択**からアクティビティ デザイナーをドラッグすることができます、**ツールボックス**ドロップ、[!INCLUDE[wfd2](../includes/wfd2-md.md)]サーフェス任意の場所のアクティビティ デザイナー通常配置している、内部の例については、 **シーケンス**アクティビティ デザイナー。 [!INCLUDE[wfd2](../includes/wfd2-md.md)] にドロップすると、<xref:System.Activities.Statements.Pick> アクティビティが作成されます。このアクティビティには、既定で、Branch1 および Branch2 という表示名を持つ 2 つの空の <xref:System.Activities.Statements.PickBranch> アクティビティが要素として格納されます。 これらそれぞれ<xref:System.Activities.Statements.PickBranch.DisplayName%2A>でプロパティ値を編集できる、 **PickBranch**アクティビティ デザイナーのヘッダー内、または、**プロパティ**各分岐はウィンドウ。  
   
  追加する 2 つの方法はあります<xref:System.Activities.Statements.PickBranch>のコレクションにアクティビティを<xref:System.Activities.Statements.Pick>オブジェクト: ドラッグ アンド ドロップ、 **PickBranch**からデザイナー、**ツールボックス**からコンテキスト メニューを使用内で、**選択**デザイン サーフェイス。 詳細については、次を参照してください。、 [PickBranch](../workflow-designer/pickbranch-activity-designer.md)トピック。 内に配置できることのみいる項目に注意してください、**選択**アクティビティ デザイナーは、 **PickBranch**アクティビティ デザイナー。  
   

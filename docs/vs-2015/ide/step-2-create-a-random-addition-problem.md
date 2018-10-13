@@ -1,7 +1,7 @@
 ---
 title: '手順 2: ランダムな加算問題の作成 | Microsoft ドキュメント'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 59addf4513afbc1208cabc7ec61eb7a4be4b9a5a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 47429cb995dd7374276a9e2872d1b80ed452281a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546994"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204374"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>手順 2: ランダムな加算問題の作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 2: ランダムな加算問題の作成](https://docs.microsoft.com/visualstudio/ide/step-2-create-a-random-addition-problem)です。  
-  
 このチュートリアルの第 2 部では、乱数に基づく計算問題を追加して、クイズに挑みます。 また、`StartTheQuiz()` という名前の、問題に記入して、カウントダウン タイマーを開始するメソッドを作成します。 このチュートリアルの後半では、減算、乗算、除算問題を追加します。  
   
 > [!NOTE]

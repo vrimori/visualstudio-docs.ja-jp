@@ -1,7 +1,7 @@
 ---
 title: セキュリティの維持 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c2093e33b2a6b3424b39c8377f8168afd1e90939
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 793ec2b6f5ccfad1ded9f8a4cc2d4e6c4b994f0f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548968"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49230803"
 ---
 # <a name="maintaining-security"></a>セキュリティの維持
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[セキュリティを維持する](https://docs.microsoft.com/visualstudio/ide/maintaining-security)します。  
-  
 セキュリティの価値は継続的な警戒にある、とよく言われます。 アプリケーションのデザイン時や開発時にいかに万全のセキュリティ対策を行っても、配置後にセキュリティの欠陥が明らかになる可能性も想定する必要があります。 アプリケーションの監査とイベント ログの分析から、それまでわからなかった欠陥が見つかることもあります。  
   
  さらに、自分が作成したアプリケーションのセキュリティを維持するだけでなく、アプリケーションが実行されるプラットフォームやアプリケーションが依存している他の製品についても、セキュリティの脅威や欠陥に関する最新情報に目を配る必要があります。  

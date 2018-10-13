@@ -1,7 +1,7 @@
 ---
 title: XML エディターとの統合 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9066e4941fad5acbb0d8da2f6f6165ee99402873
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 72cbb498184317f79cdd91a59e60dab430dfcce7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537404"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49214501"
 ---
 # <a name="integration-with-xml-editor"></a>XML エディターとの統合
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML エディターとの統合](https://docs.microsoft.com/visualstudio/xml-tools/integration-with-xml-editor)します。  
-  
   
 XML スキーマ デザイナーは、XML エディターと統合されています。 変更を反映する、XML エディターで XSD ファイルを変更する場合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)します。 ある場合、[グラフ ビュー](../xml-tools/graph-view.md)または[コンテンツ モデル ビュー](../xml-tools/content-model-view.md)開く、変更も反映されますがあります。 次の方法を使用して XML スキーマ デザイナーと XML エディターの間を移動できます。  
   

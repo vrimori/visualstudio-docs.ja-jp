@@ -1,7 +1,7 @@
 ---
 title: コード スニペットを使用するためのベスト プラクティス | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2c775dd0f5c7242779dcded5027ebf92e51a0406
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6c02abbef9a5a9022e5a887c5a9aa452143adb8b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535775"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241320"
 ---
 # <a name="best-practices-for-using-code-snippets"></a>コード スニペットを使用するためのベスト プラクティス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード スニペットを使用するためのベスト プラクティス](https://docs.microsoft.com/visualstudio/ide/best-practices-for-using-code-snippets)します。  
-  
 コード スニペットのコードは、最も基本的な処理方法のみを示しています。 ほとんどのアプリケーションでは、そのアプリケーションに合わせてコードを変更する必要があります。  
   
 ## <a name="handling-exceptions"></a>例外処理  

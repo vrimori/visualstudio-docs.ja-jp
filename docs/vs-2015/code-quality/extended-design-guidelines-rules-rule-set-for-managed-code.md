@@ -1,7 +1,7 @@
 ---
 title: マネージ コードの"拡張デザイン ガイドライン規則"規則の設定 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: fb9b8544d2d4f902bf5bd64afc937f505990b736
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7b486156a2b2fb9161b20441cfb8e62c2a9b4bb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535873"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207819"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>マネージド コードの "拡張デザイン ガイドライン規則" 規則セット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[拡張デザイン ガイドライン規則ルールセットのマネージ コードの](https://docs.microsoft.com/visualstudio/code-quality/extended-design-guidelines-rules-rule-set-for-managed-code)します。  
-  
 Microsoft 拡張デザイン ガイドライン規則のルール セットは、報告された、使いやすさと保守性の問題を最大化する基本デザイン ガイドライン規則を展開します。 特に、命名に関するガイドラインに重点が置かれています。 この規則セットは、プロジェクトにライブラリ コードが含まれている場合、または保守が容易なコードを記述するための最も高い基準を適用する場合などを考慮する必要があります。  
   
  拡張デザイン ガイドライン規則には、すべての Microsoft 基本デザイン ガイドライン規則が含まれます。 基本のデザイン ガイドライン規則には、すべての Microsoft 最小推奨規則が含まれます。 詳細については、次を参照してください[基本デザイン ガイドライン規則ルールセットのマネージ コードの](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)と[マネージ推奨規則のルールは、マネージ コードの設定。](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)  

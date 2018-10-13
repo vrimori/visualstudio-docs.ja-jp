@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: HTML と CSS のデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,21 +26,19 @@ caps.latest.revision: 104
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b331ccf0cf180364738f5ac9084b0bd2ff6b716b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2896d88ee5730482aeca737f89e5b5340070be7f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548564"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49225486"
 ---
 # <a name="quickstart-debug-html-and-css"></a>クイック スタート: HTML および CSS のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[クイック スタート: デバッグの HTML および CSS](https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-html-and-css)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
- Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能はサポートされて[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]、Windows Phone ストア アプリ、Apache Cordova の Visual Studio Tools を使用して作成されたアプリ  
+ Visual Studio では、JavaScript アプリに総合的なデバッグ機能が用意されており、Internet Explorer および Visual Studio の開発者には使い慣れた機能が含まれています。 これらの機能は、 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成されたアプリでサポートされます。  
   
  DOM 検査ツールが提供する対話式のデバッグ モデルを使用すると、レンダリングされる HTML および CSS のコードを表示および変更できます。 これらはすべてデバッガーを停止して再起動することなく実行できます。  
   
@@ -197,7 +195,7 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
      ![DOM Explorer](../debugger/media/js-dom-explorer.png "JS_DOM_Explorer")  
   
     > [!TIP]
-    >  」と入力して、JavaScript コンソール ウィンドウの左下隅の DIV 要素を選択することもできます`select(fView)`で、>> 入力プロンプトとし、Enter キーを押します。  
+    >  また、>> 入力プロンプトで `select(fView)` を入力して Enter キーを押すと、JavaScript コンソール ウィンドウの左下隅の DIV 要素を選べます。  
   
      DOM Explorer ウィンドウの右側のタブに表示される値が、DOM Explorer での現在の要素選択を反映して自動的に更新されます。  
   
@@ -295,13 +293,13 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
  JavaScript 用の Visual Studio ツールである DOM Explorer と JavaScript コンソール ウィンドウは、次のプラットフォーム上でサポートされます。  
   
--   JavaScript と HTML を使った [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] および Windows Phone ストア アプリ  
+-   JavaScript と HTML を使った[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] および Windows Phone ストア アプリ  
   
 -   [!INCLUDE[win81](../includes/win81-md.md)] で実行されている Internet Explorer 11  
   
--   [!INCLUDE[win8](../includes/win8-md.md)] で実行されている Internet Explorer 10  
+-   [!INCLUDE[win8](../includes/win8-md.md)]  
   
- 移動[ここ](http://go.microsoft.com/fwlink/?LinkID=232448)をダウンロードする[!INCLUDE[win8](../includes/win8-md.md)]と Visual Studio。  
+ [と Visual Studio をダウンロードするには、](http://go.microsoft.com/fwlink/?LinkID=232448) ここ [!INCLUDE[win8](../includes/win8-md.md)] にアクセスしてください。  
   
 ## <a name="see-also"></a>関連項目  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
@@ -311,9 +309,9 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
  [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)   
  [WebView コントロールをデバッグします。](../debugger/debug-a-webview-control.md)   
  [キーボード ショートカット](../debugger/keyboard-shortcuts-html-and-javascript.md)   
- [JavaScript コンソール コマンド](../debugger/javascript-console-commands.md)   
+ [JavaScript Console commands](../debugger/javascript-console-commands.md)   
  [HTML、CSS、および JavaScript サンプル コードをデバッグします。](../debugger/debug-html-css-and-javascript-sample-code.md)   
- [製品のサポートとアクセシビリティ](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
+ [製品のサポートとユーザー補助](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
 
 
 

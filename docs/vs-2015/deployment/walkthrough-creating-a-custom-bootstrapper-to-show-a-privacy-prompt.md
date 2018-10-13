@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: プライバシー プロンプトを表示するカスタム ブートス トラップの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 790aa1c67ef8c76e404876bd61a42d4b286892da
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4184e8400c50c518b461a0877f06c54db5f84927
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533902"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49217965"
 ---
 # <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>チュートリアル: プライバシー プロンプトを表示するためのカスタム ブートストラップの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: プライバシー プロンプトを表示するカスタム ブートス トラップの作成](https://docs.microsoft.com/visualstudio/deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt)です。  
-  
 新しいファイルのバージョンとアセンブリのバージョンのアセンブリが使用可能になると自動的に更新する ClickOnce アプリケーションを構成できます。 お客様がこの動作に同意することを確認するにプライバシー プロンプトを表示できます。 次に、アプリケーションが自動的に更新するアクセス許可を付与するかどうかを選択できます。 アプリケーションが自動的に更新する許可されていない場合はインストールされません。  
   
  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  

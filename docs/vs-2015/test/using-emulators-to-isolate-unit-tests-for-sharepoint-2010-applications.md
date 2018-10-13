@@ -1,7 +1,7 @@
 ---
 title: SharePoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,24 +13,22 @@ ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
 caps.latest.revision: 17
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 85e3236e83d29e16c4501091cebf644605bfa82c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5d45ea88fea9f30bf02c24e927694c81d8639559
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540148"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49178309"
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Sharepoint 2010 アプリケーションの単体テストを分離するためのエミュレーターの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エミュレーターを使用して Sharepoint 2010 アプリケーションの単体テストを分離する](https://docs.microsoft.com/visualstudio/test/using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications)します。  
-  
 Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010 アプリケーションの分離単体テストの作成に役立つ一連のライブラリが用意されています。 エミュレーターは、[Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 分離フレームワークで [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) を使用して、SharePoint API の最も一般的なオブジェクトおよびメソッドを模倣する、軽量なメモリ内オブジェクトを作成します。 SharePoint メソッドがエミュレートされていない場合、またはエミュレーターの既定の動作を変更する場合は、Fakes shim を作成して必要な結果を提供できます。  
   
  既存のテスト メソッドとクラスは、エミュレーターのコンテキストで実行されるように容易に変換できます。 この機能を使用すると、二重用途のテストを作成できます。 二重用途のテストは、実際の SharePoint API に対する統合テストと、エミュレーターを使用する分離単体テストを切り替えることができます。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
- [Requirements](#BKMK_Requirements)  
+ [必要条件](#BKMK_Requirements)  
   
  [AppointmentsWebPart の例](#BKMK_The_AppointmentsWebPart_example)  
   
@@ -52,7 +50,7 @@ Microsoft.SharePoint.Emulators パッケージには、Microsoft SharePoint 2010
   
  [エミュレートされた SharePoint の型](#BKMK_Emulated_SharePoint_types)  
   
-##  <a name="BKMK_Requirements"></a> 必要条件  
+##  <a name="BKMK_Requirements"></a> 要件  
   
 -   Microsoft SharePoint 2010 (SharePoint 2010 Server または SharePoint 2010 Foundation)  
   

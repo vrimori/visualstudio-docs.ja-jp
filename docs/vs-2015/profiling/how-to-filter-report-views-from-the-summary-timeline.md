@@ -1,7 +1,7 @@
 ---
 title: '方法: 概要ビューのタイムラインからレポート ビューをフィルター処理する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 95e9ad24bc5ecf41274b08c83d6f1170bf225ec3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8bdf402f8de9f5ce952d2abe4f4b015545a02b1b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548465"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231778"
 ---
 # <a name="how-to-filter-report-views-from-the-summary-timeline"></a>方法: 概要ビューのタイムラインからレポート ビューをフィルター処理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 概要ビューのタイムラインからレポート ビューをフィルター処理](https://docs.microsoft.com/visualstudio/profiling/how-to-filter-report-views-from-the-summary-timeline)します。  
-  
 パフォーマンス レポートに表示するデータをフィルター処理できます。概要ビューのタイムライン グラフで時間セグメントを指定します。 レポートをフィルター処理すると、プロファイル データ ファイルが再解析され、指定した時間セグメントのみが選択されます。  
   
 ### <a name="to-filter-a-profiling-report-from-the-summary-timeline-graph"></a>概要のタイムライン グラフのプロファイル レポートをフィルター処理するには  

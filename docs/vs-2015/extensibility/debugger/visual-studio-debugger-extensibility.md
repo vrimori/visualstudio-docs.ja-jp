@@ -1,7 +1,7 @@
 ---
 title: Visual Studio デバッガーの拡張性 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: c088b6a2-c3ad-446b-830d-9c6f41b2934b
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d4c3a9644e7150ea31cca2aba927bbdbacb8b0eb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ca40964befc940bd0cf28457755f5f338ea36579
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546296"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49212616"
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio デバッガーの拡張性
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio デバッガーの拡張性](https://docs.microsoft.com/visualstudio/extensibility/debugger/visual-studio-debugger-extensibility)します。  
-  
 Visual Studio には、プログラムでバグを追跡するための強力で使いやすいツールを提供する完全な対話型のソース コードのデバッガーが含まれています。 デバッガーでは、完全なサポート Visual Basic、c#、C と C++ および JavaScript が。 ただし、 [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]、つまりから使用可能な[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=214453)、および他のプログラミング言語は同じ豊富な機能を使用してデバッガーでサポートされます。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガーは、一般的なフロント エンド (つまり、ユーザー インターフェイス)、デバッグ コンポーネントは、さらに、デバッグ中の言語に固有です。 によってサポートのために必要なすべての新しい言語は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]デバッガーはデバッグ エンジン (DE) など、必要なバックエンド コンポーネントを作成します。 ような場合は、[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]が用意されています。  

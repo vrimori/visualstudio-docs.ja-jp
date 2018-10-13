@@ -1,7 +1,7 @@
 ---
 title: ハーフ/クォーター テクスチャ ディメンション バリアント |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f42a6786fc378379ca446b704ac8159b8979bf08
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c61d2ab349a245f4720c69479519c54cc078f882
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548378"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228508"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>ハーフ/クォーター テクスチャ ディメンション バリアント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ハーフ/クォーター テクスチャ ディメンション バリアント](https://docs.microsoft.com/visualstudio/debugger/graphics/half-quarter-texture-dimensions-variant)します。  
-  
 レンダー ターゲットではないテクスチャで、テクスチャのディメンションを小さくします。  
   
 ## <a name="interpretation"></a>解釈  

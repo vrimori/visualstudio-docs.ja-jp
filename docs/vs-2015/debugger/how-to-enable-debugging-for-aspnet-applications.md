@@ -1,7 +1,7 @@
 ---
 title: '方法: ASP.NET アプリケーションのデバッグを有効にする |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,22 +23,20 @@ caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f9f96a53a6ccdd505735a09d3e9c39acaa3517c2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b9d0e7a4b6f6daf4fb93884e6d5673ce550259ca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548569"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49235938"
 ---
 # <a name="how-to-enable-debugging-for-aspnet-applications"></a>方法:ASP.NET アプリケーションのデバッグを有効にする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ASP.NET アプリケーションのデバッグを有効にする](https://docs.microsoft.com/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)します。  
-  
 デバッグを有効にするには、 **プロジェクト プロパティ** ページとアプリケーションの web.config ファイルの両方で有効にする必要があります。  
   
 > [!NOTE]  
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  
   
 ### <a name="to-enable-aspnet-debugging-in-the-project-properties-visual-basicc"></a>Visual Basic または C# のプロジェクト プロパティで ASP.NET デバッグを有効にするには  
   
@@ -92,7 +90,7 @@ Web サイトには、複数の仮想ディレクトリとサブディレクト�
   
 たとえば、www.microsoft.com/aaa/Web.config で `debug="true"` と指定すると、aaa フォルダーまたは aaa フォルダーのサブフォルダーにあるすべてのアプリケーションに、この設定が継承されます。 そのため、www.microsoft.com/aaa/bbb フォルダーにある [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションは、この設定を継承し、www.microsoft.com/aaa/ccc、www.microsoft.com/aaa/ddd などのフォルダーにあるすべての [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションもこの設定を継承します。 唯一の例外は、アプリケーションの 1 つが、より低いレベルにある独自の Web.config ファイルで設定をオーバーライドする場合です。  
   
-デバッグ モードを有効にすると、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションのパフォーマンスに大きく影響します。 リリース バージョンのアプリケーションを配置したり、パフォーマンスの測定を実施したりする前には、デバッグ モードを無効にしてください。  
+デバッグ モードを有効にすると、 [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションのパフォーマンスに大きく影響します。 リリース バージョンのアプリケーションを配置したり、パフォーマンスの測定を実施したりする前には、デバッグ モードを無効にしてください。  
   
 ## <a name="see-also"></a>関連項目  
 [ASP.NET アプリケーションおよび AJAX アプリケーションのデバッグ](../debugger/debugging-aspnet-and-ajax-applications.md)  

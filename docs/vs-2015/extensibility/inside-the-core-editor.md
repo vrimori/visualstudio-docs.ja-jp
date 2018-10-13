@@ -1,7 +1,7 @@
 ---
 title: コア エディター内で |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 8265f31c-c45b-4858-882c-6d9f1e3b9083
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a2d9ec83c700f9166dc6b73860547bcacd265a15
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dc91a228fd788074a543678b281288e043f9385c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537461"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227735"
 ---
 # <a name="inside-the-core-editor"></a>コア エディター内で
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[のコア エディター内で](https://docs.microsoft.com/visualstudio/extensibility/inside-the-core-editor)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のコア エディターは変更し、テキスト情報のクエリを実行できるいくつかのコンポーネントのセットです。 従来の API を使用して、コア エディターをカスタマイズしている場合は、エディター アダプター経由でルーティングされますが、これらのカスタマイズを使用する続行することがあります。 お勧め、ただし、API の新しいエディターに、カスタマイズを調整することです。  
   
  コア エディターのいくつかの重要な側面を次の領域には。  

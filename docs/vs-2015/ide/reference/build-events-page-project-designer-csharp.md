@@ -1,7 +1,7 @@
 ---
 title: '[ビルド イベント] ページ (プロジェクト デザイナー) (C#) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 86ada1d23490c4e154cbdb7ba17f81acbee1796a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5a73978bf78c26914e7ee6b21c27f1eb2e7682ea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547136"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49223095"
 ---
 # <a name="build-events-page-project-designer-c"></a>[ビルド イベント] ページ (プロジェクト デザイナー) (C#)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ビルド イベント ページ、プロジェクト デザイナー (c#)](https://docs.microsoft.com/visualstudio/ide/reference/build-events-page-project-designer-csharp)します。  
-  
   
 **プロジェクト デザイナー**の **[ビルド イベント]** ページを使用して、ビルド構成の手順を指定します。 また、あらゆるビルド後イベントを実行する条件を指定することもできます。 詳細については、「[方法 : ビルド イベントを指定する (C#)](../../ide/how-to-specify-build-events-csharp.md)」および「[方法 : ビルド イベントを指定する (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)」を参照してください。  
   

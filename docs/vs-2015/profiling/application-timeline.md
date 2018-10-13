@@ -1,7 +1,7 @@
 ---
 title: アプリケーション タイムライン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2310b6f1fc6808d64d3b51b488bf4e4c4726e689
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: df71c984c017b731e5168d6079415ee26543bbbf
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533908"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226788"
 ---
 # <a name="application-timeline"></a>アプリケーションのタイムライン
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio で XAML アプリでのリソース消費量の分析](https://docs.microsoft.com/visualstudio/profiling/application-timeline)します。  
-  
 **アプリケーション タイムライン** プロファイラーを使用すると、XAML アプリケーションにおけるアプリケーションの相互作用に関連するパフォーマンスの問題を検出および修復できます。 このツールは、アプリケーションのリソースの消費量の詳細ビューを提供することで、XAML アプリケーションのパフォーマンスの向上に役立ちます。 アプリケーションが UI フレームの準備 (レイアウトとレンダリング) やネットワークとディスクの要求の処理を実行することで、およびアプリケーションの起動、ページの読み込み、ウィンドウのサイズ変更などのシナリオにおいて使用した時間を分析することができます。  
   
  **アプリケーション タイムライン**は、**[デバッグ]、[パフォーマンス プロファイラー]** コマンドから開始できるツールの 1 つです。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: VSIX パッケージへの依存関係の追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 8f20177b-dab9-43a3-b959-81a591b451d6
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ebd835fef9df8fbdeb67bdf9c7e6eff31bcf4730
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ad1c743f9fa5f0e0446eedf59dcbf4dd961be7aa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545878"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219766"
 ---
 # <a name="how-to-add-a-dependency-to-a-vsix-package"></a>方法: VSIX パッケージへの依存関係の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: VSIX パッケージに依存関係を追加](https://docs.microsoft.com/visualstudio/extensibility/how-to-add-a-dependency-to-a-vsix-package)します。  
-  
 ターゲット コンピューターに含まれていないすべての依存関係をインストールする VSIX パッケージの配置を設定することができます。 これを実現するには、source.extension.vsixmanifest ファイルを VSIX の依存関係を含めます。  
   
 #### <a name="to-add-a-dependency"></a>依存関係を追加するには  

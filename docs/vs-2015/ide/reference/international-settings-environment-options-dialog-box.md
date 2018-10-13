@@ -1,7 +1,7 @@
 ---
 title: '[国際対応の設定] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6aacaecc14b7a941fcbec54fcf1e26bf9d62690a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 98e806101b685f6691dc276bccc58d157af6bc54
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540261"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49239630"
 ---
-# <a name="international-settings-environment-options-dialog-box"></a>[国際対応の設定] ([オプション] ダイアログ ボックス - [環境])
+# <a name="international-settings-environment-options-dialog-box"></a>[国際対応の設定] \([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプション ダイアログ ボックスの国際対応の設定、環境、](https://docs.microsoft.com/visualstudio/ide/reference/international-settings-environment-options-dialog-box)します。  
-  
   
 コンピューターにインストールされている統合開発環境 (IDE) に複数の言語バージョンがある場合は、[国際対応の設定] ページで既定の言語を変更できます。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** を選択し、**[環境]** フォルダーから **[国際対応の設定]** を選択します。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
   

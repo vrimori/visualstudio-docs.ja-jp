@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での設定の同期 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1e0facac569671c880004d1fc1a7aa29487e7926
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 29e962192644d605f83504fb14df10398e1237ea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546275"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228398"
 ---
 # <a name="synchronized-settings-in-visual-studio"></a>Visual Studio での同期された設定
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio での設定の同期](https://docs.microsoft.com/visualstudio/ide/synchronized-settings-in-visual-studio)します。  
-  
 複数のコンピューターで同じ個人アカウントを使用して Visual Studio にサインインした場合、既定ではすべてのコンピューターで設定が同期されます。  
   
 ## <a name="synchronized-settings"></a>同期された設定  

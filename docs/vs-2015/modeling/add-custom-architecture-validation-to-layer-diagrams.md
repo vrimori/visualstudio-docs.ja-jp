@@ -1,7 +1,7 @@
 ---
 title: レイヤー図へのカスタム アーキテクチャ検証の追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 44
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3ef9831dd5268c545373433d728df7e36d31cf83
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2012ff0729853d365ed9bb32a9420f5b41bf47fb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533917"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231102"
 ---
 # <a name="add-custom-architecture-validation-to-layer-diagrams"></a>カスタム アーキテクチャ検証をレイヤー図に追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[依存関係図へのカスタム アーキテクチャ検証の追加](https://docs.microsoft.com/visualstudio/modeling/add-custom-architecture-validation-to-layer-diagrams)します。  
-  
 Visual Studio では、ユーザーはプロジェクトのソース コードをレイヤー モデルと対比して検証し、ソース コードがレイヤー図の依存関係に準拠していることを確認できます。 標準の検証アルゴリズムがありますが、独自の検証拡張機能を定義できます。  
   
  ユーザーがレイヤー図で **[アーキテクチャの検証]** を選択すると、標準の検証メソッドが呼び出された後、インストールされている検証拡張機能が呼び出されます。  
@@ -122,7 +120,7 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
     > [!NOTE]
     >  メソッドは特定の状況においてのみ呼び出され、ブレークポイントは自動的には動作しません。 詳細については、「 [レイヤー検証のデバッグ](#debugging)」を参照してください。  
   
-8.  メイン インスタンスで、VSIX をインストールする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、または別のコンピューターでは、検索、 **.vsix**ファイル、 **bin** VSIX プロジェクトのディレクトリ。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
+8.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のメイン インスタンスまたは別のコンピューターに拡張機能をインストールするには、 **bin\*** ディレクトリで **bin** ファイルを探します。 このファイルを、VSIX をインストールするコンピューターにコピーします。 Windows エクスプローラーで、VSIX ファイルをダブルクリックします。 これは Windows 8 のエクスプローラーです。  
   
      拡張機能をアンインストールするには、 **[ツール]** メニューの **[拡張機能と更新プログラム]** を使用します。  
   
@@ -215,7 +213,7 @@ Visual Studio では、ユーザーはプロジェクトのソース コード�
   
  デバッガーを検証プロセスにアタッチするには、検証メソッドの先頭に `System.Diagnostics.Debugger.Launch()` の呼び出しを挿入します。 デバッグ ダイアログ ボックスが表示されたら、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のメイン インスタンスを選択します。  
   
- または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メイン インスタンスに移動し、メッセージ ボックスが表示されたら、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]し、**デバッグ**ボタンをクリックし**プロセスにアタッチ**します。 **Graphcmd.exe**という名前のプロセスを選択します。  
+ または、 `System.Windows.Forms.MessageBox.Show()`の呼び出しを挿入してもかまいません。 メッセージ ボックスが表示されたら、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のメイン インスタンスに移動し、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。 **Graphcmd.exe**という名前のプロセスを選択します。  
   
  常に、Ctrl キーを押しながら F5 キーを押して (**[デバッグなしで開始]**) 実験用インスタンスを起動します。  
   

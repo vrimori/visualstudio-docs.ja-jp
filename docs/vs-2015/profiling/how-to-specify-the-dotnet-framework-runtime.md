@@ -1,7 +1,7 @@
 ---
 title: '方法: .NET Framework ランタイムを指定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,23 +17,21 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 25d7d9e63f5ab5581960f08d32f920b24f2f9906
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2508d9b0a7ab1c2511dd1bbe2a46ea486ce86a32
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535254"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49189281"
 ---
 # <a name="how-to-specify-the-net-framework-runtime"></a>方法: .NET Framework ランタイムを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: .NET Framework ランタイムを指定](https://docs.microsoft.com/visualstudio/profiling/how-to-specify-the-dotnet-framework-runtime)します。  
-  
 リリース [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] では、アプリケーションは [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ランタイムのさまざまなバージョンを使用してビルドされたモジュールで構成できます。 既定では、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールは、アプリケーションによって読み込まれる最初のランタイムをプロファイリングします。 プロファイラーを使用してアプリケーションを開始するときと、既に実行中のアプリケーションにプロファイラーをアタッチするときにランタイムがプロファイリングするよう指定できます。  
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、[!INCLUDE[vsPro](../includes/vspro-md.md)]  
+-   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 ### <a name="to-specify-the-net-framework-run-time-to-profile-when-starting-an-application-with-the-profiler"></a>プロファイラーを使用したアプリケーションの開始時にプロファイリングする .NET Framework ランタイムを指定するには  
   

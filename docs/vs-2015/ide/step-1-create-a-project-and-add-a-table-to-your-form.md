@@ -1,7 +1,7 @@
 ---
 title: '手順 1: プロジェクトの作成とフォームへのテーブルの追加 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 02b87c7a2f7384b69c6037eb77090ba76a2481f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dade91d67418fcaf788ffbcea0c5a7764e4840a4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49204465"
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>手順 1: プロジェクトの作成とフォームへのテーブルの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 1: プロジェクトの作成し、フォームへのテーブルの追加](https://docs.microsoft.com/visualstudio/ide/step-1-create-a-project-and-add-a-table-to-your-form)します。  
-  
 絵合わせゲームの作成における最初の手順は、プロジェクトの作成とフォームへのテーブルの追加です。 テーブルはアイコンを 4 x 4 のグリッドに整列させるために便利です。 いくつかのプロパティの設定も行ってゲーム ボードの見栄えが良くなるようにします。  
   
 ### <a name="to-create-a-project-and-add-a-table-to-your-form"></a>プロジェクトを作成し、フォームにテーブルを追加するには  

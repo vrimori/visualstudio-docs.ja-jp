@@ -1,7 +1,7 @@
 ---
 title: DOM Explorer を使用して CSS スタイルのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 889626b5d80afebfd701a7bc347466da97ba707b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a30ac9669c7093c7eb3b656076c606cbf5a9fdc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546698"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220743"
 ---
 # <a name="debug-css-styles-using-dom-explorer"></a>DOM Explorer を使用した CSS スタイルのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DOM Explorer を使用してデバッグの CSS スタイル](https://docs.microsoft.com/visualstudio/debugger/debug-css-styles-using-dom-explorer)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  Windows ストア アプリ、Windows Phone ストア アプリ、Visual Studio Tools for Apache Cordova を使用して作成されたアプリのデバッグ中に、選んだ DOM 要素と子要素に対する CSS 規則を表示および変更できます。  
@@ -58,14 +56,14 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 >  **[スタイル]** タブと **[計算済み]** タブで行った変更は永続的ではありません。 それらは、デバッグを停止したときに失われます。 ソース コードの変更を停止してデバッガーを再起動することがなくページの再読み込みを使用して、アプリを更新、![更新の Windows アプリのボタン](../debugger/media/js-refresh.png "JS_Refresh")ボタン (**更新の Windows アプリ**) で、**デバッグ**ツールバー (Windows ストアおよび Windows Phone ストア アプリのみ)。 詳細については、次を参照してください。[アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)します。  
   
 ## <a name="example-of-fixing-a-css-rule"></a>CSS 規則の修正例  
- この例では、CSS 規則を検査し、スタイルの問題をデバッグする方法を示します。 この例では、[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 分割アプリケーション テンプレートのグループ タイトルの表示に使用されるフォントの色を変更するとします。  
+ この例では、CSS 規則を検査し、スタイルの問題をデバッグする方法を示します。 この例では、 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] 分割アプリケーション テンプレートのグループ タイトルの表示に使用されるフォントの色を変更するとします。  
   
 > [!NOTE]
 >  この例は Windows ストア アプリの場合を示していますが、示されているすべての DOM Explorer 機能は Windows Phone ストア アプリにも適用されます。また、[変更] タブ以外は Visual Studio Tools for Apache Cordova を使用して作成されたアプリにも適用されます。  
   
 #### <a name="to-view-and-change-css-rules"></a>CSS 規則を表示および変更するには  
   
-1.  Visual Studio で、分割アプリケーション プロジェクト テンプレートで JavaScript と HTML を使用して、[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリを作成します。  
+1.  Visual Studio で、分割アプリケーション プロジェクト テンプレートで JavaScript と HTML を使用して、 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリを作成します。  
   
 2.  **ソリューション エクスプローラー**で items.css を開きます (items.css はページ フォルダーにあります)。  
   
@@ -167,7 +165,7 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
  [クイック スタート: HTML と CSS をデバッグします。](../debugger/quickstart-debug-html-and-css.md)   
  [DOM Explorer を使用してレイアウトをデバッグします。](../debugger/debug-layout-using-dom-explorer.md)   
  [DOM イベント リスナーの表示](../debugger/view-dom-event-listeners.md)   
- [製品のサポートとアクセシビリティ](http://go.microsoft.com/fwlink/?LinkId=253502)
+ [製品のサポートとユーザー補助](http://go.microsoft.com/fwlink/?LinkId=253502)
 
 
 

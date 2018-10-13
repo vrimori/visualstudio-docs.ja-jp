@@ -1,7 +1,7 @@
 ---
 title: 項目用の関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 58344d897630244f5f2c1e987f5f41971bfc720c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 687d740a379bd3b04bd47d0d2e3111bb71e7934d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534102"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207923"
 ---
 # <a name="item-functions"></a>項目用の関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[項目関数](https://docs.microsoft.com/visualstudio/msbuild/item-functions)します。  
-  
   
 MSBuild 4.0 以降、タスクとターゲットのコードは項目用の関数を呼び出し、プロジェクトの項目に関する情報を取得できます。 これらの関数により、Distinct() 項目の取得が簡素化され、項目をループ処理するよりも処理が速くなります。  
   

@@ -1,7 +1,7 @@
 ---
 title: Elements (XElement 動的プロパティ) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 75cb7f8f6a5259151679ecee84bbeb5db336782f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b65f32cc4146f275ec77a5942bdfef3fcf493b8b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536086"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49237290"
 ---
 # <a name="elements-xelement-dynamic-property"></a>Elements (XElement 動的プロパティ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Elements (XElement 動的プロパティ)](https://docs.microsoft.com/visualstudio/designers/elements-xelement-dynamic-property)します。  
-  
 現在の要素の子要素のうち指定された拡張名に一致する子要素の取得に使用するインデクサーを取得します。  
   
 ## <a name="syntax"></a>構文  

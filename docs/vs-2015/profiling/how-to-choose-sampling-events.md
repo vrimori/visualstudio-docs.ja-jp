@@ -1,7 +1,7 @@
 ---
 title: '方法: サンプリング イベントを選択する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2e00dcc15633e9b62f5db02e321950e4f91814f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0be5c96b1ca131bee9062d4049fbea49a9aec182
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544839"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228418"
 ---
 # <a name="how-to-choose-sampling-events"></a>方法 : サンプリング イベントを選択する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: サンプリング イベントを選択](https://docs.microsoft.com/visualstudio/profiling/how-to-choose-sampling-events)します。  
-  
 既定では、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールは、プロファイリングされるプロセスによって使用されるプロセッサ サイクルの数として指定された間隔でパフォーマンス データを収集します。 既定の間隔のサイクル数は 10,000,000 です。これは、1 GHz のコンピューターで約 0.01 秒に相当します。 間隔のサイクル数とサンプル イベントは変更できます。 次のサンプル イベントを使用できます。  
   
 -   クロック サイクル - CPU バインドの問題用。  

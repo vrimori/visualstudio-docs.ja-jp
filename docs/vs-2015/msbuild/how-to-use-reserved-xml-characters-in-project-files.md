@@ -1,7 +1,7 @@
 ---
 title: '方法: 予約済みの XML 文字をプロジェクト ファイルで使用する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f045195a4e934fcb6e140da68528ca43f104136d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: de8e6693b56a36f9b795b132e0181aa0531c7f33
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537035"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199668"
 ---
 # <a name="how-to-use-reserved-xml-characters-in-project-files"></a>方法 : 予約済みの XML 文字をプロジェクト ファイルで使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: プロジェクト ファイルで予約済み XML 文字を使用して](https://docs.microsoft.com/visualstudio/msbuild/how-to-use-reserved-xml-characters-in-project-files)します。  
-  
   
 プロジェクト ファイルを作成するときに、たとえばプロパティ値やタスク パラメーター値の中で、予約済み XML 文字を使用する必要が生じることがあります。 しかし、いくつかの予約文字は、プロジェクト ファイルを解析できるようにするために、名前付きエンティティに置き換える必要があります。  
   

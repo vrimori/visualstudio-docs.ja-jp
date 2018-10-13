@@ -1,7 +1,7 @@
 ---
 title: マネージ コードでアサーション |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 08cdbcde693655997fd980c018935a2b1c6df768
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5cd62b5cc5eabd731e5ad398cbb9ddbe60db073
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538222"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49219116"
 ---
 # <a name="assertions-in-managed-code"></a>マネージド コードのアサーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マネージ コードでアサーション](https://docs.microsoft.com/visualstudio/debugger/assertions-in-managed-code)します。  
-  
 アサーション、つまり `Assert` ステートメントは、条件をテストします。この条件は、`Assert` ステートメントへの引数として指定します。 条件が true と評価された場合、アクションは発生しません。 条件が false と評価された場合、アサーションは失敗です。 また、デバッグ ビルドを実行している場合、プログラムは中断モードになります。  
   
 ##  <a name="BKMK_In_this_topic"></a> このトピックの内容  
@@ -223,7 +221,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [このトピックの内容](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> 構成ファイルでのアサーションの設定  
- アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName><xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または」を参照してください。  
+ アサーションは、コード内だけでなく、プログラム構成ファイル内でも設定できます。 詳細については、「<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>」または「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>   

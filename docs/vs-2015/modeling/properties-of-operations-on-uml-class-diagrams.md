@@ -1,7 +1,7 @@
 ---
 title: クラス ダイアグラムの UML での操作のプロパティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 21
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e977ede02f355724f1a93f82f1c688de27e36fa6
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: c2392cf951c5f25a5b287a1d56338b03bebb27e0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592718"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207026"
 ---
 # <a name="properties-of-operations-on-uml-class-diagrams"></a>UML クラス ダイアグラムの操作のプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML での操作のプロパティにクラス ダイアグラム](https://docs.microsoft.com/visualstudio/modeling/properties-of-operations-on-uml-class-diagrams)します。  
-  
 UML クラス図で追加できます*操作*クラスとインターフェイスにします。 操作とは、クラスまたはインターフェイスのインスタンスが実行できるメソッドまたは関数です。  
   
  操作を追加するには、クラスまたはインターフェイスを右クリックして**追加**、 をクリックし、**操作**します。  

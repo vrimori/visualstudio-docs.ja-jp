@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのコンパイルとビルド | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ec3a74d911a32d7e7f869ee099c70914cafe9a08
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 65fbe40a3609b0729bdc376196940f2adb670a2c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549111"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229230"
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[のコンパイルと Visual Studio でビルド](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio)します。  
-  
 開発サイクル中、何度も Visual Studio を使用して、アプリケーションをビルドし、アセンブリや実行可能プログラムを作成できます。 コードを何度もビルドすることによって、無効な構文、キーワードのスペルミス、型の不一致などのコンパイル時エラーを早い段階で特定できます。 また、コードのデバッグ バージョンを何度もビルドして実行することにより、ロジック エラーやセマンティック エラーなどの実行時エラーを検出して修正できます。  
   
  プロジェクトまたはソリューションの開発を完了し、十分にデバッグしたら、そのプロジェクトまたはソリューションのコンポーネントをリリース ビルドでコンパイルできます。 既定では、リリース ビルドはデバッグ バージョンよりサイズが小さく実行が高速になるように設計および最適化されます。 詳細については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。  

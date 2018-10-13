@@ -1,7 +1,7 @@
 ---
 title: 相互運用性の警告 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: cb380cbac0e24c4c63cd5c2d6817703e89324d6c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 87cf15e3b6bbb8cda457e7c103b28f93e0672eca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49235041"
 ---
 # <a name="interoperability-warnings"></a>相互運用性に関する警告
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[相互運用性の警告](https://docs.microsoft.com/visualstudio/code-quality/interoperability-warnings)します。  
-  
 相互運用性の警告は、COM クライアントとのやり取りをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

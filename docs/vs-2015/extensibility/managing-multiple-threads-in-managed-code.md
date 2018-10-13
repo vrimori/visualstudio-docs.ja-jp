@@ -1,7 +1,7 @@
 ---
 title: マネージ コードの複数のスレッドを管理する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 59730063-cc29-4dae-baff-2234ad8d0c8f
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7be5763081da023742f53c3b2d22e0d0f4aad167
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0c1438c7425ba3d3fe1071fb2d06d7bc3345d900
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536193"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186733"
 ---
 # <a name="managing-multiple-threads-in-managed-code"></a>マネージド コードの複数のスレッドを管理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: マネージ コードでの複数のスレッドを管理する](https://docs.microsoft.com/visualstudio/extensibility/managing-multiple-threads-in-managed-code)します。  
-  
 非同期メソッドの呼び出しまたは Visual Studio の UI スレッド以外のスレッドで実行される操作がマネージ VSPackage 拡張機能の場合は、以下のガイドラインに従ってください。 保持できます UI スレッド応答性の高い作業を完了する別のスレッドで待機する必要がないです。 行うことができます、コードをより効率的な余分なスレッドがスタックの領域を占有する必要がないためより信頼性が高く、デッドロックやハングを回避するためのデバッグを簡単に行うことができます。  
   
  一般に、別のスレッドに UI スレッドから切り替えることができますまたはその逆です。 メソッドが戻るときに、現在のスレッドは、その最初の呼び出し元スレッドです。  

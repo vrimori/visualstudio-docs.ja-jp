@@ -1,7 +1,7 @@
 ---
 title: IDebugPendingBreakpoint2::Virtualize |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 58c8e9a5-4494-47c2-bddb-56f628da6a2d
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6b84154fd1ada2e12ae4fcccb95ca4f3d0aed4f3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: aab98e2e7d52ec45ff8e6d87d3438b57029c70c7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544925"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49225475"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPendingBreakpoint2::Virtualize](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugpendingbreakpoint2-virtualize)します。  
-  
 この保留中のブレークポイントの仮想化の状態を切り替えます。 保留中のブレークポイントが仮想化されたデバッグ エンジンは、プログラムに新しいコードを読み込むたびにバインドしようとします。  
   
 ## <a name="syntax"></a>構文  

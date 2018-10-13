@@ -1,7 +1,7 @@
 ---
 title: Modeling SDK for Visual Studio - ドメイン固有言語 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 79
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 4f41594e1a39046e82cd7280c5569edbbeb65eb7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 384592f89df9537300c11cdf3e8cea622d8c9c63
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533897"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224732"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Modeling SDK for Visual Studio - ドメイン固有言語
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Modeling SDK for Visual Studio - ドメイン固有言語](https://docs.microsoft.com/visualstudio/modeling/modeling-sdk-for-visual-studio-domain-specific-languages)します。  
-  
 Modeling SDK for を使用して[!INCLUDE[vsprvs](../includes/vsprvs-md.md)](MSDK) に統合できる強力なモデル ベースの開発ツールを作成する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 たとえば、UML ツールは MSDK を使用して作成されます。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。  
   
  MSDK の中核は、業務分野の概念を表すために作成するモデルの定義です。 図式ビュー、コードおよびその他の成果物の生成機能、モデルを変換するためのコマンド、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のコードやその他のオブジェクトとの対話機能などのさまざまなツールでモデルを囲むことができます。 モデルを開発するとき、他のモデルやツールと組み合わせて、開発の中央に配置される強力なツール セットを形成することができます。  

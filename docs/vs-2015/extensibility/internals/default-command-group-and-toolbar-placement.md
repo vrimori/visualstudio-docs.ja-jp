@@ -1,7 +1,7 @@
 ---
 title: 既定のコマンド、グループ、およびツールバーの配置 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ ms.assetid: 35342110-d639-4577-8367-00b21dcc6f07
 caps.latest.revision: 31
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8c6007cd9502d5b1e10aa0fc90181f405189889a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fb7144842cba237a11d94435f56782a8d2de90b6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533651"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49195742"
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>既定のコマンド、グループ、およびツール バーの配置
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンドの既定のグループ、およびツールバーの配置](https://docs.microsoft.com/visualstudio/extensibility/internals/default-command-group-and-toolbar-placement)します。  
-  
 製品の統一性と安定性は、UI は既定では、コマンドの特定のグループを表示し、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]コマンドとコマンドのグループの定義を提供します。 Vspackage は、標準のコマンドおよびコマンド グループにも使用できます。  
   
  コマンドの既定のグループが 3 つのカテゴリに分類されます。 IDE コマンド、コマンドの製品、およびエディター コマンド。  

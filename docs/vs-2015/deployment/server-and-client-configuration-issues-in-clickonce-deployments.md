@@ -1,7 +1,7 @@
 ---
 title: サーバーと ClickOnce 配置でのクライアント構成の問題 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 17ab417649818e9f56dbd1065929a6240a23d417
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 58a7c92cab0f7bbf410d28cc1bc86dd6ce4f13df
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535377"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231531"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でのサーバーおよびクライアント構成の問題
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サーバーおよびクライアント構成の問題では、ClickOnce 配置](https://docs.microsoft.com/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments)します。  
-  
 Windows Server で、インターネット インフォメーション サービス (IIS) を使用する、展開には、Windows で認識されない種類のファイルが含まれている場合は、Microsoft Word ファイルなど、そのファイルを送信する IIS は拒否し、配置は失敗します。  
   
  さらに、いくつかの Web サーバーと、アプリケーション ソフトウェアなどの Web[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]ファイルの一覧を含み、ファイルの種類をダウンロードすることはできません。 たとえば、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]すべての Web.config ファイルのダウンロードを防止します。 これらのファイルには、ユーザー名とパスワードなどの機密情報を含めることができます。  
@@ -59,7 +57,7 @@ Windows Server で、インターネット インフォメーション サービ
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce とプロキシの認証  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .NET Framework 3.5 以降で Windows 統合のプロキシ認証のサポートを提供します。 特定の machine.config ディレクティブは必要ありません。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 基本認証またはダイジェストなどの他の認証プロトコルのサポートを行いません。  
   
- この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「 http://go.microsoft.com/fwlink/?LinkId=158730」を参照してください。  
+ この機能を有効にする .NET Framework 2.0 修正プログラムを適用することもできます。 詳細については、「 http://go.microsoft.com/fwlink/?LinkId=158730 」を参照してください。  
   
  詳細については、次を参照してください。 [ \<defaultProxy > 要素 (ネットワーク設定)](http://msdn.microsoft.com/library/9d663c4b-07b4-4f6f-9b12-efbd3630354f)します。  
   

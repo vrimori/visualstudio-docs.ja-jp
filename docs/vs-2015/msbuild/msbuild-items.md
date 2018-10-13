@@ -1,7 +1,7 @@
 ---
 title: MSBuild 項目 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 38
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 522de2d2a10e58c1f7d6a42b2456c63648655a86
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d04bd43be2a4fa2a72dec687df2582ccf6201b94
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548329"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229360"
 ---
 # <a name="msbuild-items"></a>MSBuild 項目
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild 項目](https://docs.microsoft.com/visualstudio/msbuild/msbuild-items)します。  
-  
   
 MSBuild 項目はビルド システムへの入力であり、通常はファイルを表します。 項目は要素名に基づいてアイテムの種類にグループ化されます。 項目の種類は項目の名前付きリストであり、タスクのパラメーターとして使用できます。 タスクは項目値を使用して、ビルド処理のステップを実行します。  
   

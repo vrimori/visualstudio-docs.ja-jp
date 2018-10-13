@@ -1,7 +1,7 @@
 ---
 title: N 層データセットに検証を追加する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dbc73cdac537ea66a6205e4601ed024c9a27ee3a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7b9955cf71b1d8862274d4b3501cee35ddd080f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536756"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49212384"
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>n 層データセットに検証を追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[n 層データセットに検証を追加](https://docs.microsoft.com/visualstudio/data-tools/add-validation-to-an-n-tier-dataset)します。  
-  
   
 n 層ソリューションに分離されたデータセットへの検証の追加は、単一ファイルのデータセット (1 つのプロジェクト内のデータセット) に検証を追加するのと基本的には同じです。 データで検証を実行する位置として推奨されるのは、データ テーブルの <xref:System.Data.DataTable.ColumnChanging> イベントや <xref:System.Data.DataTable.RowChanging> イベントの発生時です。  
   

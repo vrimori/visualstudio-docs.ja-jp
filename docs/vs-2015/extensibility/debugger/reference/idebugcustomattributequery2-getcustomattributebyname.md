@@ -1,7 +1,7 @@
 ---
 title: IDebugCustomAttributeQuery2::GetCustomAttributeByName |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 7428dfeb-8929-41b2-9b99-cb343a86c02d
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d1681cdb590814e0808fd8283498d4d04b7360d1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6da11b6e4ebf4aeea3067d1630893e7fd7a65a6d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533458"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209002"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugCustomAttributeQuery2::GetCustomAttributeByName](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname)します。  
-  
 カスタム属性の名前を指定されたカスタム属性のバイト数を取得します。  
   
 ## <a name="syntax"></a>構文  

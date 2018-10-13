@@ -1,7 +1,7 @@
 ---
 title: '方法: ビルド ログ ファイルを表示、保存、および構成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d30e2b571e0a46afa10c8100085e6c23513159e8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 26ece0c0d46e5c747ac05bae8c2d4fc793c34601
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547385"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49207403"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>方法: ビルド ログ ファイルを表示、保存、および構成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: ビューでは、ビルド ログ ファイルの構成の保存、および](https://docs.microsoft.com/visualstudio/ide/how-to-view-save-and-configure-build-log-files)します。  
-  
 Visual Studio IDE でプロジェクトをビルドしたら、**[出力]** ウィンドウでそのビルドに関する情報を表示できます。 この情報を使用して、たとえば、ビルド エラーをトラブルシューティングできます。 C++ のプロジェクトでは、自動的に作成および保存された .txt ファイルで同じ情報を確認することもできます。 マネージ コード プロジェクトでは、自分で **[出力]** ウィンドウの情報をコピーし、テキスト ファイルに貼り付けて、保存することができます。 また、IDE を使用すれば、各ビルドについて、表示する情報の種類を指定することもできます。  
   
  MSBuild を使用して任意の種類のプロジェクトをビルドする場合は、ビルドに関する情報を保存する .txt ファイルを作成することができます。 詳細については、「[MSBuild でのビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」を参照してください。  

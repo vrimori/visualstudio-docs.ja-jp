@@ -1,7 +1,7 @@
 ---
 title: '方法: _analysis_assume を使用してコードを追加情報を指定します |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a08ca5a35d08f284062323f2e75648852debb7bf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 608ae6383f95122d5e4b85658b12d454dec24d4e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538691"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49202541"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-analysisassume"></a>方法: __analysis_assume を使用して追加のコード情報を指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: _analysis_assume を使用して追加のコード情報の指定](https://docs.microsoft.com/visualstudio/code-quality/how-to-specify-additional-code-information-by-using-analysis-assume)します。  
-  
 C/C++ コード分析のプロセスを支援し、警告を減らすは、コード分析ツールへのヒントを指定できます。 追加情報を提供するには、次の関数を使用します。  
   
  `__analysis_assume(`  `expr`  `)`  

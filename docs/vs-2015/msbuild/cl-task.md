@@ -1,7 +1,7 @@
 ---
 title: CL タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e10c5d6ed0e4b992f5b573cd46bd1248d8d24d90
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: ddc31a98419553228b099e2dfb8652992b884176
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592822"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49234833"
 ---
 # <a name="cl-task"></a>CL タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CL タスク](https://docs.microsoft.com/visualstudio/msbuild/cl-task)します。  
-  
   
 Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパイラは、実行可能ファイル (.exe)、ダイナミック リンク ライブラリ (.dll) ファイル、またはコード モジュール (.netmodule) ファイルを生成します。 詳細については、「[コンパイラ オプション](http://msdn.microsoft.com/library/ed3376c8-bef4-4c9a-80e9-3b5da232644c)」を参照してください。  
   
@@ -545,7 +543,7 @@ Visual C++ コンパイラ ツール (cl.exe) をラップします。 コンパ
   
      ソース ファイルの前処理シンボルを定義します。  
   
-     詳細については、「[/D (プリプロセッサの定義)](http://msdn.microsoft.com/library/b53fdda7-8da1-474f-8811-ba7cdcc66dba)」を参照してください。  
+     詳細については、「 [/D (Preprocessor Definitions)](http://msdn.microsoft.com/library/b53fdda7-8da1-474f-8811-ba7cdcc66dba)」を参照してください。  
   
 -   **PreprocessOutput**  
   
