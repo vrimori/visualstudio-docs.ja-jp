@@ -1,7 +1,7 @@
 ---
 title: コマンド ラインからの階層相互作用データの追加 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce7713b39acb7736e34f6ab6017b0cd32b1e1cfa
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6b22de4b3dd94ba39015605353a71412836a9ff4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47593055"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228419"
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>コマンド ラインからの階層相互作用データの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンドラインからの階層相互作用データの追加](https://docs.microsoft.com/visualstudio/profiling/adding-tier-interaction-data-from-the-command-line)します。  
-  
 階層相互作用プロファイリングにより、1 つ以上のデータベースと通信する多階層アプリケーションの関数で同期 [!INCLUDE[vstecado](../includes/vstecado-md.md)] の呼び出しの実行時間に関する追加情報が提供されます。  
   
  **Windows 8 と Windows Server 2012**  
@@ -41,7 +39,7 @@ ms.locfileid: "47593055"
   
  **リモート コンピューターでの TIP データの収集**  
   
- コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 プロファイリング ツールを使用することはできません、 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c)パッケージをダウンロードします。  
+ コピーする必要がありますをリモート コンピューターで階層相互作用データを収集する、 **vs\_プロファイラー\_**_\<プラットフォーム >_ **\_**_\<言語 >_**.exe**ファイルから、 _%vsinstalldir%_**\Team Tools\Performance \setups**Visual Studio のフォルダーを選択し、コンピューターのリモート コンピューターにインストールします。 [Visual Studio Remote Tools](http://msdn.microsoft.com/library/90f45630-0d26-4698-8c1f-63f85a12db9c) のダウンロード パッケージにあるプロファイリング ツールを使用することはできません。  
   
  **TIP レポート**  
   

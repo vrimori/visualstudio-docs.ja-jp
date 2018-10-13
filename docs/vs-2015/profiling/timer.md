@@ -1,7 +1,7 @@
 ---
 title: Timer | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7a17f756a293ba8909054043713a14340ff9bf39
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: acca8f8bf77c465873bae25a61de18230a038234
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540253"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247694"
 ---
 # <a name="timer"></a>タイマー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[タイマー](https://docs.microsoft.com/visualstudio/profiling/timer)します。  
-  
 VSPerfCmd.exe の **Timer** オプションは、サンプリングするプロファイリング イベントをプロセッサのクロック サイクルに設定し、必要に応じて、サンプリング間隔のサイクル数を既定の 10,000,000 から変更します。 1 GHz のプロセッサでは、クロック サイクル数 10,000,000 の場合、1 秒あたりのサンプル数は約 100 になります。 指定できる最小サイクル数は、50,000 です。  
   
  **Timer** を使用できるのは、サンプリング プロファイリング メソッドを使用する場合のみであり、**Launch** または **Attach** オプションも含むコマンド ラインでのみ使用できます。  

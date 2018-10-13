@@ -1,7 +1,7 @@
 ---
 title: CvReleaseMarkerSeries 関数 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a8df22a27f23395ac3de6bb3b4f28c7746dd10ba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7b65c84257bb99e85b949006fa0fa17505c88690
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539597"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226279"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CvReleaseMarkerSeries 関数](https://docs.microsoft.com/visualstudio/profiling/cvreleasemarkerseries-function)します。  
-  
 マーカー系列をリリースします。 リリース後はマーカー系列オブジェクトを使用しないでください。使用すると、アプリケーションがクラッシュすることがあります。 マーカー系列のリリースに失敗すると、メモリ漏れが発生します。  
   
 ## <a name="syntax"></a>構文  

@@ -1,7 +1,7 @@
 ---
 title: ネイティブ オブジェクトのカスタム ビューの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ab7343a13d1c5182e207728a2d4772b6704789ac
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 23a6b08bcc592284f8cb2381abe1967d50428873
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547657"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236536"
 ---
 # <a name="create-custom-views-of-native-objects"></a>ネイティブ オブジェクトのカスタム ビューを作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ネイティブ オブジェクトのカスタム ビューを作成](https://docs.microsoft.com/visualstudio/debugger/create-custom-views-of-native-objects)です。  
-  
 Visual Studio の Natvis フレームワークでは、 **[ウォッチ]**、 **[ローカル]**、 **[データヒント]** のウィンドウのようなデバッガーの変数ウィンドウを Visual Studio でどのように表示するかをカスタマイズできます。  
   
  Natvis は、以前のバージョンの Visual Studio で使用されていた **autoexp.dat** ファイルよりも優先され、XML 構文の使用、より高度な診断、バージョン管理、複数ファイルのサポートが可能になります。  
@@ -356,7 +354,7 @@ Visual Studio の Natvis フレームワークでは、 **[ウォッチ]**、 **
 -   `Expand` ノードで下位に子ノードを指定しない場合、型はデバッガー ウィンドウで展開されません。  
   
 ####  <a name="BKMK_Item_expansion"></a> Item の展開  
- `Item` 要素は、 `Expand` ノードに使用される最も基本的で一般的な要素です。 `Item` は 1 つの子要素を定義します。 たとえば、 `CRect` クラスに `top`、 `left`、 `right`、および `bottom` フィールドがあり、次の視覚化エントリがあるとします。  
+ `Item` 要素は、 `Expand` ノードに使用される最も基本的で一般的な要素です。 `Item` は 1 つの子要素を定義します。 たとえば、`CRect` クラスに `top`、`left`、`right`、および `bottom` フィールドがあり、次の視覚化エントリがあるとします。  
   
 ```xml  
 <Type Name="CRect">  

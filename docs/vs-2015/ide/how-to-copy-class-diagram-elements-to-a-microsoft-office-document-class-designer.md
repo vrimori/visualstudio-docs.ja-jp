@@ -1,7 +1,7 @@
 ---
 title: '方法: Microsoft Office ドキュメントにクラス ダイアグラムの要素をコピーする (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dc5b39a425052d710945be07aebd78d2cf96f4e3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2e14da45b7c4f6064685cc4dbd88cd26aca3b0ff
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540274"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198381"
 ---
 # <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>方法: Microsoft Office ドキュメントにクラス ダイアグラムの要素をコピーする (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Microsoft Office ドキュメント (クラス デザイナー) にクラス ダイアグラムの要素をコピー](https://docs.microsoft.com/visualstudio/ide/how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer)します。  
-  
 図形を .NET クラス図 (.cd ファイル) から他のドキュメントにコピーできます。 貼り付け先のドキュメントの種類に基づいて、図形かその基になるコードのどちらかのコピーを入手します。 モデリング プロジェクト内の UML クラス ダイアグラムから図形をコピーするには、「[イメージとしてダイアグラムをエクスポートする](../modeling/export-diagrams-as-images.md)」を参照してください。  
   
 ### <a name="to-copy-a-single-element"></a>1 つの要素をコピーするには  

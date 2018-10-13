@@ -1,7 +1,7 @@
 ---
 title: '方法 : C# リファクタリング スニペットを復元する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 24
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 13867274ace5582b25482868ddd3642426b1f295
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8cb5906009d4c3f5d9d94a8e9898a1f02b3aedc0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537383"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227884"
 ---
 # <a name="how-to-restore-c-refactoring-snippets"></a>方法 : C# リファクタリング スニペットを復元する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 復元 c# リファクタリング スニペット](https://docs.microsoft.com/visualstudio/ide/how-to-restore-csharp-refactoring-snippets)します。  
-  
 C# リファクタリング操作は、次のディレクトリにあるコード スニペットに依存しています。  
   
  *インストール ディレクトリ*\Microsoft Visual Studio 14.0\VC#\Snippets\\*言語 ID*\Refactoring  

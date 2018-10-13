@@ -1,7 +1,7 @@
 ---
 title: MSBuild Properties1 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 35
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7633928a34c9e5c5320bc5d9d22bd796b39d7da3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4c839cebc63e14490f8793feffd4580798779288
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548707"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49199278"
 ---
 # <a name="msbuild-properties1"></a>MSBuild Properties1
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSBuild プロパティ](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties)します。  
-  
   
 プロパティはビルドを設定するための名前と値のペアです。 プロパティを使用することで、タスクに値を渡したり、条件を評価したりできるだけでなく、プロジェクト ファイルで参照する値を格納しておくこともできます。  
   

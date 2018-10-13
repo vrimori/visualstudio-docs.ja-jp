@@ -1,7 +1,7 @@
 ---
 title: Windows ストア アプリ用コンテンツのプリフェッチ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fc1b01e0cd841c6239a7f2ef76f964482348ee16
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d9329cad2f0125288aeea146070188d023d1a126
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537548"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49211446"
 ---
 # <a name="prefetch-content-for-windows-store-apps"></a>Windows ストア アプリ用コンテンツのプリフェッチ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows ストア アプリ用コンテンツのプリフェッチ](https://docs.microsoft.com/visualstudio/debugger/prefetch-content-for-windows-store-apps)します。  
-  
 Windows にのみ適用されます] (../Image/windows_only_content.png"windows_only_content")  
   
  Windows ストア アプリの応答性が向上するには、アプリの web ページやイメージなど、一部の web コンテンツを事前に Windows を要求することができます[WinINet](http://msdn.microsoft.com/en-us/0a06f2af-957a-4dff-a8cc-187370181b5c)[WinINet](http://msdn.microsoft.com/library/aa383630.aspx)キャッシュします。 この機能をプリフェッチと呼びます。 これは起動時に使用されるコンテンツに特に効果的ですが、他の頻繁に使用するコンテンツをプリフェッチすることもできます。 メソッド、 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](http://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx)クラスを使用して、プリロードするコンテンツの Uri を指定できます。 Windows SDK を参照して[コンテンツのプリフェッチ サンプル](http://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309)をアプリに ContentPrefetcher 機能を追加する方法の例についてはします。  

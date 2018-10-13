@@ -1,7 +1,7 @@
 ---
 title: VSIX プロジェクト テンプレート |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: b6c82167-e2a5-4cff-8c8b-2d72e2a9092c
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ec54b88483966851149449bc1c605ee991c436b6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fea3271ed628455d53a927fd5993e887564d27ea
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547957"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236185"
 ---
 # <a name="vsix-project-template"></a>VSIX プロジェクト テンプレート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX プロジェクト テンプレート](https://docs.microsoft.com/visualstudio/extensibility/vsix-project-template)します。  
-  
 VSIX プロジェクトでは、1 つまたは複数の Visual Studio 拡張機能をラップする VSIX プロジェクト テンプレートを使用してでパッケージを公開、 [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイト。  
   
  VSIX 配置には、Vspackage、アセンブリ、MEF コンポーネント、プロジェクト テンプレート、項目テンプレート、ツールボックス コントロール、およびカスタム拡張機能の種類がサポートしています。  

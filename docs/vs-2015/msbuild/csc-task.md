@@ -1,7 +1,7 @@
 ---
 title: Csc タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 30
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c02e01e2003d2a7bb618f0c4c2dc00752c4e178
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 657535e73294508ac59330cd379c1c6bd192a0b2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544837"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49237381"
 ---
 # <a name="csc-task"></a>Csc タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Csc タスク](https://docs.microsoft.com/visualstudio/msbuild/csc-task)します。  
-  
   
 CSC.exe をラップし、実行可能ファイル (.exe ファイル)、ダイナミック リンク ライブラリ (.dll ファイル)、またはコード モジュール (.netmodule ファイル) を生成します。 CSC.exe の詳細については、「[C# コンパイラ オプション](http://msdn.microsoft.com/library/d3403556-1816-4546-a782-e8223a772e44)」を参照してください。  
   
