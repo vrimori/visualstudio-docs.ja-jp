@@ -1,7 +1,7 @@
 ---
 title: CreatePkgDef ユーティリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: c745cb76-47a6-49ff-9eed-16af0f748e35
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ec77937e18ab437107b0e9d269fb4b5c7c8e2381
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 63334ba9d454407bb93a87bf89b12cb472184d58
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539071"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181598"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef ユーティリティ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[CreatePkgDef ユーティリティ](https://docs.microsoft.com/visualstudio/extensibility/internals/createpkgdef-utility)します。  
-  
 パラメーターとして Visual Studio 拡張機能の .dll ファイルを受け取り、.dll に付随する .pkgdef ファイルを作成します。 .Pkgdef ファイルには、拡張機能がインストールされている場合、システム レジストリに書き込まそれ以外の場合は、すべての情報が含まれています。  
   
 > [!NOTE]

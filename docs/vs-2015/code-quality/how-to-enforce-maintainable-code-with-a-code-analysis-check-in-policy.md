@@ -1,7 +1,7 @@
 ---
 title: '方法: コード分析チェックイン ポリシーを保守しやすいコードを適用する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 97b321fe5a72c6f3ace680476340eca48f7ed309
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3ef282bf1b19cb2d72075619539921cdb88d08f2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49174852"
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>方法: コード分析のチェックイン ポリシーを使用して保守が容易なコードを適用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コード分析チェックイン ポリシーを保守しやすいコードを強制](https://docs.microsoft.com/visualstudio/code-quality/how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy)します。  
-  
 開発者は、複雑さとして、コードの保守容易性を測定する、コード メトリックスのツールを使用できますが、コード メトリックスをチェックイン ポリシーの一部として呼び出されることはできません。 ただし、チームは、コードのコード メトリックスの標準に準拠の確認し、チェックイン ポリシーを使用したルールを適用するコード分析規則を有効にできます。 コード メトリックスの詳細については、次を参照してください。、[コード メトリックス値](../code-quality/code-metrics-values.md)します。  
   
  開発者は、Depth of Inheritance、Class Coupling、保守容易性指数、および複雑さのルール コード分析チェックイン ポリシーを保守しやすいコードを適用するに有効にすることができます。 これらのルールの 4 つすべては、「保守容易性規則」カテゴリで、コード分析ポリシー エディターで表示されます。  

@@ -1,7 +1,7 @@
 ---
 title: 'エラー: SQL できます&#39;t が SSDEBUGPS を見つける |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1782412ded2c4edff0da29b13160107664170d20
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f775bd99c019a119d1bcd5193df0efd7ceadd096
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546834"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180168"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>エラー: SQL できます&#39;t が SSDEBUGPS を見つける
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: SQL できます&#39;t SSDEBUGPS を見つける](https://docs.microsoft.com/visualstudio/debugger/error-sql-can-t-find-ssdebugps)します。  
-  
 SSDEBUGPS.dll は、SQL Server のデバッグ ホスト コンポーネントです。  
   
  このエラーはデバッグの開始時に発生し、指定されたファイルが [!INCLUDE[sqprsqlong](../includes/sqprsqlong-md.md)] コンピューターに存在しないことを示します。 リモート デバッグのセットアップが実行されていない、または何らかの理由でこのファイルが削除されていることが原因として考えられます。  

@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスで入力候補 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 617439dc-3f0e-4e5f-b346-3e4e7fcf3c1b
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 337ea5de468755fcba5cefe0fe4067b73bd59def
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab481ff516cb6b10a4330b4255ea3e75a333f3da
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535945"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49175059"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>従来の言語サービスでのステートメント入力補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスで入力候補](https://docs.microsoft.com/visualstudio/extensibility/internals/statement-completion-in-a-legacy-language-service)します。  
-  
 ステートメント入力候補は、言語サービスにより、ユーザーの言語のキーワードやコア エディターでの入力が開始要素を完了するプロセスです。 このトピックでは、ステートメント入力候補のしくみと、言語サービスで実装する方法について説明します。  
   
  従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 ステートメント入力候補を実装する新しい方法の詳細についてを参照してください。[チュートリアル: 候補を表示する](../../extensibility/walkthrough-displaying-statement-completion.md)します。  

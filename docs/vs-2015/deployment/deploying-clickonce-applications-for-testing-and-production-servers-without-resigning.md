@@ -1,7 +1,7 @@
 ---
 title: ClickOnce アプリケーションのテストの配置と再署名なしの実稼働サーバー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 384292be2f08eef453dba5623783ef8865107d54
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 146a525394b51f71f470f1246610a855d968dddc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547445"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180220"
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>再署名を行わない ClickOnce アプリケーションの配置 (テスト サーバーおよび運用サーバー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce アプリケーションのテストの展開および Resigning なしの実稼働サーバー](https://docs.microsoft.com/visualstudio/deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning)します。  
-  
 このトピックでは、clickonce マニフェストをバージョン 3.5 再署名または ClickOnce を変更せずに複数のネットワークの場所からの ClickOnce アプリケーションの展開をできるようにする .NET Framework で導入された新機能について説明します。  
   
 > [!NOTE]

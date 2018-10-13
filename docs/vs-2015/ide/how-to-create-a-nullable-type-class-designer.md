@@ -1,7 +1,7 @@
 ---
 title: '方法: Null 許容型を作成する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f93d5a18b71a054a147b396afd293c6bdce36c64
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a30ac892489d832f4b6dc2d0c51efb6192e77419
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548520"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179427"
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>方法: Null 許容型を作成する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: null 許容型 (クラス デザイナー) 作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-a-nullable-type-class-designer)です。  
-  
 ある種の値の型は、常に値が定義されている (または必要である) とは限りません。 これはデータベースではよくあることであり、一部のフィールドに値が何も割り当てられない場合があります。 たとえば、データベースのフィールドに値がまだ割り当てられていないことを示すために、フィールドに null 値を割り当てることがあります。  
   
  *null 許容型*は、その型の一般的な値の範囲だけでなく null 値も受け付けるように拡張した値型です。 たとえば、`Int32` の null 許容型 (Nullable\<Int32> とも書きます) には、-2147483648 から 2147483647 の任意の値または null 値を代入できます。 Nullable\<bool> には、値 `True`、`False`、または null (値がまったくない) を割り当てることができます。  

@@ -1,7 +1,7 @@
 ---
 title: テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
 caps.latest.revision: 13
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 040e3f0a236067a96d107f64f4c9aca06d0706e3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 63761dc543b327c1c8639203c80afb92d4700c8d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534078"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172459"
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>テスト エクスプローラーを使用した既存の C++ アプリケーションの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[単体テスト エクスプ ローラーで既存の C++ アプリケーションをテスト](https://docs.microsoft.com/visualstudio/test/unit-testing-existing-cpp-applications-with-test-explorer)します。  
-  
 既存のアプリケーションを変更する場合は、単体テストでのカバレッジ率が十分であることを事前に確認しておくことをお勧めします。 これにより、変更がバグの原因になっていないことを確信できます。 アプリケーションに既存の単体テストがない場合は、このトピックに示されている手法を使用して追加できます。 このトピックでは、既存の Visual C++ コードに単体テストを追加する方法を説明します。コードのテスト方法を決定してから、テストを作成、記述、および実行します。  
   
 ## <a name="deciding-how-to-test-your-code"></a>コードのテスト方法の決定  

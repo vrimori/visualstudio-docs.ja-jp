@@ -1,7 +1,7 @@
 ---
 title: '[検索/コマンド] ボックス | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 22ced396f8a18cf2a665ed7a1ba1016b16e44c8d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0e818df222e9b7343facc989c1b61be30c098b64
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536255"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172576"
 ---
 # <a name="findcommand-box"></a>[検索/コマンド] ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[検索コマンド ボックス](https://docs.microsoft.com/visualstudio/ide/find-command-box)します。  
-  
 **[検索]** ボックスでは、テキストを検索し、Visual Studio コマンドを検索できます。 **[検索]** ボックスは、ツール バー コントロールとして使用できますが、既定では表示されません。 **[標準]** ツール バーの **[ボタンの追加または削除]** を選択し、**[検索]** を選択すると、**[検索]** ボックスを表示できます。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] コマンドを実行するには、コマンドの先頭に不等号 (&gt;) を付けます。  

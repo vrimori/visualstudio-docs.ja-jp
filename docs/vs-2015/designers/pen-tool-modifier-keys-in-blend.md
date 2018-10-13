@@ -1,7 +1,7 @@
 ---
 title: Blend のペン ツールの修飾キー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e393f6014d6541378f32a13b7bbb76618b6308b2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f4fd240ffae322d21e37049b5ec0a862515b00f2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546335"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172108"
 ---
 # <a name="pen-tool-modifier-keys-in-blend"></a>Blend のペン ツールの修飾キー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ペンの Blend のツールの修飾キー](https://docs.microsoft.com/visualstudio/designers/pen-tool-modifier-keys-in-blend)します。  
-  
 次の表は、**ペン** ツール ![](../designers/media/d514358f-185a-412f-a55d-36633b25dc8a.png "d514358f-185a-412f-a55d-36633b25dc8a") でパスを作成するときに、パスの変更に使用できるショートカットを一覧表示したものです。 また、**ペン** ツールを使用して、既存のパスの点を追加または削除したり、2 つの既存のパスを結合したりすることもできます。  
   
 |目的|方法|ポインター|  

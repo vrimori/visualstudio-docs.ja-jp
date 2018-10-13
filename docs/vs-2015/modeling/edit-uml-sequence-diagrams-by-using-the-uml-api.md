@@ -1,7 +1,7 @@
 ---
 title: UML API を使用して UML シーケンス図を編集する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 27
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ba6f1cb12d8ffb93721e266e80127e574ca36e76
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b2c826174f65155e2a832ec55471246ffad9568b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544497"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185504"
 ---
 # <a name="edit-uml-sequence-diagrams-by-using-the-uml-api"></a>UML API を使用して UML シーケンス図を編集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML API を使用して編集 UML シーケンス図](https://docs.microsoft.com/visualstudio/modeling/edit-uml-sequence-diagrams-by-using-the-uml-api)します。  
-  
 相互作用とは、一連の生存線の間におけるメッセージのシーケンスです。 相互作用は、UML シーケンス図に表示されます。  
   
  API の詳細については、「<xref:Microsoft.VisualStudio.Uml.Interactions?displayProperty=fullName>」を参照してください。  

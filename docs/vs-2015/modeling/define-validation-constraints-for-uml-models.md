@@ -1,7 +1,7 @@
 ---
 title: UML モデルの検証制約の定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,26 +14,24 @@ caps.latest.revision: 49
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1caf688f6ecc84413d3bdb86c1c1825241aa5ba3
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 6f2b97f2b7f3db141bbbbe17d5cf1ab63212be81
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592927"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176541"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>UML モデルの検証制約を定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデルの検証制約を定義](https://docs.microsoft.com/visualstudio/modeling/define-validation-constraints-for-uml-models)します。  
-  
 指定した条件をモデルが満たしているかどうかをテストする検証制約を定義できます。 たとえば、ユーザーが継承関係のループを作成していないことを確認するための制約を定義できます。 制約は、ユーザーがモデルを開くか、または保存しようとしたときに実行されるほか、手動で実行することもできます。 制約が失敗した場合は、ユーザー定義のエラー メッセージがエラー ウィンドウに追加されます。 これらの制約を[VSIX](http://go.microsoft.com/fwlink/?LinkId=160780)(Visual Studio Integration Extension) にパッケージ化し、他の Visual Studio ユーザーに配布できます。  
   
  また、モデルをデータベースなどの外部リソースに照らし合わせて検証する制約も定義できます。 レイヤー図と照らし合わせてプログラム コードを検証する場合は、「[レイヤー図へのカスタム アーキテクチャ検証の追加](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)します。  
   
- UML モデルをサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+ UML モデルをサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
- 参照してください[要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)します。  
+ 「 [要件](../modeling/extend-uml-models-and-diagrams.md#Requirements)」を参照してください。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
@@ -192,15 +190,15 @@ using Microsoft.VisualStudio.Uml.Classes;
   
      [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の実験用のインスタンスが開始します。  
   
-     **トラブルシューティング**: 場合は、新しい[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]は開始されません。  
+     **トラブルシューティング**: 新しい [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が起動しない場合:  
   
     -   複数のプロジェクトがある場合は、VSIX プロジェクトがソリューションのスタートアップ プロジェクトとして設定されていることを確認してください。  
   
-    -   ソリューション エクスプローラーで、スタートアップまたはプロジェクトのみのショートカット メニューを開き、 **[プロパティ]** をクリックします。 プロジェクトのプロパティ エディターで、 **[デバッグ]** タブをクリックします。確認します内の文字列、**外部プログラムの開始**フィールドの完全なパス名は、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]通常は。  
+    -   ソリューション エクスプローラーで、スタートアップまたはプロジェクトのみのショートカット メニューを開き、 **[プロパティ]** をクリックします。 プロジェクトのプロパティ エディターで、 **[デバッグ]** タブをクリックします。[外部プログラムの開始]** フィールドの文字列が [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の完全なパス名であることを確認してください。通常は次のようになります。  
   
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`  
   
-2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。  
+2.  実験用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、モデリング プロジェクトを開くか、または生成し、モデリング図を開くか、または生成します。  
   
 3.  前のセクションの制約のサンプルのテストを設定するには、次の手順に従います。  
   
@@ -244,7 +242,7 @@ public void ValidateTypeName(ValidationContext context, IType type)
  }  
 ```  
   
- 参照してください[UML API を使用したプログラミング](../modeling/programming-with-the-uml-api.md)メソッドよぶ型についてに移動し、モデルを読み取り使用することができます。  
+ モデルをナビゲートして読み込むために使用できるメソッドおよび型の詳細については、「 [Programming with the UML API](../modeling/programming-with-the-uml-api.md) 」を参照してください。  
   
 ### <a name="about-validation-constraint-methods"></a>検証制約のメソッドについて  
  それぞれの検証制約は、次の形式のメソッドで定義されます。  
@@ -270,7 +268,7 @@ public void ValidateSomething
  2 番目のパラメーターに異なる型を指定し、任意の数の検証メソッドを定義できます。 検証が起動されると、パラメーター型に対応する各モデル要素に対し、それぞれの検証メソッドが呼び出されます。  
   
 ### <a name="reporting-validation-errors"></a>検証エラーの報告  
- エラー レポートを生成するには、 `ValidationContext`によって提供されるメソッドを使用します。  
+ エラー レポートを生成するには、`ValidationContext` によって提供されるメソッドを使用します。  
   
  `context.LogError("error string", errorCode, elementsWithError);`  
   
@@ -387,7 +385,7 @@ context.LogError(... , usecase);
   
      **Visual Studio 拡張機能インストーラー** が起動され、拡張機能がインストールされます。  
   
-4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を起動または再起動します。  
+4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]を起動または再起動します。  
   
 #### <a name="to-uninstall-an-extension"></a>拡張機能をアンインストールするには  
   
@@ -401,7 +399,7 @@ context.LogError(... , usecase);
   
  *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
   
-##  <a name="Example"></a> 例  
+##  <a name="Example"></a> 「例」  
  この例は、要素間の依存関係におけるループを検索します。  
   
  保存したときと検証メニュー コマンドを選択したときに検証が実行されます。  

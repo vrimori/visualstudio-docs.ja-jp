@@ -1,7 +1,7 @@
 ---
 title: レガシ API を使用してテキスト レイヤーへのアクセス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 2258fcdd-38d1-479d-b8f8-1d4e6525f72c
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bfc9cd494f308244791b82f3f001e2bd54f71204
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c4f60a5b385ee24f2855e67e92f8a563d2603be0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548410"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49183535"
 ---
 # <a name="accessing-text-layers-by-using-the-legacy-api"></a>レガシ API を使用してテキスト レイヤーへのアクセス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ API を使用してテキストのレイヤーにアクセスする](https://docs.microsoft.com/visualstudio/extensibility/accessing-text-layers-by-using-the-legacy-api)します。  
-  
 通常、テキスト レイヤーには、テキストのレイアウトの一部の側面がカプセル化します。 「関数で-、-タイム」レイヤーでは、キャレット (挿入ポイントのテキスト) を含む関数の前後に、テキストを非表示にします。  
   
  バッファーと、ビューのテキスト レイヤーが存在して、ビュー バッファーの内容を表示する方法を変更します。  

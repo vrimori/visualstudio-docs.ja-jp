@@ -1,7 +1,7 @@
 ---
 title: 'エラー: リモートのコンピューターがリモート接続 ダイアログに表示されません |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,21 +19,19 @@ caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 552be1e38cdb7401af36b287b23091d754c35980
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a7b849ea60c48bc5127ddd50167415629daec4e6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547651"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185160"
 ---
 # <a name="error-remote-machine-does-not-appear-in-a-remote-connections-dialog"></a>エラー: リモート コンピューターが [リモート接続] ダイアログに表示されません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー: リモート コンピューターがリモート接続 ダイアログに表示されない](https://docs.microsoft.com/visualstudio/debugger/error-remote-machine-does-not-appear-in-a-remote-connections-dialog)します。  
-  
 リモート コンピューターが [リモート接続] ダイアログ ボックスに表示されない場合、下記の一般的な原因を確認してください。  
   
- マネージ互換モードを使用している場合は、Visual Studio 2010 のドキュメントを確認してください:[リモート デバッグのトラブルシューティング - Visual Studio 2010](https://msdn.microsoft.com/library/2ys11ead\(v=vs.100\).aspx)します。  
+ マネージド互換モードを使用している場合は、Visual Studio 2010 用のマニュアルの「 [リモート デバッグのトラブルシューティング - Visual Studio 2010](https://msdn.microsoft.com/library/2ys11ead\(v=vs.100\).aspx) 」を調べてください。  
   
 ### <a name="common-causes-for-this-error"></a>このエラーの一般的な原因  
   

@@ -1,7 +1,7 @@
 ---
 title: '1304: CultureInfo を指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 149ab03c1ee33d8aaf5aae30ddf56150279c4052
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: d53cdb1622fbb9750cddd2a79b1bbc7cd606ba20
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47591999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188345"
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304: CultureInfo を指定します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1304: CultureInfo を指定](https://docs.microsoft.com/visualstudio/code-quality/ca1304-specify-cultureinfo)します。
-
 |||
 |-|-|
 |TypeName|SpecifyCultureInfo|

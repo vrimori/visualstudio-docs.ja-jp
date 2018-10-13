@@ -1,7 +1,7 @@
 ---
 title: Blend における XAML のデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a1fe1c312c747e25fc1b1e93a51e26d6e67c4a9b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c0c2e135c788ce4fc632efa617323e7ac6fc1f3e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547310"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179882"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend での XAML のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Blend での XAML のデバッグ](https://docs.microsoft.com/visualstudio/debugger/debug-xaml-in-blend)します。  
-  
 アプリの XAML をデバッグするために [!INCLUDE[blend_first](../includes/blend-first-md.md)] のツールを使用できます。 エラーが表示されます、プロジェクトをビルドすると、**結果**パネル。 エラーをダブルクリックして、エラーに関連するマークアップを検索します。 非表示にする場合は、作業領域を増やす必要があります、**結果**F12 キーを押してパネル。  
   
 ## <a name="syntax-errors"></a>構文エラー  

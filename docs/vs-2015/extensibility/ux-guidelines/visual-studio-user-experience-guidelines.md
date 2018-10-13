@@ -1,7 +1,7 @@
 ---
 title: Visual Studio ユーザー エクスペリエンス ガイドライン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 3abbe495-cbbc-4982-a809-38bda34553a7
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5773bdbd493b29281d148066306daf5ad9d2d2f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c64ed14a412902679d96a45c45d06438d57fcc64
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545507"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49172004"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio ユーザー エクスペリエンス ガイドライン](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines)します。  
-  
 Visual Studio ユーザー エクスペリエンス ガイドラインは、Visual Studio の新機能を設計しているユーザーにとって、します。 次のガイドラインは、新しいユーザー インターフェイス (UI) の設計者はシームレスで開発環境内で一貫したユーザー エクスペリエンスを作成できるように、ユーザーの一般的なモデルと対話パターンに関する情報を格納します。  
   
  Windows から提供されるガイダンスを理解する Microsoft 製品用のソフトウェアを開発します。 これには注意すべき 3 つの重要なリソースがあります。  

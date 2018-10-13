@@ -1,7 +1,7 @@
 ---
 title: イメージ ライブラリ ビューアー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1af471eeada5f6da04f4fdf6b4ee69cc0741110b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 884f97acb6ff0e54c641c3a5df9c5edba9868e50
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548994"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49184107"
 ---
 # <a name="image-library-viewer"></a>イメージ ライブラリ ビューア
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イメージ ライブラリ ビューアー](https://docs.microsoft.com/visualstudio/extensibility/internals/image-library-viewer)します。  
-  
 Visual Studio Image Library ビューアー ツールは、読み込みおよびユーザーが Visual Studio と同じ方法で操作できるように、イメージのマニフェストを検索できます。 ユーザーは、バック グラウンド、サイズ、DPI、ハイ コントラスト、およびその他の設定を変更できます。 このツールは、各イメージ マニフェストの読み込み情報を表示し、イメージ マニフェスト内の各イメージのソース情報を表示します。 このツールは、場合に便利です。  
   
 1.  エラーを診断します。  

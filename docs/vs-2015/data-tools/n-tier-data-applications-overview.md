@@ -1,7 +1,7 @@
 ---
 title: N 層データ アプリケーションの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 761002eb9e46ec0e344c653affbebb10b3922466
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 912752c39d8180f7f3cd5dc0cca719e39e39a0e8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537806"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49171965"
 ---
 # <a name="n-tier-data-applications-overview"></a>n 層データ アプリケーションの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[N 層データ アプリケーションの概要](https://docs.microsoft.com/visualstudio/data-tools/n-tier-data-applications-overview)します。  
-  
   
 N-レベル * データ アプリケーションは複数に区切られたデータ アプリケーション*層*します。 n 層アプリケーションは、"分散アプリケーション" および "多階層アプリケーション" とも呼ばれ、クライアントとサーバー間に分散された別個の層に処理を分離します。 データにアクセスするアプリケーションを開発する場合は、アプリケーションを構成する各種の層を明確に分離する必要があります。  
   

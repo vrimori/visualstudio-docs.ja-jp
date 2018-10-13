@@ -1,7 +1,7 @@
 ---
 title: '[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d304aa422022a77d46c1f416f7cd41af60864db0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 76abbde711e73598eb8c7bcfde052335222d0822
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534411"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49175605"
 ---
-# <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー] ([オプション] ダイアログ ボックス - [環境])
+# <a name="web-browser-environment-options-dialog-box"></a>[Web ブラウザー]\([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[環境では、Web ブラウザーのオプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/web-browser-environment-options-dialog-box)します。  
-  
   
 内部 Web ブラウザーと Internet Explorer のオプションを設定します。 このダイアログ ボックスにアクセスするには、**[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[Web ブラウザー]** を選択します。  
   

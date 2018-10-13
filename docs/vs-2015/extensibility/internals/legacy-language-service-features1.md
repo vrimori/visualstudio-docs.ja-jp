@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスの特徴 1 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: a646e4f0-767d-4cd1-8e1a-9a2aa210a1b7
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6ed5b66c8148df36b89cfb6e6ae048a05f393551
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4e864f9899c274fe58da16cdb5581058dd20f725
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537086"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185398"
 ---
 # <a name="legacy-language-service-features"></a>従来の言語サービスの機能
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービスの特徴 1](https://docs.microsoft.com/visualstudio/extensibility/internals/legacy-language-service-features1)します。  
-  
 マネージ パッケージ フレームワーク (MPF) の言語サービスは、1 つ以上をサポートできる[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]構文の強調表示、IntelliSense、ブレークポイントの検証などの機能です。 各機能は独立して実装できますが、パーサーとスキャナーのみを必要とするスキャナー構文の強調表示を除くすべてが必要です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

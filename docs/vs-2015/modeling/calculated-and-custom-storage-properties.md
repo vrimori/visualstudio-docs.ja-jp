@@ -1,7 +1,7 @@
 ---
 title: 計算およびカスタム格納プロパティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e11ae9833d61e2ff48341b577d6aa1cdbc54afc6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c1203b962627071d757dc1876a534977c574a813
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534432"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179492"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[計算とストレージのカスタム プロパティ](https://docs.microsoft.com/visualstudio/modeling/calculated-and-custom-storage-properties)します。  
-  
 ドメイン固有言語 (DSL) 内のすべてのドメイン プロパティは、図では、言語エクスプ ローラーで、ユーザーに表示されることができ、プログラム コードからアクセスできます。 ただし、プロパティは、その値が格納される方法では異なります。  
   
 ## <a name="kinds-of-domain-properties"></a>ドメインのプロパティの種類  

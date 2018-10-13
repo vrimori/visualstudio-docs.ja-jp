@@ -1,7 +1,7 @@
 ---
 title: 'UML アクティビティ図: リファレンス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 50
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: bfe4eaad401ce61534e5785ed82b9e33fa2f6610
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3fe8a0d33b0e9be8eecdc55ac68d23138f6506d8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535073"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177841"
 ---
 # <a name="uml-activity-diagrams-reference"></a>UML アクティビティ図: リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML アクティビティ図: リファレンス](https://docs.microsoft.com/visualstudio/modeling/uml-activity-diagrams-reference)します。  
-  
 *アクティビティ図*の一連のアクションをワークフローとして、ビジネス プロセスまたはソフトウェア プロセスが表示されます。 ユーザー、ソフトウェア コンポーネント、またはコンピューターが、これらのアクションを実行できます。  
   
  アクティビティ図を使用すると、次の例のような複数の種類のプロセスを記述することができます。  

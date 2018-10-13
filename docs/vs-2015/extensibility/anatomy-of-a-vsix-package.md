@@ -1,7 +1,7 @@
 ---
 title: VSIX パッケージの構造 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 645d9bff0b1f1bd3ac3afe3f5c815d9b9cd208d3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 207abbda08134c2a1e065cf73050fc2451d4eaab
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181461"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSIX パッケージの構造
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX パッケージの構造](https://docs.microsoft.com/visualstudio/extensibility/anatomy-of-a-vsix-package)します。  
-  
 VSIX パッケージは、分類、拡張機能をインストールして Visual Studio を使用してメタデータと共に、1 つまたは複数の Visual Studio 拡張を含む .vsix ファイルです。 そのメタデータは、VSIX マニフェストと [Content_Types] .xml ファイルに含まれます。 VSIX パッケージでは、ローカライズされたセットアップのテキストを提供する 1 つ以上の Extension.vsixlangpack ファイルを含めることもでき、依存関係をインストールする追加の VSIX パッケージを含めることができます。  
   
  VSIX パッケージの形式では、Open Packaging Conventions (OPC) 標準に従います。 パッケージには、バイナリが含まれていて、ファイルをサポートするには、[Content_Types] .xml ファイルと、.vsix マニフェスト ファイル。 1 つの VSIX パッケージには、複数のプロジェクトまたは複数のパッケージを独自のマニフェストの出力を含めることができます。  

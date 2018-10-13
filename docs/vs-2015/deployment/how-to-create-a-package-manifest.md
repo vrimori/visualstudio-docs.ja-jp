@@ -1,7 +1,7 @@
 ---
 title: '方法: パッケージ マニフェストを作成する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 6abbbb351d04251b4ef1c209f35652a91b11d8c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2941000e9fa2c6f1d9fd4835c9fd0b8fa1fd1b4f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545657"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182430"
 ---
 # <a name="how-to-create-a-package-manifest"></a>方法: パッケージ マニフェストを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Create a Package Manifest](https://docs.microsoft.com/visualstudio/deployment/how-to-create-a-package-manifest)します。  
-  
 アプリケーションの必須コンポーネントを展開するには、ブートス トラップ パッケージを使用できます。 ブートス トラップ パッケージには、ロケールごとに、パッケージ マニフェストが 1 つの製品マニフェスト ファイルが含まれています。 別のローカライズされたバージョン間で共有機能は、製品マニフェストに移動してください。  
   
  パッケージ マニフェストの詳細については、次を参照してください。[方法: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)します。  

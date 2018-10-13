@@ -1,7 +1,7 @@
 ---
 title: VSTU によって作成されるプロジェクト ファイルのカスタマイズ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 4
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: ef11a6585d741fd28de918d4fa2a81f1eb927b43
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9144eaf751c9e78c79d247121d34dd4365ea5414
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533504"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49184614"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>VSTU によって作成されるプロジェクト ファイルのカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタマイズ プロジェクト ファイル VSTU によって作成される](https://docs.microsoft.com/visualstudio/cross-platform/customize-project-files-created-by-vstu)します。  
-  
   
 Visual Studio Tools for Unity は、プロジェクト ファイルの生成時に Unity スタイルのコールバックを提供します。 `VisualStudioIntegration.ProjectFileGeneration` イベントに登録し、プロジェクト ファイルが再生成されるたびに、それを変更します。  
   

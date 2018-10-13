@@ -1,7 +1,7 @@
 ---
 title: 図に UML モデルの表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,19 +14,17 @@ caps.latest.revision: 25
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5439394885ecdd3801b34bb224144bad16d4c2f6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 412bddfa7a25f613a3a400905d13dff478b5a309
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533683"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49173161"
 ---
 # <a name="display-a-uml-model-on-diagrams"></a>図に UML モデルを表示する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[図に UML モデルを表示](https://docs.microsoft.com/visualstudio/modeling/display-a-uml-model-on-diagrams)します。  
-  
-Visual Studio に対する拡張機能のプログラム コードでは、モデル要素が図上でどのように表示されるかを制御できます。 UML モデルをサポートする Visual Studio のバージョンを確認するを参照してください。[アーキテクチャとモデリング ツールのバージョンのサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)します。  
+Visual Studio に対する拡張機能のプログラム コードでは、モデル要素が図上でどのように表示されるかを制御できます。 UML モデルをサポートする Visual Studio のバージョンを確認するには、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
   
  このトピックの内容:  
  -   [図の要素を表示するには](#Display)  

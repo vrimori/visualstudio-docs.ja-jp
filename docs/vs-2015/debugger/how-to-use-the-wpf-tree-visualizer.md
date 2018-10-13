@@ -1,7 +1,7 @@
 ---
 title: '方法: WPF ツリー ビジュアライザーを使用する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9e99bdaac9feb343c594e808433d686e5d607b45
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 1c8eb0bae29db30c5ba3a305707d886b01b5c34d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592830"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188336"
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>方法: WPF ツリー ビジュアライザーを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: WPF ツリー ビジュアライザーを使用して](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-wpf-tree-visualizer)します。  
-  
 WPF ツリー ビジュアライザーを使用すると、WPF オプションのビジュアル ツリーを調べたり、ツリーに含まれるオブジェクトの WPF 依存関係プロパティを表示したりすることができます。 ビジュアル ツリーの詳細については、次を参照してください。 [WPF のツリー](http://msdn.microsoft.com/library/e83f25e5-d66b-4fc7-92d2-50130c9a6649)します。 依存関係プロパティの詳細については、次を参照してください。[依存関係プロパティの概要](http://msdn.microsoft.com/library/d119d00c-3afb-48d6-87a0-c4da4f83dee5)します。  
   
  WPF ツリー ビジュアライザーを開くと、2 つのペインが表示されます。**ビジュアル ツリー**左側、**プロパティの**_名前_**:** _型_右側のウィンドウ。 内のオブジェクトを選択、**ビジュアル ツリー**ウィンドウで、および**のプロパティ**_名前_**:**_型_ペインがそのオブジェクトのプロパティを表示する自動的に更新されます。  

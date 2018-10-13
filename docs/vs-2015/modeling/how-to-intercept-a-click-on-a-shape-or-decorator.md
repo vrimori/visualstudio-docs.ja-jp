@@ -1,7 +1,7 @@
 ---
 title: '方法: シェイプまたはデコレーターに対するクリックして |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 306e61307a6d9a5ff41a3a4492365bef39ab8449
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9ca1917d71ff2ef0961e9f5c99839759c7decff3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545529"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176047"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>方法: シェイプまたはデコレーターに対するクリック操作を受け取る
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: シェイプまたはデコレーターに対するクリック](https://docs.microsoft.com/visualstudio/modeling/how-to-intercept-a-click-on-a-shape-or-decorator)します。  
-  
 次の手順では、図形または、アイコン デコレーターに対するクリックする方法を説明します。 数回のクリックをインターセプトできるをダブルクリックしたにドラッグ、およびその他のジェスチャをし応答要素。  
   
 ## <a name="to-intercept-clicks-on-shapes"></a>図形のクリックをインターセプトするには  

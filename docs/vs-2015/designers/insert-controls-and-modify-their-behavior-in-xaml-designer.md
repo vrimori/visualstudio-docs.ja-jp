@@ -1,7 +1,7 @@
 ---
 title: XAML デザイナーでコントロールを挿入し、そのビヘイビアーを変更する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5807f503a76ba92383c3081bc0258da7f29d10fc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ca377bcb37b44e1545d0502289217d331a495fae
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544647"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179375"
 ---
 # <a name="insert-controls-and-modify-their-behavior-in-xaml-designer"></a>XAML デザイナー でコントロールを挿入し、そのビヘイビアーを変更する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コントロールを挿入し、XAML デザイナーでは、そのビヘイビアーの変更](https://docs.microsoft.com/visualstudio/designers/insert-controls-and-modify-their-behavior-in-xaml-designer)します。  
-  
 コントロールは、ユーザーとアプリとの対話を可能にします。 コントロールを使用すると、情報を収集できるとともに、オブジェクトのアニメーション化や、データ ソースのクエリなどのアクションを実行できます。  
   
  **このトピックの内容**  

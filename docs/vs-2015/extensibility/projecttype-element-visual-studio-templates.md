@@ -1,7 +1,7 @@
 ---
 title: ProjectType 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: ccf9d83f-c7f3-49c7-a31f-e1f22bec004c
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ac0c2b1e842dafded6e3a9bed2a9c2908ec30154
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7d892e6854d3f80061bd3f320520982ff614685a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548547"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177992"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ProjectType 要素 (Visual Studio テンプレート)](https://docs.microsoft.com/visualstudio/extensibility/projecttype-element-visual-studio-templates)します。  
-  
 指定されたグループの下に表示されるように、プロジェクト テンプレートの分類、**新しいプロジェクト**または**新しい項目の追加** ダイアログ ボックス。  
   
 > [!WARNING]

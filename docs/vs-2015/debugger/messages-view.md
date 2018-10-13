@@ -1,7 +1,7 @@
 ---
 title: メッセージ ビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7d603ad157786df756f130c3bf203961b48a610f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 76d033cdbe0949cfe861f44be8f390d72c316af8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182092"
 ---
 # <a name="messages-view"></a>メッセージ ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[メッセージ ビュー](https://docs.microsoft.com/visualstudio/debugger/messages-view)します。  
-  
 各ウィンドウには、関連のメッセージ ストリームがあります。 メッセージ ビュー ウィンドウには、このメッセージのストリームが表示されます。 ウィンドウ ハンドル、メッセージのコードとメッセージが表示されます。 スレッドまたはプロセスもメッセージ ビューを作成することができます。 これにより、特定のプロセスまたはスレッドは初期化のウィンドウ メッセージをキャプチャするために特に便利ですが所有するすべてのウィンドウに送信されるメッセージを表示することができます。  
   
  以下の一般的なメッセージ ビュー ウィンドウが表示されます。 最初の列には、ウィンドウ ハンドルが含まれていますし、2 番目の列には、メッセージ コードが含まれています (で説明されている[メッセージ コード](../debugger/message-codes.md))。 デコードされたメッセージのパラメーターと戻り値が右にします。  

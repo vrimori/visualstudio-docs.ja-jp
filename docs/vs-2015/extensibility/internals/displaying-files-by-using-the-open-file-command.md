@@ -1,7 +1,7 @@
 ---
 title: ファイルを開くコマンドを使用してファイルの表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 4fff0576-b2f3-4f17-9769-930f926f273c
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 139eb83f2260c44a3e0f8c50868d42aca8160694
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e5d9b4198a2d88d7a3a71f07a393ed8e4e07df1e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547824"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49177542"
 ---
 # <a name="displaying-files-by-using-the-open-file-command"></a>ファイルを開くコマンドを使用したファイルの表示
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Open File コマンドを使用してファイルを表示する](https://docs.microsoft.com/visualstudio/extensibility/internals/displaying-files-by-using-the-open-file-command)します。  
-  
 次の手順では、IDE を処理する方法について説明します、**ファイルを開く**コマンドで使用される、**ファイル**でメニュー [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。 また、プロジェクトがこのコマンドから発信された通話に応答する方法も説明します。  
   
  ユーザーがクリックすると、**ファイルを開く**コマンドを**ファイル** メニューからファイルを選択して、**ファイルを開く**ダイアログ ボックスで、次の処理が行われます。  

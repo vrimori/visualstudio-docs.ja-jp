@@ -1,7 +1,7 @@
 ---
 title: 'DA0505: プロセスに割り当てられた平均プライベート バイト数がプロファイリングされています | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ab4ff02bfe8bfacaabddd9204c677544e4fd83a2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c851015c9f811fc6a15f7b6c2ca037a6a30af113
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533232"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187430"
 ---
 # <a name="da0505-average-private-bytes-allocated-for-the-process-being-profiled"></a>DA0505: プロセスに割り当てられた平均プライベート バイト数がプロファイリングされています
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[da 0505: プロファイリング中のプロセスに割り当てられた平均プライベート バイト数](https://docs.microsoft.com/visualstudio/profiling/da0505-average-private-bytes-allocated-for-the-process-being-profiled)します。  
-  
 規則 Id |DA 0505 |  
 |カテゴリ |リソースの管理 |  
 |プロファイル方法 |すべて |  

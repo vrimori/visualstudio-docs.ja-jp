@@ -1,7 +1,7 @@
 ---
 title: スタブを使用して単体テストでアプリケーションの各部分を相互に分離する | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: 73519dd9-f3d5-49b6-a634-38881b459ea4
 caps.latest.revision: 19
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b83a9e73661e6b8c525a800376453cf8cff6a53c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b7a032db42003c62fbd96dc6e2ba54bb152d7e78
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548997"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49182184"
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>スタブを使用して単体テストでアプリケーションの各部分を相互に分離する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スタブを使用して単体テストでアプリケーションの他の部分を分離する](https://docs.microsoft.com/visualstudio/test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing)します。  
-  
 スタブ型 * は、呼び出されるその他のコンポーネントからテストするコンポーネントを簡単に区別できるようにする Microsoft Fakes フレームワークを提供する 2 つのテクノロジの 1 つ。 スタブは、テスト中に別のコンポーネントの代わりをする短いコードです。 スタブを使用することの利点は、スタブによって一貫した結果が返され、テストを簡単に記述できることです。 また、他のコンポーネントがまだ動作しなくてもテストを実行できます。  
   
  Fakes の概要とクイック スタート ガイドについては、「[Microsoft Fakes を使用したテストでのコードの分離](../test/isolating-code-under-test-with-microsoft-fakes.md)」を参照してください。  
@@ -57,7 +55,7 @@ ms.locfileid: "47548997"
   
     -   [メソッド](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Methods)  
   
-    -   [プロパティ](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
+    -   [Properties](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Properties)  
   
     -   [イベント](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md#BKMK_Events)  
   

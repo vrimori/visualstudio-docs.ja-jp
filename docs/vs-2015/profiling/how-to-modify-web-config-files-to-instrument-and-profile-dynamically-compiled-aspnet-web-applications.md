@@ -1,7 +1,7 @@
 ---
 title: '方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a2b9f0220d2b25b9bf7f3e319ef8a63ae5ea3a62
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8c5cfc94bef15e34deaec9d07a4b66021cb4fc39
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176307"
 ---
 # <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>方法: Web.config ファイルを変更して、動的にコンパイルされた ASP.NET Web アプリケーションをインストルメント化およびプロファイルする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: インストルメント化し、動的にコンパイルされた ASP.NET Web アプリケーションのプロファイリングを Web.Config ファイルを変更](https://docs.microsoft.com/visualstudio/profiling/how-to-modify-web-config-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのインストルメンテーション方式を使用すると、動的にコンパイルされた [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションから、詳しいタイミング データ、.NET のメモリの割り当てデータ、.NET オブジェクトの有効期間に関するデータを収集できます。  
   
  このトピックでは、web.config 構成ファイルを変更して [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web アプリケーションのインストルメント化とプロファイルを有効にする方法について説明します。  
@@ -148,7 +146,7 @@ ms.locfileid: "47545981"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrLocation**|  
-    |**value**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
+    |**値**|`PerformanceToolsFolder` **\VSInstr.Exe**|  
   
 4.  別の **add** 要素を **appSettings** 要素の子として追加します。  
   
@@ -157,7 +155,7 @@ ms.locfileid: "47545981"
     |属性名|属性の値|  
     |--------------------|---------------------|  
     |**key**|**Microsoft.VisualStudio.Enterprise.AspNetHelper.VsInstrTools**|  
-    |**value**|`PerformanceToolsFolder`|  
+    |**値**|`PerformanceToolsFolder`|  
   
      `PerformanceToolsFolder` は、プロファイラーの実行可能ファイルへのパスです。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] が既定の場所にインストールされている場合、値は **C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools** になります。  
   

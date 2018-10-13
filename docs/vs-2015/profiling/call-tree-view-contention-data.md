@@ -1,7 +1,7 @@
 ---
 title: コール ツリー ビュー - 競合データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 337152a7a91f7e2f6ce4a19a4cb77b166ebe5754
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cc4b4b7b0ac3a6bb77c539b54162bf449e19771a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533904"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49179222"
 ---
 # <a name="call-tree-view---contention-data"></a>コール ツリー ビュー - 競合データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コール ツリー ビュー - 競合データ](https://docs.microsoft.com/visualstudio/profiling/call-tree-view-contention-data)します。  
-  
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードには、その関数が呼び出したすべての関数、関数がブロックされた回数、および他のスレッドやプロセスとリソースを競合したために関数がブロックされた時間が一覧表示されます。  
   
  コール ツリー ビュー内の値は、コール ツリー内の親関数から呼び出された関数のインスタンスに対応します。 割合の値を計算するには、関数インスタンスの値と、プロファイル実行での競合の総数を比較します。  

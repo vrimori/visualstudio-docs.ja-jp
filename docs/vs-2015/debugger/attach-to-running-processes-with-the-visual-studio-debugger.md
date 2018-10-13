@@ -1,7 +1,7 @@
 ---
 title: Visual Studio デバッガーで実行中のプロセスのアタッチ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,12 +34,12 @@ caps.latest.revision: 62
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9d0f92e857122b0fe23f5f1afe80b4d86f8b8af7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 26e3efd74d020678d6c908ccf77eb6f35349b9b8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49176775"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>実行中のプロセスへのアタッチ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47545986"
 
 ## <a name="additional-info"></a>追加情報
 
-デバッグ中には複数のプログラムにアタッチできますが、デバッガーでアクティブになっているプログラムは常に 1 つだけです。 アクティブなプログラムは、 **[デバッグの場所]** ツール バーまたは **[プロセス]** ウィンドウで設定できます。 詳細については、次を参照してください。[方法: 現在のプログラム設定](http://msdn.microsoft.com/en-us/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e)します。  
+デバッグ中には複数のプログラムにアタッチできますが、デバッガーでアクティブになっているプログラムは常に 1 つだけです。 アクティブなプログラムは、 **[デバッグの場所]** ツール バーまたは **[プロセス]** ウィンドウで設定できます。 詳細については、「 [方法 : 現在のプロセスを設定する](http://msdn.microsoft.com/en-us/7e1d7fa5-0e40-44cf-8c41-d3dba31c969e)」を参照してください。  
   
 信頼関係のないユーザー アカウントによって所有されているプロセスにアタッチしようとすると、セキュリティ警告の確認ダイアログ ボックスが表示されます。 詳細については、次を参照してください。[セキュリティ警告: 信頼されていないユーザーによって所有されているプロセスにアタッチするのは危険です。次の情報に関して疑わしい、または不明ながこのプロセスにアタッチしない](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)します。  
   
@@ -138,10 +138,10 @@ ms.locfileid: "47545986"
 |Visual Studio から起動していない、Windows ユニバーサル (UWP) や OneCore、HoloLens、IoT アプリをデバッグします。|インストールされているアプリ パッケージをデバッグします。|N/A|使用**デバッグ/その他のターゲットをデバッグ]/[インストール済みアプリ パッケージをデバッグ**の代わりに**プロセスにアタッチします。**|
   
 > [!WARNING]
->  JavaScript で記述された Windows ユニバーサル アプリにアタッチするには、まずそのアプリに対してデバッグを有効にする必要があります。 参照してください[デバッガーをアタッチする](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger)Windows デベロッパー センターでします。  
+>  JavaScript で記述された Windows ユニバーサル アプリにアタッチするには、まずそのアプリに対してデバッグを有効にする必要があります。 Windows デベロッパー センター内の「 [Attach the debugger](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger) 」をご覧ください。  
   
 > [!NOTE]
->  C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 追加するコードに自動的にリンクすることで、 [/ASSEMBLYDEBUG](http://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982)リンカー オプション。
+>  C++ で記述されたコードにデバッガーをアタッチするには、コードが `DebuggableAttribute`を生成する必要があります。 [/ASSEMBLYDEBUG](http://msdn.microsoft.com/library/94443af3-470c-41d7-83a0-7434563d7982) リンカー オプションを使ってリンクすると、これを自動的にコードに追加できます。
 
 ## <a name="what-debugger-features-can-i-use"></a>どのようなデバッガー機能を使用できますか。
 

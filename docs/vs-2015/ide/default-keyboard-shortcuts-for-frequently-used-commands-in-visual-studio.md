@@ -1,7 +1,7 @@
 ---
 title: Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b3f82e7ff45d21639c673ef36eff603a0c8a567d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 89b7734e894d834698fc36aacde386691c312263
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538361"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181825"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の Visual Studio のコマンドを頻繁に使用される既定のキーボード ショートカット](https://docs.microsoft.com/visualstudio/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio)します。  
-  
 Visual Studio で頻繁に使用するコマンドには、ここで示している既定のショートカット キーを押すことでアクセスできます。 既定のショートカットが割り当てられているコマンドの完全なリストについては、「[既定のキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)」を参照してください。  
   
 > [!NOTE]
@@ -35,7 +33,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
   
 ||||||  
 |-|-|-|-|-|  
-|[ビルド](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_build)|[編集](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_project)|[ツール](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)|[ウィンドウ](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)|  
+|[ビルド](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_build)|[編集](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_edit)|[プロジェクト](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_project)|[ツール](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_tools)|[ウィンドウ](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_window)|  
 |[デバッグ](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_debug)|[ファイル](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_file)|[リファクター](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_refactor)|[表示](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md#bkmk_view)||  
   
 ##  <a name="bkmk_build"></a> ビルド  

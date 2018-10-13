@@ -1,7 +1,7 @@
 ---
 title: モジュール ビュー - .NET メモリ サンプリング データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f1596d85e2668090533df9021c964d6767d36b38
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3334edce4d29792e44f4cab0840a9f46763d74aa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537210"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185393"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>モジュール ビュー - .NET メモリ サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モジュール ビュー - .NET メモリ サンプリング データ](https://docs.microsoft.com/visualstudio/profiling/modules-view-dotnet-memory-sampling-data)します。  
-  
 サンプリング メソッドで収集された .NET メモリの割り当てデータの [モジュール] ビューは、メモリ データをプロファイリング実行中に実行されたモジュールごとにグループ化します。 各モジュールが、階層ツリーのルートです。 モジュールの関数が、モジュール ノードの下に一覧表示されます。  
   
  メモリを割り当てるステートメントのソース ファイルの行番号が、関数ノードの下に一覧表示され、割り当てを実行する命令のアドレスは、行ノードの下に一覧表示されます。 包括値と排他値は、行データと命令データで常に同じです。  

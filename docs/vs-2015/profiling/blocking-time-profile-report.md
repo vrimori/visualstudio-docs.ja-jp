@@ -1,7 +1,7 @@
 ---
 title: ブロック時間のプロファイル レポート | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ae0c4f34f0d3447f63afbf08e9d788304b2d353f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6cf06fc37a10f6bf028d3f4ef7174e73574b604b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533857"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49180805"
 ---
 # <a name="blocking-time-profile-report"></a>ブロック時間のプロファイル レポート
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ブロッキング時間プロファイル レポート](https://docs.microsoft.com/visualstudio/profiling/blocking-time-profile-report)します。  
-  
 プロファイル レポートは、ブロック カテゴリ別 ("I/O" や "Synchronization" など) の呼び出し履歴を対象に、ブロック時間の集計データを提供します。 優先レポートには、現在のプロセスに取って代わったプロセスと優先インスタンスの数が一覧表示されます。 ブロック プロファイル レポートを作成するために、このツールはブロック API 呼び出しを収集し、呼び出し履歴のツリーを作成します。 これらのレポートに表示されるデータは、現在の時間の範囲、非表示のスレッド、適用される場合がある次の 2 つのフィルターによって変わります。  
   
 -   [マイ コードのみ] が選択されている場合、ユーザー コードのあるスタック フレームとそのユーザー コードの 1 つ下のレベルのみが表示されます。  

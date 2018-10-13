@@ -1,7 +1,7 @@
 ---
 title: コード メトリックス値 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 22
 author: erickson-doug
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 7b14dd65be49fdc6f7da8de6c605683dd7089410
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d0c22a6659105a3d00f5c73cd880a33d357e216e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545516"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49183457"
 ---
 # <a name="code-metrics-values"></a>コード メトリックス値
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード メトリックス値](https://docs.microsoft.com/visualstudio/code-quality/code-metrics-values)します。  
-  
 コード メトリックスとは、開発者が開発中のコードをより理解できるようにする、ソフトウェアの一連の基準です。 コード メトリックスを利用して、開発者はどの型やメソッドを作成し直してまたはより徹底的にテストする必要がありますを理解できます。 開発チームでは、潜在的なリスクを識別、プロジェクトの現在の状態を把握、およびソフトウェアの開発中に進行状況を追跡できます。  
   
 ## <a name="software-measurements"></a>ソフトウェアの測定  

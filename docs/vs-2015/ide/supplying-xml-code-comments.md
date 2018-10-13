@@ -1,7 +1,7 @@
 ---
 title: XML コード コメントの追加 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 82a76cdc9da6a9d289ca325caf36f6ff2c159770
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 77c0eab37d23a9324d10c89b435f771dba28e634
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48880436"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49185459"
 ---
 # <a name="supplying-xml-code-comments"></a>XML コード コメントの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML コード コメント](https://docs.microsoft.com/visualstudio/ide/supplying-xml-code-comments)します。  
-  
 ソース コード ファイル内のコメントを IntelliSense として使用可能にすることができます。 Visual Basic、C#、または C++ コンパイラのコマンドラインに /doc スイッチを追加すると、IntelliSense ドキュメントのベースとして機能する .xml ファイルが生成されます。  
   
  Visual Basic でのコードを文書化の詳細については、次を参照してください。[方法: XML ドキュメントを作成](http://msdn.microsoft.com/library/27b5b06c-09b9-496a-8245-f9542d846230)です。  
