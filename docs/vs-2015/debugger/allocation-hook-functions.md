@@ -1,7 +1,7 @@
 ---
 title: 割り当てフック関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -29,18 +29,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c42d1984d8138186241fddaf3d8dbaee7f02338d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d2770898d630cbd4b428b87d8362f5aca31f6bca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548524"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271457"
 ---
 # <a name="allocation-hook-functions"></a>割り当てフック関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[割り当てフック関数](https://docs.microsoft.com/visualstudio/debugger/allocation-hook-functions)します。  
-  
 使用してインストール、割り当てフック関数[_CrtSetAllocHook](http://msdn.microsoft.com/library/405df37b-2fd1-42c8-83bc-90887f17f29d)メモリを割り当て、再割り当て、または解放するたびに呼び出されます。 この種のフック関数はさまざまな目的に利用できます。 たとえば、メモリ不足の状態でアプリケーションの動作をテストしたり、割り当てパターンを調査したり、後から分析するために割り当て情報を記録したりなどの目的に利用できます。  
   
 > [!NOTE]

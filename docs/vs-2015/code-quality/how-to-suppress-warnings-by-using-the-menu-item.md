@@ -1,7 +1,7 @@
 ---
 title: '方法: メニュー項目を使用した警告の抑制 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: be62471a950dc794bc3b9ff704cb187bbc943ce1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1c756a5ab6516d78f5370622555898c98658e8b3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534651"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49211788"
 ---
 # <a name="how-to-suppress-warnings-by-using-the-menu-item"></a>方法: メニュー項目を使用して警告を抑制する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: メニュー項目を使用して警告を抑制する](https://docs.microsoft.com/visualstudio/code-quality/how-to-suppress-warnings-by-using-the-menu-item)します。  
-  
 注]
 >  ソース内抑制は web サイト プロジェクトのサポートされていません。  
   

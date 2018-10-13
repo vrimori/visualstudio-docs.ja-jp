@@ -1,7 +1,7 @@
 ---
 title: ソリューション エクスプ ローラーのツールバーにコマンドの追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: f6411557-2f4b-4e9f-b02e-fce12a6ac7e9
 caps.latest.revision: 40
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0dfc2aeb0b0e73e48fd0dcf64b5b7c09fcbea9f1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f32cc47b796ea7d32207448e7888c17a1d40a73a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254400"
 ---
 # <a name="adding-a-command-to-the-solution-explorer-toolbar"></a>ソリューション エクスプローラーのツールバーへのコマンドの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソリューション エクスプ ローラーのツールバーにコマンドの追加](https://docs.microsoft.com/visualstudio/extensibility/adding-a-command-to-the-solution-explorer-toolbar)します。  
-  
 このチュートリアルでは、ボタンを追加する方法、**ソリューション エクスプ ローラー**ツールバー。  
   
  ツールバーまたはメニューのすべてのコマンドには、Visual Studio でのボタンは呼び出されます。 このボタンをクリックすると、コマンド ハンドラーのコードが実行されます。 通常、関連するコマンドは 1 つのグループ化されます。 メニューまたはツールバーは、グループのコンテナーとして機能します。 優先順位は、メニューまたはツールバーで、グループ内の個々 のコマンドを表示する順序を決定します。 ボタンを防ぐため、その可視性を制御することで、ツールバーまたはメニューに表示されることができます。 記載されているコマンド、 `<VisibilityConstraints>` .vsct ファイルのセクションは、関連付けられたコンテキストにのみ表示されます。 可視性は、グループに適用できません。  

@@ -1,7 +1,7 @@
 ---
 title: 新しい項目の追加コマンド | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8f380a11440ed413871d2c80603148aa7cc77390
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 866a77e148fe59d6a5d66b900982716630dd2faa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545094"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49240228"
 ---
 # <a name="add-new-item-command"></a>AddNewSolutionItem コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[新しい項目の追加コマンド](https://docs.microsoft.com/visualstudio/ide/reference/add-new-item-command)します。  
-  
   
 新規ソリューションのアイテム (.htm、.css、.txt、フレームセットなど) を現在のソリューションに追加して、そのソリューションを開きます。  
   
@@ -78,7 +76,7 @@ File.AddNewItem [filename] [/t:templatename] [/e:editorname]
  [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)   
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 
 
 

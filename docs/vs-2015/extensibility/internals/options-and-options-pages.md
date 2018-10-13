@@ -1,7 +1,7 @@
 ---
 title: オプションと [オプション] ページ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 97bf59649d0f2099261bef7a3e425f2fe7fc553e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d61d2c89a163cf111a2d33701a463e018f8f1488
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538302"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261041"
 ---
 # <a name="options-and-options-pages"></a>オプションとオプション ページ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[オプションとオプション ページ](https://docs.microsoft.com/visualstudio/extensibility/internals/options-and-options-pages)します。  
-  
 クリックすると**オプション**上、**ツール** メニューが開きます、**オプション** ダイアログ ボックス。 このダイアログ ボックスのオプションを [オプション] ページとしてと総称されます。 すべてのカテゴリが [オプション] ページおよびのツリー コントロール ナビゲーション ウィンドウにはにオプションのカテゴリが含まれます。 ページを選択すると、右側のウィンドウでそのオプションが表示されます。 これらのページを使用して、VSPackage の状態を決定するオプションの値を変更できます。  
   
 ## <a name="support-for-options-pages"></a>[オプション] ページのサポート  

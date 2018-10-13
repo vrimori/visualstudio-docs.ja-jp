@@ -1,7 +1,7 @@
 ---
 title: T4 テンプレート ディレクティブ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 01369002b5deaa5456d09d6a93e774ad36f85c34
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dcd11416bc067acaab8855b51969c7e1068e2c97
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537161"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248225"
 ---
 # <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 テンプレート ディレクティブ](https://docs.microsoft.com/visualstudio/modeling/t4-template-directive)します。  
-  
 通常、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の T4 テキスト テンプレートは、テンプレートの処理方法を指定する `template` ディレクティブで始まります。 テキスト テンプレートおよびそれに含まれるファイルには、template ディレクティブを 1 つしか含めることができません。  
   
  テキスト テンプレートの作成方法の一般的な概要については、次を参照してください。 [T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)です。  
@@ -54,7 +52,7 @@ ms.locfileid: "47537161"
  有効な値:  
  インバリアント カルチャである "" (既定値)。  
   
- xx-XX 形式の文字列で表現されたカルチャ。 たとえば、en-US、ja-JP、de-CH、de-DE などがあります。 詳細については、「<xref:System.Globalization.CultureInfo?displayProperty=fullName>」を参照してください。  
+ xx-XX 形式の文字列で表現されたカルチャ。 たとえば、en-US、ja-JP、de-CH、de-DE などがあります。 詳細については、「 <xref:System.Globalization.CultureInfo?displayProperty=fullName> 」を参照してください。  
   
  culture 属性では、式ブロックをテキストに変換する際に使用するカルチャを指定します。  
   

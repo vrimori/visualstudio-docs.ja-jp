@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスの特徴 2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 97c38622-ae0b-4ae0-90ed-604072c298d3
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c81d96285eca1401b3ddc5345f75640b6facc3bb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2e815790cd485c729d5c58847f5a244c8689d3ff
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546299"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246638"
 ---
 # <a name="legacy-language-service-features"></a>従来の言語サービスの機能
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービスの特徴 2](https://docs.microsoft.com/visualstudio/extensibility/internals/legacy-language-service-features2)します。  
-  
 次のトピックでは、使用できる従来の言語サービスの機能のいくつかを示します。  
   
  従来の言語サービスは、VSPackage の一部として実装されますが、言語サービスの機能を実装する新しい方法は MEF 拡張機能を使用します。 言語サービスを実装する新しい方法の詳細についてを参照してください。[エディターと言語サービス拡張](../../extensibility/editor-and-language-service-extensions.md)します。  

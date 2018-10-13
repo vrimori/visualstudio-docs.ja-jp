@@ -1,7 +1,7 @@
 ---
 title: '[スペース] タブ、[プロセス プロパティ] ダイアログ ボックス |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78f65edeec910bd0667bfc369ff1d4cbddb54813
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 03b73263f6db5e702a44b8854517ec5ee132b561
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538642"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259923"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>[スペース] タブ ([プロセス プロパティ] ダイアログ ボックス)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[領域 タブの [プロセス プロパティ] ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/space-tab-process-properties-dialog-box)します。  
-  
 使用して、**領域**タブ プロセスのアドレス空間を確認します。 表示する、[プロセス プロパティ ダイアログ ボックス](../debugger/process-properties-dialog-box.md)、フォーカスを移動、[プロセス ビュー](../debugger/processes-view.md)ウィンドウ。 ツリーで、プロセスの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
  次の設定は [使用可能な**領域**] タブ。  

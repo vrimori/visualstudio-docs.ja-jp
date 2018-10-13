@@ -1,7 +1,7 @@
 ---
 title: 関数ビュー - .NET メモリ インストルメンテーション データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b020f0101332b7fc192aed7b58befdde64012d12
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7c47b5246a8a0be75c4108c3526475d30922995c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533871"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270942"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>関数ビュー - .NET メモリ インストルメンテーション データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[関数ビュー - .NET メモリ インストルメンテーション データ](https://docs.microsoft.com/visualstudio/profiling/functions-view-dotnet-memory-instrumentation-data)します。  
-  
 インストルメンテーション メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数がリストされます。 関数行では、その関数の割り当てのサイズと数、およびタイミング データが報告されます。  
   
 ## <a name="general"></a>全般  
@@ -110,7 +108,7 @@ ms.locfileid: "47533871"
  [方法: レポート ビューの列をカスタマイズする](../profiling/how-to-customize-report-view-columns.md)   
  [関数ビュー - サンプリング](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [関数ビュー](../profiling/functions-view-instrumentation-data.md)   
- [関数 ビュー](../profiling/functions-view-sampling-data.md)
+ [関数ビュー](../profiling/functions-view-sampling-data.md)
 
 
 

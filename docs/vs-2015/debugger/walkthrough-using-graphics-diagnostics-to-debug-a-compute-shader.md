@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: グラフィックス診断を使用して計算シェーダーをデバッグする |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c46db6517571e1d5df592ce322c89c1b18c75926
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9742fa2c17bf982cde7c919648d76c63ff761ac4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547664"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250147"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>Walkthrough: Using Graphics Diagnostics to Debug a Compute Shader (チュートリアル: 計算シェーダーをデバッグするためのグラフィックス診断の使用)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 計算シェーダーをデバッグするグラフィックス診断を使用して](https://docs.microsoft.com/visualstudio/debugger/graphics/walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader)します。  
-  
 このチュートリアルでは、Visual Studio のグラフィックス診断ツールを使用して、正しくない結果を生成する計算シェーダーを調査する方法を説明します。  
   
  このチュートリアルでは、次の作業について説明します。  
@@ -41,7 +39,7 @@ ms.locfileid: "47547664"
   
  ![シミュレートされた液体は正しく動作します。](../debugger/media/gfx-diag-demo-compute-shader-fluid-problem.png "gfx_diag_demo_compute_shader_fluid_problem")  
   
- グラフィックスの問題をグラフィックス ログをキャプチャする方法については、次を参照してください。[グラフィックス情報のキャプチャ](../debugger/capturing-graphics-information.md)します。  
+ グラフィックスの問題をグラフィックス ログにキャプチャする方法については、「 [Capturing Graphics Information](../debugger/capturing-graphics-information.md)」をご覧ください。  
   
 ## <a name="investigation"></a>調査  
  グラフィックス診断ツールを使用して、グラフィックス ログ ファイルを読み込み、キャプチャされたフレームを検査することができます。  

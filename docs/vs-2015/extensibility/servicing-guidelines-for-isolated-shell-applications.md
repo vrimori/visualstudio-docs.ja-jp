@@ -1,7 +1,7 @@
 ---
 title: 分離シェル アプリケーションのサービスのためのガイドライン |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 747d1a47-b8b3-4e8b-93c0-768724be48f2
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dff7d9349e5081fa0e8ab64bfd32c90b83f19de3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 70d59500c49c6e6939d85a35d9c1ff9393f5708e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544678"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208391"
 ---
 # <a name="servicing-guidelines-for-isolated-shell-applications"></a>ガイドライン分離シェル アプリケーションの提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分離シェル アプリケーションのサービスのガイドライン](https://docs.microsoft.com/visualstudio/extensibility/servicing-guidelines-for-isolated-shell-applications)します。  
-  
 Visual Studio 分離シェル アプリケーションを配布するときに、ソフトウェア更新プログラムをインストールした後、アプリケーションに対して提供する必要があります。 これを行うには、Microsoft インストーラー (MSI) ファイルを使用して、アプリケーションをインストールする必要があります。 この種類のインストールは、Web で再配布するマイクロソフトによって提供されるソフトウェア更新プログラムをダウンロードして、顧客をカスタムの介入なしで使用できます。  
   
 ## <a name="servicing-requirements"></a>サービスの要件  

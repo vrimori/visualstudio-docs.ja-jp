@@ -1,7 +1,7 @@
 ---
 title: Visual Studio での階層 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 0a029a7c-79fd-4b54-bd63-bd0f21aa8d30
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ba640fab1c1564a8fa957d9f7b183e02db86a858
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a7ec254b80234b2eec4955cd2b57a641a233b1a2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539230"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250654"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio での階層
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio での階層](https://docs.microsoft.com/visualstudio/extensibility/internals/hierarchies-in-visual-studio)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) とプロジェクトが表示されます、*階層*します。 IDE では、階層は、各ノードが関連付けられているプロパティのセットを持つノードのツリーです。 A*プロジェクト階層*はプロジェクトのアイテム、アイテムのリレーションシップ、および項目の関連付けられているプロパティおよびコマンドを保持するコンテナーです。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、階層のインターフェイスを使用してプロジェクトの階層を管理する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>します。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>インターフェイスは、標準のコマンド ハンドラーではなく、適切な階層ウィンドウにプロジェクト項目から実行するコマンドをリダイレクトします。  

@@ -1,7 +1,7 @@
 ---
 title: 状態コードの列挙子のファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 5c37876b-c83c-4ca1-837b-57cd465a879a
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e41a0181c22f8b760156ec41e1e450aa0f3cf740
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 18e8b61c16b3a49d19b7571d529af633f6074d48
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536235"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268386"
 ---
 # <a name="file-status-code-enumerator"></a>ファイルのステータス コードの列挙子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイルの状態コードの列挙子](https://docs.microsoft.com/visualstudio/extensibility/file-status-code-enumerator)します。  
-  
 `SccStatus`列挙子には、ソース管理システムでファイルの状態を指定する名前付き定数の値が含まれています。 この列挙体を使って、 [SccQueryInfo](../extensibility/sccqueryinfo-function.md)と`POPLISTFUNC`コールバック関数 (を参照してください[POPLISTFUNC](../extensibility/poplistfunc.md)詳細については)。  
   
 ## <a name="syntax"></a>構文  

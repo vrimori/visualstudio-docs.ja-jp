@@ -1,7 +1,7 @@
 ---
 title: イメージとしてダイアグラムをエクスポートする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 7d29905f63cb9438800b4e3911b3f9ffae5c7d12
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2ab54543b2f79728f91d530439b6d8474d158347
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49266022"
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ダイアグラムをイメージとしてエクスポート](https://docs.microsoft.com/visualstudio/modeling/export-diagrams-as-images)します。  
-  
 Visual Studio で、利害関係者、ユーザー、または同じバージョンの Visual Studio を使用しないプロジェクトのチーム メンバーと共有することができるようにのモデリング図を読み取り専用の形式で保存できます。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

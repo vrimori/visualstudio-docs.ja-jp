@@ -1,7 +1,7 @@
 ---
 title: '方法: 基本 3-D モデルを作成する | Microsoft Docs '
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bf8180f13328c198131ee3d5fca3884dcd20be2c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e61c86e553672ac619f71a27f8a651b417700c8f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535782"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224784"
 ---
 # <a name="how-to-create-a-basic-3-d-model"></a>方法: 基本 3-D モデルを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 基本 3-D モデル作成](https://docs.microsoft.com/visualstudio/designers/how-to-create-a-basic-3-d-model)します。  
-  
 このドキュメントでは、モデル エディターを使用した基本 3-D モデルの作成方法を示します。  
   
  このドキュメントでは、以下のアクティビティについて説明します。  

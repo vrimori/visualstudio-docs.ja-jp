@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_addressoffset |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 810d9e90c5b1313db5714dfc476a99ceb50149ce
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ce9c52370c513ca5ae7e0fd32b1b90ed1953f592
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534419"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49273287"
 ---
 # <a name="idiasymbolgetaddressoffset"></a>IDiaSymbol::get_addressOffset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_addressoffset](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-addressoffset)します。  
-  
 アドレス場所のオフセットの部分を取得します。 使用する場合、 [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)に設定されている`LocIsStatic`します。  
   
 ## <a name="syntax"></a>構文  

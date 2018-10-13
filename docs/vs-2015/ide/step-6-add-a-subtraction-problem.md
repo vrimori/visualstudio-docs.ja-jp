@@ -1,7 +1,7 @@
 ---
 title: '手順 6: 減算問題の追加 | Microsoft ドキュメント'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 38b4d8f373d6a3c5069cc2b8f8fe4591ccfa0bcc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 793204bf4a08d09d7ce6e48e37254dd311ac6a08
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545793"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229243"
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>手順 6: 減算問題の追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[手順 6: 減算問題の追加](https://docs.microsoft.com/visualstudio/ide/step-6-add-a-subtraction-problem)します。  
-  
 このチュートリアルの第 6 部では、減算問題を追加し、次のタスクを実行する方法を説明します。  
   
 -   減算の値を格納します。  

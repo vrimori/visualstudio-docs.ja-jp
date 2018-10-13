@@ -1,7 +1,7 @@
 ---
 title: '方法: Visual Studio 拡張機能の更新 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 93f79774-7b79-4dd6-94ad-13698f72c257
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3675b8f342601ee3b79169a6c39e849686d7c12e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b1d86f723ae4c9acc64dfe7643552b9a74b78963
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544663"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254905"
 ---
 # <a name="how-to-update-a-visual-studio-extension"></a>方法: Visual Studio 拡張機能の更新
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: Visual Studio 拡張機能の更新](https://docs.microsoft.com/visualstudio/extensibility/how-to-update-a-visual-studio-extension)します。  
-  
 使用して、システムに Visual Studio 拡張機能を更新する**拡張機能と更新**更新されたバージョンをインストールします。 VSIX マニフェストのバージョン番号をインクリメントして更新されるとは、拡張機能の更新バージョンを作成する場合を示すことができます。  
   
  同じ入力方向の拡張機能の VSIX マニフェストであるときに更新プログラムがインストールされている`ID`として 1 つずつインストールしより高度な`Version`数。 場合、`Version`番号は、同じまたは低い、パッケージをインストールすることはできません。 場合、`ID`値が一致しない場合、まだインストールされていないパッケージは、別個の拡張機能として認識します。  

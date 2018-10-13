@@ -1,7 +1,7 @@
 ---
 title: イベントの送信 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 064231e7-59b5-4437-8240-a23c0a7ec2a9
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 65c86cb8028d5c310de6f48c753d862865ea7a46
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 63e1bc230df89fe219607c20e1cce248fc2238e2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546534"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270752"
 ---
 # <a name="sending-events"></a>イベントの送信
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イベントの送信](https://docs.microsoft.com/visualstudio/extensibility/debugger/sending-events)します。  
-  
 デバッガーとデバッグ エンジン (DE) 間の通信メカニズムは、DCOM に基づいてイベント モデル。 イベントは、COM オブジェクトとして送信され、各イベントには、次を指定するパラメーター。  
   
 -   この DE イベントと呼ばれます。  

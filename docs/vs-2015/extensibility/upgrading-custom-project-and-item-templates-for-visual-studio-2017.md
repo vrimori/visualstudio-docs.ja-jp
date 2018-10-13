@@ -1,7 +1,7 @@
 ---
 title: カスタム プロジェクトと項目テンプレートを Visual Studio「15」のアップグレード |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 02c7b14051a41616ed1b98812d1f1b7762f7165e
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 7e44ea1c267d9fe57c3f32ddad876b412f69ea24
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "47593111"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221157"
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-15"></a>Visual Studio「15」のカスタム プロジェクトと項目テンプレートをアップグレードします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム プロジェクトのアップグレードと for Visual Studio 項目テンプレート](https://docs.microsoft.com/visualstudio/extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017)します。  
-  
 以降では、Visual Studio「15」Preview 4、Visual Studio では、.vsix、.msi インストールされているプロジェクトと項目テンプレートを検出する方法が変更されます。 カスタムのプロジェクトまたは項目テンプレートを使用する拡張機能を所有している場合は、拡張機能を更新する必要があります。 このトピックでは、必要な作業について説明します。  
   
  この変更では、Visual Studio「15」のみに影響します。 Visual Studio の以前のバージョンには影響しません。  

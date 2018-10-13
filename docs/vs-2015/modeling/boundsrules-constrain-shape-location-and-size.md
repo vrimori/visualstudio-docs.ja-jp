@@ -1,7 +1,7 @@
 ---
 title: BoundsRules によってシェイプの位置とサイズ制限 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: cafcf44bc1365b74474b201a01d0089465cc7430
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cb9d9c35f5600ee98d53863780d9f54c3eed53f4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540104"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253722"
 ---
 # <a name="boundsrules-constrain-shape-location-and-size"></a>BoundsRules によってシェイプの位置とサイズが制限される
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BoundsRules 制限シェイプの位置とサイズ](https://docs.microsoft.com/visualstudio/modeling/boundsrules-constrain-shape-location-and-size)します。  
-  
 A*境界ルール*は図形の位置とサイズの制限を定義するクラスです。 ユーザーが、図形またはコーナーまたは図形の辺のドラッグ中に繰り返し呼び出されるメソッドを提供します。  
   
  次の例では、四角形にすると、水平方向または垂直方向のいずれかの固定のサイズのバーを制約します。 ユーザーがドラッグ角または横、高さの 2 つの許可されている構成と幅のアウトラインが反転します。  

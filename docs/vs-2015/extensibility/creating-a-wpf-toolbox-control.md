@@ -1,7 +1,7 @@
 ---
 title: WPF ツールボックス コントロールの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 9cc34db9-b0d1-4951-a02f-7537fbbb51ad
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0785ebf5177e892bd5c450525af10dd61d381fc1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a521566d25509750334e4f1202699787c3343ca6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536602"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49225616"
 ---
 # <a name="creating-a-wpf-toolbox-control"></a>WPF ツールボックス コントロールの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[WPF ツールボックス コントロールを作成する](https://docs.microsoft.com/visualstudio/extensibility/creating-a-wpf-toolbox-control)します。  
-  
 WPF (Windows Presentation Framework) ツールボックス コントロール テンプレートは自動的に追加する WPF コントロールを作成することができます、**ツールボックス**拡張機能がインストールされている場合。 このトピックでは、テンプレートを使用して作成する方法、**ツールボックス**コントロールを他のユーザーに配布することができます。  
   
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 より詳細な情報については 、[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md) に関する記事を参照してください。  
@@ -47,7 +45,7 @@ WPF (Windows Presentation Framework) ツールボックス コントロール �
   
 1.  MyToolboxControl.xaml をデザイナーで開きます。  
   
-     デザイナーの表示、<xref:System.Windows.Controls.Grid>コントロールを含む、<xref:System.Windows.Controls.Button>コントロール。  
+     デザイナーに、<xref:System.Windows.Controls.Button> コントロールを含む <xref:System.Windows.Controls.Grid> コントロールが表示されます。  
   
 2.  グリッド レイアウトを調整します。 選択すると、<xref:System.Windows.Controls.Grid>制御、グリッドの左上隅に青のコントロール バーを表示します。 横棒をクリックして、グリッドに行と列を追加できます。  
   

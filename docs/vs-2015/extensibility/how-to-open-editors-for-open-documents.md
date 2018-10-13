@@ -1,7 +1,7 @@
 ---
 title: '方法: 開いているドキュメントのエディターを開く |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 1a0fa49c-efa4-4dcc-bdc0-299b7052acdc
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 44d3ae5a20269e63e074ec32fd0631312c8d695f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b1c0cdc94a3aa796c981dbfb83aef3dd3c2ec1a8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547428"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49215996"
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>方法: 開いているドキュメントのエディターを開く
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 開いているエディターを開いているドキュメントの](https://docs.microsoft.com/visualstudio/extensibility/how-to-open-editors-for-open-documents)します。  
-  
 プロジェクトでは、ドキュメント ウィンドウが開いたら、プロジェクト最初判断しなければなりませんかどうか、ファイルが既に開いている別のエディターのドキュメント ウィンドウ。 ファイルがプロジェクトに固有のエディターで開くかを指定できますに登録されている標準のエディターのいずれかまたは[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
 ## <a name="opening-a-project-specific-editor"></a>プロジェクトに固有のエディターを開く  

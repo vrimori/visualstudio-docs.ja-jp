@@ -1,7 +1,7 @@
 ---
 title: .NET メモリの割り当てビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2e53fe27148901bc4af78f9b607c0e3a70ba4b91
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 63b5938131713c32f410f89c80a3efefa8b6c346
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544840"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268243"
 ---
 # <a name="net-memory-allocations-view"></a>.NET メモリの割り当てビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[.NET メモリの割り当てビュー](https://docs.microsoft.com/visualstudio/profiling/dotnet-memory-allocations-view)します。  
-  
 割り当てビューには、プロファイリング実行中に作成された型が一覧表示されます。 それぞれの型が、型の割り当てが発生する原因となった関数の実行パスを表示するコール ツリーのルート ノードに該当します。  
   
  型行のデータには、プロファイリング実行で作成された型のオブジェクトの総数とその型のオブジェクトに割り当てられた総バイト数が表示されます。 型の包括値と排他値は常に同じです。  

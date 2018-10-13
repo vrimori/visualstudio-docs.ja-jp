@@ -1,7 +1,7 @@
 ---
 title: UML モデリング プロジェクトおよびダイアグラムの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 50
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3cf34434bb600131bdd3a5aeeee9d2d3be98c96f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 69027b99d1c7db25f1d01e91d8e6d5c05141a2d3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547595"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250485"
 ---
 # <a name="create-uml-modeling-projects-and-diagrams"></a>UML モデリング プロジェクトおよびダイアグラムを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデリング プロジェクトおよびダイアグラム](https://docs.microsoft.com/visualstudio/modeling/create-uml-modeling-projects-and-diagrams)します。  
-  
 UML モデルは、ソフトウェア システムを理解したり設計したりする上で、また、ソフトウェア システムについて話し合う際に役立ちます。 Visual Studio には、最もよく使用される 5 つの UML 図 (アクティビティ図、クラス図、コンポーネント図、シーケンス図、およびユース ケース図) のテンプレートが用意されています。 また、システムの構造の定義に役立つレイヤー図も作成できます。  
   
  UML モデリング図とレイヤー図が存在することが可能なのは、モデリング プロジェクト内のみです。 各モデリング プロジェクトには、1 つの共有 UML モデルといくつかの UML 図が含まれています。 各図はモデルの部分ビューです。 UML モデルは、UML 図にあるすべての要素が含まれていて、UML モデル エクスプローラーを使用して表示することができます。 モデルと図の関係については、次を参照してください。[編集 UML モデルと図](../modeling/edit-uml-models-and-diagrams.md)します。 バージョン管理下のモデリング プロジェクトについては、次を参照してください[モデルおよびバージョン管理下にある図](../modeling/manage-models-and-diagrams-under-version-control.md)と[モデリング ソリューションの構築。](../modeling/structure-your-modeling-solution.md)  
@@ -148,7 +146,7 @@ UML モデルは、ソフトウェア システムを理解したり設計した
   
 -   ソース コードのビューとして作成されるクラス図。 これらは、UML クラス図とは無関係です。 詳細については、次を参照してください。[を表示するクラスと型のデザインおよび](../ide/designing-and-viewing-classes-and-types.md)します。  
   
--   コード マップ。 参照してください[ソリューション間の依存関係をマップする](../modeling/map-dependencies-across-your-solutions.md)します。  
+-   コード マップ。 「 [Map dependencies across your solutions](../modeling/map-dependencies-across-your-solutions.md)」を参照してください。  
   
 -   UML 図でもレイヤー図でもない図 (ドメイン固有の言語など)。  
   

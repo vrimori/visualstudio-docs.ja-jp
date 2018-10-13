@@ -1,7 +1,7 @@
 ---
 title: '1724: ca 型名と名前空間 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 5028646e5c937caad60a35e67ab9935a5755929a
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: 64999653e326cc99ca9b1880966406dde41ce52e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589125"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246768"
 ---
 # <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: 型名は名前空間と同一にすることはできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA1724: 型名する必要がありますいない一致する名前空間](https://docs.microsoft.com/visualstudio/code-quality/ca1724-type-names-should-not-match-namespaces)します。
-
 |||
 |-|-|
 |TypeName|TypeNamesShouldNotMatchNamespaces|

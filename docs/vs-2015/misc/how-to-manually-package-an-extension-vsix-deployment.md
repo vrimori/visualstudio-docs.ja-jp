@@ -1,7 +1,7 @@
 ---
 title: '方法: 拡張機能 (VSIX 配置) を手動でパッケージ化 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,26 +12,26 @@ ms.topic: article
 ms.assetid: d25990e0-e782-4a79-9d9a-1caf3c56c6a2
 caps.latest.revision: 10
 manager: douge
-ms.openlocfilehash: 16803e9019928da5676850899025b190df08a30a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ad93bfe700c881977130ba6651bd3e271207a56f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534638"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49269309"
 ---
 # <a name="how-to-manually-package-an-extension-vsix-deployment"></a>方法: 拡張機能を手動でパッケージ化する (VSIX 配置)
-ラップする VSIX パッケージを作成することができます、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]展開用の拡張機能。 パッケージを作成するには、3 つの方法があります。  
+VSIX パッケージを作成して、配置用の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能をラップすることができます。 パッケージを作成するには、3 つの方法があります。  
   
--   含まれている機能拡張テンプレートのいずれかを使用して、VSIX パッケージ プロジェクトを作成、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK。 これは、ほとんどのシナリオで最も簡単なオプションです。  
+-   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] SDK に含まれている機能拡張テンプレートのいずれかを使用して、VSIX パッケージ プロジェクトを作成します。 これは、ほとんどのシナリオで最も簡単なオプションです。  
   
--   空で、拡張機能プロジェクトの出力をラップ[VSIX プロジェクト](../extensibility/vsix-project-template.md)します。 テンプレート、サポートされていないアセンブリおよびカスタム型には、このオプションをお勧めします。  
+-   拡張プロジェクトの出力を空の [VSIX プロジェクト](../extensibility/vsix-project-template.md)でラップします。 テンプレート、サポートされていないアセンブリおよびカスタム型には、このオプションをお勧めします。  
   
 -   VSIX パッケージを手動で作成します。 このオプションは、その他の 2 つのオプションが利用できない場合にのみお勧めします。  
   
  ここでは、3 つ目のオプションについて説明します。  
   
 ## <a name="creating-a-vsix-package"></a>VSIX パッケージの作成  
- 拡張機能を手動でパッケージ化するには、extension.manifest ファイルと [Content_Types].xml ファイルを拡張機能プロジェクトに追加し、ビルド出力と一緒に圧縮ファイルに含め、.vsix ファイル名拡張子を持つように圧縮ファイルの名前を変更します。 サポートされている型の拡張機能パッケージ化する必要があります、 [VSIX スキーマ](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)します。  
+ 拡張機能を手動でパッケージ化するには、extension.manifest ファイルと [Content_Types].xml ファイルを拡張機能プロジェクトに追加し、ビルド出力と一緒に圧縮ファイルに含め、.vsix ファイル名拡張子を持つように圧縮ファイルの名前を変更します。 パッケージ化する拡張機能は、 [VSIX スキーマ](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)でサポートされている種類のものである必要があります。  
   
 > [!NOTE]
 >  VSIX パッケージ内のファイル名では、スペースを含める必要がありますいないもとして Uniform Resource Identifier (URI) 内に予約されている文字の下で定義された[ \[RFC2396\]](http://go.microsoft.com/fwlink/?LinkId=90339)します。  
@@ -42,7 +42,7 @@ ms.locfileid: "47534638"
   
 2.  XML ファイルを作成し、 `extension.vsixmanifest`という名前を付けます。  
   
-3.  VSIX スキーマに従って extension.vsixmanifest ファイルを入力します。 マニフェストの例を参照してください[PackageManifest Element (Root Element, VSX Schema)](http://msdn.microsoft.com/en-us/f8ae42ba-775a-4d2b-976a-f556e147f187)します。  
+3.  VSIX スキーマに従って extension.vsixmanifest ファイルを入力します。 マニフェストの例については、「 [PackageManifest Element (Root Element, VSX Schema)](http://msdn.microsoft.com/en-us/f8ae42ba-775a-4d2b-976a-f556e147f187)」を参照してください。  
   
 4.  2 つ目の XML ファイルを作成し、 `[Content_Types].xml`という名前を付けます。  
   

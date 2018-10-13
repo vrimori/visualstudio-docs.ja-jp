@@ -1,7 +1,7 @@
 ---
 title: メッセージング アクティビティ デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -12,12 +12,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 6c592c748775361f3ed6a746accd0aa30dcc42af
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 254b8d819da8cd1d06d21699940c3b118aa75119
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545724"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49274756"
 ---
 # <a name="messaging-activity-designers"></a>メッセージング アクティビティ デザイナー
 Messaging アクティビティ デザイナーは、[!INCLUDE[indigo1](../includes/indigo1-md.md)] アプリケーション内から [!INCLUDE[wf](../includes/wf-md.md)] メッセージを送受信するメッセージング アクティビティを作成および構成するために使用します。 [!INCLUDE[netfx40_long](../includes/netfx40-long-md.md)] には、5 つのメッセージング アクティビティが導入され、[!INCLUDE[wfd1](../includes/wfd1-md.md)]には、ワークフロー内でメッセージングを管理できるようにする 2 つの新しいテンプレート デザイナーが用意されています。 次の表に示す、このセクションに含まれるトピックでは、[!INCLUDE[wfd2](../includes/wfd2-md.md)]のアクティビティ デザイナーおよびテンプレート デザイナーの使用方法についてのガイドラインを示します。  

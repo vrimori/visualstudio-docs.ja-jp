@@ -1,7 +1,7 @@
 ---
 title: スレッドのプロパティ ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 00cf70e0373f6791397234d9a5a329e57a5d46ee
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 37eee1a82fab77238b992ee391a782c5af34d7d9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271701"
 ---
 # <a name="thread-properties-dialog-box"></a>[スレッド プロパティ] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド プロパティ ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/thread-properties-dialog-box)します。  
-  
 詳細については、特定のスレッドはこのダイアログ ボックスの検索を使用します。 このダイアログ ボックスを表示するには、フォーカスを移動、[スレッド ビュー](../debugger/threads-view.md)ウィンドウ、またはオープン[メッセージ ビュー](../debugger/messages-view.md)メッセージを展開します。 ツリーで、スレッドの任意のノードを選択し、**プロパティ**から、**ビュー**メニュー。  
   
  **全般** タブは、のみ タブが表示されます。 Windows 98 および Windows 95 のオペレーティング システムでは、このタブの変更済みバージョンが表示されます。  

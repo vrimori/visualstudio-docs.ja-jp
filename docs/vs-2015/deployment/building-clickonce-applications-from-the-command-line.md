@@ -1,7 +1,7 @@
 ---
 title: コマンドラインから ClickOnce アプリケーションの構築 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: beb799a75649b02a04dc4a0aae8672855b1094b8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 070ab3c216cacfcaeaf73bdc4cc6bebdaf52233b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546374"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271031"
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>ClickOnce アプリケーションのコマンド ラインからのビルド
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コマンドラインから ClickOnce アプリケーションのビルド](https://docs.microsoft.com/visualstudio/deployment/building-clickonce-applications-from-the-command-line)します。  
-  
 [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからプロジェクトをビルドできます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]をインストールします。 自動化されたプロセスを使用してビルドを再現することができます、たとえば、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの範囲外の手法です。  
   
 ## <a name="using-msbuild-to-reproduce-clickonce-application-deployments"></a>ClickOnce アプリケーションの展開を再現するために MSBuild の使用  
@@ -75,7 +73,7 @@ ms.locfileid: "47546374"
   
 2.  Windows から**開始** メニューのをクリックして**すべてのプログラム**、し**Microsoft Visual Studio**、し**Visual Studio Tools**、し**Visual Studio コマンド プロンプト**します。 コマンド プロンプトを開き、現在のユーザーのルート フォルダーでこの必要があります。  
   
-3.  **Visual Studio コマンド プロンプト**、先ほどビルドしたプロジェクトの場所を現在のディレクトリを変更します。 たとえば、「`chdir My Documents\Visual Studio\Projects\CmdLineDemo`します。  
+3.  **Visual Studio コマンド プロンプト**、先ほどビルドしたプロジェクトの場所を現在のディレクトリを変更します。 たとえば、「 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`」と入力します。  
   
 4.  生成された既存のファイルを削除する"を作成および公開を[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]プロジェクト"型`rmdir /s publish`します。  
   

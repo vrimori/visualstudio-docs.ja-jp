@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 余白のグリフの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 814185db-24f9-417f-b3b1-7c5aabb42b45
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 83b721c7b0ac33d9a37d9705cd780edcd591d9aa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a44b816df914567ff3470f6726ac7ba380921839
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538605"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270999"
 ---
 # <a name="walkthrough-creating-a-margin-glyph"></a>チュートリアル: 余白のグリフの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 余白のグリフの作成](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-creating-a-margin-glyph)です。  
-  
 エディターの余白の外観をカスタマイズするには、カスタム エディター拡張機能を使用します。 このチュートリアルは、"todo"という単語がコード コメント内に表示されるたびに、インジケーター マージンにカスタム グリフを設定します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -34,7 +32,7 @@ ms.locfileid: "47538605"
   
 ## <a name="creating-a-mef-project"></a>MEF プロジェクトを作成します。  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`TodoGlyphTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `TodoGlyphTest`の名前を指定します。  
   
 2.  エディター分類子プロジェクト項目を追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -45,7 +43,7 @@ ms.locfileid: "47538605"
   
 #### <a name="to-define-the-glyph"></a>グリフを定義するには  
   
-1.  クラス ファイルを追加し、名前`TodoGlyphFactory`します。  
+1.  クラス ファイルを追加し、その名前を `TodoGlyphFactory`にします。  
   
 2.  次の追加の宣言を使用します。  
   

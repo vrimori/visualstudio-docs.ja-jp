@@ -1,7 +1,7 @@
 ---
 title: Visual Studio の既定のキーボード ショートカット | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 59
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cdd1c4b29a90d10af3593d50f2578f8dbf27bf66
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: afe7f71508de6dca3d29afeead23258eccbc667b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538763"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247183"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio での既定のキーボード ショートカット](https://docs.microsoft.com/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio)します。  
-  
 Visual Studio のさまざまなコマンドやウィンドウには、該当するショートカット キーを押すことで、より簡単にアクセスできます。 このトピックでは、Visual Studio のインストール時に選択できる [全般的な開発設定] プロファイルの既定のショートカット キーを示しています。 選択したプロファイルにかかわらず、**[オプション]** ダイアログ ボックスを開き、**[環境]** ノードを展開して、**[キーボード]** を選択することで、コマンドのショートカット キーを確認できます。 また、別のショートカット キーを任意のコマンドに割り当てることで、ショートカット キーをカスタマイズすることもできます。  
   
  一般的なショートカット キーの一覧、およびその他の生産性向上に関する情報については、「[ヒントとテクニック](../ide/tips-and-tricks-for-visual-studio.md)」および「[生産性に関するヒント](../ide/productivity-tips-for-visual-studio.md)」を参照してください。  
@@ -40,7 +38,7 @@ Visual Studio のさまざまなコマンドやウィンドウには、該当す
   
 |||||  
 |-|-|-|-|  
-|[解析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[編集](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[Project](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[テスト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
+|[解析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[編集](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[プロジェクト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[テスト](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
 |[アーキテクチャ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)|[エディター コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)|[プロジェクトとソリューション コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)|[テスト エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)|  
 |[ビルド](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_build)|[ファイル](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_file)|[リファクター](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_refactor)|[ツール](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_tools)|  
 |[クラス ビュー コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)|[ヘルプ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)|[ソリューション エクスプローラー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)|[表示](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)|  

@@ -1,7 +1,7 @@
 ---
 title: C ランタイム ライブラリなしのチェックの実行時間を使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 864e21d2c2ec2a9922d70e6b69192d9268556737
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 02d5128a3d80b7fabe3fd8cf774d5891a66fc20c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547264"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263069"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>C ランタイム ライブラリなしのランタイム チェックの使用方法
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を使用して実行時チェックせず、C ランタイム ライブラリ](https://docs.microsoft.com/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)します。  
-  
 C ランタイム ライブラリなしプログラムをリンクする場合を使用して **/NODEFAULTLIB**実行時のチェックを使用しては、RunTmChk.lib とリンクする必要があります。  
   
  `_RTC_Initialize` は、ランタイム チェックでプログラムを初期化します。 C ランタイム ライブラリとリンクしない場合は、次のように、プログラムが `_RTC_Initialize` を呼び出す前に、ランタイム エラー チェックでコンパイルされているかどうかを確認する必要があります。  

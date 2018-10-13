@@ -1,7 +1,7 @@
 ---
 title: UsedCommands 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 5e000ee0-a919-46e9-9277-2a0659f1eb78
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d8a3f4719b6d35be56ba447279d3a85d2a3f5118
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fe7f29fabb62b7f7703ad501d332c9d37c1e47b8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539933"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276373"
 ---
 # <a name="usedcommands-element"></a>UsedCommands 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UsedCommands 要素](https://docs.microsoft.com/visualstudio/extensibility/usedcommands-element)します。  
-  
 UsedCommands 要素には、UsedCommand 要素とその他の UsedCommands グループがグループ化します。  
   
  UsedCommands 要素は省略可能です。 場合は、パッケージの外部で定義されているコマンドを呼び出すことはありません、.vsct ファイルにこのセクションを含めることはありません。  

@@ -1,7 +1,7 @@
 ---
 title: 共有およびバージョン管理 Vspackage の選択 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: e3128ac3-2e92-48e9-87ab-3b6c9d80e8c9
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 14b2ec1884fcbbebb28667e04d03e2c1424175dd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d642c265104f490739613897e1fd5c177ac0d6f9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549178"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263693"
 ---
 # <a name="choosing-between-shared-and-versioned-vspackages"></a>共有 VSPackage とバージョン管理 VSPackage の選択
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[共有間で選択してバージョン管理 Vspackage](https://docs.microsoft.com/visualstudio/extensibility/choosing-between-shared-and-versioned-vspackages)します。  
-  
 異なるバージョンの Visual Studio は、同じコンピューターに共存できます。 Vspackage が任意の組み合わせをサポートできる[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]バージョン。  
   
  Vspackage の 2 つの方法、共有戦略またはバージョン管理戦略のいずれかでのサイド バイ サイドでインストールを有効にすることができます。 複数のバージョンの存在を合わせて両方[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のバージョンに関連付けられていると、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]します。  

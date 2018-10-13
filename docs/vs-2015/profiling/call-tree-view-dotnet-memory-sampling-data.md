@@ -1,7 +1,7 @@
 ---
 title: コール ツリー ビュー - .NET メモリ サンプリング データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c24cec082e7935275d776832d96a63e910c7997a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cc2f0354a01bc2f706e2ddec6c21b1513f8d5778
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549139"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49212876"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>コール ツリー ビュー - .NET メモリ サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コール ツリー ビュー - .NET メモリ サンプリング データ](https://docs.microsoft.com/visualstudio/profiling/call-tree-view-dotnet-memory-sampling-data)します。  
-  
 [コール ツリー] ビューには、プロファイリングされるアプリケーションで走査された関数の実行パスが表示されます。 ツリーのルートは、アプリケーションまたはコンポーネントへのエントリ ポイントです。 各関数ノードは、それが呼び出したすべての関数と、それらの関数呼び出しに関する .NET メモリ割り当てデータを一覧表示します。  
   
  コール ツリー ビュー内の値は、コール ツリー内の親関数から呼び出された関数のインスタンスに対応します。 割合の値を計算するには、関数インスタンスの値と、プロファイル実行における割り当ての総数またはサイズを比較します。  

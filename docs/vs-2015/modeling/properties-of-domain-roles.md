@@ -1,7 +1,7 @@
 ---
 title: ドメイン ロールのプロパティ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6dc3f92bf1f9788f501b96540b35006ff112267b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 51149979544c19b0a887ad77e80a26284051778b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244089"
 ---
 # <a name="properties-of-domain-roles"></a>ドメイン ロールのプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン ロールのプロパティの](https://docs.microsoft.com/visualstudio/modeling/properties-of-domain-roles)します。  
-  
 次の表に、プロパティは、役割をドメインに関連付けられます。 ドメイン ロールについては、次を参照してください。[理解のモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。  
   
 |プロパティ|説明|既定値|  

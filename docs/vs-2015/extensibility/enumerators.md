@@ -1,7 +1,7 @@
 ---
 title: 列挙子 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: a60030c5-e1d1-47e1-84bb-cbfe838ab479
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6dcbd3dea8ad932aec5890bc085873ce3d20a8f0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4dcc660ba5aacf1b8014e7c4ca15443f2fdf881b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547071"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49258506"
 ---
 # <a name="enumerators"></a>列挙子
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[列挙子](https://docs.microsoft.com/visualstudio/extensibility/enumerators)します。  
-  
 このセクションでは、ソース管理プラグインが認識する必要がありますソース コントロールのプラグイン API で列挙子のデータ型を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

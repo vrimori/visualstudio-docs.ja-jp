@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル 3: 絵合わせゲームの作成| Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 00484f4cefe196cc26dcb13aadb882c23f1f9e71
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e8742924e1693a79268d6a35bc266caf5c5f32ec
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548545"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259099"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>チュートリアル 3: 絵合わせゲームの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル 3: 絵合わせゲームの作成](https://docs.microsoft.com/visualstudio/ide/tutorial-3-create-a-matching-game)です。  
-  
 このチュートリアルでは、プレーヤーが隠されたアイコンのペアを見つける絵合わせゲームを作成します。 以下の方法について説明します。  
   
 -   アイコンなどのオブジェクトを `List` オブジェクトに格納する。  

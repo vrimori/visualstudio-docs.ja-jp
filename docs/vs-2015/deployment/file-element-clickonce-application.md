@@ -1,7 +1,7 @@
 ---
 title: '&lt;ファイル&gt;要素 (ClickOnce アプリケーション) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: bf5f0c803c9c60c9a4846aeba960cbdbf4c8129b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 16c301d55738519f3e097138f08b6b2c2fe2b4c7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547282"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270739"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;ファイル&gt;要素 (ClickOnce アプリケーション)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;ファイル&gt;要素 (ClickOnce アプリケーション)](https://docs.microsoft.com/visualstudio/deployment/file-element-clickonce-application)します。  
-  
 アセンブリ以外のファイルをすべてダウンロードして、アプリケーションで使用されるを識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -122,7 +120,7 @@ ms.locfileid: "47547282"
 |---------------|-----------------|  
 |`clsid`|必須。 GUID で表される COM コンポーネントのクラス ID。|  
 |`description`|任意。 クラス名。|  
-|`threadingModel`|任意。 インプロセス COM クラスで使用されるスレッド処理モデル。 このプロパティが null の場合、スレッド処理モデルは使用されません。 コンポーネントがクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しは、このスレッドにマーシャ リングされます。 次に、有効な値を示します。<br /><br /> `Apartment`、`Free`、`Both`、および `Neutral`。|  
+|`threadingModel`|任意。 インプロセス COM クラスで使用されるスレッド処理モデル。 このプロパティが null の場合、スレッド処理モデルは使用されません。 コンポーネントがクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しは、このスレッドにマーシャ リングされます。 次に、有効な値を示します。<br /><br /> `Apartment`、 `Free`、 `Both`、および `Neutral`。|  
 |`tlbid`|任意。 この COM コンポーネントのタイプ ライブラリの GUID です。|  
 |`progid`|任意。 バージョンに依存する COM コンポーネントに関連付けられたプログラム id。 形式を`ProgID`は`<vendor>.<component>.<version>`します。|  
 |`miscStatus`|任意。 アセンブリ内の重複によって提供される情報をマニフェスト、`MiscStatus`レジストリ キー。 場合の値を`miscStatusIcon`、 `miscStatusContent`、 `miscStatusDocprint`、または`miscStatusThumbnail`属性が見つからない場合は、対応する既定値が記載`miscStatus`して足りない属性を使用します。 値は、次の表の属性値のコンマ区切りの一覧を指定できます。 COM クラスが必要とする OCX クラスである場合は、この属性を使用することができます`MiscStatus`レジストリ キーの値。|  
@@ -154,7 +152,7 @@ ms.locfileid: "47547282"
 |`Name`|任意。 インターフェイスの名前は、コードに表示されます。|  
 |`Tlbid`|任意。 指定されたインターフェイスの説明を格納するタイプ ライブラリ、`iid`属性。|  
 |`proxyStubClass32`|任意。 32 ビット プロキシ Dll の CLSID を IID にマップします。|  
-|`threadingModel`|任意。 任意。 インプロセス COM クラスで使用されるスレッド処理モデル。 このプロパティが null の場合、スレッド処理モデルは使用されません。 コンポーネントがクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しは、このスレッドにマーシャ リングされます。 次に、有効な値を示します。<br /><br /> `Apartment`、`Free`、`Both`、および `Neutral`。|  
+|`threadingModel`|任意。 任意。 インプロセス COM クラスで使用されるスレッド処理モデル。 このプロパティが null の場合、スレッド処理モデルは使用されません。 コンポーネントがクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しは、このスレッドにマーシャ リングされます。 次に、有効な値を示します。<br /><br /> `Apartment`、 `Free`、 `Both`、および `Neutral`。|  
   
 ## <a name="windowclass"></a>windowClass  
  `windowClass`要素のオプションの子では、`file`要素が場合に必要な可能性があります、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションには、登録を必要としない COM を使用してデプロイする予定の COM コンポーネントが含まれています。 要素は、対象となるバージョンが必要な COM コンポーネントによって定義ウィンドウ クラスを参照します。 要素には、次の属性が含まれています。  
@@ -174,14 +172,14 @@ ms.locfileid: "47547282"
  `dsig:Transforms`要素の必須の子では、`hash`要素。 `dsig:Transforms`要素に属性がありません。  
   
 ## <a name="dsigtransform"></a>dsig:Transform  
- `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 `dsig:Transform`要素には、次の属性。  
+ `dsig:Transform`要素の必須の子では、`dsig:Transforms`要素。 `dsig:Transform` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
 |`Algorithm`|このファイルのダイジェストを計算するために使用するアルゴリズム。 現在、唯一の値で使用される[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]は`urn:schemas-microsoft-com:HashTransforms.Identity`します。|  
   
 ## <a name="dsigdigestmethod"></a>dsig:DigestMethod  
- `dsig:DigestMethod`要素の必須の子では、`hash`要素。 `dsig:DigestMethod`要素には、次の属性。  
+ `dsig:DigestMethod`要素の必須の子では、`hash`要素。 `dsig:DigestMethod` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  
@@ -209,7 +207,7 @@ ms.locfileid: "47547282"
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)
+ [ClickOnce Application Manifest](../deployment/clickonce-application-manifest.md)
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: T4 テキスト テンプレートを使用したデザイン時コード生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 12551e10640b522f1405cb6a4fa0476f4f7b48c9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1edc6e7d66e8b371f38e16052ba26fa61287e398
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537277"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268334"
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 テキスト テンプレートを使用したデザイン時コード生成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[T4 テキスト テンプレートを使用したデザイン時コード生成](https://docs.microsoft.com/visualstudio/modeling/design-time-code-generation-by-using-t4-text-templates)します。  
-  
 デザイン時 T4 テキスト テンプレートを使用して、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトのプログラム コードや他のファイルを生成できます。 テンプレートを作成する通常、異なるデータに応じて生成されるコードを*モデル*します。 モデルとは、アプリケーションの要件に関する重要な情報が含まれたファイルまたはデータベースのことです。  
   
  たとえば、ワークフローをテーブルまたは図として定義したモデルがあるとします。 このモデルから、ワークフローを実行するソフトウェアを生成できます。 ユーザーの要件が変わったときに、新しいワークフローについてユーザーと共に検討しやすくなります。 ワークフローからコードを再生成すると、コードを手動で更新するよりも信頼性が高まります。  

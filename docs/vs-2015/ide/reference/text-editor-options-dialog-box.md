@@ -1,7 +1,7 @@
 ---
 title: '[テキスト エディター] ([オプション] ダイアログ ボックス) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2fef1fee7b91d43b543f9baaccce40686554604f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 939438c2506a95c98005144dde395028d18cc481
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548853"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260235"
 ---
-# <a name="text-editor-options-dialog-box"></a>[テキスト エディター] ([オプション] ダイアログ ボックス)
+# <a name="text-editor-options-dialog-box"></a>[テキスト エディター]\([オプション] ダイアログ ボックス)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テキスト エディターのオプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/text-editor-options-dialog-box)します。  
-  
   
 **[オプション]** ダイアログ ボックスのエディター オプションには、エディターの表示と動作をカスタマイズするための方法が用意されています。  
   

@@ -1,7 +1,7 @@
 ---
 title: シェイプとコネクタの定義 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ee16ff9dcca787fdf35101aff69348ccea42cfcf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ee3bfaac9cfcdf887a22c84e0b98a13f8add7ab
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244609"
 ---
 # <a name="defining-shapes-and-connectors"></a>シェイプとコネクタの定義
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[シェイプの定義とコネクタ](https://docs.microsoft.com/visualstudio/modeling/defining-shapes-and-connectors)します。  
-  
 いくつかの基本的な種類のシェイプを使用して、ドメイン固有言語 (DSL) で図に情報を表示できます。  
   
 ##  <a name="shapeTypes"></a> シェイプおよびコネクタの基本型  

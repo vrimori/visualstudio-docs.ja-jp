@@ -1,7 +1,7 @@
 ---
 title: レガシ API を使用して、コア エディターをインスタンス化する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: dda23b18-96ef-43c6-b0dc-06d15cbe5cbb
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aaed9c7860153beee6d02bd02242697f10647e0a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ab42c05d404492883493645731094a67f5eb368b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535004"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246039"
 ---
 # <a name="instantiating-the-core-editor-by-using-the-legacy-api"></a>レガシ API を使用して、コア エディターをインスタンス化します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ API をコア エディターを使用してインスタンス化する](https://docs.microsoft.com/visualstudio/extensibility/instantiating-the-core-editor-by-using-the-legacy-api)します。  
-  
 エディターはテキストの挿入、削除、コピー、および貼り付けなどの関数を編集します。 テキストの色分け表示、インデント、および IntelliSense ステートメント入力候補などの言語サービスによって提供されると、これらの関数を組み合わせています。  
   
  3 つの方法の 1 つのコア エディターのインスタンスをインスタンス化することができます。  

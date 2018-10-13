@@ -1,7 +1,7 @@
 ---
 title: ツールボックスの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: 3b052047-f6db-46dd-b3bf-da1c348ee410
 caps.latest.revision: 33
 manager: douge
-ms.openlocfilehash: fa9b30429de00f950e4d9de160fe72ece7f06760
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1a42c50addeb878041087d9017321ed71daac115
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533533"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254412"
 ---
 # <a name="managing-the-toolbox"></a>Managing the Toolbox
-[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]により、メンバーシップとの外観を管理するには、エディターやデザイナーなど、VSPackage、**ツールボックス**します。  
+[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] では、エディターやデザイナーなどの VSPackage を使用して **ツールボックス**のメンバーシップと外観を管理できます。  
   
- さらに、オートメーションを使用して **ツールボックス** 自体を管理できます。 オートメーションによるツールボックスの管理の詳細については、次を参照してください。[方法: Control the Toolbox](http://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)します。  
+ さらに、オートメーションを使用して **ツールボックス** 自体を管理できます。 オートメーションによるツールボックスの管理の詳細については、「 [How to: Control the Toolbox](http://msdn.microsoft.com/library/c9d8a18a-d2bc-43d4-a803-601bfc6a6599)」を参照してください。  
   
 ## <a name="automatic-toolbox-tab-selection"></a>ツールボックスのタブの自動選択  
  現在アクティブなエディターまたはデザイナーに基づいて、 **ツールボックス** の特定のタブまたはカテゴリを自動的にアクティブにできます。 たとえば、フォーム デザイナーがアクティブになっている場合、 **すべての Windows フォーム** のタブを選択できます。  
   
  このサポートは、次を必要とするエディターおよびデザイナーに限定されます。  
   
-1.  エディターまたはデザイナーのインスタンスを提供するファクトリ オブジェクトの実装。 デザイナーまたはエディターのファクトリ オブジェクトの実装の詳細については、次を参照してください。[エディター ファクトリ](../extensibility/editor-factories.md)します。  
+1.  エディターまたはデザイナーのインスタンスを提供するファクトリ オブジェクトの実装。 デザイナーまたはエディターのファクトリ オブジェクトの実装の詳細については、「 [Editor Factories](../extensibility/editor-factories.md)」を参照してください。  
   
 2.  エディターまたはデザイナーが存在する場合に自動的にアクティブにするツールボックスのタブの登録。  
   
 ## <a name="controlling-the-toolbox"></a>ツールボックスの制御  
- オートメーションのサポートを補うため、[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]方法を Vspackage に大きい制御を提供する次のインターフェイスを提供します。**ツールボックス**管理されます。  
+ オートメーションのサポートを補うために、 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] は次のインターフェイスを提供して、 **ツールボックス** の管理方法を VSPackage でより詳細に制御できるようにします。  
   
 |Interface|説明|  
 |---------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "47533533"
   
 -   <xref:System.Drawing.Design.IToolboxService> を使用する場合、カテゴリの名前などのローカライズされた情報は、実装者が管理します。  
   
- 設定メカニズムを使用して、ユーザーがアクセスする **ツールボックス** 設定を IDE の **[ツール]** メニューの **[設定のインポートとエクスポート]** コマンドからユーザーが保存できるようにします。 設定を使用する方法の詳細については、次を参照してください。 [Extending User Settings and オプション](../extensibility/extending-user-settings-and-options.md)します。  
+ 設定メカニズムを使用して、ユーザーがアクセスする **ツールボックス** 設定を IDE の **[ツール]** メニューの **[設定のインポートとエクスポート]** コマンドからユーザーが保存できるようにします。 設定の使用方法の詳細については、「 [Extending User Settings and Options](../extensibility/extending-user-settings-and-options.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [ツールボックスの拡張](../misc/extending-the-toolbox.md)

@@ -1,7 +1,7 @@
 ---
 title: プログラムへのアタッチ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 9a3f5b83-60b5-4ef0-91fe-a432105bd066
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed9bcc02f5a17471c4679aae7ad9772a8a45f6e2
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eb4709c0f6e158919b67a53d374bbefee8d152f1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546047"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49275159"
 ---
 # <a name="attaching-to-the-program"></a>プログラムへのアタッチ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プログラムへのアタッチ](https://docs.microsoft.com/visualstudio/extensibility/debugger/attaching-to-the-program)します。  
-  
 を、適切なポートとプログラムを登録した後は、デバッグするプログラムにデバッガーをアタッチする必要があります。  
   
 ## <a name="choosing-how-to-attach"></a>アタッチする方法を選択します。  

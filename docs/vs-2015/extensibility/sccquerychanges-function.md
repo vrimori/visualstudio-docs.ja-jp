@@ -1,7 +1,7 @@
 ---
 title: SccQueryChanges 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 4cd58eb3-6952-49b1-9620-8682e3eaa604
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 95f1e5a21ba74779080c601acd42d5deedb75d7c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b18ca895c991e94e8525593e6651824aa61a37ba
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538660"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49227995"
 ---
 # <a name="sccquerychanges-function"></a>SccQueryChanges 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccQueryChanges 関数](https://docs.microsoft.com/visualstudio/extensibility/sccquerychanges-function)します。  
-  
 この関数は、指定されたコールバック関数を使用して各ファイルの名前変更に関する情報を提供する、ファイルの一覧を列挙します。  
   
 ## <a name="syntax"></a>構文  

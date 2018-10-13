@@ -1,7 +1,7 @@
 ---
 title: '&lt;コマンド&gt;要素 (ブートス トラップ) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 5802aae6b3476eb9688da484e6ec36b818c2d61a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 309f93658cee6663c2b5673c03c6621330e7fa39
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544464"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276576"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;コマンド&gt;要素 (ブートス トラップ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;コマンド&gt;要素 (ブートス トラップ)](https://docs.microsoft.com/visualstudio/deployment/commands-element-bootstrapper)します。  
-  
 `Commands`要素は、テストの下にある要素の説明を実装、`InstallChecks`要素と、パッケージを宣言し、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]テストが失敗した場合、ブートス トラップをインストールする必要があります。  
   
 ## <a name="syntax"></a>構文  

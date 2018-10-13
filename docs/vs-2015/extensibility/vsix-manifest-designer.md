@@ -1,7 +1,7 @@
 ---
 title: VSIX マニフェスト デザイナー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: 5a691e77-cf91-430d-90ea-361d9031ef83
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9eeefb94d066eeef7a58e0b11658d9d6110f935d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 20b46ee920ed4ed7e32ed7e0ebbf326e5bc80f1a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538662"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271416"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX マニフェスト デザイナー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[VSIX マニフェスト デザイナー](https://docs.microsoft.com/visualstudio/extensibility/vsix-manifest-designer)します。  
-  
 VSIX パッケージ マニフェスト ファイルを Visual Studio 拡張機能のインストールの動作の設定を変更します。  
   
  **VSIX マニフェスト デザイナー**基になる VSIX スキーマにマップされます。 スキーマ内のすべての要素は、デザイナーでの対応するコントロールを使用して設定できます。 スキーマの詳細については、次を参照してください。 [VSIX 拡張機能スキーマ 2.0 リファレンス](../extensibility/vsix-extension-schema-2-0-reference.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語ソリューション テンプレートの選択 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: cded93126f4e02aa5f0417819c7a76f17e0da6d5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 618a26740759431ffe9de2b6ed5b51ffb32ea69e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546108"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268495"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>ドメイン固有言語ソリューション テンプレートの選択
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語ソリューション テンプレートの選択](https://docs.microsoft.com/visualstudio/modeling/choosing-a-domain-specific-language-solution-template)します。  
-  
 ドメイン固有言語ソリューションを作成するには、ドメイン固有言語デザイナー ウィザードで利用できるソリューション テンプレートのいずれかを選択します。 作成し言語に最も近いテンプレートを選択して、ソリューションを開始する必要がある変更を最小限に抑えることができます。  
   
  次のソリューション テンプレートは、ドメイン固有言語デザイナー ウィザードで使用できます。  

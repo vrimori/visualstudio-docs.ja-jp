@@ -1,7 +1,7 @@
 ---
 title: レガシ言語の Service2 の実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 caps.latest.revision: 27
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0b812fd0cc54f117e89d09f151293eec1cf6fe8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 35dc4c6b80975ccddc42e54d0d7f39cf9024d62d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534648"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253124"
 ---
 # <a name="implementing-a-legacy-language-service"></a>従来の言語サービスを実装します。
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語 service2 などを実装する](https://docs.microsoft.com/visualstudio/extensibility/internals/implementing-a-legacy-language-service2)します。  
-  
 Managed package framework (MPF) を使用して、言語サービスを実装するからクラスを派生する必要があります、<xref:Microsoft.VisualStudio.Package.LanguageService>クラスし、次の抽象メソッドとプロパティを実装します。  
   
 -   <xref:Microsoft.VisualStudio.Package.LanguageService.GetLanguagePreferences%2A> メソッド  

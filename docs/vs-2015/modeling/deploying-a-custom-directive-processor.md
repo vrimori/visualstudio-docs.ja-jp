@@ -1,7 +1,7 @@
 ---
 title: カスタム ディレクティブ プロセッサの配置 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b46d95aae0908a4e1e2ba72e860d56ec975b051f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: dc49795a2d19ab28eb4462efc9d6361e1ac18ab6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535374"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251954"
 ---
 # <a name="deploying-a-custom-directive-processor"></a>カスタム ディレクティブ プロセッサの配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[カスタム ディレクティブ プロセッサの配置](https://docs.microsoft.com/visualstudio/modeling/deploying-a-custom-directive-processor)します。  
-  
 任意のコンピューター上の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でカスタム ディレクティブ プロセッサを使用するには、そのプロセッサをこのトピックで説明するいずれかの方法で登録する必要があります。  
   
  次の方法があります。  
@@ -116,7 +114,7 @@ ms.locfileid: "47535374"
   
 3.  .vsix ファイルをダブルクリックします。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能インストーラーが表示されます。  
   
-4.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を再起動します。 これで、カスタム ディレクティブ プロセッサを参照するディレクティブを含むテキスト テンプレートを実行できるようになりました。 各ディレクティブの形式は次のとおりです。  
+4.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を再起動します。 これで、カスタム ディレクティブ プロセッサを参照するディレクティブを含むテキスト テンプレートを実行できるようになりました。 各ディレクティブの形式は次のとおりです。  
   
      `<#@ CustomDirective Processor="CustomDirectiveProcessorName" parameter1="value1" … #>`  
   
@@ -159,7 +157,7 @@ ms.locfileid: "47535374"
   
  .pkgdef ファイルがビルド フォルダー (通常は bin\Debug か bin\Release) に表示されることを確認します。 このフォルダーに表示されない場合は、テキスト エディターで .csproj ファイルを開き、`<GeneratePkgDefFile>false</GeneratePkgDefFile>` ノードを削除します。  
   
- 詳細については、次を参照してください。 [Vspackage](../extensibility/internals/vspackages.md)します。  
+ 詳細については、「 [VSPackages](../extensibility/internals/vspackages.md)」を参照してください。  
   
 ## <a name="setting-a-registry-key"></a>レジストリ キーの設定  
  これは、カスタム ディレクティブ プロセッサをインストールする方法としては、最も優先順位の低い方法です。 この方法では、ディレクティブ プロセッサを簡単に有効化および無効化できないうえに、ディレクティブ プロセッサを他のユーザーに配布することもできません。  

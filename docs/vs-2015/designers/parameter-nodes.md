@@ -1,7 +1,7 @@
 ---
 title: パラメーター ノード | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bed941a35af21b78ea5159a218ccd36d2ff5f1e9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bb15b19ebdef04facdb66d4b97042bb47e4cb5fa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47549144"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49276291"
 ---
 # <a name="parameter-nodes"></a>パラメーター ノード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パラメーター ノード](https://docs.microsoft.com/visualstudio/designers/parameter-nodes)します。  
-  
 シェーダー デザイナーで、パラメーター ノードは、素材のプロパティ、指向性ライト、カメラの位置、時刻など、描画ごとのベースのアプリで制御されるシェーダーへの入力を表します。 各描画呼び出しでこれらのパラメーターを変更できるため、同じシェーダーを使用してオブジェクトに異なる外観を与えることができます。  
   
 ## <a name="parameter-node-reference"></a>パラメーター ノードの参照  

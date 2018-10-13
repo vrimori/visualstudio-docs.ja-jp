@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの種類を作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: bdb2d22e-d622-450c-bb2d-98152a745fcf
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e7bb4ac2f65180476bcc2a793c478c8900ae97cd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6b23e63d8bf04c859b156a23a04af8a91b2dd932
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534873"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260248"
 ---
 # <a name="creating-project-types"></a>プロジェクト タイプの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクトの種類を作成する](https://docs.microsoft.com/visualstudio/extensibility/internals/creating-project-types)します。  
-  
 拡張する[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を新しいプロジェクトの種類を作成します。 新しいプロジェクトの種類を作成するには、いくつかの概念を理解し、いくつかの手順を完了する必要があります。 次のトピックでは、プロジェクトの種類を作成する方法の概要を説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

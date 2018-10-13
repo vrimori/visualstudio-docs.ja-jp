@@ -1,7 +1,7 @@
 ---
 title: UML モデル要素の型 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 5b8cb26c6e3d6cd51d087454d0b0c0700c1793db
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 782485523cd5c80e61032eafc575c111592895b6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548990"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49252383"
 ---
 # <a name="uml-model-element-types"></a>UML モデル要素の型
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML モデル要素の型](https://docs.microsoft.com/visualstudio/modeling/uml-model-element-types)します。  
-  
 プログラミング インターフェイスによって UML モデルを読み取り、操作できます。 ここでは、要素型の階層構造について概説します。 階層構造は、UML 仕様で定義されているものと同じです。  
   
  各型の詳細が記載[UML モデリング機能拡張の API リファレンス](../modeling/api-reference-for-uml-modeling-extensibility.md)します。  

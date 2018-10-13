@@ -1,7 +1,7 @@
 ---
 title: '例外のトラブルシューティング: System.ServiceModel.Security.MessageSecurityException |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: douge
-ms.openlocfilehash: 9d886b8eeddc84c8b6597bca77e2d7b63ca21875
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 304847259f9955706f345ef0f27800dfb77eddfb
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548055"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241231"
 ---
 # <a name="troubleshooting-exceptions-systemservicemodelsecuritymessagesecurityexception"></a>例外のトラブルシューティング : System.ServiceModel.Security.MessageSecurityException
 A<xref:System.ServiceModel.Security.MessageSecurityException>ときに例外がスローされる[!INCLUDE[vsindigo](../includes/vsindigo-md.md)]メッセージが適切に保護されていないまたは改ざんされたことを決定します。 このエラーが最も発生しやすいのは、次の条件がすべて該当する場合です。  
@@ -37,7 +37,7 @@ A<xref:System.ServiceModel.Security.MessageSecurityException>ときに例外が�
  **ASP.Net 開発サーバーを使用する場合は、NTLM 認証の問題を解決します。**  
  [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 開発サーバーでは、通常、Windows NT チャレンジ/レスポンス (NTLM: Windows NT Challenge/Response) セキュリティがオフになっており、匿名アクセスが許可されています。 既定では、ターミナル サービス セッションを実行するか、リモート接続を使用すると、NTLM セキュリティが有効になります。 NTLM が有効である場合、すべての localhost 要求が [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 開発サーバーを起動したユーザーまたはプロセスの資格情報に対して検証されます。 これにより、セキュリティ上の脅威が軽減されます。 ただし、WCF は独自の認証も行い、管理者以外のアカウントに WCF サービスの利用を許可しません。  
   
- かどうか、リモート ユーザーを使用して Web サイトの実行可能性があります、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]開発サーバーもと協力し、Web サービスまたは WCF サービス、カスタム サービス バインディングを作成するか、NTLM セキュリティをオフにします。  
+ リモート ユーザーが [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] 開発サーバーを使用して Web サイトを実行し、さらに Web サービスまたは WCF サービスを使用する可能性がある場合は、カスタム サービス バインディングを作成するか、NTLM セキュリティをオフにすることができます。  
   
 > [!IMPORTANT]
 >  セキュリティが脆弱になる可能性があるため、NTLM セキュリティをオフにすることはお勧めしません。  

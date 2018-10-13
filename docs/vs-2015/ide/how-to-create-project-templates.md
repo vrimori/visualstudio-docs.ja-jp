@@ -1,7 +1,7 @@
 ---
 title: '方法: プロジェクト テンプレートを作成する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e7e8efd905667c235d80d64e1c7ca7660281a9ea
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fb68a9902fc3adf9f2643b52e069cf182d9ca75a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49225512"
 ---
 # <a name="how-to-create-project-templates"></a>方法 : プロジェクト テンプレートを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: プロジェクト テンプレートを作成](https://docs.microsoft.com/visualstudio/ide/how-to-create-project-templates)です。  
-  
 この手順に従うと、**[テンプレートのエクスポート]** ウィザードを使ってテンプレートを作成できます。テンプレートは .zip ファイルにパッケージ化されます。 また、テンプレートのエクスポート ウィザードの拡張機能を使って、または [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] に含まれるテンプレートで、配置が向上した VSIX ファイル形式でテンプレートを作成できます。または、テンプレートを手動で作成することもできます。  
   
 ### <a name="to-create-a-custom-project-template-with-the-standard-export-template-wizard"></a>標準のテンプレートのエクスポート ウィザードを使ってカスタム プロジェクト テンプレートを作成するには  

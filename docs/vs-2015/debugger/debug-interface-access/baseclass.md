@@ -1,7 +1,7 @@
 ---
 title: BaseClass |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c7fcff45c4d11a9ee7047222e9803ee9f1bdc58
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 86da35d23af05b318bcecf950064e5d8de23df0a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538708"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242087"
 ---
 # <a name="baseclass"></a>BaseClass
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[BaseClass](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/baseclass)します。  
-  
 ユーザー定義型 (UDT) シンボルの各基本クラスが持つ子で識別される、`SymTagBaseClass`タグ。 [Idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)プロパティは、基になる、UDT の記号を格納し、基になる UDT のすべてのプロパティが使用可能なこの BaseClass シンボルの一部として。  
   
 ## <a name="properties"></a>プロパティ  
