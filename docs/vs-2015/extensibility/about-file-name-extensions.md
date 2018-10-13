@@ -1,7 +1,7 @@
 ---
 title: ファイル名拡張子について |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 99f4f9ff-fb84-4258-9787-6890f308a57f
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8a299d7b2470b16761e4a418e0717a91c2929e9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4278e27b4070ad3330b488cb8b426ffbd6484b27
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548150"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279813"
 ---
 # <a name="about-file-name-extensions"></a>ファイル名拡張子について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ファイル名拡張子について](https://docs.microsoft.com/visualstudio/extensibility/about-file-name-extensions)します。  
-  
 バージョンを関連付ける場合、VSPackage のファイル拡張子を登録するときに[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。 これは、1 つのバージョンではより重要な場合は[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をコンピューターにインストールされます。  
   
  Vspackage のファイル拡張子は、既定値は関連付けられているなプログラム識別子 (ProgID) を指す HKEY_CLASSES_ROOT キーの下に登録されます。  

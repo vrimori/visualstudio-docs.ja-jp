@@ -1,7 +1,7 @@
 ---
 title: コード分析規則セットの参照 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 0834d9c08cd8c570ae28a1a604f65627656b7009
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 928b838a4172537ec12937b02c3deab2cf666ddd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536167"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49279163"
 ---
 # <a name="code-analysis-rule-set-reference"></a>コード分析規則セットの参照
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード分析規則セットの参照](https://docs.microsoft.com/visualstudio/code-quality/code-analysis-rule-set-reference)します。  
-  
 コード分析を構成するときにマネージ コード プロジェクトでの[!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、または[!INCLUDE[vsPro](../includes/vspro-md.md)]組み込みの一覧が表示されます*ルール セット*します。 いずれかの標準規則セットを使用することも、プロジェクト要件を満たすように規則セットをカスタマイズすることもできます。  
   
 ## <a name="available-rule-sets"></a>使用できる規則セット  

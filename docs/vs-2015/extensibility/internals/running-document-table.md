@@ -1,7 +1,7 @@
 ---
 title: Document テーブルを実行している |。Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: bbec74f3-dd8e-48ad-99c1-2df503c15f5a
 caps.latest.revision: 19
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8b7f22fed31618c3f0e8b897992da0beb1c0cc80
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 131fbf7d5587382b2e47002f52e374dad154d448
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49293073"
 ---
 # <a name="running-document-table"></a>ドキュメント テーブルの実行
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を実行しているドキュメント テーブル](https://docs.microsoft.com/visualstudio/extensibility/internals/running-document-table)します。  
-  
 IDE では、実行中のドキュメント テーブル (RDT) と呼ばれる内部構造内のすべての現在開いているドキュメントの一覧を保持します。 この一覧には、これらのドキュメントの現在編集されているかどうかに関係なく、メモリ内のすべての開いているドキュメントが含まれています。 ドキュメントでは、プロジェクトまたはメイン プロジェクト ファイル (.vcxproj ファイルなど) でファイルを含む、保存されている任意の項目です。  
   
 ## <a name="elements-of-the-running-document-table"></a>実行中の Document テーブルの要素  

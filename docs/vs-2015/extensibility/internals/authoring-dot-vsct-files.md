@@ -1,7 +1,7 @@
 ---
 title: 作成します。Vsct ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0c2efb41474f9eeef29cc389529541ad460d9b89
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 85a30c8987311ea8d6216312533dc70072c96f2c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539223"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283674"
 ---
 # <a name="authoring-vsct-files"></a>作成します。Vsct ファイル
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[作成します。Vsct ファイル](https://docs.microsoft.com/visualstudio/extensibility/internals/authoring-dot-vsct-files)します。  
-  
 このドキュメントでは、Visual Studio 統合開発環境 (IDE) にメニュー項目、ツールバー、およびその他のユーザー インターフェイス (UI) 要素を追加する .vsct ファイルを作成する方法を示します。 .Vsct ファイルがまだない Visual Studio パッケージ (VSPackage) を UI 要素を追加する場合は、次の手順を使用します。  
   
  新しいプロジェクトの場合、メニュー コマンド、ツール ウィンドウ、またはカスタム エディターの必須の要素が既に選択内容に応じて .vsct ファイルを生成するためには、Visual Studio パッケージ テンプレートを使用することをお勧めします。 VSPackage の要件を満たすには、この .vsct ファイルを変更することができます。 .Vsct ファイルを変更する方法の詳細については、例を参照してください。[拡張メニューとコマンド](../../extensibility/extending-menus-and-commands.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: コード分析警告を checkid 別のマネージ コードの |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -264,18 +264,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 2401f35f950b676dd51ba24db640936e550f4d22
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d8518771d93b3bb3342aa5eedb23c03266a11052
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545678"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49280268"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>マネージド コードのコード分析警告 (CheckId 別)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[checkid 別のマネージ コードに対するコード分析の警告](https://docs.microsoft.com/visualstudio/code-quality/code-analysis-warnings-for-managed-code-by-checkid)します。  
-  
 次の表に、マネージド コードのコード分析警告を警告の CheckId 識別子別に示します。  
   
 ## <a name="warnings"></a>警告  

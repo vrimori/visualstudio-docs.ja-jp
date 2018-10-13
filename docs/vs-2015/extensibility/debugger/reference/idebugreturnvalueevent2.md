@@ -1,7 +1,7 @@
 ---
 title: IDebugReturnValueEvent2 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 2daded43-e427-4fbb-a19e-f3834e3723af
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b80977dc80ed6c03e429c150bb59860788cae306
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fd9115b68e389b5eac1ea114aed476d1f4e2c519
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546867"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49288003"
 ---
 # <a name="idebugreturnvalueevent2"></a>IDebugReturnValueEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugReturnValueEvent2](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugreturnvalueevent2)します。  
-  
 このインターフェイスは、または関数をステップ実行した後、デバッグ エンジン (DE) によって、セッション デバッグ マネージャー (SDM) に送信されます。  
   
 ## <a name="syntax"></a>構文  
