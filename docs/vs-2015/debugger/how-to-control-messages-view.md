@@ -1,7 +1,7 @@
 ---
 title: '方法: メッセージ ビューを制御 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30b70831e5244763d11731f03e42bf6945a7c3fb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: eb5e3bf1e4f40f01a93a5f9a8de73523d41eaab2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533895"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246983"
 ---
 # <a name="how-to-control-messages-view"></a>方法: メッセージ ビューを制御する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コントロール メッセージ ビュー](https://docs.microsoft.com/visualstudio/debugger/how-to-control-messages-view)します。  
-  
 Spy++ では、コンテンツの制御がある、[メッセージ ビュー](../debugger/messages-view.md)ウィンドウ。 できます[開始および停止](../debugger/how-to-start-and-stop-the-message-log-display.md)指定して、いつでもにメッセージを表示することができます。  
   
 -   表示するメッセージの種類。  

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio のレイアウト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -13,18 +13,16 @@ ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 caps.latest.revision: 3
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 25ba43a08bc2c886302894d891800ac1db87a18a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 67117992e7043335152adea59d7e15f7bbdcce00
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539023"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254758"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Layout for Visual Studio](https://docs.microsoft.com/visualstudio/extensibility/ux-guidelines/layout-for-visual-studio)します。  
-  
 Visual Studio のダイアログ ボックスの大半は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)、そのに従って標準のダイアログ ボックスは、unthemed [Windows デスクトップ ダイアログのレイアウトの原則](https://msdn.microsoft.com/library/windows/desktop/dn742499\(v=vs.85\).aspx)します。 Visual Studio の UI の更新を移動するとき、目立つのダイアログ ボックスの一部に製品を定義するとエクスペリエンスを確立する新しい設計になっています。 これら[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)テーマの外観を与えます。  
   
 ##  <a name="BKMK_UtilityDialogLayout"></a> ユーティリティのダイアログのレイアウト  

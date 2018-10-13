@@ -1,7 +1,7 @@
 ---
 title: UML モデルおよびダイアグラムの編集 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 86
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0620f0a1212d7abd864a9428492d95067098ef16
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 52d83911da0f8c1a54618a389db3cff6bbcbab1e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538531"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245825"
 ---
 # <a name="edit-uml-models-and-diagrams"></a>UML モデルおよびダイアグラムの編集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[編集 UML モデルと図](https://docs.microsoft.com/visualstudio/modeling/edit-uml-models-and-diagrams)します。  
-  
 UML モデルは、いくつかの異なる種類の図によって提供されるビューを使用して作成および編集できます。 図を使用することにより、システムを異なる角度から検討できるため、システムの設計と要件のさまざまな側面について理解し、話し合うのに役立ちます。 Visual Studio には、最も一般的に使用される 5 種類の UML 図のテンプレートが用意されています。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  

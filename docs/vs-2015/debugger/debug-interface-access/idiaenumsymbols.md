@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbols |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e8c2f26480181b39e36ae1455ff06d19adf1a42b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ff83a4a2cc647a74bbd8ffc88f7cb54e3c6556cc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536749"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249328"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDiaEnumSymbols](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiaenumsymbols)します。  
-  
 データ ソースに含まれるさまざまなシンボルを列挙します。  
   
 ## <a name="syntax"></a>構文  

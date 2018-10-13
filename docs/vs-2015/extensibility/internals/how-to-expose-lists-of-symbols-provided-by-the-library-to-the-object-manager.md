@@ -1,7 +1,7 @@
 ---
 title: '方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ ms.assetid: 19757068-bdaa-4e7e-85d6-f8ce5026a859
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0773e20a71516fab47f4bd0c72a1c3a50531532c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 09a13b7fecb0d1e337def074b91eb92913a65b70
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548144"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263628"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: オブジェクト マネージャーにライブラリによって提供されるシンボルのリストを公開
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[公開一覧のシンボル提供オブジェクト マネージャーに](https://docs.microsoft.com/visualstudio/extensibility/internals/how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager)します。  
-  
 シンボル参照ツール、**クラス ビュー**、**オブジェクト ブラウザー**、**呼び出しブラウザー**と**シンボルの検索結果**を新しいデータの要求を渡す[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]オブジェクト マネージャー。 オブジェクト マネージャーは、適切なライブラリを検索し、シンボルの新しいリストを要求します。 ライブラリの応答を要求されたデータを提供することで、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]オブジェクト マネージャーを介して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>インターフェイス。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]オブジェクト マネージャー メソッドを呼び出して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2>データを取得するインターフェイスを使用して設定またはシンボル参照ツールのビューを更新します。  
   
  ライブラリでは、ツールが呼び出され、ノードを展開すると、またはビューが更新されたとき、データの要求を取得することがあります。 シンボル参照ツールが初めて呼び出されると、オブジェクト マネージャーは、最上位レベルの一覧を提供するライブラリを要求します。 ユーザーは、一覧にノードを展開、ライブラリは、そのノードの下の子の一覧を提供します。 すべてのオブジェクト マネージャーの照会には、関心のある項目のインデックスが含まれています。 新しい一覧を表示するには、項目の数が、項目、その名前、アクセシビリティ、およびその他のプロパティの種類の一覧ではオブジェクト マネージャーを決定する必要があります。  

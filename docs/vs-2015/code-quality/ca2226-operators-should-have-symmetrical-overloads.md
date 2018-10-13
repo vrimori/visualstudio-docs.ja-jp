@@ -1,7 +1,7 @@
 ---
 title: ': 演算子 2226 対称型オーバー ロード |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6df4a36dae04dadf61790e7be16834dc0d59bdc0
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: fa38044142d672222f90c0eb5fd8b55d289d0840
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589083"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220546"
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: 演算子は対称型オーバーロードを含まなければなりません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[CA2226: 演算子は対称型オーバー ロードである必要があります](https://docs.microsoft.com/visualstudio/code-quality/ca2226-operators-should-have-symmetrical-overloads)します。
-
 |||
 |-|-|
 |TypeName|OperatorsShouldHaveSymmetricalOverloads|

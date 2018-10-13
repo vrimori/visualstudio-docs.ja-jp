@@ -1,7 +1,7 @@
 ---
 title: ソース管理プラグインを実装するためのベスト プラクティス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 85e73b73-29dc-464f-8734-ed308742c435
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a444100536473b934996b78761395c09ddc906c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fccadb7bd4b2ceaed201ab2d4d5b5c4fa71bc0ad
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544928"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49254690"
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>ソース管理プラグインを実装するためのベスト プラクティス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[をソース管理プラグインを実装するためのベスト プラクティス](https://docs.microsoft.com/visualstudio/extensibility/best-practices-for-implementing-a-source-control-plug-in)します。  
-  
 次の技術的な詳細を使用して、ソース管理のプラグインを確実に実装できる[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
 ## <a name="memory-management-issues"></a>メモリ管理に関する問題  

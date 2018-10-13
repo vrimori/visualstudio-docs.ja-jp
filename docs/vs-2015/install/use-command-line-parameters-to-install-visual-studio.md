@@ -1,7 +1,7 @@
 ---
 title: コマンド ライン パラメーターを使用して、Visual Studio をインストールする |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 7aa129021ef18cba3236624283872a2933c9ef80
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6266626d2eb60b64f1923a0c3f54d39c9b20072a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537691"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268607"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio"></a>コマンド ライン パラメーターを使用して、Visual Studio をインストールするには
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,7 +62,7 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 |**/qb**<br /><br /> **/passive**|進行状況が表示されますが、ユーザーの入力を待ちません。|  
 |**/repair**|Visual Studio を修復します。|  
 |**/SuppressRefreshPrompt**|インストール ウィザードに更新プログラムの入手可能ダイアログが表示されないようにし、必須の更新バージョンまたは推奨の更新バージョンが存在する場合に、インストール ウィザードで自動的に受け入れられるようにします。|  
-|**/u**<br /><br /> **/アンインストールします。**|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] をアンインストールします。|  
+|**/u**<br /><br /> **/アンインストールします。**|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]をアンインストールします。|  
 |**/Uninstall/Force**<br /><br /> **/u/force**|Visual Studio および他の製品と共有するすべての機能をアンインストールします。 **警告:** このパラメーターを使用する場合、同じコンピューターにインストールされているその他の製品が正しく機能しているを停止する可能性があります。|  
   
 ## <a name="see-also"></a>関連項目  

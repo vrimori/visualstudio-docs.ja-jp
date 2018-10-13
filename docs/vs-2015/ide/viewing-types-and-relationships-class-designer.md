@@ -1,7 +1,7 @@
 ---
 title: 型およびリレーションシップの表示 (クラス デザイナー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 37
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: dc7bf4d9f005b5514be5ec6765744b8d043a3979
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 801481c6fed2dab33774cd9895685e91e49ab361
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545475"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49240761"
 ---
 # <a name="viewing-types-and-relationships-class-designer"></a>型およびリレーションシップの表示 (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[表示の型およびリレーションシップ (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/viewing-types-and-relationships-class-designer)します。  
-  
 クラス デザイナーはクラス ダイアグラムを使用して、構成メンバー、共有している関係などの型の詳細情報を表示します。 実際のところ、これらのエンティティの視覚化はコードの動的ビューです。 つまり、デザイナーで型を編集し、エンティティのソース コードで、反映された編集内容を確認できます。 同様に、クラス ダイアグラムの同期が維持され、コード内のエンティティに加えられた変更が反映されます。  
   
 > [!NOTE]

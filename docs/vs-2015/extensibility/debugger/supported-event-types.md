@@ -1,7 +1,7 @@
 ---
 title: サポートされているイベントの種類 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: a3c0386d-551e-4734-9a0c-368d1c2e6671
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33e6d8a8cdd0c5ee490ffb43fff69754a93549ca
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 846a889a22188249a1a42e8d66f0b3730a19dfc2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537625"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49228762"
 ---
 # <a name="supported-event-types"></a>サポートされているイベントの種類
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[イベントの種類のサポートされている](https://docs.microsoft.com/visualstudio/extensibility/debugger/supported-event-types)します。  
-  
 Visual Studio のデバッグでは、次のイベントの種類現在サポートしています。  
   
 -   非同期のイベント  

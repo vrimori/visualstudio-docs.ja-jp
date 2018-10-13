@@ -1,7 +1,7 @@
 ---
 title: '方法: 元に戻す管理の実装 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 1942245d-7a1d-4a11-b5e7-a3fe29f11c0b
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 47b71b7e2760af18605d3ded52b68cfc38742e65
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 72355b396dc88fc02c1ccdfb4f3a2ed4afe66467
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533660"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246286"
 ---
 # <a name="how-to-implement-undo-management"></a>方法: 元に戻す管理の実装
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 管理を元に戻す実装](https://docs.microsoft.com/visualstudio/extensibility/how-to-implement-undo-management)。  
-  
 元に戻すの管理に使用される主要なインターフェイスは<xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager>、環境によって実装されます。 元に戻す管理をサポートするには、実装元に戻す単位 (つまり、 <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit>、複数の個々 のステップを含むことができます。  
   
  元に戻す管理を実装する方法は、エディターが複数のビューをサポートするかどうかどうかによって異なります。 各実装の手順は、次のセクションで詳細を示します。  

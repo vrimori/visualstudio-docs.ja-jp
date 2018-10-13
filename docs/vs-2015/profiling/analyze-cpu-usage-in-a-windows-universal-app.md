@@ -1,7 +1,7 @@
 ---
 title: Windows ユニバーサル アプリでの CPU 使用率の分析 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: f57fdf99c6ccb19c6d8add600943d799d3a28ca4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f91fa126c066d3c028cb7e634468ab8b455c8e30
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533844"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49250719"
 ---
 # <a name="analyze-cpu-usage-in-a-windows-universal-app"></a>Windows ユニバーサル アプリでの CPU 使用率の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ユニバーサル Windows アプリでの CPU 使用率の分析](https://docs.microsoft.com/visualstudio/profiling/analyze-cpu-usage-in-a-windows-universal-app)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  アプリのパフォーマンスの問題を調査する必要がある場合、まず CPU の使用状況を理解することから始めることができます。 **CPU 使用率** ツールは、CPU がコードを実行する際、どこで時間を費やしているかを示します。 特定のシナリオを重点的に CPU 使用率を実行することができます、 [XAML UI 応答性](http://msdn.microsoft.com/library/4ff84cd1-4e63-4fda-b34f-3ef862a6e480)、ツール、[エネルギー消費量](../profiling/analyze-energy-use-in-store-apps.md)ツール、またはその両方が単一の診断セッションでします。  

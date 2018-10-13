@@ -1,7 +1,7 @@
 ---
 title: UML API を使用したリレーションシップの移動 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 15
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3ae6da2980c55df6eb58686fcdb2c364b9147779
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c2d4365cefc33b81f8df3891b860e254c7dc6b8b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536713"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242503"
 ---
 # <a name="navigate-relationships-with-the-uml-api"></a>UML API を使用して関係をナビゲートする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML API を使用したリレーションシップをナビゲート](https://docs.microsoft.com/visualstudio/modeling/navigate-relationships-with-the-uml-api)します。  
-  
 モデルは、さまざまな種類のリレーションシップで相互にリンクされた要素で構成されます。 このトピックでは、プログラム コードでモデルを移動する方法について説明します。  
   
 ## <a name="traversing-relationships"></a>リレーションシップの走査  

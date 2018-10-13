@@ -1,7 +1,7 @@
 ---
 title: モデル エディター | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 38
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d53d22baf0ff1e458a2dd1ee601f59cdfe081ffa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3fb0b83e266fbe865023d6a31f926ac31b61a10a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548229"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49264048"
 ---
 # <a name="model-editor"></a>モデル エディター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデル エディター](https://docs.microsoft.com/visualstudio/designers/model-editor)します。  
-  
 このドキュメントでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] モデル エディターを使用して 3-D モデルを表示、作成、および変更する方法について説明します。  
   
  モデル エディターを使用すると、基本的な 3-D モデルを最初から作成したり、多機能の 3-D モデリング ツールを使用して作成されたより複雑な 3-D モデルを表示および変更できます。 モデル エディターは DirectX アプリケーションの開発に使用する複数の 3-D モデル形式をサポートしています。  
@@ -317,7 +315,7 @@ ms.locfileid: "47548229"
 |タイトル|説明|  
 |-----------|-----------------|  
 |[ゲームとアプリケーション用の 3D アセットの操作](../designers/working-with-3-d-assets-for-games-and-apps.md)|テクスチャ、イメージ、3-D モデルやシェーダー効果などのグラフィックス資産の操作に使用できる [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のツールの概要を説明します。|  
-|[イメージ エディター](../designers/image-editor.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|  
+|[Image Editor](../designers/image-editor.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|  
 |[シェーダー デザイナー](../designers/shader-designer.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェーダー デザイナーを使用してシェーダーを操作する方法について説明します。|
 
 

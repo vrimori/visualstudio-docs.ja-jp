@@ -1,7 +1,7 @@
 ---
 title: Visual Studio デバッガーの用語集 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 4a2cfaab-1fbd-4a23-bd00-9ac4cc50d7fd
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: da2b0d2c435cbfc0bca19977074a7b54e8de6315
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 39cf7c116e1f05629f738ec536a9dab38100718f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539423"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260131"
 ---
 # <a name="visual-studio-debugger-glossary"></a>Visual Studio デバッガーの用語集
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio デバッガーの用語集](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/visual-studio-debugger-glossary)します。  
-  
 使用される用語を次に、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] SDK のデバッグします。  
   
 ## <a name="terms"></a>用語  

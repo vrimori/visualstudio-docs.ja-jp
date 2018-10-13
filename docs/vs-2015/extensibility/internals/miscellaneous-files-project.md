@@ -1,7 +1,7 @@
 ---
 title: その他のファイル プロジェクト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 93a278a8-d4f4-400b-8945-4f1b0a2b5bac
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bdcbe1901deb472969c993b826660d03d12b2cf3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 14dd7ce7dacfaa581d3b3757b33ad0d7af51d264
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49258402"
 ---
 # <a name="miscellaneous-files-project"></a>その他のファイル プロジェクト
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Miscellaneous Files プロジェクト](https://docs.microsoft.com/visualstudio/extensibility/internals/miscellaneous-files-project)します。  
-  
 ユーザーは、プロジェクト項目が開いたら、IDE はソリューション内のすべてのプロジェクトのメンバーではないすべての項目をその他のファイル プロジェクトに割り当てます。  
   
  プロジェクトでは、どのエディターを使用するは、ユーザーがプロジェクト項目を開いたときに決定する際の重要な役割を果たします。 プロジェクトを設計すると、プロジェクト固有のエディターまたは標準のエディターを使用して特定のファイルを開きます。  

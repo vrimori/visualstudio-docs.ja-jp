@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 生成済みディレクティブ プロセッサをホストに接続する |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 49
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 451dcf21e8965de9ea350577c819daefb150a5d1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 486d41927e45dc8c99fda06c29d14871008d7066
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535181"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251937"
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>チュートリアル: 生成済みディレクティブ プロセッサへのホストの接続
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 生成されたディレクティブ プロセッサにホストに接続する](https://docs.microsoft.com/visualstudio/modeling/walkthrough-connecting-a-host-to-a-generated-directive-processor)します。  
-  
 テキスト テンプレートを処理する、独自のホストを記述することができます。 基本的なカスタム ホストの説明については、[チュートリアル: カスタム テキスト テンプレート ホストの作成](../modeling/walkthrough-creating-a-custom-text-template-host.md)です。 複数の出力ファイルを生成するなどの関数を追加するには、そのホストを拡張できます。  
   
  このチュートリアルでは、テキスト テンプレート ディレクティブ プロセッサの呼び出しをサポートするように、そのカスタム ホストを展開します。 ドメイン固有言語を定義するときに生成、*ディレクティブ プロセッサ*ドメイン モデルです。 ディレクティブ プロセッサによって、ユーザー アセンブリを記述し、テンプレートのディレクティブをインポートする必要が少なくなり、モデルにアクセスするためのテンプレートを作成するために簡単にできます。  

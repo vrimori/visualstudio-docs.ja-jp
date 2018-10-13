@@ -1,7 +1,7 @@
 ---
 title: 'テスト領域 6: 削除 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 6f2e872c-5ba2-4303-9f50-a90cef9a6225
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a05b84b3c75cec22f008b5f690c8b4ee0f8c6df3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f3e03ea9985840d20c812f56d7a0f9cae66420cc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544680"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261814"
 ---
 # <a name="test-area-6-delete"></a>テスト領域 6: 削除
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テスト領域 6: 削除](https://docs.microsoft.com/visualstudio/extensibility/internals/test-area-6-delete)します。  
-  
 このソース管理プラグインのテストの領域では、削除の各操作について説明します。  
   
  ソース コントロールの応答で操作を削除する**ソリューション エクスプ ローラー**します。  

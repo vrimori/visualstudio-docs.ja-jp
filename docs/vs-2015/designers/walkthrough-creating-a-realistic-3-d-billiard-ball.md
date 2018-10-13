@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: リアルな 3-D のビリヤード ボールの作成 | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f20907e33ba8a0f077c0d68c6fbfebf2fd1d0b44
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 303d826a22ff67ec499fcd4e8d59d6a7819a822d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537388"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49274119"
 ---
 # <a name="walkthrough-creating-a-realistic-3-d-billiard-ball"></a>チュートリアル: リアルな 3-D のビリヤード ボールの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: リアルな 3-D のビリヤード ボールの作成](https://docs.microsoft.com/visualstudio/designers/walkthrough-creating-a-realistic-3-d-billiard-ball)です。  
-  
 このチュートリアルでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でシェーダー デザイナーおよびイメージ エディターを使用して、リアルな 3-D のビリヤード ボールを作成する方法について説明します。 ビリヤード ボールの 3-D の外観は、適切なテクスチャのリソースと複数のシェーダー方法を組み合わせることによって実現します。  
   
  このドキュメントでは、以下のアクティビティについて説明します。  

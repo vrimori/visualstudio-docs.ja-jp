@@ -1,7 +1,7 @@
 ---
 title: XML スキーマ ダイアログ ボックス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9d388dc928b2f15c084034831a4b05f9d6420a65
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e229919a625241f270090eb59be4aa8cd478c18c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536435"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251694"
 ---
 # <a name="xml-schemas-dialog-box"></a>[XML スキーマ] ダイアログ ボックス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[XML スキーマ ダイアログ ボックス](https://docs.microsoft.com/visualstudio/xml-tools/xml-schemas-dialog-box)します。  
-  
   
 **XML スキーマ**どの XML スキーマ定義言語 (XSD) スキーマ、XML ドキュメントに関連付けるを選択するダイアログ ボックスを使用します。 スキーマ キャッシュにあるスキーマを選択することも、キャッシュ内に置かれていないスキーマを指定することもできます。 選択したスキーマは、スキーマ セットの一部と見なされます。 そのスキーマ セットは、IntelliSense と XML ドキュメントの検証に使用されます。  
   

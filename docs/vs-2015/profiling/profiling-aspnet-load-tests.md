@@ -1,7 +1,7 @@
 ---
 title: ASP.NET ロード テストのプロファイリング | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78825dd76015df73f514e5adb0f3dffb6d60644d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5c8922476ec3db980254a15daab8bc67d16d4e7f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546161"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49271922"
 ---
 # <a name="profiling-aspnet-load-tests"></a>ASP.NET ロード テストのプロファイリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ASP.NET ロード テストのプロファイリング](https://docs.microsoft.com/visualstudio/profiling/profiling-aspnet-load-tests)します。  
-  
 ASP.NET Web サイト プロジェクトに対して実行する自動 [!INCLUDE[TCMext](../includes/tcmext-md.md)] Web テストからプロファイル データを収集できます。 収集できるのは、サンプリング データと階層相互作用データです。 詳細については、次のトピックを参照してください。  
   
  [(NIB) 方法: Web パフォーマンス テスト エディターから Web アプリケーションのパフォーマンス セッションを実行する](http://msdn.microsoft.com/en-us/d14e0a27-33cc-4e4e-8792-fe03e50d51e1)  

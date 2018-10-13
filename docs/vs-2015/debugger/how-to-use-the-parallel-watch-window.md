@@ -1,7 +1,7 @@
 ---
 title: '方法: 並列ウォッチ ウィンドウを使用して、|Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 88c4efe15e2afd3f4158b93cf8701109cd3902b8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f14358307c2c95e1b796695a0253a520ea00e3b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540262"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249432"
 ---
 # <a name="how-to-use-the-parallel-watch-window"></a>方法: 並列ウォッチ ウィンドウを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[並列スレッドの変数のウォッチを設定](https://docs.microsoft.com/visualstudio/debugger/how-to-use-the-parallel-watch-window)します。  
-  
 [並列ウォッチ] ウィンドウには、複数のスレッドで 1 つの式が保持している値を同時に表示できます。 各行は、1 つのアプリケーションで実行中のスレッドを表しますが、スレッドは複数の行に表示される場合があります。 具体的には、各行は関数シグネチャが現在のスタック フレーム上の関数に一致する関数呼び出しを表します。 列内の項目の並べ替え、順序変更、削除、およびグループ化を行うことができます。 スレッドのフラグ設定、フラグ解除、凍結 (中断)、および凍結解除 (再開) を実行できます。 次の列が表示されます、**並列ウォッチ**ウィンドウ。  
   
 -   フラグ列。特に注意する必要のあるスレッドをマークできます。  

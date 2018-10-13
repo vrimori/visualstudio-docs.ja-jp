@@ -1,7 +1,7 @@
 ---
 title: '方法: カスタム デバッグ エンジンのデバッグ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: df27a8d6-3938-45ff-b47f-b684e80b38a0
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6b7ef3385d48e07e4c5fcd9619515b650ca193d9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e1bd7e2c3f05fd54829d042ec15fd59b783d238
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546523"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247235"
 ---
 # <a name="how-to-debug-a-custom-debug-engine"></a>方法: カスタム デバッグ エンジンのデバッグ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: カスタム デバッグ エンジンのデバッグ](https://docs.microsoft.com/visualstudio/extensibility/debugger/how-to-debug-a-custom-debug-engine)します。  
-  
 プロジェクトの種類からのデバッグ エンジン (DE) の起動、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A>メソッド。 つまりのインスタンスの管理下にある、DE を起動する[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]プロジェクトの種類を制御します。 ただし、そのインスタンスの[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]DE をデバッグすることはできません。 どのような次のようには、カスタム、DE をデバッグすることを許可する手順を示します。  
   
 > [!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: '方法: クラス ダイアグラムを印刷する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 39914413948af38cd103aae195b1130346675d21
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4261fd0b246c43090738bb2e4cd882412ad799b1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533795"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49264135"
 ---
 # <a name="how-to-print-class-diagrams-class-designer"></a>方法: クラス ダイアグラムを印刷する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: クラス ダイアグラムを印刷する (クラス デザイナー)](https://docs.microsoft.com/visualstudio/ide/how-to-print-class-diagrams-class-designer)します。  
-  
 Visual Studio の印刷機能を利用し、クラス ダイアグラムを印刷できます。  
   
 ### <a name="to-print-a-class-diagram"></a>クラス ダイアグラムを印刷するには  

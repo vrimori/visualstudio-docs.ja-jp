@@ -1,7 +1,7 @@
 ---
 title: Idiasymbol::get_hasdebuginfo |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1177995b6aa96fe237e9a63e77825f59bcbf8caa
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8c72faa4f13861f86b3735fbf5eb67b2abb64c5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538665"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49237562"
 ---
 # <a name="idiasymbolgethasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[idiasymbol::get_hasdebuginfo](https://docs.microsoft.com/visualstudio/debugger/debug-interface-access/idiasymbol-get-hasdebuginfo)します。  
-  
 場合を指定するフラグを取得、[コンパイル単位](../../debugger/debug-interface-access/compiland.md)デバッグ情報が含まれています。  
   
 ## <a name="syntax"></a>構文  

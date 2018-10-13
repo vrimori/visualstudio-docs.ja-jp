@@ -1,7 +1,7 @@
 ---
 title: '&lt;assembly&gt;要素 (ClickOnce 配置) |Microsoft ドキュメント'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 96978ec8329ddf31b2cc641bf02d2b38a9e98f4a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5fa45d64956fe1347477abb533e45565f27996f7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535971"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259949"
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;assembly&gt;要素 (ClickOnce 配置)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[&lt;アセンブリ&gt;要素 (ClickOnce 配置)](https://docs.microsoft.com/visualstudio/deployment/assembly-element-clickonce-deployment)します。  
-  
 配置マニフェストの最上位要素。  
   
 ## <a name="syntax"></a>構文  
@@ -48,7 +46,7 @@ ms.locfileid: "47535971"
 ## <a name="elements-and-attributes"></a>要素と属性  
  `assembly`要素はルート要素でありが必要です。 その最初の構成要素である必要があります、`assemblyIdentity`要素。 マニフェストの要素は次の名前空間内に存在する必要があります: `urn:schemas-microsoft-com:asm.v1`、 `urn:schemas-microsoft-com:asm.v2`、および`http://www.w3.org/2000/09/xmldsig#`します。 アセンブリの子要素は、これらの名前空間を継承またはタグ付けによってもあります。  
   
- `assembly`要素には、次の属性。  
+ `assembly` 要素には、次の属性があります。  
   
 |属性|説明|  
 |---------------|-----------------|  

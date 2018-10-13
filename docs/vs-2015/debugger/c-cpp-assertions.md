@@ -1,7 +1,7 @@
 ---
 title: C-C++ アサーション |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,18 +34,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ce168764f18d85cce1d373bf509f63bfb1e6923d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e19ffb9a63e0e2168dfb7acf9c5cf3661111a1d2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535285"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267690"
 ---
 # <a name="cc-assertions"></a>アサーション
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[C/C++ アサーション](https://docs.microsoft.com/visualstudio/debugger/c-cpp-assertions)します。  
-  
 アサート ステートメントでは、プログラム内で true になる必要のある条件を指定します。 その条件が true でない場合、アサーションは失敗し、プログラムの実行が中断されると、[アサートに失敗しました ダイアログ ボックス](../debugger/assertion-failed-dialog-box.md)が表示されます。  
   
  Visual C++ は、次の構成に基づくアサート ステートメントをサポートします。  

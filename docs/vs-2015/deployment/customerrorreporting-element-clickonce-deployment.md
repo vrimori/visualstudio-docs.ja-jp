@@ -1,7 +1,7 @@
 ---
 title: '&lt;customErrorReporting&gt;要素 (ClickOnce 配置) |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 422ccaf8e82a2b1813bc876c76a6ff5a7c96f43c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: cf4a723fe5986287859134d0f97868a19956f5a9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538803"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49252019"
 ---
 # <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting&gt;要素 (ClickOnce 配置)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ &lt;customErrorReporting&gt;要素 (ClickOnce 配置)](https://docs.microsoft.com/visualstudio/deployment/customerrorreporting-element-clickonce-deployment)します。  
-  
 エラー発生時に表示する URI を指定します。  
   
 ## <a name="syntax"></a>構文  

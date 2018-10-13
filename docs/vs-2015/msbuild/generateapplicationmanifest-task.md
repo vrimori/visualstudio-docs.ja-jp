@@ -1,7 +1,7 @@
 ---
 title: GenerateApplicationManifest タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8b0533e5ca79bf9d2cb49149ecc80ac58c911d22
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: da5c9cb78ff4d3d9542c956a377f6342945d11a0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245571"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest タスク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[GenerateApplicationManifest タスク](https://docs.microsoft.com/visualstudio/msbuild/generateapplicationmanifest-task)します。  
-  
   
 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーション マニフェストまたはネイティブ マニフェストを生成します。 ネイティブ マニフェストでは、コンポーネントの一意の ID を定義し、コンポーネントを構成するアセンブリおよびファイルを指定することによって、コンポーネントを記述します。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーション マニフェストはネイティブ マニフェストを拡張するもので、アプリケーションのエントリ ポイントとセキュリティ レベルを指定します。  
   

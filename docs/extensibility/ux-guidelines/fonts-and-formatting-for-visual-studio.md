@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b68e103edcd3162b72bc5fddd4d1401b2430df3
-ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
+ms.openlocfilehash: 9ea4b3a0ed5f041b2f09c3f3e57f334bf11777f0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49273092"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式
 ##  <a name="BKMK_TheEnvironmentFont"></a> 環境フォント
@@ -83,7 +83,7 @@ window.ShowModal()
   
  `ShowModal` ブール値を返します。 (null 許容のブール値) で、 `DialogResult`、必要な場合に使用されます。 戻り値はで、ダイアログ ボックスが閉じられた場合は true。 **OK**します。  
   
- 独自のダイアログ ボックスではありませんし、ホストされている WPF の UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウや Win32/WinForms の親ウィンドウの WPF の子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF e のルート要素lement します。 (シェルのメイン ウィンドウでプロパティを設定するが、過去の継承できません、 `HWND`)。 シェルでは、プロパティはバインドする、このようなリソースを提供します。  
+ 独自のダイアログ ボックスではありませんし、ホストされている WPF の UI を表示する必要がある場合`HwndSource`、ポップアップ ウィンドウや Win32/WinForms の親ウィンドウの WPF の子ウィンドウなどを設定する必要があります、`FontFamily`と`FontSize`WPF 要素のルート要素。 (シェルのメイン ウィンドウでプロパティを設定するが、過去の継承できません、 `HWND`)。 シェルでは、プロパティはバインドする、このようなリソースを提供します。  
   
 ```xaml
 <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />  

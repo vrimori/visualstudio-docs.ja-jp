@@ -1,7 +1,7 @@
 ---
 title: ClickOnce での COM コンポーネントの配置 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -24,18 +24,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 2ddf7e14d3a9e1ceb2e1432e70942dd455621058
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a8a544f954ed80e9adb41e0730960c4947f6357a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536192"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246845"
 ---
 # <a name="deploying-com-components-with-clickonce"></a>ClickOnce での COM コンポーネントの配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce での COM コンポーネントの配置](https://docs.microsoft.com/visualstudio/deployment/deploying-com-components-with-clickonce)します。  
-  
 従来の COM コンポーネントのデプロイには、困難な作業がきました。 コンポーネントは、グローバルに登録する必要があるおり、したがって重複しているアプリケーション間では、望ましくない副作用が発生することができます。 このような状況問題には一般に .NET Framework アプリケーションでコンポーネントがアプリケーションに完全に分離されたまたはサイド バイ サイドでの互換性があるのためです。 Visual Studio、Windows XP または以上のオペレーティング システムの分離された COM コンポーネントを配置することができます。  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .NET アプリケーションをデプロイするための簡単で安全なメカニズムを提供します。 ただし、アプリケーションでは、従来の COM コンポーネントを使用する場合は、それらを展開するための追加の手順を実行する必要があります。 このトピックでは、分離された COM コンポーネントをデプロイして (たとえば、Visual Basic 6.0 または Visual C) からのネイティブ コンポーネントを参照する方法について説明します。  
@@ -69,7 +67,7 @@ ms.locfileid: "47536192"
   
 1.  Visual Basic 6.0 を使用して、**ファイル** メニューのをクリックして**新規**、し**プロジェクト**します。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**ノード、 **ActiveX DLL**プロジェクト。 **[名前]** ボックスに「`VB6Hello`」と入力します。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**ノード、 **ActiveX DLL**プロジェクト。 **[名前]** ボックスに「 `VB6Hello`」と入力します。  
   
     > [!NOTE]
     >  ActiveX の DLL と ActiveX コントロール プロジェクト型は、登録を必要としない COM; でサポートされます。ActiveX 実行可能ファイルと ActiveX ドキュメント プロジェクトの種類がサポートされていません。  
@@ -95,7 +93,7 @@ ms.locfileid: "47536192"
   
 1.  Visual Basic の場合を使用して、**ファイル** メニューのをクリックして**新規**、し**プロジェクト**します。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**ノード**Windows アプリケーション**します。 **[名前]** ボックスに「`RegFreeComDemo`」と入力します。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual Basic**ノード**Windows アプリケーション**します。 **[名前]** ボックスに「 `RegFreeComDemo`」と入力します。  
   
 3.  **ソリューション エクスプ ローラー**、クリックして、 **すべてのファイル**プロジェクト参照を表示するボタンをクリックします。  
   

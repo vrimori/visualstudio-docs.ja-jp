@@ -1,7 +1,7 @@
 ---
 title: マネージ コードをカスタム コード分析チェックイン ポリシーの実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 6f0fe69b8afd4a33a783126b6006cbbb5545ba3f
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 82f360bb9dc256fd78a8b06aca66d9e49c57ab22
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548351"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49268971"
 ---
 # <a name="implementing-custom-code-analysis-check-in-policies-for-managed-code"></a>マネージド コード用のカスタム コード分析チェックイン ポリシーの実装
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[マネージ コードのチェックイン ポリシーを実装するカスタム コード分析](https://docs.microsoft.com/visualstudio/code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code)します。  
-  
 コード分析チェックイン ポリシーを一連のルールをバージョン管理にチェックインする前に、チーム プロジェクトのメンバーがソース コードに対して実行する必要がありますを指定します。 標準のセットを提供する Microsoft*ルール セット*そのグループのコード分析ルール機能領域に挿入します。 *カスタム チェックイン ポリシーの規則セット*チーム プロジェクトに固有のコード分析規則のセットを指定します。 規則セットは、.ruleset ファイルに格納されます。  
   
  チェックイン ポリシーは、チーム プロジェクト レベルで設定し、バージョン コントロール ツリーの .ruleset ファイルの場所で指定されました。 チームのポリシーのカスタム規則セットのバージョン管理の場所に制限はありません。  

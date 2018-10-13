@@ -1,7 +1,7 @@
 ---
 title: ドメイン固有言語における検証 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 2ba087620d926c651be18c8993d992d3bc498952
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 75df1e1f2bbc5bc5c3bdd56b8c16f0587f18751b
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545131"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263641"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ドメイン固有言語における検証](https://docs.microsoft.com/visualstudio/modeling/validation-in-a-domain-specific-language)です。  
-  
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。  
   
  開かれたとき、モデルが保存されるときと、ユーザーが明示的に実行するときに実行する検証制約があることができます、**検証**メニュー コマンド。 検証をプログラム制御の下で実行することもできます。 たとえば、プロパティ値またはリレーションシップの変更に応じて検証を実行できます。  

@@ -1,7 +1,7 @@
 ---
 title: 共通のデータ ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,22 +17,20 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1253d6ca6a2dc80c1d8875e729f532944038b1b0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4bcd83f3be97400b3b6f52646732d7a82ddd2849
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535628"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49255880"
 ---
 # <a name="common-data-views"></a>共通のデータ ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[共通のデータ ビュー](https://docs.microsoft.com/visualstudio/profiling/common-data-views)します。  
-  
 ここでは、すべてのプロファイル方法に共通のプロファイラー データ ファイルのビューとレポートに関するリファレンス情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要ビュー](../profiling/summary-view.md)  
+ [概要 ビュー](../profiling/summary-view.md)  
  概要ビューとレポートについて説明します。 データ列はプロファイル方法に応じて異なります。  
   
  [呼び出し元/呼び出し先ビュー](../profiling/caller-callee-view.md)  

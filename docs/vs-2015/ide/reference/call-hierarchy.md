@@ -1,7 +1,7 @@
 ---
 title: 呼び出し階層 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 45
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 212109c37e1c85d5ddbc55413ab5a972edbfa337
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 07d4cdc8551f7c8a8dbbcc14f682001a4bc8d83a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592735"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260085"
 ---
 # <a name="call-hierarchy"></a>呼び出し階層
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[呼び出し階層](https://docs.microsoft.com/visualstudio/ide/reference/call-hierarchy)します。  
-  
   
 呼び出し階層は、選択したメソッド、プロパティ、またはコンストラクターとの間のすべての呼び出しを表示することによって、コード内を移動することができます。 これにより、コード フローをより理解して、コードへの変更の効果を評価することができます。 複数のコードのレベルを調査して、メソッド呼び出しの複雑なチェーンとコードへの追加のエントリ ポイントを表示することで、すべての実行可能なパスを調べることができます。  
   

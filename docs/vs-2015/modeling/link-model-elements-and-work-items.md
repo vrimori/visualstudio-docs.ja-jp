@@ -1,7 +1,7 @@
 ---
 title: モデル要素をリンクし、作業項目 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 49
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 603438fda4c2f883376292b68896309a4e669be5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e3c2a7558adb9036cec474429da9778394e8c1f9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546310"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263928"
 ---
 # <a name="link-model-elements-and-work-items"></a>モデル要素と作業項目とのリンク
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデル要素をリンクし、作業項目](https://docs.microsoft.com/visualstudio/modeling/link-model-elements-and-work-items)します。  
-  
 Visual Studio のモデル要素と Team Foundation Server または Visual Studio Team Services の作業項目をリンクすることで、タスク、テスト ケース、バグ、要件、問題、およびモデルに関連するその他の作業を追跡します。 ドキュメントを、リンクされた作業項目にアタッチしてモデル要素に関連付けます。  
   
  この機能をサポートする Visual Studio のバージョンを確認するには、「 [アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
@@ -145,7 +143,7 @@ Visual Studio のモデル要素と Team Foundation Server または Visual Stud
 1.  **チーム エクスプローラー**で、モデル要素が作業項目にリンクされているチーム プロジェクトに接続していることを確認します。  
   
     > [!NOTE]
-    >  リンクされたモデル要素を表示するために使用できるのは、Team Web Access ではなく、チーム エクスプローラーだけです。 ワークスペースが、モデリング図またはモデリング要素を含むモデリング プロジェクトにマップされていることを確認します。 ワークスペースがない場合は、作成する必要があります。 参照してください[トラブルシューティング](#Troubleshooting)と[ワークスペースの作成と操作](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)します。  
+    >  リンクされたモデル要素を表示するために使用できるのは、Team Web Access ではなく、チーム エクスプローラーだけです。 ワークスペースが、モデリング図またはモデリング要素を含むモデリング プロジェクトにマップされていることを確認します。 ワークスペースがない場合は、作成する必要があります。 「 [トラブルシューティング](#Troubleshooting) 」および「 [ワークスペースの作成と操作](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)」を参照してください。  
   
 2.  作業項目を開き、 **[リンク]** をクリックします。 **[モデル リンク]** で、リンクされたモデル要素のショートカット メニューを開きます。 **[リンクされた項目を開く]** をクリックします。  
   
@@ -173,7 +171,7 @@ Visual Studio のモデル要素と Team Foundation Server または Visual Stud
   
 |**問題点**|**原因**|**解決策**|  
 |---------------|------------------------|--------------------|  
-|リンクするモデル要素が見つかりません。|要素が [!INCLUDE[esprscc](../includes/esprscc-md.md)]内にあるモデリング プロジェクトの図に含まれる可能性があります。 図にマップするワークスペースがない可能性があります。|ワークスペースをモデリング プロジェクトと図にマップします。 ワークスペースがない場合は、作成する必要があります。<br /><br /> この問題に対して表示されるエラー メッセージには、ワークスペースをマップするために使用できるパスが含まれます。<br /><br /> 参照してください[ワークスペースの作成と操作](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)します。|  
+|リンクするモデル要素が見つかりません。|要素が [!INCLUDE[esprscc](../includes/esprscc-md.md)]内にあるモデリング プロジェクトの図に含まれる可能性があります。 図にマップするワークスペースがない可能性があります。|ワークスペースをモデリング プロジェクトと図にマップします。 ワークスペースがない場合は、作成する必要があります。<br /><br /> この問題に対して表示されるエラー メッセージには、ワークスペースをマップするために使用できるパスが含まれます。<br /><br /> 「 [ワークスペースの作成と操作](http://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a)」を参照してください。|  
 |リンクされたモデル要素が見つかりません。|リンクされた要素が存在する図が、移動、名前変更、または削除されている可能性があります。|1.作業項目で、モデル要素へのリンクを削除します。<br />2.作業項目からモデル要素に新しいリンクを作成します。|  
 |想定しているリンク済みモデル要素が作業項目にありません。|リンクが作業項目から作成された場合にのみ、リンクされたレイヤー要素が作業項目に表示されます。 [!INCLUDE[esprscc](../includes/esprscc-md.md)]を使用していない場合は、図のローカル パスを使用してリンクを作成します。 モデリング プロジェクトとその図が [!INCLUDE[esprscc](../includes/esprscc-md.md)]内にある場合は、プロジェクトにアクセスできるすべてのチーム メンバーが、作業項目でリンクされた要素を見ることができます。|作業項目を更新してみてください。|  
 |作業項目を起点としてモデル要素へのリンクを削除しても、モデル要素から作業項目へのリンクが削除されません。||モデル要素を起点として作業項目へのリンクを削除します。|  

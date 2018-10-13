@@ -1,7 +1,7 @@
 ---
 title: コード分析チェックイン ポリシーのバージョンの互換性 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 17
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e5d243ecda08dde83bf2dbc77595d4df3849cf54
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 840a12e7f4c0e3853e885a803dea5a92e05a5a27
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544900"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49261483"
 ---
 # <a name="version-compatibility-for-code-analysis-check-in-policies"></a>コード分析を用いたチェックイン ポリシーに関するバージョンの互換性
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード分析チェックイン ポリシーのバージョンの互換性](https://docs.microsoft.com/visualstudio/code-quality/version-compatibility-for-code-analysis-check-in-policies)します。  
-  
 評価およびコード分析チェックイン ポリシーの異なるバージョンを使用して作成する必要がある場合[!INCLUDE[esprtfc](../includes/esprtfc-md.md)]、方法の違いを理解する必要があります[!INCLUDE[vstsTfsOrcasLong](../includes/vststfsorcaslong-md.md)]と[!INCLUDE[vstsTfsRosarioShort](../includes/vststfsrosarioshort-md.md)]チェックイン ポリシーを評価します。  
   
 ## <a name="version-compatibility-for-evaluating-check-in-policies"></a>チェックイン ポリシーを評価するためのバージョンの互換性  

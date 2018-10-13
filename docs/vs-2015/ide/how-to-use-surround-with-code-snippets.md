@@ -1,7 +1,7 @@
 ---
 title: '方法 : surround-with コード スニペットを使用する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 22
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 05b69501f5b3400836209d23fb204113e0c611a4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0ea8f6cf3ddaae2d448cf3065b6de9b948adc847
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537940"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49266917"
 ---
 # <a name="how-to-use-surround-with-code-snippets"></a>方法 : surround-with コード スニペットを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: 使用 surround-with コード スニペット](https://docs.microsoft.com/visualstudio/ide/how-to-use-surround-with-code-snippets)します。  
-  
 ここでは、surround-with コード スニペットを使用する方法について説明します。 surround-with コード スニペットは 3 つの方法 (キーボード ショートカット、[編集] メニュー、コンテキスト メニュー) で使用できます。  
   
 ### <a name="to-use-surround-with-code-snippets-through-keyboard-shortcut"></a>キーボード ショートカットを用いて surround-with コード スニペットを使用するには  

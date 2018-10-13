@@ -1,7 +1,7 @@
 ---
 title: '方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2bbf355caf4a67e54a53f7447f813bf5870b9086
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6ae389e3bfe32e2e040da5bef3f41a51ff69555d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534563"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245480"
 ---
 # <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>方法: 1 つのクラスを複数の部分クラスに分割する (クラス デザイナー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: クラスを部分クラス (クラス デザイナー) に分割](https://docs.microsoft.com/visualstudio/ide/how-to-split-a-class-into-partial-classes-class-designer)します。  
-  
 複数の宣言間でクラスまたは構造体の宣言を分割できます。Visual Basic の場合、`Partial` キーワードを、Visual C# の場合、`partial` キーワードを使用します。 部分宣言は必要な数だけ使用できます。複数のソース ファイルで使用することも、1 つのソース ファイルで使用することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
  部分クラスはいくつかの状況で便利です。 たとえば、大規模なプロジェクトで作業しているとき、クラスを複数のファイルに分割すれば、複数のプログラマーが同時に作業できます。 Visual Studio によって生成されたコードを使用しているとき、ソース ファイルを再作成しなくてもクラスを変更できます。 (Visual Studio によって生成されたコードの例には、Windows フォームと Web サービス ラッパー コードが含まれています。)Visual Studio によって作成されたファイルを変更せずに、自動生成クラスを使用するコードを作成できます。  

@@ -1,7 +1,7 @@
 ---
 title: データベース オブジェクトのスキーマ情報を取得できませんでした&lt;オブジェクト名&gt;|Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 293b9b86f4da5f5fe91b93362322bccf17629b03
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a9acf56e852d800de6201fa343e9c2e145f0c0c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545480"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248094"
 ---
 # <a name="could-not-retrieve-schema-information-for-database-object-ltobject-namegt"></a>データベース オブジェクトのスキーマ情報を取得できませんでした&lt;オブジェクト名&gt;
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[データベース オブジェクトのスキーマ情報を取得できませんでした&lt;オブジェクト名&gt;](https://docs.microsoft.com/visualstudio/data-tools/could-not-retrieve-schema-information-for-database-object-object-name)します。  
-  
   
 このメッセージが表示されるは通常のオブジェクトと**サーバー エクスプ ローラー/データベース エクスプ ローラー**がクリップボードにコピー、データベースから削除し、デザイナーに貼り付けたおよびします。 データベース オブジェクトはもう存在しないので、このメッセージが表示されます。  
   

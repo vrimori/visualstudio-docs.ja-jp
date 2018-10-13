@@ -1,7 +1,7 @@
 ---
 title: 言語サービスとコア エディター |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e03199a6-ad5f-4075-bfba-8d36865112b7
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c6de7975c085073bf9082f77499a6456b44a55b1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9a1ccca0b20a681505ef197c4eefad1b3a813af6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539778"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49218323"
 ---
 # <a name="language-services-and-the-core-editor"></a>言語サービスとコア エディター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[言語サービスとコア エディター](https://docs.microsoft.com/visualstudio/extensibility/language-services-and-the-core-editor)します。  
-  
 Visual Studio のエディターは、言語サービスに頻繁に関連付けられます。 その他のものは、言語サービスは、構文の色分け表示、ステートメント入力候補、IntelliSense、およびテキストの書式設定を提供します。  
   
 ## <a name="core-editors-and-document-data-objects"></a>コア エディターやドキュメント データ オブジェクト  

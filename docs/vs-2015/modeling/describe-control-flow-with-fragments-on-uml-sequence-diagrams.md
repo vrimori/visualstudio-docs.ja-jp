@@ -1,7 +1,7 @@
 ---
 title: UML シーケンス図のフラグメントを使用した制御フローを説明 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,24 +20,22 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 05cb3be018db16a2377132896a98f0d2b13bfa07
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c90270876721f2a43c78375108608064d325b39a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544833"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49260222"
 ---
 # <a name="describe-control-flow-with-fragments-on-uml-sequence-diagrams"></a>UML シーケンス図のフラグメントを使用した制御フローの記述
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML シーケンス図のフラグメントを使用した制御フローの記述](https://docs.microsoft.com/visualstudio/modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams)します。  
-  
 UML シーケンス図では、 *結合フラグメント* を使用して、ループ、分岐、およびその他のオルタナティブを表示できます。  
   
  結合フラグメントは、1 つまたは複数の *相互作用オペランド*で構成されます。そのそれぞれには、1 つまたは複数のメッセージ、相互作用使用、または結合フラグメントが含まれます。  
   
 > [!NOTE]
->  このトピックでは、シーケンス図におけるフラグメントについて説明します。 UML シーケンス図を読み取る方法の詳細については、次を参照してください。 [UML シーケンス図: リファレンス](../modeling/uml-sequence-diagrams-reference.md)します。 UML シーケンス図を描画する方法の詳細については、次を参照してください。 [UML シーケンス図: ガイドライン](../modeling/uml-sequence-diagrams-guidelines.md)します。  
+>  このトピックでは、シーケンス図におけるフラグメントについて説明します。 UML シーケンス図を読み取る方法の詳細については、次を参照してください。 [UML シーケンス図: リファレンス](../modeling/uml-sequence-diagrams-reference.md)します。 UML アクティビティ図を描画する方法の詳細については、「 [UML Sequence Diagrams: Guidelines](../modeling/uml-sequence-diagrams-guidelines.md)」を参照してください。  
   
  ![結合フラグメントでは 2 つの相互作用オペランドを](../modeling/media/uml-seqfragments.png "UML_SeqFragments")  
   

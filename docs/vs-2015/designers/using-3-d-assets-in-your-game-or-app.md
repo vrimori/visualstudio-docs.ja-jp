@@ -1,7 +1,7 @@
 ---
 title: ゲームまたはアプリでの 3-D アセットの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9ab73f8ecdb9507459c7214de37b2349c01062f1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 09035e985926e3f1db3bd2dd1fc2bc009f111e33
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49226311"
 ---
 # <a name="using-3-d-assets-in-your-game-or-app"></a>ゲームまたはアプリケーションでの 3-D アセットの使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[、ゲームまたはアプリでの 3-D アセットを使用して](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app)します。  
-  
 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] を使用して 3-D アセットを処理し、ビルドに含める方法について説明します。  
   
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のツールを使用して 3-D アセットを作成したら、次の手順はアプリケーションでそれらを使用することです。 ただし、これらを使用する前に、DirectX が理解できる形式にアセットを変換する必要があります。 アセットを変換しやすいように、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] には、生成できるアセットの種類ごとにビルドのカスタマイズが用意されています。 アセットをビルドに含めるには、ビルドのカスタマイズを使用するようにプロジェクトを構成し、プロジェクトにアセットを追加し、正しいビルドのカスタマイズを使用するようにアセットを構成するだけです。 その後でアプリケーションにアセットを読み込み、他の DirectX アプリケーションと同様に DirectX リソースを作成して入力することにより、アセットを使用できます。  

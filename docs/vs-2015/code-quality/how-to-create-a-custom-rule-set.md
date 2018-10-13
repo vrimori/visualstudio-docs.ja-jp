@@ -1,7 +1,7 @@
 ---
 title: '方法: カスタム規則セットの作成 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: ee21452912fa87b63b49db609828ef44cac7c4c3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e4b6c401b602575b34fb80ab98b31bb4ebcd1620
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536784"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49255503"
 ---
 # <a name="how-to-create-a-custom-rule-set"></a>方法: カスタム規則セットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: カスタム規則セットを作成する](https://docs.microsoft.com/visualstudio/code-quality/how-to-create-a-custom-rule-set)します。  
-  
 [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]、 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]、および[!INCLUDE[vsPro](../includes/vspro-md.md)]、作成して、カスタムの変更*ルール セット*コード分析に関連付けられている特定のプロジェクトのニーズを満たします。 カスタム規則セットを作成するには、1 つ以上の標準規則セットを規則セット エディターで開きます。 その後で、特定の規則を追加または削除したり、コード分析で規則への違反が検出されたときに発生するアクションを変更したりできます。  
   
  新規のカスタム規則セットを作成する場合は、新しいファイル名を使用して保存します。 作成したカスタム規則セットは、自動的にプロジェクトに割り当てられます。  

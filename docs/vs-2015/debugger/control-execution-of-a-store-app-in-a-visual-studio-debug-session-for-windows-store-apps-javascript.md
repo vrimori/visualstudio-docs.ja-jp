@@ -1,7 +1,7 @@
 ---
 title: Windows ストア アプリ (JavaScript) 用の Visual Studio デバッグ セッションでのストア アプリの実行の制御 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 583754b01f25509146bc3e3924e5132288a05285
-ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
+ms.openlocfilehash: 598785a54980c73928a8d38b73fb105bc8bbe775
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881138"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49275523"
 ---
 # <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Windows ストア アプリ用の Visual Studio デバッグ セッションでの、ストア アプリの実行制御 (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Windows ストア アプリ (JavaScript) 用の Visual Studio デバッグ セッションで、ストア アプリの実行を制御](https://docs.microsoft.com/visualstudio/debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript)します。  
-  
 このクイック スタートでは、Visual Studio デバッガー内を移動する方法と、セッションでのプログラムの状態を表示する方法を示します。  
   
  Visual Studio でのデバッグに慣れていない開発者や、Visual Studio でのデバッグ セッション間の移動について詳しく学習したい開発者向けです。 デバッグ自体の手法については説明しません。 サンプル コードの関数は、このトピックで説明しているデバッグ手順を示すためだけに設計されています。 これらの関数は、アプリまたは関数の設計に関するベスト プラクティスに従ったものではありません。 実際、すぐにわかるように、関数もアプリ自体もほとんど何もしません。  

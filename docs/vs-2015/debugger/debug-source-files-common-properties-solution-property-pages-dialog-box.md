@@ -1,7 +1,7 @@
 ---
 title: ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックスのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -31,18 +31,16 @@ caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b94306c44b8a19d1fbf924fe361d317dd911110b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 08e2dcac4c105753febc86d3bec6e5dc0035e268
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535403"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253813"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>[デバッグ ソース ファイル] ([ソリューション プロパティ ページ] ダイアログ ボックス - [共通プロパティ])
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグ ソース ファイル、一般的なプロパティは、ソリューション プロパティ ページ ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/debug-source-files-common-properties-solution-property-pages-dialog-box)します。  
-  
 このプロパティ ページでは、ソリューションのデバッグ時にデバッガーによってソース ファイルが検索される場所を指定します。  
   
  アクセスする、**デバッグ ソース ファイル**プロパティ ページで、ソリューションを右クリック**ソリューション エクスプ ローラー**選択**プロパティ**ショートカット メニューから。 展開、**共通プロパティ**フォルダー、およびクリック、**デバッグ ソース ファイル**ページ。  

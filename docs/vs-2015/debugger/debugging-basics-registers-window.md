@@ -1,7 +1,7 @@
 ---
 title: 'デバッグの基礎: [レジスタ] ウィンドウ |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -26,18 +26,16 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 201f9b1401889aacfbf748962d472cb4323ec0bb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: fa204726632f55ad6aa1b79e0b9d071864a5dcaa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536798"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49210302"
 ---
 # <a name="debugging-basics-registers-window"></a>デバッグの基礎 : [レジスタ] ウィンドウ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグの基礎: [レジスタ] ウィンドウ](https://docs.microsoft.com/visualstudio/debugger/debugging-basics-registers-window)します。  
-  
 **登録**ウィンドウのアドレス レベルのデバッグが有効になっている場合にのみ使用できますが、**オプション**ダイアログ ボックスで、**デバッグ**ノード。  
   
  レジスタとは、プロセッサ (CPU) 内部の特殊な場所で、プロセッサが処理している小さなデータを格納するために使用します。 ソース コードをコンパイルまたは解釈すると、必要に応じて、メモリのデータをレジスタに移動して再びメモリに戻す命令が生成されます。 メモリのデータにアクセスするよりもレジスタのデータにアクセスする方が速いため、データをレジスタに保管しておいて繰り返しアクセスできるようにプロセッサに対して許可するコードは、レジスタの読み込みとアンロードを繰り返す必要のあるコードよりも高速です。 コンパイラがレジスタにデータを保管してほかの最適化を実行するのを簡単にするには、グローバル変数を使用せずに、できる限りローカル変数を使用します。 この方法で書かれたコードは、データ参照の局所性が高いコードと呼ばれます。 C や C++ などの一部の言語では、可能な限り常時レジスタに変数を保管するようにコンパイラに指示するレジスタ変数をプログラマが宣言できます。 詳細については、次を参照してください。 [Register Keyword](http://msdn.microsoft.com/en-us/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)します。  

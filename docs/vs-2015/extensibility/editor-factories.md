@@ -1,7 +1,7 @@
 ---
 title: エディター ファクトリ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: cf4e8164-3546-441d-b465-e8a836ae7216
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 645dd84b7a864a160e48582b92fbc44b8708309b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 97f53e944e140948b769c351fef6c9b91f4aa008
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535402"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246910"
 ---
 # <a name="editor-factories"></a>エディター ファクトリ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エディター ファクトリ](https://docs.microsoft.com/visualstudio/extensibility/editor-factories)します。  
-  
 エディター ファクトリは、エディターのオブジェクトを作成し、物理ビューと呼ばれる、ウィンドウ フレームに配置されます。 ドキュメント データとエディターとデザイナーを作成するために必要なドキュメント ビュー オブジェクトを作成します。 Visual Studio のコア エディターと任意の標準エディターを作成する、エディター ファクトリが必要です。 エディター ファクトリのカスタム エディターを作成もできます。  
   
  実装することで、エディター ファクトリを作成する、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>インターフェイス。 次の例は、実装する方法を示しています。<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>エディター ファクトリを作成します。  

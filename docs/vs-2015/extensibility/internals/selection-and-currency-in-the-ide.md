@@ -1,7 +1,7 @@
 ---
 title: 選択と、IDE で通貨 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 87796930b8b1f76e7601bfd2dbffdddcf8d32da6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0fe6d5cb678cade67ef9e46e9b3c113c988bf879
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537819"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49270934"
 ---
 # <a name="selection-and-currency-in-the-ide"></a>IDE での選択と通貨
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[の選択と、IDE で通貨](https://docs.microsoft.com/visualstudio/extensibility/internals/selection-and-currency-in-the-ide)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]選択を使用してユーザーの情報がオブジェクトに現在選択されている統合開発環境 (IDE) の保持*コンテキスト*します。 選択範囲のコンテキストで Vspackage を活用する通貨の 2 つの方法で追跡。  
   
 -   によって、通貨については、IDE に Vspackage を伝達します。  

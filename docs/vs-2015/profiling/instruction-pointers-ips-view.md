@@ -1,7 +1,7 @@
 ---
 title: 命令ポインター (IP) ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -23,18 +23,16 @@ caps.latest.revision: 22
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 822af38922782996126443f3c664c3dd7d5d44ea
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 457aa922bbc386d3bc2b7b62296a6d876c42f601
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535699"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251746"
 ---
 # <a name="instruction-pointers-ips-view"></a>命令ポインター (IP) ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[命令ポインター (Ip) ビュー](https://docs.microsoft.com/visualstudio/profiling/instruction-pointers-ips-view)します。  
-  
 命令ポインター ビューでは、サンプリング プロファイリング中に実行される特定の命令を確認できます。  
   
  このビューは、インストルメンテーション プロファイリング中は使用できません。  

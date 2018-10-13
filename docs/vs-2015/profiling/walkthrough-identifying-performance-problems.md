@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: パフォーマンスの問題を特定する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 58
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3227329f972dcb8d3aba4380ca816f137ef06f6c
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: be81688429d6a7d9d8d2cc5fa3e1e1a5662d1263
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537801"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49274483"
 ---
 # <a name="walkthrough-identifying-performance-problems"></a>チュートリアル: パフォーマンスの問題を特定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: パフォーマンスの問題を識別する](https://docs.microsoft.com/visualstudio/profiling/walkthrough-identifying-performance-problems)します。  
-  
 このチュートリアルでは、アプリケーションのプロファイルを行ってパフォーマンス上の問題を特定する方法を示します。  
   
  このチュートリアルでは、マネージド アプリケーションのプロファイリングを行う方法と、サンプリングおよびインストルメンテーションを使用してアプリケーションのパフォーマンス上の問題を特定する方法について、順をおって説明します。  
