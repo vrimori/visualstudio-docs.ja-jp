@@ -1,7 +1,7 @@
 ---
 title: プロジェクトのタイプの基本情報 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dd2c0db72cce80f5345475dfd7e82b019b0ec22a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3f4f2163526e1bd324e87b6ffd78bafa98965490
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222483"
 ---
 # <a name="project-type-essentials"></a>プロジェクト タイプの基本情報
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プロジェクト タイプの基本情報](https://docs.microsoft.com/visualstudio/extensibility/internals/project-type-essentials)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] などの言語のいくつかのプロジェクトの種類が含まれている[!INCLUDE[csprcs](../../includes/csprcs-md.md)]または[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] また、独自のプロジェクトの種類を作成してできます。  
   
  カスタム コマンド、エディター、またはツール ウィンドウを追加する場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、新しいプロジェクトの種類を作成することがなく行うことができます。 詳細については、次のトピックを参照してください。  

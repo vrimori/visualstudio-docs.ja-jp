@@ -1,7 +1,7 @@
 ---
 title: 追加のパフォーマンス データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c4ce6ca9619d60851d03bf5827741f30f3c0f6a0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: a72898b7880900a9c767ba765dc7fe7da74904fe
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534934"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49198719"
 ---
 # <a name="collecting-additional-performance-data"></a>追加のパフォーマンス データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[追加のパフォーマンス データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-additional-performance-data)します。  
-  
 [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] プロファイリング ツールでは、プロファイル方法を使用して収集するデータ以外に、追加のデータを記録および表示できます。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

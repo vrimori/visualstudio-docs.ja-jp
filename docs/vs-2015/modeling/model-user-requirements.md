@@ -1,7 +1,7 @@
 ---
 title: ユーザーの要件をモデル化 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 30
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 1e7628db84a8f7515dfdf3ba9110ce1183751d8d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7ac55e2ec1d07c32c154b69cd467dfc534da6ae3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544963"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49215827"
 ---
 # <a name="model-user-requirements"></a>ユーザー要件のモデリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ユーザー要件をモデル化](https://docs.microsoft.com/visualstudio/modeling/model-user-requirements)します。  
-  
 Visual Studio を使用すると、ユーザーの目標達成を支援する際に、彼らのアクティビティやシステムが果たしている役割に関する図を描画することで、ユーザー ニーズを理解し、検討し、やり取りすることができます。 要求モデルとはこのような一連の図のことで、それぞれの図では、ユーザー ニーズの異なる側面に注目しています。 ビデオ デモについては、「 [ビジネス ドメインのモデリング](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)」を参照してください。  
   
  どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。  
@@ -143,7 +141,7 @@ Visual Studio を使用すると、ユーザーの目標達成を支援する際
 |概念クラス図の要素|[UML クラス図: リファレンス](../modeling/uml-class-diagrams-reference.md)|  
 |概念クラスからコードを開発する方法|[アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)|  
   
- 概念クラス図では通常、移動方向を表すために、関連付けに矢印を配置しても役に立ちません。 これは、図が実装を表していないためです。 関連付けは、現実世界のオブジェクト間の関係を表します。 次[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]して矢印の方向性のない、既定の拡張機能:[サンプル: UML ドメイン モデリング機能](http://go.microsoft.com/fwlink/?LinkId=213849)します。  
+ 概念クラス図では通常、移動方向を表すために、関連付けに矢印を配置しても役に立ちません。 これは、図が実装を表していないためです。 関連付けは、現実世界のオブジェクト間の関係を表します。 次の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 拡張機能では、方向性を示さない矢印が既定の設定になります: [サンプル: UML ドメイン モデリング機能](http://go.microsoft.com/fwlink/?LinkId=213849)  
   
 ##  <a name="BusinessRules"></a> Showing Business Rules  
  ビジネス ルールとは、特定のユース ケースに関連付けられておらず、システム全体で認められる要求です。  

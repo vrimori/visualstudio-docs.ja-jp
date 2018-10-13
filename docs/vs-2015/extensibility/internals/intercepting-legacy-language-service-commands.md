@@ -1,7 +1,7 @@
 ---
 title: レガシ言語サービスのコマンドをインターセプト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3b1a5af3de224a27d6b0078327411891bb8d1327
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 96a641778811d88c0087a23822ab789e72b066f0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49190009"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>従来の言語サービスのコマンドの受信
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[レガシ言語サービス コマンドのインターセプト](https://docs.microsoft.com/visualstudio/extensibility/internals/intercepting-legacy-language-service-commands)します。  
-  
 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、テキスト ビューの処理とそれ以外の場合、言語サービス インターセプト コマンドがあることができます。 これは、テキスト ビューが管理していない言語固有の動作に役立ちます。 テキスト ビューに、言語サービスから 1 つまたは複数のコマンドのフィルターを追加することで、これらのコマンドを傍受できます。  
   
 ## <a name="getting-and-routing-the-command"></a>取得して、コマンドのルーティング  

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 拡張機能の開発を始める |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
 caps.latest.revision: 30
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 441abc9254fac5b70270fc622740d03ecc43d512
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 96f98fe27812235d742d5a116f930ab8e70b2cd0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535777"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224160"
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能の開発を開始しています
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio 拡張機能の開発を開始しています](https://docs.microsoft.com/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)します。  
-  
 前に Visual Studio 拡張機能を初めて作成する場合、いくつか質問がある可能性があります。 ここで、最も一般的なものの一部を示しています。 探している情報が表示されない場合は、フィードバック ボタンを使用して (**このページに立ちましたか?** 画面の下部にある) する情報を確認します。  
   
 ## <a name="what-software-do-i-need-to-develop-visual-studio-extensions"></a>Visual Studio 拡張機能を開発するために必要なソフトウェアはなんですか。  

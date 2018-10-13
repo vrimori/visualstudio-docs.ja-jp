@@ -1,7 +1,7 @@
 ---
 title: HTML、CSS、および JavaScript サンプル コードのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 16
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df54fb1bc1555f5f1327921d8e35ee5e7599f0d8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5ba252c237c519f34ad407ab78997a02e87675fa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536195"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49241346"
 ---
 # <a name="debug-html-css-and-javascript-sample-code"></a>HTML、CSS、および JavaScript サンプル コードのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグ HTML、CSS、および JavaScript サンプル コード](https://docs.microsoft.com/visualstudio/debugger/debug-html-css-and-javascript-sample-code)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  このトピックのコードのサンプル ファイルは、[クイック スタート: デバッグの HTML および CSS](../debugger/quickstart-debug-html-and-css.md)します。 クイック スタートの設計上のエラーは、このバージョンのコードで修正されています。  

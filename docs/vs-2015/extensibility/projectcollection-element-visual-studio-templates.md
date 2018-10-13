@@ -1,7 +1,7 @@
 ---
 title: ProjectCollection 要素 (Visual Studio テンプレート) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: deb27180-2035-49ed-b835-c47bb3cd2f8f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6ca66c8cf18c891d7f9a771495af14eb4cc9921
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2e72ad9bafbef9ae7138ca77055d7db9e7cc2575
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548046"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49238031"
 ---
 # <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection 要素 (Visual Studio Templates)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ProjectCollection 要素 (Visual Studio テンプレート)](https://docs.microsoft.com/visualstudio/extensibility/projectcollection-element-visual-studio-templates)します。  
-  
 複数プロジェクトのテンプレートの構成と内容を指定します。  
   
  \<VSTemplate>  

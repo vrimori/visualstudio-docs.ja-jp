@@ -1,7 +1,7 @@
 ---
 title: Visual Studio テンプレート マニフェスト スキーマ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -10,18 +10,16 @@ ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 caps.latest.revision: 4
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b079e6b7356cdd84a98314beef95f4b1a8fbc5ee
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 28301729091333191bcb0c381e37e20d3d9c53aa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535942"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49217096"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ参照
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio テンプレート マニフェスト スキーマ参照](https://docs.microsoft.com/visualstudio/extensibility/visual-studio-template-manifest-schema-reference)します。  
-  
 このスキーマは、Visual Studio のプロジェクトや項目テンプレートに対して生成された Visual Studio テンプレート マニフェスト (.vstman) ファイルの形式について説明し、場所と、テンプレートに関するその他の関連情報について説明します。  
   
  : ため、個別の項目とプロジェクト テンプレートのディレクトリがある、マニフェストが項目とプロジェクト テンプレートが混在していることはありません。  

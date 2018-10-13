@@ -1,7 +1,7 @@
 ---
 title: 概要ビュー - サンプリング データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fdfa43dab60268eb428c2affbc6ad072e04b45cc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3e88a974c38ab4538faa0ebf6163ec2d8e92db8e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537376"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232977"
 ---
 # <a name="summary-view---sampling-data"></a>概要ビュー - サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[概要ビュー - サンプリング データ](https://docs.microsoft.com/visualstudio/profiling/summary-view-sampling-data)します。  
-  
 概要ビューでは、プロファイリング実行で最もパフォーマンス負荷の高い関数についての情報を表示します。 通知リンクとレポート リストの説明など詳細については、「[Summary View](../profiling/summary-view.md) (概要ビュー)」をご覧ください。  
   
 > [!NOTE]
@@ -62,7 +60,7 @@ ms.locfileid: "47537376"
   
 ## <a name="see-also"></a>関連項目  
  [概要ビュー](../profiling/summary-view-dotnet-memory-data.md)   
- [概要ビュー](../profiling/summary-view-instrumentation-data.md)
+ [概要 ビュー](../profiling/summary-view-instrumentation-data.md)
 
 
 

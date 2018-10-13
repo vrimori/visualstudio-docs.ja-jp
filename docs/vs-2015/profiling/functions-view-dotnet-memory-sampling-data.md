@@ -1,7 +1,7 @@
 ---
 title: 関数ビュー - .NET メモリ サンプリング データ | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ac8c19c02754d17a8af3b5472ecd580948793962
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6382849660d7dea44286fc467d497502caef6180
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546146"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49224797"
 ---
 # <a name="functions-view---net-memory-sampling-data"></a>関数ビュー - .NET メモリ サンプリング データ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[関数ビュー - .NET メモリ サンプリング データ](https://docs.microsoft.com/visualstudio/profiling/functions-view-dotnet-memory-sampling-data)します。  
-  
 サンプリング メソッドを使用して収集された .NET メモリの割り当てプロファイル データの関数ビューには、プロファイル実行中にメモリを割り当てた関数が一覧表示され、割り当てのサイズと数が報告されます。  
   
 |Column|説明|  
@@ -52,7 +50,7 @@ ms.locfileid: "47546146"
 ## <a name="see-also"></a>関連項目  
  [関数ビュー - インストルメンテーション](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [関数ビュー](../profiling/functions-view-sampling-data.md)   
- [関数 ビュー](../profiling/functions-view-instrumentation-data.md)
+ [関数ビュー](../profiling/functions-view-instrumentation-data.md)
 
 
 

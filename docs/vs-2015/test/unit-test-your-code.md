@@ -1,7 +1,7 @@
 ---
 title: コードの単体テスト | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
 caps.latest.revision: 64
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a1c6c521e09795619af503e0a121e51f6edc33b9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 59d0de3dd53d7d9ab3a54fc11eb50666d39dfdc7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231219"
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コードの単体テスト](https://docs.microsoft.com/visualstudio/test/unit-test-your-code)します。  
-  
 単体テストを実行することにより、開発者およびテスト担当者は、[!INCLUDE[csharp_current_short](../includes/csharp-current-short-md.md)]、[!INCLUDE[vb_current_short](../includes/vb-current-short-md.md)]、および [!INCLUDE[cpp_current_short](../includes/cpp-current-short-md.md)] のプロジェクトでクラスのメソッドに論理エラーがないかどうかをすばやく確認できます。  
   
  単体テスト ツールには次の要素が含まれます。  

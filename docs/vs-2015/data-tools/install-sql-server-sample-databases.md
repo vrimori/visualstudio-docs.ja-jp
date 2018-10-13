@@ -1,7 +1,7 @@
 ---
 title: SQL Server サンプル データベースのインストール |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -11,18 +11,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8a7e82091d93a14e53eed4ee67da086ee1a3c892
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6b681a5ee965ac32120f72ac2e0064a72ce7fa76
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537651"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49213259"
 ---
 # <a name="install-sql-server-sample-databases"></a>SQL Server サンプル データベースをインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サンプル データベースの SQL Server のインストール](https://docs.microsoft.com/visualstudio/data-tools/install-sql-server-sample-databases)します。  
-  
   
 サンプル データベースは、SQL および LINQ クエリ、データ バインド、Entity Framework のモデル化して試してみる場合に便利です。  各データベース製品には、独自のサンプル データベースがあります。 Northwind と AdventureWorks は、人気のある 2 つの SQL Server サンプル データベースです。  
   

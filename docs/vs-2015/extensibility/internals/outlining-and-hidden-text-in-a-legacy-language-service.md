@@ -1,7 +1,7 @@
 ---
 title: 従来の言語サービスでのアウトラインと隠し文字 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 252c5221-2e64-461c-8dcf-b622e400e0be
 caps.latest.revision: 6
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 586c5d818c54894eea89149cab04b2481aaa9ce0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5de1a4cdf7d3b8ecd2cc1421e1647580ecb99c9a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546612"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49232519"
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>従来の言語サービスでのアウトラインと隠し文字
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[従来の言語サービスで非表示のテキストのアウトライン表示と](https://docs.microsoft.com/visualstudio/extensibility/internals/outlining-and-hidden-text-in-a-legacy-language-service)します。  
-  
 アウトライン表示できるようになりますテキスト行のシーケンスを 1 行に折りたたみます。 たとえば、C++ では、すべてのメソッドをメソッドのシグネチャのみを示す、1 行に折りたたむできます。 非表示のテキストは、表示または非表示にできるテキスト行のシーケンスです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

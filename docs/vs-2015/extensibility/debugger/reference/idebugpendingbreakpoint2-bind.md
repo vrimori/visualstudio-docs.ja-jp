@@ -1,7 +1,7 @@
 ---
 title: IDebugPendingBreakpoint2::Bind |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cd8ab4846796e872cc7de97e82efa719405d99c4
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e29ca2dbadf3a1ae1993723e6e0e3ba2de0c4936
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545090"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49188740"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IDebugPendingBreakpoint2::Bind](https://docs.microsoft.com/visualstudio/extensibility/debugger/reference/idebugpendingbreakpoint2-bind)します。  
-  
 この保留中のブレークポイントをコードの 1 つまたは複数の場所にバインドします。  
   
 ## <a name="syntax"></a>構文  

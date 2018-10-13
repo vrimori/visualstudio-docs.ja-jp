@@ -1,7 +1,7 @@
 ---
 title: グラフィックス ピクセル履歴 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4b37dab129c5eb19825746177cb30a5e20493399
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9ac64d352bfb6d6a35ea1bd9027d30f527aab116
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539254"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208365"
 ---
 # <a name="graphics-pixel-history"></a>グラフィックス ピクセル履歴
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[グラフィックス ピクセル履歴](https://docs.microsoft.com/visualstudio/debugger/graphics/graphics-pixel-history)します。  
-  
 Visual Studio Graphics Analyzer の [ピクセル履歴] ウィンドウでは、特定のピクセルが、ゲームまたはアプリのフレームの生成中に発生する Direct3D イベントによってどのように影響を受けるかを理解できます。  
   
  [ピクセル履歴] ウィンドウを次に示します。  

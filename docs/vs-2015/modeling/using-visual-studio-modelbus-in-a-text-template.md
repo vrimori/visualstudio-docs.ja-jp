@@ -1,7 +1,7 @@
 ---
 title: テキスト テンプレートで Visual Studio ModelBus の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3c6c3d9e35f14a03f8130982c562ba812ac11d6b
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6defdf3613f9ac8f270a8e0140115cdca2328e0c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548029"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49189398"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テキスト テンプレートで Visual Studio ModelBus を使用して](https://docs.microsoft.com/visualstudio/modeling/using-visual-studio-modelbus-in-a-text-template)します。  
-  
 含むモデルを読み取るテキスト テンプレートを記述するかどうかは[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ModelBus 参照、アクセス対象のモデルへの参照を解決する可能性があります。 その場合は、テキスト テンプレートと参照先のドメイン固有言語 (Dsl) を調整する必要があります。  
   
 -   参照の対象となっている DSL には、テキスト テンプレートからのアクセス用に構成された ModelBus Adapter が必要です。 他のコードから DSL にアクセスすることも、再構成されたアダプターが、標準の ModelBus アダプターだけでなく必要です。  
@@ -303,7 +301,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
     3.  移動します`MBProvider\Debugging\Sample.provide`し**追加**します。  
   
-3.  `Sample.consume` を開きます。  
+3.  `Sample.consume`を開きます。  
   
 4.  例の 1 つの図形をクリックし、[プロパティ] ウィンドウで次のようにクリックします **[...]。** MBR プロパティ。 ダイアログ ボックスで、次のようにクリックします。**参照**選択`Sample.provide`します。 要素のウィンドウでタスクの種類を展開し、要素の 1 つを選択します。  
   

@@ -1,7 +1,7 @@
 ---
 title: アクティビティ デザイナーの並列 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 44a63d905ee33ea5e19366e927f7fe371b4bc4eb
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f557eb013cb313321b336fb22fd1299e51faaa82
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539451"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49221580"
 ---
 # <a name="parallel-activity-designer"></a>Parallel アクティビティ デザイナー
 <xref:System.Activities.Statements.Parallel> アクティビティは、一連の子アクティビティを同時に実行するアクティビティです。  

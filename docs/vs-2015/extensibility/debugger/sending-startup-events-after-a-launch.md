@@ -1,7 +1,7 @@
 ---
 title: 起動の後のスタートアップ イベントの送信 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 21b98fccac32b50e6aec643a7b69832e65d53dd8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ae6986862021313650551cb12a38b68eaea72e35
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545975"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49186616"
 ---
 # <a name="sending-startup-events-after-a-launch"></a>起動の後のスタートアップ イベントの送信
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[送信スタートアップ イベント後に、起動](https://docs.microsoft.com/visualstudio/extensibility/debugger/sending-startup-events-after-a-launch)します。  
-  
 デバッグ エンジン (DE) がプログラムにアタッチされると、デバッグ セッションに、一連のスタートアップ イベントを送信します。  
   
  スタートアップ イベントが、デバッグ セッションに送信される、次のとおりです。  

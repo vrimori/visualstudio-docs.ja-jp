@@ -1,7 +1,7 @@
 ---
 title: DOM イベント リスナーの表示 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -22,18 +22,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7eeca4964df8e89511b1a077cace83484c35f44d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d9d6f5c913cb2868df1af25470eb69f84575ffab
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534690"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49223302"
 ---
 # <a name="view-dom-event-listeners"></a>DOM イベント リスナーの表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[View DOM イベント リスナー](https://docs.microsoft.com/visualstudio/debugger/view-dom-event-listeners)します。  
-  
 Windows および Windows Phone に適用されます] (../Image/windows_and_phone_content.png"windows_and_phone_content")  
   
  **イベント**DOM Explorer のタブには、DOM 要素に関連付けられているイベントが表示されます。 各最上位のノードで、**イベント** タブをアクティブなサブスクライバーを持つイベントを表します。 最上位のノードには、特定のイベントのために登録されたイベント リスナーを表すサブノードが含まれます。 イベント リスナーの表示に加えて、このタブを使用して、JavaScript コード内のイベント リスナーの場所に移動できます。 このトピックの情報は、HTML および JavaScript を使用するストア アプリに適用します。  
@@ -62,7 +60,7 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
 6.  DOM Explorer で、右上の [`Find`] を選択します。  
   
-7.  型`ListView`、し、Enter キーを押します。  
+7.  「 `ListView`」と入力して Enter キーを押します。  
   
 8.  必要に応じて、選択、 **[次へ]** を検索するボタン、`DIV`要素を表す、`ListView`コントロール (この要素には、`data-win-control`の値`WinJS.UI.ListView`)。  
   

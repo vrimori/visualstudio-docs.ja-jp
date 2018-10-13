@@ -1,7 +1,7 @@
 ---
 title: 1 つと複数タブのビュー |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: e3611704-349f-4323-b03c-f2b0a445d781
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 84893d8465316d35098efbc99eb7ba988fcbe8d5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1e429add1b4b18cff84a2933601c56c7b026db15
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545134"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49236003"
 ---
 # <a name="single-and-multi-tab-views"></a>単一タブと複数タブのビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[単一と複数タブ ビュー](https://docs.microsoft.com/visualstudio/extensibility/single-and-multi-tab-views)します。  
-  
 エディターでは、さまざまな種類のビューを作成できます。 1 つの例は、コード エディター ウィンドウで、もう 1 つは、フォーム デザイナー。  
   
  マルチタブのビューは、複数のタブのあるビューです。 たとえば、2 つのタブの下部に HTML エディター:**デザイン**と**ソース**、それぞれ論理ビューが表示されます。 デザイン ビューでは、web ページを構成する HTML が表示されます、他に、表示された web ページが表示されます。  

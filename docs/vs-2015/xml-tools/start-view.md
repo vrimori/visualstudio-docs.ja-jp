@@ -1,7 +1,7 @@
 ---
 title: 表示の開始 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c85849089351f016b43988f3bf778cd66ed9a166
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8f3ae39fa1b90140794b7dd4c571dabed2c12d95
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536917"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49234248"
 ---
 # <a name="start-view"></a>スタート ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スタート ビュー](https://docs.microsoft.com/visualstudio/xml-tools/start-view)します。  
-  
   
 スタート ビューは、XML スキーマ (XSD) デザイナーの起点です。 新しい XSD ファイルを作成すると、最初にスタート ビューが表示されます。  
   

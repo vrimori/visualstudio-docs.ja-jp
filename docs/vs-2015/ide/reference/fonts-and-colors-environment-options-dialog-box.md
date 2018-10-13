@@ -1,7 +1,7 @@
 ---
 title: '[フォントおよび色] ([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -32,18 +32,16 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f8831cfdbf22d80cce39fbae81fffa46b8944e92
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 3d080945edc13d0f4542fdd9c981037af108325c
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538673"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220720"
 ---
-# <a name="fonts-and-colors-environment-options-dialog-box"></a>[フォントおよび色] ([オプション] ダイアログ ボックス - [環境])
+# <a name="fonts-and-colors-environment-options-dialog-box"></a>[フォントおよび色]\([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[フォントおよび色のオプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/fonts-and-colors-environment-options-dialog-box)します。  
-  
   
 **[オプション]** ダイアログ ボックスの **[フォントおよび色]** ページを使用すると、統合開発環境 (IDE) のさまざまなユーザー インターフェイス要素について、カスタムのフォントや配色を設定できます。 このダイアログ ボックスを表示するには、**[ツール] メニューの [オプション]** をクリックし、**[環境] フォルダーの [フォントおよび色]** ページを選択します。 このページが一覧に表示されない場合は、**[オプション]** ダイアログ ボックスの **[すべての設定を表示]** を選択します。  
   

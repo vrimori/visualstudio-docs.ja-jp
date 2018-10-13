@@ -1,7 +1,7 @@
 ---
 title: ソース内抑制の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 42
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 7f02a57be8d267126deb6736c9e0a690b1ac3e2d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 844681d079e5565aab9eceadb73f7d8a61cbb2c6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540320"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49209041"
 ---
 # <a name="in-source-suppression-overview"></a>ソース内抑制の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース内抑制の概要](https://docs.microsoft.com/visualstudio/code-quality/in-source-suppression-overview)します。  
-  
 ソース内抑制は非表示または追加することでマネージ コードでコード分析の違反を無視する機能、 **SuppressMessage**属性を違反が発生するコードのセグメント。 **SuppressMessage** CODE_ANALYSIS コンパイルのシンボルがコンパイル時に定義されている場合にのみ、マネージ コード アセンブリの IL メタデータに含まれている条件付き属性です。  
   
  C++/cli、CLI、ヘッダー ファイルの属性を追加する CA_SUPPRESS_MESSAGE または CA_GLOBAL_SUPPRESS_MESSAGE マクロを使用します。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: サービスを取得 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc21d53df18fe855d0f745fcb4d11708e4ac07b7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 426d0b71a23ea53a21b382ec02b8853f9ff2deb2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533377"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49229685"
 ---
 # <a name="how-to-get-a-service"></a>方法: サービスを取得
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: サービスを取得](https://docs.microsoft.com/visualstudio/extensibility/how-to-get-a-service)します。  
-  
 多くの場合、さまざまな機能にアクセスする Visual Studio サービスを取得する必要があります。 一般に、Visual Studio service は、使用できる 1 つまたは複数のインターフェイスを提供します。 ほとんどのサービスは、VSPackage から取得できます。  
   
  派生したすべての VSPackage<xref:Microsoft.VisualStudio.Shell.Package>を正しく配置されていますが、任意のグローバル サービスを要求できます。 パッケージ クラスが実装されているため<xref:System.IServiceProvider>、パッケージから派生したすべての VSPackage は、サービス プロバイダーもです。  

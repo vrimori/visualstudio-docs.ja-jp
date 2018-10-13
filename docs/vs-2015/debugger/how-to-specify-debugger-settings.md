@@ -1,7 +1,7 @@
 ---
 title: '方法: デバッガー設定の指定 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1cbfe565c66650b310c674ef22ecee74ea31a498
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 7251c2cf2c2b8d6879a85dfdc4427dc456fbf8f0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548152"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49215554"
 ---
 # <a name="how-to-specify-debugger-settings"></a>方法 : デバッガー設定を指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: デバッガー設定の指定](https://docs.microsoft.com/visualstudio/debugger/how-to-specify-debugger-settings)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] では、変数の表示方法、特定の警告を表示するかどうか、ブレークポイントの設定方法、実行中のプログラムを中断した場合の影響など、デバッガーの動作のさまざまな設定を指定できます。 デバッガーの設定を指定する、**オプション** ダイアログ ボックス。  
   
 ### <a name="to-set-debugger-options"></a>デバッガー オプションを設定するには  

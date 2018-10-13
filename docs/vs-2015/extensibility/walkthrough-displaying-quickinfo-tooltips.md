@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: クイック ヒントの表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
 caps.latest.revision: 28
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b13dce0ea4f2bb54c802b63fd19f74b8173e94d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5c8fe37de7db5a09e9c0e81f25b09e9b4ff345c1
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544463"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49237654"
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>チュートリアル: クイック ヒントの表示
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: クイック ツールヒントを表示する](https://docs.microsoft.com/visualstudio/extensibility/walkthrough-displaying-quickinfo-tooltips)します。  
-  
 クイック ヒントはメソッド シグネチャを表示する IntelliSense 機能である説明と、ユーザーがポインターをメソッド名の上に移動します。 クイック ヒントの説明を提供する識別子を定義し、コンテンツを表示するツールヒントを作成し、クイック ヒントなど、言語ベースの機能を実装できます。 クイック ヒントを定義するには、言語サービスのコンテキストでまたは独自ファイル名拡張子とコンテンツ タイプを定義し、その型だけのクイック ヒントを表示できますか ("text") などの既存のコンテンツ タイプのクイック ヒントを表示することができます。 このチュートリアルでは、「テキスト」コンテンツ タイプのクイック ヒントを表示する方法を示します。  
   
  クイック ヒントの例では、このチュートリアルは、ユーザーは、メソッド名の上、ポインターを移動すると、ツールヒントを表示します。 この設計では、これら 4 つのインターフェイスを実装する必要があります。  
@@ -50,7 +48,7 @@ ms.locfileid: "47544463"
   
 #### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`QuickInfoTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `QuickInfoTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能の作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)です。  
   
@@ -61,7 +59,7 @@ ms.locfileid: "47544463"
   
 #### <a name="to-implement-the-quickinfo-source"></a>QuickInfo ソースを実装するには  
   
-1.  クラス ファイルを追加し、名前`TestQuickInfoSource`します。  
+1.  クラス ファイルを追加し、その名前を `TestQuickInfoSource`にします。  
   
 2.  Microsoft.VisualStudio.Language.IntelliSense への参照を追加します。  
   
@@ -160,7 +158,7 @@ ms.locfileid: "47544463"
      [!code-csharp[VSSDKQuickInfoTest#16](../snippets/csharp/VS_Snippets_VSSDK/vssdkquickinfotest/cs/testquickinfosource.cs#16)]
      [!code-vb[VSSDKQuickInfoTest#16](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkquickinfotest/vb/testquickinfosource.vb#16)]  
   
-2.  インポート、<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>プロパティとして。  
+2.  <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> をプロパティとしてインポートします。  
   
      [!code-csharp[VSSDKQuickInfoTest#17](../snippets/csharp/VS_Snippets_VSSDK/vssdkquickinfotest/cs/testquickinfosource.cs#17)]
      [!code-vb[VSSDKQuickInfoTest#17](../snippets/visualbasic/VS_Snippets_VSSDK/vssdkquickinfotest/vb/testquickinfosource.vb#17)]  

@@ -1,7 +1,7 @@
 ---
 title: 関数ビュー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f4bc15c21400b720bd5dde9c18111d7cc68afc34
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 88ae3a5053c6e1cdd5f3e8ab36c80823fdb13b41
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537917"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49205609"
 ---
 # <a name="functions-view"></a>関数ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[関数ビュー](https://docs.microsoft.com/visualstudio/profiling/functions-view)します。  
-  
 関数ビューには、プロファイリング中に呼び出される関数が一覧表示されます。  
   
  既定では、関数は名前別に一覧表示されます。 関数をモジュール別に表示するには、関数ビュー ウィンドウを右クリックし、**[モジュール ビューで表示]** を選択します。 モジュール ビューが表示されます。  

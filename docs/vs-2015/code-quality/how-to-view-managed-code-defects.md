@@ -1,7 +1,7 @@
 ---
 title: '方法: マネージ コードの障害を表示 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e9de19a3d371a832ad8d8fa52d7bb2bd9b06363e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4f0dff4744e3c77ed94afe78396008a3de7646c3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536728"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49239422"
 ---
 # <a name="how-to-view-managed-code-defects"></a>方法 : マネージド コードの障害を表示する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: マネージ コードの欠陥のビュー](https://docs.microsoft.com/visualstudio/code-quality/how-to-view-managed-code-defects)します。  
-  
 コード分析、エラー、警告、およびメッセージは、コード分析 ウィンドウで報告されます。 プロジェクトまたはソリューションでコード分析を実行すると、コード分析 ウィンドウは自動的に表示されます。  
   
  コード分析 ウィンドウで、次の操作を実行できます。  

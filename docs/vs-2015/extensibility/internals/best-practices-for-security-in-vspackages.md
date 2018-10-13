@@ -1,7 +1,7 @@
 ---
 title: Vspackage ではセキュリティのベスト プラクティス |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 212a0504-cf6c-4e50-96b0-f2c1c575c0ff
 caps.latest.revision: 20
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e294995a25b0369ab839680a97fe670f9a99508d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 80c27618582f42f1647e49cbf3f64d6b493dfd8d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536042"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49203594"
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>VSPackage のセキュリティのベスト プラクティス
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Vspackage のセキュリティのためのベスト プラクティス](https://docs.microsoft.com/visualstudio/extensibility/internals/best-practices-for-security-in-vspackages)します。  
-  
 インストールする、[!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)]する、コンピューターには、管理者の資格情報のコンテキストで実行する必要があります。 セキュリティおよび配置の基本単位、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]アプリケーションは、 [Vspackage](../../extensibility/internals/vspackages.md)します。 使用して VSPackage を登録する必要があります[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、資格情報を管理する必要があります。  
   
  管理者は、レジストリとファイル システムに書き込むと、任意のコードを実行する完全なアクセス許可があります。 開発、デプロイ、または VSPackage をインストールするこれらのアクセス許可が必要です。  
