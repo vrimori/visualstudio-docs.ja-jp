@@ -1,7 +1,7 @@
 ---
 title: Combos 要素 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: ef48d2d2-0c47-4f93-8cfe-52026b6c463e
 caps.latest.revision: 7
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8822907b8b813c9a18b36920636439c17950e9bc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 6e1afd7bfa46e669c5125db18049e26984cf8d63
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539171"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245889"
 ---
 # <a name="combos-element"></a>Combos 要素
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Combos 要素](https://docs.microsoft.com/visualstudio/extensibility/combos-element)します。  
-  
 グループ[Combo 要素](../extensibility/combo-element.md)要素。  
   
 ## <a name="syntax"></a>構文  

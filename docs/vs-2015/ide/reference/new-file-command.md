@@ -1,7 +1,7 @@
 ---
 title: New File コマンド | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0e925cee55f0e2c79a02a208a5d792339e6fd86e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1043dc600d339e2a0989bb71fc7e8a09e712e102
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49264096"
 ---
 # <a name="new-file-command"></a>NewFile コマンド
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[New File コマンド](https://docs.microsoft.com/visualstudio/ide/reference/new-file-command)します。  
-  
   
 新規ファイルを作成して開きます。 ファイルは [その他のファイル] フォルダーの下に表示されます。  
   
@@ -81,7 +79,7 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
  [コマンド ウィンドウ](../../ide/reference/command-window.md)   
  [イミディエイト ウィンドウ](../../ide/reference/immediate-window.md)   
  [[検索/コマンド] ボックス](../../ide/find-command-box.md)   
- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+ [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 
 
 

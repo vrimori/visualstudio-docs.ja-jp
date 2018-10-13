@@ -1,7 +1,7 @@
 ---
 title: ルール セットの混合最小規則 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 97576ff579e1fabd5f48b4e8bf6781dc2d30acb6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d3d153a99341012bd06f9f27a87bca260962c7ef
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249835"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>"混合最小規則" 規則セット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ルール セットの混合最小規則](https://docs.microsoft.com/visualstudio/code-quality/mixed-minimum-rules-rule-set)します。  
-  
 Microsoft 混合最小規則は、潜在的なセキュリティ ホールやアプリケーションのクラッシュなど、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題に集中します。 共通言語ランタイムをサポートする C++ プロジェクトにカスタムの規則セットを作成する場合は、必ずこの規則セットを含める必要があります。  
   
 |ルール|説明|  

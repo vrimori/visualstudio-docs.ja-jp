@@ -1,7 +1,7 @@
 ---
 title: UML モデル要素にステレオタイプを追加 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b570889c117f2fac037ddf40efe32abbd0b309c9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 48bc410c2f9f6a3dfb0e18b713a9b50dda499ea8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545976"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49259715"
 ---
 # <a name="add-stereotypes-to-uml-model-elements"></a>UML モデル要素にステレオタイプを追加する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[モデル要素を UML にステレオタイプを追加](https://docs.microsoft.com/visualstudio/modeling/add-stereotypes-to-uml-model-elements)します。  
-  
 UML モデル要素にステレオタイプを追加して、注釈を付けたり、特別なプロパティを追加したりすることができます。 モデル要素にステレオタイプを追加するには、プロファイル内にステレオタイプを定義しておき、モデル要素が含まれているパッケージまたはモデルにそのプロファイルをリンクする必要があります。 ステレオタイプは、UML クラス、ユース ケース、コンポーネントなど、特定の種類のモデル要素にのみ追加できます。  
   
  たとえば、«specification» ステレオタイプを持つ UML クラスを定義する場合は、標準プロファイル L2 にリンクされたパッケージまたはモデル内にそのクラスを作成する必要があります。  

@@ -1,7 +1,7 @@
 ---
 title: Windows ストアと Windows ユニバーサル アプリのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: df5a49fc3a92c5108a53ae7e355d9d69b25dac6a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b85fd9f205b40bd04398833885d5e07e14c1866f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547185"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49256114"
 ---
 # <a name="debugging-windows-store-and-windows-universal-apps"></a>Windows ストアと Windows ユニバーサル アプリのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッグの Windows ストアおよび Windows ユニバーサル アプリ](https://docs.microsoft.com/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)します。  
-  
 Visual Studio デバッガーでは、Windows ストア アプリのデバッグを完全にサポートを提供します。  
   
  Windows ユニバーサル アプリのデバッグについては、次を参照してください。[の展開と Windows ユニバーサル プラットフォーム アプリのデバッグ](https://msdn.microsoft.com/library/windows/apps/mt613243.aspx)します。  

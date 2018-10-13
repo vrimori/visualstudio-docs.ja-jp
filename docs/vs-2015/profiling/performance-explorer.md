@@ -1,7 +1,7 @@
 ---
 title: パフォーマンス エクスプローラー | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2076aaa86f51da7928b0f81213ff97553262eb56
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d504c06cb038bbaa7298249384e88ad5bb2d5705
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533615"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49248483"
 ---
 # <a name="performance-explorer"></a>パフォーマンス エクスプローラー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[パフォーマンス エクスプ ローラー](https://docs.microsoft.com/visualstudio/profiling/performance-explorer)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールによって、開発者は、コード内のパフォーマンス関連の問題を計測、評価、および特定することができます。 これらのツールは IDE に完全に統合されており、シームレスでわかりやすいユーザー エクスペリエンスを提供します。  
   
  アプリケーションのプロファイリングは簡単です。 新しいパフォーマンス セッションを作成することによって開始します。 Visual Studio Team System Development Edition では、パフォーマンス セッション ウィザードを使用して新しいパフォーマンス セッションを作成できます。 パフォーマンス セッション終了後、プロファイリング中に収集されたデータが .vsp ファイルに保存されます。 .vsp ファイルは IDE 内で参照できます。 いくつかのレポート ビューを使用して、収集したデータからパフォーマンス上の問題を視覚化し、検出できます。  

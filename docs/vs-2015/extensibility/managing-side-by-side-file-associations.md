@@ -1,7 +1,7 @@
 ---
 title: サイド バイ サイドでのファイルの関連付けの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 9b6df3bc-d15c-4a5d-9015-948a806193b7
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79bd0fe8d298aaa6635cb30efaf7f4d0d0be8c28
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 55a3649385ca8fc840bed8bd28555bcb17f6ac91
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534552"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49253982"
 ---
 # <a name="managing-side-by-side-file-associations"></a>side-by-side のファイルの関連付けを管理する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[サイド バイ サイドでファイルの関連付けを管理する](https://docs.microsoft.com/visualstudio/extensibility/managing-side-by-side-file-associations)します。  
-  
 サイド バイ サイドでインストールを処理する方法を決定する必要があります、VSPackage では、ファイルの関連付けを提供する場合の特定のバージョン[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ファイルを呼び出す必要があります。 互換性のないファイル形式は複合問題です。  
   
  ユーザーは、新しいバージョンのデータを失うことがなく、新しいバージョンで既存のファイルを読み込むことができるように、以前のバージョンと互換性がある製品を期待します。 理想的には、VSPackage 両方ロード、保存したり以前のバージョンのファイル形式。 になっていない場合は true は、ファイル形式を VSPackage の新しいバージョンにアップグレードを提供する必要があります。 このアプローチの欠点は、アップグレードされたファイルは、以前のバージョンで開くことができません。  

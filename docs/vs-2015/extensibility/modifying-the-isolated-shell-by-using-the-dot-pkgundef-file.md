@@ -1,7 +1,7 @@
 ---
 title: 使用した分離シェルを変更します。Pkgundef ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 9cee2a20-f8ac-4d9d-aef9-068fcd9f27a4
 caps.latest.revision: 12
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3741fc9abdae6693670538c80288dfdefcefd84e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 5663c3e7f8dfb3460e163c851751bde95fb630d2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535350"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49256426"
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgundef-file"></a>使用した分離シェルを変更します。Pkgundef ファイル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分離シェルを使用して変更します。Pkgundef ファイル](https://docs.microsoft.com/visualstudio/extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file)します。  
-  
 分離シェル アプリケーションから指定されたレジストリ エントリを除外する .pkgundef ファイルを変更することができます。 通常、アプリケーションを開始するコンピューターでは、最初に、Visual Studio shell はコピー Visual Studio の既存のレジストリ エントリを使用、アプリケーションのルート レジストリ キーにします。 これには、現在インストールされている Vspackage への参照が含まれます。  
   
  分離シェル アプリケーションから、特定のレジストリ エントリを除外するには、パッケージのキーのエントリが続くアプリケーション .pkgundef ファイルに追加します。 キーとエントリは、.pkgdef ファイルと同じように表されますつまり、として [$RootKey$] または [$RootKey$\\*サブキー*] と"*エントリ*"=*値*ここで、*サブキー*に影響を与える、サブキーは、*エントリ*、エントリを削除すると*値*か`""`または`dword:00000000`します。  

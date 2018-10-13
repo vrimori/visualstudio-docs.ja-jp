@@ -1,7 +1,7 @@
 ---
 title: プログラムの起動 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: af5987f793e6f0164654f280f8417494066e3e5d
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 27b7daadd3642a4eb35d993e37b6ade3bd829972
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544494"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242550"
 ---
 # <a name="launching-a-program"></a>プログラムの起動
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[プログラムの起動](https://docs.microsoft.com/visualstudio/extensibility/debugger/launching-a-program)します。  
-  
 プログラムをデバッグする必要のあるユーザーには、IDE からデバッガーを実行する f5 キーを押すことができます。 これには、一連の最終的に接続されている、または接続されているプログラムに次のようにさらにデバッグ エンジン (DE) への接続を IDE のイベントが開始されます。  
   
 1.  IDE は、ソリューションのアクティブなプロジェクトのデバッグの設定を取得するプロジェクトのパッケージを最初に呼び出します。 設定には、開始ディレクトリ、環境変数、プログラムを実行するポートおよび指定されている場合に使用して、プログラムを作成する DE が含まれます。 これらの設定は、パッケージのデバッグに渡されます。  

@@ -1,7 +1,7 @@
 ---
 title: '方法: サービスを提供 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 12bc1f12-47b1-44f6-b8db-862aa88d50d1
 caps.latest.revision: 23
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 18cb5c28ab70b652b860d76fc6b7ad92e7262bf5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: be4e5fb7f5c5013ee9151f5db9b30d91a0894ee4
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548915"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49265006"
 ---
 # <a name="how-to-provide-a-service"></a>方法: サービスを提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: サービスを提供](https://docs.microsoft.com/visualstudio/extensibility/how-to-provide-a-service)します。  
-  
 VSPackage では、その他の Vspackage を使用できるサービスを提供できます。 サービスを提供するには、VSPackage は Visual Studio でサービスを登録して、サービスの追加する必要があります。  
   
  <xref:Microsoft.VisualStudio.Shell.Package>両方を実装するクラス<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>と<xref:System.ComponentModel.Design.IServiceContainer>します。 <xref:System.ComponentModel.Design.IServiceContainer> オンデマンドでサービスを提供するコールバック メソッドが含まれています。  

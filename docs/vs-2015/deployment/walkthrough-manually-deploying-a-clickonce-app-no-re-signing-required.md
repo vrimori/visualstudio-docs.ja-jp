@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: 手動で再署名が要求されるされないブランド情報を保持する ClickOnce アプリケーションの配置 |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 85453b899501d83191016bde0edd40b4e2a96d94
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 2d6531a94a99e2a1c24d80e9f326d23fcc6c4ec3
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "47592574"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49252994"
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル : 再署名が不要で商標を保持する ClickOnce アプリケーションの手動配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[チュートリアル: 再署名が不要な ClickOnce アプリケーションとその保持のブランド情報を手動で展開](https://docs.microsoft.com/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information)します。  
-  
 作成するときに、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションと、それを発行する顧客に渡すを展開し、顧客は、配置マニフェストを更新して再署名に従来しました。 ほとんどの場合に推奨される方法ですが、.NET Framework 3.5 を使用すると、作成[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]新しい配置マニフェストを再生成することがなく、顧客によって展開できる展開します。 詳細については、次を参照してください。 [ClickOnce アプリケーションのテストの展開および Resigning なしの実稼働サーバー](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)します。  
   
  作成するときに、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]アプリケーションと、それを発行する顧客に渡すと展開、アプリケーション、お客様のブランド化を使用できますまたはブランド化を維持することができます。 たとえば、アプリケーションが独自のアプリケーションを 1 つである場合は、ブランド化を保持するためにする可能性があります。 場合は、アプリケーションは、顧客ごとにカスタマイズされた高、お客様のブランド化を使用する場合があります。 .NET Framework 3.5 では、展開するには、組織にアプリケーションに付与するとするブランド化を保持するために、パブリッシャー情報、およびセキュリティの署名を使用できます。 詳細については、次を参照してください。[を作成する ClickOnce アプリケーションの他のユーザー デプロイ](../deployment/creating-clickonce-applications-for-others-to-deploy.md)します。  

@@ -1,7 +1,7 @@
 ---
 title: IntelliTrace スタンドアロン コレクターを使用して |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 111
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 74c17850ebbbd8a7031bc1380bc4e651d0f9dda0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2b35b6b42126bb0a1b159e3bf90e67aee15dd540
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47539058"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267476"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace スタンドアロン コレクターを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[IntelliTrace スタンドアロン コレクターを使用して](https://docs.microsoft.com/visualstudio/debugger/using-the-intellitrace-stand-alone-collector)します。  
-  
 **IntelliTrace スタンドアロン コレクター** を使用すると、対象コンピューターに Visual Studio をインストールしたり、対象システムの環境を変更したりすることなく、運用サーバーまたは他の環境でアプリの IntelliTrace 診断データを収集できます。 IntelliTrace スタンドアロン コレクターは、Web、SharePoint、WPF、および Windows フォーム アプリで動作します。 データを収集したら、コレクターを削除して、アンインストールします。  
   
  「 [デバッグ用に稼働中のデータを収集して分析する (Channel 9 ビデオ)](http://go.microsoft.com/fwlink/?LinkID=251851)」で IntelliTrace の機能をご覧ください。  
@@ -88,7 +86,7 @@ ms.locfileid: "47539058"
   
 1.  アプリのサーバーで、コレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) を作成します。  
   
-2.  Microsoft ダウンロード センターまたは Visual Studio 2103 Update 3 インストール フォルダーからコレクターを入手します。 [Visual Studio 2013 Update 4 IntelliTrace コレクター](https://www.microsoft.com/download/details.aspx?id=44909):。  
+2.  Microsoft ダウンロード センターまたは Visual Studio 2103 Update 3 インストール フォルダーからコレクターを入手します。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44909)::  
   
     -   **Microsoft ダウンロード センター**:  
   
@@ -390,7 +388,7 @@ ms.locfileid: "47539058"
   
 -   IntelliTrace デバッグ セッションを Visual Studio Enterprise から次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。  
   
--   Microsoft Test Manager でのテスト セッションから次を参照してください。[方法: 困難なの問題のデバッグを支援する IntelliTrace データの収集](~/E:/Repos/visualstudio-docs-pr/docs/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)します。  
+-   Microsoft Test Manager のテスト セッションからの場合は、「 [方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する](~/E:/Repos/visualstudio-docs-pr/docs/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)」を参照します。  
   
 ## <a name="where-can-i-get-more-information"></a>情報の入手方法  
  [保存された IntelliTrace データの使用](../debugger/using-saved-intellitrace-data.md)  

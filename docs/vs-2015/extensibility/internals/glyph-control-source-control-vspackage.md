@@ -1,7 +1,7 @@
 ---
 title: グリフ管理 (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: b9413b08-b3c3-4fc3-a6e0-3dc0db3652d7
 caps.latest.revision: 21
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cec0adc7c637dee7821552079c2c6f55296e9d0e
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ad922a083e11007bb20ab83006a04726a38a034e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538384"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49267607"
 ---
 # <a name="glyph-control-source-control-vspackage"></a>グリフ管理 (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[グリフ管理 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/glyph-control-source-control-vspackage)します。  
-  
 ソース管理 Vspackage を使用できる高度な統合の一部をソース管理下にある項目の状態を示すために、独自のグリフを表示する機能があります。  
   
 ## <a name="levels-of-glyph-control"></a>コントロールのグリフのレベル  

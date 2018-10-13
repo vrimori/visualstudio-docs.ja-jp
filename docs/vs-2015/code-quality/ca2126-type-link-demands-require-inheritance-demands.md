@@ -1,7 +1,7 @@
 ---
 title: 'Ca 2126: 型のリンク要求には継承要求が必要です |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -20,18 +20,15 @@ caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 3f482350517858fffc74600c3743a22192aa6a49
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: f6a47f6025e2f26fbcda6025aea694aab131d025
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "47589777"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49263084"
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: 型のリンク要求には継承要求が必要です
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
-
-このトピックの最新バージョンをご覧[ca 2126: 型のリンク要求には、継承要求が必要です。](https://docs.microsoft.com/visualstudio/code-quality/ca2126-type-link-demands-require-inheritance-demands)します。
-
 |||
 |-|-|
 |TypeName|TypeLinkDemandsRequireInheritanceDemands|

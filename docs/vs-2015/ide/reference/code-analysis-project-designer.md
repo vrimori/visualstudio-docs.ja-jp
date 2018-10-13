@@ -1,7 +1,7 @@
 ---
 title: コード分析 (プロジェクト デザイナー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 25419c9dbee9b4a41522c8314a0b4198df62c6a7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 9e2af505b7cf5700a521903a873c117c7daf4681
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533638"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49245168"
 ---
 # <a name="code-analysis-project-designer"></a>コード分析 (プロジェクト デザイナー)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[コード分析、プロジェクト デザイナー](https://docs.microsoft.com/visualstudio/ide/reference/code-analysis-project-designer)します。  
-  
   
 コードに対して実行できるコード分析ツールが含まれます。 ツールは、Microsoft .NET Framework デザイン ガイドラインに規定されたプログラミングやデザインに関する規則違反など、アセンブリに関する情報を報告します。  
   

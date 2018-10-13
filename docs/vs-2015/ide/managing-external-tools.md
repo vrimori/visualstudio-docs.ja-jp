@@ -1,7 +1,7 @@
 ---
 title: 外部ツールの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -62,18 +62,16 @@ caps.latest.revision: 41
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d55fdcd6da677eb34c8aee45787880781d58260a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: bf8e00635ff76e9e4ccfc4cbedbafabe8b0718dd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546342"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49244490"
 ---
 # <a name="managing-external-tools"></a>Visual Studio の外部ツール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[外部ツールの管理](https://docs.microsoft.com/visualstudio/ide/managing-external-tools)します。  
-  
 Visual Studio から、外部ツールを呼び出すことができます。 いくつかの既定ツールは **[ツール]** メニューで使用できますが、他の実行可能ファイルを独自に追加することもできます。  
   
 ## <a name="tools-available-on-the-visual-studio-tools-menu"></a>[Visual Studio Tools] メニューで使用できるツール  

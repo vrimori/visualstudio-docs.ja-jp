@@ -1,7 +1,7 @@
 ---
 title: ヘルプ ビューアーのユーザー補助機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 16
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 623e2c6514f8eddfd587848aff5fc68c29640885
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2d6dee81d823c52986922d59a4e41f402db4fbd5
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545249"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49242137"
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>ヘルプ ビューアーのユーザー補助機能
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ヘルプ ビューアーのユーザー補助機能](https://docs.microsoft.com/visualstudio/ide/accessibility-features-of-the-help-viewer)します。  
-  
 Microsoft は、すべてのユーザーが簡単に使用できる製品とサービスの開発に取り組んでいます。 このトピックでは、広範な範囲の能力を持つユーザーが Microsoft ヘルプ ビューアー 2.2 をさらに使いやすくするためのユーザー補助機能、製品、およびサービスについて説明します。  
   
 ## <a name="keyboard-access"></a>キーボード アクセス  

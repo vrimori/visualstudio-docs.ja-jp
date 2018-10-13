@@ -1,7 +1,7 @@
 ---
 title: MSI および VSIX 配置 DSL の |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 4
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9842dd41b01d10405c3e3cae0d0dde2a704ecdf3
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 7c1ad9b9790a7d7fda27bab0d409480f8114d3a7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "47592982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49258298"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[MSI および VSIX 配置 DSL の](https://docs.microsoft.com/visualstudio/modeling/msi-and-vsix-deployment-of-a-dsl)します。  
-  
 自分のコンピューターまたは他のコンピューターでは、ドメイン固有言語をインストールできます。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ターゲット コンピューターに既にインストールする必要があります。  
   
 ##  <a name="which"></a> VSIX および MSI の展開の使い分け  
@@ -55,7 +53,7 @@ ms.locfileid: "47592982"
   
      **Visual Studio 拡張機能インストーラー** が起動され、拡張機能がインストールされます。  
   
-4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] を起動または再起動します。  
+4.  [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]を起動または再起動します。  
   
 5.  DSL をテストする[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL 用に定義した拡張子を持つ新しいファイルを作成します。  
   

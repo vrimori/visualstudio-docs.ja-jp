@@ -1,7 +1,7 @@
 ---
 title: Visual Studio でのストア アプリの単体テストの作成および実行 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 28
 author: alexhomer1
 ms.author: gewarren
 manager: robinr
-ms.openlocfilehash: 76a73232cf4c522baf261d50910d188234e8a4c5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: ea2cf8293a0969a152e38304b469e0b4042073c0
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537244"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249510"
 ---
 # <a name="create-and-run-unit-tests-for-a-store-app-in-visual-studio"></a>Visual Studio でのストア アプリの単体テストの作成および実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Visual Studio でストア アプリの実行の単体テストの作成と](https://docs.microsoft.com/visualstudio/test/create-and-run-unit-tests-for-a-store-app-in-visual-studio)します。  
-  
 Visual Studio 2012 Express for Windows 8 単体テスト ツールは、ソフトウェア開発作業に単体テストを導入した開発者や開発チームをサポートするように設計されています。 単体テストは、Visual C#、Visual Basic、Visual C++ プロジェクトにおいて、クラスのメソッドの論理エラーを発見するための効率的で維持できる方法を開発者とテスト担当者に提供します。  
   
 > [!NOTE]

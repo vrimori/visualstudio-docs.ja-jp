@@ -1,7 +1,7 @@
 ---
 title: ソース管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 13d5728c-4e28-42e4-944a-a565b1765ef8
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93b00df779d5b650de59c91196b8fc004efa6994
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 875ee92c91081b2df097e96bf833ea2fcf775f6d
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548016"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49247514"
 ---
 # <a name="source-control"></a>ソース管理
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ソース管理](https://docs.microsoft.com/visualstudio/extensibility/internals/source-control)します。  
-  
 統合機能としてソース管理を実装するためのオプションについて説明[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]、ソース管理プラグインまたはソース管理 VSPackage を使用するか。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -47,5 +45,5 @@ ms.locfileid: "47548016"
  ソース管理プラグイン API のリファレンスです。  
   
  [プロジェクトの拡張](../../extensibility/extending-projects.md)  
- 使用する方法について説明します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]プロジェクトおよびソリューションのコード ファイルとリソース ファイルとソース管理を実装する方法を整理します。
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトおよびソリューションを使用してコード ファイルとリソース ファイルを編成する方法、またソース管理を実装する方法について説明します。
 

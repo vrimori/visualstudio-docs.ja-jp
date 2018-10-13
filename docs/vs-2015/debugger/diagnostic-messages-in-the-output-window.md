@@ -1,7 +1,7 @@
 ---
 title: 出力ウィンドウの診断メッセージ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -34,18 +34,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f0a9e0bb4fa34133937e39b310cb05360e66a443
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 72d9da2ea3ab6cb9807fc7e0a668155d37110c3a
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547296"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49246795"
 ---
 # <a name="diagnostic-messages-in-the-output-window"></a>出力ウィンドウの診断メッセージ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[出力ウィンドウの診断メッセージ](https://docs.microsoft.com/visualstudio/debugger/diagnostic-messages-in-the-output-window)します。  
-  
 <xref:System.Diagnostics> クラス ライブラリに含まれている Debug クラスまたは Trace クラスを使用して、[出力] ウィンドウに出力されるランタイム メッセージを記述できます。 プログラムのデバッグ バージョンだけで出力する場合は Debug クラスを使用します。 プログラムのデバッグ バージョンとリリース バージョンの両方で出力する場合は Trace クラスを使用します。  
   
 ## <a name="output-methods"></a>出力メソッド  
