@@ -1,7 +1,7 @@
 ---
 title: スレッド ビュー (並行処理のパフォーマンス) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,18 +18,16 @@ caps.latest.revision: 26
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 644308065518afa9caf6fb0db088c2ffc556a8e7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c49b68e0ee595041ec6b14c9f105937bf723afa6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547319"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49300249"
 ---
 # <a name="threads-view-parallel-performance"></a>スレッド ビュー (並行処理のパフォーマンス)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[スレッド ビュー (並行処理のパフォーマンス)](https://docs.microsoft.com/visualstudio/profiling/threads-view-parallel-performance)します。  
-  
 スレッド ビューは、コンカレンシー ビジュアライザーの最も詳細かつ機能豊富なビューです。 このビューを使用すると、スレッドが実行しているか、それとも同期、I/O、またはその他の何らかの理由のためにブロックしているかを識別できます。  
   
  コンカレンシー ビジュアライザーは、プロファイルの分析中、アプリケーション スレッドごとに、すべてのオペレーティング システムのコンテキスト切り替えイベントを調べます。 コンテキストの切り替えは、次のような理由により発生することがあります。  

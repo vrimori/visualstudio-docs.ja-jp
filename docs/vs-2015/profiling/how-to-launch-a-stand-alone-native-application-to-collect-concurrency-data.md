@@ -1,7 +1,7 @@
 ---
 title: '方法: コマンド ラインを使用してプロファイラーによってスタンドアロンのネイティブ アプリケーションを起動し、コンカレンシー データを収集する | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,18 +14,16 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5060b22603f5cab408e6f15a9f33f104e76cd7bf
-ms.sourcegitcommit: d705e015cb525bfa87a0b93e93376c3956ec2707
+ms.openlocfilehash: 2f9949254a86e729bd51ccb9896a74c2f83b2568
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "47592543"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49301220"
 ---
 # <a name="how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>方法: コマンド ラインを使用してプロファイラーによってスタンドアロンのネイティブ アプリケーションを起動し、コンカレンシー データを収集する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法: コマンドラインを使用して同時実行データを収集する、Profiler のスタンドアロン ネイティブ アプリケーションを起動](https://docs.microsoft.com/visualstudio/profiling/how-to-launch-a-stand-alone-native-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line)します。  
-  
 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのコマンド ライン ツールを使用して、ネイティブのスタンドアロン (クライアント) アプリケーションを起動し、プロセスおよびスレッドのコンカレンシー データを収集する方法について説明します。  
   
  プロファイル セッションには、以下の部分があります。  

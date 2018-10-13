@@ -1,7 +1,7 @@
 ---
 title: ClickOnce 配置マニフェスト |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 25
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 458b7f6dac29dba16a121ed6dead9d6b62fdc1cd
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 96ce7d873c20b8c29e5586a54c577a5d744b0caa
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535404"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306788"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 配置マニフェスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[ClickOnce 配置マニフェスト](https://docs.microsoft.com/visualstudio/deployment/clickonce-deployment-manifest)します。  
-  
 配置マニフェストは、配置する [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションの現在のバージョンの識別など、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] の配置に関する情報を記述した XML ファイルです。  
   
  配置マニフェストには、次の要素および属性があります。  

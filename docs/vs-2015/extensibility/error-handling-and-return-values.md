@@ -1,7 +1,7 @@
 ---
 title: エラー処理と戻り値 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: b2d9079d-39a6-438a-8010-290056694b5c
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b306918843f5acb1ed70f46e104116ffb0a012d3
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 315315e925eecd45b1c001531f5ebb6be207b2e7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47536168"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306853"
 ---
 # <a name="error-handling-and-return-values"></a>エラー処理と戻り値
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[エラー処理と戻り値](https://docs.microsoft.com/visualstudio/extensibility/error-handling-and-return-values)します。  
-  
 Vspackage と COM のエラーと同じアーキテクチャを使用します。 `SetErrorInfo`と`GetErrorInfo`関数は、Win32 アプリケーション プログラミング インターフェイス (API) の一部です。 統合開発環境 (IDE) ですべての VSPackage できますこれらグローバル Win32 Api を呼び出して詳細なエラー情報を記録エラー通知を受信するときにします。 [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)]エラー情報を管理する相互運用機能アセンブリを提供します。  
   
 ## <a name="interop-methods"></a>相互運用メソッド  

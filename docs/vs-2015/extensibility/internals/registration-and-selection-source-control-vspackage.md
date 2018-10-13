@@ -1,7 +1,7 @@
 ---
 title: 登録と選択 (ソース管理 VSPackage) |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ef8cf369d2660523bdfe4ad6eaa83be5748eedf0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e7b6324112bed6d201ca57fd3fb5c77696a528f2
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535184"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49305787"
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>登録と選択 (ソース管理 VSPackage)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[登録と選択 (ソース管理 VSPackage)](https://docs.microsoft.com/visualstudio/extensibility/internals/registration-and-selection-source-control-vspackage)します。  
-  
 公開するために VSPackage を登録する必要があるソース管理、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]します。 1 つ以上のソース管理 VSPackage が登録されている場合、ユーザーは、どの VSPackage を読み込む適切なタイミングでを選択できます。 参照してください[Vspackage](../../extensibility/internals/vspackages.md) Vspackage とそれらを登録する方法の詳細についてはします。  
   
 ## <a name="registering-a-source-control-package"></a>ソース管理パッケージを登録します。  

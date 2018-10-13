@@ -1,7 +1,7 @@
 ---
 title: '方法: を作成します。既存の Vsct ファイルです。Ctc ファイル |Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 700e80a4-c1e1-4178-af53-45e86dd2c08b
 caps.latest.revision: 9
 manager: douge
-ms.openlocfilehash: 0d267e6046539001cbe454ab69867c02f0a606ed
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e159fea34dc395ce2d7bded813f2d8feaa453006
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47545502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49303486"
 ---
 # <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>方法: 既存の .Ctc ファイルから .Vsct ファイルを作成する
-既存のコマンドテーブルの .ctc ソース ファイルから XML ベースの .vsct ファイルを作成できます。 これにより、新しい活用を行う XML ベース[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]コマンド テーブル (VSCT) コンパイラ形式。  
+既存のコマンドテーブルの .ctc ソース ファイルから XML ベースの .vsct ファイルを作成できます。 これにより、新しい XML ベースの [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] コマンド テーブル (VSCT) コンパイラ形式を利用できます。  
   
 ### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>.ctc ファイルから .vsct ファイルを作成するには  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47545502"
   
 4.  同じディレクトリにファイルを配置します。  
   
-5.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]コマンド プロンプト ウィンドウで、ディレクトリに移動します。  
+5.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のコマンド プロンプト ウィンドウで、そのディレクトリに移動します。  
   
 6.  型  
   
