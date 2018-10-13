@@ -25,6 +25,7 @@
 #### [Enterprise Mobility + Security](vs-ems.md)
 #### [Windows 開発者アカウント](vs-windows-dev.md)
 #### [Office 365 開発者サブスクリプション](vs-office-dev.md)
+#### [Office 365 サブスクリプション](vs-office365.md)
 #### [Power BI Pro ](vs-pbi.md)
 #### [最新の Requirements4TFS](vs-modernreq.md)
 #### [Azure 重量課金](vs-azure-payg.md)
