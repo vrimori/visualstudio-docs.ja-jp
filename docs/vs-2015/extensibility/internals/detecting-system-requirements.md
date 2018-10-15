@@ -1,7 +1,7 @@
 ---
 title: システム要件の検出 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 0ba94acf-bf0b-4bb3-8cca-aaac1b5d6737
 caps.latest.revision: 51
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1c9bdb2a9f33f848ed0ba879aa178efd8dd96016
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e1956130203498d32d1ee39d67121f7797dd41fc
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47548682"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49187477"
 ---
 # <a name="detecting-system-requirements"></a>システム要件の検出
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[システム要件の検出](https://docs.microsoft.com/visualstudio/extensibility/internals/detecting-system-requirements)します。  
-  
 Visual Studio がインストールされていない場合、VSPackage は機能できません。 Microsoft Windows インストーラーを使用して、VSPackage のインストールを管理する場合は、Visual Studio がインストールされているかどうかを検出するインストーラーを構成できます。 など、システムの他の要件を確認して、特定のバージョンの Windows または特定の容量の RAM を構成することもできます。  
   
 ## <a name="detecting-visual-studio-editions"></a>Visual Studio のエディションを検出します。  

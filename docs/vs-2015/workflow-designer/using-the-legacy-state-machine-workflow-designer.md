@@ -1,7 +1,7 @@
 ---
 title: 従来のステート マシン ワークフロー デザイナーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: .net-framework-4.6
 ms.reviewer: ''
 ms.suite: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: aafe537adf0a48ea38cdeb84a3461fef30cb13e0
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 30eaf026d0558538c51b4cbda313e051348a5120
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537642"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231687"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>従来のステート マシン ワークフロー デザイナーの使用
 新しいステート マシン ワークフロー プロジェクトを作成するときに[!INCLUDE[vs2010](../includes/vs2010-md.md)]をターゲットとするか、[!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)]または[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]、いずれかを使用することもできます、**ステート マシン ワークフロー コンソール アプリケーション**または、 **ステート マシン ワークフロー ライブラリ**従来のプロジェクト テンプレート。 これらのいずれかのステート マシン プロジェクト テンプレートを選択した場合、ステート マシン デザイナーが従来のワークフロー デザイナーのユーザー インターフェイスとして表示されます。 従来のステート マシン プロジェクト テンプレートの詳細については、次を参照してください[方法: 作成ステート マシン ワークフロー コンソール アプリケーション (レガシ)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)と[方法: ステート マシン ワークフロー ライブラリ (レガシ)作成](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).  

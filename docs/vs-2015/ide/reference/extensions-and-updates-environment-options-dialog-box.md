@@ -1,7 +1,7 @@
 ---
 title: '[拡張機能と更新プログラム]([オプション] ダイアログ ボックス - [環境]) | Microsoft Docs'
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 48af71d66b21c8175841c56f7d94a927f6e1a5a1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b0b51d3b5f61a256a440673b9770f10efecb7b0e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47534345"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49181091"
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>[拡張機能と更新プログラム]\([オプション] ダイアログ ボックス - [環境])
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[拡張機能と更新オプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/ide/reference/extensions-and-updates-environment-options-dialog-box)します。  
-  
   
 このページを使用して、Visual Studio での更新プログラムの実行方法に関するオプションと、拡張機能の更新および検出方法に関するオプションを設定します。  
   
