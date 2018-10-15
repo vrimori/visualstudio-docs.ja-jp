@@ -17,16 +17,16 @@ ms.prod: visual-studio-dev15
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.workload:
 - multiple
-ms.openlocfilehash: c46ce842bc9d95ffe783918b364a8cedaabf95c2
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 1538a3c93088cf02bcfb040cfa8a349ef7756eb5
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44284056"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028911"
 ---
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 のワークロード ID とコンポーネント ID
 
-**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)の更新**
+**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
 コマンド ラインを使用して Visual Studio をインストールする場合や、VSIX マニフェストで依存関係として指定する場合に必要となる使用可能なワークロードとコンポーネント ID を表示するには、以下の表のエディション名をクリックします。
 

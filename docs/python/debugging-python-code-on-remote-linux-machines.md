@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c17ca59959107d25b7752297ec209f647886362d
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3462e3e46a551b9f9245dc2cb5bf25bbcde768a5
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774692"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549312"
 ---
 # <a name="remotely-debug-python-code-on-linux"></a>Linux 上で Python コードをリモートでデバッグする
 
@@ -99,7 +99,7 @@ Azure VM のファイアウォール ルールの作成の詳細については�
 1. **[接続先]** フィールド (旧バージョンでは **[修飾子]**) に「`tcp://<secret>@<ip_address>:5678`」と入力します。`<secret>` は Python コードで渡される文字列 `enable_attach` です。`<ip_address>` はリモート コンピューターの IP アドレスです (明示的なアドレスまたは myvm.cloudapp.net のような名前を指定できます)。`:5678` はリモート デバッグ ポート番号です。
 
     > [!Warning]
-    > パブリック インターネット経由で接続している場合は、代わりに `tcps` を使用し、以下の「[デバッガー接続の SSL によるセキュリティ保護](#securing-the-debugger-connection-with-ssl)」の指示に従ってください。
+    > パブリック インターネット経由で接続している場合は、代わりに `tcps` を使用し、以下の「[デバッガー接続の SSL によるセキュリティ保護](#secure-the-debugger-connection-with-ssl)」の指示に従ってください。
 
 1. **Enter** キーを押すと、そのコンピューターで使用できる ptvsd プロセスの一覧が生成されます。
 
@@ -148,7 +148,7 @@ ptvsd のリモート デバッグ サーバーへの接続は、既定で、シ
 
     openssl のプロンプトが表示されたら、**[共通名]** のホスト名または IP アドレス (接続できればどちらでも可) を入力します
 
-    (詳細については、Python `ssl` モジュール ドキュメントの「[Self-signed certificates](http://docs.python.org/3/library/ssl.html#self-signed-certificates)」(自己署名証明書) を参照してください。 これらのドキュメントのコマンドは、1 つの結合されたファイルのみを生成する点に注意してください)。
+    (詳細については、Python `ssl` モジュール ドキュメントの「[Self-signed certificates](https://docs.python.org/3/library/ssl.html#self-signed-certificates)」(自己署名証明書) を参照してください。 これらのドキュメントのコマンドは、1 つの結合されたファイルのみを生成する点に注意してください)。
 
 1. このコードで、`enable_attach` の呼び出しを修正し、値としてファイル名を使用して `certfile` 引数と `keyfile` 引数を含めます (これらの引数の意味は、標準の `ssl.wrap_socket` Python 関数の引数と同じです)。
 

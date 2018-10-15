@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 10dc2effb90e754a91f6c9f008c6f8b1692bc252
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 433ec0e4df5108dfcf0bae1c8c62af5b0536bc5e
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281066"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548232"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
@@ -118,7 +118,7 @@ Choice は `poll` フィールドを介して Poll と関連しており、`text
 
 フィールドの種類をすべて挙げると、`CharField` (制限ありのテキスト) `TextField` (無制限のテキスト)、`EmailField`、`URLField`、`DateTimeField`、`IntegerField`、`DecimalField`、`BooleanField`、`ForeignKey`、および `ManyToMany` があります。 各フィールドには、`max_length` のような属性があります。 `blank=True` 属性はフィールドが省略可能であることを意味します。`null=true` は値が省略可能であることを意味します。 値を、データ値または表示値タプルの配列に含まれる値に制限する `choices` 属性もあります  (Django ドキュメントの「[Model field reference](https://docs.djangoproject.com/en/2.0/ref/models/fields/)」(Model フィールド リファレンス) を参照してください)。
 
-[SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使用してプロジェクトの *db.sqlite3* ファイルを調べることで、データベースに保存されている内容を正確に確認することができます。 データベース内には、Choice モデルの `poll` のような外部キー フィールドが `poll_id` として格納されていることがわかります。Django はこのマッピングを自動的に処理します。
+[SQLite ブラウザー](https://sqlitebrowser.org/)のようなツールを使用してプロジェクトの *db.sqlite3* ファイルを調べることで、データベースに保存されている内容を正確に確認することができます。 データベース内には、Choice モデルの `poll` のような外部キー フィールドが `poll_id` として格納されていることがわかります。Django はこのマッピングを自動的に処理します。
 
 一般的に、Django でデータベースを操作するということは、Django がユーザーの代わりに基のデータベースを管理できるように、モデルを介して排他的に操作することを意味します。
 
@@ -154,7 +154,7 @@ def seed(request):
     return HttpResponseRedirect(reverse('app:home'))
 ```
 
-影響を確認するために、まずアプリを実行して投票がまだ存在しないことを確認します。 次に "/seed" URL にアクセスします。アプリがホーム ページに戻ると、投票を使用できるようになったことがわかります。 ここでも [SQLite ブラウザー](http://sqlitebrowser.org/)のようなツールを使って *db.sqlite3* の生ファイルを調べてみてください。
+影響を確認するために、まずアプリを実行して投票がまだ存在しないことを確認します。 次に "/seed" URL にアクセスします。アプリがホーム ページに戻ると、投票を使用できるようになったことがわかります。 ここでも [SQLite ブラウザー](https://sqlitebrowser.org/)のようなツールを使って *db.sqlite3* の生ファイルを調べてみてください。
 
 ![シードされたデータベースを使用したポーリング Django Web プロジェクト アプリ](media/django/step06-app-with-seeded-database.png)
 

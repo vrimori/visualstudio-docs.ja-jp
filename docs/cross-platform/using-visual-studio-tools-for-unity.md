@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 574f6bb6a48df9df600c4c8be3bd97ffbb9d0382
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 9dc5de54ee4c983fd422437af170c065ac72413c
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283341"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46496065"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 
@@ -94,14 +94,6 @@ MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定�
 - Visual Studio のメイン メニューで、**[表示] > [Unity プロジェクト エクスプローラー]** を選択します。 キーボード ショートカット: **Alt** + **Shift** + **E**
 
      ![Unity プロジェクト エクスプローラー ウィンドウを表示します。](../cross-platform/media/vstu_view_unity_project_explorer.png "vstu_view_unity_project_explorer")
-
-## <a name="unity-error-list"></a>Unity のエラー一覧
-
- Visual Studio が Unity のインスタンスに接続されている場合、Visual Studio 内で Unity コンソールからのメッセージを表示できます。 これには、Unity からのエラーと警告が含まれます。 Visual Studio の **[エラー一覧]** ウィンドウでは、Unity からのエラー メッセージが **[エラー]** タブ、警告メッセージが **[警告]** タブ、その他のメッセージ (Unity API の Debug.Log を使用して送信されたメッセージなど) が **[メッセージ]** タブに表示されます。
-
- メッセージを表示するには、「[Unity のデバッグ](#unity-debugging)」セクションの説明に従って、Unity プロジェクトを Visual Studio に接続する必要があります。
-
- Unity からのエラー、警告、メッセージを Visual Studio の **[エラー一覧]** ウィンドウに表示しないようにするには、[構成] メニューでその機能を無効にします。
 
 ## <a name="unity-debugging"></a>Unity のデバッグ
 
