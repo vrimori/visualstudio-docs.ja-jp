@@ -2,7 +2,7 @@
 title: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する
 description: Visual Studio で C# および ASP.NET Core を使用して Hello World の Web アプリを作成する方法について、段階的に説明します。
 ms.custom: mvc
-ms.date: 07/30/2018
+ms.date: 09/23/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: quickstart
@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ae4dc5f14db66bee10c8b2e95ea687f71ced2abb
-ms.sourcegitcommit: b9a32c3d94b19e7344f4872bc026efd3157cf220
+ms.openlocfilehash: 53bed90ea686897c2a668ddbc64c60a95c8edfe8
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46135609"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028937"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>クイック スタート: Visual Studio を使用して初めての ASP.NET Core Web アプリを作成する
 
@@ -39,9 +39,9 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. **[新しい ASP.NET Core Web アプリケーション]** ダイアログ ボックスで、上部のドロップダウン メニューに **[ASP.NET Core 2.0]** が表示されていることを確認します。 その後、**[Web アプリケーション]** を選択して **[OK]** を選択します。
 
-  ![Visual Studio で C# ASP.NET Core プロジェクトを作成する方法を示すアニメーション .gif ファイルを表示](../ide/media/csharp-aspnet-animated-create-project.gif)
+   ![Visual Studio で C# ASP.NET Core プロジェクトを作成する方法を示すアニメーション .gif ファイルを表示](../ide/media/csharp-aspnet-animated-create-project.gif)
 
-  すぐに、Visual Studio でプロジェクト ファイルが開きます。
+   すぐに、Visual Studio でプロジェクト ファイルが開きます。
 
    > [!NOTE]
    > **.NET Core** プロジェクト テンプレートのカテゴリが表示されない場合は、左側のウィンドウで **[Visual Studio インストーラーを開く]** リンクを選択します。
@@ -58,13 +58,15 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 次に、自分の "Hello World" Web アプリを作成して実行します。 ここではその方法を説明します。
 
-1. **ソリューション エクスプローラー**で、**Pages** フォルダーを展開し、**About.cshtml** を選択します。
+1. Visual Studio の**ソリューション エクスプローラー**で、**Pages** フォルダーを展開します。 次に、**About.cshtml** を選択します。
 
-   このファイルは、Web アプリの **About** という名前のページに対応します。
+   ![ソリューション エクスプローラーから About.cshtml ファイルを選択する](../ide/media/csharp-aspnet-about-page-html-file.png)
+
+   このファイルは、Web アプリの **About** という名前のページに対応します。これは Web ブラウザーで実行されます。
 
    ![Web アプリの About ページ](../ide/media/csharp-aspnet-about-page.png)
 
-1. "additional information" というテキストを「**Hello World!**」に変更します。
+1. Visual Studio コード エディターで "additional information" というテキストを「**Hello World!**」に変更します。
 
 1. **ソリューション エクスプローラー**で、**About.cshtml** を展開し、**About.cshtml.cs** を選択します。
 
@@ -72,12 +74,12 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 1. **IIS Express** を選択するか、**Ctrl**+**F5** キーを押してアプリを実行し、Web ブラウザーで開きます。
 
-  ![Visual Studio で C# ASP.NET Core Web アプリを作成して実行する方法を示すアニメーション .gif ファイルを表示](../ide/media/csharp-aspnet-animated-hello-world.gif)
+   ![Visual Studio で C# ASP.NET Core Web アプリを作成して実行する方法を示すアニメーション .gif ファイルを表示](../ide/media/csharp-aspnet-animated-hello-world.gif)
 
    > [!NOTE]
    > "**Web サーバー 'IIS Express' に接続できませんでした**" というエラー メッセージが表示される場合は、Visual Studio を閉じて、右クリックまたはコンテキスト メニューから **[管理者として実行]** オプションを使用して Visual Studio を開きます。 その後、アプリケーションをもう一度実行します。
 
-1. **About** ページに更新されたテキストが含まれていることを確認します。
+1. Web ブラウザーで、**About** ページに更新されたテキストが含まれていることを確認します。
 
 1. Web ブラウザーを閉じます。
 

@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: feafc7d53e8d450bc980b6d842e9c2a5f0ade2e4
-ms.sourcegitcommit: 0cf1e63b6e0e6a0130668278489b21a6e5038084
+ms.openlocfilehash: 4f395d146b01548d90cf74dc67b4ea8fda1bcade
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39468817"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551755"
 ---
 # <a name="profile-python-code"></a>Python コードのプロファイリング
 
@@ -37,7 +37,7 @@ CPython ベースのインタープリターを使っている場合、Python �
 | ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | Python プロファイリングのデモについては、[こちらのビデオ (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567) をご覧ください (3 分 00 秒)。|
 
 > [!Note]
-> 現時点では、Visual Studio は、このレベルのフル アプリケーション プロファイリングのみをサポートしています。今後の機能に関するフィードバックをお寄せください。 このページの下部にある [**[Give product feedback]\(製品のフィードバックを送る\)** ボタン](#feedback) をお使いください。
+> 現時点では、Visual Studio は、このレベルのフル アプリケーション プロファイリングのみをサポートしています。今後の機能に関するフィードバックをお寄せください。 このページの下部にある [**[製品のフィードバック]** ボタン](#feedback)をお使いください。
 
 ## <a name="profiling-for-ironpython"></a>IronPython のプロファイリング
 
@@ -45,4 +45,4 @@ IronPython は CPython ベースのインタープリターではないため、
 
 代わりに、ターゲット アプリケーションとして *ipy.exe* を直接起動し、適切な引数を使ってスタートアップ スクリプトを起動することにより、Visual Studio .NET のプロファイラーを使います。 すべての Python コードを確実にデバッグし、プロファイリングできるようにするには、コマンド ラインに `-X:Debug` を含めます。 この引数により、IronPython ランタイムとコードの両方で費やされた時間を含むパフォーマンス レポートが生成されます。 コードは、完全修飾名を使って識別されます。
 
-または、IronPython には独自の組み込みプロファイリングがありますが、現在は適切なビジュアライザーがありません。 利用できるものについては、「[An IronPython Profiler](http://blogs.msdn.com/b/curth/archive/2009/03/29/an-ironpython-profiler.aspx)」(IronPython プロファイラー) (MSDN ブログ) をご覧ください。
+または、IronPython には独自の組み込みプロファイリングがありますが、現在は適切なビジュアライザーがありません。 利用できるものについては、「[An IronPython Profiler](https://blogs.msdn.microsoft.com/curth/2009/03/30/an-ironpython-profiler/)」(IronPython プロファイラー) (MSDN ブログ) をご覧ください。
