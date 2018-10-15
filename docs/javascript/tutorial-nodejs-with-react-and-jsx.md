@@ -2,7 +2,7 @@
 title: Node.js と React のアプリを作成する
 description: このチュートリアルでは、Node.js Tools for Visual Studio を使用してアプリを作成します。
 ms.custom: mvc
-ms.date: 05/23/2018
+ms.date: 09/06/2018
 ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f7bb4dfea8e23941e6d9ad29b9760c9e7c85fc5f
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: 0615f557d67c16698e0c737d97e45639be8a5eac
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567143"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125003"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -31,6 +31,30 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 > * アプリに React コードを追加する
 > * JSX をトランスパイルする
 > * デバッガーをアタッチします。
+
+## <a name="before-you-begin"></a>始める前に
+
+以下の簡単な FAQ で、主要な概念をいくつか紹介します。
+
+### <a name="what-is-nodejs"></a>Node.js とは何か
+
+Node.js はサーバー側の JavaScript ランタイム環境であり、サーバー側の JavaScript を実行します。
+
+### <a name="what-is-npm"></a>npm とは何か
+
+npm は Node.js の既定のパッケージ マネージャーです。 このパッケージ マネージャーはライブラリのインストール、更新、アンインストールを簡易化するように設計されており、プログラマーはこれを利用することで Node.js ライブラリのソース コードを簡単に公開し、共有できます。
+
+### <a name="what-is-react"></a>React とは何か
+
+React は、UI を作成するフロントエンド フレームワークです。
+
+### <a name="what-is-jsx"></a>JSX とは何か
+
+JSX は JavaScript 構文の拡張機能で、通常は UI 要素を記述するために React で使用されます。 JSX コードをブラウザーで実行するには、事前にプレーンな JavaScript にトランスパイルする必要があります。
+
+### <a name="what-is-webpack"></a>webpack とは何か
+
+webpack は、ブラウザーで実行できるように JavaScript ファイルをバンドルします。 他のリソースやアセットを変換またはパッケージ化することもできます。 これは、JSX または TypeScript のコードをプレーンな JavaScript にトランスパイルするため、Babel や TypeScript などのコンパイラを指定するためによく使用されます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -62,13 +86,15 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     ![ソリューション エクスプローラーでの Node.js プロジェクト](../javascript/media/tutorial-nodejs-react-project-structure.png)
 
-    * **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、太字で強調表示されているのがあなたのプロジェクトです。 ファイル システムでは、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。 プロジェクトを右クリックし、**[プロパティ]** を選択することで、プロジェクトに関連付けられたプロパティと環境変数を設定することができます。 プロジェクト ファイルでは Node.js プロジェクト ソースへのカスタム変更が行われないため、他の開発ツールを使用してラウンド トリップを行うことができます。
+    (1) **[新しいプロジェクト]** ダイアログ ボックスに指定した名前が使用され、**太字**で強調表示されているのがあなたのプロジェクトです。 ファイル システムでは、このプロジェクトは、プロジェクト フォルダーの *.njsproj* ファイルに該当します。 プロジェクトを右クリックし、**[プロパティ]** を選択することで、プロジェクトに関連付けられたプロパティと環境変数を設定することができます。 プロジェクト ファイルでは Node.js プロジェクト ソースへのカスタム変更が行われないため、他の開発ツールを使用してラウンド トリップを行うことができます。
 
-    * 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
+    (2) 最上位レベルにあるのは、ソリューションです。既定では、名前はプロジェクトと同じです。 ディスク上の *.sln* ファイルで表されるソリューションは、1 つ以上の関連プロジェクトのコンテナーです。
 
-    * npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックし、ダイアログ ボックスを使用して npm パッケージを検索し、インストールすることができます。
+    (3) npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックすれば、ダイアログ ボックスを利用して npm パッケージを検索し、インストールできます。または、*package.json* の設定と npm ノードの右クリック オプションを利用してパッケージをインストールし、更新できます。
 
-    * プロジェクト ノードの下に、*server.js* などのプロジェクト ファイルが表示されます。 *server.js* はプロジェクトのスタートアップ ファイルです。
+    (4) *package.json* は、ノーカルでインストールされているパッケージのパッケージ依存関係とパッケージ バージョンを管理する目的で npm によって使用されるファイルです。 このファイルの詳細については、「[package.json configuration](../javascript/configure-packages-with-package-json.md)」 (package.json の構成) を参照してください。
+
+    (5) プロジェクト ノードの下に、*server.js* などのプロジェクト ファイルが表示されます。 *server.js* はプロジェクト スタートアップ ファイルであり、そのため、**太字**で表示されます。 プロジェクトでファイルを右クリックし、**[Node.js スタートアップ スクリプトとして設定]** を選択することで、スタートアップ ファイルを設定できます。
 
 ## <a name="add-npm-packages"></a>npm パッケージを追加する
 
@@ -95,22 +121,22 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     プロジェクトの *package.json* ファイルが、パッケージのバージョンなど、新しいパッケージの情報で更新されます。
 
-1. UI を使って残りのパッケージを 1 つずつ検索して追加する代わりに、次のコードを package.json に貼り付けます。 これを行うには、`dependencies` セクションを次のコードに置き換えます。
+1. UI を使って残りのパッケージを 1 つずつ検索して追加する代わりに、次のコードを package.json に貼り付けます。 これを行うには、このコードを使用して `dependencies` セクションを追加します。
 
-    ```js
+    ```json
     "dependencies": {
-      "express": "4.16.2",
-      "path": "0.12.7",
-      "react": "16.4.0",
-      "react-dom": "16.4.0",
-      "ts-loader": "4.0.1",
-      "typescript": "2.7.2",
-      "webpack": "4.1.1",
-      "webpack-cli": "2.0.11"
+      "express": "~4.16.3",
+      "path": "~0.12.7",
+      "react": "~16.4.2",
+      "react-dom": "~16.4.2",
+      "ts-loader": "~4.5.0",
+      "typescript": "~2.9.2",
+      "webpack": "~4.17.1",
+      "webpack-cli": "~2.1.5"
     }
     ```
 
-    お使いのバージョンの空白のテンプレートに `dependencies` セクションがない場合は、既存のセクションを置き換えるのではなく、これを追加する必要があります。
+    ご使用のバージョンの空のテンプレートに `dependencies` セクションが既にある場合は、それを上記の JSON コードに置き換えるだけで済みます。 このファイルの使用の詳細については、「[package.json configuration](../javascript/configure-packages-with-package-json.md)」 (package.json の構成) を参照してください。
 
 1. プロジェクトで **npm** ノードを右クリックし、**[npm パッケージを更新する]** を選択します。
 
@@ -270,7 +296,7 @@ Visual Studio では、Node.js プロジェクトを簡単に作成すること�
 
     ![webpack を実行する](../javascript/media/tutorial-nodejs-react-run-webpack.png)
 
-    上記の出力ではなく何らかのエラーが表示される場合は、それを解決しないとアプリは動きません。 npm パッケージのバージョンがこのチュートリアルで示されているバージョンと異なる場合は、エラーの原因になる可能性があります。 エラーを修正する方法の 1 つは、前の手順で示されている正確なバージョンを使うことです。 また、これらのパッケージ バージョンの中に非推奨となったものがあるためにエラーが発生する場合は、エラーを修正するにはより新しいバージョンをインストールする必要があります。
+    上記の出力ではなく何らかのエラーが表示される場合は、それを解決しないとアプリは動きません。 npm パッケージのバージョンがこのチュートリアルで示されているバージョンと異なる場合は、エラーの原因になる可能性があります。 エラーを修正する方法の 1 つは、前の手順で示されている正確なバージョンを使うことです。 また、これらのパッケージ バージョンの中に非推奨となったものがあるためにエラーが発生する場合は、エラーを修正するにはより新しいバージョンをインストールする必要があります。 *package.json* を使用した npm パッケージのバージョン管理に関する詳細は、「[package.json configuration](../javascript/configure-packages-with-package-json.md)」 (package.json の構成) を参照してください。
 
 1. ソリューション エクスプローラーでプロジェクト ノードを右クリックして、**[追加]** > **[既存のフォルダー]** を選択し、*dist* フォルダーを選んで、**[フォルダーの選択]** を選択します。
 

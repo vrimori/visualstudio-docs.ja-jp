@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7d56030b78abe57c80d816881991b9819ed6456b
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 7f4c98c9279fe4153fb69e371f51833be382090d
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924742"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774604"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio で JavaScript と TypeScript のコードをソリューションまたはプロジェクトなしで開発します
 
@@ -58,3 +58,27 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 
 > [!NOTE]
 > *tsconfig.json* に関する詳細は、[tsconfig.json TypeScript ハンドブック ページ](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)にあります。
+
+## <a name="unit-tests"></a>単体テスト
+*package.json* でテスト ルートを指定することで、Visual Studio で単体テストの統合を有効にすることができます。
+
+```json
+{
+    // ...
+    "vsTest":{
+        "testRoot": "./tests"
+    }
+    // ...
+}
+```
+
+テスト ランナーは、どのテスト フレームワークを使用するかを判断するため、ローカルにインストールされたパッケージを列挙します。
+サポートされているフレームワークのいずれも認識されない場合は、テスト ランナーは *ExportRunner* を既定にします。 その他のサポートされているフレームワークは次のとおりです。
+* Mocha ([mochajs.org](http://mochajs.org/))
+* Jasmine ([Jasmine.github.io](https://jasmine.github.io/))
+* Tape ([github.com/substack/tape](https://github.com/substack/tape))
+
+テスト エクスプローラーを開くと (**[テスト]** > **[ウィンドウ]** > **[テスト エクスプローラー]** を選択)、Visual Studio によってテストが検出されて表示されます。
+
+> [!NOTE]
+> テスト ランナーが列挙するのは、テスト ルート内の JavaScript ファイルのみです。アプリケーションが TypeScript で記述されている場合は、JavaScript ファイルを最初にビルドする必要があります。

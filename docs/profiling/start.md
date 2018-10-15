@@ -10,14 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b9c699056a3ef4ee493397e99e37f41cbd2cf3e
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: dbecc61e5203495e33aa4417e954607d8cdf6be8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669602"
 ---
 # <a name="start"></a>[開始]
-**Start** オプションは、指定されたプロファイリング方法にプロファイラーを初期化する VSPerfCmd.exe オプションです。  
+**Start** オプションは、指定されたプロファイリング方法にプロファイラーを初期化する *VSPerfCmd.exe* オプションです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,15 +66,15 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
  プロファイラーをオフにします。  
   
 ## <a name="example"></a>例  
- 次の例では、VSPerfCmd.exe の **Start** オプションを使用してプロファイラーを初期化する方法を示します。  
+ 次の例では、*VSPerfCmd.exe* の **Start** オプションを使用してプロファイラーを初期化する方法を示します。  
   
 ```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)
+ [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)

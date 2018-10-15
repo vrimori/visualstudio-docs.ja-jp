@@ -9,22 +9,25 @@ description: クラウド ソリューション プロバイダーが顧客の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: bdf956b02c4bfc5125b452b6eece0cb39e454bc3
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: a455e645629266be28e50718ae5fffde309b3dd9
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36283378"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282288"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>顧客用に Visual Studio クラウド サブスクリプションを購入して管理する
 
-[クラウド ソリューション プロバイダー (CSP)](https://partner.microsoft.com/en-US/cloud-solution-provider) プログラムのパートナーは、顧客のために Visual Studio Enterprise クラウド サブスクリプションと Visual Studio Professional クラウド サブスクリプションを購入できます。
+[クラウド ソリューション プロバイダー (CSP)](https://partner.microsoft.com/cloud-solution-provider) プログラムのパートナーは、顧客のために Visual Studio Enterprise クラウド サブスクリプションと Visual Studio Professional クラウド サブスクリプションを購入できます。
 
 [クラウド サブスクリプションのオプションを比較する](https://visualstudio.microsoft.com/vs/pricing)
 
 ## <a name="prerequisites"></a>必須コンポーネント
+
 最初に、パートナー センターで顧客のテナントをセットアップし、そのテナント用の Azure サブスクリプションを作成する必要があります。
-[詳細を表示](https://docs.microsoft.com/vsts/billing/csp/set-up-csp-customer)
+
+[詳細を表示](/azure/devops/organizations/billing/csp/set-up-csp-customer)
+
 
 ## <a name="how-to-buy"></a>購入方法
 
@@ -79,18 +82,21 @@ CSP パートナー向けの Visual Studio の価格を見るには、[パート
 
 月および Visual Studio サブスクリプションの単位で、(特定の顧客が) 購入した 6 番目以降のユニットに 5% の割引がオファーされます。 各サブスクリプション オプションに 2 つの行があるのはそのためです。 1 つの行の [Minimum Value]\(最小値\) は 0 で、これはユニット 1 から 5 が基準価格であることを示します。 もう 1 つの行の [Minimum Value]\(最小値\) は 5 で、ユニット 6 以上に適用される 5% の割引価格を示します。
 
-
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
+
 ### <a name="q-how-are-monthly-cloud-subscription-charges-processed"></a>Q: **月間プラン**のクラウド サブスクリプション料金はどのように処理されますか?
+
 A:、最初の購入時は、現在の月の残りの日数をカバーする日割り計算された数量を請求します。 たとえば、10 個の Visual Studio Professional クラウド サブスクリプション月間プランを 4 月 15 日に購入した場合、30 日の月のうち 15 日、つまり 50% が残っており、ユニットの 50% が日割り計算されるため、5 ユニット分が請求されます。
 5 月 1 日およびそれ以降は毎月、ユーザーがキャンセルするまで、10 ユニット分が請求されます。
 
 後で支払い数量を増やした場合も、現在の月の残りの日数について、増加ユニット分が日割りで請求されます。 したがって、1 個の Visual Studio Professional クラウド サブスクリプション月間プランを 5 月 10 日に追加購入した場合は、約 0.677 ユニット (5 月の 31 日間の残り 21 日分) が請求されます。
 
 ### <a name="q-how-are-annual-cloud-subscription-charges-processed"></a>Q: **年間プラン**のクラウド サブスクリプション料金はどのように処理されますか?
+
 A: 購入ごとに、購入された全数量が直ちに請求されます。 料金は 1 年間に分散されず、日割り計算は行われません。 同じ年の異なる時期にクラウド サブスクリプション年間プランを購入した場合、サブスクリプションは異なる月に更新されます。 Microsoft ボリューム ライセンス契約の購入で一般に行われている方法とは異なり、お客様のすべてのクラウド サブスクリプション年間プランを同じ期間にすることはありません。
 
-### <a name="q-how-do-cancelations-work"></a>Q: キャンセルはどのように行われますか?
+### <a name="q-how-do-cancellations-work"></a>Q: キャンセルはどのように行われますか?
+
 A: Visual Studio クラウド サブスクリプションをキャンセルすると、自動更新がキャンセルされます。 サブスクリプションは通常の更新日まで継続した後、単に期限切れになります。
 期限が切れると、Visual Studio サブスクライバーは、Visual Studio またはサブスクリプションからの他のすべての特典を使用できなくなります。
 

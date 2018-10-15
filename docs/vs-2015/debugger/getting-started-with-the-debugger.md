@@ -1,14 +1,14 @@
 ---
 title: Getting Started with the Debugger |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -19,18 +19,16 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2269ceae72f620677f51af960f7fe164f7982412
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4642fa76a9891d07e927fa37650976180568f7a8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47544473"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49249952"
 ---
 # <a name="getting-started-with-the-debugger"></a>デバッガーの使用開始
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デバッガー機能ツアー](https://docs.microsoft.com/visualstudio/debugger/debugger-feature-tour)します。  
-  
 Visual Studio デバッガーは、どの言語でも簡単に使用できます。 ここでは、簡単な C# プログラムのデバッグ方法について説明しますが、C++、JavaScript などの他の言語のコードに同じ手順を適用することができます。  
   
 ##  <a name="BKMK_Start_debugging_a_VS_project"></a> 基本的な c# プロジェクトをデバッグします。  
@@ -71,9 +69,9 @@ static void Main(string[] args)
   
  ![[自動変数] ウィンドウのデバッグ時に](../debugger/media/getstartedwindows.png "GetStartedWindows")  
   
- これらのウィンドウの詳細については、次を参照してください。 [[自動変数] と [ローカル Windows](../debugger/autos-and-locals-windows.md)します。  
+ これらのウィンドウの詳細については、次を参照してください。 [[自動変数] と ローカル Windows](../debugger/autos-and-locals-windows.md)します。  
   
- プログラムを進めながら、変数の値がどのように変化するかを見てみましょう。 ブレークポイントを設定、`testInt += 1;`し、デバッグを再開します。 表示する必要があります**testInt**で、**ローカル**と **[自動変数]** windows が**0**、および**は**は**1**します。 デバッグを続行すると (**デバッグ]/[続行**、または**続行**ツールバーで、または**F5**)、ことを確認の値**testInt**変更**1**、し**2**など。 これらの変更を見るが面倒なときは、ブレークポイントを削除 (**]/[デバッグのブレークポイント**余白内でクリックしてまたは)、デバッグを続行します。 すべてのブレークポイントを削除する場合をクリックして**デバッグ/すべてのブレークポイントを削除**、または**CTRL + SHIFT + F9**、 をクリック**はい**確認するダイアログ ボックスで**Do youすべてのブレークポイントを削除しますか。**.  
+ プログラムを進めながら、変数の値がどのように変化するかを見てみましょう。 ブレークポイントを設定、`testInt += 1;`し、デバッグを再開します。 表示する必要があります**testInt**で、**ローカル**と **[自動変数]** windows が**0**、および**は**は**1**します。 デバッグを続行すると (**デバッグ]/[続行**、または**続行**ツールバーで、または**F5**)、ことを確認の値**testInt**変更**1**、し**2**など。 これらの変更を見るが面倒なときは、ブレークポイントを削除 (**]/[デバッグのブレークポイント**余白内でクリックしてまたは)、デバッグを続行します。 すべてのブレークポイントを削除する場合をクリックして**デバッグ/すべてのブレークポイントを削除**、または**CTRL + SHIFT + F9**、 をクリック**はい**確認するダイアログ ボックスで**Do youすべてのブレークポイントを削除しますか。**  
   
 ## <a name="stepping-into-and-over-function-calls"></a>関数の呼び出しのステップ インとステップ オーバー  
  デバッガーをステートメント-by-ステートメント内でコードを実行することができます (**ステップ イン**) か、デバッガーは関数をスキップ中にコードを実行することができます (**ステップ オーバー**) (に強い関心いるコードを迅速に取得するには関数コードが実行されます)。 どちらの方法で、同じデバッグ セッションを切り替えることができます。  

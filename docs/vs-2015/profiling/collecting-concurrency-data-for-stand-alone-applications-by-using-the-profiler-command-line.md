@@ -1,7 +1,7 @@
 ---
 title: プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのコンカレンシー データの収集 | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ caps.latest.revision: 17
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ab84cb87be459723770992a543c2bb3abb941d9
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0d722c90d8fdd77b9da56c08e224652ff8d7a3e9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546768"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49287470"
 ---
 # <a name="collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line"></a>プロファイラーのコマンド ラインを使用したスタンドアロン アプリケーションのコンカレンシー データの収集
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[Profiler のコマンドラインを使用したスタンドアロン アプリケーションの同時実行データを収集する](https://docs.microsoft.com/visualstudio/profiling/collecting-concurrency-data-for-stand-alone-applications-by-using-the-profiler-command-line)します。  
-  
 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロファイリング ツールのコンカレンシー メソッドを使用すると、リソース競合データとスレッド アクティビティ データを収集し、CPU 使用率、スレッド競合、スレッドの移行、同期の遅延、重複 I/O の領域などのシステム イベントを表示できます。  
   
 ## <a name="common-tasks"></a>一般的なタスク  

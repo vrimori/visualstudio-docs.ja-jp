@@ -1,7 +1,7 @@
 ---
 title: カスタム カテゴリと 表示項目を実装する |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -16,18 +16,16 @@ ms.assetid: 99311a93-d642-4344-bbf9-ff6e7fa5bf7f
 caps.latest.revision: 26
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9c47bc8bc4cae609ad378dabaf64f239b7aa47c6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: f4a9f18330060888527466c29f911a37ce29ce46
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49218674"
 ---
 # <a name="implementing-custom-categories-and-display-items"></a>カスタム カテゴリと 表示項目を実装します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[を実装するカスタム カテゴリと 表示項目](https://docs.microsoft.com/visualstudio/extensibility/implementing-custom-categories-and-display-items)します。  
-  
 VSPackage は、そのテキストの色とフォントの制御を提供できます、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]統合開発環境 (IDE) でカスタム カテゴリとアイテムを表示します。  
   
  カスタム カテゴリと 表示項目が、**フォントおよび色**プロパティ ページ。 開くには、**フォントおよび色**プロパティ ページで、**ツール** メニューのをクリックして**オプション**します。 展開**環境**し**フォントおよび色**します。  
@@ -54,7 +52,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
   
 ## <a name="to-create-or-identify-categories"></a>作成またはカテゴリを識別するには  
   
--   [カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >* \FontAndColors\\`<Category>`]  
+-   カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >* \FontAndColors\\`<Category>`]  
   
      *\<カテゴリ >* カテゴリのローカライズされていない名前を指定します。  
   
@@ -69,7 +67,7 @@ VSPackage は、そのテキストの色とフォントの制御を提供でき�
   
 ## <a name="to-create-or-identify-groups"></a>グループを作成または識別するのには  
   
--   [カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >* \FontAndColors\\  *\<グループ >*]  
+-   カテゴリのレジストリ エントリの特殊な型の構築 [hklm \software\microsoft \Visual Studio\\*\<Visual Studio のバージョン >* \FontAndColors\\  *\<グループ >*]  
   
      *\<グループ >* はローカライズされていないグループの名前です。  
   

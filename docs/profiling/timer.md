@@ -10,15 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc361925d26bb6274a90d62c0b0c2085b47210c4
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 914b0c3e493e8486247704ef22967c8ccd511ed2
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34476702"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669098"
 ---
 # <a name="timer"></a>タイマー
-VSPerfCmd.exe の **Timer** オプションは、サンプリングするプロファイリング イベントをプロセッサのクロック サイクルに設定し、必要に応じて、サンプリング間隔のサイクル数を既定の 10,000,000 から変更します。 1 GHz のプロセッサでは、クロック サイクル数 10,000,000 の場合、1 秒あたりのサンプル数は約 100 になります。 指定できる最小サイクル数は、50,000 です。  
+*VSPerfCmd.exe* の **Timer** オプションは、サンプリングするプロファイリング イベントをプロセッサのクロック サイクルに設定し、必要に応じて、サンプリング間隔のサイクル数を既定の 10,000,000 から変更します。 1 GHz のプロセッサでは、クロック サイクル数 10,000,000 の場合、1 秒あたりのサンプル数は約 100 になります。 指定できる最小サイクル数は、50,000 です。  
   
  **Timer** を使用できるのは、サンプリング プロファイリング メソッドを使用する場合のみであり、**Launch** または **Attach** オプションも含むコマンド ラインでのみ使用できます。  
   

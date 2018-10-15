@@ -1,7 +1,7 @@
 ---
 title: Windows 上の Visual Studio での Python サポートの概要
 description: Windows 上で最高の Python IDE である Visual Studio の Python 機能 (Python Tools for Visual Studio (PTVS) とも呼ばれます) の概要について説明します
-ms.date: 05/07/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: overview
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0176b596ecf432ab74a29c29d4af6848ee1d4820
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 99d87f5b8a8a5ee0ad69b6f6d0da121799262c9f
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626911"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320970"
 ---
 # <a name="work-with-python-in-visual-studio-on-windows"></a>Windows 上の Visual Studio での Python の使用
 
@@ -38,6 +38,8 @@ Visual Studio は、Windows 上の強力な Python IDE です。 Visual Studio �
 Visual Studio の **[Python 環境]** ウィンドウ (以下の図では横幅を広げて表示しています) を使用すると、グローバルな Python 環境、conda 環境、仮想環境をすべて 1 つの場所で管理できます。 Visual Studio では、標準的な場所にある Python のインストールが自動的に検出されます。また、カスタム インストールを構成することができます。 各環境では、簡単にパッケージを管理し、その環境の対話型ウィンドウを開き、環境フォルダーにアクセスできます。
 
 ![[Python 環境] ウィンドウを広げた表示](media/environments-expanded-view.png)
+
+**[対話型ウィンドウを開く]** コマンドを使用して、Visual Studio のコンテキスト内で Python を対話的に実行します。 **[PowerShell で開く]** コマンドを使用して、選択した環境のフォルダー内に独立したコマンド ウィンドウを開きます。 そのコマンド ウィンドウから、任意の Python スクリプトを実行できます。 
 
 詳細情報
 
@@ -62,7 +64,7 @@ Visual Studio には、構文の色分け、すべてのコードとライブラ
 
 ## <a name="interactive-window"></a>対話型ウィンドウ
 
-Visual Studio で認識されるすべての Python 環境で、別のコマンド プロンプトを使用するのではなく、Visual Studio 内で直接、Python インタープリター用の同じ対話型 (REPL) 環境を簡単に開くことができます。 また、環境間を簡単に切り替えることもできます。
+Visual Studio で認識されるすべての Python 環境で、別のコマンド プロンプトを使用するのではなく、Visual Studio 内で直接、Python インタープリター用の同じ対話型 (REPL) 環境を簡単に開くことができます。 また、環境間を簡単に切り替えることもできます。 (別のコマンド プロンプトを開くには、**[Python 環境]** ウィンドウで目的の環境を選択してから、前述の「[複数のインタープリターのサポート](#support-for-multiple=interpreters)」で説明したように、**[PowerShell で開く]** コマンドを選択します)。
 
 ![Visual Studio の Python 対話型ウィンドウ](media/interactive-window.png)
 
@@ -163,7 +165,7 @@ A:  この分野の主なツールとして [Qt Project](https://www.qt.io/qt-fo
 
 **Q.Python プロジェクトでスタンドアロンの実行可能ファイルを作成できますか?**
 
-A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が紹介されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) をご覧ください。
+A:  一般的に、Python はインタープリター言語であり、Visual Studio や Web サーバーなど、適切な Python 対応環境で、オンデマンドでコードが実行されます。 現在のところ、Python のスタンドアロンの実行可能ファイル (実質的には Python インタープリターが埋め込まれたプログラム) を作成する機能は Visual Studio にありません。 ただし、[StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency)で説明されているように、Python コミュニティでは、実行可能ファイルを作成するさまざまな方法が提供されています。 また、CPython はネイティブ アプリケーション内への埋め込みをサポートしています。詳細については、ブログの投稿「[Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/)」(CPython の埋め込み可能な Zip ファイルの使用方法) をご覧ください。
 
 ## <a name="features-matrix"></a>機能一覧
 

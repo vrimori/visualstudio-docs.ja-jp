@@ -10,16 +10,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b1e39743b8e3e6602961dfec693d5dc92c0ee63
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 5cd721dc6682057519821ee155ac8a5d803769dc
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669330"
 ---
 # <a name="status"></a>Status
-VSPerfCmd.exe の **Status** オプションでは、プロファイラーの状態、および現在プロファイルを実行中の任意のプロセスに関する情報を表示します。  
+*VSPerfCmd.exe* の **Status** オプションでは、プロファイラーの状態、および現在プロファイルを実行中の任意のプロセスに関する情報が表示されます。  
   
- コマンド ラインで指定するオプションは **Status** オプションのみにする必要があります。 状態を表示するには、VSPerfCmd.exe の **Start** オプションを使用してプロファイラーを初期化しておく必要があります。  
+ コマンド ラインで指定するオプションは **Status** オプションのみにする必要があります。 状態を表示するには、*VSPerfCmd.exe* の **Start** オプションを使用してプロファイラーを初期化しておく必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -71,8 +72,8 @@ VSPerfCmd.exe /Status
  **監視するアクセス権を伴うユーザー**  
  プロファイラーにアクセスできるユーザーの名前を一覧表示します。 VSPerfCmd.exe の **Admin** オプションを使用して、追加ユーザーにアクセスを許可できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
  [スタンドアロン アプリケーションのプロファイリング](../profiling/command-line-profiling-of-stand-alone-applications.md)   
  [ASP.NET Web アプリケーションのプロファイリング](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [プロファイリング (サービスの)](../profiling/command-line-profiling-of-services.md)
+ [サービスのプロファイリング](../profiling/command-line-profiling-of-services.md)

@@ -1,7 +1,7 @@
 ---
 title: Vspackage がユーザー インターフェイス要素を追加する方法 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: abc5d9d9-b267-48a1-92ad-75fbf2f4c1b9
 caps.latest.revision: 61
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6265edea1044c1ee7be25725268a792d78a79cc
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0f97202daa4626f0060a53781f609382bf082c17
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538612"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49283271"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackage でユーザー インターフェイス要素を追加する方法
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[方法 VSPackages に追加のユーザー インターフェイス要素](https://docs.microsoft.com/visualstudio/extensibility/internals/how-vspackages-add-user-interface-elements)します。  
-  
 VSPackage では、ユーザー インターフェイス (UI) 要素、たとえば、メニューのツールバーを追加でき、ツール ウィンドウ、.vsct ファイルを使用して Visual Studio にすることができます。  
   
  UI 要素のデザイン ガイドラインが見つかります[Visual Studio ユーザー エクスペリエンス ガイドライン](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)します。  
@@ -76,7 +74,7 @@ VSPackage では、ユーザー インターフェイス (UI) 要素、たとえ
   
  最初の`GuidSymbol`要素"guid [PackageName] Pkg"、パッケージ自体の GUID です。 これは、Visual Studio によってパッケージの読み込みに使用される GUID です。 通常、子要素はありません。  
   
- 慣例により、メニューとコマンドでグループ化された 1 秒あたり`GuidSymbol`要素"guid [PackageName] CmdSet"、およびビットマップは、3 つ目では [`GuidSymbol`要素では、"guidImages"。 この規則に準拠する必要はありませんが、各メニューのグループ、コマンド、およびビットマップの子である必要があります、`GuidSymbol`要素。  
+ 慣例により、メニューとコマンドでグループ化された 1 秒あたり`GuidSymbol`要素"guid [PackageName] CmdSet"、およびビットマップは、3 つ目では `GuidSymbol`要素では、"guidImages"。 この規則に準拠する必要はありませんが、各メニューのグループ、コマンド、およびビットマップの子である必要があります、`GuidSymbol`要素。  
   
  2 番目の`GuidSymbol`パッケージ コマンドのセットを表し、要素は、いくつか`IDSymbol`要素。 各[IDSymbol 要素](../../extensibility/idsymbol-element.md)名前に数値の値をマップし、メニューのグループ、または、コマンド セットの一部であるコマンドを表す場合があります。 `IDSymbol` 、3 番目の要素`GuidSymbol`コマンドのアイコンとして使用できる要素の表すビットマップ。 GUID と ID のペアが同じ 2 つの子がありません、アプリケーション内で一意でなければならないため`GuidSymbol`要素には、同じ値を指定します。  
   

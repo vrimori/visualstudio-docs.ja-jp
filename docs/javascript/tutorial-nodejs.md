@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ff8d28a0fa6b8889dcc90632126f8b4dd75b70dc
-ms.sourcegitcommit: 7a11a094a353f2e2a2077ad863ca4c0fb97f7ec5
+ms.openlocfilehash: 2093f8a2f2d048661b7fb23f45c5317011f25076
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39132336"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44124919"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
 このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://visualstudio.microsoft.com)から無料でインストールできます。
@@ -85,7 +85,7 @@ Visual Studio では、*プロジェクト*の 1 つのアプリケーション�
 
     (3) npm ノードには、インストールされているすべての npm パッケージが表示されます。 npm ノードを右クリックすれば、ダイアログ ボックスを利用して npm パッケージを検索し、インストールできます。または、*package.json* の設定と npm ノードの右クリック オプションを利用してパッケージをインストールし、更新できます。
 
-    (4) *package.json* は、ノーカルでインストールされているパッケージのパッケージ依存関係とパッケージ バージョンを管理する目的で npm によって使用されるファイルです。
+    (4) *package.json* は、ノーカルでインストールされているパッケージのパッケージ依存関係とパッケージ バージョンを管理する目的で npm によって使用されるファイルです。 このファイルの詳細については、「[package.json configuration](../javascript/configure-packages-with-package-json.md)」 (package.json の構成) を参照してください。
 
     (5) プロジェクト ノードの下に、*app.js* などのプロジェクト ファイルが表示されます。 *app.js* はプロジェクト スタートアップ ファイルであり、そのため、**太字**で表示されます。 プロジェクトでファイルを右クリックし、**[Node.js スタートアップ スクリプトとして設定]** を選択することで、スタートアップ ファイルを設定できます。
 

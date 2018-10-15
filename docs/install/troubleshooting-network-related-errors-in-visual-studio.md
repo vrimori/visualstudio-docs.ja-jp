@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b31a8631497b5c4f39b2c0e6ebffa469282da157
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 40898b249fae9f8d13d3fd5a80eafc3c72e3e819
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138392"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281092"
 ---
 # <a name="troubleshooting-network-related-errors-when-you-install-or-use-visual-studio"></a>Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング
 
@@ -73,7 +73,7 @@ ms.locfileid: "43138392"
 
 ## <a name="error-the-underlying-connection-was-closed"></a>エラー: "接続が切断されました"
 
-ファイアウォールが設定されたプライベート ネットワークで Visual Studio を使用する場合、Visual Studio を一部のネットワーク リソースに接続できない可能性があります。 これらのリソースには、サインインとライセンス取得のための Visual Studio Team Services (VSTS)、NuGet、および Azure サービスが含まれます。 Visual Studio でこれらのリソースのいずれかに接続できない場合は、次のエラー メッセージが表示されることがあります。
+ファイアウォールが設定されたプライベート ネットワークで Visual Studio を使用する場合、Visual Studio を一部のネットワーク リソースに接続できない可能性があります。 これらのリソースには、サインインとライセンス取得のための Azure DevOps Services、NuGet、および Azure サービスが含まれます。 Visual Studio でこれらのリソースのいずれかに接続できない場合は、次のエラー メッセージが表示されることがあります。
 
   **基になる接続が閉じられました: 送信時に、予期しないエラーが発生しました**
 
@@ -103,7 +103,7 @@ Visual Studio ではトランスポート層セキュリティ (TLS) 1.2 プロ�
 
 - cdn.vsassets.io (コンテンツ配信ネットワーク (CDN)、コンテンツをホスト)
 
-- &#42;.gallerycdn.vsassets.io (VSTS 拡張機能をホスト)
+- &#42;.gallerycdn.vsassets.io (Azure DevOps Services の拡張機能をホスト)
 
 - static2.sharepointonline.com (フォントなど、Visual Studio が使用する Office UI ファブリック キットのリソースをホスト)
 

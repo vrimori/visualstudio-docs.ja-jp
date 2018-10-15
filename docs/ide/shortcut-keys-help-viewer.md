@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bebbc778c71c464a6e4eabaebfff15760b99478
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 78e83a69e21c1c6cd1aa10235d66f63fb1e5e27a
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31954260"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775220"
 ---
 # <a name="shortcut-keys-help-viewer"></a>ショートカット キー (ヘルプ ビューアー)
 
@@ -61,7 +61,7 @@ ms.locfileid: "31954260"
 |トピック|**Ctrl** + **Tab**|左のタブから右のタブに切り替えます。|
 |トピック|**Ctrl** + **Shift** + **Tab**|右のタブから左のタブに切り替えます。|
 |トピック|**Ctrl** + **W**|現在のタブを閉じます。|
-|トピック|**Ctrl** + ***数値***|1 ～ 9 の***数値***は連続するそれぞれのタブを示しており、各数値を押すと、その特定のタブに切り替えます。|
+|トピック|**Ctrl**+**_数値_**|1 から 9 の**_数値_** は連続するそれぞれのタブを示しており、各数値を押すと、その特定のタブに切り替えます。|
 |トピック|**Ctrl** + **Alt** + **F4**|その他のコンテンツ タブを閉じます。|
 |トピック|**Ctrl** + **Shift** + **プラス記号**|ズームの倍率を 10% 上げます。|
 |トピック|**Ctrl** + **マイナス記号**|ズームの倍率を 10% 下げます。|

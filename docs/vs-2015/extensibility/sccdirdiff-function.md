@@ -1,7 +1,7 @@
 ---
 title: SccDirDiff 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -17,18 +17,16 @@ ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 38730348fcafbbed9a3284f79e14fade2efb70ba
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2700bd452ec20aa8bf05bf5ec6bde51922356cca
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540121"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49218336"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[SccDirDiff 関数](https://docs.microsoft.com/visualstudio/extensibility/sccdirdiff-function)します。  
-  
 この関数は、クライアントのディスク上の現在のローカル ディレクトリとソース管理下にある対応するプロジェクトの違いを表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,7 +52,7 @@ SCCRTN SccDirDiff(
  [in]視覚的な違いを表示するか、ローカル ディレクトリへの完全修飾パス。  
   
  dwFlags  
- [in]コマンドのフラグ (「解説」を参照してください] セクション)。  
+ [in]コマンドのフラグ (「解説」を参照してください セクション)。  
   
  pvOptions  
  [in]ソース管理プラグインに固有のオプション。  

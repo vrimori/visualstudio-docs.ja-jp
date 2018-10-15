@@ -13,12 +13,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6cf63d830a90e7240ec0adb4d191b8b765ebb1d4
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 1222f1aaa68c573a61bf10e3935e21330aa63260
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380366"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320905"
 ---
 # <a name="unit-test-your-code"></a>コードの単体テスト
 
@@ -28,8 +28,7 @@ ms.locfileid: "39380366"
 
 * **テスト エクスプローラー**&mdash;単体テストを実行して、**テスト エクスプローラー**でその結果を確認できます。 サードパーティ製のフレームワークを含めて、**テスト エクスプローラー**のアダプターがあるすべての単体テスト フレームワークを使用できます。
 
-* 
-  **マネージド コード用の Microsoft 単体テスト フレームワーク**&mdash;マネージド コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。
+* **マネージド コード用の Microsoft 単体テスト フレームワーク**&mdash;マネージド コード用の Microsoft 単体テスト フレームワークは、Visual Studio と共にインストールされ、.NET コードをテストするためのフレームワークを提供します。
 
 * **C++ 用の Microsoft 単体テスト フレームワーク**&mdash;C++ 用の Microsoft 単体テスト フレームワークは、**C++ によるデスクトップ開発**ワークロードの一部としてインストールされます。 これにより、ネイティブ コードをテストするためのフレームワークが提供されます。 Google Test、Boost.Test、CTest の各フレームワークも含まれており、サードパーティ製のアダプターを追加のテスト フレームワークで使用できます。 詳細については、[C/C++ 用の単体テストの作成](../test/writing-unit-tests-for-c-cpp.md)に関するページを参照してください。
 
@@ -50,8 +49,8 @@ ms.locfileid: "39380366"
 |**C++ コードの単体テスト**|-   [C++ 用の Microsoft 単体テスト フレームワークを使用した C/C++ 用単体テストの記述](../test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp.md)|
 |**単体テストの分離**|-   [Microsoft Fakes を使用したテストでコードを分離する](../test/isolating-code-under-test-with-microsoft-fakes.md)|
 |**コード カバレッジを使用して、テストされたプロジェクトのコードの割合を調べる:** Visual Studio のテスト ツールのコード カバレッジ機能について学習します。|-   [コード カバレッジを使用した、テストされるコード割合の確認](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)|
-|**ロード テストを使用したストレスおよびパフォーマンスの分析の実行:** ロード テストを作成し、それに単体テストを追加すると、アプリケーションのパフォーマンスおよびストレスの問題を分離するのに役立ちます。|-   [ロード テスト (VSTS と TFS)](/vsts/load-test/)|
-|**品質ゲートの設定:** 品質ゲートを作成し、コードがチェックインされる前にテストを実行することで、コードの品質を保証できます。|-   [チェックイン ポリシー (VSTS)](/vsts/tfvc/add-check-policies)|
+|**ロード テストを使用したストレスおよびパフォーマンスの分析の実行:** ロード テストを作成し、それに単体テストを追加すると、アプリケーションのパフォーマンスおよびストレスの問題を分離するのに役立ちます。|-   [ロード テスト (Azure Test Plans と TFS)](/azure/devops/test/load-test/index?view=vsts)|
+|**品質ゲートの設定:** 品質ゲートを作成し、コードがチェックインまたはマージされる前にテストを実行することで、コードの品質を保証できます。|-   [チェックイン ポリシー (Azure Repos TFVC)](/azure/devops/repos/tfvc/add-check-policies?view=vsts)|
 |**テストのオプションを設定する:** たとえば、テスト結果が格納される場所を指定できます。|[.runsettings ファイルを使用して単体テストを構成する](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|
 
 ## <a name="api-reference-documentation"></a>API リファレンス ドキュメント

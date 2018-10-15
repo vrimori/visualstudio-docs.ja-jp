@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 472fcda584db4bf6cd16c386fec4b3e668f44a9f
-ms.sourcegitcommit: 4f82c178b1ac585dcf13b515cc2a9cb547d5f949
+ms.openlocfilehash: d7ee37ddd9899b979d8440202c89d03284b26f48
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341677"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279077"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Visual Studio でのコンパイルとビルド
 
@@ -28,7 +28,7 @@ ms.locfileid: "39341677"
 
 ビルドに成功することは、実質的には検証です。つまり、アプリケーションのソース コードの構文が正しいことと、ライブラリやアセンブリなどのコンポーネントへの静的参照がすべて解決済みであることが確認されます。 この結果としてアプリケーション実行可能ファイルが生成されるので、次にこれをテストします。[デバッグ環境](../debugger/index.md)で正しく機能することを確認するとともに、手動と自動のさまざまなテストを通して[コードの品質を検証](../test/improve-code-quality.md)します。 アプリケーションのテストが完了したら、リリース バージョンをコンパイルしてユーザーにリリースします。 このプロセスの入門資料については、「[チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)」を参照してください。
 
-Visual Studio 製品ファミリの中では、アプリケーションのビルドに使用できる方法として Visual Studio IDE、MSBuild コマンドライン ツール、Visual Studio Team Services 上の Team Foundation ビルドの 3 つがあります。
+Visual Studio IDE、MSBuild コマンド ライン ツール、Team Foundation ビルド、Azure DevOps Services のいずれかの方法を使用して、アプリケーションをビルドすることができます。
 
 | ビルド方法 | 利点 |
 | --- |--- | --- |
@@ -36,7 +36,7 @@ Visual Studio 製品ファミリの中では、アプリケーションのビル
 | MSBuild コマンドライン| - Visual Studio をインストールせずにプロジェクトをビルドできます。<br />- すべてのプロジェクト タイプでマルチ プロセッサ ビルドを実行できます。<br />- ビルド システムのほとんどの部分をカスタマイズできます。|
 | Team Foundation ビルド | - ビルド プロセスを継続的インテグレーション/継続的デリバリー パイプラインの一部として自動化できます。<br />- 自動テストをすべてのビルドに適用します。<br />- クラウド ベースのリソースをほぼ無制限にビルド プロセスに使用できます。<br />- ビルド ワークフローの変更やビルド アクティビティの作成が可能です。実行するタスクを大幅にカスタマイズできます。|
 
-このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Continuous integration and deployment](/vsts/pipelines/index?view=vsts)」 (継続的なインテグレーションと配置) を参照してください。
+このセクションでは、IDE ベースのビルド プロセスを詳しく解説します。 他の方法の詳細については、「[MSBuild](../msbuild/msbuild.md)」と「[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)」をそれぞれ参照してください。
 
 ## <a name="overview-of-building-from-the-ide"></a>IDE でのビルドの概要
 

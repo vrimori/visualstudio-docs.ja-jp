@@ -1,7 +1,7 @@
 ---
 title: コンカレンシー名前空間 (コンカレンシー ビジュアライザー) | Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -18,19 +18,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: eb2b9b8b06722dd1c5cab5219a2e3457e7a54587
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 169df5f3d3e498575b0153dc12894622e0a6e149
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47535629"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49251264"
 ---
 # <a name="concurrency-namespace-concurrency-visualizer"></a>コンカレンシー名前空間 (コンカレンシー ビジュアライザー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[同時実行 Namespace (同時実行ビジュアライザー)](https://docs.microsoft.com/visualstudio/profiling/concurrency-namespace-concurrency-visualizer)します。  
-  
-`Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークであるコンカレンシー ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[コンカレンシー ランタイム](http://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)」を参照してください。  
+`Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[コンカレンシー ランタイム](http://msdn.microsoft.com/library/874bc58f-8dce-483e-a3a1-4dcc9e52ed2c)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

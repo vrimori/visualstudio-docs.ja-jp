@@ -9,11 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe7905175493d2214db86fca288cd72ee1dcbabc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d3ec82822b2004cabb91f8c7677409acce69c199
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669555"
 ---
 # <a name="overview-of-profiling-in-visual-studio"></a>Visual Studio でのプロファイリングの概要
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="next-steps"></a>次の手順
 
-* アプリケーションのパフォーマンスを測定するさまざまな方法については、「[プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)」をご覧ください。
+* アプリケーションのパフォーマンスを測定するさまざまな方法については、「[プロファイル ツールの概要](../profiling/profiling-feature-tour.md)」をご覧ください。
 
 * CPU 使用率ツールで [CPU 使用率を分析し](../profiling/cpu-usage.md)、さらに詳細な情報を取得します。
 

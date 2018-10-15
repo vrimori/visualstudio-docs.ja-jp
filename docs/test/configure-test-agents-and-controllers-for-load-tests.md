@@ -9,19 +9,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a64558f442b6d3ad77a34bb8ae4acb2860273c05
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: a0da0ca3fb5c36a0c878e641121312b2773b8215
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176470"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321113"
 ---
 # <a name="configure-test-agents-and-test-controllers-for-running-load-tests"></a>ロード テストを実行するためのテスト エージェントおよびテスト コントローラーの構成
 
 Visual Studio では、物理または仮想マシンを使用して、アプリ用にシミュレートされた負荷を生成することができます。 これらのコンピューターは、単一のテスト コントローラーと 1 つ以上のテスト エージェントとしてセットアップする必要があります。 テスト コントローラーとテスト エージェントを使用すると、単一のコンピューターで生成する場合よりも、高い負荷を生成できます。
 
 > [!NOTE]
-> また、クラウド ベースのロード テストを使用すると、多数のユーザーが同時に Web サイトにアクセスした場合と同等の負荷を生成する仮想マシンを用意できます。 クラウド ベースのロード テストの詳細については、[VSTS を使用するロード テストの実行](/vsts/load-test/get-started-simple-cloud-load-test)に関するページを参照してください。
+> また、クラウド ベースのロード テストを使用すると、多数のユーザーが同時に Web サイトにアクセスした場合と同等の負荷を生成する仮想マシンを用意できます。 クラウド ベースのロード テストの詳細については、[Azure Test Plans を使用したロード テストの実行](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts)に関するページを参照してください。
 
 ## <a name="load-simulation-architecture"></a>ロード シミュレーション アーキテクチャ
 

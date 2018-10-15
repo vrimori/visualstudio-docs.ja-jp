@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: 4ac7aa7d9fbbf4e6f6ffbe5eafd82ff8f1e0bc44
-ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
+ms.openlocfilehash: 069150d7f441b754b21c0a3a487f5238ef94e039
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43054557"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775105"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio テスト エクスプローラーに関する FAQ
 
@@ -30,7 +30,7 @@ ms.locfileid: "43054557"
 
   プロジェクトをビルドして、**[ツール]** > **[オプション]** > **[テスト]** の順に移動して、アセンブリベースの検出がオンになっていることを確認します。
 
-  [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、ソース ベースのテストの検出です。 理論、カスタム アダプター、カスタム特性、`#ifdef` ステートメントなどは実行時に定義されるため、これらを使うテストは検出できません。 これらのテストを正確に検出するには、ビルドが必要です。 15.6 プレビューでは、アセンブリベースの検出 (従来の検出プログラム) はビルドの後にのみ実行されます。 この設定は、リアルタイムのテスト検出は、ユーザーが編集中にできるだけ多くのテストを検出し、アセンブリベースの検出では、ビルド後に動的に定義されたテストを表示できるようにすることを意味します。 リアルタイムのテスト検出は、応答性を高めながら、ビルド後に完全かつ正確な結果を得ることができます。
+  [リアルタイムのテスト検出](https://go.microsoft.com/fwlink/?linkid=862824)は、ソース ベースのテストの検出です。 理論、カスタム アダプター、カスタム特性、`#ifdef` ステートメントなどは実行時に定義されるため、これらを使うテストは検出できません。 これらのテストを正確に検出するには、ビルドが必要です。 Visual Studio 2017 バージョン 15.6 以降では、アセンブリベースの検出 (従来の検出プログラム) はビルドの後にのみ実行されます。 この設定は、リアルタイムのテスト検出は、ユーザーが編集中にできるだけ多くのテストを検出し、アセンブリベースの検出では、ビルド後に動的に定義されたテストを表示できるようにすることを意味します。 リアルタイムのテスト検出は、応答性を高めながら、ビルド後に完全かつ正確な結果を得ることができます。
 
 ## <a name="test-explorer--plus-symbol"></a>テスト エクスプローラーの '+' (プラス) 記号
 **テスト エクスプローラーの最初の行に表示される '+' (プラス) 記号は何を意味しているのですか?**
@@ -93,6 +93,31 @@ ms.locfileid: "43054557"
 **テスト プロジェクト {} では、いかなる .NET NuGet アダプターも参照されません。このプロジェクトでは、テスト検出または実行が動作しないことがあります。ソリューションの各 .NET テスト プロジェクトで NuGet テスト アダプターを参照することをお勧めします。**
 
 テスト アダプター拡張機能を使用する代わりに、プロジェクトではテスト アダプターの NuGet パッケージを使用する必要があります。 これにより、パフォーマンスが大幅に向上し、継続的インテグレーションでの問題が減少します。 .NET テスト アダプター拡張機能の非推奨について詳しくは、[リリース ノート](/visualstudio/releasenotes/vs2017-preview-relnotes#testadapterextension)をご覧ください。
+
+> [!NOTE]
+> NUnit 2 のテスト アダプターを使用していて、NUnit 3 のテスト アダプターに移行できない場合は、Visual Studio バージョン 15.8 で **[ツール]** > **[オプション]** > **[テスト]** の順に選択して、この新しい検出の動作をオフにできます。 
+
+  ![ツール オプションでのテスト エクスプローラー アダプターの動作](media/testex-adapterbehavior.png)
+
+## <a name="uwp-testcontainer-was-not-found"></a>UWP TestContainer が見つかりませんでした
+**UWP テストが Visual Studio 2017 バージョン 15.7 以降で実行されなくなりました。**
+
+最近の UWP テスト プロジェクトでは、テスト アプリを識別するためのパフォーマンスを向上させるため、テスト プラットフォームのビルド プロパティを指定します。 Visual Studio バージョン 15.7 より前に初期化された UWP テスト プロジェクトがある場合は、**[出力]** > **[テスト]** で次のエラーが表示される場合があります。
+
+**System.AggregateException: 1 つ以上のエラーが発生しました。 ---> System.InvalidOperationException: Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider <GetTestContainerAsync>d__61.MoveNext()** で次の TestContainer が見つかりませんでした {}
+  
+これを修正するには、次を実行してください。
+- テスト プロジェクトのビルド プロパティを次のように更新します。
+
+```XML
+<UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
+```
+
+- TestPlatform SDK バージョンを次のように更新します。
+
+```XML
+<SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
+```
 
 ## <a name="using-feature-flags"></a>機能フラグの使用
 **新しいテスト機能を試すために機能フラグをオンにするにはどうしたらよいですか?**

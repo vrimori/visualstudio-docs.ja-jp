@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e7c2ce059e53c44d29463f0bb9aba3c2a24e1e4
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 5bd871508d4e77cd165626ab4ce3727abf9a2006
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152618"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775398"
 ---
 # <a name="cl-task"></a>CL タスク
 Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コンパイラは、実行可能ファイル (*.exe*)、ダイナミック リンク ライブラリ (*.dll*) ファイル、またはコード モジュール (*.netmodule*) ファイルを生成します。 詳細については、「[コンパイラ オプション](/cpp/build/reference/compiler-options)」を参照してください。  
@@ -752,7 +752,7 @@ Visual C++ コンパイラ ツール (*cl.exe*) をラップします。 コン�
   
     -   **EnableAllWarnings** - **/Wall**  
   
-     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/W***n* オプションをご覧ください。  
+     詳細については、「[/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warning Level)](/cpp/build/reference/compiler-option-warning-level)」(/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)) の **/W**_n_ オプションをご覧ください。  
   
 -   **WholeProgramOptimization**  
   

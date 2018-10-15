@@ -10,16 +10,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81e5f0696db8f8e29204f9fbed49cc347a4afb74
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 28e103e278ab044ee9dcef8226a65afc78da9829
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669347"
 ---
 # <a name="perftips"></a>パフォーマンスのヒント
 Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **診断ツール** は、デバッグ中のアプリのパフォーマンス監視と分析に役立ちます。  
   
- デバッガー統合診断ツールは開発中のパフォーマンスの問題を発見する優れた手段ですが、デバッガーはアプリのパフォーマンスに大きな影響を与えることがあります。 より正確なパフォーマンス データを収集するには、Visual Studio 診断ツールの使用を検討してください。このツールは、パフォーマンス調査の追加手段としてデバッガーの外部で実行されます。 「[Run Profiling Tools with or without the Debugger (デバッガーを使用して、または使用せずにプロファイリング ツールを実行する)](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」をご覧ください。  
+ デバッガー統合診断ツールは開発中のパフォーマンスの問題を発見する優れた手段ですが、デバッガーはアプリのパフォーマンスに大きな影響を与えることがあります。 より正確なパフォーマンス データを収集するには、Visual Studio 診断ツールの使用を検討してください。このツールは、パフォーマンス調査の追加手段としてデバッガーの外部で実行されます。 「[デバッガーを使用して、または使用せずにプロファイリング ツールを実行する](../profiling/running-profiling-tools-with-or-without-the-debugger.md)」をご覧ください。  
   
 ## <a name="perftips"></a>パフォーマンスのヒント  
  デバッガーがブレークポイントで実行を停止するか、ステップ実行を停止した場合、エディター ウィンドウに、ヒントとして前のブレークポイントからその中断までの経過時間が表示されます。 詳細については、「 [PerfTips: Performance Information at-a-glance while Debugging with Visual Studio](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx)」を参照してください。  
@@ -27,9 +28,9 @@ Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **
  ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>[診断ツール] ウィンドウ  
- ブレークポイントおよび関連付けられているタイミング データは、[診断ツール] ウィンドウに記録されます。  
+ ブレークポイントおよび関連付けられているタイミング データは、**[診断ツール]** ウィンドウに記録されます。  
   
- 次の図は、Visual Studio 2015 Update 1 の [診断ツール] ウィンドウを示しています。  
+ 次の図は、Visual Studio 2015 Update 1 の **[診断ツール]** ウィンドウを示しています。  
   
  ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
@@ -55,6 +56,6 @@ Visual Studio デバッガーの *PerfTips* 、および統合デバッガー **
   
 2.  **[デバッグ中に診断ツールを有効にする]** チェック ボックスをオンまたはオフにします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [Visual Studio のプロファイル](../profiling/index.md)  
- [プロファイリング機能ツアー](../profiling/profiling-feature-tour.md)
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

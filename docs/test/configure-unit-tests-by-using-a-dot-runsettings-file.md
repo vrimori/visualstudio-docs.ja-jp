@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: abecc0968862fd5547e8a2bdff113f1c21abb8d9
-ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
+ms.openlocfilehash: e4c778e66a8fa9ca2008345675c6c3504786fcdf
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901486"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280286"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings ファイルを使用して単体テストを構成する*
 
@@ -24,7 +24,7 @@ Visual Studio の単体テストは、*.runsettings* ファイルを使用して
 
 ## <a name="specify-a-run-settings-file"></a>実行設定ファイルを指定する
 
-実行設定ファイルを使用して、[コマンド ライン](vstest-console-options.md)、IDE、あるいは Visual Studio Team Services (VSTS) または Team Foundation Server (TFS) を使用する[ビルド ワークフロー](/vsts/pipelines/test/getting-started-with-continuous-testing?view=vsts)で実行されるテストを構成することができます。
+実行設定ファイルを使用して、[コマンド ライン](vstest-console-options.md)、IDE、あるいは Azure Test Plans または Team Foundation Server (TFS) を使用する[ビルド ワークフロー](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)で実行されるテストを構成することができます。
 
 ### <a name="specify-a-run-settings-file-in-the-ide"></a>IDE で実行設定ファイルを指定する
 
@@ -256,4 +256,4 @@ public void HomePageTest()
 ## <a name="see-also"></a>関連項目
 
 - [コード カバレッジ分析のカスタマイズ](../test/customizing-code-coverage-analysis.md)
-- [Visual Studio テスト タスク (VSTS)](/vsts/pipelines/tasks/test/vstest?view=vsts)
+- [Visual Studio テスト タスク (Azure Test Plans)](/azure/devops/pipelines/tasks/test/vstest?view=vsts)

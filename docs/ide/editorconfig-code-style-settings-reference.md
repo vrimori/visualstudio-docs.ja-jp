@@ -10,20 +10,20 @@ helpviewer_keywords:
 - EditorConfig coding conventions
 - language conventions [EditorConfig]
 - formatting conventions [EditorConfig]
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 04d8cd6f27f90d398d22b90f9c9bd432466fb3cd
-ms.sourcegitcommit: 58a0b227f29b95e3ed55101ef66c68913682862b
+ms.openlocfilehash: f85f2fed84dd8579295c0124adb43ee395166204
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2018
-ms.locfileid: "42626828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125068"
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig の .NET コーディング規則の設定
 
@@ -92,6 +92,8 @@ Visual Studio 2017 [EditorConfig](../ide/create-portable-custom-editor-options.m
         - dotnet\_style\_prefer\_inferred\_anonymous\_type\_member_names
         - dotnet\_style\_prefer\_auto\_properties
         - dotnet\_style\_prefer\_is\_null\_check\_over\_reference\_equality\_method
+        - dotnet\_style\_prefer\_conditional\_expression\_over\_assignment
+        - dotnet\_style\_prefer\_conditional\_expression\_over\_return
     - ["null" チェック設定](#null_checking)
         - dotnet\_style\_coalesce_expression
         - dotnet\_style\_null_propagation
@@ -1084,7 +1086,7 @@ public int Age { get { return _age; }}
 
 ```csharp
 // csharp_style_expression_bodied_indexers = true
-public T this[int i] => _value[i];
+public T this[int i] => _values[i];
 
 // csharp_style_expression_bodied_indexers = false
 public T this[int i] { get { return _values[i]; } }
@@ -1471,7 +1473,7 @@ dotnet_sort_system_directives_first = true
 
 | 規則名 | 適用可能な言語 | Visual Studio の既定値 | Visual Studio 2017 バージョン |
 | ----------- | -------------------- | ----------------------| ----------------  |
-| csharp_new_line_before_open_brace |  C# | すべて | 15.3  |
+| csharp_new_line_before_open_brace |  C# | all | 15.3  |
 | csharp_new_line_before_else |  C# | true | 15.3  |
 | csharp_new_line_before_catch |  C# | true | 15.3  |
 | csharp_new_line_before_finally |  C# | true | 15.3  |
@@ -1486,7 +1488,7 @@ dotnet_sort_system_directives_first = true
 | [値] | 説明
 | ------------- |:-------------|
 | accessors、anonymous_methods、anonymous_types、control_blocks、events、indexers、lambdas、local_functions、methods、object_collection_array_initializers、properties、types。<br>(種類が複数ある場合は、"," で区切ります)。 | 中かっこは指定されたコード要素の新しい行に配置する必要があります ("Allman" スタイルともいう)。 |
-| すべて | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
+| all | 中かっこはすべての式の新しい行に配置する必要があります ("Allman" スタイル)。 |
 | none | 中かっこはすべての式の同じ行に配置する必要があります ("K&R")。 |
 
 コード例:
