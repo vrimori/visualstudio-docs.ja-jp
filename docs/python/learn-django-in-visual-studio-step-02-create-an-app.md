@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d1458fc07bf90257ae2cc6f404d5d0661df01c18
-ms.sourcegitcommit: 9ea4b62163ad6be556e088da1e2a355f31366f39
+ms.openlocfilehash: 7e9f5506efb74735975bdddc6f1f5c483c1e5dea
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995964"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547933"
 ---
 # <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>手順 2: ビューおよびページ テンプレートを使用して Django アプリを作成する
 
@@ -125,7 +125,7 @@ class HelloDjangoAppConfig(AppConfig):
 
 `^home` のように、正規表現で末尾の $ を使用しない場合、URL パターンは "home"、"homework"、"homestead"、および "home192837" など、"home" で始まる*任意*の URL と一致します。
 
-別の正規表現を使って実験するには、[pythex.org](http://www.pythex.org) で [regex101.com](https://regex101.com) のようなオンライン ツールを試行してください。
+別の正規表現を使って実験するには、[pythex.org](https://www.pythex.org) で [regex101.com](https://regex101.com) のようなオンライン ツールを試行してください。
 
 ## <a name="step-2-3-render-a-view-using-html"></a>手順 2-3: HTML を使用してビューを表示する
 
