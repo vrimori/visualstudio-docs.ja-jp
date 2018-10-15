@@ -1,7 +1,7 @@
 ---
 title: DSL 定義図の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -21,18 +21,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0874d5eff99b7e37807daee7115e66740d2661d8
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 1fc0dbc007dcb3e15891a4176fc5bdb96babbfa8
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47537094"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208586"
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL 定義図の使用
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[DSL 定義図の使用](https://docs.microsoft.com/visualstudio/modeling/working-with-the-dsl-definition-diagram)します。  
-  
 ダイアグラムを[!INCLUDE[dsl](../includes/dsl-md.md)]定義は、ドメイン固有言語を定義するための重要なツールです。 ドメイン モデルに要素を追加し、図で関係を定義し、図のレイアウトを読みやすいように変更できます。  
   
 ## <a name="the-layout-of-the-diagram"></a>図のレイアウト  

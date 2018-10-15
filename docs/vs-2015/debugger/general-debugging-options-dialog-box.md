@@ -1,7 +1,7 @@
 ---
 title: オプション ダイアログ ボックスの 全般、デバッグ、|Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -27,18 +27,16 @@ caps.latest.revision: 50
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c765ad6431572c224fa5458b9a4c65d9bb7a8cf
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 222cd90f73611aa40980679795debf4cb5eb2c0e
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47546642"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49306892"
 ---
 # <a name="general-debugging-options-dialog-box"></a>[全般] ([オプション] ダイアログ ボックス - [デバッグ])
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[General, Debugging, オプション ダイアログ ボックス](https://docs.microsoft.com/visualstudio/debugger/general-debugging-options-dialog-box)します。  
-  
 **ツール/オプション/デバッグ/一般的な**ページで、次のオプションを設定できます。  
   
  **すべてのブレークポイントを削除する前に確認します。**  
@@ -130,7 +128,7 @@ ms.locfileid: "47546642"
  **Dll エクスポートを読み込む**  
  DLL エクスポート テーブルを読み込みます。 DLL エクスポート テーブルのシンボル情報は、対応するシンボルのない Windows メッセージ、Windows プロシージャ (WindowProc)、COM オブジェクト、マーシャリング、DLL を操作する場合に役立ちます。 DLL エクスポート情報を読み取ると、オーバーヘッドがある程度発生します。 そのため、既定ではこの機能はオフになっています。  
   
- Dll のエクスポート テーブルで使用できるシンボルを確認するには、次のように使用します。`dumpbin /exports`します。 シンボルは、すべての 32 ビット システムの DLL に使うことができます。 `dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるとき、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 (入れ子の一番内側) が先頭に表示されます。 詳細については、次を参照してください。 [dumpbin/exports](http://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)します。  
+ DLL のエクスポート テーブル内で使用できるシンボルを確認するには、`dumpbin /exports` を使います。 シンボルは、すべての 32 ビット システムの DLL に使うことができます。 `dumpbin /exports` の出力を参照すると、英数字以外の文字を含む、正確な関数名を確認できます。 この情報は、関数にブレークポイントを設定するときに使用します。 DLL エクスポート テーブルの関数名は、デバッガーの他の場所で表示されるとき、切り捨てられることがあります。 関数は呼び出し順に表示され、現在の関数 (入れ子の一番内側) が先頭に表示されます。 詳細については、「 [dumpbin /exports](http://msdn.microsoft.com/library/2971ab7e-4ee6-478b-9c85-cda42a4ce1bf)」を参照してください。  
   
  **並列スタックの図を上下に表示します。**  
  履歴を表示する方向を制御、**並列スタック**ウィンドウ。  

@@ -1,7 +1,7 @@
 ---
 title: デザイナーを使用して SQL database の作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -28,18 +28,16 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 7a641edfbe1b584d324bffca3404a1f7cd3a72ad
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 8a1765c142fcf039b28b2e1c2e6ad1bf7038aaa9
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49220754"
 ---
 # <a name="create-a-sql-database-by-using-a-designer"></a>デザイナーを使用して SQL database を作成します。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[デザイナーを使用して SQL database を作成する](https://docs.microsoft.com/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)します。  
-  
   
 テーブルを追加して、Visual Studio を使用して作成し、SQL Server Express LocalDB にローカル データベース ファイルを更新して、列を定義するなど、基本的なタスクを調べることができます。 このチュートリアルを終了すると、ローカル データベースを使用してさらに高度な機能を使用できるようになり、こうした機能を必要とする他のチュートリアルへの準備となります。  
   

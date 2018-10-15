@@ -1,7 +1,7 @@
 ---
 title: 複数のプロセスのデバッグ |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -25,18 +25,16 @@ caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f573a677d1c74613bb66219a0ac75aa5bf267f12
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: c3bbd49aeab7df414d558a8841a55d982d8d2595
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47538603"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49289875"
 ---
 # <a name="debug-multiple-processes"></a>複数プロセスをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[複数のプロセスをデバッグ](https://docs.microsoft.com/visualstudio/debugger/debug-multiple-processes)します。  
-  
 ここでは、プロセスのデバッグ開始、プロセス間の切り替え、実行の中断と続行、ソースのステップ実行、デバッグの停止、プロセスの終了/プロセスからのデタッチの方法について説明します。  
   
 ##  <a name="BKMK_Contents"></a> 目次  

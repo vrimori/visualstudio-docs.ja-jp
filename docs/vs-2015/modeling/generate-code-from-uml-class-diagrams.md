@@ -1,7 +1,7 @@
 ---
 title: UML クラス図からコードを生成 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -19,18 +19,16 @@ caps.latest.revision: 53
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 8874e5aa1c2dcf440c7cfed1cc2ce42c4187bdc1
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: e13ad8f658fafa2a20556e95123c5cd5965934e6
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533563"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49222835"
 ---
 # <a name="generate-code-from-uml-class-diagrams"></a>UML クラス ダイアグラムからコードを生成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[UML クラス図からコードを生成](https://docs.microsoft.com/visualstudio/modeling/generate-code-from-uml-class-diagrams)します。  
-  
 Visual Studio で UML クラス図から Visual c# .NET コードを生成するには、使用、**コードの生成**コマンド。 既定では、このコマンドにより、選択したそれぞれの UML 型に対して C# の型が生成されます。 コードを生成するテキスト テンプレートを変更またはコピーすることで、この動作を変更および拡張できます。 モデルの異なるパッケージに含まれる型に対して、異なる動作を指定することもできます。  
   
  **コードの生成**要素のユーザーの選択からコードを生成し、各 UML クラスまたはその他の要素の 1 つのファイルを生成するのには、コマンドは特に適しています。 たとえば、次のスクリーンショットには、2 つの UML クラスから生成された 2 つの C# ファイルが示されています。  
@@ -173,9 +171,9 @@ Visual Studio で UML クラス図から Visual c# .NET コードを生成する
     |------------------|---------------------|  
     |名前|このバインディングの名前。 上位のパッケージまたはモデルから継承されたバインディングをオーバーライドするには、オーバーライド対象のバインディングと同じ名前を使用します。|  
     |上書き|true の場合、既存のコードを上書きします。|  
-    |ターゲット名|生成されるファイルの名前。<br /><br /> などの式をこの文字列に挿入できる`{Name}`または`{Owner.Name}`します。 たとえば、作成する:`{Owner.Name}_{Name}`します。 式は、モデル要素に対して評価されます。 要素のプロパティは使用できますが、メソッドのプロパティは使用できません。 型のプロパティに場所をどのようなプロパティを使用できるを検索する**Microsoft.VisualStudio.Uml\* 。**. **重要:** `{Name}`または`{Owner.Name}`でのみ使用できます、**ターゲット名**プロパティ。   生成されるクラスの名前を変更するには、テンプレートを変更する必要があります。 詳細については、次を参照してください。[テキスト テンプレートの作成](#writing)です。|  
+    |ターゲット名|生成されるファイルの名前。<br /><br /> などの式をこの文字列に挿入できる`{Name}`または`{Owner.Name}`します。 たとえば、作成する:`{Owner.Name}_{Name}`します。 式は、モデル要素に対して評価されます。 要素のプロパティは使用できますが、メソッドのプロパティは使用できません。 型のプロパティに場所をどのようなプロパティを使用できるを検索する**Microsoft.VisualStudio.Uml\* 。**. **重要:** `{Name}`または`{Owner.Name}`でのみ使用できます、**ターゲット名**プロパティ。 生成されるクラスの名前を変更するには、テンプレートを変更する必要があります。 詳細については、次を参照してください。[テキスト テンプレートの作成](#writing)です。|  
     |プロジェクト パス|変換の出力ファイルを格納する [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトへのパスを指定します。 新しいプロジェクトを作成するには、型指定された値を使用します。 省略記号ボタン (**[...]**) を既存のプロジェクトを選択します。<br /><br /> 存在しない場合は、新しいプロジェクトが作成されます。 作成されるプロジェクトは、C# クラス ライブラリ プロジェクトになります。<br /><br /> そのためには、プロジェクト ディレクトリを入力する必要があります。 %ProgramFiles% や %LocalAppData% などの環境変数マクロを使用できます。|  
-    |ターゲット ディレクトリ|ターゲット ファイルが生成されるフォルダー。 このパスはプロジェクト フォルダーが基準になります。<br /><br /> 上位のパッケージの名前に対応するパスを挿入するには、`{PackageStructure}` 式を使用できます。 既定値は `\GeneratedCode\{PackageStructure}` です。 %TEMP% や %HomePath% などの環境変数を使用することもできます。 **重要:** `{PackageStructure}`でのみ使用できます、**ターゲット ディレクトリ**プロパティ。  |  
+    |ターゲット ディレクトリ|ターゲット ファイルが生成されるフォルダー。 このパスはプロジェクト フォルダーが基準になります。<br /><br /> 上位のパッケージの名前に対応するパスを挿入するには、`{PackageStructure}` 式を使用できます。 既定値は `\GeneratedCode\{PackageStructure}` です。 %TEMP% や %HomePath% などの環境変数を使用することもできます。 **重要:** `{PackageStructure}`でのみ使用できます、**ターゲット ディレクトリ**プロパティ。|  
     |テンプレート ファイル パス|変換を実行するテンプレート。<br /><br /> 提供されているテンプレートを使用することも、独自に作成することもできます。 提供されているテンプレートは、次の場所にあります。<br /><br /> …\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Architecture Tools\Extensibility\Templates\Text\|  
   
 5.  必要なだけいくつでもバインディングを要素にアタッチできます。  

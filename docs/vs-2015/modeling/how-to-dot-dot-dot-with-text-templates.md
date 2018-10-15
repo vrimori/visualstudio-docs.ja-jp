@@ -1,7 +1,7 @@
 ---
 title: テキスト テンプレートを使用する方法 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-tfs-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -12,18 +12,16 @@ caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 04cba7688e358f3267bd4f3fb45b2ac10e83b286
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 2dc895d6922197c3bba43b84f874d591ac75d54f
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47533263"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49231505"
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[テキスト テンプレートを使用する方法](https://docs.microsoft.com/visualstudio/modeling/how-to-dot-dot-dot-with-text-templates)します。  
-  
 テキスト テンプレートで[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用すると、実行時に、アプリケーションの一部として、デザイン時、プロジェクト コードの一部を生成するのにテキストを生成します。 このトピックでは、最も頻繁にまとめたものです"How do I..."よく寄せられる 質問します。  
   
  このトピックでは、行頭文字が付いている複数の回答は別の提案です。  
@@ -42,7 +40,7 @@ ms.locfileid: "47533263"
   
 -   ランタイム テキスト テンプレートをプロジェクトに追加します。 このテンプレートでは、インスタンス化し、使用してテキストを生成することができるコードでクラスを作成します。 データは、コンス トラクターのパラメーターを渡すことができます。 詳細については、次を参照してください。 [T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)します。  
   
--   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能で、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。 他のコンテキストで、テキスト テンプレート エンジンを使用することができます。 詳細については、「<xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>」を参照してください。  
+-   実行時にのみ使用可能なテンプレートから生成する場合は、標準のテキスト テンプレートを使用できます。 作成する場合、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能で、テキスト テンプレート サービスを呼び出すことができます。 詳細については、次を参照してください。 [VS 拡張機能でテキスト変換を呼び出す](../modeling/invoking-text-transformation-in-a-vs-extension.md)します。 他のコンテキストで、テキスト テンプレート エンジンを使用することができます。 詳細については、「 <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 」を参照してください。  
   
      使用して、 \<#@parameter#> ディレクティブには、これらのテンプレート パラメーターを渡します。 詳細については、次を参照してください。 [T4 パラメーター ディレクティブ](../modeling/t4-parameter-directive.md)します。  
   
