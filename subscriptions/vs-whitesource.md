@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションに含まれる WhiteSourc
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e4c1039018eb745c7a04c6269b4b98e737461f7c
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: a7c384a8bc4b84aea4982bd195b0d92820c68ecb
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "43289324"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542352"
 ---
 #  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの WhiteSource Bolt
 
@@ -38,13 +38,15 @@ ms.locfileid: "43289324"
 
 4.  ページの **[Activate your account]\(アカウントのアクティブ化\)** セクションでは、4 つのステップが案内されます。
 
-    - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合、「[Install free extensions for VSTS](/vsts/marketplace/install-vsts-extension?view=vsts)」 (VSTS の拡張機能を無料でインストールする) を参照してください。
+    - Microsoft Visual Studio Marketplace から WhiteSource Bolt 拡張機能を[インストール](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt)します。 拡張機能をインストールする権限がない場合は、「[Install free extensions for Azure DevOps Services](/azure/devops/marketplace/install-vsts-extension?view=vsts)」 (Azure DevOps Services の拡張機能を無料でインストールする) を参照してください。
 
-    VSTS を使っている場合は緑の **[Install]\(インストール\)** ボタンをクリックし、Team Foundation Server の場合は **[Download]\(ダウンロード\)** ボタンをクリックします。  この例では、VSTS を使います。
+
+    Azure DevOps Services を使っている場合は緑の **[インストール]** ボタンをクリックし、Team Foundation Server の場合は **[ダウンロード]** ボタンをクリックします。  この例では、Azure DevOps Services を使用します。
     > [!div class="mx-imgBorder"]
     > ![WhiteSource 特典拡張機能のインストール](_img\vs-whitesource\vs-whitesource-download-install.png)
 
-    - 次に、使う VSTS アカウントを選び、**[Confirm]\(確認\)** をクリックします   (VSTS をまだセットアップしていない場合は、[[特典]](https://my.visualstudio.com/benefits) ページで VSTS 特典をアクティブ化します)。
+    - 次に、使用する Azure DevOps 組織を選択して、**[確認]** をクリックします。  (まだ Azure DevOps Services を設定していない場合は、[特典](https://my.visualstudio.com/benefits)ページに移動して Azure DevOps Services 特典をアクティブ化します。)
+
     > [!div class="mx-imgBorder"]
     > ![WhiteSource 特典アカウントの確認](_img\vs-whitesource\vs-whitesource-confirm-account.png)
 
@@ -52,7 +54,7 @@ ms.locfileid: "43289324"
     > [!div class="mx-imgBorder"]
     > ![WhiteSource 特典インストール完了](_img\vs-whitesource\vs-whitesource-install-complete.png)
 
-5.  Visual Studio Team Services (VSTS) プロジェクト ダッシュボードを開き、**[ビルドとリリース]** メニューをクリックして **[WhiteSource Bolt]** を選択します。
+5.  Azure DevOps プロジェクトのダッシュボードを開き、**Azure Pipelines** メニューをクリックして **WhiteSource Bolt** を選択します。
     > [!div class="mx-imgBorder"]
     > ![WhiteSource 特典拡張機能の追加](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
 
@@ -90,4 +92,4 @@ ms.locfileid: "43289324"
 
 -  WhiteSource Bolt のヘルプが必要ですか。  https://www.whitesourcesoftware.com/vse_whitesource_bolt/ で WhiteSource Bolt の担当者とオンライン チャットしてください。
 -  Visual Studio サブスクリプションの販売、サブスクリプション、アカウント、課金のサポートについては、Visual Studio [サブスクリプション サポート](https://visualstudio.microsoft.com/subscriptions/support/)にお問い合わせください。
--  Visual Studio IDE、Visual Studio Team Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。
+-  Visual Studio IDE、Azure DevOps Services、またはその他の Visual Studio の製品やサービスに関する質問がありますか。  [Visual Studio のサポート](https://visualstudio.microsoft.com/support/)にアクセスしてください。

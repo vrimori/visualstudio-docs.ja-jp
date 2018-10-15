@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 392b2b5a129afe9504f306378103862d631d456e
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 2e77f5bbcdc09e44018e1a10c861e9875c569f65
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371070"
 ---
 # <a name="walkthrough-create-a-multiple-computer-build-environment"></a>チュートリアル: 複数のコンピューターを使用するビルド環境の作成
 
@@ -27,43 +27,27 @@ ms.locfileid: "32425713"
 
 > 免責情報<br /><br /> このドキュメントは "現状有姿" で提供されます。 ここに記載されている手順はテスト済みですが、あらゆる構成を網羅してテストすることはできません。 Microsoft では、追加情報があればこのドキュメントを更新するように努めます。 URL および他の参照されているインターネットの Web サイトをはじめ、このドキュメントに記載されている情報および見解は、通知なく変更されることがあります。 Microsoft はここに示されている情報について、明示か黙示かを問わず、一切保証しません。 お客様は、その使用に関するリスクを負うものとします。<br /><br /> このドキュメントは、Microsoft 製品の知的財産権に関する法的な権利をお客様に許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。<br /><br /> お客様がこのドキュメントに関する提案、コメント、またはその他のフィードバック (以下 "フィードバック") を Microsoft に提供する義務はありません。 ただし、お客様から自発的に提供されたフィードバックは、Microsoft 製品および関連する仕様書またはその他のドキュメント (以下総称して "Microsoft 提供物") に使用されることがあります。さらに、これらのドキュメントは第三者によって独自製品の開発時に使用されることがあります。 これに基づき、お客様がこのドキュメントまたは Microsoft 提供物のいずれかのバージョンに関するフィードバックを Microsoft に提供する場合、お客様は次の点に同意するものとします。(a) Microsoft は、Microsoft 提供物の中で、お客様のフィードバックを自由に複製、使用許諾、配布、およびその他の方法で商品化できる。(b) 第三者の製品において、お客様のフィードバックを反映した Microsoft 製品の特定部分を使用または Microsoft 製品の特定部分と連携するために必要な特許権のみをお客様が無償で第三者に付与する。(c) 次のような場合、お客様はフィードバックを Microsoft に提供しない。(i) 第三者の特許、著作権、またはその他の知的財産権の主張または権限がそのフィードバックに適用されるとお客様が確信する根拠がある場合、または (ii) そのフィードバックが反映されているかそのフィードバックから派生する Microsoft 提供物またはその他の Microsoft 知的財産を第三者に使用許諾またはその他の方法で共有することを求めるライセンス条件がそのフィードバックに適用される場合。
 
-このチュートリアルは、コマンド ラインでの MSBuild の実行および Team Foundation ビルドの使用により、次のオペレーティング システムに対して検証済みです。
+このチュートリアルは、次のオペレーティング システムに対して検証済みです。
 
 - Windows 8 (x86 および x64)
 - Windows 7 Ultimate
 - Windows Server 2008 R2 Standard
 
- このチュートリアルの手順を完了すると、複数コンピューター環境を使用して、次の種類のアプリをビルドできます。
+このチュートリアルの手順を完了すると、複数コンピューター環境を使用して、次の種類のアプリをビルドできます。
 
 - Windows 8 SDK を使用する C++ デスクトップ アプリ
 - .NET Framework 4.5 を対象とする Visual Basic または C# のデスクトップ アプリ
 
- 次の種類のアプリのビルドには、複数コンピューター環境を使用できません。
+次の種類のアプリのビルドには、複数コンピューター環境を使用できません。
 
 - UWP アプリ。 UWP アプリをビルドするには、ビルド コンピューターに Visual Studio をインストールする必要があります。
 - .NET Framework 4 以前を対象とするデスクトップ アプリ。 これらの種類のアプリをビルドするには、ビルド コンピューターに Visual Studio または .NET 参照アセンブリおよびツール (Windows 7.1 SDK に含まれます) をインストールする必要があります。
 
- このチュートリアルは、次の部分から構成されます。
-
-- [コンピューターにソフトウェアをインストールする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingSoftware)
-
-- [ホスト コンピューターからビルド コンピューターにファイルをコピーする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CopyingFiles)
-
-- [レジストリ設定を作成する](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingRegistry)
-
-- [ビルド コンピューターで環境変数を設定する](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#SettingEnvVariables)
-
-- [ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)
-
-- [プロジェクトをビルドする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#BuildingProjects)
-
-- [ソース管理にチェックインできるようにビルド環境を作成する](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingForSourceControl)
-
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- .NET デスクトップ開発ワークロードがインストールされた Visual Studio。
+- **.NET デスクトップ開発**ワークロードがインストールされた Visual Studio。
 
-## <a name="InstallingSoftware"></a> コンピューターにソフトウェアをインストールする
+## <a name="install-software-on-the-computers"></a>コンピューターにソフトウェアをインストールする
 
 最初にホスト コンピューターを設定し、次にビルド コンピューターを設定します。
 
@@ -73,7 +57,7 @@ ms.locfileid: "32425713"
 
 2. ビルド コンピューターに、.NET Framework 4.5 をインストールします。 インストールされていることを確認するには、レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full@Version** の値が "4.5" から始まっていることを確認します。
 
-## <a name="CopyingFiles"></a> ホスト コンピューターからビルド コンピューターにファイルをコピーする
+## <a name="copy-files-from-the-host-computer-to-the-build-computer"></a>ホスト コンピューターからビルド コンピューターにファイルをコピーする
 
 このセクションでは、特定のファイル、コンパイラ、ビルド ツール、MSBuild の資産、およびレジストリ設定をホスト コンピューターからビルド コンピューターにコピーする操作ついて説明します。 ここに示す手順では、Visual Studio がホスト コンピューターの既定の場所にインストールされていることを想定しています。別の場所にインストールした場合は、手順を適宜調整してください。
 
@@ -85,7 +69,7 @@ ms.locfileid: "32425713"
 > [!NOTE]
 > ビルド コンピューターでは、関連するファイルをすべて同じドライブに配置する必要がありますが、そのドライブのドライブ文字は、Visual Studio がホスト コンピューターにインストールされているドライブのドライブ文字と異なってもかまいません。 いずれにしても、後でこのドキュメント内で説明するように、レジストリ エントリの作成時にファイルの場所の情報が必要になります。
 
-#### <a name="copy-the-windows-sdk-files-to-the-build-computer"></a>Windows SDK ファイルをビルド コンピューターにコピーする
+### <a name="copy-the-windows-sdk-files-to-the-build-computer"></a>Windows SDK ファイルをビルド コンピューターにコピーする
 
 1. Windows SDK for Windows 8 のみがインストールされている場合は、次に示すフォルダーを再帰的にホスト コンピューターからビルド コンピューターにコピーします。
 
@@ -103,7 +87,7 @@ ms.locfileid: "32425713"
 
     - %ProgramFiles%\Windows Kits\8.0\References\
 
-     次に示す他の Windows 8 キットもインストールされている場合: 
+    次に示す他の Windows 8 キットもインストールされている場合: 
 
     - Microsoft Windows アセスメント & デプロイメント キット
 
@@ -111,7 +95,7 @@ ms.locfileid: "32425713"
 
     - Microsoft Windows ハードウェア認定キット
 
-     これらもインストールされている場合、前の手順で示した *%ProgramFiles%\Windows Kits\8.0* フォルダーにファイルがインストールされている可能性があります。また、ライセンス条項によっては、ビルド サーバーでこれらのファイルへのアクセスが許可されない可能性があります。 インストールされているすべての Windows キットについてライセンス条項を調べて、ファイルをビルド コンピューターにコピーできるかどうかを確認します。 ライセンス条項によってビルド サーバーでのアクセスが許可されていない場合は、該当するファイルをビルド コンピューターから削除します。
+    これらもインストールされている場合、前の手順で示した *%ProgramFiles%\Windows Kits\8.0* フォルダーにファイルがインストールされている可能性があります。また、ライセンス条項によっては、ビルド サーバーでこれらのファイルへのアクセスが許可されない可能性があります。 インストールされているすべての Windows キットについてライセンス条項を調べて、ファイルをビルド コンピューターにコピーできるかどうかを確認します。 ライセンス条項によってビルド サーバーでのアクセスが許可されていない場合は、該当するファイルをビルド コンピューターから削除します。
 
 2. ホスト コンピューターからビルド コンピューターに、次のフォルダーを再帰的にコピーします。
 
@@ -205,8 +189,9 @@ ms.locfileid: "32425713"
 
     - \Microsoft.VC110.DebugOpenMP\vcomp110d.dll
 
-##  <a name="CreatingRegistry"></a> レジストリ設定を作成する
- MSBuild 用の設定を構成するには、レジストリ エントリを作成する必要があります。
+## <a name="create-registry-settings"></a>レジストリ設定を作成する
+
+MSBuild 用の設定を構成するには、レジストリ エントリを作成する必要があります。
 
 1. レジストリ エントリの親フォルダーを特定します。 レジストリ エントリはすべて、同じ親キーの下に作成します。 x86 コンピューターの場合、親キーは **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft** です。 x64 コンピューターの場合、親キーは **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft** です。 システムのアーキテクチャに関係なく、このチュートリアルでは、親キーを %RegistryRoot% と示します。
 
@@ -251,11 +236,11 @@ ms.locfileid: "32425713"
 
     - **%RegistryRoot%\MSBuild\ToolsVersions\4.0\11.0@VCTargetsPath11**
 
-     x64 ビルド コンピューターでは、次のレジストリ エントリも作成し、ホスト コンピューターを参照して設定方法を決定します。
+    x64 ビルド コンピューターでは、次のレジストリ エントリも作成し、ホスト コンピューターを参照して設定方法を決定します。
 
     - **%RegistryRoot%\Microsoft SDKs\Windows\v8.0A\WinSDK-NetFx40Tools-x64@InstallationFolder**
 
-     ビルド コンピューターが x64 であり MSBuild の 64 ビット バージョンを使用する場合または x64 コンピューターで Team Foundation Server ビルド サービスを使用している場合は、ネイティブの 64 ビット レジストリに次のレジストリ エントリを作成する必要があります。 これらのエントリの設定方法を決定するには、ホスト コンピューターを参照してください。
+    ビルド コンピューターが x64 であり MSBuild の 64 ビット バージョンを使用する場合または x64 コンピューターで Team Foundation Server ビルド サービスを使用している場合は、ネイティブの 64 ビット レジストリに次のレジストリ エントリを作成する必要があります。 これらのエントリの設定方法を決定するには、ホスト コンピューターを参照してください。
 
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS@ProductDir**
 
@@ -265,23 +250,23 @@ ms.locfileid: "32425713"
 
     - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSBuild\ToolsVersions\4.0\11.0@VCTargetsPath11**
 
-## <a name="SettingEnvVariables"></a> ビルド コンピューターで環境変数を設定する
+## <a name="set-environment-variables-on-the-build-computer"></a>ビルド コンピューターで環境変数を設定する
 
 ビルド コンピューターで MSBuild を使用するには、PATH 環境変数を設定する必要があります。 *vcvarsall.bat* を使用して変数を設定することも、手動で構成することもできます。
 
 ### <a name="use-vcvarsallbat-to-set-environment-variables"></a>vcvarsall.bat を使用して環境変数を設定する
 
-- ビルド コンピューターで**コマンド プロンプト** ウィンドウを開き、*%Program Files%\Microsoft Visual Studio 11.0\VC\vcvarsall.bat* を実行します。 使用するツールセット (x86、ネイティブ x64、x64 クロス コンパイラ) を指定するには、コマンド ライン引数を使用します。 コマンド ライン引数を指定しなかった場合は、x86 のツールセットが使用されます。
+ビルド コンピューターで**コマンド プロンプト** ウィンドウを開き、*%Program Files%\Microsoft Visual Studio 11.0\VC\vcvarsall.bat* を実行します。 使用するツールセット (x86、ネイティブ x64、x64 クロス コンパイラ) を指定するには、コマンド ライン引数を使用します。 コマンド ライン引数を指定しなかった場合は、x86 のツールセットが使用されます。
 
-     次の表では、*vcvarsall.bat* でサポートされている引数を説明しています。
+次の表では、*vcvarsall.bat* でサポートされている引数を説明しています。
 
-    |vcvarsall.bat 引数|コンパイラ|ビルド コンピューターのアーキテクチャ|ビルド出力のアーキテクチャ|
-    |----------------------------|--------------|---------------------------------|-------------------------------|
-    |x86 (既定)|32 ビット ネイティブ|x86、x64|x86|
-    |x86_amd64|x64 クロス|x86、x64|X64|
-    |amd64|x64 ネイティブ|X64|X64|
+|vcvarsall.bat 引数|コンパイラ|ビルド コンピューターのアーキテクチャ|ビルド出力のアーキテクチャ|
+|----------------------------|--------------|---------------------------------|-------------------------------|
+|x86 (既定)|32 ビット ネイティブ|x86、x64|x86|
+|x86_amd64|x64 クロス|x86、x64|X64|
+|amd64|x64 ネイティブ|X64|X64|
 
-     *vcvarsall.bat* が正常に実行された (エラー メッセージが表示されない) 場合は、次の手順をスキップして、このドキュメントの「[ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)」に進むことができます。
+*vcvarsall.bat* が正常に実行された (エラー メッセージが表示されない) 場合は、次の手順をスキップして、このドキュメントの「[ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#InstallingMSBuildToGAC)」に進むことができます。
 
 ### <a name="manually-set-environment-variables"></a>手動で環境変数を設定する
 
@@ -291,19 +276,19 @@ ms.locfileid: "32425713"
 
 2. 必要に応じて、ソリューションのビルド時に MSBuild を使用しやすくなるように、次のパスも PATH 環境変数に追加することができます。
 
-     ネイティブ 32 ビットの MSBuild を使用する場合は、次のパスを PATH 変数に追加します。
+    ネイティブ 32 ビットの MSBuild を使用する場合は、次のパスを PATH 変数に追加します。
 
     - %Program Files%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools
 
     - %windir%\Microsoft.NET\Framework\v4.0.30319
 
-     ネイティブ 64 ビットの MSBuild を使用する場合は、次のパスを PATH 変数に追加します。
+    ネイティブ 64 ビットの MSBuild を使用する場合は、次のパスを PATH 変数に追加します。
 
     - %Program Files%\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\x64
 
     - %windir%\Microsoft.NET\Framework64\v4.0.30319
 
-## <a name="InstallingMSBuildToGAC"></a> ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする
+## <a name="install-msbuild-assemblies-to-the-global-assembly-cache-gac-on-the-build-computer"></a>ビルド コンピューターのグローバル アセンブリ キャッシュ (GAC) に MSBuild アセンブリをインストールする
 
 MSBuild を使用するには、ビルド コンピューターの GAC にいくつかの追加のアセンブリをインストールする必要があります。
 
@@ -324,9 +309,9 @@ MSBuild を使用するには、ビルド コンピューターの GAC にいく
     > [!NOTE]
     > GAC へのアセンブリのインストールを完了するために、再起動が必要になる場合があります。
 
-## <a name="BuildingProjects"></a> プロジェクトをビルドする
+## <a name="build-projects"></a>プロジェクトをビルドする
 
-[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] のプロジェクトおよびソリューションをビルドするには、Team Foundation ビルドまたはコマンド ラインを使用します。 Team Foundation ビルドを使用してプロジェクトをビルドすると、システムのアーキテクチャに対応する MSBuild 実行可能ファイルが起動されます。 コマンド ラインでは、32 ビット MSBuild または 64 ビット MSBuild を使用できます。MSBuild のアーキテクチャは、PATH 環境変数を設定するか、アーキテクチャ固有の MSBuild 実行可能ファイルを直接呼び出すことによって選択できます。
+Azure Pipelines を使用して Visual Studio プロジェクトとソリューションをビルドできます。または、コマンド ライン上でビルドすることもできます。 Azure Pipelines を使用してプロジェクトをビルドすると、システムのアーキテクチャに対応する MSBuild 実行可能ファイルが起動されます。 コマンド ラインでは、32 ビット MSBuild または 64 ビット MSBuild を使用できます。MSBuild のアーキテクチャは、PATH 環境変数を設定するか、アーキテクチャ固有の MSBuild 実行可能ファイルを直接呼び出すことによって選択できます。
 
 コマンド プロンプトで *msbuild.exe* を使用するには、次のコマンドを実行します (*solution.sln* は、ソリューションの名前のプレースホルダーです)。
 
@@ -334,14 +319,9 @@ MSBuild を使用するには、ビルド コンピューターの GAC にいく
 
 コマンド ラインで MSBuild を使用する方法については、[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)に関するページをご覧ください。
 
-> [!NOTE]
-> [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] プロジェクトをビルドするには、"v110" のプラットフォーム ツールセットを使用する必要があります。 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] のプロジェクト ファイルを編集しない場合は、次のコマンド ライン引数を使用してプラットフォーム ツールセットを設定できます。
->
-> **msbuild** *solution.sln* **/p:PlatformToolset=v110**
+## <a name="create-the-build-environment-so-that-it-can-be-checked-into-source-control"></a>ソース管理にチェックインできるようにビルド環境を作成する
 
-## <a name="CreatingForSourceControl"></a> ソース管理にチェックインできるようにビルド環境を作成する
-
-GAC へのファイルのインストールやレジストリ設定の変更を必要としない、さまざまなコンピューターに配置できるビルド環境を作成することもできます。 次の手順は、これを実現する方法の 1 つです。 ビルド環境ごとの特性に合わせて、手順を調整してください。
+さまざまなコンピューターに配置できる、GAC へのファイルのインストールやレジストリ設定の変更を必要としないビルド環境を作成できます。 次の手順は、これを実現する方法の 1 つです。 ビルド環境ごとの特性に合わせて、手順を調整してください。
 
 > [!NOTE]
 > ビルド時に *tracker.exe* によるエラーが発生しないように、インクリメンタル ビルドを無効にする必要があります。 インクリメンタル ビルドを無効にするには、次のビルド パラメーターを設定します。
@@ -407,9 +387,9 @@ GAC へのファイルのインストールやレジストリ設定の変更を�
 
     - Set Depot=*location of the Depot directory that you created in step 1*
 
-    - Set path=%path%;*location of MSBuild on the computer*;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 11.0\Common7\IDE\
+    - Set path=%path%;*location of MSBuild on the computer*;%Depot%\Windows\System32;%Depot%\Windows\SysWOW64;%Depot%\Microsoft Visual Studio 15.0\Common7\IDE\
 
-         ネイティブ 64 ビットのビルドの場合は、64 ビットの MSBuild が指定されるように調整します。
+       ネイティブ 64 ビットのビルドの場合は、64 ビットの MSBuild が指定されるように調整します。
 
 ## <a name="see-also"></a>関連項目
 

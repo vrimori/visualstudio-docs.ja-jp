@@ -1,7 +1,7 @@
 ---
 title: Python サポートのインストール
 description: Visual Studio 2017、2015、2013、2012、2010 で Python Tools for Visual Studio (PTVS) をインストールする方法と、オプションやインストールの場所。
-ms.date: 06/26/2018
+ms.date: 09/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8a01f8bbc90beb4e6dab5ff9b0d7d745778c3c2d
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 1f6a11de4b273b55910e03e73be79f6e3473bac5
+ms.sourcegitcommit: 000cdd1e95dd02e99a7c7c1a34c2f8fba6a632af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42627116"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168371"
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows に Visual Studio の Python サポートをインストールする方法
 
@@ -25,8 +25,6 @@ Visual Studio 用の Python サポート (Python Tools for Visual Studio (PTVS) 
 - [Visual Studio 2017](#visual-studio-2017)
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 以前](#visual-studio-2013-and-earlier)
-
-Visual Studio 2015 以前では、個別に任意の [Python インタープリターをインストールする](installing-python-interpreters.md)必要もあります (Python 3.5 以前の場合。3.6 以降はサポートされていないため、**Python バージョン 3.6 はサポートされていません**というようなメッセージが生成されます)。 同じページには、Visual Studio 2017 に既存の Python インタープリターを追加する手順もあります。
 
 インストール手順に従った後、Python サポートを簡単にテストするには、**Python の対話型**ウィンドウを開きます。その場合、**Alt** + **I** キーを押して「`2+2`」と入力します。 `4` という出力が表示されない場合は、手順を再確認してください。
 
@@ -96,7 +94,7 @@ Visual Studio で Python をインストールしたか、実行したときに�
 
     ![Visual Studio 2015 インストーラーの PTVS オプション](media/installation-vs2015.png)
 
-1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](installing-python-interpreters.md)。 インタープリターは既にインストールされているが、Visual Studio によって自動的に検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」を参照してください。
+1. Visual Studio のセットアップが完了したら、[任意の Python インタープリターをインストールします](installing-python-interpreters.md)。 Visual Studio 2015 がサポートしているのは Python 3.5 およびそれ以前のバージョンのみです。それ以降のバージョンでは、「**Python バージョン 3.6 はサポートされていません**」などのようなメッセージが表示されます。 インタープリターは既にインストールされているが、Visual Studio によって自動的に検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」を参照してください。
 
 ## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 以前
 

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2f53ae425f4942a9a14289e84798756c9fec969
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 50e9a56d6682c32d4f02f5d45899867ce21768ec
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512549"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370979"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット
 
@@ -91,8 +91,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 |Edit.Replace|**Ctrl + H** [全体]|
 |Edit.SelectAll|**Ctrl + A** [全体]|
 |Edit.SelectCurrentWord|**Ctrl + W** [テキスト エディター]|
-|Edit.SelectionCancel|
-  **Esc** [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージド リソース エディター]|
+|Edit.SelectionCancel|**Esc** [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージド リソース エディター]|
 |Edit.SurroundWith|**Ctrl + K、Ctrl + S** [全体]|
 |Edit.TabLeft|**Shift + Tab** [テキスト エディター、レポート デザイナー、Windows フォーム エディター]|
 |Edit.ToggleAllOutlining|**Ctrl + M、Ctrl + L** [テキスト エディター]|
@@ -151,7 +150,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 |View.ObjectBrowser|**Ctrl + Alt + J** [全体]|
 |View.Output|**Ctrl + Alt + O** [全体]|
 |View.PropertiesWindow|**F4**|
-|View.Refresh|**F5** [チーム エクスプローラー、Team Foundation ビルド詳細エディター]|
+|View.Refresh|**F5** [チーム エクスプローラー]|
 |View.ServerExplorer|**Ctrl + Alt + S** [全体]|
 |View.ShowSmartTag|**Ctrl + .** [Global]<br /><br /> または **Shift + Alt + F10** [全体、HTML エディター デザイン ビュー]|
 |View.SolutionExplorer|**Ctrl + Alt + L** [全体]|
