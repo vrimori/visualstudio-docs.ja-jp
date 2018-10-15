@@ -17,11 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 94398b39e6e1c2f97e2b6851639649fc33dd217c
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 482c7213f695fce68026acbd0fd953cf2d4792ad
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669138"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>ユニバーサル Windows アプリの HTML UI の応答性を分析する
 このトピックでは、アプリのパフォーマンス問題を UI 応答性プロファイラーを使って切り分ける方法を説明します。UI 応答性プロファイラーは、ユニバーサル Windows アプリで利用できるパフォーマンス ツールです。  
@@ -34,12 +35,12 @@ ms.lasthandoff: 05/14/2018
   
 -   ビジュアルの更新頻度が予想よりも少ない。 この症状は、UI スレッドの負荷が高すぎて滑らかなフレーム レートを維持できなくなった場合に発生します。 たとえば、UI スレッドがビジーであるためにコマ落ちが発生することがあります。 ネットワーク要求、イメージ デコード、描画など、一部の非 UI スレッド作業でも、ビジュアル更新の頻度が制限されることがあります。 すべての描画が UI スレッドで処理されるわけではありません。  
   
-##  <a name="RunningProfiler"></a> HTML UI の応答性ツールの実行  
+## <a name="run-the-html-ui-responsiveness-tool"></a>HTML UI の応答性ツールの実行  
  HTML UI 応答性ツールは、作業用の UWP アプリが Visual Studio で開かれているときに使用できます。  
   
 1.  アプリを Visual Studio から実行している場合は、**[標準]** ツール バーの **[デバッグの開始]** の一覧から、**[ローカル コンピューター]** または **[デバイス]** などの配置ターゲットを選択します。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー...]** をクリックします。  
+2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** を選びます。  
   
      プロファイラーの分析ターゲットを変更する場合は、**[ターゲットの変更]** を選択します。  
   
@@ -57,8 +58,7 @@ ms.lasthandoff: 05/14/2018
   
          このオプションを使用すると、ソース コードにアクセスできないときに、コンピューターにインストールされているアプリのパフォーマンスを分析できます。 このオプションは、自分が開発に携わっていないアプリのパフォーマンスを分析する場合にも便利です。  
   
-3.  
-                **[使用可能なツール]** で **[HTML UI の応答性]** を選択し、 **[開始]** をクリックします。  
+3.  **[使用可能なツール]** で **[HTML UI の応答性]** を選択し、 **[開始]** をクリックします。  
   
 4.  UI 応答性プロファイラーの開始時に、Visual Studio ETW Collector.exe を実行するためのアクセス許可を要求するユーザー アカウント制御ウィンドウが表示される場合があります。 **[はい]** をクリックします。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/14/2018
   
 6.  アプリのプロファイリングを停止し、プロファイラーによって収集されたデータを表示するには、 **[コレクションの停止]** をクリックします。  
   
-##  <a name="IsolateAnIssue"></a> 問題の特定  
+## <a name="isolate-an-issue"></a>問題の特定  
  次のセクションでは、パフォーマンス上の問題を特定するのに役立つ方法を示します。 サンプル パフォーマンス テスト アプリを使用してパフォーマンスの問題を識別し、修正する方法の詳しい手順については、「[チュートリアル: UI の応答性の向上 (HTML)](../profiling/walkthrough-improving-ui-responsiveness-html.md)」を参照してください。  
   
 ###  <a name="Workflow"></a> UI の応答性の問題の特定  
@@ -76,11 +76,11 @@ ms.lasthandoff: 05/14/2018
   
 1.  Visual Studio でアプリを開きます。  
   
-2.  アプリケーションの UI 応答性の問題をテストします。 (Ctrl + F5 キーを押して、デバッグを行わずにアプリケーションを開始します)。  
+2.  アプリケーションの UI 応答性の問題をテストします。 (**Ctrl** + **F5** キーを押して、デバッグを行わずにアプリケーションを開始します)。  
   
      問題を検出したら、テストを続けて、問題が発生している期間を絞り込むか、または問題の動作を引き起こすトリガーを識別します。  
   
-3.  Visual Studio に戻り (Alt + Tab キーを押す)、デバッグを停止します (Shift + F5 キーを押す)。  
+3.  Visual Studio に戻り (**Alt** + **Tab** キーを押す)、デバッグを停止します (**Shift** + **F5** キーを押す)。  
   
 4.  必要に応じて、 [分析用のコードのマーク](#ProfileMark)など)。  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 05/14/2018
   
     -   HTML 解析イベントのスクリプト評価など、アプリケーションによって読み込まれるページまたは URL リソース。 ファイル名またはリソースが提供されます。  
   
-    -   で指定されたその他のイベント [Profiler event reference](#ProfilerEvents).  
+    -   で指定されたその他のイベント [Profiler event reference](#profiler-event-reference).  
   
     > [!TIP]
     >  プロファイラーの有益な情報の大部分は、タイムラインの詳細グラフに表示されます。  
@@ -169,7 +169,7 @@ if (performance.mark && performance.measure) {
   
  ![タイムラインの詳細ビューでのユーザー測定イベント](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")  
   
-##  <a name="AnalyzeData"></a> データの分析  
+## <a name="analyze-data"></a>データの分析  
  次のセクションでは、プロファイラーに表示されるデータの解釈に役立つ情報を提供します。  
   
 ###  <a name="Ruler"></a> 診断セッションのタイムラインの表示  
@@ -188,7 +188,7 @@ if (performance.mark && performance.measure) {
 -   ナビゲーション イベント。 別のページに移動するときに発生します。 イベントのツールヒントには、移動先ページの URL が表示されます。  
   
 ###  <a name="CPUUtilization"></a> CPU 使用率の表示  
- CPU 使用状況グラフにより、過剰な CPU アクティビティがある期間を特定できます。 一定期間内でのアプリの平均 CPU 使用量に関する情報を示します。 情報は、特定のカテゴリを表すように色分けされています。 カテゴリには、 **[読み込み中]**、 **[スクリプティング]**、ガベージ コレクション (**[GC]**)、 **[スタイル]**、 **[レンダリング]**、 **[イメージ デコード中]** があります。 これらのカテゴリの詳細については、このトピックで後述する「 [Profiler event reference](#ProfilerEvents) 」を参照してください。  
+ CPU 使用状況グラフにより、過剰な CPU アクティビティがある期間を特定できます。 一定期間内でのアプリの平均 CPU 使用量に関する情報を示します。 情報は、特定のカテゴリを表すように色分けされています。 カテゴリには、 **[読み込み中]**、 **[スクリプティング]**、ガベージ コレクション (**[GC]**)、 **[スタイル]**、 **[レンダリング]**、 **[イメージ デコード中]** があります。 これらのカテゴリの詳細については、このトピックで後述する「 [Profiler event reference](#profiler-event-reference) 」を参照してください。  
   
  CPU 使用状況グラフは、1 つまたは複数の CPU の使用率値を 1 つのパーセント値にまとめて、すべてのアプリ スレッドに費やされた時間を示します。 CPU 使用率値は、複数の CPU を使用している場合、100% を超えることがあります。  
   
@@ -248,7 +248,7 @@ if (performance.mark && performance.measure) {
   
  CPU 使用状況グラフとビジュアル スループット (FPS) グラフでタイムラインの一部が選択されている場合、タイムラインの詳細グラフは、選択された期間の詳細情報を表示します。  
   
- タイムラインの詳細グラフ内のイベントは、CPU 使用状況グラフで表示されるのと同じ作業カテゴリを表すために色分けされています。 イベント カテゴリおよび特定のイベントの詳細については、このトピックの「 [Profiler event reference](#ProfilerEvents) 」を参照してください。  
+ タイムラインの詳細グラフ内のイベントは、CPU 使用状況グラフで表示されるのと同じ作業カテゴリを表すために色分けされています。 イベント カテゴリおよび特定のイベントの詳細については、このトピックの「 [Profiler event reference](#profiler-event-reference) 」を参照してください。  
   
  タイムラインの詳細グラフには、次のような用途があります。  
   
@@ -301,10 +301,10 @@ if (performance.mark && performance.measure) {
   
  ![フレーム別にグループ化したタイムライン イベント](../profiling/media/js_htmlvizprofiler_frame_grouping.png "JS_HTMLVizProfiler_Frame_Grouping")  
   
-##  <a name="SaveSession"></a> 診断セッションの保存  
+## <a name="save-a-diagnostic-session"></a>診断セッションの保存  
  Visual Studio では、セッションに関連付けられたタブを閉じるときに、診断セッションを保存できます。 保存されたセッションは、後で再度開くことができます。  
   
-##  <a name="ProfilerEvents"></a> Profiler event reference  
+## <a name="profiler-event-reference"></a>Profiler event reference  
  プロファイラー イベントは、UI 応答性プロファイラーで、カテゴリごとに色分けされています。 以下のイベント カテゴリがあります。  
   
 -   **読み込み中。** アプリが初めて読み込まれるときに、アプリのリソースの取得と HTML および CSS の解析に費やされた時間を示します。 これには、ネットワーク要求も含まれる場合があります。  
@@ -349,7 +349,7 @@ if (performance.mark && performance.measure) {
 |フレーム|N/A|再描画されるページの影響を受ける部分がすべて必要となる DOM に対する視覚的な変更が行われました。 これは、グループ化に使用する、ツールで生成されるイベントです。|  
 |[ユーザー測定]|N/A|`performance.measure` メソッドを使用して、アプリ固有のシナリオが測定されました。 これは、コードの分析に使用する、ツールで生成されるイベントです。|  
   
-##  <a name="Tips"></a> 追加情報  
+## <a name="additional-information"></a>追加情報  
   
 -   UI 応答性プロファイラーについては、この Build 2013 カンファレンスの [ビデオ](http://channel9.msdn.com/Events/Build/2013/3-316) をご覧ください。  
   
@@ -357,5 +357,5 @@ if (performance.mark && performance.measure) {
   
 -   シングル スレッドのコード実行モデルとパフォーマンスについては、「 [コードの実行](http://msdn.microsoft.com/library/windows/apps/hh781217.aspx)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [プロファイリング ツール](../profiling/profiling-tools.md)
+## <a name="see-also"></a>関連項目  
+ [プロファイル ツールの概要](../profiling/profiling-feature-tour.md)

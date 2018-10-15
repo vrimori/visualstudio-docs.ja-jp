@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Feedback Client 2017 のワークロードとコンポーネント ID
-description: Visual Studio のワークロードとコンポーネント ID を使用して、Visual Studio Team Services または Team Foundation Server に関する充実したフィードバックを提供します
+description: Visual Studio のワークロードとコンポーネント ID を使用して、Azure DevOps Services または Team Foundation Server に関する充実したフィードバックを提供します
 keywords: ''
 author: TerryGLee
 ms.author: tglee
@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.assetid: 7392a100-100c-458c-9394-828695109015
 ms.workload:
 - multiple
-ms.openlocfilehash: d56d68768be45fc3ab4eb8e30b777ae14abe4343
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 5037870cfbe1df0a4f997f16ef196d78de983aaa
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138780"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281560"
 ---
 # <a name="visual-studio-feedback-client-2017-component-directory"></a>Visual Studio Feedback Client 2017 のコンポーネント ディレクトリ
 
@@ -43,7 +43,7 @@ VSIX マニフェストで依存関係を設定するときは、コンポーネ
 
 **ID:** Microsoft.VisualStudio.Workload.FeedbackClient
 
-**説明:** 利害関係者は Feedback Client を使用して、Visual Studio Team Services または Team Foundation Server に関する充実したフィードバックを提供できます。
+**説明:** 利害関係者は Feedback Client を使用して、Azure DevOps Services または Team Foundation Server に関する充実したフィードバックを提供できます。
 
 ### <a name="components-included-by-this-workload"></a>このワークロードに含まれるコンポーネント
 

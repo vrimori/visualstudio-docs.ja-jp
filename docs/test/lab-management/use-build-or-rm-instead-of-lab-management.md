@@ -11,26 +11,26 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 454407c3572f7a7c7a1c0f795462d2aec539049a
-ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
+ms.openlocfilehash: cc8935db33f5c4b584cf825a46ae62f0d31d2351
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34845380"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320619"
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
 
-このトピックでは、テストの自動化または、ビルド、配置、テストの自動化に Microsoft Test Manager (MTM) と Lab Management を使用している場合、Team Foundation Server (TFS) および Visual Studio Team Services (VSTS) の[ビルドとリリース](/vsts/build-release/)機能を使用して同じ目的を達成する方法を説明します。
+このトピックでは、テストの自動化または、ビルド、配置、テストの自動化に Microsoft Test Manager (MTM) と Lab Management を使用している場合、Team Foundation Server (TFS) および Azure Test Plans の[ビルドとリリース](/azure/devops/pipelines/index?view=vsts)機能を使用して同じ目的を達成する方法を説明します。
 
 ## <a name="build-deploy-test-automation"></a>ビルド、配置、テストの自動化
 
-MTM と Lab Management は、アプリケーションのビルド、配置、テストの自動化に XAML のビルド定義に依存しています。 XAML ビルドは、目的の達成に、ラボ環境、テスト スイート、テストの設定など MTM で作成されたさまざまな構造および、ビルド コントローラー、ビルド エージェント、テスト コントローラー、テスト エージェントなどのさまざまなインフラストラクチャ コンポーネントに依存しています。 TFS と Team Services でビルドまたはリリース管理を使用すると、同じことを少ない手順で行うことができます。
+MTM と Lab Management は、アプリケーションのビルド、配置、テストの自動化に XAML のビルド定義に依存しています。 XAML ビルドは、目的の達成に、ラボ環境、テスト スイート、テストの設定など MTM で作成されたさまざまな構造および、ビルド コントローラー、ビルド エージェント、テスト コントローラー、テスト エージェントなどのさまざまなインフラストラクチャ コンポーネントに依存しています。 TFS と Azure Pipelines でビルドまたはリリース管理を使用すると、同じことを少ない手順で達成することができます。
 
 | 手順 | XAML ビルドを使用する場合 | ビルドまたはリリース管理を使用する場合 |
 |-------|----------------------|-----------------|
 | ビルドを展開してテストを実行するマシンを特定します。 | それらのマシンの MTM に標準のラボ環境を作成します。 | N/A |
 | 実行するテストを特定します。 | MTM にテスト スイートを作成し、テスト ケースを作成し、各テスト ケースと自動化を関連付けます。 テストを実行するラボ環境のマシンのロールを指定し、MTM でテスト設定を作成します。 | テスト計画でテストを管理する計画である場合、MTM に同じように自動化されたテスト スイートを作成します。 または、ビルドで生成されたテスト バイナリから直接テストを実行する場合は、これを省略することが可能です。 いずれの場合もテスト設定を作成する必要はありません。 |
-| 配置とテストを自動化します。 | LabDefaultTemplate.*.xaml を使用し、XAML ビルド定義を作成します。 ビルド定義に、ビルド、テスト スイートおよびラボ環境を指定します。 | 1 つの環境の[ビルド定義またはリリース定義](/vsts/build-release/)を作成します。 コマンド ライン タスクを使用して (XAML ビルド定義から) 同じ配置スクリプトを実行し、Test Agent の配置と機能テストの実行タスクを使用して自動化されたテストを実行します。 これらのタスクにマシンの一覧とその資格情報を入力し指定します。 |
+| 配置とテストを自動化します。 | LabDefaultTemplate.*.xaml を使用し、XAML ビルド定義を作成します。 ビルド定義に、ビルド、テスト スイートおよびラボ環境を指定します。 | 1 つの環境の[ビルドまたはリリース パイプライン](/azure/devops/pipelines/index?view=vsts)を作成します。 コマンド ライン タスクを使用して (XAML ビルド定義から) 同じ配置スクリプトを実行し、Test Agent の配置と機能テストの実行タスクを使用して自動化されたテストを実行します。 これらのタスクにマシンの一覧とその資格情報を入力し指定します。 |
 
 このシナリオでビルドまたはリリース管理を使用する利点は次のとおりです。
 
@@ -45,17 +45,17 @@ MTM と Lab Management は、アプリケーションのビルド、配置、テ
 
 ## <a name="self-service-management-of-scvmm-environments"></a>SCVMM 環境のセルフ サービスの管理
 
-[Microsoft Test Manager のテスト センター](/vsts/manual-test/mtm/guidance-mtm-usage)では、環境テンプレートのライブラリを管理する機能をサポートしたり、[SCVMM サーバー](/system-center/vmm/overview?view=sc-vmm-1801)を使用したオンデマンドでの環境のプロビジョニングをサポートしたりしています。
+[Microsoft Test Manager のテスト センター](/azure/devops/test/mtm/guidance-mtm-usage?view=vsts)では、環境テンプレートのライブラリを管理する機能をサポートしたり、[SCVMM サーバー](/system-center/vmm/overview?view=sc-vmm-1801)を使用したオンデマンドでの環境のプロビジョニングをサポートしたりしています。
 
 ラボ センターのセルフ サービス プロビジョニング機能には、次の 2 つの明確な目標があります。
 
 * 簡単にインフラストラクチャを管理できるようにします。 VM と環境テンプレートを管理し、環境の個々のクローンを分離するプライベート ネットワークを自動的に作成することがインフラストラクチャの管理の例です。
 
-* チームでテストと配置を行っている場合、より単純に仮想マシンが使えるようになります。 同じチーム プロジェクト セキュリティ モデルでラボ環境にアクセスできるようにすることと、テスト シナリオでそれらの仮想マシンを統合して使用できるようにすることが単純化の例です。
+* チームでテストと配置を行っている場合、より単純に仮想マシンが使えるようになります。 同じプロジェクト セキュリティ モデルでラボ環境にアクセスできるようにすることと、テスト シナリオでそれらの仮想マシンを統合して使用できるようにすることが使いやすさの一例です。
 
 ただし、[Microsoft Azure](https://azure.microsoft.com/) や [Microsoft Azure Stack](https://azure.microsoft.com/overview/azure-stack/) などのより充実したパブリック クラウドおよびプライベート クラウド システムの進化のため、TFS 2017 以降のインフラストラクチャの管理機能には進展がありません。 代わりに、それらのクラウド インフラストラクチャで管理されるリソースを使いやすくする取り組みは継続されています。
 
-次の表では、ラボ センターで実行する一般的なアクティビティと、それを (インフラストラクチャを管理するアクティビティの場合) SCVMM または Azure で、または (テストおよび配置アクティビティの場合) TFS と Team Services で実行する方法をまとめています。
+次の表では、ラボ センターで実行する一般的なアクティビティと、それを (インフラストラクチャを管理するアクティビティの場合) SCVMM または Azure で、または (テストおよび配置アクティビティの場合) TFS と Azure DevOps Services で実行する方法をまとめています。
 
 | 手順 | ラボ センターを使用する場合 | ビルドまたはリリース管理を使用する場合 |
 |-------|----------------------|-----------------|
@@ -68,11 +68,11 @@ MTM と Lab Management は、アプリケーションのビルド、配置、テ
 
 ネットワークが分離されたラボ環境とは、ネットワークの競合を引き起こすことがなく安全に複製できる SCVMM 仮想マシンのグループです。 これは、MTM で、一連のネットワーク インターフェイス カードを使用してプライベート ネットワークに仮想マシンを構成した、および別の一連のネットワーク インターフェイス カードを使用してパブリック ネットワークに仮想マシンを構成した一連の手順で行われました。
 
-ただし、VSTS と TFS を SCVMM ビルドおよび配置タスクと組み合わせて使うことで、SCVMM 環境の管理、分離仮想ネットワークのプロビジョニング、およびビルド、配置、テスト シナリオの実装を、行うことができます。 たとえば、タスクを使って次のことができます。
+ただし、Azure Test Plans と TFS を SCVMM ビルドおよび配置タスクと組み合わせて使うことで、SCVMM 環境の管理、分離仮想ネットワークのプロビジョニング、およびビルド、配置、テスト シナリオの実装を行うことができます。 たとえば、タスクを使って次のことができます。
 
 * チェックポイントを作成、復元、削除する
 * テンプレートを使って新しい仮想マシンを作成する
 * 仮想マシンを開始および停止する
 * SCVMM のカスタム PowerShell スクリプトを実行する
 
-詳細については、「[Create a virtual network isolated environment for build-deploy-test scenarios](/vsts/build-release/actions/virtual-networks/create-virtual-network)」(ビルド、配置、テスト シナリオのための仮想ネットワーク分離環境を作成する) を参照してください。
+詳細については、「[Create a virtual network isolated environment for build-deploy-test scenarios](/azure/devops/pipelines/targets/create-virtual-network?view=vsts)」(ビルド、配置、テスト シナリオのための仮想ネットワーク分離環境を作成する) を参照してください。

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 110e8477384e7f13da6a4f9ca0b81235f2f2446b
-ms.sourcegitcommit: 2597236a481afbaf1ad4915743898ee1aee49760
+ms.openlocfilehash: 4465eff996664dca2fe1b5dcb31b5d7af049db53
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42626940"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320788"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE へようこそ
 
@@ -50,7 +50,7 @@ Visual Studio の全体像を視覚的に確認できるように、次のイメ
 
 - [[出力]](../ide/reference/output-window.md) ウィンドウ (下中央) には、デバッグ メッセージ、エラー メッセージ、コンパイラの警告、公開状態メッセージなど、Visual Studio の通知が出力されます。 メッセージ ソースごとに独自のタブがあります。
 
-- [チーム エクスプローラー](/vsts/user-guide/work-team-explorer) (右下) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/vsts/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
+- [チーム エクスプローラー](/azure/devops/user-guide/work-team-explorer?view=vsts) (右下) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/azure/devops/repos/tfvc/overview?view=vsts) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
 
 ### <a name="popular-productivity-features"></a>よく使われる生産性機能
 
@@ -273,6 +273,8 @@ IDE の他のカスタマイズ方法については、「[Visual Studio IDE の
 - [Visual Studio を使用して初めての Python Web アプリを作成する](quickstart-python.md)
 
 - [Visual Studio を使用して初めての C# Web アプリを作成する](quickstart-aspnet-core.md)
+
+- [Visual Studio を使用して初めての F# Web アプリを作成する](quickstart-fsharp.md)
 
 - [Visual Studio を使用して初めての Node.js Web アプリを作成する](quickstart-nodejs.md)
 

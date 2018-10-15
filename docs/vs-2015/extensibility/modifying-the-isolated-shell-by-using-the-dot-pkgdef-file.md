@@ -1,7 +1,7 @@
 ---
 title: 使用した分離シェルを変更します。Pkgdef ファイル |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -15,18 +15,16 @@ ms.assetid: 69e8f78e-bcf1-46cb-8866-7de37d134997
 caps.latest.revision: 28
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f70036f91eb52d85054465e6eea9f82672d851f6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b3a9b56d946e5a337c5afeb6cdd399c3c7ba24bd
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47540162"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49291461"
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgdef-file"></a>使用した分離シェルを変更します。Pkgdef ファイル
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-このトピックの最新バージョンをご覧[分離シェルを使用して変更します。Pkgdef ファイル](https://docs.microsoft.com/visualstudio/extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file)します。  
-  
 .Pkgdef ファイルには、分離シェル アプリケーションをカスタマイズに使用できる設定がサポートしています。 これには、アプリケーションがコンピューターにインストールされているし、アプリケーションを開始するときに、Visual Studio shell によって参照されているときに作成される値を指定します。 設定は、該当するレジストリ キーに基づくファイルで構成されます。  
   
 > [!WARNING]
@@ -73,14 +71,14 @@ ms.locfileid: "47540162"
 |AppLocalizationPackage|string|アプリケーションの UI のサテライト アセンブリを含む VSPackage の GUID です。 この VSPackage は、.vsct ファイルのコンパイル済みのバージョンを含み、他のローカライズされた文字列を含めることができます。 機能セットとメニュー コマンドは、グループを有効になっているか、UI プロジェクトの .vsct ファイルの設定を変更することで無効になっています。<br /><br /> 既定値は"{*vsUiPackageGuid*}"ここで、 *vsUiPackageGuid*はアプリケーションの UI パッケージに割り当てられた GUID です。|  
 |アプリ名|string|アプリケーションの名前。 アプリケーション ウィンドウのタイトル バーに名前が表示されます。<br /><br /> 既定値では、アプリケーションのソリューション ファイルの名前です。|  
 |CommandLineLogo|string|コンソール ウィンドウで、アプリケーションの実行時に、バナー テキスト。 この設定では、コマンド ライン ビルド操作をサポートするアプリケーションのみに影響します。<br /><br /> 既定値は"*companyName * * solutionName*バージョン 1.0"ここで、 *companyName* 、Windows のインストール時に提供されている会社の名前を指定し、 *solutionName*。アプリケーション ソリューション ファイルの名前を指定します。|  
-|DefaultDebugEngine|string|既定の GUID はデバッグ、アプリケーションで使用するエンジンです。<br /><br /> 注: 空の GUID (すべてゼロ) では、アプリケーションに既定のデバッグ エンジンが指定されていないことを示します。 これにより、デバッガーを使用するデバッグ エンジンを選択します。<br /><br /> 既定値は "{00000000-0000-0000-0000-000000000000}" です。|  
+|DefaultDebugEngine|string|既定の GUID はデバッグ、アプリケーションで使用するエンジンです。<br /><br /> 注: 空の GUID (すべてゼロ) では、アプリケーションに既定のデバッグ エンジンが指定されていないことを示します。 これにより、デバッガーを使用するデバッグ エンジンを選択します。<br /><br /> 既定値は " {00000000-0000-0000-0000-000000000000}" です。|  
 |DefaultHomePage|string|内部の Web ブラウザー ウィンドウの既定のホーム ページの URL。<br /><br /> 場合、**ホーム ページ**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../ide/reference/web-browser-environment-options-dialog-box.md)します。<br /><br /> 既定値は、Windows のインストール時に提供されている会社の URL です。|  
-|DefaultProjectsLocation|string|既定のプロジェクト フォルダーの完全パス。 たとえば、オブジェクトに適用された<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 場合、 **Visual Studio プロジェクトの場所**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、プロジェクトおよびソリューション オプション] ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)します。<br /><br /> 既定値は"$MyDocuments$\\*solutionName*"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
-|DefaultSearchPage|string|内部の Web ブラウザー ウィンドウの既定の検索ページ URL。<br /><br /> 場合、**検索ページ**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../ide/reference/web-browser-environment-options-dialog-box.md)します。<br /><br /> 既定値は "http://search.live.com" です。|  
+|DefaultProjectsLocation|string|既定のプロジェクト フォルダーの完全パス。 たとえば、オブジェクトに適用された<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 場合、 **Visual Studio プロジェクトの場所**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、プロジェクトおよびソリューション オプション ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)します。<br /><br /> 既定値は"$MyDocuments$\\*solutionName*"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
+|DefaultSearchPage|string|内部の Web ブラウザー ウィンドウの既定の検索ページ URL。<br /><br /> 場合、**検索ページ**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[環境では、Web ブラウザーのオプション ダイアログ ボックス](../ide/reference/web-browser-environment-options-dialog-box.md)します。<br /><br /> 既定値は " http://search.live.com" です。|  
 |DefaultUserFilesFolderRoot|string|現在のユーザーの基準とした、ユーザー フォルダーの名前はのマイ ドキュメント フォルダーです。<br /><br /> 既定値では、アプリケーションのソリューション ファイルの名前です。|  
 |DisableOutputWindow|dword|分離シェルに出力ウィンドウを扱う必要があります無効になっているかどうかを示します。<br /><br /> この値が設定されている場合は true、Visual Studio 出力は表示されず、ソリューション ビルド マネージャーで、**出力**ウィンドウと非表示に、**ビルド開始時に出力を表示するウィンドウ** チェック ボックス、 **プロジェクトおよびソリューション**カテゴリで、**オプション** ダイアログ ボックス。<br /><br /> 既定値は false です。|  
 |HideMiscellaneousFilesByDefault|dword|非表示にする場合は true、**その他のファイル**フォルダーで既定**ソリューション エクスプ ローラー**場合は false。<br /><br /> 場合、**ソリューション エクスプ ローラーで表示するその他のファイル**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。[オプション] ダイアログ ボックスの [ドキュメント](../ide/reference/documents-environment-options-dialog-box.md)します。<br /><br /> 既定値は false です。|  
-|HideSolutionConcept|dword|スタンドアロン プロジェクトのすべてのプロジェクトを作成し、既定では、ソリューションとプロジェクトのスタンドアロン ソリューションに関連するコマンドを非表示にする場合は trueそれ以外の場合、false です。<br /><br /> 場合、**常にソリューションを表示する**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、プロジェクトおよびソリューション オプション] ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)します。<br /><br /> 既定値は false です。|  
+|HideSolutionConcept|dword|スタンドアロン プロジェクトのすべてのプロジェクトを作成し、既定では、ソリューションとプロジェクトのスタンドアロン ソリューションに関連するコマンドを非表示にする場合は trueそれ以外の場合、false です。<br /><br /> 場合、**常にソリューションを表示する**オプションは、アプリケーションで使用し、この設定は、オプションの既定の状態も影響します。 詳細については、次を参照してください。 [NIB: [全般]、プロジェクトおよびソリューション オプション ダイアログ ボックス](http://msdn.microsoft.com/en-us/8f8e37e8-b28d-4b13-bfeb-ea4d3312aeca)します。<br /><br /> 既定値は false です。|  
 |NewProjDlgInstalledTemplatesHdr|string|Visual Studio のインストール済みテンプレート ヘッダーの名前、**テンプレート**の一覧で、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれる、ローカライズ可能なリソース識別子です。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |NewProjDlgSlnTreeNodeTitle|string|名前、 **Visual Studio ソリューション**内のノード、**プロジェクトの種類**ツリーで、**新しいプロジェクト** ダイアログ ボックス。 これは、文字列またはアプリケーションの UI パッケージから読み込まれる、ローカライズ可能なリソース識別子です。<br /><br /> 既定値は"*solutionName*にインストールされたテンプレート"ここで、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
 |SolutionFileCreatorIdentifier|string|アプリケーション id、アプリケーションによって生成されるソリューション ファイルの 2 つ目の行として表示されます。 この行は、ファイルを作成したアプリケーションを示します。 慣例により、この値には、アプリケーションとアプリケーションのバージョン番号の名両方にはが含まれます。 たとえば、オブジェクトに適用された<br /><br /> `"SolutionFileCreatorIdentifier"="MyVSShellStub Solution File, Format Version 10.00"`<br /><br /> VSLauncher.exe プログラムを Visual Studio ソリューション ファイルを開くときの既定のプログラムでは、この 2 行目を使用して、ソリューション ファイルを開くときに Visual Studio のバージョンを確認します。 アプリケーションでは、その関連するソリューション ファイルを処理するために、独自のランチャーを必要があります。 ランチャーはこの 2 行目でソリューションを開くアプリケーションのバージョンを決定するソリューション ファイルの使用もできます。<br /><br /> 注: Visual Studio VSLauncher.exe プログラムは、分離シェル アプリケーションによって作成された .sln ファイルを処理しません。<br /><br /> 既定値は"*solutionName*ソリューション ファイル、$10.00" 形式のバージョン、 *solutionName*アプリケーション ソリューション ファイルの名前を指定します。|  
@@ -111,7 +109,7 @@ ms.locfileid: "47540162"
 ```  
   
 ## <a name="profile-settings"></a>プロファイルの設定  
- 次の表では、[$RootKey$ \Profile] [関連付けられている各パッケージに対して定義されている値について説明します。  
+ 次の表では、[$RootKey$ \Profile] 関連付けられている各パッケージに対して定義されている値について説明します。  
   
 |名前|型|[値]|  
 |----------|----------|-----------|  

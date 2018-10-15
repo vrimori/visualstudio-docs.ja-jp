@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a389652b969ef4e4d29defbef40c91979d959e1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 17a63dc86e77692538ea75ba708a1ff39f9fb1b9
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31948744"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384254"
 ---
 # <a name="accessibility-products-and-services-from-microsoft"></a>マイクロソフトのアクセシビリティ製品とサービス
 
@@ -55,7 +55,7 @@ Microsoft は、すべてのユーザーが簡単に使用できる製品とサ�
 
  Microsoft では、アクセシビリティに関するオプションの選択とコンピューターの設定について、詳細な手順を示すチュートリアルを用意しています。 この情報は、マウス、キーボード、または両方を組み合わせて使用する方法がわかるよう、2 種類の手順が並べて示してあります。
 
- Microsoft 製品のステップバイステップ チュートリアルを参照するには、[マイクロソフト アクセシビリティ ホーム](http://go.microsoft.com/fwlink/?LinkId=8431)を参照してください。
+ Microsoft 製品のステップバイステップ チュートリアルを参照するには、[マイクロソフト アクセシビリティ](http://go.microsoft.com/fwlink/?LinkId=8431) Web サイトを参照してください。
 
 ### <a name="assistive-technology-products-for-windows"></a>Windows の支援技術製品
 
@@ -65,15 +65,15 @@ Microsoft は、すべてのユーザーが簡単に使用できる製品とサ�
 
 ##  <a name="altfortmats"></a> 代替形式のドキュメント
 
- 印刷形式のドキュメントの判読または取り扱いが困難な方のために、多くの Microsoft 製品については、いっそう利用しやすい形式でのドキュメントが用意されています。 ユーザー補助技術製品の索引が、[マイクロソフト アクセシビリティ ホーム](http://go.microsoft.com/fwlink/?LinkId=8431)に示されています。
+印刷形式のドキュメントの判読または取り扱いが困難な方のために、多くの Microsoft 製品については、いっそう利用しやすい形式でのドキュメントが用意されています。 ユーザー補助技術製品の索引が、[マイクロソフト アクセシビリティ ホーム](http://go.microsoft.com/fwlink/?LinkId=8431)に示されています。
 
- また、Microsoft の追加のドキュメントを RFB&D (Recording for the Blind & Dyslexic, Inc) から入手することもできます。 RFB&D は、これらのドキュメントを、同社の配布サービスに登録した正規メンバーに配布します。 入手可能な Microsoft 製品ドキュメントや Microsoft Press 発行書籍については、次の連絡先にお問い合わせください。
+また、Microsoft の追加のパブリケーションを Learning Ally から入手することもできます。 Learning Ally は、これらのドキュメントを、同社の配布サービスに登録した正規メンバーに配布します。 入手可能な Microsoft 製品ドキュメントや Microsoft Press 発行書籍については、次の連絡先にお問い合わせください。
 
-|Recording for the Blind & Dyslexic, Inc.|
+|Learning Ally|
 |----------------------------------------------|
-|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> 米国内からの電話連絡先: (800) 221-4792<br /><br /> 米国外およびカナダからの電話連絡先: (609) 452-0606<br /><br /> Fax: (609) 987-8116<br /><br /> Recording for the Blind & Dyslexic Web サイト: [http://www.rfbd.org](http://go.microsoft.com/fwlink/?LinkId=62504)。|
+|20 Roszel Road<br /><br /> Princeton, NJ 08540<br /><br /> Learning Ally Web サイト: [http://www.learningally.org](http://www.learningally.org/)。|
 
- Web アドレスは変更される可能性があるため、ここで示した Web サイトに接続できない場合があります。
+Web アドレスは変更される可能性があるため、ここで示した Web サイトに接続できない場合があります。
 
 ##  <a name="hearing"></a> 聴覚障碍者のためのカスタマー サービス
 

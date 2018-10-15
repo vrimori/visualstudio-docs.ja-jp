@@ -1,7 +1,7 @@
 ---
 title: Python コードの編集
 description: Visual Studio での Python の編集では、IntelliSense、コード スニペット、ナビゲーション機能、書式設定、lint、リファクタリングの機能が提供されます。
-ms.date: 05/07/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,16 +11,16 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a309dd0abe1332a37c9865a6e38bba9c0eb00dde
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 680f568ef6d44aa5194931bd585ba307f7b64b3d
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42627157"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43774766"
 ---
 # <a name="edit-python-code"></a>Python コードの編集
 
-開発者は、コード エディターで多くの時間を費やすので、[Visual Studio での Python のサポート](installing-python-support-in-visual-studio.md)は、生産性を向上させる機能を提供します。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。
+開発者は、開発時間の多くをコード エディターで費やすため、[Visual Studio での Python のサポート](installing-python-support-in-visual-studio.md)は、生産性を向上させる機能を提供しています。 機能には、IntelliSense 構文の強調表示、オートコンプリート、署名ヘルプ、メソッドのオーバーライド、検索、ナビゲーションが含まれます。
 
 また、エディターは Visual Studio の**対話型**ウィンドウと統合され、この 2 つの間で簡単にコードを交換することができます。 詳細については、[「チュートリアル」の「手順 3: 対話型 REPL ウィンドウを使用する」](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)と、[対話型ウィンドウの使用 - 対話型コマンドにコードを送信する](python-interactive-repl-in-visual-studio.md#send-to-interactive-command)に関するページを参照してください。
 

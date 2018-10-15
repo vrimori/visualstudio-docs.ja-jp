@@ -5,17 +5,17 @@ ms.date: 07/03/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
-author: dantogno
-ms.author: v-davian
+author: conceptdev
+ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 84a665a39c9cfa9e0eee030d7bf4fdb9b3194bc1
-ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
+ms.openlocfilehash: 574f6bb6a48df9df600c4c8be3bd97ffbb9d0382
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39251719"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283341"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity を使用する
 
@@ -188,7 +188,7 @@ Visual Studio の **[停止]** ボタンをクリックするかキーボード 
 
 #### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Unity プロジェクトで使用されるマネージド DLL プロジェクトをデバッグするには
 
-1. Visual Studio Tools for Unity によって生成された Visual Studio のソリューションに、既存の DLL プロジェクトを追加します。 あまり一般的な方法ではありませんが、Unity プロジェクトのコード コンポーネントが含まれた新しいマネージド DLL プロジェクトを開始することもできます。その場合は、Visual Studio のソリューションに新しいマネージド DLL プロジェクトを代わりに追加します。 新規または既存のプロジェクトをソリューションに追加する方法の詳細については、「[方法: プロジェクトをソリューションに追加する](https://msdn.microsoft.com/library/vstudio/ff460187.aspx)」を参照してください。
+1. Visual Studio Tools for Unity によって生成された Visual Studio のソリューションに、既存の DLL プロジェクトを追加します。 あまり一般的な方法ではありませんが、Unity プロジェクトのコード コンポーネントが含まれた新しいマネージド DLL プロジェクトを開始することもできます。その場合は、Visual Studio のソリューションに新しいマネージド DLL プロジェクトを代わりに追加します。 新規または既存のプロジェクトをソリューションに追加する方法の詳細については、「[方法: プロジェクトをソリューションに追加する](https://msdn.microsoft.com/library/ff460187.aspx)」を参照してください。
 
      ![既存の DLL プロジェクトをソリューションに追加します。](../cross-platform/media/vstu_debugging_dll_add_existing.png "vstu_debugging_dll_add_existing")
 
@@ -217,6 +217,6 @@ Visual Studio の **[停止]** ボタンをクリックするかキーボード 
 |MonoBehavior ウィザードを開く|**Ctrl** + **Shift** + **M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
 |Unity プロジェクト エクスプローラーを開く|**Alt** + **Shift** + **E**|**View.UnityProjectExplorer**|
 |Unity のドキュメントにアクセスする|**Ctrl** + **Alt** + **M、Ctrl** + **H**|**Help.UnityAPIReference**|
-|Unity のデバッガー (プレーヤーまたはエディター) にアタッチする|***既定値なし***|**Debug.AttachUnityDebugger**|
+|Unity のデバッガー (プレーヤーまたはエディター) にアタッチする|**_既定値なし_**|**Debug.AttachUnityDebugger**|
 
  既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)」を参照してください。

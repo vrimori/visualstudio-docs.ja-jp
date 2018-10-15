@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 553a2a53543f25d3794cf07ef760e42a010197f1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 16082a3d04a27355033fd96f3387652063f00cce
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35669546"
 ---
-# <a name="performance-report-views"></a>パフォーマンス レポート ビュー
+# <a name="performance-report-views"></a>パフォーマンス レポートのビュー
 このセクションでは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロファイリング ツールのレポートおよびビューに関するリファレンス情報を提供します。 プロファイリング データ ファイルのビューは、[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 統合開発環境 (IDE) で表示されます。 レポートは、[VSPerfReport](../profiling/vsperfreport.md) コマンド ライン ツールによって生成されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -45,5 +46,5 @@ ms.lasthandoff: 04/19/2018
  [階層相互作用のビュー](../profiling/tier-interactions-view.md)  
  階層相互作用データを含むプロファイリング データ ファイルの相互作用のビューとレポートに関するリファレンス情報。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンス ツール データの分析](../profiling/analyzing-performance-tools-data.md)

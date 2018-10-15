@@ -11,16 +11,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cfa50ef447675969110a2294d10a596469b87c3
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 83a5716d5a548980b85108b6bbc15329a755bc2b
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39204207"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44320632"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>テスト エージェントとテスト コントローラーのインストール
 
-Visual Studio と Visual Studio Team Services (VSTS) または Team Foundation Server (TFS) を使用するテスト シナリオでは、テスト コントローラーは必要ありません。 Agents for Visual Studio は、VSTS または TFS と通信してオーケストレーションを処理します。 VSTS または TFS のビルド ワークフローおよびリリース ワークフローのために継続的なテストを実行するシナリオが考えられます。
+Visual Studio と Azure Test Plans または Team Foundation Server (TFS) を使用するテスト シナリオでは、テスト コントローラーは必要ありません。 Agents for Visual Studio は、Azure Test Plans または TFS と通信してオーケストレーションを処理します。 Azure Test Plans または TFS のビルド ワークフローおよびリリース ワークフローのために継続的なテストを実行するシナリオが考えられます。
 
 また、ラボ管理ではなく[ビルドまたはリリース管理](use-build-or-rm-instead-of-lab-management.md)を使用する方がよいかどうかを検討する場合もあります。
 
@@ -58,13 +58,13 @@ ISO ファイル形式のインストーラーを入手できるので、仮想�
 
 ## <a name="upgrade-from-visual-studio-2013-test-agents"></a>Visual Studio 2013 テスト エージェントからのアップグレード
 
-すべての新しい自動テストシナリオでは Agents for Visual Studio を使用することをお勧めします。 ビルド定義で*テスト エージェントの配置*タスクを使用して、コンピューター上にテスト エージェントをダウンロードしてインストールすることができます。
+すべての新しい自動テストシナリオでは Agents for Visual Studio を使用することをお勧めします。 ビルド パイプラインで*テスト エージェントの配置*タスクを使用して、コンピューター上にテスト エージェントをダウンロードしてインストールすることができます。
 
-次の表は、Agents for Visual Studio 2013 でサポートされるシナリオと、Team Foundation Server (TFS) 2015 および VSTS での代替シナリオを示しています。
+次の表は、Agents for Visual Studio 2013 でサポートされるシナリオと、Team Foundation Server (TFS) 2015 および Azure Test Plans での代替シナリオを示しています。
 
-| Agents for Visual Studio 2013 でサポートされるシナリオ | TFS および VSTS での代替シナリオ |
+| Agents for Visual Studio 2013 でサポートされるシナリオ | TFS および Azure Test Plans での代替シナリオ |
 | --- | --- |
-| Visual Studio でのビルド-配置-テスト ワークフロー | ユーザーは、TFS でのビルド、配置、およびテスト シナリオで[ビルド定義](/vsts/build-release/) (XAML ビルドではない) を使用できます。 |
+| Visual Studio でのビルド-配置-テスト ワークフロー | ユーザーは、TFS でのビルド、配置、およびテスト シナリオで[ビルド パイプライン](/azure/devops/pipelines/index?view=vsts) (XAML ビルドではない) を使用できます。 |
 | オンプレミス リモート コンピューターを使用するロード テスト (パフォーマンス テスト) | Test Controller と Test Agents 2013 Update 5 を使用して、オンプレミスでロード テストを実行します。 |
 | ラボ環境を使用する Microsoft Test Manager からの自動テストのリモート実行 | 現在、このシナリオに代わるものはありません。 ビルドおよびリリース定義 (XAML ビルドではない) で機能テストの実行タスクを使用して、テストをリモートで実行することをお勧めします。 |
 | 開発者による Visual Studio でのリモート テストの実行 | サポート対象から除外されました。 |

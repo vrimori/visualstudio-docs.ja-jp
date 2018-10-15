@@ -1,7 +1,7 @@
 ---
 title: クイック スタート - Python コードのリポジトリを複製する
 description: このクイック スタートでは、Visual Studio チーム エクスプローラーを使用して Python Koans リポジトリを複製することで、Visual Studio で Python プロジェクトを作成します。
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: quickstart
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a058badfecfea84841a6a857200c04ebabf42a58
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: a4b01cc775c32bc602699aa2753482f184661079
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39636825"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281690"
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>クイック スタート: Visual Studio で Python コードのリポジトリを複製する
 
@@ -30,9 +30,9 @@ ms.locfileid: "39636825"
 
 1. Visual Studio を起動します。
 
-1. **[表示]** > **[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Visual Studio Team Services に接続したり、リポジトリを複製したりできます。 (次に示す **[接続]** ページが表示されない場合は、上部ツールバーのプラグ アイコンを選択すると、そのページに進みます)。
+1. **[表示]** > **[チーム エクスプローラー]** の順に選択し、**[チーム エクスプローラー]** ウィンドウを開きます。ここでは、GitHub または Azure Repos に接続したり、リポジトリを複製したりできます。 (次に示す **[接続]** ページが表示されない場合は、上部ツールバーのプラグ アイコンを選択すると、そのページに進みます)。
 
-    ![Visual Studio Team Services、GitHub、およびリポジトリの複製が表示された [チーム エクスプローラー] ウィンドウ](media/team-explorer.png)
+    ![Azure Repos、GitHub、リポジトリの複製を示すチーム エクスプローラー ウィンドウ](media/team-explorer.png)
 
 1. **[ローカル Git リポジトリ]** で **[複製]** コマンドを選択し、[URL] フィールドに「`https://github.com/gregmalcolm/python_koans`」と入力し、複製元のファイルが格納されているフォルダーを入力し、**[複製]** ボタンを選択します。
 

@@ -10,15 +10,33 @@ ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 6a8f2b866bd1bb2c4d13f3cb3c40c1f6fbc14683
-ms.sourcegitcommit: 58a0b227f29b95e3ed55101ef66c68913682862b
+ms.openlocfilehash: abec2e0d2485b99d5cde020bffc5ad0b2dd473ac
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2018
-ms.locfileid: "42627222"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775385"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="3806"></a>3.8.0.6
+ リリース日: 2018 年 8 月 27 日
+ 
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   プロジェクトとソリューションの再読み込みを修正しました。
+
+## <a name="3805"></a>3.8.0.5
+ リリース日: 2018 年 8 月 20 日
+ 
+### <a name="bug-fixes"></a>バグ修正
+
+-   **統合:**
+
+    -   プロジェクト監視のサブスクリプション破棄を修正しました。
 
 ## <a name="3804"></a>3.8.0.4
  リリース日: 2018 年 8 月 14 日

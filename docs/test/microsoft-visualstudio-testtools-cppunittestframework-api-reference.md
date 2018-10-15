@@ -9,20 +9,20 @@ manager: douge
 ms.workload:
 - multiple
 author: mikeblome
-ms.openlocfilehash: 973147bd497f9202227ab36a1beb948c51c7c698
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 8309ee96b0948739124e0e23c4a57dd136f63362
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39381987"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280923"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス
 
 このトピックでは `Microsoft::VisualStudio::CppUnitTestFramework` の名前空間のパブリック メンバーの一覧を示します。 Microsoft ネイティブ単体テスト フレームワークに基づいて C++ の単体テストを作成するには、これらの API を使います。 トピックの最後には「[使用例](#example)」があります。
 
- ヘッダー ファイルは *VisualStudio2012[x86]InstallFolder***\VC\UnitTest\include** フォルダーにあります。
+ ヘッダー ファイルは _VisualStudio2012[x86]InstallFolder_**\VC\UnitTest\include** フォルダーにあります。
 
- lib ファイルは *VisualStudio2012[x86]InstallFolder***\VC\UnitTest\lib** フォルダーにあります。
+ lib ファイルは _VisualStudio2012[x86]InstallFolder_**\VC\UnitTest\lib** フォルダーにあります。
 
 ヘッダーと lib のパスは、ネイティブ テスト プロジェクトで自動的に構成されます。
 

@@ -12,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bd29940bdacdeef4b47432f1b649db4ba61054af
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 9db1925036f7522db3fe7a16af362da754ec49e5
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180114"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321061"
 ---
 # <a name="testing-tools-in-visual-studio"></a>Visual Studio のテスト ツール
 
@@ -25,8 +25,7 @@ Visual Studio のテスト ツールを使用することで、チームと共�
 
 - **テスト エクスプローラー** ウィンドウを使用すると、開発の手法において[単体テスト](../test/unit-test-your-code.md)を容易に統合できるようになります。 Microsoft 単体テスト フレームワークまたは複数のサードパーティ フレームワークやオープン ソース フレームワークの 1 つを使用できます。
 
-- 
-  [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) は、マネージド コードの単体テストとテスト データを自動生成します。
+- [IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md) は、マネージド コードの単体テストとテスト データを自動生成します。
 
 - [コード カバレッジ](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)は、プロジェクトのコードの中で、単体テストなどのコード化されたテストによって実際にテストされる割合を判断します。
 
@@ -43,8 +42,7 @@ Visual Studio のテスト ツールを使用することで、チームと共�
 
 ## <a name="related-scenarios"></a>関連するシナリオ
 
-* [探索的テストと手動テスト (VSTS)](/vsts/manual-test/)
-* [ロード テスト (VSTS)](/vsts/load-test/index)
-* [継続的テスト (VSTS)](/vsts/build-release/test/index)
-* [Team Services と TFS の DevOps の概要 (VSTS)](/vsts/user-guide/devops-alm-overview)
+* [探索的テストと手動テスト (Azure Test Plans)](/azure/devops/test/index?view=vsts)
+* [ロード テスト (Azure Test Plans)](/azure/devops/test/load-test/index?view=vsts)
+* [継続的なテスト (Azure Test Plans)](/azure/devops/pipelines/test/getting-started-with-continuous-testing?view=vsts)
 * [コード分析ツール](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)

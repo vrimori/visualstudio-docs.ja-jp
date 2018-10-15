@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ecd73fceda6916f547c67e599777a9cd139d3bb
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 124516b0e214f1999792f40425976441bf3c9313
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176373"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283490"
 ---
 # <a name="codeindex-command"></a>CodeIndex コマンド
 
@@ -27,7 +27,7 @@ ms.locfileid: "39176373"
 
 ## <a name="required-permissions"></a>必要なアクセス許可
 
-**CodeIndex** コマンドを使用するには、**Team Foundation 管理者**セキュリティ グループのメンバーである必要があります。 「[Permissions and groups defined for Team Services and TFS](/vsts/organizations/security/permissions?view=vsts)」 (チーム サービスと TFS に定義されているアクセス許可とグループ) を参照してください。
+**CodeIndex** コマンドを使用するには、**Team Foundation 管理者**セキュリティ グループのメンバーである必要があります。 [Azure DevOps Services と TFS 向けに定義されているアクセス許可とグループ](/azure/devops/organizations/security/permissions?view=vsts)に関するページを参照してください。
 
 > [!NOTE]
 > 管理資格情報を使ってログオンしている場合でも、このコマンドを実行するには、昇格した特権でコマンド プロンプト ウィンドウを開く必要があります。 また、Team Foundation のアプリケーション層からこのコマンドを実行する必要があります。
@@ -42,8 +42,8 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 
 |**引数**|**説明**|
 |------------------|---------------------|
-|`CollectionName`|チーム プロジェクト コレクションの名前を指定します。 名前に空白が含まれる場合は、"Fabrikam Website" のように引用符で囲みます。|
-|`CollectionId`|チーム プロジェクト コレクションの ID 番号を指定します。|
+|`CollectionName`|プロジェクト コレクションの名前を指定します。 名前に空白が含まれる場合は、"Fabrikam Website" のように引用符で囲みます。|
+|`CollectionId`|プロジェクト コレクションの ID 番号を指定します。|
 |`ServerPath`|コード ファイルのパスを指定します。|
 
 |**オプション**|**説明**|
@@ -56,8 +56,8 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 |**/destroyCodeIndex [/noPrompt]**|コード インデックスを削除し、すべてのインデックス データを削除します。 **/noPrompt** のオプションを使用する場合は、確認を要求されません。|
 |**/temporaryDataSizeLimit**:[ view &#124; <`SizeInGBs`> &#124; disable ]|変更セットを処理するときに CodeLens が作成する一時データの量を制御します。 制限の既定値は 2 GB です。<br /><br /> -   **view**: 現在のサイズ制限を表示します。<br />-   `SizeInGBs`: サイズの制限を変更します。<br />-   **disable**: サイズの制限を削除します。<br /><br /> CodeLens が新しい変更セットを処理する前に、この制限の検査が行われます。 一時データがこの制限を超える場合、CodeLens は過去の変更セット (新しい変更セットではない) の処理を一時停止します。 データがクリーンアップされ、この制限内に収まると、CodeLens は処理を再開します。 クリーンアップは 1 日に 1 度、自動的に行われます。 このことは、クリーンアップの実行が始まるまでは、一時データがこの制限を超えている可能性があることを意味します。|
 |**/indexHistoryPeriod**:[ view &#124; all &#124; <`NumberOfMonths`> ]|変更履歴のインデックスを作成する期間を制御します。 これは、CodeLens の履歴の表示量に影響します。 制限の既定値は 12 か月です。 つまり、CodeLens が過去 12 か月間の変更履歴のみを表示するという意味です。<br /><br /> -   **view**: 現在の月数を表示します。<br />-   **all**: すべての変更履歴のインデックスを作成します。<br />-   `NumberOfMonths`: 変更履歴のインデックスの作成に使用する月数を変更します。|
-|**/collectionName:** `CollectionName`|**CodeIndex** コマンドを実行する対象のチーム プロジェクト コレクションの名前を指定します。 **/CollectionId** を使用しない場合は必ず指定します。|
-|**/collectionId:** `CollectionId`|**CodeIndex** コマンドを実行する対象のチーム プロジェクト コレクションの ID 番号を指定します。 **/CollectionName** を使用しない場合は必ず指定します。|
+|**/collectionName:** `CollectionName`|**CodeIndex** コマンドを実行する対象のプロジェクト コレクションの名前を指定します。 **/CollectionId** を使用しない場合は必ず指定します。|
+|**/collectionId:** `CollectionId`|**CodeIndex** コマンドを実行する対象のプロジェクト コレクションの ID 番号を指定します。 **/CollectionName** を使用しない場合は必ず指定します。|
 
 ## <a name="examples"></a>使用例
 

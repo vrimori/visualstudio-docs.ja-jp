@@ -1,11 +1,11 @@
 ---
 ms.technology: vs-ai-tools
-ms.openlocfilehash: b941d0ba55c540de4bda1cb0f9c4ed18ceab524f
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: d52ed79b28794a3bc1532822e0eb75b6277314b2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
-ms.locfileid: "29708278"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280702"
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>データのアップロードまたはモデルとログのダウンロードを行うストレージを参照する
 
@@ -13,14 +13,14 @@ ms.locfileid: "29708278"
 
 ## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>リモート マシンまたはファイル共有上のすべてのデータにアクセスするには
 1. **サーバー エクスプローラー**を開きます。
-2. リモート マシンまたはバッチ AI 計算コンテキストを展開します。
-3. **[ストレージ]** を右クリックし、**[参照]** をクリックします。
+2. リモート マシンまたは Batch AI 計算コンテキストを展開します。
+3. **[ストレージ]** を右クリックしてから **[参照]** をクリックします。
 
     ![storage](media\manage-storage\browse-storage.png)
 
 ## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>リモート マシンまたはファイル共有上にあるジョブ固有のデータにアクセスするには
 1. [[ジョブ履歴]](job-details.md) を開きます。
 2. ジョブを選択します。
-3. **[作業フォルダー]** をクリックします。あるいは、これらの重要なログ ファイルにすばやくアクセスするために [Stdout] または [Stderr] をクリックします。
+3. **[作業フォルダー]** をクリックします。あるいは、これらの重要なログ ファイルにすばやくアクセスするために **[StdOut] または [Stderr]** をクリックします。
 
     ![storage](media\manage-storage\job-workingfolder.png)

@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - Visual Studio での Flask の詳細情報、手順 1
 description: Visual Studio プロジェクトのコンテキストでの Flask の基礎に関するチュートリアルです。
-ms.date: 06/04/2018
+ms.date: 09/04/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f64c603d9902343d83b57d56ab891c7b41d021ae
-ms.sourcegitcommit: 56ae5032d99d948aae0548ae318ca2bae97ea962
+ms.openlocfilehash: e010dd429c0ef182d9e6dc5ed205e04624c1f367
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39586405"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283419"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Flask Web フレームワークの概要
 
@@ -95,7 +95,7 @@ Flask プロジェクト テンプレートは Python Tools for Visual Studio �
 
     ![既存のリモート リポジトリにプッシュする [チーム エクスプローラー] ウィンドウ](media/flask/step01-push-to-github.png)
 
-    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Push to Visual Studio Team Services]\(Visual Studio Team Services にプッシュ\)** オプションを使用して、Visual Studio から直接作成できます。
+    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Azure DevOps へプッシュ]** オプションを使用して、Visual Studio から直接作成できます。
 
 1. このチュートリアルを進めるときに、Visual Studio のコントロールを定期的に使用して変更をコミットおよびプッシュする習慣を付けてください。 このチュートリアルでは、適切な時点で通知します。
 

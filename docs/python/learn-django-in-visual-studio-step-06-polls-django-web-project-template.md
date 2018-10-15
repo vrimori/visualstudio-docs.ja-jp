@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d8b8ec4495c12132b89561bcbbaaf8ebfdbe3483
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 10dc2effb90e754a91f6c9f008c6f8b1692bc252
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626543"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281066"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>手順 6: ポーリング Django Web プロジェクト テンプレートを使用する
 
@@ -376,8 +376,8 @@ Visual Studio で "空の Django Web プロジェクト"、"Django Web プロジ
 
 - SQLite から、PostgreSQL、MySQL、SQL Server など (これらはいずれも Azure でホストできます) の運用レベルのデータ ストアにアプリを変更します。 「[When to use SQLite](https://www.sqlite.org/whentouse.html)」(SQLite を使用する場合) (sqlite.org) で説明されているように、SQLite は、1 日あたり 100,000 ヒット未満のトラフィックが中小規模のサイトには適していますが、高ボリュームのサイトにはお勧めできません。 また、単一のコンピューターに制限されているため、負荷分散処理や geo レプリケーションなど、マルチサーバーのシナリオには使用できません。 他のデータベースに対する Django のサポートについては、「[Database setup](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup)」(データベースの設定) を参照してください。 テーブルや BLOB のような Azure ストレージ サービスを使用する場合は、[Azure SDK for Python](azure-sdk-for-python.md) も使用できます。
 
-- Visual Studio Team Services (VSTS) などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (VSTS、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として VSTS で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、VSTS は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体に対応することができます。 詳細については次を参照してください:
+- Azure Pipelines などのサービスに対して、継続的インテグレーション/継続的配置パイプラインを設定します。 (Azure Repos、GitHub、または他の場所で) ソース コード管理を使用するだけでなく、リリースの前提条件として Azure Test Plans で単体テストを自動的に実行することができます。また、運用環境に展開する前に、追加テストのためにステージング サーバーに展開するパイプラインを構成することもできます。 さらに、Azure DevOps Services は App Insights などの監視ソリューションと統合されているので、アジャイル計画ツールを使用してサイクル全体を閉じることができます。 詳細については次を参照してください:
 
-  - [Azure DevOps プロジェクトを使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
+  - [Azure DevOps Projects を使用して Python 用の CI/CD パイプラインを作成する](/azure/devops-project/azure-devops-project-python?view=vsts)
   - [Visual Studio Team Services を使用した Azure での Python 開発 (ビデオ、11 分 21 秒)](https://azure.microsoft.com/resources/videos/connect-2017-python-development-in-azure-with-visual-studio-team-services/)
 

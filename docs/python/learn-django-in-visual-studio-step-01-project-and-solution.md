@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2e561e7e5ba060258f88593cdfee0bcfb3ece5c7
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: 3db94813f6d6b87d29744be2d1f53e26c3b80f26
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626630"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280169"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>チュートリアル: Visual Studio での Django Web フレームワークの概要
 
@@ -100,7 +100,7 @@ Visual Studio プロジェクトには、Django プロジェクトと複数の�
 
     ![既存のリモート リポジトリにプッシュする [チーム エクスプローラー] ウィンドウ](media/django/step01-push-to-github.png)
 
-    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Push to Visual Studio Team Services]\(Visual Studio Team Services にプッシュ\)** オプションを使用して、Visual Studio から直接作成できます。
+    既存のリポジトリがない場合は、**[Publish to GitHub]\(GitHub に発行\)** オプションと **[Azure DevOps へプッシュ]** オプションを使用して、Visual Studio から直接作成できます。
 
 1. このチュートリアルを進めるときに、Visual Studio のコントロールを定期的に使用して変更をコミットおよびプッシュする習慣を付けてください。 このチュートリアルでは、適切な時点で通知します。
 

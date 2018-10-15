@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a514459e834e5652e544991eb061f0c96767dd32
-ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
+ms.openlocfilehash: 0839bbf95b701f1104ab5c9fb1c66318ac4707c9
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36302641"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321230"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>診断データ アダプターを作成してカスタム データを収集する、またはテスト コンピューターに影響を与える
 
@@ -34,7 +34,7 @@ Visual Studio からテストを実行する場合は、これらのテスト設
 |-----------|-----------------------|
 |**診断データ アダプターを作成する:** クラス ライブラリを作成して診断データ アダプターを作成し、次に診断データ アダプターの API を使用して、目的の情報を収集したり、テストの実行に使用するテスト システムに影響を与えたりします。|-   [方法: 診断データ アダプターを作成する](../test/how-to-create-a-diagnostic-data-adapter.md)|
 |**カスタム診断データ アダプターをインストールする:** 自分または他のユーザーが作成した診断データ アダプターを適切なディレクトリにコピーすることにより、カスタム診断データ アダプターをインストールできます。|-   [方法: カスタム診断データ アダプターをインストールする](../test/how-to-install-a-custom-diagnostic-data-adapter.md)|
-|**テストの実行時に使用するカスタム診断データ アダプターを選択する:** テストの設定で使用する診断データ アダプターを選択することにより、テストの実行時に使用するアダプターを指定できます。|-   [テスト中の診断データの収集 (VSTS)](/vsts/manual-test/collect-diagnostic-data)<br />-   [手動テストでの診断データの収集 (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)|
+|**テストの実行時に使用するカスタム診断データ アダプターを選択する:** テストの設定で使用する診断データ アダプターを選択することにより、テストの実行時に使用するアダプターを指定できます。|-   [テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)<br />-   [手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)|
 |**診断データ アダプターによって実行するアクションを構成する:** 特定のテストの設定における診断データ アダプターのアクションを制御するための設定を構成できます。|-   [方法: 診断データ アダプター用のデータのカスタム エディターを作成する](../test/how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter.md)|
 
 ## <a name="see-also"></a>関連項目

@@ -9,12 +9,12 @@ description: 提供されているサブスクリプションの種類、該当�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7db3d68b904ee6ec21f9f43e165291cfa7cbfc10
-ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
+ms.openlocfilehash: b3bea3831e2d16f43d378bfe77a4dc8f84fdda3f
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36281031"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283575"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft Partner Network (MPN) でパートナーに提供される Visual Studio サブスクリプション
 MPN でコンピテンシーを取得するか、Action Pack を購入したパートナーは、Visual Studio サブスクリプションを使用できます。 これらのサブスクリプションは、ユーザーごとにライセンスされ、パートナー企業で働く特定の名前付きユーザーに割り当てられている場合にのみ有効です。
@@ -54,7 +54,7 @@ Action Pack では、パートナーは **Visual Studio Professional (MPN) サ�
 
 また、Visual Studio Professional (MPN) サブスクライバーは、SQL Server Developer Edition など、開発用の無料ソフトウェアをダウンロードおよび使用することもできます。
 
-Visual Studio Professional (MPN) サブスクリプションには、商用に提供されている Visual Studio サブスクリプションで利用できる、VSTS 特典、月単位の Azure クレジット、テクニカル サポート、トレーニング、またはその他のサブスクライバー特典は含まれません。
+Visual Studio Professional (MPN) サブスクリプションには、商用に提供されている Visual Studio サブスクリプションで利用できる、Azure DevOps Services 特典、月単位の Azure クレジット、テクニカル サポート、トレーニング、またはその他のサブスクライバー特典は含まれません。
 
 ## <a name="internal-use-only-restriction"></a>内部使用のみの制限
 プログラム特典として提供されるすべてのソフトウェアを規定する MPN ルールは、内部でのみ使用できます。 これは、個別の Visual Studio サブスクライバーの使用に提供されるソフトウェア、および MPN ソフトウェア ライセンス特典全体に適用されます。
@@ -69,5 +69,4 @@ MPN 経由で提供される Visual Studio サブスクリプションでは、�
 
 - [MPN プログラム管理者ガイド](https://assets.microsoft.com/en-us/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) - Visual Studio サブスクリプションを MPN 従業員に割り当てる方法に関する手順が含まれます。
 - [Visual Studio サブスクリプションを MPN 従業員に割り当てる](manage-mpn-subscriptions.md)
-- 
-  [使用条件](http://www.microsoft.com/useterms/) - MPN 経由で提供される Visual Studio サブスクリプションは、Visual Studio サブスクリプションの再販禁止 (NFR) EULA の対象です。
+- [使用条件](http://www.microsoft.com/useterms/) - MPN 経由で提供される Visual Studio サブスクリプションは、Visual Studio サブスクリプションの再販禁止 (NFR) EULA の対象です。

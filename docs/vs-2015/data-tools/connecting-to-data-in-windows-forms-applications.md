@@ -1,7 +1,7 @@
 ---
 title: フォームのアプリケーションを Windows でのデータへの接続 |Microsoft Docs
 ms.custom: ''
-ms.date: 2018-06-30
+ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.reviewer: ''
 ms.suite: ''
@@ -42,12 +42,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: d1132ee07e892886e49fbaa4670b309afc448da6
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: d8da35b32f3dd25bd7ed47b25f722c6b0aa21ac7
+ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "47547281"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49208950"
 ---
 # <a name="connecting-to-data-in-windows-forms-applications"></a>Windows フォーム アプリケーションでのデータへの接続
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -77,13 +77,13 @@ ms.locfileid: "47547281"
 -   [Access データベース内のデータへの接続 (Windows フォーム)](../data-tools/connect-to-data-in-an-access-database-windows-forms.md)  
   
 ## <a name="creating-connections"></a>接続の作成  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を使用して接続が構成されて、**接続の追加/変更**] ダイアログ ボックス。 **接続の追加**いずれかのデータ ウィザード内の接続を作成または編集する場合、ダイアログ ボックスが表示されますまたは[サーバー エクスプ ローラー/データベース エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)または接続文字列プロパティを編集しているときに**プロパティ**ウィンドウ。  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を使用して接続が構成されて、**接続の追加/変更** ダイアログ ボックス。 **接続の追加**いずれかのデータ ウィザード内の接続を作成または編集する場合、ダイアログ ボックスが表示されますまたは[サーバー エクスプ ローラー/データベース エクスプ ローラー](http://msdn.microsoft.com/library/4ea29b3b-bbb2-45e4-9082-eaf635c41c4d)または接続文字列プロパティを編集しているときに**プロパティ**ウィンドウ。  
   
  次のいずれかの操作を実行すると、データ接続が自動的に構成されます。  
   
 |動作|説明|  
 |------------|-----------------|  
-|実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)します。|データベースのパスを選択すると、接続が構成されて、**データ ソース構成ウィザード**します。 詳細については、次を参照してください。[方法: データをデータベースに接続する](../data-tools/how-to-connect-to-data-in-a-database.md)します。|  
+|実行、[データ ソース構成ウィザード](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f)します。|データベースのパスを選択すると、接続が構成されて、**データ ソース構成ウィザード**します。 詳細については、「 [How to: Connect to Data in a Database](../data-tools/how-to-connect-to-data-in-a-database.md)」を参照してください。|  
 |実行、 [TableAdapter 構成ウィザード](http://msdn.microsoft.com/library/3a373dd9-7b34-4d3c-a48b-69414512bac8)します。|内で接続を作成、 **TableAdapter 構成ウィザード**します。 詳細については、次を参照してください。[作成し、Tableadapter 構成](../data-tools/create-and-configure-tableadapters.md)します。|  
 |実行、 [TableAdapters の編集](../data-tools/editing-tableadapters.md)します。|内で接続を作成、 **TableAdapter クエリ構成ウィザード**します。 詳細については、次を参照してください。[方法: TableAdapter クエリの作成](../data-tools/how-to-create-tableadapter-queries.md)です。|  
 |項目をドラッグ、[データ ソース ウィンドウ](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)からフォームに、または[Component Designer](http://msdn.microsoft.com/library/61a3a450-5b15-465e-bd9a-72a6c8c2b282)します。|項目をドラッグすると接続オブジェクトが作成、**データ ソース**ウィンドウ、 **Windows フォーム デザイナー**または**Component Designer**します。 詳細については、次を参照してください。 [Visual Studio でのデータ コントロールをバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)します。|  

@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 42bc0ed6cea6025ad59c13566504daed7222ac2b
-ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
+ms.openlocfilehash: 30a6cb4f2d39e16a9ff5334bc0676707e4c65dce
+ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203853"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44321152"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する
 
@@ -110,7 +110,7 @@ IntelliTrace データは、拡張子が *.iTrace* のファイルに保存さ�
 
 ## <a name="see-also"></a>関連項目
 
-- [テスト中の診断データの収集 (VSTS)](/vsts/manual-test/collect-diagnostic-data)
-- [手動テストでの診断データの収集 (VSTS)](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)
+- [テスト中の診断データの収集 (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [手動テストでの診断データの収集 (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
 - [テスト設定を使用して診断情報を収集する](../test/collect-diagnostic-information-using-test-settings.md)
 - [IntelliTrace データの収集](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)
