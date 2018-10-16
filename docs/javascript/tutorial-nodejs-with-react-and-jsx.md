@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0615f557d67c16698e0c737d97e45639be8a5eac
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 1d02922d4d28f41ced952c9ef8c990d55f78a226
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125003"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548206"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -312,9 +312,11 @@ webpack は、ブラウザーで実行できるように JavaScript ファイル
 
 ## <a name="run-the-app"></a>アプリを実行する
 
-1. 現在のデバッグ ターゲットとして Chrome が選ばれていることを確認します。
+1. 現在のデバッグ ターゲットとして Chrome を選びます。
 
     ![デバッグ ターゲットとして Chrome を選ぶ](../javascript/media/tutorial-nodejs-react-debug-target.png)
+
+    Chrome をコンピューターで使用できるのにオプションには表示されない場合は、デバッグ ターゲットのドロップダウン リストから **[Browse With]\(ブラウザー\)** を選択し、Chrome を既定のブラウザーに選択します (**[Set as Default]\(既定値として設定\)** を選択)。
 
 1. アプリを実行するには、**F5** キーを押すか (**[デバッグ]** > **[デバッグの開始]**)、または緑の矢印ボタンをクリックします。
 
@@ -361,6 +363,8 @@ webpack は、ブラウザーで実行できるように JavaScript ファイル
 1. Visual Studio に切り替え、次の図に示すように、*app-bundle.js* のコードの `render()` 関数にブレークポイントを設定します。
 
     ![ブレークポイントの設定](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
+
+    *app-bundle.js* で `render()` 関数を見つけるには、**Ctrl**+**F** を使用します (**[編集]** > **[検索と置換]** > **[クイック検索]**)。
 
 1. Visual Studio でデバッグ ターゲットとして Chrome を選択し、**Ctrl**+**F5** キーを押して (**[デバッグ]** > **[デバッグなしで開始]**)、ブラウザーでアプリを実行します。
 

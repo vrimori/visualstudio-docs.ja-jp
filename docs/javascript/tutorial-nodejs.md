@@ -2,7 +2,7 @@
 title: Node.js と Express のアプリを作成する
 description: このチュートリアルでは、Node.js Tools for Visual Studio を使用してアプリを作成します。
 ms.custom: ''
-ms.date: 06/27/2018
+ms.date: 09/24/2018
 ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 2093f8a2f2d048661b7fb23f45c5317011f25076
-ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.openlocfilehash: 8e7a1d04b83ffef2f7ec6efc786af6f5bc6e992e
+ms.sourcegitcommit: 000cdd1e95dd02e99a7c7c1a34c2f8fba6a632af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44124919"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168345"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と Express のアプリを作成する
 このチュートリアルでは、Node.js と Express を使用して Visual Studio を開発します。単純な Node.js Web アプリを作成し、いくつかのコードを追加し、IDE の一部の機能を試し、アプリを実行します。 まだ Visual Studio をインストールしていない場合は、[ここ](http://visualstudio.microsoft.com)から無料でインストールできます。
@@ -192,9 +192,11 @@ IntelliSense は、コードの記述を支援する Visual Studio ツールで�
 
 ## <a name="run-the-application"></a>アプリケーションの実行
 
-1. デバッグ ツール バーでデバッグ ターゲットを選択します。
+1. デバッグ ツール バーで Edge や Chrome などのデバッグ ターゲットを選択します。
 
     ![デバッグ ターゲットを選択する](../javascript/media/tutorial-nodejs-deploy-target.png)
+
+    Chrome をコンピューターで使用できるのにオプションには表示されない場合は、デバッグ ターゲットのドロップダウン リストから **[Browse With]\(ブラウザー\)** を選択し、Chrome を既定のブラウザーに選択します (**[Set as Default]\(既定値として設定\)** を選択)。
 
 1. **F5** キー (**[デバッグ]** > **[デバッグの開始]**) を押してアプリケーションを実行します。
 

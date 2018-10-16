@@ -1,5 +1,5 @@
 ---
-title: Visual Studio でテストの自動化にビルドまたはリリース管理を使用する
+title: ビルドまたはリリース管理を使用したテストの自動化
 ms.date: 03/02/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -11,14 +11,14 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: cc8935db33f5c4b584cf825a46ae62f0d31d2351
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: a5896eccbee65450ab6206dd26a8f76d3fc48d5c
+ms.sourcegitcommit: b9a32c3d94b19e7344f4872bc026efd3157cf220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320619"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46135610"
 ---
-# <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>テストの自動化に、Lab Management ではなくビルドとリリース管理を使用します。
+# <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>自動化されたテストに Lab Management ではなく Azure Test Plans を使用する
 
 このトピックでは、テストの自動化または、ビルド、配置、テストの自動化に Microsoft Test Manager (MTM) と Lab Management を使用している場合、Team Foundation Server (TFS) および Azure Test Plans の[ビルドとリリース](/azure/devops/pipelines/index?view=vsts)機能を使用して同じ目的を達成する方法を説明します。
 
@@ -64,7 +64,7 @@ MTM と Lab Management は、アプリケーションのビルド、配置、テ
 | マシンに接続します。 | 環境ビューアーでラボ環境を開きます。 | 仮想マシンに接続するために、SCVMM 管理コンソールを直接使用します。 または、仮想マシンの IP アドレスまたは DNS 名を使用して、リモート デスクトップ セッションを開きます。 |
 | 環境のチェックポイントを取得するか、クリーンなチェックポイントに環境を復元します。 | 環境ビューアーでラボ環境を開きます。 チェックポイントを取得するまたは前のチェックポイントに復元するオプションを選択します。 | 仮想マシンでこれらの操作を実行するために、直接 SCVMM 管理コンソールを使用します。 または、これらの手順をより大規模な自動化の一環として実行するには、リリース定義の環境の一部として [SCVMM Integration 拡張機能](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)からチェックポイント タスクを含めます。 |
 
-## <a name="creation-of-network-isolated-environments"></a>ネットワーク分離環境の作成
+## <a name="create-network-isolated-environments"></a>ネットワークが分離された環境を作成する
 
 ネットワークが分離されたラボ環境とは、ネットワークの競合を引き起こすことがなく安全に複製できる SCVMM 仮想マシンのグループです。 これは、MTM で、一連のネットワーク インターフェイス カードを使用してプライベート ネットワークに仮想マシンを構成した、および別の一連のネットワーク インターフェイス カードを使用してパブリック ネットワークに仮想マシンを構成した一連の手順で行われました。
 

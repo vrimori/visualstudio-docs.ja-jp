@@ -17,16 +17,16 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 619d7b0f93985f59a46fbc67f289cae8fd7ac8a9
-ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
+ms.openlocfilehash: d2762843141d1383c1fb4f7d4925b1fbe37a9298
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384189"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029109"
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017 の新機能
 
-**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)の更新**
+**[15.8 リリース](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)の更新**
 
 以前のバージョンの Visual Studio からのアップグレードを検討していますか。 Visual Studio 2017 にはすべての開発、すべてのアプリ、すべてのプラットフォームにおいて、他に類を見ない生産性があります。 Visual Studio 2017 を利用し、Android、iOS、Windows、Linux、Web、クラウド向けのアプリを開発します。 短期間でプログラミングできて、デバッグや診断も簡単に行えます。テストを頻繁に行うことで、自信をもってリリースできます。 独自の拡張機能を開発することで Visual Studio を拡張し、カスタマイズすることもできます。 今回のリリースでは、バージョン管理を使用した、迅速で、効率的な共同作業が可能になりました。
 
@@ -42,7 +42,7 @@ ms.locfileid: "44384189"
 * **[AI の開発](#ai-development)**。 Visual Studio Tools for AI では、Visual Studio の生産性機能を使用して、AI 革新を高速化することができます。 堅牢な実験機能のために、Azure Machine Learning とシームレスに統合するディープ ラーニング / AI ソリューションをビルド、テスト、展開します。
 
 > [!NOTE]
-> Visual Studio 2017 の新機能の一覧については、「[最新のリリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)」を参照してください。 また、将来的な機能の内容については、「[リリース ノートのプレビュー](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default)」を参照してください。
+> Visual Studio 2017 の新機能の一覧については、「[最新のリリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)」を参照してください。 また、将来的な機能の内容については、「[リリース ノートのプレビュー](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default&contextView=vs-2017)」を参照してください。
 
 Visual Studio 2017 の最も重要な改善点と新機能について、そのいくつかの詳細を確認できます。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 の最も重要な改善点と新機能について、その�
 
 ### <a name="a-new-setup-experience"></a>新しいセットアップ エクスペリエンス
 
-[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
+[Visual Studio 2017 をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)または [Visual Studio のシステム要件を確認する](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default&contextView=vs-2017)
 
  Visual Studio により、必要な機能だけを必要なタイミングでより簡単により短い時間でインストールできます。 また、アンインストールも正常に行われます。
 
@@ -381,7 +381,7 @@ Visual Studio を向上させることができるご提案がある場合、ま
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual Studio 2017 リリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)
+* [Visual Studio 2017 リリース ノート](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017)
 * [Visual C++ の新機能](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
 * [C# の新機能](/dotnet/csharp/whats-new)
 * [Team Foundation Server の新機能](/tfs/server/whats-new?view=vsts)

@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22d3a6ea380fdbfb8f6a41fce21d0ad283808d85
-ms.sourcegitcommit: e04e52bddf81239ad346efb4797f52e38de5cb98
+ms.openlocfilehash: 6b50ea1ae20f6d8a03609dfd37a080108ca2e58e
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43054479"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384202"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 
@@ -64,9 +64,9 @@ C# コードまたは Visual Basic コードでの参照を検索することが
 
 - Visual Studio Enterprise または Visual Studio Professional
 
-- Team Foundation Server 2013 以降、Visual Studio Team Services、または Git
+- Team Foundation Server 2013 以降、Azure DevOps Services、または Git
 
-- [Skype for Business](/skypeforbusiness/)、または Lync 2010 以降。これによりコード エディターからチームと通信できます
+- コード エディターからチームと通信するための [Skype for Business](/skypeforbusiness/)
 
 Team Foundation バージョン管理 (TFVC) または Git で格納されている C# または Visual Basic コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*コードの要素レベル*のインジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。
 
@@ -80,7 +80,7 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 コードの要素レベルのインジケーターでは、コードを変更したユーザー、およびそのユーザーが変更した内容を確認できます。 コードの要素レベルのインジケーターは、C# および Visual Basic コードに対して利用できます。
 
-これは、Team Foundation Server または Visual Studio Team Services で Team Foundation バージョン管理 (TFVC) を使用するときに行います。
+これは、Team Foundation Server または Azure DevOps Services で Team Foundation バージョン管理 (TFVC) を使用するときに表示されます。
 
 ![CodeLens: TFVC で自分のコードの変更履歴を取得する](../ide/media/codelens-code-changes.png)
 
@@ -257,13 +257,13 @@ Team Foundation バージョン管理 (TFVC) または Git で格納されてい
 
 - コードが TFS に格納されている場合は、 [TFS Config コマンド](../ide/codeindex-command.md) と共に [CodeIndex コマンド](/tfs/server/ref/command-line/tfsconfig-cmd)を使用することによって、コード インデックス作成が有効になっていることを確認します。
 
-- TFS 関連のインジケーターは、作業項目がコードにリンクされていて、リンクされた作業項目を開くアクセス許可をユーザーが持っている場合にだけ表示されます。 [チーム メンバーのアクセス許可](/vsts/work/scale/multiple-teams)があることを確認してください。
+- DevOps 関連のインジケーターは、作業項目がコードにリンクされていて、リンクされた作業項目を開くアクセス許可をユーザーが持っている場合にだけ表示されます。 [チーム メンバーのアクセス許可](/azure/devops/organizations/security/view-permissions?view=vsts)があることを確認してください。
 
 - アプリケーション コードに単体テストがない場合は、単体テスト インジケーターが表示されません。 テスト状態インジケーターは、テスト プロジェクトに自動的に表示されます。 アプリケーション コードに単体テストがあることがわかっているのに、テスト インジケーターが表示されない場合は、ソリューションのビルドを試みます (**Ctrl** + **Shift** + **B**)。
 
 ### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>コミットの作業項目詳細が表示されないのはなぜですか。
 
-**A:** CodeLens が TFS で作業項目を見つけることができない可能性があります。 その作業項目があるチーム プロジェクトに接続していることと、その作業項目を表示するアクセス許可があることを確認してください。 TFS での作業項目 ID に関する誤った情報がコミットの説明に含まれている場合、作業項目の詳細が表示されないこともあります。
+**A:** CodeLens が Azure Boards または TFS で作業項目を見つけることができない可能性があります。 その作業項目があるプロジェクトに接続していることと、その作業項目を表示するアクセス許可があることを確認してください。 Azure Boards または TFS での作業項目 ID に関する誤った情報がコミットの説明に含まれている場合、作業項目の詳細が表示されないこともあります。
 
 ### <a name="q-why-dont-i-see-the-skype-indicators"></a>Q: Skype インジケーターが表示されないのはなぜですか。
 
@@ -295,7 +295,7 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
 4. **Tab** キーを押して **[設定の表示]** の一覧に移動し、**下方向**キーを押して **[CodeLens]** を選択します。
 
-### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens ヘッドアップ ディスプレイを移動できますか。
+### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens ヘッド アップ ディスプレイを移動できますか。
 
 **A:** はい、できます。![[Dock] アイコン](../ide/media/codelensdockwindow.png)を選択して、CodeLens をウィンドウとしてドッキングします。
 
@@ -315,7 +315,7 @@ CodeLens では、異なるバージョン の Lync または Skype はインス
 
      ![[CodeLens チームのインジケーターの更新] メニュー項目](../ide/media/codelensrefreshindicatorsfromcode.png)
 
-- **テスト**: [コードの単体テストを検索し](#Find-unit-tests-for-your-code)、**テスト** インジケーターを更新します。
+- **テスト**: [コードの単体テストを検索し](#associated-unit-tests)、**テスト** インジケーターを更新します。
 
 ### <a name="q-whats-local-version"></a>Q: "ローカル バージョン" とは何ですか。
 
