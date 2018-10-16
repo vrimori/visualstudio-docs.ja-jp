@@ -11,12 +11,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 681d687432cdfc6c3e5cf4d4d549b2148c2eeff3
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 67207d653d7300ecc5d0a7ae7a85ddea1bc0d7e9
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44284186"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542495"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio にサインイン
 
@@ -36,7 +36,7 @@ Visual Studio の開発環境をカスタマイズし、最適化するには、
 
 - **Visual Studio の評価期間を拡張する** - 30 日の評価期間にとらわれることなく、Visual Studio Professional または Visual Studio Enterprise を 90 日間延長して使用できます。
 
-- **Visual Studio サブスクリプションまたは Azure DevOps Services 組織に関連付けられているアカウントを使用している場合は、Visual Studio をロック解除します**。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
+- **Visual Studio サブスクリプションまたは Azure DevOps 組織に関連付けられているアカウントを使用している場合は、Visual Studio をロック解除します**。 「[Visual Studio のロックを解除する方法](../ide/how-to-unlock-visual-studio.md)」を参照してください。
 
 - IDE で、**Azure や Azure DevOps Services などのサービスに自動的に接続**され、同じアカウントの資格情報を再度要求されることはなくなります。
 

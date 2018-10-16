@@ -2,7 +2,7 @@
 title: ソリューションまたはプロジェクトなしで Visual Studio で JavaScript コードを記述する
 description: Visual Studio では、プロジェクト ファイルやソリューション ファイルに依存せずコードを作成できます
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 09/24/2018
 ms.technology: vs-nodejs
 ms.topic: conceptual
 ms.devlang: javascript
@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 7f4c98c9279fe4153fb69e371f51833be382090d
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: db0685851113a5b85c506e250f6335e7ae83dcf4
+ms.sourcegitcommit: 000cdd1e95dd02e99a7c7c1a34c2f8fba6a632af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774604"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168332"
 ---
 # <a name="develop-javascript-and-typescript-code-in-visual-studio-without-solutions-or-projects"></a>Visual Studio で JavaScript と TypeScript のコードをソリューションまたはプロジェクトなしで開発します
 
@@ -28,7 +28,7 @@ Visual Studio 2017 では、[プロジェクトまたはソリューションな
 まず、Visual Studio を開いたときに表示されるスタート ページで **[フォルダーを開く]** を選択するか、ツール バーで **[ファイル]**、**[開く]**、**[フォルダー]** の順に選択します。 ソリューション エクスプローラーには、フォルダーのすべてのファイルが表示されます。いずれかのファイルを開いて編集を開始できます。 バックグラウンドでは、Visual Studio によってファイルにインデックスが作成され、npm、ビルド、デバッグ機能が有効になります。
 
 > [!IMPORTANT]
-> npm 統合を含め、この記事で説明する機能の多くは、Visual Studio 2017 バージョン 15.8 プレビュー 3 を必要とします。
+> npm 統合を含め、この記事で説明する機能の多くは、Visual Studio 2017 バージョン 15.8 を必要とします。
 
 ## <a name="npm-integration"></a>npm 統合
 
