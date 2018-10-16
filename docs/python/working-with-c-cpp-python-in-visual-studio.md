@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 60f4081f205b160ad74dca52dec68a10d36e43fd
-ms.sourcegitcommit: 9ea4b62163ad6be556e088da1e2a355f31366f39
+ms.openlocfilehash: bbc5d194552952ccce4a30a7c15b917e7a7a32ae
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995977"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549470"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -100,6 +100,8 @@ Python インタープリターの機能を拡張するため、およびオペ�
 ## <a name="create-the-core-c-projects"></a>C++ のコア プロジェクトを作成する
 
 "superfastcode"と"superfastcode2"という 2 つの同じ C++ プロジェクトを作成するには、このセクションの手順に従います。 後で、各プロジェクトで別の手段を使用して C++ コードを Python に公開します。
+
+1. `PYTHONHOME` 環境変数が使用する Python インタープリターに設定されていることを確認してください。 Visual Studio の C++ プロジェクトは、この変数に戻づいて、Python 拡張機能の作成時に使用される *python.h* などのファイルを見つけます。
 
 1. **ソリューション エクスプローラー**で、ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 Visual Studio ソリューションには、Python プロジェクトと C++ プロジェクトの両方を含めることができます (これは Visual Studio for Python 使用の利点の 1 つです)。
 
@@ -263,9 +265,9 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
 
 C++ モジュールは、次の理由でコンパイルに失敗する場合があります。
 
-- *Python.h* が見つからない (**E1696: ソース ファイル "Python.h" を開けません** や **C1083: インクルード ファイルを開けません: "Python.h": このようなファイルまたはディレクトリはありません**): プロジェクトのプロパティの **[C/C++]** > **[全般]** > **[追加のインクルード ディレクトリ]** のパスが Python インストールの *include* フォルダーに設定されていることを確認してください。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-project)」の手順 6 をご覧ください。
+- *Python.h* が見つからない (**E1696: ソース ファイル "Python.h" を開けません** や **C1083: インクルード ファイルを開けません: "Python.h": このようなファイルまたはディレクトリはありません**): プロジェクトのプロパティの **[C/C++]** > **[全般]** > **[追加のインクルード ディレクトリ]** のパスが Python インストールの *include* フォルダーに設定されていることを確認してください。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
 
-- Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー]** > **[全般]** > **[追加のライブラリ ディレクトリ]** のパスが、Python インストールの *libs* フォルダーを指していることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-project)」の手順 6 をご覧ください。
+- Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー]** > **[全般]** > **[追加のライブラリ ディレクトリ]** のパスが、Python インストールの *libs* フォルダーを指していることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
 
 - ターゲット アーキテクチャに関連するリンカー エラー: C++ プロジェクトのターゲット アーキテクチャを、Python インストールのアーキテクチャと一致するように変更します。 たとえば、C++ プロジェクトで x64 をターゲットとするが、Python インストールが x86 の場合は、C++ プロジェクトを x86 をターゲットとするように変更します。
 
@@ -406,7 +408,7 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 | [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | ほぼすべての C++ コンパイラで動作。 | ライブラリ スイートが大きくて複雑。使用していないコンパイラの回避策が多く含まれる。 |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | コンパイルがなく、広く利用可能。 | C 構造体のアクセスや変更が煩雑で、エラーを起こしやすい。 |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 多くの言語のバインドを一度に生成。 | Python が唯一のターゲットである場合、過剰なオーバーヘッド。 |
-| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](http://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分あり。 |
+| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](https://pypy.org/) | 容易な統合、PyPy との互換性。 | 新しく、未完成な部分あり。 |
 
 ## <a name="see-also"></a>関連項目
 

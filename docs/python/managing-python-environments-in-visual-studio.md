@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1efa65542fa22f1cb8cfb8c6988b18d86ea66c9b
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 2c7706e635cc159b7ae85274d46c2be762926ccc
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320827"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551264"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio で Python 環境を作成および管理する方法
 
@@ -78,7 +78,7 @@ Visual Studio 2017 バージョン 15.7 以降では、次のセクションに�
 ## <a name="the-python-environments-window"></a>[Python 環境] ウィンドウ
 
 > [!Note]
-> このセクションで示されているスクリーンショットは、Visual Studio 15.8 を表しています。 ご使用の Visual Studio のバージョンによっては、UI が若干異なる場合があります。
+> このセクションで示されているスクリーンショットは、Visual Studio 15.8 を表しています。 ご使用の Visual Studio のバージョンによっては、UI が異なる場合があります。
 
 Visual Studio が認識した環境が **[Python 環境]** ウィンドウに表示されます。 ウィンドウを開くには、次のいずれかの方法を使用します。
 
