@@ -9,18 +9,18 @@ description: 管理者が期限切れの Visual Studio サブスクリプショ�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ed407abbf4da1914f8a7faa03bbec5ae74b87049
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: a5f968eef0418a89d4db78f8d79258bfe6004385
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39639397"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815755"
 ---
 # <a name="handling-expired-subscriptions"></a>有効期限が切れたサブスクリプションに対応する
 
 ユーザーのサブスクリプションの有効期限が切れると、ポータルでサブスクライバーの一覧のユーザー名の横の赤い棒でそのことが示されます。 これらのサブスクライバーが引き続き Visual Studio サブスクリプションの特典を使用するには、ライセンスを更新する必要があります。 
 > [!div class="mx-imgBorder"]
-> ![有効期限が切れたサブスクリプションの一覧](_img\expired-subscriptions\expired-list.png)
+> ![有効期限が切れたサブスクリプションの一覧](_img/expired-subscriptions/expired-list.png)
 
 **サブスクリプションを更新するには**
 1.  ボリューム ライセンスの販売店または Microsoft 販売者に問い合わせてください。 

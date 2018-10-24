@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 84cf5649eac1d3183eb0c50f4a7010f202363a78
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: f29e43c66844f915d9d79de3819166905b083df2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380806"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813987"
 ---
 # <a name="test-controller-and-test-agent-requirements-for-load-testing"></a>ロード テストのためのテスト コントローラーおよびテスト エージェントの要件
 
@@ -31,7 +31,7 @@ ms.locfileid: "39380806"
 テスト コントローラーおよびテスト エージェントを配置する場合の推奨されるハードウェア要件を次の表に示します。
 
 |**構成**|**コンポーネント**|**CPU**|**HD**|**メモリ**|
-|-----------------------|-------------------|-------------|------------|----------------|
+|-|-------------------|-|------------|-|
 |仮想ユーザー 500 人 未満|テスト エージェント|2.6 GHz|10 GB|2 GB|
 |仮想ユーザー 1000 人 未満|テスト エージェント|デュアル プロセッサ 2.6 GHz|10 GB|2 GB|
 |仮想ユーザー 1000 × N 人|テスト エージェント|N 個のエージェントをそれぞれデュアル プロセッサ 2.6 Ghz でスケール アウト|10GB|2GB|

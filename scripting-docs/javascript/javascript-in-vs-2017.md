@@ -18,12 +18,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: wilkelly
 manager: ghogen
-ms.openlocfilehash: 2f58a6b22aa2e7274c6fcf8d702d264a9a592c33
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 75c234b2a3b16d3bcbe05da9f0818c73be0412db
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280039"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880794"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017 の JavaScript
 
@@ -64,7 +64,7 @@ tsconfig ファイルに必要な設定について、以下に説明します�
  出力場所と、`node_modules` や `temp` などのプロジェクト以外のフォルダーをこの設定に追加する必要があります。
  - `enableAutoDiscovery`: この設定は、前述のとおり、定義ファイルの自動検出とダウンロードを可能にします。
  - `compileOnSave`: この設定で、Visual Studio にソース ファイルが保存されるたびに再コンパイルする必要があるかどうかをコンパイラに指示します。
- - `typeAcquisition`: この一連の設定では、自動型取得の動作を制御します ([このセクション](https://docs.microsoft.com/en-us/visualstudio/ide/javascript-intellisense#Auto)で詳しく説明します)。
+ - `typeAcquisition`: この一連の設定では、自動型取得の動作を制御します ([このセクション](/visualstudio/ide/javascript-intellisense#Auto)で詳しく説明します)。
 
 JavaScript ファイルを CommonJS モジュールに変換し、`./out` フォルダーに配置する場合は、次の `tsconfig.json` ファイルを使用できます。
 

@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5161f7b4878c6ef381dc26aa4689c4fe7b7cb961
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 2e9f851734a4066e1f6ab7956d124478e0cde76c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152088"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815482"
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>標準ツールセット構成とカスタム ツールセット構成
 MSBuild ツールセットには、アプリケーション プロジェクトのビルドに使用できるタスク、ターゲット、およびツールへの参照が含まれています。 MSBuild には標準ツールセットが用意されていますが、カスタム ツールセットを作成することもできます。 ツールセットを指定する方法については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」を参照してください。  
@@ -27,7 +27,7 @@ MSBuild ツールセットには、アプリケーション プロジェクト�
  MSBuild 15.0 には以下の標準ツールセットが含まれています。  
   
 |ToolsVersion|ツールセットのパス (MSBuildToolsPath ビルド プロパティまたは MSBuildBinPath ビルド プロパティで指定)|  
-|------------------|--------------------------------------------------------------------------------------------|  
+|------------------| - |  
 |2.0|*\<Windows インストール パス>\Microsoft.Net\Framework\v2.0.50727\\*|  
 |3.5|*\<Windows インストール パス>\Microsoft.NET\Framework\v3.5\\*|  
 |4.0|*\<Windows インストール パス>\Microsoft.NET\Framework\v4.0.30319\\*|  
@@ -39,9 +39,9 @@ MSBuild ツールセットには、アプリケーション プロジェクト�
   
 |レジストリ キー|キー名|文字列キー値|  
 |------------------|--------------|----------------------|  
-|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\**  |**MSBuildToolsPath**|**.NET Framework 2.0 インストール パス**|  
-|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\**  |**MSBuildToolsPath**|**.NET Framework 3.5 インストール パス**|  
-|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\**  |**MSBuildToolsPath**|**.NET Framework 4 インストール パス**|  
+|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\2.0\\** |**MSBuildToolsPath**|**.NET Framework 2.0 インストール パス**|  
+|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\3.5\\** |**MSBuildToolsPath**|**.NET Framework 3.5 インストール パス**|  
+|**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ MSBuild\ToolsVersions\4.0\\** |**MSBuildToolsPath**|**.NET Framework 4 インストール パス**|  
   
 ### <a name="sub-toolsets"></a>サブツールセット  
  前の表のレジストリ キーにサブキーがある場合、MSBuild はそのサブキーを使って、親ツールセットのパスをオーバーライドするサブツールセットを決定します。 たとえば、次のようなサブキーがあります。  
@@ -91,11 +91,11 @@ MSBuild ツールセットには、アプリケーション プロジェクト�
   
  プロジェクトで使用される `ToolsVersion` 値に固有のプロパティを次に示します。  
   
--   **$(MSBuildBinPath)** は、`ToolsVersion` が定義されているレジストリまたは構成ファイルで指定された `ToolsPath` 値に設定されます。 レジストリまたは構成ファイルの `$(MSBuildToolsPath)` 設定は、コア タスクとコア ターゲットの場所を指定します。 プロジェクト ファイルでは、この設定が $(MSBuildBinPath) プロパティにマップされ、さらに $(MSBuildToolsPath) プロパティにもマップされます。  
+- **$(MSBuildBinPath)** は、`ToolsVersion` が定義されているレジストリまたは構成ファイルで指定された `ToolsPath` 値に設定されます。 レジストリまたは構成ファイルの `$(MSBuildToolsPath)` 設定は、コア タスクとコア ターゲットの場所を指定します。 プロジェクト ファイルでは、この設定が $(MSBuildBinPath) プロパティにマップされ、さらに $(MSBuildToolsPath) プロパティにもマップされます。  
   
--   `$(MSBuildToolsPath)`: このプロパティは予約済みのプロパティであり、構成ファイルで指定されている MSBuildToolsPath プロパティによって提供されます  (このプロパティは `$(MSBuildBinPath)` に代わるものです。 ただし、`$(MSBuildBinPath)` も互換性のために残されています)。カスタム ツールセットでは、`$(MSBuildToolsPath)` または `$(MSBuildBinPath)` のいずれか一方を定義してください。両方定義する場合は、これらのプロパティは同じ値になる必要があります。  
+- `$(MSBuildToolsPath)`: このプロパティは予約済みのプロパティであり、構成ファイルで指定されている MSBuildToolsPath プロパティによって提供されます  (このプロパティは `$(MSBuildBinPath)` に代わるものです。 ただし、`$(MSBuildBinPath)` も互換性のために残されています)。カスタム ツールセットでは、`$(MSBuildToolsPath)` または `$(MSBuildBinPath)` のいずれか一方を定義してください。両方定義する場合は、これらのプロパティは同じ値になる必要があります。  
   
- MSBuildToolsPath プロパティを追加する場合と同じ構文を使用して、ToolsVersion 固有のカスタム プロパティを構成ファイルに追加することもできます。 このようなカスタム プロパティをプロジェクト ファイルで利用できるようにするには、構成ファイルに指定された値の名前と同じ名前を使用します。 構成ファイルではツールセットを定義できますが、サブツールセットは定義できません。  
+  MSBuildToolsPath プロパティを追加する場合と同じ構文を使用して、ToolsVersion 固有のカスタム プロパティを構成ファイルに追加することもできます。 このようなカスタム プロパティをプロジェクト ファイルで利用できるようにするには、構成ファイルに指定された値の名前と同じ名前を使用します。 構成ファイルではツールセットを定義できますが、サブツールセットは定義できません。  
   
 ## <a name="see-also"></a>関連項目  
  [ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)

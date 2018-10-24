@@ -27,16 +27,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ddb993e83cee79afca89d3cd06d55ca9e6fbc19
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: cd2a749bc96271e4ed16872f1d5c4a485c55900e
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179919"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863957"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework ベースの国際対応アプリケーションの概要
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での国際対応アプリケーションの作成は 2 つの部分で構成されています。1 つはグローバリゼーションという、異なるカルチャに対応できるアプリケーションを設計するプロセスで、もう 1 つはローカリゼーションという、特定のカルチャに合わせてリソースを翻訳するプロセスです。 各国のユーザーに向けたアプリケーションの設計に関する一般的な情報については、「[推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)」を参照してください。
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] での国際対応アプリケーションの作成は 2 つの部分で構成されています。1 つはグローバリゼーションという、異なるカルチャに対応できるアプリケーションを設計するプロセスで、もう 1 つはローカリゼーションという、特定のカルチャに合わせてリソースを翻訳するプロセスです。 各国のユーザーに向けたアプリケーションの設計に関する一般的な情報については、「[推奨される国際対応アプリケーション開発手順](/dotnet/standard/globalization-localization/best-practices-for-developing-world-ready-apps)」を参照してください。
 
  [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] のローカリゼーション モデルは、アプリケーション コードとフォールバック リソース (アプリケーションが最初に開発されたときに使用された言語の文字列、イメージ、およびその他のオブジェクト) の両方を含むメイン アセンブリで構成されています。 ローカライズされた各アプリケーションには、サテライト アセンブリ (ローカライズされたリソースのみを含むアセンブリ) があります。 メイン アセンブリには常にフォールバック リソースが含まれるため、ローカライズされたサテライト アセンブリでリソースが見つからない場合、<xref:System.Resources.ResourceManager> はそのリソースを階層的に読み込もうとし、最終的にはメイン アセンブリのリソースに戻ります。 リソースのフォールバック システムの詳細については、「[ローカリゼーション用リソースの階層編成](../ide/hierarchical-organization-of-resources-for-localization.md)」を参照してください。
 

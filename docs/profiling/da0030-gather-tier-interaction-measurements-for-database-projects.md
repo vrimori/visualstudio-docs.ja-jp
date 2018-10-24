@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d53bd0975edfcaf02b0383834eb53db7716c982
-ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
+ms.openlocfilehash: 0d0fb38348a901582182bdfaec2d7d775ec195f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34766195"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814013"
 ---
 # <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: データベース プロジェクトの階層相互作用の測定値を収集します
+
 |||  
 |-|-|  
 |規則 ID|DA0030|  
@@ -29,18 +30,18 @@ ms.locfileid: "34766195"
 |プロファイル方法|サンプリング|  
 |メッセージ|多層アプリケーションの相互作用の測定値を収集すると、データベースの使用パターンと重要なデータのアクセス遅延を知ることができます。 階層の相互作用のプロファイル オプションを有効にして、再度アプリケーションのプロファイリングを試みてください。|  
 |規則の種類|情報|  
-  
+
 ## <a name="cause"></a>原因  
  <xref:System.Data> メソッドの呼び出しがプロファイル データの大きな割合を占めているため、プロファイリングの実行中に階層の相互作用データが収集されませんでした。 プロファイリングを再度実行し、階層の相互作用データを追加することを検討してください。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  この規則は、System.Data 名前空間 (<xref:System.Data.Linq><xref:System.Data.Linq> を含む) に常駐する関数内で、重要なアクティビティが発生するたびに適用されます。  
-  
+
  多階層アプリケーションは、アプリケーションのプレゼンテーションとデータ レイヤー用に複数層のサービスを使用します。 多くの場合、データ レイヤーは、Microsoft SQL Server などのデータベース管理システムを実行する独立したプロセスです。 データ レイヤーは、個別のコンピューター上でアプリケーションの途中から実行することもできます。 サンプリング プロファイルの場合、アウトプロセスまたはリモートで実行されるサービスや関数の内部まで詳しく確認することはできません。  
-  
+
  プロファイリング ツールで ADO.NET サービスへの非同期呼び出しを使用すると、Microsoft SQL Server のデータ レイヤーとの対話を行う多階層アプリケーションのタイミング情報を収集できます。 その場合、[階層の相互作用のプロファイルを有効にする] オプションを有効にする必要があります。 このオプションは、既定ではオフになっています。  
-  
+
 ## <a name="how-to-fix-violations"></a>違反の修正方法  
  この規則は情報提供用であるため、是正措置は必要ない場合があります。  
-  
+
  Visual Studio IDE から階層の相互作用データをプロファイル データに追加する方法については、「[階層相互作用データを収集する](../profiling/collecting-tier-interaction-data.md)」を参照してください。 コマンド ラインから階層の相互作用データを追加する方法については、「[階層相互作用データを収集する](../profiling/adding-tier-interaction-data-from-the-command-line.md)」を参照してください。

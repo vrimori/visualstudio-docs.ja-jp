@@ -13,12 +13,12 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b49f83813bc5acd64de74a27a025bc78503902c5
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: cec2164cf248f9301a2e75f0babe4d6f71726ff2
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747353"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459674"
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio での C++ の概要
 
@@ -151,7 +151,7 @@ HelloApp をデバッグして、コンソール ウィンドウに "Hello" と�
 
 このビルドが完了すると、コマンド プロンプト ウィンドウでコピーおよび実行できるアプリの作成は完了です。 大したことではありませんが、これはより複雑な処理へ通じる入口となります。
 
-このクイック スタートは完了しました。 その他の例については、[Visual Studio サンプル](../ide/visual-studio-samples.md)に関するページを参照してください。
+このクイック スタートは完了しました。
 
 ## <a name="see-also"></a>関連項目
 
