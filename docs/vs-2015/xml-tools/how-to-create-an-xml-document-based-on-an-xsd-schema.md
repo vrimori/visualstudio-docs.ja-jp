@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 54d7ead9f759e990b741ac9c5219af693d10a412
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: bbecacc0729c936489c05d3bb59260341a08d314
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49287327"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884226"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>方法: XSD スキーマに基づいて XML ドキュメントを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,23 +29,23 @@ ms.locfileid: "49287327"
   
  このオプションは、次のようなシナリオで使用できます。  
   
--   スキーマのさまざまな構造の使用法を理解する。  
+- スキーマのさまざまな構造の使用法を理解する。  
   
--   スキーマが意図したとおりに機能しているかどうかを確認する。  
+- スキーマが意図したとおりに機能しているかどうかを確認する。  
   
- **サンプル XML の生成**機能は、グローバル要素でのみ使用し、有効な XML スキーマ セットが必要です。  
+  **サンプル XML の生成**機能は、グローバル要素でのみ使用し、有効な XML スキーマ セットが必要です。  
   
- この機能では、通常は有効な XML ドキュメントが生成されます。 ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
+  この機能では、通常は有効な XML ドキュメントが生成されます。 ただし、スキーマに次のものが 1 つ以上含まれていると、有効なサンプルが生成されない可能性があります。  
   
--   `xs:key`、`xs:keyref`、および `xs:unique` の ID 制約  
+- `xs:key`、`xs:keyref`、および `xs:unique` の ID 制約  
   
--   `xs:pattern` ファセット  
+- `xs:pattern` ファセット  
   
--   `xs:QName` 型の列挙  
+- `xs:QName` 型の列挙  
   
--   `xs:ENTITY` 型、`xs:ENTITIES` 型、および `xs:NOTATION` 型  
+- `xs:ENTITY` 型、`xs:ENTITIES` 型、および `xs:NOTATION` 型  
   
- また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
+  また、`xs:base64Binary` の内容は、その型のスキーマで列挙が発生する場合にのみ生成されることに注意してください。  
   
 ### <a name="to-generate-an-xml-instance-document-based-on-the-xsd-file"></a>XSD ファイルに基づいて XML インスタンス ドキュメントを生成するには  
   

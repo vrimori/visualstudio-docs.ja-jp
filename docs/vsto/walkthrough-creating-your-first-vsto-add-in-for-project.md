@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bc935c50a00efea7d3124eb7d1fb3246248f0b91
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a1c6e96815c69ad6a05b3c8bc55e22f13c212e24
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672329"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884863"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>チュートリアル: が初めて VSTO アドイン プロジェクトの作成します。
   このチュートリアルでは、Microsoft Office Project の VSTO アドインを作成する方法を示します。 この種のソリューションに作成した機能は、どのプロジェクトが開いているかにかかわらず、アプリケーション自体に対して使用できます。 詳細については、次を参照してください。 [Office ソリューション開発の概要&#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)します。  
@@ -32,15 +32,15 @@ ms.locfileid: "35672329"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   Project VSTO アドイン プロジェクトを作成する。  
+- Project VSTO アドイン プロジェクトを作成する。  
   
--   Project のオブジェクト モデルを使用して、新しいプロジェクトにタスクを追加するコードを記述する。  
+- Project のオブジェクト モデルを使用して、新しいプロジェクトにタスクを追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
+- 完成したプロジェクトをクリーンアップして、開発用コンピューターでこの VSTO アドインが自動的に実行されないようにする。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
@@ -78,18 +78,18 @@ ms.locfileid: "35672329"
   
 ### <a name="to-add-a-task-to-a-new-project"></a>新しいプロジェクトにタスクを追加するには  
   
-1.  ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードのイベント ハンドラーを定義する、`NewProject`のイベント、`Microsoft.Office.Interop.MSProject.Application`クラス。  
+1. ThisAddIn コード ファイルで、次のコードを `ThisAddIn` クラスに追加します。 このコードでは、`NewProject` クラスの `Microsoft.Office.Interop.MSProject.Application` イベントのイベント ハンドラーを定義します。  
   
-     ユーザーが新しいプロジェクトを作成すると、このイベント ハンドラーによってタスクがプロジェクトに追加されます。  
+    ユーザーが新しいプロジェクトを作成すると、このイベント ハンドラーによってタスクがプロジェクトに追加されます。  
   
-     [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]  
+    [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
+    [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]  
   
- プロジェクトを変更するには、このコード例は、次のオブジェクトを使用します。  
+   プロジェクトを変更するには、このコード例は、次のオブジェクトを使用します。  
   
--   `Application` クラスの `ThisAddIn` フィールド。 `Application`フィールドを返します、`Microsoft.Office.Interop.MSProject.Application`プロジェクトの現在のインスタンスを表すオブジェクト。  
+-   `Application` クラスの `ThisAddIn` フィールド。 `Application` フィールドは、Project の現在のインスタンスを表す `Microsoft.Office.Interop.MSProject.Application` オブジェクトを返します。  
   
--   `pj` NewProject イベントのイベント ハンドラーのパラメーター。 `pj`パラメーターは、`Microsoft.Office.Interop.MSProject.Project`オブジェクトで、プロジェクトを表します。 詳細については、次を参照してください。[ソリューション プロジェクト](../vsto/project-solutions.md)します。  
+-   `pj` NewProject イベントのイベント ハンドラーのパラメーター。 `pj` パラメーターは、プロジェクトを表す `Microsoft.Office.Interop.MSProject.Project` オブジェクトです。 詳細については、次を参照してください。[ソリューション プロジェクト](../vsto/project-solutions.md)します。  
   
 1.  C# を使用する場合は、次のコードを `ThisAddIn_Startup` イベント ハンドラーに追加します。 このコードは接続、 `Application_Newproject` NewProject イベントにイベント ハンドラー。  
   

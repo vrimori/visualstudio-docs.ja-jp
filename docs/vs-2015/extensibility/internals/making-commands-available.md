@@ -18,12 +18,12 @@ ms.assetid: 3ffc4312-c6db-4759-a946-a4bb85f4a17a
 caps.latest.revision: 36
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 96f689d6a0b93ef91c181e536624bb09856c2f35
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: af377c3f0ff5e49e43d00395d8f08bf4498e6636
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49257908"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883971"
 ---
 # <a name="making-commands-available"></a>コマンドを使用可能にする
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -69,29 +69,29 @@ Visual Studio には、複数の Vspackage を追加するときにユーザー 
   
  5 番目のコンテキストの主要な領域は、IDE の UI 状態です。 UI コンテキストがアクティブなコマンドのコンテキストによって識別される`GUID`s は、次のようにします。  
   
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionBuilding_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Debugging_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Dragging_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.Dragging_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.FullScreenMode_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.FullScreenMode_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.DesignMode_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.DesignMode_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.NoSolution_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.NoSolution_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.EmptySolution_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.EmptySolution_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>
 
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.CodeWindow_guid>
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.CodeWindow_guid>
   
- これらの Guid は、アクティブまたは IDE の現在の状態に応じて、非アクティブとしてマークされます。 同時にアクティブにできる複数の UI コンテキストです。  
+  これらの Guid は、アクティブまたは IDE の現在の状態に応じて、非アクティブとしてマークされます。 同時にアクティブにできる複数の UI コンテキストです。  
   
 ### <a name="hiding-and-displaying-commands-based-on-context"></a>コンテキストに基づいたコマンドの表示と非表示  
  表示したり、パッケージ自体を読み込むことがなく、IDE でパッケージのコマンドを非表示にすることができます。 これを行うを使用して、パッケージの .vsct ファイルで、コマンドを定義します、 `DefaultDisabled`、 `DefaultInvisible`、および`DynamicVisibility`フラグと追加する 1 つ以上のコマンド[VisibilityItem](../../extensibility/visibilityitem-element.md)要素を、 [ 。VisibilityConstraints](../../extensibility/visibilityconstraints-element.md)セクション。 ときに指定されたコマンド コンテキスト`GUID`がアクティブで、コマンドが表示されます、パッケージを読み込むことがなく。  
@@ -113,13 +113,13 @@ Visual Studio には、複数の Vspackage を追加するときにユーザー 
   
  コマンドが有効にし、ソリューションが存在するときに表示するのに設定されています。つまり、次のコマンド コンテキストの Guid のいずれかがアクティブなときに。  
   
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.EmptySolution_guid>  
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.EmptySolution_guid>  
   
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>  
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasMultipleProjects_guid>  
   
--   <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>  
+- <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionHasSingleProject_guid>  
   
- 例では、すべてのコマンド フラグが個別に注意してください[コマンド フラグ](../../extensibility/command-flag-element.md)要素。  
+  例では、すべてのコマンド フラグが個別に注意してください[コマンド フラグ](../../extensibility/command-flag-element.md)要素。  
   
 ```  
 <Button guid="guidDynamicVisibilityCmdSet" id="cmdidMyCommand"   

@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveDynamicType |Microsoft ドキュメント
+title: IDebugBinder::ResolveDynamicType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ac7d69bf1a3308e6eebfb11356506b8ea7fc062
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6b49e3d42e8fbcc39d259c25081405c21ca1bc15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100482"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892806"
 ---
 # <a name="idebugbinderresolvedynamictype"></a>IDebugBinder::ResolveDynamicType
 このメソッドは、変数の正確な型を返します。  
@@ -43,13 +43,13 @@ int ResolveDynamicType(
   
 #### <a name="parameters"></a>パラメーター  
  `pDynamic`  
- [in][IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)変数の型を表すです。  
+ [in][IDebugDynamicField](../../../extensibility/debugger/reference/idebugdynamicfield.md)変数の型を表します。  
   
  `ppResolved`  
  [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)変数の型に関する特定の情報を提供します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

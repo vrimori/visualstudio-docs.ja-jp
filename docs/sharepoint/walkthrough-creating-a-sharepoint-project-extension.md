@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b8620a51480868302fc840bffea5bbdb427c48f5
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 44bafccdb3c99032678a808ba3f82f9f14558b3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42635617"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893430"
 ---
 # <a name="walkthrough-create-a-sharepoint-project-extension"></a>チュートリアル: SharePoint プロジェクト拡張機能を作成します。
   このチュートリアルでは、SharePoint プロジェクトの拡張機能を作成する方法について説明します。 プロジェクトの拡張機能を使用すると、プロジェクトを追加、削除、または名前を変更する場合など、プロジェクト レベルのイベントに応答します。 カスタム プロパティを追加またはプロパティ値を変更するときの応答もできます。 プロジェクト項目の拡張機能とは異なりプロジェクト拡張機能は、特定の SharePoint プロジェクトの種類に関連付けすることはできません。 任意の種類の SharePoint プロジェクトを開いたときに、拡張機能を読み込むプロジェクトの拡張機能を作成するときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
@@ -53,11 +53,11 @@ ms.locfileid: "42635617"
 ## <a name="create-the-projects"></a>プロジェクトを作成します。
  このチュートリアルを完了するには、2 つのプロジェクトを作成する必要があります。  
   
--   プロジェクトの拡張機能を配置するための VSIX パッケージを作成する VSIX プロジェクト。  
+- プロジェクトの拡張機能を配置するための VSIX パッケージを作成する VSIX プロジェクト。  
   
--   プロジェクトの拡張機能を実装するクラス ライブラリ プロジェクト。  
+- プロジェクトの拡張機能を実装するクラス ライブラリ プロジェクト。  
   
- この 2 つのプロジェクトを作成することから始めます。  
+  この 2 つのプロジェクトを作成することから始めます。  
   
 #### <a name="to-create-the-vsix-project"></a>VSIX プロジェクトを作成するには  
   
@@ -175,7 +175,7 @@ ms.locfileid: "42635617"
   
 2.  いずれかを選択して、プロジェクトのデバッグ ビルドを開始、 **F5**キーか、メニュー バーで**デバッグ** > **デバッグの開始**します。  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom プロジェクト Property\1.0 に拡張をインストールしの実験用インスタンスを起動する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom プロジェクトの Property\1.0 に拡張機能をインストールしの実験用インスタンスを起動する[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]です。  
   
 3.  実験用インスタンスで[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]ファーム ソリューションでは、SharePoint プロジェクトを作成し、ウィザードの他の値の既定値を使用します。  
   

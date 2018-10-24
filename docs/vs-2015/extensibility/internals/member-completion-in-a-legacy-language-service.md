@@ -17,12 +17,12 @@ ms.assetid: 500f718d-9028-49a4-8615-ba95cf47fc52
 caps.latest.revision: 22
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4e375cc8d314163b277cc20685ae19f134236b0a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 321cbd6482be088bd57c94224c41d4626a86a0f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49240813"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892689"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでのメンバー補完
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -39,11 +39,11 @@ IntelliSense メンバー入力候補は、クラス、構造体、列挙型、�
 ## <a name="how-it-works"></a>しくみ  
  MPF クラスを使用してメンバーの一覧が表示される 2 つの方法は、次のように。  
   
--   識別子の上またはメンバー入力候補の文字の後にキャレットを配置し、選択**メンバーの一覧**から、 **IntelliSense**メニュー。  
+- 識別子の上またはメンバー入力候補の文字の後にキャレットを配置し、選択**メンバーの一覧**から、 **IntelliSense**メニュー。  
   
--   <xref:Microsoft.VisualStudio.Package.IScanner>スキャナーは、メンバー入力候補の文字を検出し、トークンのトリガーを設定<xref:Microsoft.VisualStudio.Package.TokenTriggers>その文字。  
+- <xref:Microsoft.VisualStudio.Package.IScanner>スキャナーは、メンバー入力候補の文字を検出し、トークンのトリガーを設定<xref:Microsoft.VisualStudio.Package.TokenTriggers>その文字。  
   
- メンバー入力候補の文字は、クラス、構造体、列挙体のメンバーが次のことを示します。 たとえば、c# または Visual Basic でメンバー入力候補の文字は、 `.`、C++ では、文字ではいずれかを`.`または`->`します。 メンバー選択文字がスキャンされたときに、トリガーの値が設定されます。  
+  メンバー入力候補の文字は、クラス、構造体、列挙体のメンバーが次のことを示します。 たとえば、c# または Visual Basic でメンバー入力候補の文字は、 `.`、C++ では、文字ではいずれかを`.`または`->`します。 メンバー選択文字がスキャンされたときに、トリガーの値が設定されます。  
   
 ### <a name="the-intellisense-member-list-command"></a>IntelliSense のメンバーの一覧表示コマンド  
  <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>コマンドへの呼び出しを開始する、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドを<xref:Microsoft.VisualStudio.Package.Source>クラスと<xref:Microsoft.VisualStudio.Package.Source.Completion%2A>メソッドを呼び出す、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>メソッド パーサーの解析の理由で<xref:Microsoft.VisualStudio.Package.ParseReason>。  

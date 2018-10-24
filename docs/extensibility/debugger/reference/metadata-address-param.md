@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_PARAM |Microsoft ドキュメント
+title: METADATA_ADDRESS_PARAM |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2cc91ea41003f153a1b3910510f41bc032bf221
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e30e1d19a52042ad6edeabb6df4ee8e3aaf17b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125988"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893878"
 ---
 # <a name="metadataaddressparam"></a>METADATA_ADDRESS_PARAM
 この構造体は、メソッドまたは関数のパラメーターを表します。  
@@ -45,18 +45,18 @@ public struct METADATA_ADDRESS_PARAM {
   
 ## <a name="terms"></a>用語  
  tokMethod  
- メソッドの ID、パラメーターは、一部です。  
+ メソッドの ID パラメーターは一部です。  
   
  tokParam  
- パラメーターの ID です。  
+ パラメーターの ID。  
   
  dwIndex  
  パラメーターの一覧で、パラメーターのインデックス。  
   
-## <a name="remarks"></a>コメント  
- この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_PARAM`(から値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体)。  
+## <a name="remarks"></a>Remarks  
+ この構造体の共用体の一部は、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_PARAM`(からの値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

@@ -19,25 +19,25 @@ caps.latest.revision: 18
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e9b2cd003011d610b56ac97ed95e3008b5cabc6a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 583296b47c2d230a48c21952613954b17ebfe622
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49267424"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892338"
 ---
 # <a name="memory-usage-without-debugging"></a>デバッグなしのメモリ使用量
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 デバッグなしの**メモリ使用量**ツールを使用して、次のような操作を行えます  
   
--   シナリオの開発中に Visual Studio 内でのアプリのメモリ使用量が適切かどうかを監視します。  
+- シナリオの開発中に Visual Studio 内でのアプリのメモリ使用量が適切かどうかを監視します。  
   
--   アプリのメモリの状態の詳しいスナップショットを作ります。  
+- アプリのメモリの状態の詳しいスナップショットを作ります。  
   
--   スナップショットを比べて、メモリの問題の根本原因を見つけます。  
+- スナップショットを比べて、メモリの問題の根本原因を見つけます。  
   
- このトピックでは、メモリ使用量ツールを使って Windows Universal XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する Windows ユニバーサル アプリでのメモリ使用量を分析する場合、「[メモリ使用量の分析 (JavaScript)](http://msdn.microsoft.com/library/windows/apps/jj819176.aspx)」を参照してください。  
+  このトピックでは、メモリ使用量ツールを使って Windows Universal XAML アプリを分析する方法について説明します。 JavaScript と HTML を使用する Windows ユニバーサル アプリでのメモリ使用量を分析する場合、「[メモリ使用量の分析 (JavaScript)](http://msdn.microsoft.com/library/windows/apps/jj819176.aspx)」を参照してください。  
   
 ##  <a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> メモリ使用量診断セッションの開始  
   
@@ -76,13 +76,13 @@ ms.locfileid: "49267424"
 ###  <a name="BKMK_Memory_Usage_snapshot_views"></a> メモリ使用量のスナップショット ビュー  
  Visual Studio の新しいウィンドウで詳しいレポートを開くには、スナップショット ビューを使います。 スナップショット ビューには次の 2 種類があります。  
   
--   [スナップショットの詳細レポート](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_details_reports)には、1 つのスナップショットに含まれる型とインスタンスが表示されます。  
+- [スナップショットの詳細レポート](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_details_reports)には、1 つのスナップショットに含まれる型とインスタンスが表示されます。  
   
--   [スナップショットの相違 (diff) レポート](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_difference__diff__reports)では、2 つのスナップショットに含まれる型とインスタンスが比較されます。  
+- [スナップショットの相違 (diff) レポート](../profiling/memory-usage-without-debugging2.md#BKMK_Snapshot_difference__diff__reports)では、2 つのスナップショットに含まれる型とインスタンスが比較されます。  
   
- ![スナップショット表示のリンク](../profiling/media/memuse-snapshotview-numbered.png "MEMUSE__SnapshotView_Numbered")  
+  ![スナップショット表示のリンク](../profiling/media/memuse-snapshotview-numbered.png "MEMUSE__SnapshotView_Numbered")  
   
- スナップショット ビューの画像に番号を付けて示した項目は、メモリ使用量レポートのビューを開くリンクです。  
+  スナップショット ビューの画像に番号を付けて示した項目は、メモリ使用量レポートのビューを開くリンクです。  
   
 |||  
 |-|-|  

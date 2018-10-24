@@ -20,30 +20,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 73f771d71d6475ac9835ec21b36b44ce3cd131ad
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 5d4b5ee29ed19f121c6da357fa20242f6762e51c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179945"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892949"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly タスク
 <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> タスクは、プロジェクト内の少なくとも 1 つの [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] ページが、そのプロジェクトでローカルに宣言されている型を参照している場合に、アセンブリを生成します。 生成されたアセンブリは、ビルド処理が完了した後、またはビルド処理が失敗した場合に削除されます。  
   
 ## <a name="task-parameters"></a>タスク パラメーター  
   
-|パラメーター|説明|  
-|---------------|-----------------|  
-|`AssemblyName`|必須の **String** 型のパラメーターです。<br /><br /> プロジェクトのために生成されるアセンブリの短い名前を指定します。この名前は、一時的に生成されるターゲット アセンブリの名前にもなります。 たとえば、プロジェクトが *WinExeAssembly.exe* という名前の [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 実行可能ファイルを生成する場合、**AssemblyName** パラメーターの値は **WinExeAssembly** になります。|  
-|`CompileTargetName`|必須の **String** 型のパラメーターです。<br /><br /> ソース コード ファイルからアセンブリを生成するために使用される [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] ターゲットの名前を指定します。 **CompileTargetName** の一般的な値は、**CoreCompile** です。|  
-|`CompileTypeName`|必須の **String** 型のパラメーターです。<br /><br /> **CompileTargetName** パラメーターで指定したターゲットによって実行されるコンパイルの種類を指定します。 **CoreCompile** ターゲットでは、この値は **Compile** です。|  
-|`CurrentProject`|必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリを必要とするプロジェクトの、[!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] プロジェクト ファイルの完全なパスを指定します。|  
-|`GeneratedCodeFiles`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 
-  [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) タスクによって生成された言語固有のマネージド コード ファイルの一覧を指定します。|  
-|`IntermediateOutputPath`|必須の **String** 型のパラメーターです。<br /><br /> 生成される一時ターゲット アセンブリが格納されるディレクトリを指定します。|  
-|`MSBuildBinPath`|必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリをコンパイルするために必要な *MSBuild.exe* の場所を指定します。|  
-|`ReferencePath`|省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 一時ターゲット アセンブリにコンパイルされる型によって参照されるアセンブリの一覧を、パスおよびファイル名を使用して指定します。|  
-|`ReferencePathTypeName`|必須の **String** 型のパラメーターです。<br /><br /> コンパイル ターゲット (**CompileTargetName**) パラメーターによって使用される、アセンブリ参照の一覧 (**ReferencePath**) を指定するパラメーターを指定します。 適切な値は、**ReferencePath** です。|  
+| パラメーター | 説明 |
+|--------------------------| - |
+| `AssemblyName` | 必須の **String** 型のパラメーターです。<br /><br /> プロジェクトのために生成されるアセンブリの短い名前を指定します。この名前は、一時的に生成されるターゲット アセンブリの名前にもなります。 たとえば、プロジェクトが *WinExeAssembly.exe* という名前の [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)] 実行可能ファイルを生成する場合、**AssemblyName** パラメーターの値は **WinExeAssembly** になります。 |
+| `CompileTargetName` | 必須の **String** 型のパラメーターです。<br /><br /> ソース コード ファイルからアセンブリを生成するために使用される [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] ターゲットの名前を指定します。 **CompileTargetName** の一般的な値は、**CoreCompile** です。 |
+| `CompileTypeName` | 必須の **String** 型のパラメーターです。<br /><br /> **CompileTargetName** パラメーターで指定したターゲットによって実行されるコンパイルの種類を指定します。 **CoreCompile** ターゲットでは、この値は **Compile** です。 |
+| `CurrentProject` | 必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリを必要とするプロジェクトの、[!INCLUDE[TLA2#tla_msbuild](../msbuild/includes/tla2sharptla_msbuild_md.md)] プロジェクト ファイルの完全なパスを指定します。 |
+| `GeneratedCodeFiles` | 省略可能な **ITaskItem[]** パラメーターです。<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) タスクによって生成された言語固有のマネージド コード ファイルの一覧を指定します。 |
+| `IntermediateOutputPath` | 必須の **String** 型のパラメーターです。<br /><br /> 生成される一時ターゲット アセンブリが格納されるディレクトリを指定します。 |
+| `MSBuildBinPath` | 必須の **String** 型のパラメーターです。<br /><br /> 一時ターゲット アセンブリをコンパイルするために必要な *MSBuild.exe* の場所を指定します。 |
+| `ReferencePath` | 省略可能な **ITaskItem[]** パラメーターです。<br /><br /> 一時ターゲット アセンブリにコンパイルされる型によって参照されるアセンブリの一覧を、パスおよびファイル名を使用して指定します。 |
+| `ReferencePathTypeName` | 必須の **String** 型のパラメーターです。<br /><br /> コンパイル ターゲット (**CompileTargetName**) パラメーターによって使用される、アセンブリ参照の一覧 (**ReferencePath**) を指定するパラメーターを指定します。 適切な値は、**ReferencePath** です。 |
   
 ## <a name="remarks"></a>コメント  
  [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) によって実行される最初のマークアップ コンパイル パスでは、[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルがバイナリ形式にコンパイルされます。 したがって、コンパイラでは、[!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルで使用される型を含んでいる参照アセンブリの一覧が必要になります。 ただし、同じプロジェクト内で定義されている型が [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] ファイルで使用されていると、そのプロジェクトの対応するアセンブリは、プロジェクトがビルドされるまで作成されません。 このため、最初のマークアップ コンパイル パスの間にアセンブリ参照を用意することができません。  

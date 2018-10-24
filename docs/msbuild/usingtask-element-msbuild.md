@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64d3fd57f5c55a321ca09495adcd7c712964b01f
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: 28dba0a2b386cef00daf4827609ce9762c667067
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39154605"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892962"
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 要素 (MSBuild)
 [Task](../msbuild/task-element-msbuild.md) 要素で参照されているタスクを、タスクの実装が含まれているアセンブリにマップします。  
@@ -64,9 +64,9 @@ ms.locfileid: "39154605"
 
 ### <a name="parent-elements"></a>親要素  
 
-|要素|説明|  
-|-------------|-----------------|  
-|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
+| 要素 | 説明 |
+| - | - |
+| [プロジェクト](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。 |
 
 ## <a name="remarks"></a>コメント  
  環境変数、コマンド ライン プロパティ、プロジェクト レベル プロパティ、およびプロジェクト レベル項目は、直接、またはインポートされたプロジェクト ファイルを通じて、プロジェクト ファイルに含まれる `UsingTask` 要素内で参照できます。 詳細については、[タスク](../msbuild/msbuild-tasks.md)に関する記事を参照してください。  

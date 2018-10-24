@@ -16,12 +16,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db2d6c8da22278d830423643fb8ad869d5123a19
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: cbc74d746453c5d8e60161004a5b56a2c21915dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424940"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882604"
 ---
 # <a name="version-numbers-for-main-and-localized-satellite-assemblies"></a>メイン アセンブリおよびローカライズされたサテライト アセンブリのバージョン番号
 <xref:System.Resources.SatelliteContractVersionAttribute> クラスは、リソース マネージャーでローカライズされたリソースを使用するメイン アセンブリのバージョン管理をサポートしています。 <xref:System.Resources.SatelliteContractVersionAttribute> をアプリケーションのメイン アセンブリに適用すると、サテライト アセンブリを更新することなくメイン アセンブリを更新したり、再展開したりできます。 たとえば、新しいリソースを導入していない Service Pack でも、サテライト アセンブリをリビルドして再展開することなく <xref:System.Resources.SatelliteContractVersionAttribute> クラスを使用できます。 ローカライズされたリソースを使用できるようにするには、メイン アセンブリのサテライト コントラクト バージョンがサテライト アセンブリの <xref:System.Reflection.AssemblyVersionAttribute> クラスと一致する必要があります。 <xref:System.Resources.SatelliteContractVersionAttribute> に正確なバージョン番号を指定します。"*" などのワイルドカード文字は使用できません。 詳細については、[リソースの取得](/dotnet/framework/resources/retrieving-resources-in-desktop-apps)に関するページを参照してください。
@@ -35,7 +35,6 @@ ms.locfileid: "32424940"
 
 ```vb
 <Assembly: SatelliteContractVersionAttribute("4.3.2.1")>
-
 ```
 
 ```csharp

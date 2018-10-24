@@ -16,21 +16,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e5a86fa111af041e601dbc16ee5f1f6da1c54fba
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 1a6912f1b3877eadf6739d696f01d0f391a97b30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34447818"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892715"
 ---
 # <a name="how-to-change-fonts-and-colors-in-the-editor"></a>方法 : エディターで使用するフォントのフォント フェイス、サイズ、色を変更する
 コード エディターでは、さまざまなテキスト**表示項目**の既定のフォント フェイスを変更し、フォント サイズを調整し、前景色と背景色を変更することができます。 フォントの設定を変更するときは、次の情報に注意してください。
 
--   **[フォント]** と **[サイズ]** の設定は、すべての [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] エディターのすべてのテキスト要素に対するグローバルな設定です。
+- **[フォント]** と **[サイズ]** の設定は、すべての [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] エディターのすべてのテキスト要素に対するグローバルな設定です。
 
--   固定幅フォントの名前は、太字で表示されます。
+- 固定幅フォントの名前は、太字で表示されます。
 
--   **[前景色]**、**[背景色]**、**[太字]** の各オプションは、テキスト要素の種類ごとに設定できます。 たとえば、**[コメント]** と **[ブックマーク]** について色を変更して **[太字]** を選んでも、他の種類のテキスト要素は影響を受けません。
+- **[前景色]**、**[背景色]**、**[太字]** の各オプションは、テキスト要素の種類ごとに設定できます。 たとえば、**[コメント]** と **[ブックマーク]** について色を変更して **[太字]** を選んでも、他の種類のテキスト要素は影響を受けません。
 
 > [!NOTE]
 > 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、**ヘルプ**の説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](../../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
