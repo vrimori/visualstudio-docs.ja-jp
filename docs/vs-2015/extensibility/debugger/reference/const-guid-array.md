@@ -17,12 +17,12 @@ ms.assetid: bd55e7d8-372c-4c3e-9eed-28f6b415a5db
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0494d7136e2f00264fca9caca9b507ebf59fef8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: af527759568d2f36d120002e7216e1d6ce517b54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49295764"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816743"
 ---
 # <a name="constguidarray"></a>CONST_GUID_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ public struct CONST_GUID_ARRAY {
   
  この構造体のインスタンスの所有者は、割り当てられたメモリを解放します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

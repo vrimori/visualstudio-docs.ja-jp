@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1409431b0cdaec775ecd420fb9b6ea1ded0868de
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: 1f63e4f43db3f8c4b24b43bda02cf00b52befc94
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42627251"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842184"
 ---
 # <a name="analyze-cpu-usage"></a>CPU 使用率の分析
 アプリのパフォーマンスの問題を調査する必要がある場合、まず CPU の使用状況を理解することから始めることができます。 **CPU 使用率**ツールは、CPU が Visual C++、Visual C#/Visual Basic、JavaScript のコードを実行するとき、どこで時間を費やしているかを示します。 Visual Studio 2015 Update 1 以降、デバッガーを終了することなく CPU 使用率の関数ごとの内訳を確認できます。 デバッグ中に CPU プロファイリングのオンとオフを切り替えたり、ブレークポイントなど、実行が停止しているときに結果を表示できます。  
@@ -28,33 +28,33 @@ ms.locfileid: "42627251"
   
 ##  <a name="collect-cpu-usage-data"></a>CPU 使用率のデータの収集  
   
-1.  Visual Studio で、ソリューション構成を **[リリース]** に設定して配置ターゲットを選択します。  
+1. Visual Studio で、ソリューション構成を **[リリース]** に設定して配置ターゲットを選択します。  
   
-     ![リリースとローカル コンピューターの選択](../profiling/media/cpuuse_selectreleaselocalmachine.png "CPUUSE_SelectReleaseLocalMachine")  
+    ![リリースとローカル コンピューターの選択](../profiling/media/cpuuse_selectreleaselocalmachine.png "CPUUSE_SelectReleaseLocalMachine")  
   
-    -   アプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
+   -   アプリを **[リリース]** モードで実行すると、アプリの実際のパフォーマンスをよりよく把握できます。  
   
-    -   アプリをローカル コンピューターで実行すると、インストールされているアプリの実行に最も近い状態で再現できます。  
+   -   アプリをローカル コンピューターで実行すると、インストールされているアプリの実行に最も近い状態で再現できます。  
   
-    -   リモート デバイスからデータを収集している場合は、アプリはリモート デスクトップ接続を使用しないで、デバイス上で直接実行してください。  
+   -   リモート デバイスからデータを収集している場合は、アプリはリモート デスクトップ接続を使用しないで、デバイス上で直接実行してください。  
   
-    -   Windows Phone アプリの場合には、**[デバイス]** からのデータを直接収集すると最も正確なデータが得られます。  
+   -   Windows Phone アプリの場合には、**[デバイス]** からのデータを直接収集すると最も正確なデータが得られます。  
   
-2.  **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** を選びます。  
+2. **[デバッグ]** メニューの **[パフォーマンス プロファイラー]** を選びます。  
   
-3.  **[CPU 使用率]**、**[開始]** を選択します。  
+3. **[CPU 使用率]**、**[開始]** を選択します。  
   
-     ![CPU 使用率の選択](../profiling/media/cpuuse_lib_choosecpuusage.png "CPUUSE_LIB_ChooseCpuUsage")  
+    ![CPU 使用率の選択](../profiling/media/cpuuse_lib_choosecpuusage.png "CPUUSE_LIB_ChooseCpuUsage")  
   
-4.  アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
+4. アプリが起動したら、**[最大数を取得]** をクリックします。 出力の表示後に約 1 秒待ってから、**[非同期の最大数の取得]** を選択します。 ボタンのクリック間隔を空けると、診断レポートにおいてボタン クリックのルーチンを分離しやすくなります。  
   
-5.  2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
+5. 2 番目の出力行が表示された後、パフォーマンスと診断ハブで **[コレクションの停止]** をクリックします。  
   
- ![CpuUsage データ コレクションの停止](../profiling/media/cpu_use_wt_stopcollection.png "CPU_USE_WT_StopCollection")  
+   ![CpuUsage データ コレクションの停止](../profiling/media/cpu_use_wt_stopcollection.png "CPU_USE_WT_StopCollection")  
   
- CPU 使用率ツールがデータを分析してレポートを表示します。  
+   CPU 使用率ツールがデータを分析してレポートを表示します。  
   
- ![CpuUsage レポート](../profiling/media/cpu_use_wt_report.png "CPU_USE_WT_Report")  
+   ![CpuUsage レポート](../profiling/media/cpu_use_wt_report.png "CPU_USE_WT_Report")  
   
 ## <a name="analyze-the-cpu-usage-report"></a>CPU 使用率レポートの分析  
   

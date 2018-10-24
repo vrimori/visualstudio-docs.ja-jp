@@ -26,12 +26,12 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 815c2eba06af4fe50eb9dc87dd158fe1713342ac
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1243c9d26e25bd76a7e8b3518484671bdd973fb9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49280151"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841872"
 ---
 # <a name="how-to-write-a-visualizer"></a>方法 : ビジュアライザーを記述する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -43,27 +43,27 @@ ms.locfileid: "49280151"
   
  デバッガー ビジュアライザーのアーキテクチャには、次の 2 つの部分があります。  
   
--   *デバッガー側*Visual Studio デバッガー内で実行します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
+- *デバッガー側*Visual Studio デバッガー内で実行します。 デバッガー側のコードは、ビジュアライザーのユーザー インターフェイスを作成し、表示します。  
   
--   *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。  
+- *デバッグ対象側*Visual Studio がデバッグ プロセス内で実行 (、*デバッグ対象*)。  
   
- 視覚化するデータ オブジェクト (String オブジェクトなど) は、デバッグ対象プロセスに存在します。 このためデバッグ対象側では、そのデータ オブジェクトをデバッガー側に送る必要があります。これによって、デバッガー側では、作成したユーザー インターフェイスを使ってデータ オブジェクトを表示できるようになります。  
+  視覚化するデータ オブジェクト (String オブジェクトなど) は、デバッグ対象プロセスに存在します。 このためデバッグ対象側では、そのデータ オブジェクトをデバッガー側に送る必要があります。これによって、デバッガー側では、作成したユーザー インターフェイスを使ってデータ オブジェクトを表示できるようになります。  
   
- デバッガー側から視覚化対象である場合は、このデータ オブジェクトを受け取る、*オブジェクト プロバイダー*を実装する、<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>インターフェイス。 デバッグ対象側の送信を使用してデータ オブジェクト、*オブジェクト ソース*から派生<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>します。 オブジェクト プロバイダーは、オブジェクト ソースにデータを戻すこともできます。このため、データの表示だけでなく編集もできるビジュアライザーを記述できます。 オブジェクト プロバイダーは、式エバリュエーターと通信することでオブジェクト ソースと通信するようにオーバーライドできます。  
+  デバッガー側から視覚化対象である場合は、このデータ オブジェクトを受け取る、*オブジェクト プロバイダー*を実装する、<xref:Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider>インターフェイス。 デバッグ対象側の送信を使用してデータ オブジェクト、*オブジェクト ソース*から派生<xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource>します。 オブジェクト プロバイダーは、オブジェクト ソースにデータを戻すこともできます。このため、データの表示だけでなく編集もできるビジュアライザーを記述できます。 オブジェクト プロバイダーは、式エバリュエーターと通信することでオブジェクト ソースと通信するようにオーバーライドできます。  
   
- デバッグ対象側とデバッガー側は、<xref:System.IO.Stream> を介して相互に通信します。 データ オブジェクトを <xref:System.IO.Stream> にシリアル化し、<xref:System.IO.Stream> をデータ オブジェクトに逆シリアル化するメソッドが用意されています。  
+  デバッグ対象側とデバッガー側は、<xref:System.IO.Stream> を介して相互に通信します。 データ オブジェクトを <xref:System.IO.Stream> にシリアル化し、<xref:System.IO.Stream> をデータ オブジェクトに逆シリアル化するメソッドが用意されています。  
   
- デバッグ対象側のコードは、DebuggerVisualizer 属性 (<xref:System.Diagnostics.DebuggerVisualizerAttribute>) で指定します。  
+  デバッグ対象側のコードは、DebuggerVisualizer 属性 (<xref:System.Diagnostics.DebuggerVisualizerAttribute>) で指定します。  
   
- デバッガー側でビジュアライザー ユーザー インターフェイスを作成するには、<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> を継承するクラスを作成し、<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName> メソッドをオーバーライドしてインターフェイスを表示する必要があります。  
+  デバッガー側でビジュアライザー ユーザー インターフェイスを作成するには、<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer> を継承するクラスを作成し、<xref:Microsoft.VisualStudio.DebuggerVisualizers.DialogDebuggerVisualizer.Show%2A?displayProperty=fullName> メソッドをオーバーライドしてインターフェイスを表示する必要があります。  
   
- <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> を使用すると、Windows フォーム、ダイアログ、およびコントロールをビジュアライザーによって表示できます。  
+  <xref:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService> を使用すると、Windows フォーム、ダイアログ、およびコントロールをビジュアライザーによって表示できます。  
   
- ジェネリック型のサポートは制限されています。 ジェネリック型がオープン型の場合にのみ、そのジェネリック型のビジュアライザーを記述できます。 この制限は、`DebuggerTypeProxy` 属性を使用する場合の制限と同じです。 詳細については、次を参照してください。 [DebuggerTypeProxy 属性を使用して](../debugger/using-debuggertypeproxy-attribute.md)します。  
+  ジェネリック型のサポートは制限されています。 ジェネリック型がオープン型の場合にのみ、そのジェネリック型のビジュアライザーを記述できます。 この制限は、`DebuggerTypeProxy` 属性を使用する場合の制限と同じです。 詳細については、次を参照してください。 [DebuggerTypeProxy 属性を使用して](../debugger/using-debuggertypeproxy-attribute.md)します。  
   
- カスタムのビジュアライザーでは、セキュリティについての配慮が必要な場合があります。 参照してください[ビジュアライザーのセキュリティに関する考慮事項](../debugger/visualizer-security-considerations.md)します。  
+  カスタムのビジュアライザーでは、セキュリティについての配慮が必要な場合があります。 参照してください[ビジュアライザーのセキュリティに関する考慮事項](../debugger/visualizer-security-considerations.md)します。  
   
- 以下の手順は、ビジュアライザーの作成に必要な作業の概要を示したものです。 詳細については、次を参照してください。[チュートリアル: c# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)します。  
+  以下の手順は、ビジュアライザーの作成に必要な作業の概要を示したものです。 詳細については、次を参照してください。[チュートリアル: c# でビジュアライザーを記述する](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)します。  
   
 ### <a name="to-create-the-debugger-side"></a>デバッガー側を作成するには  
   

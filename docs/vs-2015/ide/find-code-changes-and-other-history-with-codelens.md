@@ -14,12 +14,12 @@ caps.latest.revision: 134
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c1fac3a8fde417065aecb7e3882ff9dc12b06402
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: df4b435f791b066afda90ac9f5492a946d7e215c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49224964"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825674"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens によるコード変更とその他の履歴の検索
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,46 +42,46 @@ ms.locfileid: "49224964"
 ##  <a name="FindReferences"></a> コード参照の検索  
  要件:  
   
--   Visual Studio Enterprise または Visual Studio Professional  
+- Visual Studio Enterprise または Visual Studio Professional  
   
--   Visual C# .NET コードまたは Visual Basic .NET コード  
+- Visual C# .NET コードまたは Visual Basic .NET コード  
   
- **参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、Visual C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、XAML ファイル、ASPX ファイルなどの他の項目からの参照は含まれません。  
+  **参照** インジケーターを選択します (**Alt + 2**)。 **参照が 1 つもない**場合は、Visual C# コードまたは Visual Basic コードからの参照がないということです。 このインジケーターには、XAML ファイル、ASPX ファイルなどの他の項目からの参照は含まれません。  
   
- ![CodeLens - 参照インジケーターを選択する](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
+  ![CodeLens - 参照インジケーターを選択する](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
   
- 参照元コードを表示するには、参照の上にマウス ポインターを合わせます。  
+  参照元コードを表示するには、参照の上にマウス ポインターを合わせます。  
   
- ![CodeLens - 参照を確認する](../ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
+  ![CodeLens - 参照を確認する](../ide/media/codelensviewreferencespeekreference.png "CodeLensViewReferencesPeekReference")  
   
- 参照を含むファイルを開くには、参照をダブルクリックします。  
+  参照を含むファイルを開くには、参照をダブルクリックします。  
   
- このコードと、その参照の間の関係を表示するには、[コード マップを作成](../modeling/map-dependencies-across-your-solutions.md)して、コード マップのショートカット メニューで **[すべての参照の表示]** を選択します。  
+  このコードと、その参照の間の関係を表示するには、[コード マップを作成](../modeling/map-dependencies-across-your-solutions.md)して、コード マップのショートカット メニューで **[すべての参照の表示]** を選択します。  
   
- ![CodeLens - コード マップ上の参照](../ide/media/codelensmappedreferences.png "CodeLensMappedReferences")  
+  ![CodeLens - コード マップ上の参照](../ide/media/codelensmappedreferences.png "CodeLensMappedReferences")  
   
 ##  <a name="FindCodeHistory"></a> コードの履歴およびリンクされた項目の検索  
  コードの変遷をたどるため、コードの履歴を確認します。 または、他の分岐での変更がコードに与える可能性のある影響を理解できるよう、変更をコードにマージする前に、それらの変更を検討します。  
   
  要件:  
   
--   Visual Studio Enterprise または Visual Studio Professional  
+- Visual Studio Enterprise または Visual Studio Professional  
   
--   Team Foundation Server 2013 以降、Visual Studio Team Services、または Git  
+- Team Foundation Server 2013 以降、Visual Studio Team Services、または Git  
   
--   [Lync 2010 以降、または Skype for Business](http://technet.microsoft.com/lync)。これによりコード エディターからチームと通信できます  
+- [Lync 2010 以降、または Skype for Business](http://technet.microsoft.com/lync)。これによりコード エディターからチームと通信できます  
   
- Team Foundation バージョン管理 (TFVC) または Git で格納されている Visual C# .NET または Visual Basic .NET コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*code-element-level* インジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。  
+  Team Foundation バージョン管理 (TFVC) または Git で格納されている Visual C# .NET または Visual Basic .NET コードでは、CodeLens の詳細をクラス レベルまたはメソッド レベルで取得します (*code-element-level* インジケーター)。 Git リポジトリが TfGit でホストされている場合、TFS 作業項目へのリンクも取得します。  
   
- ![コードの要素レベルのインジケーター](../ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
+  ![コードの要素レベルのインジケーター](../ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
   
- Visual Studio エディターで開くことができる他のすべての種類のファイルについては、ウィンドウ下部の 1 個所でファイル全体の CodeLens の詳細を取得します (*file-level* インジケーター)。  
+  Visual Studio エディターで開くことができる他のすべての種類のファイルについては、ウィンドウ下部の 1 個所でファイル全体の CodeLens の詳細を取得します (*file-level* インジケーター)。  
   
- ![ファイル レベルの CodeLens インジケーター](../ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
+  ![ファイル レベルの CodeLens インジケーター](../ide/media/almcodelensfilelevelindicators.png "ALMCodeLensFileLevelIndicators")  
   
- キーボードを使用してインジケーターを選択するには、 **Alt** キーを押した状態を保ち、関連する数値キーを表示します。  
+  キーボードを使用してインジケーターを選択するには、 **Alt** キーを押した状態を保ち、関連する数値キーを表示します。  
   
- ![Alt キーを押してキーボード アクセス番号を表示する](../ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
+  ![Alt キーを押してキーボード アクセス番号を表示する](../ide/media/codelensaltkeyindicators.png "CodeLensAltKeyIndicators")  
   
 ### <a name="find-changes-in-your-code"></a>コードに含まれる変更の検索  
  C# コードまたは Visual Basic コードを変更したユーザー、およびそのユーザーによって行われた変更を code-element-level インジケーターで探します。 これは、Team Foundation Server または Visual Studio Team Services で Team Foundation バージョン管理 (TFVC) を使用するときに行います。  
@@ -243,11 +243,11 @@ ms.locfileid: "49224964"
   
  **サポートされる Lync 構成および Skype 構成**  
   
--   Skype for Business (32 ビットまたは 64 ビット)  
+- Skype for Business (32 ビットまたは 64 ビット)  
   
--   Lync 2010 以降のみ (32 ビットまたは 64 ビット)。ただし Windows 8.1 での Lync Basic 2013 は除く  
+- Lync 2010 以降のみ (32 ビットまたは 64 ビット)。ただし Windows 8.1 での Lync Basic 2013 は除く  
   
- CodeLens では、異なるバージョン の Lync または Skype はインストールできません。 Visual Studio のローカライズ バージョンに対して、Lync または Skype がローカライズされていないことがあります。  
+  CodeLens では、異なるバージョン の Lync または Skype はインストールできません。 Visual Studio のローカライズ バージョンに対して、Lync または Skype がローカライズされていないことがあります。  
   
 ### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Q: CodeLens のフォントと色を変更するにはどうすればよいですか。  
  **A:** **[ツール]**、 **[オプション]**、 **[環境]**、 **[フォントおよび色]** の順に選択します。  

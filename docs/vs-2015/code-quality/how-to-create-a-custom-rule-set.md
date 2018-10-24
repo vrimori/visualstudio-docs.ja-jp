@@ -18,12 +18,12 @@ caps.latest.revision: 26
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: e4b6c401b602575b34fb80ab98b31bb4ebcd1620
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a5d8a5cb7e29cfd900ce81fa5f4b6253f0c49014
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49255503"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812466"
 ---
 # <a name="how-to-create-a-custom-rule-set"></a>方法: カスタム規則セットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,19 +44,19 @@ ms.locfileid: "49255503"
   
 #### <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>既存の 1 つの規則セットからカスタム規則を作成するには  
   
-1.  ソリューション エクスプ ローラーでプロジェクトを右クリックしを選択し、**プロパティ**します。  
+1. ソリューション エクスプ ローラーでプロジェクトを右クリックしを選択し、**プロパティ**します。  
   
-2.  **プロパティ**] タブで [**コード分析**します。  
+2. **プロパティ**] タブで [**コード分析**します。  
   
-3.  **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
+3. **ルール セットの**ドロップダウン リストで、次のいずれかの操作を行います。  
   
-    -   カスタマイズする規則セットを選択します。  
+   - カスタマイズする規則セットを選択します。  
   
      \- または -  
   
-    -   選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
+   - 選択 **\<[参照...] >** を既存の規則セットを指定されていないリスト。  
   
-4.  クリックして**オープン**ルール セット エディターで、ルールを表示します。  
+4. クリックして**オープン**ルール セット エディターで、ルールを表示します。  
   
 #### <a name="to-create-a-custom-rule-set-from-multiple-existing-rule-sets"></a>既存の複数の規則セットからカスタム規則セットを作成するには  
   

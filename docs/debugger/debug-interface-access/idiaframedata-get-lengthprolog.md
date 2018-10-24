@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_lengthprolog |Microsoft ドキュメント
+title: Idiaframedata::get_lengthprolog |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8033e0f769c0222dc8c3ee90d680ea6f2de279fa
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 635d435cd81286c96a3949168dc27f2b8983c4d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31460506"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843081"
 ---
 # <a name="idiaframedatagetlengthprolog"></a>IDiaFrameData::get_lengthProlog
 プロローグ コード ブロック内のバイト数を取得します。  
@@ -37,10 +37,10 @@ HRESULT get_lengthProlog (
  [out]プロローグ コードのバイト数を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`場合、このプロパティはサポートされていません。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- プロローグ コードは、レジスタの保持、CPU の状態を設定し、関数のスタックを設定する手順のシーケンスです。  
+## <a name="remarks"></a>Remarks  
+ プロローグ コードは、レジスタの保持し、CPU の状態を設定し、関数のスタックを確立する命令のシーケンスです。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

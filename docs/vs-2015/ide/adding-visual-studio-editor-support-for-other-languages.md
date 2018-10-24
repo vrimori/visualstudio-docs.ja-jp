@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c5fc84272c7041c2d761b4f4ec96add898659049
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a0a978470a307c46805e902db85cd5a638c0d83f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49300509"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823776"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Visual Studio エディターでの他の言語のサポートの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,23 +49,23 @@ Visual Studio エディターでさまざまなコンピューター言語の読
   
  構文の色づけと基本的なステートメント入力候補に加え、Visual Studio には[移動](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/)という機能もあります。 この機能を使用すれば、コード ファイル、ファイル パスおよびコード シンボルをすばやく検索することができます。 Visual Studio では、次の言語の移動がサポートされます。  
   
--   移動  
+- 移動  
   
--   Java  
+- Java  
   
--   JavaScript  
+- JavaScript  
   
--   PHP  
+- PHP  
   
--   TypeScript  
+- TypeScript  
   
--   Visual Basic  
+- Visual Basic  
   
--   Visual C++  
+- Visual C++  
   
--   Visual C#  
+- Visual C#  
   
- 特定の言語のサポートがまだインストールされていない場合でも、これらのファイルの種類にはすべて前述の機能があります。 一部の言語の特別なサポートをインストールすると、IntelliSense やその他の高度な言語機能 (電球などの) などの、追加の言語サポートが提供される場合があります。  
+  特定の言語のサポートがまだインストールされていない場合でも、これらのファイルの種類にはすべて前述の機能があります。 一部の言語の特別なサポートをインストールすると、IntelliSense やその他の高度な言語機能 (電球などの) などの、追加の言語サポートが提供される場合があります。  
   
 ## <a name="adding-support-for-non-supported-languages"></a>サポートされていない言語のサポートの追加  
  Visual Studio 2015 Update 1 以降のバージョンでは、エディターで [TextMate 文法](https://manual.macromates.com/en/language_grammars)を使用することで言語サポートを提供します。 現在、Visual Studio エディターで好みのプログラミング言語がサポートされていない場合は、まず、Web を検索します。その言語に対応する TextMate バンドルが既に存在している可能性があります。 それでも見つからない場合は、Visual Studio 2015 Update 1 以降で、言語の文法とスニペットに対応する TextMate バンドル モデルを作成して、自分でサポートを追加することができます。  

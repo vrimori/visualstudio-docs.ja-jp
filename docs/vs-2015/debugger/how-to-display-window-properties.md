@@ -16,12 +16,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 680346b640c5c6a8ad66129e30a1034b360bc084
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6a83374015fcdada482099982f0294660412a0cc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49231141"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823711"
 ---
 # <a name="how-to-display-window-properties"></a>方法: ウィンドウのプロパティを表示する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "49231141"
   
 ### <a name="to-open-the-window-properties-dialog-box"></a>[ウィンドウ プロパティ] ダイアログ ボックスを開く  
   
-1.  項目を選択し、**プロパティ**から、**ビュー**メニュー。  
+1. 項目を選択し、**プロパティ**から、**ビュー**メニュー。  
   
- プロパティ ダイアログ ボックスがモーダルではありません。 ビュー ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは選択された各項目に関する情報を自動的に更新します。
+   プロパティ ダイアログ ボックスがモーダルではありません。 ビュー ウィンドウの項目から項目をクリックすると、ダイアログ ボックスは選択された各項目に関する情報を自動的に更新します。
 
 
 

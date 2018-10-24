@@ -13,29 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42ad89e544727a67611a305444f85ff022f6b2ff
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: e5ff8b850287e91cf2a1e5e6a546980c9087541d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39500031"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49824187"
 ---
 # <a name="walkthrough-display-quickinfo-tooltips"></a>チュートリアル: 表示クイック ヒント
 クイック ヒントはメソッド シグネチャを表示する IntelliSense 機能である説明と、ユーザーがポインターをメソッド名の上に移動します。 クイック ヒントの説明を提供する識別子を定義し、コンテンツを表示するツールヒントを作成し、クイック ヒントなど、言語ベースの機能を実装できます。 クイック ヒントを定義するには、言語サービスのコンテキストでまたは独自ファイル名拡張子とコンテンツ タイプを定義し、その型だけのクイック ヒントを表示できますか ("text") などの既存のコンテンツ タイプのクイック ヒントを表示することができます。 このチュートリアルでは、「テキスト」コンテンツ タイプのクイック ヒントを表示する方法を示します。  
   
  クイック ヒントの例では、このチュートリアルは、ユーザーは、メソッド名の上、ポインターを移動すると、ツールヒントを表示します。 この設計では、これら 4 つのインターフェイスを実装する必要があります。  
   
--   ソース インターフェイス  
+- ソース インターフェイス  
   
--   ソース プロバイダーのインターフェイス  
+- ソース プロバイダーのインターフェイス  
   
--   コント ローラーのインターフェイス  
+- コント ローラーのインターフェイス  
   
--   コント ローラーのプロバイダー インターフェイス  
+- コント ローラーのプロバイダー インターフェイス  
   
- ソースとコント ローラーのプロバイダーは Managed Extensibility Framework (MEF) コンポーネント パーツ、ソースとコント ローラー クラスをエクスポートする責任を負います、サービスのインポートしブローカーなど、<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>ツールヒントのテキストを作成します。バッファー、および<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>、QuickInfo セッションが開始します。  
+  ソースとコント ローラーのプロバイダーは Managed Extensibility Framework (MEF) コンポーネント パーツ、ソースとコント ローラー クラスをエクスポートする責任を負います、サービスのインポートしブローカーなど、<xref:Microsoft.VisualStudio.Text.ITextBufferFactoryService>ツールヒントのテキストを作成します。バッファー、および<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>、QuickInfo セッションが開始します。  
   
- この例でクイック ヒントのソースがメソッドの名前と説明については、ハード コーディングされた一覧には、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供する責任を負います。  
+  この例でクイック ヒントのソースがメソッドの名前と説明については、ハード コーディングされた一覧には、完全な実装で、言語サービスと言語のドキュメントがそのコンテンツを提供する責任を負います。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールする必要はありません。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
@@ -44,7 +44,7 @@ ms.locfileid: "39500031"
   
 ### <a name="to-create-a-mef-project"></a>MEF プロジェクトを作成するには  
   
-1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューションの名前を`QuickInfoTest`します。  
+1.  C# VSIX プロジェクトを作成します。 (で、**新しいプロジェクト**ダイアログ ボックスで、 **Visual c#/機能拡張**、し**VSIX プロジェクト**)。ソリューション `QuickInfoTest`の名前を指定します。  
   
 2.  エディター分類子の項目テンプレートをプロジェクトに追加します。 詳細については、次を参照してください。[エディターの項目テンプレートを使用した拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "39500031"
   
 #### <a name="to-implement-the-quickinfo-source"></a>QuickInfo ソースを実装するには  
   
-1.  クラス ファイルを追加し、名前`TestQuickInfoSource`します。  
+1.  クラス ファイルを追加し、その名前を `TestQuickInfoSource`にします。  
   
 2.  参照を追加*Microsoft.VisualStudio.Language.IntelliSense*します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "39500031"
      [!code-vb[VSSDKQuickInfoTest#16](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_16.vb)]
      [!code-csharp[VSSDKQuickInfoTest#16](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_16.cs)]  
   
-2.  インポート、<xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker>プロパティとして。  
+2.  <xref:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker> をプロパティとしてインポートします。  
   
      [!code-vb[VSSDKQuickInfoTest#17](../extensibility/codesnippet/VisualBasic/walkthrough-displaying-quickinfo-tooltips_17.vb)]
      [!code-csharp[VSSDKQuickInfoTest#17](../extensibility/codesnippet/CSharp/walkthrough-displaying-quickinfo-tooltips_17.cs)]  

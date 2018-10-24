@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50e9a56d6682c32d4f02f5d45899867ce21768ec
-ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
+ms.openlocfilehash: f917486a6b4a539401c8652f70ca95b2e7bc7bc7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46370979"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843204"
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio で頻繁に使用するコマンドに対応する既定のキーボード ショートカット
 
@@ -26,7 +26,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="build"></a>ビルド
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |Build.BuildSolution|**Ctrl + Shift + B** [全体]|
 |Build.Cancel|**Ctrl + Break** [全体]|
 |Build.Compile|**Ctrl + F7** [全体]|
@@ -35,7 +35,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="debug"></a>デバッグ
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |Debug.BreakatFunction|**Ctrl + B** [全体]|
 |Debug.BreakAll|**Ctrl + Alt + Break** [全体]|
 |Debug.DeleteAllBreakpoints|**Ctrl + Shift + F9** [全体]|
@@ -55,7 +55,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="edit"></a>編集
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |Edit.BreakLine|**Enter** [テキスト エディター、レポート デザイナー、Windows フォーム デザイナー]<br /><br /> または **Shift + Enter** [テキスト エディター]|
 |Edit.CollapseToDefinitions|**Ctrl + M**、**Ctrl + O** [テキスト エディター]|
 |Edit.CommentSelection|**Ctrl + K**、**Ctrl + C** [テキスト エディター]|
@@ -106,7 +106,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="file"></a>ファイル
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |File.Exit|**Alt + F4** [全体]|
 |File.NewFile|**Ctrl + N** [全体]|
 |File.NewProject|**Ctrl + Shift + N** [全体]|
@@ -122,26 +122,26 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="project"></a>プロジェクト
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |Project.AddExistingItem|**Shift + Alt + A** [全体]|
 |Project.AddNewItem|**Ctrl + Shift + A** [全体]|
 
 ## <a name="refactor"></a>リファクター
 
 |コマンド|ショートカット キー [コンテキスト]|
-|-------------|-----------------------------------|
+|-------------| - |
 |Refactor.ExtractMethod|**Ctrl + R、Ctrl + M** [全体]|
 
 ## <a name="tools"></a>ツール
 
 |コマンド|ショートカット キー [コンテキスト]|
-|-------------|-----------------------------------|
+|-------------| - |
 |Tools.AttachtoProcess|**Ctrl + Alt + P** [全体]|
 
 ## <a name="view"></a>表示
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |View.ClassView|**Ctrl + Shift + C** [全体]|
 |View.EditLabel|**F2** [全体]|
 |View.ErrorList|**Ctrl + \\、Ctrl + E** [全体]<br /><br /> または **Ctrl + \\、E** [全体]|
@@ -162,7 +162,7 @@ Visual Studio で頻繁に使用するコマンドには、ここで示してい
 ## <a name="window"></a>ウィンドウ
 
 |コマンド|ショートカット キー [コンテキスト]|
-|--------------|-------------------------------------|
+|--------------| - |
 |Window.ActivateDocumentWindow|**Esc** [全体]|
 |Window.CloseDocumentWindow|**Ctrl + F4** [全体]|
 |Window.NextDocumentWindow|**Ctrl + F6** [全体]|

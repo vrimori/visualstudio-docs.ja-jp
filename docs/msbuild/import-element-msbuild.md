@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f4cba83b1e2ed91e827c8dc09dc3b3e7a02bc61
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 7dd5b0aa6f0ed56aaa3315c03aeef6ed1b77ad62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077491"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839610"
 ---
 # <a name="import-element-msbuild"></a>Import 要素 (MSBuild)
 1 つのプロジェクト ファイルの内容を別のプロジェクト ファイルにインポートします。  
@@ -55,10 +55,10 @@ ms.locfileid: "39077491"
 
 ### <a name="parent-elements"></a>親要素  
 
-|要素|説明|  
-|-------------|-----------------|  
-|[プロジェクト](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。|  
-|[ImportGroup](../msbuild/importgroup-element.md)|オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。|  
+| 要素 | 説明 |
+| - | - |
+| [プロジェクト](../msbuild/project-element-msbuild.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] プロジェクト ファイルの必須のルート要素です。 |
+| [ImportGroup](../msbuild/importgroup-element.md) | オプションの条件下でグループ化された `Import` 要素のコレクションが格納されます。 |
 
 ## <a name="remarks"></a>コメント  
  `Import` 要素を使用すると、複数のプロジェクト ファイルに共通するコードを再利用できます。 これにより、共有されたコードに対する更新が、そのコードをインポートしたすべてのプロジェクトに反映されるため、コードの保守が容易になります。  
@@ -75,7 +75,7 @@ ms.locfileid: "39077491"
 
 > [!NOTE]
 >  条件付き import ステートメントがコマンド ライン MSBuilds で動作するときは、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) の MSBuilds とは連携しません。 条件付きインポートは、プロジェクトを読み込むときに設定される構成およびプラットフォームの値を使用して評価されます。 その後、プロジェクト ファイルでの条件の再評価が必要となる変更 (プラットフォームの変更など) が加えられると、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] はプロパティと項目の条件を再評価します。ただし、インポートの条件の再評価は行いません。 インポート条件は再評価されないため、インポートはスキップされます。  
->   
+> 
 >  これを回避するには、*.targets* ファイルに条件付き import ステートメントを配置するか、[Choose 要素 (MSBuild)](../msbuild/choose-element-msbuild.md) ブロックなどの条件付きブロックにコードを配置します。  
 
 ## <a name="wildcards"></a>ワイルドカード  
