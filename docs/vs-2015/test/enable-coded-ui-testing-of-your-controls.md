@@ -13,12 +13,12 @@ ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
 caps.latest.revision: 24
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9883b266e74db115c57f0a7cc245889ed59a599d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e5ab2ca3e0f7d8f7006177f89c6850ce9882681a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247872"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848541"
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>コントロールのコード化された UI テストの有効化
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,15 +27,15 @@ ms.locfileid: "49247872"
   
  **このトピックの内容**  
   
-1.  [アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
+1. [アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#recordandplayback)  
   
-2.  [プロパティ プロバイダーの実装によってカスタム プロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
+2. [プロパティ プロバイダーの実装によってカスタム プロパティの検証をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#customproprties)  
   
-3.  [カスタム プロパティにアクセスするためのクラスを実装してコード生成をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
+3. [カスタム プロパティにアクセスするためのクラスを実装してコード生成をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#codegeneration)  
   
-4.  [操作フィルターの実装によって目的に応じた操作をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
+4. [操作フィルターの実装によって目的に応じた操作をサポートする](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](../test/media/cuit-full.png "CUIT_Full")  
+   ![CUIT&#95;Full](../test/media/cuit-full.png "CUIT_Full")  
   
 ##  <a name="recordandplayback"></a>アクセシビリティの実装によって記録と再生およびプロパティの検証をサポートする  
  コード化された UI テスト ビルダーは、記録時に出現したコントロールに関する情報をキャプチャし、そのセッションを再生するコードを生成します。 コントロールがユーザー補助をサポートしていない場合、コード化された UI テスト ビルダーは画面座標を使用して操作 (マウス クリックなど) をキャプチャします。 テストの再生時、生成されたコードは同じ画面座標にそれらのマウス クリックを表示します。 テストの再生時にコントロールが画面上の別の場所に表示される場合、生成されたコードはコントロールに対するその操作の実行に失敗します。 テストが異なる画面構成や異なる環境で再生される場合、または UI レイアウトが変更された後に再生される場合、これは失敗する可能性があります。  

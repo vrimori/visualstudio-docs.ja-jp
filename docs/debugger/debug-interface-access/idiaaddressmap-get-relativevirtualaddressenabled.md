@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::get_relativevirtualaddressenabled |Microsoft ドキュメント
+title: Idiaaddressmap::get_relativevirtualaddressenabled |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 25159556d44ca37d7938e67e67f1b9900a05010b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: aa61da69f30b759ade63798d681ae8036bcd8ece
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31458022"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849087"
 ---
 # <a name="idiaaddressmapgetrelativevirtualaddressenabled"></a>IDiaAddressMap::get_relativeVirtualAddressEnabled
 計算と相対仮想アドレス (RVA) の使用が有効かどうかを示します。  
@@ -37,12 +37,12 @@ HRESULT get_relativeVirtualAddressEnabled (
  [out]返します`TRUE`Rva の計算が有効になっている場合。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- セグメントの最初に読み込まれた PDB ファイルの場合は、Rva が有効にします。 呼び出して Rva の使用を一時的に無効、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ Rva は PDB ファイルのセグメントが最初に読み込まれているいる場合に有効です。 呼び出すことによって、Rva の使用を一時的に無効にできます、 [idiaaddressmap::put_relativevirtualaddressenabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)メソッド。  
   
- また、新しいイメージのヘッダーを呼び出すことによって確立できます、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドへの呼び出しに続けて、`put_relativeVirtualAddressEnabled`を新しいイメージのヘッダーを使用して Rva の使用を有効にするメソッド。  
+ 呼び出しても、新しいイメージのヘッダーを確立できる、 [idiaaddressmap::set_imageheaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドへの呼び出しに続けて、 `put_relativeVirtualAddressEnabled` Rva を新しいイメージ ヘッダーを使用して使用できるようにするメソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   

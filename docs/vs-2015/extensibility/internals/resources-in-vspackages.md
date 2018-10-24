@@ -17,12 +17,12 @@ ms.assetid: cc8c17a6-b190-4856-b001-0c1104f104b2
 caps.latest.revision: 24
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 073245be91c1689d0dd70d30207dc4dd809c578e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d032863677a24f377da8068b4a6e5565c5a2241c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49188580"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830679"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage のリソース
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -31,28 +31,28 @@ ms.locfileid: "49188580"
   
  Vspackage では、一部のリソースを埋め込むことができません。 次のマネージ型を埋め込むことができます。  
   
--   文字列  
+- 文字列  
   
--   (これはまた、文字列) パッケージ ロード キー  
+- (これはまた、文字列) パッケージ ロード キー  
   
--   ツール ウィンドウのアイコン  
+- ツール ウィンドウのアイコン  
   
--   コンパイル済みのコマンド テーブルの出力 (CTO) ファイル  
+- コンパイル済みのコマンド テーブルの出力 (CTO) ファイル  
   
--   CTO ビットマップ  
+- CTO ビットマップ  
   
--   コマンド ライン ヘルプ  
+- コマンド ライン ヘルプ  
   
--   ダイアログ ボックスのデータについて  
+- ダイアログ ボックスのデータについて  
   
- リソース ID を管理対象のパッケージ内のリソースが選択されています。 CTMENU 名前を指定する必要があります、CTO ファイルは例外です。 CTO ファイルとしてリソース テーブルには表示する必要があります、`byte[]`します。 その他のすべてのリソース項目は、型によって識別されます。  
+  リソース ID を管理対象のパッケージ内のリソースが選択されています。 CTMENU 名前を指定する必要があります、CTO ファイルは例外です。 CTO ファイルとしてリソース テーブルには表示する必要があります、`byte[]`します。 その他のすべてのリソース項目は、型によって識別されます。  
   
- 使用することができます、<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>に示すために属性[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]マネージ リソースが使用できることです。  
+  使用することができます、<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>に示すために属性[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]マネージ リソースが使用できることです。  
   
- [!code-csharp[VSSDKResources#1](../../snippets/csharp/VS_Snippets_VSSDK/vssdkresources/cs/vssdkresourcespackage.cs#1)]
- [!code-vb[VSSDKResources#1](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkresources/vb/vssdkresourcespackage.vb#1)]  
+  [!code-csharp[VSSDKResources#1](../../snippets/csharp/VS_Snippets_VSSDK/vssdkresources/cs/vssdkresourcespackage.cs#1)]
+  [!code-vb[VSSDKResources#1](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdkresources/vb/vssdkresourcespackage.vb#1)]  
   
- 設定<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>こうすることを示します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を使用して、リソースについては、検索するときは、アンマネージ サテライト Dll を無視する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>します。 場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]リソース ID が同じである 2 つ以上のリソースが検出した見つけた最初のリソースを使用します。  
+  設定<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>こうすることを示します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を使用して、リソースについては、検索するときは、アンマネージ サテライト Dll を無視する必要があります<xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>します。 場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]リソース ID が同じである 2 つ以上のリソースが検出した見つけた最初のリソースを使用します。  
   
 ## <a name="example"></a>例  
  次の例は、ツール ウィンドウ アイコンのマネージ表現です。  

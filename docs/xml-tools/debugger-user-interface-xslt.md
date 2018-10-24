@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df50443a4a86e1524f20fa61275364b7c6603fdf
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 6c2cedf1a07307b8494e6a6b810e9590f347c9f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39176025"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847384"
 ---
 # <a name="debugger-user-interface-xslt"></a>デバッガー ユーザー インターフェイス (XSLT)
 
@@ -41,7 +41,7 @@ ms.locfileid: "39176025"
  [ローカル] ウィンドウには、XSLT 変換のコンテキストを追跡する定義済みのコンテキスト変数も表示されます。 XSLT デバッガーが使用する定義済みのコンテキスト変数について次の表で説明します。
 
 |名前|説明|
-|----------|-----------------|
+|-|-----------------|
 |`last()`|コンテキスト サイズです。|
 |`position()`|コンテキスト サイズを基準としたコンテキスト ノードの位置、つまりインデックス番号です。|
 |`self::node()`|コンテキスト ノードの値です。|

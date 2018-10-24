@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread |Microsoft ドキュメント
+title: IDebugEngineProgram2::WatchForExpressionEvaluationOnThread |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3f89502beeb1e8165450c7c07f3f55f83dd39e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed77975e1a1d337354e7ac743e4b47e3c84ed701
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112332"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855815"
 ---
 # <a name="idebugengineprogram2watchforexpressionevaluationonthread"></a>IDebugEngineProgram2::WatchForExpressionEvaluationOnThread
-プログラムが停止された場合でも、特定のスレッドで発生する式の評価を許可 (または許可されていません) します。  
+プログラムが停止された場合でも、特定のスレッドで発生する式の評価を許可 (または許可されていません)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,27 +49,27 @@ int WatchForExpressionEvaluationOnThread(
   
 #### <a name="parameters"></a>パラメーター  
  `pOriginatingProgram`  
- [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)式の評価は、プログラムを表すオブジェクト。  
+ [in][IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)式の評価プログラムを表すオブジェクト。  
   
  `dwTid`  
  [in]スレッドの識別子を指定します。  
   
  `dwEvalFlags`  
- [in]フラグの組み合わせ、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)評価を実行する方法を指定する列挙体です。  
+ [in]フラグの組み合わせ、 [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)評価を実行する方法を指定する列挙体。  
   
  `pExprCallback`  
- [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)式の評価中に発生するデバッグ イベントを送信するために使用するオブジェクト。  
+ [in][IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)式の評価中に発生するデバッグ イベントの送信に使用するオブジェクト。  
   
  `fWatch`  
- [in]0 以外の場合 (`TRUE`)、によって識別される、スレッドで式の評価は、`dwTid`以外の場合、0 (`FALSE`) そのスレッドで式の評価は許可されていません。  
+ [in]0 以外の場合 (`TRUE`)、式の評価で識別されるスレッドで使用できるように`dwTid`、それ以外の 0 (`FALSE`) そのスレッドで式の評価を許可されていません。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- セッション デバッグ マネージャー (SDM) によって識別される、プログラムを要求するときに、`pOriginatingProgram`パラメーターを式の評価にこのメソッドを呼び出すことによって接続されている他のすべてのプログラムに通知します。  
+## <a name="remarks"></a>Remarks  
+ セッション デバッグ マネージャー (SDM) がで識別される、プログラムを確認するときに、`pOriginatingProgram`パラメーターを指定する式を評価するこのメソッドを呼び出すことによって接続されている他のすべてのプログラムに通知します。  
   
- 1 つのプログラムに式の評価が原因で、コードの関数の評価またはいずれかの評価のため、別の実行が`IDispatch`プロパティです。 このためは、このメソッドを実行し、場合でも、このプログラムにスレッドを停止する可能性があります完了の式の評価を使用します。  
+ 1 つのプログラムに式の評価が原因で、コードの関数の評価またはいずれかの評価のため、別の実行が`IDispatch`プロパティ。 このため、このメソッドは、式の評価を実行して完了場合でも、このプログラムでは、スレッドを停止する可能性がありますを使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   

@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 883c2ce82dc1c4b1d8d17d9be57ced0e598840e1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4e48bac812f8d87b7e65b6a2a5832a7a36e4f95c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49293684"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860358"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "49293684"
   
 #### <a name="to-set-the-controls-to-be-created-for-data-tables-or-objects"></a>データ テーブルまたはオブジェクトに対して作成されるコントロールを設定するには  
   
-1.  WPF デザイナーまたは Windows フォーム デザイナーが開いていることを確認します。  
+1. WPF デザイナーまたは Windows フォーム デザイナーが開いていることを確認します。  
   
-2.  **データソース**ウィンドウで、データ テーブルを表す項目を選択するかを設定するオブジェクトします。  
+2. **データソース**ウィンドウで、データ テーブルを表す項目を選択するかを設定するオブジェクトします。  
   
-3.  項目のドロップダウン メニューをクリックし、メニューの次の項目のいずれかをクリックします。  
+3. 項目のドロップダウン メニューをクリックし、メニューの次の項目のいずれかをクリックします。  
   
-    -   個別のコントロールに各データ フィールドを表示する**詳細**します。 データ項目をデザイナーにドラッグすると、このアクションにより、親のデータ テーブルまたはオブジェクトの列またはプロパティごとに異なるデータ バインド コントロールが作成され、各コントロールのラベルが作成されます。  
+   - 個別のコントロールに各データ フィールドを表示する**詳細**します。 データ項目をデザイナーにドラッグすると、このアクションにより、親のデータ テーブルまたはオブジェクトの列またはプロパティごとに異なるデータ バインド コントロールが作成され、各コントロールのラベルが作成されます。  
   
-    -   一覧で、選択して、別のコントロールをなど 1 つのコントロールでは、すべてのデータを表示するに**DataGrid**または**一覧**WPF アプリケーション、または**DataGridView** Windows フォームでアプリケーション。  
+   - 一覧で、選択して、別のコントロールをなど 1 つのコントロールでは、すべてのデータを表示するに**DataGrid**または**一覧**WPF アプリケーション、または**DataGridView** Windows フォームでアプリケーション。  
   
      利用可能なコントロールの一覧は、デザイナーが開いている、.NET Framework のバージョン、プロジェクトのターゲットは依存し、そのサポートへのデータ バインディングを制御するかどうかを追加したカスタム、**ツールボックス**します。 作成するコントロールが利用できるコントロールのリストに含まれている場合、コントロールをリストに追加できます。 詳細については、次を参照してください。[データ ソース ウィンドウにカスタム コントロールを追加](../data-tools/add-custom-controls-to-the-data-sources-window.md)します。  
   

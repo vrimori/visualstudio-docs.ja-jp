@@ -9,12 +9,12 @@ description: 別名またはフレンドリ名の使用でサインインに失�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: d05ecb8645b9970b08ad15418a43a5c95f8b2c3c
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 48faa1ce2e002b6a21c3e467db627d9c08bec2e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39637683"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854469"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>別名を使用した Visual Studio サブスクリプションへのサインインが失敗する場合がある
 
@@ -116,10 +116,10 @@ Visual Studio サブスクリプションが割り当てられました。  http
 1. https://my.visualstudio.com にアクセスして、**[新しい Microsoft アカウントを作成する]** をクリックします。
 
 2. フィールドに入力します。
-    - Someone@example.com ボックスにウェルカム メールを受信したメール アドレスを入力します。
-    - パスワードを作成します。
-    - キャンペーンの設定を選択します。
-    - **[次へ]** をクリックします。
+   - Someone@example.com ボックスにウェルカム メールを受信したメール アドレスを入力します。
+   - パスワードを作成します。
+   - キャンペーンの設定を選択します。
+   - **[次へ]** をクリックします。
 
 3. 検証手順を実行して、**[次へ]** をクリックします。
 
@@ -135,16 +135,16 @@ Visual Studio サブスクリプションが割り当てられました。  http
 
 %サブスクライバー名% 様
 
-Visual Studio サブスクリプションが割り当てられ、ウェルカム メールでは、https://my.visualstudio.com にログインするように指示されています。  これは特典を使用する場合の Web サイトで、当組織では、サイトにアクセスする前に、いくつか追加手順を実行していただく必要があります。  次の指示に従って、弊社のメール アドレスに関連付けられる "Microsoft アカウント" を作成してください。  これらの手順が完了したら、ご自分のメール アドレスを使用してサブスクリプションの特典にアクセスします。
+Visual Studio サブスクリプションが割り当てられ、ウェルカム メールでは、 https://my.visualstudio.com にログインするように指示されています。  これは特典を使用する場合の Web サイトで、当組織では、サイトにアクセスする前に、いくつか追加手順を実行していただく必要があります。  次の指示に従って、弊社のメール アドレスに関連付けられる "Microsoft アカウント" を作成してください。  これらの手順が完了したら、ご自分のメール アドレスを使用してサブスクリプションの特典にアクセスします。
 1. https://my.visualstudio.com にアクセスします。
 
 2. 右側で [新しい Microsoft アカウントを作成する] をクリックします。
 
 3. フォームに入力します。
-    - someone@example.com ボックスには会社のメール アドレスを使用します。
-    - パスワードを入力します。
-    - キャンペーンを選択します。
-    - [次へ] をクリックします。
+   - someone@example.com ボックスには会社のメール アドレスを使用します。
+   - パスワードを入力します。
+   - キャンペーンを選択します。
+   - [次へ] をクリックします。
 
 4. アカウントの検証手順を完了します。
 
@@ -152,7 +152,7 @@ Visual Studio サブスクリプションが割り当てられ、ウェルカム
 
 6. これで特典が表示されます。
 
-注: 将来、https://my.visualstudio.com にアクセスしたときに、使用するアカウント ("職場または学校アカウント" または "個人用アカウント" など) を選択するように求められる場合があります。  上記の手順を実行したら、"個人用アカウント" オプションを利用する必要があります。
+注: 将来、 https://my.visualstudio.com にアクセスしたときに、使用するアカウント ("職場または学校アカウント" または "個人用アカウント" など) を選択するように求められる場合があります。  上記の手順を実行したら、"個人用アカウント" オプションを利用する必要があります。
 
 問題がある場合は、サポート チームにお問い合わせください (https://visualstudio.microsoft.com/subscriptions/support/)。
 

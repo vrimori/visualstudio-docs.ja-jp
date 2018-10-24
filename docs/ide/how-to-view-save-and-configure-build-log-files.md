@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1888e2244182296ad2c5375d0055583dda69e592
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2b745a9e74fd4016db60883b06091a33c6d30d52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31944974"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860670"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>方法: ビルド ログ ファイルを表示、保存、および構成する
 
@@ -44,7 +44,7 @@ MSBuild を使用して任意の種類のプロジェクトをビルドする場
 3.  **[MSBuild プロジェクト ビルドの出力の詳細]** の一覧で、次の値のいずれかを選択し、**[OK]** ボタンを選択します。
 
     |詳細レベル|説明|
-    |---------------------|-----------------|
+    | - |-----------------|
     |**非表示**|ビルドの概要のみを表示します。|
     |**最小限**|ビルドの概要と、重要度 - 高として分類されたエラー、警告、メッセージを表示します。|
     |**標準**|ビルドの概要と、重要度 - 高として分類されたエラー、警告、およびメッセージと、ビルドの主なステップとを表示します。 この詳細レベルを最も頻繁に使用します。|

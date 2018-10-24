@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7af41e9e66c22e514961dc888a42153c078667cf
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 28b42e5178808a86faff33dbb887500b8979123b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857782"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811922"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Modeling SDK for Visual Studio - ドメイン固有言語
 Modeling SDK for Visual Studio を使用して、Visual Studio に統合できる強力なモデル ベースの開発ツールを作成できます。 同様に、1 つ以上のモデル定義を作成して、一連のツールと統合できます。
@@ -26,17 +26,17 @@ Modeling SDK for Visual Studio を使用して、Visual Studio に統合でき�
 
  MSDK では、ドメイン固有言語 (DSL) の形式でモデルを迅速に開発できます。 グラフィカルな表記と共にスキーマまたは抽象構文を定義する専用のエディターを使用することから始めます。 この定義から、VMSDK は次を生成します。
 
--   トランザクション ベースのストアで実行する厳密に型指定された API によるモデル実装。
+- トランザクション ベースのストアで実行する厳密に型指定された API によるモデル実装。
 
--   ツリー ベースのエクスプローラー。
+- ツリー ベースのエクスプローラー。
 
--   定義するモデルまたは一部をユーザーが表示できるグラフィカル エディター。
+- 定義するモデルまたは一部をユーザーが表示できるグラフィカル エディター。
 
--   読み取り可能な XML にモデルを保存するシリアル化メソッド。
+- 読み取り可能な XML にモデルを保存するシリアル化メソッド。
 
--   テキスト テンプレートを使用して、プログラム コードとその他の成果物を生成するための機能。
+- テキスト テンプレートを使用して、プログラム コードとその他の成果物を生成するための機能。
 
- これらのすべての機能をカスタマイズおよび拡張できます。 拡張した機能は、統合後も DSL 定義を更新でき、拡張した機能を失うことなく機能を再生成できるように統合されています。
+  これらのすべての機能をカスタマイズおよび拡張できます。 拡張した機能は、統合後も DSL 定義を更新でき、拡張した機能を失うことなく機能を再生成できるように統合されています。
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

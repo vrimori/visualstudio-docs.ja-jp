@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6924ff846da2ca7fb3ad7591f6d1c8e07f89b0d
-ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
+ms.openlocfilehash: eeacfb15b02c19ea4a166fbc8511aab644d41ea5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42626903"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861411"
 ---
 # <a name="profile-memory-usage-in-visual-studio"></a>Visual Studio でのメモリ使用のプロファイリング
 デバッガーに統合された**メモリ使用量**診断ツールを使用したデバッグ中に、メモリ リークおよび非効率的なメモリを見つけます。 メモリ使用量ツールを使うと、マネージド メモリ ヒープとネイティブ メモリ ヒープの 1 つまたは複数の "*スナップショット*" を取得して、オブジェクト型のメモリ使用量への影響を理解するのに役立てることができます。 .NET アプリ、ネイティブ アプリ、または混在モード (.NET とネイティブ) アプリのスナップショットを収集できます。  
@@ -101,14 +101,14 @@ ms.locfileid: "42626903"
 
 メモリ使用量を分析するには、リンクを 1 つクリックして、メモリ使用量の詳細なレポートを開きます。  
 
--   現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
+- 現在のスナップショットと前のスナップショットの相違点の詳細を表示するには、矢印の左にある変更リンクを選択します (![メモリ使用量増加](../profiling/media/prof-tour-mem-usage-up-arrow.png "メモリ使用量増加"))。 赤い矢印はメモリ使用量が増加したことを示し、緑の矢印は減少したことを示しています。
 
-    > [!TIP]
-    >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンクをクリック) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンクをクリック) に並べ替えられています。
+  > [!TIP]
+  >  より迅速にメモリの問題を識別するために、Diff レポートは、総数が最も増加したオブジェクト型の順 (**[オブジェクト (相違)]** 列の変更リンクをクリック) や、総ヒープ サイズが最も増加したオブジェクト型の順 (**[ヒープ サイズ (相違)]** 変更リンクをクリック) に並べ替えられています。
 
--   選択したスナップショットのみの詳細を表示するには、変更リンクではないリンクをクリックします。 
+- 選択したスナップショットのみの詳細を表示するには、変更リンクではないリンクをクリックします。 
   
- レポートが新しいウィンドウに表示されます。   
+  レポートが新しいウィンドウに表示されます。   
   
 ### <a name="managed-types-reports"></a>マネージド型レポート  
  メモリ使用量の概要テーブルで、**[オブジェクト (相違)]** または **[割り当て (相違)]** セルの現在のリンクを選択します。  
@@ -148,23 +148,23 @@ ms.locfileid: "42626903"
   
 ### <a name="change-diff-reports"></a>変更 (Diff) レポート  
   
--   **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
+- **[診断ツール]** ウィンドウの **[メモリ使用量]** タブで、概要テーブルのセルにある変更リンクを選択します。  
   
-     ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
+   ![変更 &#40;差分&#41; レポートの選択](../profiling/media/dbgdiag_mem_choosediffreport.png "DBGDIAG_MEM_ChooseDiffReport")  
   
--   マネージド レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
+- マネージド レポート、もしくはネイティブ レポートの **[比較対象]** 一覧でスナップショットを選択します。  
   
-     ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
+   ![比較対象の一覧からスナップショットを選択](../profiling/media/dbgdiag_mem_choosecompareto.png "DBGDIAG_MEM_ChooseCompareTo")  
   
- 変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)** のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
+  変更レポートを実行すると、基本のスナップショット値と比較のスナップショットの差分を表示する列 ( **(Diff)** のマークが付けられる) が、基本レポートに追加されます。 ネイティブ型の差分レポート ビューは次のようになります。  
   
- ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
+  ![ネイティブ型の差分ビュー](../profiling/media/dbgdiag_mem_native_typesviewdiff.png "DBGDIAG_MEM_Native_TypesViewDiff")  
   
 ## <a name="blogs-and-videos"></a>ブログとビデオ  
 
-|         |         |
+| | |
 |---------|---------|
-|  ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る")  |    診断ツールの使い方については、Visual Studio 2017 でのメモリ使用量と CPU 使用量を分析する方法がわかる[こちらのビデオ](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171)をご覧ください。 |
+| ![ビデオのムービー カメラ アイコン](../install/media/video-icon.png "ビデオを見る") | 診断ツールの使い方については、Visual Studio 2017 でのメモリ使用量と CPU 使用量を分析する方法がわかる[こちらのビデオ](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Profiling-with-Diagnostics-Tools-in-Visual-Studio-2017-daHnzMD6D_9211787171)をご覧ください。 |
 
  [デバッグ中に CPU とメモリを分析する](https://blogs.msdn.microsoft.com/visualstudio/2016/02/15/analyze-cpu-memory-while-debugging/)  
   

@@ -15,23 +15,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f286acae2996451688b0e1a40c4d758c4de8caf6
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 145bc3c4301b337a0f882b3893910ad5bb2fc2ac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672694"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857849"
 ---
 # <a name="visual-studio-tools-for-office-runtime-installation-scenarios"></a>Visual Studio のツール for Office runtime のインストール シナリオ
   3 つの方法で、Visual Studio 2010 Tools for Office ランタイムをインストールすることができます。  
   
--   Visual Studio のインストール時。  
+- Visual Studio のインストール時。  
   
--   Microsoft Office のインストール時。  
+- Microsoft Office のインストール時。  
   
--   Visual Studio 2010 Tools for Office ランタイム再頒布可能パッケージをインストールするとします。  
+- Visual Studio 2010 Tools for Office ランタイム再頒布可能パッケージをインストールするとします。  
   
- インストールされるランタイム コンポーネントは、コンピューターの構成およびインストール シナリオによって異なります。  
+  インストールされるランタイム コンポーネントは、コンピューターの構成およびインストール シナリオによって異なります。  
   
 ## <a name="runtime-components-that-are-installed-in-each-installation-scenario"></a>各インストール シナリオでインストールされているランタイム コンポーネント  
  Visual Studio 2010 Tools for Office ランタイムが 3 つのコンポーネント: Office ソリューション ローダー、.NET Framework 3.5 の Office 拡張機能および用の Office 拡張機能、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]またはそれ以降。 ランタイムをインストールすると、常に Office ソリューション ローダーがインストールされます。 .NET Framework 用の Office 拡張機能のインストールは、コンピューターの構成およびインストール シナリオによって異なります。 最初にランタイムをインストールするときにどちらかの Office 拡張機能をインストールできない場合、後で特定の要件を満たすと、インストールされていない Office 拡張機能がランタイムによって自動的にインストールされます。 ランタイムのこの機能は呼*オンデマンド インストール*します。  
@@ -39,7 +39,7 @@ ms.locfileid: "35672694"
  各ランタイム インストールのシナリオで、既定でインストールされるランタイム コンポーネントを次の表に示します。 各シナリオの詳細については、後で説明します。  
   
 |ランタイムのインストール シナリオ|Office ソリューション ローダー|.NET Framework 3.5 用の Office 拡張機能|[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] の Office 拡張機能|[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] の Office 拡張機能|  
-|-----------------------------------|----------------------------|--------------------------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------|  
+|-----------------------------------|----------------------------|--------------------------------------------------| - |---------------------------------------------------------------------------|  
 |[!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 以降を使用する場合|はい|○ (.NET Framework Version 3.5 がインストール済みの場合)|はい|はい|  
 |[!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] を使用する場合|はい|○ (.NET Framework Version 3.5 がインストール済みの場合)|いいえ|いいえ|  
 |Office 2010 Service Pack 1 (SP1) 以降を使用する場合|はい|○ (.NET Framework Version 3.5 がインストール済みの場合)|○ ([!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] がインストール済みの場合)|いいえ|  

@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b5e0d79b164c521bd3e0da53738d49451ff2a7af
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 3ab011487f33438091eb963c9ea4a7e1d1c80ec4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749984"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856276"
 ---
 # <a name="da0006-override-equals-for-value-types"></a>DA0006: 値の型で Equals() をオーバーライドしてください
+
 |||  
 |-|-|  
 |規則 ID|DA0006|  
@@ -30,14 +31,14 @@ ms.locfileid: "34749984"
 |プロファイル方法|サンプリング|  
 |メッセージ|値の型で Equals と等値演算子をオーバーライドしてください。|  
 |メッセージの種類|警告|  
-  
+
 ## <a name="cause"></a>原因  
  パブリック値型の Equals メソッドまたは等値演算子の呼び出しが、プロファイリング データの大きな割合を占めています。 さらに効率的な方法を実装することを検討してください。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  値型の場合、Equals を継承した実装が <xref:System.Reflection> ライブラリを使用して、この種類のすべてのフィールドの内容を比較します。 Reflection は計算コストが高いため、場合によってはすべてのフィールドで等値性を比較する必要はありません。 ユーザーがインスタンスの比較または並べ替えを行うことや、ハッシュ テーブル キーとしてインスタンスを使用することが予想される場合には、値型に Equals を実装する必要があります。 お使いのプログラミング言語が演算子のオーバーロードに対応している場合、等値演算子と非等値演算子も実装してください。  
-  
+
  Equals と等値演算子をオーバーライドする方法については、[Equals および等値演算子 (==) 実装のガイドライン](http://go.microsoft.com/fwlink/?LinkId=177818)を参照してください。  
-  
+
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  Equals と等値演算子の実装例については、コード分析ルールの「[CA1815: equals および operator equals を値型でオーバーライドします](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)」を参照してください。

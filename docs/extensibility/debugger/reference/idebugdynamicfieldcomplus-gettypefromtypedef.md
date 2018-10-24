@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef |Microsoft ドキュメント
+title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7143892f71a798db1aa9f922a64eac320f973eb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0238da9c435fcfc02aacf00e4e54459d0fc59c10
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109845"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853232"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-指定したトークンの種類を取得します。  
+そのトークンを指定する型を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,13 +52,13 @@ int GetTypeFromTypeDef(
  [in]モジュールの一意の識別子。  
   
  `tokClass`  
- [in]トークンを表す型。  
+ [in]トークン型を表します。  
   
  `ppType`  
  [out]返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)型を含むオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

@@ -1,5 +1,5 @@
 ---
-title: DEBUG_PROPERTY_INFO |Microsoft ドキュメント
+title: DEBUG_PROPERTY_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4466d74d0e19b898b3c377c67a14f7c39922d915
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 612865d08142a56b2908707839ad66b60ea2de9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31103462"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847098"
 ---
 # <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
-デバッグのプロパティに関する情報が含まれています。  
+デバッグ プロパティについてを説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ public struct DEBUG_PROPERTY_INFO {
   
 ## <a name="members"></a>メンバー  
  dwValidFields  
- フラグの組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)のどのフィールドが入力を指定する列挙です。  
+ フラグの組み合わせ、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)どのフィールドに入力を指定する列挙体。  
   
  bstrFullName  
  プロパティの完全名。  
@@ -68,17 +68,17 @@ public struct DEBUG_PROPERTY_INFO {
  書式設定された文字列としてプロパティ値です。  
   
  プロパティ  
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)この構造体で記述するオブジェクト。  
+ [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)この構造体で表されるオブジェクト。  
   
  dwAttrib  
  フラグの組み合わせ、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)このプロパティの属性を説明する列挙です。  
   
-## <a name="remarks"></a>コメント  
- プロパティは、名前、型、および値を持つ階層的な性質のオブジェクトです。 たとえば、プロパティには、ローカル変数、パラメーター、変数のウォッチと式、およびレジスタを記述できます。  
+## <a name="remarks"></a>Remarks  
+ プロパティは、名前、型、および値を持つ階層的な性質のオブジェクトです。 たとえば、プロパティには、ローカル変数、パラメーター、ウォッチ変数と式、およびレジスタを記述できます。  
   
- この構造体に渡される、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)で塗り分けはメソッドです。 この構造体がこの構造体からのリストの一部としても返されます、 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)インターフェイス、さらへの呼び出しから返される、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)と[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッドです。  
+ この構造体に渡される、 [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)メソッドでいっぱいになった場所。 この構造体がこの構造体からの一覧の一部としても返されます、 [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)インターフェイスをさらへの呼び出しから返される、 [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)と[EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

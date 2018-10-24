@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ceba7b3fd59c571b3541385cf6cd3946796a8e74
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 1484466e3d1b1a43a6ff28c2526dbb478ef7392d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079419"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853286"
 ---
 # <a name="build-clickonce-applications-from-the-command-line"></a>コマンドラインから ClickOnce アプリケーションを構築します。
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]、統合開発環境 (IDE) で作成される場合でも、コマンドラインからプロジェクトをビルドできます。 実際で作成されたプロジェクトを再構築する[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]のみを持つ別のコンピューターで、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]をインストールします。 自動化されたプロセスを使用してビルドを再現することができます、たとえば、中央のビルド ラボまたはを使用して高度なスクリプティング プロジェクト自体のビルドの範囲外の手法です。  
@@ -43,39 +43,39 @@ ms.locfileid: "39079419"
   
 #### <a name="to-create-and-publish-a-clickonce-project"></a>作成して、ClickOnce プロジェクトを発行するには  
   
-1.  クリックして**新しいプロジェクト**から、**ファイル**メニュー。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+1. クリックして**新しいプロジェクト**から、**ファイル**メニュー。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  選択**Windows アプリケーション**名前を付けます`CmdLineDemo`します。  
+2. 選択**Windows アプリケーション**名前を付けます`CmdLineDemo`します。  
   
-3.  **ビルド** メニューのをクリックして、**発行**コマンド。  
+3. **ビルド** メニューのをクリックして、**発行**コマンド。  
   
-     この手順により、プロジェクトが生成するために正しく構成されている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションの展開。  
+    この手順により、プロジェクトが生成するために正しく構成されている、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションの展開。  
   
-     発行ウィザードが表示されます。  
+    発行ウィザードが表示されます。  
   
-4.  発行ウィザードで、**完了**します。  
+4. 発行ウィザードで、**完了**します。  
   
-     Visual Studio を生成すると呼ばれる既定の Web ページを表示*Publish.htm*します。  
+    Visual Studio を生成すると呼ばれる既定の Web ページを表示*Publish.htm*します。  
   
-5.  プロジェクトを保存しが格納されているフォルダーの場所をメモしておきます。  
+5. プロジェクトを保存しが格納されているフォルダーの場所をメモしておきます。  
   
- 上記の手順では、作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクトは、最初に公開されています。 IDE の外部でビルドを再現できます。  
+   上記の手順では、作成、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクトは、最初に公開されています。 IDE の外部でビルドを再現できます。  
   
 #### <a name="to-reproduce-the-build-from-the-command-line"></a>コマンドラインからビルドを再現するには  
   
-1.  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] を終了します。  
+1. [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] を終了します。  
   
-2.  Windows から**開始** メニューのをクリックして**すべてのプログラム**、し**Microsoft Visual Studio**、し**Visual Studio Tools**、し**Visual Studio コマンド プロンプト**します。 コマンド プロンプトを開き、現在のユーザーのルート フォルダーでこの必要があります。  
+2. Windows から**開始** メニューのをクリックして**すべてのプログラム**、し**Microsoft Visual Studio**、し**Visual Studio Tools**、し**Visual Studio コマンド プロンプト**します。 コマンド プロンプトを開き、現在のユーザーのルート フォルダーでこの必要があります。  
   
-3.  **Visual Studio コマンド プロンプト**、先ほどビルドしたプロジェクトの場所を現在のディレクトリを変更します。 たとえば、「`chdir My Documents\Visual Studio\Projects\CmdLineDemo`します。  
+3. **Visual Studio コマンド プロンプト**、先ほどビルドしたプロジェクトの場所を現在のディレクトリを変更します。 たとえば、「 `chdir My Documents\Visual Studio\Projects\CmdLineDemo`」と入力します。  
   
-4.  生成された既存のファイルを削除する"を作成および公開を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクト"型`rmdir /s publish`します。  
+4. 生成された既存のファイルを削除する"を作成および公開を[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]プロジェクト"型`rmdir /s publish`します。  
   
-     この手順は省略可能では、新しいファイルすべてによって生成されたコマンド ライン ビルドになります。  
+    この手順は省略可能では、新しいファイルすべてによって生成されたコマンド ライン ビルドになります。  
   
-5.  「`msbuild /target:publish`」と入力します。  
+5. 「`msbuild /target:publish`」と入力します。  
   
- 上記の手順は、完全な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]という名前のプロジェクトのサブフォルダーに、アプリケーションの展開**発行**します。 *CmdLineDemo.application*は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 フォルダー *CmdLineDemo_1.0.0.0*ファイルを含む*CmdLineDemo.exe*と*CmdLineDemo.exe.manifest*、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 *Setup.exe*ブートス トラップ、既定でインストールするように構成するには、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
+   上記の手順は、完全な[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]という名前のプロジェクトのサブフォルダーに、アプリケーションの展開**発行**します。 *CmdLineDemo.application*は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]配置マニフェスト。 フォルダー *CmdLineDemo_1.0.0.0*ファイルが含まれています*CmdLineDemo.exe*と*CmdLineDemo.exe.manifest*、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェストです。 *Setup.exe*ブートス トラップ、既定でインストールするように構成するには、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 DotNetFX フォルダーには再頒布可能パッケージが含まれています、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。 これは、Web 上または UNC パスまたは CD または DVD を使用して、アプリケーションをデプロイする必要があるファイルのセット全体です。  
   
 ## <a name="publish-properties"></a>プロパティをパブリッシュします。  
  上記の手順で、アプリケーションを発行するとき、次のプロパティは、発行ウィザードによって、プロジェクト ファイルに挿入されます。 これらのプロパティに直接影響を与える方法、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションが生成されます。  
@@ -110,51 +110,51 @@ msbuild /target:publish /property:BootstrapperEnabled=false
   
  発行プロパティを制御[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]から、**発行**、**セキュリティ**、および**署名**のプロパティ ページ、**プロジェクト デザイナー**. アプリケーション デザイナーのさまざまなプロパティ ページで設定する各方法を示す値と共に、発行のプロパティの説明を次に示します。  
   
--   `AssemblyOriginatorKeyFile` 署名に使用されるキー ファイルを指定します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 これと同じキーをアセンブリに厳密な名前を割り当てることも可能性があります。 このプロパティが設定されて、**署名**のページ、**プロジェクト デザイナー**します。  
+- `AssemblyOriginatorKeyFile` 署名に使用されるキー ファイルを指定します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 これと同じキーをアセンブリに厳密な名前を割り当てることも可能性があります。 このプロパティが設定されて、**署名**のページ、**プロジェクト デザイナー**します。  
   
- 次のプロパティが設定、**セキュリティ**ページ。  
+  次のプロパティが設定、**セキュリティ**ページ。  
   
--   **ClickOnce のセキュリティ設定を有効にする**決定かどうか[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストが生成されます。 プロジェクトが最初に作成されると、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストの生成が既定ではオフです。 ウィザードには、最初に発行するときにこのフラグは自動的に起動します。  
+- **ClickOnce のセキュリティ設定を有効にする**決定かどうか[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストが生成されます。 プロジェクトが最初に作成されると、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]マニフェストの生成が既定ではオフです。 ウィザードには、最初に発行するときにこのフラグは自動的に起動します。  
   
--   **TargetZone**に出力する信頼のレベルを決定する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 指定できる値は、"Internet"、"LocalIntranet"および"Custom"には。 設定を生成する既定のアクセス許可を原因は Internet、LocalIntranet、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 LocalIntranet は、既定値と完全な信頼を基本的に意味します。 カスタム ベースで明示的に指定されたアクセス許可のみが指定*app.manifest*ファイルに出力するのには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 *App.manifest*ファイルは、信頼情報の定義だけを含む部分的なマニフェスト ファイル。 隠しファイルを自動的にプロジェクトに追加のアクセス許可を構成するときに、**セキュリティ**ページ。  
+- **TargetZone**に出力する信頼のレベルを決定する、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 指定できる値は、"Internet"、"LocalIntranet"および"Custom"には。 設定を生成する既定のアクセス許可を原因は Internet、LocalIntranet、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 LocalIntranet は、既定値と完全な信頼を基本的に意味します。 カスタム ベースで明示的に指定されたアクセス許可のみが指定*app.manifest*ファイルに出力するのには、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション マニフェスト。 *App.manifest*ファイルは、信頼情報の定義だけを含む部分的なマニフェスト ファイル。 隠しファイルを自動的にプロジェクトに追加のアクセス許可を構成するときに、**セキュリティ**ページ。  
   
- 次のプロパティが設定、**発行**ページ。  
+  次のプロパティが設定、**発行**ページ。  
   
--   `PublishUrl` IDE でする場所、アプリケーションを発行する場所です。 挿入される、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]どちらの場合、アプリケーション マニフェスト、`InstallUrl`または`UpdateUrl`プロパティを指定します。  
+- `PublishUrl` IDE でする場所、アプリケーションを発行する場所です。 挿入される、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]どちらの場合、アプリケーション マニフェスト、`InstallUrl`または`UpdateUrl`プロパティを指定します。  
   
--   `ApplicationVersion` バージョンを指定します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 これは、4 桁のバージョン番号です。 最後の桁がある場合、"*"を`ApplicationRevision`ビルド時に、マニフェストに挿入された値の代わりに使用します。  
+- `ApplicationVersion` バージョンを指定します、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。 これは、4 桁のバージョン番号です。 最後の桁がある場合、"*"を`ApplicationRevision`ビルド時に、マニフェストに挿入された値の代わりに使用します。  
   
--   `ApplicationRevision` リビジョンを指定します。 これは、IDE に発行するたびにインクリメントされる整数です。 に対して自動的にインクリメントされていないことをビルド コマンドラインで実行します。  
+- `ApplicationRevision` リビジョンを指定します。 これは、IDE に発行するたびにインクリメントされる整数です。 に対して自動的にインクリメントされていないことをビルド コマンドラインで実行します。  
   
--   `Install` アプリケーションがインストールされているアプリケーションまたは Web からの実行アプリケーションかどうかを判断します。  
+- `Install` アプリケーションがインストールされているアプリケーションまたは Web からの実行アプリケーションかどうかを判断します。  
   
--   `InstallUrl` ユーザーがアプリケーションのインストール場所は、(非表示)。 指定した場合にこの値の書き込み時に、 *setup.exe*ブートス トラップ場合、`IsWebBootstrapper`プロパティが有効になっています。 アプリケーション マニフェストの場合にも挿入される、`UpdateUrl`が指定されていません。  
+- `InstallUrl` ユーザーがアプリケーションのインストール場所は、(非表示)。 指定した場合にこの値の書き込み時に、 *setup.exe*ブートス トラップ場合、`IsWebBootstrapper`プロパティが有効になっています。 アプリケーション マニフェストの場合にも挿入される、`UpdateUrl`が指定されていません。  
   
--   `SupportUrl` (非表示) は、場所にリンクされて、**プログラムの追加/削除**インストールされたアプリケーションのダイアログ ボックス。  
+- `SupportUrl` (非表示) は、場所にリンクされて、**プログラムの追加/削除**インストールされたアプリケーションのダイアログ ボックス。  
   
- 次のプロパティで設定されます、**アプリケーションの更新プログラム** ダイアログ ボックスから、**発行**ページ。  
+  次のプロパティで設定されます、**アプリケーションの更新プログラム** ダイアログ ボックスから、**発行**ページ。  
   
--   `UpdateEnabled` アプリケーションの更新プログラムを確認するかどうかを示します。  
+- `UpdateEnabled` アプリケーションの更新プログラムを確認するかどうかを示します。  
   
--   `UpdateMode` 更新プログラムのフォア グラウンドまたはバック グラウンド更新のいずれかを指定します。  
+- `UpdateMode` 更新プログラムのフォア グラウンドまたはバック グラウンド更新のいずれかを指定します。  
   
--   `UpdateInterval` アプリケーションの更新プログラムを確認する頻度を指定します。  
+- `UpdateInterval` アプリケーションの更新プログラムを確認する頻度を指定します。  
   
--   `UpdateIntervalUnits` 指定するかどうか、`UpdateInterval`時間、日、または週単位の値は。  
+- `UpdateIntervalUnits` 指定するかどうか、`UpdateInterval`時間、日、または週単位の値は。  
   
--   `UpdateUrl` (非表示) は、アプリケーションが更新プログラムを受信場所です。 指定した場合、この値は、アプリケーション マニフェストに挿入されます。  
+- `UpdateUrl` (非表示) は、アプリケーションが更新プログラムを受信場所です。 指定した場合、この値は、アプリケーション マニフェストに挿入されます。  
   
--   次のプロパティで設定されます、**発行オプション** ダイアログ ボックスから、**発行**ページ。  
+- 次のプロパティで設定されます、**発行オプション** ダイアログ ボックスから、**発行**ページ。  
   
--   `PublisherName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示されるパブリッシャーの名前を指定します。 インストールされたアプリケーションの場合にも使用上のフォルダーの名前を指定、**開始**メニュー。  
+- `PublisherName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示されるパブリッシャーの名前を指定します。 インストールされたアプリケーションの場合にも使用上のフォルダーの名前を指定、**開始**メニュー。  
   
--   `ProductName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示される製品の名前を指定します。 インストールされたアプリケーションの場合にも使用のショートカット名を指定する、**開始**メニュー。  
+- `ProductName` インストールするか、アプリケーションを実行しているときに表示されるプロンプトに表示される製品の名前を指定します。 インストールされたアプリケーションの場合にも使用のショートカット名を指定する、**開始**メニュー。  
   
--   次のプロパティで設定されます、**の前提条件** ダイアログ ボックスから、**発行**ページ。  
+- 次のプロパティで設定されます、**の前提条件** ダイアログ ボックスから、**発行**ページ。  
   
--   `BootstrapperEnabled` 生成するかどうか、 *setup.exe*ブートス トラップします。  
+- `BootstrapperEnabled` 生成するかどうか、 *setup.exe*ブートス トラップします。  
   
--   `IsWebBootstrapper` 決定かどうか、 *setup.exe*ブートス トラップを Web 経由で、またはディスク ベースのモードでの動作します。  
+- `IsWebBootstrapper` 決定かどうか、 *setup.exe*ブートス トラップを Web 経由で、またはディスク ベースのモードでの動作します。  
   
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL、SupportUrl、PublishURL、および UpdateURL  
  次の表では、ClickOnce 配置の 4 つの URL オプションを示します。  

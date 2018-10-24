@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_parambasepointerregisterid |Microsoft ドキュメント
+title: Idiasymbol::get_parambasepointerregisterid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80f707c94cc0fb22aa3f1a9aa1b9e91fc14a43a8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0b74250c453f42b4591bb87ef0a281d74de3b489
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31469813"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852883"
 ---
 # <a name="idiasymbolgetparambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
-パラメーターの基本ポインターを保持するレジスタの ID を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)に設定されている`SymTagFunction`です。  
+パラメーターへの基本ポインターを保持しているレジスタの ID を取得します。 使用する場合、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)に設定されている`SymTagFunction`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,17 +34,17 @@ HRESULT get_paramBasePointerRegisterId (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [out]パラメーターの基本ポインターを保持するレジスタの ID を返します。  
+ [out]パラメーターへの基本ポインターを保持しているレジスタの ID を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

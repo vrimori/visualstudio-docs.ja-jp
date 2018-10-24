@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetICorDebugValue |Microsoft ドキュメント
+title: IDebugObject2::GetICorDebugValue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82315e1b2170f38cae296e2a9131f4b235add26b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80a70454bd28c3b59e53ee9bc1222361291e2399
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114496"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861099"
 ---
 # <a name="idebugobject2geticordebugvalue"></a>IDebugObject2::GetICorDebugValue
-マネージ コードを表すオブジェクトをこのオブジェクトに関連付けられている値を取得します。  
+このオブジェクトに関連付けられた値を表すマネージ コード オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int GetICorDebugValue(
   
 #### <a name="parameters"></a>パラメーター  
  `ppUnk`  
- [out]`IUnknown`このエイリアスを表すインターフェイスです。 このインターフェイスを照会することができます、`ICorDebugValue`インターフェイスです。  
+ [out]`IUnknown`このエイリアスを表すインターフェイスです。 このインターフェイスを照会できます、`ICorDebugValue`インターフェイス。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugValue`オブジェクトは、値を表す共通言語ランタイム インターフェイスです。  
+## <a name="remarks"></a>Remarks  
+ `ICorDebugValue`オブジェクトが値を表す共通言語ランタイム インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

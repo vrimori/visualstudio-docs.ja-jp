@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetSymbolPath |Microsoft ドキュメント
+title: IDebugEngine3::SetSymbolPath |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5a79cfd817be1a665f0008a39420e7cb39cc50b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 00f493c0c64dc8bc6bef6adff59fff4ce1bcb8c3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115487"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854573"
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
-パスまたはデバッグ シンボルの検索パスを設定します。  
+デバッグ シンボルを検索するパスを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,17 +47,17 @@ int SetSymbolPath(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`szSymbolSearchPath`|[in]シンボル検索パスまたはパスを含む文字列です。 詳細については、「解説」を参照してください。 null にすることはできません。|  
-|`szSymbolCachePath`|[in]シンボルをキャッシュできるローカル パスを含む文字列です。 null にすることはできません。|  
+|`szSymbolSearchPath`|[in]シンボルの検索パスまたはパスを含む文字列。 詳細については、「解説」を参照してください。 null にすることはできません。|  
+|`szSymbolCachePath`|[in]シンボルをキャッシュできるローカル パスを含む文字列。 null にすることはできません。|  
 |`Flags`|[in]使用されません。常に 0 に設定します。|  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 文字列`szSymbolSearchPath`シンボルを検索、セミコロンで区切られた 1 つまたは複数のパスの一覧を示します。 これらのパスは、ローカル パス、UNC 形式のパスまたは URL にすることができます。 これらのパスには、さまざまな種類のミックスことができます。 パスが UNC である場合 (たとえば、 \\\Symserver\Symbols)、デバッグ エンジンは、パスがシンボル サーバーがあり、それらによって指定されたパスでのキャッシュ、そのサーバーからシンボルを読み込むことができるようかどうかかを確認する必要がありますして`szSymbolCachePath`です。  
+## <a name="remarks"></a>Remarks  
+ 文字列`szSymbolSearchPath`シンボルの検索には、セミコロンで区切られた 1 つまたは複数のパスの一覧を示します。 これらのパスは、ローカル パス、UNC 形式のパスまたは URL にあることができます。 これらのパスには、さまざまな種類の混在こともできます。 パスが UNC である場合 (たとえば、 \\\Symserver\Symbols)、デバッグ エンジンは、パスがシンボル サーバーがあり、によって指定されたパスでキャッシュして、そのサーバーからシンボルを読み込むことができるようかどうかかを確認する必要がありますして`szSymbolCachePath`します。  
   
- シンボル パスは、1 つ以上のキャッシュの場所を含めることもできます。 キャッシュが最初に、キャッシュとの最も高い優先度の優先度順に表示されで区切られた * 記号。 例えば:  
+ シンボル パスは、1 つまたは複数のキャッシュの場所を含めることもできます。 キャッシュが最初に、最高の優先順位のキャッシュを使用して、優先順位の順序で一覧を表示してで区切られた * 記号。 例えば:  
   
 ```  
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*http://msdl.microsoft.com  

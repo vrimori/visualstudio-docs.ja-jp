@@ -16,12 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f1b2c37f551bf7b5e0a781b91420881c594ade68
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: daa18ea2716972daa1429580ad0b2f5be5afe76c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180465"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854079"
 ---
 # <a name="configure-service-reference-dialog-box"></a>[サービス参照の構成] ダイアログ ボックス
 
@@ -104,7 +104,7 @@ ms.locfileid: "39180465"
 
 > [!NOTE]
 > このオプションは、プロジェクトのバージョン 2.0 をターゲットにのみ使用する必要があります、[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]します。
-
+> 
 > [!NOTE]
 > **Web 参照の追加**ときにボタンが使用可能なだけ、**サービス参照の構成**からダイアログ ボックスが表示されます、**サービス参照の追加 ダイアログ ボックス**します。
 

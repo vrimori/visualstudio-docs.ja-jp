@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af890c62cc830693cec16494eac71176743cadd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6d2ff2b6660b7ef7530d3a37d251904fa54b5ce0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31927008"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856198"
 ---
 # <a name="visual-c-classes-in-class-designer"></a>クラス デザイナーの Visual C++ クラス
 
@@ -131,16 +131,18 @@ typedef struct
 
 **クラス デザイナー**は、テンプレート クラスの視覚化をサポートしています。 入れ子になった宣言がサポートされています。 次の表は、一般的な宣言を示しています。
 
-|コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
-|`template <class T>`<br /><br /> `class A {};`|`A<T>`<br /><br /> テンプレート クラス|
-|`template <class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> テンプレート クラス|
-|`template <class T, int i>`<br /><br /> `class A {};`|`A<T, i>`<br /><br /> テンプレート クラス|
-|`template <class T, template <class K> class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> テンプレート クラス|
+
+| コード要素 | クラス デザイナー ビュー |
+| - | - |
+| `template <class T>`<br /><br /> `class A {};` | `A<T>`<br /><br /> テンプレート クラス |
+| `template <class T, class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> テンプレート クラス |
+| `template <class T, int i>`<br /><br /> `class A {};` | `A<T, i>`<br /><br /> テンプレート クラス |
+| `template <class T, template <class K> class U>`<br /><br /> `class A {};` | `A<T, U>`<br /><br /> テンプレート クラス |
+
 次の表は、部分的特殊化の例です。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`template<class T, class U>`<br /><br /> `class A {};`|`A<T, U>`<br /><br /> テンプレート クラス|
 |`template<class T>`<br /><br /> `class A<T, T> {};`|`A<T, T>`<br /><br /> テンプレート クラス|
 |`template <class T>`<br /><br /> `class A<T, int> {};`|`A<T, int>`<br /><br /> テンプレート クラス|
@@ -149,13 +151,13 @@ typedef struct
 次の表は、部分的特殊化における継承の例です。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`template <class T, class U>`<br /><br /> `class A {};`<br /><br /> `template <class TC>`<br /><br /> `class A<T, int> {};`<br /><br /> `class B : A<int, float>`<br /><br /> `{};`<br /><br /> `class C : A<int, int>`<br /><br /> `{};`|`A<T, U>`<br /><br /> テンプレート クラス<br /><br /> `B`<br /><br /> クラス<br /><br /> (クラス A を指します)<br /><br /> `C`<br /><br /> クラス<br /><br /> (クラス A を指します)|
 
 次の表は、部分的特殊化テンプレート関数の例です。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`class A`<br /><br /> `{`<br /><br /> `template <class T, class U>`<br /><br /> `void func(T a, U b);`<br /><br /> `template <class T>`<br /><br /> `void func(T a, int b);`<br /><br /> `};`|`A`<br /><br /> func\<T, U> (+ 1 overload)|
 |`template <class T1>`<br /><br /> `class A {`<br /><br /> `template <class T2>`<br /><br /> `class B {};`<br /><br /> `};`<br /><br /> `template<> template<>`<br /><br /> `class A<type>::B<type> {};`|`A<T1>`<br /><br /> テンプレート クラス<br /><br /> `B<T2>`<br /><br /> テンプレート クラス<br /><br /> (B は、**[入れ子にされた型]** の下のクラス A の中に含まれます)|
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `class A : C<int> {};`|`A`<br /><br /> クラス<br /><br /> -> C\<int><br /><br /> `C<T>`<br /><br /> テンプレート クラス|
@@ -163,13 +165,13 @@ typedef struct
 次の表は、テンプレート継承の例です。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {`<br /><br /> `class B {};`<br /><br /> `}`<br /><br /> `class A : C<int>::B {};`|`A`<br /><br /> クラス<br /><br /> ->B<br /><br /> `C<int>`<br /><br /> クラス<br /><br /> (B は、**[入れ子にされた型]** の下のクラス C の中に含まれます)<br /><br /> `C<T>`<br /><br /> テンプレート クラス|
 
 次の表は、標準特殊クラス接続の例です。
 
 |コード要素|クラス デザイナー ビュー|
-|------------------|-------------------------|
+|------------------| - |
 |`template <class T>`<br /><br /> `class C {};`<br /><br /> `template<>`<br /><br /> `class C<int> {};`<br /><br /> `class A : C<int> {};`<br /><br /> `class D : C<float> {};`|`A`<br /><br /> クラス<br /><br /> ->C\<int><br /><br /> `C<int>`<br /><br /> クラス<br /><br /> `C<T>`<br /><br /> テンプレート クラス<br /><br /> `D`<br /><br /> クラス<br /><br /> ->C\<float>|
 |`class B {`<br /><br /> `template <class T>`<br /><br /> `T min (const T &a, const T &b);`<br /><br /> `};`|`B`<br /><br /> min \<T>|
 

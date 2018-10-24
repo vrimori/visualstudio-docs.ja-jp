@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode |Microsoft ドキュメント
+title: IDebugProgramProvider2::GetProviderProgramNode |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b6984a89d39dc99351acaa0e37f2c3d9b1e47f1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d26b74928985feefda3acdc8594c35096fc4e0b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31117811"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821325"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
 特定のプログラムの [プログラム] ノードを取得します。  
@@ -51,31 +51,31 @@ int GetProviderProgramNode(
   
 #### <a name="parameters"></a>パラメーター  
  `Flags`  
- [in]フラグの組み合わせ、 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)列挙します。 次のフラグがこの呼び出しに一般的です。  
+ [in]フラグの組み合わせ、 [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)列挙体。 次のフラグは、この呼び出しの一般的なものは。  
   
 |フラグ|説明|  
 |----------|-----------------|  
 |`PFLAG_REMOTE_PORT`|呼び出し元は、リモート マシンで実行されています。|  
-|`PFLAG_DEBUGGEE`|呼び出し元は現在デバッグされている (ノードごとにマーシャ リングに関する追加情報が返されます)。|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元にアタッチされているが、デバッガーによって起動されません。|  
+|`PFLAG_DEBUGGEE`|現在デバッグ中の呼び出し元 (ノードごとにマーシャ リングに関する追加情報が返される)。|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元に接続されているが、デバッガーによって起動されません。|  
   
  `pPort`  
- [in]ポートが呼び出しプロセスが行われています。  
+ [in]呼び出し元のプロセス、ポートがで実行されています。  
   
  `processId`  
  [in][AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)対象のプログラムを含むプロセスの ID を保持する構造体。  
   
  `guidEngine`  
- [in]プログラムは、(存在する場合) にアタッチされているデバッグ エンジンの GUID です。  
+ [in]プログラムは、(ある場合) に接続されているデバッグ エンジンの GUID です。  
   
  `programId`  
- [in][プログラム] ノードを取得する対象のプログラムの ID。  
+ [in]プログラム ノードを取得する対象のプログラムの ID。  
   
  `ppProgramNode`  
  [out][IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)要求されたプログラム ノードを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   
