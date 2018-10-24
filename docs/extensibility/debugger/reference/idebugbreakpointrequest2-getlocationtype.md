@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest2::GetLocationType |Microsoft ドキュメント
+title: IDebugBreakpointRequest2::GetLocationType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: faa536c269e8c0ebd2772617ab9bd0e3412f35b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 70189d61752643d78c545a5d33106a4638961c1b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106179"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936239"
 ---
 # <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
-このブレークポイントの要求のブレークポイントの場所の種類を取得します。  
+このブレークポイント要求のブレークポイントの場所の種類を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int GetLocationType(
   
 #### <a name="parameters"></a>パラメーター  
  `pBPLocationType`  
- [out]値を返します、 [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)このブレークポイントの要求の場所を表す列挙体です。  
+ [out]値を返します、 [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md)このブレークポイント要求の場所を表す列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_FAIL`場合、`bpLocation`フィールドに関連付けられた[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)構造が無効です。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_FAIL`場合、`bpLocation`フィールドに関連付けられている[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)構造が無効です。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CDebugBreakpointRequest`を公開するオブジェクト、[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CDebugBreakpointRequest`を公開するオブジェクト、[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)インターフェイス。  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)    

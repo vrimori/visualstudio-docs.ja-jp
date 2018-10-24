@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a90d7d900054ee1ba8dec1a278d37d5898985dd
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 3678ec0cba6f46b65f5c1d6f84e9962b5487fa93
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495428"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937864"
 ---
 # <a name="use-the-text-manager-to-monitor-global-settings"></a>テキスト マネージャーを使用して、グローバル設定を監視するには
 コア エディターを実装する場合、エディターのインスタンスがこれらの変更の影響を与えるため、グローバル設定に加えられた変更を監視する必要があります。 変更を追跡するには、テキスト マネージャーによって生成されるイベントをリッスンします。 たとえば、そのドキュメント データ オブジェクトなどのコア エディターでの表示やコンポーネントの動作のグローバル設定を指定するとテキスト マネージャーはこの情報を格納し、影響を受けるすべてのクライアントと通信すること。  
@@ -27,19 +27,19 @@ ms.locfileid: "46495428"
 ## <a name="text-manager-functions"></a>テキスト マネージャー関数  
  テキスト マネージャーは、さまざまな設定は、次のようにイベントを発生させます。  
   
--   バッファーはソース コード管理、かどうか  
+- バッファーはソース コード管理、かどうか  
   
--   ファイル変更通知を登録する方法  
+- ファイル変更通知を登録する方法  
   
--   ビューは、特定のバッファーに関連付けられたを追跡する方法  
+- ビューは、特定のバッファーに関連付けられたを追跡する方法  
   
--   テキストの色づけの基本設定  
+- テキストの色づけの基本設定  
   
--   タブとスペースの基本設定  
+- タブとスペースの基本設定  
   
- 特定の言語に固有の設定は、テキスト マネージャーによって管理されていません。 各言語サービスでは、これらの設定を管理する必要があります。  
+  特定の言語に固有の設定は、テキスト マネージャーによって管理されていません。 各言語サービスでは、これらの設定を管理する必要があります。  
   
- によって、テキスト マネージャーのイベント通知が提供される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>インターフェイス。 このインターフェイスを実装して、クライアントでイベントを処理するオブジェクトにはテキスト マネージャーが発生します。 使用してこれらのイベントの登録、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>テキスト マネージャーのインターフェイス。  
+  によって、テキスト マネージャーのイベント通知が提供される、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManagerEvents>インターフェイス。 このインターフェイスを実装して、クライアントでイベントを処理するオブジェクトにはテキスト マネージャーが発生します。 使用してこれらのイベントの登録、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer>テキスト マネージャーのインターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [コア エディター](../extensibility/inside-the-core-editor.md)   

@@ -16,14 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b039dc1331ae3f8a47468289611e5bb9be32134d
-ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
+ms.openlocfilehash: c845185c031e7c7d066aebbb1a28634358f11ce5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45549366"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941374"
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: SafeHandle を使用して、ネイティブ リソースを要約します
+
 |||
 |-|-|
 |TypeName|UseSafeHandleToEncapsulateNativeResources|

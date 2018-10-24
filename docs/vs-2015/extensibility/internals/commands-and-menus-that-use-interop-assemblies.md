@@ -18,25 +18,25 @@ ms.assetid: 8f4af525-39e5-4e69-92c8-d3efabe80bb2
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 105a4ed0f30991fe656c7f257ca766dd06c150a9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0b00f2ae82a2fd8afb62dcd42237bd313c0355ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261717"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941712"
 ---
 # <a name="commands-and-menus-that-use-interop-assemblies"></a>相互運用機能アセンブリを使用するコマンドとメニュー
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 相互運用機能アセンブリを使用してメニューやツールバーを実装する VSPackage にする必要があります。  
   
--   通知、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) についてサポートしているコマンドやかどうかが現在有効にします。  
+- 通知、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]統合開発環境 (IDE) についてサポートしているコマンドやかどうかが現在有効にします。  
   
--   (コントラクト) コマンドを処理するための規則に従います。  
+- (コントラクト) コマンドを処理するための規則に従います。  
   
--   いずれかを使用してコマンド処理を明示的に実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>インターフェイス。  
+- いずれかを使用してコマンド処理を明示的に実装、<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>または<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>インターフェイス。  
   
- 次に、これらのタスクを実行する方法について説明します。  
+  次に、これらのタスクを実行する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [相互運用機能アセンブリを使用したコマンドのステータスの特定](../../extensibility/internals/determining-command-status-by-using-interop-assemblies.md)  

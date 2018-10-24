@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO_FLAGS |Microsoft ドキュメント
+title: FRAMEINFO_FLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca63b23e9f87e807b3eec0e3ad35ea5414ac8dc6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bd2273e7ca2769c5dde43d1c29f08989503659f4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107414"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949124"
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
-スタック フレーム オブジェクトは取得する情報を指定します。  
+スタック フレーム オブジェクトを取得する情報を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -102,104 +102,104 @@ public enum enum_FRAMEINFO_FLAGS {
   
 ## <a name="members"></a>メンバー  
  FIF_FUNCNAME  
- 初期化/を使用して、`m_bstrFuncName`フィールドです。  
+ 初期化/使用、`m_bstrFuncName`フィールド。  
   
  FIF_RETURNTYPE  
- 初期化/を使用して、`m_bstrReturnType`フィールドです。  
+ 初期化/使用、`m_bstrReturnType`フィールド。  
   
  FIF_ARGS  
- 初期化/を使用して、`m_bstrArgs`フィールドです。  
+ 初期化/使用、`m_bstrArgs`フィールド。  
   
  FIF_LANGUAGE  
- 初期化/を使用して、`m_bstrLanguage`フィールドです。  
+ 初期化/使用、`m_bstrLanguage`フィールド。  
   
  FIF_MODULE  
- 初期化/を使用して、`m_bstrModule`フィールドです。  
+ 初期化/使用、`m_bstrModule`フィールド。  
   
  FIF_STACKRANGE  
- 初期化/を使用して、`m_addrMin`と`m_addrMax`(スタックの範囲) フィールドです。  
+ 初期化/使用、`m_addrMin`と`m_addrMax`(スタックの範囲) フィールド。  
   
  FIF_FRAME  
- 初期化/を使用して、`m_pFrame`フィールドです。  
+ 初期化/使用、`m_pFrame`フィールド。  
   
  FIF_DEBUGINFO  
- 初期化/を使用して、`m_fHasDebugInfo`フィールドです。  
+ 初期化/使用、`m_fHasDebugInfo`フィールド。  
   
  FIF_STALECODE  
- 初期化/を使用して、`m_fStaleCode`フィールドです。  
+ 初期化/使用、`m_fStaleCode`フィールド。  
   
  FIF_ANNOTATEDFRAME  
- 初期化/を使用して、`m_fAnnotatedFrame`フィールドです。  
+ 初期化/使用、`m_fAnnotatedFrame`フィールド。  
   
  FIF_DEBUG_MODULEP  
- 初期化/を使用して、`m_pModule`フィールドです。  
+ 初期化/使用、`m_pModule`フィールド。  
   
  FIF_FUNCNAME_FORMAT  
- 関数名の書式を設定します。 結果が返される、`m_bstrFunName`フィールドおよびないその他のフィールドに入力されます。  
+ 関数名の書式を設定します。 結果が返されます、`m_bstrFunName`フィールドおよびないその他のフィールドに入力されます。  
   
  FIF_FUNCNAME_RETURNTYPE  
- 戻り値の型を追加、`m_bstrFuncName`フィールドです。  
+ 戻り値の型を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_ARGS  
- 引数を追加、`m_bstrFuncName`フィールドです。  
+ 引数を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_LANGUAGE  
- 言語を追加、`m_bstrFuncName`フィールドです。  
+ 言語を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_MODULE  
- モジュール名を追加、`m_bstrFuncName`フィールドです。  
+ モジュール名を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_LINES  
- 追加する行の数、`m_bstrFuncName`フィールドです。  
+ 追加する行の数、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_OFFSET  
- 追加、`m_bstrFuncName`フィールドの行の先頭からのバイト オフセットに場合`FIF_FUNCNAME_LINES`が指定されています。 場合`FIF_FUNCNAME_LINES`が指定されていないか、行番号が使用できない場合は、追加のオフセット (バイト単位)、関数の先頭からです。  
+ 追加、`m_bstrFuncName`フィールドに、行の先頭からのバイト オフセットの場合`FIF_FUNCNAME_LINES`を指定します。 場合`FIF_FUNCNAME_LINES`が指定されていないか、行番号が使用できない場合は、バイト単位のオフセットを関数の開始から追加します。  
   
  FIF_FUNCNAME_ARGS_TYPES  
- 各関数の引数の型を追加、`m_bstrFuncName`フィールドです。  
+ 各関数の引数の型を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_ARGS_NAMES  
- 各関数の引数の名前を追加、`m_bstrFuncName`フィールドです。  
+ 各関数の引数の名前を追加、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_ARGS_VALUES  
- 各関数の引数の値を加算、`m_bstrFuncName`フィールドです。  
+ 各関数の引数の値を加算、`m_bstrFuncName`フィールド。  
   
  FIF_FUNCNAME_ARGS_ALL  
- 型、名、およびすべての引数の値を追加、`m_bstrFuncName`フィールドです。  
+ 型、名、およびすべての引数の値を追加、`m_bstrFuncName`フィールド。  
   
  FIF_ARGS_TYPES  
- 引数の型が取得され、書式設定します。  
+ 引数の型が取得されて書式設定します。  
   
  FIF_ARGS_NAMES  
- 引数名が取得され、書式設定します。  
+ 引数名が取得されて書式設定します。  
   
  FIF_ARGS_VALUES  
- 引数の値が取得され、書式設定します。  
+ 引数の値が取得されて書式設定します。  
   
  FIF_ARGS_ALL  
  取得し、型、名、およびすべての引数の値の書式を設定します。  
   
  FIF_ARGS_NOFORMAT  
- 引数がフォーマットされていないことを指定します (たとえば、かっこと右の引数リストを囲むかっこを追加もしない追加の引数間の区切り記号) です。  
+ 引数はフォーマットされないことを指定します (たとえば、引数リストをかっこで囲むの開閉の追加もしない引数間の区切り記号を追加) します。  
   
  FIF_ARGS_NO_FUNC_EVAL  
  引数の値を取得するときに関数 (プロパティ) の評価が使用しないことを指定します。  
   
  FIF_FILTER_NON_USER_CODE  
- デバッグ エンジンは、含まれていないために、非ユーザー コード フレームをフィルター処理します。  
+ デバッグ エンジンでは、含まれていないために、非ユーザー コード フレームをフィルター処理します。  
   
  FIF_ARGS_NO_TOSTRING  
  許可しない`ToString()`関数の評価または関数の引数を返すときに書式設定します。  
   
  FIF_DESIGN_TIME_EXPR_EVAL  
- フレームの情報は、ホスト プロセスではなく、ホストされているアプリケーション ドメインから取得する必要があります。  
+ フレームの情報は、ホスト プロセスではなく、ホストされるアプリケーション ドメインから取得する必要があります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのフラグに渡される、 [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)と[GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)メソッドで初期化するフィールドを示す、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造体または構造体。  
   
- これらのフラグはのどのフィールドを示すためにも使用、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造が返されるときに構造体が使用される、有効です。 これらの値は、ビットごとと組み合わせること`OR`です。  
+ これらのフラグは、のどのフィールドを示すためにも使用、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造が返されるときに構造体が使用し、無効です。 これらの値は、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

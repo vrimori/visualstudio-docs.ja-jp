@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e9b9a49ee6a59870d37676e2ca969e99a1516658
-ms.sourcegitcommit: 6b092e7d466377f06913d49d183dbbdca16730f0
+ms.openlocfilehash: 9f7696018ec191e851c0d5864ad36e3eeb31b599
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43138842"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941738"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Visual Studio インスタンスの検出および管理用のツール
 
@@ -61,8 +61,8 @@ Visual Studio 2017 ではレジストリ設定はプライベートな場所に�
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```
 
-  > [!NOTE]
-  > `<config>` は参照する Visual Studio のインスタンスに対応します。
+   > [!NOTE]
+   > `<config>` は参照する Visual Studio のインスタンスに対応します。
 
 分離されたハイブの名前になるハイブ名を指定するように求められます。 これを行うと、作成した分離されたハイブの下にあるレジストリを参照できるようになります。
 

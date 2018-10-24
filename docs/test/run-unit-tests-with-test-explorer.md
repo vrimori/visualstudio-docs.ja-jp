@@ -12,12 +12,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a0feb539be589a4eab51544f1a04154c11f6f9c7
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: dc918adb6a66f64cdcda46ea535cd0ab017c0676
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382335"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939517"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 
@@ -100,7 +100,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 ### <a name="test-explorer-groups"></a>テスト エクスプローラーのグループ
 
 |グループ化|説明|
-|-----------|-----------------|
+|-|-----------------|
 |**期間**|実行時間によるテストのグループ化: **[高速]**、 **[通常]**、および **[低速]**。|
 |**Outcome**|実行結果によるテストのグループ化: **[失敗したテスト]**、 **[スキップされたテスト]**、 **[成功したテスト]**。|
 |**Traits**|ユーザーが定義するカテゴリ/値のペアによるテストのグループ化。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。|
@@ -110,13 +110,12 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 
  通常、特徴はカテゴリ名/値のペアですが、1 つのカテゴリにすることもできます。 特徴は、単体テスト フレームワークによってテスト メソッドとして識別されるメソッドに割り当てることができます。 単体テスト フレームワークは、特徴のカテゴリを定義できます。 特徴のカテゴリに値を追加して、独自のカテゴリ名/値のペアを定義できます。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。
 
- 
-  **マネージド コード用の Microsoft 単体テスト フレームワークでの特徴の定義**
+ **マネージド コード用の Microsoft 単体テスト フレームワークでの特徴の定義**
 
  マネージド アプリケーション用の Microsoft 単体テスト フレームワークで、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> 属性の特徴の名前/値のペアを定義します。 テスト フレームワークには、次の定義済みの特徴も含まれています。
 
 |特徴|説明|
-|-----------|-----------------|
+|-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|所有者カテゴリは、単体テスト フレームワークによって定義されます。所有者の文字列値を指定する必要があります。|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|優先度カテゴリは、単体テスト フレームワークによって定義されます。優先度の整数値を指定する必要があります。|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|TestCategory 属性を使用すると、値なしでカテゴリを指定できます。 TestCategory 属性で定義されるカテゴリは、TestProperty 属性のカテゴリでもあります。|
@@ -144,7 +143,7 @@ Visual Studio には、マネージド コードおよびネイティブ コー�
 > 検索では大文字と小文字を区別せず、指定された文字列が条件の値の一部と一致するかどうかを照合します。
 
 |修飾子|説明|
-|---------------|-----------------|
+|-|-----------------|
 |**特徴**|特徴のカテゴリと値の両方から一致を検索します。 特徴のカテゴリと値を指定する構文は、単体テスト フレームワークによって定義されます。|
 |**プロジェクト**|テスト プロジェクト名から一致を検索します。|
 |**エラー メッセージ**|失敗したアサートが返すユーザー定義エラー メッセージから一致を検索します。|
@@ -188,7 +187,7 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 2. テスト エクスプローラーでテスト メソッドを選択し、コンテキスト メニューの **[選択したテストのデバッグ]** を選択します。
 
- デバッガーについて詳しくは、[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)に関するページをご覧ください。
+   デバッガーについて詳しくは、[Visual Studio でのデバッグ](../debugger/debugging-in-visual-studio.md)に関するページをご覧ください。
 
 ### <a name="diagnose-test-method-performance-issues"></a>テスト メソッドのパフォーマンスの問題を診断する
 
@@ -217,7 +216,7 @@ Visual Studio のコード カバレッジ ツールを使用して、単体テ�
 テストは**テスト エクスプローラー**から実行できます。テストのコード エディター内で右クリックし、**[テストの実行]** を選択するか、Visual Studio の[テスト エクスプローラー ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)を使用します。 ショートカットの一部はコンテキストベースです。 つまり、コード エディター内のカーソルの位置に基づいてテストが実行またはデバッグされます。 カーソルがテスト メソッド内にある場合、そのテスト メソッドが実行されます。 カーソルがクラス レベルにある場合、そのクラスのすべてのテストが実行されます。 名前空間レベルの場合も同じことが適用されます。
 
 |頻繁に使用されるコマンド| ショートカット キー|
-|--------------|------------------------|
+|-|------------------------|
 |TestExplorer.DebugAllTestsInContext|**Ctrl**+**R**、**Ctrl**+**T**|
 |TestExplorer.RunAllTestsInContext|**Ctrl**+**R**、**T**|
 

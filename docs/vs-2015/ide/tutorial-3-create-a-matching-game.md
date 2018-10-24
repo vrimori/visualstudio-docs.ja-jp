@@ -14,34 +14,34 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e8742924e1693a79268d6a35bc266caf5c5f32ec
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e5bd7243e49c447dc8c362b0c98bf2cc7d77d76d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259099"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939498"
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>チュートリアル 3: 絵合わせゲームの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 このチュートリアルでは、プレーヤーが隠されたアイコンのペアを見つける絵合わせゲームを作成します。 以下の方法について説明します。  
   
--   アイコンなどのオブジェクトを `List` オブジェクトに格納する。  
+- アイコンなどのオブジェクトを `List` オブジェクトに格納する。  
   
--   `foreach` ループ (Visual C# の場合) または `For Each` ループ (Visual Basic の場合) を使用してリスト内の項目を反復処理する。  
+- `foreach` ループ (Visual C# の場合) または `For Each` ループ (Visual Basic の場合) を使用してリスト内の項目を反復処理する。  
   
--   参照変数を使用してフォームの状態を追跡する。  
+- 参照変数を使用してフォームの状態を追跡する。  
   
--   複数のオブジェクトでイベントへの応答に使用できるイベント ハンドラーを作成する。  
+- 複数のオブジェクトでイベントへの応答に使用できるイベント ハンドラーを作成する。  
   
--   開始されるとカウント ダウンを行い一度だけイベントを発生させるタイマーを作成する。  
+- 開始されるとカウント ダウンを行い一度だけイベントを発生させるタイマーを作成する。  
   
- このチュートリアルを完了すると、プログラムは次の図のようになります。  
+  このチュートリアルを完了すると、プログラムは次の図のようになります。  
   
- ![このチュートリアルで作成するゲーム](../ide/media/express-finishedgame.png "Express_FinishedGame")  
-このチュートリアルで作成するゲーム  
+  ![このチュートリアルで作成するゲーム](../ide/media/express-finishedgame.png "Express_FinishedGame")  
+  このチュートリアルで作成するゲーム  
   
- サンプルの完全バージョンをダウンロードするには、「[Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)」 (絵合わせゲームのチュートリアルの完全なサンプル)を参照してください。  
+  サンプルの完全バージョンをダウンロードするには、「[Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)」 (絵合わせゲームのチュートリアルの完全なサンプル)を参照してください。  
   
 > [!NOTE]
 >  このチュートリアルでは、Visual C# と Visual Basic の両方が取り上げられているため、使用しているプログラミング言語固有の情報に注意してください。  

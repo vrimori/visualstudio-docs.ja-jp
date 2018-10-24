@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2f6c23ea3ad48c361c12912926e0642f35f853a
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 396a516efb166f382c7c9a9c76c30a874db7155a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283458"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938267"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能を追加します。
 
@@ -132,10 +132,10 @@ LSP に基づく言語サーバーを使用して、言語サービス拡張を�
 
 4. 作成、 *.pkgdef*ファイルし、次のように行を追加します。
 
-  ```xml
-  [$RootKey$\TextMate\Repositories]
-  "MyLang"="$PackageFolder$\Grammars"
-  ```
+   ```xml
+   [$RootKey$\TextMate\Repositories]
+   "MyLang"="$PackageFolder$\Grammars"
+   ```
 
 5. クリックし、ファイルを右クリックして**プロパティ**します。 変更、**ビルド**アクションを**コンテンツ**と**VSIX に含める**プロパティを true にします。
 
@@ -295,40 +295,40 @@ LSP 言語サービス拡張機能への設定のサポートを追加する以�
 
 1. JSON ファイルを追加 (たとえば、 *MockLanguageExtensionSettings.json*) 設定とその既定値を含むプロジェクト。 例えば:
 
-  ```json
-  {
+   ```json
+   {
     "foo.maxNumberOfProblems": -1
-  }
-  ```
+   }
+   ```
 2. JSON ファイルを右クリックし、選択**プロパティ**します。 変更、**ビルド**アクションを「コンテンツ」、"VSIX に含める ' プロパティを true にします。
 
 3. ConfigurationSections を実装し、JSON ファイルで定義された設定のプレフィックスの一覧を返します (Visual Studio Code で、これにマップ package.json 内の構成セクション名)。
 
-  ```csharp
-  public IEnumerable<string> ConfigurationSections
-  {
+   ```csharp
+   public IEnumerable<string> ConfigurationSections
+   {
       get
       {
           yield return "foo";
       }
-  }
-  ```
+   }
+   ```
 4. .Pkgdef ファイルをプロジェクトに追加する (新しいテキスト ファイルを追加して、.pkgdef ファイル拡張子を変更)。 Pkgdef ファイルには、この情報を含める必要があります。
 
-  ```xml
+   ```xml
     [$RootKey$\OpenFolder\Settings\VSWorkspaceSettings\[settings-name]]
     @="$PackageFolder$\[settings-file-name].json"
-  ```
+   ```
 
 5. .Pkgdef ファイルを右クリックし、選択**プロパティ**します。 変更、**ビルド**アクションを**コンテンツ**と**VSIX に含める**プロパティを true にします。
 
 6. 開き、 *source.extension.vsixmanifest*ファイルを開き、資産を追加、**資産** タブ。
 
-  ![vspackage の資産を編集します。](media/lsp-add-vspackage-asset.png)
+   ![vspackage の資産を編集します。](media/lsp-add-vspackage-asset.png)
 
-  * **型**: Microsoft.VisualStudio.VsPackage
-  * **ソース**: ファイル システム上のファイル
-  * **パス**: [へのパス、 *.pkgdef*ファイル]
+   * **型**: Microsoft.VisualStudio.VsPackage
+   * **ソース**: ファイル システム上のファイル
+   * **パス**: [へのパス、 *.pkgdef*ファイル]
 
 ### <a name="user-editing-of-settings-for-a-workspace"></a>ユーザーのワークスペースの設定の編集
 
@@ -336,16 +336,16 @@ LSP 言語サービス拡張機能への設定のサポートを追加する以�
 2. ユーザーが内のファイルを追加、 *.vs*という名前のフォルダー *VSWorkspaceSettings.json*します。
 3. ユーザーは、線を追加、 *VSWorkspaceSettings.json*ファイルの設定、サーバーを提供します。 例えば:
 
-  ```json
-  {
+   ```json
+   {
     "foo.maxNumberOfProblems": 10
-  }
-  ```
-### <a name="enabling-diagnostics-tracing"></a>診断トレースを有効にします。
-クライアントとサーバーで、問題をデバッグするときに役に立ちます間のすべてのメッセージを出力する診断トレースを有効にすることができます。  診断トレースを有効にするには、次の操作を行います。
+   }
+   ```
+   ### <a name="enabling-diagnostics-tracing"></a>診断トレースを有効にします。
+   クライアントとサーバーで、問題をデバッグするときに役に立ちます間のすべてのメッセージを出力する診断トレースを有効にすることができます。  診断トレースを有効にするには、次の操作を行います。
 
-1. 開くか、ワークスペースの設定ファイルを作成する*VSWorkspaceSettings.json* (「ユーザーのワークスペースの設定の編集」を参照してください)。
-2. 設定の json ファイルでは、次の行を追加します。
+4. 開くか、ワークスペースの設定ファイルを作成する*VSWorkspaceSettings.json* (「ユーザーのワークスペースの設定の編集」を参照してください)。
+5. 設定の json ファイルでは、次の行を追加します。
 
 ```json
 {

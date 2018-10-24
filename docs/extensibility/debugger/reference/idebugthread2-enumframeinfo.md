@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::EnumFrameInfo |Microsoft ドキュメント
+title: IDebugThread2::EnumFrameInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4781533d533228e07b4268f5c92b662cf7cda122
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98cd9db7785d7d7867e48f0bd56a2f5ab657a344
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120541"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942758"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
 このスレッドのスタック フレームの一覧を取得します。  
@@ -45,19 +45,19 @@ int EnumFrameInfo (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFieldSpec`  
- [in]フラグの組み合わせ、 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)のどのフィールドを指定する列挙体、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造は、入力します。指定して、`FIF_FUNCNAME_FORMAT`フラグを 1 つの文字列、関数名の書式を設定します。  
+ [in]フラグの組み合わせ、 [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md)のどのフィールドを指定する列挙体、 [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)構造は、入力します。指定、`FIF_FUNCNAME_FORMAT`関数名を 1 つの文字列に書式設定フラグ。  
   
  `nRadix`  
- [in]列挙子の数値情報を書式設定で使用する基数。  
+ [in]列挙子の数値情報を書式設定に使用する基数。  
   
  `ppEnum`  
  [out]返します、 [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)オブジェクトの一覧を含む[FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)スタック フレームを記述する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- スレッドのフレームが最初に列挙する現在のフレームと最後に列挙された最も古いフレームの順序で列挙されます。  
+## <a name="remarks"></a>Remarks  
+ スレッドのフレームは、最初に列挙する現在のフレームと最後に列挙された最も古いフレームを順に列挙されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

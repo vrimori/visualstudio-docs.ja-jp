@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetDocumentContext |Microsoft ドキュメント
+title: IDebugStackFrame2::GetDocumentContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14e7374fbea697b86d9ee838a6b8a76a57f920ff
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 908aef9ab784300ef4a9d30b8d16df14ff78b91d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31122029"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942193"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
-このスタック フレームのドキュメントのコンテキストを取得します。  
+このスタック フレームのドキュメント コンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ int GetDocumentContext (
  [out]返します、 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)ソース ドキュメント内の現在位置を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは呼び出し元よりも高速、 [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)メソッドを呼び出すことで、 [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)メソッド、コードのコンテキストでします。 ただし、これは保証されません (DE) すべてのデバッグ エンジンがこのメソッドを実装します。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは呼び出し元よりも高速、 [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)メソッドを呼び出して、 [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)メソッド コードのコンテキストでします。 ただし、(DE)、すべてのデバッグ エンジンにこのメソッドを実装することは保証はされません。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

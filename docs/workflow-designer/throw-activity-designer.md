@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71cf547a1ea3599de8926e40ca5a43f3bdea0f71
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: dfa48d5675f1fca01a23218e1d45e0382130bd5d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758322"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935914"
 ---
 # <a name="throw-activity-designer"></a>Throw アクティビティ デザイナー
 
@@ -38,13 +38,13 @@ ms.locfileid: "36758322"
 次の表に、<xref:System.Activities.Statements.Throw> のプロパティと、デザイナーでのその使用方法を示します。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Throw> アクティビティの表示名を指定します (省略可能)。 既定値は Throw です。|
 |<xref:System.Activities.Statements.Throw.Exception%2A>|True|スローされる例外。 この例外は、<xref:System.Exception> から派生していることが必要です。 例外を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
 
 ## <a name="see-also"></a>関連項目
 
 - [コレクション](../workflow-designer/collection-activity-designers.md)
-- [再スローします。](../workflow-designer/rethrow-activity-designer.md)
+- [Rethrow](../workflow-designer/rethrow-activity-designer.md)
 - [Throw アクティビティ デザイナー](../workflow-designer/throw-activity-designer.md)
 - [TryCatch](../workflow-designer/trycatch-activity-designer.md)
