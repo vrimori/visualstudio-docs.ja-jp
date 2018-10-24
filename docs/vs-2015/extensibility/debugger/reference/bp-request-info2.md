@@ -17,12 +17,12 @@ ms.assetid: 008c87f7-a76e-43d3-8904-11b225d6a9a5
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 95eee92b91c00d509363d4dd96d0770096c36f43
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 57ac5bf8a95be80e7c3c35f15dcb681be13fe06e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49185173"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877752"
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -110,7 +110,7 @@ public struct BP_REQUEST_INFO2 {
 ## <a name="remarks"></a>Remarks  
  この構造体がによって返される、 [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

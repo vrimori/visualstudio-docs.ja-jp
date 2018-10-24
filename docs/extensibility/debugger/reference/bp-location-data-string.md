@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_DATA_STRING |Microsoft ドキュメント
+title: BP_LOCATION_DATA_STRING |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae83bf4d0f8ba6435a962f5c1477e460d69ae27f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c740c853fff0701bf27d3c37d69141440525b44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100599"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875776"
 ---
 # <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
 統合開発環境 (IDE) から、ユーザーが入力できる文字列に基づくデータ ブレークポイントを設定するために使用します。  
@@ -41,18 +41,18 @@ typedef struct _BP_LOCATION_DATA_STRING {
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ブレークポイントが発生したスレッドを表すオブジェクト。  
   
  `bstrContext`  
- 通常は、ブレークポイント、コード内で、呼び出し履歴に見られるようメソッドまたは関数名のコンテキスト。  
+ 通常は、コード内のブレークポイント、コール スタックで見られる同様のメソッドまたは関数名のコンテキスト。  
   
  `bstrDataExpr`  
  データの文字列、ユーザーは、ブレークポイントを設定する入力します。  
   
  `dwNumElements`  
- ブレークポイントが発生したデータ文字列内の要素の数。  
+ ブレークポイントが発生したデータの文字列内の要素の数。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体のメンバーである、 [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)構造体、共用体の一部として。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

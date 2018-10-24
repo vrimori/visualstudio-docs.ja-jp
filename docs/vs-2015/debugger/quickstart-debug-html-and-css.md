@@ -26,12 +26,12 @@ caps.latest.revision: 104
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2896d88ee5730482aeca737f89e5b5340070be7f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 9ba8f8be0d078856833b807f5d0f6ca29f346c22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49225486"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873930"
 ---
 # <a name="quickstart-debug-html-and-css"></a>クイック スタート: HTML および CSS のデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,23 +44,23 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
  このトピックの内容:  
   
--   [ライブ DOM の検査](#InspectingDOM)  
+- [ライブ DOM の検査](#InspectingDOM)  
   
--   [Selecting elements](#SelectingElements)  
+- [Selecting elements](#SelectingElements)  
   
- DOM Explorer の使用の詳細については、次のトピックを参照してください。  
+  DOM Explorer の使用の詳細については、次のトピックを参照してください。  
   
--   [DOM Explorer を使用した CSS スタイルのデバッグ](../debugger/debug-css-styles-using-dom-explorer.md)  
+- [DOM Explorer を使用した CSS スタイルのデバッグ](../debugger/debug-css-styles-using-dom-explorer.md)  
   
--   [DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)  
+- [DOM Explorer を使用したレイアウトのデバッグ](../debugger/debug-layout-using-dom-explorer.md)  
   
--   [DOM イベント リスナーの表示](../debugger/view-dom-event-listeners.md)  
+- [DOM イベント リスナーの表示](../debugger/view-dom-event-listeners.md)  
   
--   [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)  
+- [アプリの更新 (JavaScript)](../debugger/refresh-an-app-javascript.md)  
   
--   [WebView コントロールのデバッグ](../debugger/debug-a-webview-control.md)  
+- [WebView コントロールのデバッグ](../debugger/debug-a-webview-control.md)  
   
- その他の JavaScript のデバッグ、JavaScript コンソール ウィンドウを使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[Visual Studio でアプリをデバッグ](../debugger/debug-store-apps-in-visual-studio.md)します。  
+  その他の JavaScript のデバッグ、JavaScript コンソール ウィンドウを使用して、ブレークポイントの設定などの機能の詳細についてを参照してください。[クイック スタート: JavaScript のデバッグ](../debugger/quickstart-debug-javascript-using-the-console.md)と[Visual Studio でアプリをデバッグ](../debugger/debug-store-apps-in-visual-studio.md)します。  
   
 ##  <a name="InspectingDOM"></a> ライブ DOM の検査  
  DOM Explorer ではレンダリングされるページのビューが示され、DOM Explorer を使用すると値を変更して結果をすぐに確認できます。 これにより、デバッガーを停止して再起動することなく変更をテストできます。 この方法でページと対話するときはプロジェクトのソース コードは変更されないので、必要なコード修正が見つかったら、ソース コードを変更します。  
@@ -70,13 +70,13 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
  DOM Explorer を使用すると次のことができます。  
   
--   DOM 要素のサブツリー内を移動し、レンダリングされる HTML、CSS、および JavaScript コードを調査します。  
+- DOM 要素のサブツリー内を移動し、レンダリングされる HTML、CSS、および JavaScript コードを調査します。  
   
--   レンダリングされる要素の属性および CSS スタイルを動的に編集し、結果をすぐに確認します。  
+- レンダリングされる要素の属性および CSS スタイルを動的に編集し、結果をすぐに確認します。  
   
--   CSS スタイルがページ要素に適用される方法を調査し、適用されたルールをトレースします。  
+- CSS スタイルがページ要素に適用される方法を調査し、適用されたルールをトレースします。  
   
- アプリケーションをデバッグするときは、しばしば DOM Explorer で要素を選択する必要があります。 要素を選択すると、DOM Explorer の右側のタブに表示される値が、DOM Explorer での要素の選択を反映して自動的に更新されます。 このようなタブとしては、 **[スタイル]**、 **[計算済み]**、 **[レイアウト]** があります。 Windows ストア アプリでは **[イベント]** タブと **[変更]** タブもサポートされています。 要素の選択の詳細については、「 [Selecting elements](#SelectingElements)」を参照してください。  
+  アプリケーションをデバッグするときは、しばしば DOM Explorer で要素を選択する必要があります。 要素を選択すると、DOM Explorer の右側のタブに表示される値が、DOM Explorer での要素の選択を反映して自動的に更新されます。 このようなタブとしては、 **[スタイル]**、 **[計算済み]**、 **[レイアウト]** があります。 Windows ストア アプリでは **[イベント]** タブと **[変更]** タブもサポートされています。 要素の選択の詳細については、「 [Selecting elements](#SelectingElements)」を参照してください。  
   
 > [!TIP]
 >  閉じた DOM Explorer ウィンドウを再び開くには、 **[デバッグ]**>**[ウィンドウ]** > **[DOM Explorer]** の順に選びます。 このウィンドウは、スクリプトのデバッグ セッション中にのみ表示されます。  
@@ -88,100 +88,100 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
 #### <a name="to-debug-by-inspecting-the-live-dom"></a>次の方法で、ライブ DOM を検査することによってデバッグします。  
   
-1.  Visual Studio で **[ファイル]** > **[新しいプロジェクト]**」を参照してください。  
+1. Visual Studio で **[ファイル]** > **[新しいプロジェクト]**」を参照してください。  
   
-2.  選択**JavaScript** > **ストア**、いずれかを選択**Windows アプリ**または**Windows Phone アプリ**を選択し、**空のアプリ**します。  
+2. 選択**JavaScript** > **ストア**、いずれかを選択**Windows アプリ**または**Windows Phone アプリ**を選択し、**空のアプリ**します。  
   
-3.  `FlipViewApp`などのプロジェクトの名前を入力し、 **[OK]** を選んでアプリを作成します。  
+3. `FlipViewApp`などのプロジェクトの名前を入力し、 **[OK]** を選んでアプリを作成します。  
   
-4.  default.html の BODY 要素に、次のコードを追加します。  
+4. default.html の BODY 要素に、次のコードを追加します。  
   
-    ```html  
-    <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
-             style="display:none">  
-        <div class="fixedItem" >  
-            <img src="#" data-win-bind="src: flipImg" />  
-        </div>  
-    </div>  
-    <div id="fView" style="width:100px;height:100px"  
-        data-win-control="WinJS.UI.FlipView" data-win-options="{  
-        itemDataSource: Data.items.dataSource, itemTemplate: flipTemplate }">  
-    </div>  
-    ```  
+   ```html  
+   <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
+            style="display:none">  
+       <div class="fixedItem" >  
+           <img src="#" data-win-bind="src: flipImg" />  
+       </div>  
+   </div>  
+   <div id="fView" style="width:100px;height:100px"  
+       data-win-control="WinJS.UI.FlipView" data-win-options="{  
+       itemDataSource: Data.items.dataSource, itemTemplate: flipTemplate }">  
+   </div>  
+   ```  
   
-5.  default.css を開き、次の CSS を追加します。  
+5. default.css を開き、次の CSS を追加します。  
   
-    ```css  
-    #fView {  
-        background-color:#0094ff;  
-        height: 100%;  
-        width: 100%;  
-        margin: 25%;  
-    }  
-    ```  
+   ```css  
+   #fView {  
+       background-color:#0094ff;  
+       height: 100%;  
+       width: 100%;  
+       margin: 25%;  
+   }  
+   ```  
   
-6.  default.js のコードを、次のコードに置き換えます。  
+6. default.js のコードを、次のコードに置き換えます。  
   
-    ```javascript  
-    (function () {  
-        "use strict";  
+   ```javascript  
+   (function () {  
+       "use strict";  
   
-        var app = WinJS.Application;  
-        var activation = Windows.ApplicationModel.Activation;  
+       var app = WinJS.Application;  
+       var activation = Windows.ApplicationModel.Activation;  
   
-        var myData = [];  
-        for (var x = 0; x < 4; x++) {  
-            myData[x] = { flipImg: "/images/logo.png" }  
-        };  
+       var myData = [];  
+       for (var x = 0; x < 4; x++) {  
+           myData[x] = { flipImg: "/images/logo.png" }  
+       };  
   
-        var pages = new WinJS.Binding.List(myData, { proxy: true });  
+       var pages = new WinJS.Binding.List(myData, { proxy: true });  
   
-        app.onactivated = function (args) {  
-            if (args.detail.kind === activation.ActivationKind.launch) {  
-                if (args.detail.previousExecutionState !==  
-                activation.ApplicationExecutionState.terminated) {  
-                    // TODO: . . .  
-                } else {  
-                    // TODO: . . .  
-                }  
-                args.setPromise(WinJS.UI.processAll());  
+       app.onactivated = function (args) {  
+           if (args.detail.kind === activation.ActivationKind.launch) {  
+               if (args.detail.previousExecutionState !==  
+               activation.ApplicationExecutionState.terminated) {  
+                   // TODO: . . .  
+               } else {  
+                   // TODO: . . .  
+               }  
+               args.setPromise(WinJS.UI.processAll());  
   
-                updateImages();  
-            }  
-        };  
+               updateImages();  
+           }  
+       };  
   
-        function updateImages() {  
+       function updateImages() {  
   
-            pages.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-            pages.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-            pages.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
-        };  
+           pages.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
+           pages.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
+           pages.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+       };  
   
-        app.oncheckpoint = function (args) {  
-        };  
+       app.oncheckpoint = function (args) {  
+       };  
   
-        app.start();  
+       app.start();  
   
-        var publicMembers = {  
-            items: pages  
-        };  
+       var publicMembers = {  
+           items: pages  
+       };  
   
-        WinJS.Namespace.define("Data", publicMembers);  
+       WinJS.Namespace.define("Data", publicMembers);  
   
-    })();  
-    ```  
+   })();  
+   ```  
   
-     このアプリを Phone エミュレーター (シミュレーターと同様の外観になります) で実行すると、次の図に示すようになります。 ただし、アプリをこの状態にするには、まず、多数のバグを修正する必要があります。  
+    このアプリを Phone エミュレーター (シミュレーターと同様の外観になります) で実行すると、次の図に示すようになります。 ただし、アプリをこの状態にするには、まず、多数のバグを修正する必要があります。  
   
-     ![期待どおりの結果を表示する FlipView アプリ](../debugger/media/js-dom-appfixed.png "JS_DOM_AppFixed")  
+    ![期待どおりの結果を表示する FlipView アプリ](../debugger/media/js-dom-appfixed.png "JS_DOM_AppFixed")  
   
-7.  **[デバッグ]** ツール バーの **[デバッグの開始]** ボタンの横にあるドロップダウン リストの **[シミュレーター]** または **[Emulator 8.1 WVGA 4 inch 512MB] (エミュレーター 8.1 WVGA 4 インチ 512 MB)** をクリックします。  
+7. **[デバッグ]** ツール バーの **[デバッグの開始]** ボタンの横にあるドロップダウン リストの **[シミュレーター]** または **[Emulator 8.1 WVGA 4 inch 512MB] (エミュレーター 8.1 WVGA 4 インチ 512 MB)** をクリックします。  
   
-     ![デバッグ ターゲット リスト](../debugger/media/js-select-target.png "JS_Select_Target")  
+    ![デバッグ ターゲット リスト](../debugger/media/js-select-target.png "JS_Select_Target")  
   
-8.  **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、F5 キーを押して、デバッグ モードでアプリを実行します。  
+8. **[デバッグ]** > **Start [デバッグ]ging**の順にクリックするか、F5 キーを押して、デバッグ モードでアプリを実行します。  
   
-     これによりアプリはシミュレーターまたは Phone エミュレーターで実行されますが、スタイリングにはいくつかバグがあるため、画面にはほとんど何も表示されません。 最初の `FlipView` のイメージが、画面の中央の小さい四角形に表示されます。  
+    これによりアプリはシミュレーターまたは Phone エミュレーターで実行されますが、スタイリングにはいくつかバグがあるため、画面にはほとんど何も表示されません。 最初の `FlipView` のイメージが、画面の中央の小さい四角形に表示されます。  
   
 9. アプリをシミュレーターで実行している場合は、シミュレーターの右側にある **[解像度の変更]** ツール バー コマンドをクリックし、画面の解像度を 1280 x 800 に構成します。 これによって、次の手順で示される値がシミュレーターに表示される値と一致することが確認できます。  
   
@@ -234,15 +234,15 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
      **[レイアウト]** タブに、次の値が表示されます。  
   
-    -   シミュレーターの場合は、320px (オフセット) および 320px (余白) です。  
+    - シミュレーターの場合は、320px (オフセット) および 320px (余白) です。  
   
-    -   Phone エミュレーターの場合は、100px (オフセット) および 100px (余白) です。  
+    - Phone エミュレーターの場合は、100px (オフセット) および 100px (余白) です。  
   
-     次の図は、Phone エミュレーター (100px オフセットおよび余白) を使用する場合の **[レイアウト]** タブを示しています。  
+      次の図は、Phone エミュレーター (100px オフセットおよび余白) を使用する場合の **[レイアウト]** タブを示しています。  
   
-     ![DOM Explorer の [レイアウト] タブ](../debugger/media/js-dom-explorer-layout.png "JS_DOM_Explorer_Layout")  
+      ![DOM Explorer の [レイアウト] タブ](../debugger/media/js-dom-explorer-layout.png "JS_DOM_Explorer_Layout")  
   
-     これは正しくありません。 **[計算済み]** タブでも、同じ余白の値が表示されます。  
+      これは正しくありません。 **[計算済み]** タブでも、同じ余白の値が表示されます。  
   
 21. **[スタイル]** タブをクリックし、 `#fView` CSS セレクターを検索します。 ここでは、 **"余白"** プロパティに 25% の値が表示されます。  
   
@@ -267,23 +267,23 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="SelectingElements"></a> Selecting elements  
  アプリケーションをデバッグするときに、次の 3 種類の方法で DOM 要素を選択できます。  
   
--   直接 DOM エクスプローラー ウィンドウの要素をクリックする (または方向キーを使用)。  
+- 直接 DOM エクスプローラー ウィンドウの要素をクリックする (または方向キーを使用)。  
   
--   **[要素の選択]** ボタン (Ctrl + B キー) を使用する。  
+- **[要素の選択]** ボタン (Ctrl + B キー) を使用する。  
   
--   使用して、`select`は 1 つのコマンドの[JavaScript Console commands](../debugger/javascript-console-commands.md)します。  
+- 使用して、`select`は 1 つのコマンドの[JavaScript Console commands](../debugger/javascript-console-commands.md)します。  
   
- DOM Explorer のウィンドウを使用して要素を選択するときに、要素にマウス ポインターを置くと、対応する要素が実行しているアプリで強調表示されます。 これを行うには、DOM Explorer の要素をクリックして選択する必要があります。または、方向キーを使用して、要素を強調表示して選択できます。 **[要素の選択]** ボタンを使用して DOM Explorer の要素を選択することもできます。 次の図は、 **[要素の選択]** ボタンを示しています。  
+  DOM Explorer のウィンドウを使用して要素を選択するときに、要素にマウス ポインターを置くと、対応する要素が実行しているアプリで強調表示されます。 これを行うには、DOM Explorer の要素をクリックして選択する必要があります。または、方向キーを使用して、要素を強調表示して選択できます。 **[要素の選択]** ボタンを使用して DOM Explorer の要素を選択することもできます。 次の図は、 **[要素の選択]** ボタンを示しています。  
   
- ![DOM Explorer で要素のボタンを選択](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
+  ![DOM Explorer で要素のボタンを選択](../debugger/media/js-dom-select-element-button.png "JS_DOM_Select_Element_Button")  
   
- **[要素の選択]** をクリックする (または Ctrl + B キーを押す) と、実行しているアプリの項目をクリックすることにより、DOM Explorer で項目を選択できるように選択モードが変更されます。 1 回クリックすると、通常の選択モードに戻ります。 **[要素の選択]** をクリックすると、アプリが前面に表示され、カーソルが新しい選択モードを反映した形状に変わります。 アウトラインが表示された要素をクリックすると、DOM Explorer が前面に戻り、指定した要素が選択されています。  
+  **[要素の選択]** をクリックする (または Ctrl + B キーを押す) と、実行しているアプリの項目をクリックすることにより、DOM Explorer で項目を選択できるように選択モードが変更されます。 1 回クリックすると、通常の選択モードに戻ります。 **[要素の選択]** をクリックすると、アプリが前面に表示され、カーソルが新しい選択モードを反映した形状に変わります。 アウトラインが表示された要素をクリックすると、DOM Explorer が前面に戻り、指定した要素が選択されています。  
   
- **[要素の選択]** をクリックする前に、 **[Display web page highlights] (Web ページの強調表示を表示)** を切り替えて実行しているアプリの要素を強調表示するかどうかを指定できます。 次の図は、このボタンを示しています。 強調表示は、既定で表示されます。  
+  **[要素の選択]** をクリックする前に、 **[Display web page highlights] (Web ページの強調表示を表示)** を切り替えて実行しているアプリの要素を強調表示するかどうかを指定できます。 次の図は、このボタンを示しています。 強調表示は、既定で表示されます。  
   
- ![Web ページを表示 ボタンを強調表示](../debugger/media/js-dom-display-highlights-button.png "JS_DOM_Display_Highlights_Button")  
+  ![Web ページを表示 ボタンを強調表示](../debugger/media/js-dom-display-highlights-button.png "JS_DOM_Display_Highlights_Button")  
   
- 強調表示する要素を選択する場合、シミュレーターでマウス ポインターを置く要素が強調表示されます。 強調表示された要素の色は、DOM Explorer の **[レイアウト]** タブに表示されるボックス モデルと一致します。  
+  強調表示する要素を選択する場合、シミュレーターでマウス ポインターを置く要素が強調表示されます。 強調表示された要素の色は、DOM Explorer の **[レイアウト]** タブに表示されるボックス モデルと一致します。  
   
 > [!NOTE]
 >  Windows Phone エミュレーターは、マウス ポインターを置くことによる要素の強調表示を部分的にサポートします。  
@@ -293,13 +293,13 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="BrowserSupport"></a> ブラウザーとプラットフォームのサポート  
  JavaScript 用の Visual Studio ツールである DOM Explorer と JavaScript コンソール ウィンドウは、次のプラットフォーム上でサポートされます。  
   
--   JavaScript と HTML を使った[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] および Windows Phone ストア アプリ  
+- JavaScript と HTML を使った[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] および Windows Phone ストア アプリ  
   
--   [!INCLUDE[win81](../includes/win81-md.md)] で実行されている Internet Explorer 11  
+- [!INCLUDE[win81](../includes/win81-md.md)] で実行されている Internet Explorer 11  
   
--   [!INCLUDE[win8](../includes/win8-md.md)]  
+- [!INCLUDE[win8](../includes/win8-md.md)]  
   
- [と Visual Studio をダウンロードするには、](http://go.microsoft.com/fwlink/?LinkID=232448) ここ [!INCLUDE[win8](../includes/win8-md.md)] にアクセスしてください。  
+  [と Visual Studio をダウンロードするには、](http://go.microsoft.com/fwlink/?LinkID=232448) ここ [!INCLUDE[win8](../includes/win8-md.md)] にアクセスしてください。  
   
 ## <a name="see-also"></a>関連項目  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   

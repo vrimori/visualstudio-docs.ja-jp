@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f7e33868c0609483f748c29cdc446bf720509d35
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 012d79a99ee8df2acf26106be922fac8c335fae3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49184055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878027"
 ---
 # <a name="tier-interactions-view"></a>階層相互作用のビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "49184055"
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
   
- 相互作用ビューでは、2 つのウィンドウに階層相互作用データが表示されます。  
+  相互作用ビューでは、2 つのウィンドウに階層相互作用データが表示されます。  
   
--   マスター ウィンドウは階層ツリーです。 最上位の行には、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページまたはプロセスのデータベース接続の集計データが含まれています。 子ノードには、親のデータベース接続の集計データが含まれています。  
+- マスター ウィンドウは階層ツリーです。 最上位の行には、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ページまたはプロセスのデータベース接続の集計データが含まれています。 子ノードには、親のデータベース接続の集計データが含まれています。  
   
--   マスター ウィンドウでデータベース呼び出しノードをクリックすると、データベース呼び出しのインスタンスのデータが詳細ウィンドウに表示されます。  
+- マスター ウィンドウでデータベース呼び出しノードをクリックすると、データベース呼び出しのインスタンスのデータが詳細ウィンドウに表示されます。  
   
- 時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。  
+  時間は、ミリ秒数または CPU クロック ティック数として表示されます。 表示される時間単位を変更するには、**[ツール]** メニュー、**[オプション]** の順にクリックして、**[時間の値を次の単位で表示]** オプションのいずれかを選択します。  
   
 ## <a name="master-pane"></a>マスター ウィンドウ  
   

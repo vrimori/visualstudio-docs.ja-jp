@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d93861fc6238949d8666072b0bf5a5cc7efdb87b
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 7062f44fe119858e579a53325deca0ea04b46475
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498942"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873020"
 ---
 # <a name="walkthrough-add-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターへの機能を追加します。
 カスタム エディターを作成した後より多くの機能を追加できます。  
@@ -122,38 +122,38 @@ ms.locfileid: "39498942"
   
 13. 実装することで、エディターからのオートメーション オブジェクト モデルを公開、`IDispatch`インターフェイス。  
   
-     詳細については、次を参照してください。[オートメーション モデルに貢献する](../extensibility/internals/contributing-to-the-automation-model.md)します。  
+     詳細については、「 [Contributing to the Automation Model](../extensibility/internals/contributing-to-the-automation-model.md)」を参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
   
--   IDE を呼び出すと、エディター インスタンスが作成された、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッド。 エディターは、複数のビューをサポートしている場合`CreateEditorInstance`ドキュメント データとドキュメント ビュー オブジェクトの両方を作成します。 ドキュメント データ オブジェクトが既にある場合を開く、null でない`punkDocDataExisting`に値が渡される`IVsEditorFactory::CreateEditorInstance`します。 エディター ファクトリの実装に適切なインターフェイスを照会して、既存のドキュメント データ オブジェクトが互換性のあるかどうかを判断する必要があります。 詳細については、次を参照してください。 [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)します。  
+- IDE を呼び出すと、エディター インスタンスが作成された、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>メソッド。 エディターは、複数のビューをサポートしている場合`CreateEditorInstance`ドキュメント データとドキュメント ビュー オブジェクトの両方を作成します。 ドキュメント データ オブジェクトが既にある場合を開く、null でない`punkDocDataExisting`に値が渡される`IVsEditorFactory::CreateEditorInstance`します。 エディター ファクトリの実装に適切なインターフェイスを照会して、既存のドキュメント データ オブジェクトが互換性のあるかどうかを判断する必要があります。 詳細については、次を参照してください。 [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)します。  
   
--   簡略化された埋め込み方法を使用する場合は、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>インターフェイス。  
+- 簡略化された埋め込み方法を使用する場合は、実装、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>インターフェイス。  
   
--   インプレース アクティブ化を使用する場合は、次のインターフェイスを実装します。  
+- インプレース アクティブ化を使用する場合は、次のインターフェイスを実装します。  
   
-     <xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>  
+   <xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>  
   
-     <xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject>  
+   <xref:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject>  
   
-     <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>  
+   <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>  
   
-    > [!NOTE]
-    >  `IOleInPlaceComponent`インターフェイスは、OLE 2 メニューのマージを回避するために使用されます。  
+  > [!NOTE]
+  >  `IOleInPlaceComponent`インターフェイスは、OLE 2 メニューのマージを回避するために使用されます。  
   
-     `IOleCommandTarget`の実装などのコマンドは処理**切り取り**、**コピー**、および**貼り付け**します。 実装する場合`IOleCommandTarget`、エディターが必要独自かどうかを決定 *.vsct*コマンド メニュー構造を定義するファイルで定義されている標準のコマンドを実装している場合、または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 通常、エディター、IDE のメニューを拡張し、使用、独自のツールバーを定義します。、 ただし、エディター、IDE の標準のコマンド セットを使用するだけでなく、独自の特定のコマンドを定義する必要があります。 エディターを使用して標準のコマンドを宣言し、新しいコマンド、コンテキスト メニューのトップレベルのメニューおよびツールバーを定義、 *.vsct*ファイル。 インプレース アクティブ化エディターを作成する場合は、実装<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>のエディターにメニューおよびツールバーを定義し、 *.vsct* OLE 2 メニューのマージを使用してではなくファイル。  
+   `IOleCommandTarget`の実装などのコマンドは処理**切り取り**、**コピー**、および**貼り付け**します。 実装する場合`IOleCommandTarget`、エディターが必要独自かどうかを決定 *.vsct*コマンド メニュー構造を定義するファイルで定義されている標準のコマンドを実装している場合、または[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]します。 通常、エディター、IDE のメニューを拡張し、使用、独自のツールバーを定義します。、 ただし、エディター、IDE の標準のコマンド セットを使用するだけでなく、独自の特定のコマンドを定義する必要があります。 エディターを使用して標準のコマンドを宣言し、新しいコマンド、コンテキスト メニューのトップレベルのメニューおよびツールバーを定義、 *.vsct*ファイル。 インプレース アクティブ化エディターを作成する場合は、実装<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>のエディターにメニューおよびツールバーを定義し、 *.vsct* OLE 2 メニューのマージを使用してではなくファイル。  
   
--   UI で大将メニュー コマンドを防ぐためには、新しいコマンドを開発する前に、IDE で既存のコマンドを使用する必要があります。 共有コマンドが定義されている*SharedCmdDef.vsct*と*ShellCmdDef.vsct*します。 既定の VisualStudioIntegration\Common\Inc サブディレクトリでこれらのファイルがインストールされている、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]インストールします。  
+- UI で大将メニュー コマンドを防ぐためには、新しいコマンドを開発する前に、IDE で既存のコマンドを使用する必要があります。 共有コマンドが定義されている*SharedCmdDef.vsct*と*ShellCmdDef.vsct*します。 既定の VisualStudioIntegration\Common\Inc サブディレクトリでこれらのファイルがインストールされている、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]インストールします。  
   
--   `ISelectionContainer` オプションの 1 つまたは複数の両方を表現できます。 選択した各オブジェクトは、`IDispatch`オブジェクト。  
+- `ISelectionContainer` オプションの 1 つまたは複数の両方を表現できます。 選択した各オブジェクトは、`IDispatch`オブジェクト。  
   
--   IDE を実装して`IOleUndoManager`からアクセスできるサービスとして、<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>またはを通じてインスタンス化できるオブジェクトとして<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>します。 エディターの実装、`IOleUndoUnit`各インターフェイス`Undo`アクション。  
+- IDE を実装して`IOleUndoManager`からアクセスできるサービスとして、<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>またはを通じてインスタンス化できるオブジェクトとして<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>します。 エディターの実装、`IOleUndoUnit`各インターフェイス`Undo`アクション。  
   
--   2 つの場所があるカスタム エディターは、オートメーション オブジェクトを公開できます。  
+- 2 つの場所があるカスタム エディターは、オートメーション オブジェクトを公開できます。  
   
-    -   `Document.Object`  
+  -   `Document.Object`  
   
-    -   `Window.Object`  
+  -   `Window.Object`  
   
 ## <a name="see-also"></a>関連項目  
  [オートメーション モデルに貢献します。](../extensibility/internals/contributing-to-the-automation-model.md)   

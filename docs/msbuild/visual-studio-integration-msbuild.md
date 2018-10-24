@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65dd8415dc57c026d2a913b209340e381b07bc6a
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 874642371f173b56a174dabdd17ee1cf50cc79fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39179142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875477"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio の統合 (MSBuild)
 Visual Studio は、マネージド プロジェクトの読み込みとビルドを行う [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をホストしています。 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] はプロジェクトに対応しているため、そのプロジェクトが他のツールで作成されていたり、ビルド処理がカスタマイズされていたりしても、 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 形式のほとんどすべてのプロジェクトを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]で問題なく使用できます。  
@@ -68,9 +68,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ## <a name="in-process-compilers"></a>インプロセス コンパイラ  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、可能な限り [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] コンパイラのインプロセス バージョンを使用して、パフォーマンスの向上を計ります ([!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] には該当しません)。これが正しく機能するためには、次の条件が満たされている必要があります。  
   
--   `Vbc` プロジェクトの場合、プロジェクトのターゲットに [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] という名前のタスクが存在すること。  
+- `Vbc` プロジェクトの場合、プロジェクトのターゲットに [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] という名前のタスクが存在すること。  
   
--   このタスクの `UseHostCompilerIfAvailable` パラメーターが true に設定されていること。  
+- このタスクの `UseHostCompilerIfAvailable` パラメーターが true に設定されていること。  
   
 ## <a name="design-time-intellisense"></a>デザイン時における IntelliSense のサポート  
  ビルドによって出力アセンブリが生成される前に、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で IntelliSense がサポートされるようにするには、次の条件が満たされている必要があります。  
@@ -157,23 +157,23 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 ## <a name="reference-resolution"></a>参照の解決  
  参照の解決とは、プロジェクト ファイルに格納されている参照項目を使用して、実際のアセンブリを検索する処理をいいます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、 **[プロパティ]** ウィンドウに参照ごとに詳細なプロパティを表示するために、参照の解決を実行する必要があります。 次の一覧では、3 種類の参照とその解決方法について説明します。  
   
--   アセンブリ参照  
+- アセンブリ参照  
   
-     プロジェクト システムは、 `ResolveAssemblyReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `ReferencePath`という項目の種類名を持つ項目を生成します。 これらの項目のそれぞれが、参照への完全パスを含む項目規定 (項目の `Include` 属性の値) を持ちます。 これらの項目には、以下の新しいメタデータに加え、入力項目のすべてのメタデータも渡されます。  
+   プロジェクト システムは、 `ResolveAssemblyReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `ReferencePath`という項目の種類名を持つ項目を生成します。 これらの項目のそれぞれが、参照への完全パスを含む項目規定 (項目の `Include` 属性の値) を持ちます。 これらの項目には、以下の新しいメタデータに加え、入力項目のすべてのメタデータも渡されます。  
   
-    -   アセンブリを出力フォルダーにコピーするかどうかを示す`CopyLocal`。true または false に設定されます。  
+  - アセンブリを出力フォルダーにコピーするかどうかを示す`CopyLocal`。true または false に設定されます。  
   
-    -   参照の元の項目規定を格納している`OriginalItemSpec`。  
+  - 参照の元の項目規定を格納している`OriginalItemSpec`。  
   
-    -   `ResolvedFrom`ディレクトリから解決された場合に "{TargetFrameworkDirectory}" に設定される [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 。  
+  - `ResolvedFrom`ディレクトリから解決された場合に "{TargetFrameworkDirectory}" に設定される [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 。  
   
--   COM 参照  
+- COM 参照  
   
-     プロジェクト システムは、 `ResolveCOMReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `ComReferenceWrappers`という項目の種類名を持つ項目を生成します。 これらの項目のそれぞれが、COM 参照のための相互運用機能アセンブリへの完全パスを含む項目規定を持ちます。 これらの項目には、アセンブリを出力フォルダーにコピーするかどうかを示す `CopyLocal` という名前の新しいメタデータ (true または false に設定) に加え、入力項目のすべてのメタデータも渡されます。  
+   プロジェクト システムは、 `ResolveCOMReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `ComReferenceWrappers`という項目の種類名を持つ項目を生成します。 これらの項目のそれぞれが、COM 参照のための相互運用機能アセンブリへの完全パスを含む項目規定を持ちます。 これらの項目には、アセンブリを出力フォルダーにコピーするかどうかを示す `CopyLocal` という名前の新しいメタデータ (true または false に設定) に加え、入力項目のすべてのメタデータも渡されます。  
   
--   ネイティブ参照  
+- ネイティブ参照  
   
-     プロジェクト システムは、 `ResolveNativeReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `NativeReferenceFile`という項目の種類名を持つ項目を生成します。 これらの項目には、参照の元の項目規定を格納する `OriginalItemSpec`という名前の新しいメタデータに加え、入力項目のすべてのメタデータも渡されます。  
+   プロジェクト システムは、 `ResolveNativeReferences`という既知の名前を持つターゲットを呼び出します。 このターゲットは、 `NativeReferenceFile`という項目の種類名を持つ項目を生成します。 これらの項目には、参照の元の項目規定を格納する `OriginalItemSpec`という名前の新しいメタデータに加え、入力項目のすべてのメタデータも渡されます。  
   
 ## <a name="performance-shortcuts"></a>パフォーマンスに関するヒント  
  Visual Studio の UI でデバッグを開始する (F5 キーを押すか、メニュー バーの **[デバッグ]** > **[デバッグの開始]** を選択する) と、パフォーマンスを向上させるために、ビルド処理で高速更新チェックを使用します。 カスタマイズされたビルドで、順次ビルドするファイルを作成した場合、高速更新チェックでは変更されたファイルが正しく識別されません。 徹底した更新プログラムのチェックを必要とするプロジェクトでは、 `DISABLEFASTUPTODATECHECK=1`環境変数を設定することで高速チェックを無効にできます。 また、プロジェクトまたはプロジェクトでインポートしたファイルで、MSBuild プロパティとしてこれを設定することもできます。  

@@ -16,34 +16,34 @@ ms.assetid: 33416226-9083-41b5-b153-10d2bf35c012
 caps.latest.revision: 41
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d3c19f48ffe00f3c824dc5085910b0319bc3c184
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7722132a81c63902450edd85ef90bde94ad94744
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49257349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880512"
 ---
 # <a name="installing-an-isolated-shell-application"></a>分離シェル アプリケーションをインストールします。
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 シェルのアプリをインストールするには、次の手順を実行する必要があります。  
   
--   ソリューションを準備します。  
+- ソリューションを準備します。  
   
--   アプリケーションの Windows インストーラー (MSI) パッケージを作成します。  
+- アプリケーションの Windows インストーラー (MSI) パッケージを作成します。  
   
--   セットアップ ブートス トラップを作成します。  
+- セットアップ ブートス トラップを作成します。  
   
- すべてのコード例では、このドキュメントは、[シェルの展開サンプル](http://go.microsoft.com/fwlink/?LinkId=262245)、MSDN web サイトのコード ギャラリーからダウンロードできます。 サンプルでは、これらの各手順の実行の結果を示します。  
+  すべてのコード例では、このドキュメントは、[シェルの展開サンプル](http://go.microsoft.com/fwlink/?LinkId=262245)、MSDN web サイトのコード ギャラリーからダウンロードできます。 サンプルでは、これらの各手順の実行の結果を示します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックで説明する手順を実行するには、コンピューターに、次のツールをインストールする必要があります。  
   
--   Visual Studio SDK  
+- Visual Studio SDK  
   
--   [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720)バージョン 3.6  
+- [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=82720)バージョン 3.6  
   
- このサンプルは、Microsoft Visualization and Modeling SDK いないすべてのシェルが必要にも必要です。  
+  このサンプルは、Microsoft Visualization and Modeling SDK いないすべてのシェルが必要にも必要です。  
   
 ## <a name="preparing-your-solution"></a>ソリューションを準備します。  
  既定では、シェル テンプレートは、VSIX パッケージにビルドしますが、この動作は、デバッグ目的で主にします。 シェル アプリケーションを展開するときに、インストール中にレジストリのアクセスと再起動を許可する MSI パッケージを使用する必要があります。 アプリケーションの MSI の展開を準備するには、次の手順を実行します。  

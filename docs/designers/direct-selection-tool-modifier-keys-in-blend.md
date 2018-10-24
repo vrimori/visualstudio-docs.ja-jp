@@ -10,18 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c17d5802e919108dfcb888f38acebe32c093bb76
-ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.openlocfilehash: 1630432d6135ab4a6f6a221f54b89aa18e7e8cb3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37924094"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876231"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend"></a>Blend の [個別選択] ツールの修飾キー
 次の表は、**個別選択**ツール ![個別選択ツール](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) で既存のパスの形状を変更するために使うことができるショートカットの一覧です。 既存のパス上の点を追加または削除したり、2 つの既存のパスを結合したりする場合は、**[ペン]** ツールを使います。
 
 |目的|方法|ポインター|
-|-----------------------|-------------|-------------|
+| - |-------------|-------------|
 |パス上の点に接線ハンドルを表示します。|パス上の点をクリックします。|![パス上の点に接線ハンドルを表示します。](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> ポイントのポインターを移動します|
 |パス上の点を移動します。|パス上の点をドラッグします。|![パス上の点を移動します。](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> ポイントのポインターを移動します|
 |パス上の 2 点を結ぶ線分に接線ハンドルを表示します。|パスの線分をクリックします。|![パス上の 2 点を結ぶ線分に接線ハンドルを表示します。](../designers/media/2ace930f-98fa-410b-92cf-7a4b88503ee7.png)<br /><br /> 線分移動ポインター|

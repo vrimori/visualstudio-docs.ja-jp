@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a1a8f46f6d5cef0d786110fb27d6ff4c1adce26b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 04f592bab7679ed3e8fe8791872ce2280d05359a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49223720"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881977"
 ---
 # <a name="ltvargt-javascript"></a>&lt;var&gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -44,41 +44,41 @@ ms.locfileid: "49223720"
  `type`  
  任意。 変数のデータ型。 型は以下のいずれかです。  
   
--   `Number` や `Object` など、ECMAScript 5 仕様に含まれる ECMAScript 言語の型。  
+- `Number` や `Object` など、ECMAScript 5 仕様に含まれる ECMAScript 言語の型。  
   
--   `HTMLElement`、`Window`、`Document` などの DOM オブジェクト。  
+- `HTMLElement`、`Window`、`Document` などの DOM オブジェクト。  
   
--   JavaScript のコンストラクター関数。  
+- JavaScript のコンストラクター関数。  
   
- `integer`  
- 任意。 `type` が `Number` である場合に、変数が整数かどうかを指定します。 変数が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `integer`  
+  任意。 `type` が `Number` である場合に、変数が整数かどうかを指定します。 変数が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `domElement`  
- 任意。 この属性は非推奨とされました。この属性より `type` 属性が優先されます。 この属性は、ドキュメント化された変数が DOM 要素であるかどうかを指定します。 変数が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `type` 属性が設定されておらず `domElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、ドキュメント化された変数が `HTMLElement` として処理されます。  
+  `domElement`  
+  任意。 この属性は非推奨とされました。この属性より `type` 属性が優先されます。 この属性は、ドキュメント化された変数が DOM 要素であるかどうかを指定します。 変数が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `type` 属性が設定されておらず `domElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、ドキュメント化された変数が `HTMLElement` として処理されます。  
   
- `mayBeNull`  
- 任意。 ドキュメント化された変数を null に設定できるかどうかを指定します。 変数を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `mayBeNull`  
+  任意。 ドキュメント化された変数を null に設定できるかどうかを指定します。 変数を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `elementType`  
- 任意。 `type` が `Array` であれば、この属性は、配列内の要素の型を指定します。  
+  `elementType`  
+  任意。 `type` が `Array` であれば、この属性は、配列内の要素の型を指定します。  
   
- `elementInteger`  
- 任意。 `type` が `Array` であり、`elementType` が `Number` である場合、この属性は、配列内の要素が整数であるかどうかを指定します。 配列内の要素が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `elementInteger`  
+  任意。 `type` が `Array` であり、`elementType` が `Number` である場合、この属性は、配列内の要素が整数であるかどうかを指定します。 配列内の要素が整数であることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `elementDomElement`  
- 任意。 この属性は非推奨とされました。この属性より `elementType` 属性が優先されます。 `type` が `Array` である場合、この属性は、配列内の要素が DOM 要素であるかどうかを指定します。 要素が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `elementType` 属性が設定されておらず `elementDomElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、配列内の各要素が `HTMLElement` として処理されます。  
+  `elementDomElement`  
+  任意。 この属性は非推奨とされました。この属性より `elementType` 属性が優先されます。 `type` が `Array` である場合、この属性は、配列内の要素が DOM 要素であるかどうかを指定します。 要素が DOM 要素であることを指定する場合は `true` に設定します。それ以外の場合は `false` に設定します。 `elementType` 属性が設定されておらず `elementDomElement` が `true` に設定されている場合、IntelliSense の入力候補機能では、配列内の各要素が `HTMLElement` として処理されます。  
   
- `elementMayBeNull`  
- 任意。 `type` が `Array` である場合、配列内の要素を null に設定できるかどうかを指定します。 配列内の要素を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
+  `elementMayBeNull`  
+  任意。 `type` が `Array` である場合、配列内の要素を null に設定できるかどうかを指定します。 配列内の要素を null に設定できることを示す場合は `true` に設定します。それ以外の場合は `false` に設定します。 既定値は `false` です。 Visual Studio では、この属性は IntelliSense 情報を提供するためには使用されません。  
   
- `helpKeyword`  
- 任意。 F1 ヘルプのキーワード。  
+  `helpKeyword`  
+  任意。 F1 ヘルプのキーワード。  
   
- `locid`  
- 任意。 変数に関するローカライズ情報用の識別子。 この識別子は、メンバーの ID であるか、または OpenAjax のメタデータで定義されているメッセージ バンドル内の `name` 属性値に対応します。 識別子の型で指定された形式によって異なります、 [ \<loc >](../ide/loc-javascript.md)タグ。  
+  `locid`  
+  任意。 変数に関するローカライズ情報用の識別子。 この識別子は、メンバーの ID であるか、または OpenAjax のメタデータで定義されているメッセージ バンドル内の `name` 属性値に対応します。 識別子の型で指定された形式によって異なります、 [ \<loc >](../ide/loc-javascript.md)タグ。  
   
- `description`  
- 任意。 変数の説明。  
+  `description`  
+  任意。 変数の説明。  
   
 ## <a name="example"></a>例  
  `<var>` 要素を使用する方法を次のコード例に示します。  

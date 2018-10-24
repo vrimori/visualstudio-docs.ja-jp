@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d4496c42bfcc0baecd69770ff529c189d85da026
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 23d810c6bbb460f01528d5f9fb55bb8ca482e383
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49220871"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880755"
 ---
 # <a name="how-to-manually-create-web-templates"></a>方法 : Web テンプレートを手動で作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,36 +36,36 @@ Web テンプレートの作成方法は、他の種類のテンプレートを�
   
 ### <a name="to-manually-create-a-web-template"></a>Web テンプレートを手動で作成するには  
   
-1.  Web プロジェクトを作成します。  
+1. Web プロジェクトを作成します。  
   
-2.  プロジェクト内のファイルを変更または削除するか、新しいファイルをプロジェクトに追加します。  
+2. プロジェクト内のファイルを変更または削除するか、新しいファイルをプロジェクトに追加します。  
   
-3.  XML ファイルを作成し、.vstemplate ファイル名拡張子を使って、プロジェクトと同じディレクトリに保存します。 このファイルを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のプロジェクトに追加しないでください。  
+3. XML ファイルを作成し、.vstemplate ファイル名拡張子を使って、プロジェクトと同じディレクトリに保存します。 このファイルを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] のプロジェクトに追加しないでください。  
   
-4.  プロジェクト テンプレート メタデータを提供するための .vstemplate XML ファイルを作成します。 詳しくは、次のセクションの例をご覧ください。  
+4. プロジェクト テンプレート メタデータを提供するための .vstemplate XML ファイルを作成します。 詳しくは、次のセクションの例をご覧ください。  
   
-5.  .vstemplate ファイルで `ProjectType` 要素を探し、テキスト値を `Web` に設定します。  
+5. .vstemplate ファイルで `ProjectType` 要素を探し、テキスト値を `Web` に設定します。  
   
-6.  `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。 プログラミング言語は次のいずれかの値です。  
+6. `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。 プログラミング言語は次のいずれかの値です。  
   
-    -   CSharp  
+   - CSharp  
   
-    -   VisualBasic  
+   - VisualBasic  
   
      例えば:  
   
-    ```  
-    <TemplateData>  
-        ...  
-        <ProjectType>Web</ProjectType>  
-        <ProjectSubType>CSharp</ProjectSubType>  
-        ...  
-    </TemplateData>  
-    ```  
+   ```  
+   <TemplateData>  
+       ...  
+       <ProjectType>Web</ProjectType>  
+       <ProjectSubType>CSharp</ProjectSubType>  
+       ...  
+   </TemplateData>  
+   ```  
   
-7.  テンプレート内のファイル (.vstemplate ファイルを含む) を選んで右クリックし、**[送信]** をクリックして、**[圧縮 (zip 形式) フォルダー]** をクリックします。 ファイルは .zip ファイルに圧縮されます。  
+7. テンプレート内のファイル (.vstemplate ファイルを含む) を選んで右クリックし、**[送信]** をクリックして、**[圧縮 (zip 形式) フォルダー]** をクリックします。 ファイルは .zip ファイルに圧縮されます。  
   
-8.  .zip テンプレート ファイルを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートのディレクトリに配置します。 既定では、このディレクトリは \My Documents\Visual Studio <*バージョン*>\My Exported Templates\\ です。  
+8. .zip テンプレート ファイルを [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクト テンプレートのディレクトリに配置します。 既定では、このディレクトリは \My Documents\Visual Studio <*バージョン*>\My Exported Templates\\ です。  
   
 ## <a name="example"></a>例  
  次の例では、Web プロジェクト テンプレートの基本的な .vstemplate ファイルを示します。  

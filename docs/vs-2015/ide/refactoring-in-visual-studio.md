@@ -14,27 +14,27 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e621d8bccdb8dceb1a6516ff0c070393962cea11
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ce995687f304579c7a4f3a95b971dcc86e28f050
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303798"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878038"
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio でのリファクタリング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 リファクタリングとは、コードの動作を変更することなく、簡単にコードを維持、理解、拡張するためのプロセスです。 一般的な*リファクタリング*の一部には、次のものがあります。  
   
-1.  長い関数を短く分割する  
+1. 長い関数を短く分割する  
   
-2.  変数、型、関数、またはパラメーターの名前を変更する  
+2. 変数、型、関数、またはパラメーターの名前を変更する  
   
-3.  パラメーターの順序を変更する  
+3. パラメーターの順序を変更する  
   
-4.  ディレクティブの使用を削除したり、順序を変更したりする  
+4. ディレクティブの使用を削除したり、順序を変更したりする  
   
- リファクタリングのロジックは言語の構文に密接に結び付けられているため、Visual Studio の各言語サービスには、それぞれ独自のリファクタリング機能があります。 詳細については、次のページを参照してください。  
+   リファクタリングのロジックは言語の構文に密接に結び付けられているため、Visual Studio の各言語サービスには、それぞれ独自のリファクタリング機能があります。 詳細については、次のページを参照してください。  
   
 ### <a name="refactoring-in-c"></a>リファクタリング [C#]  
  [リファクタリング (C#)](../csharp-ide/refactoring-csharp.md)  

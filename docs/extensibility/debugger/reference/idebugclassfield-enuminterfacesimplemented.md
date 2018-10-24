@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumInterfacesImplemented |Microsoft ドキュメント
+title: IDebugClassField::EnumInterfacesImplemented |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a8a313be7c24b4e3778a4e4890eaf2c5eb67b4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9119668cf4eb8ddb6196aec774acf171db04e868
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101392"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872682"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
-このクラスで実装されたインターフェイスの列挙子を作成します。  
+このクラスによって実装されるインターフェイスの列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int EnumInterfacesImplemented(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)実装されたインターフェイスのリストを表すオブジェクト。 インターフェイスがない場合は、null 値を返します。  
+ [out]返します、 [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)実装されるインターフェイスのリストを表すオブジェクト。 インターフェイスがない場合は、null 値を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、S_OK を返します。 または、このクラスで実装されたインターフェイスが存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
+ 成功した場合は S_OK を返します。 または、このクラスで実装されたインターフェイスがない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 列挙体の各要素は、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)インターフェイスを記述するオブジェクト。 アンマネージ注[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]ため、このメソッドは、アンマネージについて常に null 値を返します、コードが不連続エンティティとしてインターフェイスを使用しない[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]コード。  
+## <a name="remarks"></a>Remarks  
+ 列挙体の各要素は、 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)インターフェイスを記述するオブジェクト。 アンマネージ注[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]ため、このメソッドは、アンマネージ常に null 値を返します、コードが不連続エンティティとしてインターフェイスを使用しない[!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]コード。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

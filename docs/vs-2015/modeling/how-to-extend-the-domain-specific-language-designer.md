@@ -12,12 +12,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e6a7bf23ab8b64516f474c6741cef48d7a0d4b43
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 434b9c5a575ab19530ca3c5c3e0d6536235b9f88
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294269"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878558"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -74,17 +74,17 @@ DSL 定義を編集するために使用するデザイナーには、拡張機�
   
  主に、拡張機能を展開する[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]、他のコンピューターに次の手順に従います。  
   
-1.  VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\*\\\*.vsix  
+1. VSIX プロジェクトの箱で、VSIX のインストール ファイルを見つける\\*\*\\\*.vsix  
   
-2.  対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。  
+2. 対象のコンピュータにこのファイルをコピーし、Windows エクスプ ローラー (またはファイル エクスプ ローラー) でそれをダブルクリックします。  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能がインストールされていることを確認する拡張機能マネージャーを開きます。  
+    [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]拡張機能がインストールされていることを確認する拡張機能マネージャーを開きます。  
   
- 拡張機能をアンインストールするには、次の手順を実行します。  
+   拡張機能をアンインストールするには、次の手順を実行します。  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の**ツール** メニューのをクリックして**拡張機能マネージャー**です。  
+3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の**ツール** メニューのをクリックして**拡張機能マネージャー**です。  
   
-2.  拡張機能を選択して削除します。  
+4. 拡張機能を選択して削除します。  
   
 ## <a name="adding-a-shortcut-menu-command"></a>ショートカット メニュー コマンドの追加  
  DSL デザイナー画面または DSL エクスプ ローラー ウィンドウに表示されるショートカット メニューのコマンドを作成するには、次のようなクラスを記述します。  

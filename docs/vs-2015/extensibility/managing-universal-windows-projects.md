@@ -13,12 +13,12 @@ ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 40d9a160d839b965c4b5f6db2413237af0af30ce
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dd4e32c55e0e159ebaa59e0a70e41a05249bb46c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49252812"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837946"
 ---
 # <a name="managing-universal-windows-projects"></a>ユニバーサル Windows プロジェクトの管理
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -416,116 +416,116 @@ ms.locfileid: "49252812"
   
 ### <a name="detecting-changes-in-platform-projects-and-shared-projects"></a>プラットフォームのプロジェクトと共有プロジェクトに変更を検出します。  
   
-1.  プラットフォームのプロジェクトの場合と同様、共有プロジェクトでの変更を検出するために階層し、プロジェクトのイベントを使用できます。 ただし、共有プロジェクト内のプロジェクト項目は表示されません、つまり、共有プロジェクトの項目が変更されたときに特定のイベントは起動されません。  
+1. プラットフォームのプロジェクトの場合と同様、共有プロジェクトでの変更を検出するために階層し、プロジェクトのイベントを使用できます。 ただし、共有プロジェクト内のプロジェクト項目は表示されません、つまり、共有プロジェクトの項目が変更されたときに特定のイベントは起動されません。  
   
-     プロジェクト内のファイルの名前が変更イベントの順序を考慮してください。  
+    プロジェクト内のファイルの名前が変更イベントの順序を考慮してください。  
   
-    1.  ディスクでは、ファイル名が変更されました。  
+   1. ディスクでは、ファイル名が変更されました。  
   
-    2.  ファイルの新しい名前を含めるには、プロジェクト ファイルが更新されます。  
+   2. ファイルの新しい名前を含めるには、プロジェクト ファイルが更新されます。  
   
-     階層のイベント (たとえば、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) ように、UI に表示される変更の追跡を一般に、**ソリューション エクスプ ローラー**します。 階層のイベントは、ファイルの削除し、ファイルに追加で構成されるファイルの名前の変更操作を検討してください。 ただし、非表示の項目が変更されると、階層イベント システムが発生する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>イベントがない、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>イベント。 そのため、プラットフォーム プロジェクト内のファイルの名前を変更する場合、取得両方<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>、取得のみ共有プロジェクト内のファイルの名前を変更する場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>します。  
+      階層のイベント (たとえば、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>) ように、UI に表示される変更の追跡を一般に、**ソリューション エクスプ ローラー**します。 階層のイベントは、ファイルの削除し、ファイルに追加で構成されるファイルの名前の変更操作を検討してください。 ただし、非表示の項目が変更されると、階層イベント システムが発生する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>イベントがない、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>イベント。 そのため、プラットフォーム プロジェクト内のファイルの名前を変更する場合、取得両方<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemAdded%2A>、取得のみ共有プロジェクト内のファイルの名前を変更する場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents.OnItemDeleted%2A>します。  
   
-     プロジェクト項目の変更を追跡するには、DTE プロジェクト項目のイベントを処理することができます (ものがある<xref:EnvDTE.ProjectItemsEventsClass>)。 ただし、多数のイベントを処理する場合でイベントの処理パフォーマンスの向上を入手できます<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>します。 このチュートリアルでは、DTE イベントと階層のイベントのみを説明します。 この手順では、共有プロジェクトとプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、共有プロジェクトで 1 つのファイルとプラットフォーム プロジェクトに別のファイルの名前を変更するときに、各名前の変更操作に対して発生するイベントを確認できます。  
+      プロジェクト項目の変更を追跡するには、DTE プロジェクト項目のイベントを処理することができます (ものがある<xref:EnvDTE.ProjectItemsEventsClass>)。 ただし、多数のイベントを処理する場合でイベントの処理パフォーマンスの向上を入手できます<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>します。 このチュートリアルでは、DTE イベントと階層のイベントのみを説明します。 この手順では、共有プロジェクトとプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、共有プロジェクトで 1 つのファイルとプラットフォーム プロジェクトに別のファイルの名前を変更するときに、各名前の変更操作に対して発生するイベントを確認できます。  
   
-     この手順では、共有プロジェクトとプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、共有プロジェクトで 1 つのファイルとプラットフォーム プロジェクトに別のファイルの名前を変更するときに、各名前の変更操作に対して発生するイベントを確認できます。  
+      この手順では、共有プロジェクトとプラットフォーム プロジェクトにイベント リスナーを追加します。 次に、共有プロジェクトで 1 つのファイルとプラットフォーム プロジェクトに別のファイルの名前を変更するときに、各名前の変更操作に対して発生するイベントを確認できます。  
   
-2.  イベント リスナーを追加します。 新しいクラス ファイルをプロジェクトに追加し、HierarchyEventListener.cs を付けます。  
+2. イベント リスナーを追加します。 新しいクラス ファイルをプロジェクトに追加し、HierarchyEventListener.cs を付けます。  
   
-3.  HierarchyEventListener.cs ファイルを開き、次を追加するステートメントを使用します。  
+3. HierarchyEventListener.cs ファイルを開き、次を追加するステートメントを使用します。  
   
-    ```csharp  
-    using Microsoft.VisualStudio.Shell.Interop;  
-    using Microsoft.VisualStudio;  
-    using System.IO;  
+   ```csharp  
+   using Microsoft.VisualStudio.Shell.Interop;  
+   using Microsoft.VisualStudio;  
+   using System.IO;  
   
-    ```  
+   ```  
   
-4.  `HierarchyEventListener`クラス実装<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>:  
+4. `HierarchyEventListener`クラス実装<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>:  
   
-    ```csharp  
-    class HierarchyEventListener : IVsHierarchyEvents  
-    { }  
+   ```csharp  
+   class HierarchyEventListener : IVsHierarchyEvents  
+   { }  
   
-    ```  
+   ```  
   
-5.  メンバーを実装する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>次のコードのようにします。  
+5. メンバーを実装する<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchyEvents>次のコードのようにします。  
   
-    ```csharp  
-    class HierarchyEventListener : IVsHierarchyEvents  
-    {  
-        private IVsHierarchy hierarchy;  
-        IVsOutputWindowPane output;   
+   ```csharp  
+   class HierarchyEventListener : IVsHierarchyEvents  
+   {  
+       private IVsHierarchy hierarchy;  
+       IVsOutputWindowPane output;   
   
-        internal HierarchyEventListener(IVsHierarchy hierarchy, IVsOutputWindowPane outputWindow) {  
-             this.hierarchy = hierarchy;  
-             this.output = outputWindow;  
-        }  
+       internal HierarchyEventListener(IVsHierarchy hierarchy, IVsOutputWindowPane outputWindow) {  
+            this.hierarchy = hierarchy;  
+            this.output = outputWindow;  
+       }  
   
-        int IVsHierarchyEvents.OnInvalidateIcon(IntPtr hIcon) {  
-            return VSConstants.S_OK;  
-        }  
+       int IVsHierarchyEvents.OnInvalidateIcon(IntPtr hIcon) {  
+           return VSConstants.S_OK;  
+       }  
   
-        int IVsHierarchyEvents.OnInvalidateItems(uint itemIDParent) {  
-            return VSConstants.S_OK;  
-        }  
+       int IVsHierarchyEvents.OnInvalidateItems(uint itemIDParent) {  
+           return VSConstants.S_OK;  
+       }  
   
-        int IVsHierarchyEvents.OnItemAdded(uint itemIDParent, uint itemIDSiblingPrev, uint itemIDAdded) {  
-            output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemAdded: " + itemIDAdded + "\n");  
-            return VSConstants.S_OK;  
-        }  
+       int IVsHierarchyEvents.OnItemAdded(uint itemIDParent, uint itemIDSiblingPrev, uint itemIDAdded) {  
+           output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemAdded: " + itemIDAdded + "\n");  
+           return VSConstants.S_OK;  
+       }  
   
-        int IVsHierarchyEvents.OnItemDeleted(uint itemID) {  
-            output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemDeleted: " + itemID + "\n");  
-            return VSConstants.S_OK;  
-        }  
+       int IVsHierarchyEvents.OnItemDeleted(uint itemID) {  
+           output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemDeleted: " + itemID + "\n");  
+           return VSConstants.S_OK;  
+       }  
   
-        int IVsHierarchyEvents.OnItemsAppended(uint itemIDParent) {  
-            output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemsAppended\n");  
-            return VSConstants.S_OK;  
-        }  
+       int IVsHierarchyEvents.OnItemsAppended(uint itemIDParent) {  
+           output.OutputStringThreadSafe("IVsHierarchyEvents.OnItemsAppended\n");  
+           return VSConstants.S_OK;  
+       }  
   
-        int IVsHierarchyEvents.OnPropertyChanged(uint itemID, int propID, uint flags) {  
-            output.OutputStringThreadSafe("IVsHierarchyEvents.OnPropertyChanged: item ID " + itemID + "\n");  
-            return VSConstants.S_OK;  
-        }  
-    }  
+       int IVsHierarchyEvents.OnPropertyChanged(uint itemID, int propID, uint flags) {  
+           output.OutputStringThreadSafe("IVsHierarchyEvents.OnPropertyChanged: item ID " + itemID + "\n");  
+           return VSConstants.S_OK;  
+       }  
+   }  
   
-    ```  
+   ```  
   
-6.  同じクラスには、DTE イベントの別のイベント ハンドラーを追加<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>、プロジェクト項目の名前が変更されるたびに発生します。  
+6. 同じクラスには、DTE イベントの別のイベント ハンドラーを追加<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>、プロジェクト項目の名前が変更されるたびに発生します。  
   
-    ```csharp  
-    public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)  
-    {  
-        output.OutputStringThreadSafe(string.Format("[Event] Renamed {0} to {1} in project {2}\n",  
-             oldName, Path.GetFileName(projItem.get_FileNames(1)), projItem.ContainingProject.Name));  
-    }  
-    ```  
+   ```csharp  
+   public void OnItemRenamed(EnvDTE.ProjectItem projItem, string oldName)  
+   {  
+       output.OutputStringThreadSafe(string.Format("[Event] Renamed {0} to {1} in project {2}\n",  
+            oldName, Path.GetFileName(projItem.get_FileNames(1)), projItem.ContainingProject.Name));  
+   }  
+   ```  
   
-7.  階層のイベントにサインアップします。 個別に追跡しているすべてのプロジェクトにサインアップする必要があります。 次のコードを追加`ShowMessageBox`、共有のプロジェクトでは、およびその他のプラットフォーム プロジェクトの 1 つのいずれか。  
+7. 階層のイベントにサインアップします。 個別に追跡しているすべてのプロジェクトにサインアップする必要があります。 次のコードを追加`ShowMessageBox`、共有のプロジェクトでは、およびその他のプラットフォーム プロジェクトの 1 つのいずれか。  
   
-    ```csharp  
-    // hook up the event listener for hierarchy events on the shared project  
-    HierarchyEventListener listener1 = new HierarchyEventListener(sharedHier, output);  
-    uint cookie1;  
-    sharedHier.AdviseHierarchyEvents(listener1, out cookie1);  
+   ```csharp  
+   // hook up the event listener for hierarchy events on the shared project  
+   HierarchyEventListener listener1 = new HierarchyEventListener(sharedHier, output);  
+   uint cookie1;  
+   sharedHier.AdviseHierarchyEvents(listener1, out cookie1);  
   
-    // hook up the event listener for hierarchy events on the   
-    active project  
-    HierarchyEventListener listener2 = new HierarchyEventListener(activePlatformHier, output);  
-    uint cookie2;  
-    activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);  
-    ```  
+   // hook up the event listener for hierarchy events on the   
+   active project  
+   HierarchyEventListener listener2 = new HierarchyEventListener(activePlatformHier, output);  
+   uint cookie2;  
+   activePlatformHier.AdviseHierarchyEvents(listener2, out cookie2);  
+   ```  
   
-8.  DTE プロジェクト項目のイベントにサインアップ<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>します。 2 番目のリスナーをフックした後は、次のコードを追加します。  
+8. DTE プロジェクト項目のイベントにサインアップ<xref:EnvDTE.ProjectItemsEventsClass.ItemRenamed>します。 2 番目のリスナーをフックした後は、次のコードを追加します。  
   
-    ```csharp  
-    // hook up DTE events for project items  
-    Events2 dteEvents = (Events2)dte.Events;  
-    dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;  
+   ```csharp  
+   // hook up DTE events for project items  
+   Events2 dteEvents = (Events2)dte.Events;  
+   dteEvents.ProjectItemsEvents.ItemRenamed += listener1.OnItemRenamed;  
   
-    ```  
+   ```  
   
 9. 共有対象アイテムを変更します。 プラットフォーム プロジェクトで共有項目を変更することはできません。代わりに、これらの項目の実際の所有者である共有プロジェクトでそれらを変更する必要があります。 共有のプロジェクトに対応する項目の ID を取得できます<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.IsDocumentInProject%2A>、共有対象アイテムの完全なパスを指定します。 共有対象アイテムを変更します。 プラットフォームのプロジェクトに反映されます。  
   

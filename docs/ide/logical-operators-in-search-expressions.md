@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de351e019c4daacc61bbbdd2757b0f0d9a46e584
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a2c189afe9051d0f85c7f5f24a928d475d0eaca9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31942842"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872851"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>検索式の論理演算子と高度な演算子
 
@@ -57,7 +57,7 @@ ms.locfileid: "31942842"
 `code:` 演算子を使用して、複数のプログラミング言語のいずれかに関するコンテンツを検索できます。 特定のプログラミング言語に対して例を返すには、次のプログラミング言語値のいずれかを使用します。
 
 |プログラミング言語|検索演算子構文|
-|--------------------|---------|
+| - |---------|
 |Visual Basic|`code:vb`<br/>`code:visualbasic`|
 |C#|`code:c#`<br/>`code:csharp`|
 |C++|`code:cpp`<br/>`code:c++`<br/>`code:cplusplus`|

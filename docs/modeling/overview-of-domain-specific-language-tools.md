@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 873c377b4b2262df6b12f581f1cdac901d27ffce
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 6942511e325b77aaa3d646b6e84cd833b8b55ab2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859435"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871746"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>ドメイン固有言語ツールの概要
 Visual Studio でホストされている、ドメイン固有言語ツール (DSL ツール) では、ドメイン固有言語を設計し、言語に基づくモデルを作成するユーザーが必要なすべてのものを生成できます。
@@ -34,31 +34,31 @@ Visual Studio でホストされている、ドメイン固有言語ツール (D
 ## <a name="the-dsl-tools-solution"></a>DSL ツール ソリューション
  ドメイン固有のデザイナーのウィザードには、次のソリューション テンプレートが用意されています。
 
--   タスク フロー
+- タスク フロー
 
--   クラス ダイアグラム
+- クラス ダイアグラム
 
--   最小言語
+- 最小言語
 
--   コンポーネント モデル
+- コンポーネント モデル
 
--   最小限の WPF
+- 最小限の WPF
 
--   最小 Windows.Forms
+- 最小 Windows.Forms
 
--   DSL ライブラリ
+- DSL ライブラリ
 
- 詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。
+  詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。
 
- ウィザードでは、次のプロジェクトを含む Visual Studio ソリューションを作成します。
+  ウィザードでは、次のプロジェクトを含む Visual Studio ソリューションを作成します。
 
--   Dsl
+- Dsl
 
-     Dsl プロジェクトでは、ドメイン固有言語と、編集、および処理ツールを定義します。
+   Dsl プロジェクトでは、ドメイン固有言語と、編集、および処理ツールを定義します。
 
--   **DslPackage**
+- **DslPackage**
 
-     DslPackage プロジェクトでは、言語ツールを Visual Studio と統合する方法を決定します。
+   DslPackage プロジェクトでは、言語ツールを Visual Studio と統合する方法を決定します。
 
 ## <a name="the-dsl-tools-graphical-interface"></a>DSL ツールのグラフィカル インターフェイス
  DSL ツールのグラフィカル インターフェイスを使用して、ドメイン固有言語に要素および関係を追加することができます。 要素を追加した後は、図形にマップの色のカスタマイズ、デコレータを追加してその外観を定義できます。 ツールボックスに要素を追加することもできます。

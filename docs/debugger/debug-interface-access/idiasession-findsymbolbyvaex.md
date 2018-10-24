@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyvaex |Microsoft ドキュメント
+title: Idiasession::findsymbolbyvaex |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3fad26dfd43057f02105e867c5f1f0add57b20d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 706049acf99804038f48125b77a71b879658baac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463967"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874463"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-が含まれているか、指定した仮想アドレス (VA) とのオフセットに最も近いを指定した記号の型を取得します。  
+が含まれているか、指定された仮想アドレス (VA) およびオフセットに最も近い指定の記号の型を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,19 +37,19 @@ HRESULT findSymbolByVAEx (
   
 #### <a name="parameters"></a>パラメーター  
  `va`  
- [in]指定、問い合わせください。  
+ [in]指定の問い合わせください。  
   
  `symtag`  
- [in]検索する記号の型。 値から取得されますが、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙します。  
+ [in]検索する記号の型。 値から取得されます、 [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)列挙体。  
   
  `ppSymbol`  
  [out]返します、 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)シンボルを表すオブジェクトを取得します。  
   
  `displacement`  
- [out]によって指定された仮想アドレスからのオフセットを指定する値を返します`va`です。  
+ [out]によって指定された仮想アドレスからのオフセットを示す値を返します`va`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
   

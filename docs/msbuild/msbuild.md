@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8de1d8777f7f4b232ed4dcc2dabe69e0c1712fdf
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 7e87b1a71cde4d6fb37e05fa99698b636ff87bf4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876725"
 ---
 # <a name="msbuild"></a>MSBuild
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)] は、アプリケーションをビルドするためのプラットフォームです。 MSBuild とも呼ばれるこのエンジンには、ビルド プラットフォームでソフトウェアを処理およびビルドする方法を制御する、プロジェクト ファイル用の XML スキーマが用意されています。 Visual Studio は MSBuild を使用しますが、MSBuild は Visual Studio に依存しません。 プロジェクト ファイルまたはソリューション ファイルに対して *msbuild.exe* を実行すると、Visual Studio がインストールされていない環境で、製品の統合とビルドを実行できます。
@@ -56,7 +56,7 @@ Visual Studio IDE でコードを作成し、MSBuild を使用してビルドを
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] をコマンド プロンプトで実行するには、*MSBuild.exe* にプロジェクト ファイルを渡し、適切なコマンド ライン オプションを指定して実行します。 コマンド ライン オプションでは、プロパティを設定したり、特定のターゲットを実行したりできるほか、ビルド処理を制御するその他のオプションも設定できます。 たとえば、`Configuration` プロパティを `Debug` に設定して *MyProj.proj* ファイルをビルドするには、次のコマンド ライン構文を使用します。
 
 ```cmd
-MSBuild.exe MyProj.proj /property:Configuration=Debug
+MSBuild.exe MyProj.proj -property:Configuration=Debug
 ```
 
  [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] のコマンド ライン オプションの詳細については、「[コマンド ライン リファレンス](../msbuild/msbuild-command-line-reference.md)」をご覧ください。
@@ -170,19 +170,19 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 
 ## <a name="see-also"></a>関連項目
 
-|Title|説明|
-|-----------|-----------------|
-|[チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)|テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。|
-|[チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md)|MSBuild のビルド ブロックについて説明し、Visual Studio IDE を閉じずに MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。|
-|[MSBuild の概念](../msbuild/msbuild-concepts.md)|MSBuild の 4 つのビルド ブロックであるプロパティ、項目、ターゲット、およびタスクについて説明します。|
-|[項目](../msbuild/msbuild-items.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイル形式の一般的な概念と、各構成要素の組み合わせ方について説明します。|
-|[MSBuild プロパティ](../msbuild/msbuild-properties.md)|プロパティとプロパティ コレクションについて説明します。 プロパティはビルドを設定するためのキーと値のペアです。|
-|[ターゲット](../msbuild/msbuild-targets.md)|タスクを特定の順序でグループ化し、コマンド ラインからビルド処理のセクションを呼び出すことができるようにする方法について説明します。|
-|[タスク](../msbuild/msbuild-tasks.md)|実行可能コードにおける、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] による分割不可能なビルド処理の実行単位を作成する方法について説明します。|
-|[条件](../msbuild/msbuild-conditions.md)|MSBuild の要素で `Condition` 属性を使用する方法について説明します。|
-|[詳細な概念](../msbuild/msbuild-advanced-concepts.md)|バッチ処理、変換の実行、複数バージョン対応など、高度な利用法を紹介します。|
-|[MSBuild でのログ](../msbuild/logging-in-msbuild.md)|ビルド イベント、メッセージ、およびエラーを記録する方法について説明します。|
-|[その他のリソース](../msbuild/additional-msbuild-resources.md)|MSBuild に関する詳細な情報を提供するコミュニティやサポートのリソースを紹介します。|
+| Title | 説明 |
+| - | - |
+| [チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | テキスト エディターのみを使用して、基本的なプロジェクト ファイルをインクリメント方式で作成する方法について説明します。 |
+| [チュートリアル: MSBuild の使用](../msbuild/walkthrough-using-msbuild.md) | MSBuild のビルド ブロックについて説明し、Visual Studio IDE を閉じずに MSBuild プロジェクトを記述、操作、およびデバッグする方法について説明します。 |
+| [MSBuild の概念](../msbuild/msbuild-concepts.md) | MSBuild の 4 つのビルド ブロックであるプロパティ、項目、ターゲット、およびタスクについて説明します。 |
+| [項目](../msbuild/msbuild-items.md) | [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ファイル形式の一般的な概念と、各構成要素の組み合わせ方について説明します。 |
+| [MSBuild プロパティ](../msbuild/msbuild-properties.md) | プロパティとプロパティ コレクションについて説明します。 プロパティはビルドを設定するためのキーと値のペアです。 |
+| [ターゲット](../msbuild/msbuild-targets.md) | タスクを特定の順序でグループ化し、コマンド ラインからビルド処理のセクションを呼び出すことができるようにする方法について説明します。 |
+| [タスク](../msbuild/msbuild-tasks.md) | 実行可能コードにおける、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] による分割不可能なビルド処理の実行単位を作成する方法について説明します。 |
+| [条件](../msbuild/msbuild-conditions.md) | MSBuild の要素で `Condition` 属性を使用する方法について説明します。 |
+| [詳細な概念](../msbuild/msbuild-advanced-concepts.md) | バッチ処理、変換の実行、複数バージョン対応など、高度な利用法を紹介します。 |
+| [MSBuild でのログ](../msbuild/logging-in-msbuild.md) | ビルド イベント、メッセージ、およびエラーを記録する方法について説明します。 |
+| [その他のリソース](../msbuild/additional-msbuild-resources.md) | MSBuild に関する詳細な情報を提供するコミュニティやサポートのリソースを紹介します。 |
 
 ## <a name="reference"></a>参照
  [MSBuild リファレンス](../msbuild/msbuild-reference.md) リファレンス情報を示すトピックへのリンクを提供します。

@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorBreakpointResolution2::GetResolutionInfo |Microsoft ドキュメント
+title: IDebugErrorBreakpointResolution2::GetResolutionInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54d7f713eb070a578993d79bf80dc3a7b74833f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 475bfaae3e55af761eb1d19841d9b0aadad7a9e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31112351"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877076"
 ---
 # <a name="idebugerrorbreakpointresolution2getresolutioninfo"></a>IDebugErrorBreakpointResolution2::GetResolutionInfo
 ブレークポイント エラーの解決策情報を取得します。  
@@ -43,16 +43,16 @@ int GetResolutionInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `dwFields`  
- [in]フラグの組み合わせ、 [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)のフィールドを決定する列挙体`pErrorResolutionInfo`に記入することができます。  
+ [in]フラグの組み合わせ、 [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)のフィールドを決定する列挙体`pErrorResolutionInfo`を記入します。  
   
  `pErrorResolutionInfo`  
- [入力、出力].[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)ブレークポイント解像度の説明が入力構造です。  
+ [入力、出力][BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)構造体のブレークポイントの解決の説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装`CDebugErrorBreakpointResolution`を公開するオブジェクト、 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)インターフェイスです。  
+ 次の例では、単純なは、このメソッドを実装する`CDebugErrorBreakpointResolution`を公開するオブジェクト、 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)インターフェイス。  
   
 ```  
 HRESULT CDebugErrorBreakpointResolution::GetResolutionInfo(  

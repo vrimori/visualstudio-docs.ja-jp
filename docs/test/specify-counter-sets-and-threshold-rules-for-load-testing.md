@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4277935750aa4d0ba081f5117806892bbf948556
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 95aa0b7545ab7f326779b24475c8f7593ede27a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382371"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879844"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>ロード テストでのコンピューターのカウンター セットとしきい値規則を指定する
 
@@ -38,7 +38,7 @@ ms.locfileid: "39382371"
 ## <a name="tasks"></a>[タスク]
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-----------------------|
 |**ロード テストのカウンター セットを管理する:** ロード テストを作成した後で、ロード テスト エディターでカウンター セットを編集できます。 カウンター セットの管理では、パフォーマンス データの収集元となるコンピューター セットの選択や、個々のコンピューターから収集するカウンター セットの割り当てなどを行います。 カウンターは、ロード テスト エディターで管理します。|-   [方法: カウンター セットを管理する](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)|
 |**ロード テストにカウンター セットを追加する:** **新しいロード テスト ウィザード**を使用してロード テストを作成する場合、初期のカウンター セットを追加します。 これらによって、定義済みのカウンター セットがロード テスト用に提供されます。 ロード テストを作成すると、ロード テスト エディターを使用して既存のカウンター セットに新しいカウンターを追加できます。|-   [方法 : カウンターをカウンター セットに追加する](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [方法 : カスタム カウンター セットを追加する](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
 |**ロード テストのカウンターを使用してしきい値規則を指定する:** しきい値規則とは、ロード テスト中にシステム リソースの使用率を監視する個々のパフォーマンス カウンターに設定される規則です。 カウンター セットの定義には、多数の重要なパフォーマンス カウンターに対する定義済みのしきい値規則が含まれています。 ロード テストのしきい値規則は、パフォーマンス カウンターの値を定数値または別のパフォーマンス カウンターの値と比較します。|-   [方法: しきい値規則を追加する](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
@@ -67,7 +67,7 @@ Web サーバーでパフォーマンス データを簡単に収集するため
 次にサンプル速度のガイドラインを示します。
 
 |ロード テスト継続時間|推奨サンプル速度|
-|------------------------|-----------------------------|
+|-|-----------------------------|
 |\< 1 時間|5 秒|
 |1 ～ 8 時間|15 秒|
 |8 ～ 24 時間|30 秒|

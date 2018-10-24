@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 6cc733d3d926581801391a086c7886db3cec1bcc
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 9458fd6886243102f6479166fb9df21f9e4869fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382729"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877258"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>方法: C++ DLL 用の単体テストを作成する
 
@@ -117,53 +117,53 @@ ms.locfileid: "39382729"
 
 ##  <a name="make_functions_visible"></a> DLL プロジェクトにテスト プロジェクトを結合する
 
-1.  DLL プロジェクトをテスト プロジェクトのプロジェクト参照に追加します。
+1. DLL プロジェクトをテスト プロジェクトのプロジェクト参照に追加します。
 
-    1.  テスト プロジェクトのプロパティを開き、**[共通プロパティ]** > **[フレームワークと参照]** の順に選択します。
+   1.  テスト プロジェクトのプロパティを開き、**[共通プロパティ]** > **[フレームワークと参照]** の順に選択します。
 
-         ![C++ プロジェクト プロパティ | Framework と参照](../test/media/utecpp08.png)
+        ![C++ プロジェクト プロパティ | Framework と参照](../test/media/utecpp08.png)
 
-    2.  **[新しい参照の追加]** をクリックします。
+   2.  **[新しい参照の追加]** をクリックします。
 
-         **[参照の追加]** ダイアログ ボックスで、DLL プロジェクトを選択し、 **[追加]** をクリックします。
+        **[参照の追加]** ダイアログ ボックスで、DLL プロジェクトを選択し、 **[追加]** をクリックします。
 
-         ![C++ プロジェクト プロパティ | 新しい参照の追加](../test/media/utecpp09.png)
+        ![C++ プロジェクト プロパティ | 新しい参照の追加](../test/media/utecpp09.png)
 
-2.  プリンシパルの単体テストの *.cpp* ファイルに、DLL コードの *.h* ファイルを含めます。
+2. プリンシパルの単体テストの *.cpp* ファイルに、DLL コードの *.h* ファイルを含めます。
 
-    ```cpp
-    #include "..\RootFinder\RootFinder.h"
-    ```
+   ```cpp
+   #include "..\RootFinder\RootFinder.h"
+   ```
 
-3.  エクスポートされた関数を使用する基本テストを追加します。
+3. エクスポートされた関数を使用する基本テストを追加します。
 
-    ```cpp
-    TEST_METHOD(BasicTest)
-    {
-       CRootFinder rooter;
-       Assert::AreEqual(
-          // Expected value:
-          0.0,
-          // Actual value:
-          rooter.SquareRoot(0.0),
-          // Tolerance:
-          0.01,
-         // Message:
-         L"Basic test failed",
-         // Line number - used if there is no PDB file:
-         LINE_INFO());
-    }
-    ```
+   ```cpp
+   TEST_METHOD(BasicTest)
+   {
+      CRootFinder rooter;
+      Assert::AreEqual(
+         // Expected value:
+         0.0,
+         // Actual value:
+         rooter.SquareRoot(0.0),
+         // Tolerance:
+         0.01,
+        // Message:
+        L"Basic test failed",
+        // Line number - used if there is no PDB file:
+        LINE_INFO());
+   }
+   ```
 
-4.  ソリューションをビルドします。
+4. ソリューションをビルドします。
 
-     **テスト エクスプローラー**に新しいテストが表示されます。
+    **テスト エクスプローラー**に新しいテストが表示されます。
 
-5.  **テスト エクスプローラー**で **[すべて実行]** をクリックします。
+5. **テスト エクスプローラー**で **[すべて実行]** をクリックします。
 
-     ![単体テスト エクスプローラー &#45 基本テスト成功](../test/media/utecpp10.png)
+    ![単体テスト エクスプローラー &#45 基本テスト成功](../test/media/utecpp10.png)
 
- テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
+   テストとコード プロジェクトをセット アップして、コード プロジェクトで関数を実行するテストを実行できることを確認しました。 ここで、実際のテストおよびコードの記述を開始できます。
 
 ##  <a name="iterate"></a> テストを繰り返し増やして成功させる
 

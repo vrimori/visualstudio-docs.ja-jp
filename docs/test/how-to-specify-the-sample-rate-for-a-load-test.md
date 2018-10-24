@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2184c027651bf604b6ab89e5b2e63b6e945b2355
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: e73e723c25d4f84b3f98f2e22f876ad82f498158
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382504"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880118"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>方法: ロード テストの実行設定のサンプル速度を指定する
 
@@ -28,7 +28,7 @@ ms.locfileid: "39382504"
 以下は、サンプル速度のガイドラインです。
 
 |ロード テストの継続時間|推奨サンプル速度|
-|------------------------|-----------------------------|
+|-|-----------------------------|
 |\< 1 時間|5 秒|
 |1 ～ 8 時間|15 秒|
 |8 ～ 24 時間|30 秒|

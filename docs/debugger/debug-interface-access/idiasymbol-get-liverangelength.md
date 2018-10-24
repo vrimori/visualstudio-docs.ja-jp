@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeLength |Microsoft ドキュメント
+title: IDiaSymbol::get_liveRangeLength |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6668a5c33c34ffce3cdebba0802c57e9bbf598a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 23a24a4d88e181a447b5228080ae89b8853060ee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31464327"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880053"
 ---
 # <a name="idiasymbolgetliverangelength"></a>IDiaSymbol::get_liveRangeLength
 ローカル シンボルの有効なアドレスの範囲の長さを返します。  
@@ -37,14 +37,14 @@ HRESULT get_liveRangeLength (
  [out]アドレスの範囲の長さを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 > [!NOTE]
 >  返されたエラー コードは、シンボルにライブの範囲の情報がないことを意味します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  
