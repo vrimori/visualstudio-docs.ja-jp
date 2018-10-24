@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8684f85c7e5ccb8b4ca93ccc51a24c17ac40f633
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 339b0e9a3637ef375ee3ceee8c5fb84c2670c34f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859615"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838245"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>方法: ドメイン固有言語ソリューションを作成する
 ドメイン固有言語 (DSL) を作成するには、特殊な Visual Studio ソリューションを使用します。
@@ -28,12 +28,12 @@ ms.locfileid: "47859615"
 ## <a name="prerequisites"></a>必須コンポーネント
  この手順を開始する前に、これらのコンポーネントをまずインストールする必要があります。
 
-|||
-|-|-|
-|Visual Studio|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|Visual Studio Visualization and Modeling SDK||
 
+| | |
+|-|-|
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580) |
+| Visual Studio Visualization and Modeling SDK | |
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
@@ -42,43 +42,43 @@ ms.locfileid: "47859615"
 
 #### <a name="to-create-a-domain-specific-language-solution"></a>ドメイン固有言語ソリューションを作成するには
 
-1.  DSL のウィザードを起動します。
+1. DSL のウィザードを起動します。
 
-    1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+   1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-    2.  **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
+   2. **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-    3.  **プロジェクトの種類**、展開、**その他のプロジェクトの種類**ノードをクリックします**Extensibility**します。
+   3. **プロジェクトの種類**、展開、**その他のプロジェクトの種類**ノードをクリックします**Extensibility**します。
 
-    4.  クリックして**ドメイン固有言語デザイナー**します。
+   4. クリックして**ドメイン固有言語デザイナー**します。
 
-    5.  **名前**ボックスに、ソリューションの名前を入力します。 **[OK]** をクリックします。
+   5. **名前**ボックスに、ソリューションの名前を入力します。 **[OK]** をクリックします。
 
-         **ドメイン固有言語デザイナー ウィザード**が表示されます。
+       **ドメイン固有言語デザイナー ウィザード**が表示されます。
 
-        > [!NOTE]
-        >  可能であれば、コードを生成するために使用可能性がありますので、入力した名は有効な Visual c# の識別子にする必要があります。
+      > [!NOTE]
+      >  可能であれば、コードを生成するために使用可能性がありますので、入力した名は有効な Visual c# の識別子にする必要があります。
 
-     ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png)
+      ![DSL ダイアログの作成](../modeling/media/create_dsldialog.png)
 
-2.  DSL テンプレートを選択します。
+2. DSL テンプレートを選択します。
 
-     **ドメイン固有言語のオプションの選択**などソリューション テンプレートのいずれかの選択 ページで、**最小言語**します。 DSL を作成する次のようなテンプレートを選択します。
+    **ドメイン固有言語のオプションの選択**などソリューション テンプレートのいずれかの選択 ページで、**最小言語**します。 DSL を作成する次のようなテンプレートを選択します。
 
-     ソリューション テンプレートの詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。
+    ソリューション テンプレートの詳細については、次を参照してください。[ドメイン固有言語ソリューション テンプレートの選択](../modeling/choosing-a-domain-specific-language-solution-template.md)します。
 
-3.  ファイル名拡張子を入力、**ファイル拡張子**ページ。 自分のコンピューターで一意である必要がありする任意のコンピューターでは、DSL をインストールします。 メッセージが表示する必要があります**アプリケーションまたは Visual Studio エディターにこの拡張機能使用しない**します。
+3. ファイル名拡張子を入力、**ファイル拡張子**ページ。 自分のコンピューターで一意である必要がありする任意のコンピューターでは、DSL をインストールします。 メッセージが表示する必要があります**アプリケーションまたは Visual Studio エディターにこの拡張機能使用しない**します。
 
-    -   完全にインストールされていない以前の実験的な Dsl で、ファイル名拡張子を使用した場合ことができますをオフにすることを使用して、**実験用インスタンスをリセット**ツールで、Visual Studio SDK メニューで見つかります。
+   -   完全にインストールされていない以前の実験的な Dsl で、ファイル名拡張子を使用した場合ことができますをオフにすることを使用して、**実験用インスタンスをリセット**ツールで、Visual Studio SDK メニューで見つかります。
 
-    -   このファイルの拡張機能を使用する別の Visual Studio Extension がコンピューターに完全にインストールされている場合は、アンインストールを検討してください。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。
+   -   このファイルの拡張機能を使用する別の Visual Studio Extension がコンピューターに完全にインストールされている場合は、アンインストールを検討してください。 **ツール** メニューのをクリックして**拡張機能マネージャー**します。
 
-4.  検査、および必要に応じて調整、ウィザードの残りのページのフィールド。 設定に満足したら、クリックして**完了**します。 設定の詳細については、次を参照してください。 [DSL デザイナーのウィザード ページ](#settings)します。
+4. 検査、および必要に応じて調整、ウィザードの残りのページのフィールド。 設定に満足したら、クリックして**完了**します。 設定の詳細については、次を参照してください。 [DSL デザイナーのウィザード ページ](#settings)します。
 
-     ウィザードの名前は 2 つのプロジェクトを含むソリューションを作成します**Dsl**と**DslPackage**します。
+    ウィザードの名前は 2 つのプロジェクトを含むソリューションを作成します**Dsl**と**DslPackage**します。
 
-    > [!NOTE]
-    >  信頼されていないソースからのテキスト テンプレートを実行するには、をクリックしないを通知するメッセージが表示された場合**OK**します。 このメッセージが再び表示されるように設定できます。
+   > [!NOTE]
+   >  信頼されていないソースからのテキスト テンプレートを実行するには、をクリックしないを通知するメッセージが表示された場合**OK**します。 このメッセージが再び表示されるように設定できます。
 
 ## <a name="settings"></a> DSL デザイナーのウィザード ページ
  既定値から変更されていないフィールドのいくつかのままにすることができます。 ただし、ファイル拡張子のフィールドを設定することを確認します。

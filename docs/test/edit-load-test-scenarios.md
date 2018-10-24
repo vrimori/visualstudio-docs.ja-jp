@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: c589e58fb1e5b6a63706889de666d4e622f0ceb5
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 67398d5a4b2b33ace2d3ba3c74d63693861e586e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39180244"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837140"
 ---
 # <a name="edit-load-test-scenarios"></a>ロード テスト シナリオの編集
 
@@ -46,7 +46,7 @@ ms.locfileid: "39180244"
 ## <a name="tasks"></a>[タスク]
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-----------------------|
 |**シナリオにおけるユーザーの対話動作の一時的な停止の追加:** 待ち時間は、ユーザーが Web サイトとの対話中に対話を一時的に停止する原因となる行動をシミュレートするために使用されます。 待ち時間は、Web パフォーマンス テストにおける要求から次の要求までの間と、ロード テスト シナリオにおけるテスト イテレーションから次のイテレーションまでの間に発生します。 ロード テストで待ち時間を使用すると、ロード シミュレーションをより正確に作成する上で役立ちます。|-   [待ち時間を編集して Web サイトでの対話操作の遅延をシミュレート](../test/edit-think-times-in-load-test-scenarios.md)|
 |**シナリオの仮想ユーザー数の指定:** ロード パターン プロパティを構成して、ロード テスト中に、シミュレートされたユーザー ロードを調整する方法を指定できます。 持続、ステップ、およびゴール志向の 3 つの組み込みのロード パターンが用意されています。 ロード パターンを選択し、ロード テストの目的に適したレベルにプロパティを調整します。|-   [ロード パターンを編集して仮想ユーザー アクティビティをモデル化する](../test/edit-load-patterns-to-model-virtual-user-activities.md)|
 |**シナリオで仮想ユーザーがテストを実行する確率の指定:** ロード テスト シナリオで仮想ユーザーが指定のテストを実行する確率を指定する、テスト ミックスを使用できます。 これにより、より現実的なロードをシミュレートできます。 アプリケーションを通じて使用するワークフローを 1 つだけではなく複数設定することができ、エンド ユーザーがアプリケーションとやり取りする形態により近い状態を実現できます。|-   [テキスト ミックス モデルの編集](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)|

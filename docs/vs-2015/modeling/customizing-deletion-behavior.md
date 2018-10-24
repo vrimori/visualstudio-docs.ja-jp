@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 69774b098e76bb14ed11be092ae7ebedb71c218a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 401458a33c67d0c8d0302fddcdfd988113101e28
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49202762"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837563"
 ---
 # <a name="customizing-deletion-behavior"></a>削除動作のカスタマイズ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,19 +62,19 @@ ms.locfileid: "49202762"
   
 #### <a name="to-set-delete-propagation"></a>削除の伝達を設定するには  
   
-1.  DSL 定義図では、選択、*ロール*削除を伝達します。 ロールはドメイン リレーションシップ ボックスの左側または右側の線で表されます。  
+1. DSL 定義図では、選択、*ロール*削除を伝達します。 ロールはドメイン リレーションシップ ボックスの左側または右側の線で表されます。  
   
-     たとえば、アルバムが削除された場合は常に関連するアーチストも削除されるように指定する場合、ドメイン クラス Artist に接続されたロールを選択します。  
+    たとえば、アルバムが削除された場合は常に関連するアーチストも削除されるように指定する場合、ドメイン クラス Artist に接続されたロールを選択します。  
   
-2.  [プロパティ] ウィンドウで次のように設定します。、**削除の伝達**プロパティ。  
+2. [プロパティ] ウィンドウで次のように設定します。、**削除の伝達**プロパティ。  
   
-3.  F5 キーを押して、次のことを検証します。  
+3. F5 キーを押して、次のことを検証します。  
   
-    -   このリレーションシップのインスタンスが削除されると、選択したロールの要素も削除されます。  
+   -   このリレーションシップのインスタンスが削除されると、選択したロールの要素も削除されます。  
   
-    -   反対のロールの要素が削除されると、このリレーションシップのインスタンスは削除され、このロールの関連要素は削除されます。  
+   -   反対のロールの要素が削除されると、このリレーションシップのインスタンスは削除され、このロールの関連要素は削除されます。  
   
- 表示することも、**削除の伝達**オプション、 **DSL の詳細**ウィンドウ。 ドメイン クラスを選択します。 また、DSL の詳細 ウィンドウで開く、**削除動作**、ウィンドウの横にあるボタンをクリックしてページ。 **伝達**各リレーションシップの反対のロールのオプションが表示されます。 **スタイルを削除**列かどうか、**伝達**オプションは、その既定の設定では、個別の効果がありません。  
+   表示することも、**削除の伝達**オプション、 **DSL の詳細**ウィンドウ。 ドメイン クラスを選択します。 また、DSL の詳細 ウィンドウで開く、**削除動作**、ウィンドウの横にあるボタンをクリックしてページ。 **伝達**各リレーションシップの反対のロールのオプションが表示されます。 **スタイルを削除**列かどうか、**伝達**オプションは、その既定の設定では、個別の効果がありません。  
   
 ## <a name="delete-propagation-by-using-program-code"></a>プログラム コードを使用する削除の伝達  
  DSL 定義ファイル内のオプションにより選択できるのは、削除がすぐ隣に伝達するかどうかのみです。 より複雑な削除の伝達のしくみを実装するために、プログラム コードを作成できます。  
@@ -138,17 +138,17 @@ partial class MusicLibDeleteClosure
 ##  <a name="ondeleting"></a> OnDeleting および OnDeleted の使用  
  ドメイン クラスまたはドメイン リレーションシップのいずれかで、`OnDeleting()` または `OnDeleted()` をオーバーライドできます。  
   
-1.  <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A> は、要素が削除されようとしているときで、そのリレーションシップが切断されている前に呼び出されます。 まだ他の要素に対して移動可能で、`store.ElementDirectory` の中にあります。  
+1. <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A> は、要素が削除されようとしているときで、そのリレーションシップが切断されている前に呼び出されます。 まだ他の要素に対して移動可能で、`store.ElementDirectory` の中にあります。  
   
-     同時にいくつかの要素が削除される場合、削除の実行前にそれらすべてに対して OnDeleting が呼び出されます。  
+    同時にいくつかの要素が削除される場合、削除の実行前にそれらすべてに対して OnDeleting が呼び出されます。  
   
-     `IsDeleting` は true です。  
+    `IsDeleting` は true です。  
   
-2.  <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleted%2A> は要素が削除されると呼び出されます。 CLR ヒープ内に留まるので、必要があれば Undo を実行できますが、他の要素からのリンクは解除され、`store.ElementDirectory` から削除されます。 リレーションシップ、ロールはまだ古いロール プレーヤーを参照します。`IsDeleted` true です。  
+2. <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleted%2A> は要素が削除されると呼び出されます。 CLR ヒープ内に留まるので、必要があれば Undo を実行できますが、他の要素からのリンクは解除され、`store.ElementDirectory` から削除されます。 リレーションシップ、ロールはまだ古いロール プレーヤーを参照します。`IsDeleted` true です。  
   
-3.  OnDeleting および OnDeleted は要素の作成後にユーザーが Undo を起動するとき、および以前の削除が Redo で繰り返されるときに呼び出されます。 これらの場合にストア要素の更新を回避するには `this.Store.InUndoRedoOrRollback` を使用します。 詳細については、次を参照してください。[方法: モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)します。  
+3. OnDeleting および OnDeleted は要素の作成後にユーザーが Undo を起動するとき、および以前の削除が Redo で繰り返されるときに呼び出されます。 これらの場合にストア要素の更新を回避するには `this.Store.InUndoRedoOrRollback` を使用します。 詳細については、次を参照してください。[方法: モデルを更新するトランザクションを使用して](../modeling/how-to-use-transactions-to-update-the-model.md)します。  
   
- たとえば、次のコードでは、最後の子 Song が削除されると Album が削除されます。  
+   たとえば、次のコードでは、最後の子 Song が削除されると Album が削除されます。  
   
 ```  
   

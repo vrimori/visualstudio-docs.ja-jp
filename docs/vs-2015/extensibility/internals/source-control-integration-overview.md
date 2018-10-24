@@ -15,12 +15,12 @@ ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1658f54cb50ca1d04668f177657b8aaa80592494
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a16a0ece140f205f8276f0b3ec7db6b2402d3537
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49224186"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836776"
 ---
 # <a name="source-control-integration-overview"></a>ソース管理の統合の概要
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "49224186"
   
  ソース コントロールが、ソース管理プラグイン API を使用してプラグインを実装するには、次の手順に従います。  
   
-1.  指定された関数を実装する DLL を作成する[ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)します。  
+1. 指定された関数を実装する DLL を作成する[ソース管理プラグイン](../../extensibility/source-control-plug-ins.md)します。  
   
-2.  DLL を登録するには、適切なレジストリ エントリを作成する (で説明されている[方法: ソース管理のプラグインをインストール](../../extensibility/internals/how-to-install-a-source-control-plug-in.md))。  
+2. DLL を登録するには、適切なレジストリ エントリを作成する (で説明されている[方法: ソース管理のプラグインをインストール](../../extensibility/internals/how-to-install-a-source-control-plug-in.md))。  
   
-3.  UI と表示のソース管理アダプター パッケージ (ソース管理プラグインを使用してソース管理機能を処理する Visual Studio コンポーネント) のメッセージが表示されたら、ヘルパーを作成します。  
+3. UI と表示のソース管理アダプター パッケージ (ソース管理プラグインを使用してソース管理機能を処理する Visual Studio コンポーネント) のメッセージが表示されたら、ヘルパーを作成します。  
   
- ソース管理のコマンドに応答して、Visual Studio IDE の基本的な操作の標準的な UI を表示し、渡します情報をソース管理プラグイン、ソース管理プラグイン API で定義された関数を使用しています。 高度なオプションは、ソース管理プラグインを呼び出すことで、独自の UI を表示するのになどのソース管理プロジェクトの参照します。 つまり、ソース管理を処理するとき、ユーザーを UI の 2 つの異なるスタイルで表示可能性があること: Visual Studio によって提示される UI と UI をソース管理プラグインを表示します。 高度なソース管理操作で最も目立つようになります。  
+   ソース管理のコマンドに応答して、Visual Studio IDE の基本的な操作の標準的な UI を表示し、渡します情報をソース管理プラグイン、ソース管理プラグイン API で定義された関数を使用しています。 高度なオプションは、ソース管理プラグインを呼び出すことで、独自の UI を表示するのになどのソース管理プロジェクトの参照します。 つまり、ソース管理を処理するとき、ユーザーを UI の 2 つの異なるスタイルで表示可能性があること: Visual Studio によって提示される UI と UI をソース管理プラグインを表示します。 高度なソース管理操作で最も目立つようになります。  
   
 ### <a name="drawbacks-to-implementing-a-source-control-plug-in"></a>欠点は、ソース管理プラグインを実装します。  
   

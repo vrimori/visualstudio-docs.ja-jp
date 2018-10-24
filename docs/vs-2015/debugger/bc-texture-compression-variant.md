@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: da5df0faa57a63f44892fa86785bccf4716f38f4
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 67876c6b9191c8b551eb70906272751bc55ef481
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49203308"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837972"
 ---
 # <a name="bc-texture-compression-variant"></a>BC テクスチャ圧縮バリアント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,19 +34,19 @@ B8G8R8X8、B8G8R8A8、または R8G8B8A8 のバリエーションであるピク
 ## <a name="remarks"></a>Remarks  
  ソース テクスチャを作成する `ID3DDevice::CreateTexture2D` への呼び出しのたびに、ブロックベースの圧縮形式を使用してテクスチャを圧縮します。 具体的には、以下の場合にテクスチャが圧縮されます。  
   
--   `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトが、不変のシェーダー リソースを記述する場合、つまり  
+- `D3D11_TEXTURE2D_DESC` で渡される`pDesc` オブジェクトが、不変のシェーダー リソースを記述する場合、つまり  
   
-    -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
+  -   BindFlags メンバーは D3D11_BIND_SHADER_RESOURCE フラグを設定するだけです。  
   
-    -   Usage メンバーは、D3D11_USAGE_DEFAULT または D3D11_USAGE_IMMUTABLE に設定されます。  
+  -   Usage メンバーは、D3D11_USAGE_DEFAULT または D3D11_USAGE_IMMUTABLE に設定されます。  
   
-    -   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
+  -   CPUAccessFlags メンバーは 0 に設定されます(CPU アクセスなし)。  
   
-    -   SamplerDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
+  -   SamplerDesc メンバーは自身の Count メンバーを 1 に設定します (Multi-Sample Anti-Aliasing (MSAA) なし)。  
   
--   `CreateTexture2D` への呼び出しに対して初期データが提供される場合。  
+- `CreateTexture2D` への呼び出しに対して初期データが提供される場合。  
   
- サポートされているソース形式と、ブロック圧縮形式は以下のとおりです。  
+  サポートされているソース形式と、ブロック圧縮形式は以下のとおりです。  
   
 |元の形式 (from)|圧縮先の形式 (to)|  
 |------------------------------|------------------------------|  

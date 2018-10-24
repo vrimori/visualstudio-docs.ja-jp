@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4085fa30d1732e6943453a85d25fee2638fa0638
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: a09253dbeff9adb2bed6ea21545675f343e15974
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43774631"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836257"
 ---
 # <a name="collect-performance-statistics-by-using-sampling"></a>サンプリングを使用したパフォーマンス統計情報の収集
 
@@ -38,7 +38,7 @@ ms.locfileid: "43774631"
 
 - **パフォーマンス エクスプローラー**で、パフォーマンス セッション名を右クリックして **[プロパティ]** をクリックします。
 
- 次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
+  次の表の各タスクでは、サンプリング メソッドを使用してプロファイリングを実行する際に、_[パフォーマンス セッション]_**[プロパティ ページ]** ダイアログ ボックスで指定できるオプションについて説明しています。
 
 |タスク|関連するコンテンツ|
 |----------|---------------------|

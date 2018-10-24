@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual |Microsoft ドキュメント
+title: IDebugObject::IsEqual |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cccce3a530aa1871e093ce5a4ab9187f1ce9d4b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 91e84d47f7fc60e60c3c7fb58ba66bc0a00daf30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31122393"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840000"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
 このオブジェクトを持つオブジェクトを比較します。  
@@ -51,8 +51,8 @@ int IsEqual(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 通常、このメソッドはによって表される値のアドレスを比較できます、`pObject`パラメーターが、これ[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクト以外の場合は、アドレスが等しいか、し、オブジェクトが等しいと見なすかどうかです。  
+## <a name="remarks"></a>Remarks  
+ 通常、このメソッドはによって表される値のアドレスを比較できる、`pObject`パラメーターとこの[IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)オブジェクトは、アドレスが等しいかどうかは、オブジェクトを等しい。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)
