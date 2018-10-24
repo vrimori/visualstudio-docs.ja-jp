@@ -11,12 +11,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 6cc569c2e58ef29f9e9372acad30c0c2df96466c
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 20871a3dc9497bb409552337b3c9720dce373b63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495961"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828250"
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio での Xamarin Froms を使用したアプリ作成の基本事項
 
@@ -116,110 +116,110 @@ ms.locfileid: "46495961"
 
 次の手順では、.NET Standard ライブラリにコードを追加して、気象サービスからのデータにアクセスし、そのデータを格納します。
 
-1.  **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。
+1. **WeatherApp** プロジェクトを右クリックし、**[追加]、[クラス...]** の順に選択します。**[新しい項目の追加]** ダイアログで、ファイルに **Weather.cs**という名前を指定します。 このクラスは、気象データ サービスからのデータを保存するときに使用します。
 
-2.  *Weather.cs* の内容全体を次のコードで置き換えます。
+2. *Weather.cs* の内容全体を次のコードで置き換えます。
 
-    ```csharp
-    namespace WeatherApp
-    {
-        public class Weather
-        {
-            // Because labels bind to these values, set them to an empty string to
-            // ensure that the label appears on all platforms by default.
-            public string Title { get; set; } = " ";
-            public string Temperature { get; set; } = " ";
-            public string Wind { get; set; } = " ";
-            public string Humidity { get; set; } = " ";
-            public string Visibility { get; set; } = " ";
-            public string Sunrise { get; set; } = " ";
-            public string Sunset { get; set; } = " ";
-        }
-    }
-    ```
+   ```csharp
+   namespace WeatherApp
+   {
+       public class Weather
+       {
+           // Because labels bind to these values, set them to an empty string to
+           // ensure that the label appears on all platforms by default.
+           public string Title { get; set; } = " ";
+           public string Temperature { get; set; } = " ";
+           public string Wind { get; set; } = " ";
+           public string Humidity { get; set; } = " ";
+           public string Visibility { get; set; } = " ";
+           public string Sunrise { get; set; } = " ";
+           public string Sunset { get; set; } = " ";
+       }
+   }
+   ```
 
-3.  **WeatherApp** プロジェクト (**DataService.cs**) に別のクラスを追加します。これは、気象データ サービスからの JSON データを処理するのに使用します。
+3. **WeatherApp** プロジェクト (**DataService.cs**) に別のクラスを追加します。これは、気象データ サービスからの JSON データを処理するのに使用します。
 
-4.  **DataService.cs** の内容全体を次のコードで置き換えます。
+4. **DataService.cs** の内容全体を次のコードで置き換えます。
 
-    ```csharp
-    using System.Net.Http;
-    using System.Threading.Tasks;
-    using Newtonsoft.Json;
+   ```csharp
+   using System.Net.Http;
+   using System.Threading.Tasks;
+   using Newtonsoft.Json;
 
-    namespace WeatherApp
-    {
-        public class DataService
-        {
-            public static async Task<dynamic> getDataFromService(string queryString)
-            {
-                HttpClient client = new HttpClient();
-                var response = await client.GetAsync(queryString);
+   namespace WeatherApp
+   {
+       public class DataService
+       {
+           public static async Task<dynamic> getDataFromService(string queryString)
+           {
+               HttpClient client = new HttpClient();
+               var response = await client.GetAsync(queryString);
 
-                dynamic data = null;
-                if (response != null)
-                {
-                    string json = response.Content.ReadAsStringAsync().Result;
-                    data = JsonConvert.DeserializeObject(json);
-                }
+               dynamic data = null;
+               if (response != null)
+               {
+                   string json = response.Content.ReadAsStringAsync().Result;
+                   data = JsonConvert.DeserializeObject(json);
+               }
 
-                return data;
-            }
-        }
-    }
-    ```
+               return data;
+           }
+       }
+   }
+   ```
 
-5.  **Core.cs** という名前の **WeatherApp** プロジェクトは共有のビジネス ロジックを配置する場所です。ここに 3 番目のクラスを追加します。 このコードは、郵便番号を使用してクエリ文字列を生成し、気象データ サービスを呼び出し、`Weather` クラスのインスタンスにデータを取り込みます。
+5. **Core.cs** という名前の **WeatherApp** プロジェクトは共有のビジネス ロジックを配置する場所です。ここに 3 番目のクラスを追加します。 このコードは、郵便番号を使用してクエリ文字列を生成し、気象データ サービスを呼び出し、`Weather` クラスのインスタンスにデータを取り込みます。
 
-6.  **Core.cs** の内容を次のコードで置き換えます。
+6. **Core.cs** の内容を次のコードで置き換えます。
 
-    ```csharp
-    using System;
-    using System.Threading.Tasks;
+   ```csharp
+   using System;
+   using System.Threading.Tasks;
 
-    namespace WeatherApp
-    {
-        public class Core
-        {
-            public static async Task<Weather> GetWeather(string zipCode)
-            {
-                //Sign up for a free API key at http://openweathermap.org/appid
-                string key = "YOUR API KEY HERE";
-                string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
-                    + zipCode + ",us&appid=" + key + "&units=imperial";
+   namespace WeatherApp
+   {
+       public class Core
+       {
+           public static async Task<Weather> GetWeather(string zipCode)
+           {
+               //Sign up for a free API key at http://openweathermap.org/appid
+               string key = "YOUR API KEY HERE";
+               string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
+                   + zipCode + ",us&appid=" + key + "&units=imperial";
 
-                dynamic results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
+               dynamic results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
 
-                if (results["weather"] != null)
-                {
-                    Weather weather = new Weather();
-                    weather.Title = (string)results["name"];
-                    weather.Temperature = (string)results["main"]["temp"] + " F";
-                    weather.Wind = (string)results["wind"]["speed"] + " mph";
-                    weather.Humidity = (string)results["main"]["humidity"] + " %";
-                    weather.Visibility = (string)results["weather"][0]["main"];
+               if (results["weather"] != null)
+               {
+                   Weather weather = new Weather();
+                   weather.Title = (string)results["name"];
+                   weather.Temperature = (string)results["main"]["temp"] + " F";
+                   weather.Wind = (string)results["wind"]["speed"] + " mph";
+                   weather.Humidity = (string)results["main"]["humidity"] + " %";
+                   weather.Visibility = (string)results["weather"][0]["main"];
 
-                    DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
-                    DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
-                    DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
-                    weather.Sunrise = sunrise.ToString() + " UTC";
-                    weather.Sunset = sunset.ToString() + " UTC";
-                    return weather;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
-    }
-    ```
+                   DateTime time = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+                   DateTime sunrise = time.AddSeconds((double)results["sys"]["sunrise"]);
+                   DateTime sunset = time.AddSeconds((double)results["sys"]["sunset"]);
+                   weather.Sunrise = sunrise.ToString() + " UTC";
+                   weather.Sunset = sunset.ToString() + " UTC";
+                   return weather;
+               }
+               else
+               {
+                   return null;
+               }
+           }
+       }
+   }
+   ```
 
 7. *YOUR API KEY HERE* を取得した API キーで置き換えます。 ここでも引用符で囲む必要があります。
 
-8.  **WeatherApp** ライブラリ プロジェクトをビルドし、コードが正しいことを確認します。
+8. **WeatherApp** ライブラリ プロジェクトをビルドし、コードが正しいことを確認します。
 
- <a name="uicode" />
+   <a name="uicode" />
 
 ## <a name="begin-writing-shared-ui-code"></a>共有 UI コードの記述の開始
 

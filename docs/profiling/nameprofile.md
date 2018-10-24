@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f52b647cb6d110d111666df172d7243b0fd8ea4
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: df6fce197a184167b66025191f43b07ebd08ffa7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256137"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819590"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile` 関数は、指定したプロセスまたはスレッドに文字列を割り当てます。  
@@ -39,17 +39,17 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
  プロファイル要素の名前。 次の場合、名前は無効です (NameProfileA は NAME_ERROR_INVALID_NAME を返します)。  
   
--   NameProfileA に渡されたポインターが NULL 値である。  
+- NameProfileA に渡されたポインターが NULL 値である。  
   
--   pszName の文字列データの先頭が数値である。  
+- pszName の文字列データの先頭が数値である。  
   
--   pszName の文字列データに空白が含まれる。  
+- pszName の文字列データに空白が含まれる。  
   
--   pszName の文字列データに、,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 文字のいずれかが含まれる。  
+- pszName の文字列データに、,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 文字のいずれかが含まれる。  
   
- `Level`  
+  `Level`  
   
- パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 値を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを指定できます。  
+  パフォーマンス データ収集を適用できるプロファイル レベルを示します。 次の **PROFILE_CONTROL_LEVEL** 値を使用して、パフォーマンス データ収集を適用できる 3 つのレベルのいずれかを指定できます。  
   
 |列挙子|説明|  
 |----------------|-----------------|  

@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: mikeblome
-ms.openlocfilehash: 8309ee96b0948739124e0e23c4a57dd136f63362
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: b2225ec5db308b290e932cb9d29d1c50e32d4608
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280923"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820266"
 ---
 # <a name="microsoftvisualstudiotesttoolscppunittestframework-api-reference"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス
 
@@ -29,72 +29,73 @@ ms.locfileid: "44280923"
 ##  <a name="In_this_topic"></a> このトピックの内容
  [CppUnitTest.h](#cppUnitTest_h)
 
--   [テスト クラスとメソッドを作成する](#create_test_classes_and_methods)
+- [テスト クラスとメソッドを作成する](#create_test_classes_and_methods)
 
--   [初期化とクリーンアップ](#Initialize_and_cleanup)
+- [初期化とクリーンアップ](#Initialize_and_cleanup)
 
-    -   [テスト メソッド](#test_methods)
+  -   [テスト メソッド](#test_methods)
 
-    -   [テスト クラス](#test_classes)
+  -   [テスト クラス](#test_classes)
 
-    -   [テスト モジュール](#test_modules)
+  -   [テスト モジュール](#test_modules)
 
--   [テスト属性を作成する](#create_test_attributes)
+- [テスト属性を作成する](#create_test_attributes)
 
-    -   [テスト メソッド属性](#test_method_attributes)
+  - [テスト メソッド属性](#test_method_attributes)
 
-    -   [テスト クラス属性](#test_class_attributes)
+  - [テスト クラス属性](#test_class_attributes)
 
-    -   [テスト モジュール属性](#test_module_attributes)
+  - [テスト モジュール属性](#test_module_attributes)
 
-    -   [定義済みの属性](#pre_defined_attributes)
+  - [定義済みの属性](#pre_defined_attributes)
 
-     [CppUnitTestAssert.h](#cppUnitTestAssert_h)
+    [CppUnitTestAssert.h](#cppUnitTestAssert_h)
 
-    -   [一般的なアサート](#general_asserts)
+  - [一般的なアサート](#general_asserts)
 
-        -   [等しい](#general_are_equal)
+    -   [等しい](#general_are_equal)
 
-        -   [等しくない](#general_are_not_equal)
+    -   [等しくない](#general_are_not_equal)
 
-        -   [同じである](#general_are_same)
+    -   [同じである](#general_are_same)
 
-        -   [同じではない](#general_are_not_same)
+    -   [同じではない](#general_are_not_same)
 
-        -   [Null である](#general_is_null)
+    -   [Null である](#general_is_null)
 
-        -   [Null ではない](#general_is_not_null)
+    -   [Null ではない](#general_is_not_null)
 
-        -   [True である](#general_is_True)
+    -   [True である](#general_is_True)
 
-        -   [False である](#general_is_false)
+    -   [False である](#general_is_false)
 
-        -   [失敗](#general_Fail)
+    -   [失敗](#general_Fail)
 
-    -   [Windows ランタイム アサート](#winrt_asserts)
+  - [Windows ランタイム アサート](#winrt_asserts)
 
-        -   [等しい](#winrt_are_equal)
+    -   [等しい](#winrt_are_equal)
 
-        -   [同じである](#winrt_are_same)
+    -   [同じである](#winrt_are_same)
 
-        -   [等しくない](#winrt_are_not_equal)
+    -   [等しくない](#winrt_are_not_equal)
 
-        -   [同じではない](#winrt_are_not_same)
+    -   [同じではない](#winrt_are_not_same)
 
-        -   [Null である](#winrt_is_null)
+    -   [Null である](#winrt_is_null)
 
-        -   [Null ではない](#winrt_is_not_null)
+    -   [Null ではない](#winrt_is_not_null)
 
-    -   [例外アサート](#exception_asserts)
+  - [例外アサート](#exception_asserts)
 
-        -   [例外を想定する](#expect_exception)
+    - [例外を想定する](#expect_exception)
 
-         [CppUnitTestLogger.h](#cppunittestlogger_h)
+      [CppUnitTestLogger.h](#cppunittestlogger_h)
 
-        -   [Logger](#logger)
+    - [Logger](#logger)
 
-        -   [メッセージの書き込み](#write_message)
-    -    [使用例](#example)
+    - [メッセージの書き込み](#write_message)
+
+  - [使用例](#example)
 
 ##  <a name="cppUnitTest_h"></a> CppUnitTest.h
 
@@ -111,7 +112,6 @@ TEST_METHOD(methodName)
 {
     // test method body
 }
-
 ```
 
  *methodName* をテスト メソッドとして定義します。 `TEST_METHOD` はメソッドのクラスのスコープ内で宣言する必要があります。
@@ -125,7 +125,6 @@ TEST_METHOD_INITIALIZE(methodName)
 {
     // method initialization code
 }
-
 ```
 
  *methodName* を各テスト メソッドが実行される前に実行するメソッドとして定義します。 `TEST_METHOD_INITIALIZE` はテスト クラスで一度だけ定義でき、そのテスト クラスで定義する必要があります。
@@ -135,7 +134,6 @@ TEST_METHOD_CLEANUP(methodName)
 {
     // test method cleanup  code
 }
-
 ```
 
  *methodName* を各テスト メソッドの実行後に実行するメソッドとして定義します。 `TEST_METHOD_CLEANUP` はテスト クラスで一度だけ定義でき、テスト クラスのスコープ内で定義する必要があります。

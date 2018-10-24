@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e89fb94b8c68bd4ac1219b675b8e77df206bf806
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6fc870e53e9323b8f76cfa39b2e6f961b04e973a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945442"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825765"
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio で抽象クラスを実装する
 
@@ -36,24 +36,24 @@ ms.locfileid: "31945442"
 
    - C#: 
 
-    ![強調表示された C# のコード](media/abstract-highlight-cs.png)
+       ![強調表示された C# のコード](media/abstract-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示された VB のコード](media/abstract-highlight-vb.png)
+       ![強調表示された VB のコード](media/abstract-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-     - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-     - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
    ![クラス実装のプレビュー](media/abstract-preview-cs.png)
 
-1. ドロップダウン メニューから **[抽象クラスの実装]** を選びます。
+3. ドロップダウン メニューから **[抽象クラスの実装]** を選びます。
 
    > [!TIP]
    > - プレビュー ウィンドウの下部にある **[変更のプレビュー]** リンクを使うと、選択する前に、行われる[すべての変更を確認する](../../ide/preview-changes.md)ことができます。
@@ -63,11 +63,11 @@ ms.locfileid: "31945442"
 
    - C#: 
 
-      ![クラス実装の結果 C#](media/abstract-result-cs.png)
+       ![クラス実装の結果 C#](media/abstract-result-cs.png)
 
    - Visual Basic: 
 
-      ![クラス実装の結果 VB](media/abstract-result-vb.png)
+       ![クラス実装の結果 VB](media/abstract-result-vb.png)
 
 ## <a name="see-also"></a>関連項目
 

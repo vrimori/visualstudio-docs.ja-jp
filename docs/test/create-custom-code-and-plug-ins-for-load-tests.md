@@ -13,21 +13,21 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 213824ff9be80a151d20b4906839969dce3be7d1
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 01ae9f07d5ec1c0eb2cddda6c24831f213f4bf86
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39175538"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826974"
 ---
 # <a name="create-custom-code-and-plug-ins-for-load-tests"></a>ロード テスト用のカスタム コードおよびカスタム プラグインの作成
 
 カスタム プラグインでは、ユーザーが作成してロード テストや Web パフォーマンス テストにアタッチしたコードが使用されます。 ロード テスト API または Web パフォーマンス テスト API を使用してテスト用のカスタム プラグインを作成し、組み込みの機能に拡張できます。 ロード テストには複数のプラグインを追加することができます。
 
-## <a name="tasks"></a>タスク
+## <a name="tasks"></a>[タスク]
 
-|タスク|関連するトピック|
-|-----------|-----------------------|
+|[タスク]|関連するトピック|
+|-|-----------------------|
 |**ロード テスト用のカスタム プラグインを作成する**: ロード テスト API を使用してカスタム プラグインを作成し、ロード テストのテスト機能を拡張できます。|-   [方法: ロード テスト API を使用する](../test/how-to-use-the-load-test-api.md)<br />-   [方法: ロード テスト プラグインを作成する](../test/how-to-create-a-load-test-plug-in.md)|
 |**Web パフォーマンス テスト用のカスタム プラグインを作成する:** Web パフォーマンス テスト API を使用してカスタム プラグインを作成し、Web パフォーマンス テスト (要求レベルのテストを含む) のテスト機能を拡張できます。 Web サービス テストを作成することもできます。<br /><br /> さらに、Web パフォーマンス テストの記録後、Web パフォーマンス テスト結果ビューアーに表示する前にこのパフォーマンス テストを変更できる Web レコーダー プラグインを作成できます。|-   [方法: Web パフォーマンス テスト API を使用する](../test/how-to-use-the-web-performance-test-api.md)<br />-   [方法: Web パフォーマンス テスト プラグインを作成する](../test/how-to-create-a-web-performance-test-plug-in.md)<br />-   [方法: 要求レベルのプラグインを作成する](../test/how-to-create-a-request-level-plug-in.md)<br />-   [方法: Web サービス テストを作成する](../test/how-to-create-a-web-service-test.md)<br />-   [方法: レコーダー プラグインを作成する](../test/how-to-create-a-recorder-plug-in.md)|
 |**UI 機能を Web パフォーマンス テスト結果ビューアーに追加する:** Visual Studio アドインを使用すると、Web パフォーマンス テスト結果ビューアーにさらに UI 機能を追加できます。|-   [方法: Web パフォーマンス テスト結果ビューアー用に Visual Studio アドインを作成する](../test/how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md)|

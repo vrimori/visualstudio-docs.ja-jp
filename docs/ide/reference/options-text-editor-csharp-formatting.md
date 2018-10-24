@@ -19,12 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: f302445ebc8de788fc6776900f73b45550d73fa3
-ms.sourcegitcommit: 4c60bcfa2281bcc1a28def6a8e02433d2c905be6
+ms.openlocfilehash: bcd63e9a155843d715e63fb6514e22f356847d2f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42626539"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821384"
 ---
 # <a name="options-text-editor-c-formatting"></a>[オプション]、[テキスト エディター]、[C#]、[書式設定]
 
@@ -57,12 +57,12 @@ ms.locfileid: "42626539"
 |**単一行のコントロール ステートメント用のかっこの追加と削除**|選択すると、**Edit.FormatDocument** がトリガーされたときに、単一行のコントロール ステートメントのかっこが追加または削除されます。| csharp_prefer_braces<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[コード ブロックの優先順位]** > **[波かっこを優先します]** |
 |**アクセシビリティ修飾子の追加**|選択すると、**Edit.FormatDocument** がトリガーされたときに、不足しているアクセシビリティ修飾子が追加されます。| dotnet_style_require_accessibility_modifiers |
 |**アクセシビリティ修飾子の並べ替え**|選択すると、**Edit.FormatDocument** がトリガーされたときに、アクセシビリティ修飾子が並べ替えられます。| csharp_preferred_modifier_order<br/>visual_basic_preferred_modifier_order |
-|**式/ブロック本体の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、式形式のメンバーがブロック本体に変換されるか、その逆の変換が行われます。| [式形式のメンバーの EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#expression_bodied_members)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[式の優先順位]** > **[メソッドに式本体を使用する]、[コンストラクターに式本体を使用する] など**  |
-|**暗黙的/明示的な型の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、`var` が明示的な型に変換されるか、その逆の変換が行われます。| [明示的な型の Core EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#implicit-and-explicit-types)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **['var' を優先]**  |
+|**式/ブロック本体の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、式形式のメンバーがブロック本体に変換されるか、その逆の変換が行われます。| [式形式のメンバーの EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#expression_bodied_members)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[式の優先順位]** > **[メソッドに式本体を使用する]、[コンストラクターに式本体を使用する] など** |
+|**暗黙的/明示的な型の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、`var` が明示的な型に変換されるか、その逆の変換が行われます。| [明示的な型の Core EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#implicit-and-explicit-types)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **['var' を優先]** |
 |**インラインの 'out' 変数の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、可能な場合は `out` 変数がインライン化されます。| csharp_style_inlined_variable_declaration<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[変数の優先順位]** > **[インライン変数宣言を優先する]** |
 |**言語/フレームワークの種類の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、言語の種類がフレームワークの種類に変換されるか、その逆の変換が行われます。| dotnet_style_predefined_type_for_locals_parameters_members<br/>dotnet_style_predefined_type_for_member_access<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[定義済みの型の設定]** |
 |**オブジェクト/コレクションの初期化の設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに、可能な場合はオブジェクトとコレクションの初期化子が使用されます。| dotnet_style_object_initializer<br/>dotnet_style_collection_initializer<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[式の優先順位]** > **[オブジェクト初期化子を優先する]** または **[コレクション初期化子を優先する]** |
-|**'this.' 修飾子の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに `this.` の初期設定が適用されます。| [this. 修飾子の EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#this_and_me)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **['this.' の優先]**  |
+|**'this.' 修飾子の初期設定の適用**|選択すると、**Edit.FormatDocument** がトリガーされたときに `this.` の初期設定が適用されます。| [this. 修飾子の EditorConfig オプション](../../ide/editorconfig-code-style-settings-reference.md#this_and_me)<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **['this.' の優先]** |
 |**可能な場合はプライベート フィールドを読み取り専用にする**|選択すると、**Edit.FormatDocument** がトリガーされたときに、可能な場合はプライベート フィールドが `readonly` になります。| dotnet_style_readonly_field<br/><br/>**[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C#]** > **[コード スタイル]** > **[フィールドの設定]** > **[読み取り専用を優先します]** |
 |**不要なキャストを削除する**|選択すると、**Edit.FormatDocument** がトリガーされたときに、可能な場合は不要なキャストが削除されます。| N/A |
 |**未使用の変数を削除する**|選択すると、**Edit.FormatDocument** がトリガーされたときに、未使用の変数が削除されます。| N/A |
