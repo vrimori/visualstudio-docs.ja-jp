@@ -12,12 +12,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 045781b8a990030fd988e07f2aa6490a5bd3ca56
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 59faf6a1995cefe84d7f1a00bd881f52a457b20d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39232349"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911864"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、一般的なコードを共有する iOS アプリおよび Android アプリ用の Visual Studio ソリューションとプロジェクトを作成できます。 このトピックでは、簡単な iOS アプリと Android Native Activity アプリの両方を作成するソリューション テンプレートについて説明します。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (OpenGL for Embedded Systems または GLES) は、多くのモバイル デバイスでサポートされている 2D および 3D グラフィックス API です。  
@@ -36,111 +36,111 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Visual Studio を開きます。 メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]** の順にクリックします。  
+1. Visual Studio を開きます。 メニュー バーで **[ファイル]**、 **[新規]**、 **[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[クロス プラットフォーム]** の順に選択し、 **[OpenGLES アプリケーション (Android、iOS)]** テンプレートを選択します。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]**、 **[クロス プラットフォーム]** の順に選択し、 **[OpenGLES アプリケーション (Android、iOS)]** テンプレートを選択します。  
   
-3.  アプリに `MyOpenGLESApp`などの名前を付け、 **[OK]**」を参照してください。  
+3. アプリに `MyOpenGLESApp`などの名前を付け、 **[OK]**」を参照してください。  
   
-     ![新しい OpenGLES アプリケーション プロジェクト](../cross-platform/media/cppmdd_opengles_newproj.PNG "CPPMDD_OpenGLES_NewProj")  
+    ![新しい OpenGLES アプリケーション プロジェクト](../cross-platform/media/cppmdd_opengles_newproj.PNG "CPPMDD_OpenGLES_NewProj")  
   
-     Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
+    Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
   
-     ![ソリューション エクスプ ローラーの MyOpenGLESApp](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")  
+    ![ソリューション エクスプ ローラーの MyOpenGLESApp](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")  
   
- 新しい OpenGL ES アプリケーション ソリューションには、次の 3 つのライブラリ プロジェクトと 2 つのアプリケーション プロジェクトが含まれています。 ライブラリ フォルダーには、共有コード プロジェクトと共有コードを参照する 2 つのプラットフォーム固有のプロジェクトが含まれています。  
+   新しい OpenGL ES アプリケーション ソリューションには、次の 3 つのライブラリ プロジェクトと 2 つのアプリケーション プロジェクトが含まれています。 ライブラリ フォルダーには、共有コード プロジェクトと共有コードを参照する 2 つのプラットフォーム固有のプロジェクトが含まれています。  
   
--   `MyOpenGLESApp.Android.NativeActivity` には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は、*main.cpp* に配置されます。ここには `MyOpenGLESApp.Shared` に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、`MyOpenGLESApp.Android.Packaging` プロジェクトで使用されます。  
+- `MyOpenGLESApp.Android.NativeActivity` には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は、*main.cpp* に配置されます。ここには `MyOpenGLESApp.Shared` に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、`MyOpenGLESApp.Android.Packaging` プロジェクトで使用されます。  
   
--   `MyOpenGLESApp.iOS.StaticLibrary` は、`MyOpenGLESApp.Shared` に共有コードが含まれている iOS スタティック ライブラリ (*.a*) ファイルを作成します。 `MyOpenGLESApp.iOS.Application` プロジェクトで作成されたアプリケーションにリンクされます。  
+- `MyOpenGLESApp.iOS.StaticLibrary` は、`MyOpenGLESApp.Shared` に共有コードが含まれている iOS スタティック ライブラリ (*.a*) ファイルを作成します。 `MyOpenGLESApp.iOS.Application` プロジェクトで作成されたアプリケーションにリンクされます。  
   
--   `MyOpenGLESApp.Shared` には、プラットフォーム間で機能する共有コードが含まれています。 プラットフォーム固有のコードの条件付きコンパイルにプリプロセッサ マクロを使用します。 共有コードは、`MyOpenGLESApp.Android.NativeActivity` と `MyOpenGLESApp.iOS.StaticLibrary` の両方のプロジェクト参照によって使用されます。  
+- `MyOpenGLESApp.Shared` には、プラットフォーム間で機能する共有コードが含まれています。 プラットフォーム固有のコードの条件付きコンパイルにプリプロセッサ マクロを使用します。 共有コードは、`MyOpenGLESApp.Android.NativeActivity` と `MyOpenGLESApp.iOS.StaticLibrary` の両方のプロジェクト参照によって使用されます。  
   
- ソリューションには、Android および iOS プラットフォーム用のアプリを構築するための 2 つのプロジェクトがあります。  
+  ソリューションには、Android および iOS プラットフォーム用のアプリを構築するための 2 つのプロジェクトがあります。  
   
--   `MyOpenGLESApp.Android.Packaging` は、Android デバイスまたはエミュレーターに配置する *.apk* ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する AndroidManifest.xml ファイルが含まれています。 Ant のビルド プロセスを制御する *build.xml* ファイルも含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
+- `MyOpenGLESApp.Android.Packaging` は、Android デバイスまたはエミュレーターに配置する *.apk* ファイルを作成します。 これには、リソースと、マニフェスト プロパティを設定する AndroidManifest.xml ファイルが含まれています。 Ant のビルド プロセスを制御する *build.xml* ファイルも含まれています。 それは既定でスタートアップ プロジェクトとして設定されているため、Visual Studio から直接、配置して実行できます。  
   
--   **MyOpenGLESApp.iOS.Application** には、`MyOpenGLESApp.iOS.StaticLibrary` で C++ スタティック ライブラリ コードにリンクする iOS アプリを作成するためのリソースと Objective-C グルー コードが含まれています。 このプロジェクトは、Visual Studio およびリモート エージェントによってご使用の Mac に転送されるビルド パッケージを作成します。 このプロジェクトをビルドする場合、Visual Studio はファイルとコマンドを送信して、アプリを Mac でビルドおよび配置します。  
+- **MyOpenGLESApp.iOS.Application** には、`MyOpenGLESApp.iOS.StaticLibrary` で C++ スタティック ライブラリ コードにリンクする iOS アプリを作成するためのリソースと Objective-C グルー コードが含まれています。 このプロジェクトは、Visual Studio およびリモート エージェントによってご使用の Mac に転送されるビルド パッケージを作成します。 このプロジェクトをビルドする場合、Visual Studio はファイルとコマンドを送信して、アプリを Mac でビルドおよび配置します。  
   
 ##  <a name="BuildAndroid"></a> Android アプリのビルドと実行  
  テンプレートで作成したソリューションは、既定のプロジェクトとして、Android アプリを設定します。  インストールとセットアップを確認するために、このアプリをビルドおよび実行できます。 初期テストでは、Visual Studio Emulator for Android によってインストールされているデバイス プロファイルのいずれかでアプリを実行します。 別の対象でアプリをテストする場合は、対象のエミュレーターを読み込むか、デバイスをコンピューターに接続することができます。  
   
 #### <a name="to-build-and-run-the-android-native-activity-app"></a>Android Native Activity アプリをビルドして実行するには  
   
-1.  選択されていない場合は、 **[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。  
+1. 選択されていない場合は、 **[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。  
   
-     ![ソリューション プラットフォームを x86 に設定する](../cross-platform/media/cppmdd_opengles_solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
+    ![ソリューション プラットフォームを x86 に設定する](../cross-platform/media/cppmdd_opengles_solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
   
-     x86 を使用して Android Emulator for Windows を対象にします。 デバイスを対象とする場合は、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
+    x86 を使用して Android Emulator for Windows を対象にします。 デバイスを対象とする場合は、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-2.  **ソリューション エクスプローラー**で `MyOpenGLESApp.Android.Packaging` プロジェクトのショートカット メニューを開き、**[ビルド]** を選択します。  
+2. **ソリューション エクスプローラー**で `MyOpenGLESApp.Android.Packaging` プロジェクトのショートカット メニューを開き、**[ビルド]** を選択します。  
   
-     ![Android パッケージ化プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")  
+    ![Android パッケージ化プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_andbuild.png "CPPMDD_OpenGLES_AndBuild")  
   
-     Android 共有ライブラリと Android アプリ用のビルド プロセスの出力が [出力] ウィンドウに表示されます。  
+    Android 共有ライブラリと Android アプリ用のビルド プロセスの出力が [出力] ウィンドウに表示されます。  
   
-     ![Android プロジェクト用のビルド出力](../cross-platform/media/cppmdd_opengles_andoutput.png "CPPMDD_OpenGLES_AndOutput")  
+    ![Android プロジェクト用のビルド出力](../cross-platform/media/cppmdd_opengles_andoutput.png "CPPMDD_OpenGLES_AndOutput")  
   
-3.  配置ターゲットとして、いずれかの VS Emulator Android Phone (x86) プロファイルを選択します。  
+3. 配置ターゲットとして、いずれかの VS Emulator Android Phone (x86) プロファイルを選択します。  
   
-     ![配置ターゲットの選択](../cross-platform/media/cppmdd_opengles_pickemulator.png "CPPMDD_OpenGLES_PickEmulator")  
+    ![配置ターゲットの選択](../cross-platform/media/cppmdd_opengles_pickemulator.png "CPPMDD_OpenGLES_PickEmulator")  
   
-     別のエミュレーターをインストールしてあるか、Android デバイスを接続してある場合は、配置対象のドロップダウン リストからそれらを選択できます。 アプリを実行するには、ビルドしたソリューション プラットフォームが、ターゲット デバイスのプラットフォームと一致している必要があります。  
+    別のエミュレーターをインストールしてあるか、Android デバイスを接続してある場合は、配置対象のドロップダウン リストからそれらを選択できます。 アプリを実行するには、ビルドしたソリューション プラットフォームが、ターゲット デバイスのプラットフォームと一致している必要があります。  
   
-4.  F5 キーを押してデバッグを開始するか、Shift キーを押しながら F5 キーを押してデバッグなしで開始します。  
+4. F5 キーを押してデバッグを開始するか、Shift キーを押しながら F5 キーを押してデバッグなしで開始します。  
   
-     Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。 以下に、Visual Studio Emulator for Android でのアプリの外観を示します。  
+    Visual Studio によってエミュレーターが起動されます。コードを読み込んで配置するのに数秒かかります。 以下に、Visual Studio Emulator for Android でのアプリの外観を示します。  
   
-     ![Android エミュレーターで実行されているアプリ](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
+    ![Android エミュレーターで実行されているアプリ](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
   
-     アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
+    アプリが開始されると、ブレークポイントの設定や、デバッガーを使用したステップ実行、ローカルの確認、値のウォッチができるようになります。  
   
-5.  **Shift** + **F5** キーを押してデバッグを停止します。  
+5. **Shift** + **F5** キーを押してデバッグを停止します。  
   
-     エミュレーターは実行され続ける独立したプロセスです。 同じエミュレーターに対して、コードを何度も編集、コンパイル、配置できます。 アプリはエミュレーターのアプリ コレクションに表示され、そこから直接起動することができます。  
+    エミュレーターは実行され続ける独立したプロセスです。 同じエミュレーターに対して、コードを何度も編集、コンパイル、配置できます。 アプリはエミュレーターのアプリ コレクションに表示され、そこから直接起動することができます。  
   
- 生成された Android Native Activity アプリとライブラリ プロジェクトは、Android プラットフォームとやり取りする "グルー" コードを含むダイナミック ライブラリに C++ 共有コードを配置します。 つまり、ほとんどのアプリ コードはライブラリ内に含まれ、マニフェスト、リソース、およびビルド手順は、パッケージ化するプロジェクトに含まれます。 共有コードは、NativeActivity プロジェクトの main.cpp から呼び出されます。 Android Native Activity をプログラムする方法の詳細については、Android NDK Developer の「 [Concepts](https://developer.android.com/ndk/guides/concepts.html) 」ページを参照してください。  
+   生成された Android Native Activity アプリとライブラリ プロジェクトは、Android プラットフォームとやり取りする "グルー" コードを含むダイナミック ライブラリに C++ 共有コードを配置します。 つまり、ほとんどのアプリ コードはライブラリ内に含まれ、マニフェスト、リソース、およびビルド手順は、パッケージ化するプロジェクトに含まれます。 共有コードは、NativeActivity プロジェクトの main.cpp から呼び出されます。 Android Native Activity をプログラムする方法の詳細については、Android NDK Developer の「 [Concepts](https://developer.android.com/ndk/guides/concepts.html) 」ページを参照してください。  
   
- Visual Studio は、プラットフォーム ツールセットとして Clang を使用する Android NDK を使用して Android Native Activity プロジェクトをビルドします。 Visual Studio は、NativeActivity プロジェクトのプロパティを、ターゲット プラットフォームでコンパイル、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 詳細については、MyOpenGLESApp.Android.NativeActivity プロジェクトの **[プロパティ ページ]** ダイアログを参照してください。 コマンド ライン スイッチの詳細については、「 [Clang コンパイラ ユーザーズ マニュアル](http://clang.llvm.org/docs/UsersManual.html)」を参照してください。  
+   Visual Studio は、プラットフォーム ツールセットとして Clang を使用する Android NDK を使用して Android Native Activity プロジェクトをビルドします。 Visual Studio は、NativeActivity プロジェクトのプロパティを、ターゲット プラットフォームでコンパイル、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 詳細については、MyOpenGLESApp.Android.NativeActivity プロジェクトの **[プロパティ ページ]** ダイアログを参照してください。 コマンド ライン スイッチの詳細については、「 [Clang コンパイラ ユーザーズ マニュアル](http://clang.llvm.org/docs/UsersManual.html)」を参照してください。  
   
 ##  <a name="BuildIOS"></a> iOS アプリをビルドして実行するには  
  iOS アプリ プロジェクトの作成および編集は Visual Studio で行いますが、ライセンスの制限があるため、プロジェクトのビルドおよび配置は、Mac から行う必要があります。 Visual Studio は、Mac で実行するリモート エージェントと通信して、プロジェクト ファイルを転送し、ビルド、配置、デバッグのコマンドを実行します。 iOS アプリをビルドするには、その前に通信できるように Mac と Visual Studio を設定および構成する必要があります。 手順の詳細については、[iOS を使用してビルドするためのツールのインストールと構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)に関するページをご覧ください。 リモート エージェントを実行し、Visual Studio を Mac にペアリングすると、iOS アプリをビルドおよび実行して、インストールとセットアップを確認することができます。  
   
 #### <a name="to-build-and-run-the-ios-app"></a>iOS アプリをビルドして実行するには  
   
-1.  リモート エージェントが Mac で実行されていること、また Visual Studio がリモート エージェントにペアリングされていることを確認します。 リモート エージェントを開始するには、ターミナル アプリのウィンドウを開き、「 `vcremote`」を参照してください。 詳細については、「[Visual Studio でリモート エージェントを構成する](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS)」を参照してください。  
+1. リモート エージェントが Mac で実行されていること、また Visual Studio がリモート エージェントにペアリングされていることを確認します。 リモート エージェントを開始するには、ターミナル アプリのウィンドウを開き、「 `vcremote`」を参照してください。 詳細については、「[Visual Studio でリモート エージェントを構成する](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS)」を参照してください。  
   
-     ![vcremote を実行している Mac ターミナル ウィンドウ](../cross-platform/media/cppmdd_common_vcremote.png "CPPMDD_common_vcremote")  
+    ![vcremote を実行している Mac ターミナル ウィンドウ](../cross-platform/media/cppmdd_common_vcremote.png "CPPMDD_common_vcremote")  
   
-2.  選択されていない場合は、 **[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。  
+2. 選択されていない場合は、 **[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。  
   
-     ![ソリューション プラットフォームを x86 に設定する](../cross-platform/media/cppmdd_opengles_solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
+    ![ソリューション プラットフォームを x86 に設定する](../cross-platform/media/cppmdd_opengles_solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
   
-     x86 を使用して iOS シミュレーターを対象とします。 iOS デバイスを対象とする場合は、デバイス プロセッサ (通常、ARM プロセッサ) に基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
+    x86 を使用して iOS シミュレーターを対象とします。 iOS デバイスを対象とする場合は、デバイス プロセッサ (通常、ARM プロセッサ) に基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。  
   
-3.  ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[ビルド]** をクリックします。  
+3. ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[ビルド]** をクリックします。  
   
-     ![iOS アプリケーション プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_iosbuild.png "CPPMDD_OpenGLES_iOSBuild")  
+    ![iOS アプリケーション プロジェクトのビルド](../cross-platform/media/cppmdd_opengles_iosbuild.png "CPPMDD_OpenGLES_iOSBuild")  
   
-     iOS スタティック ライブラリと iOS アプリ用のビルド プロセスの出力が [出力] ウィンドウに表示されます。 Mac でリモート エージェントを実行しているターミナル ウィンドウに、コマンドおよびファイル転送アクティビティが表示されます。  
+    iOS スタティック ライブラリと iOS アプリ用のビルド プロセスの出力が [出力] ウィンドウに表示されます。 Mac でリモート エージェントを実行しているターミナル ウィンドウに、コマンドおよびファイル転送アクティビティが表示されます。  
   
-     Mac コンピューターで、コード署名要求を受け入れるようにプロンプトが表示される場合があります。 **[許可]** を選択して続行します。  
+    Mac コンピューターで、コード署名要求を受け入れるようにプロンプトが表示される場合があります。 **[許可]** を選択して続行します。  
   
-4.  ツールバーで **[iOS シミュレーター]** を選択し、Mac の iOS シミュレーターでアプリを実行します。 シミュレーターを開始するのにはしばらく時間がかかる場合があります。 出力を表示するために、Mac 上でシミュレーターを最前面に表示する必要がある場合があります。  
+4. ツールバーで **[iOS シミュレーター]** を選択し、Mac の iOS シミュレーターでアプリを実行します。 シミュレーターを開始するのにはしばらく時間がかかる場合があります。 出力を表示するために、Mac 上でシミュレーターを最前面に表示する必要がある場合があります。  
   
-     ![iOS シミュレーターで実行されているアプリ](../cross-platform/media/cppmdd_opengles_iossimulator.png "CPPMDD_OpenGLES_iOSSimulator")  
+    ![iOS シミュレーターで実行されているアプリ](../cross-platform/media/cppmdd_opengles_iossimulator.png "CPPMDD_OpenGLES_iOSSimulator")  
   
-     アプリが開始されたら、ブレークポイントを設定し、Visual Studio デバッガーを使用してローカルを確認したり、呼び出し履歴を確認したり、値を観察したりできます。  
+    アプリが開始されたら、ブレークポイントを設定し、Visual Studio デバッガーを使用してローカルを確認したり、呼び出し履歴を確認したり、値を観察したりできます。  
   
-     ![iOS アプリケーションのブレークポイントにあるデバッガー](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
+    ![iOS アプリケーションのブレークポイントにあるデバッガー](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
-5.  **Shift** + **F5** キーを押してデバッグを停止します。  
+5. **Shift** + **F5** キーを押してデバッグを停止します。  
   
-     iOS シミュレーターは、Mac 上で実行し続ける独立したプロセスです。 同じ iOS シミュレーター インスタンスに対して、コードを何度も編集、コンパイル、配置できます。 展開した後は、シミュレーターで直接コードを実行することもできます。  
+    iOS シミュレーターは、Mac 上で実行し続ける独立したプロセスです。 同じ iOS シミュレーター インスタンスに対して、コードを何度も編集、コンパイル、配置できます。 展開した後は、シミュレーターで直接コードを実行することもできます。  
   
- 生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、`Application` プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、*GameViewController.m* ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。  
+   生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、`Application` プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、*GameViewController.m* ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。  
   
- Visual Studio は、Xcode を使用してアプリをビルドするために、リモート クライアントに対してプロジェクト ファイルを転送し、コマンドを送信します。 リモート クライアントは、ビルドの状態情報を Visual Studio に返します。 アプリが正常にビルドされたら、Visual Studio を使用して、アプリを実行してデバッグするためのコマンドを送信できます。 Visual Studio のデバッガーは、iOS シミュレーター (Mac または接続されている iOS デバイス上で実行されます) で実行されるアプリを制御します。 Visual Studio は、StaticLibrary プロジェクトのプロパティを、ターゲット iOS プラットフォームでビルド、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 コンパイラ コマンド ライン オプションの詳細については、MyOpenGLESApp.iOS.StaticLibrary プロジェクトの **[プロパティ ページ]** ダイアログを開いてください。  
+   Visual Studio は、Xcode を使用してアプリをビルドするために、リモート クライアントに対してプロジェクト ファイルを転送し、コマンドを送信します。 リモート クライアントは、ビルドの状態情報を Visual Studio に返します。 アプリが正常にビルドされたら、Visual Studio を使用して、アプリを実行してデバッグするためのコマンドを送信できます。 Visual Studio のデバッガーは、iOS シミュレーター (Mac または接続されている iOS デバイス上で実行されます) で実行されるアプリを制御します。 Visual Studio は、StaticLibrary プロジェクトのプロパティを、ターゲット iOS プラットフォームでビルド、リンク、デバッグするために使用されるコマンド ラインのスイッチとオプションにマップします。 コンパイラ コマンド ライン オプションの詳細については、MyOpenGLESApp.iOS.StaticLibrary プロジェクトの **[プロパティ ページ]** ダイアログを開いてください。  
   
 ##  <a name="Customize"></a> アプリのカスタマイズ  
  共通機能を追加または変更するために、共有 C++ コードを変更することができます。 一致するように `MyOpenGLESApp.Android.NativeActivity` および `MyOpenGLESApp.iOS.Application` プロジェクトの共有コードへの呼び出しを変更する必要があります。 プリプロセッサ マクロを使用して、共通コードにおけるプラットフォーム固有のセクションを指定することができます。 Android 用にビルドする場合は、プリプロセッサ マクロ `__ANDROID__` が事前に定義されます。 iOS 用にビルドする場合は、プリプロセッサ マクロ `__APPLE__` が事前に定義されます。  

@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: eae89672a6fcbf56dcd2426547e1fb528c270db2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 25143390085ec0b4d7ab56e0fef9920d7d5eceb8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49290421"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914548"
 ---
 # <a name="define-a-work-item-link-handler"></a>作業項目リンク ハンドラーを定義する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -92,11 +92,11 @@ ms.locfileid: "49290421"
 ### <a name="import-the-work-item-namespace"></a>作業項目の名前空間をインポートする  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]プロジェクト**参照**、次のアセンブリへの参照を追加します。  
   
--   Microsoft.TeamFoundation.WorkItemTracking.Client.dll  
+- Microsoft.TeamFoundation.WorkItemTracking.Client.dll  
   
--   Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll  
+- Microsoft.VisualStudio.TeamFoundation.WorkItemTracking.dll  
   
- プログラム コードで、次の名前空間をインポートします。  
+  プログラム コードで、次の名前空間をインポートします。  
   
 ```  
 using System.ComponentModel.Composition;  
@@ -282,21 +282,21 @@ element.AddReference(ReferenceConstants.WorkItem, linkString, true);
   
  それぞれの文字について以下に説明します。  
   
--   サーバーの URI は次のとおりです。  
+- サーバーの URI は次のとおりです。  
   
-     `http://tfServer:8080/tfs/projectCollection`  
+   `http://tfServer:8080/tfs/projectCollection`  
   
-     `projectCollection` では、大文字と小文字の区別が重要です。  
+   `projectCollection` では、大文字と小文字の区別が重要です。  
   
--   `RepositoryGuid` は、TFS 接続から取得できます。  
+- `RepositoryGuid` は、TFS 接続から取得できます。  
   
-    ```csharp  
-    TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory...;  
-    RepositoryGuid= tpc.InstanceId;  
+  ```csharp  
+  TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory...;  
+  RepositoryGuid= tpc.InstanceId;  
   
-    ```  
+  ```  
   
- 参照の詳細については、次を参照してください。[モデル要素を UML に参照文字列をアタッチ](../modeling/attach-reference-strings-to-uml-model-elements.md)します。  
+  参照の詳細については、次を参照してください。[モデル要素を UML に参照文字列をアタッチ](../modeling/attach-reference-strings-to-uml-model-elements.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  <xref:Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItemStore?displayProperty=fullName>   

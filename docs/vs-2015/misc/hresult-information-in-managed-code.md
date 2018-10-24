@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 0795ee94-17a8-4327-bf57-27cd5e312a4c
 caps.latest.revision: 29
 manager: douge
-ms.openlocfilehash: b629f856bcdba13523c094b5d3fd32b6848ec23f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 08d14f1155838e53321224280a69e7a76bf07b52
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49256075"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911851"
 ---
 # <a name="hresult-information-in-managed-code"></a>マネージ コードの HRESULT 情報
 マネージド コードと COM の相互作用によって、HRESULT 戻り値が検出されたときに問題が発生する可能性があります。  
   
  COM インターフェイスでは、HRESULT 戻り値が次の役割を果たします。  
   
--   エラー情報を提供します (<xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG> など)。  
+- エラー情報を提供します (<xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG> など)。  
   
--   通常のプログラムの動作に関するステータス情報を提供します。  
+- 通常のプログラムの動作に関するステータス情報を提供します。  
   
- COM がマネージド コードへの呼び出しを行うと、HRESULT によって次の問題が発生する可能性があります。  
+  COM がマネージド コードへの呼び出しを行うと、HRESULT によって次の問題が発生する可能性があります。  
   
--   ゼロ未満の HRESULT 値 (エラー コード) を返す COM 関数によって、例外が生成されます。  
+- ゼロ未満の HRESULT 値 (エラー コード) を返す COM 関数によって、例外が生成されます。  
   
--   <xref:Microsoft.VisualStudio.VSConstants.S_OK> や <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> などの 2 つ以上のさまざまな成功コードを定期的に返す COM メソッドを識別することはできません。  
+- <xref:Microsoft.VisualStudio.VSConstants.S_OK> や <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> などの 2 つ以上のさまざまな成功コードを定期的に返す COM メソッドを識別することはできません。  
   
- [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] COM 関数の多くは、ゼロ未満の HRESULT 値を返すか、異なる成功コードを返すため、メソッドのシグネチャが保持されるように [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 相互運用機能アセンブリが書き込まれています。 すべての [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 相互運用メソッドは、 `int` 型です。 HRESULT 値は変更されず、例外を生成せず、相互運用層を介して渡されます。  
+  [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] COM 関数の多くは、ゼロ未満の HRESULT 値を返すか、異なる成功コードを返すため、メソッドのシグネチャが保持されるように [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 相互運用機能アセンブリが書き込まれています。 すべての [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] 相互運用メソッドは、 `int` 型です。 HRESULT 値は変更されず、例外を生成せず、相互運用層を介して渡されます。  
   
- COM 関数が呼び出し元のマネージド メソッドに HRESULT を返すため、呼び出し元のメソッドは、HRESULT を確認し、必要に応じて、例外をスローする必要があります。  
+  COM 関数が呼び出し元のマネージド メソッドに HRESULT を返すため、呼び出し元のメソッドは、HRESULT を確認し、必要に応じて、例外をスローする必要があります。  
   
 ## <a name="handling-hresults-returned-to-managed-code-from-com"></a>COM からマネージド コードに返される HRESULT の処理  
  マネージド コードから COM インターフェイスを呼び出す場合は、HRESULT 値を確認し、必要な場合に例外をスローします。 渡された HRESULT の値に応じて、<xref:Microsoft.VisualStudio.ErrorHandler> クラスには COM 例外をスローする <xref:Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure%2A> メソッドが含まれます。  

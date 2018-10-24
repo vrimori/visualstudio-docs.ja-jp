@@ -9,12 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 63c33b98244268a086e9db63e2b56e507471c4c3
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 418c0aa6660b01896252d04a711d4069da389f00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382759"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914490"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>コード化された UI テストでの HTML5 コントロールの使用
 
@@ -38,7 +38,7 @@ ms.locfileid: "39382759"
  ![HTML5 オーディオ コントロール](../test/media/codedui_html5_audio.png)
 
 |アクション|記録中|生成されたコード|
-|------------|---------------|--------------------|
+|-|---------------|-|
 |**オーディオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオを 00:00:00 の時点から再生|HtmlAudio.Play(TimeSpan)|
 |**オーディオの特定の時点にシーク**|\<name> オーディオの 00:01:48 の時点にシーク|HtmlAudio.Seek(TimeSpan)|
 |**オーディオの一時停止**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> オーディオの 00:01:53 の時点で一時停止|HtmlAudio.Pause(TimeSpan)|
@@ -62,7 +62,7 @@ ms.locfileid: "39382759"
  ![HTML5 ビデオ コントロール](../test/media/codedui_html5_video.png)
 
 |アクション|記録中|生成されたコード|
-|------------|---------------|--------------------|
+|-|---------------|-|
 |**ビデオの再生**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオを 00:00:00 の時点から再生|HtmlVideo.Play(TimeSpan)|
 |**ビデオの特定の時点にシーク**|\<name> ビデオの 00:01:48 の時点にシーク|HtmlVideo.Seek(TimeSpan)|
 |**ビデオの一時停止**<br /><br /> コントロールから直接、またはコントロールのコンテキスト メニューから|\<name> ビデオの 00:01:53 の時点で一時停止|HtmlVideo.Pause(TimeSpan)|
