@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b63a455ac1ff27bbdcf4434a6a70bc17b0a4893
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f1ab77b58047c92cfbf692e014f041e34456a01e
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31941747"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863583"
 ---
 # <a name="globalize-applications"></a>アプリケーションのグローバル化
 
@@ -31,8 +31,8 @@ ms.locfileid: "31941747"
 
 - [Windows フォームのグローバリゼーション](/dotnet/framework/winforms/advanced/globalizing-windows-forms) Windows フォームのグローバリゼーションに関するヘルプ ページのリンクが掲載されています。
 
-- [グローバリゼーションとローカライズ](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) Web フォームのグローバリゼーションに関するヘルプ ページのリンクが掲載されています。
+- [グローバリゼーションとローカライズ](https://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) Web フォームのグローバリゼーションに関するヘルプ ページのリンクが掲載されています。
 
 - [.NET Framework ベースの国際対応アプリケーションの概要](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Visual Basic または C# を使用した国際市場向けのソフトウェア開発について基本的な概念を説明します。
 
-- [推奨される国際対応アプリケーション開発手順](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c) 設計に関する問題や用語など、各国のユーザー向けのプログラミングについての情報を示します。
+- [推奨される国際対応アプリケーション開発手順](/dotnet/standard/globalization-localization/best-practices-for-developing-world-ready-apps) 設計に関する問題や用語など、各国のユーザー向けのプログラミングについての情報を示します。

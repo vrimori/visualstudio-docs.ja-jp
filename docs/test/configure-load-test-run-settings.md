@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: fb1f9ad69ebe012151a911bf8d7c02ded6af5e11
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 2171912d3542049564f23ea69b06186cd1846943
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283332"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813863"
 ---
 # <a name="configure-load-test-run-settings"></a>ロード テストの実行設定の構成
 
@@ -30,7 +30,7 @@ ms.locfileid: "44283332"
 ## <a name="tasks"></a>[タスク]
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-|
 |**ロード テストに実行設定を追加する:** さまざまな条件でテストを実行できるように、**新しいロード テスト ウィザード**を実行して作成された実行設定に加えて、それ以外の実行設定をロード テストに追加できます。|-   [方法: ロード テストに追加の実行設定を追加する](../test/how-to-add-additional-run-settings-to-a-load-test.md)|
 |**ロード テストで使用するアクティブな実行設定を指定する:** ロード テスト エディターを使用してロード テストで使用する実行設定を選択できます。 アクティブな実行設定は "[Active]" というサフィックスで識別されます。|-   [方法: ロード テストのアクティブな実行設定を選択する](../test/how-to-select-the-active-run-setting-for-a-load-test.md)|
 |**実行設定プロパティを編集する:** ログ オプション (以下を参照) などの実行設定プロパティを編集して、テストの長さ、ウォームアップ期間、報告されるエラー詳細の最大数、サンプル速度、接続モデル (Web パフォーマンス テストのみ)、結果ストレージの種類、検証レベル、SQL トレースを決定できます。 実行設定は、ロード テストの目的を反映している必要があります。|-   [ロード テストの実行設定のプロパティ](../test/load-test-run-settings-properties.md)<br />-   [実行設定プロパティの変更](../test/load-test-run-settings-properties.md#change-run-setting-properties)|

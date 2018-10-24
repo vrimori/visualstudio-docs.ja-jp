@@ -3,7 +3,7 @@
 ## [Visual Studio 2015 のインストール](install/install-visual-studio-2015.md)
 ## [Visual Studio プロジェクトの移植、移行、およびアップグレード](porting/porting-migrating-and-upgrading-visual-studio-projects.md)
 ## [Visual Studio IDE](ide/visual-studio-ide.md)
-## [拡張性](extensibility/extensibility-in-visual-studio.md)
+## [機能拡張](extensibility/visual-studio-sdk.md)
 ## [データ アクセス](data-tools/accessing-data-in-visual-studio.md)
 ## [クロス プラットフォームのモバイル開発](cross-platform/cross-platform-mobile-development-in-visual-studio.md)
 ## [Visual Basic](/dotnet/visual-basic)

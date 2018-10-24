@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a60b76efc5c1c476f69a11804c74cd3341139c9c
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: d5c10cdf2221f329e8e0ff748c2b4fe77479b205
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080315"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863856"
 ---
 # <a name="midl-task"></a>MIDL タスク
 Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Definition Language) コンパイラ ツール (*midl.exe*) をラップします。 詳細については、「[MIDL Command-Line Reference](https://docs.microsoft.com/en-us/windows/desktop/Midl/midl-command-line-reference)」 (MIDL コマンド ライン リファレンス) を参照してください。  
@@ -245,7 +245,7 @@ Microsoft インターフェイス定義言語 (MIDL: Microsoft Interface Defini
   
      `true` の場合、入力ファイルを *mktyplib.exe* バージョン 2.03 と互換性のある形式にしなければならなくなります。  
   
-     詳細については、「[MIDL Command-Line Reference](https://docs.microsoft.com/en-us/windows/desktop/Midl/midl-command-line-reference)」 (MIDL コマンド ライン リファレンス) の **/mktyplib203** オプションを参照してください。 また、MSDN Web サイトの「[ODL File Syntax](https://msdn.microsoft.com/library/windows/desktop/ms221683(v=vs.85).aspx)」 (ODL ファイルの構文) も参照してください。  
+     詳細については、「[MIDL Command-Line Reference](https://docs.microsoft.com/en-us/windows/desktop/Midl/midl-command-line-reference)」 (MIDL コマンド ライン リファレンス) の **/mktyplib203** オプションを参照してください。 また、MSDN Web サイトの「[ODL File Syntax](/previous-versions/windows/desktop/automat/odl-file-syntax)」 (ODL ファイルの構文) も参照してください。  
   
 -   **OutputDirectory**  
   

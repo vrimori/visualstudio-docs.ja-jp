@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 864b60a7f2262803e9a25b967831c35202799cd5
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 6f418c9f3823aaceb4237546cadc68ea2f2bf95e
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077579"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879253"
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>マルチプロセッサ環境でのログ
 MSBuild では複数のプロセッサを使用できるため、プロジェクトのビルド時間が大幅に短縮されますが、同時にログの複雑性も高まります。 シングルプロセッサ環境であれば、logger は、イベント、メッセージ、警告、およびエラーを順序に従った予測可能な方法で処理できます。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 MSBuild には、マルチプロセッサ対応の新しい logger が用意されており、カスタム "転送 logger" を作成できます。  
@@ -62,15 +62,15 @@ public interface IForwardingLogger: INodeLogger
  詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
   
 ### <a name="attaching-a-distributed-logger"></a>分散 logger のアタッチ  
- コマンド ラインでのビルドで分散 logger をアタッチするには、`/distributedlogger` (短縮形は `/dl`) スイッチを使用します。 logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 分散 logger をアタッチするコードの例を次に示します。  
+ コマンド ラインでのビルドで分散 logger をアタッチするには、`-distributedlogger` (短縮形は `-dl`) スイッチを使用します。 logger の型名およびクラス名の形式は、`-logger` スイッチの場合と同じです。ただし、分散 logger は転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 分散 logger をアタッチするコードの例を次に示します。  
   
 ```cmd  
-msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
+msbuild.exe *.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
 Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,  
 Culture=neutral  
 ```  
   
- `/dl` スイッチでは、2 つの logger 名をアスタリスク (*) で区切っています。  
+ `-dl` スイッチでは、2 つの logger 名をアスタリスク (*) で区切っています。  
   
 ## <a name="see-also"></a>関連項目  
  [ビルド ロガー](../msbuild/build-loggers.md)   

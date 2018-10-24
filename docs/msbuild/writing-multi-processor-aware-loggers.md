@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 87f54ec6e284a913f8bdb87826f585b7c4f38a4c
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: ba677aca8b1e6f5392d742cfd37c805131c15cd1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233140"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817731"
 ---
 # <a name="write-multi-processor-aware-loggers"></a>マルチプロセッサ対応のロガーの記述
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] では複数のプロセッサを使用できるため、プロジェクトのビルド時間が短縮されますが、同時にビルド イベント ログの複雑性も高まります。 シングルプロセッサ環境では、イベント、メッセージ、警告、およびエラーが順序に従った予測可能な方法で logger に到着します。 それに対し、マルチプロセッサ環境では、イベントが複数のソースから同時に、または誤った順序で送られてくることがあります。 この問題を解決するために、[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] にはマルチプロセッサ対応の logger と新しいログ モデルが導入されており、カスタム "転送 logger" を作成できます。  
@@ -73,27 +73,27 @@ ConfigurableForwardingLogger を実際の要件に合わせて変更できます
 また、カスタム転送 logger を作成することもできます。 カスタム転送 logger を作成すると、logger の動作を細かく調整できます。 ただし、カスタム転送 logger を作成する作業は ConfigurableForwardingLogger をカスタマイズする場合より複雑です。 詳細については、「[転送 logger の作成](../msbuild/creating-forwarding-loggers.md)」を参照してください。  
   
 ## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>ConfigurableForwardingLogger を使用した簡単な分散ログ  
- ConfigurableForwardingLogger またはカスタム転送ロガーをアタッチするには、*MSBuild.exe* を使用したコマンド ライン ビルドに `/distributedlogger` スイッチ (短縮形は `/dl`) を指定します。 logger の型名およびクラス名の形式は、`/logger` スイッチの場合と同じです。ただし、分散 logger は常に転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 XMLForwardingLogger というカスタム転送 logger をアタッチするコードの例を次に示します。  
+ ConfigurableForwardingLogger またはカスタム転送ロガーをアタッチするには、*MSBuild.exe* を使用したコマンド ライン ビルドに `-distributedlogger` スイッチ (短縮形は `-dl`) を指定します。 logger の型名およびクラス名の形式は、`-logger` スイッチの場合と同じです。ただし、分散 logger は常に転送 logger と中央 logger という 2 つのログ記録クラスから成ります。 XMLForwardingLogger というカスタム転送 logger をアタッチするコードの例を次に示します。  
   
 ```cmd  
-msbuild.exe myproj.proj/distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,Culture=neutral  
+msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,Culture=neutral  
 ```  
   
 > [!NOTE]
->  `/dl` スイッチでは、2 つの logger 名をアスタリスク (*) で区切る必要があります。  
+>  `-dl` スイッチでは、2 つの logger 名をアスタリスク (*) で区切る必要があります。  
   
  ConfigurableForwardingLogger の使用方法は、通常の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] ではなく ConfigurableForwardingLogger ロガーをアタッチし、ConfigurableForwardingLogger から中央ノードに渡すイベントをパラメーターとして指定する点を除き、他のロガーと同じです (「[ビルド ログの取得](../msbuild/obtaining-build-logs-with-msbuild.md)」を参照)。  
   
  たとえば、ビルドの開始および終了の時点とエラーの発生時のみ通知を受け取る場合は、パラメーターとして `BUILDSTARTEDEVENT`、`BUILDFINISHEDEVENT`、および `ERROREVENT` を渡します。 複数のパラメーターを渡す場合は、パラメーターをセミコロンで区切ります。 ConfigurableForwardingLogger を使用して `BUILDSTARTEDEVENT`、`BUILDFINISHEDEVENT`、`ERROREVENT` の各イベントのみを転送する方法を次の例に示します。  
   
 ```cmd  
-msbuild.exe myproj.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*ConfigureableForwardingLogger,C:\My.dll;BUILDSTARTEDEVENT; BUILDFINISHEDEVENT;ERROREVENT  
+msbuild.exe myproj.proj -distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*ConfigureableForwardingLogger,C:\My.dll;BUILDSTARTEDEVENT; BUILDFINISHEDEVENT;ERROREVENT  
 ```  
   
  ConfigurableForwardingLogger で使用できるパラメーターの一覧を次に示します。  
   
 |ConfigurableForwardingLogger のパラメーター|  
-|---------------------------------------------|  
+| - |  
 |BUILDSTARTEDEVENT|  
 |BUILDFINISHEDEVENT|  
 |PROJECTSTARTEDEVENT|  

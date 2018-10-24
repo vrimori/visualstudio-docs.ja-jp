@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b17e924a6736d37b78709a516f6ca9068d4711c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d34c3978b119b978e83204967e4d5f6af5946314
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31946443"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811543"
 ---
 # <a name="implement-an-interface-in-visual-studio"></a>Visual Studio でインターフェイスを実装する
 
@@ -36,22 +36,22 @@ ms.locfileid: "31946443"
 
    - C#: 
 
-    ![強調表示された C# のコード](media/interface-highlight-cs.png)
+       ![強調表示された C# のコード](media/interface-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示された VB のコード](media/interface-highlight-vb.png)
+       ![強調表示された VB のコード](media/interface-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーします。
    - **マウス**
-     - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
-     - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
-     - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - 右クリックして **[クイック アクションとリファクタリング]** メニューを選択します。
+      - 赤い波線をポイントし、表示された ![電球](media/bulb-cs.png) アイコンをクリックします。
+      - テキスト カーソルが既に赤い波線の行にある場合は、左余白に表示されている ![電球](media/bulb-cs.png) アイコンをクリックします。
 
-1. ドロップダウン メニューから **[インターフェイスの実装]** を選択します。
+3. ドロップダウン メニューから **[インターフェイスの実装]** を選択します。
 
    ![インターフェイス実装のプレビュー](media/interface-preview-cs.png)
 
@@ -63,11 +63,11 @@ ms.locfileid: "31946443"
 
    - C#: 
 
-      ![インターフェイスの実装の結果 (C#)](media/interface-result-cs.png)
+       ![インターフェイスの実装の結果 (C#)](media/interface-result-cs.png)
 
    - Visual Basic: 
 
-      ![インターフェイスの実装の結果 (VB)](media/interface-result-vb.png)
+       ![インターフェイスの実装の結果 (VB)](media/interface-result-vb.png)
 
    > [!TIP]
    > (C# のみ) **[インターフェイスを明示的に実装]** オプションを使うと、生成される各メソッドの先頭にインターフェイス名を付けて、名前の衝突を避けることができます。

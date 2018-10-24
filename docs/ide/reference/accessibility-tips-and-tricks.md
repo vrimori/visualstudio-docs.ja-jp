@@ -13,12 +13,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cff1eb98dd76f8b594193b2e768987b4e2a441d
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 57898fbcfba72c67b199ea584d494cb96dfbf491
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747457"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811842"
 ---
 # <a name="accessibility-tips-and-tricks-for-visual-studio"></a>Visual Studio のアクセシビリティのヒントとテクニック
 
@@ -48,7 +48,7 @@ Visual Studio エディターには多くのテキスト "表示要素" が含�
 Visual Studio IDE には、多くのツール ウィンドウと同様に機能するツールバーがあります。 次のショートカット キーの組み合わせを使用すると、それらのツールバーに容易にアクセスできます。
 
 |機能|説明|キーの組み合わせ|
-|-------------|-----------------|---------------------|
+|-------------|-----------------| - |
 |IDE ツール バー|標準ツール バーの最初のボタンを選択します。|**ALT**、**CTRL** + **TAB**|
 |ツール ウィンドウのツール バー|ツール ウィンドウのツール バーにフォーカスを移動します。 <br> <br> **注:** この操作はほとんどのツール ウィンドウで可能です。ただし、フォーカスがツール ウィンドウ内になければなりません。 また、Shift キーを押してから、Alt キーを押す必要があります。 チーム エクスプローラーなど、一部のツール ウィンドウでは、Shift キーをしばらく押したままにしてから、Alt キーを押す必要があります。|**Shift** + **Alt**|
 |ツールバー|次のツールバーの最初の項目に移動します (特定のツールバーにフォーカスが置かれている場合)。|**CTRL** + **TAB**|
@@ -58,7 +58,7 @@ Visual Studio IDE には、多くのツール ウィンドウと同様に機能�
 他にも便利なショートカット キーの組み合わせがあります。
 
 |機能|説明|キーの組み合わせ|
-|-------------|-----------------|---------------------|
+|-------------|-----------------| - |
 |IDE|ハイ コントラストのオンとオフを切り替えます。 <br> <br> **注:** Windows の標準的なショートカット|**左 Alt + 左 Shift + Print Screen**|
 |ダイアログ ボックス|ダイアログ ボックスのチェック ボックス オプションをオンまたはオフにします。 <br> <br> **注:** Windows の標準的なショートカット|**Space キー**|
 |コンテキスト メニュー|(右クリックして) コンテキスト メニューを開きます。 <br> <br> **注:** Windows の標準的なショートカット|**SHIFT** + **F10**|
@@ -83,18 +83,18 @@ Windows のサウンド アプレットを使用して、Visual Studio プログ
 
 1. Windows 10 を実行しているコンピューター上の**検索**ボックスに「**システムが出す音の変更**」と入力します。
 
-  ![Windows 10 の検索ボックス](media/type-here-to-search.png)
+   ![Windows 10 の検索ボックス](media/type-here-to-search.png)
 
-  (あるいは、Cortana が有効になっている場合は、「コルタナさん」と言ってから、「システムが出す音の変更」と言います。)
+   (あるいは、Cortana が有効になっている場合は、「コルタナさん」と言ってから、「システムが出す音の変更」と言います。)
 
 2. **[システムが出す音の変更]** をダブルクリックします。
 
-  ![Windows 10 の検索結果](media/change-system-sounds.png)
+   ![Windows 10 の検索結果](media/change-system-sounds.png)
 
 3. **[サウンド]** ダイアログ ボックスで、**[サウンド]** タブをクリックします。 <br><br>
- 次に、**[プログラム イベント]** で、**[Microsoft Visual Studio]** にスクロールし、選択したイベントに適用するサウンドを選択します。
+   次に、**[プログラム イベント]** で、**[Microsoft Visual Studio]** にスクロールし、選択したイベントに適用するサウンドを選択します。
 
-  ![Windows 10 の [サウンド] アプレットの [サウンド] タブ](media/sound-applet.png)
+   ![Windows 10 の [サウンド] アプレットの [サウンド] タブ](media/sound-applet.png)
 
 4. **[OK]** をクリックします。
 

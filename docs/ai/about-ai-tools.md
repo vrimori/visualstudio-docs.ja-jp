@@ -12,12 +12,12 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 43411be41acf2e5bd2e40131dd06bf817bf87a38
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e0377417da5859e38c46f99b3b335ba627261cb5
+ms.sourcegitcommit: 551f13774e8bb0eb47cbd973745628a956e866aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31046226"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459698"
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
@@ -28,19 +28,19 @@ Visual Studio Tools for AI は、ディープ ラーニング/AI ソリューシ
 ## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>ディープ ラーニング モデルと AI ソリューションを開発、デバッグ、展開する
 Visual Studio の生産性機能を使って今日の AI 革新を高速化します。 組み込みコード エディターの構文強調表示、IntelliSense、テキスト自動書式設定などの機能を使います。 ローカル変数とモデルに対してステップ実行デバッグを使い、ローカル環境でディープ ラーニング アプリケーションを対話的にテストできます。
 
-![ディープ ラーニング IDE](media\about\ide.png)
+![ディープ ラーニング IDE](media/about/ide.png)
 
 ## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Azure Machine Learning サンプル ギャラリーですぐに始める
 Visual Studio Tools for AI は Azure Machine Learning と統合されており、CNTK、TensorFlow、MMLSpark などを使ってサンプル実験のギャラリーを簡単に参照できます。
 
-![エクスプローラーの例](media\about\gallery.png)
+![エクスプローラーの例](media/about/gallery.png)
 
 [サンプル ギャラリーからのプロジェクトの作成の詳細](create-project-gallery.md)
 
 ## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>ディープ ラーニングのモデル トレーニングと推論をクラウドにスケールアウトする
 この拡張機能を使ってローカル コンピューター上でモデルを簡単にトレーニングすることも、Azure Machine Learning との統合を使ってクラウドにジョブを送信することもできます。 Spark クラスターや Azure GPU 仮想マシンなどの別のコンピューター ターゲットにジョブを送信できます。
 
-![ジョブの送信](media\about\submitjobs.png)
+![ジョブの送信](media/about/submitjobs.png)
 
 [クラウドでのモデルのトレーニングについての詳細](tensorflow-vm.md)
 

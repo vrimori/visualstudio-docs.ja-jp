@@ -17,12 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 882b2511c547837466f45578031c86e6b0df9d74
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 41837a9ff3d67f2d712352115bcb6581580b32a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36234986"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812999"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>ロード テスト アナライザーを使用したロード テストのしきい値規則違反の分析
 
@@ -35,7 +35,7 @@ ms.locfileid: "36234986"
  しきい値違反テーブルには、最初の 1,000 個の違反が表示されます。 次の表は、表示される列を示しています。
 
 |Column|説明|既定で表示|
-|------------|-----------------|------------------------|
+|-|-|-|
 |時刻|ロード テスト中に違反が発生した時刻。|[はい]|
 |コンピューター|違反が発生した、テスト中のコンピューター名。 **注:** この情報は、リモート テスト マシン群でロード テストを実行する場合に重要です。|[はい]|
 |カテゴリ|違反が発生したパフォーマンス カウンターのカテゴリ。|[はい]|
