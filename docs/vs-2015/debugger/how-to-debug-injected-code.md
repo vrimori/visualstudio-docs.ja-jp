@@ -31,12 +31,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 48091178f9f606adecaa9d0047ea35ef25e2b4a1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 04c0430140d848c3c0b2386cc4156be1dbdd47c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49270050"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819785"
 ---
 # <a name="how-to-debug-injected-code"></a>方法 : 挿入されたコードをデバッグする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "49270050"
   
  属性を使用すると、C++ でのプログラミングが簡単になります。 詳細については、次を参照してください。[概念](http://msdn.microsoft.com/library/563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e)します。 一部の属性は、コンパイラによって直接解釈されます。 プログラム ソースにコードを挿入するタイプの属性もあります。この場合、コンパイラは、コードが挿入されてからプログラム ソースをコンパイルします。 このようにコードが挿入されることにより、実際に記述するコードの量が減り、プログラミングがいっそう簡単になります。 しかし、挿入されたコードの実行中に、バグが発生してアプリケーションが正しく動作しなくなる場合があります。 このような場合は、挿入されたコードを確認する必要があります。 Visual Studio では、次の 2 つの方法で、挿入されたコードを参照できます。  
   
--   挿入されたコードを表示することができます、**逆アセンブル**ウィンドウ。  
+- 挿入されたコードを表示することができます、**逆アセンブル**ウィンドウ。  
   
--   使用して[/Fx](http://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560)、元と挿入されたコードを含むマージされたソース ファイルを作成することができます。  
+- 使用して[/Fx](http://msdn.microsoft.com/library/14f0e301-3bab-45a3-bbdf-e7ce66f20560)、元と挿入されたコードを含むマージされたソース ファイルを作成することができます。  
   
- **逆アセンブル**ウィンドウには、ソース コードおよび属性によって挿入されたコードに対応するアセンブリ言語命令が表示されます。 さらに、**逆アセンブル**ウィンドウは、ソース コードの注釈を表示できます。  
+  **逆アセンブル**ウィンドウには、ソース コードおよび属性によって挿入されたコードに対応するアセンブリ言語命令が表示されます。 さらに、**逆アセンブル**ウィンドウは、ソース コードの注釈を表示できます。  
   
 ### <a name="to-turn-on-source-annotation"></a>ソースの注釈を表示するには  
   

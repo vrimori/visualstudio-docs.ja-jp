@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::GetHostName |Microsoft ドキュメント
+title: IDebugProgramNode2::GetHostName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 80b26d0113e9d627a567a1381ec04eec54b062b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e47b8a18c631fe99b67020a4805d019b29fc234
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115776"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816793"
 ---
 # <a name="idebugprogramnode2gethostname"></a>IDebugProgramNode2::GetHostName
-プログラムをホストしているプロセスの名前を取得します。  
+プログラムをホストするプロセスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ int GetHostName (
   
 #### <a name="parameters"></a>パラメーター  
  `dwHostNameType`  
- [in]値、 [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)を返す名前の型を指定する列挙です。  
+ [in]値、 [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md)列挙型を返す名前の型を指定します。  
   
  `pbstrHostName`  
  [out]ホスト プロセスの名前を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CProgram`を公開するオブジェクト、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスです。 この例では無視、`dwHostNameType`パラメーターをモジュールのファイル パスのベース名から取得したように、プログラムの名前のみを返します。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CProgram`を公開するオブジェクト、 [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイス。 この例では無視、`dwHostNameType`パラメーターをモジュールのファイル パスのベース名から取得したように、プログラムの名前のみを返します。  
   
 ```cpp  
 HRESULT CProgram::GetHostName(DWORD dwHostNameType, BSTR* pbstrHostName) {    

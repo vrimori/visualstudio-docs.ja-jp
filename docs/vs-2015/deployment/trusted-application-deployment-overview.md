@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: wpickett
-ms.openlocfilehash: 1807efdefd387c4e4fa01c2acec0f7b32bbce6f8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 733eb98544d48716ec073605d68628ddeab7b794
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215918"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827586"
 ---
 # <a name="trusted-application-deployment-overview"></a>信頼されたアプリケーションの配置の概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "49215918"
   
  大規模な組織では、発行元と配置元のエンティティが異なる場合が少なくありません。  
   
--   発行元は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを作成するグループです。  
+- 発行元は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを作成するグループです。  
   
--   配置元は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを企業のデスクトップ コンピューターに配布するグループ (通常は、情報技術 (IT) 部門) です。  
+- 配置元は、[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] アプリケーションを企業のデスクトップ コンピューターに配布するグループ (通常は、情報技術 (IT) 部門) です。  
   
- 信頼されたアプリケーションの配置を活用するには、次の手順に従う必要があります。  
+  信頼されたアプリケーションの配置を活用するには、次の手順に従う必要があります。  
   
 1.  発行元の証明書を取得します。  
   

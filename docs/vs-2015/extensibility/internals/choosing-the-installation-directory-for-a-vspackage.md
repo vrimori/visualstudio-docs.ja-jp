@@ -15,12 +15,12 @@ ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
 caps.latest.revision: 18
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf9285cb19bfeb2a9d3417d90e4c69ea9abc2ad3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d3ed255d5b8a876ff29e5230c4517ab0b5e04398
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49266975"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843406"
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage のインストール ディレクトリの選択
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -54,17 +54,17 @@ VSPackage とそのサポート ファイルは、ユーザーのファイル �
   
  [Vspackage の管理](../../extensibility/managing-vspackages.md)レジストリ エントリが場所を制御することを示します[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]実際には、VSPackage の検索はサテライト DLL。 ただし、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] LCID 値を次の順序でのという名前のサブディレクトリでは、サテライト DLL を読み込もうとします。  
   
-1.  既定の LCID (VS LCID 英語 \1033 など)  
+1. 既定の LCID (VS LCID 英語 \1033 など)  
   
-2.  既定のサブ言語の LCID 既定値です。  
+2. 既定のサブ言語の LCID 既定値です。  
   
-3.  システム既定の LCID。  
+3. システム既定の LCID。  
   
-4.  既定のサブ言語とシステムの既定の LCID。  
+4. 既定のサブ言語とシステムの既定の LCID。  
   
-5.  米国英語 (. \1033 または。 \0x409)。  
+5. 米国英語 (. \1033 または。 \0x409)。  
   
- VSPackage DLL は、リソースとそれに SatelliteDll\DllName レジストリのエントリ ポイントが含まれる場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]上記の順序でそれらを読み込もうとします。  
+   VSPackage DLL は、リソースとそれに SatelliteDll\DllName レジストリのエントリ ポイントが含まれる場合[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]上記の順序でそれらを読み込もうとします。  
   
 ## <a name="see-also"></a>関連項目  
  [共有およびバージョン管理 Vspackage の使い分け](../../extensibility/choosing-between-shared-and-versioned-vspackages.md)   

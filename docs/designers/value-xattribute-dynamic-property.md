@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c31179d33467f6be440882bce6f6cd9559d9a00
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 473ff5b0124a050b60c9dc02929b2bad83f3661e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39080825"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842342"
 ---
 # <a name="value-xattribute-dynamic-property"></a>Value (XAttribute 動的プロパティ)
 
@@ -37,7 +37,7 @@ attrib.Value
 ## <a name="exceptions"></a>例外
 
 |例外の種類|条件|
-|--------------------|---------------|
+| - |---------------|
 |<xref:System.ArgumentNullException>|設定時に `value` が `null` である場合に発生します。|
 
 ## <a name="remarks"></a>コメント

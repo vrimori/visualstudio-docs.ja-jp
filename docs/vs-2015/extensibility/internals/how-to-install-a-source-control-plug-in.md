@@ -16,12 +16,12 @@ ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 35150331ed22960bb8556a7b1175e0ed629efca7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5f8c442aec21042faa4aa992dcdefc4f9d2ad335
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292982"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812986"
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>方法: ソース管理プラグインのインストール
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -98,16 +98,16 @@ ms.locfileid: "49292982"
 ## <a name="how-an-ide-locates-the-dll"></a>IDE が DLL を検索する方法  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE は、2 つのソースを見つける方法は、プラグインの DLL を制御します。  
   
--   既定のソース管理プラグインを検索しをサイレント モードで接続します。  
+- 既定のソース管理プラグインを検索しをサイレント モードで接続します。  
   
--   検索登録されているすべてのソース管理プラグインを元のユーザーが 1 つ選択しました。  
+- 検索登録されているすべてのソース管理プラグインを元のユーザーが 1 つ選択しました。  
   
- 最初の方法で、DLL を検索するには、IDE はエントリ ProviderRegKey HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider サブキーの下で検索します。 このエントリの値は、別のサブキーを指します。 IDE は、その 2 つ目のサブキー HKEY_LOCAL_MACHINE の下で SccServerPath をという名前のエントリを検索します。 このエントリの値は、DLL を IDE を指します。  
+  最初の方法で、DLL を検索するには、IDE はエントリ ProviderRegKey HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider サブキーの下で検索します。 このエントリの値は、別のサブキーを指します。 IDE は、その 2 つ目のサブキー HKEY_LOCAL_MACHINE の下で SccServerPath をという名前のエントリを検索します。 このエントリの値は、DLL を IDE を指します。  
   
 > [!NOTE]
 >  IDE では、相対パス (たとえば、.\NewProvider.DLL) から Dll が読み込まれません。 DLL への完全なパスを指定する必要があります (たとえば、c:\Providers\NewProvider.DLL)。 これは、承認されていないか、権限を借用したプラグインの Dll の読み込みを防止することで、IDE のセキュリティを強化します。  
   
- 2 番目の方法で、DLL を検索する IDE ですべてのエントリの HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders サブキーの下で検索*します。* 各エントリは、名前と値があります。 IDE では、これらの名前の一覧を表示、ユーザーに*します。* ユーザーが 名前を IDE は、サブキーを指している選択した名前の値を検索します。 IDE は、そのサブキー hkey_local_machine SccServerPath をという名前のエントリを探します。 そのエントリの値は、適切な DLL を IDE を指します。  
+ 2 番目の方法で、DLL を検索する IDE ですべてのエントリの HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders サブキーの下で検索<em>します。</em> 各エントリは、名前と値があります。 IDE では、これらの名前の一覧を表示、ユーザーに<em>します。</em> ユーザーが 名前を IDE は、サブキーを指している選択した名前の値を検索します。 IDE は、そのサブキー hkey_local_machine SccServerPath をという名前のエントリを探します。 そのエントリの値は、適切な DLL を IDE を指します。  
   
  ソース管理プラグインは、DLL が見つからないのどちらの方法をサポートして、その結果、ProviderRegKey、過去の設定の上書きを設定する必要があります。 さらに、その必要があります自体の一覧に追加 InstalledSccProviders のため、ユーザーが使用するには、ソース管理プラグインの選択を持つことができます。  
   

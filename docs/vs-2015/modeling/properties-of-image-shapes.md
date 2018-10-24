@@ -17,37 +17,37 @@ caps.latest.revision: 27
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 6b324e82608a79f8f57762e2538b401c794d831c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d0b2de4ce9c332b5a4f54ad41e6d3af500b49956
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49304097"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843484"
 ---
 # <a name="properties-of-image-shapes"></a>イメージ シェイプのプロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 イメージ シェイプを使用すると、ドメイン クラスが生成されたデザイナーで表示する方法を指定します。 設定して、イメージ シェイプの定義、`Image`クラスを定義済みのイメージ ファイルのプロパティ。 次の形式がサポートされています。  
   
--   .gif  
+- .gif  
   
--   .jpg  
+- .jpg  
   
--   .jpeg  
+- .jpeg  
   
--   .bmp  
+- .bmp  
   
--   .wmf  
+- .wmf  
   
--   .emf  
+- .emf  
   
--   .png  
+- .png  
   
- 既定では、イメージ ファイルなどのデザイナーのリソース ファイル内にある、**リソース**フォルダーで、 **Dsl**プロジェクト。  
+  既定では、イメージ ファイルなどのデザイナーのリソース ファイル内にある、**リソース**フォルダーで、 **Dsl**プロジェクト。  
   
- 詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。  
+  詳細については、次を参照してください。[ドメイン固有言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。  
   
- イメージ シェイプには、次の表に記載されているプロパティがあります。  
+  イメージ シェイプには、次の表に記載されているプロパティがあります。  
   
 |プロパティ|説明|既定値|  
 |--------------|-----------------|-------------|  

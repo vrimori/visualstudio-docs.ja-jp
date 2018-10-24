@@ -16,12 +16,12 @@ ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 caps.latest.revision: 16
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f731c9f441aecf5277dafffc5cc8b10d1a703a4b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8bf3de0c558dbda1d1b43e7b5887780f1a1e2b90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307717"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832065"
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>ソリューションの親コンテナー フォルダーの作成
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "49307717"
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE は、ソース管理にソリューションを追加するときに常にほぼサー フォルダーを作成します。 具体的には、これは、次の場合。  
   
--   プロジェクトは、Web プロジェクトのファイル共有です。  
+- プロジェクトは、Web プロジェクトのファイル共有です。  
   
--   別のドライブは、プロジェクトとソリューション ファイルがあります。  
+- 別のドライブは、プロジェクトとソリューション ファイルがあります。  
   
--   別の共有は、プロジェクトとソリューション ファイルがあります。  
+- 別の共有は、プロジェクトとソリューション ファイルがあります。  
   
--   プロジェクトは、個別に (ソース管理の対象のソリューション) に追加されました。  
+- プロジェクトは、個別に (ソース管理の対象のソリューション) に追加されました。  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]サー フォルダーの名前が、拡張子を除いたソリューション名と同じであることをお勧めします。 次の表では、2 つのバージョンで動作をまとめたものです。  
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]サー フォルダーの名前が、拡張子を除いたソリューション名と同じであることをお勧めします。 次の表では、2 つのバージョンで動作をまとめたものです。  
   
 |機能|tSource コントロール プラグイン API バージョン 1.1|ソース管理プラグイン API バージョン 1.2|  
 |-------------|----------------------------------------------|---------------------------------------------|  

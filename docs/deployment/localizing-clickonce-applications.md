@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7897869e8cc010d54c1914cbfa8ca763dd3a3bfa
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 2a4234d8f6ee9fa946f2accfd50a587e6dbd8068
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279343"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822113"
 ---
 # <a name="localize-clickonce-applications"></a>ClickOnce アプリケーションをローカライズします。
 ローカライズは、アプリケーションを特定のカルチャに適したものにするためのプロセスです。 このプロセスには、ユーザー インターフェイス (UI) のテキストを地域固有の言語に翻訳する作業、正しい日付と通貨の書式の適用、フォーム上にあるコントロールのサイズの調整、およびコントロールを右から左へとミラー化する作業 (必要な場合) が含まれます。  
@@ -69,16 +69,16 @@ ms.locfileid: "44279343"
   
  サテライト アセンブリを必要に応じてダウンロードする処理は、その他の種類のアセンブリを必要に応じてダウンロードする処理と若干異なります。 情報とコードの例を使用してこのシナリオを有効にする方法について、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]用ツールの[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]を参照してください[チュートリアル: ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロード](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)します。  
   
- このシナリオは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で有効にすることもできます。  参照してください[チュートリアル: ClickOnce 配置 API を使用して、デザイナーで必要に応じてサテライト アセンブリをダウンロード](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110))または[チュートリアル: ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードデザイナーを使用して](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))します。  
+ このシナリオは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で有効にすることもできます。  「 [チュートリアル: デザイナーを使用し、ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードする](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) 」または「 [チュートリアル: デザイナーを使用し、ClickOnce 配置 API で必要に応じてサテライト アセンブリをダウンロードする](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))」もご覧ください。  
   
 ## <a name="testing-localized-clickonce-applications-before-deployment"></a>展開する前に、ローカライズされた ClickOnce アプリケーションのテスト  
  サテライト アセンブリが Windows フォーム アプリケーションに使用されるのは、アプリケーションのメイン スレッドの <xref:System.Threading.Thread.CurrentUICulture%2A> プロパティがそのサテライト アセンブリのカルチャに設定されている場合に限られます。 各地域の顧客は Windows のローカライズ版を既に実行していると考えられるため、カルチャも該当する既定値に設定されているはずです。  
   
  アプリケーションを顧客が使用できるようにする前に、ローカライズされた配置をテストするには、次の 3 つのオプションがあります。  
   
--   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを、Windows の該当するローカライズ版で実行する。  
+- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを、Windows の該当するローカライズ版で実行する。  
   
--   アプリケーション内で、<xref:System.Threading.Thread.CurrentUICulture%2A> プロパティをプログラムにより設定する (このプロパティは、<xref:System.Windows.Forms.Application.Run%2A> メソッドを呼び出す前に設定する必要があります)。  
+- アプリケーション内で、<xref:System.Threading.Thread.CurrentUICulture%2A> プロパティをプログラムにより設定する (このプロパティは、<xref:System.Windows.Forms.Application.Run%2A> メソッドを呼び出す前に設定する必要があります)。  
   
 ## <a name="see-also"></a>関連項目  
  [\<assemblyIdentity > 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)   

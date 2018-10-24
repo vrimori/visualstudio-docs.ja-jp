@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: edd88755fbc3065cf6d9ff95b9859b7e70393300
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 9b7d898f4be4a314a8f046399f9d82ca9a9a84f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672426"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811582"
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>発行ウィザード (Visual Studio での Office 開発)
   使用して、**発行ウィザード**ソリューション ファイルを指定した場所にコピーするマニフェスト ファイルを作成し、セットアップ プログラムを作成します。  
@@ -41,13 +41,13 @@ ms.locfileid: "35672426"
   
  ディスクのパス、ファイル共有、FTP サイト、または web サイトの URL として場所を入力するかクリックして、**参照**場所を参照するボタンをクリックします。 これらの形式でパスができます。  
   
--   標準の相対または絶対パス Windows 形式など*C:\Deploy\MyApplication*または*\MyApplication*します。  
+- 標準の相対または絶対パス Windows 形式など*C:\Deploy\MyApplication*または*\MyApplication*します。  
   
--   汎用名前付け規則 (UNC) パスなど *\\\ServerName\MyApplication\\*します。  
+- 汎用名前付け規則 (UNC) パスなど *\\\ServerName\MyApplication\\*します。  
   
--   URL の web サイトなど http://www.microsoft.com/MyApplicationします。  
+- URL の web サイトなど http://www.microsoft.com/MyApplicationします。  
   
- 発行場所は、既定では、 *http://localhost/projectname/* かどうかがある、IIS をインストールまたは実行する場合は、publish \ ディレクトリが IIS インストールされていません。  
+  発行場所は、既定では、 *http://localhost/projectname/* かどうかがある、IIS をインストールまたは実行する場合は、publish \ ディレクトリが IIS インストールされていません。  
   
 > [!NOTE]  
 >  他の考慮事項があるターゲット コンピューターが Windows Vista を実行している場合。 ローカルな発行オプションを使用するには、Windows Vista コンピューターの管理者があります。 さらに、既定の場所は常には、*発行\\*ディレクトリにインストールされている IIS のあるかどうかに関係なく。  

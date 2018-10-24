@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: f46da0c36dfdf73fc550d57e733637ec7ab1e3fb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8dcc182664832775f2aa3878fb3320e01d3901dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49227918"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840104"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>方法 : コード分析辞書をカスタマイズする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -67,17 +67,17 @@ ms.locfileid: "49227918"
 ## <a name="custom-dictionary-elements"></a>ユーザー辞書要素  
  コード分析辞書の動作を変更するには、ユーザー辞書には、次の要素の内部テキ ストとして条件を追加します。  
   
--   [ディクショナリ/単語/認識/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsRecognizedWord)  
+- [ディクショナリ/単語/認識/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsRecognizedWord)  
   
--   [ディクショナリ/単語/認識されていない/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)  
+- [ディクショナリ/単語/認識されていない/Word](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsUnrecognizedWord)  
   
--   [ディクショナリ/単語/非推奨とされます/用語 [@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)  
+- [ディクショナリ/単語/非推奨とされます/用語 [@PreferredAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDeprecatedTermPreferredAlternate)  
   
--   [辞書、単語、複合/用語 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)  
+- [辞書、単語、複合/用語 [@CompoundAlternate]](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsCompoundTermCompoundAlternate)  
   
--   [辞書、単語、DiscreteExceptions/用語](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)  
+- [辞書、単語、DiscreteExceptions/用語](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryWordsDiscreteExceptionsTerm)  
   
--   [ディクショナリ/頭字語/CasingExceptions/頭字語](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)  
+- [ディクショナリ/頭字語/CasingExceptions/頭字語](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)  
   
 ###  <a name="BKMK_DictionaryWordsRecognizedWord"></a> ディクショナリ/単語/認識/Word  
  用語を正しいことと、コード分析を識別する用語の一覧に含めるには、ディクショナリ、単語、認識/Word 要素の内部テキ ストとしてという用語を追加します。 辞書、単語、認識/Word 要素内の用語では区別されません。  
@@ -154,11 +154,11 @@ ms.locfileid: "49227918"
   
  警告に推奨される代替語句を含めると、用語の要素の PreferredAlternate 属性で、代替を指定します。 おくことができます、属性値空代替を提案したくない場合。  
   
--   ディクショナリ/言葉で廃止された用語]、[非推奨と用語の要素は区別されません。  
+- ディクショナリ/言葉で廃止された用語]、[非推奨と用語の要素は区別されません。  
   
--   PreferredAlternate 属性の値は大文字小文字を区別します。 複合の代替のパスカル ケースを使用します。  
+- PreferredAlternate 属性の値は大文字小文字を区別します。 複合の代替のパスカル ケースを使用します。  
   
- **例**  
+  **例**  
   
 ```  
 <Dictionary>  
@@ -189,11 +189,11 @@ ms.locfileid: "49227918"
 ###  <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a> 辞書、単語、複合/用語 [@CompoundAlternate]  
  組み込みの辞書は、複合語ではなく、1 つの個別の用語としていくつかの用語を識別します。 コード分析は、複合語として識別する用語の一覧に、語句を含めると、用語の正しい大文字小文字の区別を指定するには、ディクショナリ、単語、複合/用語要素の内部テキ ストとしてという用語を追加します。 用語の要素の CompoundAlternate 属性では、個々 の単語 (パスカル ケース) の最初の文字を大文字で複合語を構成する個々 の単語を指定します。 内部テキ ストで指定された期間が自動的に DiscreteExceptions/辞書/単語の一覧に追加することに注意してください。  
   
--   ディクショナリ/言葉で廃止された用語]、[非推奨と用語の要素は区別されません。  
+- ディクショナリ/言葉で廃止された用語]、[非推奨と用語の要素は区別されません。  
   
--   PreferredAlternate 属性の値は大文字小文字を区別します。 複合の代替のパスカル ケースを使用します。  
+- PreferredAlternate 属性の値は大文字小文字を区別します。 複合の代替のパスカル ケースを使用します。  
   
- **例**  
+  **例**  
   
 ```  
 <Dictionary>  
