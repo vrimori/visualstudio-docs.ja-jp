@@ -11,12 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 66ed9323b9298f588ad1f29267d88630fae0f39b
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: dc7351c9449993b624569cc13ac5ced7d169b129
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44321178"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837114"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps でラボ環境を使用する
 
@@ -36,9 +36,9 @@ ms.locfileid: "44321178"
 |![クラウドのラボ環境](../media/topology_cloud.png)| このラボ環境は、_サーバー トポロジ_と同様に機能します。ローカルで物理または仮想マシンを実行する必要がないため、設定に費やす時間を減らせ、メンテナンスが簡単になり、コストを抑えことができます。 Microsoft Azure などのクラウド環境には、複数の Web サイトや仮想マシンをカスタム ネットワークで早く簡単に構成できます。|
 |![クライアント サーバーのラボ環境](../media/topology_clientserver.png)| このラボ環境は、*クライアント/サーバー トポロジ*を備えています。これはサーバーとクライアントのコンポーネントを備えたアプリケーションをテストするために、よく使用されます。 クライアント/サーバー トポロジでは、アプリケーションのテストに使用されるクライアントとサーバーのすべてのコンピューターはラボ環境内にあります。 このトポロジを使用すると、テストに影響を与える各コンピューターからテスト データを収集することができます。|
 
-|   |   |
+| | |
 |---|---|
-|  ![ビデオのムービー カメラ アイコン](../../install/media/video-icon.png)  |    テスト用のラボ環境の管理に関する[ビデオを視聴します](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing)。 |
+| ![ビデオのムービー カメラ アイコン](../../install/media/video-icon.png) | テスト用のラボ環境の管理に関する[ビデオを視聴します](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing)。 |
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Azure Pipelines や Team Foundation Server ビルドとリリースをクラウドと共に使用する
 
@@ -95,7 +95,7 @@ SCVMM の詳細については、「[Virtual Machine Manager](/azure/devops/pipe
 標準環境および SCVMM 環境は、多数の同じ機能をサポートしています。 ただし、考慮すべき重要な違いがいくつかあります。 以下の表では、標準環境と SCVMM 環境で使用できる機能について比較しています。
 
 |機能|SCVMM 環境|標準環境|
-|----------------|------------------------|---------------------------|
+|-|------------------------|-|
 |**テスト**|||
 |手動テストの実行|サポート状況|サポート状況|
 |コード化された UI およびその他の自動テストの実行|サポート状況|サポート状況|
@@ -117,7 +117,7 @@ SCVMM の詳細については、「[Virtual Machine Manager](/azure/devops/pipe
 ここから先へ進む前に、次の概念についても理解しておく必要があります。
 
 |用語|説明|
-|----------|-----------------|
+|-|-----------------|
 |ラボ センター|ラボ環境を作成および管理する Microsoft Test Manager の領域。|
 |Azure DevOps プロジェクト ラボ|セットアップされたラボ環境のコレクションで、これらの環境に対して仮想マシンを接続して実行することができます。|
 |Azure DevOps プロジェクト ライブラリ|格納された仮想マシン、テンプレート、および格納されたラボ環境のアーカイブで、プロジェクトのホスト グループにインポートされています。 SCVMM 環境でライブラリ内のアイテムを使用できますが、これらのアイテムを標準環境へ直接追加することはできません。 ライブラリ内のアイテムは実行できません。代わりに、新しい環境へアイテムを配置して使用します。|

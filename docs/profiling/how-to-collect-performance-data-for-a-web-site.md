@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6843e9287fd53b17329b70d331d0f37b87917f7
-ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
+ms.openlocfilehash: bfe90b47086232650a38581bb2a8af1b534b8063
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34815926"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49835989"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>方法: Web サイトのパフォーマンス データを収集する
 
@@ -41,7 +41,7 @@ ms.locfileid: "34815926"
 
 - 一部のユーザーが他のすべてのユーザーに対してプロファイルへのアクセスを拒否することがあります。
 
- 詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。
+  詳細については、「[プロファイルと Windows Vista のセキュリティ](../profiling/profiling-and-windows-vista-security.md)」および「[VSPerfCmd](../profiling/vsperfcmd.md)」の ADMIN オプションを参照してください。
 
 ## <a name="to-profile-a-web-site-project"></a>Web サイト プロジェクトをプロファイリングする
 
@@ -49,7 +49,7 @@ ms.locfileid: "34815926"
 
 2. **[分析]** メニューで **[パフォーマンス プロファイラー]** を選択し、**[パフォーマンス エクスプローラー]** を選択して、**[開始]** を選択します。
 
-3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]** をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 同時実行ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。
+3. ウィザードの最初のページで、プロファイル方法を選択し、 **[次へ]** をクリックします。 プロファイリング方法の詳細については、「[パフォーマンス収集方法について](../profiling/understanding-performance-collection-methods.md)」を参照してください。 コンカレンシー ビジュアライザーのプロファイル方法は、Web アプリケーションでは使用できません。
 
 4. **[プロファイル対象のアプリケーションを選択してください]** ドロップダウン リストで、現在のプロジェクトが選択されていることを確認し、 **[次へ]** をクリックします。
 
@@ -79,11 +79,11 @@ ms.locfileid: "34815926"
 
 5. ウィザードの 3 番目のページの **[Web アプリケーションを実行する URL またはパス]** ボックスで、アプリケーションのホーム ページの URL を入力し、 **[次へ]** をクリックします。
 
-    - サーバー (IIS) ベースの Web サイトの場合は、**http://localhost/MySite/default.aspx** などの URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+   - サーバー (IIS) ベースの Web サイトの場合は、**<http://localhost/MySite/default.aspx>** などの URL を入力します。 これにより、ローカル コンピューターの MySite のアプリケーション ルートで [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、そのサイトの default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
 
-    - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
+   - ファイル ベースの Web サイトの場合は、file///**c:\WebSites\MySite\default.aspx**のようなパスを入力します。 これにより、c:\webSites\MySite に置かれている [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションがプロファイリングされ、 http://localhost:nnnn/MySite/default.aspx ページが Internet Explorer で起動されて、セッションが開始されます。
 
-    - 外部サイトで JavaScript データを収集する場合は、http://www.contoso.com のような URL を入力します。
+   - 外部サイトで JavaScript データを収集する場合は、 http://www.contoso.com のような URL を入力します。
 
      詳細については、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ターゲット バイナリのプロパティ ページを参照してください。
 

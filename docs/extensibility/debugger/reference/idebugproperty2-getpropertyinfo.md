@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetPropertyInfo |Microsoft ドキュメント
+title: IDebugProperty2::GetPropertyInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f922731f5c595f7308f78269b8386b7da20e2398
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80f1f35e8699c04101936bcfa31abfdde751a236
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118597"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823100"
 ---
 # <a name="idebugproperty2getpropertyinfo"></a>IDebugProperty2::GetPropertyInfo
 取得、 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)プロパティを記述する構造体。  
@@ -57,19 +57,19 @@ int GetPropertyInfo (
  [in]任意の数値情報を書式設定で使用する基数。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用して`INFINITE`無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用`INFINITE`を無期限に待機します。  
   
  `rgpArgs`  
- [入力、出力].将来使用するために予約されていますnull 値に設定されます。  
+ [入力、出力]今後使用するために予約されていますnull 値に設定します。  
   
  `dwArgCount`  
- [in]将来使用するために予約されています0 に設定します。  
+ [in]今後使用するために予約されています0 に設定します。  
   
  `pPropertyInfo`  
- [out]A [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)プロパティの説明が入力構造です。  
+ [out]A [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造、プロパティの説明が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

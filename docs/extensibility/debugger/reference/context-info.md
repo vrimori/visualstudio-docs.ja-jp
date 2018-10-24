@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO |Microsoft ドキュメント
+title: CONTEXT_INFO |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb634f59a3a7eb3b37e70dd87f48b22a07251d0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9ed1b803905f403e68053c157b40ec30dc03fbd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31100433"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840065"
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
-この構造体は、メモリ コンテキストまたはコードのコンテキストについて説明します。  
+この構造体には、メモリのコンテキストまたはコードのコンテキストについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +53,7 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>メンバー  
  dwFields  
- 彼のフラグの組み合わせ[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)のどのフィールドが埋められますを指定する列挙**です。**  
+ 彼からフラグの組み合わせ[CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)フィールドが記入を指定する列挙体<strong>します。</strong>  
   
  bstrModuleUrl  
  コンテキストが配置されているモジュールの名前。  
@@ -71,14 +71,14 @@ public struct CONTEXT_INFO {
  指定されたコンテキストが配置されているコード内のアドレスのオフセット。  
   
  bstrAddressAbsolute  
- 特定のコンテキストが配置されているメモリ内の絶対アドレスです。  
+ 指定されたコンテキストが配置されているメモリ内で絶対アドレスです。  
   
-## <a name="remarks"></a>コメント  
- この構造体への呼び出しから返される、 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この構造体がへの呼び出しから返される、 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)メソッド。  
   
- サポートには、この構造体の一般的な使用、**メモリ**デバッグ ウィンドウです。  
+ この構造体の一般的な用途は、のサポートには、**メモリ**デバッグ ウィンドウ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

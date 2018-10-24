@@ -15,12 +15,12 @@ caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 38958aae1c2449145107faa7abe00a2d86baaa9a
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7bfddc0903c520469833a0f160444202edf07c32
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303200"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823698"
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>イベント ハンドラーによって変更内容がモデル外に反映される
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,23 +31,23 @@ Visualization and Modeling SDK では、ストア以外の変数、ファイル�
   
 ### <a name="to-define-a-store-event"></a>ストア イベントを定義するには  
   
-1.  監視するイベントの種類を選択します。 完全な一覧については、プロパティを確認<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>します。 各プロパティは、イベントの種類に対応します。 最もイベントの種類は頻繁に使用します。  
+1. 監視するイベントの種類を選択します。 完全な一覧については、プロパティを確認<xref:Microsoft.VisualStudio.Modeling.EventManagerDirectory>します。 各プロパティは、イベントの種類に対応します。 最もイベントの種類は頻繁に使用します。  
   
-    -   `ElementAdded` – モデル要素のときにトリガーされると、リンクのリレーションシップ、図形またはコネクタが作成されます。  
+   -   `ElementAdded` – モデル要素のときにトリガーされると、リンクのリレーションシップ、図形またはコネクタが作成されます。  
   
-    -   ElementPropertyChanged – がトリガーされたときの値を`Normal`ドメイン プロパティを変更します。 イベントは、新旧の値が等しくない場合にのみトリガーされます。 イベントは、計算およびカスタム格納プロパティに適用できません。  
+   -   ElementPropertyChanged – がトリガーされたときの値を`Normal`ドメイン プロパティを変更します。 イベントは、新旧の値が等しくない場合にのみトリガーされます。 イベントは、計算およびカスタム格納プロパティに適用できません。  
   
-         これは、リレーションシップ リンクに対応するロールのプロパティに適用できません。 代わりに、`ElementAdded`ドメインの関係を監視します。  
+        これは、リレーションシップ リンクに対応するロールのプロパティに適用できません。 代わりに、`ElementAdded`ドメインの関係を監視します。  
   
-    -   `ElementDeleted` – モデル要素の後にトリガーされると、リレーションシップ、図形またはコネクタが削除されました。 要素のプロパティ値に引き続きアクセスできますが、その他の要素へのリレーションシップはありません。  
+   -   `ElementDeleted` – モデル要素の後にトリガーされると、リレーションシップ、図形またはコネクタが削除されました。 要素のプロパティ値に引き続きアクセスできますが、その他の要素へのリレーションシップはありません。  
   
-2.  部分クラス定義を追加_YourDsl_**DocData**で別のコード ファイルで、 **DslPackage**プロジェクト。  
+2. 部分クラス定義を追加_YourDsl_**DocData**で別のコード ファイルで、 **DslPackage**プロジェクト。  
   
-3.  次の例のように、メソッドとして、イベントのコードを記述します。 できます`static`にアクセスする場合を除き、`DocData`します。  
+3. 次の例のように、メソッドとして、イベントのコードを記述します。 できます`static`にアクセスする場合を除き、`DocData`します。  
   
-4.  オーバーライド`OnDocumentLoaded()`ハンドラーを登録します。 1 つ以上のハンドラーがある場合は、すべて同じ場所に登録できます。  
+4. オーバーライド`OnDocumentLoaded()`ハンドラーを登録します。 1 つ以上のハンドラーがある場合は、すべて同じ場所に登録できます。  
   
- 登録コードの場所は重要ではありません。 `DocView.LoadView()` 代替の場所です。  
+   登録コードの場所は重要ではありません。 `DocView.LoadView()` 代替の場所です。  
   
 ```  
 using System;  

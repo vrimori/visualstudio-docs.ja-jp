@@ -23,12 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33b9b29cef4ad215e76af57e66c73eb2e8a134db
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3668b5e4275071513deb31e2e479adcd91d11589
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31953837"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839272"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>方法: 参照マネージャーを使用して参照を追加または削除する
 
@@ -100,7 +100,7 @@ EnvDTE 名前空間 (<xref:EnvDTE>、<xref:EnvDTE80>、<xref:EnvDTE90>、<xref:E
 
     新しいアプリケーションの作成時に、いくつかのプロジェクトが既定で [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)] を対象とするように設定されます。
 
-- コンパイル エラーが発生する可能性があるため、同じソリューション内の他のプロジェクトの出力に対するファイル参照は追加しないでください。 代わりに、**[参照の追加]** ダイアログ ボックスの **[プロジェクト]** タブを使ってプロジェクト間参照を作成します。 そうすることによってプロジェクトで作成するクラス ライブラリを管理する機能が向上し、チーム開発が簡単になります。 詳しくは、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」をご覧ください。
+コンパイル エラーが発生する可能性があるため、同じソリューション内の他のプロジェクトの出力に対するファイル参照は追加しないでください。 代わりに、**[参照の追加]** ダイアログ ボックスの **[プロジェクト]** タブを使ってプロジェクト間参照を作成します。 そうすることによってプロジェクトで作成するクラス ライブラリを管理する機能が向上し、チーム開発が簡単になります。 詳しくは、「[壊れた参照のトラブルシューティング](../ide/troubleshooting-broken-references.md)」をご覧ください。
 
 > [!NOTE]
 > Visual Studio 2015 以降では、一方のプロジェクトが対象とする .NET Framework のバージョンが Version 4.5 以降で、他方のプロジェクトが対象とするバージョンが Version 2、3、3.5、または 4.0 である場合、プロジェクト参照ではなくファイル参照が作成されます。
@@ -109,9 +109,9 @@ EnvDTE 名前空間 (<xref:EnvDTE>、<xref:EnvDTE80>、<xref:EnvDTE90>、<xref:E
 
 - アセンブリを次の場所のいずれかに移動またはコピーします。
 
-    - 現在のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[参照]** タブに表示されます。
+   - 現在のプロジェクト ディレクトリ。 ここにあるアセンブリは、 **[参照]** タブに表示されます。
 
-    - 同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、**[プロジェクト]** タブに表示されます。
+   - 同じソリューション内のその他のプロジェクト ディレクトリ。 ここにあるアセンブリは、**[プロジェクト]** タブに表示されます。
 
     \- または
 
@@ -175,7 +175,7 @@ Windows 8.x ストア アプリ プロジェクトには、プロジェクトを
 </PropertyGroup>
 ```
 
-このサブグループの **[Windows]** チェック ボックスがオンになっていることを確認します。 その後は、Windows ランタイム要素を使用できます。 ただし、<xref:System.Runtime> を追加する必要もあります。そこで、Windows ランタイム ライブラリ全体で使用される、<xref:System.Collections.IEnumerable> などの標準のクラスおよびインターフェイスが Windows ランタイムによって定義されます。 <xref:System.Runtime> を追加する方法については、「[Managed desktop apps and Windows Runtime](http://msdn.microsoft.com/library/windows/apps/jj856306.aspx#consuming_standard_windows_runtime_types)」(マネージド デスクトップ アプリと Windows ランタイム) をご覧ください。
+このサブグループの **[Windows]** チェック ボックスがオンになっていることを確認します。 その後は、Windows ランタイム要素を使用できます。 ただし、<xref:System.Runtime> を追加する必要もあります。そこで、Windows ランタイム ライブラリ全体で使用される、<xref:System.Collections.IEnumerable> などの標準のクラスおよびインターフェイスが Windows ランタイムによって定義されます。 <xref:System.Runtime> を追加する方法については、「[Managed desktop apps and Windows Runtime](/previous-versions/windows/apps/jj856306(v=win.10)#consuming-standard-windows-runtime-types)」(マネージド デスクトップ アプリと Windows ランタイム) をご覧ください。
 
 ### <a name="extensions-subgroup"></a>[拡張機能] サブグループ
 
