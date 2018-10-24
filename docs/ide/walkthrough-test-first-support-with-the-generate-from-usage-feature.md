@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47ad898b353914949c74eae65c6e545b1c167ec9
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: c500f7a245ffd3a0dec175dd5f016cf1b2596fa4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748193"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821490"
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>チュートリアル: 使用法から生成機能のテスト ファースト開発
 
@@ -36,15 +36,15 @@ ms.locfileid: "34748193"
 
 ### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Windows クラス ライブラリ プロジェクトとテスト プロジェクトを作成する
 
-1.  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] または [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] で、新しい **Windows クラス ライブラリ** プロジェクトを作成します。 使用している言語に応じて `GFUDemo_VB` または `GFUDemo_CS`という名前を付けます。
+1. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] または [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] で、新しい **Windows クラス ライブラリ** プロジェクトを作成します。 使用している言語に応じて `GFUDemo_VB` または `GFUDemo_CS`という名前を付けます。
 
-2.  **ソリューション エクスプローラー**の上部にあるソリューション アイコンを右クリックし、**[追加]** を選択してから **[新しいプロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスの左ペインで、**[テスト]** を選択します。
+2. **ソリューション エクスプローラー**の上部にあるソリューション アイコンを右クリックし、**[追加]** を選択してから **[新しいプロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスの左ペインで、**[テスト]** を選択します。
 
-3.  中央のペインで、**[単体テスト プロジェクト]** を選択し、`UnitTestProject1` の既定の名前をそのまま使用します。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] で表示されるダイアログ ボックスを次の図に示します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のダイアログ ボックスも同様です。
+3. 中央のペインで、**[単体テスト プロジェクト]** を選択し、`UnitTestProject1` の既定の名前をそのまま使用します。 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] で表示されるダイアログ ボックスを次の図に示します。 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のダイアログ ボックスも同様です。
 
-     ![[新しいテスト プロジェクト] ダイアログ](../ide/media/newproject_test.png)
+    ![[新しいテスト プロジェクト] ダイアログ](../ide/media/newproject_test.png)
 
-4.  **[OK]** を選択して、**[新しいプロジェクト]** ダイアログ ボックスを閉じます。
+4. **[OK]** を選択して、**[新しいプロジェクト]** ダイアログ ボックスを閉じます。
 
 ### <a name="add-a-reference-to-the-class-library-project"></a>クラス ライブラリ プロジェクトに参照を追加する
 
@@ -58,20 +58,20 @@ ms.locfileid: "34748193"
 
 ### <a name="generate-a-new-class-from-a-unit-test"></a>単体テストから新しいクラスを生成する
 
-1.  テスト プロジェクトには、*UnitTest1* という名前のファイルが含まれています。 **ソリューション エクスプローラー** でこのファイルをダブルクリックして、コード エディターで開きます。 テスト クラスとテスト メソッドが生成されています。
+1. テスト プロジェクトには、*UnitTest1* という名前のファイルが含まれています。 **ソリューション エクスプローラー** でこのファイルをダブルクリックして、コード エディターで開きます。 テスト クラスとテスト メソッドが生成されています。
 
-2.  クラス `UnitTest1` の宣言を検索して、この名前を `AutomobileTest`に変更します。
+2. クラス `UnitTest1` の宣言を検索して、この名前を `AutomobileTest`に変更します。
 
- > [!NOTE]
- >  現在、IntelliSense では、IntelliSense のステートメント入力候補に対して、 *完了モード* と *提案モード*の 2 つの方法を提供しています。 まだ定義していないクラスやメンバーを使用する場合は、提案モードを使用します。 **IntelliSense** ウィンドウが開いているときに、**Ctrl**+**Alt**+**Space** キーを押すと、完了モードと提案モードを切り替えることができます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページを参照してください。 提案モードは、次の手順で「 `Automobile` 」と入力する際に役立ちます。
+   > [!NOTE]
+   >  現在、IntelliSense では、IntelliSense のステートメント入力候補に対して、 *完了モード* と *提案モード*の 2 つの方法を提供しています。 まだ定義していないクラスやメンバーを使用する場合は、提案モードを使用します。 **IntelliSense** ウィンドウが開いているときに、**Ctrl**+**Alt**+**Space** キーを押すと、完了モードと提案モードを切り替えることができます。 詳細については、[IntelliSense の使用](../ide/using-intellisense.md)に関するページを参照してください。 提案モードは、次の手順で「 `Automobile` 」と入力する際に役立ちます。
 
-3.  `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次のスクリーンショットに示されているように、このメソッド内に `Automobile` というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、[クイック アクション](../ide/quick-actions.md) (電球) が左の余白に表示される (C# のみ) か、カーソルを移動すると波線の下に直接表示されます。
+3. `TestMethod1()` メソッドを検索して、この名前を `DefaultAutomobileIsInitializedCorrectly()`に変更します。 次のスクリーンショットに示されているように、このメソッド内に `Automobile` というクラスの新しいインスタンスを作成します。 コンパイル時のエラーを示す波下線が表示され、[クイック アクション](../ide/quick-actions.md) (電球) が左の余白に表示される (C# のみ) か、カーソルを移動すると波線の下に直接表示されます。
 
-     ![Visual Basic のクイック アクション](../ide/media/genclass_underlinevb.png)
+    ![Visual Basic のクイック アクション](../ide/media/genclass_underlinevb.png)
 
-     ![C&#35; のクイック アクション](../ide/media/genclass_underline.png)
+    ![C&#35; のクイック アクション](../ide/media/genclass_underline.png)
 
-4.  **クイック アクション** (電球) を選択するかクリックします。 `Automobile` 型が定義されていないことを示すエラー メッセージが表示されます。 ソリューションもいくつか表示されます。
+4. **クイック アクション** (電球) を選択するかクリックします。 `Automobile` 型が定義されていないことを示すエラー メッセージが表示されます。 ソリューションもいくつか表示されます。
 
 5. **[新しい型の生成]** をクリックして、**[型の生成]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、別のプロジェクトでの型の生成を含むオプションが提供されます。
 
@@ -79,9 +79,9 @@ ms.locfileid: "34748193"
 
      ![[新しい型の生成] ダイアログ ボックス](../ide/media/genotherdialog.png)
 
-6.  **[OK]** をクリックしてダイアログ ボックスを閉じ、新しいファイルを作成します。
+7. **[OK]** をクリックしてダイアログ ボックスを閉じ、新しいファイルを作成します。
 
-7.  **ソリューション エクスプローラー**で、**GFUDemo_VB** または **GFUDemo_CS** プロジェクト ノードの下に新しい *Automobile.vb* または *Automobile.cs* ファイルが存在することを確認します。 コード エディターでは、まだ `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` にフォーカスがあり、中断を最小限に抑えて、テストの記述を続行できます。
+8. **ソリューション エクスプローラー**で、**GFUDemo_VB** または **GFUDemo_CS** プロジェクト ノードの下に新しい *Automobile.vb* または *Automobile.cs* ファイルが存在することを確認します。 コード エディターでは、まだ `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` にフォーカスがあり、中断を最小限に抑えて、テストの記述を続行できます。
 
 ### <a name="generate-a-property-stub"></a>プロパティ スタブを生成する
 `Automobile` クラスに `Model` と `TopSpeed`という 2 つのパブリック プロパティがあることを示す製品仕様があるとします。 これらのプロパティは、既定のコンストラクターによって、 `"Not specified"` と `-1` の既定値で初期化されている必要があります。 次の単体テストでは、既定のコンストラクターが適切な既定値にプロパティを設定することを検証します。

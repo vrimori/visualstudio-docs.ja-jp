@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: d092234c183c93ce99e7d864c71c64a332aeb758
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 59315562e16a7ce3ef4e0a79551f524ca88d44bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39178944"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826402"
 ---
 # <a name="how-to-manually-create-web-templates"></a>方法: Web テンプレートを手動で作成する
 
@@ -30,33 +30,33 @@ Web テンプレートの作成方法は、他の種類のテンプレートを�
 
 1. Web プロジェクトを作成します。
 
-1. プロジェクト内のファイルを変更または削除するか、新しいファイルをプロジェクトに追加します。
+2. プロジェクト内のファイルを変更または削除するか、新しいファイルをプロジェクトに追加します。
 
-1. XML ファイルを作成し、*vstemplate* ファイル名拡張子を使って、プロジェクトと同じディレクトリに保存します。 このファイルを Visual Studio のプロジェクトに追加しないでください。
+3. XML ファイルを作成し、*vstemplate* ファイル名拡張子を使って、プロジェクトと同じディレクトリに保存します。 このファイルを Visual Studio のプロジェクトに追加しないでください。
 
-1. *vstemplate* XML ファイルを編集して、プロジェクト テンプレート メタデータを提供します。 詳細については、[後の例](#example)を参照してください。
+4. *vstemplate* XML ファイルを編集して、プロジェクト テンプレート メタデータを提供します。 詳細については、[後の例](#example)を参照してください。
 
-1. *vstemplate* ファイルで `ProjectType` 要素を探し、テキスト値を `Web` に設定します。
+5. *vstemplate* ファイルで `ProjectType` 要素を探し、テキスト値を `Web` に設定します。
 
-1. `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。 プログラミング言語は次のいずれかの値です。
+6. `ProjectType` 要素の後に `ProjectSubType` 要素を追加し、テキスト値をテンプレートのプログラミング言語に設定します。 プログラミング言語は次のいずれかの値です。
 
-    - CSharp
-    - VisualBasic
+   - CSharp
+   - VisualBasic
 
-    例:
+     例:
 
-    ```xml
-    <TemplateData>
-        ...
-        <ProjectType>Web</ProjectType>
-        <ProjectSubType>CSharp</ProjectSubType>
-        ...
-    </TemplateData>
-    ```
+     ```xml
+     <TemplateData>
+       ...
+       <ProjectType>Web</ProjectType>
+       <ProjectSubType>CSharp</ProjectSubType>
+       ...
+     </TemplateData>
+     ```
 
-1. テンプレート内のファイル (*vstemplate* ファイルを含む) を選択して右クリックし、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選択します。 ファイルは *.zip* ファイルに圧縮されます。
+7. テンプレート内のファイル (*vstemplate* ファイルを含む) を選択して右クリックし、**[送る]** > **[圧縮 (zip 形式) フォルダー]** の順に選択します。 ファイルは *.zip* ファイルに圧縮されます。
 
-1. *.zip* テンプレート ファイルを Visual Studio プロジェクト テンプレートのディレクトリに格納します。 既定では、このディレクトリは *%USERPROFILE%\Documents\Visual Studio \<バージョン\>\ProjectTemplates* です。
+8. *.zip* テンプレート ファイルを Visual Studio プロジェクト テンプレートのディレクトリに格納します。 既定では、このディレクトリは *%USERPROFILE%\Documents\Visual Studio \<バージョン\>\ProjectTemplates* です。
 
 ## <a name="example"></a>例
 

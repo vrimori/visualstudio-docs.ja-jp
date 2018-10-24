@@ -9,12 +9,12 @@ description: Visual Studio サブスクリプションを最大限に活用す�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 409b5a98990f3dedc8ed321f085615c1d542ed7f
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 84e3f62bfb0939bdb30f562629c84a092cd02f4b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283432"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822164"
 ---
 # <a name="managing-subscriptions"></a>サブスクリプションを管理する
 
@@ -72,14 +72,14 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 
 特典ページでは、使用中のサブスクリプションが目立つように青いバナーで表示されています。 ページの右上にも表示されます。
 > [!div class="mx-imgBorder"]
-> ![アクティブなサブスクリプション](_img\manage-vs-subscriptions\current-subscription-cropped.png)
+> ![アクティブなサブスクリプション](_img/manage-vs-subscriptions/current-subscription-cropped.png)
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>サブスクリプションは次のいずれかの方法で切り替えることができます。
 
 - 右上のドロップダウンをクリックし、一覧からサブスクリプションを選びます
 - [サブスクリプション] タブをクリックし、使うサブスクリプションをクリックします
-> [!div class="mx-imgBorder"]
-> ![サブスクリプションを切り替える](_img\manage-vs-subscriptions\change-subscription-resized.png)
+  > [!div class="mx-imgBorder"]
+  > ![サブスクリプションを切り替える](_img/manage-vs-subscriptions/change-subscription-resized.png)
 
 ### <a name="if-your-subscription-is-not-visible"></a>サブスクリプションが表示されない場合...
 
@@ -124,8 +124,8 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 4. 変更が終わったら、**[保存]** をクリックします。
 5. ブラウザーの **[戻る]** ボタンをクリックして特典ページに戻ります。
 
-    > [!div class="mx-imgBorder"]
-    > ![プロファイルの情報を編集する](_img\manage-vs-subscriptions\edit-profile-resized.png)
+   > [!div class="mx-imgBorder"]
+   > ![プロファイルの情報を編集する](_img/manage-vs-subscriptions/edit-profile-resized.png)
 
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>既存の Azure DevOps Services または Azure サブスクリプションにサブスクリプションをリンクする
 
@@ -140,8 +140,8 @@ Visual Studio サブスクリプション ポータルは、Visual Studio サブ
 3. **[Related Links]** の下にある **[代替アカウントを追加する]** を選びます。
 4. 職場/学校アカウントのメール アドレスを入力して、**[追加]** をクリックします。
 
-    > [!div class="mx-imgBorder"]
-    > ![代替アカウント](_img\manage-vs-subscriptions\alternate-account-resized.png)
+   > [!div class="mx-imgBorder"]
+   > ![代替アカウント](_img/manage-vs-subscriptions/alternate-account-resized.png)
 
 代替アカウントを追加した後は、**[サブスクリプション]** タブをクリックして **[Related Links]** セクションで適切なオプションを選ぶことにより、いつでも更新または削除できます。
 

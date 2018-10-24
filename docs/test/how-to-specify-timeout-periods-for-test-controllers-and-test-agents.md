@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 888d446d82a2f7b5fb6d8638a1c7472378b014de
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: e70c468a70d37d1d8e261844c004af785a68eb54
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39379261"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827936"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>方法: テスト コントローラーおよびテスト エージェントのタイムアウト期限を指定する
 
@@ -29,7 +29,7 @@ ms.locfileid: "39379261"
 -   テスト コントローラー: *QTController.exe.config*
 
     |キー名|説明|[値]|
-    |--------------|-----------------|-----------|
+    |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|エージェントの ping 要求を待機する秒数。これを超えると、接続が失われたと判断されます。|"n" 秒。|
     |AgentSyncTimeoutInSeconds|同期テストの実行を開始するときに、すべてのエージェントの同期を待機する秒数。これを超えると、実行が中止されます。|"n" 秒。|
     |AgentInitializeTimeout|テストの実行開始時に、すべてのエージェントとそのデータ コレクターの初期化を待機する秒数。それを超えると、テストの実行が中止されます。 この値は、データ コレクターを使用する場合は、適度に大きくする必要があります。|"n" 秒。 既定値: "120" (2 分)。|
@@ -38,7 +38,7 @@ ms.locfileid: "39379261"
 -   テスト エージェント: *QTAgentService.exe.config*
 
     |キー名|説明|[値]|
-    |--------------|-----------------|-----------|
+    |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|コントローラーへの接続を試行する間隔の秒数。|"n" 秒。 既定値: "30" (30 秒)。|
     |RemotingTimeoutSeconds|リモート処理呼び出しを継続できる時間の最大秒数。|"n" 秒。 既定値: "600" (10 分)。|
     |StopTestRunCallTimeoutInSeconds|テストの実行を停止する呼び出しを待機する秒数。|"n" 秒。 既定値: "120" (2 分)。|
