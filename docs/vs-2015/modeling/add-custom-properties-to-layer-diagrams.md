@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b43f7ab5a3247bbff4954616732aa0861726cc2b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 517d9f40dc0c98ca8572c31ae256e81de864171e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49235158"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844415"
 ---
 # <a name="add-custom-properties-to-layer-diagrams"></a>レイヤー図へのカスタム プロパティの追加
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,21 +34,21 @@ ms.locfileid: "49235158"
   
 > [!IMPORTANT]
 >  プロパティが表示されるようにするには、レイヤーのプロパティが表示されるようにする必要のある各コンピューターで、次の変更を行う必要があります。  
->   
->  1.  メモ帳を使用して実行**管理者として実行**します。 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest` を開きます  
-> 2.  `Content` 要素内で、次を追加します。  
->   
->     ```xml  
->     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>  
->     ```  
-> 3.  で、 **Visual Studio Tools**開いている Visual Studio アプリケーション スタート メニューのセクション**開発者コマンド プロンプト**します。  
->   
->      次のように入力します。  
->   
->      `devenv /rootSuffix /updateConfiguration`  
->   
->      `devenv /rootSuffix Exp /updateConfiguration`  
-> 4.  Visual Studio を再起動します。  
+> 
+> 1. メモ帳を使用して実行**管理者として実行**します。 `%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest` を開きます  
+>    2.  `Content` 要素内で、次を追加します。  
+> 
+>    ```xml  
+>    <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>  
+>    ```  
+>    3.  で、 **Visual Studio Tools**開いている Visual Studio アプリケーション スタート メニューのセクション**開発者コマンド プロンプト**します。  
+> 
+>    次のように入力します。  
+> 
+>    `devenv /rootSuffix /updateConfiguration`  
+> 
+>    `devenv /rootSuffix Exp /updateConfiguration`  
+>    4.  Visual Studio を再起動します。  
   
  **コードが VSIX プロジェクトで確認します。**  
   

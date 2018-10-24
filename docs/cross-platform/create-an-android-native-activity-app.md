@@ -12,12 +12,12 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: a94490c60a8b2ccb4513cf3c6c5c9d0de1a6f392
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 0b8a2622c0b4d55376ecb0f3bc6641d41c524962
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233114"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845443"
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity アプリの作成
 Visual C++ for Cross-Platform Mobile Development オプションをインストールすると、Visual Studio 2015 を使用して、フル機能を持つ Android Native Activity アプリを作成できます。 Android Native Development Kit (NDK) は、純粋な C/C++ コードを使用して Android アプリの大半を実装することを可能にするツールセットです。 いくつかの Java JNI コードはグルーとして機能し、C/C++ コードが Android とやり取りできるようにします。 Android NDK では、Android API レベル 9 を使用して Native Activity アプリを作成する機能が導入されました。 Native Activity コードは、Unreal Engine または OpenGL を使用したゲームやグラフィックス処理の多いアプリを作成できるので人気があります。 このトピックでは、OpenGL を使用した単純な Native Activity アプリの作成方法について説明します。 他のトピックでは、Native Activity コードの編集、ビルド、デバッグ、展開の開発ライフサイクルについて説明します。  
@@ -34,19 +34,19 @@ Visual C++ for Cross-Platform Mobile Development オプションをインスト�
   
 #### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには  
   
-1.  Visual Studio を開きます。 メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
+1. Visual Studio を開きます。 メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で、**[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、**[Native-Activity Application (Android)]** テンプレートを選択します。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で、**[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、**[Native-Activity Application (Android)]** テンプレートを選択します。  
   
-3.  アプリに `MyAndroidApp`などの名前を付け、 **[OK]**」を参照してください。  
+3. アプリに `MyAndroidApp`などの名前を付け、 **[OK]**」を参照してください。  
   
-     ![Native Activity プロジェクトの作成](../cross-platform/media/cppmdd_newproject.PNG "CppMDD_NewProject")  
+    ![Native Activity プロジェクトの作成](../cross-platform/media/cppmdd_newproject.PNG "CppMDD_NewProject")  
   
-     Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
+    Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。  
   
-     ![ソリューション エクスプローラーでの Native Activity プロジェクト](../cross-platform/media/cppmdd_rc_na_solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
+    ![ソリューション エクスプローラーでの Native Activity プロジェクト](../cross-platform/media/cppmdd_rc_na_solutionexp.PNG "CPPMDD_RC_NA_SolutionExp")  
   
- 新しい Android Native Activity アプリのソリューションには、次の 2 つのプロジェクトが含まれています。  
+   新しい Android Native Activity アプリのソリューションには、次の 2 つのプロジェクトが含まれています。  
   
 -   `MyAndroidApp.NativeActivity` には、アプリが Android 上でネイティブ アクティビティとして動作するための参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントの実装は *main.cpp* にあります。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、Packaging プロジェクトで使用されます。  
   

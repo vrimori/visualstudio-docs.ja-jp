@@ -10,12 +10,12 @@ ms.author: karann
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af9ec3cffc7375dd77be72887baee6a56e1b391
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 09251f13cafa320e2736e9c61135283bb9e9739d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077814"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844186"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML のエラーと警告
 
@@ -26,7 +26,7 @@ Visual Studio では、XAML を作成するとき、入力したコードがす�
 バックグラウンドでは、複数のツールにより並列で XAML が解析されます。 XAML エラーは、エラーを検出したツールに基づき、次の 3 つの種類の 1 つに分類されます。
 
 |**エラーを検出した機能**|**エラー コードの形式**|
-|--------------------------------|-----------------|
+| - |-----------------|
 |XAML 言語サービス (XAML エディター)|XLSxxxx|
 |XAML デザイナー|XDGxxxx|
 |XAML エディット コンティニュ|XECxxxx|
