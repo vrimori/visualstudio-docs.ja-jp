@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: be768f684a495271f06a2a79a71647a9bbaa8552
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 87fbda8cb55d0d2a6ef9f21a2a7878d4babd3fe6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498871"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830692"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>親コンテナーのフォルダーのソリューションを作成します。
 ソース管理プラグイン API バージョン 1.2、ユーザーは、ソリューション内のすべての web プロジェクトの 1 つのルートのソース コントロール変換先を指定できます。 この単一のルートには、スーパー Unified ルート (サー) が呼び出されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "39498871"
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]、サー フォルダーの名前が、拡張子を除いたソリューション名と同じであることをお勧めします。 次の表では、2 つのバージョンで動作をまとめたものです。  
   
 |機能|ソース管理プラグイン API バージョン 1.1|ソース管理プラグイン API バージョン 1.2|  
-|-------------|----------------------------------------------|---------------------------------------------|  
+|-------------| - | - |  
 |ソース コード管理にソリューションを追加します。|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccGetProjPath()<br /><br /> SccOpenProject()|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccCreateSubProject()<br /><br /> SccCreateSubProject()<br /><br /> SccOpenProject()|  
 |ソース管理対象のソリューションにプロジェクトを追加します。|SccGetProjPath()<br /><br /> OpenProject()|SccGetParentProjectPath()<br /><br /> SccOpenProject()<br /><br />  **注:** Visual Studio では、ソリューションが、SUR. の直接の子であります。|  
   

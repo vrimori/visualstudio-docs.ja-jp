@@ -11,12 +11,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: e46da7cf39ad816f70454983c56dd5751981f741
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 303b8677781d7fde893cc74e4fbcdbd5772966c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495761"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863023"
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 環境を検証する
 
@@ -42,19 +42,19 @@ Visual Studio で、まず、**[ツール]** > **[拡張機能と更新プログ
 
 1. **[ツール]、[Android]、[Android SDK マネージャー]** の順に進み、最新の Android SDK ツールがインストールされていることを確認してください。 Android SDK Tools、Android SDK Platform ツール、Android SDK Build ツールの最新版をインストールします。 常に最新レベルの Android API をインストールする必要はありません。 必要な API レベルは、対象となるプラットフォーム レベルによって異なります。 通常、Xamarin プラットフォームをインストールすると、必要なレベルの Android プラットフォームがインストールされます。
 
-2.  デバイスまたはエミュレーターでビルドとデバッグを検証します。
+2. デバイスまたはエミュレーターでビルドとデバッグを検証します。
 
-    -   ソリューション エクスプローラーで Android プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** をクリックします。
+   -   ソリューション エクスプローラーで Android プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** をクリックします。
 
-    -   ツール バーには、利用できる Android デバイスとエミュレーターの一覧が含まれるドロップダウンが表示されるはずです。
+   -   ツール バーには、利用できる Android デバイスとエミュレーターの一覧が含まれるドロップダウンが表示されるはずです。
 
-    Android デバイスの [設定] ページの [開発者] オプションで、USB デバッグを有効にする必要があります。 有効にすると、デバイスとコンピューターを USB ケーブルで接続できます。
+   Android デバイスの [設定] ページの [開発者] オプションで、USB デバッグを有効にする必要があります。 有効にすると、デバイスとコンピューターを USB ケーブルで接続できます。
 
-    エミュレーターも一覧表示されます。 いずれかのデバイスまたは Visual Studio エミュレーターを選択します。
+   エミュレーターも一覧表示されます。 いずれかのデバイスまたは Visual Studio エミュレーターを選択します。
 
-  ![デバッグ ターゲットとして Visual Studio Emulator for Android を選択する](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")
+   ![デバッグ ターゲットとして Visual Studio Emulator for Android を選択する](../cross-platform/media/crossplat-xamarin-verify-3.png "CrossPlat Xamarin Verify 3")
 
-  詳細については、Microsoft DevOps ブログの「[Introducing Visual Studio's Emulator for Android](https://blogs.msdn.microsoft.com/devops/2014/11/12/introducing-visual-studios-emulator-for-android/)」 (Visual Studio の Emulator for Android の概要) をご覧ください。 エミュレーターを機能させるときに問題が発生する場合は、「[Visual Studio Emulator for Android のトラブルシューティング](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)」を参照してください。 **[ツール]、[Android]、[Android Emulator マネージャー]** の順に選択し、エミュレーターの新しいデバイス プロファイルを作成することもできます。
+   詳細については、Microsoft DevOps ブログの「[Introducing Visual Studio's Emulator for Android](https://blogs.msdn.microsoft.com/devops/2014/11/12/introducing-visual-studios-emulator-for-android/)」 (Visual Studio の Emulator for Android の概要) をご覧ください。 エミュレーターを機能させるときに問題が発生する場合は、「[Visual Studio Emulator for Android のトラブルシューティング](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)」を参照してください。 **[ツール]、[Android]、[Android Emulator マネージャー]** の順に選択し、エミュレーターの新しいデバイス プロファイルを作成することもできます。
 
 3. **F5** キーを押すと、プログラムがコンパイルされ、Android デバイスまたはエミュレーターに配置されます。
 
@@ -68,28 +68,28 @@ Visual Studio で、まず、**[ツール]** > **[拡張機能と更新プログ
 
 ## <a name="ios"></a>iOS
 
-1.  「[Mac への接続](/xamarin/ios/get-started/installation/windows/connecting-to-mac/)」で説明されているように、ネットワーク上で Mac が利用でき、Visual Studio とペアになっていることを確認してください。
+1. 「[Mac への接続](/xamarin/ios/get-started/installation/windows/connecting-to-mac/)」で説明されているように、ネットワーク上で Mac が利用でき、Visual Studio とペアになっていることを確認してください。
 
-2.  ソリューション エクスプローラーで iOS プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** を選択します。
+2. ソリューション エクスプローラーで iOS プロジェクトを右クリックして **[スタートアップ プロジェクトに設定]** を選択します。
 
-3.  次に示すように、Visual Studio のビルド ドロップダウン リストでターゲットに **[iPhoneSimulator]** を選択するか、Mac にテザリングされたデバイスがある場合、ターゲットに **[iPhone]** を選択します。
+3. 次に示すように、Visual Studio のビルド ドロップダウン リストでターゲットに **[iPhoneSimulator]** を選択するか、Mac にテザリングされたデバイスがある場合、ターゲットに **[iPhone]** を選択します。
 
- ![iPhoneSimulator ビルド ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")
+   ![iPhoneSimulator ビルド ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")
 
- シミュレーターが一覧にない場合、Mac で Xcode を起動し、**[Xcode]** > **[ユーザー設定]** の順に選択し、**[ダウンロード]** をクリックします。 **[コンポーネント]** という見出しの下に、ダウンロード可能なシミュレーターのバージョンが表示されます。 デバッグに関する詳しい説明については、[iOS のデバッグ](/xamarin/ios/deploy-test/debugging-in-xamarin-ios)に関するページを参照してください。
+   シミュレーターが一覧にない場合、Mac で Xcode を起動し、**[Xcode]** > **[ユーザー設定]** の順に選択し、**[ダウンロード]** をクリックします。 **[コンポーネント]** という見出しの下に、ダウンロード可能なシミュレーターのバージョンが表示されます。 デバッグに関する詳しい説明については、[iOS のデバッグ](/xamarin/ios/deploy-test/debugging-in-xamarin-ios)に関するページを参照してください。
 
-4.  [Visual Studio] ドロップダウンからエミュレーター デバイス ターゲットを選択します。
+4. [Visual Studio] ドロップダウンからエミュレーター デバイス ターゲットを選択します。
 
- ![iPhone デバッグ ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")
+   ![iPhone デバッグ ターゲットを選択しています](../cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")
 
 5. **F5** キーを押してデバッガーを起動します。 Mac 上のシミュレーターが起動し、Visual Studio でのデバッグ中にアプリを操作できるようになります。 iPhone または iPad の実機を Mac に接続した場合はこの一覧に表示され、代わりに選択できます。 デバイスもシミュレーターも表示されない場合、Mac との接続を確認してください。 上の手順 1 でリンクされている記事を参照するか、**[ツール]** > **[iOS]** > **[Mac とペアリング]** の順に進んでください。
 
-6.  Mac に接続する際に問題が発生した場合は、「[接続のトラブルシューティング](/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting/)」をご覧ください。
+6. Mac に接続する際に問題が発生した場合は、「[接続のトラブルシューティング](/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting/)」をご覧ください。
 
-7.  "インストールされている iOS の署名キーに一致するプロビジョニング プロファイルがインストールされていません" というエラーが表示された場合は、次の改善案を試してください。
+7. "インストールされている iOS の署名キーに一致するプロビジョニング プロファイルがインストールされていません" というエラーが表示された場合は、次の改善案を試してください。
 
-  - [Xcode へのアカウントの追加](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)に関するページ (apple.com) の説明に従って、Mac 上の Xcode に Apple ID アカウントが追加されていることを確認します。  アカウントの追加後、必ず Visual Studio と Xcode の両方を再起動します。
+   - [Xcode へのアカウントの追加](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)に関するページ (apple.com) の説明に従って、Mac 上の Xcode に Apple ID アカウントが追加されていることを確認します。  アカウントの追加後、必ず Visual Studio と Xcode の両方を再起動します。
 
-  - iOS バンドル署名タブの iOS プロジェクト プロパティで、アクティブなデバッグ構成のカスタム権利フィールドが空であることを確認します。  注: 上記のエラー メッセージが表示された場合は、この設定の削除だけを試してみる必要があります。
+   - iOS バンドル署名タブの iOS プロジェクト プロパティで、アクティブなデバッグ構成のカスタム権利フィールドが空であることを確認します。  注: 上記のエラー メッセージが表示された場合は、この設定の削除だけを試してみる必要があります。
 
-  ![CrossPlat Xamarin Verify 8](../cross-platform/media/crossplat-xamarin-verify-8.png "CrossPlat Xamarin Verify 8")
+   ![CrossPlat Xamarin Verify 8](../cross-platform/media/crossplat-xamarin-verify-8.png "CrossPlat Xamarin Verify 8")

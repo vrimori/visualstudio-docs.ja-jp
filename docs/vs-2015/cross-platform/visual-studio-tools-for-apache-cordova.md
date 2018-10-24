@@ -11,31 +11,31 @@ caps.latest.revision: 7
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 33dd9ece0e7c2574aceec9fc2f6fe0c8ebf29d7f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 77613d3e8303a02031da713ec149602a40ef9acb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236107"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846037"
 ---
 # <a name="visual-studio-tools-for-apache-cordova"></a>Visual Studio Tools for Apache Cordova
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 iOS、Android、Windows デバイスで動作するアプリをビルドし、ほぼすべてのコードを共有しましょう。 お気に入りの Web テクノロジでビルドできます。 Apache Cordova を使うと、電話のカメラのようなデバイス機能へのネイティブ アクセスが可能になります。そして何より、無料で利用できます。 アプリをさらに簡単にビルドするため、Visual Studio には次のようなメリットが加わりました。  
   
--   簡単なインストールとセットアップ。  
+- 簡単なインストールとセットアップ。  
   
--   問題を検出して修復するための高度なデバッガー。  
+- 問題を検出して修復するための高度なデバッガー。  
   
--   デバイス エミュレーターへの簡単なアクセス。  
+- デバイス エミュレーターへの簡単なアクセス。  
   
--   デバイス プラグインを管理するデザイナー。  
+- デバイス プラグインを管理するデザイナー。  
   
--   コマンド ライン インターフェイスと完全に互換性があるプロジェクト。  
+- コマンド ライン インターフェイスと完全に互換性があるプロジェクト。  
   
- これらのツールを考慮しているものの、まだ試す準備ができていないという場合は、 [機能](https://www.visualstudio.com/explore/cordova-vs) ページをご覧ください。ツールに関する詳しく説明をご確認いただけます。  
+  これらのツールを考慮しているものの、まだ試す準備ができていないという場合は、 [機能](https://www.visualstudio.com/explore/cordova-vs) ページをご覧ください。ツールに関する詳しく説明をご確認いただけます。  
   
- 開始する準備ができている場合は、こちらの [Web サイト](http://taco.visualstudio.com/en-us/docs/get-started-vs-tools-apache-cordova/)にアクセスしてください。
+  開始する準備ができている場合は、こちらの [Web サイト](http://taco.visualstudio.com/en-us/docs/get-started-vs-tools-apache-cordova/)にアクセスしてください。
 
 
 

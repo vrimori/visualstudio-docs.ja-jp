@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_value |Microsoft ドキュメント
+title: Idiasymbol::get_value |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9a6249506356f586a2e00d2b2c2bf73eb0283c0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 23fb08303840c8d90644a292cac8832e29641246
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31481971"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863738"
 ---
 # <a name="idiasymbolgetvalue"></a>IDiaSymbol::get_value
 定数の値を取得します。  
@@ -34,16 +34,16 @@ HRESULT get_value (
   
 #### <a name="parameters"></a>パラメーター  
  `pRetVal`  
- [入力、出力].A`VARIANT`定数の値が設定されているオブジェクト。  
+ [入力、出力]A`VARIANT`オブジェクトを定数の値が入力されます。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外を返します`S_FALSE`またはエラー コード。  
+ 成功した場合、返します`S_OK`。 それ以外を返します`S_FALSE`またはエラー コード。  
   
 > [!NOTE]
->  戻り値の`S_FALSE`プロパティは、シンボルの使用可能なことを意味します。  
+>  戻り値`S_FALSE`プロパティが、シンボルの使用可能なことを意味します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドに渡されます前に、指定されたバリアント型を初期化する必要があります。 詳細については、例を参照してください。  
+## <a name="remarks"></a>Remarks  
+ このメソッドに渡される前に、指定されたバリアントを初期化する必要があります。 詳細については、例を参照してください。  
   
 ## <a name="example"></a>例  
   

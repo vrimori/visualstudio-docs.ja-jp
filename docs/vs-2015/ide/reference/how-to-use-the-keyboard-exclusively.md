@@ -21,12 +21,12 @@ caps.latest.revision: 30
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 588f93a89713d42efaba61a34b0dabe5eb2af523
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: dd4e133ac057de9340900501b16e2c3b1ee7a388
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49238525"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862165"
 ---
 # <a name="how-to-use-the-keyboard-exclusively"></a>方法: キーボード主体で操作する
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "49238525"
   
 #### <a name="to-add-controls-from-the-toolbox-to-a-designer-from-the-keyboard"></a>キーボードを使ってツールボックスからデザイナーにコントロールを追加するには  
   
-1.  メニュー バーで **[表示]**、**[ツールボックス]** の順に選択します。  
+1. メニュー バーで **[表示]**、**[ツールボックス]** の順に選択します。  
   
-2.  現在の [ツールボックス] タブのセクション間を移動するには、Ctrl + 上方向キーまたは Ctrl + 下方向キーを押します。  
+2. 現在の [ツールボックス] タブのセクション間を移動するには、Ctrl + 上方向キーまたは Ctrl + 下方向キーを押します。  
   
-3.  コントロール間を移動するには、上方向キーまたは**下方向**キーを押します。  
+3. コントロール間を移動するには、上方向キーまたは**下方向**キーを押します。  
   
-4.  コントロールを選択した後、Enter キーを押します。  
+4. コントロールを選択した後、Enter キーを押します。  
   
- コントロールがフォームまたはデザイナーに追加されます。  
+   コントロールがフォームまたはデザイナーに追加されます。  
   
 ## <a name="dialog-box-options"></a>ダイアログ ボックス オプション  
  キーボードを使って、ダイアログ ボックスのオプション間を移動し、オプションの設定を変更できます。  

@@ -19,12 +19,12 @@ caps.latest.revision: 45
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b17f8abed32a14aead89a685a030654e1afe32f9
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 74c3361e4c254841bb58f23ad789ed7a2cad584f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49190724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857394"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>シミュレーターでの Windows ストア アプリの実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -123,35 +123,35 @@ Windows ストア アプリ用の Visual Studio シミュレーターは、Windo
   
  ネットワークのプロパティをシミュレートするには、次のようにします。  
   
-1.  シミュレーターのツール バーの **[ネットワーク プロパティの変更]** ボタンをクリックします。  
+1. シミュレーターのツール バーの **[ネットワーク プロパティの変更]** ボタンをクリックします。  
   
-2.  **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]** をクリックします。  
+2. **[ネットワーク プロパティの設定]** ダイアログ ボックスの **[シミュレートされたネットワーク プロパティの使用]** をクリックします。  
   
-     チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
+    チェック ボックスをオフにしてシミュレーションを削除し、現在接続されているインターフェイスのネットワーク プロパティに戻ります。  
   
-3.  シミュレートされたネットワークの **[プロファイル名]** を入力します。 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx) オブジェクトの [ProfileName](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) プロパティでシミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。  
+3. シミュレートされたネットワークの **[プロファイル名]** を入力します。 [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.profilename.aspx) オブジェクトの [ProfileName](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) プロパティでシミュレーションを識別するために使用できる一意の名前を使用することをお勧めします。  
   
-4.  [[ネットワーク コストの種類]](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) の一覧からプロファイルの **NetworkCostType** 値を選択します。  
+4. [[ネットワーク コストの種類]](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkcosttype.aspx) の一覧からプロファイルの **NetworkCostType** 値を選択します。  
   
-5.  **[データの限度の状態フラグ]** の一覧から、 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) プロパティまたは [OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)プロパティを true に設定できます。または、 **[データの限度を下回っています]** を選択すると、両方の値を false に設定できます。  
+5. **[データの限度の状態フラグ]** の一覧から、 [ApproachingDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.approachingdatalimit.aspx) プロパティまたは [OverDataLimit](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.overdatalimit.aspx)プロパティを true に設定できます。または、 **[データの限度を下回っています]** を選択すると、両方の値を false に設定できます。  
   
-6.  **[ローミングの状態]** の一覧から、 [Roaming](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) プロパティを設定します。  
+6. **[ローミングの状態]** の一覧から、 [Roaming](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectioncost.roaming.aspx) プロパティを設定します。  
   
-7.  **[プロパティの設定]** をクリックして、前景の [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) イベントおよび [NetworkStateChange](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 型の背景の **SystemTrigger**をトリガーして、ネットワーク プロパティをシミュレートします。  
+7. **[プロパティの設定]** をクリックして、前景の [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) イベントおよび [NetworkStateChange](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.aspx) 型の背景の **SystemTrigger**をトリガーして、ネットワーク プロパティをシミュレートします。  
   
- **ネットワーク接続の管理の詳細について**  
+   **ネットワーク接続の管理の詳細について**  
   
- [従量制課金接続のコスト制約を管理する方法 (HTML)](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
+   [従量制課金接続のコスト制約を管理する方法 (HTML)](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx)  
   
- [ネットワーク情報のサンプル](http://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
+   [ネットワーク情報のサンプル](http://code.msdn.microsoft.com/windowsapps/Network-Information-Sample-63aaa201)  
   
- [エネルギー使用の分析](../profiling/analyze-energy-use-in-store-apps.md)  
+   [エネルギー使用の分析](../profiling/analyze-energy-use-in-store-apps.md)  
   
- [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx)  
+   [Windows.Networking.Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx)  
   
- [バックグラウンド タスクでシステム イベントに応答する方法](http://msdn.microsoft.com/en-us/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
+   [バックグラウンド タスクでシステム イベントに応答する方法](http://msdn.microsoft.com/en-us/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
   
- [Windows ストア アプリの中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
+   [Windows ストア アプリの中断イベント、再開イベント、およびバックグラウンド イベントをトリガーする方法](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
   
 ##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> キーボードを使用してシミュレーター内を移動する  
  **Ctrl + Alt + 上矢印キー** を押してシミュレーター ウィンドウからシミュレーター ツールバーにフォーカスを切り替えて、シミュレーター ツールバーをナビゲートできます。 ツール バーのボタンの間を移動するには、 **上向きの矢印** と **下向きの矢印** を使用します。  

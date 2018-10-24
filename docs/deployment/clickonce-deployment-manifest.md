@@ -17,46 +17,47 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e36f57857376d62beffe46b2ee4ccc7e4825023d
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 2391888e1955c48c1baafcd62c4337916a1a5322
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39077894"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820320"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce 配置マニフェスト
 配置マニフェストは、配置する [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの現在のバージョンの識別など、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] の配置に関する情報を記述した XML ファイルです。  
-  
+
  配置マニフェストには、次の要素および属性があります。  
-  
-|要素|説明|属性|  
-|-------------|-----------------|----------------|  
-|[\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md)|必須。 最上位の要素です。|`manifestVersion`|  
-|[\<assemblyIdentity> 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)|必須。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェストを指定します。|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture`|  
-|[\<description> 要素](../deployment/description-element-clickonce-deployment.md)|必須。 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。|`publisher`<br /><br /> `product`<br /><br /> `supportUrl`|  
-|[\<deployment> 要素](../deployment/deployment-element-clickonce-deployment.md)|任意。 更新プログラムの配置とシステムへの公開に使用される属性を指定します。|`install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters`|  
-|[\<compatibleFrameworks > 要素](../deployment/compatibleframeworks-element-clickonce-deployment.md)|必須。 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。|`SupportUrl`|  
-|[\<dependency> 要素](../deployment/dependency-element-clickonce-deployment.md)|必須。 配置でインストールするアプリケーションのバージョンおよびアプリケーション マニフェストの場所を指定します。|`preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size`|  
-|[\<publisherIdentity > 要素](../deployment/publisheridentity-element-clickonce-deployment.md)|署名されたマニフェストに対しては必ず指定します。 この配置マニフェストに署名した発行元についての情報が含まれます。|`Name`<br /><br /> `issuerKeyHash`|  
-|[\<Signature> 要素](../deployment/signature-element-clickonce-deployment.md)|任意。 この配置マニフェストにデジタル署名するために必要な情報が含まれます。|なし|  
-|[\<customErrorReporting > 要素](../deployment/customerrorreporting-element-clickonce-deployment.md)|任意。 エラー発生時に表示する URI を指定します。|URI|  
-  
+
+
+| 要素 | 説明 | 属性 |
+| - | - | - |
+| [\<assembly> 要素](../deployment/assembly-element-clickonce-deployment.md) | 必須。 最上位の要素です。 | `manifestVersion` |
+| [\<assemblyIdentity> 要素](../deployment/assemblyidentity-element-clickonce-deployment.md) | 必須。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェストを指定します。 | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture` |
+| [\<description> 要素](../deployment/description-element-clickonce-deployment.md) | 必須。 シェルに表示を作成するためのアプリケーション情報を識別し、**プログラム追加と削除**コントロール パネル内の項目。 | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
+| [\<deployment> 要素](../deployment/deployment-element-clickonce-deployment.md) | 任意。 更新プログラムの配置とシステムへの公開に使用される属性を指定します。 | `install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters` |
+| [\<compatibleFrameworks > 要素](../deployment/compatibleframeworks-element-clickonce-deployment.md) | 必須。 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。 | `SupportUrl` |
+| [\<dependency> 要素](../deployment/dependency-element-clickonce-deployment.md) | 必須。 配置でインストールするアプリケーションのバージョンおよびアプリケーション マニフェストの場所を指定します。 | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
+| [\<publisherIdentity > 要素](../deployment/publisheridentity-element-clickonce-deployment.md) | 署名されたマニフェストに対しては必ず指定します。 この配置マニフェストに署名した発行元についての情報が含まれます。 | `Name`<br /><br /> `issuerKeyHash` |
+| [\<Signature> 要素](../deployment/signature-element-clickonce-deployment.md) | 任意。 この配置マニフェストにデジタル署名するために必要な情報が含まれます。 | なし |
+| [\<customErrorReporting > 要素](../deployment/customerrorreporting-element-clickonce-deployment.md) | 任意。 エラー発生時に表示する URI を指定します。 | URI |
+
 ## <a name="remarks"></a>Remarks  
  配置マニフェスト ファイルには、現在のバージョンや配置に関するその他の設定など、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの配置に関する情報を指定します。 配置マニフェストでは、アプリケーション マニフェストを参照します。アプリケーション マニフェストには、アプリケーションの現在のバージョンおよび配置に含められるすべてのファイルが記述されています。  
-  
+
  詳細については、「 [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md)」を参照してください。  
-  
+
 ## <a name="file-location"></a>ファイルの場所  
  配置マニフェスト ファイルでは、アプリケーションの現在のバージョンに対応する適切なアプリケーション マニフェストを参照します。 新しいバージョンのアプリケーション配置を使用可能にした場合は、新しいアプリケーション マニフェストを参照するように配置マニフェストを更新する必要があります。  
-  
+
  配置マニフェスト ファイルには、厳密な名前を付ける必要があります。また、発行元を検証するための証明書を含めることもできます。  
-  
+
 ## <a name="file-name-syntax"></a>ファイル名の構文  
  配置マニフェスト ファイルの名前は *.application* 拡張子で終わる必要があります。  
-  
+
 ## <a name="examples"></a>使用例  
  次のコード例は、配置マニフェストを示しています。  
-  
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"  
@@ -118,6 +119,6 @@ ms.locfileid: "39077894"
 ...  
 </Signature></asmv1:assembly>  
 ```  
-  
+
 ## <a name="see-also"></a>関連項目  
  [ClickOnce アプリケーションを発行します。](../deployment/publishing-clickonce-applications.md)

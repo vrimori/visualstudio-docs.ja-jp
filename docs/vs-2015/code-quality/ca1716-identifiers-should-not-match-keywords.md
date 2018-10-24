@@ -20,15 +20,16 @@ caps.latest.revision: 23
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: cb5e3fe219d6ed8d976cf4bf03b3411dd5855a5c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 000e28642a10c565e525b2714eed0d7abaca9340
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49189775"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858876"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: 識別子はキーワードと同一にすることはできません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotMatchKeywords|
@@ -44,13 +45,13 @@ ms.locfileid: "49189775"
 
  このルールは、次の言語のキーワードを確認します。
 
--   Visual Basic
+- Visual Basic
 
--   C#
+- C#
 
--   C++/CLI
+- C++/CLI
 
- 大文字と小文字が使用される[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]他の言語キーワード、および大文字小文字の比較を使用します。
+  大文字と小文字が使用される[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]他の言語キーワード、および大文字小文字の比較を使用します。
 
 ## <a name="how-to-fix-violations"></a>違反の修正方法
  キーワードの一覧に表示されていない名前を選択します。

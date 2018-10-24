@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach |Microsoft ドキュメント
+title: IDebugCoreServer3::EnableAutoAttach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf32eb5d8771f95ec155a93d1fe1e770e0cc2d52
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e5fc3ab0767a7077860c82acefc9554ba1228cee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31108496"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831121"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-指定されたデバッグ エンジンのオート アタッチを使用できます。  
+指定されたデバッグ エンジンの自動アタッチを使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,22 +47,22 @@ int EnableAutoAttach(
   
 #### <a name="parameters"></a>パラメーター  
  `rgguidSpecificEngines`  
- [in]マークとしての自動アタッチする各デバッグ エンジンの Guid の配列。  
+ [in]各デバッグ エンジンと自動アタッチをマークするには、Guid の配列。  
   
  `celtSpecificEngines`  
- [in]指定されたエンジン数`rgguidSpecificEngines`です。  
+ [in]指定されたエンジン数`rgguidSpecificEngines`します。  
   
  `pszStartPageUrl`  
- [in]自動アタッチ時に使用する開始 URL。  
+ [in]自動アタッチするときに使用する開始 URL。  
   
  `pbstrSessionID`  
- [out]自動アタッチが、セッションの ID です。  
+ [out]自動アタッチがセッションの ID。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 1 つのエラー コードは`E_AUTO_ATTACH_NOT_REGISTERED`、auto-attach クラス ファクトリが登録されていないことを示します。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。 1 つのエラー コードは`E_AUTO_ATTACH_NOT_REGISTERED`、auto-attach クラス ファクトリが登録されていないことを示します。  
   
-## <a name="remarks"></a>コメント  
- 指定された URL に関連付けられたプログラムが開始されると、指定されたデバッグ エンジンは自動的に開始されアタッチされます。  
+## <a name="remarks"></a>Remarks  
+ 指定した URL に関連付けられたプログラムが開始されると、指定されたデバッグ エンジンは自動的に開始し、接続されています。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

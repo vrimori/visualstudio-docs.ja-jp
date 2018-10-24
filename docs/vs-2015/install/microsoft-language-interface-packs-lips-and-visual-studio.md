@@ -23,12 +23,12 @@ caps.latest.revision: 28
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: f72b67216ef0403af2e1f97208a7e33daa09b9b7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 72c71ae80dfd44752e03f1d4fd7fd384adc13dfc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49179284"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812882"
 ---
 # <a name="microsoft-language-interface-packs-lips-and-visual-studio"></a>Microsoft Language Interface Pack (LIP) および Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -97,15 +97,15 @@ Windows Language Interface Pack (LIP) を使用すると、1 つの言語バー�
   
 #### <a name="to-set-the-language-that-is-used-for-the-ui-text-in-visual-studio"></a>Visual Studio の UI テキストに使用される言語を設定するには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックします。  
+1. **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **オプション** ダイアログ ボックスで、展開**環境**順にクリックします**インターナショナル設定**します。  
+2. **オプション** ダイアログ ボックスで、展開**環境**順にクリックします**インターナショナル設定**します。  
   
-3.  **言語**一覧で、開発環境の UI テキストを表示する言語を選択します。  
+3. **言語**一覧で、開発環境の UI テキストを表示する言語を選択します。  
   
-     オペレーティング システムの表示言語設定を IDE 一致している UI テキストには、オン**Microsoft Windows と同じ**します。  
+    オペレーティング システムの表示言語設定を IDE 一致している UI テキストには、オン**Microsoft Windows と同じ**します。  
   
- また、devenv コマンドを使用して、UI に使用される言語を設定することもできます。 詳細については、次を参照してください。 [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md)します。  
+   また、devenv コマンドを使用して、UI に使用される言語を設定することもできます。 詳細については、次を参照してください。 [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [[国際対応の設定] ([オプション] ダイアログ ボックス - [環境])](../ide/reference/international-settings-environment-options-dialog-box.md)

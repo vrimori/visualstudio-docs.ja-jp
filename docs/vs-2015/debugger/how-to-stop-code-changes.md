@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ebe9a7d566c1e5b7748f02817564a58fa7eae934
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 6d869e3e6be26db871deb3afc7bc398025cc15d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306346"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862360"
 ---
 # <a name="how-to-stop-code-changes"></a>方法 : コード変更を中断する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "49306346"
   
 ### <a name="to-stop-applying-code-changes"></a>コードの変更内容の適用を停止するには  
   
--   選択**コードの変更の適用を停止**から、**デバッグ**メニュー。  
+- 選択**コードの変更の適用を停止**から、**デバッグ**メニュー。  
   
- このメニュー項目は、コード変更の適用中にのみ表示されます。  
+  このメニュー項目は、コード変更の適用中にのみ表示されます。  
   
- このオプションを選択すると、コードの変更内容は一切コミットされません。  
+  このオプションを選択すると、コードの変更内容は一切コミットされません。  
   
 ## <a name="see-also"></a>関連項目  
  [エディット コンティニュ](../debugger/edit-and-continue.md)   

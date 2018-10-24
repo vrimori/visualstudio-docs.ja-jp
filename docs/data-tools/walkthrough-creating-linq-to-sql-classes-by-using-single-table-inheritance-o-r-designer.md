@@ -13,31 +13,31 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 20565c798e9c94cb40a39deb4a80f9a83d67e161
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 943b75c9c5f9c0c32ab02b5e73c07282728e0beb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174940"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864732"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>チュートリアル: SQL クラスを単一テーブル継承 (O/R デザイナー) を使用して、LINQ を作成します。
 [Visual Studio での LINQ to SQL ツール](../data-tools/linq-to-sql-tools-in-visual-studio2.md)リレーショナル システムに実装されている通常の単一テーブル継承をサポートしています。 このチュートリアルで提供される汎用的な手順、[方法: O/R デザイナーを使用して継承を構成する](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)トピックでの継承の使用を示すために、実際のデータを提供し、[!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]します。
 
  このチュートリアルでは、次のタスクを実行します。
 
--   データベース テーブルを作成し、データを追加します。
+- データベース テーブルを作成し、データを追加します。
 
--   Windows フォーム アプリケーションを作成します。
+- Windows フォーム アプリケーションを作成します。
 
--   [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ファイルをプロジェクトに追加します。
+- [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ファイルをプロジェクトに追加します。
 
--   新しいエンティティ クラスを作成します。
+- 新しいエンティティ クラスを作成します。
 
--   継承を使用するようにエンティティ クラスを構成します。
+- 継承を使用するようにエンティティ クラスを構成します。
 
--   継承されたクラスをクエリします。
+- 継承されたクラスをクエリします。
 
--   Windows フォームにデータを表示します。
+- Windows フォームにデータを表示します。
 
 ## <a name="create-a-table-to-inherit-from"></a>継承するテーブルを作成します。
  継承の動作を確認するには、小さなを作成する`Person`の表に、基底クラスとして使用し、作成、`Employee`これを継承するオブジェクト。
@@ -191,6 +191,6 @@ ms.locfileid: "37174940"
 
 - [Visual Studio での LINQ to SQL ツールします。](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [チュートリアル: LINQ to SQL クラス (O/R デザイナー) を作成します。](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
-- [方法: 更新、挿入、および削除 (O/R デザイナー) を実行するストアド プロシージャを割り当てる](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
+- [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [方法: Visual Basic または c# でオブジェクト モデルを生成します。](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

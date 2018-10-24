@@ -10,12 +10,12 @@ ms.assetid: e970d936-1df4-4c0c-96e3-ef6191295882
 caps.latest.revision: 14
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 4b6580602e730ae2f8cfc6fe47366d57ce1ff7ff
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e9390182f6fec91d049a1c080e33802aecfed305
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49178816"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860696"
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin を使用したモバイル開発について学習します
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "49178816"
 ## <a name="essentials-overview-of-the-visual-studio-and-xamarin-environment"></a>要点: Visual Studio と Xamarin 環境の概要  
  *5 分から 15 分*  
   
--   ほとんどの作業は、Visual Studio および Xamarin がインストールされている Windows コンピューターで行います。 このコンピューターで Windows および Android アプリを直接ビルドし、デバイスまたはエミュレーターでそれらを実行およびデバッグします。 また、Mac を使用して iOS アプリをリモートでビルド、実行、およびデバッグします。 Windows コンピューターの Visual Studio は、iOS Storyboard Designer や iOS シミュレーターにも接続できます。  
+- ほとんどの作業は、Visual Studio および Xamarin がインストールされている Windows コンピューターで行います。 このコンピューターで Windows および Android アプリを直接ビルドし、デバイスまたはエミュレーターでそれらを実行およびデバッグします。 また、Mac を使用して iOS アプリをリモートでビルド、実行、およびデバッグします。 Windows コンピューターの Visual Studio は、iOS Storyboard Designer や iOS シミュレーターにも接続できます。  
   
--   Xcode および Xamarin がある Mac は、iOS アプリ向けのビルド/署名ホスト、およびランタイム環境としての役割を果たします。 Windows コンピューターの Visual Studio からの iOS のビルドは、この Mac に委任されます。Visual Studio から iOS アプリをデバッグするときは、Mac の iOS シミュレーターか、または Mac に接続されているテザリングされたデバイスで直接実行されます。 この場合、Mac 上または Mac の近くでアプリとやり取りして、Visual Studio でデバッグ機能を実行します。  
+- Xcode および Xamarin がある Mac は、iOS アプリ向けのビルド/署名ホスト、およびランタイム環境としての役割を果たします。 Windows コンピューターの Visual Studio からの iOS のビルドは、この Mac に委任されます。Visual Studio から iOS アプリをデバッグするときは、Mac の iOS シミュレーターか、または Mac に接続されているテザリングされたデバイスで直接実行されます。 この場合、Mac 上または Mac の近くでアプリとやり取りして、Visual Studio でデバッグ機能を実行します。  
   
- これらの関係を次に示します。また、iOS アプリでの作業について詳しくは、「 [Introduction to Xamarin.iOS for Visual Studio](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/introduction_to_xamarin_ios_for_visual_studio/) 」(xamarin.com) で読むことができます。  
+  これらの関係を次に示します。また、iOS アプリでの作業について詳しくは、「 [Introduction to Xamarin.iOS for Visual Studio](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/introduction_to_xamarin_ios_for_visual_studio/) 」(xamarin.com) で読むことができます。  
   
- ![Xamarin 環境における Windows 開発機 と Mac 開発機の関係 ](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin Learn 1")  
+  ![Xamarin 環境における Windows 開発機 と Mac 開発機の関係 ](../cross-platform/media/crossplat-xamarin-learn-1.png "CrossPlat Xamarin Learn 1")  
   
 ## <a name="essentials-how-projects-are-structured"></a>要点: プロジェクトの構造化の方法  
  *10 分から 30 分*  
@@ -64,15 +64,15 @@ ms.locfileid: "49178816"
   
  アプローチをあらかじめ決めておく必要はありません。Xamarin Native と Xamarin.Forms の両方を組み合わせてアプリを実装できます。  
   
--   Xamarin.Forms を使用して、プラットフォーム間で類似した UI と機能を提供する汎用目的の画面を構築します。たとえば、ログイン、連絡先フォーム、検索結果などです。  
+- Xamarin.Forms を使用して、プラットフォーム間で類似した UI と機能を提供する汎用目的の画面を構築します。たとえば、ログイン、連絡先フォーム、検索結果などです。  
   
--   プラットフォームごとに UI を調整するには、Xamarin.Forms のさまざまなカスタマイズ機能を使用します。 これらには、コードと XAML の両方から使用できる OnPlatform API が含まれ、カスタム ビューの作成、既存のレンダラーの拡張、カスタム レンダラーの作成を行います。  
+- プラットフォームごとに UI を調整するには、Xamarin.Forms のさまざまなカスタマイズ機能を使用します。 これらには、コードと XAML の両方から使用できる OnPlatform API が含まれ、カスタム ビューの作成、既存のレンダラーの拡張、カスタム レンダラーの作成を行います。  
   
--   必要に応じて、Xamarin Native を使用して、各プラットフォームの独自の UI 機能を使用する画面 (ネイティブのカメラ キャプチャとイメージの操作を使用する画面など) を構築します。  
+- 必要に応じて、Xamarin Native を使用して、各プラットフォームの独自の UI 機能を使用する画面 (ネイティブのカメラ キャプチャとイメージの操作を使用する画面など) を構築します。  
   
- 必ず、まず Xamarin.Forms ソリューションを使用してプラットフォーム間での UI コード共有をセットアップしてから、カスタマイズ機能を使用してプラットフォーム固有の調整を行うようお勧めします。 完全にプラットフォーム固有の画面が必要な場合は、Xamarin Native を使用して個別に追加できます。  
+  必ず、まず Xamarin.Forms ソリューションを使用してプラットフォーム間での UI コード共有をセットアップしてから、カスタマイズ機能を使用してプラットフォーム固有の調整を行うようお勧めします。 完全にプラットフォーム固有の画面が必要な場合は、Xamarin Native を使用して個別に追加できます。  
   
- 詳細を表示：  
+  詳細を表示：  
   
 1.  [Xamarin.Forms](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/) (xamarin.com) は、簡単な概要、および Xamarin.Forms とネイティブ UI レイヤー (つまり、Xamarin.iOS と Xamarin.Android) を比較した長所と短所を提供します。  
   

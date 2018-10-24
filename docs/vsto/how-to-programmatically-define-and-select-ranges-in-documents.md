@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 947232d593543276de281d89e3d05d6648f29ec1
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 8770871bfdc361e29d7ac7c2fc984477b1ec0ea1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35257297"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833136"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>方法: プログラムで定義し、ドキュメントで範囲を選択します
   Microsoft Office Word 文書内に範囲を定義するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用します。 使用してなど、さまざまな方法でドキュメント全体を選択することができます、<xref:Microsoft.Office.Interop.Word.Range.Select%2A>のメソッド、<xref:Microsoft.Office.Interop.Word.Range>オブジェクト、またはの Content プロパティを使用して、<xref:Microsoft.Office.Tools.Word.Document>クラス (ドキュメント レベルのカスタマイズ)、または<xref:Microsoft.Office.Interop.Word.Document>クラス (で、VSTO アドインの場合)。  
@@ -60,21 +60,21 @@ ms.locfileid: "35257297"
   
 ### <a name="to-select-the-entire-document-as-a-range-by-using-the-content-property"></a>Content プロパティを使用して文書全体を範囲として選択するには  
   
-1.  <xref:Microsoft.Office.Tools.Word.Document.Content%2A> プロパティを使用して、文書全体を含む範囲を定義します。  
+1. <xref:Microsoft.Office.Tools.Word.Document.Content%2A> プロパティを使用して、文書全体を含む範囲を定義します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#20)]
-     [!code-csharp[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#20)]  
+    [!code-vb[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#20)]
+    [!code-csharp[Trin_VstcoreWordAutomation#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#20)]  
   
- また、他のオブジェクトのメソッドとプロパティを使用して範囲を定義することもできます。  
+   また、他のオブジェクトのメソッドとプロパティを使用して範囲を定義することもできます。  
   
 ### <a name="to-select-a-sentence-in-the-active-document"></a>作業中の文書の文を選択するには  
   
-1.  <xref:Microsoft.Office.Interop.Word.Sentences> コレクション使用して範囲を設定します。 選択する文のインデックスを使用します。  
+1. <xref:Microsoft.Office.Interop.Word.Sentences> コレクション使用して範囲を設定します。 選択する文のインデックスを使用します。  
   
-     [!code-vb[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#21)]
-     [!code-csharp[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#21)]  
+    [!code-vb[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#21)]
+    [!code-csharp[Trin_VstcoreWordAutomation#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#21)]  
   
- 文を選択するもう 1 つの方法として、範囲の開始値と終了値を手動で設定する方法があります。  
+   文を選択するもう 1 つの方法として、範囲の開始値と終了値を手動で設定する方法があります。  
   
 ### <a name="to-select-a-sentence-by-manually-setting-the-start-and-end-values"></a>開始値と終了値を手動で設定して文を選択するには  
   
@@ -100,21 +100,21 @@ ms.locfileid: "35257297"
   
 ### <a name="to-select-the-entire-document-as-a-range-by-using-the-content-property"></a>Content プロパティを使用して文書全体を範囲として選択するには  
   
-1.  <xref:Microsoft.Office.Interop.Word._Document.Content%2A> プロパティを使用して、文書全体を含む範囲を定義します。  
+1. <xref:Microsoft.Office.Interop.Word._Document.Content%2A> プロパティを使用して、文書全体を含む範囲を定義します。  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#20)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#20)]  
+    [!code-vb[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#20)]
+    [!code-csharp[Trin_VstcoreWordAutomationAddIn#20](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#20)]  
   
- また、他のオブジェクトのメソッドとプロパティを使用して範囲を定義することもできます。  
+   また、他のオブジェクトのメソッドとプロパティを使用して範囲を定義することもできます。  
   
 ### <a name="to-select-a-sentence-in-the-active-document"></a>作業中の文書の文を選択するには  
   
-1.  <xref:Microsoft.Office.Interop.Word.Sentences> コレクション使用して範囲を設定します。 選択する文のインデックスを使用します。  
+1. <xref:Microsoft.Office.Interop.Word.Sentences> コレクション使用して範囲を設定します。 選択する文のインデックスを使用します。  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#21)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#21)]  
+    [!code-vb[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#21)]
+    [!code-csharp[Trin_VstcoreWordAutomationAddIn#21](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#21)]  
   
- 文を選択するもう 1 つの方法として、範囲の開始値と終了値を手動で設定する方法があります。  
+   文を選択するもう 1 つの方法として、範囲の開始値と終了値を手動で設定する方法があります。  
   
 ### <a name="to-select-a-sentence-by-manually-setting-the-start-and-end-values"></a>開始値と終了値を手動で設定して文を選択するには  
   

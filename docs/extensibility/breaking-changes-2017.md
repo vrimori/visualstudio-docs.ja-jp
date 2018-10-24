@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36d001a14815e5e8e8639ba0937506a1c06d3fc2
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 1a7ed5322c131bd9f3b758b31169676865880fd7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44280572"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826493"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 の機能拡張の変更
 
@@ -59,13 +59,14 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
 > [INSTALLDIR] Visual Studio のインストールのルート ディレクトリに以下を参照します。 *VSIXInstaller.exe* 、これを自動的に設定されますが、カスタム展開コードを記述することをお読みください[Visual Studio の検出](locating-visual-studio.md)します。
 
 * アセンブリを GAC にインストールされただけの:
-  * これらのアセンブリがインストールされた * [INSTALLDIR] \Common7\IDE\*、 *[INSTALLDIR] \Common7\IDE\PublicAssemblies*または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*します。 これらのフォルダーは、Visual Studio プロセスのプローブ パスの一部です。
+  * これらのアセンブリがインストールされた<em>[INSTALLDIR] \Common7\IDE\*、* [INSTALLDIR] \Common7\IDE\PublicAssemblies</em>または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*します。 これらのフォルダーは、Visual Studio プロセスのプローブ パスの一部です。
+
 * 非プローブのパスと、GAC にインストールされたアセンブリの場合:
   * GAC 内のコピーは、セットアップから削除されました。
   * A *.pkgdef*アセンブリのコード ベースのエントリを指定するファイルが追加されました。
 
     例えば:
-    
+
     ```xml
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]
     "name"="AssemblyName" "codeBase"="$PackageFolder$\AssemblyName.dll"
@@ -81,7 +82,7 @@ Visual Studio プロセス内で実行されているコードは、Visual Studi
   * コードは Visual Studio のコア アセンブリを検索することになります。
   * 使用を検討して、 *.pkgdef*ファイルに必要な場合に、アセンブリへのパスを指定します。
 * 拡張機能は Visual Studio プロセスの外部で実行されている: 場合
-  * Visual Studio のコア アセンブリを探してを検討してください * [INSTALLDIR] \Common7\IDE\*、 *[INSTALLDIR] \Common7\IDE\PublicAssemblies*または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*。構成ファイルまたはアセンブリ リゾルバーを使用します。
+  * Visual Studio のコア アセンブリを探して検討<em>[INSTALLDIR] \Common7\IDE\*、* [INSTALLDIR] \Common7\IDE\PublicAssemblies</em>または *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*構成ファイルまたはアセンブリ リゾルバーを使用します。
 
 ## <a name="change-reduce-registry-impact"></a>変更: レジストリの影響を軽減します。
 

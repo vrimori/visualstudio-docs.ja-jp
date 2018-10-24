@@ -17,12 +17,12 @@ ms.assetid: e31cdc78-f621-498b-9ca4-aefa790b9f6f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a79a44fea6d8e44a1978f17b933d9f51ebe069f5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 056bc73e9d7808b7b64222ff2411d9968a95f9d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49266839"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851362"
 ---
 # <a name="referencecompare"></a>REFERENCE_COMPARE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -61,7 +61,7 @@ public enum enum_REFERENCE_COMPARE {
 ## <a name="remarks"></a>Remarks  
  引数として渡される、[比較](../../../extensibility/debugger/reference/idebugreference2-compare.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

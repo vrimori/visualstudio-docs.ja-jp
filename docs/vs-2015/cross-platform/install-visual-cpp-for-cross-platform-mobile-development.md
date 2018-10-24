@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-ms.openlocfilehash: d0732cc08c679bd3eab973632164d366efe87b3b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 13db7f4e4f1676f46a8b0170ffeadd5cd9eb31b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49203867"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817445"
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Visual C++ for Cross-Platform Mobile Development のインストール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "49203867"
   
 ##  <a name="Requirements"></a> 要件  
   
--   インストール要件については、「 [Visual Studio 2015 のシステム要件](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs)」をご覧ください。  
+- インストール要件については、「 [Visual Studio 2015 のシステム要件](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs)」をご覧ください。  
   
-    > [!IMPORTANT]
-    >  Windows 7 または Windows Server 2008 R2 を使用している場合は、従来の Windows アプリケーション、Android Native Activity アプリおよびライブラリ、iOS 用のアプリとコード ライブラリのためのコードを開発できますが、Windows ストア アプリまたはユニバーサル Windows アプリのコードは開発できません。  
+  > [!IMPORTANT]
+  >  Windows 7 または Windows Server 2008 R2 を使用している場合は、従来の Windows アプリケーション、Android Native Activity アプリおよびライブラリ、iOS 用のアプリとコード ライブラリのためのコードを開発できますが、Windows ストア アプリまたはユニバーサル Windows アプリのコードは開発できません。  
   
- 特定のデバイス プラットフォームのアプリをビルドするには、いくつかの追加要件があります。  
+  特定のデバイス プラットフォームのアプリをビルドするには、いくつかの追加要件があります。  
   
--   Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android には、Hyper-V を実行できるコンピューターが必要です。 エミュレーターをインストールして実行する前に、Windows の Hyper-V 機能を有効にする必要があります。 詳細については、エミュレーターの[システム要件](http://msdn.microsoft.com/en-us/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)をご覧ください。  
+- Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android には、Hyper-V を実行できるコンピューターが必要です。 エミュレーターをインストールして実行する前に、Windows の Hyper-V 機能を有効にする必要があります。 詳細については、エミュレーターの[システム要件](http://msdn.microsoft.com/en-us/4d5bb438-231a-4cd2-84b7-e9660b0e3baf)をご覧ください。  
   
--   Android SDK に付属している x86 Android エミュレーターは、Intel HAXM ドライバーを実行できるコンピューター向けに最適化されています。 このドライバーには、VT-x および Execute Disable Bit をサポートしている Intel x64 プロセッサが必要です。 詳しくは、「 [Intel® Hardware Accelerated Execution Manager のインストール手順 - Microsoft Windows](http://go.microsoft.com/fwlink/p/?LinkId=536385)」をご覧ください。  
+- Android SDK に付属している x86 Android エミュレーターは、Intel HAXM ドライバーを実行できるコンピューター向けに最適化されています。 このドライバーには、VT-x および Execute Disable Bit をサポートしている Intel x64 プロセッサが必要です。 詳しくは、「 [Intel® Hardware Accelerated Execution Manager のインストール手順 - Microsoft Windows](http://go.microsoft.com/fwlink/p/?LinkId=536385)」をご覧ください。  
   
--   iOS 用のコードをビルドするには、Apple ID、iOS Developer Program アカウント、[Xcode 6](http://go.microsoft.com/fwlink/p/?LinkId=536387) 以降を OS X Mavericks 以降のバージョンで実行できる Mac コンピューターが必要です。 簡単なインストール手順については、「 [Install tools for iOS](#InstallForiOS)」をご覧ください。  
+- iOS 用のコードをビルドするには、Apple ID、iOS Developer Program アカウント、[Xcode 6](http://go.microsoft.com/fwlink/p/?LinkId=536387) 以降を OS X Mavericks 以降のバージョンで実行できる Mac コンピューターが必要です。 簡単なインストール手順については、「 [Install tools for iOS](#InstallForiOS)」をご覧ください。  
   
 ##  <a name="GetTheTools"></a> ツールの取得  
  Visual C++ for Cross-Platform Mobile Development は、Visual Studio の Community、Professional、Enterprise エディションに付属しているインストール可能なコンポーネントです。 Visual Studio を入手するには、「[Visual Studio 2015 のダウンロード](http://go.microsoft.com/fwlink/p/?linkid=517106)」のページにアクセスして、Visual Studio 2015 with Update 2 以降をインストールしてください。  
@@ -101,31 +101,31 @@ ms.locfileid: "49203867"
   
  次の情報を参照し、リンクを使用して、従属関係を手動でインストールします。  
   
--   [Java SE 開発キット](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
+- [Java SE 開発キット](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
   
-     既定では、インストーラーによって Java のツールが C:\Program Files (x86)\Java に格納されます。  
+   既定では、インストーラーによって Java のツールが C:\Program Files (x86)\Java に格納されます。  
   
--   [Android SDK](https://developer.android.com/sdk/index.html#Other)  
+- [Android SDK](https://developer.android.com/sdk/index.html#Other)  
   
-     インストール中に、推奨されたとおりに API を更新します。 最低でも Android 5.0 Lollipop (API レベル 21) の SDK がインストールされていることを確認します。 既定では、インストーラーによって Android SDK が C:\Program Files (x86)\Android\android-sdk に格納されます。  
+   インストール中に、推奨されたとおりに API を更新します。 最低でも Android 5.0 Lollipop (API レベル 21) の SDK がインストールされていることを確認します。 既定では、インストーラーによって Android SDK が C:\Program Files (x86)\Android\android-sdk に格納されます。  
   
-     Android SDK ディレクトリにある SDK Manager アプリをもう一度実行すると、SDK を更新したり、オプション ツールや追加の API レベルをインストールしたりできます。 **[管理者として実行]** を使用して SDK Manager アプリを実行しなければ、更新のインストールが失敗する可能性があります。 Android アプリのビルドで問題が発生した場合は、SDK Manager を確認して、インストール済み SDK の更新プログラムの有無を調べてください。  
+   Android SDK ディレクトリにある SDK Manager アプリをもう一度実行すると、SDK を更新したり、オプション ツールや追加の API レベルをインストールしたりできます。 **[管理者として実行]** を使用して SDK Manager アプリを実行しなければ、更新のインストールが失敗する可能性があります。 Android アプリのビルドで問題が発生した場合は、SDK Manager を確認して、インストール済み SDK の更新プログラムの有無を調べてください。  
   
-     Android SDK に付属している Android エミュレーターのいくつかを使用するには、オプションの Intel HAXM ドライバーをインストールする必要があります。 Intel HAXM ドライバーを正常にインストールするには、Windows から Hyper-V 機能を削除する必要がある場合があります。 Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android を使用するには、Hyper-V 機能を復元する必要があります。  
+   Android SDK に付属している Android エミュレーターのいくつかを使用するには、オプションの Intel HAXM ドライバーをインストールする必要があります。 Intel HAXM ドライバーを正常にインストールするには、Windows から Hyper-V 機能を削除する必要がある場合があります。 Windows Phone エミュレーターおよび Microsoft Visual Studio Emulator for Android を使用するには、Hyper-V 機能を復元する必要があります。  
   
--   [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)  
+- [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)  
   
-     既定では、インストーラーによって Android NDK が C:\ProgramData\Microsoft\AndroidNDK に格納されます。 Android NDK をもう一度ダウンロードしてインストールすると、NDK のインストールを更新できます。  
+   既定では、インストーラーによって Android NDK が C:\ProgramData\Microsoft\AndroidNDK に格納されます。 Android NDK をもう一度ダウンロードしてインストールすると、NDK のインストールを更新できます。  
   
--   [Apache Ant](http://ant.apache.org/bindownload.cgi)  
+- [Apache Ant](http://ant.apache.org/bindownload.cgi)  
   
-     既定では、インストーラーによって Apache Ant が C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps に格納されます。  
+   既定では、インストーラーによって Apache Ant が C:\Program Files (x86)\Microsoft Visual Studio 14.0\Apps に格納されます。  
   
--   [Microsoft Visual Studio Emulator for Android](http://go.microsoft.com/fwlink/p/?LinkId=536390)  
+- [Microsoft Visual Studio Emulator for Android](http://go.microsoft.com/fwlink/p/?LinkId=536390)  
   
-     Microsoft Visual Studio Emulator for Android は、Visual Studio ギャラリーからインストールおよび更新できます。  
+   Microsoft Visual Studio Emulator for Android は、Visual Studio ギャラリーからインストールおよび更新できます。  
   
- ほとんどの場合、Visual Studio によって、インストールしたサードパーティ製ソフトウェアの構成が検出され、内部環境変数にインストール パスが保持されます。 これらのクロス プラットフォーム開発ツールの既定のパスは、Visual Studio IDE でオーバーライドできます。  
+  ほとんどの場合、Visual Studio によって、インストールしたサードパーティ製ソフトウェアの構成が検出され、内部環境変数にインストール パスが保持されます。 これらのクロス プラットフォーム開発ツールの既定のパスは、Visual Studio IDE でオーバーライドできます。  
   
 #### <a name="to-set-the-paths-for-third-party-tools"></a>サード パーティのツールのパスを設定するには  
   

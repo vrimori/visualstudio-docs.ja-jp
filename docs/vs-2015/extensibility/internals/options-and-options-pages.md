@@ -19,12 +19,12 @@ ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 35
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d61d2c89a163cf111a2d33701a463e018f8f1488
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e9cd4ea3b1465686ee2c0a0ebcfdc4e3aa2e9e56
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261041"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816353"
 ---
 # <a name="options-and-options-pages"></a>オプションとオプション ページ
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -59,21 +59,21 @@ ms.locfileid: "49261041"
 ## <a name="option-attributes-and-layout"></a>オプションの属性とレイアウト  
  ページを提供するユーザー インターフェイス (UI) は、カスタム オプション ページのオプションの外観を決定します。 レイアウト、ラベル付け、および汎用オプション ページのオプションの説明については、次の属性によって決まります。  
   
--   <xref:System.ComponentModel.CategoryAttribute> オプションのカテゴリを決定します。  
+- <xref:System.ComponentModel.CategoryAttribute> オプションのカテゴリを決定します。  
   
--   <xref:System.ComponentModel.DisplayNameAttribute> オプションの表示名を決定します。  
+- <xref:System.ComponentModel.DisplayNameAttribute> オプションの表示名を決定します。  
   
--   <xref:System.ComponentModel.DescriptionAttribute> オプションの説明を決定します。  
+- <xref:System.ComponentModel.DescriptionAttribute> オプションの説明を決定します。  
   
-    > [!NOTE]
-    >  同等の属性、SRCategory、LocDisplayName、および SRDescription、ローカライズ文字列リソースを使用して、で定義されて、[マネージ プロジェクト サンプル](http://go.microsoft.com/fwlink/?LinkId=122774)します。  
+  > [!NOTE]
+  >  同等の属性、SRCategory、LocDisplayName、および SRDescription、ローカライズ文字列リソースを使用して、で定義されて、[マネージ プロジェクト サンプル](http://go.microsoft.com/fwlink/?LinkId=122774)します。  
   
- 次のコードがあるとします。  
+  次のコードがあるとします。  
   
- [!code-csharp[VSSDKSupportForOptionsPages#3](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/optionspagecustom.cs#3)]
- [!code-vb[VSSDKSupportForOptionsPages#3](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/optionspagegeneral.vb#3)]  
+  [!code-csharp[VSSDKSupportForOptionsPages#3](../../snippets/csharp/VS_Snippets_VSSDK/vssdksupportforoptionspages/cs/optionspagecustom.cs#3)]
+  [!code-vb[VSSDKSupportForOptionsPages#3](../../snippets/visualbasic/VS_Snippets_VSSDK/vssdksupportforoptionspages/vb/optionspagegeneral.vb#3)]  
   
- OptionInteger オプションとして [オプション] ページに表示されます**整数オプション**で、 **My Options**カテゴリ。 オプションが選択されている場合、説明、**マイ整数オプション**、[説明] ボックスに表示されます。  
+  OptionInteger オプションとして [オプション] ページに表示されます**整数オプション**で、 **My Options**カテゴリ。 オプションが選択されている場合、説明、**マイ整数オプション**、[説明] ボックスに表示されます。  
   
 ## <a name="accessing-options-pages-from-another-vspackage"></a>別の VSPackage から [オプション] ページにアクセスします。  
  ホストしてオプション ページを管理する VSPackage は、別の VSPackage からでプログラムによって、オートメーション モデルを使用してアクセスできます。 たとえば、次のコードでは、VSPackage は、オプション ページをホストとして登録されます。  

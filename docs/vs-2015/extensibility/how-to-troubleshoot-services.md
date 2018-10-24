@@ -15,27 +15,27 @@ ms.assetid: 001551da-4847-4f59-a0b2-fcd327d7f5ca
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 97084a1fe66bb84c56e1f6452397df9128f4d08f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: fdce9cb5e6499066c7e96abe895db1505f952011
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49279033"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826625"
 ---
 # <a name="how-to-troubleshoot-services"></a>方法: サービスのトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 これには、サービスを取得するときに発生する可能性があるいくつかの一般的な問題があります。  
   
--   サービスが登録されていない[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
+- サービスが登録されていない[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]します。  
   
--   インターフェイスの種類によって、サービスの種類ではなく、サービスを要求します。  
+- インターフェイスの種類によって、サービスの種類ではなく、サービスを要求します。  
   
--   サービスを要求する VSPackage が配置されてされていません。  
+- サービスを要求する VSPackage が配置されてされていません。  
   
--   間違ったサービス プロバイダーが使用されます。  
+- 間違ったサービス プロバイダーが使用されます。  
   
- かどうか、要求されたサービスを取得できない呼び出し<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>は null を返します。 サービスを要求した後は、null の常にテストする必要があります。  
+  かどうか、要求されたサービスを取得できない呼び出し<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>は null を返します。 サービスを要求した後は、null の常にテストする必要があります。  
   
 ```csharp  
 IVsActivityLog log =   

@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9e05c7aa16d689dd037546fe9a199f43a80b0401
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 85770dfd3c610f92bcb190b7a2c151b40cd31a4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49303434"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850049"
 ---
 # <a name="full-text-search-tips"></a>フルテキスト検索のヒント
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "49303434"
  "word1 word2" のような複数の文字を含む検索文字列を指定した場合、その文字列は "word1 AND word2" を入力した場合と同じになり、検索文字列のすべての単語を含むトピックのみを返します。  
   
 > [!IMPORTANT]
->  1.  句を検索することはできません。 検索文字列に複数の単語を指定した場合、返されるトピックには、指定したすべての単語が含まれますが、必ずしも指定した句とは厳密に同じにはなりません。  
-> 2.  検索句の単語間の関係を指定するには、論理演算子を使用します。 AND、OR、NOT、NEAR のような論理演算子を追加し、検索をさらに絞り込むことができます。 たとえば、"declaring NEAR union" と検索すると、"declaring" という単語と "union" という単語がそれほど離れていないトピックが検索されます。 詳細については、「[検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)」を参照してください。  
+> 1. 句を検索することはできません。 検索文字列に複数の単語を指定した場合、返されるトピックには、指定したすべての単語が含まれますが、必ずしも指定した句とは厳密に同じにはなりません。  
+>    2.  検索句の単語間の関係を指定するには、論理演算子を使用します。 AND、OR、NOT、NEAR のような論理演算子を追加し、検索をさらに絞り込むことができます。 たとえば、"declaring NEAR union" と検索すると、"declaring" という単語と "union" という単語がそれほど離れていないトピックが検索されます。 詳細については、「[検索式の論理演算子](../ide/logical-operators-in-search-expressions.md)」を参照してください。  
   
 ### <a name="filters"></a>フィルター  
  高度な検索演算子を利用し、検索結果をさらに制限できます。 ヘルプには、フルテキスト検索の結果を絞り込むためのカテゴリが 3 つあります。タイトル、コード、キーワードです。 詳細については、「[検索式の高度な検索演算子](../ide/advanced-search-operators-in-search-expressions.md)」を参照してください。  

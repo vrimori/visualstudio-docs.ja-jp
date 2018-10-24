@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartAddressSection |Microsoft ドキュメント
+title: IDiaSymbol::get_liveRangeStartAddressSection |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e598a6c6414194da487fe90d39a7f7bb2f0e7a7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f41415954439d299c0c69585141ffc678d332dcf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31463586"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864245"
 ---
 # <a name="idiasymbolgetliverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
 ローカル シンボルの有効範囲の開始アドレスのセクションの一部を返します。  
@@ -34,20 +34,20 @@ HRESULT get_liveRangeStartAddressSection (
   
 #### <a name="parameters"></a>パラメーター  
  `section`  
- [out]開始アドレスの範囲のセクションの一部を返します。  
+ [out]アドレス範囲の開始のセクションの一部を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 > [!NOTE]
 >  返されたエラー コードは、シンボルにライブの範囲の情報がないことを意味します。  
   
-## <a name="remarks"></a>コメント  
- セクションとオフセットによって形成されるアドレスは、シンボルの有効範囲の先頭です。  
+## <a name="remarks"></a>Remarks  
+ セクションとオフセットで構成されるアドレスは、シンボルの有効範囲の先頭です。  
   
- アドレスのオフセットの部分を取得する[IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md)です。  
+ アドレスのオフセットの部分を取得する[IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

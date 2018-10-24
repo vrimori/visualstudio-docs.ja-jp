@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d92bb6a-b9b9-4cd8-99e9-b5ee129b52a3
 caps.latest.revision: 9
 manager: douge
-ms.openlocfilehash: f152572198116a200f91672691b6a4787538063e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: fc5d2c8553ccdb6c554f9a8364e9fd21eaa324d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49301510"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814793"
 ---
 # <a name="getting-field-descriptions-from-the-properties-window"></a>[プロパティ] ウィンドウからのフィールドの説明の取得
 **[プロパティ]** ウィンドウの下部にある説明領域に、選択したプロパティ フィールドに関連する情報が表示されます。 この機能は既定で有効になっています。 説明フィールドを非表示にするには、 **[プロパティ]** ウィンドウを右クリックし、 **[説明]** をクリックします。 これにより、メニュー ウィンドウの **[説明]** タイトルの横のチェック マークが削除されます。 同じ手順を行って **[説明]** の表示をオンに戻すことにより、フィールドを再度表示できます。  
@@ -28,18 +28,18 @@ ms.locfileid: "49301510"
   
 ### <a name="to-specify-localized-help-strings"></a>ローカライズされたヘルプ文字列を指定するには  
   
-1.  タイプ ライブラリ ( `helpstringdll` ) のライブラリ ステートメントに`typelib`属性を追加します。  
+1. タイプ ライブラリ ( `helpstringdll` ) のライブラリ ステートメントに`typelib`属性を追加します。  
   
-    > [!NOTE]
-    >  この手順は、タイプ ライブラリがオブジェクト ライブラリ (.olb) ファイルにある場合は省略可能です。  
+   > [!NOTE]
+   >  この手順は、タイプ ライブラリがオブジェクト ライブラリ (.olb) ファイルにある場合は省略可能です。  
   
-2.  文字列の `helpstringcontext` 属性を指定します。 `helpstring` 属性を指定することもできます。  
+2. 文字列の `helpstringcontext` 属性を指定します。 `helpstring` 属性を指定することもできます。  
   
-     これらの属性は、実際の.chm ファイルのヘルプ トピックに含まれる `helpfile` 属性と `helpcontext` 属性とは異なります。  
+    これらの属性は、実際の.chm ファイルのヘルプ トピックに含まれる `helpfile` 属性と `helpcontext` 属性とは異なります。  
   
- 強調表示されているプロパティ名に表示される説明情報を取得する、**プロパティ**ウィンドウ呼び出し<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A>が選択されているプロパティの指定、必要な`lcid`属性を文字列を出力します。 内部的には、<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> は `helpstringdll` 属性で指定された .dll ファイルを検索し、指定されたコンテキストと `lcid` 属性を使ってその .dll ファイル上に `DLLGetDocumentation` を呼び出します。  
+   強調表示されているプロパティ名に表示される説明情報を取得する、**プロパティ**ウィンドウ呼び出し<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A>が選択されているプロパティの指定、必要な`lcid`属性を文字列を出力します。 内部的には、<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> は `helpstringdll` 属性で指定された .dll ファイルを検索し、指定されたコンテキストと `lcid` 属性を使ってその .dll ファイル上に `DLLGetDocumentation` を呼び出します。  
   
- `DLLGetDocumentation` の署名と実装は次のとおりです。  
+   `DLLGetDocumentation` の署名と実装は次のとおりです。  
   
 ```  
 STDAPI DLLGetDocumentation  

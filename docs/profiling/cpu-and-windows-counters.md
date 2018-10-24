@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8166645f9e767b63d22ebf36bb056c16d339131f
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: 585fb2fa8d2662d1a2bec7915bf1f08a4dc771e4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34748739"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865922"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU カウンターと Windows カウンター
 
@@ -93,15 +93,15 @@ Visual Studio IDE でコンピューターの使用可能なカウンターを�
 
 2. 次のいずれかの操作を行います。
 
-    -   **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。
+   - **[サンプリング]** をクリックし、**[サンプル]** イベントの一覧から **[パフォーマンス カウンター]** を選びます。 **[使用可能なパフォーマンス カウンター]** に CPU カウンターが一覧表示されます。
 
-         **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。
+      **注** 前のサンプリング構成に戻るには、**[キャンセル]** をクリックします。
 
      - または -
 
-    -   **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。
+   - **[CPU カウンター]** を選び、**[CPU カウンターの収集]** を選びます。 **[使用可能なカウンター]** に CPU カウンターが一覧表示されます。
 
-         **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。
+      **注** 前のカウンター収集構成に戻るには、**[キャンセル]** をクリックします。
 
 #### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>現在のプラットフォームでサポートされている Windows カウンターの一覧を表示するには
 

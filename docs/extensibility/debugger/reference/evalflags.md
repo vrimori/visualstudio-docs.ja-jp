@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS |Microsoft ドキュメント
+title: EVALFLAGS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c718414749bb6c748f25fb90837644fe984a274
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef229fb06f8b265b76dc40019b18ae3c796740f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102003"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829964"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 式の評価を制御するフラグを指定します。  
@@ -54,32 +54,32 @@ public enum enum_EVALFLAGS {
   
 ## <a name="members"></a>メンバー  
  EVAL_RETURNVALUE  
- 存在する場合は、戻り値を評価することを指定します。  
+ 存在する場合は、戻り値に評価することを指定します。  
   
  EVAL_NOSIDEEFFECTS  
  副作用を許可しないことを指定します。  
   
  EVAL_ALLOWBPS  
- ブレークポイントで停止を指定します。  
+ ブレークポイントの停止を指定します。  
   
  EVAL_ALLOWERRORREPORT  
- エラーが許可されるには、ホストにレポートを指定します。 主に、Internet Explorer でスクリプト内の式の評価に使用します。  
+ エラー報告を許可するホストを指定します。 主に、Internet Explorer でスクリプトに式の評価に使用します。  
   
  EVAL_FUNCTION_AS_ADDRESS  
- 関数を呼び出す代わりに、アドレスとして評価される関数を強制的に実行します。  
+ 関数を呼び出す代わりに、アドレスとして評価される関数を強制的にします。  
   
  EVAL_NOFUNCEVAL  
- 関数が評価するを防ぎます。 たとえば、`int`トークン、式で`myExpression(int) + 10`です。 この関数は、値としてではなくが、アドレスとして正しく評価できます。  
+ 関数が評価するを防ぎます。 たとえば、`int`式トークン`myExpression(int) + 10`します。 この関数は、アドレスとしてではない値を正しく評価できます。  
   
  EVAL_NOEVENTS  
- 式の評価中に発生するイベントがセッション デバッグ マネージャー (SDM) または IDE にいない送信することを示すフラグです。  
+ セッション デバッグ マネージャー (SDM) または、IDE には式の評価中に発生するイベントを送信しないかを示すフラグです。  
   
-## <a name="remarks"></a>コメント  
- これらのフラグがへの引数として渡される、 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)と[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ これらのフラグは、引数として渡される、 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)と[EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)メソッド。  
   
  これらのフラグは、ビットごとの OR と組み合わせることがあります。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

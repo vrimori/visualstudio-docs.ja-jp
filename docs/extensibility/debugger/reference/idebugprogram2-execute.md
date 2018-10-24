@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Execute |Microsoft ドキュメント
+title: IDebugProgram2::Execute |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7f4e26a5c892e1c796a2b6e2f9371898db21f68
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 35a3845911bf9a1ebfd90165b1c6fde45d797696
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115412"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842587"
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
-停止状態からこのプログラムの実行が続行されます。 (ステップ) など、以前の実行状態がオフになって、しを再度実行して、プログラムを開始します。  
+停止状態からこのプログラムの実行が続行されます。 (ステップ) など、以前の実行状態がオフになって、され、プログラムでは、もう一度実行が開始されます。  
   
 > [!NOTE]
->  このメソッドは推奨されません。 使用して、 [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)メソッド代わりにします。  
+>  このメソッドが非推奨とされます。 使用して、 [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md)メソッド代わりにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int Execute();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- ユーザーは、他のプログラムのスレッドを停止状態から実行を起動するときに、このプログラムにこのメソッドが呼び出されます。 ユーザーを選択すると、このメソッドが呼び出されますも、**開始**コマンドを**デバッグ**IDE のメニュー。 このメソッドの実装を呼び出すなどの単純な可能性があります、[再開](../../../extensibility/debugger/reference/idebugthread2-resume.md)プログラムに現在のスレッドでのメソッドです。  
+## <a name="remarks"></a>Remarks  
+ ユーザーは、いくつかその他のプログラムのスレッドを停止状態から実行を起動するときに、このプログラムでこのメソッドが呼び出されます。 ユーザーが選択すると、このメソッドが呼び出されますも、**開始**コマンドから、**デバッグ**IDE のメニュー。 このメソッドの実装を呼び出す可能性があります、[再開](../../../extensibility/debugger/reference/idebugthread2-resume.md)プログラムの現在のスレッドでメソッド。  
   
 > [!WARNING]
->  停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)です。 この呼び出しを処理中にそれ以外の場合、デバッガーがハングアップします。  
+>  停止イベントまたは直接 (同期) イベントを送信しない[イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md); この呼び出しを処理中にそれ以外の場合、デバッガーがハングします。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

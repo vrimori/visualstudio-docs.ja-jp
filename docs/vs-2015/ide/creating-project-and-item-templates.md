@@ -23,12 +23,12 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d8d5321187d4665ebc10cb3e7471294df50db30
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 32c1c66484d5bdaff6ba37b8b37f7f86cb513e44
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49255353"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851661"
 ---
 # <a name="creating-project-and-item-templates"></a>プロジェクトと項目テンプレートの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "49255353"
 ## <a name="contents-of-a-template"></a>テンプレートの内容  
  すべてのプロジェクト テンプレートと項目テンプレートは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でインストールされたものも、自分で作成したものも、同じ原則で機能し、似た内容から構成されます。 すべてのテンプレートには次の項目が含まれます。  
   
--   テンプレートを使用すると作成されるファイル。 これには、ソース コード ファイル、埋め込みリソース、プロジェクト ファイルなどが含まれます。  
+- テンプレートを使用すると作成されるファイル。 これには、ソース コード ファイル、埋め込みリソース、プロジェクト ファイルなどが含まれます。  
   
--   1 つの .vstemplate ファイル。 このファイルにはメタデータが含まれます。このメタデータが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に提供する情報に基づいて、**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスにテンプレートが表示され、そのテンプレートからプロジェクトや項目が作成されます。 .vstemplate ファイルについて詳しくは、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
+- 1 つの .vstemplate ファイル。 このファイルにはメタデータが含まれます。このメタデータが [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] に提供する情報に基づいて、**[新しいプロジェクト]** ダイアログ ボックスおよび **[新しい項目の追加]** ダイアログ ボックスにテンプレートが表示され、そのテンプレートからプロジェクトや項目が作成されます。 .vstemplate ファイルについて詳しくは、「[テンプレート パラメーター](../ide/template-parameters.md)」をご覧ください。  
   
- これらのファイルは、.zip ファイルに圧縮されて適切なフォルダーに配置されると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で自動的に表示されます。 プロジェクト テンプレートは、**[新しいプロジェクト]** ダイアログ ボックスの **[マイ テンプレート]** セクションに表示され、項目テンプレートは **[新しい項目の追加]** ダイアログ ボックスに表示されます。 テンプレート フォルダーについて詳しくは、「[方法: テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」をご覧ください。  
+  これらのファイルは、.zip ファイルに圧縮されて適切なフォルダーに配置されると、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で自動的に表示されます。 プロジェクト テンプレートは、**[新しいプロジェクト]** ダイアログ ボックスの **[マイ テンプレート]** セクションに表示され、項目テンプレートは **[新しい項目の追加]** ダイアログ ボックスに表示されます。 テンプレート フォルダーについて詳しくは、「[方法: テンプレートを配置して整理する](../ide/how-to-locate-and-organize-project-and-item-templates.md)」をご覧ください。  
   
 ## <a name="starter-kits"></a>スタート キット  
  スタート キットは拡張されたテンプレートであり、コミュニティの他のメンバーと共有できます。 スタート キットには、コンパイルされるコード サンプル、ドキュメント、および有用で実際的なアプリケーションをビルドする際の新しいツールやプログラミング技法を習得するうえで役立つ他のリソースが含まれています。 スタート キットの基本的な内容と手順は、テンプレートの場合と同じです。 詳しくは、「[方法: スタート キットを作成する](../ide/how-to-create-starter-kits.md)」をご覧ください。  
