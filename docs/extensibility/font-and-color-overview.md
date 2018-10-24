@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75db379b6a94d0c40fdbc1aa3946315f5fbc4edc
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: adf5877ae9b01666491e5d10522ba52b58b2d917
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39498471"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845226"
 ---
 # <a name="font-and-color-overview"></a>フォントと色の概要
 このトピックでは説明のテキストのフォントと色の設定、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE) です。 カテゴリとアイテムの表示の概念も導入されていて、Vspackage とコア エディターのテキスト属性を使用する方法について説明します。  
@@ -30,55 +30,55 @@ ms.locfileid: "39498471"
 ## <a name="categories-and-display-items"></a>カテゴリとアイテムを表示  
  フォントおよび色で構成された**カテゴリ**と**表示項目**します。  
   
--   A**カテゴリ**論理または機能の数のコンテナー**表示項目**します。  
+- A**カテゴリ**論理または機能の数のコンテナー**表示項目**します。  
   
-     一連の**カテゴリ**では、**設定の表示**のドロップダウン ボックス、**フォントおよび色**プロパティ ページ。  
+   一連の**カテゴリ**では、**設定の表示**のドロップダウン ボックス、**フォントおよび色**プロパティ ページ。  
   
--   A**表示項目**は、コメント、文字列、または表示されるときに色で表示されますが、制御構造などのテキストが適切に定義されたエンティティです。  
+- A**表示項目**は、コメント、文字列、または表示されるときに色で表示されますが、制御構造などのテキストが適切に定義されたエンティティです。  
   
- 各**表示項目**内で一意に定義されて、**カテゴリ**含まれています。 その結果、複数の**カテゴリ**できますが、**表示項目**と同じ名前です。  
+  各**表示項目**内で一意に定義されて、**カテゴリ**含まれています。 その結果、複数の**カテゴリ**できますが、**表示項目**と同じ名前です。  
   
 ## <a name="vspackage-control-of-fonts-and-colors"></a>VSPackage のコントロールのフォントと色  
  [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]に Vspackage を使用します。  
   
--   フォントと色を定義する**カテゴリ**します。  
+- フォントと色を定義する**カテゴリ**します。  
   
--   フォントと色を使用して指定**表示項目**します。  
+- フォントと色を使用して指定**表示項目**します。  
   
--   対話、**フォントおよび色**プロパティ ページ。  
+- 対話、**フォントおよび色**プロパティ ページ。  
   
--   複数の集計**カテゴリ**をグループにします。  
+- 複数の集計**カテゴリ**をグループにします。  
   
--   既定の設定の変更を保持します。  
+- 既定の設定の変更を保持します。  
   
- 内のフォントと色の選択範囲と対話する 2 つの方法がある、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]します。  
+  内のフォントと色の選択範囲と対話する 2 つの方法がある、[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]します。  
   
--   1 つの方法と呼びます*構文の色分け*します。 既存をカスタマイズする VSPackage によって使用されて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディターの言語サービスを実装し、エディターのソースを作成します。  
+- 1 つの方法と呼びます*構文の色分け*します。 既存をカスタマイズする VSPackage によって使用されて[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]エディターの言語サービスを実装し、エディターのソースを作成します。  
   
-     1 つだけ**カテゴリ**つまり、このメカニズムをサポートしている場合、**テキスト エディター**します。  
+   1 つだけ**カテゴリ**つまり、このメカニズムをサポートしている場合、**テキスト エディター**します。  
   
--   他のすべての一般的な代替手段をサポートしています**カテゴリ**とテキストを表示するときに、ソース エディター以外のユーザー インターフェイス コンポーネント。 詳細については、「<xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>」を参照してください。  
+- 他のすべての一般的な代替手段をサポートしています**カテゴリ**とテキストを表示するときに、ソース エディター以外のユーザー インターフェイス コンポーネント。 詳細については、「 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider> 」を参照してください。  
   
 ## <a name="core-editor-text-settings"></a>コア エディターのテキストの設定  
  言語サービス オブジェクトのコア エディターのフォントと色の設定が適用されます、**テキスト EditorCategory**で見つかった、**設定の表示**のドロップダウン ボックス、**フォントおよび色**プロパティ ページ。  
   
  エディターを使用する場合は、特殊なフォントおよび色の制御メカニズムを制御し、拡張言語サービスを提供するを使用する必要があります、**テキスト エディター**設定します。 メカニズムと呼びます*構文の色分け表示*提供と。  
   
--   フォントと色の表示項目を管理するための簡略化された手法です。  
+- フォントと色の表示項目を管理するための簡略化された手法です。  
   
-     詳細については、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> および <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> を参照してください。  
+   詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> および <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>.  
   
--   適切に定義された、最適化された色づけのメカニズムです。  
+- 適切に定義された、最適化された色づけのメカニズムです。  
   
-     詳細については、「<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>」を参照してください。  
+   詳細については、「 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> 」を参照してください。  
   
--   両方の機能を使用して、組み込みの表示項目から、**テキスト EditorCategory**とそれらを拡張します。  
+- 両方の機能を使用して、組み込みの表示項目から、**テキスト EditorCategory**とそれらを拡張します。  
   
-     詳細については、次を参照してください。[方法: ビルトインの配色可能な項目を使用して、](../extensibility/internals/how-to-use-built-in-colorable-items.md)と[カスタム装飾が可能なアイテム](../extensibility/internals/custom-colorable-items.md)します。  
+   詳細については、次を参照してください。[方法: ビルトインの配色可能な項目を使用して、](../extensibility/internals/how-to-use-built-in-colorable-items.md)と[カスタム装飾が可能なアイテム](../extensibility/internals/custom-colorable-items.md)します。  
   
--   現在の状態の両方の組み込みとカスタムの永続化を自動で項目を表示する、**テキスト エディター**カテゴリ。  
+- 現在の状態の両方の組み込みとカスタムの永続化を自動で項目を表示する、**テキスト エディター**カテゴリ。  
   
- 構文の色分け表示の詳細については[構文の色分け、従来の言語サービス](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)します。  
+  構文の色分け表示の詳細については[構文の色分け、従来の言語サービス](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [エディターでのレガシー インターフェイス](../extensibility/legacy-interfaces-in-the-editor.md)   
