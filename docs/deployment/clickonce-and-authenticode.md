@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2943766bb7b0df6d2e0974f8a8c1b52747f31526
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: bc0018533f089c2be3d0a94093bf41deadd9a74e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39512211"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907444"
 ---
 # <a name="clickonce-and-authenticode"></a>ClickOnce と Authenticode
 *Authenticode* は、業界標準の暗号化を使用して、アプリケーションの発行元の信頼性を検証するデジタル証明書によってアプリケーション コードに署名する Microsoft テクノロジです。 アプリケーションの配置に Authenticode を使用し、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] はトロイの木馬のリスクを軽減します。 トロイの木馬は、悪意のある第三者が、確立された信頼できるソースからの正規のプログラムと偽って示すウイルスやその他の有害なプログラムです。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置のデジタル証明書による署名は、アセンブリとファイルが改ざんされていないことを確認するためのオプションの手順です。  
@@ -39,11 +39,11 @@ ms.locfileid: "39512211"
   
  コード署名の証明書は、次の 3 つの方法のいずれかで取得することができます。  
   
--   証明書の販売元から購入する。  
+- 証明書の販売元から購入する。  
   
--   デジタル証明書の作成を担当する組織内のグループから受け取る。  
+- デジタル証明書の作成を担当する組織内のグループから受け取る。  
   
--   New-selfsignedcertificate PowerShell コマンドレットを使用するかを使用して、独自の証明書を生成*MakeCert.exe*に含まれている、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]します。  
+- New-selfsignedcertificate PowerShell コマンドレットを使用するかを使用して、独自の証明書を生成*MakeCert.exe*に含まれている、[!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]します。  
   
 ### <a name="how-using-certificate-authorities-helps-users"></a>によりユーザー、証明機関を使用する方法  
  新規-自己署名証明書を使用して生成された証明書または*MakeCert.exe*ユーティリティが一般的と呼ばれる、*自己証明書*または*テスト証明書*。この種の証明書は、同じ動作はるか方法、 *.snk*ファイルで .NET Framework で動作します。 この証明書は、秘密/公開暗号化キーのペアのみで構成され、発行者に関する検証可能な情報を含んでいません。 自己証明書を使用すると、イントラネット上に信頼性の高い [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置できます。 ただし、これらのアプリケーションをクライアント コンピューターで実行した場合は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] が、不明な発行元からのものとしてアプリケーションを識別します。 既定では、自己証明書によって署名され、インターネットを介して配置された [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは、信頼されたアプリケーションの配置を利用できません。  
@@ -68,7 +68,7 @@ ms.locfileid: "39512211"
   
 ### <a name="store-certificates"></a>証明書を格納します。  
   
--   証明書を格納することができます、 *.pfx*キー コンテナーの内部にするか、ファイル システム上のファイルで格納できます。 Windows ドメインのユーザーは、多数のキー コンテナーを持つことができます。 既定では、 *MakeCert.exe*が保存することを指定しない限り、個人のキー コンテナーに証明書を保存、 *.pfx*代わりにします。 *Mage.exe*と*MageUI.exe*、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]を作成するためのツール[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]の展開では、どちらの方法で格納される証明書を使用することができます。  
+- 証明書を格納することができます、 *.pfx*キー コンテナーの内部にするか、ファイル システム上のファイルで格納できます。 Windows ドメインのユーザーは、多数のキー コンテナーを持つことができます。 既定では、 *MakeCert.exe*が保存することを指定しない限り、個人のキー コンテナーに証明書を保存、 *.pfx*代わりにします。 *Mage.exe*と*MageUI.exe*、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]を作成するためのツール[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]の展開では、どちらの方法で格納される証明書を使用することができます。  
   
 ## <a name="see-also"></a>関連項目  
  [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)   

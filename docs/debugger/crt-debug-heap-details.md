@@ -75,12 +75,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f939c365718e60cf5053f76dd65b18c257de627e
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: df3dbcd36bdb72bdd76972ff03a295ba9310f8f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433471"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897083"
 ---
 # <a name="crt-debug-heap-details"></a>CRT デバッグ ヒープ
 このトピックでは、CRT デバッグ ヒープについて詳しく解説します。  
@@ -207,19 +207,19 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
  **デバッグ ヒープを使用するには**  
   
--   アプリケーションのデバッグ ビルドに C ランタイム ライブラリのデバッグ バージョンをリンクします。  
+- アプリケーションのデバッグ ビルドに C ランタイム ライブラリのデバッグ バージョンをリンクします。  
   
- **1 つまたは複数の _crtDbgFlag ビット フィールドを変更し、フラグの新しい状態を作成するには**  
+  **1 つまたは複数の _crtDbgFlag ビット フィールドを変更し、フラグの新しい状態を作成するには**  
   
-1.  `_CrtSetDbgFlag` パラメーターに `newFlag` を設定して `_CRTDBG_REPORT_FLAG` を呼び出すことによって、現在の `_crtDbgFlag` の状態を取得し、その値を一時変数に格納します。  
+1. `_CrtSetDbgFlag` パラメーターに `newFlag` を設定して `_CRTDBG_REPORT_FLAG` を呼び出すことによって、現在の `_crtDbgFlag` の状態を取得し、その値を一時変数に格納します。  
   
-2.  ビットをオンにする`OR`- ing (ビットごと&#124;シンボル)、一時変数 (のマニフェスト定数によってアプリケーション コードで表される)、対応するビットマスクを使用します。  
+2. ビットをオンにする`OR`- ing (ビットごと&#124;シンボル)、一時変数 (のマニフェスト定数によってアプリケーション コードで表される)、対応するビットマスクを使用します。  
   
-3.  一時変数と、オフにするビットマスクの `AND` (ビット演算子の ~) との `NOT` (ビット演算子の &) をとることで、ビットをオフにします。  
+3. 一時変数と、オフにするビットマスクの `AND` (ビット演算子の ~) との `NOT` (ビット演算子の &) をとることで、ビットをオフにします。  
   
-4.  `_CrtSetDbgFlag` パラメーターに一時変数に格納されている値を設定して `newFlag` を呼び出すことによって、`_crtDbgFlag` の新しい状態を作成します。  
+4. `_CrtSetDbgFlag` パラメーターに一時変数に格納されている値を設定して `newFlag` を呼び出すことによって、`_crtDbgFlag` の新しい状態を作成します。  
   
- たとえば、次のコードは、メモリ リークの自動検出をオンにし、`_CRT_BLOCK` 型のブロックに関するチェックをオフにします。  
+   たとえば、次のコードは、メモリ リークの自動検出をオンにし、`_CRT_BLOCK` 型のブロックに関するチェックをオフにします。  
   
 ```cpp
 // Get current flag  

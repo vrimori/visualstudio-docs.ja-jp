@@ -13,12 +13,12 @@ ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc1d47030cf8c71b681e7f6f2ff3c6df5dfa58eb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c10611ee05178f907c36aae268b0d6990a9e6606
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49243712"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905702"
 ---
 # <a name="walkthrough-creating-an-sdk-using-c"></a>チュートリアル: C++ を使用して SDK を作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -148,27 +148,27 @@ ms.locfileid: "49243712"
   
 ##  <a name="createSample"></a> クラス ライブラリを使用するサンプル アプリを作成するには  
   
-1.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+1. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
-2.  テンプレートの一覧で  **Visual C**、 **Windows ストア**、し、**空のアプリ**します。 **名前**ボックスで、指定**NativeMathSDKSample**、選択し、 **OK**ボタン。  
+2. テンプレートの一覧で  **Visual C**、 **Windows ストア**、し、**空のアプリ**します。 **名前**ボックスで、指定**NativeMathSDKSample**、選択し、 **OK**ボタン。  
   
-3.  **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NativeMathSDKSample**プロジェクトを選び、**追加**、**参照**します。  
+3. **ソリューション エクスプ ローラー**、ショートカット メニューを開き、 **NativeMathSDKSample**プロジェクトを選び、**追加**、**参照**します。  
   
-4.  **共通プロパティ**、 **Framework と参照**プロパティ ページで、参照型の一覧で、展開**Windows**、し、**拡張機能**. 詳細] ウィンドウで、[、**ネイティブ Math SDK**拡張機能を選択し、**新しい参照の追加**ボタンをクリックします。  
+4. **共通プロパティ**、 **Framework と参照**プロパティ ページで、参照型の一覧で、展開**Windows**、し、**拡張機能**. 詳細] ウィンドウで、[、**ネイティブ Math SDK**拡張機能を選択し、**新しい参照の追加**ボタンをクリックします。  
   
-5.  **参照の追加**ダイアログ ボックスで、**ネイティブ Math SDK**チェック ボックスをオンにして、 **OK**ボタン。  
+5. **参照の追加**ダイアログ ボックスで、**ネイティブ Math SDK**チェック ボックスをオンにして、 **OK**ボタン。  
   
-6.  NativeMathSDKSample のプロジェクトのプロパティを表示します。  
+6. NativeMathSDKSample のプロジェクトのプロパティを表示します。  
   
-     NativeMathSDK.props で定義したプロパティは、参照を追加したときに適用されました。 これを調べることで確認できます、 **vc++ ディレクトリ**、プロジェクトのプロパティ**構成プロパティ**します。  
+    NativeMathSDK.props で定義したプロパティは、参照を追加したときに適用されました。 これを調べることで確認できます、 **vc++ ディレクトリ**、プロジェクトのプロパティ**構成プロパティ**します。  
   
-7.  **ソリューション エクスプ ローラー**MainPage.xaml を開き、次の XAML を使用してそのコンテンツを置き換えます。  
+7. **ソリューション エクスプ ローラー**MainPage.xaml を開き、次の XAML を使用してそのコンテンツを置き換えます。  
   
-     [!code-xml[CreatingAnSDKUsingCppDemoApp#1](../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcppdemoapp/cpp/mainpage.xaml#1)]  
+    [!code-xml[CreatingAnSDKUsingCppDemoApp#1](../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcppdemoapp/cpp/mainpage.xaml#1)]  
   
-8.  このコードに合わせて Mainpage.xaml.h を更新します。  
+8. このコードに合わせて Mainpage.xaml.h を更新します。  
   
-     [!code-cpp[CreatingAnSDKUsingCppDemoApp#2](../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcppdemoapp/cpp/mainpage.xaml.h#2)]  
+    [!code-cpp[CreatingAnSDKUsingCppDemoApp#2](../snippets/cpp/VS_Snippets_VSSDK/creatingansdkusingcppdemoapp/cpp/mainpage.xaml.h#2)]  
   
 9. このコードに合わせて MainPage.xaml.cpp を更新します。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "49243712"
   
      正しい結果が表示されます。  
   
- このチュートリアルで作成して呼び出すために、拡張機能 SDK を使用、する方法を示しました、[!INCLUDE[wrt](../includes/wrt-md.md)]ライブラリと以外[!INCLUDE[wrt](../includes/wrt-md.md)]ライブラリ。  
+    このチュートリアルで作成して呼び出すために、拡張機能 SDK を使用、する方法を示しました、[!INCLUDE[wrt](../includes/wrt-md.md)]ライブラリと以外[!INCLUDE[wrt](../includes/wrt-md.md)]ライブラリ。  
   
 ## <a name="next-steps"></a>次の手順  
   

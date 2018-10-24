@@ -13,12 +13,12 @@ ms.assetid: 35e766ad-269f-41e4-ba23-74a556c315f3
 caps.latest.revision: 7
 ms.author: crdun
 manager: crdun
-ms.openlocfilehash: 819f64b9d526cc307f0f9fbd0a35db5d4e7bd1ab
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a566a6aa73ef9b1e3729248b14b0f3879f21d21c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49176567"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898779"
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,76 +50,76 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
   
  システム要件  
   
--   Hyper-V のサポート (後述の「Hyper-V」の要件を参照してください)  
+- Hyper-V のサポート (後述の「Hyper-V」の要件を参照してください)  
   
--   6 GB 以上の RAM。  
+- 6 GB 以上の RAM。  
   
--   Windows 8、Windows 8.1、Windows10 以上の Pro エディションの 64 ビット バージョン  
+- Windows 8、Windows 8.1、Windows10 以上の Pro エディションの 64 ビット バージョン  
   
--   SSSE3 以降をサポートするプロセッサ。  
+- SSSE3 以降をサポートするプロセッサ。  
   
- ネットワーク要件  
+  ネットワーク要件  
   
--   DHCP  
+- DHCP  
   
--   自動的に構成された DNS とゲートウェイの設定  
+- 自動的に構成された DNS とゲートウェイの設定  
   
- Hyper-V の要件  
+  Hyper-V の要件  
   
--   BIOS で、次の機能がサポートされている必要があります。  
+- BIOS で、次の機能がサポートされている必要があります。  
   
-    -   ハードウェア依存の仮想化  
+  -   ハードウェア依存の仮想化  
   
-    -   第 2 レベルのアドレス変換 (SLAT)  
+  -   第 2 レベルのアドレス変換 (SLAT)  
   
-    -   ハードウェア ベースのデータ実行防止 (DEP)  
+  -   ハードウェア ベースのデータ実行防止 (DEP)  
   
--   Windows で、Hyper-V を有効にして実行する必要があります。  
+- Windows で、Hyper-V を有効にして実行する必要があります。  
   
--   ローカルの Hyper-V Administrators グループのメンバーである必要があります。  
+- ローカルの Hyper-V Administrators グループのメンバーである必要があります。  
   
 ##  <a name="System"></a> システム要件  
  コンピューターは次の条件を満たしている必要があります。  
   
--   Hyper-V のサポート (「 [Hyper-V の要件](#HyperV)」を参照してください)  
+- Hyper-V のサポート (「 [Hyper-V の要件](#HyperV)」を参照してください)  
   
--   6 GB 以上の RAM。  
+- 6 GB 以上の RAM。  
   
--   Windows 8、Windows 8.1、Windows10 以上の Pro エディションの 64 ビット バージョン。  
+- Windows 8、Windows 8.1、Windows10 以上の Pro エディションの 64 ビット バージョン。  
   
- RAM と Windows の要件を確認するには、コントロール パネルで [システムとセキュリティ] を選択し、[システム] を選択します。  
+  RAM と Windows の要件を確認するには、コントロール パネルで [システムとセキュリティ] を選択し、[システム] を選択します。  
   
- ![システム要件を確認する](../cross-platform/media/android-emu-system-requirements.png "Android_Emu_System_Requirements")  
+  ![システム要件を確認する](../cross-platform/media/android-emu-system-requirements.png "Android_Emu_System_Requirements")  
   
 ##  <a name="Network"></a> ネットワーク要件  
  ネットワークは次の条件を満たしている必要があります。  
   
--   DHCP  
+- DHCP  
   
-     エミュレーターは、独自の IP アドレスでネットワーク上に個別のデバイスとして自動的に構成されるため、DHCP が必要です。  
+   エミュレーターは、独自の IP アドレスでネットワーク上に個別のデバイスとして自動的に構成されるため、DHCP が必要です。  
   
--   自動的に構成された DNS とゲートウェイの設定  
+- 自動的に構成された DNS とゲートウェイの設定  
   
-     エミュレーターの DNS およびゲートウェイ設定を手動で構成することはできません。  
+   エミュレーターの DNS およびゲートウェイ設定を手動で構成することはできません。  
   
- エミュレーターのネットワークの問題を解決する方法については、以下のトピックを参照してください。  
+  エミュレーターのネットワークの問題を解決する方法については、以下のトピックを参照してください。  
   
--   [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)  
+- [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)  
   
 ##  <a name="HyperV"></a> Hyper-V の要件  
  BIOS での Hyper-V の要件  
   
  コンピューターの BIOS は、次の要件をサポートする必要があります。また、次の要件を有効にする必要があります。  
   
--   ハードウェア依存の仮想化  
+- ハードウェア依存の仮想化  
   
--   第 2 レベルのアドレス変換 (SLAT)  
+- 第 2 レベルのアドレス変換 (SLAT)  
   
--   ハードウェア ベースのデータ実行防止 (DEP)  
+- ハードウェア ベースのデータ実行防止 (DEP)  
   
- Windows での Hyper-V の要件  
+  Windows での Hyper-V の要件  
   
- コンピューターと BIOS 設定が既に Hyper-V をサポートするよう構成されている場合、セットアップ プログラムで Hyper-V が有効になり、開始されます。 サポートする構成ではない場合は、必要に応じてこれらの要件を手動で有効にします。  
+  コンピューターと BIOS 設定が既に Hyper-V をサポートするよう構成されている場合、セットアップ プログラムで Hyper-V が有効になり、開始されます。 サポートする構成ではない場合は、必要に応じてこれらの要件を手動で有効にします。  
   
 |必要条件|この要件を確認して有効にする方法|  
 |-----------------|----------------------------------------------|  
@@ -147,15 +147,15 @@ Visual Studio Emulator for Android は、Hyper-V 上で仮想マシンとして�
 ##  <a name="Files"></a> Hyper-V に必要な圧縮と暗号化が行われていないファイル  
  NTFS ファイル システムで構成したハード ドライブで、Hyper-V に使用する仮想ハード ディスク ファイルは、圧縮も暗号化もされていない状態である必要があります。 次のディレクトリが圧縮も暗号化もされていないことを確認してください。  
   
--   %localappdata%\Microsoft\XDE  
+- %localappdata%\Microsoft\XDE  
   
--   C:\Program Files (x86)\Microsoft Emulator Manager  
+- C:\Program Files (x86)\Microsoft Emulator Manager  
   
--   C:\Program Files (x86)\Microsoft Visual Studio Emulator for Android  
+- C:\Program Files (x86)\Microsoft Visual Studio Emulator for Android  
   
--   %localappdata%\Microsoft\VisualStudioEmulator  
+- %localappdata%\Microsoft\VisualStudioEmulator  
   
- ReFS ファイル システムでは、仮想ハード ディスク ファイルの整合性ビットが設定された状態にしておくことはできません。  
+  ReFS ファイル システムでは、仮想ハード ディスク ファイルの整合性ビットが設定された状態にしておくことはできません。  
   
 ## <a name="hardware-graphics-forwarding-opengl-es-support-requirements"></a>ハードウェア グラフィックス転送 (OpenGL ES のサポート) の要件  
  OpenGL ES で使用される GPU など、エミュレーターで GPU の呼び出しをエミュレートするには、適切な DirectX ドライバーがインストールされた DirectX 互換の GPU が必要です。  

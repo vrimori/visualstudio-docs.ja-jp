@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 015725197c2c269a7b6aed2e20f0159e2a9f2fe6
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: c956da1df5507d2efecb3ff72f034d54fb377eb5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36758560"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898415"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>方法: SharePoint プロジェクトにプロパティを追加
   プロジェクトの拡張機能を使用すると、任意の SharePoint プロジェクトにプロパティを追加します。 プロパティを表示する、**プロパティ**ウィンドウで、プロジェクトを選択すると**ソリューション エクスプ ローラー**します。  
@@ -48,11 +48,11 @@ ms.locfileid: "36758560"
   
  プロパティの値に変更を保持する、**設定**プロパティのアクセサーは、次の Api を使用します。  
   
--   `CustomUserFileProperty` 使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A>プロジェクト ユーザー オプション ファイルにその値を保存するプロパティ。  
+- `CustomUserFileProperty` 使用して、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.ProjectUserFileData%2A>プロジェクト ユーザー オプション ファイルにその値を保存するプロパティ。  
   
--   `CustomProjectFileProperty` 使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>その値をプロジェクト ファイルに保存するメソッド。  
+- `CustomProjectFileProperty` 使用して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>その値をプロジェクト ファイルに保存するメソッド。  
   
- これらのファイルでデータの永続化の詳細については、次を参照してください。 [SharePoint プロジェクト システムの拡張機能でデータを保存](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)します。  
+  これらのファイルでデータの永続化の詳細については、次を参照してください。 [SharePoint プロジェクト システムの拡張機能でデータを保存](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)します。  
   
 ### <a name="specify-the-behavior-of-custom-properties"></a>カスタム プロパティの動作を指定します。  
  カスタム プロパティの表示し、動作を定義することができます、**プロパティ**ウィンドウからの属性を適用することで、<xref:System.ComponentModel>プロパティ定義に名前空間。 次の属性には、多くのシナリオがあります。  
@@ -67,7 +67,7 @@ ms.locfileid: "36758560"
   
 -   <xref:System.ComponentModel.EditorAttribute>: 使用して、プロパティを変更するカスタム エディターを指定します。  
   
-## <a name="compile-the-code"></a>コードをコンパイルします  
+## <a name="compile-the-code"></a>コードのコンパイル  
  この例では、次のアセンブリへの参照が必要です。  
   
 -   Microsoft.VisualStudio.SharePoint

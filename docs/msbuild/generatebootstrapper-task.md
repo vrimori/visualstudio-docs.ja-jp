@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 164a0eeb8c466c2e2eb5bd03f92160a2fad78abd
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 53ad85f77d014d534d625b8d08e36b7eb8c01f7f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177738"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895731"
 ---
 # <a name="generatebootstrapper-task"></a>GenerateBootstrapper タスク
 アプリケーションとその前提条件を検出、ダウンロード、インストールする自動化方法を提供します。 これは、アプリケーションを構成するすべてのコンポーネントの別々のインストーラーを統合する単一のインストーラーとして機能します。  
@@ -33,122 +33,122 @@ ms.locfileid: "39177738"
 ## <a name="task-parameters"></a>タスク パラメーター  
  次の表では、`GenerateBootstrapper` タスクのパラメーターを説明します。  
   
--   `ApplicationFile`  
+- `ApplicationFile`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     すべての前提条件がインストールされた後に、アプリケーションのインストールを開始するためにブートストラップが使用するファイルを指定します。 `BootstrapperItems` パラメーターも `ApplicationFile` パラメーターも指定されていない場合、ビルド エラーが発生します。  
+   すべての前提条件がインストールされた後に、アプリケーションのインストールを開始するためにブートストラップが使用するファイルを指定します。 `BootstrapperItems` パラメーターも `ApplicationFile` パラメーターも指定されていない場合、ビルド エラーが発生します。  
   
--   `ApplicationName`  
+- `ApplicationName`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     ブートストラップがインストールするアプリケーションの名前を指定します。 この名前は、ブートストラップがインストール中に使用する UI の中で表示されます。  
+   ブートストラップがインストールするアプリケーションの名前を指定します。 この名前は、ブートストラップがインストール中に使用する UI の中で表示されます。  
   
--   `ApplicationRequiresElevation`  
+- `ApplicationRequiresElevation`  
   
-     省略可能な `Boolean` 型のパラメーターです。  
+   省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` である場合、コンポーネントはターゲット コンピューターにインストールされるとき、管理者特権のアクセス許可で実行されます。  
+   `true` である場合、コンポーネントはターゲット コンピューターにインストールされるとき、管理者特権のアクセス許可で実行されます。  
   
--   `ApplicationUrl`  
+- `ApplicationUrl`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     アプリケーションのインストーラーをホストする Web 上の場所を指定します。  
+   アプリケーションのインストーラーをホストする Web 上の場所を指定します。  
   
--   `BootstrapperComponentFiles`  
+- `BootstrapperComponentFiles`  
   
-     省略可能な `String[]` 型の出力パラメーターです。  
+   省略可能な `String[]` 型の出力パラメーターです。  
   
-     ブートストラップ パッケージ ファイルがビルドされた場所を指定します。  
+   ブートストラップ パッケージ ファイルがビルドされた場所を指定します。  
   
--   `BootstrapperItems`  
+- `BootstrapperItems`  
   
-     省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。  
+   省略可能な <xref:Microsoft.Build.Framework.ITaskItem>`[]` 型のパラメーターです。  
   
-     ブートストラップに組み込む製品を指定します。 このパラメーターに渡される項目は、以下の構文に従わなければなりません。  
+   ブートストラップに組み込む製品を指定します。 このパラメーターに渡される項目は、以下の構文に従わなければなりません。  
   
-    ```xml  
-    <BootstrapperItem  
-        Include="ProductCode">  
-        <ProductName>  
-            ProductName  
-        </ProductName>  
-    </BootstrapperItem>  
-    ```  
+  ```xml  
+  <BootstrapperItem  
+      Include="ProductCode">  
+      <ProductName>  
+          ProductName  
+      </ProductName>  
+  </BootstrapperItem>  
+  ```  
   
-     `Include` 属性は、インストールする必要がある前提条件の名前を表します。 `ProductName` 項目メタデータは省略可能であり、パッケージが見つからない場合に、ユーザー フレンドリーな名前としてビルド エンジンによって使用されます。 これらの項目は、`ApplicationFile` が指定されている場合を除き、必須の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 入力パラメーターではありません。 アプリケーション用にインストールする必要がある前提条件ごとに、1 つの項目を含める必要があります。  
+   `Include` 属性は、インストールする必要がある前提条件の名前を表します。 `ProductName` 項目メタデータは省略可能であり、パッケージが見つからない場合に、ユーザー フレンドリーな名前としてビルド エンジンによって使用されます。 これらの項目は、`ApplicationFile` が指定されている場合を除き、必須の [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 入力パラメーターではありません。 アプリケーション用にインストールする必要がある前提条件ごとに、1 つの項目を含める必要があります。  
   
-     `BootstrapperItems` パラメーターも `ApplicationFile` パラメーターも指定されていない場合、ビルド エラーが発生します。  
+   `BootstrapperItems` パラメーターも `ApplicationFile` パラメーターも指定されていない場合、ビルド エラーが発生します。  
   
--   `BootstrapperKeyFile`  
+- `BootstrapperKeyFile`  
   
-     省略可能な `String` 型の出力パラメーターです。  
+   省略可能な `String` 型の出力パラメーターです。  
   
-     *setup.exe* がビルドされた場所を指定します。  
+   *setup.exe* がビルドされた場所を指定します。  
   
--   `ComponentsLocation`  
+- `ComponentsLocation`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     インストールするインストール前提条件をブートストラップが探す場所を指定します。 このパラメーターには、次の値を指定できます。  
+   インストールするインストール前提条件をブートストラップが探す場所を指定します。 このパラメーターには、次の値を指定できます。  
   
-    -   `HomeSite`: 前提条件がコンポーネント ベンダーによってホストされていることを示します。  
+  - `HomeSite`: 前提条件がコンポーネント ベンダーによってホストされていることを示します。  
   
-    -   `Relative`: 前提条件がアプリケーションと同じ場所にあることを示します。  
+  - `Relative`: 前提条件がアプリケーションと同じ場所にあることを示します。  
   
-    -   `Absolute`: 一元化された URL にすべてのコンポーネントがあることを示します。 この値は `ComponentsUrl` 入力パラメーターと共に使用する必要があります。  
+  - `Absolute`: 一元化された URL にすべてのコンポーネントがあることを示します。 この値は `ComponentsUrl` 入力パラメーターと共に使用する必要があります。  
   
-     `ComponentsLocation` が指定されていない場合は、`HomeSite` が既定で使用されます。  
+    `ComponentsLocation` が指定されていない場合は、`HomeSite` が既定で使用されます。  
   
--   `ComponentsUrl`  
+- `ComponentsUrl`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     インストールの前提条件が含まれる URL を指定します。  
+   インストールの前提条件が含まれる URL を指定します。  
   
--   `CopyComponents`  
+- `CopyComponents`  
   
-     省略可能な `Boolean` 型のパラメーターです。  
+   省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` である場合、ブートストラップはすべての出力ファイルを `OutputPath` パラメーターで指定されているパスにコピーします。 `BootstrapperComponentFiles` パラメーターの値はすべてこのパスに基づいたものにしなければなりません。 `false` である場合、ファイルはコピーされず、`BootstrapperComponentFiles` の値は `Path` パラメーターの値に基づいたものとなります。  このパラメーターの既定値は、`true` です。  
+   `true` である場合、ブートストラップはすべての出力ファイルを `OutputPath` パラメーターで指定されているパスにコピーします。 `BootstrapperComponentFiles` パラメーターの値はすべてこのパスに基づいたものにしなければなりません。 `false` である場合、ファイルはコピーされず、`BootstrapperComponentFiles` の値は `Path` パラメーターの値に基づいたものとなります。  このパラメーターの既定値は、`true` です。  
   
--   `Culture`  
+- `Culture`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     ブートストラップ UI およびインストールの前提条件に使用されるカルチャを指定します。 指定したカルチャが使用不可能である場合、タスクは `FallbackCulture` パラメーターの値を使用します。  
+   ブートストラップ UI およびインストールの前提条件に使用されるカルチャを指定します。 指定したカルチャが使用不可能である場合、タスクは `FallbackCulture` パラメーターの値を使用します。  
   
--   `FallbackCulture`  
+- `FallbackCulture`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     ブートストラップ UI およびインストール前提条件に使用する 2 次カルチャを指定します。  
+   ブートストラップ UI およびインストール前提条件に使用する 2 次カルチャを指定します。  
   
--   `OutputPath`  
+- `OutputPath`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     *setup.exe* とすべてのパッケージ ファイルのコピー先を指定します。  
+   *setup.exe* とすべてのパッケージ ファイルのコピー先を指定します。  
   
--   `Path`  
+- `Path`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     使用可能なすべての前提条件パッケージの場所を指定します。  
+   使用可能なすべての前提条件パッケージの場所を指定します。  
   
--   `SupportUrl`  
+- `SupportUrl`  
   
-     省略可能な `String` 型のパラメーターです。  
+   省略可能な `String` 型のパラメーターです。  
   
-     ブートストラップのインストールが失敗した場合に提供する URL を指定します。  
+   ブートストラップのインストールが失敗した場合に提供する URL を指定します。  
   
--   `Validate`  
+- `Validate`  
   
-     省略可能な `Boolean` 型のパラメーターです。  
+   省略可能な `Boolean` 型のパラメーターです。  
   
-     `true` の場合、ブートストラップは指定された入力ブートストラップ項目に対して XSD 検証を実行します。 このパラメーターの既定値は、`false` です。  
+   `true` の場合、ブートストラップは指定された入力ブートストラップ項目に対して XSD 検証を実行します。 このパラメーターの既定値は、`false` です。  
   
 ## <a name="remarks"></a>コメント  
  上記のパラメーター以外に、このタスクは <xref:Microsoft.Build.Tasks.TaskExtension> クラスからパラメーターを継承します。このクラス自体は、<xref:Microsoft.Build.Utilities.Task> クラスから継承されます。 これらの追加のパラメーターの一覧とその説明については、「[TaskExtension Base Class](../msbuild/taskextension-base-class.md)」を参照してください。  

@@ -21,12 +21,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 2b4393758b4c246af0da830b6ed8d8e20eb8ff40
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3f64fa378029546f7a3126b324c282f6a91d7231
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49191127"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897635"
 ---
 # <a name="how-to-connect-to-the-northwind-database"></a>方法: Northwind データベースへの接続
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,29 +38,29 @@ Visual Studio を使ったデータベース アプリケーションの作成�
   
 #### <a name="to-create-a-data-connection-to-the-northwind-database-sql-server"></a>Northwind データベース (SQL Server) へのデータ接続を作成するには  
   
-1.  **ビュー** ] メニューの [選択**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**します。  
+1. **ビュー** ] メニューの [選択**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**します。  
   
-2.  **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、ショートカット メニューを開き**データ接続**選択**接続の追加**.  
+2. **サーバー エクスプ ローラー**/**データベース エクスプ ローラー**、ショートカット メニューを開き**データ接続**選択**接続の追加**.  
   
-     選択した後**接続の追加**、いずれか、**データ ソースの選択** ダイアログ ボックスまたは**接続の追加** ダイアログ ボックスが表示されます。  
+    選択した後**接続の追加**、いずれか、**データ ソースの選択** ダイアログ ボックスまたは**接続の追加** ダイアログ ボックスが表示されます。  
   
-3.  場合、**データ ソースの選択**選択 ダイアログ ボックスが表示されたら、 **Microsoft SQL Server**、選び、 **OK**します。  
+3. 場合、**データ ソースの選択**選択 ダイアログ ボックスが表示されたら、 **Microsoft SQL Server**、選び、 **OK**します。  
   
-     場合、**接続の追加** ダイアログ ボックスが表示されます、**データ ソース**ない**Microsoft SQL Server (SqlClient)**、選択、**変更**ボタンをクリックする、**データ ソースの変更**ダイアログ ボックスで、 **Microsoft SQL Server**、選択し、 **OK**ボタン。  
+    場合、**接続の追加** ダイアログ ボックスが表示されます、**データ ソース**ない**Microsoft SQL Server (SqlClient)**、選択、**変更**ボタンをクリックする、**データ ソースの変更**ダイアログ ボックスで、 **Microsoft SQL Server**、選択し、 **OK**ボタン。  
   
-4.  **サーバー名**一覧で、Northwind データベースが配置されているサーバーの名前を指定します。  
+4. **サーバー名**一覧で、Northwind データベースが配置されているサーバーの名前を指定します。  
   
-5.  選択するか、SQL Server および Northwind データベースのバージョンの要件に応じて**Windows 認証を使用**選択または**SQL Server 認証を使用**ユーザー名を入力し、SQL Server を実行しているコンピューターにログオンするパスワード。  
+5. 選択するか、SQL Server および Northwind データベースのバージョンの要件に応じて**Windows 認証を使用**選択または**SQL Server 認証を使用**ユーザー名を入力し、SQL Server を実行しているコンピューターにログオンするパスワード。  
   
-6.  Northwind データベースを選択して、**を選択するか、データベース名を入力**一覧。  
+6. Northwind データベースを選択して、**を選択するか、データベース名を入力**一覧。  
   
-7.  選択**Test-connection**を Northwind データベースへの接続を確認します。  
+7. 選択**Test-connection**を Northwind データベースへの接続を確認します。  
   
-8.  **[OK]** をクリックします。  
+8. **[OK]** をクリックします。  
   
-     Northwind データベースへのデータ接続の追加を**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**します。  
+    Northwind データベースへのデータ接続の追加を**サーバー エクスプ ローラー**/**データベース エクスプ ローラー**します。  
   
- SQL Server データベースのリモート インスタンスに接続できるだけでなく、データベースを含む実際のファイルに直接接続することもできます。 これにより、アプリケーションの一部として配置可能なプロジェクトに、データベース ファイルを直接追加できるようになります。 次のローカル データベース ファイルは現在サポートされています: SQL Server Compact データベース ファイル (.sdf) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL Server Express データベース ファイル (.mdf)、および Microsoft Access データベース ファイル (.mdb または .accdb)。  
+   SQL Server データベースのリモート インスタンスに接続できるだけでなく、データベースを含む実際のファイルに直接接続することもできます。 これにより、アプリケーションの一部として配置可能なプロジェクトに、データベース ファイルを直接追加できるようになります。 次のローカル データベース ファイルは現在サポートされています: SQL Server Compact データベース ファイル (.sdf) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL Server Express データベース ファイル (.mdf)、および Microsoft Access データベース ファイル (.mdb または .accdb)。  
   
 #### <a name="to-create-a-data-connection-to-the-northwind-databasesql-server-database-file-mdf"></a>Northwind データベース (SQL Server データベース ファイル (.mdf)) へのデータ接続を作成するには  
   

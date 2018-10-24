@@ -13,23 +13,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 36ec73ef7b414519f0939c47c167f0e89c1e0941
-ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
+ms.openlocfilehash: 848778506bdea1b7bf61b6a94a1fb14908a7b930
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39638952"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908937"
 ---
 # <a name="how-to-provide-context-for-editors"></a>方法: エディターのコンテキストを提供
 エディターのコンテキストは、エディターにフォーカスがあるか、ツール ウィンドウにフォーカスが移動された直前にフォーカスがあった場合にのみアクティブです。 次のタスクを実行して、エディターのコンテキストを行うことができます。  
   
-1.  コンテキスト バッグを作成します。  
+1. コンテキスト バッグを作成します。  
   
-2.  選択範囲の要素の識別子 (SEID) コンテキスト バッグに発行します。  
+2. 選択範囲の要素の識別子 (SEID) コンテキスト バッグに発行します。  
   
-3.  バッグ内のコンテキストを維持します。  
+3. バッグ内のコンテキストを維持します。  
   
- これらのタスクは、次の手順で説明します。 コンテキストを提供する詳細については、次を参照してください。**堅牢なプログラミング**この記事で後述します。  
+   これらのタスクは、次の手順で説明します。 コンテキストを提供する詳細については、次を参照してください。**堅牢なプログラミング**この記事で後述します。  
   
 ## <a name="to-create-a-context-bag-for-an-editor-or-a-designer"></a>エディターまたはデザイナーのコンテキスト バッグを作成するには  
   

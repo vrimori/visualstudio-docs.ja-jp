@@ -16,12 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9b3a07f56819818e55548292f3dbcdc1095d9f00
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: b2ccffd384bd508998f2d82098a99835f59ad641
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908783"
 ---
 # <a name="form-support-in-workflows"></a>ワークフロー内でのフォームのサポート
   次の 4 つの種類のフォームをワークフローで使用できます: アソシエーション、開始、タスク、および変更します。 これらのフォーム型は、ASPX フォームまたは InfoPath フォームのいずれかに基づいて作成できます。 レベルをサポートする[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]は特定のフォームは、次の表で説明されているいくつかの要因によって異なります。 ワークフローの形式の種類の詳細については、次を参照してください。[ワークフロー フォームの概要](http://go.microsoft.com/fwlink/?LinkId=185228)MSDN Web サイト。  
@@ -43,7 +43,7 @@ ms.locfileid: "36326081"
  次の表[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]にインポートされる SharePoint の再利用可能なワークフローで ASPX または InfoPath のフォーム上のさまざまなフォーム型のサポート[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]します。  
   
 |フォームの種類|SharePoint Designer からインポートされた ASPX フォームを含む再利用可能なワークフロー|SharePoint Designer からインポートされた InfoPath フォームを含む再利用可能なワークフロー|  
-|---------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
+|---------------|-------------------------------------------------------------------------------| - |  
 |関連付け|フォームが参照されている、 *Elements.xml*ワークフローのファイル。<br />- *Elements.xml*形式の名前を変更または削除すると、ときに、またはその配置パスが変更されたときに、ワークフローのファイルをリファクタリングします。|-フォームは、インポートしますが、で参照されていない、 *Elements.xml*のワークフロー。<br />- *Elements.xml*ワークフローのファイルをリファクタリングできません。|  
 |開始|-フォームが、ワークフローによって参照されている、 *Elements.xml*ワークフローのファイル。<br />- *Elements.xml*形式の名前を変更または削除すると、ときに、またはその配置パスが変更されたときに、ワークフローのファイルをリファクタリングします。|-フォームは、インポートしますが、で参照されていない、 *Elements.xml*のワークフロー。<br />- *Elements.xml*ワークフローのファイルをリファクタリングできません。 **注:** 規則およびプロパティを追加およびこのシナリオを実現するための変更する必要があります。|  
 |タスク|フォームが参照されている、 *Elements.xml*ワークフローのファイル。<br />- *Elements.xml*ワークフローのファイルをリファクタリングできません。|-フォームは、インポートしますが、で参照されていない、 *Elements.xml*のワークフロー。<br />- *Elements.xml*ワークフローのファイルをリファクタリングできません。 **注:** 規則およびプロパティを追加およびこのシナリオを実現するための変更する必要があります。|  

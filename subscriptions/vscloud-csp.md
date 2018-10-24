@@ -9,12 +9,12 @@ description: クラウド ソリューション プロバイダーが顧客の�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 9d040d2f586e2c47a6f904f06d483fe484a57429
-ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
+ms.openlocfilehash: 50f4cfeaa6d0f530a70729155f0e81065359281d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46495805"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899462"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>顧客用に Visual Studio クラウド サブスクリプションを購入して管理する
 
@@ -75,6 +75,7 @@ Visual Studio サブスクリプションを別のユーザーに割り当て直
 CSP パートナー向けの Visual Studio の価格を見るには、[パートナー センター](https://partnercenter.microsoft.com)にログインします。  左側のナビゲーションで **[Pricing and offers]\(価格とプラン\)** を選択します。  右上の **[usage-based services]\(使用量ベースのサービス\)** で、今月の価格ファイルを選びます。 Excel スプレッドシートをダウンロードした後、**[Azure Price List]\(Azure 価格リスト\)** シートを開き、**[Meter Category]\(メーター カテゴリ\)** 列を **[Visual Studio]** でフィルターします。
 
 このスプレッドシートの見方を次に示します。
+
 | メーター カテゴリ    |   name                 |  [単位]                                |           内容                          |
 |-------------------|------------------------|---------------------------------------|-------------------------------------------------|
 | Visual Studio     | エンタープライズ             |  サブスクリプション                         | Visual Studio Enterprise - 月間プラン サブスクリプション   |

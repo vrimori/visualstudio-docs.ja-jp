@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81c538897de64f6b7cc1f832cc07604991375872
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: dfdcb3e273e3e2c7b957a78280511980fa9c93fe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283744"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905312"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace スタンドアロン コレクターを使用する
 **IntelliTrace スタンドアロン コレクター** を使用すると、対象コンピューターに Visual Studio をインストールしたり、対象システムの環境を変更したりすることなく、運用サーバーまたは他の環境でアプリの IntelliTrace 診断データを収集できます。 IntelliTrace スタンドアロン コレクターは、Web、SharePoint、WPF、および Windows フォーム アプリで動作します。 データを収集したら、コレクターを削除して、アンインストールします。
@@ -33,22 +33,22 @@ ms.locfileid: "44283744"
 
  **必要条件**
 
--   .NET Framework 3.5、4、または 4.5
+- .NET Framework 3.5、4、または 4.5
 
--   .iTrace ファイルを開くための、開発用コンピューターまたは別のコンピューター上の Visual Studio Enterprise (Professional Edition でも Community Edition でもなく)
+- .iTrace ファイルを開くための、開発用コンピューターまたは別のコンピューター上の Visual Studio Enterprise (Professional Edition でも Community Edition でもなく)
 
-    > [!NOTE]
-    >  必ずシンボル (.pdb) ファイルを保存してください。 IntelliTrace でデバッグおよびコードのステップ実行を行うには、対応するソース ファイルとシンボル ファイルが必要です。 参照してください[配置後の問題の診断](../debugger/diagnose-problems-after-deployment.md)します。
+  > [!NOTE]
+  >  必ずシンボル (.pdb) ファイルを保存してください。 IntelliTrace でデバッグおよびコードのステップ実行を行うには、対応するソース ファイルとシンボル ファイルが必要です。 参照してください[配置後の問題の診断](../debugger/diagnose-problems-after-deployment.md)します。
 
- **FAQ**
+  **FAQ**
 
--   [コレクターで使用できるアプリ](#WhatApps)
+- [コレクターで使用できるアプリ](#WhatApps)
 
--   [開始方法](#GetStarted)
+- [開始方法](#GetStarted)
 
--   [アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)
+- [アプリのパフォーマンスの低下なしにほとんどのデータを取得する方法](#Minimizing)
 
--   [IntelliTrace データを取得できるその他の場所](#WhereElse)
+- [IntelliTrace データを取得できるその他の場所](#WhereElse)
 
 ##  <a name="WhatApps"></a> コレクターで使用できるアプリ
 
@@ -78,40 +78,40 @@ ms.locfileid: "44283744"
 
 ##  <a name="BKMK_Install_the_IntelliTrace_Stand_Alone_Collector"></a> コレクターのインストール
 
-1.  たとえば、アプリのサーバーで作成、コレクター ディレクトリ: **C:\IntelliTraceCollector**
+1. たとえば、アプリのサーバーで作成、コレクター ディレクトリ: **C:\IntelliTraceCollector**
 
-2.  または、Microsoft ダウンロード センターから、Visual Studio 2013 Update 3 インストール フォルダーからコレクターを入手します。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44909)::
+2. または、Microsoft ダウンロード センターから、Visual Studio 2013 Update 3 インストール フォルダーからコレクターを入手します。 [IntelliTrace Collector for Visual Studio 2013 Update 4](https://www.microsoft.com/en-us/download/details.aspx?id=44909)::
 
-    -   **Microsoft ダウンロード センター**:
+   - **Microsoft ダウンロード センター**:
 
-        1.  **IntelliTraceCollector.exe**の横の **[ダウンロード]** を選択します。
+     1. **IntelliTraceCollector.exe**の横の **[ダウンロード]** を選択します。
 
-        2.  IntelliTraceCollector.exe をコレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) に保存します。
+     2. IntelliTraceCollector.exe をコレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) に保存します。
 
-        3.  IntelliTraceCollector.exe を実行します。 IntelliTraceCollection.cab ファイルが抽出されます。
+     3. IntelliTraceCollector.exe を実行します。 IntelliTraceCollection.cab ファイルが抽出されます。
 
-         \- または -
+        \- または -
 
-    -   **Visual Studio インストール フォルダー**:
+   - **Visual Studio インストール フォルダー**:
 
-        1.  次のフォルダーから IntelliTraceCollection.cab をコピーします。
+     1.  次のフォルダーから IntelliTraceCollection.cab をコピーします。
 
-             **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
+          **..\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\IntelliTrace\12.0.0**
 
-        2.  IntelliTraceCollection.cab をコレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) に保存します。
+     2.  IntelliTraceCollection.cab をコレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) に保存します。
 
-3.  IntelliTraceCollection.cab を展開します。
+3. IntelliTraceCollection.cab を展開します。
 
-    1.  アプリのサーバーでは、管理者としてコマンド プロンプト ウィンドウを開きます。
+   1.  アプリのサーバーでは、管理者としてコマンド プロンプト ウィンドウを開きます。
 
-    2.  コレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) を参照します。
+   2.  コレクター ディレクトリ (たとえば、 **C:\IntelliTraceCollector**) を参照します。
 
-    3.  末尾のピリオド ( **.** ) も含めて**expand**コマンドを使用して、IntelliTraceCollection.cab を展開します。
+   3.  末尾のピリオド ( **.** ) も含めて**expand**コマンドを使用して、IntelliTraceCollection.cab を展開します。
 
-         `expand  /f:* IntelliTraceCollection.cab .`
+        `expand  /f:* IntelliTraceCollection.cab .`
 
-        > [!NOTE]
-        >  ピリオド (**.**) を指定することにより、ローカライズされた収集計画を含むサブフォルダーが保持されます。
+       > [!NOTE]
+       >  ピリオド (**.**) を指定することにより、ローカライズされた収集計画を含むサブフォルダーが保持されます。
 
 ##  <a name="ConfigurePermissionsRunningCollector"></a> コレクター ディレクトリのアクセス許可を設定する
 
@@ -167,47 +167,47 @@ ms.locfileid: "44283744"
 
 ##  <a name="BKMK_Create_and_Configure_a_Log_File_Directory"></a> .iTrace ファイル ディレクトリのアクセス許可を設定する
 
-1.  アプリのサーバー上で作成など、.iTrace ファイル ディレクトリ: **C:\IntelliTraceLogFiles**
+1. アプリのサーバー上で作成など、.iTrace ファイル ディレクトリ: **C:\IntelliTraceLogFiles**
 
-    > [!NOTE]
-    >  -   アプリ パフォーマンスの低下を回避するには、非常にアクティブでないローカルの高速ディスク上の場所を選択します。
-    > -   .iTrace ファイルとコレクター ファイルは同じ場所に配置できます。 ただし、Web アプリまたは SharePoint アプリケーションがある場合は、この場所がアプリケーションをホストするディレクトリの外部にあることを確認します。
+   > [!NOTE]
+   > - アプリ パフォーマンスの低下を回避するには、非常にアクティブでないローカルの高速ディスク上の場所を選択します。
+   >   -   .iTrace ファイルとコレクター ファイルは同じ場所に配置できます。 ただし、Web アプリまたは SharePoint アプリケーションがある場合は、この場所がアプリケーションをホストするディレクトリの外部にあることを確認します。
+   > 
+   > [!IMPORTANT]
+   > - .iTrace ファイル ディレクトリへのアクセスを、コレクターを使用する必要がある ID のみに制限します。 IntelliTrace はメソッド パラメーターに渡されるデータや戻り値として渡されるデータを記録できるため、ユーザー、データベース、その他のソースの場所、および接続文字列のデータなどの重要情報が .iTrace ファイルに含まれることがあります。
+   >   -   .iTrace ファイルを開くことができるユーザーが、重要情報を表示する権限が与えられているユーザーであることを確認します。 .iTrace ファイルを共有する場合は注意してください。 他のユーザーがアクセスを必要とするときは、安全な共有の場所にファイルをコピーします。
 
-    > [!IMPORTANT]
-    >  -   .iTrace ファイル ディレクトリへのアクセスを、コレクターを使用する必要がある ID のみに制限します。 IntelliTrace はメソッド パラメーターに渡されるデータや戻り値として渡されるデータを記録できるため、ユーザー、データベース、その他のソースの場所、および接続文字列のデータなどの重要情報が .iTrace ファイルに含まれることがあります。
-    > -   .iTrace ファイルを開くことができるユーザーが、重要情報を表示する権限が与えられているユーザーであることを確認します。 .iTrace ファイルを共有する場合は注意してください。 他のユーザーがアクセスを必要とするときは、安全な共有の場所にファイルをコピーします。
+2. Web アプリまたは SharePoint アプリケーションのアプリケーション プールに、.iTrace ファイル ディレクトリに対する完全なアクセス許可を与えます。 Windows の **icacls** コマンドまたはエクスプローラー (またはファイル エクスプローラー) を使用できます。
 
-2.  Web アプリまたは SharePoint アプリケーションのアプリケーション プールに、.iTrace ファイル ディレクトリに対する完全なアクセス許可を与えます。 Windows の **icacls** コマンドまたはエクスプローラー (またはファイル エクスプローラー) を使用できます。
+    例えば:
 
-     例えば:
+   - Windows の **icacls** コマンドを使用してアクセス許可を設定するには:
 
-    -   Windows の **icacls** コマンドを使用してアクセス許可を設定するには:
+     - **DefaultAppPool** アプリケーション プールの Web アプリの場合:
 
-        -   **DefaultAppPool** アプリケーション プールの Web アプリの場合:
+        `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\DefaultAppPool":F`
 
-             `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\DefaultAppPool":F`
+     - **SharePoint - 80** アプリケーション プールの SharePoint アプリケーションの場合:
 
-        -   **SharePoint - 80** アプリケーション プールの SharePoint アプリケーションの場合:
+        `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`
 
-             `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`
+       - または -
 
-         - または -
+   - エクスプローラー (またはファイル エクスプローラー) を使用してアクセス許可を設定するには:
 
-    -   エクスプローラー (またはファイル エクスプローラー) を使用してアクセス許可を設定するには:
+     1.  .iTrace ファイル ディレクトリの **[プロパティ]** を開きます。
 
-        1.  .iTrace ファイル ディレクトリの **[プロパティ]** を開きます。
+     2.  **[セキュリティ]** タブで、 **[編集]**、 **[追加]** を順に選択します。
 
-        2.  **[セキュリティ]** タブで、 **[編集]**、 **[追加]** を順に選択します。
+     3.  **[オブジェクトの種類を選択してください]** ボックスに **[ビルトイン セキュリティ プリンシパル]** が表示されることを確認します。 選択しない場合**オブジェクトの種類**に追加します。
 
-        3.  **[オブジェクトの種類を選択してください]** ボックスに **[ビルトイン セキュリティ プリンシパル]** が表示されることを確認します。 選択しない場合**オブジェクトの種類**に追加します。
+     4.  ローカル コンピューターが **[場所の指定]** ボックスに表示されることを確認します。 選択しない場合**場所**を変更します。
 
-        4.  ローカル コンピューターが **[場所の指定]** ボックスに表示されることを確認します。 選択しない場合**場所**を変更します。
+     5.  **[選択するオブジェクト名を入力してください]** ボックスに、Web アプリまたは SharePoint アプリケーションのアプリケーション プールを追加します。
 
-        5.  **[選択するオブジェクト名を入力してください]** ボックスに、Web アプリまたは SharePoint アプリケーションのアプリケーション プールを追加します。
+     6.  **[名前の確認]** を選択して名前を解決します。 **[OK]** をクリックします。
 
-        6.  **[名前の確認]** を選択して名前を解決します。 **[OK]** をクリックします。
-
-        7.  アプリケーション プールに対して **フル コントロール**のアクセス許可が設定されていることを確認します。
+     7.  アプリケーション プールに対して **フル コントロール**のアクセス許可が設定されていることを確認します。
 
 ##  <a name="BKMK_Collect_Data_from_IIS_Application_Pools"></a> Web アプリまたは SharePoint アプリケーションからデータを収集する
 
@@ -291,98 +291,95 @@ ms.locfileid: "44283744"
 
  アプリのパフォーマンスが低下することなく、ほとんどのデータを取得する方法を次に示します。
 
--   問題を再現できる場合や、問題があると思われる場合にのみ、コレクターを実行します。
+- 問題を再現できる場合や、問題があると思われる場合にのみ、コレクターを実行します。
 
-     収集を開始し、問題を再現し、収集を停止します。 Visual Studio Enterprise で .iTrace ファイルを開き、データを確認します。 「 [Visual Studio Enterprise で .iTrace ファイルを開く](#BKMK_View_IntelliTrace_Log_Files)よりもパフォーマンスに及ぼす影響が少なくなります。
+   収集を開始し、問題を再現し、収集を停止します。 Visual Studio Enterprise で .iTrace ファイルを開き、データを確認します。 「 [Visual Studio Enterprise で .iTrace ファイルを開く](#BKMK_View_IntelliTrace_Log_Files)よりもパフォーマンスに及ぼす影響が少なくなります。
 
--   Web アプリおよび SharePoint アプリケーションの場合、コレクターは、指定されたアプリケーション プールを共有するすべてのアプリのデータを記録します。 そのため、収集計画で指定できるのは 1 つのアプリのモジュールのみであるにもかかわらず、同じアプリケーション プールを共有するすべてのアプリの速度が低下する可能性があります。
+- Web アプリおよび SharePoint アプリケーションの場合、コレクターは、指定されたアプリケーション プールを共有するすべてのアプリのデータを記録します。 そのため、収集計画で指定できるのは 1 つのアプリのモジュールのみであるにもかかわらず、同じアプリケーション プールを共有するすべてのアプリの速度が低下する可能性があります。
 
-     コレクターによって他のアプリの速度が低下するのを回避するためには、それぞれのアプリを専用のアプリケーション プールでホストします。
+   コレクターによって他のアプリの速度が低下するのを回避するためには、それぞれのアプリを専用のアプリケーション プールでホストします。
 
--   IntelliTrace がデータを収集する計画のイベントを確認します。 関連性のない、または希望しないイベントを無効にするよう、収集計画を編集します。
+- IntelliTrace がデータを収集する計画のイベントを確認します。 関連性のない、または希望しないイベントを無効にするよう、収集計画を編集します。
 
-     イベントを無効にするには、次のように `enabled` 要素の `<DiagnosticEventSpecification>` 属性を `false`に設定します。
+   イベントを無効にするには、次のように `enabled` 要素の `<DiagnosticEventSpecification>` 属性を `false`に設定します。
 
-     `<DiagnosticEventSpecification enabled="false">`
+   `<DiagnosticEventSpecification enabled="false">`
 
-     `enabled` 属性がない場合、イベントが有効になります。
+   `enabled` 属性がない場合、イベントが有効になります。
 
-     *これにより、どのようにパフォーマンスが向上しますか。*
+   *これにより、どのようにパフォーマンスが向上しますか。*
 
-    -   アプリに関連しないイベントを無効にすると、起動時間を短縮できます。 たとえば、Windows Workflow を使用しないアプリの Windows Workflow イベントを無効にします。
+  -   アプリに関連しないイベントを無効にすると、起動時間を短縮できます。 たとえば、Windows Workflow を使用しないアプリの Windows Workflow イベントを無効にします。
 
-    -   レジストリにアクセスするアプリのレジストリ イベントを無効にすると、起動およびランタイムのパフォーマンスは向上し、レジストリ設定に関する問題は見られません。
+  -   レジストリにアクセスするアプリのレジストリ イベントを無効にすると、起動およびランタイムのパフォーマンスは向上し、レジストリ設定に関する問題は見られません。
 
--   IntelliTrace がデータを収集する収集計画のモジュールを確認します。 目的のモジュールのみ含めるように収集計画を編集します。
+- IntelliTrace がデータを収集する収集計画のモジュールを確認します。 目的のモジュールのみ含めるように収集計画を編集します。
 
-    1.  収集計画を開きます。 `<ModuleList>` 要素を検索します。
+  1. 収集計画を開きます。 `<ModuleList>` 要素を検索します。
 
-    2.  `<ModuleList>`で、 `isExclusionList` 属性を `false`に設定します。
+  2. `<ModuleList>`で、 `isExclusionList` 属性を `false`に設定します。
 
-    3.  `<Name>` 要素を使用して、ファイル名、文字列が名前を含まれるモジュールを含む文字列値、または公開キーのいずれかで各モジュールを指定します。
+  3. `<Name>` 要素を使用して、ファイル名、文字列が名前を含まれるモジュールを含む文字列値、または公開キーのいずれかで各モジュールを指定します。
 
      たとえば、Fabrikam Fiber Web アプリの通常のメイン Web モジュールからデータを収集するには、次のようなリストを作成します。
 
-    ```xml
-    <ModuleList isExclusionList="false">
-       <Name>FabrikamFiber.Web.dll</Name>
-    </ModuleList>
+  ```xml
+  <ModuleList isExclusionList="false">
+     <Name>FabrikamFiber.Web.dll</Name>
+  </ModuleList>
+  ```
 
-    ```
+   名前に "Fabrikam" が含まれるモジュールからデータを収集するには、次のようなリストを作成します。
 
-     名前に "Fabrikam" が含まれるモジュールからデータを収集するには、次のようなリストを作成します。
+  ```xml
+  <ModuleList isExclusionList="false">
+     <Name>Fabrikam</Name>
+  </ModuleList>
+  ```
 
-    ```xml
-    <ModuleList isExclusionList="false">
-       <Name>Fabrikam</Name>
-    </ModuleList>
+   公開キー トークンを指定してモジュールからデータを収集するには、次のようなリストを作成します。
 
-    ```
+  ```xml
+  <ModuleList isExclusionList="false">
+     <Name>PublicKeyToken:B77A5C561934E089</Name>
+     <Name>PublicKeyToken:B03F5F7F11D50A3A</Name>
+     <Name>PublicKeyToken:31BF3856AD364E35</Name>
+     <Name>PublicKeyToken:89845DCD8080CC91</Name>
+     <Name>PublicKeyToken:71E9BCE111E9429C</Name>
+  </ModuleList>
+  ```
 
-     公開キー トークンを指定してモジュールからデータを収集するには、次のようなリストを作成します。
+   *これにより、どのようにパフォーマンスが向上しますか。*
 
-    ```xml
-    <ModuleList isExclusionList="false">
-       <Name>PublicKeyToken:B77A5C561934E089</Name>
-       <Name>PublicKeyToken:B03F5F7F11D50A3A</Name>
-       <Name>PublicKeyToken:31BF3856AD364E35</Name>
-       <Name>PublicKeyToken:89845DCD8080CC91</Name>
-       <Name>PublicKeyToken:71E9BCE111E9429C</Name>
-    </ModuleList>
+   これにより、メソッド呼び出し情報、およびアプリの開始時と実行時に IntelliTrace が収集するその他のインストルメンテーション データの量が減少します。 このデータにより、次のことができます。
 
-    ```
+  - データ収集後にコードをステップ実行します。
 
-     *これにより、どのようにパフォーマンスが向上しますか。*
+  - 関数呼び出しとの間で受け渡しされる値を確認します。
 
-     これにより、メソッド呼び出し情報、およびアプリの開始時と実行時に IntelliTrace が収集するその他のインストルメンテーション データの量が減少します。 このデータにより、次のことができます。
+    *なぜ代わりにモジュールを除外しないのですか。*
 
-    -   データ収集後にコードをステップ実行します。
+    既定では、収集計画は `isExclusionList` 属性を `true`に設定してモジュールを除外します。 ただし、モジュールを除外しても、リストの条件を満たさないモジュール、必要がない可能性があるサードパーティまたはオープン ソース モジュールなどのモジュールからのデータを収集してしまう可能性があります。
 
-    -   関数呼び出しとの間で受け渡しされる値を確認します。
+- *IntelliTrace が収集しないデータはありますか。*
 
-     *なぜ代わりにモジュールを除外しないのですか。*
+   はい。パフォーマンスへの影響を抑えるために、IntelliTrace は、データ収集を、メソッドと受け渡しをするプリミティブ データ型の値、およびメソッドと受け渡しをする最上位レベルのオブジェクトのフィールドのプリミティブ データ型の値に制限しています。
 
-     既定では、収集計画は `isExclusionList` 属性を `true`に設定してモジュールを除外します。 ただし、モジュールを除外しても、リストの条件を満たさないモジュール、必要がない可能性があるサードパーティまたはオープン ソース モジュールなどのモジュールからのデータを収集してしまう可能性があります。
+   たとえば、次のように整数の `AlterEmployee` と `id` オブジェクトの `Employee` を受け取る `oldemployee`メソッド シグネチャがあるとします。
 
--   *IntelliTrace が収集しないデータはありますか。*
+   `public Employee AlterEmployee(int id, Employee oldemployee)`
 
-     はい。パフォーマンスへの影響を抑えるために、IntelliTrace は、データ収集を、メソッドと受け渡しをするプリミティブ データ型の値、およびメソッドと受け渡しをする最上位レベルのオブジェクトのフィールドのプリミティブ データ型の値に制限しています。
+   `Employee` の型には、 `Id`、 `Name`、および `HomeAddress`の各属性が含まれます。 `Employee` の型と `Address` の型との間に、アソシエーション リレーションシップの関係が存在します。
 
-     たとえば、次のように整数の `AlterEmployee` と `id` オブジェクトの `Employee` を受け取る `oldemployee`メソッド シグネチャがあるとします。
+   ![Employee と Address の間のリレーションシップ](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
 
-     `public Employee AlterEmployee(int id, Employee oldemployee)`
-
-     `Employee` の型には、 `Id`、 `Name`、および `HomeAddress`の各属性が含まれます。 `Employee` の型と `Address` の型との間に、アソシエーション リレーションシップの関係が存在します。
-
-     ![Employee と Address の間のリレーションシップ](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
-
-     コレクターは、 `id`メソッドから返された、 `Employee.Id`、 `Employee.Name` 、 `Employee` 、および `AlterEmployee` の各オブジェクトの値を記録します。 ただし、null であるかどうかの情報を除き、 `Address` オブジェクトについての情報は記録しません。 コレクターは、メソッド パラメーターとして記録される時点のパラメーターとしてそれらのローカル変数を他のメソッドが使用する場合を除き、 `AlterEmployee` メソッドのローカル変数に関するデータは記録しません。
+   コレクターは、 `id`メソッドから返された、 `Employee.Id`、 `Employee.Name` 、 `Employee` 、および `AlterEmployee` の各オブジェクトの値を記録します。 ただし、null であるかどうかの情報を除き、 `Address` オブジェクトについての情報は記録しません。 コレクターは、メソッド パラメーターとして記録される時点のパラメーターとしてそれらのローカル変数を他のメソッドが使用する場合を除き、 `AlterEmployee` メソッドのローカル変数に関するデータは記録しません。
 
 ##  <a name="WhereElse"></a> IntelliTrace データを取得できるその他の場所
 
 -   IntelliTrace デバッグ セッションを Visual Studio Enterprise から次を参照してください。 [IntelliTrace 機能](../debugger/intellitrace-features.md)します。
 
--   Microsoft Test Manager でのテスト セッションから次を参照してください。[方法: 困難なの問題のデバッグを支援する IntelliTrace データの収集](/visualstudio/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues)します。
+-   Microsoft Test Manager のテスト セッションからの場合は、「 [方法: 困難な問題をデバッグするのに役立つ IntelliTrace データを収集する](/visualstudio/test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues)」を参照します。
 
 ## <a name="where-can-i-get-more-information"></a>情報の入手方法
  [保存された IntelliTrace データの使用](../debugger/using-saved-intellitrace-data.md)

@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15a1a6888ca35df54ff6073aefaf686327b4cd8a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b5a485baaa1fdeab4a0d4c61b82f5381a931ac85
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31584933"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897187"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>パフォーマンス データ ファイルを使ったシンボル情報の保存
 
@@ -43,7 +43,7 @@ Visual Studio IDE を使用してファイルを分析している場合、VSP �
 
 - 型のデータを収集した場合、vsperfreport コマンド ラインに /SUMMARY:TYPE を追加します。
 
- Windows やその他の Microsoft プログラムからシンボルを確認できない場合は、次のように解決します。
+  Windows やその他の Microsoft プログラムからシンボルを確認できない場合は、次のように解決します。
 
 - Windows シンボル キャッシュのパスを設定したことを確認します。 シンボル キャッシュのパスを設定するには、次のいずれかを実行します。
 

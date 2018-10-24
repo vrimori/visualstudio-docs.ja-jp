@@ -14,29 +14,29 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ba571f6ad66855c44902e06467889e2cae5b4555
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 016e2a0641772992c9c3e6f423e105c42ae20ff1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24571522"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909823"
 ---
 # <a name="implementing-smart-host-helper-interfaces"></a>スマート ホスト ヘルパー インターフェイスの実装
 [IDebugDocumentHelper インターフェイス](../winscript/reference/idebugdocumenthelper-interface.md)は、スマート ホストに必要な多くのインターフェイスの実装を提供することで、アクティブ デバッグ用のスマート ホストを作成するタスクを大幅に簡略化します。  
   
  `IDebugDocumentHelper` を使うスマート ホストにするためにホスト アプリケーションで行う必要があることは、次の 3 つだけです。  
   
-1.  プロセス デバッグ マネージャーの `CoCreate` を実行し、[IProcessDebugManager インターフェイス](../winscript/reference/iprocessdebugmanager-interface.md)を使ってアプリケーションをデバッグできるアプリケーションのリストに追加します。  
+1. プロセス デバッグ マネージャーの `CoCreate` を実行し、[IProcessDebugManager インターフェイス](../winscript/reference/iprocessdebugmanager-interface.md)を使ってアプリケーションをデバッグできるアプリケーションのリストに追加します。  
   
-2.  [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) メソッドを使って、各スクリプト オブジェクトのデバッグ ドキュメント ヘルパーを作成します。 ドキュメント名、親ドキュメント、テキスト、およびスクリプト ブロックが定義されていることを確認します。  
+2. [IProcessDebugManager::CreateDebugDocumentHelper](../winscript/reference/iprocessdebugmanager-createdebugdocumenthelper.md) メソッドを使って、各スクリプト オブジェクトのデバッグ ドキュメント ヘルパーを作成します。 ドキュメント名、親ドキュメント、テキスト、およびスクリプト ブロックが定義されていることを確認します。  
   
-3.  [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) インターフェイス (アクティブ スクリプトに必要です) を実装しているオブジェクトに、[IActiveScriptSiteDebug インターフェイス](../winscript/reference/iactivescriptsitedebug-interface.md)を実装します。 `IActiveScriptSiteDebug` インターフェイスの重要なメソッドのみがヘルパーにデリゲートします。  
+3. [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) インターフェイス (アクティブ スクリプトに必要です) を実装しているオブジェクトに、[IActiveScriptSiteDebug インターフェイス](../winscript/reference/iactivescriptsitedebug-interface.md)を実装します。 `IActiveScriptSiteDebug` インターフェイスの重要なメソッドのみがヘルパーにデリゲートします。  
   
- ホストは、構文の色、ドキュメントのコンテキスト作成、その他の拡張機能をさらに制御する必要がある場合は、[IDebugDocumentHost インターフェイス](../winscript/reference/idebugdocumenthost-interface.md)を実装することもできます。  
+   ホストは、構文の色、ドキュメントのコンテキスト作成、その他の拡張機能をさらに制御する必要がある場合は、[IDebugDocumentHost インターフェイス](../winscript/reference/idebugdocumenthost-interface.md)を実装することもできます。  
   
- スマート ホスト ヘルパーの大きな制限として、スマート ホスト ヘルパーは追加された後で内容が変更または縮小されたドキュメントだけを処理できます (ドキュメントを展開することはできます)。 ただし、多くのスマート ホストでは、必要な機能はスマート ホスト ヘルパーによって提供されます。  
+   スマート ホスト ヘルパーの大きな制限として、スマート ホスト ヘルパーは追加された後で内容が変更または縮小されたドキュメントだけを処理できます (ドキュメントを展開することはできます)。 ただし、多くのスマート ホストでは、必要な機能はスマート ホスト ヘルパーによって提供されます。  
   
- 以下では各ステップについて詳しく説明します。  
+   以下では各ステップについて詳しく説明します。  
   
 ## <a name="create-an-application-object"></a>アプリケーション オブジェクトを作成する  
  スマート ホスト ヘルパーを使うには、その前に、デバッガー内でアプリケーションを表す [IDebugApplication インターフェイス](../winscript/reference/idebugapplication-interface.md) オブジェクトを作成する必要があります。  
@@ -99,11 +99,11 @@ pddh->CreateDebugDocumentContext(ulStartPos + uCharacterOffset, cChars, &pddcNew
   
 -   [IDebugDocumentHelper::AddDeferredText](../winscript/reference/idebugdocumenthelper-adddeferredtext.md) を使ってテキストを追加し、ホストが実際の文字をすぐに提供する必要がないようにします。 文字が本当に必要になると、ヘルパーはホストで [IDebugDocumentHost::GetDeferredText](../winscript/reference/idebugdocumenthost-getdeferredtext.md) を呼び出します。  
   
--   ヘルパーによって提供される既定の構文の色分けを上書きします。 ヘルパーは [IDebugDocumentHost::GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) を呼び出して文字の範囲の色を決定し、ホストが `E_NOTIMPL` を返す場合は既定の実装にフォールバックします。  
+-   ヘルパーによって提供される既定の構文の色分けをオーバーライドします。 ヘルパーは [IDebugDocumentHost::GetScriptTextAttributes](../winscript/reference/idebugdocumenthost-getscripttextattributes.md) を呼び出して文字の範囲の色を決定し、ホストが `E_NOTIMPL` を返す場合は既定の実装にフォールバックします。  
   
--   [IDebugDocumentHost::OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md) を実装することでヘルパーによって作成されたドキュメント コンテキストで不明な制御を提供します。 これにより、ホストは既定のドキュメント コンテキストの実装の機能を上書きできます。  
+-   [IDebugDocumentHost::OnCreateDocumentContext](../winscript/reference/idebugdocumenthost-oncreatedocumentcontext.md) を実装することでヘルパーによって作成されたドキュメント コンテキストで不明な制御を提供します。 これにより、ホストは既定のドキュメント コンテキストの実装の機能をオーバーライドできます。  
   
 -   ファイル システムでのドキュメントのパス名を提供します。 一部のデバッグ UI はこれを使って、ユーザーがドキュメントを編集して変更を保存できるようにします。 ドキュメントが保存された後は、ホストに通知するために [IDebugDocumentHost::NotifyChanged](../winscript/reference/idebugdocumenthost-notifychanged.md) が呼び出されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクティブ スクリプトのデバッグの概要](../winscript/active-script-debugging-overview.md)

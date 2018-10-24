@@ -18,12 +18,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54a6dee20c35b290b50306d5484dc139e8a7600a
-ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
+ms.openlocfilehash: 447a01f96c9f642bca743247551bc2b3d38e4d23
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36235103"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905955"
 ---
 # <a name="command-window"></a>コマンド ウィンドウ
 **[コマンド]** ウィンドウは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合開発環境 (IDE) でコマンドやエイリアスを実行するときに使用します。 メニュー コマンドと、メニューに表示されないコマンドの両方を実行できます。 **[コマンド]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** を選択し、**[コマンド ウィンドウ]** をクリックします。
@@ -55,7 +55,7 @@ ms.locfileid: "36235103"
  コマンド モードでの移動には、次のショートカット キーを使用できます。
 
 |アクション|カーソルの位置|ショートカット キー|
-|------------|---------------------|----------------|
+|------------| - |----------------|
 |以前に入力したコマンドを一覧内で順番に参照する。|入力行|↑キーおよび↓キー|
 |ウィンドウを上にスクロールする。|コマンド ウィンドウの内容|Ctrl + ↑|
 |ウィンドウを下にスクロールする。|コマンド ウィンドウの内容|↓キーまたは Ctrl + ↓キー|
@@ -114,5 +114,5 @@ Edit.ReplaceInFiles /case /pattern:regex var[1-3]+ oldpar
 
 ## <a name="see-also"></a>参照
 
-- [Visual Studio コマンドのエイリアス](../../ide/reference/visual-studio-command-aliases.md)
+- [Visual Studio Command Aliases](../../ide/reference/visual-studio-command-aliases.md)
 - [Visual Studio のコマンド](../../ide/reference/visual-studio-commands.md)

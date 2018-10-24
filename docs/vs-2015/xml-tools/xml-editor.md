@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ee20be802884e20b885e232da43f2ade9f96dbfb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5053910e4f5760648eef989162eb31e3c3cc5c9e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49236874"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896329"
 ---
 # <a name="xml-editor"></a>XML エディター
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,27 +27,27 @@ ms.locfileid: "49236874"
   
 XML エディターは [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio のテキスト エディターに基づいており、XML 言語のサポートが追加されています。 XML エディターには次の機能が含まれます。  
   
--   XML 1.0 の構文チェック。  
+- XML 1.0 の構文チェック。  
   
--   入力中のスキーマ検証。  
+- 入力中のスキーマ検証。  
   
--   スキーマから生成されるスニペットを含めた、XML スニペットのサポート。  
+- スキーマから生成されるスニペットを含めた、XML スニペットのサポート。  
   
--   ドキュメント型定義 (DTD) のサポート。  
+- ドキュメント型定義 (DTD) のサポート。  
   
--   XML スキーマ定義言語 (XSD) スキーマのサポート。  
+- XML スキーマ定義言語 (XSD) スキーマのサポート。  
   
--   XML インスタンス ドキュメントからの XML スキーマの作成。  
+- XML インスタンス ドキュメントからの XML スキーマの作成。  
   
--   DTD または XDR (XML-Data Reduced) スキーマの XML スキーマへの変換。  
+- DTD または XDR (XML-Data Reduced) スキーマの XML スキーマへの変換。  
   
--   XSLT 1.0 の構文チェック。  
+- XSLT 1.0 の構文チェック。  
   
--   要素の展開と折りたたみが可能なドキュメントのアウトライン表示。  
+- 要素の展開と折りたたみが可能なドキュメントのアウトライン表示。  
   
--   統合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)します。 これにより、XML スキーマの階層が表示されます。  
+- 統合、 [XML スキーマ エクスプ ローラー](../xml-tools/xml-schema-explorer.md)します。 これにより、XML スキーマの階層が表示されます。  
   
- XML エディターは、よく知られている .xml、.xsd、.xsl、.config などのファイル拡張子に対して呼び出されます。ファイルに XML が含まれている場合は、未知のファイル拡張子についても XML エディターが呼び出されます。 開くことも、ファイルを XML エディターを使用して、**ファイルを開く**オプションと XML エディターを一覧から選択します。  
+  XML エディターは、よく知られている .xml、.xsd、.xsl、.config などのファイル拡張子に対して呼び出されます。ファイルに XML が含まれている場合は、未知のファイル拡張子についても XML エディターが呼び出されます。 開くことも、ファイルを XML エディターを使用して、**ファイルを開く**オプションと XML エディターを一覧から選択します。  
   
 ## <a name="express-editions"></a>Express Edition  
  XML エディターの次の機能は、Visual Studio Express Edition で提供されていません。  

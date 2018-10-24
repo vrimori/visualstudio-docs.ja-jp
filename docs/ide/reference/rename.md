@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 696ec34bb0009b9b09b5902a102c71cf1331f320
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b85814be6df104a0d5859fbb339ce0dc665c09c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945455"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908752"
 ---
 # <a name="rename-a-code-symbol-refactoring"></a>コード シンボルの名前の変更のリファクタリング
 
@@ -41,34 +41,34 @@ ms.locfileid: "31945455"
 
    - C#: 
 
-    ![強調表示されたコード - C#](media/rename-highlight-cs.png)
+       ![強調表示されたコード - C#](media/rename-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示されたコード - Visual Basic](media/rename-highlight-vb.png)
+       ![強調表示されたコード - Visual Basic](media/rename-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + R** キーを押し、次に **Ctrl + R** キーを押します。 選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
+      - **Ctrl + R** キーを押し、次に **Ctrl + R** キーを押します。 選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
    - **マウス**
-     - **[編集] > [リファクター] > [名前の変更]** の順に選択します。
-     - コードを右クリックし **[名前の変更]** を選択します。
+      - **[編集] > [リファクター] > [名前の変更]** の順に選択します。
+      - コードを右クリックし **[名前の変更]** を選択します。
 
-1. 新しい名前を入力して、項目の名前を変更します。
+3. 新しい名前を入力して、項目の名前を変更します。
 
    - C#: 
 
-    ![名前の変更のアニメーション - C#](media/rename-animated-cs.gif)
+      ![名前の変更のアニメーション - C#](media/rename-animated-cs.gif)
 
    - Visual Basic: 
 
-    ![名前の変更 - VB](media/rename-rename-vb.png)
+      ![名前の変更 - VB](media/rename-rename-vb.png)
 
    > [!TIP]
    > この新しい名前を使うように、コメントや他の文字列も更新できます。また、エディターの右上に表示される **[名前の変更]** ボックスのチェック ボックスを使って、保存前に[変更をプレビューする](../../ide/preview-changes.md)こともできます。
 
-1. 変更を確認した後は、**[適用]** ボタンを選ぶか、**Enter** キーを押すと、変更がコミットされます。
+4. 変更を確認した後は、**[適用]** ボタンを選ぶか、**Enter** キーを押すと、変更がコミットされます。
 
 > [!NOTE]
 > 競合が発生する可能性がある既存の名前を使うと、**[名前の変更]** ボックスに警告が表示されます。

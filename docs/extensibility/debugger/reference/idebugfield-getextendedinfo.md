@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetExtendedInfo |Microsoft ドキュメント
+title: IDebugField::GetExtendedInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63bf182e4e8b17133fbefd4f4a19c4b8b4a458e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b276b2bff8e8ab5af0f007fbc5bd5dd6074c4d9d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31110316"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896046"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
 このメソッドは、フィールドに関する情報を拡張を取得します。  
@@ -49,20 +49,20 @@ int GetExtendedInfo(
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`guidConstantValue`|バイト シーケンスとしての値。|  
-|`guidConstantType`|型のシグネチャと型。|  
+|`guidConstantValue`|バイトのシーケンスとしての値。|  
+|`guidConstantType`|型の型シグネチャ。|  
   
  `prgBuffer`  
- [out]拡張された情報を返します。  
+ [out]拡張情報を返します。  
   
  `pdwLen`  
- [入力、出力].拡張された情報のサイズをバイト単位で返します。  
+ [入力、出力]拡張された情報のサイズをバイト単位で返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 現時点では、このメソッドは、型または定数の値だけを返します。 呼び出し元で返されるバッファーを解放する必要があります`prgBuffer`呼び出して COM の`CoTaskMemFree`関数 (C++) または<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>(C# の場合)。  
+## <a name="remarks"></a>Remarks  
+ 現時点では、このメソッドは、型または定数の値を返します。 呼び出し元で返されるバッファーを解放する必要があります`prgBuffer`呼び出して COM の`CoTaskMemFree`関数 (C++) または<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>(c#)。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

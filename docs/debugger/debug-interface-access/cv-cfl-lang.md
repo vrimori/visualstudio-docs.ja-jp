@@ -1,5 +1,5 @@
 ---
-title: CV_CFL_LANG |Microsoft ドキュメント
+title: CV_CFL_LANG |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c383fd188c035dfacf41cdf86a84b4afe8dfa40d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 63426af550894df0e9796babaec91ff5758bbf1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31461055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909917"
 ---
 # <a name="cvcfllang"></a>CV_CFL_LANG
-アプリケーションまたはリンクされたモジュールのソース コードの言語を指定します。  
+アプリケーションまたはリンクされているモジュールのソース コードの言語を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,31 +50,31 @@ typedef enum CV_CFL_LANG {
   
 ## <a name="elements"></a>Elements  
  CV_CFL_C  
- アプリケーションの言語は C.  
+ アプリケーションの言語は C です。  
   
  CV_CFL_CXX  
  アプリケーションの言語は C++ です。  
   
  CV_CFL_FORTRAN  
- アプリケーションの言語は、FORTRAN です。  
+ アプリケーションの言語では、FORTRAN です。  
   
  CV_CFL_MASM  
- アプリケーションの言語は、Microsoft マクロ アセンブラーです。  
+ アプリケーションの言語では、Microsoft Macro Assembler です。  
   
  CV_CFL_PASCAL  
  アプリケーションの言語は、pascal 形式です。  
   
  CV_CFL_BASIC  
- アプリケーションの言語は BASIC です。  
+ アプリケーションの言語には BASIC です。  
   
  CV_CFL_COBOL  
- アプリケーションの言語は、COBOL です。  
+ アプリケーションの言語では、COBOL です。  
   
  CV_CFL_LINK  
  アプリケーションは、リンカーによって生成されたモジュールです。  
   
  CV_CFL_CVTRES  
- アプリケーションは、リソース モジュール CVTRES ツールを使用して変換されます。  
+ アプリケーションは、リソース モジュールが CVTRES ツールを使用して変換です。  
   
  CV_CFL_CVTPGD  
  アプリケーションは、CVTPGD ツールで生成された最適化 POGO モジュールです。  
@@ -89,21 +89,21 @@ typedef enum CV_CFL_LANG {
  アプリケーションの言語は、中間言語アセンブリ (つまり、共通言語ランタイム (CLR) アセンブリ) です。  
   
  CV_CFL_JAVA  
- アプリケーションの言語は、Java です。  
+ Java は、アプリケーションの言語です。  
   
  CV_CFL_JSCRIPT  
- アプリケーションの言語は、Jscript です。  
+ アプリケーションの言語では、Jscript です。  
   
  CV_CFL_MSIL  
- アプリケーションの言語は、不明な Microsoft Intermediate Language (MSIL) の結果を使用する可能性があります、 [/LTCG (リンク時コード生成)](/cpp/build/reference/ltcg-link-time-code-generation)スイッチします。  
+ アプリケーションの言語は、不明な Microsoft 中間言語 (MSIL)、結果を使用する可能性があります、 [/LTCG (リンク時コード生成)](/cpp/build/reference/ltcg-link-time-code-generation)スイッチします。  
   
  CV_CFL_HLSL  
- アプリケーションの言語は、高レベルのシェーダー言語です。  
+ アプリケーションの言語は、High Level Shader Language です。  
   
-## <a name="remarks"></a>コメント  
- この列挙体の値がへの呼び出しによって返される、 [idiasymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ この列挙体の値が呼び出しによって返される、 [idiasymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: cvconst.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d2a3b785f79d7b0b1fe038ec6c9280161ad909d
-ms.sourcegitcommit: b45daa3c4f0820b69f9e702c8c1f352ef6856b4d
+ms.openlocfilehash: 48cdb36294f027fcd2e47fca8d903caf5856c236
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43289281"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906066"
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017 を最新リリースに更新する
 
@@ -42,7 +42,7 @@ IDE 内から直接使用しやすくするために、インストールと更�
 
 2. 通知フラグを選択して**通知**ハブを開き、インストールする更新プログラムを選択します。
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](media/vs-install-notifications-hub-15dot6.png "Visual Studio 2017 の 通知ハブ")
+   ![通知ハブを使用して Visual Studio 2017 を更新する](media/vs-install-notifications-hub-15dot6.png "Visual Studio 2017 の 通知ハブ")
 
 3. **[更新]** ダイアログ ボックスが開いたら、**[今すぐ更新]** を選択します。
 
@@ -82,14 +82,14 @@ Visual Studio 2017 の以前のバージョンと同様に、Visual Studio イ�
 
 2. インストーラーを開きます。 必要に応じて、Visual Studio インストーラーを更新してから続行します。
 
-  > [!NOTE]
-  > Windows 10 を実行しているコンピューターの場合、**V** という文字の下に **Visual Studio インストーラー**と表示されるか、**M** という文字の下に **Microsoft Visual Studio インストーラー**と表示されます。
+   > [!NOTE]
+   > Windows 10 を実行しているコンピューターの場合、**V** という文字の下に **Visual Studio インストーラー**と表示されるか、**M** という文字の下に **Microsoft Visual Studio インストーラー**と表示されます。
 
-2. インストーラーの **[製品]** ページで、インストールされている Visual Studio のエディションを探します。
+3. インストーラーの **[製品]** ページで、インストールされている Visual Studio のエディションを探します。
 
-3. 更新プログラムが使用可能な場合は、**[更新]** ボタンが表示されます  (使用可能な更新プログラムがあるかどうかをインストーラーが判断するために数秒かかる場合があります)。
+4. 更新プログラムが使用可能な場合は、**[更新]** ボタンが表示されます  (使用可能な更新プログラムがあるかどうかをインストーラーが判断するために数秒かかる場合があります)。
 
-  **[更新]** ボタンを選択して更新プログラムをインストールします。
+   **[更新]** ボタンを選択して更新プログラムをインストールします。
 
      ![Visual Studio インストーラーを使用して Visual Studio 2017 を更新する](media/update-visual-studio.png "Visual Studio インストーラーを使用して Visual Studio 2017 を更新する")
 
@@ -101,19 +101,19 @@ Visual Studio 2017 の以前のバージョンと同様に、Visual Studio イ�
 
 1. 更新プログラムがある場合、Visual Studio には対応する通知フラグが表示されます。
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](media/notification-flag.png "Visual Studio の更新プログラムがあることを知らせる通知フラグ")
+   ![通知ハブを使用して Visual Studio 2017 を更新する](media/notification-flag.png "Visual Studio の更新プログラムがあることを知らせる通知フラグ")
 
-  通知フラグを選択して、**通知**ハブを開きます。
+   通知フラグを選択して、**通知**ハブを開きます。
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-hub.png "Visual Studio の通知ハブ")
+   ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-hub.png "Visual Studio の通知ハブ")
 
 2. **["Visual Studio 更新プログラム" が使用可能です]** を選択すると、**[拡張機能と更新プログラム]** ダイアログ ボックスが開きます。
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-hub-select.png "Visual Studio の通知ハブ")
+   ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-hub-select.png "Visual Studio の通知ハブ")
 
 3. **[拡張機能と更新プログラム]** ダイアログ ボックスで、**[更新]** ボタンを選択します。
 
-  ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-extensions-and-updates.png "Visual Studio の [拡張機能と更新プログラム] ダイアログ")
+   ![通知ハブを使用して Visual Studio 2017 を更新する](media/notifications-extensions-and-updates.png "Visual Studio の [拡張機能と更新プログラム] ダイアログ")
 
 #### <a name="more-about-visual-studio-notifications"></a>Visual Studio の通知の詳細
 
@@ -135,14 +135,14 @@ Visual Studio は、Visual Studio 自体またはいずれかのコンポーネ�
 
 1. インストーラーを開きます。 続行する前に、インストーラーの更新が必要な場合があります。 更新が必要な場合は、更新するよう求められます。
 
-  > [!NOTE]
-  > Windows 10 を実行しているコンピューターの場合、**V** という文字の下に **Visual Studio インストーラー**と表示されるか、**M** という文字の下に **Microsoft Visual Studio インストーラー**と表示されます。
+   > [!NOTE]
+   > Windows 10 を実行しているコンピューターの場合、**V** という文字の下に **Visual Studio インストーラー**と表示されるか、**M** という文字の下に **Microsoft Visual Studio インストーラー**と表示されます。
 
 2. インストーラーの **[製品]** ページで、インストールされている Visual Studio のエディションを探します。
 
 3. 更新プログラムが使用可能な場合は、**[更新]** ボタンが表示されます  (使用可能な更新プログラムがあるかどうかをインストーラーが判断するために数秒かかる場合があります)。
 
-  **[更新]** ボタンを選択して更新プログラムをインストールします。
+   **[更新]** ボタンを選択して更新プログラムをインストールします。
 
      ![Visual Studio インストーラーを使用して Visual Studio 2017 を更新する](media/update-visual-studio.png "Visual Studio インストーラーを使用して Visual Studio 2017 を更新する")
 

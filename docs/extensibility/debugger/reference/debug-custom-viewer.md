@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER |Microsoft ドキュメント
+title: DEBUG_CUSTOM_VIEWER |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84d8bdc7a4ea9ac59ee0956226618402b397844b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e86cae45298b3f137e2ebca65fa8c531c6d86457
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31109991"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908445"
 ---
 # <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
 カスタム ビューアーを識別する構造またはビジュアライザーを入力します。  
@@ -51,27 +51,27 @@ public struct DEBUG_CUSTOM_VIEWER {
   
 ## <a name="members"></a>メンバー  
  dwID  
- 複数のビューアーまたはいずれかによって実装されるビジュアライザーを区別するために ID`GUID`です。  
+ 複数の閲覧者またはビジュアライザーで 1 つ実装を区別するために ID`GUID`します。  
   
  bstrMenuName  
- ドロップダウン メニューに表示されるテキストです。  
+ ドロップダウン メニューに表示されるテキスト。  
   
  bstrDescription  
- カスタム ビューアーまたは型のビジュアライザー (する必要があります、null 値を使用しない場合) の説明です。  
+ カスタム ビューアーまたは型のビジュアライザーが (あります null 値を使用しない場合) の説明。  
   
  guidLang  
- 提供する、式エバリュエーターの言語です。  
+ 提供する式エバリュエーターの言語です。  
   
  guidVendor  
- 提供する、式エバリュエーターのベンダー。  
+ 提供する式エバリュエーターのベンダー。  
   
  bstrMetric  
  メトリックをカスタム ビューアーまたは型のビジュアライザー`CLSID`格納されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体のリストがへの呼び出しによって返される、 [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md)メソッド (と拡張機能によって、 [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)メソッド)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

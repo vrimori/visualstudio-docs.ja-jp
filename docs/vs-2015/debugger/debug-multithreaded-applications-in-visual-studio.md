@@ -27,12 +27,12 @@ caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2364fa5ed202f9821ab276fb5cfbb9346a4b258c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4d841456ab95d06a7b586f7a8566f8530acbb021
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298143"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897499"
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>マルチスレッド アプリケーションのデバッグ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -99,16 +99,16 @@ ms.locfileid: "49298143"
  [ブレークポイントの使用](../debugger/using-breakpoints.md)  
  -   個々のスレッドにブレークポイントを配置する場合にブレークポイント フィルターを使用する方法について説明します。  
   
--   トレースポイントを使用すると、プログラムの実行を中断なしでトレースできます。 この方法はデッドロックなどの問題を調べる場合に役立ちます。  
+- トレースポイントを使用すると、プログラムの実行を中断なしでトレースできます。 この方法はデッドロックなどの問題を調べる場合に役立ちます。  
   
- [スレッド化](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87)  
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] プログラミングでのスレッドの概念についてコード例を示しながら説明します。  
+  [スレッド化](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87)  
+  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] プログラミングでのスレッドの概念についてコード例を示しながら説明します。  
   
- [コンポーネントのマルチスレッド](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] コンポーネントでのマルチスレッドの使用方法について説明します。  
+  [コンポーネントのマルチスレッド](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+  [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] コンポーネントでのマルチスレッドの使用方法について説明します。  
   
- [旧形式のコードのためのマルチスレッド サポート (Visual C++)](http://msdn.microsoft.com/library/24425b1f-5031-4c6b-aac7-017115a40e7c)  
- MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
+  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](http://msdn.microsoft.com/library/24425b1f-5031-4c6b-aac7-017115a40e7c)  
+  MFC を使用する C# プログラマを対象とし、スレッドの概念についてコード例を示しながら説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [スレッドとプロセス](../debugger/debug-threads-and-processes.md)   

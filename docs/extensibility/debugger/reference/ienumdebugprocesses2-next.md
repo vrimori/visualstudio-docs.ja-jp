@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugProcesses2::Next |Microsoft ドキュメント
+title: IEnumDebugProcesses2::Next |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1233ccf90602abf69dd8fae9da632d7bcb93eba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 291d46cf84758ec6e5e44f089c0abd73da0ceb3c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31124193"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896161"
 ---
 # <a name="ienumdebugprocesses2next"></a>IEnumDebugProcesses2::Next
 列挙体から次の要素のセットを返します。  
@@ -45,16 +45,16 @@ int Next(
   
 #### <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得する要素の数。 また、最大のサイズを指定、`rgelt`配列。  
+ [in]取得する要素の数。 最大サイズを指定します、`rgelt`配列。  
   
  `rgelt`  
- [入力、出力].配列[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)格納する要素。  
+ [入力、出力]配列[IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)情報を格納する要素。  
   
  `pceltFetched`  
- [out]実際に返される要素の数を返します`rgelt`です。  
+ [out]実際に返される要素の数を返します`rgelt`します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`です。 返します`S_FALSE`要求された要素数より少ないは返されませんでした。 それ以外の場合、エラー コードを返します。  
+ 成功した場合、返します`S_OK`します。 返します`S_FALSE`返される可能性があります、要求された要素数よりも少ない場合、それ以外の場合、エラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md)   

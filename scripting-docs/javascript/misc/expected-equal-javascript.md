@@ -1,5 +1,5 @@
 ---
-title: '予想 &#39; = (& a) #39 です。(JavaScript) |Microsoft ドキュメント'
+title: 予想&#39;=&#39; (JavaScript) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -21,18 +21,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 8cae54b60ae94be5929ae5c5cfb8f8f0c1a2ea92
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24632902"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909998"
 ---
-# <a name="expected-3939-javascript"></a>予想 &#39; = (& a) #39 です。(JavaScript)
-条件付きコンパイル ステートメントで使用する変数を作成しようとしましたが、変数とそれに割り当てる値の間の等号 (=) を配置できませんでした。  
+# <a name="expected-3939-javascript"></a>予想&#39;=&#39; (JavaScript)
+条件付きコンパイル ステートメントを使用する変数を作成しようとしましたが、変数とそれに割り当てる値の間の等号 (=) を配置しませんでした。  
   
 ### <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   等号 (=) を追加します。 例:  
+-   等号 (=) を追加します。 例えば:  
   
     ```JavaScript  
     @set @myvar1 = 1  
