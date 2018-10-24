@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 25fbfec12299cecf265437baa04a3dd86093f30b
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3ec83128682a874a5491d62762b424045f11c4b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49259340"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849854"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio のアンインストール
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +36,11 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
 ##  <a name="uninstalling"></a>   
 #### <a name="to-uninstall-visual-studio-by-using-the-standard-uninstallation-method"></a>"Standard"のアンインストール方法を使用して Visual Studio をアンインストールするには  
   
-1.  **コントロール パネルの [** の**プログラムと機能**] ページで、アンインストール、および選択する製品のエディション**変更**します。  
+1. **コントロール パネルの [** の**プログラムと機能**] ページで、アンインストール、および選択する製品のエディション**変更**します。  
   
-2.  セットアップ ウィザードで選択**アンインストール**、選択**はい**、ウィザードの残りの指示に従います。  
+2. セットアップ ウィザードで選択**アンインストール**、選択**はい**、ウィザードの残りの指示に従います。  
   
- この standard、または既定の方法はいくつか残ります installation of Visual Studio をインストール (たとえば、Microsoft .NET Framework、Microsoft Visual C++ 再頒布可能パッケージ、Microsoft SQL Server など) の背後にある項目。   これらの他の多くのアプリケーションがそれらに依存するためにインストールされているままにします。 ただし、これらも削除する場合は、選択内のエントリ**プログラムと機能**、し、それぞれを個別に削除します。  
+   この standard、または既定の方法はいくつか残ります installation of Visual Studio をインストール (たとえば、Microsoft .NET Framework、Microsoft Visual C++ 再頒布可能パッケージ、Microsoft SQL Server など) の背後にある項目。   これらの他の多くのアプリケーションがそれらに依存するためにインストールされているままにします。 ただし、これらも削除する場合は、選択内のエントリ**プログラムと機能**、し、それぞれを個別に削除します。  
   
 #### <a name="to-uninstall-visual-studio-and-all-other-related-files-that-is-to-uninstall-almost-everything"></a>Visual Studio および他のすべての関連ファイルをアンインストールする (つまり、ほぼすべてをアンインストールする)  
   
@@ -66,18 +66,18 @@ Visual Studio 2017 の最新ドキュメントについては、次を参照し�
   
 #### <a name="to-roll-back-to-a-previous-version-or-release-of--visual-studio"></a>以前のバージョンまたはリリースの Visual Studio にロールバックするには  
   
-1.  このトピックに記載する方法のいずれかを使用して Visual Studio をアンインストールします。  
+1. このトピックに記載する方法のいずれかを使用して Visual Studio をアンインストールします。  
   
-    > [!WARNING]
-    >  期待どおりに Visual Studio (または Visual Studio の更新) の現在のリリースをアンインストールし、以前のリリースをインストールが動作しない可能性があります。  
-    >   
-    >  結果によって異なりますバージョンまたは Visual Studio のインストールがある場合は、そのコンポーネントのバージョンがインストールされている場合、どの製品がインストールされている Visual Studio のリリースまたはそのコンポーネントでは、依存関係をする必要があり、最後でのリリースインストールまたは再インストールを計画するどの Visual Studio の以前のバージョン。  これらすべての変数のため標準的なアンインストールは多くの場合、コンポーネントのままには、Visual Studio の以前のバージョンまたはリリースでは動作しません。  
-    >   
-    >  そのため、最良の結果をお勧めしますを使用して、 [Visual Studio アンインストーラー ツール](https://github.com/Microsoft/VisualStudioUninstaller/releases)します。  
+   > [!WARNING]
+   >  期待どおりに Visual Studio (または Visual Studio の更新) の現在のリリースをアンインストールし、以前のリリースをインストールが動作しない可能性があります。  
+   >   
+   >  結果によって異なりますバージョンまたは Visual Studio のインストールがある場合は、そのコンポーネントのバージョンがインストールされている場合、どの製品がインストールされている Visual Studio のリリースまたはそのコンポーネントでは、依存関係をする必要があり、最後でのリリースインストールまたは再インストールを計画するどの Visual Studio の以前のバージョン。  これらすべての変数のため標準的なアンインストールは多くの場合、コンポーネントのままには、Visual Studio の以前のバージョンまたはリリースでは動作しません。  
+   >   
+   >  そのため、最良の結果をお勧めしますを使用して、 [Visual Studio アンインストーラー ツール](https://github.com/Microsoft/VisualStudioUninstaller/releases)します。  
   
-2.  使用する Visual Studio の以前のバージョンをインストールまたは再インストールします。  
+2. 使用する Visual Studio の以前のバージョンをインストールまたは再インストールします。  
   
- Visual Studio の以前のバージョンをインストールする場合でも、新しいバージョンを使用して、またはリリースがある場合にお試しくださいまだセットアップ プログラム可能性があります。 詳細についてを参照してください、[方法: 特定のリリースの Visual Studio をインストール](../install/how-to-install-a-specific-release-of-visual-studio.md)トピック。  
+   Visual Studio の以前のバージョンをインストールする場合でも、新しいバージョンを使用して、またはリリースがある場合にお試しくださいまだセットアップ プログラム可能性があります。 詳細についてを参照してください、[方法: 特定のリリースの Visual Studio をインストール](../install/how-to-install-a-specific-release-of-visual-studio.md)トピック。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio のインストール](https://msdn.microsoft.com/library/e2h7fzkw.aspx)

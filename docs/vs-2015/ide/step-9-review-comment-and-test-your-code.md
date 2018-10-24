@@ -14,12 +14,12 @@ caps.latest.revision: 31
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3743c31aeca3c6e34afa84ed8c9ee3ddd59d98a1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f27cbc54839318674ae41385bd39876c6c513f1b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49300405"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836958"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>手順 9: レビュー、コメントの追加、およびコードのテスト
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -28,29 +28,29 @@ ms.locfileid: "49300405"
   
  一部の機能を作成しただけで、まだ完成はしていませんが、既にピクチャを読み込むことはできます。 コードへのコメントの追加とテストを行う前に、頻繁に使用することになるコードの概念についてここでレビューしておきましょう。  
   
--   Windows フォーム デザイナーで **[Show a picture]** ボタンをダブルクリックしたとき、プログラムのコードに自動的に*メソッド*が追加されました。  
+- Windows フォーム デザイナーで **[Show a picture]** ボタンをダブルクリックしたとき、プログラムのコードに自動的に*メソッド*が追加されました。  
   
--   メソッドはコードを整理する 1 つの方法で、これを使用してコードをまとめることができます。  
+- メソッドはコードを整理する 1 つの方法で、これを使用してコードをまとめることができます。  
   
--   ほとんどの場合、メソッドではいくつかの処理を特定の順序で行います。たとえば、ここで作成した `showButton_Click()` メソッドでは、ダイアログ ボックスを表示してから、ピクチャを読み込みます。  
+- ほとんどの場合、メソッドではいくつかの処理を特定の順序で行います。たとえば、ここで作成した `showButton_Click()` メソッドでは、ダイアログ ボックスを表示してから、ピクチャを読み込みます。  
   
--   メソッドは、コード *ステートメント*、またはコード行で構成されます。 コード ステートメントをまとめたものがメソッドであると考えることができます。  
+- メソッドは、コード *ステートメント*、またはコード行で構成されます。 コード ステートメントをまとめたものがメソッドであると考えることができます。  
   
--   メソッドを実行する (*呼び出す*) と、メソッド内のステートメントが最初のものから順番に 1 つずつ実行されます。  
+- メソッドを実行する (*呼び出す*) と、メソッド内のステートメントが最初のものから順番に 1 つずつ実行されます。  
   
-     ステートメントの例を次に示します。  
+   ステートメントの例を次に示します。  
   
-    ```csharp  
-    pictureBox1.Load(openFileDialog1.FileName);  
-    ```  
+  ```csharp  
+  pictureBox1.Load(openFileDialog1.FileName);  
+  ```  
   
-    ```vb  
-    pictureBox1.Load(openFileDialog1.FileName)  
-    ```  
+  ```vb  
+  pictureBox1.Load(openFileDialog1.FileName)  
+  ```  
   
-     ステートメントは、プログラムに処理を実行させる指示にあたります。 Visual C# の場合、ステートメントは必ずセミコロンで終わります。 Visual Basic の場合は、行の末尾がステートメントの末尾になります  (Visual Basic ではセミコロンは必要ありません)。上記のステートメントでは、ユーザーが **OpenFileDialog** コンポーネントで選択したファイルを読み込むように `PictureBox` コントロールに指示しています。  
+   ステートメントは、プログラムに処理を実行させる指示にあたります。 Visual C# の場合、ステートメントは必ずセミコロンで終わります。 Visual Basic の場合は、行の末尾がステートメントの末尾になります  (Visual Basic ではセミコロンは必要ありません)。上記のステートメントでは、ユーザーが **OpenFileDialog** コンポーネントで選択したファイルを読み込むように `PictureBox` コントロールに指示しています。  
   
- ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205206)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
+  ![ビデオへのリンク](../data-tools/media/playvideo.gif "PlayVideo")このトピックのビデオ版については、「[チュートリアル 1: Visual Basic によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205216)」または「[チュートリアル 1: C# によるピクチャ ビューアーの作成 - ビデオ 5](http://go.microsoft.com/fwlink/?LinkId=205206)」を参照してください。 これらのビデオでは、旧バージョンの Visual Studio を使用しているため、一部のメニュー コマンドやその他のユーザー インターフェイス要素が若干異なります。 ただし、概念および手順は、現在のバージョンの Visual Studio でも同様です。  
   
 ### <a name="to-add-comments"></a>コメントを追加するには  
   

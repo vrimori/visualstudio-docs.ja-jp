@@ -9,12 +9,12 @@ dev_langs:
 - CPP
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: f7a802fc1d2a83d3618d19254900a9b3dacb7f7c
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 735b4891449d139058b7cf114639390f6a930b55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44279870"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908347"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 C++ Core ガイドラインは、ガイドライン、ルール、および C++ 専門家とデザイナーで作成された C++ のコーディングについてのベスト プラクティスの移植可能なセットです。 Visual Studio では、c++ のコード分析ツールの一部としてこれらのルールのサブセットがサポートされています。 Core ガイドラインのチェッカーが Visual Studio 2017 では、既定でインストールされ[Visual Studio 2015 用の NuGet パッケージとして利用可能な](#vs2015_corecheck)します。
@@ -53,15 +53,15 @@ int main()
 }
 ```
 
- この例では、C++ Core Check の規則を検索する警告のいくつかを示します。
+この例では、C++ Core Check の規則を検索する警告のいくつかを示します。
 
--   C26494 はルール Type.5: 常にオブジェクトを初期化します。
+- C26494 はルール Type.5: 常にオブジェクトを初期化します。
 
--   C26485 はルール Bounds.3: 配列からポインターへの減退しません。
+- C26485 はルール Bounds.3: 配列からポインターへの減退しません。
 
--   C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。
+- C26481 はルール Bounds.1: ポインター演算を使用しないでください。 代わりに、`span` を使用してください。
 
- C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。
+C++ Core Check のコード分析ルールセットはインストールされている、このコードをコンパイルすると、最初の 2 つの警告は、出力が、3 つ目の抑制を有効になっている場合。 コード例からのビルド出力を次に示します。
 
 ```Output
 1>------ Build started: Project: CoreCheckExample, Configuration: Debug Win32 ------
@@ -80,34 +80,36 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ほとんどの規則の参照トピックでは、 [Visual Studio C コア確認リファレンス](code-analysis-for-cpp-corecheck.md)します。
 
 Visual Studio 2017 バージョン 15.3 の時点では、サポートされている規則セット。
-  - **所有者ポインターの規則**適用[所有者に関連するリソース管理を確認します<T>、C++ Core Guidelines から](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
+- **所有者ポインターの規則**適用[所有者に関連するリソース管理を確認します<T>、C++ Core Guidelines から](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
 
-  - **Const ルール**適用[、C++ Core guidelines の定数に関連したチェック](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)します。
+- **Const ルール**適用[、C++ Core guidelines の定数に関連したチェック](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)します。
 
-  - **生のポインターの規則**適用[リソース管理に関連する生のポインター、C++ Core guidelines のチェック](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
+- **生のポインターの規則**適用[リソース管理に関連する生のポインター、C++ Core guidelines のチェック](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
 
-  - **一意のポインターの規則**適用[、C++ Core guidelines のユニーク ポインター セマンティクスを持つ型に関連するリソース管理を確認します](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
+- **一意のポインターの規則**適用[、C++ Core guidelines のユニーク ポインター セマンティクスを持つ型に関連するリソース管理を確認します](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)します。
 
-  - **範囲の規則**適用、 [、C++ Core Guidelines のプロファイルの境界](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
+- **範囲の規則**適用、 [、C++ Core Guidelines のプロファイルの境界](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)します。
 
-  - **入力規則**適用、 [、C++ Core Guidelines のプロファイルを入力](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)します。
+- **入力規則**適用、 [、C++ Core Guidelines のプロファイルを入力](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile)します。
 
-  **Visual Studio 2017 バージョン 15.5**:
-  - **ルール クラス**特殊なメンバー関数と仮想の仕様の適切な使用に焦点をいくつかの規則。 これは、チェックの推奨のサブセット[クラスおよびクラスの階層構造](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)します。
-  - **同時実行規則**guard の宣言が正しくないオブジェクトをキャッチする 1 つの規則。 詳細については、次を参照してください。[ガイドラインは、同時実行に関連する](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)します。
-  - **宣言の規則**から規則のいくつか、[インターフェイス ガイドライン](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces)グローバル変数に重点を置いたが宣言されます。
-  - **機能ルール**の導入に役立つ 2 つのチェック、`noexcept`指定子。 ためのガイドラインの一部であるこの[関数の設計と実装をオフに](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)します。
-  - **共有ポインターの規則**の一部として[リソース管理](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource)共有ポインターに固有のいくつかの規則が関数に渡されるか、ローカルで使用されるを追加しましたガイドラインの強制を適用します。
-  - **スタイル ルール**1 単純ですが、重要なチェックの使用を禁止[goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)します。 これは、コーディング スタイルと式および C++ でのステートメントの使用の改善の最初の手順です。
+**Visual Studio 2017 バージョン 15.5**:
 
-  **Visual Studio 2017 バージョン 15.6**:
-  - **算術規則**算術演算子を検出する規則を[オーバーフロー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)、[操作の符号付き-符号なし](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)と[ビット操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)します。
+- **ルール クラス**特殊なメンバー関数と仮想の仕様の適切な使用に焦点をいくつかの規則。 これは、チェックの推奨のサブセット[クラスおよびクラスの階層構造](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)します。
+- **同時実行規則**guard の宣言が正しくないオブジェクトをキャッチする 1 つの規則。 詳細については、次を参照してください。[ガイドラインは、同時実行に関連する](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)します。
+- **宣言の規則**から規則のいくつか、[インターフェイス ガイドライン](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces)グローバル変数に重点を置いたが宣言されます。
+- **機能ルール**の導入に役立つ 2 つのチェック、`noexcept`指定子。 ためのガイドラインの一部であるこの[関数の設計と実装をオフに](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)します。
+- **共有ポインターの規則**の一部として[リソース管理](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource)共有ポインターに固有のいくつかの規則が関数に渡されるか、ローカルで使用されるを追加しましたガイドラインの強制を適用します。
+- **スタイル ルール**1 単純ですが、重要なチェックの使用を禁止[goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)します。 これは、コーディング スタイルと式および C++ でのステートメントの使用の改善の最初の手順です。
 
+**Visual Studio 2017 バージョン 15.6**:
 
- 警告を 1 つだけ、またはグループの数を制限することができます。 **ネイティブ最小**と**ネイティブ推奨**ルール セットには、その他の PREfast のチェックだけでなく C++ Core Check の規則が含まれます。 確認には、使用可能なルール セット、プロジェクトのプロパティ ダイアログを開き、次のように選択します**コード Analysis\General**、にあるボックスを開き、**規則セット**コンボ ボックス、および選択**複数の規則セットの選択**。 Visual Studio でのルール セットの使用に関する詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](using-rule-sets-to-group-code-analysis-rules.md)します。
+- **算術規則**算術演算子を検出する規則を[オーバーフロー](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)、[操作の符号付き-符号なし](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)と[ビット操作](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)します。
+
+警告を 1 つだけ、またはグループの数を制限することができます。 **ネイティブ最小**と**ネイティブ推奨**ルール セットには、その他の PREfast のチェックだけでなく C++ Core Check の規則が含まれます。 確認には、使用可能なルール セット、プロジェクトのプロパティ ダイアログを開き、次のように選択します**コード Analysis\General**、にあるボックスを開き、**規則セット**コンボ ボックス、および選択**複数の規則セットの選択**。 Visual Studio でのルール セットの使用に関する詳細については、次を参照してください。[ルール セットのコード分析規則のグループを使用して](using-rule-sets-to-group-code-analysis-rules.md)します。
 
 ## <a name="macros"></a>[マクロ]
- 全体のカテゴリには、コードの警告を抑制するが簡単にするマクロを定義するヘッダー ファイルには、C++ Core ガイドライン チェッカーできます。
+
+全体のカテゴリには、コードの警告を抑制するが簡単にするマクロを定義するヘッダー ファイルには、C++ Core ガイドライン チェッカーできます。
 
 ```cpp
 ALL_CPPCORECHECK_WARNINGS
@@ -128,7 +130,8 @@ CPPCORECHECK_BOUNDS_WARNINGS
 ```
 
 ## <a name="attributes"></a>属性
- Microsoft Visual C コンパイラでは、属性を非表示、GSL の制限付きサポートには。 式および関数内でのブロックのステートメントで警告を抑制するために使用します。
+
+Microsoft Visual C コンパイラでは、属性を非表示、GSL の制限付きサポートには。 式および関数内でのブロックのステートメントで警告を抑制するために使用します。
 
 ```cpp
 // Supress only warnings from the 'r.11' rule in expression.
@@ -151,17 +154,19 @@ CPPCORECHECK_BOUNDS_WARNINGS
 ```
 
 ## <a name="suppressing-analysis-by-using-command-line-options"></a>分析コマンド ライン オプションを使用して非表示にします。
- #Pragmas ではなく、プロジェクトまたはファイルを 1 つの警告を抑制するのに、ファイルのプロパティ ページでコマンド ライン オプションを使用できます。 たとえば、警告を無効にするファイルの 26400。
 
- 1) ファイルを右クリックして**ソリューション エクスプ ローラー**
+#Pragmas ではなく、プロジェクトまたはファイルを 1 つの警告を抑制するのに、ファイルのプロパティ ページでコマンド ライン オプションを使用できます。 たとえば、警告を無効にするファイルの 26400。
 
- 2) 選択**プロパティ |C または C++ |コマンド ライン**
+1. ファイルを右クリックして**ソリューション エクスプ ローラー**
 
- 3) **追加オプション**ウィンドウで、追加`/wd26400`します。
+2. 選択**プロパティ |C または C++ |コマンド ライン**
 
- コマンド ライン オプションを使用するには、ファイルのすべてのコード分析を指定することで一時的に無効に`/analyze-`します。 警告が生成されます*D9025 オーバーライド '/analyze' を '/analyze -'*、コード分析を後で再度有効にすることを通知します。
+3. **追加オプション**ウィンドウで、追加`/wd26400`します。
 
- ## <a name="corecheck_per_file"></a> 特定のプロジェクト ファイルでは、C++ Core ガイドライン チェッカーの有効化
+コマンド ライン オプションを使用するには、ファイルのすべてのコード分析を指定することで一時的に無効に`/analyze-`します。 警告が生成されます*D9025 オーバーライド '/analyze' を '/analyze -'*、コード分析を後で再度有効にすることを通知します。
+
+## <a name="corecheck_per_file"></a> 特定のプロジェクト ファイルでは、C++ Core ガイドライン チェッカーの有効化
+
 重点を置いてコード分析とも、Visual Studio IDE を使用すると便利場合があります。 ビルド時間を節約し、結果をフィルター処理しやすく、大規模なプロジェクトの次のサンプル シナリオを使用できます。
 
 1. コマンド シェルで次のように設定します。、`esp.extension`と`esp.annotationbuildlevel`環境変数。
@@ -174,6 +179,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 8. プロジェクトをリビルドします。 共通の PREFast のチェックは、すべてのファイルを実行する必要があります。 C++ Core ガイドライン チェッカーが既定で有効でないためする必要があります、それを使用するように構成ファイルでのみ実行します。
 
 ## <a name="how-to-use-the-c-core-guidelines-checker-outside-of-visual-studio"></a>Visual Studio の外部では、C++ Core ガイドライン チェッカーの使用方法
+
 自動ビルドで、C++ Core Guidelines のチェックを使用することができます。
 
 ### <a name="msbuild"></a>MSBuild
@@ -186,6 +192,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
 ```
+
 Microsoft.Cpp.targets ファイルをインポートする前にこれらのプロパティを追加することを確認します。 特定のルール セットを選択またはカスタム規則セットを作成またはその他の PREfast のチェックが含まれる既定の規則セットを使用できます。
 
 同じアプローチを使用して、指定したファイルにのみ、C++ Core チェックを行うことができます[前に説明した](#corecheck_per_file)、MSBuild ファイルを使用します。 使用して、環境変数を設定することができます、`BuildMacro`項目。
@@ -210,42 +217,42 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 ```
 
 ### <a name="non-msbuild-projects"></a>非 MSBuild プロジェクト
+
 MSBuild に依存しないビルド システムを使用する場合、チェックを実行することができますが、コード分析エンジンの構成の一部の内部について理解する必要があります。 これらの内部構造は、今後サポートされる保証はありません。
 
 いくつかの環境変数を設定して、コンパイラは適切なコマンド ライン オプションを使用する必要があります。 コンパイラの特定のパスを検索するには、ディレクトリなどが含まれますがあるないように、「Native Tools コマンド プロンプト」環境で機能することをお勧めします。
 
 1. **環境変数**
-  - `set esp.extensions=cppcorecheck.dll` これは、C++ Core Guidelines のモジュールを読み込むエンジンを指示します。
-  - `set esp.annotationbuildlevel=ignore` これには、SAL 注釈を処理するロジックが無効にします。 注釈は、C++ Core ガイドライン チェッカーのコード分析に影響しないが、これらの処理時間 (長い時間場合があります)。 この設定は、省略可、ただし強くお勧めします。
-  - `set caexcludepath=%include%` 標準ヘッダーでは発生する警告を無効にすることを強くお勧めします。 プロジェクトの一般的なヘッダーへのパスなど、ここでは、複数のパスを追加できます。
+   - `set esp.extensions=cppcorecheck.dll` これは、C++ Core Guidelines のモジュールを読み込むエンジンを指示します。
+   - `set esp.annotationbuildlevel=ignore` これには、SAL 注釈を処理するロジックが無効にします。 注釈は、C++ Core ガイドライン チェッカーのコード分析に影響しないが、これらの処理時間 (長い時間場合があります)。 この設定は、省略可、ただし強くお勧めします。
+   - `set caexcludepath=%include%` 標準ヘッダーでは発生する警告を無効にすることを強くお勧めします。 プロジェクトの一般的なヘッダーへのパスなど、ここでは、複数のパスを追加できます。
 2. **コマンド ライン オプション**
-  - `/analyze`  コード分析を有効 (も使用を検討して/analyze: のみと/analyze: quiet)。
-  - `/analyze:plugin EspXEngine.dll` このオプションは、PREfast にコード分析の拡張機能のエンジンを読み込みます。 このエンジンでは、C++ Core ガイドライン チェッカーを読み込みます。
-
-
+   - `/analyze`  コード分析を有効 (も使用を検討して/analyze: のみと/analyze: quiet)。
+   - `/analyze:plugin EspXEngine.dll` このオプションは、PREfast にコード分析の拡張機能のエンジンを読み込みます。 このエンジンでは、C++ Core ガイドライン チェッカーを読み込みます。
 
 ## <a name="use-the-guideline-support-library"></a>ガイドライン サポート ライブラリを使用します。
  ガイドライン サポート ライブラリは、Core Guidelines をフォローするように設計されています。 GSL より安全な代替手段でエラーが発生しやすい構成要素を置き換えますできる定義が含まれます。 などに置き換えることができます、`T*, length`パラメーターのペア、`span<T>`型。 GSL [ http://www.nuget.org/packages/Microsoft.Gsl](http://www.nuget.org/packages/Microsoft.Gsl)します。 ライブラリはオープン ソースはので、ソースを表示、コメントの作成、または投稿することができます。 プロジェクトに掲載する[ https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)します。
 
- ## <a name="vs2015_corecheck"></a> Visual Studio 2015 のプロジェクトで、C++ Core Check のガイドラインを使用します。
-  Visual Studio 2015 を使用する場合、C++ Core Check コード分析規則セットは既定ではインストールされていません。 Visual Studio 2015 での C++ Core Check コード分析ツールを有効にする前に、追加の手順を実行する必要があります。 マイクロソフトでは、Nuget パッケージを使用して、Visual Studio 2015 プロジェクトのサポートを提供します。 パッケージの名前は Microsoft.CppCoreCheck とで使用可能になる[ http://www.nuget.org/packages/Microsoft.CppCoreCheck](http://www.nuget.org/packages/Microsoft.CppCoreCheck)します。 このパッケージには少なくとも Visual Studio 2015 Update 1 でインストールが必要になります。
+## <a name="vs2015_corecheck"></a> Visual Studio 2015 のプロジェクトで、C++ Core Check のガイドラインを使用します。
 
- パッケージには、依存関係をヘッダーのみのガイドライン サポート ライブラリ (GSL) として別のパッケージもインストールされます。 GitHub の「使用可能な、GSL も[ https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)します。
+Visual Studio 2015 を使用する場合、C++ Core Check コード分析規則セットは既定ではインストールされていません。 Visual Studio 2015 での C++ Core Check コード分析ツールを有効にする前に、追加の手順を実行する必要があります。 マイクロソフトでは、Nuget パッケージを使用して、Visual Studio 2015 プロジェクトのサポートを提供します。 パッケージの名前は Microsoft.CppCoreCheck とで使用可能になる[ http://www.nuget.org/packages/Microsoft.CppCoreCheck](http://www.nuget.org/packages/Microsoft.CppCoreCheck)します。 このパッケージには少なくとも Visual Studio 2015 Update 1 でインストールが必要になります。
 
- コード分析の規則が読み込まれるため、Visual Studio 2015 内でチェックする C++ プロジェクトごとに、Microsoft.CppCoreCheck NuGet パッケージをインストールする必要があります。
+パッケージには、依存関係をヘッダーのみのガイドライン サポート ライブラリ (GSL) として別のパッケージもインストールされます。 GitHub の「使用可能な、GSL も[ https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL)します。
 
-#### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Visual Studio 2015 でプロジェクトに Microsoft.CppCoreCheck パッケージを追加するには
+コード分析の規則が読み込まれるため、Visual Studio 2015 内でチェックする C++ プロジェクトごとに、Microsoft.CppCoreCheck NuGet パッケージをインストールする必要があります。
 
-1.  **ソリューション エクスプ ローラー**、右クリックすると、パッケージを追加するソリューションで、プロジェクトのコンテキスト メニューを開きます。 選択**NuGet パッケージの管理**を開く、 **NuGet パッケージ マネージャー**します。
+### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Visual Studio 2015 でプロジェクトに Microsoft.CppCoreCheck パッケージを追加するには
 
-2.  **NuGet パッケージ マネージャー**ウィンドウで、Microsoft.CppCoreCheck を検索します。
+1. **ソリューション エクスプ ローラー**、右クリックすると、パッケージを追加するソリューションで、プロジェクトのコンテキスト メニューを開きます。 選択**NuGet パッケージの管理**を開く、 **NuGet パッケージ マネージャー**します。
 
-     ![Nuget パッケージ マネージャー ウィンドウは、CppCoreCheck パッケージを示しています。](../code-quality/media/cppcorecheck_nuget_window.png)
+2. **NuGet パッケージ マネージャー**ウィンドウで、Microsoft.CppCoreCheck を検索します。
 
-3.  Microsoft.CppCoreCheck パッケージを選択し、選択、**インストール**をプロジェクトに規則を追加するボタンをクリックします。
+    ![Nuget パッケージ マネージャー ウィンドウは、CppCoreCheck パッケージを示しています。](../code-quality/media/cppcorecheck_nuget_window.png)
 
- NuGet パッケージの追加、追加の MSBuild *.targets*ファイルをプロジェクトでコード分析を有効にしたときに呼び出されるプロジェクト。 これは、 *.targets*ファイルは、Visual Studio コード分析ツールに追加の拡張機能として、C++ Core Check の規則を追加します。 パッケージがインストールされている場合は、有効または無効、リリースと実験用のルールにプロパティ ページ ダイアログを使用できます。
+3. Microsoft.CppCoreCheck パッケージを選択し、選択、**インストール**をプロジェクトに規則を追加するボタンをクリックします。
+
+   NuGet パッケージの追加、追加の MSBuild *.targets*ファイルをプロジェクトでコード分析を有効にしたときに呼び出されるプロジェクト。 これは、 *.targets*ファイルは、Visual Studio コード分析ツールに追加の拡張機能として、C++ Core Check の規則を追加します。 パッケージがインストールされている場合は、有効または無効、リリースと実験用のルールにプロパティ ページ ダイアログを使用できます。
 
 ## <a name="see-also"></a>関連項目
-[Visual Studio の C++ Core Check 参照](code-analysis-for-cpp-corecheck.md)します。
 
+- [Visual Studio の C++ Core Check のリファレンス](code-analysis-for-cpp-corecheck.md)

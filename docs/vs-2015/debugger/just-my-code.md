@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c97810b69ef7256379b6d14bf29ba08a9e6e0040
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 19e57f9cebf6e9a8086f736735527fb647544228
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49273937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833760"
 ---
 # <a name="just-my-code"></a>マイ コードのみ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "49273937"
   
  以下の 3 つの属性も、デバッガーが何をマイ コードであると見なすかに影響を与えます。  
   
--   <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> は、適用先のコードがマイ コードでないことをデバッガーに通知します。  
+- <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> は、適用先のコードがマイ コードでないことをデバッガーに通知します。  
   
--   <xref:System.Diagnostics.DebuggerHiddenAttribute> は、"マイ コードのみ" がオフになっていても、コードをデバッガーから見えないようにするための属性です。  
+- <xref:System.Diagnostics.DebuggerHiddenAttribute> は、"マイ コードのみ" がオフになっていても、コードをデバッガーから見えないようにするための属性です。  
   
--   <xref:System.Diagnostics.DebuggerStepThroughAttribute> は、それが適用されているコードを (ステップ インではなく) ステップ スルーするよう、デバッガーに伝える属性です。  
+- <xref:System.Diagnostics.DebuggerStepThroughAttribute> は、それが適用されているコードを (ステップ インではなく) ステップ スルーするよう、デバッガーに伝える属性です。  
   
- 他のすべてのコードはユーザー コードであると見なされます。  
+  他のすべてのコードはユーザー コードであると見なされます。  
   
 ###  <a name="BKMK_NET_Stepping_behavior"></a> ステップ実行の動作  
  ときにする**ステップ イン**(キーボード ショートカット: F11) 非ユーザー コードには、次のユーザー ステートメントには、コードをデバッガー手順。 ときにする**ステップ アウト**(キーボード: shift + f11)、デバッガーを実行するユーザー コードの次の行にします。 ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
@@ -80,17 +80,17 @@ ms.locfileid: "49273937"
   
  既定では、デバッガーは呼び出し履歴ウィンドウで以下の関数が非ユーザー コードであると見なします。  
   
--   シンボル ファイル内に除去されたソース情報がある関数。  
+- シンボル ファイル内に除去されたソース情報がある関数。  
   
--   シンボル ファイルがスタック フレームに対応するソース ファイルがないことを示す関数。  
+- シンボル ファイルがスタック フレームに対応するソース ファイルがないことを示す関数。  
   
--   `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natjmc` ファイルに指定された関数。  
+- `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natjmc` ファイルに指定された関数。  
   
- **ステップ実行**  
+  **ステップ実行**  
   
- 既定では、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natstepfilter` ファイルに指定された関数だけが非ユーザー コードと見なされます。  
+  既定では、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` フォルダーの `*.natstepfilter` ファイルに指定された関数だけが非ユーザー コードと見なされます。  
   
- `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` に独自の `.natstepfilter` および `.natjmc` を作成して、ステップ実行と呼び出し履歴ウィンドウの動作をカスタマイズすることができます。  
+  `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers` に独自の `.natstepfilter` および `.natjmc` を作成して、ステップ実行と呼び出し履歴ウィンドウの動作をカスタマイズすることができます。  
   
 ###  <a name="BKMK_CPP_Stepping_behavior"></a> ステップ実行の動作  
  ときにする**ステップ イン**(キーボード ショートカット: F11) ユーザー コードから非ユーザー コードには、ユーザー コードの次の行にコードをデバッガー手順。 ときにする**ステップ アウト**(キーボード: shift + f11)、デバッガーを実行するユーザー コードの次の行にします。 ユーザー コードが出現しない場合は、アプリケーションが終了するか、ブレークポイントにヒットするか、または例外が発生するまで実行が続けられます。  
@@ -103,11 +103,11 @@ ms.locfileid: "49273937"
 ###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> ステップ実行の動作をカスタマイズします。  
  `*.natstepfilter` ファイルに関数を非ユーザー コードとして記述することで、それらの関数をステップ オーバーすることを指定できます。  
   
--   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するに .natstepfilter ファイルを追加、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`フォルダー。  
+- Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するに .natstepfilter ファイルを追加、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`フォルダー。  
   
--   個々 のユーザーの非ユーザー コードを指定するに .natstepfilter ファイルを追加、`%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`フォルダー。  
+- 個々 のユーザーの非ユーザー コードを指定するに .natstepfilter ファイルを追加、`%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`フォルダー。  
   
- .natstepfilter ファイルは、次の構文を使用する xml ファイルです。  
+  .natstepfilter ファイルは、次の構文を使用する xml ファイルです。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -135,11 +135,11 @@ ms.locfileid: "49273937"
 ###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> 呼び出し履歴の動作をカスタマイズします。  
  モジュール、ソース ファイル、および関数を `*.natjmc` ファイルで指定することで、呼び出し履歴でそれらを非ユーザー コードとして扱うことを指定できます。  
   
--   Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するに .natjmc ファイルを追加、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`フォルダー。  
+- Visual Studio コンピューターのすべてのユーザーの非ユーザー コードを指定するに .natjmc ファイルを追加、`%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers`フォルダー。  
   
--   個々 のユーザーの非ユーザー コードを指定するに .natjmc ファイルを追加、`%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`フォルダー。  
+- 個々 のユーザーの非ユーザー コードを指定するに .natjmc ファイルを追加、`%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`フォルダー。  
   
- .natjmc ファイルは、次の構文を使用する xml ファイルです。  
+  .natjmc ファイルは、次の構文を使用する xml ファイルです。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -165,7 +165,7 @@ ms.locfileid: "49273937"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`Name`|必須。 モジュールの完全パス。 Windows のワイルドカード文字、`?` (0 個または 1 個の文字) および `*` (0 個以上の文字) を使用できます。 たとえば、オブジェクトに適用された<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> は、ドライブの `\3rdParty\UtilLibs` 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
+|`Name`|必須。 モジュールの完全パス。 Windows のワイルドカード文字、`?` (0 個または 1 個の文字) および `*` (0 個以上の文字) を使用できます。 例えば以下のようにします。<br /><br /> `<Module Name=”?:\3rdParty\UtilLibs\*” />`<br /><br /> は、ドライブの `\3rdParty\UtilLibs` 内のすべてのモジュールを外部コードとして扱うことをデバッガーに指示します。|  
 |`Company`|任意。 実行可能ファイルに埋め込まれているモジュールを発行する会社の名前。 この属性を使用して、モジュールのあいまいさを解消することができます。|  
   
  **File 要素の属性**  
@@ -197,19 +197,19 @@ ms.locfileid: "49273937"
   
  JavaScript デバッガーは、以下のコードの種類を自動的に分類します。  
   
--   ホスト提供する文字列を渡すことによって実行されるスクリプト`eval`関数として分類**MyCode**します。  
+- ホスト提供する文字列を渡すことによって実行されるスクリプト`eval`関数として分類**MyCode**します。  
   
--   文字列を渡すことによって実行されるスクリプト、`Function`コンス トラクターとして分類**LibraryCode**します。  
+- 文字列を渡すことによって実行されるスクリプト、`Function`コンス トラクターとして分類**LibraryCode**します。  
   
--   WinJS や、Azure SDK などのフレームワーク参照に含まれているスクリプトとして分類**LibraryCode**します。  
+- WinJS や、Azure SDK などのフレームワーク参照に含まれているスクリプトとして分類**LibraryCode**します。  
   
--   文字列を渡すことによって実行されるスクリプト、 `setTimeout`、 `setImmediate`、または`setInterval`関数は、分類**UnrelatedCode**します。  
+- 文字列を渡すことによって実行されるスクリプト、 `setTimeout`、 `setImmediate`、または`setInterval`関数は、分類**UnrelatedCode**します。  
   
--   `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` は、すべての Visual Studio JavaScript プロジェクトの他のユーザー コードと非ユーザー コードを指定します。  
+- `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` は、すべての Visual Studio JavaScript プロジェクトの他のユーザー コードと非ユーザー コードを指定します。  
   
- プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加することで、既定の分類を変更し、特定のファイルや URL を分類することができます。  
+  プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加することで、既定の分類を変更し、特定のファイルや URL を分類することができます。  
   
- その他のすべてのコードとして分類**MyCode**します。  
+  その他のすべてのコードとして分類**MyCode**します。  
   
 ###  <a name="BKMK_JS_Stepping_behavior"></a> ステップ実行の動作  
   
@@ -234,30 +234,30 @@ ms.locfileid: "49273937"
 ###  <a name="BKMK_JS_Exception_behavior"></a> 例外の動作  
  ハンドルされていない例外が、  
   
--   **MyCode**または**LibraryCode**コード、デバッガーは常に中断します。  
+- **MyCode**または**LibraryCode**コード、デバッガーは常に中断します。  
   
--   **UnrelatedCode**コード、および**MyCode**または**LibraryCode**コードが呼び出し履歴をデバッガーは中断します。  
+- **UnrelatedCode**コード、および**MyCode**または**LibraryCode**コードが呼び出し履歴をデバッガーは中断します。  
   
- [例外] ダイアログ ボックスで、例外の最初の例外が有効になっているし、例外がスローされた場合**LibraryCode**または**UnrelatedCode**コード。  
+  [例外] ダイアログ ボックスで、例外の最初の例外が有効になっているし、例外がスローされた場合**LibraryCode**または**UnrelatedCode**コード。  
   
--   例外が処理される場合、デバッガーは中断しません。  
+- 例外が処理される場合、デバッガーは中断しません。  
   
--   例外が処理されない場合、デバッガーは中断します。  
+- 例外が処理されない場合、デバッガーは中断します。  
   
 ###  <a name="BKMK_JS_Customize_Just_My_Code"></a> マイ コードのみをカスタマイズします。  
  単一の Visual Studio プロジェクトのユーザー コードと非ユーザー コードを分類するには、プロジェクトのルート フォルダーに `mycode.json` という名前の .json ファイルを追加します。  
   
  分類は次の順序で行われます。  
   
-1.  既定の分類  
+1. 既定の分類  
   
-2.  `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` ファイルでの分類  
+2. `%VSInstallDirectory%\JavaScript\JustMyCode\mycode.default.wwa.json` ファイルでの分類  
   
-3.  現在のプロジェクトの `mycode. json` ファイルでの分類。  
+3. 現在のプロジェクトの `mycode. json` ファイルでの分類。  
   
- 分類の各手順で、前の手順はオーバーライドされます。 .Json ファイルは、すべてのキー値のペアを一覧表示する必要はありません、 **MyCode**、**ライブラリ**、および**Unrelated**値が空の配列を指定できます。  
+   分類の各手順で、前の手順はオーバーライドされます。 .Json ファイルは、すべてのキー値のペアを一覧表示する必要はありません、 **MyCode**、**ライブラリ**、および**Unrelated**値が空の配列を指定できます。  
   
- マイ コードの .json ファイルでは、次の構文を使用します。  
+   マイ コードの .json ファイルでは、次の構文を使用します。  
   
 ```json  
 {  
@@ -295,15 +295,15 @@ ms.locfileid: "49273937"
   
  以下のいずれかのキーワードに値を変更できます。  
   
--   `MyCode`  スクリプトとしては、分類**MyCode**します。  
+- `MyCode`  スクリプトとしては、分類**MyCode**します。  
   
--   `Library`  スクリプトとしては、分類**LibraryCode**します。  
+- `Library`  スクリプトとしては、分類**LibraryCode**します。  
   
--   `Unrelated`  スクリプトとしては、分類**UnrelatedCode**します。  
+- `Unrelated`  スクリプトとしては、分類**UnrelatedCode**します。  
   
- **MyCode、Libraries、および Unrelated**  
+  **MyCode、Libraries、および Unrelated**  
   
- **MyCode**、**ライブラリ**、および**Unrelated**キー値のペアは、url または分類を追加するファイルを指定します。  
+  **MyCode**、**ライブラリ**、および**Unrelated**キー値のペアは、url または分類を追加するファイルを指定します。  
   
 |||  
 |-|-|  

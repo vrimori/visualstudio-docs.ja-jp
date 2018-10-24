@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::LaunchSuspended |Microsoft ドキュメント
+title: IDebugPortEx2::LaunchSuspended |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f22afc50a1a2874d4853acbf9ff72cae622e790
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0a16241e406ea89b33c417bd873949979c3f6e82
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114892"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882315"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
 実行可能ファイルを起動します。  
@@ -55,36 +55,36 @@ int LaunchSuspended(
   
 #### <a name="parameters"></a>パラメーター  
  `pszExe`  
- [in]起動する実行可能ファイルの名前。 これで指定された作業ディレクトリへの相対パスまたは完全なパスを指定できます、`pszDir`パラメーター。  
+ [in]起動する実行可能ファイルの名前。 完全なパスまたは相対で指定された作業ディレクトリを指定できます、`pszDir`パラメーター。  
   
  `pszArgs`  
  [in]実行可能ファイルに渡す引数。 引数がない場合、null 値を指定できます。  
   
  `pszDir`  
- [in]実行可能ファイルによって使用される作業ディレクトリの名前。 作業ディレクトリが必要ない場合、null 値があります。  
+ [in]実行可能ファイルで使用される作業ディレクトリの名前。 作業ディレクトリが必要ない場合、null 値があります。  
   
  `bstrEnv`  
- [in]その他の NULL 終端記号を null で終わる文字列の環境ブロックします。  
+ [in]追加の NULL 終端記号の後に、null で終わる文字列の環境ブロックします。  
   
  `hStdInput`  
- [in]代替の入力ストリームを処理します。 リダイレクトが必要ない場合 0 にすることがあります。  
+ [in]代替の入力ストリームへのハンドルします。 リダイレクトが必要でない場合は、0 を指定できます。  
   
  `hStdOutput`  
- [in]代替の出力ストリームへのハンドルします。 リダイレクトが必要ない場合 0 にすることがあります。  
+ [in]代替の出力ストリームへのハンドルします。 リダイレクトが必要でない場合は、0 を指定できます。  
   
  `hStdError`  
- [in]代替のエラー出力ストリームへのハンドルします。 リダイレクトが必要ない場合 0 にすることがあります。  
+ [in]代替エラー出力ストリームへのハンドルします。 リダイレクトが必要でない場合は、0 を指定できます。  
   
  `ppPortProcess`  
- [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)を実行中のプロセスを表すオブジェクト。  
+ [out]返します、 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)実行中のプロセスを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドには、it が中断されているため、プロセスと任意のコードが実行されていないを起動する必要があります。 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)プロセスを再開するメソッドが呼び出されます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、その it が中断されているため、プロセスと、コードが実行されていないを起動する必要があります。 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)メソッドが呼び出され、プロセスを再開します。  
   
- デバッグ エンジンからプログラムを起動することもできます。 詳細については、「[プログラムの起動](../../../extensibility/debugger/launching-a-program.md)です。  
+ プログラムは、デバッグ エンジンからも起動できます。 詳細については、次を参照してください。[プログラムの起動](../../../extensibility/debugger/launching-a-program.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   

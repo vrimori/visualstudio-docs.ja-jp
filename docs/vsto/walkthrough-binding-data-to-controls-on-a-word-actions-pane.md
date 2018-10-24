@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e4202b14fce4c914737989e4a408cd74040c4d0a
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 17daf186920be45a70200cd896a390ab74c4c6d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38781933"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873891"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>チュートリアル: Word の操作ウィンドウ上のコントロールにデータをバインドします。
   このチュートリアルでは、Word の操作ウィンドウ上のコントロールへのデータ バインディングを示します。 このコントロールは、SQL Server データベースのテーブル間のマスター/詳細の関係を示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "38781933"
 > [!NOTE]  
 >  次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -61,7 +61,7 @@ ms.locfileid: "38781933"
   
 1.  名前の Word 文書プロジェクトを作成**My Word の操作ウィンドウ**します。 ウィザードで、次のように選択します。**新しい文書を作成**です。  
   
-     詳細については、次を参照してください。[方法: Visual Studio でプロジェクトを作成する Office](../vsto/how-to-create-office-projects-in-visual-studio.md)します。  
+     詳細については、次の[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)を参照してください。  
   
      デザイナーで新しい Word 文書を開き、 **My Word の操作ウィンドウ**プロジェクトを**ソリューション エクスプ ローラー**します。  
   
@@ -78,28 +78,28 @@ ms.locfileid: "38781933"
   
 ### <a name="to-add-a-data-source-to-the-project"></a>データ ソースをプロジェクトに追加するには  
   
-1.  場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
+1. 場合、**データソース**ウィンドウが表示されない、メニュー バーで 表示することによって、**ビュー** > **その他の Windows**  >  **データ ソース**します。  
   
-    > [!NOTE]  
-    >  場合**データ ソースの**使用できない場合、Word 文書をクリックし、もう一度確認します。  
+   > [!NOTE]  
+   >  場合**データ ソースの**使用できない場合、Word 文書をクリックし、もう一度確認します。  
   
-2.  クリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。  
+2. クリックして**新しいデータ ソースの追加**を開始する、**データ ソース構成ウィザード**します。  
   
-3.  選択**データベース**順にクリックします**次**します。  
+3. 選択**データベース**順にクリックします**次**します。  
   
-4.  Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
+4. Northwind サンプル SQL Server データベースへのデータ接続を選択するかを使用して新しい接続を追加、**新しい接続**ボタンをクリックします。  
   
-5.  **[次へ]** をクリックします。  
+5. **[次へ]** をクリックします。  
   
-6.  クリックしてが選択されている場合、接続を保存するオプションをオフに**次**します。  
+6. クリックしてが選択されている場合、接続を保存するオプションをオフに**次**します。  
   
-7.  展開、**テーブル**内のノード、**データベース オブジェクト**ウィンドウ。  
+7. 展開、**テーブル**内のノード、**データベース オブジェクト**ウィンドウ。  
   
-8.  次のチェック ボックスをオン、 **Suppliers**と**製品**テーブル。  
+8. 次のチェック ボックスをオン、 **Suppliers**と**製品**テーブル。  
   
 9. **[完了]** をクリックします。  
   
- ウィザードでは追加、 **Suppliers**テーブルと**製品**テーブル、**データ ソース**ウィンドウ。 表示されているプロジェクトに型指定されたデータセットを追加**ソリューション エクスプ ローラー**します。  
+   ウィザードでは追加、 **Suppliers**テーブルと**製品**テーブル、**データ ソース**ウィンドウ。 表示されているプロジェクトに型指定されたデータセットを追加**ソリューション エクスプ ローラー**します。  
   
 ### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>操作ウィンドウ コントロールにデータ バインド Windows フォーム コントロールを追加するには  
   
