@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: dbe546f43b0a66abc78b94480894b63dc4f5eafa
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 9d924ee92258e348d5ffee1551fcde7707d711cf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283113"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855210"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity の使用を開始する
 
@@ -47,7 +47,7 @@ Unity のインストールに含まれる Visual Studio のバージョンが�
 
 Visual Studio 2017 が既にインストールされている場合、または手動でインストールする場合は、Visual Studio インストーラーを実行します。
 
-1. [Visual Studio インストーラーをダウンロード](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)します。既にインストールされている場合は、それを開きます。
+1. [Visual Studio インストーラーをダウンロード](/visualstudio/install/install-visual-studio)します。既にインストールされている場合は、それを開きます。
 
 1. **[変更]** をクリックします (既にインストールされている場合)。または、**[インストール]** をクリックして、目的のバージョンの Visual Studio をインストールします (新規インストール)。
 
@@ -63,21 +63,21 @@ Unity 2018.1 以降では、Visual Studio を Unity の既定の外部スクリ�
 
 1. **[Edit]\(編集\)** メニューから **[Preferences]\(ユーザー設定\)** を選びます。
 
-  ![[Preferences]\(ユーザー設定\) を選ぶ](media/vstu_unity-preferences.png)
+   ![[Preferences]\(ユーザー設定\) を選ぶ](media/vstu_unity-preferences.png)
 
-1. [Preferences]\(ユーザー設定\) ダイアログで、**[External Tools]\(外部ツール\)** タブを選びます。
+2. [Preferences]\(ユーザー設定\) ダイアログで、**[External Tools]\(外部ツール\)** タブを選びます。
 
-1. **[External Script Editor]\(外部スクリプト エディター\)** ドロップダウン リストから、目的のバージョンの Visual Studio が一覧にある場合はそれを選び、ない場合は **[Browse]\(参照\)** を選びます。
+3. **[External Script Editor]\(外部スクリプト エディター\)** ドロップダウン リストから、目的のバージョンの Visual Studio が一覧にある場合はそれを選び、ない場合は **[Browse]\(参照\)** を選びます。
 
-  ![Visual Studio を選ぶ](media/vstu_unity-external-tools.png)
+   ![Visual Studio を選ぶ](media/vstu_unity-external-tools.png)
 
-1. **[Browse...]\(参照...\)** を選択した場合は、Visual Studio インストール ディレクトリの中の **Common7/IDE** ディレクトリに移動し、**devenv.exe** を選択します。 次に、**[Open]\(開く\)** をクリックします。
+4. **[Browse...]\(参照...\)** を選択した場合は、Visual Studio インストール ディレクトリの中の **Common7/IDE** ディレクトリに移動し、**devenv.exe** を選択します。 次に、**[Open]\(開く\)** をクリックします。
 
-  ![[Open]\(開く\) を選ぶ](media/vstu_browse-for-application.png)
+   ![[Open]\(開く\) を選ぶ](media/vstu_browse-for-application.png)
 
-1. **[External Script Editor]\(外部スクリプト エディター\)** の一覧から Visual Studio を選択した後、**[Editor Attaching]\(エディターのアタッチ\)** チェックボックスがオンになっていることを確認します。
+5. **[External Script Editor]\(外部スクリプト エディター\)** の一覧から Visual Studio を選択した後、**[Editor Attaching]\(エディターのアタッチ\)** チェックボックスがオンになっていることを確認します。
 
-1. **[Preferences]\(ユーザー設定\)** ダイアログを閉じて、構成プロセスを完了します。
+6. **[Preferences]\(ユーザー設定\)** ダイアログを閉じて、構成プロセスを完了します。
 
 ## <a name="support-for-older-versions"></a>古いバージョンのサポート
 

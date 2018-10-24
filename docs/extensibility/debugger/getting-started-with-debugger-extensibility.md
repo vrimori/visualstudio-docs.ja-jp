@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1a812575d14ef6595d58cc3ecc5d9f94b8f5635
-ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
+ms.openlocfilehash: 642f46e9497e20cd8a8276265fb434c5bd7522bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39231289"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851180"
 ---
 # <a name="get-started-with-debugger-extensibility"></a>デバッガーの拡張性を概要します。
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]の作成し、カスタマイズのデバッガーのコンポーネント内からプログラムをデバッグするために使用する必要のある情報を提供します、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]環境。  
@@ -31,11 +31,11 @@ ms.locfileid: "39231289"
   
  最適に使用する、 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]、次のものでは、理解しておく必要があります。  
   
--   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE)  
+- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]統合開発環境 (IDE)  
   
--   C++ プログラミング言語  
+- C++ プログラミング言語  
   
--   ATL COM  
+- ATL COM  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [デバッガーを拡張するためのロードマップ](../../extensibility/debugger/roadmap-for-extending-the-debugger.md)  

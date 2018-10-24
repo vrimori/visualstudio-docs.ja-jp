@@ -21,12 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7faa1e88a37416db85624863968e13b28de40bc6
-ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
+ms.openlocfilehash: 5f1c3b03507ca97724106c6ca1d121b3c54eb659
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36326128"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853143"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>For SharePoint アプリケーション ページを作成します。
   *アプリケーション ページ*は SharePoint Web サイトで使用するために設計された ASP.NET Web ページです。 アプリケーション ページは、ASP.NET ページの特殊な種類です。 アプリケーション ページと標準の ASP.NET ページの主な違いは、アプリケーション ページに、SharePoint のマスター ページとマージされるコンテンツが含まれています。 マスター ページには、サイト上の他のページと同じ外観と動作を共有するアプリケーション ページことができます。  
@@ -67,7 +67,7 @@ ms.locfileid: "36326128"
   
  Visual Studio での他の SharePoint プロジェクト項目をデバッグする場合と同様に、アプリケーション ページをデバッグできます。 Visual Studio デバッガーを開始すると、SharePoint サイトが開きます。  
   
- アプリケーション ページを表示する必要があります手動でに移動するアプリケーション ページの場所 (例: http://*Server_Name*/_layouts/*Project_Name*/ApplicationPage1.aspx)。  
+ アプリケーション ページを表示する必要があります手動でに移動するアプリケーション ページの場所 (例: http://<em>Server_Name</em>/_layouts/*Project_Name*/ApplicationPage1.aspx)。  
   
  SharePoint プロジェクトをデバッグする方法の詳細については、次を参照してください。[のトラブルシューティングを行う SharePoint ソリューション](../sharepoint/troubleshooting-sharepoint-solutions.md)します。  
   

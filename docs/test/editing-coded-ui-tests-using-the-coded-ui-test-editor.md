@@ -13,12 +13,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 50d677eec2a88f2470a7a329c4cf9e2b85f065da
-ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
+ms.openlocfilehash: 4b884afae90d477716c2041e468ceb0c64c5d41d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39177358"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849659"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>コード化された UI テスト エディターを使用してコード化された UI テストを編集する
 
@@ -74,7 +74,7 @@ ms.locfileid: "39177358"
 
 UI 操作のプロパティを **[UI 操作]** ウィンドウで変更する場合は、プロパティを編集する対象の UI 操作を含むテスト メソッドを展開し、UI 操作を選択してから [プロパティ] ウィンドウを使用してプロパティを変更します。
 
-たとえば、サーバーが使用できないときに "**Web ページ 'http://Contoso1/default.aspx' に移動**" というメッセージを表示する UI 操作が Web ブラウザーに関連付けられている場合は、URL を `'http://Contoso2/default.aspx'` に変更できます。
+たとえば、サーバーが使用できないときに "**Web ページ '<http://Contoso1/default.aspx>' に移動**" というメッセージを表示する UI 操作が Web ブラウザーに関連付けられている場合は、URL を `'http://Contoso2/default.aspx'` に変更できます。
 
 ![コントロールのプロパティ](../test/media/codeduitestcontrolprop.png)
 

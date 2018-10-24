@@ -13,12 +13,12 @@ ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 caps.latest.revision: 55
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 589e09f2eb6dae64a9f199b64a93238161d4731d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3932272acbfbfb7108b4b8d38ce526b51ef6e45c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49268353"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852015"
 ---
 # <a name="creating-a-software-development-kit"></a>ソフトウェア開発キットを作成する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,15 +27,15 @@ ms.locfileid: "49268353"
   
  Sdk の 2 種類あります。  
   
--   プラットフォーム Sdk は、プラットフォームのアプリを開発するための必須コンポーネントです。 たとえば、 [!INCLUDE[win81](../includes/win81-md.md)] SDK が開発に必要な[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]アプリ。  
+- プラットフォーム Sdk は、プラットフォームのアプリを開発するための必須コンポーネントです。 たとえば、 [!INCLUDE[win81](../includes/win81-md.md)] SDK が開発に必要な[!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)]アプリ。  
   
--   拡張機能 Sdk は、オプション コンポーネントをプラットフォームを拡張ものの、そのプラットフォームのアプリを開発するために必須です。  
+- 拡張機能 Sdk は、オプション コンポーネントをプラットフォームを拡張ものの、そのプラットフォームのアプリを開発するために必須です。  
   
- 次のセクションでは、Sdk、platform SDK を作成する方法の一般的なインフラストラクチャを記述して、拡張機能 SDK。  
+  次のセクションでは、Sdk、platform SDK を作成する方法の一般的なインフラストラクチャを記述して、拡張機能 SDK。  
   
--   [プラットフォーム Sdk](#PlatformSDKs)  
+- [プラットフォーム Sdk](#PlatformSDKs)  
   
--   [拡張機能 Sdk](#ExtensionSDKs)  
+- [拡張機能 Sdk](#ExtensionSDKs)  
   
 ##  <a name="PlatformSDKs"></a> プラットフォーム Sdk  
  プラットフォーム Sdk は、プラットフォームのアプリを開発する必要があります。 たとえば、 [!INCLUDE[win81](../includes/win81-md.md)] SDK がアプリの開発に必要な[!INCLUDE[win81](../includes/win81-md.md)]します。  

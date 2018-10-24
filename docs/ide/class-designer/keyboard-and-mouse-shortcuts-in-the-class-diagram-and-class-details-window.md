@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: db39f9c58c0fa2f0ea57d94cd1be404173720088
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 87b447c3cf2fbba77584675edf3d34f44a98cb64
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957315"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848502"
 ---
 # <a name="keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window"></a>クラス ダイアグラムおよびクラスの詳細情報のウィンドウでのキーボードとマウスのショートカット
 
@@ -31,7 +31,7 @@ ms.locfileid: "33957315"
 次のマウス操作がクラス ダイアグラムでサポートされます。
 
 |マウス操作の組み合わせ|コンテキスト|説明|
-|-----------------------|-------------|-----------------|
+| - |-------------|-----------------|
 |ダブルクリック|Shape 要素|コード エディターを開きます。|
 |ダブルクリック|ロリポップ コネクタ|ロリポップの展開/折りたたみを実行します。|
 |ダブルクリック|ロリポップ コネクタのラベル|**[インターフェイスの表示]** コマンドを呼び出します。|

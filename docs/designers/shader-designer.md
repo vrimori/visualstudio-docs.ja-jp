@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e57a42846833024fefb4bf73660484123474d00a
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: 6f2f53e801df70345e34c14c15d4456e39561623
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029054"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847632"
 ---
 # <a name="shader-designer"></a>シェーダー デザイナー
 
@@ -31,7 +31,7 @@ ms.locfileid: "47029054"
 **シェーダー デザイナー**は、以下のシェーダー形式をサポートしています。
 
 |形式名|ファイル拡張子|サポートされる操作 (表示、編集、エクスポート)|
-|-----------------|--------------------|-------------------------------------------------|
+|-----------------| - | - |
 |Directed Graph Shader Language|*.dgsl*|表示、編集|
 |HLSL シェーダー (ソース コード)|*.hlsl*|エクスポート|
 |HLSL シェーダー (バイトコード)|*.cso*|エクスポート|
@@ -177,7 +177,7 @@ DGSL シェーダーを作成するたびに、**ポイントの色**ノード�
 ## <a name="keyboard-shortcuts"></a>キーボード ショートカット
 
 |コマンド|キーボード ショートカット|
-|-------------|------------------------|
+|-------------| - |
 |**[選択]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **Q**<br /><br /> **S**|
 |**[ズーム]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **Z**<br /><br /> **Z**|
 |**[パン]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **P**<br /><br /> **K**|
@@ -204,5 +204,5 @@ DGSL シェーダーを作成するたびに、**ポイントの色**ノード�
 |Title|説明|
 |-----------|-----------------|
 |[ゲームとアプリ用の 3D アセットの操作](../designers/working-with-3-d-assets-for-games-and-apps.md)|テクスチャ、イメージ、3D モデル、およびシェーダー効果の操作に使用できる Visual Studio のツールの概要を説明します。|
-|[イメージ エディター](../designers/image-editor.md)|Visual Studio イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|
+|[Image Editor](../designers/image-editor.md)|Visual Studio イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|
 |[モデル エディター](../designers/model-editor.md)|Visual Studio モデル エディターを使って 3D モデルを操作する方法について説明します。|

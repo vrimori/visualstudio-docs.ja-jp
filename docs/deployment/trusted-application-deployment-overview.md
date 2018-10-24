@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f99bd0188c89110796f4d082e803f35ce10da867
-ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
+ms.openlocfilehash: c1be49bb015334ed37326fbe301ac2035a6f3269
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39152683"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848788"
 ---
 # <a name="trusted-application-deployment-overview"></a>信頼されたアプリケーション展開の概要
 このトピックでは、信頼されたアプリケーションの配置テクノロジを使用して、昇格されたアクセス許可を持つ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置する方法の概要を示します。  
@@ -51,21 +51,21 @@ ms.locfileid: "39152683"
   
  大規模な組織では、発行元と配置元のエンティティが異なる場合が少なくありません。  
   
--   発行元は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成するグループです。  
+- 発行元は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成するグループです。  
   
--   配置元は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを企業のデスクトップ コンピューターに配布するグループ (通常は、情報技術 (IT) 部門) です。  
+- 配置元は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを企業のデスクトップ コンピューターに配布するグループ (通常は、情報技術 (IT) 部門) です。  
   
 信頼されたアプリケーションの配置を活用するには、次の手順に従う必要があります。  
   
-1.  発行元の証明書を取得します。  
+1. 発行元の証明書を取得します。  
   
-2.  発行元をすべてのクライアント コンピューターの信頼された発行元ストアに追加します。  
+2. 発行元をすべてのクライアント コンピューターの信頼された発行元ストアに追加します。  
   
-3.  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成します。  
+3. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを作成します。  
   
-4.  発行元の証明書で配置マニフェストに署名します。  
+4. 発行元の証明書で配置マニフェストに署名します。  
   
-5.  アプリケーション配置をクライアント コンピューターに発行します。  
+5. アプリケーション配置をクライアント コンピューターに発行します。  
   
 ### <a name="obtain-a-certificate-for-the-publisher"></a>パブリッシャー証明書を取得します。  
  デジタル証明書は、Microsoft Authenticode 認証およびセキュリティ システムの主要なコンポーネントです。 Authenticode は、Windows オペレーティング システムの標準機能です。 すべての [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションには、信頼されたアプリケーションの配置の対象であるかどうかにかかわらず、デジタル証明書によって署名する必要があります。 Authenticode のしくみの詳細については[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]を参照してください[ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)します。  

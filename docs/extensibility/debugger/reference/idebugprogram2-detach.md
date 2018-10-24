@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Detach |Microsoft ドキュメント
+title: IDebugProgram2::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f2b007fa110c9ef5c344f488e710e3eaf4d097b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ff18f393c609faed6f5aeadbec9903f2d5a5dab5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114707"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832537"
 ---
 # <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
-プログラムからのデバッグ エンジンをデタッチします。  
+プログラムのデバッグ エンジンをデタッチします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ int Detach();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- デタッチされたプログラムの実行が継続が、デバッグ セッションの一部ではなくなりました。 デバッグ エンジンがデタッチされた後、これ以上のプログラム デバッグ イベントが送信されます。  
+## <a name="remarks"></a>Remarks  
+ デタッチされたプログラムの実行が継続しますが、デバッグ セッションの一部ではなくなりました。 デバッグ エンジンをデタッチしたら、これ以上のプログラムのデバッグ イベントが送信されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

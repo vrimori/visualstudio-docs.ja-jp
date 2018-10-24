@@ -18,12 +18,12 @@ ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
 caps.latest.revision: 23
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 8eadbd73c82bc40d6b3b669968cb8808ab2991d3
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 30a8b7a465c85e60b00f2208bd6e51cc55c4bbe7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49251915"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852532"
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>チュートリアル: Windows ストア アプリに対する単体テストの作成と実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,15 +35,15 @@ Visual Studio には、 [!INCLUDE[win8_appname_long](../includes/win8-appname-lo
   
  Visual Studio は、次の単体テスト機能を備えています。  
   
--   [単体テスト プロジェクトの作成](#CreateAndRunUnitTestWin8Tailored_Create)  
+- [単体テスト プロジェクトの作成](#CreateAndRunUnitTestWin8Tailored_Create)  
   
--   [単体テスト プロジェクトのマニフェストを編集します。](#CreateAndRunUnitTestWin8Tailored_Manifest)  
+- [単体テスト プロジェクトのマニフェストを編集します。](#CreateAndRunUnitTestWin8Tailored_Manifest)  
   
--   [単体テストのコーディング](#CreateAndRunUnitTestWin8Tailored_Code)  
+- [単体テストのコーディング](#CreateAndRunUnitTestWin8Tailored_Code)  
   
--   [単体テストの実行](#CreateAndRunUnitTestWin8Tailored_Run)  
+- [単体テストの実行](#CreateAndRunUnitTestWin8Tailored_Run)  
   
- 次の手順は、管理された Windows 8 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションに対して、単体テストを作成、実行、およびデバッグする手順について説明します。  
+  次の手順は、管理された Windows 8 [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] アプリケーションに対して、単体テストを作成、実行、およびデバッグする手順について説明します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio  

@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 406c870f099d2dbb1e60b0088a68e5a5c252b907
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a535a97835491f4a109ed0893d20a4330b218801
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49274405"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860306"
 ---
 # <a name="content-model-view"></a>コンテンツ モデル ビュー
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -110,11 +110,11 @@ ms.locfileid: "49274405"
   
  ズームは、次の方法で制御できます。  
   
--   マウス カーソルをコンテンツ モデル ビューのサーフェイスに合わせた状態で、Ctrl キーを押しながらマウスのホイールを回転させる。  
+- マウス カーソルをコンテンツ モデル ビューのサーフェイスに合わせた状態で、Ctrl キーを押しながらマウスのホイールを回転させる。  
   
--   スライダー コントロールを使用する。 スライダーは現在のズーム レベルを示します。  
+- スライダー コントロールを使用する。 スライダーは現在のズーム レベルを示します。  
   
- ズームのスライダーは、スライダーを選択したり、その上にカーソルを合わせたり、Ctrl キーを押しながらマウスのホイールを回転させてズームさせるときは不透明になります。それ以外の場合は透明です。  
+  ズームのスライダーは、スライダーを選択したり、その上にカーソルを合わせたり、Ctrl キーを押しながらマウスのホイールを回転させてズームさせるときは不透明になります。それ以外の場合は透明です。  
   
 ## <a name="xml-editor-integration"></a>XML エディターとの統合  
  コンテキスト メニューを使用することで、XSD デザイナーと XML エディターを切り替えることができます。  

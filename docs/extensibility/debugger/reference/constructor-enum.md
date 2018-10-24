@@ -1,5 +1,5 @@
 ---
-title: CONSTRUCTOR_ENUM |Microsoft ドキュメント
+title: CONSTRUCTOR_ENUM |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4abc7e2eb8b29a0a7486264732778502c032f42
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a8302d89bb90902f2a31a81545f14dd233bbe1f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31099715"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820539"
 ---
 # <a name="constructorenum"></a>CONSTRUCTOR_ENUM
 さまざまな種類のコンス トラクターを選択します。  
@@ -53,10 +53,10 @@ public enum ConstructorMatchOptions {
  crStatic  
  静的コンス トラクターを選択します。  
   
-## <a name="remarks"></a>コメント  
- 引数として渡される、 [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 引数として渡される、 [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)メソッド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

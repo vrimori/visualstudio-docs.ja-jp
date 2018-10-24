@@ -9,12 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a5aa0a07af94514f5fff5758fad12bbabc7520ff
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: ccfb4fa9de6513ecc36cad7156117d70879fca2e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857977"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814925"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 Visual Studio Visualization and Modeling SDK で別の DSL にインポートすることができます、不完全な DSL 定義を作成できます。 これにより、類似したモデルの共通部分を考慮することができます。
@@ -47,21 +47,21 @@ Visual Studio Visualization and Modeling SDK で別の DSL にインポートす
 
 #### <a name="to-import-a-dsl-library"></a>DSL ライブラリをインポートするには
 
-1.  別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。
+1. 別の DSL 定義内で**DSL エクスプ ローラー**、DSL のルート クラスを右クリックし、クリックして**新しい DslLibrary インポートの追加**します。
 
-2.  [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。
+2. [プロパティ] ウィンドウで次のように設定します。、**ファイル パス**ライブラリ。 相対パスまたは絶対パスを使用することができます。
 
-     インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。
+    インポートされたライブラリは、読み取り専用モードには、DSL エクスプ ローラーで表示されます。
 
-3.  基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。
+3. 基底クラスとしてインポートされたクラスを使用することができます。 インポートの DSL のドメイン クラスを作成し、プロパティ ウィンドウで、設定**ベース クラス**をインポートするクラス。
 
-4.  すべてのテンプレートの変換 をクリックします。
+4. すべてのテンプレートの変換 をクリックします。
 
-5.  DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。
+5. DSL ライブラリのプロジェクトによってビルドされたアセンブリ (DLL) への参照を DSL プロジェクトに追加します。
 
-6.  ソリューションをビルドします。
+6. ソリューションをビルドします。
 
- DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。
+   DSL ライブラリには、その他のライブラリをインポートできます。 ライブラリをインポートするときに、そのインポートは DSL エクスプ ローラーにも自動的に表示されます。
 
 ## <a name="see-also"></a>関連項目
 

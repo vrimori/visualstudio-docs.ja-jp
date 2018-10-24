@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b073640670d3e6e650fc4144c61e971c085aec2
-ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
+ms.openlocfilehash: a71a31ec3caf08dd2a6f4b4e044b929dade11f0f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34749725"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855873"
 ---
 # <a name="da0001-use-stringbuilder-for-concatenations"></a>DA0001: StringBuilder を使用して連結してください
+
 |||  
 |-|-|  
 |規則 ID|DA0001|  
@@ -30,16 +31,16 @@ ms.locfileid: "34749725"
 |プロファイル方法|サンプリング<br /><br /> インストルメンテーション|  
 |メッセージ|文字列の連結に StringBuilder を使用することを検討してください。|  
 |メッセージの種類|警告|  
-  
+
 ## <a name="cause"></a>原因  
  System.String.Concat の呼び出しがプロファイル データの大きな割合を占めています。 <xref:System.Text.StringBuilder> クラスを使用して、複数のセグメントからの文字列を連結することを検討してください。  
-  
+
 ## <a name="rule-description"></a>規則の説明  
  <xref:System.String> オブジェクトは、変更できません。 このため、文字列に変更を加えると、新しい文字列オブジェクトと元のオブジェクトのガベージ コレクションが作成されます。 この動作は、String.Concat を明示的に呼び出しても、+ や += などの文字列連結演算子を使用しても同じです。 これらのメソッドが頻繁に呼び出される場合 (文字列への文字の追加が短いループ内で発生する場合など)、プログラムのパフォーマンスが低下することがあります。  
-  
+
  StringBuilder クラスは System.String とは異なり、変更可能なオブジェクトであるため、このクラスのインスタンスを変更する StringBuilder のメソッドの大多数はその同じインスタンスへの参照を返します。 StringBuilder インスタンスには、文字を挿入したり、テキストを付加することができ、新しいインスタンスを割り当てたり、元のインスタンスを削除しなくても、インスタンスの文字を削除または置換することができます。  
-  
+
 ## <a name="how-to-investigate-a-warning"></a>警告の調査方法  
  **[エラー一覧]** ウィンドウに表示されたメッセージをダブルクリックして、サンプリング プロファイル データの[関数の詳細ビュー](../profiling/function-details-view.md)に移動します。 文字列連結を最も頻繁に使用するプログラムをセクションを特定します。 頻繁な文字列連結など、複雑な文字列操作には StringBuilder クラスを使用します。  
-  
+
  文字列の使用方法の詳細については、Microsoft Patterns and Practices (マイクロソフトのパターンと手法) ライブラリの[第 5 章「マネージド コード パフォーマンスの向上](http://go.microsoft.com/fwlink/?LinkId=177817)」の「[文字列処理](http://go.microsoft.com/fwlink/?LinkId=177816)」を参照してください。

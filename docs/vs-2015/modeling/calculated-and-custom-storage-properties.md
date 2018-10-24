@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c1203b962627071d757dc1876a534977c574a813
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 82d90d6965558ba6d28753fb71b3b227a84467a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49179492"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852857"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -93,11 +93,11 @@ ms.locfileid: "49179492"
   
  ただし、Set メソッドは、Undo または Redo では、ユーザーが呼び出される場合、またはトランザクションがロールバックされている場合にも呼び出す可能性があります。 ときに<xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A>が true の場合、Set メソッドに次のように動作する必要があります。  
   
--   その他のドメイン プロパティに値を割り当てるなど、ストアで変更されることにする必要があります。 元に戻すマネージャーはその値を設定します。  
+- その他のドメイン プロパティに値を割り当てるなど、ストアで変更されることにする必要があります。 元に戻すマネージャーはその値を設定します。  
   
--   ただし、データベースまたはファイルの内容、または、ストア外のオブジェクトなど、任意の外部リソースを更新にする必要があります。 これにより、ストア内の値を持つ synchronism で維持されることを確認します。  
+- ただし、データベースまたはファイルの内容、または、ストア外のオブジェクトなど、任意の外部リソースを更新にする必要があります。 これにより、ストア内の値を持つ synchronism で維持されることを確認します。  
   
- 例えば:  
+  例えば:  
   
 ```  
 void SetAgeValue(int value)  

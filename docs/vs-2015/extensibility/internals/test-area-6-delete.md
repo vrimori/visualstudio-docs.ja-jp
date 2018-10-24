@@ -16,12 +16,12 @@ ms.assetid: 6f2e872c-5ba2-4303-9f50-a90cef9a6225
 caps.latest.revision: 13
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f3e03ea9985840d20c812f56d7a0f9cae66420cc
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ff386c2f333d3558aa6631dd2e4c13f8bfd595c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49261814"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838752"
 ---
 # <a name="test-area-6-delete"></a>テスト領域 6: 削除
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "49261814"
   
  削除できる項目の一覧を次に示します。  
   
--   ファイル  
+- ファイル  
   
--   フォルダー  
+- フォルダー  
   
--   プロジェクト  
+- プロジェクト  
   
- によって、プロジェクトの種類にオプションがあります**削除**(ディスク上のファイルのまま)、プロジェクトまたは**削除**プロジェクト (ディスク上のファイルを削除します)。 どちらの操作を削除するプロジェクトまたは項目から**ソリューション エクスプ ローラー**します。  
+  によって、プロジェクトの種類にオプションがあります**削除**(ディスク上のファイルのまま)、プロジェクトまたは**削除**プロジェクト (ディスク上のファイルを削除します)。 どちらの操作を削除するプロジェクトまたは項目から**ソリューション エクスプ ローラー**します。  
   
 ## <a name="expected-behavior"></a>想定される動作  
  削除のテスト のテスト_ケースの予想される動作は次のとおりです。  

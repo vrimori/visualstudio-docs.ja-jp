@@ -10,35 +10,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9688948ebe2fa5e045578ee808e068d59450d748
-ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
+ms.openlocfilehash: 7f6904313ff585b8099c993f83e90bacb91a4ba2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433392"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847956"
 ---
 # <a name="configure-the-windows-firewall-for-remote-debugging"></a>Windows ファイアウォールをリモート デバッグ用に構成する
 このトピックでは、次のオペレーティング システムが稼働するコンピューターでリモート デバッグを有効にするようにファイアウォールを構成する方法を説明します。  
   
--   Windows 10  
+- Windows 10  
   
--   Windows 8/8.1  
+- Windows 8/8.1  
   
--   Windows 7   
+- Windows 7   
   
--   Windows Server 2012 R2  
+- Windows Server 2012 R2  
 
--   Windows Server 2012
+- Windows Server 2012
   
--   Windows Server 2008 R2 
+- Windows Server 2008 R2 
   
- デバッグを実行するネットワークがファイアウォールで保護されていない場合は、この構成は不要です。 それ以外の場合は、Visual Studio をホストするコンピューターと、デバッグするリモート コンピューターの両方で、ファイアウォール構成を変更する必要があります。  
+  デバッグを実行するネットワークがファイアウォールで保護されていない場合は、この構成は不要です。 それ以外の場合は、Visual Studio をホストするコンピューターと、デバッグするリモート コンピューターの両方で、ファイアウォール構成を変更する必要があります。  
   
- **IPSec** ネットワークで IPSec を使用して通信を行う必要がある場合は、Visual Studio ホスト コンピューターとリモート コンピューターの両方で追加のポートを開く必要があります。  
+  **IPSec** ネットワークで IPSec を使用して通信を行う必要がある場合は、Visual Studio ホスト コンピューターとリモート コンピューターの両方で追加のポートを開く必要があります。  
   
- **Web サーバー** リモート Web サーバーをデバッグする場合は、リモート コンピューターで追加のポートを開く必要があります。 (Iis でポート 80 開く必要があります。)  
+  **Web サーバー** リモート Web サーバーをデバッグする場合は、リモート コンピューターで追加のポートを開く必要があります。 (Iis でポート 80 開く必要があります。)  
   
- 両方のコンピューターで同じオペレーティング システムを実行する必要がないことにご注意ください。 たとえば Visual Studio コンピューターで Windows 10 を実行し、リモート コンピューターで Windows Server 2012 R2 を実行することができます。      
+  両方のコンピューターで同じオペレーティング システムを実行する必要がないことにご注意ください。 たとえば Visual Studio コンピューターで Windows 10 を実行し、リモート コンピューターで Windows Server 2012 R2 を実行することができます。      
   
 ## <a name="ports-on-the-remote-computer-that-enable-remote-debugging"></a>リモート デバッグを有効にするリモート コンピューター上のポート  
   

@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: d511934dc185ed6dac8034ee3e149391b2dd185e
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 72c4b305152694e8d3664b54aef3477d2f8b1fec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281547"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854587"
 ---
 # <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>プリフェッチされたコンテンツを使用して、Visual Studio で UWP アプリをデバッグします。
   
@@ -30,13 +30,13 @@ ms.locfileid: "44281547"
 ## <a name="to-force-preloading-of-contentprefetcher-specified-resources"></a>ContentPrefetcher で指定されるリソースのプリロードを強制するには  
  この手順では、ContentPrefetcher 機能が既に設定されていて、アプリ プロジェクトでプリロードするコンテンツ URI が指定されていると仮定しています。 指定されたリソースが新しいまたは変更されたときに、コンテンツのプリロードを強制的は、開始および選択する前に、アプリを停止する必要がある、 **Trigger Windows Store App Prefetch**コマンド。 まず、アプリを実行して、URI を登録します。 **Trigger Windows Store App Prefetch**コマンドには、コンテンツをダウンロードし、キャッシュに追加して ContentPrefetcher しにより適用されます。 アプリの後続の実行で、コンテンツがプリロードされたと見なすことができます。  
   
-1.  アプリを開始して、アプリでプリフェッチ コンテンツ URI を登録します。 **デバッグ** メニューの 選択**デバッグの開始** (キーボード ショートカット: F5)。  
+1. アプリを開始して、アプリでプリフェッチ コンテンツ URI を登録します。 **デバッグ** メニューの 選択**デバッグの開始** (キーボード ショートカット: F5)。  
   
-2.  **デバッグ** メニューの 選択**デバッグの停止** (キーボード ショートカット: shift キーを押しながら f5 キー)。  
+2. **デバッグ** メニューの 選択**デバッグの停止** (キーボード ショートカット: shift キーを押しながら f5 キー)。  
   
-3.  **デバッグ**] メニューの [選択**その他のデバッグ ターゲット**選び、 **Trigger Windows Store App Prefetch**します。  
+3. **デバッグ**] メニューの [選択**その他のデバッグ ターゲット**選び、 **Trigger Windows Store App Prefetch**します。  
   
- プリフェチした Web リソースでアプリをデバッグ、テスト、または分析できるようになりました。  
+   プリフェチした Web リソースでアプリをデバッグ、テスト、または分析できるようになりました。  
   
 > [!NOTE]
 >  指定された Web コンテンツを追加または変更するたびにこの手順を繰り返します。  

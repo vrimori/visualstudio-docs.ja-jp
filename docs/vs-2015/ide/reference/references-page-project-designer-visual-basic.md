@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: db774bdfb02d762c2370ab342cc67c1a9b792bed
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 0dabf5b84eb1adde1d6e579b7ec5ad6a6c443723
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49254710"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49859058"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "49254710"
   
 > [!NOTE]
 >  プロジェクト システムでは、検出されたアセンブリ参照が解決されます。解決するとき、次の場所で次の順序で検索されます。  
->   
->  1.  プロジェクト フォルダー。 **[すべてのファイルを表示]** が有効になっていないとき、**ソリューション エクスプローラー**にプロジェクト フォルダー ファイルが表示されます。  
-> 2.  **[参照パス]** ダイアログ ボックスに指定されているフォルダー。  
-> 3.  **[参照の追加]** ダイアログ ボックスでファイルを表示するフォルダー。  
-> 4.  プロジェクトの obj フォルダー。 (プロジェクトに COM 参照を追加するとき、1 つまたは複数のアセンブリをプロジェクトの obj フォルダーに追加できることがあります。)  
+> 
+> 1. プロジェクト フォルダー。 **[すべてのファイルを表示]** が有効になっていないとき、**ソリューション エクスプローラー**にプロジェクト フォルダー ファイルが表示されます。  
+>    2.  **[参照パス]** ダイアログ ボックスに指定されているフォルダー。  
+>    3.  **[参照の追加]** ダイアログ ボックスでファイルを表示するフォルダー。  
+>    4.  プロジェクトの obj フォルダー。 (プロジェクトに COM 参照を追加するとき、1 つまたは複数のアセンブリをプロジェクトの obj フォルダーに追加できることがあります。)  
   
  **参照**  
  この一覧には、使用か未使用かを問わず、プロジェクトのすべての参照が表示されます。  

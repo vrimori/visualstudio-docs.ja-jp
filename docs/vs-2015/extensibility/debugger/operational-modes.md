@@ -15,25 +15,25 @@ ms.assetid: f69972d0-809d-40df-9da3-04738791391c
 caps.latest.revision: 14
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bdadec54c5b28ae77d4905d2884bbee2d1f2a2ce
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ae5380f360ca1a18bcf0edafea762417084aa3d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298832"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817459"
 ---
 # <a name="operational-modes"></a>操作モード
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 これには、IDE できますが動作する、次のように 3 つのモードがあります。  
   
--   [デザイン モード](#vsconoperationalmodesanchor1)  
+- [デザイン モード](#vsconoperationalmodesanchor1)  
   
--   [実行モード](#vsconoperationalmodesanchor2)  
+- [実行モード](#vsconoperationalmodesanchor2)  
   
--   [中断モード](#vsconoperationalmodesanchor3)  
+- [中断モード](#vsconoperationalmodesanchor3)  
   
- 移行方法を理解する必要がある実装の意思決定は、これらのモードの間で、カスタム デバッグ エンジン (DE) がどのように遷移します。 デは、これらのモードを直接実装しない場合があります。 これらのモードは、デバッグ パッケージ モードを切り替えるユーザーによる操作や、DE からのイベントに基づいてでは実際には。 たとえば、中断モードに実行モードからの移行が、DE から停止イベントによって依存します。 モードまたはモードの手順を実行するか中断からの移行は、ステップ実行などの操作を実行するユーザーに依存します。 DE 遷移の詳細については、次を参照してください。[実行の制御](../../extensibility/debugger/control-of-execution.md)します。  
+  移行方法を理解する必要がある実装の意思決定は、これらのモードの間で、カスタム デバッグ エンジン (DE) がどのように遷移します。 デは、これらのモードを直接実装しない場合があります。 これらのモードは、デバッグ パッケージ モードを切り替えるユーザーによる操作や、DE からのイベントに基づいてでは実際には。 たとえば、中断モードに実行モードからの移行が、DE から停止イベントによって依存します。 モードまたはモードの手順を実行するか中断からの移行は、ステップ実行などの操作を実行するユーザーに依存します。 DE 遷移の詳細については、次を参照してください。[実行の制御](../../extensibility/debugger/control-of-execution.md)します。  
   
 ##  <a name="vsconoperationalmodesanchor1"></a> デザイン モード  
  デザイン モードは、その間機能をアプリケーションでのデバッグを設定できますの Visual Studio のデバッグ、nonrunning 状態です。  

@@ -18,21 +18,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b02adab3b0ba032a39ce73c08bd287213ef2ffc4
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 4e4e6b5471f1d36eab677d8a1d0b65ab39b7dba4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35672686"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853949"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>方法: プログラムによって Word の検索オプションを設定
   Microsoft Office Word 文書で選択内容の検索オプションを設定する 2 つの方法はあります。  
   
--   個々 のプロパティの設定、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
+- 個々 のプロパティの設定、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
   
--   引数を使用して、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>のメソッドを<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
+- 引数を使用して、<xref:Microsoft.Office.Interop.Word.Find.Execute%2A>のメソッドを<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
   
- [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
+  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
 ## <a name="use-properties-of-a-find-object"></a>Find オブジェクトのプロパティを使用します。  
  次のコードのプロパティの設定、<xref:Microsoft.Office.Interop.Word.Find>オブジェクトの現在の選択範囲内のテキストを検索します。 プロパティは、検索するには、順方向、折り返し、およびテキストを検索するなど、検索条件、<xref:Microsoft.Office.Interop.Word.Find>オブジェクト。  
