@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: b4b5a818a75399fc4ce29fb7f2bec6332dac0585
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 049b3caebc884ea22bd2928e9e4ff10e9921fd1d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945793"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930597"
 ---
 # <a name="extract-a-method-refactoring"></a>メソッドの抽出リファクタリング
 
@@ -41,21 +41,21 @@ ms.locfileid: "31945793"
 
    - C#: 
 
-    ![強調表示されたコード - C#](media/extractmethod-highlight-cs.png)
+       ![強調表示されたコード - C#](media/extractmethod-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示されたコード - Visual Basic](media/extractmethod-highlight-vb.png)
+       ![強調表示されたコード - Visual Basic](media/extractmethod-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + R** キーを押し、次に **Ctrl + M** キーを押します。 選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
+      - **Ctrl + R** キーを押し、次に **Ctrl + M** キーを押します。 選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
    - **マウス**
-     - **[編集] > [リファクター] > [メソッドの抽出]** の順に選択します。
-     - コードを右クリックし **[リファクター] > [抽出] > [メソッドの抽出]** の順に選択します。
-     - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
+      - **[編集] > [リファクター] > [メソッドの抽出]** の順に選択します。
+      - コードを右クリックし **[リファクター] > [抽出] > [メソッドの抽出]** の順に選択します。
+      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップから **[メソッドの抽出]** を選択します。
 
    メソッドがすぐに作成されます。 ここから、新しい名前を入力するだけで、メソッドの名前を今すぐ変更できます。
 
@@ -64,13 +64,13 @@ ms.locfileid: "31945793"
 
    - C#: 
 
-    ![メソッド名の変更 - C#](media/extractmethod-rename-cs.png)
+      ![メソッド名の変更 - C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic: 
 
-    ![メソッド名の変更 - Visual Basic](media/extractmethod-rename-vb.png)
+      ![メソッド名の変更 - Visual Basic](media/extractmethod-rename-vb.png)
 
-1. 変更を確認した後は、**[適用]** ボタンを選ぶか、**Enter** キーを押すと、変更がコミットされます。
+3. 変更を確認した後は、**[適用]** ボタンを選ぶか、**Enter** キーを押すと、変更がコミットされます。
 
 ## <a name="see-also"></a>関連項目
 

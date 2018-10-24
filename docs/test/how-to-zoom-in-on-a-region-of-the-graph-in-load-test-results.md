@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: f39ff75eaa6efe0d71d884fd5d6d76f65e5dad50
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: 3a5d07e4267291e30f85b1b16b49213ab119cd1c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380202"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932352"
 ---
 # <a name="how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results"></a>方法: ロード テスト結果でグラフの領域にズーム インする
 
@@ -94,15 +94,15 @@ ms.locfileid: "39380202"
 
 ### <a name="to-zoom-to-a-region-of-the-graph-by-choosing-and-dragging"></a>選択とドラッグの操作によってグラフの領域にズームするには
 
-1.  ズーム領域のいずれかの端でグラフを選択します。
+1. ズーム領域のいずれかの端でグラフを選択します。
 
-2.  マウス ポインターをズーム領域の反対側の端にドラッグします。
+2. マウス ポインターをズーム領域の反対側の端にドラッグします。
 
-3.  マウスのボタンを離します。
+3. マウスのボタンを離します。
 
-     これにより、選択とドラッグ操作によって定義された領域が拡大します。
+    これにより、選択とドラッグ操作によって定義された領域が拡大します。
 
- 次の手順では、ズーム バーの端の調節なしで、すばやくズーム アウトする方法について説明します。
+   次の手順では、ズーム バーの端の調節なしで、すばやくズーム アウトする方法について説明します。
 
 ### <a name="to-zoom-out"></a>ズーム アウトするには
 

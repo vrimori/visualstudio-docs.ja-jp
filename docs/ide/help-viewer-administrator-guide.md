@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bccbd4f1365ea42b3e0331283a5659502038e133
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 897de3b54781cf5738e80ffcc878fd8d34f6168f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33704272"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951094"
 ---
 # <a name="help-viewer-administrator-guide"></a>ヘルプ ビューアーの管理者ガイド
 
@@ -50,7 +50,6 @@ ms.locfileid: "33704272"
 -   クライアント コンピューターがインターネットにアクセスできる必要があります。
 
 -   インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。
-
 
 注意事項:
 
@@ -93,17 +92,17 @@ ms.locfileid: "33704272"
 
 #### <a name="to-uninstall-local-help"></a>ローカル ヘルプをアンインストールするには
 
-1.  ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。
+1. ヘルプ ビューアーで、**[コンテンツの管理]** タブを選択します。
 
-2.  Visual Studio ドキュメント セットに移動します。
+2. Visual Studio ドキュメント セットに移動します。
 
-3.  各サブ項目の横の **[削除]** を選択します。
+3. 各サブ項目の横の **[削除]** を選択します。
 
-4.  **[更新]** を選択し、アンインストールします。
+4. **[更新]** を選択し、アンインストールします。
 
-5.  *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* に移動し、フォルダーに *catalogType.xml* ファイルだけが含まれていることを確認します。
+5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* に移動し、フォルダーに *catalogType.xml* ファイルだけが含まれていることを確認します。
 
- 前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。
+   前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。
 
 #### <a name="to-download-the-content"></a>コンテンツをダウンロードするには
 
@@ -112,7 +111,6 @@ ms.locfileid: "33704272"
 2.  **[推奨されるドキュメント]** または **[利用可能なドキュメント]** で、ダウンロードするドキュメント セットに移動し、**[追加]** を選択します。
 
 3.  **[更新]** を選択します。
-
 
 次に、クライアント コンピューターに配置できるように、コンテンツをパッケージ化する必要があります。
 

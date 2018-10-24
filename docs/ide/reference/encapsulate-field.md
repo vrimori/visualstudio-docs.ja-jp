@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 316c1f4a6927805c75feee143f92a8e31ac4dc20
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0c6594521774ca7e4fe91bc47776c4f0c4a489a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31945247"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942921"
 ---
 # <a name="encapsulate-a-field-refactoring"></a>フィールドのカプセル化リファクタリング
 
@@ -41,20 +41,20 @@ ms.locfileid: "31945247"
 
    - C#: 
 
-    ![強調表示されたコード - C#](media/encapsulate-highlight-cs.png)
+       ![強調表示されたコード - C#](media/encapsulate-highlight-cs.png)
 
    - Visual Basic: 
 
-    ![強調表示されたコード - Visual Basic](media/encapsulate-highlight-vb.png)
+       ![強調表示されたコード - Visual Basic](media/encapsulate-highlight-vb.png)
 
-1. 次に、以下のいずれかを実行します。
+2. 次に、以下のいずれかを実行します。
 
    - **キーボード**
-     - **Ctrl + R** キーを押し、次に **Ctrl + E** キーを押します。  選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
-     - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップからどちらかの **[フィールドのカプセル化]** エントリを選択します。
+      - **Ctrl + R** キーを押し、次に **Ctrl + E** キーを押します。  選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
+      - 行の任意の場所で **Ctrl**+**.** キーを押すと、 **[クイック アクションとリファクタリング]** メニューをトリガーし、[プレビュー] ウィンドウ ポップアップからどちらかの **[フィールドのカプセル化]** エントリを選択します。
    - **マウス**
-     - **[編集] > [リファクター] > [フィールドのカプセル化]** の順に選択します。
-     - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップからどちらかの **[フィールドのカプセル化]** エントリを選択します。
+      - **[編集] > [リファクター] > [フィールドのカプセル化]** の順に選択します。
+      - コードを右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、[プレビュー] ウィンドウ ポップアップからどちらかの **[フィールドのカプセル化]** エントリを選択します。
 
    選択ツール | 説明
    --------- | -----------
@@ -68,11 +68,11 @@ ms.locfileid: "31945247"
 
    - C#: 
 
-    ![プロパティのカプセル化の結果 - C#](media/encapsulate-result-cs.png)
+      ![プロパティのカプセル化の結果 - C#](media/encapsulate-result-cs.png)
 
    - Visual Basic: 
 
-    ![プロパティのカプセル化の結果 - Visual Basic](media/encapsulate-result-vb.png)
+      ![プロパティのカプセル化の結果 - Visual Basic](media/encapsulate-result-vb.png)
 
 ## <a name="see-also"></a>関連項目
 

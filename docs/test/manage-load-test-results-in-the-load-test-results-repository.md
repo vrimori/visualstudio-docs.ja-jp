@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8f5f13915d248ff59e7a3ca1bde8ad4ee92c201e
-ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
+ms.openlocfilehash: d54c599d812bfff393cbc4ccf330aa35b902f38f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39380359"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950018"
 ---
 # <a name="manage-load-test-results-in-the-load-test-results-repository"></a>ロード テストの結果リポジトリ内のロード テスト結果の管理
 
@@ -44,7 +44,7 @@ ms.locfileid: "39380359"
 ## <a name="load-test-analyzer-tasks"></a>ロード テスト アナライザー タスク
 
 |[タスク]|関連するトピック|
-|-----------|-----------------------|
+|-|-----------------------|
 |**ロード テストの結果リポジトリの設定:** SQL データベースに、ロード テストの結果リポジトリを設定できます。 **注:**  ロード テスト リポジトリは、テスト コントローラーをインストールするときに作成することもできます。 詳細については、「[テスト エージェントをインストールして構成する](../test/lab-management/install-configure-test-agents.md)」を参照してください。||
 |**結果リポジトリの選択と表示:** 特定の結果リポジトリを選択できます。 結果ストアはローカルの結果ストアに限定されていません。 多くの場合、ロード テストは複数のリモート エージェント コンピューターで実行されます。 エージェントまたはローカル コンピューターからのテスト結果は、ロード テストの結果ストアを作成した SQL サーバーのいずれかに保存できます。 いずれの場合も、**[テスト コントローラーの管理]** ウィンドウを使用して、ロード テストの結果を保存する場所を指定する必要があります。|-   [方法 : ロード テストの結果リポジトリを選択する](../test/how-to-select-a-load-test-results-repository.md)<br />-   [方法 : ロード テストの結果にアクセスして分析する](../test/how-to-access-load-test-results-for-analysis.md)|
 |**リポジトリからロード テストの結果を削除:** **[ロード テストの結果を開いて管理]** ダイアログ ボックスを使用して、**ロード テスト エディター**からロード テストの結果を削除できます。|-   [方法: ロード テスト結果をリポジトリから削除する](../test/how-to-delete-load-test-results-from-a-repository.md)|

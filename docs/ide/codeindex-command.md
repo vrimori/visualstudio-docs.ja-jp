@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 124516b0e214f1999792f40425976441bf3c9313
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 3f1169ff5bc9487fc062ab7cbc6e2adb01151a19
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44283490"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926151"
 ---
 # <a name="codeindex-command"></a>CodeIndex コマンド
 
@@ -41,13 +41,13 @@ TFSConfig CodeIndex /indexingStatus | /setIndexing:[ on | off | keepupOnly ] | /
 ### <a name="parameters"></a>パラメーター
 
 |**引数**|**説明**|
-|------------------|---------------------|
+|------------------| - |
 |`CollectionName`|プロジェクト コレクションの名前を指定します。 名前に空白が含まれる場合は、"Fabrikam Website" のように引用符で囲みます。|
 |`CollectionId`|プロジェクト コレクションの ID 番号を指定します。|
 |`ServerPath`|コード ファイルのパスを指定します。|
 
 |**オプション**|**説明**|
-|----------------|---------------------|
+|----------------| - |
 |**/indexingStatus**|コード インデックス作成サービスの状態と構成を表示します。|
 |**/setIndexing:**[ on &#124; off &#124; keepupOnly ]|-   **on**: すべての変更セットのインデックス作成を開始します。<br />-   **off**: すべての変更セットのインデックス作成を停止します。<br />-   **keepupOnly**: 以前に作成された変更セットのインデックス作成を停止し、新しい変更セットのインデックス作成のみを開始します。|
 |**/ignoreList:**[ add &#124; remove &#124; removeAll &#124; view ] `ServerPath`<br /><br /> ワイルドカード文字 (*) を、サーバー パスの先頭、末尾、または両端に使用できます。|インデックスを作成しないコード ファイルとそのパスの一覧を指定します。<br /><br /> -   **add**: インデックスを作成しないファイルを無視ファイル リストに追加します。<br />-   **remove**: インデックスを作成するファイルを無視ファイル リストから削除します。<br />-   **removeAll**: 無視ファイル リストをクリアし、すべてのファイルのインデックス作成を開始します。<br />-   **view**: インデックスを作成しないすべてのファイルを表示します。|
