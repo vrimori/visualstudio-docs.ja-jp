@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::GetMemoryContext |Microsoft ドキュメント
+title: IDebugBinder::GetMemoryContext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18049e9f0800cc5c2bc0b53e53915a96eebb1718
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a94098a6645ef353ff3e18b17911c05d495fe8ae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101213"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905442"
 ---
 # <a name="idebugbindergetmemorycontext"></a>IDebugBinder::GetMemoryContext
-このメソッドでは、メモリのコンテキストには、オブジェクトの場所またはメモリ アドレスのいずれかに変換します。  
+このメソッドでは、メモリのコンテキストにオブジェクトの場所またはメモリ アドレスのいずれかに変換します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +54,7 @@ int GetMemoryContext(
  [out]返します、 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)オブジェクトのアドレス、またはメモリ内のアドレスを表すインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

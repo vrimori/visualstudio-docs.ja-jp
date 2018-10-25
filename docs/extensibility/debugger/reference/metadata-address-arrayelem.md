@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_ARRAYELEM |Microsoft ドキュメント
+title: METADATA_ADDRESS_ARRAYELEM |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e222adcd64457a9294a257b64f70695b9f36060
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3ab973f1f3389d6a861a0629dae3e2eb7f1b88f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125623"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926554"
 ---
 # <a name="metadataaddressarrayelem"></a>METADATA_ADDRESS_ARRAYELEM
 この構造体は、配列内の配列要素を表します。  
@@ -43,17 +43,17 @@ public struct METADATA_ADDRESS_ARRAYELEM {
   
 ## <a name="terms"></a>用語  
  tokMethod  
- ID の配列のこの要素は、一部です。  
+ ID の配列のこの要素はの一部です。  
   
- [C++]`_mdToken`は、 `typedef` 32 ビット`int`です。  
+ [C++]`_mdToken`は、 `typedef` 32 ビット`int`します。  
   
  dwIndex  
- この要素を配列内のインデックス。  
+ この要素の配列内のインデックス。  
   
-## <a name="remarks"></a>コメント  
- この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_ARRAYELEM`(から値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体)。  
+## <a name="remarks"></a>Remarks  
+ この構造体の共用体の一部は、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_ARRAYELEM`(からの値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

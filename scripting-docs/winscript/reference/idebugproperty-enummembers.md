@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty::EnumMembers |Microsoft ドキュメント
+title: IDebugProperty::EnumMembers |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9cb57f2609fcd9a80e2a9e0dfd63637e6f700047
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 07ad47ee8d0232df5f528db659def421475e7b33
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727542"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924246"
 ---
 # <a name="idebugpropertyenummembers"></a>IDebugProperty::EnumMembers
 プロパティのメンバーを列挙します。  
@@ -41,19 +41,19 @@ HRESULT EnumMembers (
   
 #### <a name="parameters"></a>パラメーター  
  `dwFieldSpec`  
- [in]指定します、`DBGPROP_INFO_FLAGS`を入力するプロパティの列挙されたデバッグ構造体のフィールドを決定する定数。  
+ [in]指定します、`DBGPROP_INFO_FLAGS`列挙のデバッグ プロパティの構造内のフィールド入力するかを決定する定数。  
   
  `nRadix`  
  [in]任意の数値情報を解釈するときに使用する基数。  
   
  `refiid`  
- [in]この IID は、列挙子をフィルター処理に渡されます。 IID はの 1 つ、`IDebugPropertyEnumType`インターフェイスから継承する`IDebugPropertyEnumType_All`です。  
+ [in]この IID は、列挙子をフィルター処理するために渡されます。 IID は、のいずれか、`IDebugPropertyEnumType`インターフェイスから継承する`IDebugPropertyEnumType_All`します。  
   
  `ppEnum`  
- [out]返します、`IEnumDebugPropertyInfo`メンバー プロパティを列挙するインターフェイスです。  
+ [out]返します、`IEnumDebugPropertyInfo`インターフェイス メンバーのプロパティを列挙します。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty インターフェイス](../../winscript/reference/idebugproperty-interface.md)   

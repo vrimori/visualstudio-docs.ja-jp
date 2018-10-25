@@ -16,12 +16,12 @@ caps.latest.revision: 14
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b09b5d3a6bb279291df64c0de720ba03f2eee16d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 052c4c59b72d5d7f5c4722fc32efc9ecedb0556b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49204433"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921965"
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>[詳細設定] ダイアログ ボックス (コンカレンシー ビジュアライザー)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -81,15 +81,15 @@ ms.locfileid: "49204433"
 ## <a name="files"></a>ファイル  
  **[ファイル]** タブでは、トレースが収集されるたびにトレース ファイルが格納されるディレクトリを指定できます。  コンカレンシー ビジュアライザーは、収集するトレースごとに 4 つのファイルを生成します。  
   
--   カーネル モード イベント トレース ログ (ETL) ファイル (*.kernel.etl)  
+- カーネル モード イベント トレース ログ (ETL) ファイル (*.kernel.etl)  
   
--   ユーザー モード イベント トレース ログ ファイル (*.user.etl)  
+- ユーザー モード イベント トレース ログ ファイル (*.user.etl)  
   
--   コンカレンシー ビジュアライザー データ ファイル (*.CVData)  
+- コンカレンシー ビジュアライザー データ ファイル (*.CVData)  
   
--   コンカレンシー ビジュアライザー トレース ファイル (*.CVTrace)  
+- コンカレンシー ビジュアライザー トレース ファイル (*.CVTrace)  
   
- 2 つの ETL ファイルには生のトレース データが保存され、2 つのコンカレンシー ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
+  2 つの ETL ファイルには生のトレース データが保存され、2 つのコンカレンシー ビジュアライザー ファイルには処理されたデータが保存されます。  生の ETL ファイルは通常、トレースが処理された後は使われません。  **[分析後にイベント トレース ログ (ETL) ファイルを削除]** チェック ボックスをオンにすると、ディスクに保存されるトレース データの量が減ります。  
   
 ## <a name="see-also"></a>関連項目  
  [マイ コードのみ](../profiling/just-my-code-threads-view.md)   

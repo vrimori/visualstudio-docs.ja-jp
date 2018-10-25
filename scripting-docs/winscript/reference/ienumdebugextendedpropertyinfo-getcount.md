@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugExtendedPropertyInfo::GetCount |Microsoft ドキュメント
+title: IEnumDebugExtendedPropertyInfo::GetCount |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cb58bd6fef639091cec4cce1750833bd47e8763e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d454fd82317d1e021b27da3366138bdf1a8091fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727262"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924175"
 ---
 # <a name="ienumdebugextendedpropertyinfogetcount"></a>IEnumDebugExtendedPropertyInfo::GetCount
 数を取得`ExtendedDebugPropertyInfo`構造体、列挙子にします。  
@@ -41,7 +41,7 @@ HRESULT GetCount (
  [out]数を返します`ExtendedDebugPropertyInfo`構造体、列挙子にします。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugExtendedPropertyInfo インターフェイス](../../winscript/reference/ienumdebugextendedpropertyinfo-interface.md)   

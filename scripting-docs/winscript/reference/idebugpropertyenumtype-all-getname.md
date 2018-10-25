@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyEnumType_All::GetName |Microsoft ドキュメント
+title: IDebugPropertyEnumType_All::GetName |マイクロソフトのドキュメント
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 49b90938630fa96ca91f3346a37a7147ec2b90e7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 41eed5e7fd8ba2874250abf60826bc59da1763df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923525"
 ---
 # <a name="idebugpropertyenumtypeallgetname"></a>IDebugPropertyEnumType_All::GetName
-名前を含む BSTR を返します、`EnumType`です。  
+名前を含む BSTR を返します、`EnumType`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>パラメーター  
  `pname`  
- [out]名前を含む、BSTR、`EnumType`です。  
+ [out]BSTR の名前を含む、`EnumType`します。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPropertyEnumType_All インターフェイス](../../winscript/reference/idebugpropertyenumtype-all-interface.md)

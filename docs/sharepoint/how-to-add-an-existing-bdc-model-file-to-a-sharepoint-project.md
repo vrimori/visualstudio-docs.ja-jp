@@ -22,31 +22,31 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8f7508cf8c66343894c16da7ff840bd275abb65c
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: bda78d33a5b49d936fb632e78472c91ab1230ba5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36755899"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922615"
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>方法: SharePoint プロジェクトに既存の BDC モデル ファイルを追加
   カスタマイズ、パッケージ化、および Visual Studio を使用してモデル ファイルを追加するビジネス データ接続 (BDC) モデルを再配置 (*.bdcm*) を SharePoint ファーム プロジェクト。 詳細については、次を参照してください。 [business data connectivity モデルの作成](../sharepoint/creating-a-business-data-connectivity-model.md)です。  
   
 ### <a name="to-add-a-bdc-model-file-to-a-sharepoint-project"></a>BDC モデル ファイルを SharePoint プロジェクトに追加するには  
   
-1.  **ソリューション エクスプ ローラー**、SharePoint プロジェクトのフォルダーを選択します。  
+1. **ソリューション エクスプ ローラー**、SharePoint プロジェクトのフォルダーを選択します。  
   
-2.  メニュー バーで、**プロジェクト** > **既存項目の追加**します。  
+2. メニュー バーで、**プロジェクト** > **既存項目の追加**します。  
   
-3.  **既存項目の追加**ダイアログ ボックスで、プロジェクトに追加、ファイルを選択し、選択するモデル定義ファイルの場所を指定し、**追加**ボタンをクリックします。  
+3. **既存項目の追加**ダイアログ ボックスで、プロジェクトに追加、ファイルを選択し、選択するモデル定義ファイルの場所を指定し、**追加**ボタンをクリックします。  
   
-     モデルが定義されていない場合、 *.NET アセンブリの型の基幹業務 (LOB) システム*、**追加の .NET アセンブリの LobSystem**  ダイアログ ボックスが表示されます。  
+    モデルが定義されていない場合、 *.NET アセンブリの型の基幹業務 (LOB) システム*、**追加の .NET アセンブリの LobSystem**  ダイアログ ボックスが表示されます。  
   
-4.  ダイアログ ボックスが表示された場合は、次の手順のいずれかを実行します。  
+4. ダイアログ ボックスが表示された場合は、次の手順のいずれかを実行します。  
   
-    -   カスタム コードを記述し、デザイナーを使用して、メタデータをインポートしたモデルの定義を選択する場合、**はい**ボタンをクリックし、システムの名前を選択し、 **OK**ボタン。  
+   - カスタム コードを記述し、デザイナーを使用して、メタデータをインポートしたモデルの定義を選択する場合、**はい**ボタンをクリックし、システムの名前を選択し、 **OK**ボタン。  
   
-    -   それ以外の場合、選択、**いいえ**ボタンをクリックし、選択し、 **[ok]** ボタンをクリックします。  
+   - それ以外の場合、選択、**いいえ**ボタンをクリックし、選択し、 **[ok]** ボタンをクリックします。  
   
      **Business Data Connectivity モデル**項目がプロジェクトに追加します。  
   

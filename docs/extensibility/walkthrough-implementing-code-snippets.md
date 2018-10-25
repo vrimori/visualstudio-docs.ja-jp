@@ -11,12 +11,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d3191f14cb3ad10b6fb95f2da6a3a4281c839de
-ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
+ms.openlocfilehash: bd4a22dc63f0304cc8afa98e35c5f7afd6cac011
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566598"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921994"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>チュートリアル: 実装のコード スニペット
 コード スニペットを作成し、拡張機能のユーザーが、独自のコードを追加できるようにエディター拡張機能に含めることができます。  
@@ -27,13 +27,13 @@ ms.locfileid: "39566598"
   
  このチュートリアルでは、これらのタスクを実行する方法について説明します。  
   
-1.  作成し、特定の言語のコード スニペットを登録します。  
+1. 作成し、特定の言語のコード スニペットを登録します。  
   
-2.  追加、**スニペットの挿入**ショートカット メニューにコマンド。  
+2. 追加、**スニペットの挿入**ショートカット メニューにコマンド。  
   
-3.  スニペットの展開を実装します。  
+3. スニペットの展開を実装します。  
   
- このチュートリアルに基づいて[チュートリアル: ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
+   このチュートリアルに基づいて[チュートリアル: ステートメント入力候補を表示](../extensibility/walkthrough-displaying-statement-completion.md)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降で、ダウンロード センターから、Visual Studio SDK をインストールしないでください。 Visual Studio のセットアップのオプション機能として含まれています。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
@@ -43,72 +43,72 @@ ms.locfileid: "39566598"
   
  次の手順では、コード スニペットを作成し、特定の GUID に関連付ける方法を示します。  
   
-1.  次のディレクトリ構造を作成します。  
+1. 次のディレクトリ構造を作成します。  
   
-     **%InstallDir%\TestSnippets\Snippets\1033\\**  
+    **%InstallDir%\TestSnippets\Snippets\1033\\**  
   
-     場所 *%installdir%* は Visual Studio インストール フォルダーです。 (コード スニペットがインストールには、このパスは使用は、通常、パスを指定できます、します。)  
+    場所 *%installdir%* は Visual Studio インストール フォルダーです。 (コード スニペットがインストールには、このパスは使用は、通常、パスを指定できます、します。)  
   
-2.  \1033\ フォルダー内に作成、 *.xml*ファイルし、名前を付けます**TestSnippets.xml**します。 (がある限り、任意の名前を指定できますが、この名前は通常、スニペットのインデックス ファイルの使用、 *.xml*ファイル名拡張子)。次のテキストを追加およびプレース ホルダーの GUID を削除して、独自に追加します。  
+2. \1033\ フォルダー内に作成、 *.xml*ファイルし、名前を付けます**TestSnippets.xml**します。 (がある限り、任意の名前を指定できますが、この名前は通常、スニペットのインデックス ファイルの使用、 *.xml*ファイル名拡張子)。次のテキストを追加およびプレース ホルダーの GUID を削除して、独自に追加します。  
   
-    ```xml  
-    <?xml version="1.0" encoding="utf-8" ?>  
-    <SnippetCollection>  
-        <Language Lang="TestSnippets" Guid="{00000000-0000-0000-0000-000000000000}">  
-            <SnippetDir>  
-                <OnOff>On</OnOff>  
-                <Installed>true</Installed>  
-                <Locale>1033</Locale>  
-                <DirPath>%InstallRoot%\TestSnippets\Snippets\%LCID%\</DirPath>  
-                <LocalizedName>Snippets</LocalizedName>  
-            </SnippetDir>  
-        </Language>  
-    </SnippetCollection>  
-    ```  
+   ```xml  
+   <?xml version="1.0" encoding="utf-8" ?>  
+   <SnippetCollection>  
+       <Language Lang="TestSnippets" Guid="{00000000-0000-0000-0000-000000000000}">  
+           <SnippetDir>  
+               <OnOff>On</OnOff>  
+               <Installed>true</Installed>  
+               <Locale>1033</Locale>  
+               <DirPath>%InstallRoot%\TestSnippets\Snippets\%LCID%\</DirPath>  
+               <LocalizedName>Snippets</LocalizedName>  
+           </SnippetDir>  
+       </Language>  
+   </SnippetCollection>  
+   ```  
   
-3.  スニペット フォルダーにファイルを作成、名前を付けます**テスト**`.snippet`、し、次のテキストを追加します。  
+3. スニペット フォルダーにファイルを作成、名前を付けます**テスト**`.snippet`、し、次のテキストを追加します。  
   
-    ```xml  
-    <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
-        <CodeSnippet Format="1.0.0">  
-            <Header>  
-                <Title>Test replacement fields</Title>  
-                <Shortcut>test</Shortcut>  
-                <Description>Code snippet for testing replacement fields</Description>  
-                <Author>MSIT</Author>  
-                <SnippetTypes>  
-                    <SnippetType>Expansion</SnippetType>  
-                </SnippetTypes>  
-            </Header>  
-            <Snippet>  
-                <Declarations>  
-                    <Literal>  
-                      <ID>param1</ID>  
-                        <ToolTip>First field</ToolTip>  
-                        <Default>first</Default>  
-                    </Literal>  
-                    <Literal>  
-                        <ID>param2</ID>  
-                        <ToolTip>Second field</ToolTip>  
-                        <Default>second</Default>  
-                    </Literal>  
-                </Declarations>  
-                <References>  
-                   <Reference>  
-                       <Assembly>System.Windows.Forms.dll</Assembly>  
-                   </Reference>  
-                </References>  
-                <Code Language="TestSnippets">  
-                    <![CDATA[MessageBox.Show("$param1$");  
-         MessageBox.Show("$param2$");]]>  
-                </Code>    
-            </Snippet>  
-        </CodeSnippet>  
-    </CodeSnippets>  
-    ```  
+   ```xml  
+   <?xml version="1.0" encoding="utf-8" ?>  
+   <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+       <CodeSnippet Format="1.0.0">  
+           <Header>  
+               <Title>Test replacement fields</Title>  
+               <Shortcut>test</Shortcut>  
+               <Description>Code snippet for testing replacement fields</Description>  
+               <Author>MSIT</Author>  
+               <SnippetTypes>  
+                   <SnippetType>Expansion</SnippetType>  
+               </SnippetTypes>  
+           </Header>  
+           <Snippet>  
+               <Declarations>  
+                   <Literal>  
+                     <ID>param1</ID>  
+                       <ToolTip>First field</ToolTip>  
+                       <Default>first</Default>  
+                   </Literal>  
+                   <Literal>  
+                       <ID>param2</ID>  
+                       <ToolTip>Second field</ToolTip>  
+                       <Default>second</Default>  
+                   </Literal>  
+               </Declarations>  
+               <References>  
+                  <Reference>  
+                      <Assembly>System.Windows.Forms.dll</Assembly>  
+                  </Reference>  
+               </References>  
+               <Code Language="TestSnippets">  
+                   <![CDATA[MessageBox.Show("$param1$");  
+        MessageBox.Show("$param2$");]]>  
+               </Code>    
+           </Snippet>  
+       </CodeSnippet>  
+   </CodeSnippets>  
+   ```  
   
- 次の手順では、コード スニペットを登録する方法を示します。  
+   次の手順では、コード スニペットを登録する方法を示します。  
   
 ### <a name="to-register-code-snippets-for-a-specific-guid"></a>特定の GUID のコード スニペットを登録するには  
   

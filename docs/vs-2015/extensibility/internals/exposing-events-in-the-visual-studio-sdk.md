@@ -16,12 +16,12 @@ ms.assetid: 70bbc258-c221-44f8-b0d7-94087d83b8fe
 caps.latest.revision: 17
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3c7e001d71ca413cb5b984fabf203eaa6f748b98
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 96cbc9ad5c7098ff1aba2bc9cd3f387ca229cc98
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49195573"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919887"
 ---
 # <a name="exposing-events-in-the-visual-studio-sdk"></a>Visual studio SDK でのイベントの公開
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -32,23 +32,23 @@ ms.locfileid: "49195573"
   
  次のプロセスでは、VSPackage に固有のイベントを返す方法について説明します。  
   
-1.  環境を起動します。  
+1. 環境を起動します。  
   
-2.  すべての Vspackage、オートメーション、AutomationEvents AutomationProperties キーの下にあるすべての値名をレジストリから読み取るし、テーブルにこれらの名前を格納します。  
+2. すべての Vspackage、オートメーション、AutomationEvents AutomationProperties キーの下にあるすべての値名をレジストリから読み取るし、テーブルにこれらの名前を格納します。  
   
-3.  この例で、automation、コンシューマーを呼び出す`DTE.Events.AutomationProjectsEvents`または`DTE.Events.AutomationProjectItemsEvents`します。  
+3. この例で、automation、コンシューマーを呼び出す`DTE.Events.AutomationProjectsEvents`または`DTE.Events.AutomationProjectItemsEvents`します。  
   
-4.  環境では、テーブルから文字列パラメーターを検索し、対応する VSPackage を読み込みます。  
+4. 環境では、テーブルから文字列パラメーターを検索し、対応する VSPackage を読み込みます。  
   
-5.  環境は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> ; AutomationProjectsEvents または AutomationProjectItemsEvents この例では、呼び出しで名を使用してメソッドが渡されます。  
+5. 環境は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> ; AutomationProjectsEvents または AutomationProjectItemsEvents この例では、呼び出しで名を使用してメソッドが渡されます。  
   
-6.  VSPackage は、メソッドをなどが含まれるルート オブジェクトを作成します。`get_AutomationProjectsEvents`と`get_AutomationProjectItemEvents`をオブジェクトには IDispatch ポインターを返します。  
+6. VSPackage は、メソッドをなどが含まれるルート オブジェクトを作成します。`get_AutomationProjectsEvents`と`get_AutomationProjectItemEvents`をオブジェクトには IDispatch ポインターを返します。  
   
-7.  環境では、automation の呼び出しに渡された名前に基づいて、適切なメソッドを呼び出します。  
+7. 環境では、automation の呼び出しに渡された名前に基づいて、適切なメソッドを呼び出します。  
   
-8.  `get_`メソッドは、両方を実装する別の IDispatch ベースのイベント オブジェクトを作成、`IConnectionPointContainer`インターフェイスと`IConnectionPoint`インターフェイスし、オブジェクトへ、IDispatchpointer を返します。  
+8. `get_`メソッドは、両方を実装する別の IDispatch ベースのイベント オブジェクトを作成、`IConnectionPointContainer`インターフェイスと`IConnectionPoint`インターフェイスし、オブジェクトへ、IDispatchpointer を返します。  
   
- 応答する必要がありますにオートメーションを使用してイベントを公開する<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>し、レジストリに追加する文字列。 基本的なプロジェクト サンプルでは、文字列が"BscProjectsEvents"と"BscProjectItemsEvents です"。  
+   応答する必要がありますにオートメーションを使用してイベントを公開する<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>し、レジストリに追加する文字列。 基本的なプロジェクト サンプルでは、文字列が"BscProjectsEvents"と"BscProjectItemsEvents です"。  
   
 ## <a name="registry-entries-from-the-basic-project-sample"></a>基本的なプロジェクト サンプルからのレジストリ エントリ  
  このセクションでは、オートメーション イベントの値をレジストリに追加する場所を示します。  

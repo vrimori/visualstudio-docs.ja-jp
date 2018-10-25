@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetBreakpointResolution |Microsoft ドキュメント
+title: IDebugBoundBreakpoint2::GetBreakpointResolution |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35337b26053876c9009be124bba9791743f53009
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7d58c58dbbaad6d57518c8f13620029034ae4b76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31102952"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920392"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
-このブレークポイントを説明するブレークポイントの解像度を取得します。  
+このブレークポイントを表すブレークポイント解像度を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +44,18 @@ int GetBreakpointResolution(
  `ppBPResolution`  
  [out]返します、 [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)次のいずれかを表すインターフェイスです。  
   
--   コードのブレークポイントがバインドされているコード内の位置を記述するブレークポイントの解像度オブジェクト。  
+-   コードのブレークポイントがバインドされているコード内の位置を示すブレークポイント解像度オブジェクト。  
   
--   データ ブレークポイントがバインドされたデータの場所。  
+-   データ ブレークポイントがバインドされているデータの場所。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`バインドされたブレークポイント オブジェクトの状態は に設定されているかどうかは`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。 返します`E_BP_DELETED`にバインドされたブレークポイント オブジェクトの状態が設定されてかどうか`BPS_DELETED`(の一部、 [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙型)。  
   
-## <a name="remarks"></a>コメント  
- 呼び出す、 [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)メソッドがコードまたはデータのブレークポイントの解像度を判断します。  
+## <a name="remarks"></a>Remarks  
+ 呼び出す、 [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)メソッドのコードまたはデータがブレークポイント解像度を判断します。  
   
 ## <a name="example"></a>例  
- 次の例は、単純なは、このメソッドを実装する方法を示します`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイスです。  
+ 次の例は、単純なは、このメソッドを実装する方法を示しています。`CBoundBreakpoint`を公開するオブジェクト、 [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイス。  
   
 ```  
 HRESULT CBoundBreakpoint::GetBreakpointResolution(  

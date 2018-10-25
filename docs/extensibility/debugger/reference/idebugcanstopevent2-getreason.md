@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason |Microsoft ドキュメント
+title: IDebugCanStopEvent2::GetReason |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c0eaefee714467084898182b338ceda63ebdc0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d32f8be53d88b8268fdbbc82e6d774bffe3d7c3a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101990"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898422"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-デバッグ エンジン (DE) が停止する理由の理由を取得します。  
+なぜデバッグ エンジン (DE) を停止する必要がある理由を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,15 +41,15 @@ int GetReason(
   
 #### <a name="parameters"></a>パラメーター  
  `pcr`  
- [out]値を返します、 [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)このイベントの理由を説明する列挙体です。  
+ [out]値を返します、 [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md)このイベントの理由を説明する列挙体。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドと通常呼ばれる前に、 [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)メソッドの呼び出し元は、0 以外を渡すかどうかを特定できるように (`TRUE`) に、`IDebugCanStopEvent2::CanStop`メソッドです。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの呼び出しの前に通常、 [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)メソッドの呼び出し元は、0 以外を渡すかどうかを判断できるように (`TRUE`) に、`IDebugCanStopEvent2::CanStop`メソッド。  
   
- 停止の理由には、いずれかを指定できます`CANSTOP_ENTRYPOINT`、エントリ ポイントに達して、DE つまりまたは`CANSTOP_STEPIN`関数にステップ インは、DE 意味します。  
+ 停止の理由には、いずれかを指定できる`CANSTOP_ENTRYPOINT`、エントリ ポイントに達した、DE つまりまたは`CANSTOP_STEPIN`関数にステップ インは、DE つまりします。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

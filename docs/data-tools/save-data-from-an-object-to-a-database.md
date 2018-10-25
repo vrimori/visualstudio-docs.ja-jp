@@ -17,12 +17,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2d5e118e4d998a5abf87920ee54401bf53d4adfa
-ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
+ms.openlocfilehash: 210d7ade5e54f9f76e40eaf577e7818db85176e5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174490"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897889"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>オブジェクトからデータベースにデータを保存する
 TableAdapter の DBDirect メソッドのいずれかに、オブジェクトから値を渡すことでオブジェクトをデータベースでデータを保存することができます (たとえば、 `TableAdapter.Insert`)。 詳細については、次を参照してください。 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)します。
@@ -35,7 +35,7 @@ TableAdapter の DBDirect メソッドのいずれかに、オブジェクトか
 >  メインのクエリが十分な情報を提供する必要があります TableAdapter を構成するとき、`DBDirect`メソッドを作成できます。 たとえば、TableAdapter が定義されている主キー列がないテーブルからデータのクエリに構成されている場合に生成しません`DBDirect`メソッド。
 
 |TableAdapter DBDirect メソッド|説明|
-|----------------------------------|-----------------|
+| - |-----------------|
 |`TableAdapter.Insert`|データベースに新しいレコードを追加して、個々 の列の値をメソッド パラメーターとして渡すことができます。|
 |`TableAdapter.Update`|既存のデータベース内のレコードを更新します。 `Update`メソッドはメソッドのパラメーターとしての元と新しい列の値を受け取ります。 元のレコードを検索するため、元の値と新しい値は、そのレコードの更新に使用されます。<br /><br /> `TableAdapter.Update`ことで、元のデータベースにデータセットの変更を調整するメソッドを使用しても、 <xref:System.Data.DataSet>、 <xref:System.Data.DataTable>、 <xref:System.Data.DataRow>、または配列の<xref:System.Data.DataRow>メソッドのパラメーターとして。|
 |`TableAdapter.Delete`|メソッドのパラメーターとして渡された元の列の値に基づいて、データベースから既存のレコードを削除します。|

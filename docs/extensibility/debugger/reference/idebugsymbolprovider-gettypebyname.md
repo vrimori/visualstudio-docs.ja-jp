@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetTypeByName |Microsoft ドキュメント
+title: IDebugSymbolProvider::GetTypeByName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 565972b0f1f7d1f2e5e2ffd751cba60621fe284d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b95117cd37f9ca6c2bfe3d2276bb03994f7a07b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118997"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924745"
 ---
 # <a name="idebugsymbolprovidergettypebyname"></a>IDebugSymbolProvider::GetTypeByName
 このメソッドは、シンボル名を記号の型にマップします。  
@@ -45,19 +45,19 @@ int GetTypeByName(
   
 #### <a name="parameters"></a>パラメーター  
  `pszClassName`  
- [in]シンボルの名前です。  
+ [in]シンボルの名前。  
   
  `nameMatch`  
- [in]たとえば、一致の大文字小文字を区別の種類を選択します。 値、 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)列挙します。  
+ [in]たとえば、一致の大文字小文字を区別の種類を選択します。 値、 [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md)列挙体。  
   
  `ppField`  
- [out]記号の型として返されます、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
+ [out]シンボル型を返します、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドはジェネリック バージョンの[GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)です。  
+## <a name="remarks"></a>Remarks  
+ このメソッドはジェネリック バージョンの[GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

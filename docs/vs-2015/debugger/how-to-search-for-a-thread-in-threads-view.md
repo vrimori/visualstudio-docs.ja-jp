@@ -16,12 +16,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c7801cb937f2a94df92bf8ab3052e4e0e2f734d1
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ed11edadca2f5e5e521eda824ece5ab735814125
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49277447"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912176"
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>方法: スレッド ビューでスレッドを検索する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,24 +30,24 @@ ms.locfileid: "49277447"
   
 ### <a name="to-search-for-a-thread-in-threads-view"></a>スレッド ビューでスレッドを検索するには  
   
-1.  そのため、ウィンドウを整列 Spy++ は、アクティブな[スレッド ビュー](../debugger/threads-view.md)ウィンドウが表示されます。  
+1. そのため、ウィンドウを整列 Spy++ は、アクティブな[スレッド ビュー](../debugger/threads-view.md)ウィンドウが表示されます。  
   
-2.  **検索**] メニューの [選択**スレッド**します。  
+2. **検索**] メニューの [選択**スレッド**します。  
   
-     [スレッド検索 ダイアログ ボックス](../debugger/thread-search-dialog-box.md)が開きます。  
+    [スレッド検索 ダイアログ ボックス](../debugger/thread-search-dialog-box.md)が開きます。  
   
-3.  検索条件として、スレッド ID またはモジュールの文字列を入力します。  
+3. 検索条件として、スレッド ID またはモジュールの文字列を入力します。  
   
-4.  値を指定しないすべてのフィールドをオフにします。  
+4. 値を指定しないすべてのフィールドをオフにします。  
   
-    > [!TIP]
-    >  モジュールによって所有されているすべてのスレッドを検索するには、オフ、**スレッド**でテキスト ボックスと、モジュールの種類の名前、**モジュール**ボックス。 使用して**次を検索**スレッドの検索を続行します。  
+   > [!TIP]
+   >  モジュールによって所有されているすべてのスレッドを検索するには、オフ、**スレッド**でテキスト ボックスと、モジュールの種類の名前、**モジュール**ボックス。 使用して**次を検索**スレッドの検索を続行します。  
   
-5.  選択**を**または**ダウン**方向を検索します。  
+5. 選択**を**または**ダウン**方向を検索します。  
   
-6.  **[OK]** をクリックします。  
+6. **[OK]** をクリックします。  
   
- 一致するスレッドが見つかると、スレッド ビュー ウィンドウで強調表示されます。
+   一致するスレッドが見つかると、スレッド ビュー ウィンドウで強調表示されます。
 
 
 

@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e278eeb486d2a2d0150fb3ffd44176d17edbdc33
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 0c617bb84a3d7aad10769ef5dbceec657e49aa21
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42624449"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927347"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用して SharePoint アプリケーションをデバッグします。
 
@@ -46,7 +46,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 - [デバッグし、SharePoint ソリューションを修正](#BKMK_DebugSolution)
 
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -265,15 +265,15 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 3. 次の手順を実行して、フィーチャーを非アクティブにします。
 
-    1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
+   1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
 
-    2. **サイトの操作**、選択、**サイト機能の管理**リンク。
+   2. **サイトの操作**、選択、**サイト機能の管理**リンク。
 
-    3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
+   3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
 
-    4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
+   4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
 
-     FeatureDeactivating() イベント ハンドラーによってエラーがスローされます。
+      FeatureDeactivating() イベント ハンドラーによってエラーがスローされます。
 
 ## <a name="collect-intellitrace-data-by-using-microsoft-monitoring-agent"></a>Microsoft Monitoring Agent を使用して IntelliTrace データを収集します。
 
@@ -286,15 +286,15 @@ SharePoint を実行しているシステムに Microsoft Monitoring Agent を�
 
 2. フィーチャーを非アクティブ化します。
 
-    1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
+   1. **サイトの操作**SharePoint では、メニュー**サイト設定**します。
 
-    2. **サイトの操作**、選択、**サイト機能の管理**リンク。
+   2. **サイトの操作**、選択、**サイト機能の管理**リンク。
 
-    3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
+   3. 横に**IntelliTraceTest Feature1**、選択、**非アクティブ化**ボタンをクリックします。
 
-    4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
+   4. [警告] ページで、選択、**この機能を非アクティブ化**リンク。
 
-     エラーが発生します (この場合は、FeatureDeactivating() イベント ハンドラーでスローされたエラーが原因)。
+      エラーが発生します (この場合は、FeatureDeactivating() イベント ハンドラーでスローされたエラーが原因)。
 
 3. PowerShell ウィンドウで実行、 [Stop-webapplicationmonitoring](http://go.microsoft.com/fwlink/?LinkID=313687)コマンドを .iTrace ファイルを作成、監視を停止し、SharePoint ソリューションを再起動します。
 

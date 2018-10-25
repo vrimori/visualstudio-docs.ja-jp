@@ -1,5 +1,5 @@
 ---
-title: IDebugPortRequest2::GetPortName |Microsoft ドキュメント
+title: IDebugPortRequest2::GetPortName |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c81bdc6586766cb4a241bf29e653cb1b10f66f2f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 490381f183a19e33fd391b133562fc2a463c6ee9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31114334"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920847"
 ---
 # <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
 ポートの名前を取得します。  
@@ -44,10 +44,10 @@ int GetPortName(
  [out]ポートの名前を返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)が通常に渡されたインターフェイス デバッグ パッケージ (クライアント) から、接続を取得するポート業者 (サーバー) にポートです。 デバッグ パッケージと、ポート供給業者の両方には、ポートの選択肢の認識します。 単純な文字列は、ポートを記述できる場合、`IDebugPortRequest2::GetPortName`メソッドには、接続を作成するための十分な情報です。 それ以外の場合、追加のインターフェイスは、サーバーを使用して取得できるクライアントによって提供されること`IDebugPortRequest2::QueryInterface`です。  
+## <a name="remarks"></a>Remarks  
+ [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)が通常に渡されたインターフェイス デバッグ パッケージ (クライアント) からポートのサプライヤー (サーバー) の接続を取得するポート。 パッケージのデバッグとポートのサプライヤーの両方は、ポートに対して多数の選択肢に注意してください。 単純な文字列は、ポートを記述できる場合、`IDebugPortRequest2::GetPortName`メソッドには、接続を作成するのに十分な情報。 サーバーを使用して取得できるクライアントによって追加のインターフェイスを指定する場合は、`IDebugPortRequest2::QueryInterface`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)

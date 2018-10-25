@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE |Microsoft ドキュメント
+title: PENDING_BP_STATE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae632ab67a21d795a0594d37301c162c1c4ba753
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30e70c956afc6aef5025d35425fbc2ee42605b90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31125917"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921067"
 ---
 # <a name="pendingbpstate"></a>PENDING_BP_STATE
 保留中のブレークポイント (バインドされていないブレークポイント) の状態を指定します。  
@@ -54,15 +54,15 @@ public enum enum_PENDING_BP_STATE {
  保留中のブレークポイントが削除されたことを示します。  
   
  PBPS_DISABLED  
- 保留中のブレークポイントを無効にすることを示します。  
+ 保留中のブレークポイントが無効になっていることを示します。  
   
  PBPS_ENABLED  
  保留中のブレークポイントが有効になっていることを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  として使用して、`state`のメンバー、 [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)構造体。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

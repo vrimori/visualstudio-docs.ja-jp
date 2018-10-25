@@ -13,12 +13,12 @@ ms.assetid: 11232a83-73ea-46bd-bc0c-46f74f6e3a42
 caps.latest.revision: 35
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: ec0229107b4a9ab3ef3710fb5306f1dfdcccfa44
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f2475a61839e34b69d8e99e01bde32fd47b9c276
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49298949"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907145"
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Visual Studio 2010 からのコード化された UI テストのアップグレード
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -56,17 +56,17 @@ ms.locfileid: "49298949"
   
  更新プログラムを適用すると、次の [!INCLUDE[vs2010](../includes/vs2010-md.md)] SP1 のコード化された UI テスト ツール機能が Windows 8 向けに改善されます。  
   
--   Windows 8 を実行しているコンピューターで、Microsoft .NET Framework 4.5 ベースの Windows Presentation Foundation (WPF) コントロールにコード化された UI テストを実行できます。  
+- Windows 8 を実行しているコンピューターで、Microsoft .NET Framework 4.5 ベースの Windows Presentation Foundation (WPF) コントロールにコード化された UI テストを実行できます。  
   
--   Windows 8 を実行しているコンピューターで、64 ビット (x64) の Internet Explorer 10 にコード化された UI テストを実行できます。  
+- Windows 8 を実行しているコンピューターで、64 ビット (x64) の Internet Explorer 10 にコード化された UI テストを実行できます。  
   
- この更新プログラムには、次の問題の修正プログラムも含まれています。  
+  この更新プログラムには、次の問題の修正プログラムも含まれています。  
   
--   **コード カバレッジ:** Visual Studio 2012 で作成されたコード カバレッジ ファイル (.coverage) を [!INCLUDE[vs2010](../includes/vs2010-md.md)] SP1 で開くことができません。  
+- **コード カバレッジ:** Visual Studio 2012 で作成されたコード カバレッジ ファイル (.coverage) を [!INCLUDE[vs2010](../includes/vs2010-md.md)] SP1 で開くことができません。  
   
--   **取り残されたテスト アーティファクト:** Team Foundation Server (TFS) 2010 の無効なユーザーに割り当てられているテスト アーティファクトがあります。 たとえば、退職したユーザーにまだ割り当てられたままのテスト ケースがあります。 TFS 2010 を TFS 2012 にアップグレードします。 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 2010 を使用して、アップグレードした TFS サーバーに接続します。 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 2010 を使用して、任意の TFS ユーザーにテスト アーティファクトを割り当てることはできません。  
+- **取り残されたテスト アーティファクト:** Team Foundation Server (TFS) 2010 の無効なユーザーに割り当てられているテスト アーティファクトがあります。 たとえば、退職したユーザーにまだ割り当てられたままのテスト ケースがあります。 TFS 2010 を TFS 2012 にアップグレードします。 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 2010 を使用して、アップグレードした TFS サーバーに接続します。 [!INCLUDE[TCMext](../includes/tcmext-md.md)] 2010 を使用して、任意の TFS ユーザーにテスト アーティファクトを割り当てることはできません。  
   
--   **ロード テスト:** Windows 8 を実行しているコンピューターで、ローカル エリア ネットワーク (LAN) プロファイル以外のネットワークの種類でロード テストを実行すると、ネットワーク エミュレーターのドライバーにより、オペレーティング システムがクラッシュします。 詳細については、「 [サポート技術情報記事 2736182](http://support.microsoft.com/kb/2736182)」を参照してください。  
+- **ロード テスト:** Windows 8 を実行しているコンピューターで、ローカル エリア ネットワーク (LAN) プロファイル以外のネットワークの種類でロード テストを実行すると、ネットワーク エミュレーターのドライバーにより、オペレーティング システムがクラッシュします。 詳細については、「 [サポート技術情報記事 2736182](http://support.microsoft.com/kb/2736182)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [Visual Studio プロジェクトの移植、移行、およびアップグレード](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   

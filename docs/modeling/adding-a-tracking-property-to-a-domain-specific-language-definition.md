@@ -13,12 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7b9641ccc9064f576f471c7e75d59c3d5b8f0db6
-ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
+ms.openlocfilehash: 473cc26a9d3e7b7bc5ec97d1608706aea2ca3009
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47859927"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898721"
 ---
 # <a name="add-a-tracking-property-to-a-domain-specific-language-definition"></a>ドメイン固有言語の定義に追跡プロパティを追加する
 
@@ -30,29 +30,30 @@ A*追跡ドメイン*プロパティは、ユーザーを更新できますが�
 
 このチュートリアルでは、ドメイン固有言語 (DSL) を持つモデルの既定の Namespace プロパティに基づいて既定値を持つプロパティの追跡の Namespace を作成します。 プロパティの追跡の詳細については、次を参照してください。[追跡プロパティを定義する](http://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be)します。
 
--   DSL ツール サポートは、プロパティ記述子を追跡します。 ただし、DSL デザイナーを使用して、言語にトラッキング プロパティを追加することはできません。 したがって、定義して、トラッキング プロパティを実装するカスタム コードを追加する必要があります。
+- DSL ツール サポートは、プロパティ記述子を追跡します。 ただし、DSL デザイナーを使用して、言語にトラッキング プロパティを追加することはできません。 したがって、定義して、トラッキング プロパティを実装するカスタム コードを追加する必要があります。
 
- 追跡プロパティが 2 つの状態: 追跡、およびユーザーによって更新されました。 追跡のプロパティには、次の機能があります。
+  追跡プロパティが 2 つの状態: 追跡、およびユーザーによって更新されました。 追跡のプロパティには、次の機能があります。
 
--   追跡の状態のときに、トラッキング プロパティの値が計算され、モデルの変更では、その他のプロパティとして値を更新します。
+- 追跡の状態のときに、トラッキング プロパティの値が計算され、モデルの変更では、その他のプロパティとして値を更新します。
 
--   更新されたときに、ユーザーの状態で追跡プロパティの値には、ユーザー、最後に設定するプロパティ値が保持されます。
+- 更新されたときに、ユーザーの状態で追跡プロパティの値には、ユーザー、最後に設定するプロパティ値が保持されます。
 
--   **プロパティ**ウィンドウで、**リセット**プロパティが更新された場合にのみ、トラッキング プロパティが有効なコマンドでユーザー状態。 **リセット**コマンド、トラッキング プロパティを設定する状態を追跡します。
+- **プロパティ**ウィンドウで、**リセット**プロパティが更新された場合にのみ、トラッキング プロパティが有効なコマンドでユーザー状態。 **リセット**コマンド、トラッキング プロパティを設定する状態を追跡します。
 
--   **プロパティ**ウィンドウ、トラッキング プロパティが追跡状態、その値が通常フォントで表示されます。
+- **プロパティ**ウィンドウ、トラッキング プロパティが追跡状態、その値が通常フォントで表示されます。
 
--   **プロパティ**ウィンドウで、追跡プロパティが更新された場合、ユーザー状態では、その値が太字のフォントで表示されます。
+- **プロパティ**ウィンドウで、追跡プロパティが更新された場合、ユーザー状態では、その値が太字のフォントで表示されます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを開始する前に、これらのコンポーネントをまずインストールする必要があります。
 
-|||
+
+| | |
 |-|-|
-|Visual Studio|[http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579)|
-|[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580)|
-|[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]|[http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581)|
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkID=185579](http://go.microsoft.com/fwlink/?LinkID=185579) |
+| [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185580](http://go.microsoft.com/fwlink/?LinkID=185580) |
+| [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] | [http://go.microsoft.com/fwlink/?LinkID=185581](http://go.microsoft.com/fwlink/?LinkID=185581) |
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
@@ -718,33 +719,33 @@ XML シリアル化のカスタムの読み込み後の動作をサポートす�
 
 次の手順は、ビルドに実行する DSL デザイナーの新しいインスタンスは[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]追跡プロパティが正しく動作していることを確認できるようにします。
 
-1.  **ビルド** メニューのをクリックして**ソリューションのリビルド**します。
+1. **ビルド** メニューのをクリックして**ソリューションのリビルド**します。
 
-2.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
+2. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。
 
-     試験的ビルド[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]開きます、**デバッグ**ソリューションで、空のテスト ファイルを格納します。
+    試験的ビルド[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]開きます、**デバッグ**ソリューションで、空のテスト ファイルを格納します。
 
-3.  **ソリューション エクスプ ローラー**デザイナーで開く Test.trackingPropertyDsl ファイルをダブルクリックし、デザイン画面をクリックします。
+3. **ソリューション エクスプ ローラー**デザイナーで開く Test.trackingPropertyDsl ファイルをダブルクリックし、デザイン画面をクリックします。
 
-     注意してください、**プロパティ**、図のウィンドウ、**既定 Namespace**プロパティが**DefaultNamespace**、および**カスタム要素**プロパティは**0/0**します。
+    注意してください、**プロパティ**、図のウィンドウ、**既定 Namespace**プロパティが**DefaultNamespace**、および**カスタム要素**プロパティは**0/0**します。
 
-4.  ドラッグ、 **ExampleElement**要素から、**ツールボックス**ダイアグラム サーフェイスにします。
+4. ドラッグ、 **ExampleElement**要素から、**ツールボックス**ダイアグラム サーフェイスにします。
 
-5.  **プロパティ**、要素のウィンドウ、**要素 Namespace**プロパティから値を変更および**DefaultNamespace**に**OtherNamespace**します。
+5. **プロパティ**、要素のウィンドウ、**要素 Namespace**プロパティから値を変更および**DefaultNamespace**に**OtherNamespace**します。
 
-     注意の値**要素 Namespace**太字で表示されています。
+    注意の値**要素 Namespace**太字で表示されています。
 
-6.  **プロパティ**ウィンドウで、右クリックして**要素 Namespace**、順にクリックします**リセット**します。
+6. **プロパティ**ウィンドウで、右クリックして**要素 Namespace**、順にクリックします**リセット**します。
 
-     プロパティの値が変更された**DefaultNamespace**、し、値は通常フォントで表示されます。
+    プロパティの値が変更された**DefaultNamespace**、し、値は通常フォントで表示されます。
 
-     右クリックして**要素 Namespace**もう一度です。 **リセット**コマンドは、プロパティが現在その状態の追跡がいるため、無効になります。
+    右クリックして**要素 Namespace**もう一度です。 **リセット**コマンドは、プロパティが現在その状態の追跡がいるため、無効になります。
 
-7.  もう 1 つドラッグ**ExampleElement**から、**ツールボックス**ダイアグラム領域で、変更をその**要素 Namespace**に**OtherNamespace**します。
+7. もう 1 つドラッグ**ExampleElement**から、**ツールボックス**ダイアグラム領域で、変更をその**要素 Namespace**に**OtherNamespace**します。
 
-8.  デザイン画面をクリックします。
+8. デザイン画面をクリックします。
 
-     **プロパティ**ダイアグラムの値はウィンドウ**カスタム要素**が**1/2**。
+    **プロパティ**ダイアグラムの値はウィンドウ**カスタム要素**が**1/2**。
 
 9. 変更**既定 Namespace**からダイアグラムの**DefaultNamespace**に**NewNamespace**します。
 

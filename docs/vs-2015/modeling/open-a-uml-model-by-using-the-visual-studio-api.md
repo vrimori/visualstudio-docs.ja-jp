@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e92ece9a8097071c8d8cef5b77ca9fdb242d677f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 14fa94779fc8d849bbfdb9176fdc94049078c674
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292709"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920216"
 ---
 # <a name="open-a-uml-model-by-using-the-visual-studio-api"></a>Visual Studio API を使用して UML モデルを開く
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,27 +35,27 @@ API を使って、Visual Studio のユーザー インターフェイスでモ�
 ##  <a name="Showing"></a> Visual Studio でモデルおよびダイアグラムを開く  
  ユーザー インターフェイスでモデルを開くには、標準の Visual Studio API `EnvDTE.DTE` を使用します。 モデリング プロジェクト項目に対して実行できる便利なキャストが 2 つあります。  
   
--   プロジェクトがモデリング プロジェクトの場合で、そのプロジェクトが現在の AppDomain に読み込まれている場合、`EnvDTE.Project` と `IModelingProject` との間でキャストを行うことができます。  
+- プロジェクトがモデリング プロジェクトの場合で、そのプロジェクトが現在の AppDomain に読み込まれている場合、`EnvDTE.Project` と `IModelingProject` との間でキャストを行うことができます。  
   
--   項目が UML 図の場合、`EnvDTE.ProjectItem` と `IDiagramContext` との間でキャストを行うことができます。  
+- 項目が UML 図の場合、`EnvDTE.ProjectItem` と `IDiagramContext` との間でキャストを行うことができます。  
   
- 以降の例の場合、プロジェクトは次の参照をインポートする必要があります。  
+  以降の例の場合、プロジェクトは次の参照をインポートする必要があります。  
   
--   EnvDTE  
+- EnvDTE  
   
--   Microsoft.VisualStudio.ArchitectureTools.Extensibility  
+- Microsoft.VisualStudio.ArchitectureTools.Extensibility  
   
--   Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
+- Microsoft.VisualStudio.Modeling.Sdk.[バージョン]  
   
--   Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
+- Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[バージョン]  
   
--   Microsoft.VisualStudio.Shell.Immutable.[バージョン]  
+- Microsoft.VisualStudio.Shell.Immutable.[バージョン]  
   
--   Microsoft.VisualStudio.Uml.Interfaces  
+- Microsoft.VisualStudio.Uml.Interfaces  
   
--   System.ComponentModel.Composition  
+- System.ComponentModel.Composition  
   
- この例では、Visual Studio で UML モデルを開きます。  
+  この例では、Visual Studio で UML モデルを開きます。  
   
 ```  
 using EnvDTE; // Visual Studio API for loading diagrams  

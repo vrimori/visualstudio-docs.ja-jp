@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5d973c688243ce9b5923ec193edcd573770b1569
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a0bd5eb8dc4c99d05d8c31aa05914327a0ab7f02
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49241242"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925878"
 ---
 # <a name="target-build-order"></a>ターゲットのビルド順序
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -29,17 +29,17 @@ ms.locfileid: "49241242"
   
 あるターゲットへの入力が別のターゲットの出力に依存する場合、ターゲットの順序を指定する必要があります。 以下の属性を使用して、ターゲットを実行する順序を指定できます。  
   
--   `InitialTargets`。 この `Project` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。  
+- `InitialTargets`。 この `Project` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。  
   
--   `DefaultTargets`。 この `Project` 属性は、ターゲットがコマンドラインで明示的に指定されていない場合に実行するターゲットを指定します。  
+- `DefaultTargets`。 この `Project` 属性は、ターゲットがコマンドラインで明示的に指定されていない場合に実行するターゲットを指定します。  
   
--   `DependsOnTargets`。 この `Target` 属性は、このターゲットを実行する前に実行する必要があるターゲットを指定します。  
+- `DependsOnTargets`。 この `Target` 属性は、このターゲットを実行する前に実行する必要があるターゲットを指定します。  
   
--   `BeforeTargets` および `AfterTargets`。 これらの `Target` 属性は、このターゲットを、指定されたターゲットの前または後に実行するように指定します (MSBuild 4.0)。  
+- `BeforeTargets` および `AfterTargets`。 これらの `Target` 属性は、このターゲットを、指定されたターゲットの前または後に実行するように指定します (MSBuild 4.0)。  
   
- ビルド内の後続のターゲットがそのターゲットに依存している場合でも、ビルド中に 1 つのターゲットが 2 回実行されることはありません。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
+  ビルド内の後続のターゲットがそのターゲットに依存している場合でも、ビルド中に 1 つのターゲットが 2 回実行されることはありません。 ターゲットは一度実行されると、それ以上ビルドに影響しません。  
   
- ターゲットには `Condition` 属性を指定することができます。 指定した条件が `false` と評価された場合、ターゲットは実行されず、ビルドには影響しません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。  
+  ターゲットには `Condition` 属性を指定することができます。 指定した条件が `false` と評価された場合、ターゲットは実行されず、ビルドには影響しません。 条件の詳細については、「[条件](../msbuild/msbuild-conditions.md)」を参照してください。  
   
 ## <a name="initial-targets"></a>初期ターゲット  
  [Project](../msbuild/project-element-msbuild.md) 要素の `InitialTargets` 属性は、ターゲットがコマンド ラインまたは `DefaultTargets` 属性に指定されている場合でも最初に実行されるターゲットを指定します。 通常、初期ターゲットはエラー チェックに使用されます。  
@@ -77,7 +77,7 @@ ms.locfileid: "49241242"
  初期ターゲット、既定のターゲット、またはコマンド ラインのターゲットがいずれも指定されていない場合、MSBuild はプロジェクト ファイル内またはインポートされたプロジェクト ファイル内で検出された最初のターゲットを実行します。  
   
 ## <a name="target-dependencies"></a>ターゲットの依存関係  
- ターゲット同士は相互に依存関係を記述できます。 `DependsOnTargets` 属性は、ターゲットが他のターゲットに依存していることを示します。 たとえば、オブジェクトに適用された  
+ ターゲット同士は相互に依存関係を記述できます。 `DependsOnTargets` 属性は、ターゲットが他のターゲットに依存していることを示します。 例えば以下のようにします。  
   
 ```  
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />  
