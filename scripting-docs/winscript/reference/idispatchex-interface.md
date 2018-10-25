@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx インターフェイス |Microsoft ドキュメント
+title: IDispatchEx インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -15,61 +15,61 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9a100a193f5e3abcb076fb8aaf3d64a0d0c38833
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 22ccc54dee335fd8c81343557d2f32c48eb30560
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24730302"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837920"
 ---
 # <a name="idispatchex-interface"></a>IDispatchEx インターフェイス
-`IDispatchEx`での拡張機能、`IDispatch`インターフェイスをサポートする機能に適したスクリプト言語などの動的言語。 このセクションの内容について説明します、`IDispatchEx`インターフェイス自体の間の相違点`IDispatch`と`IDispatchEx`、および拡張機能の論理的根拠は、します。 リーダーが慣れていることを想定して`IDispatch`にアクセスし、`IDispatch`ドキュメント。  
+`IDispatchEx`での拡張機能、`IDispatch`スクリプト言語などの動的言語に適切なインターフェイスをサポートする機能。 このセクションについて説明します、`IDispatchEx`インターフェイス自体の間の相違点`IDispatch`と`IDispatchEx`、拡張機能の"the rationale"とします。 リーダーについて理解していることが予想`IDispatch`にアクセスし、`IDispatch`ドキュメント。  
   
-## <a name="remarks"></a>コメント  
- `IDispatch`開発された基本的には Microsoft Visual Basic のです。 主な制限`IDispatch`オブジェクトが静的であることと見なされます。 つまり、オブジェクトは、実行時に変更しない限り後、型情報を完全に記述できるにコンパイル時にします。 Visual Basic Scripting Edition (VBScript) などのスクリプト言語内にあるランタイム モデルを動的と[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]とダイナミック HTML がより柔軟なインターフェイスを必要とするなど、オブジェクトをモデル化します。  
+## <a name="remarks"></a>Remarks  
+ `IDispatch` 開発 for Microsoft Visual Basic では基本的に。 主な制限`IDispatch`オブジェクトを静的にすると見なされます。 つまり、オブジェクトは実行時に変化がないため型情報完全に記述できるにコンパイル時にします。 Visual Basic Scripting Edition (VBScript) などのスクリプト言語内にあるランタイム モデルを動的と[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]オブジェクト モデルなど、動的 HTML がより柔軟なインターフェイスを必要とします。  
   
- `IDispatchEx`すべてのサービスを提供するために開発された`IDispatch`スクリプト言語より動的の遅延バインディングされた言語に対応する一部の拡張機能とします。 他の機能`IDispatchEx`で提供されていない`IDispatch`は。  
+ `IDispatchEx` すべてのサービスを提供するために開発された`IDispatch`より動的な遅延バインディングなどの言語のスクリプト言語に該当する一部の拡張機能とします。 追加機能`IDispatchEx`によって提供されるもの以外`IDispatch`は。  
   
--   オブジェクト ("expando") に新しいメンバーを追加: 使用`GetDispID`で、`fdexNameEnsure`フラグ。  
+- オブジェクト ("expando") に新しいメンバーを追加-を使用して、`GetDispID`で、`fdexNameEnsure`フラグ。  
   
--   オブジェクトのメンバーを削除: 使用`DeleteMemberByName`または`DeleteMemberByDispID`です。  
+- オブジェクトのメンバーの削除: を使用して、`DeleteMemberByName`または`DeleteMemberByDispID`します。  
   
--   大文字小文字を区別ディスパッチ操作-使用`fdexNameCaseSensitive`または`fdexNameCaseInsensitive`です。  
+- 大文字小文字を区別するディスパッチ操作-使用`fdexNameCaseSensitive`または`fdexNameCaseInsensitive`します。  
   
--   暗黙的な名前を持つメンバーの検索などを使用して`fdexNameImplicit`です。  
+- 暗黙的な名前を持つメンバーの検索などを使用して、`fdexNameImplicit`します。  
   
--   オブジェクトの Dispid の列挙-使用`GetNextDispID`です。  
+- オブジェクトの Dispid の列挙-を使用して、`GetNextDispID`します。  
   
--   DISPID からのマップを要素名-使用`GetMemberName`です。  
+- 要素名に DISPID からマップ: を使用して、`GetMemberName`します。  
   
--   オブジェクトのメンバーのプロパティを取得: を使用して`GetMemberProperties`です。  
+- オブジェクトのメンバーのプロパティを取得: を使用して、`GetMemberProperties`します。  
   
--   メソッドを呼び出すと`this`ポインターなどを使用して`InvokeEx`DISPATCH_METHOD とします。  
+- メソッドを呼び出すと`this`ポインターなどを使用して、 `InvokeEx` DISPATCH_METHOD とします。  
   
--   オブジェクトの名前空間の親を取得する名前空間の概念をサポートするブラウザーを許可する-使用`GetNameSpaceParent`です。  
+- オブジェクトの名前空間の親を取得する名前空間の概念をサポートするブラウザーを許可する: を使用して、`GetNameSpaceParent`します。  
   
- オブジェクトをサポートする`IDispatchEx`サポートする場合も`IDispatch`旧バージョンとの互換性のためです。 サポートするオブジェクトの動的な性質`IDispatchEx`がいくつかの影響、`IDispatch`それらのオブジェクトのインターフェイスです。 たとえば、`IDispatch`次が想定します。  
+  オブジェクトをサポートする`IDispatchEx`サポートする場合も`IDispatch`旧バージョンとの互換性のためです。 サポートするオブジェクトの動的な性質`IDispatchEx`いくつかに影響があります、`IDispatch`これらのオブジェクトのインターフェイス。 たとえば、`IDispatch`次想定しています。  
   
--   メンバーおよびパラメーター Dispid を一定に保つオブジェクトの有効期間。 これにより、クライアントに Dispid を一度入手したら、それらを後で使用できるキャッシュできます。  
+- メンバーとパラメーター Dispid を一定に保つオブジェクトの有効期間。 これにより、クライアントを 1 回 Dispid を取得し、後で使用できるキャッシュします。  
   
- `IDispatchEx`によりの追加と削除、一連の有効な Dispid メンバー一定していません。 ただし、 `IDispatchEx` DISPID とメンバー名の間のマッピングが一定に保つことが必要です。 つまり、メンバーを削除する場合。  
+  `IDispatchEx`追加と削除、有効な Dispid のセットのメンバーの状態が解除される定数を使用します。 ただし、 `IDispatchEx` DISPID とメンバー名の間のマッピングを一定に保つことが必要です。 つまり、メンバーが削除された場合。  
   
--   DISPID は、同じ名前のメンバーが作成されるまで再利用できません。  
+- DISPID は、同じ名前のメンバーが作成されるまで再利用することはできません。  
   
--   DISPID は有効でなければなりません`GetNextDispID`です。  
+- DISPID の有効なままにする必要があります`GetNextDispID`します。  
   
--   DISPID は、のいずれかによって正常に受け入れられる必要があります、`IDispatch`または`IDispatchEx`メソッド-削除済みとして、メンバーを認識し、適切なエラー コード (通常 DISP_E_MEMBERNOTFOUND または S_FALSE) を返すする必要があります。  
+- いずれかで、DISPID を適切に同意する必要が、`IDispatch`または`IDispatchEx`メソッド-削除済みとしては、メンバーを認識し、適切なエラー コード (通常は DISP_E_MEMBERNOTFOUND または S_FALSE) を返すする必要があります。  
   
-## <a name="examples"></a>例  
- これは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]関数 test() 内のコードは次を実行します。  
+## <a name="examples"></a>使用例  
+ これは、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]関数 test() 内のコードは、次を実行します。  
   
--   呼び出して、新しいオブジェクトを作成、`Object`コンス トラクターと、ポインター変数オブジェクトに新しいオブジェクトに割り当てます  
+- 呼び出して新しいオブジェクトを作成、`Object`コンス トラクターと、新しいオブジェクトを変数オブジェクトにポインターを割り当てます  
   
--   Elem をという名前のオブジェクトに新しい要素を作成し、この要素に関数 cat へのポインターを割り当てます。  
+- オブジェクトの要素をという名前の新しい要素を作成し、関数 cat へのポインターをこの要素に割り当てます。  
   
--   この関数を呼び出します。 メソッドとして呼び出されたため、`this`ポインターがオブジェクトのオブジェクトを参照関数は、新しい要素を追加するオブジェクトへのバーです。  
+- この関数を呼び出します。 メソッドとして呼び出されたため、`this`ポインターによって参照されたオブジェクト obj.関数は、新しい要素を追加しますオブジェクトへのバー。  
   
- 完全な HTML コードは次のとおりです。  
+  完全な HTML コードに示します。  
   
 ```  
 <html>  
@@ -100,7 +100,7 @@ test();
 </html>  
 ```  
   
- この Web ページに配置されるコントロールは、ブラウザーから、スクリプト エンジンにディスパッチのポインターを取得可能性があります。 コントロールは、関数 test() を実装し、でした。  
+ この同じ Web ページ上のコントロールは、ブラウザーから、スクリプト エンジンにディスパッチのポインターを取得でした。 コントロールは、関数 test() を実装しでした。  
   
 ```  
 <html>  
@@ -118,25 +118,25 @@ function cat()
 </html>  
 ```  
   
- コントロールからのコード、テストと同じですが、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]関数`test()`です。 実行中にこれらのディスパッチ呼び出しが行われることに注意してください[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]エンジンし、エンジンの状態を変更します。  
+ コントロールからのコード、テストと同じですが、[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]関数`test()`します。 これらのディスパッチ呼び出しが実行中に行われることに注意してください。[!INCLUDE[javascript](../../javascript/includes/javascript-md.md)]エンジンとエンジンの状態を変更します。  
   
--   Cat 関数を使用してへのディスパッチ ポインターを取得`GetDispID()`です。  
+- Cat 関数を使用するディスパッチ ポインターを取得`GetDispID()`します。  
   
--   ディスパッチへのポインター、関数を使用してオブジェクトを取得`GetDispID()`です。  
+- オブジェクトの関数を使用するディスパッチ ポインターを取得`GetDispID()`します。  
   
--   オブジェクトを持つ関数を呼び出すことによってオブジェクトを構築`InvokeEx()`し、新しく構築されたオブジェクトへのディスパッチ ポインターを取得します。  
+- 使用して、オブジェクト関数を呼び出すことによって、オブジェクトを構築`InvokeEx()`新しく構築されたオブジェクトへのディスパッチ ポインターを取得します。  
   
--   オブジェクトを使用して、Elem,、新しい要素を作成`GetDispID()`で、`fdexNameEnsure`フラグ。  
+- オブジェクトを使用して、新しい要素を Elem, を作成します。`GetDispID()`で、`fdexNameEnsure`フラグ。  
   
--   要素を使用して、cat にディスパッチ カーソルを置きます`InvokeEx()`です。  
+- 要素を使用して、cat にディスパッチを置きます`InvokeEx()`します。  
   
--   Cat へのディスパッチ ポインターをメソッドとして呼び出すことによって呼び出す`InvokeEx()`をディスパッチ ポインターとして構築されたオブジェクトに渡すと、`this`ポインター。  
+- Cat へのディスパッチのポインターをメソッドとして呼び出すことによって呼び出し`InvokeEx()`ディスパッチ ポインターとして構築されたオブジェクトを渡すと、`this`ポインター。  
   
--   Cat メソッドは、新しい要素を作成します。 現在のバー`this`オブジェクト。  
+- Cat メソッドは、新しい要素を作成します。 バーの現在`this`オブジェクト。  
   
--   確認、新しい要素では、横棒グラフ、によって作成された構築されたオブジェクトを使用して要素を列挙して`GetNextDispID()`です。  
+- 検証が行われます新しい要素をバーが作成された構築されたオブジェクトを使用して要素を列挙して`GetNextDispID()`します。  
   
- テストのコントロールのコード:  
+  テストのコントロールのコード:  
   
 ```  
    BOOL test(IDispatchEx *pdexScript)  

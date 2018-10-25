@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b4ad3742befbf564c7924c520fb560e69037004c
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 4251e5aac5042b610ed32f95a13ba5d6ffb9d4eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49281399"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848490"
 ---
 # <a name="how-to-disable-the-hosting-process"></a>方法 : ホスト プロセスを無効にする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "49281399"
   
 ### <a name="to-disable-the-hosting-process"></a>ホスト プロセスを無効にするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、実行可能なプロジェクトを開きます。 実行可能ファイルを生成しないプロジェクト (クラス ライブラリやサービス プロジェクトなど) には、このオプションがありません。  
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で、実行可能なプロジェクトを開きます。 実行可能ファイルを生成しないプロジェクト (クラス ライブラリやサービス プロジェクトなど) には、このオプションがありません。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+2. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-3.  **[デバッグ]** タブをクリックします。  
+3. **[デバッグ]** タブをクリックします。  
   
-4.  **[Visual Studio ホスティング プロセスを有効にする]** チェック ボックスをオフにします。  
+4. **[Visual Studio ホスティング プロセスを有効にする]** チェック ボックスをオフにします。  
   
- ホスト プロセスが無効になると、一部のデバッグ機能が使用できなくなったり、パフォーマンスが低下したりします。 詳しくは、「[プロセスのデバッグとホスト](../debugger/debugging-and-the-hosting-process.md)」をご覧ください。  
+   ホスト プロセスが無効になると、一部のデバッグ機能が使用できなくなったり、パフォーマンスが低下したりします。 詳しくは、「[プロセスのデバッグとホスト](../debugger/debugging-and-the-hosting-process.md)」をご覧ください。  
   
- 一般的に、ホスト プロセスが無効になると、次のことが起こります。  
+   一般的に、ホスト プロセスが無効になると、次のことが起こります。  
   
 -   [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] アプリケーションのデバッグが始まるまでの時間が長くなる。  
   

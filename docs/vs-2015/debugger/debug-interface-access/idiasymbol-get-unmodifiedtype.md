@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 788dc8e11895cd1f112924e50280973f9a08d740
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: cf1035f72b8b1fca47e4e262c48f090cb8e0bfd5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49215489"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820591"
 ---
 # <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ HRESULT get_unmodifiedType(
 ## <a name="remarks"></a>Remarks  
  現在の型が、返された元の型を変更します。 シンボルの元の型は、まず、記号の種類を取得し、元の型の型を返すを問い合わせるで決定できます。 いくつかの記号は、元の型の変更後の型を持てませんに注意してください。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: Dia2.h  
   
  ライブラリ: diaguids.lib  

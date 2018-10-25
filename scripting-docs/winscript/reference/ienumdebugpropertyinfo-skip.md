@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPropertyInfo::Skip |Microsoft ドキュメント
+title: IEnumDebugPropertyInfo::Skip |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1d0f8ff65340edfac1c02e5b7e80b7be3fd257c4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d91e80ca103addf4f726a373813b379197298109
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727212"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821072"
 ---
 # <a name="ienumdebugpropertyinfoskip"></a>IEnumDebugPropertyInfo::Skip
-指定した数のスキップ`DebugPropertyInfo`列挙のシーケンス内の構造体。  
+指定した数のスキップ`DebugPropertyInfo`列挙体シーケンス内の構造体。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ HRESULT Skip(
   
 #### <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`DebugPropertyInfo`をスキップする列挙のシーケンス内の構造体。  
+ [in]数`DebugPropertyInfo`をスキップする列挙体シーケンス内の構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。 返します`S_FALSE`場合に、列挙体の末尾に現在の要素ポインターを設定および`celt`列挙子の左の要素の数より大きい。  
+ 有効な返します`HRESULT`、通常`S_OK`します。 返します`S_FALSE`場合は、列挙体の末尾に、現在の要素のポインターを設定および`celt`列挙子の左の要素の数より大きい。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugPropertyInfo インターフェイス](../../winscript/reference/ienumdebugpropertyinfo-interface.md)   

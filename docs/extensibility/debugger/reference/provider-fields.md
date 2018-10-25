@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FIELDS |Microsoft ドキュメント
+title: PROVIDER_FIELDS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: deda42120dc98e0222910c48b0faf574a57f03dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d71ab824017d054b8543770b7eaf1efe2856867
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31126049"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860345"
 ---
 # <a name="providerfields"></a>PROVIDER_FIELDS
-プログラムの提供に関連付けられたプロパティを指定します。  
+プログラムのプロバイダーに関連付けられたプロパティを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,17 +44,17 @@ public enum enum_PROVIDER_FIELDS {
   
 ## <a name="members"></a>メンバー  
  PFIELD_PROGRAM_NODES  
- `ProgramNodes`フィールドは無効です。  
+ `ProgramNodes`フィールドは有効です。  
   
  PFIELD_IS_DEBUGGER_PRESENT  
- `fIsDebuggerPresent`フィールドは無効です。  
+ `fIsDebuggerPresent`フィールドは有効です。  
   
-## <a name="remarks"></a>コメント  
- これらの値が返されます、`Fields`のメンバー、 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)構造体のフィールドが入力に明示的に指定する構造体。  
+## <a name="remarks"></a>Remarks  
+ これらの値が返されます、`Fields`のメンバー、 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)を構造体のどのフィールドが入力された明示的に示すために構造体。  
   
- これらの値をビット単位と組み合わせて`OR`です。  
+ これらの値は、演算と組み合わせることができます`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

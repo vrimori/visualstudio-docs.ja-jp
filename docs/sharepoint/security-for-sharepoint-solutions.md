@@ -18,12 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3febd2a9a3d2450740b08cac4ad8d3c891386c9a
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: b014c3b4ada42982c41928ca17472e3f585af3ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626134"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878766"
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint ソリューションのセキュリティ
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint アプリケーションのセキュリティを強化するために、次の機能が組み込まれています。
@@ -34,7 +34,7 @@ ms.locfileid: "42626134"
 ## <a name="allowpartiallytrustedcallers-attribute"></a>AllowPartiallyTrustedCallers 属性
  既定では、ランタイム コード アクセス セキュリティ (CAS) システムによって完全に信頼されている唯一のアプリケーションは、共有マネージ コード アセンブリをアクセスできます。 AllowPartiallyTrustedCallers 属性を持つ完全に信頼されたアセンブリをマークするには、部分的に信頼されたアセンブリへのアクセスが使用できます。
 
- AllowPartiallyTrustedCallers 属性は、システムのグローバル アセンブリ キャッシュに展開されていないすべての SharePoint ソリューションに追加されます ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)])。 これには、サンド ボックス ソリューションまたは SharePoint アプリケーションの Bin ディレクトリにデプロイされたソリューションが含まれます。 詳細については、次を参照してください。 [Microsoft .NET Framework のバージョン 1 のセキュリティ変更](http://go.microsoft.com/fwlink/?LinkId=177515)と[SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=177509)します。
+ AllowPartiallyTrustedCallers 属性は、システムのグローバル アセンブリ キャッシュに展開されていないすべての SharePoint ソリューションに追加されます ( [!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)])。 これには、サンド ボックス ソリューションまたは SharePoint アプリケーションの Bin ディレクトリにデプロイされたソリューションが含まれます。 詳細については、次を参照してください。 [Microsoft .NET Framework のバージョン 1 のセキュリティ変更](http://go.microsoft.com/fwlink/?LinkId=177515)と[SharePoint Foundation の Web パーツを配置する](http://go.microsoft.com/fwlink/?LinkId=177509)します。
 
 ## <a name="safe-against-script-property"></a>[スクリプト] プロパティに対して安全
  *スクリプト インジェクション*がコントロールまたは Web ページに悪意のあるコードを挿入します。 スクリプト インジェクションから SharePoint 2010 サイトを保護するため、共同作成者は表示または既定の Web パーツまたはそれらのプロパティを編集することはできません。 この動作は、SafeAgainstScript と呼ばれる SafeControl 属性によって制御されます。 [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)]、この属性を設定して、プロジェクト項目の**安全なコントロール エントリ**サブプロパティ**スクリプトに対して安全**します。 詳細については、次を参照してください。[プロジェクト項目でのパッケージと展開の情報を提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)と[方法: 安全なコントロールとしてマークが制御](../sharepoint/how-to-mark-controls-as-safe-controls.md)します。

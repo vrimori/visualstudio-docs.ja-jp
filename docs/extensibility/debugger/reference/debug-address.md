@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS |Microsoft ドキュメント
+title: DEBUG_ADDRESS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07312208967aeccfbd81f44587f84a43dfebf4c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d5851fd9fe7224d060b1454a7123b98f77216b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101447"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813480"
 ---
 # <a name="debugaddress"></a>DEBUG_ADDRESS
 この構造体では、アドレスを表します。  
@@ -56,17 +56,17 @@ public struct DEBUG_ADDRESS {
  クラスまたはこのアドレスの種類を識別するトークンです。  
   
 > [!NOTE]
->  この値は、シンボル プロバイダーに固有では、そのため、以外のクラス型の識別子としての一般的な意味を持ちません。  
+>  この値は、シンボル プロバイダーに固有で、クラス型の識別子として以外の一般的な意味を持たない。  
   
- addr  
- A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)構造で、個々 のアドレスの種類を記述する構造体の共用体が含まれています。 値`addr`です。`dwKind` [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体、共用体を解釈する方法について説明します。  
+ Addr  
+ A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)構造体は、個々 のアドレスの種類を記述する構造体の共用体が含まれています。 値`addr`します。`dwKind` [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体、共用体を解釈する方法について説明します。  
   
-## <a name="remarks"></a>コメント  
- この構造体に渡される、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)格納するメソッド。  
+## <a name="remarks"></a>Remarks  
+ この構造体に渡される、 [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)情報を格納するメソッド。  
   
  **警告 [C++ のみ]**  
   
- 場合`addr.dwKind`は`ADDRESS_KIND_METADATA_LOCAL`場合`addr.addr.addrLocal.pLocal`を呼び出す必要があります、null の値ではない`Release`トークンのポインターで。  
+ 場合`addr.dwKind`は`ADDRESS_KIND_METADATA_LOCAL`場合`addr.addr.addrLocal.pLocal`呼び出す必要がありますし、null 値でない`Release`トークンのポインターで。  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -75,7 +75,7 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
 }  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

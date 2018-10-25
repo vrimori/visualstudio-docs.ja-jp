@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5a125223521bf73012944841c6fcf531df3a9ae8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: ed64d9dde53b31cfe5f52ce708e4ee96d91fe8ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49242763"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861365"
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ コード スニペット
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,13 +31,13 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 ## <a name="inserting-a-code-snippet"></a>コード スニペットの挿入  
  コード スニペットを挿入するには、C++ コード ファイル (.cpp または .h) を開き、ファイル内の任意の場所をクリックして、次のいずれかを実行します。  
   
--   右クリックしてコンテキスト メニューを表示し、**[スニペットの挿入]** を選択する  
+- 右クリックしてコンテキスト メニューを表示し、**[スニペットの挿入]** を選択する  
   
--   **[編集 / IntelliSense]** メニューの **[スニペットの挿入]** を選択する  
+- **[編集 / IntelliSense]** メニューの **[スニペットの挿入]** を選択する  
   
--   ホット キー **Ctrl + K + X** を使用する  
+- ホット キー **Ctrl + K + X** を使用する  
   
- **#if** で始まる選択肢の一覧が表示されます。 **#if** を選択すると、ファイルに追加された次のコードが表示されます。  
+  **#if** で始まる選択肢の一覧が表示されます。 **#if** を選択すると、ファイルに追加された次のコードが表示されます。  
   
 ```cpp  
 #if 0  
@@ -50,13 +50,13 @@ Visual Studio でコード スニペットを使用して、よく使用され�
 ## <a name="using-a-code-snippet-to-surround-selected-code"></a>コード スニペットを使用して、選択したコードを囲む  
  コード スニペットを使用して、選択したコードを囲むには、行 (または複数の行) を選択し、次のいずれかを実行します。  
   
-1.  右クリックしてコンテキスト メニューを表示し、**[ブロックの挿入]** を選択する  
+1. 右クリックしてコンテキスト メニューを表示し、**[ブロックの挿入]** を選択する  
   
-2.  **[編集 / IntelliSense]** メニューの **[ブロックの挿入]** を選択する  
+2. **[編集 / IntelliSense]** メニューの **[ブロックの挿入]** を選択する  
   
-3.  ホット キー **Ctrl + K + S** を使用する  
+3. ホット キー **Ctrl + K + S** を使用する  
   
- **#if** を選択します。 次のように表示されます。  
+   **#if** を選択します。 次のように表示されます。  
   
 ```cpp  
 #if 0  

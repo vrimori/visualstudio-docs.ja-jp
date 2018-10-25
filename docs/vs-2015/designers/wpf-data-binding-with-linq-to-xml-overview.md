@@ -14,12 +14,12 @@ caps.latest.revision: 5
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 985dfb5193082f22431db3384cc6a652f36cfb2d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 457a097d46f9af409580d3784bb577090db0c535
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247274"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852415"
 ---
 # <a name="wpf-data-binding-with-linq-to-xml-overview"></a>LINQ to XML による WPF のデータ バインディングの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "49247274"
   
  XAML と LINQ to XML の相互作用には、大きく分けて次の 2 つの方法があります。  
   
--   XAML ファイルは整形式の XML であるため、LINQ to XML などの XML テクノロジによるクエリや操作が可能です。  
+- XAML ファイルは整形式の XML であるため、LINQ to XML などの XML テクノロジによるクエリや操作が可能です。  
   
--   LINQ to XML のクエリはデータのソースを表すため、WPF UI 要素のデータ バインドのデータ ソースとして使用できます。  
+- LINQ to XML のクエリはデータのソースを表すため、WPF UI 要素のデータ バインドのデータ ソースとして使用できます。  
   
- このドキュメントでは、2 番目のシナリオについて説明します。  
+  このドキュメントでは、2 番目のシナリオについて説明します。  
   
 ## <a name="data-binding-in-the-windows-presentation-foundation"></a>Windows Presentation Foundation のデータ バインド  
  WPF のデータ バインドでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインドは次のコンポーネントに依存しています。  
@@ -52,13 +52,13 @@ ms.locfileid: "49247274"
 ### <a name="dynamic-data-binding-in-wpf"></a>WPF の動的データ バインディング  
  既定では、対象となる UI 要素が初期化されたときにだけデータ バインディングが行われます。 これを*ワンタイム* バインドと呼びます。 ほとんどの場合、このバインドは十分には役立ちません。一般に、データ バインディングのソリューションでは、次のいずれかの方法を使用して実行時に変更が動的に反映されるようにする必要があります。  
   
--   *一方向*のバインド。一方に対する変更が自動的に反映されます。 ソースに対する変更がターゲットに反映されるのが最も一般的ですが、その逆のパターンが役に立つ場合もあります。  
+- *一方向*のバインド。一方に対する変更が自動的に反映されます。 ソースに対する変更がターゲットに反映されるのが最も一般的ですが、その逆のパターンが役に立つ場合もあります。  
   
--   *双方向*のバインド。ソースに対する変更がターゲットに、ターゲットに対する変更がソースに、それぞれ自動的に反映されます。  
+- *双方向*のバインド。ソースに対する変更がターゲットに、ターゲットに対する変更がソースに、それぞれ自動的に反映されます。  
   
- 一方向または双方向のバインドが行われるようにするには、変更通知のメカニズムをソースに実装する必要があります。たとえば、<xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するか、サポートする各プロパティに対して *PropertyNameChanged* パターンを使用します。  
+  一方向または双方向のバインドが行われるようにするには、変更通知のメカニズムをソースに実装する必要があります。たとえば、<xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装するか、サポートする各プロパティに対して *PropertyNameChanged* パターンを使用します。  
   
- WPF のデータ バインディングの詳細については、「[データ バインディングの概要](http://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)」を参照してください。  
+  WPF のデータ バインディングの詳細については、「[データ バインディングの概要](http://msdn.microsoft.com/library/90f79b97-17e7-40d1-abf0-3ba600ad1d7e)」を参照してください。  
   
 ## <a name="dynamic-properties-in-linq-to-xml-classes"></a>LINQ to XML クラスの動的プロパティ  
  ほとんどの LINQ to XML クラスは、WPF の動的データ ソースとして適切ではありません。その理由は、最も有用な情報の一部はメソッドを経由した場合にのみ取得でき (プロパティでは取得できません)、LINQ to XML クラスのプロパティには変更通知も実装されていないためです。 LINQ to XML では、WPF のデータ バインディングをサポートするために一連の*動的プロパティ*が公開されます。  
@@ -71,13 +71,13 @@ ms.locfileid: "49247274"
 ### <a name="accessing-dynamic-properties"></a>動的プロパティへのアクセス  
  <xref:System.Xml.Linq.XAttribute> クラスと <xref:System.Xml.Linq.XElement> クラスの動的プロパティには、標準のプロパティのようにアクセスすることはできません。 たとえば、C# などの CLR 準拠の言語で次のような操作を行うことはできません。  
   
--   コンパイル時に直接アクセスする。 動的プロパティは、コンパイラや Visual Studio の IntelliSense からは見えません。  
+- コンパイル時に直接アクセスする。 動的プロパティは、コンパイラや Visual Studio の IntelliSense からは見えません。  
   
--   .NET リフレクションを使用して実行時に検出またはアクセスする。 動的プロパティは実行時においても、CLR の基本的な意味でのプロパティではありません。  
+- .NET リフレクションを使用して実行時に検出またはアクセスする。 動的プロパティは実行時においても、CLR の基本的な意味でのプロパティではありません。  
   
- C# で動的プロパティへアクセスするには、実行時に <xref:System.ComponentModel> 名前空間の機能を使用する必要があります。  
+  C# で動的プロパティへアクセスするには、実行時に <xref:System.ComponentModel> 名前空間の機能を使用する必要があります。  
   
- 一方、XML ソースでは、次のような形式の単純な表記法を使用して動的プロパティにアクセスできます。  
+  一方、XML ソースでは、次のような形式の単純な表記法を使用して動的プロパティにアクセスできます。  
   
 ```  
 <object>.<dynamic-property>  

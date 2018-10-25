@@ -23,12 +23,12 @@ caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d11bc0743faa9e512fcd144bfef09a84a316531d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 17deca1afc78e238e098285e760a791504b61fe8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49284987"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880728"
 ---
 # <a name="encodings-and-line-breaks"></a>エンコーディングと改行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,19 +40,19 @@ Visual Studio では、[ファイル] メニューの **[保存オプション�
   
  Visual Studio では、次の文字が改行として解釈されます。  
   
--   CRLF: キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)  
+- CRLF: キャリッジ リターン文字とライン フィード文字 (Unicode 文字では 000D + 000A)  
   
--   LF: ライン フィード文字 (Unicode 文字では 000A)  
+- LF: ライン フィード文字 (Unicode 文字では 000A)  
   
--   NEL: 次行記号 (Unicode 文字では 0085)  
+- NEL: 次行記号 (Unicode 文字では 0085)  
   
--   LS: 行区切り記号 (Unicode 文字では 2028)  
+- LS: 行区切り記号 (Unicode 文字では 2028)  
   
--   PS: 段落区切り記号 (Unicode 文字では 2029)  
+- PS: 段落区切り記号 (Unicode 文字では 2029)  
   
- 他のアプリケーションからコピーされたテキストでは、元のエンコーディングと改行文字が保持されます。 たとえば、メモ帳からテキストをコピーし、Visual Studio でテキスト ファイルに貼り付けた場合、貼り付けたテキストの設定は、メモ帳で使用していた設定と同じになります。  
+  他のアプリケーションからコピーされたテキストでは、元のエンコーディングと改行文字が保持されます。 たとえば、メモ帳からテキストをコピーし、Visual Studio でテキスト ファイルに貼り付けた場合、貼り付けたテキストの設定は、メモ帳で使用していた設定と同じになります。  
   
- 改行文字が異なるファイルを開くと、一致しない改行文字を正規化するかどうか、また、どの種類の改行を使用するかを確認するダイアログ ボックスが表示される場合があります。
+  改行文字が異なるファイルを開くと、一致しない改行文字を正規化するかどうか、また、どの種類の改行を使用するかを確認するダイアログ ボックスが表示される場合があります。
 
 
 

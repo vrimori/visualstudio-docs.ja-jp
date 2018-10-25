@@ -13,12 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7b154b970d2a738e80efa5cbf669d29bd7bae589
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: f68cb2178242e5589f312f6ddc2c555da3f47a0e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36756767"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872825"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Windows フォーム アプリケーションでルックアップ テーブルを作成します。
 用語*ルックアップ テーブル*2 つの関連するデータ テーブルにバインドされているコントロールについて説明します。 この検索コントロールは、2 番目のテーブルで選択されている値に基づいて最初のテーブルからデータを表示します。
@@ -52,7 +52,7 @@ ms.locfileid: "36756767"
      これで検索バインドが確立されます。 コントロールに設定された特定のプロパティを次の表を参照してください。
 
     |プロパティ|設定の説明|
-    |--------------|----------------------------|
+    |--------------| - |
     |**DataSource**|Visual Studio では、このプロパティを設定、 <xref:System.Windows.Forms.BindingSource>、コントロールにドラッグしたテーブルの作成 (ではなく、<xref:System.Windows.Forms.BindingSource>コントロールが作成されたときに作成) します。<br /><br /> 調整する必要がある場合に設定、<xref:System.Windows.Forms.BindingSource>を表示する列を含むテーブルの。|
     |**DisplayMember**|Visual Studio は、このプロパティをコントロールにドラッグするテーブルの主キーの後で、文字列データ型を含む最初の列に設定します。<br /><br /> 調整する必要がある場合は、表示する列名にこれを設定します。|
     |**ValueMember**|Visual Studio は、このプロパティを主キーに参加している最初の列、またはキーが定義されていない場合は、テーブルの最初の列に設定します。<br /><br /> 調整する必要がある場合は、表示する列を含むテーブルの主キーにこれを設定します。|

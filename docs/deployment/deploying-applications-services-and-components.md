@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83b6449d3f9fb41280d9e0b051c5baf3edbf5a66
-ms.sourcegitcommit: 28909340cd0a0d7cb5e1fd29cbd37e726d832631
+ms.openlocfilehash: 682010bc4235948918b3bffce70d04d5db0781af
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44320554"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861632"
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>クイック スタート: は、最初に、Visual Studio でのデプロイについてください。
 
@@ -121,7 +121,7 @@ Visual studio では、Microsoft Store へのデプロイ用のアプリ パッ�
 | アプリの種類 | 配置シナリオ | リンク |
 | --- | --- | --- |
 | **Office アプリ** | For Visual Studio からの Office アドインを発行できます。 | [展開して、Office アドインを発行](https://dev.office.com/docs/add-ins/publish/publish) |
-| **WCF または OData サービス**  | その他のアプリケーションでは、web サーバーに配置した WCF RIA サービスを使用できます。 | [開発と WCF Data Services の配置](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
+| **WCF または OData サービス** | その他のアプリケーションでは、web サーバーに配置した WCF RIA サービスを使用できます。 | [開発と WCF Data Services の配置](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **LightSwitch** | LightSwitch では、Visual Studio 2017 ではサポートされなくが、Visual Studio 2015 から、以前に引き続き展開できます。 | [LightSwitch アプリケーションの配置](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
 ## <a name="next-steps"></a>次の手順

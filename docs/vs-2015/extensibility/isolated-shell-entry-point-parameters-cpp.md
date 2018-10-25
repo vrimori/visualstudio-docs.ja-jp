@@ -16,55 +16,55 @@ ms.assetid: 18f4b18b-2173-4afa-ba0a-42fe33e61118
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f19165a5941f62fd5594a715c8812c065b371608
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 879d9e2cc40ebce42565d5eb8c607502ae17c2df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49247692"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49830757"
 ---
 # <a name="isolated-shell-entry-point-parameters-c"></a>分離シェル エントリ ポイントのパラメーター (C++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio シェルベースのアプリケーションの起動時には、Visual Studio シェルの開始のエントリ ポイントを呼び出します。 シェルの開始のエントリ ポイントへの呼び出しでは、次の設定をオーバーライドできます。 各設定の説明は、次を参照してください。[します。Pkgdef ファイル](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)します。  
   
--   AddinsAllowed  
+- AddinsAllowed  
   
--   AllowsDroppedFilesOnMainWindow  
+- AllowsDroppedFilesOnMainWindow  
   
--   アプリ名  
+- アプリ名  
   
--   CommandLineLogo  
+- CommandLineLogo  
   
--   DefaultHomePage  
+- DefaultHomePage  
   
--   DefaultProjectsLocation  
+- DefaultProjectsLocation  
   
--   DefaultSearchPage  
+- DefaultSearchPage  
   
--   DefaultUserFilesFolderRoot  
+- DefaultUserFilesFolderRoot  
   
--   DisableOutputWindow  
+- DisableOutputWindow  
   
--   HideMiscellaneousFilesByDefault  
+- HideMiscellaneousFilesByDefault  
   
--   HideSolutionConcept  
+- HideSolutionConcept  
   
--   NewProjDlgInstalledTemplatesHdr  
+- NewProjDlgInstalledTemplatesHdr  
   
--   NewProjDlgSlnTreeNodeTitle  
+- NewProjDlgSlnTreeNodeTitle  
   
--   SolutionFileCreatorIdentifier  
+- SolutionFileCreatorIdentifier  
   
--   SolutionFileExt  
+- SolutionFileExt  
   
--   UserFilesSubFolderName  
+- UserFilesSubFolderName  
   
--   UserOptsFileExt  
+- UserOptsFileExt  
   
- Visual Studio 分離シェルのテンプレートは、ソース ファイルを作成します*solutionName*.cpp、場所*solutionName*は、アプリケーションのソリューションの名前です。 このファイルは、アプリケーション、_tWinMain 関数のメイン エントリ ポイントを定義します。 この関数は、シェルの開始のエントリ ポイントを呼び出します。  
+  Visual Studio 分離シェルのテンプレートは、ソース ファイルを作成します*solutionName*.cpp、場所*solutionName*は、アプリケーションのソリューションの名前です。 このファイルは、アプリケーション、_tWinMain 関数のメイン エントリ ポイントを定義します。 この関数は、シェルの開始のエントリ ポイントを呼び出します。  
   
- アプリケーションの起動時に、これらの設定を変更することで、アプリケーションの動作を変更できます。  
+  アプリケーションの起動時に、これらの設定を変更することで、アプリケーションの動作を変更できます。  
   
 ## <a name="parameters"></a>パラメーター  
  Visual Studio シェルの開始のエントリ ポイントは、5 つのパラメーターを定義します。 最初の 4 つのパラメーターは変更しないでください。 5 番目のパラメーターは、設定の上書きの一覧を取得します。 シェルの開始のエントリ ポイントは、アプリケーションのメイン エントリ ポイントから呼び出されます。  

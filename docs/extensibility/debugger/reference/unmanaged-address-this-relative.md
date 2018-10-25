@@ -1,5 +1,5 @@
 ---
-title: UNMANAGED_ADDRESS_THIS_RELATIVE |Microsoft ドキュメント
+title: UNMANAGED_ADDRESS_THIS_RELATIVE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e0a488c06f009636f7905000529ac7803fb0d6de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: aa92fb62ba60d1ea1e8907ae66a1353d593d1ab0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31127084"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813402"
 ---
 # <a name="unmanagedaddressthisrelative"></a>UNMANAGED_ADDRESS_THIS_RELATIVE
-この構造体が基準にあるアドレスを表す、`this`ポインター (`Me` Visual Basic で)。  
+この構造体が関連しているアドレスを表す、`this`ポインター (`Me` Visual Basic で)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ public struct UNMANAGED_THIS_RELATIVE {
   
 ## <a name="terms"></a>用語  
  dwOffset  
- 基本の位置 (たとえば、クラスの vtable の先頭) からのオフセットのバイト。  
+ (たとえば、クラスの vtable の開始) の基本の位置からのオフセットのバイト。  
   
  dwBitOffset  
- 基本の位置からのビット単位のオフセット (常に 0 のビット フィールドを参照する場合を除き)。  
+ 基本の位置からのビット単位のオフセット (常に 0 ビット フィールドを参照する場合を除き)。  
   
  dwBitLength  
- アドレスを表すビット数 (常に 0 のビット フィールドを参照する場合を除き)。  
+ アドレスを表すビット数 (常に 0 ビット フィールドを参照する場合を除き)。  
   
-## <a name="remarks"></a>コメント  
- この構造体の共用体の一部である、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`(から値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙体)。  
+## <a name="remarks"></a>Remarks  
+ この構造体の共用体の一部は、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)ときに構造体、`dwKind`のフィールド、`DEBUG_ADDRESS_UNION`構造に設定されている`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`(からの値、 [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)列挙型)。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

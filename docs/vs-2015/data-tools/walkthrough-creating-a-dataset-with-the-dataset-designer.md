@@ -24,12 +24,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 robots: noindex,nofollow
-ms.openlocfilehash: 1a9d47431497f05fd5538510b39b44298587dd0e
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d77d63cc82b7af6281183b3eae67d09b0454fffb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49287366"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868262"
 ---
 # <a name="walkthrough-creating-a-dataset-with-the-dataset-designer"></a>チュートリアル : データセット デザイナーでのデータセットの作成
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "49287366"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   新しいを作成する**Windows アプリケーション**プロジェクト。  
+- 新しいを作成する**Windows アプリケーション**プロジェクト。  
   
--   空の追加**データセット**プロジェクト項目。  
+- 空の追加**データセット**プロジェクト項目。  
   
--   使用してデータセットを作成することにより、アプリケーションでデータ ソースの構成の作成と、**データセット デザイナー**します。  
+- 使用してデータセットを作成することにより、アプリケーションでデータ ソースの構成の作成と、**データセット デザイナー**します。  
   
--   Northwind データベースへの接続を作成する**サーバー エクスプ ローラー**します。  
+- Northwind データベースへの接続を作成する**サーバー エクスプ ローラー**します。  
   
--   データベース内のテーブルに基づいて、データセットに TableAdapter を持つテーブルを作成します。  
+- データベース内のテーブルに基づいて、データセットに TableAdapter を持つテーブルを作成します。  
   
- [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  

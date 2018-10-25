@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0df5b9c-0932-4e54-86f0-28530ad9d684
 caps.latest.revision: 22
 manager: douge
-ms.openlocfilehash: dc3c19d7a2756e3716e76846ac468433d00cc1d5
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 005f9597abd1ce688724af9fcb167a626e4cd885
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232077"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815040"
 ---
 # <a name="creating-your-own-start-page"></a>ユーザー独自のスタート ページの作成
 スタート ページのプロジェクト テンプレートを使用するか、または空白のスタート ページを作成することで、カスタム スタート ページを作成できます。  
@@ -57,52 +57,52 @@ ms.locfileid: "49232077"
   
 #### <a name="to-create-a-blank-start-page-by-using-the-start-page-project-template"></a>スタート ページのプロジェクト テンプレートを使用して空白のスタート ページを作成するには  
   
-1.  前の手順で説明したように、スタート ページのプロジェクト テンプレートを使用して、スタート ページ プロジェクトを作成します。  
+1. 前の手順で説明したように、スタート ページのプロジェクト テンプレートを使用して、スタート ページ プロジェクトを作成します。  
   
-2.  StartPage.xaml を開きます。  
+2. StartPage.xaml を開きます。  
   
-3.  外側の xml 要素と含まれているグリッドの <xref:System.Windows.Controls.Grid> 要素を残し、.xaml ファイルが次の例のようになるようにページのコンテンツをすべて削除します。  
+3. 外側の xml 要素と含まれているグリッドの <xref:System.Windows.Controls.Grid> 要素を残し、.xaml ファイルが次の例のようになるようにページのコンテンツをすべて削除します。  
   
-    ```xaml
-       <Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                 xmlns:sp="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.StartPage"
-                 xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.10.0"
-                 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.10.0"
-             mc:Ignorable="d" 
-                 d:DesignHeight="600" d:DesignWidth="800">
-        <Grid>
-            <!--Add content here.-->
-        </Grid>
-    </Grid>
-    ```
+   ```xaml
+      <Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                xmlns:sp="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.StartPage"
+                xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.10.0"
+                xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.10.0"
+            mc:Ignorable="d" 
+                d:DesignHeight="600" d:DesignWidth="800">
+       <Grid>
+           <!--Add content here.-->
+       </Grid>
+   </Grid>
+   ```
       
-4.  使用しないサポート ファイルを削除します。  
+4. 使用しないサポート ファイルを削除します。  
   
-     配置する .vsix ファイルと .pkgdef ファイルは残してください。  
+    配置する .vsix ファイルと .pkgdef ファイルは残してください。  
   
- または、Visual Studio によって認識される適切なタグ構造を持つ XAML ファイルを作成することで、空白のスタート ページを作成することもできます。 その後、マークアップと分離コードを追加して、必要な外観と機能を取得できます。 詳細については、次を参照してください。[カスタム スタート ページを作成する](../extensibility/creating-a-custom-start-page.md)します。  
+   または、Visual Studio によって認識される適切なタグ構造を持つ XAML ファイルを作成することで、空白のスタート ページを作成することもできます。 その後、マークアップと分離コードを追加して、必要な外観と機能を取得できます。 詳細については、次を参照してください。[カスタム スタート ページを作成する](../extensibility/creating-a-custom-start-page.md)します。  
   
 ## <a name="testing-and-applying-the-custom-start-page"></a>カスタム スタート ページのテストと適用  
  クラッシュしないことを確認するまでは、プライマリ インスタンスを設定してカスタム スタート ページを実行しないでください。 テストしたカスタム スタート ページは、Visual Studio のプライマリ インスタンスでこの手順の最後の 3 つの手順を繰り返して、システムに適用できます。  
   
 #### <a name="to-test-a-custom-start-page"></a>カスタム スタート ページをテストするには  
   
-1.  F5 キーを押します。  
+1. F5 キーを押します。  
   
-     Visual Studio の実験用インスタンスが開きます。新しいスタート ページがインストールされていますが、選択されていません。  
+    Visual Studio の実験用インスタンスが開きます。新しいスタート ページがインストールされていますが、選択されていません。  
   
-2.  Visual Studio の実験用インスタンスで、 **[ツール]** メニューの **[オプション]** をクリックします。  
+2. Visual Studio の実験用インスタンスで、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-3.  **[オプション]** ダイアログ ボックスで、 **[環境]** の下の **[スタートアップ]** を選択します。 次に、 **[スタート ページのカスタマイズ]** ボックスの一覧で、.xaml ファイルを選択して **[OK]** をクリックします。  
+3. **[オプション]** ダイアログ ボックスで、 **[環境]** の下の **[スタートアップ]** を選択します。 次に、 **[スタート ページのカスタマイズ]** ボックスの一覧で、.xaml ファイルを選択して **[OK]** をクリックします。  
   
-4.  **[表示]** メニューの **[スタート ページ]** をクリックします。  
+4. **[表示]** メニューの **[スタート ページ]** をクリックします。  
   
-     作業中のスタート ページが表示されます。 実験用インスタンスを閉じて変更したファイルを再度コピーし、実験用インスタンスを再度開いて新しい変更を確認します。  
+    作業中のスタート ページが表示されます。 実験用インスタンスを閉じて変更したファイルを再度コピーし、実験用インスタンスを再度開いて新しい変更を確認します。  
   
- カスタム スタート ページを共有するには、.vsix ファイルを bin\debug ディレクトリから [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトまたは別の Web サイトやイントラネット共有にアップロードします。 詳細については、「 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)」を参照してください。  
+   カスタム スタート ページを共有するには、.vsix ファイルを bin\debug ディレクトリから [Visual Studio ギャラリー](http://go.microsoft.com/fwlink/?LinkID=123847) Web サイトまたは別の Web サイトやイントラネット共有にアップロードします。 詳細については、「 [Deploying Custom Start Pages](../extensibility/deploying-custom-start-pages.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)   

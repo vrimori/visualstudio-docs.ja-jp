@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID |Microsoft ドキュメント
+title: AD_PROCESS_ID |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32d4174c5b190278367f0147806fe007beaa72c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9634d16a89670b92e616e4bd6b878f41166aea2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101460"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833877"
 ---
 # <a name="adprocessid"></a>AD_PROCESS_ID
-プロセス ID は、システム ID または GUID のいずれかである可能性がありますを指定します。  
+システム ID または GUID 可能性のあるプロセス ID を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,35 +49,35 @@ public struct AD_PROCESS_ID {
   
 ## <a name="members"></a>メンバー  
  `ProcessIdType`  
- 値、 [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)を解釈する方法を指定する列挙体、`ProcessId`共用体型 (または、マネージ コードの構造体のメンバーにアクセスする)。  
+ 値、 [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md)を解釈する方法を指定する列挙体、`ProcessId`共用体 (または、マネージ コードの構造体のメンバーにアクセスする場合)。  
   
  dwProcessId  
- システムからの値としてのプロセス ID。  
+ システムからの値としてプロセス ID。  
   
  guidProcessId  
- GUID としてのプロセス ID。  
+ GUID としてプロセス ID。  
   
  dwUnused  
- パディング。  
+ 余白。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この構造体は、次のメソッドに渡されます。  
   
--   [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
+- [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
--   [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
+- [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
--   [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
+- [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
--   [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
+- [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
   
- 次のメソッドから返されるとします。  
+  次のメソッドから返されます。  
   
--   [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
+- [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
--   [含ま](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
+- [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

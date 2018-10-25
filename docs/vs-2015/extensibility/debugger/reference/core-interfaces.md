@@ -15,12 +15,12 @@ ms.assetid: 666b9116-8550-4bdd-bc15-55fc57de87df
 caps.latest.revision: 25
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1ff260b8b54e3aff37b9cbceffaa1e4b3a374556
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c2ef86b1985f71b1f6ea53106c4818e09a7f43b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49217738"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831823"
 ---
 # <a name="core-interfaces"></a>コア インターフェイス
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -30,47 +30,47 @@ ms.locfileid: "49217738"
 ## <a name="discussion"></a>説明  
  これらのインターフェイスは主に、デバッグ エンジン (DE) の作成に使用します。 カテゴリがここで分類されます。  
   
--   [ブレークポイント](#Breakpoints)  
+- [ブレークポイント](#Breakpoints)  
   
--   [コンテキスト](#Contexts)  
+- [コンテキスト](#Contexts)  
   
--   [Server core](#CoreServer)  
+- [Server core](#CoreServer)  
   
--   [デバッグ エンジン](#DebugEngines)  
+- [デバッグ エンジン](#DebugEngines)  
   
--   [ドキュメント](#Documents)  
+- [ドキュメント](#Documents)  
   
--   [イベント](#Events)  
+- [イベント](#Events)  
   
--   [式](#Expressions)  
+- [式](#Expressions)  
   
--   [メモリ](#Memory)  
+- [メモリ](#Memory)  
   
--   [モジュール](#Modules)  
+- [モジュール](#Modules)  
   
--   [ポート](#Ports)  
+- [ポート](#Ports)  
   
--   [プロセス](#Processes)  
+- [プロセス](#Processes)  
   
--   [プログラム](#Programs)  
+- [プログラム](#Programs)  
   
--   [Properties](#Properties)  
+- [Properties](#Properties)  
   
--   [スタック フレーム](#StackFrames)  
+- [スタック フレーム](#StackFrames)  
   
--   [スレッド](#Threads)  
+- [スレッド](#Threads)  
   
--   [型のビジュアライザー](#TypeVisualizers)  
+- [型のビジュアライザー](#TypeVisualizers)  
   
- インターフェイスを実装できるエンティティは次のとおりです。  
+  インターフェイスを実装できるエンティティは次のとおりです。  
   
--   デバッグ エンジン (DE)  
+- デバッグ エンジン (DE)  
   
--   ポート サプライヤー (PS)  
+- ポート サプライヤー (PS)  
   
--   式エバリュエーター (EE)  
+- 式エバリュエーター (EE)  
   
--   Visual Studio (VS)  
+- Visual Studio (VS)  
   
 ##  <a name="Breakpoints"></a> ブレークポイント  
  これらのインターフェイスが関連する実装およびブレークポイントの追跡。  

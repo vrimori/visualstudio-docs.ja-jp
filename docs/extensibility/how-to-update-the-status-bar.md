@@ -13,12 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd1ddaff24cbceb73af3982cc7be3e9f09d351c2
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: b7f7d52ad8dc75f8e8bd313794b44c231522cde7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829938"
 ---
 # <a name="how-to-update-the-status-bar"></a>方法: ステータス バーの更新
 **ステータス バー**状態テキストの行または評価指標の 1 つまたは複数を含む多くのアプリケーション ウィンドウの下部にあるコントロール バーがあります。  
@@ -35,19 +35,19 @@ ms.locfileid: "39499953"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  A**ステータス バー** 4 つの個別のフィールドが含まれています。  
   
--   状態テキスト  
+- 状態テキスト  
   
--   進行状況バー  
+- 進行状況バー  
   
--   アニメーション化されたアイコン  
+- アニメーション化されたアイコン  
   
--   エディターについて  
+- エディターについて  
   
- 詳細については、次を参照してください。[ステータス バー](/cpp/mfc/status-bars)します。  
+  詳細については、次を参照してください。[ステータス バー](/cpp/mfc/status-bars)します。  
   
- IDE を自動的に呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>実装、ドキュメント ウィンドウがアクティブになります。  
+  IDE を自動的に呼び出す、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A>のメソッド、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>実装、ドキュメント ウィンドウがアクティブになります。  
   
- VSPackage の実装者は、ステータス バーで、ステータス テキストを更新します。 状態のテキスト フィールドが空のテキストに設定されている場合、IDE が「準備完了」には、この文字列をリセットします ("") のアイドル時間にします。  
+  VSPackage の実装者は、ステータス バーで、ステータス テキストを更新します。 状態のテキスト フィールドが空のテキストに設定されている場合、IDE が「準備完了」には、この文字列をリセットします ("") のアイドル時間にします。  
   
 ## <a name="see-also"></a>関連項目  
  [ステータス バー](/cpp/mfc/status-bars)

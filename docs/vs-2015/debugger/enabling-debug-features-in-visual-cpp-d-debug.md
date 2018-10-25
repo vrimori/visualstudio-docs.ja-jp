@@ -30,25 +30,25 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 452cf6ac386affb886e9a318e8686eea85e59d66
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: e512620e1af8da85039ed403d4280568101fbe57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49237147"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829262"
 ---
 # <a name="enabling-debug-features-in-visual-c-ddebug"></a>Visual C++ でのデバッグ機能の使用 (/D_DEBUG)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]、記号でプログラムをコンパイルするときに、アサーションが有効になっているなどのデバッグ機能 **_DEBUG**定義します。 定義できます **_DEBUG** 2 つの方法のいずれかで。  
   
--   指定 **#define _DEBUG**でソース コード、または  
+- 指定 **#define _DEBUG**でソース コード、または  
   
--   指定、 **/D_DEBUG**コンパイラ オプション。 (ウィザードを使って Visual Studio でプロジェクトを作成する場合 **/D_DEBUG**デバッグ構成で自動的に定義されます)。  
+- 指定、 **/D_DEBUG**コンパイラ オプション。 (ウィザードを使って Visual Studio でプロジェクトを作成する場合 **/D_DEBUG**デバッグ構成で自動的に定義されます)。  
   
- ときに **_DEBUG**が定義されている場合、コンパイラはコンパイルで囲まれたコードのセクション **#ifdef _DEBUG**と`#endif`します。  
+  ときに **_DEBUG**が定義されている場合、コンパイラはコンパイルで囲まれたコードのセクション **#ifdef _DEBUG**と`#endif`します。  
   
- MFC プログラムのデバッグ構成は、MFC ライブラリのデバッグ バージョンとリンクする必要があります。 MFC ヘッダー ファイルを決定など、定義済みのシンボルに基づいて正しいバージョンとリンクする MFC ライブラリの **_DEBUG**と **_UNICODE**します。 詳細については、次を参照してください。 [MFC ライブラリのバージョン](http://msdn.microsoft.com/library/3d7a8ae1-e276-4cf8-ba63-360c2f85ad0e)します。  
+  MFC プログラムのデバッグ構成は、MFC ライブラリのデバッグ バージョンとリンクする必要があります。 MFC ヘッダー ファイルを決定など、定義済みのシンボルに基づいて正しいバージョンとリンクする MFC ライブラリの **_DEBUG**と **_UNICODE**します。 詳細については、次を参照してください。 [MFC ライブラリのバージョン](http://msdn.microsoft.com/library/3d7a8ae1-e276-4cf8-ba63-360c2f85ad0e)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ネイティブ コードのデバッグ](../debugger/debugging-native-code.md)   

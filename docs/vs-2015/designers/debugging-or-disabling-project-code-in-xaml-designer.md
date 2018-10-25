@@ -11,12 +11,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b4a52b63dc5605dfae533a4108e11a43ed0c62ed
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 2507b509ee33957845f010f7c18404d257ad4a38
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837582"
 ---
 # <a name="debugging-or-disabling-project-code-in-xaml-designer"></a>XAML デザイナーでプロジェクト コードをデバッグまたは無効化する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -25,17 +25,17 @@ ms.locfileid: "49306372"
   
  プロジェクト コードには次のものが含まれます。  
   
--   カスタム コントロールおよびユーザー コントロール  
+- カスタム コントロールおよびユーザー コントロール  
   
--   クラス ライブラリ  
+- クラス ライブラリ  
   
--   値コンバーター  
+- 値コンバーター  
   
--   プロジェクト コードから生成されるデザイン時のデータに対するバインド  
+- プロジェクト コードから生成されるデザイン時のデータに対するバインド  
   
- プロジェクト コードが無効になると、Visual Studio は、たとえば、データが使用できなくなったバインドのプロパティ名などのプレースホルダーや、実行されなくなったコントロールのプレースホルダーを表示します。  
+  プロジェクト コードが無効になると、Visual Studio は、たとえば、データが使用できなくなったバインドのプロパティ名などのプレースホルダーや、実行されなくなったコントロールのプレースホルダーを表示します。  
   
- ![ハンドルされない例外のダイアログ](../designers/media/xaml-unhandledexception.png "XAML_UnhandledException")  
+  ![ハンドルされない例外のダイアログ](../designers/media/xaml-unhandledexception.png "XAML_UnhandledException")  
   
 #### <a name="to-determine-if-project-code-is-causing-an-exception"></a>プロジェクト コードが例外の原因かどうかを判断するには  
   

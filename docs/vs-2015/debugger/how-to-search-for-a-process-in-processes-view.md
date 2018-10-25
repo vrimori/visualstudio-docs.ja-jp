@@ -17,12 +17,12 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0e924acf48af293fedae2e9c47347e336ed6450f
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 14421b6baede8f946a9bdfd86759e78657e1e603
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49222899"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817432"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>方法: プロセス ビューでプロセスを検索する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,24 +31,24 @@ ms.locfileid: "49222899"
   
 ### <a name="to-search-for-a-process-in-processes-view"></a>プロセス ビューでプロセスを検索するには  
   
-1.  そのため、ウィンドウを整列 Spy++ は、アクティブな[プロセス ビュー](../debugger/processes-view.md)ウィンドウが表示されます。  
+1. そのため、ウィンドウを整列 Spy++ は、アクティブな[プロセス ビュー](../debugger/processes-view.md)ウィンドウが表示されます。  
   
-2.  **検索**] メニューの [選択**プロセスの検索**  
+2. **検索**] メニューの [選択**プロセスの検索**  
   
-     [プロセス検索 ダイアログ ボックス](../debugger/process-search-dialog-box.md)が開きます。  
+    [プロセス検索 ダイアログ ボックス](../debugger/process-search-dialog-box.md)が開きます。  
   
-3.  検索条件として、プロセス ID またはモジュールの文字列を入力します。  
+3. 検索条件として、プロセス ID またはモジュールの文字列を入力します。  
   
-4.  値を指定しないすべてのフィールドをオフにします。  
+4. 値を指定しないすべてのフィールドをオフにします。  
   
-    > [!TIP]
-    >  モジュールによって所有されているすべてのプロセスを検索するには、オフ、**プロセス**ボックスに、モジュール名を入力し、**モジュール**ボックス。 使用して**次を検索**プロセスの検索を続行します。  
+   > [!TIP]
+   >  モジュールによって所有されているすべてのプロセスを検索するには、オフ、**プロセス**ボックスに、モジュール名を入力し、**モジュール**ボックス。 使用して**次を検索**プロセスの検索を続行します。  
   
-5.  選択**を**または**ダウン**方向を検索します。  
+5. 選択**を**または**ダウン**方向を検索します。  
   
-6.  **[OK]** をクリックします。  
+6. **[OK]** をクリックします。  
   
- 強調表示されて、一致するプロセスが見つかった場合、**プロセス ビュー**ウィンドウ。
+   強調表示されて、一致するプロセスが見つかった場合、**プロセス ビュー**ウィンドウ。
 
 
 

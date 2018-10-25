@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 07675d7d6d592a83848b8af02031a573350c35f7
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 01e583db3bb5b5aff6608b4028636823b4ca857c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49244765"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844708"
 ---
 # <a name="switchlttgt-activity-designer"></a>スイッチ&lt;T&gt;アクティビティ デザイナー
 <xref:System.Activities.Statements.Switch%601> アクティビティは、指定した式を評価します。そして、その評価から得られた値と一致する、関連付けられたキーを持つアクティビティを、アクティビティのコレクションから実行します。  
@@ -50,11 +50,11 @@ ms.locfileid: "49244765"
   
  case を削除する方法には、次の 2 つがあります。  
   
-1.  case を選択して削除します。  
+1. case を選択して削除します。  
   
-2.  コンテキスト メニューを表示しを選択する場合は、右クリックして選択**削除**します。  
+2. コンテキスト メニューを表示しを選択する場合は、右クリックして選択**削除**します。  
   
- case を削除するには、case 自体を選択する必要があることに注意してください。 case 内のアクティビティを選択して削除すると、case ではなく、アクティビティのみが削除されます。  
+   case を削除するには、case 自体を選択する必要があることに注意してください。 case 内のアクティビティを選択して削除すると、case ではなく、アクティビティのみが削除されます。  
   
 ## <a name="see-also"></a>関連項目  
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

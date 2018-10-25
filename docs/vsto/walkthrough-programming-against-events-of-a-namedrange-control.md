@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ab9810ba5086d3de8f5d3ad91bc2c62e0d30d349
-ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
+ms.openlocfilehash: 3f8b55cda9576a0203857b3fdaeccbb205b42168
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "35673507"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812519"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>チュートリアル: プログラム NamedRange コントロールのイベント
   このチュートリアルは、追加する方法を示します、 <xref:Microsoft.Office.Tools.Excel.NamedRange> Microsoft Office Excel ワークシートと Visual Studio での Office 開発ツールを使用して、そのイベントに対してプログラミングを制御します。  
@@ -87,15 +87,15 @@ ms.locfileid: "35673507"
   
 ### <a name="to-add-text-to-your-worksheet"></a>ワークシートにテキストを追加するには  
   
-1.  セルに**A1**、次のテキストを入力します。  
+1. セルに**A1**、次のテキストを入力します。  
   
-     **これは、NamedRange コントロールの例です。**  
+    **これは、NamedRange コントロールの例です。**  
   
-2.  セルに**A3** (の左側に`namedRange2`)、次のテキストを入力します。  
+2. セルに**A3** (の左側に`namedRange2`)、次のテキストを入力します。  
   
-     **イベント:**  
+    **イベント:**  
   
- テキストを挿入するコードを記述する次のセクションで`namedRange2`のプロパティを変更し、`namedRange2`コントロールへの応答、 <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick>、 <xref:Microsoft.Office.Tools.Excel.NamedRange.Change>、および<xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange>のイベント`namedRange1`します。  
+   テキストを挿入するコードを記述する次のセクションで`namedRange2`のプロパティを変更し、`namedRange2`コントロールへの応答、 <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick>、 <xref:Microsoft.Office.Tools.Excel.NamedRange.Change>、および<xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange>のイベント`namedRange1`します。  
   
 ## <a name="add-code-to-respond-to-the-beforedoubleclick-event"></a>BeforeDoubleClick イベントに応答するコードを追加します。  
   

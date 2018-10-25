@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3978d72372f2aa9a0c57184083c67476886016aa
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f4ea97ed3650e74a10bfc5e49657f0ed3dce60ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49232116"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840702"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>方法 : 最初にビルドするターゲットを指定する
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "49232116"
   
 #### <a name="to-specify-one-initial-target"></a>1 つの初期ターゲットを指定するには  
   
--   `Project` 要素の `InitialTargets` 属性の既定のターゲットを指定します。 例えば:  
+- `Project` 要素の `InitialTargets` 属性の既定のターゲットを指定します。 例えば:  
   
-     `<Project InitialTargets="Clean">`  
+   `<Project InitialTargets="Clean">`  
   
- ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`InitialTargets` 属性で複数の初期ターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
+  ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`InitialTargets` 属性で複数の初期ターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
   
 #### <a name="to-specify-more-than-one-initial-target"></a>2 つ以上の初期ターゲットを指定するには  
   
@@ -53,11 +53,11 @@ ms.locfileid: "49232116"
   
 #### <a name="to-specify-one-default-target"></a>1 つの既定のターゲットを指定するには  
   
--   `Project` 要素の `DefaultTargets` 属性の既定のターゲットを指定します。 例えば:  
+- `Project` 要素の `DefaultTargets` 属性の既定のターゲットを指定します。 例えば:  
   
-     `<Project DefaultTargets="Compile">`  
+   `<Project DefaultTargets="Compile">`  
   
- ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`DefaultTargets` 属性で複数の既定のターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
+  ターゲットを順番に一覧表示し、セミコロンを使って各ターゲットを区切ることにより、`DefaultTargets` 属性で複数の既定のターゲットを指定できます。 リスト内のターゲットは、順番に実行されます。  
   
 #### <a name="to-specify-more-than-one-default-target"></a>2 つ以上の既定のターゲットを指定するには  
   

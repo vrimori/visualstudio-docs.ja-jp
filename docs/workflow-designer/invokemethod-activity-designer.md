@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03c62abe30fe2ba3896885d1969a3ec2bc45cc86
-ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
+ms.openlocfilehash: 7ac82e36d3abc942e0c5492cc4d7acf347eba36c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36757767"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839571"
 ---
 # <a name="invokemethod-activity-designer"></a>InvokeMethod アクティビティ デザイナー
 
@@ -36,7 +36,7 @@ ms.locfileid: "36757767"
 次の表は、<xref:System.Activities.Statements.InvokeMethod>プロパティと、デザイナーでの使用方法について説明します。 これらのプロパティは、プロパティ グリッドで編集できるし、一部は、ワークフロー デザイナー画面で編集できます。
 
 |プロパティ名|必須|使用方法|
-|-------------------|--------------|-----------|
+|-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.InvokeMethod> アクティビティの表示名。 既定値は InvokeMethod です。<br /><br /> ただし、<xref:System.Activities.Activity.DisplayName%2A>必須ではありませんいずれかを使用することをお勧めします。|
 |<xref:System.Activities.Statements.InvokeMethod.MethodName%2A>|True|アクティビティの実行時に呼び出すメソッドの名前。 呼び出されたメソッドとして宣言する必要があります**パブリック**します。 このプロパティは、デザイナー画面で編集でき、必須です。|
 |<xref:System.Activities.Statements.InvokeMethod.Parameters%2A>|False|呼び出されたメソッドのパラメーター コレクション。 パラメーターは、メソッド シグネチャ内で出現する順序でコレクションに追加する必要があります。 表示する、**パラメーター** 、このプロパティを設定するダイアログで、省略記号ボタンをクリックして、**パラメーター**プロパティ グリッドのフィールド。 をクリックして、**引数の作成**パラメーターを追加するボタンをクリックします。|
@@ -64,6 +64,6 @@ C# としてパラメーターを渡す**アウト**パラメーター (たと�
 ## <a name="see-also"></a>関連項目
 
 - [Primitives](../workflow-designer/primitives-activity-designers.md)
-- [割り当てる](../workflow-designer/assign-activity-designer.md)
-- [遅延](../workflow-designer/delay-activity-designer.md)
+- [Assign](../workflow-designer/assign-activity-designer.md)
+- [Delay](../workflow-designer/delay-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)
