@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0702d1f47b8924e97cd3a6df1bba2af2503d5b29
-ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
+ms.openlocfilehash: b7e3da13240eb172e29676b990d1c23be71e4542
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029135"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855535"
 ---
 # <a name="model-editor"></a>モデル エディター
 
@@ -31,7 +31,7 @@ ms.locfileid: "47029135"
 **モデル エディター**は DirectX アプリケーションの開発に使用する複数の 3D モデル形式をサポートしています。
 
 |形式名|ファイル拡張子|サポートされる操作 (表示、編集、作成)|
-|-----------------|--------------------|-------------------------------------------------|
+|-----------------| - | - |
 |AutoDesk FBX Interchange File|*.fbx*|表示、編集、作成|
 |Collada DAE File|*.dae*|表示、編集 (Collada DAE ファイルへの変更は FBX の形式で保存されます)。|
 |OBJ|*.obj*|表示、編集 (OBJ ファイルへの変更は FBX の形式で保存されます)。|
@@ -254,7 +254,7 @@ Visual Studio は、3D 軸の任意の向きをサポートし、それをサポ
 特定のオブジェクトがシーン内の異なる光源に反応する方法を変更するには、素材を使用する他のオブジェクトに関係なく照明のプロパティを変更できます。 次の表は、共通の照明プロパティを示します。
 
 |照明プロパティ|説明|
-|-----------------------|-----------------|
+| - |-----------------|
 |**環境光**|環境光照明がサーフェイスに与える影響について説明します。|
 |**拡散光**|ディレクショナル ライトとポイント ライトがサーフェイスに与える影響について説明します。|
 |**発光**|他の照明に関係なく、サーフェイスがどのように発光するかについて説明します。|
@@ -294,7 +294,7 @@ Visual Studio は、3D 軸の任意の向きをサポートし、それをサポ
 ## <a name="keyboard-shortcuts"></a>キーボード ショートカット
 
 |コマンド|キーボード ショートカット|
-|-------------|------------------------|
+|-------------| - |
 |**[選択]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **Q**<br /><br /> **S**|
 |**[ズーム]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **Z**<br /><br /> **Z**|
 |**[パン]** モードに切り替え|**Ctrl** + **G**、**Ctrl** + **P**<br /><br /> **K**|
@@ -339,5 +339,5 @@ Visual Studio は、3D 軸の任意の向きをサポートし、それをサポ
 |Title|説明|
 |-----------|-----------------|
 |[ゲームとアプリ用の 3D アセットの操作](../designers/working-with-3-d-assets-for-games-and-apps.md)|テクスチャ、イメージ、3D モデルやシェーダー効果などのグラフィックス アセットの操作に使用できる Visual Studio のツールの概要を説明します。|
-|[イメージ エディター](../designers/image-editor.md)|Visual Studio イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|
+|[Image Editor](../designers/image-editor.md)|Visual Studio イメージ エディターを使用してテクスチャとイメージを操作する方法について説明します。|
 |[シェーダー デザイナー](../designers/shader-designer.md)|Visual Studio シェーダー デザイナーを使用してシェーダーを操作する方法について説明します。|
