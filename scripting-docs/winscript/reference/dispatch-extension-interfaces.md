@@ -1,5 +1,5 @@
 ---
-title: ディスパッチ拡張インターフェイス |Microsoft ドキュメント
+title: ディスパッチ拡張インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -15,27 +15,27 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a5617019d15648b3aabd5d06df0f3662c4883183
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b7b77f096d70b15272e0cce1b985f3c32f89e495
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24640382"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940932"
 ---
 # <a name="dispatch-extension-interfaces"></a>ディスパッチ拡張インターフェイス
-DispEx.h ヘッダー ファイルでは、このセクションで示されているインターフェイスを提供します。  
-  
+DispEx.h のヘッダー ファイルでは、このセクションにリストされたインターフェイスを提供します。  
+
 ## <a name="in-this-section"></a>このセクションの内容  
- 次のインターフェイスは、Microsoft Windows スクリプト ホストと Windows スクリプト エンジンです。  
-  
--   [ICanHandleException インターフェイス](../../winscript/reference/icanhandleexception-interface.md)  
-  
--   [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)  
-  
--   [IDispError インターフェイス](../../winscript/reference/idisperror-interface.md)  
-  
--   [IVariantChangeType インターフェイス](../../winscript/reference/ivariantchangetype-interface.md)  
-  
- 次のインターフェイスは、Windows スクリプト ホストに固有です。  
-  
--   [IObjectIdentity インターフェイス](../../winscript/reference/iobjectidentity-interface.md)
+ 次のインターフェイスは、Microsoft Windows スクリプト ホストおよび Windows スクリプト エンジンです。  
+
+- [ICanHandleException インターフェイス](../../winscript/reference/icanhandleexception-interface.md)  
+
+- [IDispatchEx インターフェイス](../../winscript/reference/idispatchex-interface.md)  
+
+- [IDispError インターフェイス](../../winscript/reference/idisperror-interface.md)  
+
+- [IVariantChangeType インターフェイス](../../winscript/reference/ivariantchangetype-interface.md)  
+
+  次のインターフェイスは、Windows スクリプト ホストに固有します。  
+
+- [IObjectIdentity インターフェイス](../../winscript/reference/iobjectidentity-interface.md)

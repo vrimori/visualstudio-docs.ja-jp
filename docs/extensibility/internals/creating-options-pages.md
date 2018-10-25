@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 834edb926142637a250cf4a695d5d1d54e103977
-ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
+ms.openlocfilehash: 236d9a0be82885bdf8040c97601429279e74dd15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39499479"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949644"
 ---
 # <a name="create-options-pages"></a>[オプション] ページを作成します。
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Managed package framework から派生したクラス<xref:Microsoft.VisualStudio.Shell.DialogPage>拡張、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]を追加して IDE**オプション**ページの下で、**ツール**メニュー。  
@@ -47,17 +47,17 @@ ms.locfileid: "39499479"
 ## <a name="implement-dialogpage-class"></a>DialogPage クラスの実装  
  VSPackage の実装を提供するオブジェクト、 <xref:Microsoft.VisualStudio.Shell.DialogPage>-派生型は次の継承された機能を利用できます。  
   
--   既定のユーザー インターフェイス ウィンドウです。  
+- 既定のユーザー インターフェイス ウィンドウです。  
   
--   既定の永続化メカニズムの使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>、クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されて`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
+- 既定の永続化メカニズムの使用可能な場合<xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>、クラスに適用される場合は、<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>プロパティに設定されて`true`の<xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>クラスに適用されています。  
   
--   オートメーションをサポートします。  
+- オートメーションをサポートします。  
   
- 実装するオブジェクトの最小要件を**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
+  実装するオブジェクトの最小要件を**ツール オプション**ページを使用して<xref:Microsoft.VisualStudio.Shell.DialogPage>パブリック プロパティを追加します。  
   
- クラスとして正しく登録されている場合、**ツール オプション**プロバイダーは、そのパブリック プロパティが 利用可能なページ、**オプション**のセクション、**ツール**のフォームのメニューで、プロパティ グリッドです。  
+  クラスとして正しく登録されている場合、**ツール オプション**プロバイダーは、そのパブリック プロパティが 利用可能なページ、**オプション**のセクション、**ツール**のフォームのメニューで、プロパティ グリッドです。  
   
- これらすべての既定の機能を無効にできます。 たとえばより高度なユーザーを作成するインターフェイス必要がありますのみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>します。  
+  これらすべての既定の機能を無効にできます。 たとえばより高度なユーザーを作成するインターフェイス必要がありますのみの既定の実装をオーバーライドする<xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>します。  
   
 ## <a name="example"></a>例  
  オプション ページの単純な"Hello world"の実装は、以下に示します。 Visual Studio パッケージ テンプレートによって作成された既定のプロジェクトに次のコードを追加、**メニュー コマンド**オプションを選択したはオプション ページの機能に適切に紹介します。  

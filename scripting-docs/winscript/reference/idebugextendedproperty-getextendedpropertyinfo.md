@@ -1,5 +1,5 @@
 ---
-title: IDebugExtendedProperty::GetExtendedPropertyInfo |Microsoft ドキュメント
+title: IDebugExtendedProperty::GetExtendedPropertyInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
@@ -18,15 +18,15 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7109346dd8189395cfdd366ff622dfac00744382
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f314a9c777eef1716a382c74b9ea250846542da7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2017
-ms.locfileid: "24727082"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935474"
 ---
 # <a name="idebugextendedpropertygetextendedpropertyinfo"></a>IDebugExtendedProperty::GetExtendedPropertyInfo
-拡張プロパティより単純なより多くの情報の拡張情報をフェッチ`IDebugProperty`です。  
+詳細については、単純なよりである、拡張プロパティの拡張情報をフェッチ`IDebugProperty`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ HRESULT GetExtendedPropertyInfo(
   
 #### <a name="parameters"></a>パラメーター  
  `dwFieldSpec`  
- [in]記入するフィールドを決定する EX_DBGPROP_INFO_FLAGS 定数を指定します、`ExtendedDebugPropertyInfo`構造体。  
+ [in]入力するフィールドを決定する EX_DBGPROP_INFO_FLAGS 定数を指定します、`ExtendedDebugPropertyInfo`構造体。  
   
  `nRadix`  
  [in]任意の数値情報を解釈するときに使用する基数。  
@@ -49,7 +49,7 @@ HRESULT GetExtendedPropertyInfo(
  [out]返します、`ExtendedDebugPropertyInfo`プロパティを記述する構造体。  
   
 ## <a name="return-value"></a>戻り値  
- 有効な返します`HRESULT`通常`S_OK`です。  
+ 有効な返します`HRESULT`、通常`S_OK`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugExtendedProperty インターフェイス](../../winscript/reference/idebugextendedproperty-interface.md)   

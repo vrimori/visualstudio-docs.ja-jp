@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50bf9d042cd89a8f53cf63208c485682d46e68f4
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 659e370d664b3db2c3624d73164b4489cc2680a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39510427"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933288"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>チュートリアル: プログラムによるグラフィックス情報のキャプチャ
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のグラフィックス診断を使用すると、Direct3D アプリケーションからプログラムによってグラフィックス情報をキャプチャできます。  
@@ -69,24 +69,24 @@ ms.locfileid: "39510427"
   
 ##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis インターフェイスを取得するには  
   
--   以下のコードを使用して、DXGI デバッグ インターフェイスに対して IDXGraphicsAnalysis インターフェイスをフックします。  
+- 以下のコードを使用して、DXGI デバッグ インターフェイスに対して IDXGraphicsAnalysis インターフェイスをフックします。  
   
-    ```cpp
-    IDXGraphicsAnalysis* pGraphicsAnalysis;  
-    HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
-    ```  
+  ```cpp
+  IDXGraphicsAnalysis* pGraphicsAnalysis;  
+  HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
+  ```  
   
-     確認してください、`HRESULT`によって返される[DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1)使用する前に、有効なインターフェイスを取得するために。  
+   確認してください、`HRESULT`によって返される[DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1)使用する前に、有効なインターフェイスを取得するために。  
   
-    ```cpp
-    if (FAILED(getAnalysis))  
-    {  
-        // Abort program or disable programmatic capture in your app.  
-    }  
-    ```  
+  ```cpp
+  if (FAILED(getAnalysis))  
+  {  
+      // Abort program or disable programmatic capture in your app.  
+  }  
+  ```  
   
-    > [!NOTE]
-    >  場合`DXGIGetDebugInterface1`返します`E_NOINTERFACE`(`error: E_NOINTERFACE No such interface supported`)、アプリがグラフィックス診断の下で実行されていることを確認 (alt キーを押しながら f5 キーで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)])。  
+  > [!NOTE]
+  >  場合`DXGIGetDebugInterface1`返します`E_NOINTERFACE`(`error: E_NOINTERFACE No such interface supported`)、アプリがグラフィックス診断の下で実行されていることを確認 (alt キーを押しながら f5 キーで[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)])。  
   
 ### <a name="capturing-graphics-information"></a>グラフィックス情報をキャプチャする  
  これで、正しい `IDXGraphicsAnalysis` インターフェイスを取得できたので、 `BeginCapture` および `EndCapture` を使用してグラフィックス情報をキャプチャできます。  
@@ -118,5 +118,5 @@ ms.locfileid: "39510427"
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: グラフィックス情報のキャプチャ](walkthrough-capturing-graphics-information.md)   
- [グラフィックス情報のキャプチャ](capturing-graphics-information.md)   
+ [Capturing Graphics Information](capturing-graphics-information.md)   
  [コマンド ライン キャプチャ ツール](command-line-capture-tool.md)

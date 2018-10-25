@@ -13,14 +13,14 @@ ms.author: chitray
 manager: Meng
 ms.workload:
 - vssdk
-ms.openlocfilehash: f87f359d9c143adc9093b08ef58ebca89dca524e
-ms.sourcegitcommit: ed524fd809b17ad1d06bf9cd4c3374c71a44d7bf
+ms.openlocfilehash: 2e0215b22c66d6b555650e05985a674f2ad9aed4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409915"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943103"
 ---
-# <a name="walkthrough-create-an-extension-pack"></a>チュートリアル: 拡張機能パックを作成します。
+# <a name="walkthrough-create-an-extension-pack"></a>チュートリアル: 拡張機能パックを作成する
 
 拡張機能パックには、一連の拡張機能を一緒にインストールすることができます。 拡張機能パックを使用すると、簡単にお気に入りの拡張機能を他のユーザーに共有または特定のシナリオの拡張機能のセットをバンドルできます。
   
@@ -34,14 +34,14 @@ Visual Studio 2015 以降、ダウンロード センターから Visual Studio 
 
 拡張機能パック項目テンプレートは、一緒にインストールすることができる拡張機能のセットを拡張機能パックを作成します。
   
-1. **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**順にクリックします**Extensibility**します。 **テンプレート**ペインで、 **VSIX プロジェクト**します。 **[名前]** ボックスに「`Test Extension Pack`」と入力します。 **[OK]** をクリックします。  
+1. **新しいプロジェクト** ダイアログ ボックスで、展開**Visual c#** または**Visual Basic**順にクリックします**Extensibility**します。 **テンプレート**ペインで、 **VSIX プロジェクト**します。 **[名前]** ボックスに「 `Test Extension Pack`」と入力します。 **[OK]** をクリックします。  
   
 2. **ソリューション エクスプ ローラー**でプロジェクト ノードを右クリックし、選択**追加/新しい項目の**します。 移動する、Visual c#**拡張**ノード**拡張パック**します。 既定のファイル名 (ExtensionPack1.cs) のままにします。  
   
 3. 次のコードを含む、ExtensionPack1.vsext ファイルが追加されます。
 
-  ```json
-  {
+   ```json
+   {
     "id": "ExtensionPack1",
     "name": "ExtensionPack1",
     "description": "Read about creating extension packs at https://aka.ms/vsextpack",
@@ -56,8 +56,8 @@ Visual Studio 2015 以降、ダウンロード センターから Visual Studio 
         "name": "CopyAsHtml"
       }
     ]
-  }  
-  ```
+   }  
+   ```
 
 4. 拡張機能パックに含めない拡張機能の vsixid で確認できます、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/)します。 拡張機能を含める をクリックする**コピー ID**します。 既存を更新する**vsixId**上記のファイルまたはリストに別の拡張機能を追加します。
 

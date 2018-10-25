@@ -1,5 +1,5 @@
 ---
-title: FIELD_MODIFIERS |Microsoft ドキュメント
+title: FIELD_MODIFIERS |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0040795564aa1d1d599a55928b888ec7cfcfd97e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6403beec680341416940a2cb4f65476408e095be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31106777"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949085"
 ---
 # <a name="fieldmodifiers"></a>FIELD_MODIFIERS
 フィールドの型の修飾子を指定します。  
@@ -109,25 +109,25 @@ public enum enum_FIELD_MODIFIERS {
  フィールドにアクセスできないことを示します。  
   
  FIELD_MOD_ACCESS_PUBLIC  
- フィールドにパブリック アクセスがあることを示します。  
+ フィールドがパブリック アクセスを持つことを示します。  
   
  FIELD_MOD_ACCESS_PROTECTED  
- フィールドのアクセスが保護されていることを示します。  
+ フィールドにアクセスが保護されていることを示します。  
   
  FIELD_MOD_ACCESS_PRIVATE  
- フィールドが、プライベート アクセスを持つことを示します。  
+ フィールドがプライベート アクセスを持つことを示します。  
   
  FIELD_MOD_NOMODIFIERS  
- フィールドの修飾子がないことを示します。  
+ フィールドに修飾子がないことを示します。  
   
  FIELD_MOD_STATIC  
  フィールドが静的であることを示します。  
   
  FIELD_MOD_CONSTANT  
- フィールドは定数であることを示します。  
+ フィールドが定数であることを示します。  
   
  FIELD_MOD_TRANSIENT  
- フィールドが一時的なものであることを示します。  
+ フィールドが一時的であることを示します。  
   
  FIELD_MOD_VOLATILE  
  フィールドが揮発性であることを示します。  
@@ -154,41 +154,41 @@ public enum enum_FIELD_MODIFIERS {
  フィールドが sentinel であることを示します。  
   
  FIELD_MOD_INNERCLASS  
- フィールドは、内部クラスであることを示します。  
+ フィールドが内部クラスであることを示します。  
   
  FIELD_TYPE_OPTIONAL  
  フィールドが省略可能であることを示します。  
   
  FIELD_MOD_BYREF  
- フィールドが参照の引数であることを示します。 これは特にメソッドの引数です。  
+ フィールドが参照の引数であることを示します。 これは、専用のメソッドの引数。  
   
  FIELD_MOD_HIDDEN  
- フィールドは非表示にするか別のコンテキストで表示されることを示しますたとえば、[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]静的ローカル変数。  
+ フィールドを非表示または別のコンテキストで表示する必要があることを示しますたとえば、[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]静的ローカル変数。  
   
  FIELD_MOD_MARSHALASOBJECT  
- フィールドを持つオブジェクトを表すことを示す、`IUnknown`インターフェイスです。  
+ フィールドを持つオブジェクトで表すことを示す、`IUnknown`インターフェイス。  
   
  FIELD_MOD_SPECIAL_NAME  
- フィールドは、たとえばに特別な名前を持つことを示す`.ctor`コンス トラクター ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]のみ)。  
+ フィールドなど、特別な名前を持つことを示します`.ctor`コンス トラクター ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]のみ)。  
   
  FIELD_MOD_HIDEBYSIG  
- フィールドを持つことを示す、`Overloads`に適用されているキーワード ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]のみ)。  
+ フィールドがあることを示します、`Overloads`キーワードを適用 ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]のみ)。  
   
  FIELD_MOD_WRITEONLY  
- フィールドが書き込み専用であることを示します。 この値は含まれていない`FIELD_MOD_ALL`関数の評価のような書き込み専用のフィールドのみ使用することはできます。 ユーザーが明示的に得る`FIELD_MOD_WRITEONLY`フィールドです。  
+ フィールドが書き込み専用であることを示します。 この値が記載されていない`FIELD_MOD_ALL`関数の評価は、このような書き込み専用のフィールドのみを使用します。 ユーザーを明示的に問い合わせる必要があります`FIELD_MOD_WRITEONLY`フィールド。  
   
  FIELD_MOD_ACCESS_MASK  
- フィールド アクセスのマスクを示します。  
+ フィールドへのアクセスのマスクを示します。  
   
  FIELD_MOD_MASK  
  フィールド修飾子のマスクを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用、`dwModifiers`のメンバー、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体。  
   
- これらの値が渡されるも、 [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)を特定のフィールドをフィルター処理するメソッド。  
+ これらの値は渡されることも、 [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)メソッドの特定のフィールドをフィルター処理します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  

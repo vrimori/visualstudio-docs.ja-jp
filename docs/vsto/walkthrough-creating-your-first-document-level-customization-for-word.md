@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 160609032a4118c0a15abe88115971f267b90f4c
-ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
+ms.openlocfilehash: 1c5c25163a49e51b0759e57318d6119edec97983
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38778108"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928816"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-word"></a>チュートリアル: 初めての Word 用ドキュメント レベルのカスタマイズを作成します。
   この入門編のチュートリアルでは、Microsoft Office Word 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定の文書が開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、文書が開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。  
@@ -31,19 +31,19 @@ ms.locfileid: "38778108"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   新しい Word 文書プロジェクトを作成する。  
+- 新しい Word 文書プロジェクトを作成する。  
   
--   Visual Studio デザイナーでホストされるドキュメントにテキストを追加する。  
+- Visual Studio デザイナーでホストされるドキュメントにテキストを追加する。  
   
--   Word のオブジェクト モデルを使用して、カスタマイズされた文書が開かれたときにテキストを追加するコードを記述する。  
+- Word のオブジェクト モデルを使用して、カスタマイズされた文書が開かれたときにテキストを追加するコードを記述する。  
   
--   プロジェクトをビルドし、実行してテストする。  
+- プロジェクトをビルドし、実行してテストする。  
   
--   プロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
+- プロジェクトをクリーンアップして、不要なビルド ファイルやセキュリティ設定を開発用コンピューターから削除する。  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -99,7 +99,7 @@ ms.locfileid: "38778108"
 ## <a name="add-text-to-the-document-programmatically"></a>プログラムによって文書にテキストを追加します。  
  次に、ThisDocument コード ファイルにコードを追加します。 この新しいコードでは、Word のオブジェクト モデルを使用して、ドキュメントに 2 番目のテキスト段落を追加します。 ThisDocument コード ファイルには、既定で次の生成済みコードが含まれています。  
   
--   `ThisDocument` クラスの部分定義。このクラスは、ドキュメントのプログラミング モデルを表し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、次を参照してください。 [Document ホスト項目](../vsto/document-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。 `ThisDocument` クラスの残りの部分は、変更するべきではない非表示のコード ファイルに定義されています。  
+-   `ThisDocument` クラスの部分定義。このクラスは、ドキュメントのプログラミング モデルを表し、Word のオブジェクト モデルへのアクセスを提供します。 詳細については、次を参照してください。 [Document ホスト項目](../vsto/document-host-item.md)と[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)します。 `ThisDocument` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。  
   
 -   `ThisDocument_Startup` イベント ハンドラーおよび `ThisDocument_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、ドキュメントが開いたとき、および閉じたときに呼び出されます。 これらのイベント ハンドラーを使用して、ドキュメントが開いたときにカスタマイズを初期化し、ドキュメントが閉じたときにカスタマイズが使用したリソースをクリーンアップします。 詳細については、次を参照してください。 [Office プロジェクト内のイベント](../vsto/events-in-office-projects.md)します。  
   

@@ -1,5 +1,5 @@
 ---
-title: IDebugParsedExpression::EvaluateSync |Microsoft ドキュメント
+title: IDebugParsedExpression::EvaluateSync |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b67294b6bb22ff9607be726415b6aae8a2a9524
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdf9fa9057e946d68da9f1e02d5aaf90b34e569a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31115243"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931767"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
 このメソッドは、解析された式を評価し、必要に応じて別のデータ型に結果をキャストします。  
@@ -53,19 +53,19 @@ int EvaluateSync(
   
 #### <a name="parameters"></a>パラメーター  
  `dwEvalFlags`  
- [in]組み合わせた[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)定数式が評価される方法を制御します。  
+ [in]組み合わせた[EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)式を評価する方法を制御する定数。  
   
  `dwTimeout`  
- [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用して`INFINITE`無制限に待機します。  
+ [in]このメソッドから戻る前に待機するミリ秒単位で最大の時間を指定します。 使用`INFINITE`を無期限に待機します。  
   
  `pSymbolProvider`  
- [in]として表現される、シンボル プロバイダー、 [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)インターフェイスです。  
+ [in]として表現される、シンボル プロバイダー、 [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)インターフェイス。  
   
  `pAddress`  
- [in]表される、メソッド内の現在の実行場所、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイスです。  
+ [in]表されるメソッド内の現在の実行場所、 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md)インターフェイス。  
   
  `pBinder`  
- [in]として表現される、バインダー、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)インターフェイスです。  
+ [in]表される、バインダー、 [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)インターフェイス。  
   
  `bstrResultType`  
  [in]結果の型にキャストする必要があります。 この引数は、null 値を指定できます。  
@@ -74,10 +74,10 @@ int EvaluateSync(
  [out]返します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)評価の結果を表すインターフェイスです。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 式の評価コンテキストを指定した`pAddress`式内のシンボルの値を決定するルールの使用言語のスコープ、格納方法を決定できるようになります。  
+## <a name="remarks"></a>Remarks  
+ 式の評価コンテキストがで指定された`pAddress`格納方法を決定できるように、式内のシンボルの値を決定するルールの言語のスコープを使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

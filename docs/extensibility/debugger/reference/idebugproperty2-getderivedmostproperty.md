@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetDerivedMostProperty |Microsoft ドキュメント
+title: IDebugProperty2::GetDerivedMostProperty |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f453dacf988b80cf6837b3324a9d4b0a70e2254e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 58713b63728678ccab55435eb05b1cbb1c8920fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116709"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49929882"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
 プロパティの最派生プロパティを取得します。  
@@ -44,10 +44,10 @@ int GetDerivedMostProperty (
  [out]返します、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)最派生プロパティを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。 返します`S_GETDERIVEDMOST_NO_DERIVED_MOST`最派生取得するプロパティが存在しない場合。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。 返します`S_GETDERIVEDMOST_NO_DERIVED_MOST`を取得する最派生プロパティが存在しない場合。  
   
-## <a name="remarks"></a>コメント  
- たとえば、このプロパティを実装するオブジェクトの説明`ClassRoot`がのインスタンス化では実際には、`ClassDerived`から派生する`ClassRoot`、このメソッドから返されます、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクト記述する、`ClassDerived`オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ たとえば、このプロパティを実装するオブジェクトを記述する`ClassRoot`がのインスタンス化では実際には、`ClassDerived`から派生する`ClassRoot`、このメソッドから返されます、 [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)オブジェクト記述する、`ClassDerived`オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

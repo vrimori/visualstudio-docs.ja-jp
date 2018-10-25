@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 738934450536d6ae51e67223c440e607ac6b6839
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 7cb1bbc637b51ecf75c0b491a5918ceaa147aa8f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49286092"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932313"
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>方法: コンパイラ警告を非表示にする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,59 +57,59 @@ ms.locfileid: "49286092"
   
 #### <a name="to-suppress-specific-warnings-for-visual-basic"></a>Visual Basic の特定の警告を抑制するには  
   
-1.  **ソリューション エクスプローラー**で、警告を抑制するプロジェクトを選びます。  
+1. **ソリューション エクスプローラー**で、警告を抑制するプロジェクトを選びます。  
   
-2.  メニュー バーから、**[プロジェクト]**、**[プロジェクトのアンロード]** の順に選びます。  
+2. メニュー バーから、**[プロジェクト]**、**[プロジェクトのアンロード]** の順に選びます。  
   
-3.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[<**_プロジェクト名_**>.vbproj の編集]** を選びます。  
+3. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[<**_プロジェクト名_**>.vbproj の編集]** を選びます。  
   
-     コード エディターでプロジェクト ファイルが開かれます。  
+    コード エディターでプロジェクト ファイルが開かれます。  
   
-4.  ビルドしているビルド構成で `<NoWarn></NoWarn>` 要素を探します。  
+4. ビルドしているビルド構成で `<NoWarn></NoWarn>` 要素を探します。  
   
-     次の例では、x86 プラットフォームでのデバッグ ビルド構成の `<NoWarn></NoWarn>` 要素を太字で示してあります。  
+    次の例では、x86 プラットフォームでのデバッグ ビルド構成の `<NoWarn></NoWarn>` 要素を太字で示してあります。  
   
-    ```  
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">  
-        <PlatformTarget>x86</PlatformTarget>  
-        <DebugSymbols>true</DebugSymbols>  
-        <DebugType>full</DebugType>  
-        <Optimize>false</Optimize>  
-        <OutputPath>bin\Debug\</OutputPath>  
-        <DefineDebug>true</DefineDebug>  
-        <DefineTrace>true</DefineTrace>  
-        <ErrorReport>prompt</ErrorReport>  
-        <NoWarn></NoWarn>  
-        <WarningLevel>1</WarningLevel>  
-      </PropertyGroup>  
-    ```  
+   ```  
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">  
+       <PlatformTarget>x86</PlatformTarget>  
+       <DebugSymbols>true</DebugSymbols>  
+       <DebugType>full</DebugType>  
+       <Optimize>false</Optimize>  
+       <OutputPath>bin\Debug\</OutputPath>  
+       <DefineDebug>true</DefineDebug>  
+       <DefineTrace>true</DefineTrace>  
+       <ErrorReport>prompt</ErrorReport>  
+       <NoWarn></NoWarn>  
+       <WarningLevel>1</WarningLevel>  
+     </PropertyGroup>  
+   ```  
   
-5.  `<NoWarn>` 要素の値として、1 つ以上の警告番号を追加します。 複数の警告番号を指定する場合は、次の例のようにコンマで区切ります。  
+5. `<NoWarn>` 要素の値として、1 つ以上の警告番号を追加します。 複数の警告番号を指定する場合は、次の例のようにコンマで区切ります。  
   
-    ```  
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">  
-        <PlatformTarget>x86</PlatformTarget>  
-        <DebugSymbols>true</DebugSymbols>  
-        <DebugType>full</DebugType>  
-        <Optimize>false</Optimize>  
-        <OutputPath>bin\Debug\</OutputPath>  
-        <DefineDebug>true</DefineDebug>  
-        <DefineTrace>true</DefineTrace>  
-        <ErrorReport>prompt</ErrorReport>  
-        <NoWarn>40059,42024</NoWarn>  
-        <WarningLevel>1</WarningLevel>  
-      </PropertyGroup>  
-    ```  
+   ```  
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">  
+       <PlatformTarget>x86</PlatformTarget>  
+       <DebugSymbols>true</DebugSymbols>  
+       <DebugType>full</DebugType>  
+       <Optimize>false</Optimize>  
+       <OutputPath>bin\Debug\</OutputPath>  
+       <DefineDebug>true</DefineDebug>  
+       <DefineTrace>true</DefineTrace>  
+       <ErrorReport>prompt</ErrorReport>  
+       <NoWarn>40059,42024</NoWarn>  
+       <WarningLevel>1</WarningLevel>  
+     </PropertyGroup>  
+   ```  
   
-6.  変更を .vbproj ファイルに保存します。  
+6. 変更を .vbproj ファイルに保存します。  
   
-7.  メニュー バーから、**[プロジェクト]**、**[プロジェクトの再読み込み]** の順に選びます。  
+7. メニュー バーから、**[プロジェクト]**、**[プロジェクトの再読み込み]** の順に選びます。  
   
-8.  メニュー バーから、**[ビルド]**、**[ソリューションのリビルド]** の順に選びます。  
+8. メニュー バーから、**[ビルド]**、**[ソリューションのリビルド]** の順に選びます。  
   
-     指定した警告が、**[出力]** ウィンドウに表示されなくなります。  
+    指定した警告が、**[出力]** ウィンドウに表示されなくなります。  
   
- 詳しくは、「[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83)」をご覧ください。  
+   詳しくは、「[/nowarn](http://msdn.microsoft.com/library/7ebf2106-0652-4fdc-bf60-70fc86465d83)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル: アプリケーションをビルドする](../ide/walkthrough-building-an-application.md)   

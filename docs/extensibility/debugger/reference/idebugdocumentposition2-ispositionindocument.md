@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPosition2::IsPositionInDocument |Microsoft ドキュメント
+title: IDebugDocumentPosition2::IsPositionInDocument |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 225a92d521f118c2d038cabf114c69f389af0108
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e3941ac45ea70b5ccb7e546c0b9f298fa12798ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31107265"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930103"
 ---
 # <a name="idebugdocumentposition2ispositionindocument"></a>IDebugDocumentPosition2::IsPositionInDocument
-ドキュメントの位置が指定したドキュメントに含まれているかどうかを判断します。  
+ドキュメントの位置が特定のドキュメントに含まれているかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int IsPositionInDocument(
   
 #### <a name="parameters"></a>パラメーター  
  `pDoc`  
- [in][IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)を含むドキュメントの候補者を表すオブジェクト。  
+ [in][IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)を含んでいるドキュメントの候補を表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは主にブレークポイントを設定に使用[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)インターフェイスです。 ドキュメントが読み込まれ、ブレークポイントの位置はこの位置がドキュメントに含まれているかどうかと呼ばれます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは主にブレークポイントを設定に使用[IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)インターフェイス。 ドキュメントが読み込まれると、ブレークポイントの位置はこの位置がドキュメントに含まれているかどうかに呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)   

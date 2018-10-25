@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 011dc258281eccf7d1a1eca7acbc8cc71a53f00a
-ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
+ms.openlocfilehash: 9d6bd68f5e94e04cab01dcb7bafd7dcc3cf3c17d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44281144"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936125"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>リモート Visual Studio で c# または Visual Basic プロジェクトのデバッグ
 別のコンピューターに展開されている Visual Studio アプリケーションをデバッグするには、インストールし、アプリをデプロイしたコンピューターでリモート ツールを実行、Visual Studio からリモート コンピューターに接続するプロジェクトを構成し、アプリを実行します。
@@ -32,7 +32,7 @@ ms.locfileid: "44281144"
   
 リモート デバッグのユニバーサル Windows アプリ (UWP) の詳細については、次を参照してください。[インストール済みのアプリ パッケージをデバッグ](debug-installed-app-package.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 リモート デバッガーは Windows 7 でサポートされている以降 (phone ではありません) と Windows Server の Windows Server 2008 Service Pack 2 以降のバージョン。 要件の完全な一覧を参照してください。[要件](../debugger/remote-debugging.md#requirements_msvsmon)します。
 
@@ -56,25 +56,25 @@ ms.locfileid: "44281144"
 ## <a name="remote_csharp"></a> プロジェクトのリモート デバッグ
 デバッガーでは、Visual C# または Visual Basic のデスクトップ アプリケーションをリモート コンピューターに配置できませんが、次のようにリモートからそれらのデスクトップ アプリケーションをデバッグすることはできます。 次の手順では、という名前のコンピューターでデバッグする場合を前提と**MJO DL**の次の図に示すようにします。
   
-1.  という名前の WPF プロジェクトの作成**MyWpf**します。  
+1. という名前の WPF プロジェクトの作成**MyWpf**します。  
   
-2.  ブレークポイントをコード内の達しやすい任意の箇所に設定します。  
+2. ブレークポイントをコード内の達しやすい任意の箇所に設定します。  
   
-     たとえば、ブレークポイントをボタン ハンドラーに設定できます。 これを行うには、MainWindow.xaml をし、ツールボックスからボタン コントロールを追加のハンドラーを開く ボタンをダブルクリックします。
+    たとえば、ブレークポイントをボタン ハンドラーに設定できます。 これを行うには、MainWindow.xaml をし、ツールボックスからボタン コントロールを追加のハンドラーを開く ボタンをダブルクリックします。
   
-3.  ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**プロパティ**します。  
+3. ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**プロパティ**します。  
   
-4.  **プロパティ**ページで、選択、**デバッグ**タブ。  
+4. **プロパティ**ページで、選択、**デバッグ**タブ。  
   
-     ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")  
+    ![RemoteDebuggerCSharp](../debugger/media/remotedebuggercsharp.png "RemoteDebuggerCSharp")  
   
-5.  確認、**作業ディレクトリ**テキスト ボックスが空です。  
+5. 確認、**作業ディレクトリ**テキスト ボックスが空です。  
   
-6.  選択**リモート コンピューターの使用**、および種類**MJO-DL:4022**テキスト ボックスにします。 (4022 は、リモート デバッガー ウィンドウに表示されるポート番号です。 ポート番号をインクリメントで Visual Studio の各バージョン 2)。
+6. 選択**リモート コンピューターの使用**、および種類**MJO-DL:4022**テキスト ボックスにします。 (4022 は、リモート デバッガー ウィンドウに表示されるポート番号です。 ポート番号をインクリメントで Visual Studio の各バージョン 2)。
   
-7.  必ず**ネイティブ コードのデバッグを有効にする**が選択されていません。  
+7. 必ず**ネイティブ コードのデバッグを有効にする**が選択されていません。  
   
-8.  プロジェクトをビルドします。  
+8. プロジェクトをビルドします。  
   
 9. 同じパスであるリモート コンピューター上のフォルダーを作成、**デバッグ**Visual Studio コンピューター上のフォルダー: **\<ソース パス > \MyWPF\MyWPF\bin\Debug**します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "44281144"
   
 13. メッセージが表示されたら、リモート マシンに接続するネットワーク資格情報を入力します。  
   
-     必要な資格情報は、ネットワークのセキュリティ構成によって異なります。 たとえば、ドメインのコンピューターで、ドメイン名とパスワードを入力できます。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような**MJO-DL\name@something.com**、正しいパスワードと共にします。
+     必要な資格情報は、ネットワークのセキュリティ構成によって異なります。 たとえば、ドメインのコンピューターで、ドメイン名とパスワードを入力できます。 非ドメイン コンピューターで、可能性がありますを入力する、マシン名と有効なユーザー アカウント名では、このような<strong>MJO-DL\name@something.com</strong>、正しいパスワードと共にします。
 
      WPF アプリケーションのメイン ウィンドウが、リモート コンピューター上で開かれていることがわかります。
   
@@ -101,7 +101,7 @@ ms.locfileid: "44281144"
   
 15. Visual Studio コンピューターで、実行がブレークポイントで停止したことを確認できるはずです。
   
- アプリケーションで使用する必要があるすべての非コード ファイルがある場合は、Visual Studio プロジェクトに追加する必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。 フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、] をクリックして**追加 > [既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
+    アプリケーションで使用する必要があるすべての非コード ファイルがある場合は、Visual Studio プロジェクトに追加する必要があります。 追加ファイル用のプロジェクト フォルダーの作成 (で、**ソリューション エクスプ ローラー**、 をクリックして**追加 > 新しいフォルダー**)。 フォルダーにファイルを追加して (で、**ソリューション エクスプ ローラー**、] をクリックして**追加 > [既存項目の**のファイルを選択します)。 **プロパティ**ファイルごとに ページで、設定**出力ディレクトリにコピー**に**常にコピー**します。
 
 ## <a name="set-up-debugging-with-remote-symbols"></a>リモート シンボルを使用したデバッグのセットアップ 
 
@@ -111,6 +111,6 @@ ms.locfileid: "44281144"
  [Visual Studio でのデバッグ](../debugger/index.md)  
  [デバッガー機能ツアー](../debugger/debugger-feature-tour.md)   
  [リモート デバッグ用の Windows ファイアウォールを構成します。](../debugger/configure-the-windows-firewall-for-remote-debugging.md)   
- [リモート デバッガーのポートの割り当て](../debugger/remote-debugger-port-assignments.md)   
+ [Remote Debugger Port Assignments](../debugger/remote-debugger-port-assignments.md)   
  [リモートの IIS コンピューター上の ASP.NET のリモート デバッグ](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)  
  [リモート デバッグ エラーとトラブルシューティング](../debugger/remote-debugging-errors-and-troubleshooting.md)

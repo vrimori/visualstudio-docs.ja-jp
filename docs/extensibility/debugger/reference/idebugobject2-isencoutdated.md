@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsEncOutdated |Microsoft ドキュメント
+title: IDebugObject2::IsEncOutdated |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab51e2dbc75de33bcafe28295b5e47e4b4358538
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6ec1e09628b2bd1da23bda6baaa1fa157dfbf08
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31122523"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928101"
 ---
 # <a name="idebugobject2isencoutdated"></a>IDebugObject2::IsEncOutdated
-このメソッドは、またはこのオブジェクトの親コンテナーのエディット コンティニュの状態が最新かどうかを判断します。 カスタム式エバリュエーターではこのメソッドを常に返すを実装していません`E_NOTIMPL`です。  
+このメソッドは、このオブジェクトのまたは親コンテナーのエディット コンティニュの状態が古くなっているかどうかを判断します。 カスタム式エバリュエーターでは、このメソッドを常に返しますは実装しません`E_NOTIMPL`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,13 +41,13 @@ int IsEncOutdated(
   
 #### <a name="parameters"></a>パラメーター  
  `pfEncOutdated`  
- [out]0 以外 (`TRUE`) 場合は、エディット コンティニュの状態は最新では、0 (`FALSE`) されていない場合。  
+ [out]0 以外の場合 (`TRUE`) エディット コンティニュの状態が最新でない場合は、0 (`FALSE`) でない場合。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 > [!NOTE]
->  カスタム式エバリュエーターを常に返します`E_NOTIMPL`です。  
+>  カスタム式エバリュエーターを常に返します`E_NOTIMPL`します。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

@@ -14,12 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c95007ed5b740812ca2b1a269390fbad6ffbc2ba
-ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
+ms.openlocfilehash: 42c1a9cd2d1c9d1349b07e06d65a8da6a41b4245
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39079534"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938225"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio のメニュー バー メニューに追加します。
 このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法を示します。 IDE のメニュー バーには、**ファイル**、**編集**、**ビュー**、**ウィンドウ**、および**ヘルプ**のようなメニュー項目が含まれています。  
@@ -30,7 +30,7 @@ ms.locfileid: "39079534"
   
  このチュートリアルを完了すると、という名前のメニューを作成することができます**TestMenu** 1 つのコマンドを格納しています。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  Visual Studio 2015 以降、ダウンロード センターから Visual Studio SDK をインストールすることはできません。 これは Visual Studio のセットアップにオプション機能として含まれるようになりました。 また、後から VS SDK をインストールすることもできます。 詳細については、次を参照してください。 [Visual Studio SDK をインストール](../extensibility/installing-the-visual-studio-sdk.md)します。  
   
 ## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>カスタム コマンド項目テンプレートを持つ VSIX プロジェクトを作成します。  
@@ -41,48 +41,48 @@ ms.locfileid: "39079534"
   
 ## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE のメニュー バーにメニューを作成します。  
   
-1.  **ソリューション エクスプ ローラー**オープン*TestCommandPackage.vsct*します。  
+1. **ソリューション エクスプ ローラー**オープン*TestCommandPackage.vsct*します。  
   
-     ファイルの最後では、\<シンボル > いくつか含まれているノード\<GuidSymbol > ノード。 GuidTestCommandPackageCmdSet という名前のノード、としては、次のように、新しいシンボルを追加します。  
+    ファイルの最後では、\<シンボル > いくつか含まれているノード\<GuidSymbol > ノード。 GuidTestCommandPackageCmdSet という名前のノード、としては、次のように、新しいシンボルを追加します。  
   
-    ```xml  
-    <IDSymbol name="TopLevelMenu" value="0x1021"/>  
-    ```  
+   ```xml  
+   <IDSymbol name="TopLevelMenu" value="0x1021"/>  
+   ```  
   
-2.  空の作成\<メニュー > 内のノード、\<コマンド > ノード、直前に\<グループ >。 \<メニュー > ノードを追加、\<メニュー > 次のように、ノード。  
+2. 空の作成\<メニュー > 内のノード、\<コマンド > ノード、直前に\<グループ >。 \<メニュー > ノードを追加、\<メニュー > 次のように、ノード。  
   
-    ```xml  
-    <Menus>  
-          <Menu guid="guidTestCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">  
-            <Parent guid="guidSHLMainMenu"  
-                    id="IDG_VS_MM_TOOLSADDINS" />  
-            <Strings>  
-              <ButtonText>TestMenu</ButtonText>  
-              <CommandName>TestMenu</CommandName>  
-            </Strings>  
-        </Menu>  
-    </Menus>  
-    ```  
+   ```xml  
+   <Menus>  
+         <Menu guid="guidTestCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">  
+           <Parent guid="guidSHLMainMenu"  
+                   id="IDG_VS_MM_TOOLSADDINS" />  
+           <Strings>  
+             <ButtonText>TestMenu</ButtonText>  
+             <CommandName>TestMenu</CommandName>  
+           </Strings>  
+       </Menu>  
+   </Menus>  
+   ```  
   
-     `guid`と`id`コマンド セットで、コマンド セットと、特定のメニューにメニューの値が指定されます。  
+    `guid`と`id`コマンド セットで、コマンド セットと、特定のメニューにメニューの値が指定されます。  
   
-     `guid`と`id`親の値は、ツールとアドインのメニューを含む Visual Studio のメニュー バーのセクションに、メニューを配置します。  
+    `guid`と`id`親の値は、ツールとアドインのメニューを含む Visual Studio のメニュー バーのセクションに、メニューを配置します。  
   
-     値、`CommandName`文字列は、メニュー項目のテキストが表示されることを指定します。  
+    値、`CommandName`文字列は、メニュー項目のテキストが表示されることを指定します。  
   
-3.  \<グループ > セクションで、検索、\<グループ > を変更して、\<親 > 要素を追加したメニューをポイントします。  
+3. \<グループ > セクションで、検索、\<グループ > を変更して、\<親 > 要素を追加したメニューをポイントします。  
   
-    ```csharp  
-    <Groups>  
-          <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">  
-            <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>  
-          </Group>  
-        </Groups>  
-    ```  
+   ```csharp  
+   <Groups>  
+         <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">  
+           <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>  
+         </Group>  
+       </Groups>  
+   ```  
   
-     これにより、新しいメニューのグループの一部です。  
+    これにより、新しいメニューのグループの一部です。  
   
-4.  検索、`Buttons`セクション。 注意、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]パッケージ テンプレートが生成、`Button`をその親に設定を持つ要素`MyMenuGroup`します。 その結果、このコマンドは、メニューに表示されます。  
+4. 検索、`Buttons`セクション。 注意、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]パッケージ テンプレートが生成、`Button`をその親に設定を持つ要素`MyMenuGroup`します。 その結果、このコマンドは、メニューに表示されます。  
   
 ## <a name="build-and-test-the-extension"></a>ビルドし、テストの拡張機能  
   

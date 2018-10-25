@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream |Microsoft ドキュメント
+title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a01c5c14262beb36aed5d093b2bb34d4c14ef4ca
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 264112b3de5d8bcaabe555602bbc93f96c98fe9a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31101180"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937916"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-負荷は、データ ストリームを指定されたシンボルをデバッグします。  
+読み込みでは、データ ストリームを指定するシンボルをデバッグします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,19 +54,19 @@ int LoadSymbolsFromStream(
  [in]モジュールの一意の識別子。  
   
  `baseAddress`  
- [in]メモリのベース アドレス。  
+ [in]基本のメモリ アドレス。  
   
  `pUnkMetadataImport`  
- [in]シンボルのメタデータを含むオブジェクトです。  
+ [in]シンボルのメタデータを含むオブジェクト。  
   
  `pStream`  
  [in]シンボルを含むデータ ストリーム。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスです。 このメソッドの呼び出し、 [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md)メソッドです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CDebugSymbolProvider**を公開するオブジェクト、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイス。 メソッドの呼び出し、 [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md)メソッド。  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(  

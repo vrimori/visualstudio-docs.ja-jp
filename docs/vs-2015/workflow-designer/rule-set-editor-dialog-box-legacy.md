@@ -16,12 +16,12 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: erikre
-ms.openlocfilehash: 9da35b83eead06f40452696bb9559d409da8e38d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 3469e395ee50e63f8ac76e4181d02b777ccbd4ba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294581"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942401"
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>[ルール セット エディター] ダイアログ ボックス (レガシ)
 このトピックで説明する方法を使用して、**ルール セット エディター**  ダイアログ ボックスで、従来の[!INCLUDE[wfd1](../includes/wfd1-md.md)]します。 [!INCLUDE[wfd2](../includes/wfd2-md.md)] または [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] を対象とする必要がある場合は、従来の[!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]を使用します。  
@@ -67,19 +67,19 @@ ms.locfileid: "49294581"
   
  式では、次の演算子がサポートされます。  
   
--   関係演算子 : ==、=、!=  
+- 関係演算子 : ==、=、!=  
   
--   比較演算子: <、 \<=、>、> =  
+- 比較演算子: <、 \<=、>、> =  
   
--   算術演算子 : +、-、*、/、MOD  
+- 算術演算子 : +、-、*、/、MOD  
   
--   論理演算子:、& &、OR、 &#124; &#124;、NOT、!  
+- 論理演算子:、& &、OR、 &#124; &#124;、NOT、!  
   
--   ビットごとの演算子: &、&#124;  
+- ビットごとの演算子: &、&#124;  
   
- 式演算子の優先順位は、C# 演算子の優先順位規則に従います。  
+  式演算子の優先順位は、C# 演算子の優先順位規則に従います。  
   
- 条件の詳細については、次を参照してください。[ワークフロー内の条件を使用して](http://msdn.microsoft.com/en-us/541211f5-d382-4810-894f-71f00b34fa77)します。  
+  条件の詳細については、次を参照してください。[ワークフロー内の条件を使用して](http://msdn.microsoft.com/en-us/541211f5-d382-4810-894f-71f00b34fa77)します。  
   
 ### <a name="halt-and-update-functions"></a>Halt 関数と Update 関数  
  **Then アクション:** と**Else アクション:** 式をサポートする**Halt**と**Update**関数。 使用する、 **Halt**関数、入力**Halt**に、 **Then アクション:** または**Else アクション:** テキスト ボックス。 **Halt**操作によって、ルール セットの実行をすぐに停止して、呼び出し元のコードに制御が戻ります。 使用する、 **Update**フォワード チェーンを持つ関数です。  

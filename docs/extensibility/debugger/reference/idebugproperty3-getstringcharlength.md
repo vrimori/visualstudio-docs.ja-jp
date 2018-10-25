@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringCharLength |Microsoft ドキュメント
+title: IDebugProperty3::GetStringCharLength |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1694a39af0dff4577ea767efb34a048e29bbb07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8400a9d0e8123d3803403a3e73c90cc1beea84c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935056"
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
-関連付けられたプロパティの文字列に文字数を返します。  
+関連付けられているプロパティの文字列の文字数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +43,16 @@ int GetStringCharLength(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`pLen`|[out]プロパティの文字列に文字数を返します。|  
+|`pLen`|[out]プロパティの文字列の文字数を返します。|  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`; エラー コードを返しますそれ以外の場合。  
+ 成功した場合、返します`S_OK`; エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 通常、このメソッドはへの呼び出しのバッファーを割り当てるための前段階として使用、 [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ 呼び出しにバッファーを割り当てるための準備としてこのメソッドを使用する、通常、 [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md)メソッド。  
   
 ## <a name="example"></a>例  
- 次の例に対して、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイスです。  
+ 次の例では、このメソッドを実装する方法を示しています、 **CProperty**を公開するオブジェクト、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイス。  
   
 ```cpp  
 STDMETHODIMP CProperty::GetStringCharLength(ULONG *pLen)  

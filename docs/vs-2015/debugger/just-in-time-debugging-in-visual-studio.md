@@ -21,12 +21,12 @@ caps.latest.revision: 51
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 606f0129d49e8d5b8f07e6c8fac60fa5029a4828
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a2fdbbd98833ff43e07b17f605b6c3a105eb3efe
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49294048"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940582"
 ---
 # <a name="just-in-time-debugging-in-visual-studio"></a>Just-In-Time Debugging in Visual Studio (Visual Studio での Just-In-Time デバッグ)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -62,19 +62,19 @@ ms.locfileid: "49294048"
   
 #### <a name="to-enable-or-disable-just-in-time-debugging"></a>Just-In-Time デバッグの有効/無効を切り替えるには  
   
-1.  Visual Studio を開きます。 **[ツール]** メニューの **[オプション]** をクリックします。  
+1. Visual Studio を開きます。 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **オプション**ダイアログ ボックスで、**デバッグ**フォルダー。  
+2. **オプション**ダイアログ ボックスで、**デバッグ**フォルダー。  
   
-3.  **デバッグ**フォルダーを選択、**ジャスト イン タイム**ページ。  
+3. **デバッグ**フォルダーを選択、**ジャスト イン タイム**ページ。  
   
-4.  **Just-In-Time を有効にするは、これらの種類のコードのデバッグ**ボックスをオンまたは関連するプログラムの種類をオフ:**マネージ**、**ネイティブ**、または**スクリプト**.  
+4. **Just-In-Time を有効にするは、これらの種類のコードのデバッグ**ボックスをオンまたは関連するプログラムの種類をオフ:**マネージ**、**ネイティブ**、または**スクリプト**.  
   
-     Just-In-Time デバッグを有効にした後で無効に切り替えるには、管理者特権で実行する必要があります。 Just-In-Time デバッグを有効にするとレジストリ キーが設定され、そのキーを変更するには管理者特権が必要になります。  
+    Just-In-Time デバッグを有効にした後で無効に切り替えるには、管理者特権で実行する必要があります。 Just-In-Time デバッグを有効にするとレジストリ キーが設定され、そのキーを変更するには管理者特権が必要になります。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
- Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない場合、時にだけ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
+   Visual Studio がコンピューターからアンインストールされた後でも、Just-In-Time デバッグが有効になっている場合があります。 Visual Studio がインストールされていない場合、時にだけ、Visual Studio からデバッグを無効にすることはできません**オプション** ダイアログ ボックス。 その場合は、Windows レジストリを編集して Just-In-Time デバッグを無効にできます。  
   
 #### <a name="to-disable-just-in-time-debugging-by-editing-the-registry"></a>レジストリを編集して Just-In-Time デバッグを無効にするには  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 29c7ee223bbfbeb2dd7b262c33d6c00ea3c41411
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: a3497d46ed4c9c5a04d8f40cc3056ea282593884
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49245545"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934237"
 ---
 # <a name="troubleshooting-the-help-viewer"></a>ヘルプ ビューアーのトラブルシューティング
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "49245545"
 ## <a name="additional-resources"></a>その他のリソース  
  次のリソースを使用して、ヘルプ ビューアーで詳細情報を取得し、フィードバックを提供することができます。  
   
--   フィードバックを提供するには、Microsoft の Web サイト、[Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) をご覧になるか、[hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) まで電子メールを送信してください。  
+- フィードバックを提供するには、Microsoft の Web サイト、[Microsoft Connect](http://go.microsoft.com/fwlink/?linkid=243983) をご覧になるか、[hlpfdbk@microsoft.com](mailto:hlpfdbk@microsoft.com) まで電子メールを送信してください。  
   
--   詳細については、次を参照してください。、[デベロッパー ドキュメントおよびヘルプ システム](http://go.microsoft.com/fwlink/?LinkId=232741)フォーラムと[The Help Guy](http://go.microsoft.com/fwlink/?LinkId=232743)ブログ。  
+- 詳細については、次を参照してください。、[デベロッパー ドキュメントおよびヘルプ システム](http://go.microsoft.com/fwlink/?LinkId=232741)フォーラムと[The Help Guy](http://go.microsoft.com/fwlink/?LinkId=232743)ブログ。  
   
 ## <a name="see-also"></a>関連項目  
  [ヘルプ ビューアー 2.1 の管理者ガイド](http://go.microsoft.com/fwlink/?LinkId=243985)

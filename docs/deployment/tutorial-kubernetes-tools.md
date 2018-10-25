@@ -9,12 +9,12 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: 079ae6affd5c495136d97a00eae2ddccfa2c9066
-ms.sourcegitcommit: e680e8ac675f003ebcc8f8c86e27f54ff38da662
+ms.openlocfilehash: 8cf4192ce0f925624dbbe890381d3557f2a27223
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356783"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942934"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio の Kubernetes ツールを概要します。
 
@@ -90,21 +90,21 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
    ![メニュー項目の発行のスクリーン ショット](media/k8s-tools-publish-project.png)
 
-1. **発行**画面で、選択**Container Registry**発行を対象とし、指示に従って、コンテナー レジストリを選択します。 コンテナー レジストリがまだしていない場合は、選択**新しい Azure コンテナー レジストリの作成**Visual Studio から作成します。 詳細については、次を参照してください。 [Azure Container Registry にコンテナーを発行](#publish-your-container-to-azure-container-registry)します。
+2. **発行**画面で、選択**Container Registry**発行を対象とし、指示に従って、コンテナー レジストリを選択します。 コンテナー レジストリがまだしていない場合は、選択**新しい Azure コンテナー レジストリの作成**Visual Studio から作成します。 詳細については、次を参照してください。 [Azure Container Registry にコンテナーを発行](#publish-your-container-to-azure-container-registry)します。
 
    ![Pick 発行ターゲットの画面のスクリーン ショット](media/k8s-tools-publish-to-acr.png)
 
-1. ソリューション エクスプ ローラーでバックアップを右クリックして、*ソリューション* をクリック**Publish to Azure AKS**します。
+3. ソリューション エクスプ ローラーでバックアップを右クリックして、*ソリューション* をクリック**Publish to Azure AKS**します。
 
    ![Azure AKS のメニュー項目のスクリーン ショットの発行](media/k8s-tools-publish-solution.png)
 
-1. 自分のサブスクリプションと、AKS クラスターを選択して、ACR と共に作成したプロファイルを発行します。 次に、 **[OK]** をクリックします。
+4. 自分のサブスクリプションと、AKS クラスターを選択して、ACR と共に作成したプロファイルを発行します。 次に、 **[OK]** をクリックします。
 
    ![AKS の画面をスクリーン ショットの発行](media/k8s-tools-publish-to-aks.png)
 
    これにより、 **Publish to Azure AKS**画面。
 
-1.  選択、**構成 Helm**サーバー上の Helm チャートをインストールするために使用するコマンド行の更新へのリンク。
+5. 選択、**構成 Helm**サーバー上の Helm チャートをインストールするために使用するコマンド行の更新へのリンク。
 
    ![Helm の構成のスクリーン ショットのリンク](media/k8s-tools-configure-helm.png)
 
@@ -112,7 +112,7 @@ ASP.NET Core の種類は、web アプリケーションを作成し、選択で
 
    ![スクリーン ショットの Helm の構成画面](media/k8s-tools-helm-configure-screen.png)
 
-1. 展開する準備ができたら、クリックして、**発行**AKS にアプリケーションを発行するボタンをクリックします。
+6. 展開する準備ができたら、クリックして、**発行**AKS にアプリケーションを発行するボタンをクリックします。
 
    ![Azure AKS 画面のスクリーン ショットに発行します。](media/k8s-tools-publish-screen.png)
 

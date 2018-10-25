@@ -11,30 +11,30 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5d880ac873766c59adfa53e9e61a6ad13520c135
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0192953ae88bf5665ea1f28356fb23f31113b76c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31949024"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935082"
 ---
 # <a name="properties-of-domain-classes"></a>ドメイン クラスのプロパティ
-ドメイン クラスでは、次の表に、プロパティがあります。 ドメイン クラスについては、次を参照してください。[についてモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)です。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語の拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)です。
+ドメイン クラスでは、次の表に、プロパティがあります。 ドメイン クラスについては、次を参照してください。[理解のモデル、クラスとリレーションシップ](../modeling/understanding-models-classes-and-relationships.md)します。 これらのプロパティを使用する方法の詳細については、次を参照してください。[をカスタマイズすると、ドメイン固有言語を拡張する](../modeling/customizing-and-extending-a-domain-specific-language.md)します。
 
 |プロパティ|説明|既定値|
-|--------------|-----------------|-------------|
+|-|-|-|
 |アクセス修飾子|ドメイン クラスのアクセスのレベル (`public` または `internal`)。|`public`|
 |カスタム属性|このドメイン クラスから生成されるソース コードのクラスに属性を追加するために使用します。|\<なし >|
-|二重の生成の派生|場合`True`、基底クラスと部分クラス (カスタマイズをサポートする上書きを使用) の両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|`False`|
-|カスタム コンス トラクターを持つ|場合`True`、ソース コードでカスタム コンス トラクターが提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)です。|`False`|
-|継承修飾子|ドメイン クラスから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`または`sealed`)。|`none`|
-|基本クラス|このドメイン クラスを派生している場合、基本クラスの名前。|\<なし >|
+|Double 型を生成します派生。|場合`True`、基底クラスと (オーバーライドによってカスタマイズをサポート) する部分クラスの両方が生成されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)します。|`False`|
+|カスタム コンス トラクターがあります。|場合`True`、カスタム コンス トラクターは、ソース コードで提供されます。 詳細については、次を参照してください。[をオーバーライドすると、生成されたクラスを拡張する](../modeling/overriding-and-extending-the-generated-classes.md)します。|`False`|
+|継承修飾子|ドメイン クラスから生成されるソース コードのクラスの継承の種類について説明します (`none`、`abstract`または`sealed`)。|`none`|
+|基本クラス|このドメイン クラスが派生の場合、基底クラスの名前。|\<なし >|
 |名前|このドメイン クラスの名前。|現在の名前|
 |名前空間|このドメイン クラスの名前空間。|現在の名前空間|
-|メモ|このドメイン クラスに関連付けられている非公式なノートです。|\<なし >|
-|説明|生成された、デザイナーの UI を文書化に使用される説明です。|\<なし >|
-|表示名|このドメイン クラスの生成されたデザイナーで表示される名前です。|\<なし >|
-|ヘルプ キーワード|このドメイン クラスの F1 ヘルプをインデックス化に使用される省略可能なキーワードです。|\<なし >|
+|メモ|このドメイン クラスに関連付けられている非公式のメモ。|\<なし >|
+|説明|生成されたデザイナーの UI を文書化するために使用する説明。|\<なし >|
+|表示名|このドメイン クラスの生成されたデザイナーに表示される名前です。|\<なし >|
+|ヘルプ キーワード|このドメイン クラスの F1 ヘルプのインデックスを作成するために使用する省略可能なキーワード。|\<なし >|
 
 ## <a name="see-also"></a>関連項目
 

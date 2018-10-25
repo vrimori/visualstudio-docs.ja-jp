@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetServer |Microsoft ドキュメント
+title: IDebugProcess2::GetServer |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d816393aa33c976b881a6e943fb1d27e44e9ff3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: deb394f3f3e07bb9d4a2e7419ac87966aa839c87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31118347"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49930460"
 ---
 # <a name="idebugprocess2getserver"></a>IDebugProcess2::GetServer
 このプロセスで実行されているサーバーを取得します。  
@@ -44,10 +44,10 @@ int GetServer(
  [out]返します、 [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)このプロセスが実行されているサーバーを表すオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 複数のサーバーは、1 台のコンピューターで実行されていることができます。  
+## <a name="remarks"></a>Remarks  
+ 複数のサーバーは、1 台のコンピューターで実行できます。  
   
 ## <a name="see-also"></a>関連項目  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

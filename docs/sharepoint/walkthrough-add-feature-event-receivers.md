@@ -19,33 +19,33 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4a8777dff45eb257a941716306f099c67e3fcda7
-ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.openlocfilehash: 4ab2eded41d9416f03592c9346a379f8a276366a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42626089"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948780"
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>チュートリアル: フィーチャー イベント レシーバーを追加します。
   フィーチャー イベント レシーバーは、SharePoint で、次の機能に関連するイベントのいずれかが発生したときに実行する方法です。
 
--   機能をインストールします。
+- 機能をインストールします。
 
--   フィーチャーがアクティブにします。
+- フィーチャーがアクティブにします。
 
--   フィーチャーが非アクティブ化します。
+- フィーチャーが非アクティブ化します。
 
--   機能が削除されます。
+- 機能が削除されます。
 
- このチュートリアルでは、SharePoint プロジェクト内のフィーチャーには、イベント レシーバーを追加する方法を示します。 これには、次のタスクを示しています。
+  このチュートリアルでは、SharePoint プロジェクト内のフィーチャーには、イベント レシーバーを追加する方法を示します。 これには、次のタスクを示しています。
 
--   フィーチャー イベント レシーバーを空のプロジェクトを作成しています。
+- フィーチャー イベント レシーバーを空のプロジェクトを作成しています。
 
--   処理、 **FeatureDeactivating**メソッド。
+- 処理、 **FeatureDeactivating**メソッド。
 
--   SharePoint プロジェクト オブジェクト モデルを使用して、お知らせをお知らせリストに追加します。
+- SharePoint プロジェクト オブジェクト モデルを使用して、お知らせをお知らせリストに追加します。
 
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを実行するには、次のコンポーネントが必要です。
