@@ -20,12 +20,12 @@ caps.latest.revision: 43
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4c961d0a8e313760db20a74fb1397706d5890b96
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 239416a1638940207a8dcb78b395ed1915e8a93a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49214254"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867079"
 ---
 # <a name="extending-javascript-intellisense"></a>JavaScript IntelliSense の拡張
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -84,13 +84,13 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
  使用して、次のイベントの種類のハンドラーを作成する、拡張機能コードで`addEventListener`:  
   
--   `statementcompletion`、ステートメントの完了イベントのハンドラーを追加します。 ステートメント入力候補は、入力中、または ctrl キーを押しながら j. を押したときに表示される識別子の一覧またはピリオド (.) などの特殊文字を入力した後に表示される特定の型のメンバーの一覧を提供します。ハンドラーが型のイベント オブジェクトを受け取る`CompletionEvent`、次のメンバーをサポートしています:[項目のプロパティ](#Items)、[対象になるプロパティ](#Target)、 [targetName プロパティ](#TargetName)、[スコープ プロパティ](#Scope)します。  
+- `statementcompletion`、ステートメントの完了イベントのハンドラーを追加します。 ステートメント入力候補は、入力中、または ctrl キーを押しながら j. を押したときに表示される識別子の一覧またはピリオド (.) などの特殊文字を入力した後に表示される特定の型のメンバーの一覧を提供します。ハンドラーが型のイベント オブジェクトを受け取る`CompletionEvent`、次のメンバーをサポートしています:[項目のプロパティ](#Items)、[対象になるプロパティ](#Target)、 [targetName プロパティ](#TargetName)、[スコープ プロパティ](#Scope)します。  
   
--   `signaturehelp`、パラメーターの IntelliSense のヒントのハンドラーを追加します。 パラメーター情報は、数、名前、および関数に必要なパラメーターの型に関する情報を提供します。 ハンドラーが型のイベント オブジェクトを受け取る`SignatureHelpEvent`、次のメンバーをサポートしています:[対象になるプロパティ](#Target)、 [parentObject プロパティ](#ParentObject)、 [functionCommentsプロパティ](#FunctionComments)、 [functionHelp プロパティ](#FunctionHelp)します。  
+- `signaturehelp`、パラメーターの IntelliSense のヒントのハンドラーを追加します。 パラメーター情報は、数、名前、および関数に必要なパラメーターの型に関する情報を提供します。 ハンドラーが型のイベント オブジェクトを受け取る`SignatureHelpEvent`、次のメンバーをサポートしています:[対象になるプロパティ](#Target)、 [parentObject プロパティ](#ParentObject)、 [functionCommentsプロパティ](#FunctionComments)、 [functionHelp プロパティ](#FunctionHelp)します。  
   
--   `statementcompletionhint`、IntelliSense によるクイック ヒントのハンドラーを追加します。 クイック ヒント ポップアップ ボックスでは、コード内の識別子に関する完全な宣言を示します。 ハンドラーが型のイベント オブジェクトを受け取る`CompletionHintEvent`、次のメンバーをサポートしています: [completionItem プロパティ](#CompletionItem)、および[symbolHelp プロパティ](#SymbolHelp)します。  
+- `statementcompletionhint`、IntelliSense によるクイック ヒントのハンドラーを追加します。 クイック ヒント ポップアップ ボックスでは、コード内の識別子に関する完全な宣言を示します。 ハンドラーが型のイベント オブジェクトを受け取る`CompletionHintEvent`、次のメンバーをサポートしています: [completionItem プロパティ](#CompletionItem)、および[symbolHelp プロパティ](#SymbolHelp)します。  
   
- ステートメント入力候補、パラメーター情報、およびクイック ヒントなどの IntelliSense 機能を示す例については、次を参照してください。[を使用して IntelliSense](../ide/using-intellisense.md)します。  
+  ステートメント入力候補、パラメーター情報、およびクイック ヒントなどの IntelliSense 機能を示す例については、次を参照してください。[を使用して IntelliSense](../ide/using-intellisense.md)します。  
   
 > [!NOTE]
 >  JavaScript では、クイック ヒントは、入力候補一覧の右側に表示されるポップアップ ボックスを参照します。 クイック ヒントを手動で起動することはできません。  

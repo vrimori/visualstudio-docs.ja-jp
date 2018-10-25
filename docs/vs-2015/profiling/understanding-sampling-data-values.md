@@ -17,12 +17,12 @@ caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5834768784465b02b896b21339dc240a90781353
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 86458fcc630b023cd1495b91a388fe245b71d772
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49221391"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877635"
 ---
 # <a name="understanding-sampling-data-values"></a>サンプリング データ値について
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "49221391"
   
  **必要条件**  
   
--   [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
+- [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]、 [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]、 [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
- プロファイラー分析は、プロセッサがターゲット プロセス内のコードを実行しているかどうかを判別します。 プロセッサがターゲット プロセス内のコードを実行していない場合、サンプルは破棄されます。  
+  プロファイラー分析は、プロセッサがターゲット プロセス内のコードを実行しているかどうかを判別します。 プロセッサがターゲット プロセス内のコードを実行していない場合、サンプルは破棄されます。  
   
- プロセッサがターゲット コードを実行している場合、プロファイラーは、呼び出し履歴の各関数のサンプル カウントをインクリメントします。 サンプルの取得時には、呼び出し履歴上の 1 つの関数のみがコードを実行中です。 スタック上の他の関数は、関数呼び出し階層内の親であり、子の復帰を待機しています。  
+  プロセッサがターゲット コードを実行している場合、プロファイラーは、呼び出し履歴の各関数のサンプル カウントをインクリメントします。 サンプルの取得時には、呼び出し履歴上の 1 つの関数のみがコードを実行中です。 スタック上の他の関数は、関数呼び出し階層内の親であり、子の復帰を待機しています。  
   
- プロファイラーは、サンプル イベントに対して、現在命令を実行している関数の*排他*サンプル数をインクリメントします。 排他サンプルは、関数の合計 (*包括*) サンプル数にも含まれるため、現在アクティブな関数の包括サンプル数もインクリメントされます。  
+  プロファイラーは、サンプル イベントに対して、現在命令を実行している関数の*排他*サンプル数をインクリメントします。 排他サンプルは、関数の合計 (*包括*) サンプル数にも含まれるため、現在アクティブな関数の包括サンプル数もインクリメントされます。  
   
- プロファイラーは、呼び出し履歴上のすべての関数の包括サンプル数をインクリメントします。  
+  プロファイラーは、呼び出し履歴上のすべての関数の包括サンプル数をインクリメントします。  
   
 ## <a name="inclusive-samples"></a>包括サンプル  
  対象の関数の実行中に収集されるサンプルの合計数。  

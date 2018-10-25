@@ -20,12 +20,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d1709ea21fa785a573dae03ad8c89814c9952b50
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 586d7181c1a8eb3c94a8ad236d4ff40602378199
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119454"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869263"
 ---
 # <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>方法: パラメーターの型記述子を定義
   型記述子には、パラメーターのデータ型を表すプロパティが含まれています。 型記述子では、フィールド、エンティティ、またはエンティティのコレクションを定義できます。 詳細については、次を参照してください。 [TypeDescriptor](http://msdn.microsoft.com/library/ms543392%28v=office.12%29.aspx)します。  
@@ -84,43 +84,43 @@ ms.locfileid: "37119454"
   
 ### <a name="to-define-a-collection-of-entities"></a>エンティティのコレクションを定義するには  
   
-1.  **BDC メソッドの詳細**ウィンドウで、使用するパラメーターの型記述子を選択します。  
+1. **BDC メソッドの詳細**ウィンドウで、使用するパラメーターの型記述子を選択します。  
   
-2.  メニュー バーで、**ビュー**、**プロパティ ウィンドウ**します。  
+2. メニュー バーで、**ビュー**、**プロパティ ウィンドウ**します。  
   
-3.  **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例:**連絡先**)。  
+3. **プロパティ**ウィンドウで、設定、**名前**プロパティをエンティティを表す名前 (例:**連絡先**)。  
   
-4.  設定、 **IsCollection**プロパティを**True**します。 これは、この型記述子がエンティティのコレクションであることを表します。  
+4. 設定、 **IsCollection**プロパティを**True**します。 これは、この型記述子がエンティティのコレクションであることを表します。  
   
-5.  設定、 **TypeName**プロパティへの参照を含む文字列を<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、およびエンティティを表す型の完全修飾名。 この型は、プロジェクト内のクラスにすることも、ソリューションで参照されているアセンブリで定義されている型にすることも、BDC オブジェクト モデルで定義されている型にすることもできます。  
+5. 設定、 **TypeName**プロパティへの参照を含む文字列を<xref:System.Collections.Generic.IEnumerable%601>インターフェイス、およびエンティティを表す型の完全修飾名。 この型は、プロジェクト内のクラスにすることも、ソリューションで参照されているアセンブリで定義されている型にすることも、BDC オブジェクト モデルで定義されている型にすることもできます。  
   
-    -   プロジェクト内のクラスに横に下向きの矢印を選択、 **TypeName**プロパティを選択、**現在のプロジェクト** ダイアログ ボックスで、プロジェクト、クラスを選択し、表示されるタブ。  
+   - プロジェクト内のクラスに横に下向きの矢印を選択、 **TypeName**プロパティを選択、**現在のプロジェクト** ダイアログ ボックスで、プロジェクト、クラスを選択し、表示されるタブ。  
   
-         完全修飾名には、クラスの名前空間および名前と、LOB システムの名前が含まれます。  
+      完全修飾名には、クラスの名前空間および名前と、LOB システムの名前が含まれます。  
   
-         次の例の値の設定、 **TypeName**プロパティをプロジェクト内のクラスのコレクション。  
+      次の例の値の設定、 **TypeName**プロパティをプロジェクト内のクラスのコレクション。  
   
-         `System.Collections.Generic.IEnumerable`1 [MyBDCNamespace` ` 。BdcModel1.Contact, BdcModel1]'  
+      `System.Collections.Generic.IEnumerable`1 [MyBDCNamespace` ` 。BdcModel1.Contact, BdcModel1]'  
   
-    -   ソリューション内のアセンブリに配置されている型にする場合は、完全修飾名に型の名前、アセンブリの名前、バージョン番号、カルチャ、および公開キー トークンが含まれます。  
+   - ソリューション内のアセンブリに配置されている型にする場合は、完全修飾名に型の名前、アセンブリの名前、バージョン番号、カルチャ、および公開キー トークンが含まれます。  
   
-         次の例の値の設定、 **TypeName**プロパティをソリューションで参照されているアセンブリ内の型のコレクション。  
+      次の例の値の設定、 **TypeName**プロパティをソリューションで参照されているアセンブリ内の型のコレクション。  
   
-         `System.Collections.Generic.IEnumerable`1 [MyNamespace.Contact、myAssemblyName、バージョン 4.0.0.0、Culture = neutral, PublicKeyToken = b77a5c561934e089 =]'  
+      `System.Collections.Generic.IEnumerable`1 [MyNamespace.Contact、myAssemblyName、バージョン 4.0.0.0、Culture = neutral, PublicKeyToken = b77a5c561934e089 =]'  
   
-    -   BDC オブジェクト モデルで定義されている型にする場合は、完全修飾名に型の名前空間と名前のみが含まれます。  
+   - BDC オブジェクト モデルで定義されている型にする場合は、完全修飾名に型の名前空間と名前のみが含まれます。  
   
-         次の例の値の設定、 **TypeName**プロパティを BDC オブジェクト モデルで定義された型のコレクション。  
+      次の例の値の設定、 **TypeName**プロパティを BDC オブジェクト モデルで定義された型のコレクション。  
   
-         `System.Collections.Generic.IEnumerable`1 [Microsoft.BusinessData.Runtime.DynamicType]'  
+      `System.Collections.Generic.IEnumerable`1 [Microsoft.BusinessData.Runtime.DynamicType]'  
   
-6.  **BDC メソッドの詳細**ウィンドウで、型記述子のリストを開いてし、**編集**します。  
+6. **BDC メソッドの詳細**ウィンドウで、型記述子のリストを開いてし、**編集**します。  
   
-     **BDC エクスプ ローラー**ウィンドウが開きます。  
+    **BDC エクスプ ローラー**ウィンドウが開きます。  
   
-7.  **BDC エクスプ ローラー**、型記述子のショートカット メニューを開き、選択し、**型記述子の追加**します。  
+7. **BDC エクスプ ローラー**、型記述子のショートカット メニューを開き、選択し、**型記述子の追加**します。  
   
-     そのコレクション型記述子の子として新しい型記述子が追加されます。 その型記述子をエンティティとして構成します。  
+    そのコレクション型記述子の子として新しい型記述子が追加されます。 その型記述子をエンティティとして構成します。  
   
 ## <a name="see-also"></a>関連項目
  [BDC モデルのデザイン ツールの概要](../sharepoint/bdc-model-design-tools-overview.md)   

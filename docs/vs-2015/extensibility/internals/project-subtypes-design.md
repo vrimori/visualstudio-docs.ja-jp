@@ -15,12 +15,12 @@ ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
 caps.latest.revision: 33
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: db689d1d8fdb7d60cba232685ee0c8f22ca9cbb2
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: d167559a442e351c6256d07943092825deef288a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49243823"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839428"
 ---
 # <a name="project-subtypes-design"></a>プロジェクト サブタイプのデザイン
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -38,17 +38,17 @@ ms.locfileid: "49243823"
 ## <a name="project-subtype-design"></a>プロジェクト サブタイプのデザイン  
  プロジェクト サブタイプの初期化はメイン集約することによって実現<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>オブジェクト。 この集計は、プロジェクトのサブタイプをオーバーライドしたり、基本プロジェクトの機能の大半を強化したりできます。 プロジェクト サブタイプの取得を使用してプロパティを処理するためにファースト チャンス<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>、コマンドを使用して<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>、使用してプロジェクト項目の管理と<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>します。 プロジェクト サブタイプを拡張することがもできます。  
   
--   プロジェクト構成オブジェクト。  
+- プロジェクト構成オブジェクト。  
   
--   構成に依存するオブジェクト。  
+- 構成に依存するオブジェクト。  
   
--   構成に依存しない参照オブジェクト。  
+- 構成に依存しない参照オブジェクト。  
   
--   プロジェクト オートメーション オブジェクト。  
+- プロジェクト オートメーション オブジェクト。  
   
--   プロジェクトのオートメーション プロパティのコレクション。  
+- プロジェクトのオートメーション プロパティのコレクション。  
   
- プロジェクト サブタイプによって拡張機能の詳細については、次を参照してください。[プロパティとメソッドは、プロジェクト サブタイプによって拡張](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)します。  
+  プロジェクト サブタイプによって拡張機能の詳細については、次を参照してください。[プロパティとメソッドは、プロジェクト サブタイプによって拡張](../../extensibility/internals/properties-and-methods-extended-by-project-subtypes.md)します。  
   
 ##### <a name="policy-files"></a>ポリシー ファイル  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]環境は、ポリシー ファイルの実装でのプロジェクト サブタイプに基本プロジェクト システムの拡張の例を示します。 ポリシー ファイルは、の構造化、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]のソリューション エクスプ ローラーで、機能を管理することで環境**プロジェクトの追加**ダイアログ ボックスで、**新しい項目の追加** ダイアログ ボックスおよび**プロパティ** ダイアログ ボックス。 ポリシーのサブタイプをオーバーライドし、これらの機能を強化<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg>、`IOleCommandTarget`と<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>実装します。  

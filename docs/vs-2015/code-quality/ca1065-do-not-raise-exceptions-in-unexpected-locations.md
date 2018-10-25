@@ -20,15 +20,16 @@ caps.latest.revision: 18
 author: gewarren
 ms.author: gewarren
 manager: wpickett
-ms.openlocfilehash: 56f51fb381a65060fd81a3e25f1cc989c8974de8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 142322360d4ba1ffed6ef893bf02254548ee2705
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49284688"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887608"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: 予期しない場所に例外を発生させません
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
 |||
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
@@ -42,27 +43,27 @@ ms.locfileid: "49284688"
 ## <a name="rule-description"></a>規則の説明
  予期しない例外をスローするメソッドは、次のように分類できます。
 
--   プロパティの Get メソッド
+- プロパティの Get メソッド
 
--   イベントのアクセサー メソッド
+- イベントのアクセサー メソッド
 
--   Equals メソッド
+- Equals メソッド
 
--   GetHashCode メソッド
+- GetHashCode メソッド
 
--   ToString メソッド
+- ToString メソッド
 
--   静的コンストラクター
+- 静的コンストラクター
 
--   ファイナライザー
+- ファイナライザー
 
--   Dispose メソッド
+- Dispose メソッド
 
--   等値演算子
+- 等値演算子
 
--   暗黙的なキャスト演算子
+- 暗黙的なキャスト演算子
 
- 次に、これらのメソッドについてを説明します。
+  次に、これらのメソッドについてを説明します。
 
 ### <a name="property-get-methods"></a>プロパティの Get メソッド
  プロパティは、基本的にスマート フィールドです。 そのため、できるだけ多くのフィールドのように動作する必要があります。 フィールドは例外をスローしないとプロパティをもする必要があります。 例外をスローするプロパティがある場合は、メソッドにすることを検討してください。
@@ -91,22 +92,22 @@ ms.locfileid: "49284688"
 ### <a name="equals-methods"></a>Equals メソッド
  次**Equals**メソッドが例外をスローする必要があります。
 
--   <xref:System.Object.Equals%2A?displayProperty=fullName>
+- <xref:System.Object.Equals%2A?displayProperty=fullName>
 
--   [M:IEquatable.Equals](http://go.microsoft.com/fwlink/?LinkId=113472)
+- [M:IEquatable.Equals](http://go.microsoft.com/fwlink/?LinkId=113472)
 
- **Equals**メソッドが返す`true`または`false`例外をスローする代わりにします。 たとえば、Equals には、2 つの一致しない型が渡された場合に返す必要がありますだけ`false`スローする代わりに、<xref:System.ArgumentException>します。
+  **Equals**メソッドが返す`true`または`false`例外をスローする代わりにします。 たとえば、Equals には、2 つの一致しない型が渡された場合に返す必要がありますだけ`false`スローする代わりに、<xref:System.ArgumentException>します。
 
 ### <a name="gethashcode-methods"></a>GetHashCode メソッド
  次**GetHashCode**メソッドは通常は例外をスローしません。
 
--   <xref:System.Object.GetHashCode%2A>
+- <xref:System.Object.GetHashCode%2A>
 
--   [M:IEqualityComparer.GetHashCode(T)](http://go.microsoft.com/fwlink/?LinkId=113477)
+- [M:IEqualityComparer.GetHashCode(T)](http://go.microsoft.com/fwlink/?LinkId=113477)
 
- **GetHashCode**値を常に返す必要があります。 それ以外の場合、ハッシュ テーブル内の項目が失われることができます。
+  **GetHashCode**値を常に返す必要があります。 それ以外の場合、ハッシュ テーブル内の項目が失われることができます。
 
- バージョンの**GetHashCode**スローできる引数を受け取る、<xref:System.ArgumentException>します。 ただし、 **Object.GetHashCode**が例外をスローしない必要があります。
+  バージョンの**GetHashCode**スローできる引数を受け取る、<xref:System.ArgumentException>します。 ただし、 **Object.GetHashCode**が例外をスローしない必要があります。
 
 ### <a name="tostring-methods"></a>ToString メソッド
  デバッガーを使用して<xref:System.Object.ToString%2A?displayProperty=fullName>オブジェクトに関する情報を文字列の形式で表示できるようにします。 そのため、 **ToString**オブジェクトの状態が変わらないようにして、例外をスローする必要があります。

@@ -22,25 +22,25 @@ caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4e28ee8c4fa17eca8f2b5419b1d9aefb229fd020
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 5e5d49b70cc594a05bae8056fe8139e405e15cba
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49219155"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888102"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCF デバッグの制約
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 WCF サービスのデバッグを開始するには、次の 3 つの方法があります。  
   
--   サービスを呼び出すクライアント プロセスをデバッグします。 デバッガーがサービスにステップ インします。 サービスは、クライアント アプリケーションと同じソリューションになくてもかまいません。  
+- サービスを呼び出すクライアント プロセスをデバッグします。 デバッガーがサービスにステップ インします。 サービスは、クライアント アプリケーションと同じソリューションになくてもかまいません。  
   
--   サービスを要求するクライアント プロセスをデバッグします。 サービスは、ソリューションの一部である必要があります。  
+- サービスを要求するクライアント プロセスをデバッグします。 サービスは、ソリューションの一部である必要があります。  
   
--   使用する**プロセスにアタッチ**を現在実行中のサービスにアタッチします。 サービス内部でデバッグが開始されます。  
+- 使用する**プロセスにアタッチ**を現在実行中のサービスにアタッチします。 サービス内部でデバッグが開始されます。  
   
- このトピックでは、これらのシナリオの制約について説明します。  
+  このトピックでは、これらのシナリオの制約について説明します。  
   
 ## <a name="limitations-on-stepping-into-a-service"></a>サービスへのステップ インの制約  
  デバッグ中のクライアント アプリケーションのサービスにステップ インするには、次の条件を満たす必要があります。  

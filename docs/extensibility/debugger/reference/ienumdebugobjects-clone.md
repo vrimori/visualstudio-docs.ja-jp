@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::Clone |Microsoft ドキュメント
+title: IEnumDebugObjects::Clone |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e68d2a1b2b859d7a6c9872a9139ae173f0fc3f9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f82ee3ed34f042e2ef239e38d17d4da70d298fee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31123277"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888191"
 ---
 # <a name="ienumdebugobjectsclone"></a>IEnumDebugObjects::Clone
 このメソッドは、個別のオブジェクトとして現在の列挙型のコピーを返します。  
@@ -41,13 +41,13 @@ int Clone(
   
 #### <a name="parameters"></a>パラメーター  
  `ppEnum`  
- [out]個別のオブジェクトとしてこの列挙体のコピーを返します。  
+ [out]個別のオブジェクトとして、この列挙体のコピーを返します。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合を返します`S_OK`、それ以外のエラー コードを返します。  
+ 成功した場合、返します`S_OK`、それ以外のエラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
- 列挙体のコピーでは、このメソッドが呼び出されたときに元と同じ状態がします。 ただし、コピーのと、元の状態は別に、個別に変更することができます。  
+## <a name="remarks"></a>Remarks  
+ 列挙体のコピーは、このメソッドが呼び出されたとき、元と同じ状態が。 ただし、コピーのと、元の状態は別であり、個別に変更することができます。  
   
 ## <a name="see-also"></a>関連項目  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

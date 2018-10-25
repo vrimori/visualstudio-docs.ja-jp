@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d45145da27d019b0750202a38c24ecb1e147d6
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f19bbbfbde9a111c6edea112b7250fca934ac7f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49203945"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881691"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーでの例外を管理します。
 
@@ -217,7 +217,7 @@ public class GenericException<T> : Exception
 
    ![例外の追加条件](../debugger/media/extraconditionsforanexception.png "ExtraConditionsForAnException")
 
-3. 条件の行ごとに、モジュールの名前を入力し、比較演算子のリストを変更**Equals**または**Not Equals**します。 ワイルドカードを指定することがあります (**\***) では、複数のモジュールを指定する名前。
+3. 条件の行ごとに、モジュールの名前を入力し、比較演算子のリストを変更**Equals**または**Not Equals**します。 ワイルドカードを指定することがあります (* *\\* * *) では、複数のモジュールを指定する名前。
 
 4. 条件を削除する必要がある場合は、選択、 **X**条件の行の最後にします。
 

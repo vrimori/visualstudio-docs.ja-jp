@@ -24,12 +24,12 @@ caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dab1e068bf63fdc38cea55ae91d07d0407733213
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 79df9c62a0d06e5433b9716e6b0079aad8a661b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49173772"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874268"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag 関数
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,12 +89,12 @@ HRESULT CvWriteFlagExVA(
 ## <a name="return-value"></a>戻り値  
  メッセージが書き込まれると S_OK を返します。 エラーが発生した場合はエラー コードを返します。 SUCCEEDED/FAILED マクロを使用し、エラーの状態を確認します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** cvmarkers.h  
   
  **Unicode:** CvWriteFlagExW、CvWriteFlagExVW  
   
- **ANSI:** CvWriteFlagExA、CvWriteFlagExVA  
+ <strong>ANSI:</strong>CvWriteFlagExA、CvWriteFlagExVA  
   
 ## <a name="see-also"></a>関連項目  
  [C++ ライブラリ リファレンス](../profiling/cpp-library-reference.md)

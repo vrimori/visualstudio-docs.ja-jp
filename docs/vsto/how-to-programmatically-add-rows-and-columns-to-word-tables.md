@@ -17,12 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 865a33e181d761665dbe2e44976f171a2b60d433
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: fca44524c3a7c7f10e855eaf62e8b77dc225ae01
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35255890"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818680"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>方法: プログラムによって Word の表に行と列を追加
   Microsoft Office Word の表では、セルが行と列に編成されます。 表に行を追加するには、<xref:Microsoft.Office.Interop.Word.Rows> オブジェクトの <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> メソッドを使用し、列を追加するには <xref:Microsoft.Office.Interop.Word.Columns> オブジェクトの <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> メソッドを使用します。  
@@ -32,15 +32,15 @@ ms.locfileid: "35255890"
 ## <a name="document-level-customization-examples"></a>ドキュメント レベルのカスタマイズ例  
  次のコード例はドキュメント レベルのカスタマイズで使用できます。 これらの例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。 これらの例は、カスタマイズに関連するドキュメントに、少なくとも 1 つの表が既にあることを前提としています。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  このコードは、次のいずれかのプロジェクト テンプレートを使用して作成したプロジェクトでのみ実行されます。  
->   
-> -   Word 2013 ドキュメント  
-> -   Word 2013 テンプレート  
-> -   Word 2010 ドキュメント  
-> -   Word 2010 テンプレート  
->   
->  他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **Microsoft.Office.Interop.Word**アセンブリ、その後は、テーブルに行と列を追加するそのアセンブリからクラスを使用する必要があります。 詳細については、次を参照してください。[方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Word 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189588)します。  
+> 
+> - Word 2013 ドキュメント  
+> - Word 2013 テンプレート  
+> - Word 2010 ドキュメント  
+> - Word 2010 テンプレート  
+> 
+>   他の種類のプロジェクトでこのタスクを実行する場合への参照を追加する必要があります、 **Microsoft.Office.Interop.Word**アセンブリ、その後は、テーブルに行と列を追加するそのアセンブリからクラスを使用する必要があります。 詳細については、次を参照してください。[方法: ターゲットの Office アプリケーション プライマリ相互運用機能アセンブリを介して](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)と[Word 2010 プライマリ相互運用機能アセンブリ リファレンス](http://go.microsoft.com/fwlink/?LinkId=189588)します。  
   
 ### <a name="to-add-a-row-to-a-table"></a>表に行を追加するには  
   

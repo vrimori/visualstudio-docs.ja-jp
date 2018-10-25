@@ -12,12 +12,12 @@ caps.latest.revision: 36
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 760dc4f859de68040676439d84fea60d23602aeb
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 327de2e75b089e7ba836837c3c29c0d92d9ad864
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49292787"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852714"
 ---
 # <a name="visual-studio-ide"></a>Visual Studio IDE
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -116,31 +116,31 @@ Visual Studio 2015 の新機能について説明する場合は、「 [Visual S
 
  テキスト エディターには、生産性の向上に役立つ多くの機能との高度な対話性があります (望む場合)。これによって、より質の高いコードをより早く作成できます。 機能は言語によって異なり、機能をオンまたはオフにするためにそれらを使用する必要はありません (クイック起動で「エディター」を入力)。一般的な生産性向上機能として、次のものがあります。
 
-1.  [Refactoring](../ide/refactoring-in-visual-studio.md) 。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
+1. [Refactoring](../ide/refactoring-in-visual-studio.md) 。これには、変数の名前をインテリジェントに変更する、選んだコード行を別個の関数に移動する、コードを他の場所に移動する、関数パラメーターを並べ替える、などの操作が含まれます。
 
-2.  *IntelliSense* 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ Intellisense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md), [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
+2. *IntelliSense* 。コードに関する型情報をエディターに直接表示したり、場合によっては、ちょっとしたコードを自動的に作成したりする、よく使われる機能セットの包括的な用語です。 エディター内のインラインに基本ドキュメントがあるようなもので、これによって、別個のヘルプ ウィンドウで型情報を検索する手間が省けます。 IntelliSense 機能は言語によって異なります。 詳しくは、「 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ Intellisense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md), [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)」をご覧ください。 次の図は、職場でのいくつかの IntelliSense 機能を示しています。
 
-     ![Visual Studio のメンバー一覧](../ide/media/vs2015-intellisense.png "vs2015_Intellisense")
+    ![Visual Studio のメンバー一覧](../ide/media/vs2015-intellisense.png "vs2015_Intellisense")
 
-3.  **波線** 。入力と同時にコードのエラーまたは潜在的な問題をアラートします。これにより、コンパイルまたは実行時にエラーが発見されるのを待たずに即時に修正することができます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳細については、「 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)」を参照してください。
+3. **波線** 。入力と同時にコードのエラーまたは潜在的な問題をアラートします。これにより、コンパイルまたは実行時にエラーが発見されるのを待たずに即時に修正することができます。 破線の上に移動すると、エラーに関する追加情報が表示されます。 電球がエラーの修正方法に関する提案とともに左余白に表示される場合もあります。 詳細については、「 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)」を参照してください。
 
-     ![電球でのマウス ホバー](../ide/media/vs2015-lightbulb-hover.png "VS2015_LightBulb_Hover")
+    ![電球でのマウス ホバー](../ide/media/vs2015-lightbulb-hover.png "VS2015_LightBulb_Hover")
 
-4.  [ブックマーク](../ide/setting-bookmarks-in-code.md)。アクティブに作業しているファイルの特定の行にすばやく移動することができます。
+4. [ブックマーク](../ide/setting-bookmarks-in-code.md)。アクティブに作業しているファイルの特定の行にすばやく移動することができます。
 
-5.  [Call Hierarchy](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで呼び出して、キャレットの下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
+5. [Call Hierarchy](../ide/reference/call-hierarchy.md) ウィンドウはテキスト エディターのコンテキスト メニューで呼び出して、キャレットの下のメソッドを呼び出す、またはそのメソッドによって呼び出されるメソッドを表示することができます。
 
-6.  **コード レンズ** 。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。 詳しくは、「[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)」をご覧ください。
+6. **コード レンズ** 。コードへの参照および変更、リンクされたバグ、作業項目、コード レビュー、単体テストをすべて、エディターを離れずに検索できます。 詳しくは、「[コード変更およびその他の履歴の検索](../ide/find-code-changes-and-other-history-with-codelens.md)」をご覧ください。
 
-7.  **[ピークの定義]** ウィンドウ。現在のコンテキストから移動せずに、メソッドまたは型の定義インラインが表示されます。 このウィンドウは、XAML でも有効です。
+7. **[ピークの定義]** ウィンドウ。現在のコンテキストから移動せずに、メソッドまたは型の定義インラインが表示されます。 このウィンドウは、XAML でも有効です。
 
-8.  **[定義に移動]** コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
+8. **[定義に移動]** コンテキスト メニュー オプション。関数またはオブジェクトが定義されている場所に直接移動します。 エディターを右クリックすることで、その他のナビゲーション コマンドも使用できます。
 
 9. [オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) (関連ツール)。システム上の .NET アセンブリまたは Windows ランタイム アセンブリを調べ、アセンブリにどの型が含まれているか、またそれらの型にどのメソッドとプロパティが含まれているかを確認できます。
 
      ![System.Timer を示すオブジェクト ブラウザー](../ide/media/objectbrowser.png "ObjectBrowser")
 
- [編集] メニューと [表示] メニュー上の項目のほとんどは、何らかの方法でコード エディターに関連しています。 エディターについて詳しくは、「[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」および「[コードの編集](https://www.visualstudio.com/features/ide-vs)」をご覧ください。
+   [編集] メニューと [表示] メニュー上の項目のほとんどは、何らかの方法でコード エディターに関連しています。 エディターについて詳しくは、「[コードの作成](../ide/writing-code-in-the-code-and-text-editor.md)」および「[コードの編集](https://www.visualstudio.com/features/ide-vs)」をご覧ください。
 
 ## <a name="compiling-and-building-your-code"></a>コードのコンパイルとビルド
 

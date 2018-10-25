@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyField::GetPropertyGetter |Microsoft ドキュメント
+title: IDebugPropertyField::GetPropertyGetter |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d58b9f6e390378f10ef08e70894eb7ea74fc8296
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6411be501847648eed1dfdfa28e8a77a250855b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31120989"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888428"
 ---
 # <a name="idebugpropertyfieldgetpropertygetter"></a>IDebugPropertyField::GetPropertyGetter
 プロパティを取得するメソッドを取得します。  
@@ -46,7 +46,7 @@ int GetPropertyGetter(
 ## <a name="return-value"></a>戻り値  
  成功した場合、S_OK を返します。それ以外の場合、エラー コードを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プロパティを設定するメソッドを取得する[GetPropertySetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertysetter.md)メソッドを呼び出します。  
   
 ## <a name="see-also"></a>関連項目  

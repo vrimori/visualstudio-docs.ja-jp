@@ -19,12 +19,12 @@ caps.latest.revision: 47
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3a5e6044a56bfc94f7bc0e517ccbd91ae10d5b9d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: f031e81911c9a36cd2c48abf7bd2b092bb5940f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49289576"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886280"
 ---
 # <a name="run-windows-store-apps-on-a-remote-machine"></a>リモート コンピューターでの Windows ストア アプリの実行
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,11 +50,11 @@ Windows にのみ適用されます] (../Image/windows_only_content.png"windows_
   
  [リモート デバッグ用の Visual Studio プロジェクトの構成](#BKMK_ConnectVS)  
   
--   [C# プロジェクトと Visual Basic プロジェクト用のリモート デバイスの選択](#BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects)  
+- [C# プロジェクトと Visual Basic プロジェクト用のリモート デバイスの選択](#BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects)  
   
--   [JavaScript プロジェクトと C++ プロジェクト用のリモート デバイスの選択](#BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects)  
+- [JavaScript プロジェクトと C++ プロジェクト用のリモート デバイスの選択](#BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects)  
   
- [リモート デバッグ セッションの実行](#BKMK_RunRemoteDebug)  
+  [リモート デバッグ セッションの実行](#BKMK_RunRemoteDebug)  
   
 ##  <a name="BKMK_Prerequisites"></a> 必要条件  
  リモート デバイスでデバッグするには:  
@@ -123,20 +123,20 @@ Windows にのみ適用されます] (../Image/windows_only_content.png"windows_
 ##  <a name="BKMK_ConfigureRemoteDebugger"></a> リモート デバッガーの構成  
  リモート デバッガーの構成を変更するには 2 つのツールを使用します。  
   
-1.  **[Visual Studio リモート デバッグ モニター]** の **[ツール]** メニュー:  
+1. **[Visual Studio リモート デバッグ モニター]** の **[ツール]** メニュー:  
   
-    1.  リモート デバッガーのポート番号、認証モード、またはタイムアウト間隔を変更するには、 **[オプション]** を選択します。  
+   1.  リモート デバッガーのポート番号、認証モード、またはタイムアウト間隔を変更するには、 **[オプション]** を選択します。  
   
-    2.  リモート デバッグのアクセス許可を持つユーザーを追加または削除するには、 **[アクセス許可]** を選択します。  
+   2.  リモート デバッグのアクセス許可を持つユーザーを追加または削除するには、 **[アクセス許可]** を選択します。  
   
-        > [!NOTE]
-        >  アクセス許可は、リモートでデバッグするすべてのユーザー アカウントに付与する必要があります。  
+       > [!NOTE]
+       >  アクセス許可は、リモートでデバッグするすべてのユーザー アカウントに付与する必要があります。  
   
- リモート デバッガーの詳細オプションを設定するには、 **リモート デバッガー構成ウィザード** を使用します。 ウィザードを開くには、スタート画面の **リモート デバッガー構成ウィザード** を選択します。  
+   リモート デバッガーの詳細オプションを設定するには、 **リモート デバッガー構成ウィザード** を使用します。 ウィザードを開くには、スタート画面の **リモート デバッガー構成ウィザード** を選択します。  
   
-1.  **Visual Studio リモート デバッガーの構成** ページでリモート デバッガーをサービスとして実行するように選択できます。 ほとんどの場合、サービスとして実行する必要はありません。  
+2. **Visual Studio リモート デバッガーの構成** ページでリモート デバッガーをサービスとして実行するように選択できます。 ほとんどの場合、サービスとして実行する必要はありません。  
   
-2.  **[Windows ファイアウォールをデバッグ用に構成します]** ページで、リモート デバッガーに接続するネットワークの種類を追加または削除できます。 デバイスが現在接続されているネットワークだけが有効です。 少なくとも 1 つのネットワークを選択する必要があります。  
+3. **[Windows ファイアウォールをデバッグ用に構成します]** ページで、リモート デバッガーに接続するネットワークの種類を追加または削除できます。 デバイスが現在接続されているネットワークだけが有効です。 少なくとも 1 つのネットワークを選択する必要があります。  
   
 ##  <a name="BKMK_ConnectVS"></a> リモート デバッグ用の Visual Studio プロジェクトの構成  
  プロジェクトのプロパティに、接続するリモート デバイスを指定します。 手順はプログラミング言語によって異なります。 リモート デバイスのネットワーク名を入力するか、[リモート デバッガー接続の選択] ダイアログ ボックスで選択できます。  

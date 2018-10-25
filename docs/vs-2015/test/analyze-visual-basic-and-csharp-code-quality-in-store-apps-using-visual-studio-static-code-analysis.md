@@ -16,12 +16,12 @@ caps.latest.revision: 16
 author: erickson-doug
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0b65e204f9af28eea59d45cdf8fd591bf7e2dabd
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c8bca7452b94aa8e65386c3d5ef77e9f36ab98df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49306114"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828703"
 ---
 # <a name="analyze-visual-basic-and-c-code-quality-in-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio 静的コード分析によるストア アプリの Visual Basic および C# のコード品質の分析
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -49,17 +49,17 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
 ##  <a name="BKMK_Run"></a> コード分析の実行  
  Visual Studio ソリューションでコード分析を実行するには:  
   
--   **[ビルド]** メニューの **[ソリューションでコード分析を実行]** をクリックします。  
+- **[ビルド]** メニューの **[ソリューションでコード分析を実行]** をクリックします。  
   
- プロジェクトをビルドするたびに自動的にコード分析を実行するには:  
+  プロジェクトをビルドするたびに自動的にコード分析を実行するには:  
   
-1.  ソリューション エクスプローラーでプロジェクト名を右クリックし、**[プロパティ]** を選択します。  
+1. ソリューション エクスプローラーでプロジェクト名を右クリックし、**[プロパティ]** を選択します。  
   
-2.  プロジェクトのプロパティ ページで、**[コード分析]** をクリックして、**[ビルドに対するコード分析の有効化 (定数 CODEANALYSIS を定義)]** を選択します。  
+2. プロジェクトのプロパティ ページで、**[コード分析]** をクリックして、**[ビルドに対するコード分析の有効化 (定数 CODEANALYSIS を定義)]** を選択します。  
   
- ソリューションがコンパイルされ、コード分析が実行されます。 結果は、[コード分析] ウィンドウに表示されます。  
+   ソリューションがコンパイルされ、コード分析が実行されます。 結果は、[コード分析] ウィンドウに表示されます。  
   
- ![[コード分析] ウィンドウ](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")  
+   ![[コード分析] ウィンドウ](../test/media/ca-managed-collapsed.png "CA_Managed_Collapsed")  
   
 ##  <a name="BKMK_Analyze"></a> コード分析警告の分析と解決  
  特定の警告を分析するには、[コード分析] ウィンドウで警告のタイトルをクリックします。 警告が展開され、問題に関する詳細情報が表示されます。  
@@ -80,15 +80,15 @@ Windows および Windows Phone に適用されます] (../Image/windows_and_pho
   
  警告を抑制するには:  
   
-1.  詳細情報が表示されていない場合は、警告のタイトルをクリックして展開します。  
+1. 詳細情報が表示されていない場合は、警告のタイトルをクリックして展開します。  
   
-2.  警告の下部にある **[アクション]** リンクをクリックします。  
+2. 警告の下部にある **[アクション]** リンクをクリックします。  
   
-3.  **[メッセージの非表示]** をポイントし、**[ソース内]** または **[抑制ファイル内]** をクリックします。  
+3. **[メッセージの非表示]** をポイントし、**[ソース内]** または **[抑制ファイル内]** をクリックします。  
   
-    -   **[ソース内]** をクリックすると、警告を生成したメソッドの上のソース ファイルに `SuppressMessage` 属性が挿入されます。 これにより、抑制が検出されやすくなります。  
+   - **[ソース内]** をクリックすると、警告を生成したメソッドの上のソース ファイルに `SuppressMessage` 属性が挿入されます。 これにより、抑制が検出されやすくなります。  
   
-    -   **[抑制ファイル内]** では、プロジェクトの **GlobalSuppressions.cs** ファイルに `SuppressMessage` 属性を追加します。 これにより、抑制を簡単に管理できるようになります。 **GlobalSuppression.cs** に追加された `SuppressMessage` 属性は、警告を生成したメソッドもターゲットとすることに注意してください。 警告がグローバルに表示なしになることはありません。  
+   - **[抑制ファイル内]** では、プロジェクトの **GlobalSuppressions.cs** ファイルに `SuppressMessage` 属性を追加します。 これにより、抑制を簡単に管理できるようになります。 **GlobalSuppression.cs** に追加された `SuppressMessage` 属性は、警告を生成したメソッドもターゲットとすることに注意してください。 警告がグローバルに表示なしになることはありません。  
   
      ソース ファイルで警告を抑制するか、抑制ファイルで警告を抑制するかは、コーディング スタイルとニーズによって決まります。  
   

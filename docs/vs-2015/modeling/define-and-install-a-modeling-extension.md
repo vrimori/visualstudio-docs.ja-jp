@@ -15,12 +15,12 @@ caps.latest.revision: 39
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e550d7c34640b1c4b436f6a2e098a3f3ee494757
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: c6ed7f72a8125d2307b91cd829bd6f474145fa78
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49234404"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49827481"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>モデリング拡張機能を定義およびインストールする
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,13 +35,13 @@ Visual Studio では、モデリング図に対して拡張機能を定義する
 ## <a name="creating-a-modeling-extension-solution"></a>モデリング拡張機能ソリューションの生成  
  モデリング拡張機能を定義するには、次のプロジェクトを含むソリューションを生成する必要があります。  
   
--   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Integration Extension (VSIX) プロジェクト。 このプロジェクトでは、拡張機能のコンポーネントのインストーラーとして機能するファイルを生成します。  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Integration Extension (VSIX) プロジェクト。 このプロジェクトでは、拡張機能のコンポーネントのインストーラーとして機能するファイルを生成します。  
   
--   プログラム コードを含むコンポーネントに必要なクラス ライブラリ プロジェクト。  
+- プログラム コードを含むコンポーネントに必要なクラス ライブラリ プロジェクト。  
   
- 1 つの拡張機能を複数のコンポーネントで構成する場合は、単一のソリューションにそれらのコンポーネントを組み込むことができます。 必要な VSIX プロジェクトは 1 つだけです。  
+  1 つの拡張機能を複数のコンポーネントで構成する場合は、単一のソリューションにそれらのコンポーネントを組み込むことができます。 必要な VSIX プロジェクトは 1 つだけです。  
   
- カスタム ツールボックス項目やカスタム UML プロファイルなど、コードを必要としないコンポーネントは、別個のクラス ライブラリ プロジェクトを使用せずに直接 VSIX プロジェクトに追加できます。 プログラム コードが必要なコンポーネントは、別個のクラス ライブラリ プロジェクトを使用してさらに簡単に定義できます。 コードが必要なコンポーネントとしては、ジェスチャ ハンドラー、メニュー コマンド、検証コードなどがあります。  
+  カスタム ツールボックス項目やカスタム UML プロファイルなど、コードを必要としないコンポーネントは、別個のクラス ライブラリ プロジェクトを使用せずに直接 VSIX プロジェクトに追加できます。 プログラム コードが必要なコンポーネントは、別個のクラス ライブラリ プロジェクトを使用してさらに簡単に定義できます。 コードが必要なコンポーネントとしては、ジェスチャ ハンドラー、メニュー コマンド、検証コードなどがあります。  
   
 #### <a name="to-create-a-class-library-project-for-menu-commands-gesture-handlers-or-validation"></a>メニュー コマンド、ジェスチャ ハンドラー、または検証のクラス ライブラリ プロジェクトを作成するには  
   
@@ -133,15 +133,15 @@ Visual Studio では、モデリング図に対して拡張機能を定義する
   
 #### <a name="to-uninstall-an-extension"></a>拡張機能をアンインストールするには  
   
-1.  **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
+1. **[ツール]** メニューの **[拡張機能と更新プログラム]** をクリックします。  
   
-2.  **[インストール済みの拡張機能]** を展開します。  
+2. **[インストール済みの拡張機能]** を展開します。  
   
-3.  拡張機能を選択し、 **[アンインストール]** をクリックします。  
+3. 拡張機能を選択し、 **[アンインストール]** をクリックします。  
   
- 拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
+   拡張機能の障害が原因で読み込みが失敗し、エラー ウィンドウにレポートが生成されることがまれにありますが、それは拡張機能マネージャーには表示されません。 次の場所からファイルを削除することによって、拡張機能を削除する場合、場所 *%localappdata%* は通常*DriveName*: \Users\\*ユーザー名*\AppData\Local:  
   
- *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
+   *%Localappdata%* **\Microsoft\VisualStudio\\[バージョン] \Extensions**  
   
 ## <a name="see-also"></a>関連項目  
  [プロファイルを定義すると、UML を拡張](../modeling/define-a-profile-to-extend-uml.md)   

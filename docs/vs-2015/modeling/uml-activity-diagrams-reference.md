@@ -23,12 +23,12 @@ caps.latest.revision: 50
 author: alexhomer1
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3fe8a0d33b0e9be8eecdc55ac68d23138f6506d8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: eed16e010c4fc070b9cc8be57731c97c2f03b2ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49177841"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862282"
 ---
 # <a name="uml-activity-diagrams-reference"></a>UML アクティビティ図: リファレンス
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "49177841"
   
  アクティビティ図を使用すると、次の例のような複数の種類のプロセスを記述することができます。  
   
--   ビジネス プロセス、またはユーザーとシステム間のワーク フロー。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
+- ビジネス プロセス、またはユーザーとシステム間のワーク フロー。 詳細については、次を参照してください。[ユーザー要件をモデル化](../modeling/model-user-requirements.md)します。  
   
--   ユース ケースで実行された手順。 詳細については、次を参照してください。 [UML ユース ケース図: ガイドライン](../modeling/uml-use-case-diagrams-guidelines.md)します。  
+- ユース ケースで実行された手順。 詳細については、次を参照してください。 [UML ユース ケース図: ガイドライン](../modeling/uml-use-case-diagrams-guidelines.md)します。  
   
--   ソフトウェア プロトコル (コンポーネント間の相互作用の許可されたシーケンス)。  
+- ソフトウェア プロトコル (コンポーネント間の相互作用の許可されたシーケンス)。  
   
--   ソフトウェア アルゴリズム。  
+- ソフトウェア アルゴリズム。  
   
- このトピックでは、アクティビティ図で使用できる要素について説明します。 詳細はアクティビティの描画の図を参照してください[UML アクティビティ図: ガイドライン](../modeling/uml-activity-diagrams-guidelines.md)します。 UML アクティビティ図を作成する、**アーキテクチャ** メニューのをクリックして**新しい UML またはレイヤー図**します。 一般にモデリング図を描画する方法の詳細については、次を参照してください。[編集 UML モデルと図](../modeling/edit-uml-models-and-diagrams.md)します。  
+  このトピックでは、アクティビティ図で使用できる要素について説明します。 詳細はアクティビティの描画の図を参照してください[UML アクティビティ図: ガイドライン](../modeling/uml-activity-diagrams-guidelines.md)します。 UML アクティビティ図を作成する、**アーキテクチャ** メニューのをクリックして**新しい UML またはレイヤー図**します。 一般にモデリング図を描画する方法の詳細については、次を参照してください。[編集 UML モデルと図](../modeling/edit-uml-models-and-diagrams.md)します。  
   
 ## <a name="reading-activity-diagrams"></a>アクティビティ図の読み取り  
  次のセクションの表では、アクティビティ図とその主要なプロパティに対して使用できる要素について説明します。 要素のプロパティの完全な一覧は、次を参照してください。 [UML アクティビティ図の要素のプロパティ](../modeling/properties-of-elements-on-uml-activity-diagrams.md)します。  

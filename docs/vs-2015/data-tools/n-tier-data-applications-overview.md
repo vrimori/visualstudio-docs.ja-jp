@@ -22,12 +22,12 @@ caps.latest.revision: 29
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 912752c39d8180f7f3cd5dc0cca719e39e39a0e8
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 8a5f6c89f6b71ecd2902877757f7d852c0e51088
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49171965"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852922"
 ---
 # <a name="n-tier-data-applications-overview"></a>n 層データ アプリケーションの概要
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,31 +48,31 @@ N-レベル * データ アプリケーションは複数に区切られたデ�
 ## <a name="presentation-tier"></a>プレゼンテーション層  
  *プレゼンテーション層*はユーザーがアプリケーションと対話する層です。 多くの場合、追加のアプリケーション ロジックも含まれています。 一般的なプレゼンテーション層のコンポーネントには、次のようなものがあります。  
   
--   データ バインディング コンポーネント (<xref:System.Windows.Forms.BindingSource> や <xref:System.Windows.Forms.BindingNavigator> など)  
+- データ バインディング コンポーネント (<xref:System.Windows.Forms.BindingSource> や <xref:System.Windows.Forms.BindingNavigator> など)  
   
--   データの表現をオブジェクト[LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)エンティティ クラス、プレゼンテーション層で使用します。  
+- データの表現をオブジェクト[LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)エンティティ クラス、プレゼンテーション層で使用します。  
   
- プレゼンテーション層、中間層にサービス参照を使用して通常アクセスする (たとえば、 [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)アプリケーション)。 プレゼンテーション層からデータ層に直接アクセスすることはありません。 プレゼンテーション層は、中間層のデータ アクセス コンポーネントを通してデータ層と通信します。  
+  プレゼンテーション層、中間層にサービス参照を使用して通常アクセスする (たとえば、 [Windows Communication Foundation サービスと Visual Studio での WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)アプリケーション)。 プレゼンテーション層からデータ層に直接アクセスすることはありません。 プレゼンテーション層は、中間層のデータ アクセス コンポーネントを通してデータ層と通信します。  
   
 ## <a name="middle-tier"></a>中間層  
  *中間層*は、互いに通信を使用して、プレゼンテーション層とデータ層レイヤー。 一般的な中間層のコンポーネントには、次のようなものがあります。  
   
--   ビジネス ロジック (ビジネス ルールやデータ検証など)  
+- ビジネス ロジック (ビジネス ルールやデータ検証など)  
   
--   次のようなデータ アクセス コンポーネントおよびロジック  
+- 次のようなデータ アクセス コンポーネントおよびロジック  
   
-    -   [Tableadapter](http://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364)と[Dataadapter と Datareader](http://msdn.microsoft.com/library/cc952ca2-ec19-46ab-9189-15174b52cb74)します。  
+  -   [Tableadapter](http://msdn.microsoft.com/library/09416de9-134c-4dc7-8262-6c8d81e3f364)と[Dataadapter と Datareader](http://msdn.microsoft.com/library/cc952ca2-ec19-46ab-9189-15174b52cb74)します。  
   
-    -   データの表現をオブジェクト[LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)エンティティ クラスです。  
+  -   データの表現をオブジェクト[LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)エンティティ クラスです。  
   
-    -   共通のアプリケーション サービス (認証、承認、パーソナル化など)  
+  -   共通のアプリケーション サービス (認証、承認、パーソナル化など)  
   
- 次の図は、Visual Studio で使用できる機能および技術と、n 層アプリケーションの中間層においてそれらが適合する位置を示しています。  
+  次の図は、Visual Studio で使用できる機能および技術と、n 層アプリケーションの中間層においてそれらが適合する位置を示しています。  
   
- ![中間層のコンポーネント](../data-tools/media/ntiermid.png "NtierMid")  
-中間層  
+  ![中間層のコンポーネント](../data-tools/media/ntiermid.png "NtierMid")  
+  中間層  
   
- 通常、中間層は、データ接続を使用してデータ層に接続します。 一般に、このデータ接続はデータ アクセス コンポーネントに格納されます。  
+  通常、中間層は、データ接続を使用してデータ層に接続します。 一般に、このデータ接続はデータ アクセス コンポーネントに格納されます。  
   
 ## <a name="data-tier"></a>データ層  
  *データ層*は基本的に、アプリケーションのデータを格納するサーバー (たとえば、サーバーを実行している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  

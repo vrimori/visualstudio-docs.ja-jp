@@ -14,12 +14,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0adab4da28cffa3f56cb68ef4b2fd703b1d3c71f
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: cae74c50ecd99716cf26eae2b7defcadf03fecbf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37116836"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862973"
 ---
 # <a name="work-with-a-conceptual-model-wcf-data-services"></a>概念モデル (WCF Data Services) の使用します。
 
@@ -27,10 +27,11 @@ ms.locfileid: "37116836"
 
  概念モデルは、WCF Data Services アプリケーションで使用できます。 以下のトピックでは、概念モデルを使用してデータを照会する方法について説明します。
 
-|トピック|説明|
-|-----------|-----------------|
-|[方法: データ サービス クエリを実行](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)|[!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。|
-|[方法: クエリ結果の射影](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services)|データ サービス クエリによって返されるデータの量を削減する方法について説明します。|
+
+| トピック | 説明 |
+| - | - |
+| [方法: データ サービス クエリを実行](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] アプリケーションからデータ サービスを照会する方法について説明します。 |
+| [方法: クエリ結果の射影](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | データ サービス クエリによって返されるデータの量を削減する方法について説明します。 |
 
  概念モデルを使用すると、ドメインに対応する言語で有効なデータの種類を定義できます。 モデルの有効なデータを定義したり、エンティティまたはデータ サービスで実行する操作に検証を追加したりできます。
 

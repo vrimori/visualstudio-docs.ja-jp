@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::Compare |Microsoft ドキュメント
+title: IDebugReference2::Compare |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ede48e5236887e3d8fdb22425d92c8514636f94
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b00eb4e64e9dcccf4519f5e799f238ad01773b8a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31116797"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860488"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
 別の 1 つの参照を比較します。 将来使用するために予約されています。  
@@ -43,7 +43,7 @@ int Compare (
   
 #### <a name="parameters"></a>パラメーター  
  `dwCompare`  
- [in]値、 [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)比較操作、たとえば、以内、またはよりも大きい値を指定する列挙です。  
+ [in]値、 [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)列挙操作を指定する、比較、たとえば、同じか、以下よりも、またはより大きい。  
   
  `pReference`  
  [in][IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)と比較する参照を表すオブジェクト。  

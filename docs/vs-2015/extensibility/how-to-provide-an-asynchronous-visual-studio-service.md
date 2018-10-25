@@ -10,12 +10,12 @@ ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1982162500ff21f754a15cf1f5aebe3117172310
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 1938a3a8b5b0eb3c0cc7b062d6d43c4e869397eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49185669"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851977"
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>方法: Visual Studio の非同期のサービス提供
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -89,11 +89,11 @@ UI スレッドをブロックすることがなくサービスを取得する�
 ## <a name="registering-a-service"></a>サービスを登録します。  
  サービスを登録するには、追加、<xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>サービスを提供するパッケージにします。 同期サービスの登録から 2 つの違いがあります。  
   
--   自動読み込みする場合は、パッケージを追加する必要がある、 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad 属性の値。 自動読み込みの Vspackage の詳細については、次を参照してください。 [Vspackage の読み込み](../extensibility/loading-vspackages.md)します。  
+- 自動読み込みする場合は、パッケージを追加する必要がある、 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad 属性の値。 自動読み込みの Vspackage の詳細については、次を参照してください。 [Vspackage の読み込み](../extensibility/loading-vspackages.md)します。  
   
--   追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>します。 PackageRegistrationAttribute の詳細については、次を参照してください。[の登録および登録を解除する Vspackage](../extensibility/registering-and-unregistering-vspackages.md)します。  
+- 追加する必要があります、 **AllowsBackgroundLoading = true**フィールドを<xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>します。 PackageRegistrationAttribute の詳細については、次を参照してください。[の登録および登録を解除する Vspackage](../extensibility/registering-and-unregistering-vspackages.md)します。  
   
- 非同期のサービスの登録、asyncpackage からの例を次に示します。  
+  非同期のサービスの登録、asyncpackage からの例を次に示します。  
   
 ```csharp  
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]  

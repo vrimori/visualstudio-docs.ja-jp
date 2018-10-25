@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b23d7da819a0403366260b240fa095defd0f120a
-ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
+ms.openlocfilehash: 91f552ce30030abeae6af0d63763625e711d32e2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39511410"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875100"
 ---
 # <a name="walkthrough-manually-deploy-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>チュートリアル: 再署名不要ブランド情報を保持する ClickOnce アプリケーションを手動で展開します。
 作成するときに、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーションと、それを発行する顧客に渡すを展開し、顧客は、配置マニフェストを更新して再署名に従来しました。 ほとんどの場合に推奨される方法ですが、.NET Framework 3.5 を使用すると、作成[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]新しい配置マニフェストを再生成することがなく、顧客によって展開できる展開します。 詳細については、次を参照してください。[再署名なしのテストと実稼働サーバーの展開の ClickOnce アプリケーション](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)します。  
@@ -48,36 +48,36 @@ ms.locfileid: "39511410"
   
 ### <a name="to-deploy-a-clickonce-application-with-multiple-deployment-and-branding-support-using-mageexe"></a>複数の展開とブランド化のサポートが Mage.exe を使用して ClickOnce アプリケーションをデプロイするには  
   
-1.  Visual Studio コマンド プロンプトを開き、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリに変更、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
+1. Visual Studio コマンド プロンプトを開き、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリに変更、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
   
-2.  配置の現在のバージョンにちなんだ名前のディレクトリを作成します。 初めてアプリケーションを展開する場合は、おそらくを選択します**1.0.0.0**します。  
+2. 配置の現在のバージョンにちなんだ名前のディレクトリを作成します。 初めてアプリケーションを展開する場合は、おそらくを選択します**1.0.0.0**します。  
   
-    > [!NOTE]
-    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
+   > [!NOTE]
+   >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
   
-3.  という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
+3. という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
   
-4.  Mage.exe への呼び出しを使用してアプリケーション マニフェストを生成します。  
+4. Mage.exe への呼び出しを使用してアプリケーション マニフェストを生成します。  
   
-    ```cmd  
-    mage -New Application -ToFile 1.0.0.0\WindowsFormsApp1.exe.manifest -Name "Windows Forms App 1" -Version 1.0.0.0 -FromDirectory 1.0.0.0\bin -UseManifestForTrust true -Publisher "A. Datum Corporation"  
-    ```  
+   ```cmd  
+   mage -New Application -ToFile 1.0.0.0\WindowsFormsApp1.exe.manifest -Name "Windows Forms App 1" -Version 1.0.0.0 -FromDirectory 1.0.0.0\bin -UseManifestForTrust true -Publisher "A. Datum Corporation"  
+   ```  
   
-5.  デジタル証明書をアプリケーション マニフェストに署名します。  
+5. デジタル証明書をアプリケーション マニフェストに署名します。  
   
-    ```cmd  
-    mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx  
-    ```  
+   ```cmd  
+   mage -Sign WindowsFormsApp1.exe.manifest -CertFile mycert.pfx  
+   ```  
   
-6.  呼び出しで配置マニフェストを生成*Mage.exe*します。 既定では、 *Mage.exe*マークは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]その it を両方オンラインで実行できるように、オフライン インストールされているアプリケーションとして展開します。 アプリケーションで使用できるように、ユーザーがオンラインの場合にのみ使用して、`-i`引数の値を持つ`f`します。 このアプリケーションは、複数のデプロイ機能を活用するための除外、`-providerUrl`引数*Mage.exe*します。 (を除くより前のバージョン 3.5 では、.NET Framework のバージョンで`-providerUrl`のオフライン アプリケーションがエラーになります)。  
+6. 呼び出しで配置マニフェストを生成*Mage.exe*します。 既定では、 *Mage.exe*マークは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]その it を両方オンラインで実行できるように、オフライン インストールされているアプリケーションとして展開します。 アプリケーションで使用できるように、ユーザーがオンラインの場合にのみ使用して、`-i`引数の値を持つ`f`します。 このアプリケーションは、複数のデプロイ機能を活用するための除外、`-providerUrl`引数*Mage.exe*します。 (を除くより前のバージョン 3.5 では、.NET Framework のバージョンで`-providerUrl`のオフライン アプリケーションがエラーになります)。  
   
-    ```cmd  
-    mage -New Deployment -ToFile WindowsFormsApp1.application -Name "Windows Forms App 1" -Version 1.0.0.0 -AppManifest 1.0.0.0\WindowsFormsApp1.manifest   
-    ```  
+   ```cmd  
+   mage -New Deployment -ToFile WindowsFormsApp1.application -Name "Windows Forms App 1" -Version 1.0.0.0 -AppManifest 1.0.0.0\WindowsFormsApp1.manifest   
+   ```  
   
-7.  配置マニフェストに署名しません。  
+7. 配置マニフェストに署名しません。  
   
-8.  すべてのファイルをネットワーク上のアプリケーションをデプロイすると、顧客に提供します。  
+8. すべてのファイルをネットワーク上のアプリケーションをデプロイすると、顧客に提供します。  
   
 9. この時点では、顧客は彼自身の自動生成された証明書で配置マニフェストに署名する必要があります。 たとえば、Adventure Works という会社の顧客が動作する場合を生成できますを使用して、自己署名証明書、 *MakeCert.exe*ツール。 次に、使用、 *Pvk2pfx.exe*ツールによって作成されたファイルを結合する*MakeCert.exe*に渡すことが PFX ファイルに*Mage.exe*します。  
   
@@ -96,28 +96,28 @@ ms.locfileid: "39511410"
   
 ### <a name="to-deploy-a-clickonce-application-with-multiple-deployment-and-branding-support-using-mageuiexe"></a>複数の展開とブランド化のサポートが MageUI.exe を使用して ClickOnce アプリケーションをデプロイするには  
   
-1.  Visual Studio コマンド プロンプトを開き、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリに移動し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
+1. Visual Studio コマンド プロンプトを開き、[!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)]コマンド プロンプト、および格納するディレクトリに移動し、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]ファイル。  
   
-2.  という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
+2. という名前のサブディレクトリを作成する**bin**し、実行可能ファイル、アセンブリ、リソース、およびデータ ファイルを含む、すべてのアプリケーション ファイルをコピーします。  
   
-3.  配置の現在のバージョンにちなんだ名前のサブディレクトリを作成します。 初めてアプリケーションを展開する場合は、おそらくを選択します**1.0.0.0**します。  
+3. 配置の現在のバージョンにちなんだ名前のサブディレクトリを作成します。 初めてアプリケーションを展開する場合は、おそらくを選択します**1.0.0.0**します。  
   
-    > [!NOTE]
-    >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
+   > [!NOTE]
+   >  配置のバージョンは、アプリケーション ファイルのバージョンとは異なる可能性があります。  
   
-4.  移動、 \\ **bin**手順 2. で作成したディレクトリにディレクトリ。  
+4. 移動、 \\ **bin**手順 2. で作成したディレクトリにディレクトリ。  
   
-5.  グラフィカル ツールを起動*MageUI.exe*します。  
+5. グラフィカル ツールを起動*MageUI.exe*します。  
   
-    ```cmd  
-    MageUI.exe  
-    ```  
+   ```cmd  
+   MageUI.exe  
+   ```  
   
-6.  選択して新しいアプリケーション マニフェストを作成する**ファイル**、**新規**、 **Application Manifest**  メニューから。  
+6. 選択して新しいアプリケーション マニフェストを作成する**ファイル**、**新規**、 **Application Manifest**  メニューから。  
   
-7.  既定の**名前** タブで、このデプロイの名前とバージョン番号を入力します。 値を指定することも、**パブリッシャー**、どちらを使用するアプリケーションのショートカット リンク、[スタート] メニューのフォルダー名として配置されるとき。  
+7. 既定の**名前** タブで、このデプロイの名前とバージョン番号を入力します。 値を指定することも、**パブリッシャー**、どちらを使用するアプリケーションのショートカット リンク、[スタート] メニューのフォルダー名として配置されるとき。  
   
-8.  選択、**アプリケーション オプション** タブでをクリックし、**信頼情報用のアプリケーション マニフェストを使用して**します。 これにより、このブランドのサードパーティ製[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。  
+8. 選択、**アプリケーション オプション** タブでをクリックし、**信頼情報用のアプリケーション マニフェストを使用して**します。 これにより、このブランドのサードパーティ製[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]アプリケーション。  
   
 9. 選択、**ファイル** タブでをクリックし、**参照**横に、**アプリケーション ディレクトリ**テキスト ボックス。  
   

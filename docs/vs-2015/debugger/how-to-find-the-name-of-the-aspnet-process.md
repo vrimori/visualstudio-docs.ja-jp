@@ -22,25 +22,25 @@ caps.latest.revision: 32
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d6b036fdd9f75afc0c9976591ae0df23194b196d
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 223e060083554169ab6ffdb95faf4979e9466d02
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49268906"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825622"
 ---
 # <a name="how-to-find-the-name-of-the-aspnet-process"></a>方法 : ASP.NET プロセスの名前を見つける
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 実行中の [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] アプリケーションにアタッチする場合、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセスの名前を把握している必要があります。  
   
--   IIS 6.0 または IIS 7.0 を実行している場合、プロセスの名前は w3wp.exe です。  
+- IIS 6.0 または IIS 7.0 を実行している場合、プロセスの名前は w3wp.exe です。  
   
--   6.0 よりも前のバージョンの IIS を実行している場合、プロセスの名前は aspnet_wp.exe です。  
+- 6.0 よりも前のバージョンの IIS を実行している場合、プロセスの名前は aspnet_wp.exe です。  
   
- 使用して構築されたアプリケーションの[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]以降のバージョン、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]コードはファイル システム上に存在し、テスト サーバー WebDev.WebServer.exe の下で実行します。 この場合、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセスの代わりに WebDev.WebServer.exe にアタッチする必要があります。 ただし、これは、ローカル デバッグだけに当てはまります。  
+  使用して構築されたアプリケーションの[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]以降のバージョン、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)]コードはファイル システム上に存在し、テスト サーバー WebDev.WebServer.exe の下で実行します。 この場合、[!INCLUDE[vstecasp](../includes/vstecasp-md.md)] プロセスの代わりに WebDev.WebServer.exe にアタッチする必要があります。 ただし、これは、ローカル デバッグだけに当てはまります。  
   
- 古いバージョンの ASP アプリケーションは、インプロセスで実行する場合、IIS プロセス inetinfo.exe 内で実行します。  
+  古いバージョンの ASP アプリケーションは、インプロセスで実行する場合、IIS プロセス inetinfo.exe 内で実行します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「 [Visual Studio での開発設定のカスタマイズ](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)」を参照してください。  

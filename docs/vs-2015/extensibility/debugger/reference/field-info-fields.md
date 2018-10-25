@@ -17,12 +17,12 @@ ms.assetid: a69487d2-e701-4165-804a-8a011df9a3bd
 caps.latest.revision: 15
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9679d3750988e90cb10da092ba10429da87a4f42
-ms.sourcegitcommit: 9ceaf69568d61023868ced59108ae4dd46f720ab
+ms.openlocfilehash: 50af9c59a331f12190d3b428c908127e03de49b5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49222873"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889374"
 ---
 # <a name="fieldinfofields"></a>FIELD_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
@@ -74,7 +74,7 @@ public enum enum_FIELD_INFO_FIELDS {
   
  これらのフラグは、演算と組み合わせることがあります`OR`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
