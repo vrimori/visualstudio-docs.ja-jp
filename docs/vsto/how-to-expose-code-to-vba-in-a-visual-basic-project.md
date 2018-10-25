@@ -19,12 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8a979d62c8320d57c3243e4d60ef93ee56eb06cf
-ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
+ms.openlocfilehash: 7e4bc9f4227c11f8e34838a2785b27da62a0a6b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35256098"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839649"
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>方法: Visual Basic プロジェクトでのコードを VBA に公開
   内のコードを公開することができます、[!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]相互作用するコードの 2 つの種類の場合、Visual basic for Applications (VBA) コード プロジェクトします。  
@@ -35,11 +35,11 @@ ms.locfileid: "35256098"
   
  他のクラス内のコードよりも、ホスト項目クラスにコードの異なるプロセス。  
   
--   [ホスト項目クラスにコードを公開します。](#HostItemCode)  
+- [ホスト項目クラスにコードを公開します。](#HostItemCode)  
   
--   [ホスト項目クラスに含まれていないコードに公開します。](#NonHostItem)  
+- [ホスト項目クラスに含まれていないコードに公開します。](#NonHostItem)  
   
- ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[どの操作を呼び出す VSTO コード実行 VBA からでしょうか。](http://go.microsoft.com/fwlink/?LinkId=136757)します。  
+  ![ビデオへのリンク](../vsto/media/playvideo.gif "ビデオへのリンク")関連するビデオ デモについては、次を参照してください。[どの操作を呼び出す VSTO コード実行 VBA からでしょうか。](http://go.microsoft.com/fwlink/?LinkId=136757)します。  
   
 ##  <a name="HostItemCode"></a> ホスト項目クラスにコードを公開します。  
  ホスト項目クラスの Visual Basic コードを呼び出す VBA コードを有効にするには設定、 **EnableVbaCallers**するホスト項目のプロパティ**True**します。  
@@ -112,7 +112,7 @@ ms.locfileid: "35256098"
 7.  **[プロパティ]** ウィンドウで、 **ReferenceAssemblyFromVbaProject** プロパティを選択し、値を **True**に変更します。  
   
     > [!NOTE]  
-    >  かどうかは、ブックまたはドキュメントが含まれない VBA コード、またはドキュメント内の VBA コードが実行する信頼されていない場合は、設定すると、エラー メッセージが表示されるが、 **ReferenceAssemblyFromVbaProject**プロパティを**は True**。 これは、このような状況では、Visual Studio がドキュメントのVBA プロジェクトを変更できないためです。  
+    >  かどうかは、ブックまたはドキュメントが含まれない VBA コード、またはドキュメント内の VBA コードが実行する信頼されていない場合は、設定すると、エラー メッセージが表示されるが、 **ReferenceAssemblyFromVbaProject**プロパティを**は True。**. これは、このような状況では、Visual Studio がドキュメントのVBA プロジェクトを変更できないためです。  
   
 8.  表示されるメッセージで **[OK]** をクリックします。 このメッセージは、ブックまたはドキュメントに VBA コードを追加する場合からプロジェクトを実行しているを知らせる[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]、VBA コードは失われます、次回プロジェクトをビルドします。 これは、プロジェクトをビルドするたびにビルド出力フォルダー内のドキュメントが上書きされるためです。  
   

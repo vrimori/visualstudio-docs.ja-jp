@@ -23,12 +23,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 21ca61f29138aee5a4c22cbf872d6698d4180d50
-ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
+ms.openlocfilehash: 7435d6c7ad210554031994f4a366812f9799ffb2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37119487"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832109"
 ---
 # <a name="import-items-from-an-existing-sharepoint-site"></a>既存の SharePoint サイトからアイテムをインポートします。
   SharePoint ソリューション パッケージのインポート プロジェクト テンプレートによって、新しい [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint ソリューションの既存の SharePoint サイトからコンテンツ タイプやフィールドなどの要素を再利用できます。 インポートしたソリューションのほとんどは変更せずに実行できますが、それらをインポートした後にいずれかの項目を変更する場合は特に、考慮すべき特定の制限事項および問題があります。  
@@ -41,40 +41,40 @@ ms.locfileid: "37119487"
   
  [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] では、以下のアプリケーションで作成したソリューションのインポートはサポートされません。  
   
--   [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)]  
+- [!INCLUDE[winshare3](../sharepoint/includes/winshare3-md.md)]  
   
--   [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]  
+- [!INCLUDE[offshare7](../sharepoint/includes/offshare7-md.md)]  
   
--   [!INCLUDE[vs_orcas_long](../sharepoint/includes/vs-orcas-long-md.md)]  
+- [!INCLUDE[vs_orcas_long](../sharepoint/includes/vs-orcas-long-md.md)]  
   
--   Microsoft SharePoint Designer 2007  
+- Microsoft SharePoint Designer 2007  
   
--   [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]  
+- [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]  
   
- これらのアプリケーションによって作成されたソリューションを正常にインポートできる場合もありますが、その機能はテストされておらず、サポートされていません。  
+  これらのアプリケーションによって作成されたソリューションを正常にインポートできる場合もありますが、その機能はテストされておらず、サポートされていません。  
   
 ## <a name="item-import-restrictions"></a>項目のインポートに関する制限事項
  既存のほとんどの SharePoint アイテムをインポートできます *.wsp*ファイル、次のものはサポートされていません、および正常に動作する変更を必要があります。  
   
--   BDC エンティティ  
+- BDC エンティティ  
   
--   コード ワークフロー関連の要素  
+- コード ワークフロー関連の要素  
   
--   コード ワークフロー  
+- コード ワークフロー  
   
--   視覚的 Web パーツ (.ascx)  
+- 視覚的 Web パーツ (.ascx)  
   
--   Web サービス (*.asmx*)  
+- Web サービス (*.asmx*)  
   
--   コンテンツ タイプのバインディング  
+- コンテンツ タイプのバインディング  
   
--   イベント レシーバー  
+- イベント レシーバー  
   
--   リスト定義 (テンプレート)  
+- リスト定義 (テンプレート)  
   
--   サイト定義  
+- サイト定義  
   
- ソリューションをエクスポートする[!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)]または[!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]、これらの項目はから自動的に除外、 *.wsp*ファイル。 ただし、他の *.wsp*サポートされていないツールによって生成されたファイルは、これらの項目を含めることができます。 (このトピック前半の「サポートされる SharePoint ソリューション」をご覧ください。)  
+  ソリューションをエクスポートする[!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)]または[!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]、これらの項目はから自動的に除外、 *.wsp*ファイル。 ただし、他の *.wsp*サポートされていないツールによって生成されたファイルは、これらの項目を含めることができます。 (このトピック前半の「サポートされる SharePoint ソリューション」をご覧ください。)  
   
 ## <a name="what-happens-when-you-import-a-solution"></a>ソリューションをインポートするときの動作します。
  SharePoint ソリューション パッケージのインポート テンプレートをソリューションをインポートするときに[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]すべての内容のコピー、 *.wsp*を調整し、関連付けとの間の参照を保持するファイルとインポート要素および可能なファイル。  
@@ -101,7 +101,7 @@ ms.locfileid: "37119487"
  ワークフローをインポートすると、InfoPath フォームが **[その他のインポートされたファイル]** フォルダーにコピーされます。 場合、 *.wsp*ファイルには、Web テンプレートが含まれています、スタートアップ ページとして設定されて**ソリューション エクスプ ローラー**します。  
   
 ## <a name="import-fields-and-property-bags"></a>インポートのフィールドとプロパティ バッグ
- 複数のフィールドを含むソリューションをインポートするときに、すべての個別のフィールド定義が、1 つにマージされる*Elements.xml*内のノードの下にあるファイル**ソリューション エクスプ ローラー**と呼ばれる**フィールド**。 同様に、すべてのプロパティ バッグ エントリにマージされて、 *Elements.xml*と呼ばれるノードの下にあるファイル**PropertyBags**します。  
+ 複数のフィールドを含むソリューションをインポートするときに、すべての個別のフィールド定義が、1 つにマージされる*Elements.xml*内のノードの下にあるファイル**ソリューション エクスプ ローラー**と呼ばれる**フィールド。**. 同様に、すべてのプロパティ バッグ エントリにマージされて、 *Elements.xml*と呼ばれるノードの下にあるファイル**PropertyBags**します。  
   
  SharePoint 内のフィールドは、テキスト、ブール値、参照などの指定したデータ型の列です。 詳しくは、「 [構成要素: 列とフィールド型](http://go.microsoft.com/fwlink/?LinkId=182304)」をご覧ください。 プロパティ バッグを使用することによって、SharePoint 内のオブジェクト (ファームから SharePoint サイト上のリストまですべて) にプロパティを追加できます。 プロパティ バッグは、プロパティの名前と値のハッシュ テーブルとして実装されます。 詳しくは、「 [SharePoint 構成の管理](http://go.microsoft.com/fwlink/?LinkId=182296) 」または「 [SharePoint プロパティ バッグ設定](http://go.microsoft.com/fwlink/?LinkId=182297)」をご覧ください。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "37119487"
  ソリューションをインポートするときに、オプションのいくつかのフィーチャー属性は、インポートされたフィーチャー マニフェストから除外されます。 これらの属性を新しいフィーチャー ファイルで復元する場合は、元の機能、新しいフィーチャー マニフェスト ファイルを比較することで、不足している属性を識別して、トピックの手順に従います[方法: SharePoint フィーチャーカスタマイズ](../sharepoint/how-to-customize-a-sharepoint-feature.md).  
   
 ## <a name="deployment-conflict-detection-is-not-performed-on-built-in-list-instances"></a>組み込みのリスト インスタンスで配置競合の検出は実行されません。
- [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] 組み込みのリスト インスタンス (つまり、既定のリスト インスタンスを SharePoint に付属) に関する配置競合の検出は実行されません。 SharePoint 上の組み込みのリスト インスタンスを上書きしないために、競合の検出は実行されません。 組み込みのリスト インスタンスは配置されたり、更新されたりしますが、削除されたり、上書きされたりすることはありません。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint のパッケージ化と配置のトラブルシューティングを行う](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)します。  
+ [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] では、組み込みのリスト インスタンス (つまり、SharePoint に付属している既定のリスト インスタンス) に関する配置競合の検出は実行されません。 SharePoint 上の組み込みのリスト インスタンスを上書きしないために、競合の検出は実行されません。 組み込みのリスト インスタンスは配置されたり、更新されたりしますが、削除されたり、上書きされたりすることはありません。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint のパッケージ化と配置のトラブルシューティングを行う](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)します。  
   
 ## <a name="import-sharepoint-server-2010-workflows"></a>SharePoint Server 2010 のワークフローをインポートします。
  [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]で作成したワークフローをインポートする場合、そのワークフローを配置した後は正常に実行されません。 特定のアセンブリが不足するため、また  [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] のワークフローに [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] のワークフロー ソリューションで現在サポートされていない InfoPath フォームが含まれるために、ワークフローは正しく実行されません。 ただし、インポートされた [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] のワークフローは、 [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] アセンブリへの参照を追加したり、InfoPath フォームを再接続したりすることによって一部のアイテムを修正した後、正常に機能させることができます。 [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint Server 2010 のワークフローのインポート](http://go.microsoft.com/fwlink/?LinkId=182226)。  
